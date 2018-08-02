@@ -1,5 +1,5 @@
 ---
-title: 'スコープ解決演算子::: |Microsoft ドキュメント'
+title: 'スコープ解決演算子::: |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7caea3a32c0bb983518f7610918c78c8c31c63a0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: baf3678d204042bdea5e892a6e89d041b5091f38
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420942"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467080"
 ---
 # <a name="scope-resolution-operator-"></a>スコープ解決演算子: ::
-スコープ解決演算子 `::` は異なるスコープで使用される識別子を特定し、あいまいさを解消するために使用されます。 スコープの詳細については、次を参照してください。[スコープ](../cpp/scope-visual-cpp.md)です。  
+スコープ解決演算子 **::** 特定し、さまざまなスコープで使用される識別子のあいまいさを解消するために使用します。 スコープの詳細については、次を参照してください。[スコープ](../cpp/scope-visual-cpp.md)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,7 +39,7 @@ enum class :: identifier
 enum struct :: identifier  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `identifier` は変数、関数、または列挙値になることがあります。  
   
 ## <a name="with-classes-and-namespaces"></a>クラスと名前空間の使用  
@@ -62,9 +62,7 @@ int main() {
     // A class name used to disambiguate  
     NamespaceA::ClassA a1;  
     a1.x = 2;  
-  
 }  
-  
 ```  
   
  スコープ修飾子を持たないスコープ解決演算子はグローバル名前空間を参照します。  
@@ -101,7 +99,6 @@ namespace NamespaceB {
   
 namespace NamespaceC{  
     using namespace B;  
-  
 }  
 int main() {  
     NamespaceB::ClassB c_b;  
@@ -110,7 +107,6 @@ int main() {
     c_b.x = 3;  
     c_c.x = 4;  
 }  
-  
 ```  
   
  スコープ解決演算子のチェーンを使用できます。 次の例で、`NamespaceD::NamespaceD1` は入れ子になった名前空間 `NamespaceD1` を特定し、`NamespaceE::ClassE::ClassE1` は入れ子になったクラス `ClassE1` を特定します。  
@@ -123,7 +119,6 @@ namespace NamespaceD{
 }  
   
 namespace NamespaceE{  
-  
     class ClassE{  
     public:  
         class ClassE1{  
@@ -138,7 +133,6 @@ int main() {
     NamespaceE::ClassE::ClassE1 e1;  
     e1.x = 7  ;  
 }  
-  
 ```  
   
 ## <a name="with-static-members"></a>静的メンバーの使用  
@@ -158,11 +152,10 @@ int main() {
     int gx1 = ClassG::x;  
     int gx2 = ClassG::get_x();   
 }  
-  
 ```  
   
 ## <a name="with-scoped-enumerations"></a>スコープを持つ列挙型の使用  
- スコープ列挙の値を持つ、スコープ解決演算子を使用しても[列挙体の宣言](../cpp/enumerations-cpp.md)、次の例のようにします。  
+ スコープ列挙の値を持つ、スコープ解決演算子を使用しても[列挙体の宣言](../cpp/enumerations-cpp.md)、次の例。  
   
 ```cpp  
 enum class EnumA{  
@@ -172,12 +165,10 @@ enum class EnumA{
 };  
   
 int main() {  
-  
     EnumA enum_value = EnumA::First;  
 }  
-  
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [C++ 組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [名前空間](../cpp/namespaces-cpp.md)   

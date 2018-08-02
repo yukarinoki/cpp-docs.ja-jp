@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::put_id メソッド |Microsoft ドキュメント
+title: Asyncbase::put_id メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a439d94cd84ef2d94abcd9bb7a8e895db47290bf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6e9a0203bd0da2ea62d015264c1f4e8c58fcae66
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859840"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463195"
 ---
 # <a name="asyncbaseputid-method"></a>AsyncBase::put_Id メソッド
 非同期操作のハンドルを設定します。  
@@ -36,11 +36,11 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `id`  
+ *ID*  
  0 以外のハンドル。  
   
 ## <a name="return-value"></a>戻り値  
- 正常終了した場合は S_OK、それ以外の場合、E_INVALIDARG または E_ILLEGAL_METHOD_CALL します。  
+ 成功した場合は s_ok を返します。それ以外の場合、E_INVALIDARG または E_ILLEGAL_METHOD_CALL します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** async.h  

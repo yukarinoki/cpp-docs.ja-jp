@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58724d2e17947c69d1aaf2ed0af66137fe20cc74
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3eeda8fd3babed4e5f9cd658ba324dfa057f66ce
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943294"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466277"
 ---
 # <a name="sizeof-operator"></a>sizeof 演算子
 型のサイズに対するオペランドのサイズが得られます**char**します。  

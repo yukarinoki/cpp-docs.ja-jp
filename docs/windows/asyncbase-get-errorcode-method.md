@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::get_errorcode メソッド |Microsoft ドキュメント
+title: Asyncbase::get_errorcode メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 88d2dd1d09b573b89e69d28071c7f689fa8396d7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fab750ce655add3ccdac9d955e1e3a36e46f8cc5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859632"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465130"
 ---
 # <a name="asyncbasegeterrorcode-method"></a>AsyncBase::get_ErrorCode メソッド
 現在の非同期操作のエラー コードを取得します。  
@@ -36,11 +36,11 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `errorCode`  
+ *エラー コード*  
  現在のエラー コードが格納されている場所です。  
   
 ## <a name="return-value"></a>戻り値  
- 正常終了した場合は S_OK、それ以外の場合、E_ILLEGAL_METHOD_CALL 現在の非同期操作が閉じている場合。  
+ 成功した場合は s_ok を返します。それ以外の場合、E_ILLEGAL_METHOD_CALL、現在の非同期操作が閉じている場合。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** async.h  

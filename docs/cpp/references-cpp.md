@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 174ab622b177766a33dd55f6b3c78ac38c26ded1
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 953c03f7c8125713afddd3b3567615be585fc9db
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956594"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463149"
 ---
 # <a name="references-c"></a>参照 (C++)
 参照は、ポインターと同じように、メモリ内の他の場所に位置するオブジェクトのアドレスを格納します。 参照は、ポインターとは異なり、初期化された後で別のオブジェクトを参照するように指定したり、null に設定したりすることはできません。 参照の 2 種類があります。 左辺値参照を参照している名前付き変数および右辺値参照を参照している、[一時オブジェクト](../cpp/temporary-objects.md)します。 & 演算子は左辺値参照を示し、&& 演算子は、コンテキストによって右辺値参照またはユニバーサル参照 (右辺値または左辺値) を示します。  
@@ -114,12 +114,8 @@ int main() {
 4  
 ```  
   
-## <a name="comment"></a>コメント  
- このセクションのトピック  
-  
--   [参照型関数の引数](../cpp/reference-type-function-arguments.md)  
-  
--   [参照型関数の戻り値](../cpp/reference-type-function-returns.md)  
-  
--   [ポインターへの参照](../cpp/references-to-pointers.md)  
+## <a name="see-also"></a>関連項目
+ [参照型関数の引数](../cpp/reference-type-function-arguments.md)  
+ [参照型関数の戻り値](../cpp/reference-type-function-returns.md)  
+ [ポインターへの参照](../cpp/references-to-pointers.md)  
   

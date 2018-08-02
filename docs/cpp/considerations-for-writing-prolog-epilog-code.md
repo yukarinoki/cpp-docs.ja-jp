@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68eff54ff2465706f5a7459b7c6c21d87c7a1b7f
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: b581a57db7e66d1547ffd90509c62353d78d478b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402316"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464122"
 ---
 # <a name="considerations-for-writing-prologepilog-code"></a>プロローグ コードとエピローグ コードを記述する際の考慮事項
-## <a name="microsoft-specific"></a>Microsoft 固有の仕様  
+ **Microsoft 固有の仕様**  
  独自のプロローグとエピローグのコード シーケンスを記述する前に、スタック フレームがどのように配置されるかを理解することが重要です。使用する方法を知っておくと便利ではまた、`__LOCAL_SIZE`シンボル。  
   
 ##  <a name="_pluslang_c.2b2b_.stack_frame_layout"></a> スタック フレームのレイアウト  

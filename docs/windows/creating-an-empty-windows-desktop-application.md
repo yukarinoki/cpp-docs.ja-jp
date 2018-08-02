@@ -1,5 +1,5 @@
 ---
-title: 空の Windows デスクトップ アプリケーションを作成する |Microsoft ドキュメント
+title: 空の Windows デスクトップ アプリケーションを作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3a86aead2c3c84cf6d28dd3807d9dec224770785
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: baff146be956b2e116cbbe90fe6ecb9187d55f3f
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883995"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464364"
 ---
 # <a name="creating-an-empty-windows-desktop-application"></a>空の Windows デスクトップ アプリケーションを作成する
 ### <a name="to-create-an-empty-windows-desktop-application"></a>空の Windows デスクトップ アプリケーションを作成するには  
   
-1.  **[ファイル]** メニューの **[新しいプロジェクト]** をクリックします。  
+1.  **[ファイル]** メニューで、**[新規作成]**、 > **[プロジェクト]** の順に作成します。  
   
 2.  **[新しいプロジェクト]** ダイアログ ボックスの左ペインで **[win32]** をクリックし、中央のペインで **[Win32 コンソール アプリケーション]** をクリックします。  
   
@@ -43,4 +43,4 @@ ms.locfileid: "33883995"
  ここで、 [空の Visual C++ プロジェクトにファイルを追加](../windows/adding-files-to-an-empty-win32-applications.md)できます。  
   
 ## <a name="see-also"></a>関連項目  
- [アプリケーションを展開します。](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [アプリケーションの配置](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

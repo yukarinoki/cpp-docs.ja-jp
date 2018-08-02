@@ -1,5 +1,5 @@
 ---
-title: Criticalsection::criticalsection コンス トラクター |Microsoft ドキュメント
+title: Criticalsection::criticalsection コンス トラクター |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d86c80d169cb6d9794f163290c30bf1b2563588b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 866159a4b3cbacae8b7ad09154fb93707fe4baac
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870898"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467353"
 ---
 # <a name="criticalsectioncriticalsection-constructor"></a>CriticalSection::CriticalSection コンストラクター
 ミュー テックス オブジェクトに似ていますが、1 つのプロセスのスレッドのみで使用できる同期オブジェクトを初期化します。  
@@ -36,11 +36,11 @@ explicit CriticalSection(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `spincount`  
- クリティカル セクション オブジェクト用のスピン カウントします。 既定値は 0 です。  
+ *spincount*  
+ クリティカル セクション オブジェクトのスピン カウントします。 既定値は 0 です。  
   
-## <a name="remarks"></a>コメント  
- クリティカル セクションおよび spincounts の詳細については、次を参照してください。、 **InitializeCriticalSectionAndSpinCount**関数については、Windows API ドキュメントの [同期] セクションでします。  
+## <a name="remarks"></a>Remarks  
+ クリティカル セクションと spincounts の詳細については、次を参照してください。、`InitializeCriticalSectionAndSpinCount`で機能、**同期**Windows API のドキュメントのセクション。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

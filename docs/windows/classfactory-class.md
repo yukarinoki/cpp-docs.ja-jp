@@ -1,5 +1,5 @@
 ---
-title: ClassFactory クラス |Microsoft ドキュメント
+title: ClassFactory クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6294634652ffc6a53a577ccd75c348ed63c502e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 97c07b5cf97578c49da9d4a72b5a232b559ec0ab
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858394"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463867"
 ---
 # <a name="classfactory-class"></a>ClassFactory クラス
-IClassFactory インターフェイスの基本機能を実装します。  
+`IClassFactory` インターフェイスの基本機能を実装します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,19 +46,19 @@ class ClassFactory : public Details::RuntimeClass<
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `I0`  
+ *I0*  
  0 番目のインターフェイスです。  
   
- `I1`  
- 最初のインターフェイスです。  
+ *I1*  
+ 最初のインターフェイス。  
   
- `I2`  
- 2 番目のインターフェイスです。  
+ *I2*  
+ 2 番目のインターフェイス。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  利用`ClassFactory`工場出荷時のユーザー定義の実装を提供します。  
   
- 次のプログラミング パターンが使用する方法を示します、 [Implements](../windows/implements-structure.md)構造体をクラス ファクトリで複数の 3 つのインターフェイスを指定します。  
+ 次のプログラミングのパターンが使用する方法を示します、[実装](../windows/implements-structure.md)構造体をクラス ファクトリを複数の 3 つのインターフェイスを指定します。  
   
  `struct MyFactory : ClassFactory<Implements<I1, I2, I3>, I4, I5>`  
   
@@ -74,10 +74,10 @@ class ClassFactory : public Details::RuntimeClass<
   
 |名前|説明|  
 |----------|-----------------|  
-|[ClassFactory::AddRef メソッド](../windows/classfactory-addref-method.md)|ClassFactory、現在の参照カウントをインクリメントします。|  
-|[ClassFactory::LockServer メソッド](../windows/classfactory-lockserver-method.md)|現在の ClassFactory オブジェクトによって追跡されているオブジェクトの基になる数ずつインクリメントまたはデクリメントします。|  
+|[ClassFactory::AddRef メソッド](../windows/classfactory-addref-method.md)|ClassFactory の現在のオブジェクトの参照カウントをインクリメントします。|  
+|[ClassFactory::LockServer メソッド](../windows/classfactory-lockserver-method.md)|現在の ClassFactory オブジェクトによって追跡されるオブジェクトの基になる数ずつインクリメントまたはデクリメントします。|  
 |[ClassFactory::QueryInterface メソッド](../windows/classfactory-queryinterface-method.md)|パラメーターで指定されたインターフェイスへのポインターを取得します。|  
-|[ClassFactory::Release メソッド](../windows/classfactory-release-method.md)|現在の ClassFactory オブジェクト、参照カウントをデクリメントします。|  
+|[ClassFactory::Release メソッド](../windows/classfactory-release-method.md)|現在の ClassFactory オブジェクトの参照カウントをデクリメントします。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `I0`  

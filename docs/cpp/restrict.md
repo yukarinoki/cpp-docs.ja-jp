@@ -1,5 +1,5 @@
 ---
-title: 制限 |Microsoft ドキュメント
+title: 制限 |Microsoft Docs
 ms.custom: ''
 ms.date: 02/09/2018
 ms.technology:
@@ -17,40 +17,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed5f91288671eaa3dcf4700ec35dae63ffaef172
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b3eb361d0b92a3977547388ebfd612915431ec98
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422889"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463682"
 ---
 # <a name="restrict"></a>restrict
 
 **Microsoft 固有の仕様**
 
-関数宣言または関数ポインター型を返す定義に適用されるときに`restrict`関数ではないオブジェクトを返すことをコンパイラに指示*エイリアス*、つまり、他のポインターで参照します。 これにより、コンパイラの最適化を実行できます。
+関数宣言または定義を返す、ポインター型に適用すると**制限**関数によって返されるオブジェクトでないことをコンパイラに指示*別名*、によってその他の参照は、ポインター。 これにより、コンパイラがその他の最適化を実行できます。
 
 ## <a name="syntax"></a>構文
 
 > **__declspec(restrict)** *pointer_return_type* *function*();  
   
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-コンパイラに反映させる`__declspec(restrict)`です。 たとえば、CRT`malloc`関数には、`__declspec(restrict)`装飾、およびそのため、コンパイラは、によってメモリ位置へのポインターが初期化されていることを想定しています`malloc`はいないエイリアス化しても存在していたポインター。
+コンパイラの伝達 **__declspec(restrict)** します。 たとえば、CRT`malloc`関数を **__declspec(restrict)** 装飾、およびそのため、コンパイラは、メモリの場所にポインターが初期化されることを想定しています`malloc`されてもいないエイリアスになって以前既存のポインター。
 
-コンパイラは、返されたポインターが実際に別名でがないことをチェックしません。 `restrict __declspec` 修飾子で示したポインターにエイリアスがないかどうか確認するのは開発者の責任です。  
+コンパイラでは、返されたポインターが実際には別名ではありませんはチェックしません。 プログラムにエイリアスがないとマークされているポインターの開発者の責任は、 **_ _declspec を制限する**修飾子。  
   
-変数によく似たセマンティクスは、次を参照してください。 [_ _restrict](../cpp/extension-restrict.md)です。
+変数によく似たセマンティクスは、次を参照してください。 [_ _restrict](../cpp/extension-restrict.md)します。
  
-関数内ではエイリアスに適用される別の注釈を参照してください。[内](../cpp/noalias.md)です。
+関数内のエイリアスに適用される別の注釈を参照してください。[内](../cpp/noalias.md)します。
   
-については、**制限**キーワードは C++ AMP の一部であるを参照してください[(C++ AMP) を制限する](../cpp/restrict-cpp-amp.md)です。  
+については、**制限**キーワードは C++ AMP の一部であるを参照してください[制限 (C++ AMP)](../cpp/restrict-cpp-amp.md)します。  
  
 ## <a name="example"></a>例  
 
-次の例では、使用する`__declspec(restrict)`です。
+次の例では、使用 **__declspec(restrict)** します。
 
-ときに`__declspec(restrict)`いるポインターを返す、このコンパイラは戻り値が指すメモリがエイリアス化されないこと関数に適用します。 この例では、ポインターで`mempool`と`memptr`グローバルには、コンパイラを参照しているメモリがエイリアス化されないことを確認することはできません。 ただし、内で使用された`ma`とその呼び出し元`init`をそれ以外の場合から参照されていない、プログラムでは、そのためメモリを返す方法で`__decslpec(restrict)`は、オプティマイザーに使用します。 これは、どの割り当て関数の装飾の CRT ヘッダーなどのような`malloc`を使用して`__declspec(restrict)`に必ず既存のポインターでエイリアス化することはできませんメモリを返すことを示すためにします。
+ときに **__declspec(restrict)** いるポインターを返す、これにより、コンパイラ、戻り値が指すメモリがエイリアス化されないことを関数に適用されます。 この例では、ポインターで`mempool`と`memptr`、グローバルには、コンパイラを参照しているメモリがエイリアス化されないことを確認することはできません。 ただし、内で使用された`ma`とその呼び出し元`init`をそれ以外の場合から参照されていない、プログラムでは、そのためメモリを返す方法で **__decslpec(restrict)** オプティマイザーに使用されます。 これは、どの割り当て関数の装飾、CRT ヘッダーなどのような`malloc`を使用して **__declspec(restrict)** を既存のポインターによって別名を設定できませんメモリを返す常にします。
 
 ```C
 // declspec_restrict.c
@@ -122,7 +122,6 @@ int main()
 **Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
-
-[キーワード](../cpp/keywords-cpp.md)  
-[__declspec](../cpp/declspec.md)  
-[内](../cpp/noalias.md)  
+ [キーワード](../cpp/keywords-cpp.md)  
+ [__declspec](../cpp/declspec.md)  
+ [内](../cpp/noalias.md)  

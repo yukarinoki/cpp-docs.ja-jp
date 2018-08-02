@@ -1,5 +1,5 @@
 ---
-title: Comptrref::getaddressof メソッド |Microsoft ドキュメント
+title: Comptrref::getaddressof メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5dc8e80fe97bc0a4ace0cb53e43f306ad2b85309
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 435b853268d1fe8c324d217d1ad14f71e4b5a295
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883308"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462938"
 ---
 # <a name="comptrrefgetaddressof-method"></a>ComPtrRef::GetAddressOf メソッド
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -34,10 +34,10 @@ InterfaceType* const * GetAddressOf() const;
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 現在の ComPtrRef オブジェクトによって表されるインターフェイスへのポインターのアドレスです。  
+ 現在によって表されるインターフェイスへのポインターのアドレス**ComPtrRef**オブジェクト。  
   
-## <a name="remarks"></a>コメント  
- 現在の ComPtrRef オブジェクトによって表されるインターフェイスへのポインターのアドレスを取得します。  
+## <a name="remarks"></a>Remarks  
+ 現在によって表されるインターフェイスへのポインターのアドレスを取得**ComPtrRef**オブジェクト。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** client.h  

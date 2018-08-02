@@ -1,5 +1,5 @@
 ---
-title: Activationfactory::gettrustlevel メソッド |Microsoft ドキュメント
+title: Activationfactory::gettrustlevel メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1e4dfbfbc146663722eba1302b27e96812d684f4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: af3ec58afd69f3fde6e2eb67969f1dad8848c5de
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854390"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466723"
 ---
 # <a name="activationfactorygettrustlevel-method"></a>ActivationFactory::GetTrustLevel メソッド
-現在の ActivationFactory がインスタンス化するオブジェクトの信頼レベルを取得します。  
+オブジェクトの信頼レベルを取得、現在**ActivationFactory**をインスタンス化します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,11 +36,11 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `trustLvl`  
- この操作の完了時、ActivationFactory がインスタンス化するランタイム クラスの信頼レベル。  
+ *trustLvl*  
+ この操作が完了したら、信頼レベルのランタイム クラス、 **ActivationFactory**をインスタンス化します。  
   
 ## <a name="return-value"></a>戻り値  
- 正常終了した場合は S_OK、それ以外の場合、アサーション エラーが生成されますと`trustLvl`FullTrust に設定されています。  
+ 成功した場合は s_ok を返します。それ以外の場合、アサーション エラーが発生したと*trustLvl* FullTrust に設定されます。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** module.h  

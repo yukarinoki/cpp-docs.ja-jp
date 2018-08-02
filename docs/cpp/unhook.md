@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 069d206418fd392e28114d977b3448f8306a3119
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 020ae54cdaaddc2f05a8c3b6e285bc2fd0403ee8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943877"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463715"
 ---
 # <a name="unhook"></a>__unhook
 イベントからハンドラー メソッドの関連付けを解除します。  
@@ -31,8 +31,7 @@ ms.locfileid: "37943877"
 ## <a name="syntax"></a>構文  
   
 ```cpp 
-  
-      long  __unhook(  
+long  __unhook(  
    &SourceClass::EventMethod,  
    source,  
    &ReceiverClass::HandlerMethod  
@@ -61,11 +60,11 @@ long  __unhook(
  アンフックされるインターフェイス名*受信者*である COM イベント レシーバーにのみ、 *layout_dependent*のパラメーター、 [event_receiver](../windows/event-receiver.md)属性が**true**します。  
   
  *source*  
- イベント ソースのインスタンスへのポインター。 コードに応じて`type`で指定されている**event_receiver**、*ソース*次のいずれかを指定できます。  
+ イベント ソースのインスタンスへのポインター。 コードに応じて`type`で指定されている`event_receiver`、*ソース*次のいずれかを指定できます。  
   
 -   ネイティブ イベント ソース オブジェクト ポインター。  
   
--   **IUnknown**-ベース ポインター (COM ソース)。  
+-   `IUnknown`-ベース ポインター (COM ソース)。  
   
 -   マネージド オブジェクトのポインター (マネージド イベントの場合)。  
   

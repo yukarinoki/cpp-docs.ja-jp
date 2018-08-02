@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d914b668140f1cbf372e29bcdd4f4b526397fb9
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3a34fa07431892493e12a6f38603965da1dbc824
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943210"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466856"
 ---
 # <a name="temporary-objects"></a>一時オブジェクト
 場合によっては、コンパイラが一時オブジェクトを作成する必要があります。 このような一時オブジェクトが作成される理由として、次のことがあります。  
@@ -54,4 +54,3 @@ ms.locfileid: "37943210"
 |------------------------------|-----------------------|  
 |式評価の結果|式の評価結果として作成されたすべての一時要素は、式ステートメントの最後に破棄されます (つまり、セミコロンの位置)、またはの制御式の末尾に**の**、**場合**、**中**、**は**、および**切り替える**ステートメント。|  
 |初期化**const**参照|初期化子が初期化されている参照と同じ型の左辺値でない場合、基になるオブジェクト型の一時オブジェクトが作成され、初期化式で初期化されます。 この一時オブジェクトは、バインド先の参照オブジェクトが破棄された直後に破棄されます。|  
-  

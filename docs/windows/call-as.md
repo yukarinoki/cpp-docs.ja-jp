@@ -1,5 +1,5 @@
 ---
-title: call_as |Microsoft ドキュメント
+title: call_as |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 68707ea7e00665d12165c7838b1a2ad3440f944d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8fb431c6aad10f7e974ed139ddf83cfb0a58d30a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860867"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465871"
 ---
 # <a name="callas"></a>call_as
-有効な[ローカル](../windows/local-cpp.md)リモート関数が呼び出されると、ローカル関数が呼び出されるように、リモート関数にマップする関数。  
+により、[ローカル](../windows/local-cpp.md)リモート関数が呼び出されると、ローカル関数が呼び出されるように、リモート関数にマップする関数。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
-      [ call_as(  
+[ call_as(  
    function  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
  *function*  
- リモート関数が呼び出されるときに呼び出される場合、ローカル関数です。  
+ ローカル関数をリモート関数を呼び出すときに呼び出されます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **Call_as** C++ 属性と同じ機能を持つ、 [call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) MIDL 属性。  
   
 ## <a name="example"></a>例  
- 次のコードは、使用する方法を示しています。 **call_as**リモート処理不可能関数にマップする (**f1**) をリモート化可能関数 (**Remf1**)。  
+ 次のコードを使用する方法を示しています。 **call_as**リモート処理不可能関数をマップする (**f1**) リモート処理可能な関数に (**Remf1**)。  
   
-```  
+```cpp  
 // cpp_attr_ref_call_as.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -65,7 +64,7 @@ __interface IMInterface {
 |||  
 |-|-|  
 |**対象**|インターフェイス メソッド|  
-|**反復可能**|×|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

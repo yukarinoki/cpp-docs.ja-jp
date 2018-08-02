@@ -1,5 +1,5 @@
 ---
-title: Creatormap::factorycreator データ メンバー |Microsoft ドキュメント
+title: Creatormap::factorycreator データ メンバー |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0d8f0c5b2feda3b62dfb17902a281c7e71bd32f5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 57f6e841326339f78d24fa8affea5e74ae5b8d74
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882330"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465384"
 ---
 # <a name="creatormapfactorycreator-data-member"></a>CreatorMap::factoryCreator データ メンバー
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -38,22 +38,22 @@ HRESULT (*factoryCreator)(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
- `currentflags`  
+ *currentflags*  
  1 つ、 [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列挙子。  
   
- `entry`  
- CreatorMap です。  
+ *entry*  
+ CreatorMap は。  
   
- `iidClassFactory`  
- クラス ファクトリのインターフェイス ID です。  
+ *iidClassFactory*  
+ クラス ファクトリのインターフェイス ID。  
   
- `factory`  
- 操作完了したとき、クラス ファクトリのアドレス。  
+ *ファクトリ*  
+ 操作が完了時は、クラス ファクトリのアドレス。  
   
 ## <a name="return-value"></a>戻り値  
  成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  指定した CreatorMap のファクトリを作成します。  
   
 ## <a name="requirements"></a>要件  

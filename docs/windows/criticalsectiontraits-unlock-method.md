@@ -1,5 +1,5 @@
 ---
-title: Criticalsectiontraits::unlock メソッド |Microsoft ドキュメント
+title: Criticalsectiontraits::unlock メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 35a632a6c88ed29ef5e30e942c1341246de75e71
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2f66f185692c200ea459b88363143c0cc1af9d55
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883499"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466011"
 ---
 # <a name="criticalsectiontraitsunlock-method"></a>CriticalSectionTraits::Unlock メソッド
-指定されたクリティカル セクション オブジェクトの解放の所有権をサポートするように CriticalSection テンプレートを専門としています。  
+指定のクリティカル セクション オブジェクトの解放の所有権をサポートするように CriticalSection テンプレートを専門としています。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,13 +36,13 @@ inline static void Unlock(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `cs`  
+ *cs*  
  クリティカル セクション オブジェクトへのポインター。  
   
-## <a name="remarks"></a>コメント  
- *型*修飾子とは見なさ`typedef CRITICAL_SECTION* Type;`です。  
+## <a name="remarks"></a>Remarks  
+ *型*として修飾子が定義されている`typedef CRITICAL_SECTION* Type;`します。  
   
- 詳細については、次を参照してください。 Windows API のマニュアルの「同期関数」セクションで"LeaveCriticalSection function"です。  
+ 詳細については、次を参照してください。 Windows API のドキュメントの「同期関数」セクションでは"により function"です。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

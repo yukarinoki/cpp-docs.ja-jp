@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9fb3cd0a4c180073499ec1bdde1ea4703ffbf9e8
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: bbe9f077fd0d80a831d319660be26090ad5411f6
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207853"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463854"
 ---
 # <a name="comptrrefoperator-void-operator"></a>Comptrref::operator void\* \*演算子
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -34,9 +34,9 @@ operator void**() const;
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 現在の ComPtrRef オブジェクトを削除します。、、ポインターでへのポインター-をとして ComPtrRef オブジェクトによって表されるインターフェイスへのポインターをキャスト`void`、キャストのポインターを返します。  
+ 現在の削除**ComPtrRef**オブジェクト、によって表されるインターフェイスへのポインターをキャスト、 **ComPtrRef**オブジェクト、ポインターでへのポインター-として**void**、し、キャストのポインターを返します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** client.h  
   
  **Namespace:** Microsoft::WRL::Details  

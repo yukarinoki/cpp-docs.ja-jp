@@ -1,5 +1,5 @@
 ---
-title: Comptr::internaladdref メソッド |Microsoft ドキュメント
+title: Comptr::internaladdref メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 55f2ffc540ba6680636b85e73b7b4fbe96068ab3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e1ae5d4216efc790fae0bc4d86bbe828fc28c473
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870287"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463094"
 ---
 # <a name="comptrinternaladdref-method"></a>ComPtr::InternalAddRef メソッド
-この ComPtr に関連付けられたインターフェイスの参照カウントをインクリメントします。  
+これに関連付けられているインターフェイスの参照カウントをインクリメント**ComPtr**します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,8 +33,8 @@ ms.locfileid: "33870287"
 void InternalAddRef() const;  
 ```  
   
-## <a name="remarks"></a>コメント  
- このメソッドは保護されています。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは保護されます。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** client.h  

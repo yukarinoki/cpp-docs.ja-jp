@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bec66d25be2cb56c75f42f60af2ccd5e3f759ad
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e773a0188eb3450ab1a13a24fc556fa8e8c4f874
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943898"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464270"
 ---
 # <a name="transfers-of-control"></a>制御の移動
 使用することができます、 **goto**ステートメントまたは**ケース**でラベル付け、**切り替える**初期化子を越えて分岐するプログラムを指定するステートメント。 初期化子を含む宣言がジャンプ ステートメントの発生元のブロックで囲まれたブロックに存在しない限り、このようなコードは無効です。  
@@ -60,4 +60,3 @@ int main()
  上記の例では、 **goto**ステートメントの初期化を越えて制御を転送しようとする`i`します。 ただし、`i` が宣言されていても初期化されていない場合、転送は有効になります。  
   
  オブジェクト`total`と`ch`として機能するブロックで宣言された、*ステートメント*の**中**ステートメントを使用して、そのブロックが終了したときに破棄されます、 **break**ステートメント。  
-  

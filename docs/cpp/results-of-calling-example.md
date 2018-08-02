@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e7b022925e22f021a2ddad1b3b9ef52924b25a3
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 9c49457aecb93b16ffb294f88e4f6643826492e2
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939108"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465699"
 ---
 # <a name="results-of-calling-example"></a>サンプル呼び出しの結果
 ## <a name="microsoft-specific"></a>Microsoft 固有の仕様  
@@ -32,7 +32,7 @@ ms.locfileid: "37939108"
  C の装飾された関数名は "_MyFunc" です。  
   
  ![CDECL 呼び出し規約](../cpp/media/vc37i01.gif "vc37I01")  
-__cdecl の呼び出し規則  
+**_ _Cdecl**呼び出し規約  
   
 ## <a name="stdcall-and-thiscall"></a>__stdcall と thiscall  
  C の装飾名 (**_ _stdcall**) は"_MyFunc@20"。 C++ の装飾名は商標で守られています。  

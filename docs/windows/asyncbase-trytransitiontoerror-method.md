@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::trytransitiontoerror メソッド |Microsoft ドキュメント
+title: Asyncbase::trytransitiontoerror メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97fcade98e82a289c172c7651f62f3de0394fe16
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc677304ae7ab61e6726366869e85f731cd92484
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863505"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463208"
 ---
 # <a name="asyncbasetrytransitiontoerror-method"></a>AsyncBase::TryTransitionToError メソッド
 指定したエラー コードが内部エラー状態を変更できるかどうかを示します。  
@@ -36,13 +36,13 @@ bool TryTransitionToError(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `error`  
+ *error*  
  エラーの hresult 値。  
   
 ## <a name="return-value"></a>戻り値  
- `true` 内部エラー状態が変更された場合それ以外の場合、`false`です。  
+ **true**内部エラー状態が変更された。 それ以外の場合**false**します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  この操作は、エラー状態は S_OK を既に設定されている場合にのみ、エラー状態を変更します。 エラー状態であるエラー、キャンセル、完了すると、または閉じられた場合は、この操作を指定しても効果はありません。  
   
 ## <a name="requirements"></a>要件  

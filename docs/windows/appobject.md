@@ -1,5 +1,5 @@
 ---
-title: appobject |Microsoft ドキュメント
+title: appobject |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aca26e156bbb6a883ed6d55a6a01da128982c127
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c0171c8cf836c95afecb74cf1909688bbbe030db
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856974"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466372"
 ---
 # <a name="appobject"></a>appobject
-完全 .exe アプリケーションに関連付けられ、関数と、コクラスのプロパティがこのグローバルに使用できることを示しますアプリケーション オブジェクトとしてコクラスを識別[タイプ ライブラリ](../mfc/automation-clients-using-type-libraries.md)です。  
+完全な .exe アプリケーションに関連付けられ、関数と、コクラスのプロパティがこのグローバルに利用できることを示しますアプリケーション オブジェクトとしてコクラスを識別する[タイプ ライブラリ](../mfc/automation-clients-using-type-libraries.md)します。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 [appobject]  
-  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **Appobject** C++ 属性と同じ機能を持つ、 [appobject](http://msdn.microsoft.com/library/windows/desktop/aa366726) MIDL 属性。  
   
 ## <a name="example"></a>例  
  次のコードは単純なクラス定義を含む属性ブロックに続く**appobject**:  
   
-```  
+```cpp  
 // cpp_attr_ref_appobject.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -62,9 +60,9 @@ class A : public ICustom {
   
 |||  
 |-|-|  
-|**対象**|**class**、 `struct`|  
-|**反復可能**|×|  
-|**必要な属性**|**coclass**|  
+|**対象**|**クラス**、**構造体**|  
+|**反復可能**|いいえ|  
+|**必要な属性**|`coclass`|  
 |**無効な属性**|なし|  
   
  属性コンテキストの詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  

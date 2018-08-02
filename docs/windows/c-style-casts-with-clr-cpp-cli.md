@@ -1,5 +1,5 @@
 ---
-title: Clr を使用して C スタイルのキャスト (C + + CLI) |Microsoft ドキュメント
+title: C スタイル キャストと/clr (C +/cli CLI) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 384aa6d1d7a4329f52157f1d002dcda2feb5cb8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ffb2e5a7276925c5f03d06a909803d001532f35
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860399"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464585"
 ---
 # <a name="c-style-casts-with-clr-ccli"></a>C スタイル キャストと /clr (C++/CLI)
-次のトピックは、共通言語ランタイムのみに適用されます。  
+次のトピックでは、共通言語ランタイムにのみ適用されます。  
   
- CLR 型に使用する場合、コンパイラは C スタイルのキャストの次の順序で、以下のいずれかにキャストをマップしようとします。  
+ CLR 型で使用すると、コンパイラは C スタイルのキャストの次の順序で、以下のいずれかにキャストをマップしようとします。  
   
 1.  const_cast  
   
@@ -37,14 +37,14 @@ ms.locfileid: "33860399"
   
 5.  static_cast plus const_cast  
   
- 上記のキャストのいずれもが、有効な場合、および式の型とターゲットの型が CLR 参照型である場合は、C スタイル キャストは実行時チェック (castclass MSIL 命令) にマップされます。 それ以外の場合、C スタイル キャストは無効とみなされ、コンパイラ エラーが発生します。  
+ キャストの上に示したが、有効な場合、および式の型とターゲットの型が CLR 参照型である場合は、C スタイル キャストは実行時チェック (castclass MSIL 命令) にマップします。 それ以外の場合、C スタイル キャストは無効とみなされ、コンパイラがエラーを発行します。  
   
-## <a name="remarks"></a>コメント  
- C スタイル キャストは推奨されません。 コンパイルするときに[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)を使用して[safe_cast](../windows/safe-cast-cpp-component-extensions.md)です。  
+## <a name="remarks"></a>Remarks  
+ C スタイル キャストは推奨されません。 コンパイルするときに[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)を使用して、 [safe_cast](../windows/safe-cast-cpp-component-extensions.md)します。  
   
- 次のサンプルは、C スタイルのキャストにマップされる、`const_cast`です。  
+ 次の例は、C スタイルのキャストにマップされる、 **const_cast**します。  
   
-```  
+```cpp  
 // cstyle_casts_1.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -56,9 +56,9 @@ int main() {
 }  
 ```  
   
- 次のサンプルは、C スタイルのキャストにマップされる、`safe_cast`です。  
+ 次の例は、C スタイルのキャストにマップされる、 **safe_cast**します。  
   
-```  
+```cpp  
 // cstyle_casts_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -68,9 +68,9 @@ int main() {
 }  
 ```  
   
- 次のサンプルは、C スタイルのキャストにマップされる、 `safe_cast` plus`const_cast`です。  
+ 次の例は、C スタイルのキャストにマップされる、 **safe_cast** plus **const_cast**します。  
   
-```  
+```cpp  
 // cstyle_casts_3.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -89,9 +89,9 @@ int main() {
 }  
 ```  
   
- 次のサンプルは、C スタイルのキャストにマップされる、`static_cast`です。  
+ 次の例は、C スタイルのキャストにマップされる、 **static_cast**します。  
   
-```  
+```cpp  
 // cstyle_casts_4.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -110,9 +110,9 @@ int main() {
 }  
 ```  
   
- 次のサンプルは、C スタイルのキャストにマップされる、 `static_cast` plus`const_cast`です。  
+ 次の例は、C スタイルのキャストにマップされる、 **static_cast** plus **const_cast**します。  
   
-```  
+```cpp  
 // cstyle_casts_5.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -131,9 +131,9 @@ int main() {
 }  
 ```  
   
- 次の例を C スタイル キャストは実行時チェックにマップされるを示しています。  
+ 次の例を C スタイルのキャストを実行時チェックにマップします。  
   
-```  
+```cpp  
 // cstyle_casts_6.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -152,9 +152,9 @@ int main() {
 }  
 ```  
   
- 次の例では、無効な C スタイルのキャスト、これにより、コンパイラはエラーを発行します。  
+ 次の例では、無効な C スタイルのキャスト、これにより、コンパイラ エラーを発行します。  
   
-```  
+```cpp  
 // cstyle_casts_7.cpp  
 // compile with: /clr  
 using namespace System;  

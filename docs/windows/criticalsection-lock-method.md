@@ -1,5 +1,5 @@
 ---
-title: Criticalsection::lock メソッド |Microsoft ドキュメント
+title: Criticalsection::lock メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c873494a702802b8ead3dab9cac28557664f618
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a4fee4991459ddbab0ac370f025776529a6bd1e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871326"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464549"
 ---
 # <a name="criticalsectionlock-method"></a>CriticalSection::Lock メソッド
-指定されたクリティカル セクション オブジェクトの所有権を待機します。 この関数は、呼び出し元のスレッドには、所有権が付与されるを返します。  
+指定されたクリティカル セクション オブジェクトの所有権を待機します。 呼び出し元のスレッドの所有権が付与されると、関数を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,14 +38,14 @@ SyncLock Lock();
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `cs`  
- クリティカル セクションのユーザーが指定したオブジェクトです。  
+ *cs*  
+ ユーザー指定のクリティカル セクション オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
  現在の重要なセクションのロック解除に使用できるロック オブジェクト。  
   
-## <a name="remarks"></a>コメント  
- 最初の**ロック**関数が現在のクリティカル セクション オブジェクトに影響します。 2 番目**ロック**関数、ユーザー指定のクリティカル セクションに影響します。  
+## <a name="remarks"></a>Remarks  
+ 最初の**ロック**関数が現在のクリティカル セクション オブジェクトに影響します。 2 番目の**ロック**関数、ユーザー指定のクリティカル セクションに影響を与えます。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

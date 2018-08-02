@@ -1,5 +1,5 @@
 ---
-title: Comptr::ptr _ データ メンバー |Microsoft ドキュメント
+title: Comptr::ptr _ データ メンバー |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d995c8e35ed35d4581d8eec8b74fda1ebbca6519
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d22112e3478e17e8ed9688749c83cf1c3997d7e3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880808"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465101"
 ---
 # <a name="comptrptr-data-member"></a>ComPtr::ptr_ データ メンバー
-この ComPtr に関連付けられ、管理されているインターフェイスへのポインターが含まれています。  
+使用すると、関連付けられているされ、これによって管理されるインターフェイスへのポインターを含む**ComPtr**します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,8 +33,8 @@ ms.locfileid: "33880808"
 InterfaceType *ptr_;  
 ```  
   
-## <a name="remarks"></a>コメント  
- `ptr_` 内部で保護されたデータ メンバーです。  
+## <a name="remarks"></a>Remarks  
+ **ptr _** は内部の保護されたデータ メンバーです。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** client.h  

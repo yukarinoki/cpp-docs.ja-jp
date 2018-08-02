@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db5bc6b2547fb77dd887f96b6c33dee536e43f77
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 1de2bedf9a582d0adbb5b99c9e719327f3b8b90a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025904"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465995"
 ---
 # <a name="comptrasiid-method"></a>ComPtr::AsIID メソッド
-指定されたインターフェイス ID で識別されるインターフェイスを表す ComPtr オブジェクトを返します。  
+返します、 **ComPtr**指定したインターフェイス ID で識別されるインターフェイスを表すオブジェクトを  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,16 +37,16 @@ WRL_NOTHROW HRESULT AsIID(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `riid`  
+ *riid*  
  インターフェイス ID。  
   
- `p`  
- オブジェクトのインターフェイス ID を持つと等しい場合`riid`で指定されたインターフェイスを二重間接ポインター、`riid`パラメーター、それ以外の IUnknown へのポインター。  
+ *p*  
+ オブジェクトのインターフェイス ID を持つと等しい場合*riid*で指定されたインターフェイスを二重間接ポインター、 *riid*パラメーター、それ以外へのポインター`IUnknown`します。  
   
 ## <a name="return-value"></a>戻り値  
  成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** client.h  
   
  **名前空間:** Microsoft::WRL  

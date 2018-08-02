@@ -1,5 +1,5 @@
 ---
-title: AsyncStatusInternal 列挙型 |Microsoft ドキュメント
+title: AsyncStatusInternal 列挙型 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 150169442aa68395b4dc8a4f4c74951e877f18f5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a68189c461453dc72585ff4034df5ba69bb41bd5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863726"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464877"
 ---
 # <a name="asyncstatusinternal-enumeration"></a>AsyncStatusInternal 列挙型
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -33,24 +33,24 @@ WRL インフラストラクチャをサポートし、コードから直接使�
 enum AsyncStatusInternal;  
 ```  
   
-## <a name="remarks"></a>コメント  
- 非同期操作の状態の内部列挙値の間のマッピングを指定し、 **Windows::Foundation::AsyncStatus**列挙します。  
+## <a name="remarks"></a>Remarks  
+ 非同期操作の状態の内部列挙値の間のマッピングを指定します、`Windows::Foundation::AsyncStatus`列挙体。  
   
 ## <a name="members"></a>メンバー  
- `_Created`  
- 等価:: Windows::Foundation::AsyncStatus:: を作成  
+ *_Created*  
+ 同じです:: Windows::Foundation::AsyncStatus:: 作成  
   
- `_Started`  
- 等価:: Windows::Foundation::AsyncStatus:: 開始  
+ *_Started*  
+ 同じです:: Windows::Foundation::AsyncStatus:: 開始  
   
- `_Completed`  
- 等価:: Windows::Foundation::AsyncStatus:: 完了  
+ *_Completed*  
+ 同じです:: Windows::Foundation::AsyncStatus:: 完了  
   
- `_Cancelled`  
- 等価:: Windows::Foundation::AsyncStatus:: 取り消されました  
+ *_Cancelled*  
+ 同じです:: Windows::Foundation::AsyncStatus:: が取り消されました  
   
- `_Error`  
- 等価:: Windows::Foundation::AsyncStatus::Error  
+ *エラー (_e)*  
+ 同じです:: Windows::Foundation::AsyncStatus::Error  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** async.h  

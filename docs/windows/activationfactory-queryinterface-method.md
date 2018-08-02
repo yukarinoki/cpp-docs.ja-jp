@@ -1,5 +1,5 @@
 ---
-title: Activationfactory::queryinterface メソッド |Microsoft ドキュメント
+title: Activationfactory::queryinterface メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2d93a2f61e92172c94fef2406fc6caa2de71ab8e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c825e7e67844fc094e4cf9ce775152d334664d5a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854510"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465247"
 ---
 # <a name="activationfactoryqueryinterface-method"></a>ActivationFactory::QueryInterface メソッド
-指定されたインターフェイスへのポインターを取得します。  
+指定したインターフェイスへのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,11 +36,11 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `riid`  
+ *riid*  
  インターフェイス ID。  
   
- `ppvObject`  
- この操作が終了すると、パラメーターで指定されたインターフェイスへのポインター`riid`です。  
+ *ppvObject*  
+ この操作が完了すると、パラメーターで指定されたインターフェイスへのポインター *riid*します。  
   
 ## <a name="return-value"></a>戻り値  
  成功した場合は S_OK、そうでない場合は失敗を示す HRESULT。  

@@ -1,5 +1,5 @@
 ---
-title: CriticalSection クラス |Microsoft ドキュメント
+title: CriticalSection クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8b5eda8fb22f72bd1f50801f9993b9bd7a864d35
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0b8aa37f6ac12cad91fa02a2387c95911227319d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871511"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466138"
 ---
 # <a name="criticalsection-class"></a>CriticalSection クラス
 クリティカル セクション オブジェクトを表します。  
@@ -37,22 +37,22 @@ class CriticalSection;
   
 ### <a name="constructor"></a>コンストラクター  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CriticalSection::CriticalSection コンストラクター](../windows/criticalsection-criticalsection-constructor.md)|ミュー テックス オブジェクトに似ていますが、1 つのプロセスのスレッドのみで使用できる同期オブジェクトを初期化します。|  
-|[CriticalSection::~CriticalSection デストラクター](../windows/criticalsection-tilde-criticalsection-destructor.md)|初期化を解除し、現在の CriticalSection オブジェクトを破棄します。|  
+|[CriticalSection::~CriticalSection デストラクター](../windows/criticalsection-tilde-criticalsection-destructor.md)|初期化を解除し、現在の破棄**CriticalSection**オブジェクト。|  
   
 ### <a name="public-methods"></a>パブリック メソッド  
   
 |名前|説明|  
 |----------|-----------------|  
-|[CriticalSection::TryLock メソッド](../windows/criticalsection-trylock-method.md)|ブロックすることがなく、クリティカル セクションを入力しようとしています。 呼び出しが成功した場合、呼び出し元スレッドは、クリティカル セクションの所有権を取得します。|  
-|[CriticalSection::Lock メソッド](../windows/criticalsection-lock-method.md)|指定されたクリティカル セクション オブジェクトの所有権を待機します。 この関数は、呼び出し元のスレッドには、所有権が付与されるを返します。|  
+|[CriticalSection::TryLock メソッド](../windows/criticalsection-trylock-method.md)|ブロックすることがなく、クリティカル セクションを入力しようとします。 呼び出しが成功した場合、呼び出し元のスレッドはクリティカル セクションの所有権を取得します。|  
+|[CriticalSection::Lock メソッド](../windows/criticalsection-lock-method.md)|指定されたクリティカル セクション オブジェクトの所有権を待機します。 呼び出し元のスレッドの所有権が付与されると、関数を返します。|  
 |[CriticalSection::IsValid メソッド](../windows/criticalsection-isvalid-method.md)|現在の重要なセクションが有効かどうかを示します。|  
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CriticalSection::cs_ データ メンバー](../windows/criticalsection-cs-data-member.md)|クリティカル セクションのデータ メンバーを宣言します。|  
   

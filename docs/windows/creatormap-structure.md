@@ -1,5 +1,5 @@
 ---
-title: CreatorMap 構造体 |Microsoft ドキュメント
+title: CreatorMap 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a6113737d7463354ffa273ced61b190246f63a83
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fadba5993b7445af2386f6e0669f210e29560c6c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873285"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464257"
 ---
 # <a name="creatormap-structure"></a>CreatorMap 構造体
 Windows ランタイム C++ テンプレート ライブラリのインフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -34,16 +34,16 @@ Windows ランタイム C++ テンプレート ライブラリのインフラス
 struct CreatorMap;  
 ```  
   
-## <a name="remarks"></a>コメント  
- 初期化、登録、およびオブジェクトの登録を解除する方法についてを説明します。  
+## <a name="remarks"></a>Remarks  
+ 初期化し登録、およびオブジェクトの登録を解除する方法についてを説明します。  
   
- CreatorMap には、次の情報が含まれています。  
+ **CreatorMap**次の情報が含まれています。  
   
--   初期化、登録、およびオブジェクトの登録を解除する方法。  
+-   初期化し登録、およびオブジェクトの登録を解除する方法。  
   
--   従来の COM または Windows ランタイム ファクトリによってライセンス認証データを比較する方法。  
+-   従来の COM または Windows ランタイムのファクトリによってライセンス認証データを比較する方法。  
   
--   インターフェイスのファクトリ キャッシュおよびサーバー名に関する情報です。  
+-   インターフェイスのファクトリ キャッシュおよびサーバー名について説明します。  
   
 ## <a name="members"></a>メンバー  
   
@@ -51,10 +51,10 @@ struct CreatorMap;
   
 |名前|説明|  
 |----------|-----------------|  
-|[CreatorMap::activationId データ メンバー](../windows/creatormap-activationid-data-member.md)|クラシック COM クラス ID または Windows ランタイム名前によって識別されるオブジェクト ID を表します。|  
-|[CreatorMap::factoryCache データ メンバー](../windows/creatormap-factorycache-data-member.md)|CreatorMap のファクトリ キャッシュへのポインターを格納します。|  
-|[CreatorMap::factoryCreator データ メンバー](../windows/creatormap-factorycreator-data-member.md)|指定した CreatorMap のファクトリを作成します。|  
-|[CreatorMap::serverName データ メンバー](../windows/creatormap-servername-data-member.md)|CreatorMap のサーバー名を格納します。|  
+|[CreatorMap::activationId データ メンバー](../windows/creatormap-activationid-data-member.md)|クラシック COM クラスの ID または Windows ランタイムの名前によって識別されるオブジェクト ID を表します。|  
+|[CreatorMap::factoryCache データ メンバー](../windows/creatormap-factorycache-data-member.md)|工場出荷時のキャッシュへのポインターを格納、 **CreatorMap**します。|  
+|[CreatorMap::factoryCreator データ メンバー](../windows/creatormap-factorycreator-data-member.md)|指定したファクトリを作成します**CreatorMap**します。|  
+|[CreatorMap::serverName データ メンバー](../windows/creatormap-servername-data-member.md)|サーバー名を格納、 **CreatorMap**します。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CreatorMap`  

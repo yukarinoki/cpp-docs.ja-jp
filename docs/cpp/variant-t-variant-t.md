@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14386e737d136b91f8864eeaa182038b62df72e0
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 4ef7551047449167ff60372da146618fbdc4e564
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943318"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464163"
 ---
 # <a name="varianttvariantt"></a>_variant_t::_variant_t
 **Microsoft 固有の仕様**  
@@ -32,7 +32,6 @@ ms.locfileid: "37943318"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 _variant_t( ) throw( );  
   
 _variant_t(  
@@ -200,7 +199,7 @@ _variant_t(
  **符号なし int**新しいにコピーされる値`_variant_t`オブジェクト。  
   
  *i8Src*  
- _ _**Int64**新しいにコピーされる値`_variant_t`オブジェクト。  
+ **_ _Int64**新しいにコピーされる値`_variant_t`オブジェクト。  
   
  *ui8Src*  
  **符号なし _ _int64**新しいにコピーされる値`_variant_t`オブジェクト。  
@@ -215,7 +214,7 @@ _variant_t(
   
 -   **_variant_t( _variant_t&**  *var_t_Src*  **)** Constructs a `_variant_t` object from another `_variant_t` object. バリアント型は保持されます。  
   
--   **_variant_t (VARIANT &***varSrc* **、bool**`fCopy`**)** を構築、`_variant_t`既存のオブジェクト`VARIANT`オブジェクト。       場合`fCopy`は**false**、**バリアント**オブジェクトは、コピーを作成せず、新しいオブジェクトにアタッチされています。  
+-   **_variant_t (VARIANT &***varSrc* **、bool**`fCopy`**)** を構築、`_variant_t`既存のオブジェクト`VARIANT`オブジェクト。       場合*fCopy*は**false**、**バリアント**オブジェクトは、コピーを作成せず、新しいオブジェクトにアタッチされています。  
   
 -   **_variant_t (short***sSrc* **、VARTYPE**`vtSrc`**= VT_I2)** を構築、 `_variant_t` からVT_I2またはVT_BOOLの型のオブジェクト**短い**整数値。       その他の`VARTYPE`E_INVALIDARG エラーが発生します。  
   

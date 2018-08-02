@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::errorcode メソッド |Microsoft ドキュメント
+title: Asyncbase::errorcode メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: abd3eae18d793739866b6c0dd8a1b6a994093c93
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 580df181e544ced6594b049b85d7f147bd2fe22e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859580"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464617"
 ---
 # <a name="asyncbaseerrorcode-method"></a>AsyncBase::ErrorCode メソッド
 現在の非同期操作のエラー コードを取得します。  
@@ -36,10 +36,10 @@ inline void ErrorCode(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `error`  
+ *error*  
  この操作が現在のエラー コードを格納する場所です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  この操作は、スレッド セーフです。  
   
 ## <a name="requirements"></a>要件  

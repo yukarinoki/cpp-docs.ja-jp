@@ -1,5 +1,5 @@
 ---
-title: Classfactory::queryinterface メソッド |Microsoft ドキュメント
+title: Classfactory::queryinterface メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b939fdd593c031eb3e750ff6b41a275fa5685cda
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0c0132ddeb7a8bfa30f95d3e4c85ec03962361f3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855989"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467093"
 ---
 # <a name="classfactoryqueryinterface-method"></a>ClassFactory::QueryInterface メソッド
 パラメーターで指定されたインターフェイスへのポインターを取得します。  
@@ -36,11 +36,11 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `riid`  
+ *riid*  
  インターフェイス ID。  
   
- `ppvObject`  
- この操作の完了時、パラメーターで指定されたインターフェイスへのポインター`riid`です。  
+ *ppvObject*  
+ ときにこの操作が完了すると、パラメーターで指定されたインターフェイスへのポインター *riid*します。  
   
 ## <a name="return-value"></a>戻り値  
  成功した場合は S_OK、そうでない場合は失敗を示す HRESULT。  
