@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::trytransitiontocompleted メソッド |Microsoft ドキュメント
+title: Asyncbase::trytransitiontocompleted メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1f628acd1424af11cab5040b2c65d528f1774dff
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f2185b83a393860904903f4b82b3c3b42a2c3b33
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861260"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460743"
 ---
 # <a name="asyncbasetrytransitiontocompleted-method"></a>AsyncBase::TryTransitionToCompleted メソッド
 現在の非同期操作が完了したかどうかを示します。  
@@ -36,7 +36,7 @@ bool TryTransitionToCompleted(
 ```  
   
 ## <a name="return-value"></a>戻り値  
- `true` 非同期操作が完了している場合それ以外の場合、`false`です。  
+ **true**場合は、非同期の操作が完了するとします。 それ以外の場合、 **false**します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** async.h  

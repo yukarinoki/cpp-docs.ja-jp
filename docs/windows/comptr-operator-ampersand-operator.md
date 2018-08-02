@@ -1,5 +1,5 @@
 ---
-title: Comptr::operator&amp;演算子 |Microsoft ドキュメント
+title: Comptr::operator&amp;演算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bfe8cf9091d888c33420f53f584ca5509d80527
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0afff1699a4c7a3a14f07967cfb5ba5727ba0320
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872407"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461563"
 ---
 # <a name="comptroperatoramp-operator"></a>Comptr::operator&amp;演算子
-これに関連付けられているインターフェイスを解放`ComPtr`オブジェクトし、のアドレスを取得し、`ComPtr`オブジェクト。  
+これに関連付けられているインターフェイスを解放**ComPtr**オブジェクトし、のアドレスを取得し、 **ComPtr**オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,10 +36,10 @@ const Details::ComPtrRef<const WeakRef> operator&() const
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 現在への弱い参照`ComPtr`です。  
+ 現在の弱い参照を**ComPtr**します。  
   
-## <a name="remarks"></a>コメント  
- このメソッドが異なる[comptr::getaddressof](../windows/comptr-getaddressof-method.md)点で、このメソッドは、インターフェイス ポインターへの参照を解放します。 使用して`ComPtr::GetAddressOf`インターフェイス ポインターのアドレスを必要なものの、そのインターフェイスを解放したくないとき。  
+## <a name="remarks"></a>Remarks  
+ このメソッドが異なる[comptr::getaddressof](../windows/comptr-getaddressof-method.md)ことで、このメソッドは、インターフェイス ポインターへの参照を解放します。 使用`ComPtr::GetAddressOf`インターフェイス ポインターのアドレスが必要ですが、そのインターフェイスを解放したくないです。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** client.h  

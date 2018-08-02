@@ -20,45 +20,45 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70a3406d53296c778eba2ce9a6794afac2c846bd
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 9315c2bb946cd80dd68153543ad6ae532ec9b7a0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939807"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460873"
 ---
 # <a name="variantt-class"></a>_variant_t クラス
 **Microsoft 固有の仕様**  
   
- `_variant_t` オブジェクトは、`VARIANT` データ型をカプセル化します。 クラスがリソースの割り当てと解放を管理し、関数の呼び出し`VariantInit`と`VariantClear`に応じて。  
+ A **_variant_t**オブジェクトによってカプセル化、`VARIANT`データ型。 クラスがリソースの割り当てと解放を管理し、関数の呼び出し`VariantInit`と`VariantClear`に応じて。  
   
 ### <a name="construction"></a>構築  
   
 |||  
 |-|-|  
-|[_variant_t](../cpp/variant-t-variant-t.md)|`_variant_t` オブジェクトを構築します。|  
+|[_variant_t](../cpp/variant-t-variant-t.md)|構築、 **_variant_t**オブジェクト。|  
   
 ### <a name="operations"></a>オペレーション  
   
 |||  
 |-|-|  
-|[添付](../cpp/variant-t-attach.md)|アタッチを`VARIANT`オブジェクトを`_variant_t`オブジェクト。|  
+|[添付](../cpp/variant-t-attach.md)|アタッチを`VARIANT`オブジェクトを **_variant_t**オブジェクト。|  
 |[クリア](../cpp/variant-t-clear.md)|カプセル化されたクリア`VARIANT`オブジェクト。|  
-|[ChangeType](../cpp/variant-t-changetype.md)|型を変更、`_variant_t`オブジェクトを指定された`VARTYPE`します。|  
-|[デタッチ](../cpp/variant-t-detach.md)|カプセル化されたデタッチ`VARIANT`オブジェクトからこの`_variant_t`オブジェクト。|  
-|[SetString](../cpp/variant-t-setstring.md)|この `_variant_t` オブジェクトに文字列を代入します。|  
+|[ChangeType](../cpp/variant-t-changetype.md)|型を変更、 **_variant_t**オブジェクトを指定された`VARTYPE`します。|  
+|[デタッチ](../cpp/variant-t-detach.md)|カプセル化されたデタッチ`VARIANT`オブジェクトからこの **_variant_t**オブジェクト。|  
+|[SetString](../cpp/variant-t-setstring.md)|これに文字列を割り当てます **_variant_t**オブジェクト。|  
   
 ### <a name="operators"></a>演算子  
   
 |||  
 |-|-|  
-|[演算子 =](../cpp/variant-t-operator-equal.md)|既存の `_variant_t` オブジェクトに新しい値を代入します。|  
-|[演算子 = =、! =](../cpp/variant-t-relational-operators.md)|2 つの `_variant_t` オブジェクトを比較して、等しいかどうかを確認します。|  
+|[演算子 =](../cpp/variant-t-operator-equal.md)|既存の新しい値を割り当てます **_variant_t**オブジェクト。|  
+|[演算子 = =、! =](../cpp/variant-t-relational-operators.md)|比較する 2 つ **_variant_t**等値または非等値オブジェクトです。|  
 |[エクス トラクター](../cpp/variant-t-extractors.md)|カプセル化されたデータを抽出`VARIANT`オブジェクト。|  
   
 **Microsoft 固有の仕様はここまで**  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<comutil.h >  
   
  **Lib:** comsuppw.lib または comsuppwd.lib (を参照してください[/Zc:wchar_t (wchar_t をネイティブ型)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)詳細)  

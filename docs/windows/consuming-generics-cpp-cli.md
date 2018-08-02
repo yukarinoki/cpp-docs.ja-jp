@@ -1,5 +1,5 @@
 ---
-title: ジェネリックの使用 (C + + CLI) |Microsoft ドキュメント
+title: ジェネリックの使用 (C +/cli CLI) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 286d032a3ae01bf146d25583bff18ef94e6cccd6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d8282079099b0b67b144f768a69f724e39305385
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870820"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460492"
 ---
 # <a name="consuming-generics-ccli"></a>ジェネリックの使用 (C++/CLI)
-1 つの .NET 言語で作成されたジェネリックは、他の .NET 言語で使用することがあります。 テンプレートとは異なり、コンパイルされたアセンブリ内のジェネリック残ってジェネリックです。 したがって、別のアセンブリでは、ジェネリック型が定義されているアセンブリとは異なる言語であっても、ジェネリック型をインスタンス化いずれかの可能性があります。  
+1 つの .NET 言語で作成されたジェネリックは、他の .NET 言語で使用することがあります。 テンプレートとは異なり、コンパイル済みアセンブリのジェネリックはまだジェネリックは残ります。 したがって、ジェネリック型が定義されているアセンブリとは異なる言語であっても、別のアセンブリでは、ジェネリック型をインスタンス化いずれかの可能性があります。  
   
 ## <a name="example"></a>例  
   
@@ -32,7 +32,7 @@ ms.locfileid: "33870820"
   
 ### <a name="code"></a>コード  
   
-```  
+```cs  
 // consuming_generics_from_other_NET_languages.cs  
 // compile with: /target:library  
 // a C# program  
@@ -95,7 +95,7 @@ public class CircularList<ItemType> {
   
 ### <a name="code"></a>コード  
   
-```  
+```cpp  
 // consuming_generics_from_other_NET_languages_2.cpp  
 // compile with: /clr  
 #using <consuming_generics_from_other_NET_languages.dll>  

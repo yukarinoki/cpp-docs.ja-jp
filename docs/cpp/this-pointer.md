@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d150d2419885c2f0273e376fd58750417ced6756
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f63b2d129e0eb6e9986942e4286eb1728d4be797
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943498"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462220"
 ---
 # <a name="this-pointer"></a>this ポインター
 **この**ポインターは、ポインターの非静的メンバー関数内でのみアクセス可能な**クラス**、**構造体**、または**共用体**型。 これは、呼び出されるメンバー関数によって処理されるオブジェクトを指します。 静的メンバー関数はありません、**この**ポインター。  
@@ -31,7 +31,6 @@ ms.locfileid: "37943498"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 this   
 this->member-identifier  
 ```  
@@ -201,4 +200,3 @@ int main()
   
 ## <a name="see-also"></a>関連項目  
  [キーワード](../cpp/keywords-cpp.md)   
- 

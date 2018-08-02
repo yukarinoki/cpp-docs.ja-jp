@@ -1,5 +1,5 @@
 ---
-title: Classfactory::release メソッド |Microsoft ドキュメント
+title: Classfactory::release メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6aa548bcca7f443a311e594eb3a68b4f7f2f03d1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 293c95bb95feb1fa021fa742a90939c6680e7b0d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33866766"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460642"
 ---
 # <a name="classfactoryrelease-method"></a>ClassFactory::Release メソッド
-現在の ClassFactory オブジェクト、参照カウントをデクリメントします。  
+参照が現在のカウントをデクリメント**ClassFactory**オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
