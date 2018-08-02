@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ce7c57688fae22c3bba844cff480ae3aec03785
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 4439ec167cca7a2e3314879faf4c65c842801e90
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028139"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465474"
 ---
 # <a name="summary-of-scope-rules"></a>スコープ規則の概要
 名前の使用はスコープ内で明確である必要があります (オーバーロードが決定される段階まで)。 名前が関数を表している場合、関数はパラメーターの数と型に対し明確でなければなりません。 名前のあいまいさのないままの場合[メンバー アクセス](../cpp/member-access-control-cpp.md)規則が適用されます。  

@@ -1,5 +1,5 @@
 ---
-title: 終了ハンドラーの記述 |Microsoft ドキュメント
+title: 終了ハンドラーの記述 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d37319e50e7d2429ca9b64c5fc81d8c7c4418ed5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d9773817337bce2f054b279724db9859cc2faa41
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32423237"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462834"
 ---
 # <a name="writing-a-termination-handler"></a>終了ハンドラーの記述
 例外ハンドラーとは異なり、終了ハンドラーは、コードの保護されたブロックが正常に終了したかどうかに関係なく、常に実行されます。 終了ハンドラーの唯一の目的は、コードのセクションの実行がどのように終了したかに関係なく、メモリ、ハンドル、ファイルなどのリソースが適切に閉じられるようにすることです。  
@@ -37,9 +37,9 @@ ms.locfileid: "32423237"
   
 -   [Try-finally ステートメント](../cpp/try-finally-statement.md)  
   
--   [リソースのクリーンアップ](../cpp/cleaning-up-resources.md)  
+-   [リソースをクリーンアップします。](../cpp/cleaning-up-resources.md)  
   
--   [例外処理のアクションのタイミング](../cpp/timing-of-exception-handling-a-summary.md)  
+-   [例外の処理アクションのタイミング](../cpp/timing-of-exception-handling-a-summary.md)  
   
 -   [終了ハンドラーに関する制約](../cpp/restrictions-on-termination-handlers.md)  
   

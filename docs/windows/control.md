@@ -1,5 +1,5 @@
 ---
-title: コントロール |Microsoft ドキュメント
+title: コントロール |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8e80736ca84b551f197cc475aed4c7b54b9bf52
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93ffba61c9e0edaf3d127a7ddfb12b098ae484ca
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870833"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466488"
 ---
 # <a name="control"></a>control
-ユーザー定義型がコントロールであることを指定します。  
+コントロールに、ユーザー定義型を指定します。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 [control]  
-  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **コントロール**属性の意味、[コクラス](../windows/coclass.md)属性。 **コントロール**C++ 属性と同じ機能を持つ、[コントロール](http://msdn.microsoft.com/library/windows/desktop/aa366764)MIDL 属性。  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp  
 // cpp_attr_ref_control.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -61,8 +59,8 @@ class CTest : public ICustom {};
   
 |||  
 |-|-|  
-|**対象**|**class**、 `struct`|  
-|**反復可能**|×|  
+|**対象**|**クラス**、**構造体**|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

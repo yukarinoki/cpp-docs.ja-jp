@@ -1,5 +1,5 @@
 ---
-title: async_uuid |Microsoft ドキュメント
+title: async_uuid |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 857b10e206e5a4a3208086e5b7b1455f58bc40a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c76aee3ce1e56f60e966094bb2d634269cd5e3a9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856906"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466749"
 ---
 # <a name="asyncuuid"></a>async_uuid
-COM インターフェイスの同期および非同期の両方のバージョンを定義する MIDL コンパイラに指示する UUID を指定します。  
+同期および非同期の両方のバージョンの COM インターフェイスを定義する、MIDL コンパイラに指示する UUID を指定します。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
-      [async_uuid (  
+[async_uuid (  
    uuid  
 )]  
 ```  
@@ -40,12 +39,12 @@ COM インターフェイスの同期および非同期の両方のバージョ�
  *uuid*  
  インターフェイスのバージョンを識別するための UUID。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **Async_uuid** C++ 属性と同じ機能を持つ、 [async_uuid](http://msdn.microsoft.com/library/windows/desktop/aa366735) MIDL 属性。  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp  
 // cpp_attr_ref_async_uuid.cpp  
 // compile with: /LD  
 #include <Windows.h>  
@@ -64,7 +63,7 @@ __interface ICustom {
 |||  
 |-|-|  
 |**対象**|`interface`|  
-|**反復可能**|×|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|**デュアル**、**ディスパッチ インターフェイス**|  
   

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13971ede3aef6d223b1c631c4a28f8bf190e7174
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 8775f752a541d2a250e9c1c5a0c325b684335988
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37938784"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464601"
 ---
 # <a name="restrictions-on-exception-handlers"></a>例外ハンドラーに関する制約
 例外ハンドラーのコードで使用する主な制限が使用できないことを**goto**ステートメントにジャンプ、 **_ _try**ステートメント ブロックです。 代わりに、制御の標準フローに従ってステートメント ブロックに入る必要があります。 外部にジャンプすることができます、 **_ _try**ステートメントをブロックしを選択すると、例外ハンドラーを入れ子にします。  

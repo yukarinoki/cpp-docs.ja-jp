@@ -1,5 +1,5 @@
 ---
-title: 式のセマンティクス |Microsoft ドキュメント
+title: 式のセマンティクス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8419ea4e446c8bf2f555c680079ccb91cc26afb5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3675e8bca6f62a1fbc7e30beefc6cbf6efbf197c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424129"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462743"
 ---
 # <a name="semantics-of-expressions"></a>式のセマンティクス
-式は、式の演算子の優先順位とグループ化に従って評価されます ([演算子の優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)で[構文規則](../cpp/lexical-conventions.md)式に演算子を示している、C++ の関係を示しています)。  
+式は、式の演算子の優先順位とグループ化に従って評価されます ([演算子の優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)で[構文規則](../cpp/lexical-conventions.md)演算子が式を課す、C++ の関係を示しています)。  
   
 ## <a name="order-of-evaluation"></a>評価の順序  
  次の例について考えます。  
@@ -70,7 +70,7 @@ int main()
  上の図のような式は、純粋に式の副作用 (この場合は標準出力デバイスへの情報転送) のためだけに評価されます。  
   
 ## <a name="notation-in-expressions"></a>式の表記  
- C++ 言語では、オペランドを指定するときに、特定の互換性を指定します。 次の表のオペランドの型指定できる型のオペランドを必要とする演算子を*型*です。  
+ C++ 言語では、オペランドを指定するときに、特定の互換性を指定します。 次の表は型のオペランドを必要とする演算子をオペランドの型を指定できる*型*します。  
   
 ### <a name="operand-types-acceptable-to-operators"></a>演算子に適切なオペランドの型  
   

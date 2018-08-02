@@ -1,5 +1,5 @@
 ---
-title: ArgTraitsHelper 構造体 |Microsoft ドキュメント
+title: ArgTraitsHelper 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6205d69962d70d9da76c932fdd8b3f66f491ebc9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1bb8dfeff0e1f3e659e0d3c6514904df39286c45
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857702"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466638"
 ---
 # <a name="argtraitshelper-structure"></a>ArgTraitsHelper 構造体
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -35,11 +35,11 @@ struct ArgTraitsHelper;
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `TDelegateInterface`  
+ *TDelegateInterface*  
  デリゲートのインターフェイスです。  
   
-## <a name="remarks"></a>コメント  
- 支援は、デリゲート引数の共通の特性を定義します。  
+## <a name="remarks"></a>Remarks  
+ 定義のデリゲート引数の一般的な特性に役立ちます。  
   
 ## <a name="members"></a>メンバー  
   
@@ -52,9 +52,9 @@ struct ArgTraitsHelper;
   
 ### <a name="public-constants"></a>パブリック定数  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
-|[ArgTraitsHelper::args 定数](../windows/argtraitshelper-args-constant.md)|により、 [argtraits::args](../windows/argtraits-args-constant.md)デリゲート インターフェイスの呼び出しメソッドのパラメーターの数のカウントを保持します。|  
+|[ArgTraitsHelper::args 定数](../windows/argtraitshelper-args-constant.md)|により、 [argtraits::args](../windows/argtraits-args-constant.md)パラメーターの数のカウントを保持、`Invoke`デリゲート インターフェイスのメソッド。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `ArgTraitsHelper`  

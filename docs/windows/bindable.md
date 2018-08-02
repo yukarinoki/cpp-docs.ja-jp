@@ -1,5 +1,5 @@
 ---
-title: バインド可能な |Microsoft ドキュメント
+title: バインド可能な |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,39 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1cf16bfbeee2231133e60429a4a25e9d4fe85c8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a216aa5fb5be727e82313c30aa2aa72d887cb4c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861806"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467145"
 ---
 # <a name="bindable"></a>bindable
-プロパティがデータ バインディングをサポートしていることを示します。  
+プロパティがデータ バインディングをサポートすることを示します。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 [bindable]  
-  
 ```  
   
-## <a name="remarks"></a>コメント  
- **バインド可能な**C++ 属性と同じ機能を持つ、[バインド可能な](http://msdn.microsoft.com/library/windows/desktop/aa366738)MIDL 属性。 定義されたプロパティで使用することができます、 [propget](../windows/propget.md)、 [propput](../windows/propput.md)、または[propputref](../windows/propputref.md)属性、またはするにより手動でバインド可能なメソッドが定義できます。  
+## <a name="remarks"></a>Remarks  
+ **バインド可能な**C++ 属性と同じ機能を持つ、[バインド可能な](http://msdn.microsoft.com/library/windows/desktop/aa366738)MIDL 属性。 定義されたプロパティで使用することができます、 [propget](../windows/propget.md)、 [propput](../windows/propput.md)、または[propputref](../windows/propputref.md)属性、またはことにより手動でバインド可能なメソッドが定義できます。  
   
- 次の MFC サンプルの使用を表示する**バインド可能な**:  
+ 次の MFC のサンプルでの使用方法を示して**バインド可能な**:  
   
--   [コントロールのサンプル: MFC ベースの ActiveX コントロール](http://msdn.microsoft.com/en-us/a44adf86-0ba0-4504-bedb-512b6cba2e63)  
+-   [コントロールのサンプル: MFC ベースの ActiveX コントロール](http://msdn.microsoft.com/a44adf86-0ba0-4504-bedb-512b6cba2e63)  
   
--   [CIRC サンプル: ActiveX コントロール](http://msdn.microsoft.com/en-us/9ba34d04-280e-49f4-90ae-41a6be44c95b)  
+-   [ActiveX コントロールの円のサンプル:](http://msdn.microsoft.com/9ba34d04-280e-49f4-90ae-41a6be44c95b)  
   
--   [ツールヒントとヘルプ TESTHELP サンプル: ActiveX コントロール](http://msdn.microsoft.com/en-us/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)  
+-   [ヒントとヘルプ TESTHELP サンプル: ActiveX コントロール](http://msdn.microsoft.com/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)  
   
 ## <a name="example"></a>例  
- 次のコードは、使用する方法を示しています。**バインド可能な**プロパティ。  
+ 次のコードを使用する方法を示しています。**バインド可能な**プロパティ。  
   
-```  
+```cpp  
 // cpp_attr_ref_bindable.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -77,7 +75,7 @@ __interface IPropDemo : IDispatch {
 |||  
 |-|-|  
 |**対象**|インターフェイス メソッド|  
-|**反復可能**|×|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

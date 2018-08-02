@@ -1,5 +1,5 @@
 ---
-title: コンパイラ属性 |Microsoft ドキュメント
+title: コンパイラ属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4366b5d804275f78ef1c3b4f1dd8e8e51b01b8c2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 02aa14eccddca4bc3631957d6aa3d3d1b2af6894
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860659"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463455"
 ---
 # <a name="compiler-attributes"></a>コンパイラ属性
 コンパイラ属性は、さまざまな機能を提供します。  
   
 |属性|説明|  
 |---------------|-----------------|  
-|[emitidl](../windows/emitidl.md)|すべての後続の IDL 属性が処理して生成された .idl ファイル内に配置するかどうかを判断します。|  
+|[emitidl](../windows/emitidl.md)|後続のすべての IDL 属性が処理され、生成された .idl ファイル内に配置するかどうかを判断します。|  
 |[event_receiver](../windows/event-receiver.md)|イベント レシーバーを作成します。|  
 |[event_source](../windows/event-source.md)|イベント ソースを作成します。|  
-|[export](../windows/export.md)|.Idl ファイルに配置するデータ構造が発生します。|  
-|[実装](../windows/implements-cpp.md)|IDL coclass のメンバーであることを強制するディスパッチ インターフェイスを指定します。|  
-|[importidl](../windows/importidl.md)|指定された .idl ファイルを生成された .idl ファイルに挿入します。|  
+|[export](../windows/export.md)|.Idl ファイルに配置するデータ構造をによりします。|  
+|[実装](../windows/implements-cpp.md)|IDL コクラスのメンバーであるが強制されているディスパッチ インターフェイスを指定します。|  
+|[importidl](../windows/importidl.md)|生成された .idl ファイルには、指定された .idl ファイルを挿入します。|  
 |[importlib](../windows/importlib.md)|既に他のタイプ ライブラリでコンパイル済みの型を、作成中のタイプ ライブラリで使用できるようにします。|  
-|[includelib](../windows/includelib-cpp.md)|生成された .idl ファイルに含まれる、.idl ファイルまたは .h ファイルが発生します。|  
-|[library_block](../windows/library-block.md)|.Idl ファイルのライブラリ ブロックの内部構造を配置します。|  
+|[includelib](../windows/includelib-cpp.md)|生成された .idl ファイルに含まれる、.idl ファイルまたは .h ファイル。|  
+|[library_block](../windows/library-block.md)|.Idl ファイルのライブラリ ブロック内で構成要素を配置します。|  
 |[no_injected_text](../windows/no-injected-text.md)|コンパイラがコードの属性を使用した結果として挿入するを防ぎます。|  
-|[satype](../windows/satype.md)|データ型を指定します、 **SAFEARRAY**です。|  
+|[satype](../windows/satype.md)|データ型を指定します、`SAFEARRAY`します。|  
 |[version](../windows/version-cpp.md)|インターフェイスまたはクラスの複数のバージョン間で特定のバージョンを識別します。|  
   
 ## <a name="see-also"></a>関連項目  

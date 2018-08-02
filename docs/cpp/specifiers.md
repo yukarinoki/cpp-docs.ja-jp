@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d437b70148fdaba4c8eb4d7aa855e7d75f6f2487
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3d9898dc6b918643aa8ca4ace34ce2e716344c57
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953748"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463490"
 ---
 # <a name="specifiers"></a>指定子
 このトピックで説明します、*子*の (宣言指定子) コンポーネント、[宣言](declarations-and-definitions-cpp.md)します。  
@@ -53,7 +53,7 @@ ms.locfileid: "38953748"
  **署名**、**符号なし**、**長い**、および**短い**意味すべて**int**、 **typedef**名前を次のメンバーであるこれらのキーワードのいずれかが実行*宣言リスト、* のではありません*子*します。  
   
 > [!NOTE]
->  名前は再宣言できるため、その解釈は、現在のスコープ内の最新の宣言に従います。 再宣言は、名前 (特に `typedef` 名) がコンパイラによってどのように解釈されるかに影響を与える可能性があります。  
+>  名前は再宣言できるため、その解釈は、現在のスコープ内の最新の宣言に従います。 再宣言の名前の解釈方法、コンパイラによって特にに影響する可能性**typedef**名。  
   
 ## <a name="see-also"></a>関連項目  
  [宣言と定義](declarations-and-definitions-cpp.md)

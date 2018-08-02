@@ -1,5 +1,5 @@
 ---
-title: ActivatableClass マクロ |Microsoft ドキュメント
+title: ActivatableClass マクロ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,16 +21,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aeb68deddd1cdfa9e1e869a08bfb0a1f3bb8d6ca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e46063bc94fae25d414d25ae67b5418ee5aa8c27
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857465"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465858"
 ---
 # <a name="activatableclass-macros"></a>ActivatableClass マクロ
 
-指定したクラスのインスタンスを作成できるファクトリを含む内部キャッシュを追加します。
+指定したクラスのインスタンスを作成できるファクトリを含む内部キャッシュを設定します。
 
 ## <a name="syntax"></a>構文
 
@@ -60,11 +60,11 @@ ActivatableClassWithFactoryEx(
 指定したクラスのインスタンスを作成するファクトリ。
 
 *サーバー名*  
-モジュールのファクトリのサブセットを指定する名前です。
+モジュールのファクトリのサブセットを指定する名前。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-使用しないこれらのマクロをクラシック COM を使用する場合を除き、`#undef`いることを確認するディレクティブ、 **&#95; &#95;WRL_WINRT_STRICT&#95; &#95;** マクロ定義を削除します。
+これらのマクロで使わないクラシック COM を使用しない限り、`#undef`ことを確認するディレクティブ、 **&#95; &#95;WRL_WINRT_STRICT&#95; &#95;** マクロ定義が削除されます。
 
 ## <a name="requirements"></a>要件
 
@@ -73,5 +73,4 @@ ActivatableClassWithFactoryEx(
 **名前空間:** Microsoft::WRL
 
 ## <a name="see-also"></a>関連項目
-
 [Module クラス](../windows/module-class.md)

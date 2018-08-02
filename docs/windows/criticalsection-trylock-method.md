@@ -1,5 +1,5 @@
 ---
-title: Criticalsection::trylock メソッド |Microsoft ドキュメント
+title: Criticalsection::trylock メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b4ee99d82212d0d6cdd610b4565bd9292a0265dc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e1b9d238d4f5475475e5dc367aae196937630a0e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883953"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465423"
 ---
 # <a name="criticalsectiontrylock-method"></a>CriticalSection::TryLock メソッド
-ブロックすることがなく、クリティカル セクションを入力しようとしています。 呼び出しが成功した場合、呼び出し元スレッドは、クリティカル セクションの所有権を取得します。  
+ブロックすることがなく、クリティカル セクションを入力しようとします。 呼び出しが成功した場合、呼び出し元のスレッドはクリティカル セクションの所有権を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,14 +38,14 @@ static SyncLock TryLock(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `cs`  
- クリティカル セクションのユーザーが指定したオブジェクトです。  
+ *cs*  
+ ユーザー指定のクリティカル セクション オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- クリティカル セクションが正しく入力された場合は 0 以外の値または現在のスレッドは、クリティカル セクションを既に所有しています。 別のスレッドには、クリティカル セクション既に所有している場合は 0 を返します。  
+ クリティカル セクションが正しく入力された場合は 0 以外の値または現在のスレッドはクリティカル セクションを既に所有しています。 別のスレッドがクリティカル セクション既に所有している場合は 0 します。  
   
-## <a name="remarks"></a>コメント  
- 最初の**TryLock**関数が現在のクリティカル セクション オブジェクトに影響します。 2 番目**TryLock**関数、ユーザー指定のクリティカル セクションに影響します。  
+## <a name="remarks"></a>Remarks  
+ 最初の**TryLock**関数が現在のクリティカル セクション オブジェクトに影響します。 2 番目の**TryLock**関数、ユーザー指定のクリティカル セクションに影響を与えます。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

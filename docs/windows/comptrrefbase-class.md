@@ -1,5 +1,5 @@
 ---
-title: ComPtrRefBase クラス |Microsoft ドキュメント
+title: ComPtrRefBase クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 13744a1629ede5575dc992ea15b90e22961a8570
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0342500fc41c650967e17919ebdc9605d4261cb5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883581"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464244"
 ---
 # <a name="comptrrefbase-class"></a>ComPtrRefBase クラス
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -37,11 +37,11 @@ class ComPtrRefBase;
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `T`  
- A [ComPtr\<T >](../windows/comptr-class.md)型または型が、ComPtr によって表されるだけではなく、インターフェイスから派生します。  
+ *T*  
+ A [ComPtr\<T >](../windows/comptr-class.md)ことによって表されるだけでなく、インターフェイスから派生した型または型、 **ComPtr**します。  
   
-## <a name="remarks"></a>コメント  
- 基本クラスを表す、 [ComPtrRef](../windows/comptrref-class.md)クラスです。  
+## <a name="remarks"></a>Remarks  
+ 基本クラスを表します、 [ComPtrRef](../windows/comptrref-class.md)クラス。  
   
 ## <a name="members"></a>メンバー  
   
@@ -49,18 +49,18 @@ class ComPtrRefBase;
   
 |名前|説明|  
 |----------|-----------------|  
-|`InterfaceType`|テンプレート パラメーターの型のシノニム`T`です。|  
+|`InterfaceType`|テンプレート パラメーターの型のシノニム*T*します。|  
   
 ### <a name="public-operators"></a>パブリック演算子  
   
 |名前|説明|  
 |----------|-----------------|  
-|[ComPtrRefBase::operator IInspectable** 演算子](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|現在ではキャスト[ptr _](../windows/comptrrefbase-ptr-data-member.md)データ メンバーをポインターを-a のポインター - IInspectable インターフェイスです。|  
-|[ComPtrRefBase::operator IUnknown** 演算子](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|現在ではキャスト[ptr _](../windows/comptrrefbase-ptr-data-member.md)データ メンバーをポインターに-を-ポインターの IUnknown インターフェイスです。|  
+|[ComPtrRefBase::operator IInspectable** 演算子](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|現在ではキャスト[ptr _](../windows/comptrrefbase-ptr-data-member.md)データ メンバーをポインターを-、-ポインター - IInspectable インターフェイス。|  
+|[ComPtrRefBase::operator IUnknown** 演算子](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|現在ではキャスト[ptr _](../windows/comptrrefbase-ptr-data-member.md)データ メンバーをポインターを-、-ポインターの IUnknown インターフェイス。|  
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[ComPtrRefBase::ptr_ データ メンバー](../windows/comptrrefbase-ptr-data-member.md)|現在のテンプレート パラメーターで指定された型へのポインター。|  
   

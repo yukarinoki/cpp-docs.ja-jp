@@ -1,5 +1,5 @@
 ---
-title: Comptrref::operator = = 演算子 |Microsoft ドキュメント
+title: Comptrref::operator = 演算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b7cc1d89a0e113164530245467afd94becdc1e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 606059712e60ba181998155b55ae02ba8b27c4da
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880780"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463955"
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator== 演算子
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -55,20 +55,20 @@ bool operator==(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `a`  
+ *a*  
  ComPtrRef オブジェクトへの参照。  
   
- `b`  
- 別の ComPtrRef オブジェクト、または匿名型へのポインターへの参照を (`void*`)。  
+ *b*  
+ 別の ComPtrRef オブジェクト、または匿名型へのポインターへの参照 (`void*`)。  
   
 ## <a name="return-value"></a>戻り値  
- 最初の演算子によって生成`true`場合オブジェクト`a`がオブジェクトと等しい`b`、それ以外の`false`します。  
+ 最初の演算子と**true**場合オブジェクト *、* がオブジェクトと等しい*b*、それ以外の**false**します。  
   
- 2 番目と 3 番目の演算子の yield`true`場合オブジェクト`a`と等しい`nullptr`、それ以外の`false`します。  
+ 2 番目と 3 番目の演算子を生成**true**場合オブジェクト *、* と等しい**nullptr**、それ以外の**false**します。  
   
- 4 番目と 5 番目の演算子の yield`true`場合オブジェクト`a`がオブジェクトと等しい`b`、それ以外の`false`します。  
+ 4 番目と 5 番目の演算子を生成**true**場合オブジェクト *、* がオブジェクトと等しい*b*、それ以外の**false**します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  2 つの ComPtrRef オブジェクトが等しいかどうかを示します。  
   
 ## <a name="requirements"></a>要件  

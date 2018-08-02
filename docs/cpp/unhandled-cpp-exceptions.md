@@ -1,5 +1,5 @@
 ---
-title: 未処理の C++ 例外 |Microsoft ドキュメント
+title: 未処理の C++ の例外 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,19 +18,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db763ce602531b15e840013a6dd235b3fba4007e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2e2162034b3e9ff93ebccca0f7eb53299b19c648
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467980"
 ---
 # <a name="unhandled-c-exceptions"></a>未処理の C++ 例外
-一致するハンドラーの場合 (または省略記号**キャッチ**ハンドラー)、定義済みの現在の例外に対して見つかりません`terminate`実行時に呼び出されます。 (または明示的にハンドラーのいずれかで `terminate` を呼び出すことができます)。`terminate` の既定のアクションは、`abort` を呼び出すことです。 `terminate` でアプリケーションを終了する前に他の関数を呼び出すには、呼び出す関数の名前を唯一の引数として `set_terminate` 関数を呼び出します。 `set_terminate` はプログラムの任意の時点で呼び出すことができます。 `terminate`ルーチンが常に渡す引数として指定されている最後の関数を呼び出します`set_terminate`です。  
+一致するハンドラーの場合 (または省略記号**キャッチ**ハンドラー) の定義済みの現在の例外は見つかりません`terminate`実行時に呼び出されます。 (または明示的にハンドラーのいずれかで `terminate` を呼び出すことができます)。`terminate` の既定のアクションは、`abort` を呼び出すことです。 `terminate` でアプリケーションを終了する前に他の関数を呼び出すには、呼び出す関数の名前を唯一の引数として `set_terminate` 関数を呼び出します。 `set_terminate` はプログラムの任意の時点で呼び出すことができます。 `terminate`ルーチンが常に引数として渡された最後関数を呼び出します`set_terminate`します。  
   
 ## <a name="example"></a>例  
  次の例は、`char *` 例外をスローしますが、型 `char *` の例外をキャッチするハンドラーは含まれません。 `set_terminate` の呼び出しは、`terminate` に対して `term_func` を呼び出すように指示します。  
   
-```  
+```cpp 
 // exceptions_Unhandled_Exceptions.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -55,7 +56,7 @@ int main() {
   
 ## <a name="output"></a>出力  
   
-```  
+```Output  
 term_func was called by terminate.  
 ```  
   

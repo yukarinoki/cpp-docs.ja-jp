@@ -1,5 +1,5 @@
 ---
-title: トークン (C++) |Microsoft ドキュメント
+title: トークン (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba2e1a6cc36e4e5f2f785c1e5dff03c6fb5e392d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 217061557acb0c8b311a91651eea2f57a8198872
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467960"
 ---
 # <a name="tokens-c"></a>トークン (C++)
 トークンは、コンパイラにとって意味がある、C ++ プログラムの最小要素です。 C++ パーサーが認識するトークンの種類は、識別子、キーワード、リテラル、演算子、句読記号、およびその他の区切り記号です。 これらのトークンのストリームが、翻訳単位を構成します。  
@@ -44,13 +45,13 @@ ms.lasthandoff: 05/03/2018
   
  パーサーが入力ストリームからのトークンを区切るときには、左から右にスキャンした入力文字列を使用して、できるだけ長いトークンを作成します。 次のコード片の場合を考えてみます。  
   
-```  
+```cpp 
 a = i+++j;  
 ```  
   
  コードを記述したプログラマは、次の 2 つのステートメントのいずれかを意図していた可能性があります。  
   
-```  
+```cpp 
 a = i + (++j)  
   
 a = (i++) + j  

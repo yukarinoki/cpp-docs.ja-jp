@@ -1,5 +1,5 @@
 ---
-title: テンプレートのフレンド |Microsoft ドキュメント
+title: テンプレートのフレンド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c5217b1860affd05f433c6a3bf944afeb6c13f9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 97447189419bad8d3ad6f2026a7ee5f701ebca04
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422125"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466957"
 ---
 # <a name="template-friends"></a>テンプレートのフレンド
 
-クラス テンプレートが持つことができます[友人](friend-cpp.md)です。 クラスまたはクラス テンプレート、関数または関数テンプレートは、テンプレート クラスへのフレンドにできます。 フレンドは、クラス テンプレートまたは関数テンプレートの特殊化でもかまいませんが、部分的特殊化は許されません。  
+クラス テンプレートを持つことができます[友人](friend-cpp.md)します。 クラスまたはクラス テンプレート、関数または関数テンプレートは、テンプレート クラスへのフレンドにできます。 フレンドは、クラス テンプレートまたは関数テンプレートの特殊化でもかまいませんが、部分的特殊化は許されません。  
   
-**C++ 11**: 型パラメーターは、フォームを使用してフレンドとして宣言できます`friend T;`です。  
+**C++ 11**: 型パラメーターは、フォームを使用してフレンドとして宣言できます`friend T;`します。  
   
 ```cpp
 template <typename T>  
@@ -261,5 +261,4 @@ a
 ```  
   
 ## <a name="see-also"></a>関連項目  
-
-[既定の引数](../cpp/default-arguments.md)
+ [既定の引数](../cpp/default-arguments.md)

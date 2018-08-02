@@ -1,5 +1,5 @@
 ---
-title: Criticalsectiontraits::getinvalidvalue メソッド |Microsoft ドキュメント
+title: Criticalsectiontraits::getinvalidvalue メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d72c9dce0765029ee31e079315baec72afd16a46
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cf0d52769052a36c0b494d19204dd6c07f0b2404
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883148"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463386"
 ---
 # <a name="criticalsectiontraitsgetinvalidvalue-method"></a>CriticalSectionTraits::GetInvalidValue メソッド
-CriticalSection テンプレートを特化できるように、テンプレートは、常に有効です。  
+専門、 **CriticalSection**テンプレート、テンプレートが常に有効なされないようにします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,10 +34,10 @@ inline static Type GetInvalidValue();
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 常に無効な重要なセクションへのポインターを返します。  
+ 常に無効な重要なセクションにポインターを返します。  
   
-## <a name="remarks"></a>コメント  
- *型*修飾子とは見なさ`typedef CRITICAL_SECTION* Type;`です。  
+## <a name="remarks"></a>Remarks  
+ *型*として修飾子が定義されている`typedef CRITICAL_SECTION* Type;`します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

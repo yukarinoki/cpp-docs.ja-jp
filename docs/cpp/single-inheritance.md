@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b06bceadf9a274253693dc8f33f3d04e6500115
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: f4f0f2a82c02bcb58f89d604978d31eb01ebd1fd
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028622"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465691"
 ---
 # <a name="single-inheritance"></a>単一継承
 継承の一般的な形態である "単一継承" では、クラスの持つ基底クラスは 1 つだけです。 次の図に示す関係を考えます。  
@@ -164,4 +164,3 @@ int main() {
   
 > [!NOTE]
 >  基底クラスで `PrintNameOf` のような関数の実装を強制するのは、多くの場合、最適なデザインではありません。 [仮想関数](../cpp/virtual-functions.md)設計の他の手段を提供します。  
-  

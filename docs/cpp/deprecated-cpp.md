@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3efc793e5030fa86c3bd1214ef4b8b408361a4ef
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 77748cd69a3424bb4b2e209a0a447d39eae25147
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39409087"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466905"
 ---
 # <a name="deprecated-c"></a>非推奨 (C++)
 このトピックでは、Microsoft 固有について declspec 宣言を非推奨とされます。 C++ 14 について`[[deprecated]]`属性、および Microsoft 固有の declspec またはプラグマとその属性を使用するタイミングに関するガイダンスを参照してください。 [C++ の標準属性](attributes.md)します。
 
- 例外については、下、**非推奨とされます**宣言と同じ機能を提供する、[非推奨とされます](../preprocessor/deprecated-c-cpp.md)プラグマ。  
+例外については、下、**非推奨とされます**宣言と同じ機能を提供する、[非推奨とされます](../preprocessor/deprecated-c-cpp.md)プラグマ。  
   
 -   **非推奨とされます**宣言により、非推奨として特定の形式の関数のオーバー ロードを指定する一方、プラグマ形式はすべてのオーバー ロードされた関数名に適用されます。  
   

@@ -1,5 +1,5 @@
 ---
-title: 集計 |Microsoft ドキュメント
+title: 集計 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 19dea3b078f894931002d186b20c1ffb85bb763b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6f931c6930a2c7e4a71e73b7998564432bcbd967
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857988"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466931"
 ---
 # <a name="aggregates"></a>aggregates
 オブジェクトが CLSID で指定されたオブジェクトを集約することを示します。  
@@ -33,24 +33,23 @@ ms.locfileid: "33857988"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
-      [ aggregates(  
+[ aggregates(  
    clsid,  
    variable_name  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `clsid`  
+ *clsid*  
  集約可能オブジェクトの CLSID を指定します。  
   
- `variable_name`  
- 挿入する変数の名前。 この変数には、集約対象オブジェクトの **IUnknown** を格納します。  
+ *variable_name*  
+ 挿入する変数の名前。 この変数が含まれています、`IUnknown`の集約対象オブジェクト。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  オブジェクトに適用すると、 **aggregates** C++ 属性は ( `clsid`によって指定された) 集約対象オブジェクトのアウター ラッパーを実装します。  
   
- この属性を使用するには、 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)、または [vi_progid](../windows/vi-progid.md) 属性 (または、これらのいずれかを意味する別の属性) も同じ要素に適用する必要があります。 いずれか 1 つの属性を使用すると、他の 2 つも自動的に適用されます。 たとえば、 **progid** を適用すると、 **vi_progid** と **coclass** も適用されます。  
+ この属性を使用するには、 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)、または [vi_progid](../windows/vi-progid.md) 属性 (または、これらのいずれかを意味する別の属性) も同じ要素に適用する必要があります。 いずれか 1 つの属性を使用すると、他の 2 つも自動的に適用されます。 たとえば場合、`progid`が適用される`vi_progid`と`coclass`も適用されます。  
   
  **ATL プロジェクト**  
   
@@ -64,7 +63,7 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(_m_spAttrXXX, clsid)
   
 ## <a name="example"></a>例  
   
-```  
+```cpp  
 // cpp_attr_ref_aggregates.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -95,9 +94,9 @@ struct CObject : IObject
   
 |||  
 |-|-|  
-|**対象**|**class**、 `struct`|  
+|**対象**|**クラス**、**構造体**|  
 |**反復可能**|[はい]|  
-|**必要な属性**|**coclass**、 **progid**、 **vi_progid**のうち 1 つ以上。|  
+|**必要な属性**|次のいずれかまたは: `coclass`、 `progid`、または`vi_progid`します。|  
 |**無効な属性**|なし|  
   
  属性コンテキストの詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  
@@ -109,4 +108,3 @@ struct CObject : IObject
  [集計](http://msdn.microsoft.com/library/windows/desktop/ms686558)   
  [集約可能](http://msdn.microsoft.com/library/windows/desktop/aa366721)   
  [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)   
- 

@@ -1,5 +1,5 @@
 ---
-title: Creatormap::activationid データ メンバー |Microsoft ドキュメント
+title: Creatormap::activationid データ メンバー |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c4ff889f808eda00e5b2ce426cd800678b4829f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70a331bbbf34a623b02e9d8bc9aa0b80fbee2216
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881797"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467132"
 ---
 # <a name="creatormapactivationid-data-member"></a>CreatorMap::activationId データ メンバー
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -37,14 +37,14 @@ union {
 ```  
   
 ## <a name="parameters"></a>パラメーター  
- `clsid`  
+ *clsid*  
  インターフェイス ID。  
   
- `getRuntimeName`  
- Windows ランタイム オブジェクトの名前を取得する関数。  
+ *getRuntimeName*  
+ オブジェクトの Windows ランタイムの名前を取得する関数。  
   
-## <a name="remarks"></a>コメント  
- クラシック COM クラス ID または Windows ランタイム名前によって識別されるオブジェクト ID を表します。  
+## <a name="remarks"></a>Remarks  
+ クラシック COM クラスの ID または Windows ランタイムの名前によって識別されるオブジェクト ID を表します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** module.h  

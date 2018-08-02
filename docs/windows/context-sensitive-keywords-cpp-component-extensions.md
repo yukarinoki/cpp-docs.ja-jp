@@ -1,5 +1,5 @@
 ---
-title: 状況依存のキーワード (C++ コンポーネント拡張) |Microsoft ドキュメント
+title: 状況依存のキーワード (C++ コンポーネント拡張) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ceea3242087d89b511f6309003efe38d155735d2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 75476fec3dcabda2990d3ca3f5dcf017688a176d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871524"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466125"
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>状況依存のキーワード (C++ コンポーネント拡張)
 *状況依存のキーワード*は特定のコンテキストでのみ認識される言語要素です。 特定のコンテキスト以外では、状況依存のキーワードをユーザー定義の記号として使用することができます。  
@@ -48,7 +48,8 @@ ms.locfileid: "33871524"
   
 -   [リテラル](../windows/literal-cpp-component-extensions.md)  
   
--   [override](../windows/override-cpp-component-extensions.md)  
+-   
+  [override](../windows/override-cpp-component-extensions.md)  
   
 -   [プロパティ](../windows/property-cpp-component-extensions.md)  
   
@@ -56,7 +57,7 @@ ms.locfileid: "33871524"
   
 -   `where` (一部の[ジェネリック](../windows/generics-cpp-component-extensions.md))  
   
- 読みやすくするため、ユーザー定義シンボルとしての状況依存のキーワードの使用を制限することがあります。  
+ 読みやすさのために、ユーザー定義シンボルとしての状況依存のキーワードの使用を制限します。  
   
 ## <a name="windows-runtime"></a>Windows ランタイム  
  **解説**  
@@ -77,9 +78,9 @@ ms.locfileid: "33871524"
 ### <a name="examples"></a>使用例  
  **例**  
   
- 次のコード例は、適切なコンテキストでは、`property` 状況依存キーワードを使用してプロパティと変数を定義できることを示しています。  
+ 適切なコンテキストでのコード例を次に示します、**プロパティ**状況依存のキーワードは、プロパティと変数を定義するために使用できます。  
   
-```  
+```cpp  
 // context_sensitive_keywords.cpp  
 // compile with: /clr  
 public ref class C {  

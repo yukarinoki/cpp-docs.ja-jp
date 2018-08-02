@@ -1,5 +1,5 @@
 ---
-title: Chaininterfaces::verify メソッド |Microsoft ドキュメント
+title: Chaininterfaces::verify メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c83479434a936f32fb0f7367d8cd02c6676c74e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a845ea047682fda97ae581f4daad26775241ddf8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860695"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466840"
 ---
 # <a name="chaininterfacesverify-method"></a>ChainInterfaces::Verify メソッド
-テンプレート パラメーターによって、各インターフェイスが定義されていることを確認`I0`を通じて`I9`IUnknown や、IInspectable から継承`I0`から継承`I1`を通じて`I9`です。  
+各インターフェイスは、テンプレート パラメーターで定義されていることを確認します*I0*を通じて*I9* IUnknown と IInspectable、から継承*I0* 継承 *。I1*を通じて*I9*します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,11 +33,11 @@ ms.locfileid: "33860695"
 WRL_NOTHROW __forceinline static void Verify();  
 ```  
   
-## <a name="remarks"></a>コメント  
- 検証操作が失敗した場合、`static_assert`エラーを示すエラー メッセージを出力します。  
+## <a name="remarks"></a>Remarks  
+ 検証操作に失敗した場合、 **static_assert**エラーを説明するエラー メッセージを出力します。  
   
-## <a name="remarks"></a>コメント  
- テンプレート パラメーター`I0`と`I1`が必要ですが、およびパラメーター`I2`を通じて`I9`は省略可能です。  
+## <a name="remarks"></a>Remarks  
+ テンプレート パラメーター *I0*と*I1*が必要なパラメーターと*I2*を通じて*I9*は省略可能です。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** implements.h  

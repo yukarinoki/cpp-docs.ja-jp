@@ -1,5 +1,5 @@
 ---
-title: Comptr::operator = 演算子 |Microsoft ドキュメント
+title: Comptr::operator = 演算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f4066db37de8a993802970784f09141352fef028
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fac3a845ea7c512f5a7ccffdabdf67ce26029ff8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871202"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466164"
 ---
 # <a name="comptroperator-operator"></a>ComPtr::operator= 演算子
-値を現在の ComPtr に割り当てます。  
+現在の値を代入**ComPtr**します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -57,29 +57,29 @@ WRL_NOTHROW ComPtr& operator=(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `U`  
- クラスです。  
+ *U*  
+ クラス。  
   
- `other`  
- もう 1 つの ComPtr、または型へのポインター、参照、または右辺値参照。  
+ *other*  
+ ポインター、参照、または右辺値参照型または別に**ComPtr**します。  
   
 ## <a name="return-value"></a>戻り値  
- 現在の ComPtr への参照。  
+ 現在への参照を**ComPtr**します。  
   
-## <a name="remarks"></a>コメント  
- この演算子の最初のバージョンでは、現在の ComPtr に空の値を割り当てます。  
+## <a name="remarks"></a>Remarks  
+ この演算子の最初のバージョンは現在空の値を割り当てます**ComPtr**します。  
   
- 2 番目のバージョンでは、割り当てのインターフェイス ポインターが現在の ComPtr インターフェイス ポインターと同じでない場合、2 番目のインターフェイス ポインターが現在の ComPtr に割り当てられます。  
+ 2 番目のバージョンでは、割り当てのインターフェイス ポインターでない現在のと同じ場合**ComPtr**インターフェイス ポインターの場合は、2 番目のインターフェイス ポインターが現在割り当てられている**ComPtr**します。  
   
- 3 番目のバージョンでは、割り当てのインターフェイス ポインターが現在の ComPtr に割り当てられます。  
+ 現在の 3 番目のバージョンでは、割り当てのインターフェイス ポインターが割り当てられている**ComPtr**します。  
   
- 4 番目のバージョンでは、割り当ての値のインターフェイス ポインターが現在の ComPtr インターフェイス ポインターと同じでない場合、2 番目のインターフェイス ポインターが現在の ComPtr に割り当てられます。  
+ 4 番目のバージョンでは、割り当ての値のインターフェイス ポインターでない現在のと同じ場合**ComPtr**インターフェイス ポインターの場合は、2 番目のインターフェイス ポインターが現在割り当てられている**ComPtr**します。  
   
- 5 番目のバージョンがコピー演算子です。ComPtr への参照は、現在の ComPtr に割り当てられます。  
+ 5 番目のバージョンがコピー演算子です。参照を**ComPtr**に現在割り当てられている**ComPtr**します。  
   
- 6 番目のバージョンがコピー演算子を使用する移動セマンティクスです。ComPtr キャストし、現在の ComPtr に代入して、任意の型が静的な場合に右辺値参照。  
+ 6 番目のバージョンを使用するコピー操作は、移動セマンティクスです。右辺値参照を**ComPtr**キャストし、現在割り当てられている、任意の型が静的な場合**ComPtr**します。  
   
- 7 番目のバージョンがコピー演算子を使用する移動セマンティクスです。型の ComPtr への右辺値参照`U`静的キャストし、現在の ComPtr に割り当てられています。  
+ 7 番目のバージョンを使用するコピー操作は、移動セマンティクスです。右辺値参照を**ComPtr**型の*U*は静的キャストしとに現在割り当てられている**ComPtr**します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** client.h  

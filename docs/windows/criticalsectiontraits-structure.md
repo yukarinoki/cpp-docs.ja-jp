@@ -1,5 +1,5 @@
 ---
-title: CriticalSectionTraits 構造体 |Microsoft ドキュメント
+title: CriticalSectionTraits 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5534173d594b8fc09ceca8ec44a1c1223bc550b2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b10d130190308520771e37e97d34238f75670ad
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870552"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466684"
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits 構造体
-無効な重要なセクションまたはリリースの重要なセクションに関数のいずれかをサポートするために CriticalSection オブジェクトを専門としています。  
+無効なクリティカル セクションまたはクリティカル セクションを解放する関数をサポートする CriticalSection オブジェクトを専門としています。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,14 +39,14 @@ struct CriticalSectionTraits;
   
 |名前|説明|  
 |----------|-----------------|  
-|`Type`|A`typedef`クリティカル セクションへのポインターを定義します。 `Type` 見なさ`typedef CRITICAL_SECTION* Type;`です。|  
+|`Type`|A **typedef**クリティカル セクションを指すポインターを定義します。 `Type` 見なさ`typedef CRITICAL_SECTION* Type;`します。|  
   
 ### <a name="public-methods"></a>パブリック メソッド  
   
 |名前|説明|  
 |----------|-----------------|  
-|[CriticalSectionTraits::GetInvalidValue メソッド](../windows/criticalsectiontraits-getinvalidvalue-method.md)|CriticalSection テンプレートを特化できるように、テンプレートは、常に有効です。|  
-|[CriticalSectionTraits::Unlock メソッド](../windows/criticalsectiontraits-unlock-method.md)|指定されたクリティカル セクション オブジェクトの解放の所有権をサポートするように CriticalSection テンプレートを専門としています。|  
+|[CriticalSectionTraits::GetInvalidValue メソッド](../windows/criticalsectiontraits-getinvalidvalue-method.md)|専門、`CriticalSection`テンプレート、テンプレートが常に有効なされないようにします。|  
+|[CriticalSectionTraits::Unlock メソッド](../windows/criticalsectiontraits-unlock-method.md)|専門、`CriticalSection`その it サポート、クリティカル セクションを指定したオブジェクトの所有権を解放するためのテンプレート。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CriticalSectionTraits`  

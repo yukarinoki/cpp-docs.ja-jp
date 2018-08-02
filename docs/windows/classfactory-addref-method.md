@@ -1,5 +1,5 @@
 ---
-title: Classfactory::addref メソッド |Microsoft ドキュメント
+title: Classfactory::addref メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4ab84f54c8fa5c4784cbdf564805bcfea29b6a93
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1e01ceee3b889a1755fe272366ab66b32a79ae6f
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856148"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462694"
 ---
 # <a name="classfactoryaddref-method"></a>ClassFactory::AddRef メソッド
-ClassFactory、現在の参照カウントをインクリメントします。  
+現在の参照カウントをインクリメント**ClassFactory**オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   

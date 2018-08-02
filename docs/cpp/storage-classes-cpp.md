@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f89651ba671bf66d7d27edb047db6d1b6b15ee06
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e8f7939d42aa246c9b7d5924979357fb6301e726
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940925"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466586"
 ---
 # <a name="storage-classes-c"></a>ストレージ クラス (C++)  
   
@@ -228,7 +228,7 @@ void DoSomething()
 
 -  宣言と定義が同じファイルと別々のファイルのどちらで発生する場合でも、スレッド ローカル オブジェクトの宣言と定義には `thread_local` を使用する必要があります。
 
-Windows で`thread_local`は機能的に等価[_declspec](../cpp/thread.md)する点を除いて`__declspec(thread)`型定義に適用できるし、C コードでは無効です。 `thread_local` は C++ 標準の一部であり、移植性がより高いため、できるだけ常にこれを使用してください。
+Windows で`thread_local`は機能的に等価[_declspec](../cpp/thread.md)する点を除いて **_declspec**型定義に適用できるし、C コードでは無効です。 `thread_local` は C++ 標準の一部であり、移植性がより高いため、できるだけ常にこれを使用してください。
 
 ##  <a name="register"></a>  register
 
@@ -322,5 +322,4 @@ Destroying: Static I3
 - 最後に、`I3` などの静的ローカル変数は、プログラム実行中は値が保持されますが、プログラムが終了すると破棄されます。
 
 ## <a name="see-also"></a>関連項目
-
  [宣言と定義](../cpp/declarations-and-definitions-cpp.md)
