@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64ff69a4ab75189dd069e774eb05266e6140ff77
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1edcf2cb24273f475b1ba98e5e973f5704c0cec8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940496"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461703"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 Windows および Visual C++ は構造化例外処理 (SEH) をサポートしていますが、コードの移植性と柔軟性が高くなる ISO 標準の C++ 例外処理を使用することをお勧めします。 ただし、既存のコードや特定の種類のプログラムでは、SEH を使用する必要がある場合もあります。  
@@ -72,7 +72,7 @@ Windows および Visual C++ は構造化例外処理 (SEH) をサポートし�
 -   [C++ での構造化例外処理の使用](../cpp/using-structured-exception-handling-with-cpp.md)  
   
 ## <a name="example"></a>例  
- 既に説明したとおり、デストラクターの場合は、C++ プログラムで SEH を使用してを使用してコンパイルし、ローカルのオブジェクトが呼び出されます、 **/EH**特定の修飾子を持つオプション — たとえば、 **/EHsc**と **/EHa**. ただし、C++ 例外も使用している場合は、実行時の動作は予期したとおりにならない可能性があります。 次の例は、これらの動作の違いを示しています。  
+ 前に説明したように、C++ プログラムで SEH を使用し、特定の修飾子 (たとえば `/EH` や `/EHsc`) と共に `/EHa` オプションを使用してコンパイルすると、ローカル オブジェクトのデストラクターが呼び出されます。 ただし、C++ 例外も使用している場合は、実行時の動作は予期したとおりにならない可能性があります。 次の例は、これらの動作の違いを示しています。  
   
 ```cpp  
 #include <stdio.h>  
@@ -119,7 +119,6 @@ int main()
   
     return 0;  
 }  
-  
 ```  
   
  使用する場合 **/EHsc**このコードがローカル テストのコントロールをコンパイルする`CPPEX`が未定義の場合がありますの実行はされず、`TestClass`デストラクターと出力は次のように。  

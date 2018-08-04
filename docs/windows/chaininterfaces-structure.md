@@ -1,5 +1,5 @@
 ---
-title: ChainInterfaces 構造体 |Microsoft ドキュメント
+title: ChainInterfaces 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18814a4ad87cefa39201d369926c0778931d4d64
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f16a10ef5119730fb492c4adb890aedcc09d3174
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861137"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461534"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces 構造体
 一連のインターフェイス ID に適用できる検証および初期化関数を指定します。  
@@ -61,44 +61,44 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `I0`  
- (必須)インターフェイス ID 0 です。  
+ *I0*  
+ (必須)インターフェイス ID は 0 です。  
   
- `I1`  
+ *I1*  
  (必須)ID 1 のインターフェイスです。  
   
- `I2`  
- (省略可能)インターフェイス ID は 2 です。  
+ *I2*  
+ (省略可能)インターフェイス ID 2 です。  
   
- `I3`  
- (省略可能)ID 3 のインターフェイスです。  
+ *I3*  
+ (省略可能)インターフェイス ID 3 です。  
   
- `I4`  
- (省略可能)インターフェイス ID 4 です。  
+ *I4*  
+ (省略可能)ID 4 のインターフェイスです。  
   
- `I5`  
+ *I5*  
  (省略可能)ID 5 のインターフェイスです。  
   
- `I6`  
- (省略可能)インターフェイス ID 6 です。  
+ *I6*  
+ (省略可能)ID 6 のインターフェイスです。  
   
- `I7`  
+ *I7*  
  (省略可能)インターフェイス ID 7 です。  
   
- `I8`  
+ *I8*  
  (省略可能)インターフェイス ID 8 です。  
   
- `I9`  
- (省略可能)インターフェイス ID 9 です。  
+ *I9*  
+ (省略可能)インターフェイス ID は 9 です。  
   
- `DerivedType`  
- 派生型です。  
+ *DerivedType*  
+ 派生型。  
   
- `BaseType`  
- 派生型の基本データ型。  
+ *BaseType*  
+ 派生型の基本型。  
   
- `hasImplements`  
- ブール値を`true`、使用することはできません、 [MixIn](../windows/mixin-structure.md)クラスから派生していないを持つ構造体、[を実装](../windows/implements-structure.md)構造です。  
+ *hasImplements*  
+ ブール値の場合に**true**、ため使用できません、 [MixIn](../windows/mixin-structure.md)構造から派生していないクラスを使用して、[実装](../windows/implements-structure.md)構造体。  
   
 ## <a name="members"></a>メンバー  
   
@@ -106,16 +106,16 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
   
 |名前|説明|  
 |----------|-----------------|  
-|[ChainInterfaces::CanCastTo メソッド](../windows/chaininterfaces-cancastto-method.md)|指定されたインターフェイス ID を ChainInterface テンプレート パラメーターで定義された特殊化の各にキャストできるかどうかを示します。|  
-|[ChainInterfaces::CastToUnknown メソッド](../windows/chaininterfaces-casttounknown-method.md)|によって定義された型のインターフェイス ポインターにキャスト、 `I0` IUnknown へのポインターをテンプレート パラメーター。|  
-|[ChainInterfaces::FillArrayWithIid メソッド](../windows/chaininterfaces-fillarraywithiid-method.md)|ストアで定義されているインターフェイス ID、`I0`インターフェイス Id の指定した配列内の指定した場所にテンプレート パラメーター。|  
-|[ChainInterfaces::Verify メソッド](../windows/chaininterfaces-verify-method.md)|テンプレート パラメーターによって、各インターフェイスが定義されていることを確認`I0`を通じて`I9`IUnknown や、IInspectable から継承`I0`から継承`I1`を通じて`I9`です。|  
+|[ChainInterfaces::CanCastTo メソッド](../windows/chaininterfaces-cancastto-method.md)|指定されたインターフェイス ID を ChainInterface のテンプレート パラメーターで定義された特殊な形式をそれぞれにキャストできるかどうかを示します。|  
+|[ChainInterfaces::CastToUnknown メソッド](../windows/chaininterfaces-casttounknown-method.md)|によって定義された型のインターフェイス ポインターをキャスト、 *I0* IUnknown へのポインターをテンプレート パラメーター。|  
+|[ChainInterfaces::FillArrayWithIid メソッド](../windows/chaininterfaces-fillarraywithiid-method.md)|ストアで定義されたインターフェイス ID、 *I0*インターフェイス Id の指定した配列内の指定した場所にテンプレート パラメーター。|  
+|[ChainInterfaces::Verify メソッド](../windows/chaininterfaces-verify-method.md)|各インターフェイスは、テンプレート パラメーターで定義されていることを確認します*I0*を通じて*I9*から継承`IUnknown`や`IInspectable`、および*I0*から継承。*I1*を通じて*I9*します。|  
   
-### <a name="protected-constants"></a>プロテクト コンス トラクター  
+### <a name="protected-constants"></a>保護されている定数  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
-|[ChainInterfaces::IidCount 定数](../windows/chaininterfaces-iidcount-constant.md)|インターフェイスのテンプレート パラメーターで指定されたインターフェイスに含まれる Id の合計数`I0`を通じて`I9`です。|  
+|[ChainInterfaces::IidCount 定数](../windows/chaininterfaces-iidcount-constant.md)|インターフェイスのテンプレート パラメーターで指定されたインターフェイスに含まれている Id の合計数*I0*を通じて*I9*します。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `I0`  
