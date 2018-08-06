@@ -12,16 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 951a7d5c4c171a6662c55d9ae7906cc1500cd137
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 5d192234a2b3cd3d72bef15e11678ebc41ccede0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406732"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462889"
 ---
 # <a name="definitions-and-declarations-c"></a>定義と宣言 (C++)
-## <a name="microsoft-specific"></a>Microsoft 固有の仕様
- DLL インターフェイスを指すは、システムの一部のプログラムによってエクスポートされる既知のすべての項目 (関数とデータ)つまり、すべての項目として宣言されている**dllimport**または**dllexport**します。 DLL インターフェイスに含まれるすべての宣言は、いずれかを指定する必要があります、 **dllimport**または**dllexport**属性。 ただし、定義をのみ指定する必要があります、 **dllexport**属性。 たとえば、次の関数定義はコンパイラ エラーになります。
+**Microsoft 固有の仕様**DLL インターフェイスでは、システムの一部のプログラムによってエクスポートされる既知のすべての項目 (関数とデータ) つまり、すべての項目として宣言されている指す**dllimport**または**dllexport**. DLL インターフェイスに含まれるすべての宣言は、いずれかを指定する必要があります、 **dllimport**または**dllexport**属性。 ただし、定義をのみ指定する必要があります、 **dllexport**属性。 たとえば、次の関数定義はコンパイラ エラーになります。
 
 ```
 __declspec( dllimport ) int func() {   // Error; dllimport
