@@ -1,5 +1,5 @@
 ---
-title: '方法: リソースをコピー |Microsoft ドキュメント'
+title: '方法: リソースのコピー |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,55 +23,55 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4b173be24e9f177a3156f740fcb07240c30fec75
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f29a115d20eca90b66a876bf1b5070052d90008d
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879849"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570686"
 ---
 # <a name="how-to-copy-resources"></a>方法: リソースをコピーする
-それらを変更することがなく別の 1 つのファイルからのリソースをコピーすることがでくこともできます[コピー中に、言語またはリソースの条件を変更する](../windows/how-to-change-the-language-or-condition-of-a-resource-while-copying.md)です。  
+変更せずに別の 1 つのファイルからのリソースをコピーすることができますもできます[コピー中に、言語またはリソースの条件を変更する](../windows/how-to-change-the-language-or-condition-of-a-resource-while-copying.md)します。  
   
- 現在のリソース ファイルに、既存のリソースまたは実行可能ファイルからリソースを簡単にコピーすることができます。 これを行うには、同時にリソースが含まれる両方のファイルを開くと別に 1 つのファイルから項目をドラッグまたはコピーして貼り付ける 2 つのファイルです。 このメソッドは、リソース スクリプト (.rc) ファイルとリソース テンプレート (.rct) ファイル、および実行可能 (.exe) ファイルに対して機能します。  
+ 現在のリソース ファイルを既存のリソースまたは実行可能ファイルからリソースを簡単にコピーできます。 これを行うには、リソースが含まれると同時に両方のファイルを開くと別に 1 つのファイルから項目をドラッグまたはコピーして貼り付ける 2 つのファイル。 このメソッドは、リソース スクリプト (.rc) ファイルとリソース テンプレート (.rct) ファイル、実行可能ファイル (.exe) ファイルに機能します。  
   
 > [!NOTE]
->  Visual C には、独自のアプリケーションで使用できるサンプル リソース ファイルが含まれています。 詳細については、次を参照してください。[クリップアート: 共通リソース](http://msdn.microsoft.com/en-us/9bac2891-b6b3-49ec-a287-cec850c707e0)です。  
+>  Visual C には、独自のアプリケーションで使用できるサンプル リソース ファイルが含まれています。 詳細については、次を参照してください。 [CLIPART: 一般的なリソース](http://msdn.microsoft.com/9bac2891-b6b3-49ec-a287-cec850c707e0)します。  
   
- 開いている .rc ファイル間でドラッグ アンド ドロップ メソッドを使用することができます[プロジェクト外部の](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)します。  
+ 開いている .rc ファイル間でドラッグ アンド ドロップを使用する[プロジェクトの外部に](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)します。  
   
 ### <a name="to-copy-resources-between-files-using-the-drag-and-drop-method"></a>ドラッグ アンド ドロップ メソッドを使用してファイル間でリソースをコピーするには  
   
-1.  スタンドアロン両方のリソース ファイルを開きます (詳細については、次を参照してください。 [、.rc ファイル プロジェクトの外側に表示するリソース](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md))。 たとえば、Source1.rc と Source2.rc を開きます。  
+1.  スタンドアロン両方のリソース ファイルを開きます (詳細については、次を参照してください。 [、.rc ファイルの外部のプロジェクトでリソースを表示する](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md))。 たとえば、Source1.rc と Source2.rc を開きます。  
   
-2.  最初の .rc ファイル内には、コピーするリソースをクリックします。 たとえば、Source1.rc、IDD_DIALOG1 をクリックします。  
+2.  最初の .rc ファイル内には、コピーするリソースをクリックします。 たとえば、Source1.rc、クリックして**IDD_DIALOG1**します。  
   
-3.  CTRL キーを押しながらし、2 番目の .rc ファイルにリソースをドラッグします。 たとえば、Source1.rc から IDD_DIALOG1 を Source2.rc にドラッグします。  
+3.  CTRL キーを押しながらし、2 番目の .rc ファイルにリソースをドラッグします。 たとえば、ドラッグ**IDD_DIALOG1** Source1.rc Source2.rc するからです。  
   
     > [!NOTE]
-    >  CTRL キーを保持することがなくリソースをドラッグすると、コピーするのではなく、リソースが移動します。  
+    >  CTRL キーを保持することがなくリソースをドラッグするには、コピーすることではなく、リソースが移動します。  
   
 ### <a name="to-copy-resources-using-copy-and-paste"></a>コピーを使用してリソースをコピーして貼り付ける  
   
-1.  スタンドアロン両方のリソース ファイルを開きます (詳細については、次を参照してください。 [、.rc ファイル プロジェクトの外側に表示するリソース](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md))。 たとえば、Source1.rc と Source2.rc です。  
+1.  スタンドアロン両方のリソース ファイルを開きます (詳細については、次を参照してください。 [、.rc ファイルの外部のプロジェクトでリソースを表示する](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md))。 たとえば、Source1.rc と source2.rc を開きます。  
   
-2.  リソース (たとえば、Source1.rc) をコピーするソース ファイルでリソースを右クリックして選択**コピー**ショートカット メニューからです。  
+2.  リソース (たとえば、Source1.rc) をコピーするソース ファイルでリソースを右クリックし **コピー**ショートカット メニューから。  
   
-3.  これにするには、リソース (たとえば、Source2.rc) を貼り付け、リソース ファイルを右クリックします。 選択**貼り付け**ショートカット メニューからです。  
-  
-    > [!NOTE]
-    >  できませんをドラッグし、ドロップ、コピー、切り取り、または貼り付けるプロジェクト ([リソース] ビュー) でリソース ファイルと (開いているドキュメント ウィンドウで) スタンドアロンの .rc ファイル間でします。 製品の以前のバージョンで、これを行う可能性があります。  
+3.  リソース (たとえば、Source2.rc) を貼り付けたいとすると、リソース ファイルを右クリックします。 選択**貼り付け**ショートカット メニューから。  
   
     > [!NOTE]
-    >  シンボル名や、既存のファイル内の値との競合を避けるためには、Visual C は変更転送されるリソースのシンボル値またはシンボル名と値を新しいファイルにコピーするときにできます。  
+    >  ことはできませんドラッグ アンド ドロップ、コピー、切り取り、またはプロジェクト ([リソース] ビュー) 内のリソース ファイルとスタンドアロンの .rc ファイル (ドキュメント ウィンドウで開く) の間に貼り付けます。 これは、製品の以前のバージョンで実行できます。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 詳細については、管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションは、次を参照してください。[グローバライズと .NET Framework アプリケーションのローカライズ](/dotnet/standard/globalization-localization/index)です。  
+    > [!NOTE]
+    >  シンボル名または既存のファイル内の値との競合を避けるためには、Visual C が転送されるリソースのシンボル値またはシンボル名や値を変更、新しいファイルをコピーする場合。  
   
- 要件  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
+  
+## <a name="requirements"></a>要件  
   
  Win32  
   
 ## <a name="see-also"></a>関連項目  
- [方法: プロジェクト (スタンドアロン) の外側でリソース スクリプト ファイルを開く](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)   
+ [方法: プロジェクトの外側で (スタンドアロンで) リソース スクリプト ファイルを開く](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)  
  [リソース ファイル (Visual Studio)](../windows/resource-files-visual-studio.md)   
  [リソース エディター](../windows/resource-editors.md)

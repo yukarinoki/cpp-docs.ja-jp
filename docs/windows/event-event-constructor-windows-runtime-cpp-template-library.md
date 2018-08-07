@@ -1,5 +1,5 @@
 ---
-title: Event::event コンス トラクター (Windows ランタイム C++ テンプレート ライブラリ) |Microsoft ドキュメント
+title: Event::event コンス トラクター (Windows ランタイム C++ テンプレート ライブラリ) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9a63e7ddbf2528b78eac7761bbcf4891f31cc886
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: de0f68ee3e27f2ac3a7f87e64489a05a16dcdc91
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882629"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571413"
 ---
 # <a name="eventevent-constructor-windows-runtime-c-template-library"></a>Event::Event コンストラクター (Windows ランタイム C++ テンプレート ライブラリ)
 Event クラスの新しいインスタンスを初期化します。  
@@ -37,8 +37,8 @@ WRL_NOTHROW Event(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `h`  
- イベントに対するハンドル。 既定では、`h` は `nullptr` に初期化されます。  
+ *h*  
+ イベントに対するハンドル。 既定では、 *h*に初期化されます**nullptr**します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

@@ -150,14 +150,11 @@ _Lst1 は、`allocator_chunklist` と [sync_per_thread](../standard-library/sync
 |-|-|
 |[allocator_base](../standard-library/allocator-base-class.md)|同期フィルターからユーザー定義のアロケーターを作成するために必要な、基底クラスと共通の関数を定義します。|
 |[allocator_chunklist](../standard-library/allocator-chunklist-class.md)|[cache_chunklist](../standard-library/cache-chunklist-class.md) 型のキャッシュを使用して、オブジェクトに対してストレージの割り当てと解放を管理するオブジェクトを記述します。|
-|[allocator_fixed_size](../standard-library/allocator-fixed-size-class.md)|
-  [cache_freelist](../standard-library/cache-freelist-class.md) 型のキャッシュと [max_fixed_size](../standard-library/max-fixed-size-class.md) で管理されている長さを使用して、型 `Type` のオブジェクトに対し、ストレージの割り当てと解放を管理するオブジェクトを記述します。|
+|[allocator_fixed_size](../standard-library/allocator-fixed-size-class.md)|[cache_freelist](../standard-library/cache-freelist-class.md) 型のキャッシュと [max_fixed_size](../standard-library/max-fixed-size-class.md) で管理されている長さを使用して、型 `Type` のオブジェクトに対し、ストレージの割り当てと解放を管理するオブジェクトを記述します。|
 |[allocator_newdel](../standard-library/allocator-newdel-class.md)|使用するアロケーターを実装する**delete 演算子**、メモリの割り当てを解除するブロックと**演算子 new**メモリ ブロックを割り当てます。|
 |[allocator_suballoc](../standard-library/allocator-suballoc-class.md)|[cache_suballoc](../standard-library/cache-suballoc-class.md) 型のキャッシュを使用して、`Type` 型のオブジェクトに対し、ストレージの割り当てと解放を管理するオブジェクトを記述します。|
-|[allocator_unbounded](../standard-library/allocator-unbounded-class.md)|
-  [cache_freelist](../standard-library/cache-freelist-class.md) 型のキャッシュと [max_unbounded](../standard-library/max-unbounded-class.md) で管理されている長さを使用して、型 `Type` のオブジェクトに対し、ストレージの割り当てと解放を管理するオブジェクトを記述します。|
-|[allocator_variable_size](../standard-library/allocator-variable-size-class.md)|
-  [cache_freelist](../standard-library/cache-freelist-class.md) 型のキャッシュと [max_variable_size](../standard-library/max-variable-size-class.md) で管理されている長さを使用して、型 `Type` のオブジェクトに対し、ストレージの割り当てと解放を管理するオブジェクトを記述します。|
+|[allocator_unbounded](../standard-library/allocator-unbounded-class.md)|[cache_freelist](../standard-library/cache-freelist-class.md) 型のキャッシュと [max_unbounded](../standard-library/max-unbounded-class.md) で管理されている長さを使用して、型 `Type` のオブジェクトに対し、ストレージの割り当てと解放を管理するオブジェクトを記述します。|
+|[allocator_variable_size](../standard-library/allocator-variable-size-class.md)|[cache_freelist](../standard-library/cache-freelist-class.md) 型のキャッシュと [max_variable_size](../standard-library/max-variable-size-class.md) で管理されている長さを使用して、型 `Type` のオブジェクトに対し、ストレージの割り当てと解放を管理するオブジェクトを記述します。|
 |[cache_chunklist](../standard-library/cache-chunklist-class.md)|1 つのサイズのメモリ ブロックを割り当ておよび割り当て解除するブロック アロケーターを定義します。|
 |[cache_freelist](../standard-library/cache-freelist-class.md)|1 つのサイズのメモリ ブロックを割り当ておよび割り当て解除するブロック アロケーターを定義します。|
 |[cache_suballoc](../standard-library/cache-suballoc-class.md)|1 つのサイズのメモリ ブロックを割り当ておよび割り当て解除するブロック アロケーターを定義します。|

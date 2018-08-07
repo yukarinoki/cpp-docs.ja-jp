@@ -1,5 +1,5 @@
 ---
-title: 既定値 (C++) |Microsoft ドキュメント
+title: 既定 (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb701b91fc1e076dcf4e6540bf8bcaf6141ec6c6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 16f2e9587d3fa9bc9d8472c348e92555b5bbb4bb
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872966"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570858"
 ---
 # <a name="default-c"></a>default (C++)
 コクラス内で定義されるカスタムまたはディスパッチ インターフェイスが既定のプログラミング インターフェイスを表すことを示します。  
@@ -32,8 +32,7 @@ ms.locfileid: "33872966"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
-      [ default(  
+[ default(  
    interface1,  
    interface2  
 ) ]  
@@ -50,13 +49,13 @@ ms.locfileid: "33872966"
   
  既定のソース インターフェイスが指定されていない場合は、最初のソース インターフェイスが既定値として使用されます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **default** C++ 属性には、 [default](http://msdn.microsoft.com/library/windows/desktop/aa366787) MIDL 属性と同じ機能があります。 また、 **default** 属性は、 [case](../windows/case-cpp.md) 属性と共に使用されます。  
   
 ## <a name="example"></a>例  
- 次のコードは、 **default** をコクラスの定義で使用して、 **ICustomDispatch** を既定のプログラミング インターフェイスとして指定する方法を示しています。  
+ 次のコードはどのように**既定**をコクラスの定義で指定するため`ICustomDispatch`既定のプログラミング インターフェイスとして。  
   
-```  
+```cpp  
 // cpp_attr_ref_default.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -113,9 +112,9 @@ int main() {
   
 |||  
 |-|-|  
-|**対象**|**class**、 `struct`、データ メンバー|  
-|**反復可能**|×|  
-|**必要な属性**|**coclass** ( **class** または `struct`に適用される場合)|  
+|**対象**|**クラス**、**構造体**、データ メンバー|  
+|**反復可能**|いいえ|  
+|**必要な属性**|**コクラス**(に適用すると**クラス**または**構造体**)|  
 |**無効な属性**|なし|  
   
  詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  

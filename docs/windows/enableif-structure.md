@@ -1,5 +1,5 @@
 ---
-title: EnableIf 構造体 |Microsoft ドキュメント
+title: EnableIf 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1fec2f00c40b833cc9a65db1db58920543aa90d7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 82a9bc4000919d2bbe2b8598351d3fe6a4730ba9
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873379"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569031"
 ---
 # <a name="enableif-structure"></a>EnableIf 構造体
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -43,14 +43,14 @@ struct EnableIf<true, T>;
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `T`  
+ *T*  
  型。  
   
- `b`  
+ *b*  
  ブール式。  
   
-## <a name="remarks"></a>コメント  
- 最初のテンプレート パラメーターが評価された場合、2 番目のテンプレート パラメーターで指定された型のデータ メンバーを定義する`true`です。  
+## <a name="remarks"></a>Remarks  
+ 最初のテンプレート パラメーターが評価された場合は、2 番目のテンプレート パラメーターで指定された型のデータ メンバーを定義**true**します。  
   
 ## <a name="members"></a>メンバー  
   
@@ -58,7 +58,7 @@ struct EnableIf<true, T>;
   
 |名前|説明|  
 |----------|-----------------|  
-|`type`|場合テンプレート パラメーター`b`に評価される`true`、部分的特殊化は、データ メンバーを定義`type`型である`T`です。|  
+|`type`|場合テンプレート パラメーター *b*に評価される**true**、部分的特殊化は、データ メンバーを定義します。`type`型`T`します。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `EnableIf`  

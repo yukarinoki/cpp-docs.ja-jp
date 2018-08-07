@@ -1,5 +1,5 @@
 ---
-title: db_accessor |Microsoft ドキュメント
+title: db_accessor |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b81e55500a8ff44c887bed592c9472c5a8d3ea1d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 68c7d70c6d1192e1b80253cf1fb3cfc3040d8fce
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874526"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570655"
 ---
 # <a name="dbaccessor"></a>db_accessor
-グループ**db_column**に参加している属性`IAccessor`-ベースのバインディングです。  
+グループ`db_column`に参加している属性`IAccessor`-ベースのバインド。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
-      [ db_accessor(   
+[ db_accessor(   
    num,   
    auto   
 ) ]  
@@ -39,24 +38,24 @@ ms.locfileid: "33874526"
   
 #### <a name="parameters"></a>パラメーター  
  *num*  
- アクセサーの数 (0 から始まる整数インデックス) を指定します。 増加にアクセサー番号順は、整数を使用または定義された値を指定する必要があります。  
+ アクセサーの数 (0 から始まる整数のインデックス) を指定します。 昇順にアクセサー番号が整数を使用して、注文や、定義された値を指定する必要があります。  
   
  *auto*  
- アクセサーが自動的に取得されるかどうかを指定するブール値 (**TRUE**)、または取得できません (**FALSE**)。  
+ アクセサーが自動的に取得されます (TRUE) か (FALSE) を取得できないかどうかを指定するブール値。  
   
-## <a name="remarks"></a>コメント  
- **db_accessor**の基になる OLE DB アクセサーを定義後続**db_column**と**db_param**同じクラスまたは関数内の属性です。 **db_accessor**使用可能なメンバー レベルが使用されるグループに**db_column** OLE DB に参加している属性`IAccessor`-ベースのバインディングです。 いずれかと組み合わせて使用されます、 **db_table**または**db_command**属性。 この属性を呼び出すことが呼び出しに似ています、 [BEGIN_ACCESSOR](../data/oledb/begin-accessor.md)と[END_ACCESSOR](../data/oledb/end-accessor.md)マクロです。  
+## <a name="remarks"></a>Remarks  
+ **db_accessor**の基になる OLE DB アクセサーを定義します。 後続`db_column`と`db_param`同じクラスまたは関数内の属性。 **db_accessor**はメンバーのレベルで使用可能なと使用をグループに`db_column`OLE DB に参加している属性`IAccessor`-ベースのバインド。 いずれかと組み合わせて使用されます、`db_table`または`db_command`属性。 この属性を呼び出すことは、呼び出しに似ています、 [BEGIN_ACCESSOR](../data/oledb/begin-accessor.md)と[END_ACCESSOR](../data/oledb/end-accessor.md)マクロ。  
   
- **db_accessor**行セットを生成し、対応するアクセサー マップにバインドします。 呼び出さない場合**db_accessor**アクセサー 0 は自動的に生成され、すべての列バインドは、このアクセサー ブロックにマップされます。  
+ **db_accessor**行セットを生成し、対応するアクセサー マップにバインドします。 呼び出さない場合**db_accessor**アクセサー 0 が自動的に生成して、すべての列バインドはこのアクセサー ブロックにマップされます。  
   
- **db_accessor**グループ データベースの 1 つまたは複数のアクセサーに列のバインド。 複数のアクセサーを使用する必要があるシナリオの詳細については、次を参照してください。[行セットでの複数のアクセサーを使用して](../data/oledb/using-multiple-accessors-on-a-rowset.md)です。 表示されている「ユーザー レコードのサポートの複数のアクセサー」[ユーザー レコード](../data/oledb/user-records.md)です。  
+ **db_accessor**グループ データベースの 1 つまたは複数のアクセサーに列のバインド。 複数のアクセサーを使用する必要があるシナリオの詳細については、次を参照してください。[行セットでの複数のアクセサーを使用して](../data/oledb/using-multiple-accessors-on-a-rowset.md)します。 参照してください「ユーザー レコードのサポートの複数のアクセサー」[ユーザー レコード](../data/oledb/user-records.md)します。  
   
- コンシューマー属性プロバイダーは、クラスにこの属性を適用する場合、コンパイラの名前は変更するクラス\_*すると*アクセサー、場所*すると*指定した名前は、クラス、および、コンパイラと呼ばれるクラスを作成また*すると*から派生した\_*すると*アクセサー。  クラス ビューでは、両方のクラスが表示されます。  
+ コンパイラにクラスの名前は、コンシューマー属性プロバイダーでは、この属性をクラスに適用されます、ときに\_ *YourClassName*、アクセサーで*YourClassName*に付けた名前を指定します、クラス、さらに、コンパイラはというクラスを作成も*YourClassName*から派生した\_ *YourClassName*アクセサー。  クラス ビューでは、両方のクラスが表示されます。  
   
 ## <a name="example"></a>例  
- 次の例で**db_accessor** Orders テーブルの 2 つのアクセサーに Northwind データベースからのグループ列にします。 アクセサー 0、自動アクセサーは、アクセサー 1 です。  
+ 次の例では**db_accessor** Orders テーブルの 2 つのアクセサーに Northwind データベースからのグループ列にします。 アクセサー 0 は、自動のアクセサーと 1 のアクセサーはありません。  
   
-```  
+```cpp  
 // cpp_attr_ref_db_accessor.cpp  
 // compile with: /LD /link /OPT:NOREF  
 #define _ATL_ATTRIBUTES  
@@ -83,7 +82,7 @@ public:
 |||  
 |-|-|  
 |**対象**|属性ブロック|  
-|**反復可能**|×|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

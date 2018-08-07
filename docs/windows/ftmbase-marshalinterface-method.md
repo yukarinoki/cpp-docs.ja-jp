@@ -1,5 +1,5 @@
 ---
-title: Ftmbase::marshalinterface メソッド |Microsoft ドキュメント
+title: Ftmbase::marshalinterface メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc22b83aee62b03ec5e664d08440b00718325272
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff0c1a5e41dfe46f2d88aeeb3093dbc9ee4d4005
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874617"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570058"
 ---
 # <a name="ftmbasemarshalinterface-method"></a>FtmBase::MarshalInterface メソッド
 一部のクライアント プロセスで、プロキシ オブジェクトを初期化するために必要なデータをストリームに書き込みます。  
@@ -40,35 +40,35 @@ STDMETHODIMP MarshalInterface(
 ) override;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `pStm`  
+### <a name="parameters"></a>パラメーター  
+ *pStm*  
  マーシャ リング中に使用するストリームへのポインター。  
   
- `riid`  
- マーシャ リングするインターフェイスの識別子への参照。 このインターフェイスは IUnknown インターフェイスから派生する必要があります。  
+ *riid*  
+ マーシャ リングするインターフェイスの識別子への参照。 このインターフェイスから派生する必要があります、`IUnknown`インターフェイス。  
   
- `pv`  
- マーシャ リング; へのインターフェイス ポインターへのポインター呼び出し元では、目的のインターフェイスには、ポインターにいない場合、NULL を指定できます。  
+ *現在価値*  
+ マーシャ リング; へのインターフェイス ポインターへのポインター呼び出し元では、必要なインターフェイスには、ポインターにいない場合、NULL を指定できます。  
   
- `dwDestContext`  
- 移行先コンテキストで指定されたインターフェイスのマーシャ リングします。  
+ *dwDestContext*  
+ コピー先のコンテキストが指定されたインターフェイスのマーシャ リングできない位置。  
   
  1 つまたは複数の MSHCTX 列挙値を指定します。  
   
- マーシャ リング解除 (MSHCTX_INPROC) 現在のプロセスの別のアパートメントまたは現在のプロセス (MSHCTX_LOCAL) と同じコンピューター上の別のプロセスで発生します。  
+ マーシャ リング解除は、現在のプロセス (MSHCTX_INPROC) の別のアパートメントまたは (MSHCTX_LOCAL) の現在のプロセスと同じコンピューター上の別のプロセスでが発生することができます。  
   
- `pvDestContext`  
+ *pvDestContext*  
  今後使用するために予約されています。0 にする必要があります。  
   
- `mshlflags`  
- マーシャ リングするデータが、クライアントのプロセスに送信されるかどうかを指定します: 一般的な事例 — または複数のクライアントで取得できる、グローバル テーブルに書き込まれます。  
+ *mshlflags*  
+ マーシャ リングするデータがクライアント プロセスに送信されるかどうかを指定します: 一般的なケース、または複数のクライアントで取得できる、グローバル テーブルに書き込まれます。  
   
 ## <a name="return-value"></a>戻り値  
  S_OK  
- インターフェイス ポインターが正常にマーシャ リングします。  
+ インターフェイス ポインターが正常にマーシャ リングされます。  
   
  E_NOINTERFACE  
- 指定されたインターフェイスがサポートされていません。  
+ 指定したインターフェイスがサポートされていません。  
   
  STG_E_MEDIUMFULL  
  ストリームがいっぱいです。  

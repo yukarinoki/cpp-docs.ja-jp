@@ -1,5 +1,5 @@
 ---
-title: defaultvtable |Microsoft ドキュメント
+title: defaultvtable |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb853e10b1745151c12f1855f841a21c2a7e126b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 83949616f204ae37b42b91b03d69d8d803a1582f
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882538"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569671"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 COM オブジェクトの既定の vtable インターフェイスとしてインターフェイスを定義します。  
@@ -30,23 +30,22 @@ COM オブジェクトの既定の vtable インターフェイスとしてイ�
 ## <a name="syntax"></a>構文  
   
 ```  
-  
-      [ defaultvtable(  
+[ defaultvtable(  
    interface  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `interface`  
+ *interface*  
  COM オブジェクトの既定の vtable する指定されたインターフェイスです。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **Defaultvtable** C++ 属性と同じ機能を持つ、 [defaultvtable](http://msdn.microsoft.com/library/windows/desktop/aa366795) MIDL 属性。  
   
 ## <a name="example"></a>例  
  次のコードが使用されるクラスに属性を示します**defaultvtable**を既定のインターフェイスを指定します。  
   
-```  
+```cpp  
 // cpp_attr_ref_defaultvtable.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -78,8 +77,8 @@ class CMyC3 : public IMyI3 {};
   
 |||  
 |-|-|  
-|**対象**|**class**、 `struct`|  
-|**反復可能**|×|  
+|**対象**|**クラス**、**構造体**|  
+|**反復可能**|いいえ|  
 |**必要な属性**|**coclass**|  
 |**無効な属性**|なし|  
   

@@ -1,5 +1,5 @@
 ---
-title: 例外処理 (C++ コンポーネント拡張) |Microsoft ドキュメント
+title: 例外処理 (C++ コンポーネント拡張) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,19 +21,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6b6dcf8e844fbb2e8e133dc5dc6f0b98a3166ac6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 526ac2f916eb239aee938522f331cf221138f5fa
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877736"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568655"
 ---
 # <a name="exception-handling--c-component-extensions"></a>例外処理 (C++ コンポーネント拡張)
-コンパイルされたアプリケーション、 **/ZW**コンパイラ オプションまたは **/clr**コンパイラ オプションの両方を使用して*例外*プログラムの実行中に予期しないエラーを処理します。 次のトピックは、C + での例外処理を説明 +/CX または C + + CLI アプリケーションです。  
+コンパイルされたアプリケーション、`/ZW`コンパイラ オプションまたは`/clr`コンパイラ オプションの両方を使用して*例外*プログラムの実行中に予期しないエラーを処理します。 次のトピックについて説明して、C + での例外処理/cli/CX または C++/cli CLI アプリケーション。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [マネージ例外の使用についての基本概念](../dotnet/basic-concepts-in-using-managed-exceptions.md)  
- 説明を使用して例外をスロー `try` / `catch`ブロックします。  
+ [マネージド例外の使用についての基本概念](../dotnet/basic-concepts-in-using-managed-exceptions.md)  
+ について説明します例外のスローとを使用して**お試しください**/**キャッチ**ブロックします。  
   
  [例外処理/CLR での動作の違い](../dotnet/differences-in-exception-handling-behavior-under-clr.md)  
  C++ 例外処理の標準の動作の相違点をについて説明します。  
@@ -52,7 +52,7 @@ ms.locfileid: "33877736"
   
 ## <a name="related-sections"></a>関連項目  
  [例外処理](../cpp/exception-handling-in-visual-cpp.md)  
- C++ での例外処理について説明します。  
+ C++ の例外処理について説明します。  
   
 ## <a name="see-also"></a>関連項目  
  [ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)

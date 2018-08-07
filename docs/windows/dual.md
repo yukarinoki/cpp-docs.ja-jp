@@ -1,5 +1,5 @@
 ---
-title: デュアル |Microsoft ドキュメント
+title: デュアル |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 460e3f5316bc4b4509e563fda2354106164b3b1a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b52359d1f50f5ea3bad4075432fd8ae0e468d2df
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872381"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571019"
 ---
 # <a name="dual"></a>dual
-.Idl ファイル内のインターフェイスをデュアル インターフェイスとして配置します。  
+.Idl ファイルにデュアル インターフェイスとしてインターフェイスを配置します。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 [dual]  
-  
 ```  
   
-## <a name="remarks"></a>コメント  
- ときに、**デュアル**C++ 属性インターフェイスの前に、生成された .idl ファイル内のライブラリ ブロック内に配置するインターフェイスになります。  
+## <a name="remarks"></a>Remarks  
+ ときに、**デュアル**C++ 属性をインターフェイスの前と、インターフェイス、生成された .idl ファイルのライブラリ ブロック内に配置されます。  
   
 ## <a name="example"></a>例  
  次のコードは、属性ブロックを使用する**デュアル**インターフェイス定義の前に。  
   
-```  
+```cpp  
 // cpp_attr_ref_dual.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -79,8 +77,8 @@ __interface IStatic : IDispatch
   
 |||  
 |-|-|  
-|**対象**|`interface`|  
-|**反復可能**|×|  
+|**対象**|**interface**|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|**dispinterface**|  
   
@@ -88,8 +86,8 @@ __interface IStatic : IDispatch
   
 ## <a name="see-also"></a>関連項目  
  [IDL 属性](../windows/idl-attributes.md)   
- [使用して属性](../windows/attributes-by-usage.md)   
- [ユーザー設定](../windows/custom-cpp.md)   
+ [使用法別の属性](../windows/attributes-by-usage.md)   
+ [カスタム](../windows/custom-cpp.md)   
  [ディスパッチ インターフェイス](../windows/dispinterface.md)   
  [object](../windows/object-cpp.md)   
  [__interface](../cpp/interface.md)   

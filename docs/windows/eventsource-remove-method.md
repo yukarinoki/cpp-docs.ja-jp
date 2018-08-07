@@ -1,5 +1,5 @@
 ---
-title: Eventsource::remove メソッド |Microsoft ドキュメント
+title: Eventsource::remove メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bbf0480252fca342b8a690e93f92ae14ca5e84c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9dd026158a2bbc76e7a3e195bc5346f65821f2b7
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874383"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569496"
 ---
 # <a name="eventsourceremove-method"></a>EventSource::Remove メソッド
-現在の EventSource オブジェクトに関連付けられているイベント ハンドラーのセットから指定したイベント登録トークンによって表されるイベント ハンドラーを削除します。  
+現在関連付けられているイベント ハンドラーのセットから、指定されたイベント登録トークンによって表されるイベント ハンドラーを削除します。 **EventSource**オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,15 +35,15 @@ HRESULT Remove(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `token`  
- イベント ハンドラーを表すためのハンドル。 イベント ハンドラーがによって登録されたときにこのトークンが返された、 [Add()](../windows/eventsource-add-method.md)メソッドです。  
+### <a name="parameters"></a>パラメーター  
+ *token*  
+ イベント ハンドラーを表すハンドル。 このトークンはイベント ハンドラーの登録時に返された、 [Add()](../windows/eventsource-add-method.md)メソッド。  
   
 ## <a name="return-value"></a>戻り値  
  成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。  
   
-## <a name="remarks"></a>コメント  
- EventRegistrationToken 構造体の詳細については、Windows ランタイムのリファレンス ドキュメントで Windows::Foundation::EventRegistrationToken 構造体を参照してください。  
+## <a name="remarks"></a>Remarks  
+ EventRegistrationToken 構造体の詳細については、次を参照してください。、 `Windows::Foundation::EventRegistrationToken` Windows ランタイムのリファレンス ドキュメントの構造体のトピックです。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** event.h  

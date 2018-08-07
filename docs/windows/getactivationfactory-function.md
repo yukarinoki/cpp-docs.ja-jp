@@ -1,5 +1,5 @@
 ---
-title: GetActivationFactory 関数 |Microsoft ドキュメント
+title: GetActivationFactory 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f1a4bf31ff44c74362e21e8888630273fcc049e3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2cbb5be3603f79a7df1cb330ca06775357666854
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881339"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570312"
 ---
 # <a name="getactivationfactory-function"></a>GetActivationFactory 関数
-テンプレート パラメーターによって指定された型の対応するアクティベーション ファクトリを取得します。  
+テンプレート パラメーターで指定された型のアクティベーション ファクトリを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,18 +39,18 @@ inline HRESULT GetActivationFactory(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `T`  
+### <a name="parameters"></a>パラメーター  
+ *T*  
  アクティベーション ファクトリの種類を指定するテンプレート パラメーター。  
   
- `activatableClassId`  
+ *activatableClassId*  
  アクティベーション ファクトリを作成できるクラスの名前。  
   
- `factory`  
- この操作の完了時、アクティベーション ファクトリの種類への参照を`T`です。  
+ *ファクトリ*  
+ ときにこの操作が完了すると、型のアクティベーション ファクトリへの参照を*T*します。  
   
 ## <a name="return-value"></a>戻り値  
- 正常終了した場合は S_OK、それ以外の場合、この操作が失敗した理由を示す HRESULT エラーです。  
+ 成功した場合は s_ok を返します。それ以外の場合、この操作が失敗した理由を示す HRESULT エラー。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** client.h  

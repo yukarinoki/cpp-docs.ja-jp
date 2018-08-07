@@ -1,5 +1,5 @@
 ---
-title: アクセラレータ テーブル内のエントリの検索 |Microsoft ドキュメント
+title: アクセラレータ テーブル内のエントリの検索 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 53cafe8533eac024f07482563ba2c24183963978
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 45f02bff270c7049e6207d797ed2d2ca5ae339f2
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873210"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571377"
 ---
 # <a name="finding-an-entry-in-an-accelerator-table"></a>アクセラレータ テーブルでのエントリの検索
 ### <a name="to-find-an-entry-in-an-open-accelerator-table"></a>開いているアクセラレータ テーブルでエントリを検索するには  
   
-1.  アイコンをダブルクリックして、アクセラレータ テーブルを開く[リソース ビュー](../windows/resource-view-window.md)です。  
+1.  アイコンをダブルクリックして、アクセラレータ テーブルを開く[リソース ビュー](../windows/resource-view-window.md)します。  
   
     > [!NOTE]
     >  プロジェクトに .rc ファイルがまだ含まれていない場合は、「 [リソース スクリプト ファイルの新規作成](../windows/how-to-create-a-resource-script-file.md)」を参照してください。  
   
-2.  列ヘッダーをクリックして、列の内容をアルファベット順に並べ替えます。 たとえば、をクリックして**ID**をアルファベット順に、アクセラレータ テーブル内のすべての Id を表示します。  
+2.  列ヘッダーをクリックして、列の内容をアルファベット順に並べ替えます。 たとえば、をクリックして**ID**アクセラレータ テーブル内のすべての Id をアルファベット順に表示します。  
   
  これで、一覧に目を通しながらエントリを探すことができます。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。*  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。  
   
- **必要条件**  
+## <a name="requirements"></a>要件  
   
  Win32  
   

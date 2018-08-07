@@ -1,5 +1,5 @@
 ---
-title: '方法: ポインターと配列をピン留め |Microsoft ドキュメント'
+title: '方法: ポインターと配列をピン留め |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b1cea9b1c7c6738c33f00e984aa8212d611b4aec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ba13f3d561b4f7bbd57a7678fcfbea26e09a9984
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873590"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569376"
 ---
 # <a name="how-to-pin-pointers-and-arrays"></a>方法 : ポインターと配列を固定する
-マネージ オブジェクトで定義されている下位のオブジェクトをピン留めすると、オブジェクト全体をピン留めの効果があります。  たとえば、配列のいずれかの要素をピン留めすると場合、し、配列全体がもピン留めします。 ピン留めされた配列を宣言するための言語拡張機能はありません。 配列をピン留めするには、その要素の型とその要素のいずれかの暗証番号 (pin) への固定ポインターを宣言します。  
+マネージ オブジェクトで定義されている下位のオブジェクトをピン留めすると、オブジェクト全体をピン留めの効果があります。  たとえば、配列の要素が固定されている場合、配列全体もピン留めされます。 固定配列を宣言するための言語拡張機能はありません。 配列をピン留めするには、その要素の型とその要素の 1 つに固定ポインターを宣言します。  
   
 ## <a name="example"></a>例  
   
 ### <a name="code"></a>コード  
   
-```  
+```cpp  
 // pin_ptr_array.cpp  
 // compile with: /clr  
 #include <stdio.h>  
@@ -52,7 +52,7 @@ int main() {
   
 ### <a name="output"></a>出力  
   
-```  
+```Output  
 ++  
 ```  
   

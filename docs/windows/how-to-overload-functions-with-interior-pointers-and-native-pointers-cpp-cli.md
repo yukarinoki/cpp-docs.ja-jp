@@ -1,5 +1,5 @@
 ---
-title: '方法: 内部ポインターとネイティブ ポインターと関数をオーバー ロード (C + + CLI) |Microsoft ドキュメント'
+title: '方法: 内部ポインターとネイティブ ポインターと関数をオーバー ロード (C +/cli CLI) |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,24 +15,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e3bc7e5fca6a34f9847c913e92e523b2898068f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2fb1025238dc5cf5b186830d0bea3b896b7391ff
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874864"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569961"
 ---
 # <a name="how-to-overload-functions-with-interior-pointers-and-native-pointers-ccli"></a>方法: 内部ポインターとネイティブ ポインターを使用して関数をオーバーロードする (C++/CLI)
-関数は、パラメーターの型は、内部ポインターまたはネイティブ ポインターかどうかによってオーバー ロードすることができます。  
+パラメーターの型は、内部ポインター、またはネイティブ ポインターかどうかに応じて関数をオーバー ロードできます。  
   
 > [!IMPORTANT]
->  この言語機能をサポートに、 **/clr**コンパイラ オプションがなく、 **/ZW**コンパイラ オプション。  
+>  この言語機能がサポートされている、`/clr`コンパイラ オプションがなく、`/ZW`コンパイラ オプション。  
   
 ## <a name="example"></a>例  
   
 ### <a name="code"></a>コード  
   
-```  
+```cpp  
 // interior_ptr_overload.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -69,7 +69,7 @@ int main() {
   
 ### <a name="output"></a>出力  
   
-```  
+```Output 
 in f( int* pi )  
 in f( interior_ptr<int> pi )  
 ```  

@@ -53,7 +53,7 @@ ms.locfileid: "33340516"
   
     -   ELEMENT_TYPE_PTR は、修飾される型に続けて '*' と表されます。  
   
-    -   ELEMENT_TYPE_BYREF は、修飾される型に続けて '@' と表されます。  
+    -   ELEMENT_TYPE_BYREF は、修飾される型に続けて '\@' と表されます。  
   
     -   ELEMENT_TYPE_PINNED は、修飾される型に続けて '^' と表されます。 これは Visual C++ コンパイラでは生成されません。  
   

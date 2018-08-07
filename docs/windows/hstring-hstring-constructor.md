@@ -1,5 +1,5 @@
 ---
-title: Hstring::hstring コンス トラクター |Microsoft ドキュメント
+title: Hstring::hstring コンス トラクター |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a3188e137d3a39fb26ca4151f72073306038e46f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96b77ec87e3219206d353f56293fc201c46f5d7e
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876879"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568772"
 ---
 # <a name="hstringhstring-constructor"></a>HString::HString コンストラクター
-HString クラスの新しいインスタンスを初期化します。  
+新しいインスタンスを初期化、 **HString**クラス。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,16 +33,16 @@ HString(HString&& other) throw();
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `hstr`  
- HSTRING ハンドルの場合です。  
+ *hstr*  
+ HSTRING ハンドルの場合。  
   
- `other`  
- 既存の HString オブジェクト。  
+ *other*  
+ 既存の**HString**オブジェクト。  
   
-## <a name="remarks"></a>コメント  
- 最初のコンス トラクターは、空である新しい HString オブジェクトを初期化します。  
+## <a name="remarks"></a>Remarks  
+ 最初のコンス トラクターによって初期化新しい**HString**オブジェクトが空です。  
   
- 2 番目のコンス トラクターは、既存の値に新しい HString オブジェクトを初期化します`other`パラメーターを破棄し、および、`other`パラメーター。  
+ 2 番目のコンス トラクターによって初期化、新しい**HString**オブジェクト、既存の値から*他*パラメーター、し、その後破棄、*他*パラメーター。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

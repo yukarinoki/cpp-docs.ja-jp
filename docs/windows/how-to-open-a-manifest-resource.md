@@ -1,5 +1,5 @@
 ---
-title: '方法: マニフェスト リソースを開く |Microsoft ドキュメント'
+title: '方法: マニフェスト リソースを開く |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e877015afb0d53bd8c9bb12c092086b06ae59c2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 88d3573c4dce5c2aba85d9482b12bd62ba9fa1ad
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881843"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569948"
 ---
 # <a name="how-to-open-a-manifest-resource"></a>方法: マニフェスト リソースを開く
 マニフェスト リソースを [リソース ビュー](../windows/resource-view-window.md)から開くと、リソースはバイナリ形式で表示されます。 マニフェスト リソースの内容を見やすい形式で表示するには、ソリューション エクスプローラーからリソースを開く必要があります。  
   
 ### <a name="to-open-a-manifest-resource-in-the-text-editor"></a>テキスト エディターでマニフェスト リソースを開くには  
   
-1.  `Solution Explorer`でプロジェクトを開いて、 **リソース ファイル** のフォルダーを展開します。  
+1.  プロジェクトを開いてで**ソリューション エクスプ ローラー**、展開、**リソース ファイル**フォルダー。  
   
 2.  .manifest ファイルをダブルクリックします。  
   
@@ -36,13 +36,13 @@ ms.locfileid: "33881843"
   
 ### <a name="to-open-a-manifest-resource-in-another-editor"></a>別のエディターでマニフェスト リソースを開くには  
   
-1.  ソリューション エクスプローラーで .manifest ファイルを右クリックし、ショートカット メニューの **[プログラムから開く]** をクリックします。  
+1.  **ソリューション エクスプ ローラー**.manifest ファイルを右クリックし、選択、**プログラムから開く.** ショートカット メニューから。  
   
 2.  **[プログラムから開く]** ダイアログ ボックスで、使用するエディターを指定し、 **[開く]** をクリックします。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。*  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。  
   
- 要件  
+## <a name="requirements"></a>要件  
   
  Win32  
   

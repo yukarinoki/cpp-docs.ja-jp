@@ -1,5 +1,5 @@
 ---
-title: db_column |Microsoft ドキュメント
+title: db_column |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 35ab2472ac9e46b620ca735d06b23806126871e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 20c651c6e671c7c4895fc7dba85d16fdeb998ad5
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879634"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570702"
 ---
 # <a name="dbcolumn"></a>db_column
 指定された列を行セット内の変数にバインドします。  
@@ -30,8 +30,7 @@ ms.locfileid: "33879634"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
-      [ db_column(   
+[ db_column(   
    ordinal,   
    dbtype,   
    precision,   
@@ -42,8 +41,8 @@ ms.locfileid: "33879634"
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `ordinal`  
- 序数の列数 (**DBCOLUMNINFO**序数) またはデータをバインドする、行セット内のフィールドに対応する列の名前 (ANSI または Unicode 文字列)。 数字を使用する場合は、連続した序数をスキップすることができます (例: 1、2、3、5)。 名前は、使用する OLE DB プロバイダーでサポートされている場合、スペースを含めることがあります。 たとえば、次の形式のいずれかを使用できます。  
+ *序数*  
+ 列の序数 (`DBCOLUMNINFO`序数) またはデータをバインドする行セット内のフィールドに対応する列の名前 (ANSI または Unicode 文字列)。 番号を使用する場合は、連続する序数を省略できます (例: 1、2、3、5)。 使用する OLE DB プロバイダーでサポートされている場合、名前はスペースを含めることがあります。 たとえば、次の形式のいずれかを使用できます。  
   
 ```  
 [db_column("2")] TCHAR szCity[30];  
@@ -51,33 +50,33 @@ ms.locfileid: "33879634"
 ```  
   
  *dbtype* (省略可能)  
- OLE DB[型インジケーター](https://msdn.microsoft.com/en-us/library/ms711251.aspx)列エントリにします。  
+ OLE DB[型インジケーター](https://msdn.microsoft.com/library/ms711251.aspx)列エントリにします。  
   
  *有効桁数*(省略可能)  
- 列のエントリに使用される有効桁数です。 詳細については、説明を参照してください、`bPrecision`の要素、 [DBBINDING 構造体](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ 列のエントリに使用する有効桁数です。 詳細については、説明を参照してください、`bPrecision`の要素、 [DBBINDING 構造体](https://msdn.microsoft.com/library/ms716845.aspx)  
   
  *スケール*(省略可能)  
- 列のエントリに使用する小数点以下桁数。 詳細については、説明を参照してください`bScale`の要素、 [DBBINDING 構造体。](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ 列のエントリに使用する小数点以下桁数。 詳細については、説明を参照してください`bScale`の要素、 [DBBINDING 構造体。](https://msdn.microsoft.com/library/ms716845.aspx)  
   
  *ステータス*(省略可能)  
- この列の状態を保持するために使用されるメンバー変数です。 状態がかどうか、列の値が、データ値または他のいくつかの値などを示す**NULL**です。 使用可能な値は、次を参照してください。[ステータス](https://msdn.microsoft.com/en-us/library/ms722617.aspx)で、 *OLE DB プログラマーズ リファレンス*です。  
+ この列の状態を保持するために使用するメンバー変数です。 状態は、列の値がデータ値や NULL など、他のいくつかの値であるかどうかを示します。 使用可能な値は、次を参照してください。[状態](https://msdn.microsoft.com/library/ms722617.aspx)で、 *OLE DB プログラマーズ リファレンス*します。  
   
  *長さ*(省略可能)  
- 列のサイズをバイト単位で保持するために使用されるメンバー変数です。  
+ メンバー変数 (バイト単位)、列のサイズを保持するために使用します。  
   
-## <a name="remarks"></a>コメント  
- **db_column**行セット内の変数に指定したテーブル列をバインドします。 OLE DB に参加できるメンバー データを区切る`IAccessor`-ベースのバインディングです。 この属性は、通常 OLE DB コンシューマーのマクロを使用して定義されている列のマッピングを設定[BEGIN_COLUMN_MAP](../data/oledb/begin-column-map.md)、 [END_COLUMN_MAP](../data/oledb/end-column-map.md)、および[COLUMN_ENTRY](../data/oledb/column-entry.md)です。 これらの操作、OLE DB [DBBINDING 構造体](https://msdn.microsoft.com/en-us/library/ms716845.aspx)に指定された列をバインドします。 各メンバーをマークする、 **db_column**属性は、列のエントリの形式で列マップの 1 つのエントリを占有します。 したがって、配置する位置列マップは、コマンドまたはテーブル クラスでこの属性を呼び出します。  
+## <a name="remarks"></a>Remarks  
+ **db_column**行セット内の変数に指定したテーブル列をバインドします。 OLE DB に参加できるメンバー データを区切る`IAccessor`-ベースのバインド。 この属性は、通常 OLE DB コンシューマーのマクロを使用して定義されている列のマップを設定[BEGIN_COLUMN_MAP](../data/oledb/begin-column-map.md)、 [END_COLUMN_MAP](../data/oledb/end-column-map.md)、および[COLUMN_ENTRY](../data/oledb/column-entry.md)します。 これらの操作、OLE DB [DBBINDING 構造体](https://msdn.microsoft.com/library/ms716845.aspx)指定された列にバインドします。 各メンバーをマークする、 **db_column**属性は、列のエントリの形式で列のマップで 1 つのエントリを占有します。 したがって、コピー先の場所は列のマップは、コマンドまたはテーブル クラスでこの属性を呼び出します。  
   
- 使用して**db_column**いずれかと組み合わせて、 [db_table](../windows/db-table.md)または[db_command](../windows/db-command.md)属性。  
+ 使用**db_column**いずれかと組み合わせて、 [db_table](../windows/db-table.md)または[db_command](../windows/db-command.md)属性。  
   
- コンシューマー属性プロバイダーは、クラスにこの属性を適用する場合、コンパイラの名前は変更するクラス\_*すると*アクセサー、場所*すると*指定した名前は、クラス、および、コンパイラと呼ばれるクラスを作成また*すると*から派生した\_*すると*アクセサー。  クラス ビューでは、両方のクラスが表示されます。  
+ コンパイラにクラスの名前は、コンシューマー属性プロバイダーでは、この属性をクラスに適用されます、ときに\_ *YourClassName*、アクセサーで*YourClassName*に付けた名前を指定します、クラス、さらに、コンパイラはというクラスを作成も*YourClassName*から派生した\_ *YourClassName*アクセサー。  クラス ビューでは、両方のクラスが表示されます。  
   
- 例については、アプリケーションで使用されるこの属性のサンプル[AtlAgent](http://msdn.microsoft.com/en-us/52bef5da-c1a0-4223-b4e6-9e464b6db409)、および[MultiRead](http://msdn.microsoft.com/en-us/5a2a915a-77dc-492f-94b2-1b809995dd5e)です。  
+ アプリケーションで使用されるこの属性の例については、サンプル[AtlAgent](http://msdn.microsoft.com/52bef5da-c1a0-4223-b4e6-9e464b6db409)、および[MultiRead](http://msdn.microsoft.com/5a2a915a-77dc-492f-94b2-1b809995dd5e)します。  
   
 ## <a name="example"></a>例  
- このサンプルでは、列をバインドするテーブルで、**長い**データ メンバーし、ステータスや長さのフィールドを指定します。  
+ このサンプルでは、列をバインドするテーブルで、**長い**データ メンバーをステータスや長さのフィールドを指定します。  
   
-```  
+```cpp  
 // db_column_1.cpp  
 // compile with: /LD  
 #include <atlbase.h>  
@@ -94,9 +93,9 @@ class CProducts {
 ```  
   
 ## <a name="example"></a>例  
- このサンプルを次の 4 つの列をバインドする、**長い**、文字の文字列、タイムスタンプ、および**DB_NUMERIC**をこの順序での整数。  
+ このサンプルを 4 つの列をバインドする、**長い**、文字の文字列、タイムスタンプ、および`DB_NUMERIC`をこの順序で、整数。  
   
-```  
+```cpp  
 // db_column_2.cpp  
 // compile with: /LD  
 #include <atlbase.h>  
@@ -118,8 +117,8 @@ class CProducts {
   
 |||  
 |-|-|  
-|**対象**|**クラス**、`struct`メンバー、メソッド|  
-|**反復可能**|×|  
+|**対象**|**クラス**、**構造体**メンバー、メソッド|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

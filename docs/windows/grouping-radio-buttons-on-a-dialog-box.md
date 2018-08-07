@@ -1,5 +1,5 @@
 ---
-title: ダイアログ ボックスのオプション ボタンをグループ化 |Microsoft ドキュメント
+title: ダイアログ ボックスのオプション ボタンをグループ化 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aee3245a65ccdccc32b40c313eecdd45cb3ea8bf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7712927a10fa34c5b6436aecd002c9621546638b
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879329"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571504"
 ---
 # <a name="grouping-radio-buttons-on-a-dialog-box"></a>ダイアログ ボックスのオプション ボタンのグループ化
 ダイアログ ボックスにラジオ ボタン群を追加するときには、これをグループとして扱ってください。そのためには、グループの最初のボタンの [プロパティ] ウィンドウで [グループ] プロパティを設定します。 そのラジオ ボタンのコントロール ID が [メンバー変数の追加ウィザード](../ide/add-member-variable-wizard.md)に表示され、ラジオ ボタンのグループのメンバー変数を追加できるようになります。  
@@ -60,9 +60,9 @@ ms.locfileid: "33879329"
   
 6.  これで、コードを変更し、表示したときに選ばれているラジオ ボタンを指定できます。 たとえば、m_radioBox1 = 0 の場合は、グループの最初のラジオ ボタンが選ばれます。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 詳細については、管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションは、次を参照してください。[グローバライズと .NET Framework アプリケーションのローカライズ](/dotnet/standard/globalization-localization/index)です。  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
   
- 要件  
+## <a name="requirements"></a>要件  
   
  Win32  
   
@@ -70,4 +70,3 @@ ms.locfileid: "33879329"
  [ダイアログ ボックスのコントロールの配置](../windows/arrangement-of-controls-on-dialog-boxes.md)   
  [ダイアログ ボックスのコントロール](../windows/controls-in-dialog-boxes.md)   
  [コントロール](../mfc/controls-mfc.md)
-

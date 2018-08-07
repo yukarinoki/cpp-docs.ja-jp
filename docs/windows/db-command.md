@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70399b15081de89d8da49268c8d62d3ad390858d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 8eade0c6a77e70fe156f80c2809a8cca0ed89b38
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "38954982"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571439"
 ---
 # <a name="dbcommand"></a>db_command
 OLE DB コマンドを作成します。  
@@ -133,7 +133,7 @@ OLE DB コマンドからバインディング パラメーターを分離でき
 ## <a name="remarks"></a>Remarks  
 OLE DB コンシューマーは、**db_command** によって作成された [CCommand](../data/oledb/ccommand-class.md) オブジェクトを使用して、コマンドを実行します。  
   
-**db_command** はクラス スコープまたは関数スコープで使用できます。主な違いは、 `CCommand` オブジェクトのスコープです。 関数スコープでは、バインディングなどのデータは関数の終了時に終了します。 クラスと関数のスコープの使用法は、OLE DB コンシューマー テンプレート クラスを伴う**CCommand\<>**、テンプレート引数は、関数およびクラスの場合の点が異なります。 関数スコープではバインディングはローカル変数を構成する **Accessor** に対して行われますが、クラス スコープでは引数として `CAccessor`派生クラスを予期します。 クラス属性として使用すると、 **db_command** は **db_column**と共に動作します。  
+**db_command** はクラス スコープまたは関数スコープで使用できます。主な違いは、 `CCommand` オブジェクトのスコープです。 関数スコープでは、バインディングなどのデータは関数の終了時に終了します。 クラスと関数のスコープの使用法は、OLE DB コンシューマー テンプレート クラスを伴う`CCommand<>`、テンプレート引数は、関数およびクラスの場合の点が異なります。 関数スコープではバインディングはローカル変数を構成する **Accessor** に対して行われますが、クラス スコープでは引数として `CAccessor`派生クラスを予期します。 クラス属性として使用すると、 **db_command** は **db_column**と共に動作します。  
   
 **db_command** を使用して、結果セットを返さないコマンドを実行できます。  
   
@@ -252,7 +252,7 @@ int main() {
 }  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 ### <a name="attribute-context"></a>属性コンテキスト  
   

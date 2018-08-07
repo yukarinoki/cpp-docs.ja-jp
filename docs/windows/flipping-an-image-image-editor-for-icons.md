@@ -1,5 +1,5 @@
 ---
-title: 反転イメージ (アイコン用イメージ エディター) |Microsoft ドキュメント
+title: 反転イメージ (アイコン用イメージ エディター) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,44 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4332e1de44682dbd37b67c71bdcc4c107c98a3da
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0cb6c655bdc8da5341a28449a25796ad59e453b4
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873902"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569431"
 ---
 # <a name="flipping-an-image-image-editor-for-icons"></a>イメージの回転 (アイコン用イメージ エディター)
 反転またはにイメージを回転させることができます。  
   
 -   元のミラー イメージを作成します。  
   
--   上下逆に、イメージを有効にします。  
+-   イメージを上下にします。  
   
 -   一度に右側にイメージを 90 度回転させます。  
   
 ### <a name="to-flip-the-image-horizontally-mirror-image"></a>イメージを水平方向に反転させる (ミラー イメージ)  
   
-1.  **イメージ**] メニューの [選択**水平方向に反転**です。  
+1.  **イメージ**] メニューの [選択**水平方向に反転**します。  
   
 ### <a name="to-flip-the-image-vertically-turn-upside-down"></a>イメージを垂直方向に反転させる (上下)  
   
-1.  **イメージ**] メニューの [選択**垂直方向に反転**です。  
+1.  **イメージ**] メニューの [選択**垂直方向に反転**します。  
   
 ### <a name="to-rotate-the-image-90-degrees"></a>イメージを 90 ° 回転するには  
   
-1.  **イメージ**] メニューの [選択**90 度回転**です。  
+1.  **イメージ**] メニューの [選択**90 度回転**します。  
   
     > [!NOTE]
-    >  使用することも、[アクセラレータ (ショートカット) キー](../windows/accelerator-keys-image-editor-for-icons.md)これらのコマンドのショートカット メニュー (イメージ エディターで、イメージの外側をクリックします) から、コマンドにアクセスまたはします。  
+    >  使用することもできます、[アクセラレータ (ショートカット) キー](../windows/accelerator-keys-image-editor-for-icons.md)これらのコマンドのショートカット メニュー (イメージ エディターの中にイメージの外側をクリックします) から、コマンドにアクセスしたりします。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 詳細については、管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションは、次を参照してください。[グローバライズと .NET Framework アプリケーションのローカライズ](/dotnet/standard/globalization-localization/index)です。  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
   
- 要件  
+## <a name="requirements"></a>要件  
   
  なし  
   
 ## <a name="see-also"></a>関連項目  
  [グラフィカル リソースの編集](../windows/editing-graphical-resources-image-editor-for-icons.md)   
  [アイコン用イメージ エディター](../windows/image-editor-for-icons.md)
-

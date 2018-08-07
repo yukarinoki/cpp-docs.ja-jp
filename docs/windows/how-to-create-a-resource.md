@@ -1,5 +1,5 @@
 ---
-title: '方法: リソースを作成 |Microsoft ドキュメント'
+title: '方法: リソースの作成 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3a5c8ee47203f24c1995cfde9dda40912f21467
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff08e42ac1afe3954b485e11ed6433449a6ee2ff
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878646"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571471"
 ---
 # <a name="how-to-create-a-resource"></a>方法: リソースを作成する
 > [!NOTE]
@@ -46,7 +46,7 @@ ms.locfileid: "33878646"
   
 ### <a name="to-create-a-new-resource-in-class-view"></a>クラス ビューでリソースを新規作成するには  
   
-1.  [クラス ビュー](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)で、クラスを右クリックし、ショートカット メニューの **[追加]**、 **[リソースの追加]** の順にクリックします。  
+1.  [クラス ビュー](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)クラスを右クリックして選択**追加**、 をクリックし、**リソースの追加**ショートカット メニューから。  
   
 2.  [[リソースの追加] ダイアログ ボックス](../windows/add-resource-dialog-box.md)で、プロジェクトに追加するリソースを選択します。  
   
@@ -58,11 +58,12 @@ ms.locfileid: "33878646"
   
  リソースは、新しい既定のリソース (テンプレートに基づいていないリソース) として作成するか、または [テンプレート](../windows/how-to-use-resource-templates.md)の後でパターン化されるリソースとして作成できます。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。*  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド。*
+
+
+## <a name="requirements"></a>要件  
   
- **必要条件**  
-  
- Win32  
+Win32  
   
 ## <a name="see-also"></a>関連項目  
  [リソース ファイル (Visual Studio)](../windows/resource-files-visual-studio.md)   
