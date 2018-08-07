@@ -1,5 +1,5 @@
 ---
-title: RuntimeClassBase 構造体 |Microsoft ドキュメント
+title: RuntimeClassBase 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d80f475cf8a50dcb084ca6e953842e91c55e4502
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b272c733dab71e615a46cb4af25609c560bdbfef
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888408"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602680"
 ---
 # <a name="runtimeclassbase-structure"></a>RuntimeClassBase 構造体
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -31,10 +31,10 @@ WRL インフラストラクチャをサポートし、コードから直接使�
 struct RuntimeClassBase;  
 ```  
   
-## <a name="remarks"></a>コメント  
- RuntimeClass を検出するために使用される、[ように](../windows/make-function.md)関数。  
+## <a name="remarks"></a>Remarks  
+ 検出するために使用される`RuntimeClass`で、[ように](../windows/make-function.md)関数。  
   
- RuntimeClassBase は、空の構造です。  
+ **RuntimeClassBase**は空の構造です。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `RuntimeClassBase`  

@@ -1,5 +1,5 @@
 ---
-title: '[新規ツールバー] ダイアログ ボックス |Microsoft ドキュメント'
+title: 新しいツールバー ダイアログ ボックス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6662fcfab3c9bb1d805e39147bd2838e6bbce5b2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2024e9ea69bed58f679456bae6f0c566de6b99f9
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877541"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604106"
 ---
 # <a name="new-toolbar-resource-dialog-box"></a>[新規ツール バー リソース] ダイアログ ボックス
-新規ツールバー ダイアログ ボックスでは、ツール バー リソースを追加するボタンの高さと幅を指定することができます。 既定値は、16 × 15 ピクセルです。  
+新規ツール バー リソース ダイアログ ボックスを使用すると、ツール バー リソースを追加するボタンの高さと幅を指定できます。 既定では 16 × 15 ピクセルです。  
   
- ツールバーを作成するために使用するビットマップが 2048 の最大の幅です。 設定した場合は、**ボタンの幅**512 には、4 つのボタンのみ持つことができます。 513 幅を設定する場合は、3 つのボタンだけができます。  
+ ツールバーを作成するために使用するビットマップが 2048 の最大の幅です。 設定した場合は、**ボタンの幅**512 には、4 つのボタンのみができます。 513 幅を設定する場合は、3 つのボタンのみができます。  
   
  **ボタンの幅**  
- ビットマップ リソースからツール バー リソースへの変換ツール バー ボタンの幅を入力する場所を提供します。 イメージのトリミングは幅と高さを指定して、標準ツールバーの色 (16 色) を使用する色を調整します。  
+ ビットマップ リソースからツール バー リソースに変換するツール バー ボタンの幅を入力する場所を提供します。 幅と高さを指定すると、画像がトリミングされ、標準ツールバーの色 (16 色) を使用する色が調整されます。  
   
  **ボタンの高さ**  
- ビットマップ リソースからツール バー リソースへの変換ツール バー ボタンの高さを入力する場所を提供します。 イメージのトリミングは幅と高さを指定して、標準ツールバーの色 (16 色) を使用する色を調整します。  
+ ビットマップ リソースからツール バー リソースに変換するツール バー ボタンの高さを入力する場所を提供します。 幅と高さを指定すると、画像がトリミングされ、標準ツールバーの色 (16 色) を使用する色が調整されます。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 詳細については、管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションは、次を参照してください。[グローバライズと .NET Framework アプリケーションのローカライズ](/dotnet/standard/globalization-localization/index)です。  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
   
 ## <a name="requirements"></a>要件  
  MFC または ATL  
   
 ## <a name="see-also"></a>関連項目  
- [ツール バー ボタン プロパティ](../windows/toolbar-button-properties.md)   
+ [ツール バー ボタンのプロパティ](../windows/toolbar-button-properties.md)   
  [ビットマップ ツールバーからへの変換](../windows/converting-bitmaps-to-toolbars.md)   
  [ツール バー エディター](../windows/toolbar-editor.md)
-

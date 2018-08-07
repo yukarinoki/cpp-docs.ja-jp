@@ -1,5 +1,5 @@
 ---
-title: odl |Microsoft ドキュメント
+title: odl |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 559d149cfbe2fac7a5d648d56cb4e34d427cedc8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 984731d85bafe3c0e6bb0d8f6092800019b40663
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877697"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608187"
 ---
 # <a name="odl"></a>odl
-オブジェクト記述言語 (ODL) インターフェイスとしてインターフェイスを識別します。 MIDL コンパイラは必要ありません、 **odl**属性です。 古い .odl ファイルとの互換性のみ認識されます。  
+オブジェクト記述言語 (ODL) インターフェイスとしてインターフェイスを識別します。 MIDL コンパイラは必要ありません、 **odl**属性; 古い .odl ファイルと互換性のためだけ認識されます。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 [odl]  
-  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **Odl** C++ 属性と同じ機能を持つ、 [odl](http://msdn.microsoft.com/library/windows/desktop/aa367126) MIDL 属性。  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp  
 // cpp_attr_ref_odl.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -66,8 +64,8 @@ public:
   
 |||  
 |-|-|  
-|**対象**|`interface`|  
-|**反復可能**|×|  
+|**対象**|**interface**|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

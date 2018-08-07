@@ -1,5 +1,5 @@
 ---
-title: Module::registerwinrtobject メソッド |Microsoft ドキュメント
+title: Module::registerwinrtobject メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 097bf70ebd280d9494ff70ea1d80f53615f3d898
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 42ec736126e2381b00542bf71afca0b9db187df7
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874955"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603758"
 ---
 # <a name="moduleregisterwinrtobject-method"></a>Module::RegisterWinRTObject メソッド
 他のアプリケーションがそれらに接続できるように、1 つまたは複数の Windows ランタイム オブジェクトを登録します。  
@@ -36,21 +36,21 @@ HRESULT RegisterWinRTObject(const wchar_t* serverName,
    unsigned int count)  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `serverName`  
+### <a name="parameters"></a>パラメーター  
+ *サーバー名*  
  この操作によって影響を受けるオブジェクトのサブセットを指定する名前。  
   
- `activatableClassIds`  
+ *activatableClassIds*  
  登録のアクティブ化可能な Clsid の配列。  
   
- `cookie`  
- 登録済みのクラス オブジェクトを識別する値。 この値は、登録を取り消すを後で使用されます。  
+ *Cookie*  
+ 登録済みのクラス オブジェクトを識別する値。 この値は、登録を取り消すに後で使用されます。  
   
- `count`  
+ *count*  
  登録するオブジェクトの数。  
   
 ## <a name="return-value"></a>戻り値  
- 正常終了した場合は S_OK、それ以外の場合、エラーの理由を示す CO_E_OBJISREG など hresult 値の操作に失敗しました。  
+ 成功した場合は s_ok を返します。それ以外の場合、エラーの hresult 値理由を示す CO_E_OBJISREG など、操作に失敗しました。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** module.h  

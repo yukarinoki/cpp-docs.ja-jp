@@ -1,5 +1,5 @@
 ---
-title: 範囲 (C++) |Microsoft ドキュメント
+title: 範囲 (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ac5f0e81a7d29d89e32735224afed67f3d9c9101
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d8c7ab6dcfa4a085facf835343404de3ed4998a3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877931"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603443"
 ---
 # <a name="range-c"></a>range (C++)
-引数または値が設定される実行時にフィールドに使用できる値の範囲を指定します。  
+引数または値を持つが実行時に設定されているフィールドに使用できる値の範囲を指定します。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
-      [ range(  
+[ range(  
    low,   
    high  
 ) ]  
@@ -39,17 +38,17 @@ ms.locfileid: "33877931"
   
 #### <a name="parameters"></a>パラメーター  
  *low*  
- 範囲の下限値です。  
+ 範囲の下限値。  
   
  *high*  
- 範囲の上限値です。  
+ 範囲の上限値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **範囲**C++ 属性と同じ機能を持つ、[範囲](http://msdn.microsoft.com/library/windows/desktop/aa367151)MIDL 属性。  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp  
 // cpp_attr_ref_range.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -69,8 +68,8 @@ __interface ICustom {
   
 |||  
 |-|-|  
-|**対象**|インターフェイス メソッドをインターフェイス パラメーター|  
-|**反復可能**|×|  
+|**対象**|インターフェイスのメソッド、インターフェイス パラメーター|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

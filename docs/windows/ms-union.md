@@ -1,5 +1,5 @@
 ---
-title: ms_union |Microsoft ドキュメント
+title: ms_union |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a377995149fda8efd565c30caff9b7791748ed79
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c20b795231cad936f30ef329f015b6ff691aa0d3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882038"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606700"
 ---
 # <a name="msunion"></a>ms_union
-カプセル化されていない共用体のネットワーク データ表現のアラインメントを制御します。  
+カプセル化されていない共用体のネットワーク データ表現の整列を制御します。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 [ms_union]  
-  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **Ms_union** C++ 属性と同じ機能を持つ、 [ms_union](http://msdn.microsoft.com/library/windows/desktop/aa367100) MIDL 属性。  
   
 ## <a name="example"></a>例  
- 次のコードは、の位置を示しています**ms_union**:。  
+ 次のコードは、配置の**ms_union**:  
   
-```  
+```cpp  
 // cpp_attr_ref_ms_union.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -71,9 +69,9 @@ __interface IFireTabCtrl {
 |||  
 |-|-|  
 |**対象**|カプセル化されていない共用体|  
-|**反復可能**|×|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
-|**無効な属性**|**dispinterface**|  
+|**無効な属性**|`dispinterface`|  
   
  詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  
   

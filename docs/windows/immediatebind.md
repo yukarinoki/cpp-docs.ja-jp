@@ -1,5 +1,5 @@
 ---
-title: immediatebind |Microsoft ドキュメント
+title: immediatebind |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ee885c138bec9c7fea9adcc3d48b5b23e33a2ca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a9979ec16009de680facdc6e8fc22b3d3cdccc3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876265"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603056"
 ---
 # <a name="immediatebind"></a>immediatebind
-データ バインドされたオブジェクトのプロパティに対するすべての変更のデータベースに直ちに通知されることを示します。  
+データ バインド オブジェクトのプロパティに対するすべての変更のデータベースに直ちに通知されることを示します。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 [immediatebind]  
-  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **Immediatebind** C++ 属性と同じ機能を持つ、 [immediatebind](http://msdn.microsoft.com/library/windows/desktop/aa367045) MIDL 属性。  
   
 ## <a name="example"></a>例  
- 参照してください[バインド可能な](../windows/bindable.md)の使用方法の例については**immediatebind**です。  
+ 参照してください[バインド可能な](../windows/bindable.md)を使用する方法の例については**immediatebind**します。  
   
 ## <a name="requirements"></a>要件  
   
@@ -48,7 +46,7 @@ ms.locfileid: "33876265"
 |||  
 |-|-|  
 |**対象**|インターフェイス メソッド|  
-|**反復可能**|×|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

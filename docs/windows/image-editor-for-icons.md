@@ -1,5 +1,5 @@
 ---
-title: アイコン用イメージ エディター |Microsoft ドキュメント
+title: アイコン用イメージ エディター |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 41c4bf71d8d3479f8353c1f57e725f07926dee47
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bb5da618ce94711ce41e305c234ef5a5087c5f38
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879283"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603573"
 ---
 # <a name="image-editor-for-icons"></a>アイコン用イメージ エディター
 イメージ エディターには、イメージの作成と編集に使用できる広範なツール セットと、ツール バーのビットマップの作成に役立つ機能が用意されています。 **[イメージ]** メニューのコマンドや、 **[イメージ エディター]** ツール バーのツールを使用して、ビットマップ、アイコン、カーソルだけでなく、GIF 形式や JPEG 形式のイメージも編集できます。  
@@ -53,15 +53,14 @@ ms.locfileid: "33879283"
 ## <a name="visual-studio-image-library"></a>Visual Studio Image Library  
  アプリケーションで使用できるアニメーション、ビットマップ、およびアイコンが多数含まれる Visual Studio Image Library は、無料でダウンロードできます。 ライブラリをダウンロードする方法の詳細については、「 [Visual Studio Image Library](/visualstudio/designers/the-visual-studio-image-library)」を参照してください。  
   
-## <a name="managed-resources"></a>マネージ リソース  
- イメージ エディターと [バイナリ エディター](binary-editor.md) を使用して、マネージ プロジェクトのリソース ファイルを操作できます。 編集の対象となるマネージ リソースは、リンク リソースである必要があります。 Visual Studio のリソース エディターでは、埋め込みリソースの編集はサポートしていません。  
+## <a name="managed-resources"></a>マネージド リソース  
+ イメージ エディターと [バイナリ エディター](binary-editor.md) を使用して、マネージド プロジェクトのリソース ファイルを操作できます。 編集の対象となるマネージド リソースは、リンク リソースである必要があります。 Visual Studio のリソース エディターでは、埋め込みリソースの編集はサポートしていません。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 詳細については、管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションは、次を参照してください。[グローバライズと .NET Framework アプリケーションのローカライズ](/dotnet/standard/globalization-localization/index)です。  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
   
-### <a name="requirements"></a>要件  
+## <a name="requirements"></a>要件  
  なし  
   
 ## <a name="see-also"></a>関連項目  
  [リソース エディター](../windows/resource-editors.md)   
  [アイコン](http://msdn.microsoft.com/library/windows/desktop/ms646973.aspx)
-

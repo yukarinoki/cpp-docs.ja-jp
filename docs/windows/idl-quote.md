@@ -1,5 +1,5 @@
 ---
-title: idl_quote |Microsoft ドキュメント
+title: idl_quote |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a8844a4770d0a4746c9d9de32a593d0770dcc9a9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96e316add17ff45425bd51a7e32b276b234c6906
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878513"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606515"
 ---
 # <a name="idlquote"></a>idl_quote
-Visual C の現在のバージョンでサポートされていない IDL コンストラクトを使用することができますを生成された .idl ファイルへのパススルーします。  
+Visual C の現在のバージョンでサポートされていない IDL コンストラクトを使用することができ、生成された .idl ファイルに渡すことがあります。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
-      [ idl_quote(  
+[ idl_quote(  
    text  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
  *テキスト*  
- Visual C コンパイラはコンパイラ エラーを返さずに、生成された .idl ファイルへのパススルーにする属性の名前。  
+ コンパイラ エラーを返さずに生成された .idl ファイルに渡す Visual C コンパイラが意図されている属性名。  
   
-## <a name="remarks"></a>コメント  
- 場合、 **idl_quote** C++ 属性が、(後にセミコロン、かっこ)、スタンドアロン属性として使用*テキスト*は、マージされた .idl ファイルに配置されます。 場合**idl_quote** 、シンボルの使用は*テキスト*シンボルに対する属性ブロック内に配置されます。  
+## <a name="remarks"></a>Remarks  
+ 場合、 **idl_quote** C++ 属性は、(セミコロン、右かっこの後)、スタンドアロン属性として使用*テキスト*は、マージされた .idl ファイルに配置されます。 場合**idl_quote**シンボルで使用されて*テキスト*シンボルに対する属性ブロック内に配置されます。  
   
 ## <a name="example"></a>例  
- 次のコードは、サポートされていない属性を指定する方法を示します (を使用して**で**はサポートされている) と定義して、未定義の .idl コンストラクトを使用する方法。  
+ 次のコードは、サポートされていない属性を指定する方法を示します (を使用して**で**、サポートされる) と定義して、未定義の .idl コンストラクトを使用する方法。  
   
-```  
+```cpp  
 // cpp_attr_ref_idl_quote.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -79,7 +78,7 @@ __interface IStatic{
 };  
 ```  
   
- このコードと MYFLOT と MYDUB と*テキスト*エントリが生成された .idl ファイルに配置されます。 *名前*パラメーター強制的*テキスト*を参照する前に配置する*名前*で生成された .idl ファイル。 *の依存関係*パラメーターを強制的にする前に配置される依存関係のリスト定義*テキスト*で生成された .idl ファイル。  
+ このコードにより MYFLOT および MYDUB、*テキスト*エントリが生成された .idl ファイルに配置されます。 *名前*パラメーターを使い*テキスト*を参照する前に配置する*名前*で生成された .idl ファイル。 *依存関係*パラメーターを強制的にする前に配置する依存関係のリスト定義*テキスト*で生成された .idl ファイル。  
   
 ## <a name="requirements"></a>要件  
   
@@ -88,7 +87,7 @@ __interface IStatic{
 |||  
 |-|-|  
 |**対象**|任意の場所|  
-|**反復可能**|×|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

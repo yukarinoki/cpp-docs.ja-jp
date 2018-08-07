@@ -1,5 +1,5 @@
 ---
-title: importlib |Microsoft ドキュメント
+title: importlib |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c21b97e50fa03861245a0c0881963387dd8a3102
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a4563d1b24b3af6e450a67a21d6a083f1839bc3e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876759"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603069"
 ---
 # <a name="importlib"></a>importlib
 既に他のタイプ ライブラリでコンパイル済みの型を、作成中のタイプ ライブラリで使用できるようにします。  
@@ -30,23 +30,22 @@ ms.locfileid: "33876759"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
-      [ importlib(  
+[ importlib(  
    "tlb_file"  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *tlb_file*  
  現在のプロジェクトのタイプ ライブラリにインポートする .tlb ファイルの名前 (引用符で囲む)。  
   
-## <a name="remarks"></a>コメント  
- **Importlib** C++ 属性により、`importlib`ステートメントが生成された .idl ファイルのライブラリ ブロックに配置されます。 **Importlib**属性と同じ機能を持つ、 [importlib](http://msdn.microsoft.com/library/windows/desktop/aa367050) MIDL 属性。  
+## <a name="remarks"></a>Remarks  
+ **Importlib** C++ 属性によって、`importlib`ステートメントが生成された .idl ファイルのライブラリ ブロックに配置されます。 **Importlib**属性と同じ機能を持つ、 [importlib](http://msdn.microsoft.com/library/windows/desktop/aa367050) MIDL 属性。  
   
 ## <a name="example"></a>例  
  次のコードを使用する方法の例を示します**importlib**:  
   
-```  
+```cpp  
 // cpp_attr_ref_importlib.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  
@@ -60,7 +59,7 @@ ms.locfileid: "33876759"
 |||  
 |-|-|  
 |**対象**|任意の場所|  
-|**反復可能**|×|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

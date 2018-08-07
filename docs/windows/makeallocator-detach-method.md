@@ -1,5 +1,5 @@
 ---
-title: Makeallocator::detach メソッド |Microsoft ドキュメント
+title: Makeallocator::detach メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 50afca04492c29aa526f7a004c6e0f725022e9ba
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a269b7cbab3bba180dfc389075346db3c60e8bf0
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876970"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603369"
 ---
 # <a name="makeallocatordetach-method"></a>MakeAllocator::Detach メソッド
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -33,10 +33,10 @@ WRL インフラストラクチャをサポートし、コードから直接使�
 __forceinline void Detach();  
 ```  
   
-## <a name="remarks"></a>コメント  
- によって割り当てられたメモリの関連付けを解除、 [Allocate](../windows/makeallocator-allocate-method.md) MakeAllocator、現在のメソッドです。  
+## <a name="remarks"></a>Remarks  
+ によって割り当てられたメモリの関連付けを解除、 [Allocate](../windows/makeallocator-allocate-method.md)メソッドは、現在から**MakeAllocator**オブジェクト。  
   
- Detach() を呼び出すと、した割り当てメソッドによって提供されるメモリを削除する必要があります。  
+ 呼び出す場合**Detach()**、によって提供されるメモリの削除を担当、`Allocate`メソッド。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** implements.h  

@@ -1,5 +1,5 @@
 ---
-title: propput |Microsoft ドキュメント
+title: propput |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0605220b9eecce3ba042ddd0b46abd63a06c9dea
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 679b019c15d72586b5ca186e0b54c9a9172db53a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882954"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608457"
 ---
 # <a name="propput"></a>propput
 プロパティ設定関数を指定します。  
@@ -30,16 +30,14 @@ ms.locfileid: "33882954"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 [propput]  
-  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **Propput** C++ 属性と同じ機能を持つ、 [propput](http://msdn.microsoft.com/library/windows/desktop/aa367146) MIDL 属性。  
   
 ## <a name="example"></a>例  
- 例を参照して[バインド可能な](../windows/bindable.md)の使用例の**propput**です。  
+ 例をご覧ください[バインド可能な](../windows/bindable.md)の使用サンプル**propput**します。  
   
 ## <a name="requirements"></a>要件  
   
@@ -48,9 +46,9 @@ ms.locfileid: "33882954"
 |||  
 |-|-|  
 |**対象**|メソッド|  
-|**反復可能**|×|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
-|**無効な属性**|**propget**、 **propputref**|  
+|**無効な属性**|`propget`, `propputref`|  
   
  属性コンテキストの詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  
   

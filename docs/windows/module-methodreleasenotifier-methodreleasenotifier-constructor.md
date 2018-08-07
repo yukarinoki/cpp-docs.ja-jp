@@ -1,5 +1,5 @@
 ---
-title: Module::MethodReleaseNotifier::MethodReleaseNotifier コンス トラクター |Microsoft ドキュメント
+title: Module::MethodReleaseNotifier::MethodReleaseNotifier コンス トラクター |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 91540ca3fff03f1f0a449413c2d1ca72781c70f1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a8e48b6f8ec4a985bfa7fa5b8d0069e472df86e8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875228"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605991"
 ---
 # <a name="modulemethodreleasenotifiermethodreleasenotifier-constructor"></a>Module::MethodReleaseNotifier::MethodReleaseNotifier コンストラクター
-Module::methodreleasenotifier クラスの新しいインスタンスを初期化します。  
+新しいインスタンスを初期化、 **module::methodreleasenotifier**クラス。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 MethodReleaseNotifier(  
    _In_ T* object,   
    _In_ void (T::* method)(),   
@@ -39,15 +38,15 @@ MethodReleaseNotifier(
             method_(method);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `object`  
- メンバー関数があるイベント ハンドラー オブジェクトです。  
+### <a name="parameters"></a>パラメーター  
+ *object*  
+ メンバー関数は、イベント ハンドラー オブジェクト。  
   
- `method`  
- このメンバー関数はパラメーターの`object`イベント ハンドラーはします。  
+ *method*  
+ パラメーターのメンバー関数は、*オブジェクト*イベント ハンドラーは。  
   
- `release`  
- 指定`true`を基になる呼び出しを有効にする[モジュール:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md)メソッドです。 それ以外の場合、指定`false`です。  
+ *release*  
+ 指定**true** 、基になる呼び出しを有効にする[モジュール:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md)メソッド。 それ以外の場合、指定**false**します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** module.h  

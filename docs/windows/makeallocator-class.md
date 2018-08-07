@@ -1,5 +1,5 @@
 ---
-title: MakeAllocator クラス |Microsoft ドキュメント
+title: MakeAllocator クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38724e6371f5c0ae508fc18e4bc75dc2287dbe19
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c87f1191bc90cd2aec9207f3a4657349c9859bf4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878061"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605920"
 ---
 # <a name="makeallocator-class"></a>MakeAllocator クラス
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -30,7 +30,6 @@ WRL インフラストラクチャをサポートし、コードから直接使�
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 template<  
    typename T,  
    bool hasWeakReferenceSupport =   
@@ -44,19 +43,19 @@ template<typename T>
 class MakeAllocator<T, true>;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `T`  
+### <a name="parameters"></a>パラメーター  
+ *T*  
  型の名前。  
   
- `hasWeakReferenceSupport`  
- `true` 弱い参照をサポートするオブジェクトのメモリを割り当てられません`false`弱参照でサポートされていないオブジェクトのメモリを割り当てられません。  
+ *hasWeakReferenceSupport*  
+ **true**弱い参照は; をサポートするオブジェクトのメモリを割り当てられません。**false**弱い参照をサポートしていないオブジェクトのメモリを割り当てられません。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  弱い参照のサポートの有無のアクティブ化可能なクラスのメモリを割り当てます。  
   
- ユーザー定義のメモリ割り当てのモデルを実装する MakeAllocator クラスをオーバーライドします。  
+ 上書き、 **MakeAllocator**ユーザー定義のメモリ割り当てモデルを実装するクラス。  
   
- MakeAllocator は通常、構築時にオブジェクトをスローした場合は、メモリ リークを防ぐために使用されます。  
+ **MakeAllocator**は通常、構築時にオブジェクトをスローした場合は、メモリ リークを防ぐために使用します。  
   
 ## <a name="members"></a>メンバー  
   
@@ -64,15 +63,15 @@ class MakeAllocator<T, true>;
   
 |名前|説明|  
 |----------|-----------------|  
-|[MakeAllocator::MakeAllocator コンストラクター](../windows/makeallocator-makeallocator-constructor.md)|MakeAllocator クラスの新しいインスタンスを初期化します。|  
-|[MakeAllocator::~MakeAllocator デストラクター](../windows/makeallocator-tilde-makeallocator-destructor.md)|MakeAllocator クラスの現在のインスタンスの初期化を解除します。|  
+|[MakeAllocator::MakeAllocator コンストラクター](../windows/makeallocator-makeallocator-constructor.md)|新しいインスタンスを初期化、 **MakeAllocator**クラス。|  
+|[MakeAllocator::~MakeAllocator デストラクター](../windows/makeallocator-tilde-makeallocator-destructor.md)|現在のインスタンスの初期化を解除、 **MakeAllocator**クラス。|  
   
 ### <a name="public-methods"></a>パブリック メソッド  
   
 |名前|説明|  
 |----------|-----------------|  
-|[MakeAllocator::Allocate メソッド](../windows/makeallocator-allocate-method.md)|メモリが割り当てられ、現在 MakeAllocator オブジェクトに関連付けます。|  
-|[MakeAllocator::Detach メソッド](../windows/makeallocator-detach-method.md)|によって割り当てられたメモリの関連付けを解除、 [Allocate](../windows/makeallocator-allocate-method.md) MakeAllocator、現在のメソッドです。|  
+|[MakeAllocator::Allocate メソッド](../windows/makeallocator-allocate-method.md)|メモリを割り当て、現在のそれに**MakeAllocator**オブジェクト。|  
+|[MakeAllocator::Detach メソッド](../windows/makeallocator-detach-method.md)|によって割り当てられたメモリの関連付けを解除、 [Allocate](../windows/makeallocator-allocate-method.md)メソッドは、現在から**MakeAllocator**オブジェクト。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `MakeAllocator`  

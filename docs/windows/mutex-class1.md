@@ -1,5 +1,5 @@
 ---
-title: ミュー テックス Class1 |Microsoft ドキュメント
+title: ミュー テックス Class1 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9a9e9674dd8ac5aa7d444a77df66c1aff4a70299
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cd9c3dbbcbffff32f7c1611b6b49ee19ada7e52c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878412"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606775"
 ---
 # <a name="mutex-class1"></a>ミュー テックス Class1
 共有リソースを排他的に制御する同期オブジェクトを表します。  
@@ -39,25 +39,25 @@ class Mutex : public HandleT<HandleTraits::MutexTraits>
   
 |名前|説明|  
 |----------|-----------------|  
-|**SyncLock**|同期ロックをサポートするクラスのシノニムです。|  
+|`SyncLock`|同期ロックをサポートするクラスのシノニムです。|  
   
 ### <a name="public-constructor"></a>パブリック コンス トラクター  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
-|[Mutex::Mutex コンストラクター](../windows/mutex-mutex-constructor.md)|Mutex クラスの新しいインスタンスを初期化します。|  
+|[Mutex::Mutex コンストラクター](../windows/mutex-mutex-constructor.md)|新しいインスタンスを初期化、**ミュー テックス**クラス。|  
   
 ### <a name="public-members"></a>パブリック メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
-|[Mutex::Lock メソッド](../windows/mutex-lock-method.md)|ミュー テックスを解放するまで、現在のオブジェクト、または、指定したハンドルに関連付けられているミュー テックス オブジェクト待機または指定されたタイムアウト期間が経過しました。|  
+|[Mutex::Lock メソッド](../windows/mutex-lock-method.md)|現在のオブジェクトまでの待機、または**ミュー テックス**リリース ミュー テックス、または指定されたタイムアウト期間が経過した、指定したハンドルに関連付けられているオブジェクト。|  
   
 ### <a name="public-operator"></a>パブリック演算子  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
-|[Mutex::operator= 演算子](../windows/mutex-operator-assign-operator.md)|割り当て (移動)、指定されたミュー テックスは、現在のミュー テックス オブジェクトをオブジェクトです。|  
+|[Mutex::operator= 演算子](../windows/mutex-operator-assign-operator.md)|割り当て (移動)、指定した**ミュー テックス**現在オブジェクト**ミュー テックス**オブジェクト。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `Mutex`  

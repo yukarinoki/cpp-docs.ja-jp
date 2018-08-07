@@ -1,5 +1,5 @@
 ---
-title: インポート |Microsoft ドキュメント
+title: インポート |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,45 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b371cd1094a49f8a629cb6f8e880fd1210670f91
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f0b7498ce36243d2f7a7014b8fa9041a1a7378d2
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877268"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604708"
 ---
 # <a name="import"></a>import
-メイン IDL から参照する定義を含む .idl、.odl ファイル、またはヘッダーの別のファイルを指定します。  
+メイン IDL から参照する定義を含む .idl、.odl ファイル、またはヘッダーのもう 1 つのファイルを指定します。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
-      [ import(  
+[ import(  
    idl_file  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `idl_file`  
+### <a name="parameters"></a>パラメーター  
+ *idl_file*  
  現在のプロジェクトのタイプ ライブラリにインポートする .idl ファイルの名前。  
   
-## <a name="remarks"></a>コメント  
- **インポート**C++ 属性により、`#import`ステートメントを下に配置する、`import "docobj.idl"`生成された .idl ファイル内のステートメント。 **インポート**属性と同じ機能を持つ、[インポート](http://msdn.microsoft.com/library/windows/desktop/aa367047)MIDL 属性。  
+## <a name="remarks"></a>Remarks  
+ **インポート**C++ 属性によって、`#import`ステートメントの下に配置される、`import "docobj.idl"`生成された .idl ファイル内のステートメント。 **インポート**属性と同じ機能を持つ、[インポート](http://msdn.microsoft.com/library/windows/desktop/aa367047)MIDL 属性。  
   
- **インポート**属性は、プロジェクトによって生成される .idl ファイルに指定されたファイルを配置するだけ、**インポート**属性ではソース コードから指定したファイルにコンス トラクターを呼び出すことはできませんで、プロジェクトです。  プロジェクトのソース コードから指定したファイルにコンス トラクターを呼び出すには使用するか、 [#import](../preprocessor/hash-import-directive-cpp.md)と`embedded_idl`属性またはするには、.h ファイルを含めることができます、 `idl_file`.h ファイルが存在する場合は、します。  
+ **インポート**属性は、プロジェクトによって生成される .idl ファイルに指定されたファイルを配置するだけ、**インポート**属性ではソース コードから指定したファイルの構造を呼び出すことはできませんプロジェクト。  プロジェクトのソース コードから、指定したファイルの構造を呼び出すには使用か[#import](../preprocessor/hash-import-directive-cpp.md)と`embedded_idl`または属性の .h ファイルを含めることができます、 *idl_file*.h ファイルが存在する場合は、します。  
   
 ## <a name="example"></a>例  
  コード例を次に示します。  
   
-```  
+```cpp  
 // cpp_attr_ref_import.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  
 [import(import.idl)];  
 ```  
   
- 生成された .idl ファイルに次のコードを生成します。  
+ 生成された .idl ファイルに次のコードが生成されます。  
   
 ```  
 import "docobj.idl";  
@@ -75,7 +74,7 @@ library MyLib {
 |||  
 |-|-|  
 |**対象**|任意の場所|  
-|**反復可能**|×|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

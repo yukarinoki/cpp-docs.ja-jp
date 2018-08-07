@@ -1,5 +1,5 @@
 ---
-title: MixIn 構造体 |Microsoft ドキュメント
+title: MixIn 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b20dac5f189a51a1610da45e43e03e51ff1c3610
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d0ebf8efb556aef4fbd5048fa1930f2d98a01410
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876164"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605725"
 ---
 # <a name="mixin-structure"></a>MixIn 構造体
 ランタイム クラスが Windows ランタイム インターフェイス (存在する場合) から派生し、次にクラシック COM インターフェイスから派生していることを確認します。  
@@ -39,18 +39,18 @@ template<
 struct MixIn;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `Derived`  
- 派生した型、 [Implements](../windows/implements-structure.md)構造体。  
+### <a name="parameters"></a>パラメーター  
+ *派生*  
+ 派生した型、[実装](../windows/implements-structure.md)構造体。  
   
- `MixInType`  
+ *MixInType*  
  基本型。  
   
- `hasImplements`  
- `true` 場合`MixInType`は現在の実装から派生した基本型です。`false`それ以外の場合。  
+ *hasImplements*  
+ **true**場合*MixInType*は現在の実装から派生した基本型です。**false**それ以外の場合。  
   
-## <a name="remarks"></a>コメント  
- Windows ランタイムと COM クラス インターフェイスの両方から派生したクラスは、クラス宣言リストする必要がありますまず他の Windows ランタイム インターフェイスを一覧表示し、し、すべてのクラシック COM インターフェイスです。 MixIn のインターフェイスが正しい順序で指定されていることを確認します。  
+## <a name="remarks"></a>Remarks  
+ Windows ランタイムおよびクラスの COM インターフェイスの両方から派生したクラスは、クラスの宣言リストする必要があります最初に、Windows ランタイム インターフェイスを一覧表示し、し、すべてのクラシック COM のインターフェイスします。 **MixIn**により、インターフェイスが正しい順序で指定されているようになります。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `MixIn`  

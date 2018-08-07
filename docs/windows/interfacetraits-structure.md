@@ -1,5 +1,5 @@
 ---
-title: InterfaceTraits 構造体 |Microsoft ドキュメント
+title: InterfaceTraits 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4203fbb639b06e7e421809f9d901c70933d586d1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 63725d5d3e0edaea328d5753640aa74bdf35c7e0
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878685"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606749"
 ---
 # <a name="interfacetraits-structure"></a>InterfaceTraits 構造体
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -41,17 +41,17 @@ template<>
 struct __declspec(novtable) InterfaceTraits<Nil>;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `I0`  
+### <a name="parameters"></a>パラメーター  
+ *I0*  
  インターフェイスの名前。  
   
- `CloakedType`  
- RuntimeClass、Implements、および ChainInterfaces ことなく、一連のがインターフェイスはインターフェイス Id をサポートします。  
+ *CloakedType*  
+ `RuntimeClass`、`Implements`と`ChainInterfaces`、ことができなくなるの一覧で、インターフェイスのインターフェイス Id をサポートします。  
   
-## <a name="remarks"></a>コメント  
- インターフェイスの一般的な特徴を実装します。  
+## <a name="remarks"></a>Remarks  
+ インターフェイスの一般的な特性を実装します。  
   
- 2 番目のテンプレートは、クロークされているインターフェイスに特殊化です。 3 番目のテンプレートは、Nil パラメーターに特殊化です。  
+ 2 番目のテンプレートは、クロークされたインターフェイスの特殊化です。 3 番目のテンプレートは、パラメーターが Nil の特殊化です。  
   
 ## <a name="members"></a>メンバー  
   
@@ -59,23 +59,23 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
   
 |名前|説明|  
 |----------|-----------------|  
-|`Base`|`I0` テンプレート パラメーターのシノニムです。|  
+|`Base`|シノニム、 *I0*テンプレート パラメーター。|  
   
 ### <a name="public-methods"></a>パブリック メソッド  
   
 |名前|説明|  
 |----------|-----------------|  
-|[InterfaceTraits::CanCastTo メソッド](../windows/interfacetraits-cancastto-method.md)|指定したポインターをへのポインターにキャストできるかどうかを示す`Base`です。|  
-|[InterfaceTraits::CastToBase メソッド](../windows/interfacetraits-casttobase-method.md)|ポインターへのポインターをキャスト`Base`です。|  
-|[InterfaceTraits::CastToUnknown メソッド](../windows/interfacetraits-casttounknown-method.md)|IUnknown へのポインターへのポインターをキャストします。|  
+|[InterfaceTraits::CanCastTo メソッド](../windows/interfacetraits-cancastto-method.md)|指定したポインターへのポインターにキャストできるかどうかを示す`Base`します。|  
+|[InterfaceTraits::CastToBase メソッド](../windows/interfacetraits-casttobase-method.md)|指定したポインターへのポインターにキャスト`Base`します。|  
+|[InterfaceTraits::CastToUnknown メソッド](../windows/interfacetraits-casttounknown-method.md)|指定したポインターへのポインターにキャスト`IUnknown`します。|  
 |[InterfaceTraits::FillArrayWithIid メソッド](../windows/interfacetraits-fillarraywithiid-method.md)|インターフェイス ID を割り当てます`Base`インデックス引数で指定された配列の要素にします。|  
 |[InterfaceTraits::Verify メソッド](../windows/interfacetraits-verify-method.md)|ベースが正しく派生したことを確認します。|  
   
 ### <a name="public-constants"></a>パブリック定数  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
-|[InterfaceTraits::IidCount 定数](../windows/interfacetraits-iidcount-constant.md)|Id が現在の InterfaceTraits オブジェクトに関連付けられているインターフェイスの数を保持します。|  
+|[InterfaceTraits::IidCount 定数](../windows/interfacetraits-iidcount-constant.md)|インターフェイスに関連付けられた現在の Id の数を保持する**InterfaceTraits**オブジェクト。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `InterfaceTraits`  

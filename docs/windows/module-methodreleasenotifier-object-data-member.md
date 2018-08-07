@@ -1,5 +1,5 @@
 ---
-title: データ メンバーの Module::MethodReleaseNotifier::object_ |Microsoft ドキュメント
+title: データ メンバーの Module::MethodReleaseNotifier::object_ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e2ed7505943f71e2fb1817d075d7afaf69323160
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bcc6efe59c71314837ff9c47d9c86c5b7f36c608
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881537"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607233"
 ---
 # <a name="modulemethodreleasenotifierobject-data-member"></a>Module::MethodReleaseNotifier::object_ データ メンバー
-メンバー関数がある現在の module::methodreleasenotifier オブジェクトのイベント ハンドラー オブジェクトへのポインターを保持します。  
+メンバー関数は、現在のイベント ハンドラー オブジェクトへのポインターを保持**module::methodreleasenotifier**オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   

@@ -1,5 +1,5 @@
 ---
-title: Implements::fillarraywithiid メソッド |Microsoft ドキュメント
+title: Implements::fillarraywithiid メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e020bd725d0c0f5c65ab1cfb38b45e2b8fbca62e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6797c274402578cfecb522c86745fb5b257e213d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875722"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608859"
 ---
 # <a name="implementsfillarraywithiid-method"></a>Implements::FillArrayWithIid メソッド
 指定した配列の要素に現在の 0 番目のテンプレート パラメーターで指定されたインターフェイス ID を挿入します。  
@@ -36,15 +36,15 @@ __forceinline static void FillArrayWithIid(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `index`  
- この操作の開始の配列要素を示す 0 から始まるインデックス。 この操作が完了したら、 `index` 1 ずつインクリメントされます。  
+### <a name="parameters"></a>パラメーター  
+ *index*  
+ この操作の開始の配列要素を示す 0 から始まるインデックス。 この操作が完了したら、*インデックス*1 ずつインクリメントされます。  
   
- `iids`  
+ *iid*  
  IID 型の配列。  
   
-## <a name="remarks"></a>コメント  
- 内部ヘルパー関数。  
+## <a name="remarks"></a>Remarks  
+ 内部のヘルパー関数です。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** implements.h  

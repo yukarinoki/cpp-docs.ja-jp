@@ -1,5 +1,5 @@
 ---
-title: _ _identifier (c + + CLI) |Microsoft ドキュメント
+title: _ _identifier (c +/cli CLI) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,41 +18,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a96363fcfbc753e727c6cbb6a5efbbb5606b6c40
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6eac892da91c5f3640bdd243a0b3c6525faa5c2a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877684"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603346"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
-識別子としては、Visual C のキーワードの使用を有効にします。  
+識別子としての Visual C のキーワードを使用できるようにします。  
   
 ## <a name="all-platforms"></a>すべてのプラットフォーム  
-**構文**  
+### <a name="syntax"></a>構文  
   
 ```  
 __identifier(  
 Visual_C++_keyword  
 )  
-  
 ```  
   
-**解説**  
+### <a name="remarks"></a>Remarks  
   
-使用、`__identifier`キーワードではない識別子のキーワードは許可されていますが、スタイルの問題としてお勧めします。  
+使用、 **_ _identifier**キーワードではない識別子のキーワードは許可されていますが、スタイルの問題としてお勧めします。  
   
 ## <a name="windows-runtime"></a>Windows ランタイム  
   
 ### <a name="requirements"></a>要件  
- コンパイラ オプション: **/ZW**  
+ コンパイラ オプション: `/ZW`  
   
 ### <a name="examples"></a>使用例  
  **例**  
   
- 次の例では、という名前のクラス`template`c# で作成され、DLL として配布します。 使用する Visual C プログラムで、`template`クラス、`__identifier`キーワードを非表示に、ファクトを`template`は標準の C++ キーワード。  
+ 次の例では、クラスが名前付き`template`c# で作成され、DLL として配布されます。 使用する Visual C プログラムで、`template`クラス、 **_ _identifier**キーワードという事実を非表示にする**テンプレート**は標準の C++ キーワードです。  
   
-```  
+```cs  
 // identifier_template.cs  
 // compile with: /target:library  
 public class template {  
@@ -60,7 +59,7 @@ public class template {
 }  
 ```  
   
-```  
+```cpp  
 // keyword__identifier.cpp  
 // compile with: /ZW  
 #using <identifier_template.dll>  
@@ -71,19 +70,18 @@ int main() {
 ```  
   
 ## <a name="common-language-runtime"></a>共通言語ランタイム 
- **解説**  
+### <a name="remarks"></a>Remarks  
   
- `__identifier`キーワードが有効では、 **/clr**コンパイラ オプション。  
+ **_ _Identifier**キーワードが有効では、`/clr`コンパイラ オプション。  
   
 ### <a name="requirements"></a>要件  
- コンパイラ オプション: **/clr**  
+ コンパイラ オプション: `/clr`  
   
 ### <a name="examples"></a>使用例  
- **例**  
   
- 次の例では、という名前のクラス`template`c# で作成され、DLL として配布します。 使用する Visual C プログラムで、`template`クラス、`__identifier`キーワードを非表示に、ファクトを`template`は標準の C++ キーワード。  
+ 次の例では、クラスが名前付き`template`c# で作成され、DLL として配布されます。 使用する Visual C プログラムで、`template`クラス、 **_ _identifier**キーワードという事実を非表示にする**テンプレート**は標準の C++ キーワードです。  
   
-```  
+```cs  
 // identifier_template.cs  
 // compile with: /target:library  
 public class template {  
@@ -91,7 +89,7 @@ public class template {
 }  
 ```  
   
-```  
+```cpp  
 // keyword__identifier.cpp  
 // compile with: /clr  
 #using <identifier_template.dll>  
@@ -103,5 +101,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)   
+ [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)   
  [ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)

@@ -1,5 +1,5 @@
 ---
-title: ローカル (C++) |Microsoft ドキュメント
+title: ローカル (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 17a57ad56402b345aa64e4e4fd02bc57dd7f0321
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: efa937c1eaabb23fe5a360444f8c2105b735b260
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877918"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604201"
 ---
 # <a name="local-c"></a>local (C++)
-インターフェイスのヘッダーで使用する場合を使用すると、ヘッダー ジェネレーターとして MIDL コンパイラを使用できます。 個々 の関数で使用する場合は、対象のスタブが生成されないローカル プロシージャを指定します。  
+インターフェイスのヘッダーで使用されているときにジェネレーターをヘッダーとして、MIDL コンパイラを使用することができます。 個々 の関数で使用する場合は、スタブが生成されたないローカル プロシージャを指定します。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 [local]  
-  
 ```  
   
-## <a name="remarks"></a>コメント  
- `local` C++ 属性と同じ機能を持つ、[ローカル](http://msdn.microsoft.com/library/windows/desktop/aa367071)MIDL 属性。  
+## <a name="remarks"></a>Remarks  
+ **ローカル**C++ 属性と同じ機能を持つ、[ローカル](http://msdn.microsoft.com/library/windows/desktop/aa367071)MIDL 属性。  
   
 ## <a name="example"></a>例  
- 参照してください[call_as](../windows/call-as.md)の使用方法の例については`local`します。  
+ 参照してください[call_as](../windows/call-as.md)を使用する方法の例については**ローカル**します。  
   
 ## <a name="requirements"></a>要件  
   
@@ -47,10 +45,10 @@ ms.locfileid: "33877918"
   
 |||  
 |-|-|  
-|**対象**|`interface`、インターフェイス メソッド|  
-|**反復可能**|×|  
+|**対象**|**インターフェイス**、インターフェイス メソッド|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
-|**無効な属性**|**dispinterface**|  
+|**無効な属性**|`dispinterface`|  
   
  詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  
   

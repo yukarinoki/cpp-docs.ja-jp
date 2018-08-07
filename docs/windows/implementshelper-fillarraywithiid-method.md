@@ -1,5 +1,5 @@
 ---
-title: Implementshelper::fillarraywithiid メソッド |Microsoft ドキュメント
+title: Implementshelper::fillarraywithiid メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9313ade1f5731319732a2ee3efc0af191af14f05
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: da38eddae5ab9c49da98a4c5e9f383d59d110ee1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879924"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608323"
 ---
 # <a name="implementshelperfillarraywithiid-method"></a>ImplementsHelper::FillArrayWithIid メソッド
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -36,13 +36,13 @@ void FillArrayWithIid(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `index`  
- この操作の開始の配列要素を示す 0 から始まるインデックス。 この操作が完了したら、 `index` 1 ずつインクリメントされます。  
+ *index*  
+ この操作の開始の配列要素を示す 0 から始まるインデックス。 この操作が完了したら、*インデックス*1 ずつインクリメントされます。  
   
- `iids`  
- 型の Iid の配列。  
+ *iid*  
+ Iid 型の配列。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  指定した配列の要素に現在の 0 番目のテンプレート パラメーターで指定されたインターフェイス ID を挿入します。  
   
 ## <a name="requirements"></a>要件  

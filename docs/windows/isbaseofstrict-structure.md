@@ -1,5 +1,5 @@
 ---
-title: IsBaseOfStrict 構造体 |Microsoft ドキュメント
+title: IsBaseOfStrict 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db8f315c0589ceb7cd9411873152fe644985818e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f9066a9cd8985b132c1fbd9f6a97bcd0654003d2
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876892"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604504"
 ---
 # <a name="isbaseofstrict-structure"></a>IsBaseOfStrict 構造体
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -42,25 +42,25 @@ template <
 struct IsBaseOfStrict<Base, Base>;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `Base`  
+### <a name="parameters"></a>パラメーター  
+ *ベース*  
  基本データ型。  
   
- `Derived`  
- 派生型です。  
+ *派生*  
+ 派生型。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  一方の型がもう一方の型の基本クラスであるかどうかをテストします。  
   
- 最初のテンプレートは、型が生じる場合、基本型から派生したかどうかを検査**true**または**false**です。 2 番目のテンプレートは、型から派生して、それ自体が常に生成されるかどうかを検査**false**です。  
+ 最初のテンプレートが生じる場合の基本型から派生する型かどうかをテストする**true**または**false**します。 2 番目のテンプレートはから派生した型自体には、常に生成するかどうかをテストする**false**します。  
   
 ## <a name="members"></a>メンバー  
   
 ### <a name="public-constants"></a>パブリック定数  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
-|[IsBaseOfStrict::value 定数](../windows/isbaseofstrict-value-constant.md)|1 つの種類別のベースであるかどうかを示します。|  
+|[IsBaseOfStrict::value 定数](../windows/isbaseofstrict-value-constant.md)|1 つの型が別のベースであるかどうかを示します。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `IsBaseOfStrict`  

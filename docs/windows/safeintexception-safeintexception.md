@@ -1,5 +1,5 @@
 ---
-title: Safeintexception::safeintexception |Microsoft ドキュメント
+title: Safeintexception::safeintexception |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,16 +19,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ef3c1d11c0f814699ca1492f7ec1fb49c43c3d76
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 744bf034572745cd88a35f47a1ca2da03e900fd8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892177"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606658"
 ---
 # <a name="safeintexceptionsafeintexception"></a>SafeIntException::SafeIntException
-
-          `SafeIntException` オブジェクトを作成します。  
+作成、 **SafeIntException**オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,12 +39,12 @@ SafeIntException(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- [入力] `code`  
+### <a name="parameters"></a>パラメーター  
+ [in]*コード*  
  発生したエラーを説明する列挙値。  
   
-## <a name="remarks"></a>コメント  
- 値は、使用可能な`code`Safeint.h ファイルで定義されます。 便宜上、使用可能な値は、次に示します。  
+## <a name="remarks"></a>Remarks  
+ 使用可能な値を*コード*Safeint.h ファイルで定義されます。 便宜上、使用可能な値も次に示します。  
   
 -   `SafeIntNoError`  
   

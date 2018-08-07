@@ -1,5 +1,5 @@
 ---
-title: Invokehelper::invokehelper コンス トラクター |Microsoft ドキュメント
+title: Invokehelper::invokehelper コンス トラクター |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7678f9e3092bdc6e9d5839085044708b0d400533
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6618d5fc219e5f4e6533eb4d31cf7cd14fc4b1d5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874851"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602550"
 ---
 # <a name="invokehelperinvokehelper-constructor"></a>InvokeHelper::InvokeHelper コンストラクター
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -35,12 +35,12 @@ explicit InvokeHelper(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `callback`  
+### <a name="parameters"></a>パラメーター  
+ *コールバック*  
  イベント ハンドラー。  
   
-## <a name="remarks"></a>コメント  
- InvokeHelper クラスの新しいインスタンスを初期化します。  
+## <a name="remarks"></a>Remarks  
+ 新しいインスタンスを初期化、 **InvokeHelper**クラス。  
   
  `TCallback`テンプレート パラメーターは、イベント ハンドラーの種類を指定します。  
   

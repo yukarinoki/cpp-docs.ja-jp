@@ -1,5 +1,5 @@
 ---
-title: Hstringreference::copyto メソッド |Microsoft ドキュメント
+title: Hstringreference::copyto メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,30 +13,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f65c08cad438328eb1a0e15495774dbde6845f4d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fcd27ab7132739987859024270ac6c82be06e590
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874708"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607794"
 ---
 # <a name="hstringreferencecopyto-method"></a>HStringReference::CopyTo メソッド
-現在の HStringReference オブジェクトを HSTRING オブジェクトにコピーします。  
+現在のコピー **HStringReference**オブジェクトを HSTRING オブジェクトにします。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 HRESULT CopyTo(  
    _Out_ HSTRING *str  
    ) const throw();  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `str`  
+ *str*  
  コピーを受信する HSTRING です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このメソッドは、 [WindowsDuplicateString](http://msdn.microsoft.com/library/br224634.aspx)関数。  
   
 ## <a name="requirements"></a>要件  

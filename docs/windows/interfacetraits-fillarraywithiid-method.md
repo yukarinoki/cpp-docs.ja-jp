@@ -1,5 +1,5 @@
 ---
-title: Interfacetraits::fillarraywithiid メソッド |Microsoft ドキュメント
+title: Interfacetraits::fillarraywithiid メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e6e32b2e40ba9dc2b8085f8edc99beb899e90ace
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1ef552e5025a18eb4c778f9d08389d2b7e3634d5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877499"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605657"
 ---
 # <a name="interfacetraitsfillarraywithiid-method"></a>InterfaceTraits::FillArrayWithIid メソッド
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -34,22 +34,21 @@ __forceinline static void FillArrayWithIid(
    _Inout_ unsigned long &index,  
    _In_ IID* iids  
 );  
-  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `index`  
+### <a name="parameters"></a>パラメーター  
+ *index*  
  0 から始まるインデックス値を含むフィールドへのポインター。  
   
- `iids`  
+ *iid*  
  インターフェイスの Id の配列。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  インターフェイス ID を割り当てます`Base`インデックス引数で指定された配列の要素にします。  
   
- この API の名前とは対照的 1 つだけの配列要素が変更されました。全体の配列ではありません。  
+ 、この API の名前とは対照的に 1 つだけの配列の要素が変更された;全体の配列ではありません。  
   
- 詳細については`Base`、パブリック Typedef セクションを参照して[InterfaceTraits 構造体](../windows/interfacetraits-structure.md)です。  
+ 詳細については`Base`、パブリック Typedef」セクションを参照してください。 [InterfaceTraits 構造体](../windows/interfacetraits-structure.md)します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** implements.h  

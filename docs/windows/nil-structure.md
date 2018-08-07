@@ -1,5 +1,5 @@
 ---
-title: Nil 構造体 |Microsoft ドキュメント
+title: Nil 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb260114a8010d441f0556cf2a21734c0ac23cca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 12346ffa30b3e309dcb845117f311cd4a63b9ad9
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881427"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603618"
 ---
 # <a name="nil-structure"></a>Nil 構造体
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -31,10 +31,10 @@ WRL インフラストラクチャをサポートし、コードから直接使�
 struct Nil;  
 ```  
   
-## <a name="remarks"></a>コメント  
- 指定されていない、省略可能なテンプレート パラメーターを示すために使用します。  
+## <a name="remarks"></a>Remarks  
+ 指定されていない、省略可能なテンプレート パラメーターを示すために使用されます。  
   
- Nil では、空の構造です。  
+ **Nil**は空の構造です。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `Nil`  

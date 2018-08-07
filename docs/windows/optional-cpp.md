@@ -1,5 +1,5 @@
 ---
-title: 省略可能な (C++) |Microsoft ドキュメント
+title: 省略可能な (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07a15be3f90c7ab1fd7d5064f8a69371560b7e71
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 50273c511ff682410252a4c9d6ddafd11d0a92dc
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878214"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603708"
 ---
 # <a name="optional-c"></a>optional (C++)
 メンバー関数のオプション パラメーターを指定します。  
@@ -30,18 +30,16 @@ ms.locfileid: "33878214"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 [optional]  
-  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **省略可能な**C++ 属性と同じ機能を持つ、[省略可能な](http://msdn.microsoft.com/library/windows/desktop/aa367132)MIDL 属性。  
   
 ## <a name="example"></a>例  
  次のコードはどのように**省略可能な**される可能性があります。  
   
-```  
+```cpp  
 // cpp_attr_ref_optional.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -61,7 +59,7 @@ __interface IFireTabCtrl : IDispatch
 |||  
 |-|-|  
 |**対象**|インターフェイス パラメーター|  
-|**反復可能**|×|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

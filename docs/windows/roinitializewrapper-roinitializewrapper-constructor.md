@@ -1,5 +1,5 @@
 ---
-title: Roinitializewrapper::roinitializewrapper コンス トラクター |Microsoft ドキュメント
+title: Roinitializewrapper::roinitializewrapper コンス トラクター |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 64f2af40c671760bb8d4e667c209598c46b24665
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 193f0d16b03991e24cb16a90b3310512f6e86054
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889209"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604399"
 ---
 # <a name="roinitializewrapperroinitializewrapper-constructor"></a>RoInitializeWrapper::RoInitializeWrapper コンストラクター
-RoInitializeWrapper クラスの新しいインスタンスを初期化します。  
+新しいインスタンスを初期化、 **RoInitializeWrapper**クラス。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,12 +31,12 @@ RoInitializeWrapper クラスの新しいインスタンスを初期化します
 RoInitializeWrapper(   RO_INIT_TYPE flags)  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `flags`  
- RO_INIT_TYPE の列挙体は、Windows ランタイムによって提供されるサポートを指定の 1 つ。  
+### <a name="parameters"></a>パラメーター  
+ *flags*  
+ RO_INIT_TYPE の列挙体は、Windows ランタイムによって提供されるサポートの 1 つ。  
   
-## <a name="remarks"></a>コメント  
- RoInitializeWrapper クラスが Windows::Foundation::Initialize を呼び出します (*フラグ*)。  
+## <a name="remarks"></a>Remarks  
+ **RoInitializeWrapper**クラスを呼び出す`Windows::Foundation::Initialize(flags)`します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

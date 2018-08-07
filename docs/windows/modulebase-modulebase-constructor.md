@@ -1,5 +1,5 @@
 ---
-title: Modulebase::modulebase コンス トラクター |Microsoft ドキュメント
+title: Modulebase::modulebase コンス トラクター |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b18d33b962c277347e74819e5ff34f3562821f45
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c9d82f38e44f1d0c9562982da109a8deffa4fbff
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875891"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608931"
 ---
 # <a name="modulebasemodulebase-constructor"></a>ModuleBase::ModuleBase コンストラクター
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -33,8 +33,9 @@ WRL インフラストラクチャをサポートし、コードから直接使�
 ModuleBase();  
 ```  
   
-## <a name="remarks"></a>コメント  
- モジュール クラスのインスタンスを初期化します。  
+## <a name="remarks"></a>Remarks  
+ 
+          `Module` クラスのインスタンスを初期化します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** implements.h  

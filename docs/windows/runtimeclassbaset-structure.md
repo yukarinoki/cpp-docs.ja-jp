@@ -1,5 +1,5 @@
 ---
-title: RuntimeClassBaseT 構造体 |Microsoft ドキュメント
+title: RuntimeClassBaseT 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ea147ebddff03401f6151bcdc44d96efb233f90
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ec10faf9733bbff3fb271b5465ee70a338c37898
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888995"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604994"
 ---
 # <a name="runtimeclassbaset-structure"></a>RuntimeClassBaseT 構造体
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -34,12 +34,12 @@ template <
 friend struct Details::RuntimeClassBaseT;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `RuntimeClassTypeT`  
- 1 つ以上を指定するフラグのフィールド[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列挙子。  
+### <a name="parameters"></a>パラメーター  
+ *RuntimeClassTypeT*  
+ 1 つまたは複数を指定するフラグのフィールド[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列挙子。  
   
-## <a name="remarks"></a>コメント  
- 用にヘルパー メソッドを提供`QueryInterface`操作とインターフェイスの Id を取得します。  
+## <a name="remarks"></a>Remarks  
+ ヘルパー メソッドを提供します`QueryInterface`操作とのインターフェイス Id を取得します。  
   
 ## <a name="members"></a>メンバー  
   
@@ -52,5 +52,5 @@ friend struct Details::RuntimeClassBaseT;
  **Namespace:** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>関連項目  
- [参照 (Windows ランタイム ライブラリ)](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)   
+ [リファレンス (Windows ランタイム ライブラリ)](http://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)   
  [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

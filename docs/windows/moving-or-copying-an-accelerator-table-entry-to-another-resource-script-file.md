@@ -1,5 +1,5 @@
 ---
-title: 移動またはコピー アクセラレータ テーブル エントリを別のリソース スクリプト ファイル |Microsoft ドキュメント
+title: 移動または別のリソース スクリプト ファイルをアクセラレータ テーブルのエントリをコピーする |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b14e20770b89bb6863eb5fa8d7743bd3cf2efa9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e975ab71e4556c236ecd2e92f2d11a949a68ba5a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877905"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608053"
 ---
 # <a name="moving-or-copying-an-accelerator-table-entry-to-another-resource-script-file"></a>アクセラレータ テーブルから別のリソース スクリプト ファイルへのエントリの移動またはコピー
 ### <a name="to-move-or-copy-an-accelerator-table-entry-to-another-resource-script-file"></a>アクセラレータ テーブルのエントリを別のリソース スクリプト ファイルに移動またはコピーするには  
@@ -35,18 +35,16 @@ ms.locfileid: "33877905"
   
 2.  移動するエントリを選択します。  
   
-3.  **編集**] メニューの [選択**コピー**または**切り取り**です。  
+3.  **編集**] メニューの [選択**コピー**または**切り取り**します。  
   
 4.  移動先またはコピー先のリソース スクリプト ファイルでエントリを選択します。  
   
-5.  **編集**] メニューの [選択**貼り付け**です。  
+5.  **編集**] メニューの [選択**貼り付け**します。  
   
     > [!NOTE]
     >  コピーと貼り付けのショートカット キーも使用できます。  
   
-
-  
- **必要条件**  
+## <a name="requirements"></a>要件  
   
  Win32  
   

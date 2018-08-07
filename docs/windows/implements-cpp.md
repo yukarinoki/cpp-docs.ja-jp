@@ -1,5 +1,5 @@
 ---
-title: 実装 (C++) |Microsoft ドキュメント
+title: 実装 (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 118487d533e8f4701f52804ebbe1e669d29fc4cb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d0fe0c8919eb1959dab426c3c0db47f227c51b66
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880704"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606463"
 ---
 # <a name="implements-c"></a>implements (C++)
-IDL coclass のメンバーであることを強制するディスパッチ インターフェイスを指定します。  
+IDL コクラスのメンバーであるが強制されているディスパッチ インターフェイスを指定します。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
-      [ implements(   
+[ implements(   
    interfaces={interfaces},  
    dispinterfaces={dispinterfaces}  
 )]  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- **interfaces**  
- コンマ区切りの IDL coclass のメンバーとなるインターフェイスのリスト。 1 つのインターフェイスを指定するための短縮形メソッドは**実装 (***interface_name***)** です。  
+### <a name="parameters"></a>パラメーター  
+ *interfaces*  
+ コンマ区切りの IDL コクラスのメンバーとなるインターフェイスの一覧。 1 つのインターフェイスを指定するための簡略化された方法が**実装 (***interface_name***)** します。  
   
- **dispinterfaces**  
- コンマ区切りの IDL coclass のメンバーとなるディスパッチ インターフェイスのリスト。 1 つのディスパッチ インターフェイスを指定するための短縮形メソッドは**を実装する (ディスパッチ インターフェイス*** = 場合 ***)** です。  
+ *dispinterfaces*  
+ コンマ区切りの IDL コクラスのメンバーとなるディスパッチ インターフェイスの一覧。 1 つのディスパッチ インターフェイスを指定するための簡略化された方法が**実装 (dispinterface** * = 場合 ***)**。  
   
-## <a name="remarks"></a>コメント  
- 既定では、のみである COM インターフェイス、コクラスの基本クラスは、IDL コクラスに追加されます。 **実装する**IDL coclass のメンバーにするには、他のインターフェイスを強制することができます。  
+## <a name="remarks"></a>Remarks  
+ 既定では、のみである COM インターフェイスのコクラスの基本クラスは、IDL コクラスに追加されます。 **実装**IDL coclass のメンバーにするには、他のインターフェイスを強制することができます。  
   
 ## <a name="requirements"></a>要件  
   
@@ -53,7 +52,7 @@ IDL coclass のメンバーであることを強制するディスパッチ イ�
   
 |||  
 |-|-|  
-|**対象**|**class**、 `struct`|  
+|**対象**|**クラス**、**構造体**|  
 |**反復可能**|[はい]|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
@@ -61,9 +60,9 @@ IDL coclass のメンバーであることを強制するディスパッチ イ�
  詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 3 つの部分では、次の例: .idl ファイルとその関連 .h ファイルと、C++ ファイル。  
+ 次の例は、3 つの部分には: .idl ファイルとその関連 .h ファイルと、C++ ファイル。  
   
- 次の .idl のファイルは、コンパイラに表示されるものとします。  
+ コンパイラで使用できる次の .idl ファイルを想定しています。  
   
 ```  
 // attr_implements.idl  
@@ -113,9 +112,9 @@ library odod
 ```  
   
 ## <a name="example"></a>例  
- 次の .h ファイルもできるよう、コンパイラにする必要があります。  
+ 次の .h ファイルも、コンパイラに使用する必要があります。  
   
-```  
+```cpp  
 // attr_implements.h  
 // this ALWAYS GENERATED file contains definitions for the interfaces  
   
@@ -430,9 +429,9 @@ CBar;
 ```  
   
 ## <a name="example"></a>例  
- 実装して、せず、次のプログラムで IBar1、IBar2、および ISna に存在しなくなりますで生成された IDL coclass です。  
+ を実装せず、次のプログラムで`IBar1`、 `IBar2`、と`ISna`されません、`coclass`生成された IDL にします。  
   
-```  
+```cpp  
 // attr_implements.cpp  
 // compile with: /LD /link /idlout:out.idl  
 #define _ATL_ATTRIBUTES 1  

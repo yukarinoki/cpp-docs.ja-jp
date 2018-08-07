@@ -1,5 +1,5 @@
 ---
-title: IID_PPV_ARGS_Helper 関数 |Microsoft ドキュメント
+title: IID_PPV_ARGS_Helper 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0cef979ae284a303b120df7d14ae71f311498423
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 508c9a5d34fa8e9c4fa339e9917ae069874159ad
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882343"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608379"
 ---
 # <a name="iidppvargshelper-function"></a>IID_PPV_ARGS_Helper 関数
-指定された引数の型がから派生していることを確認、`IUnknown`インターフェイスです。  
+指定された引数の型から派生することを確認、`IUnknown`インターフェイス。  
   
 > [!IMPORTANT]
->  このテンプレートの特殊化では、WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。 使用して[IID_PPV_ARGS](http://msdn.microsoft.com/library/windows/desktop/ee330727.aspx)代わりにします。  
+>  このテンプレートの特殊化は WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。 使用[IID_PPV_ARGS](http://msdn.microsoft.com/library/windows/desktop/ee330727.aspx)代わりにします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,20 +40,20 @@ void** IID_PPV_ARGS_Helper(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `T`  
- 引数の型`pp`です。  
+ *T*  
+ 引数の型*pp*します。  
   
- `pp`  
+ *pp*  
  二重間接ポインター。  
   
 ## <a name="return-value"></a>戻り値  
- 引数`pp`ポインターにキャスト、ポインター-に-を-`void`です。  
+ 引数*pp*ポインターにする-、- へのポインターにキャスト**void**します。  
   
-## <a name="remarks"></a>コメント  
- 場合、コンパイル時エラーが生成されたテンプレート パラメーター`T`から派生していない`IUnknown`です。  
+## <a name="remarks"></a>Remarks  
+ コンパイル時エラーが生成テンプレート パラメーター *T*から派生していない`IUnknown`します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** client.h  
   
 ## <a name="see-also"></a>関連項目  
- [参照 (Windows ランタイム ライブラリ)](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)
+ [リファレンス (Windows ランタイム ライブラリ)](http://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)

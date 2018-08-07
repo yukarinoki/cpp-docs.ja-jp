@@ -1,5 +1,5 @@
 ---
-title: 選択 (アイコン用イメージ エディター) の色の反転 |Microsoft ドキュメント
+title: 選択 (アイコン用イメージ エディター) の色の反転 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,23 +20,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f29c9698a14d5cd8773d12a1719614e19ca67c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c187f0fac784bdd0c162334abcfdc23f8a6c1804
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874081"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608918"
 ---
 # <a name="inverting-the-colors-in-a-selection-image-editor-for-icons"></a>選択領域の色の反転 (アイコン用イメージ エディター)
 イメージ エディターを使用すると、イメージの選択部分の色を簡単に反転できます。これにより、反転色を使用したイメージの外観を確認できます。  
   
 ### <a name="to-invert-colors-in-the-current-selection"></a>現在の選択範囲の色を反転するには  
   
-1.  **イメージ** メニューのをクリックして**色の反転**です。  
+1.  **イメージ** メニューのをクリックして**色の反転**します。  
   
-
-  
- 要件  
+## <a name="requirements"></a>要件  
   
  なし  
   
