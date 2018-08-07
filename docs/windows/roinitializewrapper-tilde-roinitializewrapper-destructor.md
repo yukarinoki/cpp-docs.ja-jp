@@ -1,5 +1,5 @@
 ---
-title: 'RoInitializeWrapper:: ~ RoInitializeWrapper デストラクター |Microsoft ドキュメント'
+title: 'RoInitializeWrapper:: ~ RoInitializeWrapper デストラクター |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 29683e68f1f5aadcd477cdc717b03a648c5cccc7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c6eaeb044cf3e169bf5927a2fec948cc8d4294c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892001"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606277"
 ---
 # <a name="roinitializewrapperroinitializewrapper-destructor"></a>RoInitializeWrapper::~RoInitializeWrapper デストラクター
 Windows ランタイムの初期化を解除します。  
@@ -31,8 +31,8 @@ Windows ランタイムの初期化を解除します。
 ~RoInitializeWrapper()  
 ```  
   
-## <a name="remarks"></a>コメント  
- RoInitializeWrapper クラスは、Windows::Foundation::Uninitialize() を呼び出します。  
+## <a name="remarks"></a>Remarks  
+ **RoInitializeWrapper**クラスを呼び出す`Windows::Foundation::Uninitialize()`します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

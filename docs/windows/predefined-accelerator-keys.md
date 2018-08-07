@@ -1,5 +1,5 @@
 ---
-title: 定義済みのアクセラレータ キー |Microsoft ドキュメント
+title: 定義済みのアクセラレータ キー |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa5b42fc846f3b4f21dc8045e67d8ebc347601ea
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 42f1151f90fa6a418564f30b9ec6570645a91b42
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880800"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608418"
 ---
 # <a name="predefined-accelerator-keys"></a>定義済みのアクセラレータ キー
 Windows アプリケーション プロジェクトの一部として使用できるいくつかの定義済みのアクセラレータ キーがあります。 これらの仮想キーの一部は、Windows 環境用です。 その他の仮想キーは、ブラウザーや Unicode アプリケーションで使用できます。 どのアクセラレータでもこれらのキーを使用できます。  
@@ -62,10 +62,10 @@ Windows アプリケーション プロジェクトの一部として使用で�
 |VK_NONCONVERT|IME 無変換|  
 |VK_OEM_1|Windows: 標準的な US キーボードの ";:" キー|  
 |VK_OEM_102|Windows: RT 102 Key キーボードの山かっこキーまたはバックスラッシュ キー|  
-|VK_OEM_2|Windows: 米国標準のキーボードのは '/?' key|  
+|VK_OEM_2|Windows: 米国標準キーボードの「/?」 key|  
 |VK_OEM_3|Windows: 標準的な US キーボードの "`~" キー|  
 |VK_OEM_4|Windows: 標準的な US キーボードの "[{" キー|  
-|VK_OEM_5|Windows: 米国標準のキーボードの '\\&#124;' キー|  
+|VK_OEM_5|Windows: 米国標準キーボードの '\\&#124;' キー|  
 |VK_OEM_6|Windows: 標準的な US キーボードの "]}" キー|  
 |VK_OEM_7|Windows: 標準的な US キーボードの "単一の引用符と二重引用符" キー|  
 |VK_OEM_COMMA|Windows: すべての国/地域の "," キー|  
@@ -83,7 +83,7 @@ Windows アプリケーション プロジェクトの一部として使用で�
 |VK_XBUTTON1|Windows: X1 マウス ボタン|  
 |VK_XBUTTON2|Windows: X2 マウス ボタン|  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。*  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。  
   
 ## <a name="requirements"></a>要件  
  Win32  

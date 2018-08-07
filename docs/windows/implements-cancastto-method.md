@@ -1,5 +1,5 @@
 ---
-title: Implements::cancastto メソッド |Microsoft ドキュメント
+title: Implements::cancastto メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4fd6e6736c74e1ce895031e17c1d5268eb4ce646
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 53b17558998812895ece4b47f5de03700e502b8e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877074"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608944"
 ---
 # <a name="implementscancastto-method"></a>Implements::CanCastTo メソッド
-指定されたインターフェイスへのポインターを取得します。  
+指定したインターフェイスへのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,18 +36,18 @@ __forceinline HRESULT CanCastTo(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `riid`  
+### <a name="parameters"></a>パラメーター  
+ *riid*  
  インターフェイス ID への参照  
   
- `ppv`  
- かどうかは成功すると、インターフェイスへのポインターで指定された`riid`です。  
+ *ppv*  
+ かどうかは成功すると、インターフェイスへのポインターで指定された*riid*します。  
   
 ## <a name="return-value"></a>戻り値  
- 正常終了した場合は S_OK、それ以外の場合、E_NOINTERFACE など、エラーを示す HRESULT。  
+ 成功した場合は s_ok を返します。それ以外の場合、E_NOINTERFACE など、エラーを示す HRESULT。  
   
-## <a name="remarks"></a>コメント  
- これは、QueryInterface 操作を実行する内部ヘルパー関数です。  
+## <a name="remarks"></a>Remarks  
+ これは、QueryInterface 操作を実行する内部のヘルパー関数です。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** implements.h  

@@ -1,5 +1,5 @@
 ---
-title: SafeNotEquals |Microsoft ドキュメント
+title: SafeNotEquals |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 61104cd55ed349131fc884951da77455aa9ca978
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 37f9627e301831c98ccab7a0c79258d96c520f1a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889248"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605137"
 ---
 # <a name="safenotequals"></a>SafeNotEquals
-2 つの数値が等しくないかどうかを判断します。  
+2 つの数値が等しくないかどうかを決定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,25 +37,25 @@ inline bool SafeNotEquals (
 ) throw ();  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- [入力] `t`  
- 比較する最初の数。 T 型でなければなりません  
+### <a name="parameters"></a>パラメーター  
+ [in]*t*  
+ 比較する最初の数値。 これは、型でなければなりません`T`します。  
   
- [入力] `u`  
- 比較する 2 番目の数値。 U 型です。 これでなければなりません  
+ [in]*u*  
+ 比較する 2 番目の数値。 これは、型でなければなりません`U`します。  
   
 ## <a name="return-value"></a>戻り値  
- `true` 場合`t`と`u`が等しくない。 それ以外の場合`false`です。  
+ **true**場合*t*と*u*それ以外のない**false**します。  
   
-## <a name="remarks"></a>コメント  
- メソッドは強化`!=`ため`SafeNotEquals`2 つの異なる型の数値を比較することができます。  
+## <a name="remarks"></a>Remarks  
+ メソッドを強化`!=`ため**SafeNotEquals** 2 つの異なる型の数値を比較することができます。  
   
- このメソッドの一部である[SafeInt ライブラリ](../windows/safeint-library.md)とは、単一の比較操作のインスタンスを作成せず、 [SafeInt クラス](../windows/safeint-class.md)です。  
+ このメソッドの一部は、 [SafeInt ライブラリ](../windows/safeint-library.md)のインスタンスを作成せず、単一の比較操作のものでは、 [SafeInt クラス](../windows/safeint-class.md)します。  
   
 > [!NOTE]
->  このメソッドは、単一の数値演算を保護する必要がありますにのみ使用する必要があります。 使用する必要があります複数の操作がある場合、`SafeInt`個々 のスタンドアロン関数の呼び出しではなくクラスです。  
+>  このメソッドは、単一の数値演算を保護する必要がありますにのみ使用する必要があります。 使用する必要があります複数の操作がある場合、`SafeInt`個々 のスタンドアロン関数の呼び出しではなくクラス。  
   
- テンプレート型 T および U の詳細については、次を参照してください。 [SafeInt 関数](../windows/safeint-functions.md)です。  
+ テンプレートの種類の詳細については`T`と`U`を参照してください[SafeInt 関数](../windows/safeint-functions.md)します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** safeint.h  

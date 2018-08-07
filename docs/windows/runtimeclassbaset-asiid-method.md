@@ -1,5 +1,5 @@
 ---
-title: Runtimeclassbaset::asiid メソッド |Microsoft ドキュメント
+title: Runtimeclassbaset::asiid メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 35d218666f785685e95d737574ff44e276ce84b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1174db6702fc68b01f60491ef203265bbd6f4c14
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892131"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607428"
 ---
 # <a name="runtimeclassbasetasiid-method"></a>RuntimeClassBaseT::AsIID メソッド
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -38,24 +38,24 @@ __forceinline static HRESULT AsIID(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `T`  
- パラメーターで指定されたインターフェイス ID を実装する型`riid`です。  
+### <a name="parameters"></a>パラメーター  
+ *T*  
+ パラメーターで指定されたインターフェイス ID を実装する型*riid*します。  
   
- `implements`  
- テンプレート パラメーターで指定された型の変数`T`です。  
+ *実装*  
+ テンプレート パラメーターで指定された型の変数*T*します。  
   
- `riid`  
- 取得するインターフェイス ID です。  
+ *riid*  
+ 取得するインターフェイス ID。  
   
- `ppvObject`  
- ポインターに-を - インターフェイスへのポインターがパラメーターで指定されたこの操作が成功した場合は、`riid`です。  
+ *ppvObject*  
+ ポインター-に-、- へのポインター、インターフェイスがパラメーターで指定されたこの操作が成功した場合は、 *riid*します。  
   
 ## <a name="return-value"></a>戻り値  
- 正常終了した場合は S_OK、それ以外の場合、エラーを説明する HRESULT。  
+ 成功した場合は s_ok を返します。それ以外の場合、エラーを示す HRESULT。  
   
-## <a name="remarks"></a>コメント  
- 指定したインターフェイス ID へのポインターを取得します  
+## <a name="remarks"></a>Remarks  
+ 指定したインターフェイス ID へのポインターを取得します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** implements.h  

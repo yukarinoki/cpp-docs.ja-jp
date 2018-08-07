@@ -1,5 +1,5 @@
 ---
-title: Interfacetraits::verify メソッド |Microsoft ドキュメント
+title: Interfacetraits::verify メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f5c16ebda96d5d1c8ff12532e728f32501ea4db7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 404c5fc8680089aeac49b0cda655e9cbd0d4ecd9
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875501"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603049"
 ---
 # <a name="interfacetraitsverify-method"></a>InterfaceTraits::Verify メソッド
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -33,10 +33,10 @@ WRL インフラストラクチャをサポートし、コードから直接使�
 __forceinline static void Verify();  
 ```  
   
-## <a name="remarks"></a>コメント  
- ベースが正しく派生したことを確認します。  
+## <a name="remarks"></a>Remarks  
+ 検証が行われます`Base`は正しく派生します。  
   
- 詳細については`Base`、パブリック Typedef セクションを参照して[InterfaceTraits 構造体](../windows/interfacetraits-structure.md)です。  
+ 詳細については`Base`、パブリック Typedef」セクションを参照してください。 [InterfaceTraits 構造体](../windows/interfacetraits-structure.md)します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** implements.h  

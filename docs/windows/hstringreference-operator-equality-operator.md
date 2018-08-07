@@ -1,5 +1,5 @@
 ---
-title: Hstringreference::operator = = 演算子 |Microsoft ドキュメント
+title: Hstringreference::operator = 演算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 32cb8898cfc26297aaea888f9a382b5901ef8acf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7620cee350ab69f55737e6336b275218a70b6891
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33887040"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607714"
 ---
 # <a name="hstringreferenceoperator-operator"></a>HStringReference::Operator== 演算子
 2 つのパラメーターが等しいかどうかを示します。  
@@ -39,18 +39,17 @@ inline bool operator==(
 inline bool operator==(  
                const HStringReference& lhs,   
                const HSTRING& rhs) throw()  
-  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `lhs`  
- 比較する最初のパラメーター。 `lhs` HStringReference オブジェクトまたは HSTRING ハンドルを指定できます。  
+### <a name="parameters"></a>パラメーター  
+ *lhs*  
+ 比較する最初のパラメーター。 *lhs*できます、 **HStringReference**オブジェクトまたは HSTRING ハンドル。  
   
- `rhs`  
- 比較する 2 番目のパラメーターです。  `rhs` HStringReference オブジェクトまたは HSTRING ハンドルを指定できます。  
+ *rhs*  
+ 比較する 2 番目のパラメーター。  *rhs*できます、 **HStringReference**オブジェクトまたは HSTRING ハンドル。  
   
 ## <a name="return-value"></a>戻り値  
- `true` 場合、`lhs`と`rhs`パラメーターが等しい。 それ以外の場合、`false`です。  
+ **true**場合、 *lhs*と*rhs*パラメーターは、それ以外の**false**します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

@@ -1,5 +1,5 @@
 ---
-title: propget |Microsoft ドキュメント
+title: propget |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 339cb03b645e3aff0a6bb806e431c7be274340d8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3552a8c64260345b6a956878c459182089e1af0f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881865"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607548"
 ---
 # <a name="propget"></a>propget
-プロパティ アクセサー関数を指定します。  
+プロパティのアクセサー関数を指定します。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 [propget]  
-  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **Propget** C++ 属性と同じ機能を持つ、 [propget](http://msdn.microsoft.com/library/windows/desktop/aa367145) MIDL 属性。  
   
 ## <a name="example"></a>例  
- 例を参照して[バインド可能な](../windows/bindable.md)の使用例の**propget**です。  
+ 例をご覧ください[バインド可能な](../windows/bindable.md)の使用サンプル**propget**します。  
   
 ## <a name="requirements"></a>要件  
   
@@ -48,9 +46,9 @@ ms.locfileid: "33881865"
 |||  
 |-|-|  
 |**対象**|メソッド|  
-|**反復可能**|×|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
-|**無効な属性**|**propput**、 **propputref**|  
+|**無効な属性**|`propput`, `propputref`|  
   
  属性コンテキストの詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  
   

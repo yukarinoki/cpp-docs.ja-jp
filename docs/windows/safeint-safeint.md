@@ -1,5 +1,5 @@
 ---
-title: Safeint::safeint |Microsoft ドキュメント
+title: Safeint::safeint |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c7154349105c1953ad314b7928e7be8385179c42
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0d6bcac8dec2e85f0ea7d1d4530ed6ff1b7acc08
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888748"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604344"
 ---
 # <a name="safeintsafeint"></a>SafeInt::SafeInt
-`SafeInt` オブジェクトを構築します。  
+構築、 **SafeInt**オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
@@ -53,27 +53,27 @@ SafeInt (
 )  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- [入力] `i`  
- 新しい値`SafeInt`オブジェクト。 これは、コンス トラクターによって型 T、または U のパラメーターでなければなりません。  
+### <a name="parameters"></a>パラメーター  
+ [in]*しました*  
+ 新しい値**SafeInt**オブジェクト。 これには、コンス トラクターによって、型 T または U のパラメーターがあります。  
   
- [入力] `b`  
- 新しいブール値`SafeInt`オブジェクト。  
+ [in]*b*  
+ 新しいブール値**SafeInt**オブジェクト。  
   
- [入力] `u`  
- A`SafeInt`は u 型です。新しい`SafeInt`オブジェクトと同じ値になります`u`T 型になりますが、  
+ [in]*u*  
+ A **SafeInt**型 U の新しい**SafeInt**オブジェクトと同じ値になります*u*T 型になりますが、  
   
  U  
- 格納されたデータの種類、`SafeInt`です。 ブール値を文字、または整数のいずれかの型を指定できます。 型の場合は、整数、符号付きしたりできる符号なし 8 と 64 ビットの間であるとします。  
+ 格納されたデータの種類、 **SafeInt**します。 ブール値、文字、または整数のいずれかの型を指定できます。 整数型の場合は、符号付きまたは符号なし 8 と 64 ビットの間であるとします。  
   
-## <a name="remarks"></a>コメント  
- テンプレートの種類の詳細については`T`と`E`を参照してください[SafeInt クラス](../windows/safeint-class.md)です。  
+## <a name="remarks"></a>Remarks  
+ テンプレートの種類の詳細については`T`と`E`を参照してください[SafeInt クラス](../windows/safeint-class.md)します。  
   
- 入力パラメーター、コンス トラクターを`i`または`u`、ブール値を文字、または整数型である必要があります。 パラメーターの別の型の場合は、`SafeInt`クラス[static_assert](../cpp/static-assert.md)を無効な入力パラメーターを示します。  
+ 入力パラメーターをコンス トラクター、*は*または*u*、ブール値、文字、または整数型でなければなりません。 パラメーターの型を別の場合は、 **SafeInt**クラスが呼び出す[static_assert](../cpp/static-assert.md)を無効な入力パラメーターを示します。  
   
- テンプレートの種類を使用するコンス トラクター`U`で指定された型に、入力パラメーターを自動的に変換`T`です。 `SafeInt`クラスは、データを失うことがなくデータを変換します。 エラー ハンドラーに報告`E`、データ型に変換できない場合`T`データ損失なし。  
+ テンプレートの種類を使用するコンス トラクター`U`自動的に入力パラメーターで指定された型に変換できる`T`します。 **SafeInt**クラスのデータを失うことがなくデータを変換します。 エラー ハンドラーに報告`E`、データ型に変換できない場合`T`データ損失なし。  
   
- 作成する場合、`SafeInt`ブール型のパラメーターの値をすぐに初期化する必要があります。 構築することはできません、`SafeInt`コードを使用して`SafeInt<bool> sb;`です。 これにより、コンパイル エラーが生成されます。  
+ 作成する場合、 **SafeInt**ブール型のパラメーターから値をすぐに初期化する必要があります。 構築することはできません、 **SafeInt**コードを使用して`SafeInt<bool> sb;`します。 これにより、コンパイル エラーが生成されます。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** safeint.h  

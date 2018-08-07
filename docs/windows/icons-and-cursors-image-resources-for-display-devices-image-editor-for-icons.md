@@ -1,5 +1,5 @@
 ---
-title: 'アイコンとカーソル: ディスプレイ デバイス (アイコン用イメージ エディター) のイメージ リソース |Microsoft ドキュメント'
+title: 'アイコンとカーソル: ディスプレイ デバイス (アイコン用イメージ エディター) のイメージ リソース |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,12 +26,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a977629cbae140afa1463a7765f193a7519e1f68
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 384db46d495b342d40dd4f7588583c5b6048810c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881911"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604617"
 ---
 # <a name="icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons"></a>アイコンとカーソル: ディスプレイ デバイスのイメージ リソース (アイコン用イメージ エディター)
 アイコンとカーソルは、グラフィカルなリソースで、表示デバイスの種類ごとに異なるサイズや色スキームの複数のイメージを含めることができます。 さらに、カーソルには「ホット スポット」があります。これは、その位置を追跡するために Windows で使用されるロケーションです。 アイコンとカーソルのどちらも、ビットマップやその他のイメージと同様、イメージ エディターを使用して作成および編集されます。  
@@ -75,7 +75,7 @@ ms.locfileid: "33881911"
   
 -   [カーソルのホット スポットの設定](../windows/setting-a-cursor-s-hot-spot-image-editor-for-icons.md)  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 詳細については、管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションは、次を参照してください。[グローバライズと .NET Framework アプリケーションのローカライズ](/dotnet/standard/globalization-localization/index)です。  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
   
 ## <a name="requirements"></a>要件  
  なし  
@@ -84,4 +84,3 @@ ms.locfileid: "33881911"
  [アイコン用イメージ エディター](../windows/image-editor-for-icons.md)   
  [アイコン](http://msdn.microsoft.com/library/windows/desktop/ms646973)   
  [カーソル](http://msdn.microsoft.com/library/windows/desktop/ms646970)
-

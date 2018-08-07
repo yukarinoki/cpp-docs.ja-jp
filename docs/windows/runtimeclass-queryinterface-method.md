@@ -1,5 +1,5 @@
 ---
-title: Runtimeclass::queryinterface メソッド |Microsoft ドキュメント
+title: Runtimeclass::queryinterface メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 84f5183d0273abfc23834099c07987dca6b3da7f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 15f611a9fe361e401e1884cb1794f8d1ef1f5591
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892106"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603538"
 ---
 # <a name="runtimeclassqueryinterface-method"></a>RuntimeClass::QueryInterface メソッド
-指定したインターフェイス ID へのポインターを取得します  
+指定したインターフェイス ID へのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 STDMETHOD(  
    QueryInterface  
 )  
@@ -38,12 +37,12 @@ STDMETHOD(
    _Deref_out_ void **ppvObject);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `riid`  
+### <a name="parameters"></a>パラメーター  
+ *riid*  
  インターフェイス ID。  
   
- `ppvObject`  
- 完了時のこの opereation で指定されたインターフェイスへのポインター、`riid`パラメーター。  
+ *ppvObject*  
+ この opereation 完了時で指定されたインターフェイスへのポインター、 *riid*パラメーター。  
   
 ## <a name="return-value"></a>戻り値  
  成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。  

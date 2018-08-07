@@ -1,5 +1,5 @@
 ---
-title: Move 関数 |Microsoft ドキュメント
+title: 関数の移動 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8da1a3c839add5d056674896b5a3c6a32145924f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d058919d0906b458c6c4e81d65c9438c95a22b85
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876772"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607304"
 ---
 # <a name="move-function"></a>Move 関数
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -36,20 +36,20 @@ inline typename RemoveReference<T>::Type&& Move(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `T`  
+### <a name="parameters"></a>パラメーター  
+ *T*  
  引数の型。  
   
- `arg`  
- 移動に渡す引数。  
+ *arg*  
+ 移動する引数。  
   
 ## <a name="return-value"></a>戻り値  
- パラメーター`arg`参照または右辺値参照の特徴の後に存在する場合、削除されました。  
+ パラメーター *arg*参照または右辺値参照の特徴の後に存在する場合、削除されました。  
   
-## <a name="remarks"></a>コメント  
- 指定された引数を 1 つの場所から移動します。  
+## <a name="remarks"></a>Remarks  
+ 指定した引数を 1 つの場所から移動します。  
   
- 詳細については、次を参照してください。、**移動セマンティクス**のセクション[右辺値参照宣言子: & &](../cpp/rvalue-reference-declarator-amp-amp.md)です。  
+ 詳細については、次を参照してください。、**移動セマンティクス**の[右辺値参照宣言子: & &](../cpp/rvalue-reference-declarator-amp-amp.md)します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** internal.h  

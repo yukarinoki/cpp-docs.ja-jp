@@ -1,5 +1,5 @@
 ---
-title: sealed (C++ コンポーネント拡張) |Microsoft ドキュメント
+title: シール (C++ コンポーネント拡張) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 05c75aef047e914086aaf4ae2c0d0d3bdd04e8c7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 47efadb89786b7be54f33678d2f71d2474e4deb4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890864"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604552"
 ---
 # <a name="sealed--c-component-extensions"></a>sealed (C++ コンポーネント拡張)
-`sealed` は ref クラスの状況依存のキーワードであり、仮想メンバーがオーバーライドできないこと、または型を基本型として使用できないことを示します。  
+**封印された**の ref クラス仮想メンバーをオーバーライドできないことを示す状況依存のキーワードは、または型を基本データ型として使用できません。  
   
 > [!NOTE]
->  ISO c 11 標準の言語が、[最終](../cpp/final-specifier.md)キーワードで、Visual Studio ではサポートされています。 標準クラスでは `final` を、ref クラスでは `sealed` を使用してください。  
+>  ISO c 11 標準言語が、[最終的な](../cpp/final-specifier.md)キーワードで、Visual Studio ではサポートされています。 使用**最終的な**標準クラス、および**シール**ref クラスで。  
   
 ## <a name="all-runtimes"></a>すべてのランタイム  
   
@@ -48,30 +48,30 @@ virtual return-type identifier() sealed {...};
  *戻り値の型*  
  関数によって返される型。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
  最初の構文例ではクラスがシールされます。 2 番目の例では仮想関数がシールされます。  
   
- `sealed`キーワードはネイティブ ターゲットの場合、および Windows ランタイムと共通言語ランタイム (CLR) のも有効です。 詳細については、次を参照してください。[オーバーライド指定子とネイティブ コンパイル](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)です。  
+ **シール**キーワードはネイティブ ターゲット、および Windows ランタイムと共通言語ランタイム (CLR) も有効です。 詳細については、次を参照してください。[オーバーライド指定子とネイティブ コンパイル](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)します。  
   
- 使用して、型がシールされているかどうかは、コンパイル時に検出することができます、`__is_sealed(type)`型の特徴です。 詳細については、次を参照してください。[型の特徴のコンパイラ サポート](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)です。  
+ 使用して、型がシールされているかどうかは、コンパイル時に検出することができます、`__is_sealed(type)`型の特徴です。 詳細については、次を参照してください。[型の特徴のコンパイラ サポート](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)します。  
   
- `sealed` は状況依存のキーワードです。  詳細については、次を参照してください。[状況依存のキーワード](../windows/context-sensitive-keywords-cpp-component-extensions.md)です。  
+ **封印された**は状況依存のキーワードです。  詳細については、次を参照してください。[状況依存のキーワード](../windows/context-sensitive-keywords-cpp-component-extensions.md)します。  
   
 ## <a name="windows-runtime"></a>Windows ランタイム  
- 参照してください[Ref クラスと構造体](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx)です。  
+ 参照してください[Ref クラスと構造体](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx)します。  
   
 ### <a name="requirements"></a>要件  
- コンパイラ オプション: **/ZW**  
+ コンパイラ オプション: `/ZW`  
   
 ## <a name="common-language-runtime"></a>共通言語ランタイム  
  (この言語機能には共通言語ランタイムのみに適用される特記事項がありません。)  
   
-### <a name="requirements"></a>要件  
- コンパイラ オプション: **/clr**  
+### <a name="requirements"></a>必要条件  
+ コンパイラ オプション: `/clr`  
   
 ### <a name="examples"></a>使用例  
- 次のコード例は、仮想メンバーに対する `sealed` の効果を示します。  
+ このコード例を次の効果を示します**シール**仮想メンバーにします。  
   
 ```cpp  
 // sealed_keyword.cpp  

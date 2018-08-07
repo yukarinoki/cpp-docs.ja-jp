@@ -1,5 +1,5 @@
 ---
-title: Runtimeclass::runtimeclass コンス トラクター |Microsoft ドキュメント
+title: Runtimeclass::runtimeclass コンス トラクター |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a4f1bbfaff595ad7594f96e0ac20d29ea4ccfdbe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 91e8242d028d25e9e6783506db014e3dceda32ec
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888500"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605738"
 ---
 # <a name="runtimeclassruntimeclass-constructor"></a>RuntimeClass::RuntimeClass コンストラクター
-RuntimeClass クラスの現在のインスタンスを初期化します。  
+現在のインスタンスを初期化します、 **RuntimeClass**クラス。  
   
 ## <a name="syntax"></a>構文  
   

@@ -1,5 +1,5 @@
 ---
-title: Module::getclassobject メソッド |Microsoft ドキュメント
+title: Module::getclassobject メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9205b04fc27e1c6e0e6133a08c3c2f69ffdfc314
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 63ff6c63702cda709f4431d9c7e5be5a4bdb8449
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878539"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602654"
 ---
 # <a name="modulegetclassobject-method"></a>Module::GetClassObject メソッド
 クラス ファクトリのキャッシュを取得します。  
@@ -38,23 +38,23 @@ ms.locfileid: "33878539"
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `clsid`  
+### <a name="parameters"></a>パラメーター  
+ *clsid*  
  クラスの id。  
   
- `riid`  
- 要求するインターフェイス ID です。  
+ *riid*  
+ 要求したインターフェイス ID です。  
   
- `ppv`  
+ *ppv*  
  返されるオブジェクトへのポインター。  
   
- `serverName`  
- いずれかで指定されているサーバー名、 `ActivatableClassWithFactory`、 `ActivatableClassWithFactoryEx`、または`ActivatableClass`マクロ; または`nullptr`を既定のサーバー名を取得します。  
+ *サーバー名*  
+ いずれかで指定されているサーバー名、 `ActivatableClassWithFactory`、 `ActivatableClassWithFactoryEx`、または`ActivatableClass`マクロ; または**nullptr**を既定のサーバー名を取得します。  
   
 ## <a name="return-value"></a>戻り値  
   
-## <a name="remarks"></a>コメント  
- このメソッドは Windows ランタイムではなく、COM にのみ使用します。 このメソッドは、IClassFactory メソッドのみを公開します。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、Windows ランタイムではなく COM にのみ使用します。 このメソッドを公開のみ`IClassFactory`メソッド。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** module.h  

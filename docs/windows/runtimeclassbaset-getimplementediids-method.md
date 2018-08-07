@@ -1,5 +1,5 @@
 ---
-title: Runtimeclassbaset::getimplementediids メソッド |Microsoft ドキュメント
+title: Runtimeclassbaset::getimplementediids メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ea6ff871ef0ce886b393c948fc45accf3d8e245
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bf29b5db15f88528012914476572cb1ccb21a07c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892235"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603252"
 ---
 # <a name="runtimeclassbasetgetimplementediids-method"></a>RuntimeClassBaseT::GetImplementedIIDS メソッド
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -38,24 +38,24 @@ __forceinline static HRESULT GetImplementedIIDS(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `T`  
- `implements` パラメーターの型。  
+### <a name="parameters"></a>パラメーター  
+ *T*  
+ 種類、*実装*パラメーター。  
   
- `implements`  
- パラメーターで指定された型へのポインター`T`です。  
+ *実装*  
+ パラメーターで指定された型へのポインター *T*します。  
   
- `iidCount`  
- 取得するインターフェイスの Id の最大数。  
+ *iidCount*  
+ 取得するインターフェイス Id の最大数。  
   
- `iids`  
- この操作が完了したかどうか、正常にインターフェイスの型によって実装された Id の配列`T`です。  
+ *iid*  
+ この操作があるインターフェイスの型によって実装された Id の配列では正常に完了する場合*T*します。  
   
 ## <a name="return-value"></a>戻り値  
- 正常終了した場合は S_OK、それ以外の場合、エラーを説明する HRESULT。  
+ 成功した場合は s_ok を返します。それ以外の場合、エラーを示す HRESULT。  
   
-## <a name="remarks"></a>コメント  
- インターフェイスは、指定した型によって実装される Id の配列を取得します。  
+## <a name="remarks"></a>Remarks  
+ インターフェイスの指定された型で実装されている Id の配列を取得します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** implements.h  

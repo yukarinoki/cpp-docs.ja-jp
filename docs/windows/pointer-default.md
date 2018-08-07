@@ -1,5 +1,5 @@
 ---
-title: pointer_default |Microsoft ドキュメント
+title: pointer_default |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee904f9243cf642d3a942d4bc323f5ec381b0480
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 562bc3ebd0c80423eb94d2bc328f72aed8e67985
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877463"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604388"
 ---
 # <a name="pointerdefault"></a>pointer_default
-パラメーター リストに表示される最上位のポインターを除く、すべてのポインターの既定のポインターの属性を指定します。  
+パラメーター リストに表示される最上位レベルのポインターを除く、すべてのポインターの既定のポインターの属性を指定します。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
-      [ pointer_default(  
+[ pointer_default(  
    value  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
  *値*  
- ポインター型を記述する値: **ptr**、 `ref`、または**一意**です。  
+ ポインター型を記述する値: **ptr**、 **ref**、または**一意**します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **Pointer_default** C++ 属性と同じ機能を持つ、 [pointer_default](http://msdn.microsoft.com/library/windows/desktop/aa367141) MIDL 属性。  
   
 ## <a name="example"></a>例  
- 例を参照して[defaultvalue](../windows/defaultvalue.md)の使用例の**pointer_default**です。  
+ 例をご覧ください[defaultvalue](../windows/defaultvalue.md)の使用サンプル**pointer_default**します。  
   
 ## <a name="requirements"></a>要件  
   
@@ -52,8 +51,8 @@ ms.locfileid: "33877463"
   
 |||  
 |-|-|  
-|**対象**|`interface`|  
-|**反復可能**|×|  
+|**対象**|**interface**|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

@@ -1,5 +1,5 @@
 ---
-title: ptr |Microsoft ドキュメント
+title: ptr |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ef98cd3ac446c41143fc8e1f3f5a731f05ab3c45
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 87c3e84c0547751b03fba616df7c3f9bdd4dc06e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875995"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604331"
 ---
 # <a name="ptr"></a>ptr
-すべてのポインターとしてのポインターを指定します。  
+完全なポインターとしてのポインターを指定します。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 [ptr]  
-  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **Ptr** C++ 属性と同じ機能を持つ、 [ptr](http://msdn.microsoft.com/library/windows/desktop/aa367149) MIDL 属性。  
   
 ## <a name="example"></a>例  
- 例を参照して[defaultvalue](../windows/defaultvalue.md)の使用例の**ptr**です。  
+ 例をご覧ください[defaultvalue](../windows/defaultvalue.md)の使用サンプル**ptr**します。  
   
 ## <a name="requirements"></a>要件  
   
@@ -47,8 +45,8 @@ ms.locfileid: "33875995"
   
 |||  
 |-|-|  
-|**対象**|インターフェイスのパラメーター、インターフェイス メソッド `typedef`|  
-|**反復可能**|×|  
+|**対象**|インターフェイスのパラメーター、インターフェイスのメソッド、 **typedef**|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

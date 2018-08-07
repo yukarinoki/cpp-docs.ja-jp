@@ -1,5 +1,5 @@
 ---
-title: Interfacetraits::iidcount 定数 |Microsoft ドキュメント
+title: Interfacetraits::iidcount 定数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2664292324ebb395f3a5f260dec57360027c60e4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cf8808074e347f70290498adc83f55f488a75790
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874068"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602728"
 ---
 # <a name="interfacetraitsiidcount-constant"></a>InterfaceTraits::IidCount 定数
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -33,8 +33,8 @@ WRL インフラストラクチャをサポートし、コードから直接使�
 static const unsigned long IidCount = 1;  
 ```  
   
-## <a name="remarks"></a>コメント  
- Id が現在の InterfaceTraits オブジェクトに関連付けられているインターフェイスの数を保持します。  
+## <a name="remarks"></a>Remarks  
+ インターフェイスに関連付けられた現在の Id の数を保持する**InterfaceTraits**オブジェクト。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** implements.h  

@@ -1,5 +1,5 @@
 ---
-title: requestedit |Microsoft ドキュメント
+title: requestedit |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d741494d33cba7b1d19e2ce081bad35eaaf283e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a9b0102ad6ba7b11ea2f0c738983385ffda632ca
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878256"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606476"
 ---
 # <a name="requestedit"></a>requestedit
-プロパティをサポートしていることを示します、 **OnRequestEdit**通知します。  
+プロパティをサポートしていることを示します、`OnRequestEdit`通知します。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 [requestedit]  
-  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **Requestedit** C++ 属性と同じ機能を持つ、 [requestedit](http://msdn.microsoft.com/library/windows/desktop/aa367155) MIDL 属性。  
   
 ## <a name="example"></a>例  
- 例を参照して[バインド可能な](../windows/bindable.md)の使用例の**requestedit**です。  
+ 例をご覧ください[バインド可能な](../windows/bindable.md)の使用サンプル**requestedit**します。  
   
 ## <a name="requirements"></a>要件  
   
@@ -48,7 +46,7 @@ ms.locfileid: "33878256"
 |||  
 |-|-|  
 |**対象**|インターフェイス メソッド|  
-|**反復可能**|×|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

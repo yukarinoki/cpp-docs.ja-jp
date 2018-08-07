@@ -1,5 +1,5 @@
 ---
-title: SafeAdd |Microsoft ドキュメント
+title: SafeAdd |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b0450820afdde3eb330948a65f8d052fa54017dc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8686d0ef990e9be22ec4ebe1c81c737df9b15812
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892717"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607405"
 ---
 # <a name="safeadd"></a>SafeAdd
-オーバーフローを防止する方法の 2 つの数値を加算します。  
+オーバーフローに対する保護できる方法では、2 つの数値を追加します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,26 +38,26 @@ inline bool SafeAdd (
 ) throw ();  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- [入力] `t`  
- 追加する最初の数。 T 型でなければなりません  
+### <a name="parameters"></a>パラメーター  
+ [in]*t*  
+ 追加する最初の数値。 これは T 型である必要があります。  
   
- [入力] `u`  
- 追加する 2 番目の数値。 U 型です。 これでなければなりません  
+ [in]*u*  
+ 追加する 2 番目の数値。 これは、型 U のある必要があります。  
   
- [出力] `result`  
- パラメーターで`SafeAdd`結果を格納します。  
+ [out]*結果*  
+ パラメーターで**SafeAdd**結果を格納します。  
   
 ## <a name="return-value"></a>戻り値  
- `true` エラーが発生しない場合です。`false`場合は、エラーが発生します。  
+ **true**場合、エラーは発生しません。**false**エラーが発生した場合。  
   
-## <a name="remarks"></a>コメント  
- このメソッドの一部である[SafeInt ライブラリ](../windows/safeint-library.md)のインスタンスを作成せず、1 つの追加操作のものでは、 [SafeInt クラス](../windows/safeint-class.md)です。  
+## <a name="remarks"></a>Remarks  
+ このメソッドの一部は、 [SafeInt ライブラリ](../windows/safeint-library.md)のインスタンスを作成せず、1 つの追加操作のものでは、 [SafeInt クラス](../windows/safeint-class.md)します。  
   
 > [!NOTE]
->  このメソッドは、単一の数値演算を保護する必要がありますにのみ使用する必要があります。 使用する必要があります複数の操作がある場合、`SafeInt`個々 のスタンドアロン関数の呼び出しではなくクラスです。  
+>  このメソッドは、単一の数値演算を保護する必要がありますにのみ使用する必要があります。 使用する必要があります複数の操作がある場合、`SafeInt`個々 のスタンドアロン関数の呼び出しではなくクラス。  
   
- テンプレート型 T および U の詳細については、次を参照してください。 [SafeInt 関数](../windows/safeint-functions.md)です。  
+ T および U のテンプレートの種類の詳細については、次を参照してください。 [SafeInt 関数](../windows/safeint-functions.md)します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** safeint.h  

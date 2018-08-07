@@ -1,5 +1,5 @@
 ---
-title: 制限付き |Microsoft ドキュメント
+title: 制限付き |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e1d688d4ebca5d2cc01901f5fe1afaa4536b71bb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f79b4e53947e0e87fb70211ca40bc54f4500855f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892879"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602773"
 ---
 # <a name="restricted"></a>restricted
-モジュール、インターフェイス、またはディスパッチ インターフェイスのメンバーを任意に呼び出すことができませんを指定します。  
+モジュール、インターフェイス、またはディスパッチ インターフェイスのメンバーを任意に呼び出すことはできませんを指定します。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
-      [ restricted(  
+[ restricted(  
    interfaces  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `interfaces`  
- 呼び出すことはできません任意に COM オブジェクトで 1 つまたは複数のインターフェイス。 このパラメーターは、クラスに適用する場合に有効ではのみです。  
+### <a name="parameters"></a>パラメーター  
+ *interfaces*  
+ COM オブジェクトに任意に呼ぶことが 1 つまたは複数のインターフェイス。 このパラメーターはクラスに適用される場合に有効です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **制限**C++ 属性と同じ機能を持つ、[制限](http://msdn.microsoft.com/library/windows/desktop/aa367157)MIDL 属性。  
   
 ## <a name="example"></a>例  
  次のコードを使用する方法を示しています、**制限**属性。  
   
-```  
+```cpp  
 // cpp_attr_ref_restricted.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -75,9 +74,9 @@ class c : public a, public b
   
 |||  
 |-|-|  
-|**対象**|インターフェイス メソッド、 `interface`、**クラス**、 `struct`|  
-|**反復可能**|×|  
-|**必要な属性**|**coclass** ( **class** または `struct`に適用される場合)|  
+|**対象**|インターフェイスのメソッド、**インターフェイス**、**クラス**、**構造体**|  
+|**反復可能**|いいえ|  
+|**必要な属性**|**コクラス**(に適用すると**クラス**または**構造体**)|  
 |**無効な属性**|なし|  
   
  属性コンテキストの詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  

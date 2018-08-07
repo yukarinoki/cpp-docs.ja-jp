@@ -1,5 +1,5 @@
 ---
-title: Module::releasenotifier クラス |Microsoft ドキュメント
+title: Module::releasenotifier クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76edb403fae12dd8b6221d8bd6ec82424bc5a4f7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1deeb3076d3f1bfc2243ec333f258f543a37fceb
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878393"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608392"
 ---
 # <a name="modulereleasenotifier-class"></a>Module::ReleaseNotifier クラス
-モジュール内の最後のオブジェクトを解放すると、イベント ハンドラーを呼び出します。  
+モジュールの最後のオブジェクトがリリースされたときに、イベント ハンドラーを呼び出します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,15 +39,15 @@ class ReleaseNotifier;
   
 |名前|説明|  
 |----------|-----------------|  
-|[Module::ReleaseNotifier::~ReleaseNotifier デストラクター](../windows/module-releasenotifier-tilde-releasenotifier-destructor.md)|Module::releasenotifier クラスの現在のインスタンスの初期化を解除します。|  
-|[Module::ReleaseNotifier::ReleaseNotifier コンストラクター](../windows/module-releasenotifier-releasenotifier-constructor.md)|Module::releasenotifier クラスの新しいインスタンスを初期化します。|  
+|[Module::ReleaseNotifier::~ReleaseNotifier デストラクター](../windows/module-releasenotifier-tilde-releasenotifier-destructor.md)|現在のインスタンスの初期化を解除、 **module::releasenotifier**クラス。|  
+|[Module::ReleaseNotifier::ReleaseNotifier コンストラクター](../windows/module-releasenotifier-releasenotifier-constructor.md)|新しいインスタンスを初期化、 **module::releasenotifier**クラス。|  
   
 ### <a name="public-methods"></a>パブリック メソッド  
   
 |名前|説明|  
 |----------|-----------------|  
-|[Module::ReleaseNotifier::Invoke メソッド](../windows/module-releasenotifier-invoke-method.md)|実装された場合、モジュール内の最後のオブジェクトが離されると、イベント ハンドラーを呼び出します。|  
-|[Module::ReleaseNotifier::Release](../windows/module-releasenotifier-release.md)|パラメーターを持つオブジェクトを構築した場合は、現在の module::releasenotifier オブジェクトを削除`true`です。|  
+|[Module::ReleaseNotifier::Invoke メソッド](../windows/module-releasenotifier-invoke-method.md)|実装された場合、モジュールの最後のオブジェクトがリリースされたときに、イベント ハンドラーを呼び出します。|  
+|[Module::ReleaseNotifier::Release](../windows/module-releasenotifier-release.md)|現在の削除**module::releasenotifier**オブジェクトのパラメーターを持つオブジェクトを構築したかどうかは**true**します。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `ReleaseNotifier`  

@@ -1,5 +1,5 @@
 ---
-title: Mutex::lock メソッド |Microsoft ドキュメント
+title: Mutex::lock メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 37044dbd884c4e38c70677bf9a8fa0a51fda0a88
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c96ef497331fecf8125c51a7b8bd669ec758927
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880873"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603525"
 ---
 # <a name="mutexlock-method"></a>Mutex::Lock メソッド
-ミュー テックスを解放するまで、現在のオブジェクト、または、指定したハンドルに関連付けられているミュー テックス オブジェクト待機または指定されたタイムアウト期間が経過しました。  
+現在のオブジェクトまでの待機、または**ミュー テックス**リリース ミュー テックス、または指定されたタイムアウト期間が経過した、指定したハンドルに関連付けられているオブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,12 +40,12 @@ static SyncLock Lock(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `milliseconds`  
- タイムアウト間隔 (ミリ秒単位)。 既定値は、無限で、無期限に待機します。  
+### <a name="parameters"></a>パラメーター  
+ *(ミリ秒)*  
+ タイムアウト間隔 (ミリ秒単位)。 既定値は、INFINITE で、無期限に待機します。  
   
- `h`  
- ミュー テックス オブジェクトのハンドル。  
+ *h*  
+ ハンドルを**ミュー テックス**オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
   

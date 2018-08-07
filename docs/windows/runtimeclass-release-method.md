@@ -1,5 +1,5 @@
 ---
-title: Runtimeclass::release メソッド |Microsoft ドキュメント
+title: Runtimeclass::release メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3d07e941f3f8ee0d7df2df14216fa60ef3a2a706
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c1f9500abc1c92ea5f9aca64e379adfdcf84a44
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888797"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607525"
 ---
 # <a name="runtimeclassrelease-method"></a>RuntimeClass::Release メソッド
-現在の RuntimeClass オブジェクトに対して COM 解放操作を実行します。  
+現在の COM 解放操作を実行します。 **RuntimeClass**オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,8 +39,8 @@ STDMETHOD_(
 ## <a name="return-value"></a>戻り値  
  成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。  
   
-## <a name="remarks"></a>コメント  
- 参照カウントがゼロになった場合、RuntimeClass オブジェクトは削除されます。  
+## <a name="remarks"></a>Remarks  
+ 参照カウントが 0 になった場合、 **RuntimeClass**オブジェクトを削除します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** implements.h  

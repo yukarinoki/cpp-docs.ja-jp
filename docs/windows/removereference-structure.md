@@ -1,5 +1,5 @@
 ---
-title: RemoveReference 構造体 |Microsoft ドキュメント
+title: RemoveReference 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 126394e3a63016eccf1f5451d032753bb8f81da8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b3152cf46460dbeb8f5c8adfd5a7550f97eaca98
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881264"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602712"
 ---
 # <a name="removereference-structure"></a>RemoveReference 構造体
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -38,12 +38,12 @@ template<class T>
 struct RemoveReference<T&&>;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `T`  
- クラスです。  
+### <a name="parameters"></a>パラメーター  
+ *T*  
+ クラス。  
   
-## <a name="remarks"></a>コメント  
- 指定されたクラス テンプレート パラメーターから参照または右辺値参照の特徴を切り離します。  
+## <a name="remarks"></a>Remarks  
+ 指定されたクラス テンプレートのパラメーターから参照または右辺値参照の特徴を取り除きます。  
   
 ## <a name="members"></a>メンバー  
   

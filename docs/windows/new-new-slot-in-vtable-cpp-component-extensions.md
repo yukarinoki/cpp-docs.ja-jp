@@ -1,5 +1,5 @@
 ---
-title: 新しい (新しい vtable のスロット) (C++ コンポーネント拡張) |Microsoft ドキュメント
+title: new (新規のスロット vtable) (C++ コンポーネント拡張) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7189909f3cff84d2bb1a767e4ddeda817bcd6128
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 32452b4fd44aed2bc399165b3184d974f22d90b6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879784"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607012"
 ---
 # <a name="new-new-slot-in-vtable--c-component-extensions"></a>new (vtable の新しいスロット) (C++ コンポーネント拡張)
-`new` キーワードは、仮想メンバーが vtable の新しいスロットを取得することを示します。  
+**新しい**キーワードは、仮想メンバーが vtable の新しいスロットを取得することを示します。  
   
 ## <a name="all-runtimes"></a>すべてのランタイム  
  (この言語機能にはランタイムに適用される特記事項がありません。)  
@@ -32,25 +32,24 @@ ms.locfileid: "33879784"
  Windows ランタイムでサポートされていません。  
   
 ## <a name="common-language-runtime"></a>共通言語ランタイム 
- **解説**  
+### <a name="remarks"></a>Remarks  
   
- **/Clr**コンパイル、`new`仮想メンバーが vtable の新しいスロットを取得する以外の場合は、関数が基底クラスのメソッドをオーバーライドしていないことを示します。  
+ `/clr`コンパイル、**新しい**仮想メンバーが vtable の新しいスロットを取得するは、関数が基底クラスのメソッドをオーバーライドしていないことを示します。  
   
- `new` を指定すると、関数の IL に newslot 修飾子が追加されます。  newslot の詳細については、次のトピックを参照してください。  
+ **新しい**により、関数の IL に追加する newslot 修飾子。  newslot の詳細については、次のトピックを参照してください。  
   
--   [MethodInfo.GetBaseDefinition メソッド](https://msdn.microsoft.com/en-us/library/system.reflection.methodinfo.getbasedefinition.aspx)  
+-   [MethodInfo.GetBaseDefinition メソッド](https://msdn.microsoft.com/library/system.reflection.methodinfo.getbasedefinition.aspx)  
   
--   [MethodAttributes 列挙体](https://msdn.microsoft.com/en-us/library/system.reflection.methodattributes.aspx)  
+-   [MethodAttributes 列挙体](https://msdn.microsoft.com/library/system.reflection.methodattributes.aspx)  
   
 ### <a name="requirements"></a>要件  
- コンパイラ オプション: **/clr**  
+ コンパイラ オプション: `/clr`  
   
 ### <a name="examples"></a>使用例  
- **例**  
   
- `new` の効果の例を次に示します。  
+ 次の例は、の効果を示しています。**新しい**します。  
   
-```  
+```cpp  
 // newslot.cpp  
 // compile with: /clr  
 ref class C {  
@@ -112,5 +111,5 @@ E::f() called
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)   
+ [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)   
  [オーバーライド指定子](../windows/override-specifiers-cpp-component-extensions.md)

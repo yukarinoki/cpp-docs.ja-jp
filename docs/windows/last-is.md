@@ -1,5 +1,5 @@
 ---
-title: last_is |Microsoft ドキュメント
+title: last_is |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f27c0a12ddf5fe87f7065a16d042bd0afcfc0315
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d0519409e71457ca025318a591772faf33592abe
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877522"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606069"
 ---
 # <a name="lastis"></a>last_is
 転送する最後の配列要素のインデックスを指定します。  
@@ -30,17 +30,16 @@ ms.locfileid: "33877522"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
-      [ last_is(  
+[ last_is(  
    "expression"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *式*  
- 1 つ以上の C 言語の式。 空の引数スロットを指定します。  
+ 1 つ以上の C 言語の式。 空の引数スロットが許可されます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **Last_is** C++ 属性と同じ機能を持つ、 [last_is](http://msdn.microsoft.com/library/windows/desktop/aa367066) MIDL 属性。  
   
 ## <a name="example"></a>例  
@@ -52,8 +51,8 @@ ms.locfileid: "33877522"
   
 |||  
 |-|-|  
-|**対象**|フィールドに`struct`または**共用体**パラメーターをインターフェイスでは、インターフェイス メソッド|  
-|**反復可能**|×|  
+|**対象**|フィールドに**構造体**または**共用体**パラメーターをインターフェイス、インターフェイス メソッド|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

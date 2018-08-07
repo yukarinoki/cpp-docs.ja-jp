@@ -1,5 +1,5 @@
 ---
-title: rdx |Microsoft ドキュメント
+title: rdx |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,41 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7647ca56e3159564826efa9caf438456b9ae3568
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3908a8f06d25416999fbf2c95dd258fbc19d456d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878958"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603123"
 ---
 # <a name="rdx"></a>rdx
-レジストリ キーを作成するか、既存のレジストリ キーを変更します。  
+レジストリ キーを作成または既存のレジストリ キーを変更します。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
-      [ rdx(   
+[ rdx(   
    key,   
    valuename=NULL,   
    regtype   
 ) ]  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `key`  
- 作成または開くのためのキーの名前です。  
+### <a name="parameters"></a>パラメーター  
+ *key*  
+ 作成または開かれたキーの名前。  
   
- `valuename`(省略可能)  
- 設定する値 フィールドを指定します。 キーにもこの名前の値フィールドが既に存在しない場合が追加されます。  
+ *valuename* (省略可能)  
+ 設定する値のフィールドを指定します。 キーにもこの名前の値のフィールドがまだ存在しない場合は、追加されます。  
   
- *regtype*  
- 追加されるレジストリ キーの型。 次のいずれかになります:**テキスト**、 **dword**、**バイナリ**、または`CString`です。  
+ *regtype です。*  
+ 追加されるレジストリ キーの型。 次のいずれかを指定できます: `text`、 `dword`、 `binary`、または`CString`します。  
   
-## <a name="remarks"></a>コメント  
- **Rdx** C++ 属性を作成または COM コンポーネントの既存のレジストリ キーを変更します。 属性は、対象のメンバーを実装するオブジェクトを BEGIN_RDX_MAP マクロを追加します。 `RegistryDataExchange`、レジストリ データ メンバーの間でデータを転送する BEGIN_RDX_MAP マクロの結果として挿入された関数を使用できます  
+## <a name="remarks"></a>Remarks  
+ **Rdx** C++ 属性を作成または既存の COM コンポーネントのレジストリ キーを変更します。 属性は、対象のメンバーを実装するオブジェクトに BEGIN_RDX_MAP マクロを追加します。 `RegistryDataExchange`、レジストリおよびデータ メンバーの間でデータを転送する、BEGIN_RDX_MAP マクロした結果、挿入関数を使用できます  
   
- この属性を組み合わせて使用することができます、[コクラス](../windows/coclass.md)、 [progid](../windows/progid.md)、または[vi_progid](../windows/vi-progid.md)属性または次のいずれかのことを意味するその他の属性です。  
+ この属性を組み合わせて使用することができます、[コクラス](../windows/coclass.md)、 [progid](../windows/progid.md)、または[vi_progid](../windows/vi-progid.md)属性または他の属性をこれらのいずれかを意味します。  
   
 ## <a name="requirements"></a>要件  
   
@@ -59,17 +58,17 @@ ms.locfileid: "33878958"
   
 |||  
 |-|-|  
-|**対象**|**クラス**または`struct`メンバー|  
-|**反復可能**|×|  
+|**対象**|**クラス**または**構造体**メンバー|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   
  属性コンテキストの詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次のコードでは、CMyClass COM コンポーネントを記述するシステムに MyValue をというレジストリ キーを追加します。  
+ 次のコードは、CMyClass COM コンポーネントを記述するシステム プロパティと呼ばれるレジストリ キーを追加します。  
   
-```  
+```cpp  
 // cpp_attr_ref_rdx.cpp  
 // compile with: /LD /link /OPT:NOREF  
 #define _ATL_ATTRIBUTES  

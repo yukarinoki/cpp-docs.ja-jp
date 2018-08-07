@@ -1,5 +1,5 @@
 ---
-title: nonbrowsable |Microsoft ドキュメント
+title: nonbrowsable |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bb752c02eb200e952cf247684675ebd377eeaaa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a7bdd285ed74c7792a34cfe99e0a900d42d6bc26
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877369"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604591"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
-インターフェイス メンバーをプロパティ ブラウザーで表示されないことを示します。  
+インターフェイス メンバーをプロパティ ブラウザーに表示されないことを示します。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 [nonbrowsable]  
-  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **Nonbrowsable** C++ 属性と同じ機能を持つ、 [nonbrowsable](http://msdn.microsoft.com/library/windows/desktop/aa367117) MIDL 属性。  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp  
 // cpp_attr_ref_nonbrowsable.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -61,7 +59,7 @@ __interface IMyI
 |||  
 |-|-|  
 |**対象**|インターフェイス メソッド|  
-|**反復可能**|×|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

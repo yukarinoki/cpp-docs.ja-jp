@@ -1,5 +1,5 @@
 ---
-title: Interfacetraits::casttounknown メソッド |Microsoft ドキュメント
+title: Interfacetraits::casttounknown メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a2fdc46f57f834c3e8217049574ea504aae16f03
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ad2c0a438eee870ac86301f0a56ef525eb53d8c8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878126"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608652"
 ---
 # <a name="interfacetraitscasttounknown-method"></a>InterfaceTraits::CastToUnknown メソッド
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -36,20 +36,20 @@ static __forceinline IUnknown* CastToUnknown(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `T`  
- パラメーターの型`ptr`です。  
+### <a name="parameters"></a>パラメーター  
+ *T*  
+ パラメーターの型*ptr*します。  
   
- `ptr`  
- 型へのポインター`T`です。  
+ *ptr*  
+ 型へのポインター *T*します。  
   
 ## <a name="return-value"></a>戻り値  
- 元の IUnknown へのポインター`Base`が派生します。  
+ これから、IUnknown へのポインター`Base`が派生します。  
   
-## <a name="remarks"></a>コメント  
- IUnknown へのポインターへのポインターをキャストします。  
+## <a name="remarks"></a>Remarks  
+ 指定したポインターへのポインターにキャスト`IUnknown`します。  
   
- 詳細については`Base`、パブリック Typedef セクションを参照して[InterfaceTraits 構造体](../windows/interfacetraits-structure.md)です。  
+ 詳細については`Base`、パブリック Typedef」セクションを参照してください。 [InterfaceTraits 構造体](../windows/interfacetraits-structure.md)します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** implements.h  

@@ -1,5 +1,5 @@
 ---
-title: importidl |Microsoft ドキュメント
+title: importidl |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f5284c631813271f5682343c74cff693d1ea785e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bd930ef70e5bb2b87c584c1d821cdf4528580a31
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877476"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607184"
 ---
 # <a name="importidl"></a>importidl
-指定された .idl ファイルを生成された .idl ファイルに挿入します。  
+生成された .idl ファイルには、指定された .idl ファイルを挿入します。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
-      [ importidl(  
+[ importidl(  
    idl_file  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `idl_file`  
- アプリケーションに対して生成される .idl ファイルにマージする .idl ファイルの名前を識別します。  
+### <a name="parameters"></a>パラメーター  
+ *idl_file*  
+ アプリケーション用に生成される .idl ファイルにマージする .idl ファイルの名前を示します。  
   
-## <a name="remarks"></a>コメント  
- **Importidl** C++ 属性ライブラリ ブロックの外側でセクションの配置 (で`idl_file`) に、プログラムの生成された .idl ファイルとライブラリのセクション (で`idl_file`) ライブラリのセクションに、プログラムの生成された .idl ファイルです。  
+## <a name="remarks"></a>Remarks  
+ **Importidl** C++ 属性ライブラリ ブロックの外側でセクションの配置 (で*idl_file*)、プログラムの生成された .idl ファイルとライブラリ セクションに (で*idl_file*) のプログラムのセクションは、ライブラリに .idl ファイルを生成します。  
   
- 使用することがあります**importidl**など、生成された .idl ファイルを手動でコーディングした .idl ファイルを使用する場合。  
+ 使用することがあります**importidl**、たとえば、生成された .idl ファイルを手動でコーディングの .idl ファイルを使用する場合。  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp  
 // cpp_attr_ref_importidl.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  
@@ -61,7 +60,7 @@ ms.locfileid: "33877476"
 |||  
 |-|-|  
 |**対象**|任意の場所|  
-|**反復可能**|×|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

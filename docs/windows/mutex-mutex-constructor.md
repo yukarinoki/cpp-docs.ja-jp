@@ -1,5 +1,5 @@
 ---
-title: Mutex::mutex コンス トラクター |Microsoft ドキュメント
+title: Mutex::mutex コンス トラクター |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb7782e44fc8598ca3b806ef922f8d0840765e28
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7a7549371ba4648f8fcce03a98a021c8027c676e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876457"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605195"
 ---
 # <a name="mutexmutex-constructor"></a>Mutex::Mutex コンストラクター
-Mutex クラスの新しいインスタンスを初期化します。  
+新しいインスタンスを初期化、**ミュー テックス**クラス。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,12 +39,12 @@ Mutex(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `h`  
- ハンドル、またはハンドル、ミュー テックス オブジェクトへの右辺値参照。  
+### <a name="parameters"></a>パラメーター  
+ *h*  
+ ハンドル、または、ハンドルへの右辺値参照を**ミュー テックス**オブジェクト。  
   
-## <a name="remarks"></a>コメント  
- 最初のコンス トラクターは、指定されたハンドルからミュー テックス オブジェクトを初期化します。 2 番目のコンス トラクターは指定のハンドルからミュー テックス オブジェクトを初期化し、現在ミュー テックス オブジェクトにミュー テックスの所有権を移動します。  
+## <a name="remarks"></a>Remarks  
+ 最初のコンス トラクターの初期化、**ミュー テックス**オブジェクト指定したハンドルから。 2 番目のコンス トラクターによって初期化、**ミュー テックス**指定のハンドルとし、ミュー テックスの所有権を移動しますから、現在にオブジェクト**ミュー テックス**オブジェクト。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  
