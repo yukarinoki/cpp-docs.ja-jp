@@ -1,5 +1,5 @@
 ---
-title: Handlenulltraits::getinvalidvalue メソッド |Microsoft ドキュメント
+title: Handlenulltraits::getinvalidvalue メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9a51570a2616dd99487290e235d6d98e8725d5ab
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ef99d2b4a03c8a43cbfef7064dd0da5cf4923792
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880837"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568713"
 ---
 # <a name="handlenulltraitsgetinvalidvalue-method"></a>HANDLENullTraits::GetInvalidValue メソッド
 無効なハンドルを表します。  
@@ -34,7 +34,7 @@ inline static Type GetInvalidValue();
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 常に `nullptr` を返します。  
+ 常に返します**nullptr**します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

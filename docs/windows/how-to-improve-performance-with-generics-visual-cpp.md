@@ -1,5 +1,5 @@
 ---
-title: '方法: ジェネリック (Visual C) でパフォーマンスを向上させる |Microsoft ドキュメント'
+title: '方法: ジェネリック (Visual C) によるパフォーマンスの向上 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,28 +18,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da74cce5f41c3399fb102180cfdfe8c1215c8bf9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d7e2476111ad5c0aaaeb5bed6fe8e806b4930071
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877567"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571517"
 ---
 # <a name="how-to-improve-performance-with-generics-visual-c"></a>方法: ジェネリックを使用してパフォーマンスを改善する (Visual C++)
-ジェネリック型パラメーターに基づく再利用可能なコードを作成できます。 型パラメーターの実際の型は、クライアント コードで呼び出されるまで延期されます。 ジェネリックの詳細については、次を参照してください。[ジェネリック](../windows/generics-cpp-component-extensions.md)です。  
+ジェネリック型パラメーターに基づく再利用可能なコードを作成できます。 型パラメーターの実際の型は、クライアント コードによって呼び出されるまで遅延されます。 ジェネリックの詳細については、次を参照してください。[ジェネリック](../windows/generics-cpp-component-extensions.md)します。  
   
- この記事では、ジェネリックの利用コレクションを使用するアプリケーションのパフォーマンスを向上させる方法について説明します。  
+ この記事では、方法、コレクションを使用するアプリケーションのパフォーマンスを向上させるジェネリックがヘルプについて説明します。  
   
 ## <a name="example"></a>例  
- .NET Framework が付属してコレクション クラスの多く、<xref:System.Collections?displayProperty=fullName>名前空間。 これらのコレクションのほとんどの操作の種類のオブジェクトの<xref:System.Object?displayProperty=fullName>します。 これにより、値の型でも、.NET Framework のすべての型から派生するために、任意の型を格納するコレクション<xref:System.Object?displayProperty=fullName>です。 ただしは、この方法を次の 2 つの欠点があります。  
+ .NET Framework コレクション クラスの多くに付属の<xref:System.Collections?displayProperty=fullName>名前空間。 これらのコレクションのほとんどの操作の種類のオブジェクトの<xref:System.Object?displayProperty=fullName>します。 これにより、値の型も、.NET Framework のすべての型から派生するために、任意の型を格納するコレクション<xref:System.Object?displayProperty=fullName>します。 ただし、これにはこの方法の 2 つの欠点があります。  
   
- 場合は、コレクションは、整数などの値の型を格納するが、値必要があるをコレクションに追加される前にボックス化、値がコレクションから取得されたときにボックス化解除します。 これらは、負荷の高い操作です。  
+ 最初に、コレクションは、整数などの値型に格納する場合、値する必要がありますをコレクションに追加される前となります値がコレクションから取得されたときにします。 これらは、負荷の高い操作です。  
   
- 次に、コレクションに追加できる種類を制御する方法はありません。 整数および文字列を同じコレクションに追加する場合でも、これはおそらくありません意図するものとします。 そのため、ために、コードがタイプ セーフであるに、コレクションから取得した型が実際にある想定された事項を確認する必要があります。  
+ 次に、コレクションに追加できる種類を制御する方法はありません。 整数および文字列を同じコレクションに追加する場合でも、これが意図されたものでない可能性があります。 そのため、コードがタイプ セーフで、確認する必要がコレクションから取得した型が実際にあるものが必要です。  
   
- 次のコード例では、ジェネリックの前に .NET Framework のコレクションの 2 つの主な欠点を示します。  
+ 次のコード例では、ジェネリックより前に、の .NET Framework コレクションの 2 つの主な欠点を示します。  
   
-```  
+```cpp  
 // perf_pre_generics.cpp  
 // compile with: /clr  
   
@@ -87,11 +87,11 @@ Popped an int: 7
 ```  
   
 ## <a name="example"></a>例  
- 新しい<xref:System.Collections.Generic?displayProperty=fullName>多くについては、同じコレクションの名前空間が含まれています、<xref:System.Collections?displayProperty=fullName>名前空間が、ジェネリック型パラメーターを受け入れるように変更されました。 これにより、非ジェネリック コレクションの 2 つの欠点: ボックス化と、コレクションに格納される値の型と型を指定することができないのボックス化解除します。 2 つのコレクションでの操作は同じです。インスタンス化方法でのみが異なります。  
+ 新しい<xref:System.Collections.Generic?displayProperty=fullName>名前空間では、同じコレクションで見つかったの多くが含まれる、<xref:System.Collections?displayProperty=fullName>をジェネリック型パラメーターを受け入れるように変更されたが、名前空間。 これにより、非ジェネリック コレクションの 2 つの欠点: ボックス化と、コレクションに格納される値型と型を指定することができないのボックス化解除します。 2 つのコレクションでの操作は同じです。インスタンス化する方法のみが異なります。  
   
- この例で、ジェネリックを使用する上記の記述の例を比較<xref:System.Collections.Generic.Stack%601>コレクション。 頻繁にアクセスする大規模なコレクション、この例のパフォーマンスが前の例よりも大幅に大きくなります。  
+ ジェネリックを使用するこの例ではこれまでに記述例を比較<xref:System.Collections.Generic.Stack%601>コレクション。 頻繁にアクセスされる大規模なコレクションでこの例のパフォーマンスは、前の例よりもかなり大きいになります。  
   
-```  
+```cpp  
 // perf_post_generics.cpp  
 // compile with: /clr  
   

@@ -1,5 +1,5 @@
 ---
-title: '方法: 指定リソースのインクルード ディレクトリ |Microsoft ドキュメント'
+title: '方法: 指定リソースのインクルード ディレクトリ |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9778f774464e8da003a535e3c4dba0aef6ed24cb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: db09d29f0049152f734ada8a78c510e4424d8dd3
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875280"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569541"
 ---
 # <a name="how-to-specify-include-directories-for-resources"></a>方法: リソースのインクルード ディレクトリを指定する
 ### <a name="to-specify-include-directories-for-a-specific-rc-file"></a>特定の .rc ファイルのインクルード ディレクトリを指定するには  
   
-1.  ソリューション エクスプ ローラーで .rc ファイルを右クリックし **プロパティ**ショートカット メニューからです。  
+1.  ソリューション エクスプ ローラーで .rc ファイルを右クリックして**プロパティ**ショートカット メニューから。  
   
-2.  **プロパティ ページ**ダイアログ ボックスで、をクリックして、**リソース**左側のウィンドウ内のノードが追加インクルード ディレクトリを指定し、**追加のインクルード ディレクトリ**プロパティ。  
+2.  **プロパティ ページ**ダイアログ ボックスで、をクリックして、**リソース**左側のウィンドウでノードが、追加のインクルード ディレクトリを指定、**追加のインクルード ディレクトリ**プロパティ。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index).NET Framework 開発者ガイド 』 でします。 マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列をプロパティに割り当てる方法については、次を参照してください[チュートリアル: ASP.NETでのローカライズ用リソースの使用](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で .NET Framework 開発者ガイド。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列をプロパティに割り当てる方法については、次を参照してください[チュートリアル: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
- **必要条件**  
+## <a name="requirements"></a>要件  
   
  Win32  
   

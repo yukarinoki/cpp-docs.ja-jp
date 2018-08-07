@@ -1,5 +1,5 @@
 ---
-title: dispinterface |Microsoft ドキュメント
+title: dispinterface |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 10f398e83650dc63c002801ac999816e48f7bdd4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6497d6da630095f4d7691edb076fc354b87e5a13
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874289"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569215"
 ---
 # <a name="dispinterface"></a>dispinterface
 ディスパッチ インターフェイスとしてインターフェイスを .idl ファイルに配置します。  
@@ -30,12 +30,10 @@ ms.locfileid: "33874289"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 [dispinterface]  
-  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **dispinterface** C++ 属性がインターフェイスの前にあると、インターフェイスは生成される .idl ファイルのライブラリ ブロック内に配置されます。  
   
  基底クラスを指定しないと、ディスパッチ インターフェイスは `IDispatch`から派生します。 ディスパッチ インターフェイスのメンバーの [id](../windows/id.md) を指定する必要があります。  
@@ -58,8 +56,8 @@ dispinterface helloPro
   
 |||  
 |-|-|  
-|**対象**|`interface`|  
-|**反復可能**|×|  
+|**対象**|**interface**|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|**dual**、 **object**、 **oleautomation**、 `local`、 **ms_union**|  
   
@@ -67,9 +65,9 @@ dispinterface helloPro
   
 ## <a name="see-also"></a>関連項目  
  [IDL 属性](../windows/idl-attributes.md)   
- [使用して属性](../windows/attributes-by-usage.md)   
- [Uuid](../windows/uuid-cpp-attributes.md)   
+ [使用法別の属性](../windows/attributes-by-usage.md)   
+ [uuid](../windows/uuid-cpp-attributes.md)   
  [デュアル](../windows/dual.md)   
- [ユーザー設定](../windows/custom-cpp.md)   
+ [カスタム](../windows/custom-cpp.md)   
  [object](../windows/object-cpp.md)   
  [__interface](../cpp/interface.md)   

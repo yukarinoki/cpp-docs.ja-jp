@@ -1,5 +1,5 @@
 ---
-title: FactoryCacheFlags 列挙型 |Microsoft ドキュメント
+title: FactoryCacheFlags 列挙型 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5ba3d9b75ff72399e1b9a027c937c24bba4a6c37
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cc4bd998368fb325878a81ee4954a2ceec9432fe
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874331"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570104"
 ---
 # <a name="factorycacheflags-enumeration"></a>FactoryCacheFlags 列挙型
 ファクトリ オブジェクトをキャッシュするかどうかを判断します。  
@@ -31,14 +31,14 @@ ms.locfileid: "33874331"
 enum FactoryCacheFlags;  
 ```  
   
-## <a name="remarks"></a>コメント  
- 既定では、ポリシーをキャッシュ ファクトリとして指定されて、 [ModuleType](../windows/moduletype-enumeration.md)テンプレート パラメーターを作成するとき、[モジュール](../windows/module-class.md)オブジェクト。 このポリシーを上書きするには、指定、`FactoryCacheFlags`ファクトリ オブジェクトを作成するときの値します。  
+## <a name="remarks"></a>Remarks  
+ 既定では、出荷時のキャッシュ ポリシーとして指定、 [ModuleType](../windows/moduletype-enumeration.md)テンプレート パラメーターを作成するとき、[モジュール](../windows/module-class.md)オブジェクト。 このポリシーを上書きするには、指定、 **FactoryCacheFlags**ファクトリ オブジェクトを作成するときの値します。  
   
 |||  
 |-|-|  
 |`FactoryCacheDefault`|キャッシュ ポリシー、`Module`オブジェクトを使用します。|  
-|`FactoryCacheEnabled`|関係なくファクトリがキャッシュされるように、`ModuleType`の作成に使用するテンプレート パラメーター、`Module`オブジェクト。|  
-|`FactoryCacheDisabled`|工場出荷時に関係なくキャッシュを無効にします`ModuleType`の作成に使用するテンプレート パラメーター、`Module`オブジェクト。|  
+|`FactoryCacheEnabled`|により、ファクトリをキャッシュに関係なく、`ModuleType`を作成するために使用するテンプレート パラメーターを`Module`オブジェクト。|  
+|`FactoryCacheDisabled`|ファクトリをキャッシュに関係なく無効になります、`ModuleType`を作成するために使用するテンプレート パラメーターを`Module`オブジェクト。|  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** implements.h  

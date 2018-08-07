@@ -1,5 +1,5 @@
 ---
-title: バイナリ データの検索 |Microsoft ドキュメント
+title: バイナリ データの検索 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,32 +21,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 815975ac693885842d2e4b2287e14957abe8375f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ee50f78c4fcc39561fbd94ef3a0af28746cfbaa9
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873564"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568687"
 ---
 # <a name="finding-binary-data"></a>バイナリ データの検索
-ASCII 文字列や 16 進数のバイト数を検索することができます。 たとえば、「こんにちは」を検索することができますまたは検索するいずれかの文字列「こんにちは」"48 65 6C 6 C 6 f"(16 進数に相当)。  
+ASCII 文字列や 16 進数のバイトのいずれかを検索することができます。 たとえば、「こんにちは」を検索することができますまたは検索するいずれかの文字列「こんにちは」"48 65 6C 6c 6F"(16 進数に相当)。  
   
 ### <a name="to-find-binary-data"></a>バイナリ データを検索するには  
   
-1.  **編集** メニューのをクリックして[検索](/visualstudio/ide/reference/find-command)です。  
+1.  **編集** メニューのをクリックして[検索](/visualstudio/ide/reference/find-command)します。  
   
-2.  **検索**ボックス、ドロップダウン リストから、以前の検索文字列を選択するかを検索するデータを入力します。  
+2.  **検索**ボックス、ドロップダウン リストから、以前の検索文字列を選択または検索するデータを入力します。  
   
-3.  いずれかを選択、**検索**オプション。  
+3.  いずれかの選択、**検索**オプション。  
   
-4.  をクリックして**次を検索する**です。  
+4.  クリックして**次を検索**します。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 詳細については、管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションは、次を参照してください。[グローバライズと .NET Framework アプリケーションのローカライズ](/dotnet/standard/globalization-localization/index)です。  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
   
- 要件  
+## <a name="requirements"></a>要件  
   
  なし  
   
 ## <a name="see-also"></a>関連項目  
  [Binary Editor](binary-editor.md)
-

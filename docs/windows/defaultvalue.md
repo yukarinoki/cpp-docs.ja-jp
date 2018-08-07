@@ -1,5 +1,5 @@
 ---
-title: defaultvalue |Microsoft ドキュメント
+title: defaultvalue |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c838f057d9c5e59193d0578fe8aa871b1b75ee9d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 11ec7cf883fe8c9454cf538efc0835b9c77b1f92
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873418"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569987"
 ---
 # <a name="defaultvalue"></a>defaultvalue
-型指定されたオプションのパラメーターの既定値を指定をできます。  
+型指定された省略可能なパラメーターの既定値を指定をできます。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 [ defaultvalue= value ]  
 ```  
   
@@ -38,13 +37,13 @@ ms.locfileid: "33873418"
  *値*  
  パラメーターの既定値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **Defaultvalue** C++ 属性と同じ機能を持つ、 [defaultvalue](http://msdn.microsoft.com/library/windows/desktop/aa366793) MIDL 属性。  
   
 ## <a name="example"></a>例  
- インターフェイス メソッドを使用して、次のコードを示しています、 **defaultvalue**属性。  
+ 次のコードは、インターフェイス メソッドを使用して、 **defaultvalue**属性。  
   
-```  
+```cpp  
 // cpp_attr_ref_defaultvalue.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -73,7 +72,7 @@ __interface IFireTabCtrl : IDispatch {
 |||  
 |-|-|  
 |**対象**|インターフェイス パラメーター|  
-|**反復可能**|×|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   
@@ -83,7 +82,7 @@ __interface IFireTabCtrl : IDispatch {
  [IDL 属性](../windows/idl-attributes.md)   
  [パラメーター属性](../windows/parameter-attributes.md)   
  [out](../windows/out-cpp.md)   
- [戻り値](../windows/retval.md)   
+ [retval](../windows/retval.md)   
  [in](../windows/in-cpp.md)   
  [pointer_default](../windows/pointer-default.md)   
  [unique](../windows/unique-cpp.md)   

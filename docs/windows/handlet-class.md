@@ -1,5 +1,5 @@
 ---
-title: HandleT クラス |Microsoft ドキュメント
+title: HandleT クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99a596bf1e086ac7b1a1a72c3504ce4f41844ba4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 87a8718971a2da008b03dca1e9653d8454115adb
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876151"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570598"
 ---
 # <a name="handlet-class"></a>HandleT クラス
 オブジェクトへのハンドルを表します。  
@@ -36,9 +36,9 @@ template <
 class HandleT;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `HandleTraits`  
- インスタンス、 [HandleTraits](../windows/handletraits-structure.md)ハンドルの共通の特性を定義する構造。  
+### <a name="parameters"></a>パラメーター  
+ *HandleTraits*  
+ インスタンス、 [HandleTraits](../windows/handletraits-structure.md)ハンドルの一般的な特性を定義する構造体。  
   
 ## <a name="members"></a>メンバー  
   
@@ -52,36 +52,36 @@ class HandleT;
   
 |名前|説明|  
 |----------|-----------------|  
-|[HandleT::HandleT コンストラクター](../windows/handlet-handlet-constructor.md)|HandleT クラスの新しいインスタンスを初期化します。|  
-|[HandleT::~HandleT デストラクター](../windows/handlet-tilde-handlet-destructor.md)|HandleT クラスのインスタンスの初期化を解除します。|  
+|[HandleT::HandleT コンストラクター](../windows/handlet-handlet-constructor.md)|新しいインスタンスを初期化、 **HandleT**クラス。|  
+|[HandleT::~HandleT デストラクター](../windows/handlet-tilde-handlet-destructor.md)|インスタンスを初期化解除、 **HandleT**クラス。|  
   
 ### <a name="public-methods"></a>パブリック メソッド  
   
 |名前|説明|  
 |----------|-----------------|  
-|[HandleT::Attach メソッド](../windows/handlet-attach-method.md)|指定したハンドルを現在の HandleT オブジェクトに関連付けます。|  
-|[HandleT::Close メソッド](../windows/handlet-close-method.md)|現在の HandleT オブジェクトを閉じます。|  
-|[HandleT::Detach メソッド](../windows/handlet-detach-method.md)|基になるハンドルから現在 HandleT オブジェクトの関連付けを解除します。|  
+|[HandleT::Attach メソッド](../windows/handlet-attach-method.md)|現在の指定したハンドルに関連付けます**HandleT**オブジェクト。|  
+|[HandleT::Close メソッド](../windows/handlet-close-method.md)|現在の終了**HandleT**オブジェクト。|  
+|[HandleT::Detach メソッド](../windows/handlet-detach-method.md)|現在の関連付けを解除**HandleT**その基になるハンドルからオブジェクト。|  
 |[HandleT::Get メソッド](../windows/handlet-get-method.md)|基になるハンドルの値を取得します。|  
-|[HandleT::IsValid メソッド](../windows/handlet-isvalid-method.md)|現在の HandleT オブジェクトがハンドルを表すかどうかを示します。|  
+|[HandleT::IsValid メソッド](../windows/handlet-isvalid-method.md)|示すかどうか、現在**HandleT**オブジェクト ハンドルを表します。|  
   
 ### <a name="protected-methods"></a>プロテクト メソッド  
   
 |名前|説明|  
 |----------|-----------------|  
-|[HandleT::InternalClose メソッド](../windows/handlet-internalclose-method.md)|現在の HandleT オブジェクトを閉じます。|  
+|[HandleT::InternalClose メソッド](../windows/handlet-internalclose-method.md)|現在の終了**HandleT**オブジェクト。|  
   
 ### <a name="public-operators"></a>パブリック演算子  
   
 |名前|説明|  
 |----------|-----------------|  
-|[HandleT::operator= 演算子](../windows/handlet-operator-assign-operator.md)|指定した HandleT オブジェクトの値を現在 HandleT オブジェクトに移動します。|  
+|[HandleT::operator= 演算子](../windows/handlet-operator-assign-operator.md)|指定した値に移動**HandleT**現在オブジェクト**HandleT**オブジェクト。|  
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
-|[HandleT::handle_ データ メンバー](../windows/handlet-handle-data-member.md)|HandleT オブジェクトによって表されるハンドルが含まれています。|  
+|[HandleT::handle_ データ メンバー](../windows/handlet-handle-data-member.md)|表されるハンドルを含む、 **HandleT**オブジェクト。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `HandleT`  

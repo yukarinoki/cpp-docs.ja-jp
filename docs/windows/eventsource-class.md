@@ -1,5 +1,5 @@
 ---
-title: EventSource クラス |Microsoft ドキュメント
+title: EventSource クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 03/22/2018
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b2d466b317927cd8de259637450b68b6aaf13bd5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a98d8997ebfb5b21b3e469b2aacca15cde4a5319
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876515"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570536"
 ---
 # <a name="eventsource-class"></a>EventSource クラス
-非アジャイルのイベントを表します。 EventSource メンバー関数は、追加、削除、およびイベント ハンドラーを呼び出します。 アジャイルのイベントを使用して[AgileEventSource](agileeventsource-class.md)です。 
+非アジャイルのイベントを表します。 **EventSource**メンバー関数を追加、削除、およびイベント ハンドラーを呼び出します。 アジャイルのイベントを使用して[AgileEventSource](agileeventsource-class.md)します。 
   
 ## <a name="syntax"></a>構文  
   
@@ -34,9 +34,9 @@ template<typename TDelegateInterface>
 class EventSource;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `TDelegateInterface`  
- デリゲートをイベント ハンドラーを表すインターフェイス。  
+### <a name="parameters"></a>パラメーター  
+ *TDelegateInterface*  
+ イベント ハンドラーを表すデリゲートのインターフェイスです。  
   
 ## <a name="members"></a>メンバー  
   
@@ -44,24 +44,24 @@ class EventSource;
   
 |名前|説明|  
 |----------|-----------------|  
-|[EventSource::EventSource コンストラクター](../windows/eventsource-eventsource-constructor.md)|EventSource クラスの新しいインスタンスを初期化します。|  
+|[EventSource::EventSource コンストラクター](../windows/eventsource-eventsource-constructor.md)|新しいインスタンスを初期化、 **EventSource**クラス。|  
   
 ### <a name="public-methods"></a>パブリック メソッド  
   
 |名前|説明|  
 |----------|-----------------|  
-|[EventSource::Add メソッド](../windows/eventsource-add-method.md)|現在の EventSource オブジェクトのイベント ハンドラーのセットを指定したデリゲート インターフェイスによって表されるイベント ハンドラーを追加します。|  
-|[EventSource::GetSize メソッド](../windows/eventsource-getsize-method.md)|現在の EventSource オブジェクトに関連付けられているイベント ハンドラーの数を取得します。|  
-|[EventSource::InvokeAll メソッド](../windows/eventsource-invokeall-method.md)|指定した引数型と引数を使用して現在の EventSource オブジェクトに関連付けられている各イベント ハンドラーを呼び出します。|  
-|[EventSource::Remove メソッド](../windows/eventsource-remove-method.md)|現在の EventSource オブジェクトに関連付けられているイベント ハンドラーのセットから指定したイベント登録トークンによって表されるイベント ハンドラーを削除します。|  
+|[EventSource::Add メソッド](../windows/eventsource-add-method.md)|現在のイベント ハンドラーのセットを指定したデリゲート インターフェイスによって表されるイベント ハンドラーを追加します。 **EventSource**オブジェクト。|  
+|[EventSource::GetSize メソッド](../windows/eventsource-getsize-method.md)|現在関連付けられているイベント ハンドラーの数を取得**EventSource**オブジェクト|  
+|[EventSource::InvokeAll メソッド](../windows/eventsource-invokeall-method.md)|現在関連付けられている各イベント ハンドラーを呼び出す**EventSource**オブジェクトの指定された引数の型と引数を使用します。|  
+|[EventSource::Remove メソッド](../windows/eventsource-remove-method.md)|現在関連付けられているイベント ハンドラーのセットから、指定されたイベント登録トークンによって表されるイベント ハンドラーを削除します。 **EventSource**オブジェクト。|  
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
-|[EventSource::addRemoveLock_ データ メンバー](../windows/eventsource-addremovelock-data-member.md)|アクセスを同期化、 [targets _](../windows/eventsource-targets-data-member.md)配列を追加する場合、削除、またはイベント ハンドラーの呼び出しです。|  
+|[EventSource::addRemoveLock_ データ メンバー](../windows/eventsource-addremovelock-data-member.md)|アクセスを同期、 [targets _](../windows/eventsource-targets-data-member.md)配列を追加するときに、削除、またはイベント ハンドラーを呼び出します。|  
 |[EventSource::targets_ データ メンバー](../windows/eventsource-targets-data-member.md)|1 つまたは複数のイベント ハンドラーの配列。|  
-|[EventSource::targetsPointerLock_ データ メンバー](../windows/eventsource-targetspointerlock-data-member.md)|この EventSource のイベント ハンドラーが追加されている中であっても、削除、または呼び出される内部データ メンバーへのアクセスを同期します。|  
+|[EventSource::targetsPointerLock_ データ メンバー](../windows/eventsource-targetspointerlock-data-member.md)|この eventsource イベントのハンドラーが追加されている場合でも、削除、または呼び出される内部データ メンバーへのアクセスを同期します。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `EventSource`  
@@ -72,5 +72,5 @@ class EventSource;
  **名前空間:** Microsoft::WRL  
   
 ## <a name="see-also"></a>関連項目  
- [Microsoft::wrl Namespace](../windows/microsoft-wrl-namespace.md)
-[AgileEventSource クラス](agileeventsource-class.md)
+ [Microsoft::WRL 名前空間](../windows/microsoft-wrl-namespace.md)  
+ [AgileEventSource クラス](agileeventsource-class.md)

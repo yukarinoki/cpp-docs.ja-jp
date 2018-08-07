@@ -1,5 +1,5 @@
 ---
-title: Handlet::operator = 演算子 |Microsoft ドキュメント
+title: Handlet::operator = 演算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a13e8eb7e74625e185b59816b5794b0390e95e3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ab629946b9fc5acec6b0fb0ba8f573a3fa90a031
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873928"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570042"
 ---
 # <a name="handletoperator-operator"></a>HandleT::operator= 演算子
-指定した HandleT オブジェクトの値を現在 HandleT オブジェクトに移動します。  
+指定した値に移動**HandleT**現在オブジェクト**HandleT**オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,15 +35,15 @@ HandleT& operator=(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `h`  
+### <a name="parameters"></a>パラメーター  
+ *h*  
  ハンドルを右辺値の参照。  
   
 ## <a name="return-value"></a>戻り値  
- 現在の HandleT オブジェクトへの参照。  
+ 現在への参照を**HandleT**オブジェクト。  
   
-## <a name="remarks"></a>コメント  
- この操作には、パラメーターで指定された HandleT オブジェクトが無効になります。`h`です。  
+## <a name="remarks"></a>Remarks  
+ この操作を無効化、 **HandleT**パラメーターで指定されたオブジェクト*h*します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

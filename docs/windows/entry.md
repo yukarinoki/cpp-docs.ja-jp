@@ -1,5 +1,5 @@
 ---
-title: エントリ |Microsoft ドキュメント
+title: エントリ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db90390be5313ddbea1103105f47b55fe9e23d62
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 933fc1db2a890fedd9d725c49bbeb6c363e2f4c8
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872316"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569639"
 ---
 # <a name="entry"></a>entry
-モジュールで、DLL 内のエントリ ポイントを識別することによって、エクスポートされた関数または定数を指定します。  
+DLL 内のエントリ ポイントを識別することによって、モジュールで、エクスポートされた関数または定数を指定します。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
-      [ entry(  
+[ entry(  
    id  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `id`  
+ *ID*  
  エントリ ポイントの ID。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **エントリ**C++ 属性と同じ機能を持つ、[エントリ](http://msdn.microsoft.com/library/windows/desktop/aa366815)MIDL 属性。  
   
 ## <a name="example"></a>例  
- 例を参照して[idl_module](../windows/idl-module.md)の使用例の**エントリ**です。  
+ 例をご覧ください[idl_module](../windows/idl-module.md)の使用例の**エントリ**します。  
   
 ## <a name="requirements"></a>要件  
   
@@ -53,7 +52,7 @@ ms.locfileid: "33872316"
 |||  
 |-|-|  
 |**対象**|`idl_module` 属性|  
-|**反復可能**|×|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

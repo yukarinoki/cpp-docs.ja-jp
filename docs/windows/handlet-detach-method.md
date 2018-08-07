@@ -1,5 +1,5 @@
 ---
-title: Handlet::detach メソッド |Microsoft ドキュメント
+title: Handlet::detach メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 100d215099494c9b2714fd2c42dee69644a5006c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cc11d6be992584adb1ce2075e73d080cc3a43f47
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878464"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569480"
 ---
 # <a name="handletdetach-method"></a>HandleT::Detach メソッド
-基になるハンドルから現在 HandleT オブジェクトの関連付けを解除します。  
+現在の関連付けを解除**HandleT**その基になるハンドルからオブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,10 +34,10 @@ typename HandleTraits::Type Detach();
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 基になるハンドルです。  
+ 基になるハンドル。  
   
-## <a name="remarks"></a>コメント  
- この操作が完了すると、現在の HandleT に設定されている状態が無効です。  
+## <a name="remarks"></a>Remarks  
+ ときにこの操作が完了すると、現在**HandleT**が無効な状態に設定します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

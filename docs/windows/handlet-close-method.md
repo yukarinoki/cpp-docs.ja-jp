@@ -1,5 +1,5 @@
 ---
-title: Handlet::close メソッド |Microsoft ドキュメント
+title: Handlet::close メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4f0c1e47420106651cfe0526d6d212e9819a72ff
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 69f3f2c756d158954676f6fc42941b1b80f4345e
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873252"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569919"
 ---
 # <a name="handletclose-method"></a>HandleT::Close メソッド
-現在の HandleT オブジェクトを閉じます。  
+現在の終了**HandleT**オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,10 +33,10 @@ ms.locfileid: "33873252"
 void Close();  
 ```  
   
-## <a name="remarks"></a>コメント  
- 現在 HandleT の基になるハンドルが閉じられるし、HandleT が無効な状態に設定されています。  
+## <a name="remarks"></a>Remarks  
+ 現在の基になるハンドル**HandleT**が閉じられると**HandleT**無効な状態に設定されています。  
   
- ハンドルが正しく閉じられません、呼び出し元のスレッドで例外が発生します。  
+ ハンドルが適切に終了しない場合は、呼び出し元のスレッドで例外が発生します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

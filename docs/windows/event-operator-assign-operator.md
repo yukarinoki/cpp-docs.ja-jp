@@ -1,5 +1,5 @@
 ---
-title: Event::operator = 演算子 |Microsoft ドキュメント
+title: Event::operator = 演算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d3da41ff7fd145889ec799bb2f8ebe99aed36934
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a523d6ba8679bf7d0bdf98563b86946e16e7bfca
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871124"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571299"
 ---
 # <a name="eventoperator-operator"></a>Event::operator= 演算子
-指定された Event 参照を現在の Event インスタンスに割り当てます。  
+指定した割り当て**イベント**現在への参照を**イベント**インスタンス。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,11 +36,11 @@ WRL_NOTHROW Event& operator=(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `h`  
- イベント インスタンスに右辺値の参照。  
+ *h*  
+ 右辺値参照を**イベント**インスタンス。  
   
 ## <a name="return-value"></a>戻り値  
- 現在の Event インスタンスへのポインター。  
+ 現在へのポインター**イベント**インスタンス。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

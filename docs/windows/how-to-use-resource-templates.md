@@ -1,5 +1,5 @@
 ---
-title: '方法: リソース テンプレートを使用して |Microsoft ドキュメント'
+title: '方法: リソース テンプレートを使用して |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,51 +21,51 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 534a86d10a4bcbc34e6cef29fbb77d7caa2c64b9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: da0d33c51fa50c7291eaa6421e9b857cd6f82d36
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882733"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569457"
 ---
 # <a name="how-to-use-resource-templates"></a>方法: リソース テンプレートを使用する
 リソース テンプレートは、.rct ファイルとして保存したカスタマイズされたリソースです。 リソース テンプレートは、他のリソースを作成するための出発点として使用できます。 リソース テンプレートを使用すると、標準のコントロールやその他の繰り返される要素などの、機能を共有する他のリソースやリソースのグループを開発する時間を節約できます。 たとえば、複数のダイアログ ボックスで、[ヘルプ] ボタンと会社のロゴのアイコンを使用することが必要になる場合があります。 これを簡単に実現するには、新しいダイアログ ボックスのテンプレートを作成して、ロゴと [ヘルプ] ボタンでカスタマイズします。  
   
- リソース テンプレートをカスタマイズした後、テンプレート フォルダー (またはインクルード パスで指定された任意の場所) に変更を保存する必要があります、新しいリソース テンプレートがリソースの種類の下に表示されるように、 [リソースの追加ダイアログボックス](../windows/add-resource-dialog-box.md). 必要に応じて、この新しいリソース テンプレートを何回でも使用することができます。  
+ テンプレート フォルダー (またはインクルード パスで指定された任意の場所) に変更を保存する必要がありますリソース テンプレートをカスタマイズすると、新しいリソース テンプレートはリソースの種類の下に表示されるように、 [リソースの追加ダイアログボックス](../windows/add-resource-dialog-box.md). 必要に応じて、この新しいリソース テンプレートを何回でも使用することができます。  
   
 > [!NOTE]
->  言語固有のテンプレート ファイルは、メインのテンプレート ディレクトリのサブディレクトリに配置できます。 たとえば、英語専用のテンプレート ファイルを配置することができます\\< リソース テンプレート ディレクトリ\>\1033 です。  
+>  言語固有のテンプレート ファイルは、メインのテンプレート ディレクトリのサブディレクトリに配置できます。 英語版のみのテンプレート ファイルを配置するなど、 \\< リソース テンプレート ディレクトリ\>\1033 します。  
   
 ### <a name="to-create-a-template-for-resources"></a>リソースのテンプレートを作成するには  
   
 1.  **ソリューション エクスプ ローラー**プロジェクトを右クリックします。  
   
-2.  ショートカット メニューから選択**追加**をクリックし、**新しい項目の追加**です。  
+2.  ショートカット メニューの**追加**、 をクリックし、**新しい項目の追加**します。  
   
-3.  **新しい項目の追加** ダイアログ ボックスで、**テンプレート:**  ウィンドウで、選択**リソース テンプレート ファイル (.rct)** です。  
+3.  **新しい項目の追加** ダイアログ ボックスで、**テンプレート:** ウィンドウで、選択**リソース テンプレート ファイル (.rct)** します。  
   
-4.  新しい .rct ファイルの場所と名前を提供し、をクリックして**開く**です。  
+4.  新しい .rct ファイルの場所と名前を入力し、クリックして**オープン**します。  
   
-5.  新しい .rct ファイルがプロジェクトに追加され、ソリューション エクスプ ローラーで表示されます、**リソース**フォルダーです。  
+5.  新しい .rct ファイルがプロジェクトに追加され、ソリューション エクスプ ローラーの下に表示されます、**リソース**フォルダー。  
   
-     これで、ドキュメント ウィンドウで開く、.rct ファイルをダブルクリックし、リソースを追加することができます (ドキュメント ウィンドウで、ファイルを右クリックして選択**リソースの追加**ショートカット メニューから)。 これらのリソースをカスタマイズして、.rct ファイルを保存できます。  
+     ドキュメント ウィンドウで開く、.rct ファイルをダブルクリックしにリソースを追加することができますようになりました (ドキュメント ウィンドウにファイルを右クリックし **リソースの追加**ショートカット メニューから)。 これらのリソースをカスタマイズして、.rct ファイルを保存できます。  
   
     > [!NOTE]
-    >  新しい RCT ファイルを作成するときに Visual Studio を探します \Program Files\Microsoft Visual Studio 9.0\VC\VCResourceTemplates での \Program Files\Microsoft Visual Studio 9.0\VC\VCResourceTemplates\\*LCID* (1033 の英語版)、*または*任意の場所に、[インクルード パス](../windows/how-to-specify-include-directories-for-resources.md)です。 RCT ファイルを別のファイル フォルダー、たとえば \My Documents に格納した場合には、このフォルダーをインクルード パスに追加するだけで、Visual Studio によって RCT ファイルが検索されます。  
+    >  新しい RCT ファイルを作成するときに Visual Studio 内を検索 \Program Files\Microsoft Visual Studio 9.0\VC\VCResourceTemplates での \Program Files\Microsoft Visual Studio 9.0\VC\VCResourceTemplates\\*LCID* (場合は 1033 英語)、*または*任意の場所に、[インクルード パス](../windows/how-to-specify-include-directories-for-resources.md)します。 RCT ファイルを別のファイル フォルダー、たとえば \My Documents に格納した場合には、このフォルダーをインクルード パスに追加するだけで、Visual Studio によって RCT ファイルが検索されます。  
   
 ### <a name="to-convert-an-existing-rc-file-to-an-rct-file"></a>既存の .rc ファイルを .rct ファイルに変換するには  
   
-1.  [スタンドアロン ファイルとして .rc ファイルを開く](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)です。  
+1.  [スタンドアロン ファイルとして .rc ファイルを開く](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)します。  
   
-2.  **ファイル** メニューのをクリックして**保存\< *、filename*> として**です。  
+2.  **ファイル** メニューのをクリックして**保存\< *、filename*> として**します。  
   
-3.  場所を指定し、をクリックして**OK**です。  
+3.  場所を指定し、をクリックして**OK**します。  
   
 ### <a name="to-create-a-new-resource-from-a-template"></a>テンプレートから新しいリソースを作成するには  
   
-1.  [リソース ビュー](../windows/resource-view-window.md)  ウィンドウで、.rc ファイルを右クリックし、選択**リソースの追加**ショートカット メニューからです。  
+1.  [リソース ビュー](../windows/resource-view-window.md) .rc ファイルを右クリックして、ウィンドウ、**リソースの追加**ショートカット メニューから。  
   
-2.  **リソースの追加** ダイアログ ボックスで、プラス記号をクリックして (**+**) リソース ノードを展開し、そのリソースの使用可能なすべてのテンプレートを表示するリソースの横にあります。  
+2.  **リソースの追加** ダイアログ ボックスで、プラス記号をクリックします (**+**) の横にあるリソースをリソース ノードを展開し、そのリソースの使用可能なすべてのテンプレートを参照してください。  
   
 3.  使用するテンプレートをダブルクリックします。  
   
@@ -73,9 +73,9 @@ ms.locfileid: "33882733"
   
      リソース エディターによって一意のリソース ID が自動的に指定されます。 変更することができます、[リソース プロパティ](../windows/changing-the-properties-of-a-resource.md)に応じて。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。*  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。  
   
- 要件  
+## <a name="requirements"></a>要件  
   
  Win32  
   

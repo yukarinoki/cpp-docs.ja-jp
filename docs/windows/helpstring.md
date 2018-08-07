@@ -1,5 +1,5 @@
 ---
-title: helpstring |Microsoft ドキュメント
+title: helpstring |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 81a3e45c5636fd193b7880e093711b5cc584bf99
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e661e911cc0dd583f2ce079f8ac047a354fa596f
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879007"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570932"
 ---
 # <a name="helpstring"></a>helpstring
-適用すると、要素の記述に使用される文字の文字列を指定します。  
+適用先となる要素を記述するために使用される文字列を指定します。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
-      [ helpstring(  
+[ helpstring(  
    "string"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `string`  
+### <a name="parameters"></a>パラメーター  
+ *string*  
  ヘルプ文字列のテキスト。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **Helpstring** C++ 属性と同じ機能を持つ、 [helpstring](http://msdn.microsoft.com/library/windows/desktop/aa366856) MIDL 属性。  
   
 ## <a name="example"></a>例  
- 例を参照して[defaultvalue](../windows/defaultvalue.md)の使用方法の例については**helpstring**です。  
+ 例をご覧ください[defaultvalue](../windows/defaultvalue.md)を使用する方法の例については**helpstring**します。  
   
 ## <a name="requirements"></a>要件  
   
@@ -52,8 +51,8 @@ ms.locfileid: "33879007"
   
 |||  
 |-|-|  
-|**対象**|`interface`、 `typedef`、**クラス**、メソッド、プロパティ|  
-|**反復可能**|×|  
+|**対象**|**インターフェイス**、 **typedef**、**クラス**メソッド、プロパティ|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   
@@ -65,5 +64,5 @@ ms.locfileid: "33879007"
  [クラス属性](../windows/class-attributes.md)   
  [メソッドの属性](../windows/method-attributes.md)   
  [Typedef、Enum、Union、および struct 型の属性](../windows/typedef-enum-union-and-struct-attributes.md)   
- [ヘルプ ファイル](../windows/helpfile.md)   
+ [Helpfile](../windows/helpfile.md)   
  [helpcontext](../windows/helpcontext.md)   

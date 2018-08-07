@@ -1,5 +1,5 @@
 ---
-title: Deferrableeventargs::getdeferral メソッド |Microsoft ドキュメント
+title: Deferrableeventargs::getdeferral メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2442894c5f7bd85eb94262e776294c1e52a19e01
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 13cd6b361fccc49de6142a0640ff96dbab3cb92c
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883542"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571205"
 ---
 # <a name="deferrableeventargsgetdeferral-method"></a>DeferrableEventArgs::GetDeferral メソッド
 参照を取得、[遅延](http://go.microsoft.com/fwlink/p/?linkid=526520)遅延イベントを表すオブジェクト。  
@@ -30,14 +30,14 @@ HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `result`  
- 参照するポインター、[遅延](http://go.microsoft.com/fwlink/p/?linkid=526520)オブジェクト呼び出しが完了したとき。  
+ *結果*  
+ 参照するポインター、[遅延](http://go.microsoft.com/fwlink/p/?linkid=526520)呼び出しの完了時のオブジェクトします。  
   
 ## <a name="return-value"></a>戻り値  
  成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。  
   
-## <a name="remarks"></a>コメント  
- コード例は、次を参照してください。 [DeferrableEventArgs クラス](../windows/deferrableeventargs-class.md)です。  
+## <a name="remarks"></a>Remarks  
+ コード例では、次を参照してください。 [DeferrableEventArgs クラス](../windows/deferrableeventargs-class.md)します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** event.h  

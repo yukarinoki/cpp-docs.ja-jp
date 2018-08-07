@@ -1,5 +1,5 @@
 ---
-title: Hstring::isvalid メソッド |Microsoft ドキュメント
+title: Hstring::isvalid メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe2bea7e7971daa1c6bb169a1c049a6757d9ed8d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 26ca5d70f6632c35da64215376e0dddd6eca9fcb
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874318"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571003"
 ---
 # <a name="hstringisvalid-method"></a>HString::IsValid メソッド
-現在の HString オブジェクトが空であるかどうかを示します。  
+示すかどうか、現在**HString**オブジェクトが空か。  
   
 ## <a name="syntax"></a>構文  
   
@@ -32,7 +32,7 @@ bool IsValid() const throw()
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `true` 現在の HString オブジェクトが空でない場合それ以外の場合、`false`です。  
+ **true**場合、現在**HString**オブジェクトがないと、空以外の場合、 **false**します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

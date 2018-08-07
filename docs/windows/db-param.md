@@ -1,5 +1,5 @@
 ---
-title: db_param |Microsoft ドキュメント
+title: db_param |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ce7cf5c8e92e7fd6e6e10d7bef0519b1ced4cf62
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c7ce3c5b76dfa8602a46e947d1e8925ec2bf14c
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880713"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569444"
 ---
 # <a name="dbparam"></a>db_param
-入力または出力パラメーターを持つ指定したメンバー変数を関連付けるし、変数を区切ります。  
+入力または出力パラメーターを使用して、指定したメンバー変数を関連付けるし、変数を区切ります。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
-      [ db_param(   
+[ db_param(   
    ordinal,   
    paramtype="DBPARAMIO_INPUT",   
    dbtype,   
@@ -43,48 +42,48 @@ ms.locfileid: "33880713"
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `ordinal`  
- 列の番号 (**DBCOLUMNINFO**序数) にデータをバインドする、行セット内のフィールドに対応します。  
+ *序数*  
+ データをバインドする行セット内のフィールドに対応する列数 (DBCOLUMNINFO 序数)。  
   
  *paramtype* (省略可能)  
- パラメーターに設定する型。 プロバイダーは、基になるデータ ソースでサポートされているパラメーター I/O 型のみをサポートします。 種類は 1 つまたは複数の組み合わせ**次**値。  
+ パラメーターに設定する型。 プロバイダーは、基になるデータ ソースでサポートされているパラメーター I/O 型のみをサポートします。 種類は、次の 1 つまたは複数の値の組み合わせです。  
   
--   **DBPARAMIO_INPUT** 入力パラメーター。  
+-   DBPARAMIO_INPUT 入力パラメーター。  
   
--   **DBPARAMIO_OUTPUT** 出力パラメーター。  
+-   DBPARAMIO_OUTPUT 出力パラメーター。  
   
--   **DBPARAMIO_NOTPARAM** アクセサーにパラメーターがありません。 設定**eParamIO**行では、この値にアクセサー注意を促すユーザー パラメーターが無視されます。  
+-   DBPARAMIO_NOTPARAM アクセサーにパラメーターがありません。 設定`eParamIO`行では、この値にアクセサー ユーザーに通知するパラメーターは無視されます。  
   
  *dbtype* (省略可能)  
- OLE DB[型インジケーター](https://msdn.microsoft.com/en-us/library/ms711251.aspx)列エントリにします。  
+ OLE DB[型インジケーター](https://msdn.microsoft.com/library/ms711251.aspx)列エントリにします。  
   
  *有効桁数*(省略可能)  
- 列のエントリに使用される有効桁数です。 詳細については、説明を参照してください**bPrecision**の要素、 [DBBINDING 構造体。](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ 列のエントリに使用する有効桁数です。 詳細については、説明を参照してください`bPrecision`の要素、 [DBBINDING 構造体。](https://msdn.microsoft.com/library/ms716845.aspx)  
   
  *スケール*(省略可能)  
- 列のエントリに使用する小数点以下桁数。 詳細については、説明を参照してください**bScale**の要素、 [DBBINDING 構造体。](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ 列のエントリに使用する小数点以下桁数。 詳細については、説明を参照してください`bScale`の要素、 [DBBINDING 構造体。](https://msdn.microsoft.com/library/ms716845.aspx)  
   
  *ステータス*(省略可能)  
- この列の状態を保持するために使用されるメンバー変数です。 状態がかどうか、列の値が、データ値または他のいくつかの値などを示す**NULL**です。 使用可能な値は、次を参照してください。[ステータス](https://msdn.microsoft.com/en-us/library/ms722617.aspx)で、 *OLE DB プログラマーズ リファレンス*です。  
+ この列の状態を保持するために使用するメンバー変数です。 状態は、列の値がデータ値や NULL など、他のいくつかの値であるかどうかを示します。 使用可能な値は、次を参照してください。[状態](https://msdn.microsoft.com/library/ms722617.aspx)で、 *OLE DB プログラマーズ リファレンス*します。  
   
  *長さ*(省略可能)  
- 列のサイズをバイト単位で保持するために使用されるメンバー変数です。  
+ メンバー変数 (バイト単位)、列のサイズを保持するために使用します。  
   
-## <a name="remarks"></a>コメント  
- **db_param**パラメーターを定義するコマンドで使用する; したがってと共に使用する**db_command**です。 たとえば、使用することができます**db_param** SQL クエリまたはストアド プロシージャでパラメーターをバインドします。 ストアド プロシージャのパラメーターが疑問符 (?) で表され、パラメーターの順序でのデータ メンバーをバインドする必要があります。  
+## <a name="remarks"></a>Remarks  
+ **db_param**パラメーターを定義することでコマンドを使用する; で使用するため`db_command`します。 たとえば、使用することができます**db_param** SQL クエリまたはストアド プロシージャのパラメーターをバインドします。 ストアド プロシージャのパラメーターは疑問符 (?) で示されています、パラメーターの順序でデータ メンバーにバインドする必要があります。  
   
- **db_param** OLE DB に参加できるメンバー データを取り出すため`ICommandWithParameters`-ベースのバインディングです。 パラメーターの型 (入力または出力)、OLE DB の型、有効桁数、小数点以下桁数、状態、および指定されたパラメーターの長さを設定します。 この属性は、OLE DB コンシューマー マクロ BEGIN_PARAM_MAP を挿入しています.END_PARAM_MAP です。 各メンバーをマークする、 **db_param**属性は、マップ、COLUMN_ENTRY の形式での 1 つのエントリを占有します。  
+ **db_param** OLE DB に参加できるメンバー データを取り出すため`ICommandWithParameters`-ベースのバインド。 パラメーターの型 (入力または出力)、OLE DB 型、有効桁数、スケール、状態、および指定されたパラメーターの長さを設定します。 この属性は、OLE DB コンシューマー マクロ BEGIN_PARAM_MAP を挿入しています.END_PARAM_MAP します。 各メンバーをマークする、 **db_param**属性は、マップ、COLUMN_ENTRY の形式に 1 つのエントリを占有します。  
   
- **db_param**は組み合わせて使用するか、 [db_table](../windows/db-table.md)または[db_command](../windows/db-command.md)属性。  
+ **db_param**いずれかと組み合わせて使用は、 [db_table](../windows/db-table.md)または[db_command](../windows/db-command.md)属性。  
   
- コンシューマー属性プロバイダーは、クラスにこの属性を適用する場合、コンパイラの名前は変更するクラス\_*すると*アクセサー、場所*すると*指定した名前は、クラス、および、コンパイラと呼ばれるクラスを作成また*すると*から派生した\_*すると*アクセサー。  クラス ビューでは、両方のクラスが表示されます。  
+ コンパイラにクラスの名前は、コンシューマー属性プロバイダーでは、この属性をクラスに適用されます、ときに\_ *YourClassName*、アクセサーで*YourClassName*に付けた名前を指定します、クラス、さらに、コンパイラはというクラスを作成も*YourClassName*から派生した\_ *YourClassName*アクセサー。  クラス ビューでは、両方のクラスが表示されます。  
   
 ## <a name="example"></a>例  
- 次の例では、Northwind データベースに格納されている SalesbyYear プロシージャに基づいたコマンド クラスを作成します。 使用してストアド プロシージャの最初のパラメーターに関連付けられます、`m_RETURN_VALUE`変数、出力パラメーターとして定義されているとします。 最後の 2 つ (入力) パラメーターに関連付けられます`m_Beginning_Date`と`m_Ending_Date`です。  
+ 次の例では、Northwind データベースに格納されている SalesbyYear プロシージャに基づくコマンド クラスを作成します。 ストアド プロシージャの最初のパラメーターを関連付けます、`m_RETURN_VALUE`変数と出力パラメーターとして定義されます。 最後の 2 つ (入力) パラメーターを関連付けます`m_Beginning_Date`と`m_Ending_Date`します。  
   
- 次の使用例、 `nOutput` output パラメーターを持つ変数です。  
+ 次の例、`nOutput`出力パラメーターを持つ変数です。  
   
-```  
+```cpp  
 // db_param.cpp  
 // compile with: /LD  
 #include <atlbase.h>  
@@ -124,8 +123,8 @@ struct CSalesbyYear {
   
 |||  
 |-|-|  
-|**対象**|**class**、 `struct`、member、method、local|  
-|**反復可能**|×|  
+|**対象**|**クラス**、**構造体**member、method、local|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

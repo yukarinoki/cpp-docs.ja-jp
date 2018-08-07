@@ -1,5 +1,5 @@
 ---
-title: Hstring::attach メソッド |Microsoft ドキュメント
+title: Hstring::attach メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,28 +15,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8738c44c11c69f8d2479335ce3effc4135dfe0f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 20a05bf603b874d260c95c010e6f0e8312b35649
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876067"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570990"
 ---
 # <a name="hstringattach-method"></a>HString::Attach メソッド
-指定した HString オブジェクトを現在の HString オブジェクトに関連付けます。  
+指定した関連付けます**HString**オブジェクトと現在**HString**オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 void Attach(  
        HSTRING hstr  
        ) throw()  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `hstr`  
- 既存の HString オブジェクト。  
+ *hstr*  
+ 既存の**HString**オブジェクト。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

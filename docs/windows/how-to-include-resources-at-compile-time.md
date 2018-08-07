@@ -1,5 +1,5 @@
 ---
-title: '方法: コンパイル時にリソースをインクルード |Microsoft ドキュメント'
+title: '方法: コンパイル時にリソースをインクルード |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,15 +23,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 765d78ef5371015fdce3e505e7a2454c29c6c97e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 856d448b096910c322750eccc7447689b08b328e
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880152"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571341"
 ---
 # <a name="how-to-include-resources-at-compile-time"></a>方法: コンパイル時にリソースをインクルードする
-一般的に、1 つのリソース スクリプト (.rc) ファイルですべてのリソースの既定の設定を操作することは、簡単かつ便利なやり方です。 ただし、追加できますリソース他のファイルに現在のプロジェクトにコンパイル時にそれらを一覧表示して、**コンパイル時ディレクティブ**ボックスに、 [] ダイアログ ボックスの [リソース インクルード](../windows/resource-includes-dialog-box.md)です。  
+一般的に、1 つのリソース スクリプト (.rc) ファイルですべてのリソースの既定の設定を操作することは、簡単かつ便利なやり方です。 ただし、追加できますリソースその他のファイルで、現在のプロジェクトにコンパイル時にリストにすることによって、**コンパイル時ディレクティブ**ボックスに、[リソース インクルード ダイアログ ボックス](../windows/resource-includes-dialog-box.md)します。  
   
  メインの .rc ファイル以外のファイルにリソースを配置する理由のいくつかを次に示します。  
   
@@ -45,21 +45,19 @@ ms.locfileid: "33880152"
   
 -   カスタム形式のリソース (たとえば、RCDATA リソース) をインクルードする。 RCDATA リソースには、特別な要件があります。 たとえば、nameID フィールドの値として式を使用することはできません。 詳細については、[!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] のドキュメントを参照してください。  
   
- セクションでは、1 つに配置してこれらの条件のいずれかを満たす既存の .rc ファイルでセクションがあれば、または別個の .rc ファイルの詳細、および使用して、プロジェクトに含まれる、 [] ダイアログ ボックスの [リソース インクルード](../windows/resource-includes-dialog-box.md)です。 *Projectname*新しいプロジェクトの \res サブディレクトリに作成された .rc2 ファイルはこの目的に使用します。  
+ セクションでは、1 つに配置してこれらの条件のいずれかを満たす既存の .rc ファイルにセクションがある場合または別個の .rc ファイルの詳細、およびそれらを使用して、プロジェクトに含める、 [] ダイアログ ボックスの [リソース インクルード](../windows/resource-includes-dialog-box.md)します。 *Projectname*新しいプロジェクトの \res サブディレクトリに作成された .rc2 ファイルはこの目的に使用します。  
   
 ### <a name="to-include-resources-in-your-project-at-compile-time"></a>コンパイル時にリソースをインクルードするには  
   
-1.  一意のファイル名を持つリソース スクリプト ファイルにリソースを配置します。 使用しないでください*projectname*.rc、これは、メイン リソース スクリプト ファイルに使用するファイル名であるためです。  
+1.  一意のファイル名を持つリソース スクリプト ファイルにリソースを配置します。 使用しない*projectname*.rc、メイン リソース スクリプト ファイルを使用するファイル名です。  
   
-2.  .Rc ファイルを右クリックして (で[リソース ビュー](../windows/resource-view-window.md)) を選択して**リソースが含まれています**ショートカット メニューからです。  
+2.  .Rc ファイルを右クリックして (で[リソース ビュー](../windows/resource-view-window.md)) 選択**リソース ファイルのインクルード**ショートカット メニューから。  
   
 3.  **コンパイル時ディレクティブ**ボックスで、追加、 [#include](../preprocessor/hash-include-directive-c-cpp.md)開発環境で、メイン リソース ファイルで新しいリソース ファイルをインクルードします。  
   
      この方法でインクルードされるリソースは、コンパイル時に実行可能ファイルの一部になります。 これらのリソースは、プロジェクトのメイン .rc ファイルを操作しているときに編集または変更の対象として直接操作できません。 インクルードされる .rc ファイルを別個に開く必要があります。 インクルードされるファイルのうち、.rc 拡張子を持たないファイルは、リソース エディターで編集できません。  
   
-
-  
- 要件  
+## <a name="requirements"></a>要件  
   
  Win32  
   
