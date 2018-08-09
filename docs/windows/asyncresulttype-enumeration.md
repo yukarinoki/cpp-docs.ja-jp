@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8171c4a57621a4f17a5f0ddb0745faa70fde6524
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 7989f28ae9c9e3af4c73ec454487d34dd7cff570
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465286"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644756"
 ---
 # <a name="asyncresulttype-enumeration"></a>AsyncResultType 列挙型
 によって返される結果の種類を指定します、`GetResults()`メソッド。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 enum AsyncResultType;  
 ```  
   
@@ -40,7 +40,7 @@ enum AsyncResultType;
 |名前|説明|  
 |----------|-----------------|  
 |`MultipleResults`|一連の間で段階的に表示されますが、複数の結果`Start`状態とする前に`Close()`が呼び出されます。|  
-|`SingleResult`|単一結果、完全なイベントの発生後に表示されます。|  
+|`SingleResult`|後に示す 1 つの結果、`Complete`イベントが発生します。|  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** async.h  

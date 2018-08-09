@@ -1,5 +1,5 @@
 ---
-title: SimpleActivationFactory クラス |Microsoft ドキュメント
+title: SimpleActivationFactory クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2d10544a08fa6faebb1434cd00ca80ac30d4570a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 97ad430bc0ab5a268ff428189da5987b6c45907d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889846"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650792"
 ---
 # <a name="simpleactivationfactory-class"></a>SimpleActivationFactory クラス
 Windows ランタイムまたはクラシック COM の基底クラスを作成するための基本的なメカニズムを提供します。  
@@ -34,14 +34,14 @@ template<typename Base>
 class SimpleActivationFactory : public ActivationFactory<>;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `Base`  
+### <a name="parameters"></a>パラメーター  
+ *ベース*  
  基本クラスです。  
   
-## <a name="remarks"></a>コメント  
- 基本クラスには、既定のコンス トラクターを提供する必要があります。  
+## <a name="remarks"></a>Remarks  
+ 基底クラスには、既定のコンス トラクターを提供する必要があります。  
   
- 次のコード例で SimpleActivationFactory を使用する方法を示します、 [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md)マクロです。  
+ 次のコード例で SimpleActivationFactory を使用する方法を示します、 [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md)マクロ。  
   
  `ActivatableClassWithFactoryEx(MyClass, SimpleActivationFactory, MyServerName);`  
   
@@ -51,9 +51,9 @@ class SimpleActivationFactory : public ActivationFactory<>;
   
 |名前|説明|  
 |----------|-----------------|  
-|[SimpleActivationFactory::ActivateInstance メソッド](../windows/simpleactivationfactory-activateinstance-method.md)|指定されたインターフェイスのインスタンスを作成します。|  
-|[SimpleActivationFactory::GetRuntimeClassName メソッド](../windows/simpleactivationfactory-getruntimeclassname-method.md)|によって指定されたクラスのインスタンスのランタイム クラス名を取得、`Base`クラス テンプレート パラメーター。|  
-|[SimpleActivationFactory::GetTrustLevel メソッド](../windows/simpleactivationfactory-gettrustlevel-method.md)|によって指定されたクラスのインスタンスの信頼レベルを取得、`Base`クラス テンプレート パラメーター。|  
+|[SimpleActivationFactory::ActivateInstance メソッド](../windows/simpleactivationfactory-activateinstance-method.md)|指定したインターフェイスのインスタンスを作成します。|  
+|[SimpleActivationFactory::GetRuntimeClassName メソッド](../windows/simpleactivationfactory-getruntimeclassname-method.md)|指定されたクラスのインスタンスのランタイム クラス名を取得、*ベース*クラス テンプレート パラメーター。|  
+|[SimpleActivationFactory::GetTrustLevel メソッド](../windows/simpleactivationfactory-gettrustlevel-method.md)|指定されたクラスのインスタンスの信頼レベルを取得、*ベース*クラス テンプレート パラメーター。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `I0`  

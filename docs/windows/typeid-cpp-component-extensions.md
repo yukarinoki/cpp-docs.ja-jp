@@ -1,5 +1,5 @@
 ---
-title: typeid (C++ コンポーネント拡張) |Microsoft ドキュメント
+title: typeid (C++ コンポーネント拡張) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db1efac0a38aaa11238452e418277f78dbcd6d9d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3298ed426535ae7db93e5603dac8222bbe8f6470
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888368"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644074"
 ---
 # <a name="typeid--c-component-extensions"></a>typeid (C++ コンポーネント拡張)
 オブジェクトの型を示す値を取得します。  
   
 > [!WARNING]
->  このトピックでは、typeid の C++ コンポーネント拡張バージョンを示します。 このキーワードの ISO C のバージョンを参照してください。 [typeid 演算子](../cpp/typeid-operator.md)です。  
+>  このトピックでは、typeid の C++ コンポーネント拡張バージョンを示します。 このキーワードの ISO C バージョンでは、次を参照してください。 [typeid 演算子](../cpp/typeid-operator.md)します。  
   
 ## <a name="all-runtimes"></a>すべてのランタイム  
   
@@ -49,29 +49,27 @@ Platform::Type^ type = T::typeid;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `T`  
+ *T*  
  型の名前。  
   
-### <a name="remarks"></a>コメント  
- C + + CX、typeid を返します、 [platform::type](../cppcx/platform-type-class.md)ランタイム型情報から構築します。  
+### <a name="remarks"></a>Remarks  
+ C++/cli CX、typeid を返します、 [platform::type](../cppcx/platform-type-class.md)ランタイム型情報から構築します。  
   
 ### <a name="requirements"></a>要件  
- コンパイラ オプション: **/ZW**  
+ コンパイラ オプション: `/ZW`  
   
 ## <a name="common-language-runtime"></a>共通言語ランタイム 
- **構文**  
+### <a name="syntax"></a>構文  
   
 ```  
-  
 type::typeid  
 ```  
   
- **パラメーター**  
-  
+### <a name="parameters"></a>パラメーター   
  *type*  
- System::Type オブジェクトに適用する型 (抽象宣言子) の名前。  
+ 対象となる型 (抽象宣言子) の名前、`System::Type`オブジェクト。  
   
- **解説**  
+### <a name="remarks"></a>Remarks  
   
  `typeid` を使用して、コンパイル時に型の <xref:System.Type> を取得します。  
   
@@ -79,19 +77,18 @@ type::typeid
   
  `typeid` はコンパイル時に型名 (型) を評価できる必要がありますが、GetType は実行時に返す型を評価します。  
   
- `typeid` ネイティブ型の名前またはネイティブ型の名前です。 共通言語ランタイムの別名がかかることができます。参照してください[C++ ネイティブ型と等価な .NET Framework (C + + CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)詳細についてはします。  
+ `typeid` ネイティブ型の名前またはネイティブ型の名前を共通言語ランタイム エイリアスを取得することができます。参照してください[C++ ネイティブ型に対応する .NET Framework (C +/cli CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)詳細についてはします。  
   
- `typeid` ではネイティブ型も扱えますが、その場合でも System::Type を返します。  Type_info 構造体を取得する[typeid 演算子](../cpp/typeid-operator.md)です。  
+ `typeid` ではネイティブ型も扱えますが、その場合でも System::Type を返します。  Type_info 構造体を取得する[typeid 演算子](../cpp/typeid-operator.md)します。  
   
 ### <a name="requirements"></a>要件  
- コンパイラ オプション: **/clr**  
+ コンパイラ オプション: `/clr`  
   
 ### <a name="examples"></a>使用例  
- **例**  
   
- 次の例では、typeid のキーワードと GetType() メンバーを比較します。  
+ 次の例では、typeid のキーワードを`GetType()`メンバー。  
   
-```  
+```cpp  
 // keyword__typeid.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -121,14 +118,11 @@ typeid and GetType returned the same System::Type
 G  
   
 System.Single*  
-  
 ```  
-  
- **例**  
   
  次の例では、System::Type 型の変数を使用して型の属性を取得できることを示しています。  この例を見るとわかるように、一部の型では、`typeid` を使用するために typedef を作成する必要があります。  
   
-```  
+```cpp  
 // keyword__typeid_2.cpp  
 // compile with: /clr  
 using namespace System;  

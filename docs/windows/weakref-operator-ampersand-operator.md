@@ -1,5 +1,5 @@
 ---
-title: Weakref::operator&amp;演算子 |Microsoft ドキュメント
+title: Weakref::operator&amp;演算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c8221b405618b1879f4e4c865115a227eb09857
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 125ffe998e7c3f225f72e3fb47df4ef3525c37f9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890116"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649049"
 ---
 # <a name="weakrefoperatoramp-operator"></a>Weakref::operator&amp;演算子
-現在の WeakRef オブジェクトを表す ComPtrRef オブジェクトを返します。  
+返します、`ComPtrRef`現在を表すオブジェクトを**WeakRef**オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,10 +34,10 @@ Details::ComPtrRef<WeakRef> operator&() throw()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 現在の WeakRef オブジェクトを表す ComPtrRef オブジェクトです。  
+ A`ComPtrRef`現在を表すオブジェクトを**WeakRef**オブジェクト。  
   
-## <a name="remarks"></a>コメント  
- これは、コード内で使用するものではありませんを内部ヘルパー演算子です。  
+## <a name="remarks"></a>Remarks  
+ これは、内部ヘルパー演算子が、コードで使用されるものではありません。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** client.h  

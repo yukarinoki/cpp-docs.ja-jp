@@ -17,30 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: af3ec58afd69f3fde6e2eb67969f1dad8848c5de
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 4bddc5a453e1c3aac43fe58d105ccef863c67808
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466723"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652270"
 ---
 # <a name="activationfactorygettrustlevel-method"></a>ActivationFactory::GetTrustLevel メソッド
 オブジェクトの信頼レベルを取得、現在**ActivationFactory**をインスタンス化します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 STDMETHOD(  
    GetTrustLevel  
 )(_Out_ TrustLevel* trustLvl);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *trustLvl*  
  この操作が完了したら、信頼レベルのランタイム クラス、 **ActivationFactory**をインスタンス化します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合は s_ok を返します。それ以外の場合、アサーション エラーが発生したと*trustLvl* FullTrust に設定されます。  
+ 成功した場合は s_ok を返します。それ以外の場合、アサーション エラーが発生したと*trustLvl*に設定されている`FullTrust`します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** module.h  

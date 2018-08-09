@@ -1,5 +1,5 @@
 ---
-title: 256 色カラー パレット (アイコン用イメージ エディター) を使用して |Microsoft ドキュメント
+title: 256 色カラー パレット (アイコン用イメージ エディター) を使用して |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,35 +20,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5dc78dfa5d549b37b99125cfcef5c25ae6c76b9e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: be817ac4bddcc169ab2ecb3a9106e9594642e2f0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890906"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645153"
 ---
 # <a name="using-the-256-color-palette-image-editor-for-icons"></a>256 色カラー パレットの使用 (アイコン用イメージ エディター)
-選択範囲を使用して描画 256 色カラー パレットから、色パレットから色を選択する必要があります、 [[色] ウィンドウ](../windows/colors-window-image-editor-for-icons.md)します。  
+256 色カラー パレットから選択した場合、描画するには、色パレットから色を選択する必要があります、 [[色] ウィンドウ](../windows/colors-window-image-editor-for-icons.md)します。  
   
 ### <a name="to-choose-a-color-from-the-256-color-palette-for-large-icons"></a>大きいアイコンの 256 色カラー パレットから色を選択するには  
   
-1.  大きいアイコンまたはカーソルを選択するか、新しい大きいアイコンまたはカーソルを作成します。  
+1.  大きいアイコンまたはカーソルを選択するか、新しいの大きいアイコンまたはカーソルを作成します。  
   
-2.  表示される 256 色から色を選択、**色**のパレット、**色**ウィンドウです。  
+2.  色で表示される 256 色から選択、**色**パレットで、**色**ウィンドウ。  
   
-     選択した色が現在の色のカラー パレットになります、**色**ウィンドウです。  
+     選択した色のカラー パレットのでは、現在の色になります、**色**ウィンドウ。  
   
     > [!NOTE]
-    >  256 色の画像を使用する初期パレットでは、CreateHalftonePalette Windows API によって返されるパレットと一致します。 すべてのアイコンが、Windows シェルのためのものでは、パレットの実現化中のちらつきを防ぐためにこのパレットを使用する必要があります。  
+    >  256 色の画像に使用する初期のパレットがによって返されるパレットと一致する、 `CreateHalftonePalette` Windows API。 Windows シェルは、すべてのアイコンは、パレットの実現化中のちらつきを防ぐためにこのパレットを使用する必要があります。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 詳細については、管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションは、次を参照してください。[グローバライズと .NET Framework アプリケーションのローカライズ](/dotnet/standard/globalization-localization/index)です。  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
   
- 要件  
-  
+## <a name="requirements"></a>要件  
  なし  
   
 ## <a name="see-also"></a>関連項目  
  [アクセラレータ キー](../windows/accelerator-keys-image-editor-for-icons.md)   
  [256 色のアイコンまたはカーソルの作成](creating-a-256-color-icon-or-cursor-image-editor-for-icons.md)   
  [アイコンとカーソル: ディスプレイ デバイスのイメージ リソース](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
-

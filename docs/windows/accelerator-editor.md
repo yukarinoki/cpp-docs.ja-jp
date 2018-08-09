@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: feece642928db70a2b78dd3a4117b695b19f4af9
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 0aed7c8ef617152144bbe211f83f442fe93d525e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466073"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648286"
 ---
 # <a name="accelerator-editor"></a>アクセラレータ エディター
 アクセラレータ テーブルは、アクセス キー (ショートカット キーとも呼ばれます) とそれらに関連付けられたコマンド識別子の一覧を含む Windows リソースです。 プログラムは複数のアクセラレータ テーブルを持つことができます。  
@@ -36,7 +36,7 @@ ms.locfileid: "39466073"
   
  使用することができます[クラス ビュー](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)コードへのアクセス キーのコマンドをフックします。  
   
- アクセラレータ エディターでは、次の操作ができます。  
+ **アクセラレータ**エディターができます。  
   
 -   [アクセラレータ プロパティの設定](../windows/setting-accelerator-properties.md)  
   
@@ -47,12 +47,12 @@ ms.locfileid: "39466073"
 -   [定義済みのアクセス キーの使用](../windows/predefined-accelerator-keys.md)  
   
     > [!TIP]
-    >  アクセラレータ エディターの使用中、右クリックすると、頻繁に使用するコマンドのショートカット メニューを表示できます。 使用できるコマンドは、ポインターの位置によって異なります。  
+    >  使用しているときに、**アクセラレータ**エディター、頻繁に使用されるコマンドのショートカット メニューを表示する右クリックできます。 使用できるコマンドは、ポインターの位置によって異なります。  
   
     > [!NOTE]
     >  Windows では、空のアクセラレータ テーブルは作成できません。 エントリがないアクセラレータ テーブルを作成すると、テーブルを保存する際に自動的に削除されます。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド。* マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
   
 ## <a name="requirements"></a>要件  
  Win32  

@@ -1,5 +1,5 @@
 ---
-title: switch_is |Microsoft ドキュメント
+title: switch_is |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 05805bff0044838aaea2af2013fa951c5d3be9a1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e77c29df5fa86ccdf88a6962577cd8c70e45e2ee
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892796"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651367"
 ---
 # <a name="switchis"></a>switch_is
-式または共用体の判別共用体のメンバーが選択した役割を果たす識別子を指定します。  
+式または共用体の判別共用体のメンバーを選択するとして機能する識別子を指定します。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 [switch_is]  
-  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **Switch_is** C++ 属性と同じ機能を持つ、 [switch_is](http://msdn.microsoft.com/library/windows/desktop/aa367275) MIDL 属性。  
   
 ## <a name="example"></a>例  
- 参照してください、[ケース](../windows/case-cpp.md)のサンプルの使用例**switch_is**です。  
+ 参照してください、[ケース](../windows/case-cpp.md)の使用サンプルの例を**switch_is**します。  
   
 ## <a name="requirements"></a>要件  
   
@@ -47,8 +45,8 @@ ms.locfileid: "33892796"
   
 |||  
 |-|-|  
-|**対象**|`typedef`|  
-|**反復可能**|×|  
+|**対象**|**typedef**|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

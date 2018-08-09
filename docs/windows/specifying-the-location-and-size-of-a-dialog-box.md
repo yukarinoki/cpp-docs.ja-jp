@@ -1,5 +1,5 @@
 ---
-title: ダイアログ ボックスのサイズと場所を指定する |Microsoft ドキュメント
+title: ダイアログ ボックスのサイズと場所を指定する |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cc4c6867f5ed3791414619257fec33db4c632553
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3a3a9a629ec138659a7b0d2aba2460aced31fc74
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890578"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649004"
 ---
 # <a name="specifying-the-location-and-size-of-a-dialog-box"></a>ダイアログ ボックスの位置とサイズの指定
-場所と、ダイアログ ボックスだけでなく、場所のサイズと、内のコントロールのサイズは、ダイアログ単位で測定されます。 個々 のコントロールと、ダイアログ ボックスの値は、Visual Studio のステータス バーの選択した場合の右下に表示されます。  
+場所とダイアログ ボックスでは、だけでなく、場所のサイズと、内のコントロールのサイズは、ダイアログ単位で測定されます。 個々 のコントロールと、ダイアログ ボックスの値は、Visual Studio のステータス バーの選択した場合の右下に表示されます。  
   
- 設定できる 3 つのプロパティがある、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window) ダイアログ ボックスを画面に表示される表示を指定します。 Center プロパティがブール値です。値を True に設定した場合、ダイアログ ボックスは常に、画面の中央に表示されます。 False に設定すると、ダイアログ ボックスが表示画面に表示される場所を明示的に定義するプロパティに対して画面と 1/3 プロパティを設定できます。 位置プロパティは、{X = 0、Y = 0} として定義されている表示領域の左上隅からのオフセットの値です。 位置がまたに基づいて、**絶対配置**プロパティ: True の場合、座標画面に対して相対的です。 False の場合、座標は、ダイアログの所有者のウィンドウに対して相対的です。  
+ 設定できる 3 つのプロパティがある、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window) ダイアログ ボックスを画面に表示を指定します。 Center プロパティがブール値です。値を True に設定した場合 ダイアログ ボックスは常に、画面の中央に表示されます。 False に設定した場合は、XPos と YPos プロパティ ダイアログ ボックスが表示され、画面上の場所を明示的に定義し、設定できます。 位置プロパティは、{X = 0、Y = 0} として定義されている表示領域の左上隅からのオフセットの値です。 位置もに基づいて、 **Absolute Align**プロパティ: 座標が画面を基準には、True の場合は、ダイアログ ボックスのオーナー ウィンドウに対する相対座標は、False の場合、します。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 詳細については、管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションは、次を参照してください。[グローバライズと .NET Framework アプリケーションのローカライズ](/dotnet/standard/globalization-localization/index)です。  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
   
 ## <a name="requirements"></a>要件  
  Win32  
@@ -36,4 +36,3 @@ ms.locfileid: "33890578"
 ## <a name="see-also"></a>関連項目  
  [ダイアログ ボックスのコントロール](../windows/controls-in-dialog-boxes.md)   
  [コントロール](../mfc/controls-mfc.md)
-

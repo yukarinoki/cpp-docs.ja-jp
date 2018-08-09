@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a845ea047682fda97ae581f4daad26775241ddf8
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: b71581687ec69a4aff85f649e85ebfe10c0a844f
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466840"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650470"
 ---
 # <a name="chaininterfacesverify-method"></a>ChainInterfaces::Verify メソッド
-各インターフェイスは、テンプレート パラメーターで定義されていることを確認します*I0*を通じて*I9* IUnknown と IInspectable、から継承*I0* 継承 *。I1*を通じて*I9*します。  
+各インターフェイスは、テンプレート パラメーターで定義されていることを確認します*I0*を通じて*I9*から継承`IUnknown`や`IInspectable`、および*I0*から継承。*I1*を通じて*I9*します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 WRL_NOTHROW __forceinline static void Verify();  
 ```  
   

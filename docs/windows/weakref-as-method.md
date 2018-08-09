@@ -1,5 +1,5 @@
 ---
-title: Weakref::as メソッド |Microsoft ドキュメント
+title: Weakref::as メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70e694b4c86194402f48d335aac353e48c3de79a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 938c7c796bf88d4ea1e49f1f59d274b5017aa7de
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890703"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649303"
 ---
 # <a name="weakrefas-method"></a>WeakRef::As メソッド
-指定された ComPtr ポインター パラメーターを、指定されたインターフェイスを表すように設定します。  
+指定した設定`ComPtr`ポインター パラメーターを指定したインターフェイスを表します。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 template<typename U>  
 HRESULT As(  
    _Out_ ComPtr<U>* ptr  
@@ -42,27 +41,27 @@ HRESULT As(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `U`  
+### <a name="parameters"></a>パラメーター  
+ *U*  
  インターフェイス ID。  
   
- `ptr`  
- この操作の完了時の、パラメーター `U`を表すオブジェクト。  
+ *ptr*  
+ ときにこの操作が完了すると、パラメーターを表すオブジェクトを*U*します。  
   
 ## <a name="return-value"></a>戻り値  
   
--   この操作が成功すると S_OK になります。失敗すると HRESULT (操作が失敗した理由を示す) になり、 `ptr` は `nullptr`に設定されます。  
+-   この操作が成功した場合は s_ok を返します。それ以外の場合、理由を示す HRESULT 操作に失敗し、 *ptr*に設定されている**nullptr**します。  
   
--   この操作が成功すると S_OK になりますが、現在の WeakRef オブジェクトは既に解放されています。 パラメーターを `ptr` を `nullptr`に設定します。  
+-   現在、この操作に成功した場合は S_OK **WeakRef**オブジェクトは既に解放されています。 パラメーター *ptr*に設定されている**nullptr**します。  
   
--   この操作が成功すると S_OK になりますが、現在の WeakRef オブジェクトはパラメーター `U`から派生しません。 パラメーター `ptr` は `nullptr`に設定されます。  
+-   現在、この操作に成功した場合は S_OK **WeakRef**オブジェクトがパラメーターから派生していない*U*します。パラメーター *ptr*に設定されている**nullptr**します。  
   
-## <a name="remarks"></a>コメント  
- `U` が IWeakReference の場合、エラーが生成されます。あるいは、IInspectable から派生しません。  
+## <a name="remarks"></a>Remarks  
+ 場合は、エラーが出力パラメーター *U*は`IWeakReference`から派生していないまたは`IInspectable`します。  
   
  最初のテンプレートは、コードで使用する必要があるフォームです。 2 番目のテンプレートは、 [auto](../cpp/auto-cpp.md) 型推論キーワードなどの C++ 言語の機能をサポートしている内部ヘルパーの特殊化です。  
   
- Windows 10 SDK 以降では、弱い参照を取得できなかった場合、このメソッドは WeakRef インスタンスを `nullptr` に設定しません。そのため、 `nullptr`の WeakRef を確認するエラー チェック コードは避けてください。 代わりに、確認`ptr`の`nullptr`します。  
+ 以降、Windows 10 SDK では、このメソッドが設定されていない、 **WeakRef**インスタンス**nullptr**場合は、弱い参照を取得できませんでした、避けての WeakRef を確認するエラー チェック コード**nullptr**します。 代わりに、チェック*ptr*の**nullptr**します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** client.h  

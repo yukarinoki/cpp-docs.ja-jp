@@ -1,5 +1,5 @@
 ---
-title: Simpleactivationfactory::gettrustlevel メソッド |Microsoft ドキュメント
+title: Simpleactivationfactory::gettrustlevel メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b08ce574a8370eb0029a702f8fa4a4b12c6e93c1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 22fa30a3662897b171245da194573ec17da2f64e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892619"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645189"
 ---
 # <a name="simpleactivationfactorygettrustlevel-method"></a>SimpleActivationFactory::GetTrustLevel メソッド
-によって指定されたクラスのインスタンスの信頼レベルを取得、`Base`クラス テンプレート パラメーター。  
+指定されたクラスのインスタンスの信頼レベルを取得、`Base`クラス テンプレート パラメーター。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,12 +33,12 @@ STDMETHOD(
 )(_Out_ TrustLevel* trustLvl);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `trustLvl`  
- この操作の完了時、現在のクラス オブジェクトの信頼レベル。  
+### <a name="parameters"></a>パラメーター  
+ *trustLvl*  
+ この操作が完了時は、現在のクラスのオブジェクトの信頼レベル。  
   
 ## <a name="return-value"></a>戻り値  
- 常に S_OK です。  
+ 常に s_ok を返します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** module.h  

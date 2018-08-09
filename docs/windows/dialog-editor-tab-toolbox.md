@@ -1,5 +1,5 @@
 ---
-title: ダイアログ エディターのタブ、ツールボックス |Microsoft ドキュメント
+title: ダイアログ エディター タブ、ツールボックス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,17 +21,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb7da9e08d44435570180859c1614f7817595833
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 40e0a13f9379200ee01e0279f9d069f1d58f3a60
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882577"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649423"
 ---
 # <a name="dialog-editor-tab-toolbox"></a>[ダイアログ エディター] タブ ([ツールボックス])
-ダイアログ エディターのタブに表示されます、[ツールボックス ウィンドウ](/visualstudio/ide/reference/toolbox)ダイアログ エディターで作業する場合。 新しいダイアログ ボックスにコントロールを追加するを作成する ダイアログ ボックスに、ツールボックスからコントロールをドラッグします。 (詳細については、次を参照してください。 [ ダイアログ ボックスにコントロールを追加する](adding-a-control-to-a-dialog-box.md))。 次いでコントロールの移動、またはサイズと形状の変更ができます。  
+**ダイアログ エディター**タブに表示されます、[ツールボックス ウィンドウ](/visualstudio/ide/reference/toolbox)作業するとき、**ダイアログ**エディター。 を、新しいダイアログ ボックスにコントロールを追加するには、からコントロールをドラッグ、**ツールボックス** ダイアログ ボックスを作成する (詳細については、次を参照してください。 [ ダイアログ ボックスにコントロールを追加](adding-a-control-to-a-dialog-box.md))。 次いでコントロールの移動、またはサイズと形状の変更ができます。  
   
- ツールボックスで使用できる標準コントロールは次のとおりです。  
+ 使用できる標準のコントロール、**ツールボックス**は。  
   
 -   [ボタン コントロール](../mfc/reference/cbutton-class.md)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "33882577"
   
 -   [コンボ ボックス コントロール](../mfc/reference/ccombobox-class.md)  
   
--   [エディット コントロール](../mfc/reference/cedit-class.md)  
+-   [コントロールを編集します。](../mfc/reference/cedit-class.md)  
   
 -   グループ ボックス  
   
@@ -55,7 +55,7 @@ ms.locfileid: "33882577"
   
 -   [スクロール バー コントロール](../mfc/reference/cscrollbar-class.md)  
   
- [Windows コモン コントロール](../mfc/controls-mfc.md)ツールボックスで使用可能なアプリケーションで高度な機能を提供します。 Windows コモン コントロールには以下が含まれます。  
+ [Windows コモン コントロール](../mfc/controls-mfc.md)で使用できる、**ツールボックス**アプリケーションで高度な機能を提供します。 Windows コモン コントロールには以下が含まれます。  
   
 -   [スライダー コントロール](../mfc/slider-control-styles.md)  
   
@@ -83,15 +83,15 @@ ms.locfileid: "33882577"
   
 -   [カスタム コントロール](custom-controls-in-the-dialog-editor.md)  
   
- 選択すると、ダイアログ ボックスにカスタム コントロールを追加できます、**カスタム コントロール**ダイアログ ボックスにドラッグして、ツールボックスのアイコン。 Syslink コントロールを追加するには、カスタム コントロールを追加し、変更するコントロールの**クラス**プロパティを**Syslink**です。 これにより、プロパティが更新され、Syslink コントロールのプロパティが表示されます。 MFC ラッパー クラスについては、次を参照してください。 [CLinkCtrl](../mfc/reference/clinkctrl-class.md)です。  
+ ダイアログ ボックスにカスタム コントロールを追加するには選択して、**カスタム コントロール**アイコン、**ツールボックス**ダイアログ ボックスにドラッグするとします。 追加する、 **Syslink**を制御し、カスタム コントロールを追加、変更、コントロールの**クラス**プロパティを**Syslink**します。 これにより、プロパティを更新し、表示、 **Syslink**プロパティを制御します。 MFC ラッパー クラスについては、次を参照してください。 [CLinkCtrl](../mfc/reference/clinkctrl-class.md)します。  
   
- 必要な場合も[ ダイアログ ボックスに ActiveX コントロールを追加](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md)です。  
+ 必要な場合も[、ダイアログ ボックスに ActiveX コントロールを追加](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md)します。  
   
- また、より簡単に使用できるようにツールボックス ウィンドウをカスタマイズすることもできます。 詳細については、「[ツールボックスの使用](/visualstudio/ide/using-the-toolbox)」を参照してください。  
+ カスタマイズすることも、**ツールボックス**ウィンドウを簡単に使用します。 詳細については、「[ツールボックスの使用](/visualstudio/ide/using-the-toolbox)」を参照してください。  
 
- MFC での RichEdit 1.0 コントロールの使用の詳細については、次を参照してください[MFC での RichEdit 1.0 コントロールの使用。](../windows/using-the-richedit-1-0-control-with-mfc.md)  
+ 使用しての詳細については、 **RichEdit 1.0** MFC でコントロールを参照してください[MFC での RichEdit 1.0 コントロールの使用](../windows/using-the-richedit-1-0-control-with-mfc.md)  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 詳細については、管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションは、次を参照してください。[グローバライズと .NET Framework アプリケーションのローカライズ](/dotnet/standard/globalization-localization/index)です。  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
   
 ## <a name="requirements"></a>要件  
  Win32  
@@ -102,6 +102,5 @@ ms.locfileid: "33882577"
  [ダイアログ ボックス クラス](../mfc/dialog-box-classes.md)   
  [スクロール バー スタイル](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)   
  [リッチ エディット コントロールの例](../mfc/rich-edit-control-examples.md)   
- [ダイアログ ボックス コントロールのイベント ハンドラーの追加](../windows/adding-event-handlers-for-dialog-box-controls.md)   
+ [ダイアログ ボックスのコントロールのイベント ハンドラーの追加](../windows/adding-event-handlers-for-dialog-box-controls.md)   
  [ダイアログ ボックス コントロールおよび変数の型](../ide/dialog-box-controls-and-variable-types.md)
-

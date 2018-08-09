@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75476fec3dcabda2990d3ca3f5dcf017688a176d
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e362ec513cb7cb14f5fd3abb8a028c6e0eab616b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466125"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644230"
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>状況依存のキーワード (C++ コンポーネント拡張)
 *状況依存のキーワード*は特定のコンテキストでのみ認識される言語要素です。 特定のコンテキスト以外では、状況依存のキーワードをユーザー定義の記号として使用することができます。  
   
 ## <a name="all-runtimes"></a>すべてのランタイム  
- **解説**  
+### <a name="remarks"></a>Remarks
   
  以下は、状況依存のキーワードの一覧です。  
   
@@ -60,23 +60,22 @@ ms.locfileid: "39466125"
  読みやすさのために、ユーザー定義シンボルとしての状況依存のキーワードの使用を制限します。  
   
 ## <a name="windows-runtime"></a>Windows ランタイム  
- **解説**  
+### <a name="remarks"></a>Remarks  
   
  (この機能のプラットフォーム固有の解説はありません。)  
   
 ### <a name="requirements"></a>要件  
- コンパイラ オプション: **/ZW**  
+ コンパイラ オプション: `/ZW`  
   
 ## <a name="common-language-runtime"></a>共通言語ランタイム 
- **解説**  
+### <a name="remarks"></a>Remarks  
   
  (この機能のプラットフォーム固有の解説はありません。)  
   
 ### <a name="requirements"></a>要件  
- コンパイラ オプション: **/clr**  
+ コンパイラ オプション: `/clr`  
   
 ### <a name="examples"></a>使用例  
- **例**  
   
  適切なコンテキストでのコード例を次に示します、**プロパティ**状況依存のキーワードは、プロパティと変数を定義するために使用できます。  
   
@@ -100,8 +99,6 @@ int main() {
    System::Console::WriteLine(++property);  
 }  
 ```  
-  
- **出力**  
   
 ```Output  
 100  

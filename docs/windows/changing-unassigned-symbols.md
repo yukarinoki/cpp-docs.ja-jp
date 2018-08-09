@@ -1,5 +1,5 @@
 ---
-title: 未使用のシンボルを変更する |Microsoft ドキュメント
+title: 未割り当てシンボルの変更 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,29 +19,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7510d8bb9f356620e77d862edab71d852fdec65b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8ee2b3a437f2b36d34fe9232356b171757643509
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855384"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644987"
 ---
 # <a name="changing-unassigned-symbols"></a>未使用のシンボルの変更
 [リソース シンボル ダイアログ ボックス](../windows/resource-symbols-dialog-box.md)、編集またはリソースまたはオブジェクトに既に割り当てられていない既存のシンボルを削除することができます。  
   
 ### <a name="to-change-an-unassigned-symbol"></a>未使用のシンボルを変更するには  
   
-1.  **名前**ボックス、未使用のシンボルを選択してクリックして**変更**です。  
+1.  **名前**ボックスで未使用のシンボルを選択し、をクリックして**変更**します。  
   
-2.  シンボルの名前またはで提供される、ボックスに値を編集、**シンボルの変更** ダイアログ ボックス。  
+2.  シンボルの名前またはで用意されているボックス内の値を編集、**シンボルの変更** ダイアログ ボックス。  
   
     > [!NOTE]
-    >  シンボルの変更を*は*リソースまたはオブジェクトに割り当てられている、する必要がありますを使用して、リソース エディターか [プロパティ] ウィンドウ。 詳細については、次を参照してください。[シンボルまたはシンボル名を変更する](../windows/changing-a-symbol-or-symbol-name-id.md)です。  
+    >  シンボルの変更を*は*リソースまたはオブジェクトに割り当てられている、リソース エディターを使用する必要がありますまたは**プロパティ**ウィンドウ。 詳細については、次を参照してください。[シンボルまたはシンボル名を変更する](../windows/changing-a-symbol-or-symbol-name-id.md)します。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。*  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。  
   
- 要件  
-  
+## <a name="requirements"></a>要件  
  Win32  
   
 ## <a name="see-also"></a>関連項目  

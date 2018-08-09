@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8c54068d6938e217798c6fc17c9ece5c13ffcaa0
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 4488ca0e32bc9522e29028536efdcd5fea925301
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467366"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649986"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>コントロールの追加、編集、または削除
-ダイアログ エディターを使用することができますを追加、サイズを変更、編集、および ダイアログ ボックスのコントロールを削除します。 をその ID などのコントロールのプロパティを編集することもできるかどうか、最初に表示される実行時にします。  
+使用して、**ダイアログ**エディター、追加できますが、サイズを変更、編集、およびダイアログ ボックスのコントロールを削除します。 をその ID などのコントロールのプロパティを編集することもできるかどうか、最初に表示される実行時にします。  
   
- ダイアログ エディターのショートカット メニューを使用するにはすばやく ダイアログ ボックスに登録されている ActiveX コントロールを追加して、すばやくアクセスするためのツールボックスに ActiveX コントロールを追加することができます (詳細については、次を参照してください。[ツールボックスのカスタマイズ ダイアログ ボックス](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb))。  
+ ショートカット メニューを使用することができます、**ダイアログ**エディターにすばやく追加するには、ActiveX コントロールのダイアログ ボックスが登録されているし、ActiveX コントロールを追加することができます、**ツールボックス**すばやくアクセスできます (詳細についてを参照してください[ツールボックスのカスタマイズ ダイアログ ボックス](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb))。  
   
 -   [ダイアログ ボックスにコントロールを追加します。](adding-a-control-to-a-dialog-box.md)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "39467366"
   
 -   [[ツールボックス] ウィンドウ、非表示](showing-or-hiding-the-dialog-editor-toolbar.md)  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド。* マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
   
 ## <a name="requirements"></a>要件  
  Win32  
@@ -52,4 +52,3 @@ ms.locfileid: "39467366"
  [ダイアログ ボックスのコントロール](controls-in-dialog-boxes.md)   
  [ダイアログ ボックスのコントロールのイベント ハンドラーの追加](adding-event-handlers-for-dialog-box-controls.md)   
  [ダイアログ ボックス コントロールおよび変数の型](../ide/dialog-box-controls-and-variable-types.md)
-

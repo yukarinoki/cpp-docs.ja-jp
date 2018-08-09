@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 606059712e60ba181998155b55ae02ba8b27c4da
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a36e3068bd5211f37e6fe1f0f2a82c923b4511a6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463955"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650704"
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator== 演算子
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -54,12 +54,12 @@ bool operator==(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *a*  
- ComPtrRef オブジェクトへの参照。  
+ 参照を**ComPtrRef**オブジェクト。  
   
  *b*  
- 別の ComPtrRef オブジェクト、または匿名型へのポインターへの参照 (`void*`)。  
+ 別の参照**ComPtrRef**オブジェクト、または匿名型へのポインター (`void*`)。  
   
 ## <a name="return-value"></a>戻り値  
  最初の演算子と**true**場合オブジェクト *、* がオブジェクトと等しい*b*、それ以外の**false**します。  
@@ -69,7 +69,7 @@ bool operator==(
  4 番目と 5 番目の演算子を生成**true**場合オブジェクト *、* がオブジェクトと等しい*b*、それ以外の**false**します。  
   
 ## <a name="remarks"></a>Remarks  
- 2 つの ComPtrRef オブジェクトが等しいかどうかを示します。  
+ 示す 2 つかどうか**ComPtrRef**オブジェクトが等しい。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** client.h  

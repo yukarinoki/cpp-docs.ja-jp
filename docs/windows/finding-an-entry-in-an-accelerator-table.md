@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 45f02bff270c7049e6207d797ed2d2ca5ae339f2
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 805d50a04f76e359bbf7553ab9c31d10f0871c57
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571377"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647854"
 ---
 # <a name="finding-an-entry-in-an-accelerator-table"></a>アクセラレータ テーブルでのエントリの検索
 ### <a name="to-find-an-entry-in-an-open-accelerator-table"></a>開いているアクセラレータ テーブルでエントリを検索するには  
@@ -38,7 +38,6 @@ ms.locfileid: "39571377"
  マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。  
   
 ## <a name="requirements"></a>要件  
-  
  Win32  
   
 ## <a name="see-also"></a>関連項目  

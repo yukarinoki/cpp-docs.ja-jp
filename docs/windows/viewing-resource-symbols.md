@@ -1,5 +1,5 @@
 ---
-title: リソース シンボルの表示 |Microsoft ドキュメント
+title: リソース シンボルの表示 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ea57af6ef6ff91b7149006f63963cff55f6eebc4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9857ea9f12b74983b0af8933249450a61ed907c0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891108"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649355"
 ---
 # <a name="viewing-resource-symbols"></a>リソース シンボルの表示
 ### <a name="to-view-resource-symbols"></a>リソース シンボルを表示するには  
@@ -34,15 +34,12 @@ ms.locfileid: "33891108"
     > [!NOTE]
     >  プロジェクトに .rc ファイルがまだ含まれていない場合は、「 [リソース スクリプト ファイルの新規作成](../windows/how-to-create-a-resource-script-file.md)」を参照してください。  
   
-2.  選択**リソース シンボル**でリソース シンボル テーブルを表示するショートカット メニューから、[リソース シンボル ダイアログ ボックス](../windows/resource-symbols-dialog-box.md)です。  
+2.  選択**リソース シンボル**リソース シンボル テーブルを表示するショートカット メニューから、[リソース シンボル ダイアログ ボックス](../windows/resource-symbols-dialog-box.md)します。  
   
     > [!NOTE]
-    >  定義済みのシンボルを表示するには、確認、**読み取り専用のシンボルを表示する**チェック ボックスをオンします。  
+    >  定義済みのシンボルを表示するには、確認、**読み取り専用のシンボルを表示**チェック ボックスをオンします。  
   
-
-  
- **必要条件**  
-  
+## <a name="requirements"></a>要件  
  Win32  
   
 ## <a name="see-also"></a>関連項目  

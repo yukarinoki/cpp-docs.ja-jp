@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e813ce223bad48aab3807bb01e042190d28aef74
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 7d20927b284de5c565c5fa9ebf00f8be00a4b486
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568671"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648851"
 ---
 # <a name="hidden"></a>hidden
 項目が存在しますが、ユーザー指向ブラウザーで表示する必要がありますされませんを示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 [hidden]  
 ```  
   

@@ -1,5 +1,5 @@
 ---
-title: Factorycache::cookie データ メンバー |Microsoft ドキュメント
+title: Factorycache::cookie データ メンバー |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 27daf229da4c6707afcbf97f7ab8ce08cd8ce900
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f3636cdb2c30d08547fd9085141aa9283bdc85c7
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874448"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652384"
 ---
 # <a name="factorycachecookie-data-member"></a>FactoryCache::cookie データ メンバー
 Windows ランタイム C++ テンプレート ライブラリのインフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 union {   
    WINRT_REGISTRATION_COOKIE winrt;  
    DWORD com;   
 } cookie;  
 ```  
   
-## <a name="remarks"></a>コメント  
- オブジェクトを識別、登録されている Windows ランタイムまたは COM クラス、およびオブジェクトの登録を解除する際に使用する値が含まれています。  
+## <a name="remarks"></a>Remarks  
+ 登録済み Windows ランタイムまたは COM クラスのオブジェクトを識別し、オブジェクトの登録を解除する際に使用する値が含まれています。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** module.h  

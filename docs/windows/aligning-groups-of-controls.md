@@ -1,5 +1,5 @@
 ---
-title: コントロール グループの配置 |Microsoft ドキュメント
+title: コントロール グループの配置 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,44 +15,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 743176ed52004a37718ae69db3693dde07ca7391
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fac1c04f51b2e05213223ca3e20e4a4fcc3e54e3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858342"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651809"
 ---
 # <a name="aligning-groups-of-controls"></a>コントロール グループの配置
 次の手順では、コントロールのグループを配置する方法を示します。  
   
 ### <a name="to-align-groups-of-controls"></a>コントロールのグループを配置するには  
   
-1.  [コントロールを選択する](../windows/selecting-multiple-controls.md)配置します。 主要なコントロールを最初にする対象のコントロールをオンにしてくださいまたは配置を実行しているか、コマンドをサイズ変更する前に基準となるコントロールに設定します。  
+1.  [コントロールを選択する](../windows/selecting-multiple-controls.md)を配置します。 主要なコントロールを最初にするコントロールを選択することを確認するまたは配置を実行しているか、コマンドのサイズを変更する前に、主要なコントロールに設定します。  
   
-     コントロールのグループの最後の位置は、主要なコントロールの位置によって異なります。 主要なコントロールを選択する方法の詳細については、次を参照してください。 [Dominant コントロールの指定](../windows/specifying-the-dominant-control.md)です。  
+     コントロールのグループの最後の位置は、主要なコントロールの位置に依存します。 主要なコントロールを選択する方法の詳細については、次を参照してください。[主要なコントロールを指定する](../windows/specifying-the-dominant-control.md)します。  
   
-2.  **形式**] メニューの [選択**Align**、以下の配置の 1 つを選択。  
+2.  **形式**] メニューの [選択**Align**、以下の配置のいずれかを選択。  
   
-    -   **左揃え**: 選択したコントロールの左端に揃えます。  
+    -   `Lefts`: 選択したコントロールの左端に揃えて配置します。  
   
-    -   **センター**: 選択したコントロールを水平方向の中心点を揃えて配置します。  
+    -   `Centers`: 選択したコントロールを水平方向の中心点を揃えて配置します。  
   
-    -   **権限**: 選択したコントロールの右端に揃えて配置します。  
+    -   `Rights`: 選択したコントロールの右端に揃えて配置します。  
   
-    -   **などを揃えたり**: 選択したコントロールをそれらの上端に沿って配置されます。  
+    -   `Tops`: 選択したコントロールをそれらの上端に沿って配置します。  
   
-    -   **左右**: 選択したコントロールを中央の点に合わせて垂直方向に整列します。  
+    -   `Middles`: 選択したコントロールを垂直方向中央の点に配置します。  
   
-    -   **下部**: 選択したコントロールの下端に揃えて配置します。  
+    -   `Bottoms`: 選択したコントロールの下端に揃えて配置します。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 詳細については、管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションは、次を参照してください。[グローバライズと .NET Framework アプリケーションのローカライズ](/dotnet/standard/globalization-localization/index)です。  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
   
- 要件  
-  
+## <a name="requirements"></a>要件  
  Win32  
   
 ## <a name="see-also"></a>関連項目  
  [ダイアログ ボックスのコントロールの配置](../windows/arrangement-of-controls-on-dialog-boxes.md)   
  [ダイアログ ボックスのコントロール](../windows/controls-in-dialog-boxes.md)   
  [コントロール](../mfc/controls-mfc.md)
-

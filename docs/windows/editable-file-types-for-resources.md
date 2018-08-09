@@ -1,5 +1,5 @@
 ---
-title: リソース編集可能なファイルの種類 |Microsoft ドキュメント
+title: リソース編集可能なファイルの種類 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11d3229341ece1bbee0820a7e2320b8ef6b0381b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e17bada862cf2d7c5b86815ae140e298060ecb40
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870251"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648432"
 ---
 # <a name="editable-file-types-for-resources"></a>編集可能なリソース ファイルの種類
 次の種類のファイルを開いて、格納されているリソースを編集することができます。  
@@ -34,12 +34,10 @@ ms.locfileid: "33870251"
 |.rc|リソース スクリプト ファイル。|  
 |.rct|リソース テンプレート ファイル。|  
 |.res|リソース ファイル。|  
-|.resx|マネージ リソース ファイル。|  
+|.resx|マネージド リソース ファイル。|  
 |.exe|実行可能ファイル。|  
 |.dll|ダイナミック リンク ライブラリ ファイル。|  
 |.bmp、.ico、.dib、.cur|ビットマップ、アイコン、ツール バー、カーソルのファイル。|  
-  
-
   
 ## <a name="requirements"></a>要件  
  Win32  

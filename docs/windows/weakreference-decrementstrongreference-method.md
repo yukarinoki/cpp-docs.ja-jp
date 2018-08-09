@@ -1,5 +1,5 @@
 ---
-title: Weakreference::decrementstrongreference メソッド |Microsoft ドキュメント
+title: Weakreference::decrementstrongreference メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7d5605670e05f91f9f1293c8bff0f4d74e458d25
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5c7e2161c5451fe82e12918f00e8cb2cde37d336
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890337"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642316"
 ---
 # <a name="weakreferencedecrementstrongreference-method"></a>WeakReference::DecrementStrongReference メソッド
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -33,13 +33,13 @@ WRL インフラストラクチャをサポートし、コードから直接使�
 ULONG DecrementStrongReference();  
 ```  
   
-## <a name="remarks"></a>コメント  
- 現在の WeakReference オブジェクトの厳密な参照カウントをデクリメントします。  
+## <a name="remarks"></a>Remarks  
+ 強い参照が現在のカウントをデクリメント**WeakReference**オブジェクト。  
   
- 強い参照に設定されている厳密な参照カウントがゼロになったら、`nullptr`です。  
+ 強い参照に設定されている強力な参照カウントがゼロになったら、 **nullptr**します。  
   
 ## <a name="return-value"></a>戻り値  
- デクリメントされた強力な参照カウントします。  
+ デクリメントされた強い参照数。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** implements.h  
@@ -47,5 +47,5 @@ ULONG DecrementStrongReference();
  **Namespace:** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>関連項目  
-[WeakReference クラス](../windows/weakreference-class1.md)  
+ [WeakReference クラス](../windows/weakreference-class1.md)  
  [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

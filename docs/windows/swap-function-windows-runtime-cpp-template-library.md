@@ -1,5 +1,5 @@
 ---
-title: Swap 関数 (Windows ランタイム C++ テンプレート ライブラリ) |Microsoft ドキュメント
+title: Swap 関数 (Windows ランタイム C++ テンプレート ライブラリ) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b37a5e33b4d6a9e62510e79c7f72145ed0f1e128
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 63c28a18723ad1dc39669ee5a367c870451c9943
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889385"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651760"
 ---
 # <a name="swap-function-windows-runtime-c-template-library"></a>Swap 関数 (Windows ランタイム C++ テンプレート ライブラリ)
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -34,16 +34,16 @@ WRL_NOTHROW inline void Swap(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `left`  
+### <a name="parameters"></a>パラメーター  
+ *left*  
  最初の引数。  
   
- `right`  
+ *right*  
  2 番目の引数。  
   
 ## <a name="return-value"></a>戻り値  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  指定された 2 つの引数の値を交換します。  
   
 ## <a name="requirements"></a>要件  

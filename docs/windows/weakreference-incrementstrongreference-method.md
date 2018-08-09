@@ -1,5 +1,5 @@
 ---
-title: Weakreference::incrementstrongreference メソッド |Microsoft ドキュメント
+title: Weakreference::incrementstrongreference メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee53e068c13f52c01e997680b57915051a8efad8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f564f5d6197a640ef311cda8b2133ed583eec91e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890623"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642695"
 ---
 # <a name="weakreferenceincrementstrongreference-method"></a>WeakReference::IncrementStrongReference メソッド
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -34,10 +34,10 @@ ULONG IncrementStrongReference();
 ```  
   
 ## <a name="return-value"></a>戻り値  
- インクリメントされた強力な参照カウントします。  
+ インクリメントされた強い参照数。  
   
-## <a name="remarks"></a>コメント  
- 現在の WeakReference オブジェクトの厳密な参照カウントをインクリメントします。  
+## <a name="remarks"></a>Remarks  
+ 現在の強い参照カウントをインクリメント**WeakReference**オブジェクト。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** implements.h  
@@ -45,5 +45,5 @@ ULONG IncrementStrongReference();
  **Namespace:** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>関連項目  
-[WeakReference クラス](../windows/weakreference-class1.md)  
+ [WeakReference クラス](../windows/weakreference-class1.md)  
  [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

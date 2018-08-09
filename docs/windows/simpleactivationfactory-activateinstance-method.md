@@ -1,5 +1,5 @@
 ---
-title: Simpleactivationfactory::activateinstance メソッド |Microsoft ドキュメント
+title: Simpleactivationfactory::activateinstance メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5af4bfd22302b7694b9bafbc1452d636b19cb3c7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fe1342c3927183ae5eec30c8dd0a40ee95f37277
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889424"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646563"
 ---
 # <a name="simpleactivationfactoryactivateinstance-method"></a>SimpleActivationFactory::ActivateInstance メソッド
 
-指定されたインターフェイスのインスタンスを作成します。
+指定したインターフェイスのインスタンスを作成します。
 
 ## <a name="syntax"></a>構文
 
@@ -39,15 +39,15 @@ STDMETHOD( ActivateInstance )(
 ### <a name="parameters"></a>パラメーター
 
 *ppvObject*  
-この操作の完了時で指定されたオブジェクトのインスタンスへのポインター、`Base`クラス テンプレート パラメーター。
+ときにこの操作が完了したらで指定されたオブジェクトのインスタンスへのポインター、`Base`クラス テンプレート パラメーター。
 
 ## <a name="return-value"></a>戻り値
 
 成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-場合&#95; &#95;WRL_STRICT&#95; &#95;が定義されている、assert エラーが発生、クラス テンプレート パラメーターに指定された基本クラスから派生していない場合[RuntimeClass](../windows/runtimeclass-class.md)、または、WinRt で構成されていないまたはWinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列挙値。
+場合&#95; &#95;WRL_STRICT&#95; &#95;は定義されている、アサート エラーが生成クラス テンプレート パラメーターで指定された基本クラスから派生していない場合[RuntimeClass](../windows/runtimeclass-class.md)、WinRt で構成されていないか、またはWinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列挙値。
 
 ## <a name="requirements"></a>要件
 
@@ -56,5 +56,4 @@ STDMETHOD( ActivateInstance )(
 **名前空間:** Microsoft::WRL
 
 ## <a name="see-also"></a>関連項目
-
-[SimpleActivationFactory クラス](../windows/simpleactivationfactory-class.md)
+ [SimpleActivationFactory クラス](../windows/simpleactivationfactory-class.md)

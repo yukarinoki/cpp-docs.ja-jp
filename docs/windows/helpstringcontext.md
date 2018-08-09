@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 16f113610beb4c6427af5627ea8dfd725e02600d
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b71d8183921e0df66d6b9a82ff79faf24ccb41d3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570000"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642335"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 .Hlp または .chm ファイルをヘルプ トピックの ID を指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 [ helpstringcontext(  
    contextID  
 ) ]  
@@ -37,7 +37,7 @@ ms.locfileid: "39570000"
   
 ### <a name="parameters"></a>パラメーター  
  *contextID*  
- ヘルプ ファイルの 32 ビットのヘルプ コンテキスト id。  
+ 32 ビットのヘルプ コンテキスト識別子、**ヘルプ**ファイル。  
   
 ## <a name="remarks"></a>Remarks  
  **Helpstringcontext** C++ 属性と同じ機能を持つ、 [helpstringcontext](http://msdn.microsoft.com/library/windows/desktop/aa366858) ODL 属性。  

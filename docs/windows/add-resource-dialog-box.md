@@ -1,5 +1,5 @@
 ---
-title: リソースの追加 ダイアログ ボックス |Microsoft ドキュメント
+title: 追加のリソース ダイアログ ボックス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,34 +18,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c420a1d72aa4ceca7d71840fcccb451b6e0aba0f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dc7826b10e822b833b7a0a9361d55f74da46342a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857520"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651692"
 ---
 # <a name="add-resource-dialog-box"></a>[リソースの追加] ダイアログ ボックス
 このダイアログ ボックスは、C++ Windows デスクトップ アプリケーション プロジェクトにリソースを追加するときに使用します。  
   
 > [!NOTE]
->  この情報は、ユニバーサル Windows プラットフォーム アプリでのリソースには適用されません。 詳細については、次を参照してください。[アプリのリソースおよびリソース管理システム](/windows/uwp/app-resources/)です。  
+>  この情報は、ユニバーサル Windows プラットフォーム アプリでのリソースには適用されません。 詳細については、次を参照してください。[アプリのリソースとリソース管理システム](/windows/uwp/app-resources/)します。  
   
- **リソースの種類**  
+### <a name="resource-type"></a>リソースの種類 
  作成するリソースの種類を指定します。  
   
- カーソルおよびダイアログ ボックスのリソースのカテゴリを展開すると、さらにリソースを表示できます。 ...\Microsoft Visual Studio でこれらのリソースがある`version`\VC\VCResourceTemplates\\< LCID\>\mfc.rct です。 .Rct ファイルを追加する場合、このディレクトリ内に配置する必要がありますを指定する必要があります、[インクルード パス](../windows/how-to-specify-include-directories-for-resources.md)にします。 これらのファイルのリソースは、該当するカテゴリの第 2 レベルに表示されます。 追加できる .rct ファイル数については、事前に設定された制限はありません。  
+ カーソルおよびダイアログ ボックスのリソースのカテゴリを展開すると、さらにリソースを表示できます。 ...\Microsoft Visual Studio でこれらのリソースがある`version`\VC\VCResourceTemplates\\< LCID\>\mfc.rct します。 .Rct ファイルを追加する、このディレクトリに配置する必要がありますまたはする必要がありますを指定する場合、[インクルード パス](../windows/how-to-specify-include-directories-for-resources.md)にします。 これらのファイルのリソースは、該当するカテゴリの第 2 レベルに表示されます。 追加できる .rct ファイル数については、事前に設定された制限はありません。  
   
  ツリー コントロールの最上位レベルに表示されるリソースは、Visual Studio に用意されている既定のリソースです。  
   
- **新規**  
- 選択した種類に基づいてリソースを作成、**リソースの種類**ボックス。 リソースが適切なエディターで開きます。 たとえば、ダイアログ リソースを作成する場合で開きます、[ダイアログ エディター](../windows/dialog-editor.md)です。  
+### <a name="new"></a>新規作成
+ 選択した型に基づくリソースの作成、**リソースの種類**ボックス。 リソースが適切なエディターで開きます。 たとえば、ダイアログ リソースを作成する場合で開きます、[ダイアログ エディター](../windows/dialog-editor.md)します。  
   
- **Import**  
- 開く、**インポート**をすることができますリソースに移動する ダイアログ ボックスで、現在のプロジェクトにインポートします。 ビットマップ、アイコン、カーソル、HTML リソース ファイル、サウンド (.WAV) リソース ファイル、またはカスタム リソース ファイルをインポートできます。  
+### <a name="import"></a>インポート
+ 表示されます、**インポート**できますを移動するリソースにする ダイアログ ボックスは、現在のプロジェクトにインポートします。 ビットマップ、アイコン、カーソル、HTML リソース ファイル、サウンド (.WAV) リソース ファイル、またはカスタム リソース ファイルをインポートできます。  
   
- **カスタム**  
- 開く、[新規カスタム リソース ダイアログ ボックス](../windows/new-custom-resource-dialog-box.md)カスタム リソースを作成できます。 カスタム リソースを編集するには、バイナリ エディターを使用する必要があります。  
+### <a name="custom"></a>カスタム
+ 開く、[新しいカスタム リソース ダイアログ ボックス](../windows/new-custom-resource-dialog-box.md)では、カスタム リソースを作成できます。 カスタム リソースを編集するには、バイナリ エディターを使用する必要があります。  
   
 ## <a name="requirements"></a>要件  
  なし  

@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fb431c6aad10f7e974ed139ddf83cfb0a58d30a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 73b51afda48fe0653767a40120cc6c0cdc0e831b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465871"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644948"
 ---
 # <a name="callas"></a>call_as
 により、[ローカル](../windows/local-cpp.md)リモート関数が呼び出されると、ローカル関数が呼び出されるように、リモート関数にマップする関数。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 [ call_as(  
    function  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *function*  
  ローカル関数をリモート関数を呼び出すときに呼び出されます。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "39465871"
  **Call_as** C++ 属性と同じ機能を持つ、 [call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) MIDL 属性。  
   
 ## <a name="example"></a>例  
- 次のコードを使用する方法を示しています。 **call_as**リモート処理不可能関数をマップする (**f1**) リモート処理可能な関数に (**Remf1**)。  
+ 次のコードを使用する方法を示しています。 **call_as**リモート処理不可能関数をマップする (`f1`) リモート処理可能な関数に (`Remf1`)。  
   
 ```cpp  
 // cpp_attr_ref_call_as.cpp  

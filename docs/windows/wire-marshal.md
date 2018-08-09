@@ -1,5 +1,5 @@
 ---
-title: wire_marshal |Microsoft ドキュメント
+title: wire_marshal |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c13889c15476ff263658d7b5b4024e7a5deebe5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 37bdb19c8439e9ec6d11d0ace9c064165cf27056
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890214"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646684"
 ---
 # <a name="wiremarshal"></a>wire_marshal
-送信アプリケーションに固有のデータ型の代わりに使用されるデータ型を指定します。  
+アプリケーションに固有のデータ型ではなく転送されるデータ型を指定します。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 [wire_marshal]  
-  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **Wire_marshal** C++ 属性と同じ機能を持つ、 [wire_marshal](http://msdn.microsoft.com/library/windows/desktop/aa367309) MIDL 属性。  
   
 ## <a name="example"></a>例  
  次のコードは、の使い方を示しています**wire_marshal**:。  
   
-```  
+```cpp  
 // cpp_attr_ref_wire_marshal.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -63,8 +61,8 @@ ms.locfileid: "33890214"
   
 |||  
 |-|-|  
-|**対象**|`typedef`|  
-|**反復可能**|×|  
+|**対象**|**typedef**|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

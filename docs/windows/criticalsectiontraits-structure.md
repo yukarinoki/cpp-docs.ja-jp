@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8b10d130190308520771e37e97d34238f75670ad
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 149cb7fba3d0754e47ac656c137af2d9bf759f1a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466684"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642192"
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits 構造体
-無効なクリティカル セクションまたはクリティカル セクションを解放する関数をサポートする CriticalSection オブジェクトを専門としています。  
+専門、`CriticalSection`無効のクリティカル セクションまたはクリティカル セクションを解放する関数をサポートするオブジェクト。  
   
 ## <a name="syntax"></a>構文  
   

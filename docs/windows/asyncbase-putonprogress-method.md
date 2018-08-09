@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1a9460664ed58cf39f7b295e1406649ad1d66ca9
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a99eee63496632b8f0918ee888e6a824424b757d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467418"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649891"
 ---
 # <a name="asyncbaseputonprogress-method"></a>AsyncBase::PutOnProgress メソッド
 進行状況イベント ハンドラーのアドレスを指定した値に設定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 STDMETHOD(  
    PutOnProgress  
 )(TProgress* progressHandler);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *progressHandler*  
  進行状況イベントのハンドラーが設定されているアドレスです。  
   

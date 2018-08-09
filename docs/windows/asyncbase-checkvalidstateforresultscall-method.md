@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::checkvalidstateforresultscall メソッド |Microsoft ドキュメント
+title: Asyncbase::checkvalidstateforresultscall メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7308651726abd03f9bd4c9a32550644bec156432
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dfa3b7222a25ed56d014cc90dbffa5f57a2c9436
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859902"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651909"
 ---
 # <a name="asyncbasecheckvalidstateforresultscall-method"></a>AsyncBase::CheckValidStateForResultsCall メソッド
 現在の非同期状態に非同期操作の結果を収集できるかどうかをテストします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 inline HRESULT CheckValidStateForResultsCall();  
 ```  
   
 ## <a name="return-value"></a>戻り値  
- S_OK の結果を収集することができます。それ以外の場合、E_ILLEGAL_METHOD_CALLE_ILLEGAL_METHOD_CALL です。  
+ 結果を収集する場合は s_ok を返します。それ以外の場合、E_ILLEGAL_METHOD_CALLE_ILLEGAL_METHOD_CALL します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** async.h  

@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 16d01d634b44b4e6da425c40e011106021638305
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 1a180a8923dd5a9e8cb257b12ee0d2ba09df8ed5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461739"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642995"
 ---
 # <a name="changing-the-font-of-text-on-an-image-image-editor-for-icons"></a>イメージのテキストのフォントの変更 (アイコン用イメージ エディター)
 次の手順では、する方法の例を示します。  
@@ -31,13 +31,13 @@ ms.locfileid: "39461739"
   
 ### <a name="to-change-the-font-of-text-on-an-image"></a>イメージのテキストのフォントを変更するには  
   
-1.  C++ Windows フォーム アプリケーションを作成します。 詳細については、次を参照してください。 [Windows アプリケーション プロジェクトを作成する](http://msdn.microsoft.com/b2f93fed-c635-4705-8d0e-cf079a264efa)します。 [Windows フォーム アプリケーション テンプレート](http://msdn.microsoft.com/1babdebf-ab3f-4a64-a608-98499a5b9cea)既定では、プロジェクトに app.ico をという名前のファイルを追加します。  
+1.  C++ Windows フォーム アプリケーションを作成します。 詳細については、次を参照してください。 [Windows アプリケーション プロジェクトを作成する](http://msdn.microsoft.com/b2f93fed-c635-4705-8d0e-cf079a264efa)します。 [Windows フォーム アプリケーション テンプレート](http://msdn.microsoft.com/1babdebf-ab3f-4a64-a608-98499a5b9cea)という名前のファイルを追加します。`app.ico`既定では、プロジェクトにします。  
   
-2.  ソリューション エクスプ ローラーでは、app.ico ファイルをダブルクリックします。 [イメージ エディター](../windows/image-editor-for-icons.md)が開きます。  
+2.  **ソリューション エクスプ ローラー**、app.ico ファイルをダブルクリックします。 [イメージ エディター](../windows/image-editor-for-icons.md)が開きます。  
   
 3.  **イメージ**メニューの **ツール**選び**テキスト ツール**します。 [テキスト ツール ダイアログ ボックス](../windows/text-tool-dialog-box-image-editor-for-icons.md)が表示されます。  
   
-4.  **テキスト ツール**ダイアログ ボックスに「`C++`空のテキスト領域にします。 このテキストで app.ico の左上隅にあるサイズ変更可能なボックスに表示されます、**イメージ エディター**します。  
+4.  **テキスト ツール**ダイアログ ボックスに「`C++`空のテキスト領域にします。 このテキストの左上隅にあるサイズ変更可能なボックスに表示されます`app.ico`の**イメージ エディター**します。  
   
 5.  **イメージ エディター**、サイズ変更可能なボックス、テキストの読みやすさを向上させるために、app.ico の中央にドラッグします。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "39461739"
   
 10. をクリックして、 **OK**ボタンをクリックします。 **テキスト ツール フォント** ダイアログ ボックスが閉じ、新しいフォントの設定は、テキストに適用されます。  
   
-11. をクリックして、**閉じる**のボタンでは、**テキスト ツール** ダイアログ ボックス。 サイズ変更可能なテキストを囲むボックスには、イメージ エディターからは表示されません。  
+11. をクリックして、**閉じる**のボタンでは、**テキスト ツール** ダイアログ ボックス。 サイズ変更可能なテキストを囲むボックスから消え、**イメージ エディター**します。  
   
 ## <a name="see-also"></a>関連項目  
  [グラフィカル リソースの編集](../windows/editing-graphical-resources-image-editor-for-icons.md)   

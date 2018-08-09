@@ -1,5 +1,5 @@
 ---
-title: グラフィカル リソース (アイコン用イメージ エディター) の編集 |Microsoft ドキュメント
+title: グラフィカル リソース (アイコン用イメージ エディター) の編集 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,19 +22,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1de0c53240b1b25d84ae6a61c31d4f734f5c8313
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c6b4aea912398413d43810ad08a2b34e9cb78092
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882499"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642387"
 ---
 # <a name="editing-graphical-resources-image-editor-for-icons"></a>グラフィカル リソースの編集 (アイコン用イメージ エディター)
-グラフィカル リソース、アプリケーション用に定義した画像が表示されます。 フリーハンドの描画または図形を使用して描画できます。 編集、反転、またはサイズ変更、イメージの一部を選択またはイメージの選択した一部のカスタム ブラシを作成してそのブラシで描画します。 イメージのプロパティを定義する、異なる形式で画像を保存し、イメージを別の 1 つの形式に変換できます。  
+グラフィカル リソースは、アプリケーション用に定義したイメージです。 フリーハンドの描画または図形を使用して描画できます。 編集、反転、またはサイズ変更、イメージの一部を選択またはイメージの選択したパーツからカスタム ブラシを作成してそのブラシを使用して描画します。 画像のプロパティを定義、異なる形式で画像を保存、およびイメージの 1 つの形式から変換することができます。  
   
- 新しいグラフィカル リソースを作成するだけでなくすることができます[既存のイメージをインポート](../windows/how-to-import-and-export-resources.md)編集し、プロジェクトに追加します。 またを開き、プロジェクトの一部ではないイメージを編集[スタンドアロン イメージ編集](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)です。  
+ 新しいグラフィカルのリソースを作成するだけでなくすることができます[既存イメージをインポート](../windows/how-to-import-and-export-resources.md)を編集するため、プロジェクトに追加しています。 開いて編集するためのプロジェクトの一部ではないイメージ[スタンドアロン画像編集](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)します。  
   
--   [新しいビットマップやその他のイメージを作成します。](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)  
+-   [新しいビットマップまたはその他のイメージの作成](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)  
   
 -   [選択して、描画ツールの使用](using-a-drawing-tool-image-editor-for-icons.md)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "33882499"
   
 -   [カスタム ブラシの作成](../windows/creating-a-custom-brush-image-editor-for-icons.md)  
   
--   [イメージのプロパティを変更します。](changing-image-properties-image-editor-for-icons.md)  
+-   [画像のプロパティを変更します。](changing-image-properties-image-editor-for-icons.md)  
   
 -   [.Gifs または .jpegs ビットマップの保存](../windows/saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons.md)  
   
@@ -60,14 +60,14 @@ ms.locfileid: "33882499"
   
 -   [[イメージ] メニュー](../windows/image-menu-image-editor-for-icons.md)  
   
--   [イメージ エディター ツールバー](../windows/toolbar-image-editor-for-icons.md)  
+-   [イメージ エディターのツールバー](../windows/toolbar-image-editor-for-icons.md)  
   
 -   [イメージ エディター ウィンドウ](../windows/window-panes-image-editor-for-icons.md)  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 詳細については、管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションは、次を参照してください。[グローバライズと .NET Framework アプリケーションのローカライズ](/dotnet/standard/globalization-localization/index)です。  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
   
 > [!NOTE]
->  イメージ エディターを使用すると、32 ビット イメージを表示できます。ただし、編集はできません。  
+>  使用して、**イメージ エディター**、32 ビットのイメージを表示することができますが、編集することはできません。  
   
 ## <a name="requirements"></a>要件  
  なし  
@@ -75,4 +75,3 @@ ms.locfileid: "33882499"
 ## <a name="see-also"></a>関連項目  
  [アクセラレータ キー](../windows/accelerator-keys-image-editor-for-icons.md)   
  [アイコン用イメージ エディター](../windows/image-editor-for-icons.md)   
-

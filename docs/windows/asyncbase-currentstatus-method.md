@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 316dfea16aa129dcaff42424bef46305d2dd56b4
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 36c3f76e3fc137458acddacd834563d845057a24
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461430"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646576"
 ---
 # <a name="asyncbasecurrentstatus-method"></a>AsyncBase::CurrentStatus メソッド
 現在の非同期操作の状態を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 inline void CurrentStatus(  
    Details::AsyncStatusInternal *status  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *status*  
  この操作が現在の状態を格納する場所です。  
   

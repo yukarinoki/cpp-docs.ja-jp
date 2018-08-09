@@ -1,5 +1,5 @@
 ---
-title: ツールバー (アイコン用イメージ エディター) を非表示の表示と表示 |Microsoft ドキュメント
+title: ツールバー (アイコン用イメージ エディター) を非表示の表示と表示 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d00610d4366f76e07b6f62b5a65416bf37182e2a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 04745cf4344175b37a9e91968861bfbf087fce33
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872989"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649765"
 ---
 # <a name="displaying-or-hiding-the-toolbar-image-editor-for-icons"></a>ツール バーの表示と非表示 (アイコン用イメージ エディター)
-描画ツールの多くはから利用できるため、[キーボード](../windows/accelerator-keys-image-editor-for-icons.md)、イメージ エディター ツールバーを非表示にすると便利な場合があります。  
+描画ツールの多くはから利用できるため、[キーボード](../windows/accelerator-keys-image-editor-for-icons.md)、非表示にする便利な場合があります、**イメージ エディター**ツールバー。  
   
-### <a name="to-display-or-hide-the-image-editor-toolbar"></a>イメージ エディター ツールバーを非表示  
+### <a name="to-display-or-hide-the-image-editor-toolbar"></a>イメージ エディターのツールバーを非表示  
   
-1.  **ビュー**ボタンをクリックし**ツールバー**順に選択**イメージ エディター**です。  
+1.  **ビュー**ボタンをクリックし**ツールバー**選択**イメージ エディター**します。  
   
     > [!NOTE]
-    >  このツールバーからの要素は使用できないときにイメージ ファイル、現在のプロジェクトからまたはソリューションが開いて、イメージ エディターではありません。 参照してください[アイコンまたはその他のイメージを作成する](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)、イメージ ファイルをプロジェクトに追加する方法についてです。  
+    >  このツールバーから要素は使用できないとイメージ ファイル現在のプロジェクトからまたはソリューションがで開いていない、**イメージ エディター**します。 参照してください[アイコンまたはその他のイメージを作成する](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)、イメージ ファイルをプロジェクトに追加する方法について。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 詳細については、管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションは、次を参照してください。[グローバライズと .NET Framework アプリケーションのローカライズ](/dotnet/standard/globalization-localization/index)です。  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
   
- 要件  
-  
+## <a name="requirements"></a>要件  
  なし  
   
 ## <a name="see-also"></a>関連項目  
  [[色] ウィンドウ](../windows/colors-window-image-editor-for-icons.md)   
  [ツールバー](../windows/toolbar-image-editor-for-icons.md)   
  [アイコン用イメージ エディター](../windows/image-editor-for-icons.md)
-

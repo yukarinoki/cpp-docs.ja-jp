@@ -1,5 +1,5 @@
 ---
-title: ボックス化 (C++ コンポーネント拡張) |Microsoft ドキュメント
+title: ボックス化 (C++ コンポーネント拡張) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,40 +15,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1f689255af653e5dfdf69250e4988aa809393461
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 05a0d83de045ed29b20ff14acc7fc81fb684a93e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861358"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650623"
 ---
 # <a name="boxing--c-component-extensions"></a>ボックス化 (C++ コンポーネント拡張)
-Visual C コンパイラが値型と呼ばれるプロセス内のオブジェクトに変換できます*ボックス化*、オブジェクトと呼ばれるプロセスにおける値の型を変換および*アンボックス*です。  
+Visual C コンパイラと呼ばれるプロセス内のオブジェクトに値型に変換できる*ボックス化*、オブジェクトに変換する値の型と呼ばれるプロセスで*ボックス化解除*します。  
   
 ## <a name="all-runtimes"></a>すべてのランタイム  
  (この言語機能にはランタイムに適用される特記事項がありません。)  
   
 ## <a name="windows-runtime"></a>Windows ランタイム  
- C + + CX 値の型をボックス化とボックス化解除の参照型の略式の構文をサポートしています。 値型は `Object` 型の変数に代入されるときにボックス化されます。 `Object` 変数は値型の変数に代入されるときに、かっこ内にボックス化解除する型が指定される場合、つまり、オブジェクト変数が値型にキャストされるときに、ボックス化解除されます。  
+ C + + CX 値型のボックス化とボックス化解除の参照型の略式の構文をサポートしています。 値型は `Object` 型の変数に代入されるときにボックス化されます。 `Object` 変数は値型の変数に代入されるときに、かっこ内にボックス化解除する型が指定される場合、つまり、オブジェクト変数が値型にキャストされるときに、ボックス化解除されます。  
   
-```  
-  
+```cpp  
   Platform::Object^  
   object_variable  = value_variable;  
 value_variable = (value_type) object_variable;  
-  
 ```  
   
 ### <a name="requirements"></a>要件  
- コンパイラ オプション: **/ZW**  
+ コンパイラ オプション: `/ZW`  
   
 ### <a name="examples"></a>使用例  
- 次のコード例では、`DateTime` 値をボックス化およびボックス化解除します。 最初に、現在の日付と時刻を表す DateTime 値を取得し、それを DateTime 変数に代入します。 次に、DateTime を Object 変数に代入することでボックス化します。 最後に、ボックス化された値を別の DateTime 変数に代入することでボックス化解除します。  
+ 次のコード例では、`DateTime` 値をボックス化およびボックス化解除します。 例を最初に、取得、`DateTime`値を代入して、現在の日付と時刻を表す、`DateTime`変数。 次に、`DateTime`に割り当てることでボックス化、`Object`変数。 別に割り当てることでボックス化された値が最後に、ボックス化解除`DateTime`変数。  
   
- この例をテストするには、BlankApplication プロジェクトを作成し、BlankPage::OnNavigatedTo() メソッドを置き換えた後、右かっこの位置と変数 str1 への代入の位置にブレークポイントを指定します。 実行位置が右かっこに到達したら、str1 を確認します。  
+ 例をテストするには、作成、`BlankApplication`プロジェクトで、置換、`BlankPage::OnNavigatedTo()`メソッド、し、右角かっこと変数への割り当てにブレークポイントを指定`str1`します。 この例では、右角かっこに達すると、確認`str1`します。  
   
-```  
-  
+```cpp  
 void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)  
 {  
     using namespace Windows::Globalization::DateTimeFormatting;  
@@ -78,13 +75,12 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
     String^ str2 = dtf->Format(dtAnother);  
     OutputDebugString(str2->Data());  
 }  
-  
 ```  
   
- 詳細については、次を参照してください。[ボックス化 (C + + CX)](http://msdn.microsoft.com/library/windows/apps/hh969554.aspx)です。  
+ 詳細については、次を参照してください。[ボックス化 (C + + CX)](http://msdn.microsoft.com/library/windows/apps/hh969554.aspx)します。  
   
 ## <a name="common-language-runtime"></a>共通言語ランタイム  
- Visual C++ コンパイラでは、値型を <xref:System.Object> にボックス化できるようになりました。  これは、値型を <xref:System.Object> に変換するコンパイラで定義済みの変換により可能になりました。  
+ Visual C++ コンパイラでは、値型を <xref:System.Object> にボックス化できるようになりました。 これは、値型を <xref:System.Object> に変換するコンパイラで定義済みの変換により可能になりました。  
   
  ボックス化とボックス化解除を利用することで、値型をオブジェクトとして扱うことができます。 値型 (構造体型や int などの組み込み型を含む) を、<xref:System.Object> 型との間で相互に変換できます。  
   
@@ -99,10 +95,9 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
 -   [標準変換と暗黙のボックス化](../dotnet/standard-conversions-and-implicit-boxing.md)  
   
 ### <a name="requirements"></a>要件  
- コンパイラ オプション: **/clr**  
+ コンパイラ オプション: `/clr`  
   
 ### <a name="examples"></a>使用例  
- **例**  
   
  次の例では、暗黙的なボックス化の動作を示します。  
   
@@ -175,8 +170,6 @@ int main() {
    func2((V2^)v2);   // Using explicit boxing: calls func2(System::ValueType^)  
 }  
 ```  
-  
- **出力**  
   
 ```Output  
 1  

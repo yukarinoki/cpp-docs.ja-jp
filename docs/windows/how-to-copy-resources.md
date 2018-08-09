@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f29a115d20eca90b66a876bf1b5070052d90008d
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: eb93f90b6d96d679b055893dc13adaa0d3c2e780
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570686"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642982"
 ---
 # <a name="how-to-copy-resources"></a>方法: リソースをコピーする
 変更せずに別の 1 つのファイルからのリソースをコピーすることができますもできます[コピー中に、言語またはリソースの条件を変更する](../windows/how-to-change-the-language-or-condition-of-a-resource-while-copying.md)します。  
@@ -44,23 +44,23 @@ ms.locfileid: "39570686"
   
 1.  スタンドアロン両方のリソース ファイルを開きます (詳細については、次を参照してください。 [、.rc ファイルの外部のプロジェクトでリソースを表示する](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md))。 たとえば、Source1.rc と Source2.rc を開きます。  
   
-2.  最初の .rc ファイル内には、コピーするリソースをクリックします。 たとえば、Source1.rc、クリックして**IDD_DIALOG1**します。  
+2.  最初の .rc ファイル内には、コピーするリソースをクリックします。 たとえば、 `Source1.rc`、 をクリックして**IDD_DIALOG1**します。  
   
-3.  CTRL キーを押しながらし、2 番目の .rc ファイルにリソースをドラッグします。 たとえば、ドラッグ**IDD_DIALOG1** Source1.rc Source2.rc するからです。  
+3.  CTRL キーを押しながらし、2 番目の .rc ファイルにリソースをドラッグします。 たとえば、ドラッグ**IDD_DIALOG1**から`Source1.rc`に`Source2.rc`します。  
   
     > [!NOTE]
-    >  CTRL キーを保持することがなくリソースをドラッグするには、コピーすることではなく、リソースが移動します。  
+    >  保持することがなくリソースをドラッグする、 **Ctrl**キーはコピーすることではなく、リソースが移動します。  
   
 ### <a name="to-copy-resources-using-copy-and-paste"></a>コピーを使用してリソースをコピーして貼り付ける  
   
 1.  スタンドアロン両方のリソース ファイルを開きます (詳細については、次を参照してください。 [、.rc ファイルの外部のプロジェクトでリソースを表示する](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md))。 たとえば、Source1.rc と source2.rc を開きます。  
   
-2.  リソース (たとえば、Source1.rc) をコピーするソース ファイルでリソースを右クリックし **コピー**ショートカット メニューから。  
+2.  リソースをコピーするソース ファイル内 (たとえば、 `Source1.rc`) でリソースを右クリックし、選択**コピー**ショートカット メニューから。  
   
-3.  リソース (たとえば、Source2.rc) を貼り付けたいとすると、リソース ファイルを右クリックします。 選択**貼り付け**ショートカット メニューから。  
+3.  貼り付けなど、リソース ファイルを右クリックし (たとえば、 `Source2.rc`)。 選択**貼り付け**ショートカット メニューから。  
   
     > [!NOTE]
-    >  ことはできませんドラッグ アンド ドロップ、コピー、切り取り、またはプロジェクト ([リソース] ビュー) 内のリソース ファイルとスタンドアロンの .rc ファイル (ドキュメント ウィンドウで開く) の間に貼り付けます。 これは、製品の以前のバージョンで実行できます。  
+    >  ドラッグ アンド ドロップ、コピー、切り取り、またはプロジェクト内のリソース ファイル間に貼り付けることはできません (**リソース ビュー**) とスタンドアロンの .rc ファイル (ドキュメント ウィンドウで開きます)。 これは、製品の以前のバージョンで実行できます。  
   
     > [!NOTE]
     >  シンボル名または既存のファイル内の値との競合を避けるためには、Visual C が転送されるリソースのシンボル値またはシンボル名や値を変更、新しいファイルをコピーする場合。  
@@ -68,7 +68,6 @@ ms.locfileid: "39570686"
  マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
   
 ## <a name="requirements"></a>要件  
-  
  Win32  
   
 ## <a name="see-also"></a>関連項目  

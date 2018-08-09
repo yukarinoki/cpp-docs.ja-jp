@@ -13,12 +13,12 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4cd8e8c6e3b9626000a8bef3d86a89f5e122d611
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 22f90be7d89a006ccbfdfde2f4c2580a7b2a13de
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571530"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643846"
 ---
 # <a name="desktop-applications-visual-c"></a>デスクトップ アプリケーション (Visual C)
 A*デスクトップ アプリケーション*C++ では、ウィンドウ、またはシステム コンソールで実行される、Windows Api との完全なセットにアクセスできるネイティブ アプリケーション。 C++ でデスクトップ アプリケーションは、(Windows XP が不要になった正式にサポートされているし、それ以降に導入された多くの Windows Api があります) は、Windows XP、Windows 10 で実行できます。
@@ -26,11 +26,12 @@ A*デスクトップ アプリケーション*C++ では、ウィンドウ、ま
 デスクトップ アプリケーションは、ユニバーサル Windows プラットフォーム (UWP) アプリ、または Windows 10 を実行している Pc でも XBox、Windows Phone、Surface Hub、およびその他のデバイスで実行できるとは異なります。 デスクトップの vs の詳細についてはします。UWP アプリケーションを参照してください[テクノロジを選ぶ](https://msdn.microsoft.com/library/windows/desktop/dn614993\(v=vs.85\).aspx)します。  
 
 
-**デスクトップ ブリッジ**Windows API 設定を Windows 10 では、既存のデスクトップ アプリケーションまたは COM オブジェクトを UWP アプリとしてパッケージ化し、タッチ、または最新の Api を呼び出すなど UWP の機能を追加できます。 Visual Studio、およびパッケージをパッケージ化し、間の通信に Windows Api を使用して、1 つにまとめることでデスクトップ ソリューションに UWP アプリを追加することもできます。  
+### <a name="desktop-bridge"></a>デスクトップ ブリッジ
+Windows 10 で、既存のデスクトップ アプリケーションまたは COM オブジェクトを UWP アプリとしてパッケージ化し、タッチなどの UWP 機能を追加したり、最新の Windows API のセットから Api を呼び出します。 Visual Studio、およびパッケージをパッケージ化し、間の通信に Windows Api を使用して、1 つにまとめることでデスクトップ ソリューションに UWP アプリを追加することもできます。  
    
 Visual Studio 2017 バージョン 15.4 以降では、既存のデスクトップ アプリケーションをパッケージ化の作業を大幅に簡略化するには、Windows アプリケーション パッケージ プロジェクトを作成することができます。 に関してどのようなレジストリ呼び出しは、いくつかの制限が適用されます。 または、デスクトップ アプリケーションの Api を使用して、、多くの場合、アプリ パッケージの実行中に同様の機能を実現するために代替のコード パスを作成することができます。 詳細については、[デスクトップ ブリッジ](/windows-uwp/porting/desktop-to-uwp-root)に関するページをご覧ください。  
   
- **用語集**  
+### <a name="terminology"></a>用語  
   
 -   A *Win32*アプリケーションは、C++ でデスクトップ アプリケーションを使用して、ネイティブの Windows [Windows C Api および COM Api](https://msdn.microsoft.com/library/windows/desktop/ff818516\(v=vs.85\).aspx) CRT と標準ライブラリ Api、およびサード パーティ製のライブラリです。 ウィンドウで実行される Win32 アプリケーションでは、Windows プロシージャ関数内での Windows メッセージを明示的に使用する開発者が必要です。 名前にかかわらず、Win32 アプリケーションは、32 ビット (x86) または 64 ビット (x64) バイナリとしてコンパイルできます。 Visual Studio ide、Win32、x86 の用語は同義です。  
   

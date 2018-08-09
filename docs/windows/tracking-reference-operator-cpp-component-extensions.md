@@ -1,5 +1,5 @@
 ---
-title: 演算子の追跡参照 (C++ コンポーネント拡張) |Microsoft ドキュメント
+title: 参照演算子 (C++ コンポーネント拡張) の追跡 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,28 +18,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c460174fad6a287acfd434b1589e73153aa0b121
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e645d39a6373362a33e4efd25019d43cad348bbc
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890871"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651832"
 ---
 # <a name="tracking-reference-operator-c-component-extensions"></a>参照演算子の追跡 (C++ コンポーネント拡張)
-A*追跡参照*(`%`) 通常の C++ 参照のように動作 (`&`) オブジェクトの参照カウントがインクリメントされますが、オブジェクトが追跡参照に割り当てられている場合、します。  
+A*追跡参照*(`%`) 通常の C++ 参照のように動作 (`&`) オブジェクトの参照カウントがインクリメントされますオブジェクトが追跡参照に割り当てられるとき、点が異なります。  
   
 ## <a name="all-platforms"></a>すべてのプラットフォーム  
  追跡参照には次の特徴があります。  
   
 -   オブジェクトを追跡参照に割り当てると、オブジェクトの参照カウントがインクリメントされます。  
   
--   ネイティブ参照 (&) は * を逆参照した結果です。 追跡参照 (%) は ^ を逆参照した結果です。 オブジェクトに対する % がある限り、そのオブジェクトはメモリに残り続けることになります。  
+-   ネイティブ参照 (`&`)、結果は、逆参照する場合、`*`します。 追跡参照 (`%`)、結果は、逆参照する場合、`^`します。 ある限り、`%`オブジェクトにオブジェクトがメモリ内に生かしてに維持します。  
   
 -   ドット (`.`) メンバー アクセス演算子は、オブジェクトのメンバーにアクセスするために使用されます。  
   
 -   追跡参照は、値型およびハンドル (たとえば `String^`) に対して有効です。  
   
--   追跡参照に null 値または `nullptr` 値を割り当てることはできません。 追跡参照は、必要に応じて何度でも、別の有効なオブジェクトに再割り当てされる場合があります。  
+-   追跡参照に null を割り当てることはできませんまたは**nullptr**値。 追跡参照は、必要に応じて何度でも、別の有効なオブジェクトに再割り当てされる場合があります。  
   
 -   追跡参照は、アドレスを受け取る単項演算子としては使用できません。  
   
@@ -55,7 +55,6 @@ Foo^ spFoo2 = %srFoo;
  次の例では、% を受け取る関数に ^ を渡す方法を示します。  
   
 ```  
-  
 ref class Foo sealed {};  
   
     // internal or private  
@@ -85,11 +84,10 @@ ref class Foo sealed {};
 -   [方法: C++/CLI で追跡参照を使用する](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
   
 ### <a name="examples"></a>使用例  
- **例**  
   
- 次の C++/CLI の例では、ネイティブ型およびマネージ型で追跡参照を使用する方法を示します。  
+ 次の C++/CLI の例では、ネイティブ型およびマネージド型で追跡参照を使用する方法を示します。  
   
-```  
+```cpp  
 // tracking_reference_1.cpp  
 // compile with: /clr  
 ref class MyClass {  
@@ -123,14 +121,11 @@ int main() {
   
    delete[] pi;  
 }  
-  
 ```  
-  
- **例**  
   
  次の C++/CLI の例では、配列に追跡参照をバインドする方法を示します。  
   
-```  
+```cpp  
 // tracking_reference_2.cpp  
 // compile with: /clr  
 using namespace System;  

@@ -1,5 +1,5 @@
 ---
-title: SyncLockWithStatusT クラス |Microsoft ドキュメント
+title: SyncLockWithStatusT クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 51e5a66358890fc20731fb5cb657616484e19db4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 66fd02ff9af4f7a5c1cb85b58e966622bed0060a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890981"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648692"
 ---
 # <a name="synclockwithstatust-class"></a>SyncLockWithStatusT クラス
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -36,14 +36,14 @@ template <
 class SyncLockWithStatusT : public SyncLockT<SyncTraits>;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `SyncTraits`  
- 排他的に実行できる型またはリソースの所有権を共有します。  
+### <a name="parameters"></a>パラメーター  
+ *SyncTraits*  
+ 排他的に使用できる型またはリソースの所有権を共有します。  
   
-## <a name="remarks"></a>コメント  
- 排他的に実行できる型を表すまたはリソースの所有権を共有します。  
+## <a name="remarks"></a>Remarks  
+ 排他的に使用できる型を表すか、リソースの所有権を共有します。  
   
- SyncLockWithStatusT クラスが実装に使用される、[ミュー テックス](../windows/mutex-class1.md)と[セマフォ](../windows/semaphore-class.md)クラスです。  
+ **SyncLockWithStatusT**クラスが実装するために使用される、[ミュー テックス](../windows/mutex-class1.md)と[セマフォ](../windows/semaphore-class.md)クラス。  
   
 ## <a name="members"></a>メンバー  
   
@@ -51,26 +51,26 @@ class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
   
 |名前|説明|  
 |----------|-----------------|  
-|[SyncLockWithStatusT::SyncLockWithStatusT コンストラクター](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|SyncLockWithStatusT クラスの新しいインスタンスを初期化します。|  
+|[SyncLockWithStatusT::SyncLockWithStatusT コンストラクター](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|新しいインスタンスを初期化、 **SyncLockWithStatusT**クラス。|  
   
 ### <a name="protected-constructors"></a>プロテクト コンストラクター  
   
 |名前|説明|  
 |----------|-----------------|  
-|[SyncLockWithStatusT::SyncLockWithStatusT コンストラクター](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|SyncLockWithStatusT クラスの新しいインスタンスを初期化します。|  
+|[SyncLockWithStatusT::SyncLockWithStatusT コンストラクター](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|新しいインスタンスを初期化、 **SyncLockWithStatusT**クラス。|  
   
 ### <a name="public-methods"></a>パブリック メソッド  
   
 |名前|説明|  
 |----------|-----------------|  
-|[SyncLockWithStatusT::GetStatus メソッド](../windows/synclockwithstatust-getstatus-method.md)|SyncLockWithStatusT、現在の待機の状態を取得します。|  
-|[SyncLockWithStatusT::IsLocked メソッド](../windows/synclockwithstatust-islocked-method.md)|SyncLockWithStatusT、現在、リソースを所有しているかどうかを示しますSyncLockWithStatusT オブジェクトは、つまり、*ロック*です。|  
+|[SyncLockWithStatusT::GetStatus メソッド](../windows/synclockwithstatust-getstatus-method.md)|現在の待機状態を取得**SyncLockWithStatusT**オブジェクト。|  
+|[SyncLockWithStatusT::IsLocked メソッド](../windows/synclockwithstatust-islocked-method.md)|示すかどうか、現在**SyncLockWithStatusT**リソースを所有するオブジェクトです。 つまり、 **SyncLockWithStatusT**オブジェクトが*ロック*します。|  
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
-|[SyncLockWithStatusT::status_ データ メンバー](../windows/synclockwithstatust-status-data-member.md)|保持しますが、基になる結果にロック操作の後に操作を待機するオブジェクトは、現在の SyncLockWithStatusT オブジェクトに基づいています。|  
+|[SyncLockWithStatusT::status_ データ メンバー](../windows/synclockwithstatust-status-data-member.md)|基になる待機操作の結果を保持するオブジェクトのロック操作が現在に基づいて後**SyncLockWithStatusT**オブジェクト。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `SyncLockT`  

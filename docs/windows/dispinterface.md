@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6497d6da630095f4d7691edb076fc354b87e5a13
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 18308cc66e2a01aa5e0396f098096ee9d49416bf
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569215"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644331"
 ---
 # <a name="dispinterface"></a>dispinterface
 ディスパッチ インターフェイスとしてインターフェイスを .idl ファイルに配置します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 [dispinterface]  
 ```  
   
@@ -40,7 +40,7 @@ ms.locfileid: "39569215"
   
  MIDL のドキュメントには [dispinterface](http://msdn.microsoft.com/library/windows/desktop/aa366802) の次のような使用例があります。  
   
-```  
+```cpp  
 dispinterface helloPro   
    { interface hello; };   
 ```  
@@ -59,7 +59,7 @@ dispinterface helloPro
 |**対象**|**interface**|  
 |**反復可能**|いいえ|  
 |**必要な属性**|なし|  
-|**無効な属性**|**dual**、 **object**、 **oleautomation**、 `local`、 **ms_union**|  
+|**無効な属性**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|  
   
  詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  
   

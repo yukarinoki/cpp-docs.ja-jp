@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9b58aa072af5ff96093f9999d212f8b19ff0571c
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 718a62d627f99eff24fd7c10e0280607a52e2be7
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569818"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646888"
 ---
 # <a name="eventsourcetargetspointerlock-data-member"></a>EventSource::targetsPointerLock_ データ メンバー
 このイベント ハンドラーの中にも、内部データ メンバーへのアクセスを同期**EventSource**の追加、削除、または呼び出されました。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 Wrappers::SRWLock targetsPointerLock_;  
 ```  
   

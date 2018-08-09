@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18ce213d6c4bedd0bcaa2be1af33281ae69f6ad1
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 43e4932f93c4b9954343df2aecd4db3b13ebc147
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461506"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649206"
 ---
 # <a name="activationfactory-class"></a>ActivationFactory クラス
 1 つ以上のクラスを Windows ランタイムによってアクティブ化できるようにします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template <  
    typename I0 = Details::Nil,  
    typename I1 = Details::Nil,  
@@ -38,7 +38,7 @@ template <
 class ActivationFactory : public Details::RuntimeClass<typename Details::InterfaceListHelper<IActivationFactory, I0, I1, I2, Details::Nil>::TypeT, RuntimeClassFlags<WinRt | InhibitWeakReference>, false>;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *I0*  
  0 番目のインターフェイスです。  
   
@@ -74,7 +74,7 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
 |[ActivationFactory::AddRef メソッド](../windows/activationfactory-addref-method.md)|現在の参照カウントをインクリメント**ActivationFactory**オブジェクト。|  
 |[ActivationFactory::GetIids メソッド](../windows/activationfactory-getiids-method.md)|実装されたインターフェイス Id の配列を取得します。|  
 |[ActivationFactory::GetRuntimeClassName メソッド](../windows/activationfactory-getruntimeclassname-method.md)|オブジェクトのランタイム クラス名を取得、現在**ActivationFactory**をインスタンス化します。|  
-|[ActivationFactory::GetTrustLevel メソッド](../windows/activationfactory-gettrustlevel-method.md)|現在の ActivationFactory がインスタンス化するオブジェクトの信頼レベルを取得します。|  
+|[ActivationFactory::GetTrustLevel メソッド](../windows/activationfactory-gettrustlevel-method.md)|オブジェクトの信頼レベルを取得、現在**ActivationFactory**をインスタンス化します。|  
 |[ActivationFactory::QueryInterface メソッド](../windows/activationfactory-queryinterface-method.md)|指定したインターフェイスへのポインターを取得します。|  
 |[ActivationFactory::Release メソッド](../windows/activationfactory-release-method.md)|現在の参照カウントをデクリメント**ActivationFactory**オブジェクト。|  
   

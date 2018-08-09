@@ -1,5 +1,5 @@
 ---
-title: 編集 (アクセラレータ テーブルで) |Microsoft ドキュメント
+title: アクセラレータ テーブルでの編集 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5defa8cdd2e2fb96ceff0d333f06698154baf977
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b0844ab8a4233e2204c42a8d165309c89026fb01
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871729"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646229"
 ---
 # <a name="editing-in-an-accelerator-table"></a>アクセラレータ テーブルでのエントリの編集
 ### <a name="to-edit-in-an-accelerator-table"></a>アクセラレータ テーブルで編集するには  
   
-1.  アイコンをダブルクリックして、アクセラレータ テーブルを開く[リソース ビュー](../windows/resource-view-window.md)です。  
+1.  アイコンをダブルクリックして、アクセラレータ テーブルを開く[リソース ビュー](../windows/resource-view-window.md)します。  
   
     > [!NOTE]
     >  プロジェクトに .rc ファイルがまだ含まれていない場合は、「 [リソース スクリプト ファイルの新規作成](../windows/how-to-create-a-resource-script-file.md)」を参照してください。  
@@ -37,16 +37,15 @@ ms.locfileid: "33871729"
   
     -   [ID](id-property.md)でリストまたは入力して編集を選択します。  
   
-    -   [修飾子](../windows/accelerator-modifier-property.md)、一覧から選択します。  
+    -   [修飾子](../windows/accelerator-modifier-property.md)を一覧から選択します。  
   
     -   [キー](../windows/accelerator-key-property.md)でリストまたは入力して編集を選択します。  
   
-    -   [型](../windows/accelerator-type-property.md)、一覧から ASCII または VIRTKEY を選択します。  
+    -   [型](../windows/accelerator-type-property.md)、 **ASCII**または**VIRTKEY**一覧から。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。*  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。  
   
- **必要条件**  
-  
+## <a name="requirements"></a>要件  
  Win32  
   
 ## <a name="see-also"></a>関連項目  

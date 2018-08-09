@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92add8f79abd3aac7c11142fa67ea3b4bcd237d5
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: dcf5a095167e48a52405978a105cadaddfa870f2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466203"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647815"
 ---
 # <a name="asyncbase-class"></a>AsyncBase クラス
 Windows ランタイムの非同期ステート マシンを実装します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template <  
    typename TComplete,  
    typename TProgress = Details::Nil,  
@@ -44,7 +44,7 @@ template <
 class AsyncBase<TComplete, Details::Nil, resultType> : public Microsoft::WRL::Implements<IAsyncInfo>;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *TComplete*  
  非同期操作の完了時に呼び出されるイベント ハンドラー。  
   
@@ -52,7 +52,7 @@ class AsyncBase<TComplete, Details::Nil, resultType> : public Microsoft::WRL::Im
  実行中の非同期操作が現在の操作の進行状況を報告したときに呼び出されるイベント ハンドラー。  
   
  *resultType*  
- 1 つ、 [AsyncResultType](../windows/asyncresulttype-enumeration.md)列挙値。 既定では、SingleResult します。  
+ 1 つ、 [AsyncResultType](../windows/asyncresulttype-enumeration.md)列挙値。 既定では、`SingleResult`します。  
   
 ## <a name="members"></a>メンバー  
   

@@ -19,23 +19,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 40f79bc6afe47bfed92d096dace59ef97eed68e1
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 2429b86ad872ea310d690187c7283b8498ece3f5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568879"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645127"
 ---
 # <a name="generic-functions-ccli"></a>ジェネリック関数 (C++/CLI)
 ジェネリック関数は、型パラメーターで宣言された関数です。 呼び出されると、型パラメーターではなく実際の型が使用されます。  
   
 ## <a name="all-platforms"></a>すべてのプラットフォーム  
- **解説**  
+### <a name="remarks"></a>Remarks
   
  この機能は、すべてのプラットフォームには適用されません。  
   
 ## <a name="windows-runtime"></a>Windows ランタイム  
- **解説**  
+### <a name="remarks"></a>Remarks
   
  この機能は、Windows ランタイムでサポートされていません。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "39568879"
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 [attributes] [modifiers]  
 return-type identifier<type-parameter identifier(s)>  
 [type-parameter-constraints clauses]  
@@ -94,7 +94,6 @@ return-type identifier<type-parameter identifier(s)>
  コンパイラ オプション: `/clr`  
   
 ### <a name="examples"></a>使用例  
- **例**  
   
  次のコード サンプルでは、ジェネリック関数を示します。  
   
@@ -129,8 +128,6 @@ int main() {
 }  
 ```  
   
- **例**  
-  
  ジェネリック関数は、署名またはアリティ、関数の型パラメーターの数に基づいてオーバー ロードできます。 また、ジェネリック関数オーバー ロードできます、同じ名前の非ジェネリック関数と関数がいくつかの型パラメーターが異なる限り、します。 たとえば、次の関数をオーバー ロードできます。  
   
 ```cpp  
@@ -146,8 +143,6 @@ ref struct MyClass {
    void MyMythod(int i) {}  
 };  
 ```  
-  
- **例**  
   
  次の例では、ジェネリック関数を使用して、配列内の最初の要素を検索します。 宣言`MyClass`、基底クラスから継承される`MyBaseClass`します。 `MyClass` ジェネリック関数を含む`MyFunction`、もう 1 つの汎用関数を呼び出し`MyBaseClassFunction`、基底クラス内で。 `main`、ジェネリックの関数では、 `MyFunction`、別の型引数を使用すると呼びます。  
   
@@ -184,8 +179,6 @@ int main() {
    myObj->MyFunction<String^>("Hello generic functions!"));  
 }  
 ```  
-  
- **出力**  
   
 ```Output  
 My function returned an int: 2003  

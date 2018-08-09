@@ -1,5 +1,5 @@
 ---
-title: Comptrrefbase::ptr _ データ メンバー |Microsoft ドキュメント
+title: Comptrrefbase::ptr _ データ メンバー |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d45181e5db5fe16b6eada23ba8d6c72193fe3ae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5ff52245f518158c3ca5c44c6af88307d9a55ab4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883568"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644844"
 ---
 # <a name="comptrrefbaseptr-data-member"></a>ComPtrRefBase::ptr_ データ メンバー
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 T* ptr_;  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  現在のテンプレート パラメーターで指定された型へのポインター。  
   
-## <a name="remarks"></a>コメント  
- `ptr_` 保護されたデータ メンバーです。  
+## <a name="remarks"></a>Remarks  
+ **ptr _** は保護されたデータのメンバーです。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** client.h  

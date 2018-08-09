@@ -1,5 +1,5 @@
 ---
-title: Simpleactivationfactory::getruntimeclassname メソッド |Microsoft ドキュメント
+title: Simpleactivationfactory::getruntimeclassname メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e001d0269c21026bdd00abcdd4d257f11d601cf6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c6c6731c4c7787f3d81a4e67eac2861a46bfe1a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889034"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644409"
 ---
 # <a name="simpleactivationfactorygetruntimeclassname-method"></a>SimpleActivationFactory::GetRuntimeClassName メソッド
 
-によって指定されたクラスのインスタンスのランタイム クラス名を取得、`Base`クラス テンプレート パラメーター。
+指定されたクラスのインスタンスのランタイム クラス名を取得、`Base`クラス テンプレート パラメーター。
 
 ## <a name="syntax"></a>構文
 
@@ -43,9 +43,9 @@ STDMETHOD( GetRuntimeClassName )(
 
 成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-場合&#95; &#95;WRL_STRICT&#95; &#95;は、定義されている、assert エラーが発生して、クラスが指定されている場合、`Base`から派生したクラス テンプレート パラメーターはありません[RuntimeClass](../windows/runtimeclass-class.md)、かで構成されていません、WinRt または WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列挙値。
+場合&#95; &#95;WRL_STRICT&#95; &#95;は、定義されている、assert エラーが発生して、クラスが指定されている場合、`Base`クラス テンプレート パラメーターはありませんから派生した[RuntimeClass](../windows/runtimeclass-class.md)で構成されていないか、WinRt または WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列挙値。
 
 ## <a name="requirements"></a>要件
 
@@ -54,5 +54,4 @@ STDMETHOD( GetRuntimeClassName )(
 **名前空間:** Microsoft::WRL
 
 ## <a name="see-also"></a>関連項目
-
-[SimpleActivationFactory クラス](../windows/simpleactivationfactory-class.md)
+ [SimpleActivationFactory クラス](../windows/simpleactivationfactory-class.md)

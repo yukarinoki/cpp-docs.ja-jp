@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ac043a76ab70c77bd8cdb3a2dd0c66498e409171
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 6474b659070793ddfa4e21d15e65be30f16a49bb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463243"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641809"
 ---
 # <a name="abstract--c-component-extensions"></a>abstract (C++ コンポーネント拡張)
 **抽象**キーワードは、いずれかを宣言します。  
@@ -33,16 +33,16 @@ ms.locfileid: "39463243"
 -   型のメンバー関数を派生型でのみ定義できる。  
   
 ## <a name="all-platforms"></a>すべてのプラットフォーム  
- **構文**  
+### <a name="syntax"></a>構文 
   
-```  
+```cpp  
       class-declaration  
       class-identifier  
       abstract {}  
 virtualreturn-typemember-function-identifier() abstract ;  
 ```  
   
- **解説**  
+### <a name="remarks"></a>Remarks
   
  最初の例の構文では、abstract (抽象) にするクラスを宣言します。 *クラス宣言*コンポーネントは、いずれかのネイティブの C++ 宣言を指定できます (**クラス**または**構造体**)、または C++ の拡張機能の宣言 (**のrefクラス**または**ref 構造体**) 場合、`/ZW`または`/clr`コンパイラ オプションを指定します。  
   
@@ -58,17 +58,16 @@ virtualreturn-typemember-function-identifier() abstract ;
  詳細については、次を参照してください。 [Ref クラスと構造体](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx)します。  
   
 ### <a name="requirements"></a>要件  
- コンパイラ オプション: **/ZW**  
+ コンパイラ オプション: `/ZW`  
   
 ## <a name="common-language-runtime"></a>共通言語ランタイム 
   
 ### <a name="requirements"></a>要件  
- コンパイラ オプション: **/clr**  
+ コンパイラ オプション: `/clr`  
   
 ### <a name="examples"></a>使用例  
- **例**  
   
- 次のコード例では、`X` クラスに `abstract` が指定されているため、エラーが生成されます。  
+ 次のコード例では、ため、エラーが生成されますクラス`X`がマークされている**抽象**します。  
   
 ```cpp  
 // abstract_keyword.cpp  
@@ -83,9 +82,7 @@ int main() {
 }  
 ```  
   
- **例**  
-  
- 次のコード例では、`abstract` として指定されたネイティブ クラスがインスタンス化されるため、エラーが生成されます。 このエラーは `/clr` コンパイラ オプションの有無にかかわらず発生します。  
+ 次のコード例では、マークされているネイティブ クラスをインスタンス化ため、エラーが生成されます**抽象**します。 このエラーは `/clr` コンパイラ オプションの有無にかかわらず発生します。  
   
 ```cpp  
 // abstract_keyword_2.cpp  
@@ -99,9 +96,7 @@ int main() {
                     // cannot be instantiated. See declaration of 'X'}  
 ```  
   
- **例**  
-  
- 次のコード例では、関数 `f` に定義が含まれている一方で `abstract` が指定されているため、エラーが生成されます。 この例の最後のステートメントで、抽象仮想関数を宣言することは純粋仮想関数を宣言することと同じであることを示しています。  
+ 次のコード例では、ため、エラーが生成されます関数`f`定義が含まれていますが、設定されて**抽象**します。 この例の最後のステートメントで、抽象仮想関数を宣言することは純粋仮想関数を宣言することと同じであることを示しています。  
   
 ```cpp  
 // abstract_keyword_3.cpp  

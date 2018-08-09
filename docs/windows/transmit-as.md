@@ -1,5 +1,5 @@
 ---
-title: transmit_as |Microsoft ドキュメント
+title: transmit_as |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0c4d5fc3101e7eb0e09f33c95cb0f73dd0d2b3d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c1e1ecfb118fb391cf392b411a4664513972ed42
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890413"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642526"
 ---
 # <a name="transmitas"></a>transmit_as
-転送された型を持つクライアントとサーバー アプリケーションは、次の操作、表示の種類を関連付けるようにコンパイラに指示します。  
+クライアントとサーバー アプリケーションは、次の操作、表現の型を転送の型に関連付けるようにコンパイラに指示します。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
-      [ transmit_as(  
+[ transmit_as(  
    type  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `type`  
+### <a name="parameters"></a>パラメーター  
+ *type*  
  クライアントとサーバー間で送信されるデータ型を指定します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **Transmit_as** C++ 属性と同じ機能を持つ、 [transmit_as](http://msdn.microsoft.com/library/windows/desktop/aa367286) MIDL 属性。  
   
 ## <a name="example"></a>例  
  次のコードの使い方を示しています、 **transmit_as**属性。  
   
-```  
+```cpp  
 // cpp_attr_ref_transmit_as.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -80,8 +79,8 @@ struct _TREE_NODE_TYPE * right;
   
 |||  
 |-|-|  
-|**対象**|`typedef`|  
-|**反復可能**|×|  
+|**対象**|**typedef**|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

@@ -1,5 +1,5 @@
 ---
-title: Dominant コントロールの指定 |Microsoft ドキュメント
+title: 主要なコントロールを指定する |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07bf73fdcd69866a811cd37af6ef59aef062c01c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4c1988e05bbdf8f700688bb4b989cf5576cb86f4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889654"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642917"
 ---
 # <a name="specifying-the-dominant-control"></a>最も優先度の高いコントロールの指定
 最初に選択されているコントロールは、主要なコントロールです。  
   
 ### <a name="to-specify-the-dominant-control"></a>主要なコントロールを指定するには  
   
-1.  押しながら、 **CTRL**キーし、サイズやその他のコントロールの位置に影響を与えるに使用するコントロールをクリックして*最初*です。  
+1.  押しながら、 **Ctrl**キーし、を使用して、サイズやその他のコントロールの場所を制御するコントロールをクリックします。*最初*します。  
   
-     **注**dominant コントロールのサイズ変更ハンドルは、下位のコントロールのハンドルは中空純色です。 すべてのさらにサイズ変更や配置は、主要なコントロールに基づいています。  
+     **注**主要なコントロールのサイズ変更ハンドルは、下位のコントロールのハンドルは白抜き純色。 すべてのさらにサイズ変更や配置は、主要なコントロールに基づいています。  
   
 ### <a name="to-change-the-dominant-control"></a>主要なコントロールを変更するには  
   
-1.  現在選択されているすべてのコントロールの外側をクリックして、現在の選択を解除します。  
+1.  現在選択されているすべてのコントロールの外側をクリックして現在の選択をオフにします。  
   
 2.  最初に、別のコントロールを選択すると、前の手順を繰り返します。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 詳細については、管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションは、次を参照してください。[グローバライズと .NET Framework アプリケーションのローカライズ](/dotnet/standard/globalization-localization/index)です。  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
   
- **必要条件**  
-  
+## <a name="requirements"></a>要件 
  Win32  
   
 ## <a name="see-also"></a>関連項目  
- [複数のコントロールを選択します。](../windows/selecting-multiple-controls.md)   
+ [複数のコントロールの選択](../windows/selecting-multiple-controls.md)   
  [コントロールの選択](../windows/selecting-controls.md)   
  [ダイアログ ボックスのコントロール](../windows/controls-in-dialog-boxes.md)
-

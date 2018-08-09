@@ -1,5 +1,5 @@
 ---
-title: 'SyncLockT:: ~ SyncLockT デストラクター |Microsoft ドキュメント'
+title: 'SyncLockT:: ~ SyncLockT デストラクター |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c91c677a18c66c875107f48c2e04ba45be88fb48
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 87f32ce0583154deb2e3e5cd0afc77ce8728695d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892736"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646719"
 ---
 # <a name="synclocktsynclockt-destructor"></a>SyncLockT::~SyncLockT デストラクター
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -33,10 +33,10 @@ WRL インフラストラクチャをサポートし、コードから直接使�
 ~SyncLockT();  
 ```  
   
-## <a name="remarks"></a>コメント  
- SyncLockT クラスのインスタンスの初期化を解除します。  
+## <a name="remarks"></a>Remarks  
+ インスタンスを初期化解除、 **SyncLockT**クラス。  
   
- このデストラクターは、現在 SyncLockT インスタンスにもロックを解除します。  
+ このデストラクターの現在のロックを解除も**SyncLockT**インスタンス。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

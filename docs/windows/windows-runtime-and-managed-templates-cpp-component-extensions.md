@@ -1,5 +1,5 @@
 ---
-title: Windows ランタイムおよびマネージ テンプレート (C++ コンポーネント拡張) |Microsoft ドキュメント
+title: Windows ランタイムおよびマネージ テンプレート (C++ コンポーネント拡張) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,37 +15,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e9053b101428ac26e96446d9c6756ec5de35e06c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ec064bc8ea40fd4835c4f779e0120e1daa445d7e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891364"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641461"
 ---
-# <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows ランタイムおよびマネージ テンプレート (C++ コンポーネント拡張)
-テンプレートは、使用すると、Windows ランタイムまたは共通言語ランタイムの型のプロトタイプを定義し、別のテンプレート型パラメーターを使用してその型のバリエーションをインスタンス化しできます。  
+# <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows ランタイムおよびマネージド テンプレート (C++ コンポーネント拡張)
+テンプレートは、Windows ランタイムまたは共通言語ランタイム型では、プロトタイプを定義することを有効にして、別のテンプレート型パラメーターを使用してその型のバリエーションをインスタンス化し。  
   
 ## <a name="all-runtimes"></a>すべてのランタイム  
- 値または参照型からテンプレートを作成することができます。  値または参照型の作成の詳細については、次を参照してください。[クラスと構造体](../windows/classes-and-structs-cpp-component-extensions.md)です。  
+ 値または参照型からテンプレートを作成することができます。  値または参照型を作成する方法の詳細については、次を参照してください。[クラスと構造体](../windows/classes-and-structs-cpp-component-extensions.md)します。  
   
- 標準の C++ クラス テンプレートの詳細については、次を参照してください。[クラス テンプレート](../cpp/class-templates.md)です。  
+ 標準の C++ クラス テンプレートの詳細については、次を参照してください。[クラス テンプレート](../cpp/class-templates.md)します。  
   
 ## <a name="windows-runtime"></a>Windows ランタイム  
  (この言語機能には Windows ランタイムのみに適用される特記事項がありません。)  
   
 ### <a name="requirements"></a>要件  
- コンパイラ オプション: **/ZW**  
+ コンパイラ オプション: `/ZW`  
   
 ## <a name="common-language-runtime"></a>共通言語ランタイム  
- マネージ型は、次のコード例に示されている場合は、クラス テンプレートを作成するのには、制限があります。  
+ 次のコード例で説明するマネージ型をクラス テンプレートを作成するのには制限があります。  
   
 ### <a name="requirements"></a>要件  
- コンパイラ オプション: **/clr**  
+ コンパイラ オプション: `/clr`  
   
 ### <a name="examples"></a>使用例  
- **例**  
   
- マネージ型テンプレート パラメーターを持つジェネリック型のインスタンスを作成できますが、ジェネリック型テンプレート パラメーターを持つマネージ テンプレートをインスタンス化することはできません。  これは、ジェネリック型は実行時に解決されるためです。  詳細については、次を参照してください。[ジェネリックとテンプレート (Visual c)](../windows/generics-and-templates-visual-cpp.md)です。  
+ マネージ型テンプレート パラメーターを使用してジェネリック型のインスタンスを作成することができますが、ジェネリック型テンプレート パラメーターを持つ管理対象のテンプレートをインスタンス化することはできません。  これは、ジェネリック型は実行時に解決されるためです。  詳細については、次を参照してください。[ジェネリックとテンプレート (Visual c)](../windows/generics-and-templates-visual-cpp.md)します。  
   
 ```cpp  
 // managed_templates.cpp  
@@ -67,9 +66,7 @@ ref class R {
 };  
 ```  
   
- **例**  
-  
- マネージ テンプレートでは、ジェネリック型または関数を入れ子にすることはできません。  
+ 管理対象のテンプレートでは、ジェネリック型または関数を入れ子にすることはできません。  
   
 ```cpp  
 // managed_templates_2.cpp  
@@ -80,9 +77,7 @@ template<class T> public ref class R {
 };  
 ```  
   
- **例**  
-  
- C + を使用して参照されたアセンブリで定義されているテンプレートにアクセスすることはできませんまたは CLI 言語の構文は、リフレクションを使用できます。  テンプレートがインスタンス化されない場合、メタデータでない生成されます。  テンプレートがインスタンス化される場合は、参照されたメンバー関数のみがメタデータに表示されます。  
+ C + を使用して参照されたアセンブリで定義されているテンプレートにアクセスすることはできません/cli が CLI 言語の構文は、リフレクションを使用できます。  テンプレートがインスタンス化されない場合、メタデータでは発生しません。  テンプレートがインスタンス化される場合は、参照されているメンバー関数のみがメタデータに表示されます。  
   
 ```cpp  
 // managed_templates_3.cpp  
@@ -112,9 +107,7 @@ int main() {
 }  
 ```  
   
- **例**  
-  
- 部分的特殊化またはクラス テンプレートの明示的な特殊化でクラスのマネージ修飾子を変更することができます。  
+ 部分的特殊化またはクラス テンプレートの明示的な特殊化クラスのマネージ修飾子を変更できます。  
   
 ```cpp  
 // managed_templates_4.cpp  
@@ -139,7 +132,6 @@ interface class A<T%> {};
 // native class  
 template <>  
 class A <int> {};  
-  
 ```  
   
 ## <a name="see-also"></a>関連項目  

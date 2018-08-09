@@ -1,7 +1,7 @@
 ---
 title: UNIX から Win32 への移植 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/02/2018
 ms.technology:
 - cpp-language
 ms.topic: conceptual
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 628d032ff00205b3f511a613a866f025d62dc50a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 08958de9f756ac005f966245e22a44afd7125bc0
+ms.sourcegitcommit: 66f4f12d3851c897ca69cf62da1697e95b2b97c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843289"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39496676"
 ---
 # <a name="porting-from-unix-to-win32"></a>UNIX から Win32 への移植
 アプリケーションを UNIX から Windows に移行するときにいくつかのオプションがあります。  
@@ -42,13 +42,9 @@ ms.locfileid: "33843289"
  UNIX を Visual C++ に移植してサポートするためのMicrosoft とサード パーティのリソースを次に示します。  
   
 ### <a name="unix-migration-guides"></a>UNIX 移行ガイド  
- UNIX カスタム アプリケーションの移行ガイドは、UNIX から Win32 環境にコードを移行するときの技術的な助けを提供します。  
+ [UNIX カスタム アプリケーションの移行ガイド](https://technet.microsoft.com/library/bb656290.aspx)は、UNIX から Win32 環境にコードを移行するときの技術的なサポートを提供します。  
   
- [http://go.microsoft.com/fwlink/p/?linkid=95428](http://go.microsoft.com/fwlink/p/?linkid=95428)  
-  
- Unix 移行プロジェクト ガイドは、UNIX から Win32 への大きなプロジェクトの移行に関する概要レベルの支援を提供する点で、UNIX カスタム アプリケーション移行ガイドを補足します。 ガイドは、プロジェクトの移行の各段階で考慮する問題へのアドバイスを提供します。 ガイドは次の場所からダウンロードできます。  
-  
- [http://go.microsoft.com/fwlink/p/?linkid=20012](http://go.microsoft.com/fwlink/p/?linkid=20012)  
+ [Unix 移行プロジェクト ガイド](https://technet.microsoft.com/library/bb656287.aspx)は、大規模なプロジェクトを UNIX から Win32 に移行する場合の高度なサポートを提供する点で、UNIX カスタム アプリケーション移行ガイドを補足します。 ガイドは、プロジェクトの移行の各段階で考慮する問題へのアドバイスを提供します。
   
 ### <a name="microsoft-windows-services-for-unix-sfu"></a>Microsoft Windows Services for UNIX (SFU)  
  Microsoft Windows Services for UNIX (SFU) は、Windows を既存の UNIX ベースの環境に統合するための幅広いクロス プラットフォーム サービスを提供します。 UNIX 用のサービスは、ファイル共有、リモート アクセスと管理、パスワード同期、一般的なディレクトリの管理、一連の共通ユーティリティ、およびシェルを提供します。  

@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1590d07a7b37e7dd3abf09377a03734299cb124c
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: b49e7cbd30445250bdf0710973ba65e47823b36c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460959"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652254"
 ---
 # <a name="asyncbasegetstatus-method"></a>AsyncBase::get_Status メソッド
 非同期操作の状態を示す値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 STDMETHOD(  
    get_Status  
 )(AsyncStatus *status) override;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *status*  
- 状態が格納される場所です。 詳細については、Windows::Foundation::AsyncStatus 列挙型を参照してください。  
+ 状態が格納される場所です。 詳細については、次を参照してください。`Windows::Foundation::AsyncStatus`列挙体。  
   
 ## <a name="return-value"></a>戻り値  
  成功した場合は s_ok を返します。それ以外の場合、E_ILLEGAL_METHOD_CALL します。  

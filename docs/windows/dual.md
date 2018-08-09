@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b52359d1f50f5ea3bad4075432fd8ae0e468d2df
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 60a4326975f60455e6d2ef90575f5c940287042a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571019"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644113"
 ---
 # <a name="dual"></a>dual
 .Idl ファイルにデュアル インターフェイスとしてインターフェイスを配置します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 [dual]  
 ```  
   
@@ -80,7 +80,7 @@ __interface IStatic : IDispatch
 |**対象**|**interface**|  
 |**反復可能**|いいえ|  
 |**必要な属性**|なし|  
-|**無効な属性**|**dispinterface**|  
+|**無効な属性**|`dispinterface`|  
   
  詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  
   

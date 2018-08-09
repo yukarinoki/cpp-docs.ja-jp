@@ -1,5 +1,5 @@
 ---
-title: Synclockwithstatust::synclockwithstatust コンス トラクター |Microsoft ドキュメント
+title: Synclockwithstatust::synclockwithstatust コンス トラクター |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8f665866a43e45d6526aa33f17c05eacebdd84aa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 21ce2054cabf257594cb3fa376236b9a1e504a59
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891351"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647756"
 ---
 # <a name="synclockwithstatustsynclockwithstatust-constructor"></a>SyncLockWithStatusT::SyncLockWithStatusT コンストラクター
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -40,20 +40,20 @@ explicit SyncLockWithStatusT(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `other`  
- 右辺値参照を別の SyncLockWithStatusT オブジェクト。  
+### <a name="parameters"></a>パラメーター  
+ *other*  
+ 別の右辺値参照**SyncLockWithStatusT**オブジェクト。  
   
- `sync`  
- SyncLockWithStatusT の別のオブジェクトへの参照。  
+ *sync*  
+ 別の参照**SyncLockWithStatusT**オブジェクト。  
   
- `status`  
- 値、 [status _](../windows/synclockwithstatust-status-data-member.md)のデータ メンバー、`other`パラメーターまたは`sync`パラメーター。  
+ *status*  
+ 値、 [status _](../windows/synclockwithstatust-status-data-member.md)のデータ メンバー、*他*パラメーターまたは*同期*パラメーター。  
   
-## <a name="remarks"></a>コメント  
- SyncLockWithStatusT クラスの新しいインスタンスを初期化します。  
+## <a name="remarks"></a>Remarks  
+ 新しいインスタンスを初期化、 **SyncLockWithStatusT**クラス。  
   
- 最初のコンス トラクターの初期化パラメーターで指定された別の SyncLockWithStatusT から現在の SyncLockWithStatusT オブジェクト`other`、し、その他の SyncLockWithStatusT オブジェクトを無効にします。 2 番目のコンス トラクターは`protected`、無効な状態を現在の SyncLockWithStatusT オブジェクトを初期化します。  
+ 最初のコンス トラクターは、現在**SyncLockWithStatusT**から別のオブジェクト**SyncLockWithStatusT**パラメーターで指定された*他*、し、他の無効化**SyncLockWithStatusT**オブジェクト。 2 番目のコンス トラクターは**保護**、し、現在の初期化**SyncLockWithStatusT**オブジェクトを無効な状態にします。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

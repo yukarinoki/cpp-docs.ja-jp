@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c2a1297fff3c4604ffb181a907b982f9d2e1de4
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: dd35674b61e61eead6118fdcc0aacccbafa6f3b4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570364"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649508"
 ---
 # <a name="delegate--c-component-extensions"></a>delegate (C++ コンポーネント拡張)
 関数ポインターを表す型を宣言します。  
@@ -68,7 +68,7 @@ delegate-type-identifier
  使用して、*デリゲートの型識別子*イベント、デリゲートと同じプロトタイプを宣言します。 詳細については、次を参照してください。[デリゲート (C + + CX)](../cppcx/delegates-c-cx.md)します。  
   
 ### <a name="requirements"></a>要件  
- コンパイラ オプション: **/ZW**  
+ コンパイラ オプション: `/ZW`  
   
 ## <a name="common-language-runtime"></a>共通言語ランタイム  
  共通言語ランタイムは、次の構文を持つデリゲートをサポートします。  
@@ -124,10 +124,9 @@ function_declaration
 -   [汎用デリゲート (Visual C++)](../windows/generic-delegates-visual-cpp.md)  
   
 ### <a name="requirements"></a>要件  
- コンパイラ オプション: **/clr**  
+ コンパイラ オプション: `/clr`  
   
 ### <a name="examples"></a>使用例  
- **例**  
   
  次の例では、宣言、初期化、およびデリゲートを起動する方法を示します。  
   
@@ -187,8 +186,6 @@ int main () {
    StaticDelInst(11);  
 }  
 ```  
-  
- **出力**  
   
 ```Output  
 in func1 8  
