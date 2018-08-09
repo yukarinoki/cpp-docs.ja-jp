@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07cd0d02edc586697e42e4733df478a7ae394e0f
-ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
+ms.openlocfilehash: 937afdb400fff6f0944d8690412257cb66a9c25c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39034781"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017998"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>方法: Windows デスクトップ アプリケーションでの Windows 10 SDK の使用
 Visual Studio 2017 でクラシック Windows デスクトップ プロジェクトを作成するときは、C++ デスクトップ ワークロードがインストールまたは最後に更新されたときにインストールされた Windows 10 SDK のバージョンでビルドする既定で設定には。 このバージョンの Windows SDK は、Windows 7 以降のバージョンと互換性が。 参照してください[Windows ヘッダーを使用して](/windows/desktop/WinProg/using-the-windows-headers)詳細については、特定のバージョンの Windows を対象とします。
@@ -31,7 +31,6 @@ SDK の以前のバージョンを対象とする場合は、開く**プロジ�
   
 1.  Windows 10 SDK がインストールされていることを確認します。 一部として、Windows 10 SDK がインストールされている、 **C++ によるデスクトップ開発**ワークロード。 スタンドアロン バージョンは、「[のダウンロードと Windows 10 用ツール](https://developer.microsoft.com/windows/downloads)します。
 
-  
 2.  プロジェクト ノードのショートカット メニューを開き、 **[Retarget SDK Version] (SDK バージョンの再ターゲット)** をクリックします。  
   
      ![SDK のバージョンを再ターゲット](../windows/media/retargetingwindowssdk1.PNG "RetargetingWindowsSDK1")  
@@ -52,7 +51,7 @@ SDK の以前のバージョンを対象とする場合は、開く**プロジ�
   
      ![ターゲット プラットフォーム バージョン](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")  
   
-     この操作は、ヘッダー ファイルとライブラリ ファイルへのパスを含むプロジェクトのマクロの値を変更します。 プロジェクトのプロパティ ダイアログの Visual C ディレクトリのセクションでは、変更内容を確認するインクルード ディレクトリ などのプロパティのいずれかを選択して、選択して、ドロップダウン リストを開き、選択\<編集 >。 **[インクルード ディレクトリ]** ダイアログが表示されます。  
+     この操作は、ヘッダー ファイルとライブラリ ファイルへのパスを含むプロジェクトのマクロの値を変更します。 どのような変更を表示する、 **Visual C ディレクトリ**のセクション、**プロジェクトのプロパティ**ダイアログ ボックスなどのプロパティのいずれかの選択、**のインクルード ディレクトリ**を選択ドロップダウン リストを開き、選択\<編集 >。 **[インクルード ディレクトリ]** ダイアログが表示されます。  
   
      ![ディレクトリ ダイアログ ボックスを含める](../windows/media/retargetingwindowssdk4.PNG "RetargetingWindowsSDK4")  
   
@@ -66,7 +65,7 @@ SDK の以前のバージョンを対象とする場合は、開く**プロジ�
   
 1.  プロジェクト ノードのショートカット メニューを開き、 **[Retarget SDK Version] (SDK バージョンの再ターゲット)** をクリックします。  
   
-2.  [ターゲット プラットフォーム バージョン] ドロップダウン リストで、8.1 を選択します。  
+2.  **ターゲット プラットフォーム バージョン**ドロップダウン リストで、選択**8.1**します。  
   
 ## <a name="see-also"></a>関連項目  
  [Windows デスクトップ アプリケーション (Visual C)](../windows/how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)

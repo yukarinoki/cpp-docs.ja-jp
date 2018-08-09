@@ -26,12 +26,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1a87087b4ef51c016a5165f0d997824f174ca06c
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: debb2b1e8435cc53ec82ab1f957710850d7b5de3
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608158"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010692"
 ---
 # <a name="saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons"></a>GIF 形式または JPEG 形式でのビットマップの保存 (アイコン用イメージ エディター)
 ビットマップを作成するときに、イメージはビットマップ (.bmp) の形式で作成されます。 ただし、他のグラフィック形式または gif 形式や JPEG としてイメージを保存することができます。  
@@ -51,9 +51,10 @@ ms.locfileid: "39608158"
   
 4.  ビットマップで開いたままで、**イメージ**エディター、 をクリックして**保存*ファイル名*として .bmp**上、**ファイル**メニュー。  
   
-5.  **ファイルに名前を付けて** ダイアログ ボックスに、ファイルとファイル形式で目的を示す拡張機能を提供する名前を入力、**ファイル名**ボックス。 たとえば、myfile.gif します。  
+5.  **ファイルに名前を付けて** ダイアログ ボックスに、ファイルとファイル形式で目的を示す拡張機能を提供する名前を入力、**ファイル名**ボックス。 たとえば、 *myfile.gif*します。  
   
-     **注**作成したり、別のファイル形式として保存するには、プロジェクトの外部で、ビットマップを開いたりする必要があります。 作成するか、プロジェクト内で開いて、**付けて**コマンドは使用できません。 詳細については、次を参照してください。[を表示するリソースで、リソース スクリプト ファイル プロジェクトの外側 (スタンドアロン)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)します。  
+     > [!NOTE]
+     > 構成データベースを作成するか、別のファイル形式として保存するには、プロジェクトの外部のビットマップを開きます。 作成するか、プロジェクト内で開いて、**付けて**コマンドは使用できません。 詳細については、次を参照してください。[を表示するリソースで、リソース スクリプト ファイル プロジェクトの外側 (スタンドアロン)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)します。  
   
 6.  **[保存]** をクリックします。  
   

@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3298ed426535ae7db93e5603dac8222bbe8f6470
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 71087831b518e2aa4a2505023829781a610c867a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644074"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011934"
 ---
 # <a name="typeid--c-component-extensions"></a>typeid (C++ コンポーネント拡張)
 オブジェクトの型を示す値を取得します。  
@@ -111,8 +111,6 @@ int main() {
 }  
 ```  
   
- **出力**  
-  
 ```Output  
 typeid and GetType returned the same System::Type  
 G  
@@ -173,8 +171,6 @@ int main() {
       Console::WriteLine("int::typeid == handle_to_int::typeid, as expected");  
 }  
 ```  
-  
- **出力**  
   
 ```Output  
 True  

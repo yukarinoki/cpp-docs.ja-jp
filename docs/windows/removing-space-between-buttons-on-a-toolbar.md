@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5734874fb77907d021a360d84c17d054b223741c
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 0404c11def5ac70c9020adc28309b7c12aa1cf67
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605497"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017474"
 ---
 # <a name="removing-space-between-buttons-on-a-toolbar"></a>ツール バーのボタン間の空白の削除
 次の手順では、ツールバーのボタンの間にスペースを削除する方法を示します。  
@@ -30,12 +30,11 @@ ms.locfileid: "39605497"
   
 1.  偶数について [次へ] ボタンと重なるまでは、スペースのもう一方の側にあるボタンに向けた領域の 1 つの側で、ボタンをドラッグします。  
   
-     ドラッグしているボタンの横にある空き領域がない、ボタンを過去の横にあるボタンは複数の中間にドラッグする場合は、ドラッグしているボタンの反対側にスペースをツール バー エディターも挿入します。  
+     ドラッグしているボタンの横にある空き領域がないと、ボタンを過去の横にあるボタン、半分以上ドラッグする場合、**ツールバー**エディターもとしているボタンの反対側にスペースを挿入しますドラッグします。  
   
  マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
   
 ## <a name="requirements"></a>要件  
-  
  MFC または ATL  
   
 ## <a name="see-also"></a>関連項目  

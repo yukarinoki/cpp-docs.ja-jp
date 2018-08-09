@@ -18,20 +18,20 @@ author: mamillmsft
 ms.author: mikeblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c355924ce1f264ce63e02f5fda948a62675e675
-ms.sourcegitcommit: 894b3b3a91fcd8894b582747b03135c0be450c1f
+ms.openlocfilehash: abf51432e5803de001610da07d97d5bad1796085
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38102466"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018846"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>予測実行のサイド チャネルの C++ の開発者ガイド
 
-この記事にはとを識別して、C++ のソフトウェアの予測実行サイド チャネルのハードウェア脆弱性の軽減に役立つ開発者向けのガイダンスが含まれています。 これらの脆弱性は、信頼の境界を越えて機密情報を開示することができ、命令の予測、順番に実行をサポートするプロセッサで実行されるソフトウェアに影響を与えることができます。 このクラスの脆弱性が 2018 年 1 月で説明されている最初と追加の背景情報とガイダンスが記載[マイクロソフトのセキュリティ アドバイザリ](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002)します。
+この記事にはとを識別して、C++ のソフトウェアの予測実行サイド チャネルのハードウェア脆弱性の軽減に役立つ開発者向けのガイダンスが含まれています。 これらの脆弱性は、信頼の境界を越えて機密情報を開示することができ、命令の予測、順番に実行をサポートするプロセッサで実行されるソフトウェアに影響を与えることができます。 このクラスの脆弱性が 2018 年 1 月で説明されている最初と追加の背景情報とガイダンスが記載[マイクロソフトのセキュリティ アドバイザリ](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)します。
 
 この記事のガイダンスは、上の脆弱性によって表されるクラスに関連します。
 
-1. CVE-2017-5753 に対する、Spectre variant 1 とも呼ばれます。 このハードウェアの脆弱性のクラスに関連する側のチャネルの条件分岐 misprediction 結果として発生する予測の実行によって発生することができます。 (バージョン 15.5.5 以降)、Visual Studio 2017 の Visual C コンパイラにはサポートが含まれています、`/Qspectre`限られた可能性がある脆弱性のあるコーディング パターンのコンパイル時の軽減策を提供するスイッチに関連する CVE 2017-5753 に対する。 ドキュメント、 [/Qspectre](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre)フラグの効果と使用状況の詳細を提供します。 
+1. CVE-2017-5753 に対する、Spectre variant 1 とも呼ばれます。 このハードウェアの脆弱性のクラスに関連する側のチャネルの条件分岐 misprediction 結果として発生する予測の実行によって発生することができます。 (バージョン 15.5.5 以降)、Visual Studio 2017 の Visual C コンパイラにはサポートが含まれています、`/Qspectre`限られた可能性がある脆弱性のあるコーディング パターンのコンパイル時の軽減策を提供するスイッチに関連する CVE 2017-5753 に対する。 ドキュメント、 [/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre)フラグの効果と使用状況の詳細を提供します。 
 
 2. CVE-2018-3639 とも呼ばれます[投機的なストア バイパス (SSB)](https://aka.ms/sescsrdssb)します。 このハードウェアの脆弱性のクラスに関連する側のチャネルの結果としてメモリ アクセスの misprediction 依存ストアより負荷の予測の実行によって発生することができます。
 
@@ -184,7 +184,7 @@ unsigned char WriteSlot(unsigned int untrusted_index, void *ptr) {
 }
 ```
 
-これらの例の両方に間接的なブランチのスタックに割り当てられたポインターを投機的な変更が含まれることに注意する必要があります。 グローバル変数、ヒープに割り当てられたメモリ、およびいくつかの Cpu での読み取り専用メモリが偶数の可能性もあります投機的な変更することができます。 メモリのスタック割り当ての Visual C コンパイラ既には投機的などのバッファーとしてセキュリティ クッキーの横にある配置されるように、ローカル変数を並べ替えることで、間接的なブランチのスタック割り当てのターゲットを変更することがより困難にする手順一部、 [/GS](https://docs.microsoft.com/en-us/cpp/build/reference/gs-buffer-security-check)コンパイラ セキュリティの機能です。
+これらの例の両方に間接的なブランチのスタックに割り当てられたポインターを投機的な変更が含まれることに注意する必要があります。 グローバル変数、ヒープに割り当てられたメモリ、およびいくつかの Cpu での読み取り専用メモリが偶数の可能性もあります投機的な変更することができます。 メモリのスタック割り当ての Visual C コンパイラ既には投機的などのバッファーとしてセキュリティ クッキーの横にある配置されるように、ローカル変数を並べ替えることで、間接的なブランチのスタック割り当てのターゲットを変更することがより困難にする手順一部、 [/GS](https://docs.microsoft.com/cpp/build/reference/gs-buffer-security-check)コンパイラ セキュリティの機能です。
 
 ## <a name="speculative-type-confusion"></a>混乱の予測の種類
 
@@ -368,6 +368,6 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ## <a name="see-also"></a>関連項目
 
-[予測実行のサイド チャネルの脆弱性を軽減するためのガイダンス](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002)
+[予測実行のサイド チャネルの脆弱性を軽減するためのガイダンス](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)
 
 [予測実行のサイド チャネル ハードウェア脆弱性を軽減します。](https://blogs.technet.microsoft.com/srd/2018/03/15/mitigating-speculative-execution-side-channel-hardware-vulnerabilities/)

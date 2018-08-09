@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e35c0b9c448ce9b7aeb6e5f14627e82274a72a41
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: e3fabc0dcbbc31a1707d1823fb1ec49a53aca6d3
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604474"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015876"
 ---
 # <a name="hstringoperator-operator"></a>HString::Operator!= 演算子
 2 つのパラメーターが異なるかどうかを示します。  
@@ -44,7 +44,7 @@ inline bool operator!=( const HString& lhs,
                         const HSTRING& rhs) throw()  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *lhs*  
  比較する最初のパラメーター。 *lhs*できます、 **HString**または`HStringReference`オブジェクト、または、HSTRING ハンドル。  
   

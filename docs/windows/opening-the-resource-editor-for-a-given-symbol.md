@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ca604ac88e4e8c0ecbb45c764f7d22836d367b2
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 5911d7125b6a5cdf1e6afd8502c5891ddf680a30
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39602760"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011089"
 ---
 # <a name="opening-the-resource-editor-for-a-given-symbol"></a>特定のシンボル用のリソース エディターを開く
 シンボルを参照するときに、[リソース シンボル ダイアログ ボックス](../windows/resource-symbols-dialog-box.md)、特定のシンボルの使用方法の詳細についてをする可能性があります。 **ビュー使用**ボタンはこの情報を取得する簡単な方法を提供します。  
@@ -42,7 +42,6 @@ ms.locfileid: "39602760"
  マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。  
   
 ## <a name="requirements"></a>要件  
-  
  Win32  
   
 ## <a name="see-also"></a>関連項目  

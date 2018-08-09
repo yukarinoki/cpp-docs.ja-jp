@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 428c62db8f1444f497d6fede7affea34560b4b0e
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 26d1b0ae8923835b0ce06c7312fa185693c6586e
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605956"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014508"
 ---
 # <a name="opening-a-resource-for-binary-editing"></a>バイナリ編集するリソースのオープン
 ### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>バイナリ編集用に Windows デスクトップ リソースを開くには  
@@ -36,7 +36,7 @@ ms.locfileid: "39605956"
 2.  リソースを右クリックし、ショートカット メニューから **[バイナリー データを開く]** をクリックします。  
   
     > [!NOTE]
-    >  [リソース ビュー](../windows/resource-view-window.md) ウィンドウを使用して Visual Studio で認識されない書式のリソースを開く場合 (RCDATA やカスタム リソースなど)、リソースは自動的にバイナリ エディターで開かれます。  
+    >  使用する場合、[リソース ビュー](../windows/resource-view-window.md)で Visual Studio が認識しないこと (RCDATA やカスタム リソース) など、リソースの形式でリソースを開くウィンドウが自動的に開きます、**バイナリ**エディター。  
   
 ### <a name="to-open-a-managed-resource-for-binary-editing"></a>バイナリ編集の対象となるマネージド リソースを開くには  
   
@@ -59,10 +59,9 @@ ms.locfileid: "39605956"
  バイナリ エディターでは、特定の ASCII 値のみが表されます (0x20 ～ 0x7E)。 拡張文字は、バイナリ エディターの ASCII 値セクション (右側のパネル) にピリオドで表示されます。 "印刷可能" な文字は、ASCII 値の 32 ～ 126 です。  
   
 > [!NOTE]
->  別のエディター ウィンドウで既に編集中のリソースに対してバイナリ エディターを使用する場合、他のエディター ウィンドウをまず閉じてください。  
+>  使用する場合、**バイナリ**別のエディター ウィンドウで既に編集中のリソース エディターが最初に他のエディター ウィンドウを閉じます。  
   
 ## <a name="requirements"></a>要件  
-  
  なし  
   
 ## <a name="see-also"></a>関連項目  

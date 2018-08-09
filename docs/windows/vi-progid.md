@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 96843c9d977b15d7fe2c645c8f655cd59a42e401
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: a812317f66df3c0b1a330808a58753abb890765c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642049"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014053"
 ---
 # <a name="viprogid"></a>vi_progid
 ProgID のバージョンに依存しない形式を指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 [ vi_progid(  
    name  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *name*  
  オブジェクトを表すバージョン依存 ProgID です。  
   

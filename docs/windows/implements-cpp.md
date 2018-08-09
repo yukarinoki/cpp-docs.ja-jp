@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0fe0c8919eb1959dab426c3c0db47f227c51b66
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 0f2f7fa3cd908612e912a58d8c789369f11fcc52
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606463"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010374"
 ---
 # <a name="implements-c"></a>implements (C++)
 IDL コクラスのメンバーであるが強制されているディスパッチ インターフェイスを指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 [ implements(   
    interfaces={interfaces},  
    dispinterfaces={dispinterfaces}  
@@ -44,7 +44,7 @@ IDL コクラスのメンバーであるが強制されているディスパッ�
  コンマ区切りの IDL コクラスのメンバーとなるディスパッチ インターフェイスの一覧。 1 つのディスパッチ インターフェイスを指定するための簡略化された方法が**実装 (dispinterface** * = 場合 ***)**。  
   
 ## <a name="remarks"></a>Remarks  
- 既定では、のみである COM インターフェイスのコクラスの基本クラスは、IDL コクラスに追加されます。 **実装**IDL coclass のメンバーにするには、他のインターフェイスを強制することができます。  
+ 既定が唯一の COM インターフェイスに基本クラスの`coclass`IDL コクラスに追加されます。 **実装**IDL にするには、他のインターフェイスを強制することができます`coclass`メンバー。  
   
 ## <a name="requirements"></a>要件  
   

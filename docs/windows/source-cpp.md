@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07f9c9f93b213b13694f2741b5210614626d82f9
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: a30598e617a4c68559d6932e20dadaf7f83dc2eb
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651523"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015521"
 ---
 # <a name="source-c"></a>source (C++)
 クラスの場合、接続ポイント用の COM オブジェクトのソース インターフェイスを指定します。 プロパティまたはメソッドでは、オブジェクトまたはイベントのソースをバリアントにメンバーを返すことを示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 [ source(  
    interfaces  
 ) ]  

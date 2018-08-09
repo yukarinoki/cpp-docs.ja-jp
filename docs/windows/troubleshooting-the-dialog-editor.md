@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e7b7accec826bc6c52ab9c6f677ce980f40c6f20
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 242881100dfd9a27946bcbe74d449d078c373852
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648621"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011105"
 ---
 # <a name="troubleshooting-the-dialog-editor"></a>ダイアログ エディターのトラブルシューティング
-うちダイアログ エディターで作業するときに注意してくださいべきいくつかの問題を次に示します。  
+うち注意すべきで作業するとき、いくつかの問題を以下に示します、**ダイアログ**エディター。  
   
 -   [コントロールを追加してもダイアログ ボックスに表示されない](../windows/adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function.md)  
   

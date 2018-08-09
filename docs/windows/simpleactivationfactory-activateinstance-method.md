@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe1342c3927183ae5eec30c8dd0a40ee95f37277
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 260d7e2993bd92297167c23458d37ba80919306f
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646563"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013386"
 ---
 # <a name="simpleactivationfactoryactivateinstance-method"></a>SimpleActivationFactory::ActivateInstance メソッド
 
@@ -37,7 +37,6 @@ STDMETHOD( ActivateInstance )(
 ```
 
 ### <a name="parameters"></a>パラメーター
-
 *ppvObject*  
 ときにこの操作が完了したらで指定されたオブジェクトのインスタンスへのポインター、`Base`クラス テンプレート パラメーター。
 
@@ -47,7 +46,7 @@ STDMETHOD( ActivateInstance )(
 
 ## <a name="remarks"></a>Remarks
 
-場合&#95; &#95;WRL_STRICT&#95; &#95;は定義されている、アサート エラーが生成クラス テンプレート パラメーターで指定された基本クラスから派生していない場合[RuntimeClass](../windows/runtimeclass-class.md)、WinRt で構成されていないか、またはWinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列挙値。
+場合`__WRL_STRICT__`が定義されている、アサート エラーが生成クラス テンプレート パラメーターで指定された基本クラスから派生していない場合[RuntimeClass](../windows/runtimeclass-class.md)、WinRt または WinRtClassicComMix で構成されていないまたは[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列挙値。
 
 ## <a name="requirements"></a>要件
 

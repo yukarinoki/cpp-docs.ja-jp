@@ -20,17 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6aae190e20776c252b7f40651d5c0bdb13111dab
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 21e6d35a555ecff327bcd4b68318c17da194cb41
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606251"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018336"
 ---
 # <a name="menu-editor"></a>メニュー エディター
-メニューを使用すると、論理的かつ見つけやすい方法でコマンドを配置できます。 メニュー エディターでは、完成したアプリケーションとよく似たメニュー バーを直接操作することでメニューの作成と編集ができます。  
+メニューを使用すると、論理的かつ見つけやすい方法でコマンドを配置できます。 **メニュー**エディターを作成して、完成したアプリケーションで 1 つによく似たメニュー バーを直接操作してメニューを編集します。  
   
-Visual C++ プロジェクトの場合は、次の操作のためにメニュー エディターを使用できます。  
+Visual C プロジェクトで使用することができます、**メニュー**エディター。  
   
 -   [メニューを作成する](../windows/creating-a-menu.md)  
   
@@ -59,10 +59,10 @@ Visual C++ プロジェクトの場合は、次の操作のためにメニュー
 -   [メニュー コマンドのプロパティを変更する](../windows/menu-command-properties.md)  
   
     > [!TIP]
-    >  メニュー エディターの使用中は、多くの場合、マウスの右ボタンをクリックすると、頻繁に使用されるコマンドのポップアップ メニューを表示できます。 使用できるコマンドは、ポインターの位置によって異なります。  
+    >  使用しているときに、**メニュー**多くの場合、エディター頻繁に使用されるコマンドのポップアップ メニューを表示する、マウスの右ボタンをクリックすることができます。 使用できるコマンドは、ポインターの位置によって異なります。  
   
     > [!NOTE]
-    >  Microsoft Foundation Class ライブラリ (MFC) プログラムおよび ATL プログラムの場合は、コード ウィザードを使用して、メニュー コマンドをコードにフックできます。 詳しくは「 [イベントの追加](../ide/adding-an-event-visual-cpp.md)」をご覧ください。  
+    >  Microsoft Foundation Class ライブラリ (MFC) プログラムおよび ATL プログラムでは、使用することができます**コード ウィザード**をコードにメニュー コマンドをフックします。 詳しくは「 [イベントの追加](../ide/adding-an-event-visual-cpp.md)」をご覧ください。  
   
  マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
   

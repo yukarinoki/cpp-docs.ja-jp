@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70cba5145f64fd88d1d6f1c4a68ac4c0730968cc
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 4a976e4b6c6b2fb89dfab362b13000d2e7d4327b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570383"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013415"
 ---
 # <a name="how-to-open-a-resource-script-file-outside-of-a-project-standalone"></a>方法: プロジェクトの外側で (スタンドアロンで) リソース スクリプト ファイルを開く
 .rc ファイル内のリソースは、プロジェクトを開かずに表示できます。 ドキュメント ウィンドウで開くことで、.rc ファイルが開きます、[リソース ビュー](../windows/resource-view-window.md)ウィンドウのようなファイルがプロジェクト内で開いているとき)。  
@@ -46,13 +46,13 @@ ms.locfileid: "39570383"
   
 ### <a name="to-open-multiple-rc-files-outside-a-project"></a>プロジェクトの外部で複数の .rc ファイルを開くには  
   
-1.  2 つのリソース ファイルをスタンドアロンで開きます。 たとえば、Source1.rc と Source2.rc を開きます。  
+1.  2 つのリソース ファイルをスタンドアロンで開きます。 たとえば、開く`Source1.rc`と`Source2.rc`します。  
   
     1.  **ファイル** メニューの 選択**オープン**、 をクリックし、**ファイル**します。  
   
-    2.  **ファイルを開く** ダイアログ ボックスで、最初のリソース スクリプト ファイル (Source1.rc) を開き、ファイルを強調表示してをクリックする移動**開く**します。  
+    2.  **ファイルを開く** ダイアログ ボックスで、最初のリソース スクリプト ファイルを開きたいへ移動 (`Source1.rc`)、ファイルを強調表示し、クリックして**開く**。  
   
-    3.  直前の手順を繰り返して、2 番目の .rc ファイル (Source2.rc) を開きます。  
+    3.  2 番目の .rc ファイルを開くには、前の手順を繰り返します (`Source2.rc`)。  
   
          2 つの .rc ファイルが別個のドキュメント ウィンドウで開きました。  
   

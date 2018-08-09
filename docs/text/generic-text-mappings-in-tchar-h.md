@@ -1,5 +1,5 @@
 ---
-title: Tchar.h における汎用テキスト マッピング |Microsoft ドキュメント
+title: Tchar.h における汎用テキスト マッピング |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,19 +22,19 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7ed29b03a37c9b911a954192152115b1458fd94
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4fd66a0e2f45def3aa22342ca30eaa64846ebf4c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33867104"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012011"
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Tchar.h における汎用テキストのマッピング
 コードを簡単に国際対応にできるように、[!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] のランタイム ライブラリには、多くのデータ型やルーチンなどのオブジェクトに対して、[!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] 固有の汎用テキストのマッピングが用意されています。 Tchar.h で定義されているこれらのマッピングを使用すると、[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] ステートメントで定義したマニフェスト定数に応じて、1 バイト、マルチバイト、`#define` のどの文字セットにも対応できるジェネリック コードを記述できます。 汎用テキスト マッピングは [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] 固有の拡張機能であり、[!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)] とは互換性がありません。  
   
  Tchar.h を使用することにより、同じソースから、1 バイト、マルチバイト文字セット (MBCS: Multibyte Character Set)、および [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] の各アプリケーションをビルドできます。 Tchar.h では、プレフィックス `_tcs` の付いたマクロが定義されており、正しいプリプロセッサ定義に応じて `str`、`_mbs`、`wcs` のいずれかの関数に割り当てられます。 MBCS でビルドするには、シンボル `_MBCS` を定義します。 [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] でビルドするには、シンボル `_UNICODE` を定義します。 1 バイト アプリケーションをビルドする場合は、どちらも定義しません (既定)。 MFC アプリケーションでは、既定で `_MBCS` が定義されています。  
   
- `_TCHAR` データ型は、Tchar.h で条件に応じて定義されます。 ビルドで `_UNICODE` シンボルが定義されている場合、`_TCHAR` は `wchar_t` として定義されます。それ以外の場合、1 バイトおよび MBCS のビルドでは `char` として定義されます。 Unicode のワイド文字データ型である `wchar_t` は、8 ビットの符号付き `char` の 16 ビット版に相当します。国際対応のアプリケーションでは、バイトではなく `_tcs` を扱う `_TCHAR` ファミリの関数を使う必要があります。 たとえば、`_tcsncpy`コピー `n` `_TCHARs`ではなく、`n`バイトです。  
+ `_TCHAR` データ型は、Tchar.h で条件に応じて定義されます。 場合、シンボル`_UNICODE`、ビルドが定義されている`_TCHAR`として定義されます**wchar_t**。 そうしないと、1 バイト、MBCS のビルドとして定義されて**char**します。 (**wchar_t**、基本の Unicode ワイド文字データ型を 8 ビット符号付き 16 ビット版は、 **char**)。国際対応のアプリケーションでは、バイトではなく `_tcs` を扱う `_TCHAR` ファミリの関数を使う必要があります。 たとえば、`_tcsncpy`コピー `n` `_TCHARs`ではなく、`n`バイト。  
   
  1 バイト文字セット (SBCS: Single Byte Character Set) の文字列処理関数の中には、符号付きの `char*` パラメーターを受け取るものがあります。このため、`_MBCS` を定義すると、型の不一致を知らせるコンパイラの警告が生成される場合があります。 この警告を回避する方法は 3 つあります。  
   
@@ -58,14 +58,14 @@ ms.locfileid: "33867104"
   
 |汎用テキスト<br /><br /> データ型名|_UNICODE &<br /><br /> _MBCS が未定義の場合|_MBCS<br /><br /> 定義済み|_UNICODE<br /><br /> 定義済み|  
 |--------------------------------------|----------------------------------------|------------------------|---------------------------|  
-|`_TCHAR`|`char`|`char`|`wchar_t`|  
-|`_TINT`|`int`|`unsigned int`|`wint_t`|  
-|`_TSCHAR`|`signed char`|`signed char`|`wchar_t`|  
-|`_TUCHAR`|`unsigned char`|`unsigned char`|`wchar_t`|  
-|`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|  
+|`_TCHAR`|**char**|**char**|**wchar_t**|  
+|`_TINT`|**int**|**unsigned int**|`wint_t`|  
+|`_TSCHAR`|**符号付き文字**|**符号付き文字**|**wchar_t**|  
+|`_TUCHAR`|**unsigned char**|**unsigned char**|**wchar_t**|  
+|`_TXCHAR`|**char**|**unsigned char**|**wchar_t**|  
 |`_T` または `_TEXT`|影響なし (プリプロセッサによって削除される)|影響なし (プリプロセッサによって削除される)|`L` (後続の文字または文字列を対応する [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] の文字または文字列に変換する)|  
   
- 汎用テキスト マップのルーチン、変数、およびその他のオブジェクトの一覧は、次を参照してください。[汎用テキスト マップ](../c-runtime-library/generic-text-mappings.md)ランタイム ライブラリ リファレンスです。  
+ ルーチン、変数、およびその他のオブジェクトの汎用テキスト マッピングの一覧は、次を参照してください。[汎用テキスト マッピング](../c-runtime-library/generic-text-mappings.md)ランタイム ライブラリのリファレンス。  
   
 > [!NOTE]
 >  Unicode の文字列には NULL バイトが含まれている可能性があるため、この文字列と一緒に `str` ファミリの関数を使用しないでください。 同様に、MBCS (または SBCS) 文字列には `wcs` ファミリの関数を使用しないでください。  

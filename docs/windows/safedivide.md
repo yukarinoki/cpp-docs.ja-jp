@@ -17,19 +17,19 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7c5698a85e17a8dbcb483dcd5468289df8afadcc
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 4d7c966db1193def6479ecfd231293212bca2b1f
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605046"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018021"
 ---
 # <a name="safedivide"></a>SafeDivide
 ゼロ除算に対して保護できる方法で 2 つの数値を除算します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename T, typename U>  
 inline bool SafeDivide (  
    T t,  

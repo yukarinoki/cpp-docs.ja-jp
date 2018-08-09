@@ -1,5 +1,5 @@
 ---
-title: MFC Windows プログラミングのシンボル |Microsoft ドキュメント
+title: MFC Windows プログラミングのシンボル |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c4091853274d04d27eb060655650a071ea64d4c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7f91622e4d795b7c85cdf6f304ed6a76dd5a9364
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882694"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012782"
 ---
 # <a name="mfc-windows-programming-symbols"></a>MFC Windows プログラミングのシンボル
-これらのシンボルは、MFC サポート ファイルの一部でもが、標準の Windows アプリケーションの関数とアクションをサポートします。 これらのシンボルは、メニューで主に使用されます。 メニュー エディターのメニューを使用する場合、これらのシンボルは、共通のメニュー コマンドに関連付けられたプロパティ ウィンドウに表示されます。 たとえば、アプリケーションの終了 コマンド ファイル メニューにある場合そのコマンドに関連付けられるシンボル ID_APP_EXIT で、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)します。  
+これらのシンボルは、MFC のサポート ファイルの一部でも、標準の Windows アプリケーションの関数とアクションをサポートします。 これらのシンボルは、主に、メニューで使用します。 メニューを使用する場合、**メニュー エディター**、これらのシンボルが表示されます、**プロパティ ウィンドウ**一般的なメニュー コマンドに関連付けられています。 たとえば、アプリケーションがある場合、**ファイル**メニューで、**終了**コマンド、コマンドは ID_APP_EXIT シンボルに関連付けられますことで、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)。  
   
 ||||  
 |-|-|-|  
@@ -47,7 +47,7 @@ ms.locfileid: "33882694"
 |ID_FILE_SAVE|ID_FILE_SAVE_AS|ID_FILE_SAVE_COPY_AS|  
 |判定|ID_FILE_UPDATE|ID_FORMAT_FONT|  
 |ID_HELP|ID_HELP_FINDER|ID_HELP_INDEX|  
-|ID_HELP + を使用します。|ID_INDICATOR_CAPS|ID_INDICATOR_EXT|  
+|ID_HELP + を使用して|ID_INDICATOR_CAPS|ID_INDICATOR_EXT|  
 |ID_INDICATOR_KANA|ID_INDICATOR_NUM|ID_INDICATOR_OVR|  
 |ID_INDICATOR_REC|ID_INDICATOR_SCRL|ID_NEXT_PANE|  
 |ID_OLE_EDIT_CHANGE_ICON|ID_OLE_EDIT_CONVERT|ID_OLE_EDIT_LINKS|  

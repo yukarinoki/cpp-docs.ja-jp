@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 96e316add17ff45425bd51a7e32b276b234c6906
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: cbb36012d9a249669e3029c79dcf9c35bcdfc7a4
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606515"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011579"
 ---
 # <a name="idlquote"></a>idl_quote
 Visual C の現在のバージョンでサポートされていない IDL コンストラクトを使用することができ、生成された .idl ファイルに渡すことがあります。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 [ idl_quote(  
    text  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *テキスト*  
  コンパイラ エラーを返さずに生成された .idl ファイルに渡す Visual C コンパイラが意図されている属性名。  
   
@@ -78,7 +78,7 @@ __interface IStatic{
 };  
 ```  
   
- このコードにより MYFLOT および MYDUB、*テキスト*エントリが生成された .idl ファイルに配置されます。 *名前*パラメーターを使い*テキスト*を参照する前に配置する*名前*で生成された .idl ファイル。 *依存関係*パラメーターを強制的にする前に配置する依存関係のリスト定義*テキスト*で生成された .idl ファイル。  
+ このコードにより、`MYFLOT`と`MYDUB`と*テキスト*エントリが生成された .idl ファイルに配置されます。 *名前*パラメーターを使い*テキスト*を参照する前に配置する*名前*で生成された .idl ファイル。 *依存関係*パラメーターを強制的にする前に配置する依存関係のリスト定義*テキスト*で生成された .idl ファイル。  
   
 ## <a name="requirements"></a>要件  
   

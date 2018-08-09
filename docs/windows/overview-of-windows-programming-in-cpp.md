@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 77a6049216137da56cc79cc6f28f1f7591015a33
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 7a8705f6c1ed1030f1beeb7c2302f0d629c5d17d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604519"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012194"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>C++ でプログラミングする Windows の概要
 
@@ -39,7 +39,7 @@ C++ UWP アプリを記述する/cli CX、C の言語を使用することがで
 
    サーバーおよびクラウド プログラミングのコンテキストにおいて、コア コンポーネントのためや、計算コードのために C++ を使用することも、このカテゴリに含まれます。 場合によっては、サーバーやクラウド アプリケーションのコアとなるパフォーマンス重視のコードを C++ で記述し、パフォーマンスを最適化することもあります。 このようなコードをコンパイルして DLL にし、C# または Visual Basic から使用することができます。
 
-- **.NET Framework アプリケーション**。 .NET Framework アプリケーションのほとんどは C# または Visual Basic で記述されていますが、C++/CLI でも記述できます (Visual C++ の/clr コンパイラ オプション)。 マネージド コードとネイティブ コードを含む大規模なアプリケーションでは、C++/CLI は最小限の相互運用層で使用することをお勧めします。
+- **.NET Framework アプリケーション**。 ほとんどの .NET Framework アプリケーションは c# または Visual Basic で記述することができますも C +/cli CLI (、 `/clr` Visual c コンパイラ オプション)。 マネージド コードとネイティブ コードを含む大規模なアプリケーションでは、C++/CLI は最小限の相互運用層で使用することをお勧めします。
 
 ##  <a name="BK_WindowsUniversal"></a> Windows Universal Apps
 

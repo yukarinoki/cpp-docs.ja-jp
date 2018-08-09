@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 480baaf12c332f0a293374fe2317110eb186cbdf
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6db5f5eb080f9d802090dda61afd296bc4e6dc3b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648985"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015044"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>チュートリアル: WRL および Media Foundation を使用して UWP アプリの作成
 Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用して、使用するユニバーサル Windows プラットフォーム (UWP) アプリを作成する方法について説明します[Microsoft メディア ファンデーション](http://msdn.microsoft.com/library/windows/apps/ms694197)します。  
@@ -59,17 +59,17 @@ Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用�
   
 ### <a name="to-use-the-wrl-to-create-the-media-foundation-grayscale-transform-component"></a>メディア ファンデーションのグレースケールを作成する WRL 変換コンポーネントを使用するには  
   
-1.  Visual Studio で、作成、**空のソリューション**プロジェクト。 など、プロジェクトの名前`MediaCapture`します。  
+1.  Visual Studio で、作成、**空のソリューション**プロジェクト。 など、プロジェクトの名前*MediaCapture*します。  
   
-2.  追加、 **DLL (ユニバーサル Windows)** プロジェクトがソリューションにします。 など、プロジェクトの名前`GrayscaleTransform`します。  
+2.  追加、 **DLL (ユニバーサル Windows)** プロジェクトがソリューションにします。 など、プロジェクトの名前*GrayscaleTransform*します。  
   
-3.  追加、 **Midl ファイル (.idl)** ファイルをプロジェクトにします。 など、ファイルの名前`GrayscaleTransform.idl`します。  
+3.  追加、 **Midl ファイル (.idl)** ファイルをプロジェクトにします。 など、ファイルの名前*GrayscaleTransform.idl*します。  
   
 4.  次のコードを GrayscaleTransform.idl に追加します。  
   
      [!code-cpp[wrl-media-capture#1](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_1.idl)]  
   
-5.  次のコードを使用して pch.h の内容を置き換えます。  
+5.  次のコードを使用して、内容を置き換える`pch.h`します。  
   
      [!code-cpp[wrl-media-capture#2](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_2.h)]  
   
@@ -77,9 +77,9 @@ Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用�
   
      [!code-cpp[wrl-media-capture#3](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_3.h)]  
   
-7.  GrayscaleTransform.h は、この例では使用しません。 このファイルは必要に応じてプロジェクトから削除できます。  
+7.  `GrayscaleTransform.h` この例では使用されません。 このファイルは必要に応じてプロジェクトから削除できます。  
   
-8.  次のコードを使用して GrayscaleTransform.cpp の内容を置き換えます。  
+8.  次のコードを使用して、内容を置き換える`GrayscaleTransform.cpp`します。  
   
      [!code-cpp[wrl-media-capture#4](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_4.cpp)]  
   
@@ -92,7 +92,7 @@ Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用�
        DllGetClassObject                   PRIVATE
    ```   
   
-10. 次のコードを使用して dllmain.cpp の内容を置き換えます。  
+10. 次のコードを使用して、内容を置き換える`dllmain.cpp`します。  
   
      [!code-cpp[wrl-media-capture#6](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_6.cpp)]  
   
@@ -106,21 +106,21 @@ Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用�
   
 ### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>WRL c# アプリからカスタム メディア ファンデーション コンポーネントを使用するには  
   
-1.  新しい追加**c# 空白アプリ (XAML)** プロジェクトを`MediaCapture`ソリューション。 など、プロジェクトの名前`MediaCapture`します。  
+1.  新しい追加**c# 空白アプリ (XAML)** プロジェクトを`MediaCapture`ソリューション。 など、プロジェクトの名前*MediaCapture*します。  
   
 2.  **MediaCapture**プロジェクトへの参照を追加、`GrayscaleTransform`プロジェクト。 についてを参照してください[方法: 追加または参照マネージャーを使用して参照を削除する](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)します。  
   
-3.  Package.appxmanifest の上、**機能**] タブで [**マイク**と**web カメラ**します。 Web カメラから写真をキャプチャするために、両方の機能が必要です。  
+3.  `Package.appxmanifest`の**機能**] タブで [**マイク**と**web カメラ**します。 Web カメラから写真をキャプチャするために、両方の機能が必要です。  
   
-4.  MainPage.xaml で、ルートに次のコードを追加[グリッド](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx)要素。  
+4.  `MainPage.xaml`、ルートにこのコードを追加[グリッド](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx)要素。  
   
      [!code-xml[wrl-media-capture#7](../windows/codesnippet/Xaml/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_7.xaml)]  
   
-5.  次のコードを使用して MainPage.xaml.cs の内容を置き換えます。  
+5.  次のコードを使用して、内容を置き換える`MainPage.xaml.cs`します。  
   
      [!code-cs[wrl-media-capture#8](../windows/codesnippet/CSharp/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_8.cs)]  
   
- 次の図は、MediaCapture アプリを示しています。  
+ 次の図は、`MediaCapture app`します。  
   
  ![写真をキャプチャする MediaCapture アプリ](../windows/media/wrl_media_capture.png "WRL_Media_Capture")  
   

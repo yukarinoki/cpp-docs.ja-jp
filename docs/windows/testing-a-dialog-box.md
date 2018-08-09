@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cf9e5e24e77a14b3baf86c1b83d653dd833ebbbb
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 307b5ffeeaa21b4cb90779a9d516229bf2ab3167
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652071"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019679"
 ---
 # <a name="testing-a-dialog-box"></a>ダイアログ ボックスのテスト
 ダイアログ ボックスを設計する際には、プログラムをコンパイルせずに実行時の動作をシミュレートし、テストできます。 このモードでは、次を行うことができます。  
@@ -42,7 +42,7 @@ ms.locfileid: "39652071"
   
 ### <a name="to-test-a-dialog-box"></a>ダイアログ ボックスをテストするには  
   
-1.  ダイアログ エディターがアクティブなウィンドウである場合は、メニュー バーの **[書式]**、 **[ダイアログのテスト]** をクリックします。  
+1.  ときに、**ダイアログ**エディターがアクティブなウィンドウ、メニュー バーで、選択**形式** > **テスト ダイアログ**します。  
   
 2.  シミュレーションを終了するには、キーを押します**Esc**、かのみを選んで、**閉じる**テストしているダイアログ ボックスでボタンをクリックします。  
   

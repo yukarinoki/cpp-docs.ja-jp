@@ -21,18 +21,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 14cad19c53e8cd741bf16bab49420169e93f6af6
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: b990046e4f43e70218fc1a7f6eb885638c2051bf
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606973"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015944"
 ---
 # <a name="saving-and-loading-different-color-palettes-image-editor-for-icons"></a>さまざまなカラー パレットの保存と読み込み (アイコン用イメージ エディター)
-保存してが含まれるカラー パレットを読み込む[色をカスタマイズ](../windows/customizing-or-changing-colors-image-editor-for-icons.md)します。 既定では、Visual Studio を起動すると、前回使用したカラー パレットが自動的に読み込まれます。  
+保存して読み込む、**色**が含まれるパレット[色をカスタマイズ](../windows/customizing-or-changing-colors-image-editor-for-icons.md)します。 (既定で、**色**Visual Studio を起動すると、最も最近使用したパレットが自動的に読み込まれます)。  
   
 > [!TIP]
->  イメージ エディターには既定のカラー パレットを復元する手段がないため、既定の設定を簡単に復元できるように、既定のカラー パレットに "standard.pal" や "default.pal" などの名前を付けて保存する必要があります。  
+>  以降、**イメージ**エディターは既定値を復元する手段を持たない**色**パレットで、既定値を保存する必要があります**色**パレットなどの名前で *"standard.pal"* または *"default.pal"* 既定の設定を簡単に復元できるようにします。  
   
 ### <a name="to-save-a-custom-colors-palette"></a>カスタム カラー パレットを保存するには  
   
@@ -46,10 +46,9 @@ ms.locfileid: "39606973"
   
 1.  **イメージ**] メニューの [選択**パレットの読み込み**します。  
   
-2.  [カラー パレットの読み込み ダイアログ ボックス](../windows/load-palette-colors-dialog-box-image-editor-for-icons.md)、適切なディレクトリに移動し、読み込むパレットを選択します。 カラー パレットは、拡張子 .pal を付けて保存されています。  
+2.  [カラー パレットの読み込み ダイアログ ボックス](../windows/load-palette-colors-dialog-box-image-editor-for-icons.md)、適切なディレクトリに移動し、読み込むパレットを選択します。 **色**パレットは、拡張子 .pal と共に保存されます。  
   
 ## <a name="requirements"></a>要件  
-  
  なし  
   
 ## <a name="see-also"></a>関連項目  

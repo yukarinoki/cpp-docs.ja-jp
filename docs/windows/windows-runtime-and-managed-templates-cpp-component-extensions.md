@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ec064bc8ea40fd4835c4f779e0120e1daa445d7e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6fe449842cc019520a3d73528db05a26b17dcd99
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641461"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011563"
 ---
 # <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows ランタイムおよびマネージド テンプレート (C++ コンポーネント拡張)
 テンプレートは、Windows ランタイムまたは共通言語ランタイム型では、プロトタイプを定義することを有効にして、別のテンプレート型パラメーターを使用してその型のバリエーションをインスタンス化し。  
@@ -44,7 +44,7 @@ ms.locfileid: "39641461"
   
 ### <a name="examples"></a>使用例  
   
- マネージ型テンプレート パラメーターを使用してジェネリック型のインスタンスを作成することができますが、ジェネリック型テンプレート パラメーターを持つ管理対象のテンプレートをインスタンス化することはできません。  これは、ジェネリック型は実行時に解決されるためです。  詳細については、次を参照してください。[ジェネリックとテンプレート (Visual c)](../windows/generics-and-templates-visual-cpp.md)します。  
+ マネージ型テンプレート パラメーターを使用してジェネリック型のインスタンスを作成することができますが、ジェネリック型テンプレート パラメーターを持つ管理対象のテンプレートをインスタンス化することはできません。 これは、ジェネリック型は実行時に解決されるためです。 詳細については、次を参照してください。[ジェネリックとテンプレート (Visual c)](../windows/generics-and-templates-visual-cpp.md)します。  
   
 ```cpp  
 // managed_templates.cpp  
@@ -77,7 +77,7 @@ template<class T> public ref class R {
 };  
 ```  
   
- C + を使用して参照されたアセンブリで定義されているテンプレートにアクセスすることはできません/cli が CLI 言語の構文は、リフレクションを使用できます。  テンプレートがインスタンス化されない場合、メタデータでは発生しません。  テンプレートがインスタンス化される場合は、参照されているメンバー関数のみがメタデータに表示されます。  
+ C + を使用して参照されたアセンブリで定義されているテンプレートにアクセスすることはできません/cli が CLI 言語の構文は、リフレクションを使用できます。 テンプレートがインスタンス化されない場合、メタデータでは発生しません。 テンプレートがインスタンス化される場合は、参照されているメンバー関数のみがメタデータに表示されます。  
   
 ```cpp  
 // managed_templates_3.cpp  

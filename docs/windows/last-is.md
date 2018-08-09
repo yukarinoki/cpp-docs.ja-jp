@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0519409e71457ca025318a591772faf33592abe
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 98527958ba9fdf2c2b53e8b18348cb93d3aed6ad
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606069"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016458"
 ---
 # <a name="lastis"></a>last_is
 転送する最後の配列要素のインデックスを指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 [ last_is(  
    "expression"  
 ) ]  

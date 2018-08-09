@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8345829e5d561ead3be0052770e022f704eabc3b
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: fde195d465116f2fa3055d5981c2c465c4bf31ba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646125"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019465"
 ---
 # <a name="using-a-drawing-tool-image-editor-for-icons"></a>描画ツールの使用 (アイコン用イメージ エディター)
-イメージ エディターの手描きツールと同じ方法ですべての作業のツールを消去: ツールを選択して、必要に応じて、[前景色と背景色を選択します。](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md)とサイズおよび図形オプション。 イメージにポインターを移動し、クリックしてまたはドラッグした描画、消去します。  
+**イメージ**エディターの手描きツールと同じ方法ですべての作業のツールを消去: ツールを選択して、必要に応じて、[前景色と背景色を選択します。](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md)とサイズおよび図形オプション。 イメージにポインターを移動し、クリックしてまたはドラッグした描画、消去します。  
   
  選択すると、**消しゴム**ツール、**ブラシ**ツール、または**エアブラシ**ツール オプション セレクターがそのツールのオプションが表示されます。  
   

@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 50029cea9e5bd7bf3a5032a2190fc71d4e893b5f
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 95926c7e65210b7eaf366c0fe2a9df44fa9661d7
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607674"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016679"
 ---
 # <a name="registrationscript"></a>registration_script
 指定したカスタム登録スクリプトを実行します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 [ registration_script(   
    script   
 ) ]  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *スクリプト*  
  カスタム登録スクリプト (.rgs) ファイルの完全パスです。 値**none**など`script = "none"`コクラスに登録要件がないことを示します。  
   

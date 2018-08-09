@@ -17,19 +17,19 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a5b1c5fed776e5e9312843160a740fd3d801b196
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 07311e916fa78f1ba946ad4631905968912f8195
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608548"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019067"
 ---
 # <a name="safecast"></a>SafeCast
 型の数値を別の型にキャストします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename T, typename U>  
 inline bool SafeCast (  
    const T From,  

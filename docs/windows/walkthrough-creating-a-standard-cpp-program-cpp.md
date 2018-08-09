@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0915f6f506b942a7ee52eec637c9ea6631339e79
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 4f3f01ab95237a0401394d429443804ce65a4385
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643284"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017329"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>チュートリアル: 標準の C++ プログラム (C++) の作成
 Visual Studio の Visual C++ の統合開発環境 (IDE: Integrated Development Environment) を使用して、標準 C++ プログラムを作成できます。 このチュートリアルの手順に従って、プロジェクトを作成し、プロジェクトに新しいファイルを追加してから、ファイルを変更して C++ コードを追加できます。次に、[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] を使用してプログラムをコンパイルし、実行できます。  
@@ -59,7 +59,7 @@ Visual Studio の Visual C++ の統合開発環境 (IDE: Integrated Development 
   
     2.  **コード**ノード、をクリックして**C++ ファイル (.cpp)**、ファイルの名前を入力し、クリックして**追加**します。  
   
-     .Cpp ファイルにソース ファイル フォルダーに表示されます**ソリューション エクスプ ローラー**、Visual Studio エディターでファイルを開くとします。  
+     .Cpp ファイルに表示されます、**ソース ファイル**フォルダー**ソリューション エクスプ ローラー**、Visual Studio エディターでファイルを開くとします。  
   
 6.  エディターでファイルに、C++ 標準ライブラリを使用する有効な C++ プログラムを入力またはサンプル プログラムの 1 つのコピーし、ファイルに貼り付けます。  
   

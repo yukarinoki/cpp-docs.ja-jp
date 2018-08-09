@@ -1,5 +1,5 @@
 ---
-title: Verifyinheritancehelper::verify メソッド |Microsoft ドキュメント
+title: Verifyinheritancehelper::verify メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 879f5fa117f0f2bc444243f540925d64a2b824b0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 04bf01b5fad5a9fec579e347497a28b5e8abb861
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889876"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018817"
 ---
 # <a name="verifyinheritancehelperverify-method"></a>VerifyInheritanceHelper::Verify メソッド
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 static void Verify();  
 ```  
   
-## <a name="remarks"></a>コメント  
- 現在のテンプレート パラメーターで指定された 2 つのインターフェイスをテストし、1 つのインターフェイスは、他から派生されているかどうかを決定します。  
+## <a name="remarks"></a>Remarks  
+ 現在のテンプレート パラメーターで指定された 2 つのインターフェイスをテストし、1 つのインターフェイスは、その他から派生されているかどうかを決定します。  
   
- 1 つのインターフェイスは、他から派生していない場合は、エラーが生成されます。  
+ 1 つのインターフェイスは、その他から派生していない場合は、エラーが生成されます。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** implements.h  

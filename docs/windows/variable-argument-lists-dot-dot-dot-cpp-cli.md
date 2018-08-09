@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 054d91881d136564cdfb956f240789ca5a425ef2
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 93cd229e93c4da36004c212cef0f09463926a0e5
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642943"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015957"
 ---
 # <a name="variable-argument-lists--ccli"></a>可変個引数リスト (...) (C++/CLI)
 この例は、Visual C++ で `...` 構文を使って可変個の引数を持つ関数を実装する方法を示しています。  
@@ -54,9 +54,7 @@ int main() {
 }  
 ```  
   
-### <a name="output"></a>出力  
-  
-```  
+```Output  
 3  
 ```  
   

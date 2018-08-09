@@ -1,5 +1,5 @@
 ---
-title: MutexTraits 構造体 |Microsoft ドキュメント
+title: MutexTraits 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0406ec7938a623be7b16e0535e9d2c0c769f8392
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: deebac1516724469882391c3c856a9ed7a588c88
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874591"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018979"
 ---
 # <a name="mutextraits-structure"></a>MutexTraits 構造体
-一般的な特性を定義、[ミュー テックス](../windows/mutex-class1.md)クラスです。  
+一般的な特性を定義、[ミュー テックス](../windows/mutex-class1.md)クラス。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 struct MutexTraits : HANDLENullTraits;  
 ```  
   
@@ -39,7 +39,7 @@ struct MutexTraits : HANDLENullTraits;
   
 |名前|説明|  
 |----------|-----------------|  
-|[MutexTraits::Unlock メソッド](../windows/mutextraits-unlock-method.md)|共有リソースの排他的に制御を解放します。|  
+|[MutexTraits::Unlock メソッド](../windows/mutextraits-unlock-method.md)|共有リソースの排他的制御を解放します。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `HANDLENullTraits`  

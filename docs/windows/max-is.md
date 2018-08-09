@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3fae7ee95255d72d2799a5913821606f770e2b3b
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 2799039aa2c198bcea3784876d8299fcaec59b20
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608431"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012450"
 ---
 # <a name="maxis"></a>max_is
 有効な配列のインデックスの最大値を指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 [ max_is(  
    "expression"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *式*  
  1 つ以上の C 言語の式。 空の引数スロットが許可されます。  
   

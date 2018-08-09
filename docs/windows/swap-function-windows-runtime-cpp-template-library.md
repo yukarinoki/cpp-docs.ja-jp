@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 63c28a18723ad1dc39669ee5a367c870451c9943
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: e2d42a108d461e3f0238612171b3445e28138194
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651760"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019616"
 ---
 # <a name="swap-function-windows-runtime-c-template-library"></a>Swap 関数 (Windows ランタイム C++ テンプレート ライブラリ)
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 WRL_NOTHROW inline void Swap(  
    _Inout_ T& left,  
    _Inout_ T& right  

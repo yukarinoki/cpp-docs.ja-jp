@@ -1,5 +1,5 @@
 ---
-title: MFC の定義済みシンボル |Microsoft ドキュメント
+title: MFC の定義済みのシンボル |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dd65b4294443de9f367ecc5a4ea64b524aabb4a2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 068fcf9e4cfb45bb3d20d54df69d5b4bceb7cd53
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882061"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018495"
 ---
 # <a name="mfc-predefined-symbols"></a>MFC の定義済みシンボル
-MFC プロジェクトは、常に windows をサポートするいくつかのヘッダー ファイルをインクルードします。 使用して追加するには # StdAfx.h ファイルの include ステートメント。  
+常に、MFC プロジェクトには、windows をサポートしているいくつかのヘッダー ファイルが含まれます。 使用して追加するには`#include`内のステートメント、`StdAfx.h`ファイル。  
   
-```  
+```cpp  
 #include <afxwin.h>      //MFC core and standard components  
 #include <afxext.h>      //MFC extensions  
 #include <afxdisp.h      //MFC automation classes  
@@ -34,7 +34,7 @@ MFC プロジェクトは、常に windows をサポートするいくつかの�
 #include <afxcmn.h>      //MFC support for Windows common controls.  
 ```  
   
- ヘッダー ファイルには、MFC の一般的な値のシンボル ID 値が含まれます。 これらのシンボルを使用できるは、MFC プロジェクトで作業している場合だけです。 Afx _ プレフィックスが標準のシンボル名のプレフィックスを続くことに注意してください。  
+ ヘッダー ファイルには、MFC の一般的な値のシンボル ID の値が含まれます。 これらのシンボルを使用できるは、MFC プロジェクトで作業している場合だけです。 AFX _ プリフィックスは、標準のシンボル名のプレフィックスを続くことに注意してください。  
   
 |||  
 |-|-|  
@@ -158,7 +158,7 @@ MFC プロジェクトは、常に windows をサポートするいくつかの�
 |AFX_IDS_BOLD|AFX_IDS_BOLDITALIC|  
 |AFX_IDS_BORDERSTYLE_0|AFX_IDS_BORDERSTYLE_1|  
 |AFX_IDS_CHANGE_LINK|AFX_IDS_CHECKLISTBOX_CHECK|  
-|AFX_IDS_CHECKLISTBOX_MIXED|AFX_IDS_CHECKLISTBOX_ をオフに|  
+|AFX_IDS_CHECKLISTBOX_MIXED|AFX_IDS_CHECKLISTBOX_ をオフにします|  
 |AFX_IDS_COLOR_ACTIVEBAR|AFX_IDS_COLOR_ACTIVEBORDER|  
 |AFX_IDS_COLOR_ACTIVETEXT|AFX_IDS_COLOR_APPWORKSPACE|  
 |AFX_IDS_COLOR_BTNFACE|AFX_IDS_COLOR_BTNHIGHLIGHT|  

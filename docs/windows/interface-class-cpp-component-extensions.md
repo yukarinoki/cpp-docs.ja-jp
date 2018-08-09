@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 74b4ea6b82de65f691d5d0350e161725625e4e1f
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: cda56029b94d2c4be55ce133d96adb76663491ae
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604487"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012834"
 ---
 # <a name="interface-class--c-component-extensions"></a>インターフェイス クラス (C++ コンポーネント拡張)
 インターフェイスを宣言します。  ネイティブ インターフェイスについては、次を参照してください。 [_ _interface](../cpp/interface.md)します。  
@@ -32,14 +32,13 @@ ms.locfileid: "39604487"
 
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 interface_access  
 interface class  
  name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};  
 ```  
   
 ### <a name="parameters"></a>パラメーター  
-  
  *interface_access*  
  アセンブリの外部インターフェイスのアクセシビリティ。  指定できる値は**パブリック**と**プライベート**します。  **プライベート**既定値です。 入れ子になったインターフェイスを持つことはできません、 *interface_access*指定子。  
   
@@ -75,7 +74,7 @@ interface class
  開発環境で取得できますの F1 ヘルプでこれらのキーワードをキーワードを強調表示 (`interface class`など) f1 キーを押します。  
   
 ## <a name="windows-runtime"></a>Windows ランタイム  
- **解説**  
+### <a name="remarks"></a>Remarks 
   
  (この言語機能には Windows ランタイムのみに適用される特記事項がありません。)  
   
@@ -83,7 +82,7 @@ interface class
  コンパイラ オプション: `/ZW`  
   
 ## <a name="common-language-runtime"></a>共通言語ランタイム 
- **解説**  
+### <a name="remarks"></a>Remarks
   
  (この言語機能には共通言語ランタイムのみに適用される特記事項がありません。)  
   
@@ -183,8 +182,6 @@ int main() {
    hi->Function_1();  
 }  
 ```  
-  
- **出力**  
   
 ```Output  
 in Function_3  

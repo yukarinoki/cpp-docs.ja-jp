@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c02849bc3d1b45ecb6de89e103c51311af31b3c
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 45cfc4374b9779a61e3ea97c829317b9d4fe75ba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569844"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016162"
 ---
 # <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>方法: 内部ポインターおよびマネージド配列を宣言および使用する (C++/CLI)
 次の C +/cli CLI のサンプルを宣言して、配列への内部ポインターを使用する方法を示しています。  
@@ -56,8 +56,6 @@ int main() {
    System::Console::WriteLine("after incrementing ipi, it points to memory address whose value is: {0}", *ipi);  
 }  
 ```  
-  
-### <a name="output"></a>出力  
   
 ```Output  
 1st element in arr holds: 1  

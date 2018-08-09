@@ -24,15 +24,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97816db8075d04b6d05950bb65c25aa12382b728
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 5fca755c46d3fc5628adc2c724b9307a346d1fe7
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646931"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014004"
 ---
 # <a name="viewing-and-editing-resources-in-a-resource-editor"></a>リソース エディターでのリソースの表示と編集
-各リソースの種類には、そのリソースの種類に固有のリソース エディターが用意されています。 再配置してサイズ変更、コントロールと機能を追加するか、またはそれ以外の場合、関連付けられているエディターを使用してリソースの側面を変更できます。 内のリソースを編集することもできます。[テキスト形式](../windows/how-to-open-a-resource-script-file-in-text-format.md)と[バイナリ形式](../windows/opening-a-resource-for-binary-editing.md)します。  
+各リソースの種類が、**リソース**そのリソースの種類に固有のエディター。 再配置してサイズ変更、コントロールと機能を追加するか、またはそれ以外の場合、関連付けられているエディターを使用してリソースの側面を変更できます。 内のリソースを編集することもできます。[テキスト形式](../windows/how-to-open-a-resource-script-file-in-text-format.md)と[バイナリ形式](../windows/opening-a-resource-for-binary-editing.md)します。  
   
  リソースの種類によっては個々 のファイルをインポートしてさまざまな方法で使用されることができます。ビットマップ、アイコン、カーソル、ツールバー、および html ファイルが含まれます。 このようなリソース ファイル名があるだけでなく[リソース識別子](../windows/symbols-resource-identifiers.md)します。 他のユーザー、ダイアログ、メニューのおよび Win32 プロジェクトの文字列テーブルなど存在リソース スクリプト (.rc) ファイルまたはリソース テンプレート (.rct) ファイルの一部としてのみです。  
   
@@ -46,16 +46,16 @@ ms.locfileid: "39646931"
   
 1.  選択**リソース ビュー**から、**ビュー**メニュー。  
   
-2.  リソース ビュー ウィンドウが最上位のウィンドウではない場合は、クリックして、**リソース ビュー**上部にタブ。  
+2.  場合、**リソース ビュー**ウィンドウが最上位のウィンドウではありません、クリックして、**リソース ビュー**上部にタブ。  
   
-3.  リソース ビューから表示するリソースを含むプロジェクトのフォルダーを展開します。 たとえば、ダイアログ リソースを表示する場合は、ダイアログ フォルダーを展開します。  
+3.  **リソース ビュー**、表示するリソースを含むプロジェクトのフォルダーを展開します。 たとえば、ダイアログ リソースを表示する場合は、展開、**ダイアログ**フォルダー。  
   
     > [!NOTE]
     >  プロジェクトに .rc ファイルがまだ含まれていない場合は、「 [リソース スクリプト ファイルの新規作成](../windows/how-to-create-a-resource-script-file.md)」を参照してください。  
   
-4.  リソースを IDD_ABOUTBOX をダブルクリックします。  
+4.  たとえば、リソースをダブルクリックして**IDD_ABOUTBOX**します。  
   
-     リソースが適切なエディターで開きます。 たとえば、ダイアログ リソース、リソースは、ダイアログ エディター内で開きます。  
+     リソースが適切なエディターで開きます。 たとえば、ダイアログ リソースの場合は、リソースで開きます、**ダイアログ**エディター。  
   
      できます[、プロジェクトを開く必要はありません (リソース スクリプト) .rc ファイル内のリソースを表示](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)します。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "39646931"
   
 ### <a name="to-view-a-managed-resource-in-a-resource-editor"></a>リソース エディターでマネージ リソースを表示するには  
   
-1.  **ソリューション エクスプ ローラー**リソース、たとえば、Bitmap1.bmp をダブルクリックします。  
+1.  **ソリューション エクスプ ローラー**、たとえば、リソースをダブルクリックして**Bitmap1.bmp**します。  
   
      リソースが適切なエディターで開きます。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "39646931"
   
 1.  **ソリューション エクスプ ローラー**、削除するリソースを右クリックして**削除**ショートカット メニューから。  
   
-### <a name="requirements"></a>要件  
+## <a name="requirements"></a>要件  
  なし  
   
 ## <a name="see-also"></a>関連項目  

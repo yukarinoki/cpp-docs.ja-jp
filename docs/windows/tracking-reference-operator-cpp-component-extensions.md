@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e645d39a6373362a33e4efd25019d43cad348bbc
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 66d97de05956df985f4c0d699682210721b60c82
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651832"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011843"
 ---
 # <a name="tracking-reference-operator-c-component-extensions"></a>参照演算子の追跡 (C++ コンポーネント拡張)
 A*追跡参照*(`%`) 通常の C++ 参照のように動作 (`&`) オブジェクトの参照カウントがインクリメントされますオブジェクトが追跡参照に割り当てられるとき、点が異なります。  
@@ -46,7 +46,7 @@ A*追跡参照*(`%`) 通常の C++ 参照のように動作 (`&`) オブジェ�
 ## <a name="windows-runtime"></a>Windows ランタイム  
  追跡参照は、% が参照カウントされている点を除くと、標準 C++ 参照のように動作します。 次のスニペットでは、% 型と ^ 型の間で変換を行う方法を示します。  
   
-```  
+```cpp  
 Foo^ spFoo = ref new Foo();  
 Foo% srFoo = *spFoo;  
 Foo^ spFoo2 = %srFoo;  
@@ -54,7 +54,7 @@ Foo^ spFoo2 = %srFoo;
   
  次の例では、% を受け取る関数に ^ を渡す方法を示します。  
   
-```  
+```cpp  
 ref class Foo sealed {};  
   
     // internal or private  
@@ -139,8 +139,6 @@ int main() {
    Console::WriteLine(a[0]);  
 }  
 ```  
-  
- **出力**  
   
 ```Output  
 21  

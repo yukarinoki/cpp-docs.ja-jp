@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 862498b012955c3b77a13b37ae07bbee66dd8dfa
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: a8a19de393e7451f045d840552127743f87e00ba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651406"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019174"
 ---
 # <a name="showing-or-hiding-the-dialog-editor-toolbar"></a>[ダイアログ エディター] ツール バーの表示と非表示
-ダイアログ エディターを開くと、ソリューションの上部にある自動的にダイアログ エディター ツールバーが表示されます。  
+開くと、**ダイアログ**エディター、**ダイアログ エディター**ソリューションの上部にあるツールバーが自動的に表示されます。  
   
 ### <a name="dialog-editor-toolbar"></a>ダイアログ エディター ツール バー  
   
@@ -40,9 +40,9 @@ ms.locfileid: "39651406"
 |![垂直方向の中心のボタン](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|Vertical|![グリッドの切り替えボタン](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|グリッドの切り替え|  
 |![水平方向の中央ボタン](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|[水平方向]|![ガイドの切り替えボタン](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|[ガイドの切り替え]|  
   
- ダイアログ エディター ツールバーには、ダイアログ ボックスで、サイズと配置などのコントロールのレイアウトを変更するためのボタンが含まれています。 ダイアログ エディター ツールバーのボタンは、[書式] メニューのコマンドに対応します。 詳細については、次を参照してください。[ダイアログ エディターのアクセラレータ キー](../windows/accelerator-keys-for-the-dialog-editor.md)します。  
+ **ダイアログ エディター**ツールバーには、ダイアログ ボックスで、たとえばサイズと配置上のコントロールのレイアウトを変更するためのボタンが含まれています。 **ダイアログ エディター**ツール バー ボタンにコマンドに対応しており、**形式**メニュー。 詳細については、次を参照してください。[ダイアログ エディターのアクセラレータ キー](../windows/accelerator-keys-for-the-dialog-editor.md)します。  
   
- ダイアログ エディターでは、使用可能なツールバーと windows の一覧から選択して、ダイアログ エディターのツールバーの表示を切り替えることができます。  
+ は、**ダイアログ**エディターの表示を切り替えることができます、**ダイアログ エディター**ツールバーを使用できるツールバーおよびウィンドウの一覧から選択します。  
   
 ### <a name="to-show-or-hide-the-dialog-editor-toolbar"></a>ダイアログ エディターのツールバーを非表示  
   

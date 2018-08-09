@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9e850c90ef873e64352ace64ff680cd93474a4a1
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: ba92e459ffb26ffc1bbb9239a843d628e7041d6d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606424"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013520"
 ---
 # <a name="modulegenericreleasenotifier-class"></a>Module::GenericReleaseNotifier クラス
 現在のモジュールの最後のオブジェクトがリリースされたときに、イベント ハンドラーを呼び出します。 イベント ハンドラーは、ラムダをファンクター、または関数へのポインターによって指定されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename T>  
 class GenericReleaseNotifier : public ReleaseNotifier;  
 ```  

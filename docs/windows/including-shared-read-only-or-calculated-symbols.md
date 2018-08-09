@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 436ceb757f9cce5e1436b13f2d32a331295f4bf6
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9eeaacf95040f0f7e2ee435a7fbed2c173076315
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608613"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014914"
 ---
 # <a name="including-shared-read-only-or-calculated-symbols"></a>共有シンボル (読み取り専用) または計算型シンボルのインクルード
 別のアプリケーションによって作成されたリソース ファイルを開発環境に初めて読み取るとき、インクルードされるすべてのヘッダー ファイルが読み取り専用とマークされます。 その後、使用することができます、 [] ダイアログ ボックスの [リソース インクルード](../windows/resource-includes-dialog-box.md)追加の読み取り専用シンボル ヘッダー ファイルを追加します。  
@@ -37,7 +37,7 @@ ms.locfileid: "39608613"
   
  インクルードされるシンボル ファイルは、単純な整数の代わりに式を使用してシンボル値を定義するシンボル定義を含む既存のリソースがあるときに使用することもできます。 例えば:  
   
-```  
+```cpp  
 #define   IDC_CONTROL1 2100  
 #define   IDC_CONTROL2 (IDC_CONTROL1+1)  
 ```  
@@ -60,9 +60,9 @@ ms.locfileid: "39608613"
     > [!NOTE]
     >  プロジェクトに .rc ファイルがまだ含まれていない場合は、「 [リソース スクリプト ファイルの新規作成](../windows/how-to-create-a-resource-script-file.md)」を参照してください。  
   
-2.  **読み取り専用シンボル ディレクティブ**ボックスで使用して、 **#include**コンパイラ ディレクティブをファイルの読み取り専用のシンボルを格納する場所を指定します。  
+2.  **読み取り専用シンボル ディレクティブ**ボックスで使用して、`#include`コンパイラ ディレクティブをファイルの読み取り専用のシンボルを格納する場所を指定します。  
   
-     Resource.h を呼び出さないでください。これは、通常、メイン シンボル ヘッダー ファイルで使用されるファイル名です。  
+     ファイルを呼び出さないでください`Resource.h`、通常、メイン シンボル ヘッダー ファイルで使用されるファイル名があるためです。  
   
     > [!NOTE]
     >  **重要な**入力したとおりにリソース ファイルに含まれるが読み取り専用シンボル ディレクティブ ボックスに入力します。 入力ミスや構文エラーがないことを確認してください。  
@@ -76,7 +76,6 @@ ms.locfileid: "39608613"
 4.  **[OK]** をクリックします。  
   
 ## <a name="requirements"></a>要件  
-  
  Win32  
   
 ## <a name="see-also"></a>関連項目  

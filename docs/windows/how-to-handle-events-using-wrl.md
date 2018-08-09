@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 287fe57868f1550e2f778bd9122d0d350011084e
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: eada53c74c967c4df093e094a611a726ef79d99d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570634"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012535"
 ---
 # <a name="how-to-handle-events-using-wrl"></a>方法: WRL を使用してイベントを処理する
 このドキュメントでは、Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用してサブスクライブして、Windows ランタイム オブジェクトのイベントを処理する方法を示します。  
@@ -35,7 +35,7 @@ ms.locfileid: "39570634"
   
      [!code-cpp[wrl-consume-event#2](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_1.cpp)]  
   
-     Windows.Devices.Enumeration.h では、デバイスを列挙するために必要な型を宣言します。  
+     `Windows.Devices.Enumeration.h` デバイスを列挙するために必要な型を宣言します。  
   
      コードを読みやすくするために、.cpp ファイルでは `using namespace` ディレクティブを使用することをお勧めします。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "39570634"
  [!code-cpp[wrl-consume-event#1](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_10.cpp)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- コードをコンパイルするにコピーし、Visual Studio プロジェクトに貼り付けるかという名前のファイルに貼り付ける`wrl-consume-events.cpp`Visual Studio コマンド プロンプト ウィンドウで、次のコマンドを実行します。  
+ コードをコンパイルするにコピーし、Visual Studio プロジェクトに貼り付けるかという名前のファイルに貼り付ける`wrl-consume-events.cpp`で、次のコマンドを実行し、 **Visual Studio コマンド プロンプト**ウィンドウ。  
   
  `cl.exe wrl-consume-events.cpp runtimeobject.lib`  
   
