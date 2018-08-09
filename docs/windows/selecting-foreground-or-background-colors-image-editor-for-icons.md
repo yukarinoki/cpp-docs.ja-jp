@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 108447dc3e18be84bf2875c49adb600ed9636dc4
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: e9dc6b75cfa408ececeb533fcd75dbad0f124fda
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605549"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018830"
 ---
 # <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>前景色または背景色の選択 (アイコン用イメージ エディター)
 を除き、**消しゴム**、ツールを**イメージ エディター**それぞれ、左または右マウス ボタンを押したときに現在前景色または背景色で描画をツールバー。  
@@ -39,7 +39,6 @@ ms.locfileid: "39605549"
  マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。  
   
 ## <a name="requirements"></a>要件  
-  
  なし  
   
 ## <a name="see-also"></a>関連項目  

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f79b4e53947e0e87fb70211ca40bc54f4500855f
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: af30716208b4caf949630ba5f6965fcc6a1a54c2
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39602773"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017059"
 ---
 # <a name="restricted"></a>restricted
 モジュール、インターフェイス、またはディスパッチ インターフェイスのメンバーを任意に呼び出すことはできませんを指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 [ restricted(  
    interfaces  
 ) ]  

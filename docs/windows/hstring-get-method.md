@@ -1,5 +1,5 @@
 ---
-title: Hstring::get メソッド |Microsoft ドキュメント
+title: Hstring::get メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ea2b36c6fd5ccfd8fa0429448fb3b7045762a461
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 67a8bf626d2e3f26a2f182f2e1f099f14d29b779
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881238"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013341"
 ---
 # <a name="hstringget-method"></a>HString::Get メソッド
 基になる HSTRING ハンドルの値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HSTRING Get() const throw()  
 ```  
   

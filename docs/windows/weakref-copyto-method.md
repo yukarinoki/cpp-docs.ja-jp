@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 90756dc8ff515a8c956778bf8c6392332a8f9ca9
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 88a092255655aaea0e06e8f69b520789f441d379
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652748"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016289"
 ---
 # <a name="weakrefcopyto-method"></a>WeakRef::CopyTo メソッド
 使用可能なインターフェイスへのポインターがあるなら、指定されたポインター変数にそれを割り当てます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CopyTo(  
    REFIID riid,  
    _Deref_out_ IInspectable** ptr  

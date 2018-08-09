@@ -1,5 +1,5 @@
 ---
-title: マルチバイト文字セット (Mbcs) のサポート |Microsoft ドキュメント
+title: マルチバイト文字セット (Mbcs) のサポート |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b0381b570cbf9e900d44ac075876e63b6be14a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 46eb8a3db986c1709aa23da9b96b03867837066a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863635"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012821"
 ---
 # <a name="support-for-multibyte-character-sets-mbcss"></a>マルチバイト文字セット (MBCS) のサポート
 マルチバイト文字セット (MBCS: Multibyte Character Set) は、日本語や中国語など、1 バイト文字では表現できない文字セットをサポートするニーズに対する古いアプローチです。 新規開発を行う場合は、エンド ユーザーに対して表示されることのないシステム文字列を除き、すべてのテキスト文字列で Unicode 文字列を使用する必要があります。 MBCS は、レガシ テクノロジであり、新規開発にはお勧めしません。  
@@ -42,24 +42,24 @@ ms.locfileid: "33863635"
  環境で使われる MBCS 文字  
  MBCS 文字は、ファイル名やフォルダー名などの文字列に使用できます。  
   
- 編集操作  
- MBCS アプリケーションでの編集操作は、バイトではなく文字に対して行う必要があります。 カレットで文字を分割しないでください。右方向キーでは、右へ 1 文字移動します。 **削除**; 文字を削除する必要があります**を元に戻す**再挿入する必要があります。  
+### <a name="editing-operations"></a>編集操作  
+ MBCS アプリケーションでの編集操作は、バイトではなく文字に対して行う必要があります。 キャレットは、文字を分割する必要があります、 **→** 1 文字し、キーを移動する必要があります。 **削除**; 文字を削除する必要があります**を元に戻す**再挿入する必要があります。  
   
- 文字列操作  
+### <a name="string-handling"></a>文字列操作  
  MBCS を使うアプリケーションでは、文字列操作で特殊な問題が出てきます。 1 つの文字列の中に 1 バイト幅の文字と 2 バイト幅の文字が混在しているため、先頭バイトがあるかどうかを必ず確認する必要があります。  
   
- ランタイム ライブラリのサポート  
- C のランタイム ライブラリおよび MFC は、1 バイト文字、MBCS、および Unicode でのプログラミングをそれぞれサポートしています。 1 バイトの文字列に処理できる、`str`と対応するファミリのランタイム関数、MBCS 文字列に処理できる`_mbs`関数、および Unicode 文字列が対応するを持つ処理*wcs*関数。 MFC クラスのメンバー関数では、状況に応じて、通常の `str` ファミリの関数、MBCS の関数、または Unicode の関数に割り当てる移植性の高いランタイム関数を使用しています。  
+### <a name="run-time-library-support"></a>ランタイム ライブラリのサポート  
+ C のランタイム ライブラリおよび MFC は、1 バイト文字、MBCS、および Unicode でのプログラミングをそれぞれサポートしています。 処理されます。 1 バイトの文字列、`str`ファミリのランタイム関数、MBCS 文字列と、対応する処理は`_mbs`関数、および Unicode 文字列と、対応する処理は`wcs`関数。 MFC クラスのメンバー関数では、状況に応じて、通常の `str` ファミリの関数、MBCS の関数、または Unicode の関数に割り当てる移植性の高いランタイム関数を使用しています。  
   
- MBCS と Unicode の移植性  
- Tchar.h ヘッダー ファイルを使用することにより、同じソースから 1 バイト、MBCS、および Unicode の各アプリケーションをビルドできます。 Tchar.h の付いたマクロが定義されて *_tcs*にマップする`str`、 `_mbs`、または*wcs*機能を必要に応じて、します。 MBCS をビルドするシンボルを定義する **_MBCS**です。 Unicode をビルドするシンボルを定義する **_UNICODE**です。 既定では、 **_MBCS** MFC アプリケーションに対して定義されています。 詳細については、次を参照してください。 [Tchar.h における汎用テキスト マッピング](../text/generic-text-mappings-in-tchar-h.md)です。  
+### <a name="mbcsunicode-portability"></a>MBCS と Unicode の移植性  
+ Tchar.h ヘッダー ファイルを使用することにより、同じソースから 1 バイト、MBCS、および Unicode の各アプリケーションをビルドできます。 Tchar.h でプレフィックスが付いたマクロを定義する *_tcs*に割り当てられている`str`、 `_mbs`、または`wcs`関数は、適切な。 MBCS でビルドするには、シンボル `_MBCS` を定義します。 Unicode をビルドするには、シンボルを定義`_UNICODE`します。 MFC アプリケーションでは、既定で `_MBCS` が定義されています。 詳細については、次を参照してください。 [Tchar.h における汎用テキスト マッピング](../text/generic-text-mappings-in-tchar-h.md)します。  
   
 > [!NOTE]
->  両方を定義する場合の動作が定義されていない **_UNICODE**と **_MBCS**です。  
+>  両方を定義する場合の動作は定義されません`_UNICODE`と`_MBCS`します。  
   
  Mbctype.h ヘッダー ファイルおよび Mbstring.h ヘッダー ファイルでは、MBCS 固有の関数とマクロが定義されています。この関数とマクロは状況に応じて必要になります。 たとえば `_ismbblead` は、文字列の特定のバイトが先行バイトかどうかを示します。  
   
- 国際対応の移植性を使用してプログラムのコード[Unicode](../text/support-for-unicode.md)またはマルチバイト文字セット (Mbcs)。  
+ 国際的な移植性のため、コードでプログラム[Unicode](../text/support-for-unicode.md)またはマルチバイト文字セット (Mbcs)。  
   
 ## <a name="what-do-you-want-to-do"></a>実行する操作  
   
@@ -67,11 +67,11 @@ ms.locfileid: "33863635"
   
 -   [プログラムで Unicode と MBCS の両方を有効にします。](../text/internationalization-strategies.md)  
   
--   [MBCS を使用して、国際化プログラムを作成するには](../text/mbcs-programming-tips.md)  
+-   [MBCS を使用して、国際化のプログラムを作成するには](../text/mbcs-programming-tips.md)  
   
 -   [MBCS プログラミングの概要を参照してください。](../text/mbcs-programming-tips.md)  
   
--   [バイト幅の移植性に対する汎用テキスト マップの詳細します。](../text/generic-text-mappings-in-tchar-h.md)  
+-   [バイト幅の移植性に対する汎用テキスト マッピングについて説明します](../text/generic-text-mappings-in-tchar-h.md)  
   
 ## <a name="see-also"></a>関連項目  
  [テキストと文字列](../text/text-and-strings-in-visual-cpp.md)   

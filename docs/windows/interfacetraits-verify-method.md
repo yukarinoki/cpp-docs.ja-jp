@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 404c5fc8680089aeac49b0cda655e9cbd0d4ecd9
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: b5b160a941343fce656313f588065573d7b00c90
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603049"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017949"
 ---
 # <a name="interfacetraitsverify-method"></a>InterfaceTraits::Verify メソッド
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 __forceinline static void Verify();  
 ```  
   
 ## <a name="remarks"></a>Remarks  
  検証が行われます`Base`は正しく派生します。  
   
- 詳細については`Base`、パブリック Typedef」セクションを参照してください。 [InterfaceTraits 構造体](../windows/interfacetraits-structure.md)します。  
+ 詳細については`Base`を参照してください、**パブリック Typedef**セクション[InterfaceTraits 構造体](../windows/interfacetraits-structure.md)します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** implements.h  

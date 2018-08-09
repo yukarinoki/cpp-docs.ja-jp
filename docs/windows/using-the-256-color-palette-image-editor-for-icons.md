@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: be817ac4bddcc169ab2ecb3a9106e9594642e2f0
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 0287d27d975ce93e88a7a4b70a683188901ca958
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645153"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011817"
 ---
 # <a name="using-the-256-color-palette-image-editor-for-icons"></a>256 色カラー パレットの使用 (アイコン用イメージ エディター)
-256 色カラー パレットから選択した場合、描画するには、色パレットから色を選択する必要があります、 [[色] ウィンドウ](../windows/colors-window-image-editor-for-icons.md)します。  
+256 色カラー パレットから選択した場合、描画するから色を選択する必要があります、**色**パレットで、 [[色] ウィンドウ](../windows/colors-window-image-editor-for-icons.md)します。  
   
 ### <a name="to-choose-a-color-from-the-256-color-palette-for-large-icons"></a>大きいアイコンの 256 色カラー パレットから色を選択するには  
   
@@ -36,7 +36,7 @@ ms.locfileid: "39645153"
   
 2.  色で表示される 256 色から選択、**色**パレットで、**色**ウィンドウ。  
   
-     選択した色のカラー パレットのでは、現在の色になります、**色**ウィンドウ。  
+     選択した色に現在の色になります、**色**パレットで、**色**ウィンドウ。  
   
     > [!NOTE]
     >  256 色の画像に使用する初期のパレットがによって返されるパレットと一致する、 `CreateHalftonePalette` Windows API。 Windows シェルは、すべてのアイコンは、パレットの実現化中のちらつきを防ぐためにこのパレットを使用する必要があります。  

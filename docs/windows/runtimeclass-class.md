@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d777dd15e484ae296139bbe2bdc9b0cddcab2d59
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 7f76695cfe3dcad0f5c835577aa4cc9b7cd3ec62
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606333"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017644"
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass クラス
 指定したインターフェイスを継承し、指定した Windows ランタイム、クラシック COM、および弱い参照のサポートを提供する WinRT または COM クラスを表します。  
@@ -31,7 +31,7 @@ ms.locfileid: "39606333"
   
 ## <a name="syntax"></a>構文  
   
-```
+```cpp
 template <typename ...TInterfaces> class RuntimeClass
 template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 ```

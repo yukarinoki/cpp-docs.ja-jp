@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 806dcb96916b2e92bffc2d217e318a8853672ae8
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 7e8f1788b8af2c563e89f9a05643298a8b06d860
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605072"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014764"
 ---
 # <a name="libraryblock"></a>library_block
 IDL ライブラリ ブロック内の構造を配置します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 [library_block]  
 ```  
   

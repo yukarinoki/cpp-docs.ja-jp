@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1850507b9d00ab717a2602d4e230968f5222f077
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: fd5f7bb72e1107fe561acef4d6cc3f3ecb87ed59
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604282"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016857"
 ---
 # <a name="method-attributes"></a>メソッド属性
 次の属性は、クラス、コクラスまたはインターフェイスのメソッドに適用されます。  
@@ -39,8 +39,8 @@ ms.locfileid: "39604282"
 |[defaultbind](../windows/defaultbind.md)|オブジェクトを最もよく表す単一のバインド可能なプロパティを示します。|  
 |[defaultcollelem](../windows/defaultcollelem.md)|Visual Basic コードの最適化に使用されます。|  
 |[displaybind](../windows/displaybind.md)|バインド可能なユーザーに表示されるプロパティを示します。|  
-|[helpcontext](../windows/helpcontext.md)|ユーザーがヘルプ ファイル内のこの要素についての情報を表示できるようにコンテキスト ID を指定します。|  
-|[helpfile](../windows/helpfile.md)|タイプ ライブラリのヘルプ ファイルの名前を設定します。|  
+|[helpcontext](../windows/helpcontext.md)|ユーザーには、この要素に関する情報を表示できるようにコンテキスト ID を指定します、**ヘルプ**ファイル。|  
+|[helpfile](../windows/helpfile.md)|名前を設定、**ヘルプ**タイプ ライブラリ ファイル。|  
 |[helpstring](../windows/helpstring.md)|適用先となる要素を記述するために使用される文字列を指定します。|  
 |[helpstringcontext](../windows/helpstringcontext.md)|.Hlp または .chm ファイルをヘルプ トピックの ID を指定します。|  
 |[helpstringdll](../windows/helpstringdll.md)|使用してドキュメントの文字列の検索 (ローカライズ) を実行する DLL の名前を指定します。|  

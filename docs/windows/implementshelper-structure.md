@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5e5da95e6cfb276704b5cd6150e4abc2921a5701
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: eca429578fd9b58a2a3229199d53812a494af045
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605618"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018349"
 ---
 # <a name="implementshelper-structure"></a>ImplementsHelper 構造体
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template <  
    typename RuntimeClassFlagsT,  
    typename ILst,  
@@ -51,7 +51,7 @@ friend struct Details::ImplementsHelper;
 ## <a name="remarks"></a>Remarks  
  により、実装、[実装](../windows/implements-structure.md)構造体。  
   
- このテンプレートは、インターフェイスのリストを走査し、基本クラス、および QueryInterface を有効にするために必要な情報として追加します。  
+ このテンプレートは、インターフェイスのリストを走査し、基本クラス、および有効にするために必要な情報として追加`QueryInterface`します。  
   
 ## <a name="members"></a>メンバー  
   

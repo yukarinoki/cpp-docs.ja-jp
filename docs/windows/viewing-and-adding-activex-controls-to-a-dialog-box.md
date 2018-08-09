@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad663760efb5f969a7b7cf1b14d187b0382197b7
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 2939d5d99c0657e6caa68e8cc6fbb9e6361fcaf7
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643979"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017043"
 ---
 # <a name="viewing-and-adding-activex-controls-to-a-dialog-box"></a>ActiveX コントロールの表示およびダイアログ ボックスへの ActiveX コントロールの追加
 Visual Studio では、ActiveX コントロールをダイアログ ボックスに挿入することができます。  
@@ -51,7 +51,7 @@ Visual Studio では、ActiveX コントロールをダイアログ ボックス
     > [!CAUTION]
     >  システム上の ActiveX コントロールの中には、配布が法的に許可されていないものもあります。 コントロールをインストールしたソフトウェアのライセンス契約を参照するか、ソフトウェア会社に問い合わせてください。  
   
-     アクセスしやすいようにツールボックス ウィンドウにコントロールを配置することができます。 詳細については、次を参照してください。[ツールボックスのカスタマイズ ダイアログ ボックス](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb)します。  
+     コントロールを配置することができます、**ツールボックス**ウィンドウを簡単にアクセスします。 詳細については、次を参照してください。[ツールボックスのカスタマイズ ダイアログ ボックス](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb)します。  
   
  マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
   

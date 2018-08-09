@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d508c6196ad9b9f32b4bcb0704272a500d0e952
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 4c52b905420dcb576705d63be7d7bdce27c5eea6
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643044"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015244"
 ---
 # <a name="emitidl"></a>emitidl
 後続のすべての IDL 属性が処理され、生成された .idl ファイル内に配置するかどうかを指定します。  
@@ -75,4 +75,4 @@ ms.locfileid: "39643044"
 ## <a name="see-also"></a>関連項目  
 [コンパイラ属性](../windows/compiler-attributes.md)   
 [スタンドアロン属性](../windows/stand-alone-attributes.md)   
-[属性のサンプル](http://msdn.microsoft.com/en-us/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+[属性のサンプル](http://msdn.microsoft.com/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

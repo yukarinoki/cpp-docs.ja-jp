@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6eac892da91c5f3640bdd243a0b3c6525faa5c2a
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 14b68f573452d9ab8894027fd4d83c0b89f2ddf1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603346"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018362"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
 識別子としての Visual C のキーワードを使用できるようにします。  
@@ -31,7 +31,7 @@ ms.locfileid: "39603346"
 ## <a name="all-platforms"></a>すべてのプラットフォーム  
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 __identifier(  
 Visual_C++_keyword  
 )  
@@ -49,7 +49,7 @@ Visual_C++_keyword
 ### <a name="examples"></a>使用例  
  **例**  
   
- 次の例では、クラスが名前付き`template`c# で作成され、DLL として配布されます。 使用する Visual C プログラムで、`template`クラス、 **_ _identifier**キーワードという事実を非表示にする**テンプレート**は標準の C++ キーワードです。  
+ 次の例では、クラスが名前付き**テンプレート**c# で作成され、DLL として配布されます。 使用する Visual C プログラムで、**テンプレート**クラス、 **_ _identifier**キーワードという事実を非表示にする**テンプレート**は標準の C++ キーワードです。  
   
 ```cs  
 // identifier_template.cs  
@@ -79,7 +79,7 @@ int main() {
   
 ### <a name="examples"></a>使用例  
   
- 次の例では、クラスが名前付き`template`c# で作成され、DLL として配布されます。 使用する Visual C プログラムで、`template`クラス、 **_ _identifier**キーワードという事実を非表示にする**テンプレート**は標準の C++ キーワードです。  
+ 次の例では、クラスが名前付き**テンプレート**c# で作成され、DLL として配布されます。 使用する Visual C プログラムで、**テンプレート**クラス、 **_ _identifier**キーワードという事実を非表示にする**テンプレート**は標準の C++ キーワードです。  
   
 ```cs  
 // identifier_template.cs  

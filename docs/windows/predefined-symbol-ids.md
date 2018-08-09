@@ -1,5 +1,5 @@
 ---
-title: 定義済みシンボル Id |Microsoft ドキュメント
+title: 定義済みシンボル Id |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c28d5d3d04bc48e7c79d634406d40292d869e36
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b459fbf77b75a61350fd1aa69c00749ceb1afc4c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876424"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017241"
 ---
 # <a name="predefined-symbol-ids"></a>定義済みのシンボル ID
 新しいプロジェクトを開始する時点で、ユーザーが使用できるように、プロジェクトの種類に応じていくつかのシンボル ID が事前に定義されています。 これらのシンボル ID は、MFC など、さまざまなライブラリとプロジェクトの種類をサポートします。 これらのシンボル ID は、アプリケーションに通常含まれている共通のタスクか、マウスやポインターなどのハードウェア アイテムのアクションを表します。  
   
- これらのシンボル ID は、リソースを使用する際に重要になります。 また、アクセラレータ テーブルを編集するときにも使用できます。既に仮想キーに関連付けられているシンボル ID もあります。 使用可能なも、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)します。 定義済みの任意のシンボル ID を新しいリソースに割り当てたり、これらのシンボル ID にアクセラレータ キーを割り当てたりできます。シンボル ID に関連付けられている機能は、自動的にそのキーの組み合わせに関連付けられます。  
+ これらのシンボル ID は、リソースを使用する際に重要になります。 また、アクセラレータ テーブルを編集するときにも使用できます。既に仮想キーに関連付けられているシンボル ID もあります。 手順で利用可能なことも、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)します。 定義済みの任意のシンボル ID を新しいリソースに割り当てたり、これらのシンボル ID にアクセラレータ キーを割り当てたりできます。シンボル ID に関連付けられている機能は、自動的にそのキーの組み合わせに関連付けられます。  
   
  これらのライブラリには、プロジェクトの一部として表示される以下の定義済みのシンボルがあります。  
   
@@ -38,8 +38,6 @@ ms.locfileid: "33876424"
   
     > [!NOTE]
     >  定義済みのシンボルは、常に読み取り専用です。  
-  
-
   
 ## <a name="requirements"></a>要件  
  Win32、MFC、または ATL  

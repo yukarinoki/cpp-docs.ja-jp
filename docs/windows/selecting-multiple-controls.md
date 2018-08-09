@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fd2160a2e9eef9165aea835d093978fec35e5fd
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 42629df8eeda1bbd2bda2057dfee619b52928cba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608268"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015587"
 ---
 # <a name="selecting-multiple-controls"></a>複数のコントロールの選択
 ### <a name="to-select-multiple-controls"></a>複数のコントロールを選択するには  
@@ -47,7 +47,7 @@ ms.locfileid: "39608268"
 1.  押しながら選択コントロールのグループと、 **Shift**キーし、既存の選択範囲を追加または削除するコントロールをクリックします。  
   
     > [!NOTE]
-    >  CTRL キーを押しながら、選択範囲内でクリックをその選択範囲内の主要なコントロールを制御するにはなります。 詳細については、次を参照してください。[主要なコントロールを指定する](../windows/specifying-the-dominant-control.md)します。  
+    >  押しながら、 **Ctrl**キーと、選択範囲内のコントロールをクリックするとその選択範囲内の主要なコントロールを制御する、します。 詳細については、次を参照してください。[主要なコントロールを指定する](../windows/specifying-the-dominant-control.md)します。  
   
  マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
   

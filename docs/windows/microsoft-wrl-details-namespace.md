@@ -13,19 +13,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49256b556eddb1feadbfd01b298aba62ad1a51ee
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9effc65b150c68a5191712b364c80ad42dd276ad
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604227"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012129"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Microsoft::WRL::Details 名前空間
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 namespace Microsoft::WRL::Details;  
 ```  
   
@@ -50,7 +50,7 @@ namespace Microsoft::WRL::Details;
 |----------|-----------------|  
 |[ArgTraits 構造体](../windows/argtraits-structure.md)|インターフェイスとを指定した数のパラメーターを持つ匿名のメンバー関数は、指定したデリゲートを宣言します。|  
 |[ArgTraitsHelper 構造体](../windows/argtraitshelper-structure.md)|定義のデリゲート引数の一般的な特性に役立ちます。|  
-|[BoolStruct 構造体](../windows/boolstruct-structure.md)|ComPtr がインターフェイスのオブジェクトの有効期間を管理するかどうかを定義します。 BoolStruct が内部で使用される、 [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md)演算子。|  
+|[BoolStruct 構造体](../windows/boolstruct-structure.md)|定義するかどうかを`ComPtr`インターフェイスのオブジェクトの有効期間を管理します。 `BoolStruct` 内部で使用される、 [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md)演算子。|  
 |[CreatorMap 構造体](../windows/creatormap-structure.md)|初期化し登録、およびオブジェクトの登録を解除する方法についてを説明します。|  
 |[DerefHelper 構造体](../windows/derefhelper-structure.md)|逆参照されたポインターを表す、`T*`テンプレート パラメーター。|  
 |[EnableIf 構造体](../windows/enableif-structure.md)|最初のテンプレート パラメーターが評価された場合は、2 番目のテンプレート パラメーターで指定された型のデータ メンバーを定義**true**します。|  

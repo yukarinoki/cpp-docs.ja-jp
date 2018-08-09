@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b7b3fefbbe402babcb5291a2c9073a311a2e6451
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: d6fda61fcaace9df1df69317149c719a716c6da6
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607109"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012150"
 ---
 # <a name="inserting-a-new-menu-between-existing-menus"></a>既存のメニュー間への新規メニューの挿入
 ### <a name="to-insert-a-new-menu-between-existing-menus"></a>既存のメニュー間に新規メニューを挿入するには  
@@ -35,7 +35,6 @@ ms.locfileid: "39607109"
  マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。  
   
 ## <a name="requirements"></a>要件  
-  
  Win32  
   
 ## <a name="see-also"></a>関連項目  

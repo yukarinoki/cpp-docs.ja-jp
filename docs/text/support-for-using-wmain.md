@@ -1,5 +1,5 @@
 ---
-title: Wmain の使用 |Microsoft ドキュメント
+title: Wmain の使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,26 +18,26 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8b82b9f13da1b7c4884001fed5afce832147714
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 390f2a11b98a851b5f33b4e0a941a515421d5836
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856489"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011618"
 ---
 # <a name="support-for-using-wmain"></a>wmain の使用
-Visual C のサポートを定義する、 **wmain**関数を Unicode アプリケーションにワイド文字の引数を渡すことです。 仮パラメーターを宣言する**wmain**と同様の形式を使用して**メイン**です。 さらに、ワイド文字の引数と、必要であればワイド文字環境ポインターもプログラムに渡すことができます。 **wmain** の引数 `argv` と `envp` の型は `wchar_t*` です。 例えば:  
+Visual C のサポートを定義する、 **wmain**関数と、Unicode アプリケーションにワイド文字引数を渡します。 仮パラメーターを宣言する**wmain**のような形式を使用して`main`します。 さらに、ワイド文字の引数と、必要であればワイド文字環境ポインターもプログラムに渡すことができます。 **wmain** の引数 `argv` と `envp` の型は `wchar_t*` です。 例えば:  
   
 ```  
 wmain( int argc, wchar_t *argv[ ], wchar_t *envp[ ] )  
 ```  
   
 > [!NOTE]
->  MFC の Unicode アプリケーションを使用して**wWinMain**エントリ ポイントとして。 この場合、 `CWinApp::m_lpCmdLine` Unicode 文字列です。 設定して**wWinMainCRTStartup**で、 [/ENTRY](../build/reference/entry-entry-point-symbol.md)リンカー オプション。  
+>  Unicode の MFC アプリケーションを使用して、`wWinMain`エントリ ポイントとして。 この場合、`CWinApp::m_lpCmdLine`は Unicode 文字列です。 設定を必ず`wWinMainCRTStartup`で、 [/ENTRY](../build/reference/entry-entry-point-symbol.md)リンカー オプション。  
   
- プログラムが **main** 関数を使用している場合、マルチバイト文字環境は、プログラムの起動時にランタイム ライブラリが作成します。 マルチバイト文字環境で使われるワイド文字のコピーは、必要に応じて作成されます (たとえば、`_wgetenv` 関数や `_wputenv` 関数が呼び出されたとき)。 最初の呼び出しで`_wputenv`、または最初の呼び出しで`_wgetenv`対応するワイド文字列環境が作成された MBCS 環境が既に存在する場合。 環境が、指す、`_wenviron`ワイド文字バージョンでは、グローバル変数の`_environ`グローバル変数。 この時点では、2 つのコピー (MBCS および Unicode) 環境のでは、同時に存在し、プログラムの有効期間全体にわたって実行時のシステムによって保持されます。  
+ プログラムで使用する場合、`main`関数の場合、マルチバイト文字環境はプログラムの起動時にランタイム ライブラリによって作成します。 マルチバイト文字環境で使われるワイド文字のコピーは、必要に応じて作成されます (たとえば、`_wgetenv` 関数や `_wputenv` 関数が呼び出されたとき)。 最初の呼び出しで`_wputenv`、または最初の呼び出しで`_wgetenv`MBCS 環境が既に存在する場合、対応するワイド文字列環境が作成されます。 環境を指していますし、`_wenviron`ワイド文字バージョンでは、グローバル変数の`_environ`グローバル変数。 この時点では、2 つのコピー (MBCS および Unicode) 環境のでは、同時に存在し、プログラムの有効期間にわたって実行時のシステムによって管理されます。  
   
- プログラムが **wmain** 関数を使っている場合は、ワイド文字環境がプログラムの起動時に作成され、また `_wenviron` グローバル変数によって環境のアドレスが示されます。 最初の呼び出しで、MBCS (ASCII) 環境が作成された`_putenv`または`getenv`によって指されると、`_environ`グローバル変数。  
+ プログラムが **wmain** 関数を使っている場合は、ワイド文字環境がプログラムの起動時に作成され、また `_wenviron` グローバル変数によって環境のアドレスが示されます。 MBCS (ASCII) 環境を作成する最初の呼び出しで`_putenv`または`getenv`を指していて、`_environ`グローバル変数。  
   
 ## <a name="see-also"></a>関連項目  
  [Unicode のサポート](../text/support-for-unicode.md)   

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: effe435a7dc036d5169c1fbde748b88e158bd355
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: c854f11f64d8ec66d9c00ea8b4833f28f7bf6cdc
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604968"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011475"
 ---
 # <a name="modulereleasenotifierreleasenotifier-destructor"></a>Module::ReleaseNotifier::~ReleaseNotifier デストラクター
 現在のインスタンスの初期化を解除、 **module::releasenotifier**クラス。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 WRL_NOTHROW virtual ~ReleaseNotifier();  
 ```  
   

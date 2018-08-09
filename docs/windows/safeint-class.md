@@ -17,19 +17,19 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c1e4ac8898b48c4b64d0b12b945ab45b1c5f1436
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: a575538d2527aba25d62dff1a8ba4d89402f5cfb
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606157"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019333"
 ---
 # <a name="safeint-class"></a>SafeInt クラス
 整数のオーバーフローを防ぐため、整数のプリミティブを拡張し、さまざまな種類の整数を比較することができます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename T, typename E = _SAFEINT_DEFAULT_ERROR_POLICY>  
 class SafeInt;  
 ```  
@@ -193,19 +193,19 @@ class SafeInt;
   
  使用する場合は注意してください、 **SafeInt**クラスと組み合わせて、`?:`三項演算子。 次のコード行を検討してください。  
   
-```  
+```cpp  
 Int x = flag ? SafeInt<unsigned int>(y) : -1;  
 ```  
   
  コンパイラは、これに変換します。  
   
-```  
+```cpp  
 Int x = flag ? SafeInt<unsigned int>(y) : SafeInt<unsigned int>(-1);  
 ```  
   
  場合`flag`は**false**、コンパイラが-1 の値を割り当てる代わりに例外をスロー`x`します。 したがって、この動作を避けるためには、使用する正しいコードは、次の行です。  
   
-```  
+```cpp  
 Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;  
 ```  
   

@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 88d3573c4dce5c2aba85d9482b12bd62ba9fa1ad
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: aa8777689581a3ba014d2fa777f6695ca3220db1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569948"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014352"
 ---
 # <a name="how-to-open-a-manifest-resource"></a>方法: マニフェスト リソースを開く
-マニフェスト リソースを [リソース ビュー](../windows/resource-view-window.md)から開くと、リソースはバイナリ形式で表示されます。 マニフェスト リソースの内容を見やすい形式で表示するには、ソリューション エクスプローラーからリソースを開く必要があります。  
+マニフェスト リソースを [リソース ビュー](../windows/resource-view-window.md)から開くと、リソースはバイナリ形式で表示されます。 マニフェスト リソースの内容を見やすい形式で表示するからリソースを開く必要があります**ソリューション エクスプ ローラー**します。  
   
 ### <a name="to-open-a-manifest-resource-in-the-text-editor"></a>テキスト エディターでマニフェスト リソースを開くには  
   
@@ -32,7 +32,7 @@ ms.locfileid: "39569948"
   
 2.  .manifest ファイルをダブルクリックします。  
   
-     マニフェスト リソースがテキスト エディターで開きます。  
+     マニフェスト リソースを開きます、**テキスト エディター**します。  
   
 ### <a name="to-open-a-manifest-resource-in-another-editor"></a>別のエディターでマニフェスト リソースを開くには  
   
@@ -43,7 +43,6 @@ ms.locfileid: "39569948"
  マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。  
   
 ## <a name="requirements"></a>要件  
-  
  Win32  
   
 ## <a name="see-also"></a>関連項目  

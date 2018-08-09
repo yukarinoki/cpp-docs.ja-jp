@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2ca7757c1b9a8ebf034f68b9a380c09d4a5b08f1
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 4f44d6e4db7e09033e9c3f05d94cbf5294b306a3
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607025"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018283"
 ---
 # <a name="purpose-of-attributes"></a>属性の目的
 属性は、方向は現在不可能で、言語の従来の構造を損なうことがなく C++ を拡張します。 属性は、プロバイダーの言語機能を動的に拡張する (個別の Dll) を使用します。 属性の主な目的が、コンポーネントの開発者の生産性を高めるだけでなく、COM コンポーネントの作成を簡素化します。 属性を適用するクラス、データ メンバー、またはメンバー関数など、ほぼすべての C++ コンストラクトにします。 この新しいテクノロジが提供する利点の強調表示を次に示します。  
@@ -35,7 +35,7 @@ ms.locfileid: "39607025"
   
  たとえば、ATL のジェネリック クラスの単純なイベント シンクを実装する可能性がありますを適用する、 [event_receiver](../windows/event-receiver.md)など特定のクラスに属性`CMyReceiver`します。 `event_receiver`属性は、オブジェクト ファイルに適切なコードを挿入する Visual C コンパイラでコンパイルされます。  
   
-```  
+```cpp  
 [event_receiver(com)]  
 class CMyReceiver   
 {  

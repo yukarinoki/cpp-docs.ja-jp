@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6bf7219b4e57c82beeace1545c10b643470c9aca
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: c63ce7dc5dcd326de426c4e4738a11e24f93161c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603551"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015534"
 ---
 # <a name="platform-default-and-cli-namespaces--c-component-extensions"></a>プラットフォーム、既定、および cli 名前空間 (C++ コンポーネント拡張)
 言語要素の名前は名前空間によって修飾されるため、それ以外は同じである名前と、ソース コードの別の部分で競合することはありません。 たとえば、名前の競合は弱くコンパイラを妨げる可能性[状況依存のキーワード](../windows/context-sensitive-keywords-cpp-component-extensions.md)します。 名前空間はコンパイラによって使用されますが、コンパイルされたアセンブリでは保持されません。  
@@ -41,7 +41,7 @@ ms.locfileid: "39603551"
 ## <a name="common-language-runtime"></a>共通言語ランタイム 
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 using namespace cli;  
 ```  
   

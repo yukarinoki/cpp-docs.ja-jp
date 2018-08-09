@@ -1,5 +1,5 @@
 ---
-title: シンボル名の制限 |Microsoft ドキュメント
+title: シンボル名の制限 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59ee6ce257609c4761e43630a66de9cb9b996269
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30852b22c9ff4cc74c8f0c57b3a5ed9d79a34838
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892336"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011449"
 ---
 # <a name="symbol-name-restrictions"></a>シンボル名の制限
 シンボル名に関する制限は、次のとおりです。  
@@ -53,12 +53,10 @@ ms.locfileid: "33892336"
 |文字列|IDS_|文字列テーブル内の文字列|  
 |MFC|AFX_|定義済みの MFC シンボル用に予約されています|  
   
-
-  
 ## <a name="requirements"></a>要件  
  Win32  
   
 ## <a name="see-also"></a>関連項目  
- [シンボルまたはシンボル名 (ID) を変更します。](../windows/changing-a-symbol-or-symbol-name-id.md)   
+ [シンボルまたはシンボル名 (ID) の変更](../windows/changing-a-symbol-or-symbol-name-id.md)   
  [シンボル値の制限](../windows/symbol-value-restrictions.md)   
  [定義済みシンボル ID](../windows/predefined-symbol-ids.md)

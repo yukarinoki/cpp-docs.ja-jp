@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8c7ab6dcfa4a085facf835343404de3ed4998a3
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 4bf4f02043f3cb11a47357ff91898da23ed03c22
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603443"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014209"
 ---
 # <a name="range-c"></a>range (C++)
 引数または値を持つが実行時に設定されているフィールドに使用できる値の範囲を指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 [ range(  
    low,   
    high  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *low*  
  範囲の下限値。  
   

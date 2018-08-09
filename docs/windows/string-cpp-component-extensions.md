@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c60edae6e4eaf7cef3841a1ac03dea414f298b6a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 9d7717c8449dd1a9271878aa51571180b85584d1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645994"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017917"
 ---
 # <a name="string--c-component-extensions"></a>文字列 (C++ コンポーネント拡張)
 Visual C のコンパイラ サポート*文字列*、これらは文字のシーケンスとしてテキストを表すオブジェクトです。 Visual C++ では、文字列の変数 (暗黙的な値) とリテラル (文字列が引用符で囲まれた明示的な値) をサポートしています。  
@@ -135,8 +135,6 @@ int main() {
 }  
 ```  
   
- **出力**  
-  
 ```Output  
 abcdef  
   
@@ -213,8 +211,6 @@ int main() {
 }  
 ```  
   
- **出力**  
-  
 ```Output  
 overloaded +(String ^ a, String ^ b)   
   
@@ -265,8 +261,6 @@ int main() {
    func3("string" + "string");   // returns System::String  
 }  
 ```  
-  
- **出力**  
   
 ```Output  
 char *  

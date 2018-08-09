@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 05695e834ae244d276141185a913e8f35ef45922
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: ef77de72a9120a774e3676d649adb267074e1a72
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652202"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015612"
 ---
 # <a name="viewing-a-menu-as-a-pop-up-menu"></a>ポップアップ メニューとしてのメニューの表示
-通常、メニュー エディターを使用しているときは、メニュー リソースがメニュー バーとして表示されます。 ただし、プログラムの実行中にアプリケーションのメニュー バーにメニュー リソースが追加されている場合もあります。  
+作業する場合に、通常、**メニュー**エディター、メニュー バーでメニュー リソースが表示されます。 ただし、プログラムの実行中にアプリケーションのメニュー バーにメニュー リソースが追加されている場合もあります。  
   
 ### <a name="to-view-a-menu-resource-as-a-pop-up-menu"></a>メニュー リソースをポップアップ メニューとして表示するには  
   

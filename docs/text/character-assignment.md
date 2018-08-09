@@ -1,5 +1,5 @@
 ---
-title: 文字の代入 |Microsoft ドキュメント
+title: 文字の代入 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e403a619fc4c900aca51503862ff8f9dc315c2a3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 084cfd69a3742db10e09e9d97974a0666fa31a47
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856698"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010413"
 ---
 # <a name="character-assignment"></a>文字の代入
-これで、次の例を検討してください、`while`ループが別の文字列に 'X' 以外のすべての文字のコピー、文字列をスキャンします。  
+これで、次の例を検討してください、**中に**ループは、別の文字列に 'X' 以外のすべての文字をコピー、文字列をスキャンします。  
   
 ```  
 while( *sz2 )  
@@ -35,7 +35,7 @@ while( *sz2 )
 }  
 ```  
   
- コードでは、位置のバイトをコピーする`sz2`によって示される場所に`sz1`、インクリメントし、`sz1`を次のバイトを受信します。 場合の次の文字`sz2`2 バイト文字への割り当ては、`sz1`最初のバイトのみをコピーします。 次のコードを使用してポータブル関数の文字を安全にコピーするもう 1 つをインクリメントする`sz1`と`sz2`正しく。  
+ コードのコピーにあるバイト`sz2`によって示される場所に`sz1`、インクリメントし、`sz1`次のバイトを受信します。 場合の次の文字`sz2`2 バイト文字への代入は`sz1`最初のバイトのみをコピーします。 次のコードは、文字を安全にコピーする移植可能な関数とにインクリメント`sz1`と`sz2`正しく。  
   
 ```  
 while( *sz2 )  

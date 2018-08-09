@@ -22,15 +22,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 03922c8ca9ba767991b3440e14e4928ab6c3b0ec
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 2d1a59befd405e1412c2815694c40c8d24a99cec
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604461"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016997"
 ---
 # <a name="resource-editors"></a>リソース エディター
-リソース エディターとは、Visual Studio プロジェクトに含まれているリソースを作成または変更するための特殊な環境です。 Visual Studio のリソース エディターでは、アプリケーションのリソースをすばやく簡単に作成して変更できるようにする技術とインターフェイスを共有します。 リソース エディターを使用すると、 [リソースを適切なエディターで表示して編集](../windows/viewing-and-editing-resources-in-a-resource-editor.md) でき、 [リソースをプレビュー](../windows/previewing-resources.md)することができます。  
+A**リソース**エディターは、専用の環境の作成または Visual Studio プロジェクトに含まれているリソースを変更します。 Visual Studio のリソース エディターでは、アプリケーションのリソースをすばやく簡単に作成して変更できるようにする技術とインターフェイスを共有します。 リソース エディターを使用すると、 [リソースを適切なエディターで表示して編集](../windows/viewing-and-editing-resources-in-a-resource-editor.md) でき、 [リソースをプレビュー](../windows/previewing-resources.md)することができます。  
   
  リソースを作成したり開いたりすると、適切なエディターが自動的に開きます。  
   

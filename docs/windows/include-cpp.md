@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 93ced38ca30a2fd4a61bb3a3664967416fcaf599
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: c21bb7cf58c3c397237768942d60f79958f3278a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603489"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013562"
 ---
 # <a name="include-c"></a>include (C++)
 生成された .idl ファイルに含まれる 1 つまたは複数のヘッダー ファイルを指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 [ include(  
    header_file  
 ) ];  
@@ -45,7 +45,7 @@ ms.locfileid: "39603489"
  **含める**C++ 属性と同じ機能を持つ、[含める](http://msdn.microsoft.com/library/windows/desktop/aa367052)MIDL 属性。  
   
 ## <a name="example"></a>例  
- 次のコードを使用する方法の例を示します**含める**します。 この例では、ファイル include.h のみを含む、#include ステートメントの include します。  
+ 次のコードを使用する方法の例を示します**含める**します。 この例では、ファイル include.h のみを含む、`#include`ステートメント。  
   
 ```cpp  
 // cpp_attr_ref_include.cpp  

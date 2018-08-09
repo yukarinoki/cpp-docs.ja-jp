@@ -20,27 +20,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 41494e8b88f41c4c842e95e9f8a9f5da0247739f
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9c972f4038da4b4ed1d52fee0b8029b6f48ff3bb
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605644"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013874"
 ---
 # <a name="resizing-an-image-image-editor-for-icons"></a>イメージのサイズ変更 (アイコン用イメージ エディター)
-イメージのサイズ変更中に、イメージ エディターの動作したかどうかに依存[選択](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)イメージ全体または一部だけです。  
+動作、**イメージ**イメージのサイズ変更中にエディターがしたかどうかに依存[選択](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)イメージ全体または一部だけです。  
   
- 選択範囲には、イメージの一部のみが含まれている場合は、イメージ エディターは、行を削除することによって、選択範囲を縮小またはピクセル、または現在の背景色で領域の列は、ピクセルの行または列を複製して、選択範囲を拡大します。  
+ 選択範囲には、イメージの一部のみが含まれている場合、**イメージ**エディターは、現在の背景色で領域をピクセルの行または列を削除して選択範囲を縮小またはで選択範囲を拡大ピクセルの行または列を複製します。  
   
- 選択範囲には、イメージ全体が含まれている場合、イメージ エディターか、圧縮、イメージを拡大またはトリミングし、拡張されています。  
+ 選択範囲には、全体のイメージが含まれている場合、**イメージ**エディターか、圧縮、イメージを拡大またはトリミングおよび拡張されています。  
   
- イメージのサイズ変更の 2 つのメカニズムがある: サイズ変更ハンドルと[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)します。 イメージの一部またはすべてのサイズを変更するサイズ変更ハンドルをドラッグすることができます。 サイズ変更ハンドルをドラッグすることは、solid です。 白抜きのハンドルをドラッグすることはできません。 選択の一部ではない、のみ、イメージ全体のサイズを変更するプロパティ ウィンドウを使用することができます。  
+ イメージのサイズ変更の 2 つのメカニズムがある: サイズ変更ハンドルと[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)します。 イメージの一部またはすべてのサイズを変更するサイズ変更ハンドルをドラッグすることができます。 サイズ変更ハンドルをドラッグすることは、solid です。 白抜きのハンドルをドラッグすることはできません。 使用することができます、**プロパティ**全体のサイズを変更するにはウィンドウのイメージのみ、選択したパーツではありません。  
   
  ![サイズ変更ハンドルをビットマップに](../mfc/media/vcimageeditorsizinghandles.gif "vcImageEditorSizingHandles")  
 サイズ変更ハンドル  
   
 > [!NOTE]
->  選択したタイル表示オプションがある場合、[グリッドの設定 ダイアログ ボックス](../windows/grid-settings-dialog-box-image-editor-for-icons.md)、[次へ] のタイル グリッド線にスナップのサイズを変更します。 のみをピクセル グリッドのオプションは選択する (既定の設定、)、[次へ] の使用可能なピクセルにスナップのサイズを変更します。  
+>  ある場合、**タイル グリッド**で選択したオプション、[グリッドの設定 ダイアログ ボックス](../windows/grid-settings-dialog-box-image-editor-for-icons.md)、[次へ] のタイル グリッド線にスナップのサイズを変更します。 だけの場合、**ピクセル グリッド**オプションは、(既定の設定) を選択するには、次のピクセルにスナップのサイズを変更します。  
   
 -   [イメージ全体のサイズ変更](../windows/resizing-an-entire-image-image-editor-for-icons.md)  
   

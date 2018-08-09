@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3dc93b6dc6d6a5fbf6bcd8899793e07bd6446de1
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 3e7354dc422027207bc1dab357487ffcce48a4ca
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604357"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018595"
 ---
 # <a name="module-c"></a>module (C++)
 .idl ファイルのライブラリ ブロックを定義します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 [ module (  
    type=dll,  
    name=string,  
@@ -50,8 +50,8 @@ ms.locfileid: "39604357"
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- *型*(省略可能)  
- 次のいずれかの値を指定します。  
+*型*(省略可能)  
+次のいずれかの値を指定します。  
   
 -   `dll` 結果の DLL がインプロセス COM サーバーとして機能できるようにする関数およびクラスを追加します。 これが既定値です。  
   
@@ -61,51 +61,51 @@ ms.locfileid: "39604357"
   
 -   `unspecified` モジュール属性に関連する ATL コードの挿入を無効にします。 の ATL モジュール クラス、グローバル インスタンス _AtlModule およびエントリ ポイント関数。 プロジェクト内のその他の属性による ATL コードの挿入は無効になりせん。  
   
- *name* (省略可能)  
- ライブラリ ブロックの名前です。  
+*name* (省略可能)  
+ライブラリ ブロックの名前です。  
   
- *バージョン*(省略可能)  
- ライブラリ ブロックに割り当てるバージョン番号です。 既定値は 1.0 です。  
+*バージョン*(省略可能)  
+ライブラリ ブロックに割り当てるバージョン番号です。 既定値は 1.0 です。  
   
- *uuid*  
- ライブラリの一意の ID です。 このパラメーターを省略した場合、ライブラリの ID は自動的に生成されます。 取得する必要があります、 *uuid* 、識別子を使用して行うことができます、ライブラリ ブロックの **_ _uuidof (***libraryname***)** します。  
+*uuid*  
+ライブラリの一意の ID です。 このパラメーターを省略した場合、ライブラリの ID は自動的に生成されます。 取得する必要があります、 *uuid* 、識別子を使用して行うことができます、ライブラリ ブロックの **_ _uuidof (***libraryname***)** します。  
   
- *lcid*  
- ローカリゼーション パラメーターです。 詳細については、「 [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) 」を参照してください。  
+*lcid*  
+ローカリゼーション パラメーターです。 詳細については、「 [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) 」を参照してください。  
   
- *コントロール*(省略可能)  
- ライブラリ内のすべてのコクラスがコントロールであることを指定します。  
+*コントロール*(省略可能)  
+ライブラリ内のすべてのコクラスがコントロールであることを指定します。  
   
- *helpstring*  
- タイプ ライブラリを指定します。  
+*helpstring*  
+タイプ ライブラリを指定します。  
   
- *helpstringdll* (省略可能)  
- ドキュメントの文字列を検索する .dll ファイルの名前を設定します。 詳細については、「 [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) 」を参照してください。  
+*helpstringdll* (省略可能)  
+ドキュメントの文字列を検索する .dll ファイルの名前を設定します。 詳細については、「 [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) 」を参照してください。  
   
- *helpfile* (省略可能)  
- タイプ ライブラリのヘルプ ファイルの名前です。  
+*helpfile* (省略可能)  
+名前、**ヘルプ**タイプ ライブラリ ファイル。  
   
- *helpcontext* (省略可能)  
- このタイプ ライブラリのヘルプ ID です。  
+*helpcontext* (省略可能)  
+**ヘルプ ID**このタイプ ライブラリ。  
   
- *helpstringcontext* (省略可能)  
- 詳細については、「 [helpstringcontext](../windows/helpstringcontext.md) 」を参照してください。  
+*helpstringcontext* (省略可能)  
+詳細については、「 [helpstringcontext](../windows/helpstringcontext.md) 」を参照してください。  
   
- *非表示*(省略可能)  
- ライブラリ全体が表示されないようにします。 これは、コントロールと共に使用します。 ホストは、拡張プロパティを使用し、コントロールをラップする新しいタイプ ライブラリを作成する必要があります。 詳細については、「 [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) 」の MIDL 属性に関する説明を参照してください。  
+*非表示*(省略可能)  
+ライブラリ全体が表示されないようにします。 これは、コントロールと共に使用します。 ホストは、拡張プロパティを使用し、コントロールをラップする新しいタイプ ライブラリを作成する必要があります。 詳細については、「 [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) 」の MIDL 属性に関する説明を参照してください。  
   
- *制限付き*(省略可能)  
- ライブラリのメンバーは、任意に呼び出すことはできません。 詳細については、「 [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) 」の MIDL 属性に関する説明を参照してください。  
+*制限付き*(省略可能)  
+ライブラリのメンバーは、任意に呼び出すことはできません。 詳細については、「 [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) 」の MIDL 属性に関する説明を参照してください。  
   
- *カスタム*(省略可能)  
- 1 つ以上の属性です。これは、 [custom](../windows/custom-cpp.md) 属性と似ています。 最初のパラメーター*カスタム*属性の GUID です。 例えば:  
+*カスタム*(省略可能)  
+1 つ以上の属性です。これは、 [custom](../windows/custom-cpp.md) 属性と似ています。 最初のパラメーター*カスタム*属性の GUID です。 例えば:  
   
 ```  
 [module(custom={guid,1}, custom={guid1,2})]  
 ```  
   
- *resource_name*  
- DLL、実行可能ファイルまたはサービスの登録に使用される .rgs ファイルの文字列リソース ID です。 モジュールがタイプ サービスである場合、この引数はサービス名を含む文字列の ID の取得にも使用されます。  
+*resource_name*  
+DLL、実行可能ファイルまたはサービスの登録に使用される .rgs ファイルの文字列リソース ID です。 モジュールがタイプ サービスである場合、この引数はサービス名を含む文字列の ID の取得にも使用されます。  
   
 > [!NOTE]
 >  .rgs ファイルとサービス名を含む文字列の両方に、同じ数値が必要です。  

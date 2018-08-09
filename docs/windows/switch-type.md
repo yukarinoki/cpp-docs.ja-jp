@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f79aa2683948d54f900c92304cdff29647819a74
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: c6c1b6dda469dec663e5a8c385d300b113246a77
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650597"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016445"
 ---
 # <a name="switchtype"></a>switch_type
 共用体の判別式として使用される変数の型を識別します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 [switch_type(  
 type  
 }]  

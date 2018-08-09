@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ceaafd6230e6497ed2b7636ad5070141546cb8d6
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6d4ff3393e30e72bc3378837ff11c41927249d1f
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648166"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014195"
 ---
 # <a name="synclocktsynclockt-constructor"></a>SyncLockT::SyncLockT コンストラクター
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 SyncLockT(  
    _Inout_ SyncLockT&& other  
 );  

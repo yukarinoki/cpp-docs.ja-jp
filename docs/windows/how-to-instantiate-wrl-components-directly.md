@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 40904f8379d1a11d26c29af2340fa4adb24f12e0
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 133f0f4ee4efed71c530c7e9e8c367c7d2031433
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568817"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013276"
 ---
 # <a name="how-to-instantiate-wrl-components-directly"></a>方法: WRL コンポーネントを直接インスタンス化する
 Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用する方法について説明します[Microsoft::WRL::Make](../windows/make-function.md)と[Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)関数モジュールからコンポーネントをインスタンス化します。これを定義します。  
@@ -34,13 +34,13 @@ Windows ランタイム C++ テンプレート ライブラリを使用して、
   
 ### <a name="to-create-and-instantiate-a-basic-logger-component"></a>基本的なロガー コンポーネントを作成してインスタンス化するには  
   
-1.  Visual Studio で、作成、 **Win32 コンソール アプリケーション**プロジェクト。 など、プロジェクトの名前`WRLLogger`します。  
+1.  Visual Studio で、作成、 **Win32 コンソール アプリケーション**プロジェクト。 など、プロジェクトの名前*WRLLogger*します。  
   
 2.  追加、 **Midl ファイル (.idl)** をプロジェクトにファイルをファイルに名前を`ILogger.idl`、このコードを追加。  
   
      [!code-cpp[wrl-logger-make#1](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_1.idl)]  
   
-3.  次のコードを使用して WRLLogger.cpp の内容を置き換えます。  
+3.  次のコードを使用して、内容を置き換える`WRLLogger.cpp`します。  
   
      [!code-cpp[wrl-logger-make#2](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_2.cpp)]  
   
@@ -50,7 +50,7 @@ Windows ランタイム C++ テンプレート ライブラリを使用して、
   
      [!code-cpp[wrl-logger-makeandinitialize#1](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_3.cpp)]  
   
-2.  次のコードを使用して `wmain` の定義を置き換えます。 このバージョンは `MakeAndInitialize` を使用して `CConsoleWriter` オブジェクトをインスタンス化し、`HRESULT` の結果を確認します。  
+2.  次のコードを使用して `wmain` の定義を置き換えます。 このバージョンでは`MakeAndInitialize`をインスタンス化する、`CConsoleWriter`オブジェクトし、HRESULT の結果を確認します。  
   
      [!code-cpp[wrl-logger-makeandinitialize#2](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_4.cpp)]  
   

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ef5a4453e0b7742a385815b5285b2aa04575eb75
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 459f786863f7d10797008b87e276afb0c95e184a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645410"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020087"
 ---
 # <a name="string-c"></a>string (C++)
 示します、1 次元**char**、 **wchar_t**、 `byte` (または同等の) このような配列へのポインターまたは配列を文字列として扱う必要があります。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 [string]  
 ```  
   

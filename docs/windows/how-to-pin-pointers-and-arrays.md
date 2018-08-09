@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ba13f3d561b4f7bbd57a7678fcfbea26e09a9984
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: d80a5189e25542b344d5506ac1f69dfbec5514af
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569376"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012548"
 ---
 # <a name="how-to-pin-pointers-and-arrays"></a>方法 : ポインターと配列を固定する
 マネージ オブジェクトで定義されている下位のオブジェクトをピン留めすると、オブジェクト全体をピン留めの効果があります。  たとえば、配列の要素が固定されている場合、配列全体もピン留めされます。 固定配列を宣言するための言語拡張機能はありません。 配列をピン留めするには、その要素の型とその要素の 1 つに固定ポインターを宣言します。  
@@ -49,8 +49,6 @@ int main() {
                          // will not move during call  
 }  
 ```  
-  
-### <a name="output"></a>出力  
   
 ```Output  
 ++  

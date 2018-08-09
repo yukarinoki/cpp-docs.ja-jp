@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da0d33c51fa50c7291eaa6421e9b857cd6f82d36
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b0a123c336df3f47550f8bb825a621eff53a8cb5
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569457"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015551"
 ---
 # <a name="how-to-use-resource-templates"></a>方法: リソース テンプレートを使用する
 リソース テンプレートは、.rct ファイルとして保存したカスタマイズされたリソースです。 リソース テンプレートは、他のリソースを作成するための出発点として使用できます。 リソース テンプレートを使用すると、標準のコントロールやその他の繰り返される要素などの、機能を共有する他のリソースやリソースのグループを開発する時間を節約できます。 たとえば、複数のダイアログ ボックスで、[ヘルプ] ボタンと会社のロゴのアイコンを使用することが必要になる場合があります。 これを簡単に実現するには、新しいダイアログ ボックスのテンプレートを作成して、ロゴと [ヘルプ] ボタンでカスタマイズします。  
@@ -46,7 +46,7 @@ ms.locfileid: "39569457"
   
 4.  新しい .rct ファイルの場所と名前を入力し、クリックして**オープン**します。  
   
-5.  新しい .rct ファイルがプロジェクトに追加され、ソリューション エクスプ ローラーの下に表示されます、**リソース**フォルダー。  
+5.  新しい .rct ファイルがプロジェクトに追加されに表示されます**ソリューション エクスプ ローラー**下、**リソース**フォルダー。  
   
      ドキュメント ウィンドウで開く、.rct ファイルをダブルクリックしにリソースを追加することができますようになりました (ドキュメント ウィンドウにファイルを右クリックし **リソースの追加**ショートカット メニューから)。 これらのリソースをカスタマイズして、.rct ファイルを保存できます。  
   
@@ -76,7 +76,6 @@ ms.locfileid: "39569457"
  マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。  
   
 ## <a name="requirements"></a>要件  
-  
  Win32  
   
 ## <a name="see-also"></a>関連項目  

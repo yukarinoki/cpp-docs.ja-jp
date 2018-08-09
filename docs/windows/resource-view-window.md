@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bf2c5cb434b07c9323594448a25da7251010bbad
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 8b936b1014c2dd6640f64ca929628f6f0a74dc79
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608310"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012330"
 ---
 # <a name="resource-view-window"></a>リソース ビュー ウィンドウ
 > [!NOTE]
@@ -35,9 +35,9 @@ ms.locfileid: "39608310"
 >  プロジェクトに .rc ファイルがまだ含まれていない場合は、「 [リソース スクリプト ファイルの新規作成](../windows/how-to-create-a-resource-script-file.md)」を参照してください。  
   
 > [!TIP]
->  [リソース ビュー] ウィンドウを右クリックすると、コマンドのショートカット メニューを起動できます。 また、タイトル バーをダブルクリックすると、ウィンドウのドッキングやドッキング解除ができます。 タイトル バーを右クリックすると、さらにコマンドが表示され、ウィンドウの動作を制御できます。 詳細については、次を参照してください。 [Windows 管理](/visualstudio/ide/customizing-window-layouts-in-visual-studio)します。  
+>  右クリック、**リソース ビュー**をコマンドのショートカット メニューを起動します。 また、タイトル バーをダブルクリックすると、ウィンドウのドッキングやドッキング解除ができます。 タイトル バーを右クリックすると、さらにコマンドが表示され、ウィンドウの動作を制御できます。 詳細については、次を参照してください。 [Windows 管理](/visualstudio/ide/customizing-window-layouts-in-visual-studio)します。  
   
-#### <a name="to-open-the-resource-view-window"></a>[リソース ビュー] ウィンドウを開くには  
+### <a name="to-open-the-resource-view-window"></a>[リソース ビュー] ウィンドウを開くには  
   
 1.  クリックして**リソース ビュー**上、**ビュー**メニュー。  
   

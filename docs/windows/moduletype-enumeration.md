@@ -1,5 +1,5 @@
 ---
-title: ModuleType 列挙型 |Microsoft ドキュメント
+title: ModuleType 列挙型 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d36355c9f64f9f5c827ef8c4d5b3cb6a77d17b65
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 831f1fbcb2da205fa08286a1fbbbf414e66075d4
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876837"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019931"
 ---
 # <a name="moduletype-enumeration"></a>ModuleType 列挙型
 モジュールがインプロセス サーバーまたはアウトプロセス サーバーをサポートするかどうかを指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 enum ModuleType;  
 ```  
   
@@ -41,9 +41,9 @@ enum ModuleType;
 |----------|-----------------|  
 |`InProc`|・ インプロセス サーバーです。|  
 |`OutOfProc`|アウト プロセス サーバーの場合。|  
-|`DisableCaching`|モジュール上のキャッシュ メカニズムを無効にします。|  
-|`InProcDisableCaching`|組み合わせ`InProc`と`DisableCaching`です。|  
-|`OutOfProcDisableCaching`|組み合わせ`OutOfProc`と`DisableCaching`です。|  
+|`DisableCaching`|モジュールのキャッシュ メカニズムを無効にします。|  
+|`InProcDisableCaching`|組み合わせた`InProc`と`DisableCaching`します。|  
+|`OutOfProcDisableCaching`|組み合わせた`OutOfProc`と`DisableCaching`します。|  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** module.h  

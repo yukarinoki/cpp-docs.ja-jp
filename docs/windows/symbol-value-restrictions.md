@@ -1,5 +1,5 @@
 ---
-title: シンボル値の制限 |Microsoft ドキュメント
+title: シンボル値の制限 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3432ca82d9557fbcb47da65be148bedb0f47f8b8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1e6b594ad7fe1d805511d5e2cd1b67bd0d791e8e
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889555"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013403"
 ---
 # <a name="symbol-value-restrictions"></a>シンボル値の制限
 シンボル値には、#define プリプロセッサ ディレクティブに対して通常の方法で表現される整数を指定できます。 シンボル値の例をいくつか次に示します。  
@@ -45,23 +45,21 @@ ms.locfileid: "33889555"
   
 -   他のシンボル文字列を使用してシンボル値を定義することはできません。 たとえば、次のシンボル定義はサポートされません。  
   
-    ```  
+    ```cpp  
     #define IDC_MYEDIT  IDC_OTHEREDIT  //not supported  
     ```  
   
 -   引数を持つプリプロセッサ マクロを値の定義として使用することはできません。 例えば:  
   
-    ```  
+    ```cpp  
     #define   IDD_ABOUT  ID(7) //not supported  
     ```  
   
      これは、コンパイル時に `ID` がどのような値に評価されるかに関係なく、有効な式ではありません。  
   
--   アプリケーションには、式を使用して定義されたシンボルを含む既存のファイルが存在する可能性があります。 読み取り専用のシンボルとしてシンボルを含める方法の詳細については、次を参照してください。[共有を使用する (読み取り専用) または計算型シンボル](../windows/including-shared-read-only-or-calculated-symbols.md)です。  
+-   アプリケーションには、式を使用して定義されたシンボルを含む既存のファイルが存在する可能性があります。 読み取り専用のシンボルとしてシンボルを含める方法の詳細については、次を参照してください。[共有を使用する (読み取り専用) または計算型シンボル](../windows/including-shared-read-only-or-calculated-symbols.md)します。  
   
- 数値の範囲の詳細については、次を参照してください。 [TN023: 標準 MFC リソース](../mfc/tn023-standard-mfc-resources.md)です。  
-  
-
+ 数値の範囲の詳細については、次を参照してください。 [TN023: 標準 MFC リソース](../mfc/tn023-standard-mfc-resources.md)します。  
   
 ## <a name="requirements"></a>要件  
  Win32  

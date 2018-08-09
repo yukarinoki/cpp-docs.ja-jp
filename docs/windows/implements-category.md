@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11fecff2336163fa4f2e773244bc1ab132a15329
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 28df44096f3b61eb4ada17ec824292281edee602
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603719"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013715"
 ---
 # <a name="implementscategory"></a>implements_category
 ターゲット クラスで実装されたコンポーネントのカテゴリを指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 [ implements_category(  
    implements_category="uuid"  
 ) ]  
@@ -45,7 +45,7 @@ ms.locfileid: "39603719"
  この属性を使用するには、 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)、または [vi_progid](../windows/vi-progid.md) 属性 (または、これらのいずれかを意味する別の属性) も同じ要素に適用する必要があります。 いずれか 1 つの属性を使用すると、他の 2 つも自動的に適用されます。 たとえば場合、`progid`が適用される`vi_progid`と`coclass`も適用されます。  
   
 ## <a name="example"></a>例  
- 次のコードでは、次のオブジェクトがコントロール カテゴリを実装することを指定します。  
+ 次のコードでは、次のオブジェクト実装を指定します、`Control`カテゴリ。  
   
 ```cpp  
 // cpp_attr_ref_implements_category.cpp  
