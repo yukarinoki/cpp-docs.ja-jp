@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 47efadb89786b7be54f33678d2f71d2474e4deb4
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: fe50fed4fd701ba171620d2c0cd0cde6e8da2bbc
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604552"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020227"
 ---
 # <a name="sealed--c-component-extensions"></a>sealed (C++ コンポーネント拡張)
 **封印された**の ref クラス仮想メンバーをオーバーライドできないことを示す状況依存のキーワードは、または型を基本データ型として使用できません。  
@@ -35,13 +35,12 @@ ms.locfileid: "39604552"
   
 ## <a name="syntax"></a>構文
   
-```  
+```cpp  
 ref class identifier sealed {...};  
 virtual return-type identifier() sealed {...};  
 ```  
   
 ### <a name="parameters"></a>パラメーター  
-  
  *identifier*  
  関数またはクラスの名前。  
   

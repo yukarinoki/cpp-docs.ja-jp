@@ -1,5 +1,5 @@
 ---
-title: バッファー オーバーフローが発生 |Microsoft ドキュメント
+title: バッファー オーバーフローが発生 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13d01460e7ed9cb95d92303d82ea136803737331
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9bb362be360986371200c8cde292b3fff5acd7cd
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854653"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020188"
 ---
 # <a name="buffer-overflow"></a>バッファー オーバーフロー
 文字のサイズを変更すると、バッファーに文字を配置するときに問題が発生することができます。 次のコードは、文字列から文字をコピー、 `sz`、バッファーに`rgch`:  
@@ -32,7 +32,7 @@ while( cb < sizeof( rgch ) )
     rgch[ cb++ ] = *sz++;  
 ```  
   
- この質問が: 最後のバイトが先行バイトをコピーしますか? 次は問題が解決しない、バッファー オーバーフローする可能性がある可能性があるため。  
+ 質問: 最後のバイトが先行バイトをコピーしますか? 次は問題が解決しない、バッファー オーバーフローする可能性がある可能性があるため。  
   
 ```  
 cb = 0;  
@@ -44,7 +44,7 @@ while( cb < sizeof( rgch ) )
 }  
 ```  
   
- `_mbccpy`呼び出しが、正しいことを実現しようとしています。-1 バイトまたは 2 バイトであるかどうか、完全な文字をコピーします。 コピーされる最後の文字可能性がありますで処理できないこと、バッファーの文字が 2 バイト幅である場合に取りません。 解決するには。  
+ `_mbccpy`呼び出しが正しいことを行う試行-1 つまたは 2 バイトかどうかは、すべての文字をコピーします。 エントリの文字が 2 バイト幅の場合、コピーする最後の文字が、バッファーが適合しないアカウントにはなりません。 解決するには。  
   
 ```  
 cb = 0;  
@@ -56,7 +56,7 @@ while( (cb + _mbclen( sz )) <= sizeof( rgch ) )
 }  
 ```  
   
- このコードは、ループでバッファーのオーバーフローのテストを使用してテスト`_mbclen`によって示される現在の文字のサイズをテストする`sz`です。 呼び出すことによって、`_mbsnbcpy`関数内のコードを置き換えることができます、`while`コードの 1 つの行をループします。 例えば:  
+ このコードは、ループでバッファーのオーバーフローのテストを使用してテスト`_mbclen`によって示される現在の文字のサイズをテストする`sz`します。 呼び出すことによって、`_mbsnbcpy`関数のコードを置き換えることができます、**中**1 行のコードをループします。 例えば:  
   
 ```  
 _mbsnbcpy( rgch, sz, sizeof( rgch ) );  

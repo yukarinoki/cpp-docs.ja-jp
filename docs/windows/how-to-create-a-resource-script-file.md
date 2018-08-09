@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ed35392180d0531133413a54ca2190ed65519546
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 8da6d316050120e6eaac31b12998e5dbf0f3a012
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570575"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020266"
 ---
 # <a name="how-to-create-a-resource-script-file"></a>方法: リソース スクリプト ファイルを作成する
 > [!NOTE]
->  リソース エディターは Express Edition では使用できません。  
+>  **リソース エディター** Express エディションでは使用できません。  
 >   
 >  これは Windows デスクトップ アプリケーションだけに適用できます。 .NET 言語のプロジェクトでは、リソース スクリプト ファイルを使用しません。 詳細については、「 [リソース ファイル (Visual Studio)](../windows/resource-files-visual-studio.md)」を参照してください。  
   
 ### <a name="to-create-a-new-resource-script-rc-file"></a>リソース スクリプト (.rc) ファイルを新規作成するには  
   
-1.  既存のプロジェクト フォルダーにフォーカスを移す**ソリューション エクスプ ローラー**、たとえば、"MyProject"。  
+1.  既存のプロジェクト フォルダーにフォーカスを移す**ソリューション エクスプ ローラー**、たとえば、`MyProject`します。  
   
     > [!NOTE]
-    >  プロジェクト フォルダーをソリューション エクスプローラーの [ソリューション] フォルダーと混同しないでください。 重点を置く場合、**ソリューション**フォルダーでの選択、**新しい項目の追加**ダイアログ ボックス (手順 3) では別になります。  
+    >  ソリューション フォルダーを含むプロジェクトのフォルダーと混同しないでください**ソリューション エクスプ ローラー**します。 重点を置く場合、**ソリューション**フォルダーでの選択、**新しい項目の追加**ダイアログ ボックス (手順 3) では別になります。  
   
 2.  **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。  
   
@@ -48,10 +48,8 @@ ms.locfileid: "39570575"
 > [!NOTE]
 >  リソース スクリプト (.rc ファイル) を追加できるのは、Visual Studio IDE に読み込まれる既存のプロジェクトだけです。 プロジェクトの外側にあるスタンドアロンの .rc ファイルは作成できません。 [リソース テンプレート](../windows/how-to-use-resource-templates.md) (.rct ファイル) はいつでも作成できます。
 
-
-## <a name="requirements"></a>要件  
-  
-Win32  
+## <a name="requirements"></a>要件    
+ Win32  
   
 ## <a name="see-also"></a>関連項目  
  [リソース ファイル (Visual Studio)](../windows/resource-files-visual-studio.md)   
