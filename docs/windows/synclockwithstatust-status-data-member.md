@@ -1,5 +1,5 @@
 ---
-title: Synclockwithstatust::status _ データ メンバー |Microsoft ドキュメント
+title: Synclockwithstatust::status _ データ メンバー |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0a6d8fb587ed86063e19a44cd391ea04d75b2a68
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d1dc6cbab11a41707aa60aa37d63ae0e5042ba5a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888453"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652849"
 ---
 # <a name="synclockwithstatuststatus-data-member"></a>SyncLockWithStatusT::status_ データ メンバー
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -33,8 +33,8 @@ WRL インフラストラクチャをサポートし、コードから直接使�
 DWORD status_;  
 ```  
   
-## <a name="remarks"></a>コメント  
- 保持しますが、基になる結果にロック操作の後に操作を待機するオブジェクトは、現在の SyncLockWithStatusT オブジェクトに基づいています。  
+## <a name="remarks"></a>Remarks  
+ 基になる待機操作の結果を保持するオブジェクトのロック操作が現在に基づいて後**SyncLockWithStatusT**オブジェクト。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

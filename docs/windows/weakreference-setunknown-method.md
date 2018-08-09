@@ -1,5 +1,5 @@
 ---
-title: Weakreference::setunknown メソッド |Microsoft ドキュメント
+title: Weakreference::setunknown メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 28b25645b21d3101e2f2b2004f02f29482320808
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2a46db38bf17b1af5ae748cf90689509d6d21b0d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891021"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647681"
 ---
 # <a name="weakreferencesetunknown-method"></a>WeakReference::SetUnknown メソッド
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -35,12 +35,12 @@ void SetUnknown(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `unk`  
- ポインター、`IUnknown`オブジェクトのインターフェイスです。  
+### <a name="parameters"></a>パラメーター  
+ *unk*  
+ ポインター、`IUnknown`オブジェクトのインターフェイス。  
   
-## <a name="remarks"></a>コメント  
- 現在の強力な参照を設定`WeakReference`オブジェクトを指定されたインターフェイス ポインター。  
+## <a name="remarks"></a>Remarks  
+ 現在の強い参照を設定**WeakReference**オブジェクトを指定されたインターフェイス ポインター。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** implements.h  
@@ -48,5 +48,5 @@ void SetUnknown(
  **Namespace:** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>関連項目
-[WeakReference クラス](../windows/weakreference-class1.md)  
+ [WeakReference クラス](../windows/weakreference-class1.md)  
  [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

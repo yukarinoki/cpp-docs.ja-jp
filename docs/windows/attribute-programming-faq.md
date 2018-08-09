@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5cdc7bb8a97be6fbc8c77c06caaddf95a3095323
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: cd89a2a46535c145e4ef6f84cee0b5604346f4b2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463744"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645202"
 ---
 # <a name="attribute-programming-faq"></a>属性プログラミングの FAQ
 このトピックでは、次のよく寄せられる質問に回答します。  
@@ -46,7 +46,7 @@ ms.locfileid: "39463744"
 -   [属性を使用するクラスから派生したクラスで属性を使用できますか。](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)  
   
 ##  <a name="vcconattributeprogrammmingfaqanchor1"></a> HRESULT とは何ですか。  
- `HRESULT`は多くの場合、使用される戻り値として属性および ATL によって一般に単純なデータ型です。 次の表では、さまざまな値について説明します。 多くの値は、ヘッダー ファイルの winerror.h に格納されます。  
+ HRESULT は、多くの場合、使用される戻り値として属性および ATL によって一般に単純なデータ型です。 次の表では、さまざまな値について説明します。 多くの値は、ヘッダー ファイルの winerror.h に格納されます。  
   
 |name|説明|[値]|  
 |----------|-----------------|-----------|  
@@ -65,7 +65,7 @@ ms.locfileid: "39463744"
 ##  <a name="vcconattributeprogrammmingfaqanchor2"></a> 属性のパラメーター名を指定するがある場合をでしょうか。  
  は、ほとんどの場合、属性が 1 つのパラメーターを持つ場合、そのパラメーターが名前します。 コードで属性を挿入するときに、この名前は必要ありません。 次の使用法など、[集約可能](../windows/aggregatable.md)属性。  
   
-```  
+```cpp  
 [coclass, aggregatable(value=allowed)]  
 class CMyClass  
 {  
@@ -75,7 +75,7 @@ class CMyClass
   
  正確と同じです。  
   
-```  
+```cpp  
 [coclass, aggregatable(allowed)]  
 class CMyClass  
 {  
@@ -104,7 +104,7 @@ class CMyClass
   
  次は使用できます。  
   
-```  
+```cpp  
 [ coclass,  
    progid("MyClass.CMyClass.1"), /* Multiple-line  
                                        comment */  
@@ -114,7 +114,7 @@ class CMyClass
   
  次は許可されません。  
   
-```  
+```cpp  
 [ coclass,  
    progid("MyClass.CMyClass.1" /* Multiple-line comment */ ),  
    threading("both" // Single-line comment)  
@@ -125,10 +125,10 @@ class CMyClass
  付きかどうか、その他のクラスから属性と属性の両方のクラスを継承することができます。 属性付きのクラスから派生した結果は、属性プロバイダーがそのコードを変換した後、そのクラスからの派生と同じです。 C++ の継承を使用してクラスを派生する属性は送信されません。 属性プロバイダーは、その属性の付近のコードのみを変換します。  
   
 ##  <a name="vcconattributeprogrammmingfaqanchor5"></a> 属性なしの ATL プロジェクトで属性を使用する方法は?  
- .Idl ファイルを持つ属性なしの ATL プロジェクトを必要に応じて、属性付きオブジェクトの追加を開始したい場合があります。 この場合は、クラスの追加ウィザードを使用して、コードを提供します。  
+ .Idl ファイルを持つ属性なしの ATL プロジェクトを必要に応じて、属性付きオブジェクトの追加を開始したい場合があります。 ここでは、使用して、**クラス追加ウィザード**コードを提供します。  
   
 ##  <a name="vcconattributeprogrammmingfaqanchor6"></a> 属性付きプロジェクトに .idl ファイルを使用する方法は?  
- .Idl ファイルを属性付き ATL プロジェクトで使用するがあります。 この場合、使用すると、 [importidl](../windows/importidl.md)属性、.idl ファイルと .h ファイルをコンパイル (を参照してください、 [MIDL プロパティ ページ](../ide/midl-property-pages.md)プロジェクトのプロパティ ページ ダイアログ ボックス)、プロジェクトに .h ファイルを含める.  
+ .Idl ファイルを属性付き ATL プロジェクトで使用するがあります。 この場合、使用すると、 [importidl](../windows/importidl.md)属性、.idl ファイルと .h ファイルのコンパイル (を参照してください、 [MIDL プロパティ ページ](../ide/midl-property-pages.md)プロジェクトの**プロパティ ページ** ダイアログ ボックス)、および.h ファイルをプロジェクトに追加します。  
   
 ##  <a name="vcconattributeprogrammmingfaqanchor7"></a> 属性によって挿入されるコードを変更できますか。  
  いくつかの属性は、プロジェクトにコードを挿入します。 使用して挿入されたコードを確認できます、 [/Fx](../build/reference/fx-merge-injected-code.md)コンパイラ オプション。 挿入されたファイルからコードをコピーし、ソース コードに貼り付けることもできます。 これにより、属性の動作を変更することができます。 ただし、コードの他の部分を変更する必要があります。  

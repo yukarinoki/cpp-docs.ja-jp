@@ -1,5 +1,5 @@
 ---
-title: Srwlocksharedtraits::unlock メソッド |Microsoft ドキュメント
+title: Srwlocksharedtraits::unlock メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95be5ae4c9db7bff4ecbfb4705904f4e48c160e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c0a42d1e1010f63436951beeadbd833e2a9d445d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889359"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650525"
 ---
 # <a name="srwlocksharedtraitsunlock-method"></a>SRWLockSharedTraits::Unlock メソッド
-指定した SRWLock オブジェクトの排他的に制御を解放します。  
+指定したの排他的制御を解放`SRWLock`オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,9 +35,9 @@ inline static void Unlock(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `srwlock`  
- SRWLock オブジェクトへのハンドル。  
+### <a name="parameters"></a>パラメーター  
+ *srwlock*  
+ 識別するハンドルを`SRWLock`オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
   

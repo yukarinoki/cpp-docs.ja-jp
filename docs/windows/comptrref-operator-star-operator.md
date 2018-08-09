@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 55d4fa6156c4ef2032111c0306c3cff8dce14059
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 229a5a61bfe28280f7bffcd92f9d9cebffa2415b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461453"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647161"
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator* 演算子
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 InterfaceType* operator *();  
 ```  
   

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 94f3937006f1cc13d9eefd7a9a8f338df2a13aa1
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: b432229f9ada4c1a3dbccfc9b71557827773b41c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465982"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645907"
 ---
 # <a name="criticalsectioncriticalsection-destructor"></a>CriticalSection::~CriticalSection デストラクター
 初期化を解除し、現在の破棄**CriticalSection**オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 WRL_NOTHROW ~CriticalSection();  
 ```  
   

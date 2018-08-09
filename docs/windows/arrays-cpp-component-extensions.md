@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 21a1dd4f26db41f7e32f3f76fd3b4c82e513397a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 58ba6d598223e63f5b28adcaedad653ffc6f386a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461690"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645569"
 ---
 # <a name="arrays-c-component-extensions"></a>配列 (C++ コンポーネント拡張)
 `Platform::Array<T>` C++ 型/cli CX、または**配列**キーワードは c++/cli CLI では、指定した型と初期値の配列を宣言します。  
@@ -52,7 +52,7 @@ ms.locfileid: "39461690"
   
  構文の最初の例では、 **ref 新しい**配列を割り当てる集計キーワード。 2 番目の例では、ローカル配列を宣言します。  
   
-```  
+```cpp  
 [qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = 
     ref new[Platform::]Array<initialization-type> [{initialization-list [,...]}]  
   
@@ -83,7 +83,7 @@ ms.locfileid: "39461690"
  型がで参照カウントの配列であるかどうかをコンパイル時に検出できます`__is_ref_array(type)`します。 詳細については、次を参照してください。[型の特徴のコンパイラ サポート](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)します。  
   
 ### <a name="requirements"></a>要件  
- コンパイラ オプション: **/ZW**  
+ コンパイラ オプション: `/ZW`  
   
 ### <a name="examples"></a>使用例  
  次の例では、100 個の要素のある 1 次元配列を作成します。  
@@ -106,7 +106,7 @@ int main() {
   
  構文の最初の例では、 **gcnew**配列を割り当てるキーワード。 2 番目の例では、ローカル配列を宣言します。  
   
-```  
+```cpp  
 [qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier = 
     gcnew [cli::]array<initialization-type[,rank]>(rank-size-list[,...]) [{initialization-list [,...]}]  
   
@@ -139,7 +139,7 @@ int main() {
   
 ### <a name="remarks"></a>Remarks  
   
- `array` [プラットフォーム、既定では、および cli 名前空間](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md)名前空間。  
+ **配列**では、[プラットフォーム、既定では、および cli 名前空間](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md)名前空間。  
   
  標準の C++ のような配列のインデックスは 0 から始まる、および角かっこ () を使用して配列が添字です。 標準の C++ とは異なり、多次元配列のインデックスは、一連の各ディメンションの角かっこ ([) 演算子ではなく、各次元のインデックスの一覧で指定されます。 たとえば、*識別子*[*index1*、 *index2*] の代わりに*識別子*[*index1*] [ *index2*]。  
   
@@ -152,7 +152,7 @@ int main() {
  コンパイル時に、型、共通言語ランタイム (CLR) 配列では、かどうかを検出できます`__is_ref_array(type)`します。 詳細については、次を参照してください。[型の特徴のコンパイラ サポート](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)します。  
   
 ### <a name="requirements"></a>要件  
- コンパイラ オプション: **/clr**  
+ コンパイラ オプション: `/clr`  
   
 ### <a name="examples"></a>使用例  
  次の例を 100 個の要素を持つ 1 次元配列の最初の次元の 3 つの要素、5 の 2 番目の要素と 3 番目の 6 つの要素を持つ 3 次元の配列を作成します。  

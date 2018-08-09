@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 30e408d127e73b111e6ff464ea7530ba01beece3
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 29b892f3e120db183082d6af97f9374f89e9e647
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570744"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643057"
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>方法: WRL を使用して非同期操作を完了する
 このドキュメントでは、Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用して、非同期操作を開始し、操作が完了した時点に作業を実行する方法を示します。  
@@ -40,7 +40,7 @@ ms.locfileid: "39570744"
   
      [!code-cpp[wrl-consume-async#2](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_1.cpp)]  
   
-     Windows.System.Threading.h は、非同期タイマーを使用するために必要な型を宣言します。  
+     `Windows.System.Threading.h` 非同期のタイマーを使用するために必要な型を宣言します。  
   
      コードを読みやすくするために、.cpp ファイルでは `using namespace` ディレクティブを使用することをお勧めします。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "39570744"
  [!code-cpp[wrl-consume-asyncOp#1](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_14.cpp)]  
   
 ### <a name="compiling-the-code"></a>コードのコンパイル  
- コードをコンパイルするにコピーし、Visual Studio プロジェクトに貼り付けるかという名前のファイルに貼り付ける`wrl-consume-asyncOp.cpp`Visual Studio コマンド プロンプト ウィンドウで、次のコマンドを実行します。  
+ コードをコンパイルするにコピーし、Visual Studio プロジェクトに貼り付けるかという名前のファイルに貼り付ける`wrl-consume-asyncOp.cpp`で、次のコマンドを実行し、 **Visual Studio コマンド プロンプト**ウィンドウ。  
   
  `cl.exe wrl-consume-asyncOp.cpp runtimeobject.lib`  
   

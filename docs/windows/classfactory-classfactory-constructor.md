@@ -1,5 +1,5 @@
 ---
-title: Classfactory::classfactory コンス トラクター |Microsoft ドキュメント
+title: Classfactory::classfactory コンス トラクター |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25c394b069b85056256d405b4dce8804d84cb2e9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9d47c3b8513883b3b9ee27457fa3a0d670acac13
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857244"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646216"
 ---
 # <a name="classfactoryclassfactory-constructor"></a>ClassFactory::ClassFactory コンストラクター
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 WRL_NOTHROW ClassFactory();  
 ```  
   

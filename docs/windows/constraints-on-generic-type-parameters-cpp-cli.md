@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 33829d868eb90cde7259a482b8fc80f9cd6fd677
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: bee7bf263e3537811be1b992f463b7f1269863ff
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465299"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649784"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>ジェネリック型パラメーターの制約 (C++/CLI)
 ジェネリック型またはメソッドの宣言では、制約と型パラメーターを修飾することができます。 制約は、型引数として使用される型が満たす必要がある要件です。 たとえば、型引数が特定のインターフェイスを実装または特定のクラスから継承する必要があります、制約があります。  
@@ -32,11 +32,11 @@ ms.locfileid: "39465299"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 where type-parameter: constraint list  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *型パラメーター*  
  制約が適用される、型パラメーターの 1 つ。  
   
@@ -45,7 +45,7 @@ where type-parameter: constraint list
   
  一覧には、クラスを含めることもできます。 基底クラスの制約を満たすために、型引数の制約と同じクラスまたはください制約から派生します。  
   
- 指定することも`gcnew()`; パブリック コンス トラクターを型引数が必要かを示すまたは**ref クラス**引数型を示す任意のクラス、インターフェイス、デリゲート、または配列を含む、参照型である必要があります型。または**値クラス**引数型を示す値型である必要があります。 値は null 値以外の型\<T > を指定できます。  
+ 指定することも**gcnew()** ; パブリック コンス トラクターを型引数が必要かを示すまたは**ref クラス**を示す、型引数は任意のクラスを含む、参照型である必要がありますインターフェイス、デリゲート、または配列型。または**値クラス**引数型を示す値型である必要があります。 値は null 値以外の型\<T > を指定できます。  
   
  制約としてジェネリック パラメーターを指定することもできます。 制約する型指定された型引数は、するか、制約の型から派生する必要があります。 これは、生の型の制約と呼ばれます。  
   

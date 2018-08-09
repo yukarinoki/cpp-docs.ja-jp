@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db26591bc4d0f1912c968c331266200baeea9917
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: edc4658ebf0519ef9d1792d62b303f423e658835
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463669"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643070"
 ---
 # <a name="activationfactorygetruntimeclassname-method"></a>ActivationFactory::GetRuntimeClassName メソッド
 オブジェクトのランタイム クラス名を取得、現在**ActivationFactory**をインスタンス化します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 STDMETHOD(  
    GetRuntimeClassName  
 )(_Out_ HSTRING* runtimeName);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *runtimeName*  
  ときにこの操作が完了すると、オブジェクトのランタイム クラス名を含む文字列を識別するハンドルを現在**ActivationFactory**をインスタンス化します。  
   

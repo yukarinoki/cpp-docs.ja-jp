@@ -1,5 +1,5 @@
 ---
-title: ツール バー エディターの |Microsoft ドキュメント
+title: ツール バー エディター |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cc902a0bb90194c463ebb874234f65230cd502b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fe9c73a09e2a0f220ee4454baefb07b7e65fcafa
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891312"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641648"
 ---
 # <a name="toolbar-editor"></a>ツール バー エディター
 ツール バー エディターを使用すると、ツール バー リソースを作成し、ビットマップをツール バー リソースに変換できます。 ツールバー エディターはグラフィカルな表示を使用して、完成したアプリケーションの外観と非常によく似たツールバーとボタンを示します。  
@@ -47,7 +47,7 @@ ms.locfileid: "33891312"
   
  ツールバー エディターは、イメージ エディターの機能に似ています。 メニュー項目、グラフィック ツール、ビットマップのグリッドは、イメージ エディター内のものと同じです。 イメージ メニューには、ツールバー エディターとイメージ エディターを切り替えるためのメニュー コマンドがあります。 グラフィック ツールバー、カラー パレット、またはイメージ メニューの使用の詳細については、「 [イメージ エディター](../windows/image-editor-for-icons.md)」を参照してください。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 詳細については、管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションは、次を参照してください。[グローバライズと .NET Framework アプリケーションのローカライズ](/dotnet/standard/globalization-localization/index)です。  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
   
 ## <a name="requirements"></a>要件  
  MFC または ATL  
@@ -55,4 +55,3 @@ ms.locfileid: "33891312"
 ## <a name="see-also"></a>関連項目  
  [リソース エディター](../windows/resource-editors.md)   
  [メニューとその他のリソース](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
-

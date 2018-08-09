@@ -1,5 +1,5 @@
 ---
-title: コントロール間の間隔の均等化 |Microsoft ドキュメント
+title: コントロール間の間隔の均等化 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a858aa09d05af97b9d4aec9c6f65f28ac89dc560
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c70da177cd3f040a8606c56a4e8eea1b65595b87
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872066"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643892"
 ---
 # <a name="evening-the-spacing-between-controls"></a>コントロールの間隔の均等化
-ダイアログ エディターでは、選択されている最も外側にあるコントロール間に均等にコントロールの間隔にできます。  
+**ダイアログ**等間隔の最も外側のコントロールを選択するエディターを使用します。  
   
 ### <a name="to-even-the-spacing-between-controls"></a>コントロール間の間隔を均等に  
   
 1.  配置を変更するコントロールを選択します。  
   
-2.  **形式**] メニューの [選択**均等スペース**、次の間隔の配置の 1 つを選択。  
+2.  **形式**] メニューの [選択**均等スペース**、次の間隔の配置のいずれかを選択します。  
   
-    -   **全体で**: 等間隔の左端および右端からのコントロールを選択します。  
+    -   `Across`: 等間隔の左端と右端のコントロールを選択します。  
   
-    -   **ダウン**: 等間隔、最上位と下位のコントロールを選択します。  
+    -   `Down`: 等間隔、最上位と下位のコントロールを選択します。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 詳細については、管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションは、次を参照してください。[グローバライズと .NET Framework アプリケーションのローカライズ](/dotnet/standard/globalization-localization/index)です。  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
   
- 要件  
-  
+## <a name="requirements"></a>要件  
  Win32  
   
 ## <a name="see-also"></a>関連項目  
  [ダイアログ ボックスのコントロールの配置](../windows/arrangement-of-controls-on-dialog-boxes.md)   
  [ダイアログ ボックスのコントロール](../windows/controls-in-dialog-boxes.md)   
  [コントロール](../mfc/controls-mfc.md)
-

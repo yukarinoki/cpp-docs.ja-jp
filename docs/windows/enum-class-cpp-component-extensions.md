@@ -13,25 +13,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: af936151b221b11c88f6dd054779b1a74fa50571
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 54c4e97458e1a7322d84e012ea5609d3e29bfb0a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570549"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647314"
 ---
 # <a name="enum-class--c-component-extensions"></a>enum クラス (C++ コンポーネント拡張)
 名前空間スコープで列挙型を宣言します。列挙型とは、列挙子と呼ばれる一連の名前付き定数で構成されるユーザー定義型です。  
   
 ## <a name="all-runtimes"></a>すべてのランタイム  
- **解説**  
+### <a name="remarks"></a>Remarks
   
  C +/cli/CX および C++/cli サポート**パブリック列挙型クラス**と**プライベート列挙型クラス**は標準の C++ のような**列挙型クラス**がユーザー補助機能の追加指定子。 **/Clr**、c++ 11**列挙型クラス**型が許可されているが、本当に ISO の列挙型としない、C + することを確認するためのものが警告 C4472 が生成されます/cli/CX および C++/cli CLI 型。 ISO 標準の C++ の詳細については**enum**キーワードを参照してください[列挙](../cpp/enumerations-cpp.md)します。  
   
 ## <a name="windows-runtime"></a>Windows ランタイム  
- **構文**  
+### <a name="syntax"></a>構文  
   
-```  
+```cpp  
       access  
       enum class  
       enumeration-identifier  
@@ -39,8 +39,7 @@ ms.locfileid: "39570549"
 accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [var];  
 ```  
   
- **パラメーター**  
-  
+### <a name="parameters"></a>パラメーター  
  *access*  
  列挙型のアクセシビリティ**パブリック**または**プライベート**します。  
   
@@ -60,7 +59,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
  *var*  
  (省略可能) 列挙型の変数の名前。  
   
- **解説**  
+### <a name="remarks"></a>Remarks 
   
  使用例を含む詳細については、「 [列挙型](http://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx)」をご覧ください。  
   
@@ -73,19 +72,19 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 -   *underlying-type* が `char16`であり、列挙型の値が 0xD800 から 0xDFFF の範囲にある場合、その値を表すことができます。 この値は Unicode サロゲート ペアの一方を表していますが、このペアは分離して表すことができないため、論理的にはこの値は正しくありません。  
   
 ### <a name="requirements"></a>要件  
- コンパイラ オプション: **/ZW**  
+ コンパイラ オプション: `/ZW`  
   
 ## <a name="common-language-runtime"></a>共通言語ランタイム 
- **構文**  
+### <a name="syntax"></a>構文
   
-```  
+```cpp  
       access  
       enum class  
       name [:type] { enumerator-list } var;  
 accessenum structname [:type] { enumerator-list } var;  
 ```  
   
- **パラメーター**  
+ ### <a name="parameters"></a>パラメーター  
   
  *access*  
  列挙型のアクセシビリティ。 いずれかになります**パブリック**または**プライベート**します。  
@@ -102,7 +101,7 @@ accessenum structname [:type] { enumerator-list } var;
  *var* (省略可能)  
  列挙型の変数の名前。  
   
- **解説**  
+### <a name="remarks"></a>Remarks 
   
  **enum class** と **enum struct** は同等の宣言です。  
   
@@ -163,13 +162,13 @@ int main() {
   
  これは、関数のシグネチャに対応して MSIL に次の出力を行います。  
   
-```  
+```cpp  
 void f(int32);  
 ```  
   
  ただし、現在のバージョンのコンパイラでは、[NativeEnumAttribute] を指定すると標準列挙型がマネージド列挙型として出力され、関数のシグネチャに対応して MSIL に次の出力を行います。  
   
-```  
+```cpp  
 void f(E)  
 ```  
   
@@ -180,12 +179,9 @@ void f(E)
 -   [Underlying Type of an Enum (列挙型の基になる型)](../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md)  
   
 ### <a name="requirements"></a>要件  
- コンパイラ オプション: **/clr**  
+ コンパイラ オプション: `/clr`  
   
 ### <a name="examples"></a>使用例  
- **例**  
-  
- 説明  
   
 ```cpp  
 // mcppv2_enum_2.cpp  
@@ -215,8 +211,6 @@ int main()
    System::Console::WriteLine(o);  
 }   
 ```  
-  
- **出力**  
   
 ```Output  
 no automatic conversion to int: b  

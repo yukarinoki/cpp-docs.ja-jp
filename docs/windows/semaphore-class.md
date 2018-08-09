@@ -1,5 +1,5 @@
 ---
-title: クラスのセマフォ |Microsoft ドキュメント
+title: クラスのセマフォ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1219c2118f9cde18fe1909a2edd02d58a4be2341
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5101aba24cd8a0ed4f44587ffc4ad9e973099b8a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889470"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652637"
 ---
 # <a name="semaphore-class"></a>Semaphore クラス
-ユーザー数に制限をサポートできる共有リソースを制御する同期オブジェクトを表します。  
+ユーザーの数に制限をサポートできる共有リソースを制御する同期オブジェクトを表します。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>  
 ```  
   
@@ -46,7 +45,7 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>
   
 |名前|説明|  
 |----------|-----------------|  
-|[Semaphore::Semaphore コンストラクター](../windows/semaphore-semaphore-constructor.md)|Semaphore クラスの新しいインスタンスを初期化します。|  
+|[Semaphore::Semaphore コンストラクター](../windows/semaphore-semaphore-constructor.md)|新しいインスタンスを初期化、**セマフォ**クラス。|  
   
 ### <a name="public-methods"></a>パブリック メソッド  
   
@@ -58,13 +57,13 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>
   
 |名前|説明|  
 |----------|-----------------|  
-|[Semaphore::Lock メソッド](../windows/semaphore-lock-method.md)|指定されたタイムアウト期間が経過したか、現在のオブジェクトか、指定したハンドルに関連付けられているオブジェクトになるまで待機がシグナル状態になっています。|  
+|[Semaphore::Lock メソッド](../windows/semaphore-lock-method.md)|シグナルの状態にある現在のオブジェクトまたは指定したハンドルに関連付けられたオブジェクトまでの待機、または指定されたタイムアウト期間が経過しました。|  
   
 ### <a name="public-operators"></a>パブリック演算子  
   
 |名前|説明|  
 |----------|-----------------|  
-|[Semaphore::operator= 演算子](../windows/semaphore-operator-assign-operator.md)|セマフォ オブジェクトから指定したハンドルを現在のセマフォ オブジェクトに移動します。|  
+|[Semaphore::operator= 演算子](../windows/semaphore-operator-assign-operator.md)|指定したハンドルの移動、**セマフォ**現在オブジェクト**セマフォ**オブジェクト。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `Semaphore`  

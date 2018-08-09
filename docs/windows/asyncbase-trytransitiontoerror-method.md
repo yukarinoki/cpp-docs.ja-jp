@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc677304ae7ab61e6726366869e85f731cd92484
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 61b56472e490d95e22c1013595c5c088d2b58dcd
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463208"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643031"
 ---
 # <a name="asyncbasetrytransitiontoerror-method"></a>AsyncBase::TryTransitionToError メソッド
 指定したエラー コードが内部エラー状態を変更できるかどうかを示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 bool TryTransitionToError(  
    const HRESULT error  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *error*  
  エラーの hresult 値。  
   

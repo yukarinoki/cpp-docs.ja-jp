@@ -17,32 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2f66f185692c200ea459b88363143c0cc1af9d55
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: b64f44e2188848a25e607c53171e25aa721e9bc4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466011"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641367"
 ---
 # <a name="criticalsectiontraitsunlock-method"></a>CriticalSectionTraits::Unlock メソッド
-指定のクリティカル セクション オブジェクトの解放の所有権をサポートするように CriticalSection テンプレートを専門としています。  
+専門、`CriticalSection`その it サポート、クリティカル セクションを指定したオブジェクトの所有権を解放するためのテンプレート。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 inline static void Unlock(  
    _In_ Type cs  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *cs*  
  クリティカル セクション オブジェクトへのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- *型*として修飾子が定義されている`typedef CRITICAL_SECTION* Type;`します。  
+ `Type`として修飾子が定義されている`typedef CRITICAL_SECTION* Type;`します。  
   
- 詳細については、次を参照してください。 Windows API のドキュメントの「同期関数」セクションでは"により function"です。  
+ 詳細については、次を参照してください。**により関数**で、**同期関数**Windows API のドキュメントの「します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

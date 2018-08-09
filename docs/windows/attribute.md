@@ -20,19 +20,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d72506e3f384a784bce4d159e8e76e88098c79f7
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e7b1f849aff584da6f575bc822a71acc683520e6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461810"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646320"
 ---
 # <a name="attribute"></a>属性
 カスタム属性を作成することができます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 [ attribute(  
    AllowOn,  
    AllowMultiple=boolean,  
@@ -40,7 +40,7 @@ ms.locfileid: "39461810"
 ) ]  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *AllowOn*  
  カスタム属性を適用できる言語要素を指定します。 既定値は`System::AttributeTargets::All`(を参照してください[値](https://msdn.microsoft.com/library/system.attributetargets.aspx))。  
   
@@ -48,16 +48,16 @@ ms.locfileid: "39461810"
  構成要素にカスタム属性を繰り返し適用できるかどうかを指定します。 既定値は FALSE です。  
   
  *継承*  
- サブクラスに継承される属性を示します。 コンパイラは特別なサポートしていません。 この機能のこの情報を尊重する属性のコンシューマー (リフレクションの使用例) のジョブになります。 場合*継承された*が true の場合、この属性を継承します。 場合*AllowMultiple*が true の場合場合に、派生メンバーでは、属性が蓄積されます*AllowMultiple* false で、属性はオーバーライド (または置換) 継承します。 場合*継承された*false で、属性は継承されません。 既定値は TRUE です。  
+ サブクラスに継承される属性を示します。 コンパイラは特別なサポートしていません。 この機能の属性コンシューマーのジョブが (`Reflection`など) にこの情報を処理します。 場合*継承された*が true の場合、この属性を継承します。 場合*AllowMultiple*が true の場合場合に、派生メンバーでは、属性が蓄積されます*AllowMultiple* false で、属性はオーバーライド (または置換) 継承します。 場合*継承された*false で、属性は継承されません。 既定値は TRUE です。  
   
 ## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  `attribute`属性が非推奨となりました。  直接の共通言語ランタイム属性 System.Attribute を使用すると、ユーザー定義の子の属性を作成できます。  詳細については、次を参照してください。[ユーザー定義の属性](../windows/user-defined-attributes-cpp-component-extensions.md)します。  
+>  **属性**属性が非推奨となりました。  共通言語ランタイムの属性を使用して、`System.Attribute`に子のユーザー定義属性を作成するには、直接します。 詳細については、次を参照してください。[ユーザー定義の属性](../windows/user-defined-attributes-cpp-component-extensions.md)します。  
   
- 定義する、[カスタム属性](../windows/custom-attributes-cpp.md)配置することで、`attribute`マネージ クラスまたは構造体の定義に対する属性。 クラスの名前は、カスタム属性です。 例えば:  
+ 定義する、[カスタム属性](../windows/custom-attributes-cpp.md)配置することで、**属性**マネージ クラスまたは構造体の定義に対する属性。 クラスの名前は、カスタム属性です。 例えば:  
   
-```  
+```cpp  
 [ attribute(Parameter) ]  
 public ref class MyAttr {};  
 ```  
@@ -115,7 +115,7 @@ ref class ClassC {};
   
  参照してください[ユーザー定義の属性](../windows/user-defined-attributes-cpp-component-extensions.md)属性の対象の詳細についてはします。  
   
- `attribute`属性が、 *AllowMultiple*カスタム属性が 1 回使用するかどうかを指定するパラメーターまたは multiuse (に表示できる複数回、同じエンティティ)。  
+ **属性**属性が、 *AllowMultiple*カスタム属性が 1 回使用するかどうかを指定するパラメーターまたは multiuse (に表示できる複数回、同じエンティティ)。  
   
 ```cpp  
 // cpp_attr_ref_attribute_3.cpp  
@@ -130,21 +130,21 @@ ref struct MyAttr {
 ref class ClassA {};  
 ```  
   
- カスタム属性クラスは直接または間接的にから派生<xref:System.ComponentModel.AttributeCollection.%23ctor%2A>、高速かつ簡単にメタデータ内の属性定義を識別するため、します。 `attribute`属性が明示的な派生が必要ないために、system::attribute からの継承を意味します。  
+ カスタム属性クラスは直接または間接的にから派生<xref:System.ComponentModel.AttributeCollection.%23ctor%2A>、高速かつ簡単にメタデータ内の属性定義を識別するため、します。 **属性**属性からの継承の意味`System::Attribute`ので、明示的な派生が必要ではありません。  
   
-```  
+```cpp  
 [ attribute(Class) ]  
 ref class MyAttr  
 ```  
   
  上記の式は、次の式と同じです。  
   
-```  
+```cpp  
 [ attribute(Class) ]  
 ref class MyAttr : System::Attribute   // OK, but redundant.  
 ```  
   
- `attribute` 別名です<xref:System.AttributeUsageAttribute?displayProperty=fullName>(AttributeAttribute されません。 これは、属性の名前付け規則の例外)。  
+ **属性**の別名です<xref:System.AttributeUsageAttribute?displayProperty=fullName>(AttributeAttribute されません。 これは、属性の名前付け規則の例外)。  
   
 ## <a name="requirements"></a>要件  
   

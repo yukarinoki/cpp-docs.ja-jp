@@ -18,17 +18,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d6d2cd31306baaa0d9c8f137122fed1d4ae97295
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 948b720df6094ddd4124bb496cabb3c83a3cacf0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464692"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652989"
 ---
 # <a name="application-settings-win-32-project-wizard"></a>[アプリケーションの設定] (Win32 アプリケーション ウィザード)
 ウィザードのこのページを使用して、Win32 プロジェクトのオプションを設定します。  
   
- **アプリケーションの種類**  
+## <a name="application-type"></a>アプリケーションの種類  
  指定したタイプのアプリケーションが作成されます。  
   
 |オプション|説明|  
@@ -38,7 +38,7 @@ ms.locfileid: "39464692"
 |**DLL**|Win32 ダイナミック リンク ライブラリ (DLL: Dynamic-Link Library) が作成されます。 Win32 DLL とは C または C++ で記述されたバイナリ ファイルであり、MFC クラスではなく Win32 API を呼び出したり、複数のアプリケーションで同時に使用できる関数の共有ライブラリとして機能します。<br /><br /> DLL アプリケーションには MFC サポートや ATL サポートを追加できません。 DLL がシンボルをエクスポートするように指定できます。|  
 |**スタティック ライブラリ**|スタティック ライブラリが作成されます。 スタティック ライブラリとは、実行可能ファイルの作成時にプログラムにリンクされるオブジェクト、およびそのオブジェクトの関数とデータを含むファイルです。 このトピックでは、スターター ファイルを作成する方法を説明しますと[プロジェクト プロパティ](../ide/property-pages-visual-cpp.md)のスタティック ライブラリ。 スタティック ライブラリ ファイルには以下の利点があります。<br /><br /> -Win32 スタティック ライブラリで作業しているアプリケーションが MFC クラスではなく、Win32 api 呼び出しを行った場合に便利です。<br />-リンク プロセスは、C または C++ では、Windows アプリケーションの残りの部分が書き込まれるかどうかは同じです。<br />-MFC ベースのプログラムにまたは非 MFC プログラムは、スタティック ライブラリをリンクすることができます。|  
   
- **追加オプション**  
+## <a name="additional-options"></a>追加オプション  
  アプリケーションのサポートとオプションを定義します。定義内容はアプリケーションの種類によって異なります。  
   
 |オプション|説明|  
@@ -48,7 +48,7 @@ ms.locfileid: "39464692"
 |**プリコンパイル済みヘッダー**|スタティック ライブラリ プロジェクトでプリコンパイル済みヘッダーを使用するように指定します。|  
 |Security Development Lifecycle (SDL) チェック(C)|SDL の詳細については、次を参照してください[Microsoft Security Development Lifecycle (SDL) プロセス ガイダンス。](../build/reference/sdl-enable-additional-security-checks.md)|  
   
- **サポートを追加します。**  
+## <a name="add-support-for"></a>[サポートの追加]  
  Visual C++ に用意されているライブラリの 1 つに対するサポートを追加します。  
   
 |オプション|説明|  

@@ -1,5 +1,5 @@
 ---
-title: Weakref::asiid メソッド |Microsoft ドキュメント
+title: Weakref::asiid メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 69108681b181d0b2fce20f9e30a009b6b93c2180
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9e5ff6510463a6fed06534236612feb460919e37
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891299"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643486"
 ---
 # <a name="weakrefasiid-method"></a>WeakRef::AsIID メソッド
-指定したインターフェイス ID を表すよう指定された ComPtr ポインター パラメーターを設定します。  
+指定した設定`ComPtr`ポインター パラメーターを指定したインターフェイス ID を表す  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,27 +36,27 @@ HRESULT AsIID(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `riid`  
+### <a name="parameters"></a>パラメーター  
+ *riid*  
  インターフェイス ID。  
   
- `ptr`  
- この操作の完了時の、パラメーター `riid`を表すオブジェクト。  
+ *ptr*  
+ ときにこの操作が完了すると、パラメーターを表すオブジェクトを*riid*します。  
   
 ## <a name="return-value"></a>戻り値  
   
--   この操作が成功すると S_OK になります。失敗すると HRESULT (操作が失敗した理由を示す) になり、 `ptr` は `nullptr`に設定されます。  
+-   この操作が成功した場合は s_ok を返します。それ以外の場合、理由を示す HRESULT 操作に失敗し、 *ptr*に設定されている**nullptr**します。  
   
--   この操作が成功すると S_OK になりますが、現在の WeakRef オブジェクトは既に解放されています。 パラメーターを `ptr` を `nullptr`に設定します。  
+-   現在、この操作に成功した場合は S_OK **WeakRef**オブジェクトは既に解放されています。 パラメーター *ptr*に設定されている**nullptr**します。  
   
--   この操作が成功すると S_OK になりますが、現在の WeakRef オブジェクトはパラメーター `riid`から派生しません。 パラメーターを `ptr` を `nullptr`に設定します。 (詳細については、「解説」を参照してください。)  
+-   現在、この操作に成功した場合は S_OK **WeakRef**オブジェクトがパラメーターから派生していない*riid*します。 パラメーター *ptr*に設定されている**nullptr**します。 (詳細については、「解説」を参照してください。)  
   
-## <a name="remarks"></a>コメント  
- パラメーター `riid` が IInspectable から派生していない場合、エラーが発生します。 このエラーは、戻り値よりも優先されます。  
+## <a name="remarks"></a>Remarks  
+ 場合は、エラーが出力パラメーター *riid*から派生していない`IInspectable`します。 このエラーは、戻り値よりも優先されます。  
   
  最初のテンプレートは、コードで使用する必要があるフォームです。 2 番目のテンプレート (ここでは示されていないが、ヘッダー ファイルでは宣言されている) は、 [auto](../cpp/auto-cpp.md) 型推論キーワードなどの C++ 言語の機能をサポートしている内部ヘルパーの特殊化です。  
   
- Windows 10 SDK 以降では、弱い参照を取得できなかった場合、このメソッドは WeakRef インスタンスを `nullptr` に設定しません。そのため、 `nullptr`の WeakRef を確認するエラー チェック コードは避けてください。 代わりに、確認`ptr`の`nullptr`します。  
+ 以降、Windows 10 SDK では、このメソッドが設定されていない、 **WeakRef**インスタンス**nullptr**弱い参照を取得しない場合は避けて、をチェックするエラーチェックコード**WeakRef**の**nullptr**します。 代わりに、チェック*ptr*の**nullptr**します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** client.h  

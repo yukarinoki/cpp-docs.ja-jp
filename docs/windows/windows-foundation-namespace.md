@@ -1,5 +1,5 @@
 ---
-title: Windows::foundation Namespace |Microsoft ドキュメント
+title: Windows::foundation Namespace |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 439746381b0b5d4932edd5c8717b2d3555005416
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 60eb32017e824397af6e4535efa5ec55f314c4b8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891225"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646732"
 ---
 # <a name="windowsfoundation-namespace"></a>Windows::Foundation 名前空間
-オブジェクトとファクトリの作成などの基本的な Windows ランタイム機能を有効にします。  
+オブジェクトおよびファクトリの作成などの基本的な Windows ランタイムの機能を有効にします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,8 +40,8 @@ namespace Windows::Foundation;
   
 |名前|説明|  
 |----------|-----------------|  
-|[ActivateInstance 関数](../windows/activateinstance-function.md)|登録し、指定したクラス ID で定義されている、指定した型のインスタンスを取得します|  
-|[GetActivationFactory 関数](../windows/getactivationfactory-function.md)|テンプレート パラメーターによって指定された型の対応するアクティベーション ファクトリを取得します。|  
+|[ActivateInstance 関数](../windows/activateinstance-function.md)|登録し、指定したクラス ID で定義されている指定された型のインスタンスを取得します。|  
+|[GetActivationFactory 関数](../windows/getactivationfactory-function.md)|テンプレート パラメーターで指定された型のアクティベーション ファクトリを取得します。|  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** client.h  
@@ -49,4 +49,4 @@ namespace Windows::Foundation;
  **Namespace:** Windows  
   
 ## <a name="see-also"></a>関連項目  
- [Windows Namespace](http://msdn.microsoft.com/en-us/45b08650-69cd-4f7f-a959-b7361476865c)
+ [Windows Namespace](http://msdn.microsoft.com/45b08650-69cd-4f7f-a959-b7361476865c)

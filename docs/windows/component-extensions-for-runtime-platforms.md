@@ -19,19 +19,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e68e2b729f8120a33b296fa485d145101b3d6e5b
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a9fa20fc180d9b77f5d909ea06d12d69c1ef89d1
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466710"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652686"
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>ランタイム プラットフォームのコンポーネントの拡張機能
 Visual C++ には、ランタイム プラットフォームに対するプログラミングに役立つ言語拡張が用意されています。 C + を使用して/cli CX、ユニバーサル Windows プラットフォーム アプリとネイティブ コードにコンパイルされるコンポーネントをプログラミングできます。 C + を使用して、Windows ランタイムの COM インターフェイスに対して直接プログラミングしてユニバーサル Windows プラットフォーム アプリを作成できますが、/cli CX、コンス トラクター、例外、およびその他の最新の C++ プログラミングの表現方法で操作することができます。 .NET プラットフォームでマネージ実行環境での C++ プログラミングを有効にするを使用することが C +/cli CLI。  
   
- **2 つのランタイム拡張機能の 1 つのセット**  
+### <a name="two-runtimes-one-set-of-extensions"></a>2 つのランタイムに共通の拡張  
   
- C + + CX はサブセットの C++/cli CLI。 拡張機能は共通する C +/cli/CX および C++/cli CLI、セマンティクスが共通言語ランタイム (CLR) または Windows ランタイムを対象にかに依存します。 Windows ランタイムで実行するアプリをコンパイルするには、指定、 **/ZW**コンパイラ オプション。 CLR で実行することをコンパイルするには、指定、 **/clr**コンパイラ オプション。 Visual Studio を使用してプロジェクトを作成すると、これらのスイッチが自動的に設定されます。  
+ C + + CX はサブセットの C++/cli CLI。 拡張機能は共通する C +/cli/CX および C++/cli CLI、セマンティクスが共通言語ランタイム (CLR) または Windows ランタイムを対象にかに依存します。 Windows ランタイムで実行するアプリをコンパイルするには、指定、`/ZW`コンパイラ オプション。 CLR で動作するようにコンパイルする場合は `/clr` コンパイラ オプションを指定します。 Visual Studio を使用してプロジェクトを作成すると、これらのスイッチが自動的に設定されます。  
   
  C++ でのユニバーサル Windows プラットフォーム アプリを作成する方法の詳細については、次を参照してください。 [C++ を使用してアプリを Windows ランタイム用のロードマップ](http://msdn.microsoft.com/library/windows/apps/hh700360.aspx)します。  
   
@@ -88,7 +88,7 @@ Visual C++ には、ランタイム プラットフォームに対するプロ�
 |**nullptr**|いいえ|ハンドルまたはポインターでオブジェクトを参照しないことを示します。|[nullptr](../windows/nullptr-cpp-component-extensions.md)|  
   
 ## <a name="template-constructs"></a>テンプレートの構成要素  
- 次の言語構成要素は、キーワードとしてではなく、テンプレートとして実装されています。 指定した場合、 **/ZW**コンパイラ オプションで定義されている、`lang`名前空間。 指定した場合、 **/clr**コンパイラ オプションで定義されている、`cli`名前空間。  
+ 次の言語構成要素は、キーワードとしてではなく、テンプレートとして実装されています。 `/ZW` コンパイラ オプションを指定した場合は `lang` 名前空間で定義され、 `/clr` コンパイラ オプションを指定した場合は `cli` 名前空間で定義され、  
   
 |キーワード|目的|参照|  
 |-------------|-------------|---------------|  

@@ -1,5 +1,5 @@
 ---
-title: SRWLockExclusiveTraits 構造体 |Microsoft ドキュメント
+title: SRWLockExclusiveTraits 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6b5d56c4e0c31b56e5bdc92a9d209b58cd15ffb1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 49f1f50b3fa9e34da8831c1cec138b6aefec27a5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889278"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649274"
 ---
 # <a name="srwlockexclusivetraits-structure"></a>SRWLockExclusiveTraits 構造体
-SRWLock クラス排他ロックのモードでの一般的な特徴をについて説明します。  
+一般的な特性について説明します、`SRWLock`排他ロック モードでのクラス。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,14 +39,14 @@ struct SRWLockExclusiveTraits;
   
 |名前|説明|  
 |----------|-----------------|  
-|`Type`|ポインターのシノニム、 [SRWLOCK](../windows/srwlock-class.md)クラスです。|  
+|`Type`|ポインターのシノニム、 [SRWLOCK](../windows/srwlock-class.md)クラス。|  
   
 ### <a name="public-methods"></a>パブリック メソッド  
   
 |名前|説明|  
 |----------|-----------------|  
-|[SRWLockExclusiveTraits::GetInvalidValue メソッド](../windows/srwlockexclusivetraits-getinvalidvalue-method.md)|常に有効ではない SRWLockExclusiveTraits オブジェクトを取得します。|  
-|[SRWLockExclusiveTraits::Unlock メソッド](../windows/srwlockexclusivetraits-unlock-method.md)|指定した SRWLock オブジェクトの排他的に制御を解放します。|  
+|[SRWLockExclusiveTraits::GetInvalidValue メソッド](../windows/srwlockexclusivetraits-getinvalidvalue-method.md)|取得、 **SRWLockExclusiveTraits**オブジェクトは常に有効です。|  
+|[SRWLockExclusiveTraits::Unlock メソッド](../windows/srwlockexclusivetraits-unlock-method.md)|指定したの排他的制御を解放`SRWLock`オブジェクト。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `SRWLockExclusiveTraits`  

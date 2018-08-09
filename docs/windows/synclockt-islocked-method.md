@@ -1,5 +1,5 @@
 ---
-title: Synclockt::islocked メソッド |Microsoft ドキュメント
+title: Synclockt::islocked メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 067b3763e10b2bbb310b213f7d748e953ba2a902
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5bfbd3418af731edf826debd9d6663095be706b8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888476"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641520"
 ---
 # <a name="synclocktislocked-method"></a>SyncLockT::IsLocked メソッド
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -34,10 +34,10 @@ bool IsLocked() const;
 ```  
   
 ## <a name="return-value"></a>戻り値  
- **true** SyncLockT オブジェクトがロックされている、それ以外の場合は**false**です。  
+ **true**場合、 **SyncLockT**オブジェクトがロックされている場合はそれ以外の場合、 **false**します。  
   
-## <a name="remarks"></a>コメント  
- SyncLockT、現在、リソースを所有しているかどうかを示しますSyncLockT オブジェクトは、つまり、*ロック*です。  
+## <a name="remarks"></a>Remarks  
+ 示すかどうか、現在**SyncLockT**リソースを所有するオブジェクトです。 つまり、 **SyncLockT**オブジェクトが*ロック*します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

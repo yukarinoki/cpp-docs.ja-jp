@@ -1,5 +1,5 @@
 ---
-title: ガイドの作成し設定、上下の余白 |Microsoft ドキュメント
+title: ガイドの作成し設定、および余白 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,48 +22,47 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b548f48fc079fe26ae43c0553bef27f2348bad6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 11631a2ac6a2c83cd667d14a490c57b1a191c1a7
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873512"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642559"
 ---
 # <a name="creating-and-setting-guides-and-margins"></a>ガイドとマージンの作成と設定
-コントロールを移動する、追加、または現在のレイアウトを再配置ガイドを使用するかどうかは、ダイアログ ボックス内に正確にコントロールを揃えます。 ガイドは、ルーラー (上部にあると、ダイアログ エディターの左側にある) に対応する矢印、エディターで表示されるダイアログ ボックスでは、青色の点線として表示されます。  
+コントロールの移動は、コントロールの追加、または現在のレイアウトを並べ替え、ガイドを使用するかどうかは、ダイアログ ボックス内に正確にコントロールを配置します。 ガイド、エディター、ルーラーの対応する矢印で表示されるダイアログ ボックスで、青い点線が表示されます (最上部の左側にある、**ダイアログ**エディター)。  
   
- ダイアログ ボックスを作成するときに、4 つのマージンが提供されます。 余白は、青色の点線として表示、変更後のガイドです。  
+ ダイアログ ボックスを作成するときに、次の 4 つの余白が提供されます。 余白は、青い点線として表示される、変更後のガイドです。  
   
 ### <a name="to-create-a-guide"></a>ガイドを作成するには  
   
-1.  ルーラー内で 1 回クリックするガイドを作成します。 (1 回のクリックが新たに作成ガイド; が起動しをダブルクリックすると、[ガイドの設定 ダイアログ ボックス](../windows/guide-settings-dialog-box.md)番組ガイドの設定を指定できます)。  
+1.  ルーラー、ガイドを作成する 1 回クリックします。 (1 回のクリックが新たに作成ガイド; の起動をダブルクリックすると、[ガイドの設定 ダイアログ ボックス](../windows/guide-settings-dialog-box.md)番組ガイドの設定を指定することができます)。  
   
 ### <a name="to-set-a-guide"></a>ガイドを設定するには  
   
-1.  ダイアログ ボックスで、番組ガイドをクリックし、新しい位置にドラッグします。 (できますも矢印をクリックする、ルーラーに関連付けられたガイドをドラッグします。)  
+1.  ダイアログ ボックスで、ガイドをクリックし、新しい位置にドラッグします。 (できますも矢印をクリックする、ルーラーに関連付けられているガイドをドラッグします。)  
   
-     ウィンドウの下部にあるステータス バーでは、ルーラー、ガイドの座標が表示されます。 ルーラー、ガイドの正確な位置を表示する矢印の上、ポインターを移動します。  
+     ウィンドウの下部にあるステータス バーには、ルーラー、ガイドの座標が表示されます。 ルーラー、ガイドの正確な位置を表示する矢印の上にポインターを移動します。  
   
 ### <a name="to-delete-a-guide"></a>ガイドを削除するには  
   
-1.  ガイドは、ダイアログ ボックス外にドラッグします。  
+1.  ダイアログ ボックスには、番組ガイドをドラッグします。  
   
  \- または -  
   
--   ルーラーの外、対応する矢印をドラッグします。  
+-   ルーラーから対応する矢印をドラッグします。  
   
-#### <a name="to-move-margins"></a>余白を移動するには  
+### <a name="to-move-margins"></a>余白を移動するには  
   
 1.  余白を新しい位置にドラッグします。  
   
-     マージンを非表示をするためには、余白を 0 の位置に移動します。 余白を元に戻す、ポインターを置きます余白の 0 の位置および余白を位置に移動します。  
+     マージンを非表示にするには、余白を 0 の位置に移動します。 余白を元に戻します、余白の位置 0 ポインターを置きます、余白を位置に移動します。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 詳細については、管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションは、次を参照してください。[グローバライズと .NET Framework アプリケーションのローカライズ](/dotnet/standard/globalization-localization/index)です。  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
   
-### <a name="requirements"></a>要件  
+## <a name="requirements"></a>要件  
  Win32  
   
 ## <a name="see-also"></a>関連項目  
  [ダイアログ エディターの状態 (ガイドとグリッド)](../windows/dialog-editor-states-guides-and-grids.md)   
  [ダイアログ ボックスのコントロール](../windows/controls-in-dialog-boxes.md)
-

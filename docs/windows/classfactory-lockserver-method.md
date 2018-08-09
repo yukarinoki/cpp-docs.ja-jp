@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 654ef60c924a14e861971c651899c8baea0300ef
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: ee858346fdb70e136edfbc562c2dfffb1f63e462
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462707"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652372"
 ---
 # <a name="classfactorylockserver-method"></a>ClassFactory::LockServer メソッド
 ずつインクリメントまたはデクリメントし、現在追跡されるオブジェクトの基になる数**ClassFactory**オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 STDMETHOD(  
    LockServer  
 )(BOOL fLock);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *群れ*  
  **true**追跡対象のオブジェクトの数をインクリメントします。 **false**追跡対象のオブジェクトの数をデクリメントします。  
   
@@ -43,7 +43,7 @@ STDMETHOD(
  成功した場合は s_ok を返します。それ以外の場合、E_FAIL します。  
   
 ## <a name="remarks"></a>Remarks  
- ClassFactory の追跡の基になるインスタンス内のオブジェクト、[モジュール](../windows/module-class.md)クラス。  
+ **ClassFactory**の基になるインスタンス内のオブジェクトの追跡、[モジュール](../windows/module-class.md)クラス。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** module.h  

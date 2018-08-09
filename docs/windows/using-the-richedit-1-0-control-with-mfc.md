@@ -1,5 +1,5 @@
 ---
-title: MFC での RichEdit 1.0 コントロールの使用 |Microsoft ドキュメント
+title: MFC でリッチ エディット 1.0 コントロールの使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d2d45de1c6bd986c2bf509ce601f80fcd3721599
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a00642c1aefdce57c37723ef4daf23381cee3c13
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890312"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650749"
 ---
 # <a name="using-the-richedit-10-control-with-mfc"></a>MFC でのリッチ エディット 1.0 コントロールの使用
 リッチ エディット コントロールを使用するには、まず[AfxInitRichEdit2](../mfc/reference/application-information-and-management.md#afxinitrichedit2)リッチ エディット 2.0 コントロール (RICHED20 を読み込めません。DLL)、または呼び出す[AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit)古い RichEdit 1.0 コントロール (RICHED32 を読み込めません。DLL) です。  
   
- 現在を使用することは[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)古い RichEdit 1.0 コントロールが、クラスが**CRichEditCtrl**はのみリッチ エディット 2.0 コントロールをサポートするために設計されています。 RichEdit 1.0 およびリッチ エディット 2.0 は、非常に似ていますが、ために、ほとんどのメソッドを使用します。ただしは、1.0 と 2.0 のコントロールをいくつかのメソッドが正常に動作しない可能性がありますまたはまったく動作しないようにいくつか違いがあります。  
+ 現在を使用することが[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)古い RichEdit 1.0 コントロールでは、クラスが`CRichEditCtrl`はリッチ エディット 2.0 コントロールをサポートするためにのみ設計されています。 RichEdit 1.0 とリッチ エディット 2.0 とよく似ていますが、ために、ほとんどのメソッドを使用します。ただしの 1.0 と 2.0 のコントロールをいくつかのメソッドが正常に動作しない可能性がありますまたはまったく動作しないようにいくつかの違いに注意してください。  
   
 ## <a name="requirements"></a>要件  
  MFC  
@@ -34,4 +34,3 @@ ms.locfileid: "33890312"
 ## <a name="see-also"></a>関連項目  
  [ダイアログ エディターのトラブルシューティング](../windows/troubleshooting-the-dialog-editor.md)   
  [ダイアログ エディター](../windows/dialog-editor.md)
-

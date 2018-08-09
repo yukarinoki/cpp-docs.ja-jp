@@ -26,15 +26,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e94945212b9a7215397a1179432e87178d236b42
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: a2aacfcda168b3abdb5d46826a0351f85a4b3d48
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571286"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645397"
 ---
 # <a name="customizing-or-changing-colors-image-editor-for-icons"></a>色のカスタマイズまたは変更 (アイコン用イメージ エディター)
-イメージ エディターの[色パレット](../windows/colors-window-image-editor-for-icons.md)16 の標準色を最初に表示されます。 表示された色以外にも、独自の色を作成できます。 できます[を保存し、カスタマイズした色パレットを読み込む](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md)します。  
+**イメージ**エディターの[色パレット](../windows/colors-window-image-editor-for-icons.md)16 の標準色を最初に表示されます。 表示された色以外にも、独自の色を作成できます。 できます[を保存し、カスタマイズした色パレットを読み込む](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md)します。  
   
 ### <a name="to-change-colors-on-the-colors-palette"></a>色パレットで色を変更するには  
   
@@ -51,7 +51,6 @@ ms.locfileid: "39571286"
 5.  クリックして**OK**新しい色を追加します。  
   
 ## <a name="requirements"></a>要件  
-  
  なし  
   
 ## <a name="see-also"></a>関連項目  

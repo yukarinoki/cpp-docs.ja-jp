@@ -1,5 +1,5 @@
 ---
-title: Semaphore::semaphore コンス トラクター |Microsoft ドキュメント
+title: Semaphore::semaphore コンス トラクター |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc7ddd6279dbdf177c8e478b7c1350647ac4a7c3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3646e13818297b636a888e1ad00c998a120e8379
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888660"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643661"
 ---
 # <a name="semaphoresemaphore-constructor"></a>Semaphore::Semaphore コンストラクター
-Semaphore クラスの新しいインスタンスを初期化します。  
+新しいインスタンスを初期化、**セマフォ**クラス。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,9 +39,9 @@ WRL_NOTHROW Semaphore(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `h`  
- ハンドルまたはセマフォ オブジェクトへの右辺値参照。  
+### <a name="parameters"></a>パラメーター  
+ *h*  
+ ハンドルまたはへの右辺値参照を**セマフォ**オブジェクト。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

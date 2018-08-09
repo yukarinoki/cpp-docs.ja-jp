@@ -1,5 +1,5 @@
 ---
-title: BoolStruct 構造体 |Microsoft ドキュメント
+title: BoolStruct 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: af2827d85a1df647dca2c02c5c6ee5a12a416d51
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 14e3d81ca273bf96b4812f08a46904c9d521c5cf
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860123"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650483"
 ---
 # <a name="boolstruct-structure"></a>BoolStruct 構造体
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 struct BoolStruct;  
 ```  
   
-## <a name="remarks"></a>コメント  
- BoolStruct 構造体は、ComPtr がインターフェイスのオブジェクトの有効期間を管理するかどうかを定義します。 BoolStruct が内部で使用される、 [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md)演算子。  
+## <a name="remarks"></a>Remarks  
+ **BoolStruct**構造体を定義するかどうかを`ComPtr`インターフェイスのオブジェクトの有効期間を管理します。 **BoolStruct**内部で使用される、 [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md)演算子。  
   
 ## <a name="members"></a>メンバー  
   
@@ -42,7 +42,7 @@ struct BoolStruct;
   
 |名前|説明|  
 |----------|-----------------|  
-|[BoolStruct::Member データ メンバー](../windows/boolstruct-member-data-member.md)|指定する、 [ComPtr](../windows/comptr-class.md)またはインターフェイスのオブジェクトの有効期間の管理ではありません。|  
+|[BoolStruct::Member データ メンバー](../windows/boolstruct-member-data-member.md)|指定します、 [ComPtr](../windows/comptr-class.md)またはインターフェイスのオブジェクトの有効期間の管理ではないです。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `BoolStruct`  

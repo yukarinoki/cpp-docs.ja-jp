@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 19e04f5415f9f7a736371c888dff7559df6c6c66
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 4683305b9f7f396168bd9404f6f2501502db3d01
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462337"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645023"
 ---
 # <a name="comptrrefbaseoperator-iinspectable-operator"></a>Comptrrefbase::operator IInspectable\* \*演算子
 
@@ -40,7 +40,7 @@ operator IInspectable**() const;
 
 場合に、エラーが出力されますが、現在**ComPtrRefBase**から派生していない`IInspectable`。
 
-このキャストは使用可能な場合にのみ **&#95; &#95;WRL_CLASSIC_COM&#95; &#95;** が定義されています。
+このキャストは使用可能な場合にのみ`__WRL_CLASSIC_COM__`が定義されています。
 
 ## <a name="requirements"></a>要件
 

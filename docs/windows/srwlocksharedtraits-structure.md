@@ -1,5 +1,5 @@
 ---
-title: SRWLockSharedTraits 構造体 |Microsoft ドキュメント
+title: SRWLockSharedTraits 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a18edef3fa658608459244143a5e48738f0c3a9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c606a1a7d32a02442e767a31543a76a4dccf295e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889647"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652475"
 ---
 # <a name="srwlocksharedtraits-structure"></a>SRWLockSharedTraits 構造体
-SRWLock クラス共有ロック モードでの一般的な特徴をについて説明します。  
+一般的な特性について説明します、`SRWLock`共有ロック モードでのクラス。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,14 +39,14 @@ struct SRWLockSharedTraits;
   
 |名前|説明|  
 |----------|-----------------|  
-|`Type`|ポインターのシノニム、 [SRWLOCK](../windows/srwlock-class.md)クラスです。|  
+|`Type`|ポインターのシノニム、 [SRWLOCK](../windows/srwlock-class.md)クラス。|  
   
 ### <a name="public-methods"></a>パブリック メソッド  
   
 |名前|説明|  
 |----------|-----------------|  
-|[SRWLockSharedTraits::GetInvalidValue メソッド](../windows/srwlocksharedtraits-getinvalidvalue-method.md)|常に有効ではない SRWLockSharedTraits オブジェクトを取得します。|  
-|[SRWLockSharedTraits::Unlock メソッド](../windows/srwlocksharedtraits-unlock-method.md)|指定した SRWLock オブジェクトの排他的に制御を解放します。|  
+|[SRWLockSharedTraits::GetInvalidValue メソッド](../windows/srwlocksharedtraits-getinvalidvalue-method.md)|取得、 **SRWLockSharedTraits**オブジェクトは常に有効です。|  
+|[SRWLockSharedTraits::Unlock メソッド](../windows/srwlocksharedtraits-unlock-method.md)|指定したの排他的制御を解放`SRWLock`オブジェクト。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `SRWLockSharedTraits`  

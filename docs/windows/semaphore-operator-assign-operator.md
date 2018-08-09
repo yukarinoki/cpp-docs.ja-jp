@@ -1,5 +1,5 @@
 ---
-title: Semaphore::operator = 演算子 |Microsoft ドキュメント
+title: Semaphore::operator = 演算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25287e642bd368470b207ed237f44ca70773064e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eee563a52a24d2b78157b640ae6e84217c03af64
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892528"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651279"
 ---
 # <a name="semaphoreoperator-operator"></a>Semaphore::operator= 演算子
-セマフォ オブジェクトから指定したハンドルを現在のセマフォ オブジェクトに移動します。  
+指定したハンドルの移動、**セマフォ**現在オブジェクト**セマフォ**オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,12 +35,12 @@ Semaphore& operator=(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `h`  
- セマフォ オブジェクトへの右辺値参照。  
+### <a name="parameters"></a>パラメーター  
+ *h*  
+ 右辺値参照を**セマフォ**オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 現在のセマフォ オブジェクトへの参照。  
+ 現在への参照を**セマフォ**オブジェクト。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

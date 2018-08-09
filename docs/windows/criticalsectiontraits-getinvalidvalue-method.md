@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cf0d52769052a36c0b494d19204dd6c07f0b2404
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 01efd9bf3941a5b19e1f0fe6c106d47f1b6e9fcf
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463386"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642062"
 ---
 # <a name="criticalsectiontraitsgetinvalidvalue-method"></a>CriticalSectionTraits::GetInvalidValue メソッド
 専門、 **CriticalSection**テンプレート、テンプレートが常に有効なされないようにします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 inline static Type GetInvalidValue();  
 ```  
   
@@ -37,7 +37,7 @@ inline static Type GetInvalidValue();
  常に無効な重要なセクションにポインターを返します。  
   
 ## <a name="remarks"></a>Remarks  
- *型*として修飾子が定義されている`typedef CRITICAL_SECTION* Type;`します。  
+ `Type`として修飾子が定義されている`typedef CRITICAL_SECTION* Type;`します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

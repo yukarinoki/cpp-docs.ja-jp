@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b6f0059d167b04c9a4b177d1851ad88133ef5cd3
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 03db2fd8853321e4a9320f2c17b05800b87e466c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466557"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652963"
 ---
 # <a name="argtraitsargs-constant"></a>ArgTraits::args 定数
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 static const int args = -1; ;  
 ```  
   
@@ -37,7 +37,7 @@ static const int args = -1; ;
  パラメーターの数のカウントを保持、`Invoke`デリゲート インターフェイスのメソッド。  
   
 ## <a name="remarks"></a>Remarks  
- ときに`args`が-1 のでは、必要がありますに一致することを示します、`Invoke`メソッド シグネチャ。  
+ ときに**args**が-1 のでは、必要がありますに一致することを示します、`Invoke`メソッド シグネチャ。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** event.h  

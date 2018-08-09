@@ -1,5 +1,5 @@
 ---
-title: ポップアップ メニューとしてのメニューの表示 |Microsoft ドキュメント
+title: ポップアップ メニューとしてのメニューの表示 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c97eef61917fec0e068b25116b96b8dd7db41eb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 05695e834ae244d276141185a913e8f35ef45922
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891032"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652202"
 ---
 # <a name="viewing-a-menu-as-a-pop-up-menu"></a>ポップアップ メニューとしてのメニューの表示
 通常、メニュー エディターを使用しているときは、メニュー リソースがメニュー バーとして表示されます。 ただし、プログラムの実行中にアプリケーションのメニュー バーにメニュー リソースが追加されている場合もあります。  
   
 ### <a name="to-view-a-menu-resource-as-a-pop-up-menu"></a>メニュー リソースをポップアップ メニューとして表示するには  
   
-1.  メニューを右クリックし、**ポップアップ表示**ショートカット メニューからです。  
+1.  メニューを右クリックし、**ポップアップ表示**ショートカット メニューから。  
   
      これは単なる表示設定であり、メニューは変更されません。  
   
     > [!NOTE]
-    >  クリックして、メニュー バーの表示に戻すに**ポップアップ表示**再度 (チェック マークが削除を返す、メニュー バーの表示)。  
+    >  メニュー バーの表示に戻すに、次のようにクリックします。**ポップアップ表示**もう一度 (チェック マークが削除と、メニュー バーの表示を返します)。  
   
-
-  
- **必要条件**  
-  
+## <a name="requirements"></a>要件  
  Win32  
   
 ## <a name="see-also"></a>関連項目  
- [ポップアップ メニューを作成します。](../windows/creating-pop-up-menus.md)   
+ [ショートカット メニューの作成](../windows/creating-pop-up-menus.md)   
  [メニュー エディター](../windows/menu-editor.md)   

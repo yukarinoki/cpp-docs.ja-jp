@@ -1,5 +1,5 @@
 ---
-title: アクセラレータの種類 プロパティ |Microsoft ドキュメント
+title: アクセラレータの種類のプロパティ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb1ba8f117fadab7cccb835ba8889d57bcc9f184
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: da825a4f2052f05b24ff724d709c7c8a4b6a3db3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856502"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645686"
 ---
 # <a name="accelerator-type-property"></a>アクセラレータの [タイプ] プロパティ
-アクセラレータ**型**プロパティは、アクセラレータ ID に関連付けられているショートカット キーの組み合わせが仮想キーの組み合わせまたは ASCII/ANSI キーの値かどうかを決定します。  
+アクセラレータ**型**プロパティは、アクセラレータ ID に関連付けられているショートカット キーの組み合わせが仮想キーの組み合わせまたは ASCII/ANSI キーの値がかどうかを決定します。  
   
--   場合、**型**プロパティは**ASCII**、[修飾子](../windows/accelerator-modifier-property.md)なしにしかなれませんか、または alt キーを押し、CTRL キーを使用するアクセラレータを持つことができます (前のキーで指定された、^)。  
+-   場合、**型**プロパティは、ASCII、[修飾子](../windows/accelerator-modifier-property.md)場合のみ`None`または`Alt`、またはアクセラレータを使用することができます、 **Ctrl** (で指定されたキー前のキーを`^`)。  
   
--   場合、**型**プロパティは**VIRTKEY**修飾子とキー値の任意の組み合わせが無効です。  
+-   場合、**型**プロパティは VIRTKEY を任意に組み合わせた`Modifier`と`Key`値が無効です。  
   
     > [!NOTE]
-    >  アクセラレータ テーブルに値を入力し、ASCII または ANSI として扱われます値である場合は、テーブル内のエントリの種類と、ドロップダウン リストから選択 ASCII をクリックします。 ただし、使用する場合、 **キー タイピング登録**コマンド (**編集**メニュー) キーを指定する必要がありますを変更する、**型**プロパティ VIRTKEY から ASCII に*する前に*キー コードを入力します。  
+    >  アクセラレータ テーブルに値を入力して ASCII/ANSI をクリックすることとして扱う値を設定する場合、**型**ドロップダウン リストから ASCII を選択、テーブル内のエントリ。 ただし、使用する場合、 **キー タイピング登録**コマンド (**編集**メニュー) を指定する、 `Key`、変更する必要があります、**型**プロパティ VIRTKEY から ASCIIに*する前に*入力、`Key`コード。  
   
 ## <a name="requirements"></a>要件  
  Win32  

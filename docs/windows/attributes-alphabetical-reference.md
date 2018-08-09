@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1bbb461fe4e8cdabf7da9925323d9271a1047440
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: cb7c8dc889a37ca52c527a65f68a84d81e9553cc
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464890"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648179"
 ---
 # <a name="attributes-alphabetical-reference"></a>属性リファレンス (アルファベット順)
 次の属性は、Visual C で使用できます。  
@@ -118,7 +118,7 @@ ms.locfileid: "39464890"
 |[satype](../windows/satype.md)|データ型を指定します、`SAFEARRAY`します。|  
 |[size_is](../windows/size-is.md)|メモリのサイズがサイズのポインターに割り当てられた、サイズのポインター、および 1 次元または多次元配列へのポインターのサイズを指定します。|  
 |[source](../windows/source-cpp.md)|クラス、プロパティ、またはメソッドのメンバーがイベントの発生元であることを示します。|  
-|[string](../windows/string-cpp.md)|示します、1 次元**char**、 **wchar_t**、**バイト**、または同等の配列またはそのような配列へのポインターは、文字列として扱う必要があります。|  
+|[string](../windows/string-cpp.md)|示します、1 次元**char**、 **wchar_t**、 `byte`、または同等の配列またはそのような配列へのポインターは、文字列として扱う必要があります。|  
 |[support_error_info](../windows/support-error-info.md)|ターゲット オブジェクトのエラー報告をサポートしています。|  
 |[switch_is](../windows/switch-is.md)|式または共用体の判別共用体のメンバーを選択するとして機能する識別子を指定します。|  
 |[switch_type](../windows/switch-type.md)|共用体の判別式として使用される変数の型を識別します。|  

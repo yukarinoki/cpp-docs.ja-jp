@@ -1,5 +1,5 @@
 ---
-title: displaybind |Microsoft ドキュメント
+title: displaybind |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fcb46d4eeb4cede778aefc4210a022b08a22ca9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8fdd9efe3b60fa9dc53d1c63191e19657cb70d75
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879888"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641741"
 ---
 # <a name="displaybind"></a>displaybind
-バインド可能なとしてユーザーに表示されるプロパティを示します。  
+バインド可能なユーザーに表示されるプロパティを示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```cpp  
 [displaybind]  
-  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **Displaybind** C++ 属性と同じ機能を持つ、 [displaybind](http://msdn.microsoft.com/library/windows/desktop/aa366804) MIDL 属性。  
   
 ## <a name="example"></a>例  
- 例を参照して[バインド可能な](../windows/bindable.md)の使用方法の例については**displaybind**です。  
+ 例をご覧ください[バインド可能な](../windows/bindable.md)を使用する方法の例については**displaybind**します。  
   
 ## <a name="requirements"></a>要件  
   
@@ -48,7 +46,7 @@ ms.locfileid: "33879888"
 |||  
 |-|-|  
 |**対象**|インターフェイス メソッド|  
-|**反復可能**|×|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

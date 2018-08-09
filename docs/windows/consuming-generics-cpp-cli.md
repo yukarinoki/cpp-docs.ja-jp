@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8282079099b0b67b144f768a69f724e39305385
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: cf1c7c0894eacc828a011c8c5f9fef8c2d78fba8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460492"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652514"
 ---
 # <a name="consuming-generics-ccli"></a>ジェネリックの使用 (C++/CLI)
 1 つの .NET 言語で作成されたジェネリックは、他の .NET 言語で使用することがあります。 テンプレートとは異なり、コンパイル済みアセンブリのジェネリックはまだジェネリックは残ります。 したがって、ジェネリック型が定義されているアセンブリとは異なる言語であっても、別のアセンブリでは、ジェネリック型をインスタンス化いずれかの可能性があります。  
@@ -114,9 +114,7 @@ int main() {
 }  
 ```  
   
-### <a name="output"></a>出力  
-  
-```  
+```Output  
 90  
 80  
 70  

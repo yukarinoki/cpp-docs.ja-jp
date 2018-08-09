@@ -1,5 +1,5 @@
 ---
-title: Eventtargetarray::length メソッド |Microsoft ドキュメント
+title: Eventtargetarray::length メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eab14d842935e99f8e5f8a96b24b5675d61e418d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30386120492bcabd7ec1fc07f82e5e1ffd9c1821
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33886091"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653106"
 ---
 # <a name="eventtargetarraylength-method"></a>EventTargetArray::Length メソッド
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 size_t Length();  
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 現在のイベント ハンドラーの内部配列内の要素の数。  
+ イベント ハンドラーの内部配列の要素の現在数。  
   
-## <a name="remarks"></a>コメント  
- イベント ハンドラーの内部配列内の現在の要素数を取得します。  
+## <a name="remarks"></a>Remarks  
+ イベント ハンドラーの内部配列の要素の現在の数を取得します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** event.h  

@@ -1,5 +1,5 @@
 ---
-title: ダイアログ ボックスの新規作成 |Microsoft ドキュメント
+title: 新しいダイアログ ボックスの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49e0fe5ddf8b54078e8578396d2ed41ebd15da66
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 101c135a5ebf4d188a1e241c9d343580c13b247a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872145"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653028"
 ---
 # <a name="creating-a-new-dialog-box"></a>ダイアログ ボックスの新規作成
 ### <a name="to-create-a-new-dialog-box"></a>新しいダイアログ ボックスを作成するには  
@@ -33,22 +33,20 @@ ms.locfileid: "33872145"
     > [!NOTE]
     >  プロジェクトに .rc ファイルがまだ含まれていない場合は、「 [リソース スクリプト ファイルの新規作成](../windows/how-to-create-a-resource-script-file.md)」を参照してください。  
   
-2.  **リソースの追加**ダイアログ ボックスで、**ダイアログ**で、**リソースの種類**一覧で、をクリックして**新規**です。  
+2.  **リソースの追加**ダイアログ ボックスで、**ダイアログ**で、**リソースの種類** をクリックし、**新規**します。  
   
-     ダイアログ リソースの種類の横にあるプラス記号 (+) が表示されている場合は、ダイアログ ボックスのテンプレートが使用できることを意味します。 テンプレートの一覧を展開し、テンプレートを選択して [新規] をクリックするには、プラス記号をクリックします。  
+     プラス記号の場合 (**+**) 横に表示されます、**ダイアログ**ダイアログ ボックスのテンプレートが使用できることを意味、リソースの種類。 テンプレートの一覧を展開し、テンプレートを選択してをクリックするには、プラス記号をクリックします。**新規**します。  
   
-     新しいダイアログ ボックスでは、ダイアログ エディターで開きます。  
+     新しいダイアログ ボックスが開き、**ダイアログ**エディター。  
   
-     こともできます[ ダイアログ ボックス エディターで編集するため既存のダイアログ ボックスを開く](../windows/viewing-and-editing-resources-in-a-resource-editor.md)です。  
+     できます[の編集 ダイアログ ボックスのエディターで既存のダイアログ ボックスを開く](../windows/viewing-and-editing-resources-in-a-resource-editor.md)します。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 詳細については、管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションは、次を参照してください。[グローバライズと .NET Framework アプリケーションのローカライズ](/dotnet/standard/globalization-localization/index)です。  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
   
- 要件  
-  
+## <a name="requirements"></a>要件  
  Win32  
   
 ## <a name="see-also"></a>関連項目  
  [方法: リソースの作成](../windows/how-to-create-a-resource.md)   
  [リソース ファイル (Visual Studio)](../windows/resource-files-visual-studio.md)   
  [ダイアログ エディター](../windows/dialog-editor.md)
-

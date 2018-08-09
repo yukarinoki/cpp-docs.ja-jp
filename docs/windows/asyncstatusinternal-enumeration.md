@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a68189c461453dc72585ff4034df5ba69bb41bd5
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: eeaef23178829163725b78685b3460913f53f2c2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464877"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652800"
 ---
 # <a name="asyncstatusinternal-enumeration"></a>AsyncStatusInternal 列挙型
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 enum AsyncStatusInternal;  
 ```  
   
@@ -37,20 +37,20 @@ enum AsyncStatusInternal;
  非同期操作の状態の内部列挙値の間のマッピングを指定します、`Windows::Foundation::AsyncStatus`列挙体。  
   
 ## <a name="members"></a>メンバー  
- *_Created*  
- 同じです:: Windows::Foundation::AsyncStatus:: 作成  
+ `_Created`  
+ `::Windows::Foundation::AsyncStatus::Created` と同じ意味です。  
   
- *_Started*  
- 同じです:: Windows::Foundation::AsyncStatus:: 開始  
+ `_Started`  
+ `::Windows::Foundation::AsyncStatus::Started` と同じ意味です。  
   
- *_Completed*  
- 同じです:: Windows::Foundation::AsyncStatus:: 完了  
+ `_Completed`  
+ `::Windows::Foundation::AsyncStatus::Completed` と同じ意味です。  
   
- *_Cancelled*  
- 同じです:: Windows::Foundation::AsyncStatus:: が取り消されました  
+ `_Cancelled`  
+ `::Windows::Foundation::AsyncStatus::Cancelled` と同じ意味です。  
   
- *エラー (_e)*  
- 同じです:: Windows::Foundation::AsyncStatus::Error  
+ `_Error`  
+ `::Windows::Foundation::AsyncStatus::Error` と同じ意味です。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** async.h  

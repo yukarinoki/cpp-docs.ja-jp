@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70a331bbbf34a623b02e9d8bc9aa0b80fbee2216
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 3b9fd147f0821e14e825b2a8c0e8d7ad35104fe9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467132"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653015"
 ---
 # <a name="creatormapactivationid-data-member"></a>CreatorMap::activationId データ メンバー
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 union {   
    const IID* clsid;  
    const wchar_t* (*getRuntimeName)();  
 } activationId;  
 ```  
   
-## <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *clsid*  
  インターフェイス ID。  
   

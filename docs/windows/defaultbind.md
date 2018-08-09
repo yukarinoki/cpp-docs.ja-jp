@@ -1,5 +1,5 @@
 ---
-title: defaultbind |Microsoft ドキュメント
+title: defaultbind |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a92d4a7b617b8963c3ffbd78638a7a97515d8509
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c9930fefabd6fb12aaad64f07c078e5e422d827
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871462"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644087"
 ---
 # <a name="defaultbind"></a>defaultbind
-1 つのバインド可能なプロパティ オブジェクトを最も良く表すものを示します。  
+オブジェクトを最もよく表す単一のバインド可能なプロパティを示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```cpp  
 [defaultbind]  
-  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **Defaultbind** C++ 属性と同じ機能を持つ、 [defaultbind](http://msdn.microsoft.com/library/windows/desktop/aa366790) MIDL 属性。  
   
 ## <a name="example"></a>例  
- 例を参照して[バインド可能な](../windows/bindable.md)の使用方法の例については**defaultbind**です。  
+ 例をご覧ください[バインド可能な](../windows/bindable.md)を使用する方法の例については**defaultbind**します。  
   
 ## <a name="requirements"></a>要件  
   
@@ -48,7 +46,7 @@ ms.locfileid: "33871462"
 |||  
 |-|-|  
 |**対象**|インターフェイス メソッド|  
-|**反復可能**|×|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

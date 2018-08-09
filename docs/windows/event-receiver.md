@@ -23,26 +23,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b13acb5d637b4a733f2a2b9c66c8ded977c7847
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 2b1b285437170c4059d5cd0d66d19188c99badd9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569935"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646787"
 ---
 # <a name="eventreceiver"></a>event_receiver
 イベント レシーバー (シンク) を作成します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 [ event_receiver(  
    type   
    [, layout_dependent=false]   
 ) ]  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *type*  
  次の値のいずれかの列挙です。  
   
@@ -50,13 +50,13 @@ ms.locfileid: "39569935"
   
 -   COM コード用の`com` 。 この値の場合、ユーザーが次のヘッダー ファイルを含める必要があります。  
   
-    ```  
+    ```cpp  
     #define _ATL_ATTRIBUTES  
     #include <atlbase.h>  
     #include <atlcom.h>  
     ```  
   
- **layout_dependent**  
+ *layout_dependent*  
  指定*layout_dependent*場合にのみ`type` = **com**します。 *layout_dependent*ブール値です。  
   
 -   **true**ことに、受信する必要がありますと正確に一致するが、フック イベント ソース、イベント、デリゲートのシグネチャを意味します。 イベント レシーバーのハンドラー名は、関連するイベント ソース インターフェイスで指定された名前と一致する必要があります。 使用する必要があります`coclass`とき*layout_dependent*は**true**します。 指定するより効率的です**true**します。  
@@ -81,7 +81,7 @@ ms.locfileid: "39569935"
 |-|-|  
 |**対象**|**クラス**、**構造体**|  
 |**反復可能**|いいえ|  
-|**必要な属性**|**コクラス**とき*layout_dependent*=**は true。**|  
+|**必要な属性**|`coclass` ときに*layout_dependent*=**は true。**|  
 |**無効な属性**|なし|  
   
  詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  

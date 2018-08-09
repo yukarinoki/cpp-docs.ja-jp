@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 21503e38bb612f935e26f6eaaa93df2097e10445
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 7e4866df2d948d02a53b2532b0832f161d07ff8c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465338"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647561"
 ---
 # <a name="comptr-class"></a>ComPtr クラス
 テンプレート パラメーターで指定されたインターフェイスを表す *スマート ポインター* 型を作成します。 **ComPtr**自動的に基になるインターフェイス ポインターの参照カウントを維持し、参照カウントが 0 になるインターフェイスを解放します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template <typename T>  
 class ComPtr;  
   
@@ -37,7 +37,7 @@ template<class T>
 friend class ComPtr;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *T*  
  インターフェイスを**ComPtr**を表します。  
   

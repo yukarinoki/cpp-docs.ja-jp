@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cd6cc88ba01d7cfc5d7d5712ddeaaef0418bb12a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: d79c371b98e0dd1091fc5db2280efdee3abbf6e9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462785"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646190"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
 ターゲット クラスの COM マップにインターフェイス エントリを追加します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 [ com_interface_entry(   
   com_interface_entry  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *com_interface_entry*  
  エントリの実際のテキストを含む文字列。 使用可能な値の一覧は、次を参照してください。 [COM_INTERFACE_ENTRY マクロ](../atl/reference/com-interface-entry-macros.md)します。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "39462785"
   
  この制限は、ATL は、id とインターフェイス マップに最初のエントリを使用するために必要な`IUnknown`。 したがって、エントリは有効なインターフェイスである必要があります。 たとえば、次のコード サンプルがインターフェイス マップの最初のエントリで、実際の COM インターフェイスが指定されていないため無効です。  
   
-```  
+```cpp  
 [ coclass, com_interface_entry =  
     "COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)"  
 ]  
@@ -100,7 +100,7 @@ class CMyClass: public IMyClass, public IDebugTest
   
  結果として得られる COM オブジェクト マップ`CMyBaseClass`のとおりです。  
   
-```  
+```cpp  
 BEGIN_COM_MAP(CMyClass)  
     COM_INTERFACE_ENTRY (IMyClass)  
     COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)  
@@ -119,7 +119,7 @@ END_COM_MAP()
 |-|-|  
 |**対象**|**クラス**、**構造体**|  
 |**反復可能**|[はい]|  
-|**必要な属性**|**coclass**、 **progid**、 **vi_progid**のうち 1 つ以上。|  
+|**必要な属性**|次のいずれかまたは: `coclass`、 `progid`、または`vi_progid`します。|  
 |**無効な属性**|なし|  
   
  属性コンテキストの詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  

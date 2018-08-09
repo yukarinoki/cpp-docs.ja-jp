@@ -1,5 +1,5 @@
 ---
-title: アクセラレータ テーブルのエントリの削除 |Microsoft ドキュメント
+title: アクセラレータ テーブルのエントリの削除 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 68f6c7e9383527e3ba77d87d6d08ce5a3e1bcc8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a8f3a72f8f9a71f54a997c4ba76d51aad6fb200a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880499"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648322"
 ---
 # <a name="deleting-an-entry-from-an-accelerator-table"></a>アクセラレータ テーブルのエントリの削除
 ### <a name="to-delete-an-entry-from-an-accelerator-table"></a>アクセラレータ テーブルのエントリを削除するには  
   
-1.  アイコンをダブルクリックして、アクセラレータ テーブルを開く[リソース ビュー](../windows/resource-view-window.md)です。  
+1.  アイコンをダブルクリックして、アクセラレータ テーブルを開く[リソース ビュー](../windows/resource-view-window.md)します。  
   
     > [!NOTE]
     >  プロジェクトに .rc ファイルがまだ含まれていない場合は、「 [リソース スクリプト ファイルの新規作成](../windows/how-to-create-a-resource-script-file.md)」を参照してください。  
   
-2.  削除するエントリを選択します (を押しながら、 **CTRL**または**shift キーを押し**ながらクリックすると複数のエントリを選択するキーです)。  
+2.  削除するエントリを選択します (を押しながら、 **Ctrl**または**Shift**を複数のエントリを選択しますクリックしてキー。)。  
   
-3.  右クリックし、選択**削除**、ショートカット メニューから (または選択**削除**から、**編集**メニュー)。  
+3.  右クリックし、**削除**、ショートカット メニューから (または選択**削除**から、**編集**メニュー)。  
   
  \- または -  
   
--   Del キーを押します。  
+-   キーを押して、**削除**キー。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。*  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。  
   
- **必要条件**  
-  
+## <a name="requirements"></a>要件  
  Win32  
   
 ## <a name="see-also"></a>関連項目  

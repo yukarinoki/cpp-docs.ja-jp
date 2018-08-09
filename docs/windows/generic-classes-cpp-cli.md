@@ -19,19 +19,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 751c7f9efe4f5db612419d5837cc2d6f304f43da
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: deeb40e54c0324874d9c99a42a98e7e852394dc4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570673"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643190"
 ---
 # <a name="generic-classes-ccli"></a>ジェネリック クラス (C++/CLI)
 ジェネリック クラスは、次の形式を使用して宣言されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 [attributes]  
 generic <class-key type-parameter-identifier(s)>  
 [constraint-clauses]  
@@ -45,7 +45,7 @@ class-body
 ## <a name="remarks"></a>Remarks  
  上記の構文では、次の用語が使用されます。  
   
- `attributes` (省略可能)  
+ *属性*(省略可能)  
  追加の宣言情報。 属性と属性クラスの詳細については、属性を参照してください。  
   
  *クラス キー*  
@@ -57,7 +57,7 @@ class-body
  *制約句*  
  リスト (コンマ区切りされません)**場所**句の型パラメーター制約を指定します。 形式をとります。  
   
- `where`  *型の識別子パラメーター*`:`*制約リスト*   `...`  
+ `where`  *型の識別子パラメーター*`:`*制約リスト*  `...`  
   
  *制約リスト*  
  *クラスまたはインターフェイス*[`,` *.*]  
@@ -429,7 +429,7 @@ ref struct Outer {
 };  
 ```  
   
- 外部型\<int >:: 内部でない外部の型と同じ\<double >:: 内部。  
+ 型`Outer<int>::Inner`型と同じではない`Outer<double>::Inner`します。  
   
  ジェネリック クラスのジェネリック メソッドと同様には、入れ子にされた型の追加の型パラメーターを定義することができます。 内側と外側のクラスで同じ型パラメーター名を使用する場合、内部の型パラメーターには、外側の型パラメーターが非表示になります。  
   
@@ -449,7 +449,7 @@ ref class Outer {
   
  外側の型パラメーターを参照する手段がないため、コンパイラによってこのような状況で警告が生成されます。  
   
- 構築された入れ子になったジェネリック型は名前がある場合に、内部の型が暗黙的に外側の型の型パラメーターでパラメーター化された場合でも外側の型の型パラメーターは、内部の型の型パラメーター リストに含まれません。 上記の場合、構築された型の名前になります Outer\<int >:: 内部\<文字列 >。  
+ 構築された入れ子になったジェネリック型は名前がある場合に、内部の型が暗黙的に外側の型の型パラメーターでパラメーター化された場合でも外側の型の型パラメーターは、内部の型の型パラメーター リストに含まれません。 上記のように構築された型の名前になります`Outer<int>::Inner<string>`します。  
   
  次の例では、ビルドと、ジェネリック クラスの入れ子にされた型を使用してリンクされたリストを読み取ってを示します。  
   
@@ -548,7 +548,7 @@ Reading nodes:
   
 -   プロパティ、イベント、インデクサー、演算子は、戻り値、パラメーター、または場合などのローカル変数として外側のジェネリック クラスの型パラメーターを使用できます`ItemType`クラスの型パラメーターです。  
   
-    ```  
+    ```cpp  
     public ItemType MyProperty {}  
     ```  
   

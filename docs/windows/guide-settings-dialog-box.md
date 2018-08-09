@@ -23,37 +23,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 265c6c1931b0e48399039e507be45c73c710142d
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 271a56881f2710a7fb7c18dadeb7c36d4d6a3232
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568892"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647997"
 ---
 # <a name="guide-settings-dialog-box"></a>[ガイドの設定] ダイアログ ボックス
 ## <a name="layout-guides"></a>レイアウト ガイド  
  レイアウト ガイドの設定を表示します。  
   
- **None**  
+### <a name="none"></a>なし  
   
  レイアウト ツールを非表示にします。  
   
- **ルーラーとガイド**  
+### <a name="rulers-and-guides"></a>ルーラーとガイド  
   
  有効な場合は、レイアウト ツールにルーラーを追加します。ガイドは、ルーラーに配置することができます。 既定のガイドは、余白は、ドラッグして移動することができます。 ガイドを配置するルーラーをクリックします。 ガイドの上または横に、コントロールが移動したときに「スナップ」を制御します。 これには、アタッチすると、コントロールは、ガイドにも移動します。 コントロールがそれぞれの側では、ガイドにアタッチされているし、ガイドを移動、コントロールのサイズします。  
   
- **グリッド**  
+### <a name="grid"></a>グリッド  
   
  レイアウト グリッドを作成します。 新しいコントロールがグリッドに自動的に整列します。  
   
 ## <a name="grid-spacing"></a>グリッド間隔  
  ダイアログ ボックスの単位 (Dlu) では、グリッドの間隔の設定を表示します。  
   
- **幅: Dlu**  
+### <a name="width-dlus"></a>幅: Dlu  
   
  Dlu でレイアウト グリッドの幅を設定します。 水平 DLU は、4、ダイアログ ボックスのフォントの平均幅です。  
   
- **Height: Dlu**  
+### <a name="height-dlus"></a>Height: Dlu 
   
  Dlu でレイアウト グリッドの高さを設定します。 垂直 DLU は 8 で割った値 ダイアログ ボックスのフォントの高さの平均値です。  
   

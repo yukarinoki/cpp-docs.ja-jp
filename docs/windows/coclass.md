@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99a8924776249a3a919a03ca76b4562c39994d4f
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 2043ca568f36d7fc0eaaffbf940cabb423de5620
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463118"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647841"
 ---
 # <a name="coclass"></a>coclass
 COM インターフェイスを実装できる COM オブジェクトを作成します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 [coclass]  
 ```  
   
@@ -78,7 +78,7 @@ COM インターフェイスを実装できる COM オブジェクトを作成�
   
 -   [OBJECT_ENTRY_AUTO](../atl/reference/object-map-macros.md#object_entry_auto)マクロは、COM マップに挿入されます。
   
- クラスの .idl ファイル内に生成されるコクラスの名前は、クラスと同じ名前になります。  例では、次の例を参照して、MIDL によって生成されたヘッダー ファイルを使用して、クライアントで CMyClass、コクラスのクラス ID へのアクセスに CLSID_CMyClass を使用します。  
+ クラスの .idl ファイル内に生成されるコクラスの名前は、クラスと同じ名前になります。  たとえばとをコクラスのクラス ID へのアクセスに、次の例を参照する`CMyClass`、MIDL によって生成されたヘッダー ファイルをクライアントでは、次のように使用します。`CLSID_CMyClass`します。  
   
 ## <a name="example"></a>例  
  次のコードを使用する方法を示しています、**コクラス**属性。  
@@ -99,7 +99,7 @@ appobject, uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")]
 class CMyClass : public I {};  
 ```  
   
- 次の例は、によって挿入されたコードに表示される関数の既定の実装をオーバーライドする方法を示します、**コクラス**属性。 挿入されたコードを参照する方法の詳細については、「 [/Fx](../build/reference/fx-merge-injected-code.md) 」を参照してください。 すべての基底クラスまたはクラスを使用するインターフェイスは、挿入されたコードに表示されます。   さらに、クラスが挿入されたコードで既定で含まれている、明示的に指定するクラスをベースとして、コクラスの場合は、属性プロバイダーは、コードで指定された形式を使用します。  
+ 次の例は、によって挿入されたコードに表示される関数の既定の実装をオーバーライドする方法を示します、**コクラス**属性。 挿入されたコードを参照する方法の詳細については、「 [/Fx](../build/reference/fx-merge-injected-code.md) 」を参照してください。 すべての基底クラスまたはクラスを使用するインターフェイスは、挿入されたコードに表示されます。 さらに、クラスが挿入されたコードで既定で含まれている、明示的に指定するクラスをベースとして、コクラスの場合は、属性プロバイダーは、コードで指定された形式を使用します。  
   
 ```cpp  
 // cpp_attr_ref_coclass2.cpp  

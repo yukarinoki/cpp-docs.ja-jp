@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f80c7e758b282c0a1976d490483c397eca43b5f5
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 0bb6b6be87736d55eabc6b487101ec68fc16e378
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568629"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646141"
 ---
 # <a name="ftmbasedisconnectobject-method"></a>FtmBase::DisconnectObject メソッド
 オブジェクトへのすべての外部接続が強制的に解放します。 オブジェクトのサーバーでは、シャット ダウンする前に、このメソッドのオブジェクトの実装を呼び出します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 STDMETHODIMP DisconnectObject(  
    __in DWORD dwReserved  
 ) override;  

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 107d721e4603fc1f22a5ff793a867b290472f10c
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 6b3ee48394eede37873ce074c275290307215815
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570403"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649137"
 ---
 # <a name="event--c-component-extensions"></a>event (C++ コンポーネント拡張)
 **イベント**キーワードで宣言した、*イベント*、これは、登録されているサブスクライバーへの通知 (*イベント ハンドラー*) 重要な事態が発生したことです。  
@@ -31,9 +31,9 @@ ms.locfileid: "39570403"
 ## <a name="all-runtimes"></a>すべてのランタイム  
  C +/cli CX 宣言をサポートする、*イベント メンバー*または*イベント ブロック*します。 イベント メンバーは、イベント ブロックを宣言する簡単な表記法です。 既定ではイベント メンバーは、イベント ブロックで明示的に宣言される、`add()` 関数、`remove()` 関数、および `raise()` 関数を宣言します。 イベント メンバーの関数をカスタマイズするには、イベント ブロックを宣言した後で必要な関数をオーバーライドします。  
   
- **構文**  
+### <a name="syntax"></a>構文
   
-```  
+```cpp  
 // event data member  
 modifiereventdelegate^ event_name;     
   
@@ -46,8 +46,7 @@ modifiereventdelegate^ event_name
 }  
 ```  
   
- **パラメーター**  
-  
+### <a name="parameters"></a>パラメーター
  *修飾子*  
  イベントの宣言またはイベントのアクセサー メソッドで使用できる修飾子。  指定できる値は**静的**と**仮想**します。  
   
@@ -63,7 +62,7 @@ modifiereventdelegate^ event_name
  *パラメーター*  
  (省略可能)パラメーターを`raise`のシグネチャに一致するメソッド、*委任*パラメーター。  
   
- **解説**  
+### <a name="remarks"></a>Remarks
   
  イベントとは、イベントのトリガーに応答する、デリゲートとメンバー関数 (イベント ハンドラー) の間の関連付けです。イベントによって、任意のクラスのクライアントが、基になるデリゲートのシグネチャおよび戻り値の型に準拠したメソッドを登録できます。  
   
@@ -87,14 +86,14 @@ modifiereventdelegate^ event_name
  イベント ハンドラーを追加した後で削除する場合は、追加操作で返される EventRegistrationToken 構造体を保存する必要があります。 その後の削除操作で、削除するイベント ハンドラーを識別するために、保存しておいた EventRegistrationToken 構造体を使用します。  
   
 ### <a name="requirements"></a>要件  
- コンパイラ オプション: **/ZW**  
+ コンパイラ オプション: `/ZW`  
   
 ## <a name="common-language-runtime"></a>共通言語ランタイム 
  **イベント**キーワードでは、イベントを宣言することができます。 イベントは、何か重要なことが起きたときにクラスで通知するための手段です。  
   
- **構文**  
+### <a name="syntax"></a>構文
   
-```  
+```cpp  
 // event data member  
 modifiereventdelegate^ event_name;   
   
@@ -107,8 +106,7 @@ modifiereventdelegate^ event_name
 }  
 ```  
   
- **パラメーター**  
-  
+### <a name="parameters"></a>パラメーター
  *修飾子*  
  イベントの宣言またはイベントのアクセサー メソッドで使用できる修飾子。  指定できる値は**静的**と**仮想**します。  
   
@@ -124,8 +122,7 @@ modifiereventdelegate^ event_name
  *パラメーター*  
  (省略可能)パラメーターを`raise`のシグネチャに一致するメソッド、*委任*パラメーター。  
   
- **解説**  
-  
+### <a name="remarks"></a>Remarks
  イベントとは、イベントのトリガーに応答する、デリゲートとメンバー関数 (イベント ハンドラー) の間の関連付けです。イベントによって、任意のクラスのクライアントが、基になるデリゲートのシグネチャおよび戻り値の型に準拠したメソッドを登録できます。  
   
  デリゲートには、イベントが発生したことをコードによって示すときに呼び出されるメソッドを 1 つ以上関連付けることができます。 プログラム内のイベントを、.NET Framework 共通言語ランタイムを対象とする他のプログラムで使用できるようにすることができます。  
@@ -171,11 +168,10 @@ modifiereventdelegate^ event_name
 -   [インターフェイス内のイベント](../dotnet/how-to-use-events-in-cpp-cli.md)  
   
 ### <a name="requirements"></a>要件  
- コンパイラ オプション: **/clr**  
+ コンパイラ オプション: `/clr`  
   
 ### <a name="examples"></a>使用例  
- **例**  
-  
+
  次のコード例では、デリゲート、イベント、およびイベント ハンドラーのペアを宣言します。次に、イベント ハンドラーをサブスクライブ (追加) し、そのイベント ハンドラーを呼び出した後、サブスクライブ解除 (削除) します。  
   
 ```cpp  
@@ -229,15 +225,11 @@ int main() {
 }  
 ```  
   
- **出力**  
-  
 ```Output  
 OnClick: 7, 3.14159  
   
 OnDblClick: Hello  
 ```  
-  
- **例**  
   
  次のコード例では、単純なイベントの `raise` メソッドを生成するために使用するロジックを示しています。イベントに 1 つ以上のサブスクライバーがある場合、`raise` メソッドを呼び出すと、暗黙的または明示的にデリゲートが呼び出されます。 型でない場合は、デリゲートの戻り値**void**し、なおかつイベント サブスクライバーがある場合、`raise`メソッドはデリゲート型の既定値を返します。 イベント サブスクライバーが存在しない場合に `raise` メソッドを呼び出すと、単純に返されるだけで、例外は発生しません。 デリゲートの戻り値型でない場合**void**デリゲート型が返されます。  
   
@@ -272,8 +264,6 @@ int main() {
    Console::WriteLine(c.i);     
 }  
 ```  
-  
- **出力**  
   
 ```Output  
 0  

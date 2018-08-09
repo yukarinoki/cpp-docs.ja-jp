@@ -1,5 +1,5 @@
 ---
-title: Weakref::copyto メソッド |Microsoft ドキュメント
+title: Weakref::copyto メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 817d984e995e7ac33ba80f978a282a8c0bac3e4f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 90756dc8ff515a8c956778bf8c6392332a8f9ca9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890636"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652748"
 ---
 # <a name="weakrefcopyto-method"></a>WeakRef::CopyTo メソッド
 使用可能なインターフェイスへのポインターがあるなら、指定されたポインター変数にそれを割り当てます。  
@@ -45,23 +45,23 @@ HRESULT CopyTo(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `U`  
- IInspectable インターフェイスへのポインター。 `U` が IInspectable から派生していない場合、エラーが発生します。  
+### <a name="parameters"></a>パラメーター  
+ *U*  
+ ポインター、`IInspectable`インターフェイス。 場合は、エラーが出力*U*から派生していない`IInspectable`します。  
   
- `riid`  
- インターフェイス ID。 場合、エラーが発生`riid`から派生していない**IWeakReference**です。  
+ *riid*  
+ インターフェイス ID。 場合は、エラーが出力*riid*から派生していない`IWeakReference`します。  
   
- `ptr`  
- IInspectable または IWeakReference への二重間接ポインター。  
+ *ptr*  
+ 二重間接ポインター`IInspectable`または`IWeakReference`します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合は S_OK、そうでない場合は失敗を示す HRESULT。 詳細については、「解説」を参照してください。  
+ 成功した場合は S_OK、そうでない場合は失敗を示す HRESULT。 詳細については、「**解説**」をご覧ください。  
   
-## <a name="remarks"></a>コメント  
- S_OK の戻り値はこの操作が成功したことを示しますが、弱い参照が強い参照に解決されたかどうかは示していません。 S_OK が返される場合は、そのパラメーター `p` が強力な参照であること、つまりパラメーター `p` が `nullptr`と等しくないことをテストします。  
+## <a name="remarks"></a>Remarks  
+ S_OK の戻り値はこの操作が成功したことを示しますが、弱い参照が強い参照に解決されたかどうかは示していません。 S_OK が返された場合は、そのパラメーターをテスト*p*が強力な参照、つまりパラメーター *p*と等しくない**nullptr**します。  
   
- Windows 10 SDK 以降では、弱い参照を取得できなかった場合、このメソッドは WeakRef インスタンスを `nullptr` に設定しません。このため、WeakRef が `nullptr`かどうかを確認するエラー チェック コードは避けてください。 代わりに、確認`ptr`の`nullptr`します。  
+ 以降、Windows 10 SDK では、このメソッドが設定されていない、 **WeakRef**インスタンス**nullptr**場合は、弱い参照を取得できませんでした、避けての WeakRef を確認するエラー チェック コード**nullptr**します。 代わりに、チェック*ptr*の**nullptr**します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** client.h  
