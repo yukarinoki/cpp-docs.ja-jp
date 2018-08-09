@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7706a16a860cf554068dd3416e7c1f8b1fcea311
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 126133c5e542414f1fb38635e1cb14314bc55d52
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608775"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020396"
 ---
 # <a name="runtimeclassgetruntimeclassname-method"></a>RuntimeClass::GetRuntimeClassName メソッド
 
@@ -37,7 +37,6 @@ STDMETHOD( GetRuntimeClassName )(
 ```
 
 ### <a name="parameters"></a>パラメーター
-
 *runtimeName*  
 この操作の完了時、ランタイム クラス名。
 
@@ -47,7 +46,7 @@ STDMETHOD( GetRuntimeClassName )(
 
 ## <a name="remarks"></a>Remarks
 
-場合は、アサート エラーが出力&#95; &#95;WRL_STRICT&#95; &#95;または&#95; &#95;WRL_FORCE_INSPECTABLE_CLASS_MACRO&#95; &#95;が定義されていません。
+場合は、アサート エラーが出力`__WRL_STRICT__`または`__WRL_FORCE_INSPECTABLE_CLASS_MACRO__`が定義されていません。
 
 ## <a name="requirements"></a>要件
 
