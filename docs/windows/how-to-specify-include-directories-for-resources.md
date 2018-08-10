@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db09d29f0049152f734ada8a78c510e4424d8dd3
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b7444ccf4f3a03036a5363024d0794f67b6a1ad6
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569541"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018859"
 ---
 # <a name="how-to-specify-include-directories-for-resources"></a>方法: リソースのインクルード ディレクトリを指定する
 ### <a name="to-specify-include-directories-for-a-specific-rc-file"></a>特定の .rc ファイルのインクルード ディレクトリを指定するには  
@@ -34,7 +34,6 @@ ms.locfileid: "39569541"
  マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で .NET Framework 開発者ガイド。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列をプロパティに割り当てる方法については、次を参照してください[チュートリアル: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
 ## <a name="requirements"></a>要件  
-  
  Win32  
   
 ## <a name="see-also"></a>関連項目  
