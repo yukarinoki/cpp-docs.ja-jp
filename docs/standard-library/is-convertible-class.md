@@ -37,7 +37,7 @@ struct is_convertible;
 
 ### <a name="parameters"></a>パラメーター
 
-** から変換先の型。
+*From*から変換先の型。
 
 *Ty*変換後の型。
 

@@ -85,7 +85,7 @@ basic_istream<Allocator, Traits>& getline(
 
 ### <a name="parameters"></a>パラメーター
 
-** 文字列の抽出元の入力ストリーム。
+*is*文字列の抽出元の入力ストリーム。
 
 *str*先は、文字のストリームから読み取った入力文字列。
 
