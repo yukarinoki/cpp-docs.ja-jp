@@ -21,7 +21,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 06/04/2018
 ms.locfileid: "33339567"
 ---
-# <a name="names-add-property-wizard"></a>[名前] (プロパティの追加ウィザード)
+# <a name="names-add-property-wizard"></a>[名前]\(プロパティの追加ウィザード)
 このウィザードを使用して、インターフェイスにプロパティを追加します。  
   
  **プロパティの型**  

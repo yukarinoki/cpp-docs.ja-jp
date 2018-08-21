@@ -2078,17 +2078,17 @@ Visual C++ コンパイラでは、ARM アーキテクチャ上で次の組み�
 |__isb|ISB|void __isb(unsigned int _Type)<br /><br /> 命令ストリームにメモリ バリア操作を挿入します。 パラメーター `_Type` で、バリアによって適用される制限の種類を指定します。<br /><br /> 適用できる制限の種類の詳細については、次を参照してください。[メモリ バリアの制限](#BarrierRestrictions)します。|  
 |__emit||void __emit(unsigned \__int32 opcode)<br /><br /> コンパイラから出力される命令ストリームに、指定された命令を挿入します。<br /><br /> `opcode` の値は、コンパイル時に既知の定数式である必要があります。 命令語のサイズは 16 ビットであり、`opcode` の最上位 16 ビットは無視されます。<br /><br /> コンパイラは `opcode` の内容を解釈しようとせず、挿入された命令を実行する前の CPU またはメモリの状態は保証されません。<br /><br /> コンパイラは、挿入された命令を実行した後に CPU とメモリの状態が変更されていないことを前提としています。 したがって、状態を変更する命令は、コンパイラにより生成される通常のコードに好ましくない影響を与えることがあります。<br /><br /> このため、`emit` を使用するのは、コンパイラが正常に処理できない CPU の状態 (コプロセッサの状態など) に影響を与える命令を挿入する場合か、次を使用して宣言されている関数を実装する場合のみとします。`declspec(naked)`|  
 |__hvc|HVC|unsigned int __hvc(unsigned int, ...)|  
-|__iso_volatile_load16||_ _int16 \__iso_volatile_load16 (const volatile \__ _int16 \*)<br /><br /> 詳細については、次を参照してください。 [_ _iso_volatile_load/store](#IsoVolatileLoadStore)します。|  
-|__iso_volatile_load32||_ _int32 \__iso_volatile_load32 (const volatile \__ _int32 \*)<br /><br /> 詳細については、次を参照してください。 [_ _iso_volatile_load/store](#IsoVolatileLoadStore)します。|  
-|__iso_volatile_load64||_ _int64 \__iso_volatile_load64 (const volatile \__ _int64 \*)<br /><br /> 詳細については、次を参照してください。 [_ _iso_volatile_load/store](#IsoVolatileLoadStore)します。|  
-|__iso_volatile_load8||_ _int8 \__iso_volatile_load8 (const volatile \__int8 \*)<br /><br /> 詳細については、次を参照してください。 [_ _iso_volatile_load/store](#IsoVolatileLoadStore)します。|  
-|__iso_volatile_store16||void __iso_volatile_store16 (volatile \__ _int16 \*、 \__ _int16)<br /><br /> 詳細については、次を参照してください。 [_ _iso_volatile_load/store](#IsoVolatileLoadStore)します。|  
-|__iso_volatile_store32||void __iso_volatile_store32 (volatile \__ _int32 \*、 \__ _int32)<br /><br /> 詳細については、次を参照してください。 [_ _iso_volatile_load/store](#IsoVolatileLoadStore)します。|  
-|__iso_volatile_store64||void __iso_volatile_store64 (volatile \__ _int64 \*、 \__ _int64)<br /><br /> 詳細については、次を参照してください。 [_ _iso_volatile_load/store](#IsoVolatileLoadStore)します。|  
-|__iso_volatile_store8||void __iso_volatile_store8 (volatile \__int8 \*、 \__int8)<br /><br /> 詳細については、次を参照してください。 [_ _iso_volatile_load/store](#IsoVolatileLoadStore)します。|  
-|__ldrexd|LDREXD|_ _int64 \__ldrexd (const volatile \__ _int64 \*)|  
-|__prefetch|PLD|void _ _cdecl \__prefetch (const void \*)<br /><br /> 指定したアドレス、またはその付近のアドレスのメモリに間もなくアクセスする可能性があるという `PLD` メモリ ヒントをシステムに提供します。 システムによっては、実行時のパフォーマンスを向上させるために、そのメモリへのアクセス パターンを最適化する場合があります。 ただし、C++ 言語側からすると、この関数には目に見える効果がなく、何も実行しないことがあります。|  
-|__rdpmccntr64||符号なし _ _int64 \__rdpmccntr64(void)|  
+|__iso_volatile_load16||__int16 \__iso_volatile_load16(const volatile \__int16 \*)<br /><br /> 詳細については、次を参照してください。 [__iso_volatile_load/store](#IsoVolatileLoadStore) します。|  
+|__iso_volatile_load32||__int32 \__iso_volatile_load32(const volatile \__int32 \*)<br /><br /> 詳細については、次を参照してください。 [__iso_volatile_load/store](#IsoVolatileLoadStore) します。|  
+|__iso_volatile_load64||__int64 \__iso_volatile_load64(const volatile \__int64 \*)<br /><br /> 詳細については、次を参照してください。 [__iso_volatile_load/store](#IsoVolatileLoadStore) します。|  
+|__iso_volatile_load8||__int8 \__iso_volatile_load8(const volatile \__int8 \*)<br /><br /> 詳細については、次を参照してください。 [__iso_volatile_load/store](#IsoVolatileLoadStore) します。|  
+|__iso_volatile_store16||void __iso_volatile_store16(volatile \__int16 \*、\__int16)<br /><br /> 詳細については、次を参照してください。 [__iso_volatile_load/store](#IsoVolatileLoadStore) します。|  
+|__iso_volatile_store32||void __iso_volatile_store32(volatile \__int32 \*、 \__int32)<br /><br /> 詳細については、次を参照してください。 [__iso_volatile_load/store](#IsoVolatileLoadStore) します。|  
+|__iso_volatile_store64||void __iso_volatile_store64(volatile \__int64 \*、 \__int64)<br /><br /> 詳細については、次を参照してください。 [__iso_volatile_load/store](#IsoVolatileLoadStore) します。|  
+|__iso_volatile_store8||void __iso_volatile_store8(volatile \__int8 \*、 \__int8)<br /><br /> 詳細については、次を参照してください。 [__iso_volatile_load/store](#IsoVolatileLoadStore) します。|  
+|__ldrexd|LDREXD|__int64 \__ldrexd(const volatile \__int64 \*)|  
+|__prefetch|PLD|void __cdecl \__prefetch(const void \*)<br /><br /> 指定したアドレス、またはその付近のアドレスのメモリに間もなくアクセスする可能性があるという `PLD` メモリ ヒントをシステムに提供します。 システムによっては、実行時のパフォーマンスを向上させるために、そのメモリへのアクセス パターンを最適化する場合があります。 ただし、C++ 言語側からすると、この関数には目に見える効果がなく、何も実行しないことがあります。|  
+|__rdpmccntr64||符号なし __int64 \__rdpmccntr64(void)|  
 |__sev|SEV|void __sev(void)|  
 |__static_assert||void __static_assert (int, const char \*)|  
 |__swi|SVC|unsigned int __swi(unsigned int, ...)|  

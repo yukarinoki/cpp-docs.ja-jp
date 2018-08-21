@@ -1,4 +1,4 @@
----
+﻿---
 title: _ _rdtscp |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
@@ -20,7 +20,7 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 0d890afe9e19782f19442e8d95709b91a8680278
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
 ms.locfileid: "33329804"
@@ -54,7 +54,7 @@ unsigned __int64 __rdtscp(
  **ヘッダー ファイル** \<intrin.h >  
   
 ## <a name="remarks"></a>コメント  
- この組み込み関数は`rdtscp`命令を生成します。 この命令のハードウェア サポートを確認するには、組み込み関数`__cpuid`を`InfoType=0x80000001`として呼び出し、`CPUInfo[3] (EDX)`の 27 ビット目を確認してください。命令がサポートされていればこのビットは 1 となり、サポートされていなければ 0 となります。`rdtscp`命令が搭載されていないハードウェア上でこの組み込み関数を呼び出した場合、その結果は保証されません。  
+ この組み込み関数は`rdtscp`命令を生成します。 この命令のハードウェア サポートを確認するには、組み込み関数`__cpuid`を`InfoType=0x80000001`として呼び出し、`CPUInfo[3] (EDX)`の 27 ビット目を確認してください。 命令がサポートされていればこのビットは 1 となり、サポートされていなければ 0 となります。  `rdtscp`命令が搭載されていないハードウェア上でこの組み込み関数を呼び出した場合、その結果は保証されません。  
   
 > [!CAUTION]
 >  `rdtsc`とは異なり、`rdtscp`はシリアル化する命令です。ただし、コンパイラはこの組み込み命令を移動することがあります。  
