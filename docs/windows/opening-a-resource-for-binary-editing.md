@@ -1,5 +1,5 @@
 ---
-title: バイナリ編集するリソースのオープン |Microsoft ドキュメント
+title: バイナリ編集するリソースを開く |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c09cd825a5974422eaf757419f4ce890f5123100
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 26d1b0ae8923835b0ce06c7312fa185693c6586e
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878487"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014508"
 ---
 # <a name="opening-a-resource-for-binary-editing"></a>バイナリ編集するリソースのオープン
 ### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>バイナリ編集用に Windows デスクトップ リソースを開くには  
@@ -36,21 +36,22 @@ ms.locfileid: "33878487"
 2.  リソースを右クリックし、ショートカット メニューから **[バイナリー データを開く]** をクリックします。  
   
     > [!NOTE]
-    >  [リソース ビュー](../windows/resource-view-window.md) ウィンドウを使用して Visual Studio で認識されない書式のリソースを開く場合 (RCDATA やカスタム リソースなど)、リソースは自動的にバイナリ エディターで開かれます。  
+    >  使用する場合、[リソース ビュー](../windows/resource-view-window.md)で Visual Studio が認識しないこと (RCDATA やカスタム リソース) など、リソースの形式でリソースを開くウィンドウが自動的に開きます、**バイナリ**エディター。  
   
-### <a name="to-open-a-managed-resource-for-binary-editing"></a>バイナリ編集の対象となるマネージ リソースを開くには  
+### <a name="to-open-a-managed-resource-for-binary-editing"></a>バイナリ編集の対象となるマネージド リソースを開くには  
   
-1.  ソリューション エクスプローラーで、編集の対象となる特定のリソース ファイルを選択します。  
+1.  **ソリューション エクスプ ローラー**、編集する特定のリソース ファイルを選択します。  
   
 2.  リソースを右クリックして、ショートカット メニューから **[プログラムから開く]** を選択します。  
   
 3.  **[プログラムから開く]** ダイアログ ボックスで、 **バイナリ エディター**を選択します。  
   
     > [!NOTE]
-    >  [イメージ エディター](../windows/image-editor-for-icons.md) と [バイナリ エディター](binary-editor.md) を使用して、マネージ プロジェクトのリソース ファイルを操作できます。 編集の対象となるマネージ リソースは、リンク リソースである必要があります。 Visual Studio のリソース エディターでは、埋め込みリソースの編集はサポートしていません。  
+    >  
+  [イメージ エディター](../windows/image-editor-for-icons.md) と [バイナリ エディター](binary-editor.md) を使用して、マネージド プロジェクトのリソース ファイルを操作できます。 編集の対象となるマネージド リソースは、リンク リソースである必要があります。 Visual Studio のリソース エディターでは、埋め込みリソースの編集はサポートしていません。  
   
     > [!NOTE]
-    >  マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 詳細については、管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションは、次を参照してください。[グローバライズと .NET Framework アプリケーションのローカライズ](/dotnet/standard/globalization-localization/index)です。   
+    >  マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。   
   
  ![バイナリ エディター](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")  
 バイナリ エディターに表示されるダイアログ ボックスのバイナリ データ  
@@ -58,12 +59,10 @@ ms.locfileid: "33878487"
  バイナリ エディターでは、特定の ASCII 値のみが表されます (0x20 ～ 0x7E)。 拡張文字は、バイナリ エディターの ASCII 値セクション (右側のパネル) にピリオドで表示されます。 "印刷可能" な文字は、ASCII 値の 32 ～ 126 です。  
   
 > [!NOTE]
->  別のエディター ウィンドウで既に編集中のリソースに対してバイナリ エディターを使用する場合、他のエディター ウィンドウをまず閉じてください。  
+>  使用する場合、**バイナリ**別のエディター ウィンドウで既に編集中のリソース エディターが最初に他のエディター ウィンドウを閉じます。  
   
- **必要条件**  
-  
+## <a name="requirements"></a>要件  
  なし  
   
 ## <a name="see-also"></a>関連項目  
  [Binary Editor](binary-editor.md)
-

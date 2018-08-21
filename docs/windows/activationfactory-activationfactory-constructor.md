@@ -1,5 +1,5 @@
 ---
-title: Activationfactory::activationfactory コンス トラクター |Microsoft ドキュメント
+title: Activationfactory::activationfactory コンス トラクター |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4a28ec3d12790c4315a517afde1770ecda78c4b0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 54435a5035c101f5d868e9a5e831a7ba31fba1ee
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854939"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646469"
 ---
 # <a name="activationfactoryactivationfactory-constructor"></a>ActivationFactory::ActivationFactory コンストラクター
-ActivationFactory クラスを初期化します。  
+初期化します、 **ActivationFactory**クラス。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 ActivationFactory();  
 ```  
   

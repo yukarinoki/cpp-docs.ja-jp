@@ -1,5 +1,5 @@
 ---
-title: Srwlock::srwlock _ データ メンバー |Microsoft ドキュメント
+title: Srwlock::srwlock _ データ メンバー |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 77b6d10e4343fd17c8bd65e232d29923214eff0c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cffbcde4196f37bd97dac0f67ecefa6615d6b2ba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889109"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014927"
 ---
 # <a name="srwlocksrwlock-data-member"></a>SRWLock::SRWLock_ データ メンバー
-現在の SRWLock オブジェクトの基になるロック変数が含まれています。  
+現在の基になるロック変数が含まれる**SRWLock**オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 SRWLOCK SRWLock_;  
 ```  
   

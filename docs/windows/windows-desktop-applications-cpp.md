@@ -1,5 +1,5 @@
 ---
-title: Windows デスクトップ アプリケーション (C++) |Microsoft ドキュメント
+title: Windows デスクトップ アプリケーション (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,20 +20,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9e24921a2a33ab31a9a5e6b7c3a33dbfec6c47e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f78fa02b991fbdf7c18457a8018ea46b0c240585
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890711"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647958"
 ---
 # <a name="windows-desktop-applications-c"></a>Windows デスクトップ アプリケーション (C++)
 このセクションでは、ウィンドウで実行する C++ デスクトップ アプリケーションを作成する方法について説明します。  
+
 > [!TIP]  
-> Windows 10 用 Microsoft ストアを介して展開用の既存のデスクトップ アプリケーションをパッケージ化するのに、デスクトップ アプリを実行するコンバーターを使用できます。 詳しくは、「[Using Visual C++ Runtime in Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project)」(Centennial プロジェクトでの Visual C++ ランタイムの使用) および「[Bring your desktop app to the Universal Windows Platform (UWP) with the Desktop Bridge](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root)」(Desktop Bridge でデスクトップ アプリをユニバーサル Windows プラットフォーム (UWP) 対応にする) をご覧ください。
+> Windows 10 での Microsoft Store での展開、既存のデスクトップ アプリケーションをパッケージ化するのに、Desktop App Converter を使用できます。 詳しくは、「[Using Visual C++ Runtime in Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project)」(Centennial プロジェクトでの Visual C++ ランタイムの使用) および「[Bring your desktop app to the Universal Windows Platform (UWP) with the Desktop Bridge](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-root)」(Desktop Bridge でデスクトップ アプリをユニバーサル Windows プラットフォーム (UWP) 対応にする) をご覧ください。
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- これらのトピックでは、C++ 言語の基本を理解することを前提としています。  
+ これらのトピックは、C++ 言語の基本を理解していることを前提としています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -47,4 +48,3 @@ ms.locfileid: "33890711"
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio での visual C](../visual-cpp-in-visual-studio.md)
-

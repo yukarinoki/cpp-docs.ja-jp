@@ -1,5 +1,5 @@
 ---
-title: 代入演算子 |Microsoft ドキュメント
+title: 代入演算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/05/2018
 ms.technology:
@@ -43,11 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4318d7913b180c3fbadcf9d655e402c9b0ad7ccc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: dd26c8b9fd044c9f6372ef0a680fbc770620e43d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408987"
 ---
 # <a name="assignment-operators"></a>代入演算子
 ## <a name="syntax"></a>構文  
@@ -58,14 +59,14 @@ assignment-operator : one of
    =   *=   /=   %=   +=   -=   <<=   >>=   &=   ^=   |=  &&=
 ```  
   
-## <a name="remarks"></a>コメント  
- 代入演算子は、左側のオペランドによって指定されたオブジェクトに値を格納します。 割り当て操作の 3 種類あります。 
+## <a name="remarks"></a>Remarks  
+ 代入演算子は、左側のオペランドによって指定されたオブジェクトに値を格納します。 割り当て操作の 3 つの種類があります。 
 
-1. 2 番目のオペランドの値が 1 番目のオペランドで指定されたオブジェクトに格納されている単純な代入です。 1. 結果を保存する前に、算術、シフト、またはビットごとの演算が実行される複合代入。
-1. どのリソースをコピーすることがなく転送内 (クラス型) の割り当てを移動します。
+1. 2 番目のオペランドの値が最初のオペランドで指定されたオブジェクトに格納されている単純な代入です。 1. 結果を保存する前に、算術演算、shift キー、またはビットごとの演算が実行される複合代入。
+1. どのリソースをコピーすることがなく転送では、(クラス型) の割り当てを移動します。
 
 
-次の表に、すべての代入演算子を除く、=、(& a) (& a) = 演算子は、複合代入演算子。  
+次の表に、すべての代入演算子は except =、& & = 演算子は、複合代入演算子。  
   
 ### <a name="assignment-operators"></a>代入演算子  
   
@@ -82,7 +83,7 @@ assignment-operator : one of
 |**&=**|1 番目と 2 番目のオペランドのビットごとの AND を取得します。結果を 1 番目のオペランドで指定されたオブジェクトに格納します。|  
 |**^=**|1 番目と 2 番目のオペランドのビットごとの排他的 OR を取得します。結果を 1 番目のオペランドで指定されたオブジェクトに格納します。|  
 |**\|=**|1 番目と 2 番目のオペランドのビットごとの包括的 OR を取得します。結果を 1 番目のオペランドで指定されたオブジェクトに格納します。|
-|**&&=**| 移動代入演算子 (クラス型の場合のみ) です。 2 番目のオペランドが右辺値の場合に、コピーせずに)、そのリソースを 1 番目のオペランドに移動します。 参照してください[移動コンス トラクターと移動代入演算子](move-constructors-and-move-assignment-operators-cpp.md)詳細についてはします。|
+|**&&=**| 移動代入演算子 (クラス型の場合のみ) です。 2 番目のオペランドが右辺値の場合に、(コピー) せず、そのリソースを最初のオペランドに移動します。 参照してください[移動コンス トラクターと移動代入演算子](move-constructors-and-move-assignment-operators-cpp.md)詳細についてはします。|
   
  **演算子のキーワード**  
   
@@ -94,11 +95,11 @@ assignment-operator : one of
 |**\|=**|`or_eq`|  
 |**^=**|`xor_eq`|  
   
- プログラムでこれらの演算子キーワードにアクセスする 2 つの方法があります: ヘッダー ファイルをインクルード`iso646.h`、コンパイル時に、または、 [/Za](../build/reference/za-ze-disable-language-extensions.md) (言語の拡張機能を無効にする) コンパイラ オプション。  
+ プログラムでこれらの演算子キーワードにアクセスする 2 つの方法があります: ヘッダー ファイルをインクルード`iso646.h`を使用してコンパイル、 [/Za](../build/reference/za-ze-disable-language-extensions.md) (言語拡張を無効にする) コンパイラ オプション。  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp 
 // expre_Assignment_Operators.cpp  
 // compile with: /EHsc  
 // Demonstrate assignment operators  
@@ -129,7 +130,7 @@ int main() {
   
  特定の基底クラスからの任意の明確な派生クラスのオブジェクトは、その基底クラスのオブジェクトに代入できます。 派生クラスから基底クラスへの暗黙の変換は存在しますが、基底クラスから派生クラスへの暗黙の変換は存在しないため、逆は当てはまりません。 例えば:  
   
-```  
+```cpp 
 // expre_SimpleAssignment.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -160,14 +161,14 @@ int main()
   
  クラス型オブジェクトでは、代入は初期化とは異なります。 代入と初期化がどのように異なるかを理解するために、次のコードを考えます  
   
-```  
+```cpp 
 UserType1 A;  
 UserType2 B = A;  
 ```  
   
  前のコードは初期化子を示すもので、型 `UserType2` の引数をとる `UserType1` のコンストラクターを呼び出します。 次のコードでは  
   
-```  
+```cpp 
 UserType1 A;  
 UserType2 B;  
   
@@ -176,7 +177,7 @@ B = A;
   
  代入ステートメント  
   
-```  
+```cpp 
 B = A;   
 ```  
   
@@ -189,13 +190,13 @@ B = A;
 -   `UserType2::UserType2` 引数を取り、結果をコピーする `UserType1` コンストラクターを呼び出します (そのようなコンストラクターが存在する場合)。  
   
 ## <a name="compound-assignment"></a>複合代入。  
- 複合代入演算子での表に示す[代入演算子](../cpp/assignment-operators.md)、フォームで指定された*e1* `op` =  *e2*ここで、 *e1*は const の種類の変更可能な左辺値および*e2*は、次のいずれか。  
+ 複合代入演算子での表に示した[代入演算子](../cpp/assignment-operators.md)、フォームで指定された*e1* `op` =  *e2*ここで、 *e1*は const の種類の変更可能な左辺値と*e2*は、次のいずれか。  
   
 -   数値型  
   
--   ポインターで場合`op`が + または -  
+-   ポインターの場合は場合、`op`が + または -  
   
- *E1* `op` =  *e2*フォームと同様に動作*e1* *= e1* `op` *e2*が*e1*は 1 回だけ評価されます。  
+ *E1* `op` =  *e2*フォームの動作として*e1* *= e1* `op` *e2*が*e1*は 1 回だけ評価されます。  
   
  列挙型への複合代入によってエラー メッセージが生成されます。 左のオペランドがポインター型である場合、右のオペランドはポインター型であるか、0 に評価される定数式でなければなりません。 左のオペランドが整数型である場合、右のオペランドをポインター型にすることはできません。  
   
@@ -206,5 +207,5 @@ B = A;
   
 ## <a name="see-also"></a>関連項目  
  [二項演算子を含む式](../cpp/expressions-with-binary-operators.md)   
- [C++ 組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C の代入演算子](../c-language/c-assignment-operators.md)

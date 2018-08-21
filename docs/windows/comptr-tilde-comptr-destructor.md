@@ -1,5 +1,5 @@
 ---
-title: 'ComPtr:: ~ ComPtr デストラクター |Microsoft ドキュメント'
+title: 'ComPtr:: ~ ComPtr デストラクター |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5f430e11c2d213273b46b6b6d2d502407ae84ab6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1874eb12f7a11482cb679a743d081a8bb78bc94e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883447"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650041"
 ---
 # <a name="comptrcomptr-destructor"></a>ComPtr::~ComPtr デストラクター
-ComPtr のインスタンスを初期化解除します。  
+インスタンスを初期化解除**ComPtr**します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 WRL_NOTHROW ~ComPtr();  
 ```  
   

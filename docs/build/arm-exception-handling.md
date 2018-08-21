@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef0756875a799aacaf7308c406d98cbbf3a9a2a2
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 2047938e25ed235d04b7a851a21a44090194660a
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027967"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209119"
 ---
 # <a name="arm-exception-handling"></a>ARM 例外処理
 
@@ -248,25 +248,25 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
 |バイト 1|バイト 2|バイト 3|バイト 4|オペコード サイズ|説明|
 |------------|------------|------------|------------|------------|-----------------|
-|00-7F||||16|`add   sp,sp,#X`<br /><br /> X は (Code & 0x7F) * 4|
+|00-7F||||16|`add   sp,sp,#X`<br /><br /> X は (Code & 0x7F) \* 4|
 |80-BF|00-FF|||32|`pop   {r0-r12, lr}`<br /><br /> Code & 0x2000 の場合 LR がポップされ、対応するビットが Code & 0x1FFF で設定されている場合 r0-r12 がポップされます。|
 |C0-CF||||16|`mov   sp,rX`<br /><br /> X は Code & 0x0F|
 |D0-D7||||16|`pop   {r4-rX,lr}`<br /><br /> X は (Code & 0x03) + 4、Code & 0x04 の場合 LR がポップされます|
 |D8-DF||||32|`pop   {r4-rX,lr}`<br /><br /> X は (Code & 0x03) + 8、Code & 0x04 の場合 LR がポップされます|
 |E0-E7||||32|`vpop  {d8-dX}`<br /><br /> X は (Code & 0x07) + 8|
-|E8-EB|00-FF|||32|`addw  sp,sp,#X`<br /><br /> X は (Code & 0x03FF) * 4|
+|E8-EB|00-FF|||32|`addw  sp,sp,#X`<br /><br /> X は (Code & 0x03FF) \* 4|
 |EC-ED|00-FF|||16|`pop   {r0-r7,lr}`<br /><br /> Code & 0x0100 の場合 LR がポップされ、対応するビットが Code & 0x00FF で設定されている場合 r0-r7 がポップされます。|
 |EE|00-0F|||16|Microsoft 固有の仕様|
 |EE|10-FF|||16|使用可能|
-|EF|00-0F|||32|`ldr   lr,[sp],#X`<br /><br /> X は (Code & 0x000F) * 4|
+|EF|00-0F|||32|`ldr   lr,[sp],#X`<br /><br /> X は (Code & 0x000F) \* 4|
 |EF|10-FF|||32|使用可能|
 |F0-F4||||-|使用可能|
 |F5|00-FF|||32|`vpop  {dS-dE}`<br /><br /> S は (Code & 0x00F0) >> 4、E は Code & 0x000F|
 |F6|00-FF|||32|`vpop  {dS-dE}`<br /><br /> S は ((Code & 0x00F0) >> 4) + 16、E は (Code & 0x000F) + 16|
-|F7|00-FF|00-FF||16|`add   sp,sp,#X`<br /><br /> X は (Code & 0x00FFFF) * 4|
-|F8|00-FF|00-FF|00-FF|16|`add   sp,sp,#X`<br /><br /> X は (Code & 0x00FFFFFF) * 4|
-|F9|00-FF|00-FF||32|`add   sp,sp,#X`<br /><br /> X は (Code & 0x00FFFF) * 4|
-|FA|00-FF|00-FF|00-FF|32|`add   sp,sp,#X`<br /><br /> X は (Code & 0x00FFFFFF) * 4|
+|F7|00-FF|00-FF||16|`add   sp,sp,#X`<br /><br /> X は (Code & 0x00FFFF) \* 4|
+|F8|00-FF|00-FF|00-FF|16|`add   sp,sp,#X`<br /><br /> X は (Code & 0x00FFFFFF) \* 4|
+|F9|00-FF|00-FF||32|`add   sp,sp,#X`<br /><br /> X は (Code & 0x00FFFF) \* 4|
+|FA|00-FF|00-FF|00-FF|32|`add   sp,sp,#X`<br /><br /> X は (Code & 0x00FFFFFF) \* 4|
 |FB||||16|nop (16 ビット)|
 |FC||||32|nop (32 ビット)|
 |FD||||16|end + エピローグに 16 ビットの nop|
@@ -751,3 +751,4 @@ Function:
 
 [ARM ABI 規則の概要](../build/overview-of-arm-abi-conventions.md)  
 [Visual C++ の ARM への移行に関する一般的な問題](../build/common-visual-cpp-arm-migration-issues.md)  
+

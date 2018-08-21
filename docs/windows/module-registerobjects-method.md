@@ -1,5 +1,5 @@
 ---
-title: Module::registerobjects メソッド |Microsoft ドキュメント
+title: Module::registerobjects メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 986dcfff49529eedd8d495f4c37e19fa2b6cb8bc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 04281b87584d10d36f5f2eeea05dfae0923b2d9f
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875345"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013315"
 ---
 # <a name="moduleregisterobjects-method"></a>Module::RegisterObjects メソッド
-他のアプリケーションがそれらに接続できるように、COM または Windows ランタイム オブジェクトを登録します。  
+他のアプリケーションがそれらに接続できるように、COM または Windows ランタイムのオブジェクトを登録します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT RegisterObjects(  
    ModuleBase* module,   
    const wchar_t* serverName);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `module`  
- COM または Windows ランタイムのオブジェクトの配列。  
+### <a name="parameters"></a>パラメーター  
+ *モジュール*  
+ COM または Windows ランタイム オブジェクトの配列。  
   
- `serverName`  
+ *サーバー名*  
  オブジェクトを作成したサーバーの名前です。  
   
 ## <a name="return-value"></a>戻り値  
- 正常終了した場合は S_OK、それ以外の場合、原因を示す HRESULT 操作に失敗しました。  
+ 成功した場合は s_ok を返します。それ以外の場合、理由を示す HRESULT 操作に失敗しました。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** module.h  

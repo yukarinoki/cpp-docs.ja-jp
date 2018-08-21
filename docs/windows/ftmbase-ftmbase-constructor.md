@@ -1,5 +1,5 @@
 ---
-title: Ftmbase::ftmbase コンス トラクター |Microsoft ドキュメント
+title: Ftmbase::ftmbase コンス トラクター |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a15a2373a10df10012e4b2d2685b413014d2ea3a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3a6036db01ecdd66bcfe06405515c174628810a1
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872186"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650151"
 ---
 # <a name="ftmbaseftmbase-constructor"></a>FtmBase::FtmBase コンストラクター
-FtmBase クラスの新しいインスタンスを初期化します。  
+新しいインスタンスを初期化、 **FtmBase**クラス。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 FtmBase();  
 ```  
   

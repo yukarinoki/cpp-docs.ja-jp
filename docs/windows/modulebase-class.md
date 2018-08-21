@@ -1,5 +1,5 @@
 ---
-title: ModuleBase クラス |Microsoft ドキュメント
+title: ModuleBase クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bfee0c0cd7ff7bd7f4525a291184f08f1e2898e5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8ff7fb86b7b39e283c27ee78611444b78bc53c5b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878737"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020279"
 ---
 # <a name="modulebase-class"></a>ModuleBase クラス
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 class ModuleBase;  
 ```  
   
-## <a name="remarks"></a>コメント  
- 基本クラスを表す、[モジュール](../windows/module-class.md)クラスです。  
+## <a name="remarks"></a>Remarks  
+ 基本クラスを表します、[モジュール](../windows/module-class.md)クラス。  
   
 ## <a name="members"></a>メンバー  
   
@@ -42,8 +42,9 @@ class ModuleBase;
   
 |名前|説明|  
 |----------|-----------------|  
-|[ModuleBase::ModuleBase コンストラクター](../windows/modulebase-modulebase-constructor.md)|モジュール クラスのインスタンスを初期化します。|  
-|[ModuleBase::~ModuleBase デストラクター](../windows/modulebase-tilde-modulebase-destructor.md)|モジュール クラスの現在のインスタンスの初期化を解除します。|  
+|[ModuleBase::ModuleBase コンストラクター](../windows/modulebase-modulebase-constructor.md)|
+          `Module` クラスのインスタンスを初期化します。|  
+|[ModuleBase::~ModuleBase デストラクター](../windows/modulebase-tilde-modulebase-destructor.md)|現在のインスタンスの初期化を解除、`Module`クラス。|  
   
 ### <a name="public-methods"></a>パブリック メソッド  
   

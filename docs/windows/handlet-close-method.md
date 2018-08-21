@@ -1,5 +1,5 @@
 ---
-title: Handlet::close メソッド |Microsoft ドキュメント
+title: Handlet::close メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4f0c1e47420106651cfe0526d6d212e9819a72ff
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7cbe76cdea5c8fadef818ede1d63d88e4437bdae
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873252"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651068"
 ---
 # <a name="handletclose-method"></a>HandleT::Close メソッド
-現在の HandleT オブジェクトを閉じます。  
+現在の終了**HandleT**オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void Close();  
 ```  
   
-## <a name="remarks"></a>コメント  
- 現在 HandleT の基になるハンドルが閉じられるし、HandleT が無効な状態に設定されています。  
+## <a name="remarks"></a>Remarks  
+ 現在の基になるハンドル**HandleT**が閉じられると**HandleT**無効な状態に設定されています。  
   
- ハンドルが正しく閉じられません、呼び出し元のスレッドで例外が発生します。  
+ ハンドルが適切に終了しない場合は、呼び出し元のスレッドで例外が発生します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

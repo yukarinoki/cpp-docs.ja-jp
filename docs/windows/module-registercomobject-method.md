@@ -1,5 +1,5 @@
 ---
-title: Module::registercomobject メソッド |Microsoft ドキュメント
+title: Module::registercomobject メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c002dd64049006c8ee74c709c585a3a9d0f253a5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 61ebc6b7bfb0571ba1f2ce1957d916ecb4c790c7
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873980"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010985"
 ---
 # <a name="moduleregistercomobject-method"></a>Module::RegisterCOMObject メソッド
 他のアプリケーションがそれらに接続できるように、1 つまたは複数の COM オブジェクトを登録します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 WRL_NOTHROW virtual HRESULT RegisterCOMObject(  
    const wchar_t* serverName,  
    IID* clsids,  
@@ -39,29 +39,29 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
   
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `serverName`  
+### <a name="parameters"></a>パラメーター  
+ *サーバー名*  
  サーバーの完全修飾名。  
   
- `clsids`  
+ *clsid*  
  登録する Clsid の配列。  
   
- `factories`  
- 可用性が公開されているクラス オブジェクトの IUnknown インターフェイスの配列。  
+ *ファクトリ*  
+ パブリッシュされるかどうかをクラスのオブジェクトの IUnknown インターフェイスの配列。  
   
- `cookies`  
+ *Cookie*  
  操作が完了したらは、登録され、そのオブジェクト クラスを識別する値へのポインターの配列。 これらの値は使用後で登録を取り消します。  
   
- `count`  
+ *count*  
  登録する Clsid の数。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK 場合 successfu です。それ以外の場合、HRESULT を理由を示す CO_E_OBJISREG など、操作に失敗しました。  
+ S_OK 場合成功します。それ以外の場合、HRESULT を理由を示す CO_E_OBJISREG など、操作に失敗しました。  
   
-## <a name="remarks"></a>コメント  
- COM オブジェクトは、CLSCTX 列挙体の CLSCTX_LOCAL_SERVER 列挙子に登録されます。  
+## <a name="remarks"></a>Remarks  
+ COM オブジェクトは、CLSCTX 列挙型の別個の列挙子に登録されます。  
   
- 登録済みのオブジェクトへの接続の種類が、現在の組み合わせで指定された`comflag`テンプレート パラメーターと REGCLS 列挙体の REGCLS_SUSPENDED 列挙子。  
+ 登録済みのオブジェクトへの接続の種類が現在の組み合わせで指定された*comflag*テンプレート パラメーターと REGCLS 列挙体の REGCLS_SUSPENDED 列挙子。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** module.h  

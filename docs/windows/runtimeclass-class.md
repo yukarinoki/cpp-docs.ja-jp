@@ -1,5 +1,5 @@
 ---
-title: RuntimeClass クラス |Microsoft ドキュメント
+title: RuntimeClass クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 26c3542f5bea21d1b705cd3253e6828ff73677df
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7f76695cfe3dcad0f5c835577aa4cc9b7cd3ec62
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889008"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017644"
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass クラス
-指定されたインターフェイスを継承し、指定した Windows ランタイム、クラシック COM、および弱い参照のサポートを提供する WinRT または COM クラスを表します。  
+指定したインターフェイスを継承し、指定した Windows ランタイム、クラシック COM、および弱い参照のサポートを提供する WinRT または COM クラスを表します。  
   
-このクラスの実装を提供する、WinRT と COM クラスのスケルトンの実装を提供`QueryInterface`、 `AddRef`、`Release`など、モジュールの参照カウントを管理し、用のクラス ファクトリを提供するためのサポートアクティブ化可能なオブジェクトです。
+このクラスの実装を提供する、WinRT と COM クラスの定型実装を提供`QueryInterface`、 `AddRef`、`Release`など、モジュールの参照カウントを管理しのクラス ファクトリを提供するためのサポートアクティブ化可能なオブジェクト。
   
 ## <a name="syntax"></a>構文  
   
-```
+```cpp
 template <typename ...TInterfaces> class RuntimeClass
 template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 ```
   
-#### <a name="parameters"></a>パラメーター  
- `classFlags`  
-省略可能なパラメーターです。 1 つまたは複数の組み合わせ[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列挙値。 `__WRL_CONFIGURATION_LEGACY__` ClassFlags プロジェクト内のすべてのランタイム クラスの既定値を変更するマクロを定義することができます。 定義されている場合は RuntimeClass インスタンスは既定でアジャイルです。 定義されていない場合、RuntimeClass インスタンスは、既定でアジャイルです。 避けるためにあいまいさが常に指定の Microsoft::WRL::FtmBase`TInterfaces`または RuntimeClassType::InhibitFtmBase です。 注、InhibitFtmBase と FtmBase が両方のオブジェクトを使用する場合はアジャイルになります。
+### <a name="parameters"></a>パラメーター  
+ *classFlags*  
+省略可能なパラメーター。 1 つ以上を組み合わせた[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列挙値。 `__WRL_CONFIGURATION_LEGACY__` ClassFlags プロジェクト内のすべてのランタイム クラスの既定値を変更するマクロを定義することができます。 定義されている場合、RuntimeClass インスタンスは既定でアジャイルです。 定義されていないときに、RuntimeClass インスタンスは、既定でアジャイルです。 あいまいさを避けるために指定常に、`Microsoft::WRL::FtmBase`で`TInterfaces`または`RuntimeClassType::InhibitFtmBase`します。 InhibitFtmBase と FtmBase はどちらもオブジェクトを使用している場合は、アジャイルになります。
  
- `TInterfaces`  
-IUnknown、IInspectable またはその他のインターフェイスによって制御されるを超えてインターフェイスのリスト オブジェクトに実装されて[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)です。 オブジェクトをアジャイルにして、IMarshal を実装するために、特に Microsoft::WRL::FtmBase から派生させるのには、他のクラスを一覧に可能性がありますもします。
+ *TInterfaces*  
+インターフェイスの一覧を超えるオブジェクトが実装されて`IUnknown`、`IInspectable`または他のインターフェイスによって制御される[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)します。 特にから派生するその他のクラス リストが`Microsoft::WRL::FtmBase`アジャイル オブジェクトを作成して実装するために、`IMarshal`します。
   
 ## <a name="members"></a>メンバー  
-`RuntimeClassInitialize` MakeAndInitialize テンプレート関数は、オブジェクトを構築するために使用する場合は、オブジェクトを初期化する関数。 初期化に失敗した場合、オブジェクトが正常に初期化されている場合は S_OK、または COM エラー コードを返します。 COM エラー コードは、MakeAndInitialize の戻り値として伝達されます。 Make テンプレート関数が、オブジェクトを構築するために使用する場合に、RuntimeClassInitialize メソッドが呼び出されないことに注意してください。
+`RuntimeClassInitialize` 場合、オブジェクトを初期化する関数、`MakeAndInitialize`テンプレート関数は、オブジェクトを構築するために使用します。 初期化に失敗した場合、オブジェクトが正常に初期化すると場合は、S_OK または COM エラー コードを返します。 戻り値として COM エラー コードが伝達される`MakeAndInitialize`します。 なお、`RuntimeClassInitialize`場合、メソッドは呼び出されません、`Make`テンプレート関数は、オブジェクトを構築するために使用します。
 
 ### <a name="public-constructors"></a>パブリック コンストラクター  
   
@@ -62,4 +62,4 @@ IUnknown、IInspectable またはその他のインターフェイスによっ�
 **名前空間:** Microsoft::WRL  
   
 ## <a name="see-also"></a>関連項目  
-[Microsoft::WRL 名前空間](../windows/microsoft-wrl-namespace.md)
+ [Microsoft::WRL 名前空間](../windows/microsoft-wrl-namespace.md)

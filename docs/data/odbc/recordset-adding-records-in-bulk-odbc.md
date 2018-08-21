@@ -1,5 +1,5 @@
 ---
-title: 'レコード セット: バルク (ODBC) レコードを追加する |Microsoft ドキュメント'
+title: 'レコード セット: レコードを追加する方法 (ODBC) の |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7bb39b910eae797f360513954ad0c32d5e99bb86
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 167cf817074a992fae5492ba387ea8a3589a10ec
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089286"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337230"
 ---
 # <a name="recordset-adding-records-in-bulk-odbc"></a>レコードセット: レコードを大量に追加する方法 (ODBC)
 このトピックの内容は、MFC ODBC クラスに該当します。  
   
- MFC [CRecordset](../../mfc/reference/crecordset-class.md)クラスにはテーブルに一括で新しいレコードを追加するときに、効率を向上させる新しい最適化します。  
+ MFC [CRecordset](../../mfc/reference/crecordset-class.md)クラスには、新しい最適化を一括でテーブルに新しいレコードを追加するときに、効率を向上させます。  
   
 > [!NOTE]
->  このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを使用している場合は、次を参照してください。[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)です。  
+>  このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを使用している場合は、次を参照してください。[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。  
   
- 新しいオプション、 **dwOptions**パラメーターを[:open](../../mfc/reference/crecordset-class.md#open)メンバー関数は、 **optimizeBulkAdd**、複数のレコードを追加するときにパフォーマンスが向上呼び出さずに連続して**Requery**または**閉じる**です。 1 つ目の前にダーティであるフィールドだけ**更新**呼び出しが後続のダーティとマークされて`AddNew` /**更新**呼び出しです。  
+ 新しいオプション、 *dwOptions*パラメーターを[:open](../../mfc/reference/crecordset-class.md#open)メンバー関数は、 `optimizeBulkAdd`を呼び出さずに連続して複数のレコードを追加するときにパフォーマンスが向上`Requery`または`Close`します。 1 つ目の前にダーティであるフィールドのみ`Update`呼び出しが後続のダーティとマークされて`AddNew` / `Update`呼び出し。  
   
- データベース クラスを活用するために使用するかどうか、 **:: SQLSetPos** ODBC API 関数の追加、編集、およびレコードを削除するには、この最適化は必要ありません。  
+ 活用するために、データベース クラスを使用しているかどうか、 `::SQLSetPos` ODBC API 関数を追加すると、編集、およびレコードを削除するには、この最適化は必要ありません。  
   
- ODBC カーソル ライブラリが読み込まれる、または ODBC ドライバーでは、追加もサポートされていません、編集、および削除 **:: SQLSetPos**、この最適化のパフォーマンスを追加します。 この最適化を有効にするには設定、 **dwOptions**内のパラメーター、**開く**レコード セットには、次の呼び出し。  
+ 編集、および削除の場合は、ODBC カーソル ライブラリが読み込まれるか、ODBC ドライバーでは、追加もサポートされていません、 `::SQLSetPos`、この最適化のパフォーマンスを追加します。 この最適化を有効にするには設定、 *dwOptions*パラメーター、`Open`レコード セットを次の呼び出し。  
   
 ```  
 appendOnly | optimizeBulkAdd  

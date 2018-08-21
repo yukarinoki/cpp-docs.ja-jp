@@ -1,5 +1,5 @@
 ---
-title: Implementshelper::iidcount 定数 |Microsoft ドキュメント
+title: Implementshelper::iidcount 定数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa63cfa765d54d20b943aa3a4aabf3dc51a16984
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3ea871f2c3b75ac8f4e316b3dc680e8821ac789f
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874003"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010673"
 ---
 # <a name="implementshelperiidcount-constant"></a>ImplementsHelper::IidCount 定数
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```cpp  
 static const unsigned long IidCount;  
 ```  
   
-## <a name="remarks"></a>コメント  
- 現在の実装オブジェクトで実装されたインターフェイス Id の数を保持します。  
+## <a name="remarks"></a>Remarks  
+ 現在の実装されたインターフェイス Id の数を保持`Implements`オブジェクト。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** implements.h  

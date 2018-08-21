@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d259040ec5f4d7f1148b9a782479b6db8617602
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 470fb497bb52fa51fec06ac0edb3e1996aa1e5e8
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954631"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208527"
 ---
 # <a name="rawstorageiterator-class"></a>raw_storage_iterator クラス
 
@@ -69,8 +69,8 @@ class raw_storage_iterator
 
 |演算子|説明|
 |-|-|
-|[operator*](#op_star)|出力反復子式 * `ii` = `x` を実装するために使用される逆参照演算子。|
-|[operator=](#op_eq)|生のストレージ反復子式 * `i` = `x` をメモリへの格納用に実装するために使用される代入演算子。|
+|[operator*](#op_star)|出力反復子の式を実装するために使用される逆参照演算子\* `ii`  = `x`します。|
+|[operator=](#op_eq)|生のストレージ反復子式を実装するために使用される代入演算子は、 \* `i`  =  `x`メモリに格納するためです。|
 |[operator++](#op_add_add)|生のストレージ反復子の前置インクリメント演算子と後置インクリメント演算子。|
 
 ## <a name="requirements"></a>必要条件
@@ -103,7 +103,7 @@ typedef ForwardIterator iter_type;
 
 この型は、テンプレート パラメーター `ForwardIterator` のシノニムです。
 
-## <a name="op_star"></a>  raw_storage_iterator::operator*
+## <a name="op_star"></a>  raw_storage_iterator::operator\*
 
 生のストレージ反復子式 \* *ii* = *x* を実装するために使用される逆参照演算子。
 

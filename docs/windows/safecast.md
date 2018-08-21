@@ -1,5 +1,5 @@
 ---
-title: SafeCast |Microsoft ドキュメント
+title: SafeCast |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95a3f8508c17936626558ecc6a8d01e21688d403
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 07311e916fa78f1ba946ad4631905968912f8195
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892453"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019067"
 ---
 # <a name="safecast"></a>SafeCast
-型の数値を別の型をキャストします。  
+型の数値を別の型にキャストします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename T, typename U>  
 inline bool SafeCast (  
    const T From,  
@@ -37,23 +37,23 @@ inline bool SafeCast (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- [入力] `From`  
- 変換するソースの数。 T 型でなければなりません  
+### <a name="parameters"></a>パラメーター  
+ [in]*から*  
+ 変換するソースの数。 これは、型でなければなりません`T`します。  
   
- [出力] `To`  
- 新しい数値の型への参照。 U 型です。 これでなければなりません  
+ [out]*に*  
+ 新しい数値型への参照。 これは、型でなければなりません`U`します。  
   
 ## <a name="return-value"></a>戻り値  
- `true` エラーが発生しない場合です。`false`場合は、エラーが発生します。  
+ **true**場合、エラーは発生しません。**false**エラーが発生した場合。  
   
-## <a name="remarks"></a>コメント  
- このメソッドの一部である[SafeInt ライブラリ](../windows/safeint-library.md)のインスタンスを作成せず、1 つのキャスト操作のものでは、 [SafeInt クラス](../windows/safeint-class.md)です。  
+## <a name="remarks"></a>Remarks  
+ このメソッドの一部は、 [SafeInt ライブラリ](../windows/safeint-library.md)のインスタンスを作成せず、1 つのキャスト操作のものでは、 [SafeInt クラス](../windows/safeint-class.md)します。  
   
 > [!NOTE]
->  このメソッドは、1 つの操作を保護する必要がありますにのみ使用する必要があります。 使用する必要があります複数の操作がある場合、`SafeInt`個々 のスタンドアロン関数の呼び出しではなくクラスです。  
+>  このメソッドは、1 つの操作を保護する必要がありますにのみ使用する必要があります。 使用する必要があります複数の操作がある場合、`SafeInt`個々 のスタンドアロン関数の呼び出しではなくクラス。  
   
- テンプレート型 T および U の詳細については、次を参照してください。 [SafeInt 関数](../windows/safeint-functions.md)です。  
+ T および U のテンプレートの種類の詳細については、次を参照してください。 [SafeInt 関数](../windows/safeint-functions.md)します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** safeint.h  

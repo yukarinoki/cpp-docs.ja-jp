@@ -1,5 +1,5 @@
 ---
-title: defaultcollelem |Microsoft ドキュメント
+title: defaultcollelem |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da53f10932ffc0696d567bc1140e3e92a609e2c8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 58038fdb621ca8d31ace1f756e5f3dc122af06b1
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870911"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644961"
 ---
 # <a name="defaultcollelem"></a>defaultcollelem
 Visual Basic コードの最適化に使用されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```cpp  
 [defaultcollelem]  
-  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **Defaultcollelem** C++ 属性と同じ機能を持つ、 [defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792) MIDL 属性。  
   
 ## <a name="example"></a>例  
- インターフェイス メソッドを使用して、次のコードを示しています、 **defaultcollelem**属性。  
+ 次のコードは、インターフェイス メソッドを使用して、 **defaultcollelem**属性。  
   
-```  
+```cpp  
 // cpp_attr_ref_defaultcollelem.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -63,7 +61,7 @@ __interface IMyForm
 |||  
 |-|-|  
 |**対象**|インターフェイス メソッド|  
-|**反復可能**|×|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

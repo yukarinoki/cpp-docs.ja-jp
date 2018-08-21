@@ -1,5 +1,5 @@
 ---
-title: includelib (C++) |Microsoft ドキュメント
+title: includelib (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 252a5d953dd05edc494daf8c4a45322d5511f979
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3d6f6a4dc4f23460b3661da4ed3775708cac9b6d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878893"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016178"
 ---
 # <a name="includelib-c"></a>includelib (C++)
-生成された .idl ファイルに含まれる、.idl ファイルまたは .h ファイルが発生します。  
+生成された .idl ファイルに含まれる、.idl ファイルまたは .h ファイル。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
-      [ includelib(  
+```cpp  
+[ includelib(  
    name.idl  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *name.idl*  
  生成された .idl ファイルの一部として含めるする .idl ファイルの名前。  
   
-## <a name="remarks"></a>コメント  
- `includelib` C++ 属性によりが発生した後、生成された .idl ファイルに含まれる、.idl ファイルまたは .h ファイル、`importlib`ステートメントです。  
+## <a name="remarks"></a>Remarks  
+ **Includelib** C++ 属性により、.idl ファイルまたは .h ファイルの後、生成された .idl ファイルに含まれる、`importlib`ステートメント。  
   
 ## <a name="example"></a>例  
- .Cpp ファイルで次のコードが表示されます。  
+ 次のコードは、.cpp ファイルで示されます。  
   
-```  
+```cpp  
 // cpp_attr_ref_includelib.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  

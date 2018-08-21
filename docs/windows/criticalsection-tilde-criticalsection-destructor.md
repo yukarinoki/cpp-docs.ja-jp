@@ -1,5 +1,5 @@
 ---
-title: 'CriticalSection:: ~ CriticalSection デストラクター |Microsoft ドキュメント'
+title: 'CriticalSection:: ~ CriticalSection デストラクター |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d33f8a3feb772ffe00221aeaf80892a535c2e271
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b432229f9ada4c1a3dbccfc9b71557827773b41c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881615"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645907"
 ---
 # <a name="criticalsectioncriticalsection-destructor"></a>CriticalSection::~CriticalSection デストラクター
-初期化を解除し、現在の CriticalSection オブジェクトを破棄します。  
+初期化を解除し、現在の破棄**CriticalSection**オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 WRL_NOTHROW ~CriticalSection();  
 ```  
   

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a604ee36bf7d410f9e176278cc98a934874fbac
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1d78b37971cda2ca1bcf468a794abf69555efc3e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939885"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462252"
 ---
 # <a name="smart-pointers-modern-c"></a>スマート ポインター (Modern C++)
 標準ライブラリに含まれる最新の C++ プログラミングで*スマート ポインター*メモリの空きプログラムを確実に使用されますが、およびリソースのリークし例外セーフです。  

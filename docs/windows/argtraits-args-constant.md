@@ -1,5 +1,5 @@
 ---
-title: Argtraits::args 定数 |Microsoft ドキュメント
+title: Argtraits::args 定数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f87b29634d5b9acef2e2ccb3f7b4d5f227433d38
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 03db2fd8853321e4a9320f2c17b05800b87e466c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855774"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652963"
 ---
 # <a name="argtraitsargs-constant"></a>ArgTraits::args 定数
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 static const int args = -1; ;  
 ```  
   
-## <a name="remarks"></a>コメント  
- デリゲート インターフェイスの呼び出しメソッドのパラメーターの数の数を保持します。  
+## <a name="remarks"></a>Remarks  
+ パラメーターの数のカウントを保持、`Invoke`デリゲート インターフェイスのメソッド。  
   
-## <a name="remarks"></a>コメント  
- ときに`args`が-1 では、Invoke メソッドのシグネチャと一致することはことを示します。  
+## <a name="remarks"></a>Remarks  
+ ときに**args**が-1 のでは、必要がありますに一致することを示します、`Invoke`メソッド シグネチャ。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** event.h  

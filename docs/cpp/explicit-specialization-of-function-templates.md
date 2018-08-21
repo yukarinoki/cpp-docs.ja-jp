@@ -1,5 +1,5 @@
 ---
-title: 関数テンプレートの明示的特殊化 |Microsoft ドキュメント
+title: 関数テンプレートの明示的な特殊化 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e35eda35a7d2474826ce151292121be224955420
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d8b6a56a0a1dce5d07007898dec486d0e3b080c4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410734"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407690"
 ---
 # <a name="explicit-specialization-of-function-templates"></a>関数テンプレートの明示的特殊化
 関数テンプレートを使用すると、特定の型のために関数テンプレートの明示的な特殊化 (オーバーライド) を提供することによって、その型の特別な動作を定義できます。 例えば:  
@@ -32,7 +32,7 @@ ms.locfileid: "32410734"
 template<> void MySwap(double a, double b);  
 ```  
   
- この宣言では、別の関数を定義できます。**二重**変数。 などの非テンプレート関数、標準的な型変換 (型の変数を昇格させるなど**float**に**二重**) 適用されます。  
+ この宣言では、別の関数を定義できます。**二重**変数。 などの非テンプレート関数では、標準的な型変換 (型の変数の昇格など**float**に**二重**) 適用されます。  
   
 ## <a name="example"></a>例  
   

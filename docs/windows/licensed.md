@@ -1,5 +1,5 @@
 ---
-title: ライセンス供与 |Microsoft ドキュメント
+title: ライセンス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe7d915d53b246c98372ce8647e35fb996e9a7c4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a722b7a4eb6104670d2d67d95f1c47755af5938
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875748"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012639"
 ---
 # <a name="licensed"></a>licensed
-適用すると、COM オブジェクトはライセンスされていることを示しますを使用してインスタンス化する必要があります**IClassFactory2**です。  
+COM オブジェクトを適用するライセンスが与えられたことを示しますを使用してインスタンス化する必要があります`IClassFactory2`します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```cpp  
 [licensed]  
-  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **ライセンス**C++ 属性と同じ機能を持つ、[ライセンス](http://msdn.microsoft.com/library/windows/desktop/aa367070)MIDL 属性。  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp  
 // cpp_attr_ref_licensed.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -65,9 +63,9 @@ public:
   
 |||  
 |-|-|  
-|**対象**|**class**、 `struct`|  
-|**反復可能**|×|  
-|**必要な属性**|**coclass**|  
+|**対象**|**クラス**、**構造体**|  
+|**反復可能**|いいえ|  
+|**必要な属性**|`coclass`|  
 |**無効な属性**|なし|  
   
  詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  

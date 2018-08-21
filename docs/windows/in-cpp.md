@@ -1,5 +1,5 @@
 ---
-title: (c++) |Microsoft ドキュメント
+title: (c++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0cb730163b9048005d3af64bb42ae9113681d52b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8522b3af527267706a2e2697b88049a38b0f092f
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874019"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017192"
 ---
 # <a name="in-c"></a>in (C++)
-パラメーターが呼び出し元のプロシージャから呼び出されたプロシージャに渡されることを示します。  
+呼び出し元のプロシージャから呼び出されたプロシージャに渡されるパラメーターがあることを示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```cpp  
 [in]  
-  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **で**C++ 属性と同じ機能を持つ、[で](http://msdn.microsoft.com/library/windows/desktop/aa367051)MIDL 属性。  
   
 ## <a name="example"></a>例  
- 参照してください[バインド可能な](../windows/bindable.md)の使用方法の例については**で**です。  
+ 参照してください[バインド可能な](../windows/bindable.md)を使用する方法の例については**で**します。  
   
 ## <a name="requirements"></a>要件  
   
@@ -48,7 +46,7 @@ ms.locfileid: "33874019"
 |||  
 |-|-|  
 |**対象**|インターフェイスのパラメーター、インターフェイス メソッド|  
-|**反復可能**|×|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|**retval**|  
   

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6e1ea4abadc3b751b8bad9f9521462d510c5227
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3eb98f0b66090a9c9e5f09b0cde3e3f94a6c0248
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943773"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405189"
 ---
 # <a name="raising-software-exceptions"></a>ソフトウェア例外の発生
 プログラム エラーの最も一般的な原因のいくつかは、システムによって例外としてフラグが設定されません。 たとえば、メモリ ブロックを割り当てるときにメモリが不足していると、ランタイム関数または API 関数で例外は発生しませんが、エラー コードが返されます。  
@@ -60,7 +60,7 @@ ms.locfileid: "37943773"
 #define STATUS_FILE_BAD_FORMAT        0xE0000002  
 ```  
   
- 例外コードを定義したら、そのコードを使用して例外を発生させることができます。 たとえば、次のコードでは、メモリ割り当てエラーを検出すると STATUS_INSUFFICIENT_MEM 例外が発生します。  
+ 例外コードを定義したら、そのコードを使用して例外を発生させることができます。 たとえば、次のコード生成、`STATUS_INSUFFICIENT_MEM`メモリ割り当ての問題への応答での例外。  
   
 ```cpp 
 lpstr = _malloc( nBufferSize );  

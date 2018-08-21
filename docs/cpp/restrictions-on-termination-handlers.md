@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 969930c3918cdc0d2e38747796279c7135aba5a7
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3ae16363956afc7cca853307ef2888846a02864d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941341"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461771"
 ---
 # <a name="restrictions-on-termination-handlers"></a>終了ハンドラーに関する制約
 使用することはできません、 **goto**ステートメントにジャンプ、 **_ _try**ステートメント ブロックまたは **_ _finally**ステートメント ブロックです。 代わりに、制御の標準フローに従ってステートメント ブロックに入る必要があります。 (の外部にジャンプすることができます、ただし、 **_ _try**ステートメント ブロックです)。また、例外ハンドラーまたは終了ハンドラー内で入れ子ことはできません、 **_ _finally**ブロックします。  

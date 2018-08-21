@@ -1,5 +1,5 @@
 ---
-title: SimpleClassFactory クラス |Microsoft ドキュメント
+title: SimpleClassFactory クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: debb78ba4be2731b8cffce1133518b0b4a04f63d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c490e21717e44ec3e772c01f84a0f5adb08471fd
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892762"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012496"
 ---
 # <a name="simpleclassfactory-class"></a>SimpleClassFactory クラス
 基底クラスを作成するための基本的なメカニズムを提供します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Base>  
 class SimpleClassFactory : public ClassFactory<>;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `Base`  
+### <a name="parameters"></a>パラメーター  
+ *ベース*  
  基本クラスです。  
   
-## <a name="remarks"></a>コメント  
- 基本クラスには、既定のコンス トラクターを提供する必要があります。  
+## <a name="remarks"></a>Remarks  
+ 基底クラスには、既定のコンス トラクターを提供する必要があります。  
   
- 次のコード例で SimpleClassFactory を使用する方法を示します、 [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md)マクロです。  
+ 次のコード例は、使用する方法を示します**SimpleClassFactory**で、 [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md)マクロ。  
   
  `ActivatableClassWithFactoryEx(MyClass, SimpleClassFactory, MyServerName);`  
   
@@ -51,7 +51,7 @@ class SimpleClassFactory : public ClassFactory<>;
   
 |名前|説明|  
 |----------|-----------------|  
-|[SimpleClassFactory::CreateInstance メソッド](../windows/simpleclassfactory-createinstance-method.md)|指定されたインターフェイスのインスタンスを作成します。|  
+|[SimpleClassFactory::CreateInstance メソッド](../windows/simpleclassfactory-createinstance-method.md)|指定したインターフェイスのインスタンスを作成します。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `I0`  

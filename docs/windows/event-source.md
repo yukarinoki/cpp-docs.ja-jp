@@ -1,5 +1,5 @@
 ---
-title: event_source |Microsoft ドキュメント
+title: event_source |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,51 +22,50 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b7e7e287d68bac0fe69417fe21df27ed3231cce6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bd38dcf02de661a063df356b7d915eed9814f192
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879384"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652407"
 ---
 # <a name="eventsource"></a>event_source
 イベント ソースを作成します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
-      [ event_source(  
+```cpp  
+[ event_source(  
    type,  
    optimize=[speed | size],  
    decorate=[true | false]  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `type`  
+### <a name="parameters"></a>パラメーター  
+ *type*  
  次の値のいずれかの列挙です。  
   
 -   アンマネージ C/C++ コード用の`native` (アンマネージ クラスの既定)。  
   
--   COM コード用の`com` 。 使用する必要があります`coclass`とき`type` =`com`です。 この値の場合、ユーザーが次のヘッダー ファイルを含める必要があります。  
+-   COM コード用の`com` 。 使用する必要があります`coclass`とき`type` =`com`します。 この値の場合、ユーザーが次のヘッダー ファイルを含める必要があります。  
   
-    ```  
+    ```cpp  
     #define _ATL_ATTRIBUTES  
     #include <atlbase.h>  
     #include <atlcom.h>  
     ```  
   
- **optimize**  
- `type` が **native**の場合、 **optimize=size**と指定すると、クラスのすべてのイベント用に記憶域が (最低) 4 バイトあることを指定でき、(既定の) **optimize=speed** を指定すると、記憶域が 4 * (イベントの #) バイトあることを指定できます。  
+ *optimize*  
+ ときに*型*は`native`を指定できます`optimize=size`は 4 バイトのストレージ (最小値) のすべてのイベント クラスで示すために、または`optimize=speed`(既定値) を 4 があることを示すために * (イベントの #) バイトのストレージ。  
   
- **decorate**  
- `type` が **native**の場合、 **decorate=false**と指定すると、結合 (.mrg) ファイル内の拡張名に括弧で囲んでいるクラス名を含まないように指定できます。 [/Fx](../build/reference/fx-merge-injected-code.md) では、.mrg ファイルを生成できます。 既定の**decorate=false**では、結合されたファイルで型名は完全修飾されます。  
+ *装飾します。*  
+ ときに*型*は`native`を指定できます`decorate=false`を結合 (.mrg) ファイルの拡張名が、外側のクラス名を含める必要がありますいないことを示しています。 [/Fx](../build/reference/fx-merge-injected-code.md) では、.mrg ファイルを生成できます。 `decorate=false`、既定値は、マージされたファイルで完全修飾型名します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **event_source** C++ 属性では、それが適用されているクラスまたは構造がイベント ソースとなることを指定します。  
   
- **event_source** は、 [event_receiver](../windows/event-receiver.md) 属性と [__event](../cpp/event.md) キーワードと共に使用します。 イベント レシーバーの作成には、 **event_receiver** を使用します。 イベント ソース内のメソッドで `__event` を使用すると、それらのメソッドをイベントとして指定することができます。  
+ **event_source** は、 [event_receiver](../windows/event-receiver.md) 属性と [__event](../cpp/event.md) キーワードと共に使用します。 使用`event_receiver`イベント レシーバーを作成します。 使用 **_ _event**イベントとしてこれらのメソッドを指定するイベント ソース内のメソッドにします。  
   
 > [!NOTE]
 >  テンプレート クラスまたは構造体にイベントを含めることはできません。  
@@ -77,9 +76,9 @@ ms.locfileid: "33879384"
   
 |||  
 |-|-|  
-|**対象**|**class**、 `struct`|  
-|**反復可能**|×|  
-|**必要な属性**|**type** = `type`=**com**|  
+|**対象**|**クラス**、**構造体**|  
+|**反復可能**|いいえ|  
+|**必要な属性**|**コクラス**とき `type`=`com`|  
 |**無効な属性**|なし|  
   
  詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  

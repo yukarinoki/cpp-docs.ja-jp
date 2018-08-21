@@ -1,5 +1,5 @@
 ---
-title: 作成、移動、および編集ツール バー ボタン |Microsoft ドキュメント
+title: 作成、移動、およびツール バー ボタンの編集 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 69d2ba11978a68cd49513c5d115cc87068e6c5ca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f6cf110357b7b58424e0fd2a23ce04ba0bfacb0e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871342"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651454"
 ---
 # <a name="creating-moving-and-editing-toolbar-buttons"></a>ツール バー ボタンの作成、移動、および編集
-簡単に作成、移動、コピー、および編集できますツール バー ボタンです。  
+ことができます簡単に作成、移動、コピー、およびツールバーのボタンを編集します。  
   
- 既定では、新規または空のボタンがツールバーの右端に表示されます。 編集する前に、このボタンを行うことができます。 新しいボタンを作成するときに、[編集] ボタンの右側に別の空白ボタンが表示されます。 ツールバーを保存するときに空白のボタンは保存されません。  
+ 既定では、新規または空のボタンがツールバーの右端に表示されます。 編集する前に、このボタンを移動できます。 新しいボタンを作成するときに、[編集] ボタンの右側に空白のもう 1 つのボタンが表示されます。 ツールバーを保存するときに空白のボタンは保存されません。  
   
 -   [新しいツール バー ボタンを作成します。](creating-a-new-toolbar-button.md)  
   
@@ -44,11 +44,10 @@ ms.locfileid: "33871342"
   
 -   [編集ツールバーの [プロパティ] ページ](../windows/changing-the-properties-of-a-toolbar-button.md)  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 詳細については、管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションは、次を参照してください。[グローバライズと .NET Framework アプリケーションのローカライズ](/dotnet/standard/globalization-localization/index)です。  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
   
 ## <a name="requirements"></a>要件  
  MFC または ATL  
   
 ## <a name="see-also"></a>関連項目  
  [ツール バー エディター](../windows/toolbar-editor.md)
-

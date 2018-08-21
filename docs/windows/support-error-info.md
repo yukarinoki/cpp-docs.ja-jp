@@ -1,5 +1,5 @@
 ---
-title: support_error_info |Microsoft ドキュメント
+title: support_error_info |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,38 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0c366a379d15e50aabdc3c2157f57f85b6b5b33b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5e07d218158ff5615fbdc26a5f48b7cf828596ed
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889931"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014170"
 ---
 # <a name="supporterrorinfo"></a>support_error_info
 詳細なエラーを返すためのサポートを実装します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
-      [ support_error_info(  
+```cpp  
+[ support_error_info(  
    error_interface=uuid  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- **error_interface**  
- **IErrorInfo**を実装するインターフェイスの識別子。  
+### <a name="parameters"></a>パラメーター  
+ *error_interface*  
+ 実装するインターフェイスの識別子`IErrorInfo`します。  
   
-## <a name="remarks"></a>コメント  
- **support_error_info** C++ 属性は、ターゲット オブジェクトで発生した詳細なコンテキスト エラーをクライアントに返すためのサポートを実装します。 オブジェクトがエラーをサポートするには、 **IErrorInfo** インターフェイスのメソッドがオブジェクトによって実装されている必要があります。 詳細については、「 [IDispatch と IErrorInfo のサポート](../atl/supporting-idispatch-and-ierrorinfo.md)」を参照してください。  
+## <a name="remarks"></a>Remarks  
+ **support_error_info** C++ 属性は、ターゲット オブジェクトで発生した詳細なコンテキスト エラーをクライアントに返すためのサポートを実装します。 エラーのメソッドをサポートするために、オブジェクトの`IErrorInfo`オブジェクトでインターフェイスを実装する必要があります。 詳細については、「 [IDispatch と IErrorInfo のサポート](../atl/supporting-idispatch-and-ierrorinfo.md)」を参照してください。  
   
- この属性により、 [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) クラスが基本クラスとしてターゲット オブジェクトに追加されます。 その結果、 **ISupportErrorInfo** が既定で実装され、これを単一のインターフェイスでオブジェクトのエラーが生成される際に使用できるようになります。  
+ この属性により、 [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) クラスが基本クラスとしてターゲット オブジェクトに追加されます。 これは、結果の既定の実装、 `ISupportErrorInfo` 1 つのインターフェイスは、オブジェクトのエラーを生成するときに使用できます。  
   
 ## <a name="example"></a>例  
- 次のコードでは、 **ISupportErrorInfo** インターフェイスの既定のサポートが `CMyClass` オブジェクトに追加されます。  
+ 次のコードは、既定のサポートを追加、`ISupportErrorInfo`へのインターフェイス、`CMyClass`オブジェクト。  
   
-```  
+```cpp  
 // cpp_attr_ref_support_error_info.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  

@@ -1,5 +1,5 @@
 ---
-title: プラグマ |Microsoft ドキュメント
+title: プラグマ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cab41277a7e5560fd842bf720fd776961d918d99
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a9c9d347b319afc3ee84818e74029a98b1aa5484
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878149"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014300"
 ---
 # <a name="pragma"></a>pragma
-生成された .idl ファイルの引用符を使用せずに、指定した文字列を出力します。 である必要があります。  
+引用符を使用せず、生成された .idl ファイルには、指定した文字列を出力します。 
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
-      [ pragma(  
+```cpp  
+[ pragma(  
    pragma_statement  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *pragma_statement*  
- このプラグマは、生成された .idl ファイルに移動します。  
+ このプラグマは、生成された .idl ファイルにアクセスしたいです。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **プラグマ**C++ 属性と同じ機能を持つ、[プラグマ](http://msdn.microsoft.com/library/windows/desktop/aa367143)MIDL 属性。  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp  
 // cpp_attr_ref_pragma.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -66,7 +65,7 @@ __interface A
 |||  
 |-|-|  
 |**対象**|任意の場所|  
-|**反復可能**|×|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

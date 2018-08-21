@@ -1,5 +1,5 @@
 ---
-title: 文字列に文字書式または特殊文字を追加する |Microsoft ドキュメント
+title: 文字列に書式設定や特殊文字を追加する |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,24 +18,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 429ba8d836579bd3bc1d1dd8844494bf9cd17a7a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8ccfe36f4bbd14856b25d18bc83339ece2e98801
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864598"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644782"
 ---
 # <a name="adding-formatting-or-special-characters-to-a-string"></a>文字列への書式指定文字または特殊文字の追加
-### <a name="to-add-formatting-or-special-characters-to-a-string"></a>文字列に文字書式または特殊文字を追加するには  
+### <a name="to-add-formatting-or-special-characters-to-a-string"></a>文字列に書式設定や特殊文字を追加するには  
   
-1.  アイコンをダブルクリックして、文字列テーブルを開きます[リソース ビュー](../windows/resource-view-window.md)です。  
+1.  アイコンをダブルクリックして、文字列テーブルを開く[リソース ビュー](../windows/resource-view-window.md)します。  
   
     > [!NOTE]
     >  プロジェクトに .rc ファイルがまだ含まれていない場合は、「 [リソース スクリプト ファイルの新規作成](../windows/how-to-create-a-resource-script-file.md)」を参照してください。  
   
 2.  変更する文字列を選択します。  
   
-3.  [プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)、内のテキストの下にリストの標準のエスケープ シーケンスのいずれかの追加、**キャプション**ボックス、およびキーを押して**ENTER**です。  
+3.  [プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)、内のテキストには以下の標準のエスケープ シーケンスのいずれかの追加、**キャプション**ボックスで、キーを押します**Enter**します。  
   
     |これを取得するには|入力します。|  
     |-----------------|---------------|  
@@ -47,14 +47,12 @@ ms.locfileid: "33864598"
     |警告 (ベル)|\a|  
   
 > [!NOTE]
->  ストリング エディターは ASCI 文字のエスケープの完全なセットをサポートしていません。 上記のリストにのみ使用できます。  
+>  **文字列**エディターが ASCI のエスケープ文字の完全なセットをサポートしていません。 上記のリストにのみ使用できます。  
   
- マネージ プロジェクト (共通言語ランタイムを対象とするもの) にリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* 」を参照してください。マネージ プロジェクトにリソース ファイルを手動で追加する方法、リソースへのアクセス方法、静的なリソースの表示方法、リソース文字列をプロパティに割り当てる方法については、「 [チュートリアル : Windows フォームのローカリゼーション](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5) 」および「 [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)。  
+ マネージ プロジェクト (共通言語ランタイムを対象とするもの) にリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列をプロパティに割り当てる方法については、次を参照してください[チュートリアル: Windows フォームのローカリゼーション](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5)と[。チュートリアル: ASP.NET でのローカライズ用リソースを使用して](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)します。  
   
- **必要条件**  
-  
+## <a name="requirements"></a>要件 
  Win32  
   
 ## <a name="see-also"></a>関連項目  
  [ストリング エディター](../windows/string-editor.md)   
-

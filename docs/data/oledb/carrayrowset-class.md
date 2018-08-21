@@ -1,5 +1,5 @@
 ---
-title: CArrayRowset クラス |Microsoft ドキュメント
+title: CArrayRowset クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,22 +11,55 @@ f1_keywords:
 - CArrayRowset
 - ATL::CArrayRowset
 - ATL::CArrayRowset<TAccessor>
+- ATL::CArrayRowset::CArrayRowset
+- CArrayRowset.CArrayRowset
+- ATL.CArrayRowset.CArrayRowset
+- ATL.CArrayRowset<TAccessor>.CArrayRowset
+- CArrayRowset::CArrayRowset
+- CArrayRowset
+- CArrayRowset<TAccessor>::CArrayRowset
+- ATL::CArrayRowset<TAccessor>::CArrayRowset
+- CArrayRowset<TAccessor>.Snapshot
+- ATL::CArrayRowset::Snapshot
+- Snapshot
+- CArrayRowset<TAccessor>::Snapshot
+- ATL.CArrayRowset.Snapshot
+- ATL.CArrayRowset<TAccessor>.Snapshot
+- ATL::CArrayRowset<TAccessor>::Snapshot
+- CArrayRowset::Snapshot
+- CArrayRowset.Snapshot
+- CArrayRowset::operator[]
+- CArrayRowset.operator[]
+- ATL::CArrayRowset::m_nRowsRead
+- ATL::CArrayRowset<TAccessor>::m_nRowsRead
+- CArrayRowset<TAccessor>::m_nRowsRead
+- ATL.CArrayRowset<TAccessor>.m_nRowsRead
+- CArrayRowset.m_nRowsRead
+- m_nRowsRead
+- ATL.CArrayRowset.m_nRowsRead
+- CArrayRowset::m_nRowsRead
 dev_langs:
 - C++
 helpviewer_keywords:
 - CArrayRowset class
+- CArrayRowset class, constructor
+- Snapshot method
+- operator [], arrays
+- '[] operator'
+- operator[], arrays
+- m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 691776f39c54e843cec478c3c42871e7b7e81da1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b7975c91631df24ab12858677a770c38dc0f6411
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091103"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338913"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset クラス
 配列の構文を使用して行セットの要素をアクセスします。  
@@ -35,14 +68,17 @@ ms.locfileid: "33091103"
 
 ```cpp
 template < class TAccessor >  
-class CArrayRowset :   
-   public CVirtualBuffer <TAccessor>,   
+class CArrayRowset : 
+   public CVirtualBuffer <TAccessor>, 
    protected CBulkRowset <TAccessor>  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `TAccessor`  
- アクセサー クラスを使用する、行セットの種類。  
+### <a name="parameters"></a>パラメーター  
+ *TAccessor*  
+ 行セットで使用するアクセサー クラスの型。  
+
+## <a name="requirements"></a>要件  
+ **ヘッダー:** atldbcli.h  
   
 ## <a name="members"></a>メンバー  
   
@@ -50,23 +86,73 @@ class CArrayRowset :
   
 |||  
 |-|-|  
-|[CArrayRowset](../../data/oledb/carrayrowset-carrayrowset.md)|コンストラクターです。|  
-|[スナップショット](../../data/oledb/carrayrowset-snapshot.md)|行セット全体をメモリに読み込みます。|  
+|[CArrayRowset](#carrayrowset)|コンストラクターです。|  
+|[スナップショット](#snapshot)|行セット全体をメモリに読み込みます。|  
   
 ### <a name="operators"></a>演算子  
   
 |||  
 |-|-|  
-|[演算子&#91;&#93;](../../data/oledb/carrayrowset-operator.md)|行セットの要素にアクセスします。|  
+|[演算子&#91;&#93;](#operator)|行セットの要素にアクセスします。|  
   
 ### <a name="data-members"></a>データ メンバー  
   
 |||  
 |-|-|  
-|[CArrayRowset::m_nRowsRead](../../data/oledb/carrayrowset-m-nrowsread.md)|既に読み取られた行の数。|  
+|[CArrayRowset::m_nRowsRead](#nrowsread)|既に読み取られた行の数。|  
   
-## <a name="requirements"></a>要件  
- **ヘッダー:** atldbcli.h  
+## <a name="carrayrowset"></a> Carrayrowset::carrayrowset
+新しい `CArrayRowset` オブジェクトを作成します。  
+  
+### <a name="syntax"></a>構文  
+  
+```cpp
+CArrayRowset(int nMax = 100000);  
+```  
+  
+#### <a name="parameters"></a>パラメーター  
+ *nMax*  
+ [in]行セットの行の最大数。 
+
+## <a name="snapshot"></a> Carrayrowset::snapshot
+メモリ、イメージまたはそのスナップショットを作成するのには、行セット全体を読み取ります。  
+  
+### <a name="syntax"></a>構文  
+  
+```cpp
+HRESULT Snapshot() throw();  
+```  
+
+## <a name="operator"></a> Carrayrowset:
+行セット内の行にアクセスするためには、配列に似た構文を提供します。  
+  
+### <a name="syntax"></a>構文  
+  
+```cpp
+TAccessor & operator[](int nrow);  
+```  
+  
+#### <a name="parameters"></a>パラメーター  
+ *TAccessor*  
+ 行セットに格納されているアクセサーの種類を指定するテンプレート パラメーター。  
+  
+ *nRow*  
+ [in] (配列) にアクセスする、行の数です。  
+  
+### <a name="return-value"></a>戻り値  
+ 要求された行の内容。  
+  
+### <a name="remarks"></a>Remarks  
+ 場合*nRow*行セットの行の数を超える、例外がスローされます。  
+
+## <a name="nrowsread"></a> Carrayrowset::m_nrowsread
+既に読み取られた行セット内の行の数が含まれています。  
+  
+### <a name="syntax"></a>構文  
+  
+```cpp
+ULONG m_nRowsRead;  
+```  
   
 ## <a name="see-also"></a>関連項目  
  [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)   

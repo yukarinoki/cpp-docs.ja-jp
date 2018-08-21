@@ -1,5 +1,5 @@
 ---
-title: Eventsource::add メソッド |Microsoft ドキュメント
+title: Eventsource::add メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92af8746b4d2b5ba2f379cc8660b5345b2c5f175
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 65e8576f069cce7d7aec2eae18ad577820ca93a4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873239"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644743"
 ---
 # <a name="eventsourceadd-method"></a>EventSource::Add メソッド
-現在の EventSource オブジェクトのイベント ハンドラーのセットを指定したデリゲート インターフェイスによって表されるイベント ハンドラーを追加します。  
+現在のイベント ハンドラーのセットを指定したデリゲート インターフェイスによって表されるイベント ハンドラーを追加します。 **EventSource**オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Add(  
    _In_ TDelegateInterface* delegateInterface,  
    _Out_ EventRegistrationToken* token  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `delegateInterface`  
- インターフェイス、デリゲート オブジェクト、イベント ハンドラーを表します。  
+### <a name="parameters"></a>パラメーター  
+ *delegateInterface*  
+ イベント ハンドラーを表すデリゲート オブジェクトのインターフェイスです。  
   
- `token`  
- この操作の完了時、イベントを表すハンドル。 パラメーターとしてこのトークンを使用して、 [Remove()](../windows/eventsource-remove-method.md)メソッドをイベント ハンドラーを破棄します。  
+ *token*  
+ この操作の完了時、イベントを表すハンドルです。 パラメーターとしてこのトークンを使用して、 [Remove()](../windows/eventsource-remove-method.md)メソッドをイベント ハンドラーを破棄します。  
   
 ## <a name="return-value"></a>戻り値  
  成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。  

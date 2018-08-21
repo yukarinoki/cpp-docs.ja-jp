@@ -1,5 +1,5 @@
 ---
-title: 文字列 (C++ コンポーネント拡張) |Microsoft ドキュメント
+title: 文字列 (C++ コンポーネント拡張) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cfab95c400aad949f06a559fffbdb42993910bb7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9d7717c8449dd1a9271878aa51571180b85584d1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889246"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017917"
 ---
 # <a name="string--c-component-extensions"></a>文字列 (C++ コンポーネント拡張)
-Visual C コンパイラ サポート*文字列*、これは、文字のシーケンスとしてテキストを表すオブジェクト。 Visual C++ では、文字列の変数 (暗黙的な値) とリテラル (文字列が引用符で囲まれた明示的な値) をサポートしています。  
+Visual C のコンパイラ サポート*文字列*、これらは文字のシーケンスとしてテキストを表すオブジェクトです。 Visual C++ では、文字列の変数 (暗黙的な値) とリテラル (文字列が引用符で囲まれた明示的な値) をサポートしています。  
   
 ## <a name="all-runtimes"></a>すべてのランタイム  
- Windows ランタイムと共通言語ランタイムでは、割り当てられたメモリを自動的に管理するオブジェクトとして文字列を表します。 つまり、文字列変数がスコープから外れたりアプリケーションが終了したりしたときに文字列のメモリを明示的に破棄する必要はありません。 文字列オブジェクトの有効期間が自動的に管理されることを示す、文字列型を宣言、[オブジェクトのハンドル (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)修飾子です。  
+ Windows ランタイムと共通言語ランタイムでは、割り当てられたメモリを自動的に管理するオブジェクトとして文字列を表します。 つまり、文字列変数がスコープから外れたりアプリケーションが終了したりしたときに文字列のメモリを明示的に破棄する必要はありません。 文字列オブジェクトの有効期間が自動的に管理することを示す、文字列型を宣言、[オブジェクトのハンドル (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)修飾子。  
   
 ## <a name="windows-runtime"></a>Windows ランタイム  
  Windows ランタイムのアーキテクチャでは、Visual C++ で `String` 名前空間の `Platform` データ型を実装する必要があります。 これを簡単にするために、Visual C++ では、`string` のシノニムとして、`Platform::String` 名前空間に用意されている `default` データ型を使用することもできます。  
@@ -41,19 +41,18 @@ using namespace default;
    Platform::String^ MyString1 = "The quick brown fox";  
    String^ MyString2 = "jumped over the lazy dog.";  
    String^ MyString3 = "Hello, world!";  
-  
 ```  
   
-### <a name="remarks"></a>コメント  
- 詳細と文字列の例については、次を参照してください[platform::string、std::wstring、およびリテラル (プラットフォーム)。](http://msdn.microsoft.com/en-us/ec92fbc6-edf3-4137-a85e-8e29bdb857a8)  
+### <a name="remarks"></a>Remarks  
+ 詳細と例については、文字列は、次を参照してください[platform::string、std::wstring、およびリテラル (プラットフォーム)。](http://msdn.microsoft.com/ec92fbc6-edf3-4137-a85e-8e29bdb857a8)  
   
 ### <a name="requirements"></a>要件  
- コンパイラ オプション: **/ZW**  
+ コンパイラ オプション: `/ZW`  
   
 ## <a name="common-language-runtime"></a>共通言語ランタイム  
- このトピックを使用して実行する場合に、Visual C コンパイラがリテラル文字列を処理する方法について説明します、 **/clr**コンパイラ オプション。 使用する **/clr**、共通言語ランタイム (CLR)、C + を使用することも必要があります。 +/CLI 構文とマネージ オブジェクトです。 詳細については **/clr**を参照してください[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)です。  
+ ここでは、`/clr` コンパイラ オプションを使用して文字列リテラルを実行したときに Visual C++ コンパイラでどのように処理されるかについて説明します。 `/clr` を使用するには、共通言語ランタイム (CLR) に加え、C++/CLI の構文とマネージド オブジェクトも使用する必要があります。 詳細については`/clr`を参照してください[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)します。  
   
- コンパイルするときに **/clr**、コンパイラは型の文字列にリテラル文字列を変換<xref:System.String>です。 これには、既存のコードとの下位互換性を維持するために 2 つの例外があります。  
+ `/clr` を指定してコンパイルする場合、文字列リテラルは <xref:System.String> 型の文字列に変換されます。 これには、既存のコードとの下位互換性を維持するために 2 つの例外があります。  
   
 -   例外処理。 文字列リテラルがスローされた場合は文字列リテラルとしてキャッチされます。  
   
@@ -70,15 +69,14 @@ using namespace default;
  コンパイラに <xref:System.String> が渡されると、必要に応じてボックス化されてから、オブジェクトが文字列と連結されます (ToString を使用)。  
   
 > [!NOTE]
->  カレット ("^") は、宣言された変数が C++/CLI のマネージ オブジェクトに対するハンドルであることを示します。  
+>  カレット ("^") は、宣言された変数が C++/CLI のマネージド オブジェクトに対するハンドルであることを示します。  
   
- 詳細については、次を参照してください。[文字列リテラルと文字リテラル](../cpp/string-and-character-literals-cpp.md)です。  
+ 詳細については、次を参照してください。 [String and Character Literals](../cpp/string-and-character-literals-cpp.md)します。  
   
 ### <a name="requirements"></a>要件  
  コンパイラ オプション: **/clr**  
   
 ### <a name="examples"></a>使用例  
- **例**  
   
  文字列を連結して比較するコード例を次に示します。  
   
@@ -137,8 +135,6 @@ int main() {
 }  
 ```  
   
- **出力**  
-  
 ```Output  
 abcdef  
   
@@ -168,8 +164,6 @@ abc
   
 n is empty  
 ```  
-  
- **例**  
   
  コンパイラで提供される演算子をオーバーロードする例を次に示します。コンパイラでは、<xref:System.String> 型に基づいて関数のオーバーロードを探します。  
   
@@ -217,8 +211,6 @@ int main() {
 }  
 ```  
   
- **出力**  
-  
 ```Output  
 overloaded +(String ^ a, String ^ b)   
   
@@ -230,8 +222,6 @@ String ^ a
   
 const char * a  
 ```  
-  
- **例**  
   
  コンパイラでネイティブの文字列と <xref:System.String> 文字列を区別する例を次に示します。  
   
@@ -272,8 +262,6 @@ int main() {
 }  
 ```  
   
- **出力**  
-  
 ```Output  
 char *  
   
@@ -285,6 +273,6 @@ System.String
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)   
+ [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)   
  [文字列リテラルと文字リテラル](../cpp/string-and-character-literals-cpp.md)   
  [/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)

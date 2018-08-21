@@ -1,5 +1,5 @@
 ---
-title: Semaphoretraits::unlock メソッド |Microsoft ドキュメント
+title: Semaphoretraits::unlock メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0914c6ff83e881f92963fc8a548ddeff587db75e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 81f2214ef6a3e33b573a88ac4e23ae6aad64ea01
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892248"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015691"
 ---
 # <a name="semaphoretraitsunlock-method"></a>SemaphoreTraits::Unlock メソッド
-共有リソースのリリースのコントロールです。  
+共有リソースのコントロールをリリースします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 inline static void Unlock(  
    _In_ Type h  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `h`  
- セマフォ オブジェクトへのハンドルします。  
+### <a name="parameters"></a>パラメーター  
+ *h*  
+ ハンドルを**セマフォ**オブジェクト。  
   
-## <a name="remarks"></a>コメント  
- ロック解除の操作が成功しなかった場合、Unlock() は、エラーの原因を示すエラーを出力します。  
+## <a name="remarks"></a>Remarks  
+ 場合は、ロック解除操作が成功すると、 **Unlock()** エラーの原因を示すエラーを出力します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

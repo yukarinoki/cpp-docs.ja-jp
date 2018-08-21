@@ -1,5 +1,5 @@
 ---
-title: Microsoft::WRL::Wrappers::HandleTraits Namespace |Microsoft ドキュメント
+title: Microsoft::WRL::Wrappers::HandleTraits Namespace |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b114d067249e78d7fb935e473cc3cc952c76fe02
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c83b921aabeee34b583c8f771190ecf60edccb59
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878035"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015812"
 ---
 # <a name="microsoftwrlwrappershandletraits-namespace"></a>Microsoft::WRL::Wrappers::HandleTraits 名前空間
 一般的なハンドル ベースのリソースの種類の特性について説明します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 namespace Microsoft::WRL::Wrappers::HandleTraits;  
 ```  
   
@@ -39,15 +39,15 @@ namespace Microsoft::WRL::Wrappers::HandleTraits;
   
 |名前|説明|  
 |----------|-----------------|  
-|[CriticalSectionTraits 構造体](../windows/criticalsectiontraits-structure.md)|特殊化した、`CriticalSection`無効な重要なセクションまたは重要なセクションを解除する機能をサポートするオブジェクト。|  
+|[CriticalSectionTraits 構造体](../windows/criticalsectiontraits-structure.md)|専門、`CriticalSection`無効のクリティカル セクションまたはクリティカル セクションを解放する関数をサポートするオブジェクト。|  
 |[EventTraits 構造体](../windows/eventtraits-structure.md)|特性を定義、`Event`クラスのハンドル。|  
 |[FileHandleTraits 構造体](../windows/filehandletraits-structure.md)|ファイル ハンドルの特性を定義します。|  
-|[HANDLENullTraits 構造体](../windows/handlenulltraits-structure.md)|初期化されていないハンドルの共通の特性を定義します。|  
-|[HANDLETraits 構造体](../windows/handletraits-structure.md)|ハンドルの共通の特性を定義します。|  
-|[MutexTraits 構造体](../windows/mutextraits-structure.md)|一般的な特性を定義、[ミュー テックス](../windows/mutex-class1.md)クラスです。|  
-|[SemaphoreTraits 構造体](../windows/semaphoretraits-structure.md)|セマフォ オブジェクトの共通の特性を定義します。|  
-|[SRWLockExclusiveTraits 構造体](../windows/srwlockexclusivetraits-structure.md)|一般的な特性を記述、`SRWLock`排他ロックのモードでのクラスです。|  
-|[SRWLockSharedTraits 構造体](../windows/srwlocksharedtraits-structure.md)|一般的な特性を記述、`SRWLock`共有ロック モードでのクラスです。|  
+|[HANDLENullTraits 構造体](../windows/handlenulltraits-structure.md)|初期化されていないハンドルの一般的な特性を定義します。|  
+|[HANDLETraits 構造体](../windows/handletraits-structure.md)|ハンドルの一般的な特性を定義します。|  
+|[MutexTraits 構造体](../windows/mutextraits-structure.md)|一般的な特性を定義、[ミュー テックス](../windows/mutex-class1.md)クラス。|  
+|[SemaphoreTraits 構造体](../windows/semaphoretraits-structure.md)|セマフォ オブジェクトの一般的な特性を定義します。|  
+|[SRWLockExclusiveTraits 構造体](../windows/srwlockexclusivetraits-structure.md)|一般的な特性について説明します、`SRWLock`排他ロック モードでのクラス。|  
+|[SRWLockSharedTraits 構造体](../windows/srwlocksharedtraits-structure.md)|一般的な特性について説明します、`SRWLock`共有ロック モードでのクラス。|  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

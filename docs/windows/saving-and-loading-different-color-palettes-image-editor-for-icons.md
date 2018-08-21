@@ -1,5 +1,5 @@
 ---
-title: 保存するさまざまなカラー パレットと読み込み (アイコン用イメージ エディター) |Microsoft ドキュメント
+title: 保存と読み込み、さまざまなカラー パレット (アイコン用イメージ エディター) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,22 +21,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8b96411341baeb6abb75c44063072b94fae3ac6a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b990046e4f43e70218fc1a7f6eb885638c2051bf
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892320"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015944"
 ---
 # <a name="saving-and-loading-different-color-palettes-image-editor-for-icons"></a>さまざまなカラー パレットの保存と読み込み (アイコン用イメージ エディター)
-保存して含むカラー パレットを読み込む、[色をカスタマイズ](../windows/customizing-or-changing-colors-image-editor-for-icons.md)です。 既定では、Visual Studio を起動すると、前回使用したカラー パレットが自動的に読み込まれます。  
+保存して読み込む、**色**が含まれるパレット[色をカスタマイズ](../windows/customizing-or-changing-colors-image-editor-for-icons.md)します。 (既定で、**色**Visual Studio を起動すると、最も最近使用したパレットが自動的に読み込まれます)。  
   
 > [!TIP]
->  イメージ エディターには既定のカラー パレットを復元する手段がないため、既定の設定を簡単に復元できるように、既定のカラー パレットに "standard.pal" や "default.pal" などの名前を付けて保存する必要があります。  
+>  以降、**イメージ**エディターは既定値を復元する手段を持たない**色**パレットで、既定値を保存する必要があります**色**パレットなどの名前で *"standard.pal"* または *"default.pal"* 既定の設定を簡単に復元できるようにします。  
   
 ### <a name="to-save-a-custom-colors-palette"></a>カスタム カラー パレットを保存するには  
   
-1.  **イメージ**] メニューの [選択**パレットの保存**です。  
+1.  **イメージ**] メニューの [選択**パレットの保存**します。  
   
 2.  パレットを保存するディレクトリに移動し、パレット名を入力します。  
   
@@ -44,14 +44,11 @@ ms.locfileid: "33892320"
   
 ### <a name="to-load-a-custom-colors-palette"></a>カスタム カラー パレットを読み込むには  
   
-1.  **イメージ**] メニューの [選択**パレットの読み込み**です。  
+1.  **イメージ**] メニューの [選択**パレットの読み込み**します。  
   
-2.  [カラー パレットの読み込み ダイアログ ボックス](../windows/load-palette-colors-dialog-box-image-editor-for-icons.md)、適切なディレクトリに移動し、読み込むパレットを選択します。 カラー パレットは、拡張子 .pal を付けて保存されています。  
+2.  [カラー パレットの読み込み ダイアログ ボックス](../windows/load-palette-colors-dialog-box-image-editor-for-icons.md)、適切なディレクトリに移動し、読み込むパレットを選択します。 **色**パレットは、拡張子 .pal と共に保存されます。  
   
-
-  
- 要件  
-  
+## <a name="requirements"></a>要件  
  なし  
   
 ## <a name="see-also"></a>関連項目  

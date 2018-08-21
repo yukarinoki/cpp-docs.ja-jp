@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5b1843331afc6fa686446e7b3d7515d8701b9cf
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 24f9e4e5b3d157f23c18d46f2857b29e6960e82e
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026212"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405757"
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>コピー コンストラクターとコピー代入演算子 (C++)
 > [!NOTE]
@@ -94,4 +94,3 @@ int main()
  影響はコピー コンストラクターの影響と似ています。 引数の型がない**const**からの割り当て、 **const**オブジェクト、エラーが発生します。 逆はできません: 場合、 **const**値がない値に割り当てられている**const**割り当てが成功するとします。  
   
  オーバー ロードされた代入演算子の詳細については、次を参照してください。[割り当て](../cpp/assignment.md)します。  
-  

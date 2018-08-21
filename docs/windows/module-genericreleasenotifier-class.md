@@ -1,5 +1,5 @@
 ---
-title: Module::genericreleasenotifier クラス |Microsoft ドキュメント
+title: Module::genericreleasenotifier クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c3ba58e08bac36d905fbf874546d7791f2aa3fcb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ba92e459ffb26ffc1bbb9239a843d628e7041d6d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882009"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013520"
 ---
 # <a name="modulegenericreleasenotifier-class"></a>Module::GenericReleaseNotifier クラス
-現在のモジュールの最後のオブジェクトを解放すると、イベント ハンドラーを呼び出します。 イベント ハンドラーは、ラムダ、ファンクタ、または関数へのポインターによって指定されます。  
+現在のモジュールの最後のオブジェクトがリリースされたときに、イベント ハンドラーを呼び出します。 イベント ハンドラーは、ラムダをファンクター、または関数へのポインターによって指定されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename T>  
 class GenericReleaseNotifier : public ReleaseNotifier;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `T`  
- イベント ハンドラーの場所が含まれているデータ メンバーの型。  
+### <a name="parameters"></a>パラメーター  
+ *T*  
+ イベント ハンドラーの場所を含むデータ メンバーの型。  
   
 ## <a name="members"></a>メンバー  
   
@@ -44,19 +44,19 @@ class GenericReleaseNotifier : public ReleaseNotifier;
   
 |名前|説明|  
 |----------|-----------------|  
-|[Module::GenericReleaseNotifier::GenericReleaseNotifier コンストラクター](../windows/module-genericreleasenotifier-genericreleasenotifier-constructor.md)|Module::genericreleasenotifier クラスの新しいインスタンスを初期化します。|  
+|[Module::GenericReleaseNotifier::GenericReleaseNotifier コンストラクター](../windows/module-genericreleasenotifier-genericreleasenotifier-constructor.md)|新しいインスタンスを初期化、 **module::genericreleasenotifier**クラス。|  
   
 ### <a name="public-methods"></a>パブリック メソッド  
   
 |名前|説明|  
 |----------|-----------------|  
-|[Module::GenericReleaseNotifier::Invoke メソッド](../windows/module-genericreleasenotifier-invoke-method.md)|Module::genericreleasenotifier の現在のオブジェクトに関連付けられているイベント ハンドラーを呼び出します。|  
+|[Module::GenericReleaseNotifier::Invoke メソッド](../windows/module-genericreleasenotifier-invoke-method.md)|現在関連付けられているイベント ハンドラーを呼び出す**module::genericreleasenotifier**オブジェクト。|  
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
-|[Module::GenericReleaseNotifier::callback_ データ メンバー](../windows/module-genericreleasenotifier-callback-data-member.md)|ラムダ、ファンクタ、または現在の module::genericreleasenotifier オブジェクトに関連付けられている関数へのポインターのイベント ハンドラーが保持されます。|  
+|[Module::GenericReleaseNotifier::callback_ データ メンバー](../windows/module-genericreleasenotifier-callback-data-member.md)|ラムダ、ファンクター、または現在に関連付けられている関数へのポインター イベント ハンドラーを保持**module::genericreleasenotifier**オブジェクト。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `ReleaseNotifier`  

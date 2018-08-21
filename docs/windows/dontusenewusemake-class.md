@@ -1,5 +1,5 @@
 ---
-title: DontUseNewUseMake クラス |Microsoft ドキュメント
+title: DontUseNewUseMake クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f343d0b47d50cd375d186c29ff55b91898aa9c61
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 32418b163cb31f5eaf20c9d2b3ff3a4b585850dd
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872329"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644100"
 ---
 # <a name="dontusenewusemake-class"></a>DontUseNewUseMake クラス
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 class DontUseNewUseMake;  
 ```  
   
-## <a name="remarks"></a>コメント  
- 演算子を使用できないように`new`RuntimeClass にします。 したがって、使用する必要があります、[関数](../windows/make-function.md)代わりにします。  
+## <a name="remarks"></a>Remarks  
+ 演算子を使用できないように**新しい**で`RuntimeClass`します。 したがって、使用する必要があります、[関数](../windows/make-function.md)代わりにします。  
   
 ## <a name="members"></a>メンバー  
   
@@ -42,7 +42,7 @@ class DontUseNewUseMake;
   
 |名前|説明|  
 |----------|-----------------|  
-|[DontUseNewUseMake::operator new 演算子](../windows/dontusenewusemake-operator-new-operator.md)|演算子をオーバー ロード`new`と RuntimeClass で使用されていることを防ぎます。|  
+|[DontUseNewUseMake::operator new 演算子](../windows/dontusenewusemake-operator-new-operator.md)|演算子をオーバー ロード**新しい**しで使用されていることを防ぎます`RuntimeClass`します。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `DontUseNewUseMake`  

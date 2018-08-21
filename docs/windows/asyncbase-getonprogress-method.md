@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::getonprogress メソッド |Microsoft ドキュメント
+title: Asyncbase::getonprogress メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 83af39180da819349e95051c57dc137835db87bb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9446c94039db0ff81826e77d71a2a9539be4b276
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859541"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643148"
 ---
 # <a name="asyncbasegetonprogress-method"></a>AsyncBase::GetOnProgress メソッド
-指定された変数に現在の進行状況イベント ハンドラーのアドレスをコピーします。  
+指定された変数には、現在の進行状況イベント ハンドラーのアドレスをコピーします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 STDMETHOD(  
    GetOnProgress  
 )(TProgress** progressHandler);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `progressHandler`  
+### <a name="parameters"></a>パラメーター  
+ *progressHandler*  
  現在の進行状況イベント ハンドラーのアドレスが格納されている場所です。  
   
 ## <a name="return-value"></a>戻り値  
- 正常終了した場合は S_OK、それ以外の場合、E_ILLEGAL_METHOD_CALL です。  
+ 成功した場合は s_ok を返します。それ以外の場合、E_ILLEGAL_METHOD_CALL します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** async.h  

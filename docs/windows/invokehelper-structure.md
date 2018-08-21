@@ -1,5 +1,5 @@
 ---
-title: InvokeHelper 構造体 |Microsoft ドキュメント
+title: InvokeHelper 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b612530c1a29588cd837b2cdbeef37faf84c8b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6317dc4312e1f6379081353ff18444832f61f995
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880408"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019905"
 ---
 # <a name="invokehelper-structure"></a>InvokeHelper 構造体
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<  
    typename TDelegateInterface,  
    typename TCallback,  
@@ -88,16 +88,16 @@ template<
 struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeClass<RuntimeClassFlags<Delegate>, TDelegateInterface>;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `TDelegateInterface`  
- `TCallback`  
+### <a name="parameters"></a>パラメーター  
+ *TDelegateInterface*  
+ *TCallback*  
  イベント ハンドラー関数の型。  
   
- `argCount`  
- InvokeHelper の特殊化で引数の数。  
+ *について*  
+ 引数の数、 **InvokeHelper**特殊化します。  
   
-## <a name="remarks"></a>コメント  
- 指定した数値と引数の型に基づく Invoke() メソッドの実装を提供します。  
+## <a name="remarks"></a>Remarks  
+ 実装を提供、`Invoke()`方法、指定した数値と引数の型に基づいています。  
   
 ## <a name="members"></a>メンバー  
   
@@ -111,7 +111,7 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeC
   
 |名前|説明|  
 |----------|-----------------|  
-|[InvokeHelper::InvokeHelper コンストラクター](../windows/invokehelper-invokehelper-constructor.md)|InvokeHelper クラスの新しいインスタンスを初期化します。|  
+|[InvokeHelper::InvokeHelper コンストラクター](../windows/invokehelper-invokehelper-constructor.md)|新しいインスタンスを初期化、 **InvokeHelper**クラス。|  
   
 ### <a name="public-methods"></a>パブリック メソッド  
   

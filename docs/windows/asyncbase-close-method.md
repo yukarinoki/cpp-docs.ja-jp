@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::close メソッド |Microsoft ドキュメント
+title: Asyncbase::close メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4f3f36656b9316fb6ad980349a836fad31c3a9a0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3ce391e95aa9e08ae7d99e3cbdf064721ce21dbe
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860796"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643538"
 ---
 # <a name="asyncbaseclose-method"></a>AsyncBase::Close メソッド
 非同期操作を閉じます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 STDMETHOD(  
    Close  
 )(void) override;  
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 操作が終了またはである場合は S_OK が閉じられました。それ以外の場合、E_ILLEGAL_STATE_CHANGE です。  
+ 操作を閉じるかまたは既に場合は S_OK が閉じられました。それ以外の場合、E_ILLEGAL_STATE_CHANGE します。  
   
-## <a name="remarks"></a>コメント  
- Close() は、IAsyncInfo::Close の既定の実装は、実際の作業は行われません。 実際には、非同期操作を閉じます OnClose() 純粋仮想メソッドをオーバーライドします。  
+## <a name="remarks"></a>Remarks  
+ **Close()** の既定の実装は、 `IAsyncInfo::Close`、実際の作業を行いません。 実際に閉じる非同期操作には、オーバーライド、`OnClose()`純粋仮想メソッド。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** async.h  

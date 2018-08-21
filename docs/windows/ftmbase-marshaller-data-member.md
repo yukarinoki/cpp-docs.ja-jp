@@ -1,5 +1,5 @@
 ---
-title: Ftmbase::marshaller _ データ メンバー |Microsoft ドキュメント
+title: Ftmbase::marshaller _ データ メンバー |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a221cc7d460ed7db2a9eab6cc1ac2ea0200bbf92
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 37ad18c3daf6aee24c2e7c0c4c08c35caf87a602
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872703"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642037"
 ---
 # <a name="ftmbasemarshaller-data-member"></a>FtmBase::marshaller_ データ メンバー
 フリー スレッド マーシャラーへの参照を保持します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 Microsoft::WRL::ComPtr<IMarshal> marshaller_; ;  
 ```  
   

@@ -51,19 +51,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a41b52b07d5f3abc290773bd7c96ca82d1b698a8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03b0ce2c9bd205f9065c783a4ff4d7e50d0ff803
+ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416276"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39181160"
 ---
 # <a name="strrchr-wcsrchr-mbsrchr-mbsrchrl"></a>strrchr、wcsrchr、_mbsrchr、_mbsrchr_l
 
 文字列をスキャンして最後に出現する文字を検索します。
 
 > [!IMPORTANT]
-> **_mbsrchr**と **_mbsrchr_l** Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> `_mbsrchr` および `_mbsrchr_l` は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -134,40 +134,40 @@ NULL で終わる検索対象の文字列。
 
 ## <a name="return-value"></a>戻り値
 
-最後に見つかった位置のポインターを返します*c*で*str*、または**NULL**場合*c*が見つかりません。
+最後に見つかったにポインターを返します*c*で*str*場合は、NULL または*c*が見つかりません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Strrchr**関数の最後に見つかった位置を検索する*c* (に変換**char**) で*str*です。 検索には、終端の null 文字が含まれます。
+`strrchr`関数検索の最後に見つかった*c* (に変換**char**) で*str*します。 検索には、終端の null 文字が含まれます。
 
-**wcsrchr**と **_mbsrchr**のワイド文字とマルチバイト文字バージョンは、 **strrchr**です。 引数と戻り値の**wcsrchr**ワイド文字は、文字列以外の **_mbsrchr**マルチバイト文字列です。
+`wcsrchr` 関数と `_mbsrchr` 関数は、`strrchr` 関数のワイド文字バージョンとマルチバイト文字バージョンです。 `wcsrchr` 関数の引数と戻り値はワイド文字列で、`_mbsrchr` 関数の引数と戻り値はマルチバイト文字列です。
 
-C では、これらの関数が受け取る、* * const * *、最初の引数のポインター。 C++ では、2 つのオーバーロードを使用できます。 ポインターを受け取るオーバー ロード * * const * * へのポインターを返します**const **; へのポインターを受け取る非**const * * へのポインターを返しますではない**const**です。マクロ **_CRT_CONST_CORRECT_OVERLOADS**場合は、両方が定義されている、 **const * * と非-** const * * これらの関数のバージョンを利用できます。必要な以外の場合**const * * 両方の C++ オーバー ロードの動作のシンボルを定義する **_CONST_RETURN**です。
+C では、これらの関数の実行、 **const**最初の引数のポインター。 C++ では、2 つのオーバーロードを使用できます。 ポインターを受け取るオーバー ロード**const**へのポインターを返します**const**; へのポインターを受け取る非バージョン**const**へのポインターを返す非**定数**. マクロ _CRT_CONST_CORRECT_OVERLOADS が定義されている場合は、両方の**const**と非-**const**これらの関数のバージョンを利用できます。 必要な以外の場合**const**両方の C++ オーバー ロードの動作は、シンボル _CONST_RETURN を定義します。
 
-**_mbsrchr**パラメーターを検証します。 場合*str*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL**と **_mbsrchr** 0 を返します。 **strrchr**と**wcsrchr**はそのパラメーターを検証しません。 それ以外では、これらの関数の動作は同じです。
+`_mbsrchr` はそのパラメーターを検証します。 場合*str*が null の場合、無効なパラメーター ハンドラーが呼び出される」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)。 続けるには、実行が許可された場合`errno`EINVAL に設定されていると`_mbsrchr`0 を返します。 `strrchr` および `wcsrchr` は、パラメーターを検証しません。 それ以外では、これらの関数の動作は同じです。
 
-出力値の設定の影響を受けた、 **LC_CTYPE**カテゴリ; 詳細については、ロケールの設定、表示[setlocale、_wsetlocale](setlocale-wsetlocale.md)です。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの LC_CTYPE カテゴリの設定の設定の影響を受ける詳細については、次を参照してください。 [setlocale](setlocale-wsetlocale.md)します。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcsrchr**|**strrchr**|**_mbsrchr**|**wcsrchr**|
-|**該当なし**|**該当なし**|**_mbsrchr_l**|**該当なし**|
+|`_tcsrchr`|`strrchr`|`_mbsrchr`|`wcsrchr`|
+|**該当なし**|**該当なし**|`_mbsrchr_l`|**該当なし**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**strrchr**|\<string.h>|
-|**wcsrchr**|\<string.h> または \<wchar.h>|
-|**_mbsrchr**、 **_mbsrchr_l**|\<mbstring.h>|
+|`strrchr`|\<string.h>|
+|`wcsrchr`|\<string.h> または \<wchar.h>|
+|`_mbsrchr`, `_mbsrchr_l`|\<mbstring.h>|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-使用する例については**strrchr**を参照してください[strchr](strchr-wcschr-mbschr-mbschr-l.md)です。
+`strrchr` の使用例については、「[strchr](strchr-wcschr-mbschr-mbschr-l.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

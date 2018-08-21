@@ -1,5 +1,5 @@
 ---
-title: Makeallocator::allocate メソッド |Microsoft ドキュメント
+title: Makeallocator::allocate メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0e8d387dea7687ad61d85f975d58aa47489266d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3252096216757c34e93933bcdd91f9da2c5bb14f
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876217"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015970"
 ---
 # <a name="makeallocatorallocate-method"></a>MakeAllocator::Allocate メソッド
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 __forceinline void* Allocate();  
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合、割り当てられたメモリ; へのポインターそれ以外の場合、`nullptr`です。  
+ 成功した場合、割り当てられたメモリ; へのポインターそれ以外の場合、 **nullptr**します。  
   
-## <a name="remarks"></a>コメント  
- メモリが割り当てられ、現在 MakeAllocator オブジェクトに関連付けます。  
+## <a name="remarks"></a>Remarks  
+ メモリを割り当て、現在のそれに**MakeAllocator**オブジェクト。  
   
- 割り当てられたメモリのサイズは、現在の MakeAllocator テンプレート パラメーターで指定された型のサイズです。  
+ 割り当てられたメモリのサイズは、現在指定された型のサイズ**MakeAllocator**テンプレート パラメーター。  
   
- 開発者は、異なるメモリ割り当てのモデルを実装する Allocate() メソッドのみをオーバーライドする必要があります。  
+ だけをオーバーライドする必要がある開発者、 **Allocate()** さまざまなメモリの割り当てモデルを実装するメソッド。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** implements.h  

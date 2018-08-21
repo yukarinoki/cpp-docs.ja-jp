@@ -1,5 +1,5 @@
 ---
-title: '方法: リソース スクリプト ファイルを作成 |Microsoft ドキュメント'
+title: '方法: リソース スクリプト ファイルの作成 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a15352640a39ff6adc3b5a956a1f32c9fd414272
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8da6d316050120e6eaac31b12998e5dbf0f3a012
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875524"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020266"
 ---
 # <a name="how-to-create-a-resource-script-file"></a>方法: リソース スクリプト ファイルを作成する
 > [!NOTE]
->  リソース エディターは Express Edition では使用できません。  
+>  **リソース エディター** Express エディションでは使用できません。  
 >   
 >  これは Windows デスクトップ アプリケーションだけに適用できます。 .NET 言語のプロジェクトでは、リソース スクリプト ファイルを使用しません。 詳細については、「 [リソース ファイル (Visual Studio)](../windows/resource-files-visual-studio.md)」を参照してください。  
   
 ### <a name="to-create-a-new-resource-script-rc-file"></a>リソース スクリプト (.rc) ファイルを新規作成するには  
   
-1.  `Solution Explorer`で、"MyProject" などの既存のプロジェクト フォルダーにフォーカスを移します。  
+1.  既存のプロジェクト フォルダーにフォーカスを移す**ソリューション エクスプ ローラー**、たとえば、`MyProject`します。  
   
     > [!NOTE]
-    >  プロジェクト フォルダーをソリューション エクスプローラーの [ソリューション] フォルダーと混同しないでください。 [ソリューション] フォルダーにフォーカスを移すと、**[新しい項目の追加]** ダイアログ ボックスで選択した項目 (手順 3) とは異なった項目になります。  
+    >  ソリューション フォルダーを含むプロジェクトのフォルダーと混同しないでください**ソリューション エクスプ ローラー**します。 重点を置く場合、**ソリューション**フォルダーでの選択、**新しい項目の追加**ダイアログ ボックス (手順 3) では別になります。  
   
 2.  **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。  
   
@@ -46,10 +46,9 @@ ms.locfileid: "33875524"
  これで、新しいリソースを [作成](../windows/how-to-create-a-resource.md) して .rc ファイルに追加できます。  
   
 > [!NOTE]
->  リソース スクリプト (.rc ファイル) を追加できるのは、Visual Studio IDE に読み込まれる既存のプロジェクトだけです。 プロジェクトの外側にあるスタンドアロンの .rc ファイルは作成できません。 [リソース テンプレート](../windows/how-to-use-resource-templates.md) (.rct ファイル) はいつでも作成できます。  
-  
- 必要条件  
-  
+>  リソース スクリプト (.rc ファイル) を追加できるのは、Visual Studio IDE に読み込まれる既存のプロジェクトだけです。 プロジェクトの外側にあるスタンドアロンの .rc ファイルは作成できません。 [リソース テンプレート](../windows/how-to-use-resource-templates.md) (.rct ファイル) はいつでも作成できます。
+
+## <a name="requirements"></a>要件    
  Win32  
   
 ## <a name="see-also"></a>関連項目  

@@ -1,5 +1,5 @@
 ---
-title: decltype (C++) |Microsoft ドキュメント
+title: decltype (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac9fe7ebf3d3e406854308e56d38e37567acc07a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 343aa01d9f8e7b3146976fe046c6b2d7473ca1ec
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418040"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407248"
 ---
 # <a name="decltype--c"></a>decltype (C++)
-`decltype` 型指定子は、指定された式の型を生成します。 `decltype`と共に指定子を入力、 [auto キーワード](../cpp/auto-cpp.md)、主に記述する開発者にとってテンプレート ライブラリ役に立ちます。 `auto` と `decltype` を使用して、テンプレートの引数の型に応じた戻り値の型を持つテンプレート関数を宣言します。 または、`auto` と `decltype` を使用して、別の関数の呼び出しをラップしたテンプレート関数を宣言し、ラップされた関数の戻り値の型を返します。  
+**Decltype**型指定子は、指定された式の型を生成します。 **Decltype**と共に指定子を入力、 [auto キーワード](../cpp/auto-cpp.md)テンプレートのライブラリを作成する開発者を主に役に立ちます。 使用**自動**と**decltype**テンプレート関数の戻り値を宣言する型は、テンプレート引数の型に依存します。 または、使用して**自動**と**decltype**を別の関数の呼び出しをラップし、ラップされた関数の戻り値の型を返すテンプレート関数を宣言します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,23 +39,23 @@ decltype( expression )
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|`expression`|任意の式を指定します。 詳細については、次を参照してください。[式](../cpp/expressions-cpp.md)です。|  
+|*式*|任意の式を指定します。 詳細については、次を参照してください。[式](../cpp/expressions-cpp.md)します。|  
   
 ## <a name="return-value"></a>戻り値  
- `expression` パラメーターの型。  
+ 種類、*式*パラメーター。  
   
-## <a name="remarks"></a>コメント  
- `decltype` 型指定子は、Visual C++ 2010 以降のバージョンでサポートされ、ネイティブ コードまたはマネージ コードと共に使用できます。 `decltype(auto)` (C++14) は Visual Studio 2015 以降でサポートされています。  
+## <a name="remarks"></a>Remarks  
+ **Decltype**型指定子は、Visual C 2010 またはそれ以降のバージョンでサポートされて、ネイティブまたはマネージ コードで使用できます。 `decltype(auto)` (C++14) は Visual Studio 2015 以降でサポートされています。  
   
- コンパイラは、`expression` パラメーターの型を特定するために以下の規則を使用します。  
+ コンパイラの種類を決定する、次の規則を使用して、*式*パラメーター。  
   
--   場合、`expression`パラメーターは、識別子または[クラス メンバーに対するアクセス](../cpp/member-access-operators-dot-and.md)、`decltype(expression)`によってという名前のエンティティの種類は、`expression`です。 このようなエンティティまたは `expression` パラメーター名で一連のオーバーロードされた関数に名前を付けると、コンパイラでエラー メッセージが生成されます。  
+-   場合、*式*パラメーターは、識別子または[クラス メンバーに対するアクセス](../cpp/member-access-operators-dot-and.md)、`decltype(expression)`によってという名前のエンティティの型である*式*します。 このようなエンティティが存在しない場合、または*式*パラメーター名のオーバー ロードされた関数のセットをコンパイラがエラー メッセージが生成されます。  
   
--   場合、`expression`パラメーターが関数またはオーバー ロードされた演算子関数への呼び出し`decltype(expression)`は関数の戻り値の型。 オーバーロードされた演算子を囲んでいるかっこは無視されます。  
+-   場合、*式*パラメーターが関数またはオーバー ロードされた演算子関数では、呼び出し`decltype(expression)`は関数の戻り値の型。 オーバーロードされた演算子を囲んでいるかっこは無視されます。  
   
--   場合、`expression`パラメーターは、[右辺値](../cpp/lvalues-and-rvalues-visual-cpp.md)、`decltype(expression)`の種類は、`expression`です。 場合、`expression`パラメーターは、[左辺値](../cpp/lvalues-and-rvalues-visual-cpp.md)、`decltype(expression)`は、[左辺値参照](../cpp/lvalue-reference-declarator-amp.md)の型に`expression`です。  
+-   場合、*式*パラメーターは、[右辺値](../cpp/lvalues-and-rvalues-visual-cpp.md)、`decltype(expression)`の型である*式*します。 場合、*式*パラメーターは、[左辺値](../cpp/lvalues-and-rvalues-visual-cpp.md)、`decltype(expression)`は、[左辺値参照](../cpp/lvalue-reference-declarator-amp.md)の型に*式*します。  
   
- `decltype` 型指定子のいくつかの使用方法を次のコード例に示します。 最初に次のステートメントを記述したとします。  
+ 次のコード例に示しますのいくつかの使用、 **decltype**指定子を入力します。 最初に次のステートメントを記述したとします。  
   
 ```cpp  
 int var;  
@@ -64,32 +64,32 @@ struct A { double x; }
 const A* a = new A();  
 ```  
   
- 次に、次の表の 4 つの `decltype` ステートメントによって返される型をチェックします。  
+ 次に、4 つによって返される型を調べる**decltype**次の表のステートメント。  
   
 |ステートメント|型|メモ|  
 |---------------|----------|-----------|  
-|`decltype(fx());`|`const int&&`|[右辺値参照](../cpp/rvalue-reference-declarator-amp-amp.md)を`const int`です。|  
-|`decltype(var);`|`int`|変数 `var` の型。|  
-|`decltype(a->x);`|`double`|メンバー アクセスの型。|  
-|`decltype((a->x));`|`const double&`|内側のかっこは、ステートメントをメンバー アクセスではなく式として評価します。 そして、`a` は `const` ポインターとして宣言されているため、型は `const double` への参照です。|  
+|`decltype(fx());`|`const int&&`|[右辺値参照](../cpp/rvalue-reference-declarator-amp-amp.md)を**const int**します。|  
+|`decltype(var);`|**int**|変数 `var` の型。|  
+|`decltype(a->x);`|**double**|メンバー アクセスの型。|  
+|`decltype((a->x));`|`const double&`|内側のかっこは、ステートメントをメンバー アクセスではなく式として評価します。 `a`として宣言されている、`const`ポインター型はへの参照を**const 倍**します。|  
   
 ## <a name="decltype-and-auto"></a>decltype および auto  
- C++ 14 で使用できます`decltype(auto)`ありません後続の戻り値の型をテンプレート関数の戻り値の型を宣言すると、テンプレート引数の型に依存します。  
+ C++ 14 で使用できます`decltype(auto)`いない後続の戻り値の型テンプレート関数の戻り値の型を宣言すると、テンプレート引数の型に依存します。  
   
- C++11 では、テンプレートの引数の型に応じて戻り値の型が異なるテンプレート関数を宣言するために、`auto` キーワードとともに、後続の戻り値の型に `decltype` 型指定子を使用できます。 たとえば、テンプレート関数の戻り値の型がテンプレート引数の型に依存している次のコード例について考えます。 コード例では、*不明な*プレース ホルダーは、戻り値の型を指定できないことを示します。  
+ C++ 11 で使用することができます、 **decltype**と同時に後続の戻り値の型指定子を入力、**自動**キーワード、テンプレート関数の戻り値の型を宣言するは、そのテンプレートの種類によって異なります。引数。 たとえば、テンプレート関数の戻り値の型がテンプレート引数の型に依存している次のコード例について考えます。 コードの例で、*不明な*プレース ホルダーでは、戻り値の型を指定できないことを示します。  
   
 ```cpp  
 template<typename T, typename U>  
 UNKNOWN func(T&& t, U&& u){ return t + u; };   
 ```  
   
- `decltype` 型指定子を導入することで、開発者はテンプレート関数が返す式の型を取得できます。 使用して、*代替関数宣言の構文*後に表示される、`auto`キーワード、および`decltype`宣言指定子を入力、*遅延指定された*型を返します。 遅延指定された戻り値の型は、宣言がコード化されたときではなく、コンパイルされたときに決定します。  
+ 導入に伴い、 **decltype**型指定子により、開発者は、テンプレート関数によって返される式の型を取得します。 使用して、*代替関数宣言の構文*後で、表示される、**自動**キーワード、および**decltype**宣言指定子を入力、 *指定された遅延*型を返します。 遅延指定された戻り値の型は、宣言がコード化されたときではなく、コンパイルされたときに決定します。  
   
- 次のプロトタイプは代替関数宣言の構文について説明します。 注意してください、`const`と`volatile`修飾子、および`throw`[例外指定](../cpp/exception-specifications-throw-cpp.md)は省略可能です。 *Function_body*プレース ホルダーは、関数の動作を指定する複合ステートメントを表します。 コーディングのベスト プラクティスとして、*式*内のプレース ホルダー、`decltype`ステートメントで指定された表現に一致する必要があります、`return`ステートメントでは、存在する場合に、 *function_body*です。  
+ 次のプロトタイプは代替関数宣言の構文について説明します。 なお、 **const**と**揮発性**修飾子、および**スロー** [例外の指定](../cpp/exception-specifications-throw-cpp.md)は省略可能です。 *Function_body*プレース ホルダーは、関数の動作を指定する複合ステートメントを表します。 コーディングのプラクティスとして、*式*内のプレース ホルダー、 **decltype**ステートメントがで指定された式に一致する必要があります、**返す**ステートメントでは、に存在する場合、*function_body*します。  
   
  **自動** *function_name* **(** *パラメーター*<sub>opt</sub> **)** **const**<sub>opt</sub> **揮発性**<sub>opt</sub> **->** **decltype (***式* **)** **スロー**<sub>opt</sub> **{** *function_body***};**  
   
- 次のコード例では、`myFunc` テンプレート関数の遅延指定された戻り値の型は、テンプレート引数 `t` と `u` の型によって決まります。 コーディングのベスト プラクティス、として、コード例もは右辺値参照と`forward`関数テンプレートは、サポート*完全転送を行います*です。 詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。  
+ 次のコード例では、`myFunc` テンプレート関数の遅延指定された戻り値の型は、テンプレート引数 `t` と `u` の型によって決まります。 コーディングのプラクティスとして、このコード例もで右辺値参照と`forward`関数テンプレートは、サポート*完全転送*します。 詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。  
   
 ```cpp  
 //C++11  
@@ -101,16 +101,15 @@ auto myFunc(T&& t, U&& u) -> decltype (forward<T>(t) + forward<U>(u))
 template<typename T, typename U>  
 decltype(auto) myFunc(T&& t, U&& u)   
         { return forward<T>(t) + forward<U>(u); };  
-  
 ```  
   
 ## <a name="decltype-and-forwarding-functions-c11"></a>Decltype および転送関数 (C++11)  
  転送関数は、他の関数の呼び出しをラップします。 関数テンプレートで、引数、またはそれらの引数を含む式の結果を別の関数に転送する場合を考えます。 さらに、転送関数は、他の関数を呼び出した結果を返します。 このシナリオでは、転送関数の戻り値の型は、ラップされた関数の戻り値の型と同じである必要があります。  
   
- このシナリオでは、`decltype` 型指定子がないと、適切な型式を記述できません。 `decltype` 型指定子は、関数が参照型を返すかどうかに関する必須情報を失わないという理由で、ジェネリック転送関数を有効にします。 転送関数のコード例については、前の `myFunc` テンプレート関数の例を参照してください。  
+ このシナリオではなく適切な型式を記述することはできません、 **decltype**指定子を入力します。 **Decltype**型指定子は、関数が参照型を返すかどうかに関する必要な情報が失われないため、ジェネリック転送関数を使用します。 転送関数のコード例については、前の `myFunc` テンプレート関数の例を参照してください。  
   
 ## <a name="example"></a>例  
- 次のコード例は、テンプレート関数 `Plus()` の遅延指定の戻り値の型を宣言します。 `Plus` の関数は `operator+` オーバーロードを持つ 2 つのオペランドを処理します。 その結果、プラス演算子 (+) と `Plus` 関数の戻り値の型の解釈は、関数の引数の型によって異なります。  
+ 次のコード例は、テンプレート関数 `Plus()` の遅延指定の戻り値の型を宣言します。 `Plus`関数と 2 つのオペランドを処理する、 **operator +** オーバー ロードします。 その結果、プラス演算子 (+) と `Plus` 関数の戻り値の型の解釈は、関数の引数の型によって異なります。  
   
 ```cpp  
 // decltype_1.cpp  
@@ -183,7 +182,7 @@ x3.Dump() = 42
 ```
   
 ## <a name="example"></a>例
-**2017 およびそれ以降の visual Studio:** テンプレートは宣言ではなくインスタンス化されるときに、コンパイラが decltype 引数を解析します。 その結果、decltype 引数に非依存の特殊化が見つかった場合、インスタンス化時まで遅延されずにすぐに処理され、結果として発生したエラーは、その時点で診断されます。
+**Visual Studio 2017 以降:** コンパイラが、テンプレートは宣言ではなくインスタンス化されるときに、decltype 引数を解析します。 その結果、decltype 引数に非依存の特殊化が見つかった場合、インスタンス化時まで遅延されずにすぐに処理され、結果として発生したエラーは、その時点で診断されます。
 
 次の例は、宣言時に発生するこのようなコンパイラ エラーを示しています。
 
@@ -209,5 +208,4 @@ static_assert(test2, "PASS2");
 ## <a name="requirements"></a>要件  
  Visual C++ 2010 以降のバージョン。  
   
- `decltype(auto)` Visual Studio 2015 以降が必要です。  
-  
+ `decltype(auto)` Visual Studio 2015 またはそれ以降が必要です。  

@@ -1,5 +1,5 @@
 ---
-title: 不要になった関数に、ダイアログ ボックス コントロールをダイアログ ボックスに追加すると、|Microsoft ドキュメント
+title: 機能しなくダイアログ コントロール ダイアログ ボックスを追加すると、|Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,35 +20,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b10c24955e74d08ab570b5b694628f42bb394268
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0b2ecb47c17aeeda1cfd54c19cb72d0d1808a836
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858995"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647119"
 ---
 # <a name="adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function"></a>コントロールを追加してもダイアログ ボックスに表示されない
-ダイアログ ボックスに、コモン コントロールまたはリッチ エディット コントロールを追加すると、これは表示されません ダイアログ ボックスをテストするとダイアログ ボックス自体は表示されません。  
+ダイアログ ボックスに、一般的なコントロールまたはリッチ エディット コントロールを追加すると、ダイアログ ボックスのテストまたはダイアログ自体は表示されないときにいない表示されます。  
   
- **問題の例**  
+### <a name="example-of-the-problem"></a>問題の例  
   
-1.  Windows アプリケーション (コンソール アプリケーションではなく) を作成するようにアプリケーションの設定を変更する、Win32 プロジェクトを作成します。  
+1.  Windows アプリケーション (コンソール アプリケーションではなく) を作成するためにアプリケーション設定を変更する、Win32 プロジェクトを作成します。  
   
 2.  [リソース ビュー](../windows/resource-view-window.md)、.rc ファイルをダブルクリックします。  
   
-3.  ダイアログ オプションでダブルクリックして、**に関する**ボックス。  
+3.  ダイアログのオプションでダブルクリックして、**について**ボックス。  
   
-4.  追加、 **IP アドレス コントロール** ダイアログ ボックスにします。  
+4.  追加、 **IP アドレス コントロール** ダイアログ ボックス。  
   
-5.  保存と**すべてリビルド**です。  
+5.  保存と**すべてリビルド**します。  
   
 6.  プログラムを実行します。  
   
-7.  ダイアログ ボックスの **[ヘルプ]** メニューのをクリックして、**に関する**コマンド以外のダイアログ ボックスが表示されます。  
+7.  ダイアログ ボックスの**ヘルプ** メニューのをクリックして、**について**コマンド; ダイアログ ボックスが表示されます。  
   
- **原因**  
+### <a name="the-cause"></a>原因  
   
- 現時点では、ダイアログ エディターが自動的に追加されませんコードをプロジェクトにリッチ エディット コントロールをダイアログ ボックスまたはドラッグ アンド ドロップ、次の一般的なコントロールするときにします。 また、Visual Studio の管轄エラーまたは警告がこの問題が発生したとき。 コントロールのコードを手動で追加する必要があります。  
+ 現時点では、ダイアログ エディターが自動的に追加コードをプロジェクトにリッチ エディット コントロールをダイアログ ボックスにドラッグ アンド ドロップ、次の一般的なコントロールまたは。 Visual Studio はエラーまたは警告がこの問題が発生します。 コントロールのコードを手動で追加する必要があります。  
   
 ||||  
 |-|-|-|  
@@ -58,11 +58,11 @@ ms.locfileid: "33858995"
 |ホット キー|リッチ エディット コントロール|拡張コンボ ボックス|  
 |リスト コントロール|リッチ エディット 2.0 コントロール|カスタム コントロール|  
   
-## <a name="the-fix-for-common-controls"></a>コモン コントロールの修正方法  
- コモン コントロール ダイアログ ボックスを使用するために呼び出す必要がある[InitCommonControlsEx](http://msdn.microsoft.com/library/windows/desktop/bb775697)または**AFXInitCommonControls**  ダイアログ ボックスを作成する前にします。  
+## <a name="the-fix-for-common-controls"></a>コモン コントロール用の修正プログラム  
+ コモン コントロール ダイアログ ボックスを使用するために呼び出す必要があります[InitCommonControlsEx](http://msdn.microsoft.com/library/windows/desktop/bb775697)または`AFXInitCommonControls` ダイアログ ボックスを作成する前にします。  
   
-## <a name="the-fix-for-richedit-controls"></a>リッチ エディット コントロールの修正方法  
- 呼び出す必要があります**LoadLibrary**リッチ エディット コントロールのです。 詳細については、次を参照してください。 [MFC での RichEdit 1.0 コントロールの使用](../windows/using-the-richedit-1-0-control-with-mfc.md)、[リッチのエディット コントロールについて](http://msdn.microsoft.com/library/windows/desktop/bb787873)で、 [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]、および[リッチ エディット コントロールの概要](../mfc/overview-of-the-rich-edit-control.md)です。  
+## <a name="the-fix-for-richedit-controls"></a>リッチ エディット コントロールの修正プログラム  
+ 呼び出す必要があります`LoadLibrary`リッチ エディット コントロールの。 詳細については、次を参照してください。 [MFC での RichEdit 1.0 コントロールの使用](../windows/using-the-richedit-1-0-control-with-mfc.md)、[リッチのエディット コントロールについて](http://msdn.microsoft.com/library/windows/desktop/bb787873)で、 [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]、および[リッチ エディット コントロールの概要](../mfc/overview-of-the-rich-edit-control.md)します。  
   
 ## <a name="requirements"></a>要件  
  Win32  
@@ -70,4 +70,3 @@ ms.locfileid: "33858995"
 ## <a name="see-also"></a>関連項目  
  [ダイアログ エディターのトラブルシューティング](../windows/troubleshooting-the-dialog-editor.md)   
  [ダイアログ エディター](../windows/dialog-editor.md)
-

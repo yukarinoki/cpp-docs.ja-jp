@@ -1,5 +1,5 @@
 ---
-title: satype |Microsoft ドキュメント
+title: satype |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a77021cbcf6622701a1025ef33000196ba7bb6d9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e53f64a88e29274cbceb6ab10b651082856347d7
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888683"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012720"
 ---
 # <a name="satype"></a>satype
-データ型を指定します、 **SAFEARRAY**構造体。  
+データ型を指定します、`SAFEARRAY`構造体。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
-      [ satype(  
+```cpp  
+[ satype(  
    data_type  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *data_type*  
- データ型、 **SAFEARRAY**インターフェイス メソッドにパラメーターとして渡されるデータ構造体。  
+ データ型、`SAFEARRAY`インターフェイス メソッドにパラメーターとして渡されるデータ構造体。  
   
 ## <a name="requirements"></a>要件  
   
@@ -47,19 +46,19 @@ ms.locfileid: "33888683"
 |||  
 |-|-|  
 |**対象**|インターフェイスのパラメーター、インターフェイス メソッド|  
-|**反復可能**|×|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   
-## <a name="remarks"></a>コメント  
- **Satype** C++ 属性のデータ型を指定、 **SAFEARRAY**です。  
+## <a name="remarks"></a>Remarks  
+ **Satype** C++ 属性のデータ型を指定します、`SAFEARRAY`します。  
   
 > [!NOTE]
->  レベルの間接参照が削除される、 **SAFEARRAY** .cpp ファイルで宣言されている方法から生成された .idl ファイル内のポインター。  
+>  レベルの間接参照が削除される、 `SAFEARRAY` .cpp ファイルで宣言されている方法から生成された .idl ファイル内のポインター。  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp  
 // cpp_attr_ref_satype.cpp  
 // compile with: /LD  
 #include "unknwn.h"  

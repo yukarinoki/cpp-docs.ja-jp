@@ -1,5 +1,5 @@
 ---
-title: Comptr::comptr コンス トラクター |Microsoft ドキュメント
+title: Comptr::comptr コンス トラクター |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3a632c96c39ccd40f008556287af95944530cdc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 86b55d8288f44b04ac1afc30a0afd67fce4edf81
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871176"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646774"
 ---
 # <a name="comptrcomptr-constructor"></a>ComPtr::ComPtr コンストラクター
-ComPtr クラスの新しいインスタンスを初期化します。 オーバーロードは、既定、コピー、移動、および変換の各コンストラクターを提供します。  
+新しいインスタンスを初期化します、 **ComPtr**クラス。 オーバーロードは、既定、コピー、移動、および変換の各コンストラクターを提供します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 WRL_NOTHROW ComPtr();  
 WRL_NOTHROW ComPtr(  
    decltype(__nullptr)  
@@ -58,17 +58,17 @@ WRL_NOTHROW ComPtr(
    void *>;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `U`  
- `other` パラメーターの型。  
+### <a name="parameters"></a>パラメーター  
+ *U*  
+ 種類、*他*パラメーター。  
   
- `other`  
- `U` 型のオブジェクト。  
+ *other*  
+ 型のオブジェクト*U*します。  
   
 ## <a name="return-value"></a>戻り値  
   
-## <a name="remarks"></a>コメント  
- 最初のコンス トラクターは、どの暗黙的空のオブジェクトを作成する既定のコンス トラクターです。 2 番目のコンス トラクターを指定[_ _nullptr](../windows/nullptr-cpp-component-extensions.md)、空のオブジェクトを明示的に作成します。  
+## <a name="remarks"></a>Remarks  
+ 最初のコンス トラクターは、どの暗黙的は、空のオブジェクトを作成します。 既定のコンス トラクターです。 2 番目のコンス トラクターを指定します[_ _nullptr](../windows/nullptr-cpp-component-extensions.md)を明示的に空のオブジェクトを作成します。  
   
  3 番目のコンス トラクターは、ポインターで指定されたオブジェクトからオブジェクトを作成します。  
   

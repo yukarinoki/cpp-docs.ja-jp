@@ -1,5 +1,5 @@
 ---
-title: Makeallocator::makeallocator コンス トラクター |Microsoft ドキュメント
+title: Makeallocator::makeallocator コンス トラクター |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4b9095daa4ff1dca77c78c11ac41d8747d889d32
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e9905d878fe8592a17b86519d927a2c85629f4ed
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874942"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013861"
 ---
 # <a name="makeallocatormakeallocator-constructor"></a>MakeAllocator::MakeAllocator コンストラクター
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 MakeAllocator();  
 ```  
   
-## <a name="remarks"></a>コメント  
- MakeAllocator クラスの新しいインスタンスを初期化します。  
+## <a name="remarks"></a>Remarks  
+ 新しいインスタンスを初期化、 **MakeAllocator**クラス。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** implements.h  

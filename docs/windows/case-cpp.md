@@ -1,5 +1,5 @@
 ---
-title: ケース (C++) |Microsoft ドキュメント
+title: ケース (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 30d665861688054a4f6b7491f449014afe646c71
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ddccbc1fcecafe5ac924098a344cfb7592ce2116
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860958"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647828"
 ---
 # <a name="case-c"></a>case (C++)
-使用される、 [switch_type](../windows/switch-type.md)属性、**共用体**です。  
+使用される、 [switch_type](../windows/switch-type.md)属性、**共用体**します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
-      [ case(  
+```cpp  
+[ case(  
    value  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
  *値*  
- 入力の処理を提供する値。 型**値**種類は次のいずれかになります。  
+ 入力の処理を提供する値。 型**値**次の種類のいずれかを指定できます。  
   
 -   `int`  
   
@@ -48,15 +47,15 @@ ms.locfileid: "33860958"
   
 -   `enum`  
   
- または、このような型の識別子。  
+ または、このような種類の識別子。  
   
-## <a name="remarks"></a>コメント  
- **ケース**C++ 属性と同じ機能を持つ、**ケース**MIDL 属性。 この属性を使用してのみ、 [switch_type](../windows/switch-type.md)属性。  
+## <a name="remarks"></a>Remarks  
+ **ケース**C++ 属性と同じ機能を持つ、**ケース**MIDL 属性。 この属性でのみ使用、 [switch_type](../windows/switch-type.md)属性。  
   
 ## <a name="example"></a>例  
  次のコードの使い方を示しています、**ケース**属性。  
   
-```  
+```cpp  
 // cpp_attr_ref_case.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -79,8 +78,8 @@ struct SizedValue2 {
   
 |||  
 |-|-|  
-|**対象**|メンバー、**クラス**または `struct`|  
-|**反復可能**|×|  
+|**対象**|メンバー、**クラス**または**構造体**|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

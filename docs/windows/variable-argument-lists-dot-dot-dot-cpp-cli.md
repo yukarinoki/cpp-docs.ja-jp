@@ -1,5 +1,5 @@
 ---
-title: 可変個引数リスト (...)(C + + CLI) |Microsoft ドキュメント
+title: 可変個引数リスト (...)(C +/CLI CLI) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eec0e3591da2417137fda3bae4ed9e7860472fb2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93cd229e93c4da36004c212cef0f09463926a0e5
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889824"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015957"
 ---
 # <a name="variable-argument-lists--ccli"></a>可変個引数リスト (...) (C++/CLI)
 この例は、Visual C++ で `...` 構文を使って可変個の引数を持つ関数を実装する方法を示しています。  
   
 > [!NOTE]
->  これは C++/CLI に関するトピックです。 使用方法について、 `...` ISO 標準の C++ では、次を参照してください。[楕円および可変値引数テンプレート](../cpp/ellipses-and-variadic-templates.md)省略記号と既定の引数で[後置式](../cpp/postfix-expressions.md)です。  
+>  これは C++/CLI に関するトピックです。 使用方法について、 `...` ISO 標準 c++ では、次を参照してください。[楕円および可変個引数テンプレート](../cpp/ellipses-and-variadic-templates.md)省略記号と既定の引数で[後置式](../cpp/postfix-expressions.md)します。  
   
  `...` を使用するパラメーターは、パラメーター リストの最後のパラメーターにする必要があります。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "33889824"
   
 ### <a name="code"></a>コード  
   
-```  
+```cpp  
 // mcppv2_paramarray.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -54,16 +54,14 @@ int main() {
 }  
 ```  
   
-### <a name="output"></a>出力  
-  
-```  
+```Output  
 3  
 ```  
   
 ## <a name="code-example"></a>コード例  
  次の例では、引数の数が可変である Visual C++ の関数を C# から呼び出す方法を示します。  
   
-```  
+```cpp  
 // mcppv2_paramarray2.cpp  
 // compile with: /clr:safe /LD  
 using namespace System;  
@@ -78,7 +76,7 @@ public:
   
  C# では、`ParamArray` パラメーターに渡される引数は、可変個の引数で呼び出すことができます。 C# でのコード例を次に示します。  
   
-```  
+```cs  
 // mcppv2_paramarray3.cs  
 // compile with: /r:mcppv2_paramarray2.dll  
 // a C# program  
@@ -95,7 +93,7 @@ public class X {
   
  Visual C++ の `f` の呼び出しは、初期化された配列または可変長配列を渡すことができます。  
   
-```  
+```cpp  
 // mcpp_paramarray4.cpp  
 // compile with: /clr  
 using namespace System;  

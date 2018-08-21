@@ -1,5 +1,5 @@
 ---
-title: Srwlock::lockexclusive メソッド |Microsoft ドキュメント
+title: Srwlock::lockexclusive メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 36ae694365b58cb10666e5d8af67269b2c4f125c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 922220c9406f02568299dc60960b04a9820a7e95
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889372"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010962"
 ---
 # <a name="srwlocklockexclusive-method"></a>SRWLock::LockExclusive メソッド
-排他モードで SRWLock オブジェクトを取得します。  
+取得、 **SRWLock**排他モードでのオブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 SyncLockExclusive LockExclusive();  
   
 static SyncLockExclusive LockExclusive(  
@@ -37,12 +37,12 @@ static SyncLockExclusive LockExclusive(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `lock`  
- SRWLock オブジェクトへのポインター。  
+### <a name="parameters"></a>パラメーター  
+ *lock*  
+ ポインター、 **SRWLock**オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 排他モードで SRWLock オブジェクトです。  
+ **SRWLock**排他モードでのオブジェクト。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

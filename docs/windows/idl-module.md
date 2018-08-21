@@ -1,5 +1,5 @@
 ---
-title: idl_module |Microsoft ドキュメント
+title: idl_module |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11547a3fb1bd46a1e2edb8ce9dd0a6547464f796
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4ff8353bef24aa772621cee611519a8e7ab659af
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882525"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012116"
 ---
 # <a name="idlmodule"></a>idl_module
 .Dll ファイルにエントリ ポイントを指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
-      [ idl_module (   
+```cpp  
+[ idl_module (   
    name=module_name,   
    dllname=dll,   
    uuid="uuid",   
@@ -44,47 +43,47 @@ ms.locfileid: "33882525"
 function declaration  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- **name**  
- .Idl ファイル内に表示されるコード ブロックのユーザー定義の名前。  
+### <a name="parameters"></a>パラメーター  
+ *name*  
+ .Idl ファイルに表示されるコード ブロックのユーザー定義の名前。  
   
- **dllname** (省略可能)  
- エクスポートを含む .dll ファイル。  
+ *dllname* (省略可能)  
+ エクスポートを含む .dll ファイルです。  
   
- `uuid` (省略可能)  
+ *uuid* (省略可能)  
  一意の ID。  
   
- **helpstring** (省略可能)  
+ *helpstring* (省略可能)  
  タイプ ライブラリを記述するために使用する文字の文字列。  
   
- **helpstringcontext** (省略可能)  
+ *helpstringcontext* (省略可能)  
  .Hlp や .chm ファイル内のヘルプ トピックの ID。  
   
- **helpcontext** (省略可能)  
+ *helpcontext* (省略可能)  
  このタイプ ライブラリのヘルプ ID です。  
   
- **hidden** (省略可能)  
+ *非表示*(省略可能)  
  ライブラリが表示されないようにするパラメーター。 詳細については、「 [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) 」の MIDL 属性に関する説明を参照してください。  
   
- ***制限付き***(省略可能)  
- ライブラリのメンバーを任意に呼び出すことができません。 詳細については、「 [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) 」の MIDL 属性に関する説明を参照してください。  
+ *制限付き*(省略可能)  
+ ライブラリのメンバーは任意に呼び出すことができません。 詳細については、「 [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) 」の MIDL 属性に関する説明を参照してください。  
   
  *関数の宣言*  
- 定義する関数。  
+ この関数を定義します。  
   
-## <a name="remarks"></a>コメント  
- `idl_module` C++ 属性を使用して、.dll ファイルからインポートすることができる .dll ファイルにエントリ ポイントを指定できます。  
+## <a name="remarks"></a>Remarks  
+ **Idl_module** C++ 属性を使用して、.dll ファイルからインポートすることができる .dll ファイルにエントリ ポイントを指定できます。  
   
- **Idl_module**属性は、機能に似ていますが、[モジュール](http://msdn.microsoft.com/library/windows/desktop/aa367099)MIDL 属性。  
+ **Idl_module**属性と同様の機能を持つ、[モジュール](http://msdn.microsoft.com/library/windows/desktop/aa367099)MIDL 属性。  
   
- .Idl ファイルのライブラリ ブロックに DLL エントリ ポイントを配置することにより、.dll ファイルからエクスポートできる COM オブジェクトから何もエクスポートできます。  
+ .Idl ファイルのライブラリ ブロックに DLL のエントリ ポイントを配置することで、.dll ファイルからエクスポートできる COM オブジェクトから何もエクスポートできます。  
   
- 使用する必要があります`idl_module`2 つの手順でします。 最初に、名前/DLL の組を定義する必要があります。 使用すると、`idl_module`エントリ ポイントを指定する名前と追加の属性を指定します。  
+ 使用する必要があります**idl_module**で 2 つの手順。 最初に、名前または DLL のペアを定義する必要があります。 次に、使用**idl_module**エントリ ポイントを指定する名前と追加の属性を指定します。  
   
 ## <a name="example"></a>例  
- 次のコードを使用する方法を示しています、`idl_module`属性。  
+ 次のコードを使用する方法を示しています、 **idl_module**属性。  
   
-```  
+```cpp  
 // cpp_attr_ref_idl_module.cpp  
 // compile with: /LD  
 [idl_quote("midl_pragma warning(disable:2461)")];  
@@ -100,7 +99,7 @@ void FuncName(int i);
 |||  
 |-|-|  
 |**対象**|任意の場所|  
-|**反復可能**|×|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

@@ -1,5 +1,5 @@
 ---
-title: '方法: 宣言および内部ポインターおよびマネージ配列を使用する (C + + CLI) |Microsoft ドキュメント'
+title: '方法: 内部ポインターおよびマネージ配列宣言および使用 (C +/cli CLI) |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 457cec66aaabb01b9c10ccc66a8f9594312195b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 45cfc4374b9779a61e3ea97c829317b9d4fe75ba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875306"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016162"
 ---
-# <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>方法: 内部ポインターおよびマネージ配列を宣言および使用する (C++/CLI)
-次の C + + CLI サンプルを宣言し、配列への内部ポインターを使用する方法を示します。  
+# <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>方法: 内部ポインターおよびマネージド配列を宣言および使用する (C++/CLI)
+次の C +/cli CLI のサンプルを宣言して、配列への内部ポインターを使用する方法を示しています。  
   
 > [!IMPORTANT]
->  この言語機能をサポートに、 **/clr**コンパイラ オプションがなく、 **/ZW**コンパイラ オプション。  
+>  この言語機能がサポートされている、`/clr`コンパイラ オプションがなく、`/ZW`コンパイラ オプション。  
   
 ## <a name="example"></a>例  
   
 ### <a name="code"></a>コード  
   
-```  
+```cpp  
 // interior_ptr_arrays.cpp  
 // compile with: /clr  
 #define SIZE 10  
@@ -57,9 +57,7 @@ int main() {
 }  
 ```  
   
-### <a name="output"></a>出力  
-  
-```  
+```Output  
 1st element in arr holds: 1  
 ipi points to memory address whose value is: 1  
 after incrementing ipi, it points to memory address whose value is: 2  

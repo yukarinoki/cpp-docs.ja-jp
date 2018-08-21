@@ -1,5 +1,5 @@
 ---
-title: switch_type |Microsoft ドキュメント
+title: switch_type |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1870e1ee623d8495e9f19dd8f32ea9382070bc14
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c6c1b6dda469dec663e5a8c385d300b113246a77
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890184"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016445"
 ---
 # <a name="switchtype"></a>switch_type
-共用体の判別変数として使用される変数の型を識別します。  
+共用体の判別式として使用される変数の型を識別します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```cpp  
 [switch_type(  
 type  
 }]  
-  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `type`  
+### <a name="parameters"></a>パラメーター  
+ *type*  
  スイッチの種類は、整数、文字、ブール値、または列挙型を指定できます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **Switch_type** C++ 属性と同じ機能を持つ、 [switch_type](http://msdn.microsoft.com/library/windows/desktop/aa367276) MIDL 属性。  
   
- C++ 属性をサポートしていない[共用体をカプセル化された](http://msdn.microsoft.com/library/windows/desktop/aa366811)です。 [カプセル化されていない共用体](http://msdn.microsoft.com/library/windows/desktop/aa367119)次の形式でのみサポートされます。  
+ C++ 属性をサポートしていない[共用体をカプセル化された](http://msdn.microsoft.com/library/windows/desktop/aa366811)します。 [カプセル化されていない共用体](http://msdn.microsoft.com/library/windows/desktop/aa367119)次の形式でのみサポートされます。  
   
-```  
+```cpp  
 // cpp_attr_ref_switch_type.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -64,7 +62,7 @@ struct SizedValue2 {
 ```  
   
 ## <a name="example"></a>例  
- 参照してください、[ケース](../windows/case-cpp.md)のサンプルの使用例**switch_type**です。  
+ 参照してください、[ケース](../windows/case-cpp.md)の使用サンプルの例を**switch_type**します。  
   
 ## <a name="requirements"></a>要件  
   
@@ -72,8 +70,8 @@ struct SizedValue2 {
   
 |||  
 |-|-|  
-|**対象**|`typedef`|  
-|**反復可能**|×|  
+|**対象**|**typedef**|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

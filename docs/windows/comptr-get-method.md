@@ -1,5 +1,5 @@
 ---
-title: Comptr::get メソッド |Microsoft ドキュメント
+title: Comptr::get メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da8c4446d10f87514ec49feef95d05df2de721f7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e1acf443cfa1251649a33e55e81e03fb1b62e17a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870729"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648335"
 ---
 # <a name="comptrget-method"></a>ComPtr::Get メソッド
-この ComPtr に関連付けられたインターフェイスへのポインターを取得します。  
+これに関連付けられているインターフェイスへのポインターを取得します。 **ComPtr**します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 T* Get() const;  
 ```  
   
 ## <a name="return-value"></a>戻り値  
- この ComPtr に関連付けられているインターフェイスへのポインター。  
+ これに関連付けられているインターフェイスへのポインター **ComPtr**します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** client.h  

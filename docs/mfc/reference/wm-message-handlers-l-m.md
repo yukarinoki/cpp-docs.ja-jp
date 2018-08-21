@@ -1,5 +1,5 @@
 ---
-title: 'Wm _ で始まるメッセージのハンドラー: L-M |Microsoft ドキュメント'
+title: 'Wm _ で始まるメッセージ ハンドラー: L-M |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -43,39 +43,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2697ed09043cb14e57b5f62aad9b9a660446e84a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1f9b60c83c17b87c59afc0d79cca7ad6e91619a9
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379601"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207547"
 ---
 # <a name="wm-message-handlers-l---m"></a>WM_ で始まるメッセージのハンドラー : L - M
-左側の次のマップ エントリは、右側の関数プロトタイプに対応します。  
+左側で、次のマップ エントリは、右側の関数プロトタイプに対応します。  
   
-|マップのエントリ|関数プロトタイプ|  
+|マップ エントリ|関数プロトタイプ|  
 |---------------|------------------------|  
-|ON_WM_LBUTTONDBLCLK()|afx_msg void[離し](../../mfc/reference/cwnd-class.md#onlbuttondblclk)(UINT、CPoint) です。|  
-|ON_WM_LBUTTONDOWN()|afx_msg void [OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown)(UINT、CPoint) です。|  
-|ON_WM_LBUTTONUP()|afx_msg void [OnLButtonUp](../../mfc/reference/cwnd-class.md#onlbuttonup)(UINT、CPoint) です。|  
-|ON_WM_MBUTTONDBLCLK()|afx_msg void[離し](../../mfc/reference/cwnd-class.md#onmbuttondblclk)(UINT、CPoint) です。|  
-|ON_WM_MBUTTONDOWN()|afx_msg void [OnMButtonDown](../../mfc/reference/cwnd-class.md#onmbuttondown)(UINT、CPoint) です。|  
-|ON_WM_MBUTTONUP()|afx_msg void [OnMButtonUp](../../mfc/reference/cwnd-class.md#onmbuttonup)(UINT、CPoint) です。|  
-|ON_WM_MDIACTIVATE()|afx_msg void[なる](../../mfc/reference/cwnd-class.md#onmdiactivate)(BOOL、CWnd * CWnd\*) です。|  
-|ON_WM_MEASUREITEM()|afx_msg void [OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem)(LPMEASUREITEMSTRUCT) です。|  
-|ON_WM_MENUCHAR()|afx_msg 時間の長い[OnMenuChar](../../mfc/reference/cwnd-class.md#onmenuchar)(UINT、UINT、CMenu *) です。|  
-|ON_WM_MENUDRAG()|afx_msg UINT [OnMenuDrag](../../mfc/reference/cwnd-class.md#onmenudrag)(UINT、CMenu *) です。|  
-|ON_WM_MENUGETOBJECT()|afx_msg UINT [OnMenuGetObject](../../mfc/reference/cwnd-class.md#onmenugetobject)(MENUGETOBJECTINFO *) です。|  
-|ON_WM_MENURBUTTONUP()|afx_msg void [OnMenuRButtonUp](../../mfc/reference/cwnd-class.md#onmenurbuttonup)(UINT、CMenu *) です。|  
-|ON_WM_MENUSELECT()|afx_msg void [OnMenuSelect](../../mfc/reference/cwnd-class.md#onmenuselect)(UINT、UINT、HMENU) です。|  
-|ON_WM_MOUSEACTIVATE()|afx_msg int [OnMouseActivate](../../mfc/reference/cwnd-class.md#onmouseactivate)(CWnd *、UINT、UINT) です。|  
-|ON_WM_MOUSEHOVER()|afx_msg void [OnMouseHover](../../mfc/reference/cwnd-class.md#onmousehover)(UINT、CPoint) です。|  
-|ON_WM_MOUSEHWHEEL()|afx_msg void [OnMouseHWheel](../../mfc/reference/cwnd-class.md#onmousehwheel)(UINT、short、CPoint) です。|  
-|ON_WM_MOUSELEAVE()|afx_msg void [OnMouseLeave](../../mfc/reference/cwnd-class.md#onmouseleave)();|  
-|ON_WM_MOUSEMOVE()|afx_msg void [OnMouseMove](../../mfc/reference/cwnd-class.md#onmousemove)(UINT、CPoint) です。|  
-|ON_WM_MOUSEWHEEL()|afx_msg BOOL [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel)(UINT、short、CPoint) です。|  
-|ON_WM_MOVE()|afx_msg void [OnMove](../../mfc/reference/cwnd-class.md#onmove)(int, int) です。|  
-|ON_WM_MOVING()|afx_msg void [OnMoving](../../mfc/reference/cwnd-class.md#onmoving)(UINT、LPRECT) です。|  
+|ON_WM_LBUTTONDBLCLK()|afx_msg void[離し](../../mfc/reference/cwnd-class.md#onlbuttondblclk)(UINT, CPoint)。|  
+|ON_WM_LBUTTONDOWN()|afx_msg void [OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown)(UINT, CPoint)。|  
+|ON_WM_LBUTTONUP()|afx_msg void [OnLButtonUp](../../mfc/reference/cwnd-class.md#onlbuttonup)(UINT, CPoint)。|  
+|ON_WM_MBUTTONDBLCLK()|afx_msg void[離し](../../mfc/reference/cwnd-class.md#onmbuttondblclk)(UINT, CPoint)。|  
+|ON_WM_MBUTTONDOWN()|afx_msg void [OnMButtonDown](../../mfc/reference/cwnd-class.md#onmbuttondown)(UINT, CPoint)。|  
+|ON_WM_MBUTTONUP()|afx_msg void [OnMButtonUp](../../mfc/reference/cwnd-class.md#onmbuttonup)(UINT, CPoint)。|  
+|ON_WM_MDIACTIVATE()|afx_msg void[なる](../../mfc/reference/cwnd-class.md#onmdiactivate)(BOOL、CWnd\*、CWnd\*)。|  
+|ON_WM_MEASUREITEM()|afx_msg void [OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem)(LPMEASUREITEMSTRUCT)。|  
+|ON_WM_MENUCHAR()|時間の長い afx_msg [OnMenuChar](../../mfc/reference/cwnd-class.md#onmenuchar)(UINT, UINT, CMenu\*)。|  
+|ON_WM_MENUDRAG()|afx_msg UINT [OnMenuDrag](../../mfc/reference/cwnd-class.md#onmenudrag)(UINT、CMenu\*)。|  
+|ON_WM_MENUGETOBJECT()|afx_msg UINT [OnMenuGetObject](../../mfc/reference/cwnd-class.md#onmenugetobject)(MENUGETOBJECTINFO\*)。|  
+|ON_WM_MENURBUTTONUP()|afx_msg void [OnMenuRButtonUp](../../mfc/reference/cwnd-class.md#onmenurbuttonup)(UINT、CMenu\*)。|  
+|ON_WM_MENUSELECT()|afx_msg void [OnMenuSelect](../../mfc/reference/cwnd-class.md#onmenuselect)(UINT, UINT, HMENU)|  
+|ON_WM_MOUSEACTIVATE()|afx_msg int [OnMouseActivate](../../mfc/reference/cwnd-class.md#onmouseactivate)(CWnd\*UINT、UINT)。|  
+|ON_WM_MOUSEHOVER()|afx_msg void [OnMouseHover](../../mfc/reference/cwnd-class.md#onmousehover)(UINT, CPoint)。|  
+|ON_WM_MOUSEHWHEEL()|afx_msg void [OnMouseHWheel](../../mfc/reference/cwnd-class.md#onmousehwheel)(UINT、short、CPoint)。|  
+|ON_WM_MOUSELEAVE()|afx_msg void[合わせて OnMouseLeave](../../mfc/reference/cwnd-class.md#onmouseleave)();|  
+|ON_WM_MOUSEMOVE()|afx_msg void [OnMouseMove](../../mfc/reference/cwnd-class.md#onmousemove)(UINT, CPoint)。|  
+|ON_WM_MOUSEWHEEL()|afx_msg BOOL [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel)(UINT、short、CPoint)。|  
+|ON_WM_MOVE()|afx_msg void [OnMove](../../mfc/reference/cwnd-class.md#onmove)(int, int);|  
+|ON_WM_MOVING()|afx_msg void [OnMoving](../../mfc/reference/cwnd-class.md#onmoving)(UINT, LPRECT)。|  
   
 ## <a name="see-also"></a>関連項目  
  [メッセージ マップ](../../mfc/reference/message-maps-mfc.md)   

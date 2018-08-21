@@ -1,5 +1,5 @@
 ---
-title: InterfaceList 構造体 |Microsoft ドキュメント
+title: InterfaceList 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52acf2f0b9936903b4359e21e23ae50c95d2f31a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 318738e5f4ac623987b1002e5204739407adcdb9
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876736"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017759"
 ---
 # <a name="interfacelist-structure"></a>InterfaceList 構造体
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template <  
    typename T,  
    typename U  
@@ -37,15 +37,15 @@ template <
 struct InterfaceList;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `T`  
- インターフェイスの名前です。再帰的なリストの最初のインターフェイスです。  
+### <a name="parameters"></a>パラメーター  
+ *T*  
+ インターフェイス名。再帰的なリストの先頭のインターフェイス。  
   
- `U`  
- インターフェイスの名前です。再帰的なリスト内の残りインターフェイスです。  
+ *U*  
+ インターフェイス名。再帰的なリストの残りのインターフェイスです。  
   
-## <a name="remarks"></a>コメント  
- インターフェイスの再帰的なリストを作成するために使用します。  
+## <a name="remarks"></a>Remarks  
+ インターフェイスの再帰的な一覧を作成するために使用します。  
   
 ## <a name="members"></a>メンバー  
   
@@ -53,8 +53,8 @@ struct InterfaceList;
   
 |名前|説明|  
 |----------|-----------------|  
-|`FirstT`|テンプレート パラメーターのシノニム`T`です。|  
-|`RestT`|テンプレート パラメーターのシノニム`U`です。|  
+|`FirstT`|テンプレート パラメーターのシノニム*T*します。|  
+|`RestT`|テンプレート パラメーターのシノニム*U*します。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `InterfaceList`  

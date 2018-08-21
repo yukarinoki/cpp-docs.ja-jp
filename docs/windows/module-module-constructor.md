@@ -1,5 +1,5 @@
 ---
-title: Module::module コンス トラクター |Microsoft ドキュメント
+title: Module::module コンス トラクター |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b31e9f1e4536bc124bba359ece10217ef8b7f253
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d63b90bb3622129589fca41c029f548a07ec21b8
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875254"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017657"
 ---
 # <a name="modulemodule-constructor"></a>Module::Module コンストラクター
-モジュール クラスの新しいインスタンスを初期化します。  
+新しいインスタンスを初期化、**モジュール**クラス。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 Module();  
 ```  
   
-## <a name="remarks"></a>コメント  
- このコンス トラクターが保護されているし、で呼び出すことはできません、`new`キーワード。 代わりに、いずれかを呼び出す[module::getmodule メソッド](../windows/module-getmodule-method.md)または[module::create メソッド](../windows/module-create-method.md)です。  
+## <a name="remarks"></a>Remarks  
+ このコンス トラクターは保護され、ということはできません、**新しい**キーワード。 代わりに、いずれかを呼び出す[module::getmodule メソッド](../windows/module-getmodule-method.md)または[module::create メソッド](../windows/module-create-method.md)します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** module.h  

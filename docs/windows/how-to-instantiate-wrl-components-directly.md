@@ -1,5 +1,5 @@
 ---
-title: '方法: WRL コンポーネントを直接インスタンス化 |Microsoft ドキュメント'
+title: '方法: WRL コンポーネントを直接インスタンス化 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,34 +13,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 127a8430e79e7963ea94646f70179df2f30450ff
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 133f0f4ee4efed71c530c7e9e8c367c7d2031433
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878809"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013276"
 ---
 # <a name="how-to-instantiate-wrl-components-directly"></a>方法: WRL コンポーネントを直接インスタンス化する
-Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用する方法について[Microsoft::WRL::Make](../windows/make-function.md)と[Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)関数モジュールからコンポーネントをインスタンス化します。これを定義します。  
+Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用する方法について説明します[Microsoft::WRL::Make](../windows/make-function.md)と[Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)関数モジュールからコンポーネントをインスタンス化します。これを定義します。  
   
- コンポーネントを直接インスタンス化することにより、クラス ファクトリやその他の機構が必要ない場合にオーバーヘッドを低減できます。 両方のユニバーサル Windows プラットフォーム アプリおよびデスクトップ アプリで直接、コンポーネントをインスタンス化することができます。  
+ コンポーネントを直接インスタンス化することにより、クラス ファクトリやその他の機構が必要ない場合にオーバーヘッドを低減できます。 両方のユニバーサル Windows プラットフォーム アプリおよびデスクトップ アプリで直接のコンポーネントをインスタンス化することができます。  
   
-Windows ランタイム C++ テンプレート ライブラリを使用して、従来の COM コンポーネントを作成し、外部のデスクトップ アプリケーションからインスタンス化する方法については、次を参照してください。[する方法: 従来の COM コンポーネントを作成する](../windows/how-to-create-a-classic-com-component-using-wrl.md)です。  
+Windows ランタイム C++ テンプレート ライブラリを使用して、従来の COM コンポーネントを作成し、外部のデスクトップ アプリからインスタンスを作成する方法については、次を参照してください。[方法: 従来の COM コンポーネントを作成する](../windows/how-to-create-a-classic-com-component-using-wrl.md)します。  
   
- このドキュメントでは、2 つの例を示します。 最初の例では、`Make` 関数を使用してコンポーネントをインスタンス化します。 2 番目の例では、`MakeAndInitialize` 関数を使用して構築中に失敗する場合があるコンポーネントをインスタンス化します  (COM では通常、例外ではなく `HRESULT` の値を使用してエラーを示すため、COM 型は通常、コンストラクターからスローされません。 `MakeAndInitialize` を使用すると、コンポーネントで `RuntimeClassInitialize` メソッドを使用して構築引数を検証できます)。どちらの例も、基本的なロガー インターフェイスを定義し、コンソールにメッセージを記述するクラスを定義することでそのインターフェイスを実装します。  
+ このドキュメントでは、2 つの例を示します。 最初の例では、`Make` 関数を使用してコンポーネントをインスタンス化します。 2 番目の例では、`MakeAndInitialize` 関数を使用して構築中に失敗する場合があるコンポーネントをインスタンス化します  (通常、COM は、例外の代わりに、HRESULT 値を使用するため、エラーを示す COM 型通常はスローされません、コンス トラクター。 `MakeAndInitialize` を使用すると、コンポーネントで `RuntimeClassInitialize` メソッドを使用して構築引数を検証できます)。どちらの例も、基本的なロガー インターフェイスを定義し、コンソールにメッセージを記述するクラスを定義することでそのインターフェイスを実装します。  
   
 > [!IMPORTANT]
->  使用することはできません、 `new` Windows ランタイム C++ テンプレート ライブラリのコンポーネントをインスタンス化する演算子です。 そのため、コンポーネントを直接インスタンス化するには、常に `Make` または `MakeAndInitialize` を使用することをお勧めします。  
+>  使用することはできません、**新しい**Windows ランタイム C++ テンプレート ライブラリのコンポーネントをインスタンス化する演算子。 そのため、コンポーネントを直接インスタンス化するには、常に `Make` または `MakeAndInitialize` を使用することをお勧めします。  
   
 ### <a name="to-create-and-instantiate-a-basic-logger-component"></a>基本的なロガー コンポーネントを作成してインスタンス化するには  
   
-1.  Visual Studio で、作成、 **Win32 コンソール アプリケーション**プロジェクト。 など、プロジェクトの名前`WRLLogger`です。  
+1.  Visual Studio で、作成、 **Win32 コンソール アプリケーション**プロジェクト。 など、プロジェクトの名前*WRLLogger*します。  
   
-2.  追加、 **Midl ファイル (.idl)** ファイルをプロジェクトに、ファイルの名前`ILogger.idl`、このコードを追加します。  
+2.  追加、 **Midl ファイル (.idl)** をプロジェクトにファイルをファイルに名前を`ILogger.idl`、このコードを追加。  
   
      [!code-cpp[wrl-logger-make#1](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_1.idl)]  
   
-3.  次のコードを使用して WRLLogger.cpp の内容を置き換えます。  
+3.  次のコードを使用して、内容を置き換える`WRLLogger.cpp`します。  
   
      [!code-cpp[wrl-logger-make#2](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_2.cpp)]  
   
@@ -50,7 +50,7 @@ Windows ランタイム C++ テンプレート ライブラリを使用して、
   
      [!code-cpp[wrl-logger-makeandinitialize#1](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_3.cpp)]  
   
-2.  次のコードを使用して `wmain` の定義を置き換えます。 このバージョンは `MakeAndInitialize` を使用して `CConsoleWriter` オブジェクトをインスタンス化し、`HRESULT` の結果を確認します。  
+2.  次のコードを使用して `wmain` の定義を置き換えます。 このバージョンでは`MakeAndInitialize`をインスタンス化する、`CConsoleWriter`オブジェクトし、HRESULT の結果を確認します。  
   
      [!code-cpp[wrl-logger-makeandinitialize#2](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_4.cpp)]  
   

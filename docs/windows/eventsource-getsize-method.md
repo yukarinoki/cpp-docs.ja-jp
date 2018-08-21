@@ -1,5 +1,5 @@
 ---
-title: Eventsource::getsize メソッド |Microsoft ドキュメント
+title: Eventsource::getsize メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 60c52c711c85caa64c289937f39fe50ec18e1839
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 49497c8b33641521a66c3e84dc2dae3dbd993699
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33887001"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645049"
 ---
 # <a name="eventsourcegetsize-method"></a>EventSource::GetSize メソッド
-現在の EventSource オブジェクトに関連付けられているイベント ハンドラーの数を取得します。  
+現在関連付けられているイベント ハンドラーの数を取得**EventSource**オブジェクト  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 size_t GetSize() const;  
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 内のイベント ハンドラーの数[targets _](../windows/eventsource-targets-data-member.md)です。  
+ 内のイベント ハンドラーの数[targets _](../windows/eventsource-targets-data-member.md)します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** event.h  

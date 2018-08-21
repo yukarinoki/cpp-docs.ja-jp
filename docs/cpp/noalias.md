@@ -1,5 +1,5 @@
 ---
-title: noalias |Microsoft ドキュメント
+title: noalias |Microsoft Docs
 ms.custom: ''
 ms.date: 02/09/2018
 ms.technology:
@@ -17,30 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cbb5c1b4162f3326aade092c7e20ca42a825d13
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 56ee12f65ff9efe9f3b048d061b80aef691eb0f2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420120"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404396"
 ---
 # <a name="noalias"></a>noalias
 
 **Microsoft 固有の仕様**
 
-`noalias` 関数呼び出しの変更または表示されるグローバル状態の参照はないことを意味が指すメモリのみを変更し、*直接*ポインター パラメーター (第 1 レベルの間接指定)。
+**noalias**関数呼び出しの変更または表示されるグローバル状態の参照はないことを意味のみが指すメモリを変更し、*直接*ポインター パラメーター (第 1 レベルの間接指定)。
 
-関数が `noalias` として注釈が指定されている場合、オプティマイザーはパラメーター自体に加えてポインター パラメーターの第 1 レベルの間接指定のみが関数内で参照または変更されると仮定します。 表示されるグローバル状態は、コンパイルのスコープ外では、アドレスは取られません定義または参照されていないすべてのデータの設定です。 コンパイルのスコープは、すべてのソース ファイル ([/LTCG (リンク時コード生成)](../build/reference/ltcg-link-time-code-generation.md)ビルド) または 1 つのソース ファイル (非 **/LTCG**ビルド)。
+関数は、注釈が付けられている場合**noalias**オプティマイザーは、パラメーター自体に加えてポインター パラメーターのだけ最初のレベルの間接指定が参照または変更された関数内で想定できます。 表示されるグローバル状態は、コンパイルのスコープ外では、アドレスは取られません定義または参照されていないすべてのデータの設定です。 コンパイル スコープは、すべてのソース ファイル ([/LTCG (リンク時コード生成)](../build/reference/ltcg-link-time-code-generation.md)ビルド) または 1 つのソース ファイル (非 **/LTCG**ビルド)。
 
-`noalias`注釈は、注釈付きの関数の本体内でのみ適用されます。 関数としてマーク`__declspec(noalias)`関数によって返されるポインターのエイリアスには影響しません。
+**Noalias**注釈は、注釈付きの関数の本体でのみ適用されます。 関数としてマーク**内**関数によって返されるポインターのエイリアスには影響しません。
 
-エイリアスに影響する別の注釈を参照してください。 [__declspec(restrict)](../cpp/restrict.md)です。
+エイリアスに影響するもう 1 つの注釈を参照してください。 [__declspec(restrict)](../cpp/restrict.md)します。
 
 ## <a name="example"></a>例
 
-次の例では、使用する`__declspec(noalias)`です。
+次の例では、使用**内**します。
 
-ときに、関数`multiply`アクセス メモリの注釈が付けられている`__declspec(noalias)`、この関数がパラメーター リストでポインターを使用してを除いてグローバル状態を変更していないことをコンパイラに伝えます。
+ときに、関数`multiply`アクセスのメモリの注釈が付けられている**内**、この関数がパラメーター リストでポインターを通じてを除くグローバル状態を変更しないことをコンパイラに伝えます。
 
 ```C
 // declspec_noalias.c
@@ -109,7 +109,6 @@ int main()
 ```
 
 ## <a name="see-also"></a>関連項目
-
-[__declspec](../cpp/declspec.md)  
-[キーワード](../cpp/keywords-cpp.md)  
-[__declspec(restrict)](../cpp/restrict.md)  
+ [__declspec](../cpp/declspec.md)  
+ [キーワード](../cpp/keywords-cpp.md)  
+ [__declspec(restrict)](../cpp/restrict.md)  

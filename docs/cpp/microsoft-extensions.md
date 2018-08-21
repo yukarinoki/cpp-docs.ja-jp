@@ -1,5 +1,5 @@
 ---
-title: Microsoft 拡張機能 |Microsoft ドキュメント
+title: Microsoft の拡張機能 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,26 +14,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: beac75a8a27fc4638b541228330e83e7b665fbcb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70b1e0e6ef1294ff23952816db6f468022609f4f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419824"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408376"
 ---
 # <a name="microsoft-extensions"></a>Microsoft 拡張機能
 *asm ステートメント*:  
  **_ _asm***アセンブリ命令* **;** オプトイン    
   
- **_ _asm {***アセンブリ命令リスト***};** オプトイン      
+ **_ _asm {***アセンブリの命令リスト***};** オプトイン      
   
- *アセンブリ命令リスト*:  
+ *アセンブリの命令リスト*:  
  *アセンブリ命令* **;** オプトイン  
   
- *アセンブリ命令* **;***アセンブリ命令リスト* **;** オプトイン  
+ *アセンブリ命令* **;***アセンブリの命令リスト* **;** オプトイン  
   
- *ms 修飾子リスト*:  
- *ms 修飾子 ms 修飾子リスト*オプトイン  
+ *リスト修飾子 ms ・*:  
+ *ms 修飾子 ms 修飾子リスト*選択  
   
  *ms 修飾子*:  
  **__cdecl**  
@@ -42,13 +42,13 @@ ms.locfileid: "32419824"
   
  **__stdcall**  
   
- **_ _syscall** (将来の実装のために予約されています)  
+ **_ _syscall** (今後の実装の予約済み)  
   
- **_ _oldcall** (将来の実装のために予約されています)  
+ **_ _oldcall** (今後の実装の予約済み)  
   
- **_ _unaligned** (将来の実装のために予約されています)  
+ **_ _unaligned** (今後の実装の予約済み)  
   
- *ベース修飾子*  
+ *ベースの修飾子*  
   
  *ベース修飾子*:  
  **_ _based (** *ベース型* **)**  

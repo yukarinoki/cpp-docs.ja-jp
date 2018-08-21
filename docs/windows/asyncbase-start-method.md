@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::start メソッド |Microsoft ドキュメント
+title: Asyncbase::start メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0acc6f62530daf641a2e4d568ed511d6fd831c20
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 32c59c00180b26a2856b1fc210302ffff0e72f0c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860919"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641305"
 ---
 # <a name="asyncbasestart-method"></a>AsyncBase::Start メソッド
 非同期操作を開始します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 STDMETHOD(  
    Start  
 )(void);  
 ```  
   
 ## <a name="return-value"></a>戻り値  
- S_OK 場合は、操作の開始または既に開始です。それ以外の場合、E_ILLEGAL_STATE_CHANGE です。  
+ S_OK 場合は、操作の開始またはが既に開始します。それ以外の場合、E_ILLEGAL_STATE_CHANGE します。  
   
-## <a name="remarks"></a>コメント  
- Start() は、IAsyncInfo::Start の既定の実装は、実際の作業は行われません。 実際には、非同期操作を開始するには、OnStart() 純粋仮想メソッドをオーバーライドします。  
+## <a name="remarks"></a>Remarks  
+ **Start()** の既定の実装は、 `IAsyncInfo::Start`、実際の作業を行いません。 実際には、非同期操作を開始するには、オーバーライド、`OnStart()`純粋仮想メソッド。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** async.h  

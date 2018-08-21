@@ -1,5 +1,5 @@
 ---
-title: first_is |Microsoft ドキュメント
+title: first_is |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8292dfb329d5e5db15f8329cbdead443215bbee8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e15897eeaa6a158ae3946202819b697c7372984d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875007"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642708"
 ---
 # <a name="firstis"></a>first_is
 転送する最初の配列要素のインデックスを指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
-      [ first_is(  
+```cpp  
+[ first_is(  
    "expression"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *式*  
- 1 つ以上の C 言語の式。 空の引数スロットを指定します。  
+ 1 つ以上の C 言語の式。 空の引数スロットが許可されます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **First_is** C++ 属性と同じ機能を持つ、 [first_is](http://msdn.microsoft.com/library/windows/desktop/aa366831) MIDL 属性。  
   
 ## <a name="example"></a>例  
  次のコードは、配列のセクションを指定するさまざまな方法を示しています。  
   
-```  
+```cpp  
 // cpp_attr_ref_first_is.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -72,8 +71,8 @@ requestedit] HRESULT get_I([out, retval]long *i);
   
 |||  
 |-|-|  
-|**対象**|フィールドに`struct`または**共用体**パラメーターをインターフェイスでは、インターフェイス メソッド|  
-|**反復可能**|×|  
+|**対象**|フィールドに**構造体**または**共用体**パラメーターをインターフェイス、インターフェイス メソッド|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

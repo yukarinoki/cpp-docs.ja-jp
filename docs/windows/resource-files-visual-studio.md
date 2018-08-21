@@ -1,5 +1,5 @@
 ---
-title: リソース ファイル (Visual Studio) |Microsoft ドキュメント
+title: リソース ファイル (Visual Studio) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,20 +27,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b4b56d1f329aee29c37b15590729074d305f04d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dc9a9f35793b010f4cea227ed629543c82b2ce87
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879875"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605283"
 ---
 # <a name="resource-files-visual-studio"></a>リソース ファイル (Visual Studio)
 > [!NOTE]
->  これは Windows デスクトップ アプリケーションだけに適用できます。 ユニバーサル Windows プラットフォーム アプリでリソースについては、次を参照してください。[アプリ リソースの定義](http://msdn.microsoft.com/en-us/476ea844-632c-4467-9ce3-966be1350dd4)です。  
+>  これは Windows デスクトップ アプリケーションだけに適用できます。 ユニバーサル Windows プラットフォーム アプリでのリソースについては、次を参照してください。[アプリ リソースの定義](http://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4)します。  
 >   
-> マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 詳細については、管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションは、次を参照してください。[グローバライズと .NET Framework アプリケーションのローカライズ](/dotnet/standard/globalization-localization/index)です。  
+> マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
 >  
-> .NET プログラミング言語のプロジェクトでは、リソース スクリプト ファイルは使用しないため、 **ソリューション エクスプローラー**」をご覧ください。 [イメージ エディター](../windows/image-editor-for-icons.md) と [バイナリ エディター](binary-editor.md) を使用して、マネージ プロジェクトのリソース ファイルを操作できます。 編集の対象となるマネージ リソースは、リンク リソースである必要があります。 Visual Studio のリソース エディターでは、埋め込みリソースの編集はサポートしていません。  
+> .NET プログラミング言語のプロジェクトでは、リソース スクリプト ファイルは使用しないため、 **ソリューション エクスプローラー**」をご覧ください。 
+  [イメージ エディター](../windows/image-editor-for-icons.md) と [バイナリ エディター](binary-editor.md) を使用して、マネージド プロジェクトのリソース ファイルを操作できます。 編集の対象となるマネージド リソースは、リンク リソースである必要があります。 Visual Studio のリソース エディターでは、埋め込みリソースの編集はサポートしていません。  
   
  "リソース ファイル" という用語は、次のようなさまざまな種類のファイルを示します。  
   
@@ -95,4 +96,3 @@ ms.locfileid: "33879875"
  [リソース エディター](../windows/resource-editors.md)   
  [リソース ファイルの操作](../windows/working-with-resource-files.md)   
  [メニューとその他のリソース](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
-

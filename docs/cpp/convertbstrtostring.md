@@ -16,22 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1278ab84ea8888b34290c9738e0eb88a4485e99c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e84b8fb27c926a4b61ae631638ea4708fcf538b7
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943487"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463991"
 ---
 # <a name="convertbstrtostring"></a>ConvertBSTRToString
 **Microsoft 固有の仕様**  
   
- 変換を`BSTR`値を**char \*** します。  
+ 変換を`BSTR`値を`char *`します。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 char* __stdcall ConvertBSTRToString(BSTR pSrc);  
 ```  
   
@@ -40,7 +39,7 @@ char* __stdcall ConvertBSTRToString(BSTR pSrc);
  BSTR 変数。  
   
 ## <a name="remarks"></a>Remarks  
- `ConvertBSTRToString` は、削除する必要がある文字列を割り当てます。  
+ **ConvertBSTRToString**する必要がありますを削除する文字列を割り当てます。  
   
 ## <a name="example"></a>例  
   
@@ -70,8 +69,8 @@ char * text: Test
   
 **Microsoft 固有の仕様はここまで**  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** \<comutil.h >。  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** \<comutil.h >  
   
  **Lib:** comsuppw.lib または comsuppwd.lib (を参照してください[/Zc:wchar_t (wchar_t をネイティブ型)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)詳細)  
   

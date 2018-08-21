@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b6fea501724b24c07ab8b2199410a369d62dc9d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: d9c3e42cf2dad7e227636582baa4deabcfc05bc1
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943630"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466544"
 ---
 # <a name="const-c"></a>const (C++)
 データの宣言を変更するときに、 **const**キーワードは、オブジェクトまたは変数に変更がないを指定します。  
@@ -29,7 +29,6 @@ ms.locfileid: "37943630"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 const declaration ;  
 member-function const ;  
 ```  
@@ -132,7 +131,7 @@ int main()
 }  
 ```  
   
-## <a name="c-and-c-const-differences"></a>C と C++ での const の相違点  
+## <a name="c-and-c-const-differences"></a>C および C++ の const の相違点  
  として変数を宣言するときに**const** C ソース コード ファイルでこれを行うとします。  
   
 ```cpp 
@@ -170,7 +169,7 @@ extern "C" const int x=10;
   
 -   [volatile](../cpp/volatile-cpp.md)  
   
--   [#define](../preprocessor/hash-define-directive-c-cpp.md)します。  
+-   [#define](../preprocessor/hash-define-directive-c-cpp.md)  
   
 ## <a name="see-also"></a>関連項目  
  [キーワード](../cpp/keywords-cpp.md)

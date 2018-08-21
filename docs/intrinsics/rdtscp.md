@@ -20,7 +20,7 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 0d890afe9e19782f19442e8d95709b91a8680278
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
 ms.locfileid: "33329804"
@@ -28,7 +28,7 @@ ms.locfileid: "33329804"
 # <a name="rdtscp"></a>__rdtscp
 **Microsoft 固有の仕様**  
   
- 生成されます、`rdtscp`命令を書き込みます`TSC_AUX[31:0`] に、メモリ、および 64 ビットのタイム スタンプ カウンターを返します (`TSC)`結果。  
+ `rdtscp`命令を生成してメモリに`TSC_AUX[31:0`を書き込み、64 ビットのタイム スタンプ カウンター`TSC)`を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,7 +40,7 @@ unsigned __int64 __rdtscp(
   
 #### <a name="parameters"></a>パラメーター  
  [出力] `Aux`  
- コンピューター固有のレジスタの内容を格納する場所へのポインター`TSC_AUX[31:0]`です。  
+ コンピューター固有のレジスタの内容を格納する場所`TSC_AUX[31:0]`へのポインタです。  
   
 ## <a name="return-value"></a>戻り値  
  64 ビット符号なし整数のティック数です。  
@@ -54,14 +54,14 @@ unsigned __int64 __rdtscp(
  **ヘッダー ファイル** \<intrin.h >  
   
 ## <a name="remarks"></a>コメント  
- この組み込みを生成、`rdtscp`命令します。 この命令のハードウェア サポートを確認するのには、呼び出し、`__cpuid`で組み込み`InfoType=0x80000001`のビット 27 をチェックし、`CPUInfo[3] (EDX)`です。 このビットは、それ以外の場合、命令がサポートされている場合は 1 と 0 です。  かどうかはコードを実行するを使用するこの組み込みをサポートしていないハードウェア、`rdtscp`命令、結果は予測できません。  
+ この組み込み関数は`rdtscp`命令を生成します。 この命令のハードウェア サポートを確認するには、組み込み関数`__cpuid`を`InfoType=0x80000001`として呼び出し、`CPUInfo[3] (EDX)`の 27 ビット目を確認してください。 命令がサポートされていればこのビットは 1 となり、サポートされていなければ 0 となります。  `rdtscp`命令が搭載されていないハードウェア上でこの組み込み関数を呼び出した場合、その結果は保証されません。  
   
 > [!CAUTION]
 >  異なり`rdtsc`、`rdtscp`はシリアル化する命令です。 ただし、コンパイラがこれを回避コードを移動できます組み込みです。  
   
  この世代のハードウェアで TSC 値の解釈が異なる以前のバージョンの[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]します。  詳細についてはハードウェアのマニュアルを参照してください。  
   
- 値の意味`TSC_AUX[31:0]`オペレーティング システムによって異なります。  
+ 値`TSC_AUX[31:0]`の意味はオペレーティング システムによって異なります。  
   
 ## <a name="example"></a>例  
   

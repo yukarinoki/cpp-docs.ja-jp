@@ -1,5 +1,5 @@
 ---
-title: Synclockt::synclockt コンス トラクター |Microsoft ドキュメント
+title: Synclockt::synclockt コンス トラクター |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c3353df1a73821a2009aeba2367f1892b06aba5b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6d4ff3393e30e72bc3378837ff11c41927249d1f
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889844"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014195"
 ---
 # <a name="synclocktsynclockt-constructor"></a>SyncLockT::SyncLockT コンストラクター
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 SyncLockT(  
    _Inout_ SyncLockT&& other  
 );  
@@ -39,17 +39,17 @@ explicit SyncLockT(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `other`  
- 右辺値参照を別の SyncLockT オブジェクト。  
+### <a name="parameters"></a>パラメーター  
+ *other*  
+ 別の右辺値参照**SyncLockT**オブジェクト。  
   
- `sync`  
- SyncLockWithStatusT の別のオブジェクトへの参照。  
+ *sync*  
+ 別の参照`SyncLockWithStatusT`オブジェクト。  
   
-## <a name="remarks"></a>コメント  
- SyncLockT クラスの新しいインスタンスを初期化します。  
+## <a name="remarks"></a>Remarks  
+ 新しいインスタンスを初期化、 **SyncLockT**クラス。  
   
- 最初のコンス トラクターの初期化パラメーターで指定された別の SyncLockT オブジェクトから現在の SyncLockT オブジェクト`other`、し、その他の SyncLockT オブジェクトを無効にします。 2 番目のコンス トラクターは`protected`、無効な状態を現在の SyncLockT オブジェクトを初期化します。  
+ 最初のコンス トラクターは、現在**SyncLockT**から別のオブジェクト**SyncLockT**パラメーターで指定されたオブジェクト*他*、し、その他のを無効にし、**SyncLockT**オブジェクト。 2 番目のコンス トラクターは**保護**、し、現在の初期化**SyncLockT**オブジェクトを無効な状態にします。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

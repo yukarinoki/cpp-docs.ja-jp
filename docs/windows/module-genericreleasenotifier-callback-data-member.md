@@ -1,5 +1,5 @@
 ---
-title: データ メンバーの Module::GenericReleaseNotifier::callback_ |Microsoft ドキュメント
+title: データ メンバーの Module::GenericReleaseNotifier::callback_ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c6f7c430fcd75033e10e0a23d9d0ab78675653bc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dd166f39f28f01d2d6b30dce81080ec1b76fcad0
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880701"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018401"
 ---
 # <a name="modulegenericreleasenotifiercallback-data-member"></a>Module::GenericReleaseNotifier::callback_ データ メンバー
-ラムダ、ファンクタ、または現在の module::genericreleasenotifier オブジェクトに関連付けられている関数へのポインターのイベント ハンドラーが保持されます。  
+ラムダ、ファンクター、または現在に関連付けられている関数へのポインター イベント ハンドラーを保持`Module::GenericReleaseNotifier`オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 T callback_;  
 ```  
   

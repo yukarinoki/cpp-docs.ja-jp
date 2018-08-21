@@ -1,5 +1,5 @@
 ---
-title: ユーザー定義の属性 (C++ コンポーネント拡張) |Microsoft ドキュメント
+title: ユーザー定義の属性 (C++ コンポーネント拡張) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 22f8dfa7e78568f100b0c58c881b9e84cb47a149
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e265824d912d05bd68edcaf8637fc391d69869cd
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891767"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017709"
 ---
 # <a name="user-defined-attributes--c-component-extensions"></a>ユーザー定義の属性 (C++ コンポーネント拡張)
 カスタム属性を使用すると、インターフェイス、クラスまたは構造体、メソッド、パラメーター、または列挙型のメタデータを拡張できます。  
   
 ## <a name="all-runtimes"></a>すべてのランタイム  
- すべてのランタイムでは、カスタム属性をサポートします。  
+ すべてのランタイムは、カスタム属性をサポートします。  
   
 ## <a name="windows-runtime"></a>Windows ランタイム  
- C + + CX 属性のプロパティのみをサポートがないコンス トラクターまたはメソッドの属性です。  
+ C + + CX 属性のプロパティのみをサポートがない属性のコンス トラクターまたはメソッドです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ### <a name="requirements"></a>要件  
- コンパイラ オプション: **/ZW**  
+ コンパイラ オプション: `/ZW`  
   
 ## <a name="common-language-runtime"></a>共通言語ランタイム  
- カスタム属性を使用して、管理対象要素のメタデータを拡張できます。 詳細については、「[属性](/dotnet/standard/attributes/index)」を参照してください。  
+ カスタム属性を使用して、管理対象の要素のメタデータを拡張できます。 詳細については、「[属性](/dotnet/standard/attributes/index)」を参照してください。  
   
-### <a name="remarks"></a>コメント  
- および構文についてこのトピックでに表示される情報を置き換えることを意図した[属性](../windows/attribute.md)です。  
+### <a name="remarks"></a>Remarks  
+ 情報と、このトピックで示した構文で説明する情報を置き換えるものでは[属性](../windows/attribute.md)します。  
   
- カスタム属性を定義するには、型を定義して<xref:System.Attribute>の種類、および必要に応じて、基本クラスを適用する、<xref:System.AttributeUsageAttribute>属性。  
+ カスタム属性を定義するには、型を定義して<xref:System.Attribute>型と、必要に応じて、基本クラスを適用する、<xref:System.AttributeUsageAttribute>属性。  
   
- たとえばの Microsoft MTS) 1.0 では、トランザクションの場合、同期に関する動作の負荷分散などが ODL カスタム属性を使用してタイプ ライブラリに追加されたカスタム Guid により指定されました。 そのため、MTS サーバーのクライアントでは、タイプ ライブラリを参照しての特性を決定する可能性があります。 .NET Framework でタイプ ライブラリのアナログは、メタデータで、ODL カスタム属性のアナログはカスタム属性です。 また、タイプ ライブラリを読み取る型にリフレクションを使用してに似ています。  
+ などの Microsoft サーバー (MTS Transaction) 1.0 では、トランザクション、同期、に関する動作の負荷分散とでは、ODL カスタム属性を使用してタイプ ライブラリに追加されたカスタム Guid により指定されました。 そのため、MTS サーバーのクライアントでは、タイプ ライブラリを参照してその特性を決定でした。 .NET framework では、タイプ ライブラリのアナログはメタデータで、ODL カスタム属性のアナログはカスタム属性です。 また、タイプ ライブラリを読み取り、型でリフレクションを使用してに似ています。  
   
  詳細については、次のトピックを参照してください。  
   
@@ -53,13 +53,12 @@ ms.locfileid: "33891767"
   
 -   [属性パラメーターの型](../windows/attribute-parameter-types-cpp-component-extensions.md)  
   
- Visual C でアセンブリの署名については、次を参照してください。[厳密な名前のアセンブリ (アセンブリ署名) (C + + CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)です。  
+ Visual C でのアセンブリへの署名については、次を参照してください。[厳密な名前のアセンブリ (アセンブリ署名) (C +/cli CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)します。  
   
 ### <a name="requirements"></a>要件  
- コンパイラ オプション: **/clr**  
+ コンパイラ オプション: `/clr`  
   
 ### <a name="examples"></a>使用例  
- **例**  
   
  次の例では、カスタム属性を定義する方法を示します。  
   
@@ -78,9 +77,7 @@ ref struct Attr : public Attribute {
 ref class MyClass {};  
 ```  
   
- **例**  
-  
- 次の例は、カスタム属性の重要な機能の一部を示しています。 たとえば、次の例がカスタム属性の一般的な使用方法を示しています。 完全に記述できる自体をクライアントにサーバーをインスタンス化します。  
+ 次の例では、カスタム属性のいくつかの重要な機能を示します。 たとえば、この例は、カスタム属性の一般的な使用方法を示しています。: 完全に記述できる自体をクライアントにサーバーをインスタンス化します。  
   
 ```cpp  
 // extending_metadata_b.cpp  
@@ -155,8 +152,6 @@ int main() {
 }  
 ```  
   
- **出力**  
-  
 ```Output  
 Service Priority = 0  
   
@@ -171,13 +166,11 @@ Service Priority = 1
 Service Access = Read  
 ```  
   
- **例**  
-  
- オブジェクト ^ タイプ バリアント データ型によって置き換えられます。 次の例は、オブジェクトの配列を受け取るカスタム属性を定義 ^ パラメーターとして。  
+ `Object^`型はバリアント データ型を置き換えます。 次の例では、カスタム属性の配列を受け取る`Object^`パラメーターとして。  
   
  属性の引数はコンパイル時定数である必要があります。ほとんどの場合、定数リテラルを使用する必要があります。  
   
- 参照してください[typeid](../windows/typeid-cpp-component-extensions.md)については、カスタム属性ブロックから system::type の値を返す方法です。  
+ 参照してください[typeid](../windows/typeid-cpp-component-extensions.md)については、カスタム属性ブロックからの system::type の値を返す方法。  
   
 ```cpp  
 // extending_metadata_e.cpp  
@@ -195,9 +188,7 @@ public:
 public ref class SomeClass {};  
 ```  
   
- **例**  
-  
- ランタイムは、シリアル化可能なカスタム属性クラスのパブリックの部分である必要がある必要があります。  カスタム属性を作成するときに、カスタム属性の名前付き引数はコンパイル時の定数に限定されます。  (考えると、メタデータにクラス レイアウトに追加されたビットのシーケンスとして。)  
+ ランタイムは、カスタム属性クラスのパブリックの部分をシリアル化可能でなければならないことが必要です。  カスタム属性を作成するときに、カスタム属性の名前付き引数はコンパイル時定数に限定されます。  (考える一連のビットをメタデータのクラス レイアウトに追加されます。)  
   
 ```cpp  
 // extending_metadata_f.cpp  

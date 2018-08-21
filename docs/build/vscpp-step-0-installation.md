@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5807110caf730c72d93de7e1265199b63f1d6bff
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: a8043ff1c25c08c6adcb640defba1bc967a2fb8b
+ms.sourcegitcommit: 66f4f12d3851c897ca69cf62da1697e95b2b97c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322486"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39496559"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Visual Studio での C++ のサポートをインストール
 
@@ -42,10 +42,10 @@ ms.locfileid: "36322486"
 1. Windows の最新の Visual Studio 2017 インストーラーをダウンロードします。
 
    > [!div class="nextstepaction"]
-   > <a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 のインストールに関するコミュニティ</a>
+   > [Visual Studio 2017 のインストールに関するコミュニティ](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 
    >[!Tip]
-   > このコミュニティ版は、個人の開発者、クラス学習、学術研究、オープン ソース開発向けです。 その他の用途には、<a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Professional</a> または <a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Enterprise</a> を使用してください。
+   > このコミュニティ版は、個人の開発者、クラス学習、学術研究、オープン ソース開発向けです。 その他の用途には、[Visual Studio 2017 Professional](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) または [Visual Studio 2017 Enterprise](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) を使用してください。
 
 1. ダウンロードしたインストーラー ファイルを検索して実行します。 ブラウザーに表示されるか、ダウンロード フォルダーで見つかるでしょう。 インストーラーを実行するには、管理者特権が必要です。 インストーラーでシステムに変更を加えることを可能にするアクセス許可を付与するかどうかを求める **[ユーザーアカウント制御]** ダイアログが表示されます **。** 問題が発生した場合、エクスプローラーでダウンロードしたファイルを検索し、インストーラーのアイコンを右クリックし、コンテキスト メニューから **[管理者として実行]** を選択してください。
 

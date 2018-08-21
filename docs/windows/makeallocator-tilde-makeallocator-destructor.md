@@ -1,5 +1,5 @@
 ---
-title: 'MakeAllocator:: ~ MakeAllocator デストラクター |Microsoft ドキュメント'
+title: 'MakeAllocator:: ~ MakeAllocator デストラクター |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f0734f895315f1c8ba7577d531c54a9dc11381e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 09450b7883467640cc7176334ea18c07f43a098b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877100"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010874"
 ---
 # <a name="makeallocatormakeallocator-destructor"></a>MakeAllocator::~MakeAllocator デストラクター
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 ~MakeAllocator();  
 ```  
   
-## <a name="remarks"></a>コメント  
- MakeAllocator クラスの現在のインスタンスの初期化を解除します。  
+## <a name="remarks"></a>Remarks  
+ 現在のインスタンスの初期化を解除、 **MakeAllocator**クラス。  
   
- このデストラクターは、必要な場合も、基になる割り当てられたメモリを削除します。  
+ このデストラクターは必要な場合も、基になる割り当てられたメモリを削除します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** implements.h  

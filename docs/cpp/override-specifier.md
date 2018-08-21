@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b50ffc096cc710f4028c7effc2dda8822f077f29
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c95a67df03f62279b7b9c46ef41b6cafe7ff3df1
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940655"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408152"
 ---
 # <a name="override-specifier"></a>override 指定子
 使用することができます、**オーバーライド**キーワードを基底クラスで仮想関数をオーバーライドする関数のメンバーを指定します。  
@@ -27,7 +27,6 @@ ms.locfileid: "37940655"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 function-declaration override;  
 ```  
   
@@ -56,9 +55,7 @@ class DerivedClass: public BaseClass
     virtual void funcC(double = 0.0); // DerivedClass::funcC(double) has a different  
                                       // parameter type than BaseClass::funcC(int), so  
                                       // DerivedClass::funcC(double) is a new member function  
-  
 };  
-  
 ```  
   
  使用すると**オーバーライド**コンパイラは自動的に新しいメンバー関数を作成するのではなくエラーを生成します。  
@@ -86,7 +83,6 @@ class DerivedClass: public BaseClass
     void funcD() override; // compiler error: DerivedClass::funcD() does not   
                            // override the non-virtual BaseClass::funcD()  
 };  
-  
 ```  
   
  関数をオーバーライドできないこととクラスを継承できないことを指定するには、使用、[最終的な](../cpp/final-specifier.md)キーワード。  
@@ -94,4 +90,3 @@ class DerivedClass: public BaseClass
 ## <a name="see-also"></a>関連項目  
  [final 指定子](../cpp/final-specifier.md)   
  [キーワード](../cpp/keywords-cpp.md)   
- 

@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::get_status メソッド |Microsoft ドキュメント
+title: Asyncbase::get_status メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 46854ddfd6891efa2f205649d4b6410cc401e7fb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b49e7cbd30445250bdf0710973ba65e47823b36c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863362"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652254"
 ---
 # <a name="asyncbasegetstatus-method"></a>AsyncBase::get_Status メソッド
 非同期操作の状態を示す値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 STDMETHOD(  
    get_Status  
 )(AsyncStatus *status) override;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `status`  
- 状態が格納される場所です。 詳細については、Windows::Foundation::AsyncStatus 列挙体を参照してください。  
+### <a name="parameters"></a>パラメーター  
+ *status*  
+ 状態が格納される場所です。 詳細については、次を参照してください。`Windows::Foundation::AsyncStatus`列挙体。  
   
 ## <a name="return-value"></a>戻り値  
- 正常終了した場合は S_OK、それ以外の場合、E_ILLEGAL_METHOD_CALL です。  
+ 成功した場合は s_ok を返します。それ以外の場合、E_ILLEGAL_METHOD_CALL します。  
   
-## <a name="remarks"></a>コメント  
- このメソッドは、IAsyncInfo::get_Status を実装します。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、`IAsyncInfo::get_Status` を実装します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** async.h  

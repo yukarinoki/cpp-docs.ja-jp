@@ -1,5 +1,5 @@
 ---
-title: Modulebase::modulebase コンス トラクター |Microsoft ドキュメント
+title: Modulebase::modulebase コンス トラクター |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b18d33b962c277347e74819e5ff34f3562821f45
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7d5a733c7a3e4481495424e4241f1b8a683e0f92
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875891"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011024"
 ---
 # <a name="modulebasemodulebase-constructor"></a>ModuleBase::ModuleBase コンストラクター
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 ModuleBase();  
 ```  
   
-## <a name="remarks"></a>コメント  
- モジュール クラスのインスタンスを初期化します。  
+## <a name="remarks"></a>Remarks  
+ 
+          `Module` クラスのインスタンスを初期化します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** implements.h  

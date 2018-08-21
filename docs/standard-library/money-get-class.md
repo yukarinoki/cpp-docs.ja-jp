@@ -161,7 +161,7 @@ virtual iter_type do_get(iter_type first,
 
 インスタンスがない場合**fac**します。 `thousands_sep` 通貨入力フィールドの値の部分で発生する (ここに等しい要素**money_base::value**書式パターンが表示されます)、グループ化の制約は強制されません。 によってグループ化の制約が課される場合は、 **fac**します。 **グループ化**が適用されます。 結果の数字シーケンスを表す整数の下位注**fac**します。 `frac_digits` 10 進数字が小数点の右側と見なされます。
 
-任意の余白は、書式パターンの末尾以外に出現する場合、**money_base::space** と等しい要素が書式パターンに出現しているときに一致します。 それ以外の場合、内部の余白は一致しません。 要素*ch*場合、空白文字とみなされます[use_facet](../standard-library/locale-functions.md#use_facet) < [ctype](../standard-library/ctype-class.md) \< **CharType**>> (**iosbase**します。 [getloc](../standard-library/ios-base-class.md#getloc))。 [](../standard-library/ctype-class.md#is)( **ctype_base::space**、 *ch*) は**true**します。
+任意の余白は、書式パターンの末尾以外に出現する場合、**money_base::space** と等しい要素が書式パターンに出現しているときに一致します。 それ以外の場合、内部の余白は一致しません。 要素*ch*場合、空白文字とみなされます[use_facet](../standard-library/locale-functions.md#use_facet) < [ctype](../standard-library/ctype-class.md) \< **CharType**>> (**iosbase**します。 [getloc](../standard-library/ios-base-class.md#getloc))。 [は](../standard-library/ctype-class.md#is)( **ctype_base::space**、 *ch*) は**true**します。
 
 ### <a name="example"></a>例
 

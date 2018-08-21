@@ -1,5 +1,5 @@
 ---
-title: Weakref::weakref コンス トラクター |Microsoft ドキュメント
+title: Weakref::weakref コンス トラクター |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae70dabdd86fedf82c26c0c7d9a09d842e2310e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6e7b7d35fd8cae44c3f374a81cae572e4c9ee4f8
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891049"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011160"
 ---
 # <a name="weakrefweakref-constructor"></a>WeakRef::WeakRef コンストラクター
-WeakRef クラスの新しいインスタンスを初期化します。  
+新しいインスタンスを初期化、 **WeakRef**クラス。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 WeakRef();  
 WeakRef(  
    decltype(__nullptr)  
@@ -52,12 +52,12 @@ WeakRef(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `ptr`  
- ポインター、参照、または現在の WeakRef オブジェクトを初期化する既存のオブジェクトへの右辺値参照。  
+### <a name="parameters"></a>パラメーター  
+ *ptr*  
+ ポインター、参照、または現在を初期化する既存のオブジェクトへの右辺値参照**WeakRef**オブジェクト。  
   
-## <a name="remarks"></a>コメント  
- 最初のコンス トラクターは、空の WeakRef オブジェクトを初期化します。 2 番目のコンス トラクターは、IWeakReference インターフェイスへのポインターから WeakRef オブジェクトを初期化します。 3 番目のコンス トラクターが ComPtr への参照から WeakRef オブジェクトを初期化します\<IWeakReference > オブジェクト。 4 番目と 5 番目のコンス トラクターは、別の WeakRef オブジェクトから WeakRef オブジェクトを初期化します。  
+## <a name="remarks"></a>Remarks  
+ 最初のコンス トラクターによって初期化空**WeakRef**オブジェクト。 2 番目のコンス トラクターによって初期化、 **WeakRef**オブジェクトへのポインターから、`IWeakReference`インターフェイス。 3 番目のコンス トラクターによって初期化、 **WeakRef**への参照からオブジェクトを`ComPtr<IWeakReference>`オブジェクト。 4 番目と 5 番目のコンス トラクターの初期化、 **WeakRef**から別のオブジェクト**WeakRef**オブジェクト。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** client.h  

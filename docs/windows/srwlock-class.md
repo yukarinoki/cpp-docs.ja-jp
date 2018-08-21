@@ -1,5 +1,5 @@
 ---
-title: SRWLock クラス |Microsoft ドキュメント
+title: SRWLock クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ec31b1469f437ff2776ed9da52fbcd7557fca8e2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 58b537a29a042f2227f3c2c121a320532d52877c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891754"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016367"
 ---
 # <a name="srwlock-class"></a>SRWLock クラス
-スリム リーダー/ライター ロックに相当します。  
+スリム リーダー/ライター ロックを表します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 class SRWLock;  
 ```  
   
-## <a name="remarks"></a>コメント  
- スリム リーダー/ライター ロックは、オブジェクトまたはリソースへのスレッド間でのアクセスを同期するために使用されます。 詳細については、次を参照してください。[同期関数](http://msdn.microsoft.com/en-us/9b6359c2-0113-49b6-83d0-316ad95aba1b)です。  
+## <a name="remarks"></a>Remarks  
+ スリム リーダー/ライター ロックは、オブジェクトやリソースをスレッド間でのアクセスを同期に使用されます。 詳細については、次を参照してください。[同期関数](http://msdn.microsoft.com/9b6359c2-0113-49b6-83d0-316ad95aba1b)します。  
   
 ## <a name="members"></a>メンバー  
   
@@ -42,30 +42,30 @@ class SRWLock;
   
 |||  
 |-|-|  
-|**SyncLockExclusive**|排他モードで取得した SRWLock オブジェクトのシノニムです。|  
-|**SyncLockShared**|共有モードで取得した SRWLock オブジェクトのシノニムです。|  
+|`SyncLockExclusive`|シノニム、 **SRWLock**排他モードで取得したオブジェクト。|  
+|`SyncLockShared`|シノニム、 **SRWLock**共有モードで取得したオブジェクト。|  
   
 ### <a name="public-constructors"></a>パブリック コンストラクター  
   
 |名前|説明|  
 |----------|-----------------|  
-|[SRWLock::SRWLock コンストラクター](../windows/srwlock-srwlock-constructor.md)|SRWLock クラスの新しいインスタンスを初期化します。|  
-|[SRWLock::~SRWLock デストラクター](../windows/srwlock-tilde-srwlock-destructor.md)|SRWLock クラスのインスタンスの初期化を解除します。|  
+|[SRWLock::SRWLock コンストラクター](../windows/srwlock-srwlock-constructor.md)|新しいインスタンスを初期化、 **SRWLock**クラス。|  
+|[SRWLock::~SRWLock デストラクター](../windows/srwlock-tilde-srwlock-destructor.md)|インスタンスを初期化解除、 **SRWLock**クラス。|  
   
 ### <a name="public-methods"></a>パブリック メソッド  
   
 |名前|説明|  
 |----------|-----------------|  
-|[SRWLock::LockExclusive メソッド](../windows/srwlock-lockexclusive-method.md)|排他モードで SRWLock オブジェクトを取得します。|  
-|[SRWLock::LockShared メソッド](../windows/srwlock-lockshared-method.md)|共有モードで SRWLock オブジェクトを取得します。|  
-|[SRWLock::TryLockExclusive メソッド](../windows/srwlock-trylockexclusive-method.md)|現在または指定した SRWLock オブジェクトの排他モードで SRWLock オブジェクトを取得しようとしています。|  
-|[SRWLock::TryLockShared メソッド](../windows/srwlock-trylockshared-method.md)|現在または指定した SRWLock オブジェクトの共有モードで SRWLock オブジェクトを取得しようとしています。|  
+|[SRWLock::LockExclusive メソッド](../windows/srwlock-lockexclusive-method.md)|取得、 **SRWLock**排他モードでのオブジェクト。|  
+|[SRWLock::LockShared メソッド](../windows/srwlock-lockshared-method.md)|取得、 **SRWLock**共有モードでのオブジェクト。|  
+|[SRWLock::TryLockExclusive メソッド](../windows/srwlock-trylockexclusive-method.md)|取得を試みる、 **SRWLock**オブジェクトの現在または指定された排他モードで**SRWLock**オブジェクト。|  
+|[SRWLock::TryLockShared メソッド](../windows/srwlock-trylockshared-method.md)|取得を試みる、 **SRWLock**オブジェクトの現在または指定した共有モードで**SRWLock**オブジェクト。|  
   
-### <a name="protected-data-member"></a>プロテクト データ メンバー  
+### <a name="protected-data-member"></a>保護されたデータ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
-|[SRWLock::SRWLock_ データ メンバー](../windows/srwlock-srwlock-data-member.md)|現在の SRWLock オブジェクトの基になるロック変数が含まれています。|  
+|[SRWLock::SRWLock_ データ メンバー](../windows/srwlock-srwlock-data-member.md)|現在の基になるロック変数が含まれる**SRWLock**オブジェクト。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `SRWLock`  

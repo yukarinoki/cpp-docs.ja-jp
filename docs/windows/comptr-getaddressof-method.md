@@ -1,5 +1,5 @@
 ---
-title: Comptr::getaddressof メソッド |Microsoft ドキュメント
+title: Comptr::getaddressof メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2da8e134c4ba1ec01a6694cd886d44b14c6cac8c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c1be1dd844b08be23312848f007e4a57dbd893b5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870238"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646986"
 ---
 # <a name="comptrgetaddressof-method"></a>ComPtr::GetAddressOf メソッド
-[ptr_](../windows/comptr-ptr-data-member.md) データ メンバーのアドレスを取得します。これには、この ComPtr によって表されるインターフェイスへのポインターが含まれています。  
+アドレスを取得、 [ptr _](../windows/comptr-ptr-data-member.md)データ メンバーは、これによって表されるインターフェイスへのポインターを含む**ComPtr**します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 T* const* GetAddressOf() const;  
 T** GetAddressOf();  
 ```  

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae3419cc7df0b9ed436981d5e845764a762c8ee8
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 82ea6211a51bbe45fa1613dd7bb682f363783367
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940969"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461924"
 ---
 # <a name="volatile-c"></a>volatile (C++)
 オブジェクトをハードウェアがプログラム内で変更できることを宣言するために使用できる型修飾子です。  
@@ -32,7 +32,6 @@ ms.locfileid: "37940969"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 volatile declarator ;  
 ```  
   

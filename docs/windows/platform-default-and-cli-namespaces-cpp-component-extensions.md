@@ -1,5 +1,5 @@
 ---
-title: プラットフォーム、既定値、および cli 名前空間 (C++ コンポーネント拡張) |Microsoft ドキュメント
+title: プラットフォーム、既定では、および cli 名前空間 (C++ コンポーネント拡張) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,37 +19,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b466a94aba9f19907a5438a8b8e623d65aa0ac2d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c63ce7dc5dcd326de426c4e4738a11e24f93161c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880749"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015534"
 ---
 # <a name="platform-default-and-cli-namespaces--c-component-extensions"></a>プラットフォーム、既定、および cli 名前空間 (C++ コンポーネント拡張)
-言語要素の名前は名前空間によって修飾されるため、それ以外は同じである名前と、ソース コードの別の部分で競合することはありません。 たとえば、名前の衝突されない可能性があります、コンパイラを認識し[状況依存のキーワード](../windows/context-sensitive-keywords-cpp-component-extensions.md)です。 名前空間はコンパイラによって使用されますが、コンパイルされたアセンブリでは保持されません。  
+言語要素の名前は名前空間によって修飾されるため、それ以外は同じである名前と、ソース コードの別の部分で競合することはありません。 たとえば、名前の競合は弱くコンパイラを妨げる可能性[状況依存のキーワード](../windows/context-sensitive-keywords-cpp-component-extensions.md)します。 名前空間はコンパイラによって使用されますが、コンパイルされたアセンブリでは保持されません。  
   
 ## <a name="all-runtimes"></a>すべてのランタイム  
- Visual C++ では、プロジェクトの作成時に、既定の名前空間がプロジェクトに与えられます。 ルート名前空間の名前に一致する必要があります Windows ランタイムで、.winmd ファイルの名前が手動で、名前空間を変更できます。  
+ Visual C++ では、プロジェクトの作成時に、既定の名前空間がプロジェクトに与えられます。 ルート名前空間の名前が .winmd ファイルの名前で Windows ランタイムと一致する必要がありますが、名前空間を手動で変更できます。  
   
 ## <a name="windows-runtime"></a>Windows ランタイム  
- 詳細については、次を参照してください。[名前空間と型の可視性 (C + + CX)](http://msdn.microsoft.com/library/windows/apps/hh969551.aspx)です。  
+ 詳細については、次を参照してください。[名前空間と型の可視性 (C + + CX)](http://msdn.microsoft.com/library/windows/apps/hh969551.aspx)します。  
   
 ### <a name="requirements"></a>要件  
- コンパイラ オプション: **/ZW**  
+ コンパイラ オプション: `/ZW`  
   
 ## <a name="common-language-runtime"></a>共通言語ランタイム 
- **構文**  
+### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 using namespace cli;  
 ```  
   
- **解説**  
+### <a name="remarks"></a>Remarks  
   
- C + + CLI をサポートしている、`cli`名前空間。 コンパイルするときに **/clr**、 `using` 「構文」セクション内ステートメント暗黙的に指定します。  
+ C++/cli CLI は、サポート、 **cli**名前空間。 コンパイルするときに`/clr`、**を使用して**「構文」セクション内ステートメント暗黙的に指定します。  
   
- 次の言語機能は、`cli` 名前空間に含まれます。  
+ 次の言語機能で、 **cli**名前空間。  
   
 -   [配列](../windows/arrays-cpp-component-extensions.md)  
   
@@ -60,14 +60,13 @@ using namespace cli;
 -   [safe_cast](../windows/safe-cast-cpp-component-extensions.md)  
   
 ### <a name="requirements"></a>要件  
- コンパイラ オプション: **/clr**  
+ コンパイラ オプション: `/clr`  
   
 ### <a name="examples"></a>使用例  
- **例**  
   
- 次のコード例は、`cli` 名前空間のシンボルをユーザー定義シンボルとしてコードで使用できることを示します。  ただし、この場合は、同じ名前の `cli` 言語要素への参照を明示的または暗黙的に修飾する必要があります。  
+ 次のコード例に示しますを内のシンボルを使用することは、 **cli**コード内のユーザー定義シンボルとして名前空間。  ただし、これを完了したら、必要があります明示的または暗黙的にへの参照を修飾するために、 **cli**同じ名前の言語要素です。  
   
-```  
+```cpp  
 // cli_namespace.cpp  
 // compile with: /clr  
 using namespace cli;  

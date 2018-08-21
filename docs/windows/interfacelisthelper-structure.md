@@ -1,5 +1,5 @@
 ---
-title: InterfaceListHelper 構造体 |Microsoft ドキュメント
+title: InterfaceListHelper 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8ad091114d6be6f35f1a0341961dc5122840ace8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a5d4380109c7eb858c2b0eaeeb9156e4003fc581
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878048"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012090"
 ---
 # <a name="interfacelisthelper-structure"></a>InterfaceListHelper 構造体
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template <  
    typename T0,  
    typename T1 = Nil,  
@@ -50,41 +50,41 @@ template <
 struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `T0`  
- テンプレート パラメーター 0 で、必要になります。  
+### <a name="parameters"></a>パラメーター  
+ *T0*  
+ テンプレート パラメーター 0 の場合は必要です。  
   
- `T1`  
+ *T1*  
  テンプレート パラメーター 1 が既定では指定されていません。  
   
- `T2`  
+ *T2*  
  テンプレート パラメーター 2、既定では指定されていません。3 番目のテンプレート パラメーター。  
   
- `T3`  
+ *T3*  
  テンプレート パラメーター 3、既定では指定されていません。  
   
- `T4`  
+ *T4*  
  テンプレート パラメーター 4、既定では指定されていません。  
   
- `T5`  
+ *T5*  
  テンプレート パラメーター 5、既定では指定されていません。  
   
- `T6`  
+ *T6*  
  テンプレート パラメーター 6、既定では指定されていません。  
   
- `T7`  
- テンプレート パラメーター 7、既定では指定されていません。  
+ *T7*  
+ テンプレート パラメーター 7 では、既定では指定されていません。  
   
- `T8`  
- テンプレート パラメーター 8、既定では指定されていません。  
+ *T8*  
+ テンプレート パラメーター 8 では、既定では指定されていません。  
   
- `T9`  
+ *T9*  
  テンプレート パラメーター 9、既定では指定されていません。  
   
-## <a name="remarks"></a>コメント  
- 再帰的に指定されたテンプレート パラメーターの引数を適用することによって、InterfaceList 型を構築します。  
+## <a name="remarks"></a>Remarks  
+ ビルド、`InterfaceList`型パラメーターの引数が指定したテンプレートの適用を再帰的にします。  
   
- InterfaceListHelper テンプレートがテンプレート パラメーターを使用して`T0`最初のデータを定義する InterfaceList 構造体、および再帰的に、メンバーは、残りのテンプレート パラメーターに InterfaceListHelper テンプレートを適用します。 InterfaceListHelper は、残りのテンプレート パラメーターがない場合に停止します。  
+ **InterfaceListHelper**テンプレートがテンプレート パラメーターを使用して*T0*の最初のデータ メンバーを定義する、`InterfaceList`構造、および、再帰的に適用されます、 **InterfaceListHelper**テンプレートの残りのテンプレート パラメーター。 **InterfaceListHelper**残りのテンプレート パラメーターがない場合は停止します。  
   
 ## <a name="members"></a>メンバー  
   
@@ -92,7 +92,7 @@ struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;
   
 |名前|説明|  
 |----------|-----------------|  
-|`TypeT`|InterfaceList 型のシノニムです。|  
+|`TypeT`|InterfaceList 型のシノニム。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `InterfaceListHelper`  

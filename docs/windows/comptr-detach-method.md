@@ -1,5 +1,5 @@
 ---
-title: Comptr::detach メソッド |Microsoft ドキュメント
+title: Comptr::detach メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: afa5976d26351ed3022c58fa8226b6038fa816c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: abc30204969464323d4995310cee0866139734fc
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883594"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648010"
 ---
 # <a name="comptrdetach-method"></a>ComPtr::Detach メソッド
-この関連付けを解除`ComPtr`オブジェクトが表すインターフェイスからです。  
+この関連付けを解除**ComPtr**それが表すインターフェイスからのオブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 T* Detach();  
 ```  
   
 ## <a name="return-value"></a>戻り値  
- これによって表されるインターフェイスへのポインター`ComPtr`オブジェクト。  
+ これによって表されるインターフェイスへのポインター **ComPtr**オブジェクト。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** client.h  

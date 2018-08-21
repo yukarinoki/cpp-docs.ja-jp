@@ -1,5 +1,5 @@
 ---
-title: '間接演算子: * |Microsoft ドキュメント'
+title: '間接演算子: * |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d63fbe4042bb86f1ac7810302eeaa1b7978422b8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 80fdbe14539c5b32c2da80a5de75fbe0a2b64241
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409127"
 ---
 # <a name="indirection-operator-"></a>間接演算子: *
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 * cast-expression  
 ```  
   
-## <a name="remarks"></a>コメント  
- 単項間接演算子 (**\***)、ポインターを逆参照、ポインター値を左辺値に変換します。 間接演算子のオペランドを型へのポインターにすることはできません。 間接式の結果は、ポインター型の派生元の型です。 使用、 **\*** このコンテキストでは演算子とは異なる乗算は、バイナリ演算子とその意味します。  
+## <a name="remarks"></a>Remarks  
+ 単項間接演算子 (**\***); のポインターを逆参照、ポインター値を左辺値に変換します。 間接演算子のオペランドを型へのポインターにすることはできません。 間接式の結果は、ポインター型の派生元の型です。 使用、 **\*** このコンテキストでは演算子が乗算には、二項演算子としての意味とは異なります。  
   
  オペランドが関数を指している場合、結果は関数指定子になります。 格納場所を指している場合、結果は格納場所を指定する左辺値になります。  
   
  間接演算子は、ポインターへのポインターを逆参照するために累積的に使用される場合があります。 例えば:  
   
-```  
+```cpp 
 // expre_Indirection_Operator.cpp  
 // compile with: /EHsc  
 // Demonstrate indirection operator  
@@ -70,6 +70,6 @@ int main() {
   
 ## <a name="see-also"></a>関連項目  
  [単項演算子を含む式](../cpp/expressions-with-unary-operators.md)   
- [C++ 組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Address-of 演算子: (& a)](../cpp/address-of-operator-amp.md)   
  [間接演算子とアドレス演算子](../c-language/indirection-and-address-of-operators.md)

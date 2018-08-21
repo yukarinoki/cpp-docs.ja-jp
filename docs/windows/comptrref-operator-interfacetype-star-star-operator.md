@@ -1,5 +1,5 @@
 ---
-title: Comptrref::operator InterfaceType * * 演算子 |Microsoft ドキュメント
+title: Comptrref::operator InterfaceType * * 演算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 416b30c55027debddc153c44e55c7a4be512703d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 44bd357ea5d7c8da0ffdb4e2886a97434a12a760
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870513"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641626"
 ---
 # <a name="comptrrefoperator-interfacetype-operator"></a>ComPtrRef::operator InterfaceType** 演算子
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 operator InterfaceType**();  
 ```  
   
-## <a name="remarks"></a>コメント  
- 現在 ComPtrRef オブジェクトを削除ポインターを返しますのポインター-に-を - ComPtrRef オブジェクトによって表されるインターフェイスにします。  
+## <a name="remarks"></a>Remarks  
+ 現在の削除**ComPtrRef**オブジェクト、ポインター-に-、- へポインターを返します、インターフェイスによって表される、 **ComPtrRef**オブジェクト。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** client.h  

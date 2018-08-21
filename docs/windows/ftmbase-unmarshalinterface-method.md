@@ -1,5 +1,5 @@
 ---
-title: Ftmbase::unmarshalinterface メソッド |Microsoft ドキュメント
+title: Ftmbase::unmarshalinterface メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 964ce5cc33b51c54446874522317814279cdd960
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a1991454daa76fcf7878a7487080124b5a34dbeb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877720"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644035"
 ---
 # <a name="ftmbaseunmarshalinterface-method"></a>FtmBase::UnmarshalInterface メソッド
 新しく作成されたプロキシを初期化し、そのプロキシにインターフェイス ポインターを返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 STDMETHODIMP UnmarshalInterface(  
    __in IStream *pStm,  
    __in REFIID riid,  
@@ -37,18 +37,18 @@ STDMETHODIMP UnmarshalInterface(
 ) override;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `pStm`  
+### <a name="parameters"></a>パラメーター  
+ *pStm*  
  インターフェイス ポインターのマーシャ リングする元となるストリームへのポインター。  
   
- `riid`  
+ *riid*  
  マーシャ リングするインターフェイスの識別子への参照。  
   
- `ppv`  
- この操作の完了時で要求されたインターフェイス ポインターを受け取るポインター変数のアドレス`riid`です。 この操作が成功した場合 *`ppv`のマーシャ リングするインターフェイスの要求されたインターフェイス ポインターを格納します。  
+ *ppv*  
+ ときにこの操作が完了したらで要求されたインターフェイス ポインターを受け取るポインター変数のアドレス*riid*します。 この操作が成功した場合 **ppv*マーシャ リングするインターフェイスの要求されたインターフェイス ポインターが含まれています。  
   
 ## <a name="return-value"></a>戻り値  
- 正常終了した場合は S_OK、それ以外の場合、E_NOINTERFACE または E_FAIL します。  
+ 成功した場合は s_ok を返します。それ以外の場合、または E_FAIL E_NOINTERFACE します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** ftm.h  

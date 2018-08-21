@@ -1,5 +1,5 @@
 ---
-title: '[色] ウィンドウ (アイコン用イメージ エディター) を非表示にすると表示 |Microsoft ドキュメント'
+title: '[色] ウィンドウ (アイコン用イメージ エディター) を非表示の表示と表示 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,32 +18,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0aed218fb12a1d115bbcd92f058ec72182864677
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a6300b02fccad672eef19b387d595a42e4b94ef2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872043"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645111"
 ---
 # <a name="displaying-or-hiding-the-colors-window-image-editor-for-icons"></a>[色] ウィンドウの表示と非表示 (アイコン用イメージ エディター)
 ### <a name="to-display-colors-window"></a>[色] ウィンドウを表示するには  
   
-1.  右クリックし、**イメージ エディター**ウィンドウを選択し、 **[色] ウィンドウの表示**ショートカット メニューからです。  
+1.  右クリックし、**イメージ エディター**ウィンドウ選択 **[色] ウィンドウの表示**ショートカット メニューから。  
   
      \- または -  
   
-2.  をクリックして **[色] ウィンドウの表示**上、[イメージ メニュー](../windows/image-menu-image-editor-for-icons.md)です。  
+2.  をクリックして **[色] ウィンドウの表示**で、[イメージ メニュー](../windows/image-menu-image-editor-for-icons.md)します。  
   
 ### <a name="to-hide-the-colors-window"></a>[色] ウィンドウを非表示にするには  
   
-1.  ウィンドウの固定を解除します。 使用されていない場合にこれを自動的に隠すウィンドウが許可されます。  
+1.  ウィンドウの固定を解除します。 使用中でない場合は、このウィンドウ自動非表示をによりします。  
   
  \- または -  
   
--   クリックして、**閉じる**ボタンをクリックします。  
+-   をクリックして、**閉じる**ボタンをクリックします。  
   
- 要件  
-  
+## <a name="requirements"></a>要件  
  なし  
   
 ## <a name="see-also"></a>関連項目  

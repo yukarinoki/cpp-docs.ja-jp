@@ -1,5 +1,5 @@
 ---
-title: CAccessorRowset クラス |Microsoft ドキュメント
+title: CAccessorRowset クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,22 +9,44 @@ f1_keywords:
 - CAccessorRowset
 - ATL.CAccessorRowset
 - ATL::CAccessorRowset
+- CAccessorRowset.Bind
+- CAccessorRowset::Bind
+- CAccessorRowset::CAccessorRowset
+- CAccessorRowset.CAccessorRowset
+- CAccessorRowset
+- ATL.CAccessorRowset.CAccessorRowset
+- ATL::CAccessorRowset::CAccessorRowset
+- CAccessorRowset.Close
+- CAccessorRowset::Close
+- CAccessorRowset::FreeRecordMemory
+- CAccessorRowset.FreeRecordMemory
+- FreeRecordMemory
+- GetColumnInfo
+- CAccessorRowset.GetColumnInfo
+- CAccessorRowset::GetColumnInfo
 dev_langs:
 - C++
 helpviewer_keywords:
 - CAccessorRowset class
+- CAccessorRowset class, methods
+- CAccessorRowset class, members
+- Bind method
+- CAccessorRowset class, constructor
+- Close method
+- FreeRecordMemory method
+- GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 27d2153c6f600c3a5c75c1218e8751baaabcf030
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: edc18dcb83b2dda63fd5cfb5c56c3c95baa72df0
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090971"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340730"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset クラス
 行セットと 1 つのクラスに関連付けられているそのアクセサーをカプセル化します。  
@@ -33,16 +55,19 @@ ms.locfileid: "33090971"
 
 ```cpp
 template <class TAccessor = CNoAccessor, 
-          template <typename T> class TRowset = CRowset>  
+   template <typename T> class TRowset = CRowset>  
 class CAccessorRowset : public TAccessor, public TRowset<TAccessor>  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `TAccessor`  
+### <a name="parameters"></a>パラメーター  
+ *TAccessor*  
  アクセサー クラス。  
   
- `TRowset`  
+ *TRowset*  
  行セット クラスです。  
+
+## <a name="requirements"></a>要件  
+ **ヘッダー:** atldbcli.h  
   
 ## <a name="members"></a>メンバー  
   
@@ -50,17 +75,81 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
   
 |||  
 |-|-|  
-|[バインド](../../data/oledb/caccessorrowset-bind.md)|バインディングが作成 (際に使用される**bBind**で false として指定された[ccommand::open](../../data/oledb/ccommand-open.md))。|  
-|[CAccessorRowset](../../data/oledb/caccessorrowset-caccessorrowset.md)|コンストラクターです。|  
-|[閉じる](../../data/oledb/caccessorrowset-close.md)|行セットとすべてのアクセサーを閉じます。|  
-|[FreeRecordMemory](../../data/oledb/caccessorrowset-freerecordmemory.md)|現在のレコードを解放する必要があるすべての列を解放します。|  
-|[GetColumnInfo](../../data/oledb/caccessorrowset-getcolumninfo.md)|実装して[icolumnsinfo::getcolumninfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx)です。|  
+|[バインド](#bind)|バインドを作成します (際に使用される`bBind`として指定されて**false**で[ccommand::open](../../data/oledb/ccommand-open.md))。|  
+|[CAccessorRowset](#caccessorrowset)|コンストラクターです。|  
+|[閉じる](#close)|行セットとすべてのアクセサーを閉じます。|  
+|[FreeRecordMemory](#freerecordmemory)|解放する必要がある現在のレコード内の列を解放します。|  
+|[GetColumnInfo](#getcolumninfo)|実装[icolumnsinfo::getcolumninfo](https://msdn.microsoft.com/library/ms722704.aspx)します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  クラス`TAccessor`アクセサーを管理します。 クラス*TRowset*行セットを管理します。  
+
+## <a name="bind"></a> Caccessorrowset::bind
+指定した場合は、バインドを作成します。`bBind`として**false**で[ccommand::open](../../data/oledb/ccommand-open.md)します。  
   
-## <a name="requirements"></a>要件  
- **ヘッダー:** atldbcli.h  
+### <a name="syntax"></a>構文  
+  
+```cpp
+HRESULT Bind();  
+```  
+  
+### <a name="return-value"></a>戻り値  
+ 標準の HRESULT です。  
+
+## <a name="caccessorrowset"></a> Caccessorrowset::caccessorrowset
+`CAccessorRowset` オブジェクトを初期化します。  
+  
+### <a name="syntax"></a>構文  
+  
+```cpp
+CAccessorRowset();  
+```  
+
+## <a name="close"></a> Caccessorrowset::close
+アクティブなアクセサーと行セットを解放します。  
+  
+### <a name="syntax"></a>構文  
+  
+```cpp
+void Close();  
+```  
+  
+### <a name="remarks"></a>Remarks  
+ 関連付けられているメモリを解放します。  
+
+## <a name="freerecordmemory"></a> Caccessorrowset::freerecordmemory
+解放する必要がある現在のレコード内の列を解放します。  
+  
+### <a name="syntax"></a>構文  
+  
+```cpp
+void FreeRecordMemory();  
+```  
+
+## <a name="getcolumninfo"></a> Caccessorrowset::getcolumninfo
+開かれた行セットから列情報を取得します。  
+  
+### <a name="syntax"></a>構文  
+  
+```cpp
+HRESULT GetColumnInfo(DBORDINAL* pulColumns, 
+   DBCOLUMNINFO** ppColumnInfo, 
+   LPOLESTR* ppStrings) const; 
+    
+HRESULT GetColumnInfo(DBORDINAL* pColumns, 
+   DBCOLUMNINFO** ppColumnInfo);  
+```  
+  
+#### <a name="parameters"></a>パラメーター  
+ 参照してください[icolumnsinfo::getcolumninfo](https://msdn.microsoft.com/library/ms722704.aspx)で、 *OLE DB プログラマーズ リファレンス*します。  
+  
+### <a name="return-value"></a>戻り値  
+ 標準の HRESULT です。  
+  
+### <a name="remarks"></a>Remarks  
+ ユーザーは、返される列情報と文字列バッファーを解放する必要があります。 使用する場合は、このメソッドの 2 番目のバージョンを使用して[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)バインディングをオーバーライドする必要があります。  
+  
+ 詳細については、次を参照してください。 [icolumnsinfo::getcolumninfo](https://msdn.microsoft.com/library/ms722704.aspx)で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ## <a name="see-also"></a>関連項目  
  [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)   

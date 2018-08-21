@@ -1,5 +1,5 @@
 ---
-title: requires_category |Microsoft ドキュメント
+title: requires_category |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,38 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3a6822773292fd651eaae3be5c00fb2b693a80a9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2e2fd0863608f7e48d8ee2b296d1e1e76de6e541
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882317"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018482"
 ---
 # <a name="requirescategory"></a>requires_category
 ターゲット クラスの必須コンポーネントのカテゴリを指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
-     [ requires_category(   
+```cpp  
+[ requires_category(   
   requires_category  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *requires_category*  
  必要なカテゴリの ID。  
   
-## <a name="remarks"></a>コメント  
- **Requires_category** C++ 属性は、ターゲット クラスに必要なコンポーネントのカテゴリを指定します。 詳細については、次を参照してください。[要求する](../atl/reference/category-macros.md#required_category)です。  
+## <a name="remarks"></a>Remarks  
+ **Requires_category** C++ 属性がターゲット クラスに必須コンポーネントのカテゴリを指定します。 詳細については、次を参照してください。[要求する](../atl/reference/category-macros.md#required_category)します。  
   
  この属性を使用するには、 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)、または [vi_progid](../windows/vi-progid.md) 属性 (または、これらのいずれかを意味する別の属性) も同じ要素に適用する必要があります。  
   
 ## <a name="example"></a>例  
  次のコードでは、オブジェクトがコントロールのカテゴリを実装することが必要です。  
   
-```  
+```cpp  
 // cpp_attr_ref_requires_category.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -68,9 +67,9 @@ class CMyClass {};
   
 |||  
 |-|-|  
-|**対象**|**class**、 `struct`|  
-|**反復可能**|×|  
-|**必要な属性**|**coclass**、 **progid**、 **vi_progid**のうち 1 つ以上。|  
+|**対象**|**クラス**、**構造体**|  
+|**反復可能**|いいえ|  
+|**必要な属性**|次のいずれかまたは: `coclass`、 `progid`、または`vi_progid`します。|  
 |**無効な属性**|なし|  
   
  属性コンテキストの詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  

@@ -1,5 +1,5 @@
 ---
-title: ArgTraits 構造体 |Microsoft ドキュメント
+title: ArgTraits 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 162fbdea86aef81582902340102d54777e3f861b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: df5f341382b7f9594d740b7e47fbb53b53188d75
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858043"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643122"
 ---
 # <a name="argtraits-structure"></a>ArgTraits 構造体
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename TMemberFunction>  
 struct ArgTraits;  
 template<typename TDelegateInterface>  
@@ -117,42 +117,42 @@ template<
 struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9)>;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `TMemberFunction`  
- Invoke メソッド シグネチャに一致することはできません、ArgTraits 構造体の型名パラメーター。  
+### <a name="parameters"></a>パラメーター  
+ *TMemberFunction*  
+ Typename パラメーターことはできませんと一致する ArgTraits 構造体の`Invoke`メソッド シグネチャ。  
   
- `TDelegateInterface`  
+ *TDelegateInterface*  
  デリゲートのインターフェイスです。  
   
- `TArg1`  
- Invoke メソッドの最初の引数の型。  
+ *TArg1*  
+ 最初の引数の型、`Invoke`メソッド。  
   
- `TArg2`  
- Invoke メソッドの 2 番目の引数の型。  
+ *TArg2*  
+ 2 番目の引数の型、`Invoke`メソッド。  
   
- `TArg3`  
- Invoke メソッドの 3 番目の引数の型。  
+ *TArg3*  
+ 3 番目の引数の型、`Invoke`メソッド。  
   
- `TArg4`  
- Invoke メソッドの 4 番目の引数の型。  
+ *TArg4*  
+ 4 番目の引数の型、`Invoke`メソッド。  
   
- `TArg5`  
- Invoke メソッドの 5 番目の引数の型。  
+ *TArg5*  
+ 5 番目の引数の型、`Invoke`メソッド。  
   
- `TArg6`  
- Invoke メソッドの 6 番目の引数の型。  
+ *TArg6*  
+ 6 番目の引数の型、`Invoke`メソッド。  
   
- `TArg7`  
- Invoke メソッドの 7 番目の引数の型。  
+ *TArg7*  
+ 7 番目の引数の型、`Invoke`メソッド。  
   
- `TArg8`  
- Invoke メソッドの 8 番目の引数の型。  
+ *TArg8*  
+ 8 番目の引数の型、`Invoke`メソッド。  
   
- `TArg9`  
- Invoke メソッドの 9 番目の引数の型。  
+ *TArg9*  
+ 9 番目の引数の型、`Invoke`メソッド。  
   
-## <a name="remarks"></a>コメント  
- `ArgTraits`構造体は、インターフェイスおよびを指定した数のパラメーターを持つ匿名メンバー関数に指定したデリゲートを宣言します。  
+## <a name="remarks"></a>Remarks  
+ **ArgTraits**構造体は、インターフェイス、およびパラメーターの数が指定された匿名のメンバー関数に指定したデリゲートを宣言します。  
   
 ## <a name="members"></a>メンバー  
   
@@ -172,9 +172,9 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
   
 ### <a name="public-constants"></a>パブリック定数  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
-|[ArgTraits::args 定数](../windows/argtraits-args-constant.md)|デリゲート インターフェイスの呼び出しメソッドのパラメーターの数の数を保持します。|  
+|[ArgTraits::args 定数](../windows/argtraits-args-constant.md)|パラメーターの数のカウントを保持、`Invoke`デリゲート インターフェイスのメソッド。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `ArgTraits`  

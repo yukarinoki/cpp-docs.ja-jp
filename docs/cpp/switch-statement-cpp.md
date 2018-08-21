@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d4ab0694936fe4ad25b3c56bf286e9416e4e935
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a5a8858d48a38d42dea7fba0fdce7c3a4d407a3a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943601"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462187"
 ---
 # <a name="switch-statement-c"></a>switch ステートメント (C++)
 整数式の値に応じてコードの複数のセクション間を切り替えます。  
@@ -164,7 +164,6 @@ int main(int argc, char *argv[])
   
  A**切り替える**ステートメントは入れ子にできます。 このような場合、**ケース**または**既定**ラベルは、最も近いと関連付ける**切り替える**そのすぐ外側のステートメント。  
 
- 
 ## <a name="microsoft-specific"></a>Microsoft 固有の仕様  
  Microsoft C では、case 値の数は制限されませんが、**切り替える**ステートメント。 この数は、使用できるメモリによってのみ制限されます。 ANSI C には、少なくとも 257 が必要がありますの case ラベルを使用できる、**切り替える**ステートメント。  
   
@@ -175,4 +174,3 @@ int main(int argc, char *argv[])
 ## <a name="see-also"></a>関連項目  
  [選択ステートメント](../cpp/selection-statements-cpp.md)   
  [キーワード](../cpp/keywords-cpp.md)   
- 

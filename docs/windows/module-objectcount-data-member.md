@@ -1,5 +1,5 @@
 ---
-title: Module::objectcount _ データ メンバー |Microsoft ドキュメント
+title: Module::objectcount _ データ メンバー |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4a9360a7b0ce0596e9fb1bffb71864526cf92e5c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9e73b11ae5a29289c44bf762082397dd4ed4f826
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875020"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016692"
 ---
 # <a name="moduleobjectcount-data-member"></a>Module::objectCount_ データ メンバー
 多くのクラスが作成されたの追跡、[ように](../windows/make-function.md)関数。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 volatile long objectCount_;  
 ```  
   

@@ -1,5 +1,5 @@
 ---
-title: CreateActivationFactory 関数 |Microsoft ドキュメント
+title: CreateActivationFactory 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e842a13461757e26dd1aed663c590df4c1ba6c74
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 780fd8b6866af05007d9c99e3165b149eab956bd
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883431"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642904"
 ---
 # <a name="createactivationfactory-function"></a>CreateActivationFactory 関数
 Windows ランタイムによるアクティブ化が可能な、指定されたクラスのインスタンスを生成するファクトリを作成します。  
@@ -35,27 +35,26 @@ template<typename Factory>
       _In_ unsigned int *flags,        _In_ const CreatorMap* entry,   
       REFIID riid,   
      _Outptr_ IUnknown **ppFactory) throw();  
-  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `flags`  
- 1 つまたは複数の組み合わせ[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列挙値。  
+### <a name="parameters"></a>パラメーター  
+ *flags*  
+ 1 つ以上を組み合わせた[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列挙値。  
   
- `entry`  
- ポインター、 [CreatorMap](../windows/creatormap-structure.md)パラメーターは初期化と登録の情報を含む`riid`です。  
+ *entry*  
+ ポインターを[CreatorMap](../windows/creatormap-structure.md)パラメーターに関する情報を初期化し、登録を含む*riid*します。  
   
- `riid`  
+ *riid*  
  インターフェイス ID への参照  
   
- `ppFactory`  
+ *ppFactory*  
  この操作は、アクティベーション ファクトリへのポインターでは正常に完了します。 場合、  
   
 ## <a name="return-value"></a>戻り値  
  成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。  
   
-## <a name="remarks"></a>コメント  
- 場合、アサーション エラーが発生テンプレート パラメーター `Factory` IActivationFactory インターフェイスから派生していません。  
+## <a name="remarks"></a>Remarks  
+ 場合は、アサート エラーが出力テンプレート パラメーター*ファクトリ*インターフェイスから派生していない`IActivationFactory`します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** module.h  

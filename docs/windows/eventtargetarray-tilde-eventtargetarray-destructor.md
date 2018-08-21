@@ -1,5 +1,5 @@
 ---
-title: 'EventTargetArray:: ~ EventTargetArray デストラクター |Microsoft ドキュメント'
+title: 'EventTargetArray:: ~ EventTargetArray デストラクター |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 98f18c94a3e18a8e01e6ec58eddd8da702e4d97d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f7faffafee4cf4a3528effa052ef8105cb9ebfed
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871794"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650668"
 ---
 # <a name="eventtargetarrayeventtargetarray-destructor"></a>EventTargetArray::~EventTargetArray デストラクター
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 ~EventTargetArray();  
 ```  
   
-## <a name="remarks"></a>コメント  
- 現在の初期化を解除`EventTargetArray`クラスです。  
+## <a name="remarks"></a>Remarks  
+ 現在の初期化を解除**EventTargetArray**クラス。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** event.h  

@@ -1,5 +1,5 @@
 ---
-title: Eventsource::targetspointerlock _ データ メンバー |Microsoft ドキュメント
+title: Eventsource::targetspointerlock _ データ メンバー |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fb3c2131331521dab1b8264b696206d953762851
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 718a62d627f99eff24fd7c10e0280607a52e2be7
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873109"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646888"
 ---
 # <a name="eventsourcetargetspointerlock-data-member"></a>EventSource::targetsPointerLock_ データ メンバー
-この EventSource のイベント ハンドラーが追加されている中であっても、削除、または呼び出される内部データ メンバーへのアクセスを同期します。  
+このイベント ハンドラーの中にも、内部データ メンバーへのアクセスを同期**EventSource**の追加、削除、または呼び出されました。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 Wrappers::SRWLock targetsPointerLock_;  
 ```  
   

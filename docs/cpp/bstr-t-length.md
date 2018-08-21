@@ -1,5 +1,5 @@
 ---
-title: _bstr_t::length |Microsoft ドキュメント
+title: _bstr_t::length |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2979b9db6fc7b36d8f0d5581ae9397acf65b6977
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dc853ce15a8c7cfdbe67a3469f33189e89e55c3b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409138"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403340"
 ---
 # <a name="bstrtlength"></a>_bstr_t::length
 **Microsoft 固有の仕様**  
@@ -32,12 +32,10 @@ ms.locfileid: "32409138"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 unsigned int length ( ) const throw( );  
-  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **Microsoft 固有の仕様はここまで**  
   
 ## <a name="see-also"></a>関連項目  

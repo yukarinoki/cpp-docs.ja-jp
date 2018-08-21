@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::onclose メソッド |Microsoft ドキュメント
+title: Asyncbase::onclose メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95a0cce7f51ef7974d0520f0bdfd2f025a09ecaf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3c1b888b9d3e3f3c80c3aff40f5fd545ece9cca6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859606"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650639"
 ---
 # <a name="asyncbaseonclose-method"></a>AsyncBase::OnClose メソッド
-派生クラスでオーバーライドされると、非同期操作を閉じます。  
+派生クラスでオーバーライドされると、非同期操作を終了します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 virtual void OnClose(  
    void  
 ) = 0;  

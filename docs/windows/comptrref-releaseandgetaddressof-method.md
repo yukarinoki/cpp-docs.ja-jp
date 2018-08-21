@@ -1,5 +1,5 @@
 ---
-title: Comptrref::releaseandgetaddressof メソッド |Microsoft ドキュメント
+title: Comptrref::releaseandgetaddressof メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ab97dad8f14d72a6e8e441c9889a0e18870a0b4a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 273c8aaded45e04f1564d434c1a4f4a6920c3883
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33884008"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647802"
 ---
 # <a name="comptrrefreleaseandgetaddressof-method"></a>ComPtrRef::ReleaseAndGetAddressOf メソッド
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 InterfaceType** ReleaseAndGetAddressOf();  
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 削除された ComPtrRef オブジェクトによって表されるインターフェイスへのポインター。  
+ 表されるインターフェイスへのポインターで、削除された**ComPtrRef**オブジェクト。  
   
-## <a name="remarks"></a>コメント  
- 現在 ComPtrRef オブジェクトを削除ポインターを返しますのポインター-に-を - ComPtrRef オブジェクトによって表されるインターフェイスにします。  
+## <a name="remarks"></a>Remarks  
+ 現在の削除**ComPtrRef**オブジェクト、ポインター-に-、- へポインターを返します、インターフェイスによって表される、 **ComPtrRef**オブジェクト。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** client.h  

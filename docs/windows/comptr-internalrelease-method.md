@@ -1,5 +1,5 @@
 ---
-title: Comptr::internalrelease メソッド |Microsoft ドキュメント
+title: Comptr::internalrelease メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 375a44d3f541e5eb5e01c328093d831cfe158717
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30be6015fec0f210f0b1f70502881f2ce2c3b54b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881719"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644318"
 ---
 # <a name="comptrinternalrelease-method"></a>ComPtr::InternalRelease メソッド
-この ComPtr に関連付けられたインターフェイスに対して COM 解放操作を実行します。  
+これに関連付けられているインターフェイスで COM 解放操作を行います**ComPtr**します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void InternalRelease();  
 ```  
   
-## <a name="remarks"></a>コメント  
- このメソッドは保護されています。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは保護されます。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** client.h  

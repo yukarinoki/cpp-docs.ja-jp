@@ -1,5 +1,5 @@
 ---
-title: ダイアログ エディター ツールバーの表示と非表示 |Microsoft ドキュメント
+title: ダイアログ エディター ツールバーの表示と非表示 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad456d37252b40be72217e6cbc40a2a399bb34ef
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a8a19de393e7451f045d840552127743f87e00ba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891595"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019174"
 ---
 # <a name="showing-or-hiding-the-dialog-editor-toolbar"></a>[ダイアログ エディター] ツール バーの表示と非表示
-ダイアログ エディターを開くと、ソリューションの上部に自動的にダイアログ エディター ツールバーが表示されます。  
+開くと、**ダイアログ**エディター、**ダイアログ エディター**ソリューションの上部にあるツールバーが自動的に表示されます。  
   
 ### <a name="dialog-editor-toolbar"></a>ダイアログ エディター ツール バー  
   
@@ -36,25 +36,24 @@ ms.locfileid: "33891595"
 |![左揃えボタン](../mfc/media/vcdialogeditoralignlefts.png "vcDialogEditorAlignLefts")|[左揃え]|![上下均等配置ボタン](../mfc/media/vcdialogeditordown.png "vcDialogEditorDown")|[下へ移動]|  
 |![右揃えボタン](../mfc/media/vcdialogeditoralignrights.png "vcDialogEditorAlignRights")|[右揃え]|![Make 同じ幅ボタン](../mfc/media/vcdialogeditorsamewidth.png "vcDialogEditorSameWidth")|[同じ幅に揃える]|  
 |![上揃えボタン](../mfc/media/vcdialogeditoraligntops.png "vcDialogEditorAlignTops")|[上揃え]|![Make 同じ高さボタン](../mfc/media/vcdialogeditormakesameheight.png "vcDialogEditorMakeSameHeight")|[同じ高さに揃える]|  
-|![下揃えボタン](../mfc/media/vcdialogeditoralignbottoms.png "vcDialogEditorAlignBottoms")|[下揃え]|![Make 同じサイズのボタン](../mfc/media/vcdialogeditorsamesize.png "vcDialogEditorSameSize")|[同じサイズに揃える]|  
-|![垂直方向の中央揃えボタン](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|Vertical|![グリッドの切り替えボタン](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|グリッドの切り替え|  
-|![水平方向の中央揃えボタン](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|[水平方向]|![ガイドの切り替えボタン](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|[ガイドの切り替え]|  
+|![下揃えボタン](../mfc/media/vcdialogeditoralignbottoms.png "vcDialogEditorAlignBottoms")|[下揃え]|![同じサイズのボタン](../mfc/media/vcdialogeditorsamesize.png "vcDialogEditorSameSize")|[同じサイズに揃える]|  
+|![垂直方向の中心のボタン](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|Vertical|![グリッドの切り替えボタン](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|グリッドの切り替え|  
+|![水平方向の中央ボタン](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|[水平方向]|![ガイドの切り替えボタン](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|[ガイドの切り替え]|  
   
- ダイアログ エディター ツールバーには、たとえばサイズと位置合わせ ダイアログ ボックス上のコントロールのレイアウトを変更するためのボタンが含まれています。 ダイアログ エディター ツールバーのボタンは、[書式] メニューのコマンドに対応します。 詳細については、「[ダイアログ エディターのアクセラレータ キー](../windows/accelerator-keys-for-the-dialog-editor.md)です。  
+ **ダイアログ エディター**ツールバーには、ダイアログ ボックスで、たとえばサイズと配置上のコントロールのレイアウトを変更するためのボタンが含まれています。 **ダイアログ エディター**ツール バー ボタンにコマンドに対応しており、**形式**メニュー。 詳細については、次を参照してください。[ダイアログ エディターのアクセラレータ キー](../windows/accelerator-keys-for-the-dialog-editor.md)します。  
   
- ダイアログ エディターでは、ときに、使用可能なツールバーと windows の一覧から選択して、ダイアログ エディターのツールバーの表示を切り替えることができます。  
+ は、**ダイアログ**エディターの表示を切り替えることができます、**ダイアログ エディター**ツールバーを使用できるツールバーおよびウィンドウの一覧から選択します。  
   
-### <a name="to-show-or-hide-the-dialog-editor-toolbar"></a>ダイアログ エディター ツールバーを非表示  
+### <a name="to-show-or-hide-the-dialog-editor-toolbar"></a>ダイアログ エディターのツールバーを非表示  
   
-1.  **ビュー**ボタンをクリックし**ツールバー**順に選択**ダイアログ エディター**サブメニューからです。  
+1.  **ビュー**ボタンをクリックし**ツールバー**選択**ダイアログ エディター**サブメニューから。  
   
     > [!NOTE]
-    >  ダイアログ エディターでダイアログ ボックスのリソースを開くと、既定では、ダイアログ エディターのツールバーが表示されます。ただし、ツールバーを明示的に閉じる場合は、ダイアログ ボックスのリソースでは、次に開いた際を起動する必要があります。  
+    >  **ダイアログ エディター**ダイアログ エディターのダイアログ ボックスのリソースを開くと、既定でツールバーが表示されます。 ただし、場合は、ツールバーを明示的に閉じる必要があります ダイアログ ボックスのリソースでは、次に開いた際に、を起動します。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 詳細については、管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションは、次を参照してください。[グローバライズと .NET Framework アプリケーションのローカライズ](/dotnet/standard/globalization-localization/index)です。  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
   
- 要件  
-  
+## <a name="requirements"></a>要件  
  Win32  
   
 ## <a name="see-also"></a>関連項目  
@@ -62,4 +61,3 @@ ms.locfileid: "33891595"
  [方法: リソースの作成](../windows/how-to-create-a-resource.md)   
  [リソース ファイル (Visual Studio)](../windows/resource-files-visual-studio.md)   
  [ダイアログ エディター](../windows/dialog-editor.md)
-

@@ -37,7 +37,7 @@ ms.locfileid: "33381349"
   
 -   [サンプル](../mfc/toolbar-sample-list.md)  
   
- MFC ツールバーの詳細については、記事を参照して、Q232017"HOWTO:: 追加のテキストをツール バー ボタン、"Microsoft サポート技術情報でhttp://support.microsoft.comです。  
+ MFC ツールバーの詳細については、記事を参照して、Q232017"HOWTO:: 追加のテキストをツール バー ボタン、"Microsoft サポート技術情報で http://support.microsoft.comです。  
   
 ## <a name="see-also"></a>関連項目  
  [ユーザー インターフェイス要素](../mfc/user-interface-elements-mfc.md)   

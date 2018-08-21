@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d64a25475ad7ac40f63d29798768f8f57866b3c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5b2aa683f539e643127f8f71ff536d4c2ca2c9c0
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941626"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407527"
 ---
 # <a name="casting-operators"></a>キャスト演算子
 C++ 言語には、固有のキャスト演算子がいくつかあります。 これらの演算子は、以前のスタイルの C 言語のキャストが持つあいまいさと危険性の一部を取り除くことを目的としています。 このような演算子を次に示します。  
@@ -35,7 +35,7 @@ C++ 言語には、固有のキャスト演算子がいくつかあります。 
   
 -   [safe_cast](../windows/safe-cast-cpp-component-extensions.md)検証可能な MSIL を生成するために使用します。  
   
- `const_cast` と `reinterpret_cast` には以前の形式と同じ危険性があるため、これらの演算子は最後の手段として使用してください。 それでも、これらは、以前のスタイルのキャストを完全に置き換えるために必要です。  
+ 使用**const_cast**と**reinterpret_cast**これらの演算子は、古いスタイルのキャストと同じ危険性を提示するので、最後の手段として。 それでも、これらは、以前のスタイルのキャストを完全に置き換えるために必要です。  
   
 ## <a name="see-also"></a>関連項目  
  [キャスト](../cpp/casting.md)

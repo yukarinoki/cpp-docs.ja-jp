@@ -1,5 +1,5 @@
 ---
-title: Module::releasenotifier _ データ メンバー |Microsoft ドキュメント
+title: Module::releasenotifier _ データ メンバー |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 20e3ab1df91c279951b865f9a2d10804c7dbfd1a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 512a559eec613958cb51b0f8a06fdf42abee173f
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876944"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016318"
 ---
 # <a name="modulereleasenotifier-data-member"></a>Module::releaseNotifier_ データ メンバー
-ReleaseNotifier オブジェクトへのポインターを保持します。  
+ポインターを保持する`ReleaseNotifier`オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 ReleaseNotifier *releaseNotifier_;  
 ```  
   

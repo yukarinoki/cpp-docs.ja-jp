@@ -1,5 +1,5 @@
 ---
-title: Eventtargetarray::eventtargetarray コンス トラクター |Microsoft ドキュメント
+title: Eventtargetarray::eventtargetarray コンス トラクター |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,45 +17,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fbfd12ea513044f1062e60f5c73f5089683f043d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 59753f592f099f80396f408fa531756ba91b308e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872716"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652540"
 ---
 # <a name="eventtargetarrayeventtargetarray-constructor"></a>EventTargetArray::EventTargetArray コンストラクター
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 EventTargetArray(  
    _Out_ HRESULT* hr,  
    size_t items  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `hr`  
- このコンス トラクター操作後にパラメーター`hr`配列の割り当てが成功したか失敗するかどうかを示します。 次の表に、可能な値`hr`です。  
+### <a name="parameters"></a>パラメーター  
+ *hr*  
+ このコンス トラクター操作後にパラメーター *hr*配列の割り当てが成功または失敗するかどうかを示します。 次の表に、可能な値*hr*します。  
   
  S_OK  
  操作が成功しました。  
   
  E_OUTOFMEMORY  
- 配列のメモリを割り当てられませんでした。  
+ 配列にメモリを割り当てできませんでした。  
   
  S_FALSE  
- パラメーター`items`が 0 未満です。  
+ パラメーター*項目*が 0 未満です。  
   
- `items`  
+ *項目*  
  割り当てる配列要素の数。  
   
-## <a name="remarks"></a>コメント  
- EventTargetArray クラスの新しいインスタンスを初期化します。  
+## <a name="remarks"></a>Remarks  
+ 新しいインスタンスを初期化、 **EventTargetArray**クラス。  
   
- EventTargetArray は EventSource オブジェクトでイベント ハンドラーの配列を保持するために使用します。  
+ **EventTargetArray**配列内のイベント ハンドラーを保持するために使用する`EventSource`オブジェクト。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** event.h  

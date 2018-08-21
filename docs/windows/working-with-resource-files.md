@@ -1,5 +1,5 @@
 ---
-title: リソース ファイルの操作 |Microsoft ドキュメント
+title: Working with Resource Files |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dc416561b36566235ed422cd8989b4218f34da81
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a009c8e1d9a3db682a81e1f054ef999cffaf266d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891611"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641445"
 ---
 # <a name="working-with-resource-files"></a>リソース ファイルの操作
 > [!WARNING]
->  このセクションは、C++ で記述された Windows デスクトップ アプリケーションに適用されます。 C++ で記述されたユニバーサル Windows プラットフォーム アプリでリソースについては、次を参照してください。[アプリ リソースの定義](http://msdn.microsoft.com/en-us/476ea844-632c-4467-9ce3-966be1350dd4)です。  
+>  このセクションは、C++ で記述された Windows デスクトップ アプリケーションに適用されます。 C++ で記述されたユニバーサル Windows プラットフォーム アプリでのリソースについては、次を参照してください。[アプリ リソースの定義](http://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4)します。  
 >   
->  C + にリソースを追加する方法について +/CLI プロジェクトを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。*  
+>  C++ のリソースを追加する方法について/cli CLI プロジェクトを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。  
   
  リソースは幅広い要素で構成できます。ユーザーに情報を提供するインターフェイス要素 (ビットマップ、アイコン、カーソルなど)、アプリケーションで必要なデータが含まれたカスタム リソース、セットアップ API によって使用されるバージョン リソース、メニューおよびダイアログ ボックス リソースなどがあります。  
   
  新しいリソースをプロジェクトに追加し、適切なリソース エディターを使用してそれらのリソースを変更できます。 ほとんどの Visual C++ ウィザードでは、プロジェクトの .rc ファイルが自動的に生成されます。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 詳細については、管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションは、次を参照してください。[グローバライズと .NET Framework アプリケーションのローカライズ](/dotnet/standard/globalization-localization/index)です。  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [リソース ファイル](../windows/resource-files-visual-studio.md)  
@@ -50,7 +50,7 @@ ms.locfileid: "33891611"
  [Visual C++](../visual-cpp-in-visual-studio.md)  
  Visual C++ のドキュメントへのリンクを示します。  
   
- [Visual Studio の概要](http://msdn.microsoft.com/en-us/99997089-56ff-4d60-81a9-447062dc98ac)  
+ [Visual Studio の概要](http://msdn.microsoft.com/99997089-56ff-4d60-81a9-447062dc98ac)  
  同じ統合開発環境 (IDE: Integrated Development Environment) を使用し、混合言語ソリューションを作成するときにツールを共有し、作業を簡易化するための開発ツールの完全なセットについて説明します。  
   
  [ご意見](/visualstudio/ide/talk-to-us)  
@@ -59,4 +59,3 @@ ms.locfileid: "33891611"
 ## <a name="see-also"></a>関連項目  
  [Windows デスクトップ アプリケーション](../windows/windows-desktop-applications-cpp.md)   
  [メニューとその他のリソース](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
-

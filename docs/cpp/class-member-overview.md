@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee52b42c65a34316454ea6653447938712590327
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1c454872a3f8d1c7f41ba2f6cea7d81402b6327f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943973"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403470"
 ---
 # <a name="class-member-overview"></a>クラス メンバーの概要
 クラスまたは構造体はそのメンバーで構成されます。 クラスが行う作業は、そのメンバー関数によって実行されます。 クラスが維持する状態は、そのデータ メンバー内に格納されます。 メンバーの初期化はコンス トラクター、およびメモリの解放などのクリーンアップ作業が行われ、リソースの解放、デストラクターによって行われます。 C++11 以降では、データ メンバーは宣言の時点で初期化することができます (通常はその必要があります)。  
@@ -124,7 +124,6 @@ int TestRun::_instances{ 0 };
  C++11 以降では、非静的メンバーの宣言子に初期化子を含めることができます。  
   
 ```cpp 
-  
 class CanInit  
 {  
 public:  

@@ -1,5 +1,5 @@
 ---
-title: Visual C のテキストと文字列 |Microsoft ドキュメント
+title: Visual C のテキストと文字列 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,12 +34,12 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e16c44993f3cd9598bc42f9151264e09ac3b7a53
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8eaf5425bab79d31391e6ccd82e03c667de1271c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856034"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016627"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Visual C++ のテキストと文字列
 国際市場をターゲットにアプリケーションを開発する場合は、地域の文字セットをサポートすることが重要です。 ASCII 文字セットでは、0x00 から 0x7F までの範囲の文字を定義しています。 そのほかに、ASCII 文字セットと同じ 0x00 から 0x7F までの範囲の文字に加え、0x80 から 0xFF までの拡張文字セットも定義している、主にヨーロッパ向けの文字セットもあります。 多くのヨーロッパ系言語の文字と ASCII 文字セットを表現するには、8 ビットの 1 バイト文字セット (SBCS: Single-Byte-Character Set) で十分です。 ただし、日本語の漢字など、ヨーロッパ以外の文字セットでは、1 バイトのコード体系ですべての文字を表現しきれないため、マルチバイト文字セット (MBCS: Multibyte-Character Set) エンコーディングが必要になります。  
@@ -64,7 +64,7 @@ ms.locfileid: "33856034"
  [国際化](../c-runtime-library/internationalization.md)  
  C ランタイム ライブラリの国際対応のサポートについて説明します。  
   
- [国際対応のサンプル](http://msdn.microsoft.com/en-us/aa8d390c-cf4c-4dd8-9dea-74d81f93f2f8)  
+ [国際対応のサンプル](http://msdn.microsoft.com/aa8d390c-cf4c-4dd8-9dea-74d81f93f2f8)  
  Visual C++ の国際化のアプローチを示すサンプルへのリンクを提供します。  
   
  [言語および国/地域識別文字列](../c-runtime-library/locale-names-languages-and-country-region-strings.md)  

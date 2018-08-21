@@ -1,5 +1,5 @@
 ---
-title: Srwlockexclusivetraits::unlock メソッド |Microsoft ドキュメント
+title: Srwlockexclusivetraits::unlock メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0babd7efcae7bbd91fd81362e7b0f612f177477f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f30c2d10bd5a25a8241bc52913d675b98e23d88a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892593"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013100"
 ---
 # <a name="srwlockexclusivetraitsunlock-method"></a>SRWLockExclusiveTraits::Unlock メソッド
-指定した SRWLock オブジェクトの排他的に制御を解放します。  
+指定したの排他的制御を解放`SRWLock`オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 inline static void Unlock(  
    _In_ Type srwlock  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `srwlock`  
- SRWLock オブジェクトへのハンドルします。  
+### <a name="parameters"></a>パラメーター  
+ *srwlock*  
+ ハンドル、`SRWLock`オブジェクト。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

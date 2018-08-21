@@ -1,5 +1,5 @@
 ---
-title: IOpenRowsetImpl クラス |Microsoft ドキュメント
+title: IOpenRowsetImpl クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -7,25 +7,33 @@ ms.technology:
 ms.topic: reference
 f1_keywords:
 - IOpenRowsetImpl
+- IOpenRowsetImpl.CreateRowset
+- IOpenRowsetImpl::CreateRowset
+- CreateRowset
+- OpenRowset
+- IOpenRowsetImpl::OpenRowset
+- IOpenRowsetImpl.OpenRowset
 dev_langs:
 - C++
 helpviewer_keywords:
 - IOpenRowsetImpl class
+- CreateRowset method
+- OpenRowset method
 ms.assetid: d259cedc-1db4-41cf-bc9f-5030907ab486
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dd34987fcff3bee663a06276e3ded3c44d7ae77c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e2212a10269b852d0df6f10a87e08370c1d27cf8
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33102086"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340626"
 ---
 # <a name="iopenrowsetimpl-class"></a>IOpenRowsetImpl クラス
-実装を提供、`IOpenRowset`インターフェイスです。  
+実装を提供、`IOpenRowset`インターフェイス。  
   
 ## <a name="syntax"></a>構文
 
@@ -34,9 +42,12 @@ template <class SessionClass>
 class IOpenRowsetImpl : public IOpenRowset  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `SessionClass`  
- 派生したクラス、`IOpenRowsetImpl`です。  
+### <a name="parameters"></a>パラメーター  
+ *SessionClass*  
+ 派生したクラス、`IOpenRowsetImpl`します。  
+
+## <a name="requirements"></a>要件  
+ **ヘッダー:** atldb.h  
   
 ## <a name="members"></a>メンバー  
   
@@ -44,14 +55,58 @@ class IOpenRowsetImpl : public IOpenRowset
   
 |||  
 |-|-|  
-|[CreateRowset](../../data/oledb/iopenrowsetimpl-createrowset.md)|行セット オブジェクトを作成します。 ユーザーが直接呼び出されません。|  
-|[OpenRowset](../../data/oledb/iopenrowsetimpl-openrowset.md)|開き、単一のベース テーブルまたはインデックスからすべての行を含む行セットを返します。 (にない ATLDB です。H)|  
+|[CreateRowset](#createrowset)|行セット オブジェクトを作成します。 ユーザーが直接呼び出されません。|  
+|[OpenRowset](#openrowset)|開き、1 つのベース テーブルまたはインデックスからすべての行が含まれる行セットを返します。 (ATLDB ではないです。H)|  
   
-## <a name="remarks"></a>コメント  
- [IOpenRowset](https://msdn.microsoft.com/en-us/library/ms716946.aspx)セッション オブジェクトの必須インターフェイスです。 それが開き、単一のベース テーブルまたはインデックスからすべての行を含む行セットを返します。  
+## <a name="remarks"></a>Remarks  
+ [IOpenRowset](https://msdn.microsoft.com/library/ms716946.aspx)セッション オブジェクトの必須インターフェイスです。 これによりが表示され、1 つのベース テーブルまたはインデックスからすべての行が含まれる行セットを返します。  
   
-## <a name="requirements"></a>要件  
- **ヘッダー:** atldb.h  
+## <a name="createrowset"></a> Iopenrowsetimpl::createrowset
+行セット オブジェクトを作成します。 ユーザーが直接呼び出されません。 参照してください[iopenrowset::openrowset](https://msdn.microsoft.com/library/ms716724.aspx)で、 *OLE DB プログラマーズ リファレンス。*  
+  
+### <a name="syntax"></a>構文  
+  
+```cpp
+template template <class RowsetClass>  
+HRESULT CreateRowset(IUnknown* pUnkOuter,  
+   DBID* pTableID,  
+   DBID* pIndexID,  
+   REFIID riid,  
+   ULONG cPropertySets,  
+   DBPROPSET rgPropertySets[],  
+   IUnknown** ppRowset,  
+   RowsetClass*& pRowsetObj);  
+```  
+  
+#### <a name="parameters"></a>パラメーター  
+ *RowsetClass*  
+ ユーザーの行セット クラスを表すテンプレート クラスのメンバー。 通常、ウィザードによって生成されます。  
+  
+ *pRowsetObj*  
+ [out]行セット オブジェクトへのポインター。 通常、このパラメーターは使用されませんが COM オブジェクトに渡す前に、行セットに対してより多くの作業を実行する必要がある場合に使用できます。 有効期間*pRowsetObj*連結された*ppRowset*します。  
+  
+ その他のパラメーターでは、次を参照してください。 [iopenrowset::openrowset](https://msdn.microsoft.com/library/ms716724.aspx)で、 *OLE DB プログラマーズ リファレンス。*  
+
+## <a name="openrowset"></a> Iopenrowsetimpl::openrowset
+開き、1 つのベース テーブルまたはインデックスからすべての行が含まれる行セットを返します。  
+  
+### <a name="syntax"></a>構文  
+  
+```cpp
+HRESULT OpenRowset(IUnknown* pUnkOuter,  
+   DBID* pTableID,  
+   DBID* pIndexID,  
+   REFIID riid,  
+   ULONG cPropertySets,  
+   DBPROPSET rgPropertySets[],  
+   IUnknown** ppRowset);  
+```  
+  
+#### <a name="parameters"></a>パラメーター  
+ 参照してください[iopenrowset::openrowset](https://msdn.microsoft.com/library/ms716724.aspx)で、 *OLE DB プログラマーズ リファレンス*します。  
+  
+### <a name="remarks"></a>Remarks  
+ ATLDB でこのメソッドが見つかりませんでした。H. プロバイダーを作成するときに、ATL オブジェクト ウィザードによって作成されます。  
   
 ## <a name="see-also"></a>関連項目  
  [OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)   

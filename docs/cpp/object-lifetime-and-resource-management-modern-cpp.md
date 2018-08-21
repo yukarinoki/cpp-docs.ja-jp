@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fccba0fe09c6e2fcc636d478824c7dfcc699d653
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 365f9196f3d482098c29bf4b04610120ecbbeec4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941552"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406043"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>オブジェクトの有効期間とリソースの管理 (Modern C++)
 管理対象の言語とは異なり、C++ はプログラムを実行すると、いいえ-長い-使用メモリ リソースを自動的に解放するガベージ コレクション (GC) がありません。 C++ では、リソースの管理に直接関連するオブジェクトの有効期間。 このドキュメントでは、C++ では、オブジェクトの有効期間および管理する方法に影響する要因について説明します。  
@@ -42,7 +42,6 @@ auto p = make_shared<widget>(); // no leak, and exception safe
 p->draw();   
   
 } // no delete required, out-of-scope triggers smart pointer destructor  
-  
 ```  
   
  使用`unique_ptr`の一意の所有権など、 *pimpl*表現形式です。 (を参照してください[コンパイル時のカプセル化の Pimpl](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md))。ように、`unique_ptr`明示的なすべての主なターゲット**新しい**式。  
@@ -61,7 +60,6 @@ class node {
   ...  
 };  
 node::node() : parent(...) { children.emplace_back(new node(...) ); }  
-  
 ```  
   
  パフォーマンスの最適化が必要な場合は、使用する必要があります*適切にカプセル化された*ポインターおよび削除する明示的な呼び出しを所有しています。 例では、独自の下位レベルのデータ構造を実装する場合です。  

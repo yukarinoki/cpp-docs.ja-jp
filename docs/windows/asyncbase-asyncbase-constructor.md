@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::asyncbase コンス トラクター |Microsoft ドキュメント
+title: Asyncbase::asyncbase コンス トラクター |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cf794e3cbd9b566dafcdd1d5928ab9598bb1f08b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0fa26f2f5898e65827095a11841eae1f52403c3c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854773"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650561"
 ---
 # <a name="asyncbaseasyncbase-constructor"></a>AsyncBase::AsyncBase コンストラクター
-AsyncBase クラスのインスタンスを初期化します。  
+インスタンスを初期化します、 **AsyncBase**クラス。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 AsyncBase();  
 ```  
   

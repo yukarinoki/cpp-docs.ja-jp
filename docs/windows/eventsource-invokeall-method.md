@@ -1,5 +1,5 @@
 ---
-title: Eventsource::invokeall メソッド |Microsoft ドキュメント
+title: Eventsource::invokeall メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 00bce09f9e081bb0cd5c01115b05e4d3268d7293
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9ea378f75f100bce02cd486139fb0aac5ea5a5ff
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882616"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648634"
 ---
 # <a name="eventsourceinvokeall-method"></a>EventSource::InvokeAll メソッド
-現在関連付けられている各イベント ハンドラーを呼び出します[EventSource](../windows/eventsource-class.md)オブジェクトの指定した引数型と引数を使用します。  
+現在関連付けられている各イベント ハンドラーを呼び出す[EventSource](../windows/eventsource-class.md)オブジェクトの指定された引数の型と引数を使用します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void InvokeAll();  
 template <  
    typename T0  
@@ -183,65 +183,65 @@ void InvokeAll(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `T0`  
+### <a name="parameters"></a>パラメーター  
+ *T0*  
  0 番目のイベント ハンドラーの引数の型。  
   
- `T1`  
+ *T1*  
  最初のイベント ハンドラーの引数の型。  
   
- `T2`  
+ *T2*  
  2 番目のイベント ハンドラーの引数の型。  
   
- `T3`  
+ *T3*  
  3 番目のイベント ハンドラーの引数の型。  
   
- `T4`  
+ *T4*  
  4 番目のイベント ハンドラーの引数の型。  
   
- `T5`  
+ *T5*  
  5 番目のイベント ハンドラーの引数の型。  
   
- `T6`  
+ *T6*  
  6 番目のイベント ハンドラーの引数の型。  
   
- `T7`  
+ *T7*  
  7 番目のイベント ハンドラーの引数の型。  
   
- `T8`  
+ *T8*  
  8 番目のイベント ハンドラーの引数の型。  
   
- `T9`  
+ *T9*  
  9 番目のイベント ハンドラーの引数の型。  
   
- `arg0`  
+ *arg0*  
  0 番目のイベント ハンドラーの引数。  
   
- `arg1`  
+ *arg1*  
  最初のイベント ハンドラーの引数。  
   
- `arg2`  
+ *Arg2*  
  2 番目のイベント ハンドラーの引数。  
   
- `arg3`  
+ *arg3…*  
  3 番目のイベント ハンドラーの引数。  
   
- `arg4`  
+ *arg4*  
  4 番目のイベント ハンドラーの引数。  
   
- `arg5`  
+ *arg5*  
  5 番目のイベント ハンドラーの引数。  
   
- `arg6`  
+ *arg6*  
  6 番目のイベント ハンドラーの引数。  
   
- `arg7`  
+ *arg7*  
  7 番目のイベント ハンドラーの引数。  
   
- `arg8`  
+ *arg8*  
  8 番目のイベント ハンドラーの引数。  
   
- `arg9`  
+ *arg9*  
  9 番目のイベント ハンドラーの引数。  
   
 ## <a name="requirements"></a>要件  

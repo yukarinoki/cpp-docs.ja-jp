@@ -1,5 +1,5 @@
 ---
-title: public (C++ 属性) |Microsoft ドキュメント
+title: public (C++ 属性) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1d798d828dd252ce8b5f3f49d5a9aaf525acc986
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 01e8a2874dd756d3f6977730e5463b3089755108
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881732"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016653"
 ---
 # <a name="public-c-attributes"></a>public (C++ 属性)
-.Idl ファイル内で参照されていない場合でも、typedef がタイプ ライブラリに送られることを確認します。  
+.Idl ファイル内から参照されていない場合でも、typedef がタイプ ライブラリに送られるようにします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```cpp  
 [public]  
-  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **パブリック**C++ 属性と同じ機能を持つ、[パブリック](http://msdn.microsoft.com/library/windows/desktop/aa367150)MIDL 属性。  
   
 ## <a name="example"></a>例  
  次のコードを使用する方法を示しています、**パブリック**属性。  
   
-```  
+```cpp  
 // cpp_attr_ref_public.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -61,8 +59,8 @@ __interface IFireTabCtrl : IDispatch
   
 |||  
 |-|-|  
-|**対象**|`typedef`|  
-|**反復可能**|×|  
+|**対象**|**typedef**|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

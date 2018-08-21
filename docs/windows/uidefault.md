@@ -1,5 +1,5 @@
 ---
-title: uidefault |Microsoft ドキュメント
+title: uidefault |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad24d6e874b1c2efd9b57118e20fe78bfa037bd3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 68a23210a8f3d9f561a667f82b395da7ac46da01
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890152"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011462"
 ---
 # <a name="uidefault"></a>uidefault
-型情報のメンバーがユーザー インターフェイスに表示する既定のメンバーであることを示します。  
+型情報メンバーは、ユーザー インターフェイスに表示する既定のメンバーであることを示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```cpp  
 [uidefault]  
-  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **Uidefault** C++ 属性と同じ機能を持つ、 [uidefault](http://msdn.microsoft.com/library/windows/desktop/aa367292) MIDL 属性。  
   
 ## <a name="example"></a>例  
- 次のコードのサンプルが表示**uidefault**:  
+ 次のコードは、サンプルの**uidefault**:  
   
-```  
+```cpp  
 // cpp_attr_ref_uidefault.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -65,7 +63,7 @@ __interface ICustom{
 |||  
 |-|-|  
 |**対象**|インターフェイス メソッド|  
-|**反復可能**|×|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

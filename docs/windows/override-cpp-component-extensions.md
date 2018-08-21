@@ -1,5 +1,5 @@
 ---
-title: オーバーライド (C++ コンポーネント拡張) |Microsoft ドキュメント
+title: override (C++ コンポーネント拡張) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6818256aafc64702e5423a5560c251e6d46750fa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 855f2c18423fd6c1ca708034214e6f5c7048d6d8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878880"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605562"
 ---
 # <a name="override--c-component-extensions"></a>override (C++ コンポーネント拡張)
-状況依存の `override` キーワードは、型のメンバーが基底クラスまたは基本インターフェイスのメンバーをオーバーライドすることを示します。  
+**オーバーライド**状況依存のキーワードは、型のメンバーが基底クラスまたは基本インターフェイスのメンバーをオーバーライドすることを示します。  
   
-## <a name="remarks"></a>コメント  
- `override`キーワードは、ネイティブ ターゲット (既定のコンパイラ オプション) にコンパイルするときに有効な Windows ランタイム ターゲット (**/ZW**コンパイラ オプション)、または共通言語ランタイム ターゲット (**/clr**コンパイラオプション)。  
+## <a name="remarks"></a>Remarks  
+ **オーバーライド**キーワードは、ネイティブ ターゲット (既定のコンパイラ オプション) をコンパイルするときに有効な Windows ランタイム ターゲット (`/ZW`コンパイラ オプション)、または共通言語ランタイム ターゲット (`/clr`コンパイラ オプション)。  
   
- オーバーライド指定子の詳細については、次を参照してください。[オーバーライド指定子](../cpp/override-specifier.md)と[オーバーライド指定子とネイティブ コンパイル](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)です。  
+ オーバーライド指定子の詳細については、次を参照してください。[オーバーライド指定子](../cpp/override-specifier.md)と[オーバーライド指定子とネイティブ コンパイル](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)します。  
   
- 状況依存のキーワードの詳細については、次を参照してください。[状況依存のキーワード](../windows/context-sensitive-keywords-cpp-component-extensions.md)です。  
+ 状況依存のキーワードの詳細については、次を参照してください。[状況依存のキーワード](../windows/context-sensitive-keywords-cpp-component-extensions.md)します。  
   
 ## <a name="examples"></a>使用例  
- **例**  
   
- 次のコード例に、`override` をネイティブ コンパイルでも使用できることを示します。  
+ コード例を次に示します**オーバーライド**ネイティブ コンパイルでも使用できます。  
   
-```cpp#  
+```cpp  
 // override_keyword_1.cpp  
 // compile with: /c  
 struct I1 {  
@@ -50,11 +49,11 @@ struct X : public I1 {
 };  
 ```  
   
- **例**  
+### <a name="example"></a>例
+
+ コード例を次に示します**オーバーライド**Windows ランタイム コンパイルで使用できます。  
   
- 次のコード例に、`override` を Windows ランタイム コンパイルで使用できることを示します。  
-  
-```cpp#  
+```cpp 
 // override_keyword_2.cpp  
 // compile with: /ZW /c  
 ref struct I1 {  
@@ -66,15 +65,15 @@ ref struct X : public I1 {
 };  
 ```  
   
- **必要条件**  
+#### <a name="requirements"></a>要件  
   
- コンパイラ オプション: **/ZW**  
+ コンパイラ オプション: `/ZW`  
+    
+### <a name="example"></a>例
+
+ コード例を次に示します**オーバーライド**共通言語ランタイム コンパイルで使用できます。  
   
- **例**  
-  
- 次のコード例に、`override` を共通言語ランタイム コンパイルで使用できることを示します。  
-  
-```cpp#  
+```cpp  
 // override_keyword_3.cpp  
 // compile with: /clr /c  
 ref struct I1 {  
@@ -86,9 +85,9 @@ ref struct X : public I1 {
 };  
 ```  
   
- **必要条件**  
+#### <a name="requirements"></a>要件  
   
- コンパイラ オプション: **/clr**  
+ コンパイラ オプション: `/clr`  
   
 ## <a name="see-also"></a>関連項目  
  [オーバーライド指定子](../cpp/override-specifier.md)   

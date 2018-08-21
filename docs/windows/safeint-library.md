@@ -1,5 +1,5 @@
 ---
-title: SafeInt ライブラリ |Microsoft ドキュメント
+title: SafeInt ライブラリ |Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -18,26 +18,26 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25090eefe4f07181490f650ea4d14add9fc6ac75
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 16ec0ad37202acbae8b33f270cef15547edd77b6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892053"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604188"
 ---
 # <a name="safeint-library"></a>SafeInt ライブラリ
-SafeInt ライブラリは、アプリケーションは、数学的演算を実行するときに発生する可能性があります整数オーバーフローを防止に役立ちます。  
+**SafeInt**ライブラリ アプリケーションは、算術演算を実行するときになる可能性がある整数のオーバーフローを防ぐために役立ちます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
 |セクション|説明|  
 |-------------|-----------------|  
-|[SafeInt クラス](../windows/safeint-class.md)|このクラスは、整数オーバーフローを防ぎます。|  
-|[SafeInt 関数](../windows/safeint-functions.md)|関数を作成しなくても使用できる`SafeInt`オブジェクト。|  
-|[SafeIntException クラス](../windows/safeintexception-class.md)|例外のクラスに関連する、`SafeInt`クラスです。|  
+|[SafeInt クラス](../windows/safeint-class.md)|このクラスは、整数のオーバーフローから保護します。|  
+|[SafeInt 関数](../windows/safeint-functions.md)|関数を作成せずに使用できる、 **SafeInt**オブジェクト。|  
+|[SafeIntException クラス](../windows/safeintexception-class.md)|例外のクラスに関連する、 **SafeInt**クラス。|  
   
 ## <a name="related-sections"></a>関連項目  
   
 |セクション|説明|  
 |-------------|-----------------|  
-|[C++ 言語リファレンス](../cpp/cpp-language-reference.md)|参照し、C++ 言語の概念の説明。|
+|[C++ 言語リファレンス](../cpp/cpp-language-reference.md)|参照と、C++ 言語の概念の説明。|

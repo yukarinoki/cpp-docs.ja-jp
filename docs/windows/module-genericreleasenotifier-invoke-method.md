@@ -1,5 +1,5 @@
 ---
-title: 'Module::genericreleasenotifier:: メソッドを呼び出す |Microsoft ドキュメント'
+title: 'Module::genericreleasenotifier:: メソッドを呼び出す |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1cb6ce12105d9e752a85b1252739ef37b5664780
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: af00d6b8469dd6568f93fb112d65e1a3f4d49da5
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875332"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014976"
 ---
 # <a name="modulegenericreleasenotifierinvoke-method"></a>Module::GenericReleaseNotifier::Invoke メソッド
-Module::genericreleasenotifier の現在のオブジェクトに関連付けられているイベント ハンドラーを呼び出します。  
+現在関連付けられているイベント ハンドラーを呼び出す**module::genericreleasenotifier**オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void Invoke();  
 ```  
   

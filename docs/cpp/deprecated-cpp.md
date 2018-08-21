@@ -1,5 +1,5 @@
 ---
-title: (C++) を非推奨 |Microsoft ドキュメント
+title: 非推奨の (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/28/2017
 ms.technology:
@@ -17,29 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ec2506b406166ac5316de4724db27a6cd7ffcc1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 77748cd69a3424bb4b2e209a0a447d39eae25147
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466905"
 ---
 # <a name="deprecated-c"></a>非推奨 (C++)
-このトピックでは、Microsoft に固有の仕様について declspec 宣言使用されなくなりました。 C++ 14 に関する情報の`[[deprecated]]`属性、および Microsoft 固有の declspec またはプラグマとその属性を使用する場合のガイダンスを参照してください。 [C++ の標準属性](attributes.md)です。
+このトピックでは、Microsoft 固有について declspec 宣言を非推奨とされます。 C++ 14 について`[[deprecated]]`属性、および Microsoft 固有の declspec またはプラグマとその属性を使用するタイミングに関するガイダンスを参照してください。 [C++ の標準属性](attributes.md)します。
 
- 以下に示すような例外、**非推奨**宣言と同じ機能を提供する、[廃止](../preprocessor/deprecated-c-cpp.md)プラグマ。  
+例外については、下、**非推奨とされます**宣言と同じ機能を提供する、[非推奨とされます](../preprocessor/deprecated-c-cpp.md)プラグマ。  
   
--   **廃止**宣言ことができます、非推奨として特定の形式の関数のオーバー ロードを指定する一方、プラグマ形式は、関数名のすべてのオーバー ロードされたフォームに適用されます。  
+-   **非推奨とされます**宣言により、非推奨として特定の形式の関数のオーバー ロードを指定する一方、プラグマ形式はすべてのオーバー ロードされた関数名に適用されます。  
   
--   **廃止**宣言では、コンパイル時に表示されるメッセージを指定することができます。 このメッセージのテキストをマクロから取り込むことができます。  
+-   **非推奨とされます**宣言では、コンパイル時に表示されるメッセージを指定することができます。 このメッセージのテキストをマクロから取り込むことができます。  
   
--   マクロはで非推奨としてマークされているだけ、**廃止**プラグマ。  
+-   マクロは非推奨とされたとしてマークされているのみ、**非推奨とされます**プラグマ。  
   
- 非推奨の識別子または標準の使用が見つかったかどうか[ `[[deprecated]]` ](attributes.md) 、属性、 [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)警告がスローされます。  
+ コンパイラが非推奨の識別子または標準の使用を検出するかどうかは[ `[[deprecated]]` ](attributes.md)属性、 [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)警告がスローされます。  
   
 ## <a name="example"></a>例  
  次の例では、関数を非推奨としてマークする方法、および非推奨の関数が使用されている場合、コンパイル時に表示されるメッセージを指定する方法を示します。  
   
-```  
+```cpp 
 // deprecated.cpp  
 // compile with: /W3  
 #define MY_TEXT "function is deprecated"  
@@ -59,7 +60,7 @@ int main() {
 ## <a name="example"></a>例  
  次の例では、クラスを非推奨としてマークする方法、および非推奨のクラスが使用されている場合、コンパイル時に表示されるメッセージを指定する方法を示します。  
   
-```  
+```cpp 
 // deprecate_class.cpp  
 // compile with: /W3  
 struct __declspec(deprecated) X {  

@@ -1,5 +1,5 @@
 ---
-title: Module::getmodule メソッド |Microsoft ドキュメント
+title: Module::getmodule メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 014a2aeca7876e8fac7a8428388b4d3ead2860a5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ddfd9008a89834c17642d8b83bb9f33405a342a0
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875163"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010799"
 ---
 # <a name="modulegetmodule-method"></a>Module::GetModule メソッド
 モジュールのインスタンスを作成します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 static Module& GetModule();  
 WRL_NOTHROW static Module& GetModule();  
 ```  
@@ -43,5 +43,4 @@ WRL_NOTHROW static Module& GetModule();
  **名前空間:** Microsoft::WRL  
   
 ## <a name="see-also"></a>関連項目  
- 
-[Module クラス](../windows/module-class.md)
+ [Module クラス](../windows/module-class.md)

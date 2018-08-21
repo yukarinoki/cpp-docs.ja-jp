@@ -1,5 +1,5 @@
 ---
-title: Comptrref::operator * 演算子 |Microsoft ドキュメント
+title: Comptrref::operator * 演算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 03de935ab9195cddf3ea9936b694b55ba2cec34c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 229a5a61bfe28280f7bffcd92f9d9cebffa2415b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883473"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647161"
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator* 演算子
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 InterfaceType* operator *();  
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 現在の ComPtrRef オブジェクトによって表されるインターフェイスへのポインター。  
+ 現在によって表されるインターフェイスへのポインター **ComPtrRef**オブジェクト。  
   
-## <a name="remarks"></a>コメント  
- 現在の ComPtrRef オブジェクトによって表されるインターフェイスへのポインターを取得します。  
+## <a name="remarks"></a>Remarks  
+ 現在によって表されるインターフェイスへのポインターを取得します。 **ComPtrRef**オブジェクト。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** client.h  

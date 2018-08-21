@@ -1,5 +1,5 @@
 ---
-title: v1_enum |Microsoft ドキュメント
+title: v1_enum |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b3156554f5d2b799a9e1ef5a067d1f2e8e600d38
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b057ef891a00829fd64d967ffa860a66d6d49d5d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890662"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012343"
 ---
 # <a name="v1enum"></a>v1_enum
-指定した列挙型は、既定の 16 ビットではなく、32 ビットのエンティティとして送信するように指示します。  
+指定した列挙型を 16 ビットの既定ではなく、32 ビットのエンティティとして転送されることを指示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```cpp  
 [v1_enum]  
-  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **V1_enum** C++ 属性と同じ機能を持つ、 [v1_enum](http://msdn.microsoft.com/library/windows/desktop/aa367303) MIDL 属性。  
   
 ## <a name="example"></a>例  
  次のコードは、の使い方を示しています**v1_enum**:。  
   
-```  
+```cpp  
 // cpp_attr_ref_v1_enum.cpp  
 // compile with: /LD  
 [module(name="MyLibrary")];  
@@ -60,7 +58,7 @@ enum eList {
 |||  
 |-|-|  
 |**対象**|列挙型|  
-|**反復可能**|×|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

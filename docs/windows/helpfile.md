@@ -1,5 +1,5 @@
 ---
-title: helpfile |Microsoft ドキュメント
+title: helpfile |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 926d0fec27bf323f559ad2fe0dffbd4208b1bf2a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3c2714c1418c5c9828322561ae1d7ca86dc6130a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876190"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647737"
 ---
 # <a name="helpfile"></a>helpfile
 タイプ ライブラリのヘルプ ファイルの名前を設定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
-      [ helpfile(  
+```cpp  
+[ helpfile(  
    "filename"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *ファイル名*  
- ヘルプ トピックが含まれているファイルの名前。  
+ ヘルプ トピックを含むファイルの名前。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **Helpfile** C++ 属性と同じ機能を持つ、 [helpfile](http://msdn.microsoft.com/library/windows/desktop/aa366853) MIDL 属性。  
   
 ## <a name="example"></a>例  
- 例を参照して[モジュール](../windows/module-cpp.md)の使用方法の例については**helpfile**です。  
+ 例をご覧ください[モジュール](../windows/module-cpp.md)を使用する方法の例については**helpfile**します。  
   
 ## <a name="requirements"></a>要件  
   
@@ -52,8 +51,8 @@ ms.locfileid: "33876190"
   
 |||  
 |-|-|  
-|**対象**|`interface`、 `typedef`、**クラス**、メソッド、プロパティ|  
-|**反復可能**|×|  
+|**対象**|**インターフェイス**、 **typedef**、**クラス**、メソッド、**プロパティ**|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

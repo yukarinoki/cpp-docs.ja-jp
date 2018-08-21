@@ -1,5 +1,5 @@
 ---
-title: Handlenulltraits::close メソッド |Microsoft ドキュメント
+title: Handlenulltraits::close メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1319b6a75f92e057975d0f8d2c7e2753df47141
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0206433d2b329501b10a8262e7b487ec83e99302
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873171"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642111"
 ---
 # <a name="handlenulltraitsclose-method"></a>HANDLENullTraits::Close メソッド
 指定したハンドルを閉じます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 inline static bool Close(  
    _In_ Type h  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `h`  
- 閉じるハンドルです。  
+### <a name="parameters"></a>パラメーター  
+ *h*  
+ ハンドルを閉じます。  
   
 ## <a name="return-value"></a>戻り値  
- **true**場合処理`h`正常です。 それ以外の場合、閉じられた**false**です。  
+ **true**場合処理*h*正常。 それ以外の終了**false**します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

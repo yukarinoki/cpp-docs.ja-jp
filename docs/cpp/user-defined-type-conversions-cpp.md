@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c41e2cf0765c036715377038357d587a755196f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5040319bee3fa74319bb30ca45ff11f2f5d72720
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943957"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465933"
 ---
 # <a name="user-defined-type-conversions-c"></a>ユーザー定義型の変換 (C++)
 A*変換*何らかの種類を異なる型の値からの新しい値を生成します。 *標準変換*、組み込み型できますを作成して、C++ 言語とサポートに組み込まれている*ユーザー定義の変換*から、またはユーザー定義型の間の変換を実行します。  
@@ -79,7 +79,7 @@ A*変換*何らかの種類を異なる型の値からの新しい値を生成�
   
  **明示的な**キーワードは c++ 98 以降の変換コンス トラクターは c++ 11 以降の変換関数を適用できます。 次のセクションでには、使用する方法の詳細が含まれて、**明示的な**キーワード。  
   
-##  <a name="ConvCTOR"></a> 変換コンス トラクター  
+## <a name="ConvCTOR"></a> 変換コンス トラクター  
  変換コンストラクターはユーザー定義型または組み込み型からユーザー定義型への変換を定義します。 次の例では、組み込み型から変換する変換コンス トラクター**二重**、ユーザー定義型に`Money`します。  
   
 ```cpp 
@@ -181,7 +181,6 @@ void display_balance(const Money balance)
 {  
     std::cout << "The balance is: " << balance << std::endl;  
 }  
-  
 ```  
   
  注意メンバー変数`amount`プライベートおよびパブリック変換関数を入力することに加え**二重**はの値を返すだけに導入されました`amount`。 関数 `display_balance` では、ストリーム挿入演算子 `balance` を使用することにより、`<<` の値が標準出力にストリームされるときに暗黙的な変換が発生します。 ユーザー定義型のストリーム挿入演算子が定義されていないため`Money`、組み込み型の 1 つであるが、**二重**、コンパイラからの変換関数が使用できる`Money`に**倍**ストリーム挿入演算子を満たすためにします。  
@@ -226,8 +225,6 @@ void display_balance(const Money balance)
 {  
     std::cout << "The balance is: " << (double)balance << std::endl;  
 }  
-  
 ```  
   
  ここでは、変換関数**演算子 double**は、明示的な型に明示的なキャスト**二重**が関数に導入されました`display_balance`変換を実行します。 このキャストを省略すると、コンパイラは `<<` 型に対する適切なストリーム挿入演算子 `Money` を特定できず、エラーが発生します。  
-  

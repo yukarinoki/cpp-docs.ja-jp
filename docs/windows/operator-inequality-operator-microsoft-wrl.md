@@ -1,5 +1,5 @@
 ---
-title: operator! = 演算子 (microsoft::wrl) |Microsoft ドキュメント
+title: 演算子! = 演算子 (microsoft::wrl) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c972687973cbaa66d4b79a883e8b008cd588e237
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 66009eb2e78268a4ee35a1c6023bfcb8dfda84b0
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876398"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011654"
 ---
 # <a name="operator-operator-microsoftwrl"></a>operator!= 演算子 (Microsoft::WRL)
 非等値演算子の[ComPtr](../windows/comptr-class.md)と[ComPtrRef](../windows/comptrref-class.md)オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 WRL_NOTHROW bool operator!=(  
    const ComPtr<T>& a,  
    const ComPtr<U>& b  
@@ -62,15 +62,15 @@ WRL_NOTHROW bool operator!=(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `a`  
+### <a name="parameters"></a>パラメーター  
+ *a*  
  左側のオブジェクト。  
   
- `b`  
+ *b*  
  右側のオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- `true` オブジェクトが等しくない場合それ以外の場合、`false`です。  
+ **true** 、オブジェクトが、それ以外の場合**false**します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** client.h  

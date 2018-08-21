@@ -1,5 +1,5 @@
 ---
-title: Semaphore::lock メソッド |Microsoft ドキュメント
+title: Semaphore::lock メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 80b4db212236da6c9fb320ff5a5e04f4e9f4a4c6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: be7a2b7bbac8affd0bc668113cac30f4bed96a6b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892476"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017296"
 ---
 # <a name="semaphorelock-method"></a>Semaphore::Lock メソッド
-指定されたタイムアウト期間が経過したか、現在のオブジェクトか、指定したハンドルに関連付けられているセマフォ オブジェクトになるまで待機がシグナル状態になっています。  
+現在のオブジェクトまでの待機、または**セマフォ**オブジェクトに関連付けられている指定したハンドルがシグナル状態で、または指定されたタイムアウト期間が経過しました。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 SyncLock Lock(  
    DWORD milliseconds = INFINITE  
 );  
@@ -40,15 +40,15 @@ static SyncLock Lock(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `milliseconds`  
- タイムアウト間隔 (ミリ秒単位)。 既定値は、無限で、無期限に待機します。  
+### <a name="parameters"></a>パラメーター  
+ *(ミリ秒)*  
+ タイムアウト間隔 (ミリ秒単位)。 既定値は、INFINITE で、無期限に待機します。  
   
- `h`  
- セマフォ オブジェクトへのハンドル。  
+ *h*  
+ 識別するハンドルを**セマフォ**オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- Details::SyncLockWithStatusT\<HandleTraits::SemaphoreTraits >  
+ `Details::SyncLockWithStatusT<HandleTraits::SemaphoreTraits>`。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  
@@ -56,5 +56,4 @@ static SyncLock Lock(
  **Namespace:** Microsoft::WRL::Wrappers  
   
 ## <a name="see-also"></a>関連項目  
-[Semaphore クラス](../windows/semaphore-class.md)
- 
+ [Semaphore クラス](../windows/semaphore-class.md)

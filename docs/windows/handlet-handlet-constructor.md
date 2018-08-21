@@ -1,5 +1,5 @@
 ---
-title: Handlet::handlet コンス トラクター |Microsoft ドキュメント
+title: Handlet::handlet コンス トラクター |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a0caad909803a0f73987f3e1132920b0948d8d1b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7a0bb864fa1356089552fb3c48461fef2a63920b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881898"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641380"
 ---
 # <a name="handlethandlet-constructor"></a>HandleT::HandleT コンストラクター
-HandleT クラスの新しいインスタンスを初期化します。  
+新しいインスタンスを初期化、 **HandleT**クラス。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 explicit HandleT(  
    typename HandleTraits::Type h =   
       HandleTraits::GetInvalidValue()  
@@ -40,12 +40,12 @@ HandleT(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `h`  
+### <a name="parameters"></a>パラメーター  
+ *h*  
  ハンドル。  
   
-## <a name="remarks"></a>コメント  
- 最初のコンス トラクターは、オブジェクトへの有効なハンドルではない HandleT オブジェクトを初期化します。 2 番目のコンス トラクターは、パラメーターから新しい HandleT オブジェクトを作成する`h`です。  
+## <a name="remarks"></a>Remarks  
+ 最初のコンス トラクターの初期化、 **HandleT**オブジェクトへの有効なハンドルではないオブジェクトです。 2 番目のコンス トラクターを作成、新しい**HandleT**パラメーターからオブジェクト*h*します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

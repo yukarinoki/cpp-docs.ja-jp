@@ -1,5 +1,5 @@
 ---
-title: 'HandleT:: ~ HandleT デストラクター |Microsoft ドキュメント'
+title: 'HandleT:: ~ HandleT デストラクター |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb2599beb7b5cadda1a26592a2ab5ca63c609fc2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9f0df83ff8848f27839254bd9b1645866d3904bb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881251"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643463"
 ---
 # <a name="handlethandlet-destructor"></a>HandleT::~HandleT デストラクター
-HandleT クラスのインスタンスの初期化を解除します。  
+インスタンスを初期化解除、 **HandleT**クラス。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 ~HandleT();  
 ```  
   

@@ -1,5 +1,5 @@
 ---
-title: データ メンバーの Module::MethodReleaseNotifier::method_ |Microsoft ドキュメント
+title: データ メンバーの Module::MethodReleaseNotifier::method_ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ce9ad8ba8659fb26c7303ff5efe236535e14d8f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5a59f1d677a3412f8f3edd016a9c719a8e221d6f
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877190"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015573"
 ---
 # <a name="modulemethodreleasenotifiermethod-data-member"></a>Module::MethodReleaseNotifier::method_ データ メンバー
-Module::methodreleasenotifier、現在のイベント ハンドラーへのポインターを保持します。  
+現在のイベント ハンドラーへのポインターを保持**module::methodreleasenotifier**オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void (T::* method_)();  
 ```  
   

@@ -1,5 +1,5 @@
 ---
-title: VerifyInheritanceHelper 構造体 |Microsoft ドキュメント
+title: VerifyInheritanceHelper 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d758f4b44990d1f03ff698f0740c2aa8491367a5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7ed375a30ddadf72b7eee8a2cc852dec6620a992
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889704"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011118"
 ---
 # <a name="verifyinheritancehelper-structure"></a>VerifyInheritanceHelper 構造体
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template <  
    typename I,  
    typename Base  
@@ -41,15 +41,15 @@ template <
 struct VerifyInheritanceHelper<I, Nil>;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `I`  
+### <a name="parameters"></a>パラメーター  
+ *I*  
  型。  
   
- `Base`  
+ *ベース*  
  別の型。  
   
-## <a name="remarks"></a>コメント  
- 1 つのインターフェイスは別のインターフェイスから派生するかどうかをテストします。  
+## <a name="remarks"></a>Remarks  
+ 1 つのインターフェイスが別のインターフェイスから派生したかどうかをテストします。  
   
 ## <a name="members"></a>メンバー  
   
@@ -57,7 +57,7 @@ struct VerifyInheritanceHelper<I, Nil>;
   
 |名前|説明|  
 |----------|-----------------|  
-|[VerifyInheritanceHelper::Verify メソッド](../windows/verifyinheritancehelper-verify-method.md)|現在のテンプレート パラメーターで指定された 2 つのインターフェイスをテストし、1 つのインターフェイスは、他から派生されているかどうかを決定します。|  
+|[VerifyInheritanceHelper::Verify メソッド](../windows/verifyinheritancehelper-verify-method.md)|現在のテンプレート パラメーターで指定された 2 つのインターフェイスをテストし、1 つのインターフェイスは、その他から派生されているかどうかを決定します。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `VerifyInheritanceHelper`  

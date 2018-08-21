@@ -14,18 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9646678398ff1e18d0acf45c45bc931ce37cd54a
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a3941ec28efcc3639e56a62c25565f94bc941d13
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944002"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464283"
 ---
 # <a name="typeid-operator"></a>typeid 演算子
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 typeid(type-id)  
 typeid(expression)  
 ```  
@@ -41,7 +40,7 @@ typeid(expression)
   
 -   クラスへの参照  
   
--   * で逆参照されるポインター  
+-   逆参照、ポインター \*  
   
 -   添字付きのポインター ([ ]) (一般に、ポリモーフィックな型へのポインターで添字を使用すると、安全ではないことに注意してください)。  
   

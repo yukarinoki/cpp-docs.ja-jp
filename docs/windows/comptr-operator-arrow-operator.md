@@ -1,5 +1,5 @@
 ---
-title: Comptr::operator-&gt;演算子 |Microsoft ドキュメント
+title: Comptr::operator-&gt;演算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3cb3571207f328ad044ffd3f2f9b83bcebc7677e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1530f7998f2597aeb2fe46dba09f4844b471cd93
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870186"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644831"
 ---
 # <a name="comptroperator-gt-operator"></a>Comptr::operator-&gt;演算子
 現在のテンプレート パラメーターで指定された型へのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 WRL_NOTHROW Microsoft::WRL::Details::RemoveIUnknown<InterfaceType>* operator->() const;  
 ```  
   
 ## <a name="return-value"></a>戻り値  
  現在のテンプレート型名で指定された型へのポインター。  
   
-## <a name="remarks"></a>コメント  
- このヘルパー関数では、不要なオーバーヘッドが STDMETHOD マクロを使用して原因を削除します。 この関数で IUnknown 型は仮想ではなくプライベートです。  
+## <a name="remarks"></a>Remarks  
+ このヘルパー関数は、STDMETHOD マクロを使用することで、不要なオーバーヘッドを削除します。 この関数は、`IUnknown`型**プライベート**の代わりに**仮想**します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** client.h  

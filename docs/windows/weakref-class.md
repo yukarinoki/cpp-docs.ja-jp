@@ -1,5 +1,5 @@
 ---
-title: WeakRef クラス |Microsoft ドキュメント
+title: WeakRef クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ba7efc595be55b807cd3f044269db0debcb72407
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f56b35ffb53da8947982359174784a0dbb3cef85
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891699"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012587"
 ---
 # <a name="weakref-class"></a>WeakRef クラス
 クラシック COM ではなく、Windows ランタイムでのみ使用できる *弱い参照* を表します。 弱い参照は、アクセスできる場合とできない場合があるオブジェクトを表します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 class WeakRef : public ComPtr<IWeakReference>  
 ```  
   
-## <a name="remarks"></a>コメント  
- WeakRef オブジェクトは、 *強い参照*を保持します。これはオブジェクトと関連付けられ、有効な場合と無効な場合があります。 強い参照を取得するには、As() や AsIID() メソッドを呼び出します。 強い参照が有効な場合、関連付けられているオブジェクトにアクセスできます。 強い参照が無効な場合 (`nullptr`)、関連付けられているオブジェクトにアクセスできません。  
+## <a name="remarks"></a>Remarks  
+ A **WeakRef**オブジェクトを保持する*強い参照*、これは、オブジェクトに関連付けられ、有効または無効にすることができます。 呼び出す、`As()`または`AsIID()`強い参照を取得します。 強い参照が有効な場合、関連付けられているオブジェクトにアクセスできます。 強い参照が有効な場合 (**nullptr**)、関連付けられているオブジェクトにアクセスできません。  
   
- WeakRef オブジェクトは通常、外部スレッドや外部アプリケーションによって存在が制御されるオブジェクトを表すために使用されます。 たとえば、ファイル オブジェクトへの参照から WeakRef オブジェクトを構築します。 ファイルが開いている間、強い参照は有効です。 しかし、ファイルが閉じられた場合、強い参照は無効になります。  
+ A **WeakRef**オブジェクトは通常、外部スレッドまたはアプリケーションによって存在が制御されるオブジェクトを表すために使用します。 たとえば、構築、 **WeakRef**ファイル オブジェクトへの参照からオブジェクト。 ファイルが開いている間、強い参照は有効です。 しかし、ファイルが閉じられた場合、強い参照は無効になります。  
   
- なお、Windows 10 SDK では [As](../windows/weakref-as-method.md)、 [AsIID](../windows/weakref-asiid-method.md) 、 [CopyTo](../windows/weakref-copyto-method.md) の各メソッドの動作が変更されています。 以下のコードのように、以前は、これらのうちのいずれかのメソッドを呼び出した後、強い参照が正常に取得されたかどうかを判別するために `nullptr` の WeakRef を調べることができました。  
+ なお、Windows 10 SDK では [As](../windows/weakref-as-method.md)、 [AsIID](../windows/weakref-asiid-method.md) 、 [CopyTo](../windows/weakref-copyto-method.md) の各メソッドの動作が変更されています。 以前は、これらのメソッドを呼び出すことでしたの WeakRef を調べる**nullptr**が次のコードのように、強い参照を取得が正常にかどうかを決定します。  
   
 ```cpp  
 WeakRef wr;  
@@ -55,17 +55,15 @@ if(wr == nullptr)
 {  
     wprintf(L"Couldn’t get strong ref!");  
 }  
-  
 ```  
   
- 上記のコードは、Windows 10 SDK (以降) の使用時には機能しません。 代わりに、確認用に渡されたポインター`nullptr`です。  
+ 上記のコードは、Windows 10 SDK (以降) の使用時には機能しません。 渡されたポインターを代わりに、チェック**nullptr**します。  
   
 ```cpp  
 if (strongRef == nullptr)  
 {  
     wprintf(L"Couldn't get strong ref!");  
- }  
-  
+}  
 ```  
   
 ## <a name="members"></a>メンバー  
@@ -74,22 +72,22 @@ if (strongRef == nullptr)
   
 |名前|説明|  
 |----------|-----------------|  
-|[WeakRef::WeakRef コンストラクター](../windows/weakref-weakref-constructor.md)|WeakRef クラスの新しいインスタンスを初期化します。|  
-|[WeakRef::~WeakRef デストラクター](../windows/weakref-tilde-weakref-destructor.md)|WeakRef クラスの現在のインスタンスの初期化を解除します。|  
+|[WeakRef::WeakRef コンストラクター](../windows/weakref-weakref-constructor.md)|新しいインスタンスを初期化、 **WeakRef**クラス。|  
+|[WeakRef::~WeakRef デストラクター](../windows/weakref-tilde-weakref-destructor.md)|現在のインスタンスの初期化を解除、 **WeakRef**クラス。|  
   
 ### <a name="public-methods"></a>パブリック メソッド  
   
 |名前|説明|  
 |----------|-----------------|  
-|[WeakRef::As メソッド](../windows/weakref-as-method.md)|指定された ComPtr ポインター パラメーターを、指定されたインターフェイスを表すように設定します。|  
-|[WeakRef::AsIID メソッド](../windows/weakref-asiid-method.md)|指定したインターフェイス ID を表すよう指定された ComPtr ポインター パラメーターを設定します。|  
+|[WeakRef::As メソッド](../windows/weakref-as-method.md)|指定した設定`ComPtr`ポインター パラメーターを指定したインターフェイスを表します。|  
+|[WeakRef::AsIID メソッド](../windows/weakref-asiid-method.md)|指定した設定`ComPtr`ポインター パラメーターを指定したインターフェイス ID を表す|  
 |[WeakRef::CopyTo メソッド](../windows/weakref-copyto-method.md)|使用可能なインターフェイスへのポインターがあるなら、指定されたポインター変数にそれを割り当てます。|  
   
 ### <a name="public-operators"></a>パブリック演算子  
   
 |名前|説明|  
 |----------|-----------------|  
-|[WeakRef::operator& 演算子](../windows/weakref-operator-ampersand-operator.md)|現在の WeakRef オブジェクトを表す ComPtrRef オブジェクトを返します。|  
+|[WeakRef::operator& 演算子](../windows/weakref-operator-ampersand-operator.md)|返します、`ComPtrRef`現在を表すオブジェクトを**WeakRef**オブジェクト。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `ComPtr`  

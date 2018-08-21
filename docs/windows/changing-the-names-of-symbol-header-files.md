@@ -1,5 +1,5 @@
 ---
-title: シンボル ヘッダー ファイルの名前を変更する |Microsoft ドキュメント
+title: シンボル ヘッダー ファイルの名前を変更する |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,29 +24,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 953ac59958748bd58fa7e9027c595bf7905e5f27
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6d1c3436190ff36724eba1601a51608371b8d0a4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864230"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649947"
 ---
 # <a name="changing-the-names-of-symbol-header-files"></a>シンボル ヘッダー ファイル名の変更
-通常は、すべてのシンボル定義が Resource.h に保存されます。 ただし、同じディレクトリ内の複数のリソース ファイルを使用する場合などに、このインクルード ファイル名の変更が必要になることがあります。  
+通常、すべてのシンボルが定義に保存`Resource.h`します。 ただし、同じディレクトリ内の複数のリソース ファイルを使用する場合などに、このインクルード ファイル名の変更が必要になることがあります。  
   
 ### <a name="to-change-the-name-of-the-resource-symbol-header-file"></a>リソースのシンボル用のヘッダー ファイルの名前を変更するには  
   
-1.  [リソース ビュー](../windows/resource-view-window.md)を .rc ファイルを右クリックして[リソースが含まれています](../windows/resource-includes-dialog-box.md)ショートカット メニューからです。  
+1.  [リソース ビュー](../windows/resource-view-window.md)を .rc ファイルを右クリックして[リソース ファイルのインクルード](../windows/resource-includes-dialog-box.md)ショートカット メニューから。  
   
     > [!NOTE]
     >  プロジェクトに .rc ファイルがまだ含まれていない場合は、「 [リソース スクリプト ファイルの新規作成](../windows/how-to-create-a-resource-script-file.md)」を参照してください。  
   
 2.  **シンボル ヘッダー ファイル**ボックスに、インクルード ファイルの新しい名前を入力します。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。*  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。  
   
- 要件  
-  
+## <a name="requirements"></a>要件  
  Win32  
   
 ## <a name="see-also"></a>関連項目  

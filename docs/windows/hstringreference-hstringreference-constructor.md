@@ -1,5 +1,5 @@
 ---
-title: Hstringreference::hstringreference コンス トラクター |Microsoft ドキュメント
+title: Hstringreference::hstringreference コンス トラクター |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dc88ea32d4384b36559a4a10da0a5975345bf0d7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7dce8c6fca14ad26665bf4868681234374c20f85
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876008"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608145"
 ---
 # <a name="hstringreferencehstringreference-constructor"></a>HStringReference::HStringReference コンストラクター
-HStringReference クラスの新しいインスタンスを初期化します。  
+新しいインスタンスを初期化、 **HStringReference**クラス。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,25 +38,25 @@ HStringReference(wchar_t const (&str)[ sizeDest],
 HStringReference(HStringReference&& other) throw();  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `sizeDest`  
- コピー先の HStringReference バッファーのサイズを指定するテンプレート パラメーター。  
+### <a name="parameters"></a>パラメーター  
+ *sizeDest*  
+ 変換先のサイズを指定するテンプレート パラメーター **HStringReference**バッファー。  
   
- `str`  
+ *str*  
  ワイド文字の文字列への参照。  
   
- `len`  
- 最大長、`str`この操作で使用するパラメーター バッファーです。 場合、`len`パラメーターが指定されていない全体`str`パラメーターを使用します。 場合`len`がより大きい`sizeDest`、`len`に設定されている`sizeDest`-1 です。  
+ *len*  
+ 最大長、 *str*この操作で使用するパラメーターのバッファー。 場合、 *len*パラメーターが指定されていない全体*str*パラメーターを使用します。 場合*len*がより大きい*sizeDest*、 *len*に設定されている*sizeDest*-1。  
   
- `other`  
- 別の HStringReference オブジェクトです。  
+ *other*  
+ もう 1 つ**HStringReference**オブジェクト。  
   
-## <a name="remarks"></a>コメント  
- 最初のコンス トラクターがパラメーターとしてのサイズを同じ新規の HStringReference オブジェクトを初期化します`str`です。  
+## <a name="remarks"></a>Remarks  
+ 最初のコンス トラクターによって初期化新しい**HStringReference**オブジェクトをパラメーターとして、同じサイズ*str*します。  
   
- 2 番目のコンス トラクター初期化新しい HStringReference オブジェクトをパラメーターでサイズ specifeid`len`です。  
+ 2 番目のコンス トラクターによって初期化新しい**HStringReference**オブジェクトをパラメーターでサイズ specifeid *len*します。  
   
- 3 番目コンス トラクターは、新しい HStringReference オブジェクトの値を`other`パラメーターを破棄し、および、`other`パラメーター。  
+ 3 番目のコンス トラクターによって初期化、新しい**HStringReference**オブジェクトの値を*他*パラメーター、し、その後破棄、*他*パラメーター。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

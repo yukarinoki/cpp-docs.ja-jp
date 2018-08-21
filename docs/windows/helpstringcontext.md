@@ -1,5 +1,5 @@
 ---
-title: helpstringcontext |Microsoft ドキュメント
+title: helpstringcontext |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97b4b43f8cbd8f08cca4f6cf2f21294a625f289c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b71d8183921e0df66d6b9a82ff79faf24ccb41d3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874578"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642335"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
-.Hlp または .chm ファイルには、ヘルプ トピックの ID を指定します。  
+.Hlp または .chm ファイルをヘルプ トピックの ID を指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
-      [ helpstringcontext(  
+```cpp  
+[ helpstringcontext(  
    contextID  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `contextID`  
- ヘルプ ファイルの 32 ビットのヘルプ コンテキスト id。  
+### <a name="parameters"></a>パラメーター  
+ *contextID*  
+ 32 ビットのヘルプ コンテキスト識別子、**ヘルプ**ファイル。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **Helpstringcontext** C++ 属性と同じ機能を持つ、 [helpstringcontext](http://msdn.microsoft.com/library/windows/desktop/aa366858) ODL 属性。  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp  
 // cpp_attr_ref_helpstringcontext.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -68,8 +67,8 @@ __interface IMyI
   
 |||  
 |-|-|  
-|**対象**|**クラス**、 `interface`、インターフェイス メソッド|  
-|**反復可能**|×|  
+|**対象**|**クラス**、**インターフェイス**、インターフェイス メソッド|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

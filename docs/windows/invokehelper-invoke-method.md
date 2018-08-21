@@ -1,5 +1,5 @@
 ---
-title: Invokehelper::invoke メソッド |Microsoft ドキュメント
+title: Invokehelper::invoke メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d3fc5ac67d6c03cef7f096f898db0e2f29d125c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 56f7f77284d855a2d9a737c8694efdd357d0a6fb
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882304"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011501"
 ---
 # <a name="invokehelperinvoke-method"></a>InvokeHelper::Invoke メソッド
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 STDMETHOD(  
    Invoke  
 )();  
@@ -62,38 +62,38 @@ STDMETHOD(
 )( typename Traits;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `arg1`  
+### <a name="parameters"></a>パラメーター  
+ *arg1*  
  引数 1 です。  
   
- `arg2`  
- 2 の引数。  
+ *Arg2*  
+ 引数 2 を指定します。  
   
- `arg3`  
+ *arg3…*  
  引数 3 です。  
   
- `arg4`  
+ *arg4*  
  4 の引数。  
   
- `arg5`  
+ *arg5*  
  5 の引数。  
   
- `arg6`  
- 6 の引数。  
+ *arg6*  
+ 引数 6 です。  
   
- `arg7`  
- 引数 7 です。  
+ *arg7*  
+ 7 の引数。  
   
- `arg8`  
+ *arg8*  
  8 の引数。  
   
- `arg9`  
+ *arg9*  
  9 の引数。  
   
 ## <a name="return-value"></a>戻り値  
- 正常終了した場合は S_OK、それ以外の場合、エラーを説明する HRESULT。  
+ 成功した場合は s_ok を返します。それ以外の場合、エラーを示す HRESULT。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  指定した数の引数を含むシグネチャを持つイベント ハンドラーを呼び出します。  
   
 ## <a name="requirements"></a>要件  

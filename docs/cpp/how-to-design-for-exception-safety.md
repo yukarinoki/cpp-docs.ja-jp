@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3dd7448d50debc54cde075b8a6879af8b1be62c9
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1a9eaee55c806ea2efc82300cad47cc744c0a491
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940323"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403694"
 ---
 # <a name="how-to-design-for-exception-safety"></a>方法: 例外安全性に対応した設計をする
 例外機構の利点の 1 つは、例外をスローするステートメントから例外を処理する最初の catch ステートメントに、例外に関するデータと共に実行が直接ジャンプすることです。 ハンドラーは呼び出し履歴の何レベル上であってもかまいません。 try ステートメントと throw ステートメントの間で呼び出された関数は、スローされる例外に関して何も知る必要がありません。  ただし、例外が下から上に通知される可能性があるどの時点でも、予期せずにスコープから外れることができるように関数が設計されている必要があり、部分的に作成されたオブジェクト、リークしたメモリ、使用不能な状態のデータ構造体などが部分的に残らないようになっている必要があります。  
@@ -86,7 +86,6 @@ private:
 public:  
     SPShapeResourceClass() : m_p(new Circle), m_q(new Triangle) { }  
 };  
-  
 ```  
   
 ### <a name="use-the-raii-idiom-to-manage-resources"></a>RAII の表現形式を使用してリソースを管理する  

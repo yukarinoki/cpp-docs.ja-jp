@@ -1,5 +1,5 @@
 ---
-title: Runtimeclass::addref メソッド |Microsoft ドキュメント
+title: Runtimeclass::addref メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c570209ff612fb4fcedd77dbae92f72b2744a52
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3a2f7025d9e367c2a31d14012d9f6b22de3e70f2
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892261"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011713"
 ---
 # <a name="runtimeclassaddref-method"></a>RuntimeClass::AddRef メソッド
-RuntimeClass、現在の参照カウントをインクリメントします。  
+現在の参照カウントをインクリメント**RuntimeClass**オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 STDMETHOD_(  
    ULONG,  
    AddRef  

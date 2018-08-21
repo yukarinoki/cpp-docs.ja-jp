@@ -1,5 +1,5 @@
 ---
-title: Srwlock::lockshared メソッド |Microsoft ドキュメント
+title: Srwlock::lockshared メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fccc72814ca5c4fff417e0b6221ef0f3c045a5bb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5fda64126709515fcf3e174a6f3cbdea22d5ee9e
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33895750"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011063"
 ---
 # <a name="srwlocklockshared-method"></a>SRWLock::LockShared メソッド
-共有モードで SRWLock オブジェクトを取得します。  
+取得、 **SRWLock**共有モードでのオブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 SyncLockShared LockShared();  
   
 static SyncLockShared LockShared(  
@@ -37,12 +37,12 @@ static SyncLockShared LockShared(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `lock`  
- SRWLock オブジェクトへのポインター。  
+### <a name="parameters"></a>パラメーター  
+ *lock*  
+ ポインター、 **SRWLock**オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 共有モードで SRWLock オブジェクトです。  
+ **SRWLock**共有モードでのオブジェクト。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

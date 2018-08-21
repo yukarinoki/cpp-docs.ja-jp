@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3114f1ef379495f36f4231dbad6fd41ac145bcfe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 981d4c8c0ef30993811e5dbb6fd0a112a6447011
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941747"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406495"
 ---
 # <a name="main-function-restrictions"></a>main 関数に関する制約
-いくつかの制限が適用されます、`main`関数を他の C++ 関数には適用されません。 `main`関数。  
+いくつかの制限が適用されます、**メイン**関数を他の C++ 関数には適用されません。 **メイン**関数。  
   
 -   オーバー ロードできません (を参照してください[関数のオーバー ロード](function-overloading.md))。  
   

@@ -1,5 +1,5 @@
 ---
-title: ジェネリック インターフェイス (Visual C) |Microsoft ドキュメント
+title: ジェネリック インターフェイス (Visual C) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e16a2ab8a1ee0c9255f394d033bda2a7afc2b7e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4efe507011d70df689162b52f72d730f0ae99f58
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878698"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650054"
 ---
 # <a name="generic-interfaces-visual-c"></a>ジェネリック インターフェイス (Visual C++)
-クラスの型パラメーターに適用される制限は、インターフェイスの型パラメーターに適用されるものと同じです (を参照してください[ジェネリック クラス (C + + CLI)](../windows/generic-classes-cpp-cli.md))。  
+クラスの型パラメーターに適用される制限はインターフェイスの型パラメーターに適用されるものと同じ (を参照してください[ジェネリック クラス (C +/cli CLI)](../windows/generic-classes-cpp-cli.md))。  
   
- 関数のオーバー ロードを制御するルールは、関数のジェネリック クラスまたはジェネリック インターフェイス内で同じです。  
+ 関数のオーバー ロードを制御するルールは、ジェネリック クラスまたはジェネリック インターフェイス内の関数のと同じです。  
   
- 明示的なインターフェイス メンバーの実装がシンプルなインターフェイスの種類 (次の例を参照してください) と同じ方法での構築されたインターフェイス型を使用します。  
+ 明示的なインターフェイス メンバーの実装は、単純なインターフェイスの種類 (次の例を参照してください) と同じ方法で構築されたインターフェイス型と協力します。  
   
- インターフェイスの詳細については、次を参照してください。[インターフェイス クラス](../windows/interface-class-cpp-component-extensions.md)です。  
+ インターフェイスの詳細については、次を参照してください。[インターフェイス クラス](../windows/interface-class-cpp-component-extensions.md)します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 [attributes] generic <class-key type-parameter-identifier[, ...]>  
 [type-parameter-constraints-clauses][accesibility-modifiers] interface class identifier [: base-list] {   interface-body} [declarators] ;  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  *属性*(省略可能)  
- 追加の宣言情報。 属性と属性クラスの詳細については、属性を参照してください。  
+ 追加の宣言情報。 属性と属性クラスの詳細については、次を参照してください。**属性**します。  
   
  *クラス キー*  
  **クラス**または**typename**  
   
- `type-parameter-identifier(s)`  
- 識別子のコンマ区切りの一覧です。  
+ *type-parameter-identifier(s)*  
+ 識別子のコンマ区切りリスト。  
   
- `type-parameter-constraints-clauses`  
- 指定された形式の[ジェネリック型パラメーターの制約 (C + + CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
+ *型パラメーター制約句*  
+ 指定された形式の[ジェネリック型パラメーターの制約 (C +/cli CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
   
  *アクセシビリティ修飾子*(省略可能)  
  アクセシビリティ修飾子 (例:**パブリック、プライベート**)。  
@@ -58,19 +58,19 @@ ms.locfileid: "33878698"
  *identifier*  
  インターフェイスの名前。  
   
- *情報リスト*(省略可能)  
- 含む 1 つまたは複数明示的な基本インターフェイス コンマで区切られたリスト。  
+ *基本リスト*(省略可能)  
+ 1 つまたは複数明示的な基本インターフェイス コンマ区切りを含むリスト。  
   
  *インターフェイス本体*  
  インターフェイス メンバーの宣言。  
   
  *宣言子*(省略可能)  
- この型に基づく変数の宣言。  
+ この型に基づいた変数の宣言。  
   
 ## <a name="example"></a>例  
- 次の例では、宣言して、ジェネリック インターフェイスをインスタンス化する方法を示します。 例では、ジェネリック インターフェイス`IList<ItemType>`が宣言されています。 2 つの汎用クラスによって実装される`List1<ItemType>`と`List2<ItemType>`、異なる実装を使用します。  
+ 次の例では、宣言して、ジェネリック インターフェイスのインスタンスを作成する方法を示します。 例では、ジェネリック インターフェイスで`IList<ItemType>`は宣言されています。 2 つのジェネリック クラスによって実装される`List1<ItemType>`と`List2<ItemType>`、異なる実装を使用します。  
   
-```  
+```cpp  
 // generic_interface.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -244,9 +244,9 @@ List2
 ```  
   
 ## <a name="example"></a>例  
- この例は、ジェネリック インターフェイスを宣言`IMyGenIface`、および 2 つの非ジェネリック インターフェイス`IMySpecializedInt`と`ImySpecializedString`、specialize を`IMyGenIface`です。 2 つの特殊なインターフェイスを実装する 2 つのクラス、`MyIntClass`と`MyStringClass`です。 この例では、ジェネリック インターフェイスを特化、ジェネリックと非ジェネリックのインターフェイスをインスタンス化およびインターフェイスで明示的に実装されたメンバーを呼び出す方法を示します。  
+ この例ではジェネリック インターフェイスを宣言`IMyGenIface`、および 2 つの非ジェネリック インターフェイス`IMySpecializedInt`と`ImySpecializedString`、特化を`IMyGenIface`します。 2 つの特殊なインターフェイスが 2 つのクラスで実装し、`MyIntClass`と`MyStringClass`します。 この例では、ジェネリック インターフェイスを特化、ジェネリックと非ジェネリックのインターフェイスをインスタンス化およびインターフェイスを明示的に実装されたメンバーを呼び出す方法を示します。  
   
-```  
+```cpp  
 // generic_interface2.cpp  
 // compile with: /clr  
 // Specializing and implementing generic interfaces.  

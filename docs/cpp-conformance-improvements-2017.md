@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ed2165f75103f5e2aecd3d73dfe9518341d926e
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 2eb0ea67156671ac682b61cd0e105d1781bda915
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042330"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209093"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157"></a>Visual Studio 2017 バージョン 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156)、[15.7](#improvements_157) での C++ 準拠の改善
 
@@ -81,7 +81,7 @@ static_assert の message パラメーターは省略可能です。 詳細に�
 
 定義で列挙子を導入せず、ソースがリスト初期化構文を使用している場合に、スコープ列挙の基になる型から列挙型自体への、暗黙的な/非縮小の変換が使用できるようになりました。 詳しくは、「[Construction Rules for enum class Values (列挙型クラスの値の構築ルール)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf)」をご覧ください。
 
-### <a name="capturing-this-by-value"></a>*this を値でキャプチャする
+### <a name="capturing-this-by-value"></a>\*this を値でキャプチャする
 
 ラムダ式の `*this` オブジェクトが値でキャプチャできるようになりました。 これにより、特に新しいコンピューター アーキテクチャで、並列で非同期の操作でラムダが呼び出されるシナリオを実現できます。 詳しくは、「[Lambda Capture of \*this by Value as [=,\*this] (*this の [=,*this] としての値によるラムダ キャプチャ)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0018r3.html)」をご覧ください。
 
@@ -691,9 +691,9 @@ static_assert(__is_convertible_to(E, E), "fail"); // C2139 in 15.3
 
 ### <a name="new-compiler-warning-and-runtime-checks-on-native-to-managed-marshaling"></a>コンパイラの新しい警告と、ネイティブからマネージへのマーシャリングの実行時チェック
 
-マネージ関数からネイティブ関数を呼び出すには、マーシャリングが必要です。 CLR はマーシャリングを実行しますが、C++ のセマンティクスを理解していません。 ネイティブ オブジェクトを値で渡した場合、CLR はオブジェクトのコピー コンストラクターを呼び出すか、または BitBlt を使いますが、それによって実行時に未定義の動作が発生する可能性があります。
+マネージド関数からネイティブ関数を呼び出すには、マーシャリングが必要です。 CLR はマーシャリングを実行しますが、C++ のセマンティクスを理解していません。 ネイティブ オブジェクトを値で渡した場合、CLR はオブジェクトのコピー コンストラクターを呼び出すか、または BitBlt を使いますが、それによって実行時に未定義の動作が発生する可能性があります。
 
-今後は、削除されたコピー コンストラクターを含むネイティブ オブジェクトがネイティブとマネージの境界を越えて値で渡されることをコンパイル時に認識すると、コンパイラは警告を生成します。 コンパイル時に認識できない場合のためには、実行時チェックが挿入されて、不適切な形式のマーシャリングが発生すると直ちにプログラムが `std::terminate` を呼び出せるようにします。 Visual Studio 2017 バージョン 15.3 では、次のようなコードを実行すると、警告 C4606 "'A': ネイティブとマネージの境界を越えて値渡しで引数を渡すには、有効なコピー コンストラクターが必要です。 それがない場合、ランタイムの動作は定義されていません" が発生します。
+今後は、削除されたコピー コンストラクターを含むネイティブ オブジェクトがネイティブとマネージドの境界を越えて値で渡されることをコンパイル時に認識すると、コンパイラは警告を生成します。 コンパイル時に認識できない場合のためには、実行時チェックが挿入されて、不適切な形式のマーシャリングが発生すると直ちにプログラムが `std::terminate` を呼び出せるようにします。 Visual Studio 2017 バージョン 15.3 では、次のようなコードを実行すると、警告 C4606 "'A': ネイティブとマネージドの境界を越えて値渡しで引数を渡すには、有効なコピー コンストラクターが必要です。 それがない場合、ランタイムの動作は定義されていません" が発生します。
 
 ```cpp
 class A

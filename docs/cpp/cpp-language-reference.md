@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c3886e710d0262068848304d9f2419c835b67c2
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: df532fca3c1ecbb19126a8692377517d240bd2f8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954194"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408217"
 ---
 # <a name="c-language-reference"></a>C++ 言語リファレンス
 このリファレンスでは、Microsoft Visual C++ に実装されている C++ プログラミング言語について説明します。 この体系は、Margaret Ellis と Bjarne Stroustrup による*Annotated C++ Reference Manual* および ANSI/ISO C++ 国際規格 (ISO/IEC FDIS 14882) に基づいてます。 Microsoft 固有の C++ 言語機能の実装も含まれます。  
@@ -59,16 +59,16 @@ ms.locfileid: "38954194"
  式、NULL、複合、選択、イテレーション、ジャンプ、および宣言ステートメント。  
   
  [宣言と定義](declarations-and-definitions-cpp.md)  
- ストレージ クラス指定子、関数定義、初期化、列挙体、クラス宣言、構造体宣言、および共用体宣言、および typedef 宣言。 また、インライン関数、定数のキーワード、名前空間。  
+ ストレージ クラス指定子、関数定義、初期化、列挙型、**クラス**、**構造体**、および**共用体**宣言、および**typedef**宣言します。 また、**インライン**関数、 **const**キーワード、名前空間。  
   
  [クラス、構造、および共用体](../cpp/classes-and-structs-cpp.md)  
- クラス、構造体、および共用体の概要。 また、メンバー関数、特殊なメンバー関数、データ メンバー、ビット フィールド、このポインター、入れ子になったクラス。  
+ クラス、構造体、および共用体の概要。 また、メンバー関数、特殊なメンバー関数では、データ メンバー、ビット フィールド、**この**ポインター、入れ子になったクラスです。  
   
  [派生クラス](../cpp/inheritance-cpp.md)  
- 単一継承と多重継承、仮想関数、複数の基底クラス、抽象クラス、スコープ規則。 また、__super および \__interface キーワード。  
+ 単一および複数の継承、**仮想**関数、複数の基底クラス**抽象**クラス、スコープ規則。 また、 **_ _super**と **_ _interface**キーワード。  
   
  [メンバー アクセス コントロール](../cpp/member-access-control-cpp.md)  
- クラス メンバーへのアクセスの制御: public、private、および protected キーワード。 friend 関数および friend クラス。  
+ クラス メンバーへのアクセス制御:**パブリック**、**プライベート**、および**保護**キーワード。 friend 関数および friend クラス。  
   
  [オーバー ロード](operator-overloading.md)  
  オーバー ロードされた演算子、演算子のオーバー ロードの規則。  
@@ -80,16 +80,16 @@ ms.locfileid: "38954194"
  `#error` ディレクティブ、 **static_assert** 、キーワード、`assert`マクロ。  
   
  [テンプレート](../cpp/templates-cpp.md)  
- テンプレートの仕様、関数テンプレート、クラス テンプレート、typename キーワード、テンプレートとマクロの比較、テンプレート、スマート ポインター。  
+ テンプレートの仕様、関数テンプレート、クラス テンプレート、 **typename**キーワード、テンプレートとマクロ、テンプレートとスマート ポインター。  
   
  [イベント処理](../cpp/event-handling.md)  
  イベントとイベント ハンドラーの宣言。  
   
  [Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)  
- Microsoft C++ 固有の修飾子。 メモリのアドレス指定、呼び出し規約、naked 関数、拡張ストレージクラス属性 (__declspec)、 \__w64。  
+ Microsoft C++ 固有の修飾子。 メモリをアドレス指定、呼び出し規則、 **naked**関数、拡張ストレージ クラス属性 (**_ _declspec**)、 **_ _w64**します。  
   
  [インライン アセンブラー](../assembler/inline/inline-assembler.md)  
- __asm ブロックでのアセンブリ言語と C++ の使用。  
+ アセンブリ言語および C++ で使用して **_ _asm**ブロックします。  
   
  [コンパイラ COM サポート](../cpp/compiler-com-support.md)  
  COM 型をサポートするために使用する Microsoft 固有のクラスとグローバル関数への参照。  

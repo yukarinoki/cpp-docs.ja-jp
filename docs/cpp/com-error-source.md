@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f904fa11195c27f8e08856ef391d0ba8adbedece
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f722d1c4e8fc3d534403c2d18713e64dc2069011
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939678"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404900"
 ---
 # <a name="comerrorsource"></a>_com_error::Source
 **Microsoft 固有の仕様**  
@@ -31,13 +31,11 @@ ms.locfileid: "37939678"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 _bstr_t Source() const;  
-  
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 結果を返します`IErrorInfo::GetSource`の`IErrorInfo`内オブジェクトに記録された、`_com_error`オブジェクト。 結果の BSTR は `_bstr_t` オブジェクトにカプセル化されます。 ない場合は`IErrorInfo`が記録されると、空を返します`_bstr_t`します。  
+ 結果を返します`IErrorInfo::GetSource`の`IErrorInfo`内オブジェクトに記録された、`_com_error`オブジェクト。 結果の `BSTR` は `_bstr_t` オブジェクトにカプセル化されます。 ない場合は`IErrorInfo`が記録されると、空を返します`_bstr_t`します。  
   
 ## <a name="remarks"></a>Remarks  
  呼び出すときの失敗、`IErrorInfo::GetSource`メソッドは無視されます。  

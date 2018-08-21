@@ -1,5 +1,5 @@
 ---
-title: CloakedIid 構造体 |Microsoft ドキュメント
+title: CloakedIid 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 57ad76b48b92519eaeed089dfb14817c38273588
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3b766858d0f558b4fdff3a703c612ec07c038abf
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856161"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641921"
 ---
 # <a name="cloakediid-structure"></a>CloakedIid 構造体
-IID リスト内で指定されたインターフェイスにアクセスできないことを、RuntimeClass、Implements、および ChainInterfaces テンプレートに示します。  
+示します、 `RuntimeClass`、`Implements`と`ChainInterfaces`テンプレートの指定したインターフェイスが IID リストにアクセスできないことです。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename T>  
 struct CloakedIid : T;  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `T`  
- インターフェイスは表示されません (クロークされています)。  
+ *T*  
+ インターフェイスが非表示 (クロークされています)。  
   
-## <a name="remarks"></a>コメント  
- CloakedIid の使用方法の例を次に示します:`struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`です。  
+## <a name="remarks"></a>Remarks  
+ 方法の例を次に**CloakedIid**使用:`struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `T`  

@@ -1,5 +1,5 @@
 ---
-title: 水平スクロール バーの幅の設定 |Microsoft ドキュメント
+title: 水平スクロール バーの幅の設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,29 +21,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 34545a01c01146992c7d88ecabec1a29a7b438f2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 54b68ec8f780fc8022543813b412eaff2045cbdf
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892795"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645605"
 ---
 # <a name="setting-the-width-of-a-horizontal-scroll-bar"></a>水平スクロール バーの幅の設定
-MFC クラスを使用してダイアログ ボックスに水平スクロール バーをリスト ボックスを追加すると、スクロール バーは、アプリケーションでは自動的に表示されません。  
+MFC クラスを使用してダイアログ ボックスに水平スクロール バーを使用して、リスト ボックスを追加すると、スクロール バーは、アプリケーションでは自動的に表示されません。  
   
-### <a name="to-make-the-scroll-bar-appear"></a>スクロール バーを表示する  
+### <a name="to-make-the-scroll-bar-appear"></a>スクロール バーの表示にする  
   
-1.  呼び出して最も幅の広い要素の最大の幅を設定[CListBox::SetHorizontalExtent](../mfc/reference/clistbox-class.md#sethorizontalextent)コードにします。  
+1.  最も幅の広い要素の最大の幅を呼び出すことによって設定[CListBox::SetHorizontalExtent](../mfc/reference/clistbox-class.md#sethorizontalextent)コードにします。  
   
-     この値を設定せず、スクロール バーは表示されません、でも、リスト ボックス内の項目は、ボックスよりも太くなってとき。  
+     この値を設定せず、スクロール バーは表示されません、でも、リスト ボックス内の項目は、ボックスよりも広い場合。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 詳細については、管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションは、次を参照してください。[グローバライズと .NET Framework アプリケーションのローカライズ](/dotnet/standard/globalization-localization/index)です。  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
   
- 要件  
-  
+## <a name="requirements"></a>要件  
  MFC  
   
 ## <a name="see-also"></a>関連項目  
  [ダイアログ ボックスのコントロール](../windows/controls-in-dialog-boxes.md)   
  [コントロール](../mfc/controls-mfc.md)
-

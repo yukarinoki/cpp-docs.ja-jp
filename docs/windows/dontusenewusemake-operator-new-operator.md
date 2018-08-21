@@ -1,5 +1,5 @@
 ---
-title: Dontusenewusemake::operator new 演算子 |Microsoft ドキュメント
+title: Dontusenewusemake::operator new 演算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9785ea27c79ff0a118ff3697a22804c520b265ee
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b849c7578b29a3d4595a9ecd07c4339dc751e9dd
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873681"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652950"
 ---
 # <a name="dontusenewusemakeoperator-new-operator"></a>DontUseNewUseMake::operator new 演算子
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void* operator new(  
    size_t,  
    _In_ void* placement  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `__unnamed0`  
+### <a name="parameters"></a>パラメーター  
+ *_ _unnamed0*  
  割り当てるメモリのバイト数を指定する名前のないパラメーター。  
   
- `placement`  
+ *placement*  
  割り当てられる型。  
   
 ## <a name="return-value"></a>戻り値  
- 演算子をオーバー ロードする場合は、追加の引数を渡す方法を提供`new`です。  
+ 演算子をオーバー ロードする場合は、追加の引数を渡す方法を提供します**新しい**します。  
   
-## <a name="remarks"></a>コメント  
- 演算子をオーバー ロード`new`と RuntimeClass で使用されていることを防ぎます。  
+## <a name="remarks"></a>Remarks  
+ 演算子をオーバー ロード**新しい**しで使用されていることを防ぎます`RuntimeClass`します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** implements.h  

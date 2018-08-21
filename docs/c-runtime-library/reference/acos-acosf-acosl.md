@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 664c3555602dfc16ce811b065e0d38f8fe93e733
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5384d4e97ebb4f3f6152278e916c02bb350090ea
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392771"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401939"
 ---
 # <a name="acos-acosf-acosl"></a>acos、acosf、acosl
 
@@ -67,34 +67,34 @@ long double acos( long double x );   // C++ only
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
-値-1 ~ 1 のアーク コサイン (逆余弦) を計算するため、範囲です。
+*x*  
+-1 から 1 のアーク コサイン (逆余弦) を計算するまでの値します。
 
 ## <a name="return-value"></a>戻り値
 
-**Acos**のアーク コサインを返します*x* 0 ~ π ラジアンの範囲内です。
+**Acos**関数のアーク コサインを返します*x* 0 ~ π ラジアンの範囲内です。
 
-既定では場合、 *x*が-1 未満か、1 より大きい**acos**は不定値を返します。
+既定では場合、 *x*が-1、1 より大きいか小さい**acos**は不定値を返します。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± ∞|**無効です**|**_DOMAIN**|
-|± QNAN、IND|none|**_DOMAIN**|
-|&#124;x&#124;>1|**無効です**|**_DOMAIN**|
+|± ∞|INVALID|_DOMAIN|
+|± QNAN、IND|none|_DOMAIN|
+|&#124;x&#124;>1|INVALID|_DOMAIN|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**acos**を受け取り、返します**float**と**長い****二重**型です。 C プログラムでは、 **acos**常に受け取りを返す、**二重**です。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **acos**を受け取って返す**float**と**長い****二重**型。 C プログラムで**acos**は、**二重**します。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|省略可能なヘッダー|
+|ルーチンによって返される値|必須ヘッダー|省略可能なヘッダー|
 |-------------|---------------------|----------------------|
 |**acos**、 **acosf**、 **acosl**|\<math.h>|\<errno.h>|
 
 ## <a name="example"></a>例
 
-このプログラムは、-1 ～ 1 の範囲の値の入力を求めます。 この範囲外の入力値を生成 **_DOMAIN**エラー メッセージ。 有効な値が入力された場合、プログラムはその値のアークサインとアークコサインを出力します。
+このプログラムは、-1 ～ 1 の範囲の値の入力を求めます。 入力値がこの範囲外の場合、`_DOMAIN` エラー メッセージを生成します。 有効な値が入力された場合、プログラムはその値のアークサインとアークコサインを出力します。
 
 ```C
 // crt_asincos.c
@@ -144,10 +144,10 @@ Arccosine of 0.000000 = 1.570796
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
-[asin、asinf、asinl](asin-asinf-asinl.md)<br/>
-[atan、atanf、atanl、atan2、atan2f、atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
-[cos、cosf、cosl](cos-cosf-cosl.md)<br/>
-[_matherr](matherr.md)<br/>
-[sin、sinf、sinl](sin-sinf-sinl.md)<br/>
-[tan、tanf、tanl](tan-tanf-tanl.md)<br/>
+[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)  
+[asin、asinf、asinl](asin-asinf-asinl.md)  
+[atan、atanf、atanl、atan2、atan2f、atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)  
+[cos、cosf、cosl](cos-cosf-cosl.md)  
+[_matherr](matherr.md)  
+[sin、sinf、sinl](sin-sinf-sinl.md)  
+[tan、tanf、tanl](tan-tanf-tanl.md)  

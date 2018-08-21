@@ -1,5 +1,5 @@
 ---
-title: ツール バー エディターの |Microsoft ドキュメント
+title: ツール バー エディター |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,17 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cc902a0bb90194c463ebb874234f65230cd502b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 505b97d1b3883568fc85795898f16f9821d8b930
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891312"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011729"
 ---
 # <a name="toolbar-editor"></a>ツール バー エディター
-ツール バー エディターを使用すると、ツール バー リソースを作成し、ビットマップをツール バー リソースに変換できます。 ツールバー エディターはグラフィカルな表示を使用して、完成したアプリケーションの外観と非常によく似たツールバーとボタンを示します。  
+**ツールバー**エディターでは、ツールバーのリソースを作成し、ビットマップをツール バー リソースに変換することができます。 **ツールバー**エディターでは、グラフィカルな表示を使用して、ツールバーとほぼ同じに完成したアプリケーションでどのように表示されるがボタンを表示します。  
   
- ツールバー エディターで、次の作業ができます。  
+ **ツールバー**エディターができます。  
   
 -   [新しいツールバーとボタンを作成する](../windows/creating-new-toolbars.md)  
   
@@ -40,14 +40,14 @@ ms.locfileid: "33891312"
   
 -   [ツール ヒントを作成する](../windows/creating-a-tool-tip-for-a-toolbar-button.md)  
   
- イメージ エディター ウィンドウと同じように、ツールバー エディター ウィンドウには、ボタン イメージの 2 つのビューが表示されます。 分割バーは、2 つのペインを分割します。 分割バーを左右にドラッグすると、ペインの相対サイズを変更できます。 アクティブなペインには、選択境界線が表示されます。 イメージの 2 つのビューの上にはサブジェクト ツールバーがあります。  
+ **ツールバー**エディター ウィンドウには、イメージ エディター ウィンドウと同じボタンのイメージの 2 つのビューが表示されます。 分割バーは、2 つのペインを分割します。 分割バーを左右にドラッグすると、ペインの相対サイズを変更できます。 アクティブなペインには、選択境界線が表示されます。 イメージの 2 つのビューの上にはサブジェクト ツールバーがあります。  
   
  ![ツール バー エディター](../mfc/media/vctoolbareditor.gif "vcToolbarEditor")  
 ツール バー エディター  
   
- ツールバー エディターは、イメージ エディターの機能に似ています。 メニュー項目、グラフィック ツール、ビットマップのグリッドは、イメージ エディター内のものと同じです。 イメージ メニューには、ツールバー エディターとイメージ エディターを切り替えるためのメニュー コマンドがあります。 グラフィック ツールバー、カラー パレット、またはイメージ メニューの使用の詳細については、「 [イメージ エディター](../windows/image-editor-for-icons.md)」を参照してください。  
+ **ツールバー**エディターと似ています、**イメージ**エディターの機能です。 メニュー項目、グラフィック ツール、およびビットマップのグリッドは、内のものと同じ、**イメージ**エディター。 メニュー コマンドでは、**イメージ**メニュー間を切り替えることができるように、**ツールバー**エディターと**イメージ**エディター。 使用しての詳細については、**グラフィックス**ツールバーで、**色**パレット、または**イメージ**] メニューの [を参照してください[イメージ エディター](../windows/image-editor-for-icons.md)します。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 詳細については、管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションは、次を参照してください。[グローバライズと .NET Framework アプリケーションのローカライズ](/dotnet/standard/globalization-localization/index)です。  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
   
 ## <a name="requirements"></a>要件  
  MFC または ATL  
@@ -55,4 +55,3 @@ ms.locfileid: "33891312"
 ## <a name="see-also"></a>関連項目  
  [リソース エディター](../windows/resource-editors.md)   
  [メニューとその他のリソース](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
-

@@ -1,5 +1,5 @@
 ---
-title: '方法: interior_ptr キーワードを含む値の型を宣言 (C + + CLI) |Microsoft ドキュメント'
+title: '方法: interior_ptr キーワードを含む値型を宣言 (C +/cli CLI) |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6015d5a61589b8ed2d38b6491392fd42e4f38ef1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9abba9937bfe425fa85cbce5b0795a3f9c784d22
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879478"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017228"
 ---
 # <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>方法: interior_ptr キーワードを含む値型を宣言する (C++/CLI)
-`interior_ptr`値型で使用できます。  
+**Interior_ptr**値型で使用できます。  
   
 > [!IMPORTANT]
->  この言語機能をサポートに、 **/clr**コンパイラ オプションがなく、 **/ZW**コンパイラ オプション。  
+>  この言語機能がサポートされている、`/clr`コンパイラ オプションがなく、`/ZW`コンパイラ オプション。  
   
 ## <a name="example"></a>例  
   
 ### <a name="description"></a>説明  
- 次の C + + CLI サンプルを使用する方法を示します、`interior_ptr`値型を持つ。  
+ 次の C +/cli CLI のサンプルを使用する方法を示しています、 **interior_ptr**が値型。  
   
 ### <a name="code"></a>コード  
   
-```  
+```cpp  
 // interior_ptr_value_types.cpp  
 // compile with: /clr  
 value struct V {  
@@ -63,10 +63,8 @@ int main() {
    System::Console::WriteLine(pv->data);  
 }  
 ```  
-  
-### <a name="output"></a>出力  
-  
-```  
+
+```Output  
 1  
 2  
 2  
@@ -78,13 +76,13 @@ int main() {
 ## <a name="example"></a>例  
   
 ### <a name="description"></a>説明  
- 値の型で、`this`ポインターが、interior_ptr に評価します。  
+ 値の型で、**この**interior_ptr にポインターが評価されます。  
   
- 値型の非静的メンバー関数の本体で`V`、`this`型の式は、`interior_ptr<V>`値が、関数が呼び出された対象のオブジェクトのアドレス。  
+ 値型の非静的メンバー関数の本体で`V`、**この**型の式は、`interior_ptr<V>`値を持つ関数を呼び出すオブジェクトのアドレスになります。  
   
 ### <a name="code"></a>コード  
   
-```  
+```cpp  
 // interior_ptr_value_types_this.cpp  
 // compile with: /clr /LD  
 value struct V {  
@@ -101,11 +99,11 @@ value struct V {
 ### <a name="description"></a>説明  
  次の例では、静的メンバーとアドレス演算子を使用する方法を示します。  
   
- Visual C 型の静的メンバーのアドレスは、ネイティブ ポインターを生成します。  静的な値型のメンバーのアドレスは、値型のメンバーがランタイム ヒープに割り当てられているし、ガベージ コレクターが移動できるため、マネージ ポインターです。  
+ Visual C 型の静的メンバーのアドレスは、ネイティブ ポインターを生成します。  静的な値型のメンバーのアドレスは、値型のメンバーはランタイム ヒープに割り当てられているし、ガベージ コレクターを移動するためのマネージ ポインターです。  
   
 ### <a name="code"></a>コード  
   
-```  
+```cpp  
 // interior_ptr_value_static.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -129,9 +127,7 @@ int main() {
 }  
 ```  
   
-### <a name="output"></a>出力  
-  
-```  
+```Output 
 22  
 23  
 hello  

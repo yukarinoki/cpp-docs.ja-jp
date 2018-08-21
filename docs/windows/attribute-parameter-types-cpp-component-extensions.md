@@ -1,5 +1,5 @@
 ---
-title: 属性パラメーター型 (C++ コンポーネント拡張) |Microsoft ドキュメント
+title: 属性パラメーター型 (C++ コンポーネント拡張) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,31 +15,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 64da24a9811046672c317c24bba5332bf09303f9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 79d89eec82725b28bdbe43f08ac2c05cdb889f6e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860308"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466970"
 ---
 # <a name="attribute-parameter-types--c-component-extensions"></a>属性パラメーターの型 (C++ コンポーネント拡張)
-属性に渡される値は、コンパイル時にコンパイラに認識されている必要があります。  次の種類の属性のパラメーターになります。  
+属性に渡される値は、コンパイル時にコンパイラに判明する必要があります。  次の種類の属性のパラメーターができます。  
   
--   `bool`  
+-   **bool**  
   
--   `char`, `unsigned char`  
+-   **char**、 **unsigned char**  
   
--   `short`, `unsigned short`  
+-   **short**, **unsigned short**  
   
--   `int`, `unsigned int`  
+-   **int**、**符号なし int**  
   
--   `long`, `unsigned long`  
+-   **長い**、 **unsigned long**  
   
--   `__int64`, `unsigned __int64`  
+-   **_ _int64**、**符号なし _ _int64**  
   
--   `float`, `double`  
+-   **float**、 **double**  
   
--   `wchar_t`  
+-   **wchar_t**  
   
 -   `char*` または `wchar_t*` または `System::String*`  
   
@@ -47,13 +47,13 @@ ms.locfileid: "33860308"
   
 -   `System::Object ^`  
   
--   `enum`  
+-   **enum**  
   
 ## <a name="example"></a>例  
   
 ### <a name="code"></a>コード  
   
-```  
+```cpp  
 // attribute_parameter_types.cpp  
 // compile with: /clr /c  
 using namespace System;  
@@ -77,11 +77,11 @@ ref struct MyStruct {
 ## <a name="example"></a>例  
   
 ### <a name="description"></a>説明  
- 属性を指定する場合は、すべての名前のない (位置指定) 引数に、名前付き引数が前に指定する必要があります。  
+ 属性を指定するときにすべての名前のない (位置) 引数、名前付き引数の前にする必要があります。  
   
 ### <a name="code"></a>コード  
   
-```  
+```cpp  
 // extending_metadata_c.cpp  
 // compile with: /clr /c  
 using namespace System;  
@@ -110,11 +110,11 @@ ref class ClassD {};   // Positional and named
 ## <a name="example"></a>例  
   
 ### <a name="description"></a>説明  
- 前の型の 1 次元配列の属性のパラメーターを使用できます。  
+ 属性のパラメーターは、前の型の 1 次元の配列を指定できます。  
   
 ### <a name="code"></a>コード  
   
-```  
+```cpp  
 // extending_metadata_d.cpp  
 // compile with: /clr /c  
 using namespace System;  

@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::fireprogress メソッド |Microsoft ドキュメント
+title: Asyncbase::fireprogress メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7c2c5aab609b597c3a9ff464b868ba831889deed
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 35faad82357b0f449d407787840c865b798427f1
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863583"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642010"
 ---
 # <a name="asyncbasefireprogress-method"></a>AsyncBase::FireProgress メソッド
 現在の進行状況イベント ハンドラーを呼び出します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void FireProgress(  
    const typename ProgressTraits::Arg2Type arg  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `arg`  
- イベント ハンドラー メソッドを呼び出します。  
+### <a name="parameters"></a>パラメーター  
+ *arg*  
+ 呼び出すイベント ハンドラー メソッド。  
   
-## <a name="remarks"></a>コメント  
- `ProgressTraits` 派生した[ArgTraitsHelper 構造体](../windows/argtraitshelper-structure.md)です。  
+## <a name="remarks"></a>Remarks  
+ `ProgressTraits` 派生[ArgTraitsHelper 構造体](../windows/argtraitshelper-structure.md)します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** async.h  

@@ -1,5 +1,5 @@
 ---
-title: 複数のメニューやメニュー コマンドの選択 |Microsoft ドキュメント
+title: 複数のメニューまたはメニュー コマンドの選択 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e261227c5c34d203cdeda20a8d1409319f63be97
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 02293fce154fa9c4c98c583de02e8967f4d3957b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891910"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020214"
 ---
 # <a name="selecting-multiple-menus-or-menu-commands"></a>複数のメニューまたはメニュー コマンドの選択
 複数のメニュー名またはメニュー コマンドを選択して、プロパティの削除や変更などの一括操作を実行できます。  
   
 ### <a name="to-select-multiple-menu-commands"></a>複数のメニュー コマンドを選択するには  
   
-1.  Ctrl キーを押しながら、目的のメニューまたはサブメニューのコマンドをクリックします。  
+1.  押しながら、 **Ctrl**キー、メニューまたはサブメニューのコマンドをクリックします。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。*  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。  
   
- **必要条件**  
-  
+## <a name="requirements"></a>要件  
  Win32  
   
 ## <a name="see-also"></a>関連項目  

@@ -1,5 +1,5 @@
 ---
-title: マネージからネイティブ関数を呼び出すコード |Microsoft ドキュメント
+title: マネージ コードのネイティブ関数からの呼び出し |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c0d7e69c95790122f44dc59d06f2843afbddfb2c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3b8b266d44f9109a346160a1b2493f8644be839
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33112044"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207599"
 ---
-# <a name="calling-native-functions-from-managed-code"></a>マネージ コードからのネイティブ関数の呼び出し
-共通言語ランタイムにはプラットフォーム呼び出しサービス (PInvoke: Platform Invocation Services) が用意されており、マネージ コードでネイティブなダイナミック リンク ライブラリ (DLL : Dynamic Link Library) の C スタイルの関数を呼び出すことができます。 COM とランタイムの相互運用と、"It Just Works (そのままで動く)" つまり IJW 機構のどちらにも、同じデータ マーシャリングが使用されています。  
+# <a name="calling-native-functions-from-managed-code"></a>マネージド コードからのネイティブ関数の呼び出し
+共通言語ランタイムにはプラットフォーム呼び出しサービス (PInvoke: Platform Invocation Services) が用意されており、マネージド コードでネイティブなダイナミック リンク ライブラリ (DLL : Dynamic Link Library) の C スタイルの関数を呼び出すことができます。 COM とランタイムの相互運用と、"It Just Works (そのままで動く)" つまり IJW 機構のどちらにも、同じデータ マーシャリングが使用されています。  
   
  詳細については次を参照してください:  
   
@@ -41,7 +41,7 @@ ms.locfileid: "33112044"
  このセクションのサンプルで、`PInvoke` の使い方を示します。 `PInvoke` を使用すると、マーシャリング情報を手続き的なコードで書く代わりに属性として宣言できるため、データ マーシャリングを簡単にカスタマイズできます。  
   
 > [!NOTE]
->  マーシャリング ライブラリにより、最適化された方法でネイティブ環境とマネージ環境との間でデータ変換を行うことができるようになります。 参照してください[概要の C++ におけるマーシャ リング](../dotnet/overview-of-marshaling-in-cpp.md)マーシャ リング ライブラリの詳細についてはします。 マーシャリング ライブラリは関数には使用できず、データにしか使用できません。  
+>  マーシャリング ライブラリにより、最適化された方法でネイティブ環境とマネージド環境との間でデータ変換を行うことができるようになります。 参照してください[c++ Overview of Marshaling](../dotnet/overview-of-marshaling-in-cpp.md)マーシャ リング ライブラリの詳細についてはします。 マーシャリング ライブラリは関数には使用できず、データにしか使用できません。  
   
 ## <a name="pinvoke-and-the-dllimport-attribute"></a>PInvoke と DllImport 属性  
  次の例は、Visual C++ プログラムで `PInvoke` を使用する方法を示しています。 ネイティブ関数 puts が msvcrt.dll で定義されています。 DllImport 属性は puts の宣言に使用されます。  
@@ -100,7 +100,7 @@ int main() {
   
  C++ によって公開された特定のメソッドの方が、ある程度複雑になりますが、わかりやすく効率的です。  
   
- アプリケーションで主にアンマネージ データ型を使用する場合、または .NET Framework API よりもアンマネージ API を多く呼び出す場合は、IJW 機能の使用をお勧めします。 アプリケーションの大部分でマネージ コードを使用し、ときどきアンマネージ API を呼び出す程度であれば、どちらを選択しても大きな違いはありません。  
+ アプリケーションで主にアンマネージ データ型を使用する場合、または .NET Framework API よりもアンマネージ API を多く呼び出す場合は、IJW 機能の使用をお勧めします。 アプリケーションの大部分でマネージド コードを使用し、ときどきアンマネージド API を呼び出す程度であれば、どちらを選択しても大きな違いはありません。  
   
 ## <a name="pinvoke-with-windows-apis"></a>PInvoke と Windows API  
  PInvoke は、Windows の関数を呼び出すときに便利です。  
@@ -174,13 +174,13 @@ int main() {
 ```  
   
 ## <a name="marshaling-arguments"></a>引数のマーシャリング  
- `PInvoke` を使用する場合、マネージ型と C++ のネイティブなプリミティブ型が同じフォームを持っていれば、マーシャリングの必要はありません。 たとえば、Int32 と int、または Double と double との間では、マーシャリングは不要です。  
+ `PInvoke` を使用する場合、マネージド型と C++ のネイティブなプリミティブ型が同じフォームを持っていれば、マーシャリングの必要はありません。 たとえば、Int32 と int、または Double と double との間では、マーシャリングは不要です。  
   
  しかし、フォームが異なる場合はマーシャリングが必要です。 フォームが異なる型とは、char、string、struct などの型です。 次の表は、マーシャラーが各型に使用するマップを示します。  
   
 |wtypes.h|Visual C++|/clr を指定した Visual C++|共通言語ランタイム|  
 |--------------|------------------|-----------------------------|-----------------------------|  
-|HANDLE|void*|void*|IntPtr、UIntPtr|  
+|HANDLE|void \*|void \*|IntPtr、UIntPtr|  
 |BYTE|unsigned char|unsigned char|Byte|  
 |SHORT|short|short|Int16|  
 |WORD|unsigned short|unsigned short|UInt16|  
@@ -191,20 +191,20 @@ int main() {
 |DWORD|unsigned long|unsigned long|UInt32|  
 |ULONG|unsigned long|unsigned long|UInt32|  
 |CHAR|char|char|Char|  
-|LPCSTR|char*|String ^ [in], StringBuilder ^ [in, out]|String ^ [in], StringBuilder ^ [in, out]|  
-|LPCSTR|const char*|String ^|String|  
-|LPWSTR|wchar_t*|String ^ [in], StringBuilder ^ [in, out]|String ^ [in], StringBuilder ^ [in, out]|  
-|LPCWSTR|const wchar_t *|String ^|String|  
+|LPCSTR|Char \*|String ^ [in], StringBuilder ^ [in, out]|String ^ [in], StringBuilder ^ [in, out]|  
+|LPCSTR|const char \*|String ^|String|  
+|LPWSTR|wchar_t \*|String ^ [in], StringBuilder ^ [in, out]|String ^ [in], StringBuilder ^ [in, out]|  
+|LPCWSTR|const wchar_t \*|String ^|String|  
 |FLOAT|float|float|Single|  
 |DOUBLE|double|double|倍精度浮動小数点型|  
   
  マーシャラーは、ランタイム ヒープに割り当てられたメモリのアドレスをアンマネージ関数に渡す場合、メモリを自動的に固定します。 メモリの固定によって、割り当てられたメモリ ブロックをガベージ コレクターが圧縮時に移動することはなくなります。  
   
- このトピックの最初に示した例では、DllImport の CharSet パラメーターでマネージ型の String をマーシャリングする方法を示しています。この場合、マネージ型の String をネイティブ側で使用できるように ANSI 文字列にマーシャリングしています。  
+ このトピックの最初に示した例では、DllImport の CharSet パラメーターでマネージド型の String をマーシャリングする方法を示しています。この場合、マネージド型の String をネイティブ側で使用できるように ANSI 文字列にマーシャリングしています。  
   
- ネイティブ関数で使用する各引数のマーシャリング情報については、MarshalAs 属性で指定できます。 String * 引数をマーシャリングする場合、BStr、ANSIBStr、TBStr、LPStr、LPWStr、および LPTStr などの選択肢があります。 既定値は LPStr です。  
+ ネイティブ関数で使用する各引数のマーシャリング情報については、MarshalAs 属性で指定できます。 文字列をマーシャ リングするためのいくつかの選択肢がある\*引数: BStr、ANSIBStr、TBStr、LPStr、LPWStr、および LPTStr します。 既定値は LPStr です。  
   
- この例では、文字列を 2 バイトの Unicode 文字列 LPWStr としてマーシャリングしています。 出力は、Hello World の最初の文字です。 マーシャ リングされた文字列の 2 番目のバイトが null であり、格納するための文字列の末尾を示すマーカーとして解釈します。  
+ この例では、文字列を 2 バイトの Unicode 文字列 LPWStr としてマーシャリングしています。 出力は、Hello World の最初の文字です。 マーシャ リングされた文字列の 2 番目のバイトが null の場合、配置のため、文字列の末尾のマーカーとして解釈します。  
   
 ```  
 // platform_invocation_services_3.cpp  
@@ -223,10 +223,10 @@ int main() {
   
  MarshalAs 属性は System::Runtime::InteropServices 名前空間にあります。 この属性は、配列などのほかのデータ型にも使用できます。  
   
- このトピックで既に述べたように、マーシャリング ライブラリにより、最適化された新しい方法でネイティブ環境とマネージ環境との間でデータ変換を行うことができます。 詳細については、次を参照してください。[概要の C++ におけるマーシャ リング](../dotnet/overview-of-marshaling-in-cpp.md)です。  
+ このトピックで既に述べたように、マーシャリング ライブラリにより、最適化された新しい方法でネイティブ環境とマネージド環境との間でデータ変換を行うことができます。 詳細については、次を参照してください。 [c++ Overview of Marshaling](../dotnet/overview-of-marshaling-in-cpp.md)します。  
   
 ## <a name="performance-considerations"></a>パフォーマンスに関する考慮事項  
- PInvoke は、1 回の呼び出しで 10 ～ 30 個分の x86 命令のオーバーヘッドを要します。 この固定コストのほかに、マーシャリングによってオーバーヘッドが発生します。 マネージ コードとアンマネージ コードの間で同じ表現である blittable 型については、マーシャリングのコストはかかりません。 たとえば、int と Int32 との間の変換にコストは不要です。  
+ PInvoke は、1 回の呼び出しで 10 ～ 30 個分の x86 命令のオーバーヘッドを要します。 この固定コストのほかに、マーシャリングによってオーバーヘッドが発生します。 マネージド コードとアンマネージド コードの間で同じ表現である blittable 型については、マーシャリングのコストはかかりません。 たとえば、int と Int32 との間の変換にコストは不要です。  
   
  パフォーマンスを上げるには、マーシャリングするデータが少ない PInvoke 呼び出しを何度も行うより、できるだけ多くのデータを少ない PInvoke 呼び出しでマーシャリングすることをお勧めします。  
   

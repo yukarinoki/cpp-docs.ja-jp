@@ -1,5 +1,5 @@
 ---
-title: VerifyInterfaceHelper 構造体 |Microsoft ドキュメント
+title: VerifyInterfaceHelper 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c7f414189c60946264ce49c5d6065d91d92b8bd4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2b1dd40487a9d843fb81be1e0be65d76a86e1f9c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890253"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013299"
 ---
 # <a name="verifyinterfacehelper-structure"></a>VerifyInterfaceHelper 構造体
 Windows ランタイム C++ テンプレート ライブラリのインフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template <  
    bool isWinRTInterface,  
    typename I  
@@ -42,14 +42,14 @@ template <
 struct VerifyInterfaceHelper<false, I>;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `I`  
- 確認するインターフェイスです。  
+### <a name="parameters"></a>パラメーター  
+ *I*  
+ インターフェイスを確認します。  
   
- `isWinRTInterface`  
+ *isWinRTInterface*  
   
-## <a name="remarks"></a>コメント  
- テンプレート パラメーターによって指定されたインターフェイスが特定の要件を満たしていることを確認します。  
+## <a name="remarks"></a>Remarks  
+ テンプレート パラメーターで指定されたインターフェイスが特定の要件を満たしていることを確認します。  
   
 ## <a name="members"></a>メンバー  
   

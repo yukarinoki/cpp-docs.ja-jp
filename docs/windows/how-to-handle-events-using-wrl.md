@@ -1,5 +1,5 @@
 ---
-title: '方法: WRL を使用してイベントを処理 |Microsoft ドキュメント'
+title: '方法: WRL を使用したイベントの処理 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,29 +13,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a3c1666d1c79414beddc5b5e3ccc03953c92e902
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eada53c74c967c4df093e094a611a726ef79d99d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881154"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012535"
 ---
 # <a name="how-to-handle-events-using-wrl"></a>方法: WRL を使用してイベントを処理する
-このドキュメントは、Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用してサブスクライブして、Windows ランタイム オブジェクトのイベントを処理する方法を示しています。  
+このドキュメントでは、Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用してサブスクライブして、Windows ランタイム オブジェクトのイベントを処理する方法を示します。  
   
- そのコンポーネントのインスタンスを作成し、プロパティ値を取得する基本的な例は、次を参照してください。[する方法: アクティブ化し、Windows ランタイム コンポーネントを使用して](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)です。  
+ そのコンポーネントのインスタンスを作成し、プロパティ値を取得する基本的な例は、次を参照してください。[方法: アクティブ化し、Windows ランタイム コンポーネントを使用して、](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)します。  
   
 ## <a name="subscribing-to-and-handling-events"></a>イベントのサブスクライブと処理  
- 次の手順では `ABI::Windows::System::Threading::IDeviceWatcher` オブジェクトを開始し、イベント ハンドラーを使用して進行状況を監視します。 `IDeviceWatcher` インターフェイスを使用すると、デバイスを非同期的にまたはバックグラウンドで列挙でき、デバイスが追加、削除、または変更された場合に通知を受け取ることができます。 [コールバック](../windows/callback-function-windows-runtime-cpp-template-library.md)関数は、バック グラウンド操作の結果を処理するイベント ハンドラーを指定するには有効にするため、この例の重要な部分です。 完全な例を次に示します。  
+ 次の手順では `ABI::Windows::System::Threading::IDeviceWatcher` オブジェクトを開始し、イベント ハンドラーを使用して進行状況を監視します。 `IDeviceWatcher` インターフェイスを使用すると、デバイスを非同期的にまたはバックグラウンドで列挙でき、デバイスが追加、削除、または変更された場合に通知を受け取ることができます。 [コールバック](../windows/callback-function-windows-runtime-cpp-template-library.md)をバック グラウンド操作の結果を処理するイベント ハンドラーを指定するには有効にするので、関数はこの例の重要な部分です。 完全な例を次に示します。  
   
 > [!WARNING]
->  ユニバーサル Windows プラットフォーム アプリで Windows ランタイム C++ テンプレート ライブラリを使用すると、通常は、この例は、図のコンソール アプリを使用します。 などの関数`wprintf_s`ユニバーサル Windows プラットフォーム アプリからは使用できません。 型およびユニバーサル Windows プラットフォーム アプリで使用できる関数の詳細については、次を参照してください。[ユニバーサル Windows プラットフォーム アプリでサポートされない CRT 関数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)と[Win32 および COM を UWP アプリの](/uwp/win32-and-com/win32-and-com-for-uwp-apps)します。  
+>  通常は、ユニバーサル Windows プラットフォーム アプリで Windows ランタイム C++ テンプレート ライブラリを使用して、この例は、図のコンソール アプリを使用します。 などの関数`wprintf_s`ユニバーサル Windows プラットフォーム アプリからは使用できません。 型およびユニバーサル Windows プラットフォーム アプリで使用できる関数の詳細については、次を参照してください。[ユニバーサル Windows プラットフォーム アプリでサポートされない CRT 関数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)と[Win32 および COM UWP アプリの](/uwp/win32-and-com/win32-and-com-for-uwp-apps)します。  
   
-1.  含まれます (`#include`) 必要な Windows ランタイム、Windows ランタイム C++ テンプレート ライブラリ、または C++ 標準ライブラリのヘッダー。  
+1.  含まれます (`#include`) 必須の Windows ランタイム、Windows ランタイム C++ テンプレート ライブラリ、または C++ 標準ライブラリ ヘッダー。  
   
      [!code-cpp[wrl-consume-event#2](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_1.cpp)]  
   
-     Windows.Devices.Enumeration.h では、デバイスを列挙するために必要な型を宣言します。  
+     `Windows.Devices.Enumeration.h` デバイスを列挙するために必要な型を宣言します。  
   
      コードを読みやすくするために、.cpp ファイルでは `using namespace` ディレクティブを使用することをお勧めします。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "33881154"
   
      [!code-cpp[wrl-consume-event#5](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_5.cpp)]  
   
-     Windows ランタイムでは、完全修飾名を使用して型を識別します。 `RuntimeClass_Windows_Devices_Enumeration_DeviceInformation`パラメーターは、Windows ランタイムによって提供され、必要なランタイム クラス名を格納する文字列です。  
+     Windows ランタイム型を識別するために完全修飾名を使用します。 `RuntimeClass_Windows_Devices_Enumeration_DeviceInformation`パラメーターは、文字列は、Windows ランタイムによって提供され、必要なランタイム クラス名を含むです。  
   
 6.  `IDeviceWatcher` オブジェクトを作成します。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "33881154"
      `EnumerationCompleted` イベント ハンドラーは、列挙プロセスを停止します。 このイベントはデバイスの数が 10 未満である場合に処理されます。  
   
     > [!TIP]
-    >  この例では、ラムダ式を使用してコールバックを定義します。 関数オブジェクト (ファンクター)、関数ポインターを使用することも、または[std::function](../standard-library/function-class.md)オブジェクト。 ラムダ式について詳しくは、「[ラムダ式](../cpp/lambda-expressions-in-cpp.md)」をご覧ください。  
+    >  この例では、ラムダ式を使用してコールバックを定義します。 関数オブジェクト (ファンクター)、関数ポインターを使用することもできます。 または[std::function](../standard-library/function-class.md)オブジェクト。 ラムダ式について詳しくは、「[ラムダ式](../cpp/lambda-expressions-in-cpp.md)」をご覧ください。  
   
 8.  列挙プロセスを開始します。  
   
@@ -90,9 +90,9 @@ ms.locfileid: "33881154"
  [!code-cpp[wrl-consume-event#1](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_10.cpp)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- コードをコンパイルするコピーし、Visual Studio プロジェクトに貼り付けるかという名前のファイルに貼り付ける`wrl-consume-events.cpp`Visual Studio コマンド プロンプト ウィンドウで、次のコマンドを実行します。  
+ コードをコンパイルするにコピーし、Visual Studio プロジェクトに貼り付けるかという名前のファイルに貼り付ける`wrl-consume-events.cpp`で、次のコマンドを実行し、 **Visual Studio コマンド プロンプト**ウィンドウ。  
   
- **cl.exe wrl 消費 events.cpp runtimeobject.lib**  
+ `cl.exe wrl-consume-events.cpp runtimeobject.lib`  
   
 ## <a name="see-also"></a>関連項目  
  [Windows ランタイム C++ テンプレート ライブラリ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

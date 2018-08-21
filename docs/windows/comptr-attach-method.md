@@ -1,5 +1,5 @@
 ---
-title: Comptr::attach メソッド |Microsoft ドキュメント
+title: Comptr::attach メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 590a50fbaca22b088af39f31e2e6349a3ebc18dd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 78b5039268bd122ade815ed6040a1df546e0f293
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870104"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641331"
 ---
 # <a name="comptrattach-method"></a>ComPtr::Attach メソッド
-この ComPtr と、現在のテンプレート型パラメーターで指定されたインターフェイスの種類を関連付けます。  
+これを関連付けます**ComPtr**現在のテンプレート型パラメーターで指定したインターフェイス型にします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void Attach(  
    _In_opt_ InterfaceType* other  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `other`  
+### <a name="parameters"></a>パラメーター  
+ *other*  
  インターフェイスの型。  
   
 ## <a name="requirements"></a>要件  

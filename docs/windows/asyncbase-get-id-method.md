@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::get_id メソッド |Microsoft ドキュメント
+title: Asyncbase::get_id メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b6720348692e92e05922bde1100e42c24a866933
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ab02da2dcae788e5eb4b1db15508d2f272ec546a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859801"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651559"
 ---
 # <a name="asyncbasegetid-method"></a>AsyncBase::get_Id メソッド
 非同期操作のハンドルを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 STDMETHOD(  
    get_Id  
 )(unsigned int *id) override;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `id`  
+### <a name="parameters"></a>パラメーター  
+ *ID*  
  ハンドルが格納される場所です。  
   
 ## <a name="return-value"></a>戻り値  
- 正常終了した場合は S_OK、それ以外の場合、E_ILLEGAL_METHOD_CALL です。  
+ 成功した場合は s_ok を返します。それ以外の場合、E_ILLEGAL_METHOD_CALL します。  
   
-## <a name="remarks"></a>コメント  
- このメソッドは、IAsyncInfo::get_Id を実装します。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、`IAsyncInfo::get_Id` を実装します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** async.h  

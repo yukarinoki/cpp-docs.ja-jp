@@ -1,5 +1,5 @@
 ---
-title: readonly (C++) |Microsoft ドキュメント
+title: 読み取り専用 (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87933b214dfe91f1c9f7db88127ef83da5b7201c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 05a46e099643602867aaa807e915e419054a8d60
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876567"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016006"
 ---
 # <a name="readonly-c"></a>readonly (C++)
 データ メンバーへの割り当てを禁止します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```cpp  
 [readonly]  
-  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **readonly** C++ 属性には、 [readonly](http://msdn.microsoft.com/library/windows/desktop/aa367152) MIDL 属性と同じ機能があります。  
   
  メソッド パラメーターの変更を禁止する場合は、 [in](../windows/in-cpp.md) 属性を使用します。  
@@ -43,7 +41,7 @@ ms.locfileid: "33876567"
 ## <a name="example"></a>例  
  **readonly** 属性の使用方法は、次のコードのとおりです。  
   
-```  
+```cpp  
 // cpp_attr_ref_readonly.cpp  
 // compile with: /LD  
 [idl_quote("midl_pragma warning(disable:2461)")];  
@@ -64,7 +62,7 @@ __interface IFireTabCtrl
 |||  
 |-|-|  
 |**対象**|インターフェイス メソッド|  
-|**反復可能**|×|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

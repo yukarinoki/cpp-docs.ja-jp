@@ -1,5 +1,5 @@
 ---
-title: helpstringdll |Microsoft ドキュメント
+title: helpstringdll |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7cb3ab5fc624494d3292cd7a47031782ce7da70
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 94e33eea3dc367634b3cae9a025b0189598bbdd1
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877346"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648952"
 ---
 # <a name="helpstringdll"></a>typelib
-ドキュメントの文字列の検索 (ローカリゼーション) の実行に使用する DLL の名前を指定します。  
+使用してドキュメントの文字列の検索 (ローカライズ) を実行する DLL の名前を指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
-      [ helpstringdll(  
+```cpp  
+[ helpstringdll(  
    "string"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `string`  
- ドキュメントの文字列の検索の実行に使用する DLL です。  
+### <a name="parameters"></a>パラメーター  
+ *string*  
+ 使用してドキュメントの文字列の検索を実行する DLL です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **Helpstringdll** C++ 属性と同じ機能を持つ、 [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) MIDL 属性。  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp  
 // cpp_attr_ref_helpstringdll.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -64,8 +63,8 @@ __interface IMyI
   
 |||  
 |-|-|  
-|**対象**|**クラス**、 `interface`、インターフェイス メソッド|  
-|**反復可能**|×|  
+|**対象**|**クラス**、**インターフェイス**、インターフェイス メソッド|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

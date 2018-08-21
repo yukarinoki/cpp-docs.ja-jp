@@ -98,7 +98,7 @@ class CFontDialog : public CCommonDialog
   
  1 回、`CFontDialog`オブジェクトが構築された、使用することができます、`m_cf`値やダイアログ ボックスのコントロールの状態を初期化するためにします。 [構造体](#m_cf)型の構造は、 [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832)します。 この構造体の詳細については、Windows SDK を参照してください。  
   
- ダイアログ オブジェクトのコントロールを初期化した後、 `DoModal`  ダイアログ ボックスが表示され、ユーザーがフォントを選択できるようにするメンバー関数。 `DoModal` ユーザーが [ok] (IDOK) またはキャンセル (IDCANCEL) ボタンを選択するかどうかを返します。  
+ ダイアログ オブジェクトのコントロールを初期化した後、 `DoModal`  ダイアログ ボックスが表示され、ユーザーがフォントを選択できるようにするメンバー関数。 `DoModal` ユーザーが [ok] \(IDOK) またはキャンセル (IDCANCEL) ボタンを選択するかどうかを返します。  
   
  場合`DoModal`IDOK を返しますのいずれかを使用することができます`CFontDialog`のユーザーによって入力された情報を取得するメンバー関数。  
   

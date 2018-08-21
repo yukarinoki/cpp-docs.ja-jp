@@ -1,5 +1,5 @@
 ---
-title: バージョン情報ブロックの削除 |Microsoft ドキュメント
+title: バージョン情報ブロックの削除 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a374382e47e9623e041dd500730244b7fe205aa7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f083364f839f963867234a4d3548ac1c00258cc8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871859"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649960"
 ---
 # <a name="deleting-a-version-information-block"></a>バージョン情報ブロックの削除
 ### <a name="to-delete-a-version-information-block"></a>バージョン情報ブロックを削除するには  
@@ -38,13 +38,11 @@ ms.locfileid: "33871859"
   
      選んだヘッダーはこのコマンドによって削除されますが、残りのバージョン情報はそのまま残ります。 操作を元に戻すことはできませんのでご注意ください。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 詳細については、管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションは、次を参照してください。[グローバライズと .NET Framework アプリケーションのローカライズ](/dotnet/standard/globalization-localization/index)です。  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
   
- **必要条件**  
-  
+## <a name="requirements"></a>要件
  Win32  
   
 ## <a name="see-also"></a>関連項目  
- [バージョン情報 エディター](../windows/version-information-editor.md)   
+ [バージョン情報エディター](../windows/version-information-editor.md)   
  [バージョン情報 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)
-

@@ -1,5 +1,5 @@
 ---
-title: 別の言語のバージョン情報を追加する |Microsoft ドキュメント
+title: 別の言語のバージョン情報の追加 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 897dc9291c17e916be824915a467ec85a7770548
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93682f1a12e2fe2d5dfaf715a718563c35ecddde
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857572"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650457"
 ---
 # <a name="adding-version-information-for-another-language"></a>他言語のバージョン情報の追加
 ### <a name="to-add-version-information-for-another-language-new-info-block"></a>別の言語のバージョン情報 (新しい情報ブロック) を追加するには  
@@ -42,13 +42,11 @@ ms.locfileid: "33857572"
   
 3.  **[プロパティ]** ウィンドウで、新しいブロック用の適切な言語と文字セットを選びます。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 詳細については、管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションは、次を参照してください。[グローバライズと .NET Framework アプリケーションのローカライズ](/dotnet/standard/globalization-localization/index)です。  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
   
- **必要条件**  
-  
+## <a name="requirements"></a>要件 
  Win32  
   
 ## <a name="see-also"></a>関連項目  
- [バージョン情報 エディター](../windows/version-information-editor.md)   
+ [バージョン情報エディター](../windows/version-information-editor.md)   
  [バージョン情報 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)
-

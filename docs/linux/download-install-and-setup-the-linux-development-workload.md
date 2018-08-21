@@ -1,7 +1,8 @@
 ---
-title: Linux ワークロードのダウンロード、インストール、セットアップ | Microsoft Docs
+title: Visual Studio で C++ の Linux ワークロードをインストールする | Microsoft Docs
+description: Visual Studio で C++ の Linux ワークロードをダウンロード、インストール、セットアップする方法について説明します。
 ms.custom: ''
-ms.date: 11/16/2016
+ms.date: 07/20/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,14 +13,16 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 1d28f0db0ff91dbdb08c9ca88dfe197e8942a7f4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e33b9ac72ca7691ccbb80a9a30349d3a1e31e194
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329437"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207560"
 ---
 # <a name="download-install-and-setup-the-linux-workload"></a>Linux ワークロードのダウンロード、インストール、セットアップ
+
+Visual Studio IDE を使用して Linux 上で C++ プロジェクトを作成およびデバッグするには、**C++ による Linux 開発**のワークロードをインストールする必要があります。
 
 ## <a name="visual-studio-setup"></a>Visual Studio のセットアップ
 1. Visual Studio インストーラーを起動し、**[C++ による Linux 開発]** ワークロードを選びます。

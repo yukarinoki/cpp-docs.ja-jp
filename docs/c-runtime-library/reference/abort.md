@@ -32,35 +32,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 943faab6b13f3d07b2ca19d78c555973149aa4b0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bc7aefdac322ca8b34bccd2e377534ed1eca47e8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392615"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402713"
 ---
 # <a name="abort"></a>を呼び出してプログラム実行を終了する際、
 
 現在のプロセスを中止し、エラー コードを返します。
 
 > [!NOTE]
-> このメソッドを使用して、テスト シナリオまたはデバッグ シナリオを除く、Microsoft ストア アプリまたはユニバーサル Windows プラットフォーム (UWP) アプリをシャット ダウンしないでください。 ストア アプリを閉じる方法はプログラムや UI はに従って許可されていません、 [Microsoft ストアのポリシー](/legal/windows/agreements/store-policies)です。 詳細については、次を参照してください。 [UWP アプリのライフ サイクル](/windows/uwp/launch-resume/app-lifecycle)です。
+> テスト シナリオまたはデバッグ シナリオでは、を除き、Microsoft Store アプリまたはユニバーサル Windows プラットフォーム (UWP) アプリをシャット ダウンは、このメソッドを使用しないでください。 ストア アプリを終了するプログラムや UI の方法はに従って許可されていません、 [Microsoft Store ポリシー](/legal/windows/agreements/store-policies)します。 詳細については、次を参照してください。 [UWP アプリのライフ サイクル](/windows/uwp/launch-resume/app-lifecycle)します。
 
 ## <a name="syntax"></a>構文
 
-```c
+```C
 void abort( void );
 ```
 
 ## <a name="return-value"></a>戻り値
 
-**中止**が呼び出しプロセスに制御が返されない。 既定をチェック、中止シグナル ハンドラーと**SIGABRT**が設定されている場合。 **中止**現在のプロセスを終了し、親プロセスに終了コードを返します。
+**中止**呼び出し元のプロセスに制御が返されない。 既定では、中止シグナル ハンドラーが確認され、それが設定されている場合は `SIGABRT` が発生します。 **中止**現在のプロセスを終了し、親プロセス終了コードを返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 **Microsoft 固有の仕様**
 
-既定では、アプリがデバッグ ランタイム ライブラリでビルドされたときに、**中止**ルーチンには、前にエラー メッセージが表示されます。 **SIGABRT**が発生します。 コンソール アプリのコンソール モードで実行されている場合に、メッセージは送信**STDERR**です。 ウィンドウ モードで動作している Windows デスクトップ アプリとコンソール アプリでは、メッセージ ボックスにメッセージが表示されます。 メッセージを抑制するのには、使用[_set_abort_behavior](set-abort-behavior.md)をクリアする、 **_WRITE_ABORT_MSG**フラグ。 表示されるメッセージは、使用しているランタイム環境のバージョンによって異なります。 Visual C の最新バージョンを使用してビルドされたアプリケーションでは、メッセージのようになります。
+既定で、デバッグ ランタイム ライブラリとアプリのビルド時に、**中止**ルーチンには、前にエラー メッセージが表示されます。`SIGABRT`が発生します。 コンソール モードで動作しているコンソール アプリの場合は、`STDERR` にメッセージが送信されます。 ウィンドウ モードで動作している Windows デスクトップ アプリとコンソール アプリでは、メッセージ ボックスにメッセージが表示されます。 メッセージを抑制するには、[_set_abort_behavior](set-abort-behavior.md) を使用して `_WRITE_ABORT_MSG` フラグをクリアします。 表示されるメッセージは、使用しているランタイム環境のバージョンによって異なります。 Visual C の最新バージョンを使用して構築されたアプリケーションでは、メッセージにこのようになります。
 
 > R6010 - abort() が呼び出されました
 
@@ -68,21 +68,21 @@ C ランタイム ライブラリの以前のバージョンでは、次のメ�
 
 > このアプリケーションは、通常と異なる方法でランタイムにアプリケーションを中止するように要求しました。 詳細については、アプリケーションのサポート チームに問い合わせてください。
 
-プログラムをデバッグ モードでコンパイルしている場合、メッセージ ボックスに **[中止]**、**[再試行]**、または **[無視]** のオプションが表示されます。 ユーザーが **[中止]** をクリックすると、プログラムが即座に終了し、終了コード 3 が返されます。 ユーザーが **[再試行]** をクリックすると、just-in-time デバッグが有効な場合はデバッガーが起動してデバッグが開始します。 ユーザーが選択した場合**無視**、**中止**が通常の処理を続行します。
+プログラムをデバッグ モードでコンパイルしている場合、メッセージ ボックスに **[中止]**、**[再試行]**、または **[無視]** のオプションが表示されます。 ユーザーが **[中止]** をクリックすると、プログラムが即座に終了し、終了コード 3 が返されます。 ユーザーが **[再試行]** をクリックすると、just-in-time デバッグが有効な場合はデバッガーが起動してデバッグが開始します。 ユーザーが選択した場合**無視**、**中止**は通常の処理を続行します。
 
-製品版とデバッグ ビルドでは、**中止**し、中止シグナル ハンドラーが設定されているかどうかを確認します。 既定以外のシグナル ハンドラーが設定されている場合**中止**呼び出し`raise(SIGABRT)`です。 使用して、[信号](signal.md)関数に、中止シグナル ハンドラー関数を関連付けるには、 **SIGABRT**信号。 ハンドラー関数では、カスタム動作 (リソースのクリーンアップや情報のログ記録など) を実行し、独自のエラー コードを発行してアプリを修了できます。 カスタムのシグナル ハンドラーが定義されていない場合**中止**は発生しません、 **SIGABRT**信号。
+両方の製品版とデバッグ ビルドで**中止**し、中止シグナル ハンドラーが設定されているかどうかを確認します。 既定以外のシグナル ハンドラーが設定されている場合**中止**呼び出し`raise(SIGABRT)`します。 `SIGABRT` シグナルに中止シグナル ハンドラー関数を関連付けるには、[signal](signal.md) 関数を使用します。 ハンドラー関数では、カスタム動作 (リソースのクリーンアップや情報のログ記録など) を実行し、独自のエラー コードを発行してアプリを修了できます。 カスタムのシグナル ハンドラーが定義されていない場合**中止**は発生しません、`SIGABRT`信号。
 
-既定では、デスクトップまたはコンソール アプリの非デバッグ ビルドで**中止**(災害復旧と呼ばれていました Windows エラー報告サービス メカニズム呼び出します。ワトソン博士) を起動してエラーを Microsoft に報告します。 この動作を有効になっているか、呼び出すことによって無効になっている **_set_abort_behavior**および設定するかマスク、 **_CALL_REPORTFAULT**フラグ。 フラグが設定されていると、Windows でメッセージ ボックスが開き、「問題が発生したため、プログラムが正しく動作しなくなりました」などのテキストが表示されます。 ユーザーは **[デバッグ]** をクリックしてデバッガーを開始するか、**[プログラムの終了]** をクリックすることでオペレーティング システムで定義されているエラー コードを発行してアプリを終了できます。
+既定では、デスクトップまたはコンソール アプリの非デバッグ ビルドで**中止**(災害復旧と呼ばれていました Windows エラー報告サービス メカニズムが呼び出され。ワトソン博士) を起動してエラーを Microsoft に報告します。 この動作は、`_set_abort_behavior` を呼び出し、`_CALL_REPORTFAULT` フラグを設定するかマスクして、有効または無効にすることができます。 フラグが設定されていると、Windows でメッセージ ボックスが開き、「問題が発生したため、プログラムが正しく動作しなくなりました」などのテキストが表示されます。 ユーザーは **[デバッグ]** をクリックしてデバッガーを開始するか、**[プログラムの終了]** をクリックすることでオペレーティング システムで定義されているエラー コードを発行してアプリを終了できます。
 
-Windows エラー レポート ハンドラーが呼び出されない場合、**中止**呼び出し[_exit](exit-exit-exit.md)終了コード 3 を返します管理と、親プロセスまたはオペレーティング システムにプロセスを終了します。 **_exit**しないでまたはストリーム バッファーをフラッシュしません**atexit**/**_onexit**を処理します。
+Windows エラー レポート ハンドラーが呼び出されない場合、し**中止**呼び出し[_exit](exit-exit-exit.md)を親プロセスまたはオペレーティング システムの終了コード 3 を返します管理プロセスを終了します。 `_exit` は、ストリーム バッファーをフラッシュせず、`atexit`/`_onexit` 処理を行いません。
 
-CRT デバッグの詳細については、「 [CRT のデバッグ技術](/visualstudio/debugger/crt-debugging-techniques)」を参照してください。
+CRT デバッグの詳細については、「[CRT のデバッグ技術](/visualstudio/debugger/crt-debugging-techniques)」を参照してください。
 
 **END Microsoft 固有の仕様**
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**abort**|\<process.h> または \<stdlib.h>|
 
@@ -124,13 +124,13 @@ File could not be opened: No such file or directory
 
 ## <a name="see-also"></a>関連項目
 
-[abort の使用](../../cpp/using-abort.md)<br/>
-[abort 関数](../../c-language/abort-function-c.md)<br/>
-[プロセス制御と環境制御](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_exec、_wexec 系関数](../../c-runtime-library/exec-wexec-functions.md)<br/>
-[exit、_Exit、_exit](exit-exit-exit.md)<br/>
-[raise](raise.md)<br/>
-[signal](signal.md)<br/>
-[_spawn 系関数と _wspawn 系関数](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
-[_DEBUG](../../c-runtime-library/debug.md)<br/>
-[_set_abort_behavior](set-abort-behavior.md)<br/>
+[abort の使用](../../cpp/using-abort.md)  
+[abort 関数](../../c-language/abort-function-c.md)  
+[プロセス制御と環境制御](../../c-runtime-library/process-and-environment-control.md)  
+[_exec、_wexec 系関数](../../c-runtime-library/exec-wexec-functions.md)  
+[exit、_Exit、_exit](exit-exit-exit.md)  
+[raise](raise.md)  
+[signal](signal.md)  
+[_spawn 系関数と _wspawn 系関数](../../c-runtime-library/spawn-wspawn-functions.md)  
+[_DEBUG](../../c-runtime-library/debug.md)  
+[_set_abort_behavior](set-abort-behavior.md)  

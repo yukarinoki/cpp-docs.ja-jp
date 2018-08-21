@@ -1,5 +1,5 @@
 ---
-title: no_injected_text |Microsoft ドキュメント
+title: no_injected_text |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 74336ffaa5e1f9f1990acedf1669526c9152b82b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc0dcba6597b6b8a3b37c240bf1c4a58f30b6b23
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880349"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020344"
 ---
 # <a name="noinjectedtext"></a>no_injected_text
 コンパイラがコードの属性を使用した結果として挿入するを防ぎます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
-      [ no_injected_text(  
+```cpp  
+[ no_injected_text(  
    boolean  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `boolean`(省略可能)  
- **true**しない場合、挿入されたコード**false**挿入するコードを許可します。 **true**既定値です。  
+### <a name="parameters"></a>パラメーター  
+ *ブール*(省略可能)  
+ **true** 、挿入されたコードが必要ない場合**false**挿入するコードを許可します。 **true**既定値です。  
   
-## <a name="remarks"></a>コメント  
- 最も一般的な使用、 **no_injected_text** C++ 属性は、 [/Fx](../build/reference/fx-merge-injected-code.md)コンパイラ オプションは、挿入、 **no_injected_text** .mrg ファイル属性。  
+## <a name="remarks"></a>Remarks  
+ 最も一般的な用途、 **no_injected_text** C++ 属性は、 [/Fx](../build/reference/fx-merge-injected-code.md)コンパイラ オプションは、挿入、 **no_injected_text**属性が .mrg ファイルにします。  
   
 ## <a name="requirements"></a>要件  
   
@@ -50,7 +49,7 @@ ms.locfileid: "33880349"
 |||  
 |-|-|  
 |**対象**|任意の場所|  
-|**反復可能**|×|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

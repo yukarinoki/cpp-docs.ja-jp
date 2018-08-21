@@ -1,5 +1,5 @@
 ---
-title: Handlet::internalclose メソッド |Microsoft ドキュメント
+title: Handlet::internalclose メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b0aef97645d515a03dcf2cab90eedc06f07971c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2190a8e85f81062cc1167aa844fccf4afc819bc9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874146"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648803"
 ---
 # <a name="handletinternalclose-method"></a>HandleT::InternalClose メソッド
-現在の HandleT オブジェクトを閉じます。  
+現在の終了**HandleT**オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 virtual bool InternalClose();  
 ```  
   
 ## <a name="return-value"></a>戻り値  
- `true` 現在の HandleT が正常にクローズする場合それ以外の場合、`false`です。  
+ **true**場合、現在**HandleT**正常。 それ以外の終了**false**します。  
   
-## <a name="remarks"></a>コメント  
- InternalClose() が保護されています。  
+## <a name="remarks"></a>Remarks  
+ **InternalClose()** は**保護**します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

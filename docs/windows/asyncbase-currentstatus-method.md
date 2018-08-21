@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::currentstatus メソッド |Microsoft ドキュメント
+title: Asyncbase::currentstatus メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75b9a07fd88caa9db7f2f145069b0d8857b79fe9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 36c3f76e3fc137458acddacd834563d845057a24
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859691"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646576"
 ---
 # <a name="asyncbasecurrentstatus-method"></a>AsyncBase::CurrentStatus メソッド
 現在の非同期操作の状態を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 inline void CurrentStatus(  
    Details::AsyncStatusInternal *status  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `status`  
+### <a name="parameters"></a>パラメーター  
+ *status*  
  この操作が現在の状態を格納する場所です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  この操作は、スレッド セーフです。  
   
 ## <a name="requirements"></a>要件  

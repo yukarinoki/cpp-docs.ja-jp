@@ -1,5 +1,5 @@
 ---
-title: Argtraitshelper::args 定数 |Microsoft ドキュメント
+title: Argtraitshelper::args 定数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ff6ef465206ce1fac50b63dad0bed60a9c57b700
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 49ee69015837d27f7445db9f765739fc1d28152c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855056"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642875"
 ---
 # <a name="argtraitshelperargs-constant"></a>ArgTraitsHelper::args 定数
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 static const int args = Traits::args;  
 ```  
   
-## <a name="remarks"></a>コメント  
- により、 [argtraitshelper::args](../windows/argtraitshelper-args-constant.md)デリゲート インターフェイスの呼び出しメソッドのパラメーターの数のカウントを保持します。  
+## <a name="remarks"></a>Remarks  
+ により、 [argtraitshelper::args](../windows/argtraitshelper-args-constant.md)パラメーターの数のカウントを保持、`Invoke`デリゲート インターフェイスのメソッド。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** event.h  

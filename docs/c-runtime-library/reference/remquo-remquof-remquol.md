@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d2bcb774d7ebe7e71c3877af326177bbf8d7160
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 480bf65d61581866fe447c9563a267d08d17c838
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407003"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207654"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo、remquof、remquol
 
@@ -74,15 +74,15 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 
 ## <a name="return-value"></a>戻り値
 
-**remquo**の浮動小数点の剰余を返します*x* / *y*です。 場合の値*y* 0.0、 **remquo**は簡易な NaN を返します。 簡易な NaN の表現について、 **printf**家族を参照してください[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)です。
+**remquo**の浮動小数点の剰余を返します*x* / *y*します。 場合の値*y* 0.0、 **remquo**簡易な NaN を返します。 による簡易な NaN の表現については、 **printf**ファミリを参照してください[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Remquo**関数は浮動小数点の剰余を計算*f*の*x* / *y*ように*x*  = *すれば* * *y* + *f*ここで、*すれば*整数、 *f*と同じ符号を持つ*x*、との絶対値*f*がの絶対値よりも小さい*y*です。
+**Remquo**関数は浮動小数点の剰余を計算*f*の*x* / *y*ように*x*  = *は* \* *y* + *f*ここで、*は*整数、 *f*と同じ符号*x*、との絶対値*f*がの絶対値より小さい*y*します。
 
-C++ では、オーバー ロードのオーバー ロードを呼び出すことができますので**remquo**を受け取り、返します**float**または**長い****二重**値。 C プログラムでは、 **remquo**常に受け取って 1 つ**二重**引数を返す、**二重**です。
+C++ では、オーバー ロードのオーバー ロードを呼び出すことができますので**remquo**を受け取って返す**float**または**長い****二重**値。 C プログラムで**remquo**常に 2 つ受け取る**二重**引数を返す、**二重**。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー (C)|必須ヘッダー (C++)|
 |--------------|---------------------|-|

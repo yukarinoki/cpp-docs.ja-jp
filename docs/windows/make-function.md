@@ -1,5 +1,5 @@
 ---
-title: Make 関数 |Microsoft ドキュメント
+title: 関数の作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f381a00b5ac1f105080355f1d3e3cd15efa5abf8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0076445f21bcbad5ca7028c088cddfdbdcacf8cd
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878074"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013702"
 ---
 # <a name="make-function"></a>Make 関数
-指定した Windows ランタイム クラスを初期化します。 同じモジュールで定義されているコンポーネントのインスタンスを作成するのにには、この関数を使用します。  
+指定した Windows ランタイム クラスを初期化します。 同じモジュールで定義されているコンポーネントをインスタンス化するのにには、この関数を使用します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template <  
    typename T,  
    typename TArg1,  
@@ -171,69 +171,69 @@ template <
 ComPtr<T> Make();  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `T`  
- ユーザー指定のクラスから継承する`WRL::RuntimeClass`です。  
+### <a name="parameters"></a>パラメーター  
+ *T*  
+ ユーザー指定のクラスから継承する`WRL::RuntimeClass`します。  
   
- `TArg1`  
- 1 の指定したランタイム クラスに渡される引数の型。  
+ *TArg1*  
+ 指定されたランタイム クラスに渡される引数 1 の型。  
   
- `TArg2`  
- 指定したランタイム クラスに渡される引数 2 の型。  
+ *TArg2*  
+ 指定されたランタイム クラスに渡される引数 2 の型。  
   
- `TArg3`  
- 指定したランタイム クラスに渡される 3 の引数の型。  
+ *TArg3*  
+ 指定されたランタイム クラスに渡される引数 3 の型。  
   
- `TArg4`  
- 指定したランタイム クラスに渡される引数 4 の型。  
+ *TArg4*  
+ 指定されたランタイム クラスに渡される引数 4 の型。  
   
- `TArg5`  
- 指定したランタイム クラスに渡される 5 の引数の型。  
+ *TArg5*  
+ 指定されたランタイム クラスに渡される 5 引数の型。  
   
- `TArg6`  
- 指定したランタイム クラスに渡される 6 の引数の型。  
+ *TArg6*  
+ 指定されたランタイム クラスに渡される 6 引数の型。  
   
- `TArg7`  
- 指定したランタイム クラスに渡される 7 の引数の型。  
+ *TArg7*  
+ 指定されたランタイム クラスに渡される 7 引数の型。  
   
- `TArg8`  
- 指定したランタイム クラスに渡される 8 の引数の型。  
+ *TArg8*  
+ 指定されたランタイム クラスに渡される 8 引数の型。  
   
- `TArg9`  
- 指定したランタイム クラスに渡される 9 の引数の型。  
+ *TArg9*  
+ 指定されたランタイム クラスに渡される 9 引数の型。  
   
- `arg1`  
- 指定したランタイム クラスに渡される引数 1 です。  
+ *arg1*  
+ 指定されたランタイム クラスに渡される引数 1 です。  
   
- `arg2`  
- 指定したランタイム クラスに渡される引数 2 です。  
+ *Arg2*  
+ 指定されたランタイム クラスに渡される引数 2  
   
- `arg3`  
- 指定したランタイム クラスに渡される引数 3 です。  
+ *arg3…*  
+ 指定されたランタイム クラスに渡される引数 3 です。  
   
- `arg4`  
- 指定したランタイム クラスに渡される引数 4 です。  
+ *arg4*  
+ 指定されたランタイム クラスに渡される引数 4 です。  
   
- `arg5`  
- 指定したランタイム クラスに渡される引数 5 です。  
+ *arg5*  
+ 指定されたランタイム クラスに渡される引数 5 です。  
   
- `arg6`  
- 指定したランタイム クラスに渡される引数 6 です。  
+ *arg6*  
+ 指定されたランタイム クラスに渡される引数 6 です。  
   
- `arg7`  
- 指定したランタイム クラスに渡される引数 7 です。  
+ *arg7*  
+ 指定されたランタイム クラスに渡される引数 7 です。  
   
- `arg8`  
- 指定したランタイム クラスに渡される引数 8 です。  
+ *arg8*  
+ 指定されたランタイム クラスに渡される引数 8 です。  
   
- `arg9`  
- 指定したランタイム クラスに渡される引数 9 です。  
+ *arg9*  
+ 指定されたランタイム クラスに渡される引数 9 です。  
   
 ## <a name="return-value"></a>戻り値  
- A`ComPtr<T>`成功、それ以外の場合は、オブジェクト`nullptr`です。  
+ A`ComPtr<T>`成功。 それ以外の場合は、オブジェクト**nullptr**します。  
   
-## <a name="remarks"></a>コメント  
- 参照してください[する方法: 直接に WRL コンポーネントをインスタンス化](../windows/how-to-instantiate-wrl-components-directly.md)この関数の間の違いについて学習して[Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)、および例についてはします。  
+## <a name="remarks"></a>Remarks  
+ 参照してください[方法: 直接に WRL コンポーネントをインスタンス化](../windows/how-to-instantiate-wrl-components-directly.md)についてはこの関数の相違点と[Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)、および例についてはします。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** implements.h  

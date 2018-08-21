@@ -1,5 +1,5 @@
 ---
-title: Handlet::attach メソッド |Microsoft ドキュメント
+title: Handlet::attach メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f7e70ec50ca76f1a7a525416b33d5eac46c08a4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 42c5d28f688ec81eb89ea74cec54a80fa371721b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872522"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647145"
 ---
 # <a name="handletattach-method"></a>HandleT::Attach メソッド
-指定したハンドルを現在の HandleT オブジェクトに関連付けます。  
+現在の指定したハンドルに関連付けます**HandleT**オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void Attach(  
    typename HandleTraits::Type h  
 );  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `h`  
+ *h*  
  ハンドル。  
   
 ## <a name="requirements"></a>要件  

@@ -1,5 +1,5 @@
 ---
-title: '方法: 固定ポインターの宣言と型の値 |Microsoft ドキュメント'
+title: '方法: 固定ポインターの宣言と型の値 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 40187b7da9083ddaa5342e4bdfeba556fb900e7b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9c2dbb4bcbd1b6c76d00356535a9c99d983c1096
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880385"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019879"
 ---
 # <a name="how-to-declare-pinning-pointers-and-value-types"></a>方法 : 固定ポインターと値型を宣言する
-値の型を暗黙的にボックス化することができます。 使用して値型のオブジェクトへの固定ポインターを宣言できます、 **pin_ptr**ボックス化された値の型にします。  
+値の型を暗黙的にボックス化することができます。 使用して、値型のオブジェクトへの固定ポインターを宣言し、 **pin_ptr**ボックス化された値の型にします。  
   
 ## <a name="example"></a>例  
   
 ### <a name="code"></a>コード  
   
-```  
+```cpp  
 // pin_ptr_value.cpp  
 // compile with: /clr  
 value struct V {  
@@ -48,9 +48,7 @@ int main() {
 }  
 ```  
   
-### <a name="output"></a>出力  
-  
-```  
+```Output  
 8  
 7  
 7  

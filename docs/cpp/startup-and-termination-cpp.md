@@ -1,5 +1,5 @@
 ---
-title: 起動と終了 (C++) |Microsoft ドキュメント
+title: 起動と終了 (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7bf206280d234e630fabaed3f05daa41dde86fd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e71541c20831180a0097780e9ee6b2fd9dfb2c43
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420838"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463182"
 ---
 # <a name="startup-and-termination-c"></a>起動と終了 (C++)
-プログラムの起動と終了は 2 つの関数を使用して容易になります:[メイン](../cpp/main-program-startup.md)と[終了](../cpp/program-termination.md)です。 他の開始コードと終了コードを実行することもできます。  
+プログラムの起動と終了は 2 つの関数を使用して容易になります:[メイン](../cpp/main-program-startup.md)と[終了](../cpp/program-termination.md)します。 他の開始コードと終了コードを実行することもできます。  
   
 ## <a name="see-also"></a>関連項目  
  [基本的な概念](../cpp/basic-concepts-cpp.md)

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62a46e7d314281bd19773a5c86e70a63f3c93e14
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 25172bc44c21fcb11ec3f7c77224d3214e21c5f2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940326"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404611"
 ---
 # <a name="functions-c"></a>関数 (C++)
 
@@ -82,7 +82,7 @@ int sum(int a, int b)
 
 関数宣言の省略可能な部分は次のとおりです。
 
-1. **constexpr**コンパイル時に、関数の戻り値が定数の値を計算できます。
+1. `constexpr`。関数の戻り値がコンパイル時に計算できる定数値であることを示します。
 
     ```cpp
     constexpr float exp(float x, int n)
@@ -114,7 +114,7 @@ int sum(int a, int b)
 
      詳細については、次を参照してください。[インライン関数](../cpp/inline-functions-cpp.md)します。
 
-1. A **noexcept**式で、関数が例外をスローできるかどうかを指定します。 次の例では、関数は例外をスローしない場合、`is_pod`式に評価される**true**します。
+1. A`noexcept`式で、関数が例外をスローできるかどうかを指定します。 次の例では、関数は例外をスローしない場合、`is_pod`式に評価される**true**します。
 
     ```cpp
     #include <type_traits>
@@ -127,7 +127,7 @@ int sum(int a, int b)
 
 1. (メンバー関数のみ)Cv 修飾子、関数は、かどうかを指定する**const**または**揮発性**します。
 
-1. (メンバー関数のみ)**仮想**、**オーバーライド**、または**最終的な**します。 **仮想**関数を派生クラスでオーバーライドできることを示します。 **オーバーライド**派生クラスの関数が仮想関数をオーバーライドすることを意味します。 **最終的な**派生クラスの関数をさらにいずれかでオーバーライドできないことを意味します。 詳細については、次を参照してください。[仮想関数](../cpp/virtual-functions.md)します。
+1. (メンバー関数のみ)**仮想**、 `override`、または`final`します。 **仮想**関数を派生クラスでオーバーライドできることを示します。 `override` は、派生クラス内の関数が仮想関数をオーバーライドすることを意味します。 `final` は、いかなる派生クラス内でも関数がオーバーライドされないことを意味します。 詳細については、次を参照してください。[仮想関数](../cpp/virtual-functions.md)します。
 
 1. (メンバー関数のみ)**静的**適用関数が、関数がクラスのすべてのオブジェクト インスタンスに関連付けられていないことを意味するメンバー。
 
@@ -170,7 +170,7 @@ A*関数の定義*宣言と関数本体の中かっこで囲まれた変数の�
 
 メンバー関数として宣言できます**const**クラスのデータ メンバーの値を変更する関数が許可されないことを指定します。 メンバー関数として宣言することで**const**、役立つようにコンパイラで強制*const の正確*します。 だれかが誤って、として宣言された関数を使用して、オブジェクトを変更するにはかどうか**const**、コンパイラ エラーが発生します。 詳細については、次を参照してください。 [const](const-cpp.md)します。
 
-関数として宣言**constexpr**コンパイル時に決定される値を生成できますが可能性があります。 Constexpr 関数は一般に通常の関数よりも高速実行します。 詳細については、次を参照してください。 [constexpr](constexpr-cpp.md)します。
+関数として宣言`constexpr`コンパイル時に決定される値を生成できますが可能性があります。 Constexpr 関数は一般に通常の関数よりも高速実行します。 詳細については、次を参照してください。 [constexpr](constexpr-cpp.md)します。
 
 ## <a name="function-templates"></a>関数テンプレート
 
@@ -269,11 +269,11 @@ auto Add(const Lhs& lhs, const Rhs& rhs) -> decltype(lhs + rhs)
 
 関数本体内で宣言されている変数と呼ばれる、*ローカル変数*または単に*ローカル*します。 非静的ローカルは関数本体内でのみ認識され、スタックで宣言されている場合は、関数の終了時にスコープ外に出ます。 ローカル変数を作成して値渡しで値を返す場合、通常、コンパイラで戻り値の最適化を実行し、不要なコピー操作を回避できます。 ローカル変数を参照渡しで返す場合、呼び出し元がその参照を使用するために実行する試行がローカルの破棄後に発生するため、コンパイラは警告を発行します。
 
-C++ では、ローカル変数を "静的" として宣言することがあります。 変数は関数本体内でのみ認識されますが、関数のすべてのインスタンスに対して変数の 1 つのコピーが存在します。 によって指定された終了時にローカルな静的オブジェクトは破棄されます**atexit**します。 プログラムの制御フローが宣言をバイパスしたために静的オブジェクトが構築されなかった場合、そのオブジェクトの破棄は試みられません。
+C++ では、ローカル変数を "静的" として宣言することがあります。 変数は関数本体内でのみ認識されますが、関数のすべてのインスタンスに対して変数の 1 つのコピーが存在します。 ローカルな静的オブジェクトは、`atexit` によって指定された終了時に破棄されます。 プログラムの制御フローが宣言をバイパスしたために静的オブジェクトが構築されなかった場合、そのオブジェクトの破棄は試みられません。
 
 ##  <a name="type_deduction"></a> 戻り値の型 (c++ 14) の型の推論
 
-C++ 14 で使用できます**自動**を後続の戻り値の型を提供しなくても、関数本体からの戻り値の型を推測するようコンパイラに指示します。 なお**自動**値渡しの戻り値を常にあると推測します。 使用**自動 (& a) (& a)** への参照を推測するようコンパイラに指示します。
+C++ 14 で使用できます**自動**を後続の戻り値の型を提供しなくても、関数本体からの戻り値の型を推測するようコンパイラに指示します。 なお**自動**値渡しの戻り値を常にあると推測します。 `auto&&` を使用すると、参照を推測するようにコンパイラに指示できます。
 
 この例で**自動**lhs と rhs の合計の非定数の値のコピーとして推測されます。
 
@@ -435,10 +435,9 @@ int (*myFunction(char* s))(int);
 この宣言は、上記の typedef を使用した宣言と同等です。
 
 ## <a name="see-also"></a>関連項目
-
-- [関数のオーバーロード](../cpp/function-overloading.md)
-- [可変個の引数リストを取る関数](../cpp/functions-with-variable-argument-lists-cpp.md)
-- [明示的に既定された関数および削除された関数](../cpp/explicitly-defaulted-and-deleted-functions.md)
-- [関数の引数依存名の参照 (Koenig 参照)](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)
-- [既定の引数](../cpp/default-arguments.md)
-- [インライン関数](../cpp/inline-functions-cpp.md)
+ [関数のオーバーロード](../cpp/function-overloading.md)  
+ [可変個の引数リストを取る関数](../cpp/functions-with-variable-argument-lists-cpp.md)  
+ [明示的に既定された関数および削除された関数](../cpp/explicitly-defaulted-and-deleted-functions.md)  
+ [関数の引数依存名の参照 (Koenig 参照)](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)  
+ [既定の引数](../cpp/default-arguments.md)  
+ [インライン関数](../cpp/inline-functions-cpp.md)

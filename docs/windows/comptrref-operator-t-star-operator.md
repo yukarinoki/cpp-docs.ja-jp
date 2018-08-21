@@ -1,5 +1,5 @@
 ---
-title: Comptrref::operator T * 演算子 |Microsoft ドキュメント
+title: Comptrref::operator T * 演算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25569c1c8f9e5ab733c50c7be0768f64ec51f8b1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 472cdaeec78c30d49f3160ac4d632eb95ef8e71a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881924"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641874"
 ---
 # <a name="comptrrefoperator-t-operator"></a>ComPtrRef::operator T* 演算子
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 operator T*();  
 ```  
   
-## <a name="remarks"></a>コメント  
- 値を返します、 [ptr _](../windows/comptrrefbase-ptr-data-member.md)現在 ComPtrRef オブジェクトのデータ メンバーです。  
+## <a name="remarks"></a>Remarks  
+ 値を返します、 [ptr _](../windows/comptrrefbase-ptr-data-member.md) 、現在のデータ メンバー **ComPtrRef**オブジェクト。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** client.h  

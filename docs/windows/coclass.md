@@ -1,5 +1,5 @@
 ---
-title: コクラス |Microsoft ドキュメント
+title: コクラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,75 +17,73 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5eb9c7e632151c039b76a0f389cd18c68c0740ab
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2043ca568f36d7fc0eaaffbf940cabb423de5620
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33867013"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647841"
 ---
 # <a name="coclass"></a>coclass
-COM インターフェイスを実装する COM オブジェクトを作成します。  
+COM インターフェイスを実装できる COM オブジェクトを作成します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```cpp  
 [coclass]  
-  
 ```  
   
-## <a name="remarks"></a>コメント  
- **コクラス**C++ 属性は、生成された .idl ファイル内のコクラス構成要素を配置します。  
+## <a name="remarks"></a>Remarks  
+ **コクラス**C++ 属性は、生成された .idl ファイルのコクラス構成要素を配置します。  
   
- コクラスを定義するときに指定することも、 [uuid](../windows/uuid-cpp-attributes.md)、[バージョン](../windows/version-cpp.md)、[スレッド](../windows/threading-cpp.md)、 [vi_progid](../windows/vi-progid.md)、および[progid](../windows/progid.md)属性。 いずれかのファイルが指定されていない場合それが生成されます。  
+ コクラスを定義するときに指定することも、 [uuid](../windows/uuid-cpp-attributes.md)、[バージョン](../windows/version-cpp.md)、[スレッド](../windows/threading-cpp.md)、 [vi_progid](../windows/vi-progid.md)、および[progid](../windows/progid.md)属性。 いずれかのファイルが指定されていない場合は、それが生成されます。  
   
- 2 つのヘッダー ファイルを持つクラスが含まれている場合、**コクラス**属性を GUID を指定しない、コンパイラは両方のクラスに対して、同じ GUID を使用し、MIDL のエラーが発生します。  したがって、使用する必要があります、`uuid`属性を使用するときに**コクラス**です。  
+ 2 つのヘッダー ファイルには、クラスが含まれている場合、**コクラス**属性し、GUID を指定しない MIDL エラーが発生して、コンパイラが両方のクラスで同じ GUID を使用します。  したがって、使用する必要があります、`uuid`属性を使用するときに**コクラス**します。  
   
  **ATL プロジェクト**  
   
  この属性は、ATL プロジェクトでは、クラスまたは構造体の定義を前に。  
   
--   コードまたはオブジェクトの自動登録をサポートするためにデータを挿入します。  
+-   オブジェクトの自動登録をサポートするコードまたはデータを挿入します。  
   
--   コードまたはオブジェクトの COM クラス ファクトリをサポートするためにデータを挿入します。  
+-   オブジェクトの COM クラス ファクトリをサポートするコードまたはデータを挿入します。  
   
--   コードまたは実装するデータが挿入**IUnknown**と COM で作成可能オブジェクトのオブジェクトを作成します。  
+-   コードまたは実装するためにデータが挿入`IUnknown`と COM で作成可能オブジェクトのオブジェクトを作成します。  
   
  具体的には、次の基本クラスは、ターゲット オブジェクトに追加されます。  
   
 -   [CComCoClass クラス](../atl/reference/ccomcoclass-class.md)オブジェクトの既定のクラス ファクトリと集計モデルを提供します。  
   
--   [CComObjectRootEx クラス](../atl/reference/ccomobjectrootex-class.md)によって指定されたスレッド処理モデル クラスに基づくテンプレートを持つ、[スレッド](../windows/threading-cpp.md)属性。 場合、**スレッド**属性が指定されていない、既定のスレッド モデルがアパートメントです。  
+-   [CComObjectRootEx クラス](../atl/reference/ccomobjectrootex-class.md)テンプレートがで指定されたスレッド処理モデル クラスに基づいて、[スレッド](../windows/threading-cpp.md)属性。 場合、`threading`属性が指定されていない、既定のスレッド モデルがアパートメント。  
   
 -   [IProvideClassInfo2Impl](../atl/reference/iprovideclassinfo2impl-class.md)場合は、追加、 [noncreatable](../windows/noncreatable.md)ターゲット オブジェクトの属性が指定されていません。  
   
- 最後に、埋め込み IDL で定義されていない任意のデュアル インターフェイスが置き換えられます、対応する[IDispatchImpl](../atl/reference/idispatchimpl-class.md)クラスです。 デュアル インターフェイスが埋め込み IDL で定義されている場合は、基底のリストに特定のインターフェイスは変更されません。  
+ 最後に、埋め込み IDL で定義されていない任意のデュアル インターフェイスは、対応するのに置き換えられます[IDispatchImpl](../atl/reference/idispatchimpl-class.md)クラス。 デュアル インターフェイスは、埋め込み IDL で定義されているが、基底のリストで特定のインターフェイスは変更されません。  
   
- **コクラス**属性も使用可能、次の関数の場合または挿入されたコードを使用して`GetObjectCLSID`、基本クラスの静的メソッドとして`CComCoClass`:  
+ **コクラス**属性もご利用、次の関数またはの場合、挿入されたコードを使用して`GetObjectCLSID`、基底クラスの静的メソッドとして`CComCoClass`:  
   
 -   `UpdateRegistry` ターゲット クラスのクラス ファクトリを登録します。  
   
--   `GetObjectCLSID`、、登録に関連することもできますをターゲット クラスの CLSID を取得します。  
+-   `GetObjectCLSID`、、登録に関連することもでき、ターゲット クラスの CLSID を取得します。  
   
--   **GetObjectFriendlyName**既定の形式の文字列が返されます"\<*対象のクラス名*> `Object`"です。 この関数が既に存在する場合は追加されません。 この関数を自動的に生成されたものよりもわかりやすい名を返す対象クラスに追加します。  
+-   `GetObjectFriendlyName` 既定の形式の文字列を返します"\<*対象のクラス名*> `Object`"。 この関数が既に存在する場合は追加されません。 自動的に生成されたものよりもわかりやすい名前を返す対象のクラスには、この関数を追加します。  
   
--   **GetProgID**、登録に関連すると指定した文字列を返します、 [progid](../windows/progid.md)属性。  
+-   `GetProgID`、で指定された文字列を返します、登録に関連する、 [progid](../windows/progid.md)属性。  
   
--   **GetVersionIndependentProgID**と同じ機能を持つ**GetProgID**で指定された文字列を返しますが、 [vi_progid](../windows/vi-progid.md)です。  
+-   `GetVersionIndependentProgID` 同じ機能を持つ`GetProgID`で指定された文字列を返しますが、 [vi_progid](../windows/vi-progid.md)します。  
   
- 対象のクラスには、COM マップに関連する、次の変更が行われました。  
+ 次の変更は、COM マップに関連する、ターゲット クラスに対して与えられます。  
   
--   COM マップが追加され、すべてのインターフェイスのターゲット クラスの派生元のエントリとで指定されたすべてのエントリが、 [COM インターフェイス エントリ ポイント](../mfc/com-interface-entry-points.md)属性またはで必要な[集計](../windows/aggregates.md)属性。  
+-   COM マップが追加され、ターゲット クラスから派生するすべてのインターフェイスのエントリとで指定されたすべてのエントリが、 [COM インターフェイス エントリ ポイント](../mfc/com-interface-entry-points.md)属性またはで必要な[集計](../windows/aggregates.md)属性。  
   
--   [OBJECT_ENTRY_AUTO](../atl/reference/object-map-macros.md#object_entry_auto)マクロは、COM マップに挿入します。
+-   [OBJECT_ENTRY_AUTO](../atl/reference/object-map-macros.md#object_entry_auto)マクロは、COM マップに挿入されます。
   
- クラスの .idl ファイル内に生成されるコクラスの名前は、クラスと同じ名前になります。  たとえばと次の例を参照する、MIDL によって生成されたヘッダー ファイルを使用して、クライアントで CMyClass、コクラスのクラス ID にアクセスする CLSID_CMyClass を使用します。  
+ クラスの .idl ファイル内に生成されるコクラスの名前は、クラスと同じ名前になります。  たとえばとをコクラスのクラス ID へのアクセスに、次の例を参照する`CMyClass`、MIDL によって生成されたヘッダー ファイルをクライアントでは、次のように使用します。`CLSID_CMyClass`します。  
   
 ## <a name="example"></a>例  
  次のコードを使用する方法を示しています、**コクラス**属性。  
   
-```  
+```cpp  
 // cpp_attr_ref_coclass1.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -101,9 +99,9 @@ appobject, uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")]
 class CMyClass : public I {};  
 ```  
   
- 次の例は、によって挿入されたコードに表示される関数の既定の実装をオーバーライドする方法を示します、**コクラス**属性。 挿入されたコードを参照する方法の詳細については、「 [/Fx](../build/reference/fx-merge-injected-code.md) 」を参照してください。 すべての基底クラスまたはインターフェイス クラスを使用することは、挿入されたコードに表示されます。   さらに、挿入されたコードで既定では、クラスが含まれている、明示的に指定するクラスをベースとして、コクラスの場合は、属性プロバイダーは、コードで指定されたフォームを使用します。  
+ 次の例は、によって挿入されたコードに表示される関数の既定の実装をオーバーライドする方法を示します、**コクラス**属性。 挿入されたコードを参照する方法の詳細については、「 [/Fx](../build/reference/fx-merge-injected-code.md) 」を参照してください。 すべての基底クラスまたはクラスを使用するインターフェイスは、挿入されたコードに表示されます。 さらに、クラスが挿入されたコードで既定で含まれている、明示的に指定するクラスをベースとして、コクラスの場合は、属性プロバイダーは、コードで指定された形式を使用します。  
   
-```  
+```cpp  
 // cpp_attr_ref_coclass2.cpp  
 // compile with: /LD  
 #include <atlbase.h>  
@@ -143,8 +141,8 @@ public:
   
 |||  
 |-|-|  
-|**対象**|**class**、 `struct`|  
-|**反復可能**|×|  
+|**対象**|**クラス**、**構造体**|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

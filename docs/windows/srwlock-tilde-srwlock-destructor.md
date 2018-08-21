@@ -1,5 +1,5 @@
 ---
-title: 'SRWLock:: ~ SRWLock デストラクター |Microsoft ドキュメント'
+title: 'SRWLock:: ~ SRWLock デストラクター |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6ed3bd38024d279d8f478a6ff4525122e66c47f2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 099babd4c66e5237e8ecfbd7f39bdba9e597d63d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889080"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011953"
 ---
 # <a name="srwlocksrwlock-destructor"></a>SRWLock::~SRWLock デストラクター
-SRWLock クラスのインスタンスの初期化を解除します。  
+インスタンスを初期化解除、 **SRWLock**クラス。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 ~SRWLock();  
 ```  
   

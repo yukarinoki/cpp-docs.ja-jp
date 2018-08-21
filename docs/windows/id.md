@@ -1,5 +1,5 @@
 ---
-title: id |Microsoft ドキュメント
+title: id |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6c674765a0dfc06648d64a2b3b4e820bb467e700
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5a89758933aef4646aaf11d08d7193d48a44f468
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882448"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013546"
 ---
 # <a name="id"></a>ID
-指定します、 `dispid` (プロパティまたはメソッド、インターフェイスまたはディスパッチ インターフェイス) のメンバー関数のパラメーターです。  
+指定します、 *dispid* (プロパティまたはメソッド、インターフェイスまたは dispinterface) のメンバー関数のパラメーター。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
-      [ id(  
+```cpp  
+[ id(  
    dispid  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `dispid`  
+### <a name="parameters"></a>パラメーター  
+ *dispid*  
  インターフェイス メソッドのディスパッチ ID。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **Id** C++ 属性と同じ機能を持つ、 [id](http://msdn.microsoft.com/library/windows/desktop/aa367040) MIDL 属性。  
   
 ## <a name="example"></a>例  
- 例を参照して[バインド可能な](../windows/bindable.md)の使用方法の例については**id**です。  
+ 例をご覧ください[バインド可能な](../windows/bindable.md)を使用する方法の例については**id**します。  
   
 ## <a name="requirements"></a>要件  
   
@@ -53,7 +52,7 @@ ms.locfileid: "33882448"
 |||  
 |-|-|  
 |**対象**|インターフェイス メソッド|  
-|**反復可能**|×|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

@@ -1,5 +1,5 @@
 ---
-title: SyncLockT クラス |Microsoft ドキュメント
+title: SyncLockT クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e05a1be5d84db52573d3c3235936ecf82dde5894
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b1eb11480657d731a4667722572e921f405c0845
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892853"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012149"
 ---
 # <a name="synclockt-class"></a>SyncLockT クラス
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template <  
    typename SyncTraits  
 >  
 class SyncLockT;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `SyncTraits`  
+### <a name="parameters"></a>パラメーター  
+ *SyncTraits*  
  この型は、リソースの所有権を取得できます。  
   
-## <a name="remarks"></a>コメント  
- 排他的に実行できる型を表すまたはリソースの所有権を共有します。  
+## <a name="remarks"></a>Remarks  
+ 排他的に使用できる型を表すか、リソースの所有権を共有します。  
   
- SyncLockT クラスが使用されるなどの実装に役立つ、 [SRWLock](../windows/srwlock-class.md)クラスです。  
+ **SyncLockT**クラスの使用などの実装に役立つ、 [SRWLock](../windows/srwlock-class.md)クラス。  
   
 ## <a name="members"></a>メンバー  
   
@@ -51,27 +51,27 @@ class SyncLockT;
   
 |名前|説明|  
 |----------|-----------------|  
-|[SyncLockT::SyncLockT コンストラクター](../windows/synclockt-synclockt-constructor.md)|SyncLockT クラスの新しいインスタンスを初期化します。|  
-|[SyncLockT::~SyncLockT デストラクター](../windows/synclockt-tilde-synclockt-destructor.md)|SyncLockT クラスのインスタンスの初期化を解除します。|  
+|[SyncLockT::SyncLockT コンストラクター](../windows/synclockt-synclockt-constructor.md)|新しいインスタンスを初期化、 **SyncLockT**クラス。|  
+|[SyncLockT::~SyncLockT デストラクター](../windows/synclockt-tilde-synclockt-destructor.md)|インスタンスを初期化解除、 **SyncLockT**クラス。|  
   
 ### <a name="protected-constructors"></a>プロテクト コンストラクター  
   
 |名前|説明|  
 |----------|-----------------|  
-|[SyncLockT::SyncLockT コンストラクター](../windows/synclockt-synclockt-constructor.md)|SyncLockT クラスの新しいインスタンスを初期化します。|  
+|[SyncLockT::SyncLockT コンストラクター](../windows/synclockt-synclockt-constructor.md)|新しいインスタンスを初期化、 **SyncLockT**クラス。|  
   
 ### <a name="public-methods"></a>パブリック メソッド  
   
 |名前|説明|  
 |----------|-----------------|  
-|[SyncLockT::IsLocked メソッド](../windows/synclockt-islocked-method.md)|SyncLockT、現在、リソースを所有しているかどうかを示しますSyncLockT オブジェクトは、つまり、*ロック*です。|  
-|[SyncLockT::Unlock メソッド](../windows/synclockt-unlock-method.md)|存在する場合は、現在の SyncLockT オブジェクトによって保持されているリソースの制御を解放します。|  
+|[SyncLockT::IsLocked メソッド](../windows/synclockt-islocked-method.md)|示すかどうか、現在**SyncLockT**リソースを所有するオブジェクトです。 つまり、 **SyncLockT**オブジェクトが*ロック*します。|  
+|[SyncLockT::Unlock メソッド](../windows/synclockt-unlock-method.md)|現在保持されているリソースの制御を解放**SyncLockT**オブジェクトが存在する場合。|  
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
-|[SyncLockT::sync_ データ メンバー](../windows/synclockt-sync-data-member.md)|SyncLockT クラスによって表される、基になるリソースを保持します。|  
+|[SyncLockT::sync_ データ メンバー](../windows/synclockt-sync-data-member.md)|によって表される、基になるリソースを保持、 **SyncLockT**クラス。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `SyncLockT`  

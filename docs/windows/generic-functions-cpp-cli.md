@@ -1,5 +1,5 @@
 ---
-title: ジェネリック関数 (C + + CLI) |Microsoft ドキュメント
+title: ジェネリック関数 (C +/cli CLI) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,35 +19,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 66eb27b28a1b18942c0a8a9a77a877a2f0b2ef8c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2429b86ad872ea310d690187c7283b8498ece3f5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878835"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645127"
 ---
 # <a name="generic-functions-ccli"></a>ジェネリック関数 (C++/CLI)
-ジェネリック関数は、型パラメーターで宣言された関数です。 呼び出されると、実際の型が型パラメーターの代わりに使用されます。  
+ジェネリック関数は、型パラメーターで宣言された関数です。 呼び出されると、型パラメーターではなく実際の型が使用されます。  
   
 ## <a name="all-platforms"></a>すべてのプラットフォーム  
- **解説**  
+### <a name="remarks"></a>Remarks
   
  この機能は、すべてのプラットフォームには適用されません。  
   
 ## <a name="windows-runtime"></a>Windows ランタイム  
- **解説**  
+### <a name="remarks"></a>Remarks
   
  この機能は、Windows ランタイムでサポートされていません。  
   
 ### <a name="requirements"></a>要件  
- コンパイラ オプション: **/ZW**  
+ コンパイラ オプション: `/ZW`  
   
 ## <a name="common-language-runtime"></a>共通言語ランタイム 
- ジェネリック関数は、型パラメーターで宣言された関数です。 呼び出されると、実際の型が型パラメーターの代わりに使用されます。  
+ ジェネリック関数は、型パラメーターで宣言された関数です。 呼び出されると、型パラメーターではなく実際の型が使用されます。  
   
- **構文**  
+### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 [attributes] [modifiers]  
 return-type identifier<type-parameter identifier(s)>  
 [type-parameter-constraints clauses]  
@@ -56,13 +56,13 @@ return-type identifier<type-parameter identifier(s)>
 {function-body}  
 ```  
   
- **パラメーター**  
+### <a name="parameters"></a>パラメーター 
   
  *属性*(省略可能)  
  追加の宣言情報。 属性と属性クラスの詳細については、属性を参照してください。  
   
  *修飾子*(省略可能)  
- 静的など、関数の修飾子です。  `virtual` 仮想メソッドをジェネリックにすることはできないためには許可されません。  
+ 静的などの関数の修飾子です。  **仮想**仮想メソッドをジェネリックにすることはできないためには許可されません。  
   
  *戻り値の型*  
  メソッドによって返される型。 戻り値の型が void の場合は、戻り値は必要ありません。  
@@ -71,34 +71,33 @@ return-type identifier<type-parameter identifier(s)>
  関数名。  
   
  *型パラメーターの識別子*  
- 識別子のコンマ区切りの一覧です。  
+ 識別子のコンマ区切りリスト。  
   
- *正式なパラメーター* (省略可能)  
- パラメーターの一覧です。  
+ *仮パラメーター* (省略可能)  
+ パラメーター リストです。  
   
- *型パラメーターの制約句*  
- これは、型引数として使用できる型で制限を指定しの形式で指定された[ジェネリック型パラメーターの制約 (C + + CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)です。  
+ *型パラメーター制約句*  
+ これは、型の引数として使用できる型での制限を指定しますで指定された形式の[ジェネリック型パラメーターの制約 (C +/cli CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)します。  
   
  *関数本体*  
  型パラメーターの識別子を参照する、メソッドの本体。  
   
- **解説**  
+### <a name="remarks"></a>Remarks  
   
- ジェネリック関数は、ジェネリック型パラメーターで宣言された関数です。 クラスまたは構造体、またはスタンドアロン関数内のメソッドがあります。 1 つのジェネリック宣言は、のみが異なるさまざまな実際の型のジェネリック型パラメーターの代替関数のファミリを暗黙的に宣言します。  
+ ジェネリック関数は、ジェネリック型パラメーターで宣言された関数です。 クラスまたは構造体、またはスタンドアロン関数内のメソッドがあります。 1 つのジェネリック宣言には、ジェネリック型パラメーターのさまざまな実際の型の置換だけが異なる関数のファミリが暗黙的に宣言します。  
   
- Visual c では、ジェネリック型パラメーターを持つ、クラスまたは構造体のコンス トラクターを宣言されていません可能性があります。  
+ Visual C では、ジェネリック型パラメーターを持つ、クラスまたは構造体のコンス トラクターを宣言されていません可能性があります。  
   
- 呼び出されると、そのジェネリック型パラメーターと、実際の型が置き換えられます。 山かっことテンプレート関数の呼び出しに似た構文を使用するのには、実際の型を明示的に指定する可能性があります。 型パラメーターを指定しないで呼び出されると、コンパイラは関数呼び出しで指定されたパラメーターから実際の型を推測しようとします。 目的の型引数は、使用されるパラメーターから推測できない、コンパイラでエラーが報告されます。  
+ 呼び出されると、ジェネリック型パラメーターは、実際の型に置換されます。 テンプレート関数の呼び出しに似た構文を使用して、山かっこでは、実際の型を明示的に指定することがあります。 型のパラメーターなしで呼び出すと、コンパイラは関数呼び出しで指定されたパラメーターから実際の型を推測しようとします。 目的の型引数は、使用されるパラメーターから推測できない、コンパイラでエラーが報告されます。  
   
 ### <a name="requirements"></a>要件  
- コンパイラ オプション: **/clr**  
+ コンパイラ オプション: `/clr`  
   
 ### <a name="examples"></a>使用例  
- **例**  
   
  次のコード サンプルでは、ジェネリック関数を示します。  
   
-```  
+```cpp  
 // generics_generic_function_1.cpp  
 // compile with: /clr  
 generic <typename ItemType>  
@@ -129,11 +128,9 @@ int main() {
 }  
 ```  
   
- **例**  
+ ジェネリック関数は、署名またはアリティ、関数の型パラメーターの数に基づいてオーバー ロードできます。 また、ジェネリック関数オーバー ロードできます、同じ名前の非ジェネリック関数と関数がいくつかの型パラメーターが異なる限り、します。 たとえば、次の関数をオーバー ロードできます。  
   
- ジェネリック関数は、署名またはアリティ、関数の型パラメーターの数に基づいてオーバー ロードすることができます。 また、ジェネリック関数はオーバー ロードできます、同じ名前の非ジェネリック関数と共にときは、型パラメーターの中に、関数がそれぞれ異なります。 たとえば、次の関数をオーバー ロードすることができます。  
-  
-```  
+```cpp  
 // generics_generic_function_2.cpp  
 // compile with: /clr /c  
 ref struct MyClass {  
@@ -147,11 +144,9 @@ ref struct MyClass {
 };  
 ```  
   
- **例**  
+ 次の例では、ジェネリック関数を使用して、配列内の最初の要素を検索します。 宣言`MyClass`、基底クラスから継承される`MyBaseClass`します。 `MyClass` ジェネリック関数を含む`MyFunction`、もう 1 つの汎用関数を呼び出し`MyBaseClassFunction`、基底クラス内で。 `main`、ジェネリックの関数では、 `MyFunction`、別の型引数を使用すると呼びます。  
   
- 次の例では、ジェネリック関数を使用して、配列内の最初の要素を検索します。 宣言して`MyClass`、基本クラスから継承される`MyBaseClass`です。 `MyClass` ジェネリック関数を含む`MyFunction`、別のジェネリック関数を呼び出している`MyBaseClassFunction`、基底クラス内で。 **メイン**、ジェネリック関数`MyFunction`、異なる型引数を使用して呼び出されました。  
-  
-```  
+```cpp  
 // generics_generic_function_3.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -185,13 +180,11 @@ int main() {
 }  
 ```  
   
- **出力**  
-  
 ```Output  
 My function returned an int: 2003  
 My function returned a string: Hello generic functions!  
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)   
+ [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)   
  [ジェネリック](../windows/generics-cpp-component-extensions.md)

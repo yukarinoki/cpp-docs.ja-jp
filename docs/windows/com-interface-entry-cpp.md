@@ -1,5 +1,5 @@
 ---
-title: com_interface_entry (C++) |Microsoft ドキュメント
+title: com_interface_entry (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b0fb7de1987d77f19e04f867aac68cbcc67c1f1e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d79c371b98e0dd1091fc5db2280efdee3abbf6e9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863453"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646190"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
 ターゲット クラスの COM マップにインターフェイス エントリを追加します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
-     [ com_interface_entry(   
+```cpp  
+[ com_interface_entry(   
   com_interface_entry  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *com_interface_entry*  
- エントリの実際のテキストを含む文字列。 使用可能な値の一覧は、次を参照してください。 [COM_INTERFACE_ENTRY マクロ](../atl/reference/com-interface-entry-macros.md)です。  
+ エントリの実際のテキストを含む文字列。 使用可能な値の一覧は、次を参照してください。 [COM_INTERFACE_ENTRY マクロ](../atl/reference/com-interface-entry-macros.md)します。  
   
-## <a name="remarks"></a>コメント  
- `com_interface_entry` C++ 属性は、文字列の unabridged 内容を対象オブジェクトの COM インターフェイス マップに挿入します。 属性はターゲット オブジェクトに 1 回適用する場合、エントリは、既存のインターフェイス マップの先頭に挿入されます。 属性は、同じターゲット オブジェクトに繰り返し適用した場合、エントリは、受信した順序で、インターフェイス マップの先頭に挿入されます。  
+## <a name="remarks"></a>Remarks  
+ **Com_interface_entry** C++ 属性は、ターゲット オブジェクトの COM インターフェイス マップに unabridged 文字の文字列の内容を挿入します。 属性は、ターゲット オブジェクトに 1 回適用されている場合、エントリは、既存のインターフェイス マップの先頭に挿入されます。 属性は、同じターゲット オブジェクトを繰り返し適用されている場合、エントリが受信される順序でインターフェイス マップの先頭に挿入されます。  
   
- この属性を使用するには、 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)、または [vi_progid](../windows/vi-progid.md) 属性 (または、これらのいずれかを意味する別の属性) も同じ要素に適用する必要があります。 いずれか 1 つの属性を使用すると、他の 2 つも自動的に適用されます。 たとえば、 **progid** を適用すると、 **vi_progid** と **coclass** も適用されます。  
+ この属性を使用するには、 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)、または [vi_progid](../windows/vi-progid.md) 属性 (または、これらのいずれかを意味する別の属性) も同じ要素に適用する必要があります。 いずれか 1 つの属性を使用すると、他の 2 つも自動的に適用されます。 たとえば場合、`progid`が適用される`vi_progid`と`coclass`も適用されます。  
   
- の最初の使用`com_interface_entry`インターフェイス マップの先頭に挿入する新しいインターフェイスにより COM_INTERFACE_ENTRY 種類は次のいずれかにする必要があります。  
+ の最初の使用**com_interface_entry**インターフェイス マップの先頭に挿入する新しいインターフェイスにより COM_INTERFACE_ENTRY 種類は次のいずれかの必要があります。  
   
 -   COM_INTERFACE_ENTRY  
   
@@ -55,11 +54,11 @@ ms.locfileid: "33863453"
   
 -   COM_INTERFACE_ENTRY2_IID  
   
- 追加の使用法、`com_interface_entry`属性はサポートされているすべての COM_INTERFACE_ENTRY 型を使用できます。  
+ 追加の使用法、 **com_interface_entry**属性はサポートされているすべての COM_INTERFACE_ENTRY 型を使用できます。  
   
- この制限は、ATL は、インターフェイス マップに最初のエントリを id として使用するために必要な**IUnknown**。 したがって、エントリは有効なインターフェイスである必要があります。 たとえば、次のコード サンプルはインターフェイス マップの最初のエントリで、実際の COM インターフェイスが指定されていないため無効です。  
+ この制限は、ATL は、id とインターフェイス マップに最初のエントリを使用するために必要な`IUnknown`。 したがって、エントリは有効なインターフェイスである必要があります。 たとえば、次のコード サンプルがインターフェイス マップの最初のエントリで、実際の COM インターフェイスが指定されていないため無効です。  
   
-```  
+```cpp  
 [ coclass, com_interface_entry =  
     "COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)"  
 ]  
@@ -69,9 +68,9 @@ ms.locfileid: "33863453"
 ```  
   
 ## <a name="example"></a>例  
- 次のコードでは、2 つのエントリを追加するは、既存の COM インターフェイス マップ**CMyBaseClass**です。 1 つは、標準インターフェイスであり、2 番目、 **IDebugTest**インターフェイスです。  
+ 次のコードでは、2 つのエントリを追加するは、既存の COM インターフェイス マップ`CMyBaseClass`します。 1 つは、標準のインターフェイスと、2 つ目の非表示になります、`IDebugTest`インターフェイス。  
   
-```  
+```cpp  
 // cpp_attr_ref_com_interface_entry.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -99,9 +98,9 @@ class CMyClass: public IMyClass, public IDebugTest
 };  
 ```  
   
- 結果の COM オブジェクトのマップ**CMyBaseClass**のとおりです。  
+ 結果として得られる COM オブジェクト マップ`CMyBaseClass`のとおりです。  
   
-```  
+```cpp  
 BEGIN_COM_MAP(CMyClass)  
     COM_INTERFACE_ENTRY (IMyClass)  
     COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)  
@@ -118,9 +117,9 @@ END_COM_MAP()
   
 |||  
 |-|-|  
-|**対象**|**class**、 `struct`|  
+|**対象**|**クラス**、**構造体**|  
 |**反復可能**|[はい]|  
-|**必要な属性**|**coclass**、 **progid**、 **vi_progid**のうち 1 つ以上。|  
+|**必要な属性**|次のいずれかまたは: `coclass`、 `progid`、または`vi_progid`します。|  
 |**無効な属性**|なし|  
   
  属性コンテキストの詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  

@@ -1,5 +1,5 @@
 ---
-title: ActivateInstance 関数 |Microsoft ドキュメント
+title: ActivateInstance 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,19 +18,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c0bf945dd8225ca3c153d7f497ded6b83ebd022d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93b1c8fa12e06984a2bffdd90419c481d8897b94
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855576"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646242"
 ---
 # <a name="activateinstance-function"></a>ActivateInstance 関数
-登録し、指定したクラス ID で定義されている、指定した型のインスタンスを取得します  
+登録し、指定したクラス ID で定義されている指定された型のインスタンスを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename T>  
 inline HRESULT ActivateInstance(  
    _In_ HSTRING activatableClassId,  
@@ -38,18 +38,18 @@ inline HRESULT ActivateInstance(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `T`  
- アクティブ化する型。  
+### <a name="parameters"></a>パラメーター  
+ *T*  
+ アクティブにする型。  
   
- `activatableClassId`  
- パラメーターを定義するクラスの ID の名前`T`です。  
+ *activatableClassId*  
+ パラメーターを定義するクラスの ID の名前*T*します。  
   
- `instance`  
- この操作の完了時のインスタンスへの参照を`T`です。  
+ *インスタンス*  
+ ときにこの操作が完了したらのインスタンスへの参照を*T*します。  
   
 ## <a name="return-value"></a>戻り値  
- 正常終了した場合は S_OK、それ以外の場合、エラーのエラーの原因を示す hresult 値。  
+ 成功した場合は s_ok を返します。それ以外の場合、エラーのエラーの原因を示す hresult 値。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** client.h  

@@ -1,5 +1,5 @@
 ---
-title: Module::create メソッド |Microsoft ドキュメント
+title: Module::create メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99ede64c239909956f1f767db34a2a6a14c02314
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1b3f865addd83bec64250807285947ea1c92e59f
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874890"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016614"
 ---
 # <a name="modulecreate-method"></a>Module::Create メソッド
 モジュールのインスタンスを作成します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 WRL_NOTHROW static Module& Create();  
 template<typename T>  
 WRL_NOTHROW static Module& Create(  
@@ -42,18 +42,18 @@ WRL_NOTHROW static Module& Create(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `T`  
+### <a name="parameters"></a>パラメーター  
+ *T*  
  モジュールの種類。  
   
- `callback`  
- モジュールの最後のインスタンスのオブジェクトがリリースされたときに呼び出されます。  
+ *コールバック*  
+ モジュールの最後のインスタンス オブジェクトを解放するときに呼び出されます。  
   
- `object`  
- `object`と`method`パラメーターの組み合わせで使用されます。 場合に、ポイント最後のインスタンス オブジェクト、モジュール内の最後のインスタンス オブジェクトを解放します。  
+ *object*  
+ *オブジェクト*と*メソッド*パラメーターの組み合わせで使用されます。 ポイント最後のインスタンス オブジェクト、モジュールの最後のインスタンスのオブジェクトがリリースされたときにします。  
   
- `method`  
- `object`と`method`パラメーターの組み合わせで使用されます。 モジュールの最後のインスタンス オブジェクトが離されると、最後のインスタンス オブジェクトのメソッドを指します。  
+ *method*  
+ *オブジェクト*と*メソッド*パラメーターの組み合わせで使用されます。 モジュールの最後のインスタンスのオブジェクトがリリースされたときに、最後のインスタンス オブジェクトのメソッドを指します。  
   
 ## <a name="return-value"></a>戻り値  
  モジュールへの参照。  
@@ -65,5 +65,3 @@ WRL_NOTHROW static Module& Create(
   
 ## <a name="see-also"></a>関連項目  
 [Module クラス](../windows/module-class.md)
-
- 

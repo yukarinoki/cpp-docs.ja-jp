@@ -1,5 +1,5 @@
 ---
-title: Synclockt::unlock メソッド |Microsoft ドキュメント
+title: Synclockt::unlock メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4073d6e2b8924ae08e6af10a8e028f273f1fdfd5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 01df0ea356d2c7a8b495d4c304d11a32377cd3ff
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892307"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013903"
 ---
 # <a name="synclocktunlock-method"></a>SyncLockT::Unlock メソッド
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void Unlock();  
 ```  
   
-## <a name="remarks"></a>コメント  
- 存在する場合は、現在の SyncLockT オブジェクトによって保持されているリソースの制御を解放します。  
+## <a name="remarks"></a>Remarks  
+ 現在保持されているリソースの制御を解放**SyncLockT**オブジェクトが存在する場合。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

@@ -1,5 +1,5 @@
 ---
-title: Weakreference::weakreference コンス トラクター |Microsoft ドキュメント
+title: Weakreference::weakreference コンス トラクター |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e60b23a0c63ce1415765dd1f94863540849f975
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 04f09f98148a54ac87add3d52bcba1cffa0c1c14
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891062"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016422"
 ---
 # <a name="weakreferenceweakreference-constructor"></a>WeakReference::WeakReference コンストラクター
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 WeakReference();  
 ```  
   
-## <a name="remarks"></a>コメント  
- 新しいインスタンスを初期化、 [WeakReference クラス](../windows/weakreference-class1.md)です。  
+## <a name="remarks"></a>Remarks  
+ 新しいインスタンスを初期化、 [WeakReference クラス](../windows/weakreference-class1.md)します。  
   
- 強い参照に対して WeakReference オブジェクト ポインターは`nullptr`、強力な参照カウントが 1 に初期化されています。  
+ 強い参照ポインター、 **WeakReference**オブジェクトが初期化**nullptr**、し、強力な参照カウントは 1 に初期化されます。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** implements.h  
@@ -44,5 +44,4 @@ WeakReference();
  **Namespace:** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>関連項目  
-    
  [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

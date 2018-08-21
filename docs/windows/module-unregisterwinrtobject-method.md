@@ -1,5 +1,5 @@
 ---
-title: Module::unregisterwinrtobject メソッド |Microsoft ドキュメント
+title: Module::unregisterwinrtobject メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aab0ec29dbda428a1173d57e2671f1e4b609e085
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93c804f9e7701ab3bf021902b62ae3f1b414d61c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882603"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019080"
 ---
 # <a name="moduleunregisterwinrtobject-method"></a>Module::UnregisterWinRTObject メソッド
 他のアプリケーションがそれらに接続できないように、1 つまたは複数の Windows ランタイム オブジェクトを登録解除します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 virtual HRESULT UnregisterWinRTObject(  
    unsigned int,  
    _Inout_ WINRT_REGISTRATION_COOKIE* cookie  
 );  
-  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `cookie`  
- 登録を取り消すクラス オブジェクトを識別する値へのポインター。  
-  
-## <a name="return-value"></a>戻り値  
+### <a name="parameters"></a>パラメーター  
+ *Cookie*  
+ 登録を取り消すことは、クラス オブジェクトを識別する値へのポインター。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** module.h  

@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6830baf3d474b80f2e7906a7aadd27d2eee27f9a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 22f96b81836a8c1a9daa971ff8fb1961edb60cfb
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958621"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209005"
 ---
 # <a name="backinsertiterator-class"></a>back_insert_iterator クラス
 
@@ -63,9 +63,9 @@ class back_insert_iterator;
 
 |演算子|説明|
 |-|-|
-|[operator*](#op_star)|後方挿入のための出力反復子式 * `i` = `x` を実装するために使用される逆参照演算子。|
+|[operator*](#op_star)|出力反復子の式を実装するために使用される逆参照演算子\* `i`  =  `x`後方挿入の。|
 |[operator++](#op_add_add)|値を格納できる次の位置に `back_insert_iterator` をインクリメントします。|
-|[operator=](#op_eq)|後方挿入のための出力反復子式 * `i` = `x` を実装するために使用される代入演算子。|
+|[operator=](#op_eq)|出力反復子の式を実装するために使用される代入演算子\* `i`  =  `x`後方挿入の。|
 
 ## <a name="requirements"></a>必要条件
 
@@ -191,7 +191,7 @@ The original vector vec is: ( 1 2 3 ).
 After the insertion, the vector is: ( 1 2 3 40 ).
 ```
 
-## <a name="op_star"></a>  back_insert_iterator::operator*
+## <a name="op_star"></a>  back_insert_iterator::operator\*
 
 出力反復子式 \* *i* = *x* を実装するために使用される逆参照演算子。
 

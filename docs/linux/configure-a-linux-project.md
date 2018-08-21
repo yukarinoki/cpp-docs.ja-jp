@@ -14,15 +14,15 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 8fc0c15f4e6ff7a9969c31c4d474bb42a9797b30
-ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
+ms.openlocfilehash: b4e5bad5b0688a2f0deeb237335c26419e2d9cbe
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2018
-ms.locfileid: "34422681"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207903"
 ---
 # <a name="configure-a-linux-project"></a>Linux プロジェクトの構成
-このトピックでは、Visual Studio Linux プロジェクトを構成する方法について説明します。 CMake Linux プロジェクトに関する詳細については、「[Linux CMake プロジェクトを構成する](cmake-linux-project.md)」を参照してください。
+このトピックでは、Visual Studio で C++ Linux プロジェクトを構成する方法について説明します。 Visual Studio の CMake Linux プロジェクトに関する詳細については、「[Linux CMake プロジェクトを構成する](cmake-linux-project.md)」を参照してください。
 
 ## <a name="general-settings"></a>全般設定
 Visual Studio で Linux プロジェクトに対して、さまざまなオプションを構成することができます。  これらのオプションを表示するには、**[プロジェクト]、[プロパティ]** メニューの順に選択するか、次のように、**ソリューション エクスプローラー**でプロジェクトを右クリックし、コンテキスト メニューから **[プロパティ]** を選択します。 **[全般]** 設定が表示されます。

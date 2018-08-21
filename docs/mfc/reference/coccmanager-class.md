@@ -62,8 +62,7 @@ class COccManager : public CNoTrackObject
   
 |名前|説明|  
 |----------|-----------------|  
-|[COccManager::CreateContainer](#createcontainer)|
-          `COleContainer` オブジェクトを作成します。|  
+|[COccManager::CreateContainer](#createcontainer)|`COleContainer` オブジェクトを作成します。|  
 |[COccManager::CreateDlgControls](#createdlgcontrols)|関連付けられているによってホストされている、ActiveX コントロールを作成します`COleContainer`オブジェクト。|  
 |[COccManager::CreateSite](#createsite)|`COleClientSite` オブジェクトを作成します。|  
 |[COccManager::GetDefBtnCode](#getdefbtncode)|既定のボタンのコードを取得します。|  

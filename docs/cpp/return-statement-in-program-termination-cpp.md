@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb594eb10e8068d5f5b3ed124d5e77b48ced728e
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 6c08edff8237462cbc2c55dc5541e3da663ed0a3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943146"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461114"
 ---
 # <a name="return-statement-in-program-termination-c"></a>プログラム終了時の return ステートメント (C++)
-発行、`return`ステートメントから**メイン**呼び出しと同じ機能が、**終了**関数。 次に例を示します。  
+発行、**返す**ステートメントから`main`呼び出しと同じ機能が、`exit`関数。 次に例を示します。  
   
 ```cpp 
 // return_statement.cpp  
@@ -36,7 +36,7 @@ int main()
 }  
 ```  
   
- **終了**と**返す**前の例のステートメントは機能的に同じです。 ただし、C++ を持つ関数が以外の型を返す必要**void**値を返します。 **返す**ステートメントを使用するから値を返す`main`します。  
+ `exit`と**返す**前の例のステートメントは機能的に同じです。 ただし、C++ を持つ関数が以外の型を返す必要**void**値を返します。 **返す**ステートメントを使用するから値を返す`main`します。  
   
 ## <a name="see-also"></a>関連項目  
  [プログラムの終了](../cpp/program-termination.md)

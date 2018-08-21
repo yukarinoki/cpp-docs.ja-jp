@@ -1,5 +1,5 @@
 ---
-title: Chaininterfaces::casttounknown メソッド |Microsoft ドキュメント
+title: Chaininterfaces::casttounknown メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 696d632037f2a1fdc68e298b247e46720b81a343
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 45cc86c873e7c45a7352f0035b2fd16e312e7c6c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855095"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644447"
 ---
 # <a name="chaininterfacescasttounknown-method"></a>ChainInterfaces::CastToUnknown メソッド
-によって定義された型のインターフェイス ポインターにキャスト、 `I0` IUnknown へのポインターをテンプレート パラメーター。  
+によって定義された型のインターフェイス ポインターをキャスト、 *I0*へのポインターをテンプレート パラメーター`IUnknown`します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 __forceinline IUnknown* CastToUnknown();  
 ```  
   
 ## <a name="return-value"></a>戻り値  
- IUnknown へのポインター。  
+ ポインター`IUnknown`します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** implements.h  

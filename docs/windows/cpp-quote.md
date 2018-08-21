@@ -1,5 +1,5 @@
 ---
-title: cpp_quote |Microsoft ドキュメント
+title: cpp_quote |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,38 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38ecabcde55f49687abf7caff66fb2c316fab0fe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 21f986e227e9daca58731d03c40d6dae5b0c0a80
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871163"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653041"
 ---
 # <a name="cppquote"></a>cpp_quote
 生成された .idl ファイルに、引用符なしの指定した文字列を出力します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
-      [ cpp_quote(  
+```cpp  
+[ cpp_quote(  
    "statement"  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *statement*  
- C 命令です。  
+ C 命令。  
   
-## <a name="remarks"></a>コメント  
- **Cpp_quote** C++ 属性は、.idl ファイルのプリプロセッサ ディレクティブを配置する場合に便利です。  
+## <a name="remarks"></a>Remarks  
+ **Cpp_quote** C++ 属性は、.idl ファイル内のプリプロセッサ ディレクティブを配置する場合に便利です。  
   
- 使用することも**cpp_quote** MIDL コンパイルの一部として、.h ファイルを生成します。 たとえば、C の IDL 属性を使用していて、一部のタスクのこのファイルを使用することはできません、C++ ヘッダー ファイルがある場合は、しをコンパイルできますを使用することができます、MIDL で生成された .h ファイルを作成するためにします。  
+ 使用することも**cpp_quote** MIDL コンパイルの一部として、.h ファイルを生成します。 たとえば、C の IDL 属性を使用していて、このファイルをいくつかのタスクを使用することはできません、C++ ヘッダー ファイルがある場合は、しをコンパイルできますを使用できる MIDL で生成された .h ファイルを作成すること。  
   
  **Cpp_quote**属性と同じ機能を持つ、 [cpp_quote](http://msdn.microsoft.com/library/windows/desktop/aa366765) MIDL 属性。  
   
 ## <a name="example"></a>例  
- 例を参照して[デュアル](../windows/dual.md)例については、使用する方法を使用して**cpp_quote**です。  
+ 例をご覧ください[デュアル](../windows/dual.md)例については、使用する方法を使用して、 **cpp_quote**します。  
   
 ## <a name="requirements"></a>要件  
   
@@ -57,7 +56,7 @@ ms.locfileid: "33871163"
 |||  
 |-|-|  
 |**対象**|任意の場所|  
-|**反復可能**|×|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

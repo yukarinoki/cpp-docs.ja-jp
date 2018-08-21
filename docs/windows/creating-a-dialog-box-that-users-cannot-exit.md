@@ -1,5 +1,5 @@
 ---
-title: ユーザーが終了できないダイアログ ボックスの作成 |Microsoft ドキュメント
+title: ユーザーに終了できないダイアログ ボックスの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc04c9ccfb0fdc74e57142bf746681411bbba495
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b176fbc4e420c08a2262b532cf1310ada56c978a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33884464"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644181"
 ---
 # <a name="creating-a-dialog-box-that-users-cannot-exit"></a>ユーザーが終了できないダイアログ ボックスの作成
 ユーザーには終了できない実行時ダイアログ ボックスを作成できます。 この種のダイアログ ボックスはログオンの場合や、アプリケーションやドキュメントをロックする場合に便利です。  
@@ -37,12 +37,12 @@ ms.locfileid: "33884464"
   
      実行時にユーザーはこれらの特性を持つモーダル ダイアログ ボックスを終了できません。  
   
- この種のダイアログ ボックスをテストできるようにするため、Esc キーが押されると、ダイアログ ボックスのテスト機能がそれを検出します。 (Esc キーは、VK_ESCAPE 仮想キーとも呼ばれます。)実行時にどのように動作するよう設計されているかに関わりなく、テスト モードで Esc キーを押すとダイアログ ボックスは終了します。  
+ この種のダイアログ ボックスのテストを有効にする ダイアログ ボックスのテスト機能を検出ときに**Esc**が押されました。 (**Esc** VK_ESCAPE 仮想キーとも呼ばれます)。実行時の動作 ダイアログ ボックスの設計方法に関係なく終了できますテスト モードでキーを押して**Esc**します。  
   
 > [!NOTE]
->  MFC アプリケーションの場合、ユーザーが終了できないダイアログ ボックスを作成するには、 `OnOK` ボタンと `OnCancel` の既定の動作をオーバーライドする必要があります。それらに関連付けられたボタンを削除しても、Enter キーまたは Esc キーを押せばダイアログ ボックスを終了できるためです。  
+>  MFC アプリケーションの場合にユーザーが終了できないダイアログ ボックスを作成する必要があります動作をオーバーライドする、既定の`OnOK`と`OnCancel`に関連付けられたボタンを削除する場合でもダイアログ ボックスはキーを押しても閉じることができますので**入力**または**Esc**します。  
   
- マネージ プロジェクトにリソースを追加する方法については、次を参照してください。[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)です。  
+ マネージ プロジェクトにリソースを追加する方法については、次を参照してください。 [Resources in Desktop Apps](/dotnet/framework/resources/index)します。  
   
 ## <a name="requirements"></a>要件  
  Win32  
@@ -51,4 +51,3 @@ ms.locfileid: "33884464"
  [方法: リソースの作成](../windows/how-to-create-a-resource.md)   
  [リソース ファイル (Visual Studio)](../windows/resource-files-visual-studio.md)   
  [ダイアログ エディター](../windows/dialog-editor.md)
-

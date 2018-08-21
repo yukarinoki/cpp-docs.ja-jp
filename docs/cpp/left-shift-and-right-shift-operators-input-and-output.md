@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6f38b5ec30626f73ab3681f674fb39c5492eb49
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 50a177468795ae0e288910fa51192d9cc9a24502
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939731"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403155"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>左 shift キーおよび右シフト演算子 (&gt; &gt;と&lt; &lt;)
 ビット処理シフト演算子は、右シフト演算子 (>>) のビットを移動する*シフト式*に右と左シフト演算子 (<<) のビットを移動する*をシフト式*左にします。 <sup>1</sup>  
@@ -66,7 +66,6 @@ int main() {
     bitset<16> bitset3{short3};  
     cout << bitset3 << endl;  // 0000000000010000  
 }  
-  
 ```  
   
  符号付き数値をシフトして符号ビットが影響を受ける場合、結果は未定義です。 次の例では、符号ビットの位置まで 1 ビット左にシフトしたときに Visual C でどうなるかを示しています。  

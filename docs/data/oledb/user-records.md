@@ -1,5 +1,5 @@
 ---
-title: ユーザー レコード |Microsoft ドキュメント
+title: ユーザー レコード |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,21 +26,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aea6b4b2ebb1a02e4ef669b437fbe7eb30937f9b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8e9549070acf08e566110ea30f4a0259caeca047
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33109808"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339673"
 ---
 # <a name="user-records"></a>ユーザー レコード
-静的アクセサーを使用する (から派生したアクセサー **CAccessor)**、コンシューマー ユーザー レコードが存在する必要があります。 ユーザー レコードは、入力を処理または出力のデータ要素を含む C++ クラスです。 ATL OLE DB コンシューマー ウィザードでは、コンシューマーにユーザー レコードが生成されます。 メソッドは、コマンドの処理などのオプションのタスクのユーザー レコードを追加できます。  
+静的アクセサーを使用する (から派生したアクセサー `CAccessor`)、コンシューマーはユーザー レコードが存在する必要があります。 ユーザー レコードは、ハンドルの入力または出力するデータ要素を含む C++ クラスです。 ATL OLE DB コンシューマー ウィザードでは、コンシューマーのユーザー レコードを生成します。 メソッドは、コマンドの処理などのオプションのタスクのユーザー レコードを追加できます。  
   
- 次のコードでは、コマンドを処理するサンプル レコードを示します。 ユーザー レコードの`BEGIN_COLUMN_MAP`プロバイダーからコンシューマーに渡されるデータ行セットを表します。 `BEGIN_PARAM_MAP` コマンド パラメーターのセットを表します。 この例では、 [CCommand](../../data/oledb/ccommand-class.md)コマンドのパラメーターを処理するクラス。 マップ エントリのデータ メンバーは、1 つの連続するクラスのインスタンスごとにメモリ ブロックのオフセットを表します。 `COLUMN_ENTRY`マクロに対応している、`PROVIDER_COLUMN_ENTRY`プロバイダー側でマクロです。  
+ 次のコードでは、コマンドを処理するサンプル レコードを示します。 ユーザーのレコードでは、BEGIN_COLUMN_MAP は、プロバイダーからコンシューマーに渡されるデータ行セットを表します。 BEGIN_PARAM_MAP では、コマンド パラメーターのセットを表します。 この例では、 [CCommand](../../data/oledb/ccommand-class.md)コマンドのパラメーターを処理するクラス。 マップ エントリのデータ メンバーは、1 つの連続したクラスのインスタンスごとにメモリ ブロックのオフセットを表します。 COLUMN_ENTRY マクロは、プロバイダー側で PROVIDER_COLUMN_ENTRY マクロに対応します。  
   
- 詳細については、 **COLUMN_MAP**と**PARAM_MAP**マクロを参照してください[OLE DB コンシューマー テンプレート用マクロ](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)です。  
+ COLUMN_MAP と PARAM_MAP マクロの詳細については、次を参照してください。 [OLE DB コンシューマー テンプレート用マクロ](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)します。  
   
-```  
+```cpp  
 class CArtists  
 {  
 public:  
@@ -64,14 +64,14 @@ END_PARAM_MAP()
 ```  
   
 ## <a name="wizard-generated-user-records"></a>ウィザードで生成されたユーザー レコード  
- コンシューマーを生成する ATL OLE DB コンシューマー ウィザードを使用する場合は、OLE DB テンプレートまたは OLE DB 属性を使用する選択肢があります。 生成されたコードは、各ケースで異なります。 このコードの詳細については、次を参照してください。[コンシューマー クラス](../../data/oledb/consumer-wizard-generated-classes.md)です。  
+ ATL OLE DB コンシューマー ウィザードを使用してコンシューマーを生成する場合がある場合の OLE DB テンプレートまたは OLE DB 属性を使用して選択します。 生成されたコードでは、各ケースで異なります。 このコードの詳細については、次を参照してください。[コンシューマー クラス](../../data/oledb/consumer-wizard-generated-classes.md)します。  
   
-## <a name="user-record-support-for-multiple-accessors"></a>ユーザー レコードの複数アクセサーのサポート  
- 複数のアクセサーを使用する必要があるシナリオの詳細については、次を参照してください。[行セットでの複数のアクセサーを使用して](../../data/oledb/using-multiple-accessors-on-a-rowset.md)です。  
+## <a name="user-record-support-for-multiple-accessors"></a>複数のアクセサーのユーザー レコードのサポート  
+ 複数のアクセサーを使用する必要があるシナリオの詳細については、次を参照してください。[行セットでの複数のアクセサーを使用して](../../data/oledb/using-multiple-accessors-on-a-rowset.md)します。  
   
- 次の例では、ユーザー レコードが、行セットで複数のアクセサーをサポートするように変更を示します。 代わりに`BEGIN_COLUMN_MAP`と`END_COLUMN_MAP`を使用して[BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)と[BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)アクセサーごとにします。 `BEGIN_ACCESSOR`マクロは、アクセサーの数 (0 からのオフセット) および、アクセサーが自動でかどうかを指定します。 Autoaccessors 呼び出し`GetData`データへの呼び出しを自動的に取得する[MoveNext](../../data/oledb/crowset-movenext.md)です。 非自動アクセサーでは、明示的にデータを取得する必要があります。 すべてのレコードを取得するたくない (ビットマップ イメージ) のような大規模なデータ フィールドにバインドする場合は、非自動アクセサーを使用します。  
+ 次の例では、行セットに対して複数のアクセサーをサポートするように変更するユーザー レコードを示します。 BEGIN_COLUMN_MAP と END_COLUMN_MAP、代わりに使用して[BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)と[BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)各アクセサー。 BEGIN_ACCESSOR マクロでは、アクセサーの数 (0 からのオフセット) および、アクセサーが自動でかどうかを指定します。 Autoaccessors 呼び出し`GetData`への呼び出しで自動的にデータを取得する[MoveNext](../../data/oledb/crowset-movenext.md)します。 非自動アクセサーでは、明示的にデータを取得する必要があります。 すべてのレコードを取得するたくない (ビットマップ イメージなどの大規模なデータ フィールドにバインドしている場合は、非自動アクセサーを使用します。  
   
-```  
+```cpp  
 class CMultiArtists  
 {  
 public:  

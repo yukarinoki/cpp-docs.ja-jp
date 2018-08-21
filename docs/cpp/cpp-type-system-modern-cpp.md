@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c8df38f1869ab4c3b8e80101ca4dbbc27f9018e
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 5b5a91caab06f4d03beeea8ba542e1ebc12a8ecb
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027275"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407862"
 ---
 # <a name="c-type-system-modern-c"></a>C++ 型システム (Modern C++)
 概念*型*C++ では非常に重要です。 変数、関数の引数、関数の戻り値をコンパイルするには、それぞれに型が必要です。 さらに、すべての式 (リテラル値を含む) には、評価前にコンパイラーにより暗黙的に型が指定されます。 型の例を示します**int**整数の値を格納する**二重**浮動小数点値を格納する (とも呼ばれます*スカラー*データ型)、または標準ライブラリ クラス[std::basic_string](../standard-library/basic-string-class.md)テキストを格納します。 定義することで、独自の型を作成することができます、**クラス**または**構造体**します。 型は、変数 (または式の結果) に割り当てられるメモリの量、その変数に格納される値の種類、それらの値の解釈方法 (ビット パターンとして)、その型で実行可能な操作を指定します。 ここでは、C++ の型システムの主な機能の概要を示します。  
@@ -41,7 +41,6 @@ ms.locfileid: "39027275"
  次の例は、それぞれ記述を含む、いくつかの簡単な変数宣言を示しています。 この例は、コンパイラが型情報を使用して、特定の後続の処理を許可または拒否する方法も示しています。  
   
 ```cpp  
-  
 int result = 0;              // Declare and initialize an integer.  
 double coefficient = 10.8;   // Declare and initialize a floating   
                              // point value.  
@@ -56,7 +55,6 @@ string result = "zero";      // error. Can’t redefine a variable with
                              // new type.  
 int maxValue;                // Not recommended! maxValue contains   
                              // garbage bits until it is initialized.  
-  
 ```  
   
 ## <a name="fundamental-built-in-types"></a>基本 (組み込み) 型  
@@ -96,10 +94,10 @@ PI = .75 //Error. Cannot modify const variable.
   
  **Const**修飾子は関数と変数の宣言で広く使用されて、「const の正確性」は、C++ の重要な概念と使用する場合は、基本的に; **const**を確実に、コンパイル時に、ある値が誤って変更されません。 詳細については、次を参照してください。 [const](../cpp/const-cpp.md)します。  
   
- A **const**型は、非定数のバージョンの異なるなど`const int`から別個の型は、 **int**します。C++ を使用する**const_cast**演算子を削除する必要がありますと特殊な状況に*const 性*変数から。 詳細については、次を参照してください。[型変換とタイプ セーフ](../cpp/type-conversions-and-type-safety-modern-cpp.md)します。  
+ A **const**型は、非定数のバージョンの異なるなど**const int**から別個の型は、 **int**します。C++ を使用する**const_cast**演算子を削除する必要がありますと特殊な状況に*const 性*変数から。 詳細については、次を参照してください。[型変換とタイプ セーフ](../cpp/type-conversions-and-type-safety-modern-cpp.md)します。  
   
 ## <a name="string-types"></a>文字列型  
- 厳密に言えば、C++ 言語には組み込みの文字列型がありません。**char**と`wchar_t`1 つの文字を格納 - 終端の null 値を追加する、文字列を概算するこれらの型の配列を宣言する必要があります (たとえば、ASCII `'\0'`) 過去の最後の 1 つ配列要素に無効です文字 (とも呼ばれる、 *C スタイル文字列*)。 C スタイル文字列では、かなり多くのコードを記述するか、外部文字列ユーティリティ ライブラリ関数を使用する必要がありました。 最新の c++ 標準ライブラリの型があるが、 `std::string` (8 ビットの**char**-文字列を入力) または`std::wstring`(16 ビットの`wchar_t`-文字列を入力)。 準拠の C++ ビルド環境に含まれている標準ライブラリの一部であるために、これらの C++ 標準ライブラリ コンテナーのネイティブの文字列型として考えることができます。 `#include <string>` ディレクティブを使用するだけで、これらの型をプログラムで使用できるようになります  (MFC や ATL を使用している場合、CString クラスも使用できますが、C++ の標準の一部ではありません)。null で終わる文字配列 (前述の C スタイル文字列) は、最新の C++ では使用しないことを強くお勧めします。  
+ 厳密に言えば、C++ 言語には組み込みの文字列型がありません。**char**と**wchar_t** 1 つの文字を格納 - 終端の null 値を追加する、文字列を概算するこれらの型の配列を宣言する必要があります (たとえば、ASCII `'\0'`)、配列要素を 1 つに最後の有効な文字 (とも呼ばれる、 *C スタイル文字列*)。 C スタイル文字列では、かなり多くのコードを記述するか、外部文字列ユーティリティ ライブラリ関数を使用する必要がありました。 最新の c++ 標準ライブラリの型があるが、 `std::string` (8 ビットの**char**-文字列を入力) または`std::wstring`(16 ビットの**wchar_t**-文字列を入力)。 準拠の C++ ビルド環境に含まれている標準ライブラリの一部であるために、これらの C++ 標準ライブラリ コンテナーのネイティブの文字列型として考えることができます。 `#include <string>` ディレクティブを使用するだけで、これらの型をプログラムで使用できるようになります  (MFC や ATL を使用している場合、CString クラスも使用できますが、C++ の標準の一部ではありません)。null で終わる文字配列 (前述の C スタイル文字列) は、最新の C++ では使用しないことを強くお勧めします。  
   
 ## <a name="user-defined-types"></a>ユーザー定義型  
  定義するときに、**クラス**、**構造体**、**共用体**、または**enum**、基本型の場合と同様に、その構成要素が、コードの残りの部分で使用されます. メモリ内には既知のサイズがあり、コンパイル時のチェックを要求し、実行時にプログラムの有効期間を問い合わせるために使用する方法に関する一定の規則もあります。 基本の組み込み型とユーザー定義型の主な相違点は次のとおりです。  
@@ -116,19 +114,16 @@ PI = .75 //Error. Cannot modify const variable.
  まず知る必要がある点は、生のポインター変数を宣言すると、ポインターが逆参照されるときに参照するメモリ位置のアドレスを格納するのに必要なメモリだけが割り当てられるという点です。 データ値自体のメモリの割り当て (とも呼ばれる*バッキング ストア*) がまだ割り当てられていません。 言い換えると、生のポインター変数を宣言することで、実際のデータの変数ではなくメモリ アドレスの変数を作成することになります。 バッキング ストアへの有効なアドレスが含まれることを確認する前にポインター変数を逆参照すると、プログラムで定義されていない動作 (通常は重大なエラー) が発生します。 この種のエラーの例を次に示します。  
   
 ```cpp  
-  
 int* pNumber;       // Declare a pointer-to-int variable.  
 *pNumber = 10;      // error. Although this may compile, it is  
                     // a serious error. We are dereferencing an  
                     // uninitialized pointer variable with no  
                     // allocated memory to point to.  
-  
 ```  
   
  この例では、実際の整数データまたはそこに割り当てられた有効なメモリ アドレスを格納するメモリを割り当てずに、ポインター型を逆参照しています。 このエラーを修正するコード例を次に示します。  
   
 ```cpp  
-  
     int number = 10;          // Declare and initialize a local integer  
                               // variable for data backing store.  
     int* pNumber = &number;   // Declare and initialize a local integer  
@@ -140,7 +135,6 @@ int* pNumber;       // Declare a pointer-to-int variable.
                               // pNumber, the integer variable called  
                               // "number". Note "number" was changed, not  
                               // "pNumber".  
-  
 ```  
   
  修正後のコード例では、ローカル スタック メモリを使用して、`pNumber` がポイントするバッキング ストアを作成します。 ここでは、説明を簡単にするために基本型を使用しています。 実際には、ポインターのバッキング ストアが動的に割り当てられたと呼ばれるメモリ領域にはほとんどの多くの場合、ユーザー定義型、*ヒープ*(または*フリー ストア*) を使用して、**新しい**キーワード式 (C スタイルのプログラミングでは、古い`malloc()`C ランタイム ライブラリ関数が使用されました)。 割り当てられると、これらの変数は、通常はオブジェクトと呼ば、特にクラス定義に基づいている場合。 使用が割り当てられたメモリ**新しい**、対応する削除する必要があります**削除**ステートメント (または、使用する場合、`malloc()`関数が、C ランタイム関数を割り当てる`free()`)。  
@@ -148,14 +142,12 @@ int* pNumber;       // Declare a pointer-to-int variable.
  ただし、削除を動的に割り当てられたオブジェクトの複雑なコードと呼ばれるリソース バグの原因で特にし忘れることは、*メモリ リーク*します。 したがって、最新の C++ では生のポインターを使用しないことを強くお勧めします。 生のポインターをラップする方が適切ではほぼ常に、[スマート ポインター](../cpp/smart-pointers-modern-cpp.md)が自動的にメモリを解放します (この場合、コードがスマート ポインターのスコープ外になる)、デストラクターが呼び出される; スマート ポインターを使用してする事実上C++ プログラムでバグのクラス全体を削除します。 次の例では、`MyClass` がパブリック メソッド `DoSomeWork();` を持つユーザー定義型であることを前提としています。  
   
 ```cpp  
-  
 void someFunction() {  
     unique_ptr<MyClass> pMc(new MyClass);  
     pMc->DoSomeWork();  
 }  
   // No memory leak. Out-of-scope automatically calls the destructor  
   // for the unique_ptr, freeing the resource.  
-  
 ```  
   
  スマート ポインターの詳細については、次を参照してください。[スマート ポインター](../cpp/smart-pointers-modern-cpp.md)します。  

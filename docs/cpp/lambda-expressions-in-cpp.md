@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8457371ef266c5628e225eff8f05328190e52d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7c7b6d49ae82048d5223eea385f1503c28a990ed
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941968"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402966"
 ---
 # <a name="lambda-expressions-in-c"></a>C++ でのラムダ式
 C++ 11 以降では、ラムダ式: と呼ばれます、*ラムダ*— は無名関数オブジェクトを定義するのに便利です (、*クロージャ*) 呼び出される、または引数として渡された場所で関数。 一般に、ラムダは、アルゴリズムまたは非同期のメソッドに渡される数行のコードをカプセル化するために使用されます。 ここでは、ラムダとはどのようなものかを定義して他のプログラミング手法と比較した上で、その利点を説明し、基本的な例を示します。  
@@ -46,7 +46,6 @@ void abssort(float* x, unsigned n) {
         } // end of lambda expression  
     );  
 }  
-  
 ```  
   
  次の図は、ラムダのパーツを示しています。  
@@ -107,7 +106,7 @@ void f(Args... args) {
 }  
 ```  
   
- クラスのメソッドの本体でラムダ式を使用するには、`this` ポインターを capture 句に渡して、メソッドと外側のクラスのデータ メンバーにアクセスできるようにします。 
+ クラスのメソッドの本体でラムダ式を使用するには**この**外側のクラスのメソッドとデータ メンバーにアクセスを提供する capture 句へのポインター。 
  
 **Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)):**この**ポインターを指定することで値によってキャプチャされる可能性があります`*this`capture 句でします。 値でキャプチャすることで全体*クロージャ*、無名関数オブジェクトをその encapulates ラムダ式は、ラムダが呼び出されるすべての呼び出しサイトにコピーされます。 値によってキャプチャは、ラムダは、NUMA などの特定のハードウェア アーキテクチャで特に並列または非同期の操作で実行する場合に便利です。 
 
@@ -141,8 +140,7 @@ pNums = make_unique<vector<int>>(nums);
 auto y = [] (int first, int second)  
 {  
     return first + second;  
-};  
-  
+};   
 ```  
   
  **C++ 14**パラメーターの型がジェネリックの場合は、型指定子として auto キーワードを使用できます。 これにより、コンパイラにテンプレートとして関数呼び出し演算子を作成するように指示します。 パラメーター リストの auto の各インスタンスは、別個の型パラメーターと同等です。  
@@ -340,7 +338,6 @@ vector v after 2nd call to fillVector(): 10 11 12 13 14 15 16 17 18
     {
         return [n] { return n + 1; }();
     }
-
 ``` 
 ラムダは暗黙的に`constexpr`その結果の要件を満たしている場合、`constexpr`関数。
 ```cpp

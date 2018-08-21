@@ -1,5 +1,5 @@
 ---
-title: AsyncResultType 列挙型 |Microsoft ドキュメント
+title: AsyncResultType 列挙型 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: de4a8465dd61e52425a0335e171cf516591ae589
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7989f28ae9c9e3af4c73ec454487d34dd7cff570
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863310"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644756"
 ---
 # <a name="asyncresulttype-enumeration"></a>AsyncResultType 列挙型
-GetResults() メソッドによって返される結果の型を指定します。  
+によって返される結果の種類を指定します、`GetResults()`メソッド。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 enum AsyncResultType;  
 ```  
   
@@ -39,8 +39,8 @@ enum AsyncResultType;
   
 |名前|説明|  
 |----------|-----------------|  
-|`MultipleResults`|開始状態の間で、Close() を呼び出す前に、段階的に記載されている複数の結果のセット。|  
-|`SingleResult`|1 つの結果、完全なイベントの発生後に表示されます。|  
+|`MultipleResults`|一連の間で段階的に表示されますが、複数の結果`Start`状態とする前に`Close()`が呼び出されます。|  
+|`SingleResult`|後に示す 1 つの結果、`Complete`イベントが発生します。|  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** async.h  

@@ -1,5 +1,5 @@
 ---
-title: Comptrref::comptrref コンス トラクター |Microsoft ドキュメント
+title: Comptrref::comptrref コンス トラクター |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d738d6d00a3ca4c344bcea37b09db7e9c494b50b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 621f852728cb40ea88a916b37147c28d8bb0db38
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870660"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644463"
 ---
 # <a name="comptrrefcomptrref-constructor"></a>ComPtrRef::ComPtrRef コンストラクター
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 ComPtrRef(  
    _In_opt_ T* ptr  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `ptr`  
- ComPtrRef オブジェクトを別の基になる値です。  
+### <a name="parameters"></a>パラメーター  
+ *ptr*  
+ 別の基になる値**ComPtrRef**オブジェクト。  
   
-## <a name="remarks"></a>コメント  
- 別の ComPtrRef オブジェクトを指定したポインターから ComPtrRef クラスの新しいインスタンスを初期化します。  
+## <a name="remarks"></a>Remarks  
+ 新しいインスタンスを初期化、 **ComPtrRef**クラス、指定されたポインター **ComPtrRef**オブジェクト。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** client.h  

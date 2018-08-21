@@ -1,5 +1,5 @@
 ---
-title: ComposableBase クラス |Microsoft ドキュメント
+title: ComposableBase クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,27 +15,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1bea67bd87e4ca9a63b7fc5d00a8d49d04647440
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 501f2d8a8747e631c108f0f02f4ed876d912b70e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854851"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648490"
 ---
 # <a name="composablebase-class"></a>ComposableBase クラス
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<  
    typename FactoryInterface = IInspectable  
 >  
 class ComposableBase;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `FactoryInterface`  
-  
-## <a name="remarks"></a>コメント  
+### <a name="parameters"></a>パラメーター  
+ *FactoryInterface*  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** implements.h  

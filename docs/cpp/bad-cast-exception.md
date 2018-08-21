@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b50995ff1d5eb730bf6593679194d32d5300b9d7
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 8a37ae011ec2f06a505063678f481e6e41696c86
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943138"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401368"
 ---
 # <a name="badcast-exception"></a>bad_cast 例外
-`bad_cast` 例外は、参照型へのキャストが失敗した結果として `dynamic_cast` 演算子によってスローされます。  
+**Bad_cast**によって例外がスローされた、 **dynamic_cast**参照型へのキャストが失敗の結果として演算子。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,7 +36,7 @@ catch (bad_cast)
 ```  
   
 ## <a name="remarks"></a>Remarks  
- `bad_cast` のインターフェイスは次のとおりです。  
+ インターフェイスを**bad_cast**は。  
   
 ```cpp 
 class bad_cast : public exception {  
@@ -47,7 +47,7 @@ public:
 };  
 ```  
   
- 次のコードには、`dynamic_cast` 例外をスローする、失敗した `bad_cast` の例が含まれます。  
+ 次のコードは、失敗した例を含む**dynamic_cast**がスローされます、 **bad_cast**例外。  
   
 ```cpp 
 // expre_bad_cast_Exception.cpp  
@@ -78,7 +78,7 @@ int main() {
 }  
 ```  
   
- キャストされているオブジェクト (Shape) が、指定したキャスト型 (Circle) から派生していないため、例外がスローされます。 例外を回避するには、これらの宣言を追加**メイン**:  
+ キャストされているオブジェクト (Shape) が、指定したキャスト型 (Circle) から派生していないため、例外がスローされます。 例外を回避するには、`main` に次の宣言を追加します。  
   
 ```cpp 
 Circle circle_instance;  

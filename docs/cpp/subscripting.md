@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a55aca3abe95d189c40c7571db39fc48edf5f4cc
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c278c39908312f76a8b62a529beaed884c07a81d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943540"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461521"
 ---
 # <a name="subscripting"></a>添字演算子 
 添字演算子 (**[]**) と同様、関数呼び出し演算子は二項演算子と見なされます。 添字演算子は 1 つの引数を受け取る非静的メンバー関数である必要があります。 この引数は任意の型にでき、目的の配列の添字を指定します。  
@@ -98,9 +98,9 @@ Element: [10] = 10
 ```  
   
 ## <a name="comments"></a>コメント  
- 前のプログラムで `i` が 10 に達すると、`operator[]` は境界外の添字が使用されていることを検出して、エラー メッセージを発行します。  
+ ときに`i`が前のプログラムで 10 に達すると**operator[]** ことが検出境界外添字が使用されていると、エラー メッセージを発行します。  
   
- 関数 `operator[]` は参照型を返すことに注意してください。 これにより、これが左辺値になり、代入演算子の両側で添字式を使用できるようになります。  
+ なお、関数**演算子**参照型を返します。 これにより、これが左辺値になり、代入演算子の両側で添字式を使用できるようになります。  
   
 ## <a name="see-also"></a>関連項目  
  [演算子のオーバーロード](../cpp/operator-overloading.md)

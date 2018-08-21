@@ -1,5 +1,5 @@
 ---
-title: Eventsource::eventsource コンス トラクター |Microsoft ドキュメント
+title: Eventsource::eventsource コンス トラクター |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fb1cbab4c53b66f66fd79f28729230f16eb2482c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f1e3d250fe4365b9701485457393b85f1c55464e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872420"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649576"
 ---
 # <a name="eventsourceeventsource-constructor"></a>EventSource::EventSource コンストラクター
-EventSource クラスの新しいインスタンスを初期化します。  
+新しいインスタンスを初期化、 **EventSource**クラス。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 EventSource();  
 ```  
   

@@ -1,5 +1,5 @@
 ---
-title: 属性のプログラミングの FAQ |Microsoft ドキュメント
+title: 属性プログラミングの FAQ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,55 +17,55 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 35b57c8813778cf0bbf8efbfcbee8466074b87f0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cd89a2a46535c145e4ef6f84cee0b5604346f4b2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862365"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645202"
 ---
 # <a name="attribute-programming-faq"></a>属性プログラミングの FAQ
-このトピックは、以下のよく寄せられる質問に回答します。  
+このトピックでは、次のよく寄せられる質問に回答します。  
   
--   [HRESULT は何ですか。](#vcconattributeprogrammmingfaqanchor1)  
+-   [HRESULT とは何ですか。](#vcconattributeprogrammmingfaqanchor1)  
   
--   [属性のパラメーター名の指定がある場合](#vcconattributeprogrammmingfaqanchor2)  
+-   [属性のパラメーター名を指定するがある場合をでしょうか。](#vcconattributeprogrammmingfaqanchor2)  
   
 -   [属性ブロックでコメントを使用できますか。](#vcconattributeprogrammmingfaqanchor3)  
   
--   [継承と属性が対話する方法](#vcconattributeprogrammmingfaqanchor4)  
+-   [継承を持つ属性の操作方法](#vcconattributeprogrammmingfaqanchor4)  
   
--   [属性なしの ATL プロジェクトでの属性を使用する方法は?](#vcconattributeprogrammmingfaqanchor5)  
+-   [属性なしの ATL プロジェクトで属性を使用する方法は?](#vcconattributeprogrammmingfaqanchor5)  
   
 -   [属性付きプロジェクトに .idl ファイルを使用する方法は?](#vcconattributeprogrammmingfaqanchor6)  
   
--   [属性によって挿入されたコードを変更できますか。](#vcconattributeprogrammmingfaqanchor7)  
+-   [属性によって挿入されるコードを変更できますか。](#vcconattributeprogrammmingfaqanchor7)  
   
--   [転送を宣言する方法、属性付きインターフェイスしますか。](#vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface)  
+-   [前方宣言方法属性付きインターフェイスか。](#vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface)  
   
--   [属性を使用するクラスから派生したクラスで属性を使用することができますか。](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)  
+-   [属性を使用するクラスから派生したクラスで属性を使用できますか。](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)  
   
-##  <a name="vcconattributeprogrammmingfaqanchor1"></a> HRESULT は何ですか。  
- `HRESULT`は多くの場合、使用される戻り値として属性と ATL で一般に単純なデータ型です。 次の表では、さまざまな値について説明します。 ヘッダー ファイル winerror.h には、多くの値が含まれています。  
+##  <a name="vcconattributeprogrammmingfaqanchor1"></a> HRESULT とは何ですか。  
+ HRESULT は、多くの場合、使用される戻り値として属性および ATL によって一般に単純なデータ型です。 次の表では、さまざまな値について説明します。 多くの値は、ヘッダー ファイルの winerror.h に格納されます。  
   
-|名前|説明|[値]|  
+|name|説明|[値]|  
 |----------|-----------------|-----------|  
-|S_OK|処理は成功しました|0x00000000|  
+|S_OK|操作に成功しました|0x00000000|  
 |E_UNEXPECTED|予期しないエラー|0x8000FFFF|  
 |E_NOTIMPL|実装されていません|0x80004001|  
 |E_OUTOFMEMORY|必要なメモリを割り当てられませんでした。|0x8007000E|  
-|E_INVALIDARG|1 つまたは複数の引数が有効ではありません。|0x80070057|  
-|E_NOINTERFACE|インターフェイスがサポートされています。|0x80004002|  
+|E_INVALIDARG|1 つまたは複数の引数が無効です。|0x80070057|  
+|E_NOINTERFACE|インターフェイスがサポートされています|0x80004002|  
 |E_POINTER|無効なポインター|0x80004003|  
 |E_HANDLE|ハンドルが無効です。|0x80070006|  
-|E_ABORT|操作は中止されました|0x80004004|  
-|E_FAIL|特定できないエラー|0x80004005|  
+|E_ABORT|操作が中断されました|0x80004004|  
+|E_FAIL|不特定のエラー|0x80004005|  
 |E_ACCESSDENIED|アクセス拒否エラー|0x80070005|  
   
-##  <a name="vcconattributeprogrammmingfaqanchor2"></a> 属性のパラメーター名の指定がある場合  
- ほとんどの場合、属性が 1 つのパラメーターを持つ場合、そのパラメーターは名前です。 コード内の属性を挿入するときに、この名前は必要ありません。 次の使用法など、[集約可能](../windows/aggregatable.md)属性。  
+##  <a name="vcconattributeprogrammmingfaqanchor2"></a> 属性のパラメーター名を指定するがある場合をでしょうか。  
+ は、ほとんどの場合、属性が 1 つのパラメーターを持つ場合、そのパラメーターが名前します。 コードで属性を挿入するときに、この名前は必要ありません。 次の使用法など、[集約可能](../windows/aggregatable.md)属性。  
   
-```  
+```cpp  
 [coclass, aggregatable(value=allowed)]  
 class CMyClass  
 {  
@@ -73,9 +73,9 @@ class CMyClass
 };  
 ```  
   
- まったく同じであるとします。  
+ 正確と同じです。  
   
-```  
+```cpp  
 [coclass, aggregatable(allowed)]  
 class CMyClass  
 {  
@@ -96,15 +96,15 @@ class CMyClass
 |[include](../windows/include-cpp.md)|[includelib](../windows/includelib-cpp.md)|[last_is](../windows/last-is.md)|  
 |[length_is](../windows/length-is.md)|[max_is](../windows/max-is.md)|[no_injected_text](../windows/no-injected-text.md)|  
 |[pointer_default](../windows/pointer-default.md)|[pragma](../windows/pragma.md)|[restricted](../windows/restricted.md)|  
-|[size_is](../windows/size-is.md)|[ソース](../windows/source-cpp.md)|[switch_is](../windows/switch-is.md)|  
+|[size_is](../windows/size-is.md)|[source](../windows/source-cpp.md)|[switch_is](../windows/switch-is.md)|  
 |[switch_type](../windows/switch-type.md)|[transmit_as](../windows/transmit-as.md)|[wire_marshal](../windows/wire-marshal.md)|  
   
 ##  <a name="vcconattributeprogrammmingfaqanchor3"></a> 属性ブロックでコメントを使用できますか。  
- 属性ブロック内で単一行および複数行の両方のコメントを使用することができます。 ただし、属性にパラメーターを保持しているかっこで囲まれたコメントのいずれかのスタイルを使用することはできません。  
+ 属性ブロック内の単一行および複数行の両方のコメントを使用することができます。 ただし、属性に、パラメーターを保持しているかっこで囲まれたコメントのいずれかのスタイルを使用することはできません。  
   
  次は使用できます。  
   
-```  
+```cpp  
 [ coclass,  
    progid("MyClass.CMyClass.1"), /* Multiple-line  
                                        comment */  
@@ -112,30 +112,30 @@ class CMyClass
 ]  
 ```  
   
- 次は許可されていません。  
+ 次は許可されません。  
   
-```  
+```cpp  
 [ coclass,  
    progid("MyClass.CMyClass.1" /* Multiple-line comment */ ),  
    threading("both" // Single-line comment)  
 ]  
 ```  
   
-##  <a name="vcconattributeprogrammmingfaqanchor4"></a> 継承と属性が対話する方法  
- 付きか、他のクラスから属性と属性の両方のクラスを継承することができます。 属性付きクラスから派生した結果は、属性プロバイダーはそのコードを変換した後、そのクラスから派生する場合と同じです。 C++ の継承を使用してクラスを派生する属性は送信されません。 のみ、属性プロバイダーは、その属性の付近のコードを変換します。  
+##  <a name="vcconattributeprogrammmingfaqanchor4"></a> 継承を持つ属性の操作方法  
+ 付きかどうか、その他のクラスから属性と属性の両方のクラスを継承することができます。 属性付きのクラスから派生した結果は、属性プロバイダーがそのコードを変換した後、そのクラスからの派生と同じです。 C++ の継承を使用してクラスを派生する属性は送信されません。 属性プロバイダーは、その属性の付近のコードのみを変換します。  
   
-##  <a name="vcconattributeprogrammmingfaqanchor5"></a> 属性なしの ATL プロジェクトでの属性を使用する方法は?  
- .Idl ファイルを持つ属性なしの ATL プロジェクトがあります、属性付きオブジェクトの追加を開始することがあります。 この例では、クラスの追加ウィザードを使用して、コードを提供します。  
+##  <a name="vcconattributeprogrammmingfaqanchor5"></a> 属性なしの ATL プロジェクトで属性を使用する方法は?  
+ .Idl ファイルを持つ属性なしの ATL プロジェクトを必要に応じて、属性付きオブジェクトの追加を開始したい場合があります。 ここでは、使用して、**クラス追加ウィザード**コードを提供します。  
   
 ##  <a name="vcconattributeprogrammmingfaqanchor6"></a> 属性付きプロジェクトに .idl ファイルを使用する方法は?  
- .Idl ファイル属性 ATL プロジェクトで使用するがあります。 この場合、使用すると、 [importidl](../windows/importidl.md)属性、.idl ファイルと .h ファイルのコンパイル (を参照してください、 [midl プロパティ ページ](../ide/midl-property-pages.md)プロジェクトのプロパティ ページ ダイアログ ボックスで)、.h ファイルをプロジェクトに含める.  
+ .Idl ファイルを属性付き ATL プロジェクトで使用するがあります。 この場合、使用すると、 [importidl](../windows/importidl.md)属性、.idl ファイルと .h ファイルのコンパイル (を参照してください、 [MIDL プロパティ ページ](../ide/midl-property-pages.md)プロジェクトの**プロパティ ページ** ダイアログ ボックス)、および.h ファイルをプロジェクトに追加します。  
   
-##  <a name="vcconattributeprogrammmingfaqanchor7"></a> 属性によって挿入されたコードを変更できますか。  
- いくつかの属性は、プロジェクトにコードを挿入します。 使用して挿入されたコードを確認できます、 [/Fx](../build/reference/fx-merge-injected-code.md)コンパイラ オプション。 挿入されたファイルからコードをコピーして、ソース コードに貼り付けることもできます。 これにより、属性の動作を変更することができます。 ただしもコードの他の部分を変更する必要があります。  
+##  <a name="vcconattributeprogrammmingfaqanchor7"></a> 属性によって挿入されるコードを変更できますか。  
+ いくつかの属性は、プロジェクトにコードを挿入します。 使用して挿入されたコードを確認できます、 [/Fx](../build/reference/fx-merge-injected-code.md)コンパイラ オプション。 挿入されたファイルからコードをコピーし、ソース コードに貼り付けることもできます。 これにより、属性の動作を変更することができます。 ただし、コードの他の部分を変更する必要があります。  
   
- 次の例では、ソース コード ファイルに挿入されたコードをコピーの結果を示します。  
+ 次の例は、ソース コード ファイルに挿入されたコードをコピーするのです。  
   
-```  
+```cpp  
 // attr_injected.cpp  
 // compile with: comsupp.lib  
 #define _ATL_ATTRIBUTES 1  
@@ -253,11 +253,11 @@ public:
 int main() {}  
 ```  
   
-##  <a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a> 転送を宣言する方法、属性付きインターフェイスしますか。  
- 属性付きインターフェイスの事前宣言を作成しようとする場合は、実際のインターフェイスの宣言に適用される事前宣言に同じ属性を適用する必要があります。 適用する必要も、[エクスポート](../windows/export.md)属性を事前宣言します。  
+##  <a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a> 前方宣言方法属性付きインターフェイスか。  
+ 属性付きインターフェイスの事前宣言を行う場合は、実際のインターフェイス宣言に適用する事前宣言に同じ属性を適用する必要があります。 適用することも必要があります、[エクスポート](../windows/export.md)事前宣言する属性します。  
   
-##  <a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a> 属性を使用するクラスから派生したクラスで属性を使用することができますか。  
- いいえ、属性を使用するクラスから派生したクラスで属性の使用はサポートされていません。  
+##  <a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a> 属性を使用するクラスから派生したクラスで属性を使用できますか。  
+ いいえ、属性を使用するクラスから派生したクラスで属性を使用することはサポートされていません。  
   
 ## <a name="see-also"></a>関連項目  
  [概念](../windows/attributed-programming-concepts.md)

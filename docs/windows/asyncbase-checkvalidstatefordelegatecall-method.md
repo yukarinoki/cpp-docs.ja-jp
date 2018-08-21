@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::checkvalidstatefordelegatecall メソッド |Microsoft ドキュメント
+title: Asyncbase::checkvalidstatefordelegatecall メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 81e3420304b0432f635d04a4892e7984dd38f144
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a03f0dcb8f6d35c1d5fc8aec5bf1cc899d575861
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859876"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653073"
 ---
 # <a name="asyncbasecheckvalidstatefordelegatecall-method"></a>AsyncBase::CheckValidStateForDelegateCall メソッド
 現在の非同期状態でデリゲート プロパティを変更できるかどうかをテストします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 inline HRESULT CheckValidStateForDelegateCall();  
 ```  
   
 ## <a name="return-value"></a>戻り値  
- デリゲート プロパティを変更できる場合は S_OK、それ以外の場合、E_ILLEGAL_METHOD_CALL です。  
+ デリゲートのプロパティを変更できる場合は s_ok を返します。それ以外の場合、E_ILLEGAL_METHOD_CALL します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** async.h  

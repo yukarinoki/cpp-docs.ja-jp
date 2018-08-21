@@ -1,5 +1,5 @@
 ---
-title: 汎用デリゲート (Visual C) |Microsoft ドキュメント
+title: 汎用デリゲート (Visual C) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ecbfebc49f76eee7bb753af3d07052d1e05d73be
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5aa0bc804b3308a9b77c93cf40a2ba9cab7558a8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875599"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652909"
 ---
 # <a name="generic-delegates-visual-c"></a>汎用デリゲート (Visual C++)
-デリゲートでは、ジェネリック型パラメーターを使用できます。 デリゲートの詳細については、次を参照してください。 [delegate (C++ コンポーネント拡張)](../windows/delegate-cpp-component-extensions.md)です。  
+デリゲートでジェネリック型パラメーターを使用できます。 デリゲートの詳細については、次を参照してください。[デリゲート (C++ コンポーネント拡張)](../windows/delegate-cpp-component-extensions.md)します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 [attributes]   
 generic < [class | typename] type-parameter-identifiers>  
 [type-parameter-constraints-clauses]  
@@ -36,32 +36,32 @@ generic < [class | typename] type-parameter-identifiers>
 ([formal-parameters]);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `attributes` (省略可能)  
+### <a name="parameters"></a>パラメーター  
+ *属性*(省略可能)  
  追加の宣言情報。 属性と属性クラスの詳細については、属性を参照してください。  
   
  *type-parameter-identifier(s)*  
- 型パラメーターの識別子のコンマで区切って指定します。  
+ 型パラメーターの識別子のコンマ区切りリスト。  
   
- `type-parameter-constraints-clauses`  
- 指定された形式の[ジェネリック型パラメーターの制約 (C + + CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
+ *型パラメーター制約句*  
+ 指定された形式の[ジェネリック型パラメーターの制約 (C +/cli CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
   
  *アクセシビリティ修飾子*(省略可能)  
- アクセシビリティ修飾子 (例:**パブリック**、 `private`)。  
+ アクセシビリティ修飾子 (例:**パブリック**、**プライベート**)。  
   
  *result-type*  
  デリゲートの戻り値の型。  
   
  *identifier*  
- デリゲートの名前です。  
+ デリゲートの名前。  
   
- *正式なパラメーター* (省略可能)  
+ *仮パラメーター* (省略可能)  
  デリゲートのパラメーターのリスト。  
   
 ## <a name="example"></a>例  
- デリゲート オブジェクトが作成された時点では、デリゲートの型パラメーターを指定します。 デリゲートとそれに関連付けられているメソッドの両方には、同じシグネチャがある場合があります。 汎用デリゲートの宣言の例を次に示します。  
+ デリゲートの型パラメーターは、デリゲート オブジェクトが作成されている時点で指定されます。 デリゲートとそれに関連付けられているメソッドの両方が同じシグネチャを持つ必要があります。 次は、汎用デリゲートの宣言の例です。  
   
-```  
+```cpp  
 // generics_generic_delegate1.cpp  
 // compile with: /clr /c  
 generic <class ItemType>  
@@ -71,13 +71,13 @@ delegate ItemType GenDelegate(ItemType p1, ItemType% p2);
 ## <a name="example"></a>例  
  次の例を表示します。  
   
--   異なる型の構築型と同じデリゲート オブジェクトを使用することはできません。 さまざまな種類のオブジェクトのさまざまなデリゲートを作成します。  
+-   同じデリゲート オブジェクトは、異なる構築された型を使用できません。 別のデリゲートにさまざまな種類のオブジェクトを作成します。  
   
 -   汎用デリゲートは、ジェネリック メソッドを関連付けることができます。  
   
--   型引数を指定しないでジェネリック メソッドが呼び出されると、コンパイラは、呼び出しの型引数の推測しようとします。  
+-   ジェネリック メソッドが型引数を指定せずに呼び出されると、コンパイラは呼び出しの型引数の推論しようとします。  
   
-```  
+```cpp  
 // generics_generic_delegate2.cpp  
 // compile with: /clr  
 generic <class ItemType>  
@@ -112,9 +112,9 @@ int main() {
 ```  
   
 ## <a name="example"></a>例  
- 次の例は、汎用デリゲートを宣言`GenDelegate<ItemType>`、メソッドに関連付けることで、インスタンスを作成および`MyMethod`、型パラメーターを使用する`ItemType`です。 デリゲート (integer および double 型の値) の 2 つのインスタンスが作成され、呼び出されます。  
+ 次の例は、汎用デリゲートを宣言`GenDelegate<ItemType>`、し、メソッドに関連付けることによってインスタンス化`MyMethod`型パラメーターを使用する`ItemType`します。 (整数と double) デリゲートの 2 つのインスタンスが作成され、呼び出されます。  
   
-```  
+```cpp  
 // generics_generic_delegate.cpp  
 // compile with: /clr  
 using namespace System;  

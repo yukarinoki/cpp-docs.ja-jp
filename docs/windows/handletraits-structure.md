@@ -1,5 +1,5 @@
 ---
-title: HANDLETraits 構造体 |Microsoft ドキュメント
+title: HANDLETraits 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1aae09030ff6cad518028833ce5d4f7b06300a69
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3f722745b1283f25bd284adb3b55dcb340d78f07
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876649"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649914"
 ---
 # <a name="handletraits-structure"></a>HANDLETraits 構造体
-ハンドルの共通の特性を定義します。  
+ハンドルの一般的な特性を定義します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 struct HANDLETraits;  
 ```  
   

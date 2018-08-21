@@ -1,5 +1,5 @@
 ---
-title: ImplementsBase 構造体 |Microsoft ドキュメント
+title: ImplementsBase 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae5d91f5e7d8f2a057ba05ede5051e14f9787fb0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5729bfdf46504ab798966bdf8051ab3a3f7cbca0
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875774"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011534"
 ---
 # <a name="implementsbase-structure"></a>ImplementsBase 構造体
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 struct ImplementsBase;  
 ```  
   
-## <a name="remarks"></a>コメント  
- テンプレート パラメーターの型の検証に使用される[Implements 構造体](../windows/implements-structure.md)です。  
+## <a name="remarks"></a>Remarks  
+ テンプレート パラメーターの型の検証に使用される[Implements 構造体](../windows/implements-structure.md)します。  
   
- ImplementsBase 構造体は、設計では空です。  
+ **ImplementsBase**構造が設計によっては空です。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `ImplementsBase`  

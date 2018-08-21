@@ -1,5 +1,5 @@
 ---
-title: 構造体を実装 |Microsoft ドキュメント
+title: 構造体の実装 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1ecbf0b77feef7abeb67f8d0dc300da067d1f2da
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 31b95901f2c0b7ff210cc8542dce49991a9eef87
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880920"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014819"
 ---
 # <a name="implements-structure"></a>Implements 構造体
-指定されたインターフェイスの QueryInterface と GetIid を実装します。  
+実装`QueryInterface`と`GetIid`のインターフェイスで指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template <  
    typename I0,  
    typename I1 = Details::Nil,  
@@ -58,44 +58,44 @@ template <
 struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3, I4, I5, I6, I7, I8> : Details::ImplementsHelper<RuntimeClassFlags<flags>, typename Details::InterfaceListHelper<I0, I1, I2, I3, I4, I5, I6, I7, I8>::TypeT>, Details::ImplementsBase;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `I0`  
+### <a name="parameters"></a>パラメーター  
+ *I0*  
  0 番目のインターフェイス ID です  (必須)。  
   
- `I1`  
+ *I1*  
  1 番目のインターフェイス ID です  (オプション)。  
   
- `I2`  
+ *I2*  
  2 番目のインターフェイス ID です  (オプション)。  
   
- `I3`  
+ *I3*  
  3 番目のインターフェイス ID です  (オプション)。  
   
- `I4`  
+ *I4*  
  4 番目のインターフェイス ID です  (オプション)。  
   
- `I5`  
+ *I5*  
  5 番目のインターフェイス ID です  (オプション)。  
   
- `I6`  
+ *I6*  
  6 番目のインターフェイス ID です  (オプション)。  
   
- `I7`  
+ *I7*  
  7 番目のインターフェイス ID です  (オプション)。  
   
- `I8`  
+ *I8*  
  8 番目のインターフェイス ID です  (オプション)。  
   
- `I9`  
+ *I9*  
  9 番目のインターフェイス ID です  (オプション)。  
   
- `flags`  
+ *flags*  
  クラスの構成フラグです。 1 つまたは複数[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列挙体で指定されている、 [RuntimeClassFlags](../windows/runtimeclassflags-structure.md)構造体。  
   
-## <a name="remarks"></a>コメント  
- 指定したインターフェイスのリストから派生し、QueryInterface と GetIid をヘルパー テンプレートを実装します。  
+## <a name="remarks"></a>Remarks  
+ 指定したインターフェイスの一覧から派生し、実装のヘルパー テンプレート`QueryInterface`と`GetIid`します。  
   
- 各`I0`を通じて`I9`インターフェイス パラメーターが IInspectable のいずれかの IUnknown から派生する必要がありますまたは[ChainInterfaces](../windows/chaininterfaces-structure.md)テンプレート。 `flags`パラメーターは、サポートが IUnknown または IInspectable に対して生成されたかどうかを決定します。  
+ 各*I0*を通じて*I9*インターフェイス パラメーターは、いずれかから派生する必要があります`IUnknown`、 `IInspectable`、または[ChainInterfaces](../windows/chaininterfaces-structure.md)テンプレート。 *フラグ*のサポートが生成されるかどうかを判別します`IUnknown`または`IInspectable`します。  
   
 ## <a name="members"></a>メンバー  
   
@@ -109,13 +109,13 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
   
 |名前|説明|  
 |----------|-----------------|  
-|[Implements::CanCastTo メソッド](../windows/implements-cancastto-method.md)|指定されたインターフェイスへのポインターを取得します。|  
-|[Implements::CastToUnknown メソッド](../windows/implements-casttounknown-method.md)|基になる IUnknown インターフェイスへのポインターを取得します。|  
+|[Implements::CanCastTo メソッド](../windows/implements-cancastto-method.md)|指定したインターフェイスへのポインターを取得します。|  
+|[Implements::CastToUnknown メソッド](../windows/implements-casttounknown-method.md)|基になるポインターを取得します。`IUnknown`インターフェイス。|  
 |[Implements::FillArrayWithIid メソッド](../windows/implements-fillarraywithiid-method.md)|指定した配列の要素に現在の 0 番目のテンプレート パラメーターで指定されたインターフェイス ID を挿入します。|  
   
-### <a name="protected-constants"></a>プロテクト コンス トラクター  
+### <a name="protected-constants"></a>保護されている定数  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[Implements::IidCount 定数](../windows/implements-iidcount-constant.md)|実装されたインターフェイス Id の数を保持します。|  
   

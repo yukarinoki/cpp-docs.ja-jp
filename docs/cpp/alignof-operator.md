@@ -1,5 +1,5 @@
 ---
-title: _ _alignof 演算子 |Microsoft ドキュメント
+title: _ _alignof 演算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,26 +22,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 061557b4d017254584e8ddc3da0127f02d352720
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6a7ab2eb5f33db2a62e745756971ee29f84c25c8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408827"
 ---
 # <a name="alignof-operator"></a>__alignof 演算子
-C++11 では、指定した型の配置をバイト単位で返す `alignof` 演算子が導入されています。 移植性を最大にするため、Microsoft 固有の __alignof 演算子ではなく、alignof 演算子を使用してください。  
+C++ 11 で、 **alignof**演算子を指定した型のバイト単位で、配置を返します。 移植性を最大にするため、Microsoft 固有の __alignof 演算子ではなく、alignof 演算子を使用してください。  
   
  **Microsoft 固有の仕様**  
   
- 型の値を返します**size_t**型のアラインメント要件はします。  
+ 型の値を返します`size_t`型のアラインメント要件であります。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   __alignof( type )
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  例えば:  
   
 |正規表現|[値]|  
@@ -54,26 +55,26 @@ C++11 では、指定した型の配置をバイト単位で返す `alignof` 演
 |**__alignof( double )**|8|  
 |**__alignof( char\* )**|4|  
   
- `__alignof` 値は、基本型の `sizeof` 値と同じです。 ただし、次の例を検討します。  
+ **_ _Alignof**値は、の値として同じ`sizeof`の基本型。 ただし、次の例を検討します。  
   
-```  
+```cpp 
 typedef struct { int a; double b; } S;  
 // __alignof(S) == 8  
 ```  
   
- この場合、`__alignof` 値は、構造体内の最大要素の配置要件です。  
+ ここで、 **_ _alignof**値は、構造内の最大の要素のアラインメント要件。  
   
  同様に、  
   
-```  
+```cpp 
 typedef __declspec(align(32)) struct { int a; } S;  
 ```  
   
  `__alignof(S)` と `32` が等価です。  
   
- `__alignof` の使用方法の 1 つは、独自のメモリ割り当てルーチンの 1 つへのパラメーターとしての使用です。 たとえば、次の定義済みの構造体 `S` を指定して、`aligned_malloc` という名前のメモリ割り当てルーチンを呼び出し、特定の配置境界にメモリを割り当てることができます。  
+ 用途の 1 つ **_ _alignof**独自のメモリ割り当てルーチンのいずれかのパラメーターとしてになります。 たとえば、次の定義済みの構造体 `S` を指定して、`aligned_malloc` という名前のメモリ割り当てルーチンを呼び出し、特定の配置境界にメモリを割り当てることができます。  
   
-```  
+```cpp 
 typedef __declspec(align(32)) struct { int a; double b; } S;  
 int n = 50; // array size  
 S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));  

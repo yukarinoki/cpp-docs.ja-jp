@@ -1,5 +1,5 @@
 ---
-title: Unicode と MBCS |Microsoft ドキュメント
+title: Unicode と MBCS |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e10c07e11cbe940b5f7cfee460ddd33f6f5ff1f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9cd3e3369e2da18d707de20afc900a0bc4c9f249
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857351"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020383"
 ---
 # <a name="unicode-and-mbcs"></a>Unicode と MBCS
 MFC (Microsoft Foundation Class) ライブラリ、Visual C++ の C ランタイム ライブラリ、および Visual C++ 開発環境では、国際対応のプログラミングを支援できます。 次のようなサポート方法があります。  
@@ -43,12 +43,12 @@ MFC (Microsoft Foundation Class) ライブラリ、Visual C++ の C ランタイ
   
 -   国際市場向けに作成されたアプリケーションの MBCS プログラミングを簡略化するツールをサポート。  
   
-     MBCS をサポートしている Windows オペレーティング システム上で Visual C++ 開発システムを実行すると、システム内の統合ソース コード エディター、デバッガー、コマンド ライン ツールなどを含むすべてが MBCS をサポートします。 詳細については、次を参照してください。 [Visual c における MBCS のサポート](../text/mbcs-support-in-visual-cpp.md)です。  
+     MBCS をサポートしている Windows オペレーティング システム上で Visual C++ 開発システムを実行すると、システム内の統合ソース コード エディター、デバッガー、コマンド ライン ツールなどを含むすべてが MBCS をサポートします。 詳細については、次を参照してください。 [Visual c における MBCS のサポート](../text/mbcs-support-in-visual-cpp.md)します。  
   
 > [!NOTE]
 >  このドキュメントでは、MBCS は、Unicode でサポートされていないすべてのマルチバイト文字を指します。 Visual C++ では、MBCS は常に DBCS を意味します。 2 バイトを超える文字セットはサポートされていません。  
   
- 定義上、ASCII 文字セットは、すべてのマルチバイト文字セットのサブセットと考えることができます。 多くのマルチバイト文字セットでは、0x00 から 0x7F の範囲内の各文字が、ASCII 文字セットで同じ値を持つ文字と一致します。 たとえば、ASCII と MBCS 文字列で、1 バイト**NULL**文字 ('\0') に値 0x00 があり、終端の null 文字を示します。  
+ 定義上、ASCII 文字セットは、すべてのマルチバイト文字セットのサブセットと考えることができます。 多くのマルチバイト文字セットでは、0x00 から 0x7F の範囲内の各文字が、ASCII 文字セットで同じ値を持つ文字と一致します。 たとえば、ASCII と MBCS の両方の文字列で 1 バイトの NULL 文字 ('\0') が 0x00 の値を持つし、終端の null 文字を示します。  
   
 ## <a name="see-also"></a>関連項目  
  [テキストと文字列](../text/text-and-strings-in-visual-cpp.md)   

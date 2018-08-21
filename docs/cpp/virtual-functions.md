@@ -1,5 +1,5 @@
 ---
-title: 仮想関数 |Microsoft ドキュメント
+title: 仮想関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d1fc04a09e48ac50f6f27d4ffd3e01dbd3dac8a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 54444200b9a38c427a8192d1c16e6835712ff1f6
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467920"
 ---
 # <a name="virtual-functions"></a>仮想関数
 仮想関数は、派生クラスで再定義されるメンバー関数です。 基底クラスへのポインターまたは参照を使用して派生クラス オブジェクトを参照する場合、そのオブジェクトの仮想関数を呼び出して派生クラスのバージョンの関数を実行できます。  
   
  仮想関数では、関数の呼び出しに使用する式に関係なく、オブジェクトに対して正しい関数が呼び出されます。  
   
- 基底クラスにはとして宣言された関数が含まれていますと[仮想](../cpp/virtual-cpp.md)し、派生クラスは、同じ関数を定義します。 派生クラスからの関数は、基底クラスへのポインターまたは参照を使用して呼び出された場合でも、派生クラスのオブジェクトに対して呼び出されます。 次の例は、`PrintBalance` 関数と 2 つの派生クラスの実装を提供する基底クラスを示しています。  
+ 基底クラスにはとして宣言された関数が含まれていますと[仮想](../cpp/virtual-cpp.md)派生クラスは、同じ関数を定義します。 派生クラスからの関数は、基底クラスへのポインターまたは参照を使用して呼び出された場合でも、派生クラスのオブジェクトに対して呼び出されます。 次の例は、`PrintBalance` 関数と 2 つの派生クラスの実装を提供する基底クラスを示しています。  
   
-```  
+```cpp 
 // deriv_VirtualFunctions.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -85,7 +86,7 @@ int main() {
   
  この例では、ポインターを通じて呼び出されたとき、仮想関数と非仮想関数がどのように動作するかを示します。  
   
-```  
+```cpp 
 // deriv_VirtualFunctions2.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -140,7 +141,7 @@ int main() {
   
 ### <a name="output"></a>出力  
   
-```  
+```Output  
 Derived::NameOf  
 Invoked by Base  
 Derived::NameOf  
@@ -149,15 +150,15 @@ Invoked by Derived
   
  `NameOf` 関数が `Base` へのポインターまたは `Derived` へのポインターを介して呼び出されるかどうかに関係なく、`Derived` に対してこの関数が呼び出されます。 `Derived` が仮想関数であり、`NameOf` と `pBase` の両方が `pDerived` 型のオブジェクトを指すため、`Derived` に対する関数を呼び出します。  
   
- 仮想関数が呼び出されるためのクラス型のオブジェクトに対してのみ、としてグローバルまたは静的関数を宣言することはできません**仮想**です。  
+ としてグローバルまたは静的関数を宣言することはできませんので、仮想関数はクラス型のオブジェクトに対してのみ呼び出されると、**仮想**します。  
   
- **仮想**キーワードは派生クラスで関数オーバーライドを宣言するときに使用できますが、必要はありません。 仮想関数のオーバーライドが仮想では常にします。  
+ **仮想**関数、派生クラスのオーバーライドを宣言するときに、キーワードを使用できます。 必要はありませんが、は仮想関数のオーバーライドは常に仮想です。  
   
- 使用して宣言されている場合を除き、基本クラスの仮想関数を定義する必要があります、*純粋指定子*です。 (純粋仮想関数の詳細については、次を参照してください[抽象クラス](../cpp/abstract-classes-cpp.md)。)。  
+ 使用して宣言されている場合を除き、基本クラスで仮想関数を定義する必要があります、*純粋指定子*します。 (純粋仮想関数の詳細については、次を参照してください[抽象クラス](../cpp/abstract-classes-cpp.md)。)。  
   
  仮想関数呼び出し機構は、スコープ解決演算子 (`::`) を使用して、明示的に関数名を修飾することで抑制できます。 `Account` クラスに関連する前の例を考えます。 基底クラスの `PrintBalance` を呼び出すには、次のようなコードを使用します。  
   
-```  
+```cpp 
 CheckingAccount *pChecking = new CheckingAccount( 100.00 );  
   
 pChecking->Account::PrintBalance();  //  Explicit qualification.  
@@ -168,4 +169,3 @@ pAccount->Account::PrintBalance();   //  Explicit qualification.
 ```  
   
  前の例の `PrintBalance` への呼び出しは両方とも、仮想関数呼び出し機構を抑制します。  
-  

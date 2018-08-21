@@ -1,5 +1,5 @@
 ---
-title: Handlet::handle _ データ メンバー |Microsoft ドキュメント
+title: Handlet::handle _ データ メンバー |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4873e2a0ccd3b6e3b3c274203e952552d220bb85
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e4beb2f64448af585537347f0bf0bc7474f541c5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871906"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653171"
 ---
 # <a name="handlethandle-data-member"></a>HandleT::handle_ データ メンバー
-HandleT オブジェクトによって表されるハンドルが含まれています。  
+表されるハンドルを含む、 **HandleT**オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typename HandleTraits::Type handle_;  
 ```  
   

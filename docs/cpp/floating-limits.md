@@ -1,7 +1,7 @@
 ---
-title: 浮動小数点の制限 |Microsoft ドキュメント
+title: 浮動小数点の制限 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/03/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -19,40 +19,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bba2bef20cbe5820d2a7feaae5743f151aea9da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 85a31aea113514651fc3e81ac147b5ea2974920c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417469"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604295"
 ---
 # <a name="floating-limits"></a>浮動小数点の制限
-**Microsoft 固有の仕様**  
-  
- 次の表に、浮動小数点定数の値に関する制限を示します。 これらの制限は、標準ヘッダー ファイルで定義されても\<float.h >。  
-  
-### <a name="limits-on-floating-point-constants"></a>浮動小数点定数の制限  
-  
-|定数|説明|[値]|  
-|--------------|-------------|-----------|  
-|FLT_DIG DBL_DIG LDBL_DIG|q 桁の浮動小数点数を、精度を失わずに丸めて浮動小数点表現にしたり、戻したりできる桁数 q。|6 15 15|  
-|FLT_EPSILON DBL_EPSILON LDBL_EPSILON|x + 1.0 が 1.0 に等しくならないような最小の正数 x。|1.192092896e-07F 2.2204460492503131e-016 2.2204460492503131e-016|  
-|FLT_GUARD||0|  
-|FLT_MANT_DIG DBL_MANT_DIG LDBL_MANT_DIG|浮動小数点の有効桁で FLT_RADIX により指定された基数の桁数。 基数は 2 です。そのためこれらの値は、ビットを指定します。|24 53 53|  
-|FLT_MAX DBL_MAX LDBL_MAX|表現可能な最大浮動小数点数です。|3.402823466e+38F 1.7976931348623158e+308 1.7976931348623158e+308|  
-|FLT_MAX_10_EXP DBL_MAX_10_EXP LDBL_MAX_10_EXP|最大の整数 10 した結果をその数値が表現可能な浮動小数点数です。|38 308 308|  
-|FLT_MAX_EXP DBL_MAX_EXP LDBL_MAX_EXP|FLT_RADIX をその数値分累乗した結果が表現可能な浮動小数点数となる最大の整数。|128 1024 1024|  
-|FLT_MIN DBL_MIN LDBL_MIN|正の最小数。|1.175494351e-38 f 2.2250738585072014e-308 2.2250738585072014e-308|  
-|FLT_MIN_10_EXP DBL_MIN_10_EXP LDBL_MIN_10_EXP|負の値が最小の整数 10 をその数値分累乗した表現可能な浮動小数点数。|-37<br /><br /> -307<br /><br /> -307|  
-|FLT_MIN_EXP DBL_MIN_EXP LDBL_MIN_EXP|FLT_RADIX をその数値分累乗した結果が表現可能な浮動小数点数となる最小の負の整数。|-125<br /><br /> -1021<br /><br /> -1021|  
-|FLT_NORMALIZE||0|  
-|FLT_RADIX _DBL_RADIX _LDBL_RADIX|指数表記の基数。|2 2 2|  
-|FLT_ROUNDS _DBL_ROUNDS _LDBL_ROUNDS|浮動小数点加算の丸めモード。|1 (近く) 1 (近く) 1 (近く)|  
-  
+
+**Microsoft 固有の仕様**
+
+次の表に、浮動小数点定数の値に関する制限を示します。 これらの制限が、標準ヘッダー ファイルで定義されても\<float.h >。  
+
+## <a name="limits-on-floating-point-constants"></a>浮動小数点定数の制限
+
+|定数|説明|[値]|
+|--------------|-------------|-----------|
+|`FLT_DIG`<br/>`DBL_DIG`<br/>`LDBL_DIG`|q 桁の浮動小数点数を、精度を失わずに丸めて浮動小数点表現にしたり、戻したりできる桁数 q。|6<br/>16<br/>16|
+|`FLT_EPSILON`<br/>`DBL_EPSILON`<br/>`LDBL_EPSILON`|x + 1.0 が 1.0 に等しくならないような最小の正数 x。|1.192092896e-07F<br/>2.2204460492503131e-016<br/>2.2204460492503131e-016|
+|`FLT_GUARD`||0|
+|`FLT_MANT_DIG`<br/>`DBL_MANT_DIG`<br/>`LDBL_MANT_DIG`|により指定された基数の桁数`FLT_RADIX`浮動小数点の有効桁でします。 基数は 2 です。そのためこれらの値はビットを指定します。|24<br/>53<br/>53|
+|`FLT_MAX`<br/>`DBL_MAX`<br/>`LDBL_MAX`|表現可能な最大浮動小数点数。|3.402823466e+38F<br/>1.7976931348623158e+308<br/>1.7976931348623158e+308|
+|`FLT_MAX_10_EXP`<br/>`DBL_MAX_10_EXP`<br/>`LDBL_MAX_10_EXP`|最大の整数をその数値 10 が発生した結果が表現可能な浮動小数点数です。|38<br/>308<br/>308|
+|`FLT_MAX_EXP`<br/>`DBL_MAX_EXP`<br/>`LDBL_MAX_EXP`|最大の整数を`FLT_RADIX`数が表現可能な浮動小数点数に発生します。|128<br/>1024<br/>1024|
+|`FLT_MIN`<br/>`DBL_MIN`<br/>`LDBL_MIN`|正の最小数。|1.175494351e-38F<br/>2.2250738585072014e-308<br/>2.2250738585072014e-308|
+|`FLT_MIN_10_EXP`<br/>`DBL_MIN_10_EXP`<br/>`LDBL_MIN_10_EXP`|最小の負の整数をその数値 10 が発生した結果が表現可能な浮動小数点数です。|-37<br/>-307<br/>-307|
+|`FLT_MIN_EXP`<br/>`DBL_MIN_EXP`<br/>`LDBL_MIN_EXP`|最小の負の整数を`FLT_RADIX`数が表現可能な浮動小数点数に発生します。|-125<br/>-1021<br/>-1021|
+|`FLT_NORMALIZE`||0|
+|`FLT_RADIX`<br/>`_DBL_RADIX`<br/>`_LDBL_RADIX`|指数表記の基数。|2<br/>2<br/>2|
+|`FLT_ROUNDS`<br/>`_DBL_ROUNDS`<br/>`_LDBL_ROUNDS`|浮動小数点加算の丸めモード。|1 (近接)<br/>1 (近接)<br/>1 (近接)|
+
 > [!NOTE]
->  この表の情報は、将来のバージョンの製品では異なる場合があります。  
-  
-**Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- [整数の制限](../cpp/integer-limits.md)
+>  この表の情報は、将来のバージョンの製品では異なる場合があります。
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
+[整数の制限](../cpp/integer-limits.md)  

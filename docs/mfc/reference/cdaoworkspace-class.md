@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa0067e3054972ccc60253bb7205dc7a4f1fe4bd
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 7e6210f8c1b1fd1bd19efb74ca68c7a1bed3f7f1
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337448"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209132"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace クラス
 シングル ユーザーによる名前付きの、パスワードで保護されたデータベース セッションのログインからログオフまでを管理します。  
@@ -745,7 +745,7 @@ static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
   
 ### <a name="parameters"></a>パラメーター  
  *lpszDefaultUser*  
- 既定のユーザー名。 ユーザー名は 1 ~ 20 文字にして、アルファベット文字、アクセント記号付き文字、数字、スペース、および記号を含める:"(引用符)/(スラッシュ)、\ (円記号)、 \[ \] (角かっこ): (コロン) &#124; (パイプ)、 \< (小さい-不等号)、> (大きい-不等号)、+ (正符号) = (等しく記号)、;(セミコロン) を (コンマ) (疑問符) * (アスタリスク)、先頭スペース、および制御文字 (ASCII 31 の ASCII 00)。 関連情報については、「UserName プロパティ」DAO ヘルプのトピックを参照してください。  
+ 既定のユーザー名。 ユーザー名は 1 ~ 20 文字にして、アルファベット文字、アクセント記号付き文字、数字、スペース、および記号を含める:"(引用符)/(スラッシュ)、\ (円記号)、 \[ \] (角かっこ): (コロン) &#124; (パイプ)、 \< (小さい-不等号)、> (大きい-不等号)、+ (正符号) = (等しく記号)、;(セミコロン) を (コンマ) (疑問符) \* (アスタリスク)、先頭スペース、および制御文字 (ASCII 31 の ASCII 00)。 関連情報については、「UserName プロパティ」DAO ヘルプのトピックを参照してください。  
   
 ### <a name="remarks"></a>Remarks  
  設定する既定のユーザー名は、呼び出しの後に作成する新規のワークスペースに適用されます。 その後、ワークスペースを作成するときにユーザー名を指定する必要はありません、[作成](#create)呼び出します。  

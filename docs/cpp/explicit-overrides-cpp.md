@@ -1,5 +1,5 @@
 ---
-title: 明示的なオーバーライド (C++) |Microsoft ドキュメント
+title: 明示的なオーバーライド (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,25 +18,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bda87a0241e61cfc3fa26d4829f0504b784e8ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b7b333d42f5e5e309ffa17e8c267dcb22ec30e6d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409447"
 ---
 # <a name="explicit-overrides-c"></a>明示的なオーバーライド (C++)
 **Microsoft 固有の仕様**  
   
- 2 つまたは複数の同じ仮想関数が宣言されている[インターフェイス](../cpp/interface.md)し、これらのインターフェイスから派生したクラスは場合、は、各仮想関数を明示的にオーバーライドできます。  
+ 2 つまたは複数の同じ仮想関数が宣言されている[インターフェイス](../cpp/interface.md)と場合、これらのインターフェイスから派生したクラスは、各仮想関数を明示的にオーバーライドすることができます。  
   
- 新しいマネージ構文を使用してマネージ コードで明示的に情報を上書きするを参照してください。[明示的なオーバーライド](../windows/explicit-overrides-cpp-component-extensions.md)です。  
+ 新しいマネージ構文を使用してマネージ コードで明示的に情報を上書きするを参照してください。[明示的なオーバーライド](../windows/explicit-overrides-cpp-component-extensions.md)します。  
   
  **Microsoft 固有の仕様はここまで**  
   
 ## <a name="example"></a>例  
  明示的なオーバーライドを使用する方法を次のコード例に示します。  
   
-```  
+```cpp 
 // deriv_ExplicitOverrides.cpp  
 // compile with: /GR  
 extern "C" int printf_s(const char *, ...);  

@@ -1,5 +1,5 @@
 ---
-title: Eventsource::targets _ データ メンバー |Microsoft ドキュメント
+title: Eventsource::targets _ データ メンバー |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a35992a5579bf852323f4c01396fab56542f40cd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ea08cdc8657100e1c1e0157a8a542a44ea34cd4d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871745"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642374"
 ---
 # <a name="eventsourcetargets-data-member"></a>EventSource::targets_ データ メンバー
 1 つまたは複数のイベント ハンドラーの配列。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 ComPtr<Details::EventTargetArray> targets_;  
 ```  
   
-## <a name="remarks"></a>コメント  
- 現在の EventSource オブジェクトによって表されるイベントが発生するイベント ハンドラーが呼び出されます。  
+## <a name="remarks"></a>Remarks  
+ ときに、現在で表されるイベント**EventSource**オブジェクトが、イベント ハンドラーは呼び出されます。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** event.h  

@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::putonprogress メソッド |Microsoft ドキュメント
+title: Asyncbase::putonprogress メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c12709bdcac615937c938468bcf0e2daca437675
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a99eee63496632b8f0918ee888e6a824424b757d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859788"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649891"
 ---
 # <a name="asyncbaseputonprogress-method"></a>AsyncBase::PutOnProgress メソッド
 進行状況イベント ハンドラーのアドレスを指定した値に設定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 STDMETHOD(  
    PutOnProgress  
 )(TProgress* progressHandler);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `progressHandler`  
- 進行状況イベント ハンドラーが設定されるアドレスです。  
+### <a name="parameters"></a>パラメーター  
+ *progressHandler*  
+ 進行状況イベントのハンドラーが設定されているアドレスです。  
   
 ## <a name="return-value"></a>戻り値  
- 正常終了した場合は S_OK、それ以外の場合、E_ILLEGAL_METHOD_CALL です。  
+ 成功した場合は s_ok を返します。それ以外の場合、E_ILLEGAL_METHOD_CALL します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** async.h  

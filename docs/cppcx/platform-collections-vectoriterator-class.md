@@ -1,5 +1,5 @@
 ---
-title: Platform::Collections::VectorIterator クラス |Microsoft ドキュメント
+title: Platform::Collections::VectorIterator クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -15,17 +15,17 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: deaab183a092a073c6681004654312485959e924
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68198edb54c79d0872b3181d4ffe36df21a8cf02
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092533"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208472"
 ---
 # <a name="platformcollectionsvectoriterator-class"></a>Platform::Collections::VectorIterator クラス
 Windows ランタイム IVector インターフェイスから派生したオブジェクトの標準テンプレート ライブラリ反復子を提供します。  
   
- VectorIterator は、型 VectorProxy の要素を格納するプロキシ反復子\<T > です。 ただし、プロキシ オブジェクトは、ユーザー コードにはほとんどは表示されません。 詳細については、「 [Collections (C++/CX) (コレクション (C++/CX))](../cppcx/collections-c-cx.md)」を参照してください。  
+ VectorIterator の型 VectorProxy 要素を格納するプロキシ反復子は、\<T >。 ただし、プロキシ オブジェクトは、ユーザー コードにはほとんどは表示されません。 詳細については、「 [Collections (C++/CX) (コレクション (C++/CX))](../cppcx/collections-c-cx.md)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,8 +46,8 @@ class VectorIterator;
 |----------|-----------------|  
 |`difference_type`|ポインターの相違点 (ptrdiff_t)。|  
 |`iterator_category`|ランダム アクセス反復子 (::std::random_access_iterator_tag) のカテゴリ。|  
-|`pointer`|:Vectorproxy 内部型へのポインター\<T >、つまり VectorIterator の実装に必要なです。|  
-|`reference`|:Vectorproxy 内部型への参照を\<T >、つまり、VectorIterator の実装に必要なです。|  
+|`pointer`|Platform::Collections::Details::VectorProxy 内部型へのポインター\<T > は、VectorIterator の実装に必要な。|  
+|`reference`|Platform::Collections::Details::VectorProxy 内部型への参照を\<T >、つまり、VectorIterator の実装に必要な。|  
 |`value_type`|`T` 型名。|  
   
 ### <a name="public-constructors"></a>パブリック コンストラクター  
@@ -79,7 +79,7 @@ class VectorIterator;
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `VectorIterator`  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
  **ヘッダー:** collection.h  
   
  **名前空間:** Platform::Collections  
@@ -114,14 +114,14 @@ VectorIterator operator--(int);
 ### <a name="return-value"></a>戻り値  
  最初の構文は、現在の VectorIterator をデクリメントしてから返します。 2 番目の構文は、現在の VectorIterator のコピーを返し、現在の VectorIterator をデクリメントします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  最初の VectorIterator 構文は、現在の VectorIterator の前置デクリメントを実行します。  
   
- 2 番目の構文は、現在の VectorIterator に後置デクリメントを実行します。 `int` 2 番目の構文の型が後置デクリメント演算、実際の整数オペランドではないことを示します。  
+ 2 番目の構文は、現在の VectorIterator に後置デクリメントを実行します。 `int` 2 番目の構文で型を後置デクリメント演算、実際の整数オペランドではなくを示します。  
   
 
 
-## <a name="operator-dereference"></a>  Vectoriterator::operator * 演算子
+## <a name="operator-dereference"></a>  Vectoriterator::operator\*演算子
 現在の VectorIterator により指定される要素のアドレスを取得します。  
   
 ### <a name="syntax"></a>構文  
@@ -135,7 +135,7 @@ reference operator*() const;
   
 
 
-## <a name="operator-equality"></a>  Vectoriterator::operator = = 演算子
+## <a name="operator-equality"></a>  Vectoriterator::operator = 演算子
 現在の VectorIterator が、指定された VectorIterator と等しいかどうかを示します。  
   
 ### <a name="syntax"></a>構文  
@@ -203,7 +203,7 @@ VectorIterator operator++(int);
 ### <a name="return-value"></a>戻り値  
  最初の構文は、現在の VectorIterator をインクリメントしてから返します。 2 番目の構文は、現在の VectorIterator のコピーを返し、現在の VectorIterator をインクリメントします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  最初の VectorIterator 構文は、現在の VectorIterator の前置インクリメントを実行します。  
   
  2 番目の構文は、現在の VectorIterator に後置インクリメントを実行します。 2 つ目の構文の `int` 型は、実際の整数オペランドではなく後置インクリメント演算を示します。  
@@ -224,7 +224,7 @@ bool operator!=(const VectorIterator& other) const;
  別の VectorIterator。  
   
 ### <a name="return-value"></a>戻り値  
- `true` 現在の VectorIterator と等しくない場合`other`、それ以外の`false`します。  
+ `true` 現在の VectorIterator が等しくない場合`other`、それ以外の`false`します。  
   
 
 
@@ -262,7 +262,7 @@ bool operator<=(const VectorIterator& other) const
  別の VectorIterator。  
   
 ### <a name="return-value"></a>戻り値  
- `true` かどうか、現在の VectorIterator より小さいかに等しい`other`、それ以外の`false`します。  
+ `true` 現在の VectorIterator と等しいまたはそれよりも小さいかどうか`other`、それ以外の`false`します。  
   
 
 
@@ -286,7 +286,7 @@ difference_type operator-(const VectorIterator& other) const;
  別の VectorIterator。  
   
 ### <a name="return-value"></a>戻り値  
- 最初の演算子構文は、VectorIterator オブジェクトを取得する`n`要素が現在の VectorIterator より小さい。 2 番目の演算子構文は、現在の要素の数を返しますと`other`VectorIterator。  
+ 最初の演算子構文は、VectorIterator オブジェクトを取得する`n`要素が現在の VectorIterator より小さい。 2 番目の演算子構文は、現在の要素の数を返します、 `other` VectorIterator。  
   
 
 
@@ -339,7 +339,7 @@ inline VectorIterator<T> operator+(
   
  2 番目の構文では、`i` パラメーターの先頭から指定された転置にある要素を参照する VectorIterator。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  最初の構文例  
   
 
@@ -396,8 +396,8 @@ explicit VectorIterator(
  `v`  
  IVector\<T > オブジェクト。  
   
-### <a name="remarks"></a>コメント  
- 最初の構文例は既定のコンストラクターです。 2 番目の構文例は、IVector から VectorIterator を構築するために使用される明示的なコンス トラクター\<T > オブジェクト。  
+### <a name="remarks"></a>Remarks  
+ 最初の構文例は既定のコンストラクターです。 2 番目の構文例は、IVector から VectorIterator を構築するために使用する明示的なコンス トラクター\<T > オブジェクト。  
   
 
 

@@ -1,5 +1,5 @@
 ---
-title: リソース ビュー ウィンドウ |Microsoft ドキュメント
+title: リソース ビュー ウィンドウ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b207bfa9236b4e0de1f01f98cc7e83124048a3a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b936b1014c2dd6640f64ca929628f6f0a74dc79
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877385"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012330"
 ---
 # <a name="resource-view-window"></a>リソース ビュー ウィンドウ
 > [!NOTE]
@@ -35,19 +35,17 @@ ms.locfileid: "33877385"
 >  プロジェクトに .rc ファイルがまだ含まれていない場合は、「 [リソース スクリプト ファイルの新規作成](../windows/how-to-create-a-resource-script-file.md)」を参照してください。  
   
 > [!TIP]
->  [リソース ビュー] ウィンドウを右クリックすると、コマンドのショートカット メニューを起動できます。 また、タイトル バーをダブルクリックすると、ウィンドウのドッキングやドッキング解除ができます。 タイトル バーを右クリックすると、さらにコマンドが表示され、ウィンドウの動作を制御できます。 詳細については、次を参照してください。 [Windows 管理](/visualstudio/ide/customizing-window-layouts-in-visual-studio)です。  
+>  右クリック、**リソース ビュー**をコマンドのショートカット メニューを起動します。 また、タイトル バーをダブルクリックすると、ウィンドウのドッキングやドッキング解除ができます。 タイトル バーを右クリックすると、さらにコマンドが表示され、ウィンドウの動作を制御できます。 詳細については、次を参照してください。 [Windows 管理](/visualstudio/ide/customizing-window-layouts-in-visual-studio)します。  
   
-#### <a name="to-open-the-resource-view-window"></a>[リソース ビュー] ウィンドウを開くには  
+### <a name="to-open-the-resource-view-window"></a>[リソース ビュー] ウィンドウを開くには  
   
-1.  をクリックして**リソース ビュー**上、**ビュー**メニュー。  
+1.  クリックして**リソース ビュー**上、**ビュー**メニュー。  
   
      \- または -  
   
-2.  キーを押して**CTRL + SHIFT + E**です。  
+2.  キーを押して**Ctrl**+**Shift**+**E**します。  
   
-
-  
-### <a name="requirements"></a>要件  
+## <a name="requirements"></a>要件  
  Win32  
   
 ## <a name="see-also"></a>関連項目  

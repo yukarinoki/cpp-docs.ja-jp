@@ -1,5 +1,5 @@
 ---
-title: SemaphoreTraits 構造体 |Microsoft ドキュメント
+title: SemaphoreTraits 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c5bdb20a765b56fd90a46389eba2a869890e4fd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c953efc6e9f4b3904404ae362b6beca7f88192d2
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892606"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018270"
 ---
 # <a name="semaphoretraits-structure"></a>SemaphoreTraits 構造体
-セマフォ オブジェクトの共通の特性を定義します。  
+一般的な特性を定義、**セマフォ**オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 struct SemaphoreTraits : HANDLENullTraits;  
 ```  
   
@@ -39,7 +39,7 @@ struct SemaphoreTraits : HANDLENullTraits;
   
 |名前|説明|  
 |----------|-----------------|  
-|[SemaphoreTraits::Unlock メソッド](../windows/semaphoretraits-unlock-method.md)|共有リソースのリリースのコントロールです。|  
+|[SemaphoreTraits::Unlock メソッド](../windows/semaphoretraits-unlock-method.md)|共有リソースのコントロールをリリースします。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `HANDLENullTraits`  

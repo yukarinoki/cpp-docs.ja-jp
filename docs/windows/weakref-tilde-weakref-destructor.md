@@ -1,5 +1,5 @@
 ---
-title: 'WeakRef:: ~ WeakRef デストラクター |Microsoft ドキュメント'
+title: 'WeakRef:: ~ WeakRef デストラクター |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 47752b861ab5974b60f62cdfaba620e60288d09a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2ae538b66e4e8de7611f7b2f276c354a87dad2ef
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889889"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017894"
 ---
 # <a name="weakrefweakref-destructor"></a>WeakRef::~WeakRef デストラクター
-WeakRef クラスの現在のインスタンスの初期化を解除します。  
+現在のインスタンスの初期化を解除、 **WeakRef**クラス。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 ~WeakRef();  
 ```  
   

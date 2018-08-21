@@ -1,5 +1,5 @@
 ---
-title: Simpleclassfactory::createinstance メソッド |Microsoft ドキュメント
+title: Simpleclassfactory::createinstance メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8a31d364a6464962b8243cfaced03131a20f9324
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: aa0d48ba96c550ff6ee1248dccd0b4c8e3021212
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892749"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020305"
 ---
 # <a name="simpleclassfactorycreateinstance-method"></a>SimpleClassFactory::CreateInstance メソッド
 
-指定されたインターフェイスのインスタンスを作成します。
+指定したインターフェイスのインスタンスを作成します。
 
 ## <a name="syntax"></a>構文
 
@@ -39,25 +39,24 @@ STDMETHOD( CreateInstance )(
 ```
 
 ### <a name="parameters"></a>パラメーター
-
 *pUnkOuter*  
-必要があります`nullptr`です。 それ以外の場合、戻り値は CLASS_E_NOAGGREGATION します。
+必要があります**nullptr**、それ以外の戻り値は CLASS_E_NOAGGREGATION します。
 
-SimpleClassFactory には、集計をサポートしていません。 集計がサポートされていて、作成されるオブジェクト、集計の一部であった`pUnkOuter`集計の管理 IUnknown インターフェイスへのポインターになります。
+SimpleClassFactory には、集計をサポートしていません。 集計がサポートされており、作成されるオブジェクト、集計の一部であった*pUnkOuter*制御へのポインターになります`IUnknown`集計のインターフェイス。
 
 *riid*  
 インターフェイスを作成するには、オブジェクトの ID。
 
 *ppvObject*  
-この操作の完了時で指定されたオブジェクトのインスタンスへのポインター、`riid`パラメーター。
+ときにこの操作が完了したらで指定されたオブジェクトのインスタンスへのポインター、 *riid*パラメーター。
 
 ## <a name="return-value"></a>戻り値
 
 成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-場合&#95; &#95;WRL_STRICT&#95; &#95;が定義されている、assert エラーが発生、クラス テンプレート パラメーターに指定された基本クラスから派生していない場合[RuntimeClass](../windows/runtimeclass-class.md)、または、ClassicCom で構成されていないまたはWinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列挙値。
+場合`__WRL_STRICT__`が定義されている、アサート エラーが生成クラス テンプレート パラメーターで指定された基本クラスから派生していない場合[RuntimeClass](../windows/runtimeclass-class.md)、ClassicCom または WinRtClassicComMix で構成されていないまたは[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列挙値。
 
 ## <a name="requirements"></a>要件
 
@@ -66,5 +65,4 @@ SimpleClassFactory には、集計をサポートしていません。 集計が
 **名前空間:** Microsoft::WRL
 
 ## <a name="see-also"></a>関連項目
-
-[SimpleClassFactory クラス](../windows/simpleclassfactory-class.md)
+ [SimpleClassFactory クラス](../windows/simpleclassfactory-class.md)

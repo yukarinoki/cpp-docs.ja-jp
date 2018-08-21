@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f268dd12ca0eca55cbc91bffe5daccbc23ef4dbe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 148e42a79ef7c20b7b35c3ec570212574782c1f6
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940151"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462093"
 ---
 # <a name="thread"></a>スレッド
 
 **Microsoft 固有の仕様**
 
-**スレッド**拡張ストレージ クラス修飾子は、スレッド ローカル変数を宣言するために使用します。 C++ 11 で同等およびそれ以降のノートブックを使用して、 [thread_local](../cpp/storage-classes-cpp.md#thread_local)移植可能なコードのストレージ クラス指定子。 Windows で`thread_local`は実装されて`__declspec(thread)`します。
+**スレッド**拡張ストレージ クラス修飾子は、スレッド ローカル変数を宣言するために使用します。 C++ 11 で同等およびそれ以降のノートブックを使用して、 [thread_local](../cpp/storage-classes-cpp.md#thread_local)移植可能なコードのストレージ クラス指定子。 Windows で`thread_local`は実装されて **_declspec**します。
 
 ## <a name="syntax"></a>構文
 
@@ -96,7 +96,6 @@ __declspec( thread ) int tls_i = 1;
 **Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
-
-[__declspec](../cpp/declspec.md)  
-[キーワード](../cpp/keywords-cpp.md)  
-[スレッド ローカル ストレージ (TLS: Thread Local Storage)](../parallel/thread-local-storage-tls.md)  
+ [__declspec](../cpp/declspec.md)  
+ [キーワード](../cpp/keywords-cpp.md)  
+ [スレッド ローカル ストレージ (TLS: Thread Local Storage)](../parallel/thread-local-storage-tls.md)  

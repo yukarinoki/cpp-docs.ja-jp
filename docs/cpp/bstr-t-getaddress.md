@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4895153abe248265e0aacfbe636b9a4bd46ed205
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: eaa3921d0f1f89df11cf5e3809c9e90e4a03dd3b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941198"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408467"
 ---
 # <a name="bstrtgetaddress"></a>_bstr_t::GetAddress
 **Microsoft 固有の仕様**  
@@ -31,19 +31,17 @@ ms.locfileid: "37941198"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 BSTR* GetAddress( );  
-  
 ```  
   
 ## <a name="return-value"></a>戻り値  
  `BSTR` でラップされた `_bstr_t` へのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- `GetAddress` は、`_bstr_t` を共有するすべての `BSTR` オブジェクトに影響します。 1 つ以上`_bstr_t`を共有できる、`BSTR`コピー コンス トラクターを使用してとおよび**演算子 =** します。  
+ **GetAddress**すべて影響`_bstr_t`オブジェクトをその共有を`BSTR`します。 1 つ以上`_bstr_t`を共有できる、`BSTR`コピー コンス トラクターを使用してとおよび**演算子 =** します。  
   
 ## <a name="example"></a>例  
- 参照してください[_bstr_t::assign](../cpp/bstr-t-assign.md)の例を使用して、`GetAddress`します。  
+ 参照してください[_bstr_t::assign](../cpp/bstr-t-assign.md)の例を使用して、 **GetAddress**します。  
   
  **Microsoft 固有の仕様はここまで**  
   

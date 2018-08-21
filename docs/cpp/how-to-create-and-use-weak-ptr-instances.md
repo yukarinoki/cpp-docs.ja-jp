@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73b70a68226be14b7e99afe125b3dcd8b6784601
-ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
+ms.openlocfilehash: 673bceb5042a91361ece00360c4d9c5b140e4d00
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39034817"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402700"
 ---
 # <a name="how-to-create-and-use-weakptr-instances"></a>方法: weak_ptr インスタンスを作成して使用する
 オブジェクトには、参照カウントをインクリメントせずに `shared_ptr` の基になるオブジェクトにアクセスする方法を格納する必要が生じることがあります。 通常、この状況は `shared_ptr` インスタンス間に循環参照がある場合に発生します。  

@@ -1,5 +1,5 @@
 ---
-title: SafeModulus |Microsoft ドキュメント
+title: SafeModulus |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 653293ac04be1e3a04e90412a9d9d8b988773329
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ec263f2da2374c66c7333a57f69ff6afbf0553fb
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888869"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013637"
 ---
 # <a name="safemodulus"></a>SafeModulus
 2 つの数値に対して剰余演算を実行します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename T, typename U>  
 inline bool SafeModulus (  
    const T t,  
@@ -38,26 +38,26 @@ inline bool SafeModulus (
 ) throw ();  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- [入力] `t`  
- 除数。 T 型でなければなりません  
+### <a name="parameters"></a>パラメーター  
+ [in]*t*  
+ 除数。 これは、型でなければなりません`T`します。  
   
- [入力] `u`  
- 被除数。 U 型です。 これでなければなりません  
+ [in]*u*  
+ 被除数。 これは、型でなければなりません`U`します。  
   
- [出力] `result`  
- パラメーターで`SafeModulus`結果を格納します。  
+ [out]*結果*  
+ パラメーターで**SafeModulus**結果を格納します。  
   
 ## <a name="return-value"></a>戻り値  
- `true` エラーが発生しない場合です。`false`場合は、エラーが発生します。  
+ **true**場合、エラーは発生しません。**false**エラーが発生した場合。  
   
-## <a name="remarks"></a>コメント  
- このメソッドの一部である[SafeInt ライブラリ](../windows/safeint-library.md)のインスタンスを作成することがなく 1 つの剰余演算のものでは、 [SafeInt クラス](../windows/safeint-class.md)です。  
+## <a name="remarks"></a>Remarks  
+ このメソッドの一部は、 [SafeInt ライブラリ](../windows/safeint-library.md)のインスタンスを作成せず 1 つの剰余演算のものでは、 [SafeInt クラス](../windows/safeint-class.md)します。  
   
 > [!NOTE]
->  このメソッドは、単一の数値演算を保護する必要がありますにのみ使用する必要があります。 使用する必要があります複数の操作がある場合、`SafeInt`個々 のスタンドアロン関数の呼び出しではなくクラスです。  
+>  このメソッドは、単一の数値演算を保護する必要がありますにのみ使用する必要があります。 使用する必要があります複数の操作がある場合、`SafeInt`個々 のスタンドアロン関数の呼び出しではなくクラス。  
   
- テンプレート型 T および U の詳細については、次を参照してください。 [SafeInt 関数](../windows/safeint-functions.md)です。  
+ テンプレートの種類の詳細については`T`と`U`を参照してください[SafeInt 関数](../windows/safeint-functions.md)します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** safeint.h  

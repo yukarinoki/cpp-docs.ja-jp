@@ -1,5 +1,5 @@
 ---
-title: ActivationFactoryCallback 関数 |Microsoft ドキュメント
+title: ActivationFactoryCallback 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,39 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2f1bae2c503f4e5f0c887a46956248184ece9a1e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 858232702367aef62d0228f2e8653774896bd87f
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857325"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647184"
 ---
 # <a name="activationfactorycallback-function"></a>ActivationFactoryCallback 関数
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(  
    HSTRING activationId,  
    IActivationFactory **ppFactory  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `activationId`  
+### <a name="parameters"></a>パラメーター  
+ *activationId*  
  ランタイム クラス名を指定する文字列へのハンドルします。  
   
- `ppFactory`  
- この操作の完了時、パラメーターに対応するアクティベーション ファクトリ`activationId`です。  
+ *ppFactory*  
+ ときにこの操作が完了すると、パラメーターに対応するアクティベーション ファクトリ*activationId*します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合は S_OK、そうでない場合は失敗を示す HRESULT。 可能性の高いエラー Hresult は、CLASS_E_CLASSNOTAVAILABLE および E_INVALIDARG です。  
+ 成功した場合は S_OK、そうでない場合は失敗を示す HRESULT。 可能性の高いエラー Hresult CLASS_E_CLASSNOTAVAILABLE、E_INVALIDARG です。  
   
-## <a name="remarks"></a>コメント  
- 指定されたアクティブ化 ID のアクティベーション ファクトリを取得します  
+## <a name="remarks"></a>Remarks  
+ 指定されたアクティブ化 ID のアクティベーション ファクトリを取得します。  
   
- Windows ランタイムでは、そのランタイム クラス名で指定されたオブジェクトを要求するには、このコールバック関数を呼び出します。  
+ Windows ランタイムでは、ランタイム クラス名で指定されたオブジェクトを要求するには、このコールバック関数を呼び出します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** module.h  

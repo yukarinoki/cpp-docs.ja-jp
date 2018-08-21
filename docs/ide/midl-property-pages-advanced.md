@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f87518c23848cea91a3e3c48361aa0a63fa88a2
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9b99dae277fec7618c2e7caeb76229edce7a78c2
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33330805"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207761"
 ---
 # <a name="midl-property-pages-advanced"></a>[詳細] ([MIDL] プロパティ ページ)
 **MIDL** フォルダーの **[詳細]** プロパティ ページでは、次の MIDL コンパイラ オプションを指定します。  
@@ -48,7 +48,7 @@ ms.locfileid: "33330805"
   
 -   スタブ データのチェック ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   パラメーターの確認 ([/robust](http://msdn.microsoft.com/library/windows/desktop/aa367363)) *  
+-   パラメーターの確認 ([/robust](http://msdn.microsoft.com/library/windows/desktop/aa367363))\*  
   
 -   構造体メンバーの配置 ([/Zp](http://msdn.microsoft.com/library/windows/desktop/aa367388))  
   

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a330ecf221d210134425c4bf39c17bac0f5006dc
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f21256ca78a4bf5f268c4fa3d03c86bc52c91670
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940535"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461677"
 ---
 # <a name="dllexport-dllimport"></a>dllexport、dllimport
 **Microsoft 固有の仕様**  
@@ -35,7 +35,6 @@ ms.locfileid: "37940535"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
    __declspec( dllimport ) declarator  
    __declspec( dllexport ) declarator  
 ```  
@@ -81,7 +80,7 @@ DllExport int n;
   
 -   [C++ クラスでの dllimport と dllexport の使用](../cpp/using-dllimport-and-dllexport-in-cpp-classes.md)  
   
- **Microsoft 固有の仕様はここまで**  
+**Microsoft 固有の仕様はここまで**  
   
 ## <a name="see-also"></a>関連項目  
  [__declspec](../cpp/declspec.md)   

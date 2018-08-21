@@ -1,5 +1,5 @@
 ---
-title: '方法: さまざまな文字列型の間で変換 |Microsoft ドキュメント'
+title: '方法: さまざまな文字列型間の変換 |Microsoft Docs'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44b80fcafa15a472f4bfc68dd74ff0acc40bb2ad
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bf7623c377e8fcce2a6a498176aaf9fb08a55b20
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861228"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015093"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>方法: さまざまな文字列型間で変換する
-このトピックでは、さまざまな Visual C++ 文字列型を他の文字列に変換する方法について説明します。 対象となっている文字列型を含める`char *`、 `wchar_t*`、 [_bstr_t](../cpp/bstr-t-class.md)、 [CComBSTR](../atl/reference/ccombstr-class.md)、 [CString](../atl-mfc-shared/using-cstring.md)、 [basic_string](../standard-library/basic-string-class.md)、および<xref:System.String?displayProperty=fullName>です。 どの場合も、新しい型に変換すると文字列のコピーが作成されます。 新しい文字列に何らかの変更を加えても元の文字列には影響しません。また、逆に、元の文字列に何らかの変更を加えても新しい文字列には影響しません。  
+このトピックでは、さまざまな Visual C++ 文字列型を他の文字列に変換する方法について説明します。 カバーされる文字列の種類を含める`char *`、 `wchar_t*`、 [_bstr_t](../cpp/bstr-t-class.md)、 [CComBSTR](../atl/reference/ccombstr-class.md)、 [CString](../atl-mfc-shared/using-cstring.md)、 [basic_string](../standard-library/basic-string-class.md)、および<xref:System.String?displayProperty=fullName>します。 どの場合も、新しい型に変換すると文字列のコピーが作成されます。 新しい文字列に何らかの変更を加えても元の文字列には影響しません。また、逆に、元の文字列に何らかの変更を加えても新しい文字列には影響しません。  
   
-## <a name="converting-from-char-"></a>char * からの変換  
+## <a name="converting-from-char-"></a>Char からの変換 \*  
   
 ## <a name="example"></a>例  
   
@@ -35,7 +35,7 @@ ms.locfileid: "33861228"
   
 ### <a name="code"></a>コード  
   
-```  
+```cpp  
 // convert_from_char.cpp  
 // compile with: /clr /link comsuppw.lib  
   
@@ -115,9 +115,7 @@ int main()
 }  
 ```  
   
-### <a name="output"></a>出力  
-  
-```  
+```Output  
 Hello, World! (char *)  
 Hello, World! (wchar_t *)  
 Hello, World! (_bstr_t)  
@@ -128,7 +126,7 @@ Hello, World! (basic_string)
 Hello, World! (System::String)  
 ```  
   
-## <a name="converting-from-wchart-"></a>wchar_t * からの変換  
+## <a name="converting-from-wchart-"></a>Wchar_t からの変換 \*  
   
 ## <a name="example"></a>例  
   
@@ -137,7 +135,7 @@ Hello, World! (System::String)
   
 ### <a name="code"></a>コード  
   
-```  
+```cpp  
 // convert_from_wchar_t.cpp  
 // compile with: /clr /link comsuppw.lib  
   
@@ -238,11 +236,9 @@ int main()
     Console::WriteLine("{0}", systemstring);  
     delete systemstring;  
 }  
-```  
+```   
   
-### <a name="output"></a>出力  
-  
-```  
+```Output  
 Hello, World! (wchar_t *)  
 Hello, World! (char *)  
 Hello, World! (_bstr_t)  
@@ -262,7 +258,7 @@ Hello, World! (System::String)
   
 ### <a name="code"></a>コード  
   
-```  
+```cpp  
 // convert_from_bstr_t.cpp  
 // compile with: /clr /link comsuppw.lib  
   
@@ -339,11 +335,9 @@ int main()
     Console::WriteLine("{0}", systemstring);  
     delete systemstring;  
 }  
-```  
+```   
   
-### <a name="output"></a>出力  
-  
-```  
+```Output  
 Hello, World! (_bstr_t)  
 Hello, World! (char *)  
 Hello, World! (wchar_t *)  
@@ -363,7 +357,7 @@ Hello, World! (System::String)
   
 ### <a name="code"></a>コード  
   
-```  
+```cpp  
 // convert_from_ccombstr.cpp  
 // compile with: /clr /link comsuppw.lib  
   
@@ -452,9 +446,7 @@ int main()
 }  
 ```  
   
-### <a name="output"></a>出力  
-  
-```  
+```Output  
 Hello, World! (CComBSTR)  
 Hello, World! (char *)  
 Hello, World! (wchar_t *)  
@@ -476,7 +468,7 @@ Hello, World! (System::String)
   
 ### <a name="code"></a>コード  
   
-```  
+```cpp  
 // convert_from_cstring.cpp  
 // compile with: /clr /link comsuppw.lib  
   
@@ -498,7 +490,7 @@ int main()
     cout << origa << " (CStringA)" << endl;  
 ```  
   
-```  
+```cpp  
 // Set up a wide character CStringW string.  
 CStringW origw("Hello, World!");  
 wcout << (LPCTSTR)origw << _T(" (CStringW)") << endl;  
@@ -587,7 +579,7 @@ Console::WriteLine("{0}", systemstring);
 delete systemstring;  
 ```  
   
-```  
+```cpp  
     // Convert a wide character CStringW to a   
     // System::String.  
     String ^systemstringw = gcnew String(origw);  
@@ -595,11 +587,9 @@ delete systemstring;
     Console::WriteLine("{0}", systemstringw);  
     delete systemstringw;  
 }  
-```  
+```   
   
-### <a name="output"></a>出力  
-  
-```  
+```Output  
 Hello, World! (CStringA)  
 Hello, World! (CStringW)  
 Hello, World! (char *)  
@@ -623,7 +613,7 @@ Hello, World! (System::String)
   
 ### <a name="code"></a>コード  
   
-```  
+```cpp  
 // convert_from_basic_string.cpp  
 // compile with: /clr /link comsuppw.lib  
   
@@ -698,9 +688,7 @@ int main()
 }  
 ```  
   
-### <a name="output"></a>出力  
-  
-```  
+```Output  
 Hello, World! (basic_string)  
 Hello, World! (char *)  
 Hello, World! (wchar_t *)  
@@ -716,11 +704,11 @@ Hello, World! (System::String)
 ## <a name="example"></a>例  
   
 ### <a name="description"></a>説明  
- この例は、ワイド文字 (Unicode) から変換する方法を示します[system::string](assetId:///System::String?qualifyHint=True&autoUpgrade=True)上に示したその他の文字列型にします。  
+ この例では、ワイド文字 (Unicode) から変換[system::string](assetId:///System::String?qualifyHint=True&autoUpgrade=True)上に示したその他の文字列型。  
   
 ### <a name="code"></a>コード  
   
-```  
+```cpp  
 // convert_from_system_string.cpp  
 // compile with: /clr /link comsuppw.lib  
   
@@ -806,9 +794,7 @@ int main()
 }  
 ```  
   
-### <a name="output"></a>出力  
-  
-```  
+```Output  
 Hello, World! (System::String)  
 Hello, World! (char *)  
 Hello, World! (wchar_t *)  

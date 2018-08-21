@@ -1,5 +1,5 @@
 ---
-title: Activationfactory::addref メソッド |Microsoft ドキュメント
+title: Activationfactory::addref メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4800f8d6e4c361cf44918bc790c0d8edb7591f08
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bb4221a0432acdfcccb4e7ce77a2d16245e48a03
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854042"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650873"
 ---
 # <a name="activationfactoryaddref-method"></a>ActivationFactory::AddRef メソッド
-ActivationFactory、現在の参照カウントをインクリメントします。  
+現在の参照カウントをインクリメント**ActivationFactory**オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 STDMETHOD_(  
    ULONG,  
    AddRef  

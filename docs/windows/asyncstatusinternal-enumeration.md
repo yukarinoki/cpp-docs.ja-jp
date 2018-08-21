@@ -1,5 +1,5 @@
 ---
-title: AsyncStatusInternal 列挙型 |Microsoft ドキュメント
+title: AsyncStatusInternal 列挙型 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,40 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 150169442aa68395b4dc8a4f4c74951e877f18f5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eeaef23178829163725b78685b3460913f53f2c2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863726"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652800"
 ---
 # <a name="asyncstatusinternal-enumeration"></a>AsyncStatusInternal 列挙型
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 enum AsyncStatusInternal;  
 ```  
   
-## <a name="remarks"></a>コメント  
- 非同期操作の状態の内部列挙値の間のマッピングを指定し、 **Windows::Foundation::AsyncStatus**列挙します。  
+## <a name="remarks"></a>Remarks  
+ 非同期操作の状態の内部列挙値の間のマッピングを指定します、`Windows::Foundation::AsyncStatus`列挙体。  
   
 ## <a name="members"></a>メンバー  
  `_Created`  
- 等価:: Windows::Foundation::AsyncStatus:: を作成  
+ `::Windows::Foundation::AsyncStatus::Created` と同じ意味です。  
   
  `_Started`  
- 等価:: Windows::Foundation::AsyncStatus:: 開始  
+ `::Windows::Foundation::AsyncStatus::Started` と同じ意味です。  
   
  `_Completed`  
- 等価:: Windows::Foundation::AsyncStatus:: 完了  
+ `::Windows::Foundation::AsyncStatus::Completed` と同じ意味です。  
   
  `_Cancelled`  
- 等価:: Windows::Foundation::AsyncStatus:: 取り消されました  
+ `::Windows::Foundation::AsyncStatus::Cancelled` と同じ意味です。  
   
  `_Error`  
- 等価:: Windows::Foundation::AsyncStatus::Error  
+ `::Windows::Foundation::AsyncStatus::Error` と同じ意味です。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** async.h  

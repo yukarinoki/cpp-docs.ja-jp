@@ -1,5 +1,5 @@
 ---
-title: Event::event コンス トラクター (Windows ランタイム C++ テンプレート ライブラリ) |Microsoft ドキュメント
+title: Event::event コンス トラクター (Windows ランタイム C++ テンプレート ライブラリ) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9a63e7ddbf2528b78eac7761bbcf4891f31cc886
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8c2683d2e1875e7d68d27f7bde515b7a4ca70da0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882629"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649729"
 ---
 # <a name="eventevent-constructor-windows-runtime-c-template-library"></a>Event::Event コンストラクター (Windows ランタイム C++ テンプレート ライブラリ)
-Event クラスの新しいインスタンスを初期化します。  
+新しいインスタンスを初期化、**イベント**クラス。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 explicit Event(  
    HANDLE h = HandleT::Traits::GetInvalidValue()  
 );  
@@ -36,9 +36,9 @@ WRL_NOTHROW Event(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `h`  
- イベントに対するハンドル。 既定では、`h` は `nullptr` に初期化されます。  
+### <a name="parameters"></a>パラメーター  
+ *h*  
+ イベントに対するハンドル。 既定では、 *h*に初期化されます**nullptr**します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

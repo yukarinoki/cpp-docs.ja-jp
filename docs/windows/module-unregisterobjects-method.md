@@ -1,5 +1,5 @@
 ---
-title: Module::unregisterobjects メソッド |Microsoft ドキュメント
+title: Module::unregisterobjects メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b711338c436eda3e64d9b51ef0d3137975d834a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c46fad71a42f9f947f020709cdf7851d079edd81
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874120"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014027"
 ---
 # <a name="moduleunregisterobjects-method"></a>Module::UnregisterObjects メソッド
-指定したモジュール内のオブジェクトの登録を解除して、他のアプリケーションがそれらに接続できないようにします。  
+他のアプリケーションがそれらに接続できないように、指定したモジュール内のオブジェクトを登録解除します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT UnregisterObjects(  
    ModuleBase* module,  
    const wchar_t* serverName);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `module`  
+### <a name="parameters"></a>パラメーター  
+ *モジュール*  
  モジュールへのポインター。  
   
- `serverName`  
+ *サーバー名*  
  この操作によって影響を受けるオブジェクトのサブセットを指定する修飾名。  
   
 ## <a name="return-value"></a>戻り値  
- この操作が成功した場合は S_OK、それ以外の場合、エラーの理由を示す hresult 値この操作に失敗しました。  
+ この操作が成功した場合は s_ok を返します。それ以外の場合、エラー理由を示す HRESULT がこの操作に失敗しました。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** module.h  

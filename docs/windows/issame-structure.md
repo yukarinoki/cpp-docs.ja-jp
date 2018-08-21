@@ -1,5 +1,5 @@
 ---
-title: IsSame 構造体 |Microsoft ドキュメント
+title: IsSame 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52dd1920ad32719e4fbff5a0138e737367d97ff4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b63e3784529edf8957654511af53373fd80799ae
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877671"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014261"
 ---
 # <a name="issame-structure"></a>IsSame 構造体
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template <  
    typename T1,  
    typename T2  
@@ -41,21 +41,21 @@ template <
 struct IsSame<T1, T1>;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `T1`  
+### <a name="parameters"></a>パラメーター  
+ *T1*  
  型。  
   
- `T2`  
+ *T2*  
  別の型。  
   
-## <a name="remarks"></a>コメント  
- 1 つには、型を指定するかどうかが同じ別のテストには、種類が指定されました。  
+## <a name="remarks"></a>Remarks  
+ 別のと同じ型を指定した 1 つかどうかがテストには、種類が指定されました。  
   
 ## <a name="members"></a>メンバー  
   
 ### <a name="public-constants"></a>パブリック定数  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[IsSame::value 定数](../windows/issame-value-constant.md)|1 つの型が別のと同じかどうかを示します。|  
   

@@ -1,5 +1,5 @@
 ---
-title: ガイドのコントロールの配置 |Microsoft ドキュメント
+title: ガイドのコントロールの配置 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,41 +25,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a7c8cc57b4d2e7150ff09858cfd5b315beb37962
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a1a586a3a17e829d883dff96c12f6a2fdabe669f
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857839"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643859"
 ---
 # <a name="aligning-controls-on-a-guide"></a>ガイドのコントロールの配置
-コントロールのサイズ変更ハンドルは、コントロールが移動され、(ガイドに合わせてコントロールが存在しない) 場合に、ガイドがコントロールに合わせるときに、ガイドにスナップされます。 ガイドを移動するとときに、スナップしたコントロールはも移動します。 1 つ以上のガイドにスナップ コントロールは、ガイドでは、いずれかが移動されるときにサイズ変更されます。  
+コントロールのサイズ変更ハンドルは、コントロールを移動するととガイドがコントロールにスナップする (ガイドに合わせてコントロールが存在しない) 場合、に、ガイドにスナップされます。 ガイドが移動したときにスナップしたコントロールも移動します。 ガイドでは、いずれかが移動すると、コントロールの 1 つ以上のガイドを基準としてスナップされますがサイズ変更されます。  
   
- 目盛りは定規ガイドとコントロールの間隔を決定するには、ダイアログ単位 (Dlu) によって定義されます。 DLU は通常 8 ポイント MS Shell Dlg、ダイアログ ボックス フォントのサイズに基づいています。 水平 DLU は、4 で割った値 ダイアログ ボックスのフォントの幅の平均です。 垂直 DLU は 8 で割った値のフォントの高さの平均値です。  
+ ガイドとコントロールの間隔を決定する定規の目盛りは、ダイアログ単位 (Dlu) によって定義されます。 DLU は、通常、8 ポイント MS Shell Dlg、ダイアログ ボックス フォントのサイズに基づきます。 水平 DLU は、4、ダイアログ ボックスのフォントの平均幅です。 垂直 DLU は 8 で割った値のフォントの高さの平均値です。  
   
-### <a name="to-size-a-group-of-controls-with-guides"></a>ガイドを使用してコントロールのグループのサイズを変更するには  
+### <a name="to-size-a-group-of-controls-with-guides"></a>ガイドを使用してコントロールのグループのサイズ  
   
 1.  コントロール (またはコントロール) の一方の側をスナップをガイドします。  
   
-2.  コントロール (またはコントロール) の相手側のガイドをドラッグします。  
+2.  コントロール (またはコントロール) の反対側のガイドをドラッグします。  
   
-     必要に応じて複数のコントロールに、それぞれ 2 つ目のガイドに合わせてのサイズを変更します。  
+     複数のコントロールで必要に応じて、それぞれに 2 番目のガイドへのスナップのサイズします。  
   
-3.  コントロール (またはコントロール) のサイズをいずれかのガイドに移動します。  
+3.  コントロール (またはコントロール) のサイズのいずれかのガイドに移動します。  
   
 ### <a name="to-change-the-intervals-of-the-tick-marks"></a>目盛りの間隔を変更するには  
   
 1.  **形式** メニューの 選択**ガイド設定**です。  
   
-2.  [ガイドの設定 ダイアログ ボックス](../windows/guide-settings-dialog-box.md)で、**グリッド間隔**フィールドに、Dlu で新しい幅と高さを指定します。  
+2.  [ガイドの設定 ダイアログ ボックス](../windows/guide-settings-dialog-box.md)の**グリッド間隔**フィールドに、Dlu の新しい幅と高さを指定します。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 詳細については、管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションは、次を参照してください。[グローバライズと .NET Framework アプリケーションのローカライズ](/dotnet/standard/globalization-localization/index)です。  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
   
- 要件  
-  
+## <a name="requirements"></a>要件  
  Win32  
   
 ## <a name="see-also"></a>関連項目  
  [ダイアログ エディターの状態 (ガイドとグリッド)](../windows/dialog-editor-states-guides-and-grids.md)   
  [ダイアログ ボックスのコントロール](../windows/controls-in-dialog-boxes.md)
-

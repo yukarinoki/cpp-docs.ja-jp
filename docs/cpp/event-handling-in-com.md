@@ -26,18 +26,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f60a0a8a53d77c2d8aa111ce812bf64ab11c4910
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1a4fddaa53aed54fd33afee9205fcc9a3819f1b6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943283"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406868"
 ---
 # <a name="event-handling-in-com"></a>COM でのイベント処理
 使用してイベント ソースとイベント レシーバーを設定する COM イベントの処理で、 [event_source](../windows/event-source.md)と[event_receiver](../windows/event-receiver.md)指定それぞれ属性`type` = `com`. これらの属性により、カスタム、ディスパッチ、デュアルの各インターフェイスの適切なコードが挿入され、適用先のクラスでイベントを発生させ、COM 接続ポイントを通じてイベントを処理できるようになります。  
   
 ## <a name="declaring-events"></a>イベントの宣言  
- イベント ソース クラスで、使用、 [_ _event](../cpp/event.md)イベントとしてインターフェイスのメソッドの宣言に、インターフェイス宣言でキーワード。 このインターフェイスのイベントは、インターフェイス メソッドとして呼び出されたときに発生します。 イベント インターフェイスのメソッドは、0 個以上のパラメーターを持つことができます (これはどれも`in`パラメーター)。 戻り値の型は void または任意の整数型です。  
+ イベント ソース クラスで、使用、 [_ _event](../cpp/event.md)イベントとしてインターフェイスのメソッドの宣言に、インターフェイス宣言でキーワード。 このインターフェイスのイベントは、インターフェイス メソッドとして呼び出されたときに発生します。 イベント インターフェイスのメソッドは、0 個以上のパラメーターを持つことができます (これはどれも*で*パラメーター)。 戻り値の型は void または任意の整数型です。  
   
 ## <a name="defining-event-handlers"></a>イベント ハンドラーの定義  
  イベント レシーバー クラスでは、イベント ハンドラーを定義します。イベント ハンドラーは、処理するイベントと一致するシグニチャ (戻り値の型、呼び出し規則、引数) を持つメソッドです。 COM のイベントの呼び出し規約する必要はありませんが一致します。参照してください[レイアウトに依存する COM イベント](#vcconeventhandlingincomanchorlayoutdependentcomevents)以下の詳細についてはします。  

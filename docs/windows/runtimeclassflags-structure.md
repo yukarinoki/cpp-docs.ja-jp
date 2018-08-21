@@ -1,5 +1,5 @@
 ---
-title: RuntimeClassFlags 構造体 |Microsoft ドキュメント
+title: RuntimeClassFlags 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 05166be14680b14d704095f5f1c9375bd97da7d5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 823244b54513e4f6b2901bc29984604f65eb9a11
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892027"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018037"
 ---
 # <a name="runtimeclassflags-structure"></a>RuntimeClassFlags 構造体
-インスタンスの型が含まれています、 [RuntimeClass](../windows/runtimeclass-class.md)です。  
+インスタンスの型が含まれています、 [RuntimeClass](../windows/runtimeclass-class.md)します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template <  
    unsigned int flags  
 >  
 struct RuntimeClassFlags;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `flags`  
+### <a name="parameters"></a>パラメーター  
+ *flags*  
  A [RuntimeClassType 列挙型](../windows/runtimeclasstype-enumeration.md)値。  
   
 ## <a name="members"></a>メンバー  
   
 ### <a name="public-constants"></a>パブリック定数  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[RuntimeClassFlags::value 定数](../windows/runtimeclassflags-value-constant.md)|含まれています、 [RuntimeClassType 列挙型](../windows/runtimeclasstype-enumeration.md)値。|  
   

@@ -1,5 +1,5 @@
 ---
-title: カスタム (C++) |Microsoft ドキュメント
+title: カスタム (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b37d87d5380b9d4dac69cee702654285461ead6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c0f4f04adb9ddc847b1c22485d10512a9d684d0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871628"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651896"
 ---
 # <a name="custom-c"></a>custom (C++)
-タイプ ライブラリのオブジェクトのメタデータを定義します。  
+タイプ ライブラリ内のオブジェクトのメタデータを定義します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
-      [ custom(  
+```cpp  
+[ custom(  
    uuid,   
    value  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *uuid*  
  一意の ID。  
   
  *値*  
  バリアントを入れる値。  
   
-## <a name="remarks"></a>コメント  
- **カスタム**C++ 属性を使用すると、タイプ ライブラリに配置される情報がします。 ツールをタイプ ライブラリからカスタムの値を読み取る必要があります。  
+## <a name="remarks"></a>Remarks  
+ **カスタム**情報をタイプ ライブラリに格納すると、C++ 属性。 ツールをタイプ ライブラリからカスタムの値を読み取る必要があります。  
   
  **カスタム**属性と同じ機能を持つ、[カスタム](http://msdn.microsoft.com/library/windows/desktop/aa366766)MIDL 属性。  
   
@@ -55,9 +54,9 @@ ms.locfileid: "33871628"
   
 |||  
 |-|-|  
-|**対象**|非 COM `interface`、**クラス**、 `enum`s、`idl_module`メソッド、インターフェイスのメンバー、インターフェイスのパラメーター、 `typedef`s、**共用体**s、 `struct`s|  
+|**対象**|非 COM**インターフェイス**、**クラス**、**列挙**s、`idl_module`メソッド、インターフェイスのメンバー、インターフェイスのパラメーター、 **typedef**、s**共用体**s、**構造体**s|  
 |**反復可能**|[はい]|  
-|**必要な属性**|**コクラス**(クラスを使用) する場合|  
+|**必要な属性**|**コクラス**(クラスで使用) 場合|  
 |**無効な属性**|なし|  
   
  属性コンテキストの詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  

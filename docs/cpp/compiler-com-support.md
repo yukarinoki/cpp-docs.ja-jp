@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a21b7dd00aa0bb0894da4cc13cf0f6f40078ee1b
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7c2204e69ee6df64a08e3f5cf03191ad1e7e0535
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941828"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402462"
 ---
 # <a name="compiler-com-support"></a>コンパイラの COM サポート
 ## <a name="microsoft-specific"></a>Microsoft 固有の仕様  
@@ -28,7 +28,7 @@ ms.locfileid: "37941828"
   
  使用して、 [#import プリプロセッサ ディレクティブ](../preprocessor/hash-import-directive-cpp.md)クラスのインターフェイスとして COM を記述する C++ ヘッダー ファイルに変換や、コンパイラは、タイプ ライブラリを読み取ることができます。 一連の `#import` 属性は、結果の種類のライブラリのヘッダー ファイルのコンテンツのユーザー コントロールで使用できます。  
   
- 使用することができます、 [_ _declspec](../cpp/declspec.md)拡張属性[uuid](../cpp/uuid-cpp.md)を COM オブジェクトへのグローバル一意識別子 (GUID) を割り当てます。 キーワード[_ _uuidof](../cpp/uuidof-operator.md) COM オブジェクトに関連付けられた GUID を抽出するために使用できます。 もう 1 つ`__declspec`属性、[プロパティ](../cpp/property-cpp.md)を指定するために使用できる、**取得**と**設定**COM オブジェクトのデータ メンバーのメソッド。  
+ 使用することができます、 [_ _declspec](../cpp/declspec.md)拡張属性[uuid](../cpp/uuid-cpp.md)を COM オブジェクトへのグローバル一意識別子 (GUID) を割り当てます。 キーワード[_ _uuidof](../cpp/uuidof-operator.md) COM オブジェクトに関連付けられた GUID を抽出するために使用できます。 もう 1 つ **_ _declspec**属性、[プロパティ](../cpp/property-cpp.md)を指定するために使用できる、`get`と`set`COM オブジェクトのデータ メンバーのメソッド。  
   
  サポートする一連の COM サポート グローバル関数とクラスが提供される、`VARIANT`と`BSTR`型、スマート ポインターを実装およびによってスローされたエラー オブジェクトをカプセル化`_com_raise_error`:  
   

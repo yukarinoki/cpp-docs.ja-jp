@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af1220cbb6b872ebd0370cfa526aba47338e70e6
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 33ed35d02547acdbc9a08928a6e698c3e039d745
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028152"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405572"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>移動コンストラクターと移動代入演算子 (C++)
 このトピックでは、記述する方法を説明します、*移動コンス トラクター*と C++ のクラスの移動代入演算子。 移動コンス トラクターには、右辺値をコピーせず、左辺値に移動するオブジェクトによって所有されているリソースができます。 移動セマンティクスの詳細については、次を参照してください。[右辺値参照宣言子: & &](../cpp/rvalue-reference-declarator-amp-amp.md)します。  
@@ -250,7 +250,7 @@ int main()
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```Output  
 In MemoryBlock(size_t). length = 25.  
 In MemoryBlock(MemoryBlock&&). length = 25. Moving resource.  
 In ~MemoryBlock(). length = 0.  
@@ -273,7 +273,7 @@ In ~MemoryBlock(). length = 75. Deleting resource.
   
  Visual Studio 2010 では、以前は、この例には、次の出力が生成されます。  
   
-```  
+```Output  
 In MemoryBlock(size_t). length = 25.  
 In MemoryBlock(const MemoryBlock&). length = 25. Copying resource.  
 In ~MemoryBlock(). length = 25. Deleting resource.  
@@ -304,7 +304,6 @@ In ~MemoryBlock(). length = 75. Deleting resource.
  クラスに移動コンストラクターと移動代入演算子の両方を指定する場合、移動代入演算子を呼び出すように移動コンストラクターを記述することで、重複するコードを除去できます。 次の例は、移動代入演算子を呼び出す移動コンストラクターの変更済みのバージョンを示します。  
   
 ```cpp
-  
 // Move constructor.  
 MemoryBlock(MemoryBlock&& other)  
    : _data(nullptr)  

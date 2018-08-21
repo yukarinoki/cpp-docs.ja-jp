@@ -1,5 +1,5 @@
 ---
-title: Creatormap::activationid データ メンバー |Microsoft ドキュメント
+title: Creatormap::activationid データ メンバー |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c4ff889f808eda00e5b2ce426cd800678b4829f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3b9fd147f0821e14e825b2a8c0e8d7ad35104fe9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881797"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653015"
 ---
 # <a name="creatormapactivationid-data-member"></a>CreatorMap::activationId データ メンバー
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 union {   
    const IID* clsid;  
    const wchar_t* (*getRuntimeName)();  
 } activationId;  
 ```  
   
-## <a name="parameters"></a>パラメーター  
- `clsid`  
+### <a name="parameters"></a>パラメーター  
+ *clsid*  
  インターフェイス ID。  
   
- `getRuntimeName`  
- Windows ランタイム オブジェクトの名前を取得する関数。  
+ *getRuntimeName*  
+ オブジェクトの Windows ランタイムの名前を取得する関数。  
   
-## <a name="remarks"></a>コメント  
- クラシック COM クラス ID または Windows ランタイム名前によって識別されるオブジェクト ID を表します。  
+## <a name="remarks"></a>Remarks  
+ クラシック COM クラスの ID または Windows ランタイムの名前によって識別されるオブジェクト ID を表します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** module.h  

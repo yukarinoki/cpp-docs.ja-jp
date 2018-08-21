@@ -1,5 +1,5 @@
 ---
-title: Runtimeclass::getweakreference メソッド |Microsoft ドキュメント
+title: Runtimeclass::getweakreference メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e49703e96728e7287206aa264ce12deaad611495
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5cba36256e6abe176c6f5785b49a105395a30ee7
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888219"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014186"
 ---
 # <a name="runtimeclassgetweakreference-method"></a>RuntimeClass::GetWeakReference メソッド
-RuntimeClass、現在の弱い参照オブジェクトへのポインターを取得します。  
+現在の弱い参照オブジェクトにポインターを取得します。 **RuntimeClass**オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 STDMETHOD(  
    GetWeakReference  
 )(_Deref_out_ IWeakReference **weakReference);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `weakReference`  
- この操作の完了時、弱い参照オブジェクトへのポインター。  
+### <a name="parameters"></a>パラメーター  
+ *weakReference*  
+ この操作が完了時は、弱い参照オブジェクトへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- 常に S_OK です。  
+ 常に s_ok を返します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** implements.h  

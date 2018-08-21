@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 143924aa3dccf00df1f5486a07d9324cea584a46
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: da9e69cd7ea5e7eabdd826e021e57dac3ba8e6aa
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884302"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208859"
 ---
 # <a name="csid-class"></a>CSid クラス
 このクラスは、のラッパーを`SID`(セキュリティ識別子) 構造体。  
@@ -469,7 +469,7 @@ bool operator>=(
 ### <a name="return-value"></a>戻り値  
  TRUE の場合*lhs*がより大きいまたは等しい*rhs*、それ以外の場合は FALSE。  
   
-##  <a name="operator_const_sid__star"></a>  CSid::operator const SID *  
+##  <a name="operator_const_sid__star"></a>  CSid::operator const SID \*  
  キャストを`CSid`オブジェクトへのポインターを`SID`(セキュリティ識別子) 構造体。  
   
 ```  

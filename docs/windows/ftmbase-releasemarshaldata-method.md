@@ -1,5 +1,5 @@
 ---
-title: Ftmbase::releasemarshaldata メソッド |Microsoft ドキュメント
+title: Ftmbase::releasemarshaldata メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d56bc92e11d458a1872975f5a81a19c96566d59
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bad01416427d10a7bc8c6fdf96fce28948e6a833
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873652"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649368"
 ---
 # <a name="ftmbasereleasemarshaldata-method"></a>FtmBase::ReleaseMarshalData メソッド
-マーシャ リング データ パケットを破棄します。  
+データのマーシャ リングされたパケットは破棄されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 STDMETHODIMP ReleaseMarshalData(  
    __in IStream *pStm  
 ) override;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `pStm`  
- 破棄されるデータ パケットを含んでいるストリームへのポインター。  
+### <a name="parameters"></a>パラメーター  
+ *pStm*  
+ 破棄するデータ パケットを格納するストリームへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
  成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。  

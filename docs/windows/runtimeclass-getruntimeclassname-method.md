@@ -1,5 +1,5 @@
 ---
-title: Runtimeclass::getruntimeclassname メソッド |Microsoft ドキュメント
+title: Runtimeclass::getruntimeclassname メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3cfe3cc4a8a304bbd04fde9e6c38e2b9170e2e73
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 126133c5e542414f1fb38635e1cb14314bc55d52
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892440"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020396"
 ---
 # <a name="runtimeclassgetruntimeclassname-method"></a>RuntimeClass::GetRuntimeClassName メソッド
 
-RuntimeClass、現在のランタイム クラス名を取得します。
+現在のランタイム クラス名を取得**RuntimeClass**オブジェクト。
 
 ## <a name="syntax"></a>構文
 
@@ -37,7 +37,6 @@ STDMETHOD( GetRuntimeClassName )(
 ```
 
 ### <a name="parameters"></a>パラメーター
-
 *runtimeName*  
 この操作の完了時、ランタイム クラス名。
 
@@ -45,9 +44,9 @@ STDMETHOD( GetRuntimeClassName )(
 
 成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-場合、アサーション エラーが発生&#95; &#95;WRL_STRICT&#95; &#95;または&#95; &#95;WRL_FORCE_INSPECTABLE_CLASS_MACRO&#95; &#95;が定義されていません。
+場合は、アサート エラーが出力`__WRL_STRICT__`または`__WRL_FORCE_INSPECTABLE_CLASS_MACRO__`が定義されていません。
 
 ## <a name="requirements"></a>要件
 
@@ -56,5 +55,4 @@ STDMETHOD( GetRuntimeClassName )(
 **名前空間:** Microsoft::WRL
 
 ## <a name="see-also"></a>関連項目
-
-[RuntimeClass クラス](../windows/runtimeclass-class.md)
+ [RuntimeClass クラス](../windows/runtimeclass-class.md)

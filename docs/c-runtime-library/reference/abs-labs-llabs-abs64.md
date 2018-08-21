@@ -46,12 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc426bbbc28e6eb3b7e6e4a0fa9fab7e74f62093
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b783ee6e4a5ea511a26068ffb89fcc09236f20b1
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391754"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408129"
 ---
 # <a name="abs-labs-llabs-abs64"></a>abs、labs、llabs、_abs64
 
@@ -76,27 +76,27 @@ float abs( float n );   // C++ only
 
 ### <a name="parameters"></a>パラメーター
 
-*n*<br/>
+*n*  
 数値。
 
 ## <a name="return-value"></a>戻り値
 
 **Abs**、 **labs**、 **llabs**と **_abs64**関数がパラメーターの絶対値を返す*n*. エラーの戻り値はありません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**abs**を受け取り、返します**長い**、**長い****長い**、 **float**、**二重**、および**長い****二重**値。 これらのオーバーロードは \<cmath> ヘッダーで定義されています。 C プログラムでは、 **abs**は int です。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **abs**を受け取って返す**長い**、**長い****長い**、 **float**、**二重**、および**長い****二重**値。 これらのオーバーロードは \<cmath> ヘッダーで定義されています。 C プログラムで**abs**は、 **int**します。
 
-**Microsoft 固有の仕様**: これらの引数を指定することは任意の整数型を使用して表すことができる負の整数の範囲はその型を使用して表すことができる正の整数の範囲より大きいため変換できない機能です。 引数の絶対値を戻り値の型で表現できない場合、 **abs**関数が変更されていない引数の値を返します。 具体的には、`abs(INT_MIN)`返します**INT_MIN**、`labs(LONG_MIN)`返します**LONG_MIN**、`llabs(LLONG_MIN)`返します**LLONG_MIN**と`_abs64(_I64_MIN)`返します **_I64_MIN**です。 つまり、 **abs**関数は、正の値を保証するために使用できません。
+**Microsoft 固有の仕様**: 任意の整数型を使用して表すことができる負の整数の範囲はその型を使用して表すことができる正の整数の範囲より大きいため、これらの引数を指定することは変換できない機能です。 引数の絶対値を戻り値の型で表すことができない場合、 **abs**関数が変更されていない引数の値を返します。 具体的には、`abs(INT_MIN)` は `INT_MIN` を返し、`labs(LONG_MIN)` は `LONG_MIN` を返します。また `llabs(LLONG_MIN)` は `LLONG_MIN` を返し、`_abs64(_I64_MIN)` は `_I64_MIN` を返します。 つまり、 **abs**関数を使用して、正の値を保証することはできません。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須の C ヘッダー|必須の C++ ヘッダー|
+|ルーチンによって返される値|必須の C ヘッダー|必須の C++ ヘッダー|
 |-------------|-----------------------|---------------------------|
 |**abs**、 **labs**、 **llabs**|\<math.h> または \<stdlib.h>|\<cmath>、\<cstdlib>、\<stdlib.h>、または \<math.h>|
 |**_abs64**|\<stdlib.h>|\<cstdlib> または \<stdlib.h>|
 
-オーバー ロードされたバージョンを使用して**abs** C++ では、含める必要があります、 \<cmath > ヘッダー。
+オーバー ロードされたバージョンを使用する**abs** C++ では、含める必要がありますが、 \<cmath > ヘッダー。
 
 ## <a name="example"></a>例
 
@@ -157,8 +157,8 @@ _abs64(_I64_MIN) returns 0x8000000000000000
 
 ## <a name="see-also"></a>関連項目
 
-[データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
-[_cabs](cabs.md)<br/>
-[fabs、fabsf、fabsl](fabs-fabsf-fabsl.md)<br/>
-[imaxabs](imaxabs.md)<br/>
+[データ変換](../../c-runtime-library/data-conversion.md)  
+[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)  
+[_cabs](cabs.md)  
+[fabs、fabsf、fabsl](fabs-fabsf-fabsl.md)  
+[imaxabs](imaxabs.md)  

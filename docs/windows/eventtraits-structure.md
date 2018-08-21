@@ -1,5 +1,5 @@
 ---
-title: EventTraits 構造体 |Microsoft ドキュメント
+title: EventTraits 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dc2b6b88f9cfc095dfa6b2648dd81820b3454a1c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f46f1bc6d03f7bf222edcd3d23def72edfcb11fa
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873743"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647574"
 ---
 # <a name="eventtraits-structure"></a>EventTraits 構造体
-イベント クラス ハンドルの特性を定義します。  
+特性を定義、`Event`クラスのハンドル。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 struct EventTraits : HANDLENullTraits;  
 ```  
   

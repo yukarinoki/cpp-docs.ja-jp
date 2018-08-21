@@ -1,5 +1,5 @@
 ---
-title: iid_is |Microsoft ドキュメント
+title: iid_is |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9ef3a14211e223b9902dc9843639d217ceaf1b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 508f83b1dde590a4a8a04980895ef247f2a16123
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878003"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014989"
 ---
 # <a name="iidis"></a>iid_is
-インターフェイス ポインターによって指さ COM インターフェイスの IID を指定します。  
+インターフェイス ポインターによって示される COM インターフェイスの IID を指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
-      [ iid_is(  
+```cpp  
+[ iid_is(  
    "expression"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  *式*  
- インターフェイス ポインターが指す、COM インターフェイスの IID を指定する C 言語の式。  
+ インターフェイス ポインターが指す COM インターフェイスの IID を指定する C 言語の式。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **Iid_is** C++ 属性と同じ機能を持つ、 [iid_is](http://msdn.microsoft.com/library/windows/desktop/aa367044) MIDL 属性。  
   
 ## <a name="example"></a>例  
  次のコードを使用する示します**iid_is**:  
   
-```  
+```cpp  
 // cpp_attr_ref_iid_is.cpp  
 // compile with: /LD  
 #include "wtypes.h"  
@@ -68,7 +67,7 @@ __interface IFireTabCtrl : IDispatch
 |||  
 |-|-|  
 |**対象**|インターフェイスのパラメーター、データ メンバー|  
-|**反復可能**|×|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

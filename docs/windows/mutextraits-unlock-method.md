@@ -1,5 +1,5 @@
 ---
-title: Mutextraits::unlock メソッド |Microsoft ドキュメント
+title: Mutextraits::unlock メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11e4655c69e5ecb83cebf1225384c54c96be695b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f9b9d448ae9b73c5a47cc93da41dbcba186fdce0
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880363"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010711"
 ---
 # <a name="mutextraitsunlock-method"></a>MutexTraits::Unlock メソッド
-共有リソースの排他的に制御を解放します。  
+共有リソースの排他的制御を解放します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 inline static void Unlock(  
    _In_ Type h  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `h`  
+### <a name="parameters"></a>パラメーター  
+ *h*  
  ミュー テックス オブジェクトへのハンドルします。  
   
 ## <a name="return-value"></a>戻り値  

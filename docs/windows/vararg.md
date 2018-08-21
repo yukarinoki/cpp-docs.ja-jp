@@ -1,5 +1,5 @@
 ---
-title: vararg |Microsoft ドキュメント
+title: vararg |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2de377bc31898c91bb6db63e160b536428ae8d0e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cad2cc52c7c785a715caa96913f2a1c1bf3630b2
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890968"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010910"
 ---
 # <a name="vararg"></a>vararg
-関数が可変個の引数を取ることを指定します。  
+関数が可変個の引数を受け取ることを指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```cpp  
 [vararg]  
-  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **Vararg** C++ 属性と同じ機能を持つ、 [vararg](http://msdn.microsoft.com/library/windows/desktop/aa367304) MIDL 属性。  
   
 ## <a name="example"></a>例  
  次のコードは、の使い方を示しています**vararg**:。  
   
-```  
+```cpp  
 // cpp_attr_ref_vararg.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -62,7 +60,7 @@ __interface X : public IUnknown
 |||  
 |-|-|  
 |**対象**|インターフェイス メソッド|  
-|**反復可能**|×|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

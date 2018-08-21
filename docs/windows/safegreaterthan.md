@@ -1,5 +1,5 @@
 ---
-title: SafeGreaterThan |Microsoft ドキュメント
+title: SafeGreaterThan |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0944feb32f9dbd8b73d0710b248139c003e41410
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 098cc00d4b478df2be98bac6fc4a06990fe5aba0
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888784"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016038"
 ---
 # <a name="safegreaterthan"></a>SafeGreaterThan
 2 つの数値を比較します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename T, typename U>  
 inline bool SafeGreaterThan (  
    const T t,  
@@ -37,25 +37,25 @@ inline bool SafeGreaterThan (
 ) throw ();  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- [入力] `t`  
- 比較する最初の数。 T 型でなければなりません  
+### <a name="parameters"></a>パラメーター  
+ [in]*t*  
+ 比較する最初の数値。 これは、型でなければなりません`T`します。  
   
- [入力] `u`  
- 比較する 2 番目の数値。 U 型です。 これでなければなりません  
+ [in]*u*  
+ 比較する 2 番目の数値。 これは、型でなければなりません`U`します。  
   
 ## <a name="return-value"></a>戻り値  
- `true` 場合`t`がより大きい`u`それ以外の`false`します。  
+ **true**場合*t*がより大きい*u*。 そうしないと**false**します。  
   
-## <a name="remarks"></a>コメント  
- `SafeGreaterThan` 2 つの異なる型の数値を比較することにより、正規の比較演算子を拡張します。  
+## <a name="remarks"></a>Remarks  
+ **SafeGreaterThan** 2 つの異なる型の数値を比較することにより、正規表現の比較演算子を拡張します。  
   
- このメソッドの一部である[SafeInt ライブラリ](../windows/safeint-library.md)とは、単一の比較操作のインスタンスを作成せず、 [SafeInt クラス](../windows/safeint-class.md)です。  
+ このメソッドの一部は、 [SafeInt ライブラリ](../windows/safeint-library.md)のインスタンスを作成せず、単一の比較操作のものでは、 [SafeInt クラス](../windows/safeint-class.md)します。  
   
 > [!NOTE]
->  このメソッドは、単一の数値演算を保護する必要がありますにのみ使用する必要があります。 使用する必要があります複数の操作がある場合、`SafeInt`個々 のスタンドアロン関数の呼び出しではなくクラスです。  
+>  このメソッドは、単一の数値演算を保護する必要がありますにのみ使用する必要があります。 使用する必要があります複数の操作がある場合、`SafeInt`個々 のスタンドアロン関数の呼び出しではなくクラス。  
   
- テンプレート型 T および U の詳細については、次を参照してください。 [SafeInt 関数](../windows/safeint-functions.md)です。  
+ テンプレートの種類の詳細については`T`と`U`を参照してください[SafeInt 関数](../windows/safeint-functions.md)します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** safeint.h  

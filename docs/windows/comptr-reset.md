@@ -1,5 +1,5 @@
 ---
-title: ComPtr::Reset |Microsoft ドキュメント
+title: ComPtr::Reset |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,19 +13,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dd2ce820367b15cb5dad8baf691a835499457a55
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 74f26f520be276de863c612718de8520bffc1219
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870768"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649706"
 ---
 # <a name="comptrreset"></a>ComPtr::Reset
-この ComPtr に関連付けられているインターフェイスを指すポインターへのすべての参照を解放します。  
+これに関連付けられているインターフェイス ポインターのすべての参照を解放**ComPtr**します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 unsigned long Reset();  
 ```  
   

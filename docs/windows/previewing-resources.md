@@ -1,5 +1,5 @@
 ---
-title: リソースのプレビュー |Microsoft ドキュメント
+title: リソースのプレビュー |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,17 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 32d0082d050ceb391a4346e2a4a38ff71c3cf2a3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8393988bf6d831c8b9718d6685785d523303f3fa
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878672"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016406"
 ---
 # <a name="previewing-resources"></a>リソースのプレビュー
-リソースをプレビューするには、グラフィカルなリソースを開かずに表示することができます。 プレビューは、リソース識別子を数値に変更されるため、コンパイルした後にも実行可能ファイルに役立ちます。 多くの場合、これらの数値識別子は、十分な情報を提供しない、ため、リソースのプレビューがすばやく識別できます。  
+リソースをプレビューを開かずにグラフィカルなリソースを表示することができます。 プレビューは、リソース識別子を数値に変更されるため、コンパイルした後にも実行可能ファイルの場合に便利です。 多くの場合、これらの数値識別子は、十分な情報を提供しない、ため、リソースのプレビューでそれらをすばやく識別できます。  
   
- 次のリソースの種類の視覚的なレイアウトをプレビューすることができます。  
+ 次のリソースの種類の視覚的レイアウトをプレビューできます。  
   
 -   ビットマップ  
   
@@ -44,29 +44,28 @@ ms.locfileid: "33878672"
   
 -   ツール バー  
   
- 視覚的なプレビュー機能は、アクセラレータ、マニフェスト、文字列テーブル、およびバージョン情報リソースには適用されません。  
+ ビジュアルのプレビュー機能は、アクセラレータ、マニフェスト、文字列テーブル、およびバージョン情報リソースには適用されません。  
   
 ### <a name="to-preview-resources"></a>リソースをプレビューするには  
   
-1.  [リソース ビュー](../windows/resource-view-window.md)またはドキュメントのウィンドウで、IDD_ABOUTBOX、リソースを選択します。  
+1.  [リソース ビュー](../windows/resource-view-window.md)または、リソースを選択して、ドキュメント ウィンドウ**IDD_ABOUTBOX**します。  
   
-     **メモ** プロジェクトに .rc ファイルがまだ含まれていない場合は、「 [リソース スクリプト ファイルの新規作成](../windows/how-to-create-a-resource-script-file.md)」を参照してください。  
+     > [!NOTE]
+     > プロジェクトに .rc ファイルがまだ含まれていない場合は、「 [リソース スクリプト ファイルの新規作成](../windows/how-to-create-a-resource-script-file.md)」を参照してください。  
   
-2.  [プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)をクリックして、**プロパティ ページ**ボタンをクリックします。  
+2.  [プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)、クリックして、**プロパティ ページ**ボタンをクリックします。  
   
      \- または -  
   
-3.  **ビュー**  メニューのをクリックして**プロパティ ページ**です。  
+3.  **ビュー**  メニューのをクリックして**プロパティ ページ**します。  
   
-     リソースのプロパティ ページでは、そのリソースのプレビューの表示を開きます。 上矢印を使用して、下向きの矢印キー リソース ビューまたはドキュメント ウィンドウのツリー コントロールを移動することができます。 プロパティ ページは開いたままにし、フォーカスがあり、プレビューを表示することは、任意のリソースを表示します。  
+     **プロパティ ページ**リソースが開き、リソースのプレビューを表示します。 使用することができますし、**を**と**ダウン**ツリーを移動する方向キーを制御**リソース ビュー**またはドキュメント ウィンドウ。 **プロパティ ページ**は開いたままにし、フォーカスがあり、プレビューを表示することは、任意のリソースを表示します。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 詳細については、管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションは、次を参照してください。[グローバライズと .NET Framework アプリケーションのローカライズ](/dotnet/standard/globalization-localization/index)です。  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
   
- **必要条件**  
-  
+## <a name="requirements"></a>要件 
  Win32  
   
 ## <a name="see-also"></a>関連項目  
- [方法: プロジェクト (スタンドアロン) の外側でリソース スクリプト ファイルを開く](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)   
+ [方法: プロジェクトの外側で (スタンドアロンで) リソース スクリプト ファイルを開く](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)  
  [リソース エディター](../windows/resource-editors.md)
-

@@ -1,5 +1,5 @@
 ---
-title: Synclockwithstatust::islocked メソッド |Microsoft ドキュメント
+title: Synclockwithstatust::islocked メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a564c4223b09d9295ff0ac3159e165944c4d885d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 80c744431fe7df32be705fcf91eef0a8691b8fa4
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892554"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015799"
 ---
 # <a name="synclockwithstatustislocked-method"></a>SyncLockWithStatusT::IsLocked メソッド
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 bool IsLocked() const;  
 ```  
   
-## <a name="remarks"></a>コメント  
- SyncLockWithStatusT、現在、リソースを所有しているかどうかを示しますSyncLockWithStatusT オブジェクトは、つまり、*ロック*です。  
+## <a name="remarks"></a>Remarks  
+ 示すかどうか、現在**SyncLockWithStatusT**リソースを所有するオブジェクトです。 つまり、 **SyncLockWithStatusT**オブジェクトが*ロック*します。  
   
 ## <a name="return-value"></a>戻り値  
- **true** SyncLockWithStatusT オブジェクトがロックされている、それ以外の場合は**false**です。  
+ **true**場合、 **SyncLockWithStatusT**オブジェクトがロックされている場合はそれ以外の場合、 **false**します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

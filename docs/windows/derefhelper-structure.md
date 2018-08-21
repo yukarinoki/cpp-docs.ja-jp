@@ -1,5 +1,5 @@
 ---
-title: DerefHelper 構造体 |Microsoft ドキュメント
+title: DerefHelper 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad7af9f507a29531b14ff75aa97e0aee327db380
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9e5c4965ab8a013fdd52e6dfa51e74bfbf54ed73
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871368"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651536"
 ---
 # <a name="derefhelper-structure"></a>DerefHelper 構造体
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template <  
    typename T  
 >  
@@ -41,14 +41,14 @@ template <
 struct DerefHelper<T*>;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `T`  
+### <a name="parameters"></a>パラメーター  
+ *T*  
  テンプレート パラメーター。  
   
-## <a name="remarks"></a>コメント  
- 指すポインターが逆参照を表す、`T*`テンプレート パラメーター。  
+## <a name="remarks"></a>Remarks  
+ 逆参照されたポインターを表す、`T*`テンプレート パラメーター。  
   
- DerefHelper がなど、式で使用する:`ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`です。  
+ **DerefHelper**など、式で使用されます。`ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`します。  
   
 ## <a name="members"></a>メンバー  
   
@@ -56,7 +56,7 @@ struct DerefHelper<T*>;
   
 |名前|説明|  
 |----------|-----------------|  
-|`DerefType`|逆参照のテンプレート パラメーターの識別子の`T*`します。|  
+|`DerefType`|逆参照されるテンプレート パラメーターの識別子の`T*`します。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `DerefHelper`  

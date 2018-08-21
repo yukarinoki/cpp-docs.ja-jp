@@ -1,5 +1,5 @@
 ---
-title: Handlet::isvalid メソッド |Microsoft ドキュメント
+title: Handlet::isvalid メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 42aca81b3c2a0ad3db652bf9f77c648e503098e2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eba8dbe8ee0dad3f085104c914a731986d736e2b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873135"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647876"
 ---
 # <a name="handletisvalid-method"></a>HandleT::IsValid メソッド
-現在の HandleT オブジェクトがハンドルを表すかどうかを示します。  
+示すかどうか、現在**HandleT**オブジェクト ハンドルを表します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 bool IsValid() const;  
 ```  
   
 ## <a name="return-value"></a>戻り値  
- `true` HandleT、; ハンドルを表す場合それ以外の場合、`false`です。  
+ **true**場合、 **HandleT**ハンドルを表します。 そうしないと、 **false**します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  

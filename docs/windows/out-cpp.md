@@ -1,5 +1,5 @@
 ---
-title: out (C++) |Microsoft ドキュメント
+title: out (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b23ff91a67962ec36cf6a9c2f5ebbf8122ab73c1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f83314de19548c93afa43feced8b2a877af00738
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876814"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019054"
 ---
 # <a name="out-c"></a>out (C++)
 呼び出されたプロシージャから呼び出したプロシージャ (サーバーからクライアント) に返されるポインター パラメーターを示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```cpp  
 [out]  
-  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **out** C++ 属性には、 [propput](http://msdn.microsoft.com/library/windows/desktop/aa367136) MIDL 属性と同じ機能があります。  
   
 ## <a name="example"></a>例  
@@ -48,7 +46,7 @@ ms.locfileid: "33876814"
 |||  
 |-|-|  
 |**対象**|インターフェイス パラメーター|  
-|**反復可能**|×|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   

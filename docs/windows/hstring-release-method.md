@@ -1,5 +1,5 @@
 ---
-title: Hstring::release メソッド |Microsoft ドキュメント
+title: Hstring::release メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5fd7e09980d82cdef346202ef8a1fde4d7cb1c66
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 11b7045444433865d034318bab235c133c786842
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875293"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018430"
 ---
 # <a name="hstringrelease-method"></a>HString::Release メソッド
-基になる文字列値を削除し、現在の HString オブジェクトを空の値に初期化します。  
+基になる文字列値を削除し、現在を初期化します。 **HString**オブジェクトから空の値。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void Release() throw()  
 ```  
   

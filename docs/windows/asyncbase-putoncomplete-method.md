@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::putoncomplete メソッド |Microsoft ドキュメント
+title: Asyncbase::putoncomplete メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 490484a6988851565b478ef41ad16f0c722eb804
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e982e6f053b207b1d57ed5c0df483a9d9ab778eb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856073"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646973"
 ---
 # <a name="asyncbaseputoncomplete-method"></a>AsyncBase::PutOnComplete メソッド
-完了のイベント ハンドラーのアドレスを指定した値に設定します。  
+完了イベントのハンドラーのアドレスを指定した値に設定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 STDMETHOD(  
    PutOnComplete  
 )(TComplete* completeHandler);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `completeHandler`  
- 完了のイベント ハンドラーが設定されるアドレスです。  
+### <a name="parameters"></a>パラメーター  
+ *completeHandler*  
+ 完了イベントのハンドラーが設定されているアドレスです。  
   
 ## <a name="return-value"></a>戻り値  
- 正常終了した場合は S_OK、それ以外の場合、E_ILLEGAL_METHOD_CALL です。  
+ 成功した場合は s_ok を返します。それ以外の場合、E_ILLEGAL_METHOD_CALL します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** async.h  

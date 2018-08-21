@@ -1,5 +1,5 @@
 ---
-title: 機能 (STL/CLR) |Microsoft ドキュメント
+title: 機能 (STL/CLR) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -73,15 +73,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 04596cd043b90d8016cd0f9b1ebfe05a9bf82f72
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 98640997536bc48330beeda793a6067e3da97b5f
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305905"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376366"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
-STL/CLR ヘッダーを含める`<cliext/functional>`を定義する、テンプレート クラスと関連するテンプレート デリゲート、および関数の数。  
+STL/CLR のヘッダーを含める`<cliext/functional>`を定義する、さまざまなテンプレート クラスと関連するテンプレートのデリゲートと関数。  
   
 ## <a name="syntax"></a>構文  
   
@@ -89,7 +89,7 @@ STL/CLR ヘッダーを含める`<cliext/functional>`を定義する、テンプ
 #include <functional>  
 ```  
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/機能 >  
   
  **Namespace:** cliext 
@@ -99,9 +99,9 @@ STL/CLR ヘッダーを含める`<cliext/functional>`を定義する、テンプ
 |Delegate|説明|  
 |--------------|-----------------|  
 |[binary_delegate (STL/CLR)](#binary_delegate)|2 つの引数のデリゲート。|  
-|[binary_delegate_noreturn (STL/CLR)](#binary_delegate_noreturn)|2 つの引数のデリゲートを返す`void`です。|  
+|[binary_delegate_noreturn (STL/CLR)](#binary_delegate_noreturn)|2 つの引数のデリゲートを返す**void**します。|  
 |[unary_delegate (STL/CLR)](#unary_delegate)|引数が 1 つのデリゲート。|  
-|[unary_delegate_noreturn (STL/CLR)](#unary_delegate_noreturn)|引数が 1 つのデリゲートを返す`void`です。|  
+|[unary_delegate_noreturn (STL/CLR)](#unary_delegate_noreturn)|返すデリゲートの引数が 1 つ**void**します。|  
   
 |クラス|説明|  
 |-----------|-----------------|  
@@ -111,35 +111,35 @@ STL/CLR ヘッダーを含める`<cliext/functional>`を定義する、テンプ
 |[divides (STL/CLR)](#divides)|ファンクタを分割します。|  
 |[equal_to (STL/CLR)](#equal_to)|比較ファンクタ。|  
 |[greater (STL/CLR)](#greater)|大きい比較ファンクタ。|  
-|[greater_equal (STL/CLR)](#greater_equal)|大きいまたは等しい比較ファンクタ。|  
-|[less (STL/CLR)](#less)|小さい比較ファンクタ。|  
-|[less_equal (STL/CLR)](#less_equal)|小さいか等しい比較ファンクタ。|  
+|[greater_equal (STL/CLR)](#greater_equal)|以上の比較ファンクタ。|  
+|[less (STL/CLR)](#less)|以下の比較ファンクタ。|  
+|[less_equal (STL/CLR)](#less_equal)|少ないか等しい比較ファンクタ。|  
 |[logical_and (STL/CLR)](#logical_and)|論理 AND ファンクタ。|  
-|[logical_not (STL/CLR)](#logical_not)|論理ファンクタではありません。|  
+|[logical_not (STL/CLR)](#logical_not)|論理ファンクターではありません。|  
 |[logical_or (STL/CLR)](#logical_or)|論理 OR ファンクタ。|  
 |[minus (STL/CLR)](#minus)|ファンクタを減算します。|  
 |[modulus (STL/CLR)](#modulus)|剰余ファンクタ。|  
 |[multiplies (STL/CLR)](#multiplies)|ファンクタを乗算します。|  
-|[negate (STL/CLR)](#negate)|否定その引数を返すファンクタ。|  
-|[not_equal_to (STL/CLR)](#not_equal_to)|等しくない比較ファンクタ。|  
+|[negate (STL/CLR)](#negate)|否定の引数を返すファンクタ。|  
+|[not_equal_to (STL/CLR)](#not_equal_to)|非等値比較ファンクタ。|  
 |[plus (STL/CLR)](#plus)|ファンクタを追加します。|  
 |[unary_negate (STL/CLR)](#unary_negate)|引数が 1 つファンクタを否定するファンクタ。|  
   
 |関数|説明|  
 |--------------|-----------------|  
-|[bind1st (STL/CLR)](#bind1st)|引数とファンクタ binder1st を生成します。|  
-|[bind2nd (STL/CLR)](#bind2nd)|引数とファンクタ binder2nd を生成します。|  
-|[not1 (STL/CLR)](#not1)|ファンクタを unary_negate を生成します。|  
-|[not2 (STL/CLR)](#not2)|ファンクタを binary_negate を生成します。|  
+|[bind1st (STL/CLR)](#bind1st)|引数とファンクターの binder1st が生成されます。|  
+|[bind2nd (STL/CLR)](#bind2nd)|引数とファンクターの binder2nd が生成されます。|  
+|[not1 (STL/CLR)](#not1)|ファンクター用の unary_negate が生成されます。|  
+|[not2 (STL/CLR)](#not2)|ファンクター用の binary_negate が生成されます。|  
    
 ## <a name="members"></a>メンバー
 
 ## <a name="binary_delegate"></a> binary_delegate (STL/CLR)
-Genereic クラスでは、2 つの引数のデリゲートについて説明します。 使用するデリゲートの引数と戻り値の型を指定します。  
+Genereic クラスには、2 つの引数のデリゲートがについて説明します。 これを使用してその引数と戻り値の型の観点からデリゲートを指定します。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 generic<typename Arg1,  
     typename Arg2,  
     typename Result>  
@@ -147,25 +147,25 @@ generic<typename Arg1,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- arg1  
+ *arg1*  
  最初の引数の型。  
   
- arg2  
+ *Arg2*  
  2 番目の引数の型。  
   
- 結果  
+ *結果*  
  戻り値の型。  
   
 ### <a name="remarks"></a>Remarks  
  Genereic デリゲートでは、2 つの引数の関数について説明します。  
   
- 注意してください。  
+ 場合に注意してください。  
   
  `binary_delegate<int, int, int> Fun1;`  
   
  `binary_delegate<int, int, int> Fun2;`  
   
- 種類`Fun1`と`Fun2`シノニムでは、中に。  
+ 種類`Fun1`と`Fun2`は、シノニムの中に。  
   
  `delegate int Fun1(int, int);`  
   
@@ -199,7 +199,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -209,33 +208,33 @@ compare(L'b', L'a') = False
 ```  
 
 ## <a name="binary_delegate_noreturn"></a> binary_delegate_noreturn (STL/CLR)
-Genereic クラスの説明を返す 2 つの引数のデリゲート`void`です。 使用する引数の観点からデリゲートを指定します。  
+Genereic クラスの説明を返す 2 つの引数のデリゲート**void**します。 これを使用して、引数の観点からデリゲートを指定します。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 generic<typename Arg1,  
     typename Arg2>  
     delegate void binary_delegate(Arg1, Arg2);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- arg1  
+ *arg1*  
  最初の引数の型。  
   
- arg2  
+ *Arg2*  
  2 番目の引数の型。  
   
 ### <a name="remarks"></a>Remarks  
- Genereic デリゲートの説明を返す 2 つの引数関数`void`です。  
+ Genereic デリゲートを返す 2 つの引数関数を記述します**void**します。  
   
- 注意してください。  
+ 場合に注意してください。  
   
  `binary_delegate_noreturn<int, int> Fun1;`  
   
  `binary_delegate_noreturn<int, int> Fun2;`  
   
- 種類`Fun1`と`Fun2`シノニムでは、中に。  
+ 種類`Fun1`と`Fun2`は、シノニムの中に。  
   
  `delegate void Fun1(int, int);`  
   
@@ -267,7 +266,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -277,11 +275,11 @@ compare(b, a) = False
 ```  
 
 ## <a name="binary_negate"></a> binary_negate (STL/CLR)
-このテンプレート クラスは、ファンクタを記述、呼び出されると、論理を返しますストアドの 2 つの引数ファンクタのではありません。 使用するそのストアド ファンクタの観点から、関数オブジェクトを指定します。  
+テンプレート クラスは、ファンクタをについて説明しますが、呼び出されると、返す論理ストアドの 2 つの引数ファンクターのではありません。 これを使用してそのストアド ファンクターの観点からの関数オブジェクトを指定します。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Fun>  
     ref class binary_negate  
     { // wrap operator()  
@@ -304,18 +302,18 @@ public:
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 楽しい  
- ストアド ファンクタの型。  
+ *楽しむ*  
+ ストアド関数記号の型。  
   
 ## <a name="member-functions"></a>メンバー関数  
   
 |型定義|説明|  
 |---------------------|-----------------|  
 |delegate_type|汎用デリゲートの型。|  
-|first_argument_type|ファンクタ最初の引数の型。|  
-|result_type|ファンクタ結果の型。|  
-|second_argument_type|ファンクタ 2 番目の引数の型。|  
-|stored_function_type|ファンクタの型。|  
+|first_argument_type|ファンクター最初の引数の型。|  
+|result_type|ファンクター結果の型。|  
+|second_argument_type|ファンクター 2 番目の引数の型。|  
+|stored_function_type|関数記号の型。|  
   
 |メンバー|説明|  
 |------------|-----------------|  
@@ -327,9 +325,9 @@ public:
 |演算子 delegate_type^()|デリゲートにファンクタをキャストします。|  
   
 ### <a name="remarks"></a>Remarks  
- このテンプレート クラスは、別の 2 つの引数ファンクタを格納する 2 つの引数ファンクタをについて説明します。 このメンバー演算子を定義する`operator()`のため、オブジェクトが関数として呼び出される場合、返されることを論理 2 つの引数で呼び出されるストアド ファンクタのではありません。  
+ テンプレート クラスは、別の 2 つの引数ファンクタを格納する 2 つの引数ファンクタをについて説明します。 メンバー演算子は、定義`operator()`論理が返されるように、オブジェクトが関数として呼び出された場合、2 つの引数で呼び出されたストアド ファンクターのではありません。  
   
- 型が関数の引数として、オブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
+ 型が関数の引数としてオブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
   
 ### <a name="example"></a>例  
   
@@ -378,7 +376,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -389,11 +386,11 @@ int main()
 ```  
 
 ## <a name="bind1st"></a> bind1st (STL/CLR)
-生成、`binder1st`引数およびファンクタ。  
+生成、`binder1st`引数とファンクタ。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Fun,  
     typename Arg>  
     binder1st<Fun> bind1st(Fun% functor,  
@@ -401,21 +398,21 @@ template<typename Fun,
 ```  
   
 #### <a name="template-parameters"></a>テンプレート パラメーター  
- arg  
+ *arg*  
  引数の型。  
   
- 楽しい  
- ファンクタの型。  
+ *楽しむ*  
+ 関数記号の型。  
   
-#### <a name="function-parameters"></a>関数パラメーター  
- ファンクター  
+#### <a name="function-parameters"></a>関数のパラメーター  
+ *ファンクター*  
  ラップするファンクタ。  
   
- 左へ  
+ *left*  
  ラップする最初の引数。  
   
 ### <a name="remarks"></a>Remarks  
- テンプレート関数を返します[binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md)`<Fun>(functor, left)`です。 2 番目の引数を持つ呼び出し元引数が 1 つファンクタで 2 つの引数ファンクターと、最初の引数をラップする便利な手段として使用するとします。  
+ テンプレート関数を返します[binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md)`<Fun>(functor, left)`します。 引数が 1 つのファンクタを 2 番目の引数を呼び出すことで、2 つの引数ファンクターと、最初の引数をラップする便利な方法として使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -457,7 +454,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -467,11 +463,11 @@ int main()
 ```  
 
 ## <a name="bind2nd"></a> bind2nd (STL/CLR)
-生成、`binder2nd`引数およびファンクタ。  
+生成、`binder2nd`引数とファンクタ。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Fun,  
     typename Arg>  
     binder2nd<Fun> bind2nd(Fun% functor,  
@@ -479,21 +475,21 @@ template<typename Fun,
 ```  
   
 #### <a name="template-parameters"></a>テンプレート パラメーター  
- arg  
+ *arg*  
  引数の型。  
   
- 楽しい  
- ファンクタの型。  
+ *楽しむ*  
+ 関数記号の型。  
   
-#### <a name="function-parameters"></a>関数パラメーター  
- ファンクター  
+#### <a name="function-parameters"></a>関数のパラメーター  
+ *ファンクター*  
  ラップするファンクタ。  
   
- 右  
+ *right*  
  ラップする 2 番目の引数。  
   
 ### <a name="remarks"></a>Remarks  
- テンプレート関数を返します[binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md)`<Fun>(functor, right)`です。 最初の引数を持つ呼び出し元引数が 1 つファンクタで 2 つの引数ファンクターと 2 番目の引数をラップする便利な手段として使用するとします。  
+ テンプレート関数を返します[binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md)`<Fun>(functor, right)`します。 最初の引数による呼び出し元引数が 1 つファンクターに 2 つの引数ファンクターと 2 番目の引数をラップする便利な方法として使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -535,7 +531,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -545,11 +540,11 @@ int main()
 ```  
 
 ## <a name="binder1st"></a> binder1st (STL/CLR)
-このテンプレート クラスは、引数が 1 つファンクタを記述、呼び出されると、そのストアドの 2 つの引数ファンクタ ストアド最初の引数と 2 番目の指定された引数で呼び出されますが返されます。 使用するそのストアド ファンクタの観点から、関数オブジェクトを指定します。  
+テンプレート クラスは、引数が 1 つファンクタをについて説明しますが、呼び出されると、そのストアドの 2 つの引数ファンクター ストアドの最初の引数と 2 番目の指定された引数で呼び出されますを返します。 これを使用してそのストアド ファンクターの観点からの関数オブジェクトを指定します。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Fun>  
     ref class binder1st  
     { // wrap operator()  
@@ -571,18 +566,18 @@ public:
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 楽しい  
- ストアド ファンクタの型。  
+ *楽しむ*  
+ ストアド関数記号の型。  
   
 ### <a name="member-functions"></a>メンバー関数  
   
 |型定義|説明|  
 |---------------------|-----------------|  
 |delegate_type|汎用デリゲートの型。|  
-|first_argument_type|ファンクタ最初の引数の型。|  
-|result_type|ファンクタ結果の型。|  
-|second_argument_type|ファンクタ 2 番目の引数の型。|  
-|stored_function_type|ファンクタの型。|  
+|first_argument_type|ファンクター最初の引数の型。|  
+|result_type|ファンクター結果の型。|  
+|second_argument_type|ファンクター 2 番目の引数の型。|  
+|stored_function_type|関数記号の型。|  
   
 |メンバー|説明|  
 |------------|-----------------|  
@@ -594,9 +589,9 @@ public:
 |演算子 delegate_type^()|デリゲートにファンクタをキャストします。|  
   
 ### <a name="remarks"></a>Remarks  
- このテンプレート クラスでは、2 つの引数ファンクターと最初の引数を格納する引数が 1 つファンクタについて説明します。 このメンバー演算子を定義する`operator()`ストアドの最初の引数と 2 番目の引数が指定されたストアド ファンクターを呼び出すときの結果が返されるオブジェクトが関数として呼び出されたとき、ようにことです。  
+ テンプレート クラスは、2 つの引数ファンクターと最初の引数を格納する引数が 1 つファンクタをについて説明します。 メンバー演算子は、定義`operator()`ストアドの最初の引数と指定された 2 番目の引数を持つストアド ファンクターを呼び出すことの結果が返されるように、オブジェクトが関数として呼び出された場合、します。  
   
- 型が関数の引数として、オブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
+ 型が関数の引数としてオブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
   
 ### <a name="example"></a>例  
   
@@ -638,7 +633,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -648,11 +642,11 @@ int main()
 ```  
 
 ## <a name="binder2nd"></a> binder2nd (STL/CLR)
-このテンプレート クラスは、引数が 1 つファンクタを記述、呼び出されると、指定された最初の引数とそのストアドの 2 番目の引数で呼び出されたストアドその 2 つの引数ファンクタを返します。 使用するそのストアド ファンクタの観点から、関数オブジェクトを指定します。  
+テンプレート クラスは、引数が 1 つファンクタをについて説明しますが、呼び出されると、指定された最初の引数とそのストアドの 2 番目の引数で呼び出されますストアドの 2 つの引数ファンクタを返します。 これを使用してそのストアド ファンクターの観点からの関数オブジェクトを指定します。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Fun>  
     ref class binder2nd  
     { // wrap operator()  
@@ -674,18 +668,18 @@ public:
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 楽しい  
- ストアド ファンクタの型。  
+ *楽しむ*  
+ ストアド関数記号の型。  
   
 ## <a name="member-functions"></a>メンバー関数  
   
 |型定義|説明|  
 |---------------------|-----------------|  
 |delegate_type|汎用デリゲートの型。|  
-|first_argument_type|ファンクタ最初の引数の型。|  
-|result_type|ファンクタ結果の型。|  
-|second_argument_type|ファンクタ 2 番目の引数の型。|  
-|stored_function_type|ファンクタの型。|  
+|first_argument_type|ファンクター最初の引数の型。|  
+|result_type|ファンクター結果の型。|  
+|second_argument_type|ファンクター 2 番目の引数の型。|  
+|stored_function_type|関数記号の型。|  
   
 |メンバー|説明|  
 |------------|-----------------|  
@@ -697,9 +691,9 @@ public:
 |演算子 delegate_type^()|デリゲートにファンクタをキャストします。|  
   
 ### <a name="remarks"></a>Remarks  
- このテンプレート クラスでは、2 つの引数ファンクターと 2 番目の引数を格納する引数が 1 つファンクタについて説明します。 このメンバー演算子を定義する`operator()`指定された最初の引数と 2 番目の引数がストアド ストアド ファンクターを呼び出すときの結果が返されるオブジェクトが関数として呼び出されたとき、ようにことです。  
+ テンプレート クラスは、2 つの引数ファンクターと 2 番目の引数を格納する引数が 1 つファンクタをについて説明します。 メンバー演算子が定義されています`operator()`関数として、オブジェクトを呼び出すときに、ように、指定された最初の引数と 2 番目の引数がストアド ストアド ファンクターを呼び出すことの結果を返します。  
   
- 型が関数の引数として、オブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
+ 型が関数の引数としてオブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
   
 ### <a name="example"></a>例  
   
@@ -741,7 +735,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -751,11 +744,11 @@ int main()
 ```  
   
 ## <a name="divides"></a> 除算 (STL/CLR)
-このテンプレート クラスは、ファンクタを記述、呼び出されると、最初の引数が 2 番目で割った値を返します。 使用する、引数の型の観点から、関数オブジェクトを指定します。  
+テンプレート クラスは、ファンクタをについて説明しますが、呼び出されると、2 番目で除算する最初の引数を返します。 これを使用して、引数の型の観点からの関数オブジェクトを指定します。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class divides  
     { // wrap operator()  
@@ -777,7 +770,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- arg  
+ *arg*  
  引数と戻り値の型。  
   
 ### <a name="member-functions"></a>メンバー関数  
@@ -785,9 +778,9 @@ public:
 |型定義|説明|  
 |---------------------|-----------------|  
 |delegate_type|汎用デリゲートの型。|  
-|first_argument_type|ファンクタ最初の引数の型。|  
-|result_type|ファンクタ結果の型。|  
-|second_argument_type|ファンクタ 2 番目の引数の型。|  
+|first_argument_type|ファンクター最初の引数の型。|  
+|result_type|ファンクター結果の型。|  
+|second_argument_type|ファンクター 2 番目の引数の型。|  
   
 |メンバー|説明|  
 |------------|-----------------|  
@@ -799,9 +792,9 @@ public:
 |演算子 delegate_type^()|デリゲートにファンクタをキャストします。|  
   
 ### <a name="remarks"></a>Remarks  
- このテンプレート クラスは、2 つの引数ファンクタをについて説明します。 このメンバー演算子を定義する`operator()`最初の引数が 2 番目で割った値が返されるオブジェクトが関数として呼び出されたとき、ようにことです。  
+ テンプレート クラスは、2 つの引数ファンクタをについて説明します。 メンバー演算子は、定義`operator()`最初の引数が 2 つ目で割った値が返されるように、オブジェクトが関数として呼び出された場合、します。  
   
- 型が関数の引数として、オブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
+ 型が関数の引数としてオブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
   
 ### <a name="example"></a>例  
   
@@ -840,7 +833,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -850,11 +842,11 @@ int main()
 ```  
 
 ## <a name="equal_to"></a> equal_to (STL/CLR)
-このテンプレート クラスは、ファンクタを記述、呼び出されると、true を返します、最初の引数が 2 番目に等しい場合のみです。 使用する、引数の型の観点から、関数オブジェクトを指定します。  
+テンプレート クラスは、説明、ファンクター、呼び出されると、true を返します、最初の引数が 2 番目の場合にのみです。 これを使用して、引数の型の観点からの関数オブジェクトを指定します。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class equal_to  
     { // wrap operator()  
@@ -876,7 +868,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- arg  
+ *arg*  
  引数の型。  
   
 ### <a name="member-functions"></a>メンバー関数  
@@ -884,9 +876,9 @@ public:
 |型定義|説明|  
 |---------------------|-----------------|  
 |delegate_type|汎用デリゲートの型。|  
-|first_argument_type|ファンクタ最初の引数の型。|  
-|result_type|ファンクタ結果の型。|  
-|second_argument_type|ファンクタ 2 番目の引数の型。|  
+|first_argument_type|ファンクター最初の引数の型。|  
+|result_type|ファンクター結果の型。|  
+|second_argument_type|ファンクター 2 番目の引数の型。|  
   
 |メンバー|説明|  
 |------------|-----------------|  
@@ -898,9 +890,9 @@ public:
 |演算子 delegate_type^()|デリゲートにファンクタをキャストします。|  
   
 ### <a name="remarks"></a>Remarks  
- このテンプレート クラスは、2 つの引数ファンクタをについて説明します。 このメンバー演算子を定義する`operator()`これにより、オブジェクトが関数として呼び出される場合、true を返しますだけ最初の引数は、2 番目に等しいかどうかは。  
+ テンプレート クラスは、2 つの引数ファンクタをについて説明します。 メンバー演算子は、定義`operator()`関数として、オブジェクトを呼び出すときに、ように、のみ true を返します、最初の引数が 2 番目のかどうか。  
   
- 型が関数の引数として、オブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
+ 型が関数の引数としてオブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
   
 ### <a name="example"></a>例  
   
@@ -939,7 +931,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -949,11 +940,11 @@ int main()
 ```  
 
 ## <a name="greater"></a> 大きい (STL/CLR)
-このテンプレート クラスは、ファンクタを記述、呼び出されると、true を返します、最初の引数が 2 番目より大きい場合にのみです。 使用する、引数の型の観点から、関数オブジェクトを指定します。  
+テンプレート クラスは、説明、ファンクター、呼び出されると、true を返します、最初の引数が 2 番目より大きい場合にのみです。 これを使用して、引数の型の観点からの関数オブジェクトを指定します。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class greater  
     { // wrap operator()  
@@ -975,7 +966,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- arg  
+ *arg*  
  引数の型。  
   
 ### <a name="member-functions"></a>メンバー関数  
@@ -983,9 +974,9 @@ public:
 |型定義|説明|  
 |---------------------|-----------------|  
 |delegate_type|汎用デリゲートの型。|  
-|first_argument_type|ファンクタ最初の引数の型。|  
-|result_type|ファンクタ結果の型。|  
-|second_argument_type|ファンクタ 2 番目の引数の型。|  
+|first_argument_type|ファンクター最初の引数の型。|  
+|result_type|ファンクター結果の型。|  
+|second_argument_type|ファンクター 2 番目の引数の型。|  
   
 |メンバー|説明|  
 |------------|-----------------|  
@@ -997,9 +988,9 @@ public:
 |演算子 delegate_type ^|デリゲートにファンクタをキャストします。|  
   
 ### <a name="remarks"></a>Remarks  
- このテンプレート クラスは、2 つの引数ファンクタをについて説明します。 このメンバー演算子を定義する`operator()`オブジェクトが関数として呼び出される場合、できるように、true を返すだけ最初の引数は、2 番目より大きいかどうか。  
+ テンプレート クラスは、2 つの引数ファンクタをについて説明します。 メンバー演算子は、定義`operator()`関数として、オブジェクトを呼び出すときに、ように、のみ true を返します、最初の引数が 2 番目より大きいかどうか。  
   
- 型が関数の引数として、オブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
+ 型が関数の引数としてオブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
   
 ### <a name="example"></a>例  
   
@@ -1038,7 +1029,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1048,11 +1038,11 @@ int main()
 ```  
 
 ## <a name="greater_equal"></a> greater_equal (STL/CLR)
-このテンプレート クラスは、ファンクタを記述、呼び出されると、だけを返す場合は true。 最初の引数は、2 番目以上の場合。 使用する、引数の型の観点から、関数オブジェクトを指定します。  
+テンプレート クラスは、ファンクタをについて説明しますが、呼び出されると、ときにのみ true を返します、最初の引数が 2 番目以上のかどうか。 これを使用して、引数の型の観点からの関数オブジェクトを指定します。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class greater_equal  
     { // wrap operator()  
@@ -1074,7 +1064,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- arg  
+ *arg*  
  引数の型。  
   
 ### <a name="member-functions"></a>メンバー関数  
@@ -1082,9 +1072,9 @@ public:
 |型定義|説明|  
 |---------------------|-----------------|  
 |delegate_type|汎用デリゲートの型。|  
-|first_argument_type|ファンクタ最初の引数の型。|  
-|result_type|ファンクタ結果の型。|  
-|second_argument_type|ファンクタ 2 番目の引数の型。|  
+|first_argument_type|ファンクター最初の引数の型。|  
+|result_type|ファンクター結果の型。|  
+|second_argument_type|ファンクター 2 番目の引数の型。|  
   
 |メンバー|説明|  
 |------------|-----------------|  
@@ -1096,9 +1086,9 @@ public:
 |演算子 delegate_type ^|デリゲートにファンクタをキャストします。|  
   
 ### <a name="remarks"></a>Remarks  
- このテンプレート クラスは、2 つの引数ファンクタをについて説明します。 このメンバー演算子を定義する`operator()`これにより、オブジェクトが関数として呼び出される場合、true を返しますだけ最初の引数は、2 番目以上のかどうか。  
+ テンプレート クラスは、2 つの引数ファンクタをについて説明します。 メンバー演算子は、定義`operator()`関数として、オブジェクトを呼び出すときに、ように、のみ true を返します、最初の引数が 2 番目以上のかどうか。  
   
- 型が関数の引数として、オブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
+ 型が関数の引数としてオブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
   
 ### <a name="example"></a>例  
   
@@ -1137,7 +1127,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1146,12 +1135,12 @@ int main()
 1 0  
 ```  
 
-## <a name="less"></a> 以下 (STL/CLR)
-このテンプレート クラスは、ファンクタを記述、呼び出されると、true を返します、最初の引数が小さい場合にのみ 2 番目よりです。 使用する、引数の型の観点から、関数オブジェクトを指定します。  
+## <a name="less"></a> 小さい (STL/CLR)
+テンプレート クラスは、説明、ファンクター、呼び出されると、true を返します、最初の引数が小さい場合にのみ、1 つ目です。 これを使用して、引数の型の観点からの関数オブジェクトを指定します。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class less  
     { // wrap operator()  
@@ -1173,7 +1162,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- arg  
+ *arg*  
  引数の型。  
   
 ### <a name="member-functions"></a>メンバー関数  
@@ -1181,9 +1170,9 @@ public:
 |型定義|説明|  
 |---------------------|-----------------|  
 |delegate_type|汎用デリゲートの型。|  
-|first_argument_type|ファンクタ最初の引数の型。|  
-|result_type|ファンクタ結果の型。|  
-|second_argument_type|ファンクタ 2 番目の引数の型。|  
+|first_argument_type|ファンクター最初の引数の型。|  
+|result_type|ファンクター結果の型。|  
+|second_argument_type|ファンクター 2 番目の引数の型。|  
   
 |メンバー|説明|  
 |------------|-----------------|  
@@ -1195,9 +1184,9 @@ public:
 |演算子 delegate_type ^|デリゲートにファンクタをキャストします。|  
   
 ### <a name="remarks"></a>Remarks  
- このテンプレート クラスは、2 つの引数ファンクタをについて説明します。 メンバー演算子を定義する`operator()`これにより、オブジェクトが関数として呼び出される場合、true を返しますのみ 1 番目の引数が小さいかどうか、秒を超える。  
+ テンプレート クラスは、2 つの引数ファンクタをについて説明します。 メンバー演算子は、定義`operator()`関数として、オブジェクトを呼び出すときに、ように、のみ true を返します、最初の引数が小さいかどうか、1 つ目です。  
   
- 型が関数の引数として、オブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
+ 型が関数の引数としてオブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
   
 ### <a name="example"></a>例  
   
@@ -1236,7 +1225,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1246,11 +1234,11 @@ int main()
 ``` 
 
 ## <a name="less_equal"></a> less_equal (STL/CLR)
-このテンプレート クラスは、ファンクタを記述、呼び出されると、true を返しますのみが、最初の引数が、2 番目未満になるかどうか。 使用する、引数の型の観点から、関数オブジェクトを指定します。  
+テンプレート クラスは、ファンクタをについて説明しますが、呼び出されると、ときにのみ true を返します、最初の引数が 2 番目に小さいかどうか。 これを使用して、引数の型の観点からの関数オブジェクトを指定します。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class less_equal  
     { // wrap operator()  
@@ -1272,7 +1260,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- arg  
+ *arg*  
  引数の型。  
   
 ### <a name="member-functions"></a>メンバー関数  
@@ -1280,9 +1268,9 @@ public:
 |型定義|説明|  
 |---------------------|-----------------|  
 |delegate_type|汎用デリゲートの型。|  
-|first_argument_type|ファンクタ最初の引数の型。|  
-|result_type|ファンクタ結果の型。|  
-|second_argument_type|ファンクタ 2 番目の引数の型。|  
+|first_argument_type|ファンクター最初の引数の型。|  
+|result_type|ファンクター結果の型。|  
+|second_argument_type|ファンクター 2 番目の引数の型。|  
   
 |メンバー|説明|  
 |------------|-----------------|  
@@ -1294,9 +1282,9 @@ public:
 |演算子 delegate_type ^|デリゲートにファンクタをキャストします。|  
   
 ### <a name="remarks"></a>Remarks  
- このテンプレート クラスは、2 つの引数ファンクタをについて説明します。 このメンバー演算子を定義する`operator()`これにより、オブジェクトが関数として呼び出される場合、true を返しますのみが、最初の引数が、2 番目未満になるかどうか。  
+ テンプレート クラスは、2 つの引数ファンクタをについて説明します。 メンバー演算子は、定義`operator()`関数として、オブジェクトを呼び出すときに、ように、のみ true を返します、最初の引数が 2 番目に小さいかどうか。  
   
- 型が関数の引数として、オブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
+ 型が関数の引数としてオブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
   
 ### <a name="example"></a>例  
   
@@ -1335,7 +1323,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1345,11 +1332,11 @@ int main()
 ``` 
 
 ## <a name="logical_and"></a> logical_and (STL/CLR)
-このテンプレート クラスは、ファンクタを記述、呼び出されると、true を返します、最初の引数と 2 番目のテストとしての両方が true の場合のみです。 使用する、引数の型の観点から、関数オブジェクトを指定します。  
+テンプレート クラスは、説明、ファンクター、呼び出されると、true を返します、最初の引数と 2 番目のテストとしての両方が true の場合のみです。 これを使用して、引数の型の観点からの関数オブジェクトを指定します。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class logical_and  
     { // wrap operator()  
@@ -1371,7 +1358,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- arg  
+ *arg*  
  引数の型。  
   
 ### <a name="member-functions"></a>メンバー関数  
@@ -1379,9 +1366,9 @@ public:
 |型定義|説明|  
 |---------------------|-----------------|  
 |delegate_type|汎用デリゲートの型。|  
-|first_argument_type|ファンクタ最初の引数の型。|  
-|result_type|ファンクタ結果の型。|  
-|second_argument_type|ファンクタ 2 番目の引数の型。|  
+|first_argument_type|ファンクター最初の引数の型。|  
+|result_type|ファンクター結果の型。|  
+|second_argument_type|ファンクター 2 番目の引数の型。|  
   
 |メンバー|説明|  
 |------------|-----------------|  
@@ -1393,9 +1380,9 @@ public:
 |演算子 delegate_type ^|デリゲートにファンクタをキャストします。|  
   
 ### <a name="remarks"></a>Remarks  
- このテンプレート クラスは、2 つの引数ファンクタをについて説明します。 このメンバー演算子を定義する`operator()`これにより、オブジェクトが関数として呼び出される場合、true を返しますのみ 1 番目の引数と 2 番目のテストとしての両方の true です。  
+ テンプレート クラスは、2 つの引数ファンクタをについて説明します。 メンバー演算子は、定義`operator()`関数として、オブジェクトを呼び出すときに、ように、のみ true を返します、最初の引数と 2 番目のテストとしての両方の true です。  
   
- 型が関数の引数として、オブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
+ 型が関数の引数としてオブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
   
 ### <a name="example"></a>例  
   
@@ -1434,7 +1421,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1444,11 +1430,11 @@ int main()
 ``` 
 
 ## <a name="logical_not"></a> logical_not (STL/CLR)
-このテンプレート クラスは、ファンクタを記述、呼び出されると、true を返す場合にのみ引数が false としてテストします。 使用する、引数の型の観点から、関数オブジェクトを指定します。  
+テンプレート クラスは、説明、ファンクター、呼び出されると、true を返す場合にのみ、引数が false としてテストします。 これを使用して、引数の型の観点からの関数オブジェクトを指定します。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class logical_not  
     { // wrap operator()  
@@ -1468,16 +1454,16 @@ public:
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- arg  
+ *arg*  
  引数の型。  
   
 ### <a name="member-functions"></a>メンバー関数  
   
 |型定義|説明|  
 |---------------------|-----------------|  
-|argument_type|ファンクタ引数の型。|  
+|argument_type|ファンクター引数の型。|  
 |delegate_type|汎用デリゲートの型。|  
-|result_type|ファンクタ結果の型。|  
+|result_type|ファンクター結果の型。|  
   
 |メンバー|説明|  
 |------------|-----------------|  
@@ -1489,9 +1475,9 @@ public:
 |演算子 delegate_type ^|デリゲートにファンクタをキャストします。|  
   
 ### <a name="remarks"></a>Remarks  
- このテンプレート クラスは、引数が 1 つファンクタをについて説明します。 このメンバー演算子を定義する`operator()`これにより、オブジェクトが関数として呼び出される場合、true を返しますのみかどうか、引数が false としてテストします。  
+ テンプレート クラスは、引数が 1 つファンクタをについて説明します。 メンバー演算子は、定義`operator()`関数として、オブジェクトを呼び出すときに、ように、のみ true を返しますの引数が false としてテストします。  
   
- 型が関数の引数として、オブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
+ 型が関数の引数としてオブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
   
 ### <a name="example"></a>例  
   
@@ -1523,7 +1509,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1532,11 +1517,11 @@ int main()
 ``` 
 
 ## <a name="logical_or"></a> logical_or (STL/CLR)
-このテンプレート クラスは、ファンクタを記述、呼び出されると、true を返します最初の引数と 2 つ目のテストとしてのいずれかが true の場合のみです。 使用する、引数の型の観点から、関数オブジェクトを指定します。  
+テンプレート クラスは、説明、ファンクター、呼び出されると、true を返します、最初の引数または 2 つ目のテストのいずれかが true の場合のみです。 これを使用して、引数の型の観点からの関数オブジェクトを指定します。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class logical_or  
     { // wrap operator()  
@@ -1558,7 +1543,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- arg  
+ *arg*  
  引数の型。  
   
 ### <a name="member-functions"></a>メンバー関数  
@@ -1566,9 +1551,9 @@ public:
 |型定義|説明|  
 |---------------------|-----------------|  
 |delegate_type|汎用デリゲートの型。|  
-|first_argument_type|ファンクタ最初の引数の型。|  
-|result_type|ファンクタ結果の型。|  
-|second_argument_type|ファンクタ 2 番目の引数の型。|  
+|first_argument_type|ファンクター最初の引数の型。|  
+|result_type|ファンクター結果の型。|  
+|second_argument_type|ファンクター 2 番目の引数の型。|  
   
 |メンバー|説明|  
 |------------|-----------------|  
@@ -1580,9 +1565,9 @@ public:
 |演算子 delegate_type ^|デリゲートにファンクタをキャストします。|  
   
 ### <a name="remarks"></a>Remarks  
- このテンプレート クラスは、2 つの引数ファンクタをについて説明します。 このメンバー演算子を定義する`operator()`これにより、オブジェクトが関数として呼び出される場合、true を返しますだけ最初の引数と 2 つ目のテストとしてのいずれかの true です。  
+ テンプレート クラスは、2 つの引数ファンクタをについて説明します。 メンバー演算子は、定義`operator()`関数として、オブジェクトを呼び出すときに、ように、のみ true を返します、最初の引数または 2 つ目のテストのいずれかの true です。  
   
- 型が関数の引数として、オブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
+ 型が関数の引数としてオブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
   
 ### <a name="example"></a>例  
   
@@ -1621,7 +1606,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1631,11 +1615,11 @@ int main()
 ```      
 
 ## <a name="minus"></a> マイナス (STL/CLR)
-このテンプレート クラスは、ファンクタを記述するには、呼び出されると、最初の引数、2 つ目の負符号を返します。 使用する、引数の型の観点から、関数オブジェクトを指定します。  
+テンプレート クラスは、ファンクタをについて説明しますが、呼び出されると、2 番目のマイナスの最初の引数を返します。 これを使用して、引数の型の観点からの関数オブジェクトを指定します。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class minus  
     { // wrap operator()  
@@ -1657,7 +1641,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- arg  
+ *arg*  
  引数と戻り値の型。  
   
 ### <a name="member-functions"></a>メンバー関数  
@@ -1665,9 +1649,9 @@ public:
 |型定義|説明|  
 |---------------------|-----------------|  
 |delegate_type|汎用デリゲートの型。|  
-|first_argument_type|ファンクタ最初の引数の型。|  
-|result_type|ファンクタ結果の型。|  
-|second_argument_type|ファンクタ 2 番目の引数の型。|  
+|first_argument_type|ファンクター最初の引数の型。|  
+|result_type|ファンクター結果の型。|  
+|second_argument_type|ファンクター 2 番目の引数の型。|  
   
 |メンバー|説明|  
 |------------|-----------------|  
@@ -1679,9 +1663,9 @@ public:
 |演算子 delegate_type ^|デリゲートにファンクタをキャストします。|  
   
 ### <a name="remarks"></a>Remarks  
- このテンプレート クラスは、2 つの引数ファンクタをについて説明します。 このメンバー演算子を定義する`operator()`マイナス 2 つ目の最初の引数が返されるオブジェクトが関数として呼び出されたとき、ようにことです。  
+ テンプレート クラスは、2 つの引数ファンクタをについて説明します。 メンバー演算子は、定義`operator()`マイナス 2 つ目の最初の引数が返されるように、オブジェクトが関数として呼び出された場合、します。  
   
- 型が関数の引数として、オブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
+ 型が関数の引数としてオブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
   
 ### <a name="example"></a>例  
   
@@ -1720,7 +1704,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1730,11 +1713,11 @@ int main()
 ``` 
 
 ## <a name="modulus"></a> 剰余 (STL/CLR)
-このテンプレート クラスは、ファンクタを記述するには、呼び出されると、最初の引数、2 つ目の剰余を返します。 使用する、引数の型の観点から、関数オブジェクトを指定します。  
+テンプレート クラスは、ファンクタをについて説明しますが、呼び出されると、最初の引数を 2 番目の剰余を返します。 これを使用して、引数の型の観点からの関数オブジェクトを指定します。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class modulus  
     { // wrap operator()  
@@ -1756,7 +1739,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- arg  
+ *arg*  
  引数と戻り値の型。  
   
 ### <a name="member-functions"></a>メンバー関数  
@@ -1764,9 +1747,9 @@ public:
 |型定義|説明|  
 |---------------------|-----------------|  
 |delegate_type|汎用デリゲートの型。|  
-|first_argument_type|ファンクタ最初の引数の型。|  
-|result_type|ファンクタ結果の型。|  
-|second_argument_type|ファンクタ 2 番目の引数の型。|  
+|first_argument_type|ファンクター最初の引数の型。|  
+|result_type|ファンクター結果の型。|  
+|second_argument_type|ファンクター 2 番目の引数の型。|  
   
 |メンバー|説明|  
 |------------|-----------------|  
@@ -1778,9 +1761,9 @@ public:
 |演算子 delegate_type ^|デリゲートにファンクタをキャストします。|  
   
 ### <a name="remarks"></a>Remarks  
- このテンプレート クラスは、2 つの引数ファンクタをについて説明します。 このメンバー演算子を定義する`operator()`これにより、オブジェクトが関数として呼び出されたとき、モジュロ 2 つ目の最初の引数を返します。  
+ テンプレート クラスは、2 つの引数ファンクタをについて説明します。 メンバー演算子は、定義`operator()`モジュロ 2 つ目の最初の引数が返されるように、オブジェクトが関数として呼び出された場合、します。  
   
- 型が関数の引数として、オブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
+ 型が関数の引数としてオブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
   
 ### <a name="example"></a>例  
   
@@ -1819,7 +1802,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1829,11 +1811,11 @@ int main()
 ```   
 
 ## <a name="multiplies"></a> 乗算 (STL/CLR)
-このテンプレート クラスは、ファンクタを記述、呼び出されると、時間、2 つ目の最初の引数を返します。 使用する、引数の型の観点から、関数オブジェクトを指定します。  
+テンプレート クラスは、ファンクタをについて説明しますが、呼び出されると、時間、2 つ目の最初の引数を返します。 これを使用して、引数の型の観点からの関数オブジェクトを指定します。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class multiplies  
     { // wrap operator()  
@@ -1855,7 +1837,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- arg  
+ *arg*  
  引数と戻り値の型。  
   
 ### <a name="member-functions"></a>メンバー関数  
@@ -1863,9 +1845,9 @@ public:
 |型定義|説明|  
 |---------------------|-----------------|  
 |delegate_type|汎用デリゲートの型。|  
-|first_argument_type|ファンクタ最初の引数の型。|  
-|result_type|ファンクタ結果の型。|  
-|second_argument_type|ファンクタ 2 番目の引数の型。|  
+|first_argument_type|ファンクター最初の引数の型。|  
+|result_type|ファンクター結果の型。|  
+|second_argument_type|ファンクター 2 番目の引数の型。|  
   
 |メンバー|説明|  
 |------------|-----------------|  
@@ -1877,9 +1859,9 @@ public:
 |演算子 delegate_type ^|デリゲートにファンクタをキャストします。|  
   
 ### <a name="remarks"></a>Remarks  
- このテンプレート クラスは、2 つの引数ファンクタをについて説明します。 このメンバー演算子を定義する`operator()`これにより、オブジェクトが関数として呼び出される場合、時間、2 つ目の最初の引数を返します。  
+ テンプレート クラスは、2 つの引数ファンクタをについて説明します。 メンバー演算子は、定義`operator()`回、2 つ目の最初の引数が返されるように、オブジェクトが関数として呼び出された場合、します。  
   
- 型が関数の引数として、オブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
+ 型が関数の引数としてオブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
   
 ### <a name="example"></a>例  
   
@@ -1918,7 +1900,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1927,12 +1908,12 @@ int main()
 8 3  
 ```  
 
-## <a name="negate"></a> negate (STL/CLR)
-このテンプレート クラスは、ファンクタを記述、呼び出されると、その引数を否定を返します。 使用する、引数の型の観点から、関数オブジェクトを指定します。  
+## <a name="negate"></a> 否定 (STL/CLR)
+テンプレート クラスは、ファンクタをについて説明しますが、呼び出されると、その引数を符号反転されるを返します。 これを使用して、引数の型の観点からの関数オブジェクトを指定します。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class negate  
     { // wrap operator()  
@@ -1952,16 +1933,16 @@ public:
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- arg  
+ *arg*  
  引数の型。  
   
 ### <a name="member-functions"></a>メンバー関数  
   
 |型定義|説明|  
 |---------------------|-----------------|  
-|argument_type|ファンクタ引数の型。|  
+|argument_type|ファンクター引数の型。|  
 |delegate_type|汎用デリゲートの型。|  
-|result_type|ファンクタ結果の型。|  
+|result_type|ファンクター結果の型。|  
   
 |メンバー|説明|  
 |------------|-----------------|  
@@ -1973,9 +1954,9 @@ public:
 |演算子 delegate_type ^|デリゲートにファンクタをキャストします。|  
   
 ### <a name="remarks"></a>Remarks  
- このテンプレート クラスは、引数が 1 つファンクタをについて説明します。 このメンバー演算子を定義する`operator()`否定の引数が返されるオブジェクトが関数として呼び出されたとき、ようにことです。  
+ テンプレート クラスは、引数が 1 つファンクタをについて説明します。 メンバー演算子は、定義`operator()`否定の引数が返されるように、オブジェクトが関数として呼び出された場合、します。  
   
- 型が関数の引数として、オブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
+ 型が関数の引数としてオブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
   
 ### <a name="example"></a>例  
   
@@ -2007,7 +1988,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2016,11 +1996,11 @@ int main()
 ``` 
 
 ## <a name="not_equal_to"></a> not_equal_to (STL/CLR)
-このテンプレート クラスは、ファンクタを記述、呼び出されると、true を返します、最初の引数が 2 つ目と等しくない場合にのみです。 使用する、引数の型の観点から、関数オブジェクトを指定します。  
+テンプレート クラスは、説明、ファンクター、呼び出されると、true を返します、最初の引数が 2 番目の場合のみです。 これを使用して、引数の型の観点からの関数オブジェクトを指定します。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class not_equal_to  
     { // wrap operator()  
@@ -2042,7 +2022,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- arg  
+ *arg*  
  引数の型。  
   
 ### <a name="member-functions"></a>メンバー関数  
@@ -2050,9 +2030,9 @@ public:
 |型定義|説明|  
 |---------------------|-----------------|  
 |delegate_type|汎用デリゲートの型。|  
-|first_argument_type|ファンクタ最初の引数の型。|  
-|result_type|ファンクタ結果の型。|  
-|second_argument_type|ファンクタ 2 番目の引数の型。|  
+|first_argument_type|ファンクター最初の引数の型。|  
+|result_type|ファンクター結果の型。|  
+|second_argument_type|ファンクター 2 番目の引数の型。|  
   
 |メンバー|説明|  
 |------------|-----------------|  
@@ -2064,9 +2044,9 @@ public:
 |演算子 delegate_type ^|デリゲートにファンクタをキャストします。|  
   
 ### <a name="remarks"></a>Remarks  
- このテンプレート クラスは、2 つの引数ファンクタをについて説明します。 このメンバー演算子を定義する`operator()`オブジェクトが関数として呼び出される場合、できるように、true を返すだけ最初の引数が 2 つ目と等しくないかどうか。  
+ テンプレート クラスは、2 つの引数ファンクタをについて説明します。 メンバー演算子は、定義`operator()`関数として、オブジェクトを呼び出すときに、ように、のみ true を返します、最初の引数が 2 番目のないかどうか。  
   
- 型が関数の引数として、オブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
+ 型が関数の引数としてオブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
   
 ### <a name="example"></a>例  
   
@@ -2105,7 +2085,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2115,25 +2094,25 @@ int main()
 ```   
 
 ## <a name="not1"></a> not1 (STL/CLR)
-生成、`unary_negate`ファンクタをします。  
+生成、`unary_negate`をファンクター用です。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Fun>  
     unary_negate<Fun> not1(Fun% functor);  
 ```  
   
 #### <a name="template-parameters"></a>テンプレート パラメーター  
- 楽しい  
- ファンクタの型。  
+ *楽しむ*  
+ 関数記号の型。  
   
-#### <a name="function-parameters"></a>関数パラメーター  
- ファンクター  
+#### <a name="function-parameters"></a>関数のパラメーター  
+ *ファンクター*  
  ラップするファンクタ。  
   
 ### <a name="remarks"></a>Remarks  
- テンプレート関数を返します[unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md)`<Fun>(functor)`です。 その論理否定を配信するファンクタに引数が 1 つファンクタをラップする便利な手段として使用するとします。  
+ テンプレート関数を返します[unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md)`<Fun>(functor)`します。 その論理 NOT を配信するファンクターに引数が 1 つファンクタをラップする便利な方法として使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -2174,7 +2153,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2184,25 +2162,25 @@ int main()
 ```  
 
 ## <a name="not2"></a> not2 (STL/CLR)
-生成、`binary_negate`ファンクタをします。  
+生成、`binary_negate`をファンクター用です。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Fun>  
     binary_negate<Fun> not2(Fun% functor);  
 ```  
   
 #### <a name="template-parameters"></a>テンプレート パラメーター  
- 楽しい  
- ファンクタの型。  
+ *楽しむ*  
+ 関数記号の型。  
   
-#### <a name="function-parameters"></a>関数パラメーター  
- ファンクター  
+#### <a name="function-parameters"></a>関数のパラメーター  
+ *ファンクター*  
  ラップするファンクタ。  
   
 ### <a name="remarks"></a>Remarks  
- テンプレート関数を返します[binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md)`<Fun>(functor)`です。 その論理否定を配信するファンクタで 2 つの引数ファンクタをラップする便利な手段として使用するとします。  
+ テンプレート関数を返します[binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md)`<Fun>(functor)`します。 その論理 NOT を配信するファンクターに 2 つの引数ファンクタをラップする便利な方法として使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -2251,7 +2229,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2262,11 +2239,11 @@ int main()
 ```  
 
 ## <a name="plus"></a> plus (STL/CLR)
-このテンプレート クラスは、ファンクタを記述、呼び出されると、返される最初の引数および 2 番目です。 使用する、引数の型の観点から、関数オブジェクトを指定します。  
+テンプレート クラスは、ファンクタをについて説明しますが、呼び出されると、最初の引数と 2 つ目を返します。 これを使用して、引数の型の観点からの関数オブジェクトを指定します。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class plus  
     { // wrap operator()  
@@ -2288,7 +2265,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- arg  
+ *arg*  
  引数と戻り値の型。  
   
 ### <a name="member-functions"></a>メンバー関数  
@@ -2296,9 +2273,9 @@ public:
 |型定義|説明|  
 |---------------------|-----------------|  
 |delegate_type|汎用デリゲートの型。|  
-|first_argument_type|ファンクタ最初の引数の型。|  
-|result_type|ファンクタ結果の型。|  
-|second_argument_type|ファンクタ 2 番目の引数の型。|  
+|first_argument_type|ファンクター最初の引数の型。|  
+|result_type|ファンクター結果の型。|  
+|second_argument_type|ファンクター 2 番目の引数の型。|  
   
 |メンバー|説明|  
 |------------|-----------------|  
@@ -2310,9 +2287,9 @@ public:
 |演算子 delegate_type ^|デリゲートにファンクタをキャストします。|  
   
 ### <a name="remarks"></a>Remarks  
- このテンプレート クラスは、2 つの引数ファンクタをについて説明します。 このメンバー演算子を定義する`operator()`これにより、オブジェクトが関数として呼び出される場合、返される最初の引数および 2 番目です。  
+ テンプレート クラスは、2 つの引数ファンクタをについて説明します。 メンバー演算子は、定義`operator()`最初の引数と 2 つ目が返されるように、オブジェクトが関数として呼び出された場合、します。  
   
- 型が関数の引数として、オブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
+ 型が関数の引数としてオブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
   
 ### <a name="example"></a>例  
   
@@ -2351,7 +2328,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2361,33 +2337,33 @@ int main()
 ```  
 
 ## <a name="unary_delegate"></a> unary_delegate (STL/CLR)
-Genereic クラスでは、引数が 1 つのデリゲートについて説明します。 使用するデリゲートの引数と戻り値の型を指定します。  
+Genereic クラスには、引数が 1 つのデリゲートがについて説明します。 これを使用してその引数と戻り値の型の観点からデリゲートを指定します。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 generic<typename Arg,  
     typename Result>  
     delegate Result unary_delegate(Arg);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- arg  
+ *arg*  
  引数の型。  
   
- 結果  
+ *結果*  
  戻り値の型。  
   
 ### <a name="remarks"></a>Remarks  
  Genereic デリゲートでは、引数が 1 つの関数について説明します。  
   
- 注意してください。  
+ 場合に注意してください。  
   
  `unary_delegare<int, int> Fun1;`  
   
  `unary_delegare<int, int> Fun2;`  
   
- 種類`Fun1`と`Fun2`シノニムでは、中に。  
+ 種類`Fun1`と`Fun2`は、シノニムの中に。  
   
  `delegate int Fun1(int);`  
   
@@ -2416,7 +2392,6 @@ int main()
     System::Console::WriteLine("hash(L'b') = {0}", myhash(L'b'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2425,29 +2400,29 @@ hash(L'b') = 22
 ```  
 
 ## <a name="unary_delegate_noreturn"></a> unary_delegate_noreturn (STL/CLR)
-Genereic クラスの説明を返す 1 つの引数を持つデリゲート`void`です。 使用する、引数の型の観点からデリゲートを指定します。  
+Genereic クラスの説明を返す引数が 1 つのデリゲート**void**します。 これを使用して、引数の型の観点からデリゲートを指定します。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 generic<typename Arg>  
     delegate void unary_delegate_noreturn(Arg);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- arg  
+ *arg*  
  引数の型。  
   
 ### <a name="remarks"></a>Remarks  
- Genereic デリゲートの説明を返す 1 つの引数を持つ関数`void`です。  
+ Genereic デリゲートを返す 1 つの引数の関数の説明**void**します。  
   
- 注意してください。  
+ 場合に注意してください。  
   
  `unary_delegare_noreturn<int> Fun1;`  
   
  `unary_delegare_noreturn<int> Fun2;`  
   
- 種類`Fun1`と`Fun2`シノニムでは、中に。  
+ 種類`Fun1`と`Fun2`は、シノニムの中に。  
   
  `delegate void Fun1(int);`  
   
@@ -2477,7 +2452,6 @@ int main()
     myhash(L'b');   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2486,11 +2460,11 @@ hash(b) = 22
 ```  
 
 ## <a name="unary_negate"></a> unary_negate (STL/CLR)
-このテンプレート クラスは、ファンクタを記述、呼び出されると、論理を返しますストアドの引数が 1 つファンクタのではありません。 使用するそのストアド ファンクタの観点から、関数オブジェクトを指定します。  
+テンプレート クラスは、ファンクタをについて説明しますが、呼び出されると、返す論理ストアドの引数が 1 つファンクターのではありません。 これを使用してそのストアド ファンクターの観点からの関数オブジェクトを指定します。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Fun>  
     ref class unary_negate  
     { // wrap operator()  
@@ -2511,16 +2485,16 @@ public:
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 楽しい  
- ストアド ファンクタの型。  
+ *楽しむ*  
+ ストアド関数記号の型。  
   
 ### <a name="member-functions"></a>メンバー関数  
   
 |型定義|説明|  
 |---------------------|-----------------|  
-|argument_type|ファンクタ引数の型。|  
+|argument_type|ファンクター引数の型。|  
 |delegate_type|汎用デリゲートの型。|  
-|result_type|ファンクタ結果の型。|  
+|result_type|ファンクター結果の型。|  
   
 |メンバー|説明|  
 |------------|-----------------|  
@@ -2532,9 +2506,9 @@ public:
 |delegate_type ^|デリゲートにファンクタをキャストします。|  
   
 ### <a name="remarks"></a>Remarks  
- このテンプレート クラスでは、別の引数が 1 つファンクタを格納する引数が 1 つファンクタについて説明します。 このメンバー演算子を定義する`operator()`のため、オブジェクトが関数として呼び出される場合、返されることを論理、引数で呼び出されたストアド ファンクタのではありません。  
+ テンプレート クラスは、もう 1 つの引数が 1 つファンクタを格納する引数が 1 つファンクタをについて説明します。 メンバー演算子は、定義`operator()`論理が返されるように、オブジェクトが関数として呼び出された場合、引数で呼び出されたストアド ファンクターのではありません。  
   
- 型が関数の引数として、オブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
+ 型が関数の引数としてオブジェクトを渡すことができますも`delegate_type^`適切に変換されます。  
   
 ### <a name="example"></a>例  
   
@@ -2575,7 +2549,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  

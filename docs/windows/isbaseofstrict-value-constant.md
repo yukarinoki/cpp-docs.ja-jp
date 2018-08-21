@@ -1,5 +1,5 @@
 ---
-title: Isbaseofstrict::value 定数 |Microsoft ドキュメント
+title: Isbaseofstrict::value 定数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eaaf0b410861f28cd5b339f75a73c594b1bcba45
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5ac49319dca429dcc0351393f73d711266cf764a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875807"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010773"
 ---
 # <a name="isbaseofstrictvalue-constant"></a>IsBaseOfStrict::value 定数
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 static const bool value = __is_base_of(Base, Derived);  
 ```  
   
-## <a name="remarks"></a>コメント  
- 1 つの種類別のベースであるかどうかを示します。  
+## <a name="remarks"></a>Remarks  
+ 1 つの型が別のベースであるかどうかを示します。  
   
- `value` `true`場合型`Base`型の基本クラスである`Derived`、以外の場合は`false`します。  
+ **値**は**true**場合型`Base`型の基本クラスは、 `Derived`、それ以外の場合は**false**します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** internal.h  

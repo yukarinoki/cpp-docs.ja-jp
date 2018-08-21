@@ -1,5 +1,5 @@
 ---
-title: CreateClassFactory 関数 |Microsoft ドキュメント
+title: CreateClassFactory 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95d08573515bee89fd86d6b37e3982dde2b29978
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 57759e7191ecbe08e6d94dcec798f6d3203c13de
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870474"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645140"
 ---
 # <a name="createclassfactory-function"></a>CreateClassFactory 関数
 指定されたクラスのインスタンスを生成するファクトリを作成します。  
@@ -37,27 +37,26 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
    REFIID riid,   
    _Outptr_ IUnknown **ppFactory  
 ) throw();  
-  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `flags`  
- 1 つまたは複数の組み合わせ[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列挙値。  
+### <a name="parameters"></a>パラメーター  
+ *flags*  
+ 1 つ以上を組み合わせた[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列挙値。  
   
- `entry`  
- ポインター、 [CreatorMap](../windows/creatormap-structure.md)パラメーターは初期化と登録の情報を含む`riid`です。  
+ *entry*  
+ ポインターを[CreatorMap](../windows/creatormap-structure.md)パラメーターに関する情報を初期化し、登録を含む*riid*します。  
   
- `riid`  
+ *riid*  
  インターフェイス ID への参照  
   
- `ppFactory`  
+ *ppFactory*  
  この操作は、クラス ファクトリへのポインターでは正常に完了します。 場合、  
   
 ## <a name="return-value"></a>戻り値  
  成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。  
   
-## <a name="remarks"></a>コメント  
- 場合、アサーション エラーが発生テンプレート パラメーター `Factory` IClassFactory インターフェイスから派生していません。  
+## <a name="remarks"></a>Remarks  
+ 場合は、アサート エラーが出力テンプレート パラメーター*ファクトリ*インターフェイスから派生していない`IClassFactory`します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** module.h  

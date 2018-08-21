@@ -1,5 +1,5 @@
 ---
-title: noncreatable |Microsoft ドキュメント
+title: noncreatable |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4055d541fa60c714262a64466734bc2b2323775b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 79791c2bbfd927d26ef70d50d225d8eff95bd674
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877824"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014274"
 ---
 # <a name="noncreatable"></a>noncreatable
 単独でインスタンス化できないオブジェクトを定義します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```cpp  
 [noncreatable]  
-  
 ```  
   
-## <a name="remarks"></a>コメント  
- **Noncreatable** C++ 属性と同じ機能を持つ、 [noncreatable](http://msdn.microsoft.com/library/windows/desktop/aa367118) MIDL 属性、生成されたに自動的に渡されるとします。コンパイラで IDL ファイルです。  
+## <a name="remarks"></a>Remarks  
+ **Noncreatable** C++ 属性と同じ機能を持つ、 [noncreatable](http://msdn.microsoft.com/library/windows/desktop/aa367118) MIDL 属性と、生成されたに自動的に渡されます。コンパイラによって IDL ファイルです。  
   
- ATL を使用するプロジェクト内でこの属性を使用する場合、属性の動作を変更します。 上記の動作だけでなく、属性でもは挿入、[役立つ](../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)マクロです。 このマクロは ATL にそのオブジェクトを外部で作成できないことを示します。  
+ この属性が ATL を使用するプロジェクト内で使用される場合、属性の動作を変更します。 上記の動作に加え、属性もは挿入、[役立つ](../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)マクロ。 このマクロは atl オブジェクトを外部で作成できないことを示します。  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp  
 // cpp_attr_ref_noncreatable.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -66,8 +64,8 @@ class CMyClass : public A
   
 |||  
 |-|-|  
-|**対象**|**class**、 `struct`|  
-|**反復可能**|×|  
+|**対象**|**クラス**、**構造体**|  
+|**反復可能**|いいえ|  
 |**必要な属性**|**coclass**|  
 |**無効な属性**|なし|  
   

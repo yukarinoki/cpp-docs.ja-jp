@@ -1,5 +1,5 @@
 ---
-title: 空の Win32 アプリケーションへのファイルの追加 |Microsoft ドキュメント
+title: 空の Win32 アプリケーションへのファイルの追加 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 625b75a81773b45483c8b70c12530acfc9f75994
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1efde876cadd5a8620bef83c37a61b8b471dba8b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856893"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019239"
 ---
 # <a name="adding-files-to-an-empty-win32-applications"></a>空の Win32 アプリケーションへのファイルの追加
 ### <a name="to-add-your-files-to-an-empty-windows-desktop-application"></a>ファイルを空の Windows デスクトップ アプリケーションに追加するには  
@@ -36,11 +36,11 @@ ms.locfileid: "33856893"
   
 4.  **[OK]** をクリックします。  
   
- ソース ファイル、ヘッダー ファイル、リソース ファイルのいずれでもないファイルをプロジェクトに追加するには、同じように、ソリューション エクスプローラーでソリューション ノードを右クリックし、ファイルをプロジェクトに追加します。 プロジェクト内の他のファイルを保持するために "その他のフォルダー" が作成されます。  
+ どちらのソース、ヘッダー、またはリソース ファイルをプロジェクトにファイルを追加するには、右クリックし、**ソリューション**内のノード**ソリューション エクスプ ローラー**と同じ方法でファイルをプロジェクトに追加します。 A **[その他]** フォルダーがプロジェクト内の他のファイルを保持するために作成されます。  
   
 > [!NOTE]
 >  プロジェクトをビルドする前に、完成したアプリケーションに正しく含まれるように、これらのファイル用のビルド オプションを指定する必要があります。 詳しくは、「 [プロパティ ページでプロジェクト設定を指定する](../ide/property-pages-visual-cpp.md) 」と「 [C/C++ プログラムのビルド](../build/building-c-cpp-programs.md)」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目  
  [空の Windows デスクトップ アプリケーションを作成します。](../windows/creating-an-empty-windows-desktop-application.md)   
- [アプリケーションを展開します。](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [アプリケーションの配置](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

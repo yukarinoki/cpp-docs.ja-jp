@@ -1,5 +1,5 @@
 ---
-title: ポインターへの参照 |Microsoft ドキュメント
+title: ポインターへの参照 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9cfec6642604fb495051d44d816d4a3370e9a8e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3de0974608f313a497dfb93d357995e7cc578e4d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467830"
 ---
 # <a name="references-to-pointers"></a>References to Pointers (ポインターへの参照)
 ポインターへの参照は、オブジェクトへの参照とほぼ同じ方法で宣言できます。 ポインターへの参照を宣言すると、通常のポインターのように使用される変更可能な値が生成されます。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 05/03/2018
   
  関数 `Add1` および `Add2` は、機能的に同等です (ただし、呼び出し方法が異なります)。 違いは、`Add1` が二重の間接参照を使用しているのに対し、`Add2` はポインターへの参照を便利に利用している点です。  
   
-```  
+```cpp 
 // references_to_pointers.cpp  
 // compile with: /EHsc  
   

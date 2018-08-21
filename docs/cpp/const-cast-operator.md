@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89ed2b161c5b8f73d68fb22eb29eb00e057d7029
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5ba0312b255b2957c815bb5f26c97a668d4f7b6d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943595"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403025"
 ---
 # <a name="constcast-operator"></a>const_cast 演算子
 削除、 **const**、**揮発性**、および **_ _unaligned**クラスから属性。  
@@ -29,17 +29,15 @@ ms.locfileid: "37943595"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 const_cast <type-id> (expression)  
-  
 ```  
   
 ## <a name="remarks"></a>Remarks  
  任意のオブジェクト型へのポインターまたはデータ メンバーへのポインターを除いて同一である型に明示的に変換できる、 **const**、**揮発性**、および **_ _unaligned**修飾子。 ポインターと参照の場合、結果は元のオブジェクトを参照します。 データ メンバーへのポインターの場合、結果は元の (キャストされていない) ポインターが指していたデータ メンバーと同じメンバーを参照します。 参照されるオブジェクトの型によっては、結果のポインター、参照、またはデータ メンバーへのポインターを通じた書き込み操作で未定義の動作が発生する可能性があります。  
   
- `const_cast` 演算子を使用して定数変数の一定した状態を直接オーバーライドすることはできません。  
+ 使用することはできません、 **const_cast**定数変数の定数のステータスを直接オーバーライドする演算子。  
   
- `const_cast` 演算子は、null ポインター値を変換先の型の null ポインター値に変換します。  
+ **Const_cast**演算子は、null ポインターの値を変換先の型の null ポインター値に変換します。  
   
 ## <a name="example"></a>例  
   
@@ -72,7 +70,7 @@ int main() {
 }  
 ```  
   
- 含む行で、`const_cast`のデータ型、**この**ポインターが`const CCTest *`します。 `const_cast`演算子のデータ型を変更する、**この**へのポインター `CCTest *`、メンバーを許可する`number`を変更します。 キャストは、そのキャストが発生したステートメントの残り時間の間だけ持続します。  
+ 含む行で、 **const_cast**のデータ型、**この**ポインターが`const CCTest *`します。 **Const_cast**演算子のデータ型を変更する、**この**へのポインター `CCTest *`、メンバーを許可する`number`を変更します。 キャストは、そのキャストが発生したステートメントの残り時間の間だけ持続します。  
   
 ## <a name="see-also"></a>関連項目  
  [キャスト演算子](../cpp/casting-operators.md)   

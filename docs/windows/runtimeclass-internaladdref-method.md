@@ -1,5 +1,5 @@
 ---
-title: Runtimeclass::internaladdref メソッド |Microsoft ドキュメント
+title: Runtimeclass::internaladdref メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2998e46201be2137f11f0b91438fb68e326e46c1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 925ebb50c571c37d5137a24539429d75469a5f9b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888525"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010749"
 ---
 # <a name="runtimeclassinternaladdref-method"></a>RuntimeClass::InternalAddRef メソッド
-現在 RuntimeClass オブジェクトへの参照カウントをインクリメントします。  
+現在の参照カウントをインクリメント**RuntimeClass**オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 ULONG InternalAddRef();  
 ```  
   

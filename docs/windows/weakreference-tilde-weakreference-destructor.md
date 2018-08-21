@@ -1,5 +1,5 @@
 ---
-title: 'WeakReference:: ~ WeakReference デストラクター |Microsoft ドキュメント'
+title: 'WeakReference:: ~ WeakReference デストラクター |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c29316305983ac09714292bce20e992970cca4f5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 87fba12df4c41a49408ecfe6f0f251394dc4663a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890734"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011179"
 ---
 # <a name="weakreferenceweakreference-destructor"></a>WeakReference::~WeakReference デストラクター
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 virtual ~WeakReference();  
 ```  
   
 ## <a name="return-value"></a>戻り値  
   
-## <a name="remarks"></a>コメント  
- WeakReference クラスの現在のインスタンスの初期化を解除します。  
+## <a name="remarks"></a>Remarks  
+ 現在のインスタンスの初期化を解除、 **WeakReference**クラス。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** implements.h  

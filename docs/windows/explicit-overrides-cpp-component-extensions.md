@@ -1,5 +1,5 @@
 ---
-title: 明示的なオーバーライド (C++ コンポーネント拡張) |Microsoft ドキュメント
+title: 明示的なオーバーライド (C++ コンポーネント拡張) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,64 +15,61 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4eb418a6ded829e4eeeef3bf108894f9faf3d77e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1dcf129f551900792638018fa846557120e53e96
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879504"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644353"
 ---
 # <a name="explicit-overrides--c-component-extensions"></a>明示的なオーバーライド (C++ Component Extensions)
-このトピックでは、基底クラスまたはインターフェイスのメンバーを明示的にオーバーライドする方法について説明します。 (明示的な) 名前付きオーバーライドを別の名前を持つ派生メソッドでメソッドをオーバーライドする場合にのみ使用する必要があります。  
+このトピックでは、基底クラスまたはインターフェイスのメンバーを明示的にオーバーライドする方法について説明します。 (明示的) の名前付きオーバーライドを別の名前を持つ派生メソッドを使用してメソッドをオーバーライドする場合にのみ使用する必要があります。  
   
 ## <a name="all-runtimes"></a>すべてのランタイム  
- **構文**  
+### <a name="syntax"></a>構文
   
-```  
-  
-      overriding-function-declarator = type::function [,type::function] { overriding-function-definition }  
+```cpp  
+overriding-function-declarator = type::function [,type::function] { overriding-function-definition }  
 overriding-function-declarator = function { overriding-function-definition }  
 ```  
-  
- **パラメーター**  
-  
- *オーバーライドする関数の宣言子*  
- オーバーライド関数の戻り値の型、名、および引数リスト。  オーバーライドされる関数と同じ名前に設定をオーバーライドする関数がないことに注意してください。  
+
+### <a name="parameters"></a>パラメーター 
+ *オーバーライドする関数宣言*  
+ オーバーライド関数の戻り値の型、名、および引数リスト。  オーバーライドされる関数と同じ名前を指定する、オーバーライドする関数がないことに注意してください。  
   
  *type*  
- 基本データ型をオーバーライドする関数が含まれています。  
+ オーバーライドする関数を含む基本型。  
   
  *function*  
- オーバーライドする 1 つまたは複数の関数名のコンマ区切りの一覧。  
+ オーバーライドする 1 つまたは複数の関数名のコンマ区切りのリスト。  
   
  *オーバーライドする関数定義*  
- オーバーライド関数を定義する関数本体のステートメント。  
+ オーバーライドする関数を定義する関数本体のステートメント。  
   
- **解説**  
+### <a name="remarks"></a>Remarks
   
- 明示的な使用には、メソッドのシグネチャのエイリアスを作成する、またはメソッド witht 同じシグネチャの別の実装を提供するがオーバーライドされます。  
+ 明示的な使用には、メソッドのシグネチャのエイリアスを作成する、またはメソッドで、同じシグネチャのさまざまな実装を提供するよりも優先されます。  
   
- 継承された型および継承された型のメンバーの動作を変更する方法については、次を参照してください。[オーバーライド指定子を](../windows/override-specifiers-cpp-component-extensions.md)です。  
+ 継承された型および継承された型のメンバーの動作を変更する方法の詳細については、次を参照してください。[オーバーライド指定子を](../windows/override-specifiers-cpp-component-extensions.md)します。  
   
 ## <a name="windows-runtime"></a>Windows ランタイム  
   
 ### <a name="requirements"></a>要件  
- コンパイラ オプション: **/ZW**  
+ コンパイラ オプション: `/ZW`  
   
 ## <a name="common-language-runtime"></a>共通言語ランタイム 
- **解説**  
+### <a name="remarks"></a>Remarks
   
- ネイティブ コードで明示的なに関する情報が上書きまたはコードでコンパイルされた **/clr:oldSyntax**を参照してください[明示的なオーバーライド](../cpp/explicit-overrides-cpp.md)です。  
+ ネイティブ コードでの情報について明示的なオーバーライドまたはコードをコンパイル`/clr:oldSyntax`を参照してください[明示的なオーバーライド](../cpp/explicit-overrides-cpp.md)します。  
   
 ### <a name="requirements"></a>要件  
- コンパイラ オプション: **/clr**  
+ コンパイラ オプション: `/clr`  
   
-### <a name="examples"></a>使用例  
- **例**  
+### <a name="examples"></a>使用例   
   
  次のコード例は、基本インターフェイスでの単純な明示的なオーバーライドとメンバーの実装を示しています明示的なオーバーライドを使用していないを提供します。  
   
-```  
+```cpp  
 // explicit_override_1.cpp  
 // compile with: /clr  
 interface struct I1 {  
@@ -92,18 +89,13 @@ int main() {
 }  
 ```  
   
- **出力**  
-  
 ```Output  
 X::f override of I1::f  
 ```  
   
- **例**  
-  
  次のコード例では、すべてのインターフェイス メンバー一般的なシグネチャを持つが明示的なオーバーライド構文を使用して実装する方法を示します。  
   
-```  
-  
+```cpp  
 // explicit_override_2.cpp  
 // compile with: /clr  
 interface struct I1 {  
@@ -128,18 +120,14 @@ int main() {
 }  
 ```  
   
- **出力**  
-  
 ```Output  
 X::f override of I1::f and I2::f  
 X::f override of I1::f and I2::f  
 ```  
   
- **例**  
+ 次のコード例では、関数のオーバーライドが実装しています。 関数とは異なる名前を持つことができる方法を示します。  
   
- 次のコード例では、関数のオーバーライドでは、実装する関数とは異なる名前を持つことができる方法を示します。  
-  
-```  
+```cpp  
 // explicit_override_3.cpp  
 // compile with: /clr  
 interface struct I1 {  
@@ -159,17 +147,13 @@ int main() {
 }  
 ```  
   
- **出力**  
-  
 ```Output  
 X::g  
 ```  
   
- **例**  
+ 次のコード例では、タイプ セーフのコレクションを実装する明示的なインターフェイス実装を示します。  
   
- 次のコード例は、タイプ セーフのコレクションを実装する明示的なインターフェイス実装を示しています。  
-  
-```  
+```cpp  
 // explicit_override_4.cpp  
 // compile with: /clr /LD  
 using namespace System;  

@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c2ba300275f0154e84f7d2ced21b0893bbe3d85
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 43c76ae09f491ff163391f0ee46564af7bb629fe
+ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401686"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39181173"
 ---
 # <a name="memchr-wmemchr"></a>memchr、wmemchr
 
@@ -92,20 +92,20 @@ const wchar_t *wmemchr(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、最初の位置にポインターを返します*c*で*バッファー*です。 返しますそれ以外の場合**NULL**です。
+成功した場合の最初の場所にポインターを返します*c*で*バッファー*します。 それ以外の場合は NULL を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**memchr**と**wmemchr**最初に見つかった位置を探します*c*最初*カウント*バイトの*バッファー*です。 見つけたときに停止*c*ときに、最初のチェックがまたは*カウント*バイトです。
+`memchr` `wmemchr`最初に見つかった検索*c*最初の*カウント*バイトの*バッファー*します。 見つけたときに停止する*c*ときに、最初のチェックがまたは*カウント*バイト。
 
-C では、これらの関数が受け取る、* * const * *、最初の引数のポインター。 C++ では、2 つのオーバーロードを使用できます。 ポインターを受け取るオーバー ロード * * const * * へのポインターを返します**const **; へのポインターを受け取る非**const * * へのポインターを返しますではない**const**です。マクロ _CRT_CONST_CORRECT_OVERLOADS が両方に定義されている、 **const * * と非-** const * * これらの関数のバージョンを利用できます。必要な以外の場合**const * * 両方 C++ overloadsin C++ での動作は、シンボル _CONST_RETURN を定義します。
+C では、これらの関数の実行、 **const**最初の引数のポインター。 C++ では、2 つのオーバーロードを使用できます。 ポインターを受け取るオーバー ロード**const**へのポインターを返します**const**; へのポインターを受け取る非バージョン**const**へのポインターを返す非**定数**. マクロ _CRT_CONST_CORRECT_OVERLOADS が定義されている場合は、両方の**const**と非-**const**これらの関数のバージョンを利用できます。 必要な以外の場合**const**両方 C++ オーバー ロードについても、C++ の動作は、シンボル _CONST_RETURN を定義します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**memchr**|\<memory.h> または \<string.h>|
-|**wmemchr**|\<wchar.h>|
+|`memchr`|\<memory.h> または \<string.h>|
+|`wmemchr`|\<wchar.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

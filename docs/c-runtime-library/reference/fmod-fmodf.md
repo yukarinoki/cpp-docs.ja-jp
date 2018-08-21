@@ -1,5 +1,5 @@
 ---
-title: fmod、fmodf、fmodl |Microsoft ドキュメント
+title: fmod、fmodf、fmodl |Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2018
 ms.technology:
@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f6cc8cc10c026c5ecd621657c556da883c187f5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c473b5cb6822df07f4972ff2c964c828b14b5966
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399037"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207534"
 ---
 # <a name="fmod-fmodf-fmodl"></a>fmod、fmodf、fmodl
 
@@ -82,15 +82,15 @@ long double fmodl(
 
 ## <a name="return-value"></a>戻り値
 
-**fmod**の浮動小数点の剰余を返します*x* / *y*です。 場合の値*y* 0.0、 **fmod**は簡易な NaN を返します。 簡易な NaN の表現方法について、 **printf**家族を参照してください[printf](printf-printf-l-wprintf-wprintf-l.md)です。
+**fmod**の浮動小数点の剰余を返します*x* / *y*します。 場合の値*y* 0.0、 **fmod**簡易な NaN を返します。 による簡易な NaN の表現については、 **printf**ファミリを参照してください[printf](printf-printf-l-wprintf-wprintf-l.md)します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Fmod**関数は浮動小数点の剰余を計算*f*の*x* / *y*ように*x* = *すれば* * *y* + *f*ここで、*すれば*整数*f*と同じ符号を持つ*x*との絶対値*f*がの絶対値よりも小さい*y*です。
+**Fmod**関数は浮動小数点の剰余を計算*f*の*x* / *y*ように*x* = *は* \* *y* + *f*ここで、*は*整数*f*と同じ符号*x*との絶対値*f*がの絶対値より小さい*y*します。
 
-C++ では、オーバー ロードのオーバー ロードを呼び出すことができますので**fmod**を受け取り、返します**float**と**長い****二重**値。 C プログラムでは、 **fmod**常に受け取って 1 つ**二重**引数を返す、**二重**です。
+C++ では、オーバー ロードのオーバー ロードを呼び出すことができますので**fmod**を受け取って返す**float**と**長い****二重**値。 C プログラムで**fmod**常に 2 つ受け取る**二重**引数を返す、**二重**。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|
 |--------------|---------------------|

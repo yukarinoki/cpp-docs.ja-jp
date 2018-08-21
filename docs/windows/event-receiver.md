@@ -1,5 +1,5 @@
 ---
-title: event_receiver |Microsoft ドキュメント
+title: event_receiver |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,53 +23,52 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 01ab5aeee7d706da7016cb1ea1f01ff7367de888
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2b1b285437170c4059d5cd0d66d19188c99badd9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875566"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646787"
 ---
 # <a name="eventreceiver"></a>event_receiver
 イベント レシーバー (シンク) を作成します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
-      [ event_receiver(  
+```cpp  
+[ event_receiver(  
    type   
    [, layout_dependent=false]   
 ) ]  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `type`  
+### <a name="parameters"></a>パラメーター  
+ *type*  
  次の値のいずれかの列挙です。  
   
--   `native` アンマネージ コードと C/C++ コード (ネイティブ クラスの既定値)。  
+-   `native` アンマネージ C/C++ コード (ネイティブ クラスの既定値)。  
   
 -   COM コード用の`com` 。 この値の場合、ユーザーが次のヘッダー ファイルを含める必要があります。  
   
-    ```  
+    ```cpp  
     #define _ATL_ATTRIBUTES  
     #include <atlbase.h>  
     #include <atlcom.h>  
     ```  
   
- **layout_dependent**  
- 指定*layout_dependent*場合にのみ、 `type` = **com**です。*layout_dependent*はブール値。  
+ *layout_dependent*  
+ 指定*layout_dependent*場合にのみ`type` = **com**します。 *layout_dependent*ブール値です。  
   
--   **true**ことに、イベント レシーバー必要がありますと正確に一致するが、フックのイベント ソースで、デリゲートのシグネチャを意味します。 イベント レシーバーのハンドラー名は、関連するイベント ソース インターフェイスで指定された名前に一致する必要があります。 使用する必要があります**コクラス**とき*layout_dependent*は**true**です。 指定するやや効率的である**true**です。  
+-   **true**ことに、受信する必要がありますと正確に一致するが、フック イベント ソース、イベント、デリゲートのシグネチャを意味します。 イベント レシーバーのハンドラー名は、関連するイベント ソース インターフェイスで指定された名前と一致する必要があります。 使用する必要があります`coclass`とき*layout_dependent*は**true**します。 指定するより効率的です**true**します。  
   
--   **false** (既定値) ことを意味する呼び出し規約とストレージ クラス (virtual、static、およびその他の) イベント メソッドとハンドラー; に一致する必要はありませんやハンドラー名は、イベント ソース インターフェイス メソッドの名前と一致する必要があります。  
+-   **false** (既定値) を意味する呼び出し規約とストレージ クラス (virtual、static、およびその他の) イベント メソッドとハンドラー; に一致する必要はありませんもハンドラー名は行うイベント ソース インターフェイスのメソッド名に一致する必要があります。  
   
-## <a name="remarks"></a>コメント  
- **Event_receiver** C++ 属性は、クラスまたは構造体を適用するによって、Visual C の統合イベント モデルを使用して、イベント レシーバーができることを指定します。  
+## <a name="remarks"></a>Remarks  
+ **Event_receiver** C++ 属性は、クラスまたは構造体を適用するによって Visual C の統一イベント モデルを使用して、イベント レシーバーがなることを指定します。  
   
- **event_receiver**と共に使用される、 [event_source](../windows/event-source.md)属性および[_ _hook](../cpp/hook.md)と[_ _unhook](../cpp/unhook.md)キーワード。 使用して**event_source**イベント ソースを作成します。 使用して`__hook`(「フック」) イベント レシーバー メソッドをイベント ソースのイベントを関連付けるには、イベント レシーバーのメソッド内にあります。 使用して`__unhook`の関連付けを解除しています。  
+ **event_receiver**を併用、 [event_source](../windows/event-source.md)属性と[_ _hook](../cpp/hook.md)と[_ _unhook](../cpp/unhook.md)キーワード。 使用`event_source`イベント ソースを作成します。 使用 **_ _hook**にイベント ソースのイベントをイベント レシーバー メソッドを (「フック」) を関連付けるイベント レシーバーのメソッド内で。 使用 **_ _unhook**の関連付けを解除しています。  
   
- *layout_dependent*は COM イベント レシーバーにのみ指定 (`type`=**com**)。 既定の*layout_dependent*は**false**です。  
+ *layout_dependent* COM イベント レシーバーのみ指定 (`type`=**com**)。 既定の*layout_dependent*は**false**します。  
   
 > [!NOTE]
 >  テンプレート クラスまたは構造体にイベントを含めることはできません。  
@@ -80,9 +79,9 @@ ms.locfileid: "33875566"
   
 |||  
 |-|-|  
-|**対象**|**class**、 `struct`|  
-|**反復可能**|×|  
-|**必要な属性**|**コクラス**とき*layout_dependent*=**は true。**|  
+|**対象**|**クラス**、**構造体**|  
+|**反復可能**|いいえ|  
+|**必要な属性**|`coclass` ときに*layout_dependent*=**は true。**|  
 |**無効な属性**|なし|  
   
  詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89ad061dc2be090abbcfbc147f1ea5fbddb8ae6a
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f4f563a424fd5a019b2094f931236f4af6f0ecb4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943270"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407729"
 ---
 # <a name="delete-operator-c"></a>delete 演算子 (C++)
 メモリのブロックを解放します。  
@@ -101,4 +101,3 @@ int main()
  [単項演算子を含む式](../cpp/expressions-with-unary-operators.md)   
  [キーワード](../cpp/keywords-cpp.md)   
  [new および delete 演算子](../cpp/new-and-delete-operators.md)   
- 

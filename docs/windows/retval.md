@@ -1,5 +1,5 @@
 ---
-title: retval |Microsoft ドキュメント
+title: retval |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c0bf7ecd989b51a17c853c6d2986db204c3ce34
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e4364f60012cb4571edbf195a02b77f500a2dc86
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888722"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010332"
 ---
 # <a name="retval"></a>retval
 メンバーの戻り値を受け取るパラメーターを指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```cpp  
 [retval]  
-  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **Retval** C++ 属性と同じ機能を持つ、 [retval](http://msdn.microsoft.com/library/windows/desktop/aa367158) MIDL 属性。  
   
  **retval**関数の宣言の最後の引数に表示する必要があります。  
   
 ## <a name="example"></a>例  
- 例を参照して[バインド可能な](../windows/bindable.md)の使用例の**retval**です。  
+ 例をご覧ください[バインド可能な](../windows/bindable.md)の使用サンプル**retval**します。  
   
 ## <a name="requirements"></a>要件  
   
@@ -50,7 +48,7 @@ ms.locfileid: "33888722"
 |||  
 |-|-|  
 |**対象**|インターフェイスのパラメーター、インターフェイス メソッド|  
-|**反復可能**|×|  
+|**反復可能**|いいえ|  
 |**必要な属性**|**out**|  
 |**無効な属性**|**in**|  
   

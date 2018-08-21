@@ -1,5 +1,5 @@
 ---
-title: Implementshelper::fillarraywithiid メソッド |Microsoft ドキュメント
+title: Implementshelper::fillarraywithiid メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9313ade1f5731319732a2ee3efc0af191af14f05
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 71fe5244ecf3f7e64192d86f25104daf1139a463
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879924"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010277"
 ---
 # <a name="implementshelperfillarraywithiid-method"></a>ImplementsHelper::FillArrayWithIid メソッド
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void FillArrayWithIid(  
    _Inout_ unsigned long *index,   
    _Inout_ IID* iids) throw();  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `index`  
- この操作の開始の配列要素を示す 0 から始まるインデックス。 この操作が完了したら、 `index` 1 ずつインクリメントされます。  
+### <a name="parameters"></a>パラメーター  
+ *index*  
+ この操作の開始の配列要素を示す 0 から始まるインデックス。 この操作が完了したら、*インデックス*1 ずつインクリメントされます。  
   
- `iids`  
- 型の Iid の配列。  
+ *iid*  
+ Iid 型の配列。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  指定した配列の要素に現在の 0 番目のテンプレート パラメーターで指定されたインターフェイス ID を挿入します。  
   
 ## <a name="requirements"></a>要件  

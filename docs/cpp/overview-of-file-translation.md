@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0dd4643c21ebb8626252230b90880af9f9499c0d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: eec47e9810e0cc846cc351330512256a32f95aac
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943197"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406846"
 ---
 # <a name="overview-of-file-translation"></a>ファイル変換の概要
 C++ プログラムは、C プログラムと同様、1 つ以上のファイルで構成されます。 これらの各ファイルは、次の概念的な順序で変換されます (実際の順序は "as if" 規則に従います。つまり、変換は、これらの手順に従ったかのように行われる必要があります)。  

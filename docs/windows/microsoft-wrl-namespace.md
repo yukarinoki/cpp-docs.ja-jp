@@ -1,5 +1,5 @@
 ---
-title: Microsoft::wrl Namespace |Microsoft ドキュメント
+title: Microsoft::wrl Namespace |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,19 +24,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 37d4d5391da4dfb6e25754eb1350224acb97e972
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b3b1f5d0472fbe9ceb997460b525153a9ad87a69
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881651"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020253"
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL 名前空間
 Windows ランタイム C++ テンプレート ライブラリを構成する基本的な型を定義します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 namespace Microsoft::WRL;  
 ```  
   
@@ -70,16 +70,16 @@ namespace Microsoft::WRL;
 |名前|説明|  
 |----------|-----------------|  
 |[ChainInterfaces 構造体](../windows/chaininterfaces-structure.md)|一連のインターフェイス ID に適用できる検証および初期化関数を指定します。|  
-|[CloakedIid 構造体](../windows/cloakediid-structure.md)|IID リスト内で指定されたインターフェイスにアクセスできないことを、RuntimeClass、Implements、および ChainInterfaces テンプレートに示します。|  
-|[Implements 構造体](../windows/implements-structure.md)|指定されたインターフェイスの QueryInterface と GetIid を実装します。|  
+|[CloakedIid 構造体](../windows/cloakediid-structure.md)|示します、 `RuntimeClass`、`Implements`と`ChainInterfaces`テンプレートの指定したインターフェイスが IID リストにアクセスできないことです。|  
+|[Implements 構造体](../windows/implements-structure.md)|実装`QueryInterface`と`GetIid`のインターフェイスで指定します。|  
 |[MixIn 構造体](../windows/mixin-structure.md)|ランタイム クラスが Windows ランタイム インターフェイス (存在する場合) から派生し、次にクラシック COM インターフェイスから派生していることを確認します。|  
-|[RuntimeClassFlags 構造体](../windows/runtimeclassflags-structure.md)|インスタンスの型が含まれています、 [RuntimeClass](../windows/runtimeclass-class.md)です。|  
+|[RuntimeClassFlags 構造体](../windows/runtimeclassflags-structure.md)|インスタンスの型が含まれています、 [RuntimeClass](../windows/runtimeclass-class.md)します。|  
   
 ### <a name="enumerations"></a>列挙  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
-|[AsyncResultType 列挙型](../windows/asyncresulttype-enumeration.md)|GetResults() メソッドによって返される結果の型を指定します。|  
+|[AsyncResultType 列挙型](../windows/asyncresulttype-enumeration.md)|によって返される結果の種類を指定します、`GetResults()`メソッド。|  
 |[ModuleType 列挙型](../windows/moduletype-enumeration.md)|モジュールがインプロセス サーバーまたはアウトプロセス サーバーをサポートするかどうかを指定します。|  
 |[RuntimeClassType 列挙型](../windows/runtimeclasstype-enumeration.md)|型を指定[RuntimeClass](../windows/runtimeclass-class.md)サポートされているインスタンス。|  
   

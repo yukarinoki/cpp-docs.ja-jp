@@ -1,5 +1,5 @@
 ---
-title: ComPtr クラス |Microsoft ドキュメント
+title: ComPtr クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 94146661b9a00b17732ce75f75bcc0194dcbddd4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7e4866df2d948d02a53b2532b0832f161d07ff8c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882789"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647561"
 ---
 # <a name="comptr-class"></a>ComPtr クラス
-テンプレート パラメーターで指定されたインターフェイスを表す *スマート ポインター* 型を作成します。 ComPtr は、基になるインターフェイス ポインターの参照カウントを自動的に維持し、参照カウントがゼロになるとそのインターフェイスを解放します。  
+テンプレート パラメーターで指定されたインターフェイスを表す *スマート ポインター* 型を作成します。 **ComPtr**自動的に基になるインターフェイス ポインターの参照カウントを維持し、参照カウントが 0 になるインターフェイスを解放します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template <typename T>  
 class ComPtr;  
   
@@ -37,17 +37,17 @@ template<class T>
 friend class ComPtr;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `T`  
- ComPtr が表すインターフェイス。  
+### <a name="parameters"></a>パラメーター  
+ *T*  
+ インターフェイスを**ComPtr**を表します。  
   
- `U`  
- 現在の ComPtr がフレンドであるクラス (このパラメーターを使用するテンプレートは保護されています)。  
+ *U*  
+ クラスを現在**ComPtr**フレンドです。 (このパラメーターを使用するテンプレートは保護されています)。  
   
-## <a name="remarks"></a>コメント  
- ComPtr <> は、基になるインターフェイス ポインターを表す型を宣言します。 ComPtr <> を使用して変数を宣言し、矢印のメンバー アクセス演算子を使用 (`->`) インターフェイスのメンバー関数にアクセスします。  
+## <a name="remarks"></a>Remarks  
+ `ComPtr<>` 基になるインターフェイス ポインターを表す型を宣言します。 使用して、`ComPtr<>`変数を宣言し、矢印のメンバー アクセス演算子を使用 (`->`) インターフェイスのメンバー関数にアクセスします。  
   
- スマート ポインターの詳細については、MSDN ライブラリの [COM Coding Practices](http://msdn.microsoft.com/en-us/76aca556-b4d6-4e67-a2a3-4439900f0c39)トピックで「COM スマート ポインター」のサブセクションを参照してください。  
+ スマート ポインターの詳細については、の「COM スマート ポインター」サブセクションを参照してください、 [COM Coding Practices](http://msdn.microsoft.com/76aca556-b4d6-4e67-a2a3-4439900f0c39)MSDN ライブラリの「します。  
   
 ## <a name="members"></a>メンバー  
   
@@ -55,54 +55,54 @@ friend class ComPtr;
   
 |名前|説明|  
 |----------|-----------------|  
-|`InterfaceType`|`T` テンプレート パラメーターで指定された型のシノニム。|  
+|`InterfaceType`|指定された型のシノニム、 *T*テンプレート パラメーター。|  
   
 ### <a name="public-constructors"></a>パブリック コンストラクター  
   
 |名前|説明|  
 |----------|-----------------|  
-|[ComPtr::ComPtr コンストラクター](../windows/comptr-comptr-constructor.md)|ComPtr クラスの新しいインスタンスを初期化します。 オーバーロードは、既定、コピー、移動、および変換の各コンストラクターを提供します。|  
-|[ComPtr::~ComPtr デストラクター](../windows/comptr-tilde-comptr-destructor.md)|ComPtr のインスタンスを初期化解除します。|  
+|[ComPtr::ComPtr コンストラクター](../windows/comptr-comptr-constructor.md)|新しいインスタンスを初期化します、 **ComPtr**クラス。 オーバーロードは、既定、コピー、移動、および変換の各コンストラクターを提供します。|  
+|[ComPtr::~ComPtr デストラクター](../windows/comptr-tilde-comptr-destructor.md)|インスタンスを初期化解除**ComPtr**します。|  
   
 ### <a name="public-methods"></a>パブリック メソッド  
   
 |名前|説明|  
 |----------|-----------------|  
-|[ComPtr::As メソッド](../windows/comptr-as-method.md)|指定されたテンプレート パラメーターで識別されるインターフェイスを表す ComPtr オブジェクトを返します。|  
-|[ComPtr::AsIID メソッド](../windows/comptr-asiid-method.md)|指定されたインターフェイス ID で識別されるインターフェイスを表す ComPtr オブジェクトを返します。|  
+|[ComPtr::As メソッド](../windows/comptr-as-method.md)|返します、 **ComPtr**指定されたテンプレート パラメーターで識別されるインターフェイスを表すオブジェクト。|  
+|[ComPtr::AsIID メソッド](../windows/comptr-asiid-method.md)|返します、 **ComPtr**指定したインターフェイス ID で識別されるインターフェイスを表すオブジェクトを|  
 |[ComPtr::AsWeak メソッド](../windows/comptr-asweak-method.md)|現在のオブジェクトへの弱い参照を取得します。|  
-|[ComPtr::Attach メソッド](../windows/comptr-attach-method.md)|この ComPtr と、現在のテンプレート型パラメーターで指定されたインターフェイスの種類を関連付けます。|  
-|[ComPtr::CopyTo メソッド](../windows/comptr-copyto-method.md)|この ComPtr に関連付けられた現在のまたは指定されたインターフェイスを、指定された出力ポインターにコピーします。|  
-|[ComPtr::Detach メソッド](../windows/comptr-detach-method.md)|この ComPtr が表すインターフェイスからその関連付けを解除します。|  
-|[ComPtr::Get メソッド](../windows/comptr-get-method.md)|この ComPtr に関連付けられたインターフェイスへのポインターを取得します。|  
-|[ComPtr::GetAddressOf メソッド](../windows/comptr-getaddressof-method.md)|[ptr_](../windows/comptr-ptr-data-member.md) データ メンバーのアドレスを取得します。これには、この ComPtr によって表されるインターフェイスへのポインターが含まれています。|  
-|[ComPtr::ReleaseAndGetAddressOf メソッド](../windows/comptr-releaseandgetaddressof-method.md)|この ComPtr に関連付けられたインターフェイスを解放してから、 [ptr_](../windows/comptr-ptr-data-member.md) データ メンバーのアドレスを取得します。このアドレスには、解放されたインターフェイスへのポインターが含まれています。|  
-|[ComPtr::Reset](../windows/comptr-reset.md)|この ComPtr に関連付けられているインターフェイスを指すポインターへのすべての参照を解放します。|  
-|[ComPtr::Swap メソッド](../windows/comptr-swap-method.md)|指定された ComPtr によって管理されているインターフェイスと現在の ComPtr によって管理されるインターフェイスを交換します。|  
+|[ComPtr::Attach メソッド](../windows/comptr-attach-method.md)|これを関連付けます**ComPtr**現在のテンプレート型パラメーターで指定したインターフェイス型にします。|  
+|[ComPtr::CopyTo メソッド](../windows/comptr-copyto-method.md)|これに関連付けられている現在または指定されたインターフェイスのコピー **ComPtr**への指定された出力ポインター。|  
+|[ComPtr::Detach メソッド](../windows/comptr-detach-method.md)|この関連付けを解除**ComPtr**それが表すインターフェイスから。|  
+|[ComPtr::Get メソッド](../windows/comptr-get-method.md)|これに関連付けられているインターフェイスへのポインターを取得します。 **ComPtr**します。|  
+|[ComPtr::GetAddressOf メソッド](../windows/comptr-getaddressof-method.md)|アドレスを取得、 [ptr _](../windows/comptr-ptr-data-member.md)データ メンバーは、これによって表されるインターフェイスへのポインターを含む**ComPtr**します。|  
+|[ComPtr::ReleaseAndGetAddressOf メソッド](../windows/comptr-releaseandgetaddressof-method.md)|これに関連付けられているインターフェイスを解放**ComPtr**しのアドレスを取得し、 [ptr _](../windows/comptr-ptr-data-member.md)データ メンバーは、リリースされたインターフェイスへのポインターが含まれています。|  
+|[ComPtr::Reset](../windows/comptr-reset.md)|これに関連付けられているインターフェイス ポインターのすべての参照を解放**ComPtr**します。|  
+|[ComPtr::Swap メソッド](../windows/comptr-swap-method.md)|現在の管理インターフェイスを交換**ComPtr** 、指定した管理インターフェイスで**ComPtr**します。|  
   
 ### <a name="protected-methods"></a>プロテクト メソッド  
   
 |名前|説明|  
 |----------|-----------------|  
-|[ComPtr::InternalAddRef メソッド](../windows/comptr-internaladdref-method.md)|この ComPtr に関連付けられたインターフェイスの参照カウントをインクリメントします。|  
-|[ComPtr::InternalRelease メソッド](../windows/comptr-internalrelease-method.md)|この ComPtr に関連付けられたインターフェイスに対して COM 解放操作を実行します。|  
+|[ComPtr::InternalAddRef メソッド](../windows/comptr-internaladdref-method.md)|これに関連付けられているインターフェイスの参照カウントをインクリメント**ComPtr**します。|  
+|[ComPtr::InternalRelease メソッド](../windows/comptr-internalrelease-method.md)|これに関連付けられているインターフェイスで COM 解放操作を行います**ComPtr**します。|  
   
 ### <a name="public-operators"></a>パブリック演算子  
   
 |名前|説明|  
 |----------|-----------------|  
-|[ComPtr::operator Microsoft::WRL::Details::BoolType 演算子](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md)|ComPtr がインターフェイスのオブジェクト有効期間を管理しているかどうかを示します。|  
-|[ComPtr::operator& 演算子](../windows/comptr-operator-ampersand-operator.md)|現在の ComPtr のアドレスを取得します。|  
-|[ComPtr::operator= 演算子](../windows/comptr-operator-assign-operator.md)|値を現在の ComPtr に割り当てます。|  
+|[ComPtr::operator Microsoft::WRL::Details::BoolType 演算子](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md)|示すかどうかを**ComPtr**インターフェイスのオブジェクトの有効期間を管理します。|  
+|[ComPtr::operator& 演算子](../windows/comptr-operator-ampersand-operator.md)|現在のアドレスを取得**ComPtr**します。|  
+|[ComPtr::operator= 演算子](../windows/comptr-operator-assign-operator.md)|現在の値を代入**ComPtr**します。|  
 |[ComPtr::operator-> 演算子](../windows/comptr-operator-arrow-operator.md)|現在のテンプレート パラメーターで指定された型へのポインターを取得します。|  
-|[ComPtr::operator== 演算子](../windows/comptr-operator-equality-operator.md)|2 つの ComPtr オブジェクトが等しいかどうかを示します。|  
-|[ComPtr::operator!= 演算子](../windows/comptr-operator-inequality-operator.md)|2 つの ComPtr オブジェクトが等しくないかどうかを示します。|  
+|[ComPtr::operator== 演算子](../windows/comptr-operator-equality-operator.md)|示す 2 つかどうか**ComPtr**オブジェクトが等しい。|  
+|[ComPtr::operator!= 演算子](../windows/comptr-operator-inequality-operator.md)|示す 2 つかどうか**ComPtr**オブジェクトが等しくないです。|  
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
-|[ComPtr::ptr_ データ メンバー](../windows/comptr-ptr-data-member.md)|この ComPtr に関連付けられ、管理されているインターフェイスへのポインターが含まれています。|  
+|[ComPtr::ptr_ データ メンバー](../windows/comptr-ptr-data-member.md)|使用すると、関連付けられているされ、これによって管理されるインターフェイスへのポインターを含む**ComPtr**します。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `ComPtr`  

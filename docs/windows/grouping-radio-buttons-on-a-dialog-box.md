@@ -1,5 +1,5 @@
 ---
-title: ダイアログ ボックスのオプション ボタンをグループ化 |Microsoft ドキュメント
+title: ダイアログ ボックスのオプション ボタンをグループ化 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aee3245a65ccdccc32b40c313eecdd45cb3ea8bf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c3d0e20d8b2b88a7141672117d4c0b036682953e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879329"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641419"
 ---
 # <a name="grouping-radio-buttons-on-a-dialog-box"></a>ダイアログ ボックスのオプション ボタンのグループ化
-ダイアログ ボックスにラジオ ボタン群を追加するときには、これをグループとして扱ってください。そのためには、グループの最初のボタンの [プロパティ] ウィンドウで [グループ] プロパティを設定します。 そのラジオ ボタンのコントロール ID が [メンバー変数の追加ウィザード](../ide/add-member-variable-wizard.md)に表示され、ラジオ ボタンのグループのメンバー変数を追加できるようになります。  
+ダイアログ ボックスにラジオ ボタンを追加するときに扱うグループとして設定して、**グループ**プロパティ、**プロパティ**グループ内の最初のボタンのウィンドウ。 そのラジオ ボタンのコントロール ID が [メンバー変数の追加ウィザード](../ide/add-member-variable-wizard.md)に表示され、ラジオ ボタンのグループのメンバー変数を追加できるようになります。  
   
  1 つのダイアログ ボックスにラジオ ボタンの複数のグループを設定できます。各グループは次の手順を使用して追加する必要があります。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "33879329"
      **[グループ]** プロパティを **[True]** に変更すると、リソース スクリプトのダイアログ オブジェクト内でそのボタンのエントリに WS_GROUP スタイルが追加されます。このため、ユーザーはボタン グループのラジオ ボタンを一度に 1 つしか選べなくなります (ユーザーがラジオ ボタンを 1 つクリックすると、グループの残りのボタンはクリアされます)。  
   
     > [!NOTE]
-    >  **[グループ]** プロパティを **[True]** に設定する必要があるのは、グループ内の最初のラジオ ボタンだけです。 ボタン グループに属さないその他のコントロールがある場合は、 **グループ以外の** 最初のコントロールの *[グループ]* プロパティも同様に **[True]** に設定します。 Ctrl キーを押しながら D キーを押してタブ オーダーを表示すると、グループ外の最初のコントロールをすばやく識別できます。  
+    >  **[グループ]** プロパティを **[True]** に設定する必要があるのは、グループ内の最初のラジオ ボタンだけです。 ボタン グループに属さないその他のコントロールがある場合は、 **グループ以外の** 最初のコントロールの *[グループ]* プロパティも同様に **[True]** に設定します。 キーを押して、グループ外の最初のコントロールをすばやく識別できます**Ctrl**+**D**タブ オーダーを表示します。  
   
 ### <a name="to-add-a-member-variable-for-the-radio-button-group"></a>ラジオ ボタン グループのメンバー変数を追加するには  
   
@@ -56,18 +56,16 @@ ms.locfileid: "33879329"
   
 4.  **[変数名]** ボックスに、新しいメンバー変数の名前を入力します。  
   
-5.  **[変数の型]** リスト ボックスで、 **[int]** を選ぶか、または **「int」** と入力します。  
+5.  **変数の型**リスト ボックスで、 **int**または型`int`します。  
   
-6.  これで、コードを変更し、表示したときに選ばれているラジオ ボタンを指定できます。 たとえば、m_radioBox1 = 0 の場合は、グループの最初のラジオ ボタンが選ばれます。  
+6.  これで、コードを変更し、表示したときに選ばれているラジオ ボタンを指定できます。 たとえば、`m_radioBox1 = 0;`グループ内の最初のラジオ ボタンを選択します。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 詳細については、管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションは、次を参照してください。[グローバライズと .NET Framework アプリケーションのローカライズ](/dotnet/standard/globalization-localization/index)です。  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
   
- 要件  
-  
+## <a name="requirements"></a>要件  
  Win32  
   
 ## <a name="see-also"></a>関連項目  
  [ダイアログ ボックスのコントロールの配置](../windows/arrangement-of-controls-on-dialog-boxes.md)   
  [ダイアログ ボックスのコントロール](../windows/controls-in-dialog-boxes.md)   
  [コントロール](../mfc/controls-mfc.md)
-

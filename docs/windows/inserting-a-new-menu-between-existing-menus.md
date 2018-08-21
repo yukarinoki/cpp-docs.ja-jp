@@ -1,5 +1,5 @@
 ---
-title: 既存のメニュー間に新規メニューを挿入する |Microsoft ドキュメント
+title: 既存のメニュー間に新規メニューを挿入する |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 73a4b243823d14cd3015a7d92f7ba52a08dc68d7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d6fda61fcaace9df1df69317149c719a716c6da6
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876333"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012150"
 ---
 # <a name="inserting-a-new-menu-between-existing-menus"></a>既存のメニュー間への新規メニューの挿入
 ### <a name="to-insert-a-new-menu-between-existing-menus"></a>既存のメニュー間に新規メニューを挿入するには  
   
-1.  既存のメニュー名とキーを押して選択、**挿入**キー。 **新しい項目の**ボックスが選択した項目の前に挿入します。  
+1.  既存のメニューの名前とキーを押して選択、**挿入**キー。 **新しい項目の**ボックスが選択した項目の前に挿入されます。  
   
      \- または -  
   
-2.  メニュー バーを右クリックし、選択**Insert New**ショートカット メニューからです。  
+2.  メニュー バーを右クリックし、選択**Insert New**ショートカット メニューから。  
   
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。*  
+ マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。  
   
- 要件  
-  
+## <a name="requirements"></a>要件  
  Win32  
   
 ## <a name="see-also"></a>関連項目  

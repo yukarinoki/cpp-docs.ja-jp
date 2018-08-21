@@ -1,5 +1,5 @@
 ---
-title: Module::unregistercomobject メソッド |Microsoft ドキュメント
+title: Module::unregistercomobject メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: de4cc44d88f59e18f2c1644e9b27a9214ad32962
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 240ab47099b9e97e9a6bb794083858fe042605d2
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881937"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018696"
 ---
 # <a name="moduleunregistercomobject-method"></a>Module::UnregisterCOMObject メソッド
-他のアプリケーションが接続することが原因で、1 つまたは複数の COM オブジェクトを解除します。  
+他のアプリケーションが接続することが原因の 1 つまたは複数の COM オブジェクトを解除します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 virtual HRESULT UnregisterCOMObject(  
    const wchar_t* serverName,  
    DWORD* cookies,  
    unsigned int count  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `serverName`  
+### <a name="parameters"></a>パラメーター  
+ *サーバー名*  
  (未使用)  
   
- `cookies`  
- 登録解除するクラスのオブジェクトを識別する値へのポインターの配列。 配列がによって作成された、 [RegisterCOMObject](../windows/module-registercomobject-method.md)メソッドです。  
+ *Cookie*  
+ 登録するクラスのオブジェクトを識別する値へのポインターの配列。 配列がによって作成された、 [RegisterCOMObject](../windows/module-registercomobject-method.md)メソッド。  
   
- `count`  
+ *count*  
  登録を解除するクラスの数。  
   
 ## <a name="return-value"></a>戻り値  
- この操作が成功した場合は S_OK、それ以外の場合、エラーの理由を示す hresult 値の操作に失敗しました。  
+ この操作が成功した場合は s_ok を返します。それ以外の場合、エラーの理由を示す hresult 値の操作に失敗しました。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** module.h  

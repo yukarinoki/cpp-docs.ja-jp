@@ -1,5 +1,5 @@
 ---
-title: Interfacetraits::casttobase メソッド |Microsoft ドキュメント
+title: Interfacetraits::casttobase メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,39 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8cd8fa2106ac3792c0352aa40ea34b049c1e5ce4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 32c45c5445b6258f1ed2e1da220b2899a76aa9c9
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878526"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017072"
 ---
 # <a name="interfacetraitscasttobase-method"></a>InterfaceTraits::CastToBase メソッド
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename T>  
 static __forceinline Base* CastToBase(  
    _In_ T* ptr  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `T`  
- パラメーターの型`ptr`です。  
+### <a name="parameters"></a>パラメーター  
+ *T*  
+ パラメーターの型*ptr*します。  
   
- `ptr`  
- 型へのポインター`T`です。  
+ *ptr*  
+ 型へのポインター *T*します。  
   
 ## <a name="return-value"></a>戻り値  
- ポインター`Base`です。  
+ ポインター`Base`します。  
   
-## <a name="remarks"></a>コメント  
- ポインターへのポインターをキャスト`Base`です。  
+## <a name="remarks"></a>Remarks  
+ 指定したポインターへのポインターにキャスト`Base`します。  
   
- 詳細については`Base`、パブリック Typedef セクションを参照して[InterfaceTraits 構造体](../windows/interfacetraits-structure.md)です。  
+ 詳細については`Base`、パブリック Typedef」セクションを参照してください。 [InterfaceTraits 構造体](../windows/interfacetraits-structure.md)します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** implements.h  
