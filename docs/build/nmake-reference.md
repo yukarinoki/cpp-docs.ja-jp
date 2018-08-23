@@ -1,5 +1,5 @@
 ---
-title: NMAKE リファレンス |Microsoft ドキュメント
+title: NMAKE リファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07ffd955400b1b27efc192a7fe0df4ef31164cda
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00113372d86e488882c687afb56bd5e52bb74c21
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372680"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571695"
 ---
 # <a name="nmake-reference"></a>NMAKE リファレンス
-Microsoft Program Maintenance Utility (NMAKE.EXE) は [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] に含まれているコマンドライン ツールで、記述ファイルに含まれているコマンドに基づいてプロジェクトをビルドします。  
+Microsoft Program Maintenance Utility (NMAKE します。EXE) は、記述ファイルに含まれるコマンドに基づいてプロジェクトをビルドする Visual Studio に含まれているコマンド ライン ツールです。  
   
- NMAKE を使用するには、開発者コマンド プロンプト ウィンドウで実行する必要があります。 開発者コマンド プロンプト ウィンドウには、コマンド ラインでビルドするために必要なツール、ライブラリ、およびインクルード ファイル パスに対して設定された環境変数が含まれます。 開発者コマンド プロンプト ウィンドウを開く方法の詳細については、次を参照してください。[コマンドラインでビルドの c/c++ コード](../build/building-on-the-command-line.md)です。  
+ NMAKE を使用するには、開発者コマンド プロンプト ウィンドウで実行する必要があります。 開発者コマンド プロンプト ウィンドウには、コマンド ラインでビルドするために必要なツール、ライブラリ、およびインクルード ファイル パスに対して設定された環境変数が含まれます。 開発者コマンド プロンプト ウィンドウを開く方法の詳細については、次を参照してください。[コマンドラインでビルドの c/c++ コード](../build/building-on-the-command-line.md)します。  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください  
  [NMAKE の実行](../build/running-nmake.md)  

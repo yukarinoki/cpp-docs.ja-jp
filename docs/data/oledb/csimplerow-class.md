@@ -46,12 +46,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 94f90e4c60e5669789caadaaa827b4c12f1f157f
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d5d824529e80319d95e00b6a3831af90a9506a03
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339784"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571697"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow クラス
 使用されている行ハンドルの既定の実装を提供します、 [IRowsetImpl](../../data/oledb/irowsetimpl-class.md)クラス。  
@@ -109,7 +109,7 @@ HRESULT Compare(CSimpleRow* pRow);
  ポインターを`CSimpleRow`オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
- HRESULT 値、通常は S_OK を示すは、2 つの行は、同じ行インスタンスまたは 2 つの行を示す S_FALSE は異なります。 参照してください[IRowsetIdentity::IsSameRow](https://msdn.microsoft.com/library/ms719629.aspx)で、 *OLE DB プログラマーズ リファレンス*の他の戻り値。 
+ HRESULT 値、通常は S_OK を示すは、2 つの行は、同じ行インスタンスまたは 2 つの行を示す S_FALSE は異なります。 参照してください[IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*の他の戻り値。 
 
 ## <a name="csimplerow"></a> Csimplerow::csimplerow
 コンストラクターです。  

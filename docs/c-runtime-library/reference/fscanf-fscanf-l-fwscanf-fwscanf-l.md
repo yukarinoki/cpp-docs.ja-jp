@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72ed322c78723826615e1264642eb53f6f9eb14d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 825a63b38f443ce770739fe614ab6a4a44b8de39
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404075"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42571857"
 ---
 # <a name="fscanf-fscanfl-fwscanf-fwscanfl"></a>fscanf、_fscanf_l、fwscanf、_fwscanf_l
 
@@ -104,15 +104,15 @@ int _fwscanf_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数は、正常に変換および代入されたフィールドの数を返します。読み込まれただけで代入されなかったフィールドは戻り値には含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。 エラーが発生した場合、または戻り値は、ファイル ストリームの末尾に達した場合、最初の変換の前に、 **EOF**の**fscanf**と**fwscanf**です。
+これらの関数は、正常に変換および代入されたフィールドの数を返します。読み込まれただけで代入されなかったフィールドは戻り値には含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。 エラーが発生した場合、または戻り値は、ファイル ストリームの末尾に達した場合は、最初の変換の前に、 **EOF**の**fscanf**と**fwscanf**します。
 
-これらの関数では、パラメーターの検証が行われます。 場合*ストリーム*または*形式*null ポインターで説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうかは、引き続き実行が許可された、 **EOF**設定と**errno**に**EINVAL**です。
+これらの関数では、パラメーターの検証が行われます。 場合*ストリーム*または*形式*null ポインターの場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうかは、引き続き実行が許可された、 **EOF**設定と**errno**に**EINVAL**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Fscanf**関数の現在位置からのデータの読み取り*ストリーム*で指定した位置に*引数*(存在する場合)。 各*引数*に型指定子に対応する型の変数へのポインターにする必要があります*形式*です。 *形式*コントロール入力の解釈のフィールドし、同じ形式し、機能、*形式*引数を**scanf**; を参照してください[scanf](scanf-scanf-l-wscanf-wscanf-l.md)用、説明*形式*です。
+**Fscanf**関数は、の現在位置からデータを読み取る*ストリーム*で指定した位置に*引数*(ある場合)。 各*引数*に型指定子に対応する型の変数へのポインターである必要があります*形式*します。 *形式*コントロール入力の解釈のフィールドし、同じ形式し、機能、*形式*引数**scanf**; を参照してください[scanf](scanf-scanf-l-wscanf-wscanf-l.md)の説明*形式*します。
 
-**fwscanf**のワイド文字バージョンは、 **fscanf**; format 引数**fwscanf**ワイド文字列です。 ストリームが ANSI モードで開かれている場合、これらの関数の動作は同じになります。 **fscanf** UNICODE ストリームからの入力はサポートされていません。
+**fwscanf**のワイド文字バージョンは、 **fscanf**; 引数 format **fwscanf**はワイド文字列です。 ストリームが ANSI モードで開かれている場合、これらの関数の動作は同じになります。 **fscanf** UNICODE ストリームからの入力を現在サポートされていません。
 
 これらの関数のバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
 
@@ -123,7 +123,7 @@ int _fwscanf_l(
 |**_ftscanf**|**fscanf**|**fscanf**|**fwscanf**|
 |**_ftscanf_l**|**_fscanf_l**|**_fscanf_l**|**_fwscanf_l**|
 
-詳細については、次を参照してください。[書式指定フィールド、scanf 関数と wscanf 関数](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)です。
+詳細については、次を参照してください。 [scanf 関数と wscanf 関数の書式指定フィールド](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)します。
 
 ## <a name="requirements"></a>要件
 

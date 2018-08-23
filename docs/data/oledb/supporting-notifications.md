@@ -20,19 +20,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a9fea13ef4a89ee2a1105702db4fe692c12643d2
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 39d310b882047955201f74695f68906cabcb9d7c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337941"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571866"
 ---
 # <a name="supporting-notifications"></a>通知のサポート
 
 ## <a name="implementing-connection-point-interfaces-on-the-provider-and-consumer"></a>プロバイダーとコンシューマー接続ポイントのインターフェイスを実装します。  
  通知を実装するにはプロバイダー クラスから継承する必要があります[IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)と[IConnectionPointContainer](../../atl/reference/iconnectionpointcontainerimpl-class.md)します。  
   
- `IRowsetNotifyCP` プロバイダーは、サイト接続ポイントのインターフェイスを実装する[IRowsetNotify](https://msdn.microsoft.com/library/ms712959.aspx)します。 `IRowsetNotifyCP` 実装は、接続ポイント上のリスナーに通知する関数をブロードキャスト`IID_IRowsetNotify`の行セットの内容の変更。  
+ `IRowsetNotifyCP` プロバイダーは、サイト接続ポイントのインターフェイスを実装する[IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\))します。 `IRowsetNotifyCP` 実装は、接続ポイント上のリスナーに通知する関数をブロードキャスト`IID_IRowsetNotify`の行セットの内容の変更。  
   
  実装し、登録する必要がありますので注意`IRowsetNotify`(シンクとも呼ばれます) を使用して、コンシューマーで[IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md)コンシューマーが通知を処理できるようにします。 コンシューマーのコネクション ポイントのインターフェイスを実装する方法の詳細については、次を参照してください。[通知の受信](../../data/oledb/receiving-notifications.md)します。  
   
@@ -47,7 +47,7 @@ END_CONNECTION_POINT_MAP
 ## <a name="adding-irowsetnotify"></a>IRowsetNotify を追加します。  
  追加する`IRowsetNotify`、追加する必要がある`IConnectionPointContainerImpl<rowset-name>`と`IRowsetNotifyCP<rowset-name>`継承チェーンをします。  
   
- たとえばの継承チェーンをここでは`RUpdateRowset`で[UpdatePV](http://msdn.microsoft.com/c8bed873-223c-4a7d-af55-f90138c6f38f):  
+ たとえばの継承チェーンをここでは`RUpdateRowset`で[UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV):  
   
 > [!NOTE]
 >  サンプル コードはここでは記載されているものと異なる場合があります。サンプル コードは、最新のバージョンと見なす必要があります。  
