@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24fee4d4a73fb2933b00160879be130f4c33083b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a4555de3e42efd298cc7a6f67949a8b474f76064
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854058"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42539617"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton クラス
 コンボ ボックス コントロールを含むツール バー ボタン ( [CComboBox クラス](../../mfc/reference/ccombobox-class.md))。  
@@ -155,7 +155,7 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
   
  [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxtoolbarcomboboxbutton.h  
   
 ##  <a name="additem"></a>  CMFCToolBarComboBoxButton::AddItem  

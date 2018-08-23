@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6421c634fb6d27bf79ea0ead9f0b6b8f5829f19
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: ad833d0fb4309ed4fed0eba4c162c9d6d46bf95d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402687"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42588218"
 ---
 # <a name="name-resolution-for-dependent-types"></a>依存する型の名前解決
 使用**typename**の修飾名で指定した修飾名が型を識別するようにコンパイラに指示するテンプレートの定義。 詳細については、次を参照してください。 [typename](../cpp/typename.md)します。  
@@ -98,7 +98,7 @@ Int MyNamespace::myFunction
 ```  
   
 ### <a name="template-disambiguation"></a>テンプレートのあいまいさの解消  
- [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] は、template キーワードによるあいまいさの解消に関する C++ 98/03/11 規格の規則を強制します。 次の例では、Visual C 2010 は準拠していない行と準拠している行の両方を受け入れるとします。  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] 準拠している行のみを受け入れます。  
+ Visual Studio 2012 では、c++ 98/03/11 標準の規則"template"キーワードで曖昧性除去を適用します。 次の例では、Visual C 2010 は準拠していない行と準拠している行の両方を受け入れるとします。  Visual Studio 2012 では、準拠している行のみを受け入れます。  
   
 ```cpp  
 #include <iostream>  

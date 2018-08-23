@@ -15,46 +15,51 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7084b16536533c9605b741adb596a2a7d383c153
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 952de0ca136d29eb0b170856410b18a1d65120c1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649999"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612889"
 ---
 # <a name="comparestringordinal-method"></a>CompareStringOrdinal メソッド
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-inline INT32 CompareStringOrdinal(  
-   HSTRING lhs,   
+
+WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+
+## <a name="syntax"></a>構文
+
+```cpp
+inline INT32 CompareStringOrdinal(
+   HSTRING lhs,
    HSTRING rhs)  
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *lhs*  
- 比較する最初の HSTRING です。  
-  
- *rhs*  
- 比較する 2 つ目の HSTRING です。  
-  
-## <a name="return-value"></a>戻り値  
-  
-|[値]|条件|  
-|-----------|---------------|  
-|-1|*lhs*がより小さい*rhs*します。|  
-|0|*lhs* equals *rhs*します。|  
-|1|*lhs*がより大きい*rhs*します。|  
-  
-## <a name="remarks"></a>Remarks  
- 2 つの指定した HSTRING オブジェクトを比較し、並べ替え順序でそれらの相対位置を示す整数を返します。  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::Details  
-  
-## <a name="see-also"></a>関連項目  
- [Microsoft::WRL::Wrappers::Details 名前空間](../windows/microsoft-wrl-wrappers-details-namespace.md)
+```
+
+### <a name="parameters"></a>パラメーター
+
+*lhs*  
+比較する最初の HSTRING です。
+
+*rhs*  
+比較する 2 つ目の HSTRING です。
+
+## <a name="return-value"></a>戻り値
+
+|[値]|条件|
+|-----------|---------------|
+|-1|*lhs*がより小さい*rhs*します。|
+|0|*lhs* equals *rhs*します。|
+|1|*lhs*がより大きい*rhs*します。|
+
+## <a name="remarks"></a>Remarks
+
+2 つの指定した HSTRING オブジェクトを比較し、並べ替え順序でそれらの相対位置を示す整数を返します。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers::Details
+
+## <a name="see-also"></a>関連項目
+
+[Microsoft::WRL::Wrappers::Details 名前空間](../windows/microsoft-wrl-wrappers-details-namespace.md)

@@ -1,25 +1,25 @@
 ---
-title: プロパティ (C + + CX) |Microsoft ドキュメント
+title: プロパティ (C + + CX) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 64c7bc56-3191-4cd5-bdf4-476d07d285d5
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6393b5e5849ab2198fa8d084c2c1d15838c69bdd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5cfe1bf4ae614bc892b4ea93d36fa44604029f1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089560"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600856"
 ---
 # <a name="properties-ccx"></a>プロパティ (C++/CX)
-Windows ランタイム型では、プロパティとしてパブリック データを公開します。 クライアント コードは、パブリック データ メンバーのようにプロパティにアクセスします。 内部的には、プロパティは get アクセサー メソッドと set アクセサー メソッド、またはその両方を含むブロックとして実装されます。 アクセサー メソッドを使用すると、値を取得する前または後に追加操作を実行できます。たとえば、イベントを発生させたり、検証チェックを実行したりすることができます。  
+Windows ランタイム型では、パブリック データをプロパティとして公開します。 クライアント コードは、パブリック データ メンバーのようにプロパティにアクセスします。 内部的には、プロパティは get アクセサー メソッドと set アクセサー メソッド、またはその両方を含むブロックとして実装されます。 アクセサー メソッドを使用すると、値を取得する前または後に追加操作を実行できます。たとえば、イベントを発生させたり、検証チェックを実行したりすることができます。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  プロパティの値は、 *バッキング ストア*として知られるプライベート変数に格納されており、これはプロパティと同じ型です。 プロパティには、バッキング ストアに値を割り当てる set アクセサーと、バッキング ストアの値を取得する get アクセサーの両方を含めることができます。 プロパティは、get アクセサーだけを提供する場合は読み取り専用、set アクセサーだけを提供する場合は書き込み専用で、両方のアクセサーを提供する場合は読み書き可能 (変更可能) です。  
   
  *trivial* プロパティは、コンパイラが自動的にアクセサーとバッキング ストアを実装する読み書き可能プロパティです。 コンパイラの実装にはアクセスできません。 ただし、カスタム プロパティを宣言し、明示的にアクセサーとバッキング ストアを宣言することができます。 アクセサー内部では、set アクセサーへの入力を検証する、プロパティ値から値を計算する、データベースにアクセスする、プロパティが変更されたときにイベントを発生させるなど、必要なロジックを実行できます。  

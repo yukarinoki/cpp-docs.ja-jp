@@ -17,94 +17,100 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c9a7caba7ccfb8f5764a1f460835ff540c838975
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 0f033fc20fac656e6b9fcfa9ac822099ea929d62
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641042"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611806"
 ---
 # <a name="classfactory-class"></a>ClassFactory クラス
-`IClassFactory` インターフェイスの基本機能を実装します。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-template <  
-   typename I0 = Details::Nil,  
-   typename I1 = Details::Nil,  
-   typename I2 = Details::Nil  
->  
-class ClassFactory : public Details::RuntimeClass<  
-   typename Details::InterfaceListHelper<IClassFactory,   
-   I0,   
-   I1,   
-   I2,   
-   Details::Nil>::TypeT,   
-   RuntimeClassFlags<ClassicCom | InhibitWeakReference>,   
-      false>;  
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *I0*  
- 0 番目のインターフェイスです。  
-  
- *I1*  
- 最初のインターフェイス。  
-  
- *I2*  
- 2 番目のインターフェイス。  
-  
-## <a name="remarks"></a>Remarks  
- 利用**ClassFactory**工場出荷時のユーザー定義の実装を提供します。  
-  
- 次のプログラミングのパターンが使用する方法を示します、[実装](../windows/implements-structure.md)構造体をクラス ファクトリを複数の 3 つのインターフェイスを指定します。  
-  
- `struct MyFactory : ClassFactory<Implements<I1, I2, I3>, I4, I5>`  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="public-constructors"></a>パブリック コンストラクター  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[ClassFactory::ClassFactory コンストラクター](../windows/classfactory-classfactory-constructor.md)||  
-  
-### <a name="public-methods"></a>パブリック メソッド  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[ClassFactory::AddRef メソッド](../windows/classfactory-addref-method.md)|現在の参照カウントをインクリメント**ClassFactory**オブジェクト。|  
-|[ClassFactory::LockServer メソッド](../windows/classfactory-lockserver-method.md)|ずつインクリメントまたはデクリメントし、現在追跡されるオブジェクトの基になる数**ClassFactory**オブジェクト。|  
-|[ClassFactory::QueryInterface メソッド](../windows/classfactory-queryinterface-method.md)|パラメーターで指定されたインターフェイスへのポインターを取得します。|  
-|[ClassFactory::Release メソッド](../windows/classfactory-release-method.md)|参照が現在のカウントをデクリメント**ClassFactory**オブジェクト。|  
-  
-## <a name="inheritance-hierarchy"></a>継承階層  
- `I0`  
-  
- `ChainInterfaces`  
-  
- `I0`  
-  
- `RuntimeClassBase`  
-  
- `ImplementsHelper`  
-  
- `DontUseNewUseMake`  
-  
- `RuntimeClassFlags`  
-  
- `RuntimeClassBaseT`  
-  
- `RuntimeClass`  
-  
- `ClassFactory`  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** module.h  
-  
- **名前空間:** Microsoft::WRL  
-  
-## <a name="see-also"></a>関連項目  
- [Microsoft::wrl Namespace](../windows/microsoft-wrl-namespace.md)   
- [RuntimeClassType 列挙型](../windows/runtimeclasstype-enumeration.md)
+
+`IClassFactory` インターフェイスの基本機能を実装します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+template <
+   typename I0 = Details::Nil,
+   typename I1 = Details::Nil,
+   typename I2 = Details::Nil
+>
+class ClassFactory : public Details::RuntimeClass<
+   typename Details::InterfaceListHelper<IClassFactory,
+   I0,
+   I1,
+   I2,
+   Details::Nil>::TypeT,
+   RuntimeClassFlags<ClassicCom | InhibitWeakReference>,
+      false>;
+```
+
+### <a name="parameters"></a>パラメーター
+
+*I0*  
+0 番目のインターフェイスです。
+
+*I1*  
+最初のインターフェイス。
+
+*I2*  
+2 番目のインターフェイス。
+
+## <a name="remarks"></a>Remarks
+
+利用**ClassFactory**工場出荷時のユーザー定義の実装を提供します。
+
+次のプログラミングのパターンが使用する方法を示します、[実装](../windows/implements-structure.md)構造体をクラス ファクトリを複数の 3 つのインターフェイスを指定します。
+
+`struct MyFactory : ClassFactory<Implements<I1, I2, I3>, I4, I5>`
+
+## <a name="members"></a>メンバー
+
+### <a name="public-constructors"></a>パブリック コンストラクター
+
+|名前|説明|
+|----------|-----------------|
+|[ClassFactory::ClassFactory コンストラクター](../windows/classfactory-classfactory-constructor.md)||
+
+### <a name="public-methods"></a>パブリック メソッド
+
+|名前|説明|
+|----------|-----------------|
+|[ClassFactory::AddRef メソッド](../windows/classfactory-addref-method.md)|現在の参照カウントをインクリメント**ClassFactory**オブジェクト。|
+|[ClassFactory::LockServer メソッド](../windows/classfactory-lockserver-method.md)|ずつインクリメントまたはデクリメントし、現在追跡されるオブジェクトの基になる数**ClassFactory**オブジェクト。|
+|[ClassFactory::QueryInterface メソッド](../windows/classfactory-queryinterface-method.md)|パラメーターで指定されたインターフェイスへのポインターを取得します。|
+|[ClassFactory::Release メソッド](../windows/classfactory-release-method.md)|参照が現在のカウントをデクリメント**ClassFactory**オブジェクト。|
+
+## <a name="inheritance-hierarchy"></a>継承階層
+
+`I0`
+
+`ChainInterfaces`
+
+`I0`
+
+`RuntimeClassBase`
+
+`ImplementsHelper`
+
+`DontUseNewUseMake`
+
+`RuntimeClassFlags`
+
+`RuntimeClassBaseT`
+
+`RuntimeClass`
+
+`ClassFactory`
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** module.h
+
+**名前空間:** Microsoft::WRL
+
+## <a name="see-also"></a>関連項目
+
+[Microsoft::WRL 名前空間](../windows/microsoft-wrl-namespace.md)  
+[RuntimeClassType 列挙型](../windows/runtimeclasstype-enumeration.md)

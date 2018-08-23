@@ -1,5 +1,5 @@
 ---
-title: 割り当てとメモリを解放する BSTR の |Microsoft ドキュメント
+title: BSTR のメモリの解放の割り当てと |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,19 +21,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46ab5ae9d6f0bfa98231cbc41aa4ae0d10b89537
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 355d89a3cb5817cc64512ae885a075bf44ee2a86
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358326"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572418"
 ---
 # <a name="allocating-and-releasing-memory-for-a-bstr"></a>BSTR 用のメモリの割り当てと解放
-作成するときに`BSTR`s それらの COM オブジェクトの間で渡すと、メモリ リークを回避するために使用するメモリを扱うことに注意する必要があります。 ときに、`BSTR`インターフェイスの中で状態を維持するには、それに完了したらそのメモリを解放する必要があります。 ただし、ときに、`BSTR`インターフェイスでは、パスは、受信側のオブジェクトは、メモリ管理を担当します。  
+作成するときに`BSTR`s と COM オブジェクトの間で渡さないで、メモリ リークを回避するために使用するメモリを扱うことでように注意する必要があります。 ときに、`BSTR`インターフェイス内でまだ、終了するときにメモリを解放する必要があります。 ただし、ときに、`BSTR`インターフェイスからパスは、受信側のオブジェクトは、メモリ管理を担当します。  
   
- 一般に、割り当ておよびメモリを解放するための規則に割り当てる`BSTR`は次のようにします。  
+ 割り当てとメモリを解放するための規則に割り当てられた一般に、`BSTR`は次のようにします。  
   
--   要求する関数を呼び出すと、`BSTR`引数用のメモリを割り当てる必要があります、`BSTR`呼び出しの前に、その後でリリースします。 例えば:  
+-   予期される関数を呼び出すと、`BSTR`引数用のメモリを割り当てる必要があります、`BSTR`呼び出しの前に、後でリリースします。 例えば:  
   
      [!code-cpp[NVC_ATLMFC_Utilities#192](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_1.cpp)]  
   
@@ -52,6 +52,6 @@ ms.locfileid: "32358326"
 ## <a name="see-also"></a>関連項目  
  [文字列 (ATL と MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
  [CStringT::AllocSysString](../atl-mfc-shared/reference/cstringt-class.md#allocsysstring)   
- [SysAllocString](https://msdn.microsoft.com/library/windows/desktop/ms221458.aspx)   
- [SysFreeString](https://msdn.microsoft.com/library/windows/desktop/ms221481.aspx)
+ [SysAllocString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysallocstring)   
+ [SysFreeString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysfreestring)
 

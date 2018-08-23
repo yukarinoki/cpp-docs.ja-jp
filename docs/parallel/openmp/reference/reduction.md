@@ -1,5 +1,5 @@
 ---
-title: reduction |Microsoft ドキュメント
+title: 削減 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e20ae1ad9c549aed176d26667d9bdc62a32b8dc7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d2b90ef2eeca60a305cd8836e09dc81940392d2c
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692536"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42540282"
 ---
 # <a name="reduction"></a>reduction
-各スレッドに対してプライベートである 1 つまたは複数の変数、並列領域の末尾にあるリダクション演算の対象となることを指定します。  
+各スレッドに対してプライベートである 1 つまたは複数の変数を並行領域の最後のリダクション演算の件名を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -32,16 +32,16 @@ ms.locfileid: "33692536"
 reduction(operation:var)  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  指定項目  
   
  `operation`  
- 変数でを実行する操作の演算子 (`var`)、並列領域の最後。  
+ 変数に対して実行する操作の演算子 (`var`)、並列領域の最後にします。  
   
  `var`  
- スカラー リダクションを実行する 1 つ以上の変数です。 複数の変数が指定されている場合は、変数名をコンマで区切ります。  
+ スカラー リダクションを実行する 1 つまたは複数の変数。 1 つ以上の変数が指定されている場合は、変数名をコンマで区切ります。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `reduction` 次のディレクティブに適用されます。  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
@@ -50,7 +50,7 @@ reduction(operation:var)
   
 -   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
   
- 詳細については、次を参照してください。 [2.7.2.6 削減](../../../parallel/openmp/2-7-2-6-reduction.md)です。  
+ 詳細については、次を参照してください。 [2.7.2.6 削減](../../../parallel/openmp/2-7-2-6-reduction.md)します。  
   
 ## <a name="example"></a>例  
   
@@ -127,10 +127,10 @@ int main( )
              "%d to %d, is %d\n", 1, 10, nSum);  
   
     if (bSucceed)  
-        printf_s("All of the the functions, func1 through "  
+        printf_s("All of the functions, func1 through "  
                  "func5 succeeded!\n");  
     else  
-        printf_s("One or more of the the functions, func1 "  
+        printf_s("One or more of the functions, func1 "  
                  "through func5 failed!\n");  
   
     if (nCount != NUM_THREADS)   
@@ -162,7 +162,7 @@ int main( )
 ```Output  
 The parallel section was executed 4 times in parallel.  
 The sum of the consecutive integers from 1 to 10, is 55  
-All of the the functions, func1 through func5 succeeded!  
+All of the functions, func1 through func5 succeeded!  
 ```  
   
 ## <a name="see-also"></a>関連項目  

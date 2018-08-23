@@ -17,34 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5729bfdf46504ab798966bdf8051ab3a3f7cbca0
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: c65f47e77b7109ab1f6abfdd22b02bc34c31ef48
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011534"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600270"
 ---
 # <a name="implementsbase-structure"></a>ImplementsBase 構造体
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-struct ImplementsBase;  
-```  
-  
-## <a name="remarks"></a>Remarks  
- テンプレート パラメーターの型の検証に使用される[Implements 構造体](../windows/implements-structure.md)します。  
-  
- **ImplementsBase**構造が設計によっては空です。  
-  
-## <a name="inheritance-hierarchy"></a>継承階層  
- `ImplementsBase`  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** implements.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>関連項目  
- [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)
+
+WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+
+## <a name="syntax"></a>構文
+
+```cpp
+struct ImplementsBase;
+```
+
+## <a name="remarks"></a>Remarks
+
+テンプレート パラメーターの型の検証に使用される[Implements 構造体](../windows/implements-structure.md)します。
+
+**ImplementsBase**構造が設計によっては空です。
+
+## <a name="inheritance-hierarchy"></a>継承階層
+
+`ImplementsBase`
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** implements.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>関連項目
+
+[Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

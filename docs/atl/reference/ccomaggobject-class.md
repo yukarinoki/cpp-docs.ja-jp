@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5699f4c8c49bd35e85479572e1b49f8080415e65
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 9ea5da8b98c528eb6832c850e41b0a42c386f901
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884994"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572274"
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject クラス
 このクラスは、実装、 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)集計オブジェクトのインターフェイス。 定義上、集約オブジェクトは外側のオブジェクト内に含まれます。 `CComAggObject`クラスと似ています、 [CComObject クラス](../../atl/reference/ccomobject-class.md)、外部クライアントに直接アクセスできるインターフェイスを公開する点が異なります。  
@@ -63,7 +63,7 @@ class CComAggObject : public IUnknown,
 |名前|説明|  
 |----------|-----------------|  
 |[CComAggObject::AddRef](#addref)|集約オブジェクトの参照カウントをインクリメントします。|  
-|[CComAggObject::CreateInstance](#createinstance)|この静的関数では、新たに作成することができます**CComAggObject <** `contained` **>** のオーバーヘッドなしオブジェクト[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)します。|  
+|[CComAggObject::CreateInstance](#createinstance)|この静的関数では、新たに作成することができます**CComAggObject <** `contained` **>** のオーバーヘッドなしオブジェクト[CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)します。|  
 |[CComAggObject::FinalConstruct](#finalconstruct)|最終初期化を実行します。`m_contained`します。|  
 |[CComAggObject::FinalRelease](#finalrelease)|最終的な破棄を実行します。`m_contained`します。|  
 |[CComAggObject::QueryInterface](#queryinterface)|要求されたインターフェイスへのポインターを取得します。|  
@@ -89,7 +89,7 @@ class CComAggObject : public IUnknown,
   
  `CComAggObject`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlcom.h  
   
 ##  <a name="addref"></a>  CComAggObject::AddRef  
@@ -129,7 +129,7 @@ CComAggObject(void* pv);
  呼び出し、割り当てられているすべてのリソースを解放[FinalRelease](#finalrelease)、およびモジュールのロック カウントをデクリメントします。  
   
 ##  <a name="createinstance"></a>  CComAggObject::CreateInstance  
- この静的関数では、新たに作成することができます**CComAggObject <** `contained` **>** のオーバーヘッドなしオブジェクト[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)します。  
+ この静的関数では、新たに作成することができます**CComAggObject <** `contained` **>** のオーバーヘッドなしオブジェクト[CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)します。  
   
 ```
 static HRESULT WINAPI CreateInstance(

@@ -1,5 +1,5 @@
 ---
-title: '方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更 |Microsoft ドキュメント'
+title: '方法: ターゲット フレームワークおよびプラットフォームのツールセットの変更 |Microsoft Docs'
 ms.custom: conceptual
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f21ec9d205e009438fac97914ec4b684713102a3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c53960b7ef972d605902a260de9e7ef344a31274
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371903"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572212"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更する
-異なるバージョンの .NET Framework を対象とする別のプラットフォーム ツールセットを使用して、Visual C プロジェクト設定を変更することができます。 既定では、プロジェクト システムは、プロジェクトの作成に使用する Visual Studio のバージョンに対応する .NET Framework のバージョンおよびツールセットのバージョンを使用します。 プロジェクトのプロパティを変更することで、対象のプラットフォーム ツールセットを変更できます。 プロジェクト (.vcxproj) ファイルを変更すると、ターゲット フレームワークを変更できます。 それぞれの対象をコンパイルするために個別のコード ベースを保守する必要はありません。  
+異なるバージョンの .NET Framework を対象として、別のプラットフォーム ツールセットを使用する Visual C プロジェクトの設定を変更することができます。 既定では、プロジェクト システムは、プロジェクトの作成に使用する Visual Studio のバージョンに対応する .NET Framework のバージョンおよびツールセットのバージョンを使用します。 プロジェクトのプロパティを変更することで、対象のプラットフォーム ツールセットを変更できます。 プロジェクト (.vcxproj) ファイルを変更すると、ターゲット フレームワークを変更できます。 それぞれの対象をコンパイルするために個別のコード ベースを保守する必要はありません。  
   
 > [!IMPORTANT]
->  エディションによっては、変更されたターゲット フレームワークまたはプラットフォーム ツールセットがサポートされていない場合があります。 互換性の詳細については、次を参照してください。[ポート、移行、および Visual Studio プロジェクトのアップグレード](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)です。  
+>  エディションによっては、変更されたターゲット フレームワークまたはプラットフォーム ツールセットがサポートされていない場合があります。 互換性については、次を参照してください。[ポート、移行、および Visual Studio プロジェクトのアップグレード](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)します。  
   
  ターゲット フレームワークを変更すると、プラットフォーム ツールセットのバージョンもそのターゲット フレームワークをサポートするように変更されます。 たとえば、.NET Framework 4.5 を対象とする場合、Visual Studio 2015 (v140)、Visual Studio 2013 (v120)、Visual Studio 2012 (v110) のような互換性のあるプラットフォーム ツールセットを使用する必要があります。 .NET Framework 2.0、3.0、3.5、4、および x86、Itanium、x64 プラットフォームを対象とするには、 **Windows7.1SDK** プラットフォーム ツールセットを使用します。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "32371903"
   
 3.  ダイアログ ボックスの左ペインで、 **[構成プロパティ]** を展開し、 **[全般]** を選択します。  
   
-4.  右ペインで、 **[プラットフォーム ツールセット]** をクリックして、ドロップダウン リストから使用するツールセットを選択します。 たとえば、 [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)] ツール セットをインストールした場合は、 **[Visual Studio 2010 (v100)]** を選択してプロジェクト用に使います。  
+4.  右ペインで、 **[プラットフォーム ツールセット]** をクリックして、ドロップダウン リストから使用するツールセットを選択します。 たとえば、Visual Studio 2010 のツールセットをインストールした場合選択**Visual Studio 2010 (v100)** プロジェクトに使用します。  
   
 5.  **[OK]** を選択します。  
   

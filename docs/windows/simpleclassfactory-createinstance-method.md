@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aa0d48ba96c550ff6ee1248dccd0b4c8e3021212
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: d9dfb783a8e002f249d5f6b4cc0a45193669efb3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020305"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603114"
 ---
 # <a name="simpleclassfactorycreateinstance-method"></a>SimpleClassFactory::CreateInstance メソッド
 
@@ -39,6 +39,7 @@ STDMETHOD( CreateInstance )(
 ```
 
 ### <a name="parameters"></a>パラメーター
+
 *pUnkOuter*  
 必要があります**nullptr**、それ以外の戻り値は CLASS_E_NOAGGREGATION します。
 
@@ -65,4 +66,5 @@ SimpleClassFactory には、集計をサポートしていません。 集計が
 **名前空間:** Microsoft::WRL
 
 ## <a name="see-also"></a>関連項目
- [SimpleClassFactory クラス](../windows/simpleclassfactory-class.md)
+
+[SimpleClassFactory クラス](../windows/simpleclassfactory-class.md)

@@ -1,5 +1,5 @@
 ---
-title: 既定の名前空間 |Microsoft ドキュメント
+title: 既定の名前空間 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -7,19 +7,19 @@ ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 4712e9dc-57ba-43cc-811e-022e1dae4de8
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f4386d3636744a673a10dd9530fd3836fdb78e6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 87510fe7eee6a8027e5375f82f2b6ce7bf74ec3c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086949"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589735"
 ---
 # <a name="default-namespace"></a>既定の名前空間
-`default`名前空間のスコープとは、組み込みの型がサポートする C + + CX です。  
+`default`名前空間のスコープと C + でサポートされている組み込み型/cli CX します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,7 +39,7 @@ namespace default;
   
 ### <a name="built-in-types"></a>組み込み型  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |`char16`|Unicode (UTF-16) コード ポイントを表す 16 ビットの数字以外の値。|  
 |`float32`|32 ビットの IEEE 754 浮動小数点数。|  

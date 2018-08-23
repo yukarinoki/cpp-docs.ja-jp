@@ -1,5 +1,5 @@
 ---
-title: Platform::stathreadattribute クラス |Microsoft ドキュメント
+title: Platform::stathreadattribute クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -15,16 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::STAThreadAttribute Class
 ms.assetid: f97960fc-e673-4d9e-910a-54c8415411c4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab58409bf86af77c9b1f751b9978b5e7103bd043
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 90194dd72b5192fab71065c2275adb4e066bcb0e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089354"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590784"
 ---
 # <a name="platformstathreadattribute-class"></a>Platform::STAThreadAttribute クラス
 アプリケーションのスレッド モデルがシングル スレッド アパートメント (STA) であることを示します。  
@@ -44,9 +44,9 @@ public ref class STAThreadAttribute sealed : Attribute
 |[STAThreadAttribute コンストラクター 1](#ctor)|クラスの新しいインスタンスを初期化します。|  
   
 ### <a name="public-methods"></a>パブリック メソッド  
- STAThreadAttribute 属性が継承[platform::object クラス](../cppcx/platform-object-class.md)です。 また STAThreadAttribute は次のメンバーもオーバーロードしたり、含んだりします。  
+ STAThreadAttribute 属性が継承[platform::object Class](../cppcx/platform-object-class.md)します。 また STAThreadAttribute は次のメンバーもオーバーロードしたり、含んだりします。  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[STAThreadAttribute::Equals](#equals)|指定したオブジェクトが、現在のオブジェクトと等しいかどうかを判断します。|  
 |[STAThreadAttribute::GetHashCode](#gethashcode)|このインスタンスのハッシュ コードを返します。|  

@@ -102,12 +102,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6cd6ec4bcee26c1e2fb558670c69d0130808c933
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: faf782f4386cf2b2640ed65f3a2b24bbf4c5d693
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338341"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573156"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl クラス
 `IRowset` インターフェイスの実装を提供します。  
@@ -169,7 +169,7 @@ class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface
 |[m_rgRowHandles](#rgrowhandles)|行ハンドルの一覧。|  
   
 ## <a name="remarks"></a>Remarks  
- [IRowset](https://msdn.microsoft.com/library/ms720986.aspx)は行セットの基本インターフェイスです。  
+ [IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\))は行セットの基本インターフェイスです。  
 
 ## <a name="addrefrows"></a> Irowsetimpl::addrefrows
 既存の行ハンドルには、参照カウントを追加します。  
@@ -184,7 +184,7 @@ STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[IRowset::AddRefRows](https://msdn.microsoft.com/library/ms719619.aspx)で、 *OLE DB プログラマーズ リファレンス*します。  
+ 参照してください[IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
 
 ## <a name="createrow"></a> Irowsetimpl::createrow
 によって呼び出されるヘルパー メソッド[GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)を割り当てる新しい`HROW`します。  
@@ -222,7 +222,7 @@ STDMETHOD(GetData )(HROW hRow,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[irowset::getdata](https://msdn.microsoft.com/library/ms716988.aspx)で、 *OLE DB プログラマーズ リファレンス*します。  
+ 参照してください[irowset::getdata](/previous-versions/windows/desktop/ms716988\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
   
  いくつかのパラメーターに対応*OLE DB プログラマーズ リファレンス*で説明されている別の名前のパラメーター `IRowset::GetData`:  
   
@@ -251,7 +251,7 @@ virtual DBSTATUS GetDBStatus(RowClass* currentRow,
  状態を要求する対象の列です。  
   
 ### <a name="return-value"></a>戻り値  
- [DBSTATUS](https://msdn.microsoft.com/library/ms722617.aspx)列のフラグ。 
+ [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\))列のフラグ。 
 
 ## <a name="getnextrows"></a> Irowsetimpl::getnextrows
 前の位置を記憶、順番に行をフェッチします。  
@@ -267,7 +267,7 @@ STDMETHOD(GetNextRows )(HCHAPTER hReserved,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[irowset::getnextrows](https://msdn.microsoft.com/library/ms709827.aspx)で、 *OLE DB プログラマーズ リファレンス*します。 
+ 参照してください[irowset::getnextrows](/previous-versions/windows/desktop/ms709827\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。 
 
 ## <a name="irowsetimpl"></a> Irowsetimpl::irowsetimpl
 コンストラクターです。  
@@ -295,7 +295,7 @@ HRESULT RefRows(DBCOUNTITEM cRows,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[IRowset::AddRefRows](https://msdn.microsoft.com/library/ms719619.aspx)で、 *OLE DB プログラマーズ リファレンス*します。  
+ 参照してください[IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ### <a name="return-value"></a>戻り値  
  標準の HRESULT 値。  
@@ -314,7 +314,7 @@ STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[::releaserows](https://msdn.microsoft.com/library/ms719771.aspx)で、 *OLE DB プログラマーズ リファレンス*します。  
+ 参照してください[::releaserows](/previous-versions/windows/desktop/ms719771\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
 
 ## <a name="restartposition"></a> Irowsetimpl::restartposition
 次のフェッチ位置を初期位置に再配置します。つまり、行セットが最初の位置が作成されます。  
@@ -326,7 +326,7 @@ STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[irowset::restartposition](https://msdn.microsoft.com/library/ms712877.aspx)で、 *OLE DB プログラマーズ リファレンス*します。  
+ 参照してください[irowset::restartposition](/previous-versions/windows/desktop/ms712877\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ### <a name="remarks"></a>Remarks  
  行セットの位置はまで未定義`GetNextRow`が呼び出されます。 呼び出して行セット内内を後方に向かって移動できます`RestartPosition`をフェッチするか、逆方向にスクロールします。  
@@ -344,7 +344,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,
   
 #### <a name="parameters"></a>パラメーター  
  *statusFlags*  
- [DBSTATUS](https://msdn.microsoft.com/library/ms722617.aspx)列に設定するフラグ。  
+ [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\))列に設定するフラグ。  
   
  *currentRow*  
  現在の行。  

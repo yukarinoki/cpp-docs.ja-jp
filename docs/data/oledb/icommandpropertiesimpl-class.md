@@ -27,15 +27,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b360b56066ecbb5cc605012b234c0ac11afb2a11
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: c2f3f4c32e2e87fdd905949ffd6cebac89a5023a
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339413"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572474"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl クラス
-実装を提供、 [ICommandProperties](https://msdn.microsoft.com/library/ms723044.aspx)インターフェイス。  
+実装を提供、 [ICommandProperties](/previous-versions/windows/desktop/ms723044\(v=vs.85\))インターフェイス。  
   
 ## <a name="syntax"></a>構文
 
@@ -80,7 +80,7 @@ STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[icommandproperties::getproperties](https://msdn.microsoft.com/library/ms723119.aspx)で、 *OLE DB プログラマーズ リファレンス*します。  
+ 参照してください[icommandproperties::getproperties](/previous-versions/windows/desktop/ms723119\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ### <a name="remarks"></a>Remarks  
  「 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)」を参照してください。  
@@ -96,7 +96,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[icommandproperties::setproperties](https://msdn.microsoft.com/library/ms711497.aspx)で、 *OLE DB プログラマーズ リファレンス*します。  
+ 参照してください[icommandproperties::setproperties](/previous-versions/windows/desktop/ms711497\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ## <a name="see-also"></a>関連項目  
  [OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)   

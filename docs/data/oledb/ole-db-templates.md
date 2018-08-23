@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: af146c37490d86a839f717d387c4072fbd649a87
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 425d404272ad21ad5c732a4db210379eedc7515f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339438"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573231"
 ---
 # <a name="ole-db-templates"></a>OLE DB テンプレート
 OLE DB テンプレートは、簡単に OLE DB データ アクセスを使用します。 Visual C では、多くの一般的に使用される OLE DB インターフェイスを実装するテンプレート クラスを提供します。 OLE DB (コンシューマー) のクライアント アプリケーションを作成する Visual C のコンシューマー テンプレートとサーバー (プロバイダー) アプリケーションを作成するプロバイダー テンプレートを使用することができます。  
@@ -38,7 +38,7 @@ OLE DB テンプレートは、簡単に OLE DB データ アクセスを使用�
  [OLE DB プログラミングの概要](../../data/oledb/ole-db-programming-overview.md)  
  OLE DB は、および OLE db Universal Data Access について説明します。  
   
- [OLE DB プログラマーズ リファレンス](https://msdn.microsoft.com/library/ms713643.aspx)  
+ [OLE DB プログラマーズ リファレンス](/previous-versions/windows/desktop/ms713643\(v=vs.85\))  
  OLE DB では、Windows SDK のドキュメントへのリンクを提供します。  
   
  [OLE DB テンプレート サンプル](../../visual-cpp-samples.md)  

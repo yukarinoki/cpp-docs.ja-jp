@@ -1,5 +1,5 @@
 ---
-title: インライン アセンブラー |Microsoft ドキュメント
+title: インライン アセンブラー |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5236bebdeef2db519556d3dace4c20d9529d0e23
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 4b45c55fbba37d27aa005480789cb490b891b103
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055041"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572468"
 ---
 # <a name="inline-assembler"></a>インライン アセンブラー
 **Microsoft 固有の仕様**  
@@ -33,7 +33,7 @@ ms.locfileid: "32055041"
 > [!NOTE]
 >  インライン アセンブラー コードを含むプログラムは、他のハードウェア プラットフォームに完全に移植できるわけではありません。 移植性を考慮して設計する場合、インライン アセンブラーは使用しないでください。  
   
- インライン アセンブラーは ARM プロセッサと [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] プロセッサではサポートされていません。  ここからのトピックでは、x86 プロセッサで Visual C/C++ インライン アセンブラーを使用する方法を示します。  
+ インライン アセンブリは、ARM および x64 ではサポートされていませんプロセッサ。  ここからのトピックでは、x86 プロセッサで Visual C/C++ インライン アセンブラーを使用する方法を示します。  
   
 -   [インライン アセンブラーの概要](../../assembler/inline/inline-assembler-overview.md)  
   

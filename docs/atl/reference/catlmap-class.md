@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00aa5276c0d79be570cf17986865066a466a326c
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 304e350c9f37e29bfda8414a1c33c1211929872f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880834"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571616"
 ---
 # <a name="catlmap-class"></a>CAtlMap クラス
 このクラスは、作成して、map オブジェクトを管理するためのメソッドを提供します。  
@@ -159,7 +159,7 @@ class CAtlMap
   
  詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlcoll.h  
   
 ##  <a name="assertvalid"></a>  CAtlMap::AssertValid  
@@ -694,5 +694,5 @@ V  m_value;
   
 ## <a name="see-also"></a>関連項目  
  [マーキーのサンプル](../../visual-cpp-samples.md)   
- [UpdatePV サンプル](../../visual-cpp-samples.md)   
+ [UpdatePV サンプル](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)   
  [クラスの概要](../../atl/atl-class-overview.md)

@@ -19,6 +19,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - _fseek_nolock
@@ -39,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40eca7e4944d74e8b86d5318702c954d86a3f54f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b1ce866f7438ebc677156e6cfc9113f9725b65d
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397354"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572464"
 ---
 # <a name="fseeknolock-fseeki64nolock"></a>_fseek_nolock、_fseeki64_nolock
 
@@ -80,9 +81,9 @@ int _fseeki64_nolock(
 
 同じ[fseek](fseek-fseeki64.md)と[_fseeki64](fseek-fseeki64.md)、それぞれします。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-これらの関数は、ロックしないバージョンの[fseek](fseek-fseeki64.md)と[_fseeki64](fseek-fseeki64.md)、それぞれします。 これらは同じ[fseek](fseek-fseeki64.md)と[_fseeki64](fseek-fseeki64.md)他のスレッドによる干渉から保護されないする点を除いて。 これらの関数では他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
+これらの関数は、ロックしないバージョンの[fseek](fseek-fseeki64.md)と[_fseeki64](fseek-fseeki64.md)、それぞれします。 これらは同じ[fseek](fseek-fseeki64.md)と[_fseeki64](fseek-fseeki64.md)する点を除いて、他のスレッドによる干渉から保護されません。 これらの関数では他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
 
 ## <a name="requirements"></a>要件
 

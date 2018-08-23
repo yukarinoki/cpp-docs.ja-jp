@@ -1,5 +1,5 @@
 ---
-title: ラムダ、関数オブジェクト、および制限関数を使用して |Microsoft ドキュメント
+title: ラムダ、関数オブジェクト、および制限関数を使用して |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e3e5ab742335cfd6bb47a5105995d7339c7c36a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 99c228d018402d44186efdda264d1eec83b0332f
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687453"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42539610"
 ---
 # <a name="using-lambdas-function-objects-and-restricted-functions"></a>ラムダ、関数オブジェクト、および制限関数の使用
-呼び出しで引数としては、アクセラレータで実行する C++ AMP コードを指定してください。、 [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each)メソッドです。 その引数としてラムダ式または関数オブジェクト (ファンクター) を指定できます。 また、ラムダ式や関数オブジェクトでは、C++ AMP 制限関数を呼び出すことができます。 このトピックでは、配列追加アルゴリズムを使用して、ラムダ、関数オブジェクト、および制限関数の概要を示します。 次の例では、C++ AMP コードを使用しないアルゴリズムを示します。 同じ長さの 2 個の 1 次元配列が作成されます。 対応する整数の要素が加算され、3 番目の 1 次元配列に格納されます。 C++ AMP は使用されません。  
+アクセラレータで実行する C++ AMP コードへの呼び出しで引数として指定されましたが、 [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each)メソッド。 その引数としてラムダ式または関数オブジェクト (ファンクター) を指定できます。 また、ラムダ式や関数オブジェクトでは、C++ AMP 制限関数を呼び出すことができます。 このトピックでは、配列追加アルゴリズムを使用して、ラムダ、関数オブジェクト、および制限関数の概要を示します。 次の例では、C++ AMP コードを使用しないアルゴリズムを示します。 同じ長さの 2 個の 1 次元配列が作成されます。 対応する整数の要素が加算され、3 番目の 1 次元配列に格納されます。 C++ AMP は使用されません。  
   
 ```cpp  
 void CpuMethod() {  
@@ -39,11 +39,11 @@ void CpuMethod() {
     std::cout <<sumCPP[idx] <<"\n";  
  }  
 }  
- 
 ```  
   
 ## <a name="lambda-expression"></a>ラムダ式  
- ラムダ式の使用は、C++ AMP を使用してこのコードを記述し直す際に最も直接的な方法です。  
+ 
+ラムダ式の使用は、C++ AMP を使用してこのコードを記述し直す際に最も直接的な方法です。  
   
 ```cpp  
 void AddArraysWithLambda() {  
@@ -59,7 +59,6 @@ void AddArraysWithLambda() {
 
     sum.discard_data();
 
- 
     parallel_for_each(
  sum.extent, 
  [=](index<1> idx) restrict(amp)  
@@ -67,18 +66,17 @@ void AddArraysWithLambda() {
     sum[idx] = a[idx] + b[idx];  
  });
 
- 
     for (int i = 0; i <5; i++) {  
     std::cout <<sum[i] <<"\n";  
  }  
 }  
- 
 ```  
   
- ラムダ式には、1 個のインデックス パラメーターと `restrict(amp)` が含まれている必要があります。 例では、 [array_view](../../parallel/amp/reference/array-view-class.md) `sum`オブジェクトが 1 のランク。 そのため、ラムダ ステートメントに対するパラメーターは、[インデックス](../../parallel/amp/reference/index-class.md)ランク 1 を持つオブジェクト。 実行時に、ラムダ式は 1 回実行の各要素に対して、 [array_view](../../parallel/amp/reference/array-view-class.md)オブジェクト。 詳細については、次を参照してください。[ラムダ式の構文](../../cpp/lambda-expression-syntax.md)です。  
+ラムダ式には、1 個のインデックス パラメーターと `restrict(amp)` が含まれている必要があります。 この例で、 [array_view](../../parallel/amp/reference/array-view-class.md) `sum`オブジェクトのランクは 1 には。 したがって、ラムダ ステートメントに対するパラメーターは、[インデックス](../../parallel/amp/reference/index-class.md)をランク 1 を持つオブジェクト。 、実行時に、ラムダ式は 1 回実行の各要素に対して、 [array_view](../../parallel/amp/reference/array-view-class.md)オブジェクト。 詳細については、次を参照してください。[ラムダ式の構文](../../cpp/lambda-expression-syntax.md)します。  
   
 ## <a name="function-object"></a>Function オブジェクト  
- アクセラレータ コードを関数オブジェクトに組み込むことができます。  
+ 
+アクセラレータ コードを関数オブジェクトに組み込むことができます。  
   
 ```cpp  
 class AdditionFunctionObject  
@@ -103,7 +101,6 @@ private:
 };  
  
 void AddArraysWithFunctionObject() {  
- 
     int aCPP[] = {1, 2, 3, 4, 5};  
     int bCPP[] = {6, 7, 8, 9, 10};  
     int sumCPP[5];  
@@ -116,23 +113,21 @@ void AddArraysWithFunctionObject() {
 
     sum.discard_data();
 
- 
     parallel_for_each(
  sum.extent, 
     AdditionFunctionObject(a, b, sum));
 
- 
     for (int i = 0; i <5; i++) {  
     std::cout <<sum[i] <<"\n";  
  }  
 }  
- 
 ```  
 
- 関数オブジェクトには、コンストラクターと、関数呼び出し演算子のオーバーロードが含まれている必要があります。 関数呼び出し演算子には、1 個のインデックス パラメーターが含まれている必要があります。 関数オブジェクトのインスタンスが 2 番目の引数として渡される、 [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each)メソッドです。 この例では次の 3 つ[array_view](../../parallel/amp/reference/array-view-class.md)オブジェクトが関数オブジェクトのコンス トラクターに渡されます。 [Array_view](../../parallel/amp/reference/array-view-class.md)オブジェクト`sum`1 のランクがあります。 したがって、関数呼び出し演算子のパラメーターは、[インデックス](../../parallel/amp/reference/index-class.md)ランク 1 を持つオブジェクト。 実行時に、関数は 1 回実行の各要素に対して、 [array_view](../../parallel/amp/reference/array-view-class.md)オブジェクト。 詳細については、次を参照してください。[関数を呼び出す](../../cpp/function-call-cpp.md)と[C++ 標準ライブラリ内の関数オブジェクト](../../standard-library/function-objects-in-the-stl.md)です。  
+関数オブジェクトには、コンストラクターと、関数呼び出し演算子のオーバーロードが含まれている必要があります。 関数呼び出し演算子には、1 個のインデックス パラメーターが含まれている必要があります。 関数オブジェクトのインスタンスが 2 番目の引数として渡される、 [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each)メソッド。 この例では、次の 3 つ[array_view](../../parallel/amp/reference/array-view-class.md)オブジェクトは、関数オブジェクトのコンス トラクターに渡されます。 [Array_view](../../parallel/amp/reference/array-view-class.md)オブジェクト`sum`1 のランクがあります。 関数呼び出し演算子に対するパラメーターは、そのため、[インデックス](../../parallel/amp/reference/index-class.md)をランク 1 を持つオブジェクト。 、実行時に、関数が実行される 1 回の各要素に対して、 [array_view](../../parallel/amp/reference/array-view-class.md)オブジェクト。 詳細については、次を参照してください。[関数を呼び出す](../../cpp/function-call-cpp.md)と[C++ 標準ライブラリ内の関数オブジェクト](../../standard-library/function-objects-in-the-stl.md)します。  
   
 ## <a name="c-amp-restricted-function"></a>C++ AMP 制限関数  
- 制限関数を作成し、ラムダ式や関数オブジェクトから呼び出すことにより、アクセラレータ コードを組み込むこともできます。 次のコード例では、ラムダ式からの制限関数を呼び出す方法を示します。  
+ 
+制限関数を作成し、ラムダ式や関数オブジェクトから呼び出すことにより、アクセラレータ コードを組み込むこともできます。 次のコード例では、ラムダ式からの制限関数を呼び出す方法を示します。  
   
 ```cpp  
 void AddElementsWithRestrictedFunction(index<1> idx, array_view<int, 1> sum, array_view<int, 1> a, array_view<int, 1> b) restrict(amp)  
@@ -154,29 +149,25 @@ void AddArraysWithFunction() {
 
     sum.discard_data();
 
- 
     parallel_for_each(
  sum.extent, 
  [=](index<1> idx) restrict(amp)  
  {  
     AddElementsWithRestrictedFunction(idx, sum, a, b);
-
  });
 
- 
     for (int i = 0; i <5; i++) {  
     std::cout <<sum[i] <<"\n";  
  }  
 }  
- 
 ```  
   
- 制限付きの関数を含める必要があります`restrict(amp)`しで説明されている制限に準拠している[(C++ AMP) を制限する](../../cpp/restrict-cpp-amp.md)です。  
+制限付きの関数を含める必要があります`restrict(amp)`で説明されている制限事項に従っている[制限 (C++ AMP)](../../cpp/restrict-cpp-amp.md)します。  
   
 ## <a name="see-also"></a>関連項目  
- [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
- [ラムダ式の構文](../../cpp/lambda-expression-syntax.md)   
- [関数呼び出し](../../cpp/function-call-cpp.md)   
- [C++ 標準ライブラリ内の関数オブジェクト](../../standard-library/function-objects-in-the-stl.md)   
- [restrict (C++ AMP)](../../cpp/restrict-cpp-amp.md)
-
+ 
+[C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
+[ラムダ式の構文](../../cpp/lambda-expression-syntax.md)   
+[関数呼び出し](../../cpp/function-call-cpp.md)   
+[C++ 標準ライブラリ内の関数オブジェクト](../../standard-library/function-objects-in-the-stl.md)   
+[restrict (C++ AMP)](../../cpp/restrict-cpp-amp.md)

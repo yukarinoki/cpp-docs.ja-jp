@@ -1,5 +1,5 @@
 ---
-title: 関数 (C++) |Microsoft ドキュメント
+title: 関数 (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e24dac191e05cc3b47192cb6ec7fb0fc48dd447
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 76ab5b2911d349c62ff18967e7a660cdc3589ddd
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849484"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539216"
 ---
 # <a name="function-cc"></a>function (C/C++)
 このプラグマの引数リストで指定された関数を呼び出します。  
@@ -31,18 +31,18 @@ ms.locfileid: "33849484"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 #pragma function( function1 [, function2, ...] )  
 ```  
   
-## <a name="remarks"></a>コメント  
- 使用する場合、**組み込み**プラグマ (または/Oi) コンパイラに通知します (組み込み関数は、関数呼び出しとしてではなく、インライン コードとして生成されます) の組み込み関数を生成する、使用することができます、**関数**プラグマ関数呼び出しを明示的に強制します。 コンパイラが function プラグマを検出した後、組み込み関数を含む最初の関数定義に達した時点でそのプラグマが有効になります。 ソース ファイルの末尾にまたはの外観に効果が引き続き、**組み込み**プラグマ同じ組み込み関数を指定します。 **関数**プラグマは関数の外側でのみ使用できます: グローバル レベルでします。  
+## <a name="remarks"></a>Remarks  
+
+使用する場合、`intrinsic`プラグマ (または/Oi) 使用することができます (組み込み関数は、関数呼び出しとしてではなく、インライン コードとして生成されます) の組み込み関数を生成するコンパイラを指示する、**関数**プラグマを明示的に適用します。関数呼び出し。 コンパイラが function プラグマを検出した後、組み込み関数を含む最初の関数定義に達した時点でそのプラグマが有効になります。 ソース ファイルの末尾に、またはの外観に影響が引き続き、`intrinsic`プラグマと同じ組み込み関数を指定します。 **関数**プラグマは関数の外側でのみ使用できます: グローバル レベル。  
   
- 組み込み形式を持つ関数の一覧は、次を参照してください。 [#pragma intrinsic](../preprocessor/intrinsic.md)です。  
+組み込み形式を持つ関数の一覧は、次を参照してください。 [#pragma intrinsic](../preprocessor/intrinsic.md)します。  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp  
 // pragma_directive_function.cpp  
 #include <ctype.h>  
 #include <stdio.h>  
@@ -92,5 +92,6 @@ str is 'Now************'
 str is '!!!!!!!!!!!!!!!'  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>関連項目
+
+[プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

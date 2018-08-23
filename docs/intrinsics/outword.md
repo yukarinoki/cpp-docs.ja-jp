@@ -1,5 +1,5 @@
 ---
-title: _ _outword |Microsoft ドキュメント
+title: _ _outword |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f0e827b16b9743cb6bc7fe6906b4c74c3006864
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d118c26e79a462723f87e76672b2d9b9c1a76cb2
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331137"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540288"
 ---
 # <a name="outword"></a>__outword
 **Microsoft 固有の仕様**  
   
- 生成、`out`という単語を送信する命令`Data`出力で指定された I/O ポート`Port`です。  
+ 生成、`out`という単語を送信するには、命令`Data`で指定した I/O ポートから`Port`します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,17 +43,17 @@ void __outword(
  データを送信するポート。  
   
  [入力] `Data`  
- 送信されるデータ。  
+ 送信するデータ。  
   
 ## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__outword`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outword`|x86、x64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このルーチンは、組み込みとしてのみ使用できます。  
   
 **Microsoft 固有の仕様はここまで**  

@@ -17,37 +17,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 674a7dced019926e6ea07b41641eb42db70c45a0
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 2ec8275b1db692410677276e762f79ccf23548cc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013481"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606232"
 ---
 # <a name="srwlocktrylockexclusive-method"></a>SRWLock::TryLockExclusive メソッド
-取得を試みる、 **SRWLock**オブジェクトの現在または指定された排他モードで**SRWLock**オブジェクト。 呼び出しが成功した場合、呼び出し元のスレッドはロックの所有権を取得します。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-SyncLockExclusive TryLockExclusive();  
-  
-static SyncLockExclusive TryLockExclusive(  
-   _In_ SRWLOCK* lock  
-);  
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *lock*  
- ポインター、 **SRWLock**オブジェクト。  
-  
-## <a name="return-value"></a>戻り値  
- 成功した場合、 **SRWLock**排他モードと呼び出し元のスレッド内のオブジェクトは、ロックの所有権を取得します。 それ以外の場合、 **SRWLock**オブジェクトの状態が無効です。  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>関連項目  
- [SRWLock クラス](../windows/srwlock-class.md)
+
+取得を試みる、 **SRWLock**オブジェクトの現在または指定された排他モードで**SRWLock**オブジェクト。 呼び出しが成功した場合、呼び出し元のスレッドはロックの所有権を取得します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+SyncLockExclusive TryLockExclusive();
+
+static SyncLockExclusive TryLockExclusive(
+   _In_ SRWLOCK* lock
+);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*lock*  
+ポインター、 **SRWLock**オブジェクト。
+
+## <a name="return-value"></a>戻り値
+
+成功した場合、 **SRWLock**排他モードと呼び出し元のスレッド内のオブジェクトは、ロックの所有権を取得します。 それ以外の場合、 **SRWLock**オブジェクトの状態が無効です。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>関連項目
+
+[SRWLock クラス](../windows/srwlock-class.md)

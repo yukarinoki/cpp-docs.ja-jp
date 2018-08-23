@@ -1,5 +1,5 @@
 ---
-title: Platform::guid 値クラス |Microsoft ドキュメント
+title: Platform::guid 値クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c295138d6239ce516b4f322fb5fc479e2235a6be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 102585cf7148923f584591102712278847ee7573
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089452"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601255"
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid 値クラス
 [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) の種類を、Windows ランタイムの型システムで表します。  
@@ -41,11 +41,11 @@ public value struct Guid
 |[operator!=](#operator-not-equal)|非等値演算子。|  
 |[演算子 ()](#operator-call)|Guid を GUID に変換します。|  
   
-### <a name="remarks"></a>コメント  
- Windows の関数 [CoCreateGuid](http://msdn.microsoft.com/library/windows/desktop/ms688568\(v=vs.85\).aspx)を使用して新しい Platform::Guid を作成する例については、「 [WinRT コンポーネント: GUID を作成する方法](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)」を参照してください。  
+### <a name="remarks"></a>Remarks  
+ Windows 関数を使用して新しい platform::guid を生成する方法の例については[CoCreateGuid](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateguid)を参照してください[WinRT コンポーネント: GUID を生成する方法でしょうか。](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)  
   
 ### <a name="requirements"></a>要件  
- **クライアントがサポートされる最小:** Windows 8  
+ **クライアントがサポートされている最小:** Windows 8  
   
  **サポートされているサーバーの最小値:** Windows Server 2012  
   
@@ -124,7 +124,7 @@ Guid 構造体の新しいインスタンスを初期化します。
  GUID の残りの 8 バイト。  
   
 
-## <a name="operator-equality"></a> Guid::operator = = 演算子
+## <a name="operator-equality"></a> Guid::operator 演算子 = =
 2 つの guid を比較します。  
   
 ### <a name="syntax"></a>構文  
@@ -151,7 +151,7 @@ Platform::Guid::operator!=
 
 
 ## <a name="operator-call"></a> Guid::operator() 演算子
-暗黙的に変換、 [GUID 構造体](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx)platform::guid には GUID です。  
+暗黙的に変換を[GUID 構造体](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx)GUID を platform::guid にします。  
   
 ### <a name="syntax"></a>構文  
   

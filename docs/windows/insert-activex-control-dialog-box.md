@@ -18,30 +18,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0201619d463d677eae312d70a543a19887dbdb40
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 6e9f14b696ff67b52c365617682c0cc4c43432cd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011791"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602817"
 ---
 # <a name="insert-activex-control-dialog-box"></a>[ActiveX コントロールの挿入] ダイアログ ボックス
-このダイアログ ボックスを使用する[ダイアログ ボックスに ActiveX コントロールを挿入](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md)を使用しているときに、[ダイアログ エディター](../windows/dialog-editor.md)します。  
-  
-### <a name="activex-control"></a>ActiveX コントロール 
- Active X コントロールの一覧が表示されます。 このダイアログ ボックスからコントロールを挿入するラッパー クラスを生成しません。 ラッパー クラスを必要がある場合を使用して、[クラス ビュー](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)を作成する (詳細については、次を参照してください。[クラスの追加](../ide/adding-a-class-visual-cpp.md))。 このダイアログ ボックスで、Active X コントロールが表示されない場合は、ベンダーの指示に従って、コントロールをインストールしてみてください。  
-  
-### <a name="path"></a>パス  
- ActiveX コントロールが掲載されているファイルを表示します。  
-  
- コントロールを配置することができます、**ツールボックス**ウィンドウを簡単にアクセスします。 詳細については、次を参照してください。[ツールボックスのカスタマイズ ダイアログ ボックス](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb)します。  
-  
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
-  
-## <a name="requirements"></a>要件  
- Win32  
-  
-## <a name="see-also"></a>関連項目  
- [ダイアログ エディター タブ、ツールボックス](../windows/dialog-editor-tab-toolbox.md)   
- [リソース ファイル (Visual Studio)](../windows/resource-files-visual-studio.md)   
- [ダイアログ ボックスのコントロール](../windows/controls-in-dialog-boxes.md)
+
+このダイアログ ボックスを使用する[ダイアログ ボックスに ActiveX コントロールを挿入](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md)を使用しているときに、[ダイアログ エディター](../windows/dialog-editor.md)します。
+
+### <a name="activex-control"></a>ActiveX コントロール
+
+Active X コントロールの一覧が表示されます。 このダイアログ ボックスからコントロールを挿入するラッパー クラスを生成しません。 ラッパー クラスを必要がある場合を使用して、[クラス ビュー](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)を作成する (詳細については、次を参照してください。[クラスの追加](../ide/adding-a-class-visual-cpp.md))。 このダイアログ ボックスで、Active X コントロールが表示されない場合は、ベンダーの指示に従って、コントロールをインストールしてみてください。
+
+### <a name="path"></a>パス
+
+ActiveX コントロールが掲載されているファイルを表示します。
+
+コントロールを配置することができます、**ツールボックス**ウィンドウを簡単にアクセスします。 詳細については、次を参照してください。[ツールボックスのカスタマイズ ダイアログ ボックス](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb)します。
+
+マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
+
+## <a name="requirements"></a>要件
+
+Win32
+
+## <a name="see-also"></a>関連項目
+
+[[ダイアログ エディター] タブ ([ツールボックス])](../windows/dialog-editor-tab-toolbox.md)  
+[リソース ファイル](../windows/resource-files-visual-studio.md)  
+[ダイアログ ボックスのコントロール](../windows/controls-in-dialog-boxes.md)

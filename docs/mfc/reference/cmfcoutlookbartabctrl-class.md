@@ -54,16 +54,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4a6ef84d99ea07775a42fac9f84ead23963f64a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 7b0d2972c7d6b1f7211d5f43fa0248a8b2980f10
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852927"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540698"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 Microsoft Outlook の **ナビゲーション ウィンドウ** と同じ外観を持つタブ コントロールです。  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
+ 詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。    
 ## <a name="syntax"></a>構文  
   
 ```  
@@ -132,7 +132,7 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
   
  [CMFCOutlookBarTabCtrl](../../mfc/reference/cmfcoutlookbartabctrl-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxoutlookbartabctrl.h  
   
 ##  <a name="addcontrol"></a>  CMFCOutlookBarTabCtrl::AddControl  

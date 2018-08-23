@@ -33,15 +33,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2b54d0db22181089a8470c540ccd72f85c717fbe
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e190f81c0097e707830f7ac09c801929ea3e85e9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340294"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572753"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl クラス
-実装を提供、 [ICommandText](https://msdn.microsoft.com/library/ms714914.aspx)インターフェイス。  
+実装を提供、 [ICommandText](/previous-versions/windows/desktop/ms714914\(v=vs.85\))インターフェイス。  
   
 ## <a name="syntax"></a>構文
 
@@ -87,7 +87,7 @@ STDMETHOD(GetCommandText)(GUID * pguidDialect,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[ICommandText::GetCommandText](https://msdn.microsoft.com/library/ms709825.aspx)で、 *OLE DB プログラマーズ リファレンス*します。 *既定で*パラメーターは既定では無視されます。  
+ 参照してください[ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。 *既定で*パラメーターは既定では無視されます。  
 
 ## <a name="setcommandtext"></a> Icommandtextimpl::setcommandtext
 既存のコマンド テキストを置き換えて、コマンド テキストを設定します。  
@@ -100,7 +100,7 @@ STDMETHOD(SetCommandText)(REFGUID rguidDialect,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[icommandtext::setcommandtext](https://msdn.microsoft.com/library/ms709757.aspx)で、 *OLE DB プログラマーズ リファレンス*します。 
+ 参照してください[icommandtext::setcommandtext](/previous-versions/windows/desktop/ms709757\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。 
 
 ## <a name="strcommandtext"></a> Icommandtextimpl::m_strcommandtext
 コマンド テキストの文字列を格納します。  

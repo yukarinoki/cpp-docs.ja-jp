@@ -15,29 +15,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 67a8bf626d2e3f26a2f182f2e1f099f14d29b779
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: b8f00619e716ae0b906714691c652a6854eb8754
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013341"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606730"
 ---
 # <a name="hstringget-method"></a>HString::Get メソッド
-基になる HSTRING ハンドルの値を取得します。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
+
+基になる HSTRING ハンドルの値を取得します。
+
+## <a name="syntax"></a>構文
+
+```cpp
 HSTRING Get() const throw()  
-```  
-  
-## <a name="return-value"></a>戻り値  
- 基になる HSTRING ハンドルの値  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>関連項目  
- [HString クラス](../windows/hstring-class.md)
+```
+
+## <a name="return-value"></a>戻り値
+
+基になる HSTRING ハンドルの値
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>関連項目
+
+[HString クラス](../windows/hstring-class.md)

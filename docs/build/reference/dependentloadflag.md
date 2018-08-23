@@ -1,6 +1,6 @@
 ---
-title: /DEPENDENTLOADFLAG (既定値依存読み込みフラグを設定します)
-description: /DEPENDENTLOADFLAG オプション LoadLibrary を使用して読み込まれた Dll の既定のフラグを設定します。
+title: /DEPENDENTLOADFLAG (既定依存読み込みフラグを設定します)
+description: /DEPENDENTLOADFLAG オプションは、LoadLibrary を使用して読み込まれた Dll の既定のフラグを設定します。
 ms.custom: ''
 ms.date: 05/18/2018
 ms.technology:
@@ -20,16 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a171f3c2edbbbf614a986ff78dd2405e734a1d1
-ms.sourcegitcommit: d1f576a0f59678edc3d93508cf46485138332178
+ms.openlocfilehash: 94f7667d7da8d8e9cd7ef38cb01d0f03b0da82e3
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753711"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42573391"
 ---
-# <a name="dependentloadflag-set-default-dependent-load-flags"></a>/DEPENDENTLOADFLAG (既定値依存読み込みフラグを設定します)
+# <a name="dependentloadflag-set-default-dependent-load-flags"></a>/DEPENDENTLOADFLAG (既定依存読み込みフラグを設定します)
 
-既定負荷フラグのセットが使用されるときに`LoadLibrary`Dll を読み込むために使用します。
+既定の負荷のフラグを設定するときに使用`LoadLibrary`Dll を読み込むために使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -39,36 +39,36 @@ ms.locfileid: "34753711"
 
 |||
 |-|-|
-*loadflags*|10 進数、先行ゼロ付き 8 進数または 16 進数で、先頭の省略可能な"C"スタイル 16 ビット整数値`0x`、すべてに適用する依存読み込みフラグを指定する[LoadLibrary](https://go.microsoft.com/fwlink/p/?LinkID=259187)呼び出しです。 既定値は 0 です。
+*loadflags*|10 進数、先行ゼロの場合は、8 進数または先頭の 16 進数のオプション"C"スタイル 16 ビット整数値`0x`、すべてに適用する依存読み込みフラグを指定する[LoadLibrary](https://go.microsoft.com/fwlink/p/?LinkID=259187)呼び出し。 既定値は 0 です。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-このオプションは、Visual Studio 2017 の新機能は、Windows 10 RS1 およびそれ以降のバージョンで実行中のアプリにのみ適用されます。 アプリを実行している他のオペレーティング システムでは、このオプションが無視されます。
+このオプションは、Visual Studio 2017 の新機能は、Windows 10 RS1 以降で実行されているアプリにのみ適用されます。 このオプションは、アプリを実行するその他のオペレーティング システムで無視されます。
 
-サポートされるオペレーティング システムでは、このオプションがへの呼び出しを変更した結果`LoadLibrary("dependent.dll")`に相当するのに`LoadLibraryEx("dependent.dll", 0, loadflags)`です。 呼び出す[LoadLibraryEx](https://go.microsoft.com/fwlink/p/?LinkID=236091)影響を受けません。 このオプションでは、アプリで読み込まれた Dll に再帰的には適用されません。
+サポートされるオペレーティング システムでは、このオプションがへの呼び出しを変更した効果`LoadLibrary("dependent.dll")`を同等の`LoadLibraryEx("dependent.dll", 0, loadflags)`します。 呼び出す[LoadLibraryEx](https://go.microsoft.com/fwlink/p/?LinkID=236091)は影響を受けません。 このオプションでは、アプリを読み込んだ Dll を再帰的には適用されません。
 
-このフラグは、DLL の間、植える攻撃を防ぐために使用することができます。 たとえば、アプリで使用`LoadLibrary`依存 DLL を読み込むには、攻撃者で使用される検索パスに同じ名前の DLL を植えますでした`LoadLibrary`など、現在のディレクトリ セーフである DLL の検索モードがある場合、システムのディレクトリの前にするチェック可能性があります無効になります。 セーフの DLL 検索モードでは、検索の順序で後で、ユーザーの現在のディレクトリに配置し、Windows XP SP2 およびそれ以降のバージョンでは既定で有効にします。 詳細については、次を参照してください。[ダイナミック リンク ライブラリの検索順序](https://msdn.microsoft.com/library/windows/desktop/ms682586.aspx)です。
+このフラグは、攻撃を仕掛ける DLL を防ぐために使用できます。 たとえば、アプリで使用`LoadLibrary`依存 DLL を読み込むには、攻撃者で使用される検索パスに同じ名前の DLL を工場でした`LoadLibrary`、現在のディレクトリなどセーフ DLL の検索モードがある場合、システムのディレクトリの前にするチェック可能性があります無効になります。 セーフ DLL の検索モードでは、検索の順序で後で、ユーザーの現在のディレクトリに配置し、Windows XP SP2 以降では既定で有効にします。 詳細については、次を参照してください。[ダイナミック リンク ライブラリの検索順序](/windows/desktop/Dlls/dynamic-link-library-search-order)します。
 
-Link オプションを指定する場合`/DEPENDENTLOADFLAG:0xA00`(結合されたフラグの値`LOAD_LIBRARY_SEARCH_APPLICATION_DIR | LOAD_LIBRARY_SEARCH_SYSTEM32`) は、セーフである DLL の検索モードがユーザーのコンピューターで無効な場合でも DLL 検索パスに攻撃者が困難である保護されたディレクトリに制限されます変更します。 使用可能なフラグと、そのシンボリックと numeric 型の値は、次を参照してください。、 *dwFlags*パラメーターの説明を[LoadLibraryEx](https://go.microsoft.com/fwlink/p/?LinkID=236091)です。
+リンク オプションを指定する場合`/DEPENDENTLOADFLAG:0xA00`(結合フラグの値`LOAD_LIBRARY_SEARCH_APPLICATION_DIR | LOAD_LIBRARY_SEARCH_SYSTEM32`)、DLL 検索パスは、攻撃者がより困難である保護されたディレクトリに制限ユーザーのコンピューターに安全な DLL の検索モードが無効の場合でも変更します。 使用可能なフラグと、そのシンボリックと数値の値は、次を参照してください。、 *dwFlags*パラメーターの説明を[LoadLibraryEx](https://go.microsoft.com/fwlink/p/?LinkID=236091)します。
 
 ### <a name="to-set-the-dependentloadflag-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境で DEPENDENTLOADFLAG リンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「 [Visual C プロジェクト プロパティの設定](../../ide/working-with-project-properties.md)です。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **リンカー** > **コマンドライン**プロパティ ページ。
 
-1. オプションを入力して**追加オプション**です。
+1. オプションを入力して**追加オプション**します。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 
-- 「<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>」を参照してください。
+- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>
 
 ## <a name="see-also"></a>関連項目
 
 - [リンカー オプションの設定](setting-linker-options.md)
 - [リンカー オプション](linker-options.md)
-- [DLL を暗黙的にリンクする方法](../linking-an-executable-to-a-dll.md#linking-implicitly)
-- [リンク方式を使い分け](../linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
+- [DLL と暗黙的にリンクする方法](../linking-an-executable-to-a-dll.md#linking-implicitly)
+- [リンク方式の使用](../linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 - [LoadLibrary](https://go.microsoft.com/fwlink/p/?LinkID=259187)
 - [LoadLibraryEx](https://go.microsoft.com/fwlink/p/?LinkID=236091)
-- [ダイナミック リンク ライブラリの検索順序](https://msdn.microsoft.com/library/windows/desktop/ms682586.aspx)
+- [ダイナミック リンク ライブラリの検索順序](/windows/desktop/Dlls/dynamic-link-library-search-order)

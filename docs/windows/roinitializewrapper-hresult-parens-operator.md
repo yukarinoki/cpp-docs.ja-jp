@@ -15,26 +15,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 94c27262e63ba1c428596dbac836e165c24d8538
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: b518fc059e77420788be941ccc98035fb68aa0db
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605686"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592755"
 ---
 # <a name="roinitializewrapperhresult-operator"></a>RoInitializeWrapper::HRESULT() 演算子
-最後のによって生成された HRESULT 値を取得します**RoInitializeWrapper**コンス トラクター。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
+
+最後のによって生成された HRESULT 値を取得します**RoInitializeWrapper**コンス トラクター。
+
+## <a name="syntax"></a>構文
+
+```cpp
 operator HRESULT()  
-```  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>関連項目  
- [HandleT クラス](../windows/handlet-class.md)
+```
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>関連項目
+
+[HandleT クラス](../windows/handlet-class.md)

@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 54435a5035c101f5d868e9a5e831a7ba31fba1ee
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 9430e23c06bdccb05fe7bcadf6c89c4980564421
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646469"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611264"
 ---
 # <a name="activationfactoryactivationfactory-constructor"></a>ActivationFactory::ActivationFactory コンストラクター
-初期化します、 **ActivationFactory**クラス。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-ActivationFactory();  
-```  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** module.h  
-  
- **名前空間:** Microsoft::WRL  
-  
-## <a name="see-also"></a>関連項目  
- [ActivationFactory クラス](../windows/activationfactory-class.md)
+
+初期化します、 **ActivationFactory**クラス。
+
+## <a name="syntax"></a>構文
+
+```cpp
+ActivationFactory();
+```
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** module.h
+
+**名前空間:** Microsoft::WRL
+
+## <a name="see-also"></a>関連項目
+
+[ActivationFactory クラス](../windows/activationfactory-class.md)

@@ -1,5 +1,5 @@
 ---
-title: __shiftright128 |Microsoft ドキュメント
+title: __shiftright128 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 393138916bf29fd9adb5dceb0b8612b576b84e76
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0aa5b4028863ff31084e8d01892a86b990de51fb
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339723"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540448"
 ---
 # <a name="shiftright128"></a>__shiftright128
 **Microsoft 固有の仕様**  
@@ -55,15 +55,15 @@ unsigned __int64 __shiftright128(
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__shiftright128`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__shiftright128`|X64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `Shift` の値は常にモジュロ 64 です。このため、たとえば `__shiftright128(0, 1, 64)` をコールすると、上位部分が `0` ビット右にシフトされ、下位部分である `0` が返されます。`1` ではありません。  
   
 ## <a name="example"></a>例  
- 例については、次を参照してください。 [_ _shiftleft128](../intrinsics/shiftleft128.md)です。  
+ 例については、次を参照してください。 [_ _shiftleft128](../intrinsics/shiftleft128.md)します。  
   
 **Microsoft 固有の仕様はここまで**  
   

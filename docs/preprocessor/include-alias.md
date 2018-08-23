@@ -1,5 +1,5 @@
 ---
-title: include_alias |Microsoft ドキュメント
+title: include_alias |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,25 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84e09b51d6f234bdc17353c358e378f18e153567
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 26e59888a26b5f71b697e398e81b16012dd35e3a
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33838931"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541411"
 ---
 # <a name="includealias"></a>include_alias
 
-指定する*short_filename*のエイリアスとして使用される*long_filename*です。
+指定します*short_filename*がエイリアスとして使用される*long_filename*します。
 
 ## <a name="syntax"></a>構文
 
 > #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias("*long_filename*", "*short_filename*")  
 > #<a name="pragma-includealiaslongfilename-shortfilename"></a>プラグマ include_alias (*long_filename*、 *short_filename*)
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-一部のファイル システムでは、FAT ファイル システムの 8.3 制限よりも長いヘッダー ファイル名が許可されます。 長いヘッダー ファイル名の最初の 8 文字は一意でない可能性があるため、コンパイラは、長い名前を単純に 8.3 形式に切り詰めることはできません。 コンパイラが検出されるたびに、 *long_filename* 、文字列を置き換える*short_filename*、ヘッダー ファイルを検索し、 *short_filename*代わりにします。 このプラグマは、対応する `#include` ディレクティブよりも前に記述する必要があります。 例えば:
+一部のファイル システムでは、FAT ファイル システムの 8.3 制限よりも長いヘッダー ファイル名が許可されます。 長いヘッダー ファイル名の最初の 8 文字は一意でない可能性があるため、コンパイラは、長い名前を単純に 8.3 形式に切り詰めることはできません。 たびに、コンパイラが検出されると、 *long_filename* 、文字列を置き換える*short_filename*、ヘッダー ファイルの検索と*short_filename*代わりにします。 このプラグマは、対応する `#include` ディレクティブよりも前に記述する必要があります。 例えば:
 
 ```cpp
 // First eight characters of these two files not unique.
@@ -50,7 +50,7 @@ ms.locfileid: "33838931"
 #include "GraphicsMenu.h"
 ```
 
-検索するエイリアスは、大文字/小文字、スペル、および二重引用符や山かっこの使い方が、指定と正確に一致する必要があります。 **Include_alias**プラグマが、ファイル名に一致する単純な文字列を実行します。 その他のファイル名の検証は実行されません。 たとえば、次のようなディレクティブがあるとします。
+検索するエイリアスは、大文字/小文字、スペル、および二重引用符や山かっこの使い方が、指定と正確に一致する必要があります。 **Include_alias**プラグマは、ファイル名に一致する単純な文字列を実行します。 その他のファイル名の検証は実行されません。 たとえば、次のようなディレクティブがあるとします。
 
 ```cpp
 #pragma include_alias("mymath.h", "math.h")
@@ -58,7 +58,7 @@ ms.locfileid: "33838931"
 #include "sys/mymath.h"
 ```
 
-ヘッダー ファイル文字列が正確に一致しないため、エイリアシング (置換) は実行されません。 /Yu および/Yc コンパイラ オプションで、引数として使用されるヘッダー ファイル名も、または**hdrstop**プラグマを置き換えられません。 たとえば、ソース ファイルに次のディレクティブが含まれている場合、
+ヘッダー ファイル文字列が正確に一致しないため、エイリアシング (置換) は実行されません。 引数として使用されるヘッダー ファイル名も、`/Yu`と`/Yc`コンパイラ オプション、または`hdrstop`プラグマを置き換えられません。 たとえば、ソース ファイルに次のディレクティブが含まれている場合、
   
 ```cpp
 #include <AppleSystemHeaderStop.h>
@@ -77,7 +77,7 @@ ms.locfileid: "33838931"
 #include <stdio.h>
 ```
 
-二重引用符で囲んだファイル名と山かっこで囲んだファイル名を混同しないでください。 たとえば、前の 2 つを指定 **#pragma include_alias**ディレクティブ、コンパイラ、次を置換実行しない`#include`ディレクティブ。
+二重引用符で囲んだファイル名と山かっこで囲んだファイル名を混同しないでください。 たとえば、前の 2 つを指定`#pragma include_alias`ディレクティブ、コンパイラでは、次を置換実行しない`#include`ディレクティブ。
 
 ```cpp
 #include <api.h>
@@ -90,7 +90,7 @@ ms.locfileid: "33838931"
 #pragma include_alias(<header.h>, "header.h")  // Error
 ```
 
-ファイル名がエラー メッセージ、または、定義済みの値として報告されることに注意してください **&#95;&#95;ファイル&#95;&#95;** 置換が実行された後、マクロは、ファイルの名前。 たとえば、次のディレクティブの後に、出力を参照してください。
+ファイル名がエラー メッセージ、または定義済みの値として報告されることに注意してください。`__FILE__`置換が実行された後、マクロは、ファイルの名前。 たとえば、次のディレクティブの後に、出力を参照してください。
 
 ```cpp
 #pragma include_alias( "VeryLongFileName.H", "myfile.h" )

@@ -1,5 +1,5 @@
 ---
-title: _InterlockedCompareExchange の組み込み関数 |Microsoft ドキュメント
+title: _InterlockedCompareExchange の組み込み関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -58,12 +58,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b0fc52585171df740f70e12d81d849e3726dcd7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7eff5cab57c1288af1f6e1109fae458c35e0fa7b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339184"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611384"
 ---
 # <a name="interlockedcompareexchange-intrinsic-functions"></a>_InterlockedCompareExchange の組み込み関数
 **Microsoft 固有の仕様**  
@@ -202,15 +202,15 @@ __int64 _InterlockedCompareExchange64_rel(
   
 |組み込み|アーキテクチャ|ヘッダー|  
 |---------------|------------------|------------|  
-|`_InterlockedCompareExchange`, `_InterlockedCompareExchange8`, `_InterlockedCompareExchange16`, `_InterlockedCompareExchange64`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_InterlockedCompareExchange`, `_InterlockedCompareExchange8`, `_InterlockedCompareExchange16`, `_InterlockedCompareExchange64`|x86、ARM、x64|\<intrin.h>|  
 |`_InterlockedCompareExchange_acq`, `_InterlockedCompareExchange_rel`, `_InterlockedCompareExchange8_acq`, `_InterlockedCompareExchange8_nf`, `_InterlockedCompareExchange8_rel`,`_InterlockedCompareExchange16_acq`, `_InterlockedCompareExchange16_nf`, `_InterlockedCompareExchange16_rel`, `_InterlockedCompareExchange64_acq`, `_InterlockedCompareExchange64_nf`, `_InterlockedCompareExchange64_rel`,|ARM|\<intrin.h>|  
-|`_InterlockedCompareExchange_np`、`_InterlockedCompareExchange16_np`、`_InterlockedCompareExchange64_np`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
-|`_InterlockedCompareExchange_HLEAcquire`, `_InterlockedCompareExchange_HLERelease`, `_InterlockedCompareExchange64_HLEAcquire`, `_InterlockedCompareExchange64_HLERelease`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
+|`_InterlockedCompareExchange_np`、`_InterlockedCompareExchange16_np`、`_InterlockedCompareExchange64_np`|X64|\<intrin.h>|  
+|`_InterlockedCompareExchange_HLEAcquire`, `_InterlockedCompareExchange_HLERelease`, `_InterlockedCompareExchange64_HLEAcquire`, `_InterlockedCompareExchange64_HLERelease`|x86、x64|\<immintrin.h>|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `_InterlockedCompareExchange` は、`Destination` 値と `Comparand` 値のアトミックな比較を実行します。 `Destination` 値が `Comparand` 値と等しい場合、`Exchange` 値は `Destination` で指定されたアドレスに格納されます。 それ以外の場合は演算が実行されません。  
   
- `_InterlockedCompareExchange` win32 のコンパイラ組み込みサポートを提供[!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] [InterlockedCompareExchange](http://msdn.microsoft.com/library/ms683560.aspx)関数。  
+ `_InterlockedCompareExchange` Win32 Windows SDK のコンパイラ組み込みサポートを提供します。 [InterlockedCompareExchange](/windows/desktop/api/winbase/nf-winbase-interlockedcompareexchange)関数。  
   
  `_InterlockedCompareExchange` には、格納するデータ型、およびプロセッサ固有の取得または解放のセマンティクスを使用するかどうかに基づき、異なるいくつかの種類があります。  
   
@@ -441,6 +441,6 @@ int main(
 ## <a name="see-also"></a>関連項目  
  [_InterlockedCompareExchange128](../intrinsics/interlockedcompareexchange128.md)   
  [_InterlockedCompareExchangePointer の組み込み関数](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)   
- [コンパイラ組み込み関数](../intrinsics/compiler-intrinsics.md)   
+ [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)   
  [キーワード](../cpp/keywords-cpp.md)   
  [x86 コンパイラとの競合](../build/conflicts-with-the-x86-compiler.md)

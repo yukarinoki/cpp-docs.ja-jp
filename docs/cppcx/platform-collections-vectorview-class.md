@@ -1,5 +1,5 @@
 ---
-title: Platform::Collections::VectorView クラス |Microsoft ドキュメント
+title: Platform::Collections::VectorView クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,16 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 937342c340b085f2e2bdeef8ed7df21dae826152
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0020937bae5f6392c7d9e5e8daf22f3cc4e6a31
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092911"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584107"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView クラス
 インデックスによって個別にアクセスできるオブジェクトのシーケンシャル コレクションの読み取り専用ビューを表します。 コレクション内の各オブジェクトの型は、テンプレート パラメーターによって指定されます。  
@@ -44,7 +44,7 @@ template <typename T, typename E>
  `E`  
  `T`型の値との等値性をテストするための二項述語を指定します。 既定値は `std::equal_to<T>` です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `VectorView`クラスが実装する、 [Windows::Foundation::Collections::IVectorView\<T >](http://go.microsoft.com/fwlink/p/?LinkId=262411)インターフェイス、および標準テンプレート ライブラリ反復子をサポートします。  
   
 ### <a name="members"></a>メンバー  
@@ -87,7 +87,7 @@ virtual Windows::Foundation::Collections::IIterator<T>^
 ### <a name="return-value"></a>戻り値  
  VectorView 内の最初の要素を指定する反復子。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  First() によって返される反復子を保持する便利な方法で宣言された変数に戻り値を割り当てるには、**自動**推論キーワードを入力します。 たとえば、`auto x = myVectorView->First();` のようにします。  
   
 
@@ -109,7 +109,7 @@ T GetAt(
  VectorView オブジェクト内の特定の要素を指定する、0 から始まる符号なし整数。  
   
 ### <a name="return-value"></a>戻り値  
- `index` パラメーターで指定された要素。 要素の型が、VectorView テンプレート パラメーターで指定された*T*です。  
+ `index` パラメーターで指定された要素。 要素の型が、VectorView テンプレート パラメーターで指定された*T*します。  
   
 
 
@@ -131,7 +131,7 @@ virtual unsigned int GetMany(
  取得する項目の 0 から始まるインデックス。  
   
  `dest`  
- この操作の完了時、項目を開始位置で指定した要素の配列`startIndex`と VectorView 内の最後の要素で終了します。  
+ ときにこの操作が完了したらで指定した要素から開始する項目の配列`startIndex`と VectorView 内の最後の要素で終了します。  
   
 ### <a name="return-value"></a>戻り値  
  取得した項目数。  
@@ -242,7 +242,7 @@ VectorView(
  現在の VectorView を初期化するために使用されるオブジェクトのコレクションの型。  
   
  il  
- A [std::initializer_list](../standard-library/initializer-list-class.md)要素は、VectorView を初期化するために使用されます。  
+ A [std::initializer_list](../standard-library/initializer-list-class.md)要素が、VectorView を初期化するために適用されます。  
   
  `N`  
  現在の VectorView を初期化するために使用されるオブジェクトのコレクションの要素数。  
@@ -254,7 +254,7 @@ VectorView(
  現在の VectorView の各要素を初期化するために使用される値。  
   
  `v`  
- [Lvalue と Rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md)を[std::vector](../standard-library/vector-class.md)現在の VectorView を初期化するために使用されます。  
+ [Lvalues と Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)を[std::vector](../standard-library/vector-class.md)現在の VectorView を初期化するために使用されます。  
   
  `ptr`  
  現在の VectorView を初期化するために使用される `std::vector` へのポインター。  
@@ -266,14 +266,14 @@ VectorView(
  A [std::array](../standard-library/array-class-stl.md)現在の VectorView を初期化するために使用されるオブジェクト。  
   
  `first`  
- 現在の VectorView を初期化するために使用されるオブジェクトのシーケンスの最初の要素。 型`first`により渡される*完全転送を行います*です。 詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。  
+ 現在の VectorView を初期化するために使用されるオブジェクトのシーケンスの最初の要素。 型`first`によって渡される*完全転送*します。 詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。  
   
  `last`  
- 現在の VectorView を初期化するために使用されるオブジェクトのシーケンスの最後の要素。 型`last`により渡される*完全転送を行います*です。 詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。  
+ 現在の VectorView を初期化するために使用されるオブジェクトのシーケンスの最後の要素。 型`last`によって渡される*完全転送*します。 詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。  
   
 
 
   
 ## <a name="see-also"></a>関連項目  
  [プラットフォーム Namespace](platform-namespace-c-cx.md)   
- [C++ での Windows ランタイム コンポーネントを作成します。](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
+ [C++ で Windows ランタイム コンポーネントの作成](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

@@ -1,5 +1,5 @@
 ---
-title: C/C++ プログラムのビルド |Microsoft ドキュメント
+title: C/C++ プログラムのビルド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,16 +21,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2894c503dde89668bfb90b615c7b0966fe5fe2e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2fa07308d04d14395b0ca9773e2a0c81ed0c2bc2
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360976"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572399"
 ---
 # <a name="building-cc-programs"></a>C/C++ プログラムのビルド
 
-Visual C++ プロジェクトは、Visual Studio またはコマンド ラインでビルドできます。 Visual Studio IDE を使用して[MSBuild](../build/msbuild-visual-cpp.md)プロジェクトおよびソリューションをビルドします。 コマンド ラインでは、C/C++ コンパイラ (cl.exe) と リンカー (link.exe) を使用して単純なプロジェクトをビルドできます。 コマンドラインでより複雑なプロジェクトを作成するには、MSBuild を使用することができますか[NMAKE](../build/nmake-reference.md)です。 使用する方法の概要についての[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]プロジェクトおよびソリューションをビルドするを参照してください。[コンパイルとビルド](/visualstudio/ide/compiling-and-building-in-visual-studio)です。  
+Visual C++ プロジェクトは、Visual Studio またはコマンド ラインでビルドできます。 Visual Studio IDE を使用して[MSBuild](../build/msbuild-visual-cpp.md)プロジェクトおよびソリューションを構築します。 コマンド ラインでは、C/C++ コンパイラ (cl.exe) と リンカー (link.exe) を使用して単純なプロジェクトをビルドできます。 コマンドラインより複雑なプロジェクトを作成するには、MSBuild を使用することができますか[NMAKE](../build/nmake-reference.md)します。 Visual Studio を使用して、プロジェクトおよびソリューションを構築する方法の概要については、次を参照してください。[のコンパイルとビルド](/visualstudio/ide/compiling-and-building-in-visual-studio)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
 

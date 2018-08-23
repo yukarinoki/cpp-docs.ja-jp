@@ -40,16 +40,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4588829b3ec1d348405be925a75c493f4e8594b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 898281e0652345f22c63076cf4b0a73294faaf04
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397754"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572111"
 ---
 # <a name="endthread-endthreadex"></a>_endthread、_endthreadex
 
-スレッドを終了します。**_endthread**によって作成されるスレッドが終了 **_beginthread**と **_endthreadex**によって作成されるスレッドが終了 **_beginthreadex**.
+スレッドを終了します。**_endthread**によって作成されるスレッドを終了させる **_beginthread**と **_endthreadex**によって作成されるスレッドを終了させる **_beginthreadex**.
 
 ## <a name="syntax"></a>構文
 
@@ -64,19 +64,19 @@ void _endthreadex(
 
 *retval*スレッドの終了コード。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-呼び出すことができます **_endthread**または **_endthreadex**明示的にスレッドを終了しますただし、 **_endthread**または **_endthreadex**は呼び出されます。パラメーターとして渡されたルーチンからスレッドが戻るときに自動的に **_beginthread**または **_beginthreadex**です。 呼び出してスレッドを終了**endthread**または **_endthreadex**確実にスレッドに割り当てられたリソースを解放します。
-
-> [!NOTE]
-> Libcmt.lib にリンクする実行可能ファイルでは、Win32 の [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659.aspx) API を呼び出さないでください。呼び出すと、割り当てられたリソースをランタイム システムで再利用することができなくなります。 **_endthread**と **_endthreadex**割り当てられているスレッド リソースを解放し、呼び出す**ExitThread**です。
-
-**_endthread**スレッド ハンドルを自動的に終了します。 (この動作は、Win32 **ExitThread** API です)。したがって、使用 **_beginthread**と **_endthread**、Win32 の呼び出しを明示的に、スレッド ハンドルを終了しないでください[CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API です。
-
-などの Win32 **ExitThread** API、 **_endthreadex**スレッド ハンドルを終了しません。 したがって、使用 **_beginthreadex**と **_endthreadex**、Win32 を呼び出すことによって、スレッド ハンドルを閉じる必要があります**CloseHandle** API です。
+呼び出すことができます **_endthread**または **_endthreadex**明示的にスレッドを終了しますただし、 **_endthread**または **_endthreadex**が呼び出されます。パラメーターとして渡されたルーチンからスレッドが戻るときに自動的に **_beginthread**または **_beginthreadex**します。 呼び出しのスレッドを終了**endthread**または **_endthreadex**確実にスレッドに割り当てられたリソースの解放できます。
 
 > [!NOTE]
-> **_endthread**と **_endthreadex**により保留中の C++ デストラクターは呼び出されないスレッドにします。
+> Libcmt.lib にリンクする実行可能ファイルでは、Win32 の [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) API を呼び出さないでください。呼び出すと、割り当てられたリソースをランタイム システムで再利用することができなくなります。 **_endthread**と **_endthreadex**割り当てられているスレッド リソースを解放し、呼び出す**ExitThread**します。
+
+**_endthread**スレッド ハンドルを自動的に終了します。 (この動作は、Win32 **ExitThread** API です)。したがって、使用 **_beginthread**と **_endthread**、Win32 を呼び出すことによって明示的にスレッド ハンドルを終了しないでください[CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API。
+
+などの Win32 **ExitThread** API、 **_endthreadex**スレッド ハンドルを終了できません。 したがって、使用 **_beginthreadex**と **_endthreadex**、Win32 を呼び出してスレッド ハンドルを閉じる必要があります**CloseHandle** API。
+
+> [!NOTE]
+> **_endthread**と **_endthreadex**により呼び出されないスレッドで保留中の C++ デストラクター。
 
 ## <a name="requirements"></a>要件
 

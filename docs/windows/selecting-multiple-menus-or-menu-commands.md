@@ -17,24 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 02293fce154fa9c4c98c583de02e8967f4d3957b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: a90aab0fae3edbb54dfdd9176ffe47a18ad1796a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020214"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596942"
 ---
 # <a name="selecting-multiple-menus-or-menu-commands"></a>複数のメニューまたはメニュー コマンドの選択
-複数のメニュー名またはメニュー コマンドを選択して、プロパティの削除や変更などの一括操作を実行できます。  
-  
-### <a name="to-select-multiple-menu-commands"></a>複数のメニュー コマンドを選択するには  
-  
-1.  押しながら、 **Ctrl**キー、メニューまたはサブメニューのコマンドをクリックします。  
-  
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。  
-  
-## <a name="requirements"></a>要件  
- Win32  
-  
-## <a name="see-also"></a>関連項目  
- [メニュー エディター](../windows/menu-editor.md)
+
+複数のメニュー名またはメニュー コマンドを選択して、プロパティの削除や変更などの一括操作を実行できます。
+
+### <a name="to-select-multiple-menu-commands"></a>複数のメニュー コマンドを選択するには
+
+1. 押しながら、 **Ctrl**キー、メニューまたはサブメニューのコマンドをクリックします。
+
+マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。
+
+## <a name="requirements"></a>要件
+
+Win32
+
+## <a name="see-also"></a>関連項目
+
+[メニュー エディター](../windows/menu-editor.md)

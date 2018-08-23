@@ -1,7 +1,7 @@
 ---
 title: エクスポート |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/20/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c642a623e76a9e1344a90efd4f0a47ad195c553e
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: f6645ee4c890dab65cde8eab5dc18df1c31082c1
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39322190"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42571536"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -49,11 +49,18 @@ EXPORTS
    func2=func1
 ```
 
-エクスポートする名前が他のモジュールからの場合は、エクスポートの名前、DLL を使用して指定*other_module.exported_name*します。 たとえば、DLL で関数 `other_module.func1` をエクスポートし、呼び出し元がそれを `func2` として使用する場合は、次のように指定します。
+エクスポートする名前が他のいくつかのモジュールからの場合は、エクスポートの名前、DLL を使用して指定*other_module.exported_name*します。 たとえば、DLL で関数 `other_module.func1` をエクスポートし、呼び出し元がそれを `func2` として使用する場合は、次のように指定します。
 
 ```DEF
 EXPORTS
    func2=other_module.func1
+```
+
+序数でエクスポートする別のモジュールからエクスポートする名前がある場合の指定を使用して、エクスポートの DLL で序数に基づく*other_module。 #ordinal_number*します。 たとえば、DLL から他のモジュールでは序数の 42 し、呼び出し元として使用する関数のエクスポート`func2`、指定します。
+
+```DEF
+EXPORTS
+   func2=other_module.#42
 ```
 
 Visual C コンパイラでは、C++ の関数の名前の装飾を使用するため、装飾名 internal_name を使用して、いずれか、ソース コードでは、extern"C"を使用して、エクスポートされた関数を定義する必要があります。 コンパイラを使用する C 関数を装飾も、 [_ _stdcall](../../cpp/stdcall.md)呼び出し規約をアンダー スコア (_) プレフィックスとから成る、サフィックスを持つ、アット マーク (@) 後に (10 進数) で、引数リスト内のバイト数。  

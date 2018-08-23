@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e45a5c97f0f25ed0bcb704b584de645bce18cb9
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: e67dec2474d89e3daccf0bc0e59332c79080cc99
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338605"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540090"
 ---
 # <a name="cdbexception-class"></a>CDBException クラス
 データベース クラスから発生する例外状態を表現します。  
@@ -67,7 +67,7 @@ class CDBException : public CException
   
  `CDBException`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdb.h  
   
 ##  <a name="m_nretcode"></a>  CDBException::m_nRetCode  
@@ -132,7 +132,7 @@ class CDBException : public CException
 ### <a name="remarks"></a>Remarks  
  文字列が、フォーム"の状態: %s、ネイティブ: %ld 配信元: %s"での順序で、書式コードが記述する値を置き換え。  
   
--   SQLSTATE、5 文字のエラー コードを含む null で終わる文字列が返される、 *szSqlState* ODBC 関数のパラメーター`SQLError`します。 SQLSTATE 値は、付録 A に記載されて[ODBC エラー コード](https://msdn.microsoft.com/library/ms714687.aspx)の*ODBC プログラマ リファレンス*します。 例:"S0022"。  
+-   SQLSTATE、5 文字のエラー コードを含む null で終わる文字列が返される、 *szSqlState* ODBC 関数のパラメーター`SQLError`します。 SQLSTATE 値は、付録 A に記載されて[ODBC エラー コード](/previous-versions/windows/desktop/ms714687\(v=vs.85\))の*ODBC プログラマ リファレンス*します。 例:"S0022"。  
   
 -   データ ソースに固有のネイティブ エラー コードが返される、 *pfNativeError*のパラメーター、`SQLError`関数。 例: 207 します。  
   
@@ -140,7 +140,7 @@ class CDBException : public CException
   
  フレームワークは、エラー文字列を解釈し、そのコンポーネントには、`m_strStateNativeOrigin`場合`m_strStateNativeOrigin`情報が含まれています、1 つ以上のエラー、エラーが改行で区切られました。 フレームワークは、英数字のエラー テキストを`m_strError`します。  
   
- この文字列を構成するために使用するコードの詳細については、次を参照してください。、 [SQLError](https://msdn.microsoft.com/library/ms716312.aspx)で機能、 *ODBC プログラマ リファレンス*します。  
+ この文字列を構成するために使用するコードの詳細については、次を参照してください。、 [SQLError](/previous-versions/windows/desktop/ms716312\(v=vs.85\))で機能、 *ODBC プログラマ リファレンス*します。  
   
 ### <a name="example"></a>例  
   ODBC: から"の状態: S0022、ネイティブ: 207、配信元: [Microsoft] [ODBC SQL Server Driver] [SQL Server] の無効な列名 'ColName'"  

@@ -1,5 +1,5 @@
 ---
-title: Platform::intptr 値クラス |Microsoft ドキュメント
+title: Platform::intptr 値クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -13,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::IntPtr Struct
 ms.assetid: 6c0326e8-edfd-4e53-a963-240b845dcde8
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b54facc94be3f43b500e38371e0eba9e00d130a4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a97d77f0b84366c83f09f6a6c72afe1bbb25dc6d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088155"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612130"
 ---
 # <a name="platformintptr-value-class"></a>Platform::IntPtr 値クラス
 サイズがプラットフォームに特有の (32 ビットまたは 64 ビット)、符号付きポインターまたはハンドルを表します。  
@@ -43,7 +43,7 @@ public value struct IntPtr
 |[IntPtr::ToInt32](#toint32)|現在の IntPtr を 32 ビット整数に変換します。|  
   
 ### <a name="requirements"></a>要件  
- **クライアントがサポートされる最小:** Windows 8  
+ **クライアントがサポートされている最小:** Windows 8  
   
  **サポートされているサーバーの最小値:** Windows Server 2012  
   
@@ -61,7 +61,7 @@ IntPtr( __int64 handle-or-pointer );   IntPtr( void* value );   IntPtr( int 32-b
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- value  
+ 値  
  64 ビットのハンドルまたはポインター、または 64 ビット値へのポインター、または 64 ビット値に変換できる 32 ビット値。  
   
 

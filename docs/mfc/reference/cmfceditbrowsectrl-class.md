@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d00488a7e9a87116317aec35c82b73b40077d8c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ec3bfc550843675673782ea92ff7fad6eae2967b
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854009"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42540723"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl クラス
 `CMFCEditBrowseCtrl`クラスは、必要に応じて、[参照] ボタンを格納する編集可能なテキスト ボックスには、編集参照コントロールをサポートしています。 ユーザーが参照ボタンをクリックすると、このコントロールはカスタム動作を実行するか、ファイル参照またはフォルダー参照を含む標準ダイアログ ボックスを表示します。  
@@ -127,7 +127,7 @@ class CMFCEditBrowseCtrl : public CEdit
  [!code-cpp[NVC_MFC_NewControls#6](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#7](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_2.cpp)]  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxeditbrowsectrl.h  
   
 ##  <a name="enablebrowsebutton"></a>  :Enablebrowsebutton  
@@ -174,7 +174,7 @@ void EnableFileBrowseButton(
 ### <a name="remarks"></a>Remarks  
  参照機能付きコントロールがファイル参照モードのときにユーザーが [参照] ボタンをクリックすると、コントロールに標準的なファイル選択のダイアログ ボックスが表示されます。  
   
- 使用可能なフラグの一覧については、次を参照してください。 [OPENFILENAME 構造体](https://msdn.microsoft.com/library/ms646839.aspx)します。  
+ 使用可能なフラグの一覧については、次を参照してください。 [OPENFILENAME 構造体](/windows/desktop/api/commdlg/ns-commdlg-tagofna)します。  
   
 ##  <a name="enablefolderbrowsebutton"></a>  CMFCEditBrowseCtrl::EnableFolderBrowseButton  
  現在の参照機能付きコントロールで参照ボタンを表示し、コントロールを*フォルダーの参照*モード。  

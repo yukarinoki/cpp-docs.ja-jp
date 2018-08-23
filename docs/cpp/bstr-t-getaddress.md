@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaa3921d0f1f89df11cf5e3809c9e90e4a03dd3b
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 680588a4c045c20001b46b35c67d28e366afc52d
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408467"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42571476"
 ---
 # <a name="bstrtgetaddress"></a>_bstr_t::GetAddress
 **Microsoft 固有の仕様**  
@@ -38,7 +38,7 @@ BSTR* GetAddress( );
  `BSTR` でラップされた `_bstr_t` へのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- **GetAddress**すべて影響`_bstr_t`オブジェクトをその共有を`BSTR`します。 1 つ以上`_bstr_t`を共有できる、`BSTR`コピー コンス トラクターを使用してとおよび**演算子 =** します。  
+ **GetAddress**すべて影響`_bstr_t`オブジェクトをその共有を`BSTR`します。 1 つ以上`_bstr_t`を共有できる、`BSTR`コピー コンス トラクターを使用して、**演算子 =**。  
   
 ## <a name="example"></a>例  
  参照してください[_bstr_t::assign](../cpp/bstr-t-assign.md)の例を使用して、 **GetAddress**します。  

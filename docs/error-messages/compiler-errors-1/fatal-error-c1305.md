@@ -1,5 +1,5 @@
 ---
-title: 致命的なエラー C1305 |Microsoft ドキュメント
+title: 致命的なエラー C1305 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cb1cf19d0fc4152fbb458d684972bb5a4418f37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 90d73003d9f19eb41f9eb34cd47c7b90b1e6164f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227148"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539058"
 ---
 # <a name="fatal-error-c1305"></a>致命的なエラー C1305
 プロファイル データベース 'pgd_fil' は異なるアーキテクチャ用です。  
   
- 渡された別のプラットフォーム用に/LTCG:PGINSTRUMENT 操作から生成された .pgd ファイル[/LTCG:PGOPTIMIZE](../../build/reference/ltcg-link-time-code-generation.md)です。 [プロファイル ガイド付き最適化の](../../build/reference/profile-guided-optimizations.md)x86 のものがあると[!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]プラットフォームです。 ただし、あるプラットフォーム用に /LTCG:PGINSTRUMENT 操作によって生成された .pgd ファイルを、別のプラットフォームの /LTCG:PGOPTIMIZE への入力として使用することはできません。  
+ 渡された別のプラットフォーム用に/LTCG:PGINSTRUMENT 操作から生成された .pgd ファイル[/LTCG:PGOPTIMIZE](../../build/reference/ltcg-link-time-code-generation.md)します。 [プロファイル ガイド付き最適化の](../../build/reference/profile-guided-optimizations.md)x86 および x64 プラットフォームで利用できます。 ただし、あるプラットフォーム用に /LTCG:PGINSTRUMENT 操作によって生成された .pgd ファイルを、別のプラットフォームの /LTCG:PGOPTIMIZE への入力として使用することはできません。  
   
  このエラーを解決するには、/LTCG:PGINSTRUMENT で作成された .pgd ファイルを同じプラットフォームの /LTCG:PGOPTIMIZE に渡します。

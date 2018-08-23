@@ -1,5 +1,5 @@
 ---
-title: -SAFESEH (イメージは、安全な例外ハンドラーを持つ) |Microsoft ドキュメント
+title: -SAFESEH (イメージは、安全な例外ハンドラーを持つ) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,33 +18,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54d13e6922650f0193d4bbc3469d4acf25904234
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9156fd0d4d0433cfb975c242bc87008471bc4723
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377910"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573092"
 ---
 # <a name="safeseh-image-has-safe-exception-handlers"></a>/SAFESEH (安全な例外ハンドラーがあるイメージ)
 ```  
 /SAFESEH[:NO]  
 ```  
   
- ときに **/SAFESEH**が指定されている、リンカーはイメージの安全な例外ハンドラーのテーブルも生成できる場合、イメージ生成のみです。 このテーブルは、どの例外ハンドラーがイメージに対して有効であるかをオペレーティング システムに指定します。  
+ ときに **/SAFESEH**リンカーはイメージの安全な例外ハンドラーのテーブルも生成できる場合、イメージ生成のみを指定します。 このテーブルは、どの例外ハンドラーがイメージに対して有効であるかをオペレーティング システムに指定します。  
   
- **/SAFESEH**のみが有効では x86 のものをリンクするときのターゲットです。 **/SAFESEH**例外ハンドラーが既にあるプラットフォームでサポートされていません。 たとえば、[!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] および ARM では、すべての例外ハンドラーは PDATA にコメントされています。 ML64.exe には、コメントを追加して SEH 情報 (XDATA および PDATA) をイメージに出力する機能をサポートしているため、ml64 関数からのアンワインドが可能です。 参照してください[x64 用 MASM (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)詳細についてはします。  
+ **/SAFESEH**は x86 をリンクするときにのみ有効なターゲット。 **/SAFESEH**例外ハンドラーが既に存在するプラットフォームはサポートされていません。 たとえば、x64 と ARM では、すべての例外ハンドラーは PDATA にコメントされています。 ML64.exe には、コメントを追加して SEH 情報 (XDATA および PDATA) をイメージに出力する機能をサポートしているため、ml64 関数からのアンワインドが可能です。 参照してください[x64 用 MASM (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)詳細についてはします。  
   
- 場合 **/SAFESEH**が指定されていない、リンカーはイメージを生成および安全な例外ハンドラーのテーブルのすべてのモジュールに安全な例外処理機能との互換性がある場合。 いずれかのモジュールに安全な例外処理機能との互換性がない場合、生成されるイメージには安全な例外ハンドラーのテーブルが含まれません。 場合[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) WINDOWSCE または efi _ *、オプションのいずれかを示すサブシステムを行えるよう、リンカーはイメージおよび安全な例外ハンドラーのテーブルを生成を試行しません情報を使用します。  
+ 場合 **/SAFESEH**が指定されていない、すべてのモジュールに安全な例外処理機能と互換性がある場合、リンカーで安全な例外ハンドラーのテーブルを使用したイメージは生成します。 いずれかのモジュールに安全な例外処理機能との互換性がない場合、生成されるイメージには安全な例外ハンドラーのテーブルが含まれません。 場合[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) WINDOWSCE または efi _ *、オプションのいずれかを指定するサブシステムのどちらでもないことと、リンカーはイメージと安全な例外のハンドラーのテーブルを生成を試行しません情報を使用します。  
   
- 場合 **/SAFESEH:NO**が指定されている、リンカーは場合でも、すべてのモジュールが安全な例外処理機能と互換性のある安全な例外ハンドラーのテーブルを使用してイメージを生成しません。  
+ 場合 **/SAFESEH:NO**を指定すると、すべてのモジュールは、安全な例外処理機能と互換性がある場合でも、リンカーを安全な例外ハンドラーのテーブルを持つイメージ生成しません。  
   
  リンカーがイメージを生成できない最も一般的な理由は、リンカーへの入力ファイル (モジュール) の 1 つ以上に、安全な例外ハンドラー機能との互換性がないためです。 モジュールに安全な例外ハンドラーとの互換性がない一般的な理由は、以前のバージョンの Visual C++ のコンパイラでそのモジュールが作成されているためです。  
   
- 使用して、構造化例外ハンドラーとして関数を登録することも[します。SAFESEH](../../assembler/masm/dot-safeseh.md)です。  
+ 使用して、構造化例外ハンドラーとして関数を登録することも[します。SAFESEH](../../assembler/masm/dot-safeseh.md)します。  
   
  既存のバイナリを、安全な例外ハンドラーがある、または例外ハンドラーがないものとしてマークすることはできません。安全な例外処理の情報は、ビルド時に追加する必要があります。  
   
- リンカーが安全な例外ハンドラーのテーブルを生成できるかどうかは、C ランタイム ライブラリを使用しているアプリケーションによって決まります。 リンクする場合[/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)いて安全な例外ハンドラーのテーブル、読み込み構成構造体 (loadcfg.c CRT ソース ファイルで見つかりますなど) を指定する必要があります。 Visual c に対して定義されているすべてのエントリを格納しています。 例えば:  
+ リンカーが安全な例外ハンドラーのテーブルを生成できるかどうかは、C ランタイム ライブラリを使用しているアプリケーションによって決まります。 リンクしている場合[/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)を安全な例外ハンドラーのテーブルに読み込み構成構造体 (loadcfg.c CRT ソース ファイルで見つかるなど) を指定する必要がある Visual C に対して定義されているすべてのエントリを格納しています。 例えば:  
   
 ```  
 #include <windows.h>  
@@ -107,9 +107,9 @@ const IMAGE_LOAD_CONFIG_DIRECTORY32_2 _load_config_used = {
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには  
   
-1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「 [Visual C プロジェクト プロパティの設定](../../ide/working-with-project-properties.md)です。  
+1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。  
   
-2.  選択、**リンカー**フォルダーです。  
+2.  選択、**リンカー**フォルダー。  
   
 3.  選択、**コマンドライン**プロパティ ページ。  
   
@@ -117,7 +117,7 @@ const IMAGE_LOAD_CONFIG_DIRECTORY32_2 _load_config_used = {
   
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには  
   
--   「<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>」を参照してください。  
+-   以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>  
   
 ## <a name="see-also"></a>関連項目  
  [リンカー オプションの設定](../../build/reference/setting-linker-options.md)   

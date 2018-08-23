@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8c79981b41bf7b74cb1aa44b98b44e0b5acbc90
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: e1c3ccdba1de9191079630989facf154ccf62d7f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337922"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538536"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant クラス
 MFC ODBC クラスのバリアント型を表します。  
@@ -106,7 +106,7 @@ class CDBVariant
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CDBVariant`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdb.h  
   
 ##  <a name="cdbvariant"></a>  CDBVariant::CDBVariant  
@@ -200,7 +200,7 @@ void Clear();
 ### <a name="remarks"></a>Remarks  
  `m_pdate`共用体へのデータ メンバーが属しています。 アクセスする前に`m_pdate`、最初の値をチェック[CDBVariant::m_dwType](#m_dwtype)します。 場合`m_dwType`DBVT_DATE に設定し、`m_pdate`の有効なポインターが含まれています。 それ以外の場合、にアクセスする`m_pdate`信頼性のない結果が生成されます。  
   
- TIMESTAMP_STRUCT のデータ型の詳細については、トピックを参照してください。 [C データ型](https://msdn.microsoft.com/library/ms714556.aspx)の付録 d、 *ODBC プログラマ リファレンス*Windows SDK にします。  
+ TIMESTAMP_STRUCT のデータ型の詳細については、トピックを参照してください。 [C データ型](/previous-versions/windows/desktop/ms714556\(v=vs.85\))の付録 d、 *ODBC プログラマ リファレンス*Windows SDK にします。  
   
 ##  <a name="m_pstring"></a>  CDBVariant::m_pstring  
  型のオブジェクトへのポインターを格納[CString](../../atl-mfc-shared/reference/cstringt-class.md)します。  

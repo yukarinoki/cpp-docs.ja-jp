@@ -30,16 +30,16 @@ helpviewer_keywords:
 - portability [C++], character sets
 - MBCS [C++], international programming
 ms.assetid: a1bb27ac-abe5-4c6b-867d-f761d4b93205
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8eaf5425bab79d31391e6ccd82e03c667de1271c
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: ed4232c73122e797a3b0e7aa17c43cde5ab47cf5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016627"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610715"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Visual C++ のテキストと文字列
 国際市場をターゲットにアプリケーションを開発する場合は、地域の文字セットをサポートすることが重要です。 ASCII 文字セットでは、0x00 から 0x7F までの範囲の文字を定義しています。 そのほかに、ASCII 文字セットと同じ 0x00 から 0x7F までの範囲の文字に加え、0x80 から 0xFF までの拡張文字セットも定義している、主にヨーロッパ向けの文字セットもあります。 多くのヨーロッパ系言語の文字と ASCII 文字セットを表現するには、8 ビットの 1 バイト文字セット (SBCS: Single-Byte-Character Set) で十分です。 ただし、日本語の漢字など、ヨーロッパ以外の文字セットでは、1 バイトのコード体系ですべての文字を表現しきれないため、マルチバイト文字セット (MBCS: Multibyte-Character Set) エンコーディングが必要になります。  

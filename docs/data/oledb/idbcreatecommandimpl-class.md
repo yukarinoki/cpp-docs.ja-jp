@@ -23,15 +23,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6a2457ed01214750091bd9ec5a59c9aeac819357
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 8b67fc55a8af2bed554254732832cbd6486d2420
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336995"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42575507"
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl クラス
-実装を提供、 [IDBCreateCommand](https://msdn.microsoft.com/library/ms711625.aspx)インターフェイス。  
+実装を提供、 [IDBCreateCommand](/previous-versions/windows/desktop/ms711625\(v=vs.85\))インターフェイス。  
   
 ## <a name="syntax"></a>構文
 
@@ -74,7 +74,7 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[idbcreatecommand::createcommand](https://msdn.microsoft.com/library/ms709772.aspx)で、 *OLE DB プログラマーズ リファレンス*します。  
+ 参照してください[idbcreatecommand::createcommand](/previous-versions/windows/desktop/ms709772\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
   
  いくつかのパラメーターに対応*OLE DB プログラマーズ リファレンス*で説明されている別の名前のパラメーター `IDBCreateCommand::CreateCommand`:  
   

@@ -1,5 +1,5 @@
 ---
-title: CGlobalUtils クラス |Microsoft ドキュメント
+title: CGlobalUtils クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -48,15 +48,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ffd681a589f9e8cc1c9cc56139f7b155773038f
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 6c92ccfe9dbf25fa1355885a5f6dd3570df4884b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952086"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538552"
 ---
 # <a name="cglobalutils-class"></a>CGlobalUtils クラス
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。  
   
 ## <a name="syntax"></a>構文  
   
@@ -92,7 +92,7 @@ class CGlobalUtils
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CGlobalUtils](../../mfc/reference/cglobalutils-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxglobalutils.h  
   
 ##  <a name="adjustrecttoworkarea"></a>  CGlobalUtils::AdjustRectToWorkArea  
@@ -104,7 +104,7 @@ void AdjustRectToworkArea(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力、出力].*rect*  
+ [入力、出力]*rect*  
  [in]*pRectDelta*  
   
 ### <a name="remarks"></a>Remarks  
@@ -140,7 +140,7 @@ BOOL CanBeAttached(CWnd* pWnd) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWnd*  
+ [in]*我が物*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -154,7 +154,7 @@ BOOL CanPaneBeInFloatingMultiPaneFrameWnd(CWnd* pWnd) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWnd*  
+ [in]*我が物*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -233,7 +233,7 @@ void FlipRect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力、出力].*rect*  
+ [入力、出力]*rect*  
  [in]*nDegrees*  
   
 ### <a name="remarks"></a>Remarks  
@@ -249,7 +249,7 @@ void ForceAdjustLayout(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力、出力].*pDockManager*  
+ [入力、出力]*pDockManager*  
  [in]*bForce*  
  [in]*bForceInvisible*  
   
@@ -263,7 +263,7 @@ CDockingManager* GetDockingManager(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWnd*  
+ [in]*我が物*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -316,7 +316,7 @@ HICON GetWndIcon(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWnd*  
+ [in]*我が物*  
   
 ### <a name="return-value"></a>戻り値  
   

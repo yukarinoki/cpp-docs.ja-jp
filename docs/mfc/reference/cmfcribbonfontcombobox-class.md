@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eb5fa8f56f242ce40f6be9c27bc1cbd9c5d61ff
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 5b9183f3ae58a7ba6b7746ae27f64ca17eede991
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852524"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540909"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>CMFCRibbonFontComboBox クラス
 フォントの一覧を含むコンボ ボックスを実装します。 このコンボ ボックスをリボン パネルに配置できます。  
@@ -92,7 +92,7 @@ class CMFCRibbonFontComboBox : public CMFCRibbonComboBox
   
  [CMFCRibbonFontComboBox](../../mfc/reference/cmfcribbonfontcombobox-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxRibbonComboBox.h  
   
 ##  <a name="buildfonts"></a>  CMFCRibbonFontComboBox::BuildFonts  
@@ -149,7 +149,7 @@ CMFCRibbonFontComboBox(
  割り当てることができる有効な文字セットの詳細については*nCharSet*、および有効な値を割り当てることができる*nPitchAndFamily*を参照してください[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)で、Windows SDK のドキュメントです。  
   
 ##  <a name="getfontdesc"></a>  CMFCRibbonFontComboBox::GetFontDesc  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。  
   
 ```  
 const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;  

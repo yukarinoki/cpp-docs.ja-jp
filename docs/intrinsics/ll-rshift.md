@@ -1,5 +1,5 @@
 ---
-title: _ _ll_rshift |Microsoft ドキュメント
+title: _ _ll_rshift |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e086339c41f789323cb4aab386a96dae27a0eeb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd8189f15f38d5d3008c1f20959573ca9d2337c9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324929"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540709"
 ---
 # <a name="llrshift"></a>__ll_rshift
 **Microsoft 固有の仕様**  
   
- 2 番目のパラメーターで指定されたビット数だけ右に最初のパラメーターで指定した 64 ビット値を移動します。  
+ 右側の最初のパラメーターで指定した 64 ビット値を 2 番目のパラメーターで指定されたビット数だけシフトします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,24 +41,24 @@ __int64 __ll_rshift(
   
 #### <a name="parameters"></a>パラメーター  
  [入力] `Mask`  
- 右へシフトする 64 ビット整数値。  
+ 右にシフトする 64 ビット整数値。  
   
  [入力] `nBit`  
- モジュロ 64、x64 および x86 32 剰余、シフトするビット数。  
+ モジュロ x64 で 64 および x86 上で 32 剰余をシフトするビット数。  
   
 ## <a name="return-value"></a>戻り値  
- マスクがずれる`nBit`ビットです。  
+ マスクがずれる`nBit`ビット。  
   
 ## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__ll_rshift`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ll_rshift`|x86、x64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
- 2 番目のパラメーターが 64 on x64 (x86 32) よりも大きい場合は、その番号は、シフトするビット数を調べてモジュロ 64 (x86 32) 取得します。 `ll`プレフィックスは、の操作であることを示します`long long`、別の名前`__int64`、64 ビット符号付き整数型。  
+## <a name="remarks"></a>Remarks  
+ 2 番目のパラメーターが x64 (x86 上で 32) で 64 よりも大きい場合は、その数は、シフトするビットの数を決定する、モジュロ 64 (x86 上で 32) 取得されます。 `ll`プレフィックスは、の操作であることを示します`long long`、もう 1 つの名前`__int64`、64 ビット符号付き整数型。  
   
 ## <a name="example"></a>例  
   
@@ -93,11 +93,11 @@ fffffffffffffff0
  - 10  
 ```  
   
- **注**場合`_ull_rshift`されましたが、右にシフトした値の MSB が 0、ので、目的の結果が取得できていない場合は、負の値。  
+ **注**場合`_ull_rshift`が使用すると、右にシフトした値の MSB いたでしょう 0 の場合、目的の結果は取得できていない場合は負の値をします。  
   
 **Microsoft 固有の仕様はここまで**  
   
 ## <a name="see-also"></a>関連項目  
- [コンパイラ組み込み関数](../intrinsics/compiler-intrinsics.md)   
+ [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)   
  [__ll_lshift](../intrinsics/ll-lshift.md)   
  [__ull_rshift](../intrinsics/ull-rshift.md)

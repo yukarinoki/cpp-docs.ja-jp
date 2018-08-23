@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b679d4c8807a19c977cd7e59481dc1d78e67ba1
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: eb492c1c804aacd79f1552afb5293b8b40a8b648
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956519"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42541421"
 ---
 # <a name="alignmentof-class"></a>alignment_of クラス
 
@@ -41,9 +41,9 @@ struct alignment_of;
 
 ## <a name="remarks"></a>Remarks
 
-クエリの種類の値を保持する、型のアラインメント*Ty*します。
+型のクエリは、型の配置の値を保持*Ty*します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<type_traits>
 

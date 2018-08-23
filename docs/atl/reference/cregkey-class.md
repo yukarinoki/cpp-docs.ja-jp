@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7804513c45de1951935e0fdf2fd485b9457e2a5e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: b2f295b6bf54077ad131176092b06dbeca7a2201
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885299"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42573250"
 ---
 # <a name="cregkey-class"></a>CRegKey クラス
 このクラスは、システム レジストリのエントリを操作するためのメソッドを提供します。  
@@ -137,7 +137,7 @@ class CRegKey
 > [!IMPORTANT]
 >  レジストリの場所を指定する呼び出し元を許可するすべてのメソッドでは、信頼できないデータを読み取る可能性があります。 ようにするメソッドを使用して、 [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)この関数が NULL 終端である文字列を明示的に処理しないの考慮事項を考慮する必要があります。 呼び出し元のコードの両方の条件をチェックする必要があります。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlbase.h  
   
 ##  <a name="attach"></a>  CRegKey::Attach  
@@ -876,7 +876,7 @@ LONG SetStringValue(
  成功した場合は、ERROR_SUCCESS を返します。 失敗した場合は、WINERROR.H で定義されている 0 以外のエラー コードが返されます。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドを使用して[RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923\(v=vs.85\).aspx)値をレジストリに書き込みます。  
+ このメソッドを使用して[RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa)値をレジストリに書き込みます。  
   
 ##  <a name="setvalue"></a>  CRegKey::SetValue  
  指定された値 フィールドのデータを格納するには、このメソッドを呼び出す[m_hKey](#m_hkey)します。 このメソッドの以前のバージョンでは、現在サポートされていませんされ、されずとしてマークされます。  

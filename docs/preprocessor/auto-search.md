@@ -1,5 +1,5 @@
 ---
-title: auto_search |Microsoft ドキュメント
+title: auto_search |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5de12c9db3eec4fe84a93321bdb2d9d96d629ecd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6cea1e1fa31c21a399dace0a58983f97cc87988c
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33913045"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540871"
 ---
 # <a name="autosearch"></a>auto_search
-**C 固有の仕様**  
+**C++ 固有の仕様**  
   
- タイプ ライブラリが #import を使用して参照され、自身が別のタイプ ライブラリを参照している場合、コンパイラが他のタイプ ライブラリに対して暗黙の #import を実行できることを指定します。  
+タイプ ライブラリが参照されている場合を指定します。`#import`と別のタイプ ライブラリを参照、コンパイラは暗黙的な行える`#import`他のタイプ ライブラリの。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,9 +34,10 @@ ms.locfileid: "33913045"
 auto_search  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **END C 固有の仕様**  
   
-## <a name="see-also"></a>関連項目  
- [#import の属性](../preprocessor/hash-import-attributes-cpp.md)   
- [#import ディレクティブ](../preprocessor/hash-import-directive-cpp.md)
+## <a name="see-also"></a>関連項目 
+
+[#import の属性](../preprocessor/hash-import-attributes-cpp.md)   
+[#import ディレクティブ](../preprocessor/hash-import-directive-cpp.md)

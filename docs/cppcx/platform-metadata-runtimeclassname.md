@@ -1,5 +1,5 @@
 ---
-title: Platform::Metadata::RuntimeClassName |Microsoft ドキュメント
+title: Platform::Metadata::RuntimeClassName |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - RuntimeClassName
 - Platform::Metadata::RuntimeClassName
 ms.assetid: fdef8f85-ab94-4edd-ba50-ee0da9358ff6
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 297a5089af7db43d837934e864e0925cd7b34a3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 024d9d7dce234b07620a108b1f11c240bd842ac6
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088233"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592579"
 ---
 # <a name="platformmetadataruntimeclassname"></a>Platform::Metadata::RuntimeClassName
 クラス定義に適用された場合、プライベート クラスが GetRuntimeClassName 関数から有効な名前を返すことを確認します。  
@@ -35,7 +35,7 @@ ms.locfileid: "33088233"
   
  Windows ランタイムで表示される既存のパブリックの種類の名前です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  プライベート ref クラスのこの属性を使用して、カスタム ランタイムの種類の名前、および既存の名前が要件を満たさない場合を指定します。 名前としてクラスが実装するパブリック インターフェイスを指定します。  
   
 ### <a name="example"></a>例  

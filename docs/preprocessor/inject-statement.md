@@ -1,5 +1,5 @@
 ---
-title: inject_statement |Microsoft ドキュメント
+title: inject_statement |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 115f5b3d7012ae3e9073d81e0c1005dcb513e045
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eb4142b742ae6c2a758c2a2fb5e09c604959433f
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849341"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538263"
 ---
 # <a name="injectstatement"></a>inject_statement
-**C 固有の仕様**  
+**C++ 固有の仕様**  
   
- タイプ ライブラリ ヘッダーに引数をソース テキストとして挿入します。  
+タイプ ライブラリ ヘッダーに引数をソース テキストとして挿入します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,15 +34,17 @@ ms.locfileid: "33849341"
 inject_statement("source_text")  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `source_text`  
- タイプ ライブラリ ヘッダー ファイルに挿入するソース テキスト。  
+### <a name="parameters"></a>パラメーター  
+*source_text*  
+タイプ ライブラリ ヘッダー ファイルに挿入するソース テキスト。  
   
-## <a name="remarks"></a>コメント  
- テキストは、ヘッダー ファイルのタイプ ライブラリの内容をラップする名前空間宣言の先頭に配置されます。  
+## <a name="remarks"></a>Remarks  
+ 
+テキストは、ヘッダー ファイルのタイプ ライブラリの内容をラップする名前空間宣言の先頭に配置されます。  
   
- **END C 固有の仕様**  
+**END C 固有の仕様**  
   
 ## <a name="see-also"></a>関連項目  
- [#import の属性](../preprocessor/hash-import-attributes-cpp.md)   
- [#import ディレクティブ](../preprocessor/hash-import-directive-cpp.md)
+ 
+[#import の属性](../preprocessor/hash-import-attributes-cpp.md)   
+[#import ディレクティブ](../preprocessor/hash-import-directive-cpp.md)

@@ -17,58 +17,62 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad5f886c4d475cb51b370ae25549387f191ab4b6
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: e696b3c141a83882af67e72039c164a0f917d446
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39653132"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611201"
 ---
 # <a name="export"></a>export
-.Idl ファイルに配置するデータ構造をによりします。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-[export]  
-```  
-  
-## <a name="remarks"></a>Remarks  
- **エクスポート**C++ 属性は、.idl ファイルに配置して、ある使用可能な任意の言語で使用できるようにするバイナリ互換性のある形式で、タイプ ライブラリ内のデータ構造をによりします。  
-  
- 適用することはできません、**エクスポート**クラスでは、パブリック メンバーのみが持つ場合でも、属性をクラス (と同等の**構造体**)。  
-  
- 名前のないをエクスポートする場合**enum**s または**構造体**s で始まる指定した名前になる **_ _unnamed * * * x*ここで、 *x*シーケンシャル数です。  
-  
- エクスポートの有効な typedef は、基本型、構造体、共用体、列挙型はか、識別子を入力します。  参照してください[typedef](http://msdn.microsoft.com/library/windows/desktop/aa367287)詳細についてはします。  
-  
-## <a name="example"></a>例  
- 次のコードを使用する方法を示しています、**エクスポート**属性。  
-  
-```cpp  
-// cpp_attr_ref_export.cpp  
-// compile with: /LD  
-[module(name="MyLibrary")];  
-  
-[export]  
-struct MyStruct {  
-   int i;  
-};  
-```  
-  
-## <a name="requirements"></a>要件  
-  
-### <a name="attribute-context"></a>属性コンテキスト  
-  
-|||  
-|-|-|  
-|**対象**|**共用体**、 **typedef**、 **enum**、**構造体**、または**インターフェイス**|  
-|**反復可能**|いいえ|  
-|**必要な属性**|なし|  
-|**無効な属性**|なし|  
-  
- 詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  
-  
-## <a name="see-also"></a>関連項目  
- [コンパイラ属性](../windows/compiler-attributes.md)   
- [Typedef、Enum、Union、および Struct 型の属性](../windows/typedef-enum-union-and-struct-attributes.md)   
+
+.Idl ファイルに配置するデータ構造をによりします。
+
+## <a name="syntax"></a>構文
+
+```cpp
+[export]
+```
+
+## <a name="remarks"></a>Remarks
+
+**エクスポート**C++ 属性は、.idl ファイルに配置して、ある使用可能な任意の言語で使用できるようにするバイナリ互換性のある形式で、タイプ ライブラリ内のデータ構造をによりします。
+
+適用することはできません、**エクスポート**クラスでは、パブリック メンバーのみが持つ場合でも、属性をクラス (と同等の**構造体**)。
+
+名前のないをエクスポートする場合**enum**または**構造体**で始まる名前を指定、 **_ _unnamed**<em>x</em>ここで、 *x*シーケンシャル番号です。
+
+エクスポートの有効な typedef は、基本型、構造体、共用体、列挙型はか、識別子を入力します。  参照してください[typedef](http://msdn.microsoft.com/library/windows/desktop/aa367287)詳細についてはします。
+
+## <a name="example"></a>例
+
+次のコードを使用する方法を示しています、**エクスポート**属性。
+
+```cpp
+// cpp_attr_ref_export.cpp
+// compile with: /LD
+[module(name="MyLibrary")];
+
+[export]
+struct MyStruct {
+   int i;
+};
+```
+
+## <a name="requirements"></a>要件
+
+### <a name="attribute-context"></a>属性コンテキスト
+
+|||
+|-|-|
+|**対象**|**共用体**、 **typedef**、 **enum**、**構造体**、または**インターフェイス**|
+|**反復可能**|いいえ|
+|**必要な属性**|なし|
+|**無効な属性**|なし|
+
+詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。
+
+## <a name="see-also"></a>関連項目
+
+[コンパイラ属性](../windows/compiler-attributes.md)  
+[Typedef、Enum、Union、および Struct 型の属性](../windows/typedef-enum-union-and-struct-attributes.md)  

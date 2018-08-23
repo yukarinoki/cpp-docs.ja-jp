@@ -1,5 +1,5 @@
 ---
-title: _ _svm_clgi |Microsoft ドキュメント
+title: _ _svm_clgi |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 679c2b4d7abb792dfe6baa5ad5e18752fb7ca8bc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 54f1a88acef3f3f79a39a8dd68e1beb079f30fec
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332547"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541443"
 ---
 # <a name="svmclgi"></a>__svm_clgi
 **Microsoft 固有の仕様**  
@@ -35,21 +35,21 @@ ms.locfileid: "33332547"
 void __svm_clgi( void );  
 ```  
   
-## <a name="remarks"></a>コメント  
- `__svm_clgi`関数と同じ、`CLGI`マシン語命令します。 グローバル割り込みフラグかを決定マイクロプロセッサは無視されます、延期、I/O 完了、ハードウェア温度アラート、またはデバッグ例外などのイベントが原因の割り込みを処理します。  
+## <a name="remarks"></a>Remarks  
+ `__svm_clgi`関数は、`CLGI`マシン語命令。 グローバル割り込みフラグは、マイクロプロセッサについて、無視、延期、または I/O の完了、ハードウェアの温度アラート、またはデバッグ例外などのイベントが原因の割り込み処理のでかどうかを判断します。  
   
- この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、ドキュメントの検索"AMD64 アーキテクチャ プログラマの手動ボリューム 2: システム プログラミングでは、"の文書番号 24593、リビジョン、3.11、 [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746)サイトです。  
+ この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、検索、ドキュメントでは、"AMD64 アーキテクチャ プログラマーズ手動ボリューム 2: システム プログラミングでは、"ドキュメント番号 24593、3.11、リビジョン、 [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746)サイト。  
   
 ## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__svm_clgi`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__svm_clgi`|x86、x64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
 **Microsoft 固有の仕様はここまで**  
   
 ## <a name="see-also"></a>関連項目  
- [コンパイラ組み込み関数](../intrinsics/compiler-intrinsics.md)   
+ [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)   
  [__svm_stgi](../intrinsics/svm-stgi.md)

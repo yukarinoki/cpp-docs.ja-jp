@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c11e50755097176b276c82877c7a636be149756
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: fdce28feddfca0789306a16f8dc6d047dc375120
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852576"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42540278"
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>CMFCFilterChunkValueImpl クラス
 これは、チャンクとプロパティの値のペアのロジックを単純化するクラスです。  
@@ -91,7 +91,7 @@ class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;
 |[CMFCFilterChunkValueImpl::GetChunkGUID](#getchunkguid)|チャンクの GUID を取得します。|  
 |[CMFCFilterChunkValueImpl::GetChunkPID](#getchunkpid)|チャンクの PID (プロパティ ID) を取得します。|  
 |[CMFCFilterChunkValueImpl::GetChunkType](#getchunktype)|チャンクの種類を取得します。|  
-|[CMFCFilterChunkValueImpl::GetString](#getstring)|取得、文字列値。|  
+|[CMFCFilterChunkValueImpl::GetString](#getstring)|文字列値を取得します。|  
 |[CMFCFilterChunkValueImpl::GetValue](#getvalue)|割り当て済みの propvariant として値を取得します。|  
 |[CMFCFilterChunkValueImpl::GetValueNoAlloc](#getvaluenoalloc)|値を返しますに割り当てられた非 (内部値)。|  
 |[CMFCFilterChunkValueImpl::IsValid](#isvalid)|このプロパティの値が有効かどうかどうかを確認します。|  
@@ -128,7 +128,7 @@ class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;
   
  [CMFCFilterChunkValueImpl](../../mfc/reference/cmfcfilterchunkvalueimpl-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="clear"></a>  CMFCFilterChunkValueImpl::Clear  

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c45a9ab0e709366d5f391e574c9b8b3a5db4a53a
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 5cc725907c93955777cd09b5745651855892e4cd
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881728"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42573251"
 ---
 # <a name="cwin32heap-class"></a>CWin32Heap クラス
 このクラスは実装[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) Win32 ヒープ割り当て関数を使用します。  
@@ -83,7 +83,7 @@ class CWin32Heap : public IAtlMemMgr
   
  `CWin32Heap`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlmem.h  
   
 ##  <a name="allocate"></a>  Cwin32heap::allocate  
@@ -162,7 +162,7 @@ CWin32Heap(
   
  HEAP_NO_SERIALIZE パラメーターは、ヒープ関数の割り当てし、パフォーマンスの向上が使用して、メモリを解放するときに相互排他を使用しないを指定します。  
   
- 第 3 のパラメーターの既定値は 0 であり、この場合には必要に応じてヒープを拡大できます。 参照してください[HeapCreate](http://msdn.microsoft.com/library/windows/desktop/aa366599\(v=vs.85\).aspx)メモリ サイズおよびフラグの詳細についてはします。  
+ 第 3 のパラメーターの既定値は 0 であり、この場合には必要に応じてヒープを拡大できます。 参照してください[HeapCreate](/windows/desktop/api/heapapi/nf-heapapi-heapcreate)メモリ サイズおよびフラグの詳細についてはします。  
   
 ##  <a name="dtor"></a>  CWin32Heap:: ~ CWin32Heap  
  デストラクターです。  

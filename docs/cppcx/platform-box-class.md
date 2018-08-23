@@ -1,5 +1,5 @@
 ---
-title: Platform::box クラス |Microsoft ドキュメント
+title: Platform::box クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -9,16 +9,16 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: b3d7ea37-e98a-4fbc-80b0-ad35e50250c6
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59fcdf177f942dd598348654b366e0c0f42e916b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7def63199666a9dba0a1628031129ce584e0fcec
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091681"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605960"
 ---
 # <a name="platformbox-class"></a>Platform::Box クラス
 `Windows::Foundation::DateTime` などの値型または `int` などのスカラー型を `Platform::Object` 型に格納できるようにします。 通常は、 `Box` を明示的に使用する必要はありません。これは、値型を `Object^`にキャストすると、ボックス化が暗黙的に発生するためです。  
@@ -28,7 +28,7 @@ ms.locfileid: "33091681"
 ```cpp  
 ref class Box abstract;  
 ```  
-  ### <a name="remarks"></a>コメント  
+  ### <a name="remarks"></a>Remarks  
   
 ### <a name="requirements"></a>要件  
  **ヘッダー:** vccorlib.h  
@@ -52,10 +52,10 @@ Box(T valueArg);
   
 ### <a name="parameters"></a>パラメーター  
  `valueArg`  
- 値の型をボックス化する — たとえば、 `int`、 `bool`、 `float64`、`DateTime`です。  
+ ボックス化される値の型: たとえば、 `int`、 `bool`、 `float64`、`DateTime`します。  
   
 
-## <a name="box-const-t"></a> Box::operator ボックス&lt;const T&gt;^ 演算子
+## <a name="box-const-t"></a> Box::operator Box&lt;const T&gt;^ 演算子
 `const` 値クラスの `T` または `enum` クラスの `T` から `Box<T>` へのボックス化変換を有効にします。  
   
 ### <a name="syntax"></a>構文  
@@ -66,12 +66,12 @@ operator Box<const T>^(const T valueType);
   
 ### <a name="parameters"></a>パラメーター  
  `T`  
- 値クラス、値構造体、または列挙型。 組み込み型が含まれています、[既定の名前空間](../cppcx/default-namespace.md)です。  
+ 値クラス、値構造体、または列挙型。 組み込み型が含まれています、[既定の名前空間](../cppcx/default-namespace.md)します。  
   
 ### <a name="return-value"></a>戻り値  
  A `Platform::Box<T>^` ref クラスでボックス化された元の値を表すインスタンス。  
   
-## <a name="box-const-volatile-t"></a> Box::operator ボックス&lt;const volatile T&gt;^ 演算子
+## <a name="box-const-volatile-t"></a> Box::operator Box&lt;const volatile T&gt;^ 演算子
 `const volatile` 値クラスの `T` または `enum` 型の `T` から `Box<T>` へのボックス化変換を有効にします。  
   
 ### <a name="syntax"></a>構文  
@@ -82,12 +82,12 @@ operator Box<const volatile T>^(const volatile T valueType);
   
 ### <a name="parameters"></a>パラメーター  
  `T`  
- 列挙型、値クラス、または値構造体。 組み込み型が含まれています、[既定の名前空間](../cppcx/default-namespace.md)です。  
+ 列挙型、値クラス、または値構造体。 組み込み型が含まれています、[既定の名前空間](../cppcx/default-namespace.md)します。  
   
 ### <a name="return-value"></a>戻り値  
  A `Platform::Box<T>^` ref クラスでボックス化された元の値を表すインスタンス。  
   
-## <a name="box-t"></a> Box::operator ボックス&lt;T&gt;^ 演算子
+## <a name="box-t"></a> Box::operator Box&lt;T&gt;^ 演算子
 値クラス `T` から `Box<T>` へのボックス化変換を有効にします。  
   
 ### <a name="syntax"></a>構文  
@@ -98,12 +98,12 @@ operator Box<const T>^(const T valueType);
   
 ### <a name="parameters"></a>パラメーター  
  `T`  
- 列挙型、値クラス、または値構造体。 組み込み型が含まれています、[既定の名前空間](../cppcx/default-namespace.md)です。  
+ 列挙型、値クラス、または値構造体。 組み込み型が含まれています、[既定の名前空間](../cppcx/default-namespace.md)します。  
   
 ### <a name="return-value"></a>戻り値  
  A `Platform::Box<T>^` ref クラスでボックス化された元の値を表すインスタンス。  
   
-## <a name="box-volatile-t"></a> Box::operator ボックス&lt;揮発性 T&gt;^ 演算子
+## <a name="box-volatile-t"></a> Box::operator Box&lt;揮発性 T&gt;^ 演算子
 `volatile` 値クラスの `T` または `enum` 型の `T` から `Box<T>` へのボックス化変換を有効にします。  
   
 ### <a name="syntax"></a>構文  
@@ -114,7 +114,7 @@ operator Box<volatile T>^(volatile T valueType);
   
 ### <a name="parameters"></a>パラメーター  
  `T`  
- 列挙型、値クラス、または値構造体。 組み込み型が含まれています、[既定の名前空間](../cppcx/default-namespace.md)です。  
+ 列挙型、値クラス、または値構造体。 組み込み型が含まれています、[既定の名前空間](../cppcx/default-namespace.md)します。  
   
 ### <a name="return-value"></a>戻り値  
  A `Platform::Box<T>^` ref クラスでボックス化された元の値を表すインスタンス。  
@@ -130,7 +130,7 @@ operator Box<T>^(T valueType);
   
 ### <a name="parameters"></a>パラメーター  
  `T`  
- 列挙型、値クラス、または値構造体。 組み込み型が含まれています、[既定の名前空間](../cppcx/default-namespace.md)です。  
+ 列挙型、値クラス、または値構造体。 組み込み型が含まれています、[既定の名前空間](../cppcx/default-namespace.md)します。  
   
 ### <a name="return-value"></a>戻り値  
  A `Platform::Box<T>^` ref クラスでボックス化された元の値を表すインスタンス。  

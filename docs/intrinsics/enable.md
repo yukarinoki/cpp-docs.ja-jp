@@ -1,5 +1,5 @@
 ---
-title: 有効にする |Microsoft ドキュメント
+title: _povolit |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86e6c8ba9fc1b4dff9b1ad947a770ae901937611
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3ca265bc8a6adc3da747e94ca67cd57749687f21
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330946"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538459"
 ---
 # <a name="enable"></a>_enable
 **Microsoft 固有の仕様**  
@@ -41,11 +41,11 @@ void _enable(void);
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`_enable`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_enable`|x86、ARM、x64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `_enable` は、プロセッサに対して割り込みフラグを設定するように指示します。 x86 システムでは、この関数は割り込みフラグの設定 (`sti`) 命令を生成します。  
   
  この関数はカーネル モードのみで使用できます。 ユーザー モードで使用した場合は、特権命令例外がスローされます。  

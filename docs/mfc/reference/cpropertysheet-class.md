@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d265b2547f35e0c8c25ee5e3aad1135945e346b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 994e9f8c48bb6d6db2a9af06613abca895b09f51
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853205"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538318"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet クラス
 タブ ダイアログ ボックスとしても知られるプロパティ シートを表します。  
@@ -121,7 +121,7 @@ class CPropertySheet : public CWnd
 ## <a name="remarks"></a>Remarks  
  プロパティ シートから成る、`CPropertySheet`オブジェクトと 1 つ以上[CPropertyPage](../../mfc/reference/cpropertypage-class.md)オブジェクト。 フレームワークは、一連のタブ インデックスと、現在選択されているページが表示される領域を持つウィンドウとして、プロパティ シートを表示します。 ユーザーは、適切なタブを使用して、特定のページに移動します。  
   
- `CPropertySheet` 展開のサポートを提供します。 [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546)構造がで導入された[!INCLUDE[Win98](../../mfc/reference/includes/win98_md.md)]および Windows NT 2000 です。 構造体には、追加のフラグと「透かし」の背景ビットマップを使用をサポートするメンバーが含まれています。  
+ `CPropertySheet` 展開のサポートを提供します。 [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546) Windows 98 および Windows NT 2000 で導入された構造です。 構造体には、追加のフラグと「透かし」の背景ビットマップを使用をサポートするメンバーが含まれています。  
   
  プロパティ シート オブジェクトに自動的にこれらの新しいイメージを表示するへの呼び出しでビットマップとパレットのイメージの有効な値を渡す[まず、](#construct)または[呼び出します](#cpropertysheet).  
   
@@ -164,7 +164,7 @@ class CPropertySheet : public CWnd
   
  `CPropertySheet`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdlgs.h  
   
 ##  <a name="addpage"></a>  が  

@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: babc490d63f6c7e1692877e53b4971fc85ec4c24
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 0a8ec3a7898f846af85614dec75c10c5a0393e24
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850892"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538537"
 ---
 # <a name="cmfctooltipinfo-class"></a>CMFCToolTipInfo クラス
 ツールヒントの外観に関する情報を格納します。  
@@ -95,7 +95,7 @@ class CMFCToolTipInfo
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxtooltipctrl.h  
   
 ##  <a name="m_bballoontooltip"></a>  CMFCToolTipInfo::m_bBalloonTooltip  
@@ -222,7 +222,7 @@ BOOL m_bVislManagerTheme;
  場合`m_bVislManagerTheme`が true の場合、すべてのツールヒントに、新しい要求[CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md)そのオブジェクトの外観を決定する値を使用して、画面に表示する前に、アプリケーションのビジュアル マネージャーから。 他のメンバー、 [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md)は無視されます。  
   
 ##  <a name="operator_eq"></a>  CMFCToolTipInfo::operator =  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。  
   
 ```  
 CMFCToolTipInfo& operator=(CMFCToolTipInfo& src);

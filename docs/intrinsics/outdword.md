@@ -1,5 +1,5 @@
 ---
-title: _ _outdword |Microsoft ドキュメント
+title: _ _outdword |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aa7aea4b0be8eaa7b6d76e948e845d31f6ffa3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 326ebeeb1d282950ed7d481014d4349c168dc897
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332833"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540467"
 ---
 # <a name="outdword"></a>__outdword
 **Microsoft 固有の仕様**  
   
- 生成、`out`ダブルワードを送信する命令`Data`ポート`Port`です。  
+ 生成、`out`ダブルワードを送信する命令`Data`ポート`Port`します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,11 +50,11 @@ void __outdword(
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__outdword`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outdword`|x86、x64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このルーチンは、組み込みとしてのみ使用できます。  
   
 **Microsoft 固有の仕様はここまで**  

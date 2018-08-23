@@ -48,12 +48,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0836a09adac92300a8438a0433fda874e78bcb25
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 8eea759f7f2af32fe688bbc8583eafc1244b20d7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339218"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571517"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor クラス
 使用される[CEnumerator](../../data/oledb/cenumerator-class.md)列挙子の行セットからデータにアクセスします。  
@@ -92,7 +92,7 @@ VARIANT_BOOL m_bIsParent;
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[isourcesrowset::getsourcesrowset](https://msdn.microsoft.com/library/ms711200.aspx)で、 *OLE DB プログラマーズ リファレンス*詳細についてはします。 
+ 参照してください[isourcesrowset::getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*詳細についてはします。 
 
 ## <a name="ntype"></a> Cenumeratoraccessor::m_ntype
 行がデータ ソースまたは列挙子について説明するかどうかを示す変数。  
@@ -104,7 +104,7 @@ USHORT m_nType;
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[isourcesrowset::getsourcesrowset](https://msdn.microsoft.com/library/ms711200.aspx)で、 *OLE DB プログラマーズ リファレンス*詳細についてはします。
+ 参照してください[isourcesrowset::getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*詳細についてはします。
 
 ## <a name="szdescription"></a> Cenumeratoraccessor::m_szdescription
 データ ソースまたは列挙子の説明です。  
@@ -116,7 +116,7 @@ WCHAR m_szDescription[129];
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[isourcesrowset::getsourcesrowset](https://msdn.microsoft.com/library/ms711200.aspx)で、 *OLE DB プログラマーズ リファレンス*詳細についてはします。
+ 参照してください[isourcesrowset::getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*詳細についてはします。
 
 ## <a name="szname"></a> Cenumeratoraccessor::m_szname
 データ ソースまたは列挙子の名前。  
@@ -128,7 +128,7 @@ WCHAR m_szName[129];
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[isourcesrowset::getsourcesrowset](https://msdn.microsoft.com/library/ms711200.aspx)で、 *OLE DB プログラマーズ リファレンス*詳細についてはします。  
+ 参照してください[isourcesrowset::getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*詳細についてはします。  
 
 ## <a name="szparsename"></a> Cenumeratoraccessor::m_szparsename
 渡す文字列[ため](http://msdn.microsoft.com/library/windows/desktop/ms680604)をデータ ソースまたは列挙子のモニカーを取得します。  
@@ -140,7 +140,7 @@ WCHAR m_szParseName[129];
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[isourcesrowset::getsourcesrowset](https://msdn.microsoft.com/library/ms711200.aspx)で、 *OLE DB プログラマーズ リファレンス*詳細についてはします。  
+ 参照してください[isourcesrowset::getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*詳細についてはします。  
   
 ## <a name="see-also"></a>関連項目  
  [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)   

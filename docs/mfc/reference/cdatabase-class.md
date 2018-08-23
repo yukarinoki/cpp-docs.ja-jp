@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b28dc721b3131fc413248f6ba4a0b0612176cb67
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 6cb88decfd69fd7fb81667164f651e934ee08775
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337581"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540333"
 ---
 # <a name="cdatabase-class"></a>CDatabase クラス
 データ ソースへの接続を表します。これを通じてデータ ソース上で操作を行うことができます。  
@@ -130,7 +130,7 @@ class CDatabase : public CObject
   
  `CDatabase`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdb.h  
   
 ##  <a name="begintrans"></a>  CDatabase::BeginTrans  
@@ -189,7 +189,7 @@ void Cancel();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- MFC ODBC クラスは、非同期処理を不要になった使用に注意してください。非同期操作を実行する ODBC API 関数を直接に呼び出す必要があります[SQLSetConnectOption](https://msdn.microsoft.com/library/ms713564.aspx)します。 詳細については、次を参照してください。[非同期実行](https://msdn.microsoft.com/library/ms713563.aspx)Windows SDK に含まれています。  
+ MFC ODBC クラスは、非同期処理を不要になった使用に注意してください。非同期操作を実行する ODBC API 関数を直接に呼び出す必要があります[SQLSetConnectOption](/previous-versions/windows/desktop/ms713564\(v=vs.85\))します。 詳細については、次を参照してください。[非同期実行](/previous-versions/windows/desktop/ms713563\(v=vs.85\))Windows SDK に含まれています。  
   
 ##  <a name="cantransact"></a>  CDatabase::CanTransact  
  データベースがトランザクションをできるかどうかを判断するには、このメンバー関数を呼び出します。  

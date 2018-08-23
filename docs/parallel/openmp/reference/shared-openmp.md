@@ -1,5 +1,5 @@
 ---
-title: 共有 (OpenMP) |Microsoft ドキュメント
+title: 共有 (OpenMP) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8287f96f80748272e29b22ed5c43c364f4353b86
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b2bc1a0bbf56623feccd4d3bd96f1e719e192d48
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691678"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42539428"
 ---
 # <a name="shared-openmp"></a>shared (OpenMP)
 すべてのスレッド間で 1 つまたは複数の変数を共有する必要がありますを指定します。  
@@ -32,14 +32,14 @@ ms.locfileid: "33691678"
 shared(var)  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  指定項目  
   
  `var`  
- 共有する 1 つ以上の変数です。 複数の変数が指定されている場合は、変数名をコンマで区切ります。  
+ 共有する 1 つまたは複数の変数。 1 つ以上の変数が指定されている場合は、変数名をコンマで区切ります。  
   
-## <a name="remarks"></a>コメント  
- スレッド間で変数を共有する別の方法は、 [copyprivate](../../../parallel/openmp/reference/copyprivate.md)句。  
+## <a name="remarks"></a>Remarks  
+ スレッド間での変数を共有する別の方法は、 [copyprivate](../../../parallel/openmp/reference/copyprivate.md)句。  
   
  `shared` 次のディレクティブに適用されます。  
   
@@ -49,7 +49,7 @@ shared(var)
   
 -   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
   
- 詳細については、次を参照してください。[共有 2.7.2.4](../../../parallel/openmp/2-7-2-4-shared.md)です。  
+ 詳細については、次を参照してください。[共有 2.7.2.4](../../../parallel/openmp/2-7-2-4-shared.md)します。  
   
 ## <a name="example"></a>例  
  参照してください[プライベート](../../../parallel/openmp/reference/private-openmp.md)の使用例については`shared`します。  

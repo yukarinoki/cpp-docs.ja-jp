@@ -1,5 +1,5 @@
 ---
-title: UWP アプリで C++ AMP を使用して |Microsoft ドキュメント
+title: UWP アプリで C++ AMP の使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,20 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5736c84f21535222de5659780968efd98e1467da
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3676bc8f2c4ecbd89f01fb9257c7306a66827548
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696156"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584017"
 ---
 # <a name="using-c-amp-in-uwp-apps"></a>UWP アプリで C++ AMP の使用
-ユニバーサル Windows プラットフォーム (UWP) アプリで C++ AMP (C++ Accelerated Massive Parallelism) を使用するには、GPU (グラフィックス処理装置) またはその他の計算アクセラレータで計算を実行します。 ただし C++ AMP では、Windows ランタイムの型を直接操作するための API が提供されておらず、Windows ランタイムでは C++ AMP のラッパーが提供されません。 Windows ランタイムの型を (独自に作成したコードも含めて) コード内で使用するときは、C++ AMP と互換性のある型に変換する必要があります。  
+ユニバーサル Windows プラットフォーム (UWP) アプリで C++ AMP (C++ Accelerated Massive Parallelism) を使用すると、GPU (グラフィックス処理装置) またはその他の計算アクセラレータで計算を実行します。 ただし C++ AMP では、Windows ランタイムの型を直接操作するための API が提供されておらず、Windows ランタイムでは C++ AMP のラッパーが提供されません。 Windows ランタイムの型を (独自に作成したコードも含めて) コード内で使用するときは、C++ AMP と互換性のある型に変換する必要があります。  
   
 ## <a name="performance-considerations"></a>パフォーマンスに関する考慮事項  
- 使用する場合[!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)])、ユニバーサル Windows プラットフォーム (UWP) アプリを作成することをお勧めと共に連続した記憶域プレーン古いデータ (POD) 型を使用すること — たとえば、`std::vector`または C スタイル配列-使用されるデータのC++ AMP で。 マーシャリングの必要がないため、非 POD 型または Windows RT コンテナーを使用する場合より高いパフォーマンスの実現に役立ちます.  
+ 
+Visual C コンポーネント拡張 C + を使用しているかどうか/cli CX、ユニバーサル Windows プラットフォーム (UWP) アプリを作成すると共に連続した記憶域プレーン old data (POD) 型を使用することをお勧めします — たとえば、`std::vector`または C スタイル配列 — となるデータの。C++ AMP で使用します。 マーシャリングの必要がないため、非 POD 型または Windows RT コンテナーを使用する場合より高いパフォーマンスの実現に役立ちます.  
   
- C ++ AMP カーネルで、この方法で格納されているデータにアクセスするには、`std::vector` または配列記憶域を `concurrency::array_view` でラップし、この配列ビューを `concurrency::parallel_for_each` ループで使用します。  
+C ++ AMP カーネルで、この方法で格納されているデータにアクセスするには、`std::vector` または配列記憶域を `concurrency::array_view` でラップし、この配列ビューを `concurrency::parallel_for_each` ループで使用します。  
   
 ```cpp  
 // simple vector addition example  
@@ -46,22 +47,23 @@ concurrency::parallel_for_each(av0.extent, [=](concurrency::index<1> idx) restri
 ```  
   
 ## <a name="marshaling-windows-runtime-types"></a>Windows ランタイム型をマーシャリングする  
- Windows ランタイム API を使用する場合、`Platform::Array<T>^` などの Windows ランタイム コンテナーに格納されているデータや、`ref` キーワードまたは `value` キーワードを使用して宣言されたクラスや構造体などの複合データ型に格納されているデータに対して C++ AMP を使用することが考えられます。 この場合、C++ AMP でデータを使用できるように特別な作業を行う必要があります。  
+ 
+Windows ランタイム Api を使用する場合など、Windows ランタイム コンテナーに格納されているデータに対して C++ AMP を使用する場合、`Platform::Array<T>^`クラスまたは構造体を使用して宣言されているなどの複雑なデータ型、 **ref**キーワードまたは**値**キーワード。 この場合、C++ AMP でデータを使用できるように特別な作業を行う必要があります。  
   
-### <a name="platformarrayt-where-t-is-a-pod-type"></a>Platform::array\<T > ^ T が POD 型である、  
- `Platform::Array<T>^` を検出した場合に T が POD 型であれば、基となる記憶域に `get` メンバー関数を使用してアクセスすることができます。  
+### <a name="platformarrayt-where-t-is-a-pod-type"></a>Platform::array\<T > ^、T は POD 型  
+`Platform::Array<T>^` を検出した場合に T が POD 型であれば、基となる記憶域に `get` メンバー関数を使用してアクセスすることができます。  
   
 ```cpp  
 Platform::Array<float>^ arr; // Assume that this was returned by a Windows Runtime API  
 concurrency::array_view<float, 1> av(arr->Length, &arr->get(0));
 ```  
   
- T が POD 型でない場合に C++ AMP でデータを使用するには、次のセクションで説明する手法を使用します。  
+T が POD 型でない場合に C++ AMP でデータを使用するには、次のセクションで説明する手法を使用します。  
   
 ### <a name="windows-runtime-types-ref-classes-and-value-classes"></a>Windows ランタイム型: ref クラスと value クラス  
- C++ AMP では、複合データ型がサポートされません。 これには、非 POD 型や、`ref` キーワードまたは `value` キーワードを使用して宣言される型が含まれます。 サポートされていない型が `restrict(amp)` のコンテキストで使用されている場合、コンパイル時エラーが生成されます。  
+C++ AMP では、複合データ型がサポートされません。 非 POD 型とを使用して宣言されている任意の種類が含まれます、 **ref**キーワードまたは**値**キーワード。 サポートされていない型が `restrict(amp)` のコンテキストで使用されている場合、コンパイル時エラーが生成されます。  
   
- サポートされない型を検出した場合は、そのデータの必要な部分を `concurrency::array` オブジェクトにコピーできます。 データを C++ AMP で使用できるようにする作業に加え、この手動コピーを行うことも、データの局所性を最大限に高め、使用しないデータがアクセラレータにコピーされないようにする点で、パフォーマンスの向上に役立ちます。 使用してさらにパフォーマンスを向上させることができます、*ステージング配列*、これは特殊な形式の`concurrency::array`AMP ランタイムに対し、配列を最適化するため頻繁な転送を他の配列との間でのヒントを提供する、指定されたアクセラレータです。  
+サポートされない型を検出した場合は、そのデータの必要な部分を `concurrency::array` オブジェクトにコピーできます。 データを C++ AMP で使用できるようにする作業に加え、この手動コピーを行うことも、データの局所性を最大限に高め、使用しないデータがアクセラレータにコピーされないようにする点で、パフォーマンスの向上に役立ちます。 使用してさらにパフォーマンスを向上させることができます、*ステージング配列*、これは特殊な形式の`concurrency::array`で他の配列との間の頻繁に転送するため、配列を最適化する AMP ランタイムへのヒントを提供する、指定されたアクセス キー。  
   
 ```cpp  
 // pixel_color.h  
@@ -119,6 +121,6 @@ concurrency::parallel_for_each(av_red.extent, [=](index<1> idx) restrict(amp)
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [C++ を使用して最初の UWP アプリを作成します。](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)   
- [C++ での Windows ランタイム コンポーネントを作成します。](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
-
+ 
+[C++ を使った初めての UWP アプリを作成します。](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)   
+[C++ で Windows ランタイム コンポーネントの作成](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

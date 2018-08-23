@@ -1,5 +1,5 @@
 ---
-title: _ _ud2 |Microsoft ドキュメント
+title: _ _ud2 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c282456f74fa86940e3d1ffc77d0226a28ed0b80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eeb63aa411278c2ca6b2217d9243331b57cd7624
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326164"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541430"
 ---
 # <a name="ud2"></a>__ud2
 **Microsoft 固有の仕様**  
@@ -35,23 +35,23 @@ ms.locfileid: "33326164"
 void __ud2();  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  プロセッサでは、未定義の命令を実行する場合に無効な opcode 例外が発生します。  
   
- `__ud2`関数と同じ、`UD2`マシン語命令、およびカーネル モードでのみ使用できます。 詳細については、検索、ドキュメントの"Intel アーキテクチャ ソフトウェア デベロッパーズ マニュアル、ボリューム 2: 命令セットの参照を"で、 [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)サイトです。  
+ `__ud2`関数は、`UD2`マシン語命令、およびカーネル モードでのみ使用できます。 詳細については、ドキュメントの検索"Intel アーキテクチャ ソフトウェア デベロッパーズ マニュアル、ボリューム 2: 命令セットの参照"で、 [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)サイト。  
   
 ## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__ud2`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ud2`|x86、x64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
 **Microsoft 固有の仕様はここまで**  
   
 ## <a name="example"></a>例  
- 次の例では、例外を発生させます。 未定義の命令を実行します。 例外ハンドラーは、0 から 1 し、リターン コードを変更します。  
+ 次の例では、例外を発生させます。 未定義の命令を実行します。 例外ハンドラーは、0 から 1 つに次のリターン コードを変更します。  
   
 ```  
 // __ud2_intrinsic.cpp  

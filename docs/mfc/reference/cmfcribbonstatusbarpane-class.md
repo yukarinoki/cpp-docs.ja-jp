@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e42eceabcbe4e67e393b52b9dc3ab8e9ca7b280
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 55ef22eec84b4d7e5e4ea27abe611cf2d18f2a1b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853850"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540308"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>CMFCRibbonStatusBarPane クラス
 `CMFCRibbonStatusBarPane`クラスは、リボン ステータス バーに追加できるリボン要素を実装します。  
@@ -102,7 +102,7 @@ class CMFCRibbonStatusBarPane : public CMFCRibbonButton
   
  [CMFCRibbonStatusBarPane](../../mfc/reference/cmfcribbonstatusbarpane-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxribbonstatusbarpane.h  
   
 ##  <a name="cmfcribbonstatusbarpane"></a>  CMFCRibbonStatusBarPane::CMFCRibbonStatusBarPane  
@@ -210,7 +210,7 @@ BOOL IsExtended() const;
  ウィンドウがステータス バーの拡張領域にある場合は TRUE。 FALSE それ以外の場合。  
   
 ##  <a name="ondrawborder"></a>  CMFCRibbonStatusBarPane::OnDrawBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。  
   
 ```  
 virtual void OnDrawBorder(CDC*);
@@ -222,7 +222,7 @@ virtual void OnDrawBorder(CDC*);
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="onfillbackground"></a>  CMFCRibbonStatusBarPane::OnFillBackground  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。  
   
 ```  
 virtual COLORREF OnFillBackground(CDC* pDC);

@@ -1,5 +1,5 @@
 ---
-title: _ _indword |Microsoft ドキュメント
+title: _ _indword |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2dcfb321d526bb449335f87e7a83ba2a0aba7e60
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0fb7c8d6816475232f5a7ed5d50b2b6036a829d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325540"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541614"
 ---
 # <a name="indword"></a>__indword
 **Microsoft 固有の仕様**  
   
- 使用して、指定されたポートからのデータの 1 つのダブル ワードを読み取り、`in`命令します。  
+ 使用して、指定されたポートからのデータの 1 つのダブル ワードを読み取り、`in`命令。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,20 +40,20 @@ unsigned long __indword(
   
 #### <a name="parameters"></a>パラメーター  
  [入力] `Port`  
- 読み取りにポートです。  
+ 読み取るポート。  
   
 ## <a name="return-value"></a>戻り値  
- 単語は、ポートから読み込みます。  
+ 単語は、ポートから読み取ります。  
   
 ## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__indword`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__indword`|x86、x64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このルーチンは、組み込みとしてのみ使用できます。  
   
 **Microsoft 固有の仕様はここまで**  

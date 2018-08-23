@@ -25,15 +25,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 57ad4c5e9f119a7c9904376db4f77c35de4290f2
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e176cc20dc3f6f13eb868133b99c0ce7e86d25c4
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337129"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572874"
 ---
 # <a name="iconverttypeimpl-class"></a>IConvertTypeImpl クラス
-実装を提供、 [IConvertType](https://msdn.microsoft.com/library/ms715926.aspx)インターフェイス。  
+実装を提供、 [IConvertType](/previous-versions/windows/desktop/ms715926\(v=vs.85\))インターフェイス。  
   
 ## <a name="syntax"></a>構文
 
@@ -73,7 +73,7 @@ STDMETHOD(CanConvert)(DBTYPE wFromType,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[IConvertType::CanConvert](https://msdn.microsoft.com/library/ms711224.aspx)で、 *OLE DB プログラマーズ リファレンス*します。  
+ 参照してください[IConvertType::CanConvert](/previous-versions/windows/desktop/ms711224\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ### <a name="remarks"></a>Remarks  
  OLE DB データ変換を使用して`MSADC.DLL`します。  

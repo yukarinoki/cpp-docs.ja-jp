@@ -1,5 +1,5 @@
 ---
-title: Platform::weakreference クラス |Microsoft ドキュメント
+title: Platform::weakreference クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -7,16 +7,16 @@ ms.topic: reference
 f1_keywords:
 - Platform::WeakReference
 ms.assetid: 8cfe1977-a8c7-4b7b-b539-25c77ed4c5f1
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8db5c855b6a377a0202183d48b8fd34e93b6072
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77cd035b6cf84b16f4f6d5d92f3dd247f1251509
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088379"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601562"
 ---
 # <a name="platformweakreference-class"></a>Platform::WeakReference クラス
 ref クラスのインスタンスへの弱い参照を表します。  
@@ -50,7 +50,7 @@ class WeakReference
 |[WeakReference::operator=](#operator-assign)|新しい値を WeakReference オブジェクトに代入します。|  
 |[WeakReference::operator BoolType](#booltype)|安全な bool パターンを実装します。|  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  WeakReference クラス自体は ref クラスではありません。したがって、WeakReference クラスは Platform::Object^ から継承せず、パブリック メソッドのシグネチャでは使用できません。  
 
 ## <a name="operator-assign"></a> WeakReference::operator =
@@ -65,8 +65,8 @@ WeakReference& operator=(WeakReference&& otherArg);
 WeakReference& operator=(const volatile ::Platform::Object^ const otherArg); 
 ```  
   
-### <a name="remarks"></a>コメント  
- 上記のリストの最後のオーバーロードを使用すると、WeakReference 変数に ref クラスを代入できます。 ここでは、ref クラスにダウン キャスト[platform::object](../cppcx/platform-object-class.md)^ です。 型パラメーターの引数として指定することによって、元の型を後で復元する、 [weakreference::resolve\<T >](#resolve)メンバー関数。  
+### <a name="remarks"></a>Remarks  
+ 上記のリストの最後のオーバーロードを使用すると、WeakReference 変数に ref クラスを代入できます。 この場合、ref クラスにダウン キャスト[platform::object](../cppcx/platform-object-class.md)^ です。 型パラメーターの引数として指定することにより、元の型を後で復元する、 [weakreference::resolve\<T >](#resolve)メンバー関数。  
   
 ## <a name="booltype"></a> WeakReference::operator BoolType
 WeakReference クラスの安全な bool パターンを実装します。 コードから明示的に呼び出されることはありません。  

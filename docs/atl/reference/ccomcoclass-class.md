@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33caa14a0a406b380ba53eb8ed92cf939581f862
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 6043277eff17340cd57d0a6ee1bb8e84625f45b9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026959"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573235"
 ---
 # <a name="ccomcoclass-class"></a>CComCoClass クラス
 このクラスは、クラスのインスタンスを作成し、そのプロパティを取得するためのメソッドを提供します。  
@@ -70,7 +70,7 @@ class CComCoClass
   
  [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/ccomcoclass-class_1.h)]  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlcom.h  
   
 ##  <a name="createinstance"></a>  あって  
@@ -95,7 +95,7 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
  [out]作成が成功した場合は、要求されたインターフェイス ポインターを受け取るポインター変数のアドレス。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の HRESULT 値。 参照してください[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615) Windows sdk の有効な戻り値の説明。  
+ 標準の HRESULT 値。 参照してください[CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) Windows sdk の有効な戻り値の説明。  
   
 ### <a name="remarks"></a>Remarks  
  この関数の最初のオーバー ロードを使用して、一般的なオブジェクトを作成します。作成されるオブジェクトを集計する必要がある場合は、2 番目のオーバー ロードを使用します。  
@@ -107,7 +107,7 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
  なお、インターフェイス*Q* IID が関連付けられていることを使用して取得できる必要があります、 [_ _uuidof](../../cpp/uuidof-operator.md)演算子。  
   
 ### <a name="example"></a>例  
- 次の例では、 `CDocument` ATL ウィザードで生成されたクラスから派生`CComCoClass`を実装する、`IDocument`インターフェイス。 クラスが役立つマクロを持つオブジェクトのマップに登録されてクライアントを使用して、ドキュメントのインスタンスを作成できないため[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)します。 `CApplication` ドキュメント クラスのインスタンスを作成する独自の COM インターフェイスの 1 つのメソッドを提供するコクラスです。 いかに簡単かを示す次のコードを使用してドキュメント クラスのインスタンスを作成、`CreateInstance`から継承されたメンバー、`CComCoClass`基本クラス。  
+ 次の例では、 `CDocument` ATL ウィザードで生成されたクラスから派生`CComCoClass`を実装する、`IDocument`インターフェイス。 クラスが役立つマクロを持つオブジェクトのマップに登録されてクライアントを使用して、ドキュメントのインスタンスを作成できないため[CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)します。 `CApplication` ドキュメント クラスのインスタンスを作成する独自の COM インターフェイスの 1 つのメソッドを提供するコクラスです。 いかに簡単かを示す次のコードを使用してドキュメント クラスのインスタンスを作成、`CreateInstance`から継承されたメンバー、`CComCoClass`基本クラス。  
   
  [!code-cpp[NVC_ATL_COM#11](../../atl/codesnippet/cpp/ccomcoclass-class_2.cpp)]  
   

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20e24c5286afbe20b1f5b71a67b0d10385f80874
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 1077a9567509d98b68a864d7478ab84b94d11054
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208797"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42541700"
 ---
 # <a name="colecurrency-class"></a>COleCurrency クラス
 OLE オートメーションで使用される `CURRENCY` データ型をカプセル化します。  
@@ -97,7 +97,7 @@ class COleCurrency
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `COleCurrency`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー :** afxdisp.h  
   
 ##  <a name="colecurrency"></a>  COleCurrency::COleCurrency  
@@ -137,11 +137,11 @@ COleCurrency(
   
 - COleCurrency (`curSrc`) を構築、`COleCurrency`既存のオブジェクト`COleCurrency`オブジェクト。 新しいオブジェクトには、ソース オブジェクトと同じ状態があります。  
   
-- COleCurrency (`varSrc`) を構築、`COleCurrency`オブジェクト。 変換を試みます、[バリアント](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)構造または`COleVariant`オブジェクト (VT_CY) の通貨値から。 新しい変換後の値がコピーされるこの変換が成功した場合は、`COleCurrency`オブジェクト。 値ではそうでない場合、`COleCurrency`オブジェクトがゼロ (0) とその状態を無効に設定します。  
+- COleCurrency (`varSrc`) を構築、`COleCurrency`オブジェクト。 変換を試みます、[バリアント](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)構造または`COleVariant`オブジェクト (VT_CY) の通貨値から。 新しい変換後の値がコピーされるこの変換が成功した場合は、`COleCurrency`オブジェクト。 値ではそうでない場合、`COleCurrency`オブジェクトがゼロ (0) とその状態を無効に設定します。  
   
 - `COleCurrency(`nUnits`, `nFractionalUnits`) Constructs a `COleCurrency' 指定した数値のコンポーネントからのオブジェクト。 小数部分の絶対値が 10,000 を超える場合は、ユニットに適切な調整が行われます。 部と小数部が符号付き long 値が指定されているに注意してください。  
   
- 詳細については、次を参照してください。、[通貨](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)と[バリアント](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)Windows SDK 内のエントリ。  
+ 詳細については、次を参照してください。、[通貨](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)と[バリアント](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)Windows SDK 内のエントリ。  
   
 ### <a name="example"></a>例  
  次の例では、パラメーターの 0 と 2 つのパラメーターのコンス トラクターの効果を示します。  
@@ -304,7 +304,7 @@ const COleCurrency& operator=(const COleCurrency& curSrc);
   
 - **演算子 = (** *varSrc* **)** 場合の変換、`VARIANT`値 (または[COleVariant](../../mfc/reference/colevariant-class.md)オブジェクト) の通貨 ( `VT_CY`) は、成功すると、変換後の値はこれにコピーするは`COleCurrency`オブジェクトとその状態が有効に設定されます。 変換が成功すると、ない場合の値、`COleCurrency`オブジェクトが 0 とその状態を無効に設定します。  
   
- 詳細については、次を参照してください。、[通貨](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)と[バリアント](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)Windows SDK 内のエントリ。  
+ 詳細については、次を参照してください。、[通貨](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)と[バリアント](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)Windows SDK 内のエントリ。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCOleContainer#15](../../mfc/codesnippet/cpp/colecurrency-class_4.cpp)]  
@@ -450,7 +450,7 @@ throw(COleException*);
 ### <a name="remarks"></a>Remarks  
  ソース文字列に数値以外の文字の意味は、ローカルの言語仕様 (ロケール Id) を使用します。  
   
- ロケール ID の値の詳細については、次を参照してください。[複数の言語をサポートしている](http://msdn.microsoft.com/47dc5add-232c-4268-b977-43e12da81ede)します。  
+ ロケール ID の値の詳細については、次を参照してください。[複数の言語をサポートしている](/previous-versions/windows/desktop/automat/supporting-multiple-national-languages)します。  
   
  文字列が通貨に変換できた場合の値、この値`COleCurrency`オブジェクトが有効な値をその状態を設定します。  
   

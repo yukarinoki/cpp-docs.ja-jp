@@ -1,5 +1,5 @@
 ---
-title: '既定値:: (type_name)::equals メソッド |Microsoft ドキュメント'
+title: '既定:: (type_name)::equals メソッド |Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -9,16 +9,16 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 4450f835-06fc-4758-8d0a-72cf00007873
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2a8246597715ee2be2f55ba396a57f0ed014819
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36bd6e933d4e7bb1563ec6738c7ba3ed314c1cfd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087667"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612386"
 ---
 # <a name="defaulttypenameequals-method"></a>default::(type_name)::Equals メソッド
 指定したオブジェクトが、現在のオブジェクトと等しいかどうかを判断します。  
@@ -40,7 +40,7 @@ bool Equals(
  オブジェクトが等しい場合は`true` 。それ以外の場合は `false`。  
   
 ### <a name="requirements"></a>要件  
- **クライアントがサポートされる最小:** Windows 8  
+ **クライアントがサポートされている最小:** Windows 8  
   
  **サポートされているサーバーの最小値:** Windows Server 2012  
   

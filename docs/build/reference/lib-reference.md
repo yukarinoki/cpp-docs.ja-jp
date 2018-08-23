@@ -1,5 +1,5 @@
 ---
-title: LIB リファレンス |Microsoft ドキュメント
+title: LIB リファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a77056c6a3d0427c865658cd945e74e29d672b0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4b6eb6e9a1b7be12d125a68d3873401ccdeb7be3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371942"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572752"
 ---
 # <a name="lib-reference"></a>LIB リファレンス
-Microsoft ライブラリ マネージャー (LIB.exe) を作成およびオブジェクト ファイル形式 COFF (Common) オブジェクト ファイルのライブラリを管理します。 LIB は、エクスポート ファイルの作成し、エクスポート参照の定義をインポート ライブラリにも使用できます。  
+Microsoft ライブラリ マネージャー (LIB.exe) を作成および一般的なオブジェクト ファイル形式 (COFF) オブジェクト ファイルのライブラリを管理します。 LIB がエクスポート ファイルの作成し、定義をエクスポート参照するライブラリをインポートすることもできます。  
   
 > [!NOTE]
->  このツールは、[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] コマンド プロンプトからのみ開始できます。 システム コマンド プロンプトやエクスプローラーからは開始できません。  
+>  このツールは、Visual Studio コマンド プロンプトからのみ開始できます。 システム コマンド プロンプトやエクスプローラーからは開始できません。  
   
 -   [LIB の概要](../../build/reference/overview-of-lib.md)  
   

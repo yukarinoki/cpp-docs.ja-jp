@@ -13,18 +13,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 56b6642bb24107da4c09856dbd8daaf70fb7dfd5
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 7ba556ee3803bb00f07032e0589209af2d32addf
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015008"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591754"
 ---
 # <a name="universal-windows-apps-c"></a>ユニバーサル Windows アプリ (C++)
 
 ユニバーサル Windows プラットフォーム (UWP) アプリは、一連のさまざまなデバイスでさまざまな画面サイズに合わせて調整されるコンテンツの中心はシンプルなユーザー インターフェイスを重視する設計原則を具体化します。 XAML マークアップで UI を作成し、ネイティブ C++ で分離コードを作成します。 さらに他の言語で記述された UWP アプリケーションで使用可能なコンポーネント (DLL) を作成できます。 UWP アプリの API サーフェスは、Windows ランタイムのさまざまなオペレーティング システム サービスを提供するための十分に考慮されたライブラリです。
 
-> [!TIP]  
+> [!TIP]
 > Windows 10 では、Microsoft Store から展開の既存のデスクトップ アプリケーションをパッケージ化するデスクトップ ブリッジ app converter を使うことができます。 詳細については、次を参照してください。 [Centennial プロジェクトで Visual c のランタイムを使用して](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project)と[デスクトップ ブリッジ](/windows/uwp/porting/desktop-to-uwp-root)します。
 
 ## <a name="uwp-apps-that-use-cwinrt"></a>C + を使用する UWP アプリ/cli WinRT
@@ -46,4 +46,5 @@ C +/cli WinRT は、ヘッダーのみの新しいライブラリに基づく C+
 Windows ランタイム C++ テンプレート ライブラリでは、例外のない環境で Windows ランタイムを ISO C のコードからアクセスできる低レベルの COM インターフェイスを提供します。 ほとんどの場合、推奨使用すること C +/cli WinRT または C++/cli CX UWP アプリ開発用 Windows ランタイム C++ テンプレート ライブラリの代わりにします。 Windows ランタイム C++ テンプレート ライブラリについては、次を参照してください。 [Windows ランタイム C++ テンプレート ライブラリ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)します。
 
 ## <a name="see-also"></a>関連項目
- [Visual C++](../visual-cpp-in-visual-studio.md)<br/>
+
+[Visual C++](../visual-cpp-in-visual-studio.md)<br/>

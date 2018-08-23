@@ -1,5 +1,5 @@
 ---
-title: __readcr0 |Microsoft ドキュメント
+title: __readcr0 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffb1abfadbe793f49eae53e2ee35f820c947685c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: adece31c6123a21931436809d4405f258f4341b1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334653"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538290"
 ---
 # <a name="readcr0"></a>__readcr0
 **Microsoft 固有の仕様**  
@@ -43,11 +43,11 @@ unsigned __int64 __readcr0(void);  /* X64 */
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__readcr0`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readcr0`|x86、x64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  この組み込みはカーネル モードのみで使用でき、そのルーチンは組み込みとしてのみ使用できます。  
   
 **Microsoft 固有の仕様はここまで**  

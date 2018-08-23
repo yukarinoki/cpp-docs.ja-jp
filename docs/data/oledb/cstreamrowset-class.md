@@ -38,12 +38,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8b9f1c7aef4116ae057d771e66b5027c5783f64e
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 2a8e4af6e85dbfa3b617471b592f806ae1ef5548
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338013"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571525"
 ---
 # <a name="cstreamrowset-class"></a>CStreamRowset クラス
 使用される、`CCommand`または`CTable`宣言します。  
@@ -69,7 +69,7 @@ class CStreamRowset
 |||  
 |-|-|  
 |[CStreamRowset](#cstreamrowset)|コンストラクターです。 インスタンスを作成し、初期化、`CStreamRowset`オブジェクト。|  
-|[閉じる](#close)|リリース、 [ISequentialStream](https://msdn.microsoft.com/library/ms718035.aspx)クラスのインターフェイス ポインター。|  
+|[閉じる](#close)|リリース、 [ISequentialStream](/previous-versions/windows/desktop/ms718035\(v=vs.85\))クラスのインターフェイス ポインター。|  
   
 ## <a name="remarks"></a>Remarks  
  使用`CStreamRowset`で、`CCommand`または`CTable`例については、宣言。  
@@ -99,7 +99,7 @@ CStreamRowset();
 ```  
 
 ## <a name="close"></a> Cstreamrowset::close
-リリース、 [ISequentialStream](https://msdn.microsoft.com/library/ms718035.aspx)クラスのインターフェイス ポインター。  
+リリース、 [ISequentialStream](/previous-versions/windows/desktop/ms718035\(v=vs.85\))クラスのインターフェイス ポインター。  
   
 ### <a name="syntax"></a>構文  
   

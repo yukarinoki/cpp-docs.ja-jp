@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05d7897bf7b18d804d787f865b80b615b7564919
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: a2ce93a17dd2666469b8e6d56e1a106d508855f7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028292"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541814"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 ドッキング サイトにドッキングできる、またはタブ付きペインに含めることができるペインを実装します。  
@@ -314,7 +314,7 @@ class CDockablePane : public CPane
   
  [CDockablePane](../../mfc/reference/cdockablepane-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxDockablePane.h  
   
 ##  <a name="attachtotabwnd"></a>  Cdockablepane::attachtotabwnd  
@@ -927,7 +927,7 @@ virtual AFX_CS_STATUS GetDockingStatus(
 ### <a name="remarks"></a>Remarks  
  フレームワークは、フローティング ウィンドウのドッキングを処理するには、このメソッドを呼び出します。  
   
- DT_IMMEDIATE ドッキング モードを使用するウィンドウをドッキングまたはフローティング ツールバーの場合は、フレームワークは、ドッキング コマンド ウィンドウをドッキングを実行する前に親フレームのクライアント領域外に移動するユーザーを有効にするを遅延します。 遅延の長さの単位はミリ秒とによって制御されます、 [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock)データ メンバー. 既定値[CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock)は 200 です。 この動作のドッキング動作をエミュレートする[!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)]2007。  
+ DT_IMMEDIATE ドッキング モードを使用するウィンドウをドッキングまたはフローティング ツールバーの場合は、フレームワークは、ドッキング コマンド ウィンドウをドッキングを実行する前に親フレームのクライアント領域外に移動するユーザーを有効にするを遅延します。 遅延の長さの単位はミリ秒とによって制御されます、 [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock)データ メンバー. 既定値[CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock)は 200 です。 この動作は、Microsoft Word 2007 のドッキング動作をエミュレートします。  
   
  遅延ドッキング州 (CS_DELAY_DOCK および CS_DELAY_DOCK_TO_TAB)、フレームワーク、ユーザーがマウス ボタンを解放するまでのドッキングを行いません。 ペイン DT_STANDARD ドッキング モードを使用する場合、フレームワークは、ドッキング場所にある四角形を表示します。 ペイン DT_SMART ドッキング モードを使用する場合、フレームワークはドッキング場所にあるスマート ドッキング マーカーおよび半透明にする四角形を表示します。 ウィンドウのドッキングのモードを指定するには、呼び出し、 [CBasePane::SetDockingMode](../../mfc/reference/cbasepane-class.md#setdockingmode)メソッド。 スマート ドッキングの詳細については、次を参照してください。 [CDockingManager::GetSmartDockingParams](../../mfc/reference/cdockingmanager-class.md#getsmartdockingparams)します。  
   
@@ -1186,7 +1186,7 @@ AFX_IMPORT_DATA static int m_nSlideSteps;
  高速なアニメーション効果では、この値を小さきます。 低速のアニメーション効果では、この値を大ききます。  
   
 ##  <a name="onafterchangeparent"></a>  CDockablePane::OnAfterChangeParent  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。  
   
 ```  
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);

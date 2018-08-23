@@ -1,5 +1,5 @@
 ---
-title: 同時実行 Namespace |Microsoft ドキュメント
+title: 同時実行 Namespace |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5659c48b73eb8dfde4ffc7683de3c2cf721564d
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 2bf60ecf57a23de52575e3e2563c07e4f574194a
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695188"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42538456"
 ---
 # <a name="concurrency-namespace"></a>concurrency 名前空間
 `Concurrency` 名前空間には、C++ 向けの並列プログラミング フレームワークである同時実行ランタイムにアクセスするためのクラスおよび関数が用意されています。 詳細については、「[同時実行ランタイム](../../../parallel/concrt/concurrency-runtime.md)」を参照してください。  
@@ -81,8 +81,8 @@ namespace concurrency;
 |[concurrent_queue クラス](concurrent-queue-class.md)|`concurrent_queue` クラスは、キューの要素に先入れ先出し方式でアクセスできるようにするシーケンス コンテナー クラスです。 これを使用すると、`push`、`try_pop` などの特定の同時実行セーフな操作を実行できます。|  
 |[concurrent_unordered_map クラス](concurrent-unordered-map-class.md)|`concurrent_unordered_map` クラスは、`std::pair<const K, _Element_type>` 型要素の可変長シーケンスを制御する同時実行セーフなコンテナーです。 このシーケンスは、同時実行セーフな追加、要素アクセス、反復子アクセス、反復子走査の各操作を実行できるように表されます。|  
 |[concurrent_unordered_multimap クラス](concurrent-unordered-multimap-class.md)|`concurrent_unordered_multimap` クラスは、`std::pair<const K, _Element_type>` 型要素の可変長シーケンスを制御する同時実行セーフなコンテナーです。 このシーケンスは、同時実行セーフな追加、要素アクセス、反復子アクセス、反復子走査の各操作を実行できるように表されます。|  
-|[concurrent_unordered_multiset クラス](concurrent-unordered-multiset-class.md)|`concurrent_unordered_multiset`クラス型 K. の要素の可変長シーケンスを制御する同時実行セーフ コンテナーがシーケンスが同時実行セーフな形で表される要素アクセス、反復子アクセス、反復子走査の各操作を追加します。|  
-|[concurrent_unordered_set クラス](concurrent-unordered-set-class.md)|`concurrent_unordered_set`クラス型 K. の要素の可変長シーケンスを制御する同時実行セーフ コンテナーがシーケンスが同時実行セーフな形で表される要素アクセス、反復子アクセス、反復子走査の各操作を追加します。|  
+|[concurrent_unordered_multiset クラス](concurrent-unordered-multiset-class.md)|`concurrent_unordered_multiset`クラスは、同時実行セーフなコンテナー K. 型の要素の可変長シーケンスを制御します。により、同時実行セーフな方法で、シーケンスが表される要素へのアクセス、反復子アクセス、および反復子走査の各操作を追加します。|  
+|[concurrent_unordered_set クラス](concurrent-unordered-set-class.md)|`concurrent_unordered_set`クラスは、同時実行セーフなコンテナー K. 型の要素の可変長シーケンスを制御します。により、同時実行セーフな方法で、シーケンスが表される要素へのアクセス、反復子アクセス、および反復子走査の各操作を追加します。|  
 |[concurrent_vector クラス](concurrent-vector-class.md)|`concurrent_vector` クラスは、任意の要素にランダムにアクセスできるようにするシーケンス コンテナー クラスです。 これを使用すると、同時実行セーフな追加、要素アクセス、反復子アクセス、および反復子走査の各操作を実行できます。|  
 |[Context クラス](context-class.md)|実行コンテキストの抽象化を表します。|  
 |[context_self_unblock クラス](context-self-unblock-class.md)|このクラスは、同じコンテキストから `Unblock` オブジェクトの `Context` メソッドが呼び出された場合にスローされる例外を表します。 これは、特定のコンテキストがそれ自体のブロックを解除しようとしたことを示します。|  
@@ -111,7 +111,7 @@ namespace concurrency;
 |[message_processor クラス](message-processor-class.md)|`message_processor` クラスは、`message` オブジェクトを処理するための抽象基底クラスです。 メッセージの順序は保証されません。|  
 |[missing_wait クラス](missing-wait-class.md)|このクラスは、`task_group` オブジェクトまたは `structured_task_group` オブジェクトのデストラクターの実行時に、そのオブジェクトにスケジュールされたタスクがまだ存在する場合にスローされる例外を表します。 例外の結果としてのスタック アンワインドによりデストラクターが実行される場合、この例外はスローされません。|  
 |[multi_link_registry クラス](multi-link-registry-class.md)|`multi_link_registry` オブジェクトは、複数のソース ブロックまたは複数のターゲット ブロックを管理する `network_link_registry` です。|  
-|[multitype_join クラス](multitype-join-class.md)|`multitype_join` メッセージング ブロックは、複数のソースと単一のターゲットを持つメッセージング ブロックで、それぞれのソースから受け取った異なる種類のメッセージを 1 つに結合してターゲットに渡します。|  
+|[multitype_join クラス](multitype-join-class.md)|`multitype_join` メッセージング ブロックは、複数のソースと単一のターゲットを持つメッセージング ブロックで、それぞれのソースから受け取った異なる種類のメッセージを 1 つに結合して、結合されたメッセージのタプルをターゲットに渡します。|  
 |[nested_scheduler_missing_detach クラス](nested-scheduler-missing-detach-class.md)|このクラスは、`CurrentScheduler::Detach` オブジェクトの `Attach` メソッドによって別のスケジューラにアタッチされているコンテキストで `Scheduler` メソッドが呼び出されなかったことを、同時実行ランタイムが検出した場合にスローされる例外を表します。|  
 |[network_link_registry クラス](network-link-registry-class.md)|`network_link_registry` 抽象基底クラスによって、ソース ブロックとターゲット ブロック間のリンクを管理します。|  
 |[operation_timed_out クラス](operation-timed-out-class.md)|このクラスは、操作がタイムアウトした場合にスローされる例外を表します。|  
@@ -135,9 +135,9 @@ namespace concurrency;
 |[structured_task_group クラス](structured-task-group-class.md)|`structured_task_group` クラスは、並列処理の高度に構造化されたコレクションを表します。 `structured_task_group` オブジェクトを使用して個々の並列タスクを `task_handle` のキューに配置し、それらのタスクが完了するまで待機するか、実行が完了する前にタスク グループを取り消すことができます。取り消すと、実行が開始されていないタスクはすべて中止されます。|  
 |[target_block クラス](target-block-class.md)|`target_block` クラスは、基本的なリンク管理機能と、ターゲットのみのブロックのエラー チェック機能を実現する抽象基底クラスです。|  
 |[task クラス (同時実行ランタイム)](task-class.md)|並列パターン ライブラリ (PPL) `task` クラス。 `task` オブジェクトは、非同期的に、他のタスクと同時に実行できる処理、および同時実行ランタイムの並列アルゴリズムによって生成される並列処理を表します。 正常に終了した場合は、型 `_ResultType` の結果が生成されます。 型 `task<void>` のタスクでは結果が作成されません。 タスクは、他のタスクと関係なく待機および取り消しできます。 また、continuations(`then`)、および join(`when_all`) パターンと choice(`when_any`) パターンを使用して、他のタスクと共に構成することもできます。|  
-|[task_canceled クラス](task-canceled-class.md)|このクラスは、現在のタスクを強制的に取り消すために PPL タスク レイヤーによってスローされる例外を表します。 によってもスローされます、`get()`メソッド[タスク](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f)、取り消されたタスクに対してです。|  
+|[task_canceled クラス](task-canceled-class.md)|このクラスは、現在のタスクを強制的に取り消すために PPL タスク レイヤーによってスローされる例外を表します。 によってもスローされます、`get()`メソッド[タスク](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f)、取り消されたタスク。|  
 |[task_completion_event クラス](task-completion-event-class.md)|`task_completion_event` クラスを使用すると、条件が満たされるまで、または外部イベントに応答してタスクを開始するまで、タスクの実行を遅延できます。|  
-|[task_continuation_context クラス](task-continuation-context-class.md)|`task_continuation_context` クラスを使用すると、継続する場所を指定できます。 UWP アプリからこのクラスを使用することだけです。 非 Windows ランタイム アプリでは、タスク継続の実行コンテキストは、ランタイムによって決定され、構成できません。|  
+|[task_continuation_context クラス](task-continuation-context-class.md)|`task_continuation_context` クラスを使用すると、継続する場所を指定できます。 のみ、UWP アプリからこのクラスを使用すると便利です。 非 Windows ランタイム アプリでは、タスクの継続の実行コンテキストは、ランタイムによって決定され、構成できません。|  
 |[task_group クラス](task-group-class.md)|`task_group` クラスは、待機または取り消しができる並列処理のコレクションを表します。|  
 |[task_handle クラス](task-handle-class.md)|`task_handle` クラスは個々の並列作業項目を表します。 このクラスは、1 つの処理を実行するために必要な命令およびデータをカプセル化します。|  
 |[task_options クラス (同時実行ランタイム)](task-options-class-concurrency-runtime.md)|タスクの作成に使用できるオプションを表します。|  
@@ -165,26 +165,26 @@ namespace concurrency;
 |[IUMSUnblockNotification 構造体](iumsunblocknotification-structure.md)|ブロックされ、スケジューラの指定されたスケジュール コンテキストに制御を戻すことをトリガーされたスレッド プロキシが、ブロック解除され、スケジュールできる状態であることを示す、リソース マネージャーからの通知を表します。 このインターフェイスは、`GetContext` メソッドから返される、スレッド プロキシの関連付けられた実行コンテキストが再スケジュールされると無効になります。|  
 |[IVirtualProcessorRoot 構造体](ivirtualprocessorroot-structure.md)|スレッド プロキシが実行できるハードウェア スレッドの抽象化です。|  
 |[scheduler_interface 構造体](scheduler-interface-structure.md)|スケジューラ インターフェイス|  
-|[scheduler_ptr 構造体 (同時実行ランタイム)](scheduler-ptr-structure-concurrency-runtime.md)|スケジューラへのポインターを表します。 このクラスによって、shared_ptr を使用して共有有効期間を指定できるように、または、生ポインターを使用して参照できるようにします。|  
+|[scheduler_ptr 構造体 (同時実行ランタイム)](scheduler-ptr-structure-concurrency-runtime.md)|スケジューラへのポインターを表します。 このクラスは、生のポインターを使用して、shared_ptr またはプレーンな参照だけを使用して共有有効期間の指定を許可する存在します。|  
   
 ### <a name="enumerations"></a>列挙  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[agent_status](concurrency-namespace-enums.md#agent_status)|`agent` の有効な状態。|  
 |[Agents_EventType](concurrency-namespace-enums.md#agents_eventtype)|エージェント ライブラリによって提供されるトレース機能を使用してトレースできるイベントの種類。|  
 |[ConcRT_EventType](concurrency-namespace-enums.md#concrt_eventtype)|同時実行ランタイムによって提供されるトレース機能を使用してトレースできるイベントの種類。|  
 |[Concrt_TraceFlags](concurrency-namespace-enums.md#concrt_traceflags)|イベントの種類のトレース フラグ。|  
 |[CriticalRegionType](concurrency-namespace-enums.md#criticalregiontype)|コンテキストが存在するクリティカル領域の種類。|  
-|[DynamicProgressFeedbackType](concurrency-namespace-enums.md#dynamicprogressfeedbacktype)|`DynamicProgressFeedback` ポリシーによって使用され、スケジューラのリソースのバランスを再調整する際の判断基準として、スケジューラから収集された統計情報に従うか、または `Activate` インターフェイスの `Deactivate` メソッドおよび `IVirtualProcessorRoot` メソッドの呼び出しによってアイドル状態との間で状態が変化する仮想プロセッサのみに基づくかを示します。 使用できるスケジューラ ポリシーの詳細については、次を参照してください。 [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)です。|  
+|[DynamicProgressFeedbackType](concurrency-namespace-enums.md#dynamicprogressfeedbacktype)|`DynamicProgressFeedback` ポリシーによって使用され、スケジューラのリソースのバランスを再調整する際の判断基準として、スケジューラから収集された統計情報に従うか、または `Activate` インターフェイスの `Deactivate` メソッドおよび `IVirtualProcessorRoot` メソッドの呼び出しによってアイドル状態との間で状態が変化する仮想プロセッサのみに基づくかを示します。 使用できるスケジューラ ポリシーの詳細については、次を参照してください。 [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)します。|  
 |[join_type](concurrency-namespace-enums.md#join_type)|`join` メッセージング ブロックの種類。|  
 |[message_status](concurrency-namespace-enums.md#message_status)|ブロックへの `message` オブジェクトの提供に対する有効な応答。|  
-|[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)|ポリシー キーは、スケジューラの動作をさまざまな側面から表します。 各ポリシー要素は、キーと値の組み合わせで表現されます。 スケジューラでのスケジューラ ポリシーとその影響に関する詳細については、次を参照してください。[タスク スケジューラ](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)です。|  
-|[SchedulerType](concurrency-namespace-enums.md#schedulertype)|基になる実行コンテキスト用にスケジューラが利用するスレッドの種類を示すために、`SchedulerKind` ポリシーにより使用されます。 使用できるスケジューラ ポリシーの詳細については、次を参照してください。 [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)です。|  
-|[SchedulingProtocolType](concurrency-namespace-enums.md#schedulingprotocoltype)|スケジューラに使用されるスケジューリング アルゴリズムを記述するために、`SchedulingProtocol` ポリシーによって使用されます。 使用できるスケジューラ ポリシーの詳細については、次を参照してください。 [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)です。|  
+|[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)|ポリシー キーは、スケジューラの動作をさまざまな側面から表します。 各ポリシー要素は、キーと値の組み合わせで表現されます。 スケジューラのスケジューラ ポリシーとその影響に関する詳細については、次を参照してください。[タスク スケジューラ](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)します。|  
+|[SchedulerType](concurrency-namespace-enums.md#schedulertype)|基になる実行コンテキスト用にスケジューラが利用するスレッドの種類を示すために、`SchedulerKind` ポリシーにより使用されます。 使用できるスケジューラ ポリシーの詳細については、次を参照してください。 [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)します。|  
+|[SchedulingProtocolType](concurrency-namespace-enums.md#schedulingprotocoltype)|スケジューラに使用されるスケジューリング アルゴリズムを記述するために、`SchedulingProtocol` ポリシーによって使用されます。 使用できるスケジューラ ポリシーの詳細については、次を参照してください。 [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)します。|  
 |[SwitchingProxyState](concurrency-namespace-enums.md#switchingproxystate)|あるスレッド プロキシから別のスレッド プロキシへの協調的なコンテキスト切り替えを実行するときに、スレッド プロキシの状態を示すために使用します。|  
 |[task_group_status](concurrency-namespace-enums.md#task_group_status)|`task_group` オブジェクトまたは `structured_task_group` オブジェクトの実行状態を示します。 この型の値は、タスク グループに対してスケジュールされたタスクが完了するのを待機している多数のメソッドによって返されます。|  
-|[WinRTInitializationType](concurrency-namespace-enums.md#winrtinitializationtype)|`WinRTInitialization` ポリシーによって使用され、Windows 8 以上のオペレーティング システムで実行されるアプリケーション用のスケジューラ スレッドで、Windows ランタイムを初期化するかどうか、またどのように初期化するかを表します。 使用できるスケジューラ ポリシーの詳細については、次を参照してください。 [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)です。|  
+|[WinRTInitializationType](concurrency-namespace-enums.md#winrtinitializationtype)|`WinRTInitialization` ポリシーによって使用され、Windows 8 以上のオペレーティング システムで実行されるアプリケーション用のスケジューラ スレッドで、Windows ランタイムを初期化するかどうか、またどのように初期化するかを表します。 使用できるスケジューラ ポリシーの詳細については、次を参照してください。 [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)します。|  
   
 ### <a name="functions"></a>関数  
   

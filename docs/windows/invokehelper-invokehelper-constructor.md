@@ -17,38 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75ad1b82d6d4a28db94ef00a234547091969722b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 1ad09a5a4794a9db8882a088f90da5046b6f7b9d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020028"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609241"
 ---
 # <a name="invokehelperinvokehelper-constructor"></a>InvokeHelper::InvokeHelper コンストラクター
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-explicit InvokeHelper(  
-   TCallback callback  
-);  
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *コールバック*  
- イベント ハンドラー。  
-  
-## <a name="remarks"></a>Remarks  
- 新しいインスタンスを初期化、 **InvokeHelper**クラス。  
-  
- `TCallback`テンプレート パラメーターは、イベント ハンドラーの種類を指定します。  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** event.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>関連項目  
- [InvokeHelper 構造体](../windows/invokehelper-structure.md)   
- [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)
+
+WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+
+## <a name="syntax"></a>構文
+
+```cpp
+explicit InvokeHelper(
+   TCallback callback
+);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*コールバック*  
+イベント ハンドラー。
+
+## <a name="remarks"></a>Remarks
+
+新しいインスタンスを初期化、 **InvokeHelper**クラス。
+
+`TCallback`テンプレート パラメーターは、イベント ハンドラーの種類を指定します。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** event.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>関連項目
+
+[InvokeHelper 構造体](../windows/invokehelper-structure.md)  
+[Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

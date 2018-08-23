@@ -1,5 +1,5 @@
 ---
-title: 致命的なエラー C1113 |Microsoft ドキュメント
+title: 致命的なエラー C1113 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 343dbc41743c825b7fb3624019817ec7c5f163fa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db188764694c0c0c0b7a85c3653564d563f9cbd2
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199055"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540294"
 ---
 # <a name="fatal-error-c1113"></a>致命的なエラー C1113
-\#'file' で失敗しました。  
+\#'file' で失敗しました  
   
- Microsoft Intermediate Language (MSIL) 形式のファイルのみを渡すことができます、 [#using](../../preprocessor/hash-using-directive-cpp.md)ディレクティブです。 [/Clr](../../build/reference/clr-common-language-runtime-compilation.md)コンパイラ オプションでは、MSIL 出力ファイルを作成することができます。 その他の[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]言語も MSIL ファイルを生成します。
+ Microsoft Intermediate Language (MSIL) の形式のファイルのみに渡すことができます、 [#using](../../preprocessor/hash-using-directive-cpp.md)ディレクティブ。 [/Clr](../../build/reference/clr-common-language-runtime-compilation.md)コンパイラ オプションを使用して、MSIL 出力ファイルを作成できます。 その他の Visual Studio の言語では、MSIL ファイルも生成します。

@@ -41,12 +41,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 661ac13acd1d8eac0ecde9af9fa08875b99153e3
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 0179bbc68bb6ed60f6fadf26f98be492c2eeb4c1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336981"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572208"
 ---
 # <a name="cutlprops-class"></a>CUtlProps クラス
 OLE DB プロパティのインターフェイスのさまざまなプロパティを実装する (たとえば、 `IDBProperties`、 `IDBProperties`、および`IRowsetInfo`)。  
@@ -123,7 +123,7 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
  プロパティ セットの配列インデックス1 つのプロパティ セットがある場合は 0 します。  
   
  *pDBProp*  
- プロパティ ID と新しい値を[DBPROP](https://msdn.microsoft.com/library/ms717970.aspx)構造体。  
+ プロパティ ID と新しい値を[DBPROP](/previous-versions/windows/desktop/ms717970\(v=vs.85\))構造体。  
   
 ### <a name="return-value"></a>戻り値  
  標準の HRESULT です。 既定の戻り値は、S_OK です。  
@@ -178,7 +178,7 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
  プロパティ セットの配列インデックス1 つのプロパティ セットがある場合は 0 します。  
   
  *pDBProp*  
- プロパティ ID と新しい値を[DBPROP](https://msdn.microsoft.com/library/ms717970.aspx)構造体。  
+ プロパティ ID と新しい値を[DBPROP](/previous-versions/windows/desktop/ms717970\(v=vs.85\))構造体。  
   
 ### <a name="return-value"></a>戻り値  
  標準の HRESULT です。 既定の戻り値は、S_OK です。  

@@ -1,5 +1,5 @@
 ---
-title: CMFCVisualManagerVS2005 クラス |Microsoft ドキュメント
+title: CMFCVisualManagerVS2005 クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7282730779360ecc0bb93f0ae827b46ddff19d0
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: e3ce4384ebce3140f8d3ccadf781f3d45b92340b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038062"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541247"
 ---
 # <a name="cmfcvisualmanagervs2005-class"></a>CMFCVisualManagerVS2005 クラス
 `CMFCVisualManagerVS2005` Microsoft Visual Studio 2005 の外観をアプリケーションに提供します。  
@@ -71,10 +71,10 @@ class CMFCVisualManagerVS2005 : public CMFCVisualManagerOffice2003
 |名前|説明|  
 |----------|-----------------|  
 |[CMFCVisualManagerVS2005::GetDockingTabsBordersSize](#getdockingtabsborderssize)|フレームワークは、ドッキング、タブ付きウィンドウを描画するときに、このメソッドを呼び出します。 (上書き[CMFCVisualManager::GetDockingTabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getdockingtabsborderssize))。|  
-|[CMFCVisualManagerVS2005::GetMDITabsBordersSize](#getmditabsborderssize)|フレームワークは、ウィンドウを描画前に、MDITabs ウィンドウの境界線のサイズを確認するには、このメソッドを呼び出します。 (上書き[CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize))。|  
+|[CMFCVisualManagerVS2005::GetMDITabsBordersSize](#getmditabsborderssize)|フレームワークは、ウィンドウを描画する前に、MDITabs ウィンドウの境界線のサイズを判断するには、このメソッドを呼び出します。 (上書き[CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize))。|  
 |[CMFCVisualManagerVS2005::GetPropertyGridGroupColor](#getpropertygridgroupcolor)|(上書き[CMFCVisualManagerOffice2003::GetPropertyGridGroupColor](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#getpropertygridgroupcolor))。|  
 |[CMFCVisualManagerVS2005::GetTabFrameColors](#gettabframecolors)|(上書き[CMFCVisualManagerOffice2003::GetTabFrameColors](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#gettabframecolors))。|  
-|[CMFCVisualManagerVS2005::HasOverlappedAutoHideButtons](#hasoverlappedautohidebuttons)|現在のビジュアル マネージャー内の重複を自動的に隠すボタンかどうかを返します。 (上書き[CMFCVisualManager::HasOverlappedAutoHideButtons](../../mfc/reference/cmfcvisualmanager-class.md#hasoverlappedautohidebuttons))。|  
+|[CMFCVisualManagerVS2005::HasOverlappedAutoHideButtons](#hasoverlappedautohidebuttons)|現在のビジュアル マネージャーで自動的に隠すボタンが重複しているかどうかを返します。 (上書き[CMFCVisualManager::HasOverlappedAutoHideButtons](../../mfc/reference/cmfcvisualmanager-class.md#hasoverlappedautohidebuttons))。|  
 |[CMFCVisualManagerVS2005::OnDrawAutoHideButtonBorder](#ondrawautohidebuttonborder)|(上書き[CMFCVisualManagerOffice2003::OnDrawAutoHideButtonBorder](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawautohidebuttonborder))。|  
 |[CMFCVisualManagerVS2005::OnDrawCaptionButton](#ondrawcaptionbutton)|(`CMFCVisualManagerOfficeXP::OnDrawCaptionButton` をオーバーライドします)。|  
 |[CMFCVisualManagerVS2005::OnDrawPaneCaption](#ondrawpanecaption)|(上書き[CMFCVisualManagerOffice2003::OnDrawPaneCaption](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawpanecaption))。|  
@@ -88,12 +88,12 @@ class CMFCVisualManagerVS2005 : public CMFCVisualManagerOffice2003
 |[CMFCVisualManagerVS2005::OnUpdateSystemColors](#onupdatesystemcolors)|(上書き[CMFCVisualManagerOffice2003::OnUpdateSystemColors](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onupdatesystemcolors))。|  
   
 ## <a name="remarks"></a>Remarks  
- CMFCVisualManagerVS2005 クラスを使用しているのと同じように、アプリケーションの外観を変更する、[!INCLUDE[vsprvsext](../../mfc/reference/includes/vsprvsext_md.md)]です。  
+ CMFCVisualManagerVS2005 クラスを使用して、Microsoft Visual Studio 2005 のと同じように、アプリケーションの外観を変更します。  
   
- このクラスの先祖から派生した仮想関数は、すべてこのクラスのメンバーの[CMFCVisualManager クラス](../../mfc/reference/cmfcvisualmanager-class.md)です。  
+ このクラスの先祖から派生した仮想関数はすべてこのクラスのメンバーの[CMFCVisualManager クラス](../../mfc/reference/cmfcvisualmanager-class.md)します。  
   
 ## <a name="example"></a>例  
- 次の例では、VS 2005 のビジュアル マネージャーを使用する方法を示します。 このコード スニペットの一部である、[デスクトップ アラート デモ サンプル](../../visual-cpp-samples.md)です。  
+ 次の例では、VS 2005 ビジュアル マネージャーを使用する方法を示します。 このコード スニペットの一部、[デスクトップ アラート デモ サンプル](../../visual-cpp-samples.md)します。  
   
  [!code-cpp[NVC_MFC_DesktopAlertDemo#9](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagervs2005-class_1.cpp)]  
   
@@ -110,7 +110,7 @@ class CMFCVisualManagerVS2005 : public CMFCVisualManagerOffice2003
   
  [CMFCVisualManagerVS2005](../../mfc/reference/cmfcvisualmanagervs2005-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxvisualmanagervs2005.h  
   
 ##  <a name="getdockingtabsborderssize"></a>  CMFCVisualManagerVS2005::GetDockingTabsBordersSize  

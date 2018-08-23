@@ -1,5 +1,5 @@
 ---
-title: _ _vmx_on |Microsoft ドキュメント
+title: _ _vmx_on |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: faa4325dc55bee53f2a19b192bb0c699dd89eb0b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e01be3d3f7db075116782b64e8b92ba12fb02f1d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333093"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540681"
 ---
 # <a name="vmxon"></a>__vmx_on
 **Microsoft 固有の仕様**  
@@ -39,7 +39,7 @@ unsigned char __vmx_on(
   
 #### <a name="parameters"></a>パラメーター  
  [入力] `VmsSupportPhysicalAddress`  
- 仮想マシン制御構造 (VMCS) を指す 64 ビットの物理アドレスへのポインター。  
+ 仮想マシンの制御構造 (VMCS) を指す 64 ビットの物理アドレスへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
   
@@ -49,14 +49,14 @@ unsigned char __vmx_on(
 |1|現在 VMCS の `VM-instruction error field` で有効な拡張状態が発生したため、操作は失敗しました。|  
 |2|有効な状態がないため操作は失敗しました。|  
   
-## <a name="remarks"></a>コメント  
- `__vmx_on`に対応する関数、`VMXON`マシン語命令します。 この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、「Intel 仮想化技術仕様の「ia-32 Intel アーキテクチャ」、ドキュメントの検索に番号 C97063 002 を文書化、 [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)サイトです。  
+## <a name="remarks"></a>Remarks  
+ `__vmx_on`関数に対応する、`VMXON`マシン語命令。 この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、検索、ドキュメント、「Intel 仮想化技術仕様 ia-32 Intel アーキテクチャ向け、」で番号 C97063-002、文書化、 [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)サイト。  
   
 ## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__vmx_on`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_on`|X64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   

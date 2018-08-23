@@ -1,5 +1,5 @@
 ---
-title: CMFCDragFrameImpl クラス |Microsoft ドキュメント
+title: CMFCDragFrameImpl クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 458288ecff0b457205ba1735494ad8106c3feae7
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: aee2c58d8763581987fec40b0cb486c67363697b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040949"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539059"
 ---
 # <a name="cmfcdragframeimpl-class"></a>CMFCDragFrameImpl クラス
 `CMFCDragFrameImpl`クラスは、ユーザーが標準ドッキング モードのペインをドラッグしたときに表示されるドラッグ四角形を描画します。  
-   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+   詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。  
    
 ## <a name="syntax"></a>構文  
   
@@ -34,14 +34,14 @@ class CMFCDragFrameImpl
 ```  
   
 ## <a name="remarks"></a>Remarks  
- このクラスのオブジェクトがそれぞれに埋め込まれた[CPane クラス](../../mfc/reference/cpane-class.md)オブジェクト。 したがって、されるそれぞれのウィンドウを使用して、`CanFloat`メソッドが、ユーザーがドラッグしたときに、ドラッグ四角形を表示します。  
+ このクラスのオブジェクトがそれぞれに埋め込まれた[CPane クラス](../../mfc/reference/cpane-class.md)オブジェクト。 使用してそのため、各ペイン、`CanFloat`メソッドが、ユーザーがドラッグしたときに、ドラッグ四角形を表示します。  
   
- 使用してドラッグ四角形の幅を制御できます[AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat](afx-global-data-structure.md#m_ndragframethicknessfloat)と[AFX_GLOBAL_DATA::m_nDragFrameThicknessDock](afx-global-data-structure.md#m_ndragframethicknessdock)です。  
+ 使用してドラッグ四角形の幅を制御する[AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat](afx-global-data-structure.md#m_ndragframethicknessfloat)と[AFX_GLOBAL_DATA::m_nDragFrameThicknessDock](afx-global-data-structure.md#m_ndragframethicknessdock)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CMFCDragFrameImpl](../../mfc/reference/cmfcdragframeimpl-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdragframeimpl.h  
   
 ##  <a name="enddrawdragframe"></a>  CMFCDragFrameImpl::EndDrawDragFrame  

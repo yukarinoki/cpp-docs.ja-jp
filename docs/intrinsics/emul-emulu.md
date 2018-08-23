@@ -1,5 +1,5 @@
 ---
-title: _ _emul、_ _emulu |Microsoft ドキュメント
+title: _ _emul、_ _emulu |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,17 +20,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddc98119f6174f299b8de72383610aac72032d42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6e9e7ee594f2587334d93173daa147d81dcebb2
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331036"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540703"
 ---
 # <a name="emul-emulu"></a>__emul、__emulu
 **Microsoft 固有の仕様**  
   
- オーバーフローする保持できる 32 ビット整数の乗算を実行します。  
+ Overflow 保持できるは 32 ビット整数の乗算を実行します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -59,15 +59,15 @@ unsigned __int64 __emulu(
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__emul`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__emulu`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__emul`|x86、x64|  
+|`__emulu`|x86、x64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
- `__emul` 2 つの 32 ビット符号付きの値を受け取り、64 ビット符号付き整数値として、乗算の結果を返します。  
+## <a name="remarks"></a>Remarks  
+ `__emul` 2 つの 32 ビット符号付きの値を受け取り、64 ビット符号付き整数値として乗算の結果を返します。  
   
- `__emulu` 2 つの 32 ビット符号なし整数値を受け取り、64 ビット符号なし整数値として、乗算の結果を返します。  
+ `__emulu` 2 つの 32 ビット符号なし整数値を受け取り、64 ビット符号なし整数値として乗算の結果を返します。  
   
 ## <a name="example"></a>例  
   

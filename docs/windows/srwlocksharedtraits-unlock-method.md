@@ -17,34 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b7601504c8d1caec02df4b70f97893848e7ff1a5
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: e00b898fc60953896a9c0d2b7a124e195d3bcbf1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012600"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593169"
 ---
 # <a name="srwlocksharedtraitsunlock-method"></a>SRWLockSharedTraits::Unlock メソッド
-指定したの排他的制御を解放`SRWLock`オブジェクト。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-inline static void Unlock(  
-   _In_ Type srwlock  
-);  
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *srwlock*  
- 識別するハンドルを`SRWLock`オブジェクト。  
-  
-## <a name="return-value"></a>戻り値  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>関連項目  
- [SRWLockSharedTraits 構造体](../windows/srwlocksharedtraits-structure.md)
+
+指定したの排他的制御を解放`SRWLock`オブジェクト。
+
+## <a name="syntax"></a>構文
+
+```cpp
+inline static void Unlock(
+   _In_ Type srwlock
+);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*srwlock*  
+識別するハンドルを`SRWLock`オブジェクト。
+
+## <a name="return-value"></a>戻り値
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>関連項目
+
+[SRWLockSharedTraits 構造体](../windows/srwlocksharedtraits-structure.md)

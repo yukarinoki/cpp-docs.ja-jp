@@ -17,56 +17,61 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ed96762429aa0d4a442fb7a82db310146a3424d
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 8d18b323b255c8549ae275d3e6b88471f134c8b4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019970"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606781"
 ---
 # <a name="uuid-c-attributes"></a>uuid (C++ 属性)
-クラスまたはインターフェイスの一意の ID を指定します。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-[ uuid(  
-   "uuid"  
-) ]  
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *uuid*  
- 128 ビットの一意の識別子です。  
-  
-## <a name="remarks"></a>Remarks  
- インターフェイスまたはクラスの定義が指定しないかどうか、 **uuid** C++ 属性に、その後、Visual C コンパイラはいずれかで提供されます。 指定した場合、 **uuid**引用符を含める必要があります。  
-  
- 指定しない場合**uuid**コンパイラが、マシン上の別の属性プロジェクトでのインターフェイスまたはクラスと同じ名前の同じ GUID を生成します。  
-  
- Uuidgen.exe または Guidgen.exe を使用して、独自の一意の Id を生成することができます。 (これらのツールのいずれかを実行する をクリックして**開始** をクリック**実行**メニュー。 Enter、必要なツールの名前。)  
-  
- ATL にも使用しないプロジェクトで使用する場合を指定する、 **uuid**属性が指定した場合と同じ、 [uuid](../cpp/uuid-cpp.md) **_ _declspec**修飾子。 取得する、 **uuid**クラスを使用することができます[_ _uuidof](../cpp/uuidof-operator.md)  
-  
-## <a name="example"></a>例  
- 参照してください、[バインド可能な](../windows/bindable.md)の使用サンプルの例を**uuid**します。  
-  
-## <a name="requirements"></a>要件  
-  
-### <a name="attribute-context"></a>属性コンテキスト  
-  
-|||  
-|-|-|  
-|**対象**|**クラス**、**構造体**、**インターフェイス**、**共用体**、**列挙型**|  
-|**反復可能**|いいえ|  
-|**必要な属性**|なし|  
-|**無効な属性**|なし|  
-  
- 属性コンテキストの詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  
-  
-## <a name="see-also"></a>関連項目  
- [IDL 属性](../windows/idl-attributes.md)   
- [インターフェイス属性](../windows/interface-attributes.md)   
- [クラス属性](../windows/class-attributes.md)   
- [Typedef、Enum、Union、および struct 型の属性](../windows/typedef-enum-union-and-struct-attributes.md)   
- [uuid](http://msdn.microsoft.com/library/windows/desktop/aa367302)   
+
+クラスまたはインターフェイスの一意の ID を指定します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+[ uuid(
+   "uuid"
+) ]
+```
+
+### <a name="parameters"></a>パラメーター
+
+*uuid*  
+128 ビットの一意の識別子です。
+
+## <a name="remarks"></a>Remarks
+
+インターフェイスまたはクラスの定義が指定しないかどうか、 **uuid** C++ 属性に、その後、Visual C コンパイラはいずれかで提供されます。 指定した場合、 **uuid**引用符を含める必要があります。
+
+指定しない場合**uuid**コンパイラが、マシン上の別の属性プロジェクトでのインターフェイスまたはクラスと同じ名前の同じ GUID を生成します。
+
+Uuidgen.exe または Guidgen.exe を使用して、独自の一意の Id を生成することができます。 (これらのツールのいずれかを実行する をクリックして**開始** をクリック**実行**メニュー。 Enter、必要なツールの名前。)
+
+ATL にも使用しないプロジェクトで使用する場合を指定する、 **uuid**属性が指定した場合と同じ、 [uuid](../cpp/uuid-cpp.md) **_ _declspec**修飾子。 取得する、 **uuid**クラスを使用することができます[_ _uuidof](../cpp/uuidof-operator.md)
+
+## <a name="example"></a>例
+
+参照してください、[バインド可能な](../windows/bindable.md)の使用サンプルの例を**uuid**します。
+
+## <a name="requirements"></a>要件
+
+### <a name="attribute-context"></a>属性コンテキスト
+
+|||
+|-|-|
+|**対象**|**クラス**、**構造体**、**インターフェイス**、**共用体**、**列挙型**|
+|**反復可能**|いいえ|
+|**必要な属性**|なし|
+|**無効な属性**|なし|
+
+属性コンテキストの詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。
+
+## <a name="see-also"></a>関連項目
+
+[IDL 属性](../windows/idl-attributes.md)  
+[インターフェイス属性](../windows/interface-attributes.md)  
+[クラス属性](../windows/class-attributes.md)  
+[Typedef、Enum、Union、および Struct 型の属性](../windows/typedef-enum-union-and-struct-attributes.md)  
+[uuid](http://msdn.microsoft.com/library/windows/desktop/aa367302)  

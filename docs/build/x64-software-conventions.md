@@ -1,5 +1,5 @@
 ---
-title: x64 ソフトウェア規約 |Microsoft ドキュメント
+title: x64 ソフトウェア規約 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2115b353f269ff59c107737eeb4fdb590ffd71b6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 971f1fae3fe2d6733b0819f3a6e88db07612bce7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380889"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572068"
 ---
 # <a name="x64-software-conventions"></a>x64 ソフトウェア規約
-このセクションには、Visual C の呼び出し規約がについて説明[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]、64 ビットの拡張機能を x86 アーキテクチャ。  
+このセクションには、Visual C の 64 ビットの拡張機能を x86、x64 の呼び出し規約がについて説明しますアーキテクチャ。  
   
 -   [x64 呼び出し規則の概要](../build/overview-of-x64-calling-conventions.md)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "32380889"
   
 -   [イメージ形式](../build/image-format.md)  
   
- 次のコンパイラ オプションでは、アプリケーションを最適化できます[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]:。  
+ 次のコンパイラ オプションでは、x64 用のアプリケーションを最適化するのに役立ちます。  
   
 -   [/favor (アーキテクチャ固有の最適化)](../build/reference/favor-optimize-for-architecture-specifics.md)  
   

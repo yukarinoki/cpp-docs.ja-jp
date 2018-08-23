@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c58090351829f6a12ae90d56e8985bf615966f65
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 731229f8aca9d564e418382a54e097ff61316586
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852276"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538531"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl クラス
 `CNetAddressCtrl` クラスは、ネットワーク アドレス コントロールを表します。このコントロールを使用すると、IPv4 アドレス、IPv6 アドレス、および名前付き DNS アドレスの形式を入力して検証できます。  
@@ -72,7 +72,7 @@ class CNetAddressCtrl : public CEdit
   
  次の図は、ネットワーク アドレス コントロールを含むダイアログを示しています。 テキスト ボックス (1) ネットワーク アドレス コントロールの無効なネットワーク アドレスが含まれています。 ネットワーク アドレスが有効でない場合は、ツールチップ メッセージ (2) が表示されます。  
   
- ![ネットワーク アドレス コントロールおよび infotip を持つダイアログ。] (../../mfc/reference/media/cnetaddctrl.png "cnetaddctrl")  
+ ![ネットワーク アドレス コントロールおよび infotip を持つダイアログ。](../../mfc/reference/media/cnetaddctrl.png "cnetaddctrl")  
   
 ## <a name="example"></a>例  
  次のコード例は、ネットワーク アドレスを検証する ダイアログ ボックスの一部です。 3 つのラジオ ボタンのイベント ハンドラーは、ネットワーク アドレスを指定できるで 3 つのアドレスの種類のいずれかを指定します。 ユーザーはネットワーク コントロールのテキスト ボックスにアドレスを入力し、アドレスを検証するためのボタンを押します。 アドレスが有効な場合は、成功メッセージが表示されます。それ以外の場合、定義済みのヒントのエラー メッセージが表示されます。  
@@ -95,10 +95,10 @@ class CNetAddressCtrl : public CEdit
   
  `CNetAddressCtrl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxcmn.h  
   
- このクラスではサポートされて[!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)]以降。  
+ Windows Vista 以降、このクラスはサポートされています。  
   
  このクラスの追加要件が記載されて[ビルド要件の Windows Vista コモン コントロール](../../mfc/build-requirements-for-windows-vista-common-controls.md)します。  
   

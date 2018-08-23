@@ -17,51 +17,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 57759e7191ecbe08e6d94dcec798f6d3203c13de
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 3cecffa8505aaead738007e2a0872c3f1bc5a6d6
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645140"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593649"
 ---
 # <a name="createclassfactory-function"></a>CreateClassFactory 関数
-指定されたクラスのインスタンスを生成するファクトリを作成します。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-template<typename Factory>  
-inline HRESULT STDMETHODCALLTYPE CreateClassFactory(  
-   _In_ unsigned int *flags,   
-   _In_ const CreatorMap* entry,   
-   REFIID riid,   
-   _Outptr_ IUnknown **ppFactory  
-) throw();  
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *flags*  
- 1 つ以上を組み合わせた[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列挙値。  
-  
- *entry*  
- ポインターを[CreatorMap](../windows/creatormap-structure.md)パラメーターに関する情報を初期化し、登録を含む*riid*します。  
-  
- *riid*  
- インターフェイス ID への参照  
-  
- *ppFactory*  
- この操作は、クラス ファクトリへのポインターでは正常に完了します。 場合、  
-  
-## <a name="return-value"></a>戻り値  
- 成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。  
-  
-## <a name="remarks"></a>Remarks  
- 場合は、アサート エラーが出力テンプレート パラメーター*ファクトリ*インターフェイスから派生していない`IClassFactory`します。  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** module.h  
-  
- **名前空間:** Microsoft::WRL  
-  
-## <a name="see-also"></a>関連項目  
- [Microsoft::WRL::Wrappers::Details 名前空間](../windows/microsoft-wrl-wrappers-details-namespace.md)
+
+指定されたクラスのインスタンスを生成するファクトリを作成します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+template<typename Factory>
+inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
+   _In_ unsigned int *flags,
+   _In_ const CreatorMap* entry,
+   REFIID riid,
+   _Outptr_ IUnknown **ppFactory
+) throw();
+```
+
+### <a name="parameters"></a>パラメーター
+
+*flags*  
+1 つ以上を組み合わせた[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列挙値。
+
+*entry*  
+ポインターを[CreatorMap](../windows/creatormap-structure.md)パラメーターに関する情報を初期化し、登録を含む*riid*します。
+
+*riid*  
+インターフェイス ID への参照
+
+*ppFactory*  
+この操作は、クラス ファクトリへのポインターでは正常に完了します。 場合、
+
+## <a name="return-value"></a>戻り値
+
+成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。
+
+## <a name="remarks"></a>Remarks
+
+場合は、アサート エラーが出力テンプレート パラメーター*ファクトリ*インターフェイスから派生していない`IClassFactory`します。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** module.h
+
+**名前空間:** Microsoft::WRL
+
+## <a name="see-also"></a>関連項目
+
+[Microsoft::WRL::Wrappers::Details 名前空間](../windows/microsoft-wrl-wrappers-details-namespace.md)

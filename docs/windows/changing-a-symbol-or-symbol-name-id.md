@@ -18,32 +18,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cd9d2429f1257711d766d8e51b890e2e8a59b8d1
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: e2fb5268ca23def96c31f724b93fbdf1c81c4a43
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642257"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599696"
 ---
 # <a name="changing-a-symbol-or-symbol-name-id"></a>シンボルまたはシンボル名 (ID) の変更
-リソースまたはリソース オブジェクトを新規作成すると、IDD_DIALOG1 などの既定のシンボル名が開発環境によって割り当てられます。 使用することができます、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)を既定のシンボル名を変更する、またはリソースに既に関連付けられている任意のシンボルの名前を変更します。  
-  
-### <a name="to-change-a-resources-symbol-name"></a>リソースのシンボル名を変更するには  
-  
-1.  [リソース ビュー](../windows/resource-view-window.md)リソースを選択します。  
-  
-    > [!NOTE]
-    >  プロジェクトに .rc ファイルがまだ含まれていない場合は、「 [リソース スクリプト ファイルの新規作成](../windows/how-to-create-a-resource-script-file.md)」を参照してください。  
-  
-2.  **プロパティ**ウィンドウで、新しいシンボル名を入力するか既存のシンボルの一覧から選択、 **ID**ボックス。  
-  
-     新しいシンボル名を入力すると、値が自動的に割り当てられます。  
-  
- 使用することができます、[リソース シンボル ダイアログ ボックス](../windows/resource-symbols-dialog-box.md)リソースに割り当てられていないシンボルの名前を変更します。 詳細については、次を参照してください。[未使用のシンボルを変更する](../windows/changing-unassigned-symbols.md)します。  
-  
-## <a name="requirements"></a>要件  
- Win32  
-  
-## <a name="see-also"></a>関連項目  
- [シンボル名の制限](../windows/symbol-name-restrictions.md)   
- [定義済みシンボル ID](../windows/predefined-symbol-ids.md)
+
+リソースまたはリソース オブジェクトを新規作成すると、IDD_DIALOG1 などの既定のシンボル名が開発環境によって割り当てられます。 使用することができます、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)を既定のシンボル名を変更する、またはリソースに既に関連付けられている任意のシンボルの名前を変更します。
+
+### <a name="to-change-a-resources-symbol-name"></a>リソースのシンボル名を変更するには
+
+1. [リソース ビュー](../windows/resource-view-window.md)リソースを選択します。
+
+   > [!NOTE]
+   > プロジェクトに .rc ファイルがまだ含まれていない場合は、「 [リソース スクリプト ファイルの新規作成](../windows/how-to-create-a-resource-script-file.md)」を参照してください。
+
+2. **プロパティ**ウィンドウで、新しいシンボル名を入力するか既存のシンボルの一覧から選択、 **ID**ボックス。
+
+   新しいシンボル名を入力すると、値が自動的に割り当てられます。
+
+使用することができます、[リソース シンボル ダイアログ ボックス](../windows/resource-symbols-dialog-box.md)リソースに割り当てられていないシンボルの名前を変更します。 詳細については、次を参照してください。[未使用のシンボルを変更する](../windows/changing-unassigned-symbols.md)します。
+
+## <a name="requirements"></a>要件
+
+Win32
+
+## <a name="see-also"></a>関連項目
+
+[シンボル名の制限](../windows/symbol-name-restrictions.md)  
+[定義済みシンボル ID](../windows/predefined-symbol-ids.md)

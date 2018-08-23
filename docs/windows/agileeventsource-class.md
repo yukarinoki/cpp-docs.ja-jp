@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 90a2c582c2740846f90270fe9f45b96871329252
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 40259a559389e274b6aaaa67bb215249c96a97ba
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642839"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611033"
 ---
 # <a name="agileeventsource-class"></a>AgileEventSource クラス
 
@@ -36,12 +36,13 @@ class AgileEventSource
     : public Microsoft::WRL::EventSource<TDelegateInterface, TEventSourceOptions>;
 ```
 
-## <a name="parameters"></a>パラメーター  
- *TDelegateInterface*  
- イベント ハンドラーを表すデリゲートのインターフェイスです。
+## <a name="parameters"></a>パラメーター
 
- *TEventSourceOptions*  
- [InvokeModeOptions](invokemodeoptions-structure.md) invokeMode フィールドに設定されている構造`InvokeMode::StopOnFirstError`または`InvokeMode::FireAll`します。
+*TDelegateInterface*  
+イベント ハンドラーを表すデリゲートのインターフェイスです。
+
+*TEventSourceOptions*  
+[InvokeModeOptions](invokemodeoptions-structure.md) invokeMode フィールドに設定されている構造`InvokeMode::StopOnFirstError`または`InvokeMode::FireAll`します。
 
 ## <a name="remarks"></a>Remarks
 
@@ -49,13 +50,14 @@ Windows ランタイム コンポーネントの大半は、アジャイル コ�
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
- `EventSource` `AgileEventSource`
+`EventSource`
+`AgileEventSource`
 
 ## <a name="requirements"></a>要件
 
- **ヘッダー:** event.h
+**ヘッダー:** event.h
 
- **名前空間:** Microsoft::WRL
+**名前空間:** Microsoft::WRL
 
 ## <a name="members"></a>メンバー
 
@@ -92,4 +94,5 @@ HRESULT Add(
 
 
 ## <a name="see-also"></a>関連項目
- [Microsoft::WRL 名前空間](../windows/microsoft-wrl-namespace.md)
+
+[Microsoft::WRL 名前空間](../windows/microsoft-wrl-namespace.md)

@@ -28,16 +28,16 @@ helpviewer_keywords:
 - Input Method Editor [C++]
 - MBCS [C++], enabling
 ms.assetid: 6179f6b7-bc61-4a48-9267-fb7951223e38
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d00495f95b3c67e4a6fc3613b949b8ae2946bd6
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: f595a048d9f2e5795f69b7d1da6c4c6cf4ca0fa2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010387"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608681"
 ---
 # <a name="mbcs-support-in-visual-c"></a>Visual C++ における MBCS のサポート
 を、mbcs バージョンの Windows で実行時に (統合されたソース コード エディター、デバッガー、およびコマンド ライン ツールを含む)、Visual C 開発システムが mbcs、[メモリ] ウィンドウを除く。  
@@ -53,7 +53,7 @@ ms.locfileid: "40010387"
   
  ALT + によってアクティブ化、IME\`キーの組み合わせ、一連のボタン (評価指標) と変換ウィンドウとして表示されます。 アプリケーションでは、テキストのカーソル位置にウィンドウを配置します。 アプリケーションを処理する必要があります`WM_MOVE`と`WM_SIZE`変換ウィンドウの位置を変更してメッセージを新しい場所またはターゲット ウィンドウのサイズに準拠するようにします。  
   
- 漢字の文字を入力する機能があれば、アプリケーションのユーザーを設定する場合、アプリケーションは、IME の Windows メッセージを処理する必要があります。 IME のプログラミングの詳細については、次を参照してください。[入力方式エディター](https://msdn.microsoft.com/library/ms776145.aspx)します。  
+ 漢字の文字を入力する機能があれば、アプリケーションのユーザーを設定する場合、アプリケーションは、IME の Windows メッセージを処理する必要があります。 IME のプログラミングの詳細については、次を参照してください。[入力方式エディター](/previous-versions/windows/desktop/ms776145\(v=vs.85\))します。  
   
 ## <a name="visual-c-debugger"></a>Visual C デバッガー  
  Visual C デバッガーには、IME のメッセージにブレークポイントを設定する機能が用意されています。 さらに、[メモリ] ウィンドウでは、2 バイト文字を表示できます。  

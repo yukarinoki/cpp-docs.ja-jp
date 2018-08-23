@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 220e70158f6d1929bd120690f61325c45432fa08
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 861dcb15350955f6789e554b749ae1e6f26520ad
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649183"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597533"
 ---
 # <a name="handlenulltraitsgetinvalidvalue-method"></a>HANDLENullTraits::GetInvalidValue メソッド
-無効なハンドルを表します。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-inline static Type GetInvalidValue();  
-```  
-  
-## <a name="return-value"></a>戻り値  
- 常に返します**nullptr**します。  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>関連項目  
- [HANDLENullTraits 構造体](../windows/handlenulltraits-structure.md)
+
+無効なハンドルを表します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+inline static Type GetInvalidValue();
+```
+
+## <a name="return-value"></a>戻り値
+
+常に返します**nullptr**します。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>関連項目
+
+[HANDLENullTraits 構造体](../windows/handlenulltraits-structure.md)

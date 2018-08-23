@@ -1,5 +1,5 @@
 ---
-title: 値クラスと構造体 (C + + CX) |Microsoft ドキュメント
+title: 値クラスと構造体 (C + + CX) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b623e706fae0dfd8fca6b9aaf217e76b27dbbda
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 226198c35dc0b7e7e1c7fab4ce81fc4782b5ca38
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090715"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589057"
 ---
 # <a name="value-classes-and-structs-ccx"></a>値クラスと構造体 (C++/CX)
-A*値構造体*または*値クラス*は、Windows ランタイムと互換性のある POD ("plain old data structure") です。 これは、サイズが固定され、フィールドだけで構成されています。ref クラスとは異なり、プロパティはありません。  
+A*値構造体*または*値クラス*は Windows ランタイムと互換性のあるポッド ("plain old data structure")。 これは、サイズが固定され、フィールドだけで構成されています。ref クラスとは異なり、プロパティはありません。  
   
  次の例で、値構造体の宣言および初期化の方法について説明します。  
   
@@ -59,7 +59,7 @@ A*値構造体*または*値クラス*は、Windows ランタイムと互換性�
   
  *値クラス* は `value struct` と基本的には同じですが、フィールドにパブリック アクセシビリティを明示的に指定する必要がある点が異なります。 これは `value class` キーワードを使用して宣言されます。  
   
- 値構造体または値クラスは、フィールドとしてのみ基本的な数値型、列挙型クラスを含めることができます`Platform::String^`、または[platform::ibox \<T > ^](../cppcx/platform-ibox-interface.md)ここで T は数値型または列挙型クラスまたは値クラスまたは構造体。 `IBox<T>^` フィールドは `nullptr`という値を持つことができます。C++ はこの方法で、 *null 許容値型*という概念を実装します。  
+ 値構造体または値クラスを含めることができますのみ基本的な数値型、列挙型クラス、フィールドとして`Platform::String^`、または[platform::ibox \<T > ^](../cppcx/platform-ibox-interface.md) T は数値型または列挙型クラスまたは値クラスまたは構造体。 `IBox<T>^` フィールドは `nullptr`という値を持つことができます。C++ はこの方法で、 *null 許容値型*という概念を実装します。  
   
  `Platform::String^` 型または `IBox<T>^` 型をメンバーとして含む値クラスまたは値構造体は、 `memcpy`可能ではありません。  
   
@@ -95,7 +95,7 @@ Method2(ref obj);
  ポインターのシンボル (*) を使用して、参照によって値の型を渡すこともできます。 その他の言語での呼び出し元に関する動作は同じですが (C# の呼び出し元は `ref` キーワードを使用する)、メソッドにおける型は値の型へのポインターです。  
   
 ## <a name="nullable-value-types"></a>null 許容値型  
- 値クラスまたは値構造体が型のフィールドを持つことが前述のように、 [platform::ibox\<T > ^](../cppcx/platform-ibox-interface.md)— たとえば、`IBox<int>^`です。 このようなフィールドは、 `int` 型として有効である任意の数値型の値を持つことができます。または `nullptr`という値を持つこともできます。 オプションとして宣言されたパラメーターを持つメソッドに対する引数として、またはどこか他の場所にあり値を持つことが必須ではない値型に対して、null 許容フィールドを渡すことができます。  
+ 値クラスまたは値構造体は、型のフィールドを持つことができます前述のように、 [platform::ibox\<T > ^](../cppcx/platform-ibox-interface.md)— たとえば、`IBox<int>^`します。 このようなフィールドは、 `int` 型として有効である任意の数値型の値を持つことができます。または `nullptr`という値を持つこともできます。 オプションとして宣言されたパラメーターを持つメソッドに対する引数として、またはどこか他の場所にあり値を持つことが必須ではない値型に対して、null 許容フィールドを渡すことができます。  
   
  null 許容フィールドを持つ構造体を初期化する方法の例を次に示します。  
   

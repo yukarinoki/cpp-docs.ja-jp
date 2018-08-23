@@ -1,5 +1,5 @@
 ---
-title: _ _svm_invlpga |Microsoft ドキュメント
+title: _ _svm_invlpga |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e48fc39fd972387ee9fbbe587dc53bf61f2ae59
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 656d0edf1a4f2e740599490e6ce77cbc97426850
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330396"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541609"
 ---
 # <a name="svminvlpga"></a>__svm_invlpga
 **Microsoft 固有の仕様**  
   
- コンピューターの翻訳ルック アサイドのバッファーのアドレス マッピング エントリを無効にします。 パラメーターは、仮想アドレスと無効化するページのアドレス空間の識別子を指定します。  
+ コンピューターの変換ルックア サイド バッファーのアドレスのマッピング エントリを無効にします。 パラメーターは、仮想アドレスとを無効にするページのアドレス空間の識別子を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,17 +41,17 @@ void __svm_invlpga(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `Va`|無効化するページの仮想アドレス。|  
-|[入力] `ASID`|無効化するページのアドレス空間識別子 (ASID) です。|  
+|[入力] `Va`|無効にするページの仮想アドレス。|  
+|[入力] `ASID`|無効にするページのアドレス空間識別子 (ASID)。|  
   
-## <a name="remarks"></a>コメント  
- `__svm_invlpga`関数と同じ、`INVLPGA`マシン語命令します。 この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、ドキュメントの検索"AMD64 アーキテクチャ プログラマの手動ボリューム 2: システム プログラミングでは、"の文書番号 24593、リビジョン、3.11、 [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746)サイトです。  
+## <a name="remarks"></a>Remarks  
+ `__svm_invlpga`関数は、`INVLPGA`マシン語命令。 この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、検索、ドキュメントでは、"AMD64 アーキテクチャ プログラマーズ手動ボリューム 2: システム プログラミングでは、"ドキュメント番号 24593、3.11、リビジョン、 [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746)サイト。  
   
 ## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__svm_invlpga`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__svm_invlpga`|x86、x64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   

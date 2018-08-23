@@ -54,17 +54,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7a303e80b58207e555dbd9067982ee1e2c506bb3
-ms.sourcegitcommit: 27be37ae07ee7b657a54d23ed34438220d977fdc
+ms.openlocfilehash: 0f9566fb6e3117b10d0d6f4a2bccbe56fe33a28a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39110022"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609350"
 ---
 # <a name="windows-operations-ccli"></a>Windows の操作 (C++/CLI)
-使用して Windows に固有のさまざまなタスクを示して、[!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)]します。  
+Windows SDK を使用して Windows に固有のさまざまなタスクを示します。  
   
- 次のトピックで実行されるさまざまな Windows の操作、 [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] Visual C を使用します。  
+ 次のトピックでは、Visual C を使用して Windows SDK で実行されるさまざまな Windows の操作を示します。  
 
 ## <a name="determine_shutdown"></a> シャット ダウンが開始されたかどうかの判断します。
 次のコード例では、アプリケーションまたは .NET Framework が終了して現在あるかどうかを判断する方法を示します。 これは、ため、シャット ダウン中、これらのコンストラクトは、システムによって完了処理され、確実に使用することはできません、.NET Framework での静的な要素にアクセスするため便利です。 チェックして、<xref:System.Environment.HasShutdownStarted%2A>プロパティ最初に、これらの要素にアクセスするいないと、潜在的な障害を回避できます。  

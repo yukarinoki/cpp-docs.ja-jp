@@ -16,30 +16,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 02aa14eccddca4bc3631957d6aa3d3d1b2af6894
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 29c58b94293ed00ba95d4288458788a0b2edd679
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463455"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601707"
 ---
 # <a name="compiler-attributes"></a>コンパイラ属性
-コンパイラ属性は、さまざまな機能を提供します。  
-  
-|属性|説明|  
-|---------------|-----------------|  
-|[emitidl](../windows/emitidl.md)|後続のすべての IDL 属性が処理され、生成された .idl ファイル内に配置するかどうかを判断します。|  
-|[event_receiver](../windows/event-receiver.md)|イベント レシーバーを作成します。|  
-|[event_source](../windows/event-source.md)|イベント ソースを作成します。|  
-|[export](../windows/export.md)|.Idl ファイルに配置するデータ構造をによりします。|  
-|[実装](../windows/implements-cpp.md)|IDL コクラスのメンバーであるが強制されているディスパッチ インターフェイスを指定します。|  
-|[importidl](../windows/importidl.md)|生成された .idl ファイルには、指定された .idl ファイルを挿入します。|  
-|[importlib](../windows/importlib.md)|既に他のタイプ ライブラリでコンパイル済みの型を、作成中のタイプ ライブラリで使用できるようにします。|  
-|[includelib](../windows/includelib-cpp.md)|生成された .idl ファイルに含まれる、.idl ファイルまたは .h ファイル。|  
-|[library_block](../windows/library-block.md)|.Idl ファイルのライブラリ ブロック内で構成要素を配置します。|  
-|[no_injected_text](../windows/no-injected-text.md)|コンパイラがコードの属性を使用した結果として挿入するを防ぎます。|  
-|[satype](../windows/satype.md)|データ型を指定します、`SAFEARRAY`します。|  
-|[version](../windows/version-cpp.md)|インターフェイスまたはクラスの複数のバージョン間で特定のバージョンを識別します。|  
-  
-## <a name="see-also"></a>関連項目  
- [グループ別の属性](../windows/attributes-by-group.md)
+
+コンパイラ属性は、さまざまな機能を提供します。
+
+|属性|説明|
+|---------------|-----------------|
+|[emitidl](../windows/emitidl.md)|後続のすべての IDL 属性が処理され、生成された .idl ファイル内に配置するかどうかを判断します。|
+|[event_receiver](../windows/event-receiver.md)|イベント レシーバーを作成します。|
+|[event_source](../windows/event-source.md)|イベント ソースを作成します。|
+|[export](../windows/export.md)|.Idl ファイルに配置するデータ構造をによりします。|
+|[実装](../windows/implements-cpp.md)|IDL コクラスのメンバーであるが強制されているディスパッチ インターフェイスを指定します。|
+|[importidl](../windows/importidl.md)|生成された .idl ファイルには、指定された .idl ファイルを挿入します。|
+|[importlib](../windows/importlib.md)|既に他のタイプ ライブラリでコンパイル済みの型を、作成中のタイプ ライブラリで使用できるようにします。|
+|[includelib](../windows/includelib-cpp.md)|生成された .idl ファイルに含まれる、.idl ファイルまたは .h ファイル。|
+|[library_block](../windows/library-block.md)|.Idl ファイルのライブラリ ブロック内で構成要素を配置します。|
+|[no_injected_text](../windows/no-injected-text.md)|コンパイラがコードの属性を使用した結果として挿入するを防ぎます。|
+|[satype](../windows/satype.md)|データ型を指定します、`SAFEARRAY`します。|
+|[version](../windows/version-cpp.md)|インターフェイスまたはクラスの複数のバージョン間で特定のバージョンを識別します。|
+
+## <a name="see-also"></a>関連項目
+
+[グループ別の属性](../windows/attributes-by-group.md)

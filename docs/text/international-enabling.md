@@ -14,16 +14,16 @@ helpviewer_keywords:
 - MBCS [C++], enabling
 - Unicode [C++], enabling
 ms.assetid: b077f4ca-5865-40ef-a46e-d9e4d686ef21
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5afb7bd027fca215e1c10c111132ee881ad49548
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: b63801ac98027f490463f36df23541993528d33b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018066"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596199"
 ---
 # <a name="international-enabling"></a>国際化対応について
 従来のほとんどの C および C++ のコードは、国際対応のアプリケーションにも動作しない、文字および文字列操作について想定です。 MFC とランタイム ライブラリの両方は、Unicode や MBCS をサポートしては作業を行うには、まだがあります。 このセクションで Visual C で「国際化対応」の意味について説明します。  

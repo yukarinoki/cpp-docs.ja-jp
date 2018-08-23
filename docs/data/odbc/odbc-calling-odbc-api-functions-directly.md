@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 386bc03234ccb29b293a413944f221189f466c80
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: c0bd8ade91e2e543e8ccf1c0a9b04525b8d81b43
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336596"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571617"
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC: ODBC API 関数の直接呼び出し
 データベース クラスに単純なインターフェイスを提供する、[データソース](../../data/odbc/data-source-odbc.md)ODBC よりもします。 その結果、クラスには、すべての ODBC API はカプセル化しません。 クラスの機能が含まれていない機能、ODBC API 関数を直接呼び出す必要があります。 たとえば、ODBC カタログ関数を呼び出す必要があります (`::SQLColumns`、 `::SQLProcedures`、 `::SQLTables`、およびその他) 直接します。  
@@ -48,7 +48,7 @@ ms.locfileid: "39336596"
   
 -   完了したときにストレージの割り当てを解除します。  
   
- 次の手順の詳細については、次を参照してください。、[オープン データベース コネクティビティ (ODBC)](https://msdn.microsoft.com/library/ms710252.aspx) MSDN ドキュメント内の SDK です。  
+ 次の手順の詳細については、次を参照してください。、[オープン データベース コネクティビティ (ODBC)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) MSDN ドキュメント内の SDK です。  
   
  この手順に加えて、関数の戻り値のチェック、プログラムが完了する非同期呼び出しを待機していないことを確認する追加の手順を実行する必要があります。 手順についてを使用して、これらの最後の手順を簡略化できます。 詳細については、次を参照してください。[マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)で、 *MFC リファレンス*します。  
 

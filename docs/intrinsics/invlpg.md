@@ -1,5 +1,5 @@
 ---
-title: _ _invlpg |Microsoft ドキュメント
+title: _ _invlpg |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 373e9c1f8cc24ca4de4f0a78dd75011681c78056
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5a25e16439673f367cfe0bfe208dbc21a621b81
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327526"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539063"
 ---
 # <a name="invlpg"></a>__invlpg
 **Microsoft 固有の仕様**  
   
- X86 が生成されます`invlpg`が指すメモリに関連付けられているページの変換のルック アサイド バッファー (TLB) を無効になります命令`Address`です。  
+ X86 が生成されます`invlpg`、命令が指すメモリに関連付けられているページの変換ルック アサイド バッファ (TLB) を無効になります`Address`します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,12 +46,12 @@ void __invlpg(
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__invlpg`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__invlpg`|x86、x64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
- 組み込み`__invlpg`特権命令を生成し、0 の特権レベル (CPL) でのカーネル モードでのみ使用します。  
+## <a name="remarks"></a>Remarks  
+ 組み込みの`__invlpg`特権命令を生成し、0 の特権レベル (CPL) でのカーネル モードでのみ使用します。  
   
  このルーチンは、組み込みとしてのみ使用できます。  
   

@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9446c94039db0ff81826e77d71a2a9539be4b276
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 5439e1c17b7ad654d44fad575ba51b9ebc4095bb
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643148"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592257"
 ---
 # <a name="asyncbasegetonprogress-method"></a>AsyncBase::GetOnProgress メソッド
-指定された変数には、現在の進行状況イベント ハンドラーのアドレスをコピーします。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-STDMETHOD(  
-   GetOnProgress  
-)(TProgress** progressHandler);  
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *progressHandler*  
- 現在の進行状況イベント ハンドラーのアドレスが格納されている場所です。  
-  
-## <a name="return-value"></a>戻り値  
- 成功した場合は s_ok を返します。それ以外の場合、E_ILLEGAL_METHOD_CALL します。  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** async.h  
-  
- **名前空間:** Microsoft::WRL  
-  
-## <a name="see-also"></a>関連項目  
- [AsyncBase クラス](../windows/asyncbase-class.md)
+
+指定された変数には、現在の進行状況イベント ハンドラーのアドレスをコピーします。
+
+## <a name="syntax"></a>構文
+
+```cpp
+STDMETHOD(
+   GetOnProgress
+)(TProgress** progressHandler);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*progressHandler*  
+現在の進行状況イベント ハンドラーのアドレスが格納されている場所です。
+
+## <a name="return-value"></a>戻り値
+
+成功した場合は s_ok を返します。それ以外の場合、E_ILLEGAL_METHOD_CALL します。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** async.h
+
+**名前空間:** Microsoft::WRL
+
+## <a name="see-also"></a>関連項目
+
+[AsyncBase クラス](../windows/asyncbase-class.md)

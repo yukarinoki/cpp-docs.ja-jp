@@ -33,15 +33,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 37d53932a283ea047d748985a1da348d9346ce1e
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 604b28147c6881c7b2d62c388c5402f12bb71c78
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336967"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571865"
 ---
 # <a name="cenumerator-class"></a>CEnumerator クラス
-公開する OLE DB 列挙子オブジェクトを使用して、 [ISourcesRowset](https://msdn.microsoft.com/library/ms715969.aspx)インターフェイスをすべてのデータ ソースと列挙子を記述する行セットを返します。  
+公開する OLE DB 列挙子オブジェクトを使用して、 [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\))インターフェイスをすべてのデータ ソースと列挙子を記述する行セットを返します。  
   
 ## <a name="syntax"></a>構文
 
@@ -83,7 +83,7 @@ bool Find(TCHAR* szSearchName) throw();
  **true**名前が見つかった場合します。 それ以外の場合、 **false**します。  
   
 ### <a name="remarks"></a>Remarks  
- この名前にマップ、`SOURCES_NAME`のメンバー、 [ISourcesRowset](https://msdn.microsoft.com/library/ms715969.aspx)インターフェイス。  
+ この名前にマップ、`SOURCES_NAME`のメンバー、 [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\))インターフェイス。  
   
 ## <a name="getmoniker"></a> Cenumerator::getmoniker
 モニカーに変換できる文字列の部分を抽出する表示名を解析します。  
@@ -108,7 +108,7 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
  標準の HRESULT です。  
 
 ## <a name="open"></a> Cenumerator::open
-指定されている 1 つを呼び出して列挙子の行セットを取得します。 場合、列挙子のモニカーをバインド[isourcesrowset::getsourcesrowset](https://msdn.microsoft.com/library/ms711200.aspx)します。  
+指定されている 1 つを呼び出して列挙子の行セットを取得します。 場合、列挙子のモニカーをバインド[isourcesrowset::getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))します。  
   
 ### <a name="syntax"></a>構文  
   

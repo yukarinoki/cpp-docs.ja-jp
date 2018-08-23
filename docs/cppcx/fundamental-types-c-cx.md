@@ -1,23 +1,23 @@
 ---
-title: 基本的な型 (C + + CX) |Microsoft ドキュメント
+title: 基本的な型 (C + + CX) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: c9f82907-25f2-440b-91d6-afb8dbd46ea6
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0da64edaa3f94ac9813408d936e3f83783e6b241
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e30e7ced4f4e761f7342811c533c1f361d0b1df
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33098538"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597874"
 ---
 # <a name="fundamental-types-ccx"></a>基本的な型 (C++/CX)
-だけでなく、標準 C++ の組み込み型、C + + CX 基本的な Windows ランタイム型の標準の C++ 型にマップする typedef を提供することにより、Windows ランタイムのアーキテクチャによって定義されている型システムをサポートしています. C + + CX はブール値を文字、および数値の基本型を実装します。 これらの typedefs は、 `default` 名前空間 (明示的に指定する必要はない) で定義されます。 さらに、C + + CX が特定の Windows ランタイム型とインターフェイスのラッパーと具体的な実装を提供します。  
+だけでなく、標準的な C++ 組み込む型、C + + CX 基本 Windows ランタイム型の標準の C++ 型にマップする typedef を提供することで、Windows ランタイムのアーキテクチャで定義されている型システムをサポートしています. C + + CX はブール値、文字、および数値基本型を実装します。 これらの typedefs は、 `default` 名前空間 (明示的に指定する必要はない) で定義されます。 さらに、C + + CX ラッパーと具体的な実装を特定の Windows ランタイム型とインターフェイスを提供します。  
   
 ## <a name="boolean-and-character-types"></a>ブール値および文字の種類  
  組み込みブール値と文字型、および標準 C++ に相当するものを次の表に一覧表示します。  
@@ -28,7 +28,7 @@ ms.locfileid: "33098538"
 |default|char16|Unicode (UTF-16) コード ポイントを表す 16 ビットの数字以外の値。|wchar_t<br /><br /> - または -<br /><br /> L'c'|(Unicode 標準によって指定される)|  
   
 ## <a name="numeric-types"></a>数値型  
- 組み込み数値型を次の表に一覧表示します。 数値型は `default` 名前空間で宣言され、対応する C++ 組み込み型の typedefs です。 すべて C++ の組み込み型 (long など) は、Windows ランタイムでサポートされます。 一貫性とわかりやすくするため、使用をお勧めする C + + CX の名前。  
+ 組み込み数値型を次の表に一覧表示します。 数値型は `default` 名前空間で宣言され、対応する C++ 組み込み型の typedefs です。 Windows ランタイムでは、すべて C++ 組み込む型 (long など) がサポートされています。 一貫性とわかりやすくするため、使用ことが推奨する c++/cli CX の名前。  
   
 |C + + CX 名|定義|標準 C++ 名|値の範囲|  
 |-----------------------------------------------------------------------|----------------|-------------------------|---------------------|  
@@ -44,7 +44,7 @@ ms.locfileid: "33098538"
 |float64|64 ビットの IEEE 754 浮動小数点数。|double|1.7E +/- 308 (15 桁)|  
   
 ## <a name="windows-runtime-types"></a>Windows ランタイム型  
- 次の表に、いくつか追加の型を Windows ランタイムのアーキテクチャによって定義され、組み込まれた C + + CX です。 オブジェクトと文字列は参照型です。 それ以外は値型です。 型はすべて、 `Platform` 名前空間で宣言されています。 完全なリストについては、 [Platform namespace](../cppcx/platform-namespace-c-cx.md)を参照してください。  
+ 次の表に、いくつか追加の型は、Windows ランタイムのアーキテクチャによって定義され、C + に組み込まれているを/cli CX します。 オブジェクトと文字列は参照型です。 それ以外は値型です。 型はすべて、 `Platform` 名前空間で宣言されています。 完全なリストについては、 [Platform namespace](../cppcx/platform-namespace-c-cx.md)を参照してください。  
   
 |名|定義|  
 |----------|----------------|  

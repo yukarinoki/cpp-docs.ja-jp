@@ -1,5 +1,5 @@
 ---
-title: Platform::stringreference クラス |Microsoft ドキュメント
+title: Platform::stringreference クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -13,16 +13,16 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 646a09dd46e123f0bc7eadc178e3741367e908ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 56f7c6b2c7699d7be96309a6ab7f060e48838475
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33097511"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609664"
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference クラス
 最小のコピー操作で `Platform::String^` 入力パラメーターから他のメソッドに文字列データを渡すために使用できる最適化の手法です。  
@@ -33,7 +33,7 @@ ms.locfileid: "33097511"
 class StringReference  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ### <a name="members"></a>メンバー  
   
@@ -60,7 +60,7 @@ class StringReference
 |[Stringreference::operator()](#operator-call)|`StringReference` を `Platform::String^`に変換します。|  
   
 ### <a name="requirements"></a>要件  
- **クライアントがサポートされる最小:** Windows 8  
+ **クライアントがサポートされている最小:** Windows 8  
   
  **サポートされているサーバーの最小値:** Windows Server 2012  
   
@@ -69,7 +69,7 @@ class StringReference
  **ヘッダー:** vccorlib.h  
 
 ## <a name="data"></a>  Stringreference::data メソッド
-この内容を返します`StringReference`char16 値の配列として。  
+これの内容を返します`StringReference`char16 値の配列として。  
   
 ### <a name="syntax"></a>構文  
   
@@ -95,7 +95,7 @@ __abi_HSTRING GetHSTRING() const
 ### <a name="return-value"></a>戻り値  
  文字列データを格納する `__abi_HSTRING`。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 
 
@@ -124,11 +124,11 @@ unsigned int Length() const
 ### <a name="return-value"></a>戻り値  
  文字列の文字数を指定する符号なし整数。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 
 
-## <a name="operator-assign"></a>  StringReference::operator = 演算子
+## <a name="operator-assign"></a>  Stringreference::operator = 演算子
 指定されたオブジェクトを現在の `StringReference` オブジェクトに割り当てます。  
   
 ### <a name="syntax"></a>構文  
@@ -148,8 +148,8 @@ StringReference& operator=(const ::default::char16* __strArg);
 ### <a name="return-value"></a>戻り値  
  `StringReference` 型のオブジェクトへの参照。  
   
-### <a name="remarks"></a>コメント  
- `StringReference`は標準の C++ クラスと ref クラスではなく、それがない、**オブジェクト ブラウザー**です。  
+### <a name="remarks"></a>Remarks  
+ `StringReference`は標準の C++ クラスと ref クラスではなくに表示されない、**オブジェクト ブラウザー**します。  
   
 
 
@@ -194,7 +194,7 @@ StringReference(const ::default::char16* __strArg, size_t __lenArg)
  `__lenArg`  
  `__strArg` にある要素の数。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このコンストラクターの最初のバージョンは、既定のコンストラクターです。 2 番目のバージョンは、`StringReference` パラメーターで指定されたオブジェクトから新しい `__fstrArg` インスタンス クラスを初期化します。 3 番目と 4 番目のオーバー ロードは、新しい初期化`StringReference`char16 値の配列からのインスタンス。 char16 は、16 ビット UNICODE テキスト文字を表します。  
   
 

@@ -1,5 +1,5 @@
 ---
-title: _ _stosw |Microsoft ドキュメント
+title: _ _stosw |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a9f73b401d953c026c60d504fbb016838720b7c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bf41c1c91d8c0b5d2d7626d1fc0eee67aa96ff32
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329346"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539707"
 ---
 # <a name="stosw"></a>__stosw
 **Microsoft 固有の仕様**  
   
- ストア文字列命令が生成されます (`rep stosw`)。  
+ ストアの文字列の命令が生成されます (`rep stosw`)。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,7 +42,7 @@ void __stosw(
   
 #### <a name="parameters"></a>パラメーター  
  [出力] `Dest`  
- 操作の出力先。  
+ 操作の転送先。  
   
  [入力] `Data`  
  格納するデータ。  
@@ -54,12 +54,12 @@ void __stosw(
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__stosw`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__stosw`|x86、x64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
- 結果は、word`Data`のブロックに書き込まれる`Count`の単語、`Dest`文字列。  
+## <a name="remarks"></a>Remarks  
+ 結果は、word`Data`のブロックに書き込まれる`Count`単語、`Dest`文字列。  
   
  このルーチンは、組み込みとしてのみ使用できます。  
   

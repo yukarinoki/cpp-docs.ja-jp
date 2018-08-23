@@ -50,15 +50,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 756ced3e2e1eef48023831329751477d07d7cfec
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: f59619db743d8f8d08b2a202e992cdfcd532e1e8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336489"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573247"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl クラス
-実装を提供、 [IDBInitialize](https://msdn.microsoft.com/library/ms713706.aspx)インターフェイス。  
+実装を提供、 [IDBInitialize](/previous-versions/windows/desktop/ms713706\(v=vs.85\))インターフェイス。  
   
 ## <a name="syntax"></a>構文
 
@@ -121,7 +121,7 @@ STDMETHOD(Initialize)(void);
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[idbinitialize::initialize](https://msdn.microsoft.com/library/ms718026.aspx)で、 *OLE DB プログラマーズ リファレンス*します。 
+ 参照してください[idbinitialize::initialize](/previous-versions/windows/desktop/ms718026\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。 
 
 ## <a name="uninitialize"></a> Idbinitializeimpl::uninitialize
 データの場所はソース プロパティのサポートなどの内部リソースを解放して初期化されていない状態でのオブジェクトです。  
@@ -133,7 +133,7 @@ STDMETHOD(Uninitialize)(void);
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[:uninitialize](https://msdn.microsoft.com/library/ms719648.aspx)で、 *OLE DB プログラマーズ リファレンス*します。
+ 参照してください[:uninitialize](/previous-versions/windows/desktop/ms719648\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ## <a name="dwstatus"></a> Idbinitializeimpl::m_dwstatus
 データ ソースのフラグ。  

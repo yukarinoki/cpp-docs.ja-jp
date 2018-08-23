@@ -1,5 +1,5 @@
 ---
-title: モジュール属性 |Microsoft ドキュメント
+title: モジュール属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 650a2190e59b995962672deccdf202902f8a5b07
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 01ac7cfb1c53f0616431a33638bd04fdb586f557
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875267"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609638"
 ---
 # <a name="module-attributes"></a>モジュール属性
-次の属性にのみ適用できる、[モジュール](../windows/module-cpp.md)属性。  
+次の属性にのみ適用、[モジュール](../windows/module-cpp.md)属性。
   
-|属性|説明|  
-|---------------|-----------------|  
-|[helpstringdll](../windows/helpstringdll.md)|ドキュメントの文字列の検索 (ローカリゼーション) の実行に使用する DLL の名前を指定します。|  
+|属性|説明|
+|---------------|-----------------|
+|[helpstringdll](../windows/helpstringdll.md)|使用してドキュメントの文字列の検索 (ローカライズ) を実行する DLL の名前を指定します。|
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
  [使用法別の属性](../windows/attributes-by-usage.md)

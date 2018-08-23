@@ -17,80 +17,84 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2b18f4c38777076357170540e35fc5515025e126
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 66c85999e70e505176700ecaac69b75048ce2422
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643008"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595243"
 ---
 # <a name="aggregatable"></a>aggregatable
-クラスは、集計をサポートしていることを示します。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-[ aggregatable(   
-   value  
-) ]  
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *値*(省略可能)  
- COM オブジェクトを集計できるかを示すパラメーター:  
-  
--   `never` COM オブジェクトを集約することはできません。  
-  
--   `allowed` COM オブジェクトを直接作成できるまたは集計することができます。 既定値です。  
-  
--   `always` COM オブジェクトは直接作成することはできず、集計のみできます。 呼び出すと`CoCreateInstance`、このオブジェクトの集約オブジェクトを指定する必要があります`IUnknown`インターフェイス (制御`IUnknown`)。  
-  
-## <a name="remarks"></a>Remarks  
- **集約可能**C++ 属性と同じ機能を持つ、[集約可能](http://msdn.microsoft.com/library/windows/desktop/aa366721)MIDL 属性。 つまり、コンパイラが合格する、**集約可能**経由の属性は、生成された .idl ファイルをします。  
-  
- この属性を使用するには、 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)、または [vi_progid](../windows/vi-progid.md) 属性 (または、これらのいずれかを意味する別の属性) も同じ要素に適用する必要があります。 いずれか 1 つの属性を使用すると、他の 2 つも自動的に適用されます。 たとえば場合、`progid`が適用される`vi_progid`と`coclass`も適用されます。  
-  
-### <a name="atl-projects"></a>ATL プロジェクト  
-  
- この属性が ATL を使用するプロジェクト内で使用されている場合、属性の動作は変わります。 前に説明した動作に加え、属性も次のマクロのいずれかのクラスに追加ターゲット。  
-  
-|パラメーター値|挿入されたマクロ|  
-|---------------------|--------------------|  
-|`Never`|[DECLARE_NOT_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_not_aggregatable)|  
-|`Allowed`|[DECLARE_POLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_poly_aggregatable)|  
-|`Always`|[集約](../atl/reference/aggregation-and-class-factory-macros.md#declare_only_aggregatable)|  
-  
-## <a name="example"></a>例  
-  
-```cpp  
-// cpp_attr_ref_aggregatable.cpp  
-// compile with: /LD  
-#define _ATL_ATTRIBUTES  
-#include "atlbase.h"  
-#include "atlcom.h"  
-  
-[module(name="MyModule")];  
-  
-[ coclass, aggregatable(allowed),  
-  uuid("1a8369cc-1c91-42c4-befa-5a5d8c9d2529")]  
-class CMyClass {};  
-```  
-  
-## <a name="requirements"></a>要件  
-  
-### <a name="attribute-context"></a>属性コンテキスト  
-  
-|||  
-|-|-|  
-|**対象**|**クラス**、**構造体**|  
-|**反復可能**|いいえ|  
-|**必要な属性**|次のいずれかまたは: `coclass`、 `progid`、または`vi_progid`します。|  
-|**無効な属性**|なし|  
-  
- 属性コンテキストの詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  
-  
-## <a name="see-also"></a>関連項目  
- [IDL 属性](../windows/idl-attributes.md)   
- [クラス属性](../windows/class-attributes.md)   
- [Typedef、Enum、Union、および struct 型の属性](../windows/typedef-enum-union-and-struct-attributes.md)   
- [集計](http://msdn.microsoft.com/library/windows/desktop/ms686558)   
+
+クラスは、集計をサポートしていることを示します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+[ aggregatable(
+   value
+) ]
+```
+
+### <a name="parameters"></a>パラメーター
+
+*値*(省略可能)  
+COM オブジェクトを集計できるかを示すパラメーター:
+
+- `never` COM オブジェクトを集約することはできません。
+
+- `allowed` COM オブジェクトを直接作成できるまたは集計することができます。 既定値です。
+
+- `always` COM オブジェクトは直接作成することはできず、集計のみできます。 呼び出すと`CoCreateInstance`、このオブジェクトの集約オブジェクトを指定する必要があります`IUnknown`インターフェイス (制御`IUnknown`)。
+
+## <a name="remarks"></a>Remarks
+
+**集約可能**C++ 属性と同じ機能を持つ、[集約可能](http://msdn.microsoft.com/library/windows/desktop/aa366721)MIDL 属性。 つまり、コンパイラが合格する、**集約可能**経由の属性は、生成された .idl ファイルをします。
+
+この属性を使用するには、 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)、または [vi_progid](../windows/vi-progid.md) 属性 (または、これらのいずれかを意味する別の属性) も同じ要素に適用する必要があります。 いずれか 1 つの属性を使用すると、他の 2 つも自動的に適用されます。 たとえば場合、`progid`が適用される`vi_progid`と`coclass`も適用されます。
+
+### <a name="atl-projects"></a>ATL プロジェクト
+
+この属性が ATL を使用するプロジェクト内で使用されている場合、属性の動作は変わります。 前に説明した動作に加え、属性も次のマクロのいずれかのクラスに追加ターゲット。
+
+|パラメーター値|挿入されたマクロ|
+|---------------------|--------------------|
+|`Never`|[DECLARE_NOT_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_not_aggregatable)|
+|`Allowed`|[DECLARE_POLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_poly_aggregatable)|
+|`Always`|[集約](../atl/reference/aggregation-and-class-factory-macros.md#declare_only_aggregatable)|
+
+## <a name="example"></a>例
+
+```cpp
+// cpp_attr_ref_aggregatable.cpp
+// compile with: /LD
+#define _ATL_ATTRIBUTES
+#include "atlbase.h"
+#include "atlcom.h"
+
+[module(name="MyModule")];
+
+[ coclass, aggregatable(allowed),
+  uuid("1a8369cc-1c91-42c4-befa-5a5d8c9d2529")]
+class CMyClass {};
+```
+
+## <a name="requirements"></a>要件
+
+### <a name="attribute-context"></a>属性コンテキスト
+
+|||
+|-|-|
+|**対象**|**クラス**、**構造体**|
+|**反復可能**|いいえ|
+|**必要な属性**|次のいずれかまたは: `coclass`、 `progid`、または`vi_progid`します。|
+|**無効な属性**|なし|
+
+属性コンテキストの詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。
+
+## <a name="see-also"></a>関連項目
+
+[IDL 属性](../windows/idl-attributes.md)  
+[クラス属性](../windows/class-attributes.md)  
+[Typedef、Enum、Union、および Struct 型の属性](../windows/typedef-enum-union-and-struct-attributes.md)  
+[集計](http://msdn.microsoft.com/library/windows/desktop/ms686558)  

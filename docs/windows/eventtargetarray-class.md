@@ -17,52 +17,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4cf5f885a002ede8a715eb4850eef5a8810a0309
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 3be91f85838ceb557edd5def7d7984aaf8904ea5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648361"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42575666"
 ---
 # <a name="eventtargetarray-class"></a>EventTargetArray クラス
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-class EventTargetArray : public Microsoft::WRL::RuntimeClass<Microsoft::WRL::RuntimeClassFlags<ClassicCom>, IUnknown>;  
-```  
-  
-## <a name="remarks"></a>Remarks  
- イベント ハンドラーの配列を表します。  
-  
- 関連付けられているイベント ハンドラー、 [EventSource](../windows/eventsource-class.md)オブジェクトが格納されている保護されたで**EventTargetArray**データ メンバー。  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="public-constructors"></a>パブリック コンストラクター  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[EventTargetArray::EventTargetArray コンストラクター](../windows/eventtargetarray-eventtargetarray-constructor.md)|新しいインスタンスを初期化、 **EventTargetArray**クラス。|  
-|[EventTargetArray::~EventTargetArray デストラクター](../windows/eventtargetarray-tilde-eventtargetarray-destructor.md)|現在の初期化を解除**EventTargetArray**クラス。|  
-  
-### <a name="public-methods"></a>パブリック メソッド  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[EventTargetArray::AddTail メソッド](../windows/eventtargetarray-addtail-method.md)|イベント ハンドラーの内部配列の末尾には、指定したイベント ハンドラーを追加します。|  
-|[EventTargetArray::Begin メソッド](../windows/eventtargetarray-begin-method.md)|イベント ハンドラーの内部配列の最初の要素のアドレスを取得します。|  
-|[EventTargetArray::End メソッド](../windows/eventtargetarray-end-method.md)|イベント ハンドラーの内部配列の最後の要素のアドレスを取得します。|  
-|[EventTargetArray::Length メソッド](../windows/eventtargetarray-length-method.md)|イベント ハンドラーの内部配列の要素の現在の数を取得します。|  
-  
-## <a name="inheritance-hierarchy"></a>継承階層  
- `EventTargetArray`  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** event.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>関連項目  
- [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)
+
+WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+
+## <a name="syntax"></a>構文
+
+```cpp
+class EventTargetArray : public Microsoft::WRL::RuntimeClass<Microsoft::WRL::RuntimeClassFlags<ClassicCom>, IUnknown>;
+```
+
+## <a name="remarks"></a>Remarks
+
+イベント ハンドラーの配列を表します。
+
+関連付けられているイベント ハンドラー、 [EventSource](../windows/eventsource-class.md)オブジェクトが格納されている保護されたで**EventTargetArray**データ メンバー。
+
+## <a name="members"></a>メンバー
+
+### <a name="public-constructors"></a>パブリック コンストラクター
+
+|名前|説明|
+|----------|-----------------|
+|[EventTargetArray::EventTargetArray コンストラクター](../windows/eventtargetarray-eventtargetarray-constructor.md)|新しいインスタンスを初期化、 **EventTargetArray**クラス。|
+|[EventTargetArray::~EventTargetArray デストラクター](../windows/eventtargetarray-tilde-eventtargetarray-destructor.md)|現在の初期化を解除**EventTargetArray**クラス。|
+
+### <a name="public-methods"></a>パブリック メソッド
+
+|名前|説明|
+|----------|-----------------|
+|[EventTargetArray::AddTail メソッド](../windows/eventtargetarray-addtail-method.md)|イベント ハンドラーの内部配列の末尾には、指定したイベント ハンドラーを追加します。|
+|[EventTargetArray::Begin メソッド](../windows/eventtargetarray-begin-method.md)|イベント ハンドラーの内部配列の最初の要素のアドレスを取得します。|
+|[EventTargetArray::End メソッド](../windows/eventtargetarray-end-method.md)|イベント ハンドラーの内部配列の最後の要素のアドレスを取得します。|
+|[EventTargetArray::Length メソッド](../windows/eventtargetarray-length-method.md)|イベント ハンドラーの内部配列の要素の現在の数を取得します。|
+
+## <a name="inheritance-hierarchy"></a>継承階層
+
+`EventTargetArray`
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** event.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>関連項目
+
+[Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a03f0dcb8f6d35c1d5fc8aec5bf1cc899d575861
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: cd3629fcaf8507abd2baf6cded3c6a63bc6fd64f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39653073"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611501"
 ---
 # <a name="asyncbasecheckvalidstatefordelegatecall-method"></a>AsyncBase::CheckValidStateForDelegateCall メソッド
-現在の非同期状態でデリゲート プロパティを変更できるかどうかをテストします。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-inline HRESULT CheckValidStateForDelegateCall();  
-```  
-  
-## <a name="return-value"></a>戻り値  
- デリゲートのプロパティを変更できる場合は s_ok を返します。それ以外の場合、E_ILLEGAL_METHOD_CALL します。  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** async.h  
-  
- **名前空間:** Microsoft::WRL  
-  
-## <a name="see-also"></a>関連項目  
- [AsyncBase クラス](../windows/asyncbase-class.md)
+
+現在の非同期状態でデリゲート プロパティを変更できるかどうかをテストします。
+
+## <a name="syntax"></a>構文
+
+```cpp
+inline HRESULT CheckValidStateForDelegateCall();
+```
+
+## <a name="return-value"></a>戻り値
+
+デリゲートのプロパティを変更できる場合は s_ok を返します。それ以外の場合、E_ILLEGAL_METHOD_CALL します。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** async.h
+
+**名前空間:** Microsoft::WRL
+
+## <a name="see-also"></a>関連項目
+
+[AsyncBase クラス](../windows/asyncbase-class.md)

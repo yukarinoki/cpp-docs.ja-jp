@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a335d379c1797e6152ea1b6011830423082693bb
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: b83d7a0bb5eadede42d2572d5ebc5a02a0fe9a0e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648049"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607186"
 ---
 # <a name="asyncbasecontinueasyncoperation-method"></a>AsyncBase::ContinueAsyncOperation メソッド
-非同期操作が処理を続行する必要がありますまたは中止するかどうかを判断します。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-inline bool ContinueAsyncOperation();  
-```  
-  
-## <a name="return-value"></a>戻り値  
- **true**場合は、非同期操作の現在の状態は*開始*、つまり、操作を続行する必要があります。 それ以外の場合、 **false**、つまり、操作を停止する必要があります。  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** async.h  
-  
- **名前空間:** Microsoft::WRL  
-  
-## <a name="see-also"></a>関連項目  
- [AsyncBase クラス](../windows/asyncbase-class.md)
+
+非同期操作が処理を続行する必要がありますまたは中止するかどうかを判断します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+inline bool ContinueAsyncOperation();
+```
+
+## <a name="return-value"></a>戻り値
+
+**true**場合は、非同期操作の現在の状態は*開始*、つまり、操作を続行する必要があります。 それ以外の場合、 **false**、つまり、操作を停止する必要があります。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** async.h
+
+**名前空間:** Microsoft::WRL
+
+## <a name="see-also"></a>関連項目
+
+[AsyncBase クラス](../windows/asyncbase-class.md)

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8863f3a6c37693ec28f931c2af4cb0d299788daa
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 56297f53aa40741a506ea65761d151dcab98c421
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402664"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42571676"
 ---
 # <a name="bstrtgetbstr"></a>_bstr_t::GetBSTR
 **Microsoft 固有の仕様**  
@@ -38,7 +38,7 @@ BSTR& GetBSTR( );
  `BSTR` でラップされた `_bstr_t` の先頭。  
   
 ## <a name="remarks"></a>Remarks  
- **GetBSTR**すべて影響`_bstr_t`オブジェクトをその共有を`BSTR`します。 1 つ以上`_bstr_t`を共有できる、`BSTR`コピー コンス トラクターを使用してとおよび**演算子 =** します。  
+ **GetBSTR**すべて影響`_bstr_t`オブジェクトをその共有を`BSTR`します。 1 つ以上`_bstr_t`を共有できる、`BSTR`コピー コンス トラクターを使用して、**演算子 =**。  
   
 ## <a name="example"></a>例  
  参照してください[_bstr_t::assign](../cpp/bstr-t-assign.md)使用例について**GetBSTR**します。  

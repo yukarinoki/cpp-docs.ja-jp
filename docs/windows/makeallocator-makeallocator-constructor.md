@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e9905d878fe8592a17b86519d927a2c85629f4ed
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 9de1db618375257f3465a9b3683a9ca47b470123
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013861"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599562"
 ---
 # <a name="makeallocatormakeallocator-constructor"></a>MakeAllocator::MakeAllocator コンストラクター
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-MakeAllocator();  
-```  
-  
-## <a name="remarks"></a>Remarks  
- 新しいインスタンスを初期化、 **MakeAllocator**クラス。  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** implements.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>関連項目  
- [MakeAllocator クラス](../windows/makeallocator-class.md)   
- [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)
+
+WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+
+## <a name="syntax"></a>構文
+
+```cpp
+MakeAllocator();
+```
+
+## <a name="remarks"></a>Remarks
+
+新しいインスタンスを初期化、 **MakeAllocator**クラス。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** implements.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>関連項目
+
+[MakeAllocator クラス](../windows/makeallocator-class.md)  
+[Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

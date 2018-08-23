@@ -1,5 +1,5 @@
 ---
-title: マネージ、アンマネージ |Microsoft ドキュメント
+title: マネージ、アンマネージ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,44 +22,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 316866ac047b607ec4c92d7c6d4f8ff233ed9a3f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 908ed745e82b17dd688f062ac7021c6adf3f4851
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846377"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538834"
 ---
-# <a name="managed-unmanaged"></a>マネージ、アンマネージ
-関数をマネージまたはアンマネージとしてコンパイルするために関数レベルの制御を有効にします。  
+# <a name="managed-unmanaged"></a>マネージド、アンマネージド
+関数をマネージドまたはアンマネージドとしてコンパイルするために関数レベルの制御を有効にします。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
-      #pragma managed  
+#pragma managed  
 #pragma unmanaged  
 #pragma managed([push,] on | off)  
 #pragma managed(pop)  
 ```  
   
-## <a name="remarks"></a>コメント  
- [/Clr](../build/reference/clr-common-language-runtime-compilation.md)コンパイラ オプションは、モジュール レベルの制御関数をマネージまたはアンマネージとしてコンパイルします。  
+## <a name="remarks"></a>Remarks  
+
+[/Clr](../build/reference/clr-common-language-runtime-compilation.md)コンパイラ オプションは、関数をマネージまたはアンマネージとしてコンパイルのモジュール レベルの制御を提供します。  
   
- アンマネージ関数は、ネイティブ プラットフォーム用にコンパイルされ、プログラムのその部分の実行は、共通言語ランタイムによってネイティブ プラットフォームに渡されます。  
+アンマネージ関数は、ネイティブ プラットフォーム用にコンパイルされ、プログラムのその部分の実行は、共通言語ランタイムによってネイティブ プラットフォームに渡されます。  
   
- 既定では管理対象として、関数がコンパイルされたときに **/clr**を使用します。  
+関数は、`/clr` が使用されると、既定でマネージとしてコンパイルされます。  
   
- これらのプラグマを適用するときは次のようにします。  
+これらのプラグマを適用するときは次のようにします。  
   
--   関数の前にあり関数本体内にはないプラグマを追加します。  
+- 関数の前にあり関数本体内にはないプラグマを追加します。  
   
--   `#include` ステートメントの後にプラグマを追加します。 `#include` ステートメントの前でこれらのプラグマを使用しないでください。  
+- `#include` ステートメントの後にプラグマを追加します。 `#include` ステートメントの前でこれらのプラグマを使用しないでください。  
   
- コンパイラは無視、`managed`と`unmanaged`プラグマ場合 **/clr**コンパイルでは使用されません。  
+コンパイラは無視、**マネージ**と**アンマネージ**プラグマ場合`/clr`コンパイルでは使用されません。  
   
- テンプレート関数がインスタンス化されるとき、テンプレートの定義時のプラグマの状態により、マネージかアンマネージかが決まります。  
+テンプレート関数がインスタンス化されるとき、テンプレートの定義時のプラグマの状態により、マネージドかアンマネージドかが決まります。  
   
- 詳細については、次を参照してください。[混在アセンブリの初期化](../dotnet/initialization-of-mixed-assemblies.md)です。  
+詳細については、次を参照してください。[混在アセンブリの初期化](../dotnet/initialization-of-mixed-assemblies.md)します。  
   
 ## <a name="example"></a>例  
   
@@ -98,4 +98,5 @@ In unmanaged function.
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+
+[プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

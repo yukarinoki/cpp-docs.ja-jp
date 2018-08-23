@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3dd95e3e25cd015fd326c236f15a965e3fb9e801
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 8bc6080bf66ad9bb9d436832b1066214f8cdbfb7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025881"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572469"
 ---
 # <a name="appearance-atl-control-wizard"></a>外観、ATL コントロール ウィザード
 「検索結果」の概要をここに挿入します。  
@@ -97,5 +97,5 @@ ms.locfileid: "39025881"
   
 ## <a name="see-also"></a>関連項目  
  [ATL コントロール ウィザード](../../atl/reference/atl-control-wizard.md)   
- [標準の Windows コントロールをスーパークラスのサンプルを SUBEDIT:](http://msdn.microsoft.com/30e46bdc-ed92-417c-b6b8-359017265a7b)
+ [標準の Windows コントロールをスーパークラスのサンプルを SUBEDIT:](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit)
 

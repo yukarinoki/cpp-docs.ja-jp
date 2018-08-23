@@ -1,23 +1,23 @@
 ---
-title: Array と WriteOnlyArray (C + + CX) |Microsoft ドキュメント
+title: Array と WriteOnlyArray (C + + CX) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47c26ef4058cc3116d964740a93f7395c300b92b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: adad70bfa069a43382c06f60dea53bc2e53ff187
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089393"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606113"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Array と WriteOnlyArray (C++/CX)
-正規の C スタイルの配列を自由に使用できるまたは[std::array](../standard-library/array-class-stl.md) C + +/CX プログラム (が[std::vector](../standard-library/vector-class.md)方が適切では多くの場合)、メタデータでパブリッシュされている api では、C スタイル配列を変換する必要がありますが、またはにベクター、 [platform::array](../cppcx/platform-array-class.md)または[platform::writeonlyarray](../cppcx/platform-writeonlyarray-class.md)によってどのように使用されている型。 [Platform::Array](../cppcx/platform-array-class.md) 型は、 [std::vector](../standard-library/vector-class.md)ほどには効率的でも強力でもありません。そのため、一般的なガイドラインとして、配列要素で多くの操作を実行する内部コードでは使用を避ける必要があります。  
+通常の C スタイル配列を自由に使用できますまたは[std::array](../standard-library/array-class-stl.md)で c++/cli/CX プログラム (が[std::vector](../standard-library/vector-class.md)方が適切では多くの場合)、メタデータでパブリッシュされている任意の api では、C スタイル配列を変換する必要がありますが、ベクトルまたは、 [platform::array](../cppcx/platform-array-class.md)または[platform::writeonlyarray](../cppcx/platform-writeonlyarray-class.md)によってどのように使用されている型。 [Platform::Array](../cppcx/platform-array-class.md) 型は、 [std::vector](../standard-library/vector-class.md)ほどには効率的でも強力でもありません。そのため、一般的なガイドラインとして、配列要素で多くの操作を実行する内部コードでは使用を避ける必要があります。  
   
  次の配列型は、ABI を介して渡すことができます。  
   
@@ -29,19 +29,19 @@ ms.locfileid: "33089393"
   
 4.  Platform::Array^ の戻り値  
   
- これらの配列型を使用すると、次の 3 つの種類の Windows ランタイムで定義されている配列パターンを実装します。  
+ これらの配列型を使用すると、次の 3 つの種類の Windows ランタイムによって定義されている配列パターンを実装します。  
   
  PassArray  
- 呼び出し元が、配列をメソッドに渡すときに使用します。 C++ 入力パラメーターの型は`const` [platform::array](../cppcx/platform-array-class.md)\<T > です。  
+ 呼び出し元が、配列をメソッドに渡すときに使用します。 C++ 入力パラメーターの型は`const` [platform::array](../cppcx/platform-array-class.md)\<T >。  
   
  FillArray  
- 呼び出し元が、メソッドが入力する配列を渡すときに使用します。 C++ 入力パラメーターの型は[platform::writeonlyarray](../cppcx/platform-writeonlyarray-class.md)\<T > です。  
+ 呼び出し元が、メソッドが入力する配列を渡すときに使用します。 C++ 入力パラメーターの型は[platform::writeonlyarray](../cppcx/platform-writeonlyarray-class.md)\<T >。  
   
  ReceiveArray  
  呼び出し元が、メソッドが割り当てる配列を受け取るときに使用します。 C++/CX では、配列を Array^ として戻り値で返すことも、型 Array^* として Out パラメーターとして返すこともできます。  
   
 ## <a name="passarray-pattern"></a>PassArray パターン  
- クライアント コードが配列を C++ メソッドに渡し、メソッドがその配列を変更しない場合、メソッドはその配列を定数 Array^ として受け入れます。 Windows ランタイム アプリケーション バイナリ インターフェイス (ABI) レベルでは、これは PassArray と呼ばれます。 次の例は、JavaScript に割り当てられた配列を、読み取り側の C++ 関数に渡す方法を示しています。  
+ クライアント コードが配列を C++ メソッドに渡し、メソッドがその配列を変更しない場合、メソッドはその配列を定数 Array^ として受け入れます。 Windows ランタイムのアプリケーション バイナリ インターフェイス (ABI) レベルでこれは PassArray と呼ばれます。 次の例は、JavaScript に割り当てられた配列を、読み取り側の C++ 関数に渡す方法を示しています。  
   
  [!code-javascript[cx_arrays#101](../cppcx/codesnippet/JavaScript/array-and-writeonlyarray-c-_1.js)]  
   
@@ -50,7 +50,7 @@ ms.locfileid: "33089393"
  [!code-cpp[cx_arrays#01](../cppcx/codesnippet/CPP/js-array/class1.cpp#01)]  
   
 ## <a name="receivearray-pattern"></a>ReceiveArray パターン  
- ReceiveArray パターンでは、クライアント コードは配列を宣言し、それにメモリを割り当てて初期化するメソッドに渡します。 C++ 入力パラメーターの型は、ハットへのポインター `Array<T>^*`です。 次の例は、JavaScript で配列オブジェクトを宣言し、それを、メモリを割り当て、要素を初期化して JavaScript に返す C++ 関数に渡す方法を示しています。 JavaScript は、割り当てられた配列を戻り値として扱いますが、C++ 関数は出力パラメーターとして扱います。  
+ ReceiveArray パターンでは、クライアント コードは配列を宣言し、それにメモリを割り当てて初期化するメソッドに渡します。 C++ 入力パラメーターの型は、ハットへのポインター:`Array<T>^*`します。 次の例は、JavaScript で配列オブジェクトを宣言し、それを、メモリを割り当て、要素を初期化して JavaScript に返す C++ 関数に渡す方法を示しています。 JavaScript は、割り当てられた配列を戻り値として扱いますが、C++ 関数は出力パラメーターとして扱います。  
   
  [!code-javascript[cx_arrays#102](../cppcx/codesnippet/JavaScript/array-and-writeonlyarray-c-_3.js)]  
   

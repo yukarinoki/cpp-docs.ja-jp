@@ -1,5 +1,5 @@
 ---
-title: pop_macro |Microsoft ドキュメント
+title: pop_macro |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,32 +18,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7790cadf9b5bc0b9a1fa37b5131f4fb704142ad2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3106bc3c74be0f6d5a9a386b0f4c8c9c64bdfedf
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849640"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540062"
 ---
 # <a name="popmacro"></a>pop_macro
-値を設定、 *macro_name*マクロでこのマクロのスタックの一番上の値。  
+値を設定、 *macro_name*マクロでこのマクロのスタックの上部にある値。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 #pragma pop_macro("  
 macro_name  
 ")  
-  
 ```  
   
-## <a name="remarks"></a>コメント  
- 最初に発行する必要があります、 [push_macro](../preprocessor/push-macro.md)の*macro_name*を行うには、 **pop_macro**です。  
+## <a name="remarks"></a>Remarks  
+ 
+最初に発行する必要があります、 [push_macro](../preprocessor/push-macro.md)の*macro_name*実行する前に、 **pop_macro**します。  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp  
 // pragma_directives_pop_macro.cpp  
 // compile with: /W1  
 #include <stdio.h>  
@@ -76,4 +75,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

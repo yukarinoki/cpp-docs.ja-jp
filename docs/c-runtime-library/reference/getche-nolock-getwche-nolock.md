@@ -19,6 +19,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-conio-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - _getche_nolock
@@ -43,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e83d398330e2c7fbbf80ca5b14ef7b1099e56bc4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 319c9e56cfbd4e52d9edac841ff6d4d8df73528c
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400103"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572263"
 ---
 # <a name="getchenolock-getwchenolock"></a>_getche_nolock、_getwche_nolock
 
@@ -68,9 +69,9 @@ wint_t _getwche_nolock( void );
 
 読み取られた文字を返します。 エラーの戻り値はありません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_getche_nolock**と **_getwche_nolock**と同じ **_getche**と **_getwche**他のスレッドによる干渉から保護されないことを除きです。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
+**_getche_nolock**と **_getwche_nolock**と同じ **_getche**と **_getwche**する点を除いて、他のスレッドによる干渉から保護されません。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -80,7 +81,7 @@ wint_t _getwche_nolock( void );
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_getche_nolock**|\<conio.h>|
 |**_getwche_nolock**|\<conio.h> または \<wchar.h>|
