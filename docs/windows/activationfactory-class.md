@@ -17,92 +17,98 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 43e4932f93c4b9954343df2aecd4db3b13ebc147
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: e6088ec152d7c91cb06c17c9dae2698f2fd983d1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649206"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610191"
 ---
 # <a name="activationfactory-class"></a>ActivationFactory クラス
-1 つ以上のクラスを Windows ランタイムによってアクティブ化できるようにします。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-template <  
-   typename I0 = Details::Nil,  
-   typename I1 = Details::Nil,  
-   typename I2 = Details::Nil  
->  
-class ActivationFactory : public Details::RuntimeClass<typename Details::InterfaceListHelper<IActivationFactory, I0, I1, I2, Details::Nil>::TypeT, RuntimeClassFlags<WinRt | InhibitWeakReference>, false>;  
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *I0*  
- 0 番目のインターフェイスです。  
-  
- *I1*  
- 最初のインターフェイス。  
-  
- *I2*  
- 2 番目のインターフェイス。  
-  
-## <a name="remarks"></a>Remarks  
- **ActivationFactory**登録メソッドとの基本的な機能を提供します、`IActivationFactory`インターフェイス。 **ActivationFactory**カスタム ファクトリの実装を提供することもできます。  
-  
- 次のコード フラグメントでは、シンボリック ActivationFactory を使用する方法を示しています。  
-  
- [!code-cpp[wrl-microsoft__wrl__activationfactory#1](../windows/codesnippet/CPP/activationfactory-class_1.cpp)]  
-  
- 次のコード フラグメントは、使用する方法を示します、[実装](../windows/implements-structure.md)3 つ以上のインターフェイス Id を指定する構造体。  
-  
- `struct MyFactory : ActivationFactory<Implements<I1, I2, I3>, I4, I5>;`  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="public-constructors"></a>パブリック コンストラクター  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[ActivationFactory::ActivationFactory コンストラクター](../windows/activationfactory-activationfactory-constructor.md)|初期化します、 **ActivationFactory**クラス。|  
-  
-### <a name="public-methods"></a>パブリック メソッド  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[ActivationFactory::AddRef メソッド](../windows/activationfactory-addref-method.md)|現在の参照カウントをインクリメント**ActivationFactory**オブジェクト。|  
-|[ActivationFactory::GetIids メソッド](../windows/activationfactory-getiids-method.md)|実装されたインターフェイス Id の配列を取得します。|  
-|[ActivationFactory::GetRuntimeClassName メソッド](../windows/activationfactory-getruntimeclassname-method.md)|オブジェクトのランタイム クラス名を取得、現在**ActivationFactory**をインスタンス化します。|  
-|[ActivationFactory::GetTrustLevel メソッド](../windows/activationfactory-gettrustlevel-method.md)|オブジェクトの信頼レベルを取得、現在**ActivationFactory**をインスタンス化します。|  
-|[ActivationFactory::QueryInterface メソッド](../windows/activationfactory-queryinterface-method.md)|指定したインターフェイスへのポインターを取得します。|  
-|[ActivationFactory::Release メソッド](../windows/activationfactory-release-method.md)|現在の参照カウントをデクリメント**ActivationFactory**オブジェクト。|  
-  
-## <a name="inheritance-hierarchy"></a>継承階層  
- `I0`  
-  
- `ChainInterfaces`  
-  
- `I0`  
-  
- `RuntimeClassBase`  
-  
- `ImplementsHelper`  
-  
- `DontUseNewUseMake`  
-  
- `RuntimeClassFlags`  
-  
- `RuntimeClassBaseT`  
-  
- `RuntimeClass`  
-  
- `ActivationFactory`  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** module.h  
-  
- **名前空間:** Microsoft::WRL  
-  
-## <a name="see-also"></a>関連項目  
- [Microsoft::WRL 名前空間](../windows/microsoft-wrl-namespace.md)
+
+1 つ以上のクラスを Windows ランタイムによってアクティブ化できるようにします。
+
+## <a name="syntax"></a>構文
+
+```cpp
+template <
+   typename I0 = Details::Nil,
+   typename I1 = Details::Nil,
+   typename I2 = Details::Nil
+>
+class ActivationFactory : public Details::RuntimeClass<typename Details::InterfaceListHelper<IActivationFactory, I0, I1, I2, Details::Nil>::TypeT, RuntimeClassFlags<WinRt | InhibitWeakReference>, false>;
+```
+
+### <a name="parameters"></a>パラメーター
+
+*I0*  
+0 番目のインターフェイスです。
+
+*I1*  
+最初のインターフェイス。
+
+*I2*  
+2 番目のインターフェイス。
+
+## <a name="remarks"></a>Remarks
+
+**ActivationFactory**登録メソッドとの基本的な機能を提供します、`IActivationFactory`インターフェイス。 **ActivationFactory**カスタム ファクトリの実装を提供することもできます。
+
+次のコード フラグメントでは、シンボリック ActivationFactory を使用する方法を示しています。
+
+[!code-cpp[wrl-microsoft__wrl__activationfactory#1](../windows/codesnippet/CPP/activationfactory-class_1.cpp)]
+
+次のコード フラグメントは、使用する方法を示します、[実装](../windows/implements-structure.md)3 つ以上のインターフェイス Id を指定する構造体。
+
+`struct MyFactory : ActivationFactory<Implements<I1, I2, I3>, I4, I5>;`
+
+## <a name="members"></a>メンバー
+
+### <a name="public-constructors"></a>パブリック コンストラクター
+
+|名前|説明|
+|----------|-----------------|
+|[ActivationFactory::ActivationFactory コンストラクター](../windows/activationfactory-activationfactory-constructor.md)|初期化します、 **ActivationFactory**クラス。|
+
+### <a name="public-methods"></a>パブリック メソッド
+
+|名前|説明|
+|----------|-----------------|
+|[ActivationFactory::AddRef メソッド](../windows/activationfactory-addref-method.md)|現在の参照カウントをインクリメント**ActivationFactory**オブジェクト。|
+|[ActivationFactory::GetIids メソッド](../windows/activationfactory-getiids-method.md)|実装されたインターフェイス Id の配列を取得します。|
+|[ActivationFactory::GetRuntimeClassName メソッド](../windows/activationfactory-getruntimeclassname-method.md)|オブジェクトのランタイム クラス名を取得、現在**ActivationFactory**をインスタンス化します。|
+|[ActivationFactory::GetTrustLevel メソッド](../windows/activationfactory-gettrustlevel-method.md)|オブジェクトの信頼レベルを取得、現在**ActivationFactory**をインスタンス化します。|
+|[ActivationFactory::QueryInterface メソッド](../windows/activationfactory-queryinterface-method.md)|指定したインターフェイスへのポインターを取得します。|
+|[ActivationFactory::Release メソッド](../windows/activationfactory-release-method.md)|現在の参照カウントをデクリメント**ActivationFactory**オブジェクト。|
+
+## <a name="inheritance-hierarchy"></a>継承階層
+
+`I0`
+
+`ChainInterfaces`
+
+`I0`
+
+`RuntimeClassBase`
+
+`ImplementsHelper`
+
+`DontUseNewUseMake`
+
+`RuntimeClassFlags`
+
+`RuntimeClassBaseT`
+
+`RuntimeClass`
+
+`ActivationFactory`
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** module.h
+
+**名前空間:** Microsoft::WRL
+
+## <a name="see-also"></a>関連項目
+
+[Microsoft::WRL 名前空間](../windows/microsoft-wrl-namespace.md)

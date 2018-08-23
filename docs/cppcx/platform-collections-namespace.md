@@ -1,5 +1,5 @@
 ---
-title: Platform::collections Namespace |Microsoft ドキュメント
+title: Platform::collections Namespace |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2018
 ms.technology: cpp-windows
@@ -11,26 +11,26 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Collections Namespace
 ms.assetid: b5042864-5f22-40b7-b7a5-c0691f65cc47
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b4e38d6a051481b2b5f642c6b4de3c837f8fbfd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 171fdfe8e174d0d3b5d1c69e9aa5a777a3148ee0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088038"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612532"
 ---
 # <a name="platformcollections-namespace"></a>Platform::Collections 名前空間
 
-Platform::collections 名前空間を含む、 `Map`、 `MapView`、 `Vector`、および`VectorView`クラスです。 これらのクラスは、 [Windows::Foundation::Collections](http://go.microsoft.com/fwlink/p/?LinkId=262645) 名前空間に定義されている、対応するインターフェイスの具象実装です。 具体的なコレクション型は、(Javascript または C# で書かれたプログラムが C ++ コンポーネントを呼び出すなど) ABI を越えて移植することはできませんが、対応するインターフェイスの型に暗黙的に変換できます。 たとえば、コレクションを設定して返すパブリック メソッドを実装する場合は、 [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) を使用して内部的にコレクションを実装し、 [Windows::Foundation::Collections::IVector](http://go.microsoft.com/fwlink/p/?LinkId=262410) を戻り値の型として使用します。 詳細については、次を参照してください。[コレクション](../cppcx/collections-c-cx.md)と[C++ での Windows ランタイム コンポーネントの作成](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)です。
+Platform::collections 名前空間が含まれています、 `Map`、 `MapView`、 `Vector`、および`VectorView`クラス。 これらのクラスは、 [Windows::Foundation::Collections](http://go.microsoft.com/fwlink/p/?LinkId=262645) 名前空間に定義されている、対応するインターフェイスの具象実装です。 具体的なコレクション型は、(Javascript または C# で書かれたプログラムが C ++ コンポーネントを呼び出すなど) ABI を越えて移植することはできませんが、対応するインターフェイスの型に暗黙的に変換できます。 たとえば、コレクションを設定して返すパブリック メソッドを実装する場合は、 [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) を使用して内部的にコレクションを実装し、 [Windows::Foundation::Collections::IVector](http://go.microsoft.com/fwlink/p/?LinkId=262410) を戻り値の型として使用します。 詳細については、次を参照してください。[コレクション](../cppcx/collections-c-cx.md)と[C++ での Windows ランタイム コンポーネントの作成](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)です。
 
 Platform::Collections::Vector は [std::vector](../standard-library/vector-class.md) から構築でき、 [Platform::Collections::Map](../cppcx/platform-collections-map-class.md) は [std::map](../standard-library/map-class.md)から構築できます。
 
-また、platform::collections 名前空間は挿入反復子および入力反復子のサポートを提供および`Vector`と`VectorView`反復子。
+さらに、platform::collections 名前空間は挿入し、入力反復子のサポートを提供し、`Vector`と`VectorView`反復子。
 
-含める必要があります (`#include`)、platform::collections 名前空間の型の使用には、collection.h ヘッダー。
+含める必要があります (`#include`) platform::collections 名前空間の型の使用には、collection.h ヘッダー。
 
 ## <a name="syntax"></a>構文
 
@@ -43,7 +43,7 @@ using namespace Platform::Collections;
 
 この名前空間には、次のメンバーが含まれます。
 
-|名前|説明|
+|name|説明|
 |----------|-----------------|
 |[Platform::Collections::BackInsertIterator クラス](../cppcx/platform-collections-backinsertiterator-class.md)|コレクションの末尾に要素を挿入する反復子を表します。|
 |[Platform::Collections::InputIterator クラス](../cppcx/platform-collections-inputiterator-class.md)|コレクションの先頭に要素を挿入する反復子を表します。|

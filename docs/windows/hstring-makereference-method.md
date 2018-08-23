@@ -15,46 +15,51 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0c9a77a8a943dcefdf9db9d43121f2b00bde1568
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 061b3be0e642bb8e7406f54a469723c70559d85a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011011"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610162"
 ---
 # <a name="hstringmakereference-method"></a>HString::MakeReference メソッド
-作成、`HStringReference`オブジェクト指定した文字列パラメーターから。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-template<unsigned int sizeDest>  
-    static HStringReference MakeReference(  
-              wchar_t const (&str)[ sizeDest]);  
-  
-    template<unsigned int sizeDest>  
-    static HStringReference MakeReference(  
-              wchar_t const (&str)[sizeDest],   
-              unsigned int len);  
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *sizeDest*  
- 変換先のサイズを指定するテンプレート パラメーター`HStringReference`バッファー。  
-  
- *str*  
- ワイド文字の文字列への参照。  
-  
- *len*  
- 最大長、 *str*この操作で使用するパラメーターのバッファー。 場合、 *len*パラメーターが指定されていない全体*str*パラメーターを使用します。  
-  
-## <a name="return-value"></a>戻り値  
- `HStringReference`オブジェクトの値が指定したのと同じ*str*パラメーター。  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>関連項目  
- [HString クラス](../windows/hstring-class.md)
+
+作成、`HStringReference`オブジェクト指定した文字列パラメーターから。
+
+## <a name="syntax"></a>構文
+
+```cpp
+template<unsigned int sizeDest>
+    static HStringReference MakeReference(
+              wchar_t const (&str)[ sizeDest]);
+
+    template<unsigned int sizeDest>
+    static HStringReference MakeReference(
+              wchar_t const (&str)[sizeDest],
+              unsigned int len);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*sizeDest*  
+変換先のサイズを指定するテンプレート パラメーター`HStringReference`バッファー。
+
+*str*  
+ワイド文字の文字列への参照。
+
+*len*  
+最大長、 *str*この操作で使用するパラメーターのバッファー。 場合、 *len*パラメーターが指定されていない全体*str*パラメーターを使用します。
+
+## <a name="return-value"></a>戻り値
+
+`HStringReference`オブジェクトの値が指定したのと同じ*str*パラメーター。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>関連項目
+
+[HString クラス](../windows/hstring-class.md)

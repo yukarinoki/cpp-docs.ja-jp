@@ -1,5 +1,5 @@
 ---
-title: セキュリティ識別子のグローバル関数 |Microsoft ドキュメント
+title: セキュリティ識別子に関するグローバル関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -47,18 +47,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 153436ab5d05d0355d85ca165b2bfba9ae86d534
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b567c56c8c4ca5c25fc870e91c8c608e17280557
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365156"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610234"
 ---
-# <a name="security-identifier-global-functions"></a>セキュリティ識別子のグローバル関数
+# <a name="security-identifier-global-functions"></a>セキュリティ識別子に関するグローバル関数
 これらの関数は、オブジェクトに共通の既知の SID を返します。  
   
 > [!IMPORTANT]
->  次の表に示す関数は、Windows ランタイムで実行するアプリケーションでは使用できません。  
+>  Windows ランタイムで実行するアプリケーションでは、次の表に示す関数を使用できません。  
   
 |||  
 |-|-|  
@@ -195,10 +195,10 @@ CSid Network() throw(...);
 CSid NetworkService() throw(...);
 ```  
   
-### <a name="remarks"></a>コメント  
- NetworkService を使用して、CPerfMon セキュリティ オブジェクトの読み取りに NT authority \networkservice ユーザーを有効にします。 NetworkService、SecurityAttribute を DLL に NetworkService アカウントでログインできるように ATLServer コードに追加する[!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)]とよりオペレーティング システムです。  
+### <a name="remarks"></a>Remarks  
+ CPerfMon のセキュリティ オブジェクトの読み取りに NT authority \networkservice ユーザーを有効にするのにには、NetworkService を使用します。 NetworkService は、DLL は Windows XP Home Edition、Windows XP Professional、Windows Server 2003、およびオペレーティング システムが大きいの NetworkService アカウントでログインできるように ATLServer コードに、SecurityAttribute を追加します。  
   
- カスタム ログのカウンターがパフォーマンス モニター mmc ATLServer CPerfMon クラスに作成されると、リアルタイムのビューに正しく表示されますが、ログ ファイルを表示するときに、カウンターが表示されません。 CPerfMon カスタム パフォーマンス カウンター「パフォーマンス ログと警告」サービス (smlogsvc.exe) の下で実行するために必要な権限がない[!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)](またはそれ以上) のオペレーティング システムです。 このサービスは、"NT authority \networkservice"アカウントで実行されます。  
+ カスタム ログのカウンターがパフォーマンス モニター mmc ATLServer CPerfMon クラスを使用して作成されると、リアルタイム ビューに正しく表示されますが、ログ ファイルを表示するときに、カウンターが表示されません。 CPerfMon カスタム パフォーマンス カウンターは、Windows XP Home Edition、Windows XP Professional、windows Server 2003 (またはそれ以上) のオペレーティング システム (smlogsvc.exe)「パフォーマンス ログと警告」のサービスで実行するために必要なアクセス許可を必要はありません。 このサービスは、"NT authority \networkservice"のアカウントで実行されます。  
   
 ##  <a name="null"></a>  Sids::Null  
  SECURITY_NULL_RID SID を返します。  

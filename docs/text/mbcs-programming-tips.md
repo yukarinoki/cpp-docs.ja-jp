@@ -1,5 +1,5 @@
 ---
-title: MBCS のプログラミングについて |Microsoft ドキュメント
+title: MBCS のプログラミングについて |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - MBCS [C++], programming
 - multibyte characters [C++]
 ms.assetid: d8ad36b8-917f-474e-8adb-69462adecd17
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7eb6e298961580c959235a97f37793df41d1124f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d5beaab3fe1642b3988e9d0dcbf258eab02e26b7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855280"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610310"
 ---
 # <a name="mbcs-programming-tips"></a>MBCS のプログラミングについて
 新しい開発では、エンド ユーザーに表示される可能性があるすべての文字列に Unicode 文字エンコーディングを使用することをお勧めします。 MBCS は、Unicode によって置き換えられたレガシ テクノロジです。 ここでは、MBCS を使用しており、Unicode への変換が実用的でない、既存のプログラムを保守する必要がある開発者のためのヒントを提供します。 ここで紹介するヒントは、MFC を使ったアプリケーションにも、使わないアプリケーションにも適用できます。 ここでは、次の内容について説明します。  

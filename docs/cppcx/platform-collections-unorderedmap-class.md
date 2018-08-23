@@ -1,5 +1,5 @@
 ---
-title: Platform::Collections::UnorderedMap クラス |Microsoft ドキュメント
+title: Platform::Collections::UnorderedMap クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -7,16 +7,16 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbc1905023f64c4983cf041eda244b28ce507abc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d86e5e36c7219a79b77d79fe02e6b2ae811ccabc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092332"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612719"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap クラス
 
@@ -42,9 +42,9 @@ ref class Map sealed;
 キー/値ペア内の値の型。
 
 *C*  
-並べ替えキーとして 2 つの要素値を比較してマップ内の相対順序を決定できる関数オブジェクトを提供する型。 既定では、 [std::equal_to\<K >](../standard-library/equal-to-struct.md)です。
+並べ替えキーとして 2 つの要素値を比較してマップ内の相対順序を決定できる関数オブジェクトを提供する型。 既定では、 [std::equal_to\<K >](../standard-library/equal-to-struct.md)します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 使用できる型は次のとおりです。
 
@@ -58,9 +58,9 @@ ref class Map sealed;
 
 - パブリック列挙型クラス
 
-**UnorderedMap**のラッパーは、基本的に[std::unordered_map](../standard-library/unordered-map-class.md) Windows ランタイム型の記憶域をサポートします。 具象実装、 [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)と[IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_)パブリック間で渡される型の Windows ランタイム インターフェイスです。 パブリックの戻り値またはパラメーターで `Platform::Collections::UnorderedMap` 型を使用しようとすると、コンパイラ エラー C3986 が発生します。 パラメーターまたは戻り値の型を変更することで、エラーを修正することができます[Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)です。
+**UnorderedMap**のラッパーでは基本的に[std::unordered_map](../standard-library/unordered-map-class.md) Windows ランタイム型の格納をサポートします。 具象実装、 [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)と[IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) Windows ランタイム インターフェイスのパブリックの間で渡される型。 パブリックの戻り値またはパラメーターで `Platform::Collections::UnorderedMap` 型を使用しようとすると、コンパイラ エラー C3986 が発生します。 パラメーターまたは戻り値の型を変更することで、エラーを修正する[Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)します。
 
-詳細については、次を参照してください。[コレクション](../cppcx/collections-c-cx.md)です。
+詳細については、次を参照してください。[コレクション](../cppcx/collections-c-cx.md)します。
 
 ### <a name="members"></a>メンバー
 
@@ -87,7 +87,7 @@ ref class Map sealed;
 
 |||
 |-|-|
-|名前|説明|
+|name|説明|
 |[Map::mapchanged](#mapchanged)イベント|マップが変更されたときに発生します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
@@ -112,7 +112,7 @@ virtual void Clear();
 
 ## <a name="first"></a>  Unorderedmap::first メソッド
 
-1 つを指定する反復子を返します[Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx)順序なしのマップ内の要素。
+最初に指定する反復子を返します[Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx)順序なしのマップ内の要素。
 
 ### <a name="syntax"></a>構文
 
@@ -126,13 +126,13 @@ virtual Windows::Foundation::Collections::IIterator<
 
 マップ内の最初の要素を指定する反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 First() によって返される反復子を保持する便利な方法で宣言された変数に戻り値を割り当てるには、**自動**推論キーワードを入力します。 たとえば、`auto x = myUnorderedMap->First();` のようにします。
 
 ## <a name="getview"></a>  Unorderedmap::getview メソッド
 
-現在の UnorderedMap の読み取り専用ビューを返しますつまり、 [Platform::Collections::UnorderedMapView クラス](../cppcx/platform-collections-unorderedmapview-class.md)を実装する、 [Windows::Foundation::Collections::IMapView::IMapView](http://msdn.microsoft.com/library/windows/apps/br226037.aspx)インターフェイスです。
+現在の UnorderedMap の読み取り専用ビューを返しますつまり、 [Platform::Collections::UnorderedMapView クラス](../cppcx/platform-collections-unorderedmapview-class.md)[Windows::Foundation::Collections::IMapView::IMapView]/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) インターフェイスを実装します。
 
 ### <a name="syntax"></a>構文
 
@@ -159,7 +159,7 @@ bool HasKey(
 ### <a name="parameters"></a>パラメーター
 
 *key*  
-UnorderedMap 要素の検索に使用するキー。 型*キー* typename は*K*です。
+UnorderedMap 要素の検索に使用するキー。 型*キー* typename が*K*します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -181,14 +181,14 @@ virtual bool Insert(
 ### <a name="parameters"></a>パラメーター
 
 *key*  
-キー/値ペアのキー部分。 型*キー* typename は*K*です。
+キー/値ペアのキー部分。 型*キー* typename が*K*します。
 
 *値*  
-キー/値ペアの値部分。 型*値*typename は*V*です。
+キー/値ペアの値部分。 型*値*typename が*V*します。
 
 ### <a name="return-value"></a>戻り値
 
-`true` 現在のマップ内の既存の要素のキーと一致するかどうかは*キー*し、その要素の値部分に設定されている*値*です。 `false` 現在のマップ内の既存の要素が一致しない場合*キー*と*キー*と*値*パラメーターがキー/値ペアになっていて、現在の UnorderedMap に追加します。
+`true` 現在のマップ内の既存の要素のキーと一致するかどうか*キー*し、その要素の値の部分に設定されている*値*します。 `false` 現在のマップ内の既存の要素が一致しない場合*キー*と*キー*と*値*パラメーターのキー/値ペアに行われ、現在の UnorderedMap に追加します。
 
 ## <a name="lookup"></a>  Unorderedmap::lookup メソッド
 
@@ -205,11 +205,11 @@ V Lookup(
 ### <a name="parameters"></a>パラメーター
 
 *key*  
-UnorderedMap の要素の検索に使用するキー。 型*キー* typename は*K*です。
+UnorderedMap の要素の検索に使用するキー。 型*キー* typename が*K*します。
 
 ### <a name="return-value"></a>戻り値
 
-ペアになり、値、*キー*です。 戻り値の型は typename *V*です。
+値とペアになっている、*キー*します。 戻り値の型は typename *V*します。
 
 ## <a name="mapchanged"></a>  Unorderedmap::mapchanged
 
@@ -223,11 +223,11 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>プロパティ値/戻り値
 
-A [MapChangedEventHandler\<K, V >](http://msdn.microsoft.com/library/windows/apps/br206644.aspx)イベント、および発生した変更の種類を発生させたオブジェクトに関する情報を格納します。 関連項目[IMapChangedEventArgs\<K >](http://msdn.microsoft.com/library/windows/apps/br226034.aspx)と[collectionchange Enumeration 列挙型](http://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx)です。
+A [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler)発生した変更の種類と、イベントを発生させたオブジェクトに関する情報を格納します。 参照してください[IMapChangedEventArgs\<K >](http://msdn.microsoft.com/library/windows/apps/br226034.aspx)と[CollectionChange 列挙](http://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx)します。
 
 ## <a name="net-framework-equivalent"></a>同等の .NET Framework 関数
 
-C# または Visual Basic プロジェクト IMap 使用する Windows ランタイム アプリ\<K, V > を IDictionary として\<K, V >。
+Windows ランタイム アプリの c# または Visual Basic プロジェクトの IMap\<K, V > として IDictionary\<K, V >。
 
 ## <a name="remove"></a>  Unorderedmap::remove メソッド
 
@@ -243,7 +243,7 @@ virtual void Remove(
 ### <a name="parameters"></a>パラメーター
 
 *key*  
-キー/値ペアのキー部分。 型*キー* typename は*K*です。
+キー/値ペアのキー部分。 型*キー* typename が*K*します。
 
 ## <a name="size"></a>  Unorderedmap::size メソッド
 
@@ -350,13 +350,13 @@ UnorderedMap(
 現在の UnorderedMap の型名。
 
 *P*  
-2 つのキーを比較してそれらが等しいかどうかを判定できる関数オブジェクト。 このパラメーターの既定値[std::equal_to\<K >](../standard-library/equal-to-struct.md)です。
+2 つのキーを比較してそれらが等しいかどうかを判定できる関数オブジェクト。 このパラメーターの既定値[std::equal_to\<K >](../standard-library/equal-to-struct.md)します。
 
 *H*  
-キーのハッシュ値を生成する関数オブジェクト。 このパラメーターの既定値[クラス 1 をハッシュ](../standard-library/hash-class.md)キーの型をクラスでサポートされるのです。
+キーのハッシュ値を生成する関数オブジェクト。 このパラメーターの既定値[クラス 1 にハッシュ](../standard-library/hash-class.md)するキーの型のクラスをサポートします。
 
 *m*  
-参照または[Lvalue と Rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md)を[std::unordered_map](../standard-library/unordered-map-class.md)現在の UnorderedMap を初期化するために使用されます。
+参照または[Lvalues と Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)を[std::unordered_map](../standard-library/unordered-map-class.md)現在の UnorderedMap を初期化するために使用されます。
 
 *il* A [std::initializer_list](../standard-library/initializer-list-class.md)の[std::pair](../standard-library/pair-structure.md)マップを初期化するために使用されるオブジェクト。
 
@@ -373,4 +373,4 @@ UnorderedMap(
 [Platform::Collections::Map クラス](../cppcx/platform-collections-map-class.md)  
 [Platform::Collections::UnorderedMapView クラス](../cppcx/platform-collections-unorderedmapview-class.md)  
 [コレクション](../cppcx/collections-c-cx.md)  
-[C++ での Windows ランタイム コンポーネントを作成します。](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  
+[C++ で Windows ランタイム コンポーネントの作成](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  
