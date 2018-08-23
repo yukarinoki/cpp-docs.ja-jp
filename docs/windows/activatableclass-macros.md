@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aa178126b3a749e3af67b9dae3711c0a5cf9f408
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 398149d0d65b0dcf4c914d8f35e4c6faf209173f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645787"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606988"
 ---
 # <a name="activatableclass-macros"></a>ActivatableClass マクロ
 
@@ -54,7 +54,7 @@ ActivatableClassWithFactoryEx(
 ### <a name="parameters"></a>パラメーター
 
 *クラス名*  
-作成するクラスの名前です。  
+作成するクラスの名前です。
 
 *ファクトリ*  
 指定したクラスのインスタンスを作成するファクトリ。
@@ -73,4 +73,5 @@ ActivatableClassWithFactoryEx(
 **名前空間:** Microsoft::WRL
 
 ## <a name="see-also"></a>関連項目
+
 [Module クラス](../windows/module-class.md)

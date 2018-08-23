@@ -15,29 +15,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ed78c9276603c8b6dbdab74a32ea1940bf39544f
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 05efb34a2d03264ca0fb6da1da22a2610c800c30
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012571"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600817"
 ---
 # <a name="hstringisvalid-method"></a>HString::IsValid メソッド
-示すかどうか、現在**HString**オブジェクトが空か。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
+
+示すかどうか、現在**HString**オブジェクトが空か。
+
+## <a name="syntax"></a>構文
+
+```cpp
 bool IsValid() const throw()  
-```  
-  
-### <a name="parameters"></a>パラメーター  
- **true**場合、現在**HString**オブジェクトがないと、空以外の場合、 **false**します。  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>関連項目  
- [HString クラス](../windows/hstring-class.md)
+```
+
+### <a name="parameters"></a>パラメーター
+
+**true**場合、現在**HString**オブジェクトがないと、空以外の場合、 **false**します。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>関連項目
+
+[HString クラス](../windows/hstring-class.md)

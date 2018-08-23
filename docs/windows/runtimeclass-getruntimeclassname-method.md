@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 126133c5e542414f1fb38635e1cb14314bc55d52
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 5e367f956fbaeb36837733d619b19cdc8363ca3a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020396"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606828"
 ---
 # <a name="runtimeclassgetruntimeclassname-method"></a>RuntimeClass::GetRuntimeClassName メソッド
 
@@ -37,6 +37,7 @@ STDMETHOD( GetRuntimeClassName )(
 ```
 
 ### <a name="parameters"></a>パラメーター
+
 *runtimeName*  
 この操作の完了時、ランタイム クラス名。
 
@@ -55,4 +56,5 @@ STDMETHOD( GetRuntimeClassName )(
 **名前空間:** Microsoft::WRL
 
 ## <a name="see-also"></a>関連項目
- [RuntimeClass クラス](../windows/runtimeclass-class.md)
+
+[RuntimeClass クラス](../windows/runtimeclass-class.md)

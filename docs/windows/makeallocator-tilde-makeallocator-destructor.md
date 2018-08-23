@@ -17,32 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 09450b7883467640cc7176334ea18c07f43a098b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 7115bd3ad6ef1a385b8c2a509f42316c9f8b69bc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010874"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607199"
 ---
 # <a name="makeallocatormakeallocator-destructor"></a>MakeAllocator::~MakeAllocator デストラクター
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-~MakeAllocator();  
-```  
-  
-## <a name="remarks"></a>Remarks  
- 現在のインスタンスの初期化を解除、 **MakeAllocator**クラス。  
-  
- このデストラクターは必要な場合も、基になる割り当てられたメモリを削除します。  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** implements.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>関連項目  
- [MakeAllocator クラス](../windows/makeallocator-class.md)   
- [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)
+
+WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+
+## <a name="syntax"></a>構文
+
+```cpp
+~MakeAllocator();
+```
+
+## <a name="remarks"></a>Remarks
+
+現在のインスタンスの初期化を解除、 **MakeAllocator**クラス。
+
+このデストラクターは必要な場合も、基になる割り当てられたメモリを削除します。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** implements.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>関連項目
+
+[MakeAllocator クラス](../windows/makeallocator-class.md)  
+[Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

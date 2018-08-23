@@ -26,33 +26,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a2aacfcda168b3abdb5d46826a0351f85a4b3d48
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 5eb9b7da8b09fbac1e462394c6ae087b61814ede
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645397"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598776"
 ---
 # <a name="customizing-or-changing-colors-image-editor-for-icons"></a>色のカスタマイズまたは変更 (アイコン用イメージ エディター)
-**イメージ**エディターの[色パレット](../windows/colors-window-image-editor-for-icons.md)16 の標準色を最初に表示されます。 表示された色以外にも、独自の色を作成できます。 できます[を保存し、カスタマイズした色パレットを読み込む](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md)します。  
-  
-### <a name="to-change-colors-on-the-colors-palette"></a>色パレットで色を変更するには  
-  
-1.  **イメージ**] メニューの [選択**色の調整**します。  
-  
-2.  [カスタム カラー セレクター ダイアログ ボックス](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)、RGB または HSL 値を適切なテキスト ボックスに入力して、色を定義またはで色を選択、**グラデーション色の表示**ボックス。  
-  
-3.  スライダーを移動して、輝度を設定、**光度**バー。  
-  
-4.  作成した色の多くは、ディザリングされます。 ダブルクリックして、単色をディザリングされた色に最も近いする場合、**色**ボックス。  
-  
-     後で、ディザリングされた色をする場合、スライダーを移動、**光度**バーまたは十字カーソルを移動、**グラデーション色の表示**ボックスに、ディザリングを復元します。  
-  
-5.  クリックして**OK**新しい色を追加します。  
-  
-## <a name="requirements"></a>要件  
- なし  
-  
-## <a name="see-also"></a>関連項目  
- [アクセラレータ キー](../windows/accelerator-keys-image-editor-for-icons.md)   
- [カラーを使用します。](../windows/working-with-color-image-editor-for-icons.md)
+
+**イメージ**エディターの[色パレット](../windows/colors-window-image-editor-for-icons.md)16 の標準色を最初に表示されます。 表示された色以外にも、独自の色を作成できます。 できます[を保存し、カスタマイズした色パレットを読み込む](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md)します。
+
+### <a name="to-change-colors-on-the-colors-palette"></a>色パレットで色を変更するには
+
+1. **イメージ**] メニューの [選択**色の調整**します。
+
+2. [カスタム カラー セレクター ダイアログ ボックス](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)、RGB または HSL 値を適切なテキスト ボックスに入力して、色を定義またはで色を選択、**グラデーション色の表示**ボックス。
+
+3. スライダーを移動して、輝度を設定、**光度**バー。
+
+4. 作成した色の多くは、ディザリングされます。 ダブルクリックして、単色をディザリングされた色に最も近いする場合、**色**ボックス。
+
+   後で、ディザリングされた色をする場合、スライダーを移動、**光度**バーまたは十字カーソルを移動、**グラデーション色の表示**ボックスに、ディザリングを復元します。
+
+5. クリックして**OK**新しい色を追加します。
+
+## <a name="requirements"></a>要件
+
+なし
+
+## <a name="see-also"></a>関連項目
+
+[アクセラレータ キー](../windows/accelerator-keys-image-editor-for-icons.md)  
+[カラーを使用します。](../windows/working-with-color-image-editor-for-icons.md)

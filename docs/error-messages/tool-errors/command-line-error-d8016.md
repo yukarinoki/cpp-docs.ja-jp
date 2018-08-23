@@ -1,5 +1,5 @@
 ---
-title: コマンド ライン エラー D8016 |Microsoft ドキュメント
+title: コマンド ライン エラー D8016 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6f9709da189403f2594d76751430d30554bffe5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c6ba57b7036aae652b9eb6d885f9105d8bf0826
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300619"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607604"
 ---
 # <a name="command-line-error-d8016"></a>コマンド ライン エラー D8016
-'オプション 1' と '・ オプション 2' のコマンド ライン オプションは互換性がありません。  
+'オプション 1' と 'option2' コマンド ライン オプションは互換性がありません。  
   
  コマンド ライン オプションを指定することはできません。  
   
- CL などの環境変数、オプションの指定についてを確認してください。  
+ CL などの環境変数、オプションの指定を確認してください。  
   
- **/clr**意味 **/EHa**、およびその他の操作を指定することはできません **/EH**コンパイラ オプションを **/clr**です。 詳細については、「[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)」を参照してください。  
+ **/clr**意味 **/EHa**、その他の操作を指定することはできませんと **/EH**コンパイラ オプションを使用 **/clr**。 詳細については、「[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)」を参照してください。  
   
- 更新した後に d8016 可能性があります、 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 6.0 プロジェクト: プロジェクト更新ウィザードの処理を有効にすることがあります **/RTC**各ソース コードのファイル プロジェクト内には、これよりも優先、 **/RTC**の設定、プロジェクトです。  これを解決するには、変更、 **/RTC**プロジェクト内の各ソース コード ファイルの既定の設定に設定することを意味のプロジェクト設定 **/RTC**ファイルごとに有効になります。  
+ Visual C 6.0 プロジェクトを更新後 D8016 が発生する可能性があります。 プロジェクト更新ウィザードの処理を有効にすることがあります **/RTC**オーバーライド プロジェクトのソース コード ファイルごとに、 **/RTC**プロジェクトの設定。  これを解決するには、変更、 **/RTC** 、プロジェクトの設定の既定の設定に、プロジェクト内の各ソース コード ファイルの設定、つまり **/RTC**ファイルごとに有効になります。  
   
  参照してください[/RTC (ランタイム エラー チェック)](../../build/reference/rtc-run-time-error-checks.md)変更する方法について、 **/RTC**プロパティの設定。

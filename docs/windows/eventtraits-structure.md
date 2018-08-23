@@ -17,33 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f46f1bc6d03f7bf222edcd3d23def72edfcb11fa
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 02f7670daea943669844081a8d956ef0539d656b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647574"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594337"
 ---
 # <a name="eventtraits-structure"></a>EventTraits 構造体
-特性を定義、`Event`クラスのハンドル。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-struct EventTraits : HANDLENullTraits;  
-```  
-  
-## <a name="members"></a>メンバー  
-  
-## <a name="inheritance-hierarchy"></a>継承階層  
- `HANDLENullTraits`  
-  
- `EventTraits`  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>関連項目  
- [Microsoft::WRL::Wrappers::HandleTraits 名前空間](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+
+特性を定義、`Event`クラスのハンドル。
+
+## <a name="syntax"></a>構文
+
+```cpp
+struct EventTraits : HANDLENullTraits;
+```
+
+## <a name="members"></a>メンバー
+
+## <a name="inheritance-hierarchy"></a>継承階層
+
+`HANDLENullTraits`
+
+`EventTraits`
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>関連項目
+
+[Microsoft::WRL::Wrappers::HandleTraits 名前空間](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

@@ -17,32 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2190a8e85f81062cc1167aa844fccf4afc819bc9
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: fc3f01227cb37285f11ef8256d0b101f156871b5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648803"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605517"
 ---
 # <a name="handletinternalclose-method"></a>HandleT::InternalClose メソッド
-現在の終了**HandleT**オブジェクト。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-virtual bool InternalClose();  
-```  
-  
-## <a name="return-value"></a>戻り値  
- **true**場合、現在**HandleT**正常。 それ以外の終了**false**します。  
-  
-## <a name="remarks"></a>Remarks  
- **InternalClose()** は**保護**します。  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>関連項目  
- [HandleT クラス](../windows/handlet-class.md)
+
+現在の終了**HandleT**オブジェクト。
+
+## <a name="syntax"></a>構文
+
+```cpp
+virtual bool InternalClose();
+```
+
+## <a name="return-value"></a>戻り値
+
+**true**場合、現在**HandleT**正常。 それ以外の終了**false**します。
+
+## <a name="remarks"></a>Remarks
+
+**InternalClose()** は**保護**します。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>関連項目
+
+[HandleT クラス](../windows/handlet-class.md)

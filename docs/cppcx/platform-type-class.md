@@ -1,5 +1,5 @@
 ---
-title: Platform::type クラス |Microsoft ドキュメント
+title: Platform::type Class |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,19 +12,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc70f0a0f714cb6f5a2f4b28d922308d8fe4d645
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: e4d2931df50c6bfac126bc8e8ab1c70d61bdfe39
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255539"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596702"
 ---
 # <a name="platformtype-class"></a>Platform::Type クラス
-型に関するランタイム情報 (文字列名と型コード) を含みます。 呼び出すことによって取得[object::gettype](../cppcx/platform-object-class.md#gettype)任意のオブジェクトでまたはを使用して、または、 [typeid](../windows/typeid-cpp-component-extensions.md)演算子はクラスまたは構造体の名前にします。  
+型に関するランタイム情報 (文字列名と型コード) を含みます。 呼び出すことによって取得[object::gettype](../cppcx/platform-object-class.md#gettype)任意のオブジェクトでまたはを使用して、 [typeid](../windows/typeid-cpp-component-extensions.md)演算子はクラスまたは構造体の名前にします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,22 +34,22 @@ public ref class Platform::Type :
     Platform::Details::IPrintable  
 ```  
   
-### <a name="remarks"></a>コメント  
- `Type` クラスは、オブジェクトの実行時の型に基づいて分岐する `if` ステートメントまたは `switch` ステートメントを使用して処理を指示する必要があるアプリケーションで役に立ちます。 使用して、型のカテゴリを記述する型コードを取得、 [type::gettypecode](#gettypecode)メンバー関数。  
+### <a name="remarks"></a>Remarks  
+ `Type` クラスは、オブジェクトの実行時の型に基づいて分岐する `if` ステートメントまたは `switch` ステートメントを使用して処理を指示する必要があるアプリケーションで役に立ちます。 使用して型のカテゴリを説明する型コードを取得、 [type::gettypecode](#gettypecode)メンバー関数。  
   
 ## <a name="public-methods"></a>パブリック メソッド  
   
 |||  
 |-|-|  
 |[Type::GetTypeCode メソッド](#gettypecode)|オブジェクトの [Platform::TypeCode 列挙](../cppcx/platform-typecode-enumeration.md) 値を返します。| 
-|[Type::ToString メソッド](#tostring)|そのメタデータで指定された型の名前を返します。| 
+|[Type::ToString メソッド](#tostring)|そのメタデータで指定されている型の名前を返します。| 
 
  
 ## <a name="public-properties"></a>パブリック プロパティ  
   
 |||  
 |-|-|  
-|[Type::FullName](#fullname)|返します、 [platform::string Class](../cppcx/platform-string-class.md)^ 型の完全修飾名を表し、を使用している。 (ドット) を区切り記号としてできません:: (二重のコロン) — たとえば、`MyNamespace.MyClass`です。|  
+|[Type::FullName](#fullname)|返します、 [platform::string Class](../cppcx/platform-string-class.md)^ 型の完全修飾名を表し、を使用している。 (ドット) を区切り記号としてできません:: (二重のコロン) — たとえば、`MyNamespace.MyClass`します。|  
   
 ## <a name="conversion-operators"></a>変換演算子  
   
@@ -59,7 +59,7 @@ public ref class Platform::Type :
 |[Windows::UI::Xaml::Interop::TypeName 演算子](../cppcx/operator-windows-ui-xaml-interop-typename.md)|`Platform::Type` から `Windows::UI::Xaml::Interop::TypeName`への変換を有効にします。|  
   
 ### <a name="requirements"></a>要件  
- **クライアントがサポートされる最小:** Windows 8  
+ **クライアントがサポートされている最小:** Windows 8  
   
  **サポートされているサーバーの最小値:** Windows Server 2012  
   
@@ -69,7 +69,7 @@ public ref class Platform::Type :
 
  
 ## <a name="fullname"></a> Type::FullName プロパティ
-フォームの現在の型の完全修飾名を取得する`Namespace.Type`です。  
+フォームの現在の型の完全修飾名を取得`Namespace.Type`します。  
   
 ### <a name="syntax"></a>構文  
   
@@ -107,8 +107,8 @@ Platform::TypeCode GetTypeCode();
 ### <a name="return-value"></a>戻り値  
  Platform::TypeCode 列挙値のいずれか。  
   
-### <a name="remarks"></a>コメント  
- GetTypeCode() メンバー メソッドの相当するものは、`typeid`プロパティです。
+### <a name="remarks"></a>Remarks  
+ GetTypeCode() メンバー メソッドの相当するものは、`typeid`プロパティ。
 
 ## <a name="tostring"></a> Type::ToString メソッド
 取得する型の名前。  
@@ -120,7 +120,7 @@ Platform::String^ ToString();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- そのメタデータで指定された型の名前です。    
+ そのメタデータで指定されている型の名前。    
   
 ## <a name="see-also"></a>関連項目  
  [Platform 名前空間](../cppcx/platform-namespace-c-cx.md)

@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b7b31161ab0539a6b31b574c8cf306b4ae33378
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: e987be9ae368917a70e8dcbb5796bb12228da81b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651598"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592356"
 ---
 # <a name="handletget-method"></a>HandleT::Get メソッド
-基になるハンドルの値を取得します。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-typename HandleTraits::Type Get() const;  
-```  
-  
-## <a name="return-value"></a>戻り値  
- ハンドル。  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>関連項目  
- [HandleT クラス](../windows/handlet-class.md)
+
+基になるハンドルの値を取得します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+typename HandleTraits::Type Get() const;
+```
+
+## <a name="return-value"></a>戻り値
+
+ハンドル。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>関連項目
+
+[HandleT クラス](../windows/handlet-class.md)

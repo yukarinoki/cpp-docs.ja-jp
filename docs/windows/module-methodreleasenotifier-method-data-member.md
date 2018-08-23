@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5a59f1d677a3412f8f3edd016a9c719a8e221d6f
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 373247627e8daae87bea18c66980a15e6662a208
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015573"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592484"
 ---
 # <a name="modulemethodreleasenotifiermethod-data-member"></a>Module::MethodReleaseNotifier::method_ データ メンバー
-現在のイベント ハンドラーへのポインターを保持**module::methodreleasenotifier**オブジェクト。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-void (T::* method_)();  
-```  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** module.h  
-  
- **名前空間:** Microsoft::WRL  
-  
-## <a name="see-also"></a>関連項目  
- [Module::MethodReleaseNotifier クラス](../windows/module-methodreleasenotifier-class.md)
+
+現在のイベント ハンドラーへのポインターを保持**module::methodreleasenotifier**オブジェクト。
+
+## <a name="syntax"></a>構文
+
+```cpp
+void (T::* method_)();
+```
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** module.h
+
+**名前空間:** Microsoft::WRL
+
+## <a name="see-also"></a>関連項目
+
+[Module::MethodReleaseNotifier クラス](../windows/module-methodreleasenotifier-class.md)

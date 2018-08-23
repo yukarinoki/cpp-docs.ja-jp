@@ -17,38 +17,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 831f1fbcb2da205fa08286a1fbbbf414e66075d4
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: fe8d41aded38db7cde5316e04cfa1689845aa4e7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019931"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595473"
 ---
 # <a name="moduletype-enumeration"></a>ModuleType 列挙型
-モジュールがインプロセス サーバーまたはアウトプロセス サーバーをサポートするかどうかを指定します。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-enum ModuleType;  
-```  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="values"></a>値  
-  
-|名前|説明|  
-|----------|-----------------|  
-|`InProc`|・ インプロセス サーバーです。|  
-|`OutOfProc`|アウト プロセス サーバーの場合。|  
-|`DisableCaching`|モジュールのキャッシュ メカニズムを無効にします。|  
-|`InProcDisableCaching`|組み合わせた`InProc`と`DisableCaching`します。|  
-|`OutOfProcDisableCaching`|組み合わせた`OutOfProc`と`DisableCaching`します。|  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** module.h  
-  
- **名前空間:** Microsoft::WRL  
-  
-## <a name="see-also"></a>関連項目  
- [Microsoft::WRL 名前空間](../windows/microsoft-wrl-namespace.md)
+
+モジュールがインプロセス サーバーまたはアウトプロセス サーバーをサポートするかどうかを指定します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+enum ModuleType;
+```
+
+## <a name="members"></a>メンバー
+
+### <a name="values"></a>値
+
+|名前|説明|
+|----------|-----------------|
+|`InProc`|・ インプロセス サーバーです。|
+|`OutOfProc`|アウト プロセス サーバーの場合。|
+|`DisableCaching`|モジュールのキャッシュ メカニズムを無効にします。|
+|`InProcDisableCaching`|組み合わせた`InProc`と`DisableCaching`します。|
+|`OutOfProcDisableCaching`|組み合わせた`OutOfProc`と`DisableCaching`します。|
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** module.h
+
+**名前空間:** Microsoft::WRL
+
+## <a name="see-also"></a>関連項目
+
+[Microsoft::WRL 名前空間](../windows/microsoft-wrl-namespace.md)

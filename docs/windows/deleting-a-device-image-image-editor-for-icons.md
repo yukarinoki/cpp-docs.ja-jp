@@ -20,27 +20,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dd35697e6a46ae681286fd9601f7d8cdc022948e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 4af0ca2c0b7b82dbfe6e72f9fd1bd5e6d219d8d4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649836"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591169"
 ---
 # <a name="deleting-a-device-image-image-editor-for-icons"></a>デバイス イメージの削除 (アイコン用イメージ エディター)
-### <a name="to-delete-a-device-image"></a>デバイス イメージを削除するには  
-  
-1.  アイコン イメージが表示されますが、**イメージ**エディターで、**デバイス イメージの削除**から、**イメージ**メニュー。 リソースの最後のアイコン イメージを削除すると、リソースも削除されます。  
-  
-    > [!NOTE]
-    >  押したときに、 **Del**キー、イメージとアイコンを描画する色は削除されますが、アイコンは今すぐ再設計できることです。 キーを押す場合**Del**押すと、誤って**Ctrl**+**Z**アクションを元に戻す。  
-  
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
-  
-## <a name="requirements"></a>要件  
- なし  
-  
-## <a name="see-also"></a>関連項目  
- [アイコンとカーソル: ディスプレイ デバイスのイメージ リソース](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
- [アクセラレータ キー](../windows/accelerator-keys-image-editor-for-icons.md)   
- [アイコンとカーソル: ディスプレイ デバイスのイメージ リソース](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
+
+### <a name="to-delete-a-device-image"></a>デバイス イメージを削除するには
+
+1. アイコン イメージが表示されますが、**イメージ**エディターで、**デバイス イメージの削除**から、**イメージ**メニュー。 リソースの最後のアイコン イメージを削除すると、リソースも削除されます。
+
+   > [!NOTE]
+   > 押したときに、 **Del**キー、イメージとアイコンを描画する色は削除されますが、アイコンは今すぐ再設計できることです。 キーを押す場合**Del**押すと、誤って**Ctrl**+**Z**アクションを元に戻す。
+
+マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
+
+## <a name="requirements"></a>要件
+
+なし
+
+## <a name="see-also"></a>関連項目
+
+[アイコンとカーソル: ディスプレイ デバイスのイメージ リソース](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)  
+[アクセラレータ キー](../windows/accelerator-keys-image-editor-for-icons.md)  
+[アイコンとカーソル: ディスプレイ デバイスのイメージ リソース](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)

@@ -18,21 +18,21 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fd66a0e2f45def3aa22342ca30eaa64846ebf4c
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 9769e1af4f9a1aa8c2c347d8724712b52e03bc22
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012011"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606490"
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Tchar.h における汎用テキストのマッピング
-コードを簡単に国際対応にできるように、[!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] のランタイム ライブラリには、多くのデータ型やルーチンなどのオブジェクトに対して、[!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] 固有の汎用テキストのマッピングが用意されています。 Tchar.h で定義されているこれらのマッピングを使用すると、[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] ステートメントで定義したマニフェスト定数に応じて、1 バイト、マルチバイト、`#define` のどの文字セットにも対応できるジェネリック コードを記述できます。 汎用テキスト マッピングは [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] 固有の拡張機能であり、[!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)] とは互換性がありません。  
+国際対応のコードの転送を簡略化するのには、Microsoft ランタイム ライブラリは、多くのデータ型、ルーチン、およびその他のオブジェクトの Microsoft 固有の汎用テキスト マッピングを提供します。 1 バイト、マルチバイト、コンパイルできるジェネリック コードを記述する、Tchar.h で定義されているこれらのマッピングを使用するかを使用して定義するマニフェスト定数に応じて、Unicode 文字のセットを`#define`ステートメント。 汎用テキスト マッピングは Microsoft 固有の拡張機能であり、ANSI とは互換性がありません。  
   
- Tchar.h を使用することにより、同じソースから、1 バイト、マルチバイト文字セット (MBCS: Multibyte Character Set)、および [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] の各アプリケーションをビルドできます。 Tchar.h では、プレフィックス `_tcs` の付いたマクロが定義されており、正しいプリプロセッサ定義に応じて `str`、`_mbs`、`wcs` のいずれかの関数に割り当てられます。 MBCS でビルドするには、シンボル `_MBCS` を定義します。 [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] でビルドするには、シンボル `_UNICODE` を定義します。 1 バイト アプリケーションをビルドする場合は、どちらも定義しません (既定)。 MFC アプリケーションでは、既定で `_MBCS` が定義されています。  
+ Tchar.h を使用すると、1 バイト、マルチバイト文字のセット (MBCS) と同じソースから Unicode アプリケーションを構築できます。 Tchar.h では、プレフィックス `_tcs` の付いたマクロが定義されており、正しいプリプロセッサ定義に応じて `str`、`_mbs`、`wcs` のいずれかの関数に割り当てられます。 MBCS でビルドするには、シンボル `_MBCS` を定義します。 Unicode をビルドするには、シンボルを定義`_UNICODE`します。 1 バイト アプリケーションをビルドする場合は、どちらも定義しません (既定)。 MFC アプリケーションでは、既定で `_MBCS` が定義されています。  
   
  `_TCHAR` データ型は、Tchar.h で条件に応じて定義されます。 場合、シンボル`_UNICODE`、ビルドが定義されている`_TCHAR`として定義されます**wchar_t**。 そうしないと、1 バイト、MBCS のビルドとして定義されて**char**します。 (**wchar_t**、基本の Unicode ワイド文字データ型を 8 ビット符号付き 16 ビット版は、 **char**)。国際対応のアプリケーションでは、バイトではなく `_tcs` を扱う `_TCHAR` ファミリの関数を使う必要があります。 たとえば、`_tcsncpy`コピー `n` `_TCHARs`ではなく、`n`バイト。  
   
@@ -48,9 +48,9 @@ ms.locfileid: "40012011"
   
 |#define|コンパイル後の状態|例|  
 |---------------|----------------------|-------------|  
-|`_UNICODE`|[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] (ワイド文字)|`_tcsrev` は `_wcsrev` に割り当てられます。|  
+|`_UNICODE`|Unicode (ワイド文字)|`_tcsrev` は `_wcsrev` に割り当てられます。|  
 |`_MBCS`|マルチバイト文字|`_tcsrev` は `_mbsrev` に割り当てられます。|  
-|なし (既定では `_UNICODE` も `_MBCS` も未定義)|SBCS ([!INCLUDE[TLA#tla_ascii](../text/includes/tlasharptla_ascii_md.md)])|`_tcsrev` は `strrev` に割り当てられます。|  
+|なし (既定では `_UNICODE` も `_MBCS` も未定義)|SBCS (ASCII)|`_tcsrev` は `strrev` に割り当てられます。|  
   
  たとえば、Tchar.h で定義されている汎用テキスト関数 `_tcsrev` は、プログラムで `_mbsrev` が定義されていると `_MBCS` になり、`_wcsrev` が定義されていると `_UNICODE` になります。 それ以外の場合、`_tcsrev` は `strrev` に割り当てられます。 プログラミングに便利なように他のデータ型のマッピングも Tchar.h に用意されていますが、`_TCHAR` が最も多く使用されます。  
   
@@ -63,14 +63,14 @@ ms.locfileid: "40012011"
 |`_TSCHAR`|**符号付き文字**|**符号付き文字**|**wchar_t**|  
 |`_TUCHAR`|**unsigned char**|**unsigned char**|**wchar_t**|  
 |`_TXCHAR`|**char**|**unsigned char**|**wchar_t**|  
-|`_T` または `_TEXT`|影響なし (プリプロセッサによって削除される)|影響なし (プリプロセッサによって削除される)|`L` (後続の文字または文字列を対応する [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] の文字または文字列に変換する)|  
+|`_T` または `_TEXT`|影響なし (プリプロセッサによって削除される)|影響なし (プリプロセッサによって削除される)|`L` (次の文字または文字列を対応する Unicode に変換)|  
   
  ルーチン、変数、およびその他のオブジェクトの汎用テキスト マッピングの一覧は、次を参照してください。[汎用テキスト マッピング](../c-runtime-library/generic-text-mappings.md)ランタイム ライブラリのリファレンス。  
   
 > [!NOTE]
 >  Unicode の文字列には NULL バイトが含まれている可能性があるため、この文字列と一緒に `str` ファミリの関数を使用しないでください。 同様に、MBCS (または SBCS) 文字列には `wcs` ファミリの関数を使用しないでください。  
   
- MBCS、`_TCHAR`、および SBCS の各モデルに対応するために、`_tcsrev` および [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] を使用するコード例を次に示します。  
+ MBCS、Unicode、および SBCS の各モデルにマッピングするために、`_TCHAR` と `_tcsrev` を使用するコード例を次に示します。  
   
 ```  
 _TCHAR *RetVal, *szString;  
@@ -91,7 +91,7 @@ wchar_t *RetVal, *szString;
 RetVal = _wcsrev(szString);  
 ```  
   
- `_MBCS` と `_UNICODE` のどちらも定義されていない場合、プリプロセッサは前のコードを次のように 1 バイトの [!INCLUDE[TLA#tla_ascii](../text/includes/tlasharptla_ascii_md.md)] コードに割り当てます。  
+ どちらの場合`_MBCS`も`_UNICODE`されている、定義されている、プリプロセッサによってマップされます、フラグメント 1 バイトの ASCII コードに次のようにします。  
   
 ```  
 char *RetVal, *szString;  

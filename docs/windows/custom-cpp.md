@@ -17,55 +17,59 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c0f4f04adb9ddc847b1c22485d10512a9d684d0
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: cb5a3ebbf3ecf1454745d507fc2f2b6f792768ac
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651896"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600422"
 ---
 # <a name="custom-c"></a>custom (C++)
-タイプ ライブラリ内のオブジェクトのメタデータを定義します。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-[ custom(  
-   uuid,   
-   value  
-) ];  
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *uuid*  
- 一意の ID。  
-  
- *値*  
- バリアントを入れる値。  
-  
-## <a name="remarks"></a>Remarks  
- **カスタム**情報をタイプ ライブラリに格納すると、C++ 属性。 ツールをタイプ ライブラリからカスタムの値を読み取る必要があります。  
-  
- **カスタム**属性と同じ機能を持つ、[カスタム](http://msdn.microsoft.com/library/windows/desktop/aa366766)MIDL 属性。  
-  
-## <a name="requirements"></a>要件  
-  
-### <a name="attribute-context"></a>属性コンテキスト  
-  
-|||  
-|-|-|  
-|**対象**|非 COM**インターフェイス**、**クラス**、**列挙**s、`idl_module`メソッド、インターフェイスのメンバー、インターフェイスのパラメーター、 **typedef**、s**共用体**s、**構造体**s|  
-|**反復可能**|[はい]|  
-|**必要な属性**|**コクラス**(クラスで使用) 場合|  
-|**無効な属性**|なし|  
-  
- 属性コンテキストの詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  
-  
-## <a name="see-also"></a>関連項目  
- [IDL 属性](../windows/idl-attributes.md)   
- [スタンドアロン属性](../windows/stand-alone-attributes.md)   
- [Typedef、Enum、Union、および struct 型の属性](../windows/typedef-enum-union-and-struct-attributes.md)   
- [パラメーター属性](../windows/parameter-attributes.md)   
- [メソッドの属性](../windows/method-attributes.md)   
- [クラス属性](../windows/class-attributes.md)   
- [インターフェイス属性](../windows/interface-attributes.md)   
+
+タイプ ライブラリ内のオブジェクトのメタデータを定義します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+[ custom(
+   uuid,
+   value
+) ];
+```
+
+### <a name="parameters"></a>パラメーター
+
+*uuid*  
+一意の ID。
+
+*値*  
+バリアントを入れる値。
+
+## <a name="remarks"></a>Remarks
+
+**カスタム**情報をタイプ ライブラリに格納すると、C++ 属性。 ツールをタイプ ライブラリからカスタムの値を読み取る必要があります。
+
+**カスタム**属性と同じ機能を持つ、[カスタム](http://msdn.microsoft.com/library/windows/desktop/aa366766)MIDL 属性。
+
+## <a name="requirements"></a>要件
+
+### <a name="attribute-context"></a>属性コンテキスト
+
+|||
+|-|-|
+|**対象**|非 COM**インターフェイス**、**クラス**、**列挙**s、`idl_module`メソッド、インターフェイスのメンバー、インターフェイスのパラメーター、 **typedef**、s**共用体**s、**構造体**s|
+|**反復可能**|[はい]|
+|**必要な属性**|**コクラス**(クラスで使用) 場合|
+|**無効な属性**|なし|
+
+属性コンテキストの詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。
+
+## <a name="see-also"></a>関連項目
+
+[IDL 属性](../windows/idl-attributes.md)  
+[スタンドアロン属性](../windows/stand-alone-attributes.md)  
+[Typedef、Enum、Union、および Struct 型の属性](../windows/typedef-enum-union-and-struct-attributes.md)  
+[パラメーター属性](../windows/parameter-attributes.md)  
+[メソッド属性](../windows/method-attributes.md)  
+[クラス属性](../windows/class-attributes.md)  
+[インターフェイス属性](../windows/interface-attributes.md)  

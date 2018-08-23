@@ -17,55 +17,59 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d65d7e2a1087dcce8eaee2fa132ae80d14073dda
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: b20c270f7848a346d717357f474d89e37ea117a4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014940"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600029"
 ---
 # <a name="mutex-class1"></a>ミュー テックス Class1
-共有リソースを排他的に制御する同期オブジェクトを表します。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-class Mutex : public HandleT<HandleTraits::MutexTraits>  
-```  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="public-typedefs"></a>パブリック typedef  
-  
-|名前|説明|  
-|----------|-----------------|  
-|`SyncLock`|同期ロックをサポートするクラスのシノニムです。|  
-  
-### <a name="public-constructor"></a>パブリック コンス トラクター  
-  
-|name|説明|  
-|----------|-----------------|  
-|[Mutex::Mutex コンストラクター](../windows/mutex-mutex-constructor.md)|新しいインスタンスを初期化、**ミュー テックス**クラス。|  
-  
-### <a name="public-members"></a>パブリック メンバー  
-  
-|name|説明|  
-|----------|-----------------|  
-|[Mutex::Lock メソッド](../windows/mutex-lock-method.md)|現在のオブジェクトまでの待機、または**ミュー テックス**リリース ミュー テックス、または指定されたタイムアウト期間が経過した、指定したハンドルに関連付けられているオブジェクト。|  
-  
-### <a name="public-operator"></a>パブリック演算子  
-  
-|name|説明|  
-|----------|-----------------|  
-|[Mutex::operator= 演算子](../windows/mutex-operator-assign-operator.md)|割り当て (移動)、指定した**ミュー テックス**現在オブジェクト**ミュー テックス**オブジェクト。|  
-  
-## <a name="inheritance-hierarchy"></a>継承階層  
- `Mutex`  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>関連項目  
- [Microsoft::WRL::Wrappers 名前空間](../windows/microsoft-wrl-wrappers-namespace.md)
+
+共有リソースを排他的に制御する同期オブジェクトを表します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+class Mutex : public HandleT<HandleTraits::MutexTraits>
+```
+
+## <a name="members"></a>メンバー
+
+### <a name="public-typedefs"></a>パブリック typedef
+
+|名前|説明|
+|----------|-----------------|
+|`SyncLock`|同期ロックをサポートするクラスのシノニムです。|
+
+### <a name="public-constructor"></a>パブリック コンス トラクター
+
+|name|説明|
+|----------|-----------------|
+|[Mutex::Mutex コンストラクター](../windows/mutex-mutex-constructor.md)|新しいインスタンスを初期化、**ミュー テックス**クラス。|
+
+### <a name="public-members"></a>パブリック メンバー
+
+|name|説明|
+|----------|-----------------|
+|[Mutex::Lock メソッド](../windows/mutex-lock-method.md)|現在のオブジェクトまでの待機、または**ミュー テックス**リリース ミュー テックス、または指定されたタイムアウト期間が経過した、指定したハンドルに関連付けられているオブジェクト。|
+
+### <a name="public-operator"></a>パブリック演算子
+
+|name|説明|
+|----------|-----------------|
+|[Mutex::operator= 演算子](../windows/mutex-operator-assign-operator.md)|割り当て (移動)、指定した**ミュー テックス**現在オブジェクト**ミュー テックス**オブジェクト。|
+
+## <a name="inheritance-hierarchy"></a>継承階層
+
+`Mutex`
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>関連項目
+
+[Microsoft::WRL::Wrappers 名前空間](../windows/microsoft-wrl-wrappers-namespace.md)

@@ -1,36 +1,36 @@
 ---
-title: WRL 統合 (C + + CX) |Microsoft ドキュメント
+title: WRL 統合 (C + + CX) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 3ad43894-c574-477c-ad3e-240301f381d4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ddefed444c447fbfd300a656c36be45899177b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff2fc36582e6ffbff8f7608a5a26cc472687132e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090261"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598091"
 ---
 # <a name="wrl-integration-ccx"></a>WRL 統合 (C++/CX)
 
-自由に混在させることによる WRL コード[!INCLUDE[cppwrl](includes/cppwrl-md.md)] ([!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)]) コード。 同じ翻訳単位、WRL のオブジェクトへのハンドルで宣言されたオブジェクトを使用することができます (`^`) 表記と[!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)]スマート ポインター (`ComPtr<T>`) 表記します。 、、の戻り値が手動で処理する必要がありますと[!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)]HRESULT エラー コードと WRL 例外。
+自由に WRL コードと Windows ランタイム C++ テンプレート ライブラリ (WRL) のコードを混在できます。 同じ翻訳単位で、WRL からオブジェクトへのハンドルで宣言されたオブジェクトを使用することができます (`^`) 表記と WRL のスマート ポインター (`ComPtr<T>`) 表記法。 ただし、戻り値、および WRL HRESULT エラー コードおよび WRL の例外を手動で処理する必要があります。
   
-## <a name="includecppwrlshortincludescppwrl-short-mdmd-development"></a>[!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] 開発
+## <a name="wrl-development"></a>WRL の開発
 
-作成と利用の詳細については[!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)]コンポーネントを参照して[Windows ランタイム C++ テンプレート ライブラリ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)です。
+作成と WRL コンポーネントを利用する方法の詳細についてを参照してください。 [Windows ランタイム C++ テンプレート ライブラリ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)します。
 
 ### <a name="example"></a>例
 
-次のコード スニペットでは、WRL を使用する方法を示しますと[!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)]を使用する[!INCLUDE[wrt](includes/wrt-md.md)]クラスし、メタデータ ファイルを調べます。
+次のコード スニペットでは、WRL および WRL を使用して、Windows ランタイム クラスを使用し、メタデータ ファイルを確認するを示します。
 
-この例は、構築 Microsoft ストア アプリのフォーラムでのコード スニペットから取得されます。 このコード スニペットの作成者は、次の免責条項と条件を提示しています。
+この例は、建物の Microsoft Store アプリのフォーラムでのコード スニペットから取得されます。 このコード スニペットの作成者は、次の免責条項と条件を提示しています。
 
-1. C++ には [!INCLUDE[wrt](includes/wrt-md.md)] 型に反映させる特定の API が用意されていませんが、型の Windows メタデータ ファイル (.winmd) は CLR メタデータ ファイルに完全に準拠しています。 Windows は、指定された型の .winmd ファイルを取得するために新しいメタデータ検出 API (RoGetMetaDataFile) を提供しています。 ただし、クラスをインスタンス化できないため、これらの API は C++ 開発者にはあまり役に立ちません。
+1. C++ Windows ランタイムの型に反映させる特定の Api を提供しませんが、型の Windows メタデータ ファイル (.winmd) は CLR メタデータ ファイルに完全に準拠します。 Windows は、指定された型の .winmd ファイルを取得するために新しいメタデータ検出 API (RoGetMetaDataFile) を提供しています。 ただし、クラスをインスタンス化できないため、これらの API は C++ 開発者にはあまり役に立ちません。
 
 1. コードをコンパイルした後、Runtimeobject.lib と Rometadata.lib をリンカーに渡す必要もあります。
 
@@ -120,4 +120,4 @@ IVector<String^>^ GetTypeMethods(Object^ instance)
 
 ## <a name="see-also"></a>関連項目
 
-[その他の言語と相互運用](interoperating-with-other-languages-c-cx.md)  
+[その他の言語との相互運用](interoperating-with-other-languages-c-cx.md)  

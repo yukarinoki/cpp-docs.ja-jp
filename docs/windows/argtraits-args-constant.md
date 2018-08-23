@@ -17,33 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 03db2fd8853321e4a9320f2c17b05800b87e466c
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 0600f3a6f220d54085ff7c2ff8d60c2148ced625
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652963"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593311"
 ---
 # <a name="argtraitsargs-constant"></a>ArgTraits::args 定数
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-static const int args = -1; ;  
-```  
-  
-## <a name="remarks"></a>Remarks  
- パラメーターの数のカウントを保持、`Invoke`デリゲート インターフェイスのメソッド。  
-  
-## <a name="remarks"></a>Remarks  
- ときに**args**が-1 のでは、必要がありますに一致することを示します、`Invoke`メソッド シグネチャ。  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** event.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>関連項目  
- [ArgTraits 構造体](../windows/argtraits-structure.md)   
- [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)
+
+WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+
+## <a name="syntax"></a>構文
+
+```cpp
+static const int args = -1; ;
+```
+
+## <a name="remarks"></a>Remarks
+
+パラメーターの数のカウントを保持、`Invoke`デリゲート インターフェイスのメソッド。
+
+## <a name="remarks"></a>Remarks
+
+ときに**args**が-1 のでは、必要がありますに一致することを示します、`Invoke`メソッド シグネチャ。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** event.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>関連項目
+
+[ArgTraits 構造体](../windows/argtraits-structure.md)  
+[Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

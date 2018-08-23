@@ -1,5 +1,5 @@
 ---
-title: OLE DB コンシューマー属性 |Microsoft ドキュメント
+title: OLE DB コンシューマー属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,24 +20,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2e9afcf3850d047452b201d9d1d84f1e0cf6cb4b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4af8ccddce73e419bec468aefc1b0f63bee89ecf
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876021"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604377"
 ---
 # <a name="ole-db-consumer-attributes"></a>OLE DB コンシューマー属性
-OLE DB コンシューマー属性に基づいて、コードを挿入する、 [OLE DB コンシューマー テンプレート](../data/oledb/ole-db-consumer-templates-reference.md)コンシューマーを作成する作業 OLE DB テーブルを開くなどのタスクを実行するコマンドを実行し、データにアクセスします。  
+OLE DB コンシューマー属性に基づくコードの挿入、 [OLE DB コンシューマー テンプレート](../data/oledb/ole-db-consumer-templates-reference.md)コンシューマーを作成する作業 OLE DB テーブルを開くなどのタスクを実行するコマンドを実行して、データにアクセスします。
   
-|属性|説明|  
-|---------------|-----------------|  
-|[db_accessor](../windows/db-accessor.md)|行セット内の列をバインドして、対応するアクセサー マップにバインドします。|  
-|[db_column](../windows/db-column.md)|行セットに指定された列をバインドします。|  
-|[db_command](../windows/db-command.md)|OLE DB コマンドを実行します。|  
-|[db_param](../windows/db-param.md)|指定したメンバー変数を入力または出力パラメーターに関連付けます。|  
-|[db_source](../windows/db-source.md)|作成し、データ ソースへのプロバイダーを経由して接続をカプセル化します。|  
-|[db_table](../windows/db-table.md)|OLE DB テーブルを開きます。|  
+|属性|説明|
+|---------------|-----------------|
+|[db_accessor](../windows/db-accessor.md)|行セットの列をバインドし、対応するアクセサー マップにバインドします。|
+|[db_column](../windows/db-column.md)|行セットに指定された列をバインドします。|
+|[db_command](../windows/db-command.md)|OLE DB コマンドを実行します。|
+|[db_param](../windows/db-param.md)|指定したメンバー変数を入力または出力パラメーターに関連付けます。|
+|[db_source](../windows/db-source.md)|作成し、データ ソースへのプロバイダー経由の接続をカプセル化します。|
+|[db_table](../windows/db-table.md)|OLE DB、テーブルを開きます。|
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
  [グループ別の属性](../windows/attributes-by-group.md)

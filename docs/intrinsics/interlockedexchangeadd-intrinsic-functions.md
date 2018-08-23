@@ -1,5 +1,5 @@
 ---
-title: _InterlockedExchangeAdd の組み込み関数 |Microsoft ドキュメント
+title: _InterlockedExchangeAdd の組み込み関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -65,17 +65,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c141caf090eb34482fe53a03138ff71d2740e2fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d25fccd56522d420a96b589796ef77cc30148d3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340555"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600893"
 ---
 # <a name="interlockedexchangeadd-intrinsic-functions"></a>_InterlockedExchangeAdd の組み込み関数
 **Microsoft 固有の仕様**  
   
- Win32 のコンパイラ組み込みサポートを提供[!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] [_InterlockedExchangeAdd Intrinsic Functions](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)関数。  
+ Win32 Windows SDK のコンパイラ組み込みサポートを提供[_InterlockedExchangeAdd Intrinsic Functions](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)関数。  
   
 ## <a name="syntax"></a>構文  
   
@@ -177,11 +177,11 @@ __int64 _InterlockedExchangeAdd64_HLERelease(
   
 |組み込み|アーキテクチャ|ヘッダー|  
 |---------------|------------------|------------|  
-|`_InterlockedExchangeAdd`, `_InterlockedExchangeAdd8`, `_InterlockedExchangeAdd16`, `_InterlockedExchangeAdd64`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_InterlockedExchangeAdd`, `_InterlockedExchangeAdd8`, `_InterlockedExchangeAdd16`, `_InterlockedExchangeAdd64`|x86、ARM、x64|\<intrin.h>|  
 |`_InterlockedExchangeAdd_acq`, `_InterlockedExchangeAdd_rel`, `_InterlockedExchangeAdd_nf`, `_InterlockedExchangeAdd8_acq`, `_InterlockedExchangeAdd8_rel`, `_InterlockedExchangeAdd8_nf`,`_InterlockedExchangeAdd16_acq`, `_InterlockedExchangeAdd16_rel`, `_InterlockedExchangeAdd16_nf`, `_InterlockedExchangeAdd64_acq`, `_InterlockedExchangeAdd64_rel`, `_InterlockedExchangeAdd64_nf`|ARM|\<intrin.h>|  
-|`_InterlockedExchangeAdd_HLEAcquire`, `_InterlockedExchangeAdd_HLERelease`, `_InterlockedExchangeAdd64_HLEAcquire`, `_InterlockedExchangeAdd64_HLErelease`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
+|`_InterlockedExchangeAdd_HLEAcquire`, `_InterlockedExchangeAdd_HLERelease`, `_InterlockedExchangeAdd64_HLEAcquire`, `_InterlockedExchangeAdd64_HLErelease`|x86、x64|\<immintrin.h>|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `_InterlockedExchangeAdd` には、格納するデータ型、およびプロセッサ固有の取得または解放のセマンティクスを使用するかどうかに基づき、異なるいくつかの種類があります。  
   
  `_InterlockedExchangeAdd` 関数は 32 ビット整数値で動作しますが、`_InterlockedExchangeAdd8` は 8 ビット整数値、`_InterlockedExchangeAdd16` は 16 ビット整数値、および `_InterlockedExchangeAdd64` は 64 ビット整数値で動作します。  
@@ -190,14 +190,14 @@ __int64 _InterlockedExchangeAdd64_HLERelease(
   
  Hardware Lock Elision (HLE) 命令をサポートする Intel プラットフォームでは、`_HLEAcquire` および `_HLERelease` サフィックスの付いた組み込みにプロセッサへのヒントが含まれています。このヒントによりハードウェアでのロック書き込み手順を省くことで、パフォーマンスを向上させることができます。 HLE をサポートしていないプラットフォームでこれらの組み込みが呼び出された場合、ヒントは無視されます。  
   
- これらのルーチンは、組み込みとしてのみ使用できます。 したがって、これらは組み込みかどうかまたはない[/Oi](../build/reference/oi-generate-intrinsic-functions.md)または[#pragma intrinsic](../preprocessor/intrinsic.md)を使用します。 使用することはできません[#pragma function](../preprocessor/function-c-cpp.md)これらの組み込みでします。  
+ これらのルーチンは、組み込みとしてのみ使用できます。 したがって、これらは組み込みかどうか[/Oi](../build/reference/oi-generate-intrinsic-functions.md)または[#pragma intrinsic](../preprocessor/intrinsic.md)使用されます。 使用することはできません[#pragma function](../preprocessor/function-c-cpp.md)でこれらの組み込み。  
   
 ## <a name="example"></a>例  
- 使用する方法のサンプルについては`_InterlockedExchangeAdd`を参照してください[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)です。  
+ 使用する方法の例については`_InterlockedExchangeAdd`を参照してください[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)します。  
   
 **Microsoft 固有の仕様はここまで**  
   
 ## <a name="see-also"></a>関連項目  
- [コンパイラ組み込み関数](../intrinsics/compiler-intrinsics.md)   
+ [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)   
  [キーワード](../cpp/keywords-cpp.md)   
  [x86 コンパイラとの競合](../build/conflicts-with-the-x86-compiler.md)

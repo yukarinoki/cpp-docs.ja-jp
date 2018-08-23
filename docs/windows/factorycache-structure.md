@@ -17,41 +17,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8a09128bd334fc6e0987e39eaf51c19aadce34ea
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: df2335a49d2d5daf862db7cea7eb413c01164bee
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647548"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609029"
 ---
 # <a name="factorycache-structure"></a>FactoryCache 構造体
-Windows ランタイム C++ テンプレート ライブラリのインフラストラクチャをサポートし、コードから直接使用するものではありません。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-struct FactoryCache;  
-```  
-  
-## <a name="remarks"></a>Remarks  
- クラス ファクトリと、登録されている wrt を識別する値または COM クラスのオブジェクトの場所が含まれています。  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="public-data-members"></a>パブリック データ メンバー  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[FactoryCache::cookie データ メンバー](../windows/factorycache-cookie-data-member.md)|登録済み Windows ランタイムまたは COM クラスのオブジェクトを識別し、オブジェクトの登録を解除する際に使用する値が含まれています。|  
-|[FactoryCache::factory データ メンバー](../windows/factorycache-factory-data-member.md)|Windows ランタイムまたは COM クラス ファクトリを指します。|  
-  
-## <a name="inheritance-hierarchy"></a>継承階層  
- `FactoryCache`  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** module.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>関連項目  
- [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)
+
+Windows ランタイム C++ テンプレート ライブラリのインフラストラクチャをサポートし、コードから直接使用するものではありません。
+
+## <a name="syntax"></a>構文
+
+```cpp
+struct FactoryCache;
+```
+
+## <a name="remarks"></a>Remarks
+
+クラス ファクトリと、登録されている wrt を識別する値または COM クラスのオブジェクトの場所が含まれています。
+
+## <a name="members"></a>メンバー
+
+### <a name="public-data-members"></a>パブリック データ メンバー
+
+|名前|説明|
+|----------|-----------------|
+|[FactoryCache::cookie データ メンバー](../windows/factorycache-cookie-data-member.md)|登録済み Windows ランタイムまたは COM クラスのオブジェクトを識別し、オブジェクトの登録を解除する際に使用する値が含まれています。|
+|[FactoryCache::factory データ メンバー](../windows/factorycache-factory-data-member.md)|Windows ランタイムまたは COM クラス ファクトリを指します。|
+
+## <a name="inheritance-hierarchy"></a>継承階層
+
+`FactoryCache`
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** module.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>関連項目
+
+[Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

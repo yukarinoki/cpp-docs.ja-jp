@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ffe517b75df4e1cdd8172279c12256db940f0980
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: eab2a577d0c7b31f833a8dcc0208f9939b729ad9
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647038"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607470"
 ---
 # <a name="asyncbasegetoncomplete-method"></a>AsyncBase::GetOnComplete メソッド
-指定された変数には、現在の完了イベント ハンドラーのアドレスをコピーします。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-STDMETHOD(  
-   GetOnComplete  
-)(TComplete** completeHandler);  
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *completeHandler*  
- 現在の完了イベント ハンドラーのアドレスが格納されている場所です。  
-  
-## <a name="return-value"></a>戻り値  
- 成功した場合は s_ok を返します。それ以外の場合、E_ILLEGAL_METHOD_CALL します。  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** async.h  
-  
- **名前空間:** Microsoft::WRL  
-  
-## <a name="see-also"></a>関連項目  
- [AsyncBase クラス](../windows/asyncbase-class.md)
+
+指定された変数には、現在の完了イベント ハンドラーのアドレスをコピーします。
+
+## <a name="syntax"></a>構文
+
+```cpp
+STDMETHOD(
+   GetOnComplete
+)(TComplete** completeHandler);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*completeHandler*  
+現在の完了イベント ハンドラーのアドレスが格納されている場所です。
+
+## <a name="return-value"></a>戻り値
+
+成功した場合は s_ok を返します。それ以外の場合、E_ILLEGAL_METHOD_CALL します。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** async.h
+
+**名前空間:** Microsoft::WRL
+
+## <a name="see-also"></a>関連項目
+
+[AsyncBase クラス](../windows/asyncbase-class.md)

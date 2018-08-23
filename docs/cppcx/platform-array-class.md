@@ -1,5 +1,5 @@
 ---
-title: Platform::array クラス |Microsoft ドキュメント
+title: Platform::array クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -13,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65c45265714f869de10bdfd450c2b1349d6b526b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: fa689035a6e95db7f9471d4972063ec35486e0cb
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704673"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605886"
 ---
 # <a name="platformarray-class"></a>Platform::Array クラス
 アプリケーション バイナリ インターフェイス (ABI) を越えて受け渡しでき、変更もできる 1 次元配列を表します。  
@@ -37,16 +37,16 @@ private ref class Array<TArg, 1> :
 ```  
   
 ### <a name="members"></a>メンバー  
- Platform::array からすべてのメソッドの継承[platform::writeonlyarray クラス](../cppcx/platform-writeonlyarray-class.md)を実装し、`Value`のプロパティ、 [platform::iboxarray インターフェイス](../cppcx/platform-iboxarray-interface.md)です。  
+ Platform::array からすべてのメソッドを継承する[platform::writeonlyarray クラス](../cppcx/platform-writeonlyarray-class.md)を実装して、`Value`のプロパティ、 [platform::iboxarray インターフェイス](../cppcx/platform-iboxarray-interface.md)します。  
   
 ### <a name="public-constructors"></a>パブリック コンストラクター  
   
 |名前|説明|  
 |----------|-----------------|  
-|[Array コンストラクター](#ctor)|クラス テンプレート パラメーターによって指定された型の変更可能な 1 次元配列を初期化します*T*です。|  
+|[Array コンストラクター](#ctor)|クラス テンプレート パラメーターで指定された型の変更可能な 1 次元配列を初期化します*T*します。|  
   
 ### <a name="methods"></a>メソッド  
- 参照してください[platform::writeonlyarray クラス](../cppcx/platform-writeonlyarray-class.md)です。  
+ 参照してください[platform::writeonlyarray クラス](../cppcx/platform-writeonlyarray-class.md)します。  
   
 ### <a name="properties"></a>プロパティ  
   
@@ -54,23 +54,23 @@ private ref class Array<TArg, 1> :
 |-|-|  
 |[Array::value](#value)|現在の配列へのハンドルを取得します。|  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この Array クラスはシール クラスであり、継承できません。  
   
- Windows ランタイムの型システムは、ジャグ配列の概念をサポートしていませんし、そのため、IVector を渡すことはできません < platform::array\<T >> 戻り値またはメソッド パラメーターとして。 ABI を通じてジャグ配列またはシーケンスのシーケンスを渡すには、 `IVector<IVector<T>^>`を使用します。  
+ Windows ランタイムの型システムは、ジャグ配列の概念をサポートしていませんし、そのため、IVector を渡すことはできません < platform::array\<T >> を戻り値またはメソッド パラメーターとして。 ABI を通じてジャグ配列またはシーケンスのシーケンスを渡すには、 `IVector<IVector<T>^>`を使用します。  
   
- Platform::array を使用するタイミングと方法の詳細については、次を参照してください。 [Array と WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)です。  
+ Platform::array を使用するタイミングと方法の詳細については、次を参照してください。 [Array と WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)します。  
   
- Windows ランタイムの型システムは、ジャグ配列の概念をサポートしていませんし、そのため、IVector を渡すことはできません < platform::array\<T >> 戻り値またはメソッド パラメーターとして。 ABI を通じてジャグ配列またはシーケンスのシーケンスを渡すには、 `IVector<IVector<T>^>`を使用します。  
+ Windows ランタイムの型システムは、ジャグ配列の概念をサポートしていませんし、そのため、IVector を渡すことはできません < platform::array\<T >> を戻り値またはメソッド パラメーターとして。 ABI を通じてジャグ配列またはシーケンスのシーケンスを渡すには、 `IVector<IVector<T>^>`を使用します。  
   
- このクラスは、コンパイラによって自動的に含まれる vccorlib.h ヘッダーで定義されます。 これは、方法は、platform.winmd で定義されているパブリック型ではないため IntelliSense が含まれないオブジェクト ブラウザーに表示されます。  
+ このクラスは、コンパイラによって自動的に含まれる vccorlib.h ヘッダーで定義されます。 これは、方法は、platform.winmd で定義されているパブリック型ではないため、IntelliSense が含まれないオブジェクト ブラウザーに表示されます。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/ZW**  
 
  
 ## <a name="ctor"></a>  Array コンス トラクター
-クラス テンプレート パラメーターによって指定された型の変更可能な 1 次元配列を初期化します*T*です。  
+クラス テンプレート パラメーターで指定された型の変更可能な 1 次元配列を初期化します*T*します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -89,8 +89,8 @@ Array(T* data, unsigned int size);
  `data`  
  この Array オブジェクトを初期化するために使用する型 `T` のデータ配列へのポインター。  
   
-### <a name="remarks"></a>コメント  
- Platform::array のインスタンスを作成する方法の詳細については、次を参照してください。 [Array と WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)です。
+### <a name="remarks"></a>Remarks  
+ Platform::array のインスタンスを作成する方法の詳細については、次を参照してください。 [Array と WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)します。
 
 ## <a name="get"></a>  Array::get メソッド
 指定されたインデックス位置にある配列要素への参照を取得します。  
@@ -103,7 +103,7 @@ T& get(unsigned int index)  const;
   
 #### <a name="parameters"></a>パラメーター  
  `index`  
- 配列の要素を識別する 0 から始まるインデックス。 最小インデックスは 0、最大のインデックスによって指定された値、`size`内のパラメーター、[配列コンス トラクター](#ctor)です。  
+ 配列の要素を識別する 0 から始まるインデックス。 最小のインデックスは 0 と最大のインデックスがで指定された値、`size`パラメーター、[配列コンス トラクター](#ctor)します。  
   
 ### <a name="return-value"></a>戻り値  
  `index` パラメーターで指定された配列要素。  

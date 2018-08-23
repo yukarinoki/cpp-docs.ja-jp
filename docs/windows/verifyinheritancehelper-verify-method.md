@@ -17,32 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04bf01b5fad5a9fec579e347497a28b5e8abb861
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: cfcbb57694fc18944d199c1d4c74d8c74a335783
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018817"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599116"
 ---
 # <a name="verifyinheritancehelperverify-method"></a>VerifyInheritanceHelper::Verify メソッド
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-static void Verify();  
-```  
-  
-## <a name="remarks"></a>Remarks  
- 現在のテンプレート パラメーターで指定された 2 つのインターフェイスをテストし、1 つのインターフェイスは、その他から派生されているかどうかを決定します。  
-  
- 1 つのインターフェイスは、その他から派生していない場合は、エラーが生成されます。  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** implements.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>関連項目  
- [VerifyInheritanceHelper 構造体](../windows/verifyinheritancehelper-structure.md)   
- [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)
+
+WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+
+## <a name="syntax"></a>構文
+
+```cpp
+static void Verify();
+```
+
+## <a name="remarks"></a>Remarks
+
+現在のテンプレート パラメーターで指定された 2 つのインターフェイスをテストし、1 つのインターフェイスは、その他から派生されているかどうかを決定します。
+
+1 つのインターフェイスは、その他から派生していない場合は、エラーが生成されます。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** implements.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>関連項目
+
+[VerifyInheritanceHelper 構造体](../windows/verifyinheritancehelper-structure.md)  
+[Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

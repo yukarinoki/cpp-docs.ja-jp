@@ -1,5 +1,5 @@
 ---
-title: _InterlockedCompareExchangePointer の組み込み関数 |Microsoft ドキュメント
+title: _InterlockedCompareExchangePointer の組み込み関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c8e7a31c5377d71eaad96fddc7d93215ed3abb4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0f8ab76252c355bb56a1e2157e0e025a4eddb0d8
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340386"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596537"
 ---
 # <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>_InterlockedCompareExchangePointer の組み込み関数
 **Microsoft 固有の仕様**  
@@ -103,16 +103,16 @@ long _InterlockedCompareExchangePointer_rel (
   
 |組み込み|アーキテクチャ|Header|  
 |---------------|------------------|------------|  
-|`_InterlockedCompareExchangePointer`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_InterlockedCompareExchangePointer`|x86、ARM、x64|\<intrin.h>|  
 |`_InterlockedCompareExchangePointer_acq`、`_InterlockedCompareExchangePointer_nf`、`_InterlockedCompareExchangePointer_rel`|ARM|\<iiintrin.h>|  
-|`_InterlockedCompareExchangePointer_HLEAcquire`, `_InterlockedCompareExchangePointer_HLERelease`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
+|`_InterlockedCompareExchangePointer_HLEAcquire`, `_InterlockedCompareExchangePointer_HLERelease`|x86、x64|\<immintrin.h>|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `_InterlockedCompareExchangePointer` は `Destination` アドレスと `Comparand` アドレスのアトミックな比較を実行します。 `Destination` のアドレスが `Comparand` のアドレスと等しい場合、`Exchange` のアドレスは `Destination` で指定したアドレスに格納されます。 それ以外の場合は演算が実行されません。  
   
- `_InterlockedCompareExchangePointer` win32 のコンパイラ組み込みサポートを提供[!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] [_InterlockedCompareExchangePointer](http://msdn.microsoft.com/library/ff547863.aspx)関数。  
+ `_InterlockedCompareExchangePointer` Win32 Windows SDK のコンパイラ組み込みサポートを提供します。 [_InterlockedCompareExchangePointer](http://msdn.microsoft.com/library/ff547863.aspx)関数。  
   
- 使用する方法の例については`_InterlockedCompareExchangePointer`を参照してください[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)です。  
+ 使用する方法の例については`_InterlockedCompareExchangePointer`を参照してください[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)します。  
   
  ARM プラットフォームでは、クリティカル セクションの最初と最後などで取得と解放のセマンティクスを必要とする場合は、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスの付いた ARM 組み込みはメモリ バリアとしては機能しません。  
   
@@ -125,5 +125,5 @@ long _InterlockedCompareExchangePointer_rel (
 **Microsoft 固有の仕様はここまで**  
   
 ## <a name="see-also"></a>関連項目  
- [コンパイラ組み込み関数](../intrinsics/compiler-intrinsics.md)   
+ [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)   
  [キーワード](../cpp/keywords-cpp.md)
