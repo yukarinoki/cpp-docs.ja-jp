@@ -25,39 +25,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1a586a3a17e829d883dff96c12f6a2fdabe669f
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 55cf669d2c84bc0a603354a672706e32656a7c3c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643859"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603929"
 ---
 # <a name="aligning-controls-on-a-guide"></a>ガイドのコントロールの配置
-コントロールのサイズ変更ハンドルは、コントロールを移動するととガイドがコントロールにスナップする (ガイドに合わせてコントロールが存在しない) 場合、に、ガイドにスナップされます。 ガイドが移動したときにスナップしたコントロールも移動します。 ガイドでは、いずれかが移動すると、コントロールの 1 つ以上のガイドを基準としてスナップされますがサイズ変更されます。  
-  
- ガイドとコントロールの間隔を決定する定規の目盛りは、ダイアログ単位 (Dlu) によって定義されます。 DLU は、通常、8 ポイント MS Shell Dlg、ダイアログ ボックス フォントのサイズに基づきます。 水平 DLU は、4、ダイアログ ボックスのフォントの平均幅です。 垂直 DLU は 8 で割った値のフォントの高さの平均値です。  
-  
-### <a name="to-size-a-group-of-controls-with-guides"></a>ガイドを使用してコントロールのグループのサイズ  
-  
-1.  コントロール (またはコントロール) の一方の側をスナップをガイドします。  
-  
-2.  コントロール (またはコントロール) の反対側のガイドをドラッグします。  
-  
-     複数のコントロールで必要に応じて、それぞれに 2 番目のガイドへのスナップのサイズします。  
-  
-3.  コントロール (またはコントロール) のサイズのいずれかのガイドに移動します。  
-  
-### <a name="to-change-the-intervals-of-the-tick-marks"></a>目盛りの間隔を変更するには  
-  
-1.  **形式** メニューの 選択**ガイド設定**です。  
-  
-2.  [ガイドの設定 ダイアログ ボックス](../windows/guide-settings-dialog-box.md)の**グリッド間隔**フィールドに、Dlu の新しい幅と高さを指定します。  
-  
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
-  
-## <a name="requirements"></a>要件  
- Win32  
-  
-## <a name="see-also"></a>関連項目  
- [ダイアログ エディターの状態 (ガイドとグリッド)](../windows/dialog-editor-states-guides-and-grids.md)   
- [ダイアログ ボックスのコントロール](../windows/controls-in-dialog-boxes.md)
+
+コントロールのサイズ変更ハンドルは、コントロールを移動するととガイドがコントロールにスナップする (ガイドに合わせてコントロールが存在しない) 場合、に、ガイドにスナップされます。 ガイドが移動したときにスナップしたコントロールも移動します。 ガイドでは、いずれかが移動すると、コントロールの 1 つ以上のガイドを基準としてスナップされますがサイズ変更されます。
+
+ガイドとコントロールの間隔を決定する定規の目盛りは、ダイアログ単位 (Dlu) によって定義されます。 DLU は、通常、8 ポイント MS Shell Dlg、ダイアログ ボックス フォントのサイズに基づきます。 水平 DLU は、4、ダイアログ ボックスのフォントの平均幅です。 垂直 DLU は 8 で割った値のフォントの高さの平均値です。
+
+### <a name="to-size-a-group-of-controls-with-guides"></a>ガイドを使用してコントロールのグループのサイズ
+
+1. コントロール (またはコントロール) の一方の側をスナップをガイドします。
+
+2. コントロール (またはコントロール) の反対側のガイドをドラッグします。
+
+   複数のコントロールで必要に応じて、それぞれに 2 番目のガイドへのスナップのサイズします。
+
+3. コントロール (またはコントロール) のサイズのいずれかのガイドに移動します。
+
+### <a name="to-change-the-intervals-of-the-tick-marks"></a>目盛りの間隔を変更するには
+
+1. **形式** メニューの 選択**ガイド設定**です。
+
+2. [ガイドの設定 ダイアログ ボックス](../windows/guide-settings-dialog-box.md)の**グリッド間隔**フィールドに、Dlu の新しい幅と高さを指定します。
+
+マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
+
+## <a name="requirements"></a>要件
+
+Win32
+
+## <a name="see-also"></a>関連項目
+
+[ダイアログ エディターの状態 (ガイドとグリッド)](../windows/dialog-editor-states-guides-and-grids.md)  
+[ダイアログ ボックスのコントロール](../windows/controls-in-dialog-boxes.md)

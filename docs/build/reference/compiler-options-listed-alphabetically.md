@@ -1,7 +1,7 @@
 ---
-title: コンパイラ オプションをアルファベット順 |Microsoft ドキュメント
+title: アルファベット順のコンパイラ オプションの一覧 |Microsoft Docs
 ms.custom: ''
-ms.date: 02/22/2018
+ms.date: 08/20/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -13,16 +13,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 259958d789ed189c38b75fe708034fb0d76fc35c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 985232af68daebe924cd51300974d614bf6d6756
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379628"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42572518"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>アルファベット順のコンパイラ オプション
 
-次の表は、コンパイラ オプションをアルファベット順の一覧にしたものです。 カテゴリの一覧については、[コンパイラ オプションの一覧をカテゴリ別](compiler-options-listed-by-category.md)です。
+次の表は、コンパイラ オプションをアルファベット順の一覧にしたものです。 カテゴリの一覧については、 [Compiler Options Listed by Category](compiler-options-listed-by-category.md)します。
 
 |オプション|目的|
 |------------|-------------|
@@ -31,13 +31,13 @@ ms.locfileid: "32379628"
 |[/AI](ai-specify-metadata-directories.md)|[#using](../../preprocessor/hash-using-directive-cpp.md) ディレクティブに渡されたファイル参照を解決するために検索するディレクトリを指定します。|
 |[/analyze](analyze-code-analysis.md)|コード分析を有効にします。|
 |[/arch](arch-minimum-cpu-architecture.md)|コード生成のアーキテクチャを指定します。|
-|[/await](await-enable-coroutine-support.md)|コルーチン (可能な関数 (resume/await)) 拡張機能を有効にします。|
+|[/await](await-enable-coroutine-support.md)|コルーチン (再開可能な関数) の拡張機能を有効にします。|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|.obj ファイル内のアドレス指定可能なセクションの数を増やします。|
 |[/C](c-preserve-comments-during-preprocessing.md)|プリプロセス時にコメントを保持します。|
 |[/c](c-compile-without-linking.md)|リンクを行わないでコンパイルします。|
 |[/cgthreads](cgthreads-code-generation-threads.md)|最適化およびコード生成に使用する cl.exe スレッド数を指定します。|
 |[/clr](clr-common-language-runtime-compilation.md)|共通言語ランタイムで実行する出力ファイルを作成します。|
-|[/constexpr](constexpr-control-constexpr-evaluation.md)|コンパイル時に constexpr 評価を制御します。|
+|[/constexpr](constexpr-control-constexpr-evaluation.md)|コンパイル時に constexpr の評価を制御します。|
 |[/D](d-preprocessor-definitions.md)|定数とマクロを定義します。|
 |[/diagnostics](diagnostics-compiler-diagnostic-options.md)|診断メッセージの形式を制御します。|
 |[/doc](doc-process-documentation-comments-c-cpp.md)|ドキュメント コメントを XML ファイルに出力します。|
@@ -47,7 +47,7 @@ ms.locfileid: "32379628"
 |[/errorReport](errorreport-report-internal-compiler-errors.md)|内部コンパイラ エラー (ICE) 情報を Visual C++ チームに直接報告できます。|
 |[/execution-charset](execution-charset-set-execution-character-set.md)|実行文字セットを設定します。|
 |[/F](f-set-stack-size.md)|スタック サイズを設定します。|
-|[/favor](favor-optimize-for-architecture-specifics.md)|特定の [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] アーキテクチャ、または AMD64 アーキテクチャおよび Extended Memory 64 Technology (EM64T) アーキテクチャの両方のマイクロアーキテクチャの仕様に合わせて最適化されるコードを作成します。|
+|[/favor](favor-optimize-for-architecture-specifics.md)|特定の x64 向けに最適化されたコードを生成のアーキテクチャ、または両方の AMD64 アーキテクチャおよび Extended Memory 64 Technology (EM64T) アーキテクチャでのマイクロ アーキテクチャの仕様。|
 |[/FA](fa-fa-listing-file.md)|リスティング ファイルを作成します。|
 |[/Fa](fa-fa-listing-file.md)|リスティング ファイル名を設定します。|
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|診断テキストで cl.exe に渡されるソース コード ファイルの完全パスを表示します。|
@@ -80,16 +80,17 @@ ms.locfileid: "32379628"
 |[/guard:cf](guard-enable-control-flow-guard.md)|制御フロー ガードのセキュリティ チェックを追加します。|
 |[/Gv](gd-gr-gv-gz-calling-convention.md)|`__vectorcall` 呼び出し規約を使用します。 (x86 と x64 のみ)。|
 |[/Gw](gw-optimize-global-data.md)|プログラム全体のグローバル データの最適化を有効にします。|
-|[/GX](gx-enable-exception-handling.md)|非推奨。 同期例外処理を有効にします。 使用して[/EH](eh-exception-handling-model.md)代わりにします。|
+|[/GX](gx-enable-exception-handling.md)|非推奨。 同期例外処理を有効にします。 使用[/EH](eh-exception-handling-model.md)代わりにします。|
 |[/Gy](gy-enable-function-level-linking.md)|関数レベルのリンクを有効にします。|
-|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|非推奨。 同じ[/RTC1](rtc-run-time-error-checks.md)です。|
+|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|非推奨。 同じ[/RTC1](rtc-run-time-error-checks.md)します。|
 |[/Gz](gd-gr-gv-gz-calling-convention.md)|`__stdcall` 呼び出し規約を使用します (x86 のみ)。|
 |[/H](h-restrict-length-of-external-names.md)|非推奨。 外部名 (パブリック名) の長さを制限します。|
 |[/HELP](help-compiler-command-line-help.md)|コンパイラ オプションのリストを出力します。|
-|[/homeparams](homeparams-copy-register-parameters-to-stack.md)|関数の実行に入ったときに、レジスタで渡されたパラメーターを、強制的にスタック内のその場所に書き込みます。 これは、 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] コンパイラ (ネイティブ コンパイルおよびクロス コンパイル) だけで使用されるコンパイラ オプションです。|
+|[/homeparams](homeparams-copy-register-parameters-to-stack.md)|関数の実行に入ったときに、レジスタで渡されたパラメーターを、強制的にスタック内のその場所に書き込みます。 このコンパイラ オプションは、x64 のみコンパイラ (ネイティブ コンパイルおよびクロス コンパイル)。|
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|ホットパッチ可能なイメージを作成します。|
 |[/I](i-additional-include-directories.md)|ディレクトリ内でインクルード ファイルを検索します。|
 |[/J](j-default-char-type-is-unsigned.md)|既定の `char` 型を変更します。|
+|[/JMC](jmc.md)|マイ コードのみを C++ のネイティブ デバッグをサポートしています。|
 |[/kernel](kernel-create-kernel-mode-binary.md)|コンパイラとリンカーは、Windows カーネルで実行可能なバイナリを作成します。|
 |[/LD](md-mt-ld-use-run-time-library.md)|ダイナミック リンク ライブラリを作成します。|
 |[/LDd](md-mt-ld-use-run-time-library.md)|デバッグ バージョンのダイナミック リンク ライブラリを作成します。|
@@ -124,16 +125,16 @@ ms.locfileid: "32379628"
 |[/sdl](sdl-enable-additional-security-checks.md)|追加のセキュリティ機能と警告を有効にします。|
 |[/showIncludes](showincludes-list-include-files.md)|コンパイル時にインクルード ファイルの一覧を表示します。|
 |[/source-charset](source-charset-set-source-character-set.md)|ソース文字セットを設定します。|
-|[/std](std-specify-language-standard-version.md)|C++ 標準のバージョンの互換性セレクター。|
+|[/std](std-specify-language-standard-version.md)|C++ 標準バージョンの互換性セレクター。|
 |[/Tc](tc-tp-tc-tp-specify-source-file-type.md)|C ソース ファイルを指定します。|
 |[/TC](tc-tp-tc-tp-specify-source-file-type.md)|C. すべてのソース ファイルを指定します。|
 |[/Tp](tc-tp-tc-tp-specify-source-file-type.md)|C++ ソース ファイルを指定します。|
 |[/TP](tc-tp-tc-tp-specify-source-file-type.md)|すべてのソース ファイルは、C++ を指定します。|
 |[/U](u-u-undefine-symbols.md)|1 つの定義済みマクロを削除します。|
 |[/u](u-u-undefine-symbols.md)|すべての定義済みマクロを削除します。|
-|[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|セットのソースおよび実行の文字は、utf-8 を設定します。|
+|[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|セットのソースと実行の文字は、utf-8 に設定します。|
 |[/V](v-version-number.md)|非推奨。 .obj ファイル バージョン文字列を設定します。|
-|[/validate-charset](validate-charset-validate-for-compatible-characters.md)|互換性のある文字のみ utf-8 ファイルを検証します。|
+|[/validate-charset](validate-charset-validate-for-compatible-characters.md)|互換性のある文字のみの utf-8 ファイルを検証します。|
 |[/vd](vd-disable-construction-displacements.md)|隠し vtordisp クラス メンバーの無効と有効を切り替えます。|
 |[/vmb](vmb-vmg-representation-method.md)|メンバーへのポインターに対して、最適なクラスを使用します。|
 |[/vmg](vmb-vmg-representation-method.md)|メンバーへのポインターに対して、ジェネリック クラスを使用します。|
@@ -155,14 +156,14 @@ ms.locfileid: "32379628"
 |[/X](x-ignore-standard-include-paths.md)|標準のインクルード ディレクトリを無視します。|
 |[/Y-](y-ignore-precompiled-header-options.md)|現在のビルドで、他のすべてのプリコンパイル済みヘッダー コンパイラ オプションを無視します。|
 |[/Yc](yc-create-precompiled-header-file.md)|プリコンパイル済みヘッダー ファイルを作成します。|
-|[/Yd](yd-place-debug-information-in-object-file.md)|非推奨。 すべてのオブジェクト ファイルに、詳細なデバッグ情報を取り込みます。 使用して[/Zi](z7-zi-zi-debug-information-format.md)代わりにします。|
+|[/Yd](yd-place-debug-information-in-object-file.md)|非推奨。 すべてのオブジェクト ファイルに、詳細なデバッグ情報を取り込みます。 使用[/Zi](z7-zi-zi-debug-information-format.md)代わりにします。|
 |[/Yl](yl-inject-pch-reference-for-debug-library.md)|デバッグ ライブラリの作成時に PCH の参照を挿入します。|
 |[/Yu](yu-use-precompiled-header-file.md)|ビルド時にプリコンパイル済みヘッダー ファイルを使用します。|
 |[/Z7](z7-zi-zi-debug-information-format.md)|C 7.0 互換のデバッグ情報を生成します。|
 |[/Za](za-ze-disable-language-extensions.md)|言語拡張機能を無効にします。|
-|[/Zc](zc-conformance.md)|標準的な動作を指定[/Ze](za-ze-disable-language-extensions.md).[/Za、/Ze (言語拡張を無効にする)](za-ze-disable-language-extensions.md)|
+|[/Zc](zc-conformance.md)|標準の動作を指定します[/Ze](za-ze-disable-language-extensions.md).[/Za、/Ze (言語拡張を無効にする)](za-ze-disable-language-extensions.md)|
 |[/Ze](za-ze-disable-language-extensions.md)|非推奨。 言語拡張機能を有効にします。|
-|[/Zf](zf.md)|並行ビルドで生成時刻 PDB が向上します。|
+|[/Zf](zf.md)|並行ビルドで生成時に PDB を向上します。|
 |[/Zg](zg-generate-function-prototypes.md)|Visual C++ 2015 では削除されています。 関数プロトタイプを生成します。|
 |[/ZI](z7-zi-zi-debug-information-format.md)|エディット コンティニュと互換性のあるプログラム データベースにデバッグ情報を含めます。|
 |[/Zi](z7-zi-zi-debug-information-format.md)|詳細なデバッグ情報を生成します。|

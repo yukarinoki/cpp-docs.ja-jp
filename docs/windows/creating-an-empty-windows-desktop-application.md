@@ -18,29 +18,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: baff146be956b2e116cbbe90fe6ecb9187d55f3f
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: f1d8b81174bcb6f70e168e8da09f5e35fe646ace
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464364"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603732"
 ---
 # <a name="creating-an-empty-windows-desktop-application"></a>空の Windows デスクトップ アプリケーションを作成する
-### <a name="to-create-an-empty-windows-desktop-application"></a>空の Windows デスクトップ アプリケーションを作成するには  
-  
-1.  **[ファイル]** メニューで、**[新規作成]**、 > **[プロジェクト]** の順に作成します。  
-  
-2.  **[新しいプロジェクト]** ダイアログ ボックスの左ペインで **[win32]** をクリックし、中央のペインで **[Win32 コンソール アプリケーション]** をクリックします。  
-  
-3.  新規プロジェクトの名前とプロジェクト ディレクトリのパスを入力して、 **[OK]** をクリックします。  
-  
-4.  [Win32 アプリケーション ウィザード](../windows/win32-application-wizard.md)の **[アプリケーションの設定]** ページをクリックします。 ソース コード ファイルを使用して作成する **アプリケーションの種類** を選択し、 **[追加のオプション]** の **[空のプロジェクト]** チェック ボックスをオンにします。  
-  
-5.  **[OK]** をクリックします。  
-  
- プロジェクトがソース ファイル、ヘッダー ファイル、およびリソース ファイルを含む 3 つのディレクトリと共に **ソリューション エクスプローラー** に表示されます。  
-  
- ここで、 [空の Visual C++ プロジェクトにファイルを追加](../windows/adding-files-to-an-empty-win32-applications.md)できます。  
-  
-## <a name="see-also"></a>関連項目  
- [アプリケーションの配置](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+
+### <a name="to-create-an-empty-windows-desktop-application"></a>空の Windows デスクトップ アプリケーションを作成するには
+
+1. **[ファイル]** メニューで、**[新規作成]**、 > **[プロジェクト]** の順に作成します。
+
+2. **[新しいプロジェクト]** ダイアログ ボックスの左ペインで **[win32]** をクリックし、中央のペインで **[Win32 コンソール アプリケーション]** をクリックします。
+
+3. 新規プロジェクトの名前とプロジェクト ディレクトリのパスを入力して、 **[OK]** をクリックします。
+
+4. [Win32 アプリケーション ウィザード](../windows/win32-application-wizard.md)の **[アプリケーションの設定]** ページをクリックします。 ソース コード ファイルを使用して作成する **アプリケーションの種類** を選択し、 **[追加のオプション]** の **[空のプロジェクト]** チェック ボックスをオンにします。
+
+5. **[OK]** をクリックします。
+
+プロジェクトがソース ファイル、ヘッダー ファイル、およびリソース ファイルを含む 3 つのディレクトリと共に **ソリューション エクスプローラー** に表示されます。
+
+ここで、 [空の Visual C++ プロジェクトにファイルを追加](../windows/adding-files-to-an-empty-win32-applications.md)できます。
+
+## <a name="see-also"></a>関連項目
+
+[アプリケーションの配置](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

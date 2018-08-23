@@ -1,5 +1,5 @@
 ---
-title: 'Platform::collections: クラス |Microsoft ドキュメント'
+title: 'Platform::collections: クラス |Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -25,16 +25,16 @@ dev_langs:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7433ed3d1a81704180aa724424a39d39b193f15
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 550a1e40d3fee80b4c9666457a60772ed49b580a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092497"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590236"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector クラス
 
@@ -53,9 +53,9 @@ template <typename T, typename E>
 Vector オブジェクトに含まれている要素の型。
 
 *E*  
-型の値と等しいかどうかをテストするための二項述語を指定*T*です。既定値は `std::equal_to<T>` です。
+型の値と等しいかどうかをテストする二項述語を指定します*T*します。既定値は `std::equal_to<T>` です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 使用できる型は次のとおりです。
 
@@ -69,9 +69,9 @@ Vector オブジェクトに含まれている要素の型。
 
 1. パブリック列挙型クラス
 
-**ベクター**クラスは、C++ の具象実装、 [:ivector](/uwp/api/Windows.Foundation.Collections.IVector_T_)インターフェイスです。
+**ベクター**クラスは、C++ の具象実装、 [:ivector](/uwp/api/Windows.Foundation.Collections.IVector_T_)インターフェイス。
 
-使用しようとする場合、**ベクター**入力パブリックの戻り値またはパラメーター、コンパイラ エラー C3986 が発生します。 パラメーターを変更してエラーを修正したり、戻り値の型を[:ivector](/uwp/api/Windows.Foundation.Collections.IVector_T_)です。 詳細については、「 [Collections (C++/CX) (コレクション (C++/CX))](../cppcx/collections-c-cx.md)」を参照してください。
+使用しようとした場合、**ベクター**入力パブリックの戻り値またはパラメーター、コンパイラ エラー C3986 が発生します。 パラメーターを変更してエラーを修正したり、戻り値の型を[:ivector](/uwp/api/Windows.Foundation.Collections.IVector_T_)します。 詳細については、「 [Collections (C++/CX) (コレクション (C++/CX))](../cppcx/collections-c-cx.md)」を参照してください。
 
 ### <a name="members"></a>メンバー
 
@@ -103,7 +103,7 @@ Vector オブジェクトに含まれている要素の型。
 
 |||
 |-|-|
-|名前|説明|
+|name|説明|
 |イベント[Windows::Foundation::Collection::VectorChangedEventHandler\<T > ^ VectorChanged](http://go.microsoft.com/fwlink/p/?LinkId=262644)|Vector が変更されたときに発生します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
@@ -129,7 +129,7 @@ virtual void Append(T item);
 ### <a name="parameters"></a>パラメーター
 
 *index*  
-Vector に挿入する項目。 型*項目*によって定義された、 *T* typename。
+Vector に挿入する項目。 型*項目*によって定義されます、 *T* typename。
 
 ## <a name="clear"></a>  Vector::clear メソッド
 
@@ -155,11 +155,11 @@ virtual Windows::Foundation::Collections::IIterator <T>^ First();
 
 Vector 内の最初の要素を指す反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 First() によって返される反復子を保持する便利な方法で宣言された変数に戻り値を割り当てるには、**自動**推論キーワードを入力します。 たとえば、`auto x = myVector->First();` のようにします。 この反復子は、コレクションの長さを認識しています。
 
-STL 関数に渡すを指す反復子のペアが必要なときは、free 関数を使用して[:foundation:: 開始](../cppcx/begin-function.md)と[Windows::Foundation::Collections::end](../cppcx/end-function.md)
+STL 関数に渡すを指す反復子のペアが必要なときは、無料の関数を使用して[:foundation:: 開始](../cppcx/begin-function.md)と[:end](../cppcx/end-function.md)
 
 ## <a name="getat"></a>  Vector::getat メソッド
 
@@ -178,7 +178,7 @@ virtual T GetAt(unsigned int index);
 
 ### <a name="return-value"></a>戻り値
 
-により指定される要素、*インデックス*パラメーター。 要素の型がで定義されている、 *T* typename。
+により指定される要素、*インデックス*パラメーター。 要素の型によって定義されます、 *T* typename。
 
 ## <a name="getmany"></a>  Vector::getmany メソッド
 
@@ -198,15 +198,15 @@ virtual unsigned int GetMany(
 取得する項目の 0 から始まるインデックス。
 
 *dest*  
-指定した要素で始まるアイテムの呼び出し元が割り当てた配列*startIndex*とベクターの最後の要素で終了します。
+指定した要素から開始する項目の呼び出し元が割り当てた配列*startIndex*とベクターの最後の要素で終了します。
 
 ### <a name="return-value"></a>戻り値
 
 取得した項目数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この関数は、直接クライアント コードで使用することを目的としたものではありません。 内部的に使用されます、[関数 to_vector](../cppcx/to-vector-function.md) Platform::Vector のため std::vector インスタンスに効率的に変換を有効にします。
+この関数は、直接クライアント コードで使用することを目的としたものではありません。 内部で使用される、 [to_vector 関数](../cppcx/to-vector-function.md)Platform::Vector インスタンスの std::vector インスタンスへの効率的な変換を有効にします。
 
 ## <a name="getview"></a>  Vector::getview メソッド
 
@@ -238,15 +238,15 @@ virtual bool IndexOf(T value, unsigned int* index);
 検索する項目。
 
 *index*  
-項目の 0 から始まるインデックス場合パラメーター*値*以外、それ以外の場合は 0 です。
+項目の 0 から始まるインデックス場合パラメーター*値*。 それ以外は 0。
 
-*インデックス*項目が Vector の最初の要素か、項目が見つからなかった場合、パラメーターが 0 です。 戻り値が `true` の場合、項目が見つかり、項目は最初の要素です。それ以外の場合は、項目は見つかっていません。
+*インデックス*項目は、ベクターの最初の要素か、項目が見つからなかった場合、パラメーターが 0 です。 戻り値が `true` の場合、項目が見つかり、項目は最初の要素です。それ以外の場合は、項目は見つかっていません。
 
 ### <a name="return-value"></a>戻り値
 
 指定した項目が見つかった場合は `true`。それ以外の場合は `false`。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 IndexOf は、std::find_if を使用して項目を検索します。 このため、find_if が必要とする等価比較を有効にするために、カスタム要素の種類で == および != 演算子をオーバーロードする必要があります。
 
@@ -266,7 +266,7 @@ virtual void InsertAt(unsigned int index, T item)
 ベクター オブジェクト内の特定の要素を指定する、0 から始まる符号なし整数。
 
 *item*  
-指定された要素の後にベクターに挿入する項目*インデックス*です。 型*項目*によって定義された、 *T* typename。
+指定された要素の後にベクターに挿入する項目*インデックス*します。 型*項目*によって定義されます、 *T* typename。
 
 ## <a name="removeat"></a>  Vector::removeat メソッド
 
@@ -324,7 +324,7 @@ virtual void SetAt(unsigned int index, T item);
 ベクター オブジェクト内の特定の要素を指定する、0 から始まる符号なし整数。
 
 *item*  
-指定された要素に代入する値。 型*項目*によって定義された、 *T* typename。
+指定された要素に代入する値。 型*項目*によって定義されます、 *T* typename。
 
 ## <a name="size"></a>  Vector::size メソッド
 
@@ -387,18 +387,18 @@ A [std::initializer_list](../standard-library/initializer-list-class.md)型の�
 現在のベクターの各要素を初期化するために使用される値。
 
 *v*  
-[Lvalue と Rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md)を[std::vector](../standard-library/vector-class.md)現在のベクターを初期化するために使用されます。
+[Lvalues と Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)を[std::vector](../standard-library/vector-class.md)現在のベクターを初期化するために使用されます。
 
 *ptr*  
 現在のベクターを初期化するために使用される `std::vector` へのポインター。
 
 *first*  
-現在のベクターを初期化するために使用されるオブジェクトのシーケンスの最初の要素。 型*最初*により渡される*完全転送を行います*です。 詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
+現在のベクターを初期化するために使用されるオブジェクトのシーケンスの最初の要素。 型*最初*によって渡される*完全転送*します。 詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
 
 *last*  
-現在のベクターを初期化するために使用されるオブジェクトのシーケンスの最後の要素。 型*最後*により渡される*完全転送を行います*です。 詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
+現在のベクターを初期化するために使用されるオブジェクトのシーケンスの最後の要素。 型*最後*によって渡される*完全転送*します。 詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [プラットフォーム Namespace](platform-namespace-c-cx.md)  
-[C++ での Windows ランタイム コンポーネントを作成します。](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  
+[C++ で Windows ランタイム コンポーネントの作成](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  

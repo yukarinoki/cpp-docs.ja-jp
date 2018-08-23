@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da9e69cd7ea5e7eabdd826e021e57dac3ba8e6aa
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: d6aa313252d2ba06cf0a912f31564dec3d65e0e8
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208859"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42573100"
 ---
 # <a name="csid-class"></a>CSid クラス
 このクラスは、のラッパーを`SID`(セキュリティ識別子) 構造体。  
@@ -107,7 +107,7 @@ class CSid
   
  Windows でのアクセス制御モデルの概要については、次を参照してください。[アクセス制御](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK に含まれています。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlsecurity.h  
   
 ##  <a name="accountname"></a>  CSid::AccountName  
@@ -332,13 +332,13 @@ bool LoadAccount(
  システム名。 この文字列には、リモート コンピューターの名前を使用できます。 この文字列が NULL の場合は、代わりにローカル システムが使用されます。  
   
  *pSid*  
- ポインターを[SID](http://msdn.microsoft.com/library/windows/desktop/aa379594\(v=vs.85\).aspx)構造体。  
+ ポインターを[SID](/windows/desktop/api/winnt/ns-winnt-_sid)構造体。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、true を返します。 拡張されたエラー情報を取得するには、`GetLastError` を呼び出します。  
   
 ### <a name="remarks"></a>Remarks  
- `LoadAccount` は、指定された名前でセキュリティ識別子の検索を試行します。 参照してください[LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166\(v=vs.85\).aspx)の詳細。  
+ `LoadAccount` は、指定された名前でセキュリティ識別子の検索を試行します。 参照してください[LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida)の詳細。  
   
 ##  <a name="operator_eq"></a>  CSid::operator =  
  代入演算子。  

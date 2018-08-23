@@ -30,15 +30,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41a93a89ed0ace158a0864d7987cafd838eed304
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
-ms.translationtype: HT
+ms.openlocfilehash: 8b7501adf2f424f2232df05e26f5d0ac4a35158c
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853742"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42541826"
 ---
 # <a name="colevariant-class"></a>COleVariant クラス
-カプセル化、[バリアント](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)データ型。  
+カプセル化、[バリアント](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)データ型。  
   
 ## <a name="syntax"></a>構文  
   
@@ -76,14 +76,14 @@ class COleVariant : public tagVARIANT
 |[COleVariant::operator &lt; &lt;、 &gt;&gt;](#operator_lt_lt__gt_gt)|出力を`COleVariant`値を`CArchive`または`CDumpContext`入力し、`COleVariant`オブジェクトから`CArchive`します。|  
   
 ## <a name="remarks"></a>Remarks  
- このデータ型は、OLE オートメーションで使用されます。 具体的には、 [DISPPARAMS](http://msdn.microsoft.com/a16e5a21-766e-4287-b039-13429aa78f8b)構造体には、VARIANT 構造体の配列へのポインターが含まれています。 A`DISPPARAMS`構造を使用してパラメーターを渡す[idispatch::invoke](http://msdn.microsoft.com/964ade8e-9d8a-4d32-bd47-aa678912a54d)します。  
+ このデータ型は、OLE オートメーションで使用されます。 具体的には、 [DISPPARAMS](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagdispparams)構造体には、VARIANT 構造体の配列へのポインターが含まれています。 A`DISPPARAMS`構造を使用してパラメーターを渡す[idispatch::invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)します。  
   
 > [!NOTE]
 >  このクラスから派生、`VARIANT`構造体。 つまり、渡すことができます、`COleVariant`を呼び出して取得するパラメーターで、`VARIANT`とのデータ メンバー、`VARIANT`構造体のアクセス可能なデータ メンバーである`COleVariant`します。  
   
  2 つの関連の MFC クラス[COleCurrency](../../mfc/reference/colecurrency-class.md)と[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)バリアント データ型の通貨をカプセル化 ( `VT_CY`) と日付 ( `VT_DATE`)。 `COleVariant`クラスは、DAO クラスで広く使用は、たとえば、このクラスの一般的な使用法のこれらのクラスを参照してください[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)と[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)します。  
   
- 詳細については、次を参照してください。、[バリアント](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)、[通貨](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)、 [DISPPARAMS](http://msdn.microsoft.com/a16e5a21-766e-4287-b039-13429aa78f8b)、および[idispatch::invoke](http://msdn.microsoft.com/964ade8e-9d8a-4d32-bd47-aa678912a54d) Windows SDK 内のエントリ。  
+ 詳細については、次を参照してください。、[バリアント](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)、[通貨](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)、 [DISPPARAMS](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagdispparams)、および[idispatch::invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) Windows SDK 内のエントリ。  
   
  詳細については、`COleVariant`クラスと OLE オートメーションを使用して、記事の「を渡すパラメーターで OLE オートメーション」を参照してください[Automation](../../mfc/automation.md)します。  
   
@@ -92,11 +92,11 @@ class COleVariant : public tagVARIANT
   
  `COleVariant`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー :** afxdisp.h  
   
 ##  <a name="attach"></a>  COleVariant::Attach  
- アタッチするには、この関数を呼び出して、指定された[バリアント](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)を現在のオブジェクト`COleVariant`オブジェクト。  
+ アタッチするには、この関数を呼び出して、指定された[バリアント](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)を現在のオブジェクト`COleVariant`オブジェクト。  
   
 ```  
 void Attach(VARIANT& varSrc);
@@ -109,7 +109,7 @@ void Attach(VARIANT& varSrc);
 ### <a name="remarks"></a>Remarks  
  この関数は、設定、 [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4)の*varSrc* VT_EMPTY にします。  
   
- 詳細については、次を参照してください。、[バリアント](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)と[VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) Windows SDK 内のエントリ。  
+ 詳細については、次を参照してください。、[バリアント](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)と[VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) Windows SDK 内のエントリ。  
   
 ##  <a name="colevariant"></a>  COleVariant::COleVariant  
  `COleVariant` オブジェクトを構築します。  
@@ -221,10 +221,10 @@ void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
  [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4)この`COleVariant`オブジェクト。  
   
  *pSrc*  
- ポインター、[バリアント](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)変換するオブジェクト。 この値が NULL の場合この`COleVariant`オブジェクトは、変換のソースとして使用されます。  
+ ポインター、[バリアント](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)変換するオブジェクト。 この値が NULL の場合この`COleVariant`オブジェクトは、変換のソースとして使用されます。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。、[バリアント](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)、 [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4)、および[VariantChangeType](http://msdn.microsoft.com/48a51e32-95d7-4eeb-8106-f5043ffa2fd1) Windows SDK 内のエントリ。  
+ 詳細については、次を参照してください。、[バリアント](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)、 [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4)、および[VariantChangeType](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantchangetype) Windows SDK 内のエントリ。  
   
 ##  <a name="clear"></a>  COleVariant::Clear  
  `VARIANT` を消去します。  
@@ -239,7 +239,7 @@ void Clear();
  詳細については、次を参照してください。、 `VARIANT`、VARTYPE、および`VariantClear`Windows SDK 内のエントリ。  
   
 ##  <a name="detach"></a>  COleVariant::Detach  
- 基になるデタッチ[バリアント](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)これからオブジェクト`COleVariant`オブジェクト。  
+ 基になるデタッチ[バリアント](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)これからオブジェクト`COleVariant`オブジェクト。  
   
 ```  
 VARIANT Detach();
@@ -251,7 +251,7 @@ VARIANT Detach();
 > [!NOTE]
 >  呼び出した後`Detach`を呼び出す呼び出し元の責任は`VariantClear`、結果として`VARIANT`構造体。  
   
- 詳細については、次を参照してください。、[バリアント](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)、 [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4)、および[VariantClear](http://msdn.microsoft.com/28741d81-8404-4f85-95d3-5c209ec13835) Windows SDK 内のエントリ。  
+ 詳細については、次を参照してください。、[バリアント](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)、 [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4)、および[VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear) Windows SDK 内のエントリ。  
   
 ##  <a name="getbytearrayfromvariantarray"></a>  COleVariant::GetByteArrayFromVariantArray  
  既存の配列からバイト配列を取得します。  
@@ -332,7 +332,7 @@ const COleVariant& operator=(const CLongBinary& lbSrc);
   
 - **演算子 = (** `lbSrc` **)** コピー、 [CLongBinary](../../mfc/reference/clongbinary-class.md)オブジェクトをこの`COleVariant`オブジェクト。  
   
- 詳細については、次を参照してください。、[バリアント](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)と[VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) Windows SDK 内のエントリ。  
+ 詳細については、次を参照してください。、[バリアント](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)と[VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) Windows SDK 内のエントリ。  
   
 ##  <a name="operator_eq_eq"></a>  COleVariant::operator = =  
  この演算子は、2 つのバリアント値を比較し、それらが等しい場合は 0 以外の値を返しますそれ以外の場合 0 を返します。  

@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e982e6f053b207b1d57ed5c0df483a9d9ab778eb
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: c62119b87183fe6a60c0ed4d987cbd12788d8a0d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646973"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602687"
 ---
 # <a name="asyncbaseputoncomplete-method"></a>AsyncBase::PutOnComplete メソッド
-完了イベントのハンドラーのアドレスを指定した値に設定します。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-STDMETHOD(  
-   PutOnComplete  
-)(TComplete* completeHandler);  
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *completeHandler*  
- 完了イベントのハンドラーが設定されているアドレスです。  
-  
-## <a name="return-value"></a>戻り値  
- 成功した場合は s_ok を返します。それ以外の場合、E_ILLEGAL_METHOD_CALL します。  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** async.h  
-  
- **名前空間:** Microsoft::WRL  
-  
-## <a name="see-also"></a>関連項目  
- [AsyncBase クラス](../windows/asyncbase-class.md)
+
+完了イベントのハンドラーのアドレスを指定した値に設定します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+STDMETHOD(
+   PutOnComplete
+)(TComplete* completeHandler);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*completeHandler*  
+完了イベントのハンドラーが設定されているアドレスです。
+
+## <a name="return-value"></a>戻り値
+
+成功した場合は s_ok を返します。それ以外の場合、E_ILLEGAL_METHOD_CALL します。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** async.h
+
+**名前空間:** Microsoft::WRL
+
+## <a name="see-also"></a>関連項目
+
+[AsyncBase クラス](../windows/asyncbase-class.md)

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 840ca90b2f704fc3340c67a830856e006123867a
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: bc862ee708239878229825c9aa050c2835222b95
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027814"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42540127"
 ---
 # <a name="mfc-classes"></a>MFC クラス
 Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示すクラスが含まれています。  
@@ -852,7 +852,7 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
  ユーザーが Microsoft Windows XP または Microsoft Vista のテーマを選択したときに、Windows XP または Vista と同様の外観を表示します。  
   
  [CMFCVisualManagerWindows7 クラス](../../mfc/reference/cmfcvisualmanagerwindows7-class.md)  
- アプリケーションを [!INCLUDE[win7](../../build/includes/win7_md.md)] アプリケーションの外観にします。  
+ Windows 7 アプリケーションの外観をアプリケーションに提供します。  
   
  [CMFCWindowsManagerDialog クラス](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)  
  MDI アプリケーションで、ユーザーが MDI 子ウィンドウを管理できるようにします。  
@@ -1020,7 +1020,7 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
  OLE の [リンクの編集] ダイアログ ボックスを使って、ドキュメント内の既存のリンク オブジェクトや埋め込みオブジェクトの更新のみを行います。これは、OLE の [リンクの編集] ダイアログ ボックスの特別な使い方です。  
   
  [COleVariant クラス](../../mfc/reference/colevariant-class.md)  
- カプセル化、[バリアント](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)データ型。  
+ カプセル化、[バリアント](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)データ型。  
   
  [CPagerCtrl クラス](../../mfc/reference/cpagerctrl-class.md)  
  `CPagerCtrl` クラスは、Windows のページャー コントロールをラップします。ページャー コントロールには、外側のウィンドウに収まらない内側のウィンドウをスクロールによって表示する機能があります。  

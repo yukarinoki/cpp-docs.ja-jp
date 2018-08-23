@@ -1,7 +1,7 @@
 ---
 title: longjmp | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/14/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -31,16 +31,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6c26cae9a3fe83012387c93e31c4005d5614d97
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 857fae2e9c38dfe2c5cd468c6d1b50c6fdd2f317
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401722"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572896"
 ---
 # <a name="longjmp"></a>longjmp
 
-スタック環境と実行ロケールを復元します。
+設定されたスタック環境と実行ロケールを復元する`setjmp`呼び出します。
 
 ## <a name="syntax"></a>構文
 
@@ -53,39 +53,48 @@ void longjmp(
 
 ### <a name="parameters"></a>パラメーター
 
-*env*環境が格納されている変数。
+*env*  
+環境が格納されている変数。
 
-*値*に返される値**setjmp**呼び出します。
+*値*  
+`setjmp` 呼び出しに返される値。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Longjmp**関数は、以前に保存したスタック環境と実行ロケールを復元*env*によって**setjmp**です。 **setjmp**と**longjmp** 、東京を実行するための手段**goto**; せず、以前に呼び出されたルーチン内のエラー処理または回復コードに実行制御を渡す通常使用されます通常の呼び出しと戻り値の規則を使用します。
+**Longjmp**関数は、以前に保存したスタック環境と実行ロケールを復元*env*によって`setjmp`します。 `setjmp` **longjmp** 、非ローカルを実行する方法を提供**goto**; 通常の呼び出しを使用せず、以前に呼び出されたルーチンのエラー処理または回復コードに実行の制御を渡すに通常使用されます規約や復帰規約。
 
-呼び出し**setjmp**で保存する現在のスタック環境*env*です。 後続の呼び出しに**longjmp**保存されている環境を復元し、対応する直後の位置に制御を返す**setjmp**呼び出します。 実行が再開されますとして*値*によって返された、 **setjmp**呼び出します。 制御を受け取るルーチンにアクセスできるすべての変数 (レジスタ変数) を除く値が保持していた場合に値を含む**longjmp**が呼び出されました。 レジスタ変数の値は予測できません。 によって返される値**setjmp** 0 以外にする必要があります。 *value* が 0 として渡される場合、実際の戻り値では 1 が代入されます。
+呼び出し`setjmp`、現在のスタック環境を保存すると、 *env*します。 後続の呼び出し**longjmp**保存済みの環境を復元し、対応する直後の位置にコントロールを返します`setjmp`呼び出します。 実行は、*value* が `setjmp` 呼び出しによって返されたかのように再開されます。 コントロールを受け取るルーチンにアクセスできるすべての変数 (レジスタ変数) を除くの値にいたときに値を含む**longjmp**が呼び出されました。 レジスタ変数の値は予測できません。 `setjmp` によって返される値は、0 以外である必要があります。 *value* が 0 として渡される場合、実際の戻り値では 1 が代入されます。
 
-呼び出す**longjmp**呼び出される関数の前に**setjmp**を返します。 それ以外の場合、結果は予測可能な。
+**Microsoft 固有の仕様**
 
-使用するときは、次の制限に従う**longjmp**:
+Windows、Microsoft C コードで**longjmp**例外処理コードと同じスタック アンワインド セマンティクスを使用します。 C++ の例外が発生することと同じ場所で使用しても安全になります。 ただし、この使用法は、ポータブルでないし、いくつかの重要な注意事項が付属しています。
 
-- レジスタ変数の値は変わらないと見なさないでください。 ルーチンの呼び出し元のレジスタ変数の値**setjmp**後に適切な値にならなかった場合があります**longjmp**を実行します。
+のみを呼び出す**longjmp**と呼ばれる関数の前に`setjmp`を返します。 それ以外の場合、結果は予測可能な。
 
-- 使用しないでください**longjmp**割り込みが浮動小数点の例外が発生した場合を除き、割り込み処理ルーチンからコントロールを転送します。 ここでは、プログラムを使用して、割り込みハンドラーから戻ることが**longjmp**が、まずを再初期化する浮動小数点演算パッケージを呼び出して **_fpreset**です。
+使用する場合は、次の制限を観察**longjmp**:
 
-     **注**を使用する際は注意**setjmp**と**longjmp** C++ プログラムでします。 これらの関数は C++ オブジェクト セマンティクスをサポートしていないため、C++ 例外処理機構を使用する方が安全です。
+- レジスタ変数の値は変わらないと見なさないでください。 呼び出すルーチンのレジスタ変数の値`setjmp`後に適切な値に復元されない場合があります**longjmp**を実行します。
+
+- 使用しない**longjmp**割り込みが浮動小数点例外によって発生した場合を除き、割り込み処理ルーチンから制御を転送します。 この場合、プログラムが介して割り込みハンドラーから返す可能性があります**longjmp**が最初に再初期化浮動小数点演算パッケージを呼び出して[_fpreset](fpreset.md)します。
+
+- 使用しない**longjmp** Windows コードで直接または間接的を呼び出されるコールバック ルーチンから制御を転送します。
+
+- 使用して、コードがコンパイルされている場合 **/EHs**または **/EHsc**関数が含まれていますが、 **longjmp**呼び出しは**noexcept**しローカル オブジェクトその関数は、スタック アンワインド中に消滅されない可能性があります。
+
+**Microsoft 固有の仕様はここまで**
+
+> [!NOTE]  
+> 移植可能な C++ コードではできないと仮定`setjmp`と`longjmp`C++ オブジェクト セマンティクスをサポートします。 具体的を`setjmp` / `longjmp`ペアは、置き換える場合、動作は未定義の呼び出し、`setjmp`と`longjmp`によって**キャッチ**と**スロー**を呼び出します自動オブジェクトの重要なデストラクターには。 C++ プログラムは、C++ 例外処理機構を使用することをお勧めします。
 
 詳細については、「[setjmp/longjmp の使用](../../cpp/using-setjmp-longjmp.md)」を参照してください。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**longjmp**|\<setjmp.h >|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
-
-## <a name="libraries"></a>ライブラリ
-
-[C ランタイム ライブラリ](../../c-runtime-library/crt-library-features.md)のすべてのバージョン。
 
 ## <a name="example"></a>例
 
@@ -93,5 +102,5 @@ void longjmp(
 
 ## <a name="see-also"></a>関連項目
 
-[プロセス制御と環境制御](../../c-runtime-library/process-and-environment-control.md)<br/>
-[setjmp](setjmp.md)<br/>
+[プロセス制御と環境制御](../../c-runtime-library/process-and-environment-control.md)  
+[setjmp](setjmp.md)  

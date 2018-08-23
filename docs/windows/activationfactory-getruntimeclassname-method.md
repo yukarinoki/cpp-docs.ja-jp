@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: edc4658ebf0519ef9d1792d62b303f423e658835
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 8847083fe134c36f506e7080772b1e5f0e2a873c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643070"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590183"
 ---
 # <a name="activationfactorygetruntimeclassname-method"></a>ActivationFactory::GetRuntimeClassName メソッド
-オブジェクトのランタイム クラス名を取得、現在**ActivationFactory**をインスタンス化します。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-STDMETHOD(  
-   GetRuntimeClassName  
-)(_Out_ HSTRING* runtimeName);  
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *runtimeName*  
- ときにこの操作が完了すると、オブジェクトのランタイム クラス名を含む文字列を識別するハンドルを現在**ActivationFactory**をインスタンス化します。  
-  
-## <a name="return-value"></a>戻り値  
- 成功した場合は S_OK、そうでない場合は失敗を示す HRESULT。  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** module.h  
-  
- **名前空間:** Microsoft::WRL  
-  
-## <a name="see-also"></a>関連項目  
- [ActivationFactory クラス](../windows/activationfactory-class.md)
+
+オブジェクトのランタイム クラス名を取得、現在**ActivationFactory**をインスタンス化します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+STDMETHOD(
+   GetRuntimeClassName
+)(_Out_ HSTRING* runtimeName);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*runtimeName*  
+ときにこの操作が完了すると、オブジェクトのランタイム クラス名を含む文字列を識別するハンドルを現在**ActivationFactory**をインスタンス化します。
+
+## <a name="return-value"></a>戻り値
+
+成功した場合は S_OK、そうでない場合は失敗を示す HRESULT。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** module.h
+
+**名前空間:** Microsoft::WRL
+
+## <a name="see-also"></a>関連項目
+
+[ActivationFactory クラス](../windows/activationfactory-class.md)

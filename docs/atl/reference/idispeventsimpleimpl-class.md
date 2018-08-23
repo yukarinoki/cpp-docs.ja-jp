@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cea7c17b61f3576ed2a8f1a4daa894f5a30c8b4e
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 7793262b60adbbacb2cf7b10245340790b26e805
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027288"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42575531"
 ---
 # <a name="idispeventsimpleimpl-class"></a>IDispEventSimpleImpl クラス
 このクラスの実装を提供する、`IDispatch`メソッドは、タイプ ライブラリから型情報を取得せずします。  
@@ -101,7 +101,7 @@ class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
   
  `IDispEventSimpleImpl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlcom.h  
   
 ##  <a name="advise"></a>  IDispEventSimpleImpl::Advise  
@@ -189,7 +189,7 @@ STDMETHOD(GetIDsOfNames)(
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IDispatch::GetIDsOfNames](http://msdn.microsoft.com/6f6cf233-3481-436e-8d6a-51f93bf91619) Windows SDK にします。  
+ 参照してください[IDispatch::GetIDsOfNames](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) Windows SDK にします。  
   
 ##  <a name="gettypeinfo"></a>  IDispEventSimpleImpl::GetTypeInfo  
  この実装の`IDispatch::GetTypeInfo`E_NOTIMPL を返します。  
@@ -202,7 +202,7 @@ STDMETHOD(GetTypeInfo)(
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[が](http://msdn.microsoft.com/cc1ec9aa-6c40-4e70-819c-a7c6dd6b8c99)Windows SDK にします。  
+ 参照してください[が](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfo)Windows SDK にします。  
   
 ##  <a name="gettypeinfocount"></a>  IDispEventSimpleImpl::GetTypeInfoCount  
  この実装の`IDispatch::GetTypeInfoCount`E_NOTIMPL を返します。  
@@ -212,7 +212,7 @@ STDMETHOD(GetTypeInfoCount)(UINT* /* pctinfo */);
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/da876d53-cb8a-465c-a43e-c0eb272e2a12) Windows SDK にします。  
+ 参照してください[IDispatch::GetTypeInfoCount](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount) Windows SDK にします。  
   
 ##  <a name="invoke"></a>  IDispEventSimpleImpl::Invoke  
  この実装の`IDispatch::Invoke`イベント シンク マップに一覧表示、イベント ハンドラーの呼び出し。  
@@ -230,7 +230,7 @@ STDMETHOD(Invoke)(
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[idispatch::invoke](http://msdn.microsoft.com/964ade8e-9d8a-4d32-bd47-aa678912a54d)します。  
+ 参照してください[idispatch::invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)します。  
   
 ##  <a name="unadvise"></a>  IDispEventSimpleImpl::Unadvise  
  によって表される、イベント ソースとの接続を解除*pUnk*します。  

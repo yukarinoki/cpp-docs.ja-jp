@@ -100,12 +100,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd7160f2998eee18439baa67a93a73fcd73b5c0f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 61fc3d0ddf07887af2f565fd338b337eacd130ef
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853551"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42541140"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl クラス
 月間予定表コントロールの機能がカプセル化されています。  
@@ -194,7 +194,7 @@ class CMonthCalCtrl : public CWnd
   
  `CMonthCalCtrl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdtctl.h  
   
 ##  <a name="cmonthcalctrl"></a>  CMonthCalCtrl::CMonthCalCtrl  
@@ -736,7 +736,7 @@ void SetCalendarBorder(int cxyBorder);
 |[in]*cxyBorder*|ピクセル単位で、罫線の幅。|  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドが成功すると、罫線の幅に設定されて、 *cxyBorder*パラメーター。 境界線の幅は、現在指定されている既定値にリセットするそれ以外の場合、[テーマ](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx)テーマが使用されていない場合は 0。  
+ このメソッドが成功すると、罫線の幅に設定されて、 *cxyBorder*パラメーター。 境界線の幅は、現在指定されている既定値にリセットするそれ以外の場合、[テーマ](/windows/desktop/Controls/visual-styles-overview)テーマが使用されていない場合は 0。  
   
  このメソッドは、送信、 [MCM_SETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760993)メッセージは、Windows SDK で説明します。  
   
@@ -758,7 +758,7 @@ void SetCalendarBorderDefault();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 境界線の幅は、現在指定された既定値に設定されて[テーマ](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx)テーマが使用されていない場合は 0。  
+ 境界線の幅は、現在指定された既定値に設定されて[テーマ](/windows/desktop/Controls/visual-styles-overview)テーマが使用されていない場合は 0。  
   
  このメソッドは、送信、 [MCM_SETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760993)メッセージは、Windows SDK で説明します。  
   

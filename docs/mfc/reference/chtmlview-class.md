@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58a336ef74a3fdcb787dee5feeef2b76e45706bf
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: c3c291c7eb9b6a9cd87330f4af5135037a1f31de
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027860"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42543250"
 ---
 # <a name="chtmlview-class"></a>CHtmlView クラス
 MFC のドキュメント/ビュー アーキテクチャのコンテキストで WebBrowser コントロールの機能を提供します。  
@@ -243,7 +243,7 @@ class CHtmlView : public CFormView
 |[CHtmlView::GetLocationURL](#getlocationurl)|WebBrowser が現在表示しているリソースの URL を取得します。|  
 |[CHtmlView::GetMenuBar](#getmenubar)|メニュー バーが表示されるかどうかを判別する値を取得します。|  
 |[CHtmlView::GetOffline](#getoffline)|コントロールがオフラインかどうかを判別する値を取得します。|  
-|[CHtmlView::GetParentBrowser](#getparentbrowser)|`IDispatch` インターフェイスへのポインターを取得します。 詳細については、「 [Implementing the IDispatch Interface](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945)」を参照してください。|  
+|[CHtmlView::GetParentBrowser](#getparentbrowser)|`IDispatch` インターフェイスへのポインターを取得します。 詳細については、「 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)」を参照してください。|  
 |[CHtmlView::GetProperty](#getproperty)|指定したオブジェクトに関連付けられているプロパティの現在の値を取得します。|  
 |[CHtmlView::GetReadyState](#getreadystate)|Web ブラウザーのオブジェクトの準備完了状態を取得します。|  
 |[CHtmlView::GetRegisterAsBrowser](#getregisterasbrowser)|WebBrowser コントロールがターゲット名解決の最上位レベルのブラウザーとして登録されているかどうかを示します。|  
@@ -508,7 +508,7 @@ LPDISPATCH GetApplication() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ポインター、`IDispatch`アクティブなドキュメント オブジェクトのインターフェイス。 詳細については、「 [Implementing the IDispatch Interface](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945)」を参照してください。  
+ ポインター、`IDispatch`アクティブなドキュメント オブジェクトのインターフェイス。 詳細については、「 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)」を参照してください。  
   
 ### <a name="remarks"></a>コメント  
  Internet Explorer と WebBrowser に適用されます。  

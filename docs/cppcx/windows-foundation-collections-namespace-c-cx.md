@@ -1,5 +1,5 @@
 ---
-title: :Foundation Namespace (C + + CX) |Microsoft ドキュメント
+title: :Foundation Namespace (C + + CX) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,19 +11,19 @@ dev_langs:
 helpviewer_keywords:
 - Windows::Foundation::Collections Namespace (C++/CX)
 ms.assetid: 04bd3543-e30f-4fd2-95ee-272a3fcd0158
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d889f68db2c631921f8c34f63d21ee1f5859bd0f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: de406267a4c18cace88882b26f6b249fc5a0efa3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090823"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42586712"
 ---
 # <a name="windowsfoundationcollections-namespace-ccx"></a>Windows::Foundation::Collections 名前空間 (C++/CX)
-C + + CX Vector、VectorView、Map、および MapView コレクション クラスを使用して単純化する関数を持つ:foundation 名前空間を補足するものです。  
+C + + CX Vector、VectorView、マップ、および MapView コレクション クラスを使用して単純化する関数を持つ:foundation 名前空間を補足するものです。  
   
 ## <a name="syntax"></a>構文  
   

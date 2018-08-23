@@ -1,7 +1,7 @@
 ---
 title: setjmp | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/14/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cc4673485577f5a12024d31e94063c82a8c7b8c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 06073527aae8112d231dbd971b3daae35276efef
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407253"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572224"
 ---
 # <a name="setjmp"></a>setjmp
 
@@ -53,28 +53,35 @@ int setjmp(
 
 ### <a name="parameters"></a>パラメーター
 
-*env*<br/>
+*env*  
 環境が格納されている変数。
 
 ## <a name="return-value"></a>戻り値
 
-スタックの環境を保存した後に 0 を返します。 場合**setjmp**の結果として返されます、 **longjmp**を呼び出すと、それを返します、**値**の引数**longjmp**、または、**値**の引数**longjmp** 0 の場合は、 **setjmp** 1 を返します。 エラーの戻り値はありません。
+スタックの環境を保存した後に 0 を返します。 場合**setjmp**の結果として返されます、`longjmp`呼び出すには、それを返します、*値*の引数`longjmp`、または、*値*の引数`longjmp`は 0 です。**setjmp** 1 を返します。 エラーの戻り値はありません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Setjmp**関数は、後で復元できますを使用して、スタックの環境を保存**longjmp**です。 同時に、使用時に**setjmp**と**longjmp**非ローカルの実行方法を提供**goto**です。 これらは一般的に、通常の呼び出し規約や復帰規約を使用せず、前に呼び出されたルーチンのエラー処理または回復コードに実行の制御を渡すために使用されます。
+**Setjmp**機能が戻すことができます、その後を使用して、スタックの環境を保存します`longjmp`します。 同時に、使用すると**setjmp**と`longjmp`非ローカルを実行する方法を提供**goto**します。 これらは一般的に、通常の呼び出し規約や復帰規約を使用せず、前に呼び出されたルーチンのエラー処理または回復コードに実行の制御を渡すために使用されます。
 
-呼び出し**setjmp**で現在のスタック環境を保存*env*です。 後続の呼び出しに**longjmp**保存されている環境を復元し、直後に、対応した後ポイントにコントロールを返します**setjmp**呼び出します。 すべての変数 (レジスタ変数) を除く制御を受け取るルーチンにアクセスできるときに保持していた値が含まれて**longjmp**が呼び出されました。
+呼び出し**setjmp**で現在のスタック環境を保存します。 *env*します。 後続の呼び出し`longjmp`保存済みの環境を復元し、対応する直後のポイントにコントロールを返します**setjmp**呼び出します。 コントロールを受け取るルーチンにアクセスできるすべての変数 (レジスタ変数を除く) には、`longjmp` が呼び出されたときに保持していた値が含まれます。
 
-使用することはできません**setjmp**にネイティブ コードからマネージ コードに移動するようにします。
+使用することはできません**setjmp**ネイティブ コードからマネージ コードにジャンプします。
 
-**注** **setjmp**と**longjmp** C++ オブジェクトのセマンティクスをサポートしていません。 C++ プログラムでは、C++ 例外処理機構を使用します。
+**Microsoft 固有の仕様**
+
+Windows、Microsoft C コードで**longjmp**例外処理コードと同じスタック アンワインド セマンティクスを使用します。 C++ の例外が発生することと同じ場所で使用しても安全になります。 ただし、この使用法は、ポータブルでないし、いくつかの重要な注意事項が付属しています。 詳細については、次を参照してください。 [longjmp](longjmp.md)します。
+
+**Microsoft 固有の仕様はここまで**
+
+> [!NOTE]  
+> 移植可能な C++ コードではできないと仮定`setjmp`と`longjmp`C++ オブジェクト セマンティクスをサポートします。 具体的を`setjmp` / `longjmp`ペアは、置き換える場合、動作は未定義の呼び出し、`setjmp`と`longjmp`によって**キャッチ**と**スロー**を呼び出します自動オブジェクトの重要なデストラクターには。 C++ プログラムは、C++ 例外処理機構を使用することをお勧めします。
 
 詳細については、「[setjmp/longjmp の使用](../../cpp/using-setjmp-longjmp.md)」を参照してください。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**setjmp**|\<setjmp.h >|
 
@@ -86,6 +93,5 @@ int setjmp(
 
 ## <a name="see-also"></a>関連項目
 
-[プロセス制御と環境制御](../../c-runtime-library/process-and-environment-control.md)<br/>
-[longjmp](longjmp.md)<br/>
-[_setjmp3](../../c-runtime-library/setjmp3.md)<br/>
+[プロセス制御と環境制御](../../c-runtime-library/process-and-environment-control.md)  
+[longjmp](longjmp.md)  

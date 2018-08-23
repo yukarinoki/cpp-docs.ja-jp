@@ -27,12 +27,16 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-ms.openlocfilehash: 35f9d91164eccc5fc65d60050957a494993a4f11
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+author: mikeblome
+ms.author: mblome
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9162c515f4fd451f3e663895953e106bb4e65135
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885534"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42572579"
 ---
 # <a name="atl-text-encoding-functions"></a>ATL テキスト エンコード関数
 これらの関数は、テキストのエンコードとデコードをサポートします。
@@ -63,7 +67,7 @@ ms.locfileid: "37885534"
 |[UUEncode](#uuencode)|データを uuencode します。 |
 |[UUEncodeGetRequiredLength](#uuencodegetrequiredlength)|指定したサイズのデータからエンコードされた文字列を格納できるバッファーのサイズを、文字数で取得します。|
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlenc.h の関数  
  
 ## <a name="atlgethexvalue"></a> AtlGetHexValue
@@ -99,7 +103,7 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
   
  [!code-cpp[NVC_ATL_Utilities#95](../../atl/codesnippet/cpp/atl-text-encoding-functions_1.cpp)]  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** atlbase.h  
 
 ## <a name="atlhexdecode"></a> AtlHexDecode

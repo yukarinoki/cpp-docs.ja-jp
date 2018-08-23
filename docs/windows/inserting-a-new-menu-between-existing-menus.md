@@ -16,26 +16,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d6fda61fcaace9df1df69317149c719a716c6da6
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 759ed60206ef9cb68ea2b0f502c1241c9ce5b6cd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012150"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602974"
 ---
 # <a name="inserting-a-new-menu-between-existing-menus"></a>既存のメニュー間への新規メニューの挿入
-### <a name="to-insert-a-new-menu-between-existing-menus"></a>既存のメニュー間に新規メニューを挿入するには  
-  
-1.  既存のメニューの名前とキーを押して選択、**挿入**キー。 **新しい項目の**ボックスが選択した項目の前に挿入されます。  
-  
-     \- または -  
-  
-2.  メニュー バーを右クリックし、選択**Insert New**ショートカット メニューから。  
-  
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。  
-  
-## <a name="requirements"></a>要件  
- Win32  
-  
-## <a name="see-also"></a>関連項目  
- [メニュー エディター](../windows/menu-editor.md)   
+
+### <a name="to-insert-a-new-menu-between-existing-menus"></a>既存のメニュー間に新規メニューを挿入するには
+
+1. 既存のメニューの名前とキーを押して選択、**挿入**キー。 **新しい項目の**ボックスが選択した項目の前に挿入されます。
+
+   \- または -
+
+2. メニュー バーを右クリックし、選択**Insert New**ショートカット メニューから。
+
+マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。
+
+## <a name="requirements"></a>要件
+
+Win32
+
+## <a name="see-also"></a>関連項目
+
+[メニュー エディター](../windows/menu-editor.md)  

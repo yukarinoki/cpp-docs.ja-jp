@@ -1,23 +1,23 @@
 ---
-title: その他の言語と相互運用 (C + + CX) |Microsoft ドキュメント
+title: その他の言語との相互運用 (C + + CX) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: f74db99f-7dbd-421e-99e6-c34bbebf5cea
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e096cda810085c0e0ce9e2772c7105843e486a39
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7d4aec775dc716a5e88e6b421a7cd7f818730c23
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087843"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589889"
 ---
 # <a name="interoperating-with-other-languages-ccx"></a>その他の言語との相互運用 (C++/CX)
-ドキュメントのこの部分は、C + を使用する方法を説明 +/CX を他のプログラミング言語とライブラリで利用できる Windows ランタイム コンポーネントを作成します。 すべての言語では使用できないコンポーネントを作成することもできます。 このセクションで説明するときに検討するさまざまな側面に C + +/CX アプリケーションは、JavaScript、.NET Framework マネージ言語、または Windows ランタイム C++ テンプレート ライブラリを使用して記述されたコンポーネントと相互運用します。  
+ドキュメントのこの部分は、C + を使用する方法を説明します。/cli/CX を他のプログラミング言語とライブラリで使用できる Windows ランタイム コンポーネントを作成します。 すべての言語では使用できないコンポーネントを作成することもできます。 このセクションでは、ときに考慮するさまざまな側面を説明します。 c++/cli/CX アプリケーションは、JavaScript、.NET Framework マネージ言語、または Windows ランタイム C++ テンプレート ライブラリを使用して作成されたコンポーネントと相互運用。  
   
 ## <a name="related-topics"></a>関連トピック  
   

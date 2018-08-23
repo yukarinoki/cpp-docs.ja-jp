@@ -1,7 +1,7 @@
 ---
-title: コンパイラ オプションがカテゴリ別一覧 |Microsoft ドキュメント
+title: コンパイラの Options Listed by Category |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/20/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fff661bf573ca30a5b0e7550c2e53b00a7ff3d8f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a255259af5f660a11007005fd71f85bff80a8e05
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379329"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42573255"
 ---
 # <a name="compiler-options-listed-by-category"></a>コンパイラ オプションのカテゴリ別一覧
 
-この記事には、コンパイラ オプションのカテゴリ別の一覧が含まれています。 アルファベット順の一覧を参照してください。[コンパイラ オプション アルファベット順一覧](compiler-options-listed-alphabetically.md)です。
+この記事には、コンパイラ オプションのカテゴリ別の一覧が含まれています。 アルファベット順の一覧を参照してください。 [Compiler Options Listed Alphabetically](compiler-options-listed-alphabetically.md)します。
 
 ### <a name="optimization"></a>最適化
 
@@ -65,11 +65,11 @@ ms.locfileid: "32379329"
 |[/guard:cf](guard-enable-control-flow-guard.md)|制御フロー ガードのセキュリティ チェックを追加します。|
 |[/Gv](gd-gr-gv-gz-calling-convention.md)|`__vectorcall` 呼び出し規約を使用します。 (x86 と x64 のみ)。|
 |[/Gw](gw-optimize-global-data.md)|プログラム全体のグローバル データの最適化を有効にします。|
-|[/GX](gx-enable-exception-handling.md)|非推奨。 同期例外処理を有効にします。 使用して[/EH](eh-exception-handling-model.md)代わりにします。|
+|[/GX](gx-enable-exception-handling.md)|非推奨。 同期例外処理を有効にします。 使用[/EH](eh-exception-handling-model.md)代わりにします。|
 |[/Gy](gy-enable-function-level-linking.md)|関数レベルのリンクを有効にします。|
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|非推奨。 高速チェックを有効にします (同じ[/RTC1](rtc-run-time-error-checks.md))|
 |[/Gz](gd-gr-gv-gz-calling-convention.md)|`__stdcall` 呼び出し規約を使用します。 (x86 のみ)|
-|[/homeparams](homeparams-copy-register-parameters-to-stack.md)|関数の実行に入ったときに、レジスタで渡されたパラメーターを、強制的にスタック内のその場所に書き込みます。 これは、 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] コンパイラ (ネイティブ コンパイルおよびクロス コンパイル) だけで使用されるコンパイラ オプションです。|
+|[/homeparams](homeparams-copy-register-parameters-to-stack.md)|関数の実行に入ったときに、レジスタで渡されたパラメーターを、強制的にスタック内のその場所に書き込みます。 このコンパイラ オプションは、x64 のみコンパイラ (ネイティブ コンパイルおよびクロス コンパイル)。|
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|ホットパッチ可能なイメージを作成します。|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|高速超越関数を生成します。|
 |[QIfist](qifist-suppress-ftol.md)|非推奨。 浮動小数点型から整数型への変換が必要なときには、ヘルパー関数 `_ftol` を呼び出しません。 (x86 のみ)|
@@ -77,7 +77,7 @@ ms.locfileid: "32379329"
 |[/Qpar](qpar-auto-parallelizer.md)|ループの自動並列化を有効にします。|
 |[/Qpar-report](qpar-report-auto-parallelizer-reporting-level.md)|自動並列化のレポート レベルを有効にします。|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|浮動小数点値の整数移動命令を使用し、特定の浮動小数点読み込み最適化を無効にします。|
-|[/Qspectre](qspectre.md)|CVE 2017 5753 Spectre 攻撃のクラスの緩和方法を有効にします。|
+|[/Qspectre](qspectre.md)|軽減策 CVE 2017-5753、Spectre 攻撃のクラスを有効にします。|
 |[/Qvec-report](qvec-report-auto-vectorizer-reporting-level.md)|自動ベクター化のレポート レベルを有効にします。|
 |[/RTC](rtc-run-time-error-checks.md)|ランタイム エラー チェックを有効にします。|
 |[/volatile](volatile-volatile-keyword-interpretation.md)|volatile キーワードの解釈方法を選択します。|
@@ -119,7 +119,7 @@ ms.locfileid: "32379329"
 
 |オプション|目的|
 |------------|-------------|
-|[/constexpr](constexpr-control-constexpr-evaluation.md)|コンパイル時に constexpr 評価を制御します。|
+|[/constexpr](constexpr-control-constexpr-evaluation.md)|コンパイル時に constexpr の評価を制御します。|
 |[/openmp](openmp-enable-openmp-2-0-support.md)|ソース コードで [#pragma omp](../../preprocessor/omp.md) を有効にします。|
 |[/vd](vd-disable-construction-displacements.md)|隠し `vtordisp` クラス メンバーの無効と有効を切り替えます。|
 |[/vmb](vmb-vmg-representation-method.md)|メンバーへのポインターに対して、最適なクラスを使用します。|
@@ -129,9 +129,9 @@ ms.locfileid: "32379329"
 |[/vmv](vmm-vms-vmv-general-purpose-representation.md)|仮想継承を宣言します。|
 |[/Z7](z7-zi-zi-debug-information-format.md)|C 7.0 互換のデバッグ情報を生成します。|
 |[/Za](za-ze-disable-language-extensions.md)|言語拡張機能を無効にします。|
-|[/Zc](zc-conformance.md)|標準的な動作を指定[/Ze](za-ze-disable-language-extensions.md)です。|
+|[/Zc](zc-conformance.md)|標準の動作を指定します[/Ze](za-ze-disable-language-extensions.md)します。|
 |[/Ze](za-ze-disable-language-extensions.md)|非推奨。 言語拡張機能を有効にします。|
-|[/Zf](zf.md)|並行ビルドで生成時刻 PDB が向上します。|
+|[/Zf](zf.md)|並行ビルドで生成時に PDB を向上します。|
 |[/ZI](z7-zi-zi-debug-information-format.md)|エディット コンティニュと互換性のあるプログラム データベースにデバッグ情報を含めます。 (x86 のみ)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|詳細なデバッグ情報を生成します。|
 |[/Zl](zl-omit-default-library-name.md)|.obj ファイルから既定のライブラリ名を削除します。|
@@ -169,6 +169,7 @@ ms.locfileid: "32379329"
 |[/H](h-restrict-length-of-external-names.md)|非推奨。 外部名 (パブリック名) の長さを制限します。|
 |[/HELP](help-compiler-command-line-help.md)|コンパイラ オプションのリストを出力します。|
 |[/J](j-default-char-type-is-unsigned.md)|既定の `char` 型を変更します。|
+|[/JMC](jmc.md)|マイ コードのみを C++ のネイティブ デバッグをサポートしています。|
 |[/kernel](kernel-create-kernel-mode-binary.md)|コンパイラとリンカーは、Windows カーネルで実行可能なバイナリを作成します。|
 |[/MP](mp-build-with-multiple-processes.md)|複数のソース ファイルを同時にビルドします。|
 |[/nologo](nologo-suppress-startup-banner-c-cpp.md)|著作権情報を表示しません。|
@@ -190,35 +191,35 @@ ms.locfileid: "32379329"
 |[/Wv](compiler-option-warning-level.md)|新しいバージョンのコンパイラで導入された警告を無効にします。|
 |[/WX](compiler-option-warning-level.md)|警告をエラーとして扱います。|
 |[/Yc](yc-create-precompiled-header-file.md)|作成します。PCH ファイルです。|
-|[/Yd](yd-place-debug-information-in-object-file.md)|非推奨。 すべてのオブジェクト ファイルに、詳細なデバッグ情報を取り込みます。 使用して[/Zi](z7-zi-zi-debug-information-format.md)代わりにします。|
+|[/Yd](yd-place-debug-information-in-object-file.md)|非推奨。 すべてのオブジェクト ファイルに、詳細なデバッグ情報を取り込みます。 使用[/Zi](z7-zi-zi-debug-information-format.md)代わりにします。|
 |[/Yl](yl-inject-pch-reference-for-debug-library.md)|デバッグ ライブラリの作成時に PCH の参照を挿入します。|
 |[/Yu](yu-use-precompiled-header-file.md)|ビルド時にプリコンパイル済みヘッダー ファイルを使用します。|
 |[/Y-](y-ignore-precompiled-header-options.md)|現在のビルドで、他のすべてのプリコンパイル済みヘッダー コンパイラ オプションを無視します。|
 |[/Zm](zm-specify-precompiled-header-memory-allocation-limit.md)|プリコンパイル済みヘッダーのメモリ割り当て制限を指定します。|
-|[/await](await-enable-coroutine-support.md)|コルーチン (可能な関数 (resume/await)) 拡張機能を有効にします。|
+|[/await](await-enable-coroutine-support.md)|コルーチン (再開可能な関数) の拡張機能を有効にします。|
 |[/source-charset](source-charset-set-source-character-set.md)|ソース文字セットを設定します。|
 |[/execution-charset](execution-charset-set-execution-character-set.md)|実行文字セットを設定します。|
-|[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|セットのソースおよび実行の文字は、utf-8 を設定します。|
-|[/validate-charset](validate-charset-validate-for-compatible-characters.md)|互換性のある文字のみ utf-8 ファイルを検証します。|
+|[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|セットのソースと実行の文字は、utf-8 に設定します。|
+|[/validate-charset](validate-charset-validate-for-compatible-characters.md)|互換性のある文字のみの utf-8 ファイルを検証します。|
 |[/diagnostics](diagnostics-compiler-diagnostic-options.md)|診断メッセージの形式を制御します。|
 |[/permissive-](permissive-standards-conformance.md)|標準準拠モードを設定します。|
-|[/std](std-specify-language-standard-version.md)|C++ 標準のバージョンの互換性セレクター。|
+|[/std](std-specify-language-standard-version.md)|C++ 標準バージョンの互換性セレクター。|
 
-### <a name="deprecated-and-removed-compiler-options"></a>非推奨し、削除されたコンパイラ オプション
+### <a name="deprecated-and-removed-compiler-options"></a>非推奨と削除されたコンパイラ オプション
 
 |オプション|目的|
 |------------|-------------|
-|[/clr:noAssembly](clr-common-language-runtime-compilation.md)|非推奨。 使用して[/LN (MSIL モジュールの作成)](ln-create-msil-module.md)代わりにします。|
+|[/clr:noAssembly](clr-common-language-runtime-compilation.md)|非推奨。 使用[/LN (MSIL モジュールの作成)](ln-create-msil-module.md)代わりにします。|
 |[/Fr](fr-fr-create-dot-sbr-file.md)|非推奨。 ローカル変数を含まないブラウザー情報ファイルを作成します。|
 |[/Ge](ge-enable-stack-probes.md)|非推奨。 スタック プローブをアクティブにします。 既定でオンになります。|
-|[/GX](gx-enable-exception-handling.md)|非推奨。 同期例外処理を有効にします。 使用して[/EH](eh-exception-handling-model.md)代わりにします。|
-|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|非推奨。 高速チェックを有効にします 使用して[/RTC1](rtc-run-time-error-checks.md)代わりにします。|
+|[/GX](gx-enable-exception-handling.md)|非推奨。 同期例外処理を有効にします。 使用[/EH](eh-exception-handling-model.md)代わりにします。|
+|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|非推奨。 高速チェックを有効にします 使用[/RTC1](rtc-run-time-error-checks.md)代わりにします。|
 |[/H](h-restrict-length-of-external-names.md)|非推奨。 外部名 (パブリック名) の長さを制限します。|
 |[/Og](og-global-optimizations.md)|非推奨。 グローバル最適化を使用します。|
 |[QIfist](qifist-suppress-ftol.md)|非推奨。 浮動小数点型から整数型に変換する方法を指定するために使われていました。|
 |[/V](v-version-number.md)|非推奨。 .obj ファイル バージョン文字列を設定します。|
 |[/Wp64](wp64-detect-64-bit-portability-issues.md)|互換性のために残されています。 64 ビット移植性の問題を検出します。|
-|[/Yd](yd-place-debug-information-in-object-file.md)|非推奨。 すべてのオブジェクト ファイルに、詳細なデバッグ情報を取り込みます。 使用して[/Zi](z7-zi-zi-debug-information-format.md)代わりにします。|
+|[/Yd](yd-place-debug-information-in-object-file.md)|非推奨。 すべてのオブジェクト ファイルに、詳細なデバッグ情報を取り込みます。 使用[/Zi](z7-zi-zi-debug-information-format.md)代わりにします。|
 |[/Zc:forScope-](zc-forscope-force-conformance-in-for-loop-scope.md)|非推奨。 for ループ スコープの準拠を無効にします。|
 |[/Ze](za-ze-disable-language-extensions.md)|非推奨。 言語拡張機能を有効にします。|
 |[/Zg](zg-generate-function-prototypes.md)|Visual C++ 2015 では削除されています。 関数プロトタイプを生成します。|
