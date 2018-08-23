@@ -1,29 +1,29 @@
 ---
-title: Ref クラスと構造体 (C + + CX) |Microsoft ドキュメント
+title: Ref クラスと構造体 (C + + CX) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 3d736b82-0bf0-48cf-bac1-cc9d110b70d1
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be0a8adbb2bf20e4f92edf16fa2217a7d2b40eab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba5ce5b5cb2f55caf00ea6094cb4e14b2b08c236
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092445"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584121"
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Ref クラスと構造体 (C++/CX)
-C + + CX サポートがユーザー定義*ref クラス*と*ref 構造体*、およびユーザー定義*値クラス*と*構造体の値*です。 これらのデータ構造は、の主コンテナーする C + + CX は、Windows ランタイムの型システムをサポートしています。 その内容は、特定の規則に従ってメタデータに出力され、Windows ランタイム コンポーネントおよび C++ やその他の言語で記述されているユニバーサル Windows プラットフォーム アプリ間で渡されることができます。  
+C++/cli CX サポートがユーザー定義*ref クラス*と*ref 構造体*、およびユーザー定義*値クラス*と*構造体の値*します。 これらのデータ構造がどの C + によってプライマリ コンテナー/cli CX は、Windows ランタイムの型システムをサポートしています。 内容は、特定の規則に従ってメタデータに出力され、Windows ランタイム コンポーネントと C++ やその他の言語で記述されているユニバーサル Windows プラットフォーム アプリ間で渡されることができます。  
   
  ref クラスまたは ref 構造体には、次のような固有の特徴があります。  
   
--   名前空間内部で宣言される必要があり、名前空間のスコープ、およびその名前空間内で public または private のアクセシビリティを持つことができます。 パブリック型だけがメタデータに出力されます。 入れ子になったパブリック [列挙型](../cppcx/enums-c-cx.md) クラスを含め、入れ子になったパブリック クラス定義は使用できません。 詳細については、次を参照してください。[名前空間と型の可視性](../cppcx/namespaces-and-type-visibility-c-cx.md)です。  
+-   名前空間内部で宣言される必要があり、名前空間のスコープ、およびその名前空間内で public または private のアクセシビリティを持つことができます。 パブリック型だけがメタデータに出力されます。 入れ子になったパブリック [列挙型](../cppcx/enums-c-cx.md) クラスを含め、入れ子になったパブリック クラス定義は使用できません。 詳細については、次を参照してください。[名前空間と型の可視性](../cppcx/namespaces-and-type-visibility-c-cx.md)します。  
   
--   C + メンバーとして含まれて + CX ref クラス、値クラス、ref 構造体、値構造体、または null 許容の値構造体を含むです。 これには、float64 や bool などのスカラー型も含まれる場合があります。 また、パブリックでない限り `std::vector` やカスタム クラスなどの標準の C++ 型が含まれる場合もあります。 C + +/CX コンストラクトがあります`public`、 `protected`、 `internal`、 `private`、または`protected private`アクセシビリティ。 `public` または `protected` のすべてのメンバーは、メタデータに出力されます。 標準 C++ の型は、 `private`、 `internal`、または `protected private` のアクセシビリティを持つ必要があります。これにより、それらの型がメタデータに出力されることが防止されます。  
+-   C + メンバーとして含めることができます、/cli CX の ref クラス、値クラス、ref 構造体、値構造体、または null 許容の値構造体を含むです。 これには、float64 や bool などのスカラー型も含まれる場合があります。 また、パブリックでない限り `std::vector` やカスタム クラスなどの標準の C++ 型が含まれる場合もあります。 C +/cli/CX コンストラクトがあります`public`、 `protected`、 `internal`、 `private`、または`protected private`アクセシビリティ。 `public` または `protected` のすべてのメンバーは、メタデータに出力されます。 標準 C++ の型は、 `private`、 `internal`、または `protected private` のアクセシビリティを持つ必要があります。これにより、それらの型がメタデータに出力されることが防止されます。  
   
 -   1 つ以上の *インターフェイス クラス* または *インターフェイス構造体*を実装することができます。  
   
@@ -34,7 +34,7 @@ C + + CX サポートがユーザー定義*ref クラス*と*ref 構造体*、�
 -   その有効期間は、自動参照カウントによって管理されます。  
   
 ## <a name="declaration"></a>宣言  
- 次のコード片は `Person` ref クラスを宣言します。 注意して、標準の C++`std::map`型がプライベート メンバー、および Windows ランタイムで使用`IMapView`インターフェイスがパブリック インターフェイスで使用されています。 また、"^" が参照型の宣言に追加されることにも注意してください。  
+ 次のコード片は `Person` ref クラスを宣言します。 注意して標準の C++`std::map`型は、プライベート メンバーおよび Windows ランタイムで使用`IMapView`インターフェイスはパブリック インターフェイスで使用されます。 また、"^" が参照型の宣言に追加されることにも注意してください。  
   
  [!code-cpp[cx_classes#03](../cppcx/codesnippet/CPP/classesstructs/class1.h#03)]  
   
@@ -70,20 +70,20 @@ C + + CX サポートがユーザー定義*ref クラス*と*ref 構造体*、�
   
  ref 構造体は ref クラスと同じですが、既定ではメンバーのアクセシビリティは `public` です。  
   
- A `public` ref クラスまたは ref 構造体は、メタデータに出力されますが、その他のユニバーサル Windows プラットフォーム アプリおよび Windows ランタイム コンポーネントから使用できるようにするには、少なくとも 1 つの public または protected のコンス トラクターが必要です。 public コンストラクターを持つ public ref クラスは、アプリケーション バイナリ インターフェイス (ABI: Application Binary Interface) を介してさらに派生されることを防ぐために `sealed` としても宣言される必要があります。  
+ A `public` ref クラスまたは ref 構造体は、メタデータに出力されますが、その他のユニバーサル Windows プラットフォーム アプリおよび Windows ランタイム コンポーネントから使用するのには少なくとも 1 つの public または protected のコンス トラクターが必要です。 public コンストラクターを持つ public ref クラスは、アプリケーション バイナリ インターフェイス (ABI: Application Binary Interface) を介してさらに派生されることを防ぐために `sealed` としても宣言される必要があります。  
   
- パブリック メンバー可能性がありますいない const 宣言する定数として Windows ランタイムの型システムはサポートされていません。 静的なプロパティを使用して、定数値を持つパブリック データ メンバーを宣言することができます。  
+ パブリック メンバー可能性がありますいない const 宣言する const として Windows ランタイムの型システムはサポートされていません。 静的なプロパティを使用して、定数値を持つパブリック データ メンバーを宣言することができます。  
   
- public の ref クラスまたは構造体が定義されると、コンパイラは必要な属性をクラスに適用し、その情報をアプリの .winmd ファイルに格納します。 ただし、public unsealed の ref クラスを定義するときに手動で適用、`Windows::Foundation::Metadata::WebHostHidden`属性をクラスが JavaScript で記述されているユニバーサル Windows プラットフォーム アプリに表示されないことを確認してください。  
+ public の ref クラスまたは構造体が定義されると、コンパイラは必要な属性をクラスに適用し、その情報をアプリの .winmd ファイルに格納します。 ただし、public unsealed の ref クラスを定義するときに手動で適用、`Windows::Foundation::Metadata::WebHostHidden`属性をクラスが JavaScript で記述されているユニバーサル Windows プラットフォーム アプリに表示されないことを確認します。  
   
  ref クラスは、 `const` 型を含む標準 C++ の型を、 `private`、 `internal`、または `protected private` のあらゆるメンバーの中で使用することができます。  
   
  型パラメーターを持つパブリック ref クラスは許可されません。 ユーザー定義の generic ref クラスは許可されません。 private、internal、または protected private の ref クラスは、テンプレートになることができます。  
   
 ## <a name="destructors"></a>デストラクター  
- C + + CX、呼び出す`delete`パブリック デストラクターで、オブジェクトの参照カウントに関係なくデストラクターを呼び出します。 この動作により、非 RAII リソースのカスタム クリーンアップを確定的な方法で実行できるデストラクターを定義できます。 ただし、この場合でも、オブジェクト自体はメモリから削除されません。 オブジェクトのメモリは、参照カウントがゼロに達した場合のみ解放されます。  
+ C++/cli CX、呼び出す`delete`パブリック デストラクターでオブジェクトの参照カウントに関係なくデストラクターを呼び出します。 この動作により、非 RAII リソースのカスタム クリーンアップを確定的な方法で実行できるデストラクターを定義できます。 ただし、この場合でも、オブジェクト自体はメモリから削除されません。 オブジェクトのメモリは、参照カウントがゼロに達した場合のみ解放されます。  
   
- クラスのデストラクターがパブリックでない場合は、参照カウントがゼロに達する場合にのみ、このデストラクターが呼び出されます。 呼び出す場合`delete`プライベート デストラクターを持つオブジェクトに対して、コンパイラ警告 C4493 が発生、という"削除式も何も起こりませんのデストラクターとして\<型名 > 'public' アクセシビリティはありません"。  
+ クラスのデストラクターがパブリックでない場合は、参照カウントがゼロに達する場合にのみ、このデストラクターが呼び出されます。 呼び出す場合`delete`プライベート デストラクターを持つオブジェクトに対して、コンパイラ警告 C4493 が発生、ことを示す"削除式のデストラクターとして効果はありません\<型名 > 'public' アクセシビリティがありません"。  
   
  Ref クラスのデストラクターでは、次以外の宣言はできません。  
   
@@ -97,10 +97,10 @@ C + + CX サポートがユーザー定義*ref クラス*と*ref 構造体*、�
   
  デストラクターを既に実行しているクラスのメンバーにアクセスを試みたときの動作は不確定です。プログラムがクラッシュする可能性が高いと思われます。 public デストラクターがない型上で `delete t` を呼び出しても、何の効果もありません。 型の階層構造内から既知の `delete this` または `private` デストラクターを持つ型または基底クラス上で `protected private` を呼び出しても、何の効果もありません。  
   
- public デストラクターが宣言されると、コンパイラがコードを生成するので、ref クラスが `Platform::IDisposable` を実装し、デストラクターが `Dispose` メソッドを実装します。 `Platform::IDisposable` C + +/CX プロジェクションの`Windows::Foundation::IClosable`します。 これらのインターフェイスは、明示的に実装しないでください。  
+ public デストラクターが宣言されると、コンパイラがコードを生成するので、ref クラスが `Platform::IDisposable` を実装し、デストラクターが `Dispose` メソッドを実装します。 `Platform::IDisposable` c++/cli の CX プロジェクション`Windows::Foundation::IClosable`します。 これらのインターフェイスは、明示的に実装しないでください。  
   
 ## <a name="inheritance"></a>継承  
- Platform::Object は、すべての ref クラスの汎用基底クラスです。 ref クラスは、いずれも Platform::Object に暗黙的に変換可能で、 [Object::ToString](../cppcx/platform-object-class.md#tostring)をオーバーライドできます。 ただし、Windows ランタイムの継承モデルではありません一般的な継承モデルです。C + + CX これは、ユーザー定義のパブリック ref クラスが基底クラスとして使用できないことを意味します。  
+ Platform::Object は、すべての ref クラスの汎用基底クラスです。 ref クラスは、いずれも Platform::Object に暗黙的に変換可能で、 [Object::ToString](../cppcx/platform-object-class.md#tostring)をオーバーライドできます。 ただし、Windows ランタイムの継承モデルできない一般的な継承モデルです。c++/cli CX これは、ユーザー定義のパブリック ref クラスが基底クラスとして使用できないことを意味します。  
   
  XAML ユーザー コントロールを作成し、オブジェクトが依存関係プロパティ システムに参加している場合は、 `Windows::UI::Xaml::DependencyObject` を基底クラスとして使用できます。  
   
@@ -108,9 +108,9 @@ C + + CX サポートがユーザー定義*ref クラス*と*ref 構造体*、�
   
  private 基本 ref クラスがなくても、既存の unsealed クラスから派生できます。 独自のプログラム構造をモデル化するかまたはコードの再利用を有効にするために、オブジェクト階層構造を必要とする場合は、private または internal の ref クラスを使用するか、さらに優れた手法として標準 C++ クラスを使用してください。 public sealed ref クラス ラッパーを通じて、プライベート オブジェクト階層構造の機能を公開できます。  
   
- C + で public または protected のコンス トラクターを持つ ref クラス + CX を宣言する必要がありますシール済みとします。 この制限が C + で記述された Windows ランタイム コンポーネントで宣言する型から継承する c# または Visual Basic など他の言語で記述されたクラスのための方法がないことを意味 + CX です。  
+ C + で public または protected のコンス トラクターを持つ ref クラス/cli CX を宣言する必要が sealed として。 この制限は、C + で記述された Windows ランタイム コンポーネントで宣言する型から継承する c# または Visual Basic などの他の言語で記述されたクラスのための方法がないことを意味/cli CX します。  
   
- ここでは、C + で継承するための基本的な規則 + CX:  
+ C + での継承の基本規則をここでは/cli CX:  
   
 -   ref クラスは多くても 1 つの基本 ref クラスからしか直接継承できませんが、任意の数のインターフェイスを実装できます。  
   

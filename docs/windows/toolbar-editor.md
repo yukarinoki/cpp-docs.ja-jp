@@ -20,38 +20,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 505b97d1b3883568fc85795898f16f9821d8b930
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 997fb10b9bbe54eb26fb2e54bf7a4892dab9b189
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011729"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590757"
 ---
 # <a name="toolbar-editor"></a>ツール バー エディター
-**ツールバー**エディターでは、ツールバーのリソースを作成し、ビットマップをツール バー リソースに変換することができます。 **ツールバー**エディターでは、グラフィカルな表示を使用して、ツールバーとほぼ同じに完成したアプリケーションでどのように表示されるがボタンを表示します。  
-  
- **ツールバー**エディターができます。  
-  
--   [新しいツールバーとボタンを作成する](../windows/creating-new-toolbars.md)  
-  
--   [ビットマップからツールバーのリソースに変換する](../windows/converting-bitmaps-to-toolbars.md)  
-  
--   [ツールバー ボタンを作成、移動、編集する](../windows/creating-moving-and-editing-toolbar-buttons.md)  
-  
--   [ツール ヒントを作成する](../windows/creating-a-tool-tip-for-a-toolbar-button.md)  
-  
- **ツールバー**エディター ウィンドウには、イメージ エディター ウィンドウと同じボタンのイメージの 2 つのビューが表示されます。 分割バーは、2 つのペインを分割します。 分割バーを左右にドラッグすると、ペインの相対サイズを変更できます。 アクティブなペインには、選択境界線が表示されます。 イメージの 2 つのビューの上にはサブジェクト ツールバーがあります。  
-  
- ![ツール バー エディター](../mfc/media/vctoolbareditor.gif "vcToolbarEditor")  
-ツール バー エディター  
-  
- **ツールバー**エディターと似ています、**イメージ**エディターの機能です。 メニュー項目、グラフィック ツール、およびビットマップのグリッドは、内のものと同じ、**イメージ**エディター。 メニュー コマンドでは、**イメージ**メニュー間を切り替えることができるように、**ツールバー**エディターと**イメージ**エディター。 使用しての詳細については、**グラフィックス**ツールバーで、**色**パレット、または**イメージ**] メニューの [を参照してください[イメージ エディター](../windows/image-editor-for-icons.md)します。  
-  
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
-  
-## <a name="requirements"></a>要件  
- MFC または ATL  
-  
-## <a name="see-also"></a>関連項目  
- [リソース エディター](../windows/resource-editors.md)   
- [メニューとその他のリソース](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
+
+**ツールバー**エディターでは、ツールバーのリソースを作成し、ビットマップをツール バー リソースに変換することができます。 **ツールバー**エディターでは、グラフィカルな表示を使用して、ツールバーとほぼ同じに完成したアプリケーションでどのように表示されるがボタンを表示します。
+
+**ツールバー**エディターができます。
+
+- [新しいツールバーとボタンを作成する](../windows/creating-new-toolbars.md)
+
+- [ビットマップからツールバーのリソースに変換する](../windows/converting-bitmaps-to-toolbars.md)
+
+- [ツールバー ボタンを作成、移動、編集する](../windows/creating-moving-and-editing-toolbar-buttons.md)
+
+- [ツール ヒントを作成する](../windows/creating-a-tool-tip-for-a-toolbar-button.md)
+
+**ツールバー**エディター ウィンドウには、イメージ エディター ウィンドウと同じボタンのイメージの 2 つのビューが表示されます。 分割バーは、2 つのペインを分割します。 分割バーを左右にドラッグすると、ペインの相対サイズを変更できます。 アクティブなペインには、選択境界線が表示されます。 イメージの 2 つのビューの上にはサブジェクト ツールバーがあります。
+
+![ツール バー エディター](../mfc/media/vctoolbareditor.gif "vcToolbarEditor")  
+ツール バー エディター
+
+**ツールバー**エディターと似ています、**イメージ**エディターの機能です。 メニュー項目、グラフィック ツール、およびビットマップのグリッドは、内のものと同じ、**イメージ**エディター。 メニュー コマンドでは、**イメージ**メニュー間を切り替えることができるように、**ツールバー**エディターと**イメージ**エディター。 使用しての詳細については、**グラフィックス**ツールバーで、**色**パレット、または**イメージ**] メニューの [を参照してください[イメージ エディター](../windows/image-editor-for-icons.md)します。
+
+マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
+
+## <a name="requirements"></a>要件
+
+MFC または ATL
+
+## <a name="see-also"></a>関連項目
+
+[リソース エディター](../windows/resource-editors.md)  
+[メニューとその他のリソース](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

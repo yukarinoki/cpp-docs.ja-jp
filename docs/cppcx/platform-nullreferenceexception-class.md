@@ -1,5 +1,5 @@
 ---
-title: Platform::nullreferenceexception クラス |Microsoft ドキュメント
+title: Platform::nullreferenceexception クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,16 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::NullReferenceException
 ms.assetid: be202577-d898-4716-83cd-e3556fe8a241
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27e74ea7753ddb66a7daa8403874e803dca91f10
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 78d0cf9ec994d21845e1910b5affc9e3b5d74a8d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088077"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590328"
 ---
 # <a name="platformnullreferenceexception-class"></a>Platform::NullReferenceException クラス
 null オブジェクト参照を逆参照しようするとスローされます。  
@@ -32,11 +32,11 @@ null オブジェクト参照を逆参照しようするとスローされます
 public ref class NullReferenceException : COMException,    IException,    IPrintable,    IEquatable  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  詳細については、 [COMException](../cppcx/platform-comexception-class.md) クラスを参照してください。  
   
 ### <a name="requirements"></a>要件  
- **クライアントがサポートされる最小:** Windows 8  
+ **クライアントがサポートされている最小:** Windows 8  
   
  **サポートされているサーバーの最小値:** Windows Server 2012  
   

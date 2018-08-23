@@ -1,5 +1,5 @@
 ---
-title: _InterlockedDecrement の組み込み関数 |Microsoft ドキュメント
+title: _InterlockedDecrement の組み込み関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -54,17 +54,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eacca8241bc32965d3f22fcb3e4d5ed8b72a1651
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a30a09b9feae0d5c7e0d24967c133f076286f2fc
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338989"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42540728"
 ---
 # <a name="interlockeddecrement-intrinsic-functions"></a>_InterlockedDecrement の組み込み関数
 **Microsoft 固有の仕様**  
   
- Win32 のコンパイラ組み込みサポートを提供[!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] [InterlockedDecrement](http://msdn.microsoft.com/library/ms683580.aspx)関数。  
+Win32 Windows SDK のコンパイラ組み込みサポートを提供します。 [InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement)関数。  
   
 ## <a name="syntax"></a>構文  
   
@@ -118,19 +118,19 @@ __int64 _InterlockedDecrement64_nf(
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`_InterlockedDecrement`、`_InterlockedDecrement16`、`_InterlockedDecrement64`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_InterlockedDecrement`、`_InterlockedDecrement16`、`_InterlockedDecrement64`|x86、ARM、x64|  
 |`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `_InterlockedDecrement` には、格納するデータ型、およびプロセッサ固有の取得または解放のセマンティクスを使用するかどうかに基づき、異なるいくつかの種類があります。  
   
  `_InterlockedDecrement` 関数は 32 ビット整数値で動作しますが、`_InterlockedDecrement16` は 16 ビット整数値および `_InterlockedDecrement64` は 64 ビット整数値で動作します。  
   
  ARM プラットフォームでは、クリティカル セクションの最初と最後などで取得と解放のセマンティクスを必要とする場合は、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスの付いた組み込みはメモリ バリアとしては機能しません。  
   
- `lpAddend` パラメーターが指す変数は 32 ビットの境界に合わせて調整する必要があります。そのようにしない場合、この関数はマルチプロセッサの x86 システムおよび x 86 システム以外のシステムで失敗します。 詳細については、次を参照してください。[整列](../cpp/align-cpp.md)です。  
+ `lpAddend` パラメーターが指す変数は 32 ビットの境界に合わせて調整する必要があります。そのようにしない場合、この関数はマルチプロセッサの x86 システムおよび x 86 システム以外のシステムで失敗します。 詳細については、次を参照してください。 [align](../cpp/align-cpp.md)します。  
   
  これらのルーチンは、組み込みとしてのみ使用できます。  
   
@@ -203,6 +203,6 @@ void __cdecl SimpleThread(void* pParam) {
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [コンパイラ組み込み関数](../intrinsics/compiler-intrinsics.md)   
+ [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)   
  [キーワード](../cpp/keywords-cpp.md)   
  [x86 コンパイラとの競合](../build/conflicts-with-the-x86-compiler.md)

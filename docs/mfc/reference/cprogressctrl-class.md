@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca1c4d1d2a7c37838a57a55189330465cd0700e8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 93a637c1374e77127a5bf71c6fa736d2857928f1
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850158"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42544486"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl クラス
 Windows コモン プログレス バー コントロールの機能が用意されています。  
@@ -114,7 +114,7 @@ class CProgressCtrl : public CWnd
   
  `CProgressCtrl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxcmn.h  
   
 ##  <a name="cprogressctrl"></a>  CProgressCtrl::CProgressCtrl  
@@ -350,10 +350,12 @@ COLORREF SetBarColor(COLORREF clrBar);
 |[in]*clrBar*|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)新しい進行状況インジケーターのバーの色を指定する値。 既定の色を使用する進行状況バーが発生するときを指定します。|  
   
 ### <a name="return-value"></a>戻り値  
- として表される、進行状況インジケーターのバーの前の色、 [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)値、またはときの進行状況インジケーターのバーの色が既定の色である場合。  
+
+として表される、進行状況インジケーターのバーの前の色、 [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)値、またはときの進行状況インジケーターのバーの色が既定の色である場合。  
   
 ### <a name="remarks"></a>Remarks  
- `SetBarColor`メソッドは、進行状況バーの色場合にのみ、設定、 [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)][テーマ](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx)は無効です。  
+
+`SetBarColor`メソッドは、進行状況バーの色場合にのみ、Windows Vista 設定[テーマ](/windows/desktop/Controls/visual-styles-overview)は無効です。  
   
  このメソッドは、送信、 [PBM_SETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760838)メッセージは、Windows SDK で説明します。  
   

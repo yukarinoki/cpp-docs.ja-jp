@@ -17,36 +17,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 36c3f76e3fc137458acddacd834563d845057a24
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 193f4d26f7e163707092f3d0bc8f981a02611a22
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646576"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603703"
 ---
 # <a name="asyncbasecurrentstatus-method"></a>AsyncBase::CurrentStatus メソッド
-現在の非同期操作の状態を取得します。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-inline void CurrentStatus(  
-   Details::AsyncStatusInternal *status  
-);  
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *status*  
- この操作が現在の状態を格納する場所です。  
-  
-## <a name="remarks"></a>Remarks  
- この操作は、スレッド セーフです。  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** async.h  
-  
- **名前空間:** Microsoft::WRL  
-  
-## <a name="see-also"></a>関連項目  
- [AsyncBase クラス](../windows/asyncbase-class.md)   
- [AsyncStatusInternal 列挙型](../windows/asyncstatusinternal-enumeration.md)
+
+現在の非同期操作の状態を取得します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+inline void CurrentStatus(
+   Details::AsyncStatusInternal *status
+);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*status*  
+この操作が現在の状態を格納する場所です。
+
+## <a name="remarks"></a>Remarks
+
+この操作は、スレッド セーフです。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** async.h
+
+**名前空間:** Microsoft::WRL
+
+## <a name="see-also"></a>関連項目
+
+[AsyncBase クラス](../windows/asyncbase-class.md)  
+[AsyncStatusInternal 列挙型](../windows/asyncstatusinternal-enumeration.md)

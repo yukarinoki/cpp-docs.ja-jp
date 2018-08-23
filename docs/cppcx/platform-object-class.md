@@ -1,5 +1,5 @@
 ---
-title: Platform::object クラス |Microsoft ドキュメント
+title: Platform::object Class |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,16 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7fc6dc1df1d1e22032dbe7322b9a6ead8334ddc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 19c302f08485b6db89ea2a6b66106244ed95b48c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091882"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601739"
 ---
 # <a name="platformobject-class"></a>Platform::Object クラス
 Ref クラスと Windows ランタイム アプリで ref 構造体に対して共通の動作を提供します。 ref クラスと ref 構造体のインスタンスは、いずれも Platform::Object^ に暗黙的に変換可能で、仮想の ToString メソッドをオーバーライドできます。  
@@ -98,8 +98,8 @@ public:int GetHashCode()
 ### <a name="return-value"></a>戻り値  
  このオブジェクトを一意に識別する数値。  
   
-### <a name="remarks"></a>コメント  
- GetHashCode を使用してマップ内のオブジェクトのキーを作成できます。 使用してハッシュ コードを比較できます[object::equals](#equals)です。 コード パスが非常に重要であるときに、`GetHashCode` と `Equals` の実行速度が不十分な場合には、基になる COM レイヤーまで移動して `IUnknown` ネイティブ ポインターの比較を実行できます。  
+### <a name="remarks"></a>Remarks  
+ GetHashCode を使用してマップ内のオブジェクトのキーを作成できます。 使用してハッシュ コードを比較できる[object::equals](#equals)します。 コード パスが非常に重要であるときに、`GetHashCode` と `Equals` の実行速度が不十分な場合には、基になる COM レイヤーまで移動して `IUnknown` ネイティブ ポインターの比較を実行できます。  
   
 
 
@@ -116,12 +116,12 @@ Object::GetType()
 ### <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  A [platform::type](../cppcx/platform-type-class.md)オブジェクトのランタイム型を記述するオブジェクト。  
   
-### <a name="remarks"></a>コメント  
- 静的な[type::gettypecode](../cppcx/platform-type-class.md#gettypecode)を取得するために使用する、 [platform::typecode 列挙](../cppcx/platform-typecode-enumeration.md)を現在の型を表す値です。 これは主に、組み込み型に使用できます。 以外の ref クラスの型コード[platform::string](../cppcx/platform-string-class.md)オブジェクト (1) です。  
+### <a name="remarks"></a>Remarks  
+ 静的な[type::gettypecode](../cppcx/platform-type-class.md#gettypecode)を取得するために使用できる、 [platform::typecode 列挙](../cppcx/platform-typecode-enumeration.md)現在の型を表す値です。 これは主に、組み込み型に使用できます。 以外の ref クラスの型コード[platform::string](../cppcx/platform-string-class.md)オブジェクト (1) です。  
   
- [::Typename](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx)クラスは Windows コンポーネントとアプリ間で型情報を渡す言語に依存しない方法として、Windows Api で使用します。 T[platform::type クラス](../cppcx/platform-type-class.md)間の変換演算子を持つ`Type`と`TypeName`です。  
+ [::Interop::typename](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx)クラスは、Windows コンポーネントとアプリ間で型情報を渡すことの言語に依存しない方法として Windows Api で使用されます。 T[platform::type Class](../cppcx/platform-type-class.md)間の変換演算子を持つ`Type`と`TypeName`します。  
   
- 使用して、 [typeid](../windows/typeid-cpp-component-extensions.md)演算子を返す、 `Platform::Type` XAML ページ間で移動するときなど、クラス名のオブジェクト。  
+ 使用して、 [typeid](../windows/typeid-cpp-component-extensions.md)演算子を返す、 `Platform::Type` XAML ページ間を移動するときなど、クラス名のオブジェクト。  
   
 ```  
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);  
@@ -130,7 +130,7 @@ rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 ## <a name="see-also"></a>関連項目  
  [Platform::type クラス](../cppcx/platform-type-class.md)   
  [Platform 名前空間](../cppcx/platform-namespace-c-cx.md)   
- [型のシステム](../cppcx/type-system-c-cx.md
+ [システムの種類](../cppcx/type-system-c-cx.md
   
 ## <a name="ctor"></a>  Object::object コンス トラクター
 Object クラスの新しいインスタンスを初期化します。  

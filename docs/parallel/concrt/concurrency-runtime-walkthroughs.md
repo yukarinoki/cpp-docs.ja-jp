@@ -1,5 +1,5 @@
 ---
-title: 同時実行ランタイムのチュートリアル |Microsoft ドキュメント
+title: 同時実行ランタイムのチュートリアル |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05e50530bf1c7aa401a7422a0119f004e30234a9
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 19de73a99384d8cea0f9f594b5a1a214f8aaaf22
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686634"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42541456"
 ---
 # <a name="concurrency-runtime-walkthroughs"></a>同時実行ランタイムのチュートリアル
-このセクションのシナリオ ベースのトピックでは、多数の同時実行ランタイムの機能を使用する方法を示します。  
+このセクションでは、シナリオ ベースのトピックでは、多くの同時実行ランタイムの機能を使用する方法を示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [チュートリアル: タスクおよび XML HTTP 要求を使用した接続](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)  
- 使用する方法を示します、 [IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908)と[IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71)ユニバーサル Windows プラットフォーム (UWP) アプリでの web サービスに HTTP GET および POST 要求を送信するタスクとインターフェイスします。  
+ 使用する方法を示しています、 [IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)と[IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback)ユニバーサル Windows プラットフォーム (UWP) アプリで web サービスに HTTP GET および POST 要求を送信するタスクとのインターフェイス。  
   
  [チュートリアル: エージェント ベースのアプリケーションの作成](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)  
  基本的なエージェント ベースのアプリケーションを作成する方法について説明します。  
@@ -39,7 +39,7 @@ ms.locfileid: "33686634"
  イメージ処理を実行する非同期メッセージ ブロックのネットワークを作成する方法を示します。  
   
  [チュートリアル: フューチャの実装](../../parallel/concrt/walkthrough-implementing-futures.md)  
- 非同期的に後で使用できる値を計算する方法を示します。  
+ 後で使用できる値を非同期的に計算する方法を示します。  
   
  [チュートリアル: join を使用したデッドロックの防止](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)  
  使用する方法を説明するために食事する哲学者の問題を使用して、 [concurrency::join](../../parallel/concrt/reference/join-class.md)アプリケーションでデッドロックを防止するクラス。  
@@ -51,12 +51,12 @@ ms.locfileid: "33686634"
  コンポーネント オブジェクト モデル (COM) を使用するアプリケーションで同時実行ランタイムを使用する方法を示します。  
   
  [チュートリアル: 既存のコードを改変して軽量タスクを使用する](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md)  
- Windows API を使用して作成しを使用するスレッド、軽量タスクを実行する既存のコードを改変する方法を示します。  
+ 軽量タスクを使用するスレッドの実行を作成し、Windows API を使用する既存のコードを改変する方法を示します。  
   
  [チュートリアル: カスタム メッセージ ブロックの作成](../../parallel/concrt/walkthrough-creating-a-custom-message-block.md)  
  優先順位によって受信メッセージを並べるカスタム メッセージ ブロックの型を作成する方法について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
  [同時実行ランタイム](../../parallel/concrt/concurrency-runtime.md)  
- Visual C の並列プログラミング フレームワークが導入されています。
+ Visual C の同時実行のプログラミング フレームワークが導入されています。
 

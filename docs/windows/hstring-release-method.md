@@ -15,26 +15,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11b7045444433865d034318bab235c133c786842
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 776b6683d0adbfbb6b8ac64c08fd7f89eaad7046
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018430"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590114"
 ---
 # <a name="hstringrelease-method"></a>HString::Release メソッド
-基になる文字列値を削除し、現在を初期化します。 **HString**オブジェクトから空の値。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
+
+基になる文字列値を削除し、現在を初期化します。 **HString**オブジェクトから空の値。
+
+## <a name="syntax"></a>構文
+
+```cpp
 void Release() throw()  
-```  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>関連項目  
- [HString クラス](../windows/hstring-class.md)
+```
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>関連項目
+
+[HString クラス](../windows/hstring-class.md)

@@ -18,35 +18,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb15dbd56656c72bc0f96491d24fc43fb96de84c
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: f419f9c370c58c1e3ebf07d3b78f15499a072d4e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017813"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603499"
 ---
 # <a name="moving-or-copying-an-accelerator-table-entry-to-another-resource-script-file"></a>アクセラレータ テーブルから別のリソース スクリプト ファイルへのエントリの移動またはコピー
-### <a name="to-move-or-copy-an-accelerator-table-entry-to-another-resource-script-file"></a>アクセラレータ テーブルのエントリを別のリソース スクリプト ファイルに移動またはコピーするには  
-  
-1.  両方のリソース スクリプト ファイルでアクセラレータ テーブルを開きます。  
-  
-    > [!NOTE]
-    >  プロジェクトに .rc ファイルがまだ含まれていない場合は、「 [リソース スクリプト ファイルの新規作成](../windows/how-to-create-a-resource-script-file.md)」を参照してください。  
-  
-2.  移動するエントリを選択します。  
-  
-3.  **編集**] メニューの [選択**コピー**または**切り取り**します。  
-  
-4.  移動先またはコピー先のリソース スクリプト ファイルでエントリを選択します。  
-  
-5.  **編集**] メニューの [選択**貼り付け**します。  
-  
-    > [!NOTE]
-    >  コピーと貼り付けのショートカット キーも使用できます。  
-  
-## <a name="requirements"></a>要件  
- Win32  
-  
-## <a name="see-also"></a>関連項目  
- [アクセラレータ テーブルの編集](../windows/editing-accelerator-tables.md)   
- [アクセラレータ エディター](../windows/accelerator-editor.md)
+
+### <a name="to-move-or-copy-an-accelerator-table-entry-to-another-resource-script-file"></a>アクセラレータ テーブルのエントリを別のリソース スクリプト ファイルに移動またはコピーするには
+
+1. 両方のリソース スクリプト ファイルでアクセラレータ テーブルを開きます。
+
+   > [!NOTE]
+   > プロジェクトに .rc ファイルがまだ含まれていない場合は、「 [リソース スクリプト ファイルの新規作成](../windows/how-to-create-a-resource-script-file.md)」を参照してください。
+
+2. 移動するエントリを選択します。
+
+3. **編集**] メニューの [選択**コピー**または**切り取り**します。
+
+4. 移動先またはコピー先のリソース スクリプト ファイルでエントリを選択します。
+
+5. **編集**] メニューの [選択**貼り付け**します。
+
+   > [!NOTE]
+   > コピーと貼り付けのショートカット キーも使用できます。
+
+## <a name="requirements"></a>要件
+
+Win32
+
+## <a name="see-also"></a>関連項目
+
+[アクセラレータ テーブルの編集](../windows/editing-accelerator-tables.md)  
+[アクセラレータ エディター](../windows/accelerator-editor.md)

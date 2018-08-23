@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4885cf6e5ddbff939e3f8e6401bd23661f13e275
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 9df970022ccc4f358864c3e3462ffea2b373cd00
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337409"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42541462"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA 構造体
 `AFX_GLOBAL_DATA` 構造体は、フレームワークを管理するため、またはアプリケーションの外観および動作をカスタマイズするために使用されるフィールドおよびメソッドを格納します。  
@@ -69,7 +69,7 @@ struct AFX_GLOBAL_DATA
 |[AFX_GLOBAL_DATA::OnSettingChange](#onsettingchange)|デスクトップのメニュー アニメーションとタスクバーの自動非表示機能の現在の状態を検出します。|  
 |[AFX_GLOBAL_DATA::RegisterWindowClass](#registerwindowclass)|指定された MFC ウィンドウ クラスを登録します。|  
 |[AFX_GLOBAL_DATA::ReleaseTaskBarRefs](#releasetaskbarrefs)|GetITaskbarList メソッドおよび GetITaskbarList3 メソッドを通じて取得されたインターフェイスを解放します。|  
-|[AFX_GLOBAL_DATA::Resume](#resume)|Windows の [テーマと視覚スタイル](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx)をサポートするメソッドにアクセスする内部関数ポインターを再初期化します。|  
+|[AFX_GLOBAL_DATA::Resume](#resume)|Windows をサポートするメソッドにアクセスする内部関数ポインターを再初期化[テーマと視覚スタイル](/windows/desktop/Controls/visual-styles-overview)します。|  
 |[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|Windows の [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540) メソッドを簡単な方法で呼び出すことができます。|  
 |[AFX_GLOBAL_DATA::SetMenuFont](#setmenufont)|指定された論理フォントを作成します。|  
 |[AFX_GLOBAL_DATA::ShellCreateItemFromParsingName](#shellcreateitemfromparsingname)|解析名からシェル項目オブジェクトを作成して初期化します。|  
@@ -109,7 +109,7 @@ struct AFX_GLOBAL_DATA
 ### <a name="inheritance-hierarchy"></a>継承階層  
  `AFX_GLOBAL_DATA`   
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー :** afxglobals.h  
   
 ### <a name="see-also"></a>関連項目  

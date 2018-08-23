@@ -18,33 +18,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a6300b02fccad672eef19b387d595a42e4b94ef2
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 757360f231f15bc7166008e0e8d003bebab9eb3d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645111"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578756"
 ---
 # <a name="displaying-or-hiding-the-colors-window-image-editor-for-icons"></a>[色] ウィンドウの表示と非表示 (アイコン用イメージ エディター)
-### <a name="to-display-colors-window"></a>[色] ウィンドウを表示するには  
-  
-1.  右クリックし、**イメージ エディター**ウィンドウ選択 **[色] ウィンドウの表示**ショートカット メニューから。  
-  
-     \- または -  
-  
-2.  をクリックして **[色] ウィンドウの表示**で、[イメージ メニュー](../windows/image-menu-image-editor-for-icons.md)します。  
-  
-### <a name="to-hide-the-colors-window"></a>[色] ウィンドウを非表示にするには  
-  
-1.  ウィンドウの固定を解除します。 使用中でない場合は、このウィンドウ自動非表示をによりします。  
-  
- \- または -  
-  
--   をクリックして、**閉じる**ボタンをクリックします。  
-  
-## <a name="requirements"></a>要件  
- なし  
-  
-## <a name="see-also"></a>関連項目  
- [[色] ウィンドウ](../windows/colors-window-image-editor-for-icons.md)   
- [アイコン用イメージ エディター](../windows/image-editor-for-icons.md)
+
+### <a name="to-display-colors-window"></a>[色] ウィンドウを表示するには
+
+1. 右クリックし、**イメージ エディター**ウィンドウ選択 **[色] ウィンドウの表示**ショートカット メニューから。
+
+   \- または -
+
+2. をクリックして **[色] ウィンドウの表示**で、[イメージ メニュー](../windows/image-menu-image-editor-for-icons.md)します。
+
+### <a name="to-hide-the-colors-window"></a>[色] ウィンドウを非表示にするには
+
+1. ウィンドウの固定を解除します。 使用中でない場合は、このウィンドウ自動非表示をによりします。
+
+\- または -
+
+- をクリックして、**閉じる**ボタンをクリックします。
+
+## <a name="requirements"></a>要件
+
+なし
+
+## <a name="see-also"></a>関連項目
+
+[[色] ウィンドウ](../windows/colors-window-image-editor-for-icons.md)  
+[アイコン用イメージ エディター](../windows/image-editor-for-icons.md)

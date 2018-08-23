@@ -29,15 +29,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: fd28a97b9e1b6238e4f231845282739a6d15aeb2
-ms.sourcegitcommit: b8b1cba85ff423142d73c888be26baa8c33f3cdc
+ms.openlocfilehash: 2cdc00280db8c764d06739499b65ff75f9e331d4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39092982"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602791"
 ---
 # <a name="graphics-operations-ccli"></a>グラフィック操作 (C++/CLI)
-[!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)] を使用したイメージの操作について説明します。  
+Windows SDK を使用して画像の操作を示します。  
   
  次のトピックでは、<xref:System.Drawing.Image?displayProperty=fullName> クラスを使用してイメージ操作を実行する方法を説明します。  
   

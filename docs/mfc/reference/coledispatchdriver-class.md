@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 927ac1c73bee38257396a98a7f7ce1487d0c134d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 61e4a36db71809dab5603211dce91fad3eedd082
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026946"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42541274"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver クラス
 OLE オートメーションのクライアント側を実装します。  
@@ -102,11 +102,11 @@ class COleDispatchDriver
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `COleDispatchDriver`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー :** afxdisp.h  
   
 ##  <a name="attachdispatch"></a>  COleDispatchDriver::AttachDispatch  
- `AttachDispatch` メンバー関数を呼び出して、 `IDispatch` ポインターを `COleDispatchDriver` オブジェクトにアタッチします。 詳細については、「 [Implementing the IDispatch Interface](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945)」を参照してください。  
+ `AttachDispatch` メンバー関数を呼び出して、 `IDispatch` ポインターを `COleDispatchDriver` オブジェクトにアタッチします。 詳細については、「 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)」を参照してください。  
   
 ```  
 void AttachDispatch(
@@ -147,17 +147,17 @@ COleDispatchDriver(LPDISPATCH lpDispatch, BOOL bAutoRelease = TRUE);
  参照すると、既存`COleDispatchDriver`オブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
- フォーム`COleDispatchDriver`( `LPDISPATCH lpDispatch`、 **BOOL**`bAutoRelease` = **TRUE**) 接続、 [IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945)インターフェイス。  
+ フォーム`COleDispatchDriver`( `LPDISPATCH lpDispatch`、 **BOOL**`bAutoRelease` = **TRUE**) 接続、 [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)インターフェイス。  
   
  フォーム`COleDispatchDriver`( **const**`COleDispatchDriver`& `dispatchSrc`)、既存のコピー`COleDispatchDriver`オブジェクトし、参照カウントをインクリメントします。  
   
- フォーム`COleDispatchDriver`() を作成、`COleDispatchDriver`オブジェクトしますが、接続していない、`IDispatch`インターフェイス。 使用する前に`COleDispatchDriver`接続する必要があります (引数なし)、`IDispatch`をいずれかを使用して[coledispatchdriver::createdispatch](#createdispatch)または[COleDispatchDriver::AttachDispatch](#attachdispatch)します。 詳細については、「 [Implementing the IDispatch Interface](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945)」を参照してください。  
+ フォーム`COleDispatchDriver`() を作成、`COleDispatchDriver`オブジェクトしますが、接続していない、`IDispatch`インターフェイス。 使用する前に`COleDispatchDriver`接続する必要があります (引数なし)、`IDispatch`をいずれかを使用して[coledispatchdriver::createdispatch](#createdispatch)または[COleDispatchDriver::AttachDispatch](#attachdispatch)します。 詳細については、「 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)」を参照してください。  
   
 ### <a name="example"></a>例  
   例をご覧ください[coledispatchdriver::createdispatch](#createdispatch)します。  
   
 ##  <a name="createdispatch"></a>  Coledispatchdriver::createdispatch  
- 作成、 [IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945)インターフェイス オブジェクトにアタッチします、`COleDispatchDriver`オブジェクト。  
+ 作成、 [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)インターフェイス オブジェクトにアタッチします、`COleDispatchDriver`オブジェクト。  
   
 ```  
 BOOL CreateDispatch(
@@ -199,7 +199,7 @@ LPDISPATCH DetachDispatch();
 ### <a name="remarks"></a>Remarks  
  `IDispatch`は解放されません。  
   
- LPDISPATCH 型の詳細については、次を参照してください。 [IDispatch インターフェイスを実装する](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945)Windows SDK に含まれています。  
+ LPDISPATCH 型の詳細については、次を参照してください。 [IDispatch インターフェイスを実装する](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCOleContainer#5](../../mfc/codesnippet/cpp/coledispatchdriver-class_3.cpp)]  
@@ -244,7 +244,7 @@ void AFX_CDECL InvokeHelper(
  呼び出されるメソッドまたはプロパティを識別します。  
   
  *wflags が*  
- 呼び出しのコンテキストを記述するフラグ`IDispatch::Invoke`します。 . 使用可能な値の一覧は、次を参照してください。、 *wFlags*パラメーター [idispatch::invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx) Windows SDK にします。  
+ 呼び出しのコンテキストを記述するフラグ`IDispatch::Invoke`します。 . 使用可能な値の一覧は、次を参照してください。、 *wFlags*パラメーター [idispatch::invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) Windows SDK にします。  
   
  *変数*  
  戻り値の型を指定します。 使用可能な値については、「解説」を参照してください。  
@@ -281,9 +281,9 @@ void AFX_CDECL InvokeHelper(
   
  *PbParamInfo*引数は、スペースで区切られたリストの**vts _** 定数。 スペース (コンマではない) で区切られるこれらの値の 1 つ以上は、関数のパラメーター リストを指定します。 使用可能な値が付いて、 [EVENT_CUSTOM](event-maps.md#event_custom)マクロ。  
   
- この関数は VARIANTARG 値にパラメーターを変換し、呼び出す、 [idispatch::invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx)メソッド。 `Invoke` の呼び出しに失敗すると、この関数は、例外をスローします。 SCODE (状態コード) がによって返される場合`IDispatch::Invoke`DISP_E_EXCEPTION は、この関数がスローされます、 [COleException](../../mfc/reference/coleexception-class.md)オブジェクト。 それ以外の場合、スロー、 [COleDispatchException](../../mfc/reference/coledispatchexception-class.md)。  
+ この関数は VARIANTARG 値にパラメーターを変換し、呼び出す、 [idispatch::invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)メソッド。 `Invoke` の呼び出しに失敗すると、この関数は、例外をスローします。 SCODE (状態コード) がによって返される場合`IDispatch::Invoke`DISP_E_EXCEPTION は、この関数がスローされます、 [COleException](../../mfc/reference/coleexception-class.md)オブジェクト。 それ以外の場合、スロー、 [COleDispatchException](../../mfc/reference/coledispatchexception-class.md)。  
   
- 詳細については、次を参照してください[VARIANTARG](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)、 [IDispatch インターフェイスを実装する](http://msdn.microsoft.com/library/windows/desktop/ms221037\(v=vs.85\).aspx)、 [idispatch::invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx)、および[COM エラー コードの構造。](http://msdn.microsoft.com/library/windows/desktop/ms690088) Windows SDK にします。  
+ 詳細については、次を参照してください[VARIANTARG](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)、 [IDispatch インターフェイスを実装する](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)、 [idispatch::invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)、および[COM エラー コードの構造。](http://msdn.microsoft.com/library/windows/desktop/ms690088) Windows SDK にします。  
   
 ### <a name="example"></a>例  
   例をご覧ください[coledispatchdriver::createdispatch](#createdispatch)します。  
@@ -313,7 +313,7 @@ LPDISPATCH m_lpDispatch;
 ### <a name="remarks"></a>Remarks  
  `m_lpDispatch`データ メンバーが型 LPDISPATCH のパブリック変数です。  
   
- 詳細については、次を参照してください。 [IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
   例をご覧ください[COleDispatchDriver::AttachDispatch](#attachdispatch)します。  
@@ -340,7 +340,7 @@ operator LPDISPATCH();
  [!code-cpp[NVC_MFCOleContainer#8](../../mfc/codesnippet/cpp/coledispatchdriver-class_6.cpp)]  
   
 ##  <a name="releasedispatch"></a>  COleDispatchDriver::ReleaseDispatch  
- リリース、`IDispatch`接続します。 詳細については、次を参照してください[IDispatch インターフェイスを実装する。](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945)  
+ リリース、`IDispatch`接続します。 詳細については、次を参照してください[IDispatch インターフェイスを実装する。](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)  
   
 ```  
 void ReleaseDispatch();

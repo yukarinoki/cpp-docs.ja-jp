@@ -70,12 +70,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff18423aa981fc453850084bb2f315a5600cf6fd
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
-ms.translationtype: HT
+ms.openlocfilehash: 68f2e8e199fb22295ebd1fd25bbd3332c63e03b6
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027639"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42539091"
 ---
 # <a name="colesafearray-class"></a>COleSafeArray クラス
 任意の型および次元の配列を扱うクラスです。  
@@ -143,7 +143,7 @@ class COleSafeArray : public tagVARIANT
   
  `COleSafeArray`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー :** afxdisp.h  
   
 ##  <a name="accessdata"></a>  COleSafeArray::AccessData  
@@ -379,7 +379,7 @@ VARIANT Detach();
  基になる`VARIANT`値、`COleSafeArray`オブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
- 関数では、セーフ配列内のデータをデタッチを設定して、 [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) VT_EMPTY にオブジェクトの。 Windows 関数を呼び出すことによって、配列を解放する呼び出し元の責任[VariantClear](http://msdn.microsoft.com/28741d81-8404-4f85-95d3-5c209ec13835)します。  
+ 関数では、セーフ配列内のデータをデタッチを設定して、 [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) VT_EMPTY にオブジェクトの。 Windows 関数を呼び出すことによって、配列を解放する呼び出し元の責任[VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear)します。  
   
  エラー、関数、 [COleException](../../mfc/reference/coleexception-class.md)します。  
   
@@ -607,7 +607,7 @@ void PutElement(
  配列に割り当てるデータへのポインター。 バリアント型が VT_DISPATCH、VT_UNKNOWN、および VT_BSTR ポインターは、別のレベルの間接参照を必要としません。  
   
 ### <a name="remarks"></a>Remarks  
- この関数は、Windows の機能を自動的に呼び出します[SafeArrayLock](https://msdn.microsoft.com/library/windows/desktop/ms221492.aspx)と[SafeArrayUnlock](https://msdn.microsoft.com/library/windows/desktop/ms221246.aspx)前に、と後、要素を割り当てます。 データ要素が文字列、オブジェクト、バリアントの場合は、関数によって適切にコピーされ、既存の要素が文字列、オブジェクト、バリアントの場合は、関数によって適切にクリアされます。  
+ この関数は、Windows の機能を自動的に呼び出します[SafeArrayLock](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraylock)と[SafeArrayUnlock](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearrayunlock)前に、と後、要素を割り当てます。 データ要素が文字列、オブジェクト、バリアントの場合は、関数によって適切にコピーされ、既存の要素が文字列、オブジェクト、バリアントの場合は、関数によって適切にクリアされます。  
   
  配列は多重にロックできるため、配列が別の操作によってロックされている間に要素を配列に配置できることに注意してください。  
   

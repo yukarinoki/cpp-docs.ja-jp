@@ -1,5 +1,5 @@
 ---
-title: Platform::writeonlyarray クラス |Microsoft ドキュメント
+title: Platform::writeonlyarray クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,21 +16,21 @@ dev_langs:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f5c1f1f0260d4f1d1c4a6fb640b7cbf1e9d3f2f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3871b6ad3aead88c32c906726f689d949eb945ba
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091488"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603347"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray クラス
 メソッドで設定する配列を呼び出し元から渡すときに入力パラメーターとして使用される 1 次元配列を表します。  
   
- この ref クラスは vccorlib.h でプライベートとして宣言されています。したがって、メタデータには出力されず、C++ からのみ使用できます。 このクラスは、呼び出し元が割り当てた配列を受け取る入力パラメーターとして使用することのみを目的としています。 ユーザー コードから構築することはできません。 このクラスでは、C++ メソッドでその配列に直接書き込むことができます。このパターンは、 *FillArray* パターンと呼ばれます。 詳細については、次を参照してください。 [Array と WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)です。  
+ この ref クラスは vccorlib.h でプライベートとして宣言されています。したがって、メタデータには出力されず、C++ からのみ使用できます。 このクラスは、呼び出し元が割り当てた配列を受け取る入力パラメーターとして使用することのみを目的としています。 ユーザー コードから構築することはできません。 このクラスでは、C++ メソッドでその配列に直接書き込むことができます。このパターンは、 *FillArray* パターンと呼ばれます。 詳細については、次を参照してください。 [Array と WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,15 +43,15 @@ private ref class WriteOnlyArray<T, 1>
 ### <a name="public-methods"></a>パブリック メソッド  
  これらのメソッドのアクセシビリティは内部です。つまり、これらのメソッドには C++ アプリまたはコンポーネント内でのみアクセスできます。  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 
 |[Writeonlyarray::begin](#begin)|配列の最初の要素を指す反復子 |。  
-|[Writeonlyarray::data](#data)|データ バッファーへのポインターです |。  
+|[Writeonlyarray::data](#data)|データ バッファーへのポインター |。  
 |[Writeonlyarray::end](#end)|1 つ後ろの配列の最後の要素を指す反復子 |。  
-|[Writeonlyarray::fastpass](#fastpass)|配列が、システムによって透過的に実行される最適化です FastPass 機構を使用できるかどうかを示します。 これは、コードで使用しない |  
-|[Writeonlyarray::length](#length)|配列内の要素の数を返します |。  
-|[Writeonlyarray::set](#set)|指定した要素を指定された値に設定します |。  
+|[Writeonlyarray::fastpass](#fastpass)|配列が、システムによって透過的に実行される最適化です FastPass 機構を使用できるかどうかを示します。 コードでこれを使用しません |  
+|[Writeonlyarray::length](#length)|配列の要素の数を返します |。  
+|[Writeonlyarray::set](#set)|指定した要素を指定した値に設定します |。  
 
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
@@ -76,7 +76,7 @@ T* begin() const;
 ### <a name="return-value"></a>戻り値  
  配列内の最初の要素へのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この反復子は、配列の要素を操作するために `std::sort` などの STL アルゴリズムと共に使用できます。  
   
 
@@ -109,7 +109,7 @@ T* end() const;
 ### <a name="return-value"></a>戻り値  
  配列内の最後の要素の 1 つ後ろを指すポインター反復子。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この反復子は、配列要素に対して `std::sort` などの操作を実行するために STL アルゴリズムと共に使用できます。  
   
 
@@ -186,10 +186,10 @@ T& set(
   
 
   
-### <a name="remarks"></a>コメント  
- HRESULT 値を解釈する方法の詳細については、次を参照してください。 [COM エラー コードの構造体](http://go.microsoft.com/fwlink/p/?LinkId=262045)です。  
+### <a name="remarks"></a>Remarks  
+ HRESULT 値を解釈する方法の詳細については、次を参照してください。 [COM エラー コードの構造](http://go.microsoft.com/fwlink/p/?LinkId=262045)します。  
   
   
 ## <a name="see-also"></a>関連項目  
  [プラットフォーム Namespace](platform-namespace-c-cx.md)   
- [C++ での Windows ランタイム コンポーネントを作成します。](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
+ [C++ で Windows ランタイム コンポーネントの作成](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

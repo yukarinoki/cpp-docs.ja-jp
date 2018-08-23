@@ -1,5 +1,5 @@
 ---
-title: /Zc:strictStrings (文字列リテラルの型変換の無効化) |Microsoft ドキュメント
+title: /Zc:strictStrings (文字列リテラルの型変換の無効化) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7025a4bae2d4a7474cb366b041a3c62f3d7db819
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5055d7d1e7804512fa8f1a72bbdb27c483d6fdd3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379940"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42581140"
 ---
 # <a name="zcstrictstrings-disable-string-literal-type-conversion"></a>/Zc:strictStrings (文字列リテラル型の変換の無効化)
 
@@ -36,11 +36,11 @@ ms.locfileid: "32379940"
 
 > **/Zc:strictStrings**[**-**]
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-場合 **/Zc:strictStrings**が指定されている、コンパイラは C++ の標準`const`型としての文字列リテラルの制限 'の配列`const char`' または 'の配列`const wchar_t`' 宣言によって、します。 文字列リテラルは変更不可であり、文字列リテラルの内容を変更しようとすると、実行時にアクセス違反エラーが発生します。 文字列ポインターは `const` として宣言して文字列リテラルで初期化するか、明示的な `const_cast` を使用して非 `const` ポインターを初期化する必要があります。 既定では、場合 **/Zc:strictStrings-** を指定すると、コンパイラは C++ の標準を強制していない`const`文字列リテラルを使用して初期化された文字列ポインターを修飾します。
+場合 **/Zc:strictStrings**を指定すると、コンパイラは、標準の C++`const`型として、文字列リテラルの 'の配列`const char`' または 'の配列`const wchar_t`' 宣言によって、します。 文字列リテラルは変更不可であり、文字列リテラルの内容を変更しようとすると、実行時にアクセス違反エラーが発生します。 文字列ポインターは `const` として宣言して文字列リテラルで初期化するか、明示的な `const_cast` を使用して非 `const` ポインターを初期化する必要があります。 既定では、場合 **/Zc:strictStrings-** を指定すると、コンパイラは C++ の標準を強制しない`const`文字列リテラルを使用して初期化された文字列ポインターの制限があります。
 
-**/Zc:strictStrings**オプションは既定でオフになっています。 [寛容/-](permissive-standards-conformance.md)コンパイラ オプションでは、このオプションは、暗黙的に設定しますを使用してオーバーライドできます **/Zc:strictStrings-** です。
+**/Zc:strictStrings**オプションは既定でオフです。 [/Permissive -](permissive-standards-conformance.md)コンパイラ オプションでは、このオプションは、暗黙的に設定しますを使用してオーバーライドできます **/Zc:strictStrings-** します。
 
 使用して、 **/Zc:strictStrings**不適切なコードのコンパイルを回避するにはオプションです。 この例では、単純な宣言エラーが実行時のクラッシュを招くことを示しています。
 
@@ -53,7 +53,7 @@ int main() {
 }
 ```
 
-ときに **/Zc:strictStrings**は有効な場合、同じコードによってエラーが報告の宣言で`str`です。
+ときに **/Zc:strictStrings**が有効にすると、同じコードでの宣言でエラーを報告`str`します。
 
 ```cpp
 // strictStrings_on.cpp
@@ -68,17 +68,17 @@ int main() {
 `auto` を使用して文字列ポインターを宣言すると、正しい `const` ポインター型宣言がコンパイラによって作成されます。 `const` ポインターの内容を変更しようとすると、コンパイラによってエラーとして報告されます。
 
 > [!NOTE]
-> C++ 標準ライブラリ[!INCLUDE[cpp_dev12_long](../../build/reference/includes/cpp_dev12_long_md.md)]はサポートしていません、 **/Zc:strictStrings**デバッグ コンパイラ オプションを構築します。 いくつかを表示する場合は[C2665](../../error-messages/compiler-errors-2/compiler-error-c2665.md)ビルドでエラー出力、原因が考えられます。
+> Visual Studio 2013 での C++ 標準ライブラリはサポートしていません、 **/Zc:strictStrings**デバッグ コンパイラ オプションをビルドします。 いくつか表示される場合[C2665](../../error-messages/compiler-errors-2/compiler-error-c2665.md)ビルドでエラー出力、原因があります。
 
 Visual C++ の準拠に関する問題について詳しくは、「 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)」をご覧ください。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[のプロジェクト プロパティの操作](../../ide/working-with-project-properties.md)です。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 
 1. 選択、**構成プロパティ** > **C/C++** > **コマンドライン**プロパティ ページ。
 
-1. 変更、**追加オプション**含めるプロパティを **/Zc:strictStrings**を選択し**OK**です。
+1. 変更、**追加オプション**含めるプロパティを **/Zc:strictStrings**選び、 **OK**します。
 
 ## <a name="see-also"></a>関連項目
 

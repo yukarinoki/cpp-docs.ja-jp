@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79ec82ec00e912d597cfeda608e1b77cf08ab4e8
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 0a3a3fa5d6e9836f7de949d4c13ec19f90dbcb02
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466944"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572898"
 ---
 # <a name="string-and-character-literals--c"></a>文字列リテラルと文字リテラル (C++)
 C++ はさまざまな文字列と文字型をサポートし、これらの型のリテラル値を表す方法を提供しています。 ソース コードでは、文字セットを使用して文字リテラルと文字列リテラルの内容を表現します。 ユニバーサル文字名とエスケープ文字を使用すると、基本ソース文字セットのみを使用してあらゆる文字列を表現できます。 未加工文字列リテラルを使用すると、エスケープ文字の使用を避けられるとともに、全種類の文字列リテラルを表すことができます。 余分な構築または変換手順を実行することなく、std::string リテラルを作成することもできます。  
@@ -206,7 +206,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
   
  ユニバーサル文字名は、サロゲート コード ポイントの範囲 D800 ～ DFFF 内の値をエンコードできません。 Unicode サロゲート ペアの場合は、 `\UNNNNNNNN`を使用してユニバーサル文字名を指定します。ここで、NNNNNNNN は文字用の 8 桁のコード ポイントです。 コンパイラは、必要に応じて、サロゲート ペアを生成します。  
   
- C++03 では、ユニバーサル文字名で表現できたのは文字のサブセットに過ぎず、許可されていた一部のユニバーサル文字名は実際には正しい Unicode 文字を表していませんでした。 これは、C++11 の標準で修正されました。 C++11 では、文字リテラルと文字列リテラルの両方と識別子でユニバーサル文字名を使用できます。  ユニバーサル文字名の詳細については、次を参照してください。[文字セット](../cpp/character-sets.md)します。 Unicode について詳しくは、「 [Unicode](http://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx)」をご覧ください。 サロゲート ペアについて詳しくは、「 [サロゲート ペアと補助文字](http://msdn.microsoft.com/library/dd374069\(v=vs.85\).aspx)」をご覧ください。  
+ C++03 では、ユニバーサル文字名で表現できたのは文字のサブセットに過ぎず、許可されていた一部のユニバーサル文字名は実際には正しい Unicode 文字を表していませんでした。 これは、C++11 の標準で修正されました。 C++11 では、文字リテラルと文字列リテラルの両方と識別子でユニバーサル文字名を使用できます。  ユニバーサル文字名の詳細については、次を参照してください。[文字セット](../cpp/character-sets.md)します。 Unicode について詳しくは、「 [Unicode](http://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx)」をご覧ください。 サロゲート ペアの詳細については、次を参照してください。[サロゲート ペアと補助文字](/windows/desktop/Intl/surrogates-and-supplementary-characters)します。  
   
 ## <a name="string-literals"></a>文字列リテラル  
  文字列リテラルは文字のシーケンスを表し、その全体が、null で終わる文字列を形成します。 文字列は二重引用符で囲む必要があります。 文字列リテラルの種類は次のとおりです。  

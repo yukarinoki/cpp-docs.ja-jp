@@ -1,5 +1,5 @@
 ---
-title: SQL Server で検証可能なアセンブリの使用 (C + + CLI) |Microsoft ドキュメント
+title: SQL Server で検証可能なアセンブリの使用 (C +/cli CLI) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,27 +15,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f172eea3108771e129636e9aa95d721d45c99609
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b35675ba0081ec4ea7a1c9559f9a8fb71347cd54
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168647"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583820"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>SQL Server での確認可能なアセンブリの使用 (C++/CLI)
-ダイナミック リンク ライブラリ (Dll) としてパッケージ化、拡張ストアド プロシージャは、Visual C で開発した関数を使用して SQL Server の機能を拡張する手段を提供します。 拡張ストアド プロシージャは、Dll 内で関数として実装されます。 以外の関数、拡張ストアド プロシージャも定義[ユーザー定義型](../cpp/classes-and-structs-cpp.md)と[集計関数](http://msdn.microsoft.com/en-us/de255454-f45e-4281-81f9-bc61893ac5da)(SUM、AVG など)。  
+ダイナミック リンク ライブラリ (Dll) としてパッケージ化、拡張ストアド プロシージャは、Visual C で開発した関数を使用して SQL Server の機能を拡張する手段を提供します。 拡張ストアド プロシージャは Dll 内の関数として実装されます。 拡張ストアド プロシージャも定義するだけでなく、機能[ユーザー定義型](../cpp/classes-and-structs-cpp.md)と[集計関数](http://msdn.microsoft.com/en-us/de255454-f45e-4281-81f9-bc61893ac5da)(SUM、AVG など)。  
   
- クライアントは、拡張ストアド プロシージャを実行するとき、DLL の SQL Server 検索は、拡張ストアド プロシージャに関連付けられているされ、DLL を読み込みます。 SQL Server では、要求された拡張ストアド プロシージャを呼び出すし、指定したセキュリティ コンテキストで実行します。 拡張格納されているプロシージャ パスの結果が設定され、パラメーターをサーバーに返します。  
+ クライアントは、拡張ストアド プロシージャを実行するとき、SQL Server DLL を検索は、拡張ストアド プロシージャに関連付けられているし、DLL を読み込みます。 SQL Server では、要求された拡張ストアド プロシージャを呼び出すし、指定したセキュリティ コンテキストで実行します。 拡張にストアド パスの結果が設定され、サーバーにパラメーターを返しますのプロシージャをします。  
   
- [!INCLUDE[sqprsqlong](../dotnet/includes/sqprsqlong_md.md)] TRANSACT-SQL (T-SQL) は、SQL Server に検証可能なアセンブリをインストールすることを許可するのには、拡張機能を提供します。 SQL Server のアクセス許可セットは、次のセキュリティ レベルでセキュリティ コンテキストを指定します。  
+ SQL Server TRANSACT-SQL (T-SQL) は、SQL Server に検証可能なアセンブリをインストールすることを許可する拡張機能を提供します。 SQL Server のアクセス許可セットでは、次のセキュリティ レベルで、セキュリティ コンテキストを指定します。  
   
--   制限なしのモード: ご自身の責任でコードを実行コードはタイプ セーフではありません。  
+-   無制限のモード: コードを各自の責任で実行コードはタイプ セーフではありません。  
   
 -   セーフ モード: 検証可能なタイプ セーフなコードの実行/clr:safe と共にコンパイル。  
   
- セーフ モードでは、タイプ セーフなする検証可能なアセンブリが実行される必要があります。  
+ セーフ モードでは、実行されるアセンブリにタイプセーフにする必要があります。  
   
- 作成し、SQL Server に検証可能なアセンブリを読み込む、次のように TRANSACT-SQL コマンド CREATE ASSEMBLY と DROP ASSEMBLY を使用します。  
+ 作成しを SQL Server に検証可能なアセンブリを読み込むようアセンブリの作成と DROP ASSEMBLY は、TRANSACT-SQL コマンドを使用します。  
   
 ```  
 CREATE ASSEMBLY <assemblyName> FROM <'Assembly UNC Path'> WITH   
@@ -43,9 +43,9 @@ CREATE ASSEMBLY <assemblyName> FROM <'Assembly UNC Path'> WITH
 DROP ASSEMBLY <assemblyName>  
 ```  
   
- PERMISSION_SET コマンドでは、セキュリティ コンテキストを指定し、無制限、SAFE、または拡張の値を持つことができます。  
+ PERMISSION_SET コマンドでは、セキュリティ コンテキストを指定し、無制限、SAFE、または拡張値を持つことができます。  
   
- さらに、クラスでメソッド名にバインドする関数の作成コマンドを使用することができます。  
+ さらに、クラスでメソッド名にバインドする関数の作成コマンドを使用できます。  
   
 ```  
 CREATE FUNCTION <FunctionName>(<FunctionParams>)  
@@ -54,7 +54,7 @@ RETURNS returnType
 ```  
   
 ## <a name="example"></a>例  
- 次の SQL スクリプト (たとえば、名前付き"MyScript.sql") は、SQL Server にアセンブリを読み込みますおよびクラスのメソッドを使用可能します。  
+ 次の SQL スクリプト (たとえば、名前付き"MyScript.sql") は、SQL Server にアセンブリを読み込み、クラスのメソッドを使用できるように。  
   
 ```  
 -- Create assembly without external access  
@@ -78,12 +78,12 @@ select dbo.GetQuoteNoEA('MSFT')
 go  
 ```  
   
- SQL スクリプトは、SQL クエリ アナライザーまたは sqlcmd.exe ユーティリティを使用して、コマンドラインで、対話的に実行できます。 次のコマンド ライン MyServer に接続する、既定のデータベースを使用して、信頼関係接続を使用して、入力 MyScript.sql、され MyResult.txt を出力します。  
+ SQL スクリプトは、SQL クエリ アナライザーまたは sqlcmd.exe ユーティリティを使用したコマンドラインで、対話的に実行できます。 次のコマンド ライン MyServer に接続する、既定のデータベースを使用して、信頼関係接続を使用して、MyScript.sql、入出力 MyResult.txt します。  
   
 ```  
 sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt  
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [方法:/clr:safe に移行 (C + + CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)   
+ [方法:/clr:safe に移行する (C +/cli CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)   
  [クラスと構造体](../cpp/classes-and-structs-cpp.md)

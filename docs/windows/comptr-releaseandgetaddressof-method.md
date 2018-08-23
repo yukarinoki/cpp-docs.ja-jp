@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3bded6992abc5b22e2c02a3364431a3f68b76ad6
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: e3efdce7cde39431a8d6f097aace2ed2f5a66b4d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649849"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589948"
 ---
 # <a name="comptrreleaseandgetaddressof-method"></a>ComPtr::ReleaseAndGetAddressOf メソッド
-これに関連付けられているインターフェイスを解放**ComPtr**しのアドレスを取得し、 [ptr _](../windows/comptr-ptr-data-member.md)データ メンバーは、リリースされたインターフェイスへのポインターが含まれています。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-T** ReleaseAndGetAddressOf();  
-```  
-  
-## <a name="return-value"></a>戻り値  
- アドレス、 [ptr _](../windows/comptr-ptr-data-member.md)データ メンバー **ComPtr**します。  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** client.h  
-  
- **名前空間:** Microsoft::WRL  
-  
-## <a name="see-also"></a>関連項目  
- [ComPtr クラス](../windows/comptr-class.md)   
- [ComPtr::ptr_ データ メンバー](../windows/comptr-ptr-data-member.md)
+
+これに関連付けられているインターフェイスを解放**ComPtr**しのアドレスを取得し、 [ptr _](../windows/comptr-ptr-data-member.md)データ メンバーは、リリースされたインターフェイスへのポインターが含まれています。
+
+## <a name="syntax"></a>構文
+
+```cpp
+T** ReleaseAndGetAddressOf();
+```
+
+## <a name="return-value"></a>戻り値
+
+アドレス、 [ptr _](../windows/comptr-ptr-data-member.md)データ メンバー **ComPtr**します。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** client.h
+
+**名前空間:** Microsoft::WRL
+
+## <a name="see-also"></a>関連項目
+
+[ComPtr クラス](../windows/comptr-class.md)  
+[ComPtr::ptr_ データ メンバー](../windows/comptr-ptr-data-member.md)

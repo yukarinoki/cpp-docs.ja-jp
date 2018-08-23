@@ -17,38 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 640a28752a3bc37322737888ffc38706068118b4
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 80c369d5ccbcc9f83d0f3ff90769a3df5d7ec177
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652712"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603413"
 ---
 # <a name="classfactoryqueryinterface-method"></a>ClassFactory::QueryInterface メソッド
-パラメーターで指定されたインターフェイスへのポインターを取得します。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-STDMETHOD(  
-   QueryInterface  
-)(REFIID riid, _Deref_out_ void **ppvObject);  
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *riid*  
- インターフェイス ID。  
-  
- *ppvObject*  
- ときにこの操作が完了すると、パラメーターで指定されたインターフェイスへのポインター *riid*します。  
-  
-## <a name="return-value"></a>戻り値  
- 成功した場合は S_OK、そうでない場合は失敗を示す HRESULT。  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** module.h  
-  
- **名前空間:** Microsoft::WRL  
-  
-## <a name="see-also"></a>関連項目  
- [ClassFactory クラス](../windows/classfactory-class.md)
+
+パラメーターで指定されたインターフェイスへのポインターを取得します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+STDMETHOD(
+   QueryInterface
+)(REFIID riid, _Deref_out_ void **ppvObject);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*riid*  
+インターフェイス ID。
+
+*ppvObject*  
+ときにこの操作が完了すると、パラメーターで指定されたインターフェイスへのポインター *riid*します。
+
+## <a name="return-value"></a>戻り値
+
+成功した場合は S_OK、そうでない場合は失敗を示す HRESULT。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** module.h
+
+**名前空間:** Microsoft::WRL
+
+## <a name="see-also"></a>関連項目
+
+[ClassFactory クラス](../windows/classfactory-class.md)
