@@ -1,5 +1,5 @@
 ---
-title: CPaneDivider クラス |Microsoft ドキュメント
+title: CPaneDivider クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -94,17 +94,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7315adc855b0bfbe1cc4ffae87c416fbaa584d57
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: d19ede21d90353f9741a5a1250eddf049de71aa6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079365"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42545807"
 ---
 # <a name="cpanedivider-class"></a>CPaneDivider クラス
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。  
   
- `CPaneDivider`クラスが 2 つのペインに分割し、ペインの 2 つのグループに分割またはウィンドウ メイン フレーム ウィンドウのクライアント領域からのグループを区切るです。  
+ `CPaneDivider`クラスが 2 つのペインに分割し、ペインの 2 つのグループに分割またはウィンドウ メイン フレーム ウィンドウのクライアント領域からのグループを区切る。  
   
 ## <a name="syntax"></a>構文  
   
@@ -163,27 +163,27 @@ class CPaneDivider : public CBasePane
   
 |名前|説明|  
 |----------|-----------------|  
-|[CPaneDivider::GetPanes](#getpanes)|格納されているペインの一覧を返します、 [CPaneContainer クラス](../../mfc/reference/cpanecontainer-class.md)です。 このメソッドは、既定ペインの区分線に対してのみ呼び出す必要があります。|  
-|[CPaneDivider::GetPaneDividers](#getpanedividers)|格納されているペインの区分線の一覧を返します、 [CPaneContainer クラス](../../mfc/reference/cpanecontainer-class.md)です。 このメソッドは、既定ペインの区分線に対してのみ呼び出す必要があります。|  
+|[CPaneDivider::GetPanes](#getpanes)|内に存在するウィンドウの一覧を返します、 [CPaneContainer クラス](../../mfc/reference/cpanecontainer-class.md)します。 このメソッドは、既定ペインの区分線に対してのみ呼び出す必要があります。|  
+|[CPaneDivider::GetPaneDividers](#getpanedividers)|内に存在するペインの区分線の一覧を返します、 [CPaneContainer クラス](../../mfc/reference/cpanecontainer-class.md)します。 このメソッドは、既定ペインの区分線に対してのみ呼び出す必要があります。|  
   
 ### <a name="data-members"></a>データ メンバー  
   
 |name|説明|  
 |----------|-----------------|  
-|[CPaneDivider::m_nDefaultWidth](#m_ndefaultwidth)|アプリケーションのすべてのペインの区分線のピクセル単位の既定の幅を指定します。|  
-|[CPaneDivider::m_pSliderRTC](#m_psliderrtc)|ランタイム クラス情報へのポインターを保持する`CPaneDivider`-派生オブジェクト。|  
+|[CPaneDivider::m_nDefaultWidth](#m_ndefaultwidth)|アプリケーションのすべてのペインの区分線のピクセル単位で既定の幅を指定します。|  
+|[CPaneDivider::m_pSliderRTC](#m_psliderrtc)|ランタイム クラス情報へのポインターを保持する`CPaneDivider`の派生オブジェクト。|  
   
 ## <a name="remarks"></a>Remarks  
- フレームワークによって作成`CPaneDivider`ペインがドッキングされているときに自動的にオブジェクトします。  
+ フレームワークは作成`CPaneDivider`ペインがドッキングされているときに自動的にオブジェクトします。  
   
- ペイン分割バーの 2 つの種類があります。  
+ ウィンドウの区分線の 2 種類あります。  
   
--   既定ペインの区分線は、ウィンドウのグループがメイン フレーム ウィンドウの一辺にドッキングされているときに作成されます。 既定ペインの区分線へのポインターを保持する、 [CPaneContainerManager クラス](../../mfc/reference/cpanecontainermanager-class.md)し、ウィンドウのグループでほとんどの操作をリダイレクト (、ウィンドウのサイズ変更や、別のドッキングなどウィンドウまたはコンテナー) のコンテナー マネージャーをします。 各ドッキング ペインでは、その既定ペインの区分線へのポインターを保持します。  
+-   既定ペインの区分線は、ウィンドウのグループがメイン フレーム ウィンドウの端にドッキングされているときに作成されます。 既定ペイン分割バーへのポインターを保持する、 [CPaneContainerManager クラス](../../mfc/reference/cpanecontainermanager-class.md)とグループのペインでほとんどの操作をリダイレクト (など、ウィンドウのサイズを変更または別のドッキング ペインまたはコンテナー) のコンテナー マネージャーをします。 各ドッキング ペインは、その既定の分割線へのポインターを保持します。  
   
--   標準のペインの区分線は、コンテナー内の 2 つのペインを分割するだけです。 詳細については、次を参照してください。 [CPaneContainer クラス](../../mfc/reference/cpanecontainer-class.md)です。  
+-   標準のペインの区切り線は、コンテナー内の 2 つのペインを分割するだけです。 詳細については、次を参照してください。 [CPaneContainer クラス](../../mfc/reference/cpanecontainer-class.md)します。  
   
 ## <a name="example"></a>例  
- `CWorkspaceBar` オブジェクトから `CPaneDivider` オブジェクトを取得する方法を次の例に示します。 このコード スニペットの一部である、 [MDI タブ デモ サンプル](../../visual-cpp-samples.md)です。  
+ `CWorkspaceBar` オブジェクトから `CPaneDivider` オブジェクトを取得する方法を次の例に示します。 このコード スニペットの一部、 [MDI タブのデモ サンプル](../../visual-cpp-samples.md)します。  
   
  [!code-cpp[NVC_MFC_MDITabsDemo#5](../../mfc/reference/codesnippet/cpp/cpanedivider-class_1.cpp)]  
   
@@ -192,7 +192,7 @@ class CPaneDivider : public CBasePane
   
  [CBasePane](../../mfc/reference/cbasepane-class.md) [CPaneDivider](../../mfc/reference/cpanedivider-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxPaneDivider.h  
   
 ##  <a name="setautohidemode"></a>  CPaneDivider::SetAutoHideMode  
@@ -440,7 +440,7 @@ const CBasePane* GetFirstPane() const;
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="getpanedividers"></a>  CPaneDivider::GetPaneDividers  
- 格納されているペインの区分線の一覧を返します、 [CPaneContainer クラス](../../mfc/reference/cpanecontainer-class.md)です。 このメソッドは、既定ペインの区分線に対してのみ呼び出す必要があります。  
+ 内に存在するペインの区分線の一覧を返します、 [CPaneContainer クラス](../../mfc/reference/cpanecontainer-class.md)します。 このメソッドは、既定ペインの区分線に対してのみ呼び出す必要があります。  
   
 ```  
 void GetPaneDividers(CObList& lstSliders);
@@ -448,10 +448,10 @@ void GetPaneDividers(CObList& lstSliders);
   
 ### <a name="parameters"></a>パラメーター  
  [out]*lstSliders*  
- ペインのコンテナーに格納されているペインの区分線の一覧が含まれています。  
+ ウィンドウのコンテナー内に存在するペインの区分線の一覧が含まれています。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、既定のペイン分割バーのみを呼び出す必要があります。 既定ペインの区分線は、ウィンドウ全体のコンテナーのサイズを変更する区分線です。  
+ このメソッドは、既定ペイン区分線のみを呼び出す必要があります。 既定のウィンドウの区分線は、ウィンドウ全体のコンテナーのサイズを変更する区分線です。  
   
 ##  <a name="getpanedividerstyle"></a>  CPaneDivider::GetPaneDividerStyle  
 
@@ -465,7 +465,7 @@ DWORD GetPaneDividerStyle() const;
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="getpanes"></a>  CPaneDivider::GetPanes  
- 格納されているペインの一覧を返します、 [CPaneContainer クラス](../../mfc/reference/cpanecontainer-class.md)です。 既定ペインの区分線を取得する場合のみ、このメソッドを呼び出す必要があります。  
+ 内に存在するウィンドウの一覧を返します、 [CPaneContainer クラス](../../mfc/reference/cpanecontainer-class.md)します。 このメソッドは、既定ペインの区分線を取得する場合のみ呼び出す必要があります。  
   
 ```  
 void GetPanes(CObList& lstBars);
@@ -476,7 +476,7 @@ void GetPanes(CObList& lstBars);
  ウィンドウのコンテナーに格納されているペインの一覧が含まれています。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、既定のペイン分割バーのみを呼び出す必要があります。 既定ペインの区分線は、ウィンドウ全体のコンテナーのサイズを変更する区分線です。  
+ このメソッドは、既定ペイン区分線のみを呼び出す必要があります。 既定のウィンドウの区分線は、ウィンドウ全体のコンテナーのサイズを変更する区分線です。  
   
 ##  <a name="getrootcontainerrect"></a>  CPaneDivider::GetRootContainerRect  
 
@@ -592,14 +592,14 @@ virtual void Move(
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="m_psliderrtc"></a>  CPaneDivider::m_pSliderRTC  
- ランタイム クラス情報へのポインターを保持する`CPaneDivider`-派生オブジェクト。  
+ ランタイム クラス情報へのポインターを保持する`CPaneDivider`の派生オブジェクト。  
   
 ```  
 AFX_IMPORT_DATA static CRuntimeClass* m_pSliderRTC;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- カスタムのウィンドウの境界線を作成する場合は、このメンバー変数を設定します。 これにより、ウィンドウが描画されると、ペイン分割バーを作成するためにフレームワークです。  
+ カスタムのウィンドウの区分線を作成する場合は、このメンバー変数を設定します。 これにより、フレームワークは、ウィンドウが描画されるときに、ペイン分割バーを作成します。  
   
 ### <a name="example"></a>例  
  次の例は、設定する方法を示します、`m_pSliderRTC`メンバー変数。  

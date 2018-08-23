@@ -1,5 +1,5 @@
 ---
-title: CDockingPanesRow クラス |Microsoft ドキュメント
+title: CDockingPanesRow クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -100,17 +100,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42680d4cd79c5079703a94361403efd858ef80f2
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 128334398b268c91ec7e6b938bcbd0d2e6e37dd0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955268"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538320"
 ---
 # <a name="cdockingpanesrow-class"></a>CDockingPanesRow クラス
 ドッキング サイトの同じ水平または垂直の行 (列) に配置されるペインの一覧を管理します。  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。  
   
 ## <a name="syntax"></a>構文  
   
@@ -186,7 +186,7 @@ class CDockingPanesRow : public CObject
   
  [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxDockingPanesRow.h  
   
 ##  <a name="addpane"></a>  CDockingPanesRow::AddPane  
@@ -224,7 +224,7 @@ virtual void AddPaneFromRow(
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="arrangepanes"></a>  CDockingPanesRow::ArrangePanes  
- 指定された余白に従って行でウィンドウをドッキングと間隔パラメーターを配置します。  
+ 指定された余白に従って行でウィンドウのドッキングと間隔パラメーターを配置します。  
   
 ```  
 virtual void ArrangePanes(
@@ -234,13 +234,13 @@ virtual void ArrangePanes(
   
 ### <a name="parameters"></a>パラメーター  
  [in]*nMargin*  
- 行の左上隅から最初のペインのピクセル単位でのオフセットを指定します。  
+ 行の左上隅から最初のウィンドウのピクセル単位のオフセットを指定します。  
   
  [in]*nSpacing*  
- (ピクセル単位)、ペイン間で、間隔を指定します。  
+ ウィンドウのピクセル単位で間隔を指定します。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドを呼び出して、ドッキングする行でウィンドウを整列します。 このメソッドを呼び出した後に呼び出す必要があります`CDockingPanesRow::FixupVirtualRects(FALSE, NULL)`です。  
+ 行が、ドッキング ウィンドウを整列するには、このメソッドを呼び出します。 このメソッドを呼び出した後に呼び出す必要がある`CDockingPanesRow::FixupVirtualRects(FALSE, NULL)`します。  
   
 ##  <a name="calcfixedlayout"></a>  CDockingPanesRow::CalcFixedLayout  
 

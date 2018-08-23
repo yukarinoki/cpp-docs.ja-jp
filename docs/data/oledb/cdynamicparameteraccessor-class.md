@@ -101,12 +101,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b29a5d0538cb3608ceeb5ec09bd629b1de18b4b6
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: a39e4d600ab5bb209a74ce74dd37af2eb496de0d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338221"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572475"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor クラス
 
@@ -304,7 +304,7 @@ DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
  [in]パラメーターの数 (1 からのオフセット)。 パラメーターの 0 は、戻り値については予約されています。 パラメーターの数は、SQL またはストアド プロシージャの呼び出し内での順序に基づくパラメーターのインデックスです。 参照してください[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md)例についてはします。  
   
  *pStatus*  
- [out]指定したパラメーターの DBSTATUS 状態を格納する変数へのポインター。 DBSTATUS 値については、次を参照してください。[状態](https://msdn.microsoft.com/library/ms722617.aspx)で、 *OLE DB プログラマーズ リファレンス*、または DBSTATUS oledb.h で検索します。  
+ [out]指定したパラメーターの DBSTATUS 状態を格納する変数へのポインター。 DBSTATUS 値については、次を参照してください。[状態](/previous-versions/windows/desktop/ms722617\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*、または DBSTATUS oledb.h で検索します。  
   
 ### <a name="remarks"></a>Remarks  
  最初のオーバーライド**true**成功した場合または**false**失敗します。 2 つ目は、指定されたパラメーターの状態を表すメモリへのポインターをオーバーライドします。
@@ -407,7 +407,7 @@ bool SetParam(TCHAR* pParamName,
  [in]バッファーに書き込まれるデータを含むメモリへのポインター。  
   
  *status*  
- [in]DBSTATUS 列の状態。 DBSTATUS 値については、次を参照してください。[状態](https://msdn.microsoft.com/library/ms722617.aspx)で、 *OLE DB プログラマーズ リファレンス*、または DBSTATUS oledb.h で検索します。  
+ [in]DBSTATUS 列の状態。 DBSTATUS 値については、次を参照してください。[状態](/previous-versions/windows/desktop/ms722617\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*、または DBSTATUS oledb.h で検索します。  
   
 ### <a name="return-value"></a>戻り値  
  返します**true**成功した場合または**false**失敗します。  
@@ -449,7 +449,7 @@ bool SetParamStatus(DBORDINAL nParam,
  [in]パラメーターの数 (1 からのオフセット)。 パラメーターの 0 は、戻り値については予約されています。 パラメーターの数は、SQL またはストアド プロシージャの呼び出し内での順序に基づくパラメーターのインデックスです。 参照してください[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md)例についてはします。  
   
  *status*  
- [in]指定したパラメーターの DBSTATUS 状態です。 DBSTATUS 値については、次を参照してください。[状態](https://msdn.microsoft.com/library/ms722617.aspx)で、 *OLE DB プログラマーズ リファレンス*、または DBSTATUS oledb.h で検索します。  
+ [in]指定したパラメーターの DBSTATUS 状態です。 DBSTATUS 値については、次を参照してください。[状態](/previous-versions/windows/desktop/ms722617\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*、または DBSTATUS oledb.h で検索します。  
   
 ### <a name="remarks"></a>Remarks  
  返します**true**成功した場合または**false**失敗します。 
@@ -475,7 +475,7 @@ bool SetParamString(DBORDINAL nParam,
  [in]ANSI へのポインター (**CHAR**) または Unicode (**WCHAR**)、指定されたパラメーターのデータの文字列します。 Oledb.h DBSTATUS を参照してください。  
   
  *status*  
- [in]指定したパラメーターの DBSTATUS 状態です。 DBSTATUS 値については、次を参照してください。[状態](https://msdn.microsoft.com/library/ms722617.aspx)で、 *OLE DB プログラマーズ リファレンス*、または DBSTATUS oledb.h で検索します。  
+ [in]指定したパラメーターの DBSTATUS 状態です。 DBSTATUS 値については、次を参照してください。[状態](/previous-versions/windows/desktop/ms722617\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*、または DBSTATUS oledb.h で検索します。  
   
 ### <a name="remarks"></a>Remarks  
  返します**true**成功した場合または**false**失敗します。  

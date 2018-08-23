@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e1521c73f92bbb941b1060cb5cf2051ead88ffb
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 45632fb870f1586453c2c591ef8edce23e625002
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339593"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541098"
 ---
 # <a name="cedit-class"></a>CEdit Class
 Windows のエディット コントロールの機能が用意されています。  
@@ -238,7 +238,7 @@ class CEdit : public CWnd
   
  `CEdit`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="canundo"></a>  CEdit::CanUndo  
@@ -798,7 +798,7 @@ int LineLength(int nLine = -1) const;
 ### <a name="return-value"></a>戻り値  
  単一行のエディット コントロールでは、戻り値は、編集コントロール内のテキストの長さ、Tchar が。  
   
- 複数行のエディット コントロールでは、戻り値で指定された行の長さ、Tchar、 *n 行*パラメーター。 [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)]テキスト、長さが、行のバイト数。 Unicode テキストの長さは行の文字の数。 長さでは、行の末尾にあるキャリッジ リターン文字は含まれません。  
+ 複数行のエディット コントロールでは、戻り値で指定された行の長さ、Tchar、 *n 行*パラメーター。 ANSI テキスト、長さは、行のバイト数です。Unicode テキストの長さは、行の文字の数です。 長さでは、行の末尾にあるキャリッジ リターン文字は含まれません。  
   
  場合、 *n 行*パラメーターがコントロール内の文字数よりも多い、戻り値は 0。  
   

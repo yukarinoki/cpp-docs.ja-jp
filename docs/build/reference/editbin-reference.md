@@ -1,5 +1,5 @@
 ---
-title: EDITBIN リファレンス |Microsoft ドキュメント
+title: EDITBIN リファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,20 +19,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c20191fdb133fe09ed4f6a462cd777098acd5f05
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6e1e9963328d328767d97b3af34e20b1d2a1840b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372309"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572280"
 ---
 # <a name="editbin-reference"></a>EDITBIN リファレンス
-Microsoft COFF Binary ファイル エディター (EDITBIN です。EXE) では、オブジェクト ファイル形式 COFF (Common) のバイナリ ファイルを変更します。 EDITBIN を使用して、オブジェクト ファイル、実行可能ファイル、およびダイナミック リンク ライブラリ (DLL) を変更することができます。  
+Microsoft COFF バイナリ ファイル エディター (EDITBIN します。EXE) は、一般的なオブジェクト ファイル形式 (COFF) のバイナリ ファイルを変更します。 EDITBIN を使用して、オブジェクト ファイル、実行可能ファイル、およびダイナミック リンク ライブラリ (DLL) を変更することができます。  
   
 > [!NOTE]
->  このツールは、[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] コマンド プロンプトからのみ開始できます。 システム コマンド プロンプトやエクスプローラーからは開始できません。  
+>  このツールは、Visual Studio コマンド プロンプトからのみ開始できます。 システム コマンド プロンプトやエクスプローラーからは開始できません。  
   
- EDITBIN はにより生成されるファイルで使用するため使用できません、 [/GL](../../build/reference/gl-whole-program-optimization.md)コンパイラ オプション。 /GL で生成されたバイナリ ファイルに変更を加えるには、再コンパイルとリンクで行う必要があります。  
+ EDITBIN がで生成されたファイルで使用できる、 [/GL](../../build/reference/gl-whole-program-optimization.md)コンパイラ オプション。 /GL で生成されたバイナリ ファイルの変更は、再コンパイルとリンクで実現する必要があります。  
   
 -   [EDITBIN コマンドライン](../../build/reference/editbin-command-line.md)  
   

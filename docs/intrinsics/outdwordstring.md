@@ -1,5 +1,5 @@
 ---
-title: _ _outdwordstring |Microsoft ドキュメント
+title: _ _outdwordstring |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 942a98b9a9d43d349f6273b77c8d56967b927eae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: adc104e3325a2a9fda922f8ef32aa84982f35366
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331761"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539074"
 ---
 # <a name="outdwordstring"></a>__outdwordstring
 **Microsoft 固有の仕様**  
   
- 生成、`rep outsd`命令で、送信`Count`ダブルワードを開始位置として`Buffer`出力で指定された I/O ポート`Port`です。  
+ 生成、`rep outsd`命令で、送信`Count`ダブルワードを開始位置として`Buffer`で指定した I/O ポートから`Port`。  
   
 ## <a name="syntax"></a>構文  
   
@@ -48,17 +48,17 @@ void __outdwordstring(
  指定したポートを送信するデータへのポインター。  
   
  [入力] `Count`  
- 送信のダブルワードの数。  
+ 送信するダブルワードの数。  
   
 ## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__outdwordstring`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outdwordstring`|x86、x64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このルーチンは、組み込みとしてのみ使用できます。  
   
 **Microsoft 固有の仕様はここまで**  

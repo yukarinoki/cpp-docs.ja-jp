@@ -1,5 +1,5 @@
 ---
-title: マルチ スレッドの C プログラムのサンプル |Microsoft ドキュメント
+title: マルチ スレッドの C プログラムのサンプル |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,21 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1584d52f9ea543c95363a0f7f03cdad80442ee1c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1899187bd1ff8315300a1d60b24dbfb04f77a15a
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687993"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42540679"
 ---
 # <a name="sample-multithread-c-program"></a>マルチスレッドの C サンプル プログラム
-Bounce.c は新たに作成するサンプルのマルチ スレッド プログラム スレッドごとに、文字 **、** または**A**が型指定されています。 各スレッドは、それぞれ異なる色のハッピー フェイスを画面上で移動します。 最大で 32 のスレッドを作成できます。 プログラムの通常の終了が発生したときに`q`または**Q**は型指定します。 コンパイルと Bounce.c のリンクについては、次を参照してください。[コンパイルとリンクのマルチ スレッド プログラム](../parallel/compiling-and-linking-multithread-programs.md)です。  
+Bounce.c は新たに作成するサンプルのマルチ スレッド プログラム スレッドごとに、文字`a`または`A`は型指定されています。 各スレッドは、それぞれ異なる色のハッピー フェイスを画面上で移動します。 最大で 32 のスレッドを作成できます。 プログラムの正常終了が発生したときに`q`または`Q`は型指定します。 コンパイルと Bounce.c のリンクについては、次を参照してください。[のコンパイルとリンクのマルチ スレッド プログラム](../parallel/compiling-and-linking-multithread-programs.md)します。  
   
 ## <a name="example"></a>例  
   
 ### <a name="code"></a>コード  
   
-```  
+```c  
 // sample_multithread_c_program.c  
 // compile with: /c  
 //  
@@ -219,4 +219,5 @@ q
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [C と Win32 を使用するマルチスレッド](../parallel/multithreading-with-c-and-win32.md)
+
+[C と Win32 を使用するマルチスレッド](../parallel/multithreading-with-c-and-win32.md)

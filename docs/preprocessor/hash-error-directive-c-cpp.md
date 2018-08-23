@@ -1,5 +1,5 @@
 ---
-title: '#エラー ディレクティブ (C/C++) |Microsoft ドキュメント'
+title: '#エラー ディレクティブ (C/C++) |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba4f0e06798bc6419f8db0471f19588039eb679a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d2da939fe52e41e122ecd4926e34fb9c4be735ae
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33905573"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539854"
 ---
 # <a name="error-directive-cc"></a>#error ディレクティブ (C/C++)
-`#error` ディレクティブは、コンパイル時にユーザー指定のエラー メッセージを出力して、コンパイルを終了します。  
+**#Error**ディレクティブはコンパイル時にユーザーが指定したエラー メッセージを出力して、コンパイルを終了します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,8 +34,9 @@ ms.locfileid: "33905573"
 #errortoken-string  
 ```  
   
-## <a name="remarks"></a>コメント  
- このディレクティブを出力するエラー メッセージには、*トークン文字列*パラメーター。 `token-string` パラメーターは、マクロ展開の対象になりません。 このディレクティブは、プリプロセス時にプログラムの不整合や制約の違反を開発者に通知するために最も役立ちます。 次の例は、プリプロセス中のエラーの処理を示しています。  
+## <a name="remarks"></a>Remarks  
+ 
+このディレクティブが生成されるエラー メッセージが含まれています、*トークン文字列*パラメーター。 *トークン文字列*パラメーター、マクロの展開対象になりません。 このディレクティブは、プリプロセス時にプログラムの不整合や制約の違反を開発者に通知するために最も役立ちます。 次の例は、プリプロセス中のエラーの処理を示しています。  
   
 ```  
 #if !defined(__cplusplus)  
@@ -44,4 +45,5 @@ ms.locfileid: "33905573"
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [プリプロセッサ ディレクティブ](../preprocessor/preprocessor-directives.md)
+ 
+[プリプロセッサ ディレクティブ](../preprocessor/preprocessor-directives.md)

@@ -114,12 +114,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 219f0bc1f5b9959a424a8c3a63ec0c4e3505eb55
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: d843b3b491973c32d8fb5ff3160327a9e82223c8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852589"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42543212"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 `CMFCTabCtrl`クラスは、タブ コントロールの機能を提供します。 タブ コントロールは、上または下にフラットまたは 3D のタブを持つ、ドッキング可能なウィンドウを表示します。 タブにはテキストとイメージを表示でき、アクティブな状態のときに色を変更することもできます。  
@@ -221,7 +221,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
   
 -   切り離し可能なタブ付きウィンドウです。  
   
- `CMFCTabCtrl`  ダイアログ ボックスでは、クラスを使用できるコントロールのようにバーのドッキングを使用するアプリケーションのためのものですが、[!INCLUDE[ofprexcel](../../mfc/reference/includes/ofprexcel_md.md)]と[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]します。 詳細については、次を参照してください。 [CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)します。  
+ `CMFCTabCtrl`  ダイアログ ボックスでは、クラスを使用できますが、コントロールなど、Microsoft Excel、Visual Studio のバーのドッキングを使用するアプリケーションのためのものです。 詳細については、次を参照してください。 [CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)します。  
   
  アプリケーションでタブ コントロールのドッキングをサイズ変更、追加するこれらの手順に従います。  
   
@@ -254,7 +254,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
  [!code-cpp[NVC_MFC_StateCollection#1](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]  
 [!code-cpp[NVC_MFC_StateCollection#3](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_2.cpp)]  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxtabctrl.h  
   
 ##  <a name="activatemditab"></a>  CMFCTabCtrl::ActivateMDITab  
@@ -269,7 +269,7 @@ void ActivateMDITab(int nTab = -1);
  表示、または現在アクティブなタブを指定する-1 タブの 0 から始まるインデックス。  
   
 ##  <a name="allowdestroyemptytabbedpane"></a>  CMFCTabCtrl::AllowDestroyEmptyTabbedPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。  
   
 ```  
 virtual BOOL AllowDestroyEmptyTabbedPane() const;  

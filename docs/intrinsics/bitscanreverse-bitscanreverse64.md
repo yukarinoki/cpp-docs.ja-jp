@@ -1,5 +1,5 @@
 ---
-title: _BitScanReverse、_BitScanReverse64 |Microsoft ドキュメント
+title: _BitScanReverse、_BitScanReverse64 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35d51f3e7eaf0daeca006ff669398c9a3727a098
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9fe9fc90556c15cdab13f68647f07b877aa15abf
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323652"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538546"
 ---
 # <a name="bitscanreverse-bitscanreverse64"></a>_BitScanReverse、_BitScanReverse64
 **Microsoft 固有の仕様**  
@@ -60,8 +60,8 @@ unsigned char _BitScanReverse64(
   
 |組み込み|アーキテクチャ|Header|  
 |---------------|------------------|------------|  
-|`_BitScanReverse`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
-|`_BitScanReverse64`|ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]||  
+|`_BitScanReverse`|x86、ARM、x64|\<intrin.h>|  
+|`_BitScanReverse64`|ARM、x64||  
   
 ## <a name="example"></a>例  
   

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb3337ffa82bf65ba0d4ff010d0b70afd7a99d7
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 00204e283feb14e6b8e831a12e8bd9ad3e352adc
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848211"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571421"
 ---
 # <a name="introduction-to-com-and-atl"></a>COM と ATL の概要
 このセクションでは、COM と ATL の概要を提供します。  
@@ -35,7 +35,7 @@ ms.locfileid: "37848211"
   
 ## <a name="related-sections"></a>関連項目  
  [コンポーネント オブジェクト モデル](http://msdn.microsoft.com/library/windows/desktop/ms694363)  
- [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] Com 素材  
+ Com の Windows SDK マテリアル  
   
  [ATL](../atl/active-template-library-atl-concepts.md)  
  Active Template Library を使用してプログラミングする方法に関する概念説明のトピックへのリンクを提供します。  

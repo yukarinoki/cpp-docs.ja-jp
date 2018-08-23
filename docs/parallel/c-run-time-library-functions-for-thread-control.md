@@ -1,5 +1,5 @@
 ---
-title: スレッド コントロールのための C ランタイム ライブラリ関数 |Microsoft ドキュメント
+title: スレッド コントロールのための C ランタイム ライブラリ関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,36 +19,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a505bae156edba6798812b807d7ab5c6ea9e396
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7a08ba6c5343fda19bab823b9a415db18b745e2a
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685763"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42538286"
 ---
 # <a name="c-run-time-library-functions-for-thread-control"></a>スレッド コントロールのための C ランタイム ライブラリ関数
 Win32 プログラムはすべて、スレッドを少なくとも 1 つ持っています。 どのスレッドでも新しいスレッドを作成できます。 スレッドには、作業をすばやく完了して終了するものもあれば、プログラムの実行中アクティブ状態を続けるものもあります。  
   
- LIBCMT および MSVCRT C ランタイム ライブラリは、スレッドの作成および終了のため、次の関数を提供します。 [_beginthread、_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)と[_endthread、_endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)です。  
+LIBCMT と MSVCRT の C ランタイム ライブラリは、スレッドの作成および終了のため、次の機能を提供します。 [_beginthread、_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)と[_endthread、_endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)します。  
   
- `_beginthread` 関数および `_beginthreadex` 関数は、新しいスレッドを作成し、スレッドが正常に作成されるとスレッド識別子を返します。 スレッドは、実行を完了した時点で自動的に終了するか、`_endthread` または `_endthreadex` を呼び出すことによってそのスレッド自体を終了します。  
+`_beginthread` 関数および `_beginthreadex` 関数は、新しいスレッドを作成し、スレッドが正常に作成されるとスレッド識別子を返します。 スレッドは、実行を完了した時点で自動的に終了するか、`_endthread` または `_endthreadex` を呼び出すことによってそのスレッド自体を終了します。  
   
 > [!NOTE]
->  Libcmt.lib を使用してビルドしたプログラムから C ランタイム ルーチンを呼び出す場合は、`_beginthread` 関数または `_beginthreadex` 関数でスレッドを起動する必要があります。 Win32 の `ExitThread` 関数および `CreateThread` 関数は使用しないでください。 また、C ランタイム ライブラリのデータ構造体へアクセス中のスレッドがあって、その完了を待っている複数のスレッドが存在する場合に `SuspendThread` を使うと、デッドロック状態になります。  
+> Libcmt.lib を使用してビルドしたプログラムから C ランタイム ルーチンを呼び出す場合は、`_beginthread` 関数または `_beginthreadex` 関数でスレッドを起動する必要があります。 Win32 の `ExitThread` 関数および `CreateThread` 関数は使用しないでください。 また、C ランタイム ライブラリのデータ構造体へアクセス中のスレッドがあって、その完了を待っている複数のスレッドが存在する場合に `SuspendThread` を使うと、デッドロック状態になります。  
   
 ##  <a name="_core_the__beginthread_function"></a> _Beginthread および _beginthreadex 関数  
- `_beginthread` 関数および `_beginthreadex` 関数は、新しいスレッドを作成します。 スレッドは、プロセスのコードやデータ セグメントをプロセス内の他のスレッドと共有しますが、各スレッドには、独自のレジスタ値、スタック領域、および現在の命令アドレスがあります。 それぞれのスレッドに CPU 時間が与えられるので、プロセス中のすべてのスレッドを同時に実行できます。  
+ 
+`_beginthread` 関数および `_beginthreadex` 関数は、新しいスレッドを作成します。 スレッドは、プロセスのコードやデータ セグメントをプロセス内の他のスレッドと共有しますが、各スレッドには、独自のレジスタ値、スタック領域、および現在の命令アドレスがあります。 それぞれのスレッドに CPU 時間が与えられるので、プロセス中のすべてのスレッドを同時に実行できます。  
   
- `_beginthread` および`_beginthreadex`に似ていますが、 [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) Win32 API の関数が、これらの相違点。  
+`_beginthread` `_beginthreadex`に似ていますが、 [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) Win32 api 関数が、これらの違い。  
   
--   これらの関数は、特定の C ランタイム ライブラリ変数を初期化します。 これは、スレッドで C ランタイム ライブラリを使う場合に重要です。  
+- これらの関数は、特定の C ランタイム ライブラリ変数を初期化します。 これは、スレッドで C ランタイム ライブラリを使う場合に重要です。  
   
--   `CreateThread` は、セキュリティ属性を制御します。 CreateThread を使うと、一時的に停止状態になっているスレッドの実行を再開できます。  
+- `CreateThread` は、セキュリティ属性を制御します。 CreateThread を使うと、一時的に停止状態になっているスレッドの実行を再開できます。  
   
  `_beginthread` および `_beginthreadex` は、正常に終了した場合は新しいスレッドのハンドルを、エラーが発生した場合はエラー コードをそれぞれ返します。  
   
 ##  <a name="_core_the__endthread_function"></a> _Endthread、_endthreadex 関数  
- [_Endthread](../c-runtime-library/reference/endthread-endthreadex.md)関数によって作成されたスレッドの終了`_beginthread`(と同様に、`_endthreadex`によって作成されたスレッドが終了`_beginthreadex`)。 これらの関数が終了すると、スレッドは自動的に終了します。 `_endthread` および `_endthreadex` は、スレッドの内部条件に基づいて終了させる場合に便利です。 たとえば、通信ポートを制御できないときに、通信処理専用のスレッドを終了する場合があります。  
+ 
+[_Endthread](../c-runtime-library/reference/endthread-endthreadex.md)関数によって作成されたスレッドを終了します`_beginthread`(同様に、`_endthreadex`によって作成されたスレッドを終了します`_beginthreadex`)。 これらの関数が終了すると、スレッドは自動的に終了します。 `_endthread` および `_endthreadex` は、スレッドの内部条件に基づいて終了させる場合に便利です。 たとえば、通信ポートを制御できないときに、通信処理専用のスレッドを終了する場合があります。  
   
 ## <a name="see-also"></a>関連項目  
- [C と Win32 を使用するマルチスレッド](../parallel/multithreading-with-c-and-win32.md)
+ 
+[C と Win32 を使用するマルチスレッド](../parallel/multithreading-with-c-and-win32.md)

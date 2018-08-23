@@ -61,12 +61,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: cb2ee3fa52612ee3c6abae7a57046564c10c8afb
-ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
+ms.openlocfilehash: 573b365e0ca0d1c5b607144b1d143796e1ce927c
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39376038"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572264"
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 テンプレート クラスには、可変長のアクセスが制限されている要素のシーケンスを順序付けを制御するオブジェクトについて説明します。 コンテナー アダプターを使用する`priority_queue`優先順位キューとの基になるコンテナーを管理します。  
@@ -855,7 +855,7 @@ void push(value_type val);
 ```  
   
 ### <a name="remarks"></a>Remarks  
- メンバー関数は、値を持つ要素を挿入する`val`に、被制御シーケンスはヒープ規範を維持するために、被制御シーケンスの順序を変更するとします。 これを使用するには、キューに別の要素を追加します。  
+ メンバー関数は、値を持つ要素を挿入する`val`被制御シーケンスにし、ヒープ規範を維持するために、被制御シーケンスを並べ替えます。 これを使用するには、キューに別の要素を追加します。  
   
 ### <a name="example"></a>例  
   

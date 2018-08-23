@@ -1,5 +1,5 @@
 ---
-title: _ _movsw |Microsoft ドキュメント
+title: _ _movsw |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1b1bb1b877c0816650b78d5c6132e526afd5586
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f25cea28d18f8377def35959be573c1a41f9098b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334442"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42543222"
 ---
 # <a name="movsw"></a>__movsw
 **Microsoft 固有の仕様**  
   
- 移動の文字列を生成します (`rep movsw`) 命令します。  
+ 移動の文字列が生成されます (`rep movsw`) 命令。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,7 +42,7 @@ void __movsw(
   
 #### <a name="parameters"></a>パラメーター  
  [出力] `Dest`  
- 操作の出力先。  
+ 操作の転送先。  
   
  [入力] `Source`  
  操作のソース。  
@@ -54,12 +54,12 @@ void __movsw(
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__movsw`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__movsw`|x86、x64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
- 結果を最初`Count`によって示される単語`Source`にコピーされます、`Dest`文字列。  
+## <a name="remarks"></a>Remarks  
+ その結果、最初の`Count`によって示される単語`Source`にコピーされます、`Dest`文字列。  
   
  このルーチンは、組み込みとしてのみ使用できます。  
   

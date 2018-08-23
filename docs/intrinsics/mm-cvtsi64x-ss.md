@@ -1,5 +1,5 @@
 ---
-title: _mm_cvtsi64x_ss |Microsoft ドキュメント
+title: _mm_cvtsi64x_ss |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb529e8aab204df85de2da0a2fdf4c820964239
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ae300569c4aa04a313f44a23fe988f1de7b826a1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340607"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539318"
 ---
 # <a name="mmcvtsi64xss"></a>_mm_cvtsi64x_ss
 **Microsoft 固有の仕様**  
   
- 生成、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]スカラー単精度浮動小数点値に変換する 64 ビット整数の拡張のバージョン (`cvtsi2ss`) 命令します。  
+ 拡張 x64 を生成します。 スカラー単精度浮動小数点値に変換する 64 ビット整数のバージョン (`cvtsi2ss`) 命令。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,7 +46,7 @@ __m128 _mm_cvtsi64x_ss(
  浮動小数点値に変換する 64 ビット整数。  
   
 ## <a name="return-value"></a>戻り値  
- `__m128`構造体の最初の浮動小数点値は変換の結果。 その他の 3 つの値から変更されていないコピー`a`です。  
+ `__m128`最初の浮動小数点値が変換の結果は、構造体。 その他の 3 つの値から変更されていないコピー`a`します。  
   
 ## <a name="requirements"></a>要件  
   
@@ -56,8 +56,8 @@ __m128 _mm_cvtsi64x_ss(
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
- `__m128`構造は XMM レジスタを表し、そのため、この組み込みの値を許可する`b`XMM に移動されるシステム メモリから登録します。  
+## <a name="remarks"></a>Remarks  
+ `__m128`構造体が、XMM レジスタを表し、値は、そのため、この組み込み`b`からシステム メモリ、XMM に移動するのには、登録します。  
   
  このルーチンは、組み込みとしてのみ使用できます。  
   

@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d2dee6c5157858fef2bd26101ac128ff3d53d23
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 991b8c55c02272613ce329be9a053ff0110f1926
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337383"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539081"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd クラス
 ウィンドウを管理するメンバーと共に、Windows のシングル ドキュメント インターフェイス (SDI: Single Document Interface) のオーバーラップ フレーム ウィンドウまたはポップアップ フレーム ウィンドウの機能を提供します。  
@@ -260,7 +260,7 @@ class CFrameWnd : public CWnd
   
  `CFrameWnd`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="activateframe"></a>  CFrameWnd::ActivateFrame  
@@ -1010,7 +1010,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
 ### <a name="remarks"></a>Remarks  
  場合の値、 *nStyle*パラメーターが有効でないこのメソッドはデバッグ モードで発生させ、アサート[CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)リリース モードでします。 このメソッドはデバッグ モードでアサートし、派生した例外を発生させます。 その他のランタイム エラーが発生した場合、 [CException](../../mfc/reference/cexception-class.md)クラス。  
   
- このメソッドに記述されたアプリケーションのメニューの状態に影響[!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)]以降。  
+ このメソッドでは、Windows Vista 以降に作成されたアプリケーションのメニューの状態に影響します。  
   
 ##  <a name="setmessagetext"></a>  CFrameWnd::SetMessageText  
  ステータス バー ペインを持つ ID は 0 の文字列を配置するには、この関数を呼び出します。  

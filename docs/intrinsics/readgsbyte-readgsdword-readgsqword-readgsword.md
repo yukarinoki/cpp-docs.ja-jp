@@ -1,5 +1,5 @@
 ---
-title: _ _readgsbyte、_ _readgsdword、_ _readgsqword、_ _readgsword |Microsoft ドキュメント
+title: _ _readgsbyte、_ _readgsdword、_ _readgsqword、_ _readgsword |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,17 +22,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e09a0732f5a93c152588f0a7fdc99c7a10787bb2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00f71faa5a7b81931c8ee3fbce00ea4b7e66249b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325280"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538306"
 ---
 # <a name="readgsbyte-readgsdword-readgsqword-readgsword"></a>__readgsbyte、__readgsdword、__readgsqword、__readgsword
 **Microsoft 固有の仕様**  
   
- GS セグメントの先頭の相対オフセットで指定された場所からメモリを読み取ります。  
+ GS セグメントの先頭の相対オフセットで指定された場所からは、メモリを読み取ります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -53,24 +53,24 @@ unsigned __int64 __readgsqword(
   
 #### <a name="parameters"></a>パラメーター  
  [入力] `Offset`  
- 先頭からのオフセット`GS`から読み取れません。  
+ 先頭からのオフセット`GS`から読み取る。  
   
 ## <a name="return-value"></a>戻り値  
- メモリの内容をバイト、ワード、ダブルワード、quadword (ように呼び出される関数の名前で示されます) の場所に`GS:[Offset]`です。  
+ メモリの内容をバイト、ワード、ダブルワード、quadword (として呼び出される関数の名前で示されます) の場所に`GS:[Offset]`します。  
   
 ## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__readgsbyte`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__readgsdword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__readgsqword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__readgsword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readgsbyte`|X64|  
+|`__readgsdword`|X64|  
+|`__readgsqword`|X64|  
+|`__readgsword`|X64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
- これらの組み込みはカーネル モードで使用可能なのみと、ルーチンは、組み込みとしてのみです。  
+## <a name="remarks"></a>Remarks  
+ これらの組み込みはカーネル モードで使用可能なのみとルーチンは組み込みとしてのみです。  
   
 **Microsoft 固有の仕様はここまで**  
   

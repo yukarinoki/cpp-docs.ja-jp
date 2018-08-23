@@ -1,5 +1,5 @@
 ---
-title: _ _movsq |Microsoft ドキュメント
+title: _ _movsq |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60e0eacba00f9c0fb397b1fe37d2be8b108b6a59
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0231c2514805479c0ec999698ebd027ab51e3119
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336974"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42545813"
 ---
 # <a name="movsq"></a>__movsq
 **Microsoft 固有の仕様**  
   
- 繰り返しの移動の文字列を生成します (`rep movsq`) 命令します。  
+ 繰り返しの移動の文字列が生成されます (`rep movsq`) 命令。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,24 +42,24 @@ void __movsq(
   
 #### <a name="parameters"></a>パラメーター  
  [出力] `Dest`  
- 操作の出力先。  
+ 操作の転送先。  
   
  [入力] `Source`  
  操作のソース。  
   
  [入力] `Count`  
- コピーする quadwords の数。  
+ コピーする (クワドワード)。 の数。  
   
 ## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__movsq`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__movsq`|X64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
- 結果を最初`Count`によって示される quadwords`Source`にコピーされます、`Dest`文字列。  
+## <a name="remarks"></a>Remarks  
+ その結果、最初の`Count`によって示される (クワドワード)。`Source`にコピーされます、`Dest`文字列。  
   
  このルーチンは、組み込みとしてのみ使用できます。  
   

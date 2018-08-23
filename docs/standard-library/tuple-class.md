@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3735b6cd8b0397ae1e1092fdb37ba094248ab507
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: dc5f5c987f8e448490a0d337517d7a0699619849
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963927"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42543150"
 ---
 # <a name="tuple-class"></a>タプル クラス
 
@@ -57,7 +57,7 @@ public:
 
 ## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは、型の N のオブジェクトを格納するオブジェクトを表します`T1`、 `T2`,..., `TN`、それぞれ、where`0 <= N <= Nmax`します。 タプル インスタンスのエクステント`tuple<T1, T2, ..., TN>`番号`N`テンプレート引数の。 テンプレート引数のインデックス`Ti`し、その型の対応する格納されている値は`i - 1`します。 そのため、1 から N へこのドキュメントで型に番号を振れば、中に、対応するインデックスは 0 ~ n-1 の範囲を値です。
+このテンプレート クラスは、型の N のオブジェクトを格納するオブジェクトを表します`T1`、 `T2`,...,`TN`をそれぞれ、`0 <= N <= Nmax`します。 タプル インスタンスのエクステント`tuple<T1, T2, ..., TN>`番号`N`テンプレート引数の。 テンプレート引数のインデックス`Ti`し、その型の対応する格納されている値は`i - 1`します。 そのため、1 から N へこのドキュメントで型に番号を振れば、中に、対応するインデックスは 0 ~ n-1 の範囲を値です。
 
 ## <a name="example"></a>例
 
@@ -127,7 +127,7 @@ The tuples in the vector are
 ( 3, 0.033, three ).
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<tuple>
 

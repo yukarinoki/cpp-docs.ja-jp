@@ -1,5 +1,5 @@
 ---
-title: _ _movsd |Microsoft ドキュメント
+title: _ _movsd |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 802e3845e72516e6dd0f09fd2a350a65565cd502
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 659da66ea74088247a9eb46ae25f9920050719a1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326925"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42544464"
 ---
 # <a name="movsd"></a>__movsd
 **Microsoft 固有の仕様**  
   
- 移動の文字列を生成します (`rep movsd`) 命令します。  
+ 移動の文字列が生成されます (`rep movsd`) 命令。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,24 +42,24 @@ void __movsd(
   
 #### <a name="parameters"></a>パラメーター  
  [出力] `Dest`  
- 操作の出力先。  
+ 操作の転送先。  
   
  [入力] `Source`  
  操作のソース。  
   
  [入力] `Count`  
- コピーのダブルワードの数。  
+ コピーするダブルワードの数。  
   
 ## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__movsd`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__movsd`|x86、x64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
- 結果を最初`Count`ダブルワードを指す`Source`にコピーされます、`Dest`文字列。  
+## <a name="remarks"></a>Remarks  
+ その結果、最初の`Count`によって示されるダブルワード`Source`にコピーされます、`Dest`文字列。  
   
  このルーチンは、組み込みとしてのみ使用できます。  
   

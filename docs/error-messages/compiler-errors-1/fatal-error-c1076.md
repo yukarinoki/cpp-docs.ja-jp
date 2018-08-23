@@ -1,5 +1,5 @@
 ---
-title: 致命的なエラー C1076 |Microsoft ドキュメント
+title: 致命的なエラー C1076 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38577e59ea874dda99d57297fc8c921f444648c2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c02cc55280202b9ce576dc1e771b3428837209c8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199486"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539328"
 ---
 # <a name="fatal-error-c1076"></a>致命的なエラー C1076
 コンパイラの制限 : 内部ヒープの上限に達しました。上限を変更するには /Zm オプションを使用してください。  
@@ -30,9 +30,9 @@ ms.locfileid: "33199486"
   
  このエラーを解決するには、次の方法があります。  
   
-1.  使用して、 [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md)で指定された値に、コンパイラ メモリ制限を設定するオプション、 [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md)エラー メッセージ。 この値に設定する方法を含む詳細については[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]で「解説」セクションを参照してください[/Zm (指定プリコンパイル済みヘッダーのメモリ割り当て制限)](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md)です。  
+1.  使用して、 [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md)で指定された値に、コンパイラ メモリ制限を設定するオプション、 [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md)エラー メッセージ。 Visual Studio でこの値を設定する方法などの詳細については、「解説」セクションを参照してください。 [/Zm (指定プリコンパイル済みヘッダーのメモリ割り当て制限)](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md)します。  
   
-2.  64 ビット オペレーティング システムで 32 ビット ホスト コンパイラを使用している場合は、代わりに 64 ビット ホスト コンパイラを使用します。 詳細については、次を参照してください。[する方法: コマンドラインで 64 ビット Visual c ツールセットを有効にする](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)です。  
+2.  64 ビット オペレーティング システムで 32 ビット ホスト コンパイラを使用している場合は、代わりに 64 ビット ホスト コンパイラを使用します。 詳細については、次を参照してください。[方法: コマンドラインで 64 ビット Visual c ツールセットを有効にする](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)します。  
   
 3.  不必要なインクルード ファイルを除去します。  
   
@@ -46,4 +46,4 @@ ms.locfileid: "33199486"
   
 8.  現在のファイルを小さなファイルに分割します。  
   
- 場合の値が指定されたビルドの開始後すぐに C1076 **/Zm**プログラムに対して高すぎる可能性があります。 削減、 **/Zm**値。
+ 場合の値が指定されたビルドの開始後すぐに C1076 **/Zm**は、プログラムの高すぎる可能性があります。 削減、 **/Zm**値。

@@ -44,12 +44,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 111b5ea4f6c25aab2abc4897c9e4bda2a14362a9
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 73be0ee1987aa60d91976c1a4bbb73ebf66e5c1c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336941"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572568"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet クラス
 継承、`DBPROPIDSET`構造体し、キー フィールドを初期化するコンス トラクターを追加するだけでなく[AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md)メソッドにアクセスします。  
@@ -80,7 +80,7 @@ class CDBPropIDSet : public tagDBPROPIDSET
 |[演算子 =](#op_equal)|割り当て ID の 1 つのプロパティの内容は別に設定します。|  
   
 ## <a name="remarks"></a>Remarks  
- OLE DB コンシューマー使用`DBPROPIDSET`をコンシューマーがプロパティの情報を取得するプロパティ Id の配列を渡すための構造体。 1 つで指定されたプロパティ[コンス トラクターは](https://msdn.microsoft.com/library/ms717981.aspx)構造体が 1 つのプロパティ セットに属しています。  
+ OLE DB コンシューマー使用`DBPROPIDSET`をコンシューマーがプロパティの情報を取得するプロパティ Id の配列を渡すための構造体。 1 つで指定されたプロパティ[コンス トラクターは](/previous-versions/windows/desktop/ms717981\(v=vs.85\))構造体が 1 つのプロパティ セットに属しています。  
 
 ## <a name="addpropertyid"></a> Cdbpropidset::addpropertyid
 プロパティ ID の設定には、プロパティ ID を追加します。  
@@ -96,7 +96,7 @@ bool AddPropertyID(DBPROPID propid) throw();
  [in]プロパティ ID に追加するプロパティ ID を設定します。  
 
 ## <a name="cdbpropidset"></a> Cdbpropidset::cdbpropidset
-コンストラクターです。 初期化します、 `rgProperties`、 `cProperties`、および (必要に応じて)`guidPropertySet`のフィールド、[コンス トラクターは](https://msdn.microsoft.com/library/ms717981.aspx)構造体。  
+コンストラクターです。 初期化します、 `rgProperties`、 `cProperties`、および (必要に応じて)`guidPropertySet`のフィールド、[コンス トラクターは](/previous-versions/windows/desktop/ms717981\(v=vs.85\))構造体。  
   
 ### <a name="syntax"></a>構文  
   
@@ -126,7 +126,7 @@ void SetGUID(const GUID& guid) throw();
   
 #### <a name="parameters"></a>パラメーター  
  *guid*  
- [in]GUID を設定するため、`guidPropertySet`のフィールド、[コンス トラクターは](https://msdn.microsoft.com/library/ms717981.aspx)構造体。  
+ [in]GUID を設定するため、`guidPropertySet`のフィールド、[コンス トラクターは](/previous-versions/windows/desktop/ms717981\(v=vs.85\))構造体。  
   
 ### <a name="remarks"></a>Remarks  
  このフィールドを設定することができます、[コンス トラクター](../../data/oledb/cdbpropidset-cdbpropidset.md)もします。 このクラスの既定のコンス トラクターを使用する場合は、この関数を呼び出します。  

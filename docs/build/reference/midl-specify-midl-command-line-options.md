@@ -1,5 +1,5 @@
 ---
-title: -MIDL (MIDL コマンド ライン オプションの指定) |Microsoft ドキュメント
+title: -MIDL (MIDL コマンド ライン オプションの指定) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,47 +21,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d125042041af1e20b6dfc4a02197c2124adbeb9a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b3f20fddd657d1e5e57caf65ecc8e2c52afbf12
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375189"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42571775"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (MIDL コマンド ライン オプションの指定)
 ```  
 /MIDL:@file  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  それぞれの文字について以下に説明します。  
   
  `file`  
- 格納しているファイルの名前[MIDL コマンド ライン オプション](http://msdn.microsoft.com/library/windows/desktop/aa366839)です。  
+ 含むファイルの名前[MIDL コマンド ライン オプション](http://msdn.microsoft.com/library/windows/desktop/aa366839)します。  
   
-## <a name="remarks"></a>コメント  
- IDL ファイルの TLB ファイルへの変換のすべてのオプションを指定する必要があります`file`です。MIDL コマンド ライン オプションは、リンカーのコマンドラインで指定できません。 /MIDL が指定されていない場合は、IDL ファイル名のみとその他のオプションはなし MIDL コンパイラが呼び出されます。  
+## <a name="remarks"></a>Remarks  
+ IDL ファイル TLB ファイルへの変換のすべてのオプションを指定する必要があります`file`;MIDL コマンド ライン オプションは、リンカーのコマンドラインで指定できません。 /MIDL が指定されていない場合は、IDL ファイル名のみとしないその他のオプション、MIDL コンパイラが呼び出されます。  
   
- ファイルは、1 行につき 1 つの MIDL コマンド ライン オプションを含める必要があります。  
+ ファイルには、1 行につき 1 つの MIDL コマンド ライン オプションを含める必要があります。  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには  
   
-1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「 [Visual C プロジェクト プロパティの設定](../../ide/working-with-project-properties.md)です。  
+1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。  
   
-2.  クリックして、**リンカー**フォルダーです。  
+2.  をクリックして、**リンカー**フォルダー。  
   
-3.  クリックして、**埋め込み IDL**プロパティ ページ。  
+3.  をクリックして、**埋め込み IDL**プロパティ ページ。  
   
-4.  変更、 **MIDL コマンド**プロパティです。  
+4.  変更、 **MIDL コマンド**プロパティ。  
   
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには  
   
--   「<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MidlCommandFile%2A>」を参照してください。  
+-   以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MidlCommandFile%2A>  
   
 ## <a name="see-also"></a>関連項目  
  [リンカー オプションの設定](../../build/reference/setting-linker-options.md)   
  [リンカー オプション](../../build/reference/linker-options.md)   
- [/IDLOUT (MIDL の出力ファイルの名前を付ける)](../../build/reference/idlout-name-midl-output-files.md)   
- [/IGNOREIDL (しない属性の処理を MIDL に挿入)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)   
+ [/IDLOUT (MIDL 出力ファイルの名前)](../../build/reference/idlout-name-midl-output-files.md)   
+ [/IGNOREIDL (を MIDL に挿入に属性を処理しない)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)   
  [/TLBOUT (名前です。TLB ファイル)](../../build/reference/tlbout-name-dot-tlb-file.md)   
  [属性付きプログラムの作成](../../windows/building-an-attributed-program.md)

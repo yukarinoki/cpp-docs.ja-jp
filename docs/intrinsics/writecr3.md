@@ -1,5 +1,5 @@
 ---
-title: __writecr3 |Microsoft ドキュメント
+title: __writecr3 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 291cb73d3469264ad3b889cbd01c59622c4a370b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1f2e88c7b4b19dd558a211327988dc68f81cc9d1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324705"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541445"
 ---
 # <a name="writecr3"></a>__writecr3
 **Microsoft 固有の仕様**  
   
- 値を書き込む`Data`CR3 レジスタにします。  
+ 値を書き込みます`Data`CR3 登録します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,11 +44,11 @@ void writecr3(
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__writecr3`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writecr3`|x86、x64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  この組み込みはカーネル モードのみで使用でき、そのルーチンは組み込みとしてのみ使用できます。  
   
 **Microsoft 固有の仕様はここまで**  

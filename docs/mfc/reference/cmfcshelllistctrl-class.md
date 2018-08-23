@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 939adc0507eee61be432ba8e8f582cfc53005aa0
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 4a75d3f40ade42c25de51a3c65c98e8c448b03ed
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853996"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538305"
 ---
 # <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl クラス
 `CMFCShellListCtrl`クラスは、Windows リスト コントロールの機能を提供し、シェル項目の一覧を表示する機能を含めることによってを展開します。  
@@ -118,7 +118,7 @@ class CMFCShellListCtrl : public CMFCListCtrl
   
  `CMFCShellListCtrl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxshelllistCtrl.h  
   
 ##  <a name="displayfolder"></a>  CMFCShellListCtrl::DisplayFolder  
@@ -263,7 +263,7 @@ BOOL IsDesktop() const;
  表示されるフォルダーはデスクトップ フォルダーは、TRUE を返します。FALSE それ以外の場合。  
   
 ##  <a name="oncompareitems"></a>  CMFCShellListCtrl::OnCompareItems  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。  
   
 ```  
 virtual int OnCompareItems(

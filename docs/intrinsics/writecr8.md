@@ -1,5 +1,5 @@
 ---
-title: __writecr8 |Microsoft ドキュメント
+title: __writecr8 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26c8b474c8b2c37e082c8c49f0d232f3f91d6a2c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3fa5bda2af8d6d6d95474743725c399d3ef5269
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324630"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42543237"
 ---
 # <a name="writecr8"></a>__writecr8
 **Microsoft 固有の仕様**  
   
- 値を書き込む`Data`CR8 レジスタにします。  
+ 値を書き込みます`Data`CR8 登録します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,11 +44,11 @@ void writecr8(
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__writecr8`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writecr8`|X64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  この組み込みはカーネル モードのみで使用でき、そのルーチンは組み込みとしてのみ使用できます。  
   
 **Microsoft 固有の仕様はここまで**  

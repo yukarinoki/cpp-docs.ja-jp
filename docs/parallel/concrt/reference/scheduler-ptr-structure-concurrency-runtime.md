@@ -1,5 +1,5 @@
 ---
-title: scheduler_ptr 構造体 |Microsoft ドキュメント
+title: scheduler_ptr 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 672e4a0dd5f66ab613dde8877915c799d6c4b2f4
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 99c2ed2f8446b94d606c907f4d030c417e21fc01
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686985"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42539873"
 ---
 # <a name="schedulerptr-structure"></a>scheduler_ptr 構造体
-スケジューラへのポインターを表します。 このクラスによって、shared_ptr を使用して共有有効期間を指定できるように、または、生ポインターを使用して参照できるようにします。  
+スケジューラへのポインターを表します。 このクラスは、生のポインターを使用して、shared_ptr またはプレーンな参照だけを使用して共有有効期間の指定を許可する存在します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -82,7 +82,7 @@ scheduler_interface* get() const;
  Behave like a pointer  
   
 ```
-scheduler_interface * 演算子 const です。
+scheduler_interface * 演算子は const; () を -> します。
 ```  
   
 ### Return Value  
@@ -93,7 +93,7 @@ scheduler_interface * 演算子 const です。
 ```
 explicit scheduler_ptr(std::shared_ptr<scheduler_interface> scheduler);
 
-明示的な scheduler_ptr (_In_opt_ scheduler_interface * pScheduler) です。
+明示的な scheduler_ptr (_In_opt_ scheduler_interface * pScheduler)。
 ```  
   
 ### Parameters  

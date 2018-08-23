@@ -1,5 +1,5 @@
 ---
-title: 例外処理 (x64) |Microsoft ドキュメント
+title: 例外処理 (x64) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7ae44d84ed8a0e04f93513db3a5431ebfd80abf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: acfcf5f37e0b679faf0e35549cc705ccee216c02
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367187"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571991"
 ---
 # <a name="exception-handling-x64"></a>例外処理 (x64)
-このセクションでは、構造化例外処理と C++ 例外処理の動作について説明します、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]です。  
+このセクションでは、構造化例外処理と C++ 例外処理、x64 での動作について説明します。  
   
 -   [例外処理とデバッガー サポートのためのアンワインド データ](../build/unwind-data-for-exception-handling-debugger-support.md)  
   

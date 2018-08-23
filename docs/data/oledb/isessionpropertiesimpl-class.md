@@ -25,15 +25,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5da668814888c11c5aaa0734be5ebc39b943778e
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: eca3e25e1476023ef4b7192efd2ffbd4170e88ca
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337256"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571786"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl クラス
-実装を提供、 [ISessionProperties](https://msdn.microsoft.com/library/ms713721.aspx)インターフェイス。  
+実装を提供、 [ISessionProperties](/previous-versions/windows/desktop/ms713721\(v=vs.85\))インターフェイス。  
   
 ## <a name="syntax"></a>構文
 
@@ -79,7 +79,7 @@ STDMETHOD(GetProperties)(ULONG cPropertyIDSets,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[ISessionProperties::GetProperties](https://msdn.microsoft.com/library/ms723643.aspx)で、 *OLE DB プログラマーズ リファレンス*します。 
+ 参照してください[ISessionProperties::GetProperties](/previous-versions/windows/desktop/ms723643\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。 
 
 ## <a name="setproperties"></a> Isessionpropertiesimpl::setproperties
 プロパティを設定、`DBPROPSET_SESSION`プロパティ グループ。  
@@ -92,7 +92,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[ISessionProperties::SetProperties](https://msdn.microsoft.com/library/ms714405.aspx)で、 *OLE DB プログラマーズ リファレンス*します。  
+ 参照してください[ISessionProperties::SetProperties](/previous-versions/windows/desktop/ms714405\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ## <a name="see-also"></a>関連項目  
  [OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)   

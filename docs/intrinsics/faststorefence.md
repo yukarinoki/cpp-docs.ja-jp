@@ -1,5 +1,5 @@
 ---
-title: _ _faststorefence の |Microsoft ドキュメント
+title: _ _faststorefence の |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f8c4a343126a14e1aea931b1e154714af280904
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc3086a59fe3995fcb5b4fff34891faa6a630f63
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327799"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538849"
 ---
 # <a name="faststorefence"></a>__faststorefence
 **Microsoft 固有の仕様**  
@@ -40,11 +40,11 @@ void __faststorefence();
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__faststorefence`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__faststorefence`|X64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  この組み込みの前に発生した読み込みおよび格納操作が、実行が続行する前に全体に対して参照可能になっていることを保証する、完全なメモリ バリアの命令シーケンスを生成します。 効果は、すべての x64 プラットフォームにおける `_mm_mfence` の組み込みと同等ですが、それよりも高速になります。  
   
  AMD64 プラットフォームでは、このルーチンは、`sfence` 命令よりも高速なストア フェンスである命令を生成します。 タイム クリティカル コードでは、`_mm_sfence` ではなくこの組み込みを使用します (AMD64 プラットフォームのみ)。 Intel x64 プラットフォームでは、 `_mm_sfence` 命令は高速化します。  

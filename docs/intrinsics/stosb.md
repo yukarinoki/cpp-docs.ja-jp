@@ -1,5 +1,5 @@
 ---
-title: _ _stosb |Microsoft ドキュメント
+title: _ _stosb |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d16c9ede6d815c2c697c1ed03dc10476f6dd3bac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c8e5cefd7ba2b4816bf7e204cd4b3f97ee86974a
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324575"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539087"
 ---
 # <a name="stosb"></a>__stosb
 **Microsoft 固有の仕様**  
   
- ストア文字列命令が生成されます (`rep stosb`)。  
+ ストアの文字列の命令が生成されます (`rep stosb`)。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,7 +42,7 @@ void __stosb(
   
 #### <a name="parameters"></a>パラメーター  
  [出力] `Dest`  
- 操作の出力先。  
+ 操作の転送先。  
   
  [入力] `Data`  
  格納するデータ。  
@@ -54,12 +54,12 @@ void __stosb(
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__stosb`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__stosb`|x86、x64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
- 結果は、文字`Data`のブロックに書き込まれる`Count`内のバイト、`Dest`文字列。  
+## <a name="remarks"></a>Remarks  
+ 結果は、文字`Data`のブロックに書き込まれる`Count`バイト、`Dest`文字列。  
   
  このルーチンは、組み込みとしてのみ使用できます。  
   

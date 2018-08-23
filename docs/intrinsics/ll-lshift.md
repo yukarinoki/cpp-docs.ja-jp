@@ -1,5 +1,5 @@
 ---
-title: _ _ll_lshift |Microsoft ドキュメント
+title: _ _ll_lshift |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94cf50287c28fe530df939488c4e707d17aede03
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 364ad39bfe47ff04c4a1eefb52b32ed4bddb7809
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327373"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539089"
 ---
 # <a name="lllshift"></a>__ll_lshift
 **Microsoft 固有の仕様**  
@@ -41,26 +41,26 @@ unsigned __int64 __ll_lshift(
   
 #### <a name="parameters"></a>パラメーター  
  [入力] `Mask`  
- 左方向にシフトする 64 ビット整数値。  
+ 左にシフトする 64 ビット整数値。  
   
  [入力] `nBit`  
  シフトするビット数。  
   
 ## <a name="return-value"></a>戻り値  
- マスクで左にシフト`nBit`ビットです。  
+ マスクを左にシフト`nBit`ビット。  
   
 ## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__ll_lshift`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ll_lshift`|x86、x64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
- 64 ビット アーキテクチャを使用して、プログラムをコンパイルするかどうかと`nBit`63 を超えるシフトするビットの数が`nBit`モジュロ 64 です。 32 ビット アーキテクチャを使用して、プログラムをコンパイルするかどうかと`nBit`31 よりも大きいシフトするビットの数が`nBit`32 剰余。  
+## <a name="remarks"></a>Remarks  
+ 64 ビット アーキテクチャを使用して、プログラムをコンパイルするかどうかと`nBit`63 を超えるにシフトするビットの数が`nBit`モジュロ 64 です。 32 ビット アーキテクチャを使用して、プログラムをコンパイルするかどうかと`nBit`31 より大きいにシフトするビットの数が`nBit`32 剰余。  
   
- `ll`名前であることを示しますこの操作で`long long`(`__int64`)。  
+ `ll`名前では、操作であるを示します。 `long long` (`__int64`)。  
   
 ## <a name="example"></a>例  
   
@@ -89,7 +89,7 @@ int main()
 10000  
 ```  
   
- **注**左シフト演算の符号なしのバージョンはありません。 これは、ため`__ll_lshift`既に署名されていない入力パラメーターを使用します。 右 shift キーを押しとは異なりはありません左 shift キーの記号の依存関係、結果の最下位ビットが常にシフトした値の符号に関係なく 0 に設定されています。  
+ **注**左シフト演算の符号なしのバージョンはありません。 これは、ため`__ll_lshift`既に署名されていない入力パラメーターを使用します。 右 shift キーを押しとは異なりはありません左 shift キーを押しへのサインオンのため、結果の最下位ビットは常にシフトした値の符号に関係なく 0 に設定します。  
   
 **Microsoft 固有の仕様はここまで**  
   

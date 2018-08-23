@@ -1,5 +1,5 @@
 ---
-title: _bittestandcomplement、_bittestandcomplement64 |Microsoft ドキュメント
+title: _bittestandcomplement、_bittestandcomplement64 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f1c3eb6f6447363fee7bafca33b8ea59c1c7e45
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 74040260149b6a22dcb673eb26f4561c4f324e61
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328826"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42544466"
 ---
 # <a name="bittestandcomplement-bittestandcomplement64"></a>_bittestandcomplement、_bittestandcomplement64
 **Microsoft 固有の仕様**  
@@ -60,12 +60,12 @@ unsigned char _bittestandcomplement64(
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`_bittestandcomplement`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`_bittestandcomplement64`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_bittestandcomplement`|x86、ARM、x64|  
+|`_bittestandcomplement64`|X64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このルーチンは、組み込みとしてのみ使用できます。  
   
 ## <a name="example"></a>例  

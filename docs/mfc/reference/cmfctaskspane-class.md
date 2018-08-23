@@ -204,15 +204,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da86312e425f6b54abf6422af09a04c45aa733f2
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 51beef03fe4e92f4eacd733b2d92b04675ed4242
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028383"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540342"
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane クラス
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。  
   
  `CMFCTasksPane` クラスは、クリック可能な項目 (タスク) のリストを実装します。  
   
@@ -376,7 +376,7 @@ class CMFCTasksPane : public CDockablePane
   
  `CMFCTasksPane`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxTasksPane.h  
   
 ##  <a name="addgroup"></a>  Cmfctaskspane::addgroup  

@@ -1,5 +1,5 @@
 ---
-title: raw_interfaces_only |Microsoft ドキュメント
+title: raw_interfaces_only |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4643181bf70bc92f4ef5e88b8a9add1ba7bdaad7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 63097c9ac47f3b791ff7fd5949cece4d85e5ca1f
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849302"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538845"
 ---
 # <a name="rawinterfacesonly"></a>raw_interfaces_only
-**C 固有の仕様**  
+**C++ 固有の仕様**  
   
- エラー処理ラッパー関数の生成を抑制し、[プロパティ](../cpp/property-cpp.md)ラッパー関数を使用して宣言します。  
+エラー処理ラッパー関数の生成を抑制し、[プロパティ](../cpp/property-cpp.md)そのラッパー関数を使用して宣言します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,13 +34,15 @@ ms.locfileid: "33849302"
 raw_interfaces_only  
 ```  
   
-## <a name="remarks"></a>コメント  
- `raw_interfaces_only` 属性を使用すると、非プロパティ関数の名前付けに使用される既定のプレフィックスも削除されます。 プレフィックスは、通常、 **raw _** です。 この属性を指定すると、タイプ ライブラリの関数名が直接使用されます。  
+## <a name="remarks"></a>Remarks  
+ 
+**Raw_interfaces_only**属性も削除する非プロパティ関数の名前付けで使用される既定のプレフィックスをによりします。 通常、プレフィックスは**raw _** します。 この属性を指定すると、タイプ ライブラリの関数名が直接使用されます。  
   
- この属性を使用することで、タイプ ライブラリの低水準の内容のみを公開できます。  
+この属性を使用することで、タイプ ライブラリの低水準の内容のみを公開できます。  
   
- **END C 固有の仕様**  
+**END C 固有の仕様**  
   
 ## <a name="see-also"></a>関連項目  
- [#import の属性](../preprocessor/hash-import-attributes-cpp.md)   
- [#import ディレクティブ](../preprocessor/hash-import-directive-cpp.md)
+ 
+[#import の属性](../preprocessor/hash-import-attributes-cpp.md)   
+[#import ディレクティブ](../preprocessor/hash-import-directive-cpp.md)

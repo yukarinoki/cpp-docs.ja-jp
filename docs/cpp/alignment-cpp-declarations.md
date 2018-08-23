@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9031bea449968e22212c241b8418b505710cca8d
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 5248d7c692e3443ea0e0798cf723f38099c3f863
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39409137"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42571771"
 ---
 # <a name="alignment-c-declarations"></a>アラインメント (C++ の宣言)
-C++ の低レベルの機能の 1 つは、特定のハードウェア アーキテクチャを最大活用するために、メモリ内のオブジェクトの正確な配置を指定できる機能です。 既定では、コンパイラはクラスと構造体のメンバーのサイズの値を揃えて配置します。bool と char は 1 バイト境界に配置され、short は 2 バイト、int は 4 バイト、long long、double、long double は 8 バイトに配置されます。 ほとんどのシナリオで、既定の配置は既に最適なので、配置を気にすることはありません。 ただし、場合によっては、大幅なパフォーマンスの向上、またはメモリの節約を、データ構造にカスタム配置を指定することで達成できます。 Visual Studio 2015 の前は、既定値を超える配列を指定するのに、Microsoft 固有キーワード __alignof と declspec(alignas) を使用できました。 C++ 11 標準のキーワードを使用して Visual Studio 2015 で開始する必要があります[alignof と alignas](../cpp/alignof-and-alignas-cpp.md)最大コードの移植性を考慮します。 新しいキーワードは、内部で Microsoft 固有の拡張機能として同じ方法で動作し、拡張機能のためのドキュメントが、新しいキーワードにも適用されます。 参照してください[_ _alignof 演算子](../cpp/alignof-operator.md)と[align](../cpp/align-cpp.md)詳細についてはします。 C++ 標準は Microsoft #pragma を使用する必要があるためにの配置のターゲット プラットフォームで、コンパイラの既定値よりも小さい境界では、パッキング動作を指定しない[パック](../preprocessor/pack.md)場合。  
+C++ の低レベルの機能の 1 つは、特定のハードウェア アーキテクチャを最大活用するために、メモリ内のオブジェクトの正確な配置を指定できる機能です。 既定では、コンパイラはクラスと構造体メンバーのサイズの値: int は 4 バイト、long、double、および 8 バイトの long double は、2 つのバイトに対する簡単な 1 バイト境界にアライン bool と char です。 ほとんどのシナリオで、既定の配置は既に最適なので、配置を気にすることはありません。 ただし、場合によっては、大幅なパフォーマンスの向上、またはメモリの節約を、データ構造にカスタム配置を指定することで達成できます。 Visual Studio 2015 の前は、既定値を超える配列を指定するのに、Microsoft 固有キーワード __alignof と declspec(alignas) を使用できました。 C++ 11 標準のキーワードを使用して Visual Studio 2015 で開始する必要があります[alignof と alignas](../cpp/alignof-and-alignas-cpp.md)最大コードの移植性を考慮します。 新しいキーワードは、内部で Microsoft 固有の拡張機能として同じ方法で動作し、拡張機能のためのドキュメントが、新しいキーワードにも適用されます。 参照してください[_ _alignof 演算子](../cpp/alignof-operator.md)と[align](../cpp/align-cpp.md)詳細についてはします。 C++ 標準は Microsoft #pragma を使用する必要があるためにの配置のターゲット プラットフォームで、コンパイラの既定値よりも小さい境界では、パッキング動作を指定しない[パック](../preprocessor/pack.md)場合。  
   
  C++ 標準ライブラリを提供、 [aligned_storage クラス](../standard-library/aligned-storage-class.md)カスタムの配置を伴うデータ構造のメモリを割り当て、 [aligned_union クラス](../standard-library/aligned-union-class.md)を持つ共用体の配置を指定します。重要なコンス トラクターまたはデストラクター。  
   

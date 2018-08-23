@@ -1,5 +1,5 @@
 ---
-title: ファイルをインクルードするマルチ スレッド |Microsoft ドキュメント
+title: インクルード ファイルのマルチ スレッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62b94f4a7a394b78cb7c6f23275709e4aeacc774
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 73444c72878073d881abec08c474eb1f1ce64f02
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685802"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42540073"
 ---
 # <a name="include-files-for-multithreading"></a>マルチスレッドのためのインクルード ファイル
-標準のインクルード ファイル、ライブラリで実装されていると、C ランタイム ライブラリ関数を宣言します。 使用する場合、[最大限の最適化](../build/reference/ox-full-optimization.md)(/Ox) または[fastcall 呼び出し規約](../build/reference/gd-gr-gv-gz-calling-convention.md)(/Gr) オプション、コンパイラはレジスタ呼び出し規約を使用してすべての関数を呼び出す必要があります。 ランタイム ライブラリ関数が C の呼び出し規約を使用してコンパイルされたし、標準のインクルード ファイル内の宣言がこれらの関数の適切な外部参照を生成するようにコンパイラに指示します。  
+標準のインクルード ファイル、ライブラリで実装された、C ランタイム ライブラリ関数を宣言します。 使用する場合、[最大限の最適化](../build/reference/ox-full-optimization.md)(/Ox) または[fastcall 呼び出し規約](../build/reference/gd-gr-gv-gz-calling-convention.md)(/Gr) オプションでは、コンパイラは、register 呼び出し規約を使用してすべての関数を呼び出します。 ランタイム ライブラリ関数が C の呼び出し規則を使用してコンパイルされたし、標準のインクルード ファイル内の宣言がこれらの関数の適切な外部参照を生成するようにコンパイラに指示します。  
   
 ## <a name="see-also"></a>関連項目  
- [C と Win32 を使用するマルチスレッド](../parallel/multithreading-with-c-and-win32.md)
+
+[C と Win32 を使用するマルチスレッド](../parallel/multithreading-with-c-and-win32.md)

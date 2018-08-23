@@ -62,12 +62,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a5c9132325af7c05980aac0d7b6b7d53958e4a2b
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 747f54e4ae37fe31eeea7540c1531b988d692427
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338045"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572214"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>OLE DB プロバイダー テンプレート用マクロ
 OLE DB プロバイダー テンプレートのマクロは、次のカテゴリの機能を提供します。  
@@ -159,11 +159,11 @@ BEGIN_PROPSET_MAP(Class)
  *クラス*  
  [in]このプロパティが設定されているクラスを指定します。 プロパティ セットは、次の OLE DB オブジェクトで指定できます。  
   
--   [データ ソース オブジェクト](https://msdn.microsoft.com/library/ms721278.aspx)  
+-   [データ ソース オブジェクト](/previous-versions/windows/desktop/ms721278\(v=vs.85\))  
   
--   [セッション オブジェクト](https://msdn.microsoft.com/library/ms711572.aspx)  
+-   [セッション オブジェクト](/previous-versions/windows/desktop/ms711572\(v=vs.85\))  
   
--   [[コマンド]](https://msdn.microsoft.com/library/ms724608.aspx)  
+-   [[コマンド]](/previous-versions/windows/desktop/ms724608\(v=vs.85\))  
   
 #### <a name="example"></a>例  
  プロパティ セット マップのコード例を次に示します。  
@@ -228,10 +228,10 @@ PROPERTY_INFO_ENTRY(dwPropID)
   
 #### <a name="parameters"></a>パラメーター  
  *dwPropID*  
- [in]A [DBPROPID](https://msdn.microsoft.com/library/ms723882.aspx)プロパティと組み合わせて使用できる値は、プロパティを識別する GUID を設定します。  
+ [in]A [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\))プロパティと組み合わせて使用できる値は、プロパティを識別する GUID を設定します。  
   
 #### <a name="remarks"></a>Remarks  
- このマクロは、 `DWORD` 型のプロパティ値を、ATLDB.H で定義された既定値に設定します。 選択した値にプロパティを設定するには、 [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md)を使用します。 設定する、 [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4)と[DBPROPFLAGS](https://msdn.microsoft.com/library/ms724342.aspx)と同時に、プロパティを使用して[PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md)します。  
+ このマクロは、 `DWORD` 型のプロパティ値を、ATLDB.H で定義された既定値に設定します。 選択した値にプロパティを設定するには、 [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md)を使用します。 設定する、 [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4)と[DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\))と同時に、プロパティを使用して[PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md)します。  
   
 #### <a name="example"></a>例  
  「 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)」を参照してください。  
@@ -247,13 +247,13 @@ PROPERTY_INFO_ENTRY_EX(dwPropID, vt, dwFlags, value, options)
   
 #### <a name="parameters"></a>パラメーター  
  *dwPropID*  
- [in]A [DBPROPID](https://msdn.microsoft.com/library/ms723882.aspx)プロパティと組み合わせて使用できる値は、プロパティを識別する GUID を設定します。  
+ [in]A [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\))プロパティと組み合わせて使用できる値は、プロパティを識別する GUID を設定します。  
   
  *vt*  
  [in][VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4)のこのプロパティ エントリ。  
   
  *dwFlags*  
- [in]A [DBPROPFLAGS](https://msdn.microsoft.com/library/ms724342.aspx)このプロパティ エントリを記述する値。  
+ [in]A [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\))このプロパティ エントリを記述する値。  
   
  *値*  
  [入力] `DWORD`型のプロパティ値。  
@@ -278,7 +278,7 @@ PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)
   
 #### <a name="parameters"></a>パラメーター  
  *dwPropID*  
- [in]A [DBPROPID](https://msdn.microsoft.com/library/ms723882.aspx)プロパティと組み合わせて使用できる値は、プロパティを識別する GUID を設定します。  
+ [in]A [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\))プロパティと組み合わせて使用できる値は、プロパティを識別する GUID を設定します。  
   
  *値*  
  [入力] `DWORD`型のプロパティ値。  
@@ -355,7 +355,7 @@ PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)
  [in]列の番号。 列は、ブックマーク列でない限り、列の番号は 0 をできません。  
   
  *dbtype*  
- [in]データ型[DBTYPE](https://msdn.microsoft.com/library/ms711251.aspx)します。  
+ [in]データ型[DBTYPE](/previous-versions/windows/desktop/ms711251\(v=vs.85\))します。  
   
  *メンバー*  
  [in]メンバー変数`dataClass`データを格納します。  
@@ -383,22 +383,22 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
  [in]列の番号。 列は、ブックマーク列でない限り、列の番号は 0 をできません。  
   
  *flags*  
- [in]データを返す方法を指定します。 参照してください、`dwFlags`説明[DBBINDING 構造体](https://msdn.microsoft.com/library/ms716845.aspx)します。  
+ [in]データを返す方法を指定します。 参照してください、`dwFlags`説明[DBBINDING 構造体](/previous-versions/windows/desktop/ms716845\(v=vs.85\))します。  
   
  *colSize*  
  [in]列のサイズ。  
   
  *dbtype*  
- [in]値のデータ型を示します。 参照してください、`wType`説明[DBBINDING 構造体](https://msdn.microsoft.com/library/ms716845.aspx)します。  
+ [in]値のデータ型を示します。 参照してください、`wType`説明[DBBINDING 構造体](/previous-versions/windows/desktop/ms716845\(v=vs.85\))します。  
   
  *precision*  
- [in]場合は、データを取得するときに使用する桁数を示します*dbType* DBTYPE_NUMERIC または DBTYPE_DECIMAL です。 参照してください、`bPrecision`説明[DBBINDING 構造体](https://msdn.microsoft.com/library/ms716845.aspx)します。  
+ [in]場合は、データを取得するときに使用する桁数を示します*dbType* DBTYPE_NUMERIC または DBTYPE_DECIMAL です。 参照してください、`bPrecision`説明[DBBINDING 構造体](/previous-versions/windows/desktop/ms716845\(v=vs.85\))します。  
   
  *スケール*  
- [in]DbType が DBTYPE_NUMERIC または DBTYPE_DECIMAL の場合は、データを取得するときに使用する小数点以下桁数を示します。 参照してください、`bScale`説明[DBBINDING 構造体](https://msdn.microsoft.com/library/ms716845.aspx)します。  
+ [in]DbType が DBTYPE_NUMERIC または DBTYPE_DECIMAL の場合は、データを取得するときに使用する小数点以下桁数を示します。 参照してください、`bScale`説明[DBBINDING 構造体](/previous-versions/windows/desktop/ms716845\(v=vs.85\))します。  
   
  *guid*  
- スキーマ行セットの GUID。 参照してください[IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx)で、 *OLE DB プログラマーズ リファレンス*スキーマ行セットとその Guid の一覧についてはします。  
+ スキーマ行セットの GUID。 参照してください[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*スキーマ行セットとその Guid の一覧についてはします。  
   
 #### <a name="remarks"></a>Remarks  
  列のサイズ、データ型、有効桁数、スケール、およびスキーマ行セット GUID を指定することができます。  
@@ -451,7 +451,7 @@ PROVIDER_COLUMN_ENTRY_STR(name, ordinal, member)
  [in]データを格納するデータ クラスのメンバー変数です。  
   
 #### <a name="remarks"></a>Remarks  
- このマクロを使用して列のデータがあると見なされますと[DBTYPE_STR](https://msdn.microsoft.com/library/ms711251.aspx)します。  
+ このマクロを使用して列のデータがあると見なされますと[DBTYPE_STR](/previous-versions/windows/desktop/ms711251\(v=vs.85\))します。  
   
 #### <a name="example"></a>例  
  参照してください[BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)します。   
@@ -473,7 +473,7 @@ PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)
  [in]列の番号。 列は、ブックマーク列でない限り、列の番号は 0 をできません。  
   
  *dbtype*  
- [in]データ型[DBTYPE](https://msdn.microsoft.com/library/ms711251.aspx)します。  
+ [in]データ型[DBTYPE](/previous-versions/windows/desktop/ms711251\(v=vs.85\))します。  
   
  *size*  
  [in]列のサイズ (バイト単位)。  
@@ -504,7 +504,7 @@ PROVIDER_COLUMN_ENTRY_WSTR(name, ordinal, member)
  [in]データを格納するデータ クラスのメンバー変数です。  
   
 #### <a name="remarks"></a>Remarks  
- 列のデータが null 値が Unicode 文字の文字列を終了するときに、このマクロを使用[DBTYPE_WSTR](https://msdn.microsoft.com/library/ms711251.aspx)します。  
+ 列のデータが null 値が Unicode 文字の文字列を終了するときに、このマクロを使用[DBTYPE_WSTR](/previous-versions/windows/desktop/ms711251\(v=vs.85\))します。  
 
 ### <a name="begin_schema_map"></a> BEGIN_SCHEMA_MAP
 スキーマ マップの先頭を示します。  
@@ -520,7 +520,7 @@ BEGIN_SCHEMA_MAP(SchemaClass);
  マップを含むクラスです。 通常、セッション クラスになります。  
   
 #### <a name="remarks"></a>Remarks  
- 参照してください[IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx)スキーマ行セットの詳細については、Windows SDK に含まれています。  
+ 参照してください[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\))スキーマ行セットの詳細については、Windows SDK に含まれています。  
 
 ### <a name="end_schema_map"></a> END_SCHEMA_MAP
 スキーマ マップの終了を示します。  
@@ -546,7 +546,7 @@ SCHEMA_ENTRY(guid,
   
 #### <a name="parameters"></a>パラメーター  
  *guid*  
- スキーマ行セットの GUID。 参照してください[IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx)で、 *OLE DB プログラマーズ リファレンス*スキーマ行セットとその Guid の一覧についてはします。  
+ スキーマ行セットの GUID。 参照してください[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*スキーマ行セットとその Guid の一覧についてはします。  
   
  *rowsetClass*  
  このクラスは、スキーマ行セットを表すために作成されます。  
@@ -560,7 +560,7 @@ HRESULT Execute (LONG* pcRowsAffected,
     const VARIANT* rgRestrictions);  
 ```  
   
- これは、`Execute`関数は、行セットのデータを設定します。 ATL プロジェクト ウィザードを作成する」の説明に従って[IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx)で、 *OLE DB プログラマーズ リファレンス*、3 つの必須の OLE DB スキーマの各プロジェクトのスキーマ行セットの初期 3。  
+ これは、`Execute`関数は、行セットのデータを設定します。 ATL プロジェクト ウィザードを作成する」の説明に従って[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*、3 つの必須の OLE DB スキーマの各プロジェクトのスキーマ行セットの初期 3。  
   
 -   DBSCHEMA_TABLES  
   

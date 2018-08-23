@@ -1,5 +1,5 @@
 ---
-title: inline_recursion |Microsoft ドキュメント
+title: inline_recursion |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f81347c8286dfa1f0651af43bd3134565a22aade
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 222cb7151d975219d0e92bd1270778586e89b4d3
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849497"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541579"
 ---
 # <a name="inlinerecursion"></a>inline_recursion
 直接呼び出しまたは相互再帰関数の呼び出しのインライン展開を制御します。  
@@ -31,16 +31,17 @@ ms.locfileid: "33849497"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 #pragma inline_recursion( [{on | off}] )  
 ```  
   
-## <a name="remarks"></a>コメント  
- としてマークされている制御関数には、このプラグマを使用して[インライン](../cpp/inline-functions-cpp.md)と[_ _inline](../cpp/inline-functions-cpp.md)またはコンパイラが/Ob2 オプションで自動的に展開する関数。 このプラグマの使用を必要とする[/Ob](../build/reference/ob-inline-function-expansion.md) 1 または 2 のいずれかのコンパイラ オプションの設定。 `inline_recursion` の既定の状態はオフです。 このプラグマは、以降の最初の関数呼び出しに対して効果があり、関数の定義には影響を与えません。  
+## <a name="remarks"></a>Remarks  
+ 
+としてマークされたこのプラグマは、制御関数を使用して[インライン](../cpp/inline-functions-cpp.md)と[_ _inline](../cpp/inline-functions-cpp.md)または関数で、コンパイラが自動的に展開を`/Ob2`オプション。 このプラグマの使用が必要です、 [/Ob](../build/reference/ob-inline-function-expansion.md) 1 または 2 のいずれかのコンパイラ オプションの設定。 既定の状態**inline_recursion**はオフです。 このプラグマは、以降の最初の関数呼び出しに対して効果があり、関数の定義には影響を与えません。  
   
- `inline_recursion` プラグマは再帰関数の展開方法を制御します。 `inline_recursion` が off の場合、インライン関数が自身を (直接または間接的に) 呼び出すと、関数は 1 回しか展開されません。 場合`inline_recursion`関数で設定された値に達するまで複数回に展開されますが、上、 [inline_depth](../preprocessor/inline-depth.md)プラグマで定義されている再帰関数の既定値、`inline_depth`プラグマ、または容量制限.  
+**Inline_recursion**プラグマは、再帰関数を展開する方法を制御します。 場合**inline_recursion**はオフであり、インライン関数を呼び出す場合自体 (直接または間接的に)、関数が 1 回しか展開します。 場合**inline_recursion**関数で設定された値に達するまで複数回に展開されますが、上、 [inline_depth](../preprocessor/inline-depth.md)プラグマをで定義されている再帰関数の既定値`inline_depth`プラグマ、または容量を制限します。  
   
 ## <a name="see-also"></a>関連項目  
- [プラグマ ディレクティブと _ _pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
- [inline_depth](../preprocessor/inline-depth.md)   
- [/Ob (関数のインライン展開)](../build/reference/ob-inline-function-expansion.md)
+ 
+[プラグマ ディレクティブと _ _pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
+[inline_depth](../preprocessor/inline-depth.md)   
+[/Ob (関数のインライン展開)](../build/reference/ob-inline-function-expansion.md)

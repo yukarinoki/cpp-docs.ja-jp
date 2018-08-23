@@ -1,5 +1,5 @@
 ---
-title: _ _wbinvd |Microsoft ドキュメント
+title: _ _wbinvd |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be74b466ed641474283e26217ae728c57f28edd8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ccee7703550bff7980e1cf07b30f29d284e2a3a5
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326346"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539903"
 ---
 # <a name="wbinvd"></a>__wbinvd
 **Microsoft 固有の仕様**  
   
- 書き戻しとキャッシュの無効化が生成されます (`wbinvd`) 命令します。  
+ 書き戻しとキャッシュの無効化が生成されます (`wbinvd`) 命令。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,12 +39,12 @@ void __wbinvd(void);
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__wbinvd`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__wbinvd`|x86、x64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
- この関数はのみ権限を持つ (CPL) は 0、カーネル モードで使用して、ルーチンが、組み込みとしてのみです。  
+## <a name="remarks"></a>Remarks  
+ この関数は、0 の特権レベル (CPL) でのカーネル モードで使用可能なのみとルーチンは組み込みとして使用できるのみです。  
   
 **Microsoft 固有の仕様はここまで**  
   

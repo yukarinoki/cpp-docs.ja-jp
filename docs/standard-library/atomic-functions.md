@@ -68,12 +68,12 @@ helpviewer_keywords:
 - std::kill_dependency [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df0c7ea332cda65aa3621de581eb39419ee9b9d4
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: b70f4df63b5a885403b91c1470c3066c33f5f123
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028318"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42543153"
 ---
 # <a name="ltatomicgt-functions"></a>&lt;atomic&gt; 関数
 
@@ -164,7 +164,7 @@ inline bool atomic_compare_exchange_strong_explicit(
 
 ### <a name="remarks"></a>Remarks
 
-*アトミック比較および交換操作*が指すオブジェクトに格納されている値と比較します*Atom*が指す値に対して*Exp*します。値が等しい場合、値が指すオブジェクトに格納されている*atom*は置き換え`Val`を使用して、`read-modify-write`順序で指定されている制約を操作して、メモリを適用する*Order1*します。 操作が指す値を置換値が等しくない場合は、 *Exp*が指すオブジェクトに格納されている値を持つ*Atom*はメモリ順序制約を適用指定された*Order2*します。
+*アトミック比較および交換操作*が指すオブジェクトに格納されている値と比較します*Atom*が指す値に対して*Exp*します。場合は、値が等しい、値が指すオブジェクトに格納されている*atom*は置き換え*値*を使用して、`read-modify-write`操作しているメモリ順序制約を適用します。指定された*Order1*します。 操作が指す値を置換値が等しくない場合は、 *Exp*が指すオブジェクトに格納されている値を持つ*Atom*はメモリ順序制約を適用指定された*Order2*します。
 
 ## <a name="atomic_compare_exchange_weak"></a>  atomic_compare_exchange_weak
 

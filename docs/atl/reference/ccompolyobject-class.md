@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5bd2a384af6e73ae0c113bf8c27ae9d0c7529a8
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 2b5cff88aab5a4b069d96808755ce92d61f32fff
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881101"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42575526"
 ---
 # <a name="ccompolyobject-class"></a>CComPolyObject クラス
 このクラスは実装`IUnknown`集計または非集約オブジェクト。  
@@ -63,7 +63,7 @@ class CComPolyObject : public IUnknown,
 |名前|説明|  
 |----------|-----------------|  
 |[CComPolyObject::AddRef](#addref)|オブジェクトの参照カウントをインクリメントします。|  
-|[CComPolyObject::CreateInstance](#createinstance)|(静的)新しいを作成することができます**CComPolyObject <** `contained` **>** のオーバーヘッドなしオブジェクト[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)します。|  
+|[CComPolyObject::CreateInstance](#createinstance)|(静的)新しいを作成することができます**CComPolyObject <** `contained` **>** のオーバーヘッドなしオブジェクト[CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)します。|  
 |[CComPolyObject::FinalConstruct](#finalconstruct)|最終初期化を実行します。`m_contained`します。|  
 |[CComPolyObject::FinalRelease](#finalrelease)|最終的な破棄を実行します。`m_contained`します。|  
 |[CComPolyObject::QueryInterface](#queryinterface)|要求されたインターフェイスへのポインターを取得します。|  
@@ -97,7 +97,7 @@ class CComPolyObject : public IUnknown,
   
  `CComPolyObject`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlcom.h  
   
 ##  <a name="addref"></a>  CComPolyObject::AddRef  
@@ -137,7 +137,7 @@ CComPolyObject(void* pv);
  呼び出し、割り当てられているすべてのリソースを解放[FinalRelease](#finalrelease)、およびモジュールのロック カウントをデクリメントします。  
   
 ##  <a name="createinstance"></a>  CComPolyObject::CreateInstance  
- 新しいを作成することができます**CComPolyObject <** `contained` **>** のオーバーヘッドなしオブジェクト[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)します。  
+ 新しいを作成することができます**CComPolyObject <** `contained` **>** のオーバーヘッドなしオブジェクト[CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)します。  
   
 ```
 static HRESULT WINAPI CreateInstance(  

@@ -1,5 +1,5 @@
 ---
-title: _InterlockedExchangePointer の組み込み関数 |Microsoft ドキュメント
+title: _InterlockedExchangePointer の組み込み関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8482b7d5b21c113001b702e00f406b9a3fcfd9c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dfeb1453cffac6cfe338f42da8b8efe60e18c9f8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334939"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538754"
 ---
 # <a name="interlockedexchangepointer-intrinsic-functions"></a>_InterlockedExchangePointer の組み込み関数
 **Microsoft 固有の仕様**  
@@ -85,14 +85,14 @@ void * _InterlockedExchangePointer_HLERelease(
   
 |組み込み|アーキテクチャ|Header|  
 |---------------|------------------|------------|  
-|`_InterlockedExchangePointer`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_InterlockedExchangePointer`|x86、ARM、x64|\<intrin.h>|  
 |`_InterlockedExchangePointer_acq`、`_InterlockedExchangePointer_rel`、`_InterlockedExchangePointer_nf`|ARM|\<intrin.h>|  
-|`_InterlockedExchangePointer_HLEAcquire`, `_InterlockedExchangePointer_HLERelease`|HLE 対応 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
+|`_InterlockedExchangePointer_HLEAcquire`, `_InterlockedExchangePointer_HLERelease`|HLE 対応 x64|\<immintrin.h>|  
   
  x86 アーキテクチャでは、`_InterlockedExchangePointer` は `_InterlockedExchange` を呼び出すマクロです。  
   
-## <a name="remarks"></a>コメント  
- 64 ビット システムではパラメーターは 64 ビットであり、64 ビットの境界に合わせて調整する必要があります。そのようにしない場合は、関数が失敗します。 32 ビット システムではパラメーターは 32 ビットであり、32 ビットの境界に合わせて調整する必要があります。 詳細については、次を参照してください。[整列](../cpp/align-cpp.md)です。  
+## <a name="remarks"></a>Remarks  
+ 64 ビット システムではパラメーターは 64 ビットであり、64 ビットの境界に合わせて調整する必要があります。そのようにしない場合は、関数が失敗します。 32 ビット システムではパラメーターは 32 ビットであり、32 ビットの境界に合わせて調整する必要があります。 詳細については、次を参照してください。 [align](../cpp/align-cpp.md)します。  
   
  ARM プラットフォームでは、クリティカル セクションの最初と最後などで取得と解放のセマンティクスを必要とする場合は、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスの付いた組み込みはメモリ バリアとしては機能しません。  
   
@@ -103,5 +103,5 @@ void * _InterlockedExchangePointer_HLERelease(
 **Microsoft 固有の仕様はここまで**  
   
 ## <a name="see-also"></a>関連項目  
- [コンパイラ組み込み関数](../intrinsics/compiler-intrinsics.md)   
+ [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)   
  [x86 コンパイラとの競合](../build/conflicts-with-the-x86-compiler.md)

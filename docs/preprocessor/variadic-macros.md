@@ -1,5 +1,5 @@
 ---
-title: 可変個引数マクロ |Microsoft ドキュメント
+title: 可変個引数マクロ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,20 +15,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5918c7d91a3568799f361fcb42edb2e9c7b1445e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 16549d6b7a80a8aa0f3f98cf9c7cd89c74058959
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850536"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541588"
 ---
 # <a name="variadic-macros"></a>Variadic マクロ
 Variadic マクロは、可変個の引数を含む関数に似たマクロです。  
   
-## <a name="remarks"></a>コメント  
- 可変個引数マクロを使用する、省略記号ボタンとして指定できるマクロ定義では、および置換の識別子での最後の仮引数`__VA_ARGS__`余分な引数を挿入する定義で使用することがあります。  `__VA_ARGS__` すべてのコンマで区切ってを含む、省略記号に一致する引数に置き換えられます。  
+## <a name="remarks"></a>Remarks  
+ 
+可変個引数マクロを使用する、マクロ定義で置換識別子の最終仮引数として省略記号を指定することがあります`__VA_ARGS__`余分な引数を挿入する定義で使用することがあります。  `__VA_ARGS__` すべての間にコンマを含めて、省略記号に一致する引数に置換されます。  
   
- C 標準では、末尾にコンマが付く式にマクロが解決されないように、1 つ以上の引数を省略記号に渡すことが規定されています。  Visual C++ の実装では、引数が省略記号に渡されない場合、式の末尾にコンマが付けられません。  
+C 標準では、末尾にコンマが付く式にマクロが解決されないように、1 つ以上の引数を省略記号に渡すことが規定されています。  Visual C++ の実装では、引数が省略記号に渡されない場合、式の末尾にコンマが付けられません。  
   
 ## <a name="example"></a>例  
   
@@ -58,10 +59,8 @@ int main() {
                              // suppresses the trailing comma  
 }  
 ```  
-  
-## <a name="output"></a>出力  
-  
-```  
+    
+```Output  
 here are some varargs1(1)  
 here are some varargs2(4)  
 here are some varargs3(5)  
@@ -70,4 +69,5 @@ error
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [マクロ (C/C++)](../preprocessor/macros-c-cpp.md)
+ 
+[マクロ (C/C++)](../preprocessor/macros-c-cpp.md)

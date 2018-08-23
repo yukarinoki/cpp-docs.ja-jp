@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a729497fe24fb0c08734e45d360965f5d22880c4
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 9385882ec2cb24aefd1a319615250b5797bc0d1c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339449"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571417"
 ---
 # <a name="open-database-connectivity-odbc"></a>ODBC (Open Database Connectivity)
 MFC (Microsoft Foundation Class) ライブラリには、ODBC (Open Database Connectivity) を使用したプログラミング用のクラスが用意されています。 Visual Studio 2015 および SQL Server 2012 の ODBC SQL データ ソースに接続することをお勧めは。
   
- MFC を使用せず、ODBC API の使用に関する詳細については、次を参照してください。、[オープン データベース コネクティビティ (ODBC)](https://msdn.microsoft.com/library/ms710252.aspx) MSDN の SDK です。  
+ MFC を使用せず、ODBC API の使用に関する詳細については、次を参照してください。、[オープン データベース コネクティビティ (ODBC)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) MSDN の SDK です。  
   
   
 ## <a name="in-this-section"></a>このセクションの内容  
@@ -67,7 +67,7 @@ MFC (Microsoft Foundation Class) ライブラリには、ODBC (Open Database Con
 -   [ODBC ドライバーの一覧](odbc-driver-list.md)  
   
 ## <a name="odbc-database-tasks"></a>ODBC データベースの操作方法  
- これらのタスクは、MFC に基づいて[ODBC](odbc-basics.md)クラス。 MFC を使用せず、ODBC API の使用に関する詳細については、次を参照してください。、[オープン データベース コネクティビティ (ODBC)](https://msdn.microsoft.com/library/ms710252.aspx) SDK。  
+ これらのタスクは、MFC に基づいて[ODBC](odbc-basics.md)クラス。 MFC を使用せず、ODBC API の使用に関する詳細については、次を参照してください。、[オープン データベース コネクティビティ (ODBC)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) SDK。  
   
 -   [インストールして、ODBC の概要](installing-and-getting-started-with-odbc.md)  
   

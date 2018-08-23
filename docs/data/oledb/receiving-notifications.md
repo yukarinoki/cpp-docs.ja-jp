@@ -21,15 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fdef616456b98086bf9490297d68c98596b2dca4
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: edf4b2bd69947730caba6db5d31b1e5da15f3759
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338971"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573238"
 ---
 # <a name="receiving-notifications"></a>通知の受信
-OLE DB は、イベントが発生したときに通知を受信するためのインターフェイスを提供します。 後述[OLE DB オブジェクト通知](https://msdn.microsoft.com/library/ms725406.aspx)で、 *OLE DB プログラマーズ リファレンス*します。 これらのイベントのセットアップでは、標準の COM 接続ポイントのメカニズムを使用します。 を介してイベントを取得する必要がある ATL オブジェクトなど、`IRowsetNotify`実装、`IRowsetNotify`インターフェイスを追加して`IRowsetNotify`クラスから派生したリストし、COM_INTERFACE_ENTRY マクロを通じて公開します。  
+OLE DB は、イベントが発生したときに通知を受信するためのインターフェイスを提供します。 後述[OLE DB オブジェクト通知](/previous-versions/windows/desktop/ms725406\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。 これらのイベントのセットアップでは、標準の COM 接続ポイントのメカニズムを使用します。 を介してイベントを取得する必要がある ATL オブジェクトなど、`IRowsetNotify`実装、`IRowsetNotify`インターフェイスを追加して`IRowsetNotify`クラスから派生したリストし、COM_INTERFACE_ENTRY マクロを通じて公開します。  
   
  `IRowsetNotify` さまざまな時点で呼び出すことができる、3 つのメソッドがあります。 これらのメソッドの 1 つだけに応答する場合は、使用、 [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md)クラスに興味がないメソッドの E_NOTIMPL を返します。  
   

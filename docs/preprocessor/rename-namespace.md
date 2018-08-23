@@ -1,5 +1,5 @@
 ---
-title: rename_namespace |Microsoft ドキュメント
+title: rename_namespace |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a51114787dde2f858a8409538083282ef292d599
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0876aed966db79b23d506bffd9247dd68d4a3935
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839392"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540861"
 ---
 # <a name="renamenamespace"></a>rename_namespace
-**C 固有の仕様**  
+**C++ 固有の仕様**  
   
- タイプ ライブラリの内容を含む名前空間の名前を変更します。  
+タイプ ライブラリの内容を含む名前空間の名前を変更します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,17 +34,19 @@ ms.locfileid: "33839392"
 rename_namespace("NewName")  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `NewName`  
- 名前空間の新しい名前。  
+### <a name="parameters"></a>パラメーター  
+*NewName*  
+名前空間の新しい名前。  
   
-## <a name="remarks"></a>コメント  
- 1 つの引数を受け取る*NewName*、名前空間の新しい名前を指定します。  
+## <a name="remarks"></a>Remarks  
+ 
+1 つの引数を受け取る*NewName*、新しい名前空間の名前を指定します。  
   
- 削除するには、名前空間を使用して、 [no_namespace](../preprocessor/no-namespace.md)属性の代わりにします。  
+名前空間を削除するには、使用、 [no_namespace](../preprocessor/no-namespace.md)属性の代わりにします。  
   
- **END C 固有の仕様**  
+**END C 固有の仕様**  
   
 ## <a name="see-also"></a>関連項目  
- [#import の属性](../preprocessor/hash-import-attributes-cpp.md)   
- [#import ディレクティブ](../preprocessor/hash-import-directive-cpp.md)
+ 
+[#import の属性](../preprocessor/hash-import-attributes-cpp.md)   
+[#import ディレクティブ](../preprocessor/hash-import-directive-cpp.md)

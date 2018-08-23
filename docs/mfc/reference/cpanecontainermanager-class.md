@@ -1,5 +1,5 @@
 ---
-title: CPaneContainerManager クラス |Microsoft ドキュメント
+title: CPaneContainerManager クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -116,16 +116,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7c988f062fc870359a8f1ae1265fb91d02dbb3d
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: a3a0372d5892ec4b563275d0a5bb8f309cf6fc47
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079378"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541437"
 ---
 # <a name="cpanecontainermanager-class"></a>CPaneContainerManager クラス
-`CPaneContainerManager`クラスは、記憶域と現在のドッキング レイアウトの表示を管理します。  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+`CPaneContainerManager`クラスは、ストレージと、現在のドッキング レイアウトの表示を管理します。  
+ 詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。  
   
 ## <a name="syntax"></a>構文  
   
@@ -191,12 +191,12 @@ class CPaneContainerManager : public CObject
 |[CPaneContainerManager::StoreRecentDockSiteInfo](#storerecentdocksiteinfo)||  
   
 ### <a name="remarks"></a>Remarks  
- フレームワークのインスタンスを自動的に作成する`CPaneContainerManager`オブジェクトし、するか、そのファイルを埋め込みますに[CPaneDivider クラス](../../mfc/reference/cpanedivider-class.md)オブジェクトまたは[CMultiPaneFrameWnd クラス](../../mfc/reference/cmultipaneframewnd-class.md)オブジェクト。  
+ フレームワークのインスタンスを自動的に作成する`CPaneContainerManager`オブジェクトし、それらをいずれかに埋め込みますに[CPaneDivider クラス](../../mfc/reference/cpanedivider-class.md)オブジェクトまたは[CMultiPaneFrameWnd クラス](../../mfc/reference/cmultipaneframewnd-class.md)オブジェクト。  
   
- `CPaneContainerManager`クラスから作成されるバイナリ ツリーのルートへのポインターを格納する[CPaneContainer](../../mfc/reference/cpanecontainer-class.md)オブジェクト。  
+ `CPaneContainerManager`クラスから組み込まれているバイナリ ツリーのルートへのポインターを格納する[CPaneContainer](../../mfc/reference/cpanecontainer-class.md)オブジェクト。  
   
 ## <a name="example"></a>例  
- 次の例への参照を取得する方法を示します、`CPaneContainerManager`オブジェクト。 このコード スニペットの一部である、[ウィンドウのサイズを設定サンプル](../../visual-cpp-samples.md)です。  
+ 次の例への参照を取得する方法を示します、`CPaneContainerManager`オブジェクト。 このコード スニペットの一部、[ウィンドウのサイズを設定サンプル](../../visual-cpp-samples.md)します。  
   
  [!code-cpp[NVC_MFC_SetPaneSize#5](../../mfc/reference/codesnippet/cpp/cpanecontainermanager-class_1.cpp)]  
   
@@ -205,7 +205,7 @@ class CPaneContainerManager : public CObject
   
  [CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxpanecontainermanager.h  
   
 ##  <a name="addpane"></a>  CPaneContainerManager::AddPane  
@@ -241,7 +241,7 @@ virtual BOOL AddPaneContainerManager(
  [in]*bOuterEdge*  
  [in]*pTargetControlBar*  
  [in]*場合*  
- [in]*間*  
+ [in]*bCopy*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -352,7 +352,7 @@ BOOL CheckAndRemoveNonValidPane(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWnd*  
+ [in]*我が物*  
   
 ### <a name="return-value"></a>戻り値  
   

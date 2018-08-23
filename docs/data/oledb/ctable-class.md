@@ -24,12 +24,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 723d4f1e8f44c3ce376b4f39f34a191265ca4eab
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 34eb8cb8a6b839f8a4dcd8d699c7fcb4851d57f6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336727"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572979"
 ---
 # <a name="ctable-class"></a>CTable クラス
 (パラメーターなしのいずれかの) 単純な行セットに直接アクセスするための手段を提供します。  
@@ -100,16 +100,16 @@ HRESULT Open(const CSession& session,
  [in]`DBID`のテーブルを開きます。  
   
  *pPropSet*  
- [in]配列へのポインター [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx)プロパティおよび設定する値を含む構造体。 参照してください[プロパティ セットとプロパティ グループ](https://msdn.microsoft.com/library/ms713696.aspx)で、 *OLE DB プログラマーズ リファレンス*Windows SDK にします。 既定値は NULL には、プロパティは指定しません。  
+ [in]配列へのポインター [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))プロパティおよび設定する値を含む構造体。 参照してください[プロパティ セットとプロパティ グループ](/previous-versions/windows/desktop/ms713696\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*Windows SDK にします。 既定値は NULL には、プロパティは指定しません。  
   
  *ulPropSets*  
- [in]数[DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx)構造体が渡された、 *pPropSet*引数。  
+ [in]数[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))構造体が渡された、 *pPropSet*引数。  
   
 ### <a name="return-value"></a>戻り値  
  標準の HRESULT です。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [iopenrowset::openrowset](https://msdn.microsoft.com/library/ms716724.aspx)で、 *OLE DB プログラマーズ リファレンス*します。  
+ 詳細については、次を参照してください。 [iopenrowset::openrowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ## <a name="see-also"></a>関連項目  
  [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)   

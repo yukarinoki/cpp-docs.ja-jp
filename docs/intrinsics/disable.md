@@ -1,5 +1,5 @@
 ---
-title: _disable |Microsoft ドキュメント
+title: _disable |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4359d77f13338e2e007236b0103fd358dffd0ce1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2748d0412c9ee0f7e7684d35a38f3c2b5d133754
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324260"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541629"
 ---
 # <a name="disable"></a>_disable
 **Microsoft 固有の仕様**  
@@ -41,11 +41,11 @@ void _disable(void);
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`_disable`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_disable`|x86、ARM、x64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `_disable` は、プロセッサに対して割り込みフラグをクリアするように指示します。 x86 システムでは、この関数は割り込みフラグのクリア (`cli`) 命令を生成します。  
   
  この関数はカーネル モードのみで使用できます。 ユーザー モードで使用した場合は、実行時に特権命令例外がスローされます。  

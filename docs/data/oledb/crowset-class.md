@@ -249,12 +249,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f63fa932de6dc578fa29dd66c9b4030a8aa3140c
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: ce041b92a1e6d90089de1a68a89041f1d033e854
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338234"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573149"
 ---
 # <a name="crowset-class"></a>CRowset クラス
 OLE DB 行セット オブジェクトと関連するいくつかをカプセル化インターフェイスし、行セットのデータの操作メソッドを提供します。  
@@ -281,16 +281,16 @@ class CRowset
 |-|-|  
 |[AddRefRows](#addrefrows)|現在の行に関連付けられている参照カウントをインクリメントします。|  
 |[閉じる](#close)|行と、現在のリリース`IRowset`インターフェイス。|  
-|[Compare](#compare)|使用してをブックマーク 2 つ比較[IRowsetLocate::Compare](https://msdn.microsoft.com/library/ms709539.aspx)します。|  
+|[Compare](#compare)|使用してをブックマーク 2 つ比較[IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539\(v=vs.85\))します。|  
 |[CRowset](#crowset)|新たに作成`CRowset`オブジェクトし、(必要に応じて) に関連付けます、`IRowset`インターフェイスのパラメーターとして指定します。|  
-|[削除](#delete)|使用して、行セットから行を削除[IRowsetChange:DeleteRows](https://msdn.microsoft.com/library/ms724362.aspx)します。|  
+|[削除](#delete)|使用して、行セットから行を削除[IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85))します。|  
 |[FindNextRow](#findnextrow)|指定されたブックマーク後に、次の一致する行を検索します。|  
 |[GetApproximatePosition](#getapproximateposition)|ブックマークに対応する行のおおよその位置を返します。|  
 |[GetData](#getdata)|行の行セットのコピーからデータを取得します。|  
 |[GetDataHere](#getdatahere)|指定したバッファーからデータを取得します。|  
 |[GetOriginalData](#getoriginaldata)|最近からフェッチまたは保留中の変更を無視して、データ ソースに送信されるデータを取得します。|  
 |[GetRowStatus](#getrowstatus)|すべての行の状態を返します。|  
-|[[挿入]](#insert)|作成を使用して新しい行を挿入します[IRowsetChange:InsertRow](https://msdn.microsoft.com/library/ms716921.aspx)します。|  
+|[[挿入]](#insert)|作成を使用して新しい行を挿入します[IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921\(v=vs.85\))します。|  
 |[IsSameRow](#issamerow)|現在の行に指定された行を比較します。|  
 |[MoveFirst](#movefirst)|次のフェッチ位置を初期位置に移動します。|  
 |[MoveLast](#movelast)|最後のレコードに移動します。|  
@@ -298,8 +298,8 @@ class CRowset
 |[MovePrev](#moveprev)|前のレコードに移動します。|  
 |[MoveToBookmark](#movetobookmark)|ブックマークからブックマークで行または指定したオフセットの行をフェッチします。|  
 |[MoveToRatio](#movetoratio)|行セット内の小数部の位置から始まる行がフェッチされます。|  
-|[ReleaseRows](#releaserows)|呼び出し[::releaserows](https://msdn.microsoft.com/library/ms719771.aspx)を現在の行ハンドルを解放します。|  
-|[SetData](#setdata)|使用して行の 1 つまたは複数の列のデータ値を設定[IRowsetChange:SetData](https://msdn.microsoft.com/library/ms721232.aspx)します。|  
+|[ReleaseRows](#releaserows)|呼び出し[::releaserows](/previous-versions/windows/desktop/ms719771\(v=vs.85\))を現在の行ハンドルを解放します。|  
+|[SetData](#setdata)|使用して行の 1 つまたは複数の列のデータ値を設定[IRowsetChange:SetData](/previous-versions/windows/desktop/ms721232\(v=vs.85\))します。|  
 |[元に戻す](#undo)|最後のフェッチを行に加えられた変更を元に戻しますか[Update](../../data/oledb/crowset-update.md)します。|  
 |[更新](#update)|保留中の最後のフェッチまたは更新プログラム以降、現在の行に加えられた変更を送信します。|  
 |[UpdateAll](#updateall)|保留中の最後のフェッチまたは更新プログラム以降のすべての行に加えられた変更を送信します。|  
@@ -310,7 +310,7 @@ class CRowset
  このクラスがインスタンス化されますが、テンプレートのパラメーターとしてではなく渡されたものではありません`CTable`または`CCommand`(`CRowset`は既定です)。  
 
 ## <a name="addrefrows"></a> Crowset::addrefrows
-呼び出し[IRowset::AddRefRows](https://msdn.microsoft.com/library/ms719619.aspx) (1 つ) によって参照カウントをインクリメントするは、現在の行ハンドルに関連付けられています。  
+呼び出し[IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) (1 つ) によって参照カウントをインクリメントするは、現在の行ハンドルに関連付けられています。  
   
 ### <a name="syntax"></a>構文  
   
@@ -325,7 +325,7 @@ HRESULT AddRefRows() throw();
  このメソッドは、現在の行ハンドルの参照カウントをインクリメントします。 呼び出す[ReleaseRows](../../data/oledb/crowset-releaserows.md)カウントをデクリメントします。 Move メソッドによって返される行では、1 つの参照カウントがあります。  
 
 ## <a name="close"></a> Crowset::close
-行と、現在のリリース[IRowset](https://msdn.microsoft.com/library/ms720986.aspx)インターフェイス。  
+行と、現在のリリース[IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\))インターフェイス。  
   
 ### <a name="syntax"></a>構文  
   
@@ -337,7 +337,7 @@ void Close() throw();
  このメソッドは、現在、行セット内のすべての行を解放します。  
 
 ## <a name="compare"></a> Crowset::compare
-使用してをブックマーク 2 つ比較[IRowsetLocate::Compare](https://msdn.microsoft.com/library/ms709539.aspx)します。  
+使用してをブックマーク 2 つ比較[IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539\(v=vs.85\))します。  
   
 ### <a name="syntax"></a>構文  
   
@@ -366,7 +366,7 @@ HRESULT Compare(const CBookmarkBase& bookmark1,
  コンシューマーでのブックマークの使用方法の詳細については、次を参照してください。[ブックマークを使って](../../data/oledb/using-bookmarks.md)します。  
 
 ## <a name="crowset"></a> Crowset::crowset
-新たに作成`CRowset`オブジェクトし、(必要に応じて) に関連付けます、 [IRowset](https://msdn.microsoft.com/library/ms720986.aspx)インターフェイスのパラメーターとして指定します。  
+新たに作成`CRowset`オブジェクトし、(必要に応じて) に関連付けます、 [IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\))インターフェイスのパラメーターとして指定します。  
   
 ### <a name="syntax"></a>構文  
   
@@ -381,7 +381,7 @@ CRowset(IRowset* pRowset);
  [in]ポインター、`IRowset`このクラスに関連するインターフェイス。  
 
 ## <a name="delete"></a> Crowset::delete
-呼び出し[irowsetchange::deleterows](https://msdn.microsoft.com/library/ms724362.aspx)を行セットから現在の行を削除します。  
+呼び出し[irowsetchange::deleterows](/previous-versions/windows/desktop/ms724362(v%3dvs.85))を行セットから現在の行を削除します。  
   
 ### <a name="syntax"></a>構文  
   
@@ -410,22 +410,22 @@ HRESULT FindNextRow(DBCOMPAREOP op,
   
 #### <a name="parameters"></a>パラメーター  
  *op*  
- [in]行の値を比較する際に使用する操作。 値については、次を参照してください。 [:findnextrow](https://msdn.microsoft.com/library/ms723091.aspx)します。  
+ [in]行の値を比較する際に使用する操作。 値については、次を参照してください。 [:findnextrow](/previous-versions/windows/desktop/ms723091\(v=vs.85\))します。  
   
  *pData*  
  [in]一致する値へのポインター。  
   
  *wType*  
- [in]バッファーの値の一部のデータ型を示します。 型インジケーターの詳細については、次を参照してください。[データ型](https://msdn.microsoft.com/library/ms723969.aspx)で、 *OLE DB プログラマーズ リファレンス*Windows SDK に含まれています。  
+ [in]バッファーの値の一部のデータ型を示します。 型インジケーターの詳細については、次を参照してください。[データ型](/previous-versions/windows/desktop/ms723969\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*Windows SDK に含まれています。  
   
  *されて*  
- [in]データの値として割り当てられているコンシューマー データ構造体の長さ、(バイト単位)。 詳細については、説明を参照してください。`cbMaxLen`で[DBBINDING 構造体](https://msdn.microsoft.com/library/ms716845.aspx)で、 *OLE DB プログラマーズ リファレンス。*  
+ [in]データの値として割り当てられているコンシューマー データ構造体の長さ、(バイト単位)。 詳細については、説明を参照してください。`cbMaxLen`で[DBBINDING 構造体](/previous-versions/windows/desktop/ms716845\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス。*  
   
  *bPrecision*  
- [in]データを取得するときに使用される最大有効桁数。 使用されている場合にのみ*wType* DBTYPE_NUMERIC です。 詳細については、次を参照してください。 [DBTYPE_NUMERIC または DBTYPE_DECIMAL を伴う変換](https://msdn.microsoft.com/library/ms719714.aspx)で、 *OLE DB プログラマーズ リファレンス*します。  
+ [in]データを取得するときに使用される最大有効桁数。 使用されている場合にのみ*wType* DBTYPE_NUMERIC です。 詳細については、次を参照してください。 [DBTYPE_NUMERIC または DBTYPE_DECIMAL を伴う変換](/previous-versions/windows/desktop/ms719714\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
   
  *bScale*  
- [in]データの取得時に使用されるスケール。 使用されている場合にのみ*wType* DBTYPE_NUMERIC DBTYPE_DECIMAL か。 詳細については、次を参照してください。 [DBTYPE_NUMERIC または DBTYPE_DECIMAL を伴う変換](https://msdn.microsoft.com/library/ms719714.aspx)で、 *OLE DB プログラマーズ リファレンス*します。  
+ [in]データの取得時に使用されるスケール。 使用されている場合にのみ*wType* DBTYPE_NUMERIC DBTYPE_DECIMAL か。 詳細については、次を参照してください。 [DBTYPE_NUMERIC または DBTYPE_DECIMAL を伴う変換](/previous-versions/windows/desktop/ms719714\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
   
  *bSkipCurrent*  
  [in]検索を開始する位置のブックマークからの行の数。  
@@ -596,7 +596,7 @@ HRESULT IsSameRow(HROW hRow) const throw();
  [in]現在の行と比較する行へのハンドル。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の HRESULT です。 S_OK では、行は、同じことを示します。 その他の値では、次を参照してください。 [IRowsetIndentity::IsSameRow](https://msdn.microsoft.com/library/ms719629.aspx)で、 *OLE DB プログラマーズ リファレンス*Windows SDK にします。  
+ 標準の HRESULT です。 S_OK では、行は、同じことを示します。 その他の値では、次を参照してください。 [IRowsetIndentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*Windows SDK にします。  
 
 ## <a name="movefirst"></a> Crowset::movefirst
 最初の位置にカーソルを移動し、最初の行を取得します。  
@@ -611,7 +611,7 @@ HRESULT MoveFirst() throw();
  標準の HRESULT です。  
   
 ### <a name="remarks"></a>Remarks  
- 呼び出し[irowset::restartposition](https://msdn.microsoft.com/library/ms712877.aspx)位置を初期位置 (行セットの作成時に、次のフェッチ位置が位置) に次のフェッチ位置を変更して、最初の行を取得します。  
+ 呼び出し[irowset::restartposition](/previous-versions/windows/desktop/ms712877\(v=vs.85\))位置を初期位置 (行セットの作成時に、次のフェッチ位置が位置) に次のフェッチ位置を変更して、最初の行を取得します。  
 
 ## <a name="movelast"></a> Crowset::movelast
 最後の行にカーソルを移動します。  
@@ -626,7 +626,7 @@ HRESULT MoveLast() throw();
  標準の HRESULT です。  
   
 ### <a name="remarks"></a>Remarks  
- 呼び出し[irowset::restartposition](https://msdn.microsoft.com/library/ms712877.aspx)次のフェッチ位置を最後の位置に配置し、最後の行を取得します。  
+ 呼び出し[irowset::restartposition](/previous-versions/windows/desktop/ms712877\(v=vs.85\))次のフェッチ位置を最後の位置に配置し、最後の行を取得します。  
   
  このメソッドは、設定する必要があります`DBPROP_CANSCROLLBACKWARDS`を呼び出す前に VARIANT_TRUE に`Open`テーブルまたは行セットを含むコマンド。 (パフォーマンスの向上のため、設定することがありますも`DBPROP_QUICKRESTART`を VARIANT_TRUE に設定します)。  
 
@@ -731,12 +731,12 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
   
  `(nNumerator *  RowsetSize ) / nDenominator`  
   
- 場所`RowsetSize`行数で指定された行セットのサイズです。 この式の精度は、特定のプロバイダーによって異なります。 詳細については、次を参照してください。 [irowsetscroll::getrowsatratio](https://msdn.microsoft.com/library/ms709602.aspx)します。  
+ 場所`RowsetSize`行数で指定された行セットのサイズです。 この式の精度は、特定のプロバイダーによって異なります。 詳細については、次を参照してください。 [irowsetscroll::getrowsatratio](/previous-versions/windows/desktop/ms709602\(v=vs.85\))します。  
   
  このメソッドでは省略可能なインターフェイス`IRowsetScroll`、する可能性がありますでサポートされていないすべてのプロバイダー場合は、この場合、E_NOINTERFACE を返します。 設定する必要がありますも`DBPROP_IRowsetScroll`を呼び出す前に VARIANT_TRUE に`Open`テーブルまたは行セットを含むコマンド。  
 
 ## <a name="releaserows"></a> Crowset::releaserows
-呼び出し[::releaserows](https://msdn.microsoft.com/library/ms719771.aspx)を現在の行ハンドルを解放します。  
+呼び出し[::releaserows](/previous-versions/windows/desktop/ms719771\(v=vs.85\))を現在の行ハンドルを解放します。  
   
 ### <a name="syntax"></a>構文  
   

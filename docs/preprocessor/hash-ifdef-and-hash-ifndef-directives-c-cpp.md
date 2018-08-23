@@ -1,5 +1,5 @@
 ---
-title: '#ifdef および #ifndef ディレクティブ (C/C++) |Microsoft ドキュメント'
+title: '#ifdef および #ifndef ディレクティブ (C/C++) |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a5ecfc9cc63fc4028e1f93d8f30e8d5cb9f9357
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: 8c3453cd652401e9d1f4573bb1750773cbefe8d9
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33954090"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539217"
 ---
 # <a name="ifdef-and-ifndef-directives-cc"></a>#ifdef および #ifndef ディレクティブ (C/C++)
-**#Ifdef**と **#ifndef**ディレクティブと同じタスクを実行する、`#if`ディレクティブと共に使用したときに**定義**( *の識別子* ).  
+**#Ifdef**と **#ifndef**ディレクティブと同じタスクを実行する、`#if`ディレクティブと共に使用するときに**定義**( *の識別子* ).  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,20 +42,21 @@ ms.locfileid: "33954090"
 #if !defined identifier  
 ```  
   
-## <a name="remarks"></a>コメント  
- 使用することができます、 **#ifdef**と **#ifndef**ディレクティブを任意の場所`#if`使用できます。 **#Ifdef** *識別子*ステートメントは等価`#if 1`とき*識別子*を定義した後と等価であると`#if 0`とき*識別子*が定義されていないかで定義されているが、`#undef`ディレクティブです。 これらのディレクティブは、C または C++ ソース コードで宣言された識別子ではなく、`#define` で定義された識別子の有無を調べます。  
+## <a name="remarks"></a>Remarks  
+ 
+使用することができます、 **#ifdef**と **#ifndef**任意の場所ディレクティブ`#if`ことができます。 **#Ifdef** *識別子*ステートメントは等価`#if 1`とき*識別子*を定義した後と等価`#if 0`とき*識別子*が定義されていないか、定義していない、`#undef`ディレクティブ。 これらのディレクティブは、C または C++ ソース コードで宣言された識別子ではなく、`#define` で定義された識別子の有無を調べます。  
   
- これらのディレクティブは、言語の以前のバージョンとの互換性を維持するために用意されています。 **定義 (** *識別子* **)** で使用される定数式、`#if`ディレクティブをお勧めします。  
+これらのディレクティブは、言語の以前のバージョンとの互換性を維持するために用意されています。 **定義 (** *識別子* **)** で使用される定数式、`#if`ディレクティブをお勧めします。  
   
- **#Ifndef**ディレクティブが調べる反対の条件をチェック **#ifdef**です。 識別子を定義していない (またはその定義を `#undef` で削除した) 場合、条件は true (ゼロ以外) です。 それ以外の場合、条件は False (0) です。  
+**#Ifndef**ディレクティブが反対でチェックする条件のチェック **#ifdef**します。 識別子を定義していない (またはその定義を `#undef` で削除した) 場合、条件は true (ゼロ以外) です。 それ以外の場合、条件は False (0) です。  
   
- **Microsoft 固有の仕様**  
+**Microsoft 固有の仕様**  
   
- *識別子*/D オプションを使用してコマンドラインから渡すことができます。 最大 30 個のマクロを /D に指定できます。  
+*識別子*を使用して、コマンドラインから渡すことができます、`/D`オプション。 最大で 30 個のマクロで指定できる`/D`します。  
   
- 定義をコマンド ラインから渡すことができるため、定義の有無を調べるために便利です。 例えば:  
+定義をコマンド ラインから渡すことができるため、定義の有無を調べるために便利です。 例えば:  
   
-```  
+```cpp  
 // ifdef_ifndef.CPP  
 // compile with: /Dtest /c  
 #ifndef test  
@@ -63,7 +64,8 @@ ms.locfileid: "33954090"
 #endif  
 ```  
   
- **Microsoft 固有の仕様はここまで**  
+**Microsoft 固有の仕様はここまで**  
   
 ## <a name="see-also"></a>関連項目  
- [プリプロセッサ ディレクティブ](../preprocessor/preprocessor-directives.md)
+ 
+[プリプロセッサ ディレクティブ](../preprocessor/preprocessor-directives.md)

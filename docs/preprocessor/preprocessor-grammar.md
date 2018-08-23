@@ -1,5 +1,5 @@
 ---
-title: プリプロセッサの文法 |Microsoft ドキュメント
+title: プリプロセッサの文法 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,97 +16,98 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d14a3e00e18a2d3ac69dd472ac4056a379ada224
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1871d1b8281f4dd74733133ede70ed80430246b3
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843367"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538444"
 ---
 # <a name="preprocessor-grammar"></a>プリプロセッサの文法
 **#define**  *identifier* *token-string*opt  
   
- *#* **define**  *identifier*[**(** *identifier*opt **,** *...* **,** *identifier*opt **)**] *token-string*opt  
+*#* **define**  *identifier*[**(** *identifier*opt **,** *...* **,** *identifier*opt **)**] *token-string*opt  
   
- **defined(**  *identifier* **)**  
+**defined(**  *identifier* **)**  
   
- **defined**  *identifier*  
+**defined**  *identifier*  
   
- `#include` **"***path-spec***"**  
+`#include` **"***path-spec***"**  
   
- `#include` **\<***path-spec***>**  
+`#include` **\<***path-spec***>**  
   
- **#line**  *digit-sequence*  **"** *filename* **"** opt  
+**#line**  *digit-sequence*  **"** *filename* **"** opt  
   
- *#* **undef**  *identifier*  
+*#* **undef**  *identifier*  
   
- **#error**  *token-string*  
+**#error**  *token-string*  
   
- **#pragma**  *token-string*  
+**#pragma**  *token-string*  
   
- *条件付き*:  
- *if 部分 elif パーツ*opt*else 部分*opt*endif 行*  
+*条件付き*:  
+*elif の構成要素の if 部分*opt*else 部分*opt*endif 行*  
   
- *if 部分*:  
- *if-linetext*  
+*if 部分*:  
+*if-linetext*  
   
- *if 行*:  
- **#if**  *constant-expression*  
+*if 行*:  
+**#if**  *constant-expression*  
   
- **#ifdef**  *identifier*  
+**#ifdef**  *identifier*  
   
- **#ifndef**  *identifier*  
+**#ifndef**  *identifier*  
   
- *elif パーツ*:  
- *elif 行のテキスト*  
+*elif パーツ*:  
+*elif 行のテキスト*  
   
- *elif パーツ elif 行テキスト*  
+*elif パーツ elif 行のテキスト*  
   
- *elif 行*:  
- **#elif**  *constant-expression*  
+*elif 行*:  
+**#elif**  *constant-expression*  
   
- *他の部分から成る*:  
- *else-linetext*  
+*他の部分から成る*:  
+*else-linetext*  
   
- *else 行*:  
- `#else`  
+*他の行*:  
+`#else`  
   
- *endif 行*:  
- `#endif`  
+*endif 行*:  
+`#endif`  
   
- *桁シーケンス*:  
- *digit*  
+*数字シーケンス*:  
+*digit*  
   
- *digit-sequence digit*  
+*digit-sequence digit*  
   
- *桁*: のいずれか  
- **0 1 2 3 4 5 6 7 8 9**  
+*数字*: のいずれか  
+**0 1 2 3 4 5 6 7 8 9**  
   
- *トークン文字列*:  
- トークンの文字列  
+*トークン文字列*:  
+トークンの文字列  
   
- *トークン*:  
- *keyword*  
+*トークン*:  
+*keyword*  
   
- *identifier*  
+*identifier*  
   
- *constant*  
+*constant*  
   
- *operator*  
+*operator*  
   
- `punctuator`  
+`punctuator`  
   
- *filename* :  
- 有効なオペレーティング システム ファイル名  
+*ファイル名*:  
+有効なオペレーティング システム ファイル名  
   
- *パス spec* :  
- 有効なファイル パス  
+*パス仕様*:  
+有効なファイル パス  
   
- *テキスト*:  
- テキストの任意のシーケンス  
+*テキスト*:  
+テキストの任意のシーケンス  
   
 > [!NOTE]
->  次の非終端はでは展開、[構文規則](../cpp/lexical-conventions.md)のセクションで、 *C++ 言語リファレンス*: `constant`、 `constant` -*式*、*識別子*、*キーワード*、 `operator`、および`punctuator`です。  
+> 展開する次の非終端要素、[構文規則](../cpp/lexical-conventions.md)のセクション、 *C++ 言語リファレンス*: `constant`、 `constant` -*式*、*識別子*、*キーワード*、 `operator`、および`punctuator`します。  
   
 ## <a name="see-also"></a>関連項目  
- [文法の概要 (C/C++)](../preprocessor/grammar-summary-c-cpp.md)
+ 
+[文法の概要 (C/C++)](../preprocessor/grammar-summary-c-cpp.md)

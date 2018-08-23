@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8c8868f83cb2e05a364b8977b014db5c02689c5
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 318951b5216513c20cdb21ac4a4fcfff9c3e0ac7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886064"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540451"
 ---
 # <a name="styles-used-by-mfc"></a>MFC で使用するスタイル  
   
@@ -232,15 +232,15 @@ ms.locfileid: "37886064"
 |BS_AUTOCHECKBOX|2 つの状態のチェック ボックス ボタンを作成します: BST_CHECKED をします。 ボタンをクリックすると、オーナー ウィンドウに BN_CLICKED 通知を送信し、ボタンの状態を変更します。 既定では、関連付けられたテキストはチェック ボックスの右側に表示されます。 チェック ボックスの左側にテキストを表示するには、BS_LEFTTEXT または BS_RIGHTBUTTON スタイルを使用します。|  
 |BS_AUTORADIOBUTTON|2 つの状態でラジオ ボタンを作成します: BST_CHECKED をします。 通常、オプション ボタンはグループで使用します。各グループで一度に選択できるオプションは 1 つだけです。 ボタンをクリックしてにより、オーナー ウィンドウに BN_CLICKED 通知を送信、BST_CHECKED をクリックしたラジオ ボタンの状態を設定し、ボタン グループに設定されている他のすべてのラジオ ボタンの状態を設定します。 既定では、関連付けられたテキストはオプション ボタンの右側に表示されます。 ラジオ ボタンの左側にテキストを表示するには、BS_LEFTTEXT または BS_RIGHTBUTTON スタイルを使用します。|  
 |BS_CHECKBOX|2 つの状態のチェック ボックス ボタンを作成します: BST_CHECKED をします。 ボタンをクリックすると、オーナー ウィンドウに BN_CLICKED 通知を送信しますが、ボタンの状態は変更されません。 既定では、関連付けられたテキストはチェック ボックスの右側に表示されます。 チェック ボックスの左側にテキストを表示するには、BS_LEFTTEXT または BS_RIGHTBUTTON スタイルを使用します。|  
-|BS_COMMANDLINK|コマンド リンク ボタンを作成します。 コマンド リンク ボタンは [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] に固有のコマンド ボタンで、メイン テキストの左側に緑の矢印が表示され、メイン テキストの下に注釈が表示されます。 注意のテキストを使用して、設定する[CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote)します。|  
-|BS_DEFCOMMANDLINK|コマンド リンク ボタンを作成します。 コマンド リンク ボタンは [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] に固有のコマンド ボタンで、メイン テキストの左側に緑の矢印が表示され、メイン テキストの下に注釈が表示されます。 注意のテキストを使用して、設定する[CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote)します。 ボタンがダイアログ ボックスの場合は、ENTER キーを押す BN_CLICKED に通知を送信 ダイアログ ボックス、ボタンに入力フォーカスがあるない場合でもです。|  
+|BS_COMMANDLINK|コマンド リンク ボタンを作成します。 コマンド リンク ボタンは、メイン テキストの下の注メイン テキストの左側に緑色の矢印を表示する Windows Vista に固有のコマンド ボタンです。 注意のテキストを使用して、設定する[CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote)します。|  
+|BS_DEFCOMMANDLINK|コマンド リンク ボタンを作成します。 コマンド リンク ボタンは、メイン テキストの下の注メイン テキストの左側に緑色の矢印を表示する Windows Vista に固有のコマンド ボタンです。 注意のテキストを使用して、設定する[CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote)します。 ボタンがダイアログ ボックスの場合は、ENTER キーを押す BN_CLICKED に通知を送信 ダイアログ ボックス、ボタンに入力フォーカスがあるない場合でもです。|  
 |BS_DEFPUSHBUTTON|境界線が黒くて太いコマンド ボタンを作成します。 ボタンがダイアログ ボックスの場合は、ENTER キーを押す BN_CLICKED に通知を送信 ダイアログ ボックス、ボタンに入力フォーカスがあるない場合でもです。|  
-|BS_DEFSPLITBUTTON|分割ボタンを作成します。 分割ボタンは [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] に固有のコマンド ボタンで、ボタンとドロップダウン矢印が並んで表示されます。 ボタンをクリックすると、既定のコマンドが実行されます。 ドロップダウン矢印をクリックすると、追加のコマンドのメニューが表示されます。 分割ボタンがダイアログ ボックスである場合は、ENTER キーを押す BN_CLICKED に通知を送信 ダイアログ ボックス、ボタンに入力フォーカスがあるない場合でも|  
+|BS_DEFSPLITBUTTON|分割ボタンを作成します。 分割ボタンは、コマンド ボタンの下向き矢印の横にあるボタンを含む Windows Vista に固有です。 ボタンをクリックすると、既定のコマンドが実行されます。 ドロップダウン矢印をクリックすると、追加のコマンドのメニューが表示されます。 分割ボタンがダイアログ ボックスである場合は、ENTER キーを押す BN_CLICKED に通知を送信 ダイアログ ボックス、ボタンに入力フォーカスがあるない場合でも|  
 |BS_GROUPBOX|他のボタンをグループ化する四角形を作成します。 このスタイルに関連付けられたテキストは、この四角形の左上隅に表示されます。|  
 |BS_OWNERDRAW|オーナー描画ボタンを作成します。 ボタンの外観が変更されると、フレームワークは `DrawItem` メソッドを呼び出します。 `CBitmapButton` クラスを使用するときは、このスタイルを設定する必要があります。|  
 |BS_PUSHBUTTON|ユーザーがボタンをクリックすると、オーナー ウィンドウに BN_CLICKED 通知を送信するコマンド ボタンを作成します。|  
 |BS_RADIOBUTTON|2 つの状態でラジオ ボタンを作成します: BST_CHECKED をします。 通常、オプション ボタンはグループで使用します。各グループで一度に選択できるオプションは 1 つだけです。 ボタンをクリックしてでは、オーナー ウィンドウに BN_CLICKED 通知を送信しますが、グループ内のいずれかのボタンの状態は自動的に変更されません。 既定では、関連付けられたテキストはオプション ボタンの右側に表示されます。 ラジオ ボタンの左側にテキストを表示するには、BS_LEFTTEXT または BS_RIGHTBUTTON スタイルを使用します。|  
-|BS_SPLITBUTTON|分割ボタンを作成します。 分割ボタンは [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] に固有のコマンド ボタンで、ボタンとドロップダウン矢印が並んで表示されます。 ボタンをクリックすると、既定のコマンドが実行されます。 ドロップダウン矢印をクリックすると、追加のコマンドのメニューが表示されます。|  
+|BS_SPLITBUTTON|分割ボタンを作成します。 分割ボタンは、コマンド ボタンの下向き矢印の横にあるボタンを含む Windows Vista に固有です。 ボタンをクリックすると、既定のコマンドが実行されます。 ドロップダウン矢印をクリックすると、追加のコマンドのメニューが表示されます。|  
 |BS_USERBUTTON|現在では使用されていないスタイルですが、16 ビット バージョンの Windows との下位互換性のために残されています。 Win32 ベースのアプリケーションでは、代わりにこのスタイルを使用する必要があります。|  
   
 ### <a name="radio-button-and-check-box-styles"></a>ラジオ ボタンとチェック ボックス スタイル  
@@ -498,7 +498,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
 |WS_EX_CONTEXTHELP|ウィンドウのタイトル バーに疑問符 () が含まれています。 ユーザーがこの疑問符をクリックすると、カーソルは、疑問符付きのポインターに変化します。 ユーザーには、子ウィンドウ、クリックすると、子は WM_HELP メッセージを受信します。|  
 |WS_EX_CONTROLPARENT|により、ユーザーが TAB キーを使用して、ウィンドウの子ウィンドウ間を移動できます。|  
 |WS_EX_DLGMODALFRAME|二重の境界線、タイトル バーで WS_CAPTION スタイル フラグを指定する場合で作成できます (必要に応じて) を持つウィンドウ、 *dwStyle*パラメーター。|  
-|WS_EX_LAYERED|ウィンドウが、[ウィンドウを階層化](http://msdn.microsoft.com/library/ms632599.aspx#layered)します。 ウィンドウに、このスタイルは使用できません、[クラス スタイル](http://msdn.microsoft.com/library/ms633574.aspx#class_styles)CS_OWNDC または CS_CLASSDC のいずれかの。 ただし、[!INCLUDE[win8_first](../../mfc/reference/includes/win8_first_md.md)]でトップ レベル ウィンドウに対してのみを Windows の以前のバージョン サポートが、子ウィンドウの WS_EX_LAYERED スタイルをサポートしています。|  
+|WS_EX_LAYERED|ウィンドウが、[ウィンドウを階層化](http://msdn.microsoft.com/library/ms632599.aspx#layered)します。 ウィンドウに、このスタイルは使用できません、[クラス スタイル](http://msdn.microsoft.com/library/ms633574.aspx#class_styles)CS_OWNDC または CS_CLASSDC のいずれかの。 ただし、Microsoft Windows 8 は、トップ レベル ウィンドウに対してのみの Windows の以前のバージョン サポートが、子ウィンドウの WS_EX_LAYERED スタイルをサポートします。|  
 |WS_EX_LEFT|ウィンドウの汎用左揃えプロパティを示します。 既定値です。|  
 |WS_EX_LEFTSCROLLBAR|クライアント領域の左側に垂直スクロール バーを配置します。|  
 |WS_EX_LTRREADING|表示ウィンドウのテキストを左から右を使用して読み取り順序プロパティ。 既定値です。|  

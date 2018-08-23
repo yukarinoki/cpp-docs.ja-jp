@@ -1,5 +1,5 @@
 ---
-title: いったん |Microsoft ドキュメント
+title: 後 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b0e0b2b3667d4a33709caa643e4d26ed70b2990
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b3ce387b4b9748c7fb46a419cbc8738e2598c5ab
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912928"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539222"
 ---
 # <a name="once"></a>once
 ソース コード ファイルをコンパイルする際、コンパイラによってファイルが 1 回だけ取り込まれる (開かれる) ようにします。  
@@ -31,26 +31,24 @@ ms.locfileid: "33912928"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 #pragma once  
-  
 ```  
   
-## <a name="remarks"></a>コメント  
- `#pragma once` を使用すると、翻訳単位でファイルの最初の #include の実行後にコンパイラで同じファイルを開いて読み込むことがないので、ビルド時間を短縮できます。 これを呼びます*複数インクルードの最適化*です。 同様の効果がある、 *#include guard の include*表現形式は、プリプロセッサ マクロの定義を使用して、ファイルの内容が複数回インクルードを防ぐためです。 違反を防ぐためには、*単一定義規則*— すべてのテンプレート、型、関数、およびオブジェクトがある 2 つ以上の定義、コード内の要件です。  
+## <a name="remarks"></a>Remarks  
+ 
+使用`#pragma once`コンパイラが開き、いない最初の後に、ファイルを読み取ると、ビルド時間を短縮できます`#include`の翻訳単位内のファイル。 呼ばれる*複数インクルードの最適化*します。 同様の効果がある、`#include guard`表現形式は、プリプロセッサ マクロの定義を使用して、ファイルの内容の複数のインクルードされないようにします。 これは、違反を防ぐためにも役立ちます、*単一定義規則*: 要件のすべてのテンプレート、型、関数、およびオブジェクトに、コードにある複数の定義があること。  
   
- 例えば:  
+例えば:  
   
 ```  
 // header.h  
 #pragma once  
-// Code placed here is included only once per translation unit  
-  
+// Code placed here is included only once per translation unit    
 ```  
   
- 新しいコードには `#pragma once` ディレクティブを使用することをお勧めします。これを使えば、プリプロセッサ シンボルによるグローバル名前空間のポリューションが発生しないためです。 またこのディレクティブは、必要な入力量や無駄も少なく、シンボルの競合の原因にもなりません。シンボルの競合とは、異なるヘッダー ファイルで同じプリプロセッサ シンボルがガード値として使用されたときに発生するエラーです。 これは C++ の標準の一部ではありませんが、いくつかの一般的なコンパイラにより移植可能な方法で実装されます。  
+新しいコードには `#pragma once` ディレクティブを使用することをお勧めします。これを使えば、プリプロセッサ シンボルによるグローバル名前空間のポリューションが発生しないためです。 またこのディレクティブは、必要な入力量や無駄も少なく、シンボルの競合の原因にもなりません。シンボルの競合とは、異なるヘッダー ファイルで同じプリプロセッサ シンボルがガード値として使用されたときに発生するエラーです。 これは C++ の標準の一部ではありませんが、いくつかの一般的なコンパイラにより移植可能な方法で実装されます。  
   
- 同じファイルで #include guard 表現形式と `#pragma once` の両方を使用する利点はありません。 コメントではないコードまたはプリプロセッサ ディレクティブが標準的な表現形式の前後にくる場合、`#pragma once` ディレティブと同様の方法で、コンパイラにより #include guard 表現形式が認識され、複数インクルードの最適化が実装されます。  
+同じファイルで #include guard 表現形式と `#pragma once` の両方を使用する利点はありません。 コメントではないコードまたはプリプロセッサ ディレクティブが標準的な表現形式の前後にくる場合、`#pragma once` ディレティブと同様の方法で、コンパイラにより #include guard 表現形式が認識され、複数インクルードの最適化が実装されます。  
   
 ```  
 // header.h  
@@ -59,13 +57,13 @@ ms.locfileid: "33912928"
 #ifndef HEADER_H_     // equivalently, #if !defined HEADER_H_  
 #define HEADER_H_  
 // Code placed here is included only once per translation unit  
-#endif // HEADER_H_  
-  
+#endif // HEADER_H_    
 ```  
   
- 既存のコードとの一貫性を維持するために、`#pragma once` ディレクティブを実装していないコンパイラにコードを移植できるようにする必要がある場合や、複数のインクルードの最適化が不可能である場合は、#include guard 表現形式をお勧めします。 これは、ファイル システムの別名または別名が設定されたインクルード パスにより、コンパイラが正規のパスを基準に同じインクルード ファイルを識別できなくなるような複雑なプロジェクトで発生する場合があります。  
+お勧め、`#include guard`表現形式と、コードを実装していないコンパイラに移植する必要があります、`#pragma once`ディレクティブは、既存のコードとの一貫性を維持する場合や、複数インクルードの最適化が不可能。 これは、ファイル システムの別名または別名が設定されたインクルード パスにより、コンパイラが正規のパスを基準に同じインクルード ファイルを識別できなくなるような複雑なプロジェクトで発生する場合があります。  
   
- プリプロセッサ シンボルを使用してその効果を制御する、複数回のインクルードが発生するように設計されているヘッダー ファイルに、`#pragma once` または #include guard の表現形式を使用しないようにします。 この設計の例は、次を参照してください。、 \<assert.h > ヘッダー ファイルです。 また、インクルード ファイルに複数のパスを作成すると、#include guard と `#pragma once` の両方で複数インクルードの最適化が損なわれるため、インクルード パスを慎重に管理し、それを回避してください。  
+使用しないように注意する`#pragma once`または`#include guard`プリプロセッサ シンボルを使用して、その影響を制御する、複数回含まれるよう設計されているヘッダー ファイル内の表現形式です。 この設計の例は、次を参照してください。、 \<assert.h > ヘッダー ファイル。 管理をインクルード パスを無にインクルード ファイルは、複数のパスを作成しないようにする、複数インクルードの両方の最適化`#include guard`s と`#pragma once`します。  
   
 ## <a name="see-also"></a>関連項目  
- [プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

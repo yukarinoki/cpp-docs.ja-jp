@@ -1,5 +1,5 @@
 ---
-title: _mm_stream_si64x |Microsoft ドキュメント
+title: _mm_stream_si64x |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ea6b9bdc57765b15128ebcc6f9a17bba2612e29
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0385f2812c58b65102780780a1b7a548b2b08429
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328790"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540891"
 ---
 # <a name="mmstreamsi64x"></a>_mm_stream_si64x  
   
 **Microsoft 固有の仕様**  
   
- MOVNTI 命令を生成します。 データを書き込みます`Source`で指定されたメモリ位置へ`Dest`キャッシュを汚染なし。  
+ MOVNTI 命令を生成します。 において、データを書き込む`Source`で指定されたメモリ位置へ`Dest`キャッシュの汚染なし。  
   
 ## <a name="syntax"></a>構文  
   
@@ -51,11 +51,11 @@ void _mm_stream_si64x(
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`_mm_stream_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_mm_stream_si64x`|X64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
  このルーチンは、組み込みとしてのみ使用できます。  
   

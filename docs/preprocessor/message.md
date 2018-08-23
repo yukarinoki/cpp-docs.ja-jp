@@ -1,5 +1,5 @@
 ---
-title: メッセージ |Microsoft ドキュメント
+title: メッセージ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47b9fd580d1ebabf4352104fe49f1d3c982a49e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a3ce9091fe380f7d255dd321dbb9eb5ca7134b8d
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846364"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541408"
 ---
 # <a name="message"></a>message
 コンパイルを終了せずに、標準出力に文字列リテラルを送信します。  
@@ -31,20 +31,20 @@ ms.locfileid: "33846364"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 #pragma message( messagestring )  
 ```  
   
-## <a name="remarks"></a>コメント  
- 一般的な使用、**メッセージ**プラグマは、コンパイル時に情報メッセージを表示します。  
+## <a name="remarks"></a>Remarks  
+
+一般的な使用、**メッセージ**プラグマは、コンパイル時に情報メッセージを表示します。  
   
- *Messagestring*パラメーターは、リテラル、文字列に展開されるマクロを指定でき、こうしたマクロと文字列リテラルの任意の組み合わせを連結することができます。  
+*Messagestring*パラメーターは、リテラル文字列に展開されるマクロは、こうしたマクロと文字列リテラルの任意の組み合わせを連結することができます。  
   
- 定義済みマクロを使用する場合、**メッセージ**プラグマ マクロが文字列を返す必要があります、それ以外の場合、マクロの出力を文字列に変換する必要があります。  
+定義済みマクロを使用する場合、**メッセージ**プラグマ マクロが文字列を返す必要があります、それ以外の場合、マクロの出力を文字列に変換する必要があります。  
   
- 次のコード片では、**メッセージ**プラグマはコンパイル時にメッセージを表示します。  
+次のコード フラグメントを使用して、**メッセージ**プラグマはコンパイル時にメッセージを表示します。  
   
-```  
+```cpp  
 // pragma_directives_message1.cpp  
 // compile with: /LD  
 #if _M_IX86 >= 500  
@@ -68,4 +68,5 @@ ms.locfileid: "33846364"
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -1,5 +1,5 @@
 ---
-title: CMFCVisualManagerOffice2007 クラス |Microsoft ドキュメント
+title: CMFCVisualManagerOffice2007 クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -240,17 +240,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fd70adb821724a476a66ad21157eb8506ffaa40
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: fd52e1437146c5584fa6240b4423462401921b44
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039590"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538761"
 ---
 # <a name="cmfcvisualmanageroffice2007-class"></a>CMFCVisualManagerOffice2007 クラス
 `CMFCVisualManagerOffice2007` Microsoft Office 2007 の外観をアプリケーションに提供します。 
 
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。  
   
 ## <a name="syntax"></a>構文  
   
@@ -377,13 +377,13 @@ class CMFCVisualManagerOffice2007 : public CMFCVisualManagerOffice2003
 |[CMFCVisualManagerOffice2007::OnSetWindowRegion](#onsetwindowregion)||  
 |[CMFCVisualManagerOffice2007::OnUpdateSystemColors](#onupdatesystemcolors)||  
 |[CMFCVisualManagerOffice2007::SetResourceHandle](#setresourcehandle)||  
-|`CMFCVisualManagerOffice2007::SetStyle`|配色を設定、 `CMFCVisualManagerOffice2007` GUI します。|  
+|`CMFCVisualManagerOffice2007::SetStyle`|色スキームの設定、 `CMFCVisualManagerOffice2007` GUI です。|  
   
 ## <a name="remarks"></a>Remarks  
- 使用して`CMFCVisualManagerOffice2007`を Microsoft Office 2007 のと同じように、アプリケーションの外観を変更します。 このビジュアル マネージャーでは、使用する前に、スタイルを設定することが必要です。 このビジュアル マネージャーに渡す前に`CMFCVisualManager::SetDefaultManager`、静的関数を呼び出す必要があります`CMFCVisualManagerOffice2007::SetStyle`です。  
+ 使用`CMFCVisualManagerOffice2007`を Microsoft Office 2007 のように、アプリケーションのビジュアルの外観を変更します。 このビジュアル マネージャーを使用する前に、スタイルを設定することが必要です。 このビジュアル マネージャーに渡す前に`CMFCVisualManager::SetDefaultManager`、静的関数を呼び出す必要があります`CMFCVisualManagerOffice2007::SetStyle`します。  
   
 ## <a name="example"></a>例  
- 次の例では、Office 2007 のビジュアル マネージャーを使用する方法を示します。 このコード スニペットの一部である、[デスクトップ アラート デモ サンプル](../../visual-cpp-samples.md)です。  
+ 次の例では、Office 2007 のビジュアル マネージャーを使用する方法を示します。 このコード スニペットの一部、[デスクトップ アラート デモ サンプル](../../visual-cpp-samples.md)します。  
   
  [!code-cpp[NVC_MFC_DesktopAlertDemo#7](../../mfc/reference/codesnippet/cpp/cmfcvisualmanageroffice2007-class_1.cpp)]  
   
@@ -400,7 +400,7 @@ class CMFCVisualManagerOffice2007 : public CMFCVisualManagerOffice2003
   
  [CMFCVisualManagerOffice2007](../../mfc/reference/cmfcvisualmanageroffice2007-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxvisualmanageroffice2007.h  
   
 ##  <a name="alwayshighlight3dtabs"></a>  CMFCVisualManagerOffice2007::AlwaysHighlight3DTabs  
@@ -492,7 +492,7 @@ CMFCRibbonBar* GetRibbonBar(CWnd* pWnd) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWnd*  
+ [in]*我が物*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -711,7 +711,7 @@ virtual BOOL GetToolTipInfo(
   
 ### <a name="parameters"></a>パラメーター  
  [in]*params*  
- [in]*タイプ*  
+ [in]*%n タイプ*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -769,7 +769,7 @@ BOOL IsRibbonPresent(CWnd* pWnd) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWnd*  
+ [in]*我が物*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -867,7 +867,7 @@ virtual void OnDrawCheckBoxEx(
 ### <a name="parameters"></a>パラメーター  
  [in]*pDC*  
  [in]*rect*  
- [in]*%n 状態*  
+ [in]*状態*  
  [in]*bHighlighted*  
  [in]*bPressed*  
  [in]*bEnabled*  
@@ -1760,7 +1760,7 @@ virtual void OnDrawScrollButtons(
  [in]*pDC*  
  [in]*rect*  
  [in]*nBorderSize*  
- [in]*画像*  
+ [in]*画像を*  
  [in]*bHilited*  
   
 ### <a name="remarks"></a>Remarks  
@@ -2338,7 +2338,7 @@ virtual BOOL OnNcActivate(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWnd*  
+ [in]*我が物*  
  [in]*描画*  
   
 ### <a name="return-value"></a>戻り値  
@@ -2356,7 +2356,7 @@ virtual BOOL OnNcPaint(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWnd*  
+ [in]*我が物*  
  [in]*lstSysButtons*  
  [in]*rectRedraw*  
   
@@ -2374,7 +2374,7 @@ virtual BOOL OnSetWindowRegion(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWnd*  
+ [in]*我が物*  
  [in]*sizeWindow*  
   
 ### <a name="return-value"></a>戻り値  

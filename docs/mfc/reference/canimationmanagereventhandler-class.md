@@ -1,5 +1,5 @@
 ---
-title: CAnimationManagerEventHandler クラス |Microsoft ドキュメント
+title: CAnimationManagerEventHandler クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62a775457d6da763a5c8426146d421a4cc958454
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: bfc64617002db0536dc3d62e70082c27b260802f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955649"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539718"
 ---
 # <a name="canimationmanagereventhandler-class"></a>CAnimationManagerEventHandler クラス
 アニメーション マネージャーのステータスの変更時に Animation API によって呼び出されるコールバックを実装します。  
@@ -52,12 +52,12 @@ class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase
   
 |名前|説明|  
 |----------|-----------------|  
-|[CAnimationManagerEventHandler::CreateInstance](#createinstance)|インスタンスを作成`CAnimationManagerEventHandler`オブジェクト。|  
-|[CAnimationManagerEventHandler::OnManagerStatusChanged](#onmanagerstatuschanged)|アニメーション マネージャーの状態が変わったときに呼び出されます。 (`CUIAnimationManagerEventHandlerBase::OnManagerStatusChanged` をオーバーライドします)。|  
-|[CAnimationManagerEventHandler::SetAnimationController](#setanimationcontroller)|イベントをルーティングする、アニメーション コント ローラーへのポインターを格納します。|  
+|[CAnimationManagerEventHandler::CreateInstance](#createinstance)|インスタンスを作成します`CAnimationManagerEventHandler`オブジェクト。|  
+|[CAnimationManagerEventHandler::OnManagerStatusChanged](#onmanagerstatuschanged)|アニメーション マネージャーの状態が変更されたときに呼び出されます。 (`CUIAnimationManagerEventHandlerBase::OnManagerStatusChanged` をオーバーライドします)。|  
+|[CAnimationManagerEventHandler::SetAnimationController](#setanimationcontroller)|イベントをルーティングするアニメーション コント ローラーへのポインターを格納します。|  
   
 ## <a name="remarks"></a>Remarks  
- このイベント ハンドラーが作成され、CAnimationController::EnableAnimationManagerEvent を呼び出すときに IUIAnimationManager::SetManagerEventHandler メソッドに渡されます。  
+ このイベント ハンドラーが作成され、CAnimationController::EnableAnimationManagerEvent を呼び出すときに、IUIAnimationManager::SetManagerEventHandler メソッドに渡されます。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CUIAnimationCallbackBase`  
@@ -66,11 +66,11 @@ class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase
   
  `CAnimationManagerEventHandler`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxanimationcontroller.h  
   
 ##  <a name="canimationmanagereventhandler"></a>  CAnimationManagerEventHandler::CAnimationManagerEventHandler  
- [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
+ Visual Studio 2010 SP1 が必要です。  
   
  CAnimationManagerEventHandler オブジェクトを構築します。  
   
@@ -79,7 +79,7 @@ CAnimationManagerEventHandler();
 ```  
   
 ##  <a name="createinstance"></a>  CAnimationManagerEventHandler::CreateInstance  
- [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
+ Visual Studio 2010 SP1 が必要です。  
   
  CAnimationManagerEventHandler オブジェクトのインスタンスを作成します。  
   
@@ -94,15 +94,15 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
  イベントを受信するアニメーション コント ローラーへのポインター。  
   
  *ppManagerEventHandler*  
- 出力です。 そのメソッドが成功した場合は、アニメーション マネージャーにステータスの更新を処理する COM オブジェクトへのポインターを格納します。  
+ 出力します。 メソッドでは、それが成功した場合は、状態が更新され、アニメーション マネージャーを処理する COM オブジェクトへのポインターが含まれています。  
   
 ### <a name="return-value"></a>戻り値  
- メソッドが成功した場合は S_OK を返します。 それ以外の場合、HRESULT エラー コードを返します。  
+ メソッドが成功すると、S_OK を返します。 それ以外の場合、HRESULT エラー コードを返します。  
   
 ##  <a name="onmanagerstatuschanged"></a>  CAnimationManagerEventHandler::OnManagerStatusChanged  
- [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
+ Visual Studio 2010 SP1 が必要です。  
   
- アニメーション マネージャーの状態が変わったときに呼び出されます。  
+ アニメーション マネージャーの状態が変更されたときに呼び出されます。  
   
 ```  
 IFACEMETHOD(OnManagerStatusChanged)(
@@ -118,12 +118,12 @@ IFACEMETHOD(OnManagerStatusChanged)(
  以前の状態。  
   
 ### <a name="return-value"></a>戻り値  
- 現在の実装は常に S_OK を返します。  
+ 現在の実装を常に S_OK を返します。  
   
 ##  <a name="setanimationcontroller"></a>  CAnimationManagerEventHandler::SetAnimationController  
- [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
+ Visual Studio 2010 SP1 が必要です。  
   
- イベントをルーティングする、アニメーション コント ローラーへのポインターを格納します。  
+ イベントをルーティングするアニメーション コント ローラーへのポインターを格納します。  
   
 ```  
 void SetAnimationController(CAnimationController* pAnimationController);
