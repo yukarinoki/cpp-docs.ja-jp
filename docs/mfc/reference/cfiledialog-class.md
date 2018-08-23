@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c681cc5f79d0c9d876da522666565e5a43c8e145
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d758bcc700180781c899f2263fe04c29ee0e6409
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028006"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540712"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog クラス
 ファイルを開くまたは保存する操作に使用される、コモン ダイアログ ボックスをカプセル化します。  
@@ -305,7 +305,7 @@ class CFileDialog : public CCommonDialog
   
  `CFileDialog`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdlgs.h  
   
 ##  <a name="addcheckbutton"></a>  CFileDialog::AddCheckButton  
@@ -561,7 +561,7 @@ explicit CFileDialog(
   
  *LpszFilter*ファイル名が、ファイルの一覧に表示する必要のあるファイルの種類を決定するパラメーターを使用します。 文字列のペアの最初の文字列には、フィルターがについて説明します2 番目の文字列では、使用するファイル名拡張子を示します。 複数の拡張機能は、区切り記号としてセミコロン (';' の文字) を使用して指定できます。 2 つの文字列の末尾に '&#124;' NULL 文字が続く文字。 使用することも、 [CString](../../atl-mfc-shared/using-cstring.md)このパラメーターのオブジェクト。  
   
- たとえば、[!INCLUDE[ofprexcel](../../mfc/reference/includes/ofprexcel_md.md)]他 .xlc (グラフ) の拡張機能または .xls (ワークシート) を持つファイルを開くことができます。 Excel 用のフィルターとしてを記述できます。  
+ などの Microsoft Excel では、ユーザー拡張機能 .xlc (グラフ) または他のユーザーの間で .xls (ワークシート) を持つファイルを開くことができます。 Excel 用のフィルターとしてを記述できます。  
   
  [!code-cpp[NVC_MFCFiles#24](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_2.cpp)]  
   
@@ -1353,7 +1353,7 @@ void SetControlText(
  コントロールに対して設定するテキストを含む文字列へのポインター。  
   
 ### <a name="remarks"></a>Remarks  
- この関数の両方のバージョンでは、Unicode を使用するアプリケーションに対して有効です。 ただし、LPCSTR 型のバージョンのみが使用するアプリケーションの有効な[!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)]します。  
+ この関数の両方のバージョンでは、Unicode を使用するアプリケーションに対して有効です。 ただし、LPCSTR 型のバージョンのみが ANSI を使用するアプリケーションに対して無効です。  
   
  このメソッドを使用して、OFN_EXPLORER スタイルでダイアログ ボックスを作成する必要があります。 それ以外の場合、アサーションと、関数は失敗します。  
   
@@ -1439,16 +1439,16 @@ void SetTemplate(
  非エクスプ ローラーのテンプレート リソースの ID 番号を含む`CFileDialog`オブジェクト。 このテンプレートは、Windows NT 3.51 または OFN_EXPLORER スタイルが存在しない場合にのみ使用されます。  
   
  [in]*nWin4ID*  
- エクスプ ローラーのテンプレート リソースの ID 番号を含む`CFileDialog`オブジェクト。 このテンプレートはでのみ使用[!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)]以降のバージョン、Windows 95 および以降のバージョンのと OFN_EXPLORER スタイルが存在する場合またはします。  
+ エクスプ ローラーのテンプレート リソースの ID 番号を含む`CFileDialog`オブジェクト。 このテンプレートは、Windows NT 4.0 およびそれ以降のバージョン、Windows 95 および以降のバージョンでのみ、または OFN_EXPLORER スタイルが存在する場合に使用されます。  
   
  [in]*lpWin3ID*  
  非エクスプ ローラーのテンプレート リソースの名前を含む`CFileDialog`オブジェクト。 このテンプレートは、Windows NT 3.51 または OFN_EXPLORER スタイルが存在しない場合にのみ使用されます。  
   
  [in]*lpWin4ID*  
- エクスプ ローラーのテンプレート リソースの名前を含む`CFileDialog`オブジェクト。 このテンプレートはでのみ使用[!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)]以降のバージョン、Windows 95 および以降のバージョンのと OFN_EXPLORER スタイルが存在する場合またはします。  
+ エクスプ ローラーのテンプレート リソースの名前を含む`CFileDialog`オブジェクト。 このテンプレートは、Windows NT 4.0 およびそれ以降のバージョン、Windows 95 および以降のバージョンでのみ、または OFN_EXPLORER スタイルが存在する場合に使用されます。  
   
 ### <a name="remarks"></a>Remarks  
- 指定されたテンプレートの 1 つだけが使用されます。 システムでは、OFN_EXPLORER スタイルおよびオペレーティング システムで、アプリケーションが実行されているかどうかに基づいて、使用するテンプレートを決定します。 Explorer ではないとエクスプ ローラー スタイルのテンプレートの両方を指定するは Windows NT 3.51 をサポートする簡単な[!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)]以降のバージョン、および Windows 95 および以降のバージョン。  
+ 指定されたテンプレートの 1 つだけが使用されます。 システムでは、OFN_EXPLORER スタイルおよびオペレーティング システムで、アプリケーションが実行されているかどうかに基づいて、使用するテンプレートを決定します。 Explorer ではないとエクスプ ローラー スタイルのテンプレートの両方を指定すると、Windows NT 3.51、Windows NT 4.0 およびそれ以降のバージョンと Windows 95 および以降のバージョンのサポートが容易になります。  
   
 > [!NOTE]
 > Windows Vista またはそれ以降のスタイル ファイル ダイアログ ボックスでは、この関数をサポートしていません。 Windows Vista またはそれ以降のスタイル ファイル ダイアログ ボックスでこの関数を使用するとスローされます[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)します。 別の方法では、カスタマイズされたダイアログを使用します。 カスタムの使用の詳細については`CFileDialog`を参照してください[IFileDialogCustomize](http://msdn.microsoft.com/library/windows/desktop/bb775912)します。  
