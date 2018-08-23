@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 663ee462bf03e76ab15cbac05790c89dcaf07dca
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: ae6f41c2e8e8d142ee143d7ba0829751e1c230a3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884855"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573239"
 ---
 # <a name="cmessagemap-class"></a>CMessageMap クラス
 このクラスは、別のオブジェクトによってアクセスされるオブジェクトのメッセージにマップを使用できます。  
@@ -50,7 +50,7 @@ class ATL_NO_VTABLE CMessageMap
 ## <a name="remarks"></a>Remarks  
  `CMessageMap` 抽象基本クラスでオブジェクトのメッセージ マップに別のオブジェクトによってアクセスできます。 オブジェクトのメッセージ マップを公開するためはそのクラスから派生する必要があります`CMessageMap`します。  
   
- ATL を使用して`CMessageMap`サポートが含まれている windows および動的メッセージ マップのチェーンにします。 たとえば、すべてを含むクラスを[CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)オブジェクトがから派生する必要があります`CMessageMap`します。 次のコードから取得されますが、 [SUBEDIT](../../visual-cpp-samples.md)サンプル。 を通じて[CComControl](../../atl/reference/ccomcontrol-class.md)、`CAtlEdit`から自動的に派生`CMessageMap`します。  
+ ATL を使用して`CMessageMap`サポートが含まれている windows および動的メッセージ マップのチェーンにします。 たとえば、すべてを含むクラスを[CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)オブジェクトがから派生する必要があります`CMessageMap`します。 次のコードから取得されますが、 [SUBEDIT](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit)サンプル。 を通じて[CComControl](../../atl/reference/ccomcontrol-class.md)、`CAtlEdit`から自動的に派生`CMessageMap`します。  
   
  [!code-cpp[NVC_ATL_Windowing#90](../../atl/codesnippet/cpp/cmessagemap-class_1.h)]  
   
@@ -58,7 +58,7 @@ class ATL_NO_VTABLE CMessageMap
   
  メッセージ マップの詳細については、次を参照してください[メッセージ マップ](../../atl/message-maps-atl.md)"ATL ウィンドウ クラス"の記事。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlwin.h  
   
 ##  <a name="processwindowmessage"></a>  CMessageMap::ProcessWindowMessage  

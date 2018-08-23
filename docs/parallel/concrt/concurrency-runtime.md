@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be177574aa78080f3a950fb674adc0a8fab0b5c4
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: b39fb35b21721cb9b93741a74f62d749b6fb1051
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208390"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608268"
 ---
 # <a name="concurrency-runtime"></a>同時実行ランタイム
 C++ の同時実行ランタイムにより、信頼性が高く、スケーラブルで、応答性の高い並行アプリケーションを作成できます。 このフレームワークでは抽象のレベルが引き上げられるので、同時実行に関連するインフラストラクチャの詳細を管理する必要はありません。 また、アプリケーションのサービスの品質への要求を満たすスケジューリング ポリシーを指定するためにも使用できます。 同時実行ランタイムを初めて使用する場合に役立つ情報が記載されている次の各ドキュメントを活用してください。  
@@ -111,7 +111,7 @@ C++ の同時実行ランタイムにより、信頼性が高く、スケーラ�
 |[同時実行ランタイムと Visual Studio 2010 での並列パターン ライブラリのコード サンプル](http://go.microsoft.com/fwlink/p/?linkid=183875)|同時実行ランタイムの例を示すサンプル アプリケーションおよびユーティリティを提供します。|  
 |[ネイティブ コードのブログでの並列プログラミング](http://go.microsoft.com/fwlink/p/?linkid=183873)|同時実行ランタイムでの並列プログラミングに関する詳細なブログ記事を別途紹介しています。|  
 |[C++ とネイティブ コードのフォーラムでの並列コンピューティング](http://go.microsoft.com/fwlink/p/?linkid=183874)|同時実行ランタイムに関するコミュニティ ディスカッションに参加できます。|  
-|[並列プログラミング](/dotnet/standard/parallel-programming/index)|[!INCLUDE[dnprdnshort](../../error-messages/tool-errors/includes/dnprdnshort_md.md)]に用意されている並列プログラミング モデルについて説明しています。|  
+|[並列プログラミング](/dotnet/standard/parallel-programming/index)|.NET Framework で使用できる並列プログラミング モデルについてを説明します。|  
   
 ## <a name="see-also"></a>関連項目  
  [参照](../../parallel/concrt/reference/reference-concurrency-runtime.md)

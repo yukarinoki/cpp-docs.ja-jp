@@ -1,5 +1,5 @@
 ---
-title: Platform::operationcanceledexception クラス |Microsoft ドキュメント
+title: Platform::operationcanceledexception クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,16 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::OperationCanceledException
 ms.assetid: 5351bc20-5408-423a-8169-f09acc8a3fbb
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d076f82acbf3dd7120feac70d13c3179f7471ccd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2e937625530c6dc8576ce8e850a97d11ea24ca05
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088968"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592735"
 ---
 # <a name="platformoperationcanceledexception-class"></a>Platform::OperationCanceledException クラス
 操作が中止されるとスローされます。  
@@ -32,11 +32,11 @@ ms.locfileid: "33088968"
 public ref class OperationCanceledException : COMException,    IException,    IPrintable,    IEquatable  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  詳細については、 [COMException](../cppcx/platform-comexception-class.md) クラスを参照してください。  
   
 ### <a name="requirements"></a>要件  
- **クライアントがサポートされる最小:** Windows 8  
+ **クライアントがサポートされている最小:** Windows 8  
   
  **サポートされているサーバーの最小値:** Windows Server 2012  
   

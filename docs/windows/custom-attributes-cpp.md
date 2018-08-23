@@ -1,5 +1,5 @@
 ---
-title: カスタム属性 (C++) |Microsoft ドキュメント
+title: カスタム属性 (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e5ca62b63cd09f2c5041efbbf36b01cc3b44f77c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e2bbcd8fb0e1b04ec35520f154724b095762233b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33887027"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608002"
 ---
 # <a name="custom-attributes-c"></a>カスタム属性 (C++)
-カスタム属性は、ユーザーが、メタデータを拡張できる厳密に型指定の手法です。 このトピックの内容が属性を使用して扱う: パラメーターおよびターゲットを指定します。  
-  
- 新しいカスタム属性を定義する方法についてを参照してください。  
-  
--   [ユーザー定義の属性](../windows/user-defined-attributes-cpp-component-extensions.md)  
-  
--   [属性](../windows/attribute.md)(非推奨の構文)。  
-  
-## <a name="see-also"></a>関連項目  
- [属性](../windows/attribute.md)   
- [カスタム属性 (C++)](../windows/custom-attributes-cpp.md)
+
+カスタム属性は、ユーザーが、メタデータを拡張できる厳密に型指定された手法です。 このトピックでは、属性が使用されています: パラメーターとターゲットを指定します。
+
+カスタム属性の定義についてを参照してください。
+
+- [ユーザー定義の属性](../windows/user-defined-attributes-cpp-component-extensions.md)
+
+- [属性](../windows/attribute.md)(非推奨の構文を参照)。
+
+## <a name="see-also"></a>関連項目
+
+[attribute](../windows/attribute.md)  
+[カスタム属性 (C++)](../windows/custom-attributes-cpp.md)

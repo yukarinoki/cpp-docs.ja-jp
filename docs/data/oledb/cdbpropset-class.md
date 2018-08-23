@@ -44,12 +44,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 15a1506980519880652abc637549ec2c7bf17e1d
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 1b94898cbe4a041ac1bb9a5d01c55380ee496106
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337598"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572006"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet クラス
 継承、`DBPROPSET`構造体し、キー フィールドを初期化するコンス トラクターを追加するだけでなく`AddProperty`メソッドにアクセスします。  
@@ -131,7 +131,7 @@ bool AddProperty(DWORD dwPropertyID,
  **true**場合は、プロパティが正常に追加します。 それ以外の場合、 **false**します。 
 
 ## <a name="cdbpropset"></a> Cdbpropset::cdbpropset
-コンストラクターです。 初期化します、 `rgProperties`、 `cProperties`、および`guidPropertySet`のフィールド、 [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx)構造体。  
+コンストラクターです。 初期化します、 `rgProperties`、 `cProperties`、および`guidPropertySet`のフィールド、 [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))構造体。  
   
 ### <a name="syntax"></a>構文  
   
@@ -161,7 +161,7 @@ void SetGUID(const GUID& guid) throw();
   
 #### <a name="parameters"></a>パラメーター  
  *guid*  
- [in]GUID を設定するため、`guidPropertySet`のフィールド、 [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx)構造体。  
+ [in]GUID を設定するため、`guidPropertySet`のフィールド、 [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))構造体。  
   
 ### <a name="remarks"></a>Remarks  
  このフィールドを設定することができます、[コンス トラクター](../../data/oledb/cdbpropset-cdbpropset.md)もします。  
@@ -179,5 +179,5 @@ CDBPropSet& operator =(CDBPropSet& propset) throw();
  [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [CDBPropIDSet クラス](../../data/oledb/cdbpropidset-class.md)   
- [DBPROPSET 構造体](https://msdn.microsoft.com/library/ms714367.aspx)   
- [DBPROP 構造体](https://msdn.microsoft.com/library/ms717970.aspx)
+ [DBPROPSET 構造体](/previous-versions/windows/desktop/ms714367\(v=vs.85\))   
+ [DBPROP 構造体](/previous-versions/windows/desktop/ms717970\(v=vs.85\))

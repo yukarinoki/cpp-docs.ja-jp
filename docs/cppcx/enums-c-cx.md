@@ -1,28 +1,28 @@
 ---
-title: 列挙型 (C + + CX) |Microsoft ドキュメント
+title: 列挙型 (C + + CX) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 99fbbe28-c1cd-43af-9ead-60f90eba6e68
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c96fa4e7194e262eec0be4cf5f7467c163530bd2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 725e2b9edb7ba2a84418e900ffb1aafe4c5064af
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087382"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593965"
 ---
 # <a name="enums-ccx"></a>列挙型 (C++/CX)
-C + + CX をサポートしている、`public enum class`キーワードは、標準の C++ に似ている`scoped  enum`です。 `public enum class` キーワードを使用して宣言された列挙子を使用する場合、列挙体識別子を使用して各列挙子値の範囲を指定する必要があります。  
+C +/cli CX のサポート、`public enum class`キーワード、標準の C++ に似ている`scoped  enum`します。 `public enum class` キーワードを使用して宣言された列挙子を使用する場合、列挙体識別子を使用して各列挙子値の範囲を指定する必要があります。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `public enum class` など、アクセス指定子を持たない `public`は、標準 C++ の [スコープ列挙体](../cpp/enumerations-cpp.md)として扱われます。  
   
- A`public enum class`または`public enum struct`Windows ランタイム自体は、型が int32、またはフラグ列挙用の uint32 にすることが必要ですが、宣言は任意の整数型の基になる型を持つことができます。 次の構文は、 `public enum class` または `public enum struct`の各部分を説明します。  
+ A`public enum class`または`public enum struct`宣言は、Windows ランタイム自体は、int32、またはフラグ列挙型の uint32 型であることが必要ですが、基になる型の任意の整数型を持つことができます。 次の構文は、 `public enum class` または `public enum struct`の各部分を説明します。  
   
  この例は、パブリック列挙型クラスを定義する方法を示しています。  
   

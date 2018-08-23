@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc17925e36e0e224a657177d0aa18912c564efed
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 64a2f9d5d296e28b4b773e072edc90e1b339feae
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850801"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572268"
 ---
 # <a name="using-contained-windows"></a>含まれている Windows を使用します。
 ATL に含まれているウィンドウを実装する[CContainedWindowT](../atl/reference/ccontainedwindowt-class.md)します。 コンテナー内のウィンドウでは、そのメッセージを独自のクラスで処理することではなく、コンテナー オブジェクトをデリゲートするウィンドウを表します。  
@@ -40,7 +40,7 @@ ATL に含まれているウィンドウを実装する[CContainedWindowT](../at
   
  [!code-cpp[NVC_ATL_Windowing#67](../atl/codesnippet/cpp/using-contained-windows_1.h)]  
   
- 含まれているウィンドウの詳細については、次を参照してください。、 [SUBEDIT](../visual-cpp-samples.md)サンプル。  
+ 含まれているウィンドウの詳細については、次を参照してください。、 [SUBEDIT](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit)サンプル。  
   
 ## <a name="see-also"></a>関連項目  
  [ウィンドウ クラス](../atl/atl-window-classes.md)

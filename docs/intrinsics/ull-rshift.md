@@ -1,5 +1,5 @@
 ---
-title: _ _ull_rshift |Microsoft ドキュメント
+title: _ _ull_rshift |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5248792d04efca518fc425a144c692cd88cf8d1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c834b3b2284a7a5ae660870b840d3275c985dc9e
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333119"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539069"
 ---
 # <a name="ullrshift"></a>__ull_rshift
 **Microsoft 固有の仕様**  
   
- x64 では、2 番目のパラメーターで指定されたビット数だけ右に最初のパラメーターで指定した 64 ビット値を移動します。  
+ x64 では、2 番目のパラメーターで指定されたビット数を右側の最初のパラメーターで指定した 64 ビット値を戻しています。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,24 +40,24 @@ unsigned __int64 __ull_rshift(
   
 #### <a name="parameters"></a>パラメーター  
  [入力] `mask`  
- 右へシフトする 64 ビット整数値。  
+ 右にシフトする 64 ビット整数値。  
   
  [入力] `nBit`  
- シフト、x86、32 剰余モジュロ x64 の 64 ビットの数。  
+ X86 上で 32 剰余と x64 の 64 剰余、シフトするビット数。  
   
 ## <a name="return-value"></a>戻り値  
- マスクがずれる`nBit`ビットです。  
+ マスクがずれる`nBit`ビット。  
   
 ## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__ull_rshift`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ull_rshift`|x86、x64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
- 2 番目のパラメーターが 31 on x86 (x64 では 63) よりも大きい場合は、シフトするビット数を調べてその数は 32 (x64 での 64) 剰余取得されます。 `ull`名前で示す`unsigned long long (unsigned __int64)`です。  
+## <a name="remarks"></a>Remarks  
+ 2 番目のパラメーターが 31 on x86 (x64 で 63) よりも大きい場合は、シフトするビットの数を決定する、その数が 32 (x64 での 64) 剰余取得されます。 `ull`名前で示します`unsigned long long (unsigned __int64)`します。  
   
 ## <a name="example"></a>例  
   

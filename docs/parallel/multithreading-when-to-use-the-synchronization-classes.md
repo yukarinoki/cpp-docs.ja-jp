@@ -1,5 +1,5 @@
 ---
-title: 'マルチ スレッド: 同期クラスを使用する場合 |Microsoft ドキュメント'
+title: 'マルチ スレッド: 同期クラスを使用する場合 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,45 +21,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b05922b826de81b5192b183e1c0afdfcda189f03
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b3556bace6c578edec8eaedffb528d21cb1644f5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688259"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606065"
 ---
 # <a name="multithreading-when-to-use-the-synchronization-classes"></a>マルチスレッド : 同期クラスの使い分け
-MFC で提供されるマルチ スレッドのクラスは 2 つのカテゴリに分類されます同期オブジェクト ([関数](../mfc/reference/csyncobject-class.md)、 [CSemaphore](../mfc/reference/csemaphore-class.md)、 [CMutex](../mfc/reference/cmutex-class.md)、 [ 。CCriticalSection](../mfc/reference/ccriticalsection-class.md)、および[CEvent](../mfc/reference/cevent-class.md)) と同期アクセス オブジェクト ([CMultiLock](../mfc/reference/cmultilock-class.md)と[CSingleLock](../mfc/reference/csinglelock-class.md))。  
+MFC で提供されるマルチ スレッドのクラスが 2 つのカテゴリに分類されます同期オブジェクト ([CSyncObject](../mfc/reference/csyncobject-class.md)、 [CSemaphore](../mfc/reference/csemaphore-class.md)、 [CMutex](../mfc/reference/cmutex-class.md)、 [ 。CCriticalSection](../mfc/reference/ccriticalsection-class.md)、および[CEvent](../mfc/reference/cevent-class.md)) と同期アクセス オブジェクト ([CMultiLock](../mfc/reference/cmultilock-class.md)と[CSingleLock](../mfc/reference/csinglelock-class.md))。  
   
- 同期クラスの使用時に、リソースの整合性を確保するリソースへのアクセスを制御する必要があります。 同期アクセス クラスは、これらの被制御リソースにアクセスするために使用されます。 このトピックでは、各クラスを使用する場合について説明します。  
+同期クラスの使用時に、リソースの整合性を確保するリソースへのアクセスを制御する必要があります。 同期アクセス クラスは、これらの制御されたリソースへのアクセスに使用されます。 このトピックでは、各クラスを使用する場合について説明します。  
   
- 同期クラスを使用する必要がありますを調べるには、次の一連の質問をしてください。  
+同期クラスを使用する必要がありますを確認するのには、次の一連の質問を確認してください。  
   
-1.  アプリケーションがリソースにアクセスできる前に発生するものを待機する (たとえば、データ必要がありますから受信する通信ポートをファイルに書き込む前に)?  
+1. アプリケーションがリソースにアクセスできる前に発生するを待機するには (たとえば、データがから受け取る必要が通信ポートあるをファイルに書き込む前に) でしょうか。  
   
-     使用する場合は、`CEvent`です。  
+     場合はそれを使用して、`CEvent`します。  
   
-2.  複数のスレッド同じアクセス権をアプリケーション内でこのリソース一度に 1 つ (たとえば、アプリケーションが、最大 5 つのウィンドウのビューの同じドキュメントに許可する) か。  
+2. できます 1 つ以上のスレッド内、同じアプリケーションのアクセスでこのリソース一度に 1 つ (たとえば、アプリケーションが最大 5 つのウィンドウのビューには、同じドキュメントを許可する) か?  
   
-     使用する場合は、`CSemaphore`です。  
+     場合はそれを使用して、`CSemaphore`します。  
   
-3.  このリソースを使用して複数のアプリケーション (たとえば、リソースは、DLL) ですか?  
+3. このリソースを使用して複数のアプリケーション (リソースは、DLL 内など) ですか?  
   
-     使用する場合は、`CMutex`です。  
+     場合はそれを使用して、`CMutex`します。  
   
-     ない場合を使用して`CCriticalSection`です。  
+     ない場合を使用して、`CCriticalSection`します。  
   
- **関数**直接は使用されていません。 その他の 4 つの同期クラスの基本クラスです。  
+`CSyncObject` 直接使用されません。 その他の 4 つの同期クラスの基本クラスです。  
   
-## <a name="example-1-using-three-synchronization-classes"></a>例 1: を使用して 3 つの同期クラス  
- たとえば、アカウントのリンク リストを保持するアプリケーションの場合を考えます。 このアプリケーションでは 3 つまでのアカウントを個別のウィンドウで調べることができます。ただし、一度に更新できるアカウントは 1 つだけとします。 更新されたデータはネットワークを通じてデータ アーカイブに送られます。  
+## <a name="example-1-using-three-synchronization-classes"></a>例 1: 次の 3 つの同期クラスを使用します。  
+ 
+たとえば、アカウントのリンク リストを保持するアプリケーションの場合を考えます。 このアプリケーションでは 3 つまでのアカウントを個別のウィンドウで調べることができます。ただし、一度に更新できるアカウントは 1 つだけとします。 更新されたデータはネットワークを通じてデータ アーカイブに送られます。  
   
- このアプリケーションでは、3 種類の同期クラスをすべて使います。 使用して一度に 1 つ調査するを最大 3 つのアカウントでできるように、`CSemaphore`を 3 つのビュー オブジェクトへのアクセスを制限します。 4 番目のアカウントを表示しようとすると、アプリケーションは最初の 3 つのウィンドウのいずれかが閉じるのを待つか、失敗します。 アカウントが更新されると、アプリケーションを使用して`CCriticalSection`一度に 1 つだけのアカウントが更新されるようにします。 更新プログラムが成功、 `CEvent`、シグナル状態になるイベントを待機しているスレッドを解放します。 新しいデータは、このスレッドからデータ アーカイブに送られます。  
+このアプリケーションでは、3 種類の同期クラスをすべて使います。 使用して最大 3 つのアカウントで同時に調査するため、`CSemaphore`を 3 つのビュー オブジェクトへのアクセスを制限します。 4 番目のアカウントを表示しようとすると、アプリケーションは最初の 3 つのウィンドウのいずれかが閉じるのを待つか、失敗します。 アカウントを更新すると、アプリケーションを使用して`CCriticalSection`を一度に 1 つだけのアカウントが更新されるようにします。 更新プログラムの成功、 `CEvent`、シグナル状態になるイベントの待機スレッドを解放します。 新しいデータは、このスレッドからデータ アーカイブに送られます。  
   
 ## <a name="example-2-using-synchronization-access-classes"></a>例 2: 同期アクセス クラスを使用します。  
- 同期アクセス クラスを使用して、さらに単純を選択します。 場合は、アプリケーションで 1 つの被制御リソースのみにアクセスするのを使用して`CSingleLock`です。 被制御リソース数のいずれかへのアクセスを必要とする場合を使用して`CMultiLock`です。 例 1 で`CSingleLock`が使用されている特定の時点に各ケースで 1 つのリソースが必要なためです。  
+ 
+同期アクセス クラスを使用して、さらに簡単かを選択します。 場合は、アプリケーションは、1 つの被制御リソースのみへのアクセスを使用して、`CSingleLock`します。 被制御リソース数のいずれかへのアクセスを必要がある場合を使用して、`CMultiLock`します。 例 1 で`CSingleLock`使用された、特定の時点に各ケースの 1 つだけのリソースが必要なためです。  
   
- 同期クラスの使用方法については、次を参照してください。[マルチ スレッド: 同期クラスを使用する方法](../parallel/multithreading-how-to-use-the-synchronization-classes.md)です。 同期については、次を参照してください。[同期](http://msdn.microsoft.com/library/windows/desktop/ms686353)で、[!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]です。 MFC でマルチ スレッド処理のサポートについては、次を参照してください。 [C++ と MFC を使用するマルチ スレッド](../parallel/multithreading-with-cpp-and-mfc.md)です。  
+同期クラスの使用方法については、次を参照してください。[マルチ スレッド: 同期クラスの使用方法](../parallel/multithreading-how-to-use-the-synchronization-classes.md)します。 同期の詳細については、次を参照してください。[同期](http://msdn.microsoft.com/library/windows/desktop/ms686353)Windows SDK に含まれています。 MFC でマルチ スレッドのサポートについては、次を参照してください。 [C++ と MFC を使用するマルチ スレッド](../parallel/multithreading-with-cpp-and-mfc.md)します。  
   
 ## <a name="see-also"></a>関連項目  
- [C++ と MFC を使用するマルチスレッド](../parallel/multithreading-with-cpp-and-mfc.md)
+ 
+[C++ と MFC を使用するマルチスレッド](../parallel/multithreading-with-cpp-and-mfc.md)

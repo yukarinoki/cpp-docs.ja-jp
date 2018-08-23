@@ -1,5 +1,5 @@
 ---
-title: _ _debugbreak |Microsoft ドキュメント
+title: _ _debugbreak |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a3dcead3129c87b2d02f8822019af763c0fe8b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71b7dfca165e76880370368282bdbd7728315cfa
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340178"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539492"
 ---
 # <a name="debugbreak"></a>__debugbreak
 **Microsoft 固有の仕様**  
@@ -40,13 +40,13 @@ void __debugbreak();
   
 |組み込み|アーキテクチャ|Header|  
 |---------------|------------------|------------|  
-|`__debugbreak`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`__debugbreak`|x86、ARM、x64|\<intrin.h>|  
   
-## <a name="remarks"></a>コメント  
- `__debugbreak`コンパイラと同様、組み込み[DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297.aspx)ブレークポイントが発生する移植可能な Win32 方法は、します。  
+## <a name="remarks"></a>Remarks  
+ `__debugbreak`コンパイラと同様に、組み込み[DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297.aspx)は、移植可能な Win32 手法でブレークポイントを発生します。  
   
 > [!NOTE]
->  コンパイルするときに **/clr**、関数を含む`__debugbreak`は MSIL にコンパイルされます。 `asm int 3` により、関数がネイティブにコンパイルされます。 詳細については、次を参照してください。 [_ _asm](../assembler/inline/asm.md)です。  
+>  コンパイルするときに **/clr**を含む関数`__debugbreak`は MSIL にコンパイルされます。 `asm int 3` により、関数がネイティブにコンパイルされます。 詳細については、次を参照してください。 [_ _asm](../assembler/inline/asm.md)します。  
   
  例えば:  
   
@@ -73,5 +73,5 @@ main() {
 **Microsoft 固有の仕様はここまで**  
   
 ## <a name="see-also"></a>関連項目  
- [コンパイラ組み込み関数](../intrinsics/compiler-intrinsics.md)   
+ [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)   
  [キーワード](../cpp/keywords-cpp.md)

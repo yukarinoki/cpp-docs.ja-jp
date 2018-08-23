@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dc15e9eaf7068756aa4d945cf494156498af6f9
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 2a03e29ed5197d27b421135b1561f3edc88af596
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025985"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573333"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL OLE DB コンシューマー ウィザード
 このウィザードを設定する OLE DB コンシューマー クラス、データ バインディングで指定された OLE DB プロバイダーを指定したデータ ソースにアクセスするために必要です。  
@@ -33,7 +33,7 @@ ms.locfileid: "39025985"
   
 ## <a name="uielement-list"></a>UIElement の一覧  
 **Data Source**  
-**データソース**ボタンを指定した OLE DB プロバイダーを使用して、指定されたデータ ソースを設定することができます。 このボタンをクリックすると、**データ リンク プロパティ** ダイアログ ボックスが表示されます。 接続文字列の作成の詳細については、**データ リンク プロパティ**ダイアログ ボックスを参照してください[Data Link API の概要](https://msdn.microsoft.com/library/ms718102.aspx)Windows SDK のドキュメント。  
+**データソース**ボタンを指定した OLE DB プロバイダーを使用して、指定されたデータ ソースを設定することができます。 このボタンをクリックすると、**データ リンク プロパティ** ダイアログ ボックスが表示されます。 接続文字列の作成の詳細については、**データ リンク プロパティ**ダイアログ ボックスを参照してください[Data Link API の概要](/previous-versions/windows/desktop/ms718102\(v=vs.85\))Windows SDK のドキュメント。  
   
 > [!NOTE]
 >  Shift キーを押し、以前のリリースで、**データソース**Data Link (.udl) ファイルを選択できるようにファイルを開く ダイアログを開くボタンをクリックします。 この機能はサポートされなくなりました。  
@@ -176,7 +176,7 @@ ms.locfileid: "39025985"
  使用する場合は、このオプションを選択`CCommand`または`db_command`クラス宣言に、コマンドとコマンドのアクセサーを作成します。 これは、既定の選択です。  
   
  **サポート**  
- (既定値は none です)、コンシューマーでサポートされる更新プログラムの種類を指定するチェック ボックスを選択します。 次の各設定は[DBPROP_IRowsetChange](https://msdn.microsoft.com/library/ms715892.aspx)の適切なエントリ[DBPROP_UPDATABILITY](https://msdn.microsoft.com/library/ms722676.aspx)プロパティにマップを設定します。  
+ (既定値は none です)、コンシューマーでサポートされる更新プログラムの種類を指定するチェック ボックスを選択します。 次の各設定は[DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892\(v=vs.85\))の適切なエントリ[DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676\(v=vs.85\))プロパティにマップを設定します。  
   
  **変更**  
  コンシューマーが行セットの行のデータの更新をサポートするを指定します。  
@@ -190,4 +190,4 @@ ms.locfileid: "39025985"
 ## <a name="see-also"></a>関連項目  
  [ATL OLE DB コンシューマー](../../atl/reference/adding-an-atl-ole-db-consumer.md)   
  [コード ウィザードを使用した機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [接続文字列およびデータ リンク (OLE DB)](https://msdn.microsoft.com/library/ms718376.aspx)
+ [接続文字列およびデータ リンク (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))

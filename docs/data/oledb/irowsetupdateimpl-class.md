@@ -63,15 +63,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: afbf8b42b4d518412c1004d78c5c718e54078c1c
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 5dcaa42242410c2823388c7004a0c0a7d1991f59
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340782"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571416"
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl クラス
-OLE DB テンプレートの実装、 [IRowsetUpdate](https://msdn.microsoft.com/library/ms714401.aspx)インターフェイス。  
+OLE DB テンプレートの実装、 [IRowsetUpdate](/previous-versions/windows/desktop/ms714401\(v=vs.85\))インターフェイス。  
   
 ## <a name="syntax"></a>構文
 
@@ -142,7 +142,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 |[m_mapCachedData](#mapcacheddata)|遅延された操作の元のデータが含まれています。|  
   
 ## <a name="remarks"></a>Remarks  
- 最初の読み取りしのドキュメントを理解する必要があります[IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx)が説明されているすべてのものも適用されるため、ここで、します。 第 6 章を参照する必要がありますも、 *OLE DB プログラマーズ リファレンス*でデータを設定します。  
+ 最初の読み取りしのドキュメントを理解する必要があります[IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))が説明されているすべてのものも適用されるため、ここで、します。 第 6 章を参照する必要がありますも、 *OLE DB プログラマーズ リファレンス*でデータを設定します。  
   
  `IRowsetUpdateImpl` OLE DB 実装`IRowsetUpdate`インターフェイスに加えられた変更の送信を遅延するコンシューマー`IRowsetChange`をデータ ソースし、データ転送する前に変更を元に戻します。  
   
@@ -153,7 +153,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
   
 -   第 6 章、 *OLE DB プログラマーズ リファレンス*  
   
--   参照してください、`RUpdateRowset`クラス UpdatePV サンプルで使用されます  
+-   参照してください、`RUpdateRowset`クラスが使用されて、 [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)サンプル  
 
 ## <a name="setdata"></a> Irowsetupdateimpl::setdata
 1 つまたは複数の列のデータ値を設定します。  
@@ -167,7 +167,7 @@ STDMETHOD (SetData )(HROW hRow,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[irowsetchange::setdata](https://msdn.microsoft.com/library/ms721232.aspx)で、 *OLE DB プログラマーズ リファレンス*します。  
+ 参照してください[irowsetchange::setdata](/previous-versions/windows/desktop/ms721232\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、 [irowsetchangeimpl::setdata](../../data/oledb/irowsetchangeimpl-setdata.md)がメソッドにはでは即時と遅延のいずれかの操作の処理を許可するように元のデータのキャッシュが含まれます。
@@ -184,7 +184,7 @@ STDMETHOD (GetOriginalData )(HROW hRow,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[IRowsetUpdate::GetOriginalData](https://msdn.microsoft.com/library/ms709947.aspx)で、 *OLE DB プログラマーズ リファレンス*します。   
+ 参照してください[IRowsetUpdate::GetOriginalData](/previous-versions/windows/desktop/ms709947\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。   
 
 ## <a name="getpendingrows"></a> Irowsetupdateimpl::getpendingrows
 保留中の変更を含む行の一覧を返します。  
@@ -201,12 +201,12 @@ STDMETHOD (GetPendingRows )(HCHAPTER /* hReserved */,
   
 #### <a name="parameters"></a>パラメーター  
  *hReserved*  
- [in]対応する、 *hChapter*パラメーター [IRowsetUpdate::GetPendingRows](https://msdn.microsoft.com/library/ms719626.aspx)します。  
+ [in]対応する、 *hChapter*パラメーター [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626\(v=vs.85\))します。  
   
- その他のパラメーターでは、次を参照してください。 [IRowsetUpdate::GetPendingRows](https://msdn.microsoft.com/library/ms719626.aspx)で、 *OLE DB プログラマーズ リファレンス*します。  
+ その他のパラメーターでは、次を参照してください。 [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [IRowsetUpdate::GetPendingRows](https://msdn.microsoft.com/library/ms719626.aspx)で、 *OLE DB プログラマーズ リファレンス*します。  
+ 詳細については、次を参照してください。 [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
 
 ## <a name="getrowstatus"></a> Irowsetupdateimpl::getrowstatus
 指定された行の状態を返します。  
@@ -222,9 +222,9 @@ STDMETHOD (GetRowStatus )(HCHAPTER /* hReserved */,
   
 #### <a name="parameters"></a>パラメーター  
  *hReserved*  
- [in]対応する、 *hChapter*パラメーター [IRowsetUpdate::GetRowStatus](https://msdn.microsoft.com/library/ms724377.aspx)します。  
+ [in]対応する、 *hChapter*パラメーター [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377\(v=vs.85\))します。  
   
- その他のパラメーターでは、次を参照してください。 [IRowsetUpdate::GetRowStatus](https://msdn.microsoft.com/library/ms724377.aspx)で、 *OLE DB プログラマーズ リファレンス*します。  
+ その他のパラメーターでは、次を参照してください。 [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
 
 ## <a name="undo"></a> Irowsetupdateimpl::undo
 最後のフェッチまたは更新以降、行への変更を元に戻します。  
@@ -242,15 +242,15 @@ STDMETHOD (Undo )(HCHAPTER /* hReserved */,
   
 #### <a name="parameters"></a>パラメーター  
  *hReserved*  
- [in]対応する、 *hChapter*パラメーター [IRowsetUpdate::Undo](https://msdn.microsoft.com/library/ms719655.aspx)します。  
+ [in]対応する、 *hChapter*パラメーター [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\))します。  
   
  *pcRowsUndone*  
- [out]対応する、 *pcRows*パラメーター [IRowsetUpdate::Undo](https://msdn.microsoft.com/library/ms719655.aspx)します。  
+ [out]対応する、 *pcRows*パラメーター [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\))します。  
   
  *prgRowsUndone*  
- [in]対応する、 *prgRows*パラメーター [IRowsetUpdate::Undo](https://msdn.microsoft.com/library/ms719655.aspx)します。  
+ [in]対応する、 *prgRows*パラメーター [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\))します。  
   
- その他のパラメーターでは、次を参照してください。 [IRowsetUpdate::Undo](https://msdn.microsoft.com/library/ms719655.aspx)で、 *OLE DB プログラマーズ リファレンス*します。 
+ その他のパラメーターでは、次を参照してください。 [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。 
 
 ## <a name="update"></a> Irowsetupdateimpl::update
 最後のフェッチまたは更新以降、行に加えられた変更を送信します。  
@@ -268,12 +268,12 @@ STDMETHOD (Update )(HCHAPTER /* hReserved */,
   
 #### <a name="parameters"></a>パラメーター  
  *hReserved*  
- [in]対応する、 *hChapter*パラメーター [irowsetupdate::update](https://msdn.microsoft.com/library/ms719709.aspx)します。  
+ [in]対応する、 *hChapter*パラメーター [irowsetupdate::update](/previous-versions/windows/desktop/ms719709\(v=vs.85\))します。  
   
- その他のパラメーターでは、次を参照してください。 [irowsetupdate::update](https://msdn.microsoft.com/library/ms719709.aspx)で、 *OLE DB プログラマーズ リファレンス*します。  
+ その他のパラメーターでは、次を参照してください。 [irowsetupdate::update](/previous-versions/windows/desktop/ms719709\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ### <a name="remarks"></a>Remarks  
- 呼び出して変更を転送する[irowsetchangeimpl::flushdata](../../data/oledb/irowsetchangeimpl-flushdata.md)します。 コンシューマーを呼び出す必要があります[crowset::update](../../data/oledb/crowset-update.md)の変更を有効にします。 設定*prgRowstatus*で説明するよう適切な値に[行の状態](https://msdn.microsoft.com/library/ms722752.aspx)で、 *OLE DB プログラマーズ リファレンス*します。 
+ 呼び出して変更を転送する[irowsetchangeimpl::flushdata](../../data/oledb/irowsetchangeimpl-flushdata.md)します。 コンシューマーを呼び出す必要があります[crowset::update](../../data/oledb/crowset-update.md)の変更を有効にします。 設定*prgRowstatus*で説明するよう適切な値に[行の状態](/previous-versions/windows/desktop/ms722752\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。 
   
 ## <a name="isupdateallowed"></a> Irowsetupdateimpl::isupdateallowed
 セキュリティ、更新後に、整合性を確認するには、このメソッドをオーバーライドします。  
@@ -297,7 +297,7 @@ HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] */ /* status */,
  [out]ユーザーに、状態が返されます。  
   
 ### <a name="remarks"></a>Remarks  
- 更新プログラムを許可する場合は、S_OK を返します。E_FAIL を返しますそれ以外の場合。 設定する必要がある更新を許可する場合、`DBROWSTATUS`で[irowsetupdateimpl::update](../../data/oledb/irowsetupdateimpl-update.md)に適切な[状態の行](https://msdn.microsoft.com/library/ms722752.aspx)します。  
+ 更新プログラムを許可する場合は、S_OK を返します。E_FAIL を返しますそれ以外の場合。 設定する必要がある更新を許可する場合、`DBROWSTATUS`で[irowsetupdateimpl::update](../../data/oledb/irowsetupdateimpl-update.md)に適切な[状態の行](/previous-versions/windows/desktop/ms722752\(v=vs.85\))します。  
 
 ## <a name="mapcacheddata"></a> Irowsetupdateimpl::m_mapcacheddata
 遅延された操作の元のデータを格納しているマップ。  

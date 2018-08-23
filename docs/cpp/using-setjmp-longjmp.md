@@ -1,7 +1,7 @@
 ---
-title: Setjmp-longjmp の使用 |Microsoft Docs
+title: Setjmp と longjmp 関数を使用して |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/14/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -22,22 +22,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2073729fc5445fc36e3d8a6f52c4f69b079c8b47
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a83253fb98506bb586af2b52ef3321bada7ca01f
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462132"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572570"
 ---
-# <a name="using-setjmplongjmp"></a>setjmp/longjmp の使用
-ときに[setjmp](../c-runtime-library/reference/setjmp.md)と[longjmp](../c-runtime-library/reference/longjmp.md)は非ローカルを実行する方法を提供を一緒に使用**goto**します。 これらは通常、標準呼び出し規約や復帰規約を使用せずに、前に呼び出されたルーチンのエラー処理または回復コードに実行の制御を渡すために使用されます。  
-  
+# <a name="using-setjmp-and-longjmp"></a>Setjmp と longjmp の使用
+
+ときに[setjmp](../c-runtime-library/reference/setjmp.md)と[longjmp](../c-runtime-library/reference/longjmp.md)は非ローカルを実行する方法を提供を一緒に使用**goto**します。 これらは、標準呼び出しを使用せず、以前に呼び出されたルーチンのエラー処理または回復コードに実行制御を渡す C コードで通常使用される規約や復帰規約。
+
 > [!CAUTION]
->  ただし、ため**setjmp**と**longjmp** C++ オブジェクトのセマンティクスをサポートしていませんし、使用しないことをお勧めするローカル変数の最適化を防ぐことによってパフォーマンスが低下する可能性があります、ため、C++ プログラムにします。 使用することをお勧めします。**お試しください**/**キャッチ**代わりに構築します。  
-  
- 使用する場合**setjmp**/**longjmp** 、C++ プログラムでも含める\<setjmp.h > または\<setjmpex.h > の間の相互作用を保証するために、関数と C++ 例外処理します。 使用する場合[/EH](../build/reference/eh-exception-handling-model.md)をコンパイルするローカル オブジェクトのデストラクターがスタック アンワインド中に呼び出されます。 使用する場合 **/EHs**コンパイル、および関数の呼び出しを使用する関数の 1 つに[nothrow](../cpp/nothrow-cpp.md)と関数を使用する**nothrow**呼び出し**longjmp**、デストラクター アンワインドが発生しない場合、オプティマイザーによってします。  
-  
- 移植可能なコード、ときに、非ローカルの**goto**を呼び出す**longjmp**実行すると、フレーム ベースのオブジェクトの適切な破棄が信頼性が高くない可能性があります。  
-  
-## <a name="see-also"></a>関連項目  
- [C (構造化) と C++ の混合例外](../cpp/mixing-c-structured-and-cpp-exceptions.md)
+> `setjmp`と`longjmp`C++ コンパイラ、間で移植のスタック フレーム オブジェクトの適切な破棄をサポートしていないし、C++ での使用をお勧めしませんので、ローカル変数の最適化を防ぐことによって、パフォーマンスが低下する可能性があります、プログラム。 使用することをお勧めします。**お試しください**と**キャッチ**代わりに構築します。
+
+使用する場合`setjmp`と`longjmp`、C++ プログラムでも含める\<setjmp.h > または\<setjmpex.h > 関数と構造化例外処理 (SEH) または C++ の例外の間の相互作用処理します。
+
+**Microsoft 固有の仕様**
+
+使用する場合、 [/EH](../build/reference/eh-exception-handling-model.md) C++ コードをコンパイルするオプションで、ローカル オブジェクトのデストラクターがスタック アンワインド中に呼び出されます。 ただし、使用する場合 **/EHs**または **/EHsc**コンパイル、および使用する関数の 1 つに[noexcept](../cpp/noexcept-cpp.md)呼び出し`longjmp`デストラクターは、その関数をアンワインドし、発生しない場合、オプティマイザーの状態に応じて。
+
+移植可能なコードは、のときに、`longjmp`呼び出しが実行フレーム ベースのオブジェクトの適切な破棄は、標準で明示的にはことが保証され、他のコンパイラでサポートされていない可能性があります。 警告レベル 4 への呼び出しを通知する`setjmp`警告 C4611: '_setjmp' と C++ オブジェクト デストラクション間の相互作用はポータブルでないです。
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
+[C (構造化) と C++ の混合例外](../cpp/mixing-c-structured-and-cpp-exceptions.md)  

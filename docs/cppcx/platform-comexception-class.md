@@ -1,5 +1,5 @@
 ---
-title: Platform::comexception クラス |Microsoft ドキュメント
+title: Platform::comexception クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -13,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79c7824a64fc9bfa4bef761e82505195835146ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f67088d7e40f60922fa2fe03993a280284cbf76e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090527"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597001"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException クラス
 アプリケーションの実行中に発生する COM エラーを表します。 COMException は、一連の定義済みの標準例外の基底クラスです。  
@@ -60,7 +60,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
 ## <a name="derived-exceptions"></a>派生例外  
  次の定義済みの例外は COMException から派生します。 これらは、その名前、コンストラクターの名前、および基になる HRESULT 値だけが COMException とは異なります。  
   
-|名前|基になる HRESULT|説明|  
+|name|基になる HRESULT|説明|  
 |----------|------------------------|-----------------|  
 |COMException|*ユーザー定義の hresult*|COM メソッドの呼び出しから認識されない HRESULT が返されるとスローされます。|  
 |AccessDeniedException|E_ACCESSDENIED|リソースや機能へのアクセスが拒否されるとスローされます。|  
@@ -77,7 +77,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
 |OutOfMemoryException|E_OUTOFMEMORY|メモリが不足して操作を完了できないときにスローされます。|  
   
 ### <a name="requirements"></a>要件  
- **クライアントがサポートされる最小:** Windows 8  
+ **クライアントがサポートされている最小:** Windows 8  
   
  **サポートされているサーバーの最小値:** Windows Server 2012  
   
@@ -112,8 +112,8 @@ public:property int HResult {    int get();}
 ## <a name="property-value"></a>プロパティ値  
  エラーを指定する HRESULT 値。  
   
-### <a name="remarks"></a>コメント  
- HRESULT 値を解釈する方法の詳細については、次を参照してください。 [COM エラー コードの構造体](http://go.microsoft.com/fwlink/p/?LinkId=262045)です。  
+### <a name="remarks"></a>Remarks  
+ HRESULT 値を解釈する方法の詳細については、次を参照してください。 [COM エラー コードの構造](http://go.microsoft.com/fwlink/p/?LinkId=262045)します。  
 
 ## <a name="message"></a> Comexception::message プロパティ
 例外を説明するメッセージ。  

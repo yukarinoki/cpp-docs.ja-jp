@@ -60,17 +60,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3135c95ddc32c198bb7abc6ddea4ef5aea5a1d8a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: e4cfc3e0d129fdb10ee10275000df6d8c51604be
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338020"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42543229"
 ---
 # <a name="cmfcautohidebutton-class"></a>CMFCAutoHideButton クラス
 非表示になるように構成されている [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) を表示または非表示にするボタンです。  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
+ 詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。    
 ## <a name="syntax"></a>構文  
   
 ```  
@@ -121,7 +121,7 @@ class CMFCAutoHideButton : public CObject
   
  `CMFCAutoHideButton`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxautohidebutton.h  
   
 ##  <a name="bringtotop"></a>  CMFCAutoHideButton::BringToTop  

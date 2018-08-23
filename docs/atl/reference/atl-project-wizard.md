@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80556b31650cc04e66b2ad6681d60eff2fa72d5f
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d138f65e447594059dba5b536378ee004be77036
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025819"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572391"
 ---
 # <a name="atl-project-wizard"></a>ATL プロジェクト ウィザード
 Active Template Library (ATL) は、簡単に小さくて高速な COM オブジェクトを記述するテンプレート ベースの C++ クラスのセットです。 ATL プロジェクト ウィザードでは、COM オブジェクトを格納する構造体を持つプロジェクトを作成します。  
@@ -52,7 +52,7 @@ Active Template Library (ATL) は、簡単に小さくて高速な COM オブジ
   
 -   [ATL プロジェクトのコンパイラを最適化します。](../../atl/reference/specifying-compiler-optimization-for-an-atl-project.md)  
   
- プロジェクトのプロパティを指定することができます (たとえば、 [CRT に静的にリンクするかどうか](../../atl/programming-with-atl-and-c-run-time-code.md)) で、[プロジェクトのプロパティ](../../ide/general-property-page-project.md)ページを設定できます[ビルド構成](/visualstudio/ide/understanding-build-configurations)のATL プロジェクトです。 参照してください[アプリケーションを構築するプロジェクトを使用して](http://msdn.microsoft.com/3339fa90-bac2-4b95-8361-662a2e0e7dfe)詳細についてはします。  
+ プロジェクトのプロパティを指定することができます (たとえば、 [CRT に静的にリンクするかどうか](../../atl/programming-with-atl-and-c-run-time-code.md)) で、[プロジェクトのプロパティ](../../ide/general-property-page-project.md)ページを設定できます[ビルド構成](/visualstudio/ide/understanding-build-configurations)のATL プロジェクトです。  
   
 ## <a name="see-also"></a>関連項目  
  [Visual C++ プロジェクトの作成および管理](../../ide/creating-and-managing-visual-cpp-projects.md)   

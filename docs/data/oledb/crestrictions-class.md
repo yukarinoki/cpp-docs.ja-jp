@@ -24,12 +24,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4d93d1042f48ae877e61692b095be9442f9a7917
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: b9dc35df928d53d7d5ca5d833db8e87c96e1c7f4
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337178"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571628"
 ---
 # <a name="crestrictions-class"></a>CRestrictions クラス
 ジェネリック クラスには、スキーマ行セットの制限を指定することができます。  
@@ -96,7 +96,7 @@ HRESULT Open(const CSession& session,
 ### <a name="remarks"></a>Remarks  
  スキーマ行セットでは、7 個の制限の最大数を指定できます。  
   
- 参照してください[IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx)定義されている制限については、各スキーマ行セットにします。  
+ 参照してください[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\))定義されている制限については、各スキーマ行セットにします。  
   
 ## <a name="see-also"></a>関連項目  
  [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)   

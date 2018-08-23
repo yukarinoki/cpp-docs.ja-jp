@@ -1,5 +1,5 @@
 ---
-title: hdrstop |Microsoft ドキュメント
+title: hdrstop |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1c628efaf45be87dcfc046cf1774c762c157f4f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 10365b4cbe43863f72b721665ae8ea518e3fdc5f
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847027"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42543143"
 ---
 # <a name="hdrstop"></a>hdrstop
 プリコンパイル ファイル名およびコンパイル状態が保存される場所に対する追加の制御を指定します。  
@@ -31,32 +31,32 @@ ms.locfileid: "33847027"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 #pragma hdrstop [( "filename" )]    
 ```  
   
-## <a name="remarks"></a>コメント  
- *Filename*使用または作成するプリコンパイル済みヘッダー ファイルの名前を指定します (かどうかに応じて[/Yu](../build/reference/yu-use-precompiled-header-file.md)または[/Yc](../build/reference/yc-create-precompiled-header-file.md)が指定されている)。 場合*filename*パスの指定が含まれていない、プリコンパイル済みヘッダー ファイルがソース ファイルと同じディレクトリにあると見なされます。  
+## <a name="remarks"></a>Remarks  
+ 
+*Filename*を使用して、または作成するには、プリコンパイル済みヘッダー ファイルの名前を指定します (かどうかに応じて[/Yu](../build/reference/yu-use-precompiled-header-file.md)または[/Yc](../build/reference/yc-create-precompiled-header-file.md)を指定)。 場合*filename*パスの指定が含まれていない、プリコンパイル済みヘッダー ファイルは、ソース ファイルと同じディレクトリにあると見なされます。  
   
- C または C++ ファイルが含まれている場合、 **hdrstop**プラグマ/Yc でコンパイルした場合、コンパイラは、プラグマの位置までコンパイルの状態を保存します。 プラグマの後ろにあるコードのコンパイル状態は保存されません。  
+C または C++ ファイルが含まれている場合、 **hdrstop**プラグマでコンパイルされたときに`/Yc`コンパイラはプラグマの位置までのコンパイル状態を保存します。 プラグマの後ろにあるコードのコンパイル状態は保存されません。  
   
- 使用して*filename*コンパイル済みの状態が保存されるプリコンパイル済みヘッダー ファイルの名前。 間にスペース**hdrstop**と*filename*は省略可能です。 指定されたファイル名、 **hdrstop**プラグマ文字列は、そのため、C または C++ の文字列の制約を受けます。 具体的には、文字列を引用符で囲み、エスケープ文字 (円記号) を使用してディレクトリ名を指定する必要があります。 例えば:  
+使用*filename*コンパイル済みの状態を保存するプリコンパイル済みヘッダー ファイルの名前。 間にスペース**hdrstop**と*filename*は省略可能です。 指定されたファイル名、 **hdrstop**プラグマは文字列であり、C または C++ の文字列の制約を前提となります。 具体的には、文字列を引用符で囲み、エスケープ文字 (円記号) を使用してディレクトリ名を指定する必要があります。 例えば:  
   
 ```  
 #pragma hdrstop( "c:\\projects\\include\\myinc.pch" )  
 ```  
   
- プリコンパイルされたヘッダー ファイルの名前は、次の規則 (優先度順に表示) に従って決定されます。  
+プリコンパイル済みヘッダー ファイルの名前は、次の規則 (優先度順に表示) に従って決定されます。  
   
-1.  /Fp コンパイラ オプションの引数  
+1. 引数、`/Fp`コンパイラ オプション  
   
-2.  *Filename* # 引数**プラグマ hdrstop**  
+2. *Filename*への引数 `#pragma hdrstop`  
   
-3.  拡張子 .PCH を持つソース ファイルのベース名  
+3. 拡張子 .PCH を持つソース ファイルのベース名  
   
- /Yc および/Yu オプションで、次の 2 つのコンパイル オプションのどちらも、また**hdrstop**プラグマ ファイルの名前を指定する、ソース ファイルの基本名が、プリコンパイル済みヘッダー ファイルのベース名として使用します。  
+`/Yc`と`/Yu`オプションは、2 つのコンパイル オプションのどちらでもない場合も**hdrstop**プラグマは、ファイル名を指定、ソース ファイルの基本名がプリコンパイル済みヘッダー ファイルのベース名として使用されます。  
   
- また、次のように、プリプロセス コマンドを使用してマクロ置換を実行することもできます。  
+また、次のように、プリプロセス コマンドを使用してマクロ置換を実行することもできます。  
   
 ```  
 #define INCLUDE_PATH "c:\\progra~`1\\devstsu~1\\vc\\include\\"  
@@ -67,11 +67,11 @@ ms.locfileid: "33847027"
 #pragma hdrstop( INCLUDE_PATH PCH_FNAME )  
 ```  
   
- 次の規則は、where、 **hdrstop**プラグマを配置することができます。  
+次の規則は、where、 **hdrstop**プラグマを配置することができます。  
   
--   すべてのデータ宣言、関数宣言、および定義の外にある必要があります。  
+- すべてのデータ宣言、関数宣言、および定義の外にある必要があります。  
   
--   ヘッダー ファイルにではなく、ソース ファイルに指定する必要があります。  
+- ヘッダー ファイルにではなく、ソース ファイルに指定する必要があります。  
   
 ## <a name="example"></a>例  
   
@@ -86,7 +86,8 @@ __inline Disp( char *szToDisplay )   // Define an inline function
 #pragma hdrstop  
 ```  
   
- この例では、 **hdrstop**プラグマは、2 つのファイルが含まれています、インライン関数が定義されている後に表示されます。 初めは、プラグマの位置が不自然に見えるかもしれません。 、ただし、その使用を検討して、手動プリコンパイル オプション/Yc および/Yu、で、 **hdrstop**プラグマにより、ソース ファイル全体をプリコンパイルする — インライン コードも含みます。 Microsoft コンパイラでは、データ宣言以外のプリコンパイルも実行できます。  
+この例で、 **hdrstop**プラグマは、2 つのファイルが含まれているし、インライン関数が定義されているが表示されます。 初めは、プラグマの位置が不自然に見えるかもしれません。 検討してください、ただし、手動プリコンパイル オプションを使用している`/Yc`と`/Yu`で、 **hdrstop**プラグマにより、ソース ファイル全体をプリコンパイルする — インライン コードも含みます。 Microsoft コンパイラでは、データ宣言以外のプリコンパイルも実行できます。  
   
 ## <a name="see-also"></a>関連項目  
- [プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

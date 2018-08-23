@@ -1,20 +1,20 @@
 ---
-title: ボックス化 (C + + CX) |Microsoft ドキュメント
+title: ボックス化 (C + + CX) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: edfb12fa-2a9b-42f6-bdac-d4d76cb8274e
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e47313f65c4129bbc6fbf0a7bfbf698eb092f9f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e70b908bddbf7034e1d60f16cb0e492c0a707586
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086500"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598881"
 ---
 # <a name="boxing-ccx"></a>ボックス化 (C++/CX)
 *ボックス化* とは、入力型として [Platform::Object^](http://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)を取るメソッドに変数が渡されたときに、ref クラス内で、値の型変数 ( `int`Windows::Foundation::DateTime [など) または基本的スカラー型 (](../cppcx/platform-object-class.md) など) をラップすることです。  
@@ -24,8 +24,8 @@ ms.locfileid: "33086500"
   
  [!code-cpp[cx_boxing#01](../cppcx/codesnippet/CPP/cx_boxing/class1.cpp#01)]  
   
-### <a name="using-platformiboxt-to-support-nullable-value-types"></a>Platform::ibox 使用\<T > を null 許容値型をサポートするには  
- C# および Visual Basic では、null 許容値型の概念をサポートしています。 C + + CX、行うこともできます、 `Platform::IBox<T>` null 許容値型パラメーターをサポートするパブリック メソッドを公開する型。 次の例は、C + + CX のパブリック メソッド、c# 呼び出し元が null の引数を渡すと null を返すにします。  
+### <a name="using-platformiboxt-to-support-nullable-value-types"></a>Platform::ibox を使用して\<T > を null 許容値型のサポート  
+ C# および Visual Basic では、null 許容値型の概念をサポートしています。 C++/cli 使用することができます、CX、 `Platform::IBox<T>` null 許容値型パラメーターをサポートするパブリック メソッドを公開する型。 次の例は c++/cli CX のパブリック メソッドを c# 呼び出し元が null の引数を渡すと null を返します。  
   
  [!code-cpp[cx_boxing#02](../cppcx/codesnippet/CPP/cx_boxing/class1.h#02)]  
   

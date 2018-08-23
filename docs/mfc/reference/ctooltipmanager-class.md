@@ -1,5 +1,5 @@
 ---
-title: CTooltipManager クラス |Microsoft ドキュメント
+title: CTooltipManager クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01d0cb0774af7c1c900f31b4e83bb03dba8bd255
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 9de39d2054f3c75e00e8827ebb4aaefac9970d59
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121087"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42544472"
 ---
 # <a name="ctooltipmanager-class"></a>CTooltipManager クラス
 ツールヒントに関するランタイム情報を保持します。 `CTooltipManager` クラスのインスタンスは、アプリケーションごとに 1 回作成されます。  
@@ -55,14 +55,14 @@ class CTooltipManager : public CObject
 |[CTooltipManager::UpdateTooltips](#updatetooltips)||  
   
 ## <a name="remarks"></a>Remarks  
- 使用して[CMFCToolTipCtrl クラス](../../mfc/reference/cmfctooltipctrl-class.md)、 `CMFCToolTipInfo`、および`CTooltipManager`アプリケーションでカスタマイズされたツールヒントを実装します。 これらのツールヒントのクラスを使用する方法の例は、次を参照してください。、 [CMFCToolTipCtrl クラス](../../mfc/reference/cmfctooltipctrl-class.md)トピックです。  
+ 使用[CMFCToolTipCtrl クラス](../../mfc/reference/cmfctooltipctrl-class.md)、 `CMFCToolTipInfo`、および`CTooltipManager`アプリケーションでカスタマイズされたツールヒントを実装するためにします。 これらのツールヒントのクラスを使用する方法の例は、次を参照してください。、 [CMFCToolTipCtrl クラス](../../mfc/reference/cmfctooltipctrl-class.md)トピック。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CTooltipManager](../../mfc/reference/ctooltipmanager-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxtooltipmanager.h  
   
 ##  <a name="createtooltip"></a>  CTooltipManager::CreateToolTip  
@@ -77,37 +77,37 @@ static BOOL CreateToolTip(
   
 ### <a name="parameters"></a>パラメーター  
  [out]*pToolTip*  
- ツールヒントのポインターへの参照。 新しく作成されたツールヒントを指す、関数が戻るときに設定されます。  
+ ツールヒントのポインターへの参照。 新しく作成されたツールヒントを指すように、関数が返されるときに設定されます。  
   
  [in]*pWndParent*  
  ツールヒントの親です。  
   
- [in]*タイプ*  
- ツール ヒントの種類です。  
+ [in]*%n タイプ*  
+ ツールヒントの型。  
   
 ### <a name="return-value"></a>戻り値  
- 0 以外の場合、ツール ヒントが正常に作成されました。  
+ 0 以外の場合、ツールヒントが正常に作成されました。  
   
 ### <a name="remarks"></a>Remarks  
- 呼び出す必要があります[CTooltipManager::DeleteToolTip](#deletetooltip)で戻されたツールヒント コントロールを削除する*pToolTip*です。  
+ 呼び出す必要があります[CTooltipManager::DeleteToolTip](#deletetooltip)に渡されるツールヒント コントロールを削除する*pToolTip*します。  
   
- [CTooltipManager](../../mfc/reference/ctooltipmanager-class.md)する種類のセットを作成する各ツールヒントのビジュアル表示パラメーターがツールヒントに基づく*タイプ*を指定します。 1 つまたは複数のツールヒント型のパラメーターを変更するには、呼び出す[:settooltipparams](#settooltipparams)です。  
+ [CTooltipManager](../../mfc/reference/ctooltipmanager-class.md)作成各ツールヒントのビジュアル表示パラメーターがツールヒントに基づくセットの種類を *%n タイプ*を指定します。 ツールヒントの種類を 1 つまたは複数のパラメーターを変更するには、呼び出す[:settooltipparams](#settooltipparams)します。  
   
- 有効なツールヒントの種類は、次の表のとおりです。  
+ ツールヒントが有効な型は、次の表のとおりです。  
   
-|ツールヒントの種類|コントロールの分類|種類の例|  
+|ツールヒントの種類|コントロールのカテゴリ|型の例|  
 |------------------|----------------------|-------------------|  
 |AFX_TOOLTIP_TYPE_BUTTON|ボタンをクリックします。|CMFCButton|  
-|AFX_TOOLTIP_TYPE_CAPTIONBAR|キャプション バーです。|CMFCCaptionBar|  
-|AFX_TOOLTIP_TYPE_DEFAULT|別のカテゴリに適合しないコントロールです。|なし。|  
-|AFX_TOOLTIP_TYPE_DOCKBAR|ドッキング可能なウィンドウ。|CDockablePane|  
+|AFX_TOOLTIP_TYPE_CAPTIONBAR|キャプション バー。|CMFCCaptionBar|  
+|AFX_TOOLTIP_TYPE_DEFAULT|別のカテゴリに適合しない任意のコントロール。|なし。|  
+|AFX_TOOLTIP_TYPE_DOCKBAR|ドッキング可能ペイン。|CDockablePane|  
 |AFX_TOOLTIP_TYPE_EDIT|テキスト ボックスです。|なし。|  
-|AFX_TOOLTIP_TYPE_MINIFRAME|ミニフレームです。|CPaneFrameWnd|  
+|AFX_TOOLTIP_TYPE_MINIFRAME|ミニフレームします。|CPaneFrameWnd|  
 |AFX_TOOLTIP_TYPE_PLANNER|プランナー|なし。|  
 |AFX_TOOLTIP_TYPE_RIBBON|リボン バー。|CMFCRibbonBar、CMFCRibbonPanelMenuBar|  
-|AFX_TOOLTIP_TYPE_TAB|タブ コントロールです。|CMFCTabCtrl|  
-|AFX_TOOLTIP_TYPE_TOOLBAR|ツールバーです。|CMFCToolBar、CMFCPopupMenuBar|  
-|AFX_TOOLTIP_TYPE_TOOLBOX|ツールボックス。|なし。|  
+|AFX_TOOLTIP_TYPE_TAB|タブ コントロール。|CMFCTabCtrl|  
+|AFX_TOOLTIP_TYPE_TOOLBAR|ツールバー。|CMFCToolBar、CMFCPopupMenuBar|  
+|AFX_TOOLTIP_TYPE_TOOLBOX|ツールボックスです。|なし。|  
   
 ##  <a name="deletetooltip"></a>  CTooltipManager::DeleteToolTip  
  ツールヒント コントロールを削除します。  
@@ -117,14 +117,14 @@ static void DeleteToolTip(CToolTipCtrl*& pToolTip);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力、出力].*pToolTip*  
+ [入力、出力]*pToolTip*  
  破棄するツールヒントへのポインターへの参照。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドの各呼び出し[CToolTipCtrl クラス](../../mfc/reference/ctooltipctrl-class.md)によって作成された[CTooltipManager::CreateToolTip](#createtooltip)です。 親コントロールからこのメソッドを呼び出す必要があります、`OnDestroy`ハンドラー。 これは、正しくフレームワークからヒントを削除する必要があります。 このメソッドは設定*pToolTip*に NULL を返す前にします。  
+ このメソッドの各呼び出し[CToolTipCtrl クラス](../../mfc/reference/ctooltipctrl-class.md)によって作成された[CTooltipManager::CreateToolTip](#createtooltip)します。 親コントロールからこのメソッドを呼び出す必要があります、`OnDestroy`ハンドラー。 これは、framework からヒントを正しく削除に必要です。 このメソッドは、設定*pToolTip*を返す前に NULL にします。  
   
 ##  <a name="settooltipparams"></a>  :Settooltipparams  
- 指定された Windows コントロールの種類のツールヒント コントロールの外観をカスタマイズします。  
+ 指定した種類の Windows コントロールのツールヒント コントロールの外観をカスタマイズします。  
   
 ```  
 void SetTooltipParams(
@@ -141,22 +141,22 @@ void SetTooltipParams(
  カスタム ツールヒントのランタイム クラスです。  
   
  [in]*pParams*  
- ツール ヒントのパラメーターです。  
+ ツールヒントのパラメーターです。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドを設定、ランタイム クラスと最初のパラメーターを[CToolTipManager](../../mfc/reference/ctooltipmanager-class.md)ツールヒントを作成するときに使用します。 コントロールを呼び出すと[CTooltipManager::CreateToolTip](#createtooltip)がツールヒントにパスとなる型で示される型の 1 つと*nTypes*、ツールヒント マネージャーのインスタンスであるツールヒント コントロールを作成する、によって指定されたランタイム クラス*pRTC*で指定されたパラメーターを渡す*pParams*新しいツールヒントにします。  
+ このメソッドを設定、ランタイム クラスと最初のパラメーターを[CToolTipManager](../../mfc/reference/ctooltipmanager-class.md)ツールヒントを作成するときに使用します。 コントロールを呼び出すと[CTooltipManager::CreateToolTip](#createtooltip)ツールヒント内のパスである型で示される型のいずれかと*nTypes*、ツールヒント マネージャーのインスタンスであるツールヒント コントロールを作成する、指定されたランタイム クラス*pRTC*で指定されたパラメーターを渡す*pParams*新しいヒントにします。  
   
- このメソッドを呼び出す、既存のすべてのツールヒント所有者が AFX_WM_UPDATETOOLTIPS メッセージを受信しすると、ツールヒントを使用して再作成する必要があります[CTooltipManager::CreateToolTip](#createtooltip)です。  
+ このメソッドを呼び出すし、既存のすべてのツールヒントの所有者には、AFX_WM_UPDATETOOLTIPS メッセージが表示される、ツールヒントを使用して再作成する必要があります[CTooltipManager::CreateToolTip](#createtooltip)します。  
   
- *nTypes*有効なツールヒントの任意の組み合わせの種類を指定できます[CTooltipManager::CreateToolTip](#createtooltip)が使用することもできます AFX_TOOLTIP_TYPE_ALL です。 AFX_TOOLTIP_TYPE_ALL を渡すと、すべてのツール ヒントの種類に影響します。  
+ *nTypes*する有効なツールヒントの任意の組み合わせの種類は、 [CTooltipManager::CreateToolTip](#createtooltip)使用方法、またはその AFX_TOOLTIP_TYPE_ALL をすることができます。 AFX_TOOLTIP_TYPE_ALL を渡すと、すべてのツール ヒントの種類に影響します。  
   
 ### <a name="example"></a>例  
- 次の例で使用する方法、`SetTooltipParams`のメソッド、`CTooltipManager`クラスです。 このコード スニペットは、「 [クライアント サンプルの描画](../../visual-cpp-samples.md)」の一部です。  
+ 次の例では、使用する方法、`SetTooltipParams`のメソッド、`CTooltipManager`クラス。 このコード スニペットは、「 [クライアント サンプルの描画](../../visual-cpp-samples.md)」の一部です。  
   
  [!code-cpp[NVC_MFC_DrawClient#11](../../mfc/reference/codesnippet/cpp/ctooltipmanager-class_1.cpp)]  
   
 ##  <a name="settooltiptext"></a>  CTooltipManager::SetTooltipText  
- テキストとツールヒントの説明を設定します。  
+ ツールヒントの説明テキストを設定します。  
   
 ```  
 static void SetTooltipText(
@@ -171,23 +171,23 @@ static void SetTooltipText(
  [in]*pTI*  
  TOOLINFO オブジェクトへのポインター。  
   
- [入力、出力].*pToolTip*  
+ [入力、出力]*pToolTip*  
  テキストと説明を設定する対象のツールヒント コントロールへのポインター。  
   
- [in]*タイプ*  
+ [in]*%n タイプ*  
  このツールヒントが関連付けられているコントロールの種類を指定します。  
   
  [in]*strText*  
- ツールヒントのテキストとして設定するテキストです。  
+ ツールヒントのテキストとして設定するテキスト。  
   
  [in]*lpszDescr*  
  ツールヒントの説明へのポインター。 NULL にすることができます。  
   
 ### <a name="remarks"></a>Remarks  
- 値*タイプ*と同じ値にする必要があります、*タイプ*のパラメーター [CTooltipManager::CreateToolTip](#createtooltip)ツールヒントを作成したときにします。  
+ 値 *%n タイプ*と同じ値である必要があります、 *%n タイプ*パラメーターの[CTooltipManager::CreateToolTip](#createtooltip)ツールヒントを作成するときにします。  
   
 ##  <a name="updatetooltips"></a>  CTooltipManager::UpdateTooltips  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。  
   
 ```  
 void UpdateTooltips();

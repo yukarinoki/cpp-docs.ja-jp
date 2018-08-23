@@ -1,5 +1,5 @@
 ---
-title: Dll の遅延読み込みの制約 |Microsoft ドキュメント
+title: Dll の遅延読み込みの制約 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 532d5ba64288fb70b19f10386186c0b520e67661
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40774d6307eb9b423ebd4fd303a48acbd87eda24
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375917"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572223"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>DLL の遅延読み込みの制約
 インポートの遅延読み込みには制約があります。  
@@ -30,9 +30,9 @@ ms.locfileid: "32375917"
   
 -   遅延読み込み Kernel32.dll はサポートされません。 この DLL は、遅延読み込みヘルパー ルーチンが遅延読み込みを実行するのに必要です。  
   
--   [バインド](../../build/reference/binding-imports.md)のエントリ ポイントは、転送されることはできません。  
+-   [バインド](../../build/reference/binding-imports.md)エントリの転送されるポイントはサポートされません。  
   
--   遅延読み込み DLL のエントリ ポイントでプロセスごとに初期化が起こる場合、DLL の遅延読み込みでプロセスの動作が同じにならない可能性があります。 それ以外の場合を使用して宣言する静的 TLS (スレッド ローカル ストレージ) を含める[_declspec](../../cpp/thread.md)を使用して、DLL が読み込まれるときに処理されません`LoadLibrary`です。 `TlsAlloc`、`TlsFree`、`TlsGetValue`、および `TlsSetValue` を使用した動的 TLS は、静的または遅延読み込み DLL で引き続き利用可能です。  
+-   遅延読み込み DLL のエントリ ポイントでプロセスごとに初期化が起こる場合、DLL の遅延読み込みでプロセスの動作が同じにならない可能性があります。 それ以外の場合は、静的 TLS (スレッド ローカル ストレージ) を使用して宣言を含める[_declspec](../../cpp/thread.md)を使用して、DLL が読み込まれるときに処理されません`LoadLibrary`します。 `TlsAlloc`、`TlsFree`、`TlsGetValue`、および `TlsSetValue` を使用した動的 TLS は、静的または遅延読み込み DLL で引き続き利用可能です。  
   
 -   静的 (グローバル) 関数ポインターは、関数への最初の呼び出しの後に、インポートされた関数について再初期化する必要があります。 これは、関数ポインターを最初に使用するときにはサンクをポイントするからです。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "32375917"
  [LoadLibrary 関数](http://msdn.microsoft.com/library/windows/desktop/ms684175.aspx)   
  [GetModuleHandle 関数](http://msdn.microsoft.com/library/windows/desktop/ms683199.aspx)   
  [GetProcAddress 関数](http://msdn.microsoft.com/library/windows/desktop/ms683212.aspx)   
- [TlsAlloc 関数](http://msdn.microsoft.com/library/windows/desktop/ms686801.aspx)   
- [TlsFree 関数](http://msdn.microsoft.com/library/windows/desktop/ms686804.aspx)   
- [TlsGetValue 関数](http://msdn.microsoft.com/library/windows/desktop/ms686812.aspx)   
- [TlsSetValue 関数](http://msdn.microsoft.com/library/windows/desktop/ms686818.aspx)
+ [TlsAlloc 関数](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)   
+ [TlsFree 関数](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsfree)   
+ [TlsGetValue 関数](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)   
+ [TlsSetValue 関数](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlssetvalue)

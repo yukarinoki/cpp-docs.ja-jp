@@ -1,5 +1,5 @@
 ---
-title: _mm_cvtss_si64x |Microsoft ドキュメント
+title: _mm_cvtss_si64x |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 665c52fc0dd0645e25d3014cc28f9fdfba344e2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 947c9bf0892da52b44a99486b3ff0f1d59bc6fee
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332105"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540697"
 ---
 # <a name="mmcvtsssi64x"></a>_mm_cvtss_si64x
 **Microsoft 固有の仕様**  
   
- 生成、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]変換スカラー単一単精度浮動小数点数の 64 ビットの整数に拡張バージョン (`cvtss2si`) 命令します。  
+ 拡張 x64 を生成、変換スカラー単一単精度浮動小数点数を 64 ビット整数のバージョン (`cvtss2si`) 命令。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,18 +42,18 @@ __int64 _mm_cvtss_si64x(
  `__m128`浮動小数点値を含む構造体。  
   
 ## <a name="return-value"></a>戻り値  
- 64 ビット整数の場合、最初の浮動小数点値の整数への変換の結果。  
+ 64 ビット整数の場合、最初の浮動小数点値の整数値への変換の結果。  
   
 ## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`_mm_cvtss_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_mm_cvtss_si64x`|X64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
- 構造値の最初の要素が整数に変換され、返されます。 MXCSR で丸め制御ビットを使用して、丸め処理を決定します。 既定の丸めモードは、小数部が 0.5 である場合、偶数丸められる最も近い round です。 `__m128`構造は、この組み込みは、XMM レジスタの値は XMM レジスタを表すし、システム メモリに書き込みます。  
+## <a name="remarks"></a>Remarks  
+ 構造体の値の最初の要素が整数に変換し、返されます。 MXCSR で丸め制御ビットを使用すると、丸め処理を決定します。 既定の丸めモードは、小数部分が 0.5 の場合、偶数丸められる最も近い round をします。 `__m128`構造は、この組み込みは、XMM レジスタの値、XMM レジスタを表すし、システム メモリに書き込みます。  
   
  このルーチンは、組み込みとしてのみ使用できます。  
   

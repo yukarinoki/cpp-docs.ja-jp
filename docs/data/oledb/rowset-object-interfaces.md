@@ -19,42 +19,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e8a1a5f5256087a8869426489fe01250b16fc598
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 177f3110b2bc782093a91ee9dfaa560843791b5c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340512"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572209"
 ---
 # <a name="rowset-object-interfaces"></a>行セット オブジェクト インターフェイス
 次の表では、行セット オブジェクトの OLE DB で定義されている必須および省略可能なインターフェイスを示します。  
   
 |Interface|必須?|OLE DB テンプレートによって実装されるでしょうか。|  
 |---------------|---------------|--------------------------------------|  
-|[IAccessor](https://msdn.microsoft.com/library/ms719672.aspx)|必須|[はい]|  
-|[IColumnsInfo](https://msdn.microsoft.com/library/ms724541.aspx)|必須|[はい]|  
-|[IConvertType](https://msdn.microsoft.com/library/ms715926.aspx)|必須|[はい]|  
-|[IRowset](https://msdn.microsoft.com/library/ms720986.aspx)|必須|[はい]|  
-|[IRowsetInfo](https://msdn.microsoft.com/library/ms724541.aspx)|必須|[はい]|  
-|[IChapteredRowset](https://msdn.microsoft.com/library/ms718180.aspx)|Optional|いいえ|  
-|[IColumnsInfo2](https://msdn.microsoft.com/library/ms712953.aspx)|Optional|いいえ|  
-|[IColumnsRowset](https://msdn.microsoft.com/library/ms722657.aspx)|Optional|いいえ|  
+|[IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\))|必須|[はい]|  
+|[IColumnsInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\))|必須|[はい]|  
+|[IConvertType](/previous-versions/windows/desktop/ms715926\(v=vs.85\))|必須|[はい]|  
+|[IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\))|必須|[はい]|  
+|[IRowsetInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\))|必須|[はい]|  
+|[IChapteredRowset](/previous-versions/windows/desktop/ms718180\(v=vs.85\))|Optional|いいえ|  
+|[IColumnsInfo2](/previous-versions/windows/desktop/ms712953\(v=vs.85\))|Optional|いいえ|  
+|[IColumnsRowset](/previous-versions/windows/desktop/ms722657\(v=vs.85\))|Optional|いいえ|  
 |[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)|Optional|はい (ATL) を使用|  
-|[IDBAsynchStatus](https://msdn.microsoft.com/library/ms709832.aspx)|Optional|いいえ|  
-|[IGetRow](https://msdn.microsoft.com/library/ms718047.aspx)|Optional|いいえ|  
-|[IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx)|Optional|[はい]|  
-|[IRowsetChapterMember](https://msdn.microsoft.com/library/ms725430.aspx)|Optional|いいえ|  
-|[IRowsetCurrentIndex](https://msdn.microsoft.com/library/ms709700.aspx)|Optional|いいえ|  
-|[IRowsetFind](https://msdn.microsoft.com/library/ms724221.aspx)|Optional|いいえ|  
-|[IRowsetIdentity](https://msdn.microsoft.com/library/ms715913.aspx)|(ただし、レベル 0 のプロバイダーに必要) (省略可能)|[はい]|  
-|[IRowsetIndex](https://msdn.microsoft.com/library/ms719604.aspx)|Optional|いいえ|  
-|[IRowsetLocate](https://msdn.microsoft.com/library/ms721190.aspx)|Optional|[はい]|  
-|[IRowsetRefresh](https://msdn.microsoft.com/library/ms714892.aspx)|Optional|いいえ|  
-|[IRowsetScroll](https://msdn.microsoft.com/library/ms712984.aspx)|Optional|いいえ|  
-|[IRowsetUpdate](https://msdn.microsoft.com/library/ms714401.aspx)|Optional|[はい]|  
-|[IRowsetView](https://msdn.microsoft.com/library/ms709755.aspx)|Optional|いいえ|  
-|[ISupportErrorInfo](https://msdn.microsoft.com/library/ms715816.aspx)|Optional|[はい]|  
-|[IRowsetBookmark](https://msdn.microsoft.com/library/ms714246.aspx)|Optional|いいえ|  
+|[IDBAsynchStatus](/previous-versions/windows/desktop/ms709832\(v=vs.85\))|Optional|いいえ|  
+|[IGetRow](/previous-versions/windows/desktop/ms718047\(v=vs.85\))|Optional|いいえ|  
+|[IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))|Optional|[はい]|  
+|[IRowsetChapterMember](/previous-versions/windows/desktop/ms725430\(v=vs.85\))|Optional|いいえ|  
+|[IRowsetCurrentIndex](/previous-versions/windows/desktop/ms709700\(v=vs.85\))|Optional|いいえ|  
+|[IRowsetFind](/previous-versions/windows/desktop/ms724221\(v=vs.85\))|Optional|いいえ|  
+|[IRowsetIdentity](/previous-versions/windows/desktop/ms715913\(v=vs.85\))|(ただし、レベル 0 のプロバイダーに必要) (省略可能)|[はい]|  
+|[IRowsetIndex](/previous-versions/windows/desktop/ms719604\(v=vs.85\))|Optional|いいえ|  
+|[IRowsetLocate](/previous-versions/windows/desktop/ms721190\(v=vs.85\))|Optional|[はい]|  
+|[IRowsetRefresh](/previous-versions/windows/desktop/ms714892\(v=vs.85\))|Optional|いいえ|  
+|[IRowsetScroll](/previous-versions/windows/desktop/ms712984\(v=vs.85\))|Optional|いいえ|  
+|[IRowsetUpdate](/previous-versions/windows/desktop/ms714401\(v=vs.85\))|Optional|[はい]|  
+|[IRowsetView](/previous-versions/windows/desktop/ms709755\(v=vs.85\))|Optional|いいえ|  
+|[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816\(v=vs.85\))|Optional|[はい]|  
+|[IRowsetBookmark](/previous-versions/windows/desktop/ms714246\(v=vs.85\))|Optional|いいえ|  
   
  ウィザードで生成された行セット オブジェクトを実装して`IAccessor`、`IRowset`と`IRowsetInfo`継承を使用します。 `IAccessorImpl`両方の出力列をバインドします。 `IRowset`インターフェイスは、行のフェッチとデータを処理します。 `IRowsetInfo`インターフェイスは、行セット プロパティを処理します。  
   

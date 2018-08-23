@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8043ff1c25c08c6adcb640defba1bc967a2fb8b
-ms.sourcegitcommit: 66f4f12d3851c897ca69cf62da1697e95b2b97c2
+ms.openlocfilehash: bfc91d25e4c843eaa004b59eab076bcfbe188253
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39496559"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42571983"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Visual Studio での C++ のサポートをインストール
 
@@ -63,7 +63,7 @@ ms.locfileid: "39496559"
 
    初めて Visual Studio を実行する時には、Microsoft アカウントでサインインするように求められます。 アカウントをお持ちでない場合は、新しいアカウントを無料で作成できます。 テーマを選択する必要もあります。 後で変更することもできるので、ご安心ください。 
 
-   初めて実行する場合、Visual Studio の準備に数分かかる場合があります。 どのようになるかを、短いコマ撮りで次に示します。
+   Visual Studio をいくつかでかかる場合がありますを準備する分を使用して、初めて実行します。 どのようになるかを、短いコマ撮りで次に示します。
 
 
    ![Visual Studio 2017 のサインイン](../build/media/vscpp-quickstart-first-run.gif "Visual Studio 2017 のサインイン")

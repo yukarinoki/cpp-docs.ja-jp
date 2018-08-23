@@ -18,42 +18,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 42629df8eeda1bbd2bda2057dfee619b52928cba
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 72daa8e4bebfb8a3483c26a25c1f1d253faee8c2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015587"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611983"
 ---
 # <a name="selecting-multiple-controls"></a>複数のコントロールの選択
-### <a name="to-select-multiple-controls"></a>複数のコントロールを選択するには  
-  
-1.  [ツールボックス ウィンドウ](/visualstudio/ide/reference/toolbox)を選択、**ポインター**ツール。  
-  
-2.  選択ボックスで、ダイアログ ボックスで選択するコントロールの周囲へのポインターをドラッグします。  
-  
-     マウス ボタンを離すと、すべて内側と、選択ボックスが選択されているを交差を制御します。  
-  
-     \- または -  
-  
--   押しながら、 **Shift**キーを選択したいコントロールをクリックします。  
-  
-     \- または -  
-  
--   押しながら、 **Ctrl**キーを選択したいコントロールをクリックします。  
-  
-### <a name="to-remove-a-control-from-a-group-of-selected-controls-or-to-add-a-control-to-a-group-of-selected-controls"></a>コントロールを選択したコントロールのグループから削除するには、か、コントロールを選択したコントロールのグループに追加するには  
-  
-1.  押しながら選択コントロールのグループと、 **Shift**キーし、既存の選択範囲を追加または削除するコントロールをクリックします。  
-  
-    > [!NOTE]
-    >  押しながら、 **Ctrl**キーと、選択範囲内のコントロールをクリックするとその選択範囲内の主要なコントロールを制御する、します。 詳細については、次を参照してください。[主要なコントロールを指定する](../windows/specifying-the-dominant-control.md)します。  
-  
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
-  
-## <a name="requirements"></a>要件  
- Win32  
-  
-## <a name="see-also"></a>関連項目  
- [コントロールの選択](../windows/selecting-controls.md)   
- [ダイアログ ボックスのコントロール](../windows/controls-in-dialog-boxes.md)
+
+### <a name="to-select-multiple-controls"></a>複数のコントロールを選択するには
+
+1. [ツールボックス ウィンドウ](/visualstudio/ide/reference/toolbox)を選択、**ポインター**ツール。
+
+2. 選択ボックスで、ダイアログ ボックスで選択するコントロールの周囲へのポインターをドラッグします。
+
+   マウス ボタンを離すと、すべて内側と、選択ボックスが選択されているを交差を制御します。
+
+   \- または -
+
+- 押しながら、 **Shift**キーを選択したいコントロールをクリックします。
+
+   \- または -
+
+- 押しながら、 **Ctrl**キーを選択したいコントロールをクリックします。
+
+### <a name="to-remove-a-control-from-a-group-of-selected-controls-or-to-add-a-control-to-a-group-of-selected-controls"></a>コントロールを選択したコントロールのグループから削除するには、か、コントロールを選択したコントロールのグループに追加するには
+
+1. 押しながら選択コントロールのグループと、 **Shift**キーし、既存の選択範囲を追加または削除するコントロールをクリックします。
+
+   > [!NOTE]
+   > 押しながら、 **Ctrl**キーと、選択範囲内のコントロールをクリックするとその選択範囲内の主要なコントロールを制御する、します。 詳細については、次を参照してください。[主要なコントロールを指定する](../windows/specifying-the-dominant-control.md)します。
+
+マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
+
+## <a name="requirements"></a>要件
+
+Win32
+
+## <a name="see-also"></a>関連項目
+
+[コントロールの選択](../windows/selecting-controls.md)  
+[ダイアログ ボックスのコントロール](../windows/controls-in-dialog-boxes.md)

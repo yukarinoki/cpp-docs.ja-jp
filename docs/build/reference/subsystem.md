@@ -1,5 +1,5 @@
 ---
-title: -SUBSYSTEM |Microsoft ドキュメント
+title: -SUBSYSTEM |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c12df1a2166c9ef5a1af8a33a5764a8899909edb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 75e0086f96f39814bd1a7e77df2adccc47d698fc
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377624"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42571639"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 実行可能イメージに必要な実行環境を指定します。  
@@ -34,19 +34,19 @@ ms.locfileid: "32377624"
         NATIVE|POSIX|WINDOWS|WINDOWSCE}[,major[.minor]]  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このオプションは、イメージを編集して、実行のためにオペレーティング システムから呼び出すサブシステムを指定します。  
   
  以下のいずれかのサブシステムを指定できます。  
   
  BOOT_APPLICATION  
- Windows のブート環境で実行するアプリケーションです。 ブート アプリケーションの詳細については、次を参照してください。 [BCD WMI プロバイダーに関する](http://msdn.microsoft.com/library/aa362639.aspx)です。  
+ Windows のブート環境で実行するアプリケーションです。 ブート アプリケーションの詳細については、次を参照してください。 [BCD WMI プロバイダーについて](/previous-versions/windows/desktop/bcd/about-bcd)します。  
   
  CONSOLE  
  Windows キャラクター モード アプリケーション。 オペレーティング システムには、コンソール アプリケーションのコンソールが用意されています。  
   
  拡張可能なファームウェア インターフェイス (EFI) イメージ  
- EFI サブシステムのオプションは、拡張可能なファームウェア インターフェイスの環境で実行できる実行可能イメージを設定します。 この環境は通常、ハードウェアと共に提供され、オペレーティング システムが読み込まれる前に実行されます。 EFI のイメージの種類による主な相違点は、イメージが読み込まれるメモリ位置、およびイメージへの呼び出しが返されるときに実行される処理です。 EFI_APPLICATION イメージは、制御が返されるとアンロードされます。 EFI_BOOT_SERVICE_DRIVER または EFI_RUNTIME_DRIVER は、エラー コードと共に制御が返された場合にのみアンロードされます。 EFI_ROM イメージは ROM から実行されます。 詳細についてを参照してください、仕様上、 [Unified EFI Forum](http://www.uefi.org/) web サイトです。  
+ EFI サブシステムのオプションは、拡張可能なファームウェア インターフェイスの環境で実行できる実行可能イメージを設定します。 この環境は通常、ハードウェアと共に提供され、オペレーティング システムが読み込まれる前に実行されます。 EFI のイメージの種類による主な相違点は、イメージが読み込まれるメモリ位置、およびイメージへの呼び出しが返されるときに実行される処理です。 EFI_APPLICATION イメージは、制御が返されるとアンロードされます。 EFI_BOOT_SERVICE_DRIVER または EFI_RUNTIME_DRIVER は、エラー コードと共に制御が返された場合にのみアンロードされます。 EFI_ROM イメージは ROM から実行されます。 詳細については、上の仕様を参照してください。、 [Unified EFI Forum](http://www.uefi.org/) web サイト。  
   
  NATIVE  
  サブシステム環境なしで実行されるコード、たとえばカーネル モード デバイス ドライバーやネイティブ システム プロセス。 このオプションは、通常、Windows システムの機能のために予約されています。  
@@ -55,7 +55,7 @@ ms.locfileid: "32377624"
  Windows 上の POSIX サブシステムで実行するアプリケーション。  
   
  WINDOWS  
- Windows のグラフィカル環境で実行するアプリケーション。 これには、デスクトップ アプリとユニバーサル Windows プラットフォーム (UWP) アプリの両方が含まれます。  
+ Windows のグラフィカル環境で実行するアプリケーション。 これには、デスクトップ アプリおよびユニバーサル Windows プラットフォーム (UWP) アプリの両方が含まれます。  
   
  WINDOWSCE  
  WINDOWSCE サブシステムは、アプリケーションが Windows CE カーネルのバージョンがあるデバイスで実行するように設計されたことを示します。 カーネルのバージョンには、PocketPC、Windows Mobile、Windows Phone 7、Windows CE V1.0-6.0R3、および Windows Embedded Compact 7 があります。  

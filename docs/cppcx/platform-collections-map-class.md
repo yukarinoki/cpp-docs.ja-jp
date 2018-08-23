@@ -1,5 +1,5 @@
 ---
-title: 'Platform::collections: クラス |Microsoft ドキュメント'
+title: :Map クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2018
 ms.technology: cpp-windows
@@ -19,16 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6580ccb9ca19a575bac6a9fedbb4e8f16c7060ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6831369f6327b7cef38b1a4f15013f1e3ff4043
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33093182"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608989"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map クラス
 
@@ -53,12 +53,12 @@ ref class Map sealed;
 キー/値ペア内の値の型。
 
 *C*  
-並べ替えキーとして 2 つの要素値を比較してマップ内の相対順序を決定できる関数オブジェクトを提供する型。 既定では、 [std::less\<K >](../standard-library/less-struct.md)です。
+並べ替えキーとして 2 つの要素値を比較してマップ内の相対順序を決定できる関数オブジェクトを提供する型。 既定では、 [std::less\<K >](../standard-library/less-struct.md)します。
 
 *__is_valid_winrt_type()*  
-コンパイラによって生成された関数の種類を検証する*K*と*V*し、マップの種類を格納できない場合にフレンドリ エラー メッセージを提供します。
+コンパイラによって生成された関数の種類を検証する*K*と*V*し型にマップに格納できない場合は、わかりやすいエラー メッセージを提供します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 使用できる型は次のとおりです。
 
@@ -72,9 +72,9 @@ ref class Map sealed;
 
 - パブリック列挙型クラス
 
-マップは、基本的に [std::map](../standard-library/map-class.md)のラッパーです。 C++ の具象実装は、 [Windows::Foundation::Collections::IMap < Windows::Foundation::Collections::IKeyValuePair\<K, V >>](http://go.microsoft.com/fwlink/p/?LinkId=262408)と[IObservableMap](http://msdn.microsoft.com/library/windows/apps/br226050.aspx)Windows ランタイム インターフェイスのパブリックの間で渡される型。 パブリックの戻り値またはパラメーターで `Platform::Collections::Map` 型を使用しようとすると、コンパイラ エラー C3986 が発生します。 パラメーターまたは戻り値の型を変更することで、エラーを修正することができます[Windows::Foundation::Collections::IMap\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262408)です。
+マップは、基本的に [std::map](../standard-library/map-class.md)のラッパーです。 C++ の具象実装では、 [Windows::Foundation::Collections::IMap < Windows::Foundation::Collections::IKeyValuePair\<K, V >>](http://go.microsoft.com/fwlink/p/?LinkId=262408)と[IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_)Windows ランタイム インターフェイスのパブリックの間で渡される型。 パブリックの戻り値またはパラメーターで `Platform::Collections::Map` 型を使用しようとすると、コンパイラ エラー C3986 が発生します。 パラメーターまたは戻り値の型を変更することで、エラーを修正する[Windows::Foundation::Collections::IMap\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262408)します。
 
-詳細については、次を参照してください。[コレクション](../cppcx/collections-c-cx.md)です。
+詳細については、次を参照してください。[コレクション](../cppcx/collections-c-cx.md)します。
 
 ### <a name="members"></a>メンバー
 
@@ -101,7 +101,7 @@ ref class Map sealed;
 
 |||
 |-|-|
-|名前|説明|
+|name|説明|
 |[Map::mapchanged](#mapchanged-event.md) `event`|マップが変更されたときに発生します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
@@ -139,13 +139,13 @@ Windows::Foundation::Collections::IKeyValuePair<K, V>^>^ First();
 
 マップ内の最初の要素を指定する反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 First() によって返される反復子を保持する便利な方法で宣言された変数に戻り値を割り当てるには、**自動**推論キーワードを入力します。 たとえば、`auto x = myMap->First();` のようにします。
 
 ## <a name="getview"></a>  Map::getview メソッド
 
-現在のマップの読み取り専用ビューを返しますつまり、 [Platform::Collections::MapView クラス](../cppcx/platform-collections-mapview-class.md)を実装する、 [Windows::Foundation::Collections::IMapView\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226037.aspx)インターフェイスです。
+現在のマップの読み取り専用ビューを返しますつまり、 [Platform::Collections::MapView クラス](../cppcx/platform-collections-mapview-class.md)、実装する、[Windows::Foundation::Collections::IMapView\<K, V >]/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) インターフェイス。
 
 ### <a name="syntax"></a>構文
 
@@ -170,7 +170,7 @@ bool HasKey(K key);
 ### <a name="parameters"></a>パラメーター
 
 *key*  
-Map 要素の検索に使用するキー。 型*キー* typename は*K*です。
+Map 要素の検索に使用するキー。 型*キー* typename が*K*します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -189,14 +189,14 @@ virtual bool Insert(K key, V value);
 ### <a name="parameters"></a>パラメーター
 
 *key*  
-キー/値ペアのキー部分。 型*キー* typename は*K*です。
+キー/値ペアのキー部分。 型*キー* typename が*K*します。
 
 *値*  
-キー/値ペアの値部分。 型*値*typename は*V*です。
+キー/値ペアの値部分。 型*値*typename が*V*します。
 
 ### <a name="return-value"></a>戻り値
 
-`true` 現在のマップ内の既存の要素のキーと一致するかどうかは*キー*し、その要素の値部分に設定されている*値*です。 `false` 現在のマップ内の既存の要素が一致しない場合*キー*と*キー*と*値*パラメーターがキー/値ペアになっていて、現在のマップに追加します。
+`true` 現在のマップ内の既存の要素のキーと一致するかどうか*キー*し、その要素の値の部分に設定されている*値*します。 `false` 現在のマップ内の既存の要素が一致しない場合*キー*と*キー*と*値*パラメーターのキー/値ペアに行われ、現在のマップに追加されます。
 
 ## <a name="lookup"></a>  Map::lookup メソッド
 
@@ -211,13 +211,13 @@ V Lookup(K key);
 ### <a name="parameters"></a>パラメーター
 
 *key*  
-マップの要素の検索に使用するキー。 型*キー* typename は*K*です。
+マップの要素の検索に使用するキー。 型*キー* typename が*K*します。
 
 ### <a name="return-value"></a>戻り値
 
-ペアになり、値、*キー*です。 戻り値の型は typename *V*です。
+値とペアになっている、*キー*します。 戻り値の型は typename *V*します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 キーが存在しない場合、 [platform::outofboundsexception](../cppcx/platform-outofboundsexception-class.md)がスローされます。
 
@@ -247,7 +247,7 @@ Map(
 並べ替えキーとして 2 つの要素値を比較してマップ内の相対順序を決定できる関数オブジェクトを提供する型。
 
 *m*  
-参照または[Lvalue と Rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md)を`map Class`現在のマップを初期化するために使用されます。
+参照または[Lvalues と Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)を`map Class`現在のマップを初期化するために使用されます。
 
 *first*  
 現在のマップを初期化するために使用される要素の範囲内の最初の要素の入力反復子。
@@ -267,11 +267,11 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>プロパティ値/戻り値
 
-A [MapChangedEventHandler\<K, V >](http://msdn.microsoft.com/library/windows/apps/br206644.aspx)イベント、および発生した変更の種類を発生させたオブジェクトに関する情報を格納します。 関連項目[IMapChangedEventArgs\<K >](http://msdn.microsoft.com/library/windows/apps/br226034.aspx)と[collectionchange Enumeration 列挙型](http://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx)です。
+A [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler)発生した変更の種類と、イベントを発生させたオブジェクトに関する情報を格納します。 参照してください[IMapChangedEventArgs\<K >](http://msdn.microsoft.com/library/windows/apps/br226034.aspx)と[CollectionChange 列挙](http://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx)します。
 
 ## <a name="net-framework-equivalent"></a>同等の .NET Framework 関数
 
-C# または Visual Basic を使用する Windows ランタイム アプリ プロジェクト IMap\<K, V > を IDictionary として\<K, V >。
+C# または Visual Basic を使用する Windows ランタイム アプリ プロジェクト IMap\<K, V > として IDictionary\<K, V >。
 
 ## <a name="remove"></a>  Map::remove メソッド
 
@@ -286,7 +286,7 @@ virtual void Remove(K key);
 ### <a name="parameters"></a>パラメーター
 
 *key*  
-キー/値ペアのキー部分。 型*キー* typename は*K*です。
+キー/値ペアのキー部分。 型*キー* typename が*K*します。
 
 ## <a name="size"></a>  Map::size メソッド
 
@@ -305,4 +305,4 @@ virtual property unsigned int Size;
 ## <a name="see-also"></a>関連項目
 
 [プラットフォーム Namespace](platform-namespace-c-cx.md)  
-[C++ での Windows ランタイム コンポーネントを作成します。](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  
+[C++ で Windows ランタイム コンポーネントの作成](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  

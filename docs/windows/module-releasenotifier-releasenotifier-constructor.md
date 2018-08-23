@@ -17,32 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 93dca0500971f0bcfdefd017457e02bf6a033660
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: f4ab2d5d03516147acda38ea2133d7445695de80
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608470"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598789"
 ---
 # <a name="modulereleasenotifierreleasenotifier-constructor"></a>Module::ReleaseNotifier::ReleaseNotifier コンストラクター
-新しいインスタンスを初期化、 **module::releasenotifier**クラス。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-ReleaseNotifier(bool release) throw();  
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *release*  
- **true**を削除するインスタンスこれ、`Release`メソッドが呼び出されます。**false**をこのインスタンスを削除できません。  
-  
-## <a name="exceptions"></a>例外  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** module.h  
-  
- **名前空間:** Microsoft::WRL  
-  
-## <a name="see-also"></a>関連項目  
- [Module::ReleaseNotifier クラス](../windows/module-releasenotifier-class.md)
+
+新しいインスタンスを初期化、 **module::releasenotifier**クラス。
+
+## <a name="syntax"></a>構文
+
+```cpp
+ReleaseNotifier(bool release) throw();
+```
+
+### <a name="parameters"></a>パラメーター
+
+*release*  
+**true**を削除するインスタンスこれ、`Release`メソッドが呼び出されます。**false**をこのインスタンスを削除できません。
+
+## <a name="exceptions"></a>例外
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** module.h
+
+**名前空間:** Microsoft::WRL
+
+## <a name="see-also"></a>関連項目
+
+[Module::ReleaseNotifier クラス](../windows/module-releasenotifier-class.md)

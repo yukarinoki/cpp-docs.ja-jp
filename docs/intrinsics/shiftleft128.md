@@ -1,5 +1,5 @@
 ---
-title: _ _shiftleft128 |Microsoft ドキュメント
+title: _ _shiftleft128 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfc63cdd252e2acb23d8a6e842138d91e6c9b9c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3ca2c389b00126ff477b8e184d690afce07c484
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339996"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538861"
 ---
 # <a name="shiftleft128"></a>__shiftleft128
 **Microsoft 固有の仕様**  
@@ -55,11 +55,11 @@ unsigned __int64 __shiftleft128(
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__shiftleft128`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__shiftleft128`|X64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `Shift` の値は常にモジュロ 64 です。このため、たとえば `__shiftleft128(1, 0, 64)` をコールすると、上位部分が `0` ビット右にシフトされ、下位部分である `0` が返されます。`1` ではありません。  
   
 ## <a name="example"></a>例  

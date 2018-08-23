@@ -1,5 +1,5 @@
 ---
-title: fenv_access |Microsoft ドキュメント
+title: fenv_access |Microsoft Docs
 ms.custom: ''
 ms.date: 03/12/2018
 ms.technology:
@@ -18,16 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2f6f379e61ea84c1142bd94be49b55a50b28753
-ms.sourcegitcommit: 1ac8f983eeaacd09135a249dea00f10e1c94e0e3
+ms.openlocfilehash: eeb138a8b2598c209005031a3ccd3104fead48dc
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36963324"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538708"
 ---
 # <a name="fenvaccess"></a>fenv_access
-
-無効になります (**で**) か、または有効 (**オフ**) 浮動小数点環境に影響する最適化フラグ テストとモードの変更。
+無効にします (**で**) または有効 (**オフ**) 浮動小数点環境に影響する最適化フラグ テストとモードの変更。
 
 ## <a name="syntax"></a>構文
 
@@ -35,11 +34,11 @@ ms.locfileid: "36963324"
 
 ## <a name="remarks"></a>Remarks
 
-既定では、 **fenv_access**は**オフ**です。 コンパイラが想定する場合は、コードはアクセスできませんか、または浮動小数点の環境を操作し、多くの浮動小数点コードの最適化を実行できます。 設定**fenv_access**に**で**浮動小数点または環境をテストの状態フラグの例外を除き、制御モード フラグを設定するが、コードにアクセスすることをコンパイラに通知するためにします。 コンパイラでは、コードでは、浮動小数点環境を一貫してアクセスできるように、これらの最適化が無効にします。 
+既定では、 **fenv_access**は**オフ**します。 コンパイラが想定する場合は、コードはアクセスしないか、または浮動小数点の環境を操作し、さまざまな浮動小数点コードの最適化を実行できます。 設定**fenv_access**に**で**コードが例外状態フラグをテストする、またはコントロール モード フラグを設定するのには、浮動小数点環境にアクセスすることをコンパイラに通知します。 コンパイラは、コードでは、浮動小数点環境を一貫してアクセスできるように、これらの最適化を無効にします。 
 
-浮動小数点の動作の詳細については、次を参照してください。 [/fp (浮動小数点の動作を指定)](../build/reference/fp-specify-floating-point-behavior.md)です。
+浮動小数点の動作の詳細については、次を参照してください。 [/fp (浮動小数点の動作の指定)](../build/reference/fp-specify-floating-point-behavior.md)します。
 
-対象には、最適化の種類**fenv_access**は。
+適用される最適化の種類**fenv_access**は。
 
 - グローバルの共通部分式の削除
 
@@ -55,7 +54,7 @@ ms.locfileid: "36963324"
 
 ## <a name="examples"></a>使用例
 
-この例では設定**fenv_access**に**で**24 ビットの精度の浮動小数点制御レジスタを設定します。
+この例では設定**fenv_access**に**で**24 ビット精度浮動小数点のコントロールに登録を設定します。
 
 ```cpp
 // pragma_directive_fenv_access_x86.cpp
@@ -85,7 +84,7 @@ int main() {
 out=9.999999776482582e-003
 ```
 
-コメント アウトする場合`#pragma fenv_access (on)`前のサンプルから、コンパイラがコンパイル時の評価は、制御モードを使用しないため、出力が異なることに注意してください。
+コメント アウトする場合`#pragma fenv_access (on)`前のサンプルでは、コンパイラがコンパイル時の評価は、コントロールのモードを使用しないので、出力が異なることに注意してください。
 
 ```cpp
 // pragma_directive_fenv_access_2.cpp

@@ -1,5 +1,5 @@
 ---
-title: _ _outbytestring |Microsoft ドキュメント
+title: _ _outbytestring |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b61fcd7875fd98e73c2d4cbd6502a98624daed5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 55dc6492faea101df40c2901ced24321822f36e8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334624"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541110"
 ---
 # <a name="outbytestring"></a>__outbytestring
 **Microsoft 固有の仕様**  
   
- 生成されます、`rep outsb`が送信する最初の命令`Count`データのバイトを指す`Buffer`で指定されたポートに`Port`です。  
+ 生成、`rep outsb`命令で、1 つ目の送信`Count`によって示されるデータのバイト`Buffer`で指定されたポートに`Port`します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,20 +45,20 @@ void __outbytestring(
  データを送信するポート。  
   
  [入力] `Buffer`  
- 指定されたポートが送信するデータ。  
+ 指定したポートを送信するデータ。  
   
  [入力] `Count`  
- 送信されるデータのバイト数。  
+ 送信するデータのバイト数。  
   
 ## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__outbytestring`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outbytestring`|x86、x64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このルーチンは、組み込みとしてのみ使用できます。  
   
 **Microsoft 固有の仕様はここまで**  

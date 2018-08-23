@@ -1,5 +1,5 @@
 ---
-title: '非 MFC Dll: 概要 |Microsoft ドキュメント'
+title: '非 MFC Dll: 概要 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c61ad8e6d1107dfdacc91c32d48ca1e3624a0211
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 037f6d7bc80956536a7098ee67275425c41a2f68
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368643"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613220"
 ---
 # <a name="non-mfc-dlls-overview"></a>非 MFC DLL: 概要
-非 MFC DLL が内部的には、MFC を使わない DLL と、MFC または非 MFC の実行可能ファイルによって、DLL からエクスポートされた関数を呼び出すことができます。 関数から、非 MFC DLL standard C インターフェイスを使用して通常エクスポートされます。  
+非 MFC DLL が内部的には、MFC を使わない DLL と、MFC または非 MFC の実行可能ファイル、DLL からエクスポートされた関数を呼び出すことができます。 関数から、非 MFC DLL 標準の C インターフェイスを使用して、通常はエクスポートされます。  
   
- 非 MFC Dll に関する詳細については、次を参照してください。[ダイナミック リンク ライブラリ](http://msdn.microsoft.com/library/windows/desktop/ms682589)で、[!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]です。  
+ 非 MFC Dll の詳細については、次を参照してください。[ダイナミック リンク ライブラリ](http://msdn.microsoft.com/library/windows/desktop/ms682589)Windows SDK に含まれています。  
   
 ## <a name="what-do-you-want-to-do"></a>実行する操作  
   
@@ -39,9 +39,9 @@ ms.locfileid: "32368643"
   
 ## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください  
   
--   [MFC と静的にリンクされている標準の MFC Dll](../build/regular-dlls-statically-linked-to-mfc.md)  
+-   [MFC と静的にリンクされるレギュラー MFC の Dll](../build/regular-dlls-statically-linked-to-mfc.md)  
   
--   [MFC と動的にリンクされている標準の MFC Dll](../build/regular-dlls-dynamically-linked-to-mfc.md)  
+-   [MFC と動的にリンクされるレギュラー MFC の Dll](../build/regular-dlls-dynamically-linked-to-mfc.md)  
   
 -   [MFC 拡張 DLL: 概要](../build/extension-dlls-overview.md)  
   

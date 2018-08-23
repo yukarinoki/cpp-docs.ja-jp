@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2214067aae84d1c6aae0a93cf008463829fafda4
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 4089b786363f6b1bcbb50d08e16821efc186539a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886051"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609500"
 ---
 # <a name="cstringt-class"></a>CStringT クラス
 このクラスを表す、`CStringT`オブジェクト。  
@@ -277,7 +277,7 @@ public CSimpleStringT<BaseType,
   
  `CStringT`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |Header|を使用します。|  
 |------------|-------------|  
@@ -298,9 +298,9 @@ BSTR AllocSysString() const;
  MFC プログラムで、 [CMemoryException クラス](../../mfc/reference/cmemoryexception-class.md)が不十分なメモリが存在する場合にスローされます。 ATL のプログラムで、 [CAtlException](../../atl/reference/catlexception-class.md)がスローされます。 この関数は通常、Automation で文字列を返すに使用します。  
   
 
- 一般的には、この文字列は、COM 関数に渡される場合は、[in] としてパラメーターで文字列を解放する呼び出し元が必要です。 これを使用して行うことができます[SysFreeString](https://msdn.microsoft.com/library/windows/desktop/ms221481.aspx)」の説明に従って、Windows SDK。 詳細については、次を参照してください。[割り当てと BSTR のメモリの解放](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)します。  
+ 一般的には、この文字列は、COM 関数に渡される場合は、[in] としてパラメーターで文字列を解放する呼び出し元が必要です。 これを使用して行うことができます[SysFreeString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysfreestring)」の説明に従って、Windows SDK。 詳細については、次を参照してください。[割り当てと BSTR のメモリの解放](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)します。  
   
- Windows での OLE 割り当て関数の詳細については、次を参照してください。 [SysAllocString](https://msdn.microsoft.com/library/windows/desktop/ms221458.aspx) Windows SDK に含まれています。  
+ Windows での OLE 割り当て関数の詳細については、次を参照してください。 [SysAllocString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysallocstring) Windows SDK に含まれています。  
 
   
 ### <a name="example"></a>例  
@@ -552,7 +552,7 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 - `CStringT`( `const unsigned char*` `psz` ): 作成することができます、`CStringT`へのポインターから**unsigned char**します。  
   
 > [!NOTE]
->  間で文字列の暗黙的な変換をオフに _CSTRING_DISABLE_NARROW_WIDE_CONVERSION マクロを定義して[!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)]と[!INCLUDE[TLA#tla_unicode](../../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)]文字列。 マクロは、変換をサポートするコンス トラクターをコンパイルから除外します。  
+>  ANSI および Unicode 文字列の間で文字列の暗黙的な変換をオフに _CSTRING_DISABLE_NARROW_WIDE_CONVERSION マクロを定義します。 マクロは、変換をサポートするコンス トラクターをコンパイルから除外します。  
   
  なお、 *strSrc*パラメーターには、いずれかを指定できます、`CStringT`または`CThisSimpleString`オブジェクト。 `CStringT`、その既定のインスタンス化のいずれかを使用して、(`CString`、 `CStringA`、または`CStringW`) は`CThisSimpleString`を使用して、**この**ポインター。 `CThisSimpleString` インスタンスが宣言されて、 [CSimpleStringT クラス](../../atl-mfc-shared/reference/csimplestringt-class.md)より小さい組み込み機能を備えた小さい文字列クラスは、`CStringT`クラス。  
   

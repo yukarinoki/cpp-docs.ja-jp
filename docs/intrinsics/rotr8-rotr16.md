@@ -1,5 +1,5 @@
 ---
-title: _rotr8、_rotr16 |Microsoft ドキュメント
+title: _rotr8、_rotr16 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca8c9bddac3f9e1a34d9b1a430cb97da86c40865
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a667f857621c01900165f6e93de7f7bddc837915
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337224"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538522"
 ---
 # <a name="rotr8-rotr16"></a>_rotr8、_rotr16
 **Microsoft 固有の仕様**  
@@ -57,12 +57,12 @@ unsigned short _rotr16(
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`_rotr8`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`_rotr16`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_rotr8`|x86、ARM、x64|  
+|`_rotr16`|x86、ARM、x64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  右シフト演算とは異なり、右回転を実行すると、下端からあふれた下位ビットは最上位ビット位置に移動します。  
   
 ## <a name="example"></a>例  

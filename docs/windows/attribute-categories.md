@@ -1,5 +1,5 @@
 ---
-title: 属性のカテゴリ |Microsoft ドキュメント
+title: 属性のカテゴリ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,28 +15,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3a97cc367c1e4bda6218e30c57b36426395c8331
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a53577446db1001b354f5765c9c7b6c5e0e1e06b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859382"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604196"
 ---
 # <a name="attribute-categories"></a>属性のカテゴリ
-属性のリファレンスでは、さまざまな種類の Visual C で使用できる属性について説明します。  
+属性のリファレンスでは、Visual C で使用できる属性のさまざまな種類について説明します。
   
-## <a name="related-sections"></a>関連項目  
+## <a name="related-sections"></a>関連項目
  [COM 属性](../windows/com-attributes.md)  
- COM 開発の数多くの領域をサポートするためにコードを挿入します。  
+ COM 開発のさまざまな領域をサポートするためにコードを挿入します。
   
  [IDL 属性](../windows/idl-attributes.md)  
- 作成するか、ウィザードしたりせずに構造とそのファイルの構文に精通してソース コード ファイル内から関連付けられている .idl ファイルを変更するコードを挿入します。  
+ 作成するかと、構造体とそのファイルの構文について理解することがなくウィザードを使用せず、ソース コード ファイル内から関連付けられている .idl ファイルを変更するコードを挿入します。
   
  [OLE DB コンシューマー属性](../windows/ole-db-consumer-attributes.md)  
- 基づいたコードを挿入、 [OLE DB コンシューマー テンプレート](../data/oledb/ole-db-consumer-templates-reference.md)コンシューマーを作成する作業 OLE DB テーブルを開くなどのタスクを実行するコマンドを実行し、データにアクセスします。  
+ 基づくコードを挿入、 [OLE DB コンシューマー テンプレート](../data/oledb/ole-db-consumer-templates-reference.md)コンシューマーを作成する作業 OLE DB テーブルを開くなどのタスクを実行するコマンドを実行して、データにアクセスします。
   
  [コンパイラ属性](../windows/compiler-attributes.md)  
- さまざまな一般的なプログラミング タスクを実行するコードを挿入します。  
+ さまざまな一般的なプログラミング タスクを実行するコードを挿入します。
   
  [属性付きプログラミング](../windows/attributed-programming-concepts.md)  
- 属性付きプログラミング概念に関するトピックへのリンクを示します。
+ 属性付きプログラミングを説明する概念説明のトピックへのリンクを提供します。

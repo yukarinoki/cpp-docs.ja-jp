@@ -1,5 +1,5 @@
 ---
-title: __fastfail |Microsoft ドキュメント
+title: _ _fastfail |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b59aeb1bd2e7986e173608689b0b1c37a0ef247e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a0346be9f7a48defc702c9f2ef6aa187c37f187
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334367"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540444"
 ---
 # <a name="fastfail"></a>__fastfail
 **Microsoft 固有の仕様**  
@@ -37,15 +37,15 @@ void __fastfail(unsigned int code);
 ## <a name="return-value"></a>戻り値  
  `__fastfail` 組み込みには戻り値はありません。  
   
-## <a name="remarks"></a>コメント  
- `__fastfail`組み込みのメカニズムを提供する、*失敗を高速*要求: 破損した可能性のあるプロセスを即時プロセス終了を要求する方法です。 重大な障害によってプログラムの状態が破損し、回復できずにスタックしている場合は、通常の例外処理機能では処理できません。 `__fastfail` を使用して、最小限のオーバーヘッドでプロセスを終了します。  
+## <a name="remarks"></a>Remarks  
+ `__fastfail`組み込みメカニズムを提供します、*失敗を高速*要求: 破損した可能性のあるプロセスが即時プロセス終了を要求できるようにします。 重大な障害によってプログラムの状態が破損し、回復できずにスタックしている場合は、通常の例外処理機能では処理できません。 `__fastfail` を使用して、最小限のオーバーヘッドでプロセスを終了します。  
   
  内部的には、`__fastfail` はアーキテクチャ固有のいくつかのメカニズムを使用して実装されています。  
   
 |アーキテクチャ|命令|コード引数の場所|  
 |------------------|-----------------|-------------------------------|  
 |x86|int 0x29|ecx|  
-|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|int 0x29|rcx|  
+|X64|int 0x29|rcx|  
 |ARM|Opcode 0xDEFB|r0|  
   
  ファスト フェール要求は単体で使用でき、通常は、実行に必要な命令は 2 つのみとなります。 ファスト フェール要求が実行されると、カーネルが適切なアクションを実行します。 ユーザー モードのコードでは、ファスト フェール イベントが発生したときの命令ポインター自体をまたぐメモリの依存関係はありません。 このため、深刻なメモリの破損がある場合でも、その信頼性が最大化されます。  
@@ -62,7 +62,7 @@ void __fastfail(unsigned int code);
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__fastfail`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]、ARM|  
+|`__fastfail`|x86、x64、ARM|  
   
  **ヘッダー ファイル** \<intrin.h >  
   

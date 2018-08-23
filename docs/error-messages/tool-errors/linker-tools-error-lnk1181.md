@@ -1,7 +1,7 @@
 ---
-title: リンカ ツール エラー LNK1181 |Microsoft ドキュメント
+title: リンカ ツール エラー LNK1181 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/22/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,29 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 617678e5453acdafaf72875857b0e0f9b84a110a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3edd2f39848ea1db054dd4ceee8abf290dde7a74
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301360"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597663"
 ---
 # <a name="linker-tools-error-lnk1181"></a>リンカ ツール エラー LNK1181
 入力ファイル 'filename' を開くことができません。  
   
- リンカーが見つかりませんでした`filename`が存在しないか、パスが見つかりませんでした。  
+ リンカーが見つかりませんでした。`filename`が存在しないか、パスが見つかりませんでした。  
   
- LNK1181 含めるエラーの一般的な原因がいくつか:  
+ よくある原因のエラー LNK1181 が含まれます。  
   
--   `filename` リンカーのコマンドラインは、ファイルに追加の依存関係が存在しないのでが参照されます。  
+-   `filename` リンカーのコマンドラインは、ファイルの追加の依存関係が存在しないために参照されます。  
   
--   A **/LIBPATH**ステートメントを含むディレクトリを指定する`filename`がありません。  
+-   A **/LIBPATH**格納されているディレクトリを指定するステートメント`filename`がありません。  
   
- 上記の問題を解決するのには、リンカーのコマンドラインで参照されているすべてのファイルが、システムに存在を確認します。  あることを確認、 **/LIBPATH**リンカーの依存ファイルを含むディレクトリごとにステートメントです。  
+ 上記の問題を解決するには、リンカーのコマンドラインで参照されているすべてのファイルは、システムに存在を確認します。  あることを確認、 **/LIBPATH**リンカーの依存ファイルを含む各ディレクトリに対してステートメントです。 
+
+ 詳細については、次を参照してください。[リンカー入力としての .lib ファイル](../../build/reference/dot-lib-files-as-linker-input.md)します。
   
- LNK1181 の他の考えられる原因は、長いファイル名に埋め込まれたスペースが引用符で囲まれていないことです。  その場合は、リンカーだけ最初のスペースでは、最大のファイル名が認識され、ファイル拡張子を想定します .obj。このような状況を解決するには長いファイル名を囲む (パスとファイル名) 引用符で囲んで指定します。  
+ LNK1181 のもう 1 つの考えられる原因は、長いファイル名に埋め込まれたスペースが引用符で囲まれていないことです。  その場合は、リンカーだけ最初のスペースでは、最大のファイル名が認識され、ファイル拡張子を想定します .obj。このような状況を解決するには長いファイル名を囲む (パスとファイル名) 引用符で囲んで指定します。  
+
+ コンパイルすると、 [/P (ファイルへのプリプロセス)](../../build/reference/p-preprocess-to-a-file.md)オプションにより、LNK1181 のため、そのオプションの .obj ファイルの作成を抑制します。
   
- 詳細については、次を参照してください。[リンカー入力としての .lib ファイル](../../build/reference/dot-lib-files-as-linker-input.md)です。  
+  
   
 ## <a name="see-also"></a>関連項目  
  [/LIBPATH (追加ライブラリのパス)](../../build/reference/libpath-additional-libpath.md)

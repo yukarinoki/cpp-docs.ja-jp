@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17ec3560e7faf8c49f410437c79609bfb871a9c9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 58772f3690a68dc3a0d22c2db863fc7ad4904a1c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849950"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538530"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>CMFCVisualManagerWindows7 クラス
-`CMFCVisualManagerWindows7`アプリケーションの外観を与えます、[!INCLUDE[win7](../../build/includes/win7_md.md)]アプリケーション。  
+`CMFCVisualManagerWindows7` Windows 7 アプリケーションの外観をアプリケーションに提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -103,7 +103,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |`CMFCVisualManagerWindows7::SetStyle`|色スキームの設定、 `CMFCVisualManagerWindows7` GUI です。|  
   
 ## <a name="remarks"></a>Remarks  
- 使用して、`CMFCVisualManagerWindows7`クラスは、既定値を模倣するために、アプリケーションの外観を変更する[!INCLUDE[win7](../../build/includes/win7_md.md)]アプリケーション。 このクラスが、アプリケーションが Windows のバージョンで実行されている場合は無効になるよりも前[!INCLUDE[win7](../../build/includes/win7_md.md)]します。 定義されている既定のビジュアル マネージャーを使用するアプリケーション シナリオでは、 [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)します。  
+ 使用して、`CMFCVisualManagerWindows7`クラスの既定の Windows 7 アプリケーションを模倣するために、アプリケーションの外観を変更します。 このクラスは、アプリケーションが Windows 7 より前のバージョンの Windows で実行されている場合に有効なできない可能性があります。 定義されている既定のビジュアル マネージャーを使用するアプリケーション シナリオでは、 [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)します。  
   
  CMFCVisualManagerWindows7 両方からの複数のメソッドの継承、 [CMFCVisualManagerWindows クラス](../../mfc/reference/cmfcvisualmanagerwindows-class.md)と`CMFCVisualManager`クラス。 前のセクションで表示されているメソッドは、メソッドを初めて使用する、`CMFCVisualManagerWindows7`クラス。  
   
@@ -120,7 +120,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
   
  `CMFCVisualManagerWindows7`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxvisualmanagerwindows7.h  
   
 ##  <a name="_dtorcmfcvisualmanagerwindows7"></a>  CMFCVisualManagerWindows7:: ~ CMFCVisualManagerWindows7  

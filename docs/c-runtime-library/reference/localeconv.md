@@ -18,6 +18,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-locale-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - localeconv
@@ -32,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe3cc75430dfa9bb2f4c5513f4b2ba5a2fd1c4c9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7f4e8a20ef31f4379e7ddf6b7425fd7ecc70294a
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405251"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42575502"
 ---
 # <a name="localeconv"></a>localeconv
 
@@ -51,22 +52,22 @@ struct lconv *localeconv( void );
 
 ## <a name="return-value"></a>戻り値
 
-**localeconv** 、入力の型のオブジェクトへのポインターを返します[構造体 lconv](../../c-runtime-library/standard-types.md)です。 オブジェクトに含まれる値は、スレッド ローカル ストレージのロケール設定からコピーされ、後続の呼び出しによって上書きされること**localeconv**です。 このオブジェクトの値に加えられた変更は、ロケールの設定を変更しないでください。 呼び出す[setlocale、_wsetlocale](setlocale-wsetlocale.md)で*カテゴリ*値**LC_ALL**、 **LC_MONETARY**、または**LC_NUMERIC**構造体の内容を上書きします。
+**localeconv**型の入力オブジェクトにポインターを返します[struct lconv](../../c-runtime-library/standard-types.md)します。 オブジェクトに含まれる値がスレッド ローカル記憶域のロケール設定からコピーされ、以降の呼び出しによって上書きできる**localeconv**します。 このオブジェクトの値に加えられた変更は、ロケールの設定を変更しないでください。 呼び出す[setlocale](setlocale-wsetlocale.md)で*カテゴリ*値**LC_ALL**、 **LC_MONETARY**、または**LC_NUMERIC**構造体の内容を上書きします。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 **Localeconv**関数は、現在のロケールの数値の書式設定に関する詳細情報を取得します。 この情報は、**lconv** 型の構造体で格納されます。 **lconv** 構造体は、LOCALE.H で定義され、次のメンバーが含まれます。
 
 |フィールド|説明|
 |-|-|
-decimal_point、<br/>_W_decimal_point|小数点非金銭的数量の文字へのポインター。
-thousands_sep、<br/>_W_thousands_sep|非金銭的数量の小数点の左側にある数字のグループを示す文字へのポインターに分離します。
-グループ化|ポインター、 **char**-サイズが非金銭的数の数字の各グループのサイズを表す整数です。
-端数、<br/>_W_int_curr_symbol|現在のロケールの国際通貨記号を指すポインター。 最初の 3 文字は、*ISO 4217 Codes for the Representation of Currency and Funds* 規格で定義されている英字の国際通貨記号を指定します。 4 文字目 (null 文字の直前) は、国際通貨記号と通貨の数量を区切ります。
-通貨、<br/>_W_currency_symbol|現在のロケールの現地の通貨記号を指すポインター。
-mon_decimal_point、<br/>_W_mon_decimal_point|小数点文字の通貨値へのポインター。
-mon_thousands_sep、<br/>_W_mon_thousands_sep|通貨値で小数点の左側にある数字のグループの区切り文字へのポインター。
-mon_grouping|ポインター、 **char**-サイズが通貨書式の数字の各グループのサイズを表す整数です。
+decimal_point、<br/>_W_decimal_point|小数点の通貨でない数量の文字へのポインター。
+thousands_sep、<br/>_W_thousands_sep|通貨でない数量の小数点の左側にある数字のグループを示す文字へのポインターに分離します。
+グループ化|ポインターを**char**-サイズの通貨でない数量の数字の各グループのサイズを含む整数です。
+int_curr_symbol、<br/>_W_int_curr_symbol|現在のロケールの国際通貨記号へのポインター。 最初の 3 文字は、*ISO 4217 Codes for the Representation of Currency and Funds* 規格で定義されている英字の国際通貨記号を指定します。 4 文字目 (null 文字の直前) は、国際通貨記号と通貨の数量を区切ります。
+通貨、<br/>_W_currency_symbol|現在のロケールの国内通貨記号へのポインター。
+mon_decimal_point、<br/>_W_mon_decimal_point|小数点の通貨数量の文字へのポインター。
+mon_thousands_sep、<br/>_W_mon_thousands_sep|通貨数量の小数点の左側にある数字のグループを区切る文字へのポインター。
+mon_grouping|ポインターを**char**-通貨数量の数字の各グループのサイズを格納する整数のサイズします。
 positive_sign、<br/>_W_positive_sign|負でない通貨数量の符号を示す文字列。
 negative_sign、<br/>_W_negative_sign|負の通貨数量の符号を示す文字列。
 する時|国際方式で書式化された通貨数量の小数点より右側の桁数。
@@ -78,17 +79,17 @@ n_sep_by_space|書式化された負の通貨数量の値と通貨記号をス�
 p_sign_posn|書式化された負でない通貨数量での正符号の位置。
 n_sign_posn|書式化された負の通貨数量での正符号の位置。
 
-指定したメンバーの場合を除き、 **lconv**構造を持つ`char *`と`wchar_t *`バージョンは、文字列へのポインター。 これらに相当する **""** (または**L""** の**wchar_t \*** ) 長さが 0 のいずれかまたは現在のロケールでサポートされていません。 なお**decimal_point**と **_W_decimal_point**は常にサポートされていると、長さが 0 以外のです。
+指定したメンバーのない限り、 **lconv**構造を持つ`char *`と`wchar_t *`バージョンは、文字列へのポインター。 これらに相当する **""** (または**L""** の**wchar_t \*** ) 長さが 0 のいずれかまたは現在のロケールでサポートされていません。 なお**decimal_point**と **_W_decimal_point**は常にサポートされており、長さが 0 以外。
 
 **Char**構造体のメンバーは、文字ではなく、小さい負でない数値。 そのいずれかが **CHAR_MAX** に相当する場合は、現在のロケールではサポートされていません。
 
-値**をグループ化**と**mon_grouping**は次の規則に従って解釈されます。
+値**グループ化**と**mon_grouping**は、次の規則に従って解釈されます。
 
-- **CHAR_MAX** -、さらにグループ化を実行できません。
+- **CHAR_MAX** -以上グループ化は行いません。
 
-- 0 - は、残りの各桁の直前の要素を使用します。
+- 0 - は、残りの桁ごとの直前の要素を使用します。
 
-- *n* -現在のグループを構成する数字の数。 次の要素が調べられて、現在のグループの前にある次のグループのサイズが決定されます。
+- *n* -現在のグループを構成する桁数。 次の要素が調べられて、現在のグループの前にある次のグループのサイズが決定されます。
 
 **int_curr_symbol** の値は、次の規則に従って解釈されます。
 
@@ -98,31 +99,31 @@ n_sign_posn|書式化された負の通貨数量での正符号の位置。
 
 **p_cs_precedes** と **n_cs_precedes** の値は、次の規則に従って解釈されます (かっこ内は **n_cs_precedes** 規則です)。
 
-- 0 - 通貨記号には、負でない (負) 通貨値の値が次に示します。
+- 0 - 通貨記号は、負でない (負の) 通貨値の値に従います。
 
-- 1-通貨記号では、負でない (負) 通貨値の前に付きます。
+- 1-通貨記号は、負でない (負の) 通貨値の前にあります。
 
 **p_sep_by_space** と **n_sep_by_space** の値は、次の規則に従って解釈されます (かっこ内は **n_sep_by_space** 規則です)。
 
-- 0 - 負でない (負) 通貨値をスペースで値から通貨記号が区切られます。
+- 0 - 負でない (負の) 通貨値をスペースでの値から通貨記号が区切られます。
 
-- 1 - 通貨記号と負でない (負) 通貨値の領域の分離はありません。
+- 1 - 通貨記号と負でない (負の) 通貨値の間をスペースで区切りませんはありません。
 
 **p_sign_posn** と **n_sign_posn** の値は、次の規則に従って解釈されます。
 
-- 0 - 数値と通貨記号をかっこで囲みます。
+- 0 - 数量と通貨記号をかっこで囲みます。
 
-- 1-記号の文字列には、数値と通貨記号が前に付きます。
+- 1-符号の文字列には、数量と通貨記号が先頭に付きます。
 
-- 2-記号の文字列には、数値と通貨記号が次に示します。
+- 2-符号の文字列では、数量と通貨記号に従います。
 
-- 3-記号の文字列には、通貨記号が前に記述します。
+- 3 - 通貨記号の直前に符号の文字列。
 
 - 4-すぐに次のように通貨記号の記号文字列します。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**localeconv**|\<locale.h>|
 

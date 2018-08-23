@@ -17,32 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 125ffe998e7c3f225f72e3fb47df4ef3525c37f9
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: f8bb81ca1591fc398b1d0814fca918309169e82c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649049"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600985"
 ---
 # <a name="weakrefoperatoramp-operator"></a>Weakref::operator&amp;演算子
-返します、`ComPtrRef`現在を表すオブジェクトを**WeakRef**オブジェクト。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
+
+返します、`ComPtrRef`現在を表すオブジェクトを**WeakRef**オブジェクト。
+
+## <a name="syntax"></a>構文
+
+```cpp
 Details::ComPtrRef<WeakRef> operator&() throw()  
-```  
-  
-## <a name="return-value"></a>戻り値  
- A`ComPtrRef`現在を表すオブジェクトを**WeakRef**オブジェクト。  
-  
-## <a name="remarks"></a>Remarks  
- これは、内部ヘルパー演算子が、コードで使用されるものではありません。  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** client.h  
-  
- **名前空間:** Microsoft::WRL  
-  
-## <a name="see-also"></a>関連項目  
- [WeakRef クラス](../windows/weakref-class.md)
+```
+
+## <a name="return-value"></a>戻り値
+
+A`ComPtrRef`現在を表すオブジェクトを**WeakRef**オブジェクト。
+
+## <a name="remarks"></a>Remarks
+
+これは、内部ヘルパー演算子が、コードで使用されるものではありません。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** client.h
+
+**名前空間:** Microsoft::WRL
+
+## <a name="see-also"></a>関連項目
+
+[WeakRef クラス](../windows/weakref-class.md)

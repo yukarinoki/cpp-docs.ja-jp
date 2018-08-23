@@ -28,7 +28,7 @@ ms.locfileid: "33254433"
   
  ユーザー定義のコレクション クラスには、 `MoveNext` と `Current`の定義を含める必要があります。  
   
- 詳細については、「 [How to: Iterate Over a User-Defined Collection with for each](../../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md) 」を参照してください。  
+ 詳細については、「 [方法: for each を使用してユーサー定義のコレクションを反復処理する](../../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md) 」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では C3287 が生成されます。  

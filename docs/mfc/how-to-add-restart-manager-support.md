@@ -1,5 +1,5 @@
 ---
-title: '方法: 再起動マネージャーのサポートを追加 |Microsoft ドキュメント'
+title: '方法: 再起動マネージャーのサポートの追加 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f11cc3258d577969807dd63c24c00da39652fff
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 8b30491b2cb46ab0e8b25edc2d39e6616817c9b4
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931274"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42543159"
 ---
 # <a name="how-to-add-restart-manager-support"></a>方法: 再起動マネージャーのサポートを追加する
 
@@ -31,11 +31,11 @@ ms.locfileid: "36931274"
 > [!NOTE]
 >  データの保存とアプリケーションの再起動を行う再起動マネージャーの既定の動作はオーバーライドできます。  
   
- 既定では、プロジェクト ウィザードを使用して作成された MFC アプリケーション[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]アプリケーションは、Windows Vista またはそれ以降のオペレーティング システムをあるコンピューター上で実行されている場合は、再起動マネージャーをサポートします。 アプリケーションが再起動マネージャーをサポートしないようにする場合は、新しいプロジェクト ウィザードで再起動マネージャーを無効にすることができます。  
+ 既定では、Visual Studio でプロジェクト ウィザードを使用して作成された MFC アプリケーションは、Windows Vista またはそれ以降のオペレーティング システムをあるコンピューター上で、アプリケーションの実行時に再起動マネージャーをサポートします。 アプリケーションが再起動マネージャーをサポートしないようにする場合は、新しいプロジェクト ウィザードで再起動マネージャーを無効にすることができます。  
   
 ### <a name="to-add-support-for-the-restart-manager-to-an-existing-application"></a>既存のアプリケーションが再起動マネージャーをサポートするように設定するには  
   
-1.  [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]で既存の MFC アプリケーションを開きます。  
+1.  Visual Studio では、既存の MFC アプリケーションを開きます。  
   
 2.  メイン アプリケーションのソース ファイルを開きます。 既定では、これはアプリケーションと同じ名前の .cpp ファイルです。 たとえば、MyProject のメイン アプリケーションのソース ファイルは、MyProject.cpp です。  
   

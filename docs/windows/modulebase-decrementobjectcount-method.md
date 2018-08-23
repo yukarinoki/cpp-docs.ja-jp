@@ -17,33 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 65dc4dbca2e152a62bb79ed104f9533d2fa20569
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: f45f52f2e979b76128be02dc7c3e931bd3b9d2c5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019983"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594589"
 ---
 # <a name="modulebasedecrementobjectcount-method"></a>ModuleBase::DecrementObjectCount メソッド
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-virtual long DecrementObjectCount() = 0;  
-```  
-  
-## <a name="return-value"></a>戻り値  
- デクリメント操作の前にカウントします。  
-  
-## <a name="remarks"></a>Remarks  
- 実装された場合、デクリメント オブジェクトの数によって追跡モジュール。  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** implements.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>関連項目  
- [ModuleBase クラス](../windows/modulebase-class.md)   
- [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)
+
+WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+
+## <a name="syntax"></a>構文
+
+```cpp
+virtual long DecrementObjectCount() = 0;
+```
+
+## <a name="return-value"></a>戻り値
+
+デクリメント操作の前にカウントします。
+
+## <a name="remarks"></a>Remarks
+
+実装された場合、デクリメント オブジェクトの数によって追跡モジュール。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** implements.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>関連項目
+
+[ModuleBase クラス](../windows/modulebase-class.md)  
+[Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

@@ -198,17 +198,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69b27a3fd2fdce9836512e19c566b02c40afb78a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 73f4f14f01cd9d881c0e9da0db8aa23d7946e719
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853518"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541132"
 ---
 # <a name="cmfcribbonbar-class"></a>CMFCRibbonBar クラス
 `CMFCRibbonBar` クラスは、Office 2007 で使用されているものに似たリボン バーを実装します。  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。  
    
 ## <a name="syntax"></a>構文  
   
@@ -342,7 +342,7 @@ class CMFCRibbonBar : public CPane
   
  [CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー :** afxribbonbar.h  
   
 ##  <a name="activatecontextcategory"></a>  CMFCRibbonBar::ActivateContextCategory  

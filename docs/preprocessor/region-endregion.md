@@ -1,5 +1,5 @@
 ---
-title: region、endregion |Microsoft ドキュメント
+title: リージョン、endregion |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5590d2b251d86a9d20b62bfdb3d5bf929e3d92d4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9e6ec22be873dcec06f224913eb905a2779e4efd
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839448"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540659"
 ---
 # <a name="region-endregion"></a>region、endregion
-**#pragma region** 、コードのブロックを展開したり折りたたんだりを使用する場合を指定することができます、[アウトライン機能](/visualstudio/ide/outlining)の Visual Studio コード エディター。  
+`#pragma region` 展開したり折りたたむを使用する場合のコードのブロックを指定することができます、[アウトライン機能](/visualstudio/ide/outlining)の Visual Studio コード エディター。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,21 +39,22 @@ ms.locfileid: "33839448"
 #pragma endregion comment  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `comment`(省略可能)  
- コード エディターに表示されるコメント。  
+### <a name="parameters"></a>パラメーター  
+*コメント*(省略可能)  
+コード エディターに表示されるコメント。  
   
- *名前*(省略可能)  
- 領域の名前。  この名前はコード エディターに表示されます。  
+*name* (省略可能)  
+領域の名前。  この名前はコード エディターに表示されます。  
   
-## <a name="remarks"></a>コメント  
- **#pragma endregion**の末尾を示す、 **#pragma region**ブロックします。  
+## <a name="remarks"></a>Remarks  
+ 
+`#pragma endregion` 末尾を`#pragma region`ブロックします。  
   
- A`#region`でブロックを終了する必要があります **#pragma endregion**です。  
+A`#region`でブロックを終了する必要があります`#pragma endregion`します。  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp  
 // pragma_directives_region.cpp  
 #pragma region Region_1  
 void Test() {}  
@@ -65,4 +66,5 @@ int main() {}
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

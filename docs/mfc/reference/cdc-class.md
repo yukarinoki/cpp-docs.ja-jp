@@ -412,12 +412,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 317e953d4c1a4e2637c71891fabde542ca751c8e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 791b27e9ff5648a2616c92852a1d4f824d43127b
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339710"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42538964"
 ---
 # <a name="cdc-class"></a>CDC クラス
 デバイス コンテキスト オブジェクトのクラスを定義します。  
@@ -2537,16 +2537,16 @@ DWORD GetCharacterPlacement(
  処理する文字列へのポインター。  
   
  *nCount*  
- 文字列の長さを指定します。 ANSI バージョンの場合は BYTE カウント、Unicode 関数の場合は WORD カウントです。 詳細については、次を参照してください。 [GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx)します。  
+ 文字列の長さを指定します。 ANSI バージョンの場合は BYTE カウント、Unicode 関数の場合は WORD カウントです。 詳細については、次を参照してください。 [GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa)します。  
   
  *nMaxExtent*  
  処理する文字列の最大エクステントを論理単位で指定します。 このエクステントを超えて処理された文字列は無視されます。 並べ替えやグリフの配列に必要な演算は、範囲に含まれている文字だけに適用されます。 GCP_MAXEXTENT 値が指定されている場合にのみ、このパラメーターが使用される、 *dwFlags*パラメーター。 入力文字列を処理するときは、エクステントの合計が最大値を超えない限り、各文字と文字のエクステントが出力、エクステント、および他の配列に追加されます。 制限に達すると、処理は停止します。  
   
  lpResults  
- ポインターを[GCP_Results](http://msdn.microsoft.com/library/windows/desktop/dd144842\(v=vs.85\).aspx)関数の結果を受け取る構造体。  
+ ポインターを[GCP_Results](/windows/desktop/api/wingdi/ns-wingdi-taggcp_resultsa)関数の結果を受け取る構造体。  
   
  *dwFlags*  
- 必要な配列に挿入される文字列の処理方法を指定します。 このパラメーターは、いずれかを指定できますか記載以上の値、 *dwFlags*のセクション、 [GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx)トピック。  
+ 必要な配列に挿入される文字列の処理方法を指定します。 このパラメーターは、いずれかを指定できますか記載以上の値、 *dwFlags*のセクション、 [GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa)トピック。  
   
  *str*  
  ポインターを[CString](../../atl-mfc-shared/reference/cstringt-class.md)オブジェクトを処理します。  
@@ -2557,7 +2557,7 @@ DWORD GetCharacterPlacement(
  関数が失敗した場合は、0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、関数の機能をエミュレート[GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx)」の説明に従って、Windows SDK。  
+ このメンバー関数は、関数の機能をエミュレート[GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa)」の説明に従って、Windows SDK。  
   
 ##  <a name="getcharabcwidths"></a>  CDC::GetCharABCWidths  
  現在の TrueType フォントから指定した範囲内の連続する文字の幅を取得します。  

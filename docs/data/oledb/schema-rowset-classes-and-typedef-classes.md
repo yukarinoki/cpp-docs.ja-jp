@@ -1083,54 +1083,54 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 02d0787ebb40379ac438880ab7a23aa36a0b0f56
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 25a68bb459122ea83d9be2491cb5fadaaf8a00c0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338299"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571874"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>スキーマ行セット クラスと Typedef クラス
 スキーマが所有する、または特定のユーザーによって作成されたデータベース オブジェクトのコレクションとは。 カタログは、1 つまたは複数のスキーマを含めることができますが、INFORMATION_SCHEMA ビューとスキーマ情報のドメインが含まれるというスキーマを常に含める必要があります。 OLE DB でのスキーマ情報は、定義済みのスキーマ行セットの使用が取得され、型、テーブル、列、インデックス、ビュー、アサーションと制約、統計、文字セット、照合順序、およびドメインが含まれています。  
   
  スキーマ行セットは、定義済みの行セットのメタデータを表すです。 スキーマ行セットは、通常、データベース構造コンパイル時に不明動的プログラミングで使用されます。 これらのスキーマ行セットを使用すると、実行時に、データベースに関する情報を取得します。  
   
- スキーマ行セットのインスタンスを作成するのにには、typedef クラスを使用します。 対応する typedef とスキーマ行セット クラスは、以下に示します。 呼び出す必要があります[crestrictions::open](../../data/oledb/crestrictions-open.md)スキーマ行セットのインスタンスを作成した後。 このメソッドは、指定した制限に基づく結果セットを返します。 参照してください[IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx)については、各スキーマ行セットに関連する制限列にします。  
+ スキーマ行セットのインスタンスを作成するのにには、typedef クラスを使用します。 対応する typedef とスキーマ行セット クラスは、以下に示します。 呼び出す必要があります[crestrictions::open](../../data/oledb/crestrictions-open.md)スキーマ行セットのインスタンスを作成した後。 このメソッドは、指定した制限に基づく結果セットを返します。 参照してください[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\))については、各スキーマ行セットに関連する制限列にします。  
   
  次の表は、各 OLE DB スキーマ行セットと、対応する OLE DB テンプレート typedef クラスと情報クラス。  
   
 |OLE DB スキーマ行セット|Typedef クラス|情報クラス|  
 |--------------------------|-------------------|----------------|  
-|[ASSERTIONS](https://msdn.microsoft.com/library/ms719776.aspx)|[CAssertions](#assertion)|[CAssertionInfo](#assertion)|  
-|[CATALOGS](https://msdn.microsoft.com/library/ms721241.aspx)|[CCatalogs](#catalog)|[CCatalogInfo](#catalog)|  
-|[CHARACTER_SETS](https://msdn.microsoft.com/library/ms722638.aspx)|[CCharacterSets](#characterset)|[CCharacterSetInfo](#characterset)|  
-|[照合順序](https://msdn.microsoft.com/library/ms715783.aspx)|[CCollations](#collation)|[CCollationInfo](#collation)|  
-|[COLUMN_PRIVILEGES](https://msdn.microsoft.com/library/ms715800.aspx)|[CColumnPrivileges](#columnprivilege)|[CColumnPrivilegeInfo](#columnprivilege)|  
-|[列](https://msdn.microsoft.com/library/ms723052.aspx)|[CColumns](#columns)|[CColumnsInfo](#columns)|  
-|[CONSTRAINT_COLUMN_USAGE](https://msdn.microsoft.com/library/ms724522.aspx)|[CConstraintColumnUsage](#constraintcolumnusage)|[CConstraintColumnUsageInfo](#constraintcolumnusage)|  
-|[CONSTRAINT_TABLE_USAGE](https://msdn.microsoft.com/library/ms713710.aspx)|[CConstraintTableUsage](#constrainttableusage)|[CConstraintTableUsageInfo](#constrainttableusage)|  
-|[CHECK_CONSTRAINTS](https://msdn.microsoft.com/library/ms712845.aspx)|[CCheckConstraints](#checkconstraint)|[CCheckConstraintInfo](#checkconstraint)|  
-|[COLUMN_DOMAIN_USAGE](https://msdn.microsoft.com/library/ms711240.aspx)|[CColumnDomainUsage](#columndomainusage)|[CColumnDomainUsageInfo](#columndomainusage)|  
-|[FOREIGN_KEYS](https://msdn.microsoft.com/library/ms711276.aspx)|[CForeignKeys](#foreignkeys)|[CForeignKeysInfo](#foreignkeys)|  
-|[INDEXES](https://msdn.microsoft.com/library/ms709712.aspx)|[CIndexes](#index)|[CIndexInfo](#index)|  
-|[KEY_COLUMN_USAGE](https://msdn.microsoft.com/library/ms712990.aspx)|[CKeyColumn](#keycolumn)|[CKeyColumnInfo](#keycolumn)|  
-|[PRIMARY_KEYS](https://msdn.microsoft.com/library/ms714362.aspx)|[CPrimaryKeys](#primarykey)|[CPrimaryKeyInfo](#primarykey)|  
-|[プロシージャ](https://msdn.microsoft.com/library/ms724021.aspx)|[CProcedures](#procedure)|[CProcedureInfo](#procedure)|  
-|[PROCEDURE_COLUMNS](https://msdn.microsoft.com/library/ms723092.aspx)|[CProcedureColumns](#procedurecolumn)|[CProcedureColumnInfo](#procedurecolumn)|  
-|[PROCEDURE_PARAMETERS](https://msdn.microsoft.com/library/ms713623.aspx)|[CProcedureParameters](#procedureparam)|[CProcedureParameterInfo](#procedureparam)|  
-|[PROVIDER_TYPES](https://msdn.microsoft.com/library/ms709785.aspx)|[CProviderTypes](#provider)|[CProviderInfo](#provider)|  
-|[REFERENTIAL_CONSTRAINTS](https://msdn.microsoft.com/library/ms719737.aspx)|[CReferentialConstraints](#referentialconstraint)|[CReferentialConstraintInfo](#referentialconstraint)|  
-|[SCHEMATA](https://msdn.microsoft.com/library/ms716887.aspx)|[CSchemata](#schemata)|[CSchemataInfo](#schemata)|  
-|[SQL_LANGUAGES](https://msdn.microsoft.com/library/ms714374.aspx)|[CSQLLanguages](#sqllanguage)|[CSQLLanguageInfo](#sqllanguage)|  
-|[統計情報](https://msdn.microsoft.com/library/ms715957.aspx)|[CStatistics](#statistic)|[CStatisticInfo](#statistic)|  
-|[TABLE_CONSTRAINTS](https://msdn.microsoft.com/library/ms715921.aspx)|[CTableConstraints](#tableconstraint)|[CTableConstraintInfo](#tableconstraint)|  
-|[テーブル](https://msdn.microsoft.com/library/ms716980.aspx)|[CTables](#table)|[CTableInfo](#table)|  
-|[TABLE_PRIVILEGES](https://msdn.microsoft.com/library/ms725428.aspx)|[CTablePrivileges](#tableprivilege)|[CTablePrivilegeInfo](#tableprivilege)|  
-|[翻訳](https://msdn.microsoft.com/library/ms725365.aspx)|[CTranslations](#translation)|[CTranslationInfo](#translation)|  
-|[USAGE_PRIVILEGES](https://msdn.microsoft.com/library/ms722743.aspx)|[CUsagePrivileges](#usageprivilege)|[CUsagePrivilegeInfo](#usageprivilege)|  
-|[VIEW_COLUMN_USAGE](https://msdn.microsoft.com/library/ms714896.aspx)|[CViewColumnUsage](#viewcolumn)|[CViewColumnInfo](#viewcolumn)|  
-|[VIEWS](https://msdn.microsoft.com/library/ms723122.aspx)|[CViews](#view)|[CViewInfo](#view)|  
-|[VIEW_TABLE_USAGE](https://msdn.microsoft.com/library/ms719727.aspx)|[CViewTableUsage](#viewtable)|[CViewTableInfo](#viewtable)|  
+|[ASSERTIONS](/previous-versions/windows/desktop/ms719776\(v=vs.85\))|[CAssertions](#assertion)|[CAssertionInfo](#assertion)|  
+|[CATALOGS](/previous-versions/windows/desktop/ms721241\(v=vs.85\))|[CCatalogs](#catalog)|[CCatalogInfo](#catalog)|  
+|[CHARACTER_SETS](/previous-versions/windows/desktop/ms722638\(v=vs.85\))|[CCharacterSets](#characterset)|[CCharacterSetInfo](#characterset)|  
+|[照合順序](/previous-versions/windows/desktop/ms715783\(v=vs.85\))|[CCollations](#collation)|[CCollationInfo](#collation)|  
+|[COLUMN_PRIVILEGES](/previous-versions/windows/desktop/ms715800\(v=vs.85\))|[CColumnPrivileges](#columnprivilege)|[CColumnPrivilegeInfo](#columnprivilege)|  
+|[列](/previous-versions/windows/desktop/ms723052\(v=vs.85\))|[CColumns](#columns)|[CColumnsInfo](#columns)|  
+|[CONSTRAINT_COLUMN_USAGE](/previous-versions/windows/desktop/ms724522\(v=vs.85\))|[CConstraintColumnUsage](#constraintcolumnusage)|[CConstraintColumnUsageInfo](#constraintcolumnusage)|  
+|[CONSTRAINT_TABLE_USAGE](/previous-versions/windows/desktop/ms713710\(v=vs.85\))|[CConstraintTableUsage](#constrainttableusage)|[CConstraintTableUsageInfo](#constrainttableusage)|  
+|[CHECK_CONSTRAINTS](/previous-versions/windows/desktop/ms712845\(v=vs.85\))|[CCheckConstraints](#checkconstraint)|[CCheckConstraintInfo](#checkconstraint)|  
+|[COLUMN_DOMAIN_USAGE](/previous-versions/windows/desktop/ms711240\(v=vs.85\))|[CColumnDomainUsage](#columndomainusage)|[CColumnDomainUsageInfo](#columndomainusage)|  
+|[FOREIGN_KEYS](/previous-versions/windows/desktop/ms711276\(v=vs.85\))|[CForeignKeys](#foreignkeys)|[CForeignKeysInfo](#foreignkeys)|  
+|[INDEXES](/previous-versions/windows/desktop/ms709712\(v=vs.85\))|[CIndexes](#index)|[CIndexInfo](#index)|  
+|[KEY_COLUMN_USAGE](/previous-versions/windows/desktop/ms712990\(v=vs.85\))|[CKeyColumn](#keycolumn)|[CKeyColumnInfo](#keycolumn)|  
+|[PRIMARY_KEYS](/previous-versions/windows/desktop/ms714362\(v=vs.85\))|[CPrimaryKeys](#primarykey)|[CPrimaryKeyInfo](#primarykey)|  
+|[プロシージャ](/previous-versions/windows/desktop/ms724021\(v=vs.85\))|[CProcedures](#procedure)|[CProcedureInfo](#procedure)|  
+|[PROCEDURE_COLUMNS](/previous-versions/windows/desktop/ms723092\(v=vs.85\))|[CProcedureColumns](#procedurecolumn)|[CProcedureColumnInfo](#procedurecolumn)|  
+|[PROCEDURE_PARAMETERS](/previous-versions/windows/desktop/ms713623\(v=vs.85\))|[CProcedureParameters](#procedureparam)|[CProcedureParameterInfo](#procedureparam)|  
+|[PROVIDER_TYPES](/previous-versions/windows/desktop/ms709785\(v=vs.85\))|[CProviderTypes](#provider)|[CProviderInfo](#provider)|  
+|[REFERENTIAL_CONSTRAINTS](/previous-versions/windows/desktop/ms719737\(v=vs.85\))|[CReferentialConstraints](#referentialconstraint)|[CReferentialConstraintInfo](#referentialconstraint)|  
+|[SCHEMATA](/previous-versions/windows/desktop/ms716887\(v=vs.85\))|[CSchemata](#schemata)|[CSchemataInfo](#schemata)|  
+|[SQL_LANGUAGES](/previous-versions/windows/desktop/ms714374\(v=vs.85\))|[CSQLLanguages](#sqllanguage)|[CSQLLanguageInfo](#sqllanguage)|  
+|[統計情報](/previous-versions/windows/desktop/ms715957\(v=vs.85\))|[CStatistics](#statistic)|[CStatisticInfo](#statistic)|  
+|[TABLE_CONSTRAINTS](/previous-versions/windows/desktop/ms715921\(v=vs.85\))|[CTableConstraints](#tableconstraint)|[CTableConstraintInfo](#tableconstraint)|  
+|[テーブル](/previous-versions/windows/desktop/ms716980\(v=vs.85\))|[CTables](#table)|[CTableInfo](#table)|  
+|[TABLE_PRIVILEGES](/previous-versions/windows/desktop/ms725428\(v=vs.85\))|[CTablePrivileges](#tableprivilege)|[CTablePrivilegeInfo](#tableprivilege)|  
+|[翻訳](/previous-versions/windows/desktop/ms725365\(v=vs.85\))|[CTranslations](#translation)|[CTranslationInfo](#translation)|  
+|[USAGE_PRIVILEGES](/previous-versions/windows/desktop/ms722743\(v=vs.85\))|[CUsagePrivileges](#usageprivilege)|[CUsagePrivilegeInfo](#usageprivilege)|  
+|[VIEW_COLUMN_USAGE](/previous-versions/windows/desktop/ms714896\(v=vs.85\))|[CViewColumnUsage](#viewcolumn)|[CViewColumnInfo](#viewcolumn)|  
+|[VIEWS](/previous-versions/windows/desktop/ms723122\(v=vs.85\))|[CViews](#view)|[CViewInfo](#view)|  
+|[VIEW_TABLE_USAGE](/previous-versions/windows/desktop/ms719727\(v=vs.85\))|[CViewTableUsage](#viewtable)|[CViewTableInfo](#viewtable)|  
   
 ## <a name="assertion"></a> CAssertions、CAssertionInfo
 Typedef クラスを呼び出す`CAssertions`そのパラメーター クラスを実装する`CAssertionInfo`します。  
@@ -1140,7 +1140,7 @@ Typedef クラスを呼び出す`CAssertions`そのパラメーター クラス�
   
  このクラスは、特定のユーザーによって所有されているカタログで定義されているアサーションを識別します。  
   
- 次の表に、クラスのデータ メンバーの`CAssertionInfo`とその対応する OLE DB 列。 参照してください[アサーション行セット](https://msdn.microsoft.com/library/ms719776.aspx)で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
+ 次の表に、クラスのデータ メンバーの`CAssertionInfo`とその対応する OLE DB 列。 参照してください[アサーション行セット](/previous-versions/windows/desktop/ms719776\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
   
 |データ メンバー|OLE DB 列|  
 |------------------|--------------------|  
@@ -1159,7 +1159,7 @@ Typedef クラスを呼び出す`CCatalogs`そのパラメーター クラスを
   
  このクラスは、データベース管理システムからアクセス可能なカタログに関連付けられている物理属性を識別します。  
   
- 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[CATALOGS 行セット](https://msdn.microsoft.com/library/ms721241.aspx)で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
+ 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[CATALOGS 行セット](/previous-versions/windows/desktop/ms721241\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
   
 |データ メンバー|OLE DB 列|  
 |------------------|--------------------|  
@@ -1174,7 +1174,7 @@ Typedef クラスを呼び出す`CCharacterSets`そのパラメーター クラ�
   
  このクラスは、特定のユーザーにアクセスできる、カタログで定義されている文字セットを識別します。  
   
- 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[CHARACTER_SETS 行セット](https://msdn.microsoft.com/library/ms722638.aspx)で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
+ 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[CHARACTER_SETS 行セット](/previous-versions/windows/desktop/ms722638\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
   
 |データ メンバー|OLE DB 列|  
 |------------------|--------------------|  
@@ -1195,7 +1195,7 @@ Typedef クラスを呼び出す`CCheckConstraints`そのパラメーター ク�
   
  このクラスは、check 制約、カタログで定義されている特定のユーザーによって所有されているを識別します。 Check 制約では、データの値またはテーブル内 1 つまたは複数の列で許容される形式を指定します。  
   
- 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[CHECK_CONSTRAINTS 行セット](https://msdn.microsoft.com/library/ms712845.aspx)で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
+ 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[CHECK_CONSTRAINTS 行セット](/previous-versions/windows/desktop/ms712845\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
   
 |データ メンバー|OLE DB 列|  
 |------------------|--------------------|  
@@ -1213,7 +1213,7 @@ Typedef クラスを呼び出す`CCollations`そのパラメーター クラス�
   
  このクラスは、文字の照合順序、カタログで定義されている、特定のユーザーにアクセスできるを識別します。  
   
- 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[照合順序の行セット](https://msdn.microsoft.com/library/ms715783.aspx)で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
+ 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[照合順序の行セット](/previous-versions/windows/desktop/ms715783\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
   
 |データ メンバー|OLE DB 列|  
 |------------------|--------------------|  
@@ -1233,7 +1233,7 @@ Typedef クラスを呼び出す`CColumnDomainUsage`そのパラメーター ク
   
  このクラスは、カタログで定義されているし、特定のユーザーによって所有されているドメインに依存する列をカタログに定義されたを識別します。  
   
- 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[COLUMN_DOMAIN_USAGE 行セット](https://msdn.microsoft.com/library/ms711240.aspx)で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
+ 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[COLUMN_DOMAIN_USAGE 行セット](/previous-versions/windows/desktop/ms711240\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
   
 |データ メンバー|OLE DB 列|  
 |------------------|--------------------|  
@@ -1255,7 +1255,7 @@ Typedef クラスを呼び出す`CColumnPrivileges`そのパラメーター ク�
   
  このクラスは、テーブルの列をカタログで定義されているが利用できる、または特定のユーザーに許可した権限を識別します。  
   
- 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[COLUMN_PRIVILEGES 行セット](https://msdn.microsoft.com/library/ms715800.aspx)で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
+ 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[COLUMN_PRIVILEGES 行セット](/previous-versions/windows/desktop/ms715800\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
   
 |データ メンバー|OLE DB 列|  
 |------------------|--------------------|  
@@ -1278,7 +1278,7 @@ Typedef クラスを呼び出す`CColumns`そのパラメーター クラスを�
   
  このクラスは、特定のユーザーにアクセスできる、カタログに定義されたテーブルの列を識別します。  
   
- 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[COLUMNS 行セット](https://msdn.microsoft.com/library/ms723052.aspx)で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
+ 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[COLUMNS 行セット](/previous-versions/windows/desktop/ms723052\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
   
 |データ メンバー|OLE DB 列|  
 |------------------|--------------------|  
@@ -1319,7 +1319,7 @@ Typedef クラスを呼び出す`CConstraintColumnUsage`そのパラメーター
   
  このクラスは、参照に関する制約、unique 制約、check 制約、およびアサーションによって使用される、カタログで定義されているし、特定のユーザーによって所有されている列を識別します。  
   
- 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[CONSTRAINT_COLUMN_USAGE 行セット](https://msdn.microsoft.com/library/ms724522.aspx)で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
+ 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[CONSTRAINT_COLUMN_USAGE 行セット](/previous-versions/windows/desktop/ms724522\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
   
 |データ メンバー|OLE DB 列|  
 |------------------|--------------------|  
@@ -1341,7 +1341,7 @@ Typedef クラスを呼び出す`CConstraintTableUsage`そのパラメーター 
   
  このクラスは、参照に関する制約、unique 制約、check 制約、およびアサーションによって使用される、カタログで定義されているし、特定のユーザーによって所有されているテーブルを識別します。  
   
- 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[CONSTRAINT_TABLE_USAGE 行セット](https://msdn.microsoft.com/library/ms724522.aspx)で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
+ 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[CONSTRAINT_TABLE_USAGE 行セット](/previous-versions/windows/desktop/ms724522\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
   
 |データ メンバー|OLE DB 列|  
 |------------------|--------------------|  
@@ -1360,7 +1360,7 @@ Typedef クラスを呼び出す`CForeignKeys`そのパラメーター クラス
   
  このクラスは、特定のユーザーによってカタログで定義されている外部キー列を識別します。  
   
- 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[FOREIGN_KEYS 行セット](https://msdn.microsoft.com/library/ms711276.aspx)で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
+ 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[FOREIGN_KEYS 行セット](/previous-versions/windows/desktop/ms711276\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
   
 |データ メンバー|OLE DB 列|  
 |------------------|--------------------|  
@@ -1388,7 +1388,7 @@ Typedef クラスを呼び出す`CIndexes`そのパラメーター クラスを�
   
  このクラスは、特定のユーザーによって所有されているインデックス、カタログで定義されているを識別します。  
   
- 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[インデックスの行セット](https://msdn.microsoft.com/library/ms709712.aspx)で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
+ 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[インデックスの行セット](/previous-versions/windows/desktop/ms709712\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
   
 |データ メンバー|OLE DB 列|  
 |------------------|--------------------|  
@@ -1425,7 +1425,7 @@ Typedef クラスを呼び出す`CKeyColumns`そのパラメーター クラス�
   
  このクラスは、特定のユーザーがキーとして制約する列をカタログに定義されたを識別します。  
   
- 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[KEY_COLUMN_USAGE 行セット](https://msdn.microsoft.com/library/ms712990.aspx)で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
+ 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[KEY_COLUMN_USAGE 行セット](/previous-versions/windows/desktop/ms712990\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
   
 |データ メンバー|OLE DB 列|  
 |------------------|--------------------|  
@@ -1448,7 +1448,7 @@ Typedef クラスを呼び出す`CPrimaryKeys`そのパラメーター クラス
   
  このクラスは、特定のユーザーによってカタログで定義されている主キー列を識別します。  
   
- 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[PRIMARY_KEYS 行セット](https://msdn.microsoft.com/library/ms714362.aspx)で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
+ 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[PRIMARY_KEYS 行セット](/previous-versions/windows/desktop/ms714362\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
   
 |データ メンバー|OLE DB 列|  
 |------------------|--------------------|  
@@ -1468,7 +1468,7 @@ Typedef クラスを呼び出す`CProcedureColumns`そのパラメーター ク�
   
  このクラスは、プロシージャによって返される行セットの列に関する情報を返します。  
   
- 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[PROCEDURE_COLUMNS 行セット](https://msdn.microsoft.com/library/ms723092.aspx)で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
+ 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[PROCEDURE_COLUMNS 行セット](/previous-versions/windows/desktop/ms723092\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
   
 |データ メンバー|OLE DB 列|  
 |------------------|--------------------|  
@@ -1497,7 +1497,7 @@ Typedef クラスを呼び出す`CProcedureParameters`そのパラメーター �
   
  このクラスは、パラメーターとプロシージャのリターン コードに関する情報を返します。  
   
- 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[PROCEDURE_PARAMETERS 行セット](https://msdn.microsoft.com/library/ms713623.aspx)で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
+ 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[PROCEDURE_PARAMETERS 行セット](/previous-versions/windows/desktop/ms713623\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
   
 |データ メンバー|OLE DB 列|  
 |------------------|--------------------|  
@@ -1525,7 +1525,7 @@ Typedef クラスを呼び出す`CProcedures`そのパラメーター クラス�
   
  このクラスは、特定のユーザーによって所有されている手順をカタログに定義されたを示します。  
   
- 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[プロシージャの行セット](https://msdn.microsoft.com/library/ms724021.aspx)で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
+ 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[プロシージャの行セット](/previous-versions/windows/desktop/ms724021\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
   
 |データ メンバー|OLE DB 列|  
 |------------------|--------------------|  
@@ -1544,7 +1544,7 @@ Typedef クラスを呼び出す`CProviderTypes`そのパラメーター クラ�
   
  このクラスは、データ プロバイダーでサポートされている (基本) データ型を識別します。  
   
- 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[PROVIDER_TYPES 行セット](https://msdn.microsoft.com/library/ms709785.aspx)で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
+ 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[PROVIDER_TYPES 行セット](/previous-versions/windows/desktop/ms709785\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
   
 |データ メンバー|OLE DB 列|  
 |------------------|--------------------|  
@@ -1577,7 +1577,7 @@ Typedef クラスを呼び出す`CReferentialConstraints`そのパラメータ�
   
  このクラスは、参照制約、カタログで定義されている特定のユーザーによって所有されているを識別します。  
   
- 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[REFERENTIAL_CONSTRAINTS 行セット](https://msdn.microsoft.com/library/ms719737.aspx)で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
+ 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[REFERENTIAL_CONSTRAINTS 行セット](/previous-versions/windows/desktop/ms719737\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
   
 |データ メンバー|OLE DB 列|  
 |------------------|--------------------|  
@@ -1600,7 +1600,7 @@ Typedef クラスを呼び出す`CSchemata`そのパラメーター クラスを
   
  このクラスは、特定のユーザーによって所有されているスキーマを識別します。  
   
- 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[スキーマ行セット](https://msdn.microsoft.com/library/ms716887.aspx)で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
+ 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[スキーマ行セット](/previous-versions/windows/desktop/ms716887\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
   
 |データ メンバー|OLE DB 列|  
 |------------------|--------------------|  
@@ -1619,7 +1619,7 @@ Typedef クラスを呼び出す`CSQLLanguages`そのパラメーター クラ�
   
  このクラスは、適合性レベル、オプション、およびカタログで定義されているデータには、SQL の実装の処理がサポートされている言語を識別します。  
   
- 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[SQL_LANGUAGES 行セット](https://msdn.microsoft.com/library/ms714374.aspx)で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
+ 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[SQL_LANGUAGES 行セット](/previous-versions/windows/desktop/ms714374\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
   
 |データ メンバー|OLE DB 列|  
 |------------------|--------------------|  
@@ -1639,7 +1639,7 @@ Typedef クラスを呼び出す`CStatistics`そのパラメーター クラス�
   
  このクラスは、特定のユーザーによって所有されている統計、カタログで定義されているを識別します。  
   
- 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[統計情報の行セット](https://msdn.microsoft.com/library/ms715957.aspx)で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
+ 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[統計情報の行セット](/previous-versions/windows/desktop/ms715957\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
   
 |データ メンバー|OLE DB 列|  
 |------------------|--------------------|  
@@ -1656,7 +1656,7 @@ Typedef クラスを呼び出す`CTableConstraints`そのパラメーター ク�
   
  このクラスは、テーブル制約、カタログで定義されている特定のユーザーによって所有されているを識別します。  
   
- 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[TABLE_CONSTRAINTS 行セット](https://msdn.microsoft.com/library/ms715921.aspx)で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
+ 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[TABLE_CONSTRAINTS 行セット](/previous-versions/windows/desktop/ms715921\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
   
 |データ メンバー|OLE DB 列|  
 |------------------|--------------------|  
@@ -1679,7 +1679,7 @@ Typedef クラスを呼び出す`CTablePrivileges`そのパラメーター ク�
   
  このクラスは、特定のユーザーにアクセスできる、カタログに定義されたテーブルを識別します。  
   
- 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[TABLE_PRIVILEGES 行セット](https://msdn.microsoft.com/library/ms725428.aspx)で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
+ 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[TABLE_PRIVILEGES 行セット](/previous-versions/windows/desktop/ms725428\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
   
 |データ メンバー|OLE DB 列|  
 |------------------|--------------------|  
@@ -1699,7 +1699,7 @@ Typedef クラスを呼び出す`CTables`そのパラメーター クラスを�
   
  このクラスは、テーブルで、カタログに定義されたに利用可能にしたり、特定のユーザーによって付与される権限を識別します。  
   
- 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[TABLES 行セット](https://msdn.microsoft.com/library/ms716980.aspx)で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
+ 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[TABLES 行セット](/previous-versions/windows/desktop/ms716980\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
   
 |データ メンバー|OLE DB 列|  
 |------------------|--------------------|  
@@ -1718,7 +1718,7 @@ Typedef クラスを呼び出す`CTranslations`そのパラメーター クラ�
   
  このクラスは、特定のユーザーにアクセスできる、カタログで定義されている文字変換を識別します。  
   
- 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[翻訳行セット](https://msdn.microsoft.com/library/ms725365.aspx)で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
+ 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[翻訳行セット](/previous-versions/windows/desktop/ms725365\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
   
 |データ メンバー|OLE DB 列|  
 |------------------|--------------------|  
@@ -1740,7 +1740,7 @@ Typedef クラスを呼び出す`CUsagePrivileges`そのパラメーター ク�
   
  このクラスは、カタログに定義に利用可能にしたり、特定のユーザーによって付与されるオブジェクトの使用法の特権を識別します。  
   
- 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[USAGE_PRIVILEGES 行セット](https://msdn.microsoft.com/library/ms722743.aspx)で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
+ 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[USAGE_PRIVILEGES 行セット](/previous-versions/windows/desktop/ms722743\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
   
 |データ メンバー|OLE DB 列|  
 |------------------|--------------------|  
@@ -1761,7 +1761,7 @@ Typedef クラスを呼び出す`CViewColumnUsage`そのパラメーター ク�
   
  このクラスは、カタログで定義されているテーブルを表示し、依存している、特定のユーザーによって所有されているにで、列に識別します。  
   
- 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[VIEW_COLUMN_USAGE 行セット](https://msdn.microsoft.com/library/ms714896.aspx)で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
+ 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[VIEW_COLUMN_USAGE 行セット](/previous-versions/windows/desktop/ms714896\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
   
 |データ メンバー|OLE DB 列|  
 |------------------|--------------------|  
@@ -1783,7 +1783,7 @@ Typedef クラスを呼び出す`CViews`そのパラメーター クラスを実
   
  このクラスは、カタログで定義されているテーブルを表示し、依存している、特定のユーザーによって所有されているにで、テーブルに識別します。  
   
- 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[ビューの行セット](https://msdn.microsoft.com/library/ms723122.aspx)で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
+ 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[ビューの行セット](/previous-versions/windows/desktop/ms723122\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
   
 |データ メンバー|OLE DB 列|  
 |------------------|--------------------|  
@@ -1803,7 +1803,7 @@ Typedef クラスを呼び出す`CViewTableUsage`そのパラメーター クラ
   
  このクラスは、表示されているテーブル、カタログで定義されている、特定のユーザーにアクセスできるを識別します。  
   
- 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[VIEW_TABLE_USAGE 行セット](https://msdn.microsoft.com/library/ms719727.aspx)で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
+ 次の表には、クラスのデータ メンバーとその対応する OLE DB 列が一覧表示します。 参照してください[VIEW_TABLE_USAGE 行セット](/previous-versions/windows/desktop/ms719727\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*スキーマと列の詳細についてはします。  
   
 |データ メンバー|OLE DB 列|  
 |------------------|--------------------|  

@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eba8dbe8ee0dad3f085104c914a731986d736e2b
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: ef93be9a6994cf0e093380941810bc735961ee1c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647876"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593277"
 ---
 # <a name="handletisvalid-method"></a>HandleT::IsValid メソッド
-示すかどうか、現在**HandleT**オブジェクト ハンドルを表します。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-bool IsValid() const;  
-```  
-  
-## <a name="return-value"></a>戻り値  
- **true**場合、 **HandleT**ハンドルを表します。 そうしないと、 **false**します。  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>関連項目  
- [HandleT クラス](../windows/handlet-class.md)
+
+示すかどうか、現在**HandleT**オブジェクト ハンドルを表します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+bool IsValid() const;
+```
+
+## <a name="return-value"></a>戻り値
+
+**true**場合、 **HandleT**ハンドルを表します。 そうしないと、 **false**します。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>関連項目
+
+[HandleT クラス](../windows/handlet-class.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法: マニフェストを C/C++ アプリケーションに埋め込む |Microsoft ドキュメント'
+title: '方法: マニフェストを C/C++ アプリケーションを埋め込む |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a759533a8e88ef05e3660e0e9b36525df378334
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7dec5377bca1cc56e2444d7466fc5107d594205a
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369053"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571409"
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>方法 : マニフェストを C/C++ アプリケーションに埋め込む
-C/C++ アプリケーション (またはライブラリ) にほとんどのシナリオで適切な実行時の動作が保証されるため、最終的なバイナリ内に埋め込まれたマニフェストがあることをお勧めします。 既定では、[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]ソース ファイルからプロジェクトをビルドするときに、マニフェストを埋め込むしようとしています。 参照してください[Visual Studio でのマニフェストの生成](../build/manifest-generation-in-visual-studio.md)詳細についてはします。 ただし場合 (nmake の) を使用してアプリケーションを作成すると、既存のメイクファイルをいくつかの変更が必要です。 このセクションでは、自動的に、最終的なバイナリ内にマニフェストを埋め込むには既存のメイクファイルを変更する方法を示します。  
+C/C++ アプリケーション (またはライブラリ) にほとんどのシナリオで適切な実行時の動作が保証されるため、最終的なバイナリ内に埋め込まれたマニフェストがあることをお勧めします。 既定では、Visual Studio がソース ファイルからプロジェクトをビルドするときに、マニフェストを埋め込むしよう参照してください[Visual Studio でのマニフェスト生成](../build/manifest-generation-in-visual-studio.md)詳細についてはします。 ただしアプリケーションを作成するには、nmake を使用して、既存のメイクファイルにいくつかの変更は必要な。 このセクションでは、自動的に最終的なバイナリ内のマニフェストを埋め込むには既存のメイクファイルを変更する方法を示します。  
   
 ## <a name="two-approaches"></a>2 つの方法  
- アプリケーションまたはライブラリ内にマニフェストを埋め込むには 2 つの方法ができます。  
+ アプリケーションまたはライブラリ内のマニフェストを埋め込むには 2 つの方法はあります。  
   
--   インクリメンタル ビルドを実行しない場合は、ビルド後のステップとして、次のようなコマンドを使用してマニフェストを直接埋め込むことができます。  
+-   インクリメンタル ビルドを実行しない場合は、ビルド後の手順として、次のようなコマンドラインを使用してマニフェストを直接埋め込むことができます。  
   
-     **mt.exe のマニフェストの MyApp.exe.manifest-outputresource:MyApp.exe;1**  
+     **mt.exe のマニフェスト MyApp.exe.manifest-outputresource:MyApp.exe;1**  
   
      または  
   
-     **mt.exe のマニフェストの MyLibrary.dll.manifest-outputresource:MyLibrary.dll;2**  
+     **mt.exe のマニフェスト MyLibrary.dll.manifest-outputresource:MyLibrary.dll;2**  
   
-     (EXE、DLL では 2 の 1。)  
+     (1 exe、DLL では 2 です。)  
   
--   インクリメンタル ビルドを実行する場合は、ここに示すようにリソースを直接編集がインクリメンタル ビルドを無効にしてなる完全な再構築したがって、異なる方法を実行する必要があります。  
+-   インクリメンタル ビルドを実行している場合次に示すように、リソースを直接編集はインクリメンタル ビルドを無効にして全体の再構築が発生します。そのため、別のアプローチを実行する必要があります。  
   
-    -   MyApp.exe.manifest ファイルを生成するバイナリをリンクします。  
+    -   MyApp.exe.manifest ファイルを生成するバイナリにリンクします。  
   
     -   マニフェストをリソース ファイルに変換します。  
   
-    -   再マニフェスト リソースをバイナリに埋め込む (増分) リンクします。  
+    -   再マニフェスト リソースをバイナリに埋め込むために (インクリメンタル) リンクします。  
   
- 次の例では、両方の手法を組み込むメイクファイルを変更する方法を示します。  
+ 次の例では、両方の手法を組み込むことのメイクファイルを変更する方法を示します。  
   
 ## <a name="makefiles-before"></a>メイクファイル (変更前) に、  
- 1 つのファイルから構築された簡単なアプリケーション、MyApp.exe の (nmake の) スクリプトを考慮してください。  
+ 1 つのファイルから構築された単純なアプリケーション、MyApp.exe の (nmake の) スクリプトを検討してください。  
   
 ```  
 # build MyApp.exe  
@@ -70,9 +70,9 @@ clean :
     del MyApp.obj MyApp.exe  
 ```  
   
- Visual C を使った変更されず、このスクリプトが実行される場合は、MyApp.exe が正常に作成します。 実行時に依存するアセンブリを読み込む、オペレーティング システムで使用するための外部のマニフェスト ファイル MyApp.exe.manifest も作成します。  
+ Visual C で変更されていない、このスクリプトが実行される場合、MyApp.exe が正常に作成します。 実行時に依存するアセンブリをロードするオペレーティング システムで使用するための外部のマニフェスト ファイル MyApp.exe.manifest も作成します。  
   
- MyLibrary.dll の (nmake の) スクリプトは次とよく似ています。  
+ MyLibrary.dll の (nmake の) スクリプトはよく似ています。  
   
 ```  
 # build MyLibrary.dll  
@@ -96,7 +96,7 @@ clean :
 ```  
   
 ## <a name="makefiles-after"></a>メイクファイル (変更後)  
- ビルドするには、元のメイクファイルに 4 つの小さな変更を加える必要があるマニフェストを埋め込みます。 : MyApp.exe メイクファイルで  
+ ビルドで使用するには、元のメイクファイルに 4 つの小さな変更を加える必要があるマニフェストに埋め込まれます。 : MyApp.exe メイクファイルで  
   
 ```  
 # build MyApp.exe  
@@ -159,7 +159,7 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)  
 ```  
   
- メイクファイルには、実際の作業、makefile.inc makefile.targ.inc を実行する 2 つのファイルが追加されました。  
+ メイクファイルには、実際の処理、makefile.inc makefile.targ.inc を実行する 2 つのファイルが追加されました。  
   
  Makefile.inc を作成し、次をコピーします。  
   

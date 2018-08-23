@@ -23,53 +23,56 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3760da2fad7596938acf881cd36af099ad1253cf
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: c1727313018e88d97f810204428cc99f7aab2366
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643797"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591610"
 ---
 # <a name="adding-values-to-a-combo-box-control"></a>コンボ ボックス コントロールへの値の追加
-ある限り、コンボ ボックス コントロールに値を追加することができます、**ダイアログ**エディターが開きます。  
-  
+
+ある限り、コンボ ボックス コントロールに値を追加することができます、**ダイアログ**エディターが開きます。
+
 > [!TIP]
->  コンボ ボックスにすべての値を追加することをお勧め*する前に*でボックスのサイズを変更、**ダイアログ**エディター、またはするには、複合コントロールに表示されるテキストを切り捨てることができます。  
-  
-### <a name="to-enter-values-into-a-combo-box-control"></a>コンボ ボックス コントロールに値を入力するには  
-  
-1.  クリックして、コンボ ボックス コントロールを選択します。  
-  
-2.  [プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)、下へスクロールして、**データ**プロパティ。  
-  
-    > [!NOTE]
-    >  種類でグループ化されたプロパティを表示する場合**データ**に表示されます、 **Misc**プロパティ。  
-  
-3.  値の領域をクリックして、**データ**セミコロンで区切られたプロパティと、データ値を入力します。  
-  
-    > [!NOTE]
-    >  スペースがドロップダウン リストで項目がアルファベット順に干渉するためには、値の間にスペースを入れないでください。  
-  
-4.  クリックして**Enter**値の追加が完了したら。  
-  
- コンボ ボックスのドロップダウン部分を拡大する方法については、次を参照してください。[し、コンボ ボックスのドロップダウン リストのサイズの設定](setting-the-size-of-the-combo-box-and-its-drop-down-list.md)します。  
-  
+> コンボ ボックスにすべての値を追加することをお勧め*する前に*でボックスのサイズを変更、**ダイアログ**エディター、またはするには、複合コントロールに表示されるテキストを切り捨てることができます。
+
+### <a name="to-enter-values-into-a-combo-box-control"></a>コンボ ボックス コントロールに値を入力するには
+
+1. クリックして、コンボ ボックス コントロールを選択します。
+
+2. [プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)、下へスクロールして、**データ**プロパティ。
+
+   > [!NOTE]
+   > 種類でグループ化されたプロパティを表示する場合**データ**に表示されます、 **Misc**プロパティ。
+
+3. 値の領域をクリックして、**データ**セミコロンで区切られたプロパティと、データ値を入力します。
+
+   > [!NOTE]
+   > スペースがドロップダウン リストで項目がアルファベット順に干渉するためには、値の間にスペースを入れないでください。
+
+4. クリックして**Enter**値の追加が完了したら。
+
+コンボ ボックスのドロップダウン部分を拡大する方法については、次を参照してください。[し、コンボ ボックスのドロップダウン リストのサイズの設定](setting-the-size-of-the-combo-box-and-its-drop-down-list.md)します。
+
 > [!NOTE]
->  この手順を使用して、Win32 プロジェクトに値を追加することはできません (、**データ**Win32 プロジェクトのプロパティがグレー)。 Win32 プロジェクトはこの機能を追加するライブラリを持っていないため、プログラムで Win32 プロジェクトを使用してコンボ ボックスに値を追加する必要があります。  
-  
-### <a name="to-test-the-appearance-of-values-in-a-combo-box"></a>コンボ ボックスで値の外観をテストするには  
-  
-1.  内の値を入力した後に、**データ**プロパティ、 をクリックして、**テスト**のボタンでは、[ダイアログ エディター ツールバー](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)します。  
-  
-     全体の値の一覧を下へスクロールしてみてください。 入力されたとおりに値が表示されます、**データ**プロパティ、**プロパティ**ウィンドウ。 スペルまたは大文字小文字のチェックはありません。  
-  
-     キーを押して**Esc**に戻る、 **ダイアログ ボックス**エディター。  
-  
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
-  
-## <a name="requirements"></a>要件  
- Win32  
-  
-## <a name="see-also"></a>関連項目  
- [ダイアログ ボックスのコントロール](../windows/controls-in-dialog-boxes.md)   
- [コントロール](../mfc/controls-mfc.md)
+> この手順を使用して、Win32 プロジェクトに値を追加することはできません (、**データ**Win32 プロジェクトのプロパティがグレー)。 Win32 プロジェクトはこの機能を追加するライブラリを持っていないため、プログラムで Win32 プロジェクトを使用してコンボ ボックスに値を追加する必要があります。
+
+### <a name="to-test-the-appearance-of-values-in-a-combo-box"></a>コンボ ボックスで値の外観をテストするには
+
+1. 内の値を入力した後に、**データ**プロパティ、 をクリックして、**テスト**のボタンでは、[ダイアログ エディター ツールバー](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)します。
+
+   全体の値の一覧を下へスクロールしてみてください。 入力されたとおりに値が表示されます、**データ**プロパティ、**プロパティ**ウィンドウ。 スペルまたは大文字小文字のチェックはありません。
+
+   キーを押して**Esc**に戻る、 ** ダイアログ ボックス**エディター。
+
+マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
+
+## <a name="requirements"></a>要件
+
+Win32
+
+## <a name="see-also"></a>関連項目
+
+[ダイアログ ボックスのコントロール](../windows/controls-in-dialog-boxes.md)  
+[コントロール](../mfc/controls-mfc.md)

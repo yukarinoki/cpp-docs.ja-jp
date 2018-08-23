@@ -18,47 +18,52 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1ef27e86ae356ddc67555390b7e053daa8d32a09
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: a46a2f9b18a45e7ea627488881b0289e733ddd7b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013354"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608968"
 ---
 # <a name="version-c"></a>version (C++)
-クラスの複数のバージョン間で特定のバージョンを識別します。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-[ version(  
-   "version"  
-) ]  
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *version*  
- バージョン番号、`coclass`します。 指定しない場合、1.0 は .idl ファイルに配置されます。  
-  
-## <a name="remarks"></a>Remarks  
- **バージョン**C++ 属性と同じ機能を持つ、[バージョン](http://msdn.microsoft.com/library/windows/desktop/aa367306)MIDL 属性と、生成された .idl ファイルに渡されます。  
-  
-## <a name="example"></a>例  
- 参照してください、[バインド可能な](../windows/bindable.md)の使用サンプルの例を**バージョン**します。  
-  
-## <a name="requirements"></a>要件  
-  
-### <a name="attribute-context"></a>属性コンテキスト  
-  
-|||  
-|-|-|  
-|**対象**|**クラス**、**構造体**|  
-|**反復可能**|いいえ|  
-|**必要な属性**|**coclass**|  
-|**無効な属性**|なし|  
-  
- 属性コンテキストの詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  
-  
-## <a name="see-also"></a>関連項目  
- [コンパイラ属性](../windows/compiler-attributes.md)   
- [クラス属性](../windows/class-attributes.md)   
+
+クラスの複数のバージョン間で特定のバージョンを識別します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+[ version(
+   "version"
+) ]
+```
+
+### <a name="parameters"></a>パラメーター
+
+*version*  
+バージョン番号、`coclass`します。 指定しない場合、1.0 は .idl ファイルに配置されます。
+
+## <a name="remarks"></a>Remarks
+
+**バージョン**C++ 属性と同じ機能を持つ、[バージョン](http://msdn.microsoft.com/library/windows/desktop/aa367306)MIDL 属性と、生成された .idl ファイルに渡されます。
+
+## <a name="example"></a>例
+
+参照してください、[バインド可能な](../windows/bindable.md)の使用サンプルの例を**バージョン**します。
+
+## <a name="requirements"></a>要件
+
+### <a name="attribute-context"></a>属性コンテキスト
+
+|||
+|-|-|
+|**対象**|**クラス**、**構造体**|
+|**反復可能**|いいえ|
+|**必要な属性**|**coclass**|
+|**無効な属性**|なし|
+
+属性コンテキストの詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。
+
+## <a name="see-also"></a>関連項目
+
+[コンパイラ属性](../windows/compiler-attributes.md)  
+[クラス属性](../windows/class-attributes.md)  

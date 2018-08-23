@@ -37,15 +37,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f1f726459e72d57aa8e855df4f4f3ec5d566f687
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d07c0e64e969e599393a657d4c41a8dd544901c9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337074"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572663"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl クラス
-実装を提供、 [IRowsetInfo](https://msdn.microsoft.com/library/ms724541.aspx)インターフェイス。  
+実装を提供、 [IRowsetInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\))インターフェイス。  
   
 ## <a name="syntax"></a>構文
 
@@ -92,7 +92,7 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[irowsetinfo::getproperties](https://msdn.microsoft.com/library/ms719611.aspx)で、 *OLE DB プログラマーズ リファレンス*します。 
+ 参照してください[irowsetinfo::getproperties](/previous-versions/windows/desktop/ms719611\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。 
 
 ## <a name="getreferencedrowset"></a> Irowsetinfoimpl::getreferencedrowset
 ブックマークを適用する行セットにインターフェイス ポインターを返します。  
@@ -106,7 +106,7 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[IRowsetInfo::GetReferencedRowset](https://msdn.microsoft.com/library/ms721145.aspx)で、 *OLE DB プログラマーズ リファレンス*します。 *IOrdinal*パラメーターはブックマーク列である必要があります。 
+ 参照してください[IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。 *IOrdinal*パラメーターはブックマーク列である必要があります。 
 
 ## <a name="getspecification"></a> Irowsetinfoimpl::getspecification
 この行セットを作成するオブジェクト (コマンドまたはセッション) のインターフェイス ポインターを返します。  
@@ -119,7 +119,7 @@ STDMETHOD (GetSpecification )(REFIID riid,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[IRowsetInfo::GetSpecification](https://msdn.microsoft.com/library/ms716746.aspx)で、 *OLE DB プログラマーズ リファレンス*します。  
+ 参照してください[IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドを使用[IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md)データ ソース オブジェクトからプロパティを取得します。  

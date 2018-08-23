@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28f0cedbe20ebea21b3b10e5016605c1bce51383
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 0b2cff8470ad11270d2f40abf3d03c708a9d6e87
+ms.sourcegitcommit: 9035b4df448583c195f54318e941284b632dc308
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407388"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573328"
 ---
 # <a name="member-access-control-c"></a>メンバー アクセス コントロール (C++)
 アクセス制御を分離することを有効にする、[パブリック](../cpp/public-cpp.md)からクラスのインターフェイス、[プライベート](../cpp/private-cpp.md)実装の詳細と[保護](../cpp/protected-cpp.md)のみであるメンバーを使用して派生クラス。 アクセス指定子は、その後で宣言されたすべてのメンバーに対して当てはまり、これは、次のアクセス指定子が検出されるまで続きます。  
@@ -80,28 +80,44 @@ protected:      // Declare protected function for derived classes only.
   
 ```cpp 
 // access_specifiers_for_base_classes.cpp  
-class BaseClass  
-{  
-public:  
-    int PublicFunc();    // Declare a public member.  
-protected:  
+class BaseClass
+{
+public:
+    int PublicFunc(); // Declare a public member.  
+protected:
     int ProtectedFunc(); // Declare a protected member.  
-private:  
-    int PrivateFunc();   // Declare a private member.  
-};  
-  
+private:
+    int PrivateFunc(); // Declare a private member.  
+};
+
 // Declare two classes derived from BaseClass.  
-class DerivedClass1 : public BaseClass  
-{  
-};  
-  
-class DerivedClass2 : private BaseClass  
-{  
-};  
-  
-int main()  
-{  
-}  
+class DerivedClass1 : public BaseClass
+{
+    void foo()
+    {
+        PublicFunc();
+        ProtectedFunc();
+        PrivateFunc(); // function is inaccessible
+    }
+};
+
+class DerivedClass2 : private BaseClass
+{
+    void foo()
+    {
+        PublicFunc();
+        ProtectedFunc();
+        PrivateFunc(); // function is inaccessible
+    }
+};
+
+int main()
+{
+    DerivedClass1 derived_class1;
+    DerivedClass2 derived_class2;
+    derived_class1.PublicFunc();
+    derived_class2.PublicFunc(); // function is inaccessible
+}
 ```  
   
  `DerivedClass1` では、メンバー関数 `PublicFunc` はパブリック メンバーであり、`ProtectedFunc` がパブリック基底クラスであるため、`BaseClass` はプロテクト メンバーになります。 `PrivateFunc` は `BaseClass` に対してプライベートであるため、派生クラスからはアクセスできません。  
@@ -228,5 +244,6 @@ int main()
   
  図では、クラス `VBase` で宣言される名前は、必ずクラス `RightPath` 経由でアクセスされます。 `RightPath` が `VBase` をプライベート基底クラスとして宣言するのに対し、`LeftPath` は `VBase` をパブリック基底クラスとして宣言するため、右のパスの方がアクセスが簡単です。  
   
+
 ## <a name="see-also"></a>関連項目  
  [C++ 言語リファレンス](../cpp/cpp-language-reference.md)

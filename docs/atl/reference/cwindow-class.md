@@ -163,12 +163,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a725ee9eb8d35ec947d21799c577243223f59ed4
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a4f29cefa626928cb87ce7d72904a4b189113f05
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881267"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572383"
 ---
 # <a name="cwindow-class"></a>CWindow クラス
 このクラスは、ウィンドウを操作するためのメソッドを提供します。  
@@ -382,7 +382,7 @@ class CWindow
   
  Windows の詳細については、次を参照してください。 [Windows](http://msdn.microsoft.com/library/windows/desktop/ms632595)と Windows SDK の後続のトピックです。 ATL でのウィンドウの使用に関する詳細については、記事を参照してください。 [ATL ウィンドウ クラス](../../atl/atl-window-classes.md)します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlwin.h  
   
 ##  <a name="arrangeiconicwindows"></a>  CWindow::ArrangeIconicWindows  

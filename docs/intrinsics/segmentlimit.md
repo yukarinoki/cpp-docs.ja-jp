@@ -1,5 +1,5 @@
 ---
-title: _ _segmentlimit |Microsoft ドキュメント
+title: _ _segmentlimit |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64fffacbaebc99d3298b5463a014db1e9117cd7b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eacffcd5e66d73cd7594207f58356a4a8a0ecb47
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330753"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541820"
 ---
 # <a name="segmentlimit"></a>__segmentlimit
 **Microsoft 固有の仕様**  
   
- 生成、 `lsl` (負荷のセグメントの制限) の命令。  
+ 生成、 `lsl` (負荷のセグメントの制限) 命令。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,18 +42,18 @@ unsigned long __segmentlimit(
  セグメントのセレクターを指定する定数。  
   
 ## <a name="return-value"></a>戻り値  
- 指定されたセグメント セレクターのセグメントの上限`a`セレクターは、現在のアクセス許可レベルで有効と表示されているが、します。  
+ セグメントの数で指定されたセグメント セレクター`a`セレクターが現在のアクセス許可レベルで有効であり、表示されているが、します。  
   
 ## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__segmentlimit`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__segmentlimit`|x86、x64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
- セグメントの上限を取得できない場合は、この命令が失敗します。 失敗した場合、この命令が ZF フラグをクリアし、戻り値が定義されていません。  
+## <a name="remarks"></a>Remarks  
+ セグメントの上限を取得できない場合は、この命令が失敗します。 失敗した場合、この命令な ZF フラグをクリアして、戻り値が定義されていません。  
   
  このルーチンは、組み込みとしてのみ使用できます。  
   

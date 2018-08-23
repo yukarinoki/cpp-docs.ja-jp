@@ -1,5 +1,5 @@
 ---
-title: Platform::iboxarray インターフェイス |Microsoft ドキュメント
+title: Platform::iboxarray インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,16 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::IBoxArray
 ms.assetid: 6cd82c9e-4230-4147-9edb-7a652875dbf1
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 572724dcebbdb3921b26d6c688ff5d68d1392437
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 78815ed42833c48074abbb4b0c0fa0203f8c35a1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088343"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597321"
 ---
 # <a name="platformiboxarray-interface"></a>Platform::IBoxArray インターフェイス
 `IBoxArray` はアプリケーション バイナリ インターフェイス (ABI) を越えて渡されるか、XAML コントロールなどの `Platform::Object^` 要素のコレクションに格納される値型の配列のラッパーです。  
@@ -37,8 +37,8 @@ interface class IBoxArray
  `T`  
  各配列要素のボックス化された値の型。  
   
-### <a name="remarks"></a>コメント  
- `IBoxArray` C + + CX 名`Windows::Foundation::IReferenceArray`です。  
+### <a name="remarks"></a>Remarks  
+ `IBoxArray` c++/cli の CX 名前`Windows::Foundation::IReferenceArray`します。  
   
 ### <a name="members"></a>メンバー  
  `IBoxArray` インターフェイスは `IValueType` インターフェイスを継承します。 `IBoxArray` にも、次に示すメンバーがあります。  
@@ -63,8 +63,8 @@ property T Value {T get();}
 ### <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  このオブジェクトに元から格納されていた値を返します。  
   
-### <a name="remarks"></a>コメント  
- 例については、次を参照してください。[ボックス化](../cppcx/boxing-c-cx.md)です。  
+### <a name="remarks"></a>Remarks  
+ 例については、次を参照してください。[ボックス化](../cppcx/boxing-c-cx.md)します。  
   
   
 ## <a name="see-also"></a>関連項目  

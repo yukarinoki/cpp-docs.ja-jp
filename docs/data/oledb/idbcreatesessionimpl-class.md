@@ -23,15 +23,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 756cc7ba203a1655bf5112d9c03e84707644f1e5
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d934e9ae5494b934acb0779665ba4471dfc4c2b7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337571"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572697"
 ---
 # <a name="idbcreatesessionimpl-class"></a>IDBCreateSessionImpl クラス
-実装を提供、 [IDBCreateSession](https://msdn.microsoft.com/library/ms724076.aspx)インターフェイス。  
+実装を提供、 [IDBCreateSession](/previous-versions/windows/desktop/ms724076\(v=vs.85\))インターフェイス。  
   
 ## <a name="syntax"></a>構文
 
@@ -74,7 +74,7 @@ STDMETHOD(CreateSession)(IUnknown * pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[idbcreatesession::createsession](https://msdn.microsoft.com/library/ms714942.aspx)で、 *OLE DB プログラマーズ リファレンス*します。   
+ 参照してください[idbcreatesession::createsession](/previous-versions/windows/desktop/ms714942\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。   
   
 ## <a name="see-also"></a>関連項目  
  [OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)   

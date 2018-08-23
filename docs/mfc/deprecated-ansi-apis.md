@@ -1,5 +1,5 @@
 ---
-title: ANSI Api を非推奨 |Microsoft ドキュメント
+title: 非推奨の ANSI Api |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d612cca5d0c95b411f5278fe92404166d26b53b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95eed7834e46f6a42a363e8a8f8134945beb54fc
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342060"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541126"
 ---
 # <a name="deprecated-ansi-apis"></a>非推奨の ANSI API
-Microsoft Foundation Class (MFC) ライブラリは、クラスと、Unicode 文字セットに基づくメソッドに向けた移行します。 その結果、複数の MFC メソッドの ANSI バージョンの使用は推奨されていません。 今後のアプリケーションでこれらのメソッドの Unicode バージョンを使用します。  
+Microsoft Foundation Class (MFC) ライブラリは、クラスと、Unicode 文字セットに基づくメソッドに向けた移行中です。 その結果、一部の MFC メソッドの ANSI バージョンの使用は推奨されていません。 今後のアプリケーションでこれらのメソッドの Unicode バージョンを使用します。  
   
- 付属する Windows コモン コントロール バージョン 6.1 以降[!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)]ANSI の次の方法は推奨されなくなりました。  
+ Windows vista が出荷される Windows コモン コントロール バージョン 6.1 以降で、次の ANSI メソッドは非推奨します。  
   
 ## <a name="cbutton-class"></a>CButton クラス  
   
@@ -61,7 +61,7 @@ AFX_ANSI_DEPRECATED BOOL SetCueBanner(LPCWSTR lpszText,
 ```  
   
 ## <a name="clinkctrl-class"></a>CLinkCtrl クラス  
- クラス全体は推奨されません。  
+ クラス全体が非推奨とされます。  
   
 ## <a name="clistctrl-class"></a>CListCtrl クラス  
   

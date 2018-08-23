@@ -18,25 +18,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7c32da2b56e3a19bda02f226645b98d746a39c7d
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 5b8d9ef624f17645da058ab86cd9b6a53cf17069
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650317"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606022"
 ---
 # <a name="shrinking-or-stretching-part-of-an-image-image-editor-for-icons"></a>イメージの一部の縮小または拡大 (アイコン用イメージ エディター)
-### <a name="to-shrink-or-stretch-part-of-an-image"></a>イメージの一部を拡大または縮小するには  
-  
-1.  サイズを変更するイメージの一部を選択します。 詳細については、次を参照してください。[領域のイメージの選択](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)します。  
-  
-2.  選択範囲が必要なサイズになるまでは、サイズ変更ハンドルのいずれかをドラッグします。  
-  
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。  
-  
-## <a name="requirements"></a>要件  
- なし  
-  
-## <a name="see-also"></a>関連項目  
- [アクセラレータ キー](../windows/accelerator-keys-image-editor-for-icons.md)   
- [イメージのサイズ変更](../windows/resizing-an-image-image-editor-for-icons.md)
+
+### <a name="to-shrink-or-stretch-part-of-an-image"></a>イメージの一部を拡大または縮小するには
+
+1. サイズを変更するイメージの一部を選択します。 詳細については、次を参照してください。[領域のイメージの選択](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)します。
+
+2. 選択範囲が必要なサイズになるまでは、サイズ変更ハンドルのいずれかをドラッグします。
+
+マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
+
+## <a name="requirements"></a>要件
+
+なし
+
+## <a name="see-also"></a>関連項目
+
+[アクセラレータ キー](../windows/accelerator-keys-image-editor-for-icons.md)  
+[イメージのサイズ変更](../windows/resizing-an-image-image-editor-for-icons.md)

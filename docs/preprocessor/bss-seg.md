@@ -1,5 +1,5 @@
 ---
-title: bss_seg |Microsoft ドキュメント
+title: bss_seg |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b82027066e66cc51be8982a19ab6209ff236ef2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 08304a42b961f93b7d9e4e6e644e1514e34eb335
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849809"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540197"
 ---
 # <a name="bssseg"></a>bss_seg
 初期化されていない変数が格納される .obj ファイル内のセグメントを指定します。  
@@ -31,35 +31,35 @@ ms.locfileid: "33849809"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 #pragma bss_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
-## <a name="remarks"></a>コメント  
- Obj ファイルと見なすことができます、 [dumpbin](../build/reference/dumpbin-command-line.md)アプリケーションです。 初期化されていないデータの .obj ファイルの既定セグメントは、.bss です。 場合によっては、使用**bss_seg**高速化することができますを 1 つのセクションに初期化されていないデータをグループ化で、読み込み時間。  
+## <a name="remarks"></a>Remarks  
+ 
+Obj ファイルを表示できる、 [dumpbin](../build/reference/dumpbin-command-line.md)アプリケーション。 初期化されていないデータの .obj ファイルの既定セグメントは、.bss です。 場合によっては使用**bss_seg**高速化できますの読み込み時間の 1 つのセクションに初期化されていないデータをグループ化します。  
   
- **bss_seg**パラメーターなしのセグメントを .bss にリセットします。  
+**bss_seg**パラメーターなしで、セグメントを .bss にリセットします。  
   
- **プッシュ**(省略可能)  
- レコードを内部コンパイラ スタックに格納します。 A**プッシュ**持つことができます、*識別子*と*セグメント名*です。  
+*プッシュ*(省略可能)  
+レコードを内部コンパイラ スタックに格納します。 A*プッシュ*できますが、*識別子*と*セグメント名*します。  
   
- **pop** (省略可能)  
- 内部コンパイラ スタックの最上部からレコードを削除します。  
+*pop* (省略可能)  
+内部コンパイラ スタックの最上部からレコードを削除します。  
   
- *識別子*(省略可能)  
- 使用すると**プッシュ**、内部コンパイラ スタックのレコードに名前が割り当てられます。 使用すると**pop**、レコードまで内部スタックからポップ*識別子*が削除された場合は*識別子*がない内部スタックで、何もポップします。  
+*識別子*(省略可能)  
+使用すると*プッシュ*、内部コンパイラ スタックのレコードに名前を割り当てます。 使用すると*pop*、レコードまで内部スタックからポップ*識別子*が削除された場合*識別子*は内部のスタックに何もポップされます。  
   
- *識別子*により、複数のレコードが 1 つでポップできます**pop**コマンド。  
+*識別子*により、複数のレコードを 1 つのポップを*pop*コマンド。  
   
- *"segment-name"*(optional)  
- 引数の名前。 使用すると**pop**、スタックがポップされますと*セグメント名*アクティブなセグメント名になります。  
+*"segment-name"*(optional)  
+引数の名前。 使用すると*pop*、スタックがポップされ、*セグメント名*がアクティブなセグメント名になります。  
   
- *「セグメント クラス」* (省略可能)  
- Version 2.0 未満の C++ との互換性のために残されています。 これは無視されます。  
+*「セグメント クラス」* (省略可能)  
+Version 2.0 未満の C++ との互換性のために残されています。 これは無視されます。  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp  
 // pragma_directive_bss_seg.cpp  
 int i;                     // stored in .bss  
 #pragma bss_seg(".my_data1")  
@@ -75,11 +75,12 @@ int main() {
 }  
 ```  
   
- 初期化されたデータのセクションを指定することもできます ([data_seg](../preprocessor/data-seg.md))、関数 ([code_seg](../preprocessor/code-seg.md))、および const 変数 ([const_seg](../preprocessor/const-seg.md))。  
+初期化されたデータのセクションを指定することもできます ([data_seg](../preprocessor/data-seg.md))、関数 ([code_seg](../preprocessor/code-seg.md))、および const 変数 ([const_seg](../preprocessor/const-seg.md))。  
   
- 使用して割り当てられたデータ、 **bss_seg**プラグマがその位置に関する情報を保持しません。  
+データを使用して割り当て、 **bss_seg**プラグマがその場所に関する情報を保持していません。  
   
- 参照してください[/section](../build/reference/section-specify-section-attributes.md)セクションを作成するときに使用しない名前の一覧についてはします。  
+参照してください[/section](../build/reference/section-specify-section-attributes.md)に対して一連の名前のセクションを作成するときに使用する必要があります。  
   
 ## <a name="see-also"></a>関連項目  
- [プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

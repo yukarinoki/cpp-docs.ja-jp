@@ -1,5 +1,5 @@
 ---
-title: _ _inbyte |Microsoft ドキュメント
+title: _ _inbyte |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad2e02d4e1bc1ee5d1694769b2ec217cd7acbaba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a7a659c9ac452d9ff42bb37d049e5cf44ff2c261
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329830"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538311"
 ---
 # <a name="inbyte"></a>__inbyte
 **Microsoft 固有の仕様**  
   
- 生成、`in`命令、1 バイトを返すことによって指定されたポートから読み取られた`Port`です。  
+ 生成、`in`で指定されたポートからの命令、1 バイトを返す読み取り`Port`します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,7 +40,7 @@ unsigned char __inbyte(
   
 #### <a name="parameters"></a>パラメーター  
  [入力] `Port`  
- 読み取りにポートです。  
+ 読み取るポート。  
   
 ## <a name="return-value"></a>戻り値  
  指定されたポートから読み取られたバイト。  
@@ -49,13 +49,13 @@ unsigned char __inbyte(
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__inbyte`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__inbyte`|x86、x64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
 **Microsoft 固有の仕様はここまで**  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このルーチンは、組み込みとしてのみ使用できます。  
   
 ## <a name="see-also"></a>関連項目  

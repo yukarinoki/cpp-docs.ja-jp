@@ -1,5 +1,5 @@
 ---
-title: '方法: safe_cast を使用して、C + + CLI |Microsoft ドキュメント'
+title: '方法: safe_cast を使用して、c++/cli CLI |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0f695c45d5202f376a4ce4daf14c37a7fd9a1904
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd1582179a64327afda6a4dc16cde9588b19397f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33136676"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607915"
 ---
 # <a name="how-to-use-safecast-in-ccli"></a>方法: C++/CLI で safe_cast を使用する
-この記事は、C + で safe_cast を使用する方法を示しています。 + CLI アプリケーションです。 Safe_cast について[!INCLUDE[cppwrt_short](../build/reference/includes/cppwrt_short_md.md)]を参照してください[safe_cast](../windows/safe-cast-cpp-component-extensions.md)です。  
+この記事では、C + で safe_cast を使用する方法を示しています。/cli CLI アプリケーション。 C + で safe_cast について/cli CX を参照してください[safe_cast](../windows/safe-cast-cpp-component-extensions.md)します。  
   
-## <a name="upcasting"></a>アップ キャスト  
- アップ キャストは、派生型からその基本クラスのいずれかへのキャストです。 このキャストは、安全な明示的なキャスト表記は必要ありません。 次の例を使用して、アップ キャストを実行する方法を示しています。`safe_cast`と指定されていない場合。  
+## <a name="upcasting"></a>キャスト  
+ アップ キャストは、派生型からその基本クラスのいずれかにキャストします。 このキャストは、安全な明示的なキャスト表記は必要ありません。 次の例は、使用、アップ キャストを実行する方法を示します`safe_cast`とこれがないです。  
   
 ```cpp  
 // safe_upcast.cpp  
@@ -76,7 +76,7 @@ in B::Test2
 ```  
   
 ## <a name="downcasting"></a>ダウン キャスト  
- ダウン キャストには、基底クラスから基底クラスから派生したクラスへのキャストを示します。  ダウン キャストは実行時にアドレス指定されるオブジェクトは、派生クラス オブジェクト実際に対処している場合にのみ安全です。  異なり`static_cast`、`safe_cast`動的チェックを実行し、スロー<xref:System.InvalidCastException>場合は、変換は失敗します。  
+ ダウン キャストは、基本クラスから基底クラスから派生したクラスへのキャストです。  ダウン キャストは実行時に指定されるオブジェクトが派生クラスのオブジェクトをアドレス指定実際に場合にのみ安全です。  異なり`static_cast`、`safe_cast`動的チェックを実行し、スロー<xref:System.InvalidCastException>場合は、変換は失敗します。  
   
 ```cpp  
 // safe_downcast.cpp  
@@ -127,8 +127,8 @@ in C::Test()
 in B::Test2()  
 ```  
   
-## <a name="safecast-with-user-defined-conversions"></a>ユーザー定義の変換と safe_cast  
- 次の例は、使用する方法を示しています。`safe_cast`をユーザー定義の変換を呼び出します。  
+## <a name="safecast-with-user-defined-conversions"></a>ユーザー定義の変換を含む safe_cast  
+ 次のサンプルを使用する方法を示しています。`safe_cast`をユーザー定義の変換を呼び出します。  
   
 ```cpp  
 // safe_cast_udc.cpp  
@@ -185,9 +185,9 @@ in operator V^(R^ r)
   
 ### <a name="boxing"></a>ボックス化  
   
- ボックス化は、コンパイラが挿入された、ユーザー定義の変換として定義されます。  したがって、使用することができます`safe_cast`CLR ヒープに値をボックス化します。  
+ ボックス化は、コンパイラが挿入された、ユーザー定義の変換として定義されます。  したがって、使用できる`safe_cast`を CLR ヒープ上の値をボックス化します。  
   
- 次の例では、単純なとユーザー定義の値の型をボックス化を示します。  A`safe_cast`がガベージ コレクトされたヒープに変数に割り当て、ネイティブ スタックには値型の変数をボックスします。  
+ 次の例では、シンプルでユーザー定義の値の型のボックス化を示します。  A`safe_cast`ボックスの値型の変数がネイティブ スタックにあるガベージ コレクション ヒープ上の変数に割り当てることがあります。  
   
 ```cpp  
 // safe_cast_boxing.cpp  
@@ -213,7 +213,7 @@ int main() {
 }  
 ```  
   
- [次へ] 例は、ボックス化が経由でユーザー定義の変換で優先順位を持つ、`safe_cast`操作します。  
+ 次の例は、ボックス化が経由でユーザー定義の変換で優先順位を持つことを示しています、`safe_cast`操作。  
   
 ```cpp  
 // safe_cast_boxing_2.cpp  
@@ -248,9 +248,9 @@ int main() {
   
 ### <a name="unboxing"></a>ボックス化解除  
   
- ボックス化解除は、コンパイラが挿入された、ユーザー定義の変換として定義されます。  したがって、使用することができます`safe_cast`CLR ヒープに値をボックス化解除します。  
+ ボックス化解除すると、コンパイラが挿入された、ユーザー定義の変換として定義されます。  したがって、使用できる`safe_cast`CLR ヒープ上の値をボックス化解除します。  
   
- ユーザー定義の変換は、ボックス化解除は、ボックス化とは異なりボックス化解除する必要がありますは明示的にする-によっては、実行する必要があります、 `static_cast`、C スタイル キャスト、または`safe_cast`; ボックス化解除し、暗黙的に実行できません。  
+ ユーザー定義の変換は、ボックス化解除が、ボックス化とは異なりボックス化解除する必要があります明示的 — では、実行する必要があります、 `static_cast`、C スタイル キャスト、または`safe_cast`; ボックス化解除し、暗黙的に実行できません。  
   
 ```cpp  
 // safe_cast_unboxing.cpp  
@@ -261,7 +261,7 @@ int main() {
 }  
 ```  
   
- 次のサンプルは、値型とのプリミティブ型をボックス化解除を示しています。  
+ 次のサンプルは、値型とプリミティブ型をボックス化解除を示しています。  
   
 ```cpp  
 // safe_cast_unboxing_2.cpp  
@@ -308,7 +308,7 @@ int main() {
 ```  
   
 ## <a name="safecast-and-generic-types"></a>safe_cast 型およびジェネリック型  
- 次の例は、使用する方法を示しています。`safe_cast`ジェネリック型にキャストを実行します。  
+ 次のサンプルを使用する方法を示しています。`safe_cast`ジェネリック型にキャストを実行します。  
   
 ```cpp  
 // safe_cast_generic_types.cpp  

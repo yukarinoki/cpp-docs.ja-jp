@@ -1,5 +1,5 @@
 ---
-title: _ _readpmc |Microsoft ドキュメント
+title: _ _readpmc |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73d98db19be60bd038965763a24b83ddd0016c9f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d5072f49728a4ea9b7a323d3837997dd3d767358
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333792"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539899"
 ---
 # <a name="readpmc"></a>__readpmc
 **Microsoft 固有の仕様**  
   
- 生成、`rdpmc`命令で指定されたカウンターの監視パフォーマンスの読み取りが`counter`です。  
+ 生成、`rdpmc`命令で指定されたカウンターの監視パフォーマンスの読み取りが`counter`します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,21 +40,21 @@ unsigned __int64 __readpmc(
   
 #### <a name="parameters"></a>パラメーター  
  [入力] `counter`  
- 読み取りパフォーマンス カウンター。  
+ パフォーマンス カウンターを読み取る。  
   
 ## <a name="return-value"></a>戻り値  
- 指定されたパフォーマンス カウンターの値。  
+ 指定したパフォーマンス カウンターの値。  
   
 ## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__readpmc`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readpmc`|x86、x64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
- この組み込みはカーネル モードでのみ、使用可能なルーチンが、組み込みとしてのみです。  
+## <a name="remarks"></a>Remarks  
+ この組み込みはカーネル モードでのみ、使用可能なルーチンは組み込みとして使用できるのみです。  
   
 **Microsoft 固有の仕様はここまで**  
   

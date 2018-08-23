@@ -1,23 +1,23 @@
 ---
-title: ユニバーサル Windows プラットフォーム アプリでサポートされない CRT 関数 |Microsoft ドキュメント
+title: ユニバーサル Windows プラットフォーム アプリでサポートされない CRT 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: cbfc957d-6c60-48f4-97e3-1ed8526743b4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed8b5c150632d035060b0e34f3962f2e903990a8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ef64ac81e36a298d89078997992343d92b7dbdc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090869"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609186"
 ---
 # <a name="crt-functions-not-supported-in-universal-windows-platform-apps"></a>ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数
-多くの C ランタイム (CRT) 関数はユニバーサル Windows プラットフォーム (UWP) アプリをビルドする時に使用できません。 場合によっては、回避策を利用できます:-たとえば、Windows ランタイムまたは Win32 Api を使用できます。 しかし、回避策が利用できない場合には、CRT 関数は禁止されています。CRT 関数に相当する機能やサポートする API を UWP アプリに使用できないためです。 Windows ランタイムのサポートされている別の方法を探すを参照してください。 [UWP アプリでの Windows Api に代わる方法](/uwp/win32-and-com/alternatives-to-windows-apis-uwp)です。  
+多くの C ランタイム (CRT) 関数はユニバーサル Windows プラットフォーム (UWP) アプリをビルドする時に使用できません。 場合によっては、回避策がある--たとえば、Windows ランタイムまたは Win32 Api を使用できます。 しかし、回避策が利用できない場合には、CRT 関数は禁止されています。CRT 関数に相当する機能やサポートする API を UWP アプリに使用できないためです。 Windows ランタイムのサポートされている別の方法を探すを参照してください。 [UWP アプリでの Windows Api の代替](/uwp/win32-and-com/alternatives-to-windows-apis-uwp)します。  
   
 次の一覧には UWP アプリをビルドするときに使用できない CRT 関数と、その回避策があればそれを示しています。  
   
@@ -39,13 +39,13 @@ ms.locfileid: "33090869"
 |_environ _putenv _putenv_s _searchenv _searchenv_s _dupenv_s _wputenv _wputenv_s _wsearchenv getenv getenv_s putenv _wdupenv_s _wenviron _wgetenv _wgetenv_s _wsearchenv_s tzset|UWP アプリでは環境変数を使用できません。|回避策はありません。 タイム ゾーンを設定するには、_tzset を使用します。|  
 |_loaddll _getdllprocaddr _unloaddll|これらは以前のバージョンの CRT で廃止された関数です。 また、ユーザーは同じアプリケーション パッケージのものを除き、DLL を読み込むことができません。|パッケージ化された DLL を読み込んで使用するには、Win32 API `LoadPackagedLibrary`、 `GetProcAddress`、 `FreeLibrary` を使用します。|  
 |_wexecl _wexecle _wexeclp _wexeclpe _wexecv _wexecve _wexecvp _wexecvpe _execl _execle _execlp _execlpe _execv _execve _execvp _execvpe _spawnl _spawnle _spawnlp _spawnlpe _spawnv _spawnve _spawnvp _spawnvpe _wspawnl _wspawnle _wspawnlp _wspawnlpe _wspawnv _wspawnve _wspawnvp _wspawnvpe _wsystem execl execle execlp execlpe execv execve execvp execvpe spawnl spawnle spawnlp spawnlpe spawnv spawnve spawnvp spawnvpe system|この機能は、UWP アプリでは使用できません。 UWP アプリから別の UWP アプリまたはデスクトップ アプリを起動することはできません。|回避策はありません。|  
-|_heapwalk _heapadd _heapchk _heapset _heapused|ここに挙げた関数は通常、ヒープを使用するために使用します。 しかし、UWP アプリでは対応する Win32 API がサポートされていません。 アプリがプライベート ヒープを作成したり使用したりすることはありません。|回避策はありません。 ただし、 `_heapwalk` はデバッグを目的とする場合にのみ DEBUG CRT で使用できます。 Microsoft Store にアップロードされるアプリでは、これらを使用できません。|  
+|_heapwalk _heapadd _heapchk _heapset _heapused|ここに挙げた関数は通常、ヒープを使用するために使用します。 しかし、UWP アプリでは対応する Win32 API がサポートされていません。 アプリがプライベート ヒープを作成したり使用したりすることはありません。|回避策はありません。 ただし、 `_heapwalk` はデバッグを目的とする場合にのみ DEBUG CRT で使用できます。 これらは、Microsoft Store にアップロードされるアプリで使用することはできません。|  
   
- 次の関数は UWP アプリの CRT で使用できますが、対応する Win32 または Windows ランタイム Api を使用できない場合にのみ使用する必要があります: 大きなコード ベースを移植するときなど、  
+ 次の関数は、UWP アプリの CRT で使用できますが、対応する Win32 または Windows ランタイム Api を使用できない場合にのみ使用する必要があります: 大規模なコード ベースを移植する場合など、  
   
 |||  
 |-|-|  
-|1 バイト文字列関数 ( `strcat`、 `strcpy`、 `strlwr`など)。|UWP アプリには Unicode すべての Win32 Api と公開されている Windows ランタイム Api は、Unicode 文字のセットのみを使用しているためです。  1 バイトの関数は、大きなコード ベースを移植するときのために残されていますが、それ以外の状況では使用を避け、可能な限り対応するワイド文字関数を使用してください。|  
+|1 バイト文字列関数 ( `strcat`、 `strcpy`、 `strlwr`など)。|UWP アプリには Unicode Unicode 文字セットのみを使用して、すべての Win32 Api と Windows ランタイム Api は公開されているためです。  1 バイトの関数は、大きなコード ベースを移植するときのために残されていますが、それ以外の状況では使用を避け、可能な限り対応するワイド文字関数を使用してください。|  
 |ストリーム IO 関数と低レベル ファイル IO 関数 ( `fopen`、 `open`など)。|ここに挙げた関数は同期的であるため、UWP アプリに使用することは勧められていません。 UWP アプリでは、UI スレッドがロックされることがないように、ファイルを開くとき、ファイルから読み取るとき、ファイルに書き込むときは非同期 API を使用します。 このような API には、 `Windows::Storage::FileIO` クラスのものなどが挙げられます。|  
   
 ## <a name="windows-8x-store-apps-and-windows-phone-8x-apps"></a>Windows 8.x ストア アプリと Windows Phone 8.x アプリ  

@@ -19,6 +19,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - fseek
@@ -37,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a327bf196da71f47262c957e7fe6a8352971c36d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 01c0eee248090f6bffad6f68b34d59f1a6fa7265
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403743"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572053"
 ---
 # <a name="fseek-fseeki64"></a>fseek、_fseeki64
 
@@ -76,31 +77,31 @@ int _fseeki64(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、 **fseek**と **_fseeki64** 0 を返します。 それ以外の場合は、0 以外の値を返します。 シーク非対応のデバイスでは、戻り値は未定義です。 場合*ストリーム*null ポインターでは、場合*原点*以下に示す有効な値のいずれかではない**fseek**と **_fseeki64**無効な呼び出しパラメーターのハンドラーを」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し、-1 を返します。
+成功した場合、 **fseek**と **_fseeki64** 0 を返します。 それ以外の場合は、0 以外の値を返します。 シーク非対応のデバイスでは、戻り値は未定義です。 場合*ストリーム*null ポインターの場合は、場合*原点*が許可されている値を以下に示すいずれかの**fseek**と **_fseeki64**無効なを呼び出すパラメーターのハンドラーを」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し、-1 を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Fseek**と **_fseeki64**関数ファイル ポインター (存在する場合) に関連付けられている移動*ストリーム*されている新しい場所に*オフセット*バイト*原点*です。 ストリームの次の操作は、新しい場所で行われます。 更新用に開かれているストリームでの次の操作は読み取りまたは書き込みのいずれかです。 引数*原点*STDIO で定義されている、次の定数のいずれかを指定する必要があります。H:
+**Fseek**と **_fseeki64**関数ファイル ポインター (存在する場合) に関連付けられている移動*ストリーム*である新しい場所に*オフセット*バイト*原点*します。 ストリームの次の操作は、新しい場所で行われます。 更新用に開かれているストリームでの次の操作は読み取りまたは書き込みのいずれかです。 引数*原点*STDIO で定義されている、次の定数のいずれかを指定する必要があります。H:
 
 |配信元の値|説明|
 |-|-|
 **SEEK_CUR**|ファイル ポインターの現在の位置。
-**SEEK_END**|EOF (ファイル終端)。
+**オフセット**|EOF (ファイル終端)。
 **SEEK_SET**|ファイルの先頭。
 
-使用することができます**fseek**と **_fseeki64**ファイルの任意の場所にポインターを移動します。 ポインターは、ファイルの末尾を越えて配置することもできます。 **fseek**と **_fseeki64**ファイルの終端のインジケーターをクリアし、前にすべての結果を否定[ungetc](ungetc-ungetwc.md)に対して呼び出す*ストリーム*です。
+使用することができます**fseek**と **_fseeki64**ファイル内の任意の場所にポインターを移動します。 ポインターは、ファイルの末尾を越えて配置することもできます。 **fseek**と **_fseeki64** 、ファイルの終わりインジケーターをクリアし、前のすべての効果が無視されます[ungetc](ungetc-ungetwc.md)に対する*ストリーム*します。
 
 データを追加するためにファイルを開く場合、現在のファイルの位置は、次の書き込みが発生する場所ではなく最後の I/O 操作によって決まります。 追加のために開かれたファイルで I/O 操作がまだ発生していない場合、ファイルの位置はファイルの先頭です。
 
-テキスト モードで開いたストリーム**fseek**と **_fseeki64**キャリッジ リターンとライン フィード翻訳可能性があるため、用途が限定**fseek**と **_fseeki64**予期しない結果を生成します。 唯一**fseek**と **_fseeki64**操作がテキスト モードで開いたストリームで動作する保証は。
+テキスト モードで開かれたストリームの**fseek**と **_fseeki64**キャリッジ リターンとラインフィードの変換が発生することができますので、用途が限定**fseek**と **_fseeki64**予期しない結果を生成します。 唯一**fseek**と **_fseeki64**テキスト モードで開かれたストリームで動作する保証の操作します。
 
 - 元の値のいずれかに対して相対的なオフセット 0 でシークします。
 
-- 呼び出しから返されたオフセット値を持つファイルの先頭からのシーク[ftell](ftell-ftelli64.md)を使用する場合**fseek**または[_ftelli64](ftell-ftelli64.md)を使用する場合 **_fseeki64**.
+- 呼び出しから返されるオフセット値を使用して、ファイルの先頭からシーク[ftell](ftell-ftelli64.md)を使用する場合**fseek**または[_ftelli64](ftell-ftelli64.md)を使用する場合 **_fseeki64**.
 
-テキスト モードでも、Ctrl + Z は入力時に EOF (EOF: end-of-file) 文字として解釈されます。 読み取り/書き込み用に開かれたファイルで[fopen](fopen-wfopen.md)関連するすべてのルーチンは、ファイルの末尾に CTRL + Z を確認して、可能であればそれを削除します。 これはの組み合わせを使用して、 **fseek**と[ftell](ftell-ftelli64.md)または **_fseeki64**と[_ftelli64](ftell-ftelli64.md)で終わるファイル内で移動するにはCTRL + Z が発生する可能性があります**fseek**または **_fseeki64**が、ファイルの末尾付近に正しく動作します。
+テキスト モードでも、Ctrl + Z は入力時に EOF (EOF: end-of-file) 文字として解釈されます。 ファイルを読み取り/書き込み、開いた[fopen](fopen-wfopen.md)と関連するすべてのルーチンは、ファイルの末尾に CTRL + Z 確認し、可能であれば削除します。 これはの組み合わせを使用して、 **fseek**と[ftell](ftell-ftelli64.md)または **_fseeki64**と[_ftelli64](ftell-ftelli64.md)で終わるファイル内で移動するには、CTRL + Z が生じる**fseek**または **_fseeki64**ファイルの末尾近くが正しく動作しません。
 
-バイト オーダー マーク (BOM) で始まるファイルを CRT で開くときには、ファイル ポインターは BOM の後ろ (つまり、ファイルの実際のコンテンツの開始位置) に配置されます。 しなければならない場合**fseek**ファイルの先頭を使用して[ftell](ftell-ftelli64.md)を初期位置を取得して**fseek**にではなく 0 を配置します。
+バイト オーダー マーク (BOM) で始まるファイルを CRT で開くときには、ファイル ポインターは BOM の後ろ (つまり、ファイルの実際のコンテンツの開始位置) に配置されます。 しなければならない場合**fseek**ファイルの先頭を使用して[ftell](ftell-ftelli64.md)初期位置を取得して**fseek** 0 の位置ではなく、それにします。
 
 この関数では、実行中に他のスレッドをロックするので、スレッド セーフです。 ロックしないバージョンについては、「[_fseek_nolock、_fseeki64_nolock](fseek-nolock-fseeki64-nolock.md)」を参照してください。
 

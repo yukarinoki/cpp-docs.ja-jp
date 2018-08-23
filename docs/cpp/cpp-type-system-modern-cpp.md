@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b5a91caab06f4d03beeea8ba542e1ebc12a8ecb
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 394136ccd11b4efd9f312c82acad7e9258309551
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407862"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572759"
 ---
 # <a name="c-type-system-modern-c"></a>C++ 型システム (Modern C++)
 概念*型*C++ では非常に重要です。 変数、関数の引数、関数の戻り値をコンパイルするには、それぞれに型が必要です。 さらに、すべての式 (リテラル値を含む) には、評価前にコンパイラーにより暗黙的に型が指定されます。 型の例を示します**int**整数の値を格納する**二重**浮動小数点値を格納する (とも呼ばれます*スカラー*データ型)、または標準ライブラリ クラス[std::basic_string](../standard-library/basic-string-class.md)テキストを格納します。 定義することで、独自の型を作成することができます、**クラス**または**構造体**します。 型は、変数 (または式の結果) に割り当てられるメモリの量、その変数に格納される値の種類、それらの値の解釈方法 (ビット パターンとして)、その型で実行可能な操作を指定します。 ここでは、C++ の型システムの主な機能の概要を示します。  
@@ -157,7 +157,7 @@ void someFunction() {
  ポインターの詳細については一般に、表示[ポインター](../cpp/pointers-cpp.md)します。  
   
 ## <a name="windows-data-types"></a>Windows のデータ型  
- C および C++ 向けの従来の Win32 プログラミングでは、ほとんどの関数は Windows 固有の typedef マクロと #define マクロ (`windef.h` で定義) を使用して、パラメーターと戻り値の型を指定します。 これらの Windows データ型は、C と C++ の組み込み型に付けられた特殊な名前 (エイリアス) ではほとんどの場合です。 これらの typedef とプリプロセッサ定義の一覧は、次を参照してください。[データ型の Windows](http://msdn.microsoft.com/4553cafc-450e-4493-a4d4-cb6e2f274d46)します。 HRESULT や LCID など、typedef には便利で内容がわかりやすいものがあります。 INT など、他の typedef には特別な意味がなく、C++ の基本型のエイリアスにすぎません。 他の Windows のデータ型には、C プログラミングおよび 16 ビット プロセッサの時代から残っている名前がありますが、最新のハードウェアやオペレーティング システムでは目的も意味もありません。 またとして一覧表示、Windows ランタイム ライブラリに関連付けられている特殊なデータ型がある[Windows ランタイムの基本データ型](http://msdn.microsoft.com/b5735851-ec07-48c1-92b4-ca9f768096f6)します。 最新の C++ では、値の解釈方法について Windows の型が追加の意味を伝えるのでない限り、一般的なガイドラインとして C++ の基本型が推奨されます。  
+ C および C++ 向けの従来の Win32 プログラミングでは、ほとんどの関数は Windows 固有の typedef マクロと #define マクロ (`windef.h` で定義) を使用して、パラメーターと戻り値の型を指定します。 これらの Windows データ型は、C と C++ の組み込み型に付けられた特殊な名前 (エイリアス) ではほとんどの場合です。 これらの typedef とプリプロセッサ定義の一覧は、次を参照してください。[データ型の Windows](/windows/desktop/WinProg/windows-data-types)します。 HRESULT や LCID など、typedef には便利で内容がわかりやすいものがあります。 INT など、他の typedef には特別な意味がなく、C++ の基本型のエイリアスにすぎません。 他の Windows のデータ型には、C プログラミングおよび 16 ビット プロセッサの時代から残っている名前がありますが、最新のハードウェアやオペレーティング システムでは目的も意味もありません。 またとして一覧表示、Windows ランタイム ライブラリに関連付けられている特殊なデータ型がある[Windows ランタイムの基本データ型](/windows/desktop/WinRT/base-data-types)します。 最新の C++ では、値の解釈方法について Windows の型が追加の意味を伝えるのでない限り、一般的なガイドラインとして C++ の基本型が推奨されます。  
   
 ## <a name="more-information"></a>説明  
  C++ の型システムの詳細については、次のトピックを参照してください。  

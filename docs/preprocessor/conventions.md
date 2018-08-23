@@ -1,5 +1,5 @@
 ---
-title: 規則 |Microsoft ドキュメント
+title: 規則 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae91b383159a6de7e28507f9e272e5ea60093e0e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1227136dfc42269348fa8ac2d996ca80d063c610
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912668"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541229"
 ---
 # <a name="conventions"></a>規約
 構文規則では、構文のコンポーネントごとに異なるフォント属性を使用します。 シンボルとフォントは次のとおりです。  
@@ -32,7 +32,8 @@ ms.locfileid: "33912668"
 |opt|後ろに opt が続く非終端要素は、常に省略可能です。|  
 |既定のタイプフェイス|このタイプフェイスで記述されているか、示されているセット内の文字は、ステートメント内で終端要素として使用できます。|  
   
- 非終端要素に続くコロン (:) は、定義の説明を示します。 代替定義は別の行に示されます。  
+非終端要素に続くコロン (:) は、定義の説明を示します。 代替定義は別の行に示されます。  
   
 ## <a name="see-also"></a>関連項目  
- [文法の概要 (C/C++)](../preprocessor/grammar-summary-c-cpp.md)
+
+[文法の概要 (C/C++)](../preprocessor/grammar-summary-c-cpp.md)

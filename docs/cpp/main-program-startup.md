@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d78ca2a195ac60e31e01bbe271b7f92536cc1a05
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 824bb7059e13c76af0c2f739676d32afc04aa0c7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401483"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572658"
 ---
 # <a name="main-program-startup"></a>main: プログラムの起動
-という名前の特殊な関数**メイン**はすべての C および C++ プログラムの実行の開始ポイントです。 準拠したコードを記述する場合は、[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)]するを使用できるプログラミング モデル、`wmain`のワイド文字バージョンである**メイン**します。  
+という名前の特殊な関数**メイン**はすべての C および C++ プログラムの実行の開始ポイントです。 Unicode プログラミング モデルに準拠するコードを記述する場合は、使用できます`wmain`のワイド文字バージョンである**メイン**します。  
   
  **メイン**関数がコンパイラによってあらかじめ定義されていません。 これは、プログラム テキストに記述する必要があります。  
   

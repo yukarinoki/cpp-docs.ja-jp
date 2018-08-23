@@ -1,5 +1,5 @@
 ---
-title: raw_method_prefix |Microsoft ドキュメント
+title: raw_method_prefix |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 236c9042393e4ff3de57bea83ad566c8b74d5d3b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8fb9178bc315385bab97cea473430745ad66d973
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839921"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538437"
 ---
 # <a name="rawmethodprefix"></a>raw_method_prefix
-**C 固有の仕様**  
+**C++ 固有の仕様**  
   
- 名前の衝突を避けるために異なるプレフィックスを指定します。  
+名前の衝突を避けるために異なるプレフィックスを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,18 +34,20 @@ ms.locfileid: "33839921"
 raw_method_prefix("Prefix")  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `Prefix`  
- 使用されるプレフィックス。  
+### <a name="parameters"></a>パラメーター  
+*Prefix*  
+使用されるプレフィックス。  
   
-## <a name="remarks"></a>コメント  
- 低レベルのプロパティとメソッドは、既定のプレフィックスの付いたメンバー関数によって公開される**raw _** 高レベルのエラー処理メンバー関数の名前の衝突を避けるためにします。  
+## <a name="remarks"></a>Remarks  
+ 
+低レベルのプロパティとメソッドが既定のプレフィックスを持つという名前のメンバー関数によって公開されている**raw _** 高レベルのエラー処理メンバー関数の名前の競合を回避するためにします。  
   
 > [!NOTE]
->  場合の影響、`raw_method_prefix`の有無によって属性は変更されません、 [raw_interfaces_only](#_predir_raw_interfaces_only)属性。 `raw_method_prefix` は、プレフィックスの指定において、常に `raw_interfaces_only` に優先します。 両方の属性を同じ `#import` ステートメントで使用した場合、`raw_method_prefix` 属性で指定されているプレフィックスが使用されます。  
+> 効果、 **raw_method_prefix**の存在によって属性は変更されません、 [raw_interfaces_only](#_predir_raw_interfaces_only)属性。 **Raw_method_prefix**より優先されます`raw_interfaces_only`でプレフィックスを指定します。 両方の属性が同じで使用されている場合`#import`ステートメントでは後で指定されたプレフィックス、 **raw_method_prefix**属性を使用します。  
   
- **END C 固有の仕様**  
+**END C 固有の仕様**  
   
 ## <a name="see-also"></a>関連項目  
- [#import の属性](../preprocessor/hash-import-attributes-cpp.md)   
- [#import ディレクティブ](../preprocessor/hash-import-directive-cpp.md)
+ 
+[#import の属性](../preprocessor/hash-import-attributes-cpp.md)   
+[#import ディレクティブ](../preprocessor/hash-import-directive-cpp.md)

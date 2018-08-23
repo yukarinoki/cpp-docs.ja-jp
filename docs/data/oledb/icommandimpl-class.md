@@ -63,15 +63,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 07453e3040594332857ba75455b1847a3914fdd2
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d6adec1a87463515f3fa87dfd4ca31fda650e902
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337795"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573091"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl クラス
-実装を提供、 [ICommand](https://msdn.microsoft.com/library/ms709737.aspx)インターフェイス。  
+実装を提供、 [ICommand](/previous-versions/windows/desktop/ms709737\(v=vs.85\))インターフェイス。  
   
 ## <a name="syntax"></a>構文
 
@@ -124,7 +124,7 @@ STDMETHOD(Cancel)();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[icommand::cancel](https://msdn.microsoft.com/library/ms714402.aspx)で、 *OLE DB プログラマーズ リファレンス*します。  
+ 参照してください[icommand::cancel](/previous-versions/windows/desktop/ms714402\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
 
 ## <a name="cancelexecution"></a> Icommandimpl::cancelexecution
 現在のコマンドの実行をキャンセルします。  
@@ -178,7 +178,7 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 ### <a name="remarks"></a>Remarks  
  1 つ以上の行セットを作成するか、別の行セットを作成するための独自の条件を提供するには、別の呼び出しを配置`CreateRowset`内から`Execute`します。  
   
- 参照してください[icommand::execute](https://msdn.microsoft.com/library/ms718095.aspx)で、 *OLE DB プログラマーズ リファレンス。*  
+ 参照してください[icommand::execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス。*  
 
 ## <a name="execute"></a> Icommandimpl::execute
 コマンドを実行します。  
@@ -194,7 +194,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[icommand::execute](https://msdn.microsoft.com/library/ms718095.aspx)で、 *OLE DB プログラマーズ リファレンス*します。  
+ 参照してください[icommand::execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ### <a name="remarks"></a>Remarks  
  要求された発信インターフェイスは、この関数を作成する、行セット オブジェクトから取得したインターフェイスになります。  
@@ -212,7 +212,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[ICommand::GetDBSession](https://msdn.microsoft.com/library/ms719622.aspx)で、 *OLE DB プログラマーズ リファレンス*します。  
+ 参照してください[ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ### <a name="remarks"></a>Remarks  
  セッションからプロパティを取得するために便利です。  

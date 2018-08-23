@@ -17,39 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ff24ac92e5e84cb85127ef6e33805928fabd6f60
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 8398f0bd4d9fdc786926782b13ebcac913a6a351
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647532"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612871"
 ---
 # <a name="chaininterfacescancastto-method"></a>ChainInterfaces::CanCastTo メソッド
-指定されたインターフェイス ID を既定以外のテンプレート パラメーターで定義された特殊な形式をそれぞれにキャストできるかどうかを示します。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-__forceinline bool CanCastTo(  
-   REFIID riid,  
-   _Deref_out_ void **ppv  
-);  
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *riid*  
- インターフェイス ID。  
-  
- *ppv*  
- 正常にキャストされた最後のインターフェイス ID へのポインター。  
-  
-## <a name="return-value"></a>戻り値  
- **true**すべてのキャスト操作が成功した場合、それ以外の場合**false**します。  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** implements.h  
-  
- **名前空間:** Microsoft::WRL  
-  
-## <a name="see-also"></a>関連項目  
- [ChainInterfaces 構造体](../windows/chaininterfaces-structure.md)
+
+指定されたインターフェイス ID を既定以外のテンプレート パラメーターで定義された特殊な形式をそれぞれにキャストできるかどうかを示します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+__forceinline bool CanCastTo(
+   REFIID riid,
+   _Deref_out_ void **ppv
+);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*riid*  
+インターフェイス ID。
+
+*ppv*  
+正常にキャストされた最後のインターフェイス ID へのポインター。
+
+## <a name="return-value"></a>戻り値
+
+**true**すべてのキャスト操作が成功した場合、それ以外の場合**false**します。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** implements.h
+
+**名前空間:** Microsoft::WRL
+
+## <a name="see-also"></a>関連項目
+
+[ChainInterfaces 構造体](../windows/chaininterfaces-structure.md)

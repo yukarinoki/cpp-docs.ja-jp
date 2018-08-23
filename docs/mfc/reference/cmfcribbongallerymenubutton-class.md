@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonGalleryMenuButton クラス |Microsoft ドキュメント
+title: CMFCRibbonGalleryMenuButton クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,16 +28,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2dd3d47b2175a64be605ac8db9fdb1502ce2755
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: a63d72d9744928ca0871ed251cfaea254d0acb14
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041261"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539066"
 ---
 # <a name="cmfcribbongallerymenubutton-class"></a>CMFCRibbonGalleryMenuButton クラス
 リボン ギャラリーを含むリボン メニュー ボタンを実装します。  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。  
    
 ## <a name="syntax"></a>構文  
   
@@ -97,7 +97,7 @@ ASSERT_VALID (pExButton);
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md) [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) [CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) [CMFCRibbonGalleryMenuButton](../../mfc/reference/cmfcribbongallerymenubutton-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxRibbonPaletteGallery.h  
   
 ##  <a name="copyfrom"></a>  CMFCRibbonGalleryMenuButton::CopyFrom  
@@ -113,7 +113,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="cmfcribbongallerymenubutton"></a>  CMFCRibbonGalleryMenuButton::CMFCRibbonGalleryMenuButton  
- 構築して初期化、 [CMFCRibbonGalleryMenuButton](../../mfc/reference/cmfcribbongallerymenubutton-class.md)オブジェクト。  
+ 構築し、初期化、 [CMFCRibbonGalleryMenuButton](../../mfc/reference/cmfcribbongallerymenubutton-class.md)オブジェクト。  
   
 ```  
 CMFCRibbonGalleryMenuButton(
@@ -133,9 +133,9 @@ CMFCRibbonGalleryMenuButton(
   
 ### <a name="parameters"></a>パラメーター  
  *uiID*  
- ボタンのコマンド ID。 これは、ユーザーがこのボタンをクリックしたときに、WM_COMMAND メッセージで送信される値です。  
+ ボタンのコマンド ID。 これは、ユーザーがこのボタンをクリックすると、WM_COMMAND メッセージで送信される値です。  
   
- *画像*  
+ *画像を*  
  ギャラリー メニュー ボタンに表示するイメージのインデックス。 イメージが格納されている、 *imagesPalette*パラメーター。  
   
  *lpszText*  
@@ -154,7 +154,7 @@ CMFCRibbonGalleryMenuButton(
  ギャラリー メニュー ボタンは、矢印がポップアップ メニューとして表示されます。 ユーザーがこのボタンをクリックすると、イメージのギャラリーが表示されます。  
   
 ### <a name="example"></a>例  
- 次の例でのコンス トラクターを使用する方法、`CMFCRibbonGalleryMenuButton`クラスです。 このコード スニペットの一部である、 [MS Office 2007 デモ サンプル](../../visual-cpp-samples.md)です。  
+ 次の例では、コンス トラクターを使用する方法、`CMFCRibbonGalleryMenuButton`クラス。 このコード スニペットの一部、 [MS Office 2007 のデモ サンプル](../../visual-cpp-samples.md)します。  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#8](../../mfc/reference/codesnippet/cpp/cmfcribbongallerymenubutton-class_1.cpp)]  
   

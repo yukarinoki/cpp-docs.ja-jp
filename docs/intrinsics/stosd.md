@@ -1,5 +1,5 @@
 ---
-title: _ _stosd |Microsoft ドキュメント
+title: _ _stosd |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99d00b5e3b39f17203ba915d6b4344438803db88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e63ee47c98e898fe5cba1a24078029f6afe10b15
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327133"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539316"
 ---
 # <a name="stosd"></a>__stosd
 **Microsoft 固有の仕様**  
   
- ストア文字列命令が生成されます (`rep stosd`)。  
+ ストアの文字列の命令が生成されます (`rep stosd`)。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,7 +42,7 @@ void __stosd(
   
 #### <a name="parameters"></a>パラメーター  
  [出力] `Dest`  
- 操作の出力先。  
+ 操作の転送先。  
   
  [入力] `Data`  
  格納するデータ。  
@@ -54,12 +54,12 @@ void __stosd(
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__stosd`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__stosd`|x86、x64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
- 結果ダブルワードは`Data`のブロックに書き込まれる`Count`によって示されるメモリ位置にダブルワード`Dest`です。  
+## <a name="remarks"></a>Remarks  
+ 結果はダブルワード`Data`のブロックに書き込まれる`Count`によって示されるメモリ位置にダブルワード`Dest`します。  
   
  このルーチンは、組み込みとしてのみ使用できます。  
   

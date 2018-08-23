@@ -828,12 +828,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97d8e923d89085161feb7dcec38d3b0e3972b96e
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 317eae9ee404e603eaf37b2d512724c6b3d0c9f9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028422"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538364"
 ---
 # <a name="cwnd-class"></a>CWnd クラス
 Microsoft Foundation Class ライブラリにあるすべてのウィンドウ クラスの基本機能が用意されています。  
@@ -1302,7 +1302,7 @@ class CWnd : public CCmdTarget
   
  `CWnd`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="accdodefaultaction"></a>  CWnd::accDoDefaultAction  
@@ -2258,7 +2258,7 @@ virtual BOOL DestroyWindow();
   
  `DestroyWindow`メンバー関数によって作成されたモードレス ダイアログ ボックスを破棄も[CDialog::Create](../../mfc/reference/cdialog-class.md#create)します。  
   
- 場合、`CWnd`子ウィンドウが破棄されが、 [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)スタイルのセット、 [WM_PARENTNOTIFY](https://msdn.microsoft.com/library/ms632638.aspx)親にメッセージを送信します。  
+ 場合、`CWnd`子ウィンドウが破棄されが、 [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)スタイルのセット、 [WM_PARENTNOTIFY](/previous-versions/windows/desktop/inputmsg/wm-parentnotify)親にメッセージを送信します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCWindowing#87](../../mfc/reference/codesnippet/cpp/cwnd-class_26.cpp)]  
@@ -7780,7 +7780,7 @@ afx_msg void OnNcXButtonUp(
 >  このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。  
   
 ##  <a name="onnextmenu"></a>  CWnd::OnNextMenu  
- フレームワークは、このメンバー関数を呼び出し、メニュー バーとシステム メニューを切り替える右または左方向キーが使用されるときにするとします。  
+ フレームワークは、メニュー バーとシステム メニューを切り替える、右または左方向キーを使用する場合、このメンバー関数を呼び出します。  
   
 ```  
 afx_msg void OnNextMenu(
@@ -8260,7 +8260,7 @@ afx_msg void OnSessionChange(
 ### <a name="remarks"></a>Remarks  
  このメソッドは受信、 [WM_WTSSESSION_CHANGE](http://msdn.microsoft.com/library/aa383828)通知は、Windows SDK で説明します。  
   
- *NSessionState*パラメーターは、セッションが接続されているか、コンソールまたはリモートのターミナルから切断されている、ユーザーがログオンまたはログオフ、セッションがロックまたはロック解除、またはセッションがリモート制御の状態に変更を指定します。 詳細については、次を参照してください。、 *wParam*のパラメーターは、 [WM_WTSSESSION_CHANGE](http://msdn.microsoft.com/library/aa383828)メッセージ。  
+ *NSessionState*パラメーターは、セッションが接続されているか、コンソールまたはリモートのターミナルから切断されている、ユーザーがログオンまたはログオフ、セッションがロックまたはロック解除、またはセッションがリモート制御の状態に変更を指定します。 詳細については、次を参照してください。、 *wParam*のパラメーター、 [WM_WTSSESSION_CHANGE](http://msdn.microsoft.com/library/aa383828)メッセージ。  
   
 > [!NOTE]
 >  このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。  
@@ -8561,7 +8561,7 @@ afx_msg void OnSysChar(
 |31|遷移の状態を指定します。 キーがリリースされている、またはキーが押された場合は 0 の場合、値は 1 です。|  
   
 ### <a name="remarks"></a>Remarks  
- これには、コントロール メニュー キーの仮想キー コードを指定します。 (の標準の仮想キー コードの一覧については、Winuser.h を参照してください)  
+ これには、コントロール メニュー キーの仮想キー コードを指定します。 (標準の仮想キー コードの一覧は、の Winuser.h を参照してください)  
   
  WM_SYSCHAR を渡すことができます、コンテキストのコードが 0 の場合、 [WM_SYSCHAR](http://msdn.microsoft.com/library/windows/desktop/ms646357)メッセージを[TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms646373) Windows 関数は、システムではなく通常のキー メッセージものとして処理します。文字キー。 これにより、アクティブなウィンドウが入力フォーカスを持っていない場合でも、アクティブなウィンドウで使用されるアクセラレータ キーです。  
   
@@ -8983,7 +8983,7 @@ afx_msg void OnUnInitMenuPopup(
 >  このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。  
   
 ##  <a name="onupdateuistate"></a>  CWnd::OnUpdateUIState  
- 指定したウィンドウとそのすべての子ウィンドウのユーザー インターフェイス (UI) 状態を変更するのと呼ばれます。  
+ 指定したウィンドウとすべての子ウィンドウのユーザー インターフェイス (UI) 状態を変更するときに呼び出されます。  
   
 ```  
 afx_msg void OnUpdateUIState(

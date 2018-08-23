@@ -113,12 +113,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2fa455bbe4a5aa902232b502e129f6c8e21463a9
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e741055950449ea07c719cf6cd4c33a34d6f43b3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337723"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42575509"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset クラス
 フェッチして、単一の呼び出しで複数の行ハンドルを取得することによって、データの一括で動作する行を操作できます。  
@@ -160,7 +160,7 @@ class CBulkRowset : public CRowset<TAccessor>
  [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]  
 
 ## <a name="addrefrows"></a> Cbulkrowset::addrefrows
-呼び出し[IRowset::AddRefRows](https://msdn.microsoft.com/library/ms719619.aspx) bulk 行セットから取得した現在のすべての行の参照カウントをインクリメントします。  
+呼び出し[IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) bulk 行セットから取得した現在のすべての行の参照カウントをインクリメントします。  
   
 ### <a name="syntax"></a>構文  
   
@@ -246,7 +246,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
  [in]対象の行にブックマークからの行の数。 場合*した*0 の場合は、フェッチされる最初の行は、ブックマークが設定された行。 場合*した*は 1 です。 最初の行がフェッチされた行の直後、行は、します。 場合*した*-1 で、フェッチされる最初の行は、ブックマークが設定された行の前に行。  
   
 ### <a name="return-value"></a>戻り値  
- 参照してください[irowset::getdata](https://msdn.microsoft.com/library/ms716988.aspx)で、 *OLE DB プログラマーズ リファレンス*します。 
+ 参照してください[irowset::getdata](/previous-versions/windows/desktop/ms716988\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。 
 
 ## <a name="movetoratio"></a> Cbulkrowset::movetoratio
 行セット内の小数部の位置から始まる行がフェッチされます。  
@@ -273,10 +273,10 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
   
  `(nNumerator *  RowsetSize ) / nDenominator`  
   
- 場所`RowsetSize`行数で指定された行セットのサイズです。 この式の精度は、特定のプロバイダーによって異なります。 詳細については、次を参照してください。 [irowsetscroll::getrowsatratio](https://msdn.microsoft.com/library/ms709602.aspx)で、 *OLE DB プログラマーズ リファレンス*します。   
+ 場所`RowsetSize`行数で指定された行セットのサイズです。 この式の精度は、特定のプロバイダーによって異なります。 詳細については、次を参照してください。 [irowsetscroll::getrowsatratio](/previous-versions/windows/desktop/ms709602\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。   
 
 ## <a name="releaserows"></a> Cbulkrowset::releaserows
-呼び出し[::releaserows](https://msdn.microsoft.com/library/ms719771.aspx) bulk 行セットから取得した現在のすべての行の参照カウントをデクリメントします。  
+呼び出し[::releaserows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) bulk 行セットから取得した現在のすべての行の参照カウントをデクリメントします。  
   
 ### <a name="syntax"></a>構文  
   

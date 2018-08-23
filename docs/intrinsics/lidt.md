@@ -1,5 +1,5 @@
 ---
-title: _ _lidt |Microsoft ドキュメント
+title: _ _lidt |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8dd972d2a7e8d75f7149b2dc2766ffca86b0b2e5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f6f73e37c8fddc54e91be13d83c54f126ab6b5a0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326512"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540104"
 ---
 # <a name="lidt"></a>__lidt
 **Microsoft 固有の仕様**  
   
- 指定されたメモリ位置の値と割り込みの記述子テーブル レジスタ (IDTR) を読み込みます。  
+ 指定されたメモリ位置の値が割り込みの記述子テーブル レジスタ (IDTR) を読み込みます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,15 +47,15 @@ void __lidt(
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__lidt`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__lidt`|x86、x64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
- `__lidt`関数と同じ、`LIDT`マシン語命令、およびカーネル モードでのみ使用できます。 詳細については、検索、ドキュメントの"Intel アーキテクチャ ソフトウェア デベロッパーズ マニュアル、ボリューム 2: 命令セットの参照を"で、 [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)サイトです。  
+## <a name="remarks"></a>Remarks  
+ `__lidt`関数は、`LIDT`マシン語命令、およびカーネル モードでのみ使用できます。 詳細については、ドキュメントの検索"Intel アーキテクチャ ソフトウェア デベロッパーズ マニュアル、ボリューム 2: 命令セットの参照"で、 [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)サイト。  
   
 **Microsoft 固有の仕様はここまで**  
   
 ## <a name="see-also"></a>関連項目  
- [コンパイラ組み込み関数](../intrinsics/compiler-intrinsics.md)   
+ [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)   
  [__sidt](../intrinsics/sidt.md)

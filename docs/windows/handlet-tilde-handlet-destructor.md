@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f0df83ff8848f27839254bd9b1645866d3904bb
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 1d48bef07a6aeb42569faad775867bf415577980
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643463"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607729"
 ---
 # <a name="handlethandlet-destructor"></a>HandleT::~HandleT デストラクター
-インスタンスを初期化解除、 **HandleT**クラス。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-~HandleT();  
-```  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>関連項目  
- [HandleT クラス](../windows/handlet-class.md)
+
+インスタンスを初期化解除、 **HandleT**クラス。
+
+## <a name="syntax"></a>構文
+
+```cpp
+~HandleT();
+```
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>関連項目
+
+[HandleT クラス](../windows/handlet-class.md)

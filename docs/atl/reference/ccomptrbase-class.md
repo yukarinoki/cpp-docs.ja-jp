@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26e2984a3b52152b54d5f35ae72b8f3fdeaff474
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 686dbe540301508bd95563b7eafc466a5821a9f6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209223"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572754"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase クラス
 このクラスは、メモリの COM ベースのルーチンを使用するスマート ポインター クラスの基盤を提供します。  
@@ -91,7 +91,7 @@ class CComPtrBase
 ## <a name="remarks"></a>Remarks  
  このクラスは、COM メモリ管理ルーチンを使用して他のスマート ポインターの基礎を提供[CComQIPtr](../../atl/reference/ccomqiptr-class.md)と[CComPtr](../../atl/reference/ccomptr-class.md)します。 派生クラスは、独自のコンス トラクターと演算子がによって提供される方法を利用して`CComPtrBase`します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlcomcli.h  
   
 ##  <a name="advise"></a>  CComPtrBase::Advise  
@@ -173,10 +173,10 @@ HRESULT CoCreateInstance(
  CLSID は、データとオブジェクトの作成に使用されるコードに関連付けられています。  
   
 ### <a name="return-value"></a>戻り値  
- 失敗した場合、成功した場合、または REGDB_E_CLASSNOTREG、CLASS_E_NOAGGREGATION、CO_E_CLASSSTRING または E_NOINTERFACE に S_OK を返します。 参照してください[とも](http://msdn.microsoft.com/library/windows/desktop/ms686615)と[この](http://msdn.microsoft.com/library/windows/desktop/ms688386)のこれらのエラーの説明。  
+ 失敗した場合、成功した場合、または REGDB_E_CLASSNOTREG、CLASS_E_NOAGGREGATION、CO_E_CLASSSTRING または E_NOINTERFACE に S_OK を返します。 参照してください[とも](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)と[この](http://msdn.microsoft.com/library/windows/desktop/ms688386)のこれらのエラーの説明。  
   
 ### <a name="remarks"></a>Remarks  
- メソッドの最初のフォームを呼び出すと、[この](http://msdn.microsoft.com/library/windows/desktop/ms688386)CLSID を回復するために使用します。 どちらの形式を呼び出して[とも](http://msdn.microsoft.com/library/windows/desktop/ms686615)します。  
+ メソッドの最初のフォームを呼び出すと、[この](http://msdn.microsoft.com/library/windows/desktop/ms688386)CLSID を回復するために使用します。 どちらの形式を呼び出して[とも](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)します。  
   
  場合、デバッグ ビルドで、アサーション エラーが発生[解放](#p)は NULL と等しくありません。  
   

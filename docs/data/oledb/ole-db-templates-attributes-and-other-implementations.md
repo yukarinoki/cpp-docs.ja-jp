@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 32d9356c5c223df723626cf6ac07a7b5fda368de
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 16f7be95c36970ce96d04ff357831294f3a3faf1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340652"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571618"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>OLE DB テンプレート、属性、およびその他の実装
 ## <a name="atl-ole-db-templates"></a>ATL OLE DB テンプレート  
@@ -34,7 +34,7 @@ ms.locfileid: "39340652"
   
 -   **OLE DB プロバイダー テンプレート**OLE DB サーバー (プロバイダー) アプリケーションを実装するために使用します。  
   
- OLE DB テンプレートを使用するには、C++ テンプレート、COM、および OLE DB インターフェイスに関する知識が必要です。 OLE DB に慣れていない場合は、次を参照してください。 [OLE DB プログラマーズ リファレンス](https://msdn.microsoft.com/library/ms713643.aspx)します。  
+ OLE DB テンプレートを使用するには、C++ テンプレート、COM、および OLE DB インターフェイスに関する知識が必要です。 OLE DB に慣れていない場合は、次を参照してください。 [OLE DB プログラマーズ リファレンス](/previous-versions/windows/desktop/ms713643\(v=vs.85\))します。  
   
  詳細については、次の操作を実行できます。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "39340652"
   
 -   一覧を参照してください。 [OLE DB テンプレート サンプル](http://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)します。  
   
--   参照してください[OLE DB プログラマーズ リファレンス](https://msdn.microsoft.com/library/ms713643.aspx)(、Windows SDK) にします。  
+-   参照してください[OLE DB プログラマーズ リファレンス](/previous-versions/windows/desktop/ms713643\(v=vs.85\))(、Windows SDK) にします。  
   
 ## <a name="ole-db-attributes"></a>OLE DB 属性します。  
  [OLE DB コンシューマー属性](../../windows/ole-db-consumer-attributes.md)OLE DB コンシューマーを作成する便利な手段を提供します。 OLE DB 属性に基づくコードの挿入、 [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-reference.md)して OLE DB コンシューマーとプロバイダーを作成します。 属性でサポートされていない機能を指定する必要がある場合は、コードで属性と組み合わせて OLE DB テンプレートを使用することができます。  
@@ -55,7 +55,7 @@ ms.locfileid: "39340652"
  MFC ライブラリの 1 つのクラス ライブラリが[COleDBRecordView](../../mfc/reference/coledbrecordview-class.md)コントロールでのデータベース レコードを表示します。 ビューが、フォーム ビューに直接接続されている、`CRowset`オブジェクトし、のフィールドが表示されます、`CRowset`ダイアログ テンプレートのコントロール内のオブジェクト。 移動するための既定の実装も提供に、最初次、前、または最後のレコードとインターフェイス ビューで現在のレコードを更新します。 詳細については、「`COleDBRecordView`」を参照してください。  
   
 ## <a name="ole-db-sdk-interfaces"></a>OLE DB SDK インターフェイス  
- OLE DB テンプレートと OLE DB 機能がサポートして場合、OLE DB インターフェイス自体を使用する必要があります。 詳細については、次を参照してください。 [OLE DB プログラマーズ リファレンス](https://msdn.microsoft.com/library/ms713643.aspx)Windows SDK に含まれています。  
+ OLE DB テンプレートと OLE DB 機能がサポートして場合、OLE DB インターフェイス自体を使用する必要があります。 詳細については、次を参照してください。 [OLE DB プログラマーズ リファレンス](/previous-versions/windows/desktop/ms713643\(v=vs.85\))Windows SDK に含まれています。  
   
 ## <a name="see-also"></a>関連項目  
  [OLE DB プログラミング](../../data/oledb/ole-db-programming.md)   

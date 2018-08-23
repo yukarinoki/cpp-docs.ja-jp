@@ -17,39 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 65e8576f069cce7d7aec2eae18ad577820ca93a4
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: a13c5b48a7e242f47903fda038331fd126832dcf
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644743"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592232"
 ---
 # <a name="eventsourceadd-method"></a>EventSource::Add メソッド
-現在のイベント ハンドラーのセットを指定したデリゲート インターフェイスによって表されるイベント ハンドラーを追加します。 **EventSource**オブジェクト。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-HRESULT Add(  
-   _In_ TDelegateInterface* delegateInterface,  
-   _Out_ EventRegistrationToken* token  
-);  
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *delegateInterface*  
- イベント ハンドラーを表すデリゲート オブジェクトのインターフェイスです。  
-  
- *token*  
- この操作の完了時、イベントを表すハンドルです。 パラメーターとしてこのトークンを使用して、 [Remove()](../windows/eventsource-remove-method.md)メソッドをイベント ハンドラーを破棄します。  
-  
-## <a name="return-value"></a>戻り値  
- 成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** event.h  
-  
- **名前空間:** Microsoft::WRL
- 
- ## <a name="see-also"></a>関連項目
- [EventSource クラス](../windows/eventsource-class.md)
+
+現在のイベント ハンドラーのセットを指定したデリゲート インターフェイスによって表されるイベント ハンドラーを追加します。 **EventSource**オブジェクト。
+
+## <a name="syntax"></a>構文
+
+```cpp
+HRESULT Add(
+   _In_ TDelegateInterface* delegateInterface,
+   _Out_ EventRegistrationToken* token
+);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*delegateInterface*  
+イベント ハンドラーを表すデリゲート オブジェクトのインターフェイスです。
+
+*token*  
+この操作の完了時、イベントを表すハンドルです。 パラメーターとしてこのトークンを使用して、 [Remove()](../windows/eventsource-remove-method.md)メソッドをイベント ハンドラーを破棄します。
+
+## <a name="return-value"></a>戻り値
+
+成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** event.h
+
+**名前空間:** Microsoft::WRL
+
+## <a name="see-also"></a>関連項目
+[EventSource クラス](../windows/eventsource-class.md)

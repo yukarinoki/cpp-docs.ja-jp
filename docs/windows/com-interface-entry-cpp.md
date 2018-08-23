@@ -17,90 +17,94 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d79c371b98e0dd1091fc5db2280efdee3abbf6e9
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 9c0b2c53bf06a748be522606f5904f307cc00df8
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646190"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591357"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
-ターゲット クラスの COM マップにインターフェイス エントリを追加します。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-[ com_interface_entry(   
-  com_interface_entry  
-) ]  
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *com_interface_entry*  
- エントリの実際のテキストを含む文字列。 使用可能な値の一覧は、次を参照してください。 [COM_INTERFACE_ENTRY マクロ](../atl/reference/com-interface-entry-macros.md)します。  
-  
-## <a name="remarks"></a>Remarks  
- **Com_interface_entry** C++ 属性は、ターゲット オブジェクトの COM インターフェイス マップに unabridged 文字の文字列の内容を挿入します。 属性は、ターゲット オブジェクトに 1 回適用されている場合、エントリは、既存のインターフェイス マップの先頭に挿入されます。 属性は、同じターゲット オブジェクトを繰り返し適用されている場合、エントリが受信される順序でインターフェイス マップの先頭に挿入されます。  
-  
- この属性を使用するには、 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)、または [vi_progid](../windows/vi-progid.md) 属性 (または、これらのいずれかを意味する別の属性) も同じ要素に適用する必要があります。 いずれか 1 つの属性を使用すると、他の 2 つも自動的に適用されます。 たとえば場合、`progid`が適用される`vi_progid`と`coclass`も適用されます。  
-  
- の最初の使用**com_interface_entry**インターフェイス マップの先頭に挿入する新しいインターフェイスにより COM_INTERFACE_ENTRY 種類は次のいずれかの必要があります。  
-  
--   COM_INTERFACE_ENTRY  
-  
--   COM_INTERFACE_ENTRY_IID  
-  
--   COM_INTERFACE_ENTRY2  
-  
--   COM_INTERFACE_ENTRY2_IID  
-  
- 追加の使用法、 **com_interface_entry**属性はサポートされているすべての COM_INTERFACE_ENTRY 型を使用できます。  
-  
- この制限は、ATL は、id とインターフェイス マップに最初のエントリを使用するために必要な`IUnknown`。 したがって、エントリは有効なインターフェイスである必要があります。 たとえば、次のコード サンプルがインターフェイス マップの最初のエントリで、実際の COM インターフェイスが指定されていないため無効です。  
-  
-```cpp  
-[ coclass, com_interface_entry =  
-    "COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)"  
-]  
-   class CMyClass  
-   {  
-   };  
-```  
-  
-## <a name="example"></a>例  
- 次のコードでは、2 つのエントリを追加するは、既存の COM インターフェイス マップ`CMyBaseClass`します。 1 つは、標準のインターフェイスと、2 つ目の非表示になります、`IDebugTest`インターフェイス。  
-  
-```cpp  
-// cpp_attr_ref_com_interface_entry.cpp  
-// compile with: /LD  
-#define _ATL_ATTRIBUTES  
-#include "atlbase.h"  
-#include "atlcom.h"  
-  
-[module (name ="ldld")];  
-  
-[ object,  
-  uuid("7dbebed3-d636-4917-af62-c767a720a5b9")]  
-__interface IDebugTest{};  
-  
-[ object,  
-  uuid("2875ceac-f94b-4087-8e13-d13dc167fcfc")]  
-__interface IMyClass{};  
-  
-[ coclass,  
-  com_interface_entry ("COM_INTERFACE_ENTRY (IMyClass)"),  
-  com_interface_entry ("COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)"),  
+
+ターゲット クラスの COM マップにインターフェイス エントリを追加します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+[ com_interface_entry(
+  com_interface_entry
+) ]
+```
+
+### <a name="parameters"></a>パラメーター
+
+*com_interface_entry*  
+エントリの実際のテキストを含む文字列。 使用可能な値の一覧は、次を参照してください。 [COM_INTERFACE_ENTRY マクロ](../atl/reference/com-interface-entry-macros.md)します。
+
+## <a name="remarks"></a>Remarks
+
+**Com_interface_entry** C++ 属性は、ターゲット オブジェクトの COM インターフェイス マップに unabridged 文字の文字列の内容を挿入します。 属性は、ターゲット オブジェクトに 1 回適用されている場合、エントリは、既存のインターフェイス マップの先頭に挿入されます。 属性は、同じターゲット オブジェクトを繰り返し適用されている場合、エントリが受信される順序でインターフェイス マップの先頭に挿入されます。
+
+この属性を使用するには、 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)、または [vi_progid](../windows/vi-progid.md) 属性 (または、これらのいずれかを意味する別の属性) も同じ要素に適用する必要があります。 いずれか 1 つの属性を使用すると、他の 2 つも自動的に適用されます。 たとえば場合、`progid`が適用される`vi_progid`と`coclass`も適用されます。
+
+の最初の使用**com_interface_entry**インターフェイス マップの先頭に挿入する新しいインターフェイスにより COM_INTERFACE_ENTRY 種類は次のいずれかの必要があります。
+
+- COM_INTERFACE_ENTRY
+
+- COM_INTERFACE_ENTRY_IID
+
+- COM_INTERFACE_ENTRY2
+
+- COM_INTERFACE_ENTRY2_IID
+
+追加の使用法、 **com_interface_entry**属性はサポートされているすべての COM_INTERFACE_ENTRY 型を使用できます。
+
+この制限は、ATL は、id とインターフェイス マップに最初のエントリを使用するために必要な`IUnknown`。 したがって、エントリは有効なインターフェイスである必要があります。 たとえば、次のコード サンプルがインターフェイス マップの最初のエントリで、実際の COM インターフェイスが指定されていないため無効です。
+
+```cpp
+[ coclass, com_interface_entry =
+    "COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)"
+]
+   class CMyClass
+   {
+   };
+```
+
+## <a name="example"></a>例
+
+次のコードでは、2 つのエントリを追加するは、既存の COM インターフェイス マップ`CMyBaseClass`します。 1 つは、標準のインターフェイスと、2 つ目の非表示になります、`IDebugTest`インターフェイス。
+
+```cpp
+// cpp_attr_ref_com_interface_entry.cpp
+// compile with: /LD
+#define _ATL_ATTRIBUTES
+#include "atlbase.h"
+#include "atlcom.h"
+
+[module (name ="ldld")];
+
+[ object,
+  uuid("7dbebed3-d636-4917-af62-c767a720a5b9")]
+__interface IDebugTest{};
+
+[ object,
+  uuid("2875ceac-f94b-4087-8e13-d13dc167fcfc")]
+__interface IMyClass{};
+
+[ coclass,
+  com_interface_entry ("COM_INTERFACE_ENTRY (IMyClass)"),
+  com_interface_entry ("COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)"),
   uuid("b85f8626-e76e-4775-b6a0-4826a9e94af2")  
-]  
-  
-class CMyClass: public IMyClass, public IDebugTest  
-{  
-};  
-```  
-  
- 結果として得られる COM オブジェクト マップ`CMyBaseClass`のとおりです。  
-  
-```cpp  
+]
+
+class CMyClass: public IMyClass, public IDebugTest
+{
+};
+```
+
+結果として得られる COM オブジェクト マップ`CMyBaseClass`のとおりです。
+
+```cpp
 BEGIN_COM_MAP(CMyClass)  
     COM_INTERFACE_ENTRY (IMyClass)  
     COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)  
@@ -109,22 +113,23 @@ BEGIN_COM_MAP(CMyClass)
     COM_INTERFACE_ENTRY(IDebugTest)  
     COM_INTERFACE_ENTRY(IProvideClassInfo)  
 END_COM_MAP()  
-```  
-  
-## <a name="requirements"></a>要件  
-  
-### <a name="attribute-context"></a>属性コンテキスト  
-  
-|||  
-|-|-|  
-|**対象**|**クラス**、**構造体**|  
-|**反復可能**|[はい]|  
-|**必要な属性**|次のいずれかまたは: `coclass`、 `progid`、または`vi_progid`します。|  
-|**無効な属性**|なし|  
-  
- 属性コンテキストの詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  
-  
-## <a name="see-also"></a>関連項目  
- [COM 属性](../windows/com-attributes.md)   
- [クラス属性](../windows/class-attributes.md)   
- [Typedef、Enum、Union、および Struct 型の属性](../windows/typedef-enum-union-and-struct-attributes.md)   
+```
+
+## <a name="requirements"></a>要件
+
+### <a name="attribute-context"></a>属性コンテキスト
+
+|||
+|-|-|
+|**対象**|**クラス**、**構造体**|
+|**反復可能**|[はい]|
+|**必要な属性**|次のいずれかまたは: `coclass`、 `progid`、または`vi_progid`します。|
+|**無効な属性**|なし|
+
+属性コンテキストの詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。
+
+## <a name="see-also"></a>関連項目
+
+[COM 属性](../windows/com-attributes.md)  
+[クラス属性](../windows/class-attributes.md)  
+[Typedef、Enum、Union、および Struct 型の属性](../windows/typedef-enum-union-and-struct-attributes.md)  

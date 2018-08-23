@@ -1,5 +1,5 @@
 ﻿---
-title: _ _rdtscp |Microsoft ドキュメント
+title: _ _rdtscp |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d890afe9e19782f19442e8d95709b91a8680278
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: HT
+ms.openlocfilehash: a98f1e84f3ef09d3cef5d45028374b93887fc6d4
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329804"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539518"
 ---
 # <a name="rdtscp"></a>__rdtscp
 **Microsoft 固有の仕様**  
@@ -43,13 +43,13 @@ unsigned __int64 __rdtscp(
  コンピューター固有のレジスタの内容を格納する場所`TSC_AUX[31:0]`へのポインタです。  
   
 ## <a name="return-value"></a>戻り値  
- 64 ビット符号なし整数のティック数です。  
+ 64 ビット符号なし整数のティック数。  
   
 ## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__rdtscp`|AMD NPT ファミリ 0 fh またはそれ以降のバージョン|  
+|`__rdtscp`|AMD NPT ファミリ 0 fh または以降のバージョン|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
@@ -57,9 +57,9 @@ unsigned __int64 __rdtscp(
  この組み込み関数は`rdtscp`命令を生成します。 この命令のハードウェア サポートを確認するには、組み込み関数`__cpuid`を`InfoType=0x80000001`として呼び出し、`CPUInfo[3] (EDX)`の 27 ビット目を確認してください。 命令がサポートされていればこのビットは 1 となり、サポートされていなければ 0 となります。  `rdtscp`命令が搭載されていないハードウェア上でこの組み込み関数を呼び出した場合、その結果は保証されません。  
   
 > [!CAUTION]
->  `rdtsc`とは異なり、`rdtscp`はシリアル化する命令です。ただし、コンパイラはこの組み込み命令を移動することがあります。  
+>  異なり`rdtsc`、`rdtscp`をシリアル化する命令は、コンパイラがこの問題を回避コードを移動するとはいえ、組み込み。  
   
- この世代のハードウェアで TSC 値の解釈が異なる以前のバージョンの[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]します。  詳細についてはハードウェアのマニュアルを参照してください。  
+ この世代のハードウェアで TSC 値の解釈は、x64 の以前のバージョンとは異なります。  詳細についてはハードウェアのマニュアルを参照してください。  
   
  値`TSC_AUX[31:0]`の意味はオペレーティング システムによって異なります。  
   
@@ -84,7 +84,7 @@ TSC_AUX was 0
 ```  
   
 **Microsoft 固有の仕様はここまで**  
- 高度なマイクロ デバイス, Inc. によって copyright 2007All rights reserved. 高度なマイクロ デバイス, Inc. のアクセス許可を持つ再現  
+ 高度なマイクロ デバイス, inc. copyright 2007All rights reserved. 高度なマイクロ デバイス, Inc. からのアクセス許可を持つ再現  
   
 ## <a name="see-also"></a>関連項目  
  [__rdtsc](../intrinsics/rdtsc.md)   

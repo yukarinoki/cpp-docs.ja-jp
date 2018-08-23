@@ -1,5 +1,5 @@
 ---
-title: '#undef ディレクティブ (C/C++) |Microsoft ドキュメント'
+title: '#undef ディレクティブ (C/C++) |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16b8c937ad62ddc6738c626543dab2d4e5453bc5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c98c6559e04f0e89fa4c3501f30cd88d449de306
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839781"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538448"
 ---
 # <a name="undef-directive-cc"></a>#undef ディレクティブ (C/C++)
 `#define` で作成された名前を削除 (定義解除) します。  
@@ -31,20 +31,19 @@ ms.locfileid: "33839781"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 #undef   
 identifier  
-  
 ```  
   
-## <a name="remarks"></a>コメント  
- `#undef`ディレクティブの現在の定義を削除する*識別子*です。 その結果、それ以降の出現箇所の*識別子*はプリプロセッサによって無視されます。 使用してをマクロ定義を削除する`#undef`、マクロのみを与える*識別子*; パラメーター リストを提供しないでください。  
+## <a name="remarks"></a>Remarks 
+
+**#Undef**ディレクティブの現在の定義を削除します*識別子*します。 その結果、後続の*識別子*はプリプロセッサによって無視されます。 使用してマクロ定義を削除する **#undef**のマクロのみ*識別子*; パラメーター リストが得られない。  
   
- `#undef` ディレクティブは事前の定義を持たない識別子にも適用できます。 これにより、その識別子が未定義であることが保証されます。 `#undef` ステートメント内では、マクロ置換は実行されません。  
+適用することも、 **#undef**ディレクティブを以前の定義を持たない識別子。 これにより、その識別子が未定義であることが保証されます。 内ではマクロ置換は実行されません **#undef**ステートメント。  
   
- `#undef` ディレクティブ、通常は `#define` ディレクティブと対で使用され、識別子が特別な意味を持つ領域をソース プログラム内に作成します。 たとえば、ソース プログラムの特定の関数でマニフェスト定数を使用すると、プログラムの残り部分に影響を与えない環境固有の値を定義できます。 また `#undef` ディレクティブは、`#if` ディレクティブをソース プログラムの条件付きコンパイルを制御します。 参照してください[#if、#elif、#else、および #endif ディレクティブ](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)詳細についてはします。  
+**#Undef**ディレクティブと組み合わせるは通常、`#define`識別子が必要がある特別な意味をソース プログラムに領域を作成するディレクティブ。 たとえば、ソース プログラムの特定の関数でマニフェスト定数を使用すると、プログラムの残り部分に影響を与えない環境固有の値を定義できます。 **#Undef**ディレクティブでも使用できます、`#if`ディレクティブをソース プログラムの条件付きコンパイルを制御します。 参照してください[#if、#elif、#else、および #endif ディレクティブ](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)詳細についてはします。  
   
- 次の例は、`#undef` ディレクティブを使用して、シンボリック定数およびマクロの定義を削除しています。 マクロの識別子のみが指定されていることに注意してください。  
+次の例では、 **#undef**ディレクティブは、シンボリック定数およびマクロの定義を削除します。 マクロの識別子のみが指定されていることに注意してください。  
   
 ```  
 #define WIDTH 80  
@@ -56,11 +55,12 @@ identifier
 #undef ADD  
 ```  
   
- **Microsoft 固有の仕様**  
+**Microsoft 固有の仕様**  
   
- マクロは、コマンド ラインで /U オプションを使用し、その後ろに定義解除する識別子を指定して定義を解除できます。 このコマンドを発行の効果のシーケンスに相当`#undef`*マクロ名*ステートメントをファイルの先頭にします。  
+マクロを使用してコマンドラインからに定義できます、`/U`オプションを定義するマクロ名を続けています。 このコマンドを発行の効果は一連の`#undef`*マクロ名*ステートメントをファイルの先頭にあります。  
   
- **Microsoft 固有の仕様はここまで**  
+**Microsoft 固有の仕様はここまで**  
   
 ## <a name="see-also"></a>関連項目  
- [プリプロセッサ ディレクティブ](../preprocessor/preprocessor-directives.md)
+ 
+[プリプロセッサ ディレクティブ](../preprocessor/preprocessor-directives.md)

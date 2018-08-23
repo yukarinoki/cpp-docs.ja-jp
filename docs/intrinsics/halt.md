@@ -1,5 +1,5 @@
 ---
-title: __halt |Microsoft ドキュメント
+title: __halt |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a36790eb1df098e6f663a30894c29a9ea14587b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 007b3be0fc26d9a011d961540f9dc4057498b137
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327204"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541799"
 ---
 # <a name="halt"></a>__halt
 **Microsoft 固有の仕様**  
   
- 有効な割り込み、マスク不可能割り込み (NMI)、または、リセットが発生するまでは、マイクロプロセッサを停止します。  
+ 有効な割り込み、マスク不可能割り込み (NMI)、またはリセットが発生するまでのマイクロプロセッサを停止します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,12 +40,12 @@ void __halt( void );
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__halt`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__halt`|x86、x64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
- `__halt`関数と同じ、`HLT`マシン語命令、およびカーネル モードでのみ使用できます。 詳細については、検索、ドキュメントの"Intel アーキテクチャ ソフトウェア デベロッパーズ マニュアル、ボリューム 2: 命令セットの参照を"で、 [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)サイトです。  
+## <a name="remarks"></a>Remarks  
+ `__halt`関数は、`HLT`マシン語命令、およびカーネル モードでのみ使用できます。 詳細については、ドキュメントの検索"Intel アーキテクチャ ソフトウェア デベロッパーズ マニュアル、ボリューム 2: 命令セットの参照"で、 [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)サイト。  
   
 **Microsoft 固有の仕様はここまで**  
   

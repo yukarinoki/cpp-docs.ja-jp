@@ -1,5 +1,5 @@
 ---
-title: _ _vmx_vmread |Microsoft ドキュメント
+title: _ _vmx_vmread |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81feddd403c96d0b3f9402aaa744d0c79dbec21e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eee9c82487159b9233999d17ff36c4aad3ef6445
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340672"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540093"
 ---
 # <a name="vmxvmread"></a>__vmx_vmread
 **Microsoft 固有の仕様**  
   
- 現在仮想マシン制御構造 (VMCS) から、指定したフィールドを読み取り、指定した場所に配置します。  
+ 現在の仮想マシン制御構造 (VMCS) から指定したフィールドを読み取り、指定した場所に配置します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,8 +42,8 @@ unsigned char __vmx_vmread(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `Field`|読み取る VMCS のフィールドです。|  
-|[入力] `FieldValue`|指定された VMCS フィールドから値を格納する場所へのポインターの読み取り、`Field`パラメーター。|  
+|[入力] `Field`|読み取る VMCS フィールド。|  
+|[入力] `FieldValue`|によって指定された VMCS フィールドから値を格納する場所へのポインターを読み取る、`Field`パラメーター。|  
   
 ## <a name="return-value"></a>戻り値  
   
@@ -53,19 +53,19 @@ unsigned char __vmx_vmread(
 |1|現在 VMCS の `VM-instruction error field` で有効な拡張状態が発生したため、操作は失敗しました。|  
 |2|有効な状態がないため操作は失敗しました。|  
   
-## <a name="remarks"></a>コメント  
- `__vmx_vmread`関数と同じ、`VMREAD`マシン語命令します。 値、`Field`パラメーターは、Intel のドキュメントに記載されているエンコードのフィールドのインデックス。 詳細については、「Intel 仮想化技術仕様の「ia-32 Intel アーキテクチャ」、ドキュメントの検索に番号 C97063 002 を文書化、 [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)サイト、し、そのドキュメントの「付録 C を参照してください.  
+## <a name="remarks"></a>Remarks  
+ `__vmx_vmread`関数は、`VMREAD`マシン語命令。 値、`Field`パラメーターは、Intel のドキュメントで説明されているエンコードされたフィールドのインデックス。 詳細については、検索、ドキュメント、「Intel 仮想化技術仕様 ia-32 Intel アーキテクチャ向け、」で番号 C97063-002、文書化、 [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)サイト、し、そのドキュメントの「付録 C を参照してください.  
   
 ## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__vmx_vmread`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_vmread`|X64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
 **Microsoft 固有の仕様はここまで**  
   
 ## <a name="see-also"></a>関連項目  
- [コンパイラ組み込み関数](../intrinsics/compiler-intrinsics.md)   
+ [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)   
  [__vmx_vmwrite](../intrinsics/vmx-vmwrite.md)

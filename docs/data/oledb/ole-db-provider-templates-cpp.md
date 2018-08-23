@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 204abfb28ed58051f27f62b522ed0b02a0a78585
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 4983234cdbc64f4ca8364c5afcc2d8e735ba2d01
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339576"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42575510"
 ---
 # <a name="ole-db-provider-templates-c"></a>OLE DB プロバイダー テンプレート (C++)
 OLE DB は、Microsoft Universal Data Access 戦略の重要な部分です。 OLE DB の設計では、任意のデータ ソースからのパフォーマンスの高いデータ アクセスを許可します。 表形式データでは、データベースからの送信かどうかに関係なく OLE DB で表示できます。 柔軟性を使用すると、大量の電力ができます。  
@@ -63,7 +63,7 @@ OLE DB は、Microsoft Universal Data Access 戦略の重要な部分です。 O
  プロバイダーは、複雑さと機能が大幅に異なります。 読み取り専用プロバイダー、および更新可能なプロバイダーのプロバイダーに分類すると便利です。  
   
 -   Visual C 6.0 には、読み取り専用プロバイダーのみがサポートされています。 [OLE DB プロバイダーを作成する](../../data/oledb/creating-an-ole-db-provider.md)読み取り専用プロバイダーを作成する方法について説明します。  
--   Visual C は、更新可能なプロバイダーは、更新をサポートしています (書き込む) データ ストア。 更新可能なプロバイダーについては、次を参照してください。[更新可能なプロバイダーを作成する](../../data/oledb/creating-an-updatable-provider.md)、 [UpdatePV](http://msdn.microsoft.com/c8bed873-223c-4a7d-af55-f90138c6f38f)サンプルは、更新可能なプロバイダーの例を示します。  
+-   Visual C は、更新可能なプロバイダーは、更新をサポートしています (書き込む) データ ストア。 更新可能なプロバイダーについては、次を参照してください。[更新可能なプロバイダーを作成する](../../data/oledb/creating-an-updatable-provider.md)、 [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)サンプルは、更新可能なプロバイダーの例を示します。  
   
  詳細については次を参照してください:  
   
@@ -75,5 +75,5 @@ OLE DB は、Microsoft Universal Data Access 戦略の重要な部分です。 O
   
 ## <a name="see-also"></a>関連項目  
  [データ アクセス](../data-access-in-cpp.md)   
- [OLE DB SDK のドキュメント](https://msdn.microsoft.com/library/ms722784.aspx)   
- [OLE DB プログラマーズ リファレンス](https://msdn.microsoft.com/library/ms713643.aspx)
+ [OLE DB SDK のドキュメント](/previous-versions/windows/desktop/ms722784\(v=vs.85\))   
+ [OLE DB プログラマーズ リファレンス](/previous-versions/windows/desktop/ms713643\(v=vs.85\))

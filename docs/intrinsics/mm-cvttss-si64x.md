@@ -1,5 +1,5 @@
 ---
-title: _mm_cvttss_si64x |Microsoft ドキュメント
+title: _mm_cvttss_si64x |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4fd8aebb3f9a4f0078c8174aa25b9abb9378f1b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f70588ca17a2bde34de6a16b62b18fa6125b08c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333630"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539914"
 ---
 # <a name="mmcvttsssi64x"></a>_mm_cvttss_si64x
 **Microsoft 固有の仕様**  
   
- 出力拡張 x64 バージョンの 64 ビットの整数に切り捨て単精度浮動小数点数に変換 (`cvttss2si`) 命令します。  
+ 出力拡張 x64 バージョンの 64 ビットの整数に切り捨て単精度浮動小数点数に変換 (`cvttss2si`) 命令。  
   
 ## <a name="syntax"></a>構文  
   
@@ -48,12 +48,12 @@ __int64 _mm_cvttss_si64x(
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`_mm_cvttss_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_mm_cvttss_si64x`|X64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
- 組み込みとは異なります`_mm_cvtss_si64x`ことだけ不正確な変換がゼロに向かって切り捨てられます。 `__m128`構造は XMM レジスタを表す、生成された命令は、システム メモリに XMM レジスタからデータを移動します。  
+## <a name="remarks"></a>Remarks  
+ 組み込みの異なる`_mm_cvtss_si64x`不正確な変換は、ゼロに向かって切り捨てられます。 その内のみです。 `__m128`構造体が、XMM レジスタを表す、生成された命令をシステム メモリに、XMM レジスタからデータを移動します。  
   
  このルーチンは、組み込みとしてのみ使用できます。  
   

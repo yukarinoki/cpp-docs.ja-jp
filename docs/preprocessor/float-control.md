@@ -1,5 +1,5 @@
 ---
-title: float_control |Microsoft ドキュメント
+title: float_control |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7ac671c938b80fc69b8214456efecf798e1e5f6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b9b94e5b8eccdc63735c7cb25faa7eacb1e23670
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840356"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42545782"
 ---
 # <a name="floatcontrol"></a>float_control
 関数の浮動小数点動作を指定します。  
@@ -35,21 +35,23 @@ float_control( value,setting [push] | push | pop )
 ```  
   
 ## <a name="flags"></a>フラグ  
- `value`、 `setting` **[プッシュ]**  
- 浮動小数点の動作を指定します。 `value` 指定できます**正確な**または**を除く**です。 詳細については、「[/fp (浮動小数点の動作の指定)](../build/reference/fp-specify-floating-point-behavior.md)」を参照してください。 `setting` いずれかを指定できます**で**または**オフ**です。  
+ 
+*値*、*設定* *[プッシュ]*  
+浮動小数点の動作を指定します。 *値*できる`precise`または`except`します。 詳細については、「[/fp (浮動小数点の動作の指定)](../build/reference/fp-specify-floating-point-behavior.md)」を参照してください。 *設定*できます`on`または`off`します。  
   
- 場合`value`は**正確な**の設定**正確な**と**を除く**が指定されています。 **除く**にのみ設定できます**で**とき**正確な**にも設定されている**で**です。  
+場合*値*は`precise`、設定`precise`と`except`が指定されています。 `except` 設定することができますのみ`on`とき`precise`にも設定されている`on`。  
   
- 場合、省略可能な**プッシュ**トークンを追加する、現在の設定`value`を内部コンパイラ スタックにプッシュします。  
+場合、省略可能な*プッシュ*トークンは追加、現在の設定*値*内部コンパイラ スタックにプッシュされます。  
   
- **push**  
- 現在の `float_control` 設定を内部コンパイラ スタックにプッシュします。  
+*push*  
+現在のプッシュ**float_control**内部コンパイラ スタックに設定  
   
- **pop**  
- 削除、`float_control`内部コンパイラ スタックの一番上から設定およびようにするが、新しい`float_control`設定します。  
+*pop*  
+削除、 **float_control**内部コンパイラ スタックの一番上から設定し、それは新しい**float_control**設定。  
   
-## <a name="remarks"></a>コメント  
- 有効にすることはできません`float_control precise`ときはオフ**を除く**にします。 同様に、**正確な**ときにオフにすることはできません`fenv_access`にします。 `float_control` プラグマを使用して厳格なモデルから高速モデルに移行するには、次のコードを使用します。  
+## <a name="remarks"></a>Remarks  
+ 
+`float_control precise` がオンの場合は、`except` をオフにすることはできません。 同様に、`precise` がオンになっている場合は、`fenv_access` をオフにすることはできません。 厳格なモデルから使用してモデルを高速にする、 **float_control**プラグマを使用して、次のコード。  
   
 ```  
 #pragma float_control(except, off)  
@@ -57,7 +59,7 @@ float_control( value,setting [push] | push | pop )
 #pragma float_control(precise, off)  
 ```  
   
- `float_control` プラグマを使用して高速モデルから厳格なモデルに移行するには、次のコードを使用します。  
+高速モデルから厳格なモデルに移行する、 **float_control**プラグマを使用して、次のコード。  
   
 ```  
 #pragma float_control(precise, on)  
@@ -65,16 +67,17 @@ float_control( value,setting [push] | push | pop )
 #pragma float_control(except, on)  
 ```  
   
- その他の浮動小数点プラグマには以下があります。  
+その他の浮動小数点プラグマには以下があります。  
   
--   [fenv_access](../preprocessor/fenv-access.md)  
+- [fenv_access](../preprocessor/fenv-access.md)  
   
--   [fp_contract](../preprocessor/fp-contract.md)  
+- [fp_contract](../preprocessor/fp-contract.md)  
   
 ## <a name="example"></a>例  
- 次のサンプルは、`float_control` プラグマを使用してオーバーフロー浮動小数点例外をキャッチする方法を示しています。  
+ 
+次の例は、プラグマを使用してオーバーフロー浮動小数点例外をキャッチする方法を示しています。 **float_control**します。  
   
-```  
+```cpp  
 // pragma_directive_float_control.cpp  
 // compile with: /EHa  
 #include <stdio.h>  
@@ -113,4 +116,5 @@ Pass
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  

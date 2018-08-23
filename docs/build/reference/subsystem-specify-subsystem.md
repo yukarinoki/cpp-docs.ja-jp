@@ -1,5 +1,5 @@
 ---
-title: -SUBSYSTEM (サブシステムの指定) |Microsoft ドキュメント
+title: -SUBSYSTEM (サブシステムの指定) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70d6f047cf18b8b768d40533e2acc6cb2f649327
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a40cf81d0b00123692c9ea8b0e2f3111fb914fbb
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379004"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572563"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (サブシステムの指定)
 ```  
@@ -37,10 +37,10 @@ ms.locfileid: "32379004"
 ```  
   
  BOOT_APPLICATION  
- Windows のブート環境で実行するアプリケーションです。 ブート アプリケーションの詳細については、次を参照してください。 [About BCD](http://msdn.microsoft.com/library/windows/desktop/aa362639)です。  
+ Windows のブート環境で実行するアプリケーションです。 ブート アプリケーションの詳細については、次を参照してください。 [About BCD](http://msdn.microsoft.com/library/windows/desktop/aa362639)します。  
   
  CONSOLE  
- Win32 文字モード アプリケーションに対して使用します。 オペレーティング システムには、コンソール アプリケーションのコンソールが用意されています。 ネイティブ コードに `main` または `wmain` が定義されている場合、マネージ コードに `int main(array<String ^> ^)` が定義されている場合、または `/clr:safe` を使用してアプリケーションを完全にビルドする場合、CONSOLE が既定の設定になります。  
+ Win32 文字モード アプリケーションに対して使用します。 オペレーティング システムには、コンソール アプリケーションのコンソールが用意されています。 ネイティブ コードに `main` または `wmain` が定義されている場合、マネージド コードに `int main(array<String ^> ^)` が定義されている場合、または `/clr:safe` を使用してアプリケーションを完全にビルドする場合、CONSOLE が既定の設定になります。  
   
  拡張可能なファームウェア インターフェイス  
  EFI_* サブシステムです。 詳細については、EFI の仕様を参照してください。 たとえば、Intel の Web サイトなどを参照してください。 最小および既定のバージョンは 1.0 です。  
@@ -52,12 +52,12 @@ ms.locfileid: "32379004"
  Windows NT 上の POSIX サブシステムで実行するアプリケーションです。  
   
  WINDOWS  
- アプリケーションにはコンソールは不要です。このシステムにはユーザーとの対話用のウィンドウが作成されるからです。 ネイティブ コードに `WinMain` または `wWinMain` が定義されている場合、あるいはマネージ コードに `WinMain(HISTANCE *, HINSTANCE *, char *, int)` または `wWinMain(HINSTANCE *, HINSTANCE *, wchar_t *, int)` が定義されている場合、WINDOWS が既定の設定になります。  
+ アプリケーションにはコンソールは不要です。このシステムにはユーザーとの対話用のウィンドウが作成されるからです。 ネイティブ コードに `WinMain` または `wWinMain` が定義されている場合、あるいはマネージド コードに `WinMain(HISTANCE *, HINSTANCE *, char *, int)` または `wWinMain(HINSTANCE *, HINSTANCE *, wchar_t *, int)` が定義されている場合、WINDOWS が既定の設定になります。  
   
  `Major` および `minor` (省略可能)  
  サブシステムに最低限必要なバージョンを指定します。 引数には、0 ～ 65535 の範囲の 10 進数を指定します。 詳細については、「解説」を参照してください。 バージョン番号に上限はありません。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  /SUBSYSTEM オプションは、実行可能ファイルの環境を指定します。  
   
  サブシステムの選択によって、リンカーが選択するエントリ ポイント シンボル (またはエントリ ポイント関数) が決まります。  
@@ -67,16 +67,16 @@ ms.locfileid: "32379004"
 |サブシステム|最小要件|既定値|  
 |---------------|-------------|-------------|  
 |BOOT_APPLICATION|1|1|  
-|CONSOLE|5.01 (x86) 5.02 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|6.00 (x86、[!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|  
-|WINDOWS|5.01 (x86) 5.02 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|6.00 (x86、[!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|  
-|NATIVE (DRIVER:WDM を使用する場合)|1.00 (x86) 1.10 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]、ARM)|1.00 (x86) 1.10 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]、ARM)|  
-|NATIVE (/DRIVER:WDM を使用しない場合)|(x86) 4.00 5.02 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|(x86) 4.00 5.02 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|  
+|CONSOLE|(x86) 5.01 (x64) 5.02 6.02 です (ARM)|(x86、x64) は 6.00 6.02 です (ARM)|  
+|WINDOWS|(x86) 5.01 (x64) 5.02 6.02 です (ARM)|(x86、x64) は 6.00 6.02 です (ARM)|  
+|NATIVE (DRIVER:WDM を使用する場合)|(x86) 1.00 1.10 (x64、ARM)|(x86) 1.00 1.10 (x64、ARM)|  
+|NATIVE (/DRIVER:WDM を使用しない場合)|(x86) 4.00 (x64) 5.02 6.02 です (ARM)|(x86) 4.00 (x64) 5.02 6.02 です (ARM)|  
 |POSIX|1|19.90|  
 |EFI_APPLICATION、EFI_BOOT_SERVICE_DRIVER、EFI_ROM、EFI_RUNTIME_DRIVER|1|1|  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには  
   
-1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「 [Visual C プロジェクト プロパティの設定](../../ide/working-with-project-properties.md)です。  
+1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。  
   
 2.  [リンカー] フォルダーを選択します。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "32379004"
   
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには  
   
--   「<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.SubSystem%2A>」を参照してください。  
+-   以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.SubSystem%2A>  
   
 ## <a name="see-also"></a>関連項目  
  [リンカー オプションの設定](../../build/reference/setting-linker-options.md)   

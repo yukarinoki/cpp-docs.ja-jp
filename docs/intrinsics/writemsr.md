@@ -1,5 +1,5 @@
 ---
-title: _ _writemsr |Microsoft ドキュメント
+title: _ _writemsr |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76131f4d07dec1713c80b4cd4f98f729b9ecf07b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d9a3fdc9b094ebb81db1bfe841d7974c5df89ca0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323525"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540298"
 ---
 # <a name="writemsr"></a>__writemsr
 **Microsoft 固有の仕様**  
   
- モデル専用レジスタへの書き込みが生成されます (`wrmsr`) 命令します。  
+ モデル専用レジスタへの書き込みが生成されます (`wrmsr`) 命令。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,12 +50,12 @@ void __writemsr(
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__writemsr`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writemsr`|x86、x64|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
- この関数は、カーネル モードでのみ使用して、このルーチンは、組み込みとしてのみです。  
+## <a name="remarks"></a>Remarks  
+ この関数は、カーネル モードでのみ使用可能性があり、このルーチンは組み込みとして使用できるのみです。  
   
 **Microsoft 固有の仕様はここまで**  
   

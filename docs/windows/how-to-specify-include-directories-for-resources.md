@@ -17,28 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b7444ccf4f3a03036a5363024d0794f67b6a1ad6
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: baa317610339e7073f2e829860e11ab15e66277e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018859"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611062"
 ---
 # <a name="how-to-specify-include-directories-for-resources"></a>方法: リソースのインクルード ディレクトリを指定する
-### <a name="to-specify-include-directories-for-a-specific-rc-file"></a>特定の .rc ファイルのインクルード ディレクトリを指定するには  
-  
-1.  ソリューション エクスプ ローラーで .rc ファイルを右クリックして**プロパティ**ショートカット メニューから。  
-  
-2.  **プロパティ ページ**ダイアログ ボックスで、をクリックして、**リソース**左側のウィンドウでノードが、追加のインクルード ディレクトリを指定、**追加のインクルード ディレクトリ**プロパティ。  
-  
- マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で .NET Framework 開発者ガイド。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列をプロパティに割り当てる方法については、次を参照してください[チュートリアル: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
-  
-## <a name="requirements"></a>要件  
- Win32  
-  
-## <a name="see-also"></a>関連項目  
- [[リソース インクルード] ダイアログ ボックス](../windows/resource-includes-dialog-box.md)   
- [TN035: Visual C での複数のリソース ファイルとヘッダー ファイルの使用](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)   
- [シンボル: リソース識別子](../windows/symbols-resource-identifiers.md)   
- [リソース ファイル (Visual Studio)](../windows/resource-files-visual-studio.md)   
- [リソース エディター](../windows/resource-editors.md)
+
+### <a name="to-specify-include-directories-for-a-specific-rc-file"></a>特定の .rc ファイルのインクルード ディレクトリを指定するには
+
+1. ソリューション エクスプ ローラーで .rc ファイルを右クリックして**プロパティ**ショートカット メニューから。
+
+2. **プロパティ ページ**ダイアログ ボックスで、をクリックして、**リソース**左側のウィンドウでノードが、追加のインクルード ディレクトリを指定、**追加のインクルード ディレクトリ**プロパティ。
+
+マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で .NET Framework 開発者ガイド。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列をプロパティに割り当てる方法については、次を参照してください[チュートリアル: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
+
+## <a name="requirements"></a>要件
+
+Win32
+
+## <a name="see-also"></a>関連項目
+
+[[リソース インクルード] ダイアログ ボックス](../windows/resource-includes-dialog-box.md)  
+[テクニカル ノート 35: Visual C++ における複数のリソース ファイルとヘッダー ファイルの使用](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)  
+[シンボル: リソース識別子](../windows/symbols-resource-identifiers.md)  
+[リソース ファイル](../windows/resource-files-visual-studio.md)  
+[リソース エディター](../windows/resource-editors.md)

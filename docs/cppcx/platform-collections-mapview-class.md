@@ -1,5 +1,5 @@
 ---
-title: Platform::Collections::MapView クラス |Microsoft ドキュメント
+title: Platform::Collections::MapView クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,16 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b5000ad06e542aa4616a29150601b8d628fc097
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7abf07b24947a4c800b2b21f91fdf9840dd799d5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091532"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605472"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView クラス
 キーと値のペアのコレクションである、 *マップ*への読み取り専用ビューを表します。  
@@ -48,10 +48,10 @@ ref class MapView sealed;
  キー/値ペア内の値の型。  
   
  `C`  
- 並べ替えキーとして 2 つの要素値を比較して MapView 内の相対順序を決定できる関数オブジェクトを提供する型。 既定では、 [std::less\<K >](../standard-library/less-struct.md)です。  
+ 並べ替えキーとして 2 つの要素値を比較して MapView 内の相対順序を決定できる関数オブジェクトを提供する型。 既定では、 [std::less\<K >](../standard-library/less-struct.md)します。  
   
-### <a name="remarks"></a>コメント  
- MapView の C++ の具象実装、 [Windows::Foundation::Collections::IMapView \<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409)インターフェイスがアプリケーション バイナリ インターフェイス (ABI) を越えて渡されるです。 詳細については、「 [Collections (C++/CX) (コレクション (C++/CX))](../cppcx/collections-c-cx.md)」を参照してください。  
+### <a name="remarks"></a>Remarks  
+ MapView の C++ の具象実装、 [Windows::Foundation::Collections::IMapView \<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409)アプリケーション バイナリ インターフェイス (ABI) を越えて渡されるインターフェイス。 詳細については、「 [Collections (C++/CX) (コレクション (C++/CX))](../cppcx/collections-c-cx.md)」を参照してください。  
   
 ### <a name="members"></a>メンバー  
   
@@ -93,7 +93,7 @@ virtual Windows::Foundation::Collections::IIterator<
 ### <a name="return-value"></a>戻り値  
  マップ ビュー内の最初の要素を指定する反復子。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  First() によって返される反復子を保持する便利な方法で宣言された変数に戻り値を割り当てるには、**自動**推論キーワードを入力します。 たとえば、`auto x = myMapView->First();` のようにします。  
   
 
@@ -110,7 +110,7 @@ bool HasKey(K key);
   
 ### <a name="parameters"></a>パラメーター  
  `key`  
- MapView 要素の検索に使用するキー。 型`key`typename は*K*です。  
+ MapView 要素の検索に使用するキー。 型`key`typename が*K*します。  
   
 ### <a name="return-value"></a>戻り値  
  キーが見つかった場合は `true`。それ以外の場合は `false`。  
@@ -128,10 +128,10 @@ V Lookup(K key);
   
 ### <a name="parameters"></a>パラメーター  
  `key`  
- MapView の要素の検索に使用するキー。 型`key`typename は*K*です。  
+ MapView の要素の検索に使用するキー。 型`key`typename が*K*します。  
   
 ### <a name="return-value"></a>戻り値  
- `key` とペアになる値。 戻り値の型は typename *V*です。  
+ `key` とペアになる値。 戻り値の型は typename *V*します。  
   
 
 
@@ -165,7 +165,7 @@ MapView(
  並べ替えキーとして 2 つの要素値を比較して MapView 内の相対順序を決定できる関数オブジェクト。  
   
  `m`  
- 参照または[Lvalue と Rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md)を`map Class`現在の MapView を初期化するために使用されます。  
+ 参照または[Lvalues と Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)を`map Class`現在の MapView を初期化するために使用されます。  
   
  `first`  
  現在の MapView を初期化するために使用される要素の範囲内の最初の要素の入力反復子。  
@@ -213,7 +213,7 @@ void Split(
  `secondPartition`  
  元の MapView オブジェクトの 2 番目の部分。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは操作可能ではありません。これは何も実行しません。  
     
 ## <a name="see-also"></a>関連項目  

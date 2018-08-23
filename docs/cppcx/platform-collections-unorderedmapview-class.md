@@ -1,5 +1,5 @@
 ---
-title: Platform::Collections::UnorderedMapView クラス |Microsoft ドキュメント
+title: Platform::Collections::UnorderedMapView クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -7,16 +7,16 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec6b1541eff80b6aac4d8d82bfb7ea6ceb977843
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a2d8668f0ed5d58ce3b8028fb02d572bb04f8bc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092678"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613575"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView クラス
 キーと値のペアのコレクションである、 *マップ*への読み取り専用ビューを表します。  
@@ -41,8 +41,8 @@ ref class UnorderedMapView sealed;
  `C`  
  2 つのキー値を比較して等価性を確認できる関数オブジェクトを提供する型。 既定では、 [std::equal_to\<K >](../standard-library/equal-to-struct.md)  
   
-### <a name="remarks"></a>コメント  
- UnorderedMapView の C++ の具象実装、 [Windows::Foundation::Collections::IMapView\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409)インターフェイスがアプリケーション バイナリ インターフェイス (ABI) を越えて渡されるです。 詳細については、「 [Collections (C++/CX) (コレクション (C++/CX))](../cppcx/collections-c-cx.md)」を参照してください。  
+### <a name="remarks"></a>Remarks  
+ UnorderedMapView の C++ の具象実装、 [Windows::Foundation::Collections::IMapView\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409)アプリケーション バイナリ インターフェイス (ABI) を越えて渡されるインターフェイス。 詳細については、「 [Collections (C++/CX) (コレクション (C++/CX))](../cppcx/collections-c-cx.md)」を参照してください。  
   
 ### <a name="members"></a>メンバー  
   
@@ -71,7 +71,7 @@ ref class UnorderedMapView sealed;
  **名前空間:** Platform::Collections  
 
 ## <a name="first"></a>  UnorderedMapView::First メソッド
-1 つを指定する反復子を返します[Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx)順序なしのマップ内の要素。  
+最初に指定する反復子を返します[Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx)順序なしのマップ内の要素。  
   
 ### <a name="syntax"></a>構文  
   
@@ -84,7 +84,7 @@ virtual Windows::Foundation::Collections::IIterator<
 ### <a name="return-value"></a>戻り値  
  マップ ビュー内の最初の要素を指定する反復子。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  First() によって返される反復子を保持する便利な方法で宣言された変数に戻り値を割り当てるには、**自動**推論キーワードを入力します。 たとえば、`auto x = myMapView->First();` のようにします。  
   
 
@@ -100,7 +100,7 @@ bool HasKey(K key);
   
 ### <a name="parameters"></a>パラメーター  
  `key`  
- 要素の検索に使用するキー。 型`key`typename は*K*です。  
+ 要素の検索に使用するキー。 型`key`typename が*K*します。  
   
 ### <a name="return-value"></a>戻り値  
  キーが見つかった場合は `true`。それ以外の場合は `false`。  
@@ -118,10 +118,10 @@ V Lookup(K key);
   
 ### <a name="parameters"></a>パラメーター  
  `key`  
- UnorderedMapView の要素の検索に使用するキー。 型`key`typename は*K*です。  
+ UnorderedMapView の要素の検索に使用するキー。 型`key`typename が*K*します。  
   
 ### <a name="return-value"></a>戻り値  
- `key` とペアになる値。 戻り値の型は typename *V*です。  
+ `key` とペアになる値。 戻り値の型は typename *V*します。  
   
 
 
@@ -159,7 +159,7 @@ void Split(
  `secondPartition`  
  元の UnorderedMapView オブジェクトの 2 つ目の部分。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは操作可能ではありません。これは何も実行しません。  
   
 
@@ -221,13 +221,13 @@ UnorderedMapView(
  UnorderedMapView の型名。  
   
  `H`  
- キーのハッシュ値にできる関数オブジェクト。 既定値は[std::hash\<K >](http://msdn.microsoft.com/en-us/54f67435-af9d-4217-a29d-fa4d2491a104)の型を`std::hash`をサポートしています。  
+ キーのハッシュ値にできる関数オブジェクト。 既定値は[std::hash\<K >](http://msdn.microsoft.com/en-us/54f67435-af9d-4217-a29d-fa4d2491a104)の種類を`std::hash`をサポートしています。  
   
  `P`  
- 2 つのキーを比較して等価性を確認できる関数オブジェクトを提供する型。 既定値は[std::equal_to\<K >](../standard-library/equal-to-struct.md)です。  
+ 2 つのキーを比較して等価性を確認できる関数オブジェクトを提供する型。 既定値は[std::equal_to\<K >](../standard-library/equal-to-struct.md)します。  
   
  `m`  
- 参照または[Lvalue と Rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md)を[std::unordered_map](../standard-library/unordered-map-class.md) UnorderedMapView を初期化するために使用されます。  
+ 参照または[Lvalues と Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)を[std::unordered_map](../standard-library/unordered-map-class.md) UnorderedMapView を初期化するために使用されます。  
   
  `first`  
  UnorderedMapView を初期化するために使用される要素の範囲内の最初の要素の入力反復子。  

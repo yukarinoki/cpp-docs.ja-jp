@@ -68,12 +68,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5c3bd275c189e7c99bbc275caf31436b5f5a1d5e
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 69a96cf199e7ce131e91f750cdd83ebc915c38d8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340086"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572203"
 ---
 # <a name="cdatasource-class"></a>CDataSource クラス
 データ ソース プロバイダー経由の接続を表す OLE DB データ ソース オブジェクトに対応します。  
@@ -153,7 +153,7 @@ HRESULT GetProperties(ULONG ulPropIDSets,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[idbproperties::getproperties](https://msdn.microsoft.com/library/ms714344.aspx)で、 *OLE DB プログラマーズ リファレンス*Windows SDK にします。  
+ 参照してください[idbproperties::getproperties](/previous-versions/windows/desktop/ms714344\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*Windows SDK にします。  
   
 ### <a name="return-value"></a>戻り値  
  標準の HRESULT です。  
@@ -238,10 +238,10 @@ HRESULT Open(LPCSTR szProgID,
  [in]`CLSID`のデータ プロバイダー。  
   
  *pPropSet*  
- [in]配列へのポインター [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx)プロパティおよび設定する値を含む構造体。 参照してください[プロパティ セットとプロパティ グループ](https://msdn.microsoft.com/library/ms713696.aspx)で、 *OLE DB プログラマーズ リファレンス*Windows SDK にします。  
+ [in]配列へのポインター [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))プロパティおよび設定する値を含む構造体。 参照してください[プロパティ セットとプロパティ グループ](/previous-versions/windows/desktop/ms713696\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*Windows SDK にします。  
   
  *nPropertySets*  
- [in]数[DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx)構造体が渡された、 *pPropSet*引数。  
+ [in]数[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))構造体が渡された、 *pPropSet*引数。  
   
  *pName*  
  [入力] 接続先のデータベース名。  
@@ -253,7 +253,7 @@ HRESULT Open(LPCSTR szProgID,
  [入力] ユーザーのパスワード。  
   
  *nInitMode*  
- [入力] データベースの初期化モード。 参照してください[初期化プロパティ](https://msdn.microsoft.com/library/ms723127.aspx)で、 *OLE DB プログラマーズ リファレンス*有効な初期化モードの一覧については、Windows SDK に含まれています。 場合*nInitMode*がゼロ初期化モードが、接続を開くために使用するプロパティ セットに含まれます。  
+ [入力] データベースの初期化モード。 参照してください[初期化プロパティ](/previous-versions/windows/desktop/ms723127\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*有効な初期化モードの一覧については、Windows SDK に含まれています。 場合*nInitMode*がゼロ初期化モードが、接続を開くために使用するプロパティ セットに含まれます。  
   
  *szProgID*  
  [入力] プログラム ID。  
@@ -293,7 +293,7 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
  *szFileName*  
  [in] ファイル名、通常はデータ ソース接続 (.UDL) ファイル。  
   
- データ リンク ファイル (.udl ファイル) の詳細については、次を参照してください。 [Data Link API の概要](https://msdn.microsoft.com/library/ms718102.aspx)Windows SDK に含まれています。  
+ データ リンク ファイル (.udl ファイル) の詳細については、次を参照してください。 [Data Link API の概要](/previous-versions/windows/desktop/ms718102\(v=vs.85\))Windows SDK に含まれています。  
   
 ### <a name="return-value"></a>戻り値  
  標準の HRESULT です。  
@@ -376,10 +376,10 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
  [入力] データ プロバイダーのプログラム ID。  
   
  *pPropset*  
- [in]配列へのポインター [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx)プロパティおよび設定する値を含む構造体。 参照してください[プロパティ セットとプロパティ グループ](https://msdn.microsoft.com/library/ms713696.aspx)で、 *OLE DB プログラマーズ リファレンス*Windows SDK にします。 データ ソース オブジェクトが初期化されている場合、プロパティはデータ ソース プロパティ グループに属している必要があります。 同じプロパティが複数回指定されている場合*pPropset*プロバイダーに固有では使用されている値。 場合*ulPropSets* 0 の場合は、このパラメーターは無視されます。  
+ [in]配列へのポインター [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))プロパティおよび設定する値を含む構造体。 参照してください[プロパティ セットとプロパティ グループ](/previous-versions/windows/desktop/ms713696\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*Windows SDK にします。 データ ソース オブジェクトが初期化されている場合、プロパティはデータ ソース プロパティ グループに属している必要があります。 同じプロパティが複数回指定されている場合*pPropset*プロバイダーに固有では使用されている値。 場合*ulPropSets* 0 の場合は、このパラメーターは無視されます。  
   
  *ulPropSets*  
- [in]数[DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx)構造体が渡された、 *pPropSet*引数。 0 の場合は、プロバイダーは無視されます*pPropset*します。  
+ [in]数[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))構造体が渡された、 *pPropSet*引数。 0 の場合は、プロバイダーは無視されます*pPropset*します。  
   
 ### <a name="return-value"></a>戻り値  
  標準の HRESULT です。  

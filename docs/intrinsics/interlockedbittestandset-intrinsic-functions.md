@@ -1,5 +1,5 @@
 ---
-title: _interlockedbittestandset の組み込み関数 |Microsoft ドキュメント
+title: _interlockedbittestandset の組み込み関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6789a8e602fded02d4d521be74e602557ebdaefe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7b64118753138087bce446a92716c6cb1731c7ea
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340334"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541620"
 ---
 # <a name="interlockedbittestandset-intrinsic-functions"></a>_interlockedbittestandset の組み込み関数
 **Microsoft 固有の仕様**  
@@ -95,14 +95,14 @@ unsigned char _interlockedbittestandset64_HLERelease(
   
 |組み込み|アーキテクチャ|Header|  
 |---------------|------------------|------------|  
-|`_interlockedbittestandset`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_interlockedbittestandset`|x86、ARM、x64|\<intrin.h>|  
 |`_interlockedbittestandset_acq`、`_interlockedbittestandset_nf`、`_interlockedbittestandset_rel`|ARM|\<intrin.h>|  
-|`_interlockedbittestandset_HLEAcquire`, `_interlockedbittestandset_HLERelease`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
-|`_interlockedbittestandset64`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
-|`_interlockedbittestandset64_HLEAcquire`, `_interlockedbittestandset64_HLERelease`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
+|`_interlockedbittestandset_HLEAcquire`, `_interlockedbittestandset_HLERelease`|x86、x64|\<immintrin.h>|  
+|`_interlockedbittestandset64`|X64|\<intrin.h>|  
+|`_interlockedbittestandset64_HLEAcquire`, `_interlockedbittestandset64_HLERelease`|X64|\<immintrin.h>|  
   
-## <a name="remarks"></a>コメント  
- x86 および [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] プロセッサでは、これらの組み込みは `lock bts` 命令を使用して指定したビットを読み込み、その値を 1 に設定します。 この操作はアトミックです。  
+## <a name="remarks"></a>Remarks  
+ X86 および x64 プロセッサでは、これらの組み込みを使用して、`lock bts`命令を読み取り、指定したビットを 1 に設定します。 この操作はアトミックです。  
   
  ARM プロセッサでは、クリティカル セクションの最初と最後などでの取得と解放のセマンティクスのために、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスの付いた ARM 組み込みはメモリ バリアとしては機能しません。  
   
@@ -113,5 +113,5 @@ unsigned char _interlockedbittestandset64_HLERelease(
 **Microsoft 固有の仕様はここまで**  
   
 ## <a name="see-also"></a>関連項目  
- [コンパイラ組み込み関数](../intrinsics/compiler-intrinsics.md)   
+ [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)   
  [x86 コンパイラとの競合](../build/conflicts-with-the-x86-compiler.md)

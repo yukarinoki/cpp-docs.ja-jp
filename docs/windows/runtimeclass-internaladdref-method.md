@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 925ebb50c571c37d5137a24539429d75469a5f9b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 6e0d2b6d41598195b2615e4d6b4a8585d1ca1cf2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010749"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599726"
 ---
 # <a name="runtimeclassinternaladdref-method"></a>RuntimeClass::InternalAddRef メソッド
-現在の参照カウントをインクリメント**RuntimeClass**オブジェクト。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-ULONG InternalAddRef();  
-```  
-  
-## <a name="return-value"></a>戻り値  
- 結果として得られる、参照カウントします。  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** implements.h  
-  
- **名前空間:** Microsoft::WRL  
-  
-## <a name="see-also"></a>関連項目  
- [RuntimeClass クラス](../windows/runtimeclass-class.md)
+
+現在の参照カウントをインクリメント**RuntimeClass**オブジェクト。
+
+## <a name="syntax"></a>構文
+
+```cpp
+ULONG InternalAddRef();
+```
+
+## <a name="return-value"></a>戻り値
+
+結果として得られる、参照カウントします。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** implements.h
+
+**名前空間:** Microsoft::WRL
+
+## <a name="see-also"></a>関連項目
+
+[RuntimeClass クラス](../windows/runtimeclass-class.md)

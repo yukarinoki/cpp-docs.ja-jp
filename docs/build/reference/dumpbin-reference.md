@@ -1,5 +1,5 @@
 ---
-title: DUMPBIN リファレンス |Microsoft ドキュメント
+title: DUMPBIN リファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,20 +20,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46d116ad1efde9ae144e17eb9a4ac2ad996add13
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4858fe41db5e9a5ac6208881a045e7915b9bdfee
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372657"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573153"
 ---
 # <a name="dumpbin-reference"></a>DUMPBIN リファレンス
-Microsoft COFF Binary File Dumper (DUMPBIN です。EXE) では、オブジェクト ファイル形式 COFF (Common) のバイナリ ファイルに関する情報を表示します。 DUMPBIN を使用して、COFF オブジェクト ファイル、COFF オブジェクト、実行可能ファイル、およびダイナミック リンク ライブラリ (Dll) の標準ライブラリを調べることができます。  
+Microsoft COFF Binary File Dumper (DUMPBIN します。EXE) では、一般的なオブジェクト ファイル形式 (COFF) のバイナリ ファイルに関する情報が表示されます。 DUMPBIN を使用すると、COFF オブジェクト ファイル、COFF オブジェクト、実行可能ファイル、およびダイナミック リンク ライブラリ (Dll) の標準ライブラリを確認します。  
   
 > [!NOTE]
->  このツールは、[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] コマンド プロンプトからのみ開始できます。 システム コマンド プロンプトやエクスプローラーからは開始できません。  
+>  このツールは、Visual Studio コマンド プロンプトからのみ開始できます。 システム コマンド プロンプトやエクスプローラーからは開始できません。  
   
- のみ、 [/HEADERS](../../build/reference/headers.md) DUMPBIN オプションはにより生成されるファイルで使用できるよう、 [/GL](../../build/reference/gl-whole-program-optimization.md)コンパイラ オプション。  
+ のみ、 [/HEADERS](../../build/reference/headers.md) DUMPBIN オプションがで生成されたファイルで使用できる、 [/GL](../../build/reference/gl-whole-program-optimization.md)コンパイラ オプション。  
   
 -   [DUMPBIN コマンドライン](../../build/reference/dumpbin-command-line.md)  
   

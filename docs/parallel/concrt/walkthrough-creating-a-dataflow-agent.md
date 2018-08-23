@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: データフロー エージェントの作成 |Microsoft ドキュメント'
+title: 'チュートリアル: データフロー エージェントの作成 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33f7c7cf5e64d2ddf751bb97ee1b617d09df6af3
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: f94692b6762e1dc24a7af910d2cfd52abc516598
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693095"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42541595"
 ---
 # <a name="walkthrough-creating-a-dataflow-agent"></a>チュートリアル: データフロー エージェントの作成
 ここでは、制御フローではなくデータ フローに基づくエージェント ベースのアプリケーションを作成する方法について説明します。  
   
- *制御フロー*プログラムで操作の実行順序を指します。 制御フローは、条件付きステートメントやループなどの制御構造体を使用して調整されます。 または、*データフロー*で計算が行われるすべての必要なデータが使用可能な場合にのみ、プログラミング モデルを参照します。 データ フロー プログラミング モデルは、プログラムの独立したコンポーネントどうしがメッセージを送信することによって通信する、メッセージ パッシングの概念に関連しています。  
+ *制御フロー*プログラムで操作の実行順序を指します。 制御フローは、条件付きステートメントやループなどの制御構造体を使用して調整されます。 または、*データフロー*を計算が行われるすべての必要なデータが使用可能な場合にのみ、プログラミング モデルを指します。 データ フロー プログラミング モデルは、プログラムの独立したコンポーネントどうしがメッセージを送信することによって通信する、メッセージ パッシングの概念に関連しています。  
   
  非同期エージェントでは、制御フロー モデルとデータ フロー プログラミング モデルの両方がサポートされています。 制御フロー モデルはほとんどの状況に適していますが、エージェントがデータを受信し、そのデータのペイロードに基づいてアクションを実行するなどの状況ではデータ フロー モデルの方が適しています。  
   
@@ -41,13 +41,13 @@ ms.locfileid: "33693095"
 ##  <a name="top"></a> セクション  
  このチュートリアルは、次のセクションで構成されています。  
   
-- [基本的な制御フロー エージェントの作成](#control-flow)  
+- [基本的な制御フロー エージェントを作成します。](#control-flow)  
   
-- [基本的なデータ フロー エージェントの作成](#dataflow)  
+- [基本的なデータフロー エージェントの作成](#dataflow)  
   
-- [メッセージ ログ エージェントの作成](#logging)  
+- [メッセージ ログ エージェントを作成します。](#logging)  
   
-##  <a name="control-flow"></a> 基本的な制御フロー エージェントの作成  
+##  <a name="control-flow"></a> 基本的な制御フロー エージェントを作成します。  
  `control_flow_agent` クラスを定義する次の例について考えます。 `control_flow_agent` クラスは、1 つの入力バッファーと 2 つの出力バッファーの合計 3 つのメッセージ バッファーに対して作用します。 `run` メソッドは、ループ内でソース メッセージ バッファーから読み取り、条件付きステートメントを使用してプログラムの実行フローを調整します。 エージェントは、ゼロ以外の負の値に対してカウンターの 1 つをインクリメントし、ゼロ以外の正の値に対して別のカウンターをインクリメントします。 エージェントは、sentinel 値のゼロを受信すると、カウンターの値を出力メッセージ バッファーに送信します。 `negatives` メソッドと `positives` メソッドは、アプリケーションがエージェントから負の値と正の値のカウントを読み取ることができるようにします。  
   
  [!code-cpp[concrt-dataflow-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_1.cpp)]  
@@ -56,7 +56,7 @@ ms.locfileid: "33693095"
   
  [[トップ](#top)]  
   
-##  <a name="dataflow"></a> 基本的なデータ フロー エージェントの作成  
+##  <a name="dataflow"></a> 基本的なデータフロー エージェントの作成  
  ここでは、`control_flow_agent` クラスからデータ フロー モデルに切り替えて、同じタスクを実行する方法について説明します。  
   
  データ フロー エージェントを使用するには、メッセージ バッファーのネットワークを作成し、それぞれのメッセージ バッファーが特定の用途で機能するようにします。 一部のメッセージ ブロックでは、フィルター関数を使用して、メッセージの受け入れまたは拒否をメッセージ ペイロードに基づいて行います。 フィルター関数を使用すると、メッセージ ブロックが特定の値のみを受信するようになります。  
@@ -83,7 +83,7 @@ ms.locfileid: "33693095"
   
  [!code-cpp[concrt-dataflow-agent#4](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_5.cpp)]  
   
-6.  `event` オブジェクトと `countdown event` オブジェクトが設定されるまで待ちます。 これらのイベントは、エージェントが sentinel 値を受信したこと、およびすべての操作が終了したことを通知します。  
+6.  `event` オブジェクトと `countdown event` オブジェクトが設定されるまで待ちます。 これらのイベントは、エージェントが sentinel 値を受信したことと、すべての操作が完了したことを通知します。  
   
  [!code-cpp[concrt-dataflow-agent#5](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_6.cpp)]  
   
@@ -95,9 +95,9 @@ ms.locfileid: "33693095"
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`increment_active`|A [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md)アクティブなイベント カウンターをインクリメントし、ネットワークの残りの部分に、入力値を渡すオブジェクト。|  
-|`negatives`, `positives`|[concurrency::call](../../parallel/concrt/reference/call-class.md)番号とデクリメントの数、アクティブなイベント カウンターをインクリメントするオブジェクト。 各オブジェクトは、フィルターを使用して、負の数または正の数を受け入れます。|  
-|`sentinel`|A [concurrency::call](../../parallel/concrt/reference/call-class.md)をアクティブなイベント カウンター 0 とデクリメントの sentinel 値のみを受け入れるオブジェクト。|  
+|`increment_active`|A [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md)オブジェクトのアクティブなイベント カウンターをインクリメントし、ネットワークの残りの部分に、入力値を渡します。|  
+|`negatives`, `positives`|[concurrency::call](../../parallel/concrt/reference/call-class.md)アクティブなイベント カウンターの数値とデクリメントのカウントをインクリメントするオブジェクト。 各オブジェクトは、フィルターを使用して、負の数または正の数を受け入れます。|  
+|`sentinel`|A [concurrency::call](../../parallel/concrt/reference/call-class.md)をアクティブなイベント カウンターはゼロでデクリメント sentinel 値のみを受け入れるオブジェクト。|  
 |`connector`|A [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md)ソース メッセージ バッファーを内部ネットワークに接続するオブジェクト。|  
   
  `run` メソッドは別個のスレッドで呼び出されるため、ネットワークが完全に接続される前に、他のスレッドからネットワークにメッセージが送信されることがあります。 `_source` データ メンバーは、アプリケーションからエージェントに送信されるすべての入力をバッファーに格納する `unbounded_buffer` オブジェクトです。 ネットワークですべての入力メッセージが処理されるように、エージェントは最初にネットワークの内部ノードをリンクしてから、そのネットワークの始端 `connector` を `_source` データ メンバーにリンクします。 これにより、ネットワークの形成中にメッセージが処理されることがなくなります。  
@@ -120,13 +120,13 @@ There are 499477 positive numbers.
 ```  
   
 ### <a name="compiling-the-code"></a>コードのコンパイル  
- コード例をコピーし、Visual Studio プロジェクトに貼り付けるかという名前のファイルに貼り付けます`dataflow-agent.cpp`Visual Studio コマンド プロンプト ウィンドウで、次のコマンドを実行します。  
+ コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、という名前のファイルに貼り付ける`dataflow-agent.cpp`Visual Studio コマンド プロンプト ウィンドウで、次のコマンドを実行します。  
   
  **cl.exe/EHsc dataflow-agent.cpp**  
   
  [[トップ](#top)]  
   
-##  <a name="logging"></a> メッセージ ログ エージェントの作成  
+##  <a name="logging"></a> メッセージ ログ エージェントを作成します。  
  次の例では、`log_agent` クラスに似た `dataflow_agent` クラスを示します。 `log_agent` クラスは、ログ メッセージをファイルおよびコンソールに書き込む非同期ログ エージェントを実装します。 `log_agent` クラスは、アプリケーションがメッセージを情報、警告、またはエラーとして分類できるようにします。 また、アプリケーションが各ログ カテゴリをファイルとコンソールのどちらに書き込むか、または両方に書き込むかを指定できるようにします。 この例では、ファイルにすべてのログ メッセージが書き込まれ、コンソールにはエラー メッセージのみが書き込まれます。  
   
  [!code-cpp[concrt-log-filter#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_8.cpp)]  
@@ -147,7 +147,7 @@ info: ===Logging finished.===
 ```  
   
 ### <a name="compiling-the-code"></a>コードのコンパイル  
- コード例をコピーし、Visual Studio プロジェクトに貼り付けるかという名前のファイルに貼り付けます`log-filter.cpp`Visual Studio コマンド プロンプト ウィンドウで、次のコマンドを実行します。  
+ コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、という名前のファイルに貼り付ける`log-filter.cpp`Visual Studio コマンド プロンプト ウィンドウで、次のコマンドを実行します。  
   
  **cl.exe/EHsc log-filter.cpp**  
   
