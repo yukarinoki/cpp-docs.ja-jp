@@ -1,5 +1,5 @@
 ---
-title: -仮想ディスク (ディスプレイスメントの無効化) |Microsoft ドキュメント
+title: -vd (ディスプレイスメントの無効化) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6a7b9bacc95c668c1c0f59a3dba172d58c607d2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4e983da4521db077235c2b879e0d1277b9505e94
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377598"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605869"
 ---
 # <a name="vd-disable-construction-displacements"></a>/vd (ディスプレイスメントの無効化)
 ## <a name="syntax"></a>構文  
@@ -42,30 +42,30 @@ ms.locfileid: "32377598"
   
 ## <a name="arguments"></a>引数  
  `0`  
- Vtordisp コンストラクター/デストラクター ディスプレイスメント メンバーを抑制します。 すべてのクラスのコンス トラクターとデストラクターを呼び出す仮想ことがわかっている場合にのみ、このオプションが事実上機能を選択します。  
+ Vtordisp コンストラクター/デストラクター ディスプレイスメント メンバーを使用すると、抑制します。 すべてのクラスのコンス トラクターとデストラクターが仮想呼び出すことがわかっている場合にのみ、このオプションは事実上関数を選択します。  
   
  `1`  
- 隠し vtordisp コンストラクター/デストラクター ディスプレイスメント メンバーの作成を有効にします。 このオプションは、既定値です。  
+ 隠し vtordisp コンストラクター/デストラクター ディスプレイスメント メンバーを作成をできます。 このオプションは、既定値です。  
   
  `2`  
- 使用できるように[dynamic_cast 演算子](../../cpp/dynamic-cast-operator.md)構築されるオブジェクト。 たとえば、仮想基底クラスから派生クラスへの dynamic_cast です。  
+ 使用できるように[dynamic_cast Operator](../../cpp/dynamic-cast-operator.md)で構築されるオブジェクト。 たとえば、仮想基底クラスから派生クラスへの dynamic_cast です。  
   
- **/vd2**仮想関数を使用して仮想ベースがある場合は、vtordisp フィールドを追加します。 **/vd1**すれば十分です。 最も一般的なケース **/vd2**が必要なは、仮想ベース内の唯一の仮想関数がデストラクターです。  
+ **/vd2**仮想関数を持つ仮想基底がある場合は、vtordisp フィールドを追加します。 **/vd1**十分です。 最も一般的なケース **/vd2**が必要なは、仮想ベースで唯一の仮想関数がデストラクターの場合。  
   
-## <a name="remarks"></a>コメント  
- これらのオプションは、仮想基底を使用する C++ コードにのみ適用されます。  
+## <a name="remarks"></a>Remarks  
+ これらのオプションは、仮想基底クラスを使用する C++ コードにのみ適用されます。  
   
- [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 仮想継承が使用されている状況で C++ ディスプレイスメントをサポートを実装します。 ディスプレイスメントは仮想関数の場合、仮想ベースで宣言され、派生クラスでオーバーライドされるときに作成の問題を解決、さらに派生クラスの構築中にコンス トラクターから呼び出されます。  
+ Visual C では、仮想継承を使用する状況で C++ ディスプレイスメントをサポートを実装します。 ディスプレイスメントは仮想関数の場合、仮想ベースで宣言され、派生クラスでオーバーライドされるときに作成の問題を解決、さらに派生クラスの構築中にコンス トラクターから呼び出されます。  
   
- 問題が仮想関数が渡されるが正しくない`this`ポインターその結果、仮想変位間の不一致の基底クラスとその派生クラスにします。 ソリューションでは、各仮想基本クラスの vtordisp フィールドと呼ばれる 1 つ構築変位の調整を提供します。  
+ 問題は仮想関数が不適切な渡される可能性があります、`this`ポインター、結果として、仮想変位の不一致の基底クラスとその派生クラスにします。 ソリューションでは、各仮想基本クラスの vtordisp フィールドと呼ばれる 1 つ構築変位の調整を提供します。  
   
- 既定では、コードがユーザー定義のコンス トラクターとデストラクターを定義し、仮想ベースの仮想関数がオーバーライドされるたびに、vtordisp フィールドが導入されました。  
+ 既定では、vtordisp フィールドは、コードは、ユーザー定義のコンス トラクターとデストラクターを定義し、仮想基底クラスの仮想関数がオーバーライドされるたびに導入されました。  
   
- これらのオプションでは、ソース ファイル全体に影響します。 使用して[vtordisp](../../preprocessor/vtordisp.md)を抑制し、クラス単位で vtordisp フィールドを再度有効にします。  
+ これらのオプションでは、ソース ファイル全体に影響します。 使用[vtordisp](../../preprocessor/vtordisp.md)を抑制しクラスによって単位で vtordisp フィールドを再度有効にします。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
   
-1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[のプロジェクト プロパティの操作](../../ide/working-with-project-properties.md)です。  
+1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。  
   
 2.  **[C/C++]** フォルダーをクリックします。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "32377598"
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには  
   
--   「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>」を参照してください。  
+-   以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>  
   
 ## <a name="see-also"></a>関連項目  
  [コンパイラ オプション](../../build/reference/compiler-options.md)   
