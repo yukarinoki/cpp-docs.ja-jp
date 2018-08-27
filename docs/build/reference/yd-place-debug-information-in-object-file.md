@@ -1,5 +1,5 @@
 ---
-title: -Yd (デバッグ情報のオブジェクト ファイル) |Microsoft ドキュメント
+title: -Yd (デバッグ情報のオブジェクト ファイル) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39b03b0faf975caba8c5a287c88afcdf53f7a71f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 86cb8a42b77cd0a932530455f1125125a9f546d9
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378234"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42585968"
 ---
 # <a name="yd-place-debug-information-in-object-file"></a>/Yd (デバッグ情報のオブジェクト ファイルへの取り込み)
-使用する場合は、プリコンパイル済みヘッダー (.pch) ファイルから作成されたデバッグ情報をすべてのオブジェクト ファイルの完全なペース、 [/Yc](../../build/reference/yc-create-precompiled-header-file.md)と[/Z7](../../build/reference/z7-zi-zi-debug-information-format.md)オプション。 非推奨。  
+使用する場合は、プリコンパイル済みヘッダー (.pch) ファイルから作成されるデバッグ情報をすべてのオブジェクト ファイルの完全な性能を試します、 [/Yc](../../build/reference/yc-create-precompiled-header-file.md)と[/Z7](../../build/reference/z7-zi-zi-debug-information-format.md)オプション。 非推奨。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,14 +35,14 @@ ms.locfileid: "32378234"
 /Yd  
 ```  
   
-## <a name="remarks"></a>コメント  
- **/Yd への取り込み**は廃止されました。[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]複数のオブジェクトが 1 つの .pdb ファイルへの書き込みの使用を今すぐサポート **/Zi**代わりにします。 非推奨のコンパイラ オプションの一覧は、次を参照してください。**廃止予定とコンパイラ オプションの削除**で[コンパイラ オプションの一覧をカテゴリ別](../../build/reference/compiler-options-listed-by-category.md)です。  
+## <a name="remarks"></a>Remarks  
+ **/Yd への取り込み**は非推奨とされます。Visual C では、複数のオブジェクトが 1 つの .pdb ファイルへの書き込みをサポートを使用して **/Zi**代わりにします。 非推奨のコンパイラ オプションの一覧は、次を参照してください。**非推奨とされた削除済みのコンパイラ オプション**で[Compiler Options Listed by Category](../../build/reference/compiler-options-listed-by-category.md)します。  
   
- デバッグ情報を含むライブラリを配布する必要がありますしない限り、使用、 [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)オプションなく **/Z7**と **/yd への取り込み**です。  
+ 使用して、デバッグ情報を含むライブラリを配布する必要がない限り、 [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)オプションなく **/Z7**と **/yd への取り込み**します。  
   
- すべての .obj ファイルに詳細なデバッグ情報を格納するは、のみ、デバッグ情報が含まれているライブラリを配布する必要があります。 コンパイル速度が低下し、非常に大きなディスク領域が必要です。 ときに **/Yc**と **/Z7**されずに使用されます **/yd への取り込み**コンパイラが .pch ファイルから作成された最初の .obj ファイル内の一般的なデバッグ情報を格納します。 コンパイラが .pch ファイルから、後で作成された .obj ファイルにこの情報を挿入できません。情報への相互参照を挿入します。 .Obj ファイルの数は、.pch ファイルを使用して、関係なく 1 つだけの .obj ファイルには、一般的なデバッグ情報が含まれています。  
+ すべての .obj ファイルに詳細なデバッグ情報を格納するは、デバッグ情報が含まれているライブラリを配布する場合にのみ必要があります。 これにより、コンパイル速度が低下し、かなりのディスク領域が必要です。 ときに **/Yc**と **/Z7**されずに使用されます **/yd への取り込み**コンパイラが .pch ファイルから作成された最初の .obj ファイル内の一般的なデバッグ情報を格納します。 コンパイラが .obj ファイルの .pch ファイルから作成された後にこの情報を挿入できません。相互参照情報を挿入します。 .Obj ファイルの数は、.pch ファイルを使用して、関係なく 1 つだけの .obj ファイルには、一般的なデバッグ情報が含まれています。  
   
- この既定の動作の結果も高速ビルド時間、ディスク領域の負担を軽減は望ましくありませんわずかな変更は、一般的なデバッグ情報を含む .obj ファイルの再構築が必要な場合です。 この場合、コンパイラは、元の .obj ファイルへの相互参照を含むすべての .obj ファイルをリビルドする必要があります。 また、さまざまなプロジェクトで共通の .pch ファイルを使用する単一の .obj ファイルへの相互参照への依存は困難です。  
+ この既定の動作の結果は、ビルド時間が高速化、ディスク領域の負担を軽減、これは望ましくありませんわずかな変更は、一般的なデバッグ情報を含む .obj ファイルを再構築が必要な場合。 この場合、コンパイラには、.obj ファイルへの相互参照を含むすべての .obj ファイルが再構築する必要があります。 また、異なるプロジェクトで共通の .pch ファイルを使用する場合の相互参照を 1 つの .obj ファイルへの依存は困難です。  
   
  プリコンパイル済みヘッダーの詳細についてを参照してください。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "32378234"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
   
-1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[のプロジェクト プロパティの操作](../../ide/working-with-project-properties.md)です。  
+1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。  
   
 2.  **[C/C++]** フォルダーをクリックします。  
   
@@ -62,31 +62,31 @@ ms.locfileid: "32378234"
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには  
   
--   「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>」を参照してください。  
+-   以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>  
   
 ## <a name="examples"></a>使用例  
- F.cpp と G.cpp、各を含むこれら 2 つの基本ファイルがあると **#include**ステートメント。  
+ F.cpp とこれらの各を格納している G.cpp 2 つの基本ファイルがあるとします **#include**ステートメント。  
   
 ```  
 #include "windows.h"  
 #include "etc.h"  
 ```  
   
- 次のコマンドは、プリコンパイル済みヘッダーを作成するファイルの ETC.pch とオブジェクト ファイル F.obj:  
+ 次のコマンドは、プリコンパイル済みヘッダーを作成します。 ファイル ETC.pch と F.obj オブジェクト ファイル。  
   
 ```  
 CL /YcETC.H /Z7 F.CPP  
 ```  
   
- F.obj オブジェクト ファイルには、型および WINDOWS.h および ETC.h のシンボル情報 (およびが含まれているその他のヘッダー ファイル) が含まれています。 今すぐ ETC.pch プリコンパイル済みヘッダーを使用して、ソース ファイル G.cpp をコンパイルすることができます。  
+ F.obj オブジェクト ファイルには、型と WINDOWS.h および ETC.h のシンボル情報 (および他のヘッダー ファイルが含まれている) が含まれています。 今すぐ G.cpp ソース ファイルをコンパイルするのに ETC.pch プリコンパイル済みヘッダーを使用できます。  
   
 ```  
 CL /YuETC.H /Z7 G.CPP  
 ```  
   
- オブジェクト ファイル G.obj はプリコンパイル済みヘッダーのデバッグ情報は含まれませんが、単に F.obj ファイルでは、その情報を参照します。 F.obj とリンクする必要がありますに注意してください。  
+ G.obj オブジェクト ファイルでは、プリコンパイル済みヘッダーのデバッグ情報は含まれませんが、単に F.obj ファイルでは、その情報を参照します。 F.obj とリンクする必要があることに注意してください。  
   
- プリコンパイル済みヘッダーはでコンパイルされていない場合 **/Z7**、以降のコンパイルを使用してそのまま使用することができます **/Z7**です。 ただし、デバッグ情報が現在のオブジェクト ファイル内に配置し、関数、およびプリコンパイル済みヘッダーで定義されている型のローカル シンボルは、デバッガーを使用できません。  
+ プリコンパイル済みヘッダーでコンパイルされて場合 **/Z7**、以降のコンパイルを使用してそのまま使用することができます **/Z7**します。 ただし、デバッグ情報が現在のオブジェクト ファイル内に配置して、関数と、プリコンパイル済みヘッダーで定義された型のローカル シンボルは、デバッガーを使用できません。  
   
 ## <a name="see-also"></a>関連項目  
  [コンパイラ オプション](../../build/reference/compiler-options.md)   
