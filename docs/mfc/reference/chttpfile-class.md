@@ -58,8 +58,7 @@ class CHttpFile : public CInternetFile
   
 |名前|説明|  
 |----------|-----------------|  
-|[CHttpFile::CHttpFile](#chttpfile)|
-          `CHttpFile` オブジェクトを作成します。|  
+|[CHttpFile::CHttpFile](#chttpfile)|`CHttpFile` オブジェクトを作成します。|  
   
 ### <a name="public-methods"></a>パブリック メソッド  
   

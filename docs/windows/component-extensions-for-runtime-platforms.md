@@ -64,9 +64,7 @@ C +/cli CLI は ISO/ANSI C 規格を拡張し、定義下で、Ecma C +/cli CLI 
 |-------------|-----------------------|-------------|---------------|
 |**abstract**|[はい]|関数またはクラスが抽象型であることを示します。|[abstract](../windows/abstract-cpp-component-extensions.md)|
 |**new**|いいえ|関数が基底クラスのバージョンのオーバーライドでないことを示します。|[new (新規スロット vtable の)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)|
-|
-  **override**|[はい]|メソッドが基底クラスのバージョンのオーバーライドでなければならないことを示します。|
-  [override](../windows/override-cpp-component-extensions.md)|
+|**override**|[はい]|メソッドが基底クラスのバージョンのオーバーライドでなければならないことを示します。|[override](../windows/override-cpp-component-extensions.md)|
 |**sealed**|[はい]|クラスを基底クラスとして使用しないことを示します。|[sealed](../windows/sealed-cpp-component-extensions.md)|
 
 ## <a name="keywords-for-generics"></a>ジェネリックのキーワード
