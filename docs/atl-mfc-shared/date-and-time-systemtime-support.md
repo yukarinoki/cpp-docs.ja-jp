@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf48881b3baeb7dc5ab48483ae9b075a9c048a38
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 0698dbcb27e471218c39517676654156634aa022
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883568"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131387"
 ---
 # <a name="date-and-time-systemtime-support"></a>日付と時刻: SYSTEMTIME サポート
 [CTime](../atl-mfc-shared/reference/ctime-class.md)クラスには、Win32 からシステムとファイルの時間を受け入れるコンス トラクター。 このような目的に `CTime` オブジェクトを使用する場合は、この記事の説明に従って初期化を適宜変更する必要があります。  
@@ -52,8 +52,6 @@ ms.locfileid: "37883568"
 -   [MFC の一般的な日付と時刻](../atl-mfc-shared/date-and-time.md)  
   
 -   [日付と時刻のオートメーションのサポート](../atl-mfc-shared/date-and-time-automation-support.md)  
-  
--   [日付と時刻: 汎用クラス](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
   
 ## <a name="see-also"></a>関連項目  
  [日付と時刻](../atl-mfc-shared/date-and-time.md)

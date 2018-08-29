@@ -80,12 +80,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a14d5012e1db8dec0f1aa6c39d8764232169dec2
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 70e980a33e88920afef9c6f19dcd8b2ecfca5071
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954878"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131439"
 ---
 # <a name="numericlimits-class"></a>numeric_limits クラス
 
@@ -145,7 +145,7 @@ class numeric_limits
 |[tinyness_before](#tinyness_before)|型が、値を丸める前に正規化された値として表現するには小さすぎることを確認できるかどうかをテストします。|
 |[traps](#traps)|型において算術例外に関するレポートをトラップするように実装されているかどうかをテストします。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<limits>
 
@@ -156,7 +156,7 @@ class numeric_limits
 0 以外の最小の非正規化値を返します。
 
 ```cpp
-static Type denorm_min() throw();
+static constexpr Type denorm_min() throw();
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -215,7 +215,7 @@ The smallest nonzero denormalized value
 型が精度を失うことなく表現できる基数桁数を返します。
 
 ```cpp
-static const int digits = 0;
+static constexpr int digits = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -259,7 +259,7 @@ int main( )
 型が精度を失うことなく表現できる小数点数桁数を返します。
 
 ```cpp
-static const int digits10 = 0;
+static constexpr int digits10 = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -303,7 +303,7 @@ The float is; 100000000
 関数は、1 と、データ型が表現可能な 1 より大きい最小値との間の差を返します。
 
 ```cpp
-static Type epsilon() throw();
+static constexpr Type epsilon() throw();
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -355,7 +355,7 @@ The difference between 1 and the smallest value greater than 1
 型が非正規化値を許可するかどうかをテストします。
 
 ```cpp
-static const float_denorm_style has_denorm = denorm_absent;
+static constexpr float_denorm_style has_denorm = denorm_absent;
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -401,7 +401,7 @@ Whether long int objects allow denormalized values: 0
 精度の損失が、不正確な結果ではなく、非正規化の損失として検出されるかどうかをテストします。
 
 ```cpp
-static const bool has_denorm_loss = false;
+static constexpr bool has_denorm_loss = false;
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -447,7 +447,7 @@ Whether long int objects can detect denormalized loss: 0
 型が正の無限大を表すことができるかどうかをテストします。
 
 ```cpp
-static const bool has_infinity = false;
+static constexpr bool has_infinity = false;
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -493,7 +493,7 @@ Whether long int objects have infinity: 0
 型が静かな (シグナルを発生させない) 非数 (NaN) を表せるかどうかをテストします。
 
 ```cpp
-static const bool has_quiet_NaN = false;
+static constexpr bool has_quiet_NaN = false;
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -539,7 +539,7 @@ Whether long int objects have quiet_NaN: 0
 型がシグナルを発生する非数 (NAN) を表せるかどうかをテストします。
 
 ```cpp
-static const bool has_signaling_NaN = false;
+static constexpr bool has_signaling_NaN = false;
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -585,7 +585,7 @@ Whether long int objects have a signaling_NaN: 0
 型の正の無限大の表現 (使用可能な場合)。
 
 ```cpp
-static Type infinity() throw();
+static constexpr Type infinity() throw();
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -639,7 +639,7 @@ The representation of infinity for type long double is: inf
 型が表すことができる値のセットが有限かどうかをテストします。
 
 ```cpp
-static const bool is_bounded = false;
+static constexpr bool is_bounded = false;
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -693,7 +693,7 @@ Whether unsigned char objects have bounded set of representable values: 1
 型で実行される計算に丸め誤差がないかどうかをテストします。
 
 ```cpp
-static const bool is_exact = false;
+static constexpr bool is_exact = false;
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -747,7 +747,7 @@ Whether unsigned char objects have calculations free of rounding errors: 1
 型が IEC 559 標準に準拠しているかどうかをテストします。
 
 ```cpp
-static const bool is_iec559 = false;
+static constexpr bool is_iec559 = false;
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -797,7 +797,7 @@ Whether unsigned char objects conform to iec559 standards: 0
 型が整数を表せるかどうかをテストします。
 
 ```cpp
-static const bool is_integer = false;
+static constexpr bool is_integer = false;
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -847,7 +847,7 @@ Whether unsigned char objects have an integral representation: 1
 **type** が剰余を表せるかどうかをテストします。
 
 ```cpp
-static const bool is_modulo = false;
+static constexpr bool is_modulo = false;
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -897,7 +897,7 @@ Whether unsigned char objects have a modulo representation: 1
 型が符号付きを表せるかどうかをテストします。
 
 ```cpp
-static const bool is_signed = false;
+static constexpr bool is_signed = false;
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -947,7 +947,7 @@ Whether unsigned char objects have a signed representation: 0
 型に、テンプレート クラス `numeric_limits`で定義されている明示的な特殊化が含まれるかどうかをテストします。
 
 ```cpp
-static const bool is_specialized = false;
+static constexpr bool is_specialized = false;
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -1001,7 +1001,7 @@ Whether int* objects have an explicit specialization in the class: 0
 負の最小有限値を返します。
 
 ```cpp
-static Type lowest() throw();
+static constexpr Type lowest() throw();
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -1017,7 +1017,7 @@ static Type lowest() throw();
 型の最大の有限値を返します。
 
 ```cpp
-static Type max() throw();
+static constexpr Type max() throw();
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -1059,7 +1059,7 @@ int main() {
 その型の別個の 2 つの値が別個の 10 進表現であることを確証するために必要な 10 進桁数を返します。
 
 ```cpp
-static int max_digits10 = 0;
+static constexpr int max_digits10 = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -1075,7 +1075,7 @@ static int max_digits10 = 0;
 基数を累乗した場合に、浮動小数点型が有限値として表すことができる正の整数の最大指数を返します。
 
 ```cpp
-static const int max_exponent = 0;
+static constexpr int max_exponent = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -1121,7 +1121,7 @@ The maximum radix-based exponent for type long double is:  1024
 10 の基数を累乗した場合に、浮動小数点型が有限値として表すことができる正の整数の最大指数を返します。
 
 ```cpp
-static const int max_exponent10 = 0;
+static constexpr int max_exponent10 = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -1167,7 +1167,7 @@ The maximum base 10 exponent for type long double is:  308
 型の最小の正規化値を返します。
 
 ```cpp
-static Type min() throw();
+static constexpr Type min() throw();
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -1217,7 +1217,7 @@ The minimum value for type short int is:  -32768
 基数の底を累乗した場合に、浮動小数点型が有限値として表すことができる負の整数の最大指数を返します。
 
 ```cpp
-static const int min_exponent = 0;
+static constexpr int min_exponent = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -1263,7 +1263,7 @@ The minimum radix-based exponent for type long double is:  -1021
 10 の基数を累乗した場合に、浮動小数点型が有限値として表すことができる負の整数の最大指数を返します。
 
 ```cpp
-static const int min_exponent10 = 0;
+static constexpr int min_exponent10 = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -1309,7 +1309,7 @@ The minimum base 10 exponent for type long double is:  -307
 型の静かな非数表現 (NAN) を返します。
 
 ```cpp
-static Type quiet_NaN() throw();
+static constexpr Type quiet_NaN() throw();
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -1355,7 +1355,7 @@ The quiet NaN for type long double is:  1.#QNAN
 型の表現に使用される、基数と呼ばれる整数の底を返します。
 
 ```cpp
-static const int radix = 0;
+static constexpr int radix = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -1401,7 +1401,7 @@ The base for type long double is:  2
 型の丸め誤差の最大値を返します。
 
 ```cpp
-static Type round_error() throw();
+static constexpr Type round_error() throw();
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -1443,7 +1443,7 @@ The maximum rounding error for type long double is:  0.5
 実装において、浮動小数点値を整数値に丸め処理を行うために選択可能なさまざまな方式を記述した値を返します。
 
 ```cpp
-static const float_round_style round_style = round_toward_zero;
+static constexpr float_round_style round_style = round_toward_zero;
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -1490,7 +1490,7 @@ The rounding style for an int type is: 0
 型のシグナリング非数 (NAN) の表現を返します。
 
 ```cpp
-static Type signaling_NaN() throw();
+static constexpr Type signaling_NaN() throw();
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -1530,7 +1530,7 @@ int main( )
 型が、値を丸める前に正規化された値として表現するには小さすぎることを確認できるかどうかをテストします。
 
 ```cpp
-static const bool tinyness_before = false;
+static constexpr bool tinyness_before = false;
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -1580,7 +1580,7 @@ Whether unsigned char types can detect tinyness before rounding: 0
 型において算術例外に関するレポートをトラップするように実装されているかどうかをテストします。
 
 ```cpp
-static const bool traps = false;
+static constexpr bool traps = false;
 ```
 
 ### <a name="return-value"></a>戻り値

@@ -1,7 +1,7 @@
 ---
-title: 'マルチ スレッド: プログラミングのヒント |Microsoft Docs'
+title: 'マルチ スレッド: MFC のプログラミングのヒント |Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ad830117323aef807fcebc1ef61b4dfb1900bd9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 28446576fefe52dfaa99b69ae410a87424e28e3b
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591312"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132039"
 ---
-# <a name="multithreading-programming-tips"></a>マルチスレッド : プログラミングのヒント
-マルチスレッド アプリケーションでデータにアクセスするときは、シングルスレッドの場合より慎重に行う必要があります。 マルチスレッド アプリケーションでは、複数のスレッドがそれぞれ個別に同時に実行されるので、アルゴリズムやデータに関して、複数のスレッドで同じデータが使われることを考慮する必要があります。 このトピックでは、MFC (Microsoft Foundation Class) ライブラリを使用してマルチスレッド アプリケーションを開発する場合にこのような問題を回避する手法について説明します。  
+# <a name="multithreading-mfc-programming-tips"></a>マルチ スレッド: MFC のプログラミングのヒント
+マルチ スレッド アプリケーションでは、目的の順序で操作が発生して、複数のスレッドによってアクセスされるすべてのデータが破損していないことを確認して、シングル スレッド アプリケーションより慎重が必要です。 このトピックでは、MFC (Microsoft Foundation Class) ライブラリを使用してマルチスレッド アプリケーションを開発する場合にこのような問題を回避する手法について説明します。  
   
 - [複数のスレッドからオブジェクトへのアクセス](#_core_accessing_objects_from_multiple_threads)  
   
@@ -46,13 +46,13 @@ ms.locfileid: "42591312"
   
 ##  <a name="_core_accessing_objects_from_multiple_threads"></a> 複数のスレッドからオブジェクトへのアクセス  
  
-サイズおよびパフォーマンス上の理由により、MFC オブジェクトのスレッドの安全性は、オブジェクト レベルでは保証されず、クラス レベルでしか保証されません。 つまり、2 つの異なるスレッドで 2 つの異なる `CString` オブジェクトを操作することはできますが、2 つの異なるスレッドで同じ `CString` オブジェクトを操作することはできません。 複数のスレッドで 1 つのオブジェクトを操作する必要があるときは、Win32 のクリティカル セクションなどの同期機構を使ってアクセスを保護します。 関連オブジェクトはクリティカル セクションとその他の詳細についてを参照してください[同期](http://msdn.microsoft.com/library/windows/desktop/ms686353)Windows SDK に含まれています。  
+MFC オブジェクトは、単独でスレッド セーフではできません。 2 つのスレッドはクリティカル セクションなど、MFC 同期クラスや、適切な Win32 の同期オブジェクトを使用しない限り、同じオブジェクトを操作できません。 関連オブジェクトはクリティカル セクションとその他の詳細についてを参照してください[同期](/windows/desktop/Sync/synchronization)Windows SDK に含まれています。  
   
 クラス ライブラリは内部的にクリティカル セクションを使って、デバッグ メモリの割り当てなどが使うグローバル データ構造を保護しています。  
   
 ##  <a name="_core_accessing_mfc_objects_from_non.2d.mfc_threads"></a> 非 MFC スレッドから MFC オブジェクトへのアクセス  
  
-使用して以外の方法でスレッドを作成するマルチ スレッド アプリケーションがある場合、 [CWinThread](../mfc/reference/cwinthread-class.md)オブジェクト、そのスレッドから MFC オブジェクトにアクセスすることはできません。 つまり、セカンダリ スレッドから MFC オブジェクトにアクセスする場合は、作成する必要がそのスレッドで説明する方法のいずれかで[マルチ スレッド: ユーザー インターフェイス スレッドの作成](../parallel/multithreading-creating-user-interface-threads.md)または[マルチ スレッド。ワーカー スレッドを作成する](../parallel/multithreading-creating-worker-threads.md)します。 ほかの方法では、マルチスレッド アプリケーションの実行に必要な内部変数をクラス ライブラリで初期化できません。  
+使用して以外の方法でスレッドを作成するマルチ スレッド アプリケーションがある場合、 [CWinThread](../mfc/reference/cwinthread-class.md)オブジェクト、そのスレッドから MFC オブジェクトにアクセスすることはできません。 つまり、セカンダリ スレッドから MFC オブジェクトにアクセスする場合は、作成する必要がそのスレッドで説明する方法のいずれかで[マルチ スレッド: ユーザー インターフェイス スレッドの作成](multithreading-creating-user-interface-threads.md)または[マルチ スレッド。ワーカー スレッドを作成する](multithreading-creating-worker-threads.md)します。 ほかの方法では、マルチスレッド アプリケーションの実行に必要な内部変数をクラス ライブラリで初期化できません。  
   
 ##  <a name="_core_windows_handle_maps"></a> Windows ハンドルのマップ  
  
@@ -62,12 +62,12 @@ ms.locfileid: "42591312"
   
 ワーカー スレッドを実行して、アプリケーションのメイン ウィンドウにこれらのメッセージを投稿は、さまざまなタスクに対応する新しいユーザー定義のメッセージを作成する方法のもう 1 つを使用して`::PostMessage`します。 この通信方法は、2 つの異なるアプリケーション間の対話動作に似ています。ただし、2 つのスレッドが同じアドレス空間を共有する点が異なります。  
   
-ハンドル マップの詳細については、次を参照してください。[テクニカル ノート 3:](../mfc/tn003-mapping-of-windows-handles-to-objects.md)します。 スレッド ローカル ストレージの詳細については、次を参照してください。[スレッド ローカル ストレージ](http://msdn.microsoft.com/library/windows/desktop/ms686749)と[スレッド ローカル ストレージを使用して](http://msdn.microsoft.com/library/windows/desktop/ms686991)Windows SDK に含まれています。  
+ハンドル マップの詳細については、次を参照してください。[テクニカル ノート 3:](../mfc/tn003-mapping-of-windows-handles-to-objects.md)します。 スレッド ローカル ストレージの詳細については、次を参照してください。[スレッド ローカル ストレージ](/windows/desktop/ProcThread/thread-local-storage)と[スレッド ローカル ストレージを使用して](/windows/desktop/ProcThread/using-thread-local-storage)Windows SDK に含まれています。  
   
 ##  <a name="_core_communicating_between_threads"></a> スレッド間通信  
  
-MFC には、スレッドからオブジェクトへのアクセスを同期化して、スレッドの安全性を保証するクラスがあります。 これらのクラスの使用方法については、「[マルチ スレッド: 同期クラスの使用方法](../parallel/multithreading-how-to-use-the-synchronization-classes.md)と[マルチ スレッド: 同期クラスを使用するときに](../parallel/multithreading-when-to-use-the-synchronization-classes.md)します。 これらのオブジェクトの詳細については、次を参照してください。[同期](http://msdn.microsoft.com/library/windows/desktop/ms686353)Windows SDK に含まれています。  
+MFC には、スレッドからオブジェクトへのアクセスを同期化して、スレッドの安全性を保証するクラスがあります。 これらのクラスの使用方法については、「[マルチ スレッド: 同期クラスの使用方法](multithreading-how-to-use-the-synchronization-classes.md)と[マルチ スレッド: 同期クラスを使用するときに](multithreading-when-to-use-the-synchronization-classes.md)します。 これらのオブジェクトの詳細については、次を参照してください。[同期](/windows/desktop/Sync/synchronization)Windows SDK に含まれています。  
   
 ## <a name="see-also"></a>関連項目  
 
-[C++ と MFC を使用するマルチスレッド](../parallel/multithreading-with-cpp-and-mfc.md)
+[C++ と MFC を使用するマルチスレッド](multithreading-with-cpp-and-mfc.md)

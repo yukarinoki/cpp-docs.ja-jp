@@ -1,5 +1,5 @@
 ---
-title: '現在の時刻: 汎用クラス |Microsoft ドキュメント'
+title: '現在の時刻: 汎用クラス |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,19 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec71cf76f859457aa76e69b57b58db3940e974da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c99a2626c9f60c6407ca9b374bed9c83c981e5b3
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354596"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132008"
 ---
 # <a name="current-time-general-purpose-classes"></a>現在の時刻: 汎用クラス
-次の手順を作成する方法を示しています、`CTime`オブジェクトを現在の時刻に初期化します。  
+次の手順を作成する方法を示しています、`CTime`オブジェクトし、現在の時刻で初期化します。  
   
 #### <a name="to-get-the-current-time"></a>現在の時刻を取得するには  
   
-1.  割り当てる、`CTime`オブジェクトに、次のようにします。  
+1.  割り当て、`CTime`オブジェクトに、次のようにします。  
   
      [!code-cpp[NVC_ATLMFC_Utilities#171](../atl-mfc-shared/codesnippet/cpp/current-time-general-purpose-classes_1.cpp)]  
   
@@ -41,14 +41,13 @@ ms.locfileid: "32354596"
   
      [!code-cpp[NVC_ATLMFC_Utilities#172](../atl-mfc-shared/codesnippet/cpp/current-time-general-purpose-classes_2.cpp)]  
   
-     `GetCurrentTime`から静的メンバー関数は、`CTime`クラス、その名前をクラスと、スコープ解決演算子の名前を修飾する必要があります (`::`)、`CTime::GetCurrentTime()`です。  
+     `GetCurrentTime`から静的メンバー関数は、`CTime`クラス、クラスと、スコープ解決演算子の名前、その名前を修飾する必要があります (`::`)、`CTime::GetCurrentTime()`します。  
   
- もちろん、2 つの手順に従って以前結合できます、単一のプログラム ステートメントに次のように。  
+ もちろん、2 つの手順が記載されている以前でした同時に 1 つのプログラム ステートメントとしては、次のように。  
   
  [!code-cpp[NVC_ATLMFC_Utilities#173](../atl-mfc-shared/codesnippet/cpp/current-time-general-purpose-classes_3.cpp)]  
   
-## <a name="see-also"></a>関連項目  
- [日付と時刻: 汎用クラス](../atl-mfc-shared/date-and-time-general-purpose-classes.md)
+
 
 
 

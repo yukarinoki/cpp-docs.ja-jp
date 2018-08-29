@@ -1,7 +1,7 @@
 ---
 title: 古いコード (Visual C) のためのマルチ スレッドのサポート |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -20,25 +20,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c911ff2f0dcd43a6f07144f893b91f3a97c6708b
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 7b1b301186036460acc07a526267503da8b97678
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42538718"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132103"
 ---
 # <a name="multithreading-support-for-older-code-visual-c"></a>旧形式のコードのためのマルチスレッド サポート (Visual C++)
 Visual C++ では、並列に実行する複数のスレッドを同時に実行させることができます。 マルチスレッドを使うと、バックグラウンドのタスクを別に分けたり、複数の入力ストリームを同時に管理したり、ユーザー インターフェイスを管理したりできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  
-[C と Win32 を使用するマルチスレッド](../parallel/multithreading-with-c-and-win32.md)  
+[C と Win32 を使用するマルチスレッド](multithreading-with-c-and-win32.md)  
 Microsoft Windows で動作するマルチスレッド アプリケーションの作成方法について説明します。  
   
-[C++ と MFC を使用するマルチスレッド](../parallel/multithreading-with-cpp-and-mfc.md)  
+[C++ と MFC を使用するマルチスレッド](multithreading-with-cpp-and-mfc.md)  
 プロセスとスレッドについて説明します。また、MFC でマルチスレッドを使用する方法についても説明します。  
   
-[マルチスレッドとロケール](../parallel/multithreading-and-locales.md)  
+[マルチスレッドとロケール](multithreading-and-locales.md)  
 C ランタイム ライブラリとマルチ スレッド アプリケーションでは、C++ 標準ライブラリの両方のロケール機能を使用するときに発生する問題について説明します。  
   
 ## <a name="related-sections"></a>関連項目  

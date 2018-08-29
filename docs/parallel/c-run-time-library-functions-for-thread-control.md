@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a08ba6c5343fda19bab823b9a415db18b745e2a
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 2eaa1a0589cb001658b18144e06956eebd302287
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42538286"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131855"
 ---
 # <a name="c-run-time-library-functions-for-thread-control"></a>スレッド コントロールのための C ランタイム ライブラリ関数
 Win32 プログラムはすべて、スレッドを少なくとも 1 つ持っています。 どのスレッドでも新しいスレッドを作成できます。 スレッドには、作業をすばやく完了して終了するものもあれば、プログラムの実行中アクティブ状態を続けるものもあります。  
@@ -54,4 +54,4 @@ LIBCMT と MSVCRT の C ランタイム ライブラリは、スレッドの作�
   
 ## <a name="see-also"></a>関連項目  
  
-[C と Win32 を使用するマルチスレッド](../parallel/multithreading-with-c-and-win32.md)
+[C と Win32 を使用するマルチスレッド](multithreading-with-c-and-win32.md)
