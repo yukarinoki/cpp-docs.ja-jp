@@ -1,5 +1,5 @@
 ---
-title: -guard (有効にする Control Flow Guard) |Microsoft ドキュメント
+title: -guard (有効にする制御フロー ガード) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5c60ff444189e9e6b7919b43649b75722ee7249
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6c65bafc14f5ef29db89ddc0a4647193231f7e19
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377405"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131671"
 ---
 # <a name="guard-enable-control-flow-guard"></a>/guard (制御フロー ガードを有効にする)
 制御フロー ガードのセキュリティ チェックのコンパイラ生成を有効にします。  
@@ -31,8 +31,10 @@ ms.locfileid: "32377405"
 /guard:cf[-]  
 ```  
   
-## <a name="remarks"></a>コメント  
- **/guard:cf** オプションにより、コンパイラがコンパイル時に間接的な呼び出しのターゲットに関する制御フローを分析し、実行時に、ターゲットを確認するコードを挿入します。 既定では、 **/guard:cf** は無効になっており、明示的に有効にする必要があります。 このオプションを明示的に無効にするには、 **/guard:cf-** を使用します。  
+## <a name="remarks"></a>Remarks  
+ **/guard:cf** オプションにより、コンパイラがコンパイル時に間接的な呼び出しのターゲットに関する制御フローを分析し、実行時に、ターゲットを確認するコードを挿入します。 既定では、 **/guard:cf** は無効になっており、明示的に有効にする必要があります。 このオプションを明示的に無効にするには、 **/guard:cf-** を使用します。 
+
+**Visual Studio 2017 以降**: このオプションは追加のガード**スイッチ**を生成するステートメントのテーブルを移動します。
   
  **/guard:cf** 制御フローガード (CFG) オプションが指定されている場合、コンパイラとリンカーがランタイム セキュリティ チェックを追加で挿入して、コードを侵害する試みを検出します。 コンパイルとリンク中に、コードのすべての間接的な呼び出しが分析され、コードを正常に実行したときに到達可能なすべての場所が検索されます。 この情報は、バイナリのヘッダーの追加の構造に格納されます。 また、コンパイラは、コード内の間接的な各呼び出しの前に、ターゲットが検証済みの場所のいずれかにあることを確認するチェックを挿入します。 CFG 対応オペレーティング システム上の実行時にチェックに失敗した場合、オペレーティング システムはプログラムを閉じます。  
   
@@ -46,7 +48,7 @@ ms.locfileid: "32377405"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
   
-1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[のプロジェクト プロパティの操作](../../ide/working-with-project-properties.md)です。  
+1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。  
   
 2.  **[構成プロパティ]**、 **[C/C++]**、 **[コード生成]** の順に選択します。  
   

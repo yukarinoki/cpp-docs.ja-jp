@@ -1,7 +1,7 @@
 ---
 title: 列挙型 (C++) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/01/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48f9328ef6a862ffc8888b99b16764978b0005c2
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 00a1b940ad6c792abbb13ec91b7376b73b2be16b
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406254"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43130951"
 ---
 # <a name="enumerations-c"></a>列挙型 [C++]
 列挙体は、列挙子と呼ばれる一連の名前付き整数定数で構成されるユーザー定義型です。  
@@ -149,7 +149,8 @@ namespace ScopedEnumConversions
   
  `hand = account_num;` 行では、前に示したように、スコープを持たない列挙型に関連するエラーが発生することに注意してください。 これは、明示的にキャストすることでエラーを回避できます。 ただし、スコープを持つ列挙型を使用しても、次のステートメント、`account_num = Suit::Hearts;` での変換の試みは、明示的なキャストなしではエラーが発生します。 
 
-## <a name="enums-with-no-enumerators"></a>なしの列挙子の列挙型
+## <a name="no_enumerators"></a> なしの列挙子の列挙型
+
 **Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 列挙型 (標準またはスコープ) を定義すると、明示的な基になる型となしの列挙子を導入するには有効で新しい整数を入力します。他の型に暗黙的な変換がありません。 この型を使用して、その組み込みの基になる型ではなく、暗黙的な変換を不注意による微妙なエラーが発生する可能性を排除できます。  
 
 

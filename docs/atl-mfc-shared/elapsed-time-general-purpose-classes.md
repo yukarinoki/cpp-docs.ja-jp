@@ -1,5 +1,5 @@
 ---
-title: '汎用クラスでの経過時間: |Microsoft ドキュメント'
+title: '経過時間: 汎用クラス |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,24 +21,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff7ef11bb20124a05e2e85c408ce27de8f982546
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 98e3c07522ead22467455ce2d601270e7b624be0
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354267"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131615"
 ---
-# <a name="elapsed-time-general-purpose-classes"></a>汎用クラスでの経過時間:
-次の手順は、2 つの差を計算する方法を示しています。`CTime`オブジェクトを取得、`CTimeSpan`結果。  
-  
-#### <a name="to-calculate-elapsed-time"></a>経過時間を計算するには  
-  
-1.  使用して、`CTime`と`CTimeSpan`経過時間を次のように計算するオブジェクト。  
+# <a name="elapsed-time-general-purpose-classes"></a>経過時間: 汎用クラス
+次の手順は、2 つの差を計算する方法を示しています。`CTime`オブジェクトを取得、`CTimeSpan`結果。 使用して、`CTime`と`CTimeSpan`の経過時間を次のように計算するオブジェクト。  
   
      [!code-cpp[NVC_ATLMFC_Utilities#174](../atl-mfc-shared/codesnippet/cpp/elapsed-time-general-purpose-classes_1.cpp)]  
   
-     計算した後`elapsedTime`のメンバー関数を使用する`CTimeSpan`を経過した時間の値のコンポーネントを抽出します。  
-  
-## <a name="see-also"></a>関連項目  
- [日付と時刻: 汎用クラス](../atl-mfc-shared/date-and-time-general-purpose-classes.md)
+計算した後`elapsedTime`のメンバー関数を使用する`CTimeSpan`経過時間の値のコンポーネントを抽出します。  
 

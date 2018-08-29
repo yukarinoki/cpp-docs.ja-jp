@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49c5e624b437f39270fb880fe526d55e7ed83e5d
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 97a69c52adb5094c7c7841a93b73b1a83cd786d9
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42539048"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131063"
 ---
 # <a name="avoiding-problem-areas-with-multithread-programs"></a>マルチスレッド プログラムの問題を回避する方法
-いくつかの問題を作成する、リンク、またはマルチ スレッドの C プログラムの実行で発生する可能性があります。 いくつかの一般的な問題については、次の表で説明します。 (MFC の観点から詳細については、次を参照してください[マルチ スレッド: プログラミングのヒント](../parallel/multithreading-programming-tips.md)。)。  
+いくつかの問題を作成する、リンク、またはマルチ スレッドの C プログラムの実行で発生する可能性があります。 いくつかの一般的な問題については、次の表で説明します。 (MFC の観点から詳細については、次を参照してください[マルチ スレッド: プログラミングのヒント](multithreading-programming-tips.md)。)。  
   
 |問題|考えられる原因|  
 |-------------|--------------------|  
@@ -34,4 +34,4 @@ ms.locfileid: "42539048"
   
 ## <a name="see-also"></a>関連項目  
 
-[C と Win32 を使用するマルチスレッド](../parallel/multithreading-with-c-and-win32.md)
+[C と Win32 を使用するマルチスレッド](multithreading-with-c-and-win32.md)
