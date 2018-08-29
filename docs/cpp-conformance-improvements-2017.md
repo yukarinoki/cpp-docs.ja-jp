@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bb06a4ef2229b2b9e98bf7acabbe757744fc73
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 3708bce00b01ee796067bf91d99645cb61f19a53
+ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42573163"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42900701"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Visual Studio 2017 バージョン 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156)、[15.7](#improvements_157)、[15.8](#update_158) での C++ 準拠の改善
 
@@ -1683,6 +1683,8 @@ struct S : Base<T> {
 ```
 
 このエラーを解決するには、`return` ステートメントを `return this->base_value;` に変更します。
+
+**注:** Boost python ライブラリの [unwind_type.hpp](https://github.com/boostorg/python/blame/develop/include/boost/python/detail/unwind_type.hpp) には、テンプレートの事前宣言のための MSVC 固有の回避策が長い間存在していました。 Visual Studio 2017 バージョン 15.8 以降の [/permissive-](build/reference/permissive-standards-conformance.md) モード (_MSC_VER=1915) では、MSVC コンパイラは、他のコンパイラとの一貫性を保ち、引数依存の名前検索 (ADL) を正しく実行します。これにより、この回避策のガードが不要になります。 このエラー "*C3861: 'unwind_type': 識別子が見つかりませんでした*" を回避するには、Boostorg のリポジトリの [PR 229](https://github.com/boostorg/python/pull/229) を参照して、ヘッダー ファイルを更新します。 [vcpkg](vcpkg.md) Boost パッケージには既に修正プログラムが適用されているため、vcpkg から Boost のソースを取得するかアップグレードする場合は、修正プログラムを個別に適用する必要はありません。
 
 ### <a name="forward-declarations-and-definitions-in-namespace-std"></a>名前空間 std での事前宣言と定義
 
