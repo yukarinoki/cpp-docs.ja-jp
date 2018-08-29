@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 643347915e97f1c803047f91b72311c5642e6eef
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 5eadb13e71e65e07c807812ad00fc1989c3a19f9
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879560"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132208"
 ---
 # <a name="date-and-time"></a>日付と時刻
 MFC には、日付と時刻を使用した作業のいくつかの方法がサポートされています。 次の設定があります。  
@@ -34,8 +34,6 @@ MFC には、日付と時刻を使用した作業のいくつかの方法がサ�
 -   オートメーションのサポート[DATE データ型](../atl-mfc-shared/date-type.md)します。 サポートの日付、時刻、および日付/時刻値。 [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)と[COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md)クラスは、この機能をカプセル化します。 動作する、 [COleVariant](../mfc/reference/colevariant-class.md)クラスのオートメーションのサポートを使用します。  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います  
-  
--   [日付と時刻: 汎用クラス](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
   
 -   [日付と時刻: SYSTEMTIME サポート](../atl-mfc-shared/date-and-time-systemtime-support.md)  
   

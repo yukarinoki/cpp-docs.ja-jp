@@ -1,5 +1,5 @@
 ---
-title: -寛容 - (標準準拠) |Microsoft ドキュメント
+title: -permissive-(標準の準拠) |Microsoft Docs
 ms.date: 06/21/2018
 ms.technology:
 - cpp-tools
@@ -19,16 +19,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e1a9c407779b6bf441ea1375026af6ac04bb8c8
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: 1f2f0b1ca5351fbf2cfa2ab4b3233f8e709fae44
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322265"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131217"
 ---
-# <a name="permissive--standards-conformance"></a>寛容/-(標準準拠)
+# <a name="permissive--standards-conformance"></a>/permissive -(標準への準拠)
 
-コンパイラに標準準拠モードを指定します。 特定し、コードをより正確と移植性を向上させるで準拠の問題を解決するためには、このオプションを使用します。
+コンパイラに標準準拠のモードを指定します。 特定しより正確と移植性を向上させる、コードで準拠の問題を修正するためには、このオプションを使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -36,34 +36,36 @@ ms.locfileid: "36322265"
 
 ## <a name="remarks"></a>Remarks
 
-使用することができます、**寛容/-** コンパイラ オプションをコンパイラの標準準拠の動作を指定します。 このオプションは、制限の緩やかな動作を無効にし、設定、 [/Zc](../../build/reference/zc-conformance.md)厳密に準拠するためのコンパイラ オプション。 IDE では、このオプションは、IntelliSense エンジン下線非準拠コードも、します。
+Visual Studio 2017 以降、このオプションはサポートされています。
 
-既定では、**寛容/-** オプションは Visual Studio 2017 バージョン 15.5 およびそれ以降のバージョンで作成された新しいプロジェクトで設定します。 以前のバージョンで既定で設定されていません。 オプションが設定されている、コンパイラ診断エラーが発生、コードで標準以外の言語構成要素と、警告が検出された場合は、前にいくつかの一般的なバグを含めて、c++ 11 コード。
+使用することができます、 **/permissive -** コンパイラ オプションは、標準準拠コンパイラの動作を指定します。 このオプションは、制限の緩やかな動作を無効にし、設定、 [/Zc](../../build/reference/zc-conformance.md)厳密に準拠コンパイラ オプション。 IDE では、このオプションも IntelliSense エンジン下線非準拠コードになります。
 
-**寛容/-** オプションは、ほぼすべての Windows Driver Kit (WDK)、Windows 秋作成者 SDK (10.0.16299.0) 以降で、ソフトウェア開発キット (SDK) など、最新の Windows Kits からヘッダー ファイルとの互換性。 SDK の古いバージョンは、コンパイルに失敗する可能性があります**寛容/-** コードへの準拠の理由によりさまざまなソース。 コンパイラと別のリリースのタイムライン上の Sdk 出荷いくつか残っている問題があるためです。 特定のヘッダー ファイル問題については、次を参照してください。 [Windows ヘッダー問題](#windows-header-issues)以下です。
+既定で、 **/permissive -** Visual Studio 2017 バージョン 15.5 以降で作成された新しいプロジェクトのオプションを設定します。 既定では以前のバージョンに設定されていません。 前にいくつかの一般的なバグを含む、オプションの設定、コンパイラ診断のエラーが発生またはコードの非標準の言語で構築したときに警告が検出された、ときに、c++ 11 コード。
 
-**寛容/-** オプション セットに、 [/Zc:strictStrings](../../build/reference/zc-conformance.md)と[/Zc:rvalueCast](../../build/reference/zc-conformance.md)オプション準拠の動作をします。 既定値は、非準拠の動作です。 特定に渡すことができます **/Zc**後オプション**寛容/-** この動作をオーバーライドするコマンド ラインでします。
+**/Permissive -** オプションは、ほぼすべてのソフトウェア開発キット (SDK) や Windows Driver Kit (WDK)、Windows Fall Creators SDK (10.0.16299.0) 以降など、最新の Windows キットからヘッダー ファイルとの互換性。 以前のバージョンの SDK をコンパイルできない可能性があります **/permissive -** 各種のソース コードへの準拠の理由。 コンパイラと別のリリースのタイムライン上の Sdk の出荷の残りの問題があるためです。 特定のヘッダー ファイルの問題を参照してください。 [Windows ヘッダー問題](#windows-header-issues)以下。
 
-Visual Studio 2017 15.3 のバージョンのコンパイラ以降のバージョンで、**寛容/-** オプション セットに、 [/Zc:ternary](../../build/reference/zc-ternary.md)オプション。 コンパイラでは、2 段階名前検索の要件の詳細も実装します。 ときに、**寛容/-** オプションの設定と、コンパイラがテンプレートで使用される依存と非依存の名前を識別する、関数とクラス テンプレート定義を解析します。 このリリースでは、名前の依存関係分析だけが実行されます。
+**/Permissive -** オプション セット、 [/Zc:strictStrings](../../build/reference/zc-conformance.md)と[/Zc:rvalueCast](../../build/reference/zc-conformance.md)準拠した動作するためのオプション。 非準拠の動作を既定使用されます。 特定渡すことができます **/Zc**後オプション **/permissive -** でこの動作をオーバーライドするためのコマンドライン。
 
-環境に固有の拡張機能と実装では、最大、標準のまま言語領域受けません**寛容/-** です。 たとえば、Microsoft 固有`__declspec`、呼び出し規約と構造化例外処理キーワード、およびコンパイラ固有プラグマ ディレクティブまたは属性に、コンパイラによってフラグがない**寛容/-** モード。
+Visual Studio 2017 バージョン 15.3 では、コンパイラの最初のバージョンでは、 **/permissive -** オプション セット、 [/Zc:ternary](../../build/reference/zc-ternary.md)オプション。 コンパイラでは、2 フェーズの名前検索の要件の詳細も実装します。 ときに、 **/permissive -** オプションが設定されている、コンパイラは、テンプレートで使用される依存と非依存の名前を識別する、関数とクラス テンプレート定義を解析します。 このリリースでは、名前の依存関係の分析だけが実行されます。
 
-**寛容/-** オプションでは、現在のコンパイラ バージョンで準拠サポートを使用する言語構成要素が非準拠かを判断します。 オプションでは、コードを特定のバージョンの C++ 標準に準拠しているかどうかは判断されません。 最新のドラフト標準のすべての実装済みのコンパイラ サポートを有効にするを使用して、 [/std:latest](../../build/reference/std-specify-language-standard-version.md)オプション。 使用して、現在実装されている c++ 17 規格にコンパイラのサポートを制限、 [/std:c + + 17](../../build/reference/std-specify-language-standard-version.md)オプション。 C++ 14 標準をより厳密に一致するようにコンパイラのサポートを制限するには、 [/std:c + + 14](../../build/reference/std-specify-language-standard-version.md)オプションは、既定値です。
+環境固有の拡張機能と、標準の実装に依存しますまま言語領域は受けません **/permissive -** します。 たとえば、Microsoft 固有`__declspec`、呼び出し規約、および構造化例外処理キーワード、および特定のコンパイラのプラグマ ディレクティブまたは属性はフラグが設定されないでコンパイラ **/permissive -** モード。
 
-すべての c++ 11、c++ 14、または c++ 17 標準に準拠できませんコードは、Visual Studio 2017 で Visual C コンパイラでサポートされます。 Visual Studio のバージョンに応じて、**寛容/-** オプションは、名前の 2 フェーズ参照の一部の側面に関連、一時的に非定数の参照をバインド、コピー初期化を直接 init として扱うことを許可する問題を検出できません可能性があります複数ユーザー定義変換初期化、または代替トークン内の論理演算子は、および他の適合性のサポートされていない領域。 Visual C++ の準拠に関する問題について詳しくは、「 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)」をご覧ください。 最大限に活用する**寛容/-**、Visual Studio の最新バージョンに更新します。
+**/Permissive -** オプション サポートを使用して、準拠コンパイラの現在のバージョンでどの言語コンストラクトが非準拠を確認します。 オプションは、コードが特定のバージョンの C++ 標準に準拠しているかどうかを決定できません。 最新のドラフト標準のすべての実装済みのコンパイラ サポートを有効にするには使用、 [/std:latest](../../build/reference/std-specify-language-standard-version.md)オプション。 コンパイラのサポートを現在実装されている c++ 17 標準に制限する、 [/std:c + + 17](../../build/reference/std-specify-language-standard-version.md)オプション。 C++ 14 標準をより厳密に一致するように、コンパイラのサポートを制限するには、 [/std:c + + + 14](../../build/reference/std-specify-language-standard-version.md)オプションは、既定値です。
+
+すべての c++ 11、c++ 14、または c++ 17 標準に準拠しないコードが Visual Studio 2017 で Visual C コンパイラによってサポートされています。 Visual Studio のバージョンに応じて、 **/permissive -** オプションは、2 フェーズの名前参照の一部の側面に関する、一時的に非定数の参照をバインド、直接の初期化としてコピー init を扱うこと、許可の問題を検出しない可能性があります複数ユーザー定義の変換では、初期化、または別のトークンの論理演算子は、およびその他の適合性のサポートされていない領域。 Visual C++ の準拠に関する問題について詳しくは、「 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)」をご覧ください。 取得を最大限に活用する **/permissive -**、Visual Studio の最新バージョンに更新します。
 
 ### <a name="how-to-fix-your-code"></a>コードを修正する方法
 
-ここでは、非準拠を使用するときとして検出されるコードの例をいくつか**寛容/-**、と共に、問題を修正する方法をお勧めします。
+いくつかの例として、非準拠を使用するときに検出されたコードの **/permissive -**、と共に、問題を修正する方法をお勧めします。
 
-#### <a name="use-default-as-an-identifier-in-native-code"></a>ネイティブ コードで識別子として既定値の使用
+#### <a name="use-default-as-an-identifier-in-native-code"></a>ネイティブ コードの識別子として既定値の使用
 
 ```cpp
 void func(int default); // Error C2321: 'default' is a keyword, and
                         // cannot be used in this context
 ```
 
-#### <a name="lookup-members-in-dependent-base"></a>依存する基本の参照メンバー
+#### <a name="lookup-members-in-dependent-base"></a>依存ベース参照メンバー
 
 ```cpp
 template <typename T>
@@ -91,7 +93,7 @@ void h() {
 }
 ```
 
-#### <a name="use-of-qualified-names-in-member-declarations"></a>メンバーの宣言内の修飾名の使用
+#### <a name="use-of-qualified-names-in-member-declarations"></a>メンバー宣言の修飾名の使用
 
 ```cpp
 struct A {
@@ -101,7 +103,7 @@ struct A {
 };
 ```
 
-#### <a name="initialize-multiple-union-members-in-a-member-initializer"></a>メンバーの初期化子内の複数の共用体のメンバーを初期化します。
+#### <a name="initialize-multiple-union-members-in-a-member-initializer"></a>メンバー初期化子内の複数の共用体のメンバーを初期化します。
 
 ```cpp
 union U
@@ -116,7 +118,7 @@ union U
 };
 ```
 
-#### <a name="hidden-friend-name-lookup-rules"></a>フレンド名のルックアップ規則を非表示
+#### <a name="hidden-friend-name-lookup-rules"></a>非表示のフレンド名のルックアップ規則
 
 ```cpp
 // Example 1
@@ -156,7 +158,7 @@ int data[Color::Blue]; // error C3411: 'Color' is not valid as the size
                        // Cast to type size_t or int to fix.
 ```
 
-#### <a name="use-for-each-in-native-code"></a>ネイティブ コードでは、それぞれの使用
+#### <a name="use-for-each-in-native-code"></a>ネイティブ コードでは for each の使用
 
 ```cpp
 void func() {
@@ -242,19 +244,19 @@ class ATL_NO_VTABLE CFooImpl : public ICustom,
 
 #### <a name="ambiguous-conditional-operator-arguments"></a>あいまいな条件演算子の引数
 
-Visual Studio 2017 バージョン 15.3 する前に、コンパイラのバージョンは、コンパイラは条件演算子 (または三項演算子) への引数を受け入れられます`?:`をでとみなされるあいまいな標準です。 **寛容/-** モードでは、コンパイラはこれで以前のバージョンでの診断を使用せずにコンパイルされるケースで 1 つまたは複数の診断発行します。
+Visual Studio 2017 バージョン 15.3 の前に、コンパイラのバージョンでは、コンパイラは条件演算子 (または三項演算子) の引数を受け入れられる`?:`標準によってあいまいなが検討されます。 **/Permissive -** モードでは、コンパイラはこれで以前のバージョンでの診断を使用せずにコンパイルする場合、1 つまたは複数の診断発行します。
 
-この変更につながる可能性のある一般的なエラーは次のとおりです。
+この変更の可能性のある一般的なエラーは次のとおりです。
 
-- エラー C2593: 'operator'? あいまいです。
+- エラー C2593: '演算子?' あいまいです。
 
-- エラー C2679: バイナリ '?': 'B' 型の右側のオペランドを扱う演算子が見つかりません (または許容可能な変換はありません)
+- エラー C2679: バイナリ '?': 'B' 型の右辺のオペランドを扱う演算子が見つかりません (または、変換はありません)
 
-- エラー C2678: バイナリ '?': タイプ 'A' の左側のオペランドを扱う演算子が見つかりません (または許容可能な変換はありません)
+- エラー C2678: バイナリ '?': 型 'A' の左側のオペランドを扱う演算子が見つかりません (または、変換はありません)
 
-- エラー C2446: ':': 'B' から 'A' への変換はありません
+- エラー C2446: ':': 'a' から 'B' 変換なし
 
-この問題を引き起こす可能性のある一般的なコード パターンは、いくつかのクラス C 型 T に別の型 T から非明示的コンス トラクターと非明示的な変換演算子の両方を提供する場合ここでは、3 番目の型に 2 番目の引数の変換と 3 番目の引数の 2 番目の型への変換の両方は有効な変換では、これは、標準に従ってあいまいな。
+この問題を引き起こす可能性のある一般的なコード パターンがいくつかのクラス C 型 T を別の型 T から非明示的コンス トラクターと非明示的変換演算子の両方を提供するときにします。この場合、2 番目の引数の 3 番目の型への変換と 3 番目の引数の 2 番目の型への変換の両方が有効な変換は、標準に従ってあいまいであります。
 
 ```cpp
 // Example 1: class that provides conversion to and initialization from some type T
@@ -274,7 +276,7 @@ auto y = cond ? 7 : int(a);
 auto z = cond ? A(7) : a;
 ```
 
-T は、null で終わる文字列型の 1 つを表すときにこの一般的なパターンの重要な例外がある (たとえば、 `const char *`、`const char16_t *`など) と実際の引数に`?:`文字列は、対応する型のリテラルです。 C++ 17 には、c++ 14 のセマンティクスが変更されました。 例 2 のコードは受け入れられます結果として、 **/std:c + + 14** 、および 拒否された **/std:c + + 17**とき **/Zc:ternary**または **/permissive-** を使用します。
+T が null で終わる文字列型のいずれかを表す場合にこの共通パターンに重要な例外がある (たとえば、 `const char *`、`const char16_t *`など) と実際の引数を`?:`文字列は、対応する型のリテラル。 C++ 17 には、c++ 14 のセマンティクスが変更されました。 例 2 のコードが受け入れられるため、 **/std:c + + + 14**および 拒否された **/std:c + + + 17**とき **/Zc:ternary**または **/permissive-** 使用されます。
 
 ```cpp
 // Example 2: exception from the above
@@ -295,7 +297,7 @@ auto x = cond ? "A" : s;
 auto y = cond ? "A" : static_cast<const char*>(s);
 ```
 
-型の引数の 1 つの条件演算子では、別のケースでエラーが発生する可能性があります`void`です。 この場合は、アサートに似たマクロで一般的な可能性があります。
+別のケースでエラーが発生する可能性がありますが、型の引数の 1 つの条件演算子`void`します。 この場合は、アサートに似たマクロで一般的な可能性があります。
 
 ```cpp
 // Example 3: void arguments
@@ -306,7 +308,7 @@ void myassert(const char* text, const char* file, int line);
 #define ASSERT_B(ex) (void)((ex) ? void() : myassert(#ex, __FILE__, __LINE__))
 ```
 
-条件演算子の結果の型を下にある変更可能性がありますテンプレート メタプログラミングでエラーが発生する可能性がありますも **/Zc:ternary**と**寛容/-** です。 この問題を使用して解決するのには 1 つの方法[std::remove_reference](../../standard-library/remove-reference-class.md)結果の型にします。
+条件演算子の結果の型の下で変更可能性がありますが、メタプログラミング テンプレートでエラーが発生する可能性がありますも **/Zc:ternary**と **/permissive -** します。 使用して、この問題を解決する方法の 1 つ[std::remove_reference](../../standard-library/remove-reference-class.md)結果の型にします。
 
 ```cpp
 // Example 4: different result types
@@ -318,9 +320,9 @@ decltype(auto) x = cond ? a : b; // char without, const char& with /Zc:ternary
 const char (&z)[2] = count > 3 ? "A" : "B"; // const char* without /Zc:ternary
 ```
 
-#### <a name="two-phase-name-look-up"></a>2 段階名前検索
+#### <a name="two-phase-name-look-up"></a>2 フェーズの名前を参照してください。
 
-ときに、**寛容/-** オプションの設定と、コンパイラは、2 段階名前検索の必要に応じてテンプレートで使用される依存と非依存の名前を識別する、関数とクラス テンプレート定義を解析します。 Visual Studio 2017 15.3 のバージョンでは、名前の依存関係の分析が実行されます。 具体的には、テンプレート定義のコンテキストで宣言されていない非依存名では、ISO C 標準で必要に応じて、診断メッセージが発生します。 Visual Studio 2017 バージョン 15.7 引数依存ファイルの場所を定義コンテキストを必要とする非依存名のバインドも行われます。
+ときに、 **/permissive -** オプションが設定されている、コンパイラは、2 フェーズの名前検索の必要に応じてテンプレートで使用される依存と非依存の名前を識別する、関数とクラス テンプレート定義を解析します。 Visual Studio 2017 バージョン 15.3 では、名前の依存関係の分析が実行されます。 具体的には、テンプレート定義のコンテキストで宣言されていない非依存名では、ISO C 標準で必要な診断メッセージが発生します。 Visual Studio 2017 バージョン 15.7 では、引数依存の検索の定義のコンテキストを必要とする非依存名のバインドも行われます。
 
 ```cpp
 // dependent base
@@ -346,15 +348,15 @@ int main()
 }
 ```
 
-2 フェーズ参照は、従来の動作をしますが、それ以外の場合に必要なかどうかは**寛容/-** の動作を追加、 **/Zc:twoPhase-** オプション。
+2 フェーズ参照は、従来の動作をしますが、それ以外の場合に必要なかどうか **/permissive -** の動作を追加、 **/Zc:twoPhase-** オプション。
 
 ### <a name="windows-header-issues"></a>Windows ヘッダーの問題
 
-**寛容/-** オプションは Windows 秋作成者更新 SDK (10.0.16299.0) する前に Windows キットのバージョンの Windows Driver Kit (WDK) バージョン 1709 厳しすぎます。 使用するために Windows Kits の最新バージョンに更新することをお勧め**寛容/-** に Windows またはデバイスのドライバー コード。
+**/Permissive -** オプションは、Windows Fall Creators Update SDK (10.0.16299.0) する前に Windows キットのバージョン、または Windows Driver Kit (WDK) バージョン 1709 の厳しすぎます。 使用するには、Windows キットの最新バージョンに更新することをお勧めします。 **/permissive -** Windows またはデバイスのドライバー コードにします。
 
-Windows に 2018 更新 SDK (10.0.17134.0)、Windows 秋作成者更新 SDK (10.0.16299.0)、または Windows Driver Kit (WDK) 1709、年 4 月の特定のヘッダー ファイルには、使用と互換性がないように問題も含まれている **/permissive-**. これらの問題を回避することをお勧めのみこれらのソース コード ファイルをそれらを必要とし、削除するこれらのヘッダーの使用を制限する、**寛容/-** それらの特定のソース コード ファイルをコンパイルするオプションを選択します。
+Windows April 2018 Update SDK (10.0.17134.0)、Windows Fall Creators Update SDK (10.0.16299.0) または Windows Driver Kit (WDK) 1709 で特定のヘッダー ファイルの使用を互換性の問題がある **/permissive-**. これらの問題を回避するをお勧めをそれらを必要とし、削除するソース コード ファイルのみにこれらのヘッダーの使用を制限する、 **/permissive -** それらの特定のソース コード ファイルをコンパイルするときのオプションします。
 
-これらの WinRT WRL ヘッダーがリリースされた Windows では、年 2018年 4 月更新 SDK (10.0.17134.0) はありませんでクリーン**寛容/-** です。 これらの問題を回避するには、いずれかを使用しないで**寛容/-**、使用または**寛容/-** で **/Zc:twoPhase-** これらのヘッダーを使用する場合。
+これらの WinRT WRL ヘッダーがリリースされた、Windows April 2018 Update SDK (10.0.17134.0) のないでクリーン **/permissive -** します。 これらの問題を回避するには、いずれかには、使わない **/permissive -**、使用または **/permissive -** で **/Zc:twoPhase-** これらのヘッダーを使用する場合。
 
 - Winrt/wrl/async.h の問題
 
@@ -365,13 +367,13 @@ Windows に 2018 更新 SDK (10.0.17134.0)、Windows 秋作成者更新 SDK (10.
    C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(513): error C3861: 'TraceProgressNotificationComplete': identifier not found
    ```
 
-- Winrt/wrl/implements.h での問題します。
+- Winrt/wrl/implements.h を発行します。
 
    ```Output
    C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt\wrl\implements.h(2086): error C2039: 'SetStrongReference': is not a member of 'Microsoft::WRL::Details::WeakReferenceImpl'
    ```
 
-これらのユーザー モード ヘッダーがリリースされた Windows では、年 2018年 4 月更新 SDK (10.0.17134.0) はありませんでクリーン**寛容/-** です。 これらの問題を回避するを使用しないで**寛容/-** これらのヘッダーを使用する場合。
+これらのユーザー モード ヘッダーがリリースされた、Windows April 2018 Update SDK (10.0.17134.0) のないでクリーン **/permissive -** します。 これらの問題を回避するを使用しないで **/permissive -** これらのヘッダーを使用する場合。
 
 - Um/Tune.h の問題
 
@@ -382,7 +384,7 @@ Windows に 2018 更新 SDK (10.0.17134.0)、Windows 秋作成者更新 SDK (10.
    C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(1240): note: 'Release': function declaration must be available as none of the arguments depend on a template parameter
    ```
 
-- Um/spddkhlp.h での問題します。
+- Um/spddkhlp.h を発行します。
 
    ```Output
    C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\spddkhlp.h(759): error C3861: 'pNode': identifier not found
@@ -396,11 +398,11 @@ Windows に 2018 更新 SDK (10.0.17134.0)、Windows 秋作成者更新 SDK (10.
    C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\refptrco.h(395): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
    ```
 
-これらの問題は、ユーザー モード SDK のヘッダーに、Windows 秋作成者更新 (10.0.16299.0) に固有です。
+これらの問題は、Windows Fall Creators Update SDK (10.0.16299.0) のヘッダーをユーザー モードに固有します。
 
-- Um/Query.h での問題します。
+- Um/Query.h を発行します。
 
-   使用する場合、**寛容/-** コンパイラ スイッチ、 `tagRESTRICTION` case(RTOr) メンバーのための構造はコンパイルされません 'または' です。
+   使用する場合、 **/permissive -** コンパイラ スイッチ、 `tagRESTRICTION` case(RTOr) メンバーによりコンパイルしない構造体 'または'。
 
    ```cpp
    struct tagRESTRICTION
@@ -422,21 +424,21 @@ Windows に 2018 更新 SDK (10.0.17134.0)、Windows 秋作成者更新 SDK (10.
    };
    ```
 
-   この問題に対処することがなく Query.h を含むファイルをコンパイル、**寛容/-** オプション。
+   この問題に対処せず Query.h を含むファイルをコンパイル、 **/permissive -** オプション。
 
-- Um/cellularapi_oem.h での問題します。
+- Um/cellularapi_oem.h を発行します。
 
-   使用する場合、**寛容/-** コンパイラ スイッチの事前宣言`enum UICCDATASTOREACCESSMODE`警告が発生します。
+   使用する場合、 **/permissive -** コンパイラ スイッチの事前宣言`enum UICCDATASTOREACCESSMODE`警告が発生します。
 
    ```cpp
    typedef enum UICCDATASTOREACCESSMODE UICCDATASTOREACCESSMODE; // C4471
    ```
 
-   対象範囲外の列挙の事前宣言は、Microsoft 拡張です。 この問題に対処することがなく cellularapi_oem.h を含むファイルをコンパイル、**寛容/-** オプション、またはを使用して、 [/wd](../../build/reference/compiler-option-warning-level.md)警告 C4471 をミュートするにはオプションです。
+   スコープを持たない列挙型の事前宣言は、Microsoft 拡張です。 この問題に対処せず cellularapi_oem.h を含むファイルをコンパイル、 **/permissive -** オプション、またはを使用して、 [/wd](../../build/reference/compiler-option-warning-level.md)警告 C4471 をミュートするオプション。
 
-- Um/omscript.h での問題します。
+- Um/omscript.h を発行します。
 
-   C++ 03、文字列リテラルから BSTR に変換 (typedef でにある ' wchar_t *') は推奨されなくなりましたが、許可されています。 C++ 11 では、変換は許可されません。
+   C++ 03、文字列リテラルから BSTR への変換で (typedef でにある ' wchar_t *') は非推奨とされますが、許可されています。 C++ 11 では、変換は使用できなくします。
 
    ```cpp
    virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
@@ -445,29 +447,29 @@ Windows に 2018 更新 SDK (10.0.17134.0)、Windows 秋作成者更新 SDK (10.
        /* [in][defaultvalue] */ __RPC__in BSTR language = L"") = 0; // C2440
    ```
 
-   この問題に対処することがなく omscript.h を含むファイルをコンパイル、**寛容/-** オプション、または使用 **/Zc:strictStrings-** 代わりにします。
+   この問題に対処せず omscript.h を含むファイルをコンパイル、 **/permissive -** オプション、またはを使用して、 **/Zc:strictStrings-** 代わりにします。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-Visual Studio 2017 バージョン 15.5 およびそれ以降のバージョンでは、この手順を使用します。
+Visual Studio 2017 バージョン 15.5 以降では、この手順を使用します。
 
 1. プロジェクトの開く**プロパティ ページ** ダイアログ ボックス。
 
 1. 選択、**構成プロパティ** > **C/C++** > **言語**プロパティ ページ。
 
-1. 変更、**準拠モード**プロパティの値を**はい (制限の緩やかな/-)** です。 選択**OK**または**適用**して変更を保存します。
+1. 変更、**準拠モード**プロパティの値を **[はい] (/permissive -)** します。 選択**OK**または**適用**変更を保存します。
 
-Visual Studio 2017 バージョン 15.5 前に、のバージョンでは、この手順を使用します。
+Visual Studio 2017 バージョン 15.5 より前に、のバージョンでは、この手順を使用します。
 
 1. プロジェクトの開く**プロパティ ページ** ダイアログ ボックス。
 
 1. 選択、**構成プロパティ** > **C/C++** > **コマンドライン**プロパティ ページ。
 
-1. 入力、**寛容/-** コンパイラ オプション、**追加オプション**ボックス。 選択**OK**または**適用**して変更を保存します。
+1. 入力、 **/permissive -** コンパイラ オプションで、**追加オプション**ボックス。 選択**OK**または**適用**変更を保存します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
-- 「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>」を参照してください。
+- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>
 
 ## <a name="see-also"></a>関連項目
 

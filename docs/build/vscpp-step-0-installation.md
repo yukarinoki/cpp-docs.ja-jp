@@ -1,5 +1,5 @@
 ---
-title: Visual Studio で C++ サポートのインストール |Microsoft Docs
+title: Visual Studio 2017 で C++ サポートのインストール |Microsoft Docs
 description: Visual Studio の Visual C サポートをインストールします。
 ms.custom: mvc
 ms.date: 06/21/2018
@@ -14,17 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfc91d25e4c843eaa004b59eab076bcfbe188253
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 4ee0763608edde0f7ceff81983a324190b605ff7
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42571983"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43130892"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Visual Studio での C++ のサポートをインストール
 
-まだ Visual Studio および Visual C++ ツールをダウンロードおよびインストールしていない場合は、次の方法で作業を開始できます。
-
+ダウンロードし、Visual Studio 2017 と Visual C ツールをまだインストールしていない場合、開始する方法を示します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -36,7 +35,13 @@ ms.locfileid: "42571983"
 
 ディスク容量とオペレーティング システムの要件の詳細については、次を参照してください。 [Visual Studio 製品ファミリのシステム要件](/visualstudio/productinfo/vs2017-system-requirements-vs)します。 インストーラーにより、選択したオプションに必要なディスク領域の量が報告されます。
 
-## <a name="installation"></a>インストール
+## <a name="visual-studio-2015-installation"></a>Visual Studio 2015 のインストール
+
+ Visual Studio 2015 をインストールするには[Visual Studio の以前のバージョンをダウンロード](https://www.visualstudio.com/vs/older-downloads/)します。 セットアップ プログラムを実行し、選択**カスタム インストール**し、C++ コンポーネントを選択します。 
+
+ 一般に、Visual Studio 2015 のコンパイラを使用してコードをコンパイルする必要がある場合でも、Visual Studio 2017 を使用することを強くお勧めします。 詳細については、「[Visual Studio でネイティブ マルチ ターゲットを利用し、古いプロジェクトを作成する](../porting/use-native-multi-targeting.md)」を参照してください。
+
+## <a name="visual-studio-2017-installation"></a>Visual Studio 2017 のインストール
 
 1. Windows の最新の Visual Studio 2017 インストーラーをダウンロードします。
 

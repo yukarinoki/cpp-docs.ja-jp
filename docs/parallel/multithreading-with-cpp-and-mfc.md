@@ -1,7 +1,7 @@
 ---
 title: C++ と MFC でのマルチ スレッド |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fd5a60908d52bf0ccdf0c0e76e076cb244e3e31
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a1f5f1ea1d8d6578b631da772522a0a852d11c89
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596098"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132195"
 ---
 # <a name="multithreading-with-c-and-mfc"></a>C++ と MFC を使用するマルチスレッド
 MFC (Microsoft Foundation Class) ライブラリでは、マルチスレッド アプリケーションがサポートされています。 このトピックでは、プロセスとスレッドについて説明します。また、MFC でマルチスレッドを使用する方法についても説明します。  
@@ -41,26 +41,26 @@ MFC (Microsoft Foundation Class) ライブラリでは、マルチスレッド �
   
 MFC では、ユーザー インターフェイス スレッドとワーカー スレッドの 2 種類に区別されます。 ユーザー インターフェイス スレッドでは主に、ユーザー入力を処理し、ユーザーが生成したイベントおよびメッセージに応答します。 ワーカー スレッドでは、ユーザー入力が必要ない、再計算などの処理を行います。 Win32 API ではこの 2 つのスレッドを区別しません。スレッドの起動アドレスがわかれば、スレッドを実行できます。 MFC では、ユーザー インターフェイス上のイベントに対してメッセージ ポンプを指定することにより、ユーザー インターフェイス スレッドに対して専用の処理を行います。 `CWinApp` は、`CWinThread` から派生したユーザー インターフェイス スレッド オブジェクトの例であり、ユーザーが生成したイベントおよびメッセージを処理します。  
   
-複数のスレッドが同一のオブジェクトにアクセスする場合は注意が必要です。 [マルチ スレッド: プログラミングのヒント](../parallel/multithreading-programming-tips.md)このような状況で発生する可能性のある問題を回避するのに使用できる手法について説明します。 [マルチ スレッド: 同期クラスの使用方法](../parallel/multithreading-how-to-use-the-synchronization-classes.md)複数のスレッドから 1 つのオブジェクトへのアクセスを同期に使用できるクラスを使用する方法について説明します。  
+複数のスレッドが同一のオブジェクトにアクセスする場合は注意が必要です。 [マルチ スレッド: プログラミングのヒント](multithreading-programming-tips.md)このような状況で発生する可能性のある問題を回避するのに使用できる手法について説明します。 [マルチ スレッド: 同期クラスの使用方法](multithreading-how-to-use-the-synchronization-classes.md)複数のスレッドから 1 つのオブジェクトへのアクセスを同期に使用できるクラスを使用する方法について説明します。  
   
 マルチスレッド プログラムの作成とデバッグには高度な技術が必要です。プログラマはオブジェクトが一度に複数のスレッドからアクセスされないようにする必要があるからです。 マルチスレッドに関連するトピックでは、マルチスレッド プログラムで MFC を使用する方法について説明しますが、マルチスレッド プログラミング技術の基礎については説明していません。 Visual C++ に付属のマルチスレッド MFC サンプル アプリケーションでは、マルチスレッド機能の追加方法や MFC でサポートされない Win32 API を利用した例が示されていますが、これはほんの出発点です。  
   
-オペレーティング システムでプロセスとスレッドを処理する方法の詳細については、次を参照してください。[プロセスとスレッド](http://msdn.microsoft.com/library/windows/desktop/ms684841)Windows SDK に含まれています。  
+オペレーティング システムでプロセスとスレッドを処理する方法の詳細については、次を参照してください。[プロセスとスレッド](/windows/desktop/ProcThread/processes-and-threads)Windows SDK に含まれています。  
   
 MFC がサポートするマルチスレッド機能の詳細については、次のトピックを参照してください。  
   
-- [マルチスレッド: ユーザー インターフェイス スレッドの生成](../parallel/multithreading-creating-user-interface-threads.md)  
+- [マルチスレッド: ユーザー インターフェイス スレッドの生成](multithreading-creating-user-interface-threads.md)  
   
-- [マルチスレッド: ワーカー スレッドの生成](../parallel/multithreading-creating-worker-threads.md)  
+- [マルチスレッド: ワーカー スレッドの生成](multithreading-creating-worker-threads.md)  
   
-- [マルチスレッド: 同期クラスの使用法](../parallel/multithreading-how-to-use-the-synchronization-classes.md)  
+- [マルチスレッド: 同期クラスの使用法](multithreading-how-to-use-the-synchronization-classes.md)  
   
-- [マルチスレッド: スレッドの終了](../parallel/multithreading-terminating-threads.md)  
+- [マルチスレッド: スレッドの終了](multithreading-terminating-threads.md)  
   
-- [マルチスレッド: プログラミングのヒント](../parallel/multithreading-programming-tips.md)  
+- [マルチスレッド: プログラミングのヒント](multithreading-programming-tips.md)  
   
-- [マルチスレッド: 同期クラスの使い分け](../parallel/multithreading-when-to-use-the-synchronization-classes.md)  
+- [マルチスレッド: 同期クラスの使い分け](multithreading-when-to-use-the-synchronization-classes.md)  
   
 ## <a name="see-also"></a>関連項目  
  
-[旧形式のコードのためのマルチスレッド サポート (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)
+[旧形式のコードのためのマルチスレッド サポート (Visual C++)](multithreading-support-for-older-code-visual-cpp.md)

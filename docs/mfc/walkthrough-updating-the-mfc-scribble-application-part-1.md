@@ -293,4 +293,4 @@ A*ビジュアル マネージャー*はアプリケーションのすべての�
 ## <a name="see-also"></a>関連項目
 
 [チュートリアル](../mfc/walkthroughs-mfc.md)  
-[チュートリアル: MFC Scribble アプリケーション (第 2 部) の更新](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)  
+[チュートリアル: MFC Scribble アプリケーション (第 2 部) の更新] (../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)  
