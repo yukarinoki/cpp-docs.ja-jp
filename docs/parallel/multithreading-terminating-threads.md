@@ -1,7 +1,7 @@
 ---
-title: 'マルチ スレッド: スレッドの終了 |Microsoft Docs'
+title: 'マルチ スレッド: MFC 内のスレッドの終了 |Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -23,14 +23,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2411d11c154bef09b95d33e5b8598ba3c64dfb94
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3b192c0ee4bc7658fc39791545c4aa9334edd183
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608845"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131946"
 ---
-# <a name="multithreading-terminating-threads"></a>マルチスレッド : スレッドの終了
+# <a name="multithreading-terminating-threads-in-mfc"></a>マルチ スレッド: MFC 内のスレッドの終了
 通常、スレッドは、次の 2 つの条件で終了します。1 つは制御関数が終了した場合、もう 1 つはスレッドを最後まで実行できなかった場合です。 ワード プロセッサでバックグラウンド印刷用のスレッドを使っている場合、印刷が正常に終了すると、制御関数が正常に終了します。 ただし、ユーザーが印刷をキャンセルするときは、バッググラウンド印刷用のスレッドを途中で終了する必要があります。 このトピックでは、この 2 つの終了処理を実現する方法と、スレッド終了時の終了コードを取得する方法について説明します。  
   
 - [スレッドの正常終了](#_core_normal_thread_termination)  
@@ -67,7 +67,7 @@ ms.locfileid: "42608845"
   
 ## <a name="see-also"></a>関連項目  
  
-[C++ と MFC でのマルチ スレッド](../parallel/multithreading-with-cpp-and-mfc.md)   
+[C++ と MFC でのマルチ スレッド](multithreading-with-cpp-and-mfc.md)   
 [_endthread、_endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)   
 [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
 [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659)

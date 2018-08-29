@@ -1,7 +1,7 @@
 ---
-title: 'マルチ スレッド: 同期クラスを使用する場合 |Microsoft Docs'
+title: 'マルチ スレッド: MFC 同期クラスを使用する場合 |Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -21,14 +21,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3556bace6c578edec8eaedffb528d21cb1644f5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d88bb98388aaedac9499ab91ad94bef085c0b702
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606065"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132267"
 ---
-# <a name="multithreading-when-to-use-the-synchronization-classes"></a>マルチスレッド : 同期クラスの使い分け
+# <a name="multithreading-when-to-use-the-mfc-synchronization-classes"></a>マルチ スレッド: MFC 同期クラスを使用する場合
 MFC で提供されるマルチ スレッドのクラスが 2 つのカテゴリに分類されます同期オブジェクト ([CSyncObject](../mfc/reference/csyncobject-class.md)、 [CSemaphore](../mfc/reference/csemaphore-class.md)、 [CMutex](../mfc/reference/cmutex-class.md)、 [ 。CCriticalSection](../mfc/reference/ccriticalsection-class.md)、および[CEvent](../mfc/reference/cevent-class.md)) と同期アクセス オブジェクト ([CMultiLock](../mfc/reference/cmultilock-class.md)と[CSingleLock](../mfc/reference/csinglelock-class.md))。  
   
 同期クラスの使用時に、リソースの整合性を確保するリソースへのアクセスを制御する必要があります。 同期アクセス クラスは、これらの制御されたリソースへのアクセスに使用されます。 このトピックでは、各クラスを使用する場合について説明します。  
@@ -61,8 +61,8 @@ MFC で提供されるマルチ スレッドのクラスが 2 つのカテゴリ
  
 同期アクセス クラスを使用して、さらに簡単かを選択します。 場合は、アプリケーションは、1 つの被制御リソースのみへのアクセスを使用して、`CSingleLock`します。 被制御リソース数のいずれかへのアクセスを必要がある場合を使用して、`CMultiLock`します。 例 1 で`CSingleLock`使用された、特定の時点に各ケースの 1 つだけのリソースが必要なためです。  
   
-同期クラスの使用方法については、次を参照してください。[マルチ スレッド: 同期クラスの使用方法](../parallel/multithreading-how-to-use-the-synchronization-classes.md)します。 同期の詳細については、次を参照してください。[同期](http://msdn.microsoft.com/library/windows/desktop/ms686353)Windows SDK に含まれています。 MFC でマルチ スレッドのサポートについては、次を参照してください。 [C++ と MFC を使用するマルチ スレッド](../parallel/multithreading-with-cpp-and-mfc.md)します。  
+同期クラスの使用方法については、次を参照してください。[マルチ スレッド: 同期クラスの使用方法](multithreading-how-to-use-the-synchronization-classes.md)します。 同期の詳細については、次を参照してください。[同期](/windows/desktop/Sync/synchronization)Windows SDK に含まれています。 MFC でマルチ スレッドのサポートについては、次を参照してください。 [C++ と MFC を使用するマルチ スレッド](multithreading-with-cpp-and-mfc.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  
-[C++ と MFC を使用するマルチスレッド](../parallel/multithreading-with-cpp-and-mfc.md)
+[C++ と MFC を使用するマルチスレッド](multithreading-with-cpp-and-mfc.md)

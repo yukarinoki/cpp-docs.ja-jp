@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15748249a39813edc4446fa25511d20361b0706c
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e4aea3a0125e2712203eb668197d42bd850aef5e
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405111"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131892"
 ---
 # <a name="if-else-statement-c"></a>if-else ステートメント (C++)
 条件分岐を制御します。 内のステートメント、 *if ブロック*が実行された場合にのみ、 *if 式*0 以外の値 (または TRUE) に評価されます。 場合の値*式*0 以外の場合、 *statement1*とブロック内の他のステートメントが実行され、存在する場合、他のブロックはスキップされます。 場合の値*式*0 の場合は、if ブロックはスキップされ、他のブロックが存在する場合が実行されます。 0 以外に評価される式は、
@@ -119,7 +119,8 @@ int main()
     }
 }
 ```  
-## <a name="if-statement-with-an-initializer"></a>場合、初期化子と共にステートメント
+## <a name="if_with_init"></a> 場合、初期化子と共にステートメント
+
 **Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)):**場合**ステートメントは、式を宣言し、名前付きの変数の初期化を含めることもできます。 変数が if ブロックのスコープ内だけに必要なときは、この形式の if ステートメントを使用します。 
 
 ```cpp
@@ -169,8 +170,8 @@ int main()
   
  **他**の句、`if...else`ステートメントは、最も近いの関連付け前**場合**ステートメントがない、対応するのと同じスコープ内で**他**ステートメント。   
 
-## <a name="constexpr-if-statements"></a>constexpr 場合ステートメント
-**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 関数テンプレートで使用することができます、`constexpr if`ステートメントを複数に頼ることがなくコンパイル時の分岐の決定関数のオーバー ロードします。 たとえば、1 つの関数を記述する、そのハンドル パラメーターのアンパック (ゼロのパラメーター オーバー ロードは必要ありません)。 
+## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr"> 場合 constexpr ステートメント
+**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 関数テンプレートで使用することができます、**場合 constexpr**ことがなくコンパイル時の分岐決定を行うステートメント複数の関数オーバー ロードを使用することです。 たとえば、1 つの関数を記述する、そのハンドル パラメーターのアンパック (ゼロのパラメーター オーバー ロードは必要ありません)。 
 
 ```cpp
 template <class T, class... Rest>
@@ -180,9 +181,8 @@ void f(T&& t, Rest&&... r)
    do_something(t);
 
    // handle r conditionally
-   constexpr if (sizeof...(r)) 
+   if constexpr (sizeof...(r)) 
    {
-      
       f(r...); 
    }
    else

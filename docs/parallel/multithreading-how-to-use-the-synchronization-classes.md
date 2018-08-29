@@ -1,7 +1,7 @@
 ---
-title: 'マルチ スレッド: 同期クラスの使用方法 |Microsoft Docs'
+title: 'マルチ スレッド: MFC 同期クラスを使用する方法 |Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -23,14 +23,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cec2f873f1fc46ebac2e0f1714c8f46ebc10eac4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e36f63f74a0edc1f6cbcf28b85adceed954cce3d
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597890"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131263"
 ---
-# <a name="multithreading-how-to-use-the-synchronization-classes"></a>マルチスレッド : 同期クラスの使用法
+# <a name="multithreading-how-to-use-the-mfc-synchronization-classes"></a>MFC 同期クラスを使用する方法をマルチ スレッド。
 リソースにアクセスする複数のスレッドの同期は、マルチスレッド アプリケーションを書くときに共通の問題です。 複数のスレッドから同じデータに同時にアクセスすると、予測できない結果になることがあります。 たとえば、あるスレッドで構造体の内容を更新しているときに、別のスレッドが同じ構造体の内容を読み取るということが考えられます。 この場合、後者のスレッドが実際に読み取った内容が、古いデータになるか更新後のデータになるかはわかりません。古いデータと更新データが混在することも考えられます。 MFC (Microsoft Foundation Class) の同期クラスと同期アクセス クラスを使うと、この問題を解決できます。 このトピックでは、これらのクラスを使用して、一般的なマルチスレッド アプリケーションでスレッド セーフなクラスを作成する方法を説明します。  
   
 一般的なマルチスレッド アプリケーションには、スレッド間の共有リソースを表すクラスがあります。 スレッドセーフなクラスをデザインすると、同期関数を呼び出す必要がありません。 リソースへのアクセスをすべてクラス内部で処理するので、プログラマはクラスの破損などを気にせずに、クラスを最大限に活用する方法だけを考えることができます。 スレッド セーフなクラスを作成するには、同期クラスをリソース クラス内にマージすることが効果的な方法です。 同期クラスの共有クラスへのマージは簡単に行うことができます。  
@@ -63,8 +63,8 @@ singleLock.Unlock();
   
 この手法の欠点は、同期オブジェクトを追加しない場合と比べて、クラスの動作が少し遅くなることです。 また、同期オブジェクトを複数のスレッドで削除した場合は、マージが成功するとは限りません。 このような場合は、同期オブジェクトを別個に管理します。  
   
-さまざまな状況で使用する同期クラスを決定する方法の詳細については、次を参照してください。[マルチ スレッド: 同期クラスを使用するときに](../parallel/multithreading-when-to-use-the-synchronization-classes.md)します。 同期の詳細については、次を参照してください。[同期](http://msdn.microsoft.com/library/windows/desktop/ms686353)Windows SDK に含まれています。 MFC でマルチ スレッドのサポートの詳細については、次を参照してください。 [C++ と MFC を使用するマルチ スレッド](../parallel/multithreading-with-cpp-and-mfc.md)します。  
+さまざまな状況で使用する同期クラスを決定する方法の詳細については、次を参照してください。[マルチ スレッド: 同期クラスを使用するときに](multithreading-when-to-use-the-synchronization-classes.md)します。 同期の詳細については、次を参照してください。[同期](/windows/desktop/Sync/synchronization)Windows SDK に含まれています。 MFC でマルチ スレッドのサポートの詳細については、次を参照してください。 [C++ と MFC を使用するマルチ スレッド](multithreading-with-cpp-and-mfc.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  
-[C++ と MFC を使用するマルチスレッド](../parallel/multithreading-with-cpp-and-mfc.md)
+[C++ と MFC を使用するマルチスレッド](multithreading-with-cpp-and-mfc.md)

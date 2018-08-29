@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0506c7f4efd288417c8fbdcd4784446651c362ac
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 1e6bef9e707636d18ed5ecb78098661a753111ba
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42545793"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132182"
 ---
 # <a name="multithreading-and-locales"></a>マルチスレッドとロケール
 C ランタイム ライブラリと C++ 標準ライブラリの両方、プログラムのロケールの変更のサポートを提供します。 このトピックでは、マルチ スレッド アプリケーションで両方のライブラリのロケール機能を使用するときに発生する問題について説明します。  
@@ -446,7 +446,7 @@ unsigned __stdcall RunThreadB(void *params)
   
 ## <a name="see-also"></a>関連項目  
 
-[古いコード (Visual C) のためのマルチ スレッドのサポート](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
+[古いコード (Visual C) のためのマルチ スレッドのサポート](multithreading-support-for-older-code-visual-cpp.md)   
 [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
 [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)   
 [setlocale](../preprocessor/setlocale.md)   
