@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b8cf828ab0373c3bd09d22af5f2ced702cc68aa
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 795261da81fbe8082e279bc3830f004d845e1ea7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336020"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196937"
 ---
 # <a name="cftpfilefind-class"></a>CFtpFileFind クラス
 FTP サーバーのインターネット ファイル検索を支援します。  
@@ -75,7 +75,7 @@ class CFtpFileFind : public CFileFind
   
  `CFtpFileFind`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxinet.h  
   
 ##  <a name="cftpfilefind"></a>  CFtpFileFind::CFtpFileFind  
@@ -120,14 +120,14 @@ virtual BOOL FindFile(
   
 -   ローカル、またはすべてのゲートウェイでは、データをキャッシュ INTERNET_FLAG_DONT_CACHE しません。  
   
--   生データを返す既定値 INTERNET_FLAG_RAW_DATA ( [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)構造体が FTP)。  
+-   生データを返す既定値 INTERNET_FLAG_RAW_DATA ( [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)構造体が FTP)。  
   
 -   Secure Sockets Layer やの割合で、ネットワーク上でトランザクションを INTERNET_FLAG_SECURE をセキュリティで保護 このフラグは、HTTP 要求のみに適用されます。  
   
 -   INTERNET_FLAG_EXISTING_CONNECT 可能な場合は、新しいサーバーに既存の接続を再利用`FindFile`要求ごとに新しいセッションを作成する代わりに要求します。  
   
 ### <a name="return-value"></a>戻り値  
- 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 拡張エラー情報を取得するには、Win32 関数を呼び出す[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)します。  
+ 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 拡張エラー情報を取得するには、Win32 関数を呼び出す[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)します。  
   
 ### <a name="remarks"></a>Remarks  
  呼び出した後`FindFile`FTP の最初のファイルを取得するを呼び出すことができます[FindNextFile](#findnextfile)を後続の FTP ファイルを取得します。  
@@ -143,12 +143,12 @@ virtual BOOL FindNextFile();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 以上のファイルがある場合、0 以外の場合ファイルが見つかりましたが、ディレクトリ内の最後の 1 つである場合や、エラーが発生した場合は 0 します。 拡張エラー情報を取得するには、Win32 関数を呼び出す[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)します。 ファイルが見つかりましたが、ディレクトリ内の最後のファイル、または一致する場合は、ファイルが見つからなかんだことができます、 `GetLastError` ERROR_NO_MORE_FILES を返します。  
+ 以上のファイルがある場合、0 以外の場合ファイルが見つかりましたが、ディレクトリ内の最後の 1 つである場合や、エラーが発生した場合は 0 します。 拡張エラー情報を取得するには、Win32 関数を呼び出す[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)します。 ファイルが見つかりましたが、ディレクトリ内の最後のファイル、または一致する場合は、ファイルが見つからなかんだことができます、 `GetLastError` ERROR_NO_MORE_FILES を返します。  
   
 ### <a name="remarks"></a>Remarks  
  任意の属性の関数を呼び出す前に少なくとも 1 回この関数を呼び出す必要があります (を参照してください[呼び出しておく](../../mfc/reference/cfilefind-class.md#findnextfile))。  
   
- `FindNextFile` Win32 関数をラップ[FindNextFile](http://msdn.microsoft.com/library/windows/desktop/aa364428)します。  
+ `FindNextFile` Win32 関数をラップ[FindNextFile](/windows/desktop/api/fileapi/nf-fileapi-findnextfilea)します。  
   
 ### <a name="example"></a>例  
   このトピックの例を参照してください。  

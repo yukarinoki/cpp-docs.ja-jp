@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 239ea94343652d379048bbeee87d2650d3f1ed72
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 065c7296982bc715d35431a441be5b0e8506e1fd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852537"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197304"
 ---
 # <a name="event-handling-principles"></a>イベント処理の原則
 3 つの手順はすべてのイベント処理に共通します。 必要があります。  
@@ -41,13 +41,13 @@ ms.locfileid: "37852537"
   
  イベント ソースを通知するのに分けることが 3 つの手順。  
   
--   クエリのソース オブジェクトは[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)します。  
+-   クエリのソース オブジェクトは[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)します。  
   
--   呼び出す[IConnectionPointContainer::FindConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms692476)興味イベント インターフェイスの IID を渡します。 かどうか、正常に返されます、 [IConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms694318)コネクション ポイント オブジェクトのインターフェイス。  
+-   呼び出す[IConnectionPointContainer::FindConnectionPoint](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint)興味イベント インターフェイスの IID を渡します。 かどうか、正常に返されます、 [IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint)コネクション ポイント オブジェクトのインターフェイス。  
   
--   呼び出す[iconnectionpoint::advise](http://msdn.microsoft.com/library/windows/desktop/ms678815)を渡す、`IUnknown`イベント シンクの。 かどうか、正常に返されます、`DWORD`接続を表すクッキー。  
+-   呼び出す[iconnectionpoint::advise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-advise)を渡す、`IUnknown`イベント シンクの。 かどうか、正常に返されます、`DWORD`接続を表すクッキー。  
   
- イベントの受信にご関心を正常に登録した後は、ソース オブジェクトによって発生したイベントに従ってオブジェクトのイベント インターフェイスでメソッドが呼び出されます。 イベントを受信するが不要になったときに経由で接続ポイントに cookie を渡すことができます[:unadvise](http://msdn.microsoft.com/library/windows/desktop/ms686608)します。 これにより、ソースとシンク間の接続が中断されます。  
+ イベントの受信にご関心を正常に登録した後は、ソース オブジェクトによって発生したイベントに従ってオブジェクトのイベント インターフェイスでメソッドが呼び出されます。 イベントを受信するが不要になったときに経由で接続ポイントに cookie を渡すことができます[:unadvise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-unadvise)します。 これにより、ソースとシンク間の接続が中断されます。  
   
  参照しないように注意するイベントを処理するときのサイクルです。  
   

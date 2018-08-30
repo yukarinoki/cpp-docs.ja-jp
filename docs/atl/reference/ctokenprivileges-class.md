@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa48af82fb5b6119e1efc14081c6851eafb85fa5
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 23c8776e462c2b275b0c7620e01b4bc82e7ad7ed
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208703"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195745"
 ---
 # <a name="ctokenprivileges-class"></a>CTokenPrivileges クラス
 このクラスは、のラッパー、`TOKEN_PRIVILEGES`構造体。  
@@ -79,15 +79,15 @@ class CTokenPrivileges
 |[CTokenPrivileges::operator =](#operator_eq)|代入演算子。|  
   
 ## <a name="remarks"></a>Remarks  
- [アクセス トークン](http://msdn.microsoft.com/library/windows/desktop/aa374909)プロセスまたはスレッドのセキュリティ コンテキストを示し、Windows システムにログオンしている各ユーザーに割り当てられているオブジェクトです。  
+ [アクセス トークン](/windows/desktop/SecAuthZ/access-tokens)プロセスまたはスレッドのセキュリティ コンテキストを示し、Windows システムにログオンしている各ユーザーに割り当てられているオブジェクトです。  
   
- アクセス トークンは、各ユーザーに与えられているさまざまなセキュリティ特権の記述に使用されます。 特権は、ローカルで一意な識別子と呼ばれる 64 ビットの数値で構成されています ( [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)) と記述子の文字列。  
+ アクセス トークンは、各ユーザーに与えられているさまざまなセキュリティ特権の記述に使用されます。 特権は、ローカルで一意な識別子と呼ばれる 64 ビットの数値で構成されています ( [LUID](/windows/desktop/api/winnt/ns-winnt-_luid)) と記述子の文字列。  
   
- `CTokenPrivileges`クラスは、のラッパー、 [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)構造体し、0 または多くの権限が含まれています。 削除、または指定されたクラスのメソッドを使用して照会された特権を追加することができます。  
+ `CTokenPrivileges`クラスは、のラッパー、 [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)構造体し、0 または多くの権限が含まれています。 削除、または指定されたクラスのメソッドを使用して照会された特権を追加することができます。  
   
- Windows でのアクセス制御モデルの概要については、次を参照してください。[アクセス制御](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK に含まれています。  
+ Windows でのアクセス制御モデルの概要については、次を参照してください。[アクセス制御](/windows/desktop/SecAuthZ/access-control)Windows SDK に含まれています。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlsecurity.h  
   
 ##  <a name="add"></a>  CTokenPrivileges::Add  
@@ -106,7 +106,7 @@ void Add(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
  True の場合、特権が有効にします。 False の場合、特権は無効です。  
   
  *rPrivileges*  
- 参照を[TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)構造体。 特権と属性がこの構造体からコピーされに追加、`CTokenPrivileges`オブジェクト。  
+ 参照を[TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)構造体。 特権と属性がこの構造体からコピーされに追加、`CTokenPrivileges`オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドの最初のフォーム、特権が正常に追加された場合、false それ以外の場合は true を返します。  
@@ -125,7 +125,7 @@ CTokenPrivileges(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
  `CTokenPrivileges`新しいオブジェクトに割り当てるオブジェクト。  
   
  *rPrivileges*  
- [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)構造に割り当てる新しい`CTokenPrivileges`オブジェクト。  
+ [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)構造に割り当てる新しい`CTokenPrivileges`オブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
  `CTokenPrivileges`を使用してオブジェクトを作成することができます必要に応じて、`TOKEN_PRIVILEGES`構造体または以前に定義された`CTokenPrivileges`オブジェクト。  
@@ -214,7 +214,7 @@ void GetLuidsAndAttributes(
   
 ### <a name="parameters"></a>パラメーター  
  *pPrivileges*  
- 配列を指すポインター [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)オブジェクト。 `CLUIDArray` typedef 定義として`CAtlArray<LUID> CLUIDArray`します。  
+ 配列を指すポインター [LUID](/windows/desktop/api/winnt/ns-winnt-_luid)オブジェクト。 `CLUIDArray` typedef 定義として`CAtlArray<LUID> CLUIDArray`します。  
   
  *pAttributes*  
  DWORD オブジェクトの配列へのポインター。 このパラメーターが省略するか、NULL の場合は、属性は取得されません。 `CAttributes` typedef 定義として`CAtlArray <DWORD> CAttributes`します。  
@@ -251,7 +251,7 @@ const TOKEN_PRIVILEGES* GetPTOKEN_PRIVILEGES() const throw(...);
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ポインターを返します、 [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)構造体。  
+ ポインターを返します、 [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)構造体。  
   
 ##  <a name="lookupprivilege"></a>  CTokenPrivileges::LookupPrivilege  
  指定した権限の名前に関連付けられた属性を取得します。  
@@ -282,7 +282,7 @@ CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
   
 ### <a name="parameters"></a>パラメーター  
  *rPrivileges*  
- [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)構造に割り当てる、`CTokenPrivileges`オブジェクト。  
+ [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)構造に割り当てる、`CTokenPrivileges`オブジェクト。  
   
  *rhs*  
  `CTokenPrivileges`オブジェクトに割り当てるオブジェクト。  
@@ -298,12 +298,12 @@ operator const TOKEN_PRIVILEGES *() const throw(...);
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 値へのポインターにキャスト、 [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)構造体。  
+ 値へのポインターにキャスト、 [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)構造体。  
   
 ## <a name="see-also"></a>関連項目  
  [セキュリティのサンプル](../../visual-cpp-samples.md)   
- [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)   
- [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)   
- [LUID_AND_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379263)   
+ [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)   
+ [LUID](/windows/desktop/api/winnt/ns-winnt-_luid)   
+ [LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes)   
  [クラスの概要](../../atl/atl-class-overview.md)   
  [セキュリティに関するグローバル関数](../../atl/reference/security-global-functions.md)

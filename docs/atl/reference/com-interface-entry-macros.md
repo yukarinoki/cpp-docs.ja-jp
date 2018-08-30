@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fa450436bee52aa9cd13803e3bf51c6a500fa0e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 43d6d1ace739c50d471c7e57b8670d010319ae1a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883376"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196048"
 ---
 # <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY マクロ  
  アクセスできるように、これらのマクロでその COM マップにオブジェクトのインターフェイスが入力`QueryInterface`します。 COM マップ内のエントリの順序は、注文インターフェイスのチェック中に一致する IID 対象となる`QueryInterface`します。  
@@ -48,7 +48,7 @@ ms.locfileid: "37883376"
 |[COM_INTERFACE_ENTRY_AGGREGATE_BLIND](#com_interface_entry_aggregate_blind)|同じ[で定義](#com_interface_entry_aggregate)にクエリを転送するために結果の任意の IID のクエリを実行することを除いて、 *punk*します。|  
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)|同じ[で定義](#com_interface_entry_aggregate)、場合を除く*punk*が null の場合で説明されている集計を自動的に作成、 *clsid*します。|  
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|同じ[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)にクエリを転送するために結果の任意の IID のクエリを実行することを除いて、 *punk*、場合*punk*が null の場合、自動的に作成します。説明されている集計、 *clsid*します。|  
-|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|プログラムを呼び出すと、 [DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297)について、指定したインターフェイスを照会する場合。|  
+|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|プログラムを呼び出すと、 [DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297)について、指定したインターフェイスを照会する場合。|  
 |[COM_INTERFACE_ENTRY_CACHED_TEAR_OFF](#com_interface_entry_cached_tear_off)|インスタンスごとにインターフェイスに固有のデータを保存します。|  
 |[COM_INTERFACE_ENTRY_TEAR_OFF](#com_interface_entry_tear_off)|ティアオフ インターフェイスを公開します。|  
 |[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|COM マップ内のこのエントリに達したら、処理は、基底クラスの COM マップを処理します。|  
@@ -56,7 +56,7 @@ ms.locfileid: "37883376"
 |[COM_INTERFACE_ENTRY_FUNC_BLIND](#com_interface_entry_func_blind)|同じ[COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func)への呼び出しの結果の任意の IID のクエリを実行することを除いて、 *func*します。|  
 |[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|E_NOINTERFACE を返すし、COM マップ処理の指定したインターフェイスが照会されたときに終了します。|  
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 **ヘッダー:** atlcom.h
 
 ## <a name="com_interface_entry"></a> COM_INTERFACE_ENTRY
@@ -82,7 +82,7 @@ BEGIN_COM_MAP(CThisExample)
    COM_INTERFACE_ENTRY(ISupportErrorInfo)
 END_COM_MAP()
 ```
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 **ヘッダー:** atlcom.h
   
 ##  <a name="com_interface_entry2"></a>  COM_INTERFACE_ENTRY2  
@@ -229,7 +229,7 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
  [!code-cpp[NVC_ATL_Windowing#115](../../atl/codesnippet/cpp/com-map-macros_7.h)]  
   
 ##  <a name="com_interface_entry_break"></a>  COM_INTERFACE_ENTRY_BREAK  
- プログラムを呼び出すと、 [DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297)について、指定したインターフェイスを照会する場合。  
+ プログラムを呼び出すと、 [DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297)について、指定したインターフェイスを照会する場合。  
   
 ```
 COM_INTERFACE_ENTRY_BREAK(x)

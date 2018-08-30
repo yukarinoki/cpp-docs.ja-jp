@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf5cf9438d2fcecb434802dc99aaa5c692ba108f
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6cce467218b92f6d0827cff2b8ede56b735ab9af
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882898"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197147"
 ---
 # <a name="ipropertypage2impl-class"></a>IPropertyPage2Impl クラス
 このクラスは実装`IUnknown`の既定の実装の継承と[IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)します。  
@@ -53,7 +53,7 @@ class IPropertyPage2Impl : public IPropertyPageImpl<T>
 |[IPropertyPage2Impl::EditProperty](#editproperty)|プロパティ ページがアクティブになったときにどのプロパティ コントロールがフォーカスを受け取るを指定します。 ATL の実装では、E_NOTIMPL を返します。|  
   
 ## <a name="remarks"></a>Remarks  
- [IPropertyPage2](http://msdn.microsoft.com/library/windows/desktop/ms683996)インターフェイスは、拡張[IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246)を追加して、`EditProperty`メソッド。 このメソッドは、プロパティ ページのオブジェクトで特定のプロパティを選択するクライアントを使用します。  
+ [IPropertyPage2](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage2)インターフェイスは、拡張[IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage)を追加して、`EditProperty`メソッド。 このメソッドは、プロパティ ページのオブジェクトで特定のプロパティを選択するクライアントを使用します。  
   
  クラス`IPropertyPage2Impl`の E_NOTIMPL を単純に返します`IPropertyPage2::EditProperty`します。 ただしの既定の実装を継承[IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)実装と`IUnknown`ダンプ情報を送信することによってデバッグでのデバイスをビルドします。  
   
@@ -68,7 +68,7 @@ class IPropertyPage2Impl : public IPropertyPageImpl<T>
   
  `IPropertyPage2Impl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlctl.h  
   
 ##  <a name="editproperty"></a>  IPropertyPage2Impl::EditProperty  
@@ -82,7 +82,7 @@ HRESULT EditProperty(DISPID dispID);
  E_NOTIMPL を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IPropertyPage2::EditProperty](http://msdn.microsoft.com/library/windows/desktop/ms690353) Windows SDK にします。  
+ 参照してください[IPropertyPage2::EditProperty](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage2-editproperty) Windows SDK にします。  
   
 ## <a name="see-also"></a>関連項目  
  [IPerPropertyBrowsingImpl クラス](../../atl/reference/iperpropertybrowsingimpl-class.md)   

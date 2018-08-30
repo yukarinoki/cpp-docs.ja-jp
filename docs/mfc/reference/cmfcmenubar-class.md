@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4d8961cc929196c21838fd21132146deddabcc1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 2933ed9fbb9a464b4458ce357ce196f2ae9df8f6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540317"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196383"
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar クラス
 ドッキングを実装するメニュー バーです。  
@@ -387,7 +387,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Remarks  
  代わりに、この関数を使用する必要があります[CMFCMenuBar::Create](#create)に加えて、ツールバーのスタイルのスタイルを指定する場合。 頻繁に使用されるいくつか追加スタイル バーオブジェクト、CBRS_TOP です。  
   
- 追加スタイルのリストは、次を参照してください。[ツール バー コントロールとボタンのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb760439)、[コモン コントロール スタイル](http://msdn.microsoft.com/library/windows/desktop/bb775498)、および[共通のウィンドウ スタイル](http://msdn.microsoft.com/library/windows/desktop/ms632600)します。  
+ 追加スタイルのリストは、次を参照してください。[ツール バー コントロールとボタンのスタイル](/windows/desktop/Controls/toolbar-control-and-button-styles)、[コモン コントロール スタイル](/windows/desktop/Controls/common-control-styles)、および[共通のウィンドウ スタイル](https://msdn.microsoft.com/library/windows/desktop/ms632600)します。  
   
 ### <a name="example"></a>例  
  次の例では、使用する方法、`CreateEx`のメソッド、`CMFCMenuBar`クラス。 このコード スニペットの一部、 [IE デモ サンプル](../../visual-cpp-samples.md)します。  
@@ -964,7 +964,7 @@ static BOOL SetMenuFont(
   
 ### <a name="parameters"></a>パラメーター  
  [in]*lpLogFont*  
- ポインターを[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/bb773327)フォント設定を定義する構造体。  
+ ポインターを[LOGFONT](/windows/desktop/api/dimm/ns-dimm-__midl___midl_itf_dimm_0000_0000_0003)フォント設定を定義する構造体。  
   
  [in]*bHorz*  
  TRUE の場合は、 *lpLogFont*縦書きフォント、FALSE 横書きフォントに使用する場合に使用するパラメーター。  

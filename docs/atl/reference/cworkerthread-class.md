@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e29bf1c8265a0d92200cda2704b750dfd8db3d6f
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 78d846db4080c780bfa72fca52b7c9f6868edc2f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885641"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195341"
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread クラス
 このクラスは、ワーカー スレッドを作成します。 または、既存のものを使用して化し、1 つ以上のカーネル オブジェクトのハンドルを待機ハンドルがシグナル通知されたときに、指定したクライアント関数を実行します。  
@@ -96,7 +96,7 @@ class CWorkerThread
   
 6.  スレッドを終了するには、呼び出す[CWorkerThread::Shutdown](#shutdown)します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlutil.h  
   
 ##  <a name="addhandle"></a>  CWorkerThread::AddHandle  
@@ -232,7 +232,7 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
  成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
 ### <a name="remarks"></a>Remarks  
- ハンドルが削除されたとき[IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle)に渡された関連付けられているオブジェクトで呼び出される[AddHandle](#addhandle)します。 この呼び出しが失敗した場合、 `CWorkerThread` 、Windows を呼び出す[CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211)関数のハンドル。  
+ ハンドルが削除されたとき[IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle)に渡された関連付けられているオブジェクトで呼び出される[AddHandle](#addhandle)します。 この呼び出しが失敗した場合、 `CWorkerThread` 、Windows を呼び出す[CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211)関数のハンドル。  
   
 ##  <a name="shutdown"></a>  CWorkerThread::Shutdown  
  ワーカー スレッドをシャット ダウンするには、このメソッドを呼び出します。  

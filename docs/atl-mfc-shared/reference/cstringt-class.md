@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4089b786363f6b1bcbb50d08e16821efc186539a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 481b50fa99e367859eab51b41a1c5e37d8602341
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609500"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197934"
 ---
 # <a name="cstringt-class"></a>CStringT クラス
 このクラスを表す、`CStringT`オブジェクト。  
@@ -705,7 +705,7 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 > [!NOTE]
 > `FormatMessage` 新しく書式設定された文字列のシステム メモリの割り当てを試行します。 この試行が失敗すると、自動的にメモリ不足例外がスローされます。  
   
- 各挿入は対応するパラメーター次が必要、 *pszFormat*または*nFormatID*パラメーター。 メッセージのテキスト内でいくつかのエスケープ シーケンスが動的にメッセージの書式設定のサポートされています。 詳細については、Windows を参照してください。 [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351) Windows SDK 内の関数。  
+ 各挿入は対応するパラメーター次が必要、 *pszFormat*または*nFormatID*パラメーター。 メッセージのテキスト内でいくつかのエスケープ シーケンスが動的にメッセージの書式設定のサポートされています。 詳細については、Windows を参照してください。 [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) Windows SDK 内の関数。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATLMFC_Utilities#118](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_13.cpp)]  
@@ -730,7 +730,7 @@ void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 > [!NOTE]
 > `FormatMessageV` 呼び出し[CStringT::FormatMessage](#formatmessage)、新しく書式設定された文字列のシステム メモリの割り当てしようと試みます。 この試行が失敗すると、自動的にメモリ不足例外がスローされます。  
   
- 詳細については、Windows を参照してください。 [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351) Windows SDK 内の関数。  
+ 詳細については、Windows を参照してください。 [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) Windows SDK 内の関数。  
   
 ##  <a name="formatv"></a>  CStringT::FormatV  
  可変個引数リストを使用してメッセージ文字列の書式を設定します。  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e6a6c25367e2b978ac4a8c82f36c07907614bbc3
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 10acf2b69eaa6b49145e671d437f18dfaff8e499
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584751"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195791"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -74,7 +74,7 @@ OLE DB[型インジケーター](/previous-versions/windows/desktop/ms711251\(v=
 
 コンパイラにクラスの名前は、コンシューマー属性プロバイダーでは、この属性をクラスに適用されます、ときに\_ *YourClassName*、アクセサーで*YourClassName*に付けた名前を指定します、クラス、さらに、コンパイラはというクラスを作成も*YourClassName*から派生した\_ *YourClassName*アクセサー。  クラス ビューでは、両方のクラスが表示されます。
 
-アプリケーションで使用されるこの属性の例については、サンプル[AtlAgent](http://msdn.microsoft.com/52bef5da-c1a0-4223-b4e6-9e464b6db409)、および[MultiRead](http://msdn.microsoft.com/5a2a915a-77dc-492f-94b2-1b809995dd5e)します。
+アプリケーションで使用されるこの属性の例については、サンプル[AtlAgent](https://github.com/Microsoft/VCSamples)、および[MultiRead](https://github.com/Microsoft/VCSamples)します。
 
 ## <a name="example"></a>例
 

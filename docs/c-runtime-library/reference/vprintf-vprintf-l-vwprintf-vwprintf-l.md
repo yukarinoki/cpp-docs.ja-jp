@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c809278279aff17adfdf77f658d7a2759a87ce1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2cf6a20c3153c8769e83cab35ab5196bd629bef7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414820"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197850"
 ---
 # <a name="vprintf-vprintfl-vwprintf-vwprintfl"></a>vprintf、_vprintf_l、vwprintf、_vwprintf_l
 
@@ -93,20 +93,20 @@ int _vwprintf_l(
 
 ## <a name="return-value"></a>戻り値
 
-**vprintf**と**vwprintf**を含まない終端の null 文字または負の値の出力エラーが発生した場合、書き込まれる文字数を返します。 場合*形式*null ポインター、または書式指定文字列に無効な書式指定文字が含まれている場合、無効なパラメーター ハンドラーが呼び出される、」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は-1 を返します設定と**errno**に**EINVAL**です。
+**vprintf 系**と**vwprintf**出力エラーが発生した場合に、終端の null 文字または負の値をしないなど、書き込まれる文字数を返します。 場合*形式*null ポインター、または書式指定文字列に無効な書式指定文字が含まれている場合、無効なパラメーター ハンドラーが呼び出される」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は-1 を返し設定と**errno**に**EINVAL**します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-これらの各関数は、引数リストへのポインターをとり書式化してに指定されたデータを書き込む**stdout**です。
+これらの各関数、引数リストへのポインターを受け取る書式設定して、特定のデータを書き込みます**stdout**します。
 
-**vwprintf**のワイド文字バージョンは、 **vprintf**; ストリームが ANSI モードで開かれている場合、2 つの関数動作は同じです。 **vprintf** UNICODE ストリームへの出力はサポートされていません。
+**vwprintf**のワイド文字バージョンは、 **vprintf**; 2 つの関数は、動作、ストリームが ANSI モードで開かれている場合は同じです。 **vprintf 系**UNICODE ストリームへの出力をサポートされていません。
 
 これらの関数のバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
 
 > [!IMPORTANT]
-> *format* にユーザー定義の文字列を指定しないでください。 詳しくは、「 [バッファー オーバーランの回避](http://msdn.microsoft.com/library/windows/desktop/ms717795)」をご覧ください。 無効な形式の文字列が検出されて、エラーとなることに注意してください。
+> *format* にユーザー定義の文字列を指定しないでください。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。 無効な形式の文字列が検出されて、エラーとなることに注意してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -117,14 +117,14 @@ int _vwprintf_l(
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|省略可能なヘッダー|
+|ルーチンによって返される値|必須ヘッダー|省略可能なヘッダー|
 |-------------|---------------------|----------------------|
-|**vprintf**、 **_vprintf_l**|\<stdio.h> および \<stdarg.h>|\<varargs.h>*|
+|**vprintf 系**、 **_vprintf_l**|\<stdio.h> および \<stdarg.h>|\<varargs.h>*|
 |**vwprintf**、 **_vwprintf_l**|\<stdio.h> または \<wchar.h>、および \<stdarg.h>|\<varargs.h>*|
 
 \* UNIX V との互換性用。
 
-コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソールに関連付けられている標準ストリームのハンドル**stdin**、 **stdout**、および**stderr**、C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります. 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+ユニバーサル Windows プラットフォーム (UWP) アプリでは、コンソールがサポートされていません。 コンソールに関連付けられている標準ストリームのハンドル**stdin**、 **stdout**、および**stderr**、C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります. 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

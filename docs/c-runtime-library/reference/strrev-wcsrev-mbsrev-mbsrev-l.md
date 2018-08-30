@@ -56,12 +56,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52b99b08fc7761f5fb2d15761bf7726ac0faf64d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2c9c2f461df538f405af8295c65f67dbefe46bb7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415427"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198095"
 ---
 # <a name="strrev-wcsrev-mbsrev-mbsrevl"></a>_strrev、_wcsrev、_mbsrev、_mbsrev_l
 
@@ -100,16 +100,16 @@ NULL で終わる反転対象の文字列。
 
 変更された文字列へのポインターを返します。 エラーを示す戻り値は予約されていません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Strrev**関数内の文字の順序を反転する*str*です。 終端の NULL 文字はそのまま保持されます。 **_wcsrev**と **_mbsrev**のワイド文字とマルチバイト文字バージョンは、 **_strrev**です。 引数と戻り値の **_wcsrev**ワイド文字は、文字列以外の **_mbsrev**マルチバイト文字列です。 **_Mbsrev**の各マルチバイト文字内のバイト順*str*は変更されません。 それ以外では、これらの関数の動作は同じです。
+**_Strrev**関数内の文字の順序を反転する*str*します。 終端の NULL 文字はそのまま保持されます。 **_wcsrev**と **_mbsrev**のワイド文字とマルチバイト文字バージョン **_strrev**します。 引数と戻り値の **_wcsrev**はワイド文字列 **_mbsrev**はマルチバイト文字の文字列。 **_Mbsrev**の各マルチバイト文字のバイトの順序*str*は変更されません。 それ以外では、これらの関数の動作は同じです。
 
-**_mbsrev**パラメーターを検証します。 いずれか*string1*または*string2* null ポインターで説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合 **_mbsrev**返します**NULL**設定と**errno**に**EINVAL**です。 **_strrev**と **_wcsrev**はそのパラメーターを検証しません。
+**_mbsrev**パラメーターを検証します。 いずれか*string1*または*string2* null ポインターの場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合 **_mbsrev**返します**NULL**設定と**errno**に**EINVAL**します。 **_strrev**と **_wcsrev**パラメーターを検証できません。
 
-出力値の設定の影響を受けた、 **LC_CTYPE** 、ロケールのカテゴリの設定; 参照してください[setlocale、_wsetlocale](setlocale-wsetlocale.md)詳細についてはします。 いないする点を除いて、これらの関数のバージョンは同じですが、 **_l**サフィックスを使用して、現在のロケールが付いている、 **_l**サフィックスは、ロケール パラメーターを代わりに使用します。渡されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値の設定に影響は、 **LC_CTYPE**ロケールのカテゴリの設定; を参照してください[setlocale、_wsetlocale](setlocale-wsetlocale.md)詳細についてはします。 いないことを除いて、これらの関数のバージョンは同じですが、 **_l**サフィックスを使用して、現在のロケールが付いている、 **_l**サフィックスは、ロケール パラメーターを代わりに使用します。渡されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 > [!IMPORTANT]
-> これらの関数は、バッファー オーバーランの脅威に対して脆弱な場合があります。 バッファー オーバーランは、認められていない特権の昇格の原因となるため、システムの攻撃に使用される可能性があります。 詳しくは、「 [バッファー オーバーランの回避](http://msdn.microsoft.com/library/windows/desktop/ms717795)」をご覧ください。
+> これらの関数は、バッファー オーバーランの脅威に対して脆弱な場合があります。 バッファー オーバーランは、認められていない特権の昇格の原因となるため、システムの攻撃に使用される可能性があります。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -120,7 +120,7 @@ NULL で終わる反転対象の文字列。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_strrev**|\<string.h>|
 |**_wcsrev**|\<string.h> または \<wchar.h>|

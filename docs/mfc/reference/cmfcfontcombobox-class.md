@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67fae4e4fd130e8cb61554f7e2d41595070ee819
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 0c0f72fd7a359654ffdb32ae0030a82216384207
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852279"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197614"
 ---
 # <a name="cmfcfontcombobox-class"></a>CMFCFontComboBox クラス
 `CMFCFontComboBox`クラスは、フォントの一覧を含むコンボ ボックス コントロールを作成します。  
@@ -59,7 +59,7 @@ class CMFCFontComboBox : public CComboBox
 |`CMFCFontComboBox::DrawItem`|現在のフォント コンボ ボックス コントロールで、指定した項目を描画するためにフレームワークによって呼び出されます。 (上書き[CComboBox::DrawItem](../../mfc/reference/ccombobox-class.md#drawitem))。|  
 |[CMFCFontComboBox::GetSelFont](#getselfont)|現在選択されているフォントについての情報を取得します。|  
 |`CMFCFontComboBox::MeasureItem`|現在のフォント コンボ ボックス コントロールでリスト ボックスのサイズの Windows に通知するためにフレームワークによって呼び出されます。 (上書き[CComboBox::MeasureItem](../../mfc/reference/ccombobox-class.md#measureitem))。|  
-|`CMFCFontComboBox::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)と[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 関数。 ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドします)。|  
+|`CMFCFontComboBox::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)と[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 関数。 ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドします)。|  
 |[CMFCFontComboBox::SelectFont](#selectfont)|フォント コンボ ボックスから、指定した条件に一致するフォントを選択します。|  
 |[CMFCFontComboBox::Setup](#setup)|フォント コンボ ボックス内の項目の一覧を初期化します。|  
   
@@ -83,7 +83,7 @@ class CMFCFontComboBox : public CComboBox
   
  [CMFCFontComboBox](../../mfc/reference/cmfcfontcombobox-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxfontcombobox.h  
   
 ##  <a name="cmfcfontcombobox"></a>  CMFCFontComboBox::CMFCFontComboBox  
@@ -139,7 +139,7 @@ BOOL SelectFont(
  フォント名を指定します。  
   
  [in]*nCharSet*  
- 文字セットを指定します。 既定値は、DEFAULT_CHARSET です。 詳細については、次を参照してください。、`lfCharSet`のメンバー、 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)構造体。  
+ 文字セットを指定します。 既定値は、DEFAULT_CHARSET です。 詳細については、次を参照してください。、`lfCharSet`のメンバー、 [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)構造体。  
   
 ### <a name="return-value"></a>戻り値  
  フォント コンボ ボックス内の項目は、説明オブジェクトの指定したフォントまたはフォントの名前と charset; と一致する場合は TRUE。それ以外の場合、FALSE です。  

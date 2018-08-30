@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57dc254bab0acd875378dfd26ba3fe6e8d5650f4
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: afecaafc5a9d3c1eb9a9466cce303a493d355ce0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407511"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196208"
 ---
 # <a name="based-pointers-c"></a>ベース ポインター (C++)
 **Microsoft 固有の仕様**  
@@ -56,7 +56,7 @@ struct llist_t {
  ポインター `vpBuffer` には、プログラムの後の段階で割り当てられるメモリ アドレスが代入されます。 リンク リストは `vpBuffer` の値を基準として再配置されます。  
   
 > [!NOTE]
->  使用してポインターを含む識別子の永続化を行うことできますも[メモリ マップト ファイル](http://msdn.microsoft.com/library/windows/desktop/aa366556)します。  
+>  使用してポインターを含む識別子の永続化を行うことできますも[メモリ マップト ファイル](/windows/desktop/Memory/file-mapping)します。  
   
  based ポインターを逆参照する場合、ベースは、明示的に指定されているか、または宣言によって暗黙的に認識されている必要があります。  
   

@@ -1,5 +1,5 @@
 ---
-title: データ ソース オブジェクト インターフェイス |Microsoft ドキュメント
+title: データ ソース オブジェクト インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,29 +20,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1c8aaed0a9f50e20dba5938b9b37425f4caa2bb1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 25fca5e7e51789aceef8fb92cf48cc238a8e26fa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33101878"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195998"
 ---
 # <a name="data-source-object-interfaces"></a>データ ソース オブジェクト インターフェイス
-次の表は、データ ソース オブジェクトの OLE DB で定義されている必須およびオプションのインターフェイスを示します。  
+次の表では、データ ソース オブジェクトの OLE DB で定義されている必須および省略可能なインターフェイスを示します。  
   
-|Interface|必須?|OLE DB テンプレートによって実装されるか。|  
+|Interface|必須?|OLE DB テンプレートによって実装されるでしょうか。|  
 |---------------|---------------|--------------------------------------|  
 |`IDBCreateSession`|必須|[はい]|  
 |`IDBInitialize`|必須|[はい]|  
 |`IDBProperties`|必須|[はい]|  
-|[IPersist](http://msdn.microsoft.com/library/windows/desktop/ms688695)|必須|[はい]|  
-|[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)|Optional|×|  
-|`IDBDataSourceAdmin`|Optional|×|  
-|`IDBInfo`|Optional|×|  
-|[IPersistFile](http://msdn.microsoft.com/library/windows/desktop/ms687223)|Optional|×|  
-|`ISupportErrorInfo`|Optional|×|  
+|[IPersist](/windows/desktop/api/objidl/nn-objidl-ipersist)|必須|[はい]|  
+|[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Optional|いいえ|  
+|`IDBDataSourceAdmin`|Optional|いいえ|  
+|`IDBInfo`|Optional|いいえ|  
+|[IPersistFile](/windows/desktop/api/objidl/nn-objidl-ipersistfile)|Optional|いいえ|  
+|`ISupportErrorInfo`|Optional|いいえ|  
   
- データ ソース オブジェクトを実装して、 `IDBProperties`、 `IDBInitialize`、および`IDBCreateSession`継承によってインターフェイスです。 継承、またはそのいずれかのこれらの実装クラスから継承せず、追加の機能をサポートするために選択できます。 サポートする場合、`IDBDataSourceAdmin`インターフェイスから継承する必要があります、`IDBDataSourceAdminImpl`クラスです。  
+ データ ソース オブジェクトの実装、 `IDBProperties`、 `IDBInitialize`、および`IDBCreateSession`インターフェイス継承を使用します。 継承するか、これらの実装クラスのいずれかから継承せず、追加の機能をサポートするために選択できます。 サポートする場合、`IDBDataSourceAdmin`インターフェイスから継承する必要があります、`IDBDataSourceAdminImpl`クラス。  
   
 ## <a name="see-also"></a>関連項目  
  [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

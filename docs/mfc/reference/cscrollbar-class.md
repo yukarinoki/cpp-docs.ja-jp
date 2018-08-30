@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c37e8cb4d69e93fd0842aa7cb2149331f502eae
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 03588a0c41633f632c99c8c178d6b69b39b00e48
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850046"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199202"
 ---
 # <a name="cscrollbar-class"></a>CScrollBar クラス
 Windows のスクロール バー コントロールの機能を提供します。  
@@ -102,7 +102,7 @@ class CScrollBar : public CWnd
   
  `CScrollBar`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="create"></a>  CScrollBar::Create  
@@ -195,13 +195,13 @@ BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;
   
 ### <a name="parameters"></a>パラメーター  
  *pScrollInfo*  
- ポインター、 [SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787535)構造体。  
+ ポインター、 [SCROLLBARINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollbarinfo)構造体。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、true を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [SBM_SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787545)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [SBM_SCROLLBARINFO](/windows/desktop/Controls/sbm-getscrollbarinfo)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="getscrollinfo"></a>  CScrollBar::GetScrollInfo  
  `SCROLLINFO` 構造体がスクロール バーについて保持している情報を取得します。  
@@ -214,7 +214,7 @@ BOOL GetScrollInfo(
   
 ### <a name="parameters"></a>パラメーター  
  *lpScrollInfo*  
- ポインターを[SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537)構造体。 この構造体の詳細については、Windows SDK を参照してください。  
+ ポインターを[SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo)構造体。 この構造体の詳細については、Windows SDK を参照してください。  
   
  *いる*  
  取得するスクロール バーのパラメーターを指定します。 一般的な使用状況、SIF_ALL、SIF_PAGE、SIF_POS、SIF_TRACKPOS、SIF_RANGE の組み合わせを指定します。 参照してください`SCROLLINFO`いる値の詳細についてはします。  
@@ -225,7 +225,7 @@ BOOL GetScrollInfo(
 ### <a name="remarks"></a>Remarks  
  `GetScrollInfo` 32 ビットのスクロール位置を使用するアプリケーションを有効にします。  
   
- [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537)構造体には、スクロール バーの最小値と最大スクロール位置、ページ サイズおよびスクロール ボックス (つまみ) の位置などに関する情報が含まれています。 参照してください、`SCROLLINFO`構造」のトピックの詳細については、構造体の既定値を変更する方法について、Windows SDK。  
+ [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo)構造体には、スクロール バーの最小値と最大スクロール位置、ページ サイズおよびスクロール ボックス (つまみ) の位置などに関する情報が含まれています。 参照してください、`SCROLLINFO`構造」のトピックの詳細については、構造体の既定値を変更する方法について、Windows SDK。  
   
  MFC Windows メッセージ ハンドラーのスクロール バーの位置を示す[CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)と[ために](../../mfc/reference/cwnd-class.md#onvscroll)、位置データの 16 ビットのみを提供します。 `GetScrollInfo` `SetScrollInfo` 32 ビットのスクロール バーの位置データを提供します。 したがって、アプリケーションを呼び出すことができます`GetScrollInfo`いずれかの処理中に`CWnd::OnHScroll`または`CWnd::OnVScroll`32 ビットのスクロール バーの位置データを取得します。  
   
@@ -294,7 +294,7 @@ BOOL SetScrollInfo(
   
 ### <a name="parameters"></a>パラメーター  
  *lpScrollInfo*  
- ポインターを[SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537)構造体。  
+ ポインターを[SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo)構造体。  
   
  *bRedraw*  
  スクロール バーが、新しい情報を反映するように再描画が必要かどうかを指定します。 場合*bRedraw*が true の場合、スクロール バーが再描画します。 FALSE の場合は描画されません。 既定では、スクロール バーが再描画されます。  
@@ -305,7 +305,7 @@ BOOL SetScrollInfo(
 ### <a name="remarks"></a>Remarks  
  必要な値を指定する必要があります、`SCROLLINFO`フラグの値を含むパラメーターは、構造体します。  
   
- `SCROLLINFO`構造体には、スクロール バーの最小値と最大スクロール位置、ページ サイズおよびスクロール ボックス (つまみ) の位置などに関する情報が含まれています。 参照してください、 [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537)構造」のトピックの詳細については、構造体の既定値を変更する方法について、Windows SDK。  
+ `SCROLLINFO`構造体には、スクロール バーの最小値と最大スクロール位置、ページ サイズおよびスクロール ボックス (つまみ) の位置などに関する情報が含まれています。 参照してください、 [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo)構造」のトピックの詳細については、構造体の既定値を変更する方法について、Windows SDK。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CScrollBar#3](../../mfc/reference/codesnippet/cpp/cscrollbar-class_3.cpp)]  

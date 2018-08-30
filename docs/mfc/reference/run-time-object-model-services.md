@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2704e39ffced414e84236302c9ad31586226dd8d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 13e04c7f1ae9873ebf2d044dd8b6d6948e55a120
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027687"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197473"
 ---
 # <a name="run-time-object-model-services"></a>ランタイム オブジェクト モデル サービス
 クラスは、 [CObject](../../mfc/reference/cobject-class.md)と[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)ランタイム クラス情報をシリアル化、および動的オブジェクトの作成へのアクセスなど、複数のサービスのオブジェクトをカプセル化します。 すべてのクラスから派生した`CObject`この機能を継承します。  
@@ -87,9 +87,9 @@ AFX_COMCTL32_IF_EXISTS(  proc );
  関数の名前を含む null で終わる文字列へのポインターまたは関数の序数値を指定します。 下位ワード; でこのパラメーターが、序数値である場合は、必要があります。上位ワードは、0 にする必要があります。 このパラメーターは、Unicode である必要があります。  
    
 ### <a name="remarks"></a>Remarks  
- 指定された関数を一般的なコントロール ライブラリかどうかを判断するこのマクロを使用して*proc* (呼び出し元ではなく[GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212)します。  
+ 指定された関数を一般的なコントロール ライブラリかどうかを判断するこのマクロを使用して*proc* (呼び出し元ではなく[GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212)します。  
    
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  afxcomctl32.h、afxcomctl32.inl は  
    
 ### <a name="see-also"></a>関連項目  
@@ -107,9 +107,9 @@ AFX_COMCTL32_IF_EXISTS2( proc );
  関数の名前を含む null で終わる文字列へのポインターまたは関数の序数値を指定します。 下位ワード; でこのパラメーターが、序数値である場合は、必要があります。上位ワードは、0 にする必要があります。 このパラメーターは、Unicode である必要があります。  
    
 ### <a name="remarks"></a>Remarks  
- 指定された関数を一般的なコントロール ライブラリかどうかを判断するこのマクロを使用して*proc* (呼び出し元ではなく[GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212)します。 このマクロは、AFX_COMCTL32_IF_EXISTS の Unicode バージョンです。  
+ 指定された関数を一般的なコントロール ライブラリかどうかを判断するこのマクロを使用して*proc* (呼び出し元ではなく[GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212)します。 このマクロは、AFX_COMCTL32_IF_EXISTS の Unicode バージョンです。  
    
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  afxcomctl32.h、afxcomctl32.inl は  
    
 ### <a name="see-also"></a>関連項目  
@@ -140,7 +140,7 @@ DECLARE_DYNAMIC(class_name)
 ### <a name="example"></a>例  
  例をご覧ください[IMPLEMENT_DYNAMIC](#implement_dynamic)します。  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afx.h 
 
 ##  <a name="declare_dyncreate"></a>  DECLARE_DYNCREATE  
@@ -169,7 +169,7 @@ DECLARE_DYNCREATE(class_name)
 ### <a name="example"></a>例  
  例をご覧ください[IMPLEMENT_DYNCREATE](#implement_dyncreate)します。  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afx.h 
 
  
@@ -187,7 +187,7 @@ DECLARE_OLECTLTYPE( class_name )
 ### <a name="remarks"></a>Remarks  
  `GetUserTypeNameID` `GetMiscStatus`で宣言されている、純粋仮想関数`COleControl`します。 これらの関数は純粋であるため、仮想する必要があるクラスでオーバーライドされる、コントロール。 DECLARE_OLECTLTYPE、だけでなく、コントロール クラスの宣言に IMPLEMENT_OLECTLTYPE マクロを追加する必要があります。  
    
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxctl.h  
    
 ### <a name="see-also"></a>関連項目  
@@ -210,7 +210,7 @@ DECLARE_PROPPAGEIDS( class_name )
   
  プロパティ ページの詳細については、記事を参照してください。 [ActiveX コントロール: プロパティ ページ](../mfc-activex-controls-property-pages.md)します。  
    
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxctl.h  
    
 ### <a name="see-also"></a>関連項目   
@@ -246,7 +246,7 @@ DECLARE_SERIAL(class_name)
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCObjectSample#21](../../mfc/codesnippet/cpp/run-time-object-model-services_2.h)]  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afx.h 
 
 ##  <a name="implement_dynamic"></a>  新規クラス  
@@ -273,7 +273,7 @@ IMPLEMENT_DYNAMIC(class_name, base_class_name)
   
  [!code-cpp[NVC_MFCCObjectSample#3](../../mfc/codesnippet/cpp/run-time-object-model-services_4.cpp)]  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afx.h 
 
 ##  <a name="implement_dyncreate"></a>  IMPLEMENT_DYNCREATE  
@@ -304,7 +304,7 @@ IMPLEMENT_DYNCREATE(class_name, base_class_name)
   
  [!code-cpp[NVC_MFCCObjectSample#23](../../mfc/codesnippet/cpp/run-time-object-model-services_6.cpp)]  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afx.h 
 
 ## <a name="implement_olecreate_flags"></a>  IMPLEMENT_OLECREATE_FLAGS
@@ -330,7 +330,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
     -   `afxRegApartmentThreading` ThreadingModel レジストリ内のスレッド処理モデルの設定アパートメントを = です。    
     -   `afxRegFreeThreading` スレッド処理モデルを ThreadingModel をレジストリに設定する Free を =。  
       
-         2 つのフラグを結合する`afxRegApartmentThreading`と`afxRegFreeThreading`ThreadingModel を設定する = Both。 参照してください[InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390)スレッド モデルの登録の詳細については、Windows SDK に含まれています。 
+         2 つのフラグを結合する`afxRegApartmentThreading`と`afxRegFreeThreading`ThreadingModel を設定する = Both。 参照してください[InprocServer32](/windows/desktop/com/inprocserver32)スレッド モデルの登録の詳細については、Windows SDK に含まれています。 
    
  *l*、 *w1*、 *w2*、 *b1*、 *b2*、 *b3*、 *b4*、 *b5*、 *b6*、 *b7*、 *b8*  
  クラスの CLSID のコンポーネント。  
@@ -344,13 +344,13 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
   
  OLE クラス ID は、オブジェクトの一意の 128 ビット識別子です。 いずれかで構成されます**長い**、2 つ**WORD**秒、および 8**バイト**によって表される、s *l*、 *w1*、 *w2*、および*b1*を通じて*b8*構文の説明にします。 アプリケーション ウィザードとコード ウィザードでは、必要に応じての一意の OLE クラス Id を作成します。  
    
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー :** afxdisp.h  
    
 ### <a name="see-also"></a>関連項目  
  [マクロとグローバル](mfc-macros-and-globals.md)   
  [DECLARE_OLECREATE](#declare_olecreate)   
- [CLSID キー](http://msdn.microsoft.com/library/windows/desktop/ms691424)
+ [CLSID キー](/windows/desktop/com/clsid-key-hklm)
 
 
 ## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE
@@ -368,17 +368,17 @@ DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
  コントロールの外部名を含む文字列のリソース ID。  
   
  *dwOleMisc*  
- 1 つまたは複数のフラグを含む列挙です。 この列挙体の詳細については、次を参照してください。[入ります](http://msdn.microsoft.com/library/windows/desktop/ms678497)Windows SDK に含まれています。  
+ 1 つまたは複数のフラグを含む列挙です。 この列挙体の詳細については、次を参照してください。[入ります](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc)Windows SDK に含まれています。  
    
 ### <a name="remarks"></a>Remarks  
  IMPLEMENT_OLECTLTYPE、だけでなく、コントロール クラスの宣言に DECLARE_OLECTLTYPE マクロを追加する必要があります。  
   
- `GetUserTypeNameID`メンバー関数は、コントロール クラスを識別する、リソース文字列を返します。 `GetMiscStatus` コントロールの入りますビットを返します。 この列挙体には、コントロールの他の特性を説明する設定のコレクションを指定します。 入ります設定の詳細については、次を参照してください。[入ります](http://msdn.microsoft.com/library/windows/desktop/ms678497)Windows SDK に含まれています。  
+ `GetUserTypeNameID`メンバー関数は、コントロール クラスを識別する、リソース文字列を返します。 `GetMiscStatus` コントロールの入りますビットを返します。 この列挙体には、コントロールの他の特性を説明する設定のコレクションを指定します。 入ります設定の詳細については、次を参照してください。[入ります](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc)Windows SDK に含まれています。  
   
 > [!NOTE]
 >  ActiveX ControlWizard で使用される既定の設定: されて、OLEMISC_SETCLIENTSITEFIRST、OLEMISC_INSIDEOUT、OLEMISC_CANTLINKINSIDE、および OLEMISC_RECOMPOSEONRESIZE します。  
    
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxctl.h  
    
 ### <a name="see-also"></a>関連項目  
@@ -414,7 +414,7 @@ IMPLEMENT_SERIAL(class_name, base_class_name, wSchema)
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCObjectSample#24](../../mfc/codesnippet/cpp/run-time-object-model-services_7.cpp)]  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afx.h 
 
 ##  <a name="runtime_class"></a>  RUNTIME_CLASS  
@@ -436,7 +436,7 @@ RUNTIME_CLASS(class_name)
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCObjectSample#25](../../mfc/codesnippet/cpp/run-time-object-model-services_8.cpp)]  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afx.h 
    
 ##  <a name="declare_olecreate"></a>  DECLARE_OLECREATE  
@@ -457,7 +457,7 @@ DECLARE_OLECREATE(class_name)
   
  クラス宣言でヘッダーが含まれる場合、クラスの実装で IMPLEMENT_OLECREATE を含める必要があります。 ヘッダーを使用して、クラス宣言には、DECLARE_DYNCREATE または DECLARE_SERIAL も使用する必要があります。  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー**: afxdisp.h  
 
 ##  <a name="implement_olecreate"></a>  IMPLEMENT_OLECREATE  
@@ -486,7 +486,7 @@ IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6
   
  OLE クラス ID は、オブジェクトの一意の 128 ビット識別子です。 いずれかで構成されます**長い**、2 つ**WORD**秒、および 8**バイト**によって表される、s *l*、 *w1*、 *w2*、および*b1*を通じて*b8*構文の説明にします。 アプリケーション ウィザードとコード ウィザードでは、必要に応じての一意の OLE クラス Id を作成します。  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー**: afxdisp.h 
 
 ## <a name="see-also"></a>関連項目  

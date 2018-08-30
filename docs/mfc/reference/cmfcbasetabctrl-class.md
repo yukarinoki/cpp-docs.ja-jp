@@ -248,12 +248,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a629f372058e3e6688a57043d73e29717f3601d
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 212637b55a422c11d82ae6ad9f548d9e429c41dd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540719"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198569"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 タブ付きウィンドウの基本的な機能を実装します。  
@@ -357,7 +357,7 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::OnDragOver](#ondragover)||  
 |[CMFCBaseTabCtrl::OnDrop](#ondrop)||  
 |[CMFCBaseTabCtrl::OnRenameTab](#onrenametab)||  
-|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|[TranslateMessage](../../mfc/reference/cwinapp-class.md) および [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) の各 Windows 関数にディスパッチされる前に、ウィンドウ メッセージを変換するためにクラス [CWinApp](http://msdn.microsoft.com/library/windows/desktop/ms644934) で使用されます。 ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドします)。|  
+|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|クラスによって使用される[CWinApp](../../mfc/reference/cwinapp-class.md)にディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)と[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 関数。 ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドします)。|  
 |[CMFCBaseTabCtrl::RecalcLayout](#recalclayout)|タブ付きウィンドウの内部レイアウトを再計算します。|  
 |[CMFCBaseTabCtrl::RemoveAllTabs](#removealltabs)|タブ付きウィンドウからタブをすべて削除します。|  
 |[CMFCBaseTabCtrl::RemoveTab](#removetab)|タブ付きウィンドウからタブを 1 つ削除します。|  
@@ -776,7 +776,7 @@ virtual COLORREF GetActiveTabColor() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)アクティブなタブの背景色を指定する値。  
+ A [COLORREF](/windows/desktop/gdi/colorref)アクティブなタブの背景色を指定する値。  
   
 ### <a name="remarks"></a>Remarks  
  既定では、アクティブなタブの背景色は、COLOR_WINDOW が。 アクティブなタブの背景色を変更するには、メソッドを使用して[CMFCBaseTabCtrl::SetActiveTabColor](#setactivetabcolor)します。  
@@ -789,7 +789,7 @@ virtual COLORREF GetActiveTabTextColor() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)アクティブなタブのテキストの色を指定する値。  
+ A [COLORREF](/windows/desktop/gdi/colorref)アクティブなタブのテキストの色を指定する値。  
   
 ### <a name="remarks"></a>Remarks  
  既定では、アクティブなタブのテキストの色は COLOR_WINDOWTEXT です。 テキストの色を変更するには、メソッドを使用して[CMFCBaseTabCtrl::SetActiveTabTextColor](#setactivetabtextcolor)します。  
@@ -812,7 +812,7 @@ const CArray<COLORREF,COLORREF>& GetAutoColors() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 配列への参照を[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)値を[CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)オブジェクト タブの自動の色分けを使用します。  
+ 配列への参照を[COLORREF](/windows/desktop/gdi/colorref)値を[CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)オブジェクト タブの自動の色分けを使用します。  
   
 ### <a name="remarks"></a>Remarks  
  既定では、フレームワークは、ライブラリで定義された色を色の配列を初期化します。 メソッドを呼び出して、カスタムの色の配列を行うことができます[CMFCBaseTabCtrl::SetAutoColors](#setautocolors)します。  
@@ -958,7 +958,7 @@ virtual COLORREF GetTabBkColor(int iTab) const;
  タブの 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)場合は-1 と指定したタブの背景色を示す値。 *iTab*が範囲外です。  
+ A [COLORREF](/windows/desktop/gdi/colorref)場合は-1 と指定したタブの背景色を示す値。 *iTab*が範囲外です。  
   
 ##  <a name="gettabbordersize"></a>  CMFCBaseTabCtrl::GetTabBorderSize  
  タブ コントロールにおけるタブ境界線のサイズを取得します。  
@@ -1176,7 +1176,7 @@ virtual COLORREF GetTabTextColor(int iTab) const;
  タブの 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)パラメーターを指定したタブのテキストの色を示す場合は-1。 *iTab*が範囲外です。  
+ A [COLORREF](/windows/desktop/gdi/colorref)パラメーターを指定したタブのテキストの色を示す場合は-1。 *iTab*が範囲外です。  
   
 ##  <a name="gettabwnd"></a>  CMFCBaseTabCtrl::GetTabWnd  
  指定したタブ上に存在するウィンドウへのポインターを返します。  
@@ -1844,7 +1844,7 @@ virtual void SetActiveTabColor(COLORREF clr);
  新しい背景色を指定します。  
   
 ### <a name="remarks"></a>Remarks  
- フレームワークからのアクティブなタブの既定の背景色を取得する、 [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)メソッド。  
+ フレームワークからのアクティブなタブの既定の背景色を取得する、 [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)メソッド。  
   
 ##  <a name="setactivetabtextcolor"></a>  CMFCBaseTabCtrl::SetActiveTabTextColor  
  アクティブなタブのテキストの色を設定します。  
@@ -1855,10 +1855,10 @@ virtual void SetActiveTabTextColor(COLORREF clr);
   
 ### <a name="parameters"></a>パラメーター  
  [in]*clr*  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)を新しいテキストの色を指定します。  
+ A [COLORREF](/windows/desktop/gdi/colorref)を新しいテキストの色を指定します。  
   
 ### <a name="remarks"></a>Remarks  
- 既定では、フレームワークがからテキストの色を取得[GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)します。 この既定の色を上書きを使用して、`SetActiveTabTextColor`メソッド。  
+ 既定では、フレームワークがからテキストの色を取得[GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)します。 この既定の色を上書きを使用して、`SetActiveTabTextColor`メソッド。  
   
 ##  <a name="setautocolors"></a>  CMFCBaseTabCtrl::SetAutoColors  
  色の自動モードでは、フレームワークを使用するタブ コントロールの色を設定します。  
@@ -1929,7 +1929,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
  各イメージのピクセルの幅。  
   
  [in]*clrTransp*  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)イメージの透明色を示すパラメーターです。  
+ A [COLORREF](/windows/desktop/gdi/colorref)イメージの透明色を示すパラメーターです。  
   
  [in]*hImageList*  
  事前に読み込まれたイメージの一覧へのハンドル。  
@@ -2114,7 +2114,7 @@ virtual BOOL SetTabTextColor(
  タブの 0 から始まるインデックス。  
   
  [in]*色*  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)新しいテキストの色を示すパラメーターです。  
+ A [COLORREF](/windows/desktop/gdi/colorref)新しいテキストの色を示すパラメーターです。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、0 以外の場合それ以外の場合は 0 です。  

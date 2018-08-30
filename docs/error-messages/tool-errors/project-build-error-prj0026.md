@@ -1,7 +1,7 @@
 ---
-title: プロジェクト ビルド エラー PRJ0026 |Microsoft ドキュメント
+title: プロジェクト ビルド エラー PRJ0026 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28f74b3c12520e16dad8306b16833544c34f925b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2402ee3f8e099a58c236ad7055a1a1487773dd9f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318442"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195051"
 ---
 # <a name="project-build-error-prj0026"></a>プロジェクト ビルド エラー PRJ0026
-応答ファイル 'file' には、ユーザーの ANSI コード ページに変換できない Unicode の内容が含まれています。  
-  
- ***ファイルの UNICODE の内容***  
-  
- プロジェクト システムでは、応答ファイルに、ユーザーの現在の ANSI コード ページに正しく変換できない Unicode の内容が見つかりました。  
-  
- このエラーの解決方法では、ANSI を使用するか、コード ページをコンピューターにインストールし、システムの既定値として設定を応答ファイルの内容を更新します。
+
+> 応答ファイル '*ファイル*' ユーザーの ANSI コード ページに変換できない Unicode の内容が含まれています。
+>
+> *ファイルの UNICODE の内容*
+
+プロジェクト システムでは、応答ファイルに、ユーザーの現在の ANSI コード ページに正しく変換できない Unicode の内容が見つかりません。
+
+このエラーを解決では、ANSI を使用するか、コード ページをコンピューターにインストールし、システムの既定値として設定する応答ファイルの内容を更新します。
