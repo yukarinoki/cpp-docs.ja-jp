@@ -34,16 +34,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b914e950fd94435768c355f327d3d48a653e0d5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 78e3d346bca087a6fd855e6428e6a53779cd7355
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407146"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202517"
 ---
 # <a name="setnewmode"></a>_set_new_mode
 
-新しいハンドラー モードを設定**malloc**です。
+新しいハンドラー モードを設定**malloc**します。
 
 ## <a name="syntax"></a>構文
 
@@ -54,15 +54,15 @@ int _set_new_mode( int newhandlermode );
 ### <a name="parameters"></a>パラメーター
 
 *newhandlermode*<br/>
-新しいハンドラー モードを**malloc**以外の場合は有効な値は 0 または 1 です。
+新しいハンドラー モードを**malloc**。 有効な値は 0 または 1。
 
 ## <a name="return-value"></a>戻り値
 
-以前のハンドラーのモードのセットを返します**malloc**です。 戻り値 1 が示す、メモリの割り当てに失敗**malloc**旧称によって新しいハンドラー ルーチンです。 戻り値 0 は、しないことを示します。 場合、 *newhandlermode*引数が 0 または 1 と等しくない、-1 を返します。
+以前のハンドラー モードのセットを返します**malloc**します。 戻り値 1、障害時に、メモリの割り当てに**malloc**以前新しいハンドラー ルーチンと呼ばれる戻り値 0 は呼び出さなかったことを示します。 場合、 *newhandlermode*引数が 0 または 1 と等しく、-1 を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ の **_set_new_mode** 関数は、[malloc](malloc.md) 用の新しいハンドラー モードを設定します。 新しいハンドラー モードを示すかどうか、失敗した場合、 **malloc**によって設定された新しいハンドラー ルーチンを呼び出すには、 [_set_new_handler](set-new-handler.md)です。 既定では、 **malloc**メモリの割り当てに失敗した場合に新しいハンドラー ルーチンを呼び出しません。 この既定の動作をオーバーライドすることができるようにときに、 **malloc** 、メモリの割り当てに失敗する**malloc**に同じ新しいハンドラー ルーチンを呼び出す方法、**新しい**演算子が同じ理由で失敗します。 詳細については、*C++ 言語リファレンス*の「[new](../../cpp/new-operator-cpp.md) および [delete](../../cpp/delete-operator-cpp.md) 演算子」の説明をご覧ください。 既定の動作をオーバーライドするには、次の関数を呼び出します。
+C++ の **_set_new_mode** 関数は、[malloc](malloc.md) 用の新しいハンドラー モードを設定します。 新しいハンドラー モードを示すかどうか、失敗した場合、 **malloc**によって設定された新しいハンドラー ルーチンを呼び出すには、 [_set_new_handler](set-new-handler.md)します。 既定では、 **malloc**でメモリの割り当ての失敗によって新しいハンドラー ルーチンを呼び出しません。 この既定の動作をオーバーライドするように、 **malloc** 、メモリの割り当てに失敗した**malloc**に同じ新しいハンドラー ルーチンを呼び出す方法、**新しい**演算子が同じ理由で失敗しました。 詳細については、*C++ 言語リファレンス*の「[new](../../cpp/new-operator-cpp.md) および [delete](../../cpp/delete-operator-cpp.md) 演算子」の説明をご覧ください。 既定の動作をオーバーライドするには、次の関数を呼び出します。
 
 ```cpp
 _set_new_mode(1);
@@ -70,11 +70,11 @@ _set_new_mode(1);
 
 この呼び出しはプログラムの最初の方で指定するか、Newmode.obj にリンクします (「[リンク オプション](../../c-runtime-library/link-options.md)」を参照してください)。
 
-この関数は、そのパラメーターを検証します。 場合*newhandlermode*として無効なパラメーター ハンドラーを呼び出す 0 または 1 の場合、関数以外の何も記載されて[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合 **_ * * * set_new_mode** -1 を返し**errno**に**EINVAL**です。
+この関数は、そのパラメーターを検証します。 場合*newhandlermode*で説明として、無効なパラメーター ハンドラーを呼び出す 0 または 1 の場合、関数以外の何も[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合<strong>_set_new_mode</strong> -1 を返し**errno**に`EINVAL`します。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_set_new_mode**|\<new.h>|
 

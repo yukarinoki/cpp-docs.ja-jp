@@ -19,19 +19,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 09597e0aff65e8bc2e8f9c92452c80ea4b7618fa
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: cf65c4ab55861a5588c27484db604a8e7008b96d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602107"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200727"
 ---
 # <a name="accelerator-keys-image-editor-for-icons"></a>アクセラレータ キー (アイコン用イメージ エディター)
 
 既定では、キーにバインドされているイメージ エディターのコマンドをアクセラレータ キーを以下に示します。 アクセラレータ キーを変更するには、次のようにクリックします。**オプション**上、**ツール**] メニューの [選び、**キーボード**下、**環境**フォルダー。 詳細については、「[Visual Studio でのキーボード ショートカットの識別とカスタマイズ](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio)」をご覧ください。
 
 > [!NOTE]
-> 使用している設定またはエディションによっては、ダイアログ ボックスで使用可能なオプションや、メニュー コマンドの名前や位置がヘルプに記載されている内容と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。
+> 使用している設定またはエディションによっては、ダイアログ ボックスで使用可能なオプションや、メニュー コマンドの名前や位置がヘルプに記載されている内容と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio での開発設定のカスタマイズ](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。
 
 |コマンド|キー|説明|
 |-------------|----------|-----------------|

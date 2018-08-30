@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51933ac5aeb3c14a25b3989809aab2e09686b9a3
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 90972e39bbad812f820452816ff3df982174539f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539085"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202977"
 ---
 # <a name="cusertool-class"></a>CUserTool クラス
 ユーザー ツールは、外部アプリケーションを実行するメニュー項目です。 **ツール**のタブ、**カスタマイズ** ダイアログ ボックス ( [CMFCToolBarsCustomizeDialog クラス](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) により、ユーザー ツールのユーザーを追加し、名前、コマンド、引数を指定し、各ユーザー ツールの初期ディレクトリ。  
@@ -159,7 +159,7 @@ virtual BOOL Invoke();
  コマンドが正常に実行された場合、0 以外の場合それ以外の場合 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 呼び出し[ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153)ユーザー ツールに関連付けられているコマンドを実行します。 または、コマンドが空の場合、関数は失敗[ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153)は失敗します。  
+ 呼び出し[ShellExecute](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea)ユーザー ツールに関連付けられているコマンドを実行します。 または、コマンドが空の場合、関数は失敗[ShellExecute](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea)は失敗します。  
   
 ##  <a name="loaddefaulticon"></a>  CUserTool::LoadDefaultIcon  
  ユーザー ツールの既定のアイコンを読み込みます。  

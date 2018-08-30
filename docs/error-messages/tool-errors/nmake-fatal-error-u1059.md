@@ -1,7 +1,7 @@
 ---
-title: NMAKE の致命的なエラー U1059 |Microsoft ドキュメント
+title: NMAKE の致命的なエラー U1059 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,23 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6eb038befdb7c587c6fe2a734003abba585c3e2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b54919398c757bfe05f747ff57341f31decfc61
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320704"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200791"
 ---
 # <a name="nmake-fatal-error-u1059"></a>NMAKE の致命的なエラー U1059
-構文エラー: '}' に依存するがありません  
-  
- 依存ファイルの検索パスが正しく指定されていません。 パスまたは右中かっこで空白が存在していた (**}**) は省略されました。  
-  
- ディレクトリの仕様を相互に依存するための構文します。  
-  
- **{**   
- ***ディレクトリ*} 依存**  
-  
- ここで`directories`1 つまたは複数のパス、それぞれをセミコロンで区切って指定 (**;**)。 スペースは許可されません。  
-  
- マクロで検索パスの一部または全体が置き換えられた場合、マクロ展開でスペースが存在しないことを確認します。
+
+> 構文エラー: '}' に依存します。
+
+依存ファイルの検索パスが正しく指定されていません。 パスまたは右中かっこに空白が存在していた (**}**) を省略した場合します。
+
+依存ファイルのディレクトリの指定の構文は、
+
+> **{** *ディレクトリ* **} 依存**
+
+場所*ディレクトリ*1 つまたは複数のパスをセミコロンで区切って指定それぞれを指定します (**;**)。 スペースは許可されません。
+
+検索パスの一部またはすべては、マクロに置き換え場合、は、マクロ展開中にスペースが存在しないことを確認してください。

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f21a4545bb24b0a4a9e19efa2a6ff9738272cc9f
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: ef3da102cd01fa970fa50d687f6cfea57ac64325
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340444"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199752"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>使用するアクセサーの種類の決定
 コンパイル時または実行時に、行セットでのデータ型を指定できます。  
@@ -38,7 +38,7 @@ ms.locfileid: "39340444"
 |`CDynamicAccessor`|自動。|いいえ。|行セット内のデータ型がわからない場合に役立ちます。|  
 |`CDynamicParameterAccessor`|自動、することができますが、[オーバーライド](../../data/oledb/overriding-a-dynamic-accessor.md)します。|はい、プロバイダーがサポートしている場合`ICommandWithParameters`します。 パラメーターが自動的にバインドします。|も低速`CDynamicAccessor`ですがジェネリックのストアド プロシージャを呼び出すために便利です。|  
 |`CDynamicStringAccessor[A,W]`|自動。|いいえ。|文字列データとしてデータ ストアからデータを取得します。|  
-|`CManualAccessor`|使用して手動`AddBindEntry`します。|使用して手動で`AddParameterEntry`します。|非常に高速です。パラメーターと列が 1 回だけバインドされます。 使用するデータの種類を決定します。 (を参照してください[DBVIEWER](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832)例については、サンプル)。以上のコードを必要と`CDynamicAccessor`または`CAccessor`します。 OLE DB を直接呼び出すことのようになります。|  
+|`CManualAccessor`|使用して手動`AddBindEntry`します。|使用して手動で`AddParameterEntry`します。|非常に高速です。パラメーターと列が 1 回だけバインドされます。 使用するデータの種類を決定します。 (を参照してください[DBVIEWER](https://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832)例については、サンプル)。以上のコードを必要と`CDynamicAccessor`または`CAccessor`します。 OLE DB を直接呼び出すことのようになります。|  
 |`CXMLAccessor`|自動。|いいえ。|文字列データとしてデータ ストアからデータを取得し、データの XML タグを付けるように書式設定します。|  
   
 ## <a name="see-also"></a>関連項目  

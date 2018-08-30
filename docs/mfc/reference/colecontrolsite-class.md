@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c6f84f575edbcaf8ecc64f424f3225d969d6a7f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f79917e34a749048696f320a8311978acc2739f4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850356"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202856"
 ---
 # <a name="colecontrolsite-class"></a>COleControlSite クラス
 クライアント側のカスタム コントロール インターフェイスをサポートします。  
@@ -205,7 +205,7 @@ class COleControlSite : public CCmdTarget
 |[COleControlSite::m_rect](#m_rect)|コントロールのサイトのサイズ。|  
   
 ## <a name="remarks"></a>Remarks  
- このサポートは、埋め込みの ActiveX コントロールの場所とその表示サイト、そのモニカー、そのユーザー インターフェイス、アンビエント プロパティ、およびコンテナーによって提供されるその他のリソースの範囲に関する情報を取得するための主要な手段です。 `COleControlSite` 完全に実装、 [IOleControlSite](http://msdn.microsoft.com/library/windows/desktop/ms688502)、[ビュー](http://msdn.microsoft.com/library/windows/desktop/ms686586)、[していること](http://msdn.microsoft.com/library/windows/desktop/ms693706)、 [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)、 `IBoundObjectSite`、`INotifyDBEvents`、 [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md)インターフェイス。 さらに、(アンビエント プロパティとイベント シンクのサポートを提供する)、IDispatch インターフェイスが実装されてもします。  
+ このサポートは、埋め込みの ActiveX コントロールの場所とその表示サイト、そのモニカー、そのユーザー インターフェイス、アンビエント プロパティ、およびコンテナーによって提供されるその他のリソースの範囲に関する情報を取得するための主要な手段です。 `COleControlSite` 完全に実装、 [IOleControlSite](/windows/desktop/api/ocidl/nn-ocidl-iolecontrolsite)、[ビュー](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite)、[していること](/windows/desktop/api/oleidl/nn-oleidl-ioleclientsite)、 [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)、 `IBoundObjectSite`、`INotifyDBEvents`、 [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md)インターフェイス。 さらに、(アンビエント プロパティとイベント シンクのサポートを提供する)、IDispatch インターフェイスが実装されてもします。  
   
  使用して ActiveX コントロール サイトを作成する`COleControlSite`からクラスを派生`COleControlSite`します。 `CWnd`-コンテナー (たとえば、ダイアログ ボックス) の派生クラスでオーバーライド、`CWnd::CreateControlSite`関数。  
   
@@ -216,7 +216,7 @@ class COleControlSite : public CCmdTarget
   
  `COleControlSite`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxocc.h  
   
 ##  <a name="binddefaultproperty"></a>  COleControlSite::BindDefaultProperty  
@@ -406,7 +406,7 @@ virtual HRESULT DoVerb(
 ### <a name="remarks"></a>Remarks  
  この関数は、コントロールの直接呼び出し`IOleObject`インターフェイスを指定した動詞を実行します。 この関数呼び出しの結果として、例外がスローされた場合は、HRESULT エラー コードが返されます。  
   
- 詳細については、次を参照してください。 [IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) Windows SDK に含まれています。  
   
 ##  <a name="enabledsc"></a>  COleControlSite::EnableDSC  
  コントロール サイトのソースとなるデータを有効にします。  
@@ -676,7 +676,7 @@ CONTROLINFO m_ctlInfo;
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この情報が格納されている、 [CONTROLINFO](http://msdn.microsoft.com/library/windows/desktop/ms680734)構造体。  
+ この情報が格納されている、 [CONTROLINFO](/windows/desktop/api/ocidl/ns-ocidl-tagcontrolinfo)構造体。  
   
 ##  <a name="m_dweventsink"></a>  COleControlSite::m_dwEventSink  
  コントロールのイベント シンクからの接続ポイントのクッキーを格納します。  
@@ -693,10 +693,10 @@ DWORD m_dwMiscStatus;
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。[入ります](http://msdn.microsoft.com/library/windows/desktop/ms678497)Windows SDK に含まれています。  
+ 詳細については、次を参照してください。[入ります](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc)Windows SDK に含まれています。  
   
 ##  <a name="m_dwpropnotifysink"></a>  COleControlSite::m_dwPropNotifySink  
- 含まれています、 [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)クッキー。  
+ 含まれています、 [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)クッキー。  
   
 ```  
 DWORD m_dwPropNotifySink;  
@@ -731,7 +731,7 @@ UINT m_nID;
 ```  
   
 ##  <a name="m_pactiveobject"></a>  COleControlSite::m_pActiveObject  
- 含まれています、 [IOleInPlaceActiveObject](http://msdn.microsoft.com/library/windows/desktop/ms691299)コントロールのインターフェイス。  
+ 含まれています、 [IOleInPlaceActiveObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceactiveobject)コントロールのインターフェイス。  
   
 ```  
 LPOLEINPLACEACTIVEOBJECT m_pActiveObject;  
@@ -745,7 +745,7 @@ COleControlContainer* m_pCtrlCont;
 ```  
   
 ##  <a name="m_pinplaceobject"></a>  COleControlSite::m_pInPlaceObject  
- 含まれています、 `IOleInPlaceObject` [IOleInPlaceObject](http://msdn.microsoft.com/library/windows/desktop/ms692646)コントロールのインターフェイス。  
+ 含まれています、 `IOleInPlaceObject` [IOleInPlaceObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceobject)コントロールのインターフェイス。  
   
 ```  
 LPOLEINPLACEOBJECT m_pInPlaceObject;  
@@ -759,7 +759,7 @@ LPOLEOBJECT m_pObject;
 ```  
   
 ##  <a name="m_pwindowlessobject"></a>  COleControlSite::m_pWindowlessObject  
- 含まれています、 `IOleInPlaceObjectWindowless` [IOleInPlaceObjectWindowless](http://msdn.microsoft.com/library/windows/desktop/ms687304)コントロールのインターフェイス。  
+ 含まれています、 `IOleInPlaceObjectWindowless` [IOleInPlaceObjectWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplaceobjectwindowless)コントロールのインターフェイス。  
   
 ```  
 IOleInPlaceObjectWindowless* m_pWindowlessObject;  
@@ -797,7 +797,7 @@ virtual BOOL ModifyStyle(
  現在のウィンドウ スタイルを追加するスタイル。  
   
  *nFlags*  
- ウィンドウの配置フラグ。 使用可能な値の一覧は、次を参照してください。、 [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 内の関数。  
+ ウィンドウの配置フラグ。 使用可能な値の一覧は、次を参照してください。、 [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 内の関数。  
   
 ### <a name="return-value"></a>戻り値  
  スタイルが変更された場合、それ以外の場合 0 0 以外の値。  
@@ -805,7 +805,7 @@ virtual BOOL ModifyStyle(
 ### <a name="remarks"></a>Remarks  
  WS_DISABLED の設定と一致するコントロールの在庫 Enabled プロパティが変更されます。 WS_BORDER の要求された設定と一致するコントロールの株価の罫線のスタイル プロパティが変更されます。 その他のすべてのスタイルは、1 つが存在する場合、コントロールのウィンドウのハンドルに直接適用されます。  
   
- コントロールのウィンドウ スタイルを変更します。 ビットごとの OR を使用してスタイルを追加または削除を組み合わせることができます ( &#124; ) 演算子。 参照してください、 [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)使用可能なウィンドウのスタイルについては、Windows SDK 内の関数。  
+ コントロールのウィンドウ スタイルを変更します。 ビットごとの OR を使用してスタイルを追加または削除を組み合わせることができます ( &#124; ) 演算子。 参照してください、 [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)使用可能なウィンドウのスタイルについては、Windows SDK 内の関数。  
   
  場合*nFlags* 0 以外の場合、 `ModifyStyle` Win32 関数を呼び出す`SetWindowPos`、し、結合することで、ウィンドウを再描画*nFlags*で次の 4 つのフラグ。  
   
@@ -837,7 +837,7 @@ virtual BOOL ModifyStyleEx(
  現在のウィンドウ スタイルを追加する拡張スタイル。  
   
  *nFlags*  
- ウィンドウの配置フラグ。 使用可能な値の一覧は、次を参照してください。、 [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 内の関数。  
+ ウィンドウの配置フラグ。 使用可能な値の一覧は、次を参照してください。、 [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 内の関数。  
   
 ### <a name="return-value"></a>戻り値  
  スタイルが変更された場合、それ以外の場合 0 0 以外の値。  
@@ -845,7 +845,7 @@ virtual BOOL ModifyStyleEx(
 ### <a name="remarks"></a>Remarks  
  WS_EX_CLIENTEDGE の設定と一致するコントロールのストック外観プロパティが変更されます。 1 つが存在する場合、他のすべての拡張ウィンドウ スタイルがコントロールのウィンドウのハンドルに直接適用されます。  
   
- ウィンドウの拡張コントロールのサイト オブジェクトのスタイルを変更します。 ビットごとの OR を使用してスタイルを追加または削除を組み合わせることができます ( &#124; ) 演算子。 参照してください、 [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)使用可能なウィンドウのスタイルについては、Windows SDK 内の関数。  
+ ウィンドウの拡張コントロールのサイト オブジェクトのスタイルを変更します。 ビットごとの OR を使用してスタイルを追加または削除を組み合わせることができます ( &#124; ) 演算子。 参照してください、 [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)使用可能なウィンドウのスタイルについては、Windows SDK 内の関数。  
   
  場合*nFlags* 0 以外の場合、 `ModifyStyleEx` Win32 関数を呼び出す`SetWindowPos`、し、結合することで、ウィンドウを再描画*nFlags*で次の 4 つのフラグ。  
   
@@ -1051,7 +1051,7 @@ virtual BOOL SetWindowPos(
  ウィンドウの新しい高さ。  
   
  *nFlags*  
- ウィンドウのサイズ変更や配置フラグを指定します。 使用可能な値は、「解説」を参照してください。 [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK に含まれています。  
+ ウィンドウのサイズ変更や配置フラグを指定します。 使用可能な値は、「解説」を参照してください。 [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK に含まれています。  
   
 ### <a name="return-value"></a>戻り値  
  0 以外の場合、成功した場合は 0。  

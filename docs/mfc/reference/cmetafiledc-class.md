@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1da8f48fc993ec2b6c963bf3648359cc39dfc8ce
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: fb2fd794798f96cceca893df4a69dc888196d9a6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338861"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197004"
 ---
 # <a name="cmetafiledc-class"></a>CMetaFileDC クラス
 イメージやテキストを自由に作成するための一連のグラフィック デバイス インターフェイス (GDI) コマンドを含む Windows のメタファイルを実装します。  
@@ -66,9 +66,9 @@ class CMetaFileDC : public CDC
   
  メタファイルに必要なコマンドを送信した後、`Close`メタファイルのハンドルを返しますメタファイル デバイス コンテキストを閉じ、メンバー関数。 破棄、`CMetaFileDC`オブジェクト。  
   
- [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile)メタファイルを繰り返し再生するメタファイルのハンドルを使用し、ことができます。 メタファイルできますなど Windows の関数で操作することも[CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480)メタファイルをディスクにコピーします。  
+ [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile)メタファイルを繰り返し再生するメタファイルのハンドルを使用し、ことができます。 メタファイルできますなど Windows の関数で操作することも[CopyMetaFile](/windows/desktop/api/wingdi/nf-wingdi-copymetafilea)メタファイルをディスクにコピーします。  
   
- メタファイルを不要になったときにメモリから削除、 [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) Windows 関数。  
+ メタファイルを不要になったときにメモリから削除、 [DeleteMetaFile](/windows/desktop/api/wingdi/nf-wingdi-deletemetafile) Windows 関数。  
   
  実装することも、`CMetaFileDC`オブジェクトを処理できるようにの呼び出しの出力し、GDI 呼び出しの属性両方`GetTextExtent`します。 このようなメタファイルはより柔軟なと詳細は簡単に再利用できる一般的な GDI コードでは、多くの場合、出力と属性の呼び出しの組み合わせで構成されます。 `CMetaFileDC`クラスは、2 つのデバイス コンテキストを継承`m_hDC`と`m_hAttribDC`、CDC から。 `m_hDC`のすべてのデバイス コンテキストが処理[CDC](../../mfc/reference/cdc-class.md) GDI 呼び出しの出力と`m_hAttribDC`デバイス コンテキストは、CDC GDI 属性のすべての呼び出しを処理します。 通常、これらの 2 つのデバイス コンテキストでは、同じデバイスを参照してください。 場合`CMetaFileDC`DC の属性は、既定で NULL に設定されます。  
   
@@ -83,7 +83,7 @@ class CMetaFileDC : public CDC
   
  `CMetaFileDC`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxext.h  
   
 ##  <a name="close"></a>  CMetaFileDC::Close  
@@ -97,9 +97,9 @@ HMETAFILE Close();
  関数が成功した場合に、有効な HMETAFILEそれ以外の場合は NULL です。  
   
 ### <a name="remarks"></a>Remarks  
- Windows メタファイルのハンドルがなど Windows の関数とメタファイルを操作することもでき[CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480)します。  
+ Windows メタファイルのハンドルがなど Windows の関数とメタファイルを操作することもでき[CopyMetaFile](/windows/desktop/api/wingdi/nf-wingdi-copymetafilea)します。  
   
- 使用後に、Windows を呼び出すことによって、メタファイルを削除[DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537)関数。  
+ 使用後に、Windows を呼び出すことによって、メタファイルを削除[DeleteMetaFile](/windows/desktop/api/wingdi/nf-wingdi-deletemetafile)関数。  
   
 ##  <a name="closeenhanced"></a>  CMetaFileDC::CloseEnhanced  
  拡張メタファイル デバイス コンテキストを閉じ、拡張形式、メタファイルを識別するハンドルを返します。  

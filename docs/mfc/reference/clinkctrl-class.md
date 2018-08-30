@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a384f79944ace90fcb289511e18297de7a7da233
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 422326f03674c541c4fdc45529bee45bf0ff5df6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208011"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201005"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl クラス
 Windows コモン SysLink コントロールの機能が用意されています。  
@@ -91,7 +91,7 @@ class CLinkCtrl : public CWnd
   
  このコントロール (つまり、`CLinkCtrl`クラス) は Windows xp 以降を実行中のプログラムでのみ使用できます。  
   
- 詳細については、次を参照してください。 [SysLink コントロール](http://msdn.microsoft.com/library/windows/desktop/bb760706)Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [SysLink コントロール](/windows/desktop/Controls/syslink-overview)Windows SDK に含まれています。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -102,7 +102,7 @@ class CLinkCtrl : public CWnd
   
  `CLinkCtrl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxcmn.h  
   
 ##  <a name="clinkctrl"></a>  CLinkCtrl::CLinkCtrl  
@@ -132,10 +132,10 @@ virtual BOOL Create(DWORD dwStyle,
   
 ### <a name="parameters"></a>パラメーター  
  *lpszLinkMarkup*  
- 表示するテキストをマークされた項目を含む 0 で終わる文字列へのポインター。 詳細については、」のセクション「マークアップとリンク アクセス」を参照してください。 [SysLink コントロールの概要](http://msdn.microsoft.com/library/windows/desktop/bb760706)します。  
+ 表示するテキストをマークされた項目を含む 0 で終わる文字列へのポインター。 詳細については、」のセクション「マークアップとリンク アクセス」を参照してください。 [SysLink コントロールの概要](/windows/desktop/Controls/syslink-overview)します。  
   
  *dwStyle*  
- リンク コントロールのスタイルを指定します。 コントロールのスタイルの任意の組み合わせを適用します。 参照してください[コモン コントロール スタイル](http://msdn.microsoft.com/library/windows/desktop/bb775498)で、`Windows SDK`詳細についてはします。  
+ リンク コントロールのスタイルを指定します。 コントロールのスタイルの任意の組み合わせを適用します。 参照してください[コモン コントロール スタイル](/windows/desktop/Controls/common-control-styles)で、`Windows SDK`詳細についてはします。  
   
  *rect*  
  リンク コントロールのサイズと位置を指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](../../mfc/reference/rect-structure1.md)構造体。  
@@ -186,13 +186,13 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
   
 ### <a name="parameters"></a>パラメーター  
  *lpszLinkMarkup*  
- 表示するテキストをマークされた項目を含む 0 で終わる文字列へのポインター。 詳細については、」のセクション「マークアップとリンク アクセス」を参照してください。 [SysLink コントロールの概要](http://msdn.microsoft.com/library/windows/desktop/bb760706)します。  
+ 表示するテキストをマークされた項目を含む 0 で終わる文字列へのポインター。 詳細については、」のセクション「マークアップとリンク アクセス」を参照してください。 [SysLink コントロールの概要](/windows/desktop/Controls/syslink-overview)します。  
   
  *dwExStyle*  
- リンク コントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK に含まれています。  
+ リンク コントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK に含まれています。  
   
  *dwStyle*  
- リンク コントロールのスタイルを指定します。 コントロールのスタイルの任意の組み合わせを適用します。 詳細については、次を参照してください。[コモン コントロール スタイル](http://msdn.microsoft.com/library/windows/desktop/bb775498)Windows SDK に含まれています。  
+ リンク コントロールのスタイルを指定します。 コントロールのスタイルの任意の組み合わせを適用します。 詳細については、次を参照してください。[コモン コントロール スタイル](/windows/desktop/Controls/common-control-styles)Windows SDK に含まれています。  
   
  *rect*  
  リンク コントロールのサイズと位置を指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](../../mfc/reference/rect-structure1.md)構造体。  
@@ -222,7 +222,7 @@ int GetIdealHeight() const;
  ピクセル単位で、コントロールの適切な高さ。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[LM_GETIDEALHEIGHT](http://msdn.microsoft.com/library/windows/desktop/bb760716)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[LM_GETIDEALHEIGHT](/windows/desktop/Controls/lm-getidealheight)」の説明に従って、Windows SDK。  
   
 ##  <a name="getidealsize"></a>  CLinkCtrl::GetIdealSize  
  リンクの指定した幅に応じて、現在のリンク コントロールのリンク テキストの適切な高さを計算します。  
@@ -238,7 +238,7 @@ int GetIdealSize(
 |パラメーター|説明|  
 |---------------|-----------------|  
 |[in]*cxMaxWidth*|ピクセル単位で、リンクの最大の幅。|  
-|[out]\* *pSize*|Windows へのポインター[サイズ](http://msdn.microsoft.com/library/windows/desktop/dd145106)構造体。 このメソッドが戻るとき、 *cy*のメンバー、`SIZE`構造で指定されているリンクのテキスト幅の理想的なリンクのテキストの高さに含まれる*cxMaxWidth*します。 *Cx*構造体のメンバーには、実際に必要なリンクのテキストの幅が含まれています。|  
+|[out]\* *pSize*|Windows へのポインター[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)構造体。 このメソッドが戻るとき、 *cy*のメンバー、`SIZE`構造で指定されているリンクのテキスト幅の理想的なリンクのテキストの高さに含まれる*cxMaxWidth*します。 *Cx*構造体のメンバーには、実際に必要なリンクのテキストの幅が含まれています。|  
   
 ### <a name="return-value"></a>戻り値  
  ピクセル単位で、リンク テキストの適切な高さ。 戻り値は、の値として同じ、 *cy*のメンバー、`SIZE`構造体。  
@@ -246,7 +246,7 @@ int GetIdealSize(
 ### <a name="remarks"></a>Remarks  
  例については、`GetIdealSize`メソッド例を参照してください。 [CLinkCtrl::Create](#create)します。  
   
- このメソッドは、送信、 [LM_GETIDEALSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760718)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [LM_GETIDEALSIZE](/windows/desktop/Controls/lm-getidealsize)メッセージは、Windows SDK で説明します。  
   
 ##  <a name="getitem"></a>  CLinkCtrl::GetItem  
  状態とリンク コントロールの項目の属性を取得します。  
@@ -257,13 +257,13 @@ BOOL GetItem(PLITEM pItem) const;
   
 ### <a name="parameters"></a>パラメーター  
  *pItem*  
- ポインターを[LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710)項目情報を受け取る構造体。  
+ ポインターを[LITEM](/windows/desktop/api/commctrl/ns-commctrl-taglitem)項目情報を受け取る構造体。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、true を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[LM_GETITEM](/windows/desktop/Controls/lm-getitem)」の説明に従って、Windows SDK。  
   
 ##  <a name="getitemid"></a>  CLinkCtrl::GetItemID  
  リンク コントロールの項目の ID を取得します。  
@@ -299,7 +299,7 @@ BOOL GetItemID(
 >  この関数は、場合も FALSE を返しますのバッファー *szID または strID* MAX_LINKID_TEXT 未満です。  
   
 ### <a name="remarks"></a>Remarks  
- 特定のリンク コントロールの項目の ID を取得します。 詳細については、Win32 メッセージを参照してください。 [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) Windows SDK に含まれています。  
+ 特定のリンク コントロールの項目の ID を取得します。 詳細については、Win32 メッセージを参照してください。 [LM_GETITEM](/windows/desktop/Controls/lm-getitem) Windows SDK に含まれています。  
   
 ##  <a name="getitemstate"></a>  CLinkCtrl::GetItemState  
  リンク コントロールの項目の状態を取得します。  
@@ -319,13 +319,13 @@ BOOL GetItemState(
  指定した状態の項目の値。  
   
  *対象*  
- 取得するには、どの状態項目を記述するフラグの組み合わせ。 値の一覧は、の説明を参照して、`state`内のメンバー、 [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710)構造体。 使用可能な項目はで許可されているものとまったく同じ`state`します。  
+ 取得するには、どの状態項目を記述するフラグの組み合わせ。 値の一覧は、の説明を参照して、`state`内のメンバー、 [LITEM](/windows/desktop/api/commctrl/ns-commctrl-taglitem)構造体。 使用可能な項目はで許可されているものとまったく同じ`state`します。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、true を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 特定のリンク コントロールの項目の指定した状態の項目の値を取得します。 詳細については、Win32 メッセージを参照してください。 [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) Windows SDK に含まれています。  
+ 特定のリンク コントロールの項目の指定した状態の項目の値を取得します。 詳細については、Win32 メッセージを参照してください。 [LM_GETITEM](/windows/desktop/Controls/lm-getitem) Windows SDK に含まれています。  
   
 ##  <a name="getitemurl"></a>  CLinkCtrl::GetItemUrl  
  リンク コントロールの項目で表される URL を取得します。  
@@ -361,7 +361,7 @@ BOOL GetItemUrl(
 >  この関数は、場合も FALSE を返しますのバッファー *szUrl または strUrl* MAX_LINKID_TEXT 未満です。  
   
 ### <a name="remarks"></a>Remarks  
- 指定したリンク コントロールの項目で表される URL を取得します。 詳細については、Win32 メッセージを参照してください。 [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) Windows SDK に含まれています。  
+ 指定したリンク コントロールの項目で表される URL を取得します。 詳細については、Win32 メッセージを参照してください。 [LM_GETITEM](/windows/desktop/Controls/lm-getitem) Windows SDK に含まれています。  
   
 ##  <a name="hittest"></a>  CLinkCtrl::HitTest  
  ユーザーが指定したリンクをクリックしたかどうかを決定します。  
@@ -378,7 +378,7 @@ BOOL HitTest(PLHITTESTINFO phti) const;
  成功した場合、true を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[LM_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb760722)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[LM_HITTEST](/windows/desktop/Controls/lm-hittest)」の説明に従って、Windows SDK。  
   
 ##  <a name="setitem"></a>  CLinkCtrl::SetItem  
  状態とリンク コントロールの項目の属性を設定します。  
@@ -389,13 +389,13 @@ BOOL SetItem(PLITEM pItem);
   
 ### <a name="parameters"></a>パラメーター  
  *pItem*  
- ポインターを[LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710)設定情報を含む構造体。  
+ ポインターを[LITEM](/windows/desktop/api/commctrl/ns-commctrl-taglitem)設定情報を含む構造体。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、true を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[LM_SETITEM](/windows/desktop/Controls/lm-setitem)」の説明に従って、Windows SDK。  
   
 ##  <a name="setitemid"></a>  CLinkCtrl::SetItemID  
  リンク コントロールの項目の ID を取得します。  
@@ -417,7 +417,7 @@ BOOL SetItemID(
  成功した場合、true を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 特定のリンク コントロールの項目の ID を設定します。 詳細については、Win32 メッセージを参照してください。 [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) Windows SDK に含まれています。  
+ 特定のリンク コントロールの項目の ID を設定します。 詳細については、Win32 メッセージを参照してください。 [LM_SETITEM](/windows/desktop/Controls/lm-setitem) Windows SDK に含まれています。  
   
 ##  <a name="setitemstate"></a>  CLinkCtrl::SetItemState  
  リンク コントロールの項目の状態を取得します。  
@@ -437,13 +437,13 @@ BOOL SetItemState(
  設定されている指定された状態の項目の値。  
   
  *対象*  
- 設定されている状態の項目を記述するフラグの組み合わせ。 値の一覧は、の説明を参照して、`state`内のメンバー、 [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710)構造体。 使用可能な項目はで許可されているものとまったく同じ`state`します。  
+ 設定されている状態の項目を記述するフラグの組み合わせ。 値の一覧は、の説明を参照して、`state`内のメンバー、 [LITEM](/windows/desktop/api/commctrl/ns-commctrl-taglitem)構造体。 使用可能な項目はで許可されているものとまったく同じ`state`します。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、true を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 特定のリンク コントロールの項目の指定した状態の項目の値を設定します。 詳細については、Win32 メッセージを参照してください。 [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) Windows SDK に含まれています。  
+ 特定のリンク コントロールの項目の指定した状態の項目の値を設定します。 詳細については、Win32 メッセージを参照してください。 [LM_SETITEM](/windows/desktop/Controls/lm-setitem) Windows SDK に含まれています。  
   
 ##  <a name="setitemurl"></a>  CLinkCtrl::SetItemUrl  
  リンク コントロールの項目で表される URL を設定します。  
@@ -465,7 +465,7 @@ BOOL SetItemUrl(
  成功した場合、true を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 指定したリンク コントロールの項目で表される URL を設定します。 詳細については、Win32 メッセージを参照してください。 [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) Windows SDK に含まれています。  
+ 指定したリンク コントロールの項目で表される URL を設定します。 詳細については、Win32 メッセージを参照してください。 [LM_SETITEM](/windows/desktop/Controls/lm-setitem) Windows SDK に含まれています。  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
