@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6414856aa893a9dba67dce5ffd9650fd03289ae
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 892cccea65b9e1b6f0c1eec21d3973e84a0fba03
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885248"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223260"
 ---
 # <a name="ccomcompositecontrol-class"></a>CComCompositeControl クラス
 このクラスは、複合コントロールを実装するために必要なメソッドを提供します。  
@@ -103,7 +103,7 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
   
  `CComCompositeControl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlctl.h  
   
 ##  <a name="advisesinkmap"></a>  CComCompositeControl::AdviseSinkMap  
@@ -174,7 +174,7 @@ HWND Create(
  予約済み。  
   
  *dwInitParam*  
- コントロールの作成時に、コントロールに渡されるデータ。 として、データが渡される*dwInitParam*の LPARAM パラメーターとして表示されます、 [WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428)メッセージで、作成時に、複合コントロールに送信されます。  
+ コントロールの作成時に、コントロールに渡されるデータ。 として、データが渡される*dwInitParam*の LPARAM パラメーターとして表示されます、 [WM_INITDIALOG](/windows/desktop/dlgbox/wm-initdialog)メッセージで、作成時に、複合コントロールに送信されます。  
   
 ### <a name="return-value"></a>戻り値  
  新しく作成された複合コントロールのダイアログ ボックスへのハンドル。  

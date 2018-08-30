@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 801a88573133a68beec4855dc499fcba27bb64e8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: bad7a0a5263d001d9dc77dd8d9e8cf0cf70100b4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593870"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219640"
 ---
 # <a name="visual-c-language-reference-ccx"></a>Visual C++ の言語リファレンス (C++/CX)
 
@@ -45,5 +45,5 @@ C + を使用して/cli CX を作成できます。
 |[スレッドとマーシャ リング](../cppcx/threading-and-marshaling-c-cx.md)|作成するコンポーネントのスレッドとマーシャリングの動作を指定する方法について説明します。|
 |[名前空間参照](../cppcx/namespaces-reference-c-cx.md)|既定の名前空間、Platform 名前空間、Platform::Collections、および関連する名前空間の参照ドキュメント。|
 |[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)|Windows ランタイム アプリでは使用できない CRT 関数の一覧を示します。|
-|[Windows 10 アプリに関するハウツー ガイド](http://msdn.microsoft.com/library/windows/apps/xaml/mt244352.aspx)|Windows 10 アプリについての全般的な概要と、詳細情報へのリンクがあります。|
+|[Windows 10 アプリに関するハウツー ガイド](https://msdn.microsoft.com/library/windows/apps/xaml/mt244352.aspx)|Windows 10 アプリについての全般的な概要と、詳細情報へのリンクがあります。|
 |[C + +/CX Part 0 of \[n\]: 概要](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction/)<br /><br />[C + +/CX Part 1 of \[n\]: 単純なクラス](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class/)<br /><br />[C + +/CX Part 2 of \[n\]: ハット記号が型](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats/)<br /><br />[C + +/CX Part 3 of \[n\]: 作成中](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)<br /><br />[C + +/CX Part 4 of \[n\]: 静的メンバー関数](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions/)|入門の Visual C ブログ シリーズで C + + CX します。|

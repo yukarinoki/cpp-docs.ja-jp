@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c182840ed3592a229b8d6c7b98930ade57a18b25
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 676d14b1027cbc9df68e4be26a9a1451a29d8c37
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883022"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204313"
 ---
 # <a name="crtthreadtraits-class"></a>CRTThreadTraits クラス
 このクラスは、CRT のスレッドの作成機能を提供します。 スレッドの CRT 関数が使用する場合は、このクラスを使用します。  
@@ -48,7 +48,7 @@ class CRTThreadTraits
 |[CRTThreadTraits::CreateThread](#createthread)|(静的)CRT 関数を使用してスレッドを作成するには、この関数を呼び出します。|  
   
 ## <a name="remarks"></a>Remarks  
- スレッドの特徴は、特定の種類のスレッドの作成機能を提供するクラスです。 作成関数、Windows と同じシグネチャとセマンティクスを持ちます[CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453)関数。  
+ スレッドの特徴は、特定の種類のスレッドの作成機能を提供するクラスです。 作成関数、Windows と同じシグネチャとセマンティクスを持ちます[CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread)関数。  
   
  スレッドの特徴は、次のクラスによって使用されます。  
   
@@ -58,7 +58,7 @@ class CRTThreadTraits
   
  場合は、スレッドがありますを使用していない CRT 関数を使用して、 [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md)代わりにします。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlbase.h  
   
 ##  <a name="createthread"></a>  CRTThreadTraits::CreateThread  
@@ -94,10 +94,10 @@ static HANDLE CreateThread(
  [out]成功した場合、新しく作成されたスレッドのスレッド ID を受け取る DWORD 変数のアドレス。  
   
 ### <a name="return-value"></a>戻り値  
- 失敗した場合、新しく作成されたスレッドにハンドルを返します。 呼び出す[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)拡張エラー情報を取得します。  
+ 失敗した場合、新しく作成されたスレッドにハンドルを返します。 呼び出す[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)拡張エラー情報を取得します。  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453)詳細については、この関数のパラメーター。  
+ 参照してください[CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread)詳細については、この関数のパラメーター。  
   
  この関数を呼び出す[_beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md)スレッドを作成します。  
   

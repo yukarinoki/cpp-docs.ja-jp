@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b6043da3945b36bd756714049b2bb6c91a32bd4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4cae819ccffae37ca27d1e062ae9a766e7acba1f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966551"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201752"
 ---
 # <a name="moneyget-class"></a>money_get クラス
 
@@ -46,9 +46,11 @@ class money_get : public locale::facet;
 
 ### <a name="parameters"></a>パラメーター
 
-*CharType*ロケールの文字をエンコードする、プログラム内で使用される型。
+*CharType*<br/>
+ ロケールの文字をエンコードするためにプログラム内で使用される型。
 
-*InputIterator* get 関数が入力の読み取り元の反復子の型。
+*InputIterator*<br/>
+ get 関数が入力を読み取る反復子の型。
 
 ## <a name="remarks"></a>Remarks
 
@@ -75,7 +77,7 @@ class money_get : public locale::facet;
 |[do_get](#do_get)|通貨値を表す文字シーケンスから数値を抽出するために呼び出される仮想関数。|
 |[get](#get)|通貨値を表す文字シーケンスから数値を抽出します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<locale>
 
@@ -113,17 +115,23 @@ virtual iter_type do_get(iter_type first,
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*変換されるシーケンスの先頭を示す入力反復子。
+*first*<br/>
+ 変換されるシーケンスの開始位置を示す入力反復子。
 
-*最後*変換されるシーケンスの末尾を示す入力反復子。
+*last*<br/>
+ 変換されるシーケンスの終了位置を示す入力反復子。
 
-*Intl*を示すブール値のシーケンスで期待される通貨記号の種類を示す: **true**場合、国際**false**国内場合。
+*Intl*<br/>
+ シーケンスで期待される通貨記号の種類を示すブール値。国際通貨の場合は **true**、国内通貨の場合は **false**。
 
-*Iosbase*形式にフラグを設定すると設定は、通貨記号が省略可能であることを示します。 それ以外の場合、これが必要です。
+*iosbase*<br/>
+ 書式設定フラグ。これが設定されている場合、通貨記号は省略可能です。それ以外の場合は必須です。
 
-*状態*かどうか、操作が成功したかどうかに従って、ストリームの状態の適切なビットマスク要素を設定します。
+*状態*<br/>
+ 操作が成功したか失敗したかに基づいて、ストリームの状態に適したビットマスク要素を設定します。
 
-*val*変換されたシーケンスを格納する文字列。
+*val*<br/>
+ 変換後のシーケンスを格納する文字列。
 
 ### <a name="return-value"></a>戻り値
 
@@ -189,17 +197,23 @@ iter_type get(iter_type first,
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*変換されるシーケンスの先頭を示す入力反復子。
+*first*<br/>
+ 変換されるシーケンスの開始位置を示す入力反復子。
 
-*最後*変換されるシーケンスの末尾を示す入力反復子。
+*last*<br/>
+ 変換されるシーケンスの終了位置を示す入力反復子。
 
-*Intl*を示すブール値のシーケンスで期待される通貨記号の種類を示す: **true**場合、国際**false**国内場合。
+*Intl*<br/>
+ シーケンスで期待される通貨記号の種類を示すブール値。国際通貨の場合は **true**、国内通貨の場合は **false**。
 
-*Iosbase*形式にフラグを設定すると設定は、通貨記号が省略可能であることを示しますこれは必要な場合は、。
+*iosbase*<br/>
+ 書式設定フラグ。これが設定されている場合、通貨記号は省略可能です。それ以外の場合は必須です
 
-*状態*操作が成功するかどうかに従って、ストリームの状態の適切なビットマスク要素を設定します。
+*状態*<br/>
+ 操作が成功したかどうかに基づき、ストリームの状態に適したビットマスク要素を設定します。
 
-*val*変換されたシーケンスを格納する文字列。
+*val*<br/>
+ 変換後のシーケンスを格納する文字列。
 
 ### <a name="return-value"></a>戻り値
 
@@ -280,7 +294,8 @@ explicit money_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Refs*オブジェクトのメモリ管理の種類を指定するために使用する整数値。
+*_Refs*<br/>
+ オブジェクトのメモリ管理の種類を指定するために使用する整数値。
 
 ### <a name="remarks"></a>Remarks
 
@@ -294,7 +309,7 @@ explicit money_get(size_t _Refs = 0);
 
 デストラクターが保護されているため、利用できる直接的な例はありません。
 
-コンス トラクターを使用してその基本オブジェクトを初期化します**ロケール::**[ファセット](../standard-library/locale-class.md#facet_class)(**_ * * * Refs*)。
+コンス トラクターを使用してその基本オブジェクトを初期化します**ロケール::**[ファセット](../standard-library/locale-class.md#facet_class)(*_Refs*)。
 
 ## <a name="string_type"></a>  money_get::string_type
 

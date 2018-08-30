@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b00d66c8d3842c03cc58e389bc308bc9515369b3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a3625667ccdbff85291d82ea519815bfc30c600f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882264"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219811"
 ---
 # <a name="cstockpropimpl-class"></a>CStockPropImpl クラス
 このクラスは、ストック プロパティの値をサポートするためのメソッドを提供します。  
@@ -210,7 +210,7 @@ class ATL_NO_VTABLE CStockPropImpl : public IDispatchImpl<InterfaceName, piid,
   
  `CStockPropImpl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlctl.h  
   
 ##  <a name="get_appearance"></a>  CStockPropImpl::get_Appearance  
@@ -502,7 +502,7 @@ HRESULT STDMETHODCALLTYPE get_Picture(IPictureDisp** ppPicture);
   
 ### <a name="parameters"></a>パラメーター  
  *ppPicture*  
- 画像のプロパティへのポインターを受け取る変数。 参照してください[IPictureDisp](http://msdn.microsoft.com/library/windows/desktop/ms680762)の詳細。  
+ 画像のプロパティへのポインターを受け取る変数。 参照してください[IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762)の詳細。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
@@ -869,7 +869,7 @@ HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
   
 ### <a name="parameters"></a>パラメーター  
  *pPicture*  
- 画像のプロパティへのポインター。 参照してください[IPictureDisp](http://msdn.microsoft.com/library/windows/desktop/ms680762)の詳細。  
+ 画像のプロパティへのポインター。 参照してください[IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762)の詳細。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
@@ -990,7 +990,7 @@ HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
   
 ### <a name="parameters"></a>パラメーター  
  *pPicture*  
- 画像のプロパティへのポインター。 参照してください[IPictureDisp](http://msdn.microsoft.com/library/windows/desktop/ms680762)の詳細。  
+ 画像のプロパティへのポインター。 参照してください[IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762)の詳細。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  

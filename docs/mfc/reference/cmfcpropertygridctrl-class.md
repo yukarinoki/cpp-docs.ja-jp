@@ -160,12 +160,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e1bf852b10ace3dca8014e54f2b0070328da64e
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 16bebe3beeecf48fb2601f0feee56e5168de83ac
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539337"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205096"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl クラス
 詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。  
@@ -246,7 +246,7 @@ class CMFCPropertyGridCtrl : public CWnd
 |[CMFCPropertyGridCtrl::IsShowDragContext](#isshowdragcontext)|ユーザーは、列をサイズ変更時に、フレームワークが、現在のプロパティ グリッド コントロールの名前と値の列を再描画かどうかを示します。|  
 |[CMFCPropertyGridCtrl::IsVSDotNetLook](#isvsdotnetlook)|プロパティ グリッド コントロールの外観が VS .NET で使用されるスタイルかどうかを示します。|  
 |[CMFCPropertyGridCtrl::MarkModifiedProperties](#markmodifiedproperties)|変更されたプロパティを表示する方法を指定します。|  
-|`CMFCPropertyGridCtrl::PreTranslateMessage`|[TranslateMessage](../../mfc/reference/cwinapp-class.md) および [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) の各 Windows 関数にディスパッチされる前に、ウィンドウ メッセージを変換するためにクラス [CWinApp](http://msdn.microsoft.com/library/windows/desktop/ms644934) で使用されます。 ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドします)。|  
+|`CMFCPropertyGridCtrl::PreTranslateMessage`|クラスによって使用される[CWinApp](../../mfc/reference/cwinapp-class.md)にディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)と[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 関数。 ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドします)。|  
 |[CMFCPropertyGridCtrl::RemoveAll](#removeall)|プロパティ グリッド コントロールからすべてのプロパティ オブジェクトを削除します。|  
 |[CMFCPropertyGridCtrl::ResetOriginalValues](#resetoriginalvalues)|すべてのプロパティの元の値を復元します。|  
 |[CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode)|設定またはアルファベット順のモードをリセットします。|  

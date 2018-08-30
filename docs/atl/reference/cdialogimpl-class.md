@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f6fb0cc519b7c03b84122b24e23e4ea9b49bc71
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 09cc987b583bdddd78604f75bd07bc9e2743a1dc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880704"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206642"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl クラス
 このクラスは、モーダルまたはモードレス ダイアログ ボックスを作成するためのメソッドを提供します。  
@@ -102,9 +102,9 @@ template <class T,
 |コントロールの作成|[ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)|  
 |ATL ダイアログ ボックスを使用|[ATL ウィンドウ クラス](../../atl/atl-window-classes.md)|  
 |ATL プロジェクト ウィザード|[ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)|  
-|ダイアログ ボックス|[ダイアログ ボックス](http://msdn.microsoft.com/library/windows/desktop/ms632588)と Windows SDK の後続のトピック|  
+|ダイアログ ボックス|[ダイアログ ボックス](https://msdn.microsoft.com/library/windows/desktop/ms632588)と Windows SDK の後続のトピック|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlwin.h  
   
 ##  <a name="create"></a>  CDialogImpl::Create  
@@ -126,7 +126,7 @@ HWND Create(
  [in]オーナー ウィンドウのハンドル。  
   
  **RECT &** *rect*  
- [in]A [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)  ダイアログ ボックスのサイズと位置を指定する構造体。  
+ [in]A [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)  ダイアログ ボックスのサイズと位置を指定する構造体。  
   
  *dwInitParam*  
  [in]ダイアログ ボックスに渡す値を指定します、 *lParam* WM_INITDIALOG メッセージのパラメーター。  
@@ -199,7 +199,7 @@ INT_PTR DoModal(
   
 ### <a name="parameters"></a>パラメーター  
  *hWndParent*  
- [in]オーナー ウィンドウのハンドル。 既定値はの戻り値、 [GetActiveWindow](http://msdn.microsoft.com/library/windows/desktop/ms646292) Win32 関数。  
+ [in]オーナー ウィンドウのハンドル。 既定値はの戻り値、 [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) Win32 関数。  
   
  *dwInitParam*  
  [in]ダイアログ ボックスに渡す値を指定します、 *lParam* WM_INITDIALOG メッセージのパラメーター。  

@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 318951b5216513c20cdb21ac4a4fcfff9c3e0ac7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6de4e448450aa346875bfef5e9455d713258b5d6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540451"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199922"
 ---
 # <a name="styles-used-by-mfc"></a>MFC で使用するスタイル  
   
@@ -308,7 +308,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
   
 ## <a name="edit-styles"></a>  エディット スタイル  
   
-編集スタイルを適用する[CEdit クラス](../../mfc/reference/cedit-class.md)オブジェクト。 スタイルの組み合わせを指定、 *dwStyle*パラメーターの[CEdit::Create](../../mfc/reference/cedit-class.md#create)します。 Windows での編集コントロールのスタイルの詳細については、次を参照してください。[コントロールのスタイルを編集する (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb775464)します。  
+編集スタイルを適用する[CEdit クラス](../../mfc/reference/cedit-class.md)オブジェクト。 スタイルの組み合わせを指定、 *dwStyle*パラメーターの[CEdit::Create](../../mfc/reference/cedit-class.md#create)します。 Windows での編集コントロールのスタイルの詳細については、次を参照してください。[コントロールのスタイルを編集する (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464)します。  
   
 |スタイル|説明|  
 |-----------|-----------------|  
@@ -403,7 +403,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
   
 ## <a name="scroll-bar-styles"></a> スクロール バー スタイル  
   
-スクロール バーのスタイルを適用する[CScrollBar クラス](../../mfc/reference/cscrollbar-class.md)オブジェクト。 スタイルの組み合わせを指定、 *dwStyle*パラメーターの[CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)します。 スクロール バーの Windows でのコントロールのスタイルの詳細については、次を参照してください。[スクロール バー コントロールのスタイル (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb787533)します。  
+スクロール バーのスタイルを適用する[CScrollBar クラス](../../mfc/reference/cscrollbar-class.md)オブジェクト。 スタイルの組み合わせを指定、 *dwStyle*パラメーターの[CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)します。 スクロール バーの Windows でのコントロールのスタイルの詳細については、次を参照してください。[スクロール バー コントロールのスタイル (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533)します。  
   
 |スタイル|説明|  
 |-----------|-----------------|  
@@ -420,7 +420,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
   
 ## <a name="static-styles"></a> 静的なスタイル  
   
-静的なスタイルを適用する[CStatic クラス](../../mfc/reference/cstatic-class.md)オブジェクト。 スタイルの組み合わせを指定、 *dwStyle*パラメーターの[CStatic::Create](../../mfc/reference/cstatic-class.md#create)します。 Windows での静的コントロール スタイルの詳細については、次を参照してください。[静的コントロール スタイル (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb760773)します。  
+静的なスタイルを適用する[CStatic クラス](../../mfc/reference/cstatic-class.md)オブジェクト。 スタイルの組み合わせを指定、 *dwStyle*パラメーターの[CStatic::Create](../../mfc/reference/cstatic-class.md#create)します。 Windows での静的コントロール スタイルの詳細については、次を参照してください。[静的コントロール スタイル (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773)します。  
   
 |スタイル|説明|  
 |-----------|-----------------|  
@@ -498,7 +498,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
 |WS_EX_CONTEXTHELP|ウィンドウのタイトル バーに疑問符 () が含まれています。 ユーザーがこの疑問符をクリックすると、カーソルは、疑問符付きのポインターに変化します。 ユーザーには、子ウィンドウ、クリックすると、子は WM_HELP メッセージを受信します。|  
 |WS_EX_CONTROLPARENT|により、ユーザーが TAB キーを使用して、ウィンドウの子ウィンドウ間を移動できます。|  
 |WS_EX_DLGMODALFRAME|二重の境界線、タイトル バーで WS_CAPTION スタイル フラグを指定する場合で作成できます (必要に応じて) を持つウィンドウ、 *dwStyle*パラメーター。|  
-|WS_EX_LAYERED|ウィンドウが、[ウィンドウを階層化](http://msdn.microsoft.com/library/ms632599.aspx#layered)します。 ウィンドウに、このスタイルは使用できません、[クラス スタイル](http://msdn.microsoft.com/library/ms633574.aspx#class_styles)CS_OWNDC または CS_CLASSDC のいずれかの。 ただし、Microsoft Windows 8 は、トップ レベル ウィンドウに対してのみの Windows の以前のバージョン サポートが、子ウィンドウの WS_EX_LAYERED スタイルをサポートします。|  
+|WS_EX_LAYERED|ウィンドウが、[ウィンドウを階層化](/windows/desktop/winmsg/window-features)します。 ウィンドウに、このスタイルは使用できません、[クラス スタイル](/windows/desktop/winmsg/about-window-classes)CS_OWNDC または CS_CLASSDC のいずれかの。 ただし、Microsoft Windows 8 は、トップ レベル ウィンドウに対してのみの Windows の以前のバージョン サポートが、子ウィンドウの WS_EX_LAYERED スタイルをサポートします。|  
 |WS_EX_LEFT|ウィンドウの汎用左揃えプロパティを示します。 既定値です。|  
 |WS_EX_LEFTSCROLLBAR|クライアント領域の左側に垂直スクロール バーを配置します。|  
 |WS_EX_LTRREADING|表示ウィンドウのテキストを左から右を使用して読み取り順序プロパティ。 既定値です。|  
@@ -524,14 +524,14 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
 [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)  
 [CStatic::Create](../../mfc/reference/cstatic-class.md#create)  
 [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox)  
-[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)  
-[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)  
+[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)  
+[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)  
 [ボタンのスタイル (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951)  
 [コンボ ボックス スタイル (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796)  
-[編集コントロールのスタイル (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb775464)  
+[編集コントロールのスタイル (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464)  
 [リスト ボックス スタイル (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775149) 
 [MessageBox 関数 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505) 
-[スクロール バー コントロールのスタイル (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb787533)  
-[静的コントロール スタイル (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb760773)  
+[スクロール バー コントロールのスタイル (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533)  
+[静的コントロール スタイル (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773)  
 [ウィンドウ スタイル (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600)  
 [拡張ウィンドウ スタイル (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543)  

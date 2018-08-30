@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f8ab76252c355bb56a1e2157e0e025a4eddb0d8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 18f26f9ac0cd00758d1259ac368b2408a7a2e8cf
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596537"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214622"
 ---
 # <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>_InterlockedCompareExchangePointer の組み込み関数
 **Microsoft 固有の仕様**  
@@ -110,7 +110,7 @@ long _InterlockedCompareExchangePointer_rel (
 ## <a name="remarks"></a>Remarks  
  `_InterlockedCompareExchangePointer` は `Destination` アドレスと `Comparand` アドレスのアトミックな比較を実行します。 `Destination` のアドレスが `Comparand` のアドレスと等しい場合、`Exchange` のアドレスは `Destination` で指定したアドレスに格納されます。 それ以外の場合は演算が実行されません。  
   
- `_InterlockedCompareExchangePointer` Win32 Windows SDK のコンパイラ組み込みサポートを提供します。 [_InterlockedCompareExchangePointer](http://msdn.microsoft.com/library/ff547863.aspx)関数。  
+ `_InterlockedCompareExchangePointer` Win32 Windows SDK のコンパイラ組み込みサポートを提供します。 [_InterlockedCompareExchangePointer](https://msdn.microsoft.com/library/ff547863.aspx)関数。  
   
  使用する方法の例については`_InterlockedCompareExchangePointer`を参照してください[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)します。  
   

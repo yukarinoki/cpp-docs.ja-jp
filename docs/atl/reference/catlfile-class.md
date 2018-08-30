@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ecf0dc1907d2f78a844756d0efc8add04de6046
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: afbb4600098591900491e7c1ec6f256bc58c26a4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885274"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220650"
 ---
 # <a name="catlfile-class"></a>CAtlFile クラス
 このクラスは、ファイル処理 API、Windows の thin ラッパーを提供します。  
@@ -87,7 +87,7 @@ class CAtlFile : public CHandle
   
  `CAtlFile`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlfile.h  
   
 ##  <a name="catlfile"></a>  CAtlFile::CAtlFile  
@@ -132,7 +132,7 @@ HRESULT Create(
  ファイル名。  
   
  *dwDesiredAccess*  
- 必要なアクセス。 参照してください*dwDesiredAccess*で[CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) Windows SDK に含まれています。  
+ 必要なアクセス。 参照してください*dwDesiredAccess*で[CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) Windows SDK に含まれています。  
   
  *dwShareMode*  
  共有モード。 参照してください*dwShareMode*で`CreateFile`します。  
@@ -153,7 +153,7 @@ HRESULT Create(
  成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 呼び出し[CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858)を作成したり、ファイルを開きます。  
+ 呼び出し[CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea)を作成したり、ファイルを開きます。  
   
 ##  <a name="flush"></a>  CAtlFile::Flush  
  ファイルのバッファーをクリアして、ファイルに書き込まれるバッファー内のすべてのデータには、このメソッドを呼び出します。  
@@ -166,7 +166,7 @@ HRESULT Flush() throw();
  成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 呼び出し[FlushFileBuffers](http://msdn.microsoft.com/library/windows/desktop/aa364439)バッファー内のデータをファイルにフラッシュします。  
+ 呼び出し[FlushFileBuffers](/windows/desktop/api/fileapi/nf-fileapi-flushfilebuffers)バッファー内のデータをファイルにフラッシュします。  
   
 ##  <a name="getoverlappedresult"></a>  CAtlFile::GetOverlappedResult  
  ファイルの重複した操作の結果を取得するには、このメソッドを呼び出します。  
@@ -180,7 +180,7 @@ HRESULT GetOverlappedResult(
   
 ### <a name="parameters"></a>パラメーター  
  *pOverlapped*  
- オーバー ラップ構造体。 参照してください*lpOverlapped*で[GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) Windows SDK に含まれています。  
+ オーバー ラップ構造体。 参照してください*lpOverlapped*で[GetOverlappedResult](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) Windows SDK に含まれています。  
   
  *dwBytesTransferred*  
  バイトが転送されます。 参照してください*lpNumberOfBytesTransferred*で`GetOverlappedResult`します。  
@@ -192,7 +192,7 @@ HRESULT GetOverlappedResult(
  成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 呼び出し[GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209)ファイルの重複した操作の結果を取得します。  
+ 呼び出し[GetOverlappedResult](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult)ファイルの重複した操作の結果を取得します。  
   
 ##  <a name="getposition"></a>  CAtlFile::GetPosition  
  現在のファイル ポインターの位置を取得するには、このメソッドを呼び出します。  
@@ -209,7 +209,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
  成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 呼び出し[SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541)を現在のファイル ポインターの位置を取得します。  
+ 呼び出し[SetFilePointer](/windows/desktop/api/fileapi/nf-fileapi-setfilepointer)を現在のファイル ポインターの位置を取得します。  
   
 ##  <a name="getsize"></a>  CAtlFile::GetSize  
  ファイルのバイト単位のサイズを取得するには、このメソッドを呼び出します。  
@@ -226,7 +226,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
  成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 呼び出し[GetFileSize](http://msdn.microsoft.com/library/windows/desktop/aa364955)ファイルのバイト単位でサイズを取得します。  
+ 呼び出し[GetFileSize](/windows/desktop/api/fileapi/nf-fileapi-getfilesize)ファイルのバイト単位でサイズを取得します。  
   
 ##  <a name="lockrange"></a>  CAtlFile::LockRange  
  他のプロセスがそれにアクセスすることを防ぐために、ファイル内の領域をロックするには、このメソッドを呼び出します。  
@@ -246,7 +246,7 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
  成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 呼び出し[ロック ファイル](http://msdn.microsoft.com/library/windows/desktop/aa365202)ファイルに領域をロックします。 ファイル内のバイトをロックすると、他のプロセスがそれらのバイトにアクセスできなくなります。 ファイルの 1 つ以上の領域をロックすることができますが、重なり合う領域は許可されません。 使用して、リージョンのロックを解除するときに[CAtlFile::UnlockRange](#unlockrange)、バイト範囲は、以前にロックされた領域に正確に対応する必要があります。 `LockRange` 隣接する領域をマージできません。ロックされている 2 つの領域が隣接している場合とは別に解除各する必要があります。  
+ 呼び出し[ロック ファイル](/windows/desktop/api/fileapi/nf-fileapi-lockfile)ファイルに領域をロックします。 ファイル内のバイトをロックすると、他のプロセスがそれらのバイトにアクセスできなくなります。 ファイルの 1 つ以上の領域をロックすることができますが、重なり合う領域は許可されません。 使用して、リージョンのロックを解除するときに[CAtlFile::UnlockRange](#unlockrange)、バイト範囲は、以前にロックされた領域に正確に対応する必要があります。 `LockRange` 隣接する領域をマージできません。ロックされている 2 つの領域が隣接している場合とは別に解除各する必要があります。  
   
 ##  <a name="m_ptm"></a>  CAtlFile::m_pTM  
  ポインターを`CAtlTransactionManager`オブジェクト。  
@@ -293,16 +293,16 @@ HRESULT Read(
  読み取られたバイト数。  
   
  *pOverlapped*  
- オーバー ラップ構造体。 参照してください*lpOverlapped*で[ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467) Windows SDK に含まれています。  
+ オーバー ラップ構造体。 参照してください*lpOverlapped*で[ReadFile](/windows/desktop/api/fileapi/nf-fileapi-readfile) Windows SDK に含まれています。  
   
  *pfnCompletionRoutine*  
- メモリを割り当てます。 参照してください*lpCompletionRoutine*で[ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468) Windows SDK に含まれています。  
+ メモリを割り当てます。 参照してください*lpCompletionRoutine*で[ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex) Windows SDK に含まれています。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 最初の 3 つのフォームを呼び出す[ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467)、最後の[ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468)ファイルからデータを読み取る。 使用[CAtlFile::Seek](#seek)ファイル ポインターを移動します。  
+ 最初の 3 つのフォームを呼び出す[ReadFile](/windows/desktop/api/fileapi/nf-fileapi-readfile)、最後の[ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex)ファイルからデータを読み取る。 使用[CAtlFile::Seek](#seek)ファイル ポインターを移動します。  
   
 ##  <a name="seek"></a>  CAtlFile::Seek  
  ファイルのファイル ポインターを移動するには、このメソッドを呼び出します。  
@@ -324,7 +324,7 @@ HRESULT Seek(
  成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 呼び出し[SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541)ファイル ポインターを移動します。  
+ 呼び出し[SetFilePointer](/windows/desktop/api/fileapi/nf-fileapi-setfilepointer)ファイル ポインターを移動します。  
   
 ##  <a name="setsize"></a>  CAtlFile::SetSize  
  ファイルのサイズを設定するには、このメソッドを呼び出します。  
@@ -341,7 +341,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
  成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 呼び出し[SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541)と[SetEndOfFile](http://msdn.microsoft.com/library/windows/desktop/aa365531)ファイルのサイズを設定します。 返された場合は、ファイル ポインターは、ファイルの末尾に配置されます。  
+ 呼び出し[SetFilePointer](/windows/desktop/api/fileapi/nf-fileapi-setfilepointer)と[SetEndOfFile](/windows/desktop/api/fileapi/nf-fileapi-setendoffile)ファイルのサイズを設定します。 返された場合は、ファイル ポインターは、ファイルの末尾に配置されます。  
   
 ##  <a name="unlockrange"></a>  CAtlFile::UnlockRange  
  ファイルの領域のロックを解除するには、このメソッドを呼び出します。  
@@ -361,7 +361,7 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
  成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 呼び出し[UnlockFile](http://msdn.microsoft.com/library/windows/desktop/aa365715)ファイルの領域のロックを解除します。  
+ 呼び出し[UnlockFile](/windows/desktop/api/fileapi/nf-fileapi-unlockfile)ファイルの領域のロックを解除します。  
   
 ##  <a name="write"></a>  CAtlFile::Write  
  ファイル ポインターによって示される位置からファイルにデータを書き込むには、このメソッドを呼び出します。  
@@ -392,10 +392,10 @@ HRESULT Write(
  バッファーから転送されるバイト数。  
   
  *pOverlapped*  
- オーバー ラップ構造体。 参照してください*lpOverlapped*で[WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747) Windows SDK に含まれています。  
+ オーバー ラップ構造体。 参照してください*lpOverlapped*で[WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile) Windows SDK に含まれています。  
   
  *pfnCompletionRoutine*  
- メモリを割り当てます。 参照してください*lpCompletionRoutine*で[WriteFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365748) Windows SDK に含まれています。  
+ メモリを割り当てます。 参照してください*lpCompletionRoutine*で[WriteFileEx](/windows/desktop/api/fileapi/nf-fileapi-writefileex) Windows SDK に含まれています。  
   
  *pnBytesWritten*  
  書き込みバイト数。  
@@ -404,7 +404,7 @@ HRESULT Write(
  成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 最初の 3 つのフォームを呼び出す[WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747)、最後の呼び出し[WriteFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365748)データ ファイルに書き込めません。 使用[CAtlFile::Seek](#seek)ファイル ポインターを移動します。  
+ 最初の 3 つのフォームを呼び出す[WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile)、最後の呼び出し[WriteFileEx](/windows/desktop/api/fileapi/nf-fileapi-writefileex)データ ファイルに書き込めません。 使用[CAtlFile::Seek](#seek)ファイル ポインターを移動します。  
   
 ## <a name="see-also"></a>関連項目  
  [マーキーのサンプル](../../visual-cpp-samples.md)   

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6c883ef9c0c5866db1edf60668efcea7e819fc5
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 60d3d845f51f59e6072bd0425f34c63e0049dd31
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208768"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202538"
 ---
 # <a name="ccomcurrency-class"></a>CComCurrency クラス
 `CComCurrency` には、CURRENCY オブジェクトを作成および管理するためのメソッドと演算子があります。  
@@ -103,7 +103,7 @@ class CComCurrency
   
  CY_MIN_FRACTION、CY_MAX_FRACTION、CY_SCALE の値は、atlcur.h で定義されます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlcur.h  
   
 ##  <a name="ccomcurrency"></a>  CComCurrency::CComCurrency  
@@ -559,5 +559,5 @@ HRESULT SetInteger(LONGLONG nInteger);
   
 ## <a name="see-also"></a>関連項目  
  [COleCurrency クラス](../../mfc/reference/colecurrency-class.md)   
- [通貨](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)   
+ [通貨](https://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)   
  [クラスの概要](../../atl/atl-class-overview.md)

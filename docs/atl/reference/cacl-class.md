@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3408e098b7d7b29ff9ee82775954734e3e768dcb
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 066f9ac076d4371692331231b5f6f212947b2001
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879983"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196485"
 ---
 # <a name="cacl-class"></a>CAcl クラス
 このクラスは、のラッパー、 `ACL` (アクセス制御リスト) の構造体。  
@@ -92,7 +92,7 @@ class CAcl
 |[CAcl::operator =](#operator_eq)|代入演算子。|  
   
 ## <a name="remarks"></a>Remarks  
- `ACL`構造体が ACL (アクセス制御リスト) のヘッダー。 ACL には、連続した 0 個以上の一覧が含まれています。 [Ace](http://msdn.microsoft.com/library/windows/desktop/aa374868) (アクセス制御エントリ)。 ACL 内の個々 の Ace の番号が 0 から*n-1*ここで、 *n* ACL に Ace の数です。 ACL を編集するには、アプリケーションはそのインデックスを使用して、ACL 内でアクセス制御エントリ (ACE) を表します。  
+ `ACL`構造体が ACL (アクセス制御リスト) のヘッダー。 ACL には、連続した 0 個以上の一覧が含まれています。 [Ace](/windows/desktop/SecAuthZ/access-control-entries) (アクセス制御エントリ)。 ACL 内の個々 の Ace の番号が 0 から*n-1*ここで、 *n* ACL に Ace の数です。 ACL を編集するには、アプリケーションはそのインデックスを使用して、ACL 内でアクセス制御エントリ (ACE) を表します。  
   
  2 つの ACL の種類があります。  
   
@@ -104,11 +104,11 @@ class CAcl
   
  オブジェクトには、システム レベルのセキュリティ情報がシステムには、システム管理者によって制御される ACL の形式で、それに関連付けられていることもできます。 システムの ACL は、オブジェクトにアクセスするすべての試行を監査するシステム管理者に許可できます。  
   
- 詳細については、次を参照してください。、 [ACL](http://msdn.microsoft.com/library/windows/desktop/aa374872) Windows SDK で説明します。  
+ 詳細については、次を参照してください。、 [ACL](/windows/desktop/SecAuthZ/access-control-lists) Windows SDK で説明します。  
   
- Windows でのアクセス制御モデルの概要については、次を参照してください。[アクセス制御](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK に含まれています。  
+ Windows でのアクセス制御モデルの概要については、次を参照してください。[アクセス制御](/windows/desktop/SecAuthZ/access-control)Windows SDK に含まれています。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlsecurity.h  
   
 ##  <a name="caccessmaskarray"></a>  CAcl::CAccessMaskArray  
@@ -129,7 +129,7 @@ typedef CAtlArray<BYTE> CAceFlagArray;
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この typedef は、アクセス制御エントリ (ACE) の種類に固有の制御フラグを定義するために使用する配列の型を指定します。 参照してください、 [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919)可能なフラグの完全な一覧を定義します。  
+ この typedef は、アクセス制御エントリ (ACE) の種類に固有の制御フラグを定義するために使用する配列の型を指定します。 参照してください、 [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header)可能なフラグの完全な一覧を定義します。  
   
 ##  <a name="cacetypearray"></a>  CAcl::CAceTypeArray  
  バイト配列。  
@@ -139,7 +139,7 @@ typedef CAtlArray<BYTE> CAceTypeArray;
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この typedef は、ACCESS_ALLOWED_ACE_TYPE または ACCESS_DENIED_ACE_TYPE など、アクセス制御エントリ (ACE) オブジェクトの種類を定義するために使用する配列の型を指定します。 参照してください、 [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919)使用可能な型の完全な一覧を定義します。  
+ この typedef は、ACCESS_ALLOWED_ACE_TYPE または ACCESS_DENIED_ACE_TYPE など、アクセス制御エントリ (ACE) オブジェクトの種類を定義するために使用する配列の型を指定します。 参照してください、 [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header)使用可能な型の完全な一覧を定義します。  
   
 ##  <a name="cacl"></a>  CAcl::CAcl  
  コンストラクターです。  
@@ -205,7 +205,7 @@ void GetAclEntries(
   
  つまりの最初の要素の互いに、各配列の内容が対応、`CAccessMaskArray`の最初の要素に対応する配列、`CSidArray`配列、という具合です。  
   
- 参照してください[ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) ACE 型とフラグの詳細についてはします。  
+ 参照してください[ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) ACE 型とフラグの詳細についてはします。  
   
 ##  <a name="getaclentry"></a>  CAcl::GetAclEntry  
  すべてのアクセス制御リスト (ACL) 内のエントリに関する情報を取得します。  
@@ -246,7 +246,7 @@ void GetAclEntry(
 ### <a name="remarks"></a>Remarks  
  このメソッドは、個々 の ACE のより多くの情報を提供することに関する情報がすべては取得[CAcl::GetAclEntries](#getaclentries)単独で使用できるようにします。  
   
- 参照してください[ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) ACE 型とフラグの詳細についてはします。  
+ 参照してください[ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) ACE 型とフラグの詳細についてはします。  
   
 ##  <a name="getlength"></a>  CAcl::GetLength  
  アクセス制御リスト (ACL) の長さを返します。  

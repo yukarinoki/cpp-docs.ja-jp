@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9968a3601e366628b3539343dde34e956387356a
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: ea4bfc278e0912248c437123bd1510002a5c3829
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885765"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201628"
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc クラス
 このクラスは、のラッパー、`SECURITY_DESCRIPTOR`構造体。  
@@ -115,9 +115,9 @@ class CSecurityDesc
   
  アプリケーションは変更しないでください、`SECURITY_DESCRIPTOR`構造直接必要がありますを使用して、クラスのメソッドを提供します。  
   
- Windows でのアクセス制御モデルの概要については、次を参照してください。[アクセス制御](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK に含まれています。  
+ Windows でのアクセス制御モデルの概要については、次を参照してください。[アクセス制御](/windows/desktop/SecAuthZ/access-control)Windows SDK に含まれています。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlsecurity.h  
   
 ##  <a name="csecuritydesc"></a>  CSecurityDesc::CSecurityDesc  
@@ -155,7 +155,7 @@ bool FromString(LPCTSTR pstr) throw(...);
   
 ### <a name="parameters"></a>パラメーター  
  *pstr*  
- 含む null で終わる文字列へのポインター、[文字列形式のセキュリティ記述子](http://msdn.microsoft.com/library/windows/desktop/aa379570)に変換します。  
+ 含む null で終わる文字列へのポインター、[文字列形式のセキュリティ記述子](/windows/desktop/SecAuthZ/security-descriptor-string-format)に変換します。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合に true を返します。 エラー発生時に、例外をスローします。  
@@ -163,7 +163,7 @@ bool FromString(LPCTSTR pstr) throw(...);
 ### <a name="remarks"></a>Remarks  
  使用して、文字列を作成できる[CSecurityDesc::ToString](#tostring)します。 セキュリティ記述子を文字列に変換すると、格納および転送するやすくなります。  
   
- このメソッドを呼び出す[convertstringsecuritydescriptortosecuritydescriptor が](http://msdn.microsoft.com/library/windows/desktop/aa376401)します。  
+ このメソッドを呼び出す[convertstringsecuritydescriptortosecuritydescriptor が](/windows/desktop/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora)します。  
   
 ##  <a name="getcontrol"></a>  CSecurityDesc::GetControl  
  セキュリティ記述子から情報を制御するを取得します。  
@@ -180,7 +180,7 @@ bool GetControl(SECURITY_DESCRIPTOR_CONTROL* psdc) const throw();
  メソッドが成功した場合、false が失敗した場合に true を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドを呼び出す[GetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa446647)します。  
+ このメソッドを呼び出す[GetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa446647)します。  
   
 ##  <a name="getdacl"></a>  CSecurityDesc::GetDacl  
  セキュリティ記述子の随意アクセス制御リスト (DACL) の情報を取得します。  
@@ -251,7 +251,7 @@ const SECURITY_DESCRIPTOR* GetPSECURITY_DESCRIPTOR() const throw();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ポインターを返します、 [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561)構造体。  
+ ポインターを返します、 [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)構造体。  
   
 ##  <a name="getsacl"></a>  CSecurityDesc::GetSacl  
  セキュリティ記述子からシステム アクセス制御リスト (SACL) の情報を取得します。  
@@ -428,7 +428,7 @@ bool IsSelfRelative() const throw();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- セキュリティ記述子が自己相対形式で連続するメモリ ブロック内のすべてのセキュリティ情報がある場合に true を返します。 セキュリティ記述子には絶対形式の場合は false を返します。 詳細については、次を参照してください。[絶対有効期限と Self-Relative セキュリティ記述子](http://msdn.microsoft.com/library/windows/desktop/aa374807)します。  
+ セキュリティ記述子が自己相対形式で連続するメモリ ブロック内のすべてのセキュリティ情報がある場合に true を返します。 セキュリティ記述子には絶対形式の場合は false を返します。 詳細については、次を参照してください。[絶対有効期限と Self-Relative セキュリティ記述子](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors)します。  
   
 ##  <a name="makeabsolute"></a>  CSecurityDesc::MakeAbsolute  
  セキュリティ記述子を絶対形式に変換するには、このメソッドを呼び出します。  
@@ -441,7 +441,7 @@ bool MakeAbsolute() throw(...);
  メソッドが成功した場合、false それ以外の場合は true を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 絶対形式のセキュリティ記述子には、情報自体ではなく、含まれる情報へのポインターが含まれています。 自己相対形式のセキュリティ記述子には、連続するメモリ ブロックの情報が含まれています。 自己相対のセキュリティ記述子で、`SECURITY_DESCRIPTOR`構造体は、情報を常に開始されますが、セキュリティ記述子の他のコンポーネントは任意の順序で構造に従うことができます。 メモリ アドレスを使用する代わりに、自己相対のセキュリティ記述子のコンポーネントは、セキュリティ記述子の先頭からのオフセットによって識別されます。 この形式は、セキュリティ記述子をディスクに格納されているまたは通信プロトコルを使用して送信する必要がある場合に便利です。 詳細については、次を参照してください。[絶対有効期限と Self-Relative セキュリティ記述子](http://msdn.microsoft.com/library/windows/desktop/aa374807)します。  
+ 絶対形式のセキュリティ記述子には、情報自体ではなく、含まれる情報へのポインターが含まれています。 自己相対形式のセキュリティ記述子には、連続するメモリ ブロックの情報が含まれています。 自己相対のセキュリティ記述子で、`SECURITY_DESCRIPTOR`構造体は、情報を常に開始されますが、セキュリティ記述子の他のコンポーネントは任意の順序で構造に従うことができます。 メモリ アドレスを使用する代わりに、自己相対のセキュリティ記述子のコンポーネントは、セキュリティ記述子の先頭からのオフセットによって識別されます。 この形式は、セキュリティ記述子をディスクに格納されているまたは通信プロトコルを使用して送信する必要がある場合に便利です。 詳細については、次を参照してください。[絶対有効期限と Self-Relative セキュリティ記述子](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors)します。  
   
 ##  <a name="makeselfrelative"></a>  CSecurityDesc::MakeSelfRelative  
  セキュリティ記述子を自己相対形式に変換するには、このメソッドを呼び出します。  
@@ -454,7 +454,7 @@ bool MakeSelfRelative() throw(...);
  メソッドが成功した場合、false それ以外の場合は true を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 絶対形式のセキュリティ記述子には、自体の情報を格納しているのではなく、それに含まれる情報へのポインターが含まれています。 自己相対形式のセキュリティ記述子には、連続するメモリ ブロックの情報が含まれています。 自己相対のセキュリティ記述子で、`SECURITY_DESCRIPTOR`構造体は、情報を常に開始されますが、セキュリティ記述子の他のコンポーネントは任意の順序で構造に従うことができます。 メモリ アドレスを使用する代わりに、セキュリティ記述子のコンポーネントは、セキュリティ記述子の先頭からのオフセットによって識別されます。 この形式は、セキュリティ記述子をディスクに格納されているまたは通信プロトコルを使用して送信する必要がある場合に便利です。 詳細については、次を参照してください。[絶対有効期限と Self-Relative セキュリティ記述子](http://msdn.microsoft.com/library/windows/desktop/aa374807)します。  
+ 絶対形式のセキュリティ記述子には、自体の情報を格納しているのではなく、それに含まれる情報へのポインターが含まれています。 自己相対形式のセキュリティ記述子には、連続するメモリ ブロックの情報が含まれています。 自己相対のセキュリティ記述子で、`SECURITY_DESCRIPTOR`構造体は、情報を常に開始されますが、セキュリティ記述子の他のコンポーネントは任意の順序で構造に従うことができます。 メモリ アドレスを使用する代わりに、セキュリティ記述子のコンポーネントは、セキュリティ記述子の先頭からのオフセットによって識別されます。 この形式は、セキュリティ記述子をディスクに格納されているまたは通信プロトコルを使用して送信する必要がある場合に便利です。 詳細については、次を参照してください。[絶対有効期限と Self-Relative セキュリティ記述子](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors)します。  
   
 ##  <a name="operator_eq"></a>  CSecurityDesc::operator =  
  代入演算子。  
@@ -489,7 +489,7 @@ bool SetControl(
   
 ### <a name="parameters"></a>パラメーター  
  *ControlBitsOfInterest*  
- 設定する制御ビットを示す SECURITY_DESCRIPTOR_CONTROL マスク。 設定できるフラグの一覧は、次を参照してください。 [SetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx)します。  
+ 設定する制御ビットを示す SECURITY_DESCRIPTOR_CONTROL マスク。 設定できるフラグの一覧は、次を参照してください。 [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx)します。  
   
  *ControlBitsToSet*  
  によって指定される制御ビットの新しい値を示す SECURITY_DESCRIPTOR_CONTROL マスク、 *ControlBitsOfInterest*マスク。 このパラメーターの一覧表示フラグの組み合わせを指定できます、 *ControlBitsOfInterest*パラメーター。  
@@ -498,7 +498,7 @@ bool SetControl(
  正常に終了した場合は true を返します。失敗した場合は false を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドを呼び出す[SetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx)します。  
+ このメソッドを呼び出す[SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx)します。  
   
 ##  <a name="setdacl"></a>  CSecurityDesc::SetDacl  
  随意アクセス制御リスト (DACL) で情報を設定します。 DACL が既にセキュリティ記述子に存在する場合は置き換えられます。  
@@ -592,7 +592,7 @@ bool ToString(
   
 ### <a name="parameters"></a>パラメーター  
  *pstr*  
- 受信する null で終わる文字列へのポインター、[文字列形式のセキュリティ記述子](http://msdn.microsoft.com/library/windows/desktop/aa379570)します。  
+ 受信する null で終わる文字列へのポインター、[文字列形式のセキュリティ記述子](/windows/desktop/SecAuthZ/security-descriptor-string-format)します。  
   
  *si*  
  出力文字列に含めるセキュリティ記述子のコンポーネントを示す SECURITY_INFORMATION ビット フラグの組み合わせを指定します。  
@@ -614,12 +614,12 @@ bool ToString(
   
  DACL が NULL、入力のセキュリティ記述子で SE_DACL_PRESENT の制御ビットが設定されている場合は、メソッドは失敗します。  
   
- DACL が NULL で、入力のセキュリティ記述子で SE_DACL_PRESENT の制御ビットが設定されていない、結果として得られるセキュリティ記述子文字列には d: コンポーネントはありません。 参照してください[セキュリティ記述子の文字列形式](http://msdn.microsoft.com/library/windows/desktop/aa379570)の詳細。  
+ DACL が NULL で、入力のセキュリティ記述子で SE_DACL_PRESENT の制御ビットが設定されていない、結果として得られるセキュリティ記述子文字列には d: コンポーネントはありません。 参照してください[セキュリティ記述子の文字列形式](/windows/desktop/SecAuthZ/security-descriptor-string-format)の詳細。  
   
- このメソッドを呼び出す[convertstringsecuritydescriptortosecuritydescriptor が](http://msdn.microsoft.com/library/windows/desktop/aa376401)します。  
+ このメソッドを呼び出す[convertstringsecuritydescriptortosecuritydescriptor が](/windows/desktop/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora)します。  
   
 ## <a name="see-also"></a>関連項目  
  [セキュリティのサンプル](../../visual-cpp-samples.md)   
- [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561)   
+ [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)   
  [クラスの概要](../../atl/atl-class-overview.md)   
  [セキュリティに関するグローバル関数](../../atl/reference/security-global-functions.md)

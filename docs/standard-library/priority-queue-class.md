@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a53b865d054948d9ee22acbfbec0b6ddf807ec0c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e63f13c07ceb6220ba3dc8e7932c7357ed649188
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954761"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199239"
 ---
 # <a name="priorityqueue-class"></a>priority_queue クラス
 
@@ -50,11 +50,14 @@ class priority_queue
 
 ### <a name="parameters"></a>パラメーター
 
-*型*priority_queue に格納される要素のデータを入力します。
+*Type*<br/>
+ priority_queue に格納される要素のデータ型。
 
-*コンテナー* priority_queue を実装するために使用される基になるコンテナーの種類。
+*コンテナー*<br/>
+ priority_queue を実装するために使用する基になるコンテナーの型。
 
-*比較*priority_queue 内の相対順序を決定する並べ替えキーとして 2 つの要素の値を比較できる関数オブジェクトを提供する型。 この引数は省略可能な二項述語と**少ない***\<*** typename** *コンテナー ***:: value_type*** >* は既定値です。
+*Compare*<br/>
+ 2 つの要素の値を並べ替えキーとして比較して、priority_queue 内の要素の相対順序を決定できる関数オブジェクトを提供する型。 この引数は省略可能であり、既定値は二項述語 `less<typename Container::value_type>` です。
 
 ## <a name="remarks"></a>Remarks
 
@@ -98,7 +101,7 @@ C++ 標準ライブラリで定義されたコンテナー アダプターには
 |[size](#size)|`priority_queue` 内の要素数を返します。|
 |[top](#top)|`priority_queue` の最上位にある最大要素への const 参照を返します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<queue>
 
@@ -249,15 +252,20 @@ priority_queue(InputIterator first, InputIterator last, const Traits&_comp, cons
 
 ### <a name="parameters"></a>パラメーター
 
-*_ comp*型の比較関数**constTraits**既定値は、基本のコンテナーの機能を比較すると、priority_queue 内の要素の並べ替えに使用します。
+*_ comp*<br/>
+ priority_queue 内の要素の並べ替えに使用される、**constTraits** 型の比較関数。既定では基本コンテナーの関数を比較します。
 
-*_Cont*が構築された priority_queue がコピーに基本のコンテナー。
+*_Cont*<br/>
+ 構築された priority_queue がコピーになる元の基本コンテナー。
 
-*適切な*priority_queue を構築されたセットがコピーにです。
+*right*<br/>
+ 構築される set のコピー元となる priority_queue。
 
-*最初*コピーされる要素の範囲内の最初の要素の位置。
+*first*<br/>
+ コピーする要素範囲内の最初の要素の位置。
 
-*最後*コピーされる要素の範囲を超える先頭の要素の位置。
+*last*<br/>
+ コピーする要素範囲を超える最初の要素の位置。
 
 ### <a name="remarks"></a>Remarks
 
@@ -388,7 +396,8 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>パラメーター
 
-*val* priority_queue の最上部に追加する要素。
+*val*<br/>
+ priority_queue の最上位に追加された要素。
 
 ### <a name="remarks"></a>Remarks
 

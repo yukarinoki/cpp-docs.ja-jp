@@ -1,5 +1,5 @@
 ---
-title: ツール バー コントロールの外観のカスタマイズ |Microsoft ドキュメント
+title: ツール バー コントロールの外観のカスタマイズ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,47 +21,47 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48825a264b7d82152f47e70c5911bea400c313db
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 54c512bd727b7ef36ee94eb5ccaf3018be692d14
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36932118"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197696"
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>ツール バー コントロールの外観のカスタマイズ
-クラス`CToolBarCtrl`外観 (および場合によっては、動作) のツールバー オブジェクトに影響する多くのスタイルを提供します。 設定してツール バー オブジェクトを変更、`dwCtrlStyle`のパラメーター、 `CToolBarCtrl::Create` (または`CToolBar::CreateEx`) メンバー関数は、ツール バー コントロールを作成します。  
+クラス`CToolBarCtrl`外観 (および、場合によっては、動作)、ツールバーのオブジェクトの影響を与える多くのスタイルを提供します。 設定して、ツールバーのオブジェクトを変更、`dwCtrlStyle`のパラメーター、 `CToolBarCtrl::Create` (または`CToolBar::CreateEx`) メンバー関数は、ツール バー コントロールを作成します。  
   
- 次のスタイルは、ツールバーのボタンの"3D"縦横比とボタンのテキストの配置に影響します。  
+ 次のスタイルは、ツール バー ボタンの"3D"側面と、ボタンのテキストの配置に影響します。  
   
--   **TBSTYLE_FLAT**ツールバーとボタンの両方が透過的なフラット ツールバーを作成します。 ボタンのビットマップ ボタンのテキストが表示されます。 このスタイルを使用すると、カーソルの下のボタンが自動的に強調表示されます。  
+-   **TBSTYLE_FLAT**ツールバーとボタンの両方が透過的なフラット ツールバーを作成します。 ボタンのビットマップ ボタンのテキストが表示されます。 このスタイルを使用する場合、カーソルの下のボタンが強調表示されます。  
   
--   **バーオブジェクト**透過ツールバーを作成します。 透明なツールバーで、ツールバーは透明が、ボタンはできません。 ボタンのビットマップ ボタンのテキストが表示されます。  
+-   **バーオブジェクト**透明なツールバーを作成します。 透過的なツールバーで、ツールバーは透明が、ボタンはできません。 ボタンのビットマップ ボタンのテキストが表示されます。  
   
--   **TBSTYLE_LIST**場所ボタンのボタンのビットマップの右側にテキストです。  
+-   **TBSTYLE_LIST**場所ボタンのボタンの右側にテキスト。  
   
 > [!NOTE]
->  再描画の問題を防ぐために、 **TBSTYLE_FLAT**と**バーオブジェクト**ツールバー オブジェクトを表示する前に、スタイルを設定する必要があります。  
+>  再描画の問題を防ぐために、 **TBSTYLE_FLAT**と**バーオブジェクト**ツールバー オブジェクトが表示される前に、スタイルを設定する必要があります。  
   
- 次のスタイルでは、ツールバーがドラッグを使用して、ツールバーのオブジェクト内の各ボタンの位置を変更および削除するユーザーを使用するかどうかを決定します。  
+ 次のスタイルは、ツールバーにユーザーがドラッグを使用して、ツールバーのオブジェクト内の各ボタンの位置を変更し、削除ができるかどうかを決定します。  
   
--   **TBSTYLE_ALTDRAG** alt キーを押しながらドラッグして、ツール バー ボタンの位置を変更することができます。 このスタイルが指定されていない場合、ユーザーはボタンをドラッグし、shift キーを押し必要があります。  
+-   **TBSTYLE_ALTDRAG** alt キーを押しながらドラッグすることで、ツールバーのボタンの位置を変更することができます。 このスタイルが指定されていない場合は、ユーザーがボタンをドラッグするときに shift キーを押しする必要があります。  
   
     > [!NOTE]
     >  **ツール**をドラッグできるツール バー ボタンを有効にするスタイルを指定する必要があります。  
   
--   **TBSTYLE_REGISTERDROP**生成**TBN_GETOBJECT**通知を要求するメッセージは、マウス ポインターがツール バー ボタン上に置いたときにターゲット オブジェクトを削除します。  
+-   **TBSTYLE_REGISTERDROP**生成**TBN_GETOBJECT**通知にマウス ポインターがツール バー ボタン上に配置時に、要求するメッセージがターゲット オブジェクトを削除します。  
   
- 残りのスタイルでは、ツールバーのオブジェクトのビジュアルとビジュアルの側面に影響します。  
+ 残りのスタイルでは、ツールバーのオブジェクトの表示と非ビジュアルの側面に影響します。  
   
--   **TBSTYLE_WRAPABLE**ボタンの複数の行を持つことができるツールバーを作成します。 ツール バー ボタン「ラップできます」次の行に、ツールバーが狭いが同じ直線上のすべてのボタンを含めるためになったとき。 分離と折り返されます境界での折り返しが発生します。  
+-   **TBSTYLE_WRAPABLE**をボタンの複数の行をできるツールバーを作成します。 ツール バー ボタンできます「ラップ」次の行に、ツールバーが狭すぎてを同じ行にすべてのボタンが含まれます。 分離および折り返されます境界での折り返しが発生します。  
   
--   **TBSTYLE_CUSTOMERASE**生成**NM_CUSTOMDRAW**の通知メッセージを処理するとき**WM_ERASEBKGND**メッセージ。  
+-   **TBSTYLE_CUSTOMERASE**生成**NM_CUSTOMDRAW**の通知メッセージの処理時に**WM_ERASEBKGND**メッセージ。  
   
--   **TBSTYLE_TOOLTIPS**ツールバーにボタンの説明テキストを表示するアプリケーションで使用できるツール ヒント コントロールを作成します。  
+-   **TBSTYLE_TOOLTIPS**ツールバーにボタンの説明テキストを表示するアプリケーションが使用できるツール ヒント コントロールを作成します。  
   
- ツール バー スタイルや拡張スタイルの完全な一覧については、次を参照してください。[ツール バー コントロールとボタンのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb760439)と[ツールバー拡張スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760430)Windows SDK にします。  
+ Toolbar のスタイルと拡張スタイルの完全な一覧については、次を参照してください。[ツール バー コントロールとボタンのスタイル](/windows/desktop/Controls/toolbar-control-and-button-styles)と[ツールバー拡張スタイル](/windows/desktop/Controls/toolbar-extended-styles)Windows SDK にします。  
   
 ## <a name="see-also"></a>関連項目  
- [CToolBarCtrl の使い方](../mfc/using-ctoolbarctrl.md)   
+ [Ctoolbarctrl の使い方](../mfc/using-ctoolbarctrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 

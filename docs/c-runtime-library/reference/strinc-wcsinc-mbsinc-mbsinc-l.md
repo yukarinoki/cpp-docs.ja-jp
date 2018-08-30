@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86822cfeb26428a53e94d50a3d831732241007ee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1d714499ebb33d1d4dc2636ab80b2ad727ccac39
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411664"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195159"
 ---
 # <a name="strinc-wcsinc-mbsinc-mbsincl"></a>_strinc、_wcsinc、_mbsinc、_mbsinc_l
 
@@ -95,22 +95,22 @@ unsigned char *_mbsinc_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらの各ルーチン直後に続く文字へのポインターを返します*現在*です。
+これらの各ルーチン直後に続く文字へのポインターを返します*現在*します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Mbsinc**関数は、直後に続くマルチバイト文字の最初のバイトまでポインターを返す*現在*です。 **_mbsinc**に従ってマルチバイト文字シーケンスを認識、[マルチバイト コード ページ](../../c-runtime-library/code-pages.md)は、現在使用中です。**_mbsinc_l**に渡されたロケール パラメーターを代わりに使用する点を除いてと同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_Mbsinc**直後に続くマルチバイト文字の最初のバイトへのポインターを返します関数*現在*します。 **_mbsinc**に従ってマルチバイト文字シーケンスを認識、[マルチバイト コード ページ](../../c-runtime-library/code-pages.md)は、現在使用中です。**_mbsinc_l**で渡されるロケール パラメーターを代わりに使用すると同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-汎用テキスト関数 **_tcsinc**、マップ、Tchar.h で定義された **_mbsinc**場合 **_MBCS**は定義されている、または **_wcsinc**場合 **_UNICODE**は定義されています。 それ以外の場合、 **_tcsinc**にマップ **_strinc**です。 **_strinc**と **_wcsinc**の 1 バイト文字とワイド文字バージョンは、 **_mbsinc**です。 **_strinc**と **_wcsinc**この割り当てにのみ提供され、それ以外の場合は使用できません。 詳細については、「[Using Generic-Text Mappings](../../c-runtime-library/using-generic-text-mappings.md)」(汎用テキスト マップの使用) および「[Generic-Text Mappings](../../c-runtime-library/generic-text-mappings.md)」(汎用テキスト マップ) をご覧ください。
+汎用テキスト関数 **_tcsinc**にマップ、Tchar.h で定義されている、 **_mbsinc**場合 **_MBCS**が定義されている、または **_wcsinc**場合 **_UNICODE**は定義されています。 それ以外の場合、 **_tcsinc**マップ **_strinc**します。 **_strinc**と **_wcsinc**の 1 バイト文字とワイド文字バージョン **_mbsinc**します。 **_strinc**と **_wcsinc**このマッピングにのみ提供され、それ以外の場合は使用できません。 詳細については、「[Using Generic-Text Mappings](../../c-runtime-library/using-generic-text-mappings.md)」(汎用テキスト マップの使用) および「[Generic-Text Mappings](../../c-runtime-library/generic-text-mappings.md)」(汎用テキスト マップ) をご覧ください。
 
-場合*現在*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行は継続許可されたかどうか、この関数を返します**EINVAL**設定と**errno**に**EINVAL**です。
+場合*現在*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 かどうかは、引き続き実行が許可された、この関数を返します**EINVAL**設定と**errno**に**EINVAL**します。
 
 > [!IMPORTANT]
-> これらの関数は、バッファー オーバーランの脅威に対して脆弱な場合があります。 バッファー オーバーランは、認められていない特権の昇格の原因となるため、システムの攻撃に使用される可能性があります。 詳しくは、「 [バッファー オーバーランの回避](http://msdn.microsoft.com/library/windows/desktop/ms717795)」をご覧ください。
+> これらの関数は、バッファー オーバーランの脅威に対して脆弱な場合があります。 バッファー オーバーランは、認められていない特権の昇格の原因となるため、システムの攻撃に使用される可能性があります。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_mbsinc**|\<mbstring.h>|
 |**_mbsinc_l**|\<mbstring.h>|

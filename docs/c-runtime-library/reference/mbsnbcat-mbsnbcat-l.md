@@ -42,16 +42,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff7dc09e4305c16ebe710cb99c9e1bdd24490761
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6f6d75df13263c0eb6a239f2fe6f4f5a400e03d3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405060"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210083"
 ---
 # <a name="mbsnbcat-mbsnbcatl"></a>_mbsnbcat、_mbsnbcat_l
 
-最大では、最初の末尾に追加**n**を別の 1 つのマルチバイト文字列のバイト数。 これらの関数のセキュリティを強化したバージョンについては、「[_mbsnbcat_s, _mbsnbcat_s_l](mbsnbcat-s-mbsnbcat-s-l.md)」を参照してください。
+追加、最大で 1 つ目**n**を別の 1 つのマルチバイト文字列のバイト数。 これらの関数のセキュリティを強化したバージョンについては、「[_mbsnbcat_s, _mbsnbcat_s_l](mbsnbcat-s-mbsnbcat-s-l.md)」を参照してください。
 
 > [!IMPORTANT]
 > この API は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
@@ -94,7 +94,7 @@ NULL で終わるマルチバイト文字のコピー先文字列。
 NULL で終わるマルチバイト文字のコピー元文字列。
 
 *count*<br/>
-バイト数*src*に追加する*dest*です。
+バイト数*src*に追加する*dest*します。
 
 *locale*<br/>
 使用するロケール。
@@ -103,15 +103,15 @@ NULL で終わるマルチバイト文字のコピー元文字列。
 
 **_mbsnbcat**コピー先文字列へのポインターを返します。 エラーを示す戻り値は予約されていません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Mbsnbcat**関数は、追加、多くても 1 つ目*カウント*バイトの*src*に*dest*です。 場合に null 文字の直前にあるバイト*dest*先行バイト、最初のバイトの*src*先行バイトが上書きされます。 それ以外の場合、最初のバイトの*src*の終端の null 文字を上書き*dest*です。 Null バイトが表示された場合*src*する前に*カウント*バイトを追加すると、 **_mbsnbcat**すべてのバイトを追加*src*、null 文字までです。 場合*カウント*がの長さより大きい*src*の長さ*src*の代わりに使用される*カウント*です。 結果の文字列は null 文字で終了します。 重なり合う文字列間でコピーした場合の動作は未定義です。
+**_Mbsnbcat**関数追加、最大で 1 つ目*カウント*バイトの*src*に*dest*します。 場合に null 文字の直前にあるバイト*dest*が先行バイト、最初のバイトの*src*この先行バイトが上書きされます。 それ以外の場合、最初のバイトの*src*の終端の null 文字を上書き*dest*します。 Null バイトが表示される場合*src*する前に*カウント*バイトが追加され、 **_mbsnbcat**からすべてのバイトを追加します。 *src*、null 文字までです。 場合*カウント*がの長さより大きい*src*の長さ*src*の代わりに使用されます*カウント*します。 結果の文字列は null 文字で終了します。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
-出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_Mbsnbcat**関数のバージョンは、このロケールに依存する動作の現在のロケールを使用して、 **_mbsnbcat_l**バージョンは、代わりに渡されたロケール パラメーターを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_Mbsnbcat**関数のバージョンは、このロケールに依存する動作の現在のロケールを使用、 **_mbsnbcat_l**バージョンは、代わりに渡されたロケール パラメーターを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-**セキュリティに関するメモ** null で終わる文字列をご使用ください。 null で終わる文字列はターゲット バッファーのサイズを超えないようにしてください。 詳しくは、「 [バッファー オーバーランの回避](http://msdn.microsoft.com/library/windows/desktop/ms717795)」をご覧ください。
+**セキュリティに関するメモ** null で終わる文字列をご使用ください。 null で終わる文字列はターゲット バッファーのサイズを超えないようにしてください。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
-場合*dest*または*src*は**NULL**、」の説明に従って、関数で、無効なパラメーター エラーが発生[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 関数を返しますのかどうかは、エラーが処理される、 **EINVAL**設定と**errno**に**EINVAL**です。
+場合*dest*または*src*は**NULL**、関数の説明に従って、無効なパラメーター エラーが生成されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 エラーが処理されるかどうか、関数を返します**EINVAL**設定と**errno**に**EINVAL**します。
 
 C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -124,7 +124,7 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_mbsnbcat**|\<mbstring.h>|
 |**_mbsnbcat_l**|\<mbstring.h>|

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85415ee73b65619a2da0a3e7720250a3618a0fec
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: f6d17ec38820e82a97435e04f2126f87ef9208aa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883519"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218437"
 ---
 # <a name="cfiletimespan-class"></a>CFileTimeSpan クラス
 このクラスは、相対的な日付と時刻の値がファイルへの関連付けを管理するためのメソッドを提供します。  
@@ -74,7 +74,7 @@ class CFileTimeSpan
 ## <a name="example"></a>例  
  例をご覧ください[CFileTime::Millisecond](../../atl-mfc-shared/reference/cfiletime-class.md#millisecond)します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atltime.h  
   
 ##  <a name="cfiletimespan"></a>  CFileTimeSpan::CFileTimeSpan  
@@ -272,7 +272,7 @@ void SetTimeSpan(LONGLONG nSpan) throw();
  ミリ秒単位で期間の新しい値。  
   
 ## <a name="see-also"></a>関連項目  
- [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)   
+ [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)   
  [CFileTime クラス](../../atl-mfc-shared/reference/cfiletime-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [ATL/MFC 共有クラス](../../atl-mfc-shared/atl-mfc-shared-classes.md)

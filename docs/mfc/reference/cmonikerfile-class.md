@@ -28,15 +28,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 296e288f017373563b867b02ad26f25ec6bc6227
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b3aab8fe3dac8cb58884861a83e41d09b493a375
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853648"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212118"
 ---
 # <a name="cmonikerfile-class"></a>CMonikerFile クラス
-データのストリームを表します ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) によってという名前を[IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)します。  
+データのストリームを表します ( [IStream](/windows/desktop/api/objidl/nn-objidl-istream)) によってという名前を[IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -74,7 +74,7 @@ class CMonikerFile : public COleStreamFile
   
  `CMonikerFile` ストリーム以外にバインドするのには使用できません。 使用する必要がありますストレージまたはオブジェクトにバインドする場合、`IMoniker`インターフェイスを直接します。  
   
- ストリームとモニカーの詳細については、次を参照してください[COleStreamFile](../../mfc/reference/colestreamfile-class.md)で、 *MFC リファレンス*と[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)と[IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)で、。Windows SDK。  
+ ストリームとモニカーの詳細については、次を参照してください[COleStreamFile](../../mfc/reference/colestreamfile-class.md)で、 *MFC リファレンス*と[IStream](/windows/desktop/api/objidl/nn-objidl-istream)と[IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker)で、。Windows SDK。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -85,7 +85,7 @@ class CMonikerFile : public COleStreamFile
   
  `CMonikerFile`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxole.h  
   
 ##  <a name="close"></a>  CMonikerFile::Close  
@@ -117,7 +117,7 @@ IBindCtx* CreateBindContext(CFileException* pError);
  ファイルの例外へのポインター。 エラーが発生した場合、原因に設定されます。  
   
 ### <a name="return-value"></a>戻り値  
- バインド コンテキストへのポインター [IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755)成功。 それ以外の場合に NULL の場合は、バインドします。 インスタンスが開かれた場合、`IBindHost`バインド コンテキストがから取得した、インターフェイス、 `IBindHost`。 存在する場合ありません`IBindHost`インターフェイスまたはインターフェイスは、バインド コンテキストに失敗した場合、バインド コンテキストが作成されます。 説明については、 [IBindHost](http://msdn.microsoft.com/library/ie/ms775076)インターフェイス、Windows SDK を参照してください。  
+ バインド コンテキストへのポインター [IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx)成功。 それ以外の場合に NULL の場合は、バインドします。 インスタンスが開かれた場合、`IBindHost`バインド コンテキストがから取得した、インターフェイス、 `IBindHost`。 存在する場合ありません`IBindHost`インターフェイスまたはインターフェイスは、バインド コンテキストに失敗した場合、バインド コンテキストが作成されます。 説明については、 [IBindHost](https://msdn.microsoft.com/library/ie/ms775076)インターフェイス、Windows SDK を参照してください。  
   
 ### <a name="remarks"></a>Remarks  
  バインド コンテキストは、特定のモニカー バインド操作に関する情報を格納するオブジェクトです。 カスタム バインド コンテキストを提供するには、この関数をオーバーライドすることができます。  
@@ -144,10 +144,10 @@ IMoniker* GetMoniker() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 現在のモニカー インターフェイスへのポインター ( [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705))。  
+ 現在のモニカー インターフェイスへのポインター ( [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker))。  
   
 ### <a name="remarks"></a>Remarks  
- `CMonikerFile` 、インターフェイスではありませんから返されるポインターは参照カウントをインクリメントしていません (を通じて[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379))、モニカーがリリースされたときに、`CMonikerFile`オブジェクトを解放します。 モニカーの保持またはそれを解放する場合は、まず`AddRef`こと。  
+ `CMonikerFile` 、インターフェイスではありませんから返されるポインターは参照カウントをインクリメントしていません (を通じて[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref))、モニカーがリリースされたときに、`CMonikerFile`オブジェクトを解放します。 モニカーの保持またはそれを解放する場合は、まず`AddRef`こと。  
   
 ##  <a name="open"></a>  CMonikerFile::Open  
  ファイルまたはモニカー オブジェクトを開くには、このメンバー関数を呼び出します。  

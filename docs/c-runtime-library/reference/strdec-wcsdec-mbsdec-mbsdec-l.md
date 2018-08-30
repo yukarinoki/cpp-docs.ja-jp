@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c73813c406011eaadd540398d3364ec183f8deaf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7a700d6e7befb71b1161ec27beb7a839f93e003e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414218"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211475"
 ---
 # <a name="strdec-wcsdec-mbsdec-mbsdecl"></a>_strdec、_wcsdec、_mbsdec、_mbsdec_l
 
@@ -89,28 +89,28 @@ unsigned char *_mbsdec_l(
 ### <a name="parameters"></a>パラメーター
 
 *start*<br/>
-任意の文字へのポインター (または **_mbsdec**と **_mbsdec_l**、任意のマルチバイト文字の最初のバイト) 元の文字列です。*開始*前に指定する必要があります*現在*元の文字列。
+任意の文字へのポインター (または **_mbsdec**と **_mbsdec_l**、最初のバイトのマルチバイト文字の) 元の文字列。*開始*前に指定する必要があります*現在*元の文字列。
 
 *current*<br/>
-任意の文字へのポインター (または **_mbsdec**と **_mbsdec_l**、任意のマルチバイト文字の最初のバイト) 元の文字列です。*現在*従う必要があります*開始*元の文字列。
+任意の文字へのポインター (または **_mbsdec**と **_mbsdec_l**、最初のバイトのマルチバイト文字の) 元の文字列。*現在*従う必要があります*開始*元の文字列。
 
 *locale*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-**_mbsdec**、 **_mbsdec_l**、 **_strdec**、および **_wcsdec**直前にある文字へのポインターを返す各*現在*;**_mbsdec**返します**NULL**場合の値*開始*以上のものには、*現在*です。 **_tcsdec**これらの関数と戻り値のいずれかにマップが異なります。
+**_mbsdec**、 **_mbsdec_l**、 **_strdec**、および **_wcsdec**の直前にある文字へのポインターを返す各*現在*;**_mbsdec**返します**NULL**場合の値*開始*の以上*現在*します。 **_tcsdec**これらの関数と戻り値のいずれかにマップされますが、マッピングに依存します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Mbsdec**と **_mbsdec_l**関数では、ポインターを返す前に記述するマルチバイト文字の最初のバイトまで*現在*を含む文字列*開始*です。
+**_Mbsdec**と **_mbsdec_l**関数に先行するマルチバイト文字の最初のバイトへのポインターを返す*現在*を含む文字列で*開始*します。
 
-出力値の設定の影響を受けた、 **LC_CTYPE** 、ロケールのカテゴリの設定; 参照してください[setlocale、_wsetlocale](setlocale-wsetlocale.md)詳細についてはします。  **_mbsdec** 、使用されているロケールに従ってマルチバイト文字シーケンスを認識中に **_mbsdec_l**に渡されたロケール パラメーターを代わりに使用する点を除いてと同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値の設定に影響は、 **LC_CTYPE**ロケールのカテゴリの設定; を参照してください[setlocale、_wsetlocale](setlocale-wsetlocale.md)詳細についてはします。  **_mbsdec**現在使用されているロケールに従ってマルチバイト文字シーケンスを認識中 **_mbsdec_l**で渡されるロケール パラメーターを代わりに使用すると同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-場合*開始*または*現在*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行は継続許可されたかどうか、この関数を返します**EINVAL**設定と**errno**に**EINVAL**です。
+場合*開始*または*現在*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 かどうかは、引き続き実行が許可された、この関数を返します**EINVAL**設定と**errno**に**EINVAL**します。
 
 > [!IMPORTANT]
-> これらの関数は、バッファー オーバーランの脅威に対して脆弱な場合があります。 バッファー オーバーランは、認められていない特権の昇格の原因となるため、システムの攻撃に使用される可能性があります。 詳しくは、「 [バッファー オーバーランの回避](http://msdn.microsoft.com/library/windows/desktop/ms717795)」をご覧ください。
+> これらの関数は、バッファー オーバーランの脅威に対して脆弱な場合があります。 バッファー オーバーランは、認められていない特権の昇格の原因となるため、システムの攻撃に使用される可能性があります。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -118,13 +118,13 @@ unsigned char *_mbsdec_l(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsdec**|**_strdec**|**_mbsdec**|**_wcsdec**|
 
-**_strdec**と **_wcsdec**の 1 バイト文字とワイド文字バージョンは、 **_mbsdec**と **_mbsdec_l**です。 **_strdec**と **_wcsdec**この割り当てにのみ提供され、それ以外の場合は使用できません。
+**_strdec**と **_wcsdec**の 1 バイト文字とワイド文字バージョン **_mbsdec**と **_mbsdec_l**します。 **_strdec**と **_wcsdec**このマッピングにのみ提供され、それ以外の場合は使用できません。
 
 詳細については、「[Using Generic-Text Mappings](../../c-runtime-library/using-generic-text-mappings.md)」(汎用テキスト マップの使用) および「[Generic-Text Mappings](../../c-runtime-library/generic-text-mappings.md)」(汎用テキスト マップ) をご覧ください。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_mbsdec**|\<mbstring.h>|\<mbctype.h>|
 |**_mbsdec_l**|\<mbstring.h>|\<mbctype.h>|
@@ -135,7 +135,7 @@ unsigned char *_mbsdec_l(
 
 ## <a name="example"></a>例
 
-次の例を使用して **_tcsdec**です。
+次の例を使用して **_tcsdec**します。
 
 ```cpp
 // crt_tcsdec.cpp
@@ -161,7 +161,7 @@ int main()
 }
 ```
 
-次の例を使用して **_mbsdec**です。
+次の例を使用して **_mbsdec**します。
 
 ```cpp
 // crt_mbsdec.cpp

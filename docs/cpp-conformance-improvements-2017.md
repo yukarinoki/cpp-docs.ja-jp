@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bb06a4ef2229b2b9e98bf7acabbe757744fc73
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 9bce71c444426d5d1a2d5340c603118a09e8275f
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42573163"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132244"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Visual Studio 2017 バージョン 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156)、[15.7](#improvements_157)、[15.8](#update_158) での C++ 準拠の改善
 
@@ -55,19 +55,19 @@ static_assert の message パラメーターは省略可能です。 詳細に�
 
 ### <a name="constexpr-lambdas"></a>constexpr ラムダ
 
-定数式でラムダ式を使用できるようになりました。 詳しくは、「[Constexpr Lambda (Constexpr ラムダ)](http://open-std.org/JTC1/SC22/WG21/docs/papers/2015/n4487.pdf)」をご覧ください。
+定数式でラムダ式を使用できるようになりました。 詳細については、「[constexpr lambda expressions in C++](cpp/lambda-expressions-constexpr.md)」(C++ での constexpr ラムダ式) をご覧ください。
 
 ### <a name="if-constexpr-in-function-templates"></a>関数テンプレートでの if constexpr
 
-関数テンプレートに、`if constexpr` ステートメントを含めてコンパイル時の分岐を有効にできます。 詳細については、「[if constexpr](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0128r1.html)」をご覧ください。
+関数テンプレートに、`if constexpr` ステートメントを含めてコンパイル時の分岐を有効にできます。 詳細については、「[if constexpr statements](cpp/if-else-statement-cpp.md#if_constexpr)」(if constexpr 式) をご覧ください。
 
 ### <a name="selection-statements-with-initializers"></a>初期化子を含む選択ステートメント
 
-`if` ステートメントには、ステートメント自体のブロック スコープで変数を導入する初期化子を含めることができます。 詳しくは、「[Selection statements with initializer (初期化子を持つ選択ステートメント)](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0305r1.html)」をご覧ください。
+`if` ステートメントには、ステートメント自体のブロック スコープで変数を導入する初期化子を含めることができます。 詳細については、「[if statements with initializer](cpp/if-else-statement-cpp.md#if_with_init)」(初期化子を含む if 式) をご覧ください。
 
 ### <a name="maybeunused-and-nodiscard-attributes"></a>[[maybe_unused]] 属性と [[nodiscard]] 属性
 
-エンティティを使用しない場合に警告を発生させない、または関数呼び出しの戻り値が破棄されたら警告を発生させる、新しい属性です。 詳しくは、「[Wording for maybe_unused attribute (maybe_unused 属性の表現)](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0212r0.pdf)」と「[Proposal of unused,nodiscard and fallthrough attributes (unused、nodiscard、fallthrough 属性の提案)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0068r0.pdf)」をご覧ください。
+エンティティを使用しない場合に警告を発生させない、または関数呼び出しの戻り値が破棄されたら警告を発生させる、新しい属性です。 詳しくは、「[Attributes in C++ (C++ における属性)](cpp/attributes.md)」をご覧ください。
 
 ### <a name="using-attribute-namespaces-without-repetition"></a>繰り返しのない属性名前空間の使用
 
@@ -75,11 +75,11 @@ static_assert の message パラメーターは省略可能です。 詳細に�
 
 ### <a name="structured-bindings"></a>構造化バインド
 
-値が、配列、std::tuple または std::pair のいずれかである、または、すべてのパブリックの非静的データ メンバーを持つときに、1 つの宣言で、そのコンポーネントの個別の名前を持つ値を格納できるようになりました。 詳しくは、「[Structured Bindings (構造化バインド)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf)」をご覧ください。
+値が、配列、std::tuple または std::pair のいずれかである、または、すべてのパブリックの非静的データ メンバーを持つときに、1 つの宣言で、そのコンポーネントの個別の名前を持つ値を格納できるようになりました。 詳細については、「[Structured Bindings](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf)」(構造化バインド) と「[Returning multiple values from a function](cpp/functions-cpp.md#multi_val)」(関数から複数の値を返す) をご覧ください。
 
 ### <a name="construction-rules-for-enum-class-values"></a>列挙型クラスの値の構築ルール
 
-定義で列挙子を導入せず、ソースがリスト初期化構文を使用している場合に、スコープ列挙の基になる型から列挙型自体への、暗黙的な/非縮小の変換が使用できるようになりました。 詳しくは、「[Construction Rules for enum class Values (列挙型クラスの値の構築ルール)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf)」をご覧ください。
+定義で列挙子を導入せず、ソースがリスト初期化構文を使用している場合に、スコープ列挙の基になる型から列挙型自体への、暗黙的な/非縮小の変換が使用できるようになりました。 詳細については、「[Construction Rules for enum class Values](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf)」(列挙型クラスの値の構築ルール) と[列挙](cpp/enumerations-cpp.md#no_enumerators)に関する記事をご覧ください。
 
 ### <a name="capturing-this-by-value"></a>\*this を値でキャプチャする
 
@@ -214,6 +214,8 @@ struct B : A {
 
 B b(42L); // now calls B(int)
 ```
+
+詳細については、「[コンストラクター](cpp/constructors-cpp.md#inheriting_constructors)」を参照してください。
 
 ### <a name="c17-extended-aggregate-initialization"></a>C++17: 集約の初期化 (拡張)
 
@@ -1683,6 +1685,8 @@ struct S : Base<T> {
 ```
 
 このエラーを解決するには、`return` ステートメントを `return this->base_value;` に変更します。
+
+**注:** Boost python ライブラリの [unwind_type.hpp](https://github.com/boostorg/python/blame/develop/include/boost/python/detail/unwind_type.hpp) には、テンプレートの事前宣言のための MSVC 固有の回避策が長い間存在していました。 Visual Studio 2017 バージョン 15.8 以降の [/permissive-](build/reference/permissive-standards-conformance.md) モード (_MSC_VER=1915) では、MSVC コンパイラは、他のコンパイラとの一貫性を保ち、引数依存の名前検索 (ADL) を正しく実行します。これにより、この回避策のガードが不要になります。 このエラー "*C3861: 'unwind_type': 識別子が見つかりませんでした*" を回避するには、Boostorg のリポジトリの [PR 229](https://github.com/boostorg/python/pull/229) を参照して、ヘッダー ファイルを更新します。 [vcpkg](vcpkg.md) Boost パッケージには既に修正プログラムが適用されているため、vcpkg から Boost のソースを取得するかアップグレードする場合は、修正プログラムを個別に適用する必要はありません。
 
 ### <a name="forward-declarations-and-definitions-in-namespace-std"></a>名前空間 std での事前宣言と定義
 

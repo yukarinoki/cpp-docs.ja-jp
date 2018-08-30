@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b38ca29ed166f27459da5192f23accf32969465
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b9a4827900f30dba168f9f5b1b6a93c2aa7e331b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336635"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215736"
 ---
 # <a name="cbrush-class"></a>CBrush クラス
 Windows のグラフィック デバイス インターフェイス (GDI) のブラシをカプセル化します。  
@@ -62,14 +62,14 @@ class CBrush : public CGdiObject
   
 |名前|説明|  
 |----------|-----------------|  
-|[CBrush::CreateBrushIndirect](#createbrushindirect)|スタイル、色、および指定されたパターンでブラシを初期化する[LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)構造体。|  
+|[CBrush::CreateBrushIndirect](#createbrushindirect)|スタイル、色、および指定されたパターンでブラシを初期化する[LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush)構造体。|  
 |[CBrush::CreateDIBPatternBrush](#createdibpatternbrush)|デバイスに依存しないビットマップ (DIB) で指定されたパターンでは、ブラシを初期化します。|  
 |[CBrush::CreateHatchBrush](#createhatchbrush)|指定したハッシュ パターンおよび色のブラシを初期化します。|  
 |[CBrush::CreatePatternBrush](#createpatternbrush)|ビットマップで指定されたパターンでは、ブラシを初期化します。|  
 |[CBrush::CreateSolidBrush](#createsolidbrush)|指定の純色ブラシを初期化します。|  
 |[CBrush::CreateSysColorBrush](#createsyscolorbrush)|既定のシステム カラーであるブラシを作成します。|  
 |[CBrush::FromHandle](#fromhandle)|ポインターを返します、`CBrush`を Windows にハンドルが指定されると`HBRUSH`オブジェクト。|  
-|[CBrush::GetLogBrush](#getlogbrush)|取得、 [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)構造体。|  
+|[CBrush::GetLogBrush](#getlogbrush)|取得、 [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush)構造体。|  
   
 ### <a name="public-operators"></a>パブリック演算子  
   
@@ -91,7 +91,7 @@ class CBrush : public CGdiObject
   
  `CBrush`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="cbrush"></a>  CBrush::CBrush  
@@ -131,7 +131,7 @@ explicit CBrush(CBitmap* pBitmap);
   
  引数なしのコンス トラクターを使用する場合、その結果を初期化する必要があります`CBrush`オブジェクト[CreateSolidBrush](#createsolidbrush)、 [CreateHatchBrush](#createhatchbrush)、 [CreateBrushIndirect](#createbrushindirect)、[とき](#createpatternbrush)、または[構築](#createdibpatternbrush)します。 引数を受け取るコンス トラクターのいずれかを使用する場合、それ以上初期化必要があります。 引数を持つコンス トラクターは、引数なしのコンス トラクターは常に成功しますが、エラーが発生した場合、例外をスローできます。  
   
- 1 つのコンス トラクター [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)パラメーターが指定した色を純色ブラシを作成します。 色は、RGB 値を指定しますおよび RGB マクロを WINDOWS で使用して構築できます。H.  
+ 1 つのコンス トラクター [COLORREF](/windows/desktop/gdi/colorref)パラメーターが指定した色を純色ブラシを作成します。 色は、RGB 値を指定しますおよび RGB マクロを WINDOWS で使用して構築できます。H.  
   
  2 つのパラメーターを持つコンス トラクターは、ハッチ ブラシを構築します。 *NIndex*ハッチ パターンのインデックスを指定します。 *CrColor*パラメーターは、色を指定します。  
   
@@ -141,7 +141,7 @@ explicit CBrush(CBitmap* pBitmap);
  [!code-cpp[NVC_MFCDocView#21](../../mfc/codesnippet/cpp/cbrush-class_1.cpp)]  
   
 ##  <a name="createbrushindirect"></a>  CBrush::CreateBrushIndirect  
- スタイル、色、および指定されたパターンでブラシを初期化する[LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)構造体。  
+ スタイル、色、および指定されたパターンでブラシを初期化する[LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush)構造体。  
   
 ```  
 BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
@@ -149,7 +149,7 @@ BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
   
 ### <a name="parameters"></a>パラメーター  
  *lpLogBrush*  
- 指す、 [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)ブラシに関する情報を含む構造体。  
+ 指す、 [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush)ブラシに関する情報を含む構造体。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -208,11 +208,11 @@ BOOL CreateDIBPatternBrush(
   
  次の Windows 機能の使用方法の詳細については、Windows SDK を参照してください。  
   
-- [構築](http://msdn.microsoft.com/library/windows/desktop/dd183492)(3.0 より前のバージョンの Windows 用に記述されたアプリケーションとの互換性のためだけに用意されているこの関数は、使用して、`CreateDIBPatternBrushPt`関数です)。  
+- [構築](/windows/desktop/api/wingdi/nf-wingdi-createdibpatternbrush)(3.0 より前のバージョンの Windows 用に記述されたアプリケーションとの互換性のためだけに用意されているこの関数は、使用して、`CreateDIBPatternBrushPt`関数です)。  
   
-- [されている](http://msdn.microsoft.com/library/windows/desktop/dd183493)(この関数は Win32 ベースのアプリケーションを使用する必要があります)。  
+- [されている](/windows/desktop/api/wingdi/nf-wingdi-createdibpatternbrushpt)(この関数は Win32 ベースのアプリケーションを使用する必要があります)。  
   
-- [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574)  
+- [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc)  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#23](../../mfc/codesnippet/cpp/cbrush-class_3.cpp)]  
@@ -243,7 +243,7 @@ BOOL CreateHatchBrush(
 - HS_VERTICAL 垂直ハッチ  
   
  *crColor*  
- RGB 色 (の陰影の色) として、ブラシの前景色を指定します。 参照してください[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)詳細については、Windows SDK に含まれています。  
+ RGB 色 (の陰影の色) として、ブラシの前景色を指定します。 参照してください[COLORREF](/windows/desktop/gdi/colorref)詳細については、Windows SDK に含まれています。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -277,7 +277,7 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
   
  モノクロ ビットマップ (1 ピクセルあたり 1 ビット、色が 1 色プレーン) を使用して作成されたブラシは、現在のテキストと背景色を使用して描画されます。 0 に設定されたビットで表されるピクセルは、現在のテキストの色で描画されます。 1 に設定されたビットで表されるピクセルは、現在の背景色で描画されます。  
   
- 使用方法について[とき](http://msdn.microsoft.com/library/windows/desktop/dd183508)、Windows 機能、Windows SDK を参照してください。  
+ 使用方法について[とき](/windows/desktop/api/wingdi/nf-wingdi-createpatternbrush)、Windows 機能、Windows SDK を参照してください。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#25](../../mfc/codesnippet/cpp/cbrush-class_5.cpp)]  
@@ -291,7 +291,7 @@ BOOL CreateSolidBrush(COLORREF crColor);
   
 ### <a name="parameters"></a>パラメーター  
  *crColor*  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)構造、ブラシの色を指定します。 色は、RGB 値を指定しますおよび RGB マクロを WINDOWS で使用して構築できます。H.  
+ A [COLORREF](/windows/desktop/gdi/colorref)構造、ブラシの色を指定します。 色は、RGB 値を指定しますおよび RGB マクロを WINDOWS で使用して構築できます。H.  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -313,7 +313,7 @@ BOOL CreateSysColorBrush(int nIndex);
   
 ### <a name="parameters"></a>パラメーター  
  *nIndex*  
- 色のインデックスを指定します。 この値は、ウィンドウ要素のいずれかの描画に使用する色に対応します。 参照してください[GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)値の一覧については、Windows SDK に含まれています。  
+ 色のインデックスを指定します。 この値は、ウィンドウ要素のいずれかの描画に使用する色に対応します。 参照してください[GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)値の一覧については、Windows SDK に含まれています。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -343,7 +343,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ### <a name="remarks"></a>Remarks  
  場合、`CBrush`ハンドル、一時的にオブジェクトが既にアタッチされていない`CBrush`オブジェクトを作成し、接続されています。 この一時`CBrush`オブジェクトが次回アプリケーションがあるイベント ループでのアイドル時間までに限り有効です。 この時点では、すべての一時的なグラフィック オブジェクトが削除されます。 つまり、一時オブジェクトは 1 つのウィンドウ メッセージを処理中にのみ有効です。  
   
- グラフィック オブジェクトの使用に関する詳細については、次を参照してください。[グラフィック オブジェクト](http://msdn.microsoft.com/library/windows/desktop/dd144962)Windows SDK に含まれています。  
+ グラフィック オブジェクトの使用に関する詳細については、次を参照してください。[グラフィック オブジェクト](/windows/desktop/gdi/graphic-objects)Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
   例をご覧ください[CBrush::CBrush](#cbrush)します。  
@@ -357,7 +357,7 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
   
 ### <a name="parameters"></a>パラメーター  
  *終了*  
- 指す、 [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)ブラシに関する情報を含む構造体。  
+ 指す、 [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush)ブラシに関する情報を含む構造体。  
   
 ### <a name="return-value"></a>戻り値  
  関数が成功した場合と*終了*有効なポインターが、戻り値は、バッファーに格納されているバイト数。  
@@ -387,7 +387,7 @@ operator HBRUSH() const;
 ### <a name="remarks"></a>Remarks  
  この演算子は、キャスト演算子です。  
   
- グラフィック オブジェクトの使用に関する詳細については、次を参照してください。[グラフィック オブジェクト](http://msdn.microsoft.com/library/windows/desktop/dd144962)Windows SDK に含まれています。  
+ グラフィック オブジェクトの使用に関する詳細については、次を参照してください。[グラフィック オブジェクト](/windows/desktop/gdi/graphic-objects)Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#28](../../mfc/codesnippet/cpp/cbrush-class_8.cpp)]  

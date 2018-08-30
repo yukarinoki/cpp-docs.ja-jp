@@ -1,5 +1,5 @@
 ---
-title: ATL 接続ポイント |Microsoft ドキュメント
+title: ATL 接続ポイント |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 179f4329d55261d71d3d122e6a2601ce7e805c0f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ec0e902f2b01e33ac460c6210d51c5e0637c3282
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354669"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202921"
 ---
 # <a name="atl-connection-points"></a>ATL コネクション ポイント
 接続可能オブジェクトは、着信インターフェイスをサポートしているオブジェクトです。 着信インターフェイスにより、オブジェクトはクライアントと通信できます。 着信インターフェイスごとに、接続可能なオブジェクトは接続ポイントを公開しています。 各着信インターフェイスは、シンクと呼ばれるオブジェクト上のクライアントによって実装されます。  
   
- ![コネクション ポイント](../atl/media/vc2zw31.gif "vc2zw31")  
+ ![接続ポイント](../atl/media/vc2zw31.gif "vc2zw31")  
   
- 各接続ポイントをサポートしている、 [IConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms694318)インターフェイスです。 接続可能なオブジェクトを使用してクライアントを接続ポイントを公開する、 [IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)インターフェイスです。  
+ 各接続ポイントをサポートしています、 [IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint)インターフェイス。 接続可能オブジェクトを使用してクライアントに接続ポイントを公開する、 [IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)インターフェイス。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ATL コネクション ポイント クラス](../atl/atl-connection-point-classes.md)  

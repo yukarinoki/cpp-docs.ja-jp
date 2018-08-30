@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45b0f46724dd552639c215093f74d8eb14d8afdd
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 17ca93348ab5535908ea8b2d035669f7e61cef55
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42540923"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221357"
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl クラス
 Windows コモン ステータス バー コントロール の機能が用意されています。  
@@ -133,10 +133,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>パラメーター  
  *dwStyle*  
- ステータス バー コントロールのスタイルを指定します。 ステータス バーのコントロールのスタイルで表示されている任意の組み合わせを適用[一般的なコントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb775498)Windows SDK に含まれています。 このパラメーターは、WS_CHILD スタイルを含める必要があります。 WS_VISIBLE スタイルする必要があります。  
+ ステータス バー コントロールのスタイルを指定します。 ステータス バーのコントロールのスタイルで表示されている任意の組み合わせを適用[一般的なコントロールのスタイル](/windows/desktop/Controls/common-control-styles)Windows SDK に含まれています。 このパラメーターは、WS_CHILD スタイルを含める必要があります。 WS_VISIBLE スタイルする必要があります。  
   
  *rect*  
- ステータス バー コントロールのサイズと位置を指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。  
+ ステータス バー コントロールのサイズと位置を指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。  
   
  *pParentWnd*  
  ステータス バー コントロールの親ウィンドウを通常を指定します、`CDialog`します。 NULL は指定できません。  
@@ -171,13 +171,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>パラメーター  
  *dwExStyle*  
- 作成されるコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK に含まれています。  
+ 作成されるコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK に含まれています。  
   
  *dwStyle*  
- ステータス バー コントロールのスタイルを指定します。 ステータス バーのコントロールのスタイルで表示されている任意の組み合わせを適用[一般的なコントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb775498)Windows SDK に含まれています。 このパラメーターは、WS_CHILD スタイルを含める必要があります。 WS_VISIBLE スタイルする必要があります。  
+ ステータス バー コントロールのスタイルを指定します。 ステータス バーのコントロールのスタイルで表示されている任意の組み合わせを適用[一般的なコントロールのスタイル](/windows/desktop/Controls/common-control-styles)Windows SDK に含まれています。 このパラメーターは、WS_CHILD スタイルを含める必要があります。 WS_VISIBLE スタイルする必要があります。  
   
  *rect*  
- 参照を[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。  
+ 参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。  
   
  *pParentWnd*  
  コントロールの親であるウィンドウへのポインター。  
@@ -207,7 +207,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
 ### <a name="parameters"></a>パラメーター  
  *lpDrawItemStruct*  
- Long ポインター、 [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802)のために必要な図面の種類に関する情報を含む構造体。  
+ Long ポインター、 [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)のために必要な図面の種類に関する情報を含む構造体。  
   
 ### <a name="remarks"></a>Remarks  
  `itemAction`のメンバー、`DRAWITEMSTRUCT`構造体を実行する描画の動作を定義します。  
@@ -267,7 +267,7 @@ HICON GetIcon(int iPart) const;
  アイコンへのハンドル場合メソッドが成功しました。それ以外の場合は NULL です。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、送信、 [SB_GETICON](http://msdn.microsoft.com/library/windows/desktop/bb760744)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [SB_GETICON](/windows/desktop/Controls/sb-geticon)メッセージは、Windows SDK で説明します。  
   
  ステータス バー コントロールとも呼ばれる部分には、テキスト出力ペインの行で構成されます。 ステータス バーの詳細については、次を参照してください。 [MFC でのステータス バーの実装](../../mfc/status-bar-implementation-in-mfc.md)と[CStatusBarCtrl オブジェクトのモードの設定](../../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md)します。  
   
@@ -320,7 +320,7 @@ BOOL GetRect(
  外接する四角形が取得される一部の 0 から始まるインデックス。  
   
  *lpRect*  
- アドレスを[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)外接する四角形を受け取る。  
+ アドレスを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)外接する四角形を受け取る。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -411,7 +411,7 @@ CString GetTipText(int nPane) const;
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md)ツールヒントで使用するテキストを含むオブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[SB_GETTIPTEXT](http://msdn.microsoft.com/library/windows/desktop/bb760751)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[SB_GETTIPTEXT](/windows/desktop/Controls/sb-gettiptext)」の説明に従って、Windows SDK。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#7](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_9.cpp)]  
@@ -427,7 +427,7 @@ BOOL IsSimple() const;
  ステータス ウィンドウのコントロールが簡易モードの場合、0 以外の場合それ以外の場合 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[SB_ISSIMPLE](http://msdn.microsoft.com/library/windows/desktop/bb760753)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[SB_ISSIMPLE](/windows/desktop/Controls/sb-issimple)」の説明に従って、Windows SDK。  
   
 ##  <a name="setbkcolor"></a>  CStatusBarCtrl::SetBkColor  
  ステータス バーの背景色を設定します。  
@@ -441,10 +441,10 @@ COLORREF SetBkColor(COLORREF cr);
  新しい背景色を示す COLORREF 値です。 ステータス バーの既定の背景色を使用するときの値を指定します。  
   
 ### <a name="return-value"></a>戻り値  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)前の既定の背景色を表す値です。  
+ A [COLORREF](/windows/desktop/gdi/colorref)前の既定の背景色を表す値です。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[SB_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760754)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[SB_SETBKCOLOR](/windows/desktop/Controls/sb-setbkcolor)」の説明に従って、Windows SDK。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#8](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_10.cpp)]  
@@ -469,7 +469,7 @@ BOOL SetIcon(
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[SB_SETICON](http://msdn.microsoft.com/library/windows/desktop/bb760755)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[SB_SETICON](/windows/desktop/Controls/sb-seticon)」の説明に従って、Windows SDK。  
   
 ### <a name="example"></a>例  
   例をご覧ください[CStatusBarCtrl::SetBkColor](#setbkcolor)します。  
@@ -576,7 +576,7 @@ void SetTipText(
  ツールヒント テキストを含む文字列へのポインター。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[SB_SETTIPTEXT](http://msdn.microsoft.com/library/windows/desktop/bb760759)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[SB_SETTIPTEXT](/windows/desktop/Controls/sb-settiptext)」の説明に従って、Windows SDK。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#12](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_14.cpp)]  

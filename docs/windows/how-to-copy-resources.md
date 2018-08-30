@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9cef186c18622dc361f97bd65e7bd264a6f03cf
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2abd889584ce39627153d6eac59db9240367ba20
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599585"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214392"
 ---
 # <a name="how-to-copy-resources"></a>方法: リソースをコピーする
 
@@ -37,7 +37,7 @@ ms.locfileid: "42599585"
 現在のリソース ファイルを既存のリソースまたは実行可能ファイルからリソースを簡単にコピーできます。 これを行うには、リソースが含まれると同時に両方のファイルを開くと別に 1 つのファイルから項目をドラッグまたはコピーして貼り付ける 2 つのファイル。 このメソッドは、リソース スクリプト (.rc) ファイルとリソース テンプレート (.rct) ファイル、実行可能ファイル (.exe) ファイルに機能します。
 
 > [!NOTE]
-> Visual C には、独自のアプリケーションで使用できるサンプル リソース ファイルが含まれています。 詳細については、次を参照してください。 [CLIPART: 一般的なリソース](http://msdn.microsoft.com/9bac2891-b6b3-49ec-a287-cec850c707e0)します。
+> Visual C には、独自のアプリケーションで使用できるサンプル リソース ファイルが含まれています。 詳細については、次を参照してください。 [CLIPART: 一般的なリソース](https://msdn.microsoft.com/9bac2891-b6b3-49ec-a287-cec850c707e0)します。
 
 開いている .rc ファイル間でドラッグ アンド ドロップを使用する[プロジェクトの外部に](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)します。
 

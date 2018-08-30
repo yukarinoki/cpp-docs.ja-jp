@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7cbfd0e8b9ef95aac083b367980571c5535e6a7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ca91e614438695a14c6c16c05c5d778b143657eb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599043"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219384"
 ---
 # <a name="c-amp-overview"></a>C++ AMP の概要
 C++ Accelerated Massive Parallelism (C++ AMP) は、独立したグラフィックス カードの GPU (graphics processing unit) などのデータ並列ハードウェアを活用して、C++ コードの実行を高速化します。 C++ AMP を使用することによって、並列化と異種ハードウェアを使用して実行を高速化できるように、多次元データ アルゴリズムをコーディングすることができます。 C++ AMP のプログラミング モデルには、多次元配列、インデックス作成、メモリ転送、タイル、数学関数ライブラリが含まれています。 C++ AMP の言語拡張機能を使用して、データを CPU から GPU へ、また GPU から CPU へどのように移動するかを制御でき、パフォーマンスを向上させることができます。  
@@ -464,7 +464,7 @@ C++ AMP には、アクセラレータ機能を使用するグラフィックス
   
 - [writeonly_texture_view クラス](../../parallel/amp/reference/writeonly-texture-view-class.md): すべてのテクスチャへの書き込み専用のアクセスを提供します。  
   
-- [短いベクター ライブラリ](http://msdn.microsoft.com/en-us/4c4f5bed-c396-493b-a238-c347563f645f): 長さが 2、3、および 4 に基づくの short ベクター型のセットを定義**int**、 `uint`、 **float**、**二重**、 [norm](../../parallel/amp/reference/norm-class.md)、または[unorm](../../parallel/amp/reference/unorm-class.md)します。  
+- [短いベクター ライブラリ](https://msdn.microsoft.com/4c4f5bed-c396-493b-a238-c347563f645f): 長さが 2、3、および 4 に基づくの short ベクター型のセットを定義**int**、 `uint`、 **float**、**二重**、 [norm](../../parallel/amp/reference/norm-class.md)、または[unorm](../../parallel/amp/reference/unorm-class.md)します。  
   
 ## <a name="universal-windows-platform-uwp-apps"></a>ユニバーサル Windows プラットフォーム (UWP) アプリ  
  

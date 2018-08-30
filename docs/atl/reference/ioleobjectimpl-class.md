@@ -59,12 +59,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aec4de071df8dcca960a0f1cb802375e5553ceb3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 3646a640cb3873ec32f6284f8d2be99469ef7633
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880305"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220904"
 ---
 # <a name="ioleobjectimpl-class"></a>IOleObjectImpl クラス
 このクラスは実装`IUnknown`とは、コンテナーがコントロールでの通信に使用するプリンシパルのインターフェイスです。  
@@ -131,7 +131,7 @@ class ATL_NO_VTABLE IOleObjectImpl : public IOleObject
 |[IOleObjectImpl::Update](#update)|コントロールを更新します。 ATL の実装では、S_OK を返します。|  
   
 ## <a name="remarks"></a>Remarks  
- [IOleObject](http://msdn.microsoft.com/library/windows/desktop/dd542709)インターフェイスは、コンテナーがコントロールでの通信に使用するプリンシパルのインターフェイスです。 クラス`IOleObjectImpl`このインターフェイスの既定の実装を提供し、実装`IUnknown`ダンプ情報を送信することによってデバッグでのデバイスをビルドします。  
+ [IOleObject](/windows/desktop/api/oleidl/nn-oleidl-ioleobject)インターフェイスは、コンテナーがコントロールでの通信に使用するプリンシパルのインターフェイスです。 クラス`IOleObjectImpl`このインターフェイスの既定の実装を提供し、実装`IUnknown`ダンプ情報を送信することによってデバッグでのデバイスをビルドします。  
   
  **関連資料** [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)、 [ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)  
   
@@ -140,7 +140,7 @@ class ATL_NO_VTABLE IOleObjectImpl : public IOleObject
   
  `IOleObjectImpl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlctl.h  
   
 ##  <a name="advise"></a>  IOleObjectImpl::Advise  
@@ -153,7 +153,7 @@ STDMETHOD(Advise)(
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IOleObject::Advise](http://msdn.microsoft.com/library/windows/desktop/ms686573) Windows SDK にします。  
+ 参照してください[IOleObject::Advise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-advise) Windows SDK にします。  
   
 ##  <a name="close"></a>  IOleObjectImpl::Close  
  アンロードを実行してから、コントロールの状態を変更します。  
@@ -167,7 +167,7 @@ STDMETHOD(Close)(DWORD dwSaveOption);
   
  コントロール クラスのデータ メンバーに、ポインターが保持されている[は](../../atl/reference/ccomcontrolbase-class.md#m_spinplacesite)と[アドバイズ](../../atl/reference/ccomcontrolbase-class.md#m_spadvisesink)がリリースされたら、およびデータ メンバー [CComControlBase:。m_bNegotiatedWnd](../../atl/reference/ccomcontrolbase-class.md#m_bnegotiatedwnd)、 [CComControlBase::m_bWndless](../../atl/reference/ccomcontrolbase-class.md#m_bwndless)、および[CComControlBase::m_bInPlaceSiteEx](../../atl/reference/ccomcontrolbase-class.md#m_binplacesiteex)が FALSE に設定します。  
   
- 参照してください[IOleObject::Close](http://msdn.microsoft.com/library/windows/desktop/ms683922) Windows SDK にします。  
+ 参照してください[IOleObject::Close](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-close) Windows SDK にします。  
   
 ##  <a name="doverb"></a>  IOleObjectImpl::DoVerb  
  列挙されるアクションのいずれかを実行するコントロールに指示します。  
@@ -196,7 +196,7 @@ STDMETHOD(DoVerb)(
 |で|[DoVerbShow](#doverbshow)|  
 |OLEIVERB_UIACTIVATE|[DoVerbUIActivate](#doverbuiactivate)|  
   
- 参照してください[IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) Windows SDK にします。  
+ 参照してください[IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) Windows SDK にします。  
   
 ##  <a name="doverbdiscardundo"></a>  IOleObjectImpl::DoVerbDiscardUndo  
  保持されているすべての元に戻す状態を破棄するコントロールに指示します。  
@@ -250,7 +250,7 @@ HRESULT DoVerbInPlaceActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
  標準の HRESULT 値の 1 つ。  
   
 ### <a name="remarks"></a>Remarks  
- 呼び出す場所でコントロールをアクティブに[CComControlBase::InPlaceActivate](../../atl/reference/ccomcontrolbase-class.md#inplaceactivate)します。 しない限り、コントロール クラスのデータ メンバー`m_bWindowOnly`が true の場合、`DoVerbInPlaceActivate`ウィンドウなしのコントロールとしてコントロールをアクティブ化をまず試みます (可能なコンテナーがサポートしている場合にのみ[IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300))。 関数が拡張機能を持つコントロールをアクティブ化しようとした、失敗した場合は (コンテナーがサポートしている場合にのみ可能な限り[この](http://msdn.microsoft.com/library/windows/desktop/ms693461))。 関数が拡張機能がないコントロールをアクティブ化しようとした、失敗した場合は (コンテナーがサポートしている場合にのみ可能な限り[ビュー](http://msdn.microsoft.com/library/windows/desktop/ms686586))。 アクティブ化に成功した場合、関数は、コントロールがアクティブ化されて、コンテナーを通知します。  
+ 呼び出す場所でコントロールをアクティブに[CComControlBase::InPlaceActivate](../../atl/reference/ccomcontrolbase-class.md#inplaceactivate)します。 しない限り、コントロール クラスのデータ メンバー`m_bWindowOnly`が true の場合、`DoVerbInPlaceActivate`ウィンドウなしのコントロールとしてコントロールをアクティブ化をまず試みます (可能なコンテナーがサポートしている場合にのみ[IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless))。 関数が拡張機能を持つコントロールをアクティブ化しようとした、失敗した場合は (コンテナーがサポートしている場合にのみ可能な限り[この](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex))。 関数が拡張機能がないコントロールをアクティブ化しようとした、失敗した場合は (コンテナーがサポートしている場合にのみ可能な限り[ビュー](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite))。 アクティブ化に成功した場合、関数は、コントロールがアクティブ化されて、コンテナーを通知します。  
   
 ##  <a name="doverbopen"></a>  IOleObjectImpl::DoVerbOpen  
  別のウィンドウで開いて編集をするコントロールがされます。  
@@ -331,7 +331,7 @@ STDMETHOD(EnumAdvise)(IEnumSTATDATA** ppenumAdvise);
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IOleObject::EnumAdvise](http://msdn.microsoft.com/library/windows/desktop/ms682355) Windows SDK にします。  
+ 参照してください[IOleObject::EnumAdvise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-enumadvise) Windows SDK にします。  
   
 ##  <a name="enumverbs"></a>  IOleObjectImpl::EnumVerbs  
  このコントロールの登録済みのアクション (動詞) の列挙子を呼び出すことによって提供`OleRegEnumVerbs`します。  
@@ -343,7 +343,7 @@ STDMETHOD(EnumVerbs)(IEnumOLEVERB** ppEnumOleVerb);
 ### <a name="remarks"></a>Remarks  
  動詞は、プロジェクトの .rgs ファイルに追加できます。 たとえば、サンプルを参照してください。RGS の[円](../../visual-cpp-samples.md)サンプル。  
   
- 参照してください[:enumverbs](http://msdn.microsoft.com/library/windows/desktop/ms692781) Windows SDK にします。  
+ 参照してください[:enumverbs](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-enumverbs) Windows SDK にします。  
   
 ##  <a name="getclientsite"></a>  IOleObjectImpl::GetClientSite  
  コントロール クラスのデータ メンバーにカーソルを置きます[CComControlBase::m_spClientSite](../../atl/reference/ccomcontrolbase-class.md#m_spclientsite)に*ppClientSite*し、ポインター、参照カウントをインクリメントします。  
@@ -353,7 +353,7 @@ STDMETHOD(GetClientSite)(IOleClientSite** ppClientSite);
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IOleObject::GetClientSite](http://msdn.microsoft.com/library/windows/desktop/ms692603) Windows SDK にします。  
+ 参照してください[IOleObject::GetClientSite](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getclientsite) Windows SDK にします。  
   
 ##  <a name="getclipboarddata"></a>  IOleObjectImpl::GetClipboardData  
  クリップボードからデータを取得します。  
@@ -368,7 +368,7 @@ STDMETHOD(GetClipboardData)(
  E_NOTIMPL を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IOleObject::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/ms682288) Windows SDK にします。  
+ 参照してください[IOleObject::GetClipboardData](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getclipboarddata) Windows SDK にします。  
   
 ##  <a name="getextent"></a>  IOleObjectImpl::GetExtent  
  HIMETRIC 単位 (0.01 ミリメートル単位) の実行中のコントロールの表示サイズを取得します。  
@@ -382,7 +382,7 @@ STDMETHOD(GetExtent)(
 ### <a name="remarks"></a>Remarks  
  コントロール クラスのデータ メンバーに、サイズが格納されている[この](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent)します。  
   
- 参照してください[IOleObject::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms692325) Windows SDK にします。  
+ 参照してください[IOleObject::GetExtent](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getextent) Windows SDK にします。  
   
 ##  <a name="getmiscstatus"></a>  IOleObjectImpl::GetMiscStatus  
  呼び出すことによって、コントロールの登録済みの状態情報へのポインターを返します`OleRegGetMiscStatus`します。  
@@ -396,7 +396,7 @@ STDMETHOD(GetMiscStatus)(
 ### <a name="remarks"></a>Remarks  
  状態情報には、コントロールおよびプレゼンテーションのデータでサポートされている動作が含まれています。 プロジェクトの .rgs ファイルには、状態情報を追加できます。  
   
- 参照してください[IOleObject::GetMiscStatus](http://msdn.microsoft.com/library/windows/desktop/ms678521) Windows SDK にします。  
+ 参照してください[IOleObject::GetMiscStatus](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getmiscstatus) Windows SDK にします。  
   
 ##  <a name="getmoniker"></a>  IOleObjectImpl::GetMoniker  
  コントロールのモニカーを取得します。  
@@ -412,7 +412,7 @@ STDMETHOD(GetMoniker)(
  E_NOTIMPL を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IOleObject::GetMoniker](http://msdn.microsoft.com/library/windows/desktop/ms686576) Windows SDK にします。  
+ 参照してください[IOleObject::GetMoniker](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getmoniker) Windows SDK にします。  
   
 ##  <a name="getuserclassid"></a>  IOleObjectImpl::GetUserClassID  
  コントロールのクラス識別子を返します。  
@@ -422,7 +422,7 @@ STDMETHOD(GetUserClassID)(CLSID* pClsid);
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IOleObject::GetUserClassID](http://msdn.microsoft.com/library/windows/desktop/ms682313) Windows SDK にします。  
+ 参照してください[IOleObject::GetUserClassID](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getuserclassid) Windows SDK にします。  
   
 ##  <a name="getusertype"></a>  IOleObjectImpl::GetUserType  
  呼び出すことによって、コントロールのユーザーの種類の名前を返します`OleRegGetUserType`します。  
@@ -436,7 +436,7 @@ STDMETHOD(GetUserType)(
 ### <a name="remarks"></a>Remarks  
  ユーザーの種類名は、メニューおよびダイアログ ボックスなどのユーザー インターフェイス要素での表示に使用されます。 プロジェクトの .rgs ファイル内のユーザー型名を変更することができます。  
   
- 参照してください[IOleObject::GetUserType](http://msdn.microsoft.com/library/windows/desktop/ms688643) Windows SDK にします。  
+ 参照してください[IOleObject::GetUserType](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getusertype) Windows SDK にします。  
   
 ##  <a name="initfromdata"></a>  IOleObjectImpl::InitFromData  
  選択したデータからコントロールを初期化します。  
@@ -452,7 +452,7 @@ STDMETHOD(InitFromData)(
  E_NOTIMPL を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IOleObject::InitFromData](http://msdn.microsoft.com/library/windows/desktop/ms688510) Windows SDK にします。  
+ 参照してください[IOleObject::InitFromData](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-initfromdata) Windows SDK にします。  
   
 ##  <a name="isuptodate"></a>  IOleObjectImpl::IsUpToDate  
  コントロールの最新の状態を確認します。  
@@ -465,7 +465,7 @@ STDMETHOD(IsUpToDate)(void);
  S_OK を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[:isuptodate](http://msdn.microsoft.com/library/windows/desktop/ms686624) Windows SDK にします。  
+ 参照してください[:isuptodate](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-isuptodate) Windows SDK にします。  
   
 ##  <a name="onpostverbdiscardundo"></a>  IOleObjectImpl::OnPostVerbDiscardUndo  
  によって呼び出される[アンドゥ](#doverbdiscardundo)後、元に戻す状態は破棄されます。  
@@ -633,7 +633,7 @@ STDMETHOD(SetClientSite)(IOleClientSite* pClientSite);
 ### <a name="remarks"></a>Remarks  
  メソッドは、S_OK を返します。  
   
- 参照してください[IOleObject::SetClientSite](http://msdn.microsoft.com/library/windows/desktop/ms684013) Windows SDK にします。  
+ 参照してください[IOleObject::SetClientSite](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setclientsite) Windows SDK にします。  
   
 ##  <a name="setcolorscheme"></a>  IOleObjectImpl::SetColorScheme  
  存在する場合は、配色をコントロールのアプリケーションをお勧めします。  
@@ -646,7 +646,7 @@ STDMETHOD(SetColorScheme)(LOGPALETTE* /* pLogPal */);
  E_NOTIMPL を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IOleObject::SetColorScheme](http://msdn.microsoft.com/library/windows/desktop/ms683971) Windows SDK にします。  
+ 参照してください[IOleObject::SetColorScheme](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setcolorscheme) Windows SDK にします。  
   
 ##  <a name="setextent"></a>  IOleObjectImpl::SetExtent  
  コントロールの表示領域の範囲を設定します。  
@@ -664,7 +664,7 @@ STDMETHOD(SetExtent)(
   
  場合は、コントロールがデータ メンバーをクラス[CComControlBase::m_bRecomposeOnResize](../../atl/reference/ccomcontrolbase-class.md#m_brecomposeonresize)が true の場合、`SetExtent`呼び出し`SendOnDataChange`と`SendOnViewChange`アドバイズ ホルダー コントロールのサイズに登録されているすべてのアドバイズ シンクに通知するには変更されました。  
   
- 参照してください[IOleObject::SetExtent](http://msdn.microsoft.com/library/windows/desktop/ms694330) Windows SDK にします。  
+ 参照してください[IOleObject::SetExtent](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setextent) Windows SDK にします。  
   
 ##  <a name="sethostnames"></a>  IOleObjectImpl::SetHostNames  
  アプリケーションのコンテナーおよびコンテナー ドキュメントの名前をコントロールに指示します。  
@@ -677,7 +677,7 @@ STDMETHOD(SetHostNames)(LPCOLESTR /* szContainerApp */, LPCOLESTR /* szContainer
  S_OK を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IOleObject::SetHostNames](http://msdn.microsoft.com/library/windows/desktop/ms680642) Windows SDK にします。  
+ 参照してください[IOleObject::SetHostNames](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-sethostnames) Windows SDK にします。  
   
 ##  <a name="setmoniker"></a>  IOleObjectImpl::SetMoniker  
  そのモニカーは、コントロールに指示します。  
@@ -692,7 +692,7 @@ STDMETHOD(SetMoniker)(
  E_NOTIMPL を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IOleObject::SetMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679671) Windows SDK にします。  
+ 参照してください[IOleObject::SetMoniker](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setmoniker) Windows SDK にします。  
   
 ##  <a name="unadvise"></a>  IOleObjectImpl::Unadvise  
  コントロールのクラスに格納されている、アドバイザリ コネクションを削除します。`m_spOleAdviseHolder`データ メンバー。  
@@ -702,7 +702,7 @@ STDMETHOD(Unadvise)(DWORD dwConnection);
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IOleObject::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms693749) Windows SDK にします。  
+ 参照してください[IOleObject::Unadvise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-unadvise) Windows SDK にします。  
   
 ##  <a name="update"></a>  IOleObjectImpl::Update  
  コントロールを更新します。  
@@ -715,9 +715,9 @@ STDMETHOD(Update)(void);
  S_OK を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IOleObject::Update](http://msdn.microsoft.com/library/windows/desktop/ms679699) Windows SDK にします。  
+ 参照してください[IOleObject::Update](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-update) Windows SDK にします。  
   
 ## <a name="see-also"></a>関連項目  
  [CComControl クラス](../../atl/reference/ccomcontrol-class.md)   
- [ActiveX コントロールのインターフェイス](http://msdn.microsoft.com/library/windows/desktop/ms692724)   
+ [ActiveX コントロールのインターフェイス](/windows/desktop/com/activex-controls-interfaces)   
  [クラスの概要](../../atl/atl-class-overview.md)

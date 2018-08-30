@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77b0c115dbd820ea715b739dd3e4d6eb2c5f4950
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 0a2652730c981313ee3e168aca4a36a91fadde47
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883451"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198456"
 ---
 # <a name="ccomcontrol-class"></a>CComControl クラス
 このクラスは、作成および ATL のコントロールを管理するためのメソッドを提供します。  
@@ -89,7 +89,7 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
   
  `CComControl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlctl.h  
   
 ##  <a name="ccomcontrol"></a>  CComControl::CComControl  
@@ -157,7 +157,7 @@ HRESULT FireOnChanged(DISPID dispID);
  標準の HRESULT 値の 1 つ。  
   
 ### <a name="remarks"></a>Remarks  
- 場合は、コントロール クラスから派生[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)、このメソッドを呼び出す[CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged)すべてに通知するには接続`IPropertyNotifySink`インターフェイスを指定したコントロールプロパティが変更されました。 コントロール クラスがから派生していない場合`IPropertyNotifySink`、このメソッドは、S_OK を返します。 
+ 場合は、コントロール クラスから派生[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)、このメソッドを呼び出す[CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged)すべてに通知するには接続`IPropertyNotifySink`インターフェイスを指定したコントロールプロパティが変更されました。 コントロール クラスがから派生していない場合`IPropertyNotifySink`、このメソッドは、S_OK を返します。 
   
  このメソッドは、安全に呼び出す場合でも、コントロールは、接続ポイントをサポートしません。  
   
@@ -179,7 +179,7 @@ HRESULT FireOnRequestEdit(DISPID dispID);
  標準の HRESULT 値の 1 つ。  
   
 ### <a name="remarks"></a>Remarks  
- 場合は、コントロール クラスから派生[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)、このメソッドを呼び出す[CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit)すべてに通知するには接続`IPropertyNotifySink`インターフェイスを指定されました。コントロールのプロパティがこれから変更します。 コントロール クラスがから派生していない場合`IPropertyNotifySink`、このメソッドは、S_OK を返します。  
+ 場合は、コントロール クラスから派生[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)、このメソッドを呼び出す[CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit)すべてに通知するには接続`IPropertyNotifySink`インターフェイスを指定されました。コントロールのプロパティがこれから変更します。 コントロール クラスがから派生していない場合`IPropertyNotifySink`、このメソッドは、S_OK を返します。  
 
   
  このメソッドは、安全に呼び出す場合でも、コントロールは、接続ポイントをサポートしません。  
@@ -205,10 +205,10 @@ int MessageBox(
  ダイアログ ボックスのタイトル。 場合は NULL (既定)、「エラー」が使用されるタイトル。  
   
  *%n タイプ*  
- 内容と、ダイアログ ボックスの動作を指定します。 参照してください、[メッセージ ボックス](http://msdn.microsoft.com/library/windows/desktop/ms645505)使用可能なさまざまなメッセージ ボックスの一覧については、Windows SDK ドキュメント内のエントリ。 既定では、単純な**OK**ボタンをクリックします。  
+ 内容と、ダイアログ ボックスの動作を指定します。 参照してください、[メッセージ ボックス](/windows/desktop/api/winuser/nf-winuser-messagebox)使用可能なさまざまなメッセージ ボックスの一覧については、Windows SDK ドキュメント内のエントリ。 既定では、単純な**OK**ボタンをクリックします。  
   
 ### <a name="return-value"></a>戻り値  
- 下に表示 メニュー項目の値のいずれかを示す整数値を返します[メッセージ ボックス](http://msdn.microsoft.com/library/windows/desktop/ms645505)Windows SDK のドキュメント。  
+ 下に表示 メニュー項目の値のいずれかを示す整数値を返します[メッセージ ボックス](/windows/desktop/api/winuser/nf-winuser-messagebox)Windows SDK のドキュメント。  
   
 ### <a name="remarks"></a>Remarks  
  `MessageBox` 開発時とユーザーにエラーまたは警告メッセージを表示する簡単な方法としては役立ちます。  

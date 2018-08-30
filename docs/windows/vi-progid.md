@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5848581b26812f322782a73d8964deee1feefb9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7c8924f7b22ed86adf7721018c4df3094a2069c1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606975"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200696"
 ---
 # <a name="viprogid"></a>vi_progid
 
@@ -75,4 +75,4 @@ ATL プロジェクトでは、場合、[コクラス](../windows/coclass.md)属
 [IDL 属性](../windows/idl-attributes.md)  
 [Typedef、Enum、Union、および Struct 型の属性](../windows/typedef-enum-union-and-struct-attributes.md)  
 [クラス属性](../windows/class-attributes.md)  
-[ProgID キー](http://msdn.microsoft.com/library/windows/desktop/dd542719)  
+[ProgID キー](/windows/desktop/com/-progid--key)  

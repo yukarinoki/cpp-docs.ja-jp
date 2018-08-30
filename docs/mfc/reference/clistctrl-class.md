@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d668d99c8fa2b9001b0693a5e38e8e6941d087b6
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 5d798f78addcc457303b42d80f79f77aef67305a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337630"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199781"
 ---
 # <a name="clistctrl-class"></a>CListCtrl クラス
 "リスト ビュー コントロール" の機能をカプセル化します。このコントロールには項目のコレクションを表示され、各項目はイメージ リストのアイコンとラベルで構成されます。  
@@ -521,7 +521,7 @@ class CListCtrl : public CWnd
   
  `CListCtrl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxcmn.h  
   
 ##  <a name="approximateviewrect"></a>  CListCtrl::ApproximateViewRect  
@@ -545,7 +545,7 @@ CSize ApproximateViewRect(
  A`CSize`おおよその幅と高さ (ピクセル単位)、項目を表示するために必要なを含むオブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 マクロの動作を実装[ListView_ApproximateViewRect](http://msdn.microsoft.com/library/windows/desktop/bb761231)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 マクロの動作を実装[ListView_ApproximateViewRect](/windows/desktop/api/commctrl/nf-commctrl-listview_approximateviewrect)」の説明に従って、Windows SDK。  
   
 ##  <a name="arrange"></a>  CListCtrl::Arrange  
  アイコンのビュー内の項目の位置を変更して、グリッド上に配置します。  
@@ -589,7 +589,7 @@ void CancelEditLabel();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [LVM_CANCELEDITLABEL](http://msdn.microsoft.com/library/windows/desktop/bb774886)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [LVM_CANCELEDITLABEL](/windows/desktop/Controls/lvm-canceleditlabel)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="clistctrl"></a>  CListCtrl::CListCtrl  
  `CListCtrl` オブジェクトを構築します。  
@@ -611,10 +611,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>パラメーター  
  *dwStyle*  
- リスト コントロールのスタイルを指定します。 リスト コントロール スタイルの任意の組み合わせをコントロールに適用されます。 参照してください[リスト ビュー ウィンドウ スタイル](http://msdn.microsoft.com/library/windows/desktop/bb774739)これらのスタイルの完全な一覧については、Windows SDK に含まれています。 拡張を使用してコントロールに固有のスタイル セット[SetExtendedStyle](#setextendedstyle)します。  
+ リスト コントロールのスタイルを指定します。 リスト コントロール スタイルの任意の組み合わせをコントロールに適用されます。 参照してください[リスト ビュー ウィンドウ スタイル](/windows/desktop/Controls/list-view-window-styles)これらのスタイルの完全な一覧については、Windows SDK に含まれています。 拡張を使用してコントロールに固有のスタイル セット[SetExtendedStyle](#setextendedstyle)します。  
   
  *rect*  
- リスト コントロールのサイズと位置を指定します。 いずれかのことができます、`CRect`オブジェクトまたは[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。  
+ リスト コントロールのサイズと位置を指定します。 いずれかのことができます、`CRect`オブジェクトまたは[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。  
   
  *pParentWnd*  
  リスト コントロールの親ウィンドウを通常を指定します、`CDialog`します。 NULL は指定できません。  
@@ -653,13 +653,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>パラメーター  
  *dwExStyle*  
- 作成されるコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK に含まれています。  
+ 作成されるコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK に含まれています。  
   
  *dwStyle*  
- リスト コントロールのスタイルを指定します。 リスト コントロール スタイルの任意の組み合わせをコントロールに適用されます。 これらのスタイルの完全な一覧を参照してください。[リスト ビュー ウィンドウ スタイル](http://msdn.microsoft.com/library/windows/desktop/bb774739)Windows SDK に含まれています。  
+ リスト コントロールのスタイルを指定します。 リスト コントロール スタイルの任意の組み合わせをコントロールに適用されます。 これらのスタイルの完全な一覧を参照してください。[リスト ビュー ウィンドウ スタイル](/windows/desktop/Controls/list-view-window-styles)Windows SDK に含まれています。  
   
  *rect*  
- 参照を[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。  
+ 参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。  
   
  *pParentWnd*  
  コントロールの親であるウィンドウへのポインター。  
@@ -673,7 +673,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Remarks  
  使用`CreateEx`の代わりに[作成](#create)、Windows の拡張スタイルの先頭で指定された、Windows の拡張スタイルを適用する**WS_EX**します。  
   
- `CreateEx` 指定された拡張の Windows スタイルでコントロールを作成します。 *dwExStyle*します。 コントロール固有の拡張スタイルを設定するには、呼び出す[SetExtendedStyle](#setextendedstyle)します。 たとえば、使用して`CreateEx`WS_EX_CONTEXTHELP、としてこのようなスタイルの設定が使用する`SetExtendedStyle`LVS_EX_FULLROWSELECT としてこのようなスタイルを設定します。 詳細については、トピックで説明されているスタイルを参照してください。[リスト ビューのスタイルを拡張](http://msdn.microsoft.com/library/windows/desktop/bb774732)Windows SDK に含まれています。  
+ `CreateEx` 指定された拡張の Windows スタイルでコントロールを作成します。 *dwExStyle*します。 コントロール固有の拡張スタイルを設定するには、呼び出す[SetExtendedStyle](#setextendedstyle)します。 たとえば、使用して`CreateEx`WS_EX_CONTEXTHELP、としてこのようなスタイルの設定が使用する`SetExtendedStyle`LVS_EX_FULLROWSELECT としてこのようなスタイルを設定します。 詳細については、トピックで説明されているスタイルを参照してください。[リスト ビューのスタイルを拡張](/windows/desktop/Controls/extended-list-view-styles)Windows SDK に含まれています。  
   
 ##  <a name="createdragimage"></a>  CListCtrl::CreateDragImage  
  指定された項目のドラッグ イメージ リストを作成します。 *nItem*します。  
@@ -689,7 +689,7 @@ CImageList* CreateDragImage(
  イメージ リストを持つドラッグが作成される項目のインデックス。  
   
  *lpPoint*  
- アドレスを[ポイント](http://msdn.microsoft.com/library/windows/desktop/dd162805)ビューで、イメージの左上隅の初期の場所を受信する構造体を調整します。  
+ アドレスを[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)ビューで、イメージの左上隅の初期の場所を受信する構造体を調整します。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は、ドラッグ イメージのリストへのポインターそれ以外の場合は NULL です。  
@@ -791,7 +791,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
  Long ポインター、`DRAWITEMSTRUCT`のために必要な図面の種類に関する情報を含む構造体。  
   
 ### <a name="remarks"></a>Remarks  
- `itemAction`のメンバー、 [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802)構造体を実行する描画の動作を定義します。  
+ `itemAction`のメンバー、 [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)構造体を実行する描画の動作を定義します。  
   
  既定では、このメンバー関数は何もしません。 オーナー描画の描画を実装するには、このメンバー関数をオーバーライド`CListCtrl`オブジェクト。  
   
@@ -849,7 +849,7 @@ LRESULT EnableGroupView(BOOL fEnable);
 - **-1**操作に失敗しました。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [LVM_ENABLEGROUPVIEW](http://msdn.microsoft.com/library/windows/desktop/bb774900)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [LVM_ENABLEGROUPVIEW](/windows/desktop/Controls/lvm-enablegroupview)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="ensurevisible"></a>  CListCtrl::EnsureVisible  
  により、リスト ビュー アイテムが部分的に表示される少なくとも。  
@@ -893,7 +893,7 @@ int FindItem(
   
 ### <a name="parameters"></a>パラメーター  
  *pFindInfo*  
- ポインター、[保持](http://msdn.microsoft.com/library/windows/desktop/bb774745)を検索する項目に関する情報を含む構造体。  
+ ポインター、[保持](/windows/desktop/api/commctrl/ns-commctrl-taglvfindinfoa)を検索する項目に関する情報を含む構造体。  
   
  *n 開始*  
  使用すると、検索を開始するアイテムを最初から開始する場合は-1 のインデックス。 位置にある項目*n 開始*場合は、検索から除外*n 開始*-1 と等しくないです。  
@@ -949,7 +949,7 @@ BOOL GetBkImage(LVBKIMAGE* plvbkImage) const;
  成功した場合、0 以外を返します。 またはそれ以外の場合 0 の場合は。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、Win32 マクロの動作を実装[ListView_GetBkImage](http://msdn.microsoft.com/library/windows/desktop/bb761246)」の説明に従って、Windows SDK。  
+ このメソッドは、Win32 マクロの動作を実装[ListView_GetBkImage](/windows/desktop/api/commctrl/nf-commctrl-listview_getbkimage)」の説明に従って、Windows SDK。  
   
 ### <a name="example"></a>例  
 
@@ -998,7 +998,7 @@ BOOL GetCheck(int nItem) const;
  0 以外の場合、項目が選択されている場合は 0 それ以外の場合。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 マクロの動作を実装[ListView_GetCheckState](http://msdn.microsoft.com/library/windows/desktop/bb761250)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 マクロの動作を実装[ListView_GetCheckState](/windows/desktop/api/commctrl/nf-commctrl-listview_getcheckstate)」の説明に従って、Windows SDK。  
   
 ### <a name="example"></a>例  
   例をご覧ください[CListCtrl::SetCheck](#setcheck)します。  
@@ -1017,7 +1017,7 @@ BOOL GetColumn(
  属性を取得する列のインデックス。  
   
  *pColumn*  
- アドレス、 [LVCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743)構造体を取得する情報を指定し、列に関する情報を受信します。 `mask`メンバーは、どの列を取得する属性を指定します。 場合、`mask`メンバー LVCF_TEXT 値を指定する、`pszText`メンバーは、項目のテキストを受け取るバッファーのアドレスを含める必要があります、`cchTextMax`メンバーは、バッファーのサイズを指定する必要があります。  
+ アドレス、 [LVCOLUMN](/windows/desktop/api/commctrl/ns-commctrl-taglvcolumna)構造体を取得する情報を指定し、列に関する情報を受信します。 `mask`メンバーは、どの列を取得する属性を指定します。 場合、`mask`メンバー LVCF_TEXT 値を指定する、`pszText`メンバーは、項目のテキストを受け取るバッファーのアドレスを含める必要があります、`cchTextMax`メンバーは、バッファーのサイズを指定する必要があります。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -1061,7 +1061,7 @@ BOOL GetColumnOrderArray(
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 マクロの動作を実装[ListView_GetColumnOrderArray](http://msdn.microsoft.com/library/windows/desktop/bb761254)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 マクロの動作を実装[ListView_GetColumnOrderArray](/windows/desktop/api/commctrl/nf-commctrl-listview_getcolumnorderarray)」の説明に従って、Windows SDK。  
   
 ### <a name="example"></a>例  
 
@@ -1165,7 +1165,7 @@ CString GetEmptyText() const;
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md)コントロールが空の場合に表示するテキストを格納しています。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、送信、 [LVM_GETEMPTYTEXT](http://msdn.microsoft.com/library/windows/desktop/bb774921)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [LVM_GETEMPTYTEXT](/windows/desktop/Controls/lvm-getemptytext)メッセージは、Windows SDK で説明します。  
   
 ##  <a name="getextendedstyle"></a>  CListCtrl::GetExtendedStyle  
  リスト ビュー コントロールの現在の拡張スタイルを取得します。  
@@ -1175,10 +1175,10 @@ DWORD GetExtendedStyle();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 一覧で使用されている拡張スタイルの組み合わせでは、コントロールを表示します。 これらの拡張スタイルの説明については、次を参照してください。、[拡張リスト ビューのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb774732)Windows SDK のトピックです。  
+ 一覧で使用されている拡張スタイルの組み合わせでは、コントロールを表示します。 これらの拡張スタイルの説明については、次を参照してください。、[拡張リスト ビューのスタイル](/windows/desktop/Controls/extended-list-view-styles)Windows SDK のトピックです。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 マクロの動作を実装[ListView_GetExtendedListViewStyle](http://msdn.microsoft.com/library/windows/desktop/bb761264)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 マクロの動作を実装[ListView_GetExtendedListViewStyle](/windows/desktop/api/commctrl/nf-commctrl-listview_getextendedlistviewstyle)」の説明に従って、Windows SDK。  
   
 ### <a name="example"></a>例  
   例をご覧ください[かざして](#setextendedstyle)します。  
@@ -1226,7 +1226,7 @@ int GetFocusedGroup() const;
  このようなグループがある場合、状態が LVGS_FOCUSED、グループのインデックスそれ以外の場合、-1 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、送信、 [LVM_GETFOCUSEDGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774925)メッセージは、Windows SDK で説明します。 詳細については、の LVGS_FOCUSED 値を参照してください、`state`のメンバー、 [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)構造体。  
+ このメソッドは、送信、 [LVM_GETFOCUSEDGROUP](/windows/desktop/Controls/lvm-getfocusedgroup)メッセージは、Windows SDK で説明します。 詳細については、の LVGS_FOCUSED 値を参照してください、`state`のメンバー、 [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup)構造体。  
   
 ##  <a name="getgroupcount"></a>  CListCtrl::GetGroupCount  
  現在のリスト ビュー コントロール内のグループの数を取得します。  
@@ -1239,7 +1239,7 @@ int GetGroupCount()const;
  リスト ビュー コントロール内のグループの数。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、送信、 [LVM_GETGROUPCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb774931)メッセージは、Windows SDK で説明-->。  
+ このメソッドは、送信、 [LVM_GETGROUPCOUNT](/windows/desktop/Controls/lvm-getgroupcount)メッセージは、Windows SDK で説明-->。  
   
 ##  <a name="getgroupinfo"></a>  CListCtrl::GetGroupInfo  
  リスト ビュー コントロールの指定したグループの情報を取得します。  
@@ -1255,13 +1255,13 @@ int GetGroupInfo(
  情報を取得するグループの識別子です。  
   
  *pgrp*  
- ポインター、 [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)指定されたグループに関する情報を保持します。  
+ ポインター、 [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup)指定されたグループに関する情報を保持します。  
   
 ### <a name="return-value"></a>戻り値  
  それ以外の場合、グループの成功した場合、または-1 の ID を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [LVM_GETGROUPINFO](http://msdn.microsoft.com/library/windows/desktop/bb774932)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [LVM_GETGROUPINFO](/windows/desktop/Controls/lvm-getgroupinfo)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="getgroupinfobyindex"></a>  CListCtrl::GetGroupInfoByIndex  
  現在のリスト ビュー コントロール内の指定されたグループに関する情報を取得します。  
@@ -1277,13 +1277,13 @@ BOOL GetGroupInfoByIndex(
 |パラメーター|説明|  
 |---------------|-----------------|  
 |[in]*iIndex*|グループの 0 から始まるインデックス。|  
-|[out]*pGroup*|ポインター、 [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)構造体で指定されたグループに関する情報を受け取る、 *iIndex*パラメーター。<br /><br /> メンバーを初期化するため、呼び出し元は、 [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)構造体。 設定、`cbSize`メンバー構造体のサイズおよびのフラグ、`mask`メンバーを取得する情報を指定します。|  
+|[out]*pGroup*|ポインター、 [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup)構造体で指定されたグループに関する情報を受け取る、 *iIndex*パラメーター。<br /><br /> メンバーを初期化するため、呼び出し元は、 [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup)構造体。 設定、`cbSize`メンバー構造体のサイズおよびのフラグ、`mask`メンバーを取得する情報を指定します。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、送信、 [LVM_GETGROUPINFOBYINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774933)メッセージは、Windows SDK で説明-->。  
+ このメソッドは、送信、 [LVM_GETGROUPINFOBYINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774933)メッセージは、Windows SDK で説明-->。  
   
 ### <a name="example"></a>例  
  次のコード例は、変数を定義`m_listCtrl`、つまり現在のリスト ビュー コントロールにアクセスするために使用します。 この変数は次の例で使用されています。  
@@ -1334,10 +1334,10 @@ void GetGroupMetrics(PLVGROUPMETRICS pGroupMetrics) const;
   
 ### <a name="parameters"></a>パラメーター  
  *pGroupMetrics*  
- ポインターを[LVGROUPMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb774752)グループ メトリック情報を格納します。  
+ ポインターを[LVGROUPMETRICS](/windows/desktop/api/commctrl/ns-commctrl-taglvgroupmetrics)グループ メトリック情報を格納します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [LVM_GETGROUPMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb774934)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [LVM_GETGROUPMETRICS](/windows/desktop/Controls/lvm-getgroupmetrics)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="getgrouprect"></a>  CListCtrl::GetGroupRect  
  現在のリスト ビュー コントロール内の指定したグループの外接する四角形を取得します。  
@@ -1354,16 +1354,16 @@ BOOL GetGroupRect(
 |パラメーター|説明|  
 |---------------|-----------------|  
 |[in]*iGroupId*|グループを指定します。|  
-|[入力、出力]*lpRect*|ポインターを[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。 指定されているグループの四角形の座標がその構造体にこのメソッドが成功した場合は、 *iGroupId*します。|  
+|[入力、出力]*lpRect*|ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。 指定されているグループの四角形の座標がその構造体にこのメソッドが成功した場合は、 *iGroupId*します。|  
 |[in]*iCoords*|取得する四角形の座標を指定します。 これらの値のいずれかを使用します。<br /><br /> -LVGGR_GROUP - 展開されたグループ全体の座標を (既定値)。<br />-LVGGR_HEADER - のみヘッダー (折りたたまれたグループ) の座標。<br />-LVGGR_SUBSETLINK - のサブセットのリンク (サブセットのマークアップ) のみを調整します。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
- 呼び出し元を割り当て、 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)によって示される構造体、 *pRect*パラメーター。  
+ 呼び出し元を割り当て、 [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)によって示される構造体、 *pRect*パラメーター。  
   
- このメソッドは、送信、 [LVM_GETGROUPRECT](http://msdn.microsoft.com/library/windows/desktop/bb774935)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [LVM_GETGROUPRECT](/windows/desktop/Controls/lvm-getgrouprect)メッセージは、Windows SDK で説明します。  
   
 ### <a name="example"></a>例  
  次のコード例は、変数を定義`m_listCtrl`、つまり現在のリスト ビュー コントロールにアクセスするために使用します。 この変数は次の例で使用されています。    
@@ -1407,15 +1407,15 @@ UINT GetGroupState(
 |パラメーター|説明|  
 |---------------|-----------------|  
 |[in]*iGroupId*|グループの 0 から始まるインデックス。|  
-|[in]*dwMask*|指定したグループを取得する状態の値を指定するマスク。 詳細については、次を参照してください。、`mask`のメンバー、 [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)構造体。|  
+|[in]*dwMask*|指定したグループを取得する状態の値を指定するマスク。 詳細については、次を参照してください。、`mask`のメンバー、 [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup)構造体。|  
   
 ### <a name="return-value"></a>戻り値  
  指定したグループまたはグループが見つからない場合は 0 の要求された状態。  
   
 ### <a name="remarks"></a>Remarks  
- 戻り値はビットごとの AND 演算の結果、 *dwMask*パラメーターとその値の`state`のメンバー、 [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)現在のリスト ビュー コントロールを表す構造体です。  
+ 戻り値はビットごとの AND 演算の結果、 *dwMask*パラメーターとその値の`state`のメンバー、 [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup)現在のリスト ビュー コントロールを表す構造体です。  
   
- このメソッドは、送信、 [LVM_GETGROUPSTATE](http://msdn.microsoft.com/library/windows/desktop/bb774936)メッセージは、Windows SDK で説明します。 詳細については、次を参照してください。、 [ListView_GetGroupState](http://msdn.microsoft.com/library/windows/desktop/bb761288)マクロ。  
+ このメソッドは、送信、 [LVM_GETGROUPSTATE](/windows/desktop/Controls/lvm-getgroupstate)メッセージは、Windows SDK で説明します。 詳細については、次を参照してください。、 [ListView_GetGroupState](/windows/desktop/api/commctrl/nf-commctrl-listview_getgroupstate)マクロ。  
   
 ##  <a name="getheaderctrl"></a>  CListCtrl::GetHeaderCtrl  
  リスト ビュー コントロールのヘッダー コントロールを取得します。  
@@ -1428,7 +1428,7 @@ CHeaderCtrl* GetHeaderCtrl();
  リスト ビュー コントロールによって使用される、ヘッダー コントロールへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 マクロの動作を実装[ListView_GetHeader](http://msdn.microsoft.com/library/windows/desktop/bb761290)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 マクロの動作を実装[ListView_GetHeader](/windows/desktop/api/commctrl/nf-commctrl-listview_getheader)」の説明に従って、Windows SDK。  
   
 ### <a name="example"></a>例  
   例をご覧ください[CListCtrl::GetColumnOrderArray](#getcolumnorderarray)します。  
@@ -1444,7 +1444,7 @@ HCURSOR GetHotCursor();
  リスト ビュー コントロールで使用されている現在のカーソルのホットなリソースへのハンドル。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 マクロの動作を実装[ListView_GetHotCursor](http://msdn.microsoft.com/library/windows/desktop/bb761292)」の説明に従って、Windows SDK。 ホバー選択が有効な場合にのみ表示されるホット カーソルでは、カーソルがリスト ビュー アイテムを置いたときに表示されます。 ホバー選択は、拡張スタイル LVS_EX_TRACKSELECT の設定で有効です。  
+ このメンバー関数は、Win32 マクロの動作を実装[ListView_GetHotCursor](/windows/desktop/api/commctrl/nf-commctrl-listview_gethotcursor)」の説明に従って、Windows SDK。 ホバー選択が有効な場合にのみ表示されるホット カーソルでは、カーソルがリスト ビュー アイテムを置いたときに表示されます。 ホバー選択は、拡張スタイル LVS_EX_TRACKSELECT の設定で有効です。  
   
 ### <a name="example"></a>例    
   
@@ -1467,7 +1467,7 @@ int GetHotItem();
  リスト ビュー コントロールの現在のホットな項目のインデックス。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 マクロの動作を実装[ListView_GetHotItem](http://msdn.microsoft.com/library/windows/desktop/bb761294)」の説明に従って、Windows SDK。 ホットの項目は、ホット トラッキング (とホバー選択) 場合は、現在選択されている項目が有効になっているように定義されます。  
+ このメンバー関数は、Win32 マクロの動作を実装[ListView_GetHotItem](/windows/desktop/api/commctrl/nf-commctrl-listview_gethotitem)」の説明に従って、Windows SDK。 ホットの項目は、ホット トラッキング (とホバー選択) 場合は、現在選択されている項目が有効になっているように定義されます。  
   
  ホット トラッキングが有効な場合、ユーザーがリスト ビュー アイテムを上に置いたときに、マウス ボタンを使用せず、項目のラベルが自動的に強調表示します。  
   
@@ -1492,7 +1492,7 @@ DWORD GetHoverTime() const;
  選択されている前に、アイテムの上、マウス カーソルをポイントする必要があります (ミリ秒) の遅延を返します。 戻り値が-1 の場合、静止時間が経過は既定のホバー時間です。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 マクロの動作を実装[ListView_GetHoverTime](http://msdn.microsoft.com/library/windows/desktop/bb761296)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 マクロの動作を実装[ListView_GetHoverTime](/windows/desktop/api/commctrl/nf-commctrl-listview_gethovertime)」の説明に従って、Windows SDK。  
   
 ### <a name="example"></a>例    
   
@@ -1542,13 +1542,13 @@ BOOL GetInsertMark(LPLVINSERTMARK lvim) const;
   
 ### <a name="parameters"></a>パラメーター  
  *lvim*  
- ポインター、 [LVINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb774758)挿入マークの情報を含む構造体。  
+ ポインター、 [LVINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-lvinsertmark)挿入マークの情報を含む構造体。  
   
 ### <a name="return-value"></a>戻り値  
  それ以外の場合、成功した場合、TRUE または FALSE を返します。 場合、FALSE が返されますのサイズ、`cbSize`のメンバー、`LVINSERTMARK`構造体は、構造体の実際のサイズと一致しません。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [LVM_GETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb774945)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [LVM_GETINSERTMARK](/windows/desktop/Controls/lvm-getinsertmark)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="getinsertmarkcolor"></a>  CListCtrl::GetInsertMarkColor  
  挿入マークの現在の色を取得します。  
@@ -1558,10 +1558,10 @@ COLORREF GetInsertMarkColor() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 返します、 [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)の挿入ポイントの色を含む構造体。  
+ 返します、 [COLORREF](/windows/desktop/gdi/colorref)の挿入ポイントの色を含む構造体。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [LVM_GETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774947)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [LVM_GETINSERTMARKCOLOR](/windows/desktop/Controls/lvm-getinsertmarkcolor)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="getinsertmarkrect"></a>  CListCtrl::GetInsertMarkRect  
  挿入ポイントの外接する四角形を取得します。  
@@ -1582,7 +1582,7 @@ int GetInsertMarkRect(LPRECT pRect) const;
 - **1**挿入ポイントが見つかりました。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [LVM_GETINSERTMARKRECT](http://msdn.microsoft.com/library/windows/desktop/bb774949)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [LVM_GETINSERTMARKRECT](/windows/desktop/Controls/lvm-getinsertmarkrect)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="getitem"></a>  CListCtrl::GetItem  
  リスト ビュー項目の属性の一部またはすべてを取得します。  
@@ -1593,7 +1593,7 @@ BOOL GetItem(LVITEM* pItem) const;
   
 ### <a name="parameters"></a>パラメーター  
  *pItem*  
- ポインター、 [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)項目の属性を受け取る。  
+ ポインター、 [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)項目の属性を受け取る。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -1629,7 +1629,7 @@ DWORD_PTR GetItemData(int nItem) const;
  指定した項目に関連付けられている 32 ビット アプリケーションに固有の値。  
   
 ### <a name="remarks"></a>Remarks  
- この値は、`lParam`のメンバー、 [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) Windows SDK」の説明に従って、構造体  
+ この値は、`lParam`のメンバー、 [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) Windows SDK」の説明に従って、構造体  
   
 ### <a name="example"></a>例  
 
@@ -1660,16 +1660,16 @@ BOOL GetItemIndexRect(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*pItemIndex*|ポインター、[記述](http://msdn.microsoft.com/library/windows/desktop/bb774762)サブ項目の親項目の構造体。<br /><br /> 呼び出し元がのメンバーを設定したり、[記述](http://msdn.microsoft.com/library/windows/desktop/bb774762)構造体。 このパラメーターは、NULL にすることはできません。|  
+|[in]*pItemIndex*|ポインター、[記述](https://msdn.microsoft.com/library/windows/desktop/bb774762)サブ項目の親項目の構造体。<br /><br /> 呼び出し元がのメンバーを設定したり、[記述](https://msdn.microsoft.com/library/windows/desktop/bb774762)構造体。 このパラメーターは、NULL にすることはできません。|  
 |[in]*iColumn*|コントロール内の列の 0 から始まるインデックス。|  
 |[in]*rectType*|外接する四角形を取得するリスト ビューのサブ項目の部分です。 次のいずれかの値を指定します。<br /><br /> LVIR_BOUNDS - アイコンとラベルを含む全体のサブ項目の外接する四角形を返します。<br /><br /> LVIR_ICON は、アイコンまたは小さいアイコンのサブ項目の外接する四角形を返します。<br /><br /> LVIR_LABEL - は、サブ項目のテキストの外接する四角形を返します。|  
-|[out]*pRect*|ポインターを[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)サブ項目の外接する四角形に関する情報を受け取る構造体。<br /><br /> 呼び出し元を割り当て、 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。 このパラメーターは、NULL にすることはできません。|  
+|[out]*pRect*|ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)サブ項目の外接する四角形に関する情報を受け取る構造体。<br /><br /> 呼び出し元を割り当て、 [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。 このパラメーターは、NULL にすることはできません。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、送信、 [LVM_GETITEMINDEXRECT](http://msdn.microsoft.com/library/windows/desktop/bb761046)メッセージは、Windows SDK で説明します。 詳細については、次を参照してください。 [ListView_GetItemIndexRect マクロ](http://msdn.microsoft.com/library/windows/desktop/bb774959)します。  
+ このメソッドは、送信、 [LVM_GETITEMINDEXRECT](/windows/desktop/Controls/lvm-getitemindexrect)メッセージは、Windows SDK で説明します。 詳細については、次を参照してください。 [ListView_GetItemIndexRect マクロ](/windows/desktop/api/commctrl/nf-commctrl-listview_getitemindexrect)します。  
   
 ### <a name="example"></a>例  
  次のコード例は、変数を定義`m_listCtrl`、つまり現在のリスト ビュー コントロールにアクセスするために使用します。 この変数は次の例で使用されています。    
@@ -1713,7 +1713,7 @@ BOOL GetItemPosition(
  位置を取得する項目のインデックス。  
   
  *lpPoint*  
- アドレスを[ポイント](http://msdn.microsoft.com/library/windows/desktop/dd162805)ビューでアイテムの左上隅の位置を受け取る構造体を調整します。  
+ アドレスを[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)ビューでアイテムの左上隅の位置を受け取る構造体を調整します。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -1750,7 +1750,7 @@ BOOL GetItemRect(
  位置を取得する項目のインデックス。  
   
  *lpRect*  
- アドレスを[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)外接する四角形を受け取る。  
+ アドレスを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)外接する四角形を受け取る。  
   
  *nCode*  
  外接する四角形を取得する対象のリスト ビュー項目の部分です。 これらの値のいずれかを指定できます。  
@@ -1829,7 +1829,7 @@ BOOL GetItemSpacing(
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、送信、 [LVM_GETITEMSPACING](http://msdn.microsoft.com/library/windows/desktop/bb761051)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [LVM_GETITEMSPACING](/windows/desktop/Controls/lvm-getitemspacing)メッセージは、Windows SDK で説明します。  
   
 ##  <a name="getitemstate"></a>  CListCtrl::GetItemState  
  リスト ビュー項目の状態を取得します。  
@@ -1851,7 +1851,7 @@ UINT GetItemState(
  指定したリストの状態フラグが項目に表示します。  
   
 ### <a name="remarks"></a>Remarks  
- 項目の状態がで指定された、`state`のメンバー、 [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) Windows SDK」の説明に従って、構造体します。 指定またはアイテムの状態を変更すると、`stateMask`メンバーを変更するビットを指定します。  
+ 項目の状態がで指定された、`state`のメンバー、 [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) Windows SDK」の説明に従って、構造体します。 指定またはアイテムの状態を変更すると、`stateMask`メンバーを変更するビットを指定します。  
   
 ### <a name="example"></a>例  
   例をご覧ください[CListCtrl::GetTopIndex](#gettopindex)します。  
@@ -1890,7 +1890,7 @@ CString GetItemText(
  返すバージョン、`CString`項目のテキストを返します。  
   
 ### <a name="remarks"></a>Remarks  
- 場合*ラベル*0 の場合は、場合、この関数は、項目ラベルを取得*ラベル*が 0 以外の場合、サブ項目のテキストはすべて取得します。 サブ項目の引数の詳細については、の説明を参照してください、 [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) Windows SDK の構造体。  
+ 場合*ラベル*0 の場合は、場合、この関数は、項目ラベルを取得*ラベル*が 0 以外の場合、サブ項目のテキストはすべて取得します。 サブ項目の引数の詳細については、の説明を参照してください、 [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) Windows SDK の構造体。  
   
 ##  <a name="getnextitem"></a>  CListCtrl::GetNextItem  
  一覧の検索では、項目を持つ、指定したプロパティと指定項目に指定されたリレーションシップであるを表示します。  
@@ -1944,8 +1944,8 @@ BOOL GetNextItemIndex(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力、出力]*pItemIndex*|ポインター、[記述](http://msdn.microsoft.com/library/windows/desktop/bb774762)検索開始位置となる項目を記述する構造体または内のフラグに一致する最初の項目を検索する場合は-1、 *nFlags*パラメーター。<br /><br /> このメソッドが成功した場合、`LVITEMINDEX`構造体には、検索で見つかった項目がについて説明します。|  
-|[in]*nFlags*|検索を実行する方法を指定するフラグのビットごとの組み合わせ (OR)。<br /><br /> 検索インデックス、状態、または、ターゲット項目の外観に依存またはで指定された項目を基準としたターゲット項目の物理的な位置、 *pItemIndex*パラメーター。 詳細については、次を参照してください。、*フラグ*パラメーター、 [LVM_GETNEXTITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761059)メッセージ。|  
+|[入力、出力]*pItemIndex*|ポインター、[記述](https://msdn.microsoft.com/library/windows/desktop/bb774762)検索開始位置となる項目を記述する構造体または内のフラグに一致する最初の項目を検索する場合は-1、 *nFlags*パラメーター。<br /><br /> このメソッドが成功した場合、`LVITEMINDEX`構造体には、検索で見つかった項目がについて説明します。|  
+|[in]*nFlags*|検索を実行する方法を指定するフラグのビットごとの組み合わせ (OR)。<br /><br /> 検索インデックス、状態、または、ターゲット項目の外観に依存またはで指定された項目を基準としたターゲット項目の物理的な位置、 *pItemIndex*パラメーター。 詳細については、次を参照してください。、*フラグ*パラメーター、 [LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059)メッセージ。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -1953,7 +1953,7 @@ BOOL GetNextItemIndex(
 ### <a name="remarks"></a>Remarks  
  呼び出し元がのメンバーを設定したり、`LVITEMINDEX`によって示される構造体、 *pItemIndex*パラメーター。  
   
- このメソッドは、送信、 [LVM_GETNEXTITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761059)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059)メッセージは、Windows SDK で説明します。  
   
 ##  <a name="getnextselecteditem"></a>  CListCtrl::GetNextSelectedItem  
  識別されるリスト項目のインデックスを取得*pos*、設定し、 *pos*位置の値にします。  
@@ -2006,7 +2006,7 @@ UINT GetNumberOfWorkAreas() const;
  この時点では使用されません。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 マクロの動作を実装[ListView_GetNumberOfWorkAreas](http://msdn.microsoft.com/library/windows/desktop/bb774988)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 マクロの動作を実装[ListView_GetNumberOfWorkAreas](/windows/desktop/api/commctrl/nf-commctrl-listview_getnumberofworkareas)」の説明に従って、Windows SDK。  
   
 ### <a name="example"></a>例    
   
@@ -2045,10 +2045,10 @@ COLORREF GetOutlineColor() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 返します、 [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)外枠の色を含む構造体。  
+ 返します、 [COLORREF](/windows/desktop/gdi/colorref)外枠の色を含む構造体。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [LVM_GETOUTLINECOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761065)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [LVM_GETOUTLINECOLOR](/windows/desktop/Controls/lvm-getoutlinecolor)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="getorigin"></a>  CListCtrl::GetOrigin  
  リスト ビュー コントロールの現在のビューの原点を取得します。  
@@ -2059,7 +2059,7 @@ BOOL GetOrigin(LPPOINT lpPoint) const;
   
 ### <a name="parameters"></a>パラメーター  
  *lpPoint*  
- アドレスを[ポイント](http://msdn.microsoft.com/library/windows/desktop/dd162805)ビューの基準を受け取る。  
+ アドレスを[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)ビューの基準を受け取る。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。 ただし、レポート ビューでコントロールがある場合に、戻り値常に 0 です。  
@@ -2075,7 +2075,7 @@ UINT GetSelectedColumn() const;
  選択した列のインデックス。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [LVM_GETSELECTEDCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb761067)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [LVM_GETSELECTEDCOLUMN](/windows/desktop/Controls/lvm-getselectedcolumn)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="getselectedcount"></a>  CListCtrl::GetSelectedCount  
  リスト ビュー コントロールで選択したアイテムの数を取得します。  
@@ -2117,7 +2117,7 @@ int GetSelectionMark();
  0 から始まる選択マーク、または選択マークがない場合は-1。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 マクロの動作を実装[ListView_GetSelectionMark](http://msdn.microsoft.com/library/windows/desktop/bb774998)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 マクロの動作を実装[ListView_GetSelectionMark](/windows/desktop/api/commctrl/nf-commctrl-listview_getselectionmark)」の説明に従って、Windows SDK。  
   
 ### <a name="example"></a>例  
 
@@ -2197,7 +2197,7 @@ BOOL GetSubItemRect(
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 マクロの動作を実装[ListView_GetSubItemRect](http://msdn.microsoft.com/library/windows/desktop/bb775004)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 マクロの動作を実装[ListView_GetSubItemRect](/windows/desktop/api/commctrl/nf-commctrl-listview_getsubitemrect)」の説明に従って、Windows SDK。  
   
 ##  <a name="gettextbkcolor"></a>  CListCtrl::GetTextBkColor  
  リスト ビュー コントロールのテキストの背景色を取得します。  
@@ -2234,13 +2234,13 @@ BOOL GetTileInfo(PLVTILEINFO pti) const;
   
 ### <a name="parameters"></a>パラメーター  
  *pti*  
- ポインター、[保持](http://msdn.microsoft.com/library/windows/desktop/bb774766)タイル情報を受け取る構造体。  
+ ポインター、[保持](/windows/desktop/api/commctrl/ns-commctrl-taglvtileinfo)タイル情報を受け取る構造体。  
   
 ### <a name="return-value"></a>戻り値  
  戻り値は使用されません。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [LVM_GETTILEINFO](http://msdn.microsoft.com/library/windows/desktop/bb761081)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [LVM_GETTILEINFO](/windows/desktop/Controls/lvm-gettileinfo)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="gettileviewinfo"></a>  CListCtrl::GetTileViewInfo  
  タイル ビューでリスト ビュー コントロールに関する情報を取得します。  
@@ -2251,13 +2251,13 @@ BOOL GetTileViewInfo(PLVTILEVIEWINFO ptvi) const;
   
 ### <a name="parameters"></a>パラメーター  
  *ptvi*  
- ポインター、[保持](http://msdn.microsoft.com/library/windows/desktop/bb774768)を取得した情報を受け取る構造体。  
+ ポインター、[保持](/windows/desktop/api/commctrl/ns-commctrl-taglvtileviewinfo)を取得した情報を受け取る構造体。  
   
 ### <a name="return-value"></a>戻り値  
  戻り値は使用されません。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [LVM_GETTILEVIEWINFO](http://msdn.microsoft.com/library/windows/desktop/bb761083)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [LVM_GETTILEVIEWINFO](/windows/desktop/Controls/lvm-gettileviewinfo)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="gettooltips"></a>  CListCtrl::GetToolTips  
  ツールヒントを表示するリスト ビュー コントロールを使用するツール ヒント コントロールを取得します。  
@@ -2270,7 +2270,7 @@ CToolTipCtrl* GetToolTips() const;
  ポインターを[CToolTipCtrl](ctooltipctrl-class.md)リスト コントロールで使用するオブジェクト。 場合、[作成](#create)メンバー関数は LVS_NOTOOLTIPS スタイルを使用して、ツールヒントは使用されず、および NULL が返されます。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[LVM_GETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb761085)」の説明に従って、Windows SDK。 MFC 実装の`GetToolTips`を返します、`CToolTipCtrl`オブジェクトで、ツール ヒント コントロールを識別するハンドルではなく、リスト コントロールによって使用されます。  
+ このメンバー関数は、Win32 メッセージの動作を実装[LVM_GETTOOLTIPS](/windows/desktop/Controls/lvm-gettooltips)」の説明に従って、Windows SDK。 MFC 実装の`GetToolTips`を返します、`CToolTipCtrl`オブジェクトで、ツール ヒント コントロールを識別するハンドルではなく、リスト コントロールによって使用されます。  
   
 ### <a name="example"></a>例  
 
@@ -2324,7 +2324,7 @@ DWORD GetView() const;
  リスト ビュー コントロールの現在のビュー。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [LVM_GETVIEW](http://msdn.microsoft.com/library/windows/desktop/bb761091)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [LVM_GETVIEW](/windows/desktop/Controls/lvm-getview)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="getviewrect"></a>  CListCtrl::GetViewRect  
  リスト ビュー コントロール内のすべての項目の外接する四角形を取得します。  
@@ -2335,7 +2335,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
   
 ### <a name="parameters"></a>パラメーター  
  *lpRect*  
- アドレスを[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。  
+ アドレスを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -2360,7 +2360,7 @@ void GetWorkAreas(
  配列へのポインター`RECT`構造体 (または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクト)、リスト ビュー コントロールの作業領域を受信します。 これらの構造体の値は、クライアント座標です。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 マクロの動作を実装[ListView_GetWorkAreas](http://msdn.microsoft.com/library/windows/desktop/bb775024)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 マクロの動作を実装[ListView_GetWorkAreas](/windows/desktop/api/commctrl/nf-commctrl-listview_getworkareas)」の説明に従って、Windows SDK。  
   
 ### <a name="example"></a>例  
   例をご覧ください[CListCtrl::GetNumberOfWorkAreas](#getnumberofworkareas)します。  
@@ -2380,7 +2380,7 @@ BOOL HasGroup(int iGroupId) const;
  成功した場合、true を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [LVM_HASGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761097)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [LVM_HASGROUP](/windows/desktop/Controls/lvm-hasgroup)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="hittest"></a>  CListCtrl::HitTest  
  、のいずれかが指定した位置にある場合は、どのリスト ビュー アイテムを決定します。  
@@ -2401,7 +2401,7 @@ int HitTest(
  テストする点です。  
   
  *pFlags*  
- テストの結果に関する情報を受け取る整数へのポインター。 説明を参照してください、`flags`のメンバー、[持ち](http://msdn.microsoft.com/library/windows/desktop/bb774754)Windows SDK の構造体。  
+ テストの結果に関する情報を受け取る整数へのポインター。 説明を参照してください、`flags`のメンバー、[持ち](/windows/desktop/api/commctrl/ns-commctrl-taglvhittestinfo)Windows SDK の構造体。  
   
 ### <a name="return-value"></a>戻り値  
  指定した位置にある項目のインデックス*pHitTestInfo*があれば、それ以外の場合は-1。  
@@ -2476,7 +2476,7 @@ int InsertColumn(
 ### <a name="remarks"></a>Remarks  
  リスト ビュー コントロールの左端の列は、左揃えにする必要があります。  
   
- [LVCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743)構造体には、レポート ビューの列の属性が含まれています。 列に関する情報を受信することも使用されます。 Windows SDK は、この構造を説明します。  
+ [LVCOLUMN](/windows/desktop/api/commctrl/ns-commctrl-taglvcolumna)構造体には、レポート ビューの列の属性が含まれています。 列に関する情報を受信することも使用されます。 Windows SDK は、この構造を説明します。  
   
 ##  <a name="insertgroup"></a>  CListCtrl::InsertGroup  
  グループをリスト ビュー コントロールに挿入します。  
@@ -2492,13 +2492,13 @@ LRESULT InsertGroup(
  グループの挿入項目のインデックス。  
   
  *pgrp*  
- ポインター、 [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)を追加するグループを含む構造体。  
+ ポインター、 [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup)を追加するグループを含む構造体。  
   
 ### <a name="return-value"></a>戻り値  
  操作が失敗した場合は、グループは、追加された項目または-1 のインデックスを返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [LVM_INSERTGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761103)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [LVM_INSERTGROUP](/windows/desktop/Controls/lvm-insertgroup)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="insertgroupsorted"></a>  CListCtrl::InsertGroupSorted  
  指定したグループをグループの順序付きリストに挿入します。  
@@ -2509,13 +2509,13 @@ LRESULT InsertGroupSorted(PLVINSERTGROUPSORTED pStructInsert);
   
 ### <a name="parameters"></a>パラメーター  
  *pStructInsert*  
- ポインター、[された](http://msdn.microsoft.com/library/windows/desktop/bb774756)を挿入するグループを含む構造体。  
+ ポインター、[された](/windows/desktop/api/commctrl/ns-commctrl-taglvinsertgroupsorted)を挿入するグループを含む構造体。  
   
 ### <a name="return-value"></a>戻り値  
  戻り値は使用されません。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [LVM_INSERTGROUPSORTED](http://msdn.microsoft.com/library/windows/desktop/bb761105)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [LVM_INSERTGROUPSORTED](/windows/desktop/Controls/lvm-insertgroupsorted)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="insertitem"></a>  CListCtrl::InsertItem  
  リスト ビュー コントロールに項目を挿入します。  
@@ -2547,7 +2547,7 @@ int InsertItem(
   
 ### <a name="parameters"></a>パラメーター  
  *pItem*  
- ポインター、 [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) Windows SDK」の説明に従って、項目の属性を指定する構造体。  
+ ポインター、 [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) Windows SDK」の説明に従って、項目の属性を指定する構造体。  
   
  *nItem*  
  挿入する項目のインデックス。  
@@ -2559,13 +2559,13 @@ int InsertItem(
  項目のイメージ、または番号の場合は、項目は、コールバック項目のインデックス。 コールバック アイテムについては、次を参照してください。 [CListCtrl::GetCallbackMask](#getcallbackmask)します。  
   
  *いる*  
- *いる*パラメーターは、どの項目を指定します。 パラメーターとして渡される属性は有効です。 いずれかまたはマスクの値の詳細が記載[LVITEM 構造体](http://msdn.microsoft.com/library/windows/desktop/bb774760)Windows SDK に含まれています。 有効な値は、ビットごとの OR 演算子と組み合わせることができます。  
+ *いる*パラメーターは、どの項目を指定します。 パラメーターとして渡される属性は有効です。 いずれかまたはマスクの値の詳細が記載[LVITEM 構造体](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)Windows SDK に含まれています。 有効な値は、ビットごとの OR 演算子と組み合わせることができます。  
   
  *状態*  
- 項目の状態、状態の画像、およびオーバーレイ画像を示します。 Windows SDK のトピックを参照して[LVITEM 構造](http://msdn.microsoft.com/library/windows/desktop/bb774760)詳細については、[リスト ビュー項目の状態](http://msdn.microsoft.com/library/windows/desktop/bb774733)有効なフラグの一覧についてはします。  
+ 項目の状態、状態の画像、およびオーバーレイ画像を示します。 Windows SDK のトピックを参照して[LVITEM 構造](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)詳細については、[リスト ビュー項目の状態](/windows/desktop/Controls/list-view-item-states)有効なフラグの一覧についてはします。  
   
  *取得*  
- 状態のメンバーのビットを取得または変更はことを示します。 参照してください[LVITEM 構造](http://msdn.microsoft.com/library/windows/desktop/bb774760)詳細については、Windows SDK に含まれています。  
+ 状態のメンバーのビットを取得または変更はことを示します。 参照してください[LVITEM 構造](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)詳細については、Windows SDK に含まれています。  
   
  *lParam*  
  項目に関連付けられている 32 ビット アプリケーションに固有の値。 設定する必要がありますこのパラメーターが指定されている場合、*いる*されています。  
@@ -2574,7 +2574,7 @@ int InsertItem(
  成功した場合は、新しい項目またはそれ以外の場合は-1 のインデックス。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドを呼び出すと、呼び出すメッセージをコントロール ウィンドウに送信する場合があります。 コントロールに関連付けられているメッセージ ハンドラーが失敗すると、(LVS_OWNERDRAW などのウィンドウ スタイルを使用) などの特定の条件下で、項目のテキストを設定します。 これらの条件の詳細についてを参照してください[呼び出す](http://msdn.microsoft.com/library/windows/desktop/bb761107)Windows SDK に含まれています。  
+ このメソッドを呼び出すと、呼び出すメッセージをコントロール ウィンドウに送信する場合があります。 コントロールに関連付けられているメッセージ ハンドラーが失敗すると、(LVS_OWNERDRAW などのウィンドウ スタイルを使用) などの特定の条件下で、項目のテキストを設定します。 これらの条件の詳細についてを参照してください[呼び出す](/windows/desktop/Controls/lvm-insertitem)Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
 
@@ -2612,16 +2612,16 @@ int InsertMarkHitTest(
   
 ### <a name="parameters"></a>パラメーター  
  *pPoint*  
- ポインターを[ポイント](http://msdn.microsoft.com/library/windows/desktop/dd162805)リスト コントロールのクライアント領域を基準と、ヒット テストを含む構造体を調整します。  
+ ポインターを[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)リスト コントロールのクライアント領域を基準と、ヒット テストを含む構造体を調整します。  
   
  *lvim*  
- ポインター、 [LVINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb774758)パラメーターで定義されている座標に最も近い挿入ポイントを指定する構造体。  
+ ポインター、 [LVINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-lvinsertmark)パラメーターで定義されている座標に最も近い挿入ポイントを指定する構造体。  
   
 ### <a name="return-value"></a>戻り値  
  最も近い位置にカーソルを指定したポイントします。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [LVM_INSERTMARKHITTEST](http://msdn.microsoft.com/library/windows/desktop/bb761131)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [LVM_INSERTMARKHITTEST](/windows/desktop/Controls/lvm-insertmarkhittest)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="isgroupviewenabled"></a>  CListCtrl::IsGroupViewEnabled  
  リスト ビュー コントロールのグループ ビューが有効になっているかどうかを判断します。  
@@ -2634,7 +2634,7 @@ BOOL IsGroupViewEnabled() const;
  それ以外の場合、グループ ビューが有効になっている場合は TRUE または FALSE を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [LVM_ISGROUPVIEWENABLED](http://msdn.microsoft.com/library/windows/desktop/bb761133)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [LVM_ISGROUPVIEWENABLED](/windows/desktop/Controls/lvm-isgroupviewenabled)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="isitemvisible"></a>  CListCtrl::IsItemVisible  
  現在のリスト ビュー コントロール内の指定項目が表示されているかどうかを示します。  
@@ -2653,7 +2653,7 @@ BOOL IsItemVisible(int index) const;
  指定した項目が表示されている以外の場合、FALSE の場合は TRUE。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、送信、 [LVM_ISITEMVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb761135)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [LVM_ISITEMVISIBLE](/windows/desktop/Controls/lvm-isitemvisible)メッセージは、Windows SDK で説明します。  
   
 ##  <a name="mapidtoindex"></a>  CListCtrl::MapIDToIndex  
  現在のリスト ビュー コントロール内の項目の一意の ID をインデックスにマップします。  
@@ -2676,7 +2676,7 @@ UINT MapIDToIndex(UINT id) const;
   
  マルチ スレッド環境で、インデックスが保証されるは、バック グラウンド スレッドではなく、リスト ビュー コントロールをホストしているスレッドでのみに注意してください。  
   
- このメソッドは、送信、 [LVM_MAPIDTOINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761137)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [LVM_MAPIDTOINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761137)メッセージは、Windows SDK で説明します。  
   
 ##  <a name="mapindextoid"></a>  CListCtrl::MapIndexToID  
  現在のリスト ビュー コントロール内の項目のインデックスを一意の ID にマップします。  
@@ -2699,7 +2699,7 @@ UINT MapIndexToID(UINT index) const;
   
  マルチ スレッド環境で、インデックスが保証されるは、バック グラウンド スレッドではなく、リスト ビュー コントロールをホストしているスレッドでのみに注意してください。  
   
- このメソッドは、送信、 [LVM_MAPINDEXTOID](http://msdn.microsoft.com/library/windows/desktop/bb761139)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [LVM_MAPINDEXTOID](/windows/desktop/Controls/lvm-mapindextoid)メッセージは、Windows SDK で説明します。  
   
 ### <a name="example"></a>例  
  次のコード例は、変数を定義`m_listCtrl`、つまり現在のリスト ビュー コントロールにアクセスするために使用します。 この変数は次の例で使用されています。    
@@ -2761,7 +2761,7 @@ LRESULT MoveGroup(
  戻り値は使用されません。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [LVM_MOVEGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761141)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [LVM_MOVEGROUP](/windows/desktop/Controls/lvm-movegroup)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="moveitemtogroup"></a>  CListCtrl::MoveItemToGroup  
  指定した項目を指定されたグループに移動します。  
@@ -2784,7 +2784,7 @@ void MoveItemToGroup(
 > [!NOTE]
 >  現在このメソッドは実装されていません。  
   
- このメソッドは、の機能をエミュレート、 [LVM_MOVEITEMTOGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761143)メッセージ、Windows SDK で説明されているとします。  
+ このメソッドは、の機能をエミュレート、 [LVM_MOVEITEMTOGROUP](/windows/desktop/Controls/lvm-moveitemtogroup)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="redrawitems"></a>  CListCtrl::RedrawItems  
  項目の範囲を再描画のリスト ビュー コントロールを強制します。  
@@ -2806,7 +2806,7 @@ BOOL RedrawItems(
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 指定された項目が、リスト ビュー ウィンドウが WM_PAINT メッセージを受信するまで実際に再描画されません。 すぐに再描画、Windows を呼び出す[と](http://msdn.microsoft.com/library/windows/desktop/dd145167)関数の後、この関数を使用します。  
+ 指定された項目が、リスト ビュー ウィンドウが WM_PAINT メッセージを受信するまで実際に再描画されません。 すぐに再描画、Windows を呼び出す[と](/windows/desktop/api/winuser/nf-winuser-updatewindow)関数の後、この関数を使用します。  
   
 ##  <a name="removeallgroups"></a>  CListCtrl::RemoveAllGroups  
  リスト ビュー コントロールからすべてのグループを削除します。  
@@ -2816,7 +2816,7 @@ void RemoveAllGroups();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [LVM_REMOVEALLGROUPS](http://msdn.microsoft.com/library/windows/desktop/bb761147)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [LVM_REMOVEALLGROUPS](/windows/desktop/Controls/lvm-removeallgroups)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="removegroup"></a>  CListCtrl::RemoveGroup  
  リスト ビュー コントロールから、指定されたグループを削除します。  
@@ -2833,7 +2833,7 @@ LRESULT RemoveGroup(int iGroupId);
  それ以外の場合、グループの成功した場合、または-1 のインデックスを返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [LVM_REMOVEGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761149)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [LVM_REMOVEGROUP](/windows/desktop/Controls/lvm-removegroup)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="scroll"></a>  CListCtrl::Scroll  
  リスト ビュー コントロールの内容をスクロールします。  
@@ -2858,7 +2858,7 @@ BOOL SetBkColor(COLORREF cr);
   
 ### <a name="parameters"></a>パラメーター  
  *cr*  
- 背景色を設定すると、または背景色なしの clr_none します。 背景色でリスト ビュー コントロールの再描画が大幅に背景色を持たないものよりも高速です。 については、次を参照してください。 [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Windows SDK に含まれています。  
+ 背景色を設定すると、または背景色なしの clr_none します。 背景色でリスト ビュー コントロールの再描画が大幅に背景色を持たないものよりも高速です。 については、次を参照してください。 [COLORREF](/windows/desktop/gdi/colorref) Windows SDK に含まれています。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -3001,7 +3001,7 @@ BOOL SetColumn(
  属性を設定する列のインデックス。  
   
  *pColumn*  
- アドレス、 [LVCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743)属性、Windows SDK」の説明に従って、新しい列を含む構造体。 構造体の`mask`メンバーは、どの列を設定する属性を指定します。 場合、`mask`メンバー値を指定します、LVCF_TEXT、構造体の`pszText`メンバーが null で終わる文字列と構造体のアドレス`cchTextMax`メンバーは無視されます。  
+ アドレス、 [LVCOLUMN](/windows/desktop/api/commctrl/ns-commctrl-taglvcolumna)属性、Windows SDK」の説明に従って、新しい列を含む構造体。 構造体の`mask`メンバーは、どの列を設定する属性を指定します。 場合、`mask`メンバー値を指定します、LVCF_TEXT、構造体の`pszText`メンバーが null で終わる文字列と構造体のアドレス`cchTextMax`メンバーは無視されます。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -3029,7 +3029,7 @@ BOOL SetColumnOrderArray(
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 マクロの動作を実装[ListView_SetColumnOrderArray](http://msdn.microsoft.com/library/windows/desktop/bb775072)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 マクロの動作を実装[ListView_SetColumnOrderArray](/windows/desktop/api/commctrl/nf-commctrl-listview_setcolumnorderarray)」の説明に従って、Windows SDK。  
   
 ### <a name="example"></a>例  
   例をご覧ください[CListCtrl::GetColumnOrderArray](#getcolumnorderarray)します。  
@@ -3048,7 +3048,7 @@ BOOL SetColumnWidth(
  幅を設定する列のインデックス。 リスト ビューで、このパラメーターは 0 にある必要があります。  
   
  *cx*  
- 列の新しい幅。 」の説明に従って LVSCW_AUTOSIZE または LVSCW_AUTOSIZE_USEHEADER のいずれかを指定できます[LVM_SETCOLUMNWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb761163) Windows SDK に含まれています。  
+ 列の新しい幅。 」の説明に従って LVSCW_AUTOSIZE または LVSCW_AUTOSIZE_USEHEADER のいずれかを指定できます[LVM_SETCOLUMNWIDTH](/windows/desktop/Controls/lvm-setcolumnwidth) Windows SDK に含まれています。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -3062,13 +3062,13 @@ DWORD SetExtendedStyle(DWORD dwNewStyle);
   
 ### <a name="parameters"></a>パラメーター  
  *dwNewStyle*  
- リスト ビュー コントロールで使用する拡張スタイルの組み合わせ。 これらのスタイルの説明については、次を参照してください。、[リスト ビューのスタイルの拡張](http://msdn.microsoft.com/library/windows/desktop/bb774732)Windows SDK のトピックです。  
+ リスト ビュー コントロールで使用する拡張スタイルの組み合わせ。 これらのスタイルの説明については、次を参照してください。、[リスト ビューのスタイルの拡張](/windows/desktop/Controls/extended-list-view-styles)Windows SDK のトピックです。  
   
 ### <a name="return-value"></a>戻り値  
  前の組み合わせでは、リスト ビュー コントロールで使用するスタイルを拡張します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 マクロの動作を実装[ListView_SetExtendedListViewStyle](http://msdn.microsoft.com/library/windows/desktop/bb775076)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 マクロの動作を実装[ListView_SetExtendedListViewStyle](/windows/desktop/api/commctrl/nf-commctrl-listview_setextendedlistviewstyle)」の説明に従って、Windows SDK。  
   
 ### <a name="example"></a>例  
 
@@ -3094,13 +3094,13 @@ int SetGroupInfo(
  情報を設定するグループの識別子。  
   
  *pgrp*  
- ポインター、 [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)設定情報を含む構造体。 呼び出し元は、この構造体を割り当てると、そのメンバーを設定します。  
+ ポインター、 [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup)設定情報を含む構造体。 呼び出し元は、この構造体を割り当てると、そのメンバーを設定します。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合、グループの IDそれ以外の場合、-1 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、送信、 [LVM_SETGROUPINFO](http://msdn.microsoft.com/library/windows/desktop/bb761167)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [LVM_SETGROUPINFO](/windows/desktop/Controls/lvm-setgroupinfo)メッセージは、Windows SDK で説明します。  
   
 ##  <a name="setgroupmetrics"></a>  CListCtrl::SetGroupMetrics  
  リスト ビュー コントロールのグループのメトリックを設定します。  
@@ -3111,10 +3111,10 @@ void SetGroupMetrics(PLVGROUPMETRICS pGroupMetrics);
   
 ### <a name="parameters"></a>パラメーター  
  *pGroupMetrics*  
- ポインター、 [LVGROUPMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb774752)を設定するグループのメトリック情報を含む構造体。  
+ ポインター、 [LVGROUPMETRICS](/windows/desktop/api/commctrl/ns-commctrl-taglvgroupmetrics)を設定するグループのメトリック情報を含む構造体。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [LVM_SETGROUPMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb761168)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [LVM_SETGROUPMETRICS](/windows/desktop/Controls/lvm-setgroupmetrics)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="sethotcursor"></a>  CListCtrl::SetHotCursor  
  リスト ビュー コントロールのホット トラッキングが有効になっているときに使用するカーソルを設定します。  
@@ -3131,7 +3131,7 @@ HCURSOR SetHotCursor(HCURSOR hc);
  リスト ビュー コントロールで使用されている以前のカーソルのホットなリソースへのハンドル。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 マクロの動作を実装[ListView_SetHotCursor](http://msdn.microsoft.com/library/windows/desktop/bb775082)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 マクロの動作を実装[ListView_SetHotCursor](/windows/desktop/api/commctrl/nf-commctrl-listview_sethotcursor)」の説明に従って、Windows SDK。  
   
  カーソルがリスト ビュー アイテムを置いたホバー選択が有効な場合にのみ表示されるホット カーソルが表示されます。 ホバー選択は、拡張スタイル LVS_EX_TRACKSELECT の設定で有効です。  
   
@@ -3153,7 +3153,7 @@ int SetHotItem(int iIndex);
  前のホットの項目の 0 から始まるインデックス。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 マクロの動作を実装[ListView_SetHotItem](http://msdn.microsoft.com/library/windows/desktop/bb775083)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 マクロの動作を実装[ListView_SetHotItem](/windows/desktop/api/commctrl/nf-commctrl-listview_sethotitem)」の説明に従って、Windows SDK。  
   
 ### <a name="example"></a>例  
   例をご覧ください[CListCtrl::GetHotItem](#gethotitem)します。  
@@ -3173,7 +3173,7 @@ DWORD SetHoverTime(DWORD dwHoverTime = (DWORD)-1);
  前のホバー時間 (ミリ秒)。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 マクロの動作を実装[ListView_SetHoverTime](http://msdn.microsoft.com/library/windows/desktop/bb775084)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 マクロの動作を実装[ListView_SetHoverTime](/windows/desktop/api/commctrl/nf-commctrl-listview_sethovertime)」の説明に従って、Windows SDK。  
   
 ### <a name="example"></a>例  
   例をご覧ください[CListCtrl::GetHoverTime](#gethovertime)します。  
@@ -3203,7 +3203,7 @@ CSize SetIconSpacing(CSize size);
  A [CSize](../../atl-mfc-shared/reference/csize-class.md)アイコンの間隔の以前の値を含むオブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 マクロの動作を実装[ListView_SetIconSpacing](http://msdn.microsoft.com/library/windows/desktop/bb775085)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 マクロの動作を実装[ListView_SetIconSpacing](/windows/desktop/api/commctrl/nf-commctrl-listview_seticonspacing)」の説明に従って、Windows SDK。  
   
 ### <a name="example"></a>例  
 
@@ -3251,13 +3251,13 @@ BOOL SetInfoTip(PLVSETINFOTIP plvInfoTip);
   
 ### <a name="parameters"></a>パラメーター  
  *plvInfoTip*  
- ポインター、[保持](http://msdn.microsoft.com/library/windows/desktop/bb774764)設定される情報を含む構造体。  
+ ポインター、[保持](/windows/desktop/api/commctrl/ns-commctrl-taglvsetinfotip)設定される情報を含む構造体。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、true を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [LVM_SETINFOTIP](http://msdn.microsoft.com/library/windows/desktop/bb761180)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [LVM_SETINFOTIP](/windows/desktop/Controls/lvm-setinfotip)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="setinsertmark"></a>  CListCtrl::SetInsertMark  
  定義されている位置にカーソルを設定します。  
@@ -3268,13 +3268,13 @@ BOOL SetInsertMark(LPLVINSERTMARK lvim);
   
 ### <a name="parameters"></a>パラメーター  
  *lvim*  
- ポインター、 [LVINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb774758)挿入ポイントを設定する場所を指定する構造体。  
+ ポインター、 [LVINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-lvinsertmark)挿入ポイントを設定する場所を指定する構造体。  
   
 ### <a name="return-value"></a>戻り値  
  それ以外の場合、成功した場合、TRUE または FALSE を返します。 場合、FALSE が返されます、サイズ、`cbSize`のメンバー、`LVINSERTMARK`構造体が、構造体の実際のサイズと等しくないかが現在のビューでは、挿入ポイントの場合は適用されません。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [LVM_SETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb761182)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [LVM_SETINSERTMARK](/windows/desktop/Controls/lvm-setinsertmark)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="setinsertmarkcolor"></a>  CListCtrl::SetInsertMarkColor  
  挿入ポイントの色を設定します。  
@@ -3285,13 +3285,13 @@ COLORREF SetInsertMarkColor(COLORREF color);
   
 ### <a name="parameters"></a>パラメーター  
  *色*  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)挿入ポイントを設定する色を指定する構造体。  
+ A [COLORREF](/windows/desktop/gdi/colorref)挿入ポイントを設定する色を指定する構造体。  
   
 ### <a name="return-value"></a>戻り値  
  返します、`COLORREF`前の色を含む構造体。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [LVM_SETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761184)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [LVM_SETINSERTMARKCOLOR](/windows/desktop/Controls/lvm-setinsertmarkcolor)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="setitem"></a>  CListCtrl::SetItem  
  リスト ビューの一部またはすべてのアイテムの属性を設定します。  
@@ -3325,7 +3325,7 @@ BOOL SetItem(
   
 ### <a name="parameters"></a>パラメーター  
  *pItem*  
- アドレス、 [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)属性、Windows SDK」の説明に従って、新しい項目を含む構造体。 構造体の`iItem`と`iSubItem`項目またはサブ項目、および構造体のメンバーが識別`mask`メンバーを設定する属性を指定します。 詳細については、 `mask` 、メンバーを参照してください、**解説**します。  
+ アドレス、 [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)属性、Windows SDK」の説明に従って、新しい項目を含む構造体。 構造体の`iItem`と`iSubItem`項目またはサブ項目、および構造体のメンバーが識別`mask`メンバーを設定する属性を指定します。 詳細については、 `mask` 、メンバーを参照してください、**解説**します。  
   
  *nItem*  
  属性を設定するアイテムのインデックス。  
@@ -3384,7 +3384,7 @@ void SetItemCount(int nItems);
  仮想リスト ビュー コントロールの項目数を設定するを参照してください。 [CListCtrl::SetItemCountEx](#setitemcountex)します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 マクロの動作を実装[ListView_SetItemCount](http://msdn.microsoft.com/library/windows/desktop/bb775093)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 マクロの動作を実装[ListView_SetItemCount](/windows/desktop/api/commctrl/nf-commctrl-listview_setitemcount)」の説明に従って、Windows SDK。  
   
 ### <a name="example"></a>例  
 
@@ -3427,7 +3427,7 @@ BOOL SetItemCountEx(
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 マクロの動作を実装[ListView_SetItemCountEx](http://msdn.microsoft.com/library/windows/desktop/bb775095)、仮想のリスト ビューの Windows SDKand を呼び出すのみ記載されています。  
+ このメンバー関数は、Win32 マクロの動作を実装[ListView_SetItemCountEx](/windows/desktop/api/commctrl/nf-commctrl-listview_setitemcountex)、仮想のリスト ビューの Windows SDKand を呼び出すのみ記載されています。  
   
 ### <a name="example"></a>例  
 
@@ -3468,7 +3468,7 @@ BOOL SetItemData(int nItem, DWORD_PTR dwData);
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- この値は、`lParam`のメンバー、 [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) Windows SDK」の説明に従って、構造体します。  
+ この値は、`lParam`のメンバー、 [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) Windows SDK」の説明に従って、構造体します。  
   
 ### <a name="example"></a>例  
 
@@ -3496,19 +3496,19 @@ BOOL SetItemIndexState(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*pItemIndex*|ポインター、[記述](http://msdn.microsoft.com/library/windows/desktop/bb774762)項目を記述する構造体。 呼び出し元は、この構造体を割り当てると、そのメンバーを設定します。|  
-|[in]*dwState*|項目を設定する状態のビットごとの組み合わせである[ビュー項目の状態を一覧表示](http://msdn.microsoft.com/library/windows/desktop/bb774733)します。 0 にリセット、または、状態を設定するいずれかを指定します。|  
-|[in]*dwMask*|指定された状態の有効なビット マスク、 *dwState*パラメーター。 ビットごとの組み合わせ (OR) を指定[ビュー項目の状態を一覧表示](http://msdn.microsoft.com/library/windows/desktop/bb774733)します。|  
+|[in]*pItemIndex*|ポインター、[記述](https://msdn.microsoft.com/library/windows/desktop/bb774762)項目を記述する構造体。 呼び出し元は、この構造体を割り当てると、そのメンバーを設定します。|  
+|[in]*dwState*|項目を設定する状態のビットごとの組み合わせである[ビュー項目の状態を一覧表示](/windows/desktop/Controls/list-view-item-states)します。 0 にリセット、または、状態を設定するいずれかを指定します。|  
+|[in]*dwMask*|指定された状態の有効なビット マスク、 *dwState*パラメーター。 ビットごとの組み合わせ (OR) を指定[ビュー項目の状態を一覧表示](/windows/desktop/Controls/list-view-item-states)します。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、 *dwState*パラメーターを参照してください[リスト ビュー項目の状態](http://msdn.microsoft.com/library/windows/desktop/bb774733)します。  
+ 詳細については、 *dwState*パラメーターを参照してください[リスト ビュー項目の状態](/windows/desktop/Controls/list-view-item-states)します。  
   
- 詳細については、 *dwMask*パラメーターを参照してください、*対象*のメンバー、 [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)構造体。  
+ 詳細については、 *dwMask*パラメーターを参照してください、*対象*のメンバー、 [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)構造体。  
   
- このメソッドは、送信、 [LVM_SETITEMINDEXSTATE](http://msdn.microsoft.com/library/windows/desktop/bb761190)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [LVM_SETITEMINDEXSTATE](/windows/desktop/Controls/lvm-setitemindexstate)メッセージは、Windows SDK で説明します。  
   
 ##  <a name="setitemposition"></a>  CListCtrl::SetItemPosition  
  リスト ビュー コントロール内の指定位置に項目を移動します。  
@@ -3524,7 +3524,7 @@ BOOL SetItemPosition(
  位置が設定される項目のインデックス。  
   
  *pt*  
- A[ポイント](http://msdn.microsoft.com/library/windows/desktop/dd162805)アイテムの左上隅のビューで、新しい位置を指定する構造体の座標します。  
+ A[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)アイテムの左上隅のビューで、新しい位置を指定する構造体の座標します。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -3557,13 +3557,13 @@ BOOL SetItemState(
  状態を設定するアイテムのインデックス。  
   
  *pItem*  
- アドレス、 [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) Windows SDK」の説明に従って、構造体します。 構造体の`stateMask`メンバーは、どの状態を変更し、構造体のビットを指定します`state`メンバーには、これらのビットの新しい値が含まれています。 その他のメンバーは無視されます。  
+ アドレス、 [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) Windows SDK」の説明に従って、構造体します。 構造体の`stateMask`メンバーは、どの状態を変更し、構造体のビットを指定します`state`メンバーには、これらのビットの新しい値が含まれています。 その他のメンバーは無視されます。  
   
  *状態*  
- 状態ビットの新しい値。 使用可能な値の一覧は、次を参照してください。 [CListCtrl::GetNextItem](#getnextitem)と[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)状態のメンバー。  
+ 状態ビットの新しい値。 使用可能な値の一覧は、次を参照してください。 [CListCtrl::GetNextItem](#getnextitem)と[LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)状態のメンバー。  
   
  *いる*  
- どの状態を変更するビットを指定するマスク。 この値の対象のメンバーに対応、 [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)構造体。  
+ どの状態を変更するビットを指定するマスク。 この値の対象のメンバーに対応、 [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)構造体。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -3598,13 +3598,13 @@ BOOL SetItemText(
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドが LVS_OWNERDATA ウィンドウ スタイルを含むコントロールで使用するためものありません (実際には、これにより、アサーション、デバッグ ビルドで)。 このリスト コントロール スタイルの詳細については、次を参照してください。[リスト ビュー コントロールの概要](http://msdn.microsoft.com/library/windows/desktop/bb774735)します。  
+ このメソッドが LVS_OWNERDATA ウィンドウ スタイルを含むコントロールで使用するためものありません (実際には、これにより、アサーション、デバッグ ビルドで)。 このリスト コントロール スタイルの詳細については、次を参照してください。[リスト ビュー コントロールの概要](/windows/desktop/Controls/list-view-controls-overview)します。  
   
 ### <a name="example"></a>例  
   例をご覧ください[CListCtrl::InsertItem](#insertitem)します。  
   
 ##  <a name="setoutlinecolor"></a>  CListCtrl::SetOutlineColor  
- 場合、リスト ビュー コントロールの境界線の色を設定、 [LVS_EX_BORDERSELECT](http://msdn.microsoft.com/library/windows/desktop/bb774739)拡張ウィンドウ スタイルを設定します。  
+ 場合、リスト ビュー コントロールの境界線の色を設定、 [LVS_EX_BORDERSELECT](/windows/desktop/Controls/list-view-window-styles)拡張ウィンドウ スタイルを設定します。  
   
 ```  
 COLORREF SetOutlineColor(COLORREF color);
@@ -3612,13 +3612,13 @@ COLORREF SetOutlineColor(COLORREF color);
   
 ### <a name="parameters"></a>パラメーター  
  *色*  
- 新しい[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)外枠の色を含む構造体。  
+ 新しい[COLORREF](/windows/desktop/gdi/colorref)外枠の色を含む構造体。  
   
 ### <a name="return-value"></a>戻り値  
  前の`COLORREF`外枠の色を含む構造体  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [LVM_SETOUTLINECOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761200)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [LVM_SETOUTLINECOLOR](/windows/desktop/Controls/lvm-setoutlinecolor)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="setselectedcolumn"></a>  CListCtrl::SetSelectedColumn  
  リスト ビュー コントロールの選択した列を設定します。  
@@ -3635,7 +3635,7 @@ LRESULT SetSelectedColumn(int iCol);
  戻り値は使用されません。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [LVM_SETSELECTEDCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb761202)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [LVM_SETSELECTEDCOLUMN](/windows/desktop/Controls/lvm-setselectedcolumn)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="setselectionmark"></a>  CListCtrl::SetSelectionMark  
  リスト ビュー コントロールの選択マークを設定します。  
@@ -3652,7 +3652,7 @@ int SetSelectionMark(int iIndex);
  以前選択マーク、または選択マークがない場合は-1。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 マクロの動作を実装[ListView_SetSelectionMark](http://msdn.microsoft.com/library/windows/desktop/bb775112)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 マクロの動作を実装[ListView_SetSelectionMark](/windows/desktop/api/commctrl/nf-commctrl-listview_setselectionmark)」の説明に従って、Windows SDK。  
   
 ### <a name="example"></a>例  
   例をご覧ください[CListCtrl::GetSelectionMark](#getselectionmark)します。  
@@ -3666,7 +3666,7 @@ BOOL SetTextBkColor(COLORREF cr);
   
 ### <a name="parameters"></a>パラメーター  
  *cr*  
- 新しいテキストの背景色を指定する COLORREF します。 については、次を参照してください。 [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Windows SDK に含まれています。  
+ 新しいテキストの背景色を指定する COLORREF します。 については、次を参照してください。 [COLORREF](/windows/desktop/gdi/colorref) Windows SDK に含まれています。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -3691,7 +3691,7 @@ BOOL SetTextColor(COLORREF cr);
   
 ### <a name="parameters"></a>パラメーター  
  *cr*  
- 新しいテキストの色を指定する COLORREF します。 については、次を参照してください。 [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Windows SDK に含まれています。  
+ 新しいテキストの色を指定する COLORREF します。 については、次を参照してください。 [COLORREF](/windows/desktop/gdi/colorref) Windows SDK に含まれています。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -3717,13 +3717,13 @@ BOOL SetTileInfo(PLVTILEINFO pti);
   
 ### <a name="parameters"></a>パラメーター  
  *pti*  
- ポインター、[保持](http://msdn.microsoft.com/library/windows/desktop/bb774766)設定される情報を含む構造体。  
+ ポインター、[保持](/windows/desktop/api/commctrl/ns-commctrl-taglvtileinfo)設定される情報を含む構造体。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、true を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [LVM_SETTILEINFO](http://msdn.microsoft.com/library/windows/desktop/bb761210)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [LVM_SETTILEINFO](/windows/desktop/Controls/lvm-settileinfo)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="settileviewinfo"></a>  CListCtrl::SetTileViewInfo  
  タイル ビューでは、リスト ビュー コントロールを使用する情報を設定します。  
@@ -3734,13 +3734,13 @@ BOOL SetTileViewInfo(PLVTILEVIEWINFO ptvi);
   
 ### <a name="parameters"></a>パラメーター  
  *ptvi*  
- ポインター、[保持](http://msdn.microsoft.com/library/windows/desktop/bb774768)設定情報を含む構造体。  
+ ポインター、[保持](/windows/desktop/api/commctrl/ns-commctrl-taglvtileviewinfo)設定情報を含む構造体。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、true を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [LVM_SETTILEVIEWINFO](http://msdn.microsoft.com/library/windows/desktop/bb761212)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [LVM_SETTILEVIEWINFO](/windows/desktop/Controls/lvm-settileviewinfo)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="settooltips"></a>  CListCtrl::SetToolTips  
  ツールヒントを表示するリスト ビュー コントロールを使用するツール ヒント コントロールを設定します。  
@@ -3757,7 +3757,7 @@ CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
  ポインターを[CToolTipCtrl](ctooltipctrl-class.md)ツールヒントが以前に使用しない場合、コントロール、または NULL で使われていたツールヒントを含むオブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[LVM_SETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb761216)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[LVM_SETTOOLTIPS](/windows/desktop/Controls/lvm-settooltips)」の説明に従って、Windows SDK。  
   
  ツールヒントを使用していない LVS_NOTOOLTIPS スタイル指定を作成するとき、`CListCtrl`オブジェクト。  
   
@@ -3776,7 +3776,7 @@ DWORD SetView(int iView);
  それ以外の場合、成功した場合、1 または-1 を返します。 たとえば、ビューが有効でない場合に-1 が返されます。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [LVM_SETVIEW](http://msdn.microsoft.com/library/windows/desktop/bb761220)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [LVM_SETVIEW](/windows/desktop/Controls/lvm-setview)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="setworkareas"></a>  CListCtrl::SetWorkAreas  
  リスト ビュー コントロールのアイコンを表示する範囲を設定します。  
@@ -3795,7 +3795,7 @@ void SetWorkAreas(
  配列のアドレス`RECT`構造体 (または`CRect`オブジェクト)、リスト ビュー コントロールの新しい作業領域を指定します。 これらの領域は、クライアント座標で指定する必要があります。 このパラメーターが NULL の場合、作業領域は、コントロールのクライアント領域に設定されます。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 マクロの動作を実装[ListView_SetWorkAreas](http://msdn.microsoft.com/library/windows/desktop/bb775128)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 マクロの動作を実装[ListView_SetWorkAreas](/windows/desktop/api/commctrl/nf-commctrl-listview_setworkareas)」の説明に従って、Windows SDK。  
   
 ### <a name="example"></a>例  
 
@@ -3826,7 +3826,7 @@ BOOL SortGroups(
  成功した場合、true を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [LVM_SORTGROUPS](http://msdn.microsoft.com/library/windows/desktop/bb761225)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [LVM_SORTGROUPS](/windows/desktop/Controls/lvm-sortgroups)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="sortitems"></a>  CListCtrl::SortItems  
  アプリケーション定義の比較関数を使用して、リスト ビュー項目を並べ替えます。  
@@ -3861,9 +3861,9 @@ int CALLBACK CompareFunc(LPARAM lParam1,
 ```  
 比較関数は、2 つ目の前に指定する必要があります最初の項目がある場合、負の値を返す必要があります、正の値を使用している場合は、最初の項目が 2 番目、または場合は 0 に従う必要があります、2 つの項目が等しい。  
   
- *LParam1*パラメーターは、32 ビット値が比較される最初の項目に関連付けられている、 *lParam2*パラメーターは、2 番目の項目に関連付けられている値。 これらで指定された値、 *lParam*項目のメンバー [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)リストに挿入されたときに構造体します。 *LParamSort*と同じパラメーターです、*指定*値。  
+ *LParam1*パラメーターは、32 ビット値が比較される最初の項目に関連付けられている、 *lParam2*パラメーターは、2 番目の項目に関連付けられている値。 これらで指定された値、 *lParam*項目のメンバー [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)リストに挿入されたときに構造体します。 *LParamSort*と同じパラメーターです、*指定*値。  
   
- このメソッドは、送信、 [LVM_SORTITEMS](http://msdn.microsoft.com/library/windows/desktop/bb761227)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [LVM_SORTITEMS](/windows/desktop/Controls/lvm-sortitems)メッセージは、Windows SDK で説明します。  
   
 ### <a name="example"></a>例  
  によって並べ替えられている項目になる単純な比較関数を次に、 *lParam*値。  
@@ -3915,14 +3915,14 @@ int CALLBACK CompareFunc(LPARAM lParam1,
     LPARAM lParam2,
     LPARAM lParamSort);
 ```  
-ように、このメッセージは[LVM_SORTITEMS](http://msdn.microsoft.com/library/windows/desktop/bb761227)、比較関数に渡される情報の型を除く。 [LVM_SORTITEMS](http://msdn.microsoft.com/library/windows/desktop/bb761227)、 *lParam1*と*lParam2*を比較する項目の値です。 [LVM_SORTITEMSEX](http://msdn.microsoft.com/library/windows/desktop/bb761228)、 *lParam1*を比較する最初の項目の現在のインデックスと*lParam2*は 2 番目の項目の現在のインデックスです。 送信することができます、 [LVM_GETITEMTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761055)メッセージ項目に関する詳細情報を取得します。  
+ように、このメッセージは[LVM_SORTITEMS](/windows/desktop/Controls/lvm-sortitems)、比較関数に渡される情報の型を除く。 [LVM_SORTITEMS](/windows/desktop/Controls/lvm-sortitems)、 *lParam1*と*lParam2*を比較する項目の値です。 [LVM_SORTITEMSEX](/windows/desktop/Controls/lvm-sortitemsex)、 *lParam1*を比較する最初の項目の現在のインデックスと*lParam2*は 2 番目の項目の現在のインデックスです。 送信することができます、 [LVM_GETITEMTEXT](/windows/desktop/Controls/lvm-getitemtext)メッセージ項目に関する詳細情報を取得します。  
   
  比較関数は、2 つ目の前に指定する必要があります最初の項目がある場合、負の値を返す必要があります、正の値を使用している場合は、最初の項目が 2 番目、または場合は 0 に従う必要があります、2 つの項目が等しい。  
   
 > [!NOTE]
->  並べ替えの処理中に、リスト ビューの内容は、安定性がなくです。 コールバック関数すべてにメッセージを送信、リスト ビュー コントロール以外の場合[LVM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb774953)結果は予測できません。  
+>  並べ替えの処理中に、リスト ビューの内容は、安定性がなくです。 コールバック関数すべてにメッセージを送信、リスト ビュー コントロール以外の場合[LVM_GETITEM](/windows/desktop/Controls/lvm-getitem)結果は予測できません。  
   
- このメソッドは、送信、 [LVM_SORTITEMSEX](http://msdn.microsoft.com/library/windows/desktop/bb761228)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [LVM_SORTITEMSEX](/windows/desktop/Controls/lvm-sortitemsex)メッセージは、Windows SDK で説明します。  
   
 ### <a name="example"></a>例  
  次のコード例は、変数を定義`m_listCtrl`、つまり現在のリスト ビュー コントロールにアクセスするために使用します。 この変数は次の例で使用されています。  
@@ -3978,13 +3978,13 @@ int SubItemHitTest(LPLVHITTESTINFO pInfo);
   
 ### <a name="parameters"></a>パラメーター  
  *pInfo*  
- ポインター、[持ち](http://msdn.microsoft.com/library/windows/desktop/bb774754)構造体。  
+ ポインター、[持ち](/windows/desktop/api/commctrl/ns-commctrl-taglvhittestinfo)構造体。  
   
 ### <a name="return-value"></a>戻り値  
  項目またはサブ項目、(ある場合)、テスト中、またはそれ以外の場合は-1 の 1 から始まるインデックス。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 マクロの動作を実装[ListView_SubItemHitTest](http://msdn.microsoft.com/library/windows/desktop/bb775135)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 マクロの動作を実装[ListView_SubItemHitTest](/windows/desktop/api/commctrl/nf-commctrl-listview_subitemhittest)」の説明に従って、Windows SDK。  
   
 ### <a name="example"></a>例  
 

@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 508655dbfeb2d06d936d2b73d5435cf04c860f4b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a4acb718d44a5abcf4413cbb7f026e4a8ea0f57b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598935"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218090"
 ---
 # <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying"></a>方法: コピー時におけるリソースの言語または条件を変更する
 
 リソースのコピー時に、リソースの言語プロパティ、条件プロパティ、またはその両方を変更できます。
 
-- リソースの言語では、そのリソースで使用する言語のみを識別します。 これを使って[FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042)参照して、リソースを識別できるようにします。 (ただし、各言語でテキストに関連していない違いをリソースに含めることができます。たとえば、日本語キーボードのみで動作するアクセラレータや中国語でローカライズされたビルドのみに対応するビットマップなどです)。
+- リソースの言語では、そのリソースで使用する言語のみを識別します。 これを使って[FindResource](/windows/desktop/api/winbase/nf-winbase-findresourcea)参照して、リソースを識別できるようにします。 (ただし、各言語でテキストに関連していない違いをリソースに含めることができます。たとえば、日本語キーボードのみで動作するアクセラレータや中国語でローカライズされたビルドのみに対応するビットマップなどです)。
 
 - リソースの条件とは、リソースの特定のコピーが使用される条件を識別する定義済みのシンボルです。
 

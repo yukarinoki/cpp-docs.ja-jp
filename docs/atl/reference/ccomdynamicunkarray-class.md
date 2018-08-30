@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a83ab3aa6506e9ee620d3604149bfd181678a05
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 710dc1929662c5f5358912433be2df605bf87964
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879810"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218182"
 ---
 # <a name="ccomdynamicunkarray-class"></a>CComDynamicUnkArray クラス
 このクラスの配列を格納する`IUnknown`ポインター。  
@@ -77,7 +77,7 @@ class CComDynamicUnkArray
 > [!NOTE]
 > **注**クラス`CComDynamicUnkArray`によって使用されます、**クラスの追加**接続ポイントを持つコントロールを作成するときにウィザード。 接続ポイントの数を手動で指定する場合は、変更からの参照を`CComDynamicUnkArray`に`CComUnkArray<` *n* `>`ここで、 *n*コネクション ポイントの数です必須。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlcom.h  
   
 ##  <a name="add"></a>  CComDynamicUnkArray::Add  
@@ -160,7 +160,7 @@ IUnknown* GetAt(int nIndex);
  取得する要素のインデックス。  
   
 ### <a name="return-value"></a>戻り値  
- ポインター、 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)インターフェイス。  
+ ポインター、 [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)インターフェイス。  
   
 ##  <a name="getcookie"></a>  CComDynamicUnkArray::GetCookie  
  関連付けられているクッキーを取得するには、このメソッドを呼び出して、指定された`IUnknown`ポインター。  

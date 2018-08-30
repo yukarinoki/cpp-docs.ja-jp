@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaaad259fa0c864a72feaff3222f683563c8ca91
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1b9dc87340d567f876d91abc4d8ebfa1d6353cad
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852318"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209988"
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>ATL COM オブジェクトの基礎
 次の図は、クラスおよび ATL COM オブジェクトの定義に使用するインターフェイス間の関係を示しています。  
@@ -40,7 +40,7 @@ ms.locfileid: "37852318"
   
  クライアントは、内部オブジェクトと対話する外側のオブジェクトを経由する必要はありません、ため、集約オブジェクトは方が効率的です。 また、外側のオブジェクトはありません集約オブジェクトの機能を認識する集約オブジェクトのインターフェイスは、クライアントに直接使用できます。 ただし、すべてのオブジェクトを集計することができます。 集計オブジェクト、集計を考慮して設計が必要です。  
   
- ATL 実装[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)で 2 つのフェーズ。  
+ ATL 実装[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)で 2 つのフェーズ。  
   
 -   [CComObject](../atl/reference/ccomobject-class.md)、 [CComAggObject](../atl/reference/ccomaggobject-class.md)、または[CComPolyObject](../atl/reference/ccompolyobject-class.md)実装、`IUnknown`メソッド。  
   

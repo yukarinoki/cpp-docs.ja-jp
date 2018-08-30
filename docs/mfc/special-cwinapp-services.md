@@ -1,5 +1,5 @@
 ---
-title: CWinApp サービス |Microsoft ドキュメント
+title: CWinApp サービス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,51 +40,51 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd6af2ab524711c591772c28ed47742e6aa406ad
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: beac10db09fefdf38d8e038855eb62ba8af80dbe
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955873"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218613"
 ---
 # <a name="special-cwinapp-services"></a>CWinApp のその他のサービス
-メッセージ ループの実行をアプリケーションを初期化し、その後をクリーンアップする機会を提供することだけでなく[CWinApp](../mfc/reference/cwinapp-class.md)他のいくつかのサービスを提供します。  
+メッセージ ループの実行をアプリケーションの初期化し、その後、クリーンアップする機会を提供することだけでなく[CWinApp](../mfc/reference/cwinapp-class.md)いくつかのサービスを提供します。  
   
 ##  <a name="_core_shell_registration"></a> シェル登録  
- 既定では、MFC アプリケーション ウィザードでは、ファイル エクスプ ローラーまたはファイル マネージャーでダブルクリックして、作成したアプリケーションをデータ ファイルを開くユーザーは、します。 MFC アプリケーション ウィザードが呼び出しを追加するアプリケーションが MDI アプリケーションであり、アプリケーションが作成されるファイルの拡張子を指定する場合、 [RegisterShellFileTypes](../mfc/reference/cwinapp-class.md#registershellfiletypes)と[EnableShellOpen](../mfc/reference/cwinapp-class.md#enableshellopen)のメンバー関数は[CWinApp](../mfc/reference/cwinapp-class.md)を`InitInstance`を書き込むオーバーライドします。  
+ MFC アプリケーション ウィザードは既定では、により、ユーザーはファイル エクスプ ローラーまたはファイル マネージャーでダブルクリックして、作成したアプリケーション データ ファイルを開きます。 MFC アプリケーション ウィザードが呼び出しを追加するアプリケーションが MDI アプリケーションであり、アプリケーションが作成されるファイルの拡張子を指定する場合、 [RegisterShellFileTypes](../mfc/reference/cwinapp-class.md#registershellfiletypes)と[EnableShellOpen](../mfc/reference/cwinapp-class.md#enableshellopen)のメンバー関数[CWinApp](../mfc/reference/cwinapp-class.md)を`InitInstance`書き込みを上書きします。  
   
- `RegisterShellFileTypes` ファイル エクスプ ローラーまたはファイル マネージャーで、アプリケーションのドキュメントの種類を登録します。 関数は、Windows が保持している登録データベースにエントリを追加します。 エントリで、各ドキュメントの種類を登録、ファイル拡張子をファイルの種類に関連付けるを開くには、アプリケーションのコマンドラインを指定、およびその型のドキュメントを開くダイナミック データ エクス (チェンジ DDE) コマンドを指定します。  
+ `RegisterShellFileTypes` ファイル エクスプ ローラーまたはファイル マネージャーで、アプリケーションのドキュメントの種類を登録します。 関数は、Windows を管理する登録データベースにエントリを追加します。 エントリは、各ドキュメントの種類を登録、ファイル拡張子をファイルの種類に関連付けるし、アプリケーションを開くためのコマンドラインを指定したうえで、その種類のドキュメントを開くダイナミック データ エクス (チェンジ DDE) コマンドを指定します。  
   
- `EnableShellOpen` アプリケーションで、ユーザーが選択したファイルを開くには、ファイル エクスプ ローラーまたはファイル マネージャーから DDE コマンドを受け取るようにすることで、プロセスを完了します。  
+ `EnableShellOpen` DDE コマンドをユーザーが選択したファイルを開くには、ファイル エクスプ ローラーまたはファイル マネージャーから受信するアプリケーションを許可することで、プロセスを完了します。  
   
- この自動登録のサポートで`CWinApp`アプリケーションを使用して .reg ファイルを出荷するまたは特殊なインストール作業を行う必要があります。  
+ この自動登録のサポートで`CWinApp`.reg ファイルは、アプリケーションと共に出荷するまたは特殊なインストール作業を行う必要がなくなります。  
   
- GDI + アプリケーションを初期化するかどうか (を呼び出して[GdiplusStartup](https://msdn.microsoft.com/library/ms534077)で、 [InitInstance](../mfc/reference/cwinapp-class.md#initinstance)関数)、GDI + のバック グラウンド スレッドを抑制する必要があります。  
+ アプリの GDI + を初期化するかどうか (呼び出して[GdiplusStartup](/windows/desktop/api/gdiplusinit/nf-gdiplusinit-gdiplusstartup)で、 [InitInstance](../mfc/reference/cwinapp-class.md#initinstance)関数)、GDI + のバック グラウンド スレッドを抑制する必要があります。  
   
- これを行うことができます、`SuppressBackgroundThread`のメンバー、 [GdiplusStartupInput](https://msdn.microsoft.com/library/ms534067)構造の**TRUE**です。 スレッド、バック グラウンド GDI + を抑制する場合、`NotificationHook`と`NotificationUnhook`呼び出しが行われる直前に入力して、アプリケーションのメッセージ ループを終了します。 これらの呼び出しの詳細については、次を参照してください。 [GdiplusStartupOutput](https://msdn.microsoft.com/library/ms534068)です。 そのためを呼び出すことをおすすめ`GdiplusStartup`フック通知関数は仮想関数のオーバーライドで、 [:run](../mfc/reference/cwinapp-class.md#run)次のように。  
+ 設定してこれを行う、`SuppressBackgroundThread`のメンバー、 [GdiplusStartupInput](/windows/desktop/api/gdiplusinit/ns-gdiplusinit-gdiplusstartupinput)構造体を**TRUE**します。 ときに、スレッドがバック グラウンド GDI + の抑制、`NotificationHook`と`NotificationUnhook`呼び出しが行われる直前に入力し、アプリケーションのメッセージ ループを終了します。 これらの呼び出しの詳細については、次を参照してください。 [GdiplusStartupOutput](/windows/desktop/api/gdiplusinit/ns-gdiplusinit-gdiplusstartupoutput)します。 そのため、適してを呼び出す`GdiplusStartup`フックの通知関数は仮想関数のオーバーライドでは[使わ](../mfc/reference/cwinapp-class.md#run)以下に示すように。  
   
  [!code-cpp[NVC_MFCDocView#6](../mfc/codesnippet/cpp/special-cwinapp-services_1.cpp)]  
   
- 場合は、バック グラウンド スレッド GDI + を抑制しないでください DDE コマンド処理の途中でに発行できるアプリケーションのメイン ウィンドウが作成される前にします。 シェルによって発行された DDE コマンド処理の途中で中止できます、エラー メッセージします。  
+ 場合は、バック グラウンド スレッド GDI + を抑制しないでください DDE コマンド処理の途中で実行できるアプリケーションにメイン ウィンドウが作成される前に。 シェルによって発行された DDE コマンドことができますが途中で中止、エラー メッセージします。  
   
 ##  <a name="_core_file_manager_drag_and_drop"></a> ファイル マネージャーでのドラッグ アンド ドロップ  
- ファイルは、ファイル マネージャーまたはファイル エクスプ ローラーで、ファイル ビュー ウィンドウから、アプリケーションのウィンドウにドラッグできます。 アプリケーションでしたファイル名を取得し、それらのファイルの MDI 子ウィンドウを開く場所 MDI アプリケーションのメイン ウィンドウにドラッグできる 1 つまたは複数のファイルを有効にすることがありますなど。  
+ ファイルは、ファイル マネージャーまたはファイル エクスプ ローラーで、ファイル ビュー ウィンドウから、アプリケーションのウィンドウにドラッグできます。 アプリケーションでしたファイル名を取得し、それらのファイルの MDI 子ウィンドウを開き、MDI アプリケーションのメイン ウィンドウにドラッグする 1 つまたは複数のファイルなどを有効にする場合があります。  
   
- ファイルのドラッグを有効にし、アプリケーションの削除、MFC アプリケーション ウィザードがへの呼び出しを書き込み、 [CWnd](../mfc/reference/cwnd-class.md)メンバー関数は、 [DragAcceptFiles](../mfc/reference/cwnd-class.md#dragacceptfiles)でメイン フレーム ウィンドウの`InitInstance`です。 ドラッグ アンド ドロップ機能を実装したくない場合は、その呼び出しを削除できます。  
+ ファイルのドラッグを有効にし、アプリケーションの削除、MFC アプリケーション ウィザードがへの呼び出しを書き込みます、 [CWnd](../mfc/reference/cwnd-class.md)メンバー関数は[DragAcceptFiles](../mfc/reference/cwnd-class.md#dragacceptfiles)でメイン フレーム ウィンドウ、`InitInstance`します。 ドラッグ アンド ドロップ機能を実装する必要がない場合は、その呼び出しを削除できます。  
   
 > [!NOTE]
->  一般的なドラッグ アンド ドロップ機能を実装することもできます。-データ間またはドキュメント内でのドラッグ — ole です。 については、記事を参照してください。[ドラッグ アンド ドロップ (OLE)](../mfc/drag-and-drop-ole.md)です。  
+>  全般的なドラッグ アンド ドロップ機能を実装することもできます。- またはドキュメント内の間でデータをドラッグする — ole します。 については、この記事を参照してください。[ドラッグ アンド ドロップ (OLE)](../mfc/drag-and-drop-ole.md)します。  
   
-##  <a name="_core_keeping_track_of_the_most_recently_used_documents"></a> 最近使ったドキュメントのほとんどの追跡  
- ように、ユーザーは、開くし、ファイルを閉じ、アプリケーション オブジェクトの追跡、4 つの最近使用したファイルです。 これらのファイルの名前が [ファイル] メニューに追加され、変更されるときに更新します。 フレームワークは、レジストリまたは .ini ファイルに、プロジェクトと同じ名前で、これらのファイル名を格納し、アプリケーションの起動時にファイルを読み取るにします。 `InitInstance`オーバーライドへの呼び出しが含まれていますが、MFC アプリケーション ウィザードが作成される、 [CWinApp](../mfc/reference/cwinapp-class.md)メンバー関数は、 [LoadStdProfileSettings](../mfc/reference/cwinapp-class.md#loadstdprofilesettings)情報をレジストリまたは .ini からが読み込まれますファイルは、最もを最近などファイル名を使用します。  
+##  <a name="_core_keeping_track_of_the_most_recently_used_documents"></a> 最近使ったドキュメントのほとんどの管理  
+ ように、ユーザーは、開くし、ファイルを閉じ、アプリケーション オブジェクトの追跡、4 つの最近使用したファイル。 これらのファイル名では、ファイル メニューに追加され、変更するときに更新します。 フレームワークは、レジストリまたは .ini ファイルに、プロジェクトと同じ名前では、これらのファイル名を格納しに、アプリケーションの起動時に、ファイルから読み取らします。 `InitInstance`オーバーライドへの呼び出しを含む MFC アプリケーション ウィザードが作成される、 [CWinApp](../mfc/reference/cwinapp-class.md)メンバー関数は[LoadStdProfileSettings](../mfc/reference/cwinapp-class.md#loadstdprofilesettings)情報をレジストリまたは .ini からが読み込まれますファイルには、ファイル名を使用群など。  
   
  これらのエントリは、次のように格納されます。  
   
--   Windows NT、2000、およびそれ以降、Windows のレジストリ キー値が格納されます。  
+-   Windows nt、Windows 2000、およびそれ以降、レジストリ キー値が格納されます。  
   
--   Windows 3.x、値は、WIN に格納します。INI ファイルです。  
+-   Windows で勝利に 3.x、値が格納されます。INI ファイルです。  
   
--   Windows 95 以降では、値は、WIN のキャッシュされたバージョンに格納されます。INI です。  
+-   Windows 95 以降では、値は、WIN のキャッシュされたバージョンに格納されます。INI します。  
   
 ## <a name="see-also"></a>関連項目  
  [CWinApp: アプリケーション クラス](../mfc/cwinapp-the-application-class.md)

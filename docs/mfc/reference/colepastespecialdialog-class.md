@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42f4a45dc2b49b784f74175203e892c253ea1f5e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9c3dff52e3607125493c956d46e1bd38c399565e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851434"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213340"
 ---
 # <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog クラス
 OLE の [形式を選択して貼り付け] ダイアログ ボックス用に使用されます。  
@@ -85,7 +85,7 @@ class COlePasteSpecialDialog : public COleDialog
 ## <a name="remarks"></a>Remarks  
  クラスのオブジェクトを作成`COlePasteSpecialDialog`をこのダイアログ ボックスを呼び出す場合します。 後に、`COlePasteSpecialDialog`オブジェクトが構築された、使用することができます、 [AddFormat](#addformat)と[AddStandardFormats](#addstandardformats)  ダイアログ ボックスに、クリップボードの形式を追加するメンバー関数。 使用することも、[塗りつぶす対象となる](#m_ps)値やダイアログ ボックスのコントロールの状態を初期化するためにします。 `m_ps`構造体には、型を選択して貼り付けします。  
   
- 詳細については、次を参照してください。、[選択して貼り付け](http://msdn.microsoft.com/library/windows/desktop/ms692434)Windows SDK の構造体。  
+ 詳細については、次を参照してください。、[選択して貼り付け](/windows/desktop/api/oledlg/ns-oledlg-tagoleuipastespeciala)Windows SDK の構造体。  
   
  OLE に固有のダイアログ ボックスの詳細については、記事を参照してください。 [OLE のダイアログ ボックス](../../mfc/dialog-boxes-in-ole.md)します。  
   
@@ -104,7 +104,7 @@ class COlePasteSpecialDialog : public COleDialog
   
  `COlePasteSpecialDialog`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxodlgs.h  
   
 ##  <a name="addformat"></a>  COlePasteSpecialDialog::AddFormat  
@@ -157,9 +157,9 @@ void AddFormat(
 ### <a name="remarks"></a>Remarks  
  この関数は、追加されているテキストまたは呼び出すなどの標準的な形式か、カスタム形式、アプリケーションがシステムに登録されているを呼び出すことができます。 データ オブジェクトを貼り付け、アプリケーションの詳細については、記事を参照してください。[データ オブジェクトとデータ ソース: 操作](../../mfc/data-objects-and-data-sources-manipulation.md)します。  
   
- 詳細については、次を参照してください。、 [TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227)列挙型、および[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK の構造体。  
+ 詳細については、次を参照してください。、 [TYMED](/windows/desktop/api/objidl/ne-objidl-tagtymed)列挙型、および[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK の構造体。  
   
- 詳細については、次を参照してください。、 [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) Windows SDK の種類を列挙します。  
+ 詳細については、次を参照してください。、 [OLEUIPASTEFLAG](/windows/desktop/api/oledlg/ne-oledlg-tagoleuipasteflag) Windows SDK の種類を列挙します。  
   
 ##  <a name="addlinkentry"></a>  COlePasteSpecialDialog::AddLinkEntry  
  サポートされているクリップボード形式の一覧に新しいエントリを追加します。  
@@ -173,7 +173,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
  追加するクリップボード形式。  
   
 ### <a name="return-value"></a>戻り値  
- [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172)構造体の新しいリンクのエントリの情報を格納します。  
+ [OLEUIPASTEFLAG](/windows/desktop/api/oledlg/ne-oledlg-tagoleuipasteflag)構造体の新しいリンクのエントリの情報を格納します。  
   
 ##  <a name="addstandardformats"></a>  COlePasteSpecialDialog::AddStandardFormats  
  貼り付け操作で、アプリケーションがサポートできる形式の一覧に、次のクリップボード形式を追加するには、この関数を呼び出します。  
@@ -231,7 +231,7 @@ COlePasteSpecialDialog(
 ### <a name="remarks"></a>Remarks  
  この関数は、`COlePasteSpecialDialog`オブジェクト。 ダイアログ ボックスを表示するには[DoModal](#domodal)関数。  
   
- 詳細については、次を参照してください。、 [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) Windows SDK の種類を列挙します。  
+ 詳細については、次を参照してください。、 [OLEUIPASTEFLAG](/windows/desktop/api/oledlg/ne-oledlg-tagoleuipasteflag) Windows SDK の種類を列挙します。  
   
 ##  <a name="createitem"></a>  静的オブジェクト  
  貼り付け ダイアログ ボックスで選択された新しい項目を作成します。  
@@ -264,7 +264,7 @@ virtual INT_PTR DoModal();
   
 - ユーザーには、ダイアログ ボックスが取り消された場合は IDCANCEL。  
   
-- IDABORT 場合は、エラーが発生しました。 IDABORT が返される場合、`COleDialog::GetLastError`発生したエラーの種類に関する詳細を取得します。 考えられるエラーの一覧については、次を参照してください。、[選択して貼り付け](http://msdn.microsoft.com/library/windows/desktop/ms694512)Windows SDK 内の関数。  
+- IDABORT 場合は、エラーが発生しました。 IDABORT が返される場合、`COleDialog::GetLastError`発生したエラーの種類に関する詳細を取得します。 考えられるエラーの一覧については、次を参照してください。、[選択して貼り付け](/windows/desktop/api/oledlg/nf-oledlg-oleuipastespeciala)Windows SDK 内の関数。  
   
 ### <a name="remarks"></a>Remarks  
  メンバーを設定して、さまざまなダイアログ ボックス コントロールを初期化する場合、[塗りつぶす対象となる](#m_ps)構造体を呼び出す前に、これを行う必要があります`DoModal`はダイアログ オブジェクトを構築します。  
@@ -288,7 +288,7 @@ DVASPECT GetDrawAspect() const;
 ### <a name="remarks"></a>Remarks  
  この関数の後にのみ呼び出す[DoModal](#domodal) IDOK を返します。  
   
- 描画の側面の詳細については、次を参照してください。、 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK の構造体。  
+ 描画の側面の詳細については、次を参照してください。、 [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK の構造体。  
   
 ##  <a name="geticonicmetafile"></a>  COlePasteSpecialDialog::GetIconicMetafile  
  ユーザーが選択した項目に関連付けられているメタファイルを取得します。  
@@ -311,7 +311,7 @@ int GetPasteIndex() const;
  配列のインデックス`OLEUIPASTEENTRY`ユーザーによって選択された構造体。 貼り付け操作を実行するときに、選択されたインデックスに対応する形式を使用する必要があります。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。、 [OLEUIPASTEENTRY](http://msdn.microsoft.com/library/windows/desktop/ms690165) Windows SDK の構造体。  
+ 詳細については、次を参照してください。、 [OLEUIPASTEENTRY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuipasteentrya) Windows SDK の構造体。  
   
 ##  <a name="getselectiontype"></a>  COlePasteSpecialDialog::GetSelectionType  
  ユーザーの選択の種類を決定します。  
@@ -355,7 +355,7 @@ OLEUIPASTESPECIAL m_ps;
 ### <a name="remarks"></a>Remarks  
  この構造体のメンバーは、直接またはメンバー関数を使用して変更できます。  
   
- 詳細については、次を参照してください。、[選択して貼り付け](http://msdn.microsoft.com/library/windows/desktop/ms692434)Windows SDK の構造体。  
+ 詳細については、次を参照してください。、[選択して貼り付け](/windows/desktop/api/oledlg/ns-oledlg-tagoleuipastespeciala)Windows SDK の構造体。  
   
 ## <a name="see-also"></a>関連項目  
  [MFC サンプルの OCLIENT](../../visual-cpp-samples.md)   

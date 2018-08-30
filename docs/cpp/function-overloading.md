@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f57ae6a7d084a497ec41c9b66b314ad1fdb3e7fc
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 16d9123125cc6cb01ee5dfb03f771e263d9915f2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406572"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221441"
 ---
 # <a name="function-overloading"></a>関数のオーバーロード
 C++ では、同じスコープ内で同じ名前の複数の関数を指定できます。 これらと呼ばれる*オーバー ロードされた*関数。 オーバー ロードされた関数では、関数の型と引数の数に応じて、異なるセマンティクスを指定できます。 
@@ -43,8 +43,9 @@ C++ では、同じスコープ内で同じ名前の複数の関数を指定で�
 |**const**または**揮発性**|[はい]、関数全体に適用する場合|
 |[ref-qualifier](#ref-qualifier)|[はい]|  
   
-## <a name="example"></a>例  
- 次の例は、どのようにオーバーロードが使用できるかを示しています。  
+## <a name="example"></a>例
+
+次の例は、どのようにオーバーロードが使用できるかを示しています。  
   
 ```cpp 
 // function_overloading.cpp  
@@ -270,9 +271,9 @@ volatile Over&
   
 1.  完全一致。 関数の呼び出しに使用された型と関数プロトタイプで宣言された型の完全な一致は、常に最適な一致です。 単純変換のシーケンスは、完全一致として分類されます。 ただし、次の変換を実行しないシーケンスは、実行するシーケンスよりも優先順位が高いと見なされます。  
   
-    -   ポインターへのポインターから**const** (`type` **\*** に**const** `type` **\***).  
+    -   ポインターへのポインターから**const** (`type` <strong>\*</strong>に**const** `type` <strong>\*</strong>).  
   
-    -   ポインターへのポインターから**揮発性**(`type` **\*** に**揮発性** `type` **\***).  
+    -   ポインターへのポインターから**揮発性**(`type` <strong>\*</strong>に**揮発性** `type` <strong>\*</strong>).  
   
     -   参照への参照から**const** (`type` **&** に**const** `type` **&**).  
   

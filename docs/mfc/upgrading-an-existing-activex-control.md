@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 175b64b40ab2fd242e3e430cf99d761f577835cb
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: ca5a5e4d7bda9fe14362696d44137273cc020c7f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026421"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203131"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>既存の ActiveX コントロールのアップグレード
 既存の ActiveX コントロール (以前の OLE コントロール) 変更しなくても、インターネットで使用できます。 ただし、それぞれのパフォーマンスを向上させるためにコントロールを変更することがあります。 Web ページ上にコントロールを使用する場合は、追加の考慮事項です。 .Ocx ファイルとすべてのサポート ファイルは、ターゲット コンピューターである必要がありますか、インターネット経由でダウンロードします。 これにより、コードのサイズと時間の重要な考慮事項をダウンロードします。 ダウンロードは、署名された .cab ファイルにパッケージ化することができます。 コントロール、スクリプトの安全性および初期化に対して安全としてマークできます。  
@@ -89,7 +89,7 @@ CODEBASE="http://example.microsoft.com/acontrol.cab#version=1,
   
  キャビネット ファイルが指す`CODEBASE`ActiveX コントロールの .ocx ファイルとそのインストールを制御する .inf ファイルに含める必要があります。 キャビネット ファイル、コントロールのファイルの名前を指定することで、.inf ファイルを作成します。 既にこのキャビネット ファイルで、システムに存在する依存 Dll を含めないでください。 たとえば、MFC Dll が別のキャビネット ファイルにパッケージ化され、制御の .inf ファイルで参照します。  
   
- CAB ファイルを作成する方法の詳細については、次を参照してください。 [CAB ファイルを作成する](http://msdn.microsoft.com/cc52fd09-bdf6-4410-a693-149a308f36a3)します。  
+ CAB ファイルを作成する方法の詳細については、次を参照してください。 [CAB ファイルを作成する](https://msdn.microsoft.com/cc52fd09-bdf6-4410-a693-149a308f36a3)します。  
   
 ### <a name="the-inf-file"></a>INF ファイル  
  次の例、spindial.inf、リスト サポート ファイルとバージョンについては、必要な MFC Spindial を制御します。 MFC Dll の場所は、Microsoft Web サイトに注意してください。 Mfc42.cab が提供され、Microsoft によって署名されました。  
@@ -221,7 +221,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
 ##  <a name="_core_signing_code"></a> コードの署名  
  コード署名は、コードのソースを識別するために設計されていて、署名されたので、コードが変更されていないことを保証するためにします。 ブラウザーの安全性設定によって、コードをダウンロードする前に、ユーザーを警告可能性があります。 ユーザーは、特定の証明書の所有者またはそれらによって署名された大文字と小文字のコードが警告なしにダウンロードが信頼された企業を信頼する選択できます。 コードは、改ざんを回避するためにデジタル署名します。  
   
- 信頼の警告メッセージを表示せず、コントロールを自動的にダウンロードできるように、最終的なコードが署名を確認します。 コードに署名する方法の詳細については、Authenticode ActiveX sdk に関するドキュメントを確認しを参照してください[CAB ファイルへの署名](http://msdn.microsoft.com/04d8b47a-8f1c-4b54-ab90-730fcdc03747)します。  
+ 信頼の警告メッセージを表示せず、コントロールを自動的にダウンロードできるように、最終的なコードが署名を確認します。 コードに署名する方法の詳細については、Authenticode ActiveX sdk に関するドキュメントを確認しを参照してください[CAB ファイルへの署名](https://msdn.microsoft.com/04d8b47a-8f1c-4b54-ab90-730fcdc03747)します。  
   
  信頼とブラウザーの安全性レベル設定によって、証明書が署名した個人または会社を識別するために表示されます。 安全性レベルが none、署名されたコントロールの証明書の所有者が信頼されている場合や、証明書は表示されません。 参照してください[Internet Explorer ブラウザーの安全性レベルと動作を制御](#_core_internet_explorer_browser_safety_levels_and_control_behavior)コントロールをダウンロードするかどうかと証明書の表示のブラウザーの安全性設定の特定方法の詳細について。  
   

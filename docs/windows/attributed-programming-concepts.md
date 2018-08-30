@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2fe6616cd22ee9de9ffbb6b3a26620a7ccdebc63
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 223359e10ef0e64860a611079abf9e7e83a26fe1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598078"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222809"
 ---
 # <a name="attributed-programming-concepts"></a>属性付きプログラミングの概念
 
 Visual C には、さまざまな属性をプログラムで使用できるようにマテリアルが含まれています。 Visual C の新機能の属性は、COM プログラミングおよび .NET Framework 共通言語ランタイムの開発を容易に設計されています。 ソース ファイルで属性を追加するときに、コンパイラはプロバイダーのダイナミック リンク ライブラリ (DLL) コードを挿入または生成されたオブジェクト ファイル内のコードを変更するには機能します。 .Idl ファイル、インターフェイス、タイプ ライブラリ、およびその他の COM 要素の作成を支援する属性があります。 統合開発環境 (IDE) で属性は、[プロパティ] ウィンドウと、ウィザードによってサポートします。
 
-属性は、COM オブジェクトを記述するために必要な詳細なコーディングの一部をなくすため中に、バック グラウンド必要があります。 [COM fundamentals](http://msdn.microsoft.com/library/windows/desktop/ms694363)に最大限に活用します。
+属性は、COM オブジェクトを記述するために必要な詳細なコーディングの一部をなくすため中に、バック グラウンド必要があります。 [COM fundamentals](/windows/desktop/com/the-component-object-model)に最大限に活用します。
 
 ## <a name="in-this-section"></a>このセクションの内容
 

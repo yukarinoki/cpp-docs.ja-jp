@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e9d212e74f77d21efa1b2ed030f8a1446d111fc
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 74f1f0f88828b5d6355c692aa8eaeecd5869bf57
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882950"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202935"
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Unicode とマルチバイト文字セット (MBCS: Multibyte Character Set) のサポート
 
@@ -67,9 +67,9 @@ MFC クラス ライブラリ全体は、Unicode 文字とワイド文字に utf
 
    - 使用する TCHAR を使用して、 **char**します。
 
-   - 使用する LPTSTR を使用して、 **char\*** します。
+   - 使用する LPTSTR を使用して、 **char**<strong>\*</strong>します。
 
-   - 使用する LPCTSTR を使用して、 **const char\*** します。 `CString` 演算子の間で変換に LPCTSTR を提供`CString`LPCTSTR とします。
+   - 使用する LPCTSTR を使用して、 **const char**<strong>\*</strong>します。 `CString` 演算子の間で変換に LPCTSTR を提供`CString`LPCTSTR とします。
 
 `CString` のコンストラクター、代入演算子、比較演算子は Unicode を適切に処理します。
 
@@ -101,7 +101,7 @@ DBCS では、文字列の中に任意の ANSI の 1 バイト文字と 2 バイ
 
 すべてのランタイム文字列処理ルーチンの汎用テキスト関数マッピングは、後ほど[C ランタイム ライブラリ リファレンス](../c-runtime-library/c-run-time-library-reference.md)します。 一覧については、次を参照してください。[国際化](../c-runtime-library/internationalization.md)します。
 
-同様に、`CString`メソッドは、汎用的なデータ型マッピングを使用して実装されます。 TCHAR を使用する MFC MBCS および Unicode の両方を有効にするには、 **char**または`wchar_t`の LPTSTR **char\*** または`wchar_t*`とに LPCTSTR **const char\*** または`const wchar_t*`します。 これによって、MBCS または Unicode への正しいマッピングが確保されます。
+同様に、`CString`メソッドは、汎用的なデータ型マッピングを使用して実装されます。 TCHAR を使用する MFC MBCS および Unicode の両方を有効にするには、 **char**または`wchar_t`の LPTSTR **char** <strong>\*</strong>または`wchar_t*`、およびのLPCTSTR**const char** <strong>\*</strong>または`const wchar_t*`します。 これによって、MBCS または Unicode への正しいマッピングが確保されます。
 
 ## <a name="see-also"></a>関連項目
 

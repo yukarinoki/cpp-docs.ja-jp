@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9367e92110ba7fb232e89b9d950e491e5e8da5c7
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: b8dda27c3f1c535f60856bd9d4a3abb9a51a1a32
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407170"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219921"
 ---
 # <a name="comerrorerrormessage"></a>_com_error::ErrorMessage
 **Microsoft 固有の仕様**  
@@ -38,7 +38,7 @@ const TCHAR * ErrorMessage( ) const throw( );
  内に記録された HRESULT の文字列メッセージを返します、`_com_error`オブジェクト。 HRESULT がマップされた 16 ビット[wCode](../cpp/com-error-wcode.md)、汎用メッセージでは、"`IDispatch error #<wCode>`"が返されます。 メッセージがない場合、一般的なメッセージ "`Unknown error #<hresult>`" が返されます。 返される文字列とは、Unicode または _UNICODE マクロの状態に応じて、マルチバイト文字列です。  
   
 ## <a name="remarks"></a>Remarks  
- 内に記録された HRESULT の適切なシステム メッセージのテキストを取得、`_com_error`オブジェクト。 システム メッセージのテキストは、Win32 を呼び出すことによって取得[FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351)関数。 返される文字列は `FormatMessage` API によって割り当てられ、`_com_error` オブジェクトが破棄されるときに解放されます。  
+ 内に記録された HRESULT の適切なシステム メッセージのテキストを取得、`_com_error`オブジェクト。 システム メッセージのテキストは、Win32 を呼び出すことによって取得[FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage)関数。 返される文字列は `FormatMessage` API によって割り当てられ、`_com_error` オブジェクトが破棄されるときに解放されます。  
   
  **Microsoft 固有の仕様はここまで**  
   

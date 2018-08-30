@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3132 |Microsoft ドキュメント
+title: コンパイラ エラー C3132 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb2ecc863bc06542e4bb2e78e71ce95279c004f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb32d65b119330e49773118e38e1c8b618d03cfc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252388"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204759"
 ---
 # <a name="compiler-error-c3132"></a>コンパイラ エラー C3132
-' 関数のパラメーター ': パラメーター配列は、'1 次元配列のマネージ' 型の仮引数にのみ適用できます  
+' 関数のパラメーター ': パラメーター配列は、型 '1 次元マネージ配列の仮引数にのみ適用できます  
   
- [ParamArray](https://msdn.microsoft.com/en-us/library/system.paramarrayattribute.aspx)属性が 1 次元配列をパラメーターに適用されました。  
+ [ParamArray](https://msdn.microsoft.com/library/system.paramarrayattribute.aspx)属性が 1 次元配列パラメーターに適用されました。  
   
  次の例では、C3132 が生成されます。  
   

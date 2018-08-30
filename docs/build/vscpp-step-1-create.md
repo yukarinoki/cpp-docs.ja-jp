@@ -15,20 +15,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35b7b896dfb2a4c9dd37a9f59476cbc7f23c3902
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7875d0e5c142304077ddcd3f7a1f5554da6d6248
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391234"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131037"
 ---
 # <a name="create-a-c-console-app-project"></a>C++ コンソール アプリ プロジェクトを作成します。
 
 C++ プログラマのためのスタート地点は通常、「Hello, world!」 コマンドラインで実行されるアプリケーションです。 これは、このステップの Visual Studio で作成することができます。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
-- コンピューターにインストールされ実行されている C++ ワークロードなデスクトップ開発の Visual Studio を持っていること。 まだインストールされていない場合は [Visual Studio での C++ のインストール サポート](../build/vscpp-step-0-installation.md)
+- コンピューターに C ++ によるデスクトップ開発のワークロードを備えた Visual Studio をインストールして実行します。 これがまだインストールされていない場合を参照してください。 [Visual Studio 2017 での C++ のインストール サポート](../build/vscpp-step-0-installation.md)します。
 
 ## <a name="create-your-app-project"></a>アプリ プロジェクトを作成します。
 

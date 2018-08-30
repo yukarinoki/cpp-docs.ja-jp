@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5df81fa3d47005fc80bdb3b1c78cba050775cda6
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 4ab667e372c8118a83b7a93444abbfbc5c19b6e0
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42540279"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131519"
 ---
 # <a name="compiling-and-linking-multithread-programs"></a>マルチスレッド プログラムのコンパイルとリンク
-Bounce.c プログラムがで導入された[マルチ スレッドの C サンプル プログラム](../parallel/sample-multithread-c-program.md)します。  
+Bounce.c プログラムがで導入された[マルチ スレッドの C サンプル プログラム](sample-multithread-c-program.md)します。  
   
 プログラムはコンパイルが既定でマルチ スレッドです。  
   
@@ -54,4 +54,4 @@ Bounce.c プログラムがで導入された[マルチ スレッドの C サン
   
 ## <a name="see-also"></a>関連項目
 
-[C と Win32 を使用するマルチスレッド](../parallel/multithreading-with-c-and-win32.md)
+[C と Win32 を使用するマルチスレッド](multithreading-with-c-and-win32.md)

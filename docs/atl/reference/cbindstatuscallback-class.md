@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8df8ef2a0846f5ac90a2adfc53fa64da92930f3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8879c1d304e6d46b7ae3c8c2f1ed535526a5390e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881241"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202463"
 ---
 # <a name="cbindstatuscallback-class"></a>CBindStatusCallback クラス
 このクラスは、`IBindStatusCallback` インターフェイスを実装します。  
@@ -101,10 +101,10 @@ class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx
 |[CBindStatusCallback::m_dwTotalRead](#m_dwtotalread)|読み取られたバイトの合計数。|  
 |[CBindStatusCallback::m_pFunc](#m_pfunc)|関数へのポインターでは、データがあるときに呼び出されます。|  
 |[CBindStatusCallback::m_pT](#m_pt)|非同期データ転送を要求しているオブジェクトへのポインター。|  
-|[CBindStatusCallback::m_spBindCtx](#m_spbindctx)|ポインター、 [IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755)現在のバインド操作のインターフェイス。|  
+|[CBindStatusCallback::m_spBindCtx](#m_spbindctx)|ポインター、 [IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx)現在のバインド操作のインターフェイス。|  
 |[CBindStatusCallback::m_spBinding](#m_spbinding)|ポインター、`IBinding`現在のバインド操作のインターフェイス。|  
-|[CBindStatusCallback::m_spMoniker](#m_spmoniker)|ポインター、 [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)インターフェイスを使用する URL。|  
-|[CBindStatusCallback::m_spStream](#m_spstream)|ポインター、 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)データ転送のインターフェイス。|  
+|[CBindStatusCallback::m_spMoniker](#m_spmoniker)|ポインター、 [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker)インターフェイスを使用する URL。|  
+|[CBindStatusCallback::m_spStream](#m_spstream)|ポインター、 [IStream](/windows/desktop/api/objidl/nn-objidl-istream)データ転送のインターフェイス。|  
   
 ## <a name="remarks"></a>Remarks  
  `CBindStatusCallback` クラスは、`IBindStatusCallback` インターフェイスを実装します。 `IBindStatusCallback` 非同期データ転送をから通知を受信できるように、アプリケーションで実装する必要があります。 システムによって提供される非同期モニカーを使用して`IBindStatusCallback`非同期データに関する情報を送受信する方法と、オブジェクトの間を転送します。  
@@ -124,7 +124,7 @@ class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx
   
  `CBindStatusCallback`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlctl.h  
   
 ##  <a name="cbindstatuscallback"></a>  CBindStatusCallback::CBindStatusCallback  
@@ -278,7 +278,7 @@ T* m_pT;
  `CBindStatusCallback`オブジェクトは、このオブジェクトのクラスでテンプレート化されます。  
   
 ##  <a name="m_spbindctx"></a>  CBindStatusCallback::m_spBindCtx  
- ポインター、 [IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755)バインド コンテキスト (特定のモニカー バインド操作に関する情報を格納するオブジェクト) へのアクセスを提供するインターフェイスです。  
+ ポインター、 [IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx)バインド コンテキスト (特定のモニカー バインド操作に関する情報を格納するオブジェクト) へのアクセスを提供するインターフェイスです。  
   
 ```
 CComPtr<IBindCtx> m_spBindCtx;
@@ -298,7 +298,7 @@ CComPtr<IBinding> m_spBinding;
  初期化された`OnStartBinding`でリリースされた`OnStopBinding`します。  
   
 ##  <a name="m_spmoniker"></a>  CBindStatusCallback::m_spMoniker  
- ポインター、 [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)インターフェイスを使用する URL。  
+ ポインター、 [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker)インターフェイスを使用する URL。  
   
 ```
 CComPtr<IMoniker> m_spMoniker;
@@ -308,7 +308,7 @@ CComPtr<IMoniker> m_spMoniker;
  初期化された`StartAsyncDownload`します。  
   
 ##  <a name="m_spstream"></a>  CBindStatusCallback::m_spStream  
- ポインター、 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)現在のバインド操作のインターフェイス。  
+ ポインター、 [IStream](/windows/desktop/api/objidl/nn-objidl-istream)現在のバインド操作のインターフェイス。  
   
 ```
 CComPtr<IStream> m_spStream;
@@ -336,10 +336,10 @@ STDMETHOD(
  [in]バインディングの当初から使用可能なデータのバイト単位で累積時間。 データの量に関連がないこと、または特定の量が利用できないことを示す、0 にすることができます。  
   
  *pformatetc*  
- [in]ポインター、 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682242)使用可能なデータの形式を格納する構造体。 形式がない場合は、CF_NULL を指定できます。  
+ [in]ポインター、 [FORMATETC](/windows/desktop/com/the-formatetc-structure)使用可能なデータの形式を格納する構造体。 形式がない場合は、CF_NULL を指定できます。  
   
  *pstgmed*  
- [in]ポインター、 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms695269)今すぐに利用可能な実際のデータを保持する構造体。  
+ [in]ポインター、 [STGMEDIUM](/windows/desktop/com/the-stgmedium-structure)今すぐに利用可能な実際のデータを保持する構造体。  
   
 ### <a name="return-value"></a>戻り値  
  標準の HRESULT 値の 1 つ。  

@@ -1,5 +1,5 @@
 ---
-title: COM の概要 |Microsoft ドキュメント
+title: COM の概要 |Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -14,31 +14,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 938d0c45cae5ec9a2988f77f539af1a3d5513b83
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5a408ecb1a96aab284a4ac8c7cdd59909ed7c0ea
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356176"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216524"
 ---
 # <a name="introduction-to-com"></a>COM の概要
-COM では、どの OLE と ActiveX コントロールのビルドで、基本的な「オブジェクト モデル」がします。 COM は、他のコンポーネントおよびホスト アプリケーションには、その機能を公開するオブジェクトを許可します。 オブジェクトがそれ自体を公開する方法と、プロセス間やネットワークのこの公開の動作を定義します。 COM では、オブジェクトのライフ サイクルも定義します。  
+COM は、どの ActiveX コントロールと OLE のビルドで、基本的な「オブジェクト モデル」。 COM は、他のコンポーネントやアプリケーションをホストする機能を公開するオブジェクトを許可します。 オブジェクトがそれ自体を公開する方法と、プロセス間で、ネットワーク間でのこの公開の動作を定義します。 COM には、オブジェクトのライフ サイクルも定義します。  
   
- COM を基本にはこれらの概念を示します。  
+ COM の基盤は、これらの概念です。  
   
 -   [インターフェイス](../atl/interfaces-atl.md)— オブジェクトを使用するには、機能を公開するメカニズムです。  
   
--   [IUnknown](../atl/iunknown.md) -他のすべてのユーザーは基になる基本インターフェイスです。 参照カウントや COM を介して実行メカニズムを照会するインターフェイスを実装します。  
+-   [IUnknown](../atl/iunknown.md) -他のすべてのユーザーは基になる基本インターフェイスです。 参照カウントや COM 経由で実行されているメカニズムのクエリを実行するインターフェイスを実装します。  
   
--   [参照カウント](../atl/reference-counting.md)— 手法を使用するオブジェクト (または、厳密には、インターフェイス) を決定が使用されていない、つまり、自身を削除するために解放場合にします。  
+-   [参照カウント](../atl/reference-counting.md)— されるオブジェクト (または、厳密には、インターフェイス) と、使用しなくなったと決定自体を削除する無料ではそのための手法です。  
   
--   [QueryInterface](../atl/queryinterface.md) -特定のインターフェイスのオブジェクトをクエリに使用する方法です。  
+-   [QueryInterface](../atl/queryinterface.md) -特定のインターフェイスのオブジェクトのクエリに使用する方法。  
   
--   [マーシャ リング](../atl/marshaling.md)— スレッド、プロセス、および場所に依存しないのため、ネットワークの境界を越えて使用するオブジェクトをできる機構です。  
+-   [マーシャ リング](../atl/marshaling.md): スレッド、プロセス、および場所に依存しないのため、ネットワーク境界全体で使用するオブジェクトを使用するメカニズムです。  
   
 -   [集計](../atl/aggregation.md)-別の 1 つのオブジェクトの作成に使用できる方法を使用します。  
   
 ## <a name="see-also"></a>関連項目  
  [COM と ATL の概要](../atl/introduction-to-com-and-atl.md)   
- [コンポーネント オブジェクト モデル](http://msdn.microsoft.com/library/windows/desktop/ms694363)
+ [コンポーネント オブジェクト モデル](/windows/desktop/com/the-component-object-model)
 

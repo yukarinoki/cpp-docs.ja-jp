@@ -42,16 +42,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 316580b0c5f1f46ffa9f4a49ef759b347032fc09
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 17cbcb0313ac0a3e14b45d851ee6f4e98d5ec993
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404650"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206411"
 ---
 # <a name="mbsnbset-mbsnbsetl"></a>_mbsnbset、_mbsnbset_l
 
-最初の設定**n**指定された文字にマルチバイト文字の文字列のバイト数。 これらの関数にはセキュリティを強化したバージョンがあります。「[_mbsnbset_s、_mbsnbset_s_l](mbsnbset-s-mbsnbset-s-l.md)」を参照してください。
+最初の設定**n**指定した文字にマルチバイト文字列のバイト数。 これらの関数にはセキュリティを強化したバージョンがあります。「[_mbsnbset_s、_mbsnbset_s_l](mbsnbset-s-mbsnbset-s-l.md)」を参照してください。
 
 > [!IMPORTANT]
 > この API は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
@@ -90,17 +90,17 @@ unsigned char *_mbsnbset_l(
 
 **_mbsnbset**変更された文字列へのポインターを返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Mbsnbset**と **_mbsnbset_l**関数設定、多くても 1 つ目*カウント*バイトの*str*に*c*. 場合*カウント*がの長さより大きい*str*の長さ*str*の代わりに使用される*カウント*です。 場合*c*で指定された最後のバイトに完全に設定することはできず、マルチバイト文字*カウント*、最後のバイトは空白文字で埋められます。 **_mbsnbset**と **_mbsnbset_l**終端は配置されませんの末尾に null *str*です。
+**_Mbsnbset**と **_mbsnbset_l**関数設定、最大で 1 つ目*カウント*バイトの*str*に*c*. 場合*カウント*がの長さより大きい*str*の長さ*str*の代わりに使用が*カウント*します。 場合*c*マルチバイト文字で指定された最後のバイトに完全に設定することはできません、*カウント*、最後のバイトは空白文字で埋められます。 **_mbsnbset**と **_mbsnbset_l**終端が設定されないの末尾に null *str*します。
 
-**_mbsnbset**と **_mbsnbset_l**に似ていますが **_mbsnset**に設定する点を除いて、*カウント*バイトなく*カウント*文字*c*です。
+**_mbsnbset**と **_mbsnbset_l**のような **_mbsnset**に設定する点を除いて、*カウント*バイトなく*カウント*文字の*c*します。
 
-場合*str*は**NULL**または*カウント*ゼロ、」の説明に従って、この関数は無効なパラメーター例外を生成[パラメーターの検証](../../c-runtime-library/parameter-validation.md). 続けるには、実行が許可された場合**errno**に設定されている**EINVAL** 、関数を返します**NULL**です。 また場合、 *c*は有効なマルチバイト文字ではありません**errno**に設定されている**EINVAL**スペースが代わりに使用します。
+場合*str*は**NULL**または*カウント*ゼロ、」の説明に従って、この関数は無効なパラメーター例外を生成[パラメーターの検証](../../c-runtime-library/parameter-validation.md). 続けるには、実行が許可された場合**errno**に設定されている**EINVAL** 、関数を返します**NULL**します。 また場合、 *c*有効なマルチバイト文字でない**errno**に設定されている**EINVAL**スペースが代わりに使用します。
 
-出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_Mbsnbset**この関数のバージョンは、このロケールに依存する動作の現在のロケールを使用して、 **_mbsnbset_l**バージョンは、代わりに渡されたロケール パラメーターを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_Mbsnbset**この関数のバージョンは、このロケールに依存する動作の現在のロケールを使用、 **_mbsnbset_l**バージョンは、代わりに渡されたロケール パラメーターを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-**セキュリティに関するメモ** この API は、バッファー オーバーランが原因で発生する可能性のある問題の影響を受けます。 バッファー オーバーランは、システムを攻撃するときによく使用される方法であり、その結果、認められていない権限が昇格されます。 詳しくは、「 [バッファー オーバーランの回避](http://msdn.microsoft.com/library/windows/desktop/ms717795)」をご覧ください。
+**セキュリティに関するメモ** この API は、バッファー オーバーランが原因で発生する可能性のある問題の影響を受けます。 バッファー オーバーランは、システムを攻撃するときによく使用される方法であり、その結果、認められていない権限が昇格されます。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -111,7 +111,7 @@ unsigned char *_mbsnbset_l(
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_mbsnbset**|\<mbstring.h>|
 |**_mbsnbset_l**|\<mbstring.h>|

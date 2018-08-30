@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: add135c353366ed54a24c63fcce2101c49d24fe7
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c767b39874ff64082d8533f92a9e006f69835c97
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338582"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205936"
 ---
 # <a name="cclientdc-class"></a>CClientDC クラス
-Windows 関数の呼び出しを行います[GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)構築時に、 [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920)破棄時にします。  
+Windows 関数の呼び出しを行います[GetDC](/windows/desktop/api/winuser/nf-winuser-getdc)構築時に、 [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc)破棄時にします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -62,7 +62,7 @@ class CClientDC : public CDC
   
  `CClientDC`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="cclientdc"></a>  CClientDC::CClientDC  
@@ -77,7 +77,7 @@ explicit CClientDC(CWnd* pWnd);
  デバイス コンテキスト オブジェクトがアクセス クライアント領域を持つウィンドウです。  
   
 ### <a name="remarks"></a>Remarks  
- コンス トラクターは、Windows の関数を呼び出します。 [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)します。  
+ コンス トラクターは、Windows の関数を呼び出します。 [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc)します。  
   
  例外 (型の`CResourceException`) 場合にスローされる、Windows`GetDC`呼び出しは失敗します。 Windows が既に割り当てられているすべての利用可能なデバイス コンテキストの場合は、デバイス コンテキストを使用しないことがあります。 アプリケーションは、共通のディスプレイ コンテキスト Windows の任意の時点でご利用いただけますの 5 つの競合します。  
   

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee4a9d3156a4d5efecd74406b92a1a7bcec48d1f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 4ceba9da99585cb9a88b5fa7fa43d10c9fe02836
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849147"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218800"
 ---
 # <a name="coleipframewnd-class"></a>COleIPFrameWnd クラス
 アプリケーションの埋め込み先編集ウィンドウの基底クラスです。  
@@ -69,7 +69,7 @@ class COleIPFrameWnd : public CFrameWnd
   
  `COleIPFrameWnd`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxole.h  
   
 ##  <a name="coleipframewnd"></a>  COleIPFrameWnd::COleIPFrameWnd  
@@ -80,7 +80,7 @@ COleIPFrameWnd();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。[受け取る](http://msdn.microsoft.com/library/windows/desktop/ms693737)Windows SDK に含まれています。  
+ 詳細については、次を参照してください。[受け取る](/windows/desktop/api/oleidl/ns-oleidl-tagoifi)Windows SDK に含まれています。  
   
 ##  <a name="oncreatecontrolbars"></a>  COleIPFrameWnd::OnCreateControlBars  
  フレームワークによって、`OnCreateControlBars`で埋め込み先編集の項目がアクティブ化時に機能します。  

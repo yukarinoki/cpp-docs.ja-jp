@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 686dbe540301508bd95563b7eafc466a5821a9f6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ae23f641becea5a7bdb47eefbdee59e18c2f27a4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572754"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205596"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase クラス
 このクラスは、メモリの COM ベースのルーチンを使用するスマート ポインター クラスの基盤を提供します。  
@@ -173,10 +173,10 @@ HRESULT CoCreateInstance(
  CLSID は、データとオブジェクトの作成に使用されるコードに関連付けられています。  
   
 ### <a name="return-value"></a>戻り値  
- 失敗した場合、成功した場合、または REGDB_E_CLASSNOTREG、CLASS_E_NOAGGREGATION、CO_E_CLASSSTRING または E_NOINTERFACE に S_OK を返します。 参照してください[とも](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)と[この](http://msdn.microsoft.com/library/windows/desktop/ms688386)のこれらのエラーの説明。  
+ 失敗した場合、成功した場合、または REGDB_E_CLASSNOTREG、CLASS_E_NOAGGREGATION、CO_E_CLASSSTRING または E_NOINTERFACE に S_OK を返します。 参照してください[とも](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)と[この](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromprogid)のこれらのエラーの説明。  
   
 ### <a name="remarks"></a>Remarks  
- メソッドの最初のフォームを呼び出すと、[この](http://msdn.microsoft.com/library/windows/desktop/ms688386)CLSID を回復するために使用します。 どちらの形式を呼び出して[とも](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)します。  
+ メソッドの最初のフォームを呼び出すと、[この](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromprogid)CLSID を回復するために使用します。 どちらの形式を呼び出して[とも](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)します。  
   
  場合、デバッグ ビルドで、アサーション エラーが発生[解放](#p)は NULL と等しくありません。  
   
@@ -339,7 +339,7 @@ template <class Q> HRESULT QueryInterface(Q
  エラー発生時に成功した場合、または E_NOINTERFACE S_OK を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドを呼び出す[iunknown::queryinterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)します。  
+ このメソッドを呼び出す[iunknown::queryinterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))します。  
   
  場合、デバッグ ビルドで、アサーション エラーが発生*pp*は NULL と等しくありません。  
   

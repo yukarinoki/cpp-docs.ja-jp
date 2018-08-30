@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d54a22bd215a80f3e7cab3770a4ba12cd7baffb
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 218b03ed1e1c69dd7b365e9c2526aef5b1145aed
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027443"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218490"
 ---
 # <a name="coledroptarget-class"></a>COleDropTarget クラス
 ウィンドウと OLE ライブラリの間の通信機構を提供します。  
@@ -85,7 +85,7 @@ class COleDropTarget : public CCmdTarget
   
  `COleDropTarget`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxole.h  
   
 ##  <a name="coledroptarget"></a>  COleDropTarget::COleDropTarget  
@@ -138,7 +138,7 @@ virtual DROPEFFECT OnDragEnter(
 ### <a name="remarks"></a>Remarks  
  ウィンドウにドロップ操作を許可するには、この関数をオーバーライドします。 既定の実装[CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter)、単に既定でせずが返されます。  
   
- 詳細については、次を参照してください。 [IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IDropTarget::DragEnter](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragenter) Windows SDK に含まれています。  
   
 ##  <a name="ondragleave"></a>  COleDropTarget::OnDragLeave  
  ドラッグ操作の実行中に、カーソルがウィンドウを離れたときに、フレームワークによって呼び出されます。  
@@ -154,7 +154,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 ### <a name="remarks"></a>Remarks  
  ドラッグ操作が指定したウィンドウを離れるときに特別な動作が必要な場合は、この関数をオーバーライドします。 この関数の既定の実装を呼び出す[CView::OnDragLeave](../../mfc/reference/cview-class.md#ondragleave)します。  
   
- 詳細については、次を参照してください。 [IDropTarget::DragLeave](http://msdn.microsoft.com/library/windows/desktop/ms680110) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IDropTarget::DragLeave](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragleave) Windows SDK に含まれています。  
   
 ##  <a name="ondragover"></a>  COleDropTarget::OnDragOver  
  カーソルがウィンドウの上にドラッグされるときに、フレームワークによって呼び出されます。  
@@ -196,7 +196,7 @@ virtual DROPEFFECT OnDragOver(
 ### <a name="remarks"></a>Remarks  
  この関数は、ウィンドウにドロップ操作を許可するオーバーライドする必要があります。 この関数の既定の実装を呼び出す[直前](../../mfc/reference/cview-class.md#ondragover)既定でせずが返されます。 この関数は、ドラッグ アンド ドロップ操作中に頻繁に呼び出されると、ため、最適化してください可能な限りです。  
   
- 詳細については、次を参照してください。 [IDropTarget::DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IDropTarget::DragOver](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragover) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCOleContainer#21](../../mfc/codesnippet/cpp/coledroptarget-class_1.cpp)]  
@@ -275,7 +275,7 @@ virtual BOOL OnDrop(
   
  既定の実装`COleDropTarget::OnDrop`呼び出し[この関数](../../mfc/reference/cview-class.md#ondrop)既定で FALSE を返しますこれだけです。  
   
- 詳細については、次を参照してください。 [IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IDropTarget::Drop](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-drop) Windows SDK に含まれています。  
   
 ##  <a name="ondropex"></a>  COleDropTarget::OnDropEx  
  ドロップ操作が発生するときに、フレームワークによって呼び出されます。  
@@ -325,7 +325,7 @@ virtual DROPEFFECT OnDropEx(
   
  - DROPEFFECT_SCROLL を使用して、ドラッグのスクロール操作が実行されるときに、またはターゲットで発生していることを示します。  
   
- 詳細については、次を参照してください。 [IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IDropTarget::Drop](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-drop) Windows SDK に含まれています。  
   
 ##  <a name="register"></a>  COleDropTarget::Register  
  有効なドロップ先として OLE Dll で、ウィンドウを登録するには、この関数を呼び出します。  
@@ -344,7 +344,7 @@ BOOL Register(CWnd* pWnd);
 ### <a name="remarks"></a>Remarks  
  この関数は、受け入れドロップ操作を呼び出す必要があります。  
   
- 詳細については、次を参照してください。 [RegisterDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms678405) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [RegisterDragDrop](/windows/desktop/api/ole2/nf-ole2-registerdragdrop) Windows SDK に含まれています。  
   
 ##  <a name="revoke"></a>  COleDropTarget::Revoke  
  この関数を呼び出すことによって、ドロップ先として登録されている任意のウィンドウを破棄する前に[登録](#register)ドロップ ターゲットの一覧から削除します。  
@@ -356,7 +356,7 @@ virtual void Revoke();
 ### <a name="remarks"></a>Remarks  
  この関数から自動的に呼び出される、 [OnDestroy](../../mfc/reference/cwnd-class.md#ondestroy)が登録されている場合は、この関数を明示的に呼び出す必要は通常、ウィンドウのハンドラー。  
   
- 詳細については、次を参照してください。 [RevokeDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms692643) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [RevokeDragDrop](/windows/desktop/api/ole2/nf-ole2-revokedragdrop) Windows SDK に含まれています。  
   
 ## <a name="see-also"></a>関連項目  
  [MFC サンプル HIERSVR](../../visual-cpp-samples.md)   

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 980edf3b7e7f699b1fc870fda2e58f6422e3a1cb
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 424d98236b37dabe1c671a9890f049063a8e50a1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42539920"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212277"
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer クラス
 OLE のビジュアル編集サーバー、オートメーション サーバー、およびリンク コンテナー (埋め込みアイテムへのリンクをサポートするアプリケーションのことです) で使います。  
@@ -106,7 +106,7 @@ void ConnectTemplate(
  アプリケーションの 1 つのインスタンスが複数のインスタンスをサポートできるかどうかを示します。 TRUE の場合は、オブジェクトを作成するには、各要求に対して、アプリケーションの複数のインスタンスが起動されます。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [CLSID キー](http://msdn.microsoft.com/library/windows/desktop/ms691424) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [CLSID キー](/windows/desktop/com/clsid-key-hklm) Windows SDK に含まれています。  
   
 ##  <a name="unregister"></a>  COleTemplateServer::Unregister  
  関連付けられたドキュメント テンプレートを登録解除します。  

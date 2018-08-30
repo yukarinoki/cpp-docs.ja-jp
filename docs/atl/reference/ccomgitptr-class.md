@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90da5e8394ea4f630a817b68edf60d4242b40be9
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a45866226f06b20d0805b7c4e294ff6d2d65506e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884175"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197921"
 ---
 # <a name="ccomgitptr-class"></a>CComGITPtr クラス
 このクラスは、インターフェイス ポインターを処理するためのメソッドおよびグローバル インターフェイス テーブル (GIT) を提供します。  
@@ -83,7 +83,7 @@ class CComGITPtr
 > [!NOTE]
 >  グローバル インターフェイス テーブルの機能は、DCOM バージョン 1.1 で Windows 95 以降、Windows 98、Windows NT 4.0 Service Pack 3 以降、および Windows 2000 にできるだけです。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlbase.h  
   
 ##  <a name="attach"></a>  CComGITPtr::Attach  
@@ -254,6 +254,6 @@ HRESULT Revoke() throw();
   
 ## <a name="see-also"></a>関連項目  
  [フリー スレッド マーシャラー](../../atl/atl-and-the-free-threaded-marshaler.md)   
- [アパートメント間でインターフェイスへのアクセス](http://msdn.microsoft.com/library/windows/desktop/ms682353)   
- [グローバル インターフェイス テーブルを使用する場合](http://msdn.microsoft.com/library/windows/desktop/ms693729)   
+ [アパートメント間でインターフェイスへのアクセス](/windows/desktop/com/accessing-interfaces-across-apartments)   
+ [グローバル インターフェイス テーブルを使用する場合](/windows/desktop/com/when-to-use-the-global-interface-table)   
  [クラスの概要](../../atl/atl-class-overview.md)

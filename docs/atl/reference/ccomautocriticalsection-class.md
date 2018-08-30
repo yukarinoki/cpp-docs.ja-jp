@@ -1,5 +1,5 @@
 ---
-title: CComAutoCriticalSection クラス |Microsoft ドキュメント
+title: CComAutoCriticalSection クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae0c3cd1d00ce83a4e952d60a978663bfa76f814
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ef8cc6fe14dc2c636b02ce2002787a74b12b5528
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357230"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217901"
 ---
 # <a name="ccomautocriticalsection-class"></a>CComAutoCriticalSection クラス
-`CComAutoCriticalSection` 取得し、クリティカル セクション オブジェクトの所有権を解放するためのメソッドを提供します。  
+`CComAutoCriticalSection` 取得とクリティカル セクション オブジェクトの所有権を解放するメソッドを提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,10 +43,10 @@ class CComAutoCriticalSection : public CComCriticalSection
 |[CComAutoCriticalSection::CComAutoCriticalSection](#ccomautocriticalsection)|コンストラクターです。|  
 |[CComAutoCriticalSection:: ~ CComAutoCriticalSection](#dtor)|デストラクターです。|  
   
-## <a name="remarks"></a>コメント  
- `CComAutoCriticalSection` クラスに似ています[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)、除く`CComAutoCriticalSection`コンス トラクターでクリティカル セクション オブジェクトを自動的に初期化します。  
+## <a name="remarks"></a>Remarks  
+ `CComAutoCriticalSection` クラスに似ていますが[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)、除く`CComAutoCriticalSection`コンス トラクターでクリティカル セクション オブジェクトを自動的に初期化します。  
   
- 通常、使用して`CComAutoCriticalSection`を通じて、`typedef`名前[AutoCriticalSection](ccommultithreadmodel-class.md#autocriticalsection)です。 この名前を参照して`CComAutoCriticalSection`とき[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)が使用されています。  
+ 通常、使用して`CComAutoCriticalSection`を通じて、`typedef`名前[AutoCriticalSection](ccommultithreadmodel-class.md#autocriticalsection)します。 この名前の参照`CComAutoCriticalSection`とき[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)が使用されています。  
 
   
  `Init`と`Term`メソッドから[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)このクラスを使用する場合は使用できません。  
@@ -66,8 +66,8 @@ class CComAutoCriticalSection : public CComCriticalSection
 CComAutoCriticalSection();
 ```  
   
-### <a name="remarks"></a>コメント  
- Win32 関数を呼び出す[InitializeCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms683472)、クリティカル セクション オブジェクトを初期化します。  
+### <a name="remarks"></a>Remarks  
+ Win32 関数を呼び出す[InitializeCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsection)、クリティカル セクション オブジェクトを初期化します。  
   
 ##  <a name="dtor"></a>  CComAutoCriticalSection:: ~ CComAutoCriticalSection  
  デストラクターです。  
@@ -76,8 +76,8 @@ CComAutoCriticalSection();
 ~CComAutoCriticalSection() throw();
 ```  
   
-### <a name="remarks"></a>コメント  
- デストラクター [DeleteCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682552)、クリティカル セクション オブジェクトによって使用されるすべてのシステム リソースを解放します。  
+### <a name="remarks"></a>Remarks  
+ デストラクターの呼び出し[DeleteCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-deletecriticalsection)、クリティカル セクション オブジェクトによって使用されるすべてのシステム リソースを解放します。  
   
 ## <a name="see-also"></a>関連項目  
  [CComFakeCriticalSection クラス](../../atl/reference/ccomfakecriticalsection-class.md)   

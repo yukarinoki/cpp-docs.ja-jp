@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f9ed49115a82f6e032404b862b8eca0ad922a34
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f5b99266d465629853361c07ea16f9ae620b0e24
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853070"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210829"
 ---
 # <a name="colebusydialog-class"></a>COleBusyDialog クラス
 OLE の [サーバーが応答しません] ダイアログ ボックスまたは [サーバーを使用できません] ダイアログ ボックスに使用されます。  
@@ -67,7 +67,7 @@ class COleBusyDialog : public COleDialog
 > [!NOTE]
 >  アプリケーション コンテナーのウィザードで生成されたコードでは、このクラスを使用します。  
   
- 詳細については、次を参照してください。、 [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) Windows SDK の構造体。  
+ 詳細については、次を参照してください。、 [OLEUIBUSY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuibusya) Windows SDK の構造体。  
   
  OLE に固有のダイアログ ボックスの詳細については、記事を参照してください。 [OLE のダイアログ ボックス](../../mfc/dialog-boxes-in-ole.md)します。  
   
@@ -86,7 +86,7 @@ class COleBusyDialog : public COleDialog
   
  `COleBusyDialog`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxodlgs.h  
   
 ##  <a name="colebusydialog"></a>  COleBusyDialog::COleBusyDialog  
@@ -122,7 +122,7 @@ explicit COleBusyDialog(
 ### <a name="remarks"></a>Remarks  
  ダイアログ ボックスを表示するには、呼び出す[DoModal](#domodal)します。  
   
- 詳細については、次を参照してください。、 [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) Windows SDK の構造体。  
+ 詳細については、次を参照してください。、 [OLEUIBUSY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuibusya) Windows SDK の構造体。  
   
 ##  <a name="domodal"></a>  COleBusyDialog::DoModal  
  サーバー ビジー状態であるか、サーバーが応答しません ダイアログ ボックスを表示するには、この関数を呼び出します。  
@@ -138,7 +138,7 @@ virtual INT_PTR DoModal();
   
 - ユーザーには、ダイアログ ボックスが取り消された場合は IDCANCEL。  
   
-- IDABORT 場合は、エラーが発生しました。 IDABORT が返される場合、`COleDialog::GetLastError`発生したエラーの種類に関する詳細を取得します。 考えられるエラーの一覧については、次を参照してください。、 [OleUIBusy](http://msdn.microsoft.com/library/windows/desktop/ms680125) Windows SDK 内の関数。  
+- IDABORT 場合は、エラーが発生しました。 IDABORT が返される場合、`COleDialog::GetLastError`発生したエラーの種類に関する詳細を取得します。 考えられるエラーの一覧については、次を参照してください。、 [OleUIBusy](/windows/desktop/api/oledlg/nf-oledlg-oleuibusya) Windows SDK 内の関数。  
   
 ### <a name="remarks"></a>Remarks  
  メンバーを設定して、さまざまなダイアログ ボックス コントロールを初期化する場合、[各](#m_bz)構造体を呼び出す前に、これを行う必要があります`DoModal`はダイアログ オブジェクトを構築します。  
@@ -184,7 +184,7 @@ OLEUIBUSY m_bz;
 ### <a name="remarks"></a>Remarks  
  この構造体のメンバーは、直接またはメンバー関数を使用して変更できます。  
   
- 詳細については、次を参照してください。、 [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) Windows SDK の構造体。  
+ 詳細については、次を参照してください。、 [OLEUIBUSY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuibusya) Windows SDK の構造体。  
   
 ## <a name="see-also"></a>関連項目  
  [COleDialog クラス](../../mfc/reference/coledialog-class.md)   

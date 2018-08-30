@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82639ff7d4c4f6c6e33778b47509a2744cb12f13
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 796a717faf86d10e789dec8ea0ca0e77517414a6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337396"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215281"
 ---
 # <a name="cfilefind-class"></a>CFileFind クラス
 ローカル ファイルを検索し、基本クラスです[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)と[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)、インターネット ファイル検索を実行します。  
@@ -147,7 +147,7 @@ class CFileFind : public CObject
   
  `CFileFind`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afx.h  
   
 ##  <a name="cfilefind"></a>  CFileFind::CFileFind  
@@ -207,7 +207,7 @@ virtual BOOL FindFile(
  作成するために予約`FindFile`派生クラス。 0 を指定する必要があります。  
   
 ### <a name="return-value"></a>戻り値  
- 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 拡張エラー情報を取得するには、Win32 関数を呼び出す[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)します。  
+ 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 拡張エラー情報を取得するには、Win32 関数を呼び出す[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)します。  
   
 ### <a name="remarks"></a>Remarks  
  呼び出した後`FindFile`ファイル検索を開始する[FindNextFile](#findnextfile)を後続のファイルを取得します。 呼び出す必要があります`FindNextFile`次の属性のいずれかにメンバー関数を呼び出す前に少なくとも 1 回。  
@@ -261,7 +261,7 @@ virtual BOOL FindNextFile();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 以上のファイルがある場合、0 以外の場合ファイルが見つかりましたが、ディレクトリ内の最後の 1 つである場合や、エラーが発生した場合は 0 します。 拡張エラー情報を取得するには、Win32 関数を呼び出す[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)します。 ファイルが見つかりましたが、ディレクトリ内の最後のファイル、または一致する場合は、ファイルが見つからなかんだことができます、 `GetLastError` ERROR_NO_MORE_FILES を返します。  
+ 以上のファイルがある場合、0 以外の場合ファイルが見つかりましたが、ディレクトリ内の最後の 1 つである場合や、エラーが発生した場合は 0 します。 拡張エラー情報を取得するには、Win32 関数を呼び出す[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)します。 ファイルが見つかりましたが、ディレクトリ内の最後のファイル、または一致する場合は、ファイルが見つからなかんだことができます、 `GetLastError` ERROR_NO_MORE_FILES を返します。  
   
 ### <a name="remarks"></a>Remarks  
  呼び出す必要があります`FindNextFile`次の属性のいずれかにメンバー関数を呼び出す前に少なくとも 1 回。  
@@ -304,7 +304,7 @@ virtual BOOL FindNextFile();
   
 - [MatchesMask](#matchesmask)  
   
- `FindNextFile` Win32 関数をラップ[FindNextFile](http://msdn.microsoft.com/library/windows/desktop/aa364428)します。  
+ `FindNextFile` Win32 関数をラップ[FindNextFile](/windows/desktop/api/fileapi/nf-fileapi-findnextfilea)します。  
   
 ### <a name="example"></a>例  
   例をご覧ください[CFileFind::IsDirectory](#isdirectory)します。  
@@ -319,7 +319,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
   
 ### <a name="parameters"></a>パラメーター  
  *pTimeStamp*  
- ポインターを[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)ファイルが作成された時刻を含む構造体。  
+ ポインターを[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)ファイルが作成された時刻を含む構造体。  
   
  *refTime*  
  参照を[CTime](../../atl-mfc-shared/reference/ctime-class.md)オブジェクト。  
@@ -331,7 +331,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
  呼び出す必要があります[FindNextFile](#findnextfile)呼び出す前に少なくとも 1 回`GetCreationTime`します。  
   
 > [!NOTE]
->  すべてのファイル システムでは、同じセマンティクスを使用して、この関数によって返されるタイムスタンプを実装します。 この関数は、基になるファイル システムまたはサーバーがサポートしない場合、時間属性を維持することは、その他のタイム スタンプ関数によって返されるのと同じ値を返す可能性があります。 参照してください、 [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)時刻の形式については、構造体。 いくつかのオペレーティング システムでは、ファイルが存在するコンピューターにゾーンのローカル タイムの時刻が返されることが。 Win32 を参照してください。[詳細](http://msdn.microsoft.com/library/windows/desktop/ms724277)API の詳細についてはします。  
+>  すべてのファイル システムでは、同じセマンティクスを使用して、この関数によって返されるタイムスタンプを実装します。 この関数は、基になるファイル システムまたはサーバーがサポートしない場合、時間属性を維持することは、その他のタイム スタンプ関数によって返されるのと同じ値を返す可能性があります。 参照してください、 [Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)時刻の形式については、構造体。 いくつかのオペレーティング システムでは、ファイルが存在するコンピューターにゾーンのローカル タイムの時刻が返されることが。 Win32 を参照してください。[詳細](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime)API の詳細についてはします。  
   
 ### <a name="example"></a>例  
   例をご覧ください[CFileFind::GetLength](#getlength)します。  
@@ -439,7 +439,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
  参照を[CTime](../../atl-mfc-shared/reference/ctime-class.md)オブジェクト。  
   
  *pTimeStamp*  
- ポインターを[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)ファイルの最終アクセス時刻を含む構造体。  
+ ポインターを[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)ファイルの最終アクセス時刻を含む構造体。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、0 以外の場合失敗した場合は 0。 `GetLastAccessTime` 場合にのみ、0 を返します[FindNextFile](#findnextfile)がこの呼び出さ`CFileFind`オブジェクト。  
@@ -448,7 +448,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
  呼び出す必要があります[FindNextFile](#findnextfile)呼び出す前に少なくとも 1 回`GetLastAccessTime`します。  
   
 > [!NOTE]
->  すべてのファイル システムでは、同じセマンティクスを使用して、この関数によって返されるタイムスタンプを実装します。 この関数は、基になるファイル システムまたはサーバーがサポートしない場合、時間属性を維持することは、その他のタイム スタンプ関数によって返されるのと同じ値を返す可能性があります。 参照してください、 [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)時刻の形式については、構造体。 いくつかのオペレーティング システムでは、ファイルが存在するコンピューターにゾーンのローカル タイムの時刻が返されることが。 Win32 を参照してください。[詳細](http://msdn.microsoft.com/library/windows/desktop/ms724277)API の詳細についてはします。  
+>  すべてのファイル システムでは、同じセマンティクスを使用して、この関数によって返されるタイムスタンプを実装します。 この関数は、基になるファイル システムまたはサーバーがサポートしない場合、時間属性を維持することは、その他のタイム スタンプ関数によって返されるのと同じ値を返す可能性があります。 参照してください、 [Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)時刻の形式については、構造体。 いくつかのオペレーティング システムでは、ファイルが存在するコンピューターにゾーンのローカル タイムの時刻が返されることが。 Win32 を参照してください。[詳細](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime)API の詳細についてはします。  
   
 ### <a name="example"></a>例  
   例をご覧ください[CFileFind::GetLength](#getlength)します。  
@@ -463,7 +463,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
   
 ### <a name="parameters"></a>パラメーター  
  *pTimeStamp*  
- ポインターを[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)ファイルの最終書き込み時刻を含む構造体。  
+ ポインターを[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)ファイルの最終書き込み時刻を含む構造体。  
   
  *refTime*  
  参照を[CTime](../../atl-mfc-shared/reference/ctime-class.md)オブジェクト。  
@@ -475,7 +475,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
  呼び出す必要があります[FindNextFile](#findnextfile)呼び出す前に少なくとも 1 回`GetLastWriteTime`します。  
   
 > [!NOTE]
->  すべてのファイル システムでは、同じセマンティクスを使用して、この関数によって返されるタイムスタンプを実装します。 この関数は、基になるファイル システムまたはサーバーがサポートしない場合、時間属性を維持することは、その他のタイム スタンプ関数によって返されるのと同じ値を返す可能性があります。 参照してください、 [Win32_Find_Data](http://msdn.microsoft.com/library/windows/desktop/aa365740)時刻の形式については、構造体。 いくつかのオペレーティング システムでは、ファイルが存在するコンピューターにゾーンのローカル タイムの時刻が返されることが。 Win32 を参照してください。[詳細](http://msdn.microsoft.com/library/windows/desktop/ms724277)API の詳細についてはします。  
+>  すべてのファイル システムでは、同じセマンティクスを使用して、この関数によって返されるタイムスタンプを実装します。 この関数は、基になるファイル システムまたはサーバーがサポートしない場合、時間属性を維持することは、その他のタイム スタンプ関数によって返されるのと同じ値を返す可能性があります。 参照してください、 [Win32_Find_Data](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)時刻の形式については、構造体。 いくつかのオペレーティング システムでは、ファイルが存在するコンピューターにゾーンのローカル タイムの時刻が返されることが。 Win32 を参照してください。[詳細](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime)API の詳細についてはします。  
   
 ### <a name="example"></a>例  
   例をご覧ください[CFileFind::GetLength](#getlength)します。  
@@ -493,7 +493,7 @@ ULONGLONG GetLength() const;
 ### <a name="remarks"></a>Remarks  
  呼び出す必要があります[FindNextFile](#findnextfile)呼び出す前に少なくとも 1 回`GetLength`します。  
   
- `GetLength` Win32 構造を使用して[WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)を取得し、ファイル サイズの値をバイト単位で返します。  
+ `GetLength` Win32 構造を使用して[WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)を取得し、ファイル サイズの値をバイト単位で返します。  
   
 > [!NOTE]
 >  時点で、MFC 7.0、 `GetLength` 64 ビット整数型をサポートしています。 以前、ライブラリのこの新しいバージョンで構築された既存のコードについては、切り捨ての警告があります。  
@@ -530,7 +530,7 @@ BOOL IsArchived() const;
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- アプリケーションがバックアップまたは削除、FILE_ATTRIBUTE_ARCHIVE で識別されるファイル属性には、アーカイブ ファイルをマーク、 [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)構造体。  
+ アプリケーションがバックアップまたは削除、FILE_ATTRIBUTE_ARCHIVE で識別されるファイル属性には、アーカイブ ファイルをマーク、 [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)構造体。  
   
  呼び出す必要があります[FindNextFile](#findnextfile)呼び出す前に少なくとも 1 回`IsArchived`します。  
   
@@ -550,7 +550,7 @@ BOOL IsCompressed() const;
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 圧縮されたファイルが FILE_ATTRIBUTE_COMPRESSED でマークされた、ファイル属性がで識別される、 [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)構造体。 ファイルの場合は、この属性は、すべてのファイルにデータが圧縮されているを示します。 ディレクトリの場合は、この属性は、圧縮が新しく作成されたファイルとサブディレクトリの既定値を示します。  
+ 圧縮されたファイルが FILE_ATTRIBUTE_COMPRESSED でマークされた、ファイル属性がで識別される、 [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)構造体。 ファイルの場合は、この属性は、すべてのファイルにデータが圧縮されているを示します。 ディレクトリの場合は、この属性は、圧縮が新しく作成されたファイルとサブディレクトリの既定値を示します。  
   
  呼び出す必要があります[FindNextFile](#findnextfile)呼び出す前に少なくとも 1 回`IsCompressed`します。  
   
@@ -570,7 +570,7 @@ BOOL IsDirectory() const;
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- ディレクトリであるファイルが FILE_ATTRIBUTE_DIRECTORY で識別されるファイル属性でマークされた、 [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)構造体。  
+ ディレクトリであるファイルが FILE_ATTRIBUTE_DIRECTORY で識別されるファイル属性でマークされた、 [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)構造体。  
   
  呼び出す必要があります[FindNextFile](#findnextfile)呼び出す前に少なくとも 1 回`IsDirectory`します。  
   
@@ -608,7 +608,7 @@ BOOL IsHidden() const;
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- FILE_ATTRIBUTE_HIDDEN で示されている、すべてのファイルのファイル属性が識別される、 [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)構造体。 隠しファイルは通常のディレクトリ一覧に含まれていません。  
+ FILE_ATTRIBUTE_HIDDEN で示されている、すべてのファイルのファイル属性が識別される、 [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)構造体。 隠しファイルは通常のディレクトリ一覧に含まれていません。  
   
  呼び出す必要があります[FindNextFile](#findnextfile)呼び出す前に少なくとも 1 回`IsHidden`します。  
   
@@ -628,7 +628,7 @@ BOOL IsNormal() const;
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- FILE_ATTRIBUTE_NORMAL でマークされたファイル、ファイル属性の識別、 [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)構造体。 通常のファイルには、他の属性セットがありません。 その他のすべてのファイル属性は、この属性をオーバーライドします。  
+ FILE_ATTRIBUTE_NORMAL でマークされたファイル、ファイル属性の識別、 [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)構造体。 通常のファイルには、他の属性セットがありません。 その他のすべてのファイル属性は、この属性をオーバーライドします。  
   
  呼び出す必要があります[FindNextFile](#findnextfile)呼び出す前に少なくとも 1 回`IsNormal`します。  
   
@@ -648,7 +648,7 @@ BOOL IsReadOnly() const;
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 読み取り専用ファイルが FILE_ATTRIBUTE_READONLY でマークされた、ファイル属性がで識別される、 [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)構造体。 アプリケーションは、この種類のファイルを読み取ることができますが、書き込みまたは削除することはできません。  
+ 読み取り専用ファイルが FILE_ATTRIBUTE_READONLY でマークされた、ファイル属性がで識別される、 [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)構造体。 アプリケーションは、この種類のファイルを読み取ることができますが、書き込みまたは削除することはできません。  
   
  呼び出す必要があります[FindNextFile](#findnextfile)呼び出す前に少なくとも 1 回`IsReadOnly`します。  
   
@@ -668,7 +668,7 @@ BOOL IsSystem() const;
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- システム ファイルが、FILE_ATTRIBUTE_SYSTEM でマークされた、ファイル属性がで識別される、 [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)構造体。 システム ファイルはの一部であるまたはのみ、オペレーティング システムによって使用されます。  
+ システム ファイルが、FILE_ATTRIBUTE_SYSTEM でマークされた、ファイル属性がで識別される、 [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)構造体。 システム ファイルはの一部であるまたはのみ、オペレーティング システムによって使用されます。  
   
  呼び出す必要があります[FindNextFile](#findnextfile)呼び出す前に少なくとも 1 回`IsSystem`します。  
   
@@ -688,7 +688,7 @@ BOOL IsTemporary() const;
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 一時ファイルが FILE_ATTRIBUTE_TEMPORARY でマークされた、ファイル属性がで識別される、 [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)構造体。 一時ファイルは、一時的なストレージに使用されます。 アプリケーションは、どうしても必要な場合にのみ、ファイルを書き込む必要があります。 ファイルのデータのほとんどは、ファイルがすぐに削除されるため、メディアに書き込まれずに、メモリに残ります。  
+ 一時ファイルが FILE_ATTRIBUTE_TEMPORARY でマークされた、ファイル属性がで識別される、 [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)構造体。 一時ファイルは、一時的なストレージに使用されます。 アプリケーションは、どうしても必要な場合にのみ、ファイルを書き込む必要があります。 ファイルのデータのほとんどは、ファイルがすぐに削除されるため、メディアに書き込まれずに、メモリに残ります。  
   
  呼び出す必要があります[FindNextFile](#findnextfile)呼び出す前に少なくとも 1 回`IsTemporary`します。  
   
@@ -715,7 +715,7 @@ virtual BOOL MatchesMask(DWORD dwMask) const;
   
 ### <a name="parameters"></a>パラメーター  
  *dwMask*  
- 識別される 1 つまたは複数のファイル属性を指定します、 [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)見つかったファイルの構造体。 複数の属性を検索するには、ビットごとの OR を使用して (&#124;) 演算子。 次の属性の任意の組み合わせが、許容されます。  
+ 識別される 1 つまたは複数のファイル属性を指定します、 [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)見つかったファイルの構造体。 複数の属性を検索するには、ビットごとの OR を使用して (&#124;) 演算子。 次の属性の任意の組み合わせが、許容されます。  
   
 -   FILE_ATTRIBUTE_ARCHIVE ファイルは、アーカイブ ファイルです。 アプリケーションでは、この属性を使用して、ファイルをバックアップまたは削除のマークします。  
   
@@ -734,7 +734,7 @@ virtual BOOL MatchesMask(DWORD dwMask) const;
 -   FILE_ATTRIBUTE_TEMPORARY ファイルは、一時的なストレージの使用されています。 アプリケーションは、どうしても必要な場合にのみ、ファイルを書き込む必要があります。 ファイルのデータのほとんどは、ファイルがすぐに削除されるため、メディアに書き込まれずに、メモリに残ります。  
   
 ### <a name="return-value"></a>戻り値  
- 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 拡張エラー情報を取得するには、Win32 関数を呼び出す[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)します。  
+ 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 拡張エラー情報を取得するには、Win32 関数を呼び出す[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)します。  
   
 ### <a name="remarks"></a>Remarks  
  呼び出す必要があります[FindNextFile](#findnextfile)呼び出す前に少なくとも 1 回`MatchesMask`します。  

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c9a1786e5b3a6fb150e3e27fb459ac4341486ca
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e1520cd301fa46fb4d9521fd6d4180ebd3710f67
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604789"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218251"
 ---
 # <a name="manifest-resources"></a>マニフェスト リソース
 
@@ -43,11 +43,11 @@ ms.locfileid: "42604789"
 </dependency>
 ```
 
-Windows XP または Windows Vista アプリケーションのマニフェスト リソースは、アプリケーションで最新バージョンの Windows コモン コントロール (上の例で示すようにバージョン 6.0) を使用することを指定するだけではなく、 [Syslink コントロール](http://msdn.microsoft.com/library/windows/desktop/bb760706)をサポートします。
+Windows XP または Windows Vista アプリケーションでは、マニフェスト リソースだけでなくことを指定、アプリケーションを使用して、最新バージョンの Windows コモン コントロール (v6.0、上記のよう) もサポートしています、 [Syslink コントロール](/windows/desktop/Controls/syslink-overview)します。
 
-バージョンを表示し、マニフェスト リソースに含まれる情報を入力して、XML ビューアーで、または Visual Studio で、ファイルを開くことができます[テキスト エディター](http://msdn.microsoft.com/508e1f18-99d5-48ad-b5ad-d011b21c6ab1)します。 詳細については、 [Visual Studio テキスト エディターでマニフェスト リソースを開く方法](../windows/how-to-open-a-manifest-resource.md)に関するページを参照してください。
+バージョンを表示し、マニフェスト リソースに含まれる情報を入力して、XML ビューアーで、または Visual Studio で、ファイルを開くことができます[テキスト エディター](https://msdn.microsoft.com/508e1f18-99d5-48ad-b5ad-d011b21c6ab1)します。 詳細については、 [Visual Studio テキスト エディターでマニフェスト リソースを開く方法](../windows/how-to-open-a-manifest-resource.md)に関するページを参照してください。
 
-マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 」を参照してください。マネージド プロジェクトにリソース ファイルを手動で追加する方法、リソースへのアクセス方法、静的なリソースの表示方法、リソース文字列をプロパティに割り当てる方法については、  [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)をサポートします。
+マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列をプロパティに割り当てる方法については、次を参照してください[チュートリアル: Using Resources for Localization with ASP.NET](https://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
 
 ## <a name="limitations"></a>制限事項
 

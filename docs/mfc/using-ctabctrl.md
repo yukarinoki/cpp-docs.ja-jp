@@ -1,5 +1,5 @@
 ---
-title: CTabCtrl の使い方 |Microsoft ドキュメント
+title: Ctabctrl の使い方 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3fd34d88a035e4180eff955238004a18d9af09a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9918bfa73249812a55ce2b8f5718a53ee9cec087
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383683"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217923"
 ---
 # <a name="using-ctabctrl"></a>CTabCtrl の使い方
-[タブ コントロール] は、ノートの仕切りやファイル キャビネットのラベルの付いたフォルダーに似ています。 タブ コントロールは、クラスによって表される[CTabCtrl](../mfc/reference/ctabctrl-class.md)、一度に 1 つずつ、ピアまたは各ページの間の論理リレーションシップを示す形式でユーザーに情報またはコントロールの複数のページを表示します。  
+「タブ コントロール」は、ノートの仕切ページまたはファイル キャビネットのラベルの付いたフォルダーに似ています。 クラスによって表される、タブ コントロールを使用して、 [CTabCtrl](../mfc/reference/ctabctrl-class.md)をピアまたは各ページの間に論理リレーションシップを示す形式で、一度に 1 つのユーザーに複数のページの情報やコントロールを表示する。  
   
- タブ コントロールの詳細については、次を参照してください。[タブ コントロール](http://msdn.microsoft.com/library/windows/desktop/bb760550)Windows SDK に含まれています。  
+ タブ コントロールの詳細については、次を参照してください。[のタブ コントロール](/windows/desktop/Controls/tab-controls)Windows SDK に含まれています。  
   
-## <a name="what-do-you-want-to-know-more-about"></a>詳しくは次のトピックをクリックしてください。  
+## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います  
   
 -   [タブ コントロールとプロパティ シート](../mfc/tab-controls-and-property-sheets.md)  
   

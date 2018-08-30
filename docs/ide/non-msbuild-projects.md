@@ -1,7 +1,7 @@
 ---
 title: Visual C++ での "フォルダーを開く" プロジェクト | Microsoft Docs
 ms.custom: ''
-ms.date: 08/02/2017
+ms.date: 06/01/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,15 +14,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fe4eba09f06b987ab11f35429e13796fe6baafb
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d4444e70ec158d7afa35c3955bbef9af4bfa12f2
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337286"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131324"
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Visual C++ での "フォルダーを開く" プロジェクト
-Visual Studio 2017 で導入された "フォルダーを開く" 機能を使うと、ソース ファイルのフォルダーを開き、IntelliSense、参照、リファクタリング、デバッグなどのサポートを利用してコーディングをすぐに始めることができます。 .sln または .vcxproj ファイルは読み込まれません。必要な場合は、カスタム タスクを指定し、簡単な .json ファイルを使ってパラメーターをビルドして起動できます。 "フォルダーを開く" を利用することで、Visual C++ は、ファイルの厳密でないコレクションだけでなく、CMake、Ninja、QMake (Qt プロジェクトの場合)、gyp、SCons、Gradle、Buck、make などのほとんどすべてのビルド システムもサポートできるようになります。 
+
+Visual Studio 2017 以降で "フォルダーを開く" 機能を使うと、ソース ファイルのフォルダーを開き、IntelliSense、参照、リファクタリング、デバッグなどのサポートを利用してコーディングをすぐに始めることができます。 .sln または .vcxproj ファイルは読み込まれません。必要な場合は、カスタム タスクを指定し、簡単な .json ファイルを使ってパラメーターをビルドして起動できます。 "フォルダーを開く" を利用することで、Visual C++ は、ファイルの厳密でないコレクションだけでなく、CMake、Ninja、QMake (Qt プロジェクトの場合)、gyp、SCons、Gradle、Buck、make などのほとんどすべてのビルド システムもサポートできるようになります。 
 
 "フォルダーを開く" を使うには、メイン メニューから *[ファイル] > [開く] > [フォルダー]* を選ぶか、*Ctrl + Shift + Alt + O* キーを押します。フォルダー内のすべてのファイルがソリューション エクスプローラーにすぐに表示されます。 任意のファイルをクリックして、編集を開始できます。 バックグラウンドでは、Visual Studio は、ファイルのインデックス作成を開始して、IntelliSense、ナビゲーション、およびリファクタリング機能を有効にします。 ファイルを編集、作成、移動、または削除すると、Visual Studio は自動的に変更を追跡し、IntelliSense インデックスを継続的に更新します。 
   
@@ -30,7 +31,7 @@ Visual Studio 2017 で導入された "フォルダーを開く" 機能を使う
 CMake は、C++ デスクトップ ワークロードのコンポーネントである CMake Tools for Visual C++ として Visual Studio IDE に統合されています。 詳細については、「[CMake Tools for Visual C++](cmake-tools-for-visual-cpp.md)」 (Visual C++ の CMake ツール) をご覧ください。
  
 ## <a name="qmake-projects-that-target-the-qt-framework"></a>Qt フレームワークを対象とする QMake プロジェクト
-CMake Tools for Visual C++ を使って Qt を対象に Qt プロジェクトをビルドするか、または Qt Visual Studio 拡張機能を使うことができます。 注: 2017 年 8 月現在、[Visual Studio 2017 に対する Qt Visual Studio 拡張機能のサポート](https://download.qt.io/development_releases/vsaddin/)はベータ版として使用できます。
+CMake Tools for Visual C++ を使って Qt を対象に Qt プロジェクトをビルドするか、または Visual Studio 2015 または Visual Studio 2017 のどちらかで [Qt Visual Studio 拡張機能](https://download.qt.io/development_releases/vsaddin/)を使うことができます。
 
 ## <a name="gyp-cons-scons-buck-etc"></a>gyp、Cons、SCons、Buck など
 任意のビルド システムを Visual C++ で使いながら、Visual C++ IDE とデバッガーの利点を利用することもできます。 プロジェクトのルート フォルダーを開くと、Visual C++ はヒューリスティックを使って IntelliSense と参照のためにソース ファイルにインデックスを付けます。 CppProperties.json ファイルを編集することにより、コードの構造についてのヒントを提供できます。 同様の方法で、launch.vs.json ファイルを編集することにより、ビルド プログラムを構成できます。 

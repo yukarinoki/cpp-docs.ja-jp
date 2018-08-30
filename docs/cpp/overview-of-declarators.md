@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f09df81587012703d8ba1fc883413d6d35929e8
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: dd815f1af5a6eced06eae99316b2ee137fa398c9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404939"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209362"
 ---
 # <a name="overview-of-declarators"></a>宣言の概要
 宣言子は、オブジェクトまたは関数の名前を指定する宣言の構成要素です。 また、宣言子は、名前付きオブジェクトがオブジェクト、ポインター、参照、または配列であるかどうかも指定します。  宣言子は基本型を指定しませんが、ポインター、参照、配列などの派生型を指定するために、基本型の型情報を変更します。  関数に適用されると、宣言子は型指定子と組み合わせて、関数の戻り値の型がオブジェクト、ポインター、または参照であるかを完全に指定します  (指定子で説明した[宣言と定義](declarations-and-definitions-cpp.md)型やストレージ クラスなどのプロパティを伝達します。 このセクションで説明した修飾子[Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)、宣言子を変更します)。次の図は、`MyFunction` の宣言全体と宣言の構成要素を示します。  
@@ -53,7 +53,7 @@ const char *pch, ch;
   
  **ポインター、参照、および配列の宣言子**  
   
- 名前の前に挿入されたポインター演算子により、オブジェクトはポインターまたは参照になります。  **\*** 演算子をポインターとして名前を宣言する、 **&** 演算子は参照として宣言します。  
+ 名前の前に挿入されたポインター演算子により、オブジェクトはポインターまたは参照になります。  <strong>\*</strong>演算子をポインターとして名前を宣言する、 **&** 演算子は参照として宣言します。  
   
 ```cpp 
 int *i; // declarator is *i  

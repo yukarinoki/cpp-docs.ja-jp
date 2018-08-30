@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1fff338bfce32f8233cd58aa7c0790508ce542c
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 4fdf98e41b552fa759f1aed3e67d531e02bc7f58
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882882"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206776"
 ---
 # <a name="category-macros"></a>カテゴリに関するマクロ
 これらのマクロは、カテゴリのマップを定義します。  
@@ -52,7 +52,7 @@ ms.locfileid: "37882882"
 |[IMPLEMENTED_CATEGORY](#implemented_category)|COM オブジェクトによって実装されているカテゴリを示します。|  
 |[要求します。](#required_category)|COM オブジェクトによって、コンテナーに必要なカテゴリを示します。|  
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlcom.h  
 
 ##  <a name="begin_category_map"></a>  BEGIN_CATEGORY_MAP  
@@ -76,7 +76,7 @@ BEGIN_CATEGORY_MAP(theClass)
 > [!NOTE]
 >  ATL では、標準コンポーネント カテゴリ マネージャーを使用して、コンポーネントのカテゴリを登録します。 モジュールが登録されると、マネージャーがシステムに存在しない場合は、登録が成功するしますが、コンポーネントのカテゴリは、そのクラスは登録されません。  
   
- コンポーネントのカテゴリの詳細については、次を参照してください。[コンポーネントのカテゴリの概要とどのように動作する](http://msdn.microsoft.com/library/windows/desktop/ms694322)Windows SDK に含まれています。  
+ コンポーネントのカテゴリの詳細については、次を参照してください。[コンポーネントのカテゴリの概要とどのように動作する](/windows/desktop/com/component-categories-and-how-they-work)Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]  
@@ -107,7 +107,7 @@ IMPLEMENTED_CATEGORY(catID)
   
  クライアントは、そのインスタンスを作成するのにことがなくその機能と要件を決定するのにクラスの登録されているカテゴリの情報を使用できます。  
   
- コンポーネントのカテゴリの詳細については、次を参照してください。[コンポーネントのカテゴリの概要とどのように動作する](http://msdn.microsoft.com/library/windows/desktop/ms694322)Windows SDK に含まれています。  
+ コンポーネントのカテゴリの詳細については、次を参照してください。[コンポーネントのカテゴリの概要とどのように動作する](/windows/desktop/com/component-categories-and-how-they-work)Windows SDK に含まれています。  
   
 ### <a name="a-selection-of-stock-categories"></a>ストック カテゴリの選択  
   
@@ -119,7 +119,7 @@ IMPLEMENTED_CATEGORY(catID)
 |単純データ バインディング|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|  
 |高度なデータ バインディング|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|  
 |ウィンドウなしのコントロール|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|  
-|インターネットに対応したオブジェクト|参照してください[インターネット対応オブジェクト](http://msdn.microsoft.com/library/windows/desktop/ms690561)サンプルの一覧については、Windows SDK に含まれています。||  
+|インターネットに対応したオブジェクト|参照してください[インターネット対応オブジェクト](/windows/desktop/com/internet-aware-objects)サンプルの一覧については、Windows SDK に含まれています。||  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]  
@@ -140,7 +140,7 @@ REQUIRED_CATEGORY( catID )
   
  クライアントは、そのインスタンスを作成するのにことがなくその機能と要件を決定するのにクラスの登録されているカテゴリの情報を使用できます。 たとえば、コントロールは、コンテナーがデータ バインディングをサポートする必要があります。 コンテナーは、そのコントロールに必要なカテゴリをカテゴリ マネージャーをクエリすることによって、コントロールをホストするために必要な機能があるかどうかを確認できます。 コンテナーが必要な機能をサポートしていない場合、COM オブジェクトをホストする拒否することができます。  
   
- サンプルの一覧を含め、コンポーネントのカテゴリの詳細については、次を参照してください。[コンポーネントのカテゴリの概要とどのように動作する](http://msdn.microsoft.com/library/windows/desktop/ms694322)Windows SDK に含まれています。  
+ サンプルの一覧を含め、コンポーネントのカテゴリの詳細については、次を参照してください。[コンポーネントのカテゴリの概要とどのように動作する](/windows/desktop/com/component-categories-and-how-they-work)Windows SDK に含まれています。  
   
 ### <a name="a-selection-of-stock-categories"></a>ストック カテゴリの選択  
   
@@ -152,7 +152,7 @@ REQUIRED_CATEGORY( catID )
 |単純データ バインディング|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|  
 |高度なデータ バインディング|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|  
 |ウィンドウなしのコントロール|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|  
-|インターネットに対応したオブジェクト|参照してください[インターネット対応オブジェクト](http://msdn.microsoft.com/library/windows/desktop/ms690561)サンプルの一覧については、Windows SDK に含まれています。||  
+|インターネットに対応したオブジェクト|参照してください[インターネット対応オブジェクト](/windows/desktop/com/internet-aware-objects)サンプルの一覧については、Windows SDK に含まれています。||  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_Windowing#135](../../atl/codesnippet/cpp/category-macros_2.h)]  

@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8eb030bb6827fd8df5a7f4826c4c1e4b3b47b5a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 83ff74a460c7cb34a50d0fbdf338eccc3da27f98
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337171"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197440"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession クラス
 
@@ -118,7 +118,7 @@ class CInternetSession : public CObject
 [CObject](../../mfc/reference/cobject-class.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;`CInternetSession`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxinet.h
 
@@ -237,7 +237,7 @@ DWORD_PTR GetContext() const;
 
 ## <a name="getcookie"></a>  CInternetSession::GetCookie
 
-このメンバー関数は、Win32 関数の動作を実装[InternetGetCookie](http://msdn.microsoft.com/library/windows/desktop/aa384710)」の説明に従って、Windows SDK。
+このメンバー関数は、Win32 関数の動作を実装[InternetGetCookie](/windows/desktop/api/wininet/nf-wininet-internetgetcookiea)」の説明に従って、Windows SDK。
 
 ```cpp
 static BOOL GetCookie(
@@ -269,7 +269,7 @@ URL を含む文字列へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-それ以外の場合、成功した場合、TRUE または FALSE を返します。 呼び出しに失敗した場合は、Win32 関数を呼び出す[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定します。 次のエラー値が適用されます。
+それ以外の場合、成功した場合、TRUE または FALSE を返します。 呼び出しに失敗した場合は、Win32 関数を呼び出す[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定します。 次のエラー値が適用されます。
 
 - ERROR_NO_MORE_ITEMS は指定された URL の cookie とそのすべての親です。
 
@@ -476,7 +476,7 @@ virtual void OnStatusCallback(
 |INTERNET_STATUS_RESPONSE_RECEIVED|サーバーから応答を受信しました。 *LpvStatusInformation*パラメーターが NULL です。|
 |INTERNET_STATUS_CLOSING_CONNECTION|サーバーへの接続を終了しています。 *LpvStatusInformation*パラメーターが NULL です。|
 |INTERNET_STATUS_CONNECTION_CLOSED|サーバーへの接続が正常に閉じられます。 *LpvStatusInformation*パラメーターが NULL です。|
-|INTERNET_STATUS_HANDLE_CREATED|Win32 API 関数で使用される[InternetConnect](http://msdn.microsoft.com/library/windows/desktop/aa384363)を新しいハンドルが作成されたことを示します。 これにより、アプリケーションの呼び出し、Win32 関数[InternetCloseHandle](http://msdn.microsoft.com/library/windows/desktop/aa384350)接続の時間がかかりすぎる場合、別のスレッドから。 これらの関数の詳細について Windows SDKfor を参照してください。|
+|INTERNET_STATUS_HANDLE_CREATED|Win32 API 関数で使用される[InternetConnect](/windows/desktop/api/wininet/nf-wininet-internetconnecta)を新しいハンドルが作成されたことを示します。 これにより、アプリケーションの呼び出し、Win32 関数[InternetCloseHandle](/windows/desktop/api/wininet/nf-wininet-internetclosehandle)接続の時間がかかりすぎる場合、別のスレッドから。 これらの関数の詳細について Windows SDKfor を参照してください。|
 |INTERNET_STATUS_HANDLE_CLOSING|このハンドルの値が正常に終了します。|
 
 ステータス コールバック ルーチンを実行する前に、何らかのアクションを要求するには、このメンバー関数をオーバーライドします。
@@ -589,7 +589,7 @@ URL に関連付けるを実際の文字列データを含む文字列へのポ�
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Win32 メッセージの動作を実装[InternetSetCookie](http://msdn.microsoft.com/library/windows/desktop/aa385107)」の説明に従って、Windows SDK。
+このメンバー関数は、Win32 メッセージの動作を実装[InternetSetCookie](/windows/desktop/api/wininet/nf-wininet-internetsetcookiea)」の説明に従って、Windows SDK。
 
 ## <a name="setoption"></a>  CInternetSession::SetOption
 
@@ -612,7 +612,7 @@ BOOL SetOption(
 ### <a name="parameters"></a>パラメーター
 
 *dwOption*  
-インターネット オプションを設定します。 参照してください[オプション フラグ](http://msdn.microsoft.com/library/windows/desktop/aa385328)Windows SDKfor 使用可能なオプションの一覧にします。
+インターネット オプションを設定します。 参照してください[オプション フラグ](/windows/desktop/WinInet/option-flags)Windows SDKfor 使用可能なオプションの一覧にします。
 
 *lpBuffer*  
 オプションの設定を格納するバッファー。
@@ -632,7 +632,7 @@ BOOL SetOption(
 
 ### <a name="return-value"></a>戻り値
 
-操作が成功した場合は、値 TRUE が返されます。 エラーが発生した場合、値は FALSE が返されます。 呼び出しが失敗した場合は、Win32 関数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。
+操作が成功した場合は、値 TRUE が返されます。 エラーが発生した場合、値は FALSE が返されます。 呼び出しが失敗した場合は、Win32 関数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。
 
 ## <a name="see-also"></a>関連項目
 

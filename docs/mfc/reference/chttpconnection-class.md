@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03e773e57b4cdaee09331dab651f41f1fa8db211
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: bbc42f1af6dab8c34c6092e604682669ab18b9bb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336063"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211578"
 ---
 # <a name="chttpconnection-class"></a>CHttpConnection クラス
 HTTP サーバーへの接続を管理します。  
@@ -66,7 +66,7 @@ class CHttpConnection : public CInternetConnection
   
  `CHttpConnection`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxinet.h  
   
 ##  <a name="chttpconnection"></a>  CHttpConnection::CHttpConnection  
@@ -129,7 +129,7 @@ CHttpConnection(
 |NULL 以外の文字列|NULL 以外の文字列|*pstrUserName*|*pstrPassword*|  
   
  *dwFlags*  
- 任意の組み合わせ、 **INTERNET_ _ flag _\*** フラグ。 表を参照して、**解説**の[しないで](#openrequest)の説明については*dwFlags*値。  
+ 任意の組み合わせ、`INTERNET_FLAG_*`フラグ。 表を参照して、**解説**の[しないで](#openrequest)の説明については*dwFlags*値。  
   
 ### <a name="remarks"></a>Remarks  
  作成することはありません、`CHttpConnection`直接します。 呼び出してオブジェクトを作成する代わりに、[代わりに](../../mfc/reference/cinternetsession-class.md#gethttpconnection)します。  

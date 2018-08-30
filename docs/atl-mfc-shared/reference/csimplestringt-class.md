@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da0cd0df9311d11b30c3ef42d8492c71cb78abb4
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fd96c7028f5f37d617c86e412fa238ccf141cb58
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883633"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42573138"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT クラス
 このクラスを表す、`CSimpleStringT`オブジェクト。  
@@ -131,7 +131,7 @@ class CSimpleStringT
 ### <a name="remarks"></a>Remarks  
  `CSimpleStringT` Visual C でサポートされているさまざまな文字列クラスの基本クラスです。 バッファーの基本的な操作、文字列オブジェクトのメモリ管理のため、最小限のサポートを提供します。 高度な文字列オブジェクトでは、次を参照してください。 [CStringT クラス](../../atl-mfc-shared/reference/cstringt-class.md)します。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** atlsimpstr.h  
 
 
@@ -467,7 +467,7 @@ PXSTR GetBufferSetLength(int nLength);
   
  バッファーのメモリが自動的に解放されるときに、`CSimpleStringT`オブジェクトは破棄されます。  
   
- 文字列の長さ自分の場合は、終端の null 文字をいない追加されません。 使用して、バッファーを解放するときに、最終的な文字列の長さを指定する必要があります`ReleaseBuffer`します。 呼び出すと終端の null 文字を追加するかどうかは`ReleaseBuffer`の長さを-1 (既定値) を渡す`ReleaseBuffer`、および`ReleaseBuffer`は実行を`strlen`バッファーの長さを確認するにします。  
+ 文字列の長さ自分で、終端の null 文字を追加しないでください。 使用して、バッファーを解放するときに、最終的な文字列の長さを指定する必要があります`ReleaseBuffer`します。 呼び出すと終端の null 文字を追加するかどうかは`ReleaseBuffer`の長さを-1 (既定値) を渡す`ReleaseBuffer`、および`ReleaseBuffer`は実行を`strlen`バッファーの長さを確認するにします。  
   
  参照カウントの詳細については、次の記事を参照してください。  
   

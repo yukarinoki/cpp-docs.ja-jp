@@ -1,7 +1,7 @@
 ---
-title: コンパイラの警告 (レベル 3) C4686 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 3) C4686 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,42 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1edbf438951644f63aae637a68f69d173ab7e1b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 32a44cd929eb7629ef317ce9847950b613bde52c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292780"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202081"
 ---
 # <a name="compiler-warning-level-3-c4686"></a>コンパイラの警告 (レベル 3) C4686
-**'**   
- ***ユーザー定義型*': 動作の変更可能な UDT の戻り値呼び出し規約**  
-  
- クラス テンプレートの特殊化が、戻り値の型を使用する前に定義します。 クラスをインスタンス化するものが解決するには C4686インスタンスを宣言するか、メンバーへのアクセス (C\<int >:: 何も) もオプションです。  
-  
- 既定では、この警告はオフに設定されています。 詳細については、「 [既定で無効になっているコンパイラ警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 」を参照してください。  
-  
- 代わりに、以下を試してください。  
-  
-```  
-// C4686.cpp  
-// compile with: /W3  
-#pragma warning (default : 4686)  
-template <class T>  
-class C;  
-  
-template <class T>  
-C<T> f(T);  
-  
-template <class T>  
-class C {};  
-  
-int main() {  
-   f(1);   // C4686  
-}  
-  
-template <class T>  
-C<T> f(T) {  
-   return C<int>();  
-}  
+
+> '*ユーザー定義型*': 動作の変更可能な UDT の戻り値の呼び出し規則
+
+## <a name="remarks"></a>Remarks
+
+クラス テンプレートの特殊化されていない戻り値の型で使用する前に定義されます。 C4686; を解決するには、クラスをインスタンス化するものインスタンスの宣言またはメンバーへのアクセス (C\<int >:: 何も) もオプションです。
+
+既定では、この警告はオフに設定されています。 詳細については、「 [既定で無効になっているコンパイラ警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 」を参照してください。
+
+## <a name="example"></a>例
+
+以下をお試し代わりにします。
+
+```cpp
+// C4686.cpp
+// compile with: /W3
+#pragma warning (default : 4686)
+template <class T>
+class C;
+
+template <class T>
+C<T> f(T);
+
+template <class T>
+class C {};
+
+int main() {
+   f(1);   // C4686
+}
+
+template <class T>
+C<T> f(T) {
+   return C<int>();
+}
 ```

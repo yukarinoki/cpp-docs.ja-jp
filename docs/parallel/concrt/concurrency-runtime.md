@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b39fb35b21721cb9b93741a74f62d749b6fb1051
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b0a7a2bcabc045be7493174c8eea2362d074b221
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608268"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203944"
 ---
 # <a name="concurrency-runtime"></a>同時実行ランタイム
 C++ の同時実行ランタイムにより、信頼性が高く、スケーラブルで、応答性の高い並行アプリケーションを作成できます。 このフレームワークでは抽象のレベルが引き上げられるので、同時実行に関連するインフラストラクチャの詳細を管理する必要はありません。 また、アプリケーションのサービスの品質への要求を満たすスケジューリング ポリシーを指定するためにも使用できます。 同時実行ランタイムを初めて使用する場合に役立つ情報が記載されている次の各ドキュメントを活用してください。  
@@ -107,7 +107,7 @@ C++ の同時実行ランタイムにより、信頼性が高く、スケーラ�
   
 |||  
 |-|-|  
-|[Hilo での非同期プログラミング パターンとヒント (C++ と XAML を使った Windows ストア アプリ)](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|同時実行ランタイムを使用して C++ と XAML を使った Windows ランタイム アプリである Hilo での非同期操作を実装する方法について説明します。|  
+|[非同期プログラミング パターンし、Hilo (C++ と XAML を使った Windows ストア アプリ) でのヒント](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|同時実行ランタイムを使用して C++ と XAML を使った Windows ランタイム アプリである Hilo での非同期操作を実装する方法について説明します。|  
 |[同時実行ランタイムと Visual Studio 2010 での並列パターン ライブラリのコード サンプル](http://go.microsoft.com/fwlink/p/?linkid=183875)|同時実行ランタイムの例を示すサンプル アプリケーションおよびユーティリティを提供します。|  
 |[ネイティブ コードのブログでの並列プログラミング](http://go.microsoft.com/fwlink/p/?linkid=183873)|同時実行ランタイムでの並列プログラミングに関する詳細なブログ記事を別途紹介しています。|  
 |[C++ とネイティブ コードのフォーラムでの並列コンピューティング](http://go.microsoft.com/fwlink/p/?linkid=183874)|同時実行ランタイムに関するコミュニティ ディスカッションに参加できます。|  

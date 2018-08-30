@@ -1,5 +1,5 @@
 ---
-title: '方法: PInvoke を使用してマネージ コードからネイティブ Dll を呼び出す |Microsoft ドキュメント'
+title: '方法: PInvoke を使用してマネージ コードからネイティブ Dll を呼び出す |Microsoft Docs'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e82690e49daf324d0ff77f89710ecdd09b208c19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ddd919fb621c971425e9763cf781e5ff0b1c731
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33129188"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195669"
 ---
-# <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>方法: PInvoke を使用してマネージ コードからネイティブ DLL を呼び出す
-アンマネージ Dll に実装されている関数は、Platform Invoke (P/invoke) 機能を使用してマネージ コードから呼び出すことができます。 DLL のソース コードが使用できない場合は、相互運用するための唯一のオプションは P/invoke です。 ただし、Visual C は、他の .NET 言語とは異なり、P/invoke する代わりを提供します。 詳細については、次を参照してください。[を使用して C++ Interop (暗黙の PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)です。  
+# <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>方法: PInvoke を使用してマネージド コードからネイティブ DLL を呼び出す
+アンマネージ Dll に実装されている関数は、Platform Invoke (P/invoke) 機能を使用してマネージ コードから呼び出すことができます。 DLL のソース コードを使用できない場合の相互運用の唯一のオプションは、P/invoke します。 ただし、Visual C は、他の .NET 言語とは異なり、P/invoke の代替を提供します。 詳細については、次を参照してください。[を使用して C++ Interop (暗黙の PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)します。  
   
 ## <a name="example"></a>例  
- 次のコード例は、Win32 を使用して[問題](http://msdn.microsoft.com/library/windows/desktop/ms724385)ピクセルでの画面の現在の解像度を取得します。  
+ 次のコード例は、Win32 を使用して[GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385) (ピクセル単位)、画面の現在の解像度を取得します。  
   
- 組み込み型のみを引数として使用し、値を返す関数の場合は、追加の作業は必要ありません。 関数ポインター、配列、および構造体など、他のデータ型では、適切なデータのマーシャ リングすることを確認する追加の属性が必要です。  
+ 関数の引数として組み込み型のみを使用すると、戻り値の場合に余分な作業は必要ありません。 関数ポインター、配列、および構造体などの他のデータ型には、適切なデータのマーシャ リングすることを確認する追加属性が必要です。  
   
- 必要ありませんは、この例で示したように、グローバル名前空間に存在しないように P/invoke 宣言のある値クラスの静的メンバーを作成するようにします。  
+ 必須ではありませんが、この例のように、グローバル名前空間に存在しないように P/invoke 宣言の値クラスの静的メンバーを作成するようにを勧めします。  
   
 ```  
 // pinvoke_basic.cpp  

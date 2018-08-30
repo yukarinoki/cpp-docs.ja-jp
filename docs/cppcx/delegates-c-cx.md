@@ -1,23 +1,23 @@
 ---
-title: デリゲート (C + + CX) |Microsoft ドキュメント
+title: デリゲート (C + + CX) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 3175bf1c-86d8-4eda-8d8f-c5b6753d8e38
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9936280d25933afb787d883139725b5a7044db6e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fda9cab73088746ec64caf482f9e606d713eaa4f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092389"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222744"
 ---
 # <a name="delegates-ccx"></a>デリゲート (C++/CX)
-`delegate`関数オブジェクトには、標準 C++ の Windows ランタイムに相当する参照型を宣言するキーワードを使用します。 関数シグネチャに似たデリゲート宣言。これは、ラップされた関数が持つ必要のある、戻り値の型およびパラメーターの型を指定します。 これは、ユーザー定義のデリゲート宣言です。  
+`delegate`キーワードの使用を標準 C++ での関数オブジェクトの Windows ランタイムと等価な参照型を宣言します。 関数シグネチャに似たデリゲート宣言。これは、ラップされた関数が持つ必要のある、戻り値の型およびパラメーターの型を指定します。 これは、ユーザー定義のデリゲート宣言です。  
   
 ```cpp  
      public delegate void PrimeFoundHandler(int result);  
@@ -29,10 +29,10 @@ ms.locfileid: "33092389"
 event PrimeFoundHandler^ primeFoundEvent;  
 ```  
   
- クライアントに公開されるデリゲートを宣言する、Windows ランタイムのアプリケーション バイナリ インターフェイスを使用して[Windows::Foundation::TypedEventHandler\<TSender, TResult >](http://msdn.microsoft.com/library/windows/apps/br225997.aspx)です。 このデリゲートには、デリゲートが Javascript クライアントによって利用できるようにする、事前定義されたプロキシとスタブ バイナリがあります。  
+ クライアントに公開されるデリゲートを宣言する、Windows ランタイムのアプリケーション バイナリ インターフェイスを使用して[Windows::Foundation::TypedEventHandler\<TSender, TResult >](https://msdn.microsoft.com/library/windows/apps/br225997.aspx)します。 このデリゲートには、デリゲートが Javascript クライアントによって利用できるようにする、事前定義されたプロキシとスタブ バイナリがあります。  
   
 ## <a name="consuming-delegates"></a>デリゲートの利用  
- ユニバーサル Windows プラットフォーム アプリを作成するときに頻繁に使用する Windows ランタイム クラスを公開するイベントの種類としてのデリゲート。 イベントにサブスクライブするには、デリゲートの署名に一致する関数 (ラムダ) を指定することで、そのデリゲート型のインスタンスを作成します。 そして、 `+=` 演算子を使用して、デリゲート オブジェクトをクラスのイベント メンバーに渡します。 これは、イベントのサブスクライブと呼ばれます。 クラスのインスタンスがイベントを "発生" させると、ユーザーのオブジェクトやその他のオブジェクトによって追加された他のハンドラーと共に、関数が呼び出されます。  
+ ユニバーサル Windows プラットフォーム アプリを作成するときに頻繁に使用する Windows ランタイム クラスによって公開されるイベントの種類としてのデリゲート。 イベントにサブスクライブするには、デリゲートの署名に一致する関数 (ラムダ) を指定することで、そのデリゲート型のインスタンスを作成します。 そして、 `+=` 演算子を使用して、デリゲート オブジェクトをクラスのイベント メンバーに渡します。 これは、イベントのサブスクライブと呼ばれます。 クラスのインスタンスがイベントを "発生" させると、ユーザーのオブジェクトやその他のオブジェクトによって追加された他のハンドラーと共に、関数が呼び出されます。  
   
 > [!TIP]
 >  Visual Studio は、イベント ハンドラーを作成するときに便利です。 たとえば、イベント ハンドラーを XAML マークアップで指定すると、ツール ヒントが表示されます。 ツール ヒントが選択されると、Visual Studio は、自動的にイベント ハンドラー メソッドを作成し、パブリッシャー クラスのイベントに関連付けます。  
@@ -48,9 +48,9 @@ event PrimeFoundHandler^ primeFoundEvent;
  [!code-cpp[cx_delegates#121](../cppcx/codesnippet/CPP/delegatesevents/class1.cpp#121)]  
   
 > [!WARNING]
->  細心の注意を払って循環参照を回避する場合を除き、一般にイベント ハンドラーにはラムダではなく名前付き関数を使用する方が適しています。 名前付き関数では弱い参照によって "this" ポインターをキャプチャしますが、ラムダでは強い参照によって "this" ポインターをキャプチャし、循環参照を作成します。 詳細については、次を参照してください。[弱い参照および中断サイクル](../cppcx/weak-references-and-breaking-cycles-c-cx.md)です。  
+>  細心の注意を払って循環参照を回避する場合を除き、一般にイベント ハンドラーにはラムダではなく名前付き関数を使用する方が適しています。 名前付き関数では弱い参照によって "this" ポインターをキャプチャしますが、ラムダでは強い参照によって "this" ポインターをキャプチャし、循環参照を作成します。 詳細については、次を参照してください。[弱い参照および中断サイクル](../cppcx/weak-references-and-breaking-cycles-c-cx.md)します。  
   
- Windows ランタイムで定義されているイベント ハンドラー デリゲートの名前に、フォームがある規則では、* EventHandler — RoutedEventHandler、SizeChangedEventHandler、SuspendingEventHandler など、します。 同様に、慣例に基づき、イベント ハンドラー デリゲートは 2 つのパラメーターを持ち、void を返します。 型パラメーターがないデリゲートでは、最初のパラメーターは [Platform::Object^](../cppcx/platform-object-class.md)型です。これは、イベントを発生させたオブジェクトである送信元への参照を保持します。 イベント ハンドラー メソッドで引数を使用する前に、元の型にキャスト バックする必要があります。 型パラメーターを持つイベント ハンドラー デリゲートでは、最初の型パラメーターは送信元の種類を指定し、2 番目のパラメーターはイベントに関する情報を保持する ref クラスへのハンドルです。 規則では、そのクラスの名前は\*EventArgs です。 たとえば、RoutedEventHandler デリゲートには RoutedEventArgs^ 型の 2 番目のパラメーターがあり、DragEventHander には DragEventArgs^ 型の 2 番目のパラメーターがあります。  
+ 慣例により、Windows ランタイムによって定義されているイベント ハンドラー デリゲートの名前があるフォーム * EventHandler — などの RoutedEventHandler、SizeChangedEventHandler、suspendingeventhandler します。 同様に、慣例に基づき、イベント ハンドラー デリゲートは 2 つのパラメーターを持ち、void を返します。 型パラメーターがないデリゲートでは、最初のパラメーターは [Platform::Object^](../cppcx/platform-object-class.md)型です。これは、イベントを発生させたオブジェクトである送信元への参照を保持します。 イベント ハンドラー メソッドで引数を使用する前に、元の型にキャスト バックする必要があります。 型パラメーターを持つイベント ハンドラー デリゲートでは、最初の型パラメーターは送信元の種類を指定し、2 番目のパラメーターはイベントに関する情報を保持する ref クラスへのハンドルです。 慣例により、そのクラスの名前が\*EventArgs。 たとえば、RoutedEventHandler デリゲートには RoutedEventArgs^ 型の 2 番目のパラメーターがあり、DragEventHander には DragEventArgs^ 型の 2 番目のパラメーターがあります。  
   
  名前付け規則により、非同期操作が完了したときに実行されるコードをラップするデリゲートには、*CompletedHandler という名前が付けられます。 これらのデリゲートは、イベントではなくクラスのプロパティとして定義されます。 したがって、サブスクライブするために `+=` 演算子を使用する必要はありません。デリゲート オブジェクトをプロパティに割り当てるだけです。  
   
@@ -58,7 +58,7 @@ event PrimeFoundHandler^ primeFoundEvent;
 >  C++ IntelliSense ではデリゲート署名がフルに表示されないため、EventArgs パラメーターの特定の型を判断するための役には立ちません。 型を見つけるには、 **オブジェクト** ブラウザーでデリゲートの `Invoke` メソッドを確認します。  
   
 ## <a name="creating-custom-delegates"></a>カスタム デリゲートの作成  
- イベント ハンドラーを定義するか、コンシューマーは、Windows ランタイム コンポーネントに渡すカスタム機能を有効にする、独自のデリゲートを定義できます。 その他の Windows ランタイム型と同様には、パブリック デリゲートをジェネリックとして宣言にすることはできません。  
+ イベント ハンドラーを定義する、またはコンシューマーを Windows ランタイム コンポーネントに渡すカスタム機能を有効にする、独自のデリゲートを定義できます。 他の Windows ランタイム型のようには、パブリック デリゲートをジェネリックとして宣言にすることはできません。  
   
 ### <a name="declaration"></a>宣言  
  デリゲートの宣言は関数宣言に似ていますが、デリゲートは型である点が異なります。 クラス宣言の内部にデリゲート宣言を入れ子にすることもできますが、通常は名前空間スコープでデリゲートを宣言します。 次のデリゲートは、入力として `ContactInfo^` を受け取って `Platform::String^`を返す関数をカプセル化します。  
@@ -70,9 +70,9 @@ event PrimeFoundHandler^ primeFoundEvent;
  [!code-cpp[Cx_delegates#112](../cppcx/codesnippet/CPP/delegatesevents/class1.h#112)]  
   
 > [!NOTE]
->  使用する、"^"シンボル デリゲート型を参照するときの任意の Windows ランタイムで参照する型と同様です。  
+>  使用する、"^"は任意の Windows ランタイムで型を参照するのと同じように、デリゲート型を参照するときをシンボルします。  
   
- イベント宣言には常にデリゲート型が含まれます。 この例は、一般的なデリゲートを示しています。 Windows ランタイムで型のシグネチャ。  
+ イベント宣言には常にデリゲート型が含まれます。 この例は、一般的なデリゲートを示しています。 Windows ランタイムの型シグネチャ。  
   
  [!code-cpp[cx_delegates#122](../cppcx/codesnippet/CPP/delegatesevents/class1.h#122)]  
   
@@ -86,7 +86,7 @@ event PrimeFoundHandler^ primeFoundEvent;
   
  [!code-cpp[Cx_delegates#114](../cppcx/codesnippet/CPP/delegatesevents/class1.cpp#114)]  
   
- 次の例では、クライアント アプリは、内の各項目に対してデリゲートを実行する Windows ランタイム コンポーネントのパブリック メソッドにカスタム デリゲートを渡します、 `Vector`:  
+ 次の例では、クライアント アプリは内の各項目に対してデリゲートを実行する Windows ランタイム コンポーネントのパブリック メソッドにカスタム デリゲートを渡します、 `Vector`:  
   
  [!code-cpp[Cx_delegates#118](../cppcx/codesnippet/CPP/clientapp/mainpage.xaml.cpp#118)]  
   
@@ -122,7 +122,7 @@ event PrimeFoundHandler^ primeFoundEvent;
 ## <a name="delegates-and-threads"></a>デリゲートとスレッド  
  関数オブジェクトと同様に、デリゲートには将来いつか実行されるコードが含まれます。 デリゲートを作成して渡すコードと、デリゲートを受け取って実行する関数が同じスレッドで実行されている場合、動作は比較的簡単です。 そのスレッドが UI スレッドの場合、デリゲートは XAML コントロールなどのユーザー インターフェイス オブジェクトを直接処理できます。  
   
- クライアント アプリでは、スレッド アパートメントで実行され、そのコンポーネントにデリゲートを提供する Windows ランタイム コンポーネントが読み込まれる場合、既定では、デリゲートが呼び出される STA スレッドで直接です。 ほとんどの Windows ランタイム コンポーネントは、STA または MTA で実行できます。  
+ クライアント アプリが、スレッド アパートメントで実行され、そのコンポーネントへのデリゲートを提供します。 Windows ランタイム コンポーネントを読み込む場合、既定では、デリゲートが呼び出される STA スレッドで直接。 ほとんどの Windows ランタイム コンポーネントは、STA または MTA で実行できます。  
   
  デリゲートを実行するコードが別のスレッド (concurrency::task オブジェクトのコンテキスト内など) で実行される場合は、共有データへのアクセスを同期する必要があります。 たとえば、デリゲートにベクターへの参照が含まれ、XAML コントロールが同じベクターへの参照を持つ場合は、デリゲートと XAML コントロールが同時にベクターにアクセスしようとしたときに発生する可能性のあるデッドロックや競合状態を回避する手順を実行する必要があります。 また、デリゲートが呼び出される前にスコープ外に出る可能性がある参照ローカル変数によってデリゲートがキャプチャを試みないように注意する必要もあります。  
   

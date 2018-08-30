@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 534d2755dfb38e739234dd15eb7f04263874c59e
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: dcd141134dfef7b7044d0a4f9635ff5bcc252c93
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209026"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223365"
 ---
 # <a name="reverseiterator-class"></a>reverse_iterator クラス
 
@@ -97,7 +97,7 @@ RandomIterator 逆の順序で動作するように適合させる反復子を�
 |[operator->](#operator-_gt)|`reverse_iterator` によってアドレス指定される要素へのポインターを返します。|
 |[operator&#91;&#93;](#op_at)|`reverse_iterator` によってアドレス指定される要素からの要素のオフセットへの参照を返します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<iterator>
 
@@ -805,7 +805,7 @@ reference operator[](difference_type Off) const;
 
 ### <a name="remarks"></a>Remarks
 
-この演算子は、**\***( **\*this** + `Off` を返します。
+この演算子は、<strong>\*</strong>( **\*this** + `Off` を返します。
 
 ### <a name="example"></a>例
 

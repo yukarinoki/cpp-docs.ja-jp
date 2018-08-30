@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f60ba71a82bf09361e55f8c6b7cab82f49d47bd
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: d90a3f4b2cbacb3071dcd552fd88f6cb11bb5d43
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42572460"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131843"
 ---
 # <a name="constructors-c"></a>コンストラクター (C++)
 
@@ -598,7 +598,7 @@ public:
 
 ## <a name="inheriting_constructors"></a> コンス トラクター (c++ 11) の継承
 
-派生クラスは、次の例に示すように using 宣言を使用することにより、コンストラクターを直接基底クラスから継承できます。
+派生クラスを使用して直接基底クラスからコンス トラクターを継承することができます、**を使用して**次の例に示すように宣言します。
 
 ```cpp
 #include <iostream>
@@ -647,7 +647,7 @@ Derived d3 = d2 calls: Base(Base&)
 Derived d4 calls: Base()*/
 ```
 
-using 宣言を使用すると、派生クラス内のコンストラクターとシグネチャが同じであるものを除き、基底クラスのすべてのコンストラクターがスコープ内に取りこまれます。 一般に、派生クラスが新しいデータ メンバーまたはコンストラクターを宣言しない場合は、コンストラクターの継承を使用することをお勧めします。
+**Visual Studio 2017 バージョン 15.7 以降**:**を使用して**ステートメント **/std:c + + 17**スコープに同じシグネチャを持つものを除く基底クラスからすべてのコンス トラクターは、モード派生クラスでコンス トラクター。 一般に、派生クラスが新しいデータ メンバーまたはコンストラクターを宣言しない場合は、コンストラクターの継承を使用することをお勧めします。 参照してください[Visual Studio 2017 バージョン 15.7 での機能強化](../cpp-conformance-improvements-2017.md#improvements_157)します。
 
 型が基底クラスを指定している場合、クラス テンプレートは型の引数からすべてのコンストラクターを継承できます。
 

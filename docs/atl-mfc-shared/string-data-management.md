@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b42f637c487e27b8658bcd09389eec940bb1df05
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: b4e82671973f2d841c6c0797fb73ad582ce203f1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880217"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214348"
 ---
 # <a name="string-data-management"></a>文字列データ管理
 Visual C には、文字列データを管理するためにいくつかの方法が用意されています。  
@@ -67,7 +67,7 @@ Visual C には、文字列データを管理するためにいくつかの方�
  A `CString` INT_MAX (2,147, 483,647) 文字にオブジェクトを格納できます。 取得または設定内の個々 の文字、TCHAR データ型が使用される、`CString`オブジェクト。 文字の配列とは異なり、`CString`クラスには、組み込みのメモリ割り当てが可能です。 これにより、`CString`必要に応じて自動的に拡張するオブジェクト (は、増加について心配する必要する必要はありません、`CString`長い文字列に合わせてオブジェクト)。  
   
 ##  <a name="_core_cstrings_and_const_char_pointers"></a> Cstring、const char ポインター  
- A`CString`オブジェクトは、リテラルの C スタイル文字列のように動作できますも (、`PCXSTR`と同じ**const char\***  Unicode 下ではない場合)。 [CSimpleStringT::operator PCXSTR](../atl-mfc-shared/reference/csimplestringt-class.md#operator_pcxstr)変換演算子を使うと`CString`自由に関数呼び出しで文字ポインターの代わりに使用するオブジェクト。 **CString (LPCWSTR** `pszSrc` **)** コンス トラクターの代わりに使用する文字のポインターを使用する`CString`オブジェクト。  
+ A`CString`オブジェクトは、リテラルの C スタイル文字列のように動作できますも (、`PCXSTR`と同じ**const char** <strong>\*</strong> Unicode 下ではない場合)。 [CSimpleStringT::operator PCXSTR](../atl-mfc-shared/reference/csimplestringt-class.md#operator_pcxstr)変換演算子を使うと`CString`自由に関数呼び出しで文字ポインターの代わりに使用するオブジェクト。 **CString (LPCWSTR** `pszSrc` **)** コンス トラクターの代わりに使用する文字のポインターを使用する`CString`オブジェクト。  
   
  折りたたむ場合に試行は行われません`CString`オブジェクト。 2 つの操作を行った場合`CString`オブジェクトを含む`Chicago`、たとえば、内の文字`Chicago`2 つの場所に格納されます。 (この可能性がありますできません MFC では、将来のバージョンの場合は true。 それに依存する必要がありますしないようにします。)  
   

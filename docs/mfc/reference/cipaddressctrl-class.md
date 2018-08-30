@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6c7d45c36534ab2c67765dc6e4e9ea61b79b3ea
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 49362fa02005ce44100b0248d25ffc364a68da16
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338033"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222339"
 ---
 # <a name="cipaddressctrl-class"></a>CIPAddressCtrl クラス
 Windows コモン IP アドレス コントロールの機能が用意されています。  
@@ -76,7 +76,7 @@ class CIPAddressCtrl : public CWnd
   
  このコントロール (つまり、`CIPAddressCtrl`クラス) は Microsoft Internet Explorer 4.0 以降を実行中のプログラムでのみ使用できます。 Windows および Windows NT の将来のバージョンで使用可能なもされます。  
   
- IP アドレスの管理の概要については、次を参照してください。 [IP アドレス コントロール](http://msdn.microsoft.com/library/windows/desktop/bb761372)Windows SDK に含まれています。  
+ IP アドレスの管理の概要については、次を参照してください。 [IP アドレス コントロール](/windows/desktop/Controls/ip-address-controls)Windows SDK に含まれています。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -87,12 +87,11 @@ class CIPAddressCtrl : public CWnd
   
  `CIPAddressCtrl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxcmn.h  
   
 ##  <a name="cipaddressctrl"></a>  CIPAddressCtrl::CIPAddressCtrl  
- 
-          `CIPAddressCtrl` オブジェクトを作成します。  
+ `CIPAddressCtrl` オブジェクトを作成します。  
   
 ```  
 CIPAddressCtrl();
@@ -106,7 +105,7 @@ void ClearAddress();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[IPM_CLEARADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761377)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[IPM_CLEARADDRESS](/windows/desktop/Controls/ipm-clearaddress)」の説明に従って、Windows SDK。  
   
 ##  <a name="create"></a>  CIPAddressCtrl::Create  
  IP アドレス コントロールを作成しにアタッチします、`CIPAddressCtrl`オブジェクト。  
@@ -121,10 +120,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>パラメーター  
  *dwStyle*  
- IP アドレス コントロールのスタイル。 ウィンドウ スタイルの組み合わせを適用します。 コントロールが子ウィンドウにある必要がありますので、WS_CHILD スタイルを含める必要があります。 参照してください[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) windows スタイルの一覧については、Windows SDK に含まれています。  
+ IP アドレス コントロールのスタイル。 ウィンドウ スタイルの組み合わせを適用します。 コントロールが子ウィンドウにある必要がありますので、WS_CHILD スタイルを含める必要があります。 参照してください[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) windows スタイルの一覧については、Windows SDK に含まれています。  
   
  *rect*  
- IP アドレス コントロールのサイズと位置への参照。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。  
+ IP アドレス コントロールのサイズと位置への参照。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。  
   
  *pParentWnd*  
  IP アドレス コントロールの親ウィンドウへのポインター。 NULL は指定できません。  
@@ -158,13 +157,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>パラメーター  
  *dwExStyle*  
- 作成されるコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK に含まれています。  
+ 作成されるコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK に含まれています。  
   
  *dwStyle*  
- IP アドレス コントロールのスタイル。 ウィンドウ スタイルの組み合わせを適用します。 コントロールが子ウィンドウにある必要がありますので、WS_CHILD スタイルを含める必要があります。 参照してください[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) windows スタイルの一覧については、Windows SDK に含まれています。  
+ IP アドレス コントロールのスタイル。 ウィンドウ スタイルの組み合わせを適用します。 コントロールが子ウィンドウにある必要がありますので、WS_CHILD スタイルを含める必要があります。 参照してください[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) windows スタイルの一覧については、Windows SDK に含まれています。  
   
  *rect*  
- 参照を[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。  
+ 参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。  
   
  *pParentWnd*  
  コントロールの親であるウィンドウへのポインター。  
@@ -211,7 +210,7 @@ int GetAddress(DWORD& dwAddress);
  IP アドレス コントロール内の空白でないフィールドの数。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378)」の説明に従って、Windows SDK。 最初のプロトタイプで読み取るフィールド 0 ~ コントロールの 3 内の数値の左から右それぞれ、4 つのパラメーターを設定します。 上記の 2 つ目のプロトタイプで*dwAddress*は次のように設定されます。  
+ このメンバー関数は、Win32 メッセージの動作を実装[IPM_GETADDRESS](/windows/desktop/Controls/ipm-getaddress)」の説明に従って、Windows SDK。 最初のプロトタイプで読み取るフィールド 0 ~ コントロールの 3 内の数値の左から右それぞれ、4 つのパラメーターを設定します。 上記の 2 つ目のプロトタイプで*dwAddress*は次のように設定されます。  
   
 |フィールド|ビット フィールドの値を格納しています。|  
 |-----------|-------------------------------------|  
@@ -231,7 +230,7 @@ BOOL IsBlank() const;
  すべての IP アドレス コントロール フィールドが空以外の場合、0 以外の場合それ以外の場合 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[IPM_ISBLANK](http://msdn.microsoft.com/library/windows/desktop/bb761379)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[IPM_ISBLANK](/windows/desktop/Controls/ipm-isblank)」の説明に従って、Windows SDK。  
   
 ##  <a name="setaddress"></a>  CIPAddressCtrl::SetAddress  
  IP アドレス コントロールの 4 つすべてのフィールドのアドレス値を設定します。  
@@ -263,7 +262,7 @@ void SetAddress(DWORD dwAddress);
  新しい IP アドレスを含む DWORD 値を指定します。 参照してください**解説**の表に、DWORD 値を格納する方法を示します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380)」の説明に従って、Windows SDK。 最初のプロトタイプで読み取るフィールド 0 ~ コントロールの 3 内の数値の左から右それぞれ、4 つのパラメーターを設定します。 上記の 2 つ目のプロトタイプで*dwAddress*は次のように設定されます。  
+ このメンバー関数は、Win32 メッセージの動作を実装[IPM_SETADDRESS](/windows/desktop/Controls/ipm-setaddress)」の説明に従って、Windows SDK。 最初のプロトタイプで読み取るフィールド 0 ~ コントロールの 3 内の数値の左から右それぞれ、4 つのパラメーターを設定します。 上記の 2 つ目のプロトタイプで*dwAddress*は次のように設定されます。  
   
 |フィールド|ビット フィールドの値を格納しています。|  
 |-----------|-------------------------------------|  
@@ -284,7 +283,7 @@ void SetFieldFocus(WORD nField);
  0 から始まるフィールド インデックスがフォーカスを設定する必要があります。 この値がフィールドの数より大きい場合は、最初の空フィールドにフォーカスが設定されます。 すべてのフィールドが空白以外の場合は、最初のフィールドにフォーカスが設定されます。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[IPM_SETFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb761381)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[IPM_SETFOCUS](/windows/desktop/Controls/ipm-setfocus)」の説明に従って、Windows SDK。  
   
 ##  <a name="setfieldrange"></a>  CIPAddressCtrl::SetFieldRange  
  IP アドレス コントロール内の指定したフィールドに範囲を設定します。  
@@ -307,7 +306,7 @@ void SetFieldRange(
  この IP アドレス コントロールで指定されたフィールドの上限値を受け取る整数への参照。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[IPM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761382)」の説明に従って、Windows SDK。 2 つのパラメーターを使用して、*上限値*と*下限*の代わりに、フィールドの上限と下限の制限を示すために、 *wRange* Win32 メッセージで使用されるパラメーター。  
+ このメンバー関数は、Win32 メッセージの動作を実装[IPM_SETRANGE](/windows/desktop/Controls/ipm-setrange)」の説明に従って、Windows SDK。 2 つのパラメーターを使用して、*上限値*と*下限*の代わりに、フィールドの上限と下限の制限を示すために、 *wRange* Win32 メッセージで使用されるパラメーター。  
   
 ## <a name="see-also"></a>関連項目  
  [CWnd クラス](../../mfc/reference/cwnd-class.md)   

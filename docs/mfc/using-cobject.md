@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0fab92dddc10a66fe350d343f1fd280ce5c9a50
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 30906b3851357942873e3926151d5a195161a6e5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027152"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205184"
 ---
 # <a name="using-cobject"></a>CObject の使い方
 [CObject](../mfc/reference/cobject-class.md)ルート基本クラスが、ほとんどの Microsoft Foundation Class ライブラリ (MFC)。 `CObject`クラスにはシリアル化のサポート、ランタイム クラス情報、オブジェクトの診断出力など、独自のプログラム オブジェクトに組み込むことが必要な多くの便利な機能が含まれています。 クラスを派生させる場合`CObject`、クラスは、これらを悪用できる`CObject`機能します。  
@@ -40,9 +40,9 @@ ms.locfileid: "39027152"
   
 -   [オブジェクトを動的に作成します。](../mfc/dynamic-object-creation.md)  
   
--   [診断のために、オブジェクトのデータをダンプします。](http://msdn.microsoft.com/727855b1-5a83-44bd-9fe3-f1d535584b59)  
+-   [診断のために、オブジェクトのデータをダンプします。](/previous-versions/visualstudio/visual-studio-2010/sc15kz85\(v=vs.100\))  
   
--   オブジェクトの内部状態の検証 (を参照してください[MFC ASSERT_VALID と cobject::assertvalid](http://msdn.microsoft.com/7654fb75-9e9a-499a-8165-0a96faf2d5e6))  
+-   オブジェクトの内部状態の検証 (を参照してください[MFC ASSERT_VALID と cobject::assertvalid](https://msdn.microsoft.com/7654fb75-9e9a-499a-8165-0a96faf2d5e6))  
   
 -   [それ自体を永続的ストレージにシリアル化クラスします。](../mfc/serialization-in-mfc.md)  
   

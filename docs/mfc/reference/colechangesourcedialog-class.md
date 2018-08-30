@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea2c87a3ce87bbf15f99609a643a9a72f6d2058e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a8b2ca6ebbc0201a3c56c9239b665c55ccd9eb13
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853486"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202746"
 ---
 # <a name="colechangesourcedialog-class"></a>COleChangeSourceDialog クラス
 OLE の [ソースの変更] ダイアログ ボックスに使用します。  
@@ -77,9 +77,9 @@ class COleChangeSourceDialog : public COleDialog
 |[COleChangeSourceDialog::m_cs](#m_cs)|ダイアログ ボックスの動作を制御する構造体。|  
   
 ## <a name="remarks"></a>Remarks  
- クラスのオブジェクトを作成`COleChangeSourceDialog`をこのダイアログ ボックスを呼び出す場合します。 後に、`COleChangeSourceDialog`オブジェクトが構築された、使用することができます、 [m_cs](#m_cs)値やダイアログ ボックスのコントロールの状態を初期化するためにします。 `m_cs`型の構造は、 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160)します。 このダイアログ ボックスの使い方の詳細については、次を参照してください。、 [DoModal](#domodal)メンバー関数。  
+ クラスのオブジェクトを作成`COleChangeSourceDialog`をこのダイアログ ボックスを呼び出す場合します。 後に、`COleChangeSourceDialog`オブジェクトが構築された、使用することができます、 [m_cs](#m_cs)値やダイアログ ボックスのコントロールの状態を初期化するためにします。 `m_cs`型の構造は、 [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea)します。 このダイアログ ボックスの使い方の詳細については、次を参照してください。、 [DoModal](#domodal)メンバー関数。  
   
- 詳細については、次を参照してください。、 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK の構造体。  
+ 詳細については、次を参照してください。、 [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) Windows SDK の構造体。  
   
  OLE に固有のダイアログ ボックスの詳細については、記事を参照してください。 [OLE のダイアログ ボックス](../../mfc/dialog-boxes-in-ole.md)します。  
   
@@ -98,7 +98,7 @@ class COleChangeSourceDialog : public COleDialog
   
  `COleChangeSourceDialog`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxodlgs.h  
   
 ##  <a name="colechangesourcedialog"></a>  COleChangeSourceDialog::COleChangeSourceDialog  
@@ -120,7 +120,7 @@ explicit COleChangeSourceDialog(
 ### <a name="remarks"></a>Remarks  
  ダイアログ ボックスを表示するには[DoModal](#domodal)関数。  
   
- 詳細については、次を参照してください。、 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160)構造と[OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) Windows SDK 内の関数。  
+ 詳細については、次を参照してください。、 [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea)構造と[OleUIChangeSource](/windows/desktop/api/oledlg/nf-oledlg-oleuichangesourcea) Windows SDK 内の関数。  
   
 ##  <a name="domodal"></a>  COleChangeSourceDialog::DoModal  
  OLE の [ソースの変更] ダイアログ ボックスを表示するには、この関数を呼び出します。  
@@ -136,7 +136,7 @@ virtual INT_PTR DoModal();
   
 - ユーザーには、ダイアログ ボックスが取り消された場合は IDCANCEL。  
   
-- IDABORT 場合は、エラーが発生しました。 IDABORT が返される場合、 [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)発生したエラーの種類に関する詳細を取得します。 考えられるエラーの一覧については、次を参照してください。、 [OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) Windows SDK 内の関数。  
+- IDABORT 場合は、エラーが発生しました。 IDABORT が返される場合、 [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)発生したエラーの種類に関する詳細を取得します。 考えられるエラーの一覧については、次を参照してください。、 [OleUIChangeSource](/windows/desktop/api/oledlg/nf-oledlg-oleuichangesourcea) Windows SDK 内の関数。  
   
 ### <a name="remarks"></a>Remarks  
  メンバーを設定して、さまざまなダイアログ ボックス コントロールを初期化する場合、 [m_cs](#m_cs)構造体を呼び出す前に、これを行う必要があります`DoModal`はダイアログ オブジェクトを構築します。  
@@ -185,9 +185,9 @@ CString GetFromPrefix();
 ### <a name="remarks"></a>Remarks  
  後でのみこの関数の呼び出し[DoModal](#domodal) IDOK を返します。  
   
- この値はから直接、`lpszFrom`のメンバー、 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160)構造体。  
+ この値はから直接、`lpszFrom`のメンバー、 [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea)構造体。  
   
- 詳細については、次を参照してください。、 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK の構造体。  
+ 詳細については、次を参照してください。、 [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) Windows SDK の構造体。  
   
 ##  <a name="getitemname"></a>  COleChangeSourceDialog::GetItemName  
  アイテム モニカーのリンクされたクライアントの項目の表示名の部分を取得するには、この関数を呼び出します。  
@@ -215,12 +215,12 @@ CString GetToPrefix();
 ### <a name="remarks"></a>Remarks  
  後でのみこの関数の呼び出し[DoModal](#domodal) IDOK を返します。  
   
- この値はから直接、`lpszTo`のメンバー、 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160)構造体。  
+ この値はから直接、`lpszTo`のメンバー、 [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea)構造体。  
   
- 詳細については、次を参照してください。、 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK の構造体。  
+ 詳細については、次を参照してください。、 [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) Windows SDK の構造体。  
   
 ##  <a name="m_cs"></a>  COleChangeSourceDialog::m_cs  
- このデータ メンバーが型の構造体[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160)します。  
+ このデータ メンバーが型の構造体[OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea)します。  
   
 ```  
 OLEUICHANGESOURCE m_cs;  
@@ -229,7 +229,7 @@ OLEUICHANGESOURCE m_cs;
 ### <a name="remarks"></a>Remarks  
  `OLEUICHANGESOURCE` OLE の [ソースの変更] ダイアログ ボックスの動作の制御に使用されます。 この構造体のメンバーを直接変更できます。  
   
- 詳細については、次を参照してください。、 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK の構造体。  
+ 詳細については、次を参照してください。、 [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) Windows SDK の構造体。  
   
 ##  <a name="isvalidsource"></a>  COleChangeSourceDialog::IsValidSource  
  新しいソースが有効なかどうかを判断するには、この関数を呼び出します。  
@@ -244,7 +244,7 @@ BOOL IsValidSource();
 ### <a name="remarks"></a>Remarks  
  後でのみこの関数の呼び出し[DoModal](#domodal) IDOK を返します。  
   
- 詳細については、次を参照してください。、 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK の構造体。  
+ 詳細については、次を参照してください。、 [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) Windows SDK の構造体。  
   
 ## <a name="see-also"></a>関連項目  
  [COleDialog クラス](../../mfc/reference/coledialog-class.md)   

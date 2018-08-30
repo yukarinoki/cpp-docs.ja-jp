@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43ad1d1d047b9e44da27d1c9eb24dde39fd429ef
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b1a4d3d44f7ce18486feab4096673970857a0907
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849917"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214978"
 ---
 # <a name="cscrollview-class"></a>CScrollView クラス
 A [CView](../../mfc/reference/cview-class.md)スクロール機能を持つ。  
@@ -86,9 +86,9 @@ class CScrollView : public CView
   
 -   キーボード、非スクロールのマウス、または IntelliMouse ホイールからのメッセージに応答して自動的にスクロールします。  
   
- キーボードからのメッセージに対して自動的にスクロールして、WM_KEYDOWN メッセージを追加し、VK_DOWN、VK_PREV と呼び出しをテスト[SetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787597)します。  
+ キーボードからのメッセージに対して自動的にスクロールして、WM_KEYDOWN メッセージを追加し、VK_DOWN、VK_PREV と呼び出しをテスト[SetScrollPos](/windows/desktop/api/winuser/nf-winuser-setscrollpos)します。  
   
- マウス ホイールを自分でメッセージ マップをオーバーライドしてスクロールを処理できる[OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel)と[OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel)メンバー関数。 `CScrollView`、これらのメンバー関数の推奨される動作をサポートする[WM_MOUSEWHEEL](http://msdn.microsoft.com/library/windows/desktop/ms645617)ホイールの回転メッセージ。  
+ マウス ホイールを自分でメッセージ マップをオーバーライドしてスクロールを処理できる[OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel)と[OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel)メンバー関数。 `CScrollView`、これらのメンバー関数の推奨される動作をサポートする[WM_MOUSEWHEEL](/windows/desktop/inputdev/wm-mousewheel)ホイールの回転メッセージ。  
   
  自動スクロールを活用するからビュー クラスを派生`CScrollView`の代わりにから`CView`します。 ビューが初めて作成すると、呼び出し、ドキュメントのサイズに基づいて、スクロール可能なビューのサイズを計算する場合、`SetScrollSizes`メンバー関数は、いずれかのオーバーライドから[:oninitialupdate](../../mfc/reference/cview-class.md#oninitialupdate)または[CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate)します。 (ドキュメントのサイズを照会する独自のコードを記述する必要があります。 例については、次を参照してください、 [Scribble サンプル](../../visual-cpp-samples.md)。)。  
   
@@ -123,7 +123,7 @@ class CScrollView : public CView
   
  `CScrollView`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="checkscrollbars"></a>  CScrollView::CheckScrollBars  

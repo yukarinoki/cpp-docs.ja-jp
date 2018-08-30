@@ -51,12 +51,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2da945addb975404a5ea6d1805a8f0abf5d5b9eb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 49dd74c679e451a658828fcacb55146e3f8d5d17
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412906"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200295"
 ---
 # <a name="vscprintfp-vscprintfpl-vscwprintfp-vscwprintfpl"></a>_vscprintf_p、_vscprintf_p_l、_vscwprintf_p、_vscwprintf_p_l
 
@@ -100,18 +100,18 @@ int _vscwprintf_p _l(
 
 ## <a name="return-value"></a>戻り値
 
-**_vscprintf_p**によって生成される文字列を指している場合、引数のリストを文字の数が印刷またはファイルに送信されたか、コードは、指定した書式設定を使用してバッファーを返します。 戻り値には、終端の NULL 文字は含まれません。 **_vscwprintf_p**ワイド文字に対して同じ機能を実行します。
+**_vscprintf_p**コードは、指定した書式設定を使用してバッファーまたはファイルに送信される引数の一覧で、文字列の指す場合に生成は文字数を返します。 戻り値には、終端の NULL 文字は含まれません。 **_vscwprintf_p**ワイド文字に対して同じ機能を実行します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-これらの関数は異なる **_vscprintf**と **_vscwprintf**引数を使用する順序を指定する機能がサポートされるでのみです。 詳細については、「[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」をご覧ください。
+これらの関数は異なる **_vscprintf**と **_vscwprintf**のみをサポートする、引数を使用する順序を指定できます。 詳細については、「[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」をご覧ください。
 
 これらの関数のバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
 
-場合*形式*null ポインターで説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は-1 を返します設定と**errno**に**EINVAL**です。
+場合*形式*null ポインターの場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は-1 を返し設定と**errno**に**EINVAL**します。
 
 > [!IMPORTANT]
-> 場合に*形式*ユーザー定義の文字列では、null で終了し、正しい数とパラメーターの型を持ちます。 詳しくは、「 [バッファー オーバーランの回避](http://msdn.microsoft.com/library/windows/desktop/ms717795)」をご覧ください。
+> 場合に*形式*ユーザー定義の文字列は、null 終端であり、正しい数と型のパラメーターがあります。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -122,7 +122,7 @@ int _vscwprintf_p _l(
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_vscprintf_p**、 **_vscprintf_p_l**|\<stdio.h>|
 |**_vscwprintf_p**、 **_vscwprintf_p_l**|\<stdio.h> または \<wchar.h>|

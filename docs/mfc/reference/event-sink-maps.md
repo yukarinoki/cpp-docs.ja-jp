@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0322d6b304366e598fc3db206d4c2e4b9b9d6315
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 114ccb875c1551528eb77edb9c2fae0ecb27edd6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336606"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212044"
 ---
 # <a name="event-sink-maps"></a>イベント シンク マップ
 埋め込み OLE コントロールのイベントが発生したとき、コントロールのコンテナーは、マップと呼ばれる、"イベント シンク、"MFC によって提供されるメカニズムを使用してイベントを受け取ります。 このイベント シンク マップは、それぞれ特定のイベントと、これらのイベントのパラメーター ハンドラー関数を指定します。 イベント シンク マップの詳細については、記事を参照してください。 [ActiveX コントロール コンテナー](../../mfc/activex-control-containers.md)します。  
@@ -59,7 +59,7 @@ BEGIN_EVENTSINK_MAP(theClass, baseClass)
   
  イベント シンク マップと OLE コントロールのコンテナーの詳細については、この記事を参照してください。 [ActiveX コントロール コンテナー](../../mfc/activex-control-containers.md)します。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdisp.h  
   
 ##  <a name="declare_eventsink_map"></a>  DECLARE_EVENTSINK_MAP  
@@ -74,7 +74,7 @@ DECLARE_EVENTSINK_MAP()
   
  イベント シンク マップの詳細については、記事を参照してください。 [ActiveX コントロール コンテナー](../../mfc/activex-control-containers.md)します。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxwin.h  
   
 ##  <a name="end_eventsink_map"></a>  END_EVENTSINK_MAP  
@@ -84,7 +84,7 @@ DECLARE_EVENTSINK_MAP()
 END_EVENTSINK_MAP()   
 ```  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdisp.h  
   
 ##  <a name="on_event"></a>  ON_EVENT  
@@ -119,7 +119,7 @@ ON_EVENT(theClass, id, dispid, pfnHandler,  vtsParams)
   
  一覧については、 **vts _** 定数を参照してください[EVENT_CUSTOM](event-maps.md#event_custom)します。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdisp.h  
   
 ##  <a name="on_event_range"></a>  ON_EVENT_RANGE  
@@ -166,7 +166,7 @@ ON_EVENT_RANGE(theClass, idFirst, idLast, dispid, pfnHandler,  vtsParams)
   
  [!code-cpp[NVC_MFCAutomation#13](../../mfc/codesnippet/cpp/event-sink-maps_3.cpp)]  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdisp.h  
   
 ##  <a name="on_event_reflect"></a>  ON_EVENT_REFLECT  
@@ -200,7 +200,7 @@ ON_EVENT_REFLECT(theClass,  dispid, pfnHandler,  vtsParams)
   
  一覧については、 **vts _** 定数を参照してください[EVENT_CUSTOM](event-maps.md#event_custom)します。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdisp.h  
   
 ##  <a name="on_propnotify"></a>  ON_PROPNOTIFY  
@@ -222,7 +222,7 @@ ON_PROPNOTIFY(theClass, id, dispid, pfnRequest, pfnChanged)
  通知に関連するプロパティのディスパッチ ID。  
   
  *pfnRequest*  
- 処理するメンバー関数へのポインター、`OnRequestEdit`このプロパティに通知します。 この関数の型を返すブール値を必要と**BOOL\*** パラメーター。 この関数は、プロパティを変更する場合は TRUE と FALSE を許可しないようにするパラメーターを設定する必要があります。 関数は、通知が処理されたかを指定する場合は TRUE を返しますそれ以外の場合は FALSE です。  
+ 処理するメンバー関数へのポインター、`OnRequestEdit`このプロパティに通知します。 この関数の型を返すブール値を必要と**BOOL** <strong>\*</strong>パラメーター。 この関数は、プロパティを変更する場合は TRUE と FALSE を許可しないようにするパラメーターを設定する必要があります。 関数は、通知が処理されたかを指定する場合は TRUE を返しますそれ以外の場合は FALSE です。  
   
  *pfnChanged*  
  処理するメンバー関数へのポインター、`OnChanged`このプロパティに通知します。 関数は、BOOL 型 UINT パラメーターの戻り値が必要です。 通知が処理されたことを指定する場合は TRUE を返しますそれ以外の場合は FALSE です。  
@@ -259,12 +259,12 @@ ON_PROPNOTIFY_RANGE(theClass, idFirst, idLast, dispid, pfnRequest, pfnChanged)
  通知に関連するプロパティのディスパッチ ID。  
   
  *pfnRequest*  
- 処理するメンバー関数へのポインター、`OnRequestEdit`このプロパティに通知します。 この関数は、型を返すブール値と UINT が必要と**BOOL\*** パラメーター。 関数は、プロパティを変更する場合は TRUE と FALSE を許可しないようにするパラメーターを設定する必要があります。 通知が処理されたことを指定する場合は TRUE を返しますそれ以外の場合は FALSE です。  
+ 処理するメンバー関数へのポインター、`OnRequestEdit`このプロパティに通知します。 この関数が必要、`BOOL`型を返すと`UINT`と`BOOL*`パラメーター。 関数は、プロパティを変更する場合は TRUE と FALSE を許可しないようにするパラメーターを設定する必要があります。 通知が処理されたことを指定する場合は TRUE を返しますそれ以外の場合は FALSE です。  
   
  *pfnChanged*  
- 処理するメンバー関数へのポインター、`OnChanged`このプロパティに通知します。 関数は、BOOL 型 UINT パラメーターの戻り値が必要です。 通知が処理されたことを指定する場合は TRUE を返しますそれ以外の場合は FALSE です。  
+ 処理するメンバー関数へのポインター、`OnChanged`このプロパティに通知します。 関数があります、`BOOL`型を返すと`UINT`パラメーター。 通知が処理されたことを指定する場合は TRUE を返しますそれ以外の場合は FALSE です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdisp.h  
   
 ##  <a name="on_propnotify_reflect"></a>  ON_PROPNOTIFY_REFLECT  
@@ -284,12 +284,12 @@ ON_PROPNOTIFY_REFLECT(theClass, dispid, pfnRequest, pfnChanged)
  通知に関連するプロパティのディスパッチ ID。  
   
  *pfnRequest*  
- 処理するメンバー関数へのポインター、`OnRequestEdit`このプロパティに通知します。 この関数の型を返すブール値を必要と**BOOL\*** パラメーター。 この関数は、プロパティを変更する場合は TRUE と FALSE を許可しないようにするパラメーターを設定する必要があります。 関数は、通知が処理されたかを指定する場合は TRUE を返しますそれ以外の場合は FALSE です。  
+ 処理するメンバー関数へのポインター、`OnRequestEdit`このプロパティに通知します。 この関数の型を返すブール値を必要と**BOOL** <strong>\*</strong>パラメーター。 この関数は、プロパティを変更する場合は TRUE と FALSE を許可しないようにするパラメーターを設定する必要があります。 関数は、通知が処理されたかを指定する場合は TRUE を返しますそれ以外の場合は FALSE です。  
   
  *pfnChanged*  
  処理するメンバー関数へのポインター、`OnChanged`このプロパティに通知します。 関数の型およびパラメーターを返すブール値が必要です。 関数は、通知が処理されたかを指定する場合は TRUE を返しますそれ以外の場合は FALSE です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdisp.h  
     
 ## <a name="see-also"></a>関連項目  

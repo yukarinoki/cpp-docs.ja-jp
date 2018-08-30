@@ -1,5 +1,5 @@
 ---
-title: Windows API の同期データ構造との比較 |Microsoft ドキュメント
+title: Windows API の同期データ構造との比較 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,36 +15,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d1470911b13243a7c8b3befc627801368e89f04
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: cb6dc90a272c8e288a4370ae18ad3d1fda150eed
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687375"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197549"
 ---
 # <a name="comparing-synchronization-data-structures-to-the-windows-api"></a>同期データ構造と Windows API の比較
 ここでは、同時実行ランタイムが提供する同期データ構造と Windows API が提供する同期データ構造の動作を比較します。  
   
- 同時実行ランタイムによって提供される同期データ構造に従って、*協調スレッド処理モデル*です。 協調スレッド処理モデルでは、同期プリミティブは処理リソースを他のスレッドに明示的に譲渡します。 これとは異なります、*プリエンプティブ スレッド処理モデル*制御スケジューラまたはオペレーティング システムで、処理リソースを他のスレッドに転送はここで、します。  
+ 同時実行ランタイムによって提供される同期データ構造に従って、*協調スレッド処理モデル*します。 協調スレッド処理モデルでは、同期プリミティブは処理リソースを他のスレッドに明示的に譲渡します。 これに対し、*プリエンプティブ スレッド処理モデル*制御スケジューラまたはオペレーティング システムによって、処理リソースを他のスレッドに転送されます場所、します。  
   
 ## <a name="criticalsection"></a>critical_section  
- [Concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md)ウィンドウに似ています`CRITICAL_SECTION`構造体の 1 つのプロセスのスレッドでのみ使用できるためです。 Windows API のクリティカル セクションの詳細については、次を参照してください。[クリティカル セクション オブジェクト](http://msdn.microsoft.com/library/windows/desktop/ms682530)です。  
+ [Concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md) 、Windows と似ています`CRITICAL_SECTION`のため、1 つのプロセスのスレッドでのみ使用できます。 Windows API のクリティカル セクションの詳細については、次を参照してください。[クリティカル セクション オブジェクト](/windows/desktop/Sync/critical-section-objects)します。  
   
 ## <a name="readerwriterlock"></a>reader_writer_lock  
- [:Reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) Windows のスリム リーダー/ライター (SRW) ロックに似ています。 類似点と相違点を次の表に示します。  
+ [:Reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)クラスが Windows のスリム リーダー/ライター (SRW) ロックに似ています。 類似点と相違点を次の表に示します。  
   
 |機能|`reader_writer_lock`|SRW ロック|  
 |-------------|--------------------------|--------------|  
 |再入不可能|[はい]|[はい]|  
-|リーダーをライターに昇格 (アップグレード サポート)|×|×|  
-|ライターをリーダーに降格 (ダウングレード サポート)|×|×|  
-|書き込み優先ロック|[はい]|×|  
-|ライターへの FIFO アクセス|[はい]|×|  
+|リーダーをライターに昇格 (アップグレード サポート)|いいえ|いいえ|  
+|ライターをリーダーに降格 (ダウングレード サポート)|いいえ|いいえ|  
+|書き込み優先ロック|[はい]|いいえ|  
+|ライターへの FIFO アクセス|[はい]|いいえ|  
   
- SRW ロックの詳細については、次を参照してください。[スリム リーダー/ライター (SRW) ロック](http://msdn.microsoft.com/library/windows/desktop/aa904937)プラットフォーム SDK に含まれています。  
+ SRW ロックの詳細については、次を参照してください。[スリム リーダー/ライター (SRW) ロック](https://msdn.microsoft.com/library/windows/desktop/aa904937)プラットフォーム SDK に含まれています。  
   
 ## <a name="event"></a>event  
- [Concurrency::event](../../parallel/concrt/reference/event-class.md)名前のない Windows 手動リセット イベントに似ています。 ただし、`event` オブジェクトは協調して動作しますが、Windows イベントはプリエンプティブに動作します。 Windows イベントの詳細については、次を参照してください。[イベント オブジェクト](http://msdn.microsoft.com/library/windows/desktop/ms682655)です。  
+ [Concurrency::event](../../parallel/concrt/reference/event-class.md)名前のない Windows 手動リセット イベントと似ています。 ただし、`event` オブジェクトは協調して動作しますが、Windows イベントはプリエンプティブに動作します。 Windows イベントの詳細については、次を参照してください。[イベント オブジェクト](/windows/desktop/Sync/event-objects)します。  
   
 ## <a name="example"></a>例  
   
@@ -86,7 +86,7 @@ Windows event:
   
  `event` クラスは協調して動作するため、イベントがシグナル状態になるのを待機している場合、スケジューラは処理リソースを別のコンテキストに再割り当てすることができます。 したがって、`event` クラスを使用するバージョンで、より多くの作業が実行されます。 Windows イベントを使用するバージョンでは、待機中の各タスクは次のタスクが開始される前にシグナル状態になる必要があります。  
   
- タスクの詳細については、次を参照してください。[タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)です。  
+ タスクの詳細については、次を参照してください。[タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [同期データ構造](../../parallel/concrt/synchronization-data-structures.md)

@@ -166,12 +166,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db7a95327430b4d0bbfda173c83b7631af822060
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: d9644882f537285b27fa376afa65581d6d4c3c9f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339242"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216289"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx クラス
 機能を拡張[CMDIFrameWnd](../../mfc/reference/cframewnd-class.md)Windows のマルチ ドキュメント インターフェイス (MDI) のフレーム ウィンドウ。  
@@ -252,7 +252,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::OnTearOffMenu](#ontearoffmenu)|ティアオフ バーのあるメニューがアクティブ化されるときにフレームワークによって呼び出されます。|  
 |[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|フレームのメニューを更新するためにフレームワークによって呼び出されます。 (`CMDIFrameWnd::OnUpdateFrameMenu` をオーバーライドします)。|  
 |[CMDIFrameWndEx::PaneFromPoint](#panefrompoint)|指定したポイントを含むドッキング ペインを返します。|  
-|`CMDIFrameWndEx::PreTranslateMessage`|[TranslateMessage](../../mfc/reference/cwinapp-class.md) および [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) の各 Windows 関数にディスパッチされる前に、ウィンドウ メッセージを変換するためにクラス [CWinApp](http://msdn.microsoft.com/library/windows/desktop/ms644934) で使用されます。  (`CMDIFrameWnd::PreTranslateMessage` をオーバーライドします)。|  
+|`CMDIFrameWndEx::PreTranslateMessage`|クラスによって使用される[CWinApp](../../mfc/reference/cwinapp-class.md)にディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)と[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 関数。  (`CMDIFrameWnd::PreTranslateMessage` をオーバーライドします)。|  
 |[CMDIFrameWndEx::RecalcLayout](#recalclayout)|フレーム ウィンドウのレイアウトを再計算するためにフレームワークによって呼び出されます。 (上書き[表示](../../mfc/reference/cframewnd-class.md#recalclayout))。|  
 |[CMDIFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|ウィンドウの登録を解除し、ドッキング マネージャーから削除されます。|  
 |[CMDIFrameWndEx::SaveMDIState](#savemdistate)|MDI タブ付きグループの現在のレイアウトおよび前に開かれたドキュメントの一覧を保存します。|  
@@ -294,7 +294,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
   
  [CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxMDIFrameWndEx.h  
   
 ##  <a name="activeitemrecalclayout"></a>  CMDIFrameWndEx::ActiveItemRecalcLayout  
@@ -1341,7 +1341,7 @@ virtual BOOL OnMenuButtonToolHitTest(
  ツール バー ボタン。  
   
  [out]*pTI*  
- ポインターを[TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256)構造体。  
+ ポインターを[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)構造体。  
   
 ### <a name="return-value"></a>戻り値  
  アプリケーションを設定する場合は TRUE、 *pTI*パラメーター。 既定の実装では、FALSE を返します。  
@@ -1790,7 +1790,7 @@ virtual void WinHelp(
  指定されたヘルプの種類に必要なデータを指定します。 *nCmd*します。  
   
  [in]*nCmd*  
- 要求されるヘルプの種類を指定します。 使用可能な値、および影響についての一覧については、*指定*パラメーターを参照してください、 [WinHelp 関数](http://msdn.microsoft.com/library/windows/desktop/bb762267)Windows SDK にします。  
+ 要求されるヘルプの種類を指定します。 使用可能な値、および影響についての一覧については、*指定*パラメーターを参照してください、 [WinHelp 関数](/windows/desktop/api/winuser/nf-winuser-winhelpa)Windows SDK にします。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは[cwnd::winhelp](../../mfc/reference/cwnd-class.md#winhelp)します。  

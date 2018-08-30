@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c773cb242b3ac432ad5c0482bfad318c4c33b78a
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fb99d0cb37fff5abe5a7eb54d3ba9c4226e5fd1c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883856"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197202"
 ---
 # <a name="cwindowimpl-class"></a>CWindowImpl クラス
 ウィンドウを作成またはサブクラス化するためのメソッドを提供します。  
@@ -128,7 +128,7 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
   
  `CWindowImpl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlwin.h  
   
 ##  <a name="create"></a>  CWindowImpl::Create  
@@ -150,22 +150,22 @@ HWND Create(
  [in]親またはオーナー ウィンドウのハンドル。  
   
  *rect*  
- [in]A [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)ウィンドウの位置を指定する構造体。 `RECT`ポインターまたは参照によって渡すことができます。  
+ [in]A [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)ウィンドウの位置を指定する構造体。 `RECT`ポインターまたは参照によって渡すことができます。  
   
  *szWindowName*  
  [in]ウィンドウの名前を指定します。 既定値は、NULL です。  
   
  *dwStyle*  
- [in]ウィンドウのスタイル。 この値は、ウィンドウの特性クラスによって提供されるスタイルと組み合わされます。 既定値は、スタイルに対するフル コントロールをクラスに、特徴を示します。 使用可能な値の一覧は、次を参照してください。 [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK に含まれています。  
+ [in]ウィンドウのスタイル。 この値は、ウィンドウの特性クラスによって提供されるスタイルと組み合わされます。 既定値は、スタイルに対するフル コントロールをクラスに、特徴を示します。 使用可能な値の一覧は、次を参照してください。 [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK に含まれています。  
   
  *dwExStyle*  
- [in]拡張ウィンドウ スタイル。 この値は、ウィンドウの特性クラスによって提供されるスタイルと組み合わされます。 既定値は、スタイルに対するフル コントロールをクラスに、特徴を示します。 使用可能な値の一覧は、次を参照してください。 [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK に含まれています。  
+ [in]拡張ウィンドウ スタイル。 この値は、ウィンドウの特性クラスによって提供されるスタイルと組み合わされます。 既定値は、スタイルに対するフル コントロールをクラスに、特徴を示します。 使用可能な値の一覧は、次を参照してください。 [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK に含まれています。  
   
  *MenuOrID*  
  [in]子ウィンドウの場合、ウィンドウの識別子。 最上位レベルのウィンドウでは、メニューはウィンドウのハンドルします。 既定値は**0 u**します。  
   
  *lpCreateParam*  
- [in]ウィンドウの作成データへのポインター。 詳細については、最後のパラメーターの説明を参照してください。 [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)します。  
+ [in]ウィンドウの作成データへのポインター。 詳細については、最後のパラメーターの説明を参照してください。 [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)します。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、新しく作成されたウィンドウを識別するハンドル。 それ以外の場合は NULL です。  
@@ -207,7 +207,7 @@ LRESULT DefWindowProc();
  メッセージの処理の結果。  
   
 ### <a name="remarks"></a>Remarks  
- 既定では、`DefWindowProc`呼び出し、 [CallWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633571)ウィンドウ プロシージャで指定されたメッセージの情報を送信する Win32 関数[コンテナー内](#m_pfnsuperwindowproc)します。  
+ 既定では、`DefWindowProc`呼び出し、 [CallWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633571)ウィンドウ プロシージャで指定されたメッセージの情報を送信する Win32 関数[コンテナー内](#m_pfnsuperwindowproc)します。  
   
  パラメーターなしの関数は、現在のメッセージから自動的に必要なパラメーターを取得します。  
   
@@ -262,7 +262,7 @@ WNDPROC m_pfnSuperWindowProc;
   
 |ウィンドウの種類|ウィンドウ プロシージャ|  
 |--------------------|----------------------|  
-|新しいウィンドウ クラスを使用して指定に基づいて、 [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)マクロ。|[DefWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633572) Win32 関数。|  
+|新しいウィンドウ クラスを使用して指定に基づいて、 [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)マクロ。|[DefWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633572) Win32 関数。|  
 |指定された、既存のクラスを変更するウィンドウ クラスに基づいて、 [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)マクロ。|既存のウィンドウ クラスのウィンドウ プロシージャです。|  
 |サブクラス化されたウィンドウです。|サブクラス化されたウィンドウの元のウィンドウ プロシージャ。|  
   

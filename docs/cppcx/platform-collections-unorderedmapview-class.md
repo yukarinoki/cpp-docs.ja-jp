@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a2d8668f0ed5d58ce3b8028fb02d572bb04f8bc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c463dbcb68b5a4b875dbb109eedc07a3b4b27c86
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613575"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203029"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView クラス
 キーと値のペアのコレクションである、 *マップ*への読み取り専用ビューを表します。  
@@ -71,7 +71,7 @@ ref class UnorderedMapView sealed;
  **名前空間:** Platform::Collections  
 
 ## <a name="first"></a>  UnorderedMapView::First メソッド
-最初に指定する反復子を返します[Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx)順序なしのマップ内の要素。  
+最初に指定する反復子を返します[Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx)順序なしのマップ内の要素。  
   
 ### <a name="syntax"></a>構文  
   
@@ -126,7 +126,7 @@ V Lookup(K key);
 
 
 ## <a name="size"></a>  UnorderedMapView::Size メソッド
-数を返します[Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) UnorderedMapView 内の要素。  
+数を返します[Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) UnorderedMapView 内の要素。  
   
 ### <a name="syntax"></a>構文  
   
@@ -221,7 +221,7 @@ UnorderedMapView(
  UnorderedMapView の型名。  
   
  `H`  
- キーのハッシュ値にできる関数オブジェクト。 既定値は[std::hash\<K >](http://msdn.microsoft.com/en-us/54f67435-af9d-4217-a29d-fa4d2491a104)の種類を`std::hash`をサポートしています。  
+ キーのハッシュ値にできる関数オブジェクト。 既定値は[std::hash\<K >](https://msdn.microsoft.com/54f67435-af9d-4217-a29d-fa4d2491a104)の種類を`std::hash`をサポートしています。  
   
  `P`  
  2 つのキーを比較して等価性を確認できる関数オブジェクトを提供する型。 既定値は[std::equal_to\<K >](../standard-library/equal-to-struct.md)します。  

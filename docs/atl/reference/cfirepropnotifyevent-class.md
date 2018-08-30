@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20fd9c660f036c04ea2ca7d06d04315391504e3e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 3ec6fb0d54cd748b707c81b88e09fb7d846aaa2f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881530"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194425"
 ---
 # <a name="cfirepropnotifyevent-class"></a>CFirePropNotifyEvent クラス
 このクラスは、コントロール プロパティの変更について、コンテナーのシンクに通知するためのメソッドを提供します。  
@@ -56,11 +56,11 @@ class CFirePropNotifyEvent
   
  コントロールの作成の詳細については、次を参照してください。、 [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlctl.h  
   
 ##  <a name="fireonchanged"></a>  CFirePropNotifyEvent::FireOnChanged  
- すべての通知接続[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)インターフェイス (オブジェクトの接続ポイントがすべて) 上に、指定したオブジェクトのプロパティが変更されました。  
+ すべての通知接続[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)インターフェイス (オブジェクトの接続ポイントがすべて) 上に、指定したオブジェクトのプロパティが変更されました。  
   
 ```
 static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
@@ -80,7 +80,7 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
  この関数は、コントロールが接続ポイントをサポートしていない場合でも呼び出しが安全です。  
   
 ##  <a name="fireonrequestedit"></a>  CFirePropNotifyEvent::FireOnRequestEdit  
- すべての通知接続されている[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)インターフェイス (上、オブジェクトの接続ポイントがすべて)、指定したオブジェクトのプロパティが変更されようにします。  
+ すべての通知接続されている[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)インターフェイス (上、オブジェクトの接続ポイントがすべて)、指定したオブジェクトのプロパティが変更されようにします。  
   
 ```
 static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);

@@ -1,5 +1,5 @@
 ---
-title: 致命的なエラー C1093 |Microsoft ドキュメント
+title: 致命的なエラー C1093 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6e7bfe845c35b31f5a1b0833c600e6947be8592
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5c736fbb5180edb26eda6a557a4e8e45a3ffc881
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226351"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202027"
 ---
 # <a name="fatal-error-c1093"></a>致命的なエラー C1093
-API 呼び出し '関数の name' には、'の呼び出しの位置' が失敗しました: 'ランタイムからテキスト'  
+
+> API の呼び出し '*関数名*'失敗'*呼び出しの場所*':'*ランタイムからテキスト*'  
   
- .NET 関数呼び出しに失敗しました。 ***実行時からテキスト***可能性がありますか、COM ランタイムでは提供されない場合があります。  
+.NET 関数の呼び出しが失敗しました。 *ランタイムからテキスト*文字列、COM ランタイムでは提供されない可能性があります。  
   
- システム エラー メッセージの詳細については、winerror.h システム ファイルを参照してください。 および[FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351)です。
+システム エラー メッセージの詳細については、winerror.h システム ファイルを参照してくださいと[FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage)します。

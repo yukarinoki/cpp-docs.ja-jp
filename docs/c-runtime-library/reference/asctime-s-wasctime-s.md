@@ -40,16 +40,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4300d5fdab43cf4d22cf4e1fdee790f9d06d00d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5b5414a59aac41bec29886b1aa83c20395b3e916
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403249"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208680"
 ---
 # <a name="asctimes-wasctimes"></a>asctime_s、_wasctime_s
 
-変換、 **tm**時刻の文字列に構造体。 これらの関数は、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、[asctime、_wasctime](asctime-wasctime.md) のセキュリティが強化されたバージョンです。
+変換を**tm**時間を文字の文字列の構造。 これらの関数は、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、[asctime、_wasctime](asctime-wasctime.md) のセキュリティが強化されたバージョンです。
 
 ## <a name="syntax"></a>構文
 
@@ -79,13 +79,13 @@ errno_t _wasctime_s(
 ### <a name="parameters"></a>パラメーター
 
 *バッファー*<br/>
-結果の文字列を格納するバッファーへのポインター。 この関数で指定されたサイズに有効なメモリ位置へのポインターを前提としています*numberOfElements*です。
+結果の文字列を格納するバッファーへのポインター。 この関数で指定したサイズと有効なメモリ位置へのポインターを前提としています*numberOfElements*します。
 
 *numberOfElements*<br/>
 結果を格納するために使用するバッファーのサイズ。
 
 *tmSource*<br/>
-時刻/日付の構造体。 この関数には、有効なへのポインターが前提としています**構造体** **tm**オブジェクト。
+時刻/日付の構造体。 この関数が有効なへのポインターを前提としています**構造体** **tm**オブジェクト。
 
 ## <a name="return-value"></a>戻り値
 
@@ -93,38 +93,38 @@ errno_t _wasctime_s(
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*バッファー*|*numberOfElements*|*tmSource*|Return|値で*バッファー*|
+|*バッファー*|*numberOfElements*|*tmSource*|Return|値*バッファー*|
 |--------------|------------------------|----------|------------|-----------------------|
 |**NULL**|どれでも可|どれでも可|**EINVAL**|変更されない|
-|いない**NULL** (有効なメモリが指す)|0|どれでも可|**EINVAL**|変更されない|
+|いない**NULL** (有効なメモリを指す)|0|どれでも可|**EINVAL**|変更されない|
 |いない**NULL**|0< サイズ < 26|どれでも可|**EINVAL**|空の文字列|
 |いない**NULL**|>= 26|**NULL**|**EINVAL**|空の文字列|
 |いない**NULL**|>= 26|無効な時間構造体または時間のコンポーネントの値が範囲外|**EINVAL**|空の文字列|
 
 > [!NOTE]
-> エラーの状態の**wasctime_s**のような**asctime_s**の言葉でサイズの制限が測定されることは例外です。
+> エラー状態を**wasctime_s**のような**asctime_s**の言葉で、サイズの上限を測定する例外を使用します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Asctime**関数が、構造体を文字の文字列として格納されている時刻に変換します。 *TmSource*への呼び出しから値が取得した通常**gmtime**または**localtime**です。 どちらの関数を埋めるために使用できます、 **tm**時間で定義されている構造体します。H.
+**Asctime**関数が文字の文字列を構造体として格納されている時間に変換します。 *TmSource*への呼び出しから値が取得通常**gmtime**または**localtime**します。 どちらの関数を埋めるために使用できます、 **tm**時間で定義されている構造体します。H.
 
 |timeptr メンバー|[値]|
 |--------------------|-----------|
-|**tm_hour**|午前 0 時 (0 ~ 23) 以降の時間|
+|**tm_hour**|時間午前 0 時 (0 ~ 23) 以降|
 |**tm_isdst**|夏時間が有効な場合は正、夏時間が無効な場合は 0、夏時間かどうかが不明な場合は負。 C ランタイム ライブラリでは、アメリカ合衆国の規則を前提に夏時間 (DST) を計算します。|
 |**tm_mday**|(1 ~ 31) の月の日|
 |**未満**|分 (0 ~ 59)|
-|**表します。**|月 (0 ~ 11 です。年 1 月 = 0)|
+|**tm_mon**|月 (0 ~ 11。年 1 月 = 0 です)|
 |**tm_sec**|秒 (0 ~ 59)|
 |**tm_wday**|曜日 (0 ~ 6 です。日曜日 = 0)|
-|**tm_yday**|年 (0 ~ 365; の日付1 月 1 日 = 0)|
+|**tm_yday**|(0-365; 年の通算日1 月 1 日 = 0)|
 |**tm_year**|年 (実際の西暦から 1900 を引いた数)|
 
 変換された文字列も、ローカル タイム ゾーンの設定に従って調整されます。 ローカル タイムの設定の詳細については、[time、_time32、_time64](time-time32-time64.md)、[_ftime、_ftime32、_ftime64](ftime-ftime32-ftime64.md)、および [localtime_s、_localtime32_s、_localtime64_s](localtime-s-localtime32-s-localtime64-s.md) の関数を参照してください。また、タイム ゾーン環境とグローバル変数の定義の詳細については、[_tzset](tzset.md) 関数を参照してください。
 
-によって生成される結果の文字列**asctime_s** 26 文字が含まれていて、フォーム`Wed Jan 02 02:03:55 1980\n\0`です。 24 時間制が使用されます。 すべてのフィールドには一定の幅があります。 文字列の最後の 2 つの位置には、改行文字と null 文字が入ります。 2 番目のパラメーターとして渡される値は、この大きさ以上にする必要があります。 エラー コードでは、以下である場合**EINVAL**が返されます。
+によって生成される文字列**asctime_s**には、26 文字が含まれていて、フォーム`Wed Jan 02 02:03:55 1980\n\0`します。 24 時間制が使用されます。 すべてのフィールドには一定の幅があります。 文字列の最後の 2 つの位置には、改行文字と null 文字が入ります。 2 番目のパラメーターとして渡される値は、この大きさ以上にする必要があります。 エラー コードでは、以下である場合**EINVAL**が返されます。
 
-**_wasctime_s**のワイド文字バージョンは、 **asctime_s**です。 **_wasctime_s**と**asctime_s**それ以外の場合の動作は同じです。
+**_wasctime_s**のワイド文字バージョンは、 **asctime_s**します。 **_wasctime_s**と**asctime_s**動作は同じです。
 
 ### <a name="generic-text-routine-mapping"></a>汎用テキスト ルーチンのマップ
 
@@ -136,20 +136,20 @@ C++ では、テンプレートのオーバーロードによってこれらの�
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**asctime_s**|\<time.h>|
 |**_wasctime_s**|\<time.h> または \<wchar.h>|
 
 ## <a name="security"></a>セキュリティ
 
-バッファー ポインターがない場合**NULL**ポインターが有効なバッファーを指していないと、した位置にあるどの関数が上書きされます。 これによりアクセス違反が発生することもあります。
+バッファー ポインターがない場合**NULL**と、ポインターが有効なバッファーを指していない、関数は、任意の場所から上書きされます。 これによりアクセス違反が発生することもあります。
 
-渡されるサイズ引数がバッファーの実際のサイズより大きい場合、[バッファー オーバーラン](http://msdn.microsoft.com/library/windows/desktop/ms717795)が発生する場合があります。
+渡されるサイズ引数がバッファーの実際のサイズより大きい場合、[バッファー オーバーラン](/windows/desktop/SecBP/avoiding-buffer-overruns)が発生する場合があります。
 
 ## <a name="example"></a>例
 
-このプログラムは、長整数型のシステム時刻を配置**時計**、構造に変換され**newtime**し、その文字列の形式に変換の出力を使用して、および、 **asctime_s**関数。
+このプログラムは長整数型のシステム時刻を配置**時計**、構造体に変換します**newtime**に変換用の文字列形式を使用して出力して、 **asctime_s**関数。
 
 ```C
 // crt_asctime_s.c

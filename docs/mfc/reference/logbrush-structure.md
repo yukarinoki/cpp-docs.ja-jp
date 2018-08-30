@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15b904a07eb668a59a269741973424aa30e15877
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b868efed07f786a78c516862e1f88d2310a7c05d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336407"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208779"
 ---
 # <a name="logbrush-structure"></a>LOGBRUSH 構造体
-`LOGBRUSH`構造体、スタイル、色、および物理的なブラシのパターンを定義します。 Windows で使用されて[CreateBrushIndirect](http://msdn.microsoft.com/library/windows/desktop/dd183487)と[構造体](http://msdn.microsoft.com/library/windows/desktop/dd162705)関数。  
+`LOGBRUSH`構造体、スタイル、色、および物理的なブラシのパターンを定義します。 Windows で使用されて[CreateBrushIndirect](/windows/desktop/api/wingdi/nf-wingdi-createbrushindirect)と[構造体](/windows/desktop/api/wingdi/nf-wingdi-extcreatepen)関数。  
   
 ## <a name="syntax"></a>構文  
   
@@ -81,7 +81,7 @@ typedef struct tag LOGBRUSH { /* lb */
 ## <a name="remarks"></a>Remarks  
  *LbColor*ハッチ ブラシの前景の色を制御、 [CDC::SetBkMode](../../mfc/reference/cdc-class.md#setbkmode)と[CDC::SetBkColor](../../mfc/reference/cdc-class.md#setbkcolor)関数は、背景色を制御します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** wingdi.h  
   
 ## <a name="see-also"></a>関連項目  

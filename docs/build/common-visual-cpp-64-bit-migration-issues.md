@@ -1,5 +1,5 @@
 ---
-title: 一般的な Visual C の 64 ビットへの移行に関する問題 |Microsoft ドキュメント
+title: 一般的な Visual C の 64 ビットへの移行に関する問題 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab4b8a8e693a9e1a87ddb3a06fe609416808d3dc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fadc3d48eb6ba812415cbedc9c077e7ffc1b4016
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367730"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208159"
 ---
 # <a name="common-visual-c-64-bit-migration-issues"></a>Visual C++ の 64 ビットへの移行に関する一般的な問題
 
@@ -37,7 +37,7 @@ Visual C++ を使用して、64 ビット Windows オペレーティング シ�
   
 -   `size_t`、 `time_t`、および`ptrdiff_t`は 64 ビット Windows オペレーティング システムで 64 ビット値です。  
   
--   `time_t` は、Visual C++ 2005 以前の Visual C++ バージョンの 32 ビット Windows オペレーティング システムでは 32 ビット値です。 現在は、`time_t` は既定で 64 ビット整数です。 詳細については、次を参照してください。[時間管理](../c-runtime-library/time-management.md)です。  
+-   `time_t` は、Visual C++ 2005 以前の Visual C++ バージョンの 32 ビット Windows オペレーティング システムでは 32 ビット値です。 現在は、`time_t` は既定で 64 ビット整数です。 詳細については、次を参照してください。[時間管理](../c-runtime-library/time-management.md)します。  
   
      コード内で `int` 値を使用する場所について、およびその値を `size_t` または `time_t` のどちらの値として処理するかについて考慮する必要があります。 32 ビットよりも大きくなると、`int` ストレージに返されるときにデータが切り捨てられます。  
   
@@ -53,9 +53,9 @@ Visual C++ を使用して、64 ビット Windows オペレーティング シ�
   
 -   [コンパイラ オプション](../build/reference/compiler-options.md)  
   
--   [移行に関するヒント](http://msdn.microsoft.com/library/windows/desktop/aa384214)  
+-   [移行に関するヒント](/windows/desktop/WinProg64/migration-tips)  
   
 ## <a name="see-also"></a>関連項目  
 
-[64 ビット、x64 用の Visual C の構成のターゲット](../build/configuring-programs-for-64-bit-visual-cpp.md)   
+[64 ビット、x64 の Visual C の構成のターゲット](../build/configuring-programs-for-64-bit-visual-cpp.md)   
 [Visual C++ 移植とアップグレードのガイド](../porting/visual-cpp-porting-and-upgrading-guide.md)

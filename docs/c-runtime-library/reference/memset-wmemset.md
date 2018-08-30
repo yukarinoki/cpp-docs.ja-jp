@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0cbc05c0e337560982f69a5ca920340bc1b0de8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d6b26f0c200f19cab4bb2710be686b25a9dce014
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401244"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202011"
 ---
 # <a name="memset-wmemset"></a>memset、wmemset
 
@@ -74,17 +74,17 @@ wchar_t *wmemset(
 
 ## <a name="return-value"></a>戻り値
 
-値*dest*です。
+値*dest*します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-最初の設定*カウント*の文字*dest*文字*c*です。
+最初の設定*カウント*の文字*dest*文字*c*します。
 
-**セキュリティに関する注意**コピー先のバッファーが以上の十分な余裕を持っているかどうかを確認*カウント*文字です。 詳しくは、「 [バッファー オーバーランの回避](http://msdn.microsoft.com/library/windows/desktop/ms717795)」をご覧ください。
+**セキュリティに関する注意**コピー先のバッファーが以上に十分な空き領域を持っているかどうかを確認*カウント*文字。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**memset**|\<memory.h> または \<string.h>|
 |**wmemset**|\<wchar.h>|

@@ -32,15 +32,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd2b9e09ed536d30729d39d53dc983d02cf0c6d7
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 4c63eda0bbe734bd7c9f0a972e6756a444369123
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849686"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212431"
 ---
 # <a name="coleconvertdialog-class"></a>COleConvertDialog クラス
-詳細については、次を参照してください。、 [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) Windows SDK の構造体。  
+詳細については、次を参照してください。、 [OLEUICONVERT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiconverta) Windows SDK の構造体。  
   
 ## <a name="syntax"></a>構文  
   
@@ -95,7 +95,7 @@ class COleConvertDialog : public COleDialog
   
  `COleConvertDialog`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxodlgs.h  
   
 ##  <a name="coleconvertdialog"></a>  COleConvertDialog::COleConvertDialog  
@@ -135,7 +135,7 @@ explicit COleConvertDialog (
 ### <a name="remarks"></a>Remarks  
  ダイアログ ボックスを表示するには[DoModal](#domodal)関数。  
   
- 詳細については、次を参照してください。 [CLSID キー](http://msdn.microsoft.com/library/windows/desktop/ms691424)と[OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657)構造体。  
+ 詳細については、次を参照してください。 [CLSID キー](/windows/desktop/com/clsid-key-hklm)と[OLEUICONVERT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiconverta)構造体。  
   
 ##  <a name="doconvert"></a>  COleConvertDialog::DoConvert  
  この関数の呼び出しから正常に戻った後[DoModal](#domodal), に変換する、または型のオブジェクトをアクティブ化するか、 [COleClientItem](../../mfc/reference/coleclientitem-class.md)。  
@@ -168,7 +168,7 @@ virtual INT_PTR DoModal();
   
 - ユーザーには、ダイアログ ボックスが取り消された場合は IDCANCEL。  
   
-- IDABORT 場合は、エラーが発生しました。 IDABORT が返される場合、 [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)発生したエラーの種類に関する詳細を取得します。 考えられるエラーの一覧については、次を参照してください。、 [OleUIConvert](http://msdn.microsoft.com/library/windows/desktop/ms680694) Windows SDK 内の関数。  
+- IDABORT 場合は、エラーが発生しました。 IDABORT が返される場合、 [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)発生したエラーの種類に関する詳細を取得します。 考えられるエラーの一覧については、次を参照してください。、 [OleUIConvert](/windows/desktop/api/oledlg/nf-oledlg-oleuiconverta) Windows SDK 内の関数。  
   
 ### <a name="remarks"></a>Remarks  
  メンバーを設定して、さまざまなダイアログ ボックス コントロールを初期化する場合、 [m_cv](#m_cv)構造体を呼び出す前に、これを行う必要があります`DoModal`はダイアログ オブジェクトを構築します。  
@@ -188,7 +188,7 @@ REFCLSID GetClassID() const;
 ### <a name="remarks"></a>Remarks  
  後でのみこの関数の呼び出し[DoModal](#domodal) IDOK を返します。  
   
- 詳細については、次を参照してください。 [CLSID キー](http://msdn.microsoft.com/library/windows/desktop/ms691424) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [CLSID キー](/windows/desktop/com/clsid-key-hklm) Windows SDK に含まれています。  
   
 ##  <a name="getdrawaspect"></a>  COleConvertDialog::GetDrawAspect  
  ユーザーがアイコンとして選択した項目を表示する選択したかどうかを判断するには、この関数を呼び出します。  
@@ -207,7 +207,7 @@ DVASPECT GetDrawAspect() const;
 ### <a name="remarks"></a>Remarks  
  後でのみこの関数の呼び出し[DoModal](#domodal) IDOK を返します。  
   
- 描画の側面の詳細については、次を参照してください。、 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 内のデータ構造。  
+ 描画の側面の詳細については、次を参照してください。、 [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 内のデータ構造。  
   
 ##  <a name="geticonicmetafile"></a>  COleConvertDialog::GetIconicMetafile  
  選択した項目のアイコンの外観を含むメタファイルを識別するハンドルを取得するには、この関数を呼び出します。  
@@ -258,7 +258,7 @@ OLEUICONVERT m_cv;
 ### <a name="remarks"></a>Remarks  
  この構造体のメンバーは、直接またはメンバー関数のいずれかに変更できます。  
   
- 詳細については、次を参照してください。、 [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) Windows SDK の構造体。  
+ 詳細については、次を参照してください。、 [OLEUICONVERT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiconverta) Windows SDK の構造体。  
   
 ## <a name="see-also"></a>関連項目  
  [COleDialog クラス](../../mfc/reference/coledialog-class.md)   

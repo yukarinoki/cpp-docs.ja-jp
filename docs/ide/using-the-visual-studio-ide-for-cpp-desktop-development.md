@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b71f09914d509aa4202bfc856d52f6cea26cea3
-ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
+ms.openlocfilehash: a0678afc9d79499e4581feeca03b1a5bf9b7b963
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35253816"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131307"
 ---
 # <a name="using-the-visual-studio-ide-for-c-desktop-development"></a>C++ デスクトップ開発のための Visual Studio IDE の使用
 
@@ -30,6 +30,18 @@ Visual Studio 統合開発環境 (IDE) は、大規模と小規模のコード �
 Visual Studio をまだインストールしていない場合、この機会にインストールしてください。 ダウンロードへのリンクおよびクイック チュートリアルは、「[Visual Studio での C++ サポートのインストール](../build/vscpp-step-0-installation.md)」を参照してください。 Visual Studio の一般的なインストール方法と不具合が生じた場合のトラブルシューティング方法の詳細については、「[Visual Studio のインストール](/visualstudio/install/install-visual-studio)」を参照してください。 **C++ によるデスクトップ開発**ワークロードを必ず選択し、既定ではインストールされない、C++ コンパイラー、ツールおよびライブラリを Visual Studio のインストール時に含めるようにします。
 
 一連のチュートリアルは、Visual Studio、Visual C++ 言語、Windows デスクトップ開発に必要なコンポーネントをインストールしていることを前提としています。 C++ 言語の基礎について理解していることも前提としています。 C++ について学習する必要がある場合、さまざまな書籍や Web リソースをご利用いただけます。 Standard C++ Foundation Web サイトの [Get Started](https://isocpp.org/get-started) ページが入門としてお勧めです。
+
+Visual Studio をまだインストールしていない場合、この機会にインストールしてください。 
+
+**Visual Studio 2017 のインストール**
+
+Visual Studio 2017 は [Visual Studio のダウンロード](http://www.visualstudio.com/downloads/download-visual-studio-vs.aspx)からダウンロードできます。 Visual Studio をインストールするときは、Visual C++ 開発ツールを必ず含めてください。既定ではインストールされません。 Visual Studio のインストール方法に関する詳細については、[Visual Studio のインストール](/visualstudio/install/install-visual-studio)に関するページを参照してください。
+
+**Visual Studio 2015 のインストール**
+
+ Visual Studio 2015 をインストールするには、[以前のバージョンの Visual Studio のダウンロード](https://www.visualstudio.com/vs/older-downloads/) ページに移動してください。 セットアップ プログラムを実行し、**カスタム インストール**で C++ コンポーネントを選択します。 
+
+ 一般に、Visual Studio 2015 のコンパイラを使用してコードをコンパイルする必要がある場合でも、Visual Studio 2017 を使用することを強くお勧めします。 詳細については、「[Visual Studio でネイティブ マルチ ターゲットを利用し、古いプロジェクトを作成する](../porting/use-native-multi-targeting.md)」を参照してください。
 
 Visual Studio がインストールできたら、次へお進みください。
 

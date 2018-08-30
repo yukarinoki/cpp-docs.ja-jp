@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b09b6c89a6dccd0b1cc78346838b79aacb7e9200
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e7b699f5b6aa023473416b822a94d9b3a91c2b07
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594552"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221120"
 ---
 # <a name="lastis"></a>last_is
 
@@ -43,7 +43,7 @@ ms.locfileid: "42594552"
 
 ## <a name="remarks"></a>Remarks
 
-**Last_is** C++ 属性と同じ機能を持つ、 [last_is](http://msdn.microsoft.com/library/windows/desktop/aa367066) MIDL 属性。
+**Last_is** C++ 属性と同じ機能を持つ、 [last_is](/windows/desktop/Midl/last-is) MIDL 属性。
 
 ## <a name="example"></a>例
 

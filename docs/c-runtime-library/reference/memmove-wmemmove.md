@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66ea555d08ecb92895e170c3088332a532149ad1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 11f474675d8ba5b370b1f13f048e989d9c283bde
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401114"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204629"
 ---
 # <a name="memmove-wmemmove"></a>memmove、wmemmove
 
@@ -73,15 +73,15 @@ wchar_t *wmemmove(
 
 ## <a name="return-value"></a>戻り値
 
-値*dest*です。
+値*dest*します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-コピー*カウント*バイト (**memmove**) または文字 (**wmemmove**) から*src*に*dest*です。 コピー元とコピー先の領域の一部が重なり合っている場合、どちらの関数も、重なり合っている領域のコピー元のバイトをコピーした後で上書きします。
+コピー*カウント*バイト (**memmove**) または文字 (**wmemmove**) から*src*に*dest*します。 コピー元とコピー先の領域の一部が重なり合っている場合、どちらの関数も、重なり合っている領域のコピー元のバイトをコピーした後で上書きします。
 
-**セキュリティに関するメモ** コピー先のバッファーのサイズがソース バッファー以上であることをご確認ください。 詳しくは、「 [バッファー オーバーランの回避](http://msdn.microsoft.com/library/windows/desktop/ms717795)」をご覧ください。
+**セキュリティに関するメモ** コピー先のバッファーのサイズがソース バッファー以上であることをご確認ください。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
-**Memmove**と**wmemmove**場合、関数が廃止される予定のみ定数 **_CRT_SECURE_DEPRECATE_MEMORY**インクルード ステートメントの前に定義されました。次の例など、非推奨である関数:
+**Memmove**と**wmemmove**場合、関数は廃止のみ定数 **_CRT_SECURE_DEPRECATE_MEMORY**の順序でインクルード ステートメントの前に定義されます次の例に示すように、非推奨にする関数。
 
 ```C
 #define _CRT_SECURE_DEPRECATE_MEMORY
@@ -97,7 +97,7 @@ wchar_t *wmemmove(
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**memmove**|\<string.h>|
 |**wmemmove**|\<wchar.h>|

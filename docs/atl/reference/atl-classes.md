@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bb96db2ff3a927885bdb914665147dc0e7ce8da
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 71025785fbc9eab2b962e0f9e48ba9170edf1de1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881293"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204191"
 ---
 # <a name="atl-classes-and-structs"></a>ATL クラスと構造体
 Active Template Library (ATL) では、次のクラスと構造体が含まれています。 カテゴリ別、特定のクラスを探すを参照してください。、 [ATL クラスの概要](../../atl/atl-class-overview.md)します。  
@@ -71,20 +71,20 @@ Active Template Library (ATL) では、次のクラスと構造体が含まれ�
 |[CAxWindow](../../atl/reference/caxwindow-class.md)|このクラスは、ActiveX コントロールをホスト ウィンドウを操作するためのメソッドを提供します。|atlwin.h|  
 |[CAxWindow2T](../../atl/reference/caxwindow2t-class.md)|このクラスは、ActiveX コントロールをホストし、ライセンスされた ActiveX コントロールをホストするためのサポートがあります。 ウィンドウを操作するためのメソッドを提供します。|atlwin.h|  
 |[CBindStatusCallback](../../atl/reference/cbindstatuscallback-class.md)|このクラスは、`IBindStatusCallback` インターフェイスを実装します。|atlctl.h|  
-|[CComAggObject](../../atl/reference/ccomaggobject-class.md)|このクラスは実装[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)集約オブジェクト。|atlcom.h|  
+|[CComAggObject](../../atl/reference/ccomaggobject-class.md)|このクラスは実装[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)集約オブジェクト。|atlcom.h|  
 |[CComAllocator](../../atl/reference/ccomallocator-class.md)|このクラスは、COM メモリのルーチンを使用してメモリを管理するためのメソッドを提供します。|atlbase.h|  
 |[CComApartment](../../atl/reference/ccomapartment-class.md)|このクラスは、スレッド プールの EXE モジュールでアパートメントを管理するためのサポートを提供します。|atlbase.h|  
 |[CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md)|このクラスは、取得およびクリティカル セクション オブジェクトの所有権を解放するためのメソッドを提供します。|atlcore.h|  
 |[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)|ATL 7.0 では、時点で`CComAutoThreadModule`は廃止されています。 を参照してください[ATL モジュール](../../atl/atl-module-classes.md)の詳細。|atlbase.h|  
 |[CComBSTR](../../atl/reference/ccombstr-class.md)|このクラスは、Bstr のラッパーです。|atlbase.h|  
-|[CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)|このクラスは実装[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)ティアオフ インターフェイス。|atlcom.h|  
-|[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)|このクラスは、実装、 [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)インターフェイス。|atlcom.h|  
-|[CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)|このクラスは、実装、 [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720)インターフェイス。|atlcom.h|  
-|[CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md)|このクラスは、実装、 [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)インターフェイスでき、複数のアパートメント内に作成するオブジェクト。|atlcom.h|  
+|[CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)|このクラスは実装[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)ティアオフ インターフェイス。|atlcom.h|  
+|[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)|このクラスは、実装、 [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)インターフェイス。|atlcom.h|  
+|[CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)|このクラスは、実装、 [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2)インターフェイス。|atlcom.h|  
+|[CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md)|このクラスは、実装、 [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)インターフェイスでき、複数のアパートメント内に作成するオブジェクト。|atlcom.h|  
 |[CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md)|このクラスから派生[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)を使用して[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) 1 つのオブジェクトを構築します。|atlcom.h|  
 |[CComCoClass](../../atl/reference/ccomcoclass-class.md)|このクラスは、クラスのインスタンスを作成し、そのプロパティを取得するためのメソッドを提供します。|atlcom.h|  
 |[CComCompositeControl](../../atl/reference/ccomcompositecontrol-class.md)|このクラスは、複合コントロールを実装するために必要なメソッドを提供します。|atlctl.h|  
-|[CComContainedObject](../../atl/reference/ccomcontainedobject-class.md)|このクラスは実装[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)所有者オブジェクトの委任することによって`IUnknown`します。|atlcom.h|  
+|[CComContainedObject](../../atl/reference/ccomcontainedobject-class.md)|このクラスは実装[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)所有者オブジェクトの委任することによって`IUnknown`します。|atlcom.h|  
 |[CComControl](../../atl/reference/ccomcontrol-class.md)|このクラスは、作成および ATL のコントロールを管理するためのメソッドを提供します。|atlctl.h|  
 |[CComControlBase](../../atl/reference/ccomcontrolbase-class.md)|このクラスは、作成および ATL のコントロールを管理するためのメソッドを提供します。|atlctl.h|  
 |[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)|このクラスは、取得およびクリティカル セクション オブジェクトの所有権を解放するためのメソッドを提供します。|atlcore.h|  
@@ -208,20 +208,20 @@ Active Template Library (ATL) では、次のクラスと構造体が含まれ�
 |[IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md)|このクラスは実装`IUnknown`とは、コンテナーがコントロールでの通信に使用するプリンシパルのインターフェイスです。|atlctl.h|  
 |[IPerPropertyBrowsingImpl](../../atl/reference/iperpropertybrowsingimpl-class.md)|このクラスは実装`IUnknown`し、クライアントは、オブジェクトのプロパティ ページの情報にアクセスできます。|atlctl.h|  
 |[IPersistPropertyBagImpl](../../atl/reference/ipersistpropertybagimpl-class.md)|このクラスは実装`IUnknown`でき、そのプロパティをクライアントが指定したプロパティ バッグに保存するオブジェクト。|atlcom.h|  
-|[IPersistStorageImpl](../../atl/reference/ipersiststorageimpl-class.md)|このクラスは、実装、 [IPersistStorage](http://msdn.microsoft.com/library/windows/desktop/ms679731)インターフェイス。|atlcom.h|  
-|[IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)|このクラスは実装`IUnknown`の既定の実装を提供し、 [IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273)インターフェイス。|atlcom.h|  
-|[IPointerInactiveImpl](../../atl/reference/ipointerinactiveimpl-class.md)|このクラスは実装`IUnknown`と[IPointerInactive](http://msdn.microsoft.com/library/windows/desktop/ms693712)インターフェイスのメソッド。|atlctl.h|  
-|[IPropertyNotifySinkCP](../../atl/reference/ipropertynotifysinkcp-class.md)|このクラスは、公開、 [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)接続可能なオブジェクトに対するアウトゴーイング インターフェイスとしてインターフェイス。|atlctl.h|  
+|[IPersistStorageImpl](../../atl/reference/ipersiststorageimpl-class.md)|このクラスは、実装、 [IPersistStorage](/windows/desktop/api/objidl/nn-objidl-ipersiststorage)インターフェイス。|atlcom.h|  
+|[IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)|このクラスは実装`IUnknown`の既定の実装を提供し、 [IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit)インターフェイス。|atlcom.h|  
+|[IPointerInactiveImpl](../../atl/reference/ipointerinactiveimpl-class.md)|このクラスは実装`IUnknown`と[IPointerInactive](/windows/desktop/api/ocidl/nn-ocidl-ipointerinactive)インターフェイスのメソッド。|atlctl.h|  
+|[IPropertyNotifySinkCP](../../atl/reference/ipropertynotifysinkcp-class.md)|このクラスは、公開、 [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)接続可能なオブジェクトに対するアウトゴーイング インターフェイスとしてインターフェイス。|atlctl.h|  
 |[IPropertyPage2Impl](../../atl/reference/ipropertypage2impl-class.md)|このクラスは実装`IUnknown`の既定の実装の継承と[IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)します。|atlctl.h|  
-|[IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)|このクラスは実装`IUnknown`の既定の実装を提供し、 [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246)インターフェイス。|atlctl.h|  
-|[IProvideClassInfo2Impl](../../atl/reference/iprovideclassinfo2impl-class.md)|このクラスの既定の実装を提供する、 [IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303)と[IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764)メソッド。|atlcom.h|  
+|[IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)|このクラスは実装`IUnknown`の既定の実装を提供し、 [IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage)インターフェイス。|atlctl.h|  
+|[IProvideClassInfo2Impl](../../atl/reference/iprovideclassinfo2impl-class.md)|このクラスの既定の実装を提供する、 [IProvideClassInfo](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo)と[IProvideClassInfo2](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo2)メソッド。|atlcom.h|  
 |[IQuickActivateImpl](../../atl/reference/iquickactivateimpl-class.md)|このクラスは、1 つの呼び出しにコンテナーのコントロールの初期化を結合します。|atlctl.h|  
-|[IRunnableObjectImpl](../../atl/reference/irunnableobjectimpl-class.md)|このクラスは実装`IUnknown`の既定の実装を提供し、 [IRunnableObject](http://msdn.microsoft.com/library/windows/desktop/ms692783)インターフェイス。|atlctl.h|  
+|[IRunnableObjectImpl](../../atl/reference/irunnableobjectimpl-class.md)|このクラスは実装`IUnknown`の既定の実装を提供し、 [IRunnableObject](/windows/desktop/api/objidl/nn-objidl-irunnableobject)インターフェイス。|atlctl.h|  
 |[IServiceProviderImpl](../../atl/reference/iserviceproviderimpl-class.md)|このクラスの既定の実装を提供する、`IServiceProvider`インターフェイス。|atlcom.h|  
-|[ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)|このクラスは実装`IUnknown`の既定の実装を提供し、 [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217)インターフェイス。|atlcom.h|  
+|[ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)|このクラスは実装`IUnknown`の既定の実装を提供し、 [ISpecifyPropertyPages](/windows/desktop/api/ocidl/nn-ocidl-ispecifypropertypages)インターフェイス。|atlcom.h|  
 |[ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md)|このクラスの既定の実装を提供する、`ISupportErrorInfo Interface`インターフェイスを 1 つのインターフェイスのみがオブジェクトのエラーを生成するときに使用できます。|atlcom.h|  
 |[IThreadPoolConfig インターフェイス](../../atl/reference/ithreadpoolconfig-interface.md)|このインターフェイスは、スレッド プールを構成するためのメソッドを提供します。|atlutil.h|  
-|[IViewObjectExImpl](../../atl/reference/iviewobjecteximpl-class.md)|このクラスは実装`IUnknown`の既定の実装を提供し、 [IViewObject](http://msdn.microsoft.com/library/windows/desktop/ms680763)、 [IViewObject2](http://msdn.microsoft.com/library/windows/desktop/ms691318)、および[IViewObjectEx](http://msdn.microsoft.com/library/windows/desktop/ms682375)インターフェイス。|atlctl.h|  
+|[IViewObjectExImpl](../../atl/reference/iviewobjecteximpl-class.md)|このクラスは実装`IUnknown`の既定の実装を提供し、 [IViewObject](/windows/desktop/api/oleidl/nn-oleidl-iviewobject)、 [IViewObject2](/windows/desktop/api/oleidl/nn-oleidl-iviewobject2)、および[IViewObjectEx](/windows/desktop/api/ocidl/nn-ocidl-iviewobjectex)インターフェイス。|atlctl.h|  
 |[IWorkerThreadClient インターフェイス](../../atl/reference/iworkerthreadclient-interface.md)|`IWorkerThreadClient` クライアントによって実装されるインターフェイスは、 [CWorkerThread](../../atl/reference/cworkerthread-class.md)クラス。|atlutil.h|  
 |[_U_MENUorID](../../atl/reference/u-menuorid-class.md)|このクラスのラッパーを提供する`CreateWindow`と`CreateWindowEx`します。|atlwin.h|  
 |[_U_RECT](../../atl/reference/u-rect-class.md)|この引数アダプター クラスを使用するか`RECT`ポインターまたは参照ポインターの観点から実装されている関数に渡されます。|atlwin.h|  

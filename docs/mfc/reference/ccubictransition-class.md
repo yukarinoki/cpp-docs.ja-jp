@@ -1,5 +1,5 @@
 ---
-title: CCubicTransition クラス |Microsoft ドキュメント
+title: CCubicTransition クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8697e52368fd407d1c325990552ee9851d48a76
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: d82d61476e4af024eff53c0943a8a9e293c8d285
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953221"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210745"
 ---
 # <a name="ccubictransition-class"></a>CCubicTransition クラス
 3 次遷移をカプセル化します。  
@@ -48,24 +48,24 @@ class CCubicTransition : public CBaseTransition;
   
 |名前|説明|  
 |----------|-----------------|  
-|[CCubicTransition::CCubicTransition](#ccubictransition)|移行のオブジェクトを構築し、そのパラメーターを初期化します。|  
+|[CCubicTransition::CCubicTransition](#ccubictransition)|遷移オブジェクトを構築し、そのパラメーターを初期化します。|  
   
 ### <a name="public-methods"></a>パブリック メソッド  
   
 |名前|説明|  
 |----------|-----------------|  
-|[CCubicTransition::Create](#create)|カプセル化された移行 COM オブジェクトを作成する遷移のライブラリを呼び出します。 (上書き[CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create))。|  
+|[CCubicTransition::Create](#create)|カプセル化された移行 COM オブジェクトを作成する遷移ライブラリを呼び出します。 (上書き[CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create))。|  
   
 ### <a name="public-data-members"></a>パブリック データ メンバー  
   
 |名前|説明|  
 |----------|-----------------|  
-|[CCubicTransition::m_dblFinalValue](#m_dblfinalvalue)|遷移の終了時、アニメーション変数の値。|  
-|[CCubicTransition::m_dblFinalVelocity](#m_dblfinalvelocity)|移行の最後に変数の速度です。|  
+|[CCubicTransition::m_dblFinalValue](#m_dblfinalvalue)|移行の最後にアニメーション変数の値。|  
+|[CCubicTransition::m_dblFinalVelocity](#m_dblfinalvelocity)|移行の最後に変数の速度。|  
 |[CCubicTransition::m_duration](#m_duration)|移行の期間です。|  
   
 ## <a name="remarks"></a>Remarks  
- 3 次遷移中にアニメーション変数の値変更初期値から、指定した最終的な値を指定した速度で終わる、切り替え効果の期間にわたってします。 すべての遷移が自動的にクリアされますをお勧めして割り当てられた新しい演算子を使用します。 カプセル化された IUIAnimationTransition COM オブジェクトは、NULL を指定してから、まで CAnimationController::AnimateGroup、によって作成されます。 この COM オブジェクトの作成も何も起こりません後は、メンバー変数を変更します。  
+ 中 3 次遷移では、アニメーション変数の値変更の初期値から指定の最終的な値を指定した速度で終わる、遷移の期間にわたってします。 すべての遷移が自動的にクリアされますが、お勧めするそれらに割り当てられている新しい演算子を使用します。 カプセル化された IUIAnimationTransition COM オブジェクトは、null を指定し、まで、CAnimationController::AnimateGroup によって作成されます。 影響を与えませんこの COM オブジェクトの作成後は、メンバー変数を変更します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -74,11 +74,11 @@ class CCubicTransition : public CBaseTransition;
   
  `CCubicTransition`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxanimationcontroller.h  
   
 ##  <a name="ccubictransition"></a>  CCubicTransition::CCubicTransition  
- 移行のオブジェクトを構築し、そのパラメーターを初期化します。  
+ 遷移オブジェクトを構築し、そのパラメーターを初期化します。  
   
 ```  
 CCubicTransition(
@@ -92,13 +92,13 @@ CCubicTransition(
  移行の期間です。  
   
  *finalValue*  
- 遷移の終了時、アニメーション変数の値。  
+ 移行の最後にアニメーション変数の値。  
   
  *finalVelocity*  
- 移行の最後に変数の速度です。  
+ 移行の最後に変数の速度。  
   
 ##  <a name="create"></a>  CCubicTransition::Create  
- カプセル化された移行 COM オブジェクトを作成する遷移のライブラリを呼び出します。  
+ カプセル化された移行 COM オブジェクトを作成する遷移ライブラリを呼び出します。  
   
 ```  
 virtual BOOL Create(
@@ -108,20 +108,20 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>パラメーター  
 *pLibrary*  
- ポインター、 [IUIAnimationTransitionLibrary インターフェイス](https://msdn.microsoft.com/library/windows/desktop/dd371897)、標準的な遷移のライブラリを定義します。  
+ ポインター、 [IUIAnimationTransitionLibrary インターフェイス](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)、標準的な遷移のライブラリを定義します。  
 
 ### <a name="return-value"></a>戻り値  
- 移行が正常に作成された場合は TRUE。それ以外の場合は FALSE。  
+ 移行が正常に作成された場合は TRUE。それ以外の場合は FALSE です。  
   
 ##  <a name="m_dblfinalvalue"></a>  CCubicTransition::m_dblFinalValue  
- 遷移の終了時、アニメーション変数の値。  
+ 移行の最後にアニメーション変数の値。  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
 ##  <a name="m_dblfinalvelocity"></a>  CCubicTransition::m_dblFinalVelocity  
- 移行の最後に変数の速度です。  
+ 移行の最後に変数の速度。  
   
 ```  
 DOUBLE m_dblFinalVelocity;  

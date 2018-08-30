@@ -23,15 +23,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7e0bd440e2e4bd8d32525fe4be6aaad2c401f6a
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 9d67f00b88be88e1cb2691414b0666bd298977dd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880622"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220181"
 ---
 # <a name="iprovideclassinfo2impl-class"></a>IProvideClassInfo2Impl クラス
-このクラスの既定の実装を提供する、 [IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303)と[IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764)メソッド。  
+このクラスの既定の実装を提供する、 [IProvideClassInfo](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo)と[IProvideClassInfo2](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo2)メソッド。  
   
 ## <a name="syntax"></a>構文  
   
@@ -85,7 +85,7 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
 |[IProvideClassInfo2Impl::_tih](#_tih)|コクラスの型情報を管理します。|  
   
 ## <a name="remarks"></a>Remarks  
- [IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764)インターフェイスは、拡張[IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303)を追加して、`GetGUID`メソッド。 このメソッドでは、クライアントは既定のイベント セットのオブジェクトのアウトゴーイング インターフェイス IID を取得できます。 クラス`IProvideClassInfo2Impl`の既定の実装を提供します、`IProvideClassInfo`と`IProvideClassInfo2`メソッド。  
+ [IProvideClassInfo2](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo2)インターフェイスは、拡張[IProvideClassInfo](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo)を追加して、`GetGUID`メソッド。 このメソッドでは、クライアントは既定のイベント セットのオブジェクトのアウトゴーイング インターフェイス IID を取得できます。 クラス`IProvideClassInfo2Impl`の既定の実装を提供します、`IProvideClassInfo`と`IProvideClassInfo2`メソッド。  
   
  `IProvideClassInfo2Impl` 型の静的メンバーを含む`CComTypeInfoHolder`コクラスの型情報を管理します。  
   
@@ -94,7 +94,7 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
   
  `IProvideClassInfo2Impl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlcom.h  
   
 ##  <a name="getclassinfo"></a>  IProvideClassInfo2Impl::GetClassInfo  
@@ -105,7 +105,7 @@ STDMETHOD(GetClassInfo)(ITypeInfo** pptinfo);
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IProvideClassInfo::GetClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms690192) Windows SDK にします。  
+ 参照してください[IProvideClassInfo::GetClassInfo](/windows/desktop/api/ocidl/nf-ocidl-iprovideclassinfo-getclassinfo) Windows SDK にします。  
   
 ##  <a name="getguid"></a>  IProvideClassInfo2Impl::GetGUID  
  オブジェクトの送信のディスパッチ インターフェイスの GUID を取得します。  
@@ -117,7 +117,7 @@ STDMETHOD(GetGUID)(
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IProvideClassInfo2::GetGUID](http://msdn.microsoft.com/library/windows/desktop/ms679721) Windows SDK にします。  
+ 参照してください[IProvideClassInfo2::GetGUID](/windows/desktop/api/ocidl/nf-ocidl-iprovideclassinfo2-getguid) Windows SDK にします。  
   
 ##  <a name="iprovideclassinfo2impl"></a>  IProvideClassInfo2Impl::IProvideClassInfo2Impl  
  コンストラクターです。  

@@ -1,5 +1,5 @@
 ---
-title: プロジェクト ビルド エラー PRJ0013 |Microsoft ドキュメント
+title: プロジェクト ビルド エラー PRJ0013 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d055043d5c7e7b030557ab03ceb7181c664ce01
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aeb0ac9011697c440667a538bd1805780810fb4a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318777"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221560"
 ---
 # <a name="project-build-error-prj0013"></a>プロジェクト ビルド エラー PRJ0013
 システム リソースが非常に少ない可能性があります。 ビルドの起動に必要なパイプを作成できません。  
   
  このエラーは、システム リソースが少ないことを示しています。 このエラーを解決するには、他のプロセス/アプリケーションによるシステム リソースの使用を減らします。  
   
- このエラーは、セキュリティ レベルは、パイプを作成するための十分な場合にも発生することができます (を参照してください[CreatePipe](http://msdn.microsoft.com/library/windows/desktop/aa365152.aspx))。
+ このエラーは、セキュリティ レベルが不十分でパイプを作成する場合は発生も (を参照してください[CreatePipe](https://msdn.microsoft.com/library/windows/desktop/aa365152.aspx))。

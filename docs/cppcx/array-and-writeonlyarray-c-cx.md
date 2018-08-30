@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adad70bfa069a43382c06f60dea53bc2e53ff187
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8b90e1f40a4de3331dfb712d8dd0f113df5e9f9e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606113"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203753"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Array と WriteOnlyArray (C++/CX)
 通常の C スタイル配列を自由に使用できますまたは[std::array](../standard-library/array-class-stl.md)で c++/cli/CX プログラム (が[std::vector](../standard-library/vector-class.md)方が適切では多くの場合)、メタデータでパブリッシュされている任意の api では、C スタイル配列を変換する必要がありますが、ベクトルまたは、 [platform::array](../cppcx/platform-array-class.md)または[platform::writeonlyarray](../cppcx/platform-writeonlyarray-class.md)によってどのように使用されている型。 [Platform::Array](../cppcx/platform-array-class.md) 型は、 [std::vector](../standard-library/vector-class.md)ほどには効率的でも強力でもありません。そのため、一般的なガイドラインとして、配列要素で多くの操作を実行する内部コードでは使用を避ける必要があります。  
@@ -82,12 +82,12 @@ ms.locfileid: "42606113"
 ## <a name="use-arrayreference-to-avoid-copying-data"></a>ArrayReference 使用による、データ コピーの回避  
  データが ABI を介して [Platform::Array](../cppcx/platform-array-class.md)に渡されており、最終的にはそのデータを C スタイル配列で処理して効率性を追求するシナリオでは、 [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) を使用して、不要なコピー操作を回避できます。 [を受け取るパラメーターに引数として](../cppcx/platform-arrayreference-class.md) Platform::ArrayReference `Platform::Array`が渡されると、 `ArrayReference` は、そのデータを指定された C スタイル配列に直接格納します。 `ArrayReference` にソース データへのロック オンがないため、呼び出しが完了する前に別のスレッドでそのデータが変更されるかまたは削除された場合、結果は不確定になることに注意してください。  
   
- 次のコード スニペットは、 [DataReader](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.datareader.aspx) 操作の結果を `Platform::Array` にコピーする方法 (通常のパターン) と、 `ArrayReference` を代わりに使用してデータを C スタイル配列に直接コピーする方法を示します。  
+ 次のコード スニペットの結果をコピーする方法を示しています、 [DataReader](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.datareader.aspx)に操作を`Platform::Array`(通常のパターン) と、代わりに使用`ArrayReference`を C スタイル配列に直接データをコピーします。  
   
  [!code-cpp[cx_arrays#07](../cppcx/codesnippet/CPP/js-array/class1.h#07)]  
   
 ## <a name="avoid-exposing-an-array-as-a-property"></a>配列をプロパティとして公開することを回避する方法  
- 一般に、ref クラスで `Platform::Array` 型をプロパティとして公開することは避ける必要があります。これは、クライアント コードが単一要素にアクセスしようとしている場合でも、配列全体が返されるためです。 パブリック ref クラスでシーケンス コンテナーをプロパティとして公開する必要があるときは、 [Windows::Foundation::IVector](http://msdn.microsoft.com/library/windows/apps/br206631.aspx) の方が適切です。 プライベートまたは内部 API (メタデータに発行されません) では、 [std::vector](../standard-library/vector-class.md)などの標準 C++ コンテナーの使用を検討してください。  
+ 一般に、ref クラスで `Platform::Array` 型をプロパティとして公開することは避ける必要があります。これは、クライアント コードが単一要素にアクセスしようとしている場合でも、配列全体が返されるためです。 シーケンス コンテナーをパブリック ref クラスのプロパティとして公開する必要があるときに[Windows::Foundation::IVector](https://msdn.microsoft.com/library/windows/apps/br206631.aspx)をお勧めします。 プライベートまたは内部 API (メタデータに発行されません) では、 [std::vector](../standard-library/vector-class.md)などの標準 C++ コンテナーの使用を検討してください。  
   
 ## <a name="see-also"></a>関連項目  
  [型システム](../cppcx/type-system-c-cx.md)   

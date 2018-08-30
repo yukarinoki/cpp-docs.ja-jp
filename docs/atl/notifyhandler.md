@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72c6c992f2ec92bc11d6dd009649d503d3c0bd02
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: e39b0b1ac94a759c4a8b30fce8c634ed49be4ff9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848338"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209480"
 ---
 # <a name="notifyhandler"></a>NotifyHandler
 メッセージ マップで NOTIFY_HANDLER マクロの 3 番目のパラメーターで識別される関数の名前。  
@@ -43,7 +43,7 @@ ms.locfileid: "37848338"
  メッセージを送信するコントロールの識別子です。  
   
  *pnmh*  
- アドレス、 [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514)通知コードおよび追加情報を格納する構造体。 このパラメーターを持つより大きな構造体をポイントするいくつかの通知メッセージの`NMHDR`その最初のメンバーとして構造体。  
+ アドレス、 [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr)通知コードおよび追加情報を格納する構造体。 このパラメーターを持つより大きな構造体をポイントするいくつかの通知メッセージの`NMHDR`その最初のメンバーとして構造体。  
   
  *bHandled*  
  メッセージ マップ セット*bHandled*する前に TRUE を*NotifyHandler*が呼び出されます。 場合*NotifyHandler* 、メッセージを完全に処理しない設定があります*bHandled*に**FALSE**を示すメッセージがさらに処理を必要があります。  
@@ -57,5 +57,5 @@ ms.locfileid: "37848338"
 ## <a name="see-also"></a>関連項目  
  [ウィンドウの実装](../atl/implementing-a-window.md)   
  [メッセージ マップ](../atl/message-maps-atl.md)   
- [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)
+ [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)
 

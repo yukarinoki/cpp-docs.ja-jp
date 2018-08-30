@@ -1,20 +1,22 @@
 ---
 layout: LandingPage
-author: jasongroce
-ms.author: apexprodleads
-ms.topic: landing-page
+ms.topic: conceptual
 title: C++ ドキュメントによる Linux 開発
 description: Linux で実行されているアプリケーションを作成し、デバッグする。
-ms.openlocfilehash: c4794dbeb7e5a1d356e251686653c6c0aa0a023a
-ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
+author: mikeblome
+ms.author: mblome
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c17106038bc79742351efef07a5900a4709c9569
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
-ms.locfileid: "29794181"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213914"
 ---
 # <a name="linux-development-with-c-documentation"></a>C++ ドキュメントによる Linux 開発
 
-Linux で実行されているアプリケーションを作成し、デバッグする。
+Visual Studio 2017 を使用して、Linux で実行されているアプリケーションを作成し、デバッグします。
 
 <ul class="panelContent cardsF">
     <li>
@@ -29,7 +31,7 @@ Linux で実行されているアプリケーションを作成し、デバッ�
                     </div>
                     <div class="cardText">
                         <h3>Linux ワークロードをインストールし、構成する</h3>
-                        <p>Visual Studio をセットアップして、C++ で Linux アプリケーションをビルドする方法について説明します。</p>
+                        <p>Visual Studio 2017 以降をセットアップして、C++ で Linux アプリケーションをビルドする方法について説明します。</p>
                     </div>
                 </div>
             </div>

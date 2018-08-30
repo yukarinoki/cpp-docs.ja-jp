@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 468eb677a0073e25c9ef33182aea0d321cded352
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 4855ca5c461b7437345150f5d199521c48f0b253
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335621"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196554"
 ---
 # <a name="registering-ole-controls"></a>OLE コントロールの登録
 OLE コントロールは、他の OLE サーバー オブジェクトは、その他の OLE に対応するアプリケーションでアクセスできます。 これは、コントロールのタイプ ライブラリとクラスを登録することによって実現されます。  
@@ -83,7 +83,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
   
 - `afxRegFreeThreading` スレッド処理モデルを ThreadingModel をレジストリに設定する Free を =。  
   
-     2 つのフラグを結合する`afxRegApartmentThreading`と`afxRegFreeThreading`ThreadingModel を設定する = Both。 参照してください[InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390)スレッド モデルの登録の詳細については、Windows SDK に含まれています。  
+     2 つのフラグを結合する`afxRegApartmentThreading`と`afxRegFreeThreading`ThreadingModel を設定する = Both。 参照してください[InprocServer32](/windows/desktop/com/inprocserver32)スレッド モデルの登録の詳細については、Windows SDK に含まれています。  
   
 > [!NOTE]
 >  4.2、以前のバージョンの MFC で、 **int** *nRegFlags*パラメーターがブール型パラメーター、 *bInsertable*、許可または挿入から挿入されるコントロールを禁止します。オブジェクト ダイアログ ボックス。  
@@ -142,7 +142,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
  コントロールのクラスが登録されている場合は 0 以外それ以外の場合 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- これにより、OLE コントロールの対応するコンテナーで使用されるコントロール。 `AfxOleRegisterControlClass` コントロールの名前と、システム上の場所で、レジストリを更新しもレジストリにコントロールをサポートするスレッド処理モデルを設定します。 詳細については、次を参照してください。[テクニカル ノート 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)、"アパートメント モデルのスレッドで OLE コントロール"は、と[に関するプロセスとスレッド](http://msdn.microsoft.com/library/windows/desktop/ms681917)Windows SDK にします。  
+ これにより、OLE コントロールの対応するコンテナーで使用されるコントロール。 `AfxOleRegisterControlClass` コントロールの名前と、システム上の場所で、レジストリを更新しもレジストリにコントロールをサポートするスレッド処理モデルを設定します。 詳細については、次を参照してください。[テクニカル ノート 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)、"アパートメント モデルのスレッドで OLE コントロール"は、と[に関するプロセスとスレッド](/windows/desktop/ProcThread/about-processes-and-threads)Windows SDK にします。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCAxCtl#11](../../mfc/reference/codesnippet/cpp/registering-ole-controls_1.cpp)]  
@@ -153,7 +153,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
   
  コントロールが有効なコンテナーでは、オブジェクトの挿入 ダイアログ ボックスに表示されます、アパートメント モデルを認識されます。 完了したら、同じクラスの別のインスタンスが使用を開始する前に 1 つのアパートメントでのコントロールが静的データにアクセスするときに、されていない、スケジューラによって無効にするため、アパートメント モデル対応のコントロールは静的クラスのデータは、ロックで保護を確認する必要があります。同じ静的データ。 クリティカル セクションのコードでは、静的なデータへのアクセスが囲まれます。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxctl.h  
   
 ##  <a name="afxoleregisterpropertypageclass"></a>  AfxOleRegisterPropertyPageClass  
@@ -189,9 +189,9 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
  コントロールのクラスが登録されている場合は 0 以外それ以外の場合 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- これにより、OLE コントロールの対応するコンテナーで使用されるプロパティ ページができます。 `AfxOleRegisterPropertyPageClass` プロパティ ページの名前と、システム上の場所のレジストリを更新しもレジストリにコントロールをサポートするスレッド処理モデルを設定します。 詳細については、次を参照してください。[テクニカル ノート 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)、"アパートメント モデルのスレッドで OLE コントロール"は、と[に関するプロセスとスレッド](http://msdn.microsoft.com/library/windows/desktop/ms681917)Windows SDK にします。  
+ これにより、OLE コントロールの対応するコンテナーで使用されるプロパティ ページができます。 `AfxOleRegisterPropertyPageClass` プロパティ ページの名前と、システム上の場所のレジストリを更新しもレジストリにコントロールをサポートするスレッド処理モデルを設定します。 詳細については、次を参照してください。[テクニカル ノート 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)、"アパートメント モデルのスレッドで OLE コントロール"は、と[に関するプロセスとスレッド](/windows/desktop/ProcThread/about-processes-and-threads)Windows SDK にします。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxctl.h  
   
 ##  <a name="afxoleregistertypelib"></a>  AfxOleRegisterTypeLib  
@@ -229,7 +229,7 @@ BOOL AfxOleRegisterTypeLib(
   
  [!code-cpp[NVC_MFCAutomation#8](../../mfc/codesnippet/cpp/registering-ole-controls_4.cpp)]  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdisp.h  
   
 ##  <a name="afxoleunregisterclass"></a>  AfxOleUnregisterClass  
@@ -249,7 +249,7 @@ BOOL AFXAPI AfxOleUnregisterClass(REFCLSID clsID, LPCSTR pszProgID);
 ### <a name="return-value"></a>戻り値  
  コントロールまたはプロパティ ページ クラスは正常に登録された場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxctl.h  
   
 ##  <a name="afxoleunregistertypelib"></a>  AfxOleUnregisterTypeLib  
@@ -269,7 +269,7 @@ BOOL AFXAPI AfxOleUnregisterTypeLib(REFGUID tlID);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCAxCtl#13](../../mfc/reference/codesnippet/cpp/registering-ole-controls_5.cpp)]  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdisp.h  
 
 ## <a name="see-also"></a>関連項目  

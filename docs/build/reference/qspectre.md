@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a74c6c7c2ee7aab175d7e136e5cf02a8d9f8bfc
-ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
+ms.openlocfilehash: ec3509b71d78221c3e15607d34f674fc38d9f635
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39375878"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43130990"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -32,7 +32,7 @@ Spectre バリアント 1 セキュリティの脆弱性を軽減するための
 
 ## <a name="remarks"></a>Remarks
 
-**/Qspectre**オプションは、特定の操作を軽減するために手順を挿入するコンパイラ[Spectre セキュリティの脆弱性](https://spectreattack.com/spectre.pdf)します。 これらの脆弱性と呼ばれる*予測実行のサイド チャネル攻撃*に影響する多くのオペレーティング システムと最新のプロセッサ、AMD、intel プロセッサを含む、および ARM です。
+**/Qspectre**オプションは、Visual Studio 2017 バージョン 15.7 で使用できる以降。 特定の操作を軽減するために手順を挿入するコンパイラが、その[Spectre セキュリティの脆弱性](https://spectreattack.com/spectre.pdf)します。 これらの脆弱性と呼ばれる*予測実行のサイド チャネル攻撃*に影響する多くのオペレーティング システムと最新のプロセッサ、AMD、intel プロセッサを含む、および ARM です。
 
 **/Qspectre**オプションは既定でオフです。
 

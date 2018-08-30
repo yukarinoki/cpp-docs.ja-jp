@@ -1,5 +1,5 @@
 ---
-title: 'TN003: Windows ハンドルのマップ オブジェクトに |Microsoft ドキュメント'
+title: 'TN003: オブジェクト マッピングの Windows ハンドルと |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,20 +19,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2be47da802fd1168ec7b43c2f7701351b3c88d8
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: a7dbd74a8f216efb64d220747155a619d2084b3b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951509"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211763"
 ---
 # <a name="tn003-mapping-of-windows-handles-to-objects"></a>テクニカル ノート 3: Windows ハンドルとオブジェクト間のマップ
-この注の説明、MFC Windows をマップをサポートするルーチンが C++ オブジェクトへのハンドルをオブジェクトします。  
+この注は、MFC を説明します。 Windows のマッピングをサポートするルーチンが C++ オブジェクトへのハンドルをオブジェクト。  
   
 ## <a name="the-problem"></a>問題を  
- Windows のオブジェクトは、さまざまなによって表される通常[処理](http://msdn.microsoft.com/library/windows/desktop/aa383751)MFC クラスのオブジェクトが C++ オブジェクトでの Windows オブジェクト ハンドルをラップします。 MFC クラス ライブラリの関数をラップするハンドルを使用して、C++ オブジェクトはラップして、特定のハンドルを持っている Windows のオブジェクトを検索できます。 ただし、オブジェクトでは、C++ のラッパー オブジェクトがない場合がありますして、指定の時刻に C++ のラッパーとして機能する一時オブジェクトが作成されます。  
+ Windows オブジェクトは、さまざまなによって表される通常[処理](/windows/desktop/WinProg/windows-data-types)MFC クラスのオブジェクトが C++ オブジェクトでの Windows オブジェクト ハンドルをラップします。 MFC クラス ライブラリの関数をラップするハンドルを使用して、特定のハンドルを持つ Windows オブジェクトのラップが C++ オブジェクトを検索できます。 ただし、場合によって、オブジェクトには C++ のラッパー オブジェクトはありません、システム指定の時刻に C++ ラッパーとして機能する一時オブジェクトを作成します。  
   
- ハンドルのマップを使用する Windows のオブジェクトは次のとおりです。  
+ ハンドル マップを使用する Windows オブジェクトは次のとおりです。  
   
 -   HWND ([CWnd](../mfc/reference/cwnd-class.md)と`CWnd`-派生クラス)  
   
@@ -56,37 +56,37 @@ ms.locfileid: "36951509"
   
 -   ソケット ([CSocket](../mfc/reference/csocket-class.md))  
   
- ハンドルを指定すると、これらのオブジェクトのいずれにも、静的メソッドを呼び出すことによって、ハンドルをラップする MFC オブジェクトを見つけることができます`FromHandle`です。 たとえばと呼ばれる HWND をその*hWnd*、次の行はへのポインターを返します、`CWnd`をラップする*hWnd*:  
+ ハンドルを指定すると、これらのオブジェクトの 1 つに、静的メソッドを呼び出すことによって、ハンドルをラップする MFC オブジェクトを検索できる`FromHandle`します。 たとえば、HWND と呼ばれる指定された*hWnd*、次の行はへのポインターを返します、`CWnd`をラップする*hWnd*:  
   
 ```  
 CWnd::FromHandle(hWnd)  
 ```  
   
- 場合*hWnd*が特定のラッパー オブジェクト、一時的な`CWnd`をラップする作成*hWnd*です。 これにより、いずれかのハンドルから有効な C++ オブジェクトを取得します。  
+ 場合*hWnd*が特定のラッパー オブジェクト、一時的な`CWnd`がラップする作成*hWnd*します。 これにより、いずれかのハンドルから有効な C++ オブジェクトを取得します。  
   
- ラッパー オブジェクトを作成したら、ラッパー クラスのパブリック メンバー変数からのハンドルを取得できます。 場合、 `CWnd`、 *m_hWnd* HWND そのオブジェクトにはが含まれています。  
+ ラッパー オブジェクトを取得したら、ラッパー クラスのパブリック メンバー変数からそのハンドルを取得できます。 場合、 `CWnd`、 *m_hWnd* HWND そのオブジェクトにはが含まれています。  
   
 ## <a name="attaching-handles-to-mfc-objects"></a>MFC オブジェクトにハンドルをアタッチします。  
- Windows のオブジェクトを新しく作成されたハンドルのラッパー オブジェクトおよびハンドルを指定、呼び出すことによって、2 つを関連付けることができます、`Attach`例のように関数。  
+ Windows オブジェクトを新しく作成されたハンドル ラッパー オブジェクトおよびハンドルを指定、呼び出すことによって、2 つを関連付けることができます、`Attach`この例のように関数。  
   
 ```  
 CWnd myWnd;  
 myWnd.Attach(hWnd);
 ```  
   
- これはパーマネント マップの関連付けにエントリ*myWnd*と*hWnd*です。 呼び出す`CWnd::FromHandle(hWnd)`はへのポインターを返します*myWnd*です。 ときに*myWnd*が削除されると、デストラクターを自動的に破棄*hWnd* 、Windows を呼び出すことによって[DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682)関数。 これが必要ない場合*hWnd*からデタッチする必要があります*myWnd*する前に*myWnd*は破棄されます (これでスコープを終了するときに通常*myWnd*定義されました)。 `Detach`メソッドではこのです。  
+ これは、永続的なマップの関連付けにエントリ*myWnd*と*hWnd*します。 呼び出す`CWnd::FromHandle(hWnd)`へのポインターを返すようになりましたが*myWnd*します。 ときに*myWnd*が削除されると、デストラクターを自動的に破棄*hWnd* 、Windows を呼び出すことによって[DestroyWindow](https://msdn.microsoft.com/library/windows/desktop/ms632682)関数。 これが望ましくない場合*hWnd*からデタッチする必要があります*myWnd*する前に*myWnd*が破棄される (位置のスコープを終了するときに通常*myWnd*が定義されている)。 `Detach`メソッドがこれです。  
   
 ```  
 myWnd.Detach();
 ```  
   
 ## <a name="more-about-temporary-objects"></a>一時オブジェクトの詳細  
- 一時オブジェクトが作成されるたびに`FromHandle`ラッパー オブジェクトにまだないハンドルを指定します。 これらの一時オブジェクトは、ハンドルからデタッチされ、によって削除された、`DeleteTempMap`関数。 既定では[CWinThread::OnIdle](../mfc/reference/cwinthread-class.md#onidle)を自動的に呼び出して`DeleteTempMap`一時ハンドルのマップをサポートするクラスごとにします。 つまり、一時的なオブジェクトへのポインターが有効になります、関数からの終了の時点、ポインターを取得したを想定することはできません。  
+ 一時オブジェクトが作成されるたびに`FromHandle`ラッパー オブジェクトにまだないハンドルを指定します。 これらの一時オブジェクトは、ハンドルからデタッチされ、によって削除された、`DeleteTempMap`関数。 既定で[CWinThread::OnIdle](../mfc/reference/cwinthread-class.md#onidle)自動的に呼び出します`DeleteTempMap`一時的なハンドルのマップをサポートするクラスごとにします。 つまり、一時オブジェクトへのポインターが有効になります、関数からの終了の時点から、ポインターを取得した場所を想定することはできません。  
   
-## <a name="wrapper-objects-and-multiple-threads"></a>ラッパー オブジェクトと複数のスレッド  
- スレッド単位では、一時的と永続的の両方のオブジェクトが維持されます。 つまり、1 つのスレッドが一時的か永続的かどうかに関係なく、別のスレッドの C++ のラッパー オブジェクトにアクセスできません。  
+## <a name="wrapper-objects-and-multiple-threads"></a>オブジェクトのラッパーと複数のスレッド  
+ スレッドごとでは、一時的および永続的な両方のオブジェクトが維持されます。 つまり、1 つのスレッドが一時的か永続的かどうかに関係なく、別のスレッドの C++ のラッパー オブジェクトにアクセスできません。  
   
- これらのオブジェクトを別の 1 つのスレッドに渡す、常に送信して、ネイティブと`HANDLE`型です。 1 つのスレッドから C++ のラッパー オブジェクトを渡す多くの場合、予期しない結果。  
+ 1 つのスレッド間でこれらのオブジェクトを渡す、常に送信して、ネイティブと`HANDLE`型。 別の 1 つのスレッドから C++ ラッパー オブジェクトを渡すことが予期しない結果が発生する多くの場合。  
   
 ## <a name="see-also"></a>関連項目  
  [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   

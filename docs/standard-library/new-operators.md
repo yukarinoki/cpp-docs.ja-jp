@@ -9,12 +9,12 @@ f1_keywords:
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 327e37d1f13691eca049c98e8b1ab314b393a608
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 11c4f3d1c994ee7a29ee47e35881d533f8c8715a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42539721"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216189"
 ---
 # <a name="ltnewgt-operators"></a>&lt;new&gt; 演算子
 
@@ -45,7 +45,7 @@ void operator delete(void* ptr,
 
 値を表示するために delete 式によって、最初の関数が呼び出されます*ptr*が無効です。 プログラムでは、この関数のシグネチャを持つ関数を定義できます。これは、C++ 標準ライブラリで定義されている既定のバージョンに置き換わります。 必要な動作は、の値を受け入れる*ptr*または null をする以前の呼び出しによって返されたつまり[演算子 new](../standard-library/new-operators.md#op_new)(**size_t**)。
 
-Null 値の既定の動作*ptr*は何もしないようにします。 その他の値の*ptr*前述のような呼び出しによって以前返される値を指定する必要があります。 Null 以外の値の既定の動作*ptr*が、以前の呼び出しによって割り当てられたストレージを再利用されます。 どのような条件下でこのような再利用できるストレージの一部またはすべてが後続の呼び出しによって割り当てが指定されていない場合`operator new`(**size_t**)、または任意の`calloc`( **size_t**)、 `malloc`( **size_t**)、または`realloc`( **void\***、 **size_t**)。
+Null 値の既定の動作*ptr*は何もしないようにします。 その他の値の*ptr*前述のような呼び出しによって以前返される値を指定する必要があります。 Null 以外の値の既定の動作*ptr*が、以前の呼び出しによって割り当てられたストレージを再利用されます。 どのような条件下でこのような再利用できるストレージの一部またはすべてが後続の呼び出しによって割り当てが指定されていない場合`operator new`(**size_t**)、または任意の`calloc`( **size_t**)、 `malloc`( **size_t**)、または`realloc`( **void**<strong>\*</strong>、 **size_t**)。
 
 2 番目の関数は、**new**( **std::size_t**) の形式の new 式に対応する配置 delete 式で呼び出されます。 何も実行されません。
 
@@ -75,7 +75,7 @@ void operator delete[](void* ptr,
 
 ### <a name="remarks"></a>Remarks
 
-最初の関数を呼び出して、`delete[]`式の値を表示するために*ptr*が無効です。 関数は置き換え可能です。プログラムでこの関数のシグネチャを持つ関数を定義でき、これが C++ 標準ライブラリで定義された既定のバージョンに置き換わるためです。 必要な動作は、の値を受け入れる*ptr*または null をする以前の呼び出しによって返されたつまり[演算子 new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)(**size_t**)。 Null 値の既定の動作*ptr*は何もしないようにします。 その他の値の*ptr*前述のような呼び出しによって以前返される値を指定する必要があります。 Null 以外の値の既定の動作*ptr*が、以前の呼び出しによって割り当てられたストレージを再利用されます。 どのような条件下でこのような再利用できるストレージの一部またはすべてが後続の呼び出しによって割り当てが指定されていない場合[演算子 new](../standard-library/new-operators.md#op_new)(**size_t**)、または任意の`calloc`(**size_t**)、 `malloc`(**size_t**)、または`realloc`( **void\***、 **size_t**)。
+最初の関数を呼び出して、`delete[]`式の値を表示するために*ptr*が無効です。 関数は置き換え可能です。プログラムでこの関数のシグネチャを持つ関数を定義でき、これが C++ 標準ライブラリで定義された既定のバージョンに置き換わるためです。 必要な動作は、の値を受け入れる*ptr*または null をする以前の呼び出しによって返されたつまり[演算子 new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)(**size_t**)。 Null 値の既定の動作*ptr*は何もしないようにします。 その他の値の*ptr*前述のような呼び出しによって以前返される値を指定する必要があります。 このような非 null 値の既定の動作*ptr*が、以前の呼び出しによって割り当てられたストレージを再利用されます。 どのような条件下でこのような再利用できるストレージの一部またはすべてが後続の呼び出しによって割り当てが指定されていない場合[演算子 new](../standard-library/new-operators.md#op_new)(**size_t**)、または任意の`calloc`(**size_t**)、 `malloc`(**size_t**)、または`realloc`( **void**<strong>\*</strong>、 **size_t**).
 
 2 番目の関数は、配置によって呼び出されます`delete[]`に対応する式を`new[]`形式の式`new[]`(**std::size_t**)。 何も実行されません。
 

@@ -1,5 +1,5 @@
 ---
-title: 致命的なエラー C1900 |Microsoft ドキュメント
+title: 致命的なエラー C1900 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da7cdd5601785f43748ec87d3219f43728536855
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2211b4243ddf44194959a263fd90ec1a615ea0a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228988"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220282"
 ---
 # <a name="fatal-error-c1900"></a>致命的なエラー C1900
-'tool1' の Version 'number1' と 'tool2' の Version 'number2' が一致しません。  
-  
- コンパイラのさまざまなパスで実行されたツールが一致しません。 ***number1***と***number2***ファイルの日付を参照してください。 たとえば、パス 1 ではコンパイラ フロントエンドが (c1.dll) を実行し、パス 2 ではコンパイラ バックエンドが (c2.dll) を実行します。 ファイルの日付が一致する必要があります。  
-  
- この問題を解決するには、Visual Studio のすべての更新プログラムが適用されたことを確認します。 問題が解決しない場合は使用**プログラムと機能**を修復または Visual Studio を再インストールするには、Windows コントロール パネルの します。
+
+> Il の不一致 '*tool1*'version'*number1*'と'*tool2*'version'*number2*'
+
+コンパイラのさまざまなパスで実行されたツールが一致しません。 *number1*と*number2*ファイルの日付を参照してください。 たとえば、パス 1 ではコンパイラ フロントエンドが (c1.dll) を実行し、パス 2 ではコンパイラ バックエンドが (c2.dll) を実行します。 ファイルの日付が一致する必要があります。
+
+この問題を解決するには、Visual Studio のすべての更新プログラムが適用されたことを確認します。 問題が解決しない場合は、使用**プログラムと機能**修復または Visual Studio を再インストールする Windows コントロール パネルの します。

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e6abf906d9fa0e5866b28a0c617e68edead8378
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 2772ec96558c4aa1d1f5fcb573166a37a31c0592
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852251"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201206"
 ---
 # <a name="cminiframewnd-class"></a>CMiniFrameWnd クラス
 フローティング ツール バーの周りなどで使用される、半分の高さのフレーム ウィンドウを表します。  
@@ -71,7 +71,7 @@ class CMiniFrameWnd : public CFrameWnd
   
  `CMiniFrameWnd`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="cminiframewnd"></a>  CMiniFrameWnd::CMiniFrameWnd  
@@ -147,8 +147,7 @@ virtual BOOL Create(
  `Create` ウィンドウのクラス名とウィンドウの名前を初期化し、そのスタイルと親の既定値を登録します。  
   
 ##  <a name="createex"></a>  CMiniFrameWnd::CreateEx  
- 
-          `CMiniFrameWnd` オブジェクトを作成します。  
+ `CMiniFrameWnd` オブジェクトを作成します。  
   
 ```  
 virtual BOOL CreateEx(
@@ -166,7 +165,7 @@ virtual BOOL CreateEx(
  拡張スタイルを指定します、`CMiniFrameWnd`作成中です。 任意の適用、[拡張ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)ウィンドウにします。  
   
  *lpClassName*  
- Windows クラスの名前を示す文字の null で終わる文字列の指す (、 [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)構造)。 クラス名はグローバルに登録されている任意の名前を指定できます[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)関数またはそのいずれかの定義済みのコントロール クラス名。 NULL は指定できません。  
+ Windows クラスの名前を示す文字の null で終わる文字列の指す (、 [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576)構造)。 クラス名はグローバルに登録されている任意の名前を指定できます[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)関数またはそのいずれかの定義済みのコントロール クラス名。 NULL は指定できません。  
   
  *lpWindowName*  
  ウィンドウの名前を含む null で終わる文字列へのポインター。  

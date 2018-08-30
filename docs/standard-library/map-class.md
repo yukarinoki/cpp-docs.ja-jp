@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40b84e3daac5a1e5574c09e656d39dc774b57031
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: bb157fb5c39dff7f4e06926ddd17ed38d7a5174a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027746"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218634"
 ---
 # <a name="map-class"></a>map クラス
 
@@ -123,15 +123,19 @@ class map;
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*マップに格納されるキー データを入力します。
+*Key*<br/>
+ map に格納されるキーのデータ型。
 
-*型*マップに格納される要素のデータ型します。
+*Type*<br/>
+ map に格納される要素のデータ型。
 
-*Traits*マップ内の相対順序を決定する並べ替えキーとして 2 つの要素の値を比較できる関数オブジェクトを提供する型。 この引数は省略可能であり、既定値は二項述語 `less<Key>` です。
+*Traits*<br/>
+ 2 つの要素の値を並べ替えキーとして比較して、map 内の要素の相対順序を決定できる関数オブジェクトを提供する型。 この引数は省略可能であり、既定値は二項述語 `less<Key>` です。
 
 C++ 14 では、型パラメーターを使用せずに std::less<> 述語を指定することで、異種ルックアップを有効にすることができます。 詳細については、「[連想コンテナーの異種ルックアップ](../standard-library/stl-containers.md#sequence_containers)」をご覧ください。
 
-*アロケーター*マップの割り当てとメモリの解放に関する詳細をカプセル化する格納されたアロケーター オブジェクトを表す型です。 この引数は省略可能であり、既定値は `allocator<pair<const Key, Type> >` です。
+*アロケーター*<br/>
+ メモリの map の割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値は `allocator<pair<const Key, Type> >` です。
 
 ## <a name="remarks"></a>Remarks
 
@@ -228,7 +232,7 @@ map では、[key_compare](#key_compare) 型の格納されている関数オブ
 |[operator&#91;&#93;](#op_at)|map に、指定したキー値を持つ要素を挿入します。|
 |[operator=](#op_eq)|別の map のコピーで map の要素を置き換えます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<map>
 
@@ -572,7 +576,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*照合される map の要素のキー値。
+*key*<br/>
+ 照合される map の要素のキー値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1035,7 +1040,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*の検索対象のマップ要素の並べ替えキーと比較される引数キー値。
+*key*<br/>
+ 検索対象の map 内の要素の並べ替えキーと比較される引数キー値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1121,13 +1127,17 @@ size_type erase(
 
 ### <a name="parameters"></a>パラメーター
 
-*場所*を削除する要素の位置。
+*Where*<br/>
+ 削除される要素の位置。
 
-*最初*を削除する最初の要素の位置。
+*まずは*<br/>
+ 削除される最初の要素の位置。
 
-*最後*を削除する最後の要素の次の位置。
+*前の*<br/>
+ 削除される最後の要素の次の位置。
 
-*キー*を削除する要素のキー値。
+*Key*<br/>
+ 削除される要素のキー値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1229,7 +1239,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*検索対象のマップからの要素の並べ替えキーによって照合されるキーの値。
+*key*<br/>
+ 検索対象の map 内の要素の並べ替えキーによって照合されるキー値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1561,11 +1572,11 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>Remarks
 
-`iterator`のオブジェクトである要素をマップのポイントで定義されている[value_type](#value_type)、つまり型の`pair` * \< * **constKey**、**型 * * * >*、その最初のメンバーは要素へのキーおよび 2 番目のメンバーは要素が保持するマップされたデータです。
+オブジェクトである要素をマップのポイントで定義されている反復子[value_type](#value_type)、つまり型の`pair<const Key, Type>`、その最初のメンバーは要素へのキーおよび 2 番目のメンバーは要素が保持するマップされたデータです。
 
-逆参照する、**反復子**`Iter` 、map 内の要素を指す、`->`演算子。
+反復子を逆参照する*Iter* 、map 内の要素を指す、`->`演算子。
 
-要素のキーの値にアクセスするには、使用`Iter`  -> **最初**と同等 (\* `Iter`)。 **最初**します。 要素のマップされたデータの値にアクセスするには、使用`Iter`  ->  **2 番目**と同等 (\* `Iter`)。 **second**。
+要素のキーの値にアクセスするには、使用`Iter->first`と同等`(*Iter).first`します。 要素のマップされたデータの値にアクセスするには、使用`Iter->second`と同等`(*Iter).second`します。
 
 ### <a name="example"></a>例
 
@@ -1587,7 +1598,7 @@ map が要素の並べ替えに使用する関数オブジェクトを返しま�
 
 格納されているオブジェクトは以下のメンバー関数を定義します。
 
-**bool operator**( **constKey&**`left`, **const Key&**`right`);
+`bool operator(const Key& left, const Key& right);`
 
 これは、並べ替え順で `left` が `right` に先行しかつ等しくない場合に **true** を返します。
 
@@ -1690,7 +1701,8 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*の検索対象のマップ要素の並べ替えキーと比較される引数キー値。
+*key*<br/>
+ 検索対象の map 内の要素の並べ替えキーと比較される引数キー値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2402,9 +2414,9 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 `reverse_iterator` 型は要素の値を変更できず、逆の順序で map を反復処理するために使用します。
 
-`reverse_iterator`のオブジェクトである要素をマップのポイントで定義されている[value_type](#value_type)、つまり型の`pair` * \< * **constKey**、**型 * * * >*、その最初のメンバーは要素へのキーおよび 2 番目のメンバーは要素が保持するマップされたデータです。
+`reverse_iterator`のオブジェクトである要素をマップのポイントで定義されている[value_type](#value_type)、つまり型の`pair<const Key, Type>`、その最初のメンバーは要素へのキーおよび 2 番目のメンバーは要素が保持するマップされたデータです。
 
-逆参照する、 `reverse_iterator` `rIter` 、map 内の要素を指す、`->`演算子。
+逆参照する、 `reverse_iterator` *rIter* 、map 内の要素を指す、`->`演算子。
 
 要素のキーの値にアクセスするには、使用`rIter`  -> **最初**と同等 (\* `rIter`)。 **最初**します。 要素のマップされたデータの値にアクセスするには、使用`rIter`  ->  **2 番目**と同等 (\* `rIter`)。 **最初**します。
 
@@ -2479,7 +2491,8 @@ void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*ターゲット マップを交換する要素を提供する引数のマップ。
+*right*<br/>
+ ターゲットの map と交換する要素を提供する引数の map。
 
 ### <a name="remarks"></a>Remarks
 
@@ -2549,7 +2562,8 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*の検索対象のマップ要素の並べ替えキーの値と比較される引数キー値。
+*key*<br/>
+ 検索対象の map 内の要素の並べ替えキー値と比較される引数キー値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2738,7 +2752,7 @@ int main( )
 
 ## <a name="see-also"></a>関連項目
 
-[\<マップ > メンバー](http://msdn.microsoft.com/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
+[\<マップ > メンバー](https://msdn.microsoft.com/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
 [コンテナー](../cpp/containers-modern-cpp.md)<br/>
 [C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>

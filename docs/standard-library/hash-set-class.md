@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81c7572ffd5a53456cd4555b82a8d3e235286339
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f40fbed217bde0cfe0e917100a18bbdea91f0a8f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961709"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200347"
 ---
 # <a name="hashset-class"></a>hash_set クラス
 
@@ -121,11 +121,14 @@ class hash_set
 
 ### <a name="parameters"></a>パラメーター
 
-*キー* hash_set に格納される要素のデータを入力します。
+*Key*<br/>
+ hash_set に格納される要素のデータ型。
 
-*Traits*クラスの 1 つ、2 つの関数オブジェクトを含む型は、相対的な順序と、ハッシュ関数は、単項述語のマッピングのキーの値を決定する並べ替えキーとして 2 つの要素の値を比較することは二項述語で比較されている、要素型の符号なし整数に`size_t`します。 この引数は省略可能で、および`hash_compare`*< キー、* **小***\<キー> >* 既定値です。
+*Traits*<br/>
+ 2 つの関数オブジェクトを含む型、クラスのいずれかの比較は、相対的な順序と符号なしの要素の単項述語のマッピングのキー値であるハッシュ関数を決定する並べ替えキーとして 2 つの要素の値を比較することは二項述語型の整数`size_t`します。 この引数は省略可能であり、既定値は `hash_compare<Key, less<Key> >` です。
 
-*アロケーター* hash_set の割り当てとメモリの解放に関する詳細をカプセル化する格納されたアロケーター オブジェクトを表す型です。 この引数は省略可能であり、既定値は **アロケーター***\<キー>。*
+*アロケーター*<br/>
+ メモリの hash_set の割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値は `allocator<Key>` です。
 
 ## <a name="remarks"></a>Remarks
 
@@ -217,7 +220,7 @@ hash_set クラスに用意されている反復子は双方向反復子です�
 |-|-|
 |[hash_set::operator=](#op_eq)|別の `hash_set` のコピーで `hash_set` の要素を置き換えます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<hash_set>
 
@@ -559,7 +562,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*照合される hash_set の要素のキー。
+*key*<br/>
+ 照合される hash_set の要素のキー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1025,7 +1029,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*検索対象の hash_set の要素の並べ替えキーと比較される引数キー。
+*key*<br/>
+ 検索対象の hash_set 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1111,13 +1116,17 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Where* hash_set から削除する要素の位置。
+*_Where*<br/>
+ hash_set から削除する要素の位置。
 
-*最初*hash_set から削除する最初の要素の位置。
+*first*<br/>
+ hash_set から削除する最初の要素の位置。
 
-*最後*hash_set から削除する最後の要素の次の位置。
+*last*<br/>
+ hash_set から削除する最後の要素の次の位置。
 
-*キー* hash_set から削除する要素のキー。
+*key*<br/>
+ hash_set から削除する要素のキー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1225,7 +1234,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*検索対象の hash_set の要素の並べ替えキーによって照合される引数キー。
+*key*<br/>
+ 検索対象の hash_set 内の要素の並べ替えキーによって照合される引数キー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1650,7 +1660,8 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*検索対象の hash_set の要素の並べ替えキーと比較される引数キー。
+*key*<br/>
+ 検索対象の hash_set 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2139,7 +2150,8 @@ void swap(hash_set& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*をターゲットの hash_set と交換する要素を提供する引数の hash_set。
+*right*<br/>
+ ターゲットの hash_set と交換する要素を提供する引数の hash_set。
 
 ### <a name="remarks"></a>Remarks
 
@@ -2214,7 +2226,8 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*検索対象の hash_set の要素の並べ替えキーと比較される引数キー。
+*key*<br/>
+ 検索対象の hash_set 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
 

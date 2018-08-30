@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56a57d3fe0eb1a016af9eee8539cd7f57a12ddf5
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fd7f2c708dd3cfe63e40b62912a775fcc120c4ba
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880561"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223052"
 ---
 # <a name="csnapinpropertypageimpl-class"></a>CSnapInPropertyPageImpl クラス
 このクラスは、スナップインのプロパティ ページ オブジェクトを実装するためのメソッドを提供します。  
@@ -94,7 +94,7 @@ CSnapInPropertyPageImpl : public CDialogImplBase
   
  `CSnapInPropertyPageImpl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlsnap.h  
   
 ##  <a name="canceltoclose"></a>  CSnapInPropertyPageImpl::CancelToClose  
@@ -146,7 +146,7 @@ PROPSHEETPAGE m_psp;
 ### <a name="remarks"></a>Remarks  
  この構造体を使用して、構築した後、プロパティ ページの外観を初期化します。  
   
- そのメンバーの一覧を含む、この構造の詳細については、次を参照してください。 [PROPSHEETPAGE](http://msdn.microsoft.com/library/aa815151) Windows SDK に含まれています。  
+ そのメンバーの一覧を含む、この構造の詳細については、次を参照してください。 [PROPSHEETPAGE](https://msdn.microsoft.com/library/aa815151) Windows SDK に含まれています。  
   
 ##  <a name="onapply"></a>  CSnapInPropertyPageImpl::OnApply  
  ユーザーがクリックしたときに、このメンバー関数が呼び出されます、 **OK**または**今すぐ適用**ボタンをクリックします。  

@@ -126,12 +126,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17a6d1e618dc9345266cb3c0d618fda1c4f78c44
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b3a80cf072a4f95885ef0bc9a0b28a385fde085f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339463"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206084"
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog クラス
 HTML を使用して、ダイアログ ボックスを作成するために使用ダイアログ リソースをユーザー インターフェイスを実装するのではなく。  
@@ -171,7 +171,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 |[CDHtmlDialog::GetControlProperty](#getcontrolproperty)|指定した ActiveX コントロールの要求のプロパティを取得します。|  
 |[CDHtmlDialog::GetCurrentUrl](#getcurrenturl)|現在のドキュメントに関連付けられている Uniform Resource Locator (URL) を取得します。|  
 |[CDHtmlDialog::GetDHtmlDocument](#getdhtmldocument)|現在読み込まれている HTML ドキュメントの IHTMLDocument2 インターフェイスを取得します。|  
-|[CDHtmlDialog::GetDropTarget](#getdroptarget)|別の方法を指定するダイアログを許可する、ドロップ先として使用されているときに、コンテナー内の WebBrowser コントロールによって呼び出されます[IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679)します。|  
+|[CDHtmlDialog::GetDropTarget](#getdroptarget)|別の方法を指定するダイアログを許可する、ドロップ先として使用されているときに、コンテナー内の WebBrowser コントロールによって呼び出されます[IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget)します。|  
 |[CDHtmlDialog::GetElement](#getelement)|HTML 要素のインターフェイスを取得します。|  
 |[CDHtmlDialog::GetElementHtml](#getelementhtml)|取得、 `innerHTML` HTML 要素のプロパティ。|  
 |[CDHtmlDialog::GetElementInterface](#getelementinterface)|HTML 要素から要求されたインターフェイス ポインターを取得します。|  
@@ -239,7 +239,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
   
  `CDHtmlDialog`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdhtml.h  
   
 ##  <a name="ddx_dhtml_helper_macros"></a>  DDX_DHtml Helper マクロ  
@@ -678,7 +678,7 @@ HRESULT GetDHtmlDocument(IHTMLDocument2 **pphtmlDoc);
  標準の HRESULT です。 成功した場合は、S_OK を返します。  
   
 ##  <a name="getdroptarget"></a>  CDHtmlDialog::GetDropTarget  
- 別の方法を指定するダイアログを許可する、ドロップ先として使用されているときに、コンテナー内の WebBrowser コントロールによって呼び出されます[IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679)します。  
+ 別の方法を指定するダイアログを許可する、ドロップ先として使用されているときに、コンテナー内の WebBrowser コントロールによって呼び出されます[IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget)します。  
   
 ```  
 STDMETHOD(GetDropTarget)(

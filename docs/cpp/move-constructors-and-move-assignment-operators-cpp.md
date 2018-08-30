@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33ed35d02547acdbc9a08928a6e698c3e039d745
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: f414871477e8d263546833cb71496f5795dd4671
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405572"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204988"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>移動コンストラクターと移動代入演算子 (C++)
 このトピックでは、記述する方法を説明します、*移動コンス トラクター*と C++ のクラスの移動代入演算子。 移動コンス トラクターには、右辺値をコピーせず、左辺値に移動するオブジェクトによって所有されているリソースができます。 移動セマンティクスの詳細については、次を参照してください。[右辺値参照宣言子: & &](../cpp/rvalue-reference-declarator-amp-amp.md)します。  
@@ -317,4 +317,4 @@ MemoryBlock(MemoryBlock&& other)
   
 ## <a name="see-also"></a>関連項目  
  [右辺値参照宣言子: & &](../cpp/rvalue-reference-declarator-amp-amp.md)   
- [\<ユーティリティ > に移動](http://msdn.microsoft.com/abef7e85-9dd6-4724-85da-d7f7fe95dca9)
+ [\<ユーティリティ > に移動](https://msdn.microsoft.com/abef7e85-9dd6-4724-85da-d7f7fe95dca9)

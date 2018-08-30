@@ -48,12 +48,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8eea759f7f2af32fe688bbc8583eafc1244b20d7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0af12e1cd2f9925d5b7df8ccf16a7838a2e8c78b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571517"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215612"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor クラス
 使用される[CEnumerator](../../data/oledb/cenumerator-class.md)列挙子の行セットからデータにアクセスします。  
@@ -77,7 +77,7 @@ class CEnumeratorAccessor
 |[m_nType](#ntype)|行がデータ ソースまたは列挙子について説明するかどうかを示す変数。|  
 |[m_szDescription](#szdescription)|データ ソースまたは列挙子の説明です。|  
 |[m_szName](#szname)|データ ソースまたは列挙子の名前。|  
-|[m_szParseName](#szparsename)|渡す文字列[ため](http://msdn.microsoft.com/library/windows/desktop/ms680604)をデータ ソースまたは列挙子のモニカーを取得します。|  
+|[m_szParseName](#szparsename)|渡す文字列[ため](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname)をデータ ソースまたは列挙子のモニカーを取得します。|  
   
 ## <a name="remarks"></a>Remarks  
  この行セットは、データ ソースと現在の列挙子から見えるの列挙子で構成されます。  
@@ -131,7 +131,7 @@ WCHAR m_szName[129];
  参照してください[isourcesrowset::getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*詳細についてはします。  
 
 ## <a name="szparsename"></a> Cenumeratoraccessor::m_szparsename
-渡す文字列[ため](http://msdn.microsoft.com/library/windows/desktop/ms680604)をデータ ソースまたは列挙子のモニカーを取得します。  
+渡す文字列[ため](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname)をデータ ソースまたは列挙子のモニカーを取得します。  
   
 ### <a name="syntax"></a>構文  
   

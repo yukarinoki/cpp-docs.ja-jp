@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7424581c277e7b20132fd5e667acb77a4a95789e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9fc3be9fb25b6593f4b69f846394544b7b7d756a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598651"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220466"
 ---
 # <a name="idlmodule"></a>idl_module
 
@@ -65,10 +65,10 @@ function declaration
 このタイプ ライブラリのヘルプ ID です。
 
 *非表示*(省略可能)  
-ライブラリが表示されないようにするパラメーター。 詳細については、「 [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) 」の MIDL 属性に関する説明を参照してください。
+ライブラリが表示されないようにするパラメーター。 参照してください、[隠し](/windows/desktop/Midl/hidden)MIDL 属性に関する詳細について説明します。
 
 *制限付き*(省略可能)  
-ライブラリのメンバーは任意に呼び出すことができません。 詳細については、「 [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) 」の MIDL 属性に関する説明を参照してください。
+ライブラリのメンバーは任意に呼び出すことができません。 参照してください、[制限](/windows/desktop/Midl/restricted)MIDL 属性に関する詳細について説明します。
 
 *関数の宣言*  
 この関数を定義します。
@@ -77,7 +77,7 @@ function declaration
 
 **Idl_module** C++ 属性を使用して、.dll ファイルからインポートすることができる .dll ファイルにエントリ ポイントを指定できます。
 
-**Idl_module**属性と同様の機能を持つ、[モジュール](http://msdn.microsoft.com/library/windows/desktop/aa367099)MIDL 属性。
+**Idl_module**属性と同様の機能を持つ、[モジュール](/windows/desktop/Midl/module)MIDL 属性。
 
 .Idl ファイルのライブラリ ブロックに DLL のエントリ ポイントを配置することで、.dll ファイルからエクスポートできる COM オブジェクトから何もエクスポートできます。
 

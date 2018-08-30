@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8333ffcb1de62f4af5ee0a3ec0412ad742af7192
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 42588b844158ebe995a9d07dc206679580db12fe
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42540480"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201169"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>チュートリアル: タスクおよび XML HTTP 要求を使用した接続
 この例は、使用する方法を示します、 [IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)と[IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) web サービスで、ユニバーサル Windows プラットフォーム (UWP に HTTP GET および POST 要求を送信するタスクとのインターフェイス) アプリです。 タスクと `IXMLHTTPRequest2` を組み合わせることによって、他のタスクと共に構成するコードを記述できます。 たとえば、タスクのチェーンの一部としてダウンロード タスクを使用できます。 ダウンロード タスクは、処理が取り消された場合にも応答できます。  
@@ -33,7 +33,7 @@ ms.locfileid: "42540480"
   
  このドキュメントでは、最初に `HttpRequest` およびそのサポート クラスを作成する方法を示します。 C++ および XAML を使用する UWP アプリからこのクラスを使用する方法を示します。  
   
- 使用するより詳細な例については、`HttpReader`クラスは、このドキュメントで説明を参照してください[開発 Bing Maps Trip Optimizer、JavaScript および C++ での Windows ストア アプリ](http://msdn.microsoft.com/library/974cf025-de1a-4299-b7dd-c6c7bf0e5d30)します。 使用する別の例の`IXMLHTTPRequest2`はないタスクを使用して、参照してください[クイック スタート: XML HTTP 要求 (IXMLHTTPRequest2) を使用して接続](http://msdn.microsoft.com/en-us/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35)します。  
+ 使用するより詳細な例については、`HttpReader`クラスは、このドキュメントで説明を参照してください[開発 Bing Maps Trip Optimizer、JavaScript および C++ での Windows ストア アプリ](https://msdn.microsoft.com/library/974cf025-de1a-4299-b7dd-c6c7bf0e5d30)します。 使用する別の例の`IXMLHTTPRequest2`はないタスクを使用して、参照してください[クイック スタート: XML HTTP 要求 (IXMLHTTPRequest2) を使用して接続](https://msdn.microsoft.com/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35)します。  
   
 > [!TIP]
 >  `IXMLHTTPRequest2` `IXMLHTTPRequest2Callback`は UWP アプリで使用するために推奨されるインターフェイスです。 また、この例をデスクトップ アプリケーションでの使用に適用することもできます。  
@@ -72,7 +72,7 @@ ms.locfileid: "42540480"
   
 #### <a name="to-use-the-httprequest-class"></a>HttpRequest クラスを使用するには  
   
-1.  MainPage.xaml で定義、 [StackPanel](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx)要素として次のとおりです。  
+1.  MainPage.xaml で定義、 [StackPanel](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx)要素として次のとおりです。  
   
      [!code-xml[concrt-using-ixhr2#A1](../../parallel/concrt/codesnippet/xaml/walkthrough-connecting-using-tasks-and-xml-http-requests_4.xaml)]  
   
@@ -121,6 +121,6 @@ ms.locfileid: "42540480"
  [PPL における取り消し処理](cancellation-in-the-ppl.md)   
  [C++ での非同期プログラミング](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)   
  [C++ における UWP アプリ用の非同期操作の作成](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)   
- [クイック スタート: XML HTTP 要求 (IXMLHTTPRequest2) を使用してを接続します。](http://msdn.microsoft.com/en-us/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35)   
+ [クイック スタート: XML HTTP 要求 (IXMLHTTPRequest2) を使用してを接続します。](https://msdn.microsoft.com/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35)   
  [task クラス (同時実行ランタイム)](../../parallel/concrt/reference/task-class.md)   
  [task_completion_event クラス](../../parallel/concrt/reference/task-completion-event-class.md)

@@ -1,7 +1,7 @@
 ---
-title: コンパイラの警告 (レベル 3) C4306 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 3) C4306 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,19 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99a490fc90ee9a977442548406ea2aec4baac3fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ab5372213819375a6c1fec3cfc43970415b6486a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299004"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219995"
 ---
 # <a name="compiler-warning-level-3-c4306"></a>コンパイラの警告 (レベル 3) C4306
-**'**   
- ***識別子*': から変換 '**   
- ***type1* 'to'**   
- ***type2* ' より大きいサイズの**  
-  
- 識別子の型は、大きいサイズのポインターにキャストします。 新しい種類の塗りつぶされていない上位ビットをゼロで埋められますとなります。  
-  
- この警告は、不要な変換である可能性があります。 結果のポインターが無効であります。
+
+> '*識別子*': から変換'*type1*'to'*type2*' より大きいサイズの
+
+識別子の型は、大きいサイズのポインターにキャストします。 新しい種類の塗りつぶされていない上位ビットはゼロで埋められますになります。
+
+この警告は、不要な変換である可能性があります。 結果のポインターは有効でない可能性があります。

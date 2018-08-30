@@ -1,5 +1,5 @@
 ---
-title: ATL 接続ポイント クラス |Microsoft ドキュメント
+title: ATL コネクション ポイント クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,21 +19,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49acd19fcb25751ac9223b557b068383556f63f3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 289ff7ae7db1abd6a0a19577a2c567b462a2910e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354336"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201401"
 ---
 # <a name="atl-connection-point-classes"></a>ATL 接続ポイント クラス
 ATL 接続ポイントをサポートするために、次のクラスを使用します。  
   
--   [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md)コネクション ポイントを実装します。 表す発信インターフェイスの IID は、テンプレート パラメーターとして渡されます。  
+-   [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md)接続ポイントを実装します。 表すアウトゴーイング インターフェイスの IID は、テンプレート パラメーターとして渡されます。  
   
--   [入力したコネクション](../atl/reference/iconnectionpointcontainerimpl-class.md)接続ポイント コンテナーを実装およびの一覧を管理`IConnectionPointImpl`オブジェクト。  
+-   [IConnectionPointContainerImpl](../atl/reference/iconnectionpointcontainerimpl-class.md)接続ポイント コンテナーを実装およびの一覧を管理`IConnectionPointImpl`オブジェクト。  
   
--   [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md)を表す接続ポイントを実装する、 [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)インターフェイスです。  
+-   [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md)を表す接続ポイントを実装して、 [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)インターフェイス。  
   
 -   [CComDynamicUnkArray](../atl/reference/ccomdynamicunkarray-class.md)任意の数の接続ポイントとそのシンク間の接続を管理します。  
   
@@ -41,9 +41,9 @@ ATL 接続ポイントをサポートするために、次のクラスを使用�
   
 -   [CFirePropNotifyEvent](../atl/reference/cfirepropnotifyevent-class.md)オブジェクトのプロパティが変更されたかを変更するには、クライアントのシンクに通知します。  
   
--   [IDispEventImpl](../atl/reference/idispeventimpl-class.md) ATL COM オブジェクトのコネクション ポイントのサポートを提供します。 これらの接続ポイントは、COM オブジェクトによって提供されているイベント シンク マップにマップされます。  
+-   [IDispEventImpl](../atl/reference/idispeventimpl-class.md) ATL COM オブジェクトの接続ポイントのサポートを提供します。 これらの接続ポイントは、COM オブジェクトによって提供されているイベント シンク マップにマップされます。  
   
--   [されます](../atl/reference/idispeventsimpleimpl-class.md)適切なハンドラー関数にイベントをルーティングするクラスでイベント シンク マップと連携します。  
+-   [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)適切なハンドラー関数にイベントをルーティングするクラスでイベント シンク マップと連携します。  
   
 ## <a name="see-also"></a>関連項目  
  [接続ポイント](../atl/atl-connection-points.md)

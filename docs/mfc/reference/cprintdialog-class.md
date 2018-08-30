@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1495a0674cf29d5090c2fff3a1639f5a1646f490
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 6bd5f5c0840e90efe4d1e495181cbe5667c86b48
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852333"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197513"
 ---
 # <a name="cprintdialog-class"></a>CPrintDialog クラス
 Windows のコモン ダイアログ ボックスである [印刷] ダイアログで提供されるサービスをカプセル化したものです。  
@@ -112,11 +112,11 @@ class CPrintDialog : public CCommonDialog
   
  フレームワークの関与なし印刷を処理するために、アプリケーションを実行する場合は、使用、`CPrintDialog`現状有姿を指定すると、コンス トラクターを持つクラスまたはダイアログからのクラスを派生させることができます`CPrintDialog`と、ニーズに合わせてコンス トラクターを記述します。 いずれの場合も、これらのダイアログ ボックスと同様に標準の MFC ダイアログ ボックス クラスから派生しているため`CCommonDialog`します。  
   
- 使用する、`CPrintDialog`オブジェクトは、まずを使用してオブジェクトを作成、`CPrintDialog`コンス トラクター。 ダイアログ ボックスが構築されると、設定または任意の値を変更、 [m_pd](#m_pd)構造 ダイアログ ボックスのコントロールの値を初期化します。 `m_pd`型の構造は、 [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843)します。 この構造体の詳細については、Windows SDK を参照してください。  
+ 使用する、`CPrintDialog`オブジェクトは、まずを使用してオブジェクトを作成、`CPrintDialog`コンス トラクター。 ダイアログ ボックスが構築されると、設定または任意の値を変更、 [m_pd](#m_pd)構造 ダイアログ ボックスのコントロールの値を初期化します。 `m_pd`型の構造は、 [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda)します。 この構造体の詳細については、Windows SDK を参照してください。  
   
  ハンドルを指定しない場合`m_pd`の`hDevMode`と`hDevNames`メンバー、Windows 関数を呼び出すことを確認する`GlobalFree`の ダイアログ ボックスが済んだら、これらのハンドル。 によって提供されるフレームワークの印刷のセットアップの実装を使用する場合`CWinApp::OnFilePrintSetup`、これらのハンドルを解放する必要はありません。 ハンドルがによって管理される`CWinApp`で解放されると`CWinApp`のデストラクター。 使用する場合は、これらのハンドルを解放する必要がのみ`CPrintDialog`スタンドアロンです。  
   
- ダイアログ ボックスのコントロールを初期化した後に呼び出し、 `DoModal`  ダイアログ ボックスが表示され、ユーザーが印刷オプションを選択できるようにするメンバー関数。 `DoModal` ユーザーが [ok] (IDOK) またはキャンセル (IDCANCEL) ボタンを選択するかどうかを返します。  
+ ダイアログ ボックスのコントロールを初期化した後に呼び出し、 `DoModal`  ダイアログ ボックスが表示され、ユーザーが印刷オプションを選択できるようにするメンバー関数。 `DoModal` ユーザーが [ok] \(IDOK) またはキャンセル (IDCANCEL) ボタンを選択するかどうかを返します。  
   
  場合`DoModal`IDOK を返しますのいずれかを使用することができます`CPrintDialog`のユーザーによって入力された情報を取得するメンバー関数。  
   
@@ -145,7 +145,7 @@ class CPrintDialog : public CCommonDialog
   
  `CPrintDialog`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdlgs.h  
   
 ##  <a name="cprintdialog"></a>  CPrintDialog::CPrintDialog  
@@ -163,7 +163,7 @@ CPrintDialog(
  標準の Windows 印刷 ダイアログ ボックスまたは印刷のセットアップ ダイアログ ボックスが表示されるかどうかを指定します。 このパラメーターは、標準の Windows プリンターの設定 ダイアログ ボックスを表示する場合は true に設定します。 Windows 印刷ダイアログ ボックスを表示する場合は FALSE に設定します。 場合*呼び出すと*false で、印刷のセットアップが、[印刷] ダイアログ ボックスに、オプション ボタンが引き続き表示されます。  
   
  *dwFlags*  
- 1 つまたは複数のフラグがダイアログ ボックスで、ビットごとの OR 演算子を使用して結合の設定のカスタマイズに使用することができます。 たとえば、PD_ALLPAGES フラグは、ドキュメントのすべてのページに既定の印刷範囲を設定します。 参照してください、 [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843)これらのフラグの詳細については、Windows SDK で構造体。  
+ 1 つまたは複数のフラグがダイアログ ボックスで、ビットごとの OR 演算子を使用して結合の設定のカスタマイズに使用することができます。 たとえば、PD_ALLPAGES フラグは、ドキュメントのすべてのページに既定の印刷範囲を設定します。 参照してください、 [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda)これらのフラグの詳細については、Windows SDK で構造体。  
   
  *pParentWnd*  
  ウィンドウ、ダイアログ ボックスの親またはオーナー ウィンドウへのポインター。  
@@ -171,13 +171,13 @@ CPrintDialog(
 ### <a name="remarks"></a>Remarks  
  このメンバー関数は、のみ、オブジェクトを構築します。 使用して、`DoModal`メンバー関数は、ダイアログ ボックスを表示します。  
   
- コンス トラクターを呼び出すときに注意して*呼び出すと*を FALSE に設定すると、PD_RETURNDC フラグは自動的に使用します。 呼び出した後`DoModal`、 `GetDefaults`、または`GetPrinterDC`ではプリンター DC が返されます`m_pd.hDC`します。 この DC を呼び出して解放する必要があります[とき](http://msdn.microsoft.com/library/windows/desktop/dd183533)の呼び出し元によって`CPrintDialog`します。  
+ コンス トラクターを呼び出すときに注意して*呼び出すと*を FALSE に設定すると、PD_RETURNDC フラグは自動的に使用します。 呼び出した後`DoModal`、 `GetDefaults`、または`GetPrinterDC`ではプリンター DC が返されます`m_pd.hDC`します。 この DC を呼び出して解放する必要があります[とき](/windows/desktop/api/wingdi/nf-wingdi-deletedc)の呼び出し元によって`CPrintDialog`します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#174](../../mfc/codesnippet/cpp/cprintdialog-class_1.cpp)]  
   
 ##  <a name="createprinterdc"></a>  CPrintDialog::CreatePrinterDC  
- プリンター デバイス コンテキスト (DC) を作成、 [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)と[DEVNAMES](../../mfc/reference/devnames-structure.md)構造体。  
+ プリンター デバイス コンテキスト (DC) を作成、 [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)と[DEVNAMES](../../mfc/reference/devnames-structure.md)構造体。  
   
 ```  
 HDC CreatePrinterDC();
@@ -200,7 +200,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- IDOK や IDCANCEL。 IDCANCEL が返された場合は、Windows を呼び出す[情報を得る](http://msdn.microsoft.com/library/windows/desktop/ms646916)エラーが発生したかどうかを判断する関数。  
+ IDOK や IDCANCEL。 IDCANCEL が返された場合は、Windows を呼び出す[情報を得る](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror)エラーが発生したかどうかを判断する関数。  
   
  IDOK や IDCANCEL は、ユーザーが [ok] または [キャンセル] ボタンを選択するかどうかを示す定数です。  
   
@@ -209,7 +209,7 @@ virtual INT_PTR DoModal();
   
  呼び出した後`DoModal`、他のメンバー、ダイアログ ボックスに、設定やユーザーによって入力された情報を取得する関数を呼び出すことができます。  
   
- コンス トラクターを呼び出すときに注意して*呼び出すと*を FALSE に設定すると、PD_RETURNDC フラグは自動的に使用します。 呼び出した後`DoModal`、 `GetDefaults`、または`GetPrinterDC`ではプリンター DC が返されます`m_pd.hDC`します。 この DC を呼び出して解放する必要があります[とき](http://msdn.microsoft.com/library/windows/desktop/dd183533)の呼び出し元によって`CPrintDialog`します。  
+ コンス トラクターを呼び出すときに注意して*呼び出すと*を FALSE に設定すると、PD_RETURNDC フラグは自動的に使用します。 呼び出した後`DoModal`、 `GetDefaults`、または`GetPrinterDC`ではプリンター DC が返されます`m_pd.hDC`します。 この DC を呼び出して解放する必要があります[とき](/windows/desktop/api/wingdi/nf-wingdi-deletedc)の呼び出し元によって`CPrintDialog`します。  
   
 ### <a name="example"></a>例  
   例をご覧ください[CPrintDialog::CreatePrinterDC](#createprinterdc)します。  
@@ -245,7 +245,7 @@ BOOL GetDefaults();
   
  場合によっては、この関数の呼び出しは呼び出します、[コンス トラクター](#cprintdialog)の`CPrintDialog`で*呼び出すと*を FALSE に設定します。 これらの場合、プリンター DC と`hDevNames`と`hDevMode`(内にある 2 つのハンドル、`m_pd`データ メンバー) は自動的に割り当てられます。  
   
- 場合のコンス トラクター`CPrintDialog`で呼び出されました*呼び出すと*を FALSE に設定すると、この関数はしか返されません`hDevNames`と`hDevMode`内にある`m_pd.hDevNames`と`m_pd.hDevMode`)、呼び出し元にはプリンター DC で返すことも`m_pd.hDC`します。 プリンター DC を削除して、Windows の呼び出しの呼び出し元の責任[GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579)関数が終了したら、ハンドルを`CPrintDialog`オブジェクト。  
+ 場合のコンス トラクター`CPrintDialog`で呼び出されました*呼び出すと*を FALSE に設定すると、この関数はしか返されません`hDevNames`と`hDevMode`内にある`m_pd.hDevNames`と`m_pd.hDevMode`)、呼び出し元にはプリンター DC で返すことも`m_pd.hDC`します。 プリンター DC を削除して、Windows の呼び出しの呼び出し元の責任[GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree)関数が終了したら、ハンドルを`CPrintDialog`オブジェクト。  
   
 ### <a name="example"></a>例  
  このコード フラグメントでは、既定のプリンター デバイス コンテキストを取得し、ユーザーにレポートをインチあたりのドットでプリンターの解像度。 (この属性をプリンターの機能の多くの場合と呼びます DPI。)  
@@ -278,7 +278,7 @@ LPDEVMODE GetDevMode() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)データ構造は、デバイスの初期化と印刷ドライバーの環境に関する情報が含まれています。 この構造体で、Windows によって使用されたメモリのロックを解除する必要があります[GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595)関数は、Windows SDK で説明します。  
+ [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)データ構造は、デバイスの初期化と印刷ドライバーの環境に関する情報が含まれています。 この構造体で、Windows によって使用されたメモリのロックを解除する必要があります[GlobalUnlock](/windows/desktop/api/winbase/nf-winbase-globalunlock)関数は、Windows SDK で説明します。  
   
 ### <a name="remarks"></a>Remarks  
  この関数を呼び出した後[DoModal](#domodal)または[ため](#getdefaults)印刷デバイスに関する情報を取得します。  
@@ -345,7 +345,7 @@ HDC GetPrinterDC() const;
  成功した場合、プリンター デバイス コンテキストを識別するハンドルそれ以外の場合は NULL です。  
   
 ### <a name="remarks"></a>Remarks  
- 場合、*呼び出すと*のパラメーター、`CPrintDialog`コンス トラクターが FALSE (印刷 ダイアログ ボックスが表示されることを示す)、`GetPrinterDC`プリンター デバイス コンテキストへのハンドルを返します。 Windows を呼び出す必要があります[とき](http://msdn.microsoft.com/library/windows/desktop/dd183533)が終わったら、デバイス コンテキストを削除する関数を使用します。  
+ 場合、*呼び出すと*のパラメーター、`CPrintDialog`コンス トラクターが FALSE (印刷 ダイアログ ボックスが表示されることを示す)、`GetPrinterDC`プリンター デバイス コンテキストへのハンドルを返します。 Windows を呼び出す必要があります[とき](/windows/desktop/api/wingdi/nf-wingdi-deletedc)が終わったら、デバイス コンテキストを削除する関数を使用します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#109](../../mfc/codesnippet/cpp/cprintdialog-class_5.cpp)]  
@@ -374,7 +374,7 @@ PRINTDLG& m_pd;
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 構築した後、`CPrintDialog`オブジェクトを使用することができます`m_pd`を呼び出す前に ダイアログ ボックスのさまざまな側面を設定する、 [DoModal](#domodal)メンバー関数。 詳細については、`m_pd`構造体は、「 [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843) Windows SDK に含まれています。  
+ 構築した後、`CPrintDialog`オブジェクトを使用することができます`m_pd`を呼び出す前に ダイアログ ボックスのさまざまな側面を設定する、 [DoModal](#domodal)メンバー関数。 詳細については、`m_pd`構造体は、「 [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda) Windows SDK に含まれています。  
   
  変更する場合、`m_pd`データ メンバーを直接、既定の動作をオーバーライドします。  
   

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee3fbc85ee6068c6e45f2847ae7ba45a425db8e8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 5be60ff1f0aa8b2ceff7517a9af968e0b7690478
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538556"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214680"
 ---
 # <a name="diagnostic-services"></a>診断サービス
 Microsoft Foundation Class ライブラりは、プログラムのデバッグをより簡単にする多くの診断サービスを提供します。 これらの診断サービスには、プログラムのメモリー割り当てを追跡したり、実行時にオブジェクトの内容をダンプしたり、実行時にデバッグ メッセージを表示したりできるようにするマクロやグローバル関数が含まれます。 診断サービスのマクロとグローバル関数は、次のカテゴリに分類されます。  
@@ -605,7 +605,7 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
   
  この関数を正常に使用するには。  
   
--   IMAGEHLP ファイル。DLL は、パスにある必要があります。 この DLL がない、関数により、エラー メッセージが表示されます。 参照してください[イメージ ヘルプ ライブラリ](http://msdn.microsoft.com/library/windows/desktop/ms680321)IMAGEHLP によって提供される関数のセットについてはします。  
+-   IMAGEHLP ファイル。DLL は、パスにある必要があります。 この DLL がない、関数により、エラー メッセージが表示されます。 参照してください[イメージ ヘルプ ライブラリ](/windows/desktop/Debug/image-help-library)IMAGEHLP によって提供される関数のセットについてはします。  
   
 -   スタック フレームがモジュールには、デバッグ情報を含める必要があります。 デバッグ情報を含んでいない、スタック トレースでは、関数によって生成されますが、トレースがあまり詳しく説明。  
 ### <a name="requirements"></a>要件  

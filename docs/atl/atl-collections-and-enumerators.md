@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9837b42148062bdd2c44855c129f085ca47cdec0
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 00265d3ce0f8ea867021500777d93991d245be47
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848795"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204814"
 ---
 # <a name="atl-collections-and-enumerators"></a>ATL のコレクションと列挙子
 A `collection` (生データまたはその他のオブジェクト) のデータ項目のグループにアクセスできるようにするインターフェイスを提供する COM オブジェクトです。 呼ばれるオブジェクトのグループへのアクセスを提供することは、一定の基準に従ってインターフェイスを*コレクション インターフェイス*します。  
@@ -31,7 +31,7 @@ A `collection` (生データまたはその他のオブジェクト) のデー�
   
  `enumerator`はコレクション内の項目を反復処理するインターフェイスを提供する COM オブジェクトです。 列挙子インターフェイスが必要な 4 つのメソッドを使用して、コレクションの要素にシリアル アクセスを提供します。 `Next`、 `Skip`、 `Reset`、および`Clone`します。  
   
- 典型的な (ただし、まったく架空の) について学びますの詳細については、列挙子インターフェイスは[として](https://msdn.microsoft.com/library/ms680089.aspx)インターフェイス。  
+ 詳細については、読み取り、列挙子インターフェイスのリファレンス コンテンツを学習できます[IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring)インターフェイス。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ATL のコレクションと列挙子クラス](../atl/atl-collection-and-enumerator-classes.md)  

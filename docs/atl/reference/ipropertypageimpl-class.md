@@ -41,15 +41,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7692f60731c47f295630885c77e0e61e8bb5aac
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 7377a6b47df76190c4dc97b916590e53c7df8f9c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884751"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210112"
 ---
 # <a name="ipropertypageimpl-class"></a>IPropertyPageImpl クラス
-このクラスは実装`IUnknown`の既定の実装を提供し、 [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246)インターフェイス。  
+このクラスは実装`IUnknown`の既定の実装を提供し、 [IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage)インターフェイス。  
   
 > [!IMPORTANT]
 >  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。  
@@ -105,7 +105,7 @@ class IPropertyPageImpl
 |[IPropertyPageImpl::m_size](#m_size)|ピクセルで高さと幅のプロパティ ページのダイアログ ボックスを格納します。|  
   
 ## <a name="remarks"></a>Remarks  
- [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246)インターフェイスにより、プロパティ シート内の特定のプロパティ ページを管理するオブジェクト。 クラス`IPropertyPageImpl`このインターフェイスの既定の実装を提供し、実装`IUnknown`ダンプ情報を送信することによってデバッグでのデバイスをビルドします。  
+ [IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage)インターフェイスにより、プロパティ シート内の特定のプロパティ ページを管理するオブジェクト。 クラス`IPropertyPageImpl`このインターフェイスの既定の実装を提供し、実装`IUnknown`ダンプ情報を送信することによってデバッグでのデバイスをビルドします。  
   
  **関連資料** [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)、 [ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)  
   
@@ -114,7 +114,7 @@ class IPropertyPageImpl
   
  `IPropertyPageImpl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlctl.h  
   
 ##  <a name="activate"></a>  ために  
@@ -130,7 +130,7 @@ HRESULT Activate(
 ### <a name="remarks"></a>Remarks  
  既定では、ダイアログ ボックスはモードレスの値に関係なく、常に、 *bModal*パラメーター。  
   
- 参照してください[IPropertyPage::Activate](http://msdn.microsoft.com/library/windows/desktop/ms682250) Windows SDK にします。  
+ 参照してください[IPropertyPage::Activate](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-activate) Windows SDK にします。  
   
 ##  <a name="apply"></a>  IPropertyPageImpl::Apply  
  指定された基になるオブジェクトにプロパティ ページの現在の値を適用`SetObjects`します。  
@@ -143,7 +143,7 @@ HRESULT Apply();
  S_OK を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IPropertyPage::Apply](http://msdn.microsoft.com/library/windows/desktop/ms691284) Windows SDK にします。  
+ 参照してください[IPropertyPage::Apply](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-apply) Windows SDK にします。  
   
 ##  <a name="deactivate"></a>  IPropertyPageImpl::Deactivate  
  作成されたダイアログ ボックス ウィンドウを破棄[Activate](#activate)します。  
@@ -153,7 +153,7 @@ HRESULT Deactivate();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IPropertyPage::Deactivate](http://msdn.microsoft.com/library/windows/desktop/ms682504) Windows SDK にします。  
+ 参照してください[IPropertyPage::Deactivate](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-deactivate) Windows SDK にします。  
   
 ##  <a name="getpageinfo"></a>  IPropertyPageImpl::GetPageInfo  
  入力、*されている*データ メンバーに含まれる情報を含む構造体。  
@@ -165,7 +165,7 @@ HRESULT GetPageInfo(PROPPAGEINFO* pPageInfo);
 ### <a name="remarks"></a>Remarks  
  `GetPageInfo` 関連付けられている文字列リソースを読み込む[m_dwDocString](#m_dwdocstring)、 [m_dwHelpFile](#m_dwhelpfile)、および[m_dwTitle](#m_dwtitle)します。  
   
- 参照してください[文字列](http://msdn.microsoft.com/library/windows/desktop/ms680714)Windows SDK にします。  
+ 参照してください[文字列](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-getpageinfo)Windows SDK にします。  
   
 ##  <a name="help"></a>  IPropertyPageImpl::Help  
  プロパティ ページについては、Windows を起動します。  
@@ -175,7 +175,7 @@ HRESULT Help(PROPPAGEINFO* pPageInfo);
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IPropertyPage::Help](http://msdn.microsoft.com/library/windows/desktop/ms691504) Windows SDK にします。  
+ 参照してください[IPropertyPage::Help](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-help) Windows SDK にします。  
   
 ##  <a name="ipropertypageimpl"></a>  IPropertyPageImpl::IPropertyPageImpl  
  コンストラクターです。  
@@ -240,7 +240,7 @@ UINT m_dwTitle;
 ```  
   
 ##  <a name="m_ppagesite"></a>  IPropertyPageImpl::m_pPageSite  
- 指す、 [IPropertyPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690583)プロパティ ページがフレームのプロパティとの通信に使用するインターフェイス。  
+ 指す、 [IPropertyPageSite](/windows/desktop/api/ocidl/nn-ocidl-ipropertypagesite)プロパティ ページがフレームのプロパティとの通信に使用するインターフェイス。  
   
 ```
 IPropertyPageSite* m_pPageSite;
@@ -268,7 +268,7 @@ HRESULT Move(LPCRECT pRect);
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IPropertyPage::Move](http://msdn.microsoft.com/library/windows/desktop/ms680118) Windows SDK にします。  
+ 参照してください[IPropertyPage::Move](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-move) Windows SDK にします。  
   
 ##  <a name="setdirty"></a>  IPropertyPageImpl::SetDirty  
  変更されたかの値に応じて、変更しないと、プロパティ ページの状態をフラグ*bDirty*します。  
@@ -292,17 +292,17 @@ HRESULT SetObjects(ULONG nObjects, IUnknown** ppUnk);
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IPropertyPage::SetObjects](http://msdn.microsoft.com/library/windows/desktop/ms678529) Windows SDK にします。  
+ 参照してください[IPropertyPage::SetObjects](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-setobjects) Windows SDK にします。  
   
 ##  <a name="setpagesite"></a>  IPropertyPageImpl::SetPageSite  
- プロパティ ページで、 [IPropertyPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690583)プロパティ ページがフレームのプロパティとの通信に使用するポインター。  
+ プロパティ ページで、 [IPropertyPageSite](/windows/desktop/api/ocidl/nn-ocidl-ipropertypagesite)プロパティ ページがフレームのプロパティとの通信に使用するポインター。  
   
 ```
 HRESULT SetPageSite(IPropertyPageSite* pPageSite);
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IPropertyPage::SetPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690413) Windows SDK にします。  
+ 参照してください[IPropertyPage::SetPageSite](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-setpagesite) Windows SDK にします。  
   
 ##  <a name="show"></a>  IPropertyPageImpl::Show  
  プロパティ ページ ダイアログ ボックスは、表示または非表示になります。  
@@ -312,7 +312,7 @@ HRESULT Show(UINT nCmdShow);
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IPropertyPage::Show](http://msdn.microsoft.com/library/windows/desktop/ms694467) Windows SDK にします。  
+ 参照してください[IPropertyPage::Show](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-show) Windows SDK にします。  
   
 ##  <a name="translateaccelerator"></a>  IPropertyPageImpl::TranslateAccelerator  
  指定されたキーストロークを処理`pMsg`します。  
@@ -322,7 +322,7 @@ HRESULT TranslateAccelerator(MSG* pMsg);
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IPropertyPage::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms686603) Windows SDK にします。  
+ 参照してください[IPropertyPage::TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-translateaccelerator) Windows SDK にします。  
   
 ## <a name="see-also"></a>関連項目  
  [IPropertyPage2Impl クラス](../../atl/reference/ipropertypage2impl-class.md)   

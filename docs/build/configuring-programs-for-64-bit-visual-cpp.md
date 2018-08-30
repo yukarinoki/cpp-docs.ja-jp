@@ -1,5 +1,5 @@
 ---
-title: 64 ビット、x64 用の Visual C を構成するターゲット |Microsoft ドキュメント
+title: 64 ビット、x64 の Visual C の構成のターゲット |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5eaae71fb55b176ee4903978a6b4b5a8624dc049
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e1054343d5e6afbc739fe302870b43eb9526f7d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366810"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196990"
 ---
-# <a name="configure-visual-c-for-64-bit-x64-targets"></a>64 ビット、x64 用の Visual C の構成のターゲット
+# <a name="configure-visual-c-for-64-bit-x64-targets"></a>64 ビット、x64 の Visual C の構成のターゲット
 
-このセクションには、トピックが含まれています。 64 ビット x64 を対象とするに関するハードウェアの Visual c でビルド ツールを使用します。  
+このセクションでは 64 ビット x64 を対象とする詳細については、Visual C でのハードウェアのビルド ツール。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -49,7 +49,7 @@ ms.locfileid: "32366810"
   
 [/favor (アーキテクチャ固有の最適化)](../build/reference/favor-optimize-for-architecture-specifics.md)  
   
-[64 ビット Windows プログラミング ガイド](http://msdn.microsoft.com/library/windows/desktop/bb427430)  
+[64 ビット Windows プログラミング ガイド](/windows/desktop/WinProg64/programming-guide-for-64-bit-windows)  
   
 [x64 用 MASM (ml64.exe)](../assembler/masm/masm-for-x64-ml64-exe.md)  
   

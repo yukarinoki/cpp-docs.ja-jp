@@ -16,15 +16,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3ca1bf5c716be10d079beaec3e49ae014df0932
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 7dfc909f5842220bf22d7e411c3155c4c8f8d1c5
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882099"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131352"
 ---
 # <a name="formatting-time-automation-classes"></a>時刻の書式設定: オートメーション クラス
-#### <a name="to-format-a-time"></a>時刻の書式設定  
+
+## <a name="to-format-a-time"></a>時刻の書式設定  
   
  使用して、`Format`いずれかのメンバー関数[COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)または[COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md)時刻または経過時間を表す文字列を作成します。  
   
@@ -32,13 +33,11 @@ ms.locfileid: "37882099"
   
  詳細については、クラスを参照してください。 [COleVariant](../mfc/reference/colevariant-class.md)します。  
   
-### <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います  
+## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください  
   
--   [MFC の一般的な日付と時刻](../atl-mfc-shared/date-and-time.md)  
+- [MFC の一般的な日付と時刻](../atl-mfc-shared/date-and-time.md)  
   
--   [日付と時刻: 汎用クラス](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
-  
--   [SYSTEMTIME の操作](../atl-mfc-shared/date-and-time-systemtime-support.md)  
+- [SYSTEMTIME の操作](../atl-mfc-shared/date-and-time-systemtime-support.md)  
   
 ## <a name="see-also"></a>関連項目  
  [日付と時刻: オートメーション サポート](../atl-mfc-shared/date-and-time-automation-support.md)

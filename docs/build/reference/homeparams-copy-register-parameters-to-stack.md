@@ -1,5 +1,5 @@
 ---
-title: -homeparams (レジスタ パラメーターへのコピー スタック) |Microsoft ドキュメント
+title: -homeparams (レジスタ パラメーターへのコピー スタック) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ffc9b37ebdcbb380186c7840f5ebd956708a2dc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bfd6b8c77d972eb4606e7095bc5f733e7db16ea6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374399"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573242"
 ---
 # <a name="homeparams-copy-register-parameters-to-stack"></a>/homeparams (レジスタ パラメーターのスタックへのコピー)
 関数の実行に入ったときに、レジスタで渡されたパラメーターを、強制的にスタック内のその場所に書き込みます。  
@@ -33,18 +33,18 @@ ms.locfileid: "32374399"
 /homeparams  
 ```  
   
-## <a name="remarks"></a>コメント  
- これは、 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] コンパイラ (ネイティブ コンパイルおよびクロス コンパイル) だけで使用されるコンパイラ オプションです。  
+## <a name="remarks"></a>Remarks  
+ このコンパイラ オプションは、x64 のみコンパイラ (ネイティブ コンパイルおよびクロス コンパイル)。  
   
- パラメーターが渡されたときに、[!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]コンパイルでは、呼び出し規約によりパラメーターが必要、レジスタに渡されるパラメーターにもします。 詳細については、次を参照してください。[パラメーターの引き渡し](../../build/parameter-passing.md)です。 ただし、既定では、リリース ビルドで、登録パラメーターは書き込めません、スタックにスペースが既に提供されているパラメーターを。 これにより、プログラムの最適化 (リリース) ビルドのデバッグが困難にします。  
+ X64 でのパラメーターが渡されると、コンパイルの呼び出し規約によりパラメーターが必要、レジスタに渡されるパラメーターの場合でも。 詳細については、次を参照してください。[パラメーターの引き渡し](../../build/parameter-passing.md)します。 ただし、リリース ビルドでは既定では、登録パラメーターは書き込めません、スタックにパラメーターを既に提供されている領域に。 これにより、プログラムの最適化 (リリース) ビルドをデバッグは困難です。  
   
- リリース ビルドを使用して **/homeparams**にアプリケーションをデバッグしていることを確認します。 **/homeparams**わけでは、パフォーマンスが劣りますスタック レジスタ パラメーターを読み込む必要があるためです。  
+ リリース ビルドでは、使用 **/homeparams**させるアプリケーションをデバッグすることができます。 **/homeparams**スタック レジスタ パラメーターを読み込む必要があるために、パフォーマンスがわけです。  
   
- デバッグ ビルドでレジスタに渡されたパラメーターを使用して、スタックが常に格納されます。  
+ デバッグ ビルドでは、レジスタに渡されるパラメーターを常に、スタックが設定されます。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
   
-1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[のプロジェクト プロパティの操作](../../ide/working-with-project-properties.md)です。  
+1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。  
   
 2.  **[C/C++]** フォルダーをクリックします。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "32374399"
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには  
   
--   「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>」を参照してください。  
+-   以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>  
   
 ## <a name="see-also"></a>関連項目  
  [コンパイラ オプション](../../build/reference/compiler-options.md)   

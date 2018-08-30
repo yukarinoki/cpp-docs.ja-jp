@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47ac9fa5431b5edfb4885dfdbf39be6c6b89cee6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: faed3af6595b37146bfd565e09e9ceeea3ca5d73
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960662"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217655"
 ---
 # <a name="ctypeltchargt-class"></a>ctype&lt;char&gt; クラス
 
@@ -146,7 +146,7 @@ protected:
 
 メンバー関数の [do_narrow](../standard-library/ctype-class.md#do_narrow) と [do_widen](../standard-library/ctype-class.md#do_widen) は、要素を変更せずにコピーします。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<locale>
 
@@ -154,6 +154,6 @@ protected:
 
 ## <a name="see-also"></a>関連項目
 
-[facet クラス](http://msdn.microsoft.com/Library/dd4f12f5-cb1b-457f-af56-2fb204216ec1)<br/>
+[facet クラス](locale-class.md#facet_class)<br/>
 [ctype_base クラス](../standard-library/ctype-base-class.md)<br/>
 [C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

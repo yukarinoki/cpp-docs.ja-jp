@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4be126af9228312fa5fd4430e4f477f037d31df8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 37c8140d3579fc5d629b10c8e3ae5459e6492920
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572558"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198661"
 ---
 # <a name="ccomobject-class"></a>CComObject クラス
 このクラスは実装`IUnknown`非集約オブジェクト。  
@@ -62,7 +62,7 @@ class CComObject : public Base
 |[CComObject::Release](#release)|オブジェクトの参照カウントをデクリメントします。|  
   
 ## <a name="remarks"></a>Remarks  
- `CComObject` 実装[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)非集約オブジェクト。 ただし、呼び出し`QueryInterface`、 `AddRef`、および`Release`に委任されます`CComObjectRootEx`します。  
+ `CComObject` 実装[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)非集約オブジェクト。 ただし、呼び出し`QueryInterface`、 `AddRef`、および`Release`に委任されます`CComObjectRootEx`します。  
   
  使用しての詳細については`CComObject`、記事をご覧ください[ATL COM オブジェクトの基本事項](../../atl/fundamentals-of-atl-com-objects.md)します。  
   
@@ -92,8 +92,8 @@ CComObject(void* = NULL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- **void\***  
- [in]この名前のないパラメーターは使用されません。 他の対称性が存在する **ほか * * * XXX*`Object`*XXX*コンス トラクター。  
+ <em>void\*</em>  
+ [in]この名前のないパラメーターは使用されません。 他の対称性が存在する`CComXXXObjectXXX`コンス トラクター。  
   
 ### <a name="remarks"></a>Remarks  
  デストラクターをデクリメントこと。  

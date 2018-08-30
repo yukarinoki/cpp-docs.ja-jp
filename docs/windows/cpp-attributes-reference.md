@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 72ee57a4556bc8e6e761db0ea96f7b312d9948d9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 782e0789268f55e254535434e39c3aeb9b0532cb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602577"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201929"
 ---
 # <a name="c-attributes-reference"></a>C++ 属性リファレンス
 
@@ -48,7 +48,7 @@ Microsoft では、COM プログラミングと .NET Framework 共通言語ラ�
 [属性付きプログラミング](../windows/attributed-programming-concepts.md)  
 属性の概要について説明します。
 
-[参照](http://msdn.microsoft.com/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
+[参照](https://msdn.microsoft.com/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
 C と C++ の言語リファレンス、Visual C++ で提供されるライブラリ、Visual C++ 機能拡張オブジェクト モデル、および MASM (Microsoft Macro Assembler) に関するトピックへのリンクがあります。
 
 [Visual C++ のサンプル](../visual-cpp-samples.md)  

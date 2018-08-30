@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0445939c7437e4978ee698005cc2f7541e6684b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c528e2a80894db1da82d7b07ba34a7c62b6237da
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339307"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219020"
 ---
 # <a name="ccolordialog-class"></a>CColorDialog クラス
 色の選択 ダイアログ ボックスをアプリケーションに組み込むことができます。  
@@ -80,13 +80,13 @@ class CColorDialog : public CCommonDialog
   
  構築する、`CColorDialog`オブジェクトで指定されたコンス トラクターを使用して、または新しいクラスを派生し、独自のカスタム コンス トラクターを使用します。  
   
- ダイアログ ボックスが構築されると、設定または任意の値を変更、 [m_cc](#m_cc)構造 ダイアログ ボックスのコントロールの値を初期化します。 *M_cc*型の構造は、 [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830)します。  
+ ダイアログ ボックスが構築されると、設定または任意の値を変更、 [m_cc](#m_cc)構造 ダイアログ ボックスのコントロールの値を初期化します。 *M_cc*型の構造は、 [CHOOSECOLOR](/windows/desktop/api/commdlg/ns-commdlg-tagchoosecolora)します。  
   
  ダイアログ ボックスのコントロールを初期化した後、 `DoModal`  ダイアログ ボックスが表示され、ユーザーが色を選択できるようにするメンバー関数。 `DoModal` いずれか、ダイアログ ボックスの ok (IDOK) またはキャンセル (IDCANCEL) ボタンのユーザーの選択範囲を返します。  
   
  場合`DoModal`IDOK を返しますのいずれかを使用することができます`CColorDialog`のユーザーによって入力された情報を取得するメンバー関数。  
   
- Windows を使用する[情報を得る](http://msdn.microsoft.com/library/windows/desktop/ms646916) ダイアログ ボックスの初期化中にエラーが発生したかどうかを判断して、エラーに関する詳細については、関数。  
+ Windows を使用する[情報を得る](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) ダイアログ ボックスの初期化中にエラーが発生したかどうかを判断して、エラーに関する詳細については、関数。  
   
  `CColorDialog` COMMDLG に依存します。Windows 3.1 以降のバージョンに付属する DLL ファイルです。  
   
@@ -112,7 +112,7 @@ class CColorDialog : public CCommonDialog
   
  `CColorDialog`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdlgs.h  
   
 ##  <a name="ccolordialog"></a>  CColorDialog::CColorDialog  
@@ -130,7 +130,7 @@ CColorDialog(
  既定色を選択します。 値が指定されていない場合は、既定では RGB(0,0,0) (黒です)。  
   
  *dwFlags*  
- 関数と、ダイアログ ボックスの外観をカスタマイズするフラグのセット。 詳細については、次を参照してください。、 [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830) Windows SDK の構造体。  
+ 関数と、ダイアログ ボックスの外観をカスタマイズするフラグのセット。 詳細については、次を参照してください。、 [CHOOSECOLOR](/windows/desktop/api/commdlg/ns-commdlg-tagchoosecolora) Windows SDK の構造体。  
   
  *pParentWnd*  
  ウィンドウ、ダイアログ ボックスの親またはオーナー ウィンドウへのポインター。  
@@ -146,7 +146,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- IDOK や IDCANCEL。 IDCANCEL が返された場合は、Windows を呼び出す[情報を得る](http://msdn.microsoft.com/library/windows/desktop/ms646916)エラーが発生したかどうかを判断する関数。  
+ IDOK や IDCANCEL。 IDCANCEL が返された場合は、Windows を呼び出す[情報を得る](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror)エラーが発生したかどうかを判断する関数。  
   
  IDOK や IDCANCEL は、ユーザーが [ok] または [キャンセル] ボタンを選択するかどうかを示す定数です。  
   
@@ -166,7 +166,7 @@ COLORREF GetColor() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)色 ダイアログ ボックスで選択した色の RGB の情報を含む値。  
+ A [COLORREF](/windows/desktop/gdi/colorref)色 ダイアログ ボックスで選択した色の RGB の情報を含む値。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#50](../../mfc/codesnippet/cpp/ccolordialog-class_2.cpp)]  
@@ -190,7 +190,7 @@ static COLORREF* PASCAL GetSavedCustomColors();
  [!code-cpp[NVC_MFCDocView#51](../../mfc/codesnippet/cpp/ccolordialog-class_3.cpp)]  
   
 ##  <a name="m_cc"></a>  CColorDialog::m_cc  
- 型の構造体[CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830)メンバーの特性と、ダイアログ ボックスの値を格納します。  
+ 型の構造体[CHOOSECOLOR](/windows/desktop/api/commdlg/ns-commdlg-tagchoosecolora)メンバーの特性と、ダイアログ ボックスの値を格納します。  
   
 ```  
 CHOOSECOLOR m_cc;  

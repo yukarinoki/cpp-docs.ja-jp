@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e8a958ac670f91edfccdfced43fce311bc29c04
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ac4a2c7bafc25aaaf8591f38cad47df199e74c30
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539306"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196592"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl クラス
 Windows ツール バー コモン コントロールの機能が用意されています。  
@@ -242,7 +242,7 @@ class CToolBarCtrl : public CWnd
 |[CToolBarCtrl::GetButtonSize](#getbuttonsize)|現在の幅 (ピクセル単位) のツール バー ボタンの高さを取得します。|  
 |[CToolBarCtrl::GetColorScheme](#getcolorscheme)|現在のツール バー コントロールのカラー スキームを取得します。|  
 |[CToolBarCtrl::GetDisabledImageList](#getdisabledimagelist)|ツール バー コントロールはボタンを無効になっている表示を使用しているイメージ リストを取得します。|  
-|[CToolBarCtrl::GetDropTarget](#getdroptarget)|取得、 [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679)ツール バー コントロールのインターフェイス。|  
+|[CToolBarCtrl::GetDropTarget](#getdroptarget)|取得、 [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget)ツール バー コントロールのインターフェイス。|  
 |[CToolBarCtrl::GetExtendedStyle](#getextendedstyle)|ツール バー コントロールの拡張スタイルを取得します。|  
 |[CToolBarCtrl::GetHotImageList](#gethotimagelist)|ツール バー コントロールを使用して「ホット」ボタンを表示するイメージ リストを取得します。 その上にマウス ポインターがときに、ホットなボタンが強調表示されます。|  
 |[CToolBarCtrl::GetHotItem](#gethotitem)|ツールバーのホットなアイテムのインデックスを取得します。|  
@@ -289,7 +289,7 @@ class CToolBarCtrl : public CWnd
 |[CToolBarCtrl::SetCmdID](#setcmdid)|指定したボタンが押されたときに、オーナー ウィンドウに送信するコマンド識別子を設定します。|  
 |[CToolBarCtrl::SetColorScheme](#setcolorscheme)|現在のツール バー コントロールの配色を設定します。|  
 |[CToolBarCtrl::SetDisabledImageList](#setdisabledimagelist)|ボタンの表示を無効にするには、ツール バー コントロールを使用するイメージ リストを設定します。|  
-|[CToolBarCtrl::SetDrawTextFlags](#setdrawtextflags)|Win32 関数でフラグを設定[DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498)テキスト、フラグを設定する方法に従って書式設定された指定の四角形を描画に使用されます。|  
+|[CToolBarCtrl::SetDrawTextFlags](#setdrawtextflags)|Win32 関数でフラグを設定[DrawText](/windows/desktop/api/winuser/nf-winuser-drawtext)テキスト、フラグを設定する方法に従って書式設定された指定の四角形を描画に使用されます。|  
 |[CToolBarCtrl::SetExtendedStyle](#setextendedstyle)|ツール バー コントロールの拡張スタイルを設定します。|  
 |[CToolBarCtrl::SetHotImageList](#sethotimagelist)|「ホット」ボタンを表示するツール バー コントロールを使用するイメージ リストを設定します。|  
 |[CToolBarCtrl::SetHotItem](#sethotitem)|ツールバーのホットな項目を設定します。|  
@@ -386,7 +386,7 @@ int AddBitmap(
  成功した場合は、最初の新しいイメージの 0 から始まるインデックスそれ以外の場合 - 1。  
   
 ### <a name="remarks"></a>Remarks  
- Windows API を使用して[CreateMappedBitmap](http://msdn.microsoft.com/library/windows/desktop/bb787467)ツールバーのビットマップを追加する前に色をマップします。 ポインターを渡す場合、`CBitMap`オブジェクト、ツールバーの破棄後に、ビットマップはまで破棄されないことを確認する必要があります。  
+ Windows API を使用して[CreateMappedBitmap](/windows/desktop/api/commctrl/nf-commctrl-createmappedbitmap)ツールバーのビットマップを追加する前に色をマップします。 ポインターを渡す場合、`CBitMap`オブジェクト、ツールバーの破棄後に、ビットマップはまで破棄されないことを確認する必要があります。  
   
 ##  <a name="addbuttons"></a>  CToolBarCtrl::AddButtons  
  ツール バー コントロールには、1 つまたは複数のボタンを追加します。  
@@ -541,7 +541,7 @@ BOOL ChangeBitmap(
 ### <a name="remarks"></a>Remarks  
  このメソッドが成功した場合は、指定したボタンで、指定されたイメージが表示されます。  
   
- このメソッドは、送信、 [TB_CHANGEBITMAP](http://msdn.microsoft.com/library/windows/desktop/bb787301)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [TB_CHANGEBITMAP](/windows/desktop/Controls/tb-changebitmap)メッセージは、Windows SDK で説明します。  
   
 ### <a name="example"></a>例  
  次のコード例のビットマップを変更する、**ファイルを保存**のビットマップをボタン、**について**ボタンをクリックします。  
@@ -602,7 +602,7 @@ virtual BOOL Create(
  ツールバー コントロールのスタイルを指定します。 ツールバーには、WS_CHILD スタイルが常に必要です。 」の説明に従って、toolbar のスタイルとウィンドウ スタイルの任意の組み合わせを指定するさらに、**解説**します。  
   
  *rect*  
- 必要に応じて、ツール バー コントロールのサイズと位置を指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。  
+ 必要に応じて、ツール バー コントロールのサイズと位置を指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。  
   
  *pParentWnd*  
  ツールバー コントロールの親ウィンドウを指定します。 NULL は指定できません。  
@@ -622,11 +622,11 @@ virtual BOOL Create(
   
 - WS_DISABLED ことはほとんどありません。  
   
- 参照してください[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)ウィンドウ スタイルの説明については、Windows SDK に含まれています。  
+ 参照してください[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)ウィンドウ スタイルの説明については、Windows SDK に含まれています。  
   
- 組み合わせを必要に応じて適用[コモン コントロール スタイル](http://msdn.microsoft.com/library/windows/desktop/bb775498)」の説明に従って、Windows SDK。  
+ 組み合わせを必要に応じて適用[コモン コントロール スタイル](/windows/desktop/Controls/common-control-styles)」の説明に従って、Windows SDK。  
   
- コントロールまたはボタン自体にツール バー スタイルの組み合わせを適用します。 スタイルは、トピックで説明されて[ツール バー コントロールとボタンのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb760439)Windows SDK に含まれています。  
+ コントロールまたはボタン自体にツール バー スタイルの組み合わせを適用します。 スタイルは、トピックで説明されて[ツール バー コントロールとボタンのスタイル](/windows/desktop/Controls/toolbar-control-and-button-styles)Windows SDK に含まれています。  
   
  拡張 toolbar のスタイルを使用するには、呼び出す[SetExtendedStyle](#setextendedstyle)を呼び出した後`Create`します。 拡張ウィンドウ スタイルを使用してツールバーを作成するには、呼び出す[するに](#createex)の代わりに`Create`します。  
   
@@ -646,13 +646,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>パラメーター  
  *dwExStyle*  
- 作成されるコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK に含まれています。  
+ 作成されるコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK に含まれています。  
   
  *dwStyle*  
  ツールバー コントロールのスタイルを指定します。 ツールバーには、WS_CHILD スタイルが常に必要です。 」の説明に従って、toolbar のスタイルとウィンドウ スタイルの任意の組み合わせを指定するさらに、**解説**の[作成](#create)です。  
   
  *rect*  
- 参照を[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。  
+ 参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。  
   
  *pParentWnd*  
  コントロールの親であるウィンドウへのポインター。  
@@ -664,7 +664,7 @@ virtual BOOL CreateEx(
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 使用`CreateEx`の代わりに[作成](#create)、Windows の拡張スタイルの先頭で指定された、Windows の拡張スタイルを適用する**WS_EX**します。 `CreateEx` 指定された拡張の Windows スタイルでコントロールを作成します。 *dwExStyle*します。 拡張を使用してコントロールに固有のスタイル セット[SetExtendedStyle](#setextendedstyle)します。 たとえば、使用して`CreateEx`WS_EX_CONTEXTHELP、としてこのようなスタイルの設定が使用する`SetExtendedStyle`TBSTYLE_EX_DRAWDDARROWS としてこのようなスタイルを設定します。 詳細についてで説明されているスタイルを参照してください。[ツールバー拡張スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760430)Windows SDK に含まれています。  
+ 使用`CreateEx`の代わりに[作成](#create)、Windows の拡張スタイルの先頭で指定された、Windows の拡張スタイルを適用する**WS_EX**します。 `CreateEx` 指定された拡張の Windows スタイルでコントロールを作成します。 *dwExStyle*します。 拡張を使用してコントロールに固有のスタイル セット[SetExtendedStyle](#setextendedstyle)します。 たとえば、使用して`CreateEx`WS_EX_CONTEXTHELP、としてこのようなスタイルの設定が使用する`SetExtendedStyle`TBSTYLE_EX_DRAWDDARROWS としてこのようなスタイルを設定します。 詳細についてで説明されているスタイルを参照してください。[ツールバー拡張スタイル](/windows/desktop/Controls/toolbar-extended-styles)Windows SDK に含まれています。  
   
 ##  <a name="ctoolbarctrl"></a>  CToolBarCtrl::CToolBarCtrl  
  `CToolBarCtrl` オブジェクトを構築します。  
@@ -737,7 +737,7 @@ BOOL GetAnchorHighlight() const;
  ゼロ以外の場合、アンカーの強調表示が有効になっています。 0 の場合、アンカーの強調表示が無効になっています。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[TB_GETANCHORHIGHLIGHT](http://msdn.microsoft.com/library/windows/desktop/bb787313)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[TB_GETANCHORHIGHLIGHT](/windows/desktop/Controls/tb-getanchorhighlight)」の説明に従って、Windows SDK。  
   
 ##  <a name="getbitmap"></a>  CToolBarCtrl::GetBitmap  
  ツールバーのボタンに関連付けられたビットマップのインデックスを取得します。  
@@ -754,7 +754,7 @@ int GetBitmap(int nID) const;
  成功した場合、ビットマップのインデックスを返します。  
   
 ### <a name="remarks"></a>Remarks  
- 機能を実装[TB_GETBITMAP](http://msdn.microsoft.com/library/windows/desktop/bb787315) Windows SDK に含まれています。  
+ 機能を実装[TB_GETBITMAP](/windows/desktop/Controls/tb-getbitmap) Windows SDK に含まれています。  
   
 ##  <a name="getbitmapflags"></a>  CToolBarCtrl::GetBitmapFlags  
  ツールバーのビットマップのフラグを取得します。  
@@ -812,13 +812,13 @@ int GetButtonInfo(
  ボタンの識別子です。  
   
  *ptbbi*  
- ポインターを[受け取る](http://msdn.microsoft.com/library/windows/desktop/bb760478)ボタンの情報を受け取る。  
+ ポインターを[受け取る](/windows/desktop/api/commctrl/ns-commctrl-tbbuttoninfoa)ボタンの情報を受け取る。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、ボタンの 0 から始まるインデックスそれ以外の場合は-1。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[TB_GETBUTTONINFO](http://msdn.microsoft.com/library/windows/desktop/bb787321)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[TB_GETBUTTONINFO](/windows/desktop/Controls/tb-getbuttoninfo)」の説明に従って、Windows SDK。  
   
 ##  <a name="getbuttonsize"></a>  CToolBarCtrl::GetButtonSize  
  ツール バー ボタンのサイズを取得します。  
@@ -847,7 +847,7 @@ CString GetButtonText(int idButton) const;
  A [CString](../../atl-mfc-shared/using-cstring.md)指定したボタンの表示テキストを格納しています。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、送信、 [TB_GETBUTTONTEXT](http://msdn.microsoft.com/library/windows/desktop/bb787325)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [TB_GETBUTTONTEXT](/windows/desktop/Controls/tb-getbuttontext)メッセージは、Windows SDK で説明します。  
   
 ##  <a name="getcolorscheme"></a>  CToolBarCtrl::GetColorScheme  
  現在のツール バー コントロールのカラー スキームを取得します。  
@@ -860,13 +860,13 @@ BOOL GetColorScheme(COLORSCHEME* lpColorScheme) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[out]*lpColorScheme*|ポインターを[COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502)色スキームの情報を受け取る構造体。 このメソッドが戻るとき、強調表示色と影の色、ツール バー コントロールの構造について説明します。|  
+|[out]*lpColorScheme*|ポインターを[COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme)色スキームの情報を受け取る構造体。 このメソッドが戻るとき、強調表示色と影の色、ツール バー コントロールの構造について説明します。|  
   
 ### <a name="return-value"></a>戻り値  
 このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、送信、 [TB_GETCOLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb787327)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [TB_GETCOLORSCHEME](/windows/desktop/Controls/tb-getcolorscheme)メッセージは、Windows SDK で説明します。  
   
 ##  <a name="getdisabledimagelist"></a>  CToolBarCtrl::GetDisabledImageList  
  ツール バー コントロールはボタンを無効になっている表示を使用しているイメージ リストを取得します。  
@@ -879,10 +879,10 @@ CImageList* GetDisabledImageList() const;
  ポインターを[CImageList](../../mfc/reference/cimagelist-class.md)オブジェクト、または無効になっているイメージ リストが設定されていない場合は NULL です。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[TB_GETDISABLEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787329)」の説明に従って、Windows SDK。 MFC 実装の`GetDisabledImageList`を使用して、`CImageList`イメージ リストを識別するハンドルではなく、ツール バー コントロールのボタンを含むオブジェクトのイメージします。  
+ このメンバー関数は、Win32 メッセージの動作を実装[TB_GETDISABLEDIMAGELIST](/windows/desktop/Controls/tb-getdisabledimagelist)」の説明に従って、Windows SDK。 MFC 実装の`GetDisabledImageList`を使用して、`CImageList`イメージ リストを識別するハンドルではなく、ツール バー コントロールのボタンを含むオブジェクトのイメージします。  
   
 ##  <a name="getdroptarget"></a>  CToolBarCtrl::GetDropTarget  
- 取得、 [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679)ツール バー コントロールのインターフェイス。  
+ 取得、 [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget)ツール バー コントロールのインターフェイス。  
   
 ```  
 HRESULT GetDropTarget(IDropTarget** ppDropTarget) const;  
@@ -890,13 +890,13 @@ HRESULT GetDropTarget(IDropTarget** ppDropTarget) const;
   
 ### <a name="parameters"></a>パラメーター  
  *ppDropTarget*  
- ポインター、 [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679)インターフェイス ポインター。 エラーが発生する場合は、NULL ポインターがこのアドレスに配置されます。  
+ ポインター、 [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget)インターフェイス ポインター。 エラーが発生する場合は、NULL ポインターがこのアドレスに配置されます。  
   
 ### <a name="return-value"></a>戻り値  
  操作の成功または失敗を示す HRESULT 値を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[TB_GETOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787343)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[TB_GETOBJECT](/windows/desktop/Controls/tb-getobject)」の説明に従って、Windows SDK。  
   
 ##  <a name="getextendedstyle"></a>  CToolBarCtrl::GetExtendedStyle  
  ツール バー コントロールの拡張スタイルを取得します。  
@@ -906,10 +906,10 @@ DWORD GetExtendedStyle() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 現在、ツール バー コントロールの使用されている拡張スタイルを表す DWORD です。 スタイルの一覧は、次を参照してください。[ツールバー拡張スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760430)、Windows SDK に含まれています。  
+ 現在、ツール バー コントロールの使用されている拡張スタイルを表す DWORD です。 スタイルの一覧は、次を参照してください。[ツールバー拡張スタイル](/windows/desktop/Controls/toolbar-extended-styles)、Windows SDK に含まれています。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[TB_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb787331)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[TB_GETEXTENDEDSTYLE](/windows/desktop/Controls/tb-getextendedstyle)」の説明に従って、Windows SDK。  
   
 ##  <a name="gethotimagelist"></a>  CToolBarCtrl::GetHotImageList  
  ツール バー コントロールを使用して「ホット」ボタンを表示するイメージ リストを取得します。 その上にマウス ポインターがときに、ホットなボタンが強調表示されます。  
@@ -922,7 +922,7 @@ CImageList* GetHotImageList() const;
  ポインターを[CImageList](../../mfc/reference/cimagelist-class.md)オブジェクト、または無効になっているイメージ リストが設定されていない場合は NULL です。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[TB_GETHOTIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787334)」の説明に従って、Windows SDK。 その上にマウス ポインターがときに、ホットなボタンが強調表示されます。  
+ このメンバー関数は、Win32 メッセージの動作を実装[TB_GETHOTIMAGELIST](/windows/desktop/Controls/tb-gethotimagelist)」の説明に従って、Windows SDK。 その上にマウス ポインターがときに、ホットなボタンが強調表示されます。  
   
 ##  <a name="gethotitem"></a>  CToolBarCtrl::GetHotItem  
  ツールバーのホットなアイテムのインデックスを取得します。  
@@ -935,7 +935,7 @@ int GetHotItem() const;
  ツールバーのホットなアイテムの 0 から始まるインデックス。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[TB_GETHOTITEM](http://msdn.microsoft.com/library/windows/desktop/bb787336)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[TB_GETHOTITEM](/windows/desktop/Controls/tb-gethotitem)」の説明に従って、Windows SDK。  
   
 ##  <a name="getimagelist"></a>  CToolBarCtrl::GetImageList  
  ツール バー コントロールを使用して既定の状態でボタンを表示するイメージ リストを取得します。  
@@ -948,7 +948,7 @@ CImageList* GetImageList() const;
  ポインターを[CImageList](../../mfc/reference/cimagelist-class.md)オブジェクト、またはイメージの一覧が設定されていない場合は NULL です。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[TB_GETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787337)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[TB_GETIMAGELIST](/windows/desktop/Controls/tb-getimagelist)」の説明に従って、Windows SDK。  
   
 ##  <a name="getinsertmark"></a>  CToolBarCtrl::GetInsertMark  
  ツールバーの現在の挿入マークを取得します。  
@@ -959,10 +959,10 @@ void GetInsertMark(TBINSERTMARK* ptbim) const;
   
 ### <a name="parameters"></a>パラメーター  
  *ptbim*  
- ポインターを[受け取る](http://msdn.microsoft.com/library/windows/desktop/bb760480)挿入マークを受け取る。  
+ ポインターを[受け取る](/windows/desktop/api/commctrl/ns-commctrl-tbinsertmark)挿入マークを受け取る。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[TB_GETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb787338)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[TB_GETINSERTMARK](/windows/desktop/Controls/tb-getinsertmark)」の説明に従って、Windows SDK。  
   
 ##  <a name="getinsertmarkcolor"></a>  CToolBarCtrl::GetInsertMarkColor  
  ツールバーの挿入マークを描画するために使用される色を取得します。  
@@ -975,7 +975,7 @@ COLORREF GetInsertMarkColor() const;
  現在の挿入マークの色を表す COLORREF 値。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[TB_GETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb787339)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[TB_GETINSERTMARKCOLOR](/windows/desktop/Controls/tb-getinsertmarkcolor)」の説明に従って、Windows SDK。  
   
 ##  <a name="getitemrect"></a>  CToolBarCtrl::GetItemRect  
  ツール バー コントロールのボタンの外接する四角形を取得します。  
@@ -991,7 +991,7 @@ BOOL GetItemRect(
  情報を取得する対象のボタンの 0 から始まるインデックス。  
   
  *lpRect*  
- アドレスを[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)を外接する四角形の座標を受け取るオブジェクト。  
+ アドレスを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)を外接する四角形の座標を受け取るオブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -1008,13 +1008,13 @@ BOOL GetMaxSize(LPSIZE pSize) const;
   
 ### <a name="parameters"></a>パラメーター  
  *pSize*  
- ポインターを[サイズ](http://msdn.microsoft.com/library/windows/desktop/dd145106)項目のサイズを受け取る。  
+ ポインターを[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)項目のサイズを受け取る。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[TB_GETMAXSIZE](http://msdn.microsoft.com/library/windows/desktop/bb787341)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[TB_GETMAXSIZE](/windows/desktop/Controls/tb-getmaxsize)」の説明に従って、Windows SDK。  
   
 ##  <a name="getmaxtextrows"></a>  CToolBarCtrl::GetMaxTextRows  
  ツール バー ボタンに表示されるテキスト行の最大数を取得します。  
@@ -1035,10 +1035,10 @@ void GetMetrics(LPTBMETRICS ptbm) const;
   
 ### <a name="parameters"></a>パラメーター  
  *ptbm*  
- ポインター、 [TBMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb760482)の構造、`CToolBarCtrl`オブジェクト。  
+ ポインター、 [TBMETRICS](/windows/desktop/api/commctrl/ns-commctrl-tbmetrics)の構造、`CToolBarCtrl`オブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [TB_GETMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb787342)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [TB_GETMETRICS](/windows/desktop/Controls/tb-getmetrics)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="getpadding"></a>  CToolBarCtrl::GetPadding  
  現在のツール バー コントロールの水平および垂直方向の余白を取得します。  
@@ -1060,7 +1060,7 @@ BOOL GetPadding(
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、送信、 [TB_GETPADDING](http://msdn.microsoft.com/library/windows/desktop/bb787344)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [TB_GETPADDING](/windows/desktop/Controls/tb-getpadding)メッセージは、Windows SDK で説明します。  
   
 ##  <a name="getpressedimagelist"></a>  CToolBarCtrl::GetPressedImageList  
  現在のツール バー コントロールが押された状態のボタンを表すために使用するイメージ リストを取得します。  
@@ -1073,7 +1073,7 @@ CImageList* GetPressedImageList();
  ポインターを[CImageList](../../mfc/reference/cimagelist-class.md)このようなイメージの一覧が設定されていない場合、現在のコントロール、または NULL のイメージ リストを格納します。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、送信、 [TB_GETPRESSEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787345)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [TB_GETPRESSEDIMAGELIST](/windows/desktop/Controls/tb-getpressedimagelist)メッセージは、Windows SDK で説明します。  
   
 ##  <a name="getrect"></a>  CToolBarCtrl::GetRect  
  指定したツール バー ボタンの外接する四角形を取得します。  
@@ -1089,13 +1089,13 @@ BOOL GetRect(
  ボタンの識別子です。  
   
  *lpRect*  
- ポインターを[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)外接する四角形の情報を受け取る構造体。  
+ ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)外接する四角形の情報を受け取る構造体。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は TRUE、それ以外の場合は FALSE。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[TB_GETRECT](http://msdn.microsoft.com/library/windows/desktop/bb787346)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[TB_GETRECT](/windows/desktop/Controls/tb-getrect)」の説明に従って、Windows SDK。  
   
 ##  <a name="getrows"></a>  CToolBarCtrl::GetRows  
  現在、ツール バー コントロールで表示されるボタンの行の数を取得します。  
@@ -1158,7 +1158,7 @@ int GetString(
  成功した場合、文字列の長さしない場合は-1。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[TB_GETSTRING](http://msdn.microsoft.com/library/windows/desktop/bb787349)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[TB_GETSTRING](/windows/desktop/Controls/tb-getstring)」の説明に従って、Windows SDK。  
   
 ##  <a name="getstyle"></a>  CToolBarCtrl::GetStyle  
  ツール バー コントロールに現在適用されているスタイルを取得します。  
@@ -1168,7 +1168,7 @@ DWORD GetStyle() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 組み合わせを含む DWORD[ツール バー コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb760439)」の説明に従って、Windows SDK。  
+ 組み合わせを含む DWORD[ツール バー コントロールのスタイル](/windows/desktop/Controls/toolbar-control-and-button-styles)」の説明に従って、Windows SDK。  
   
 ##  <a name="gettooltips"></a>  CToolBarCtrl::GetToolTips  
  ツール バー コントロールに関連付けられている場合は、ツール ヒント コントロールのハンドルを取得します。  
@@ -1192,7 +1192,7 @@ int HitTest(LPPOINT ppt) const;
   
 ### <a name="parameters"></a>パラメーター  
  *ppt*  
- ポインターを[ポイント](http://msdn.microsoft.com/library/windows/desktop/dd162805)でヒット テストの x 座標を含む構造体、`x`メンバーと、y 座標のヒット テストで、`y`メンバー。 座標は、ツールバーのクライアント領域を基準とは。  
+ ポインターを[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)でヒット テストの x 座標を含む構造体、`x`メンバーと、y 座標のヒット テストで、`y`メンバー。 座標は、ツールバーのクライアント領域を基準とは。  
   
 ### <a name="return-value"></a>戻り値  
  ツールバー上のポイントの位置を示す整数値。 値が 0 または正の値の場合は、この戻り値がポイントにある区切り記号以外の項目の 0 から始まるインデックスにします。  
@@ -1200,7 +1200,7 @@ int HitTest(LPPOINT ppt) const;
  戻り値が負の場合、ポイントはボタン内ではありません。 戻り値の絶対値は、区切り記号アイテムまたは最も近いの区切り記号以外の項目のインデックスです。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[TB_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb787360)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[TB_HITTEST](/windows/desktop/Controls/tb-hittest)」の説明に従って、Windows SDK。  
   
 ##  <a name="hidebutton"></a>  CToolBarCtrl::HideButton  
  ツール バー コントロールで指定したボタンを表示または非表示にします。  
@@ -1279,16 +1279,16 @@ BOOL InsertMarkHitTest(
   
 ### <a name="parameters"></a>パラメーター  
  *ppt*  
- ポインターを[ポイント](http://msdn.microsoft.com/library/windows/desktop/dd162805)ツールバーのクライアント領域を基準と、ヒット テストを含む構造体を調整します。  
+ ポインターを[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)ツールバーのクライアント領域を基準と、ヒット テストを含む構造体を調整します。  
   
  *ptbim*  
- ポインターを[受け取る](http://msdn.microsoft.com/library/windows/desktop/bb760480)挿入マークの情報を受け取る構造体。  
+ ポインターを[受け取る](/windows/desktop/api/commctrl/ns-commctrl-tbinsertmark)挿入マークの情報を受け取る構造体。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[TB_INSERTMARKHITTEST](http://msdn.microsoft.com/library/windows/desktop/bb787367)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[TB_INSERTMARKHITTEST](/windows/desktop/Controls/tb-insertmarkhittest)」の説明に従って、Windows SDK。  
   
 ##  <a name="isbuttonchecked"></a>  CToolBarCtrl::IsButtonChecked  
  ツール バー コントロールで指定されたボタンがオンになっているかどうかを判断します。  
@@ -1415,7 +1415,7 @@ void LoadImages(
  呼び出し元アプリケーションにプログラムのインスタンス ハンドル。 このパラメーターは、標準イメージの一覧を読み込む HINST_COMMCTRL を指定できます。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[TB_LOADIMAGES](http://msdn.microsoft.com/library/windows/desktop/bb787381)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[TB_LOADIMAGES](/windows/desktop/Controls/tb-loadimages)」の説明に従って、Windows SDK。  
   
 ##  <a name="mapaccelerator"></a>  CToolBarCtrl::MapAccelerator  
  ツール バー ボタンにアクセラレータの文字にマップします。  
@@ -1437,7 +1437,7 @@ BOOL MapAccelerator(
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[TB_MAPACCELERATOR](http://msdn.microsoft.com/library/windows/desktop/bb787383)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[TB_MAPACCELERATOR](/windows/desktop/Controls/tb-mapaccelerator)」の説明に従って、Windows SDK。  
   
 ##  <a name="markbutton"></a>  CToolBarCtrl::MarkButton  
  ツール バー コントロールでは、指定したボタンの強調表示状態を設定します。  
@@ -1459,7 +1459,7 @@ BOOL MarkButton(
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[TB_MARKBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb787385)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[TB_MARKBUTTON](/windows/desktop/Controls/tb-markbutton)」の説明に従って、Windows SDK。  
   
 ##  <a name="movebutton"></a>  CToolBarCtrl::MoveButton  
  ボタンを別の 1 つのインデックスに移動します。  
@@ -1481,7 +1481,7 @@ BOOL MoveButton(
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[TB_MOVEBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb787387)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[TB_MOVEBUTTON](/windows/desktop/Controls/tb-movebutton)」の説明に従って、Windows SDK。  
   
 ##  <a name="pressbutton"></a>  CToolBarCtrl::PressButton  
  押すか、ツール バー コントロールの指定したボタンを解放します。  
@@ -1503,7 +1503,7 @@ BOOL PressButton(int nID, BOOL bPress = TRUE);
 ### <a name="remarks"></a>Remarks  
  1 つ以上のボタンの状態を変更する場合は、呼び出すことを検討してください。 [SetState](#setstate)代わりにします。  
   
- このメソッドは、送信、 [TB_PRESSBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb787389)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [TB_PRESSBUTTON](/windows/desktop/Controls/tb-pressbutton)メッセージは、Windows SDK で説明します。  
   
 ##  <a name="replacebitmap"></a>  CToolBarCtrl::ReplaceBitmap  
  新しいビットマップでは、現在のツール バー コントロールの既存のビットマップを置き換えます。  
@@ -1516,13 +1516,13 @@ BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*pReplaceBitmap*|ポインターを[TBREPLACEBITMAP](http://msdn.microsoft.com/library/windows/desktop/bb760484)ビットマップを交換して、新しいビットマップを記述する構造体。|  
+|[in]*pReplaceBitmap*|ポインターを[TBREPLACEBITMAP](/windows/desktop/api/commctrl/ns-commctrl-tbreplacebitmap)ビットマップを交換して、新しいビットマップを記述する構造体。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、送信、 [TB_REPLACEBITMAP](http://msdn.microsoft.com/library/windows/desktop/bb787391)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [TB_REPLACEBITMAP](/windows/desktop/Controls/tb-replacebitmap)メッセージは、Windows SDK で説明します。  
   
 ### <a name="example"></a>例  
  次のコード例は、別のビットマップの標準ツールバーのビットマップを置き換えます。  
@@ -1600,7 +1600,7 @@ BOOL SetAnchorHighlight(BOOL fAnchor = TRUE);
  以前のアンカー設定します。 強調表示が有効になっている場合、この値は 0 以外の場合は。 強調表示が有効になっていない場合は、この値は 0 です。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、Win32 メッセージの動作を実装[TB_SETANCHORHIGHLIGHT](http://msdn.microsoft.com/library/windows/desktop/bb787396)」の説明に従って、Windows SDK。  
+ このメソッドは、Win32 メッセージの動作を実装[TB_SETANCHORHIGHLIGHT](/windows/desktop/Controls/tb-setanchorhighlight)」の説明に従って、Windows SDK。  
   
 ##  <a name="setbitmapsize"></a>  CToolBarCtrl::SetBitmapSize  
  ツール バー コントロールに追加する実際のビットマップ イメージのサイズを設定します。  
@@ -1633,13 +1633,13 @@ BOOL SetButtonInfo(
  ボタンの識別子です。  
   
  *ptbbi*  
- ポインターを[受け取る](http://msdn.microsoft.com/library/windows/desktop/bb760478)ボタンの情報を受け取る。  
+ ポインターを[受け取る](/windows/desktop/api/commctrl/ns-commctrl-tbbuttoninfoa)ボタンの情報を受け取る。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- メンバー関数は、Win32 メッセージの動作を実装する[TB_SETBUTTONINFO](http://msdn.microsoft.com/library/windows/desktop/bb787413)」の説明に従って、Windows SDK。  
+ メンバー関数は、Win32 メッセージの動作を実装する[TB_SETBUTTONINFO](/windows/desktop/Controls/tb-setbuttoninfo)」の説明に従って、Windows SDK。  
   
 ##  <a name="setbuttonsize"></a>  CToolBarCtrl::SetButtonSize  
  ツール バー コントロールにボタンのサイズを設定します。  
@@ -1697,7 +1697,7 @@ BOOL SetButtonWidth(
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[TB_SETBUTTONWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb787417)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[TB_SETBUTTONWIDTH](/windows/desktop/Controls/tb-setbuttonwidth)」の説明に従って、Windows SDK。  
   
 ##  <a name="setcmdid"></a>  CToolBarCtrl::SetCmdID  
  指定したボタンが押されたときに、オーナー ウィンドウに送信されるコマンド id を設定します。  
@@ -1729,12 +1729,12 @@ void SetColorScheme(const COLORSCHEME* lpColorScheme);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*lpColorScheme*|ポインターを[COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502)強調表示色とコントロールは、ツールバーの影の色を記述する構造体。|  
+|[in]*lpColorScheme*|ポインターを[COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme)強調表示色とコントロールは、ツールバーの影の色を記述する構造体。|  
   
 ### <a name="remarks"></a>Remarks  
  Windows Vista のビジュアル テーマが設定されている場合は、このメソッドを指定しても効果はありません。  
   
- このメソッドは、送信、 [TB_SETCOLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb787421)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [TB_SETCOLORSCHEME](/windows/desktop/Controls/tb-setcolorscheme)メッセージは、Windows SDK で説明します。  
   
 ### <a name="example"></a>例  
  次のコード例では、現在のツール バー コントロールの配色を設定します。 コード例には、赤の各ツール ボタンの左と上のエッジと右や下の辺が青。 ボタンを押すし、青に変わり、ボタンの赤のエッジ、青のエッジが赤に変わります。  
@@ -1756,10 +1756,10 @@ CImageList* SetDisabledImageList(CImageList* pImageList);
  ポインターを[CImageList](../../mfc/reference/cimagelist-class.md)ボタン イメージの表示を無効にするツール バー コントロールで使用されていたオブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[TB_SETDISABLEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787423)」の説明に従って、Windows SDK。 MFC 実装の`SetDisabledImageList`を使用して、`CImageList`イメージ リストを識別するハンドルではなく、ツール バー コントロールの無効にされたボタンを含むオブジェクトのイメージします。  
+ このメンバー関数は、Win32 メッセージの動作を実装[TB_SETDISABLEDIMAGELIST](/windows/desktop/Controls/tb-setdisabledimagelist)」の説明に従って、Windows SDK。 MFC 実装の`SetDisabledImageList`を使用して、`CImageList`イメージ リストを識別するハンドルではなく、ツール バー コントロールの無効にされたボタンを含むオブジェクトのイメージします。  
   
 ##  <a name="setdrawtextflags"></a>  CToolBarCtrl::SetDrawTextFlags  
- Win32 関数でフラグを設定[DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498)テキスト、フラグを設定する方法に従って書式設定された指定の四角形を描画に使用されます。  
+ Win32 関数でフラグを設定[DrawText](/windows/desktop/api/winuser/nf-winuser-drawtext)テキスト、フラグを設定する方法に従って書式設定された指定の四角形を描画に使用されます。  
   
 ```  
 DWORD SetDrawTextFlags(
@@ -1769,7 +1769,7 @@ DWORD SetDrawTextFlags(
   
 ### <a name="parameters"></a>パラメーター  
  *dwMask*  
- 1 つ以上の Win32 関数で指定された、dt _ フラグの組み合わせ[DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498)、ビットでこれを示す*dwDTFlags*テキストを描画するときに使用されます。  
+ 1 つ以上の Win32 関数で指定された、dt _ フラグの組み合わせ[DrawText](/windows/desktop/api/winuser/nf-winuser-drawtext)、ビットでこれを示す*dwDTFlags*テキストを描画するときに使用されます。  
   
  *dwDTFlags*  
  Win32 関数で指定された、dt _ フラグの 1 つ以上を組み合わせた`DrawText`ボタンのテキストの描画方法を示します。 この値は`DrawText`ボタンのテキストが描画されます。  
@@ -1778,7 +1778,7 @@ DWORD SetDrawTextFlags(
  前のテキストの描画を含む DWORD フラグを設定します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[TB_SETDRAWTEXTFLAGS](http://msdn.microsoft.com/library/windows/desktop/bb787425)」の説明に従って、Windows SDK。 このメンバー関数は、Win32 関数でフラグを設定`DrawText`フラグを設定する方法に従って書式設定された指定の四角形にテキストを描画します。  
+ このメンバー関数は、Win32 メッセージの動作を実装[TB_SETDRAWTEXTFLAGS](/windows/desktop/Controls/tb-setdrawtextflags)」の説明に従って、Windows SDK。 このメンバー関数は、Win32 関数でフラグを設定`DrawText`フラグを設定する方法に従って書式設定された指定の四角形にテキストを描画します。  
   
 ##  <a name="setextendedstyle"></a>  CToolBarCtrl::SetExtendedStyle  
  ツール バー コントロールの拡張スタイルを設定します。  
@@ -1792,10 +1792,10 @@ DWORD SetExtendedStyle(DWORD dwExStyle);
  新しい拡張スタイルを指定する値。 このパラメーターは、ツールバーの拡張スタイルの組み合わせを指定できます。  
   
 ### <a name="return-value"></a>戻り値  
- 前の拡張スタイルを表す DWORD です。 スタイルの一覧は、次を参照してください。[ツールバー拡張スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760430)、Windows SDK に含まれています。  
+ 前の拡張スタイルを表す DWORD です。 スタイルの一覧は、次を参照してください。[ツールバー拡張スタイル](/windows/desktop/Controls/toolbar-extended-styles)、Windows SDK に含まれています。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[TB_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb787427)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[TB_SETEXTENDEDSTYLE](/windows/desktop/Controls/tb-setextendedstyle)」の説明に従って、Windows SDK。  
   
 ##  <a name="sethotimagelist"></a>  CToolBarCtrl::SetHotImageList  
  「ホット」ボタンを表示するツール バー コントロールを使用するイメージ リストを設定します。  
@@ -1812,7 +1812,7 @@ CImageList* SetHotImageList(CImageList* pImageList);
  ポインターを[CImageList](../../mfc/reference/cimagelist-class.md)ホット ボタンの画像を表示するツール バー コントロールで使用されていたオブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[TB_SETHOTIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787429)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[TB_SETHOTIMAGELIST](/windows/desktop/Controls/tb-sethotimagelist)」の説明に従って、Windows SDK。  
   
  MFC 実装の`SetHotImageList`を使用して、`CImageList`イメージ リストを識別するハンドルではなく、ツール バー コントロールのホット ボタンを含むオブジェクトのイメージします。 ポインターが上にあるとき、ホットなボタンが強調表示されます。  
   
@@ -1831,7 +1831,7 @@ int SetHotItem(int nHot);
  前のホットな項目またはホット項目がなかった場合は-1 のインデックス。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[TB_SETHOTITEM](http://msdn.microsoft.com/library/windows/desktop/bb787431)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[TB_SETHOTITEM](/windows/desktop/Controls/tb-sethotitem)」の説明に従って、Windows SDK。  
   
 ##  <a name="setimagelist"></a>  CToolBarCtrl::SetImageList  
  既定の状態にあるボタンを表示するツールバーを使用するイメージ リストを設定します。  
@@ -1848,7 +1848,7 @@ CImageList* SetImageList(CImageList* pImageList);
  ポインターを[CImageList](../../mfc/reference/cimagelist-class.md)ボタン イメージの既定の状態で表示するツール バー コントロールで使用されていたオブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[TB_SETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787433)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[TB_SETIMAGELIST](/windows/desktop/Controls/tb-setimagelist)」の説明に従って、Windows SDK。  
   
  MFC 実装の`SetImageList`を使用して、`CImageList`イメージ リストを識別するハンドルではなく、ツール バー コントロールのボタンを含むオブジェクトのイメージします。  
   
@@ -1875,10 +1875,10 @@ void SetInsertMark(TBINSERTMARK* ptbim);
   
 ### <a name="parameters"></a>パラメーター  
  *ptbim*  
- ポインター、[受け取る](http://msdn.microsoft.com/library/windows/desktop/bb760480)挿入マークを含む構造体。  
+ ポインター、[受け取る](/windows/desktop/api/commctrl/ns-commctrl-tbinsertmark)挿入マークを含む構造体。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[TB_SETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb787437)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[TB_SETINSERTMARK](/windows/desktop/Controls/tb-setinsertmark)」の説明に従って、Windows SDK。  
   
 ##  <a name="setinsertmarkcolor"></a>  CToolBarCtrl::SetInsertMarkColor  
  ツールバーの挿入マークを描画するために使用される色を設定します。  
@@ -1895,7 +1895,7 @@ COLORREF SetInsertMarkColor(COLORREF clrNew);
  前の挿入マークの色を表す COLORREF 値。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[TB_SETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb787439)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 メッセージの動作を実装[TB_SETINSERTMARKCOLOR](/windows/desktop/Controls/tb-setinsertmarkcolor)」の説明に従って、Windows SDK。  
   
 ##  <a name="setmaxtextrows"></a>  CToolBarCtrl::SetMaxTextRows  
  ツール バー ボタンに表示されるテキスト行の最大数を設定します。  
@@ -1920,10 +1920,10 @@ void SetMetrics(LPTBMETRICS ptbm);
   
 ### <a name="parameters"></a>パラメーター  
  *ptbm*  
- ポインター、 [TBMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb760482)の構造、`CToolBarCtrl`オブジェクト。  
+ ポインター、 [TBMETRICS](/windows/desktop/api/commctrl/ns-commctrl-tbmetrics)の構造、`CToolBarCtrl`オブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [TB_SETMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb787446)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [TB_SETMETRICS](/windows/desktop/Controls/tb-setmetrics)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="setowner"></a>  CToolBarCtrl::SetOwner  
  ツール バー コントロールのオーナー ウィンドウを設定します。  
@@ -1959,7 +1959,7 @@ DWORD SetPadding(
  下位ワードには、前の水平方向の余白の値が含まれています。 上位ワードには、前の垂直方向の余白の値が含まれています。 DWORD。 パディング値は、ピクセル単位で測定されます。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、送信、 [TB_SETPADDING](http://msdn.microsoft.com/library/windows/desktop/bb787448)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [TB_SETPADDING](/windows/desktop/Controls/tb-setpadding)メッセージは、Windows SDK で説明します。  
   
 ### <a name="example"></a>例  
  次のコード例では、現在のツール バー コントロールの水平および垂直方向の埋め込みを 20 ピクセルに設定します。  
@@ -1986,7 +1986,7 @@ CImagelist* SetPressedImageList(
  ポインターを[CImageList](../../mfc/reference/cimagelist-class.md)このようなイメージの一覧が設定されていない場合、現在のコントロール、または NULL の前のイメージ リストを格納します。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、送信、 [TB_SETPRESSEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787453)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [TB_SETPRESSEDIMAGELIST](/windows/desktop/Controls/tb-setpressedimagelist)メッセージは、Windows SDK で説明します。  
   
 ### <a name="example"></a>例  
  次のコード例では、既定のイメージ リストと同じである押された状態のイメージ リストを設定します。  
@@ -2011,7 +2011,7 @@ void SetRows(
  要求された行の数に、ツールバーのサイズを変更できない場合、複数の行または少数の行を使用するかどうかを通知します。  
   
  *lpRect*  
- 指す、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)ツールバーの新しい外接する四角形を受信する構造体。  
+ 指す、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)ツールバーの新しい外接する四角形を受信する構造体。  
   
 ### <a name="remarks"></a>Remarks  
  場合は、要求された行にサイズ変更できないツールバー サイズが自体するか、[次へ] 大きくまたは次より小さい有効なサイズの値に応じて*き*します。 場合*き*が true の場合、新しい行の数が要求された数よりも大きくなります。 場合*き*false で、新しい行の数は、要求された数よりも小さくなります。  
@@ -2057,7 +2057,7 @@ void SetStyle(DWORD dwStyle);
   
 ### <a name="parameters"></a>パラメーター  
  *dwStyle*  
- 組み合わせを含む DWORD[ツール バー コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb760439)」の説明に従って、Windows SDK。  
+ 組み合わせを含む DWORD[ツール バー コントロールのスタイル](/windows/desktop/Controls/toolbar-control-and-button-styles)」の説明に従って、Windows SDK。  
   
 ##  <a name="settooltips"></a>  CToolBarCtrl::SetToolTips  
  ツール ヒント コントロールをツール バー コントロールに関連付けます。  
@@ -2085,7 +2085,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
  戻り値は使用されません。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [TB_SETWINDOWTHEME](http://msdn.microsoft.com/library/windows/desktop/bb787465)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [TB_SETWINDOWTHEME](/windows/desktop/Controls/tb-setwindowtheme)メッセージ、Windows SDK で説明されているとします。  
   
 ## <a name="see-also"></a>関連項目  
  [MFC サンプル CMNCTRL1](../../visual-cpp-samples.md)   

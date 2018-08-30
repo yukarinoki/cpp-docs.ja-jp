@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 177f3110b2bc782093a91ee9dfaa560843791b5c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 2050a444ca228554cfbb3b6bba2693c55e53c4a2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572209"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217551"
 ---
 # <a name="rowset-object-interfaces"></a>行セット オブジェクト インターフェイス
 次の表では、行セット オブジェクトの OLE DB で定義されている必須および省略可能なインターフェイスを示します。  
@@ -39,7 +39,7 @@ ms.locfileid: "42572209"
 |[IChapteredRowset](/previous-versions/windows/desktop/ms718180\(v=vs.85\))|Optional|いいえ|  
 |[IColumnsInfo2](/previous-versions/windows/desktop/ms712953\(v=vs.85\))|Optional|いいえ|  
 |[IColumnsRowset](/previous-versions/windows/desktop/ms722657\(v=vs.85\))|Optional|いいえ|  
-|[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)|Optional|はい (ATL) を使用|  
+|[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Optional|はい (ATL) を使用|  
 |[IDBAsynchStatus](/previous-versions/windows/desktop/ms709832\(v=vs.85\))|Optional|いいえ|  
 |[IGetRow](/previous-versions/windows/desktop/ms718047\(v=vs.85\))|Optional|いいえ|  
 |[IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))|Optional|[はい]|  

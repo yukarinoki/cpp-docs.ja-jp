@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca0b25f5df6d4efb70e27fea6ef2323568134b2e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4250a2b13740b5aa71ca10300a90560ed615f68e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964470"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200029"
 ---
 # <a name="basicistream-class"></a>basic_istream クラス
 
@@ -173,7 +173,7 @@ setstate(state);
 |[operator>>](#op_gt_gt)|入力ストリームで関数を呼び出すか、または入力ストリームから書式設定されたデータを読み取ります。|
 |[operator=](#op_eq)|演算子の右辺の `basic_istream` をこのオブジェクトに代入します。 これは、コピーを残さない `rvalue` 参照を伴う移動代入です。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<istream>
 
@@ -521,7 +521,7 @@ basic_istream& operator>>(unsigned long long& val);
 basic_istream& operator>>(void *& val);
 ```
 
-それぞれがフィールドを抽出し、`use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`). [get](#get)( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`) を呼び出して、それを数値に変換します。 ここでは、 **InIt**として定義されます`istreambuf_iterator` \< **Elem**、 **Tr**>、および`val`型を持つ**長い**、**unsigned long**、または**void \*** に応じて。
+それぞれがフィールドを抽出し、`use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`). [get](#get)( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`) を呼び出して、それを数値に変換します。 ここでは、 **InIt**として定義されます`istreambuf_iterator` \< **Elem**、 **Tr**>、および`val`型を持つ**長い**、 **unsigned long**、または**void** <strong>\*</strong>に応じて。
 
 変換後の値の型として表すことができないかどうか`val`、関数呼び出し[setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`)。 いずれの場合も関数は **\*this** を返します。
 

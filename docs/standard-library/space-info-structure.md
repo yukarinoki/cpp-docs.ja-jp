@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b143a37c306320223ac3abe430e41c9750c8ece9
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 7c0e9a636fea95a4ce829731c25605197ee00549
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025784"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206736"
 ---
 # <a name="spaceinfo-structure"></a>space_info 構造体
 
@@ -45,7 +45,7 @@ struct space_info   {
 |`unsigned long long capacity`|ボリュームを表すことのできるバイト数の合計数を表します。|
 |`unsigned long long free`|ボリューム上のデータを表すために使用されないバイト数を表します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<filesystem >
 
@@ -55,5 +55,5 @@ struct space_info   {
 
 [ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
 [\<filesystem>](../standard-library/filesystem.md)<br/>
-[space](http://msdn.microsoft.com/7fce0b0e-523b-4598-b218-47245d0204ca)<br/>
+[space](https://msdn.microsoft.com/7fce0b0e-523b-4598-b218-47245d0204ca)<br/>
 [ファイル システムのナビゲーション (C++)](../standard-library/file-system-navigation.md)<br/>

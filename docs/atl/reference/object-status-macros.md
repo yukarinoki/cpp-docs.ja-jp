@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3657e7076bf67a5a3870d7d127cc150f976ecde
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6fcfffcd9508876399b30238cac0b4f65c92c733
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883659"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206502"
 ---
 # <a name="object-status-macros"></a>オブジェクトの状態に関するマクロ
 このマクロは、ActiveX コントロールに属しているフラグを設定します。  
@@ -28,7 +28,7 @@ ms.locfileid: "37883659"
 |-|-|  
 |[DECLARE_OLEMISC_STATUS](#declare_olemisc_status)|ATL の ActiveX コントロールにおける入りますフラグを設定するために使用します。|  
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlcom.h  
 
 ##  <a name="declare_olemisc_status"></a>  DECLARE_OLEMISC_STATUS  
@@ -43,7 +43,7 @@ DECLARE_OLEMISC_STATUS( miscstatus )
  該当するすべて入りますフラグ。  
   
 ### <a name="remarks"></a>Remarks  
- このマクロは、ActiveX コントロールの入りますフラグの設定に使用されます。 参照してください[IOleObject::GetMiscStatus](http://msdn.microsoft.com/library/windows/desktop/ms678521)の詳細。  
+ このマクロは、ActiveX コントロールの入りますフラグの設定に使用されます。 参照してください[IOleObject::GetMiscStatus](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getmiscstatus)の詳細。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_Windowing#124](../../atl/codesnippet/cpp/object-status-macros_1.h)]  

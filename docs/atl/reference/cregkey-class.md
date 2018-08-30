@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2f295b6bf54077ad131176092b06dbeca7a2201
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 1fe661f48c583cfb82e52b6c125f6cf7fce2e714
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42573250"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203559"
 ---
 # <a name="cregkey-class"></a>CRegKey クラス
 このクラスは、システム レジストリのエントリを操作するためのメソッドを提供します。  
@@ -132,10 +132,10 @@ class CRegKey
   
  `CRegKey` 特定のコンピューターのシステム レジストリに対してプログラミング インターフェイスを提供します。 たとえば、特定のレジストリ キーを開くには、呼び出す`CRegKey::Open`します。 取得したり、データ値を変更したりするには、呼び出す`CRegKey::QueryValue`または`CRegKey::SetValue`、それぞれします。 キーを閉じるには、呼び出す`CRegKey::Close`します。  
   
- キーを閉じると、そのレジストリ データが書き込まれます (フラッシュ) ハード _ ディスク。 このプロセスは数秒をかかります。 呼び出すことができる場合、アプリケーションは、ハード_ディスクにレジストリ データを明示的に記述する必要があります、 [RegFlushKey](http://msdn.microsoft.com/library/windows/desktop/ms724867) Win32 関数。 ただし、`RegFlushKey`多くのシステム リソースを使用し、どうしても必要な場合にのみ呼び出す必要があります。  
+ キーを閉じると、そのレジストリ データが書き込まれます (フラッシュ) ハード _ ディスク。 このプロセスは数秒をかかります。 呼び出すことができる場合、アプリケーションは、ハード_ディスクにレジストリ データを明示的に記述する必要があります、 [RegFlushKey](/windows/desktop/api/winreg/nf-winreg-regflushkey) Win32 関数。 ただし、`RegFlushKey`多くのシステム リソースを使用し、どうしても必要な場合にのみ呼び出す必要があります。  
   
 > [!IMPORTANT]
->  レジストリの場所を指定する呼び出し元を許可するすべてのメソッドでは、信頼できないデータを読み取る可能性があります。 ようにするメソッドを使用して、 [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)この関数が NULL 終端である文字列を明示的に処理しないの考慮事項を考慮する必要があります。 呼び出し元のコードの両方の条件をチェックする必要があります。  
+>  レジストリの場所を指定する呼び出し元を許可するすべてのメソッドでは、信頼できないデータを読み取る可能性があります。 ようにするメソッドを使用して、 [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)この関数が NULL 終端である文字列を明示的に処理しないの考慮事項を考慮する必要があります。 呼び出し元のコードの両方の条件をチェックする必要があります。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** atlbase.h  
@@ -189,13 +189,13 @@ LONG Create(
  作成または開くキーのクラスを指定します。 既定値は、REG_NONE します。  
   
  *dwOptions*  
- キーのオプション。 既定値は、REG_OPTION_NON_VOLATILE です。 使用可能な値と説明の一覧は、次を参照してください。 [RegCreateKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724844) Windows SDK に含まれています。  
+ キーのオプション。 既定値は、REG_OPTION_NON_VOLATILE です。 使用可能な値と説明の一覧は、次を参照してください。 [RegCreateKeyEx](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) Windows SDK に含まれています。  
   
  *samDesired*  
  キーのセキュリティのアクセス。 既定値は KEY_READ &#124; KEY_WRITE します。 使用可能な値と説明の一覧は、次を参照してください。`RegCreateKeyEx`します。  
   
  *lpSecAttr*  
- ポインターを[SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)キーのハンドルを子プロセスが継承できるかどうかを示す構造体。 既定では、このパラメーターが NULL (つまり、ハンドルを継承することはできませんです)。  
+ ポインターを[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)キーのハンドルを子プロセスが継承できるかどうかを示す構造体。 既定では、このパラメーターが NULL (つまり、ハンドルを継承することはできませんです)。  
   
  *lpdwDisposition*  
  [out]NULL 以外の場合は、REG_CREATED_NEW_KEY (キーが存在せず作成した場合) またはポインターを取得し、(キーが存在し、開かれた) 場合。  
@@ -308,7 +308,7 @@ LONG EnumKey(
  成功した場合は、ERROR_SUCCESS を返します。 失敗した場合は、WINERROR.H で定義されている 0 以外のエラー コードが返されます。  
   
 ### <a name="remarks"></a>Remarks  
- サブキーを列挙するために呼び出す`CRegKey::EnumKey`インデックスはゼロにします。 インデックスの値をインクリメントし、メソッドが戻る ERROR_NO_MORE_ITEMS までを繰り返します。 詳細については、次を参照してください。 [RegEnumKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724862) Windows SDK に含まれています。  
+ サブキーを列挙するために呼び出す`CRegKey::EnumKey`インデックスはゼロにします。 インデックスの値をインクリメントし、メソッドが戻る ERROR_NO_MORE_ITEMS までを繰り返します。 詳細については、次を参照してください。 [RegEnumKeyEx](/windows/desktop/api/winreg/nf-winreg-regenumkeyexa) Windows SDK に含まれています。  
   
 ##  <a name="flush"></a>  CRegKey::Flush  
  すべての開いているレジストリ キーの属性をレジストリに書き込むには、このメソッドを呼び出します。  
@@ -321,7 +321,7 @@ LONG Flush() throw();
  成功した場合は、ERROR_SUCCESS を返します。 失敗した場合は、WINERROR.H で定義されている 0 以外のエラー コードが返されます。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [RegEnumFlush](http://msdn.microsoft.com/library/windows/desktop/ms724867) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [RegEnumFlush](/windows/desktop/api/winreg/nf-winreg-regflushkey) Windows SDK に含まれています。  
   
 ##  <a name="getkeysecurity"></a>  CRegKey::GetKeySecurity  
  開いているレジストリ キーを保護するセキュリティ記述子のコピーを取得するには、このメソッドを呼び出します。  
@@ -335,7 +335,7 @@ LONG GetKeySecurity(
   
 ### <a name="parameters"></a>パラメーター  
  *si*  
- [SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573)要求されたセキュリティ情報を示す値。  
+ [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information)要求されたセキュリティ情報を示す値。  
   
  *psd*  
  要求されたセキュリティ記述子のコピーを受け取るバッファーへのポインター。  
@@ -347,7 +347,7 @@ LONG GetKeySecurity(
  成功した場合は、ERROR_SUCCESS を返します。 メソッドが失敗した場合、戻り値は 0 以外のエラー コードが WINERROR で定義されているは。H.  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [RegGetKeySecurity](http://msdn.microsoft.com/library/windows/desktop/aa379313)します。  
+ 詳細については、次を参照してください。 [RegGetKeySecurity](/windows/desktop/api/winreg/nf-winreg-reggetkeysecurity)します。  
   
 ##  <a name="m_hkey"></a>  CRegKey::m_hKey  
  関連付けられているレジストリ キーのハンドルが含まれています、`CRegKey`オブジェクト。  
@@ -404,7 +404,7 @@ LONG NotifyChangeKeyValue(
 > [!NOTE]
 >  このメソッドでは、指定したキーが削除された場合、呼び出し元は通知されません。  
   
- 詳細およびサンプル プログラムでは、次を参照してください。 [RegNotifyChangeKeyValue](http://msdn.microsoft.com/library/windows/desktop/ms724892)します。  
+ 詳細およびサンプル プログラムでは、次を参照してください。 [RegNotifyChangeKeyValue](/windows/desktop/api/winreg/nf-winreg-regnotifychangekeyvalue)します。  
   
 ##  <a name="open"></a>  Cregkey::open  
  指定したキーを開き、設定するには、このメソッドを呼び出す[m_hKey](#m_hkey)にこのキーのハンドル。  
@@ -424,7 +424,7 @@ LONG Open(
  作成または開かれたキーの名前を指定します。 この名前のサブキーである必要があります*hKeyParent*します。  
   
  *samDesired*  
- キーのセキュリティのアクセス。 既定値は、KEY_ALL_ACCESS です。 使用可能な値と説明の一覧は、次を参照してください。 [RegCreateKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724844) Windows SDK に含まれています。  
+ キーのセキュリティのアクセス。 既定値は、KEY_ALL_ACCESS です。 使用可能な値と説明の一覧は、次を参照してください。 [RegCreateKeyEx](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) Windows SDK に含まれています。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は、ERROR_SUCCESS; を返しますそれ以外の場合、0 以外のエラー値は、WINERROR で定義します。H.  
@@ -482,10 +482,10 @@ LONG QueryBinaryValue(
  メソッドが成功した場合は、ERROR_SUCCESS が返されます。 メソッドは、値の読み取りに失敗した場合、WINERROR で定義されている 0 以外のエラー コードを返します。H. 種類が REG_BINARY の参照されるデータがない場合は、定義が返されます。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドを利用`RegQueryValueEx`を正しい種類のデータが返されることを確認します。 参照してください[RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)の詳細。  
+ このメソッドを利用`RegQueryValueEx`を正しい種類のデータが返されることを確認します。 参照してください[RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)の詳細。  
   
 > [!IMPORTANT]
->  このメソッドは、呼び出し元が信頼できないデータを読み取る可能性がある、レジストリの場所を指定できます。 また、 [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)このメソッドによって使用される関数が NULL 終端である文字列を明示的に処理しません。 呼び出し元のコードの両方の条件をチェックする必要があります。  
+>  このメソッドは、呼び出し元が信頼できないデータを読み取る可能性がある、レジストリの場所を指定できます。 また、 [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)このメソッドによって使用される関数が NULL 終端である文字列を明示的に処理しません。 呼び出し元のコードの両方の条件をチェックする必要があります。  
   
 ##  <a name="querydwordvalue"></a>  CRegKey::QueryDWORDValue  
  DWORD データ値を指定した名前を取得するには、このメソッドを呼び出します。  
@@ -507,10 +507,10 @@ LONG QueryDWORDValue(
  メソッドが成功した場合は、ERROR_SUCCESS が返されます。 メソッドは、値の読み取りに失敗した場合、WINERROR で定義されている 0 以外のエラー コードを返します。H. REG_DWORD 型の参照されるデータがない場合は、定義が返されます。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドを利用`RegQueryValueEx`を正しい種類のデータが返されることを確認します。 参照してください[RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)の詳細。  
+ このメソッドを利用`RegQueryValueEx`を正しい種類のデータが返されることを確認します。 参照してください[RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)の詳細。  
   
 > [!IMPORTANT]
->  このメソッドは、呼び出し元が信頼できないデータを読み取る可能性がある、レジストリの場所を指定できます。 また、 [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)このメソッドによって使用される関数が NULL 終端である文字列を明示的に処理しません。 呼び出し元のコードの両方の条件をチェックする必要があります。  
+>  このメソッドは、呼び出し元が信頼できないデータを読み取る可能性がある、レジストリの場所を指定できます。 また、 [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)このメソッドによって使用される関数が NULL 終端である文字列を明示的に処理しません。 呼び出し元のコードの両方の条件をチェックする必要があります。  
   
 ##  <a name="queryguidvalue"></a>  CRegKey::QueryGUIDValue  
  GUID データ値を指定した名前を取得するには、このメソッドを呼び出します。  
@@ -532,7 +532,7 @@ LONG QueryGUIDValue(
  メソッドが成功した場合は、ERROR_SUCCESS が返されます。 メソッドは、値の読み取りに失敗した場合、WINERROR で定義されている 0 以外のエラー コードを返します。H. 参照されるデータは、有効な GUID ではありません、定義が返されます。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドを利用`CRegKey::QueryStringValue`GUID を使用して、文字列に変換および[CLSIDFromString](http://msdn.microsoft.com/library/windows/desktop/ms680589)します。  
+ このメソッドを利用`CRegKey::QueryStringValue`GUID を使用して、文字列に変換および[CLSIDFromString](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromstring)します。  
   
 > [!IMPORTANT]
 >  このメソッドは、呼び出し元が信頼できないデータを読み取る可能性がある、レジストリの場所を指定できます。  
@@ -561,10 +561,10 @@ LONG QueryMultiStringValue(
  メソッドが成功した場合は、ERROR_SUCCESS が返されます。 メソッドは、値の読み取りに失敗した場合、WINERROR で定義されている 0 以外のエラー コードを返します。H. REG_MULTI_SZ 型の参照されるデータがない場合は、定義が返されます。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドを利用`RegQueryValueEx`を正しい種類のデータが返されることを確認します。 参照してください[RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)の詳細。  
+ このメソッドを利用`RegQueryValueEx`を正しい種類のデータが返されることを確認します。 参照してください[RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)の詳細。  
   
 > [!IMPORTANT]
->  このメソッドは、呼び出し元が信頼できないデータを読み取る可能性がある、レジストリの場所を指定できます。 また、 [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)このメソッドによって使用される関数が NULL 終端である文字列を明示的に処理しません。 呼び出し元のコードの両方の条件をチェックする必要があります。  
+>  このメソッドは、呼び出し元が信頼できないデータを読み取る可能性がある、レジストリの場所を指定できます。 また、 [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)このメソッドによって使用される関数が NULL 終端である文字列を明示的に処理しません。 呼び出し元のコードの両方の条件をチェックする必要があります。  
   
 ##  <a name="queryqwordvalue"></a>  CRegKey::QueryQWORDValue  
  QWORD データが指定された値の名前を取得するには、このメソッドを呼び出します。  
@@ -586,10 +586,10 @@ LONG QueryQWORDValue(
  メソッドが成功した場合は、ERROR_SUCCESS が返されます。 メソッドは、値の読み取りに失敗した場合、WINERROR で定義されている 0 以外のエラー コードを返します。H. REG_QWORD 型の参照されるデータがない場合は、定義が返されます。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドを利用`RegQueryValueEx`を正しい種類のデータが返されることを確認します。 参照してください[RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)の詳細。  
+ このメソッドを利用`RegQueryValueEx`を正しい種類のデータが返されることを確認します。 参照してください[RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)の詳細。  
   
 > [!IMPORTANT]
->  このメソッドは、呼び出し元が信頼できないデータを読み取る可能性がある、レジストリの場所を指定できます。 また、 [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)このメソッドによって使用される関数が NULL 終端である文字列を明示的に処理しません。 呼び出し元のコードの両方の条件をチェックする必要があります。  
+>  このメソッドは、呼び出し元が信頼できないデータを読み取る可能性がある、レジストリの場所を指定できます。 また、 [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)このメソッドによって使用される関数が NULL 終端である文字列を明示的に処理しません。 呼び出し元のコードの両方の条件をチェックする必要があります。  
   
 ##  <a name="querystringvalue"></a>  CRegKey::QueryStringValue  
  指定された値名の文字列データを取得するには、このメソッドを呼び出します。  
@@ -615,10 +615,10 @@ LONG QueryStringValue(
  メソッドが成功した場合は、ERROR_SUCCESS が返されます。 メソッドは、値の読み取りに失敗した場合、WINERROR で定義されている 0 以外のエラー コードを返します。H. REG_SZ 型の参照されるデータがない場合は、定義が返されます。 メソッドは、ERROR_MORE_DATA を返す場合*が*が 0、バイト単位で必要なバッファー サイズではなく。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドを利用`RegQueryValueEx`を正しい種類のデータが返されることを確認します。 参照してください[RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)の詳細。  
+ このメソッドを利用`RegQueryValueEx`を正しい種類のデータが返されることを確認します。 参照してください[RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)の詳細。  
   
 > [!IMPORTANT]
->  このメソッドは、呼び出し元が信頼できないデータを読み取る可能性がある、レジストリの場所を指定できます。 また、 [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)このメソッドによって使用される関数が NULL 終端である文字列を明示的に処理しません。 呼び出し元のコードの両方の条件をチェックする必要があります。  
+>  このメソッドは、呼び出し元が信頼できないデータを読み取る可能性がある、レジストリの場所を指定できます。 また、 [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)このメソッドによって使用される関数が NULL 終端である文字列を明示的に処理しません。 呼び出し元のコードの両方の条件をチェックする必要があります。  
   
 ##  <a name="queryvalue"></a>  CRegKey::QueryValue  
  指定した値のフィールドのデータを取得するには、このメソッドを呼び出す[m_hKey](#m_hkey)します。 このメソッドの以前のバージョンでは、現在サポートされていませんされ、されずとしてマークされます。  
@@ -717,7 +717,7 @@ LONG SetBinaryValue(
  成功した場合は、ERROR_SUCCESS を返します。 失敗した場合は、WINERROR.H で定義されている 0 以外のエラー コードが返されます。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドを使用して[RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923)値をレジストリに書き込みます。  
+ このメソッドを使用して[RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa)値をレジストリに書き込みます。  
   
 ##  <a name="setdwordvalue"></a>  CRegKey::SetDWORDValue  
  レジストリ キーの DWORD 値を設定するには、このメソッドを呼び出します。  
@@ -737,7 +737,7 @@ LONG SetDWORDValue(LPCTSTR pszValueName, DWORD dwValue) throw();
  成功した場合は、ERROR_SUCCESS を返します。 失敗した場合は、WINERROR.H で定義されている 0 以外のエラー コードが返されます。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドを使用して[RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923)値をレジストリに書き込みます。  
+ このメソッドを使用して[RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa)値をレジストリに書き込みます。  
   
 ##  <a name="setguidvalue"></a>  CRegKey::SetGUIDValue  
  レジストリ キーの GUID 値を設定するには、このメソッドを呼び出します。  
@@ -757,7 +757,7 @@ LONG SetGUIDValue(LPCTSTR pszValueName, REFGUID guidValue) throw();
  成功した場合は、ERROR_SUCCESS を返します。 失敗した場合は、WINERROR.H で定義されている 0 以外のエラー コードが返されます。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドを利用`CRegKey::SetStringValue`GUID を使用して文字列に変換および[StringFromGUID2](http://msdn.microsoft.com/library/windows/desktop/ms683893)します。  
+ このメソッドを利用`CRegKey::SetStringValue`GUID を使用して文字列に変換および[StringFromGUID2](/windows/desktop/api/combaseapi/nf-combaseapi-stringfromguid2)します。  
   
 ##  <a name="setkeyvalue"></a>  CRegKey::SetKeyValue  
  指定したキーの指定した値のフィールドにデータを格納するには、このメソッドを呼び出します。  
@@ -801,16 +801,16 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 |DACL_SECURITY_INFORMATION|キーの随意アクセス制御リスト (DACL) を設定します。 キーに対する WRITE_DAC アクセス許可を持っているか、呼び出し元のプロセスは、オブジェクトの所有者である必要があります。|  
 |GROUP_SECURITY_INFORMATION|キーのプライマリ グループ セキュリティ識別子 (SID) を設定します。 キーは WRITE_OWNER アクセスが必要または呼び出し元のプロセスは、オブジェクトの所有者である必要があります。|  
 |OWNER_SECURITY_INFORMATION|キーの所有者の SID を設定します。 キーは WRITE_OWNER アクセスが必要または呼び出し元のプロセスがオブジェクトの所有者であるか、有効になっている SE_TAKE_OWNERSHIP_NAME 権限を持っている必要があります。|  
-|SACL_SECURITY_INFORMATION|キーのシステム アクセス制御リスト (SACL) を設定します。 ACCESS_SYSTEM_SECURITY アクセス キーが必要です。 このアクセスを取得するための適切が SE_SECURITY_NAME を有効にするには[特権](http://msdn.microsoft.com/library/windows/desktop/aa379306)呼び出し元の現在のアクセス トークンで ACCESS_SYSTEM_SECURITY へのアクセスのためのハンドルを開くし、特権を無効にします。|  
+|SACL_SECURITY_INFORMATION|キーのシステム アクセス制御リスト (SACL) を設定します。 ACCESS_SYSTEM_SECURITY アクセス キーが必要です。 このアクセスを取得するための適切が SE_SECURITY_NAME を有効にするには[特権](https://msdn.microsoft.com/library/windows/desktop/aa379306)呼び出し元の現在のアクセス トークンで ACCESS_SYSTEM_SECURITY へのアクセスのためのハンドルを開くし、特権を無効にします。|  
   
  *psd*  
- ポインターを[SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561)構造を指定したキーに設定するセキュリティ属性を指定します。  
+ ポインターを[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)構造を指定したキーに設定するセキュリティ属性を指定します。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は、ERROR_SUCCESS を返します。 失敗した場合は、WINERROR.H で定義されている 0 以外のエラー コードが返されます。  
   
 ### <a name="remarks"></a>Remarks  
- キーのセキュリティ属性を設定します。 参照してください[RegSetKeySecurity](http://msdn.microsoft.com/library/windows/desktop/aa379314)の詳細。  
+ キーのセキュリティ属性を設定します。 参照してください[RegSetKeySecurity](/windows/desktop/api/winreg/nf-winreg-regsetkeysecurity)の詳細。  
   
 ##  <a name="setmultistringvalue"></a>  CRegKey::SetMultiStringValue  
  レジストリ キーの複数行文字列の値を設定するには、このメソッドを呼び出します。  
@@ -830,7 +830,7 @@ LONG SetMultiStringValue(LPCTSTR pszValueName, LPCTSTR pszValue) throw();
  成功した場合は、ERROR_SUCCESS を返します。 失敗した場合は、WINERROR.H で定義されている 0 以外のエラー コードが返されます。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドを使用して[RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923)値をレジストリに書き込みます。  
+ このメソッドを使用して[RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa)値をレジストリに書き込みます。  
   
 ##  <a name="setqwordvalue"></a>  CRegKey::SetQWORDValue  
  レジストリ キーの QWORD 値を設定するには、このメソッドを呼び出します。  
@@ -850,7 +850,7 @@ LONG SetQWORDValue(LPCTSTR pszValueName, ULONGLONG qwValue) throw();
  成功した場合は、ERROR_SUCCESS を返します。 失敗した場合は、WINERROR.H で定義されている 0 以外のエラー コードが返されます。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドを使用して[RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923)値をレジストリに書き込みます。  
+ このメソッドを使用して[RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa)値をレジストリに書き込みます。  
   
 ##  <a name="setstringvalue"></a>  CRegKey::SetStringValue  
  レジストリ キーの文字列値を設定します。  
@@ -945,7 +945,7 @@ ATL_DEPRECATED LONG SetValue(
 ### <a name="remarks"></a>Remarks  
  2 つの元のバージョンの`SetValue`されずとしてマークされ、使用する必要があります。 これらの形式が使用されている場合、コンパイラは警告を発行します。  
   
- 3 番目のメソッド呼び出し[RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923)します。  
+ 3 番目のメソッド呼び出し[RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa)します。  
   
 ## <a name="see-also"></a>関連項目  
  [DCOM のサンプル](../../visual-cpp-samples.md)   

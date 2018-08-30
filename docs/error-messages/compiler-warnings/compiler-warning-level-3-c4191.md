@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 3) C4191 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 3) C4191 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 892bf76a8480e573a71e768fbe24778e7e66f88b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3b0198971064bec114e4665a499e070ddb61501
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291493"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197499"
 ---
 # <a name="compiler-warning-level-3-c4191"></a>コンパイラの警告 (レベル 3) C4191
 'operator/operation' : 'type of expression' から 'type required' への変換は保証されません  
@@ -36,7 +36,7 @@ ms.locfileid: "33291493"
   
 -   引数リストの長さが異なる場合 ( `__cdecl`では、短い方の引数リストが varargs であっても、長い方のリストから短い方へキャストされる場合のみ)。  
   
--   データへのポインター (以外の**void\***) 関数へのポインターに対してエイリアス化です。  
+-   データへのポインター (以外の**void**<strong>\*</strong>) 関数へのポインターに対してエイリアス。  
   
 -   その他の型の違いによって、 `reinterpret_cast`でエラーまたは警告が発生する場合。  
   

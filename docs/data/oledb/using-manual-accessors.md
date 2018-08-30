@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 236fd1809fa012262f3a98f0f1856f3bbff6b454
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: dceca7ead0910474b2277538066d3cbae4bc791e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340865"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213829"
 ---
 # <a name="using-manual-accessors"></a>手動アクセサーの使用
 不明なコマンドを処理する場合は、次の 4 つあります。  
@@ -53,7 +53,7 @@ ms.locfileid: "39340865"
   
 6.  呼び出す`GetNextResult`複数行セットが使用可能なかどうかを判断します。 手順 2 ~ 5 を繰り返します。  
   
- 手動アクセサーの例は、次を参照してください。`CDBListView::CallProcedure`で、 [DBVIEWER](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832)サンプル。  
+ 手動アクセサーの例は、次を参照してください。`CDBListView::CallProcedure`で、 [DBVIEWER](https://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832)サンプル。  
   
 ## <a name="see-also"></a>関連項目  
  [アクセサーの使用](../../data/oledb/using-accessors.md)

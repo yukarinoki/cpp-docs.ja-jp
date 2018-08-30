@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed6b5f46e20338bdb06c5c04599402dbbefa935e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 561a82e2bea320e6230af84055716606d180e2c5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880051"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214276"
 ---
 # <a name="catlexemodulet-class"></a>CAtlExeModuleT クラス
 このクラスは、アプリケーションのモジュールを表します。  
@@ -105,7 +105,7 @@ class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
   
  `CAtlExeModuleT`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlbase.h  
   
 ##  <a name="catlexemodulet"></a>  CAtlExeModuleT::CAtlExeModuleT  
@@ -259,7 +259,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
   
 ### <a name="parameters"></a>パラメーター  
  *nShowCmd*  
- ウィンドウの表示方法を指定します。 このパラメーターで説明されている値のいずれかを指定できます、 [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559)セクション。 既定値は SW_HIDE です。  
+ ウィンドウの表示方法を指定します。 このパラメーターで説明されている値のいずれかを指定できます、 [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)セクション。 既定値は SW_HIDE です。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
@@ -285,7 +285,7 @@ static void UninitializeCom() throw();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 既定でこのメソッドを呼び出すだけです[CoUninitialize](http://msdn.microsoft.com/library/windows/desktop/ms688715)デストラクターから呼び出されるとします。 オーバーライドする場合は、このメソッドをオーバーライド[する](#initializecom)します。  
+ 既定でこのメソッドを呼び出すだけです[CoUninitialize](/windows/desktop/api/combaseapi/nf-combaseapi-couninitialize)デストラクターから呼び出されるとします。 オーバーライドする場合は、このメソッドをオーバーライド[する](#initializecom)します。  
   
 ##  <a name="unlock"></a>  CAtlExeModuleT::Unlock  
  モジュールのロック カウントをデクリメントします。  
@@ -306,7 +306,7 @@ int WinMain(int nShowCmd) throw();
   
 ### <a name="parameters"></a>パラメーター  
  *nShowCmd*  
- ウィンドウの表示方法を指定します。 このパラメーターで説明されている値のいずれかを指定できます、 [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559)セクション。  
+ ウィンドウの表示方法を指定します。 このパラメーターで説明されている値のいずれかを指定できます、 [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)セクション。  
   
 ### <a name="return-value"></a>戻り値  
  実行可能ファイルの戻り値を返します。  

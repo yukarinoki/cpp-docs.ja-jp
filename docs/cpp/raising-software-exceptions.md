@@ -23,17 +23,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b4469d7d53a7374f62e0ec232a7836e80ab75d8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 587ce3800be5c58e4882b6ac3239de614739bcb8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606416"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219662"
 ---
 # <a name="raising-software-exceptions"></a>ソフトウェア例外の発生
 プログラム エラーの最も一般的な原因のいくつかは、システムによって例外としてフラグが設定されません。 たとえば、メモリ ブロックを割り当てるときにメモリが不足していると、ランタイム関数または API 関数で例外は発生しませんが、エラー コードが返されます。  
   
- ただし、扱うことができますいずれかの条件を例外として、コードでその状態を検出して呼び出すことによって、報告、 [RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552)関数。 この方法でエラーにフラグを設定すれば、構造化例外処理の長所をあらゆるランタイム エラーに取り込むことができます。  
+ ただし、扱うことができますいずれかの条件を例外として、コードでその状態を検出して呼び出すことによって、報告、 [RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552)関数。 この方法でエラーにフラグを設定すれば、構造化例外処理の長所をあらゆるランタイム エラーに取り込むことができます。  
   
  エラーで構造化例外処理を使用するには、次の手順に従います。  
   
@@ -68,7 +68,7 @@ if (lpstr == NULL)
     RaiseException( STATUS_INSUFFICIENT_MEM, 0, 0, 0);  
 ```  
   
- 例外を簡単に発生させるには、最後の 3 つのパラメーターを 0 に設定します。 最後の 3 つのパラメーターは、追加情報を渡し、ハンドラーの実行を中止するフラグを設定するときに使用します。 参照してください、 [RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552)詳細については、Windows SDK 内の関数。  
+ 例外を簡単に発生させるには、最後の 3 つのパラメーターを 0 に設定します。 最後の 3 つのパラメーターは、追加情報を渡し、ハンドラーの実行を中止するフラグを設定するときに使用します。 参照してください、 [RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552)詳細については、Windows SDK 内の関数。  
   
  例外処理フィルターで、定義したコードをテストできます。 例えば:  
   

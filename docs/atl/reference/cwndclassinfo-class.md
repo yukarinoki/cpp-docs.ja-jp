@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b328cb869f971afb0251750d7847d6850688731
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 11f61e89ab888b678bf54f65b999c0fd4394dbea
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879836"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201663"
 ---
 # <a name="cwndclassinfo-class"></a>CWndClassInfo クラス
 このクラスは、ウィンドウ クラスの情報を登録するためのメソッドを提供します。  
@@ -79,11 +79,11 @@ class CWndClassInfo
   
  [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwndclassinfo-class_1.h)]  
   
- ウィンドウ クラスの詳細については、次を参照してください。[ウィンドウ クラス](http://msdn.microsoft.com/library/windows/desktop/ms632596)Windows SDK に含まれています。  
+ ウィンドウ クラスの詳細については、次を参照してください。[ウィンドウ クラス](https://msdn.microsoft.com/library/windows/desktop/ms632596)Windows SDK に含まれています。  
   
  ATL でのウィンドウの使用に関する詳細については、記事を参照してください。 [ATL ウィンドウ クラス](../../atl/atl-window-classes.md)します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlwin.h  
   
 ##  <a name="m_atom"></a>  CWndClassInfo::m_atom  
@@ -138,7 +138,7 @@ TCHAR m_szAutoName[13];
  `CWndClassInfo` 使用して`m_szAutoName`NULL が渡される場合にのみ、`WndClassName`パラメーターを[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)、[場合は](window-class-macros.md#declare_wnd_class_ex)または[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass). ウィンドウ クラスが登録されているときに、ATL は名前を作成します。  
   
 ##  <a name="m_wc"></a>  CWndClassInfo::m_wc  
- ウィンドウ クラスの情報の保持、 [WNDCLASSEX](http://msdn.microsoft.com/library/windows/desktop/ms633577)構造体。  
+ ウィンドウ クラスの情報の保持、 [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577)構造体。  
   
 ```
 WNDCLASSEX m_wc;

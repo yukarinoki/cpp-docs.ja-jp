@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 004da50bf8d688f1d7b0432e5196094b878870cf
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 43a8851d11e6113d52b2ad128b1ff41e66c1ad12
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955008"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223236"
 ---
 # <a name="sample-container-class"></a>サンプル コンテナー クラス
 
@@ -34,7 +34,7 @@ ms.locfileid: "38955008"
 
 - 場合、式`~Ty`例外をスローするには、コンテナー オブジェクトの結果の状態が定義されていません。
 
-- コンテナーがアロケーター オブジェクトを格納する場合*al*、および*al*以外への呼び出しの結果として例外をスローします * al ***.allocate**コンテナーの結果の状態オブジェクトは定義されません。
+- コンテナーがアロケーター オブジェクトを格納する場合*al*、および*al*以外への呼び出しの結果として例外をスローします`al.allocate`、コンテナー オブジェクトの結果の状態が定義されていません。
 
 - コンテナーが被制御シーケンスの順序付け方法を指定する関数オブジェクト *comp* を格納し、*comp* がいずれかの例外をスローする場合、コンテナー オブジェクトの結果の状態は未定義です。
 
@@ -80,7 +80,7 @@ C++ 標準に従って、C++ 標準ライブラリで定義されたコンテナ
 
 - 型`Alloc::pointer`は同じである必要はありません`Ty *`します。 (ポインターには、クラスを指定できます。)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー**: \<sample container>
 

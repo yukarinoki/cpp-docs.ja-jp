@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7aad2093ecc9511c3b15f68963b496130bf3c3f
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 62ed04d8e54e4bf107ae12b9a4165b663c9d10d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882112"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203872"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>CComCachedTearOffObject クラス
-このクラスは実装[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)ティアオフ インターフェイス。  
+このクラスは実装[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)ティアオフ インターフェイス。  
   
 ## <a name="syntax"></a>構文  
   
@@ -76,7 +76,7 @@ public CComObjectRootEx<contained
 |[CComCachedTearOffObject::m_contained](#m_contained)|A`CComContainedObject`ティアオフ クラスから派生したオブジェクト (クラス`contained`)。|  
   
 ## <a name="remarks"></a>Remarks  
- `CComCachedTearOffObject` 実装[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)ティアオフ インターフェイス。 このクラスとは異なります`CComTearOffObject`で`CComCachedTearOffObject`独自`IUnknown`所有者オブジェクトの別、 `IUnknown` (所有者は、ティアオフが作成される対象のオブジェクト)。 `CComCachedTearOffObject` 独自に維持で参照カウントの`IUnknown`し、参照カウントがゼロ自体を削除します。 ただし、そのティアオフのいずれかを照会する場合は、インターフェイス、所有者オブジェクトの参照カウント`IUnknown`が増分されます。  
+ `CComCachedTearOffObject` 実装[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)ティアオフ インターフェイス。 このクラスとは異なります`CComTearOffObject`で`CComCachedTearOffObject`独自`IUnknown`所有者オブジェクトの別、 `IUnknown` (所有者は、ティアオフが作成される対象のオブジェクト)。 `CComCachedTearOffObject` 独自に維持で参照カウントの`IUnknown`し、参照カウントがゼロ自体を削除します。 ただし、そのティアオフのいずれかを照会する場合は、インターフェイス、所有者オブジェクトの参照カウント`IUnknown`が増分されます。  
   
  場合、`CComCachedTearOffObject`オブジェクト、ティアオフを実装することを既にインスタンス化、およびティアオフ インターフェイスは、ここでも、同じクエリ`CComCachedTearOffObject`オブジェクトが再利用します。 これに対して、ティアオフ インターフェイスによって実装を`CComTearOffObject`、所有者オブジェクトを通じてをもう一度照会別`CComTearOffObject`がインスタンス化されます。  
   
@@ -91,7 +91,7 @@ public CComObjectRootEx<contained
   
  `CComCachedTearOffObject`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlcom.h  
   
 ##  <a name="addref"></a>  CComCachedTearOffObject::AddRef  

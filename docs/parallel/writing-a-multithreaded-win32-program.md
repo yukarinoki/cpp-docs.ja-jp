@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 266bb7aa664489ee23c39554ebc91d1f99336f7e
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 98abce752ca02e40be68787d06fa8d4c17ce3e4b
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42539054"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131204"
 ---
 # <a name="writing-a-multithreaded-win32-program"></a>マルチスレッド Win32 プログラムの作成
 複数のスレッドを使用してプログラムを記述するときに、その動作を調整する必要がありますと[プログラムのリソースの使用](#_core_sharing_common_resources_between_threads)します。 各スレッドが受け取っていることを確認することも必要[独自のスタック](#_core_thread_stacks)します。  
@@ -37,7 +37,7 @@ ms.locfileid: "42539054"
 ##  <a name="_core_sharing_common_resources_between_threads"></a> スレッド間でのリソースの共有  
   
 > [!NOTE]
->  MFC の観点から詳細については、次を参照してください。[マルチ スレッド: プログラミングのヒント](../parallel/multithreading-programming-tips.md)と[マルチ スレッド: 同期クラスを使用するときに](../parallel/multithreading-when-to-use-the-synchronization-classes.md)します。  
+>  MFC の観点から詳細については、次を参照してください。[マルチ スレッド: プログラミングのヒント](multithreading-programming-tips.md)と[マルチ スレッド: 同期クラスを使用するときに](multithreading-when-to-use-the-synchronization-classes.md)します。  
   
 各スレッドは、専用のスタックと CPU レジスタの専用コピーを持っています。 ファイル、静的データ、ヒープ メモリなどのリソースは、プロセス内のすべてのスレッドで共有します。 これらの共通リソースを使うスレッドは、同期をとる必要があります。 Win32 には、セマフォや、クリティカル セクション、イベント、ミューテックスなど、リソースの同期をとるためにさまざまな方法が用意されています。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "42539054"
   
 ミュー テックス (略*mut*ual *ex*clusion) は 1 つ別の非同期的に実行されているスレッドやプロセス間の通信方法です。 この通信は、複数のスレッドやプロセスの処理を調整する一般的な方法で、共有リソースをロックまたはロックを解除することにより共有リソースへのアクセスを制御します。 これを解決する*x*、*y*座標の更新の問題、更新スレッドは、データ構造が、更新プログラムを実行する前に、使用中であることを示すミュー テックスを設定します。 両方の座標が更新されたら、ミューテックスを解除します。 表示スレッドは、ミューテックスが解除されるのを待ってから画面を更新する必要があります。 この場合プロセスはブロックされて、ミューテックスが解除されるまで先へ進むことができないので、ミューテックスを待つこのプロセスは、ミューテックスによりブロッキングされているということがあります。  
   
-示した Bounce.c プログラム[マルチ スレッドの C サンプル プログラム](../parallel/sample-multithread-c-program.md)名前付きミュー テックスを使用`ScreenMutex`画面の更新を調整します。 表示スレッドの 1 つは、画面を作成する準備が毎回呼び出す`WaitForSingleObject`を識別するハンドルで`ScreenMutex`と定数の無限を示す、`WaitForSingleObject`呼び出しがタイムアウトしない、ミュー テックスでブロックする必要があります。`ScreenMutex` が解除されると、待機している関数がミューテックスをセットして、ほかのスレッドが表示に干渉できないようにしてスレッドの実行を続けます。 ScreenMutex が解除されない場合、スレッドはミューテックスが解除されるまでブロックされます。 呼び出して、ミュー テックスを解放スレッドには、表示の更新が完了すると、`ReleaseMutex`します。  
+示した Bounce.c プログラム[マルチ スレッドの C サンプル プログラム](sample-multithread-c-program.md)名前付きミュー テックスを使用`ScreenMutex`画面の更新を調整します。 表示スレッドの 1 つは、画面を作成する準備が毎回呼び出す`WaitForSingleObject`を識別するハンドルで`ScreenMutex`と定数の無限を示す、`WaitForSingleObject`呼び出しがタイムアウトしない、ミュー テックスでブロックする必要があります。`ScreenMutex` が解除されると、待機している関数がミューテックスをセットして、ほかのスレッドが表示に干渉できないようにしてスレッドの実行を続けます。 ScreenMutex が解除されない場合、スレッドはミューテックスが解除されるまでブロックされます。 呼び出して、ミュー テックスを解放スレッドには、表示の更新が完了すると、`ReleaseMutex`します。  
   
 画面表示と静的データは、注意深く管理する必要がある 2 つのリソース例にすぎません。 たとえば、プログラムには、同じファイルにアクセスする複数のスレッドが存在する場合があります。 別のスレッドがファイル ポインターを移動した可能性があるので、それぞれのスレッドは、読み書きする前にファイル ポインターをリセットする必要があります。 さらに、各スレッドは、ポインターに位置をセットしてからファイルにアクセスするまでの間にプリエンプトされないようにする必要があります。 これらのスレッドで各ファイルのアクセスにより、ファイルへのアクセスを調整する、セマフォを使用する必要があります`WaitForSingleObject`と`ReleaseMutex`呼び出し。 この手法を説明するコード例を次に示します。  
   
@@ -68,8 +68,8 @@ C のランタイム ライブラリまたは Win32 API を呼び出すスレッ
   
 スレッドはそれぞれ自分自身のスタックを持っているので、できる限り静的データを使わないことで、データ項目に対して起こりうる衝突を避けることができます。 スレッドが持つ各データに対しては、すべて auto 自動スタック変数を使うようにプログラムをデザインします。 Bounce.c プログラムのグローバル変数は、ミューテックスか、初期化後に変化しない変数のいずれかです。  
   
-Win32 には、スレッドの個別データを格納するために、スレッド ローカル ストレージ (TLS: Thread-Local Storage) も用意されています。 詳細については、次を参照してください。[スレッド ローカル ストレージ (TLS)](../parallel/thread-local-storage-tls.md)します。  
+Win32 には、スレッドの個別データを格納するために、スレッド ローカル ストレージ (TLS: Thread-Local Storage) も用意されています。 詳細については、次を参照してください。[スレッド ローカル ストレージ (TLS)](thread-local-storage-tls.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  
-[C と Win32 を使用するマルチスレッド](../parallel/multithreading-with-c-and-win32.md)
+[C と Win32 を使用するマルチスレッド](multithreading-with-c-and-win32.md)

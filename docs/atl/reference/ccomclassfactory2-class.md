@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42ee8ab5fe6e410cf812c7c147f4673803b81903
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fe4ddaab8de2369c7cb1b31132f686bc6037676b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880191"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205526"
 ---
 # <a name="ccomclassfactory2-class"></a>CComClassFactory2 クラス
-このクラスは、実装、 [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720)インターフェイス。  
+このクラスは、実装、 [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2)インターフェイス。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,11 +45,11 @@ class CComClassFactory2 : public IClassFactory2,
  *ライセンス*  
  次の静的関数を実装するクラス。  
   
-- **静的な BOOL VerifyLicenseKey (BSTR** `bstr` **)。**  
+- `static BOOL VerifyLicenseKey( BSTR bstr );`  
   
-- **静的な BOOL GetLicenseKey (DWORD** `dwReserved` **、BSTR\***  `pBstr` **)。**  
+- `static BOOL GetLicenseKey( DWORD dwReserved, BSTR * pBstr );`  
   
-- **静的な BOOL IsLicenseValid ();**  
+- `static BOOL IsLicenseValid( );`  
   
 ## <a name="members"></a>メンバー  
   
@@ -64,7 +64,7 @@ class CComClassFactory2 : public IClassFactory2,
 |[CComClassFactory2::RequestLicKey](#requestlickey)|作成して、ライセンス キーを返します。|  
   
 ## <a name="remarks"></a>Remarks  
- `CComClassFactory2` 実装して、 [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720)インターフェイスで、拡張機能の[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)します。 `IClassFactory2` コントロール オブジェクトのライセンスで作成します。 ライセンスされたコンピューターで実行するクラス ファクトリと、実行時のライセンス キーを提供できます。 このライセンス キーにより、完全なマシンのライセンスが存在しない場合は、オブジェクトをインスタンス化するアプリケーションです。  
+ `CComClassFactory2` 実装して、 [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2)インターフェイスで、拡張機能の[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)します。 `IClassFactory2` コントロール オブジェクトのライセンスで作成します。 ライセンスされたコンピューターで実行するクラス ファクトリと、実行時のライセンス キーを提供できます。 このライセンス キーにより、完全なマシンのライセンスが存在しない場合は、オブジェクトをインスタンス化するアプリケーションです。  
   
  ATL オブジェクトから派生することによって、クラス ファクトリを取得する通常[CComCoClass](../../atl/reference/ccomcoclass-class.md)します。 このクラスには、マクロが含まれています。 [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)、宣言する[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)既定のクラス ファクトリとして。 使用する`CComClassFactory2`、指定、 [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2)オブジェクトのクラス定義でマクロ。 例えば:  
   
@@ -87,7 +87,7 @@ class CComClassFactory2 : public IClassFactory2,
   
  `CComClassFactory2`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlcom.h  
   
 ##  <a name="createinstance"></a>  CComClassFactory2::CreateInstance  
@@ -149,7 +149,7 @@ STDMETHOD(CreateInstanceLic)(
  ライセンス キーを使用して、取得できます[RequestLicKey](#requestlickey)します。 ライセンスのないマシン上でオブジェクトを作成するために呼び出す必要がある`CreateInstanceLic`します。  
   
 ##  <a name="getlicinfo"></a>  CComClassFactory2::GetLicInfo  
- 入力、 [LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590)クラス ファクトリを記述する情報の構造体の機能のライセンスします。  
+ 入力、 [LICINFO](/windows/desktop/api/ocidl/ns-ocidl-taglicinfo)クラス ファクトリを記述する情報の構造体の機能のライセンスします。  
   
 ```
 STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
@@ -185,7 +185,7 @@ STDMETHOD(LockServer)(BOOL fLock);
  呼び出す`LockServer`により、クライアントは複数のオブジェクトをすばやく作成できるように、クラス ファクトリを保持します。  
   
 ##  <a name="requestlickey"></a>  CComClassFactory2::RequestLicKey  
- 作成しているライセンス キーを返します、`fRuntimeKeyAvail`のメンバー、 [LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590)構造は TRUE になります。  
+ 作成しているライセンス キーを返します、`fRuntimeKeyAvail`のメンバー、 [LICINFO](/windows/desktop/api/ocidl/ns-ocidl-taglicinfo)構造は TRUE になります。  
   
 ```
 STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);

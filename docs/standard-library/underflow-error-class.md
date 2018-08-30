@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8e45320c1dd0a3358d19bf3bd0b83a56a841723
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: b4d5dcf640e46bfb3a0ac6e9b29dbaff36f4b868
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027051"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204408"
 ---
 # <a name="underflowerror-class"></a>underflow_error クラス
 
@@ -69,7 +69,7 @@ Type: class std::underflow_error
 *\
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<stdexcept>
 
@@ -77,6 +77,6 @@ Type: class std::underflow_error
 
 ## <a name="see-also"></a>関連項目
 
-[\<stdexcept > メンバー](http://msdn.microsoft.com/7b6b0a73-916e-44aa-9a3f-f5b6b3ce98e6)<br/>
+[\<stdexcept > メンバー](https://msdn.microsoft.com/7b6b0a73-916e-44aa-9a3f-f5b6b3ce98e6)<br/>
 [runtime_error クラス](../standard-library/runtime-error-class.md)<br/>
 [C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

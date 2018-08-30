@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbcabd0659e98d25cbe28ce233b89dccc3585d61
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 15719f93fbcfde8e6684373f99c924132af9d288
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336187"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215441"
 ---
 # <a name="cdaoexception-class"></a>CDaoException クラス
 データ アクセス オブジェクト (DAO: Data Accsess Object) を基にした MFC データベース クラスから発生する例外条件を表します。  
@@ -88,7 +88,7 @@ class CDaoException : public CException
   
  `CDaoException`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdao.h  
   
 ##  <a name="cdaoexception"></a>  CDaoException::CDaoException  
@@ -201,7 +201,7 @@ void GetErrorInfo(int nIndex);
 ### <a name="remarks"></a>Remarks  
  これは、OLE コードです。 ほとんどの場合、MFC または DAO エラーの詳細については、他の使用可能なため、この値を使用する必要があります頻度の低い`CDaoException`データ メンバー。  
   
- SCODE については、トピックを参照してください。 [OLE エラー コードの構造](http://msdn.microsoft.com/library/windows/desktop/ms690088)Windows SDK に含まれています。 SCODE のデータ型は、HRESULT のデータ型にマップします。  
+ SCODE については、トピックを参照してください。 [OLE エラー コードの構造](/windows/desktop/com/structure-of-com-error-codes)Windows SDK に含まれています。 SCODE のデータ型は、HRESULT のデータ型にマップします。  
   
 ## <a name="see-also"></a>関連項目  
  [CException クラス](../../mfc/reference/cexception-class.md)   

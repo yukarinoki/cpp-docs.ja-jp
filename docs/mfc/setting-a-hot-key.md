@@ -1,5 +1,5 @@
 ---
-title: ホット キーの設定 |Microsoft ドキュメント
+title: ホット キーの設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3987ddee98ae35e02a181e38cd71f181801aeb61
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 254d7532b83a4f30c0029b2488bb0b2111cce31d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379646"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219398"
 ---
 # <a name="setting-a-hot-key"></a>ホット キーの設定
-アプリケーションは、ホット キーによって提供される情報を使用して ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) 2 つの方法のいずれかで制御します。  
+アプリケーションは、ホット キーによって提供される情報を使用できます ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) 2 つの方法のいずれかで制御します。  
   
--   送信することによって、子ウィンドウ以外のウィンドウをアクティブ化するためのグローバル ホット キーを設定、 [WM_SETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646284)メッセージをウィンドウをアクティブ化します。  
+-   送信することによって、子ウィンドウ以外のウィンドウをアクティブ化するためのグローバル ホット キーを設定、 [WM_SETHOTKEY](/windows/desktop/inputdev/wm-sethotkey)メッセージ ウィンドウをアクティブ化します。  
   
--   Windows の関数を呼び出すことによって、スレッド固有のホット キーを設定[RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309)です。  
+-   Windows 関数を呼び出すことによって、スレッド固有のホット キーを設定[RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309)します。  
   
 ## <a name="see-also"></a>関連項目  
- [CHotKeyCtrl の使い方](../mfc/using-chotkeyctrl.md)   
+ [Chotkeyctrl の使い方](../mfc/using-chotkeyctrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 

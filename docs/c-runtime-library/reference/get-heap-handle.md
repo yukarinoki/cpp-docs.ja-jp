@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a472a100a03f8a03947eedb3aa8dc04edadb588
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 238fab4ec2d900c8183c018f3cb03fe6dc1fb2f5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396057"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202235"
 ---
 # <a name="getheaphandle"></a>_get_heap_handle
 
@@ -56,13 +56,13 @@ intptr_t _get_heap_handle( void );
 
 C ランタイム システムで使用される Win32 ヒープのハンドルを返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-[HeapSetInformation](http://msdn.microsoft.com/library/windows/desktop/aa366705) を呼び出し、CRT ヒープの Low Fragmentation Heap を有効にする場合は、この関数を使用します。
+[HeapSetInformation](/windows/desktop/api/heapapi/nf-heapapi-heapsetinformation) を呼び出し、CRT ヒープの Low Fragmentation Heap を有効にする場合は、この関数を使用します。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_get_heap_handle**|\<malloc.h>|
 

@@ -1,5 +1,5 @@
 ---
-title: CAnimationVariable クラス |Microsoft ドキュメント
+title: CAnimationVariable クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 207adbba4635b80ba7b60af53f920b1af376e93d
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 964d5691baf47adc51663d2de19c58ee6dfe0cc8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36957300"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216911"
 ---
 # <a name="canimationvariable-class"></a>CAnimationVariable クラス
 アニメーション変数を表します。  
@@ -84,12 +84,12 @@ class CAnimationVariable;
 |名前|説明|  
 |----------|-----------------|  
 |[CAnimationVariable::AddTransition](#addtransition)|遷移を追加します。|  
-|[CAnimationVariable::ApplyTransitions](#applytransitions)|ストーリー ボードには、内部のリストから、切り替え効果を追加します。|  
+|[CAnimationVariable::ApplyTransitions](#applytransitions)|ストーリー ボードを内部リストから、遷移を追加します。|  
 |[CAnimationVariable::ClearTransitions](#cleartransitions)|遷移をクリアします。|  
-|[CAnimationVariable::Create](#create)|基になるアニメーション変数 COM オブジェクトを作成します。|  
-|[CAnimationVariable::CreateTransitions](#createtransitions)|このアニメーションの変数に適用されるすべての遷移を作成します。|  
+|[CAnimationVariable::Create](#create)|基になる、アニメーション変数 COM オブジェクトを作成します。|  
+|[CAnimationVariable::CreateTransitions](#createtransitions)|このアニメーション変数に適用されるすべての遷移を作成します。|  
 |[CAnimationVariable::EnableIntegerValueChangedEvent](#enableintegervaluechangedevent)|有効または IntegerValueChanged イベントを無効にします。|  
-|[CAnimationVariable::EnableValueChangedEvent](#enablevaluechangedevent)|有効または ValueChanged イベントを無効にします。|  
+|[CAnimationVariable::EnableValueChangedEvent](#enablevaluechangedevent)|有効または、ValueChanged イベントを無効にします。|  
 |[CAnimationVariable::GetDefaultValue](#getdefaultvalue)|既定値を返します。|  
 |[CAnimationVariable::GetParentAnimationObject](#getparentanimationobject)|親を返しますのアニメーション オブジェクト。|  
 |[CAnimationVariable::GetValue](#getvalue)|オーバーロードされます。 アニメーション変数の現在の値を返します。|  
@@ -106,7 +106,7 @@ class CAnimationVariable;
   
 |名前|説明|  
 |----------|-----------------|  
-|[CAnimationVariable::m_bAutodestroyTransitions](#m_bautodestroytransitions)|関連する transition オブジェクトを削除するかどうかを指定します。|  
+|[CAnimationVariable::m_bAutodestroyTransitions](#m_bautodestroytransitions)|関連の transition オブジェクトを削除するかどうかを指定します。|  
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
@@ -115,15 +115,15 @@ class CAnimationVariable;
 |[CAnimationVariable::m_dblDefaultValue](#m_dbldefaultvalue)|IUIAnimationVariable に反映される既定の値を指定します。|  
 |[CAnimationVariable::m_lstTransitions](#m_lsttransitions)|このアニメーション変数をアニメーション化する遷移の一覧が含まれています。|  
 |[CAnimationVariable::m_pParentObject](#m_pparentobject)|このアニメーション変数をカプセル化するアニメーション オブジェクトへのポインター。|  
-|[CAnimationVariable::m_variable](#m_variable)|IUIAnimationVariable COM オブジェクトへのポインターを格納します。 COM オブジェクトは、まだ作成されていない場合、または作成に失敗した場合は NULL です。|  
+|[CAnimationVariable::m_variable](#m_variable)|IUIAnimationVariable COM オブジェクトへのポインターを格納します。 COM オブジェクトがまだ作成されていない場合、または作成に失敗した場合は NULL です。|  
   
 ## <a name="remarks"></a>Remarks  
- CAnimationVariable クラスは、IUIAnimationVariable COM オブジェクトをカプセル化します。 ストーリー ボードのアニメーションの変数に適用する遷移の一覧も保持します。 CAnimationVariable オブジェクトは、アプリケーション アニメーション化された値、ポイント、サイズ、色、および四角形で表すことができるアニメーション オブジェクトに埋め込まれます。  
+ CAnimationVariable クラスには、IUIAnimationVariable COM オブジェクトがカプセル化します。 ストーリー ボード アニメーション変数に適用する遷移の一覧も保持します。 CAnimationVariable オブジェクトは、アプリケーションをアニメーション化された値、ポイント、サイズ、色、および四角形で表すことができます、アニメーション オブジェクトに埋め込まれています。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CAnimationVariable`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxanimationcontroller.h  
   
 ##  <a name="_dtorcanimationvariable"></a>  CAnimationVariable:: ~ CAnimationVariable  
@@ -142,13 +142,13 @@ void AddTransition(CBaseTransition* pTransition);
   
 ### <a name="parameters"></a>パラメーター  
  *pTransition*  
- 追加する遷移へのポインター。  
+ 追加への移行へのポインター。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは切り替え効果をアニメーション変数に適用する遷移の内部リストに追加します。 アニメーションがスケジュールされているときに、この一覧をクリアする必要があります。  
+ このメソッドは、アニメーション変数に適用する遷移の内部リストに切り替え効果を追加します。 アニメーションがスケジュールされているときに、この一覧をクリアする必要があります。  
   
 ##  <a name="applytransitions"></a>  CAnimationVariable::ApplyTransitions  
- ストーリー ボードには、内部のリストから、切り替え効果を追加します。  
+ ストーリー ボードを内部リストから、遷移を追加します。  
   
 ```  
 void ApplyTransitions(
@@ -165,10 +165,10 @@ void ApplyTransitions(
  ストーリー ボードへのポインター。  
   
  *bDependOnKeyframes*  
- 場合は TRUE、このメソッドは、キーフレームに依存する切り替えを追加する必要があります。  
+ このメソッドは、キーフレームに依存する遷移を追加する必要がありますがある場合は TRUE。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、ストーリー ボードには、内部のリストから、切り替え効果を追加します。 呼び出されます、最上位レベルのコードから複数回せずキーフレームに依存してキーフレームに依存する切り替え効果を追加する切り替えを追加します。 基になるアニメーション変数の COM オブジェクトが作成されていない場合、このメソッドをこの段階で作成します。  
+ このメソッドは、ストーリー ボードを内部リストから、遷移を追加します。 呼び出されます、最上位レベルのコードから複数回のキーフレームに依存をキーフレームに依存する遷移を追加しない遷移を追加します。 基になるアニメーション変数の COM オブジェクトが作成されていない場合、このメソッドをこの段階で作成します。  
   
 ##  <a name="canimationvariable"></a>  CAnimationVariable::CAnimationVariable  
  アニメーション変数のオブジェクトを構築します。  
@@ -182,7 +182,7 @@ CAnimationVariable(DOUBLE dblDefaultValue = 0.0);
  既定値を指定します。  
   
 ### <a name="remarks"></a>Remarks  
- アニメーション変数オブジェクトを構築し、その既定値を設定します。 既定値は、変数がアニメーション化されていないか、またはアニメーション化することはできませんとに使用されます。  
+ アニメーション変数のオブジェクトを構築し、その既定値を設定します。 既定値は、変数がアニメーション化されないか、またはアニメーション化することはできませんと使用されます。  
   
 ##  <a name="cleartransitions"></a>  CAnimationVariable::ClearTransitions  
  遷移をクリアします。  
@@ -196,10 +196,10 @@ void ClearTransitions(BOOL bAutodestroy);
  このメソッドが transition オブジェクトを削除するかどうかを指定します。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、すべての遷移を遷移の内部の一覧から削除します。 BAutodestroy が true の場合、または、m_bAutodestroyTransitions が TRUE の場合、遷移は削除されます。 それ以外の場合、呼び出し元は、transition オブジェクトを解放する必要があります。  
+ このメソッドは、遷移の内部一覧から、すべての遷移を削除します。 BAutodestroy が true の場合、または m_bAutodestroyTransitions は TRUE、遷移は削除されます。 それ以外の場合、呼び出し元の transition オブジェクト割り当てを解除する必要があります。  
   
 ##  <a name="create"></a>  CAnimationVariable::Create  
- 基になるアニメーション変数 COM オブジェクトを作成します。  
+ 基になる、アニメーション変数 COM オブジェクトを作成します。  
   
 ```  
 virtual BOOL Create(IUIAnimationManager* pManager);
@@ -210,13 +210,13 @@ virtual BOOL Create(IUIAnimationManager* pManager);
  アニメーション マネージャーへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- アニメーション変数が作成された場合は TRUE。それ以外の場合は FALSE。  
+ アニメーション変数が作成された場合は TRUE。それ以外の場合は FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、基になるアニメーション変数の COM オブジェクトを作成し、その既定値を設定します。  
   
 ##  <a name="createtransitions"></a>  CAnimationVariable::CreateTransitions  
- このアニメーションの変数に適用されるすべての遷移を作成します。  
+ このアニメーション変数に適用されるすべての遷移を作成します。  
   
 ```  
 BOOL CreateTransitions(
@@ -226,13 +226,13 @@ BOOL CreateTransitions(
   
 ### <a name="parameters"></a>パラメーター  
 *pLibrary*  
- ポインター、 [IUIAnimationTransitionLibrary インターフェイス](https://msdn.microsoft.com/library/windows/desktop/dd371897)、標準的な遷移のライブラリを定義します。  
+ ポインター、 [IUIAnimationTransitionLibrary インターフェイス](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)、標準的な遷移のライブラリを定義します。  
   
 ### <a name="return-value"></a>戻り値  
- 移行が正常に作成された場合は TRUE。それ以外の場合は FALSE。  
+ 遷移が正常に作成された場合は TRUE。それ以外の場合は FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは遷移の変数の内部リストに追加されている遷移を作成する必要があるときにフレームワークによって呼び出されます。  
+ このメソッドは、遷移の変数の内部一覧に追加された遷移を作成する必要があるときに、フレームワークによって呼び出されます。  
   
 ##  <a name="enableintegervaluechangedevent"></a>  CAnimationVariable::EnableIntegerValueChangedEvent  
  有効または IntegerValueChanged イベントを無効にします。  
@@ -248,13 +248,13 @@ void EnableIntegerValueChangedEvent (
  親のコント ローラーへのポインター。  
   
  *bEnable*  
- TRUE - 有効にするイベントを FALSE には、イベントを無効にします。  
+ TRUE - FALSE - 無効にするイベントのイベントを有効にします。  
   
 ### <a name="remarks"></a>Remarks  
- ValueChanged イベントを有効にすると、フレームワークは CAnimationController::OnAnimationIntegerValueChanged 仮想メソッドを呼び出します。 このイベントを処理するために CAnimationController から派生したクラスでオーバーライドする必要があります。 アニメーション変数の整数値が変更されるたびに、このメソッドが呼び出されます。  
+ ValueChanged イベントを有効にすると、フレームワークは CAnimationController::OnAnimationIntegerValueChanged の仮想メソッドを呼び出します。 このイベントを処理するには、CAnimationController から派生したクラスでオーバーライドする必要があります。 このメソッドは、アニメーション変数の整数値が変更されるたびに呼び出されます。  
   
 ##  <a name="enablevaluechangedevent"></a>  CAnimationVariable::EnableValueChangedEvent  
- 有効または ValueChanged イベントを無効にします。  
+ 有効または、ValueChanged イベントを無効にします。  
   
 ```  
 void EnableValueChangedEvent (
@@ -267,10 +267,10 @@ void EnableValueChangedEvent (
  親のコント ローラーへのポインター。  
   
  *bEnable*  
- TRUE - 有効にするイベントを FALSE には、イベントを無効にします。  
+ TRUE - FALSE - 無効にするイベントのイベントを有効にします。  
   
 ### <a name="remarks"></a>Remarks  
- ValueChanged イベントを有効にすると、フレームワークは CAnimationController::OnAnimationValueChanged 仮想メソッドを呼び出します。 このイベントを処理するために CAnimationController から派生したクラスでオーバーライドする必要があります。 アニメーション変数の値が変更されるたびに、このメソッドが呼び出されます。  
+ ValueChanged イベントを有効にすると、フレームワークは CAnimationController::OnAnimationValueChanged の仮想メソッドを呼び出します。 このイベントを処理するには、CAnimationController から派生したクラスでオーバーライドする必要があります。 アニメーション変数の値が変更されるたびに、このメソッドが呼び出されます。  
   
 ##  <a name="getdefaultvalue"></a>  CAnimationVariable::GetDefaultValue  
  既定値を返します。  
@@ -283,7 +283,7 @@ DOUBLE GetDefaultValue() const;
  既定値。  
   
 ### <a name="remarks"></a>Remarks  
- アニメーション変数の既定値を取得するのにには、この関数を使用します。 コンス トラクターまたは SetDefaultValue メソッドによって、既定値を設定できます。  
+ この関数を使用すると、アニメーション変数の既定値を取得できます。 SetDefaultValue メソッドまたはコンス トラクターで、既定値を設定できます。  
   
 ##  <a name="getparentanimationobject"></a>  CAnimationVariable::GetParentAnimationObject  
  親を返しますのアニメーション オブジェクト。  
@@ -293,10 +293,10 @@ CAnimationBaseObject* GetParentAnimationObject();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- それ以外の場合のリレーションシップが確立された場合に、親アニメーション オブジェクトへのポインターが NULL です。  
+ それ以外の場合のリレーションシップが確立されている場合、親アニメーション オブジェクトへのポインターが NULL です。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、親のアニメーション オブジェクト (コンテナー) へのポインターを取得する呼び出すことができます。  
+ 親のアニメーション オブジェクト (コンテナー) へのポインターを取得するこのメソッドを呼び出すことができます。  
   
 ##  <a name="getvalue"></a>  CAnimationVariable::GetValue  
  アニメーション変数の現在の値を返します。  
@@ -314,7 +314,7 @@ HRESULT GetValue(INT32& nValue);
  アニメーション変数の現在の値。  
   
 ### <a name="return-value"></a>戻り値  
- 値が正常に取得された、またはアニメーションの基になる変数が作成されていない場合は S_OK です。 それ以外の場合の HRESULT エラー コード。  
+ 値が正常に取得されたか、基になるアニメーション変数が作成されていない場合は s_ok を返します。 それ以外の HRESULT エラー コード。  
   
 ### <a name="remarks"></a>Remarks  
  アニメーション変数の現在の値を取得するこのメソッドを呼び出すことができます。 基になる COM オブジェクトが作成されていない場合 dblValue で関数が戻るときに、既定値が含まれます。  
@@ -327,20 +327,20 @@ IUIAnimationVariable* GetVariable();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- IUIAnimationVariable COM オブジェクト、またはアニメーション変数が作成されていないまたは作成できない場合は NULL に有効なポインター。  
+ IUIAnimationVariable COM オブジェクト、またはアニメーション変数が作成されていない、または作成できない場合は NULL に有効なポインター。  
   
 ### <a name="remarks"></a>Remarks  
  基になる IUIAnimationVariable COM オブジェクトにアクセスし、必要な場合は、そのメソッドを直接呼び出すには、この関数を使用します。  
   
 ##  <a name="m_bautodestroytransitions"></a>  CAnimationVariable::m_bAutodestroyTransitions  
- 関連する transition オブジェクトを削除するかどうかを指定します。  
+ 関連の transition オブジェクトを削除するかどうかを指定します。  
   
 ```  
 BOOL m_bAutodestroyTransitions;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 遷移の内部の一覧からが削除されるときに、transition オブジェクトの削除を強制する場合は true には、この値を設定します。 この値が FALSE の場合は、アプリケーションを呼び出すことにより、遷移を削除してください。 遷移の一覧が常に、アニメーションがスケジュールされている後にクリアされます。 既定値は FALSE です。  
+ 遷移の内部リストからが削除されるときに、transition オブジェクトの削除を強制する場合は true には、この値を設定します。 この値が FALSE の場合は、アプリケーションを呼び出すことによって、遷移を削除してください。 アニメーションがスケジュールされている後の遷移の一覧は常にクリアされます。 既定値は FALSE です。  
   
 ##  <a name="m_dbldefaultvalue"></a>  CAnimationVariable::m_dblDefaultValue  
  IUIAnimationVariable に反映される既定の値を指定します。  
@@ -364,7 +364,7 @@ CAnimationBaseObject* m_pParentObject;
 ```  
   
 ##  <a name="m_variable"></a>  CAnimationVariable::m_variable  
- IUIAnimationVariable COM オブジェクトへのポインターを格納します。 COM オブジェクトは、まだ作成されていない場合、または作成に失敗した場合は NULL です。  
+ IUIAnimationVariable COM オブジェクトへのポインターを格納します。 COM オブジェクトがまだ作成されていない場合、または作成に失敗した場合は NULL です。  
   
 ```  
 ATL::CComPtr<IUIAnimationVariable> m_variable;  
@@ -382,7 +382,7 @@ void SetDefaultValue(DOUBLE dblDefaultValue);
  新しい既定値を指定します。  
   
 ### <a name="remarks"></a>Remarks  
- 既定値にリセットするのにには、このメソッドを使用します。 このメソッドは、解放、内部 IUIAnimationVariable COM オブジェクト、したがってアニメーション変数を作成し直すときに、基になる COM オブジェクトは、新しい既定値を取得します。 アニメーション変数を表す COM オブジェクトを作成していない場合、または変数がアニメーション化されていない場合、GetValue によって既定値が返されます。  
+ 既定値にリセットするのにには、このメソッドを使用します。 このメソッド リリース内部 IUIAnimationVariable COM オブジェクト、したがってアニメーション変数が再作成されるを基になる COM オブジェクトが新しい既定値を取得します。 アニメーション変数を表す COM オブジェクトが作成されていない場合、または変数がアニメーション化されていない場合、GetValue によって既定値が返されます。  
   
 ##  <a name="setparentanimationobject"></a>  CAnimationVariable::SetParentAnimationObject  
  アニメーション変数とアニメーション オブジェクト間のリレーションシップを設定します。  

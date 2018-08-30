@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17da583b770fcab1d682868c38c04e0aa97155dd
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 348f25718fe22e056da5097bca0d67013a56c4c8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026434"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203150"
 ---
 # <a name="cmemorystate-structure"></a>CMemoryState 構造体
 プログラムでのメモリ リークを検出する便利な手段を提供します。  
@@ -78,7 +78,7 @@ struct CMemoryState
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CMemoryState`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afx.h  
   
 ##  <a name="checkpoint"></a>  Cmemorystate::checkpoint  
@@ -172,7 +172,7 @@ void DumpStatistics() const;
   
 -   現在 (バイト) をプログラムによって使用される合計メモリ  
   
- 無料のブロックは、ブロックが割り当て解除が遅延場合数`afxMemDF`に設定された`delayFreeMemDF`します。 詳細については、次を参照してください。 [afxMemDF](diagnostic-services.md#afxmemdf)、"MFC マクロとグローバル"セクションでします。 参照してください[デバッグ ヒープ ブロック型](http://msdn.microsoft.com/db2e7f62-0679-4b39-a23f-26f2c2f407c5)の詳細については、これらの種類をブロックするのです。  
+ 無料のブロックは、ブロックが割り当て解除が遅延場合数`afxMemDF`に設定された`delayFreeMemDF`します。 詳細については、次を参照してください。 [afxMemDF](diagnostic-services.md#afxmemdf)、"MFC マクロとグローバル"セクションでします。 参照してください[デバッグ ヒープ ブロック型](https://msdn.microsoft.com/db2e7f62-0679-4b39-a23f-26f2c2f407c5)の詳細については、これらの種類をブロックするのです。  
   
 ### <a name="example"></a>例  
   次のコードを配置する必要があります*projname*App.cpp します。 次のグローバル変数を定義します。  

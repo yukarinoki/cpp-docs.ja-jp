@@ -1,5 +1,5 @@
 ---
-title: C++ でのラムダ式の constexpr |Microsoft Docs
+title: C++ では constexpr ラムダ式 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/19/2017
 ms.technology:
@@ -14,14 +14,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b78fa3de7777ffc6702902cf967a405595caf12f
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1b4636333861cc853130a777956ca4b88114f3c6
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408204"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131400"
 ---
-# <a name="constexpr-lambda-expressions-in-c"></a>C++ でのラムダ式の constexpr
+# <a name="constexpr-lambda-expressions-in-c"></a>C++ では constexpr ラムダ式
 **Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + + 17](../build/reference/std-specify-language-standard-version.md)): としてラムダ式を宣言することがあります**constexpr**か指定する定数式で使用時にそれぞれの初期化キャプチャまたは導入されるデータ メンバーは、定数式内で許可されます。  
 
 ```cpp

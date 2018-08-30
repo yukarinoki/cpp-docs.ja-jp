@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27dd0ad9bb64c8e708b228ec13a9fbf0e33fa589
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 85332341e1a229ce5110153c0ad6195ef0ad42c4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884117"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208176"
 ---
 # <a name="ccomobjectnolock-class"></a>CComObjectNoLock クラス
 このクラスは実装`IUnknown`の集約オブジェクトは、モジュールのロック数をコンス トラクターでインクリメントされません。  
@@ -60,7 +60,7 @@ class CComObjectNoLock : public Base
 |[CComObjectNoLock::Release](#release)|オブジェクトの参照カウントをデクリメントします。|  
   
 ## <a name="remarks"></a>Remarks  
- `CComObjectNoLock` 似ています[CComObject](../../atl/reference/ccomobject-class.md)実装で[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)非集約オブジェクトです。 ただし、`CComObjectNoLock`増分値はモジュールのロックは、コンス トラクター内で数。  
+ `CComObjectNoLock` 似ています[CComObject](../../atl/reference/ccomobject-class.md)実装で[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)非集約オブジェクトです。 ただし、`CComObjectNoLock`増分値はモジュールのロックは、コンス トラクター内で数。  
   
  ATL を使用して`CComObjectNoLock`のクラス ファクトリを内部的にします。 一般に、このクラスを直接使用するはありません。  
   
@@ -69,7 +69,7 @@ class CComObjectNoLock : public Base
   
  `CComObjectNoLock`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlcom.h  
   
 ##  <a name="addref"></a>  CComObjectNoLock::AddRef  
@@ -90,8 +90,8 @@ CComObjectNoLock(void* = NULL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- **void\***  
- [in]この名前のないパラメーターは使用されません。 他の対称性が存在する **ほか * * * XXX*`Object`*XXX*コンス トラクター。  
+ <em>void\*</em>  
+ [in]この名前のないパラメーターは使用されません。 他の対称性が存在する`CComXXXObjectXXX`コンス トラクター。  
   
 ##  <a name="dtor"></a>  CComObjectNoLock:: ~ CComObjectNoLock  
  デストラクターです。  

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af604ac6afce91dc865cfbb465e8c27acea8f775
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 9d4c752dc2a139d1e0bac38d9c307154cdc32fe6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885322"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196320"
 ---
 # <a name="cautorevertimpersonation-class"></a>CAutoRevertImpersonation クラス
 このクラスは、 [CAccessToken](../../atl/reference/caccesstoken-class.md)オブジェクトがスコープ外になったときにこの状態にします。  
@@ -55,13 +55,13 @@ class CAutoRevertImpersonation
 |[CAutoRevertImpersonation::GetAccessToken](#getaccesstoken)|このオブジェクトに関連付けられた現在のトークンへのアクセスを取得します。|  
   
 ## <a name="remarks"></a>Remarks  
- [アクセス トークン](http://msdn.microsoft.com/library/windows/desktop/aa374909)プロセスまたはスレッドのセキュリティ コンテキストを示し、Windows NT または Windows 2000 のシステムにログオンしている各ユーザーに割り当てられているオブジェクトです。 これらのアクセス トークンを表すことができます、`CAccessToken`クラス。  
+ [アクセス トークン](/windows/desktop/SecAuthZ/access-tokens)プロセスまたはスレッドのセキュリティ コンテキストを示し、Windows NT または Windows 2000 のシステムにログオンしている各ユーザーに割り当てられているオブジェクトです。 これらのアクセス トークンを表すことができます、`CAccessToken`クラス。  
   
  アクセス トークンを偽装する必要があります。 便宜上、このクラスが提供されているが、アクセス トークンの偽装は実行されません。のみ、自動 nonimpersonated 状態を元に戻す処理を実行します。 これは、ため、アクセス トークンの偽装を実行できるいくつかの方法です。  
   
- Windows でのアクセス制御モデルの概要については、次を参照してください。[アクセス制御](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK に含まれています。  
+ Windows でのアクセス制御モデルの概要については、次を参照してください。[アクセス制御](/windows/desktop/SecAuthZ/access-control)Windows SDK に含まれています。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlsecurity.h  
   
 ##  <a name="attach"></a>  CAutoRevertImpersonation::Attach  
@@ -130,5 +130,5 @@ const CAccessToken* GetAccessToken() throw();
   
 ## <a name="see-also"></a>関連項目  
  [ATLSecurity サンプル](../../visual-cpp-samples.md)   
- [アクセス トークン](http://msdn.microsoft.com/library/windows/desktop/aa374909)   
+ [アクセス トークン](/windows/desktop/SecAuthZ/access-tokens)   
  [クラスの概要](../../atl/atl-class-overview.md)

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ef7551047449167ff60372da146618fbdc4e564
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 95b0931438afe8ff151d3c9f6c4727013df79478
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464163"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209343"
 ---
 # <a name="varianttvariantt"></a>_variant_t::_variant_t
 **Microsoft 固有の仕様**  
@@ -210,7 +210,7 @@ _variant_t(
   
 -   **_variant_t (VARIANT &***varSrc***)** を構築、`_variant_t`オブジェクトのコピーから、`VARIANT`オブジェクト。     バリアント型は保持されます。  
   
--   **_variant_t (VARIANT\****pVarSrc***)** を構築、`_variant_t`オブジェクトのコピーから、`VARIANT`オブジェクト。     バリアント型は保持されます。  
+-   **_variant_t (VARIANT**<strong>\*</strong>*pVarSrc***)** を構築、`_variant_t`オブジェクトのコピーから、`VARIANT`オブジェクト。     バリアント型は保持されます。  
   
 -   **_variant_t( _variant_t&**  *var_t_Src*  **)** Constructs a `_variant_t` object from another `_variant_t` object. バリアント型は保持されます。  
   
@@ -228,15 +228,15 @@ _variant_t(
   
 -   **_variant_t (_bstr_t &**`bstrSrc`**)** を構築、 `_variant_t` VT_BSTR からの型のオブジェクトを`_bstr_t`オブジェクト。     新しい `BSTR` を割り当てます。  
   
--   **_variant_t (wchar_t \***  *wstrSrc***)** を構築、`_variant_t`型 VT_BSTR Unicode 文字列からのオブジェクト。   新しい `BSTR` を割り当てます。  
+-   **_variant_t (wchar_t** <strong>\*</strong> *wstrSrc***)** を構築、`_variant_t`型 VT_BSTR Unicode 文字列からのオブジェクト。   新しい `BSTR` を割り当てます。  
   
--   **_variant_t (char\***`strSrc`**)** を構築、`_variant_t`型 VT_BSTR 文字列からのオブジェクト。     新しい `BSTR` を割り当てます。  
+-   **_variant_t (char**<strong>\*</strong>`strSrc`**)** を構築、`_variant_t`型 VT_BSTR 文字列からのオブジェクト。     新しい `BSTR` を割り当てます。  
   
 -   **_variant_t (bool**`bSrc`**)** を構築、 `_variant_t` VT_BOOL からの型のオブジェクトを**bool**値。      
   
--   **_variant_t (IUnknown\***  `pIUknownSrc` **、bool**`fAddRef`**= true)** を構築、 `_variant_t` VT_UNKNOWN の COM インターフェイス ポインターから型のオブジェクト.       場合`fAddRef`は**true**、し`AddRef`への呼び出しが一致するように指定されたインターフェイス ポインターで呼び出される`Release`が発生するときに、`_variant_t`オブジェクトは破棄されます。 呼び出すかどうかは`Release`で指定されたインターフェイス ポインター。 場合`fAddRef`は**false**、このコンス トラクターは、指定されたインターフェイス ポインターの所有権を受け取ります。 呼び出さない`Release`で指定されたインターフェイス ポインター。  
+-   **_variant_t (IUnknown** <strong>\*</strong> `pIUknownSrc` **、bool**`fAddRef`**= true)** を構築、`_variant_t`型のオブジェクトCOM インターフェイス ポインターから VT_UNKNOWN します。       場合`fAddRef`は**true**、し`AddRef`への呼び出しが一致するように指定されたインターフェイス ポインターで呼び出される`Release`が発生するときに、`_variant_t`オブジェクトは破棄されます。 呼び出すかどうかは`Release`で指定されたインターフェイス ポインター。 場合`fAddRef`は**false**、このコンス トラクターは、指定されたインターフェイス ポインターの所有権を受け取ります。 呼び出さない`Release`で指定されたインターフェイス ポインター。  
   
--   **_variant_t (IDispatch\***  `pDispSrc` **、bool**`fAddRef`**= true)** を構築、`_variant_t`型が VT_DISPATCH COM インターフェイスからのオブジェクトポインター。       場合`fAddRef`は**true**、し`AddRef`への呼び出しが一致するように指定されたインターフェイス ポインターで呼び出される`Release`が発生するときに、`_variant_t`オブジェクトは破棄されます。 呼び出すかどうかは`Release`で指定されたインターフェイス ポインター。 場合`fAddRef`は**false**、このコンス トラクターは、指定されたインターフェイス ポインターの所有権を受け取ります。 呼び出さない`Release`で指定されたインターフェイス ポインター。  
+-   **_variant_t (IDispatch** <strong>\*</strong> `pDispSrc` **、bool**`fAddRef`**= true)** を構築、`_variant_t`のオブジェクトCOM インターフェイス ポインターから VT_DISPATCH を入力します。       場合`fAddRef`は**true**、し`AddRef`への呼び出しが一致するように指定されたインターフェイス ポインターで呼び出される`Release`が発生するときに、`_variant_t`オブジェクトは破棄されます。 呼び出すかどうかは`Release`で指定されたインターフェイス ポインター。 場合`fAddRef`は**false**、このコンス トラクターは、指定されたインターフェイス ポインターの所有権を受け取ります。 呼び出さない`Release`で指定されたインターフェイス ポインター。  
   
 -   **_variant_t (10 進数 (& a)**`decSrc`**)** を構築、 `_variant_t` VT_DECIMAL からの型のオブジェクトを`DECIMAL`値。      
   

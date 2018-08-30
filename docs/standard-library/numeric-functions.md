@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::inner_product [C++]
 - std::iota [C++]
 - std::partial_sum [C++]
-ms.openlocfilehash: 47ac885152b0fdfbb9ce1ab77f6597db00c5bc07
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 1060c5c02b0e599de5ca5a39970825fd5622ebf5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960253"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199189"
 ---
 # <a name="ltnumericgt-functions"></a>&lt;numeric&gt; 関数
 
@@ -62,7 +62,7 @@ Type accumulate(
 
 ### <a name="remarks"></a>Remarks
 
-初期値は保証があることを明確に定義された結果の範囲が空で、後者*val*が返されます。 二項演算は結合的または可換的である必要はありません。 結果は初期値に初期化*val*し*結果* =  `binary_op` (*結果*、 **\***`Iter`) 内で、繰り返しが計算されます、`Iter`が範囲内の連続する要素を指す反復子です。 範囲が有効であることが必要で、複雑さは範囲のサイズに応じて線形的です。 2 項演算子の戻り値の型は、反復中のクロージャを確実にするために、**Type** に変換可能である必要があります。
+初期値は保証があることを明確に定義された結果の範囲が空で、後者*val*が返されます。 二項演算は結合的または可換的である必要はありません。 結果は初期値に初期化*val*し*結果* =  `binary_op` (*結果*、 <strong>\*</strong>`Iter`) 内で、繰り返しが計算されます、`Iter`が範囲内の連続する要素を指す反復子です。 範囲が有効であることが必要で、複雑さは範囲のサイズに応じて線形的です。 2 項演算子の戻り値の型は、反復中のクロージャを確実にするために、**Type** に変換可能である必要があります。
 
 ### <a name="example"></a>例
 

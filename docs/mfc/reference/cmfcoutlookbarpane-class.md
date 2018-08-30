@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 394cd0da74171e517086886a5c0c915fc77ba49c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 96219173186b578e2469c769ade62c388d8c3c07
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540343"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201477"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>CMFCOutlookBarPane クラス
 詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。  
@@ -323,7 +323,7 @@ DECLARE_MESSAGE_MAPCOLORREF GetRegularColor() const;
  RGB 色の値として現在のテキストの色。  
   
 ### <a name="remarks"></a>Remarks  
- 使用[CMFCOutlookBarPane::SetTextColor](#settextcolor) Outlook バーの現在の (通常、選択した) のテキストの色を設定します。 既定のテキスト色を取得するには呼び出すことによって、 [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) COLOR_WINDOW インデックスを持つ関数です。  
+ 使用[CMFCOutlookBarPane::SetTextColor](#settextcolor) Outlook バーの現在の (通常、選択した) のテキストの色を設定します。 既定のテキスト色を取得するには呼び出すことによって、 [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371) COLOR_WINDOW インデックスを持つ関数です。  
   
 ##  <a name="isbackgroundtexture"></a>  CMFCOutlookBarPane::IsBackgroundTexture  
  Outlook バー ペインの読み込まれた背景イメージがあるかどうかを判断します。  

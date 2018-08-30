@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a08ba6c5343fda19bab823b9a415db18b745e2a
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 6a0e57931b7f2af3f6232f140fd38155cfa5b2f8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42538286"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195236"
 ---
 # <a name="c-run-time-library-functions-for-thread-control"></a>スレッド コントロールのための C ランタイム ライブラリ関数
 Win32 プログラムはすべて、スレッドを少なくとも 1 つ持っています。 どのスレッドでも新しいスレッドを作成できます。 スレッドには、作業をすばやく完了して終了するものもあれば、プログラムの実行中アクティブ状態を続けるものもあります。  
@@ -40,7 +40,7 @@ LIBCMT と MSVCRT の C ランタイム ライブラリは、スレッドの作�
  
 `_beginthread` 関数および `_beginthreadex` 関数は、新しいスレッドを作成します。 スレッドは、プロセスのコードやデータ セグメントをプロセス内の他のスレッドと共有しますが、各スレッドには、独自のレジスタ値、スタック領域、および現在の命令アドレスがあります。 それぞれのスレッドに CPU 時間が与えられるので、プロセス中のすべてのスレッドを同時に実行できます。  
   
-`_beginthread` `_beginthreadex`に似ていますが、 [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) Win32 api 関数が、これらの違い。  
+`_beginthread` `_beginthreadex`に似ていますが、 [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) Win32 api 関数が、これらの違い。  
   
 - これらの関数は、特定の C ランタイム ライブラリ変数を初期化します。 これは、スレッドで C ランタイム ライブラリを使う場合に重要です。  
   
@@ -54,4 +54,4 @@ LIBCMT と MSVCRT の C ランタイム ライブラリは、スレッドの作�
   
 ## <a name="see-also"></a>関連項目  
  
-[C と Win32 を使用するマルチスレッド](../parallel/multithreading-with-c-and-win32.md)
+[C と Win32 を使用するマルチスレッド](multithreading-with-c-and-win32.md)

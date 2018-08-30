@@ -1,5 +1,5 @@
 ---
-title: CListCtrl の使い方 |Microsoft ドキュメント
+title: Clistctrl の使い方 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ce28c5be7ff87d9ebad38d35bf19b7d182531ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 52ec0bcda66ec8f1a166351682b163a09ffb55d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382987"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210491"
 ---
 # <a name="using-clistctrl"></a>CListCtrl の使い方
-リスト コントロールを使用すると、ファイル エクスプ ローラーで、またはテキスト、アイコンの有無の単票形式のリストと同様に、ラベルが付いたアイコンの形を表示できます。 リスト コントロールで持つことができます、4 つ考えられる「ビュー」(MFC ビューと混同しないで not) の詳細については — アイコンの表示、小さいアイコン ビュー、リスト ビュー、およびレポートの表示-内のビューを参照してください、 [CListCtrl](../mfc/reference/clistctrl-class.md)クラスの概要です。  
+リスト コントロールを使用すると、ファイル エクスプ ローラー、またはテキスト、アイコンの有無の単票形式のリストのように、ラベルが付いたアイコンの形を表示できます。 リスト コントロールがあることができます、4 つ選択可能な「ビュー」(MFC ビューと混同しない) の説明については、アイコンの表示、小さいアイコンのビュー、リスト ビュー、およびレポートの表示-でビューを参照してください、 [CListCtrl](../mfc/reference/clistctrl-class.md)クラスの概要。  
   
- 一部のビューでは、ユーザーはアイコンを別の位置にドラッグまたは、アイコンのラベルを編集します。 たとえば、ファイル エクスプ ローラーで、以外のウィンドウで、リスト コントロールを使用する右側のウィンドウを参照してください。 エクスプ ローラーの表示 メニューで使用可能なビューで確認できます。  
+ 一部のビューでユーザーが別の位置にアイコンをドラッグまたはアイコンのラベルの編集します。 たとえば、以外のウィンドウで、リスト コントロールを使用するファイル エクスプ ローラーで、右側のウィンドウを参照してください。 エクスプ ローラーの表示 メニューで使用可能なビューを実験できます。  
   
- 関連情報については、次を参照してください。[リスト ビュー コントロールに関する](http://msdn.microsoft.com/library/windows/desktop/bb774735)Windows SDK に含まれています。  
+ 関連情報については、次を参照してください。[リスト ビュー コントロールについて](/windows/desktop/Controls/list-view-controls-overview)Windows SDK に含まれています。  
   
 > [!NOTE]
->  Windows SDK は、リスト コントロールを「リスト ビュー コントロール」 "View"のこの使用法を参照しない MFC ビュー クラスでは、特に`CListView`です。 詳細については、次を参照してください。[リスト コントロールとリスト ビュー](../mfc/list-control-and-list-view.md)です。  
+>  Windows SDK は、リスト コントロールを「リスト ビュー コントロール」として参照します。 "View"のこの使用法を参照しない MFC ビュー クラスでは、特に`CListView`します。 詳細については、次を参照してください。[リスト コントロールとリスト ビュー](../mfc/list-control-and-list-view.md)します。  
   
-## <a name="what-do-you-want-to-know-more-about"></a>詳しくは次のトピックをクリックしてください。  
+## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います  
   
 -   [リスト コントロールとリスト ビュー](../mfc/list-control-and-list-view.md)  
   

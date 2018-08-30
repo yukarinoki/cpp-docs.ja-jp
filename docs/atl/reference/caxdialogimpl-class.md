@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd019112e846875bfa8e27faac5088fbcf1cdaef
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 88cb742464507fe7040b38d88355ab473b366bac
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881988"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196011"
 ---
 # <a name="caxdialogimpl-class"></a>CAxDialogImpl クラス
 このクラスは、ActiveX コントロールをホストするダイアログ ボックス (モーダルまたはモードレス) を実装します。  
@@ -103,7 +103,7 @@ class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
   
  `CAxDialogImpl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlwin.h  
   
 ##  <a name="advisesinkmap"></a>  CAxDialogImpl::AdviseSinkMap  
@@ -170,7 +170,7 @@ INT_PTR DoModal(
   
 ### <a name="parameters"></a>パラメーター  
  *hWndParent*  
- [in]オーナー ウィンドウのハンドル。 既定値はの戻り値、 [GetActiveWindow](http://msdn.microsoft.com/library/windows/desktop/ms646292) Win32 関数。  
+ [in]オーナー ウィンドウのハンドル。 既定値はの戻り値、 [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) Win32 関数。  
   
  *dwInitParam*  
  [in]ダイアログ ボックスに渡す値を指定します、 *lParam* WM_INITDIALOG メッセージのパラメーター。  
@@ -235,7 +235,7 @@ BOOL IsDialogMessage(LPMSG pMsg);
   
 ### <a name="parameters"></a>パラメーター  
  *pMsg*  
- ポインターを[MSG](http://msdn.microsoft.com/library/windows/desktop/ms644958)確認するメッセージを含む構造体。  
+ ポインターを[MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958)確認するメッセージを含む構造体。  
   
 ### <a name="return-value"></a>戻り値  
  メッセージが処理されたかどうかは TRUE を返します。  

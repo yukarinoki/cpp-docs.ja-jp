@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0521d09f4f96c73c20022d88621671564e7ada78
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3294730f8f1cc835af49ee003d8f81830d64c9a6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965527"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198303"
 ---
 # <a name="valarray-class"></a>valarray クラス
 
@@ -113,7 +113,7 @@ ms.locfileid: "38965527"
 |[operator&#124;=](#op_or_eq)|配列内の要素のビットごとの `OR` を、指定された `valarray` 内の対応する要素か要素型の値と共に取得します。|
 |[operator~](#op_dtor)|`valarray` 内の各要素のビットごとの `NOT` 値を取得する単項演算子。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<valarray>
 
@@ -131,9 +131,11 @@ valarray<Type> apply(Type _Func(constType&)) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*_Func(Type)* オペランド valarray と valarray の各要素に適用する関数オブジェクト。
+*_Func(Type)*<br/>
+ オペランド valarray の各要素に適用する関数オブジェクト。
 
-*_Func(const Type&)* オペランド valarray と valarray の各要素に適用する const の関数オブジェクト。
+*_Func(const Type&)*<br/>
+ オペランド valarray の各要素に適用する const の関数オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -141,7 +143,7 @@ valarray<Type> apply(Type _Func(constType&)) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、クラス [valarray](../standard-library/valarray-class.md)**\<Type>** のオブジェクトを返します。その長さは [size](#size)、その各要素の `I` は **func**(( **\*this**)[ `I`]) です。
+このメンバー関数は、クラスのオブジェクトを返します[valarray](../standard-library/valarray-class.md)**\<型 >**、長さの[サイズ](#size)、その各要素の*は*は`_Func((*this)[I])`します。
 
 ### <a name="example"></a>例
 
@@ -1247,7 +1249,7 @@ valarray<Type> operator[](const valarray<size_t>& _Indarray) const;
 
 ### <a name="remarks"></a>Remarks
 
-メンバー演算子がによって制御されるものの中から要素のシーケンスを選択するいくつかの方法を提供するオーバー ロードされた *\****この**します。 5 つのメンバー演算子の最初のグループは、[operator=](#op_eq) (および他の代入演算子) のさまざまなオーバーロードと共に機能し、制御されるシーケンスの選択的置換 (スライス) を可能にします。 選択された要素は存在していなければなりません。
+によって制御されるものの中から要素のシーケンスを選択するいくつかの方法を提供するメンバー演算子はオーバー ロード<strong>\*この</strong>します。 5 つのメンバー演算子の最初のグループは、[operator=](#op_eq) (および他の代入演算子) のさまざまなオーバーロードと共に機能し、制御されるシーケンスの選択的置換 (スライス) を可能にします。 選択された要素は存在していなければなりません。
 
 1 または 2 に定義された [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) を使用してコンパイルすると、valarray の境界外の要素にアクセスしようとした場合にランタイム エラーが発生します。  詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 

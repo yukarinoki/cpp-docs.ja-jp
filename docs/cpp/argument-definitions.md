@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 044c5df5ae0a51912893ccf306a5c93afceb7ab3
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 66c1e1eea44ee105176d8693cec95bcce3c18a1f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407589"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200641"
 ---
 # <a name="argument-definitions"></a>引数定義
 次のプロトタイプで引数を指定します。  
@@ -44,7 +44,7 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
  最初のコマンドライン引数は常に`argv` **[1]** 、最後の 1 つは`argv` **[** `argc` - 1 **]** します。  
   
 > [!NOTE]
->  慣例では、`argv`**[0]** は、プログラムが起動されるコマンドです。  ただしを使用してプロセスを起動することは[CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197)最初と 2 つ目の両方の引数を使用する場合 (*lpApplicationName*と*lpCommandLine*)、 `argv`**[0]** 実行可能ファイルができない可能性があります名; を使用して、 [GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197)実行可能ファイルの名前とその完全修飾パスを取得します。  
+>  慣例では、`argv`**[0]** は、プログラムが起動されるコマンドです。  ただしを使用してプロセスを起動することは[CreateProcess](https://msdn.microsoft.com/library/windows/desktop/ms683197)最初と 2 つ目の両方の引数を使用する場合 (*lpApplicationName*と*lpCommandLine*)、 `argv`**[0]** 実行可能ファイルができない可能性があります名; を使用して、 [GetModuleFileName](https://msdn.microsoft.com/library/windows/desktop/ms683197)実行可能ファイルの名前とその完全修飾パスを取得します。  
   
 ## <a name="microsoft-specific"></a>Microsoft 固有の仕様  
  *envp*  

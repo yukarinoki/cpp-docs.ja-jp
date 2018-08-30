@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eeba73be12fdf8e068800d192cef7df9462aa4fe
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b6600706690dea3573f8eb1aa47f68b592b3bff1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402788"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200308"
 ---
 # <a name="mbtowc-mbtowcl"></a>mbtowc、_mbtowc_l
 
@@ -78,15 +78,15 @@ int _mbtowc_l(
 
 ## <a name="return-value"></a>戻り値
 
-場合**mbchar**は**NULL**場合に、オブジェクトを*mbchar*フォームへの有効なマルチバイト文字を指す**mbtowc**で長さを返しますマルチバイト文字のバイト数。 場合*mbchar*は**NULL**またはそれが指すオブジェクト ワイド null 文字 (L '\0') は、0 を返します。 場合、オブジェクトを*mbchar*へのポインターは、最初に有効なマルチバイト文字を形成しません*カウント*文字、-1 を返します。
+場合**mbchar**は**NULL**場合に、オブジェクトを*mbchar*フォームを有効なマルチバイト文字を指す**mbtowc**で長さを返しますマルチバイト文字のバイト数。 場合*mbchar*は**NULL**または参照先オブジェクトがワイド文字の null 文字 (L '\0')、0 を返します。 場合、オブジェクトを*mbchar*へのポインターは、その中で有効なマルチバイト文字は*カウント*文字、-1 を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Mbtowc**関数に変換*カウント*によって示される数以下のバイト*mbchar*場合は、 *mbchar*は**NULL**、対応するワイド文字。 **mbtowc**で結果のワイド文字を格納*wchar、* 場合*wchar*は**NULL**です。 **mbtowc**を検査しない複数の**MB_CUR_MAX**バイトです。 **mbtowc**ロケールに依存する動作に現在のロケールを使用 **_mbtowc_l**は、代わりに渡されるロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**Mbtowc**関数に変換します*カウント*によって示される数以下のバイト*mbchar*場合は、 *mbchar*ない**NULL**、対応するワイド文字。 **mbtowc**で結果のワイド文字を格納*wchar、* 場合*wchar*ない**NULL**します。 **mbtowc**を検査しない複数の**MB_CUR_MAX**バイト。 **mbtowc**ロケールに依存する動作に現在のロケールを使用 **_mbtowc_l**代わりに渡されたロケールを使用すると同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**mbtowc**|\<stdlib.h>|
 |**_mbtowc_l**|\<stdlib.h>|
@@ -156,7 +156,7 @@ Attempt to convert a NULL pointer to a wide character:
 ## <a name="see-also"></a>関連項目
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)<br/>
+[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
 [ロケール](../../c-runtime-library/locale.md)<br/>
 [マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: グラフィック オブジェクト |Microsoft ドキュメント
+title: グラフィック オブジェクト |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -51,18 +51,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cf7e2c56094727c6956d0e2e21708dd81be4f10
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: dd8fc67f7cdc11328c4da9643f57b65a1cc6bfd0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930847"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197186"
 ---
 # <a name="graphic-objects"></a>グラフィック オブジェクト
 Windows には、さまざまなデバイス コンテキストで使用する描画ツールが用意されています。 たとえば、線を描画するためのペン、内部を塗りつぶすためのブラシ、テキストを描画するためのフォントがあります。 MFC には、Windows の描画ツールと同等のグラフィック オブジェクト クラスが用意されています。 使用可能なクラスと、それに対応する Windows グラフィックス デバイス インターフェイス (GDI) ハンドル型を次の表に示します。  
   
 > [!NOTE]
->  詳細については、GDI + SDK のドキュメントを参照してください: [ http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp](http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp)です。  
+>  詳細については、GDI + SDK のドキュメントを参照してください: [ https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp](https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp)します。  
   
  この記事では、これらのグラフィック オブジェクト クラスの使用方法について説明します。  
   
@@ -78,7 +78,7 @@ Windows には、さまざまなデバイス コンテキストで使用する�
 |[CRgn](../mfc/reference/crgn-class.md)|**HRGN**|  
   
 > [!NOTE]
->  クラス[CImage](../atl-mfc-shared/reference/cimage-class.md)ビットマップの拡張サポートを提供します。  
+>  クラスは、 [CImage](../atl-mfc-shared/reference/cimage-class.md)ビットマップの拡張サポートを提供します。  
   
  クラス ライブラリに含まれる各グラフィック オブジェクト クラスには、そのクラスのグラフィック オブジェクトを作成するためのコンストラクターがあります。グラフィック オブジェクトは、`CreatePen` などの適切な関数を使用して初期化する必要があります。  
   
@@ -90,9 +90,9 @@ Windows には、さまざまなデバイス コンテキストで使用する�
   
 #### <a name="to-create-a-graphic-object-in-a-device-context"></a>デバイス コンテキストでグラフィック オブジェクトを作成するには  
   
-1.  スタック フレーム上でグラフィック オブジェクトを定義します。 型に固有の作成関数 (たとえば、`CreatePen`) を使用して、オブジェクトを初期化します。 または、コンストラクター内でオブジェクトを初期化します。 説明を参照して[1 段階および 2 段階の作成](../mfc/one-stage-and-two-stage-construction-of-objects.md)コード例を提供します。  
+1.  スタック フレーム上でグラフィック オブジェクトを定義します。 型に固有の作成関数 (たとえば、`CreatePen`) を使用して、オブジェクトを初期化します。 または、コンストラクター内でオブジェクトを初期化します。 説明を参照してください。 [1 段階および 2 段階の作成](../mfc/one-stage-and-two-stage-construction-of-objects.md)、コード例を提供します。  
   
-2.  [現在のデバイス コンテキストにオブジェクトを選択](../mfc/selecting-a-graphic-object-into-a-device-context.md)、前に選択された古いグラフィック オブジェクトを保存します。  
+2.  [現在のデバイス コンテキストにオブジェクトを選択](../mfc/selecting-a-graphic-object-into-a-device-context.md)、古いグラフィック オブジェクトを保存する前に選択されました。  
   
 3.  現在のグラフィック オブジェクトの操作が完了したら、古いグラフィック オブジェクトをデバイス コンテキストに選択してその状態を復元します。  
   
@@ -101,11 +101,11 @@ Windows には、さまざまなデバイス コンテキストで使用する�
 > [!NOTE]
 >  グラフィック オブジェクトを繰り返し使用する場合は、1 回割り当てておけば、後で必要になったときに各デバイス コンテキストに選択できます。 これらのオブジェクトが不要になったときは必ず削除してください。  
   
-### <a name="what-do-you-want-to-know-more-about"></a>詳しくは次のトピックをクリックしてください。  
+### <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います  
   
 -   [グラフィック オブジェクトの 1 つのステージと 2 段階の構築](../mfc/one-stage-and-two-stage-construction-of-objects.md)  
   
--   [1 番目と 2 段階でペンを作成する例](../mfc/one-stage-and-two-stage-construction-of-objects.md)  
+-   [1 つまたは複数の段階でペンを作成する例](../mfc/one-stage-and-two-stage-construction-of-objects.md)  
   
 -   [グラフィック オブジェクトをデバイス コンテキストに選択する](../mfc/selecting-a-graphic-object-into-a-device-context.md)  
   

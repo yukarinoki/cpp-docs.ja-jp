@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f366e01fbaa8da5c0dbc96ff4da324611e132f1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3457195b07335345476153038d7ab38606607a2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403922"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217360"
 ---
 # <a name="mbstowcss-mbstowcssl"></a>mbstowcs_s、_mbstowcs_s_l
 
@@ -96,7 +96,7 @@ errno_t _mbstowcs_s_l(
 null で終了するマルチバイト文字のシーケンスのアドレス。
 
 *count*<br/>
-格納するワイド文字の最大数、 *wcstr*バッファー、終端の null は含まないまたは[_TRUNCATE](../../c-runtime-library/truncate.md)です。
+格納するワイド文字の最大数、 *wcstr*バッファー、終端の null は含まないまたは[_TRUNCATE](../../c-runtime-library/truncate.md)します。
 
 *locale*<br/>
 使用するロケール。
@@ -105,45 +105,45 @@ null で終了するマルチバイト文字のシーケンスのアドレス。
 
 正常終了した場合は 0 を返します。失敗した場合はエラー コードを返します。
 
-|エラー条件|戻り値と**errno**|
+|エラー条件|戻り値および**errno**|
 |---------------------|------------------------------|
 |*wcstr*は**NULL**と*sizeInWords* > 0|**EINVAL**|
 |*mbstr*は**NULL**|**EINVAL**|
-|コピー先のバッファーが小さすぎて、変換された文字列を含める (しない限り、*カウント*は **_TRUNCATE**; 解説を参照してください)|**ERANGE**|
-|*wcstr*は**NULL**と*sizeInWords* = = 0|**EINVAL**|
+|コピー先のバッファーが小さすぎて変換後の文字列を含む (しない限り、*カウント*は **_TRUNCATE**; 以下の「解説」を参照してください)|**ERANGE**|
+|*wcstr*ない**NULL**と*sizeInWords* 0 を = =|**EINVAL**|
 
-これらのいずれかの条件が発生すると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター例外が呼び出されます。 実行の継続が許可された場合、関数はエラー コードを返します設定と**errno**表に示すようにします。
+これらのいずれかの条件が発生すると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター例外が呼び出されます。 実行の継続が許可された場合、関数はエラー コードを返します設定と**errno**表に記載されています。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Mbstowcs_s**関数によって示される、マルチバイト文字の文字列に変換*mbstr*が指すバッファーに格納されているワイド文字に*wcstr*です。 これらの条件のいずれかが満たされるまで、各文字に対して変換が続きます。
+**Mbstowcs_s**関数が指すマルチバイト文字の文字列に変換します*mbstr*が指すバッファーに格納されているワイド文字に*wcstr*します。 これらの条件のいずれかが満たされるまで、各文字に対して変換が続きます。
 
 - マルチバイトの null 文字が検出されました。
 
 - 無効なマルチバイト文字が検出されました。
 
-- 格納されるワイド文字の数、 *wcstr* equals をバッファー*カウント*です。
+- 格納されるワイド文字の数、 *wcstr* equals をバッファー*カウント*します。
 
 変換後の文字列は、常に null で終わります (エラーの場合も同様)。
 
-場合*カウント*特殊な値は、 [_TRUNCATE](../../c-runtime-library/truncate.md)、し**mbstowcs_s** null 用の領域を残して、コピー先のバッファーに収まるようだけでなく、文字列のと同様に変換しますターミネータです。
+場合*カウント*特殊な値は、 [_TRUNCATE](../../c-runtime-library/truncate.md)、し**mbstowcs_s**コピー先のバッファーは null の空きを残して収まる限りの文字列の多くに変換されますターミネータ。
 
-場合**mbstowcs_s**ソース文字列を変換が正常に null 終端文字も含めて、変換後の文字列のワイド文字単位のサイズを入れ *&#42;pReturnValue* (を提供*pReturnValue*は**NULL**)。 これが発生した場合でも、 *wcstr*引数は**NULL**し、必要なバッファー サイズを決定する方法を提供します。 されている場合*wcstr*は**NULL**、*カウント*は無視されますと*sizeInWords* 0 にする必要があります。
+場合**mbstowcs_s** 、元の文字列を正常に変換に null の終端文字を含む変換された文字列のワイド文字のサイズが置かれる *&#42;pReturnValue* (提供*pReturnValue*ない**NULL**)。 これが発生した場合でも、 *wcstr*引数が**NULL**し、必要なバッファー サイズを決定する方法を提供します。 場合*wcstr*は**NULL**、*カウント*は無視されますと*sizeInWords* 0 にする必要があります。
 
-場合**mbstowcs_s**で無効なマルチバイト文字が発生した 0 に入れます *&#42;pReturnValue*、空の文字列をコピー先のバッファーを設定、設定**errno** に**EILSEQ**、し、返します**EILSEQ**です。
+場合**mbstowcs_s**検出すると、無効なマルチバイト文字に 0 を入れ *&#42;pReturnValue*、空の文字列をコピー先のバッファーを設定、設定**errno** に**EILSEQ**、し、返します**EILSEQ**します。
 
-シーケンスを指す場合*mbstr*と*wcstr*などの動作の重複**mbstowcs_s**が定義されていません。
+によって、シーケンスを指している場合*mbstr*と*wcstr*の動作が重なる**mbstowcs_s**が定義されていません。
 
 > [!IMPORTANT]
-> いることを確認*wcstr*と*mbstr*が重なり合わず、および*カウント*変換するマルチバイト文字の数を正確に反映します。
+> いることを確認*wcstr*と*mbstr*重複しないと*数*変換するマルチバイト文字の数を正確に反映します。
 
-**mbstowcs_s** ; すべてのロケールに依存する動作に現在のロケールを使用 **_mbstowcs_s_l**は、代わりに渡されるロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**mbstowcs_s**ロケールに依存する動作に現在のロケールを使用 **_mbstowcs_s_l**代わりに渡されたロケールを使用すると同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**mbstowcs_s**|\<stdlib.h>|
 |**_mbstowcs_s_l**|\<stdlib.h>|
@@ -154,7 +154,7 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
 [ロケール](../../c-runtime-library/locale.md)<br/>
-[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)<br/>
+[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
 [マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>

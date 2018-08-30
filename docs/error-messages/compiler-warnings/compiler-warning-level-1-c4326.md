@@ -1,7 +1,7 @@
 ---
-title: コンパイラの警告 (レベル 1) C4326 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4326 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,24 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 838c79d6ba897905dad18788adc5ee682ff2fa2c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cee18a9ccc807370cf2fb40748939f211a4ba52f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283131"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211005"
 ---
 # <a name="compiler-warning-level-1-c4326"></a>コンパイラの警告 (レベル 1) C4326
-'function' の戻り値の型が 'type2' ではなく ' type1' をする必要があります。  
-  
- 関数が以外の型を返しました***type1***です。 たとえばを使用して[/Za](../../build/reference/za-ze-disable-language-extensions.md)、main が返されませんでした、`int`です。  
-  
- 次の例では、C4326 が生成されます。  
-  
-```  
-// C4326.cpp  
-// compile with: /Za /W1  
-char main()  
-{   // C4326 try int main  
-}  
+
+> 型を返す '*関数*'は'*type1*' の代わりに '*type2*'
+
+## <a name="remarks"></a>Remarks
+
+返される型を以外の関数*type1*します。 たとえばを使用して[/Za](../../build/reference/za-ze-disable-language-extensions.md)、**メイン**を返しませんでした、 **int**。
+
+## <a name="example"></a>例
+
+次の例では、C4326 を生成し、その修正方法を示しています。
+
+```cpp
+// C4326.cpp
+// compile with: /Za /W1
+char main()
+{
+    // C4326, instead use int main()
+}
 ```

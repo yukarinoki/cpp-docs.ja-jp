@@ -1,5 +1,5 @@
 ---
-title: タブおよびタブの属性を制御します |。Microsoft ドキュメント
+title: タブおよびタブの属性を制御します |。Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,25 +18,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd2129ad4b2dc075893a730c0ba75de96dbebea0
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: c02f939c9f9314f3e24921879836c2743ae7d5ea
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952860"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223283"
 ---
 # <a name="tabs-and-tab-control-attributes"></a>タブおよびタブ コントロールの属性
-タブ コントロールを構成するタブの動作と外観を細かく制御がある ([CTabCtrl](../mfc/reference/ctabctrl-class.md))。 各タブには、ラベル、アイコン、項目の状態、および関連付けられている、アプリケーションで定義された 32 ビット値を持つことができます。 各タブには、アイコン、ラベル、またはその両方を表示できます。  
+タブ コントロールを構成するタブの動作と外観を細かく制御がある ([CTabCtrl](../mfc/reference/ctabctrl-class.md))。 各タブには、ラベル、アイコン、項目の状態、および関連付けられている、アプリケーションで定義された 32 ビット値を持つことができます。 各タブでは、アイコン、ラベル、またはその両方を表示できます。  
   
- さらに、各タブの項目が 3 つの状態を持つことができます: 押された、元の状態、または強調表示されます。 この状態は、既存のタブ項目を変更することによってのみ設定できます。 既存のタブ項目を変更するへの呼び出しで取得[GetItem](../mfc/reference/ctabctrl-class.md#getitem)、変更、`TCITEM`構造 (具体的には、 *dwState*と*dwStateMask*データ メンバー)、し、変更された返す`TCITEM`への呼び出しを含む構造体[SetItem](../mfc/reference/ctabctrl-class.md#setitem)です。 内のすべてのタブ項目の項目の状態をクリアする必要があるかどうか、`CTabCtrl`オブジェクト、呼び出しを行う[DeselectAll](../mfc/reference/ctabctrl-class.md#deselectall)です。 この関数は、すべてのタブ項目または現在選択されている 1 つを除くすべての項目の状態をリセットします。  
+ さらに、各タブ項目の 3 つの状態があります: 押された状態、元の状態、または強調表示されます。 この状態は、既存のタブ項目を変更することによってのみ設定できます。 呼び出しを使用して取得する既存のタブ項目を変更するには、 [GetItem](../mfc/reference/ctabctrl-class.md#getitem)、変更、`TCITEM`構造 (具体的には、 *dwState*と*dwStateMask*データ メンバー)、変更を返します`TCITEM`構造体への呼び出しで[SetItem](../mfc/reference/ctabctrl-class.md#setitem)します。 内のすべてのタブ項目の項目の状態をクリアする必要があるかどうか、`CTabCtrl`オブジェクト、呼び出しを行う[DeselectAll](../mfc/reference/ctabctrl-class.md#deselectall)します。 この関数は、すべてのタブの項目または現在選択されている 1 つを除くすべての項目の状態をリセットします。  
   
- 次のコードでは、すべてのタブ項目の状態を解除し、3 番目の項目の状態を変更します。  
+ 次のコードでは、すべてのタブ アイテムの状態を解除し、3 番目の項目の状態を変更します。  
   
  [!code-cpp[NVC_MFCControlLadenDialog#32](../mfc/codesnippet/cpp/tabs-and-tab-control-attributes_1.cpp)]  
   
- タブの属性の詳細については、次を参照してください。[タブおよびタブ属性](http://msdn.microsoft.com/library/windows/desktop/bb760550)Windows SDK に含まれています。 タブ コントロールにタブを追加する方法の詳細については、次を参照してください。[タブ コントロールに追加するタブ](../mfc/adding-tabs-to-a-tab-control.md)このトピックで後述します。  
+ タブの属性の詳細については、次を参照してください。[タブおよびタブ属性](/windows/desktop/Controls/tab-controls)Windows SDK に含まれています。 タブ コントロールにタブを追加する方法の詳細については、次を参照してください。[タブ コントロールを追加するタブ](../mfc/adding-tabs-to-a-tab-control.md)このトピックで後述します。  
   
 ## <a name="see-also"></a>関連項目  
- [CTabCtrl の使い方](../mfc/using-ctabctrl.md)   
+ [Ctabctrl の使い方](../mfc/using-ctabctrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 

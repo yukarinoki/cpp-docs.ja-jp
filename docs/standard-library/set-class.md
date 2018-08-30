@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d549d3440de902bf9888fa399e5636b93001ca29
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f7a04710d900aa9eb5889c19fbdc419a3b7f3cbc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964887"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204611"
 ---
 # <a name="set-class"></a>set クラス
 
@@ -118,13 +118,16 @@ class set
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*セットに格納される要素のデータ型します。
+*Key*<br/>
+ set に格納される要素のデータ型。
 
-*Traits*セット内の相対順序を決定する並べ替えキーとして 2 つの要素の値を比較できる関数オブジェクトを提供する型。 この引数は省略可能であり、既定値は二項述語 **less** *\<Key>* です。
+*Traits*<br/>
+ 2 つの要素の値を並べ替えキーとして比較して、set 内の要素の相対順序を決定できる関数オブジェクトを提供する型。 この引数は省略可能であり、既定値は二項述語 **less** *\<Key>* です。
 
 C++ 14 では、型パラメーターを使用せずに `std::less<>` 述語または `std::greater<>` 述語を指定することで、異種ルックアップを有効にすることができます。 詳細については、「[連想コンテナーの異種ルックアップ](../standard-library/stl-containers.md#sequence_containers)」をご覧ください。
 
-*アロケーター*セットの割り当てとメモリの解放に関する詳細をカプセル化する格納されたアロケーター オブジェクトを表す型です。 この引数は省略可能であり、既定値は **アロケーター***\<キー>。*
+*アロケーター*<br/>
+ メモリの set の割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値は `allocator<Key>` です。
 
 ## <a name="remarks"></a>Remarks
 
@@ -212,7 +215,7 @@ set クラスに用意されている反復子は双方向反復子ですが、�
 |-|-|
 |[operator=](#op_eq)|別の set のコピーで set の要素を置き換えます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<set>
 
@@ -484,7 +487,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*セットから一致する要素のキー。
+*key*<br/>
+ 照合される set の要素のキー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -929,7 +933,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*検索対象のセットからの要素の並べ替えキーと比較される引数キー。
+*key*<br/>
+ 検索対象の set 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1013,13 +1018,17 @@ size_type erase(
 
 ### <a name="parameters"></a>パラメーター
 
-*場所*を削除する要素の位置。
+*Where*<br/>
+ 削除される要素の位置。
 
-*最初*を削除する最初の要素の位置。
+*まずは*<br/>
+ 削除される最初の要素の位置。
 
-*最後*を削除する最後の要素の次の位置。
+*前の*<br/>
+ 削除される最後の要素の次の位置。
 
-*キー*を削除する要素のキー値。
+*Key*<br/>
+ 削除される要素のキー値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1121,7 +1130,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*検索対象のセットからの要素の並べ替えキーによって照合されるキーの値。
+*key*<br/>
+ 検索対象の set 内の要素の並べ替えキーと照合するキー値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1584,7 +1594,8 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*検索対象のセットからの要素の並べ替えキーと比較される引数キー。
+*key*<br/>
+ 検索対象の set 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2203,7 +2214,8 @@ void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*引数は、設定対象のセットを交換する要素を提供します。
+*right*<br/>
+ ターゲットの set と交換する要素を提供する引数の set。
 
 ### <a name="remarks"></a>Remarks
 
@@ -2271,7 +2283,8 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*検索対象のセットからの要素の並べ替えキーと比較される引数キー。
+*key*<br/>
+ 検索対象の set 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
 

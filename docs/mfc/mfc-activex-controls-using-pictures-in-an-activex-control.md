@@ -1,5 +1,5 @@
 ---
-title: 'MFC ActiveX コントロール: ActiveX コントロールにおけるピクチャの使用 |Microsoft ドキュメント'
+title: 'MFC ActiveX コントロール: ActiveX コントロールにおけるピクチャの使用 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 356d7acd67747f4310ed0e4f564df7d1533e88ed
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: ebe0c28f1f2d6ee2eab81d9de2af3c033ecd484a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930649"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199675"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールにおけるピクチャの使用
 この記事では、ActiveX コントロールに共通する Picture 型と、その実装方法を説明します。 ここでは、次の内容について説明します。  
@@ -71,7 +71,7 @@ ms.locfileid: "36930649"
      ActiveX コントロールの描画に使用するいくつかの関数を変更します。  
   
 ##  <a name="_core_additions_to_your_control_project"></a> コントロール プロジェクトへの追加  
- 標準の Picture プロパティ ページのプロパティ ページの ID を追加するには、コントロール実装ファイル内の BEGIN_PROPPAGEIDS マクロの後に、次の行を挿入 (です。CPP):  
+ 標準の Picture プロパティ ページのプロパティ ページの ID を追加するには、コントロール実装ファイル内の BEGIN_PROPPAGEIDS マクロの後に、次の行を挿入 (します。CPP):  
   
  [!code-cpp[NVC_MFC_AxPic#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_1.cpp)]  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36930649"
   
  [!code-cpp[NVC_MFC_AxPic#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_3.h)]  
   
- データ メンバーの名前を付ける必要はありません*m_pic*; は、任意の名前で十分です。  
+ データ メンバーの名前を付ける必要はありません*m_pic*; 任意の名前で十分です。  
   
  次に、Picture 型をサポートするカスタム プロパティを追加します。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36930649"
   
 5.  **[プロパティ名]** ボックスに、プロパティ名を入力します。 例として、この手順では `ControlPicture` を使用します。  
   
-6.  **プロパティの型**ボックスで、 **IPictureDisp\*** プロパティの型。  
+6.  **プロパティ型**ボックスで、 **IPictureDisp** <strong>\*</strong>のプロパティの型。  
   
 7.  **[実装型]** として、 **[Get/Set メソッド]** をクリックします。  
   

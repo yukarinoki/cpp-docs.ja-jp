@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93a637c1374e77127a5bf71c6fa736d2857928f1
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 05b259afe5c266db30ed31ed47e917f0ac1a5607
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42544486"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196191"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl クラス
 Windows コモン プログレス バー コントロールの機能が用意されています。  
@@ -143,14 +143,14 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>パラメーター  
  *dwStyle*  
- 進行状況バー コントロールのスタイルを指定します。 ウィンドウ stylesdescribed 内の任意の組み合わせを適用[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)次の進行状況バー コントロールのスタイルをコントロールに加え、Windows sdk:  
+ 進行状況バー コントロールのスタイルを指定します。 ウィンドウ stylesdescribed 内の任意の組み合わせを適用[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)次の進行状況バー コントロールのスタイルをコントロールに加え、Windows sdk:  
   
 - PBS_VERTICAL 表示では、進行状況を垂直方向に、上下から。 このフラグを設定せず、進行状況バー コントロールは、右に水平方向、左を表示します。  
   
 - PBS_SMOOTH 表示段階、smooth、進行状況バー コントロールに入力します。 このフラグを設定しないブロックのコントロールを生成します。  
   
  *rect*  
- 進行状況バー コントロールのサイズと位置を指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。 指定した座標がのクライアント領域を基準とは、コントロールは、子ウィンドウにある必要があります、ため、 *pParentWnd*します。  
+ 進行状況バー コントロールのサイズと位置を指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。 指定した座標がのクライアント領域を基準とは、コントロールは、子ウィンドウにある必要があります、ため、 *pParentWnd*します。  
   
  *pParentWnd*  
  通常、進行状況バー コントロールの親ウィンドウを指定します、`CDialog`します。 NULL は指定できません。  
@@ -181,13 +181,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>パラメーター  
  *dwExStyle*  
- 作成されるコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK に含まれています。  
+ 作成されるコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK に含まれています。  
   
  *dwStyle*  
- 進行状況バー コントロールのスタイルを指定します。 説明されているウィンドウのスタイルの任意の組み合わせを適用[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK に含まれています。  
+ 進行状況バー コントロールのスタイルを指定します。 説明されているウィンドウのスタイルの任意の組み合わせを適用[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK に含まれています。  
   
  *rect*  
- 参照を[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。  
+ 参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。  
   
  *pParentWnd*  
  コントロールの親であるウィンドウへのポインター。  
@@ -209,10 +209,10 @@ COLORREF GetBarColor() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- として現在の進行状況バーの色が表される、 [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)値、またはとき、進行状況インジケーターのバーの色が既定の色である場合。  
+ として現在の進行状況バーの色が表される、 [COLORREF](/windows/desktop/gdi/colorref)値、またはとき、進行状況インジケーターのバーの色が既定の色である場合。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、送信、 [PBM_GETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760826)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [PBM_GETBARCOLOR](/windows/desktop/Controls/pbm-getbarcolor)メッセージは、Windows SDK で説明します。  
   
 ##  <a name="getbkcolor"></a>  CProgressCtrl::GetBkColor  
  現在の進行状況バーの背景色を取得します。  
@@ -222,10 +222,10 @@ COLORREF GetBkColor() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- として現在の進行状況バーの背景色が表される、 [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)値。  
+ として現在の進行状況バーの背景色が表される、 [COLORREF](/windows/desktop/gdi/colorref)値。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、送信、 [PBM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760828)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [PBM_GETBKCOLOR](/windows/desktop/Controls/pbm-getbkcolor)メッセージは、Windows SDK で説明します。  
   
 ##  <a name="getpos"></a>  CProgressCtrl::GetPos  
  進行状況バーの現在の位置を取得します。  
@@ -282,7 +282,7 @@ int GetState() const;
 |PBST_PAUSED|一時停止|  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、送信、 [PBM_GETSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760834)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [PBM_GETSTATE](/windows/desktop/Controls/pbm-getstate)メッセージは、Windows SDK で説明します。  
   
 ### <a name="example"></a>例  
  次のコード例では、進行状況バー コントロールにプログラムでアクセスするために使用される `m_progressCtrl` 変数を定義します。 この変数は次の例で使用されています。  
@@ -307,7 +307,7 @@ int GetStep() const;
 ### <a name="remarks"></a>Remarks  
  ステップの増分値は、量への呼び出し[CProgressCtrl::StepIt](#stepit)進行状況バーの現在の位置が増加します。  
   
- このメソッドは、送信、 [PBM_GETSTEP](http://msdn.microsoft.com/library/windows/desktop/bb760836)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [PBM_GETSTEP](/windows/desktop/Controls/pbm-getstep)メッセージは、Windows SDK で説明します。  
   
 ### <a name="example"></a>例  
  次のコード例では、進行状況バー コントロールにプログラムでアクセスするために使用される `m_progressCtrl` 変数を定義します。 この変数は次の例で使用されています。  
@@ -347,17 +347,17 @@ COLORREF SetBarColor(COLORREF clrBar);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*clrBar*|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)新しい進行状況インジケーターのバーの色を指定する値。 既定の色を使用する進行状況バーが発生するときを指定します。|  
+|[in]*clrBar*|A [COLORREF](/windows/desktop/gdi/colorref)新しい進行状況インジケーターのバーの色を指定する値。 既定の色を使用する進行状況バーが発生するときを指定します。|  
   
 ### <a name="return-value"></a>戻り値  
 
-として表される、進行状況インジケーターのバーの前の色、 [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)値、またはときの進行状況インジケーターのバーの色が既定の色である場合。  
+として表される、進行状況インジケーターのバーの前の色、 [COLORREF](/windows/desktop/gdi/colorref)値、またはときの進行状況インジケーターのバーの色が既定の色である場合。  
   
 ### <a name="remarks"></a>Remarks  
 
 `SetBarColor`メソッドは、進行状況バーの色場合にのみ、Windows Vista 設定[テーマ](/windows/desktop/Controls/visual-styles-overview)は無効です。  
   
- このメソッドは、送信、 [PBM_SETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760838)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [PBM_SETBARCOLOR](/windows/desktop/Controls/pbm-setbarcolor)メッセージは、Windows SDK で説明します。  
   
 ### <a name="example"></a>例  
  次のコード例では、進行状況バー コントロールにプログラムでアクセスするために使用される `m_progressCtrl` 変数を定義します。 この変数は次の例で使用されています。  
@@ -381,7 +381,7 @@ COLORREF SetBkColor(COLORREF clrNew);
  新しい背景色を示す COLORREF 値。 進行状況バーの既定の背景色を使用するときの値を指定します。  
   
 ### <a name="return-value"></a>戻り値  
- [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)場合は、既定の色の背景色は、前の背景色またはときを示す値。  
+ [COLORREF](/windows/desktop/gdi/colorref)場合は、既定の色の背景色は、前の背景色またはときを示す値。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CProgressCtrl#6](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_10.cpp)]  
@@ -408,7 +408,7 @@ BOOL SetMarquee(
 ### <a name="remarks"></a>Remarks  
  マーキーのモードがオンになっている場合は、進行状況バーがアニメーション化されるようにスクロール シアター マーキー サインオンします。  
   
- このメソッドは、送信、 [PBM_SETMARQUEE](http://msdn.microsoft.com/library/windows/desktop/bb760842)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [PBM_SETMARQUEE](/windows/desktop/Controls/pbm-setmarquee)メッセージは、Windows SDK で説明します。  
   
 ### <a name="example"></a>例  
  次のコード例では、進行状況バー コントロールにプログラムでアクセスするために使用される `m_progressCtrl` 変数を定義します。 この変数は次の例で使用されています。  
@@ -484,7 +484,7 @@ int SetState(int iState);
  現在の進行状況バー コントロールの直前の状態。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、送信、 [PBM_SETSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760850)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [PBM_SETSTATE](/windows/desktop/Controls/pbm-setstate)メッセージは、Windows SDK で説明します。  
   
 ### <a name="example"></a>例  
  次のコード例では、進行状況バー コントロールにプログラムでアクセスするために使用される `m_progressCtrl` 変数を定義します。 この変数は次の例で使用されています。  

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75f9e974a2969fa817598556e3e043626a826970
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fd9e665a83db3b824e03eb960baf54f296d15d4f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881306"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204855"
 ---
 # <a name="worker-archetype"></a>ワーカーのアーキタイプ
 準拠するクラス、*ワーカー*アーキタイプが作業項目を処理するコードがスレッド プール キューに登録を提供します。  
@@ -31,8 +31,8 @@ ms.locfileid: "37881306"
 |メソッド|説明|  
 |------------|-----------------|  
 |[Initialize](#initialize)|すべての要求が渡される前に、ワーカーのオブジェクトを初期化するために呼び出されます[Execute](#execute)します。|  
-|[実行](#execute)|作業項目の処理と呼ばれます。|  
-|[終了](#terminate)|ワーカーのオブジェクトの初期化解除に渡されたすべての要求後に呼び出された[Execute](#execute)します。|  
+|[Execute](#execute)|作業項目の処理と呼ばれます。|  
+|[Terminate](#terminate)|ワーカーのオブジェクトの初期化解除に渡されたすべての要求後に呼び出された[Execute](#execute)します。|  
   
 |Typedef|説明|  
 |-------------|-----------------|  
@@ -59,7 +59,7 @@ ms.locfileid: "37881306"
 |*ワーカー*|[CThreadPool](../../atl/reference/cthreadpool-class.md)|  
 |*ワーカー*|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** atlutil.h  
   
 ## <a name="execute"></a>WorkerArchetype::Execute
@@ -82,7 +82,7 @@ void Execute(
  Worker クラスで認識されるカスタム パラメーターです。 渡されるも`WorkerArchetype::Initialize`と`Terminate`します。  
   
  *pOverlapped*  
- ポインター、 [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342)構造体のどの作業項目のキューに入ったキューを作成するために使用します。  
+ ポインター、 [OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-_overlapped)構造体のどの作業項目のキューに入ったキューを作成するために使用します。  
   
 ## <a name="initialize"></a> WorkerArchetype::Initialize
 すべての要求が渡される前に、ワーカーのオブジェクトを初期化するために呼び出されます`WorkerArchetype::Execute`します。  

@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 759ffd42b7de4d7f1922a95876a05ce4d3002dab
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: d3650482cca0e974a229e303ae20ebdb455aae02
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337539"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218684"
 ---
 # <a name="cbasepane-class"></a>CBasePane クラス
 MFC でのすべてのペインの基本クラス。  
@@ -291,7 +291,7 @@ class CBasePane : public CWnd
 |[Cbasepane::onsetaccdata](#onsetaccdata)|`CBasePane` このメソッドを使用しません。|  
 |`CBasePane::OnUpdateCmdUI`|内部的に使用します。|  
 |[CBasePane::PaneFromPoint](#panefrompoint)|指定したポイントを含むペインを返します。|  
-|`CBasePane::PreTranslateMessage`|[TranslateMessage](../../mfc/reference/cwinapp-class.md) および [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) の各 Windows 関数にディスパッチされる前に、ウィンドウ メッセージを変換するためにクラス [CWinApp](http://msdn.microsoft.com/library/windows/desktop/ms644934) で使用されます。 ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドします)。|  
+|`CBasePane::PreTranslateMessage`|クラスによって使用される[CWinApp](../../mfc/reference/cwinapp-class.md)にディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)と[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 関数。 ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドします)。|  
 |[CBasePane::RecalcLayout](#recalclayout)|`CBasePane` このメソッドを使用しません。|  
 |[CBasePane::RemovePaneFromDockManager](#removepanefromdockmanager)|ウィンドウの登録を解除し、ドッキング マネージャーの一覧から削除されます。|  
 |[CBasePane::SaveState](#savestate)|レジストリにペインの状態を保存します。|  
@@ -361,7 +361,7 @@ class CBasePane : public CWnd
   
  [CBasePane](../../mfc/reference/cbasepane-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxbasepane.h  
   
 ##  <a name="accnotifyobjectfocusevent"></a>  CBasePane::AccNotifyObjectFocusEvent  
@@ -1388,7 +1388,7 @@ virtual HDWP MoveWindow(
  遅延のウィンドウの位置の構造体、または NULL へのハンドル。  
   
 ### <a name="remarks"></a>Remarks  
- として NULL を渡す場合、 *hdwp*パラメーターでは、このメソッドは通常、ウィンドウを移動します。 ハンドルを渡すと、このメソッドは、遅延のウィンドウを移動を実行します。 呼び出すことによって、ハンドルを取得できる[BeginDeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632672)またはこのメソッドの前回の呼び出しの戻り値を格納することで。  
+ として NULL を渡す場合、 *hdwp*パラメーターでは、このメソッドは通常、ウィンドウを移動します。 ハンドルを渡すと、このメソッドは、遅延のウィンドウを移動を実行します。 呼び出すことによって、ハンドルを取得できる[BeginDeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632672)またはこのメソッドの前回の呼び出しの戻り値を格納することで。  
   
 ##  <a name="onafterchangeparent"></a>  CBasePane::OnAfterChangeParent  
  ウィンドウの親が変更された後、フレームワークによって呼び出されます。  

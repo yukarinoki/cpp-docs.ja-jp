@@ -174,12 +174,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d19e808ed5e03f4ef117b91070a8885e7c68438
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 43f9e1b342d6de1a93906d2469d0fd1eb211e886
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850469"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215662"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem クラス
 OLE アイテムへのコンテナー インターフェイスを定義します。  
@@ -309,7 +309,7 @@ class COleClientItem : public CDocItem
   
  `COleClientItem`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxole.h  
   
 ##  <a name="activate"></a>  COleClientItem::Activate  
@@ -334,7 +334,7 @@ void Activate(
 |- 2|別のウィンドウで項目を編集します。|OLEIVERB_OPEN|  
 |- 3|アイテムを非表示します。|OLEIVERB_HIDE|  
   
- -1 という値は、通常、他の動詞のエイリアスです。 編集のオープンがサポートされていない場合は、-1 と同じ効果が-2。 追加の値を参照してください。 [IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) Windows SDK に含まれています。  
+ -1 という値は、通常、他の動詞のエイリアスです。 編集のオープンがサポートされていない場合は、-1 と同じ効果が-2。 追加の値を参照してください。 [IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) Windows SDK に含まれています。  
   
  *pView*  
  OLE アイテムを保持するコンテナーの表示ウィンドウへのポインターこれは、インプレース アクティブ化のサーバー アプリケーションが使用されます。 コンテナーは、インプレース アクティブ化をサポートしていない場合、このパラメーターは NULL を指定する必要があります。  
@@ -347,7 +347,7 @@ void Activate(
   
  主動詞し、で 0 が指定された場合、 *nVerb* OLE 項目の編集を許可するパラメーター、サーバー アプリケーションを起動します。 コンテナー アプリケーションでは、インプレース アクティブ化をサポートする場合は、インプレース編集を実行できます。 場合は、コンテナーは、インプレース アクティブ化 (または Open 動詞が指定されているかどうか) をサポートしていない、別のウィンドウで、サーバーを起動し、編集しが実行できます。 通常、コンテナー アプリケーションのユーザーが主動詞の値である OLE 項目をダブルクリックときに、 *nVerb*パラメーターは、ユーザーが実行できるアクションを決定します。 ただし、サーバーは、1 つのみのアクションをサポートする場合は、その操作が、関係なく、値がで指定された、 *nVerb*パラメーター。  
   
- 詳細については、次を参照してください。 [IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) Windows SDK に含まれています。  
   
 ##  <a name="activateas"></a>  COleClientItem::ActivateAs  
  指定された型の項目と同様に、項目をアクティブ化する OLE オブジェクトの変換機能を使用して*clsidNew*します。  
@@ -399,7 +399,7 @@ virtual BOOL CanActivate();
 ### <a name="remarks"></a>Remarks  
  既定の実装では、コンテナーに有効なウィンドウがある場合、インプレース アクティブ化ができます。 受け入れるか拒否されてアクティブ化要求の特別なロジックを実装するには、この関数をオーバーライドします。 たとえば、OLE 項目が小さすぎるか、現在表示されていない場合は、アクティブ化の要求を拒否する可能性が。  
   
- 詳細については、次を参照してください。 [IOleInPlaceSite::CanInPlaceActivate](http://msdn.microsoft.com/library/windows/desktop/ms691236) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IOleInPlaceSite::CanInPlaceActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplacesite-caninplaceactivate) Windows SDK に含まれています。  
   
 ##  <a name="cancreatefromdata"></a>  COleClientItem::CanCreateFromData  
  コンテナー アプリケーションの埋め込みオブジェクトを作成できるかどうかを調べます、指定された`COleDataObject`オブジェクト。  
@@ -454,7 +454,7 @@ static BOOL PASCAL CanPaste();
  埋め込み OLE アイテムは、クリップボードから貼り付けができる場合は 0 以外それ以外の場合 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [OleGetClipboard](http://msdn.microsoft.com/library/windows/desktop/ms692778)と[OleQueryCreateFromData](http://msdn.microsoft.com/library/windows/desktop/ms683739) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [OleGetClipboard](/windows/desktop/api/ole2/nf-ole2-olegetclipboard)と[OleQueryCreateFromData](/windows/desktop/api/ole2/nf-ole2-olequerycreatefromdata) Windows SDK に含まれています。  
   
 ##  <a name="canpastelink"></a>  置き換えるには  
  この関数では、リンクされている OLE 項目をクリップボードから貼り付けができるかどうかを参照してください。  
@@ -467,7 +467,7 @@ static BOOL PASCAL CanPasteLink();
  リンクされている OLE 項目をクリップボードから貼り付けができる場合は 0 以外それ以外の場合 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [OleGetClipboard](http://msdn.microsoft.com/library/windows/desktop/ms692778)と[OleQueryLinkFromData](http://msdn.microsoft.com/library/windows/desktop/ms690244) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [OleGetClipboard](/windows/desktop/api/ole2/nf-ole2-olegetclipboard)と[OleQueryLinkFromData](/windows/desktop/api/ole2/nf-ole2-olequerylinkfromdata) Windows SDK に含まれています。  
   
 ##  <a name="close"></a>  COleClientItem::Close  
  メモリ内には、そのハンドラーが実行されていないサーバーに読み込まれて実行中の状態を読み込み済み状態にから OLE 項目の状態を変更するには、この関数を呼び出します。  
@@ -489,7 +489,7 @@ void Close(OLECLOSE dwCloseOption = OLECLOSE_SAVEIFDIRTY);
 ### <a name="remarks"></a>Remarks  
  OLE 項目が実行されていない場合は、この関数を指定しても影響はありません。  
   
- 詳細については、次を参照してください。 [IOleObject::Close](http://msdn.microsoft.com/library/windows/desktop/ms683922) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IOleObject::Close](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-close) Windows SDK に含まれています。  
   
 ##  <a name="coleclientitem"></a>  COleClientItem::COleClientItem  
  構築、`COleClientItem`オブジェクトし、C++ オブジェクトのみを構築し、OLE の初期化は行われませんが、ドキュメントの項目のコンテナー ドキュメントのコレクションに追加します。  
@@ -558,7 +558,7 @@ void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ### <a name="remarks"></a>Remarks  
  通常、[編集] メニューから、コピーまたは切り取りコマンドのメッセージ ハンドラーを記述する場合、この関数を呼び出します。 コピーまたは切り取りのコマンドを実装する場合、コンテナー アプリケーションで項目の選択を実装する必要があります。  
   
- 詳細については、次を参照してください。 [OleSetClipboard](http://msdn.microsoft.com/library/windows/desktop/ms686623) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [OleSetClipboard](/windows/desktop/api/ole2/nf-ole2-olesetclipboard) Windows SDK に含まれています。  
   
 ##  <a name="createclonefrom"></a>  COleClientItem::CreateCloneFrom  
  指定した OLE 項目のコピーを作成するには、この関数を呼び出します。  
@@ -589,13 +589,13 @@ BOOL CreateFromClipboard(
   
 ### <a name="parameters"></a>パラメーター  
  *レンダリング*  
- サーバーが OLE 項目を表示する方法を指定するフラグ。 有効な値では、次を参照してください。 [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows SDK に含まれています。  
+ サーバーが OLE 項目を表示する方法を指定するフラグ。 有効な値では、次を参照してください。 [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK に含まれています。  
   
  *cfFormat*  
  OLE 項目を作成するときにキャッシュするクリップボード データ形式を指定します。  
   
  *lpFormatEtc*  
- ポインターを[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)場合に使用される構造*レンダリング*OLERENDER_FORMAT OLERENDER_DRAW か。 指定されたクリップボード形式の書式の追加情報を指定する場合にのみ、このパラメーターの値を指定*cfFormat*します。 このパラメーターを省略した場合、既定値は、の他のフィールドの使用は、`FORMATETC`構造体。  
+ ポインターを[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)場合に使用される構造*レンダリング*OLERENDER_FORMAT OLERENDER_DRAW か。 指定されたクリップボード形式の書式の追加情報を指定する場合にのみ、このパラメーターの値を指定*cfFormat*します。 このパラメーターを省略した場合、既定値は、の他のフィールドの使用は、`FORMATETC`構造体。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -603,7 +603,7 @@ BOOL CreateFromClipboard(
 ### <a name="remarks"></a>Remarks  
  通常の編集 メニューの 貼り付け コマンド メッセージ ハンドラーからこの関数を呼び出します。 (場合に、フレームワークによって貼り付けコマンドが有効になって、 [CanPaste](#canpaste)メンバー関数は 0 以外の値を返します)。  
   
- 詳細については、次を参照してください。 [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)と[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender)と[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK に含まれています。  
   
 ##  <a name="createfromdata"></a>  COleClientItem::CreateFromData  
  埋め込みからアイテムを作成するには、この関数を呼び出し、`COleDataObject`オブジェクト。  
@@ -621,13 +621,13 @@ BOOL CreateFromData(
  ポインター、 [COleDataObject](../../mfc/reference/coledataobject-class.md) OLE 項目の作成元のオブジェクト。  
   
  *レンダリング*  
- サーバーが OLE 項目を表示する方法を指定するフラグ。 有効な値では、次を参照してください。 [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows SDK に含まれています。  
+ サーバーが OLE 項目を表示する方法を指定するフラグ。 有効な値では、次を参照してください。 [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK に含まれています。  
   
  *cfFormat*  
  OLE 項目を作成するときにキャッシュするクリップボード データ形式を指定します。  
   
  *lpFormatEtc*  
- ポインターを[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)場合に使用される構造*レンダリング*OLERENDER_FORMAT OLERENDER_DRAW か。 指定されたクリップボード形式の書式の追加情報を指定する場合にのみ、このパラメーターの値を指定*cfFormat*します。 このパラメーターを省略した場合、既定値は、の他のフィールドの使用は、`FORMATETC`構造体。  
+ ポインターを[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)場合に使用される構造*レンダリング*OLERENDER_FORMAT OLERENDER_DRAW か。 指定されたクリップボード形式の書式の追加情報を指定する場合にのみ、このパラメーターの値を指定*cfFormat*します。 このパラメーターを省略した場合、既定値は、の他のフィールドの使用は、`FORMATETC`構造体。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -635,7 +635,7 @@ BOOL CreateFromData(
 ### <a name="remarks"></a>Remarks  
  データ転送操作では、クリップボードまたはドラッグ アンド ドロップ操作からの貼り付けなどの提供`COleDataObject`サーバー アプリケーションによって提供される情報を含むオブジェクトします。 通常のオーバーライドでは使用[この関数](../../mfc/reference/cview-class.md#ondrop)します。  
   
- 詳細については、次を参照してください。 [OleCreateFromData](http://msdn.microsoft.com/library/windows/desktop/ms691211)、 [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)、および[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [OleCreateFromData](/windows/desktop/api/ole2/nf-ole2-olecreatefromdata)、 [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender)、および[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK に含まれています。  
   
 ##  <a name="createfromfile"></a>  COleClientItem::CreateFromFile  
  ファイルから埋め込み OLE アイテムを作成するには、この関数を呼び出します。  
@@ -657,13 +657,13 @@ BOOL CreateFromFile(
  将来使用するために予約されています。  
   
  *レンダリング*  
- サーバーが OLE 項目を表示する方法を指定するフラグ。 有効な値では、次を参照してください。 [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows SDK に含まれています。  
+ サーバーが OLE 項目を表示する方法を指定するフラグ。 有効な値では、次を参照してください。 [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK に含まれています。  
   
  *cfFormat*  
  OLE 項目を作成するときにキャッシュするクリップボード データ形式を指定します。  
   
  *lpFormatEtc*  
- ポインターを[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)場合に使用される構造*レンダリング*OLERENDER_FORMAT OLERENDER_DRAW か。 指定されたクリップボード形式の書式の追加情報を指定する場合にのみ、このパラメーターの値を指定*cfFormat*します。 このパラメーターを省略した場合、既定値は、の他のフィールドの使用は、`FORMATETC`構造体。  
+ ポインターを[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)場合に使用される構造*レンダリング*OLERENDER_FORMAT OLERENDER_DRAW か。 指定されたクリップボード形式の書式の追加情報を指定する場合にのみ、このパラメーターの値を指定*cfFormat*します。 このパラメーターを省略した場合、既定値は、の他のフィールドの使用は、`FORMATETC`構造体。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -671,7 +671,7 @@ BOOL CreateFromFile(
 ### <a name="remarks"></a>コメント  
  フレームワークからこの関数を呼び出します[クリック](../../mfc/reference/coleinsertdialog-class.md#createitem)場合は、ファイルから作成 を選択すると、ユーザーがオブジェクトの挿入 ダイアログ ボックスから [ok] を選択します。  
   
- 詳細については、次を参照してください。 [OleCreateFromFile](http://msdn.microsoft.com/library/windows/desktop/ms690116)、 [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)、および[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [OleCreateFromFile](/windows/desktop/api/ole/nf-ole-olecreatefromfile)、 [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender)、および[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK に含まれています。  
   
 ##  <a name="createlinkfromclipboard"></a>  リンク  
  クリップボードの内容からリンクされた項目を作成するには、この関数を呼び出します。  
@@ -685,13 +685,13 @@ BOOL CreateLinkFromClipboard(
   
 ### <a name="parameters"></a>パラメーター  
  *レンダリング*  
- サーバーが OLE 項目を表示する方法を指定するフラグ。 有効な値では、次を参照してください。 [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows SDK に含まれています。  
+ サーバーが OLE 項目を表示する方法を指定するフラグ。 有効な値では、次を参照してください。 [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK に含まれています。  
   
  *cfFormat*  
  OLE 項目を作成するときにキャッシュするクリップボード データ形式を指定します。  
   
  *lpFormatEtc*  
- ポインターを[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)場合に使用される構造*レンダリング*OLERENDER_FORMAT OLERENDER_DRAW か。 指定されたクリップボード形式の書式の追加情報を指定する場合にのみ、このパラメーターの値を指定*cfFormat*します。 このパラメーターを省略した場合、既定値は、の他のフィールドの使用は、`FORMATETC`構造体。  
+ ポインターを[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)場合に使用される構造*レンダリング*OLERENDER_FORMAT OLERENDER_DRAW か。 指定されたクリップボード形式の書式の追加情報を指定する場合にのみ、このパラメーターの値を指定*cfFormat*します。 このパラメーターを省略した場合、既定値は、の他のフィールドの使用は、`FORMATETC`構造体。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -699,7 +699,7 @@ BOOL CreateLinkFromClipboard(
 ### <a name="remarks"></a>Remarks  
  通常 編集 メニュー リンク貼り付け コマンドのメッセージ ハンドラーからこの関数を呼び出します。 (リンク貼り付けコマンドがの既定の実装で有効になっている[COleDocument](../../mfc/reference/coledocument-class.md) OLE 項目にリンクできますが、クリップボードに含まれている場合)。  
   
- 詳細については、次を参照してください。 [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)と[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender)と[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK に含まれています。  
   
 ##  <a name="createlinkfromdata"></a>  COleClientItem::CreateLinkFromData  
  リンクされた項目を作成するには、この関数を呼び出し、`COleDataObject`オブジェクト。  
@@ -717,13 +717,13 @@ BOOL CreateLinkFromData(
  ポインター、 [COleDataObject](../../mfc/reference/coledataobject-class.md) OLE 項目の作成元のオブジェクト。  
   
  *レンダリング*  
- サーバーが OLE 項目を表示する方法を指定するフラグ。 有効な値では、次を参照してください。 [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows SDK に含まれています。  
+ サーバーが OLE 項目を表示する方法を指定するフラグ。 有効な値では、次を参照してください。 [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK に含まれています。  
   
  *cfFormat*  
  OLE 項目を作成するときにキャッシュするクリップボード データ形式を指定します。  
   
  *lpFormatEtc*  
- ポインターを[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)場合に使用される構造*レンダリング*OLERENDER_FORMAT OLERENDER_DRAW か。 指定されたクリップボード形式の書式の追加情報を指定する場合にのみ、このパラメーターの値を指定*cfFormat*します。 このパラメーターを省略した場合、既定値は、の他のフィールドの使用は、`FORMATETC`構造体。  
+ ポインターを[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)場合に使用される構造*レンダリング*OLERENDER_FORMAT OLERENDER_DRAW か。 指定されたクリップボード形式の書式の追加情報を指定する場合にのみ、このパラメーターの値を指定*cfFormat*します。 このパラメーターを省略した場合、既定値は、の他のフィールドの使用は、`FORMATETC`構造体。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -731,7 +731,7 @@ BOOL CreateLinkFromData(
 ### <a name="remarks"></a>Remarks  
  呼び出しがこのユーザーにリンクが示されている場合は、ドロップ操作中に作成する必要があります。 これは、貼り付けコマンドを処理するために使用できます。 フレームワークによって呼び出された`COleClientItem::CreateLinkFromClipboard`し、[静的オブジェクト](../../mfc/reference/colepastespecialdialog-class.md#createitem)リンク オプションが選択されています。  
   
- 詳細については、次を参照してください。 [OleCreateLinkFromData](http://msdn.microsoft.com/library/windows/desktop/ms680731)、 [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)、および[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [OleCreateLinkFromData](/windows/desktop/api/ole2/nf-ole2-olecreatelinkfromdata)、 [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender)、および[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK に含まれています。  
   
 ##  <a name="createlinkfromfile"></a>  COleClientItem::CreateLinkFromFile  
  ファイルからリンクされている OLE 項目を作成するには、この関数を呼び出します。  
@@ -749,13 +749,13 @@ BOOL CreateLinkFromFile(
  OLE 項目の作成元のファイルの名前へのポインター。  
   
  *レンダリング*  
- サーバーが OLE 項目を表示する方法を指定するフラグ。 有効な値では、次を参照してください。 [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows SDK に含まれています。  
+ サーバーが OLE 項目を表示する方法を指定するフラグ。 有効な値では、次を参照してください。 [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK に含まれています。  
   
  *cfFormat*  
  OLE 項目を作成するときにキャッシュするクリップボード データ形式を指定します。  
   
  *lpFormatEtc*  
- ポインターを[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)場合に使用される構造*レンダリング*OLERENDER_FORMAT OLERENDER_DRAW か。 指定されたクリップボード形式の書式の追加情報を指定する場合にのみ、このパラメーターの値を指定*cfFormat*します。 このパラメーターを省略した場合、既定値は、の他のフィールドの使用は、`FORMATETC`構造体。  
+ ポインターを[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)場合に使用される構造*レンダリング*OLERENDER_FORMAT OLERENDER_DRAW か。 指定されたクリップボード形式の書式の追加情報を指定する場合にのみ、このパラメーターの値を指定*cfFormat*します。 このパラメーターを省略した場合、既定値は、の他のフィールドの使用は、`FORMATETC`構造体。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -763,7 +763,7 @@ BOOL CreateLinkFromFile(
 ### <a name="remarks"></a>Remarks  
  フレームワークは、ファイルから作成を選択し、リンク チェック ボックスをオンになって、ユーザーがオブジェクトの挿入 ダイアログ ボックスから ok を選択する場合、この関数を呼び出します。 呼び出された[クリック](../../mfc/reference/coleinsertdialog-class.md#createitem)します。  
   
- 詳細については、次を参照してください。 [OleCreateLinkToFile](http://msdn.microsoft.com/library/windows/desktop/ms678434)、 [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)、および[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [OleCreateLinkToFile](/windows/desktop/api/ole2/nf-ole2-olecreatelinktofile)、 [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender)、および[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK に含まれています。  
   
 ##  <a name="createnewitem"></a>  COleClientItem::CreateNewItem  
  埋め込みアイテム; を作成するには、この関数を呼び出すこの関数は、ユーザーが OLE 項目を作成できるサーバー アプリケーションを起動します。  
@@ -781,13 +781,13 @@ BOOL CreateNewItem(
  作成する OLE 項目の種類を一意に識別する ID です。  
   
  *レンダリング*  
- サーバーが OLE 項目を表示する方法を指定するフラグ。 有効な値では、次を参照してください。 [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows SDK に含まれています。  
+ サーバーが OLE 項目を表示する方法を指定するフラグ。 有効な値では、次を参照してください。 [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK に含まれています。  
   
  *cfFormat*  
  OLE 項目を作成するときにキャッシュするクリップボード データ形式を指定します。  
   
  *lpFormatEtc*  
- ポインターを[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)場合に使用される構造*レンダリング*OLERENDER_FORMAT OLERENDER_DRAW か。 指定されたクリップボード形式の書式の追加情報を指定する場合にのみ、このパラメーターの値を指定*cfFormat*します。 このパラメーターを省略した場合、既定値は、の他のフィールドの使用は、`FORMATETC`構造体。  
+ ポインターを[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)場合に使用される構造*レンダリング*OLERENDER_FORMAT OLERENDER_DRAW か。 指定されたクリップボード形式の書式の追加情報を指定する場合にのみ、このパラメーターの値を指定*cfFormat*します。 このパラメーターを省略した場合、既定値は、の他のフィールドの使用は、`FORMATETC`構造体。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -795,7 +795,7 @@ BOOL CreateNewItem(
 ### <a name="remarks"></a>Remarks  
  フレームワークは、新規作成 ボタンを選択すると、ユーザーがオブジェクトの挿入 ダイアログ ボックスから ok を選択する場合、この関数を呼び出します。  
   
- 詳細については、次を参照してください。 [OleCreate](http://msdn.microsoft.com/library/windows/desktop/ms678409)、 [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)、および[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [OleCreate](/windows/desktop/api/ole/nf-ole-olecreate)、 [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender)、および[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK に含まれています。  
   
 ##  <a name="createstaticfromclipboard"></a>  COleClientItem::CreateStaticFromClipboard  
  クリップボードの内容から、静的な項目を作成するには、この関数を呼び出します。  
@@ -809,13 +809,13 @@ BOOL CreateStaticFromClipboard(
   
 ### <a name="parameters"></a>パラメーター  
  *レンダリング*  
- サーバーが OLE 項目を表示する方法を指定するフラグ。 有効な値では、次を参照してください。 [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows SDK に含まれています。  
+ サーバーが OLE 項目を表示する方法を指定するフラグ。 有効な値では、次を参照してください。 [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK に含まれています。  
   
  *cfFormat*  
  OLE 項目を作成するときにキャッシュするクリップボード データ形式を指定します。  
   
  *lpFormatEtc*  
- ポインターを[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)場合に使用される構造*レンダリング*OLERENDER_FORMAT OLERENDER_DRAW か。 指定されたクリップボード形式の書式の追加情報を指定する場合にのみ、このパラメーターの値を指定*cfFormat*します。 このパラメーターを省略した場合、既定値は、の他のフィールドの使用は、`FORMATETC`構造体。  
+ ポインターを[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)場合に使用される構造*レンダリング*OLERENDER_FORMAT OLERENDER_DRAW か。 指定されたクリップボード形式の書式の追加情報を指定する場合にのみ、このパラメーターの値を指定*cfFormat*します。 このパラメーターを省略した場合、既定値は、の他のフィールドの使用は、`FORMATETC`構造体。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -823,7 +823,7 @@ BOOL CreateStaticFromClipboard(
 ### <a name="remarks"></a>Remarks  
  静的な項目には、プレゼンテーションのデータがネイティブのデータではなく; が含まれていますそのため編集できません。 場合に通常、この関数が呼び出す、[一般的に](#createfromclipboard)メンバー関数は失敗します。  
   
- 詳細については、次を参照してください。 [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)と[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender)と[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK に含まれています。  
   
 ##  <a name="createstaticfromdata"></a>  COleClientItem::CreateStaticFromData  
  静的な項目を作成するには、この関数を呼び出し、`COleDataObject`オブジェクト。  
@@ -841,13 +841,13 @@ BOOL CreateStaticFromData(
  ポインター、 [COleDataObject](../../mfc/reference/coledataobject-class.md) OLE 項目の作成元のオブジェクト。  
   
  *レンダリング*  
- サーバーが OLE 項目を表示する方法を指定するフラグ。 有効な値では、次を参照してください。 [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows SDK に含まれています。  
+ サーバーが OLE 項目を表示する方法を指定するフラグ。 有効な値では、次を参照してください。 [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK に含まれています。  
   
  *cfFormat*  
  OLE 項目を作成するときにキャッシュするクリップボード データ形式を指定します。  
   
  *lpFormatEtc*  
- ポインターを[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)場合に使用される構造*レンダリング*OLERENDER_FORMAT OLERENDER_DRAW か。 指定されたクリップボード形式の書式の追加情報を指定する場合にのみ、このパラメーターの値を指定*cfFormat*します。 このパラメーターを省略した場合、既定値は、の他のフィールドの使用は、`FORMATETC`構造体。  
+ ポインターを[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)場合に使用される構造*レンダリング*OLERENDER_FORMAT OLERENDER_DRAW か。 指定されたクリップボード形式の書式の追加情報を指定する場合にのみ、このパラメーターの値を指定*cfFormat*します。 このパラメーターを省略した場合、既定値は、の他のフィールドの使用は、`FORMATETC`構造体。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -857,7 +857,7 @@ BOOL CreateStaticFromData(
   
  使用される[静的オブジェクト](../../mfc/reference/colepastespecialdialog-class.md#createitem)静的を選択するとします。  
   
- 詳細については、次を参照してください。 [OleCreateStaticFromData](http://msdn.microsoft.com/library/windows/desktop/ms687290)、 [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)、および[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [OleCreateStaticFromData](/windows/desktop/api/ole2/nf-ole2-olecreatestaticfromdata)、 [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender)、および[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK に含まれています。  
   
 ##  <a name="deactivate"></a>  COleClientItem::Deactivate  
  OLE 項目を非アクティブ化して、関連付けられているリソースを解放するには、この関数を呼び出します。  
@@ -871,7 +871,7 @@ void Deactivate();
   
  アプリケーションでは、元に戻すをサポートする場合を呼び出さないで`Deactivate`。 代わりに、呼び出す[DeactivateUI](#deactivateui)します。  
   
- 詳細については、次を参照してください。 [IOleInPlaceObject::InPlaceDeactivate](http://msdn.microsoft.com/library/windows/desktop/ms679700) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IOleInPlaceObject::InPlaceDeactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceobject-inplacedeactivate) Windows SDK に含まれています。  
   
 ##  <a name="deactivateui"></a>  COleClientItem::DeactivateUI  
  ユーザーは、インプレース アクティブなアイテムを非アクティブ化時に、この関数を呼び出します。  
@@ -885,7 +885,7 @@ void DeactivateUI();
   
  この関数は、項目の元に戻す状態情報をフラッシュしません。 情報が保存されているように[ので](#reactivateandundo)アイテムを非アクティブ化の直後に、コンテナーの元に戻すコマンドが選択した場合に後で、サーバー アプリケーションで、元に戻すコマンドを実行するに使用できます。  
   
- 詳細については、次を参照してください。 [IOleInPlaceObject::InPlaceDeactivate](http://msdn.microsoft.com/library/windows/desktop/ms679700) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IOleInPlaceObject::InPlaceDeactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceobject-inplacedeactivate) Windows SDK に含まれています。  
   
 ##  <a name="delete"></a>  COleClientItem::Delete  
  OLE 項目コンテナーのドキュメントから削除するには、この関数を呼び出します。  
@@ -943,7 +943,7 @@ DROPEFFECT DoDragDrop(
   
 -   Windows 95/98 ドラッグ遅延時間は、WIN のキャッシュされたバージョンに格納されます。INI します。  
   
- レジストリのいずれかの遅延情報が格納されている方法の詳細についてはドラッグのまたはします。INI ファイルを参照してください[WriteProfileString](http://msdn.microsoft.com/library/windows/desktop/ms725504) Windows SDK に含まれています。  
+ レジストリのいずれかの遅延情報が格納されている方法の詳細についてはドラッグのまたはします。INI ファイルを参照してください[WriteProfileString](/windows/desktop/api/winbase/nf-winbase-writeprofilestringa) Windows SDK に含まれています。  
   
 ##  <a name="doverb"></a>  COleClientItem::DoVerb  
  呼び出す`DoVerb`を指定した動詞を実行します。  
@@ -967,7 +967,7 @@ virtual BOOL DoVerb(
 |- 2|別のウィンドウで項目を編集します。|OLEIVERB_OPEN|  
 |- 3|アイテムを非表示します。|OLEIVERB_HIDE|  
   
- -1 という値は、通常、他の動詞のエイリアスです。 編集のオープンがサポートされていない場合は、-1 と同じ効果が-2。 追加の値を参照してください。 [IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) Windows SDK に含まれています。  
+ -1 という値は、通常、他の動詞のエイリアスです。 編集のオープンがサポートされていない場合は、-1 と同じ効果が-2。 追加の値を参照してください。 [IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) Windows SDK に含まれています。  
   
  *pView*  
  表示ウィンドウへのポインターこれは、インプレース アクティブ化のサーバーによって使用されます。 コンテナー アプリケーションは、インプレース アクティブ化を許可していない場合、このパラメーターは NULL を指定する必要があります。  
@@ -1013,7 +1013,7 @@ BOOL Draw(
   
  *LpBounds*パラメーターは、ターゲットのデバイス コンテキスト (現在のマップ モード) の相対で四角形を識別します。 レンダリングは、画像をスケーリングする必要があり、表示されるビューと最終的な印刷されたイメージの拡大/縮小するビューを強制するコンテナー アプリケーションで使用できます。  
   
- 詳細については、次を参照してください。 [IViewObject::Draw](http://msdn.microsoft.com/library/windows/desktop/ms688655) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IViewObject::Draw](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-draw) Windows SDK に含まれています。  
   
 ##  <a name="getactiveview"></a>  COleClientItem::GetActiveView  
  項目がインプレース アクティブ化するビューを返します。  
@@ -1047,9 +1047,9 @@ BOOL GetCachedExtent(
 ### <a name="remarks"></a>Remarks  
  この関数と同じ情報を提供する[GetExtent](#getextent)します。 ただし、呼び出す`GetCachedExtent`など他の OLE ハンドラーの処理中にエクステントの情報を取得する[OnChange](#onchange)します。 ディメンションは、寸法です。  
   
- これは、可能なため、`GetCachedExtent`を使用して、 [IViewObject2](http://msdn.microsoft.com/library/windows/desktop/ms691318)を使用するのではなく、インターフェイス、 [IOleObject](http://msdn.microsoft.com/library/windows/desktop/dd542709)この項目の範囲を取得するインターフェイス。 `IViewObject2` COM オブジェクトが前回の呼び出しで使用されるエクステントの情報をキャッシュ[IViewObject::Draw](http://msdn.microsoft.com/library/windows/desktop/ms688655)します。  
+ これは、可能なため、`GetCachedExtent`を使用して、 [IViewObject2](/windows/desktop/api/oleidl/nn-oleidl-iviewobject2)を使用するのではなく、インターフェイス、 [IOleObject](/windows/desktop/api/oleidl/nn-oleidl-ioleobject)この項目の範囲を取得するインターフェイス。 `IViewObject2` COM オブジェクトが前回の呼び出しで使用されるエクステントの情報をキャッシュ[IViewObject::Draw](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-draw)します。  
   
- 詳細については、次を参照してください。 [IViewObject2::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms684032) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IViewObject2::GetExtent](/windows/desktop/api/oleidl/nf-oleidl-iviewobject2-getextent) Windows SDK に含まれています。  
   
 ##  <a name="getclassid"></a>  COleClientItem::GetClassID  
  指すメモリにアイテムのクラス ID を返します*pClassID*します。  
@@ -1060,12 +1060,12 @@ void GetClassID(CLSID* pClassID) const;
   
 ### <a name="parameters"></a>パラメーター  
  *pClassID*  
- 型の識別子にポインター [CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424)クラス ID を取得するには CLSID については、Windows SDK を参照してください。  
+ 型の識別子にポインター [CLSID](/windows/desktop/com/clsid-key-hklm)クラス ID を取得するには CLSID については、Windows SDK を参照してください。  
   
 ### <a name="remarks"></a>Remarks  
  クラス ID は、アイテムを編集するアプリケーションを一意に識別する 128 ビットの数値です。  
   
- 詳細については、次を参照してください。 [IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IPersist::GetClassID](/windows/desktop/api/objidl/nf-objidl-ipersist-getclassid) Windows SDK に含まれています。  
   
 ##  <a name="getclipboarddata"></a>  COleClientItem::GetClipboardData  
  取得するには、この関数を呼び出す、`COleDataSource`オブジェクトへの呼び出しで、クリップボードに配置がすべてのデータを含む、 [CopyToClipboard](#copytoclipboard)メンバー関数。  
@@ -1145,7 +1145,7 @@ BOOL GetExtent(
 > [!NOTE]
 >  呼び出さない`GetExtent`、OLE ハンドラーの処理中になど[OnChange](#onchange)します。 呼び出す[GetCachedExtent](#getcachedextent)代わりにします。  
   
- 詳細については、次を参照してください。 [IOleObject::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms692325) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IOleObject::GetExtent](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getextent) Windows SDK に含まれています。  
   
 ##  <a name="geticonfromregistry"></a>  COleClientItem::GetIconFromRegistry  
  特定の CLSID のサーバーに関連付けられているアイコン リソースを識別するハンドルを取得するには、このメンバー関数を呼び出します。  
@@ -1222,7 +1222,7 @@ SCODE GetLastStatus() const;
 ### <a name="remarks"></a>Remarks  
  FALSE、またはその他のメンバーの BOOL の値が NULL を返す関数を返すメンバー関数の`GetLastStatus`より詳細なエラー情報を返します。 ほとんどの OLE メンバー関数がより重大なエラーに対して例外をスローすることに注意します。 SCODE の解釈の詳細については、最終 SCODE 値が返されましたが、基になる OLE 呼び出しに依存します。  
   
- SCODE の詳細については、次を参照してください。 [COM エラー コードの構造](http://msdn.microsoft.com/library/windows/desktop/ms690088)Windows SDK のドキュメント。  
+ SCODE の詳細については、次を参照してください。 [COM エラー コードの構造](/windows/desktop/com/structure-of-com-error-codes)Windows SDK のドキュメント。  
   
 ##  <a name="getlinkupdateoptions"></a>  COleClientItem::GetLinkUpdateOptions  
  OLE 項目のリンクの更新オプションの現在の値を取得するには、この関数を呼び出します。  
@@ -1243,7 +1243,7 @@ OLEUPDATE GetLinkUpdateOptions();
   
  この関数、 [COleLinksDialog](../../mfc/reference/colelinksdialog-class.md)クラス。  
   
- 詳細については、次を参照してください。 [IOleLink::GetUpdateOptions](http://msdn.microsoft.com/library/windows/desktop/ms680100) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IOleLink::GetUpdateOptions](/windows/desktop/api/oleidl/nf-oleidl-iolelink-getupdateoptions) Windows SDK に含まれています。  
   
 ##  <a name="gettype"></a>  COleClientItem::GetType  
  OLE 項目の埋め込みまたはリンクされているかどうか、または静的に決定するには、この関数を呼び出します。  
@@ -1288,7 +1288,7 @@ void GetUserType(
   
  完全な型名が要求されましたが、使用できない場合は、短い名前が代わりに使用されます。 登録情報データベース、OLE 項目の種類のエントリが見つからないか、ユーザーの種類が OLE 項目の種類に登録されていない場合、ユーザーの種類に格納されている場合は、OLE アイテムが使用されます。 そのユーザーの種類名が空の文字列の場合は、「不明なオブジェクト」が使用されます。  
   
- 詳細については、次を参照してください。 [IOleObject::GetUserType](http://msdn.microsoft.com/library/windows/desktop/ms688643) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IOleObject::GetUserType](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getusertype) Windows SDK に含まれています。  
   
 ##  <a name="isinplaceactive"></a>  COleClientItem::IsInPlaceActive  
  OLE 項目がアクティブであるかどうかを確認するには、この関数を呼び出します。  
@@ -1318,7 +1318,7 @@ BOOL IsLinkUpToDate() const;
   
  これはによって自動的に呼び出されます、 [COleLinksDialog](../../mfc/reference/colelinksdialog-class.md)実装します。  
   
- 詳細については、次を参照してください。 [:isuptodate](http://msdn.microsoft.com/library/windows/desktop/ms686624) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [:isuptodate](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-isuptodate) Windows SDK に含まれています。  
   
 ##  <a name="ismodified"></a>  COleClientItem::IsModified  
  この関数では、かどうか OLE 項目がダーティ (最後に保存された以降に変更) を参照してください。  
@@ -1331,7 +1331,7 @@ BOOL IsModified() const;
  OLE 項目がダーティの場合、0 以外の場合それ以外の場合 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [IPersistStorage::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IPersistStorage::IsDirty](/windows/desktop/api/objidl/nf-objidl-ipersiststorage-isdirty) Windows SDK に含まれています。  
   
 ##  <a name="isopen"></a>  COleClientItem::IsOpen  
  OLE 項目が開いているかどうかを確認するには、この関数を呼び出すつまり、別のウィンドウで実行されているサーバー アプリケーションのインスタンスで開かれます。  
@@ -1357,7 +1357,7 @@ BOOL IsRunning() const;
  OLE 項目が実行されている以外の場合は 0 以外それ以外の場合 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [OleIsRunning](http://msdn.microsoft.com/library/windows/desktop/ms688705) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [OleIsRunning](/windows/desktop/api/ole2/nf-ole2-oleisrunning) Windows SDK に含まれています。  
   
 ##  <a name="onactivate"></a>  COleClientItem::OnActivate  
  インプレース アクティブされただけのアイテムを通知するためにフレームワークによって呼び出されます。  
@@ -1455,7 +1455,7 @@ virtual void OnDeactivateAndUndo();
 ### <a name="remarks"></a>Remarks  
  既定の実装[DeactivateUI](#deactivateui)サーバーのユーザー インターフェイスを非アクティブ化します。 コンテナー アプリケーションで元に戻すコマンドを実装している場合は、この関数をオーバーライドします。 オーバーライドの中で、関数の基底クラスのバージョンを呼び出すし、最後のコマンドは、アプリケーションで実行を元に戻します。  
   
- 詳細については、次を参照してください。 [IOleInPlaceSite::DeactivateAndUndo](http://msdn.microsoft.com/library/windows/desktop/ms683743) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IOleInPlaceSite::DeactivateAndUndo](/windows/desktop/api/oleidl/nf-oleidl-ioleinplacesite-deactivateandundo) Windows SDK に含まれています。  
   
 ##  <a name="ondeactivateui"></a>  COleClientItem::OnDeactivateUI  
  ユーザーは、インプレース アクティブなアイテムを非アクティブ化時に呼び出されます。  
@@ -1485,7 +1485,7 @@ virtual void OnDiscardUndoState();
   
  この関数を呼び出すことによって呼び出すことができます、サーバーが発生する場合は、サーバーは、Microsoft Foundation Class ライブラリで書き込まれましたが、 [COleServerDoc::DiscardUndoState](../../mfc/reference/coleserverdoc-class.md#discardundostate)します。  
   
- 詳細については、次を参照してください。 [IOleInPlaceSite::DiscardUndoState](http://msdn.microsoft.com/library/windows/desktop/ms688642) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IOleInPlaceSite::DiscardUndoState](/windows/desktop/api/oleidl/nf-oleidl-ioleinplacesite-discardundostate) Windows SDK に含まれています。  
   
 ##  <a name="ongetclipboarddata"></a>  COleClientItem::OnGetClipboardData  
  取得するためにフレームワークによって呼び出される、`COleDataSource`オブジェクトのいずれかを呼び出して、クリップボードに配置がすべてのデータを格納している、 [CopyToClipboard](#copytoclipboard)または[(dodragdrop を)](#dodragdrop)メンバー関数。  
@@ -1563,7 +1563,7 @@ virtual BOOL OnGetWindowContext(
  ドキュメント フレーム ウィンドウへのポインターへのポインター。  
   
  *は*  
- ポインター、[受け取る](http://msdn.microsoft.com/library/windows/desktop/ms693737)フレーム ウィンドウの情報を受け取る構造体。  
+ ポインター、[受け取る](/windows/desktop/api/oleidl/ns-oleidl-tagoifi)フレーム ウィンドウの情報を受け取る構造体。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -1575,7 +1575,7 @@ virtual BOOL OnGetWindowContext(
   
  既定の実装がアプリケーションに適合しない場合にのみ、この関数をオーバーライドします。たとえば、次のようにアプリケーションにユーザー インターフェイスのパラダイム SDI または MDI のとは異なる場合です。 これは、高度なオーバーライド可能な。  
   
- 詳細については、次を参照してください。 [IOleInPlaceSite::GetWindowContext](http://msdn.microsoft.com/library/windows/desktop/ms694366)と[受け取る](http://msdn.microsoft.com/library/windows/desktop/ms693737)Windows SDK の構造体。  
+ 詳細については、次を参照してください。 [IOleInPlaceSite::GetWindowContext](/windows/desktop/api/oleidl/nf-oleidl-ioleinplacesite-getwindowcontext)と[受け取る](/windows/desktop/api/oleidl/ns-oleidl-tagoifi)Windows SDK の構造体。  
   
 ##  <a name="oninsertmenus"></a>  COleClientItem::OnInsertMenus  
  空のメニューに、コンテナー アプリケーションのメニューを挿入する、インプレース アクティブ化時にフレームワークによって呼び出されます。  
@@ -1598,7 +1598,7 @@ virtual void OnInsertMenus(
   
  既定の実装を挿入*コンテナー*インプレースでコンテナーのメニュー。 つまり、ファイル、コンテナー、およびウィンドウのメニュー グループ。 [CDocTemplate::SetContainerInfo](../../mfc/reference/cdoctemplate-class.md#setcontainerinfo)このメニュー リソースを設定するために使用します。 また、既定の実装は 0、2、および 4 での要素に適切な値を割り当てます*lpMenuWidths*、メニュー リソースによって異なります。 既定の実装がアプリケーションに適切でない場合は、この関数をオーバーライドします。たとえば、次のように、アプリケーションがリソースをドキュメントの種類に関連付けるためのドキュメント テンプレートを使用しない場合です。 オーバーライドする必要がある場合、この関数をオーバーライドすると、[とき](#onsetmenu)と[OnRemoveMenus](#onremovemenus)します。 これは、高度なオーバーライド可能な。  
   
- 詳細については、次を参照してください。 [IOleInPlaceFrame::InsertMenus](http://msdn.microsoft.com/library/windows/desktop/ms683987) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IOleInPlaceFrame::InsertMenus](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceframe-insertmenus) Windows SDK に含まれています。  
   
 ##  <a name="onremovemenus"></a>  COleClientItem::OnRemoveMenus  
  埋めこみ先編集が終了すると、指定した複合メニューから、コンテナーのメニューを削除するためにフレームワークによって呼び出されます。  
@@ -1616,7 +1616,7 @@ virtual void OnRemoveMenus(CMenu* pMenuShared);
   
  サブメニュー*コンテナー*サーバーが繰り返し呼び出された場合は、複数のコンポジット メニューに共有される`OnInsertMenus`します。 そのため削除しないで、サブメニューのオーバーライドで`OnRemoveMenus`; のみ切断する必要があります。  
   
- 詳細については、次を参照してください。 [IOleInPlaceFrame::RemoveMenus](http://msdn.microsoft.com/library/windows/desktop/ms688685) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IOleInPlaceFrame::RemoveMenus](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceframe-removemenus) Windows SDK に含まれています。  
   
 ##  <a name="onscrollby"></a>  COleClientItem::OnScrollBy  
  サーバーからの要求に応答で OLE 項目をスクロールするためにフレームワークによって呼び出されます。  
@@ -1635,7 +1635,7 @@ virtual BOOL OnScrollBy(CSize sizeExtent);
 ### <a name="remarks"></a>Remarks  
  たとえば、OLE アイテムは部分的に表示されて、ユーザーが表示領域外で埋め込み先編集を実行中に移動、カーソルを表示したままにこの関数が呼び出されます。 既定の実装では、何も行われません。 指定した量によって、項目をスクロールするには、この関数をオーバーライドします。 スクロールすると、結果として OLE 項目の表示部分を変更できることに注意してください。 呼び出す[SetItemRects](#setitemrects)アイテムの表示の四角形を更新します。  
   
- 詳細については、次を参照してください。 [IOleInPlaceSite::Scroll](http://msdn.microsoft.com/library/windows/desktop/ms690291) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IOleInPlaceSite::Scroll](/windows/desktop/api/oleidl/nf-oleidl-ioleinplacesite-scroll) Windows SDK に含まれています。  
   
 ##  <a name="onsetmenu"></a>  COleClientItem::OnSetMenu  
  インプレース アクティブ化が開始され、終了は、2 回をフレームワークが呼び出しますコンポジット メニューと、2 回目をインストールする最初の時間 (と*holemenu* null) を削除します。  
@@ -1658,9 +1658,9 @@ virtual void OnSetMenu(
  OLE 項目の編集ウィンドウへのハンドルします。 これは、OLE から編集コマンドを受信するウィンドウです。  
   
 ### <a name="remarks"></a>Remarks  
- 既定の実装をインストールまたはコンポジット メニューを削除しを呼び出して、[その](http://msdn.microsoft.com/library/windows/desktop/ms692831)インストールまたはディスパッチのコードを削除する関数。 既定の実装がアプリケーションに対して適切でない場合は、この関数をオーバーライドします。 この関数をオーバーライドする場合はおそらくをオーバーライドする[とき](#oninsertmenus)と[OnRemoveMenus](#onremovemenus)もします。 これは、高度なオーバーライド可能な。  
+ 既定の実装をインストールまたはコンポジット メニューを削除しを呼び出して、[その](/windows/desktop/api/ole2/nf-ole2-olesetmenudescriptor)インストールまたはディスパッチのコードを削除する関数。 既定の実装がアプリケーションに対して適切でない場合は、この関数をオーバーライドします。 この関数をオーバーライドする場合はおそらくをオーバーライドする[とき](#oninsertmenus)と[OnRemoveMenus](#onremovemenus)もします。 これは、高度なオーバーライド可能な。  
   
- 詳細については、次を参照してください。 [OleCreateMenuDescriptor](http://msdn.microsoft.com/library/windows/desktop/ms691415)、[その](http://msdn.microsoft.com/library/windows/desktop/ms692831)、および[IOleInPlaceFrame::SetMenu](http://msdn.microsoft.com/library/windows/desktop/ms693713) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [OleCreateMenuDescriptor](/windows/desktop/api/ole2/nf-ole2-olecreatemenudescriptor)、[その](/windows/desktop/api/ole2/nf-ole2-olesetmenudescriptor)、および[IOleInPlaceFrame::SetMenu](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceframe-setmenu) Windows SDK に含まれています。  
   
 ##  <a name="onshowcontrolbars"></a>  COleClientItem::OnShowControlBars  
  コンテナー アプリケーションのコントロール バーを非表示にしたりするためにフレームワークによって呼び出されます。  
@@ -1724,7 +1724,7 @@ BOOL ReactivateAndUndo();
   
  Microsoft Foundation Class ライブラリで、サーバー アプリケーションが書き込まれると、この関数と、サーバーを呼び出す[されて](../../mfc/reference/coleserverdoc-class.md#onreactivateandundo)します。  
   
- 詳細については、次を参照してください。 [IOleInPlaceObject::ReactivateAndUndo](http://msdn.microsoft.com/library/windows/desktop/ms691372) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IOleInPlaceObject::ReactivateAndUndo](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceobject-reactivateandundo) Windows SDK に含まれています。  
   
 ##  <a name="release"></a>  COleClientItem::Release  
  OLE アイテムによって使用されるリソースをクリーンアップするには、この関数を呼び出します。  
@@ -1740,7 +1740,7 @@ virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
 ### <a name="remarks"></a>Remarks  
  `Release` によって呼び出される、`COleClientItem`デストラクター。  
   
- 詳細については、次を参照してください。 [:release](http://msdn.microsoft.com/library/windows/desktop/ms682317) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [:release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) Windows SDK に含まれています。  
   
 ##  <a name="reload"></a>  COleClientItem::Reload  
  終了し、項目を再読み込みします。  
@@ -1808,7 +1808,7 @@ void SetExtent(
 ### <a name="remarks"></a>Remarks  
  これにより、サーバー アプリケーション、Microsoft Foundation Class ライブラリを使用して記述されていますが場合、 [OnSetExtent](../../mfc/reference/coleserveritem-class.md#onsetextent)メンバー関数は、対応する`COleServerItem`呼び出されるオブジェクト。 OLE 項目は、その表示を適宜調整することができますし。 寸法、ディメンションがあります。 ユーザーが OLE 項目をサイズ変更時に、または何らかの形式のレイアウトのネゴシエーションをサポートしている場合は、この関数を呼び出します。  
   
- 詳細については、次を参照してください。 [IOleObject::SetExtent](http://msdn.microsoft.com/library/windows/desktop/ms694330) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IOleObject::SetExtent](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setextent) Windows SDK に含まれています。  
   
 ##  <a name="sethostnames"></a>  COleClientItem::SetHostNames  
  コンテナー アプリケーションの名前と埋め込み OLE アイテムのコンテナーの名前を指定するには、この関数を呼び出します。  
@@ -1831,7 +1831,7 @@ void SetHostNames(
   
  これとも呼ばれます自動的にドキュメント名とアプリケーションの名前でオブジェクトが読み込まれるときに、または別の名前でファイルを保存するとします。 したがって、この関数を直接呼び出す通常必要はありません。  
   
- 詳細については、次を参照してください。 [IOleObject::SetHostNames](http://msdn.microsoft.com/library/windows/desktop/ms680642) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IOleObject::SetHostNames](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-sethostnames) Windows SDK に含まれています。  
   
 ##  <a name="seticonicmetafile"></a>  COleClientItem::SetIconicMetafile  
  項目のアイコンを描画するために使われるメタファイルをキャッシュします。  
@@ -1874,7 +1874,7 @@ BOOL SetItemRects(
 ### <a name="remarks"></a>Remarks  
  この関数の既定の実装によって、 [:onchangeitemposition](#onchangeitemposition)メンバー関数。 位置または OLE の表示部分の項目の変更されるたびに、この関数を呼び出す必要があります。 ビューから呼び出すことは、通常これは意味[OnSize](../../mfc/reference/cwnd-class.md#onsize)と[OnScrollBy](../../mfc/reference/cview-class.md#onscrollby)メンバー関数。  
   
- 詳細については、次を参照してください。 [IOleInPlaceObject::SetObjectRects](http://msdn.microsoft.com/library/windows/desktop/ms683767) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IOleInPlaceObject::SetObjectRects](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceobject-setobjectrects) Windows SDK に含まれています。  
   
 ##  <a name="setlinkupdateoptions"></a>  COleClientItem::SetLinkUpdateOptions  
  指定したリンク アイテムの表示のリンクの更新オプションを設定するには、この関数を呼び出します。  
@@ -1894,7 +1894,7 @@ void SetLinkUpdateOptions(OLEUPDATE dwUpdateOpt);
 ### <a name="remarks"></a>Remarks  
  通常、リンク ダイアログ ボックスでユーザーが選択した更新オプションを変更する必要がありますできません。  
   
- 詳細については、次を参照してください。 [IOleLink::SetUpdateOptions](http://msdn.microsoft.com/library/windows/desktop/ms680120) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IOleLink::SetUpdateOptions](/windows/desktop/api/oleidl/nf-oleidl-iolelink-setupdateoptions) Windows SDK に含まれています。  
   
 ##  <a name="setprintdevice"></a>  COleClientItem::SetPrintDevice  
  この項目の出力先のデバイスを変更するには、この関数を呼び出します。  
@@ -1906,10 +1906,10 @@ BOOL SetPrintDevice(const PRINTDLG* ppd);
   
 ### <a name="parameters"></a>パラメーター  
  *ptd*  
- ポインターを[DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613)データ構造は、新しい印刷対象デバイスに関する情報が含まれます。 NULL にすることができます。  
+ ポインターを[DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice)データ構造は、新しい印刷対象デバイスに関する情報が含まれます。 NULL にすることができます。  
   
  *ppd*  
- ポインターを[PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646940)データ構造は、新しい印刷対象デバイスに関する情報が含まれます。 NULL にすることができます。  
+ ポインターを[PRINTDLG](https://msdn.microsoft.com/library/windows/desktop/ms646940)データ構造は、新しい印刷対象デバイスに関する情報が含まれます。 NULL にすることができます。  
   
 ### <a name="return-value"></a>戻り値  
  関数が成功した場合、0 以外の場合それ以外の場合 0 を返します。  
@@ -1919,9 +1919,9 @@ BOOL SetPrintDevice(const PRINTDLG* ppd);
   
  この関数の引数には、OLE システムがターゲット デバイスを識別するために使用する情報が含まれています。 `PRINTDLG`構造体には、一般的な印刷 ダイアログ ボックスを初期化するために Windows を使用する情報が含まれます。 ユーザーがダイアログ ボックスを閉じた後、Windows はこの構造体で、ユーザーの選択に関する情報を返します。 `m_pd`のメンバー、 [CPrintDialog](../../mfc/reference/cprintdialog-class.md)オブジェクトが、`PRINTDLG`構造体。  
   
- この構造体の詳細については、次を参照してください。 [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843) Windows SDK に含まれています。  
+ この構造体の詳細については、次を参照してください。 [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda) Windows SDK に含まれています。  
   
- 詳細については、次を参照してください。 [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) Windows SDK に含まれています。  
   
 ##  <a name="updatelink"></a>  COleClientItem::UpdateLink  
  OLE 項目のプレゼンテーション データをすぐに更新するには、この関数を呼び出します。  
@@ -1936,7 +1936,7 @@ BOOL UpdateLink();
 ### <a name="remarks"></a>Remarks  
  リンクされた項目は、関数は OLE 項目の新しいプレゼンテーションを取得するリンクのソースを検索します。 このプロセスは、時間のかかるである可能性がある、1 つまたは複数のサーバー アプリケーションを実行する必要があります。 埋め込みアイテムは、関数は再帰的に、埋め込み項目が期限切れになる可能性があるリンクを含むかどうかを確認し、更新することは動作します。 ユーザーは、リンク ダイアログ ボックスを使用して個々 のリンクを手動で更新できます。  
   
- 詳細については、次を参照してください。 [IOleLink::Update](http://msdn.microsoft.com/library/windows/desktop/ms692660) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IOleLink::Update](/windows/desktop/api/oleidl/nf-oleidl-iolelink-update) Windows SDK に含まれています。  
   
 ## <a name="see-also"></a>関連項目  
  [MFC サンプル MFCBIND](../../visual-cpp-samples.md)   

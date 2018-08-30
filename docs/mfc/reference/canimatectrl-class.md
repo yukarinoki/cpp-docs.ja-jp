@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e786dc176558900223b2b482a7161abe5e0d84d
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 98b8f9f99b38d2878025546379a185aef53bb663
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336274"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213770"
 ---
 # <a name="canimatectrl-class"></a>CAnimateCtrl クラス
 Windows コモン アニメーション コントロールの機能が用意されています。  
@@ -105,7 +105,7 @@ class CAnimateCtrl : public CWnd
   
  `CAnimateCtrl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxcmn.h  
   
 ##  <a name="canimatectrl"></a>  CAnimateCtrl::CAnimateCtrl  
@@ -147,7 +147,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>パラメーター  
  *dwStyle*  
- アニメーション コントロールのスタイルを指定します。 以下の「解説」セクションとアニメーション コントロールのスタイルで説明されているスタイルが説明されている windows 任意組み合わせを適用[アニメーション コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb761886)Windows SDK に含まれています。  
+ アニメーション コントロールのスタイルを指定します。 以下の「解説」セクションとアニメーション コントロールのスタイルで説明されているスタイルが説明されている windows 任意組み合わせを適用[アニメーション コントロールのスタイル](/windows/desktop/Controls/animation-control-styles)Windows SDK に含まれています。  
   
  *rect*  
  アニメーション コントロールの位置とサイズを指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](../../mfc/reference/rect-structure1.md)構造体。  
@@ -174,7 +174,7 @@ virtual BOOL Create(
   
  アニメーション コントロールで拡張ウィンドウ スタイルを使用する場合は、呼び出す[CreateEx](#createex)の代わりに`Create`します。  
   
- 上記のウィンドウ スタイル、だけでなくアニメーション コントロールに 1 つまたは複数のアニメーション コントロールのスタイルを適用します。 詳細については、Windows SDK を参照してください[アニメーション コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb761886)します。  
+ 上記のウィンドウ スタイル、だけでなくアニメーション コントロールに 1 つまたは複数のアニメーション コントロールのスタイルを適用します。 詳細については、Windows SDK を参照してください[アニメーション コントロールのスタイル](/windows/desktop/Controls/animation-control-styles)します。  
   
 ### <a name="example"></a>例  
   例をご覧ください[CAnimateCtrl::CAnimateCtrl](#canimatectrl)します。  
@@ -193,13 +193,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>パラメーター  
  *dwExStyle*  
- 作成されるコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK に含まれています。  
+ 作成されるコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK に含まれています。  
   
  *dwStyle*  
- アニメーション コントロールのスタイルを指定します。 ウィンドウの任意の組み合わせを適用し、で説明されているアニメーション コントロールのスタイル[アニメーション コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb761886)Windows SDK に含まれています。  
+ アニメーション コントロールのスタイルを指定します。 ウィンドウの任意の組み合わせを適用し、で説明されているアニメーション コントロールのスタイル[アニメーション コントロールのスタイル](/windows/desktop/Controls/animation-control-styles)Windows SDK に含まれています。  
   
  *rect*  
- 参照を[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。  
+ 参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。  
   
  *pParentWnd*  
  コントロールの親であるウィンドウへのポインター。  
@@ -224,7 +224,7 @@ BOOL IsPlaying() const;
  AVI クリップが再生中以外の場合は TRUE。それ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、送信、 [ACM_ISPLAYING](http://msdn.microsoft.com/library/windows/desktop/bb761895)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [ACM_ISPLAYING](/windows/desktop/Controls/acm-isplaying)メッセージは、Windows SDK で説明します。  
   
 ##  <a name="open"></a>  CAnimateCtrl::Open  
  AVI クリップを開くし、最初のフレームを表示するには、この関数を呼び出します。  

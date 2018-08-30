@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b5cff88aab5a4b069d96808755ce92d61f32fff
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9b739a2c4388877bc463a6345dcfe347d8638b27
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42575526"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206373"
 ---
 # <a name="ccompolyobject-class"></a>CComPolyObject クラス
 このクラスは実装`IUnknown`集計または非集約オブジェクト。  
@@ -76,7 +76,7 @@ class CComPolyObject : public IUnknown,
 |[CComPolyObject::m_contained](#m_contained)|デリゲート`IUnknown`集約オブジェクトの場合、またはに不明な外部への呼び出し、`IUnknown`オブジェクトが集計されない場合は、オブジェクトの。|  
   
 ## <a name="remarks"></a>Remarks  
- `CComPolyObject` 実装[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)集計または非集約オブジェクト。  
+ `CComPolyObject` 実装[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)集計または非集約オブジェクト。  
   
  インスタンス`CComPolyObject`作成は、外側の値が"不明"のチェックします。 NULL の場合`IUnknown`の非集計オブジェクトに実装されます。 不明な外部が NULL でない場合`IUnknown`集約オブジェクトに実装されます。  
   

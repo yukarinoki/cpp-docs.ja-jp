@@ -162,12 +162,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57a32de579eb28e41153f6b13b715167225f3833
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 2847bf32a51a63e39d80839fed1b46fac18f29dc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850379"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215792"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl クラス
 リッチ エディット コントロールの機能を提供します。  
@@ -290,7 +290,7 @@ class CRichEditCtrl : public CWnd
   
  `CRichEditCtrl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxcmn.h  
   
 ##  <a name="canpaste"></a>  CRichEditCtrl::CanPaste  
@@ -302,7 +302,7 @@ BOOL CanPaste(UINT nFormat = 0) const;
   
 ### <a name="parameters"></a>パラメーター  
  *パラメーター*  
- クエリするクリップボード データ形式。 このパラメーターは、定義済みのクリップボード形式またはによって返される値のいずれかを指定できます[独自のデータ](http://msdn.microsoft.com/library/windows/desktop/ms649049)します。  
+ クエリするクリップボード データ形式。 このパラメーターは、定義済みのクリップボード形式またはによって返される値のいずれかを指定できます[独自のデータ](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata)します。  
   
 ### <a name="return-value"></a>戻り値  
  クリップボードの形式を貼り付けできる場合は 0 以外それ以外の場合 0 を返します。  
@@ -310,7 +310,7 @@ BOOL CanPaste(UINT nFormat = 0) const;
 ### <a name="remarks"></a>Remarks  
  場合*フォーマット*は 0 です。`CanPaste`現在クリップボードに任意の形式が試行されます。  
   
- 詳細については、次を参照してください。 [EM_CANPASTE](http://msdn.microsoft.com/library/windows/desktop/bb787993)メッセージと[独自のデータ](http://msdn.microsoft.com/library/windows/desktop/ms649049)Windows SDK 内の関数。  
+ 詳細については、次を参照してください。 [EM_CANPASTE](/windows/desktop/Controls/em-canpaste)メッセージと[独自のデータ](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata)Windows SDK 内の関数。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#1](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_1.cpp)]  
@@ -328,7 +328,7 @@ BOOL CanRedo() const;
 ### <a name="remarks"></a>Remarks  
  再実行キューの操作の名前を検出するには、呼び出す[CRichEditCtrl::GetRedoName](#getredoname)します。 最新の元に戻す操作を元に戻す、呼び出す[やり直し](#redo)します。  
   
- 詳細については、次を参照してください。 [EM_CANREDO](http://msdn.microsoft.com/library/windows/desktop/bb787995) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [EM_CANREDO](/windows/desktop/Controls/em-canredo) Windows SDK に含まれています。  
   
 ##  <a name="canundo"></a>  CRichEditCtrl::CanUndo  
  最後の編集操作を元に戻すことができるかどうかを決定します。  
@@ -341,7 +341,7 @@ BOOL CanUndo() const;
  呼び出しで最後の編集操作を取り消すことができる場合、0 以外の場合、[を元に戻す](#undo)メンバー関数は元に戻すことができない場合は 0。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [EM_CANUNDO](http://msdn.microsoft.com/library/windows/desktop/bb775468) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [EM_CANUNDO](/windows/desktop/Controls/em-canundo) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#2](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_2.cpp)]  
@@ -363,7 +363,7 @@ int CharFromPos(CPoint pt) const;
 ### <a name="remarks"></a>Remarks  
  このメンバー関数は、リッチ エディット コントロールで動作します。 エディット コントロールの情報を取得するには、呼び出す[場合](../../mfc/reference/cedit-class.md#charfrompos)します。  
   
- 詳細については、次を参照してください。 [EM_CHARFROMPOS](http://msdn.microsoft.com/library/windows/desktop/bb761566) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [EM_CHARFROMPOS](/windows/desktop/Controls/em-charfrompos) Windows SDK に含まれています。  
   
 ##  <a name="clear"></a>  CRichEditCtrl::Clear  
  削除 (クリア) 編集コントロールの豊富なの現在の選択 (ある場合)。  
@@ -377,7 +377,7 @@ void Clear();
   
  現在の選択範囲を削除し、削除された内容をクリップボードに配置、[切り取り](#cut)メンバー関数。  
   
- 詳細については、次を参照してください。 [WM_CLEAR](http://msdn.microsoft.com/library/windows/desktop/ms649020) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [WM_CLEAR](/windows/desktop/dataxchg/wm-clear) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#3](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_3.cpp)]  
@@ -390,7 +390,7 @@ void Copy();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [WM_COPY](http://msdn.microsoft.com/library/windows/desktop/ms649022) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [WM_COPY](/windows/desktop/dataxchg/wm-copy) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#4](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_4.cpp)]  
@@ -408,7 +408,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>パラメーター  
  *dwStyle*  
- 編集コントロールのスタイルを指定します。 リストされているウィンドウのスタイルの組み合わせを適用、**解説**以下のセクションと[コントロールのスタイルを編集](http://msdn.microsoft.com/library/windows/desktop/bb775464)Windows SDK で説明します。  
+ 編集コントロールのスタイルを指定します。 リストされているウィンドウのスタイルの組み合わせを適用、**解説**以下のセクションと[コントロールのスタイルを編集](/windows/desktop/Controls/edit-control-styles)Windows SDK で説明します。  
   
  *rect*  
  編集コントロールのサイズと位置を指定します。 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](../../mfc/reference/rect-structure1.md)構造体。  
@@ -443,7 +443,7 @@ virtual BOOL Create(
   
 - WS_TABSTOP には、タブ オーダーに編集コントロールが含まれます。  
   
- ウィンドウ スタイルの詳細については、次を参照してください。 [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK に含まれています。  
+ ウィンドウ スタイルの詳細については、次を参照してください。 [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#5](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_5.cpp)]  
@@ -462,13 +462,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>パラメーター  
  *dwExStyle*  
- 作成されるコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK に含まれています。  
+ 作成されるコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK に含まれています。  
   
  *dwStyle*  
- 編集コントロールのスタイルを指定します。 リストされているウィンドウのスタイルの組み合わせを適用、**解説**のセクション[作成](#create)と[コントロールのスタイルを編集](http://msdn.microsoft.com/library/windows/desktop/bb775464)Windows SDK で説明します。  
+ 編集コントロールのスタイルを指定します。 リストされているウィンドウのスタイルの組み合わせを適用、**解説**のセクション[作成](#create)と[コントロールのスタイルを編集](/windows/desktop/Controls/edit-control-styles)Windows SDK で説明します。  
   
  *rect*  
- 参照を[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。  
+ 参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。  
   
  *pParentWnd*  
  コントロールの親であるウィンドウへのポインター。  
@@ -507,7 +507,7 @@ void Cut();
   
  削除されたテキストをクリップボードに配置することがなく現在の選択範囲を削除する、[クリア](#clear)メンバー関数。  
   
- 詳細については、次を参照してください。 [WM_CUT](http://msdn.microsoft.com/library/windows/desktop/ms649023) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [WM_CUT](/windows/desktop/dataxchg/wm-cut) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#7](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_7.cpp)]  
@@ -529,7 +529,7 @@ BOOL DisplayBand(LPRECT pDisplayRect);
 ### <a name="remarks"></a>Remarks  
  テキストと OLE アイテムは、ポインターで指定された領域にクリップ*pDisplayRect*します。  
   
- 詳細については、次を参照してください。 [EM_DISPLAYBAND](http://msdn.microsoft.com/library/windows/desktop/bb787997) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [EM_DISPLAYBAND](/windows/desktop/Controls/em-displayband) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
   例をご覧ください[CRichEditCtrl::FormatRange](#formatrange)します。  
@@ -546,7 +546,7 @@ void EmptyUndoBuffer();
   
  元に戻すフラグは、呼び出すたびに自動的に消去、 [CWnd](../../mfc/reference/cwnd-class.md)メンバー関数は[SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext)します。  
   
- 詳細については、次を参照してください。 [EM_EMPTYUNDOBUFFER](http://msdn.microsoft.com/library/windows/desktop/bb761568) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [EM_EMPTYUNDOBUFFER](/windows/desktop/Controls/em-emptyundobuffer) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#8](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_8.cpp)]  
@@ -562,18 +562,18 @@ long FindText(
   
 ### <a name="parameters"></a>パラメーター  
  *dwFlags*  
- 使用可能な値の一覧は、次を参照してください。 *wParam*で[EM_FINDTEXTEXT](http://msdn.microsoft.com/library/windows/desktop/bb788011) Windows SDK に含まれています。  
+ 使用可能な値の一覧は、次を参照してください。 *wParam*で[EM_FINDTEXTEXT](/windows/desktop/Controls/em-findtextex) Windows SDK に含まれています。  
   
  *pFindText*  
- ポインター、[指定](http://msdn.microsoft.com/library/windows/desktop/bb787909)検索パラメーターを指定し、一致が見つかった範囲を返すことを構造体します。  
+ ポインター、[指定](/windows/desktop/api/richedit/ns-richedit-_findtextexa)検索パラメーターを指定し、一致が見つかった範囲を返すことを構造体します。  
   
 ### <a name="return-value"></a>戻り値  
  次の一致項目の 0 から始まる文字の位置-1 は一致するものがある場合。  
   
 ### <a name="remarks"></a>Remarks  
- 検索できますいずれかを上下に適切な範囲パラメーターを設定、[上](http://msdn.microsoft.com/library/windows/desktop/bb787885)内で構造体、`FINDTEXTEX`構造体。  
+ 検索できますいずれかを上下に適切な範囲パラメーターを設定、[上](/windows/desktop/api/richedit/ns-richedit-_charrange)内で構造体、`FINDTEXTEX`構造体。  
   
- 詳細については、次を参照してください。 [EM_FINDTEXTEX](http://msdn.microsoft.com/library/windows/desktop/bb788011)メッセージと[指定](http://msdn.microsoft.com/library/windows/desktop/bb787909)Windows SDK の構造体。  
+ 詳細については、次を参照してください。 [EM_FINDTEXTEX](/windows/desktop/Controls/em-findtextex)メッセージと[指定](/windows/desktop/api/richedit/ns-richedit-_findtextexa)Windows SDK の構造体。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#9](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_9.cpp)]  
@@ -595,7 +595,7 @@ DWORD FindWordBreak(
  開始する 0 から始まる文字位置。  
   
 ### <a name="return-value"></a>戻り値  
- パラメーターに基づく*nCode*します。 詳細については、次を参照してください。 [EM_FINDWORDBREAK](http://msdn.microsoft.com/library/windows/desktop/bb788018) Windows SDK に含まれています。  
+ パラメーターに基づく*nCode*します。 詳細については、次を参照してください。 [EM_FINDWORDBREAK](/windows/desktop/Controls/em-findwordbreak) Windows SDK に含まれています。  
   
 ### <a name="remarks"></a>Remarks  
  このメンバー関数を使用すると、指定した位置にある文字に関する情報を取得します。  
@@ -611,7 +611,7 @@ long FormatRange(
   
 ### <a name="parameters"></a>パラメーター  
  *pfr*  
- ポインター、 [FORMATRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787911)出力デバイスに関する情報を格納する構造体。 NULL では、リッチ エディット コントロール内のキャッシュされた情報を解放できることを示します。  
+ ポインター、 [FORMATRANGE](/windows/desktop/api/richedit/ns-richedit-_formatrange)出力デバイスに関する情報を格納する構造体。 NULL では、リッチ エディット コントロール内のキャッシュされた情報を解放できることを示します。  
   
  *bDisplay*  
  テキストを表示するかどうかを示します。 FALSE の場合は、テキストはだけ測定されます。  
@@ -622,7 +622,7 @@ long FormatRange(
 ### <a name="remarks"></a>Remarks  
  この呼び出しへの呼び出し後に通常、[続いて](#displayband)します。  
   
- 詳細については、次を参照してください。[しかし](http://msdn.microsoft.com/library/windows/desktop/bb788020)メッセージと[FORMATRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787911) Windows SDK の構造体。  
+ 詳細については、次を参照してください。[しかし](/windows/desktop/Controls/em-formatrange)メッセージと[FORMATRANGE](/windows/desktop/api/richedit/ns-richedit-_formatrange) Windows SDK の構造体。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#10](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_10.cpp)]  
@@ -644,7 +644,7 @@ CPoint GetCharPos(long lChar) const;
 ### <a name="remarks"></a>Remarks  
  文字を指定するには、その 0 から始まるインデックス値を提供します。 場合*lChar*がこの最後の文字のインデックスよりも大きい`CRichEditCtrl`オブジェクト、戻り値の最後の文字の直後の文字位置の座標を指定しますこの`CRichEditCtrl`オブジェクト。  
   
- 詳細については、次を参照してください。 [EM_POSFROMCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761631) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [EM_POSFROMCHAR](/windows/desktop/Controls/em-posfromchar) Windows SDK に含まれています。  
   
 ##  <a name="getdefaultcharformat"></a>  CRichEditCtrl::GetDefaultCharFormat  
  既定の文字の属性の書式を取得します。`CRichEditCtrl`オブジェクト。  
@@ -681,7 +681,7 @@ long GetEventMask() const;
 ### <a name="remarks"></a>Remarks  
  通知メッセージを指定する、イベント マスク、`CRichEditCtrl`オブジェクトがその親ウィンドウに送信します。  
   
- 詳細については、次を参照してください。 [EM_GETEVENTMASK](http://msdn.microsoft.com/library/windows/desktop/bb788032) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [EM_GETEVENTMASK](/windows/desktop/Controls/em-geteventmask) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
   例をご覧ください[CRichEditCtrl::SetEventMask](#seteventmask)します。  
@@ -697,7 +697,7 @@ int GetFirstVisibleLine() const;
  この最上部に表示されている行の 0 から始まるインデックス`CRichEditCtrl`オブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [EM_GETFIRSTVISIBLELINE](http://msdn.microsoft.com/library/windows/desktop/bb761574) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [EM_GETFIRSTVISIBLELINE](/windows/desktop/Controls/em-getfirstvisibleline) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#11](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_11.cpp)]  
@@ -710,12 +710,12 @@ IRichEditOle* GetIRichEditOle() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ポインター、 [IRichEditOle](http://msdn.microsoft.com/library/windows/desktop/bb774306)これへのアクセスに使用できるインターフェイス`CRichEditCtrl`オブジェクトの OLE の機能です。インターフェイスにアクセスできない場合は NULL です。  
+ ポインター、 [IRichEditOle](/windows/desktop/api/richole/nn-richole-iricheditole)これへのアクセスに使用できるインターフェイス`CRichEditCtrl`オブジェクトの OLE の機能です。インターフェイスにアクセスできない場合は NULL です。  
   
 ### <a name="remarks"></a>Remarks  
  このインターフェイスを使用してこのアクセス`CRichEditCtrl`オブジェクトの OLE 機能。  
   
- 詳細については、次を参照してください。 [EM_GETOLEINTERFACE](http://msdn.microsoft.com/library/windows/desktop/bb788041)メッセージと[IRichEditOle](http://msdn.microsoft.com/library/windows/desktop/bb774306) Windows SDK のインターフェイス。  
+ 詳細については、次を参照してください。 [EM_GETOLEINTERFACE](/windows/desktop/Controls/em-getoleinterface)メッセージと[IRichEditOle](/windows/desktop/api/richole/nn-richole-iricheditole) Windows SDK のインターフェイス。  
   
 ##  <a name="getlimittext"></a>  CRichEditCtrl::GetLimitText  
  このテキストの上限を取得します。`CRichEditCtrl`オブジェクト。  
@@ -730,7 +730,7 @@ long GetLimitText() const;
 ### <a name="remarks"></a>Remarks  
  テキストの上限は最大量 (バイト単位) のテキストのリッチ エディット コントロールが受け入れることができます。  
   
- 詳細については、次を参照してください。 [EM_GETLIMITTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761582) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [EM_GETLIMITTEXT](/windows/desktop/Controls/em-getlimittext) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#12](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_12.cpp)]  
@@ -768,7 +768,7 @@ int GetLine(
 > [!NOTE]
 >  バッファーの最初の単語は、コピーする文字の数を格納、ため、バッファーが 4 バイト長であることを確認します。  
   
- 詳細については、次を参照してください。 [EM_GETLINE](http://msdn.microsoft.com/library/windows/desktop/bb761584) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [EM_GETLINE](/windows/desktop/Controls/em-getline) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
   例をご覧ください[GetLineCount](#getlinecount)します。  
@@ -784,7 +784,7 @@ int GetLineCount() const;
  この行の数`CRichEditCtrl`オブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [EM_GETLINECOUNT](http://msdn.microsoft.com/library/windows/desktop/bb761586) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [EM_GETLINECOUNT](/windows/desktop/Controls/em-getlinecount) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#13](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_13.cpp)]  
@@ -802,7 +802,7 @@ BOOL GetModify() const;
 ### <a name="remarks"></a>Remarks  
  Windows では、リッチ エディット コントロールの内容が変更されたかどうかを示す内部フラグを保持します。 エディット コントロールが最初に作成し、呼び出すことによってもクリアすることができます、このフラグがクリアされて、 [SetModify](#setmodify)メンバー関数。  
   
- 詳細については、次を参照してください。 [EM_GETMODIFY](http://msdn.microsoft.com/library/windows/desktop/bb761592) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [EM_GETMODIFY](/windows/desktop/Controls/em-getmodify) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#14](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_14.cpp)]  
@@ -815,7 +815,7 @@ UINT GetOptions() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 現在のオプション フラグの値の組み合わせ。 これらの値の一覧は、次を参照してください。、*方法は限られて*パラメーター、 [EM_SETOPTIONS](http://msdn.microsoft.com/library/windows/desktop/bb774254)メッセージ、Windows SDK で説明されているとします。  
+ 現在のオプション フラグの値の組み合わせ。 これらの値の一覧は、次を参照してください。、*方法は限られて*パラメーター、 [EM_SETOPTIONS](/windows/desktop/Controls/em-setoptions)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="getparaformat"></a>  CRichEditCtrl::GetParaFormat  
  現在の選択の属性の書式設定、段落を取得します。  
@@ -826,9 +826,9 @@ DWORD GetParaFormat(PARAFORMAT& pf) const;  DWORD GetParaFormat(PARAFORMAT2& pf)
   
 ### <a name="parameters"></a>パラメーター  
  *pf*  
- 最初のバージョンへのポインターで、 [PARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787940)段落の現在の選択の属性を保持する構造体。  
+ 最初のバージョンへのポインターで、 [PARAFORMAT](/windows/desktop/api/richedit/ns-richedit-_paraformat)段落の現在の選択の属性を保持する構造体。  
   
- 2 番目のバージョンへのポインターで、 [PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942)リッチ エディット 2.0 の拡張機能である構造体に、`PARAFORMAT`構造体、既定の文字書式属性を保持しています。  
+ 2 番目のバージョンへのポインターで、 [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2)リッチ エディット 2.0 の拡張機能である構造体に、`PARAFORMAT`構造体、既定の文字書式属性を保持しています。  
   
 ### <a name="return-value"></a>戻り値  
  `dwMask`データ メンバーの*pf*します。 これには、段落の現在の選択範囲全体で一貫性のある属性を指定します。  
@@ -836,7 +836,7 @@ DWORD GetParaFormat(PARAFORMAT& pf) const;  DWORD GetParaFormat(PARAFORMAT2& pf)
 ### <a name="remarks"></a>Remarks  
  複数の段落が選択されている場合*pf*選択した最初の段落の属性を受け取ります。 戻り値は、どの属性が選択範囲全体で一貫性のあるを指定します。  
   
- 詳細については、次を参照してください。、 [EM_GETPARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774182)メッセージと`PARAFORMAT`と`PARAFORMAT2`Windows SDK 内の構造体。  
+ 詳細については、次を参照してください。、 [EM_GETPARAFORMAT](/windows/desktop/Controls/em-getparaformat)メッセージと`PARAFORMAT`と`PARAFORMAT2`Windows SDK 内の構造体。  
   
 ### <a name="example"></a>例  
   例をご覧ください[CRichEditCtrl::SetParaFormat](#setparaformat)します。  
@@ -852,10 +852,10 @@ BOOL GetPunctuation(
   
 ### <a name="parameters"></a>パラメーター  
  *fType*  
- 」の説明に従って、区切り型フラグ、 *fType*パラメーターの[EM_GETPUNCTUATION](http://msdn.microsoft.com/library/windows/desktop/bb774184) Windows SDK に含まれています。  
+ 」の説明に従って、区切り型フラグ、 *fType*パラメーターの[EM_GETPUNCTUATION](/windows/desktop/Controls/em-getpunctuation) Windows SDK に含まれています。  
   
  *lpPunc*  
- ポインターを[句読点](http://msdn.microsoft.com/library/windows/desktop/bb787944)Windows SDK」の説明に従って、構造体します。  
+ ポインターを[句読点](/windows/desktop/api/richedit/ns-richedit-_punctuation)Windows SDK」の説明に従って、構造体します。  
   
 ### <a name="return-value"></a>戻り値  
  以外の場合、操作が成功した場合は 0。  
@@ -877,7 +877,7 @@ void GetRect(LPRECT lpRect) const;
 ### <a name="remarks"></a>Remarks  
  書式設定の四角形は、テキストの外接する四角形です。 この値の規模に関係なく、`CRichEditCtrl`オブジェクト。  
   
- 詳細については、次を参照してください。 [EM_GETRECT](http://msdn.microsoft.com/library/windows/desktop/bb761596) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [EM_GETRECT](/windows/desktop/Controls/em-getrect) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
   例をご覧ください[LimitText](#limittext)します。  
@@ -890,7 +890,7 @@ UNDONAMEID GetRedoName() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合、`GetRedoName`を返します、[ある場合](http://msdn.microsoft.com/library/windows/desktop/bb774365)コントロールの再実行キューの次のアクションの種類を示す列挙型。 再実行キューが空の場合、またはキューに再実行操作が 不明な型の場合`GetRedoName`0 を返します。  
+ 成功した場合、`GetRedoName`を返します、[ある場合](/windows/desktop/api/richedit/ne-richedit-_undonameid)コントロールの再実行キューの次のアクションの種類を示す列挙型。 再実行キューが空の場合、またはキューに再実行操作が 不明な型の場合`GetRedoName`0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
  元に戻すまたは再実行できるアクションの種類は、入力、delete、ドラッグ アンド ドロップ、切り取り、および貼り付け操作。 この情報は、アンドゥ操作のドロップダウン リスト ボックスなどの取り消しとやり直し操作の拡張ユーザー インターフェイスを提供するアプリケーションで役立ちます。  
@@ -908,7 +908,7 @@ void GetSel(
   
 ### <a name="parameters"></a>パラメーター  
  *cr*  
- 参照を[上](http://msdn.microsoft.com/library/windows/desktop/bb787885)構造体を現在の選択範囲の境界を受信します。  
+ 参照を[上](/windows/desktop/api/richedit/ns-richedit-_charrange)構造体を現在の選択範囲の境界を受信します。  
   
  *nStartChar*  
  現在選択されている最初の文字の 0 から始まるインデックス。  
@@ -925,7 +925,7 @@ void GetSel(
   
  選択範囲にすべての場合、先頭 (`cpMin`または*nStartChar*) は 0 と終了 (`cpMax`または*nEndChar*) が - 1。  
   
- 詳細については、次を参照してください。 [EM_EXGETSEL](http://msdn.microsoft.com/library/windows/desktop/bb788001)メッセージと[上](http://msdn.microsoft.com/library/windows/desktop/bb787885)Windows SDK の構造体。  
+ 詳細については、次を参照してください。 [EM_EXGETSEL](/windows/desktop/Controls/em-exgetsel)メッセージと[上](/windows/desktop/api/richedit/ns-richedit-_charrange)Windows SDK の構造体。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#15](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_15.cpp)]  
@@ -939,9 +939,9 @@ DWORD GetSelectionCharFormat(CHARFORMAT& cf) const;  DWORD GetSelectionCharForma
   
 ### <a name="parameters"></a>パラメーター  
  *cf*  
- 最初のバージョンへのポインターで、 [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881)を現在の選択の属性を書式設定文字を受け取る構造体。  
+ 最初のバージョンへのポインターで、 [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat)を現在の選択の属性を書式設定文字を受け取る構造体。  
   
- 2 番目のバージョンへのポインターで、 [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883)リッチ エディット 2.0 の拡張機能は、構造体に、`CHARFORMAT`を現在の選択の属性を書式設定文字を受け取る構造体。  
+ 2 番目のバージョンへのポインターで、 [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a)リッチ エディット 2.0 の拡張機能は、構造体に、`CHARFORMAT`を現在の選択の属性を書式設定文字を受け取る構造体。  
   
 ### <a name="return-value"></a>戻り値  
  `dwMask`データ メンバーの*cf*します。これには、現在の選択範囲全体で一貫性のある属性の書式設定文字を指定します。  
@@ -949,7 +949,7 @@ DWORD GetSelectionCharFormat(CHARFORMAT& cf) const;  DWORD GetSelectionCharForma
 ### <a name="remarks"></a>Remarks  
  *Cf*パラメーターは、現在選択されている最初の文字の属性を受け取ります。 戻り値は、どの属性が選択範囲全体で一貫性のあるを指定します。  
   
- 詳細については、次を参照してください。、 [EM_GETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb788026)メッセージと`CHARFORMAT`と`CHARFORMAT2`Windows SDK 内の構造体。  
+ 詳細については、次を参照してください。、 [EM_GETCHARFORMAT](/windows/desktop/Controls/em-getcharformat)メッセージと`CHARFORMAT`と`CHARFORMAT2`Windows SDK 内の構造体。  
   
 ### <a name="example"></a>例  
   例をご覧ください[SetSelectionCharFormat](#setselectioncharformat)します。  
@@ -975,7 +975,7 @@ WORD GetSelectionType() const;
 - SEL_MULTIOBJECT では、現在の選択範囲には、複数の OLE オブジェクトが含まれていることを示します。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [EM_SELECTIONTYPE](http://msdn.microsoft.com/library/windows/desktop/bb774223) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [EM_SELECTIONTYPE](/windows/desktop/Controls/em-selectiontype) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#16](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_16.cpp)]  
@@ -1001,7 +1001,7 @@ long GetSelText(LPSTR lpBuf) const;  CString GetSelText() const;
 ### <a name="remarks"></a>Remarks  
  最初の形式を使用する場合**GetSelText (** `lpBuf` **)** バッファーが十分な大きさで、テキストを受信することを確認する必要があります。 呼び出す[GetSel](#getsel)現在選択されている文字の数を決定します。  
   
- 詳細については、次を参照してください。 [EM_GETSELTEXT](http://msdn.microsoft.com/library/windows/desktop/bb774190) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [EM_GETSELTEXT](/windows/desktop/Controls/em-getseltext) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
   例をご覧ください[CRichEditCtrl::GetSelectionType](#getselectiontype)します。  
@@ -1017,7 +1017,7 @@ long GetTextLength() const;
  このテキストの長さ`CRichEditCtrl`オブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [WM_GETTEXTLENGTH](http://msdn.microsoft.com/library/windows/desktop/ms632628) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [WM_GETTEXTLENGTH](/windows/desktop/winmsg/wm-gettextlength) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#17](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_17.cpp)]  
@@ -1033,7 +1033,7 @@ long GetTextLengthEx(
   
 ### <a name="parameters"></a>パラメーター  
  *dwFlags*  
- テキストの長さを決定する際に使用するメソッドを指定する値。 このメンバーは、いずれかを指定できますまたは以上の値のフラグのメンバーに表示されている[GETTEXTLENGTHEX](http://msdn.microsoft.com/library/windows/desktop/bb787915) Windows SDK で説明します。  
+ テキストの長さを決定する際に使用するメソッドを指定する値。 このメンバーは、いずれかを指定できますまたは以上の値のフラグのメンバーに表示されている[GETTEXTLENGTHEX](/windows/desktop/api/richedit/ns-richedit-_gettextlengthex) Windows SDK で説明します。  
   
  *uCodePage*  
  変換 (Unicode の 1200 の ANSI コード ページの CP_ACP) のコード ページです。  
@@ -1042,7 +1042,7 @@ long GetTextLengthEx(
  文字または、編集コントロール内のバイト数。 互換性のないフラグが設定されている場合*dwFlags*、このメンバー関数は、E_INVALIDARG を返します。  
   
 ### <a name="remarks"></a>Remarks  
- `GetTextLengthEx` テキストの長さを決定するその他の方法を提供します。 リッチ エディット 2.0 の機能をサポートします。 参照してください[リッチのエディット コントロールについて](http://msdn.microsoft.com/library/windows/desktop/bb787873)Windows SDKfor の詳細についてはします。  
+ `GetTextLengthEx` テキストの長さを決定するその他の方法を提供します。 リッチ エディット 2.0 の機能をサポートします。 参照してください[リッチのエディット コントロールについて](/windows/desktop/Controls/about-rich-edit-controls)Windows SDKfor の詳細についてはします。  
   
 ##  <a name="gettextmode"></a>  CRichEditCtrl::GetTextMode  
  リッチ エディット コントロールの現在のテキスト モードと元に戻すレベルを取得します。  
@@ -1052,7 +1052,7 @@ UINT GetTextMode() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ビット フラグのセット、 [TEXTMODE](http://msdn.microsoft.com/library/windows/desktop/bb774364)列挙型、Windows SDK で説明されているとします。 フラグは、現在のテキスト モードを示し、コントロールのレベルを元に戻します。  
+ ビット フラグのセット、 [TEXTMODE](/windows/desktop/api/richedit/ne-richedit-tagtextmode)列挙型、Windows SDK で説明されているとします。 フラグは、現在のテキスト モードを示し、コントロールのレベルを元に戻します。  
   
 ##  <a name="gettextrange"></a>  CRichEditCtrl::GetTextRange  
  指定された文字の範囲を取得します。  
@@ -1078,9 +1078,9 @@ int GetTextRange(
  終端の null 文字を含まないコピーされた文字の数。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [EM_GETTEXTRANGE](http://msdn.microsoft.com/library/windows/desktop/bb774199) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [EM_GETTEXTRANGE](/windows/desktop/Controls/em-gettextrange) Windows SDK に含まれています。  
   
- `GetTextRange` リッチ エディット 2.0 の機能をサポートしています。 参照してください[リッチのエディット コントロールについて](http://msdn.microsoft.com/library/windows/desktop/bb787873)Windows SDKfor の詳細についてはします。  
+ `GetTextRange` リッチ エディット 2.0 の機能をサポートしています。 参照してください[リッチのエディット コントロールについて](/windows/desktop/Controls/about-rich-edit-controls)Windows SDKfor の詳細についてはします。  
   
 ##  <a name="getundoname"></a>  CRichEditCtrl::GetUndoName  
  存在する場合は、元に戻すキューで次のアクションの種類を取得します。  
@@ -1090,7 +1090,7 @@ UNDONAMEID GetUndoName() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 場合は、元に戻す操作は、コントロールの元に戻すキュー`GetUndoName`を返します、[ある場合](http://msdn.microsoft.com/library/windows/desktop/bb774365)キューの次のアクションの種類を示す列挙型。 アンドゥ キューが空の場合、またはキューに元に戻す操作の種類が不明の場合`GetUndoName`0 を返します。  
+ 場合は、元に戻す操作は、コントロールの元に戻すキュー`GetUndoName`を返します、[ある場合](/windows/desktop/api/richedit/ne-richedit-_undonameid)キューの次のアクションの種類を示す列挙型。 アンドゥ キューが空の場合、またはキューに元に戻す操作の種類が不明の場合`GetUndoName`0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
  元に戻すまたは再実行できるアクションの種類は、入力、delete、ドラッグ アンド ドロップ、切り取り、および貼り付け操作。 この情報を元に戻すことができる操作のドロップダウン リスト ボックスなどの取り消しとやり直し操作の拡張ユーザー インターフェイスを提供するアプリケーションのことができます。  
@@ -1103,7 +1103,7 @@ UINT GetWordWrapMode() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 現在のワード ラップし、単語分割オプション。 これらのオプションの説明を[EM_SETWORDWRAPMODE](http://msdn.microsoft.com/library/windows/desktop/bb774294) Windows SDK に含まれています。  
+ 現在のワード ラップし、単語分割オプション。 これらのオプションの説明を[EM_SETWORDWRAPMODE](/windows/desktop/Controls/em-setwordwrapmode) Windows SDK に含まれています。  
   
 ### <a name="remarks"></a>Remarks  
  このメンバー関数は、オペレーティング システムのアジア言語のバージョンでのみ使用できます。  
@@ -1127,7 +1127,7 @@ void HideSelection(
 ### <a name="remarks"></a>Remarks  
  ときに*bPerm*が true の場合、この ECO_NOHIDESEL オプションを変更`CRichEditCtrl`オブジェクト。 このオプションの簡単な説明を参照してください。 [SetOptions](#setoptions)します。 この関数を使用するにはこのすべてのオプションを設定する`CRichEditCtrl`オブジェクト。  
   
- 詳細については、次を参照してください。 [EM_HIDESELECTION](http://msdn.microsoft.com/library/windows/desktop/bb774210) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [EM_HIDESELECTION](/windows/desktop/Controls/em-hideselection) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#18](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_18.cpp)]  
@@ -1149,7 +1149,7 @@ void LimitText(long nChars = 0);
 > [!NOTE]
 >  テキストの制限には、各 OLE アイテムは 1 つの文字としてカウントされます。  
   
- 詳細については、次を参照してください。 [EM_EXLIMITTEXT](http://msdn.microsoft.com/library/windows/desktop/bb788003) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [EM_EXLIMITTEXT](/windows/desktop/Controls/em-exlimittext) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#19](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_19.cpp)]  
@@ -1171,7 +1171,7 @@ long LineFromChar(long nIndex) const;
 ### <a name="remarks"></a>Remarks  
  文字のインデックスには、リッチ エディット コントロールの先頭からの文字数です。 文字をカウントする OLE 項目を 1 つの文字としてカウントされます。  
   
- 詳細については、次を参照してください。 [EM_EXLINEFROMCHAR](http://msdn.microsoft.com/library/windows/desktop/bb788005) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [EM_EXLINEFROMCHAR](/windows/desktop/Controls/em-exlinefromchar) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#20](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_20.cpp)]  
@@ -1193,7 +1193,7 @@ int LineIndex(int nLine = -1) const;
 ### <a name="remarks"></a>Remarks  
  文字のインデックスには、リッチ エディット コントロールの先頭から指定した行の文字数です。  
   
- 詳細については、次を参照してください。 [EM_LINEINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761611) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [EM_LINEINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761611) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#21](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_21.cpp)]  
@@ -1215,7 +1215,7 @@ int LineLength(int nLine = -1) const;
 ### <a name="remarks"></a>Remarks  
  使用して、 [LineIndex](#lineindex)この内の特定の行番号の文字インデックスを取得するメンバー関数`CRichEditCtrl`オブジェクト。  
   
- 詳細については、次を参照してください。 [EM_LINELENGTH](http://msdn.microsoft.com/library/windows/desktop/bb761613) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [EM_LINELENGTH](/windows/desktop/Controls/em-linelength) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
   例をご覧ください[LineIndex](#lineindex)します。  
@@ -1241,7 +1241,7 @@ void LineScroll(
   
  `LineScroll` 過去の任意の行の最後の文字、水平方向にスクロールするために使用します。  
   
- 詳細については、次を参照してください。 [EM_LINESCROLL](http://msdn.microsoft.com/library/windows/desktop/bb761615) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [EM_LINESCROLL](/windows/desktop/Controls/em-linescroll) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
   例をご覧ください[GetFirstVisibleLine](#getfirstvisibleline)します。  
@@ -1256,7 +1256,7 @@ void Paste();
 ### <a name="remarks"></a>Remarks  
  クリップボードに認識される形式でデータが含まれている場合にのみデータが挿入されます。  
   
- 詳細については、次を参照してください。 [WM_PASTE](http://msdn.microsoft.com/library/windows/desktop/ms649028) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [WM_PASTE](/windows/desktop/dataxchg/wm-paste) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#22](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_22.cpp)]  
@@ -1284,7 +1284,7 @@ void PasteSpecial(
 ### <a name="remarks"></a>Remarks  
  新しいマテリアルは、カーソル、キャレットの位置に挿入されます。  
   
- 詳細については、次を参照してください。 [EM_PASTESPECIAL](http://msdn.microsoft.com/library/windows/desktop/bb774214) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [EM_PASTESPECIAL](/windows/desktop/Controls/em-pastespecial) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#23](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_23.cpp)]  
@@ -1304,7 +1304,7 @@ CPoint PosFromChar(UINT nChar) const;
  文字、(x, y) の位置。 単一行のエディット コントロールでは、y 座標は常に値が 0 です。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [EM_POSFROMCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761631) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [EM_POSFROMCHAR](/windows/desktop/Controls/em-posfromchar) Windows SDK に含まれています。  
   
 ##  <a name="redo"></a>  CRichEditCtrl::Redo  
  コントロールの再実行キューでは、次の操作をやり直します。  
@@ -1317,7 +1317,7 @@ BOOL Redo();
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [EM_REDO](http://msdn.microsoft.com/library/windows/desktop/bb774218) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [EM_REDO](/windows/desktop/Controls/em-redo) Windows SDK に含まれています。  
   
 ##  <a name="replacesel"></a>  CRichEditCtrl::ReplaceSel  
  この現在の選択範囲を置き換える`CRichEditCtrl`テキストが指定されたオブジェクト。  
@@ -1342,7 +1342,7 @@ void ReplaceSel(
   
  この関数は、挿入されたテキストを書式設定を既存の書式設定文字が。 テキストの範囲全体を置換するときに (呼び出して`SetSel`(0,-1) 呼び出す前に`ReplaceSel`)、新しく挿入されたテキストでの継承、前の段落の書式を保持する段落文字の末尾があります。  
   
- 詳細については、次を参照してください。 [EM_REPLACESEL](http://msdn.microsoft.com/library/windows/desktop/bb761633) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [EM_REPLACESEL](/windows/desktop/Controls/em-replacesel) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
   例をご覧ください[LineIndex](#lineindex)します。  
@@ -1357,7 +1357,7 @@ void RequestResize();
 ### <a name="remarks"></a>Remarks  
  この関数は[、ボトムレス](../../mfc/reference/cwnd-class.md#onsize)処理の制限のない`CRichEditCtrl`オブジェクト。  
   
- 詳細については、次を参照してください。、 [EM_REQUESTRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb774220)メッセージと**リッチ エディット コントロールの制限のない**のセクション[リッチのエディット コントロールについて](http://msdn.microsoft.com/library/windows/desktop/bb787873)Windows SDK にします。  
+ 詳細については、次を参照してください。、 [EM_REQUESTRESIZE](/windows/desktop/Controls/em-requestresize)メッセージと**リッチ エディット コントロールの制限のない**のセクション[リッチのエディット コントロールについて](/windows/desktop/Controls/about-rich-edit-controls)Windows SDK にします。  
   
 ##  <a name="setautourldetect"></a>  CRichEditCtrl::SetAutoURLDetect  
  URL を自動的に検出するためにリッチ エディット コントロールを設定します。  
@@ -1374,10 +1374,10 @@ BOOL SetAutoURLDetect(BOOL bEnable = TRUE);
  成功しましたが、それ以外の場合は 0 以外の場合は 0 を返します。 たとえば、メッセージがメモリ不足が原因で失敗します。  
   
 ### <a name="remarks"></a>Remarks  
- 有効な場合、リッチ エディット コントロールは標準の URL 形式と一致するかどうかを判断するテキストをスキャンします。 これらの URL 形式の一覧は、次を参照してください。 [EM_AUTOURLDETECT](http://msdn.microsoft.com/library/windows/desktop/bb787991) Windows SDK に含まれています。  
+ 有効な場合、リッチ エディット コントロールは標準の URL 形式と一致するかどうかを判断するテキストをスキャンします。 これらの URL 形式の一覧は、次を参照してください。 [EM_AUTOURLDETECT](/windows/desktop/Controls/em-autourldetect) Windows SDK に含まれています。  
   
 > [!NOTE]
->  設定しない`SetAutoURLDetect`Url 以外のテキストの編集コントロールが CFE_LINK 効果を使用する場合は TRUE に設定します。 `SetAutoURLDetect` Url のこの特殊効果を有効にして、他のすべてのテキストに無効にします。 参照してください[EN_LINK](http://msdn.microsoft.com/library/windows/desktop/bb787970) CFE_LINK 効果の詳細についてはします。  
+>  設定しない`SetAutoURLDetect`Url 以外のテキストの編集コントロールが CFE_LINK 効果を使用する場合は TRUE に設定します。 `SetAutoURLDetect` Url のこの特殊効果を有効にして、他のすべてのテキストに無効にします。 参照してください[EN_LINK](/windows/desktop/Controls/en-link) CFE_LINK 効果の詳細についてはします。  
   
 ##  <a name="setbackgroundcolor"></a>  CRichEditCtrl::SetBackgroundColor  
  背景色を設定します。`CRichEditCtrl`オブジェクト。  
@@ -1399,9 +1399,9 @@ COLORREF SetBackgroundColor(
  この前の背景色`CRichEditCtrl`オブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
- システムの値または指定した背景色を設定できます[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)値。  
+ システムの値または指定した背景色を設定できます[COLORREF](/windows/desktop/gdi/colorref)値。  
   
- 詳細については、次を参照してください。 [EM_SETBKGNDCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774228)メッセージと[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Windows SDK の構造体。  
+ 詳細については、次を参照してください。 [EM_SETBKGNDCOLOR](/windows/desktop/Controls/em-setbkgndcolor)メッセージと[COLORREF](/windows/desktop/gdi/colorref) Windows SDK の構造体。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#24](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_24.cpp)]  
@@ -1416,9 +1416,9 @@ BOOL SetDefaultCharFormat(CHARFORMAT2& cf);
   
 ### <a name="parameters"></a>パラメーター  
  *cf*  
- 最初のバージョンへのポインターで、 [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881)新しい既定の文字書式属性を含む構造体。  
+ 最初のバージョンへのポインターで、 [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat)新しい既定の文字書式属性を含む構造体。  
   
- ポインター、2 番目のバージョンで、 [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883)リッチ エディット 2.0 の拡張機能である構造体を`CHARFORMAT`構造、既定の文字書式属性を格納しています。  
+ ポインター、2 番目のバージョンで、 [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a)リッチ エディット 2.0 の拡張機能である構造体を`CHARFORMAT`構造、既定の文字書式属性を格納しています。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -1426,7 +1426,7 @@ BOOL SetDefaultCharFormat(CHARFORMAT2& cf);
 ### <a name="remarks"></a>Remarks  
  指定された属性のみ、`dwMask`のメンバー *cf*は、この関数によって変更します。  
   
- 詳細については、次を参照してください。、 [EM_SETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774230)メッセージと`CHARFORMAT`と`CHARFORMAT2`Windows SDK 内の構造体。  
+ 詳細については、次を参照してください。、 [EM_SETCHARFORMAT](/windows/desktop/Controls/em-setcharformat)メッセージと`CHARFORMAT`と`CHARFORMAT2`Windows SDK 内の構造体。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#25](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_25.cpp)]  
@@ -1448,7 +1448,7 @@ DWORD SetEventMask(DWORD dwEventMask);
 ### <a name="remarks"></a>Remarks  
  通知メッセージを指定する、イベント マスク、`CRichEditCtrl`オブジェクトがその親ウィンドウに送信します。  
   
- 詳細については、次を参照してください。 [//EM_SETEVENTMASK](http://msdn.microsoft.com/library/windows/desktop/bb774238) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [//EM_SETEVENTMASK](/windows/desktop/Controls/em-seteventmask) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#26](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_26.cpp)]  
@@ -1467,7 +1467,7 @@ void SetModify(BOOL bModified = TRUE);
 ### <a name="remarks"></a>Remarks  
  変更されたフラグは、編集コントロール内のテキストが変更されたかどうかを示します。 ユーザーがテキストを変更するたびに自動的に設定されます。 その値を取得することができます、[この](#getmodify)メンバー関数。  
   
- 詳細については、次を参照してください。 [EM_SETMODIFY](http://msdn.microsoft.com/library/windows/desktop/bb761651) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [EM_SETMODIFY](/windows/desktop/Controls/em-setmodify) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
   例をご覧ください[この](#getmodify)します。  
@@ -1481,15 +1481,15 @@ BOOL SetOLECallback(IRichEditOleCallback* pCallback);
   
 ### <a name="parameters"></a>パラメーター  
  *pCallback*  
- ポインター、 [IRichEditOleCallback](http://msdn.microsoft.com/library/windows/desktop/bb774308)オブジェクトこの`CRichEditCtrl`OLE 関連のリソースと情報を取得するオブジェクトが使用されます。  
+ ポインター、 [IRichEditOleCallback](/windows/desktop/api/richole/nn-richole-iricheditolecallback)オブジェクトこの`CRichEditCtrl`OLE 関連のリソースと情報を取得するオブジェクトが使用されます。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- これは、`CRichEditCtrl`オブジェクトが呼び出す[iunknown::addref](http://msdn.microsoft.com/library/windows/desktop/ms691379)で指定された COM オブジェクトの使用カウントをインクリメントする*pCallback*します。  
+ これは、`CRichEditCtrl`オブジェクトが呼び出す[iunknown::addref](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)で指定された COM オブジェクトの使用カウントをインクリメントする*pCallback*します。  
   
- 詳細については、次を参照してください。 [EM_SETOLECALLBACK](http://msdn.microsoft.com/library/windows/desktop/bb774252)メッセージと[IRichEditOleCallback](http://msdn.microsoft.com/library/windows/desktop/bb774308) Windows SDK のインターフェイス。  
+ 詳細については、次を参照してください。 [EM_SETOLECALLBACK](/windows/desktop/Controls/em-setolecallback)メッセージと[IRichEditOleCallback](/windows/desktop/api/richole/nn-richole-iricheditolecallback) Windows SDK のインターフェイス。  
   
 ##  <a name="setoptions"></a>  CRichEditCtrl::SetOptions  
  このオプションを設定`CRichEditCtrl`オブジェクト。  
@@ -1534,7 +1534,7 @@ void SetOptions(
   
 - ECO_VERTICAL を描画するテキストと垂直方向にオブジェクト。 アジア言語でのみ使用できます。  
   
- 詳細については、次を参照してください。 [EM_SETOPTIONS](http://msdn.microsoft.com/library/windows/desktop/bb774254) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [EM_SETOPTIONS](/windows/desktop/Controls/em-setoptions) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#27](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_27.cpp)]  
@@ -1549,9 +1549,9 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
   
 ### <a name="parameters"></a>パラメーター  
  *pf*  
- 最初のバージョンへのポインターで、 [PARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787940)新しい既定の段落書式属性。  
+ 最初のバージョンへのポインターで、 [PARAFORMAT](/windows/desktop/api/richedit/ns-richedit-_paraformat)新しい既定の段落書式属性。  
   
- 2 番目のバージョンへのポインターで、 [PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942)リッチ エディット 2.0 の拡張機能である構造体に、`PARAFORMAT`構造体、既定の文字書式属性を保持しています。  
+ 2 番目のバージョンへのポインターで、 [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2)リッチ エディット 2.0 の拡張機能である構造体に、`PARAFORMAT`構造体、既定の文字書式属性を保持しています。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -1559,7 +1559,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 ### <a name="remarks"></a>Remarks  
  指定された属性のみ、`dwMask`のメンバー *pf*は、この関数によって変更します。  
   
- 詳細については、次を参照してください。、 [EM_SETPARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774276)メッセージと`PARAFORMAT`と`PARAFORMAT2`Windows SDK 内の構造体。  
+ 詳細については、次を参照してください。、 [EM_SETPARAFORMAT](/windows/desktop/Controls/em-setparaformat)メッセージと`PARAFORMAT`と`PARAFORMAT2`Windows SDK 内の構造体。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#28](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_28.cpp)]  
@@ -1575,10 +1575,10 @@ BOOL SetPunctuation(
   
 ### <a name="parameters"></a>パラメーター  
  *fType*  
- 区切り記号のフラグ。 使用可能な値の一覧は、次を参照してください。、 *fType*パラメーターを[EM_SETPUNCTUATION](http://msdn.microsoft.com/library/windows/desktop/bb774278) Windows SDK に含まれています。  
+ 区切り記号のフラグ。 使用可能な値の一覧は、次を参照してください。、 *fType*パラメーターを[EM_SETPUNCTUATION](/windows/desktop/Controls/em-setpunctuation) Windows SDK に含まれています。  
   
  *lpPunc*  
- ポインターを[句読点](http://msdn.microsoft.com/library/windows/desktop/bb787944)Windows SDK」の説明に従って、構造体します。  
+ ポインターを[句読点](/windows/desktop/api/richedit/ns-richedit-_punctuation)Windows SDK」の説明に従って、構造体します。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、0 以外。 それ以外の場合に 0 です。  
@@ -1603,7 +1603,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 ### <a name="remarks"></a>Remarks  
  このオプションの簡単な説明を参照してください。 [SetOptions](#setoptions)します。 この関数を使用するにはこのすべてのオプションを設定する`CRichEditCtrl`オブジェクト。  
   
- 詳細については、次を参照してください。 [EM_SETREADONLY](http://msdn.microsoft.com/library/windows/desktop/bb761655) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [EM_SETREADONLY](/windows/desktop/Controls/em-setreadonly) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#29](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_29.cpp)]  
@@ -1622,7 +1622,7 @@ void SetRect(LPCRECT lpRect);
 ### <a name="remarks"></a>Remarks  
  書式設定の四角形は、テキストの外接する四角形です。 外接する四角形は、リッチ エディット コントロールのウィンドウのサイズに依存しません。 ときにこの`CRichEditCtrl`オブジェクトが最初に作成、書式設定の四角形は、ウィンドウのクライアント領域と同じサイズです。 使用`SetRect`書式設定の四角形の豊富な編集ウィンドウよりも小さいを変更します。  
   
- 詳細については、次を参照してください。 [EM_SETRECT](http://msdn.microsoft.com/library/windows/desktop/bb761657) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [EM_SETRECT](/windows/desktop/Controls/em-setrect) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#30](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_30.cpp)]  
@@ -1646,7 +1646,7 @@ void SetSel(CHARRANGE& cr);
  選択範囲の最後の文字の 0 から始まるインデックス。  
   
  *cr*  
- [上](http://msdn.microsoft.com/library/windows/desktop/bb787885)現在の選択範囲の境界を保持する構造体。  
+ [上](/windows/desktop/api/richedit/ns-richedit-_charrange)現在の選択範囲の境界を保持する構造体。  
   
 ### <a name="remarks"></a>Remarks  
  この関数の 2 つの形式は、選択範囲の境界を設定する別の方法を提供します。 これらの形式の簡単な説明に従います。  
@@ -1659,7 +1659,7 @@ void SetSel(CHARRANGE& cr);
   
  これですべてのテキストを選択する`CRichEditCtrl`オブジェクトを呼び出す`SetSel`0 と 1 の最後のインデックスを開始インデックス。  
   
- 詳細については、次を参照してください。 [EM_EXSETSEL](http://msdn.microsoft.com/library/windows/desktop/bb788007)メッセージと[上](http://msdn.microsoft.com/library/windows/desktop/bb787885)Windows SDK の構造体。  
+ 詳細については、次を参照してください。 [EM_EXSETSEL](/windows/desktop/Controls/em-exsetsel)メッセージと[上](/windows/desktop/api/richedit/ns-richedit-_charrange)Windows SDK の構造体。  
   
 ### <a name="example"></a>例  
   例をご覧ください[GetSel](#getsel)します。  
@@ -1674,9 +1674,9 @@ BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
   
 ### <a name="parameters"></a>パラメーター  
  *cf*  
- 最初のバージョンへのポインターで、 [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881)文字書式を含む構造体が現在の選択の属性します。  
+ 最初のバージョンへのポインターで、 [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat)文字書式を含む構造体が現在の選択の属性します。  
   
- 2 番目のバージョンへのポインターで、 [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883)リッチ エディット 2.0 の拡張機能である構造体を`CHARFORMAT`構造体を新しい現在の選択の属性を書式設定文字を含みます。  
+ 2 番目のバージョンへのポインターで、 [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a)リッチ エディット 2.0 の拡張機能である構造体を`CHARFORMAT`構造体を新しい現在の選択の属性を書式設定文字を含みます。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -1684,7 +1684,7 @@ BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
 ### <a name="remarks"></a>Remarks  
  指定された属性のみ、`dwMask`のメンバー *cf*は、この関数によって変更します。  
   
- 詳細については、次を参照してください。、 [EM_SETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774230)と`CHARFORMAT`と`CHARFORMAT2`Windows SDK 内の構造体。  
+ 詳細については、次を参照してください。、 [EM_SETCHARFORMAT](/windows/desktop/Controls/em-setcharformat)と`CHARFORMAT`と`CHARFORMAT2`Windows SDK 内の構造体。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#31](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_31.cpp)]  
@@ -1719,7 +1719,7 @@ BOOL SetTargetDevice(
 ### <a name="remarks"></a>Remarks  
  リッチ エディット コントロールが、デバイスを所有しているこの関数が成功した場合は、パラメーターとして渡されるコンテキスト。 その場合は、呼び出し元の関数では、デバイス コンテキストが破棄する必要があります。  
   
- 詳細については、次を参照してください。 [EM_SETTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/bb774282) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [EM_SETTARGETDEVICE](/windows/desktop/Controls/em-settargetdevice) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#32](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_32.cpp)]  
@@ -1733,7 +1733,7 @@ BOOL SetTextMode(UINT fMode);
   
 ### <a name="parameters"></a>パラメーター  
  *fMode*  
- コントロールのテキスト モードと元に戻すレベルのパラメーターの新しい設定を指定します。 使用可能な値の一覧、モード パラメーターを参照してください。 [EM_SETTEXTMODE](http://msdn.microsoft.com/library/windows/desktop/bb774286) Windows SDK に含まれています。  
+ コントロールのテキスト モードと元に戻すレベルのパラメーターの新しい設定を指定します。 使用可能な値の一覧、モード パラメーターを参照してください。 [EM_SETTEXTMODE](/windows/desktop/Controls/em-settextmode) Windows SDK に含まれています。  
   
 ### <a name="return-value"></a>戻り値  
  成功しましたが、それ以外の場合は 0 以外の場合は 0 を返します。  
@@ -1741,7 +1741,7 @@ BOOL SetTextMode(UINT fMode);
 ### <a name="remarks"></a>Remarks  
  テキスト モードの説明は、Windows SDK の EM_SETTEXTMODE を参照してください。  
   
- コントロールにテキストが含まれている場合、このメンバー関数が失敗します。 送信するには、コントロールが空であることを確認するを[によって](http://msdn.microsoft.com/library/windows/desktop/ms632644)を空の文字列メッセージ。  
+ コントロールにテキストが含まれている場合、このメンバー関数が失敗します。 送信するには、コントロールが空であることを確認するを[によって](/windows/desktop/winmsg/wm-settext)を空の文字列メッセージ。  
   
 ##  <a name="setundolimit"></a>  CRichEditCtrl::SetUndoLimit  
  アンドゥ キューに格納できるアクションの最大数を設定します。  
@@ -1770,9 +1770,9 @@ BOOL SetWordCharFormat(CHARFORMAT2& cf);
   
 ### <a name="parameters"></a>パラメーター  
  *cf*  
- 最初のバージョンへのポインターで、 [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881)文字書式を含む構造体が現在選択されている単語の属性します。  
+ 最初のバージョンへのポインターで、 [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat)文字書式を含む構造体が現在選択されている単語の属性します。  
   
- 2 番目のバージョンへのポインターで、 [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883)リッチ エディット 2.0 の拡張機能である構造体を`CHARFORMAT`書式属性、現在選択されている単語を新しい文字を含む構造。  
+ 2 番目のバージョンへのポインターで、 [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a)リッチ エディット 2.0 の拡張機能である構造体を`CHARFORMAT`書式属性、現在選択されている単語を新しい文字を含む構造。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -1780,7 +1780,7 @@ BOOL SetWordCharFormat(CHARFORMAT2& cf);
 ### <a name="remarks"></a>Remarks  
  指定された属性のみ、`dwMask`のメンバー *cf*は、この関数によって変更します。  
   
- 詳細については、次を参照してください。、 [EM_SETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774230)メッセージと`CHARFORMAT`と`CHARFORMAT2`Windows SDK 内の構造体。  
+ 詳細については、次を参照してください。、 [EM_SETCHARFORMAT](/windows/desktop/Controls/em-setcharformat)メッセージと`CHARFORMAT`と`CHARFORMAT2`Windows SDK 内の構造体。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#33](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_33.cpp)]  
@@ -1794,7 +1794,7 @@ UINT SetWordWrapMode(UINT uFlags) const;
   
 ### <a name="parameters"></a>パラメーター  
  *uFlags*  
- 右端での折り返しと単語区切りを設定するオプション。 使用可能なオプションの一覧は、次を参照してください。 [EM_SETWORDWRAPMODE](http://msdn.microsoft.com/library/windows/desktop/bb774294) Windows SDK に含まれています。  
+ 右端での折り返しと単語区切りを設定するオプション。 使用可能なオプションの一覧は、次を参照してください。 [EM_SETWORDWRAPMODE](/windows/desktop/Controls/em-setwordwrapmode) Windows SDK に含まれています。  
   
 ### <a name="return-value"></a>戻り値  
  現在のワード ラップおよび単語区切りオプション。  
@@ -1812,7 +1812,7 @@ void StopGroupTyping();
 ### <a name="remarks"></a>Remarks  
  コントロールは、アンドゥ キューに新しいアクションに存在する場合に、次の入力のアクションを格納します。  
   
- 詳細については、次を参照してください。 [EM_STOPGROUPTYPING](http://msdn.microsoft.com/library/windows/desktop/bb774300) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [EM_STOPGROUPTYPING](/windows/desktop/Controls/em-stopgrouptyping) Windows SDK に含まれています。  
   
 ##  <a name="streamin"></a>  CRichEditCtrl::StreamIn  
  このテキストを置換`CRichEditCtrl`指定された入力ストリームからテキストを含むオブジェクト。  
@@ -1828,7 +1828,7 @@ long StreamIn(
  入力データの形式を指定するフラグ。 詳細については、次の「解説」を参照してください。  
   
  *es*  
- [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891)入力ストリームを指定します。 詳細については、次の「解説」を参照してください。  
+ [EDITSTREAM](/windows/desktop/api/richedit/ns-richedit-_editstream)入力ストリームを指定します。 詳細については、次の「解説」を参照してください。  
   
 ### <a name="return-value"></a>戻り値  
  入力ストリームから読み取られた文字数。  
@@ -1844,7 +1844,7 @@ long StreamIn(
   
  `EDITSTREAM`パラメーター *es*、バッファーにテキストを使用するコールバック関数を指定します。 このコールバック関数は入力ストリームがなくなるまで繰り返し呼び出されます。  
   
- 詳細については、次を参照してください。 [EM_STREAMIN](http://msdn.microsoft.com/library/windows/desktop/bb774302)メッセージと[EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) Windows SDK の構造体。  
+ 詳細については、次を参照してください。 [EM_STREAMIN](/windows/desktop/Controls/em-streamin)メッセージと[EDITSTREAM](/windows/desktop/api/richedit/ns-richedit-_editstream) Windows SDK の構造体。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#34](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_34.cpp)]  
@@ -1865,7 +1865,7 @@ long StreamOut(
  出力データ形式を指定するフラグ。 詳細については、次の「解説」を参照してください。  
   
  *es*  
- [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891)出力ストリームを指定します。 詳細については、次の「解説」を参照してください。  
+ [EDITSTREAM](/windows/desktop/api/richedit/ns-richedit-_editstream)出力ストリームを指定します。 詳細については、次の「解説」を参照してください。  
   
 ### <a name="return-value"></a>戻り値  
  出力ストリームに書き込まれた文字の数。  
@@ -1885,7 +1885,7 @@ long StreamOut(
   
  `EDITSTREAM`パラメーター *es*テキストをバッファーにコールバック関数を指定します。 このコールバック関数は、出力ストリームがなくなるまで繰り返し呼び出されます。  
   
- 詳細については、次を参照してください。 [EM_STREAMOUT](http://msdn.microsoft.com/library/windows/desktop/bb774304)メッセージと[EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) Windows SDK の構造体。  
+ 詳細については、次を参照してください。 [EM_STREAMOUT](/windows/desktop/Controls/em-streamout)メッセージと[EDITSTREAM](/windows/desktop/api/richedit/ns-richedit-_editstream) Windows SDK の構造体。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#36](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_36.cpp)]  
@@ -1905,7 +1905,7 @@ BOOL Undo();
 ### <a name="remarks"></a>Remarks  
  元に戻す操作が元に戻すことができますもあります。 たとえば、最初の呼び出しで削除されたテキストを復元できます`Undo`します。 2 番目の呼び出しを使用してテキストを削除するには中間の編集操作がない限り、`Undo`します。  
   
- 詳細については、次を参照してください。 [EM_UNDO](http://msdn.microsoft.com/library/windows/desktop/bb761670) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [EM_UNDO](/windows/desktop/Controls/em-undo) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
   例をご覧ください[CanUndo](#canundo)します。  

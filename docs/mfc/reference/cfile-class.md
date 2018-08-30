@@ -70,12 +70,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20a254e6d5a6e3e04dfd013c1f7ae3e8e2c9100e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 1d3422923075f1c9546da1f8d2430e2e2f2c4bbc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337272"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203057"
 ---
 # <a name="cfile-class"></a>CFile クラス
 ファイルに関する MFC の基底クラスです。  
@@ -157,7 +157,7 @@ class CFile : public CObject
   
  `CFile`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afx.h  
   
 ##  <a name="abort"></a>  解放  
@@ -363,7 +363,7 @@ virtual CString GetFileTitle() const;
  基になるファイルのタイトル。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドを呼び出す[GetFileTitle](http://msdn.microsoft.com/library/windows/desktop/ms646924)ファイルのタイトルを取得します。 成功した場合、メソッドは、ファイル名、ユーザーに表示するには、システムは使用する文字列を返します。 それ以外の場合、メソッドを呼び出して[PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589)を基になるファイルのファイル名 (ファイル拡張子を含む) を取得します。 そのため、返されるファイルのタイトルの文字列にファイル拡張子が含まれません常にあります。 詳細については、次を参照してください。 [GetFileTitle](http://msdn.microsoft.com/library/windows/desktop/ms646924)と[PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589) Windows SDK に含まれています。  
+ このメソッドを呼び出す[GetFileTitle](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea)ファイルのタイトルを取得します。 成功した場合、メソッドは、ファイル名、ユーザーに表示するには、システムは使用する文字列を返します。 それ以外の場合、メソッドを呼び出して[PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea)を基になるファイルのファイル名 (ファイル拡張子を含む) を取得します。 そのため、返されるファイルのタイトルの文字列にファイル拡張子が含まれません常にあります。 詳細については、次を参照してください。 [GetFileTitle](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea)と[PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea) Windows SDK に含まれています。  
   
  名前を含む、ファイルのパス全体を返す呼び出し[まで含めた](#getfilepath)します。 ファイルの名前だけを返すを呼び出す[GetFileName](#getfilename)します。  
   
@@ -568,7 +568,7 @@ virtual BOOL Open(
  [!code-cpp[NVC_MFCFiles#14](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_10.cpp)]  
   
 ##  <a name="operator_handle"></a>  CFile::operator ハンドル  
- この演算子を識別するハンドルを使用して、`CFile`などの関数オブジェクト[ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468)と[GetFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724320)が想定されている、`HANDLE`します。  
+ この演算子を識別するハンドルを使用して、`CFile`などの関数オブジェクト[ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex)と[GetFileTime](/windows/desktop/api/fileapi/nf-fileapi-getfiletime)が想定されている、`HANDLE`します。  
   
 ```  
 operator HANDLE() const;  

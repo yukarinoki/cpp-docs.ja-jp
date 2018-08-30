@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cc725907c93955777cd09b5745651855892e4cd
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: b1a15397ee74c94c0d3af088a7b6eb80bd21c66d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42573251"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195337"
 ---
 # <a name="cwin32heap-class"></a>CWin32Heap クラス
 このクラスは実装[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) Win32 ヒープ割り当て関数を使用します。  
@@ -73,7 +73,7 @@ class CWin32Heap : public IAtlMemMgr
 |[CWin32Heap::m_hHeap](#m_hheap)|ヒープのオブジェクトへのハンドルします。|  
   
 ## <a name="remarks"></a>Remarks  
- `CWin32Heap` 含む、Win32 ヒープ割り当て関数を使用してメモリの割り当て方法を実装する[HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597)と[選択肢](http://msdn.microsoft.com/library/windows/desktop/aa366701)します。 その他のヒープ クラスとは異なり`CWin32Heap`メモリを割り当てる前に指定する有効なヒープ ハンドルが必要です: プロセス ヒープを使用するその他のクラスの既定です。 コンス トラクターまたはハンドルを指定することができます、 [cwin32heap::attach](#attach)メソッド。 参照してください、 [CWin32Heap::CWin32Heap](#cwin32heap)メソッドの詳細。  
+ `CWin32Heap` 含む、Win32 ヒープ割り当て関数を使用してメモリの割り当て方法を実装する[HeapAlloc](/windows/desktop/api/heapapi/nf-heapapi-heapalloc)と[選択肢](/windows/desktop/api/heapapi/nf-heapapi-heapfree)します。 その他のヒープ クラスとは異なり`CWin32Heap`メモリを割り当てる前に指定する有効なヒープ ハンドルが必要です: プロセス ヒープを使用するその他のクラスの既定です。 コンス トラクターまたはハンドルを指定することができます、 [cwin32heap::attach](#attach)メソッド。 参照してください、 [CWin32Heap::CWin32Heap](#cwin32heap)メソッドの詳細。  
   
 ## <a name="example"></a>例  
  例をご覧ください[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)します。  
@@ -103,7 +103,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>Remarks  
  呼び出す[cwin32heap::free](#free)または[cwin32heap::reallocate](#reallocate)このメソッドによって割り当てられたメモリを解放します。  
   
- 使用して実装[HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597)します。  
+ 使用して実装[HeapAlloc](/windows/desktop/api/heapapi/nf-heapapi-heapalloc)します。  
   
 ##  <a name="attach"></a>  Cwin32heap::attach  
  既存のヒープには、ヒープのオブジェクトをアタッチします。  
