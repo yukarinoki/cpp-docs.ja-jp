@@ -21,24 +21,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8d933c80aa42ef9b954b6ae498632ab9835cb3d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 22e4cf19ec3b85d14d346bd56697f4bcc4ff687b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025940"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194469"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; 列挙体
 
 このトピックでは、filesystem ヘッダーの列挙体について説明します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<実験/filesystem > **Namespace:** std::experimental::filesystem
 
 ## <a name="copy_options"></a>  copy_options
 
-動作を指定するために [copy](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) および [copy_file](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) 関数で使用されるビットマスク値の列挙体。
+動作を指定するために [copy](filesystem-functions.md#copy) および [copy_file](filesystem-functions.md#copy_file) 関数で使用されるビットマスク値の列挙体。
 
 ### <a name="syntax"></a>構文
 

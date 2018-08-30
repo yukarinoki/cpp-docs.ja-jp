@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a75d3f40ade42c25de51a3c65c98e8c448b03ed
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: aef6192218f5fae40bca6aa6fb8202a0d238091a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538305"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195833"
 ---
 # <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl クラス
 `CMFCShellListCtrl`クラスは、Windows リスト コントロールの機能を提供し、シェル項目の一覧を表示する機能を含めることによってを展開します。  
@@ -212,7 +212,7 @@ const IShellFolder* GetCurrentShellFolder() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ポインター、 [IShellFolder インターフェイス](http://msdn.microsoft.com/library/windows/desktop/bb775075)選択したオブジェクト。  
+ ポインター、 [IShellFolder インターフェイス](https://msdn.microsoft.com/library/windows/desktop/bb775075)選択したオブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
  オブジェクトが現在選択されていない場合、このメソッドは NULL を返します。  
@@ -247,7 +247,7 @@ SHCONTF GetItemTypes() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- A [SHCONTF](http://msdn.microsoft.com/library/windows/desktop/bb762539)に表示される項目の種類を含む値、`CMFCShellListCtrl`します。  
+ A [SHCONTF](/windows/desktop/api/shobjidl_core/ne-shobjidl_core-_shcontf)に表示される項目の種類を含む値、`CMFCShellListCtrl`します。  
   
 ### <a name="remarks"></a>Remarks  
  表示される項目の種類を設定する、 `CMFCShellListCtrl`、呼び出す[CMFCShellListCtrl::SetItemTypes](#setitemtypes)します。  
@@ -406,7 +406,7 @@ void SetItemTypes(SHCONTF nTypes);
  リスト項目の種類、`CMFCShellListCtrl`サポートしています。  
   
 ### <a name="remarks"></a>Remarks  
- 項目の種類の一覧については、次を参照してください。 [SHCONTF](http://msdn.microsoft.com/library/windows/desktop/bb762539)します。  
+ 項目の種類の一覧については、次を参照してください。 [SHCONTF](/windows/desktop/api/shobjidl_core/ne-shobjidl_core-_shcontf)します。  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

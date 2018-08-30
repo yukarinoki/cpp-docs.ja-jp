@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b22bbcfd2055a362a3ee9b3fcfd4498cdb089586
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 3cfdbff4d63197ca37976d5dcc242ac7b8ab8410
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407957"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194133"
 ---
 # <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>方法: CComPtr および CComQIPtr インスタンスを作成して使用する
-従来の Windows プログラミングでは、ライブラリは、多くの場合、COM オブジェクトとして (厳密には COM サーバーとして) 実装されます。 多くの Windows オペレーティング システム コンポーネントは COM サーバーとして実装されており、多くの共同作成者からこの形式のライブラリが提供されています。 COM の基本については、次を参照してください。[コンポーネント オブジェクト モデル (COM)](http://msdn.microsoft.com/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4)します。  
+従来の Windows プログラミングでは、ライブラリは、多くの場合、COM オブジェクトとして (厳密には COM サーバーとして) 実装されます。 多くの Windows オペレーティング システム コンポーネントは COM サーバーとして実装されており、多くの共同作成者からこの形式のライブラリが提供されています。 COM の基本については、次を参照してください。[コンポーネント オブジェクト モデル (COM)](https://msdn.microsoft.com/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4)します。  
   
  コンポーネント オブジェクト モデル (COM) オブジェクトをインスタンス化するときは、デストラクターの `AddRef` と `Release` の呼び出しを使用して参照のカウントを実行する COM スマート ポインターにインターフェイス ポインターを格納します。 Active Template Library (ATL) または Microsoft Foundation Class ライブラリ (MFC) を使用している場合は、 `CComPtr` スマート ポインターを使用します。 ATL または MFC を使用していない場合は、 `_com_ptr_t`を使用します。 COM には `std::unique_ptr`に相当するものがないため、これらのスマート ポインターを単一所有者のシナリオと複数所有者のシナリオの両方に使用します。 `CComPtr` と `ComQIPtr` のどちらも、右辺値参照が含まれる移動操作をサポートしています。  
   
