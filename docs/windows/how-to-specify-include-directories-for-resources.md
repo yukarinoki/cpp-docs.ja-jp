@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: baa317610339e7073f2e829860e11ab15e66277e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c52f2a17e347e7b37152a3d7a78423f0523b5679
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611062"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220599"
 ---
 # <a name="how-to-specify-include-directories-for-resources"></a>方法: リソースのインクルード ディレクトリを指定する
 
@@ -32,7 +32,7 @@ ms.locfileid: "42611062"
 
 2. **プロパティ ページ**ダイアログ ボックスで、をクリックして、**リソース**左側のウィンドウでノードが、追加のインクルード ディレクトリを指定、**追加のインクルード ディレクトリ**プロパティ。
 
-マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で .NET Framework 開発者ガイド。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列をプロパティに割り当てる方法については、次を参照してください[チュートリアル: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
+マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で .NET Framework 開発者ガイド。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列をプロパティに割り当てる方法については、次を参照してください[チュートリアル: Using Resources for Localization with ASP.NET](https://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
 
 ## <a name="requirements"></a>要件
 

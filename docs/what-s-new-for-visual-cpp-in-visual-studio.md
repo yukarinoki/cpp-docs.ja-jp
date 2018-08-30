@@ -9,31 +9,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fc79d438b61fce90faf1f8548671ec882c5099a
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 6d3a3ec1fec213cc6fa1bb5dc0ebfdadbe7d22b2
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34569696"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131721"
 ---
-# <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] での Visual C# の新機能
+# <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Visual Studio 2017 における Visual C++ の新機能
 
-[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] には、Visual C++ 環境に対する多くの更新プログラムと修正プログラムが導入されています。 コンパイラおよびツールの、250 以上のバグおよびレポートされた問題を修正してきました。その多くは、**[フィードバックの送信]** の [[問題の報告]](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) オプションおよび [[提案の送信]](https://visualstudio.uservoice.com/) オプションを通じてお客様から寄せられたものです。 バグ レポートをお寄せいただきありがとうございました。 Visual Studio 全体の新機能の詳細については、「[[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] の新機能](https://go.microsoft.com/fwlink/p/?linkid=834481)」を参照してください。
+Visual Studio 2017 には、Visual C++ 環境に対する多くの更新プログラムと修正プログラムが導入されています。 コンパイラおよびツールの、250 以上のバグおよびレポートされた問題を修正してきました。その多くは、**[フィードバックの送信]** の [[問題の報告]](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) オプションおよび [[提案の送信]](https://visualstudio.uservoice.com/) オプションを通じてお客様から寄せられたものです。 バグ レポートをお寄せいただきありがとうございました。 Visual Studio 全体の新機能の詳細については、「[Visual Studio 2017 の新機能](https://go.microsoft.com/fwlink/p/?linkid=834481)」を参照してください。
 
-<!--The compiler and tools version number in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] is 14.10.24629. -->
+<!--The compiler and tools version number in Visual Studio 2017 is 14.10.24629. -->
 
 ## <a name="c-compiler"></a>C++ コンパイラ
 
 ### <a name="c-conformance-improvements"></a>C++ 準拠の強化
 
 このリリースでは、C++ コンパイラと標準ライブラリを更新して C++11 と C++14 機能のサポートを強化し、C++17 標準に組み込まれると予想される特定の機能について予備的なサポートを追加しました。 詳しくは、「[C++ Conformance Improvements in Visual Studio 2017](cpp-conformance-improvements-2017.md)」(Visual Studio 2017 での C++ 準拠の強化) をご覧ください。
-**Visual Studio 2017 バージョン 15.5**:  
 
-   コンパイラは C++17 の新機能の約 75% をサポートしています。その中には構造化バインド、`constexpr` ラムダ、`if constexpr`、インライン変数、フォールド式、型システムへの `noexcept` の追加が含まれます。 これらは **/std:c++17** オプションの下にあります。 詳細については、[Visual Studio 2017 での C++ 準拠の強化](cpp-conformance-improvements-2017.md)に関するページをご覧ください。
+**Visual Studio 2017 バージョン 15.5**: コンパイラは C++17 の新機能の約 75% をサポートしています。その中には構造化バインド、`constexpr` ラムダ、`if constexpr`、インライン変数、フォールド式、型システムへの `noexcept` の追加が含まれます。 これらは **/std:c++17** オプションの下にあります。 詳細については、[Visual Studio 2017 での C++ 準拠の強化](cpp-conformance-improvements-2017.md)に関するページをご覧ください。
 
-**Visual Studio 2017 バージョン 15.7**:  
-
-Visual Studio バージョン 15.7 の MSVC コンパイラ ツールセットが、C++ 標準に準拠となりました。 詳細については、「[Announcing: MSVC Conforms to the C++ Standard](https://blogs.msdn.microsoft.com/vcblog/2018/05/07/announcing-msvc-conforms-to-the-c-standard/)」 (発表: MSVC の C++ への準拠) および「[Visual C++ 言語への準拠](visual-cpp-language-conformance.md)」を参照してください。
+**Visual Studio 2017 バージョン 15.7**: Visual Studio バージョン 15.7 の MSVC コンパイラ ツールセットが、C++ 標準に準拠となりました。 詳細については、「[Announcing: MSVC Conforms to the C++ Standard](https://blogs.msdn.microsoft.com/vcblog/2018/05/07/announcing-msvc-conforms-to-the-c-standard/)」 (発表: MSVC の C++ への準拠) および「[Visual C++ 言語への準拠](visual-cpp-language-conformance.md)」を参照してください。
 
 ### <a name="new-compiler-options"></a>新しいコンパイラ オプション
 
@@ -43,7 +40,7 @@ Visual Studio バージョン 15.7 の MSVC コンパイラ ツールセット�
 
 - [/debug:fastlink](build/reference/debug-generate-debug-info.md): すべてのデバッグ情報を PDB ファイルにコピーしないことで、インクリメンタル リンク時間を最大で 30% 高速化します (Visual Studio 2015 と比較した場合)。 代わりに、PDB ファイルは実行可能ファイルの作成に使われたオブジェクトとライブラリ ファイルのデバッグ情報を参照します。 「[Faster C++ build cycle in VS "15" with /Debug:fastlink](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/faster-c-build-cycle-in-vs-15-with-debugfastlink/)」 (VS "15" での /Debug:fastlink による C++ ビルド サイクルの高速化) および「[Recommendations to speed C++ builds in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/26/recommendations-to-speed-c-builds-in-visual-studio/)」(Visual Studio で C++ のビルドを高速化するための推奨事項) をご覧ください。
 
-- [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] では、[/sdl](build/reference/sdl-enable-additional-security-checks.md) を [/await](build/reference/await-enable-coroutine-support.md) と一緒に使うことができます。 コルーチンでの [/RTC](build/reference/rtc-run-time-error-checks.md) の制限がなくなりました。
+- Visual Studio 2017 では、[/sdl](build/reference/sdl-enable-additional-security-checks.md) を [/await](build/reference/await-enable-coroutine-support.md) と一緒に使うことができます。 コルーチンでの [/RTC](build/reference/rtc-run-time-error-checks.md) の制限がなくなりました。
 
    **Visual Studio 2017 バージョン 15.3**:  
 - [/std:c++14 と /std:c++latest](build/reference/std-specify-language-standard-version.md): これらのコンパイラ オプションを使用すると、プロジェクトで ISO C++ プログラミング言語の特定のバージョンにオプトインできます。 ほとんどの新しいドラフト標準機能は、**/std:c++latest** オプションによって保護されています。
@@ -406,7 +403,7 @@ Android および iOS を対象とするモバイル アプリを、Visual Studi
 
 ## <a name="clangc2-platform-toolset"></a>Clang/C2 プラットフォーム ツールセット
 
-[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] に付属する Clang/C2 ツールセットが、**/bigobj** スイッチをサポートするようになりました。これは、大規模なプロジェクトを構築する際に重要です。 また、コンパイラのフロントエンドとバックエンドの両方について、いくつかの重要なバグ修正が組み込まれました。
+Visual Studio 2017 に同梱されている Clang/C2 ツールセットが **/bigobj** スイッチをサポートするようになりました。これは、大規模なプロジェクトを構築する際に重要です。 また、コンパイラのフロントエンドとバックエンドの両方について、いくつかの重要なバグ修正が組み込まれました。
 
 ## <a name="c-code-analysis"></a>C++ コードの分析
 

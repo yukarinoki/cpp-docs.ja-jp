@@ -1,7 +1,7 @@
 ---
 title: IDE と Visual C++ 開発用ツール | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/02/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3668fb438c2a0aa7fa14cff97f498a9becc67b36
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: df30bdea71a890eed25f546a53e7f329fa330762
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705401"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132021"
 ---
 # <a name="ide-and-tools-for-visual-c-development"></a>IDE と Visual C++ 開発用ツール
 
@@ -29,7 +29,11 @@ Visual Studio IDE の共有ツールに加えて、MSVC には、ネイティブ
 
 ## <a name="creating-a-solution-and-projects"></a>ソリューションとプロジェクトの作成
 
-*プロジェクト* は基本的には、実行可能ファイルに組み込まれている、イメージやデータ ファイルなどの一連のソース コード ファイルとリソースです。 Visual Studio 2017 では、使用するすべてのビルド システムやカスタム ビルド ツールをサポートでき、IntelliSense、参照、デバッグなどの機能が完全にサポートされます。
+*プロジェクト* は基本的には、実行可能ファイルに組み込まれている、イメージやデータ ファイルなどの一連のソース コード ファイルとリソースです。 
+
+Visual Studio 2015 では、MSBuild プロジェクトのサポートを提供します。 Qt や CMake などの他のビルド システム向けの Visual Studio 拡張機能をダウンロードすることができます。
+
+Visual Studio 2017 では、使用するすべてのビルド システムやカスタム ビルド ツールがサポートされ、IntelliSense、参照、デバッグなどの機能が完全にサポートされます。
 
 - MSBuild は Visual Studio のネイティブ ビルド システムであり、多くの場合、MFC または ATL を使用するユニバーサル Windows プラットフォーム (UWP) アプリや従来の Windows デスクトップ アプリケーションに最適です。 MSBuild ベースの C++ プロジェクトの詳細については、「[MSBuild ベース プロジェクトの作成と管理](creating-and-managing-visual-cpp-projects.md)」を参照してください。
 - CMake はクロスプラットフォームのビルド システムであり、C++ によるデスクトップ開発のワークロードをインストールする際に Visual Studio IDE に統合されます。 詳細については、「[CMake projects in Visual C++ (Visual C++ の CMake プロジェクト)](cmake-tools-for-visual-cpp.md)」をご覧ください。
@@ -105,13 +109,17 @@ Visual Studio デスクトップ プロジェクトのコンテキストにお�
 
 Visual Studio には、ネイティブ C++ の単体テスト フレームワークと C++/CLI の単体テスト フレームワークの両方が含まれています。 詳細については、「[単体テストを使用したコードの検証](/visualstudio/test/unit-test-your-code)」と「[C++ 用の Microsoft 単体テスト フレームワークを使用した C++ 用単体テストの記述](/visualstudio/test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp)」を参照してください。
 
+## <a name="analyze"></a>解析
+
+Visual Studio には、[C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md) ルール チェッカーの実装など、C++ の静的コード分析ツールが含まれます。 詳細については、「[C/C++ のコード分析の概要](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)」を参照してください。
+
 ## <a name="debug"></a>デバッグ
 
 プロジェクト構成が [デバッグ] に設定されている場合、**F5** キーを押してプログラムをデバッグできます。 デバッグ中には、**F9** キーを押してブレークポイントを設定したり、**F10** キーを押してコードをステップ実行したり、指定された変数やレジスタの値を表示したり、場合によってはコードに変更を加え、再コンパイルせずにデバッグを続行したりすることができます。 詳しくは、「[Visual Studio でのデバッグ](/visualstudio/debugger/debugging-in-visual-studio)」をご覧ください。
 
 ## <a name="deploy-completed-applications"></a>完成したアプリケーションの配置
 
-UWP アプリは、Microsoft Store の **[プロジェクト]** > **[ストア]** メニュー オプションを通じて顧客向けに配置できます。 CRT の配置は、水面下で自動的に処理されます。 詳細については、「 [アプリの販売](http://go.microsoft.com/fwlink/p/?LinkId=262280)」を参照してください。
+UWP アプリは、Microsoft Store の **[プロジェクト]** > **[ストア]** メニュー オプションを通じて顧客向けに配置できます。 CRT の配置は、水面下で自動的に処理されます。 詳細については、「[Publish Windows apps and games](/windows/uwp/publish/)」(Windows のアプリとゲームを公開する) を参照してください。 
 
 ネイティブ C++ デスクトップ アプリケーションを別のコンピューターに配置する場合、アプリケーション自体と、そのアプリケーションが依存するすべてのライブラリ ファイルをインストールする必要があります。 アプリケーションと共にユニバーサル C++ ランタイム (UCRT) を配置する方法として、集中配置、ローカル配置、静的リンクの 3 とおりの方法があります。 詳細については、「[デスクトップ アプリケーションの配置](../ide/deploying-native-desktop-applications-visual-cpp.md)」を参照してください。
 

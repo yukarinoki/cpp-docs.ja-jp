@@ -1,5 +1,5 @@
 ---
-title: -ASSEMBLYRESOURCE (マネージ リソースを埋め込む) |Microsoft ドキュメント
+title: -ASSEMBLYRESOURCE (マネージ リソースの埋め込み) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,35 +21,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88afe292905ee46c1e939d29f787055f98058dc9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: acb7b173ffd22e65e20dcc9cceef61b2e2131c83
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372179"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213402"
 ---
-# <a name="assemblyresource-embed-a-managed-resource"></a>/ASSEMBLYRESOURCE (マネージ リソースの埋め込み)
+# <a name="assemblyresource-embed-a-managed-resource"></a>/ASSEMBLYRESOURCE (マネージド リソースの埋め込み)
 ```  
 /ASSEMBLYRESOURCE:filename[,[name][,PRIVATE]]  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  *ファイル名*  
- マネージ リソースをこのアセンブリに埋め込みます。  
+ このアセンブリに埋め込む管理対象リソース。  
   
  *name*  
  任意。 リソースの論理名リソースの読み込みに使用する名前。 既定値は、ファイルの名前です。  
   
- 必要に応じて、ファイルが、アセンブリ マニフェストにプライベートでなければなりませんかどうかを指定することができます。 既定では、*名前*がアセンブリに公開します。  
+ 必要に応じて、ファイルをプライベート アセンブリ マニフェストである必要があるかどうかを指定できます。 既定では、*名前*アセンブリ内でパブリックです。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  /ASSEMBLYRESOURCE オプションを使用して、アセンブリにリソースを埋め込みます。  
   
- リソースは、リンカーで作成したアセンブリでパブリックです。 リンカーでは、アセンブリ内のリソースの名前を変更できません。  
+ リソースは、リンカーで作成したアセンブリの公開。 リンカーでは、アセンブリ内のリソースの名前を変更できません。  
   
- 場合*filename*は、.NET Framework のリソース (.resources) ファイルをたとえば、によって作成、[リソース ファイル ジェネレーター (Resgen.exe)](/dotnet/framework/tools/resgen-exe-resource-file-generator)または開発環境でアクセスできるメンバー間で、**System.Resources**名前空間 (を参照してください[System.Resources.ResourceManager](https://msdn.microsoft.com/en-us/library/system.resources.resourcemanager.aspx)詳細については)。 他のすべてのリソースを使用して、**それ以外**\*メソッド**System.Reflection.Assembly**実行時にリソースにアクセスするクラス。  
+ 場合*filename*は、.NET Framework のリソース (.resources) ファイルをたとえば、によって作成、[リソース ファイル ジェネレーター (Resgen.exe)](/dotnet/framework/tools/resgen-exe-resource-file-generator)または開発環境でアクセスできるメンバー間で、**System.Resources**名前空間 (を参照してください[System.Resources.ResourceManager](https://msdn.microsoft.com/library/system.resources.resourcemanager.aspx)詳細については)。 他のすべてのリソースを使用して、**それ以外**\*メソッド**System.Reflection.Assembly**実行時にリソースにアクセスするクラス。  
   
- アセンブリの生成に影響するその他のリンカー オプションは次のとおりです。  
+ アセンブリの生成に影響するその他のリンカー オプションがあります。  
   
 -   [/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)  
   
@@ -67,17 +67,17 @@ ms.locfileid: "32372179"
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには  
   
-1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「 [Visual C プロジェクト プロパティの設定](../../ide/working-with-project-properties.md)です。  
+1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。  
   
-2.  クリックして、**リンカー**フォルダーです。  
+2.  をクリックして、**リンカー**フォルダー。  
   
-3.  クリックして、**入力**プロパティ ページ。  
+3.  をクリックして、**入力**プロパティ ページ。  
   
-4.  変更、**埋め込みマネージ リソース ファイル**プロパティです。  
+4.  変更、**埋め込みマネージ リソース ファイル**プロパティ。  
   
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには  
   
-1.  「<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EmbedManagedResourceFile%2A>」を参照してください。  
+1.  以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EmbedManagedResourceFile%2A>  
   
 ## <a name="see-also"></a>関連項目  
  [リンカー オプションの設定](../../build/reference/setting-linker-options.md)   
