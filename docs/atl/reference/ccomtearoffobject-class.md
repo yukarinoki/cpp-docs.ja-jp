@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abc3721159dfa7470106e6935664f3119ae4d264
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: eb505ac53c6a8b3b05edfc99bad813ebe2c341d0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885040"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218566"
 ---
 # <a name="ccomtearoffobject-class"></a>CComTearOffObject クラス
 このクラスは、ティアオフ インターフェイスを実装します。  
@@ -46,7 +46,7 @@ class CComTearOffObject : public Base
  *ベース*  
  ティアオフ クラスから派生した`CComTearOffObjectBase`ティアオフ オブジェクトをサポートする場合、インターフェイスです。  
   
- ATL は、2 つのフェーズでそのティアオフ インターフェイスを実装する —、`CComTearOffObjectBase`メソッドは、参照カウントを処理および`QueryInterface`、中に`CComTearOffObject`実装[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)。  
+ ATL は、2 つのフェーズでそのティアオフ インターフェイスを実装する —、`CComTearOffObjectBase`メソッドは、参照カウントを処理および`QueryInterface`、中に`CComTearOffObject`実装[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)。  
   
 ## <a name="members"></a>メンバー  
   
@@ -93,7 +93,7 @@ class CComTearOffObject : public Base
   
  `CComTearOffObject`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlcom.h  
   
 ##  <a name="addref"></a>  CComTearOffObject::AddRef  

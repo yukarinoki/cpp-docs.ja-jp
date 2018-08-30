@@ -1,5 +1,5 @@
 ---
-title: タブ コントロールへのタブの追加 |Microsoft ドキュメント
+title: タブ コントロールへのタブの追加 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86032bd3d1ce10221cb5d8094e4ba6de866e1eea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb8caad0b7d1f632a2d97e4ea6bda7c93a2b4d74
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342854"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218298"
 ---
 # <a name="adding-tabs-to-a-tab-control"></a>タブ コントロールへのタブの追加
-タブ コントロールの作成後に ([CTabCtrl](../mfc/reference/ctabctrl-class.md))、タブは、必要な数だけを追加します。  
+タブ コントロールを作成した後 ([CTabCtrl](../mfc/reference/ctabctrl-class.md))、タブは、必要な数だけを追加します。  
   
 ### <a name="to-add-a-tab-item"></a>タブ項目を追加するには  
   
-1.  準備、 [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554)構造体。  
+1.  準備、 [TCITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtcitema)構造体。  
   
 2.  呼び出す[として](../mfc/reference/ctabctrl-class.md#insertitem)、構造体を渡します。  
   
-3.  その他のタブの項目を手順 1. および 2. を繰り返します。  
+3.  追加のタブ項目の手順 1. および 2. を繰り返します。  
   
- 詳細については、次を参照してください。[タブ コントロールを作成する](http://msdn.microsoft.com/library/windows/desktop/bb760550)Windows SDK に含まれています。  
+ 詳細については、次を参照してください。[タブ コントロールを作成する](/windows/desktop/Controls/tab-controls)Windows SDK に含まれています。  
   
 ## <a name="see-also"></a>関連項目  
- [CTabCtrl の使い方](../mfc/using-ctabctrl.md)   
+ [Ctabctrl の使い方](../mfc/using-ctabctrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 
