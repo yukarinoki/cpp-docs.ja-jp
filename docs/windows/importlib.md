@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b9522db579641d79b8b77cc870cd1df6f03c0413
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a790887f54e01cea835c6110e3d81e1c2d3afeaa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607674"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206702"
 ---
 # <a name="importlib"></a>importlib
 
@@ -43,7 +43,7 @@ ms.locfileid: "42607674"
 
 ## <a name="remarks"></a>Remarks
 
-**Importlib** C++ 属性によって、`importlib`ステートメントが生成された .idl ファイルのライブラリ ブロックに配置されます。 **Importlib**属性と同じ機能を持つ、 [importlib](http://msdn.microsoft.com/library/windows/desktop/aa367050) MIDL 属性。
+**Importlib** C++ 属性によって、`importlib`ステートメントが生成された .idl ファイルのライブラリ ブロックに配置されます。 **Importlib**属性と同じ機能を持つ、 [importlib](/windows/desktop/Midl/importlib) MIDL 属性。
 
 ## <a name="example"></a>例
 

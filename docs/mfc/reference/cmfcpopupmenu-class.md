@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04217a03defcecf990a943d5d99f8370a966a5f7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 125b15062fc46850ad9b0d2512f9f7cc2e2095e1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539896"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204213"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu クラス
 Windows のポップアップ メニュー機能を実装し、ティアオフ メニューやツールヒントなどの機能を追加することでそれを拡張します。
@@ -510,7 +510,7 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
  有効にするサウンド、FALSE それ以外の場合は TRUE です。  
   
 ### <a name="remarks"></a>Remarks  
- サウンドを有効にした場合、フレームワーク、 [PlaySound](http://msdn.microsoft.com/library/windows/desktop/bb774426)メソッド ユーザーは、ポップアップ メニューを開くか、メニュー コマンドを選択したときにします。 既定では、この機能が有効にします。  
+ サウンドを有効にした場合、フレームワーク、 [PlaySound](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iusernotification-playsound)メソッド ユーザーは、ポップアップ メニューを開くか、メニュー コマンドを選択したときにします。 既定では、この機能が有効にします。  
   
 ##  <a name="enableresize"></a>  CMFCPopupMenu::EnableResize  
 

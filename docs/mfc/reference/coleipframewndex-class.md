@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 436c99777f526cfa364241b4dc25e33be672d6ae
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: e2eb1695383e5bb1a700305fd0cc8487590afd7c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539307"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217042"
 ---
 # <a name="coleipframewndex-class"></a>COleIPFrameWndEx クラス
 `COleIPFrameWndEx` クラスは、MFC をサポートする OLE コンテナーを実装します。 アプリケーションの埋め込み先フレーム ウィンドウ クラスを、 `COleIPFrameWndEx` COleIPFrameWnd [クラスからではなく、](../../mfc/reference/coleipframewnd-class.md)クラスから派生させる必要があります 詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。   
@@ -929,7 +929,7 @@ virtual void WinHelp(
  指定されたヘルプの種類に必要なデータを指定します。 *nCmd*します。  
   
  [in]*nCmd*  
- 要求されるヘルプの種類を指定します。 使用可能な値、および影響についての一覧については、*指定*パラメーターを参照してください、 [WinHelp 関数](http://msdn.microsoft.com/library/windows/desktop/bb762267)Windows SDK にします。  
+ 要求されるヘルプの種類を指定します。 使用可能な値、および影響についての一覧については、*指定*パラメーターを参照してください、 [WinHelp 関数](/windows/desktop/api/winuser/nf-winuser-winhelpa)Windows SDK にします。  
   
 ### <a name="remarks"></a>Remarks  
   

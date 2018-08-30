@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75742b466b284a24d6771971a831dfc91303c834
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 1d433c76e054b16491ab7586d6107b4931dc2915
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882433"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203717"
 ---
 # <a name="composite-control-global-functions"></a>複合コントロールに関するグローバル関数
 これらの関数は、ダイアログ ボックスの作成と、作成、ホスト、および ActiveX コントロールのライセンスのサポートを提供します。  
@@ -57,7 +57,7 @@ ms.locfileid: "37882433"
 |[AtlAxWinTerm](#atlaxwinterm)|AxWin オブジェクトのホストのコードは初期化されません。|  
 |[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|オブジェクトの既定のソース インターフェイスに関する情報を返します。|  
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlhost.h  
 
 ##  <a name="atlaxdialogbox"></a>  AtlAxDialogBox  
@@ -77,13 +77,13 @@ ATLAPI_(int) AtlAxDialogBox(
  [in]実行可能ファイルには、ダイアログ ボックスのテンプレートが含まれています。 モジュールのインスタンスを識別します。  
   
  *lpTemplateName*  
- [in]ダイアログ ボックスのテンプレートを識別します。 このパラメーターは、いずれかのダイアログ ボックスのテンプレートの名前を指定する null で終わる文字列へのポインターまたはダイアログ ボックスのテンプレートのリソース識別子を指定する整数値は。 パラメーターは、リソース識別子を指定する場合の上位ワードはゼロである必要があり、その下位ワードは、識別子を含める必要があります。 使用することができます、[されるときは](http://msdn.microsoft.com/library/windows/desktop/ms648029)マクロをこの値を作成します。  
+ [in]ダイアログ ボックスのテンプレートを識別します。 このパラメーターは、いずれかのダイアログ ボックスのテンプレートの名前を指定する null で終わる文字列へのポインターまたはダイアログ ボックスのテンプレートのリソース識別子を指定する整数値は。 パラメーターは、リソース識別子を指定する場合の上位ワードはゼロである必要があり、その下位ワードは、識別子を含める必要があります。 使用することができます、[されるときは](https://msdn.microsoft.com/library/windows/desktop/ms648029)マクロをこの値を作成します。  
   
  *hWndParent*  
  [in]ダイアログ ボックスを所有するウィンドウを識別します。  
   
  *lpDialogProc*  
- [in]ダイアログ ボックス プロシージャへのポインター。 ダイアログ ボックス プロシージャの詳細については、次を参照してください。 [DialogProc](http://msdn.microsoft.com/library/windows/desktop/ms645469)します。  
+ [in]ダイアログ ボックス プロシージャへのポインター。 ダイアログ ボックス プロシージャの詳細については、次を参照してください。 [DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469)します。  
   
  *dwInitParam*  
  [in]ダイアログ ボックスに渡す値を指定します、 *lParam* WM_INITDIALOG メッセージのパラメーター。  
@@ -99,9 +99,9 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100  
 ```  
   
- リソース スクリプトの編集の詳細については、次を参照してください。[方法: テキスト形式でリソース スクリプト ファイルを開く](../../windows/how-to-open-a-resource-script-file-in-text-format.md)します。 コントロールのリソース定義ステートメントの詳細については、次を参照してください。[共通管理パラメーター](http://msdn.microsoft.com/library/windows/desktop/aa380902) Windows SDK で *: SDK Tools*します。  
+ リソース スクリプトの編集の詳細については、次を参照してください。[方法: テキスト形式でリソース スクリプト ファイルを開く](../../windows/how-to-open-a-resource-script-file-in-text-format.md)します。 コントロールのリソース定義ステートメントの詳細については、次を参照してください。[共通管理パラメーター](/windows/desktop/menurc/common-control-parameters) Windows SDK で *: SDK Tools*します。  
   
- [全般] ダイアログ ボックスの詳細についてを参照してください[DialogBox](http://msdn.microsoft.com/library/windows/desktop/ms645452)と[CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) Windows SDK にします。  
+ [全般] ダイアログ ボックスの詳細についてを参照してください[DialogBox](/windows/desktop/api/winuser/nf-winuser-dialogboxa)と[CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) Windows SDK にします。  
   
 ##  <a name="atlaxcreatedialog"></a>  AtlAxCreateDialog  
  ユーザーが用意するダイアログ テンプレートからモードレス ダイアログ ボックスを作成します。  
@@ -120,13 +120,13 @@ ATLAPI_(HWND) AtlAxCreateDialog(
  [in]実行可能ファイルには、ダイアログ ボックスのテンプレートが含まれています。 モジュールのインスタンスを識別します。  
   
  *lpTemplateName*  
- [in]ダイアログ ボックスのテンプレートを識別します。 このパラメーターは、いずれかのダイアログ ボックスのテンプレートの名前を指定する null で終わる文字列へのポインターまたはダイアログ ボックスのテンプレートのリソース識別子を指定する整数値は。 パラメーターは、リソース識別子を指定する場合の上位ワードはゼロである必要があり、その下位ワードは、識別子を含める必要があります。 使用することができます、[されるときは](http://msdn.microsoft.com/library/windows/desktop/ms648029)マクロをこの値を作成します。  
+ [in]ダイアログ ボックスのテンプレートを識別します。 このパラメーターは、いずれかのダイアログ ボックスのテンプレートの名前を指定する null で終わる文字列へのポインターまたはダイアログ ボックスのテンプレートのリソース識別子を指定する整数値は。 パラメーターは、リソース識別子を指定する場合の上位ワードはゼロである必要があり、その下位ワードは、識別子を含める必要があります。 使用することができます、[されるときは](https://msdn.microsoft.com/library/windows/desktop/ms648029)マクロをこの値を作成します。  
   
  *hWndParent*  
  [in]ダイアログ ボックスを所有するウィンドウを識別します。  
   
  *lpDialogProc*  
- [in]ダイアログ ボックス プロシージャへのポインター。 ダイアログ ボックス プロシージャの詳細については、次を参照してください。 [DialogProc](http://msdn.microsoft.com/library/windows/desktop/ms645469)します。  
+ [in]ダイアログ ボックス プロシージャへのポインター。 ダイアログ ボックス プロシージャの詳細については、次を参照してください。 [DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469)します。  
   
  *dwInitParam*  
  [in]ダイアログ ボックスに渡す値を指定します、 *lParam* WM_INITDIALOG メッセージのパラメーター。  
@@ -137,7 +137,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 ### <a name="remarks"></a>Remarks  
  表示されたダイアログ ボックスは、ActiveX コントロールを含めることができます。  
   
- 参照してください[:createdialog](http://msdn.microsoft.com/library/windows/desktop/ms645434)と[CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) Windows SDK にします。  
+ 参照してください[:createdialog](/windows/desktop/api/winuser/nf-winuser-createdialoga)と[CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) Windows SDK にします。  
   
 ##  <a name="atlaxcreatecontrol"></a>  AtlAxCreateControl  
  ActiveX コントロールを作成して初期化し、指定されたウィンドウでホストします。  
@@ -442,7 +442,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
  コードをホストしているコントロールの初期化が成功した場合、0 以外の場合それ以外の場合は FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
- ATL コントロール ホスト API を使用する前に、この関数を呼び出す必要があります。 この関数への呼び出しの後、 **"AtlAxWin"** への呼び出しでウィンドウ クラスを使用できます[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)または[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)」の説明に従って、Windows SDK。  
+ ATL コントロール ホスト API を使用する前に、この関数を呼び出す必要があります。 この関数への呼び出しの後、 **"AtlAxWin"** への呼び出しでウィンドウ クラスを使用できます[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)または[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)」の説明に従って、Windows SDK。  
 
 ##  <a name="atlaxwinterm"></a>  AtlAxWinTerm  
  この関数の登録を解除してコードをホストしている、ATL のコントロールの初期化を解除、 **"AtlAxWin80**と **"AtlAxWinLic80"** ウィンドウ クラス。  
@@ -455,7 +455,7 @@ inline BOOL AtlAxWinTerm();
  常に TRUE を返します。  
   
 ### <a name="remarks"></a>Remarks  
- この関数を呼び出すだけです[UnregisterClass](http://msdn.microsoft.com/library/windows/desktop/ms644899) Windows SDK で説明されているとします。  
+ この関数を呼び出すだけです[UnregisterClass](https://msdn.microsoft.com/library/windows/desktop/ms644899) Windows SDK で説明されているとします。  
   
  呼び出した場合に既存のすべてのホスト ウィンドウが破棄された後にクリーンアップするには、この関数を呼び出す[AtlAxWinInit](#atlaxwininit)不要になったホスト ウィンドウを作成する必要があります。 この関数を呼び出さない場合、ウィンドウ クラスは登録解除する自動的にプロセスが終了します。  
   

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca7b7d38c204d7dd8402b9d610a5800dcef6ced9
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 89f811f476fb21d2880169c168671515c9d8caf9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883230"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223139"
 ---
 # <a name="ccomenumonstl-class"></a>CComEnumOnSTL クラス
 このクラスは、C++ 標準ライブラリ コレクションに基づいて COM 列挙子オブジェクトを定義します。  
@@ -41,7 +41,7 @@ class ATL_NO_VTABLE CComEnumOnSTL : public IEnumOnSTLImpl<Base, piid,
   
 #### <a name="parameters"></a>パラメーター  
  *ベース*  
- COM の列挙子 ([として](https://msdn.microsoft.com/library/ms680089.aspx)) インターフェイス。  
+ COM の列挙子。 参照してください[IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring)例についてはします。 
   
  *piid*  
  列挙子インターフェイスのインターフェイス ID へのポインター。  
@@ -89,7 +89,7 @@ class ATL_NO_VTABLE CComEnumOnSTL : public IEnumOnSTLImpl<Base, piid,
   
  `CComEnumOnSTL`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlcom.h  
   
 ## <a name="example"></a>例  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9d86984dc67dd5cbea6fe52ff1c8b099e5b061f5
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 7b131119f5f6207feccec3c683a470a8b099de12
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337191"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207843"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>スキーマ行セットを使用したメタデータの取得
 プロバイダー、行セット、テーブル、列、またはその他のデータベース情報に関する情報を行セットを開かずに取得することが必要な場合があります。 データベース構造に関するデータはメタデータと呼ばれます。メタデータはさまざまな方法で取得できます。 1 つは、スキーマ行セットを使用する方法です。  
@@ -60,7 +60,7 @@ CRestrictions<CAccessor<CColumnsInfo>
   
  [CRestrictions](../../data/oledb/crestrictions-class.md)クラスは制約がサポートを提供します。 スキーマ行セットのインスタンスを作成した後で呼び出す[crestrictions::open](../../data/oledb/crestrictions-open.md)します。 このメソッドは、指定された制約に基づいて結果セットを返します。  
   
- 制限を指定するを参照してください[付録 B スキーマ行セット](http://go.microsoft.com/fwlink/p/?linkid=64681)し使用している行セットを検索します。 たとえば、`CColumns`に対応する、 [COLUMNS 行セット](http://go.microsoft.com/fwlink/p/?linkid=64682); そのトピックでは、COLUMNS 行セットの制限列: TABLE_CATALOG、table_schema、TABLE_NAME、COLUMN_NAME します。 制約を指定するときは、この順序に従う必要があります。  
+ 制限を指定するを参照してください[付録 B スキーマ行セット](/previous-versions/windows/desktop/ms712921\(v=vs.85\))し使用している行セットを検索します。 たとえば、`CColumns`に対応する、 [COLUMNS 行セット](/previous-versions/windows/desktop/ms723052\(v%3dvs.85\)); そのトピックでは、COLUMNS 行セットの制限列: TABLE_CATALOG、table_schema、TABLE_NAME、COLUMN_NAME します。 制約を指定するときは、この順序に従う必要があります。  
   
  そのため、たとえば、テーブル名で制限する場合は、TABLE_NAME が 3 つ目の制限列を呼び出して`Open`、次の例に示すように、3 番目の制限パラメーターとして目的のテーブル名を指定します。  
   
@@ -90,9 +90,9 @@ CRestrictions<CAccessor<CColumnsInfo>
   
  OLE DB テンプレートのスキーマ行セットの参照の typedef クラスが提供されている (を参照してください[スキーマ行セット クラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md))。  
   
- 制限列を含め、OLE DB スキーマ行セットの詳細については、次を参照してください。[付録 b スキーマ行セット](http://go.microsoft.com/fwlink/p/?linkid=64681)OLE DB プログラマーズ リファレンス。  
+ 制限列を含め、OLE DB スキーマ行セットの詳細については、次を参照してください。[付録 b スキーマ行セット](/previous-versions/windows/desktop/ms712921\(v=vs.85\))OLE DB プログラマーズ リファレンス。  
   
- スキーマ行セット クラスを使用する方法のより複雑な例については、次を参照してください。、 [CatDB](http://msdn.microsoft.com/003d516b-2bf6-444e-8be5-4ebaa0b66046)と[DBViewer](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832)サンプル。  
+ スキーマ行セット クラスを使用する方法のより複雑な例については、次を参照してください。、 [CatDB](https://github.com/Microsoft/VCSamples)と[DBViewer](https://github.com/Microsoft/VCSamples)サンプル。  
   
  スキーマ行セット プロバイダーのサポートについては、次を参照してください。[スキーマ行セットのサポート](../../data/oledb/supporting-schema-rowsets.md)します。  
   

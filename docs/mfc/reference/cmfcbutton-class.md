@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e50f48ad935e74bff05fe41dd77a0b17c0bd26ed
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 155aa704efe0686fc03be6e2b12c076656fad7a1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337308"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217510"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton クラス
 `CMFCButton`クラスに機能を追加する、 [CButton](../../mfc/reference/cbutton-class.md)ボタン テキストの配置、ボタンのテキストとイメージの組み合わせ、カーソルの選択、ツール ヒントの指定などのクラス。  
@@ -137,7 +137,7 @@ class CMFCButton : public CButton
 |[CMFCButton::IsRadioButton](#isradiobutton)|ボタンがラジオ ボタンであるかどうかを示します。|  
 |[CMFCButton::IsWindowsThemingEnabled](#iswindowsthemingenabled)|ボタンの境界線のスタイルを現在の Windows テーマに対応するかどうかを示します。|  
 |`CMFCButton::OnDrawParentBackground`|指定された領域では、ボタンの親の背景を描画します。 (上書き[AFX_GLOBAL_DATA::DrawParentBackground](../../mfc/reference/afx-global-data-structure.md)|  
-|`CMFCButton::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)と[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 関数。 ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドします)。|  
+|`CMFCButton::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)と[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 関数。 ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドします)。|  
 |[CMFCButton::SetAutorepeatMode](#setautorepeatmode)|ボタンを自動繰り返しモードに設定します。|  
 |[CMFCButton::SetCheckedImage](#setcheckedimage)|チェックされているボタンのイメージを設定します。|  
 |[CMFCButton::SetFaceColor](#setfacecolor)|ボタンのテキストの背景色を設定します。|  
@@ -200,7 +200,7 @@ class CMFCButton : public CButton
   
  [CMFCButton](../../mfc/reference/cmfcbutton-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxbutton.h  
   
 ##  <a name="cleanup"></a>  CMFCButton::CleanUp  

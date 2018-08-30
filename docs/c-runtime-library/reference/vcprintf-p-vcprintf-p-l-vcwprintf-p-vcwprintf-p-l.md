@@ -51,12 +51,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03251c9f0442ffa3cda6b00b6528e424e1fe9007
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b0e2271093237fbfdbc7f5e0492b1db220c469d1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415635"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210362"
 ---
 # <a name="vcprintfp-vcprintfpl-vcwprintfp-vcwprintfpl"></a>_vcprintf_p、_vcprintf_p_l、_vcwprintf_p、_vcwprintf_p_l
 
@@ -103,22 +103,22 @@ int _vcwprintf_p_l(
 
 ## <a name="return-value"></a>戻り値
 
-書き込まれた文字数。出力エラーが発生した場合は負の値が返されます。 場合*形式*null ポインターで説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL**し、-1 が返されます。
+書き込まれた文字数。出力エラーが発生した場合は負の値が返されます。 場合*形式*null ポインターの場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL** -1 が返されます。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-これらの各関数は、引数リストへのポインターを使用し、使用、 **_putch**関数をフォーマットし、指定されたデータをコンソールに書き込みます。 (**_vcwprintf_p**使用 **_putwch**の代わりに **_putch**です。 **_vcwprintf_p**のワイド文字バージョンは、 **_vcprintf_p**です。 引数としてワイド文字列を使用します。)
+これらの各関数は、引数リストへのポインターを使用し、使用、 **_putch**関数を書式設定し、指定されたデータをコンソールに書き込みます。 (**_vcwprintf_p**使用 **_putwch**の代わりに **_putch**します。 **_vcwprintf_p**のワイド文字バージョンは、 **_vcprintf_p**します。 引数としてワイド文字列を使用します。)
 
-これらの関数を持つバージョン、 **_l**サフィックスは、現在のロケールの代わりに渡されたロケール パラメーターを使用する点を除いて同じです。
+これらの関数がのバージョン、 **_l**現在のロケールの代わりに渡されるロケール パラメーターを使用することを除き、サフィックスは同じです。
 
-各*引数*(存在する場合) は変換され、対応する書式指定に応じて*形式*です。 書式指定では位置指定パラメーターがサポートされるので、書式指定文字列の中で引数を使用する順序を指定できます。 詳細については、「[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」をご覧ください。
+各*引数*(ある場合) は変換され、出力に対応する書式指定に応じて*形式*します。 書式指定では位置指定パラメーターがサポートされるので、書式指定文字列の中で引数を使用する順序を指定できます。 詳細については、「[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」をご覧ください。
 
 これらの関数では、出力時にライン フィード文字をキャリッジ リターンとライン フィード (CR-LF) の組み合わせに変換しません。
 
 > [!IMPORTANT]
-> *format* にユーザー定義の文字列を指定しないでください。 詳しくは、「 [バッファー オーバーランの回避](http://msdn.microsoft.com/library/windows/desktop/ms717795)」をご覧ください。
+> *format* にユーザー定義の文字列を指定しないでください。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
-これらの関数は、入力ポインターと書式指定文字列を検証します。 場合*形式*または*引数*は**NULL**、またはの説明に従って、これらの関数が無効なパラメーター ハンドラーを呼び出し、書式指定文字列に無効な書式指定文字が含まれている場合[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、これらの関数は-1 を返します設定と**errno**に**EINVAL**です。
+これらの関数は、入力ポインターと書式指定文字列を検証します。 場合*形式*または*引数*は**NULL**の説明に従って、これらの関数が、無効なパラメーター ハンドラーを呼び出します書式指定文字列に無効な書式指定文字が含まれている場合、または[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、これらの関数は-1 を返し設定と**errno**に**EINVAL**します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -129,7 +129,7 @@ int _vcwprintf_p_l(
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_vcprintf_p**、 **_vcprintf_p_l**|\<conio.h> および \<stdarg.h>|
 |**_vcwprintf_p**、 **_vcwprintf_p_l**|\<conio.h> および \<stdarg.h>|

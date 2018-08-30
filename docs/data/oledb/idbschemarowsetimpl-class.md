@@ -47,12 +47,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 21910a85dfecf6bd1e66b4ce0df366e3841f3c36
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3f8e1875f318b35e0b28cf1e36f926d54cab4831
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572875"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204129"
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl クラス
 スキーマ行セットの実装を提供します。  
@@ -145,7 +145,7 @@ HRESULT CreateSchemaRowset(IUnknown *pUnkOuter,
   
 #### <a name="parameters"></a>パラメーター  
  *pUnkOuter*  
- [in]外部[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 、それ以外の場合 NULL を集計するときにします。  
+ [in]外部[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) 、それ以外の場合 NULL を集計するときにします。  
   
  *cRestrictions*  
  [入力] スキーマ行セットに適用する制限の数。  
@@ -279,7 +279,7 @@ STDMETHOD (GetSchema s )(ULONG * pcSchemas,
  この関数の実装では、セッション クラスでスキーマ マップを持っている必要があります。 スキーマ マップ情報を使用して、マップ内のスキーマの GUID の配列で応答します。 これは、プロバイダーによってサポートされるスキーマを表します。  
 
 ## <a name="see-also"></a>関連項目  
- [IDBSchemaRowsetImpl クラス メンバー](http://msdn.microsoft.com/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
+ [IDBSchemaRowsetImpl クラス メンバー](https://msdn.microsoft.com/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
  [スキーマ行セット クラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)   
  [スキーマ行セットのサポート](../../data/oledb/supporting-schema-rowsets.md)    
  [SCHEMA_ENTRY](../../data/oledb/schema-entry.md)    

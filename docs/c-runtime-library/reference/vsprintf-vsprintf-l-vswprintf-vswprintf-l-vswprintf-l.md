@@ -55,12 +55,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c1c4c22bb309516c751af66845acdb69b090797
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: baa34ae887e12a59785bafd0551fe383fac5f7b1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417315"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220451"
 ---
 # <a name="vsprintf-vsprintfl-vswprintf-vswprintfl-vswprintfl"></a>vsprintf、_vsprintf_l、vswprintf、_vswprintf_l、__vswprintf_l
 引数リストへのポインターを使用して、書式付き出力を書き込みます。 これらの関数にはセキュリティが強化されたバージョンがあります。「[vsprintf_s、_vsprintf_s_l、vswprintf_s、_vswprintf_s_l](vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)」を参照してください。
@@ -145,20 +145,20 @@ int _vswprintf_l(
 
 ## <a name="return-value"></a>戻り値
 
-**vsprintf**と**vswprintf**を含まない終端の null 文字または負の値の出力エラーが発生した場合、書き込まれる文字数を返します。 場合*バッファー*または*形式*null ポインター」の説明に従って、これらの関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、これらの関数は-1 を返します設定と**errno**に**EINVAL**です。
+**vsprintf**と**vswprintf**出力エラーが発生した場合に、終端の null 文字または負の値をしないなど、書き込まれる文字数を返します。 場合*バッファー*または*形式*null ポインターの場合は、」の説明に従って、これらの関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、これらの関数は-1 を返し設定と**errno**に**EINVAL**します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-これらの各関数は、引数リストへのポインターを使用し、書式を設定し、が指すメモリに指定されたデータを書き込みます*バッファー*です。
+これらの各関数、引数リストへのポインターを受け取ると、書式を設定およびが指すメモリに指定されたデータを書き込みます*バッファー*します。
 
 これらの関数のバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
 
 > [!IMPORTANT]
-> 使用して**vsprintf**がありますの文字数を制限する方法は書き込まれません、つまりこの関数を使用してコードがバッファー オーバーランを受けやすくなります。 代わりに [_vsnprintf](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) を使用するか、または [_vscprintf](vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) を呼び出して、必要なバッファーの大きさを決定します。 また、*形式*はユーザー定義の文字列ではありません。 詳しくは、「 [バッファー オーバーランの回避](http://msdn.microsoft.com/library/windows/desktop/ms717795)」をご覧ください。
+> 使用して**vsprintf**、ある文字の数を制限する方法は書き込まれません、つまり、この関数を使用してコードがバッファー オーバーランを受けやすくなります。 代わりに [_vsnprintf](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) を使用するか、または [_vscprintf](vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) を呼び出して、必要なバッファーの大きさを決定します。 また、いることを確認*形式*ユーザー定義文字列ではありません。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
-**vswprintf** 、2 番目のパラメーターを必要とする ISO C 標準に準拠している*カウント*、型の**size_t**です。 古い非標準動作を強制的には、次のように定義します。**実行させるには**します。 従来の動作ではありません、今後のバージョンでは、ように準拠した新しい動作を使用するコードを変更する必要があります。
+**vswprintf** 、2 番目のパラメーターを必要とする ISO C 標準に準拠している*カウント*、型の**size_t**します。 古い非標準動作を強制的には、次のように定義します。**実行させるには**します。 以前の動作にない可能性が、今後のバージョンでは、ため、新しいに準拠した動作を使用するコードを変更する必要があります。
 
 C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -171,7 +171,7 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|省略可能なヘッダー|
+|ルーチンによって返される値|必須ヘッダー|省略可能なヘッダー|
 |-------------|---------------------|----------------------|
 |**vsprintf**、 **_vsprintf_l**|\<stdio.h> および \<stdarg.h>|\<varargs.h>*|
 |**vswprintf**、 **_vswprintf_l**|\<stdio.h> または \<wchar.h>、および \<stdarg.h>|\<varargs.h>*|

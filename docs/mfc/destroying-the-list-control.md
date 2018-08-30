@@ -1,5 +1,5 @@
 ---
-title: リスト コントロールの破棄 |Microsoft ドキュメント
+title: リスト コントロールの破棄 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,21 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edb26671ba775cfa7daf98d39c7eccc9fd4111bd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 01cdbc0f404c34a8c5ebc3ae09adf30e0cea0851
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343283"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215043"
 ---
 # <a name="destroying-the-list-control"></a>リスト コントロールの破棄
-埋め込む場合、 [CListCtrl](../mfc/reference/clistctrl-class.md)オブジェクト ビューまたはダイアログのクラスのデータ メンバーとしてその所有者が破棄されるときは破棄されます。 使用する場合、 [CListView](../mfc/reference/clistview-class.md)ビューが破棄されると、フレームワークが、コントロールを破棄します。  
+埋め込む場合、 [CListCtrl](../mfc/reference/clistctrl-class.md)が破棄される所有者が破棄されるときに、ビューまたはダイアログ クラスのデータ メンバーとしてオブジェクトします。 使用する場合、 [CListView](../mfc/reference/clistview-class.md)フレームワークでは、ビューが破棄されると、コントロールが破棄されます。  
   
- リスト コントロールではなく、アプリケーションに格納される、リストのデータの一部に基づいて並べ替えた場合は、メモリを解放を配置する必要があります。 詳細については、次を参照してください。[コールバック項目とコールバック マスク](http://msdn.microsoft.com/library/windows/desktop/bb774736)Windows SDK に含まれています。  
+ リスト コントロールではなく、アプリケーションに格納される、リスト データの一部を配置する場合は、メモリを解放を配置する必要があります。 詳細については、次を参照してください。[コールバック項目とコールバック マスク](/windows/desktop/Controls/using-list-view-controls)Windows SDK に含まれています。  
   
- さらに、ユーザーはイメージ リストを作成し、リスト コントロール オブジェクトに関連付けられているも解放担当します。  
+ さらに、イメージのリストを作成し、リスト コントロールのオブジェクトに関連付けられているすべての割り当てを解除する責任は。  
   
 ## <a name="see-also"></a>関連項目  
- [CListCtrl の使い方](../mfc/using-clistctrl.md)   
+ [Clistctrl の使い方](../mfc/using-clistctrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 

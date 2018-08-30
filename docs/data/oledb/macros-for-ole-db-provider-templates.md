@@ -62,12 +62,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 747f54e4ae37fe31eeea7540c1531b988d692427
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: e2456eed4f55fe5a5f68552cfe91e5785fc99cf5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572214"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209022"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>OLE DB プロバイダー テンプレート用マクロ
 OLE DB プロバイダー テンプレートのマクロは、次のカテゴリの機能を提供します。  
@@ -231,7 +231,7 @@ PROPERTY_INFO_ENTRY(dwPropID)
  [in]A [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\))プロパティと組み合わせて使用できる値は、プロパティを識別する GUID を設定します。  
   
 #### <a name="remarks"></a>Remarks  
- このマクロは、 `DWORD` 型のプロパティ値を、ATLDB.H で定義された既定値に設定します。 選択した値にプロパティを設定するには、 [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md)を使用します。 設定する、 [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4)と[DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\))と同時に、プロパティを使用して[PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md)します。  
+ このマクロは、 `DWORD` 型のプロパティ値を、ATLDB.H で定義された既定値に設定します。 選択した値にプロパティを設定するには、 [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md)を使用します。 設定する、 [VARTYPE](https://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4)と[DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\))と同時に、プロパティを使用して[PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md)します。  
   
 #### <a name="example"></a>例  
  「 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)」を参照してください。  
@@ -250,7 +250,7 @@ PROPERTY_INFO_ENTRY_EX(dwPropID, vt, dwFlags, value, options)
  [in]A [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\))プロパティと組み合わせて使用できる値は、プロパティを識別する GUID を設定します。  
   
  *vt*  
- [in][VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4)のこのプロパティ エントリ。  
+ [in][VARTYPE](https://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4)のこのプロパティ エントリ。  
   
  *dwFlags*  
  [in]A [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\))このプロパティ エントリを記述する値。  

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e32312e8c6f3dc149f6e5e1f8dc37b1395732d02
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 52550df1ca89ec1252fc2910bf27598d51302495
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408191"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212262"
 ---
 # <a name="const-and-volatile-pointers"></a>const ポインターと volatile ポインター
 [Const](../cpp/const-cpp.md)と[揮発性](../cpp/volatile-cpp.md)キーワードは、ポインターの処理方法を変更します。 **Const**キーワードでは、初期化後に、ポインターを変更できないことを指定します。 ポインターがその後、変更から保護します。  
@@ -96,7 +96,7 @@ errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *str
  前のステートメントは、関数を宣言[strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)へのポインター型の 3 つの引数の 2 つが、 **char**します。 引数が参照によって渡されますないため、値によって、関数は両方を変更する無料`strDestination`と`strSource`場合`strSource`として宣言されていない**const**します。 宣言`strSource`として**const**により、呼び出し元`strSource`呼び出された関数では変更できません。  
   
 > [!NOTE]
->  標準変換があるため、 *typename* **\*** に**const** *typename*  **\***、型の引数を渡すことは`char *`に[strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)します。 ただし、その逆は正しくありません。削除する暗黙的な変換が存在しない、 **const**オブジェクトまたはポインターからの属性。  
+> 標準変換があるため、 *typename* <strong>\*</strong>に**const** *typename*  <strong>\*</strong>、型の引数を渡すことは`char *`に[strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)します。 ただし、その逆は正しくありません。削除する暗黙的な変換が存在しない、 **const**オブジェクトまたはポインターからの属性。  
   
  A **const**指定された型のポインターは、同じ型のポインターに割り当てることができます。 ただし、ポインターでない**const**に割り当てることはできません、 **const**ポインター。 次のコードは、正しい代入と正しくない代入を示します。  
   

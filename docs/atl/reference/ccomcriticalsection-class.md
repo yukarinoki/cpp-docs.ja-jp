@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5926f92ae636a13c1e5241792790151ee48ceddc
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: b5957d55ae75723331e35984b9ab3c8e34c4fa78
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884871"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204959"
 ---
 # <a name="ccomcriticalsection-class"></a>CComCriticalSection クラス
 このクラスは、取得およびクリティカル セクション オブジェクトの所有権を解放するためのメソッドを提供します。  
@@ -70,7 +70,7 @@ class CComCriticalSection
   
  参照してください[CComCritSecLock クラス](../../atl/reference/ccomcritseclock-class.md)呼び出すよりもこのクラスを使用するより安全な方法を`Lock`と`Unlock`直接します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlcore.h  
   
 ##  <a name="ccomcriticalsection"></a>  CComCriticalSection::CComCriticalSection  
@@ -84,7 +84,7 @@ CComCriticalSection() throw();
  セット、 [m_sec](#m_sec)データ メンバーを NULL にします。  
   
 ##  <a name="init"></a>  CComCriticalSection::Init  
- Win32 関数を呼び出す[InitializeCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms683472)に含まれるクリティカル セクション オブジェクトを初期化しますが、 [m_sec](#m_sec)データ メンバー。  
+ Win32 関数を呼び出す[InitializeCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsection)に含まれるクリティカル セクション オブジェクトを初期化しますが、 [m_sec](#m_sec)データ メンバー。  
   
 ```
 HRESULT Init() throw();
@@ -94,7 +94,7 @@ HRESULT Init() throw();
  成功した場合、E_OUTOFMEMORY または E_FAIL エラー発生時に、S_OK を返します。  
   
 ##  <a name="lock"></a>  CComCriticalSection::Lock  
- Win32 関数を呼び出す[EnterCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682608)、どの待機スレッドがクリティカル セクション オブジェクトに含まれているの所有権を取得できるまで、 [m_sec](#m_sec)データ メンバー。  
+ Win32 関数を呼び出す[EnterCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-entercriticalsection)、どの待機スレッドがクリティカル セクション オブジェクトに含まれているの所有権を取得できるまで、 [m_sec](#m_sec)データ メンバー。  
   
 ```
 HRESULT Lock() throw();
@@ -114,7 +114,7 @@ CRITICAL_SECTION m_sec;
 ```  
   
 ##  <a name="term"></a>  CComCriticalSection::Term  
- Win32 関数を呼び出す[DeleteCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682552)に含まれているクリティカル セクション オブジェクトによって使用されるすべてのリソースを解放する、 [m_sec](#m_sec)データ メンバー。  
+ Win32 関数を呼び出す[DeleteCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-deletecriticalsection)に含まれているクリティカル セクション オブジェクトによって使用されるすべてのリソースを解放する、 [m_sec](#m_sec)データ メンバー。  
   
 ```
 HRESULT Term() throw();
@@ -127,7 +127,7 @@ HRESULT Term() throw();
  1 回`Term`が呼び出されると、重要なセクションは、同期は使用できなくします。  
   
 ##  <a name="unlock"></a>  CComCriticalSection::Unlock  
- Win32 関数を呼び出す[により](http://msdn.microsoft.com/library/windows/desktop/ms684169)に含まれるクリティカル セクション オブジェクトの所有権を解放する、 [m_sec](#m_sec)データ メンバー。  
+ Win32 関数を呼び出す[により](/windows/desktop/api/synchapi/nf-synchapi-leavecriticalsection)に含まれるクリティカル セクション オブジェクトの所有権を解放する、 [m_sec](#m_sec)データ メンバー。  
   
 ```
 HRESULT Unlock() throw();

@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2b0bcdc5ee6c4c2b71837f1cdd958f50d8d0b4a
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 5aa7efb7881b00933afab92a7157c09e0f769605
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572892"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204424"
 ---
 # <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport、_CrtDbgReportW
 
@@ -108,8 +108,8 @@ int _CrtDbgReportW(
 
 |レポート モード|レポート ファイル|**_CrtDbgReport**、 **_CrtDbgReportW**動作|
 |-----------------|-----------------|------------------------------------------------|
-|**_CRTDBG_MODE_DEBUG**|利用不可|Windows [OutputDebugString](http://msdn.microsoft.com/library/windows/desktop/aa363362.aspx) API にメッセージを書き込みます。|
-|**_CRTDBG_MODE_WNDW**|利用不可|Windows [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) API を呼び出して、メッセージおよび **[中止]**、**[再試行]**、**[無視]** の各ボタンを表示するメッセージ ボックスを作成します。 クリックすると**中止**、 **_CrtDbgReport**または **_CrtDbgReport**すぐに中止されます。 ユーザーが **[再試行]** をクリックすると、1 を返します。 クリックすると**無視**、実行が継続と **_CrtDbgReport**と **_CrtDbgReportW** 0 が返されます。 エラー状況が存在するときに **[無視]** をクリックすると、"未定義の動作" という結果になることがよくあります。|
+|**_CRTDBG_MODE_DEBUG**|利用不可|Windows [OutputDebugString](https://msdn.microsoft.com/library/windows/desktop/aa363362.aspx) API にメッセージを書き込みます。|
+|**_CRTDBG_MODE_WNDW**|利用不可|Windows [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) API を呼び出して、メッセージおよび **[中止]**、**[再試行]**、**[無視]** の各ボタンを表示するメッセージ ボックスを作成します。 クリックすると**中止**、 **_CrtDbgReport**または **_CrtDbgReport**すぐに中止されます。 ユーザーが **[再試行]** をクリックすると、1 を返します。 クリックすると**無視**、実行が継続と **_CrtDbgReport**と **_CrtDbgReportW** 0 が返されます。 エラー状況が存在するときに **[無視]** をクリックすると、"未定義の動作" という結果になることがよくあります。|
 |**_CRTDBG_MODE_FILE**|**__HFILE**|メッセージをユーザーが指定した書き込みます**処理**、Windows を使用して[WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile) API とはファイル ハンドルの有効性を確認できませんアプリケーションは、レポート ファイルを開き、有効なファイルを渡す。処理します。|
 |**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDERR**|メッセージを書き込みます**stderr**します。|
 |**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDOUT**|メッセージを書き込みます**stdout**します。|

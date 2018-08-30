@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ea43fefabe43bec8a5bf9b00404491a405e5416
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: d9e90570e783b2c42081da4854d54a65d1bdb9b6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852982"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208867"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>CMFCPropertyGridFontProperty クラス
 `CMFCPropertyGridFileProperty`クラスは、フォントの選択 ダイアログ ボックスを開くプロパティ リスト コントロール項目をサポートしています。  
@@ -66,7 +66,7 @@ class CMFCPropertyGridFontProperty : public CMFCPropertyGridProperty
   
  [CMFCPropertyGridFontProperty](../../mfc/reference/cmfcpropertygridfontproperty-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxpropertygridctrl.h  
   
 ##  <a name="cmfcpropertygridfontproperty"></a>  CMFCPropertyGridFontProperty::CMFCPropertyGridFontProperty  
@@ -90,7 +90,7 @@ CMFCPropertyGridFontProperty(
  フォントの属性を指定するフォントの論理構造体。  
   
  [in]*dwFontDialogFlags*  
- プロパティ値のドロップダウン ボタンをクリックすると表示される [フォント] ダイアログ ボックスに適用されるスタイル。 既定値は、CF_EFFECTS と CF_SCREENFONTS のビットごとの組み合わせ (OR です)。 詳細については、次を参照してください。、*フラグ*のパラメーター、 [CHOOSEFONT 構造](http://msdn.microsoft.com/library/windows/desktop/ms646832)します。  
+ プロパティ値のドロップダウン ボタンをクリックすると表示される [フォント] ダイアログ ボックスに適用されるスタイル。 既定値は、CF_EFFECTS と CF_SCREENFONTS のビットごとの組み合わせ (OR です)。 詳細については、次を参照してください。、*フラグ*のパラメーター、 [CHOOSEFONT 構造](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta)します。  
   
  [in]*lpszDescr*  
  フォントのプロパティの説明。 既定値は、NULL です。  
@@ -129,7 +129,7 @@ LPLOGFONT GetLogFont();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ポインターを[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)選択したフォントを記述する構造体。  
+ ポインターを[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)選択したフォントを記述する構造体。  
   
 ### <a name="remarks"></a>Remarks  
   

@@ -188,12 +188,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97548fca6b47e8d765eb7744a86ab0d4cfa27b17
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 50bb4061a13a9057a695b25ca32421c4dd7ed88b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337485"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207825"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx クラス
 Windows のシングル ドキュメント インターフェイス (SDI: Single Document Interface) のオーバーラップ フレーム ウィンドウまたはポップアップ フレーム ウィンドウの機能を実装し、ウィンドウを管理するメンバーを提供します。 拡張、 [CFrameWnd](../../mfc/reference/cframewnd-class.md)クラス。  
@@ -250,7 +250,7 @@ class CFrameWndEx : public CFrameWnd
 |[CFrameWndEx::OnCreate](#oncreate)|フレームを作成した後に、フレームワークによって呼び出されます。|  
 |[CFrameWndEx::OnDestroy](#ondestroy)|フレームが破棄されるときに、フレームワークによって呼び出されます。|  
 |[CFrameWndEx::OnDrawMenuImage](#ondrawmenuimage)|アプリケーションは、メニュー項目に関連付けられているイメージを描画するときに、フレームワークによって呼び出されます。|  
-|[CFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|フレームワークによって呼び出さときに、`CMFCPopupMenu`プロセス オブジェクトを[WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213)メッセージ。|  
+|[CFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|フレームワークによって呼び出さときに、`CMFCPopupMenu`プロセス オブジェクトを[WM_PAINT](/windows/desktop/gdi/wm-paint)メッセージ。|  
 |[CFrameWndEx::OnDWMCompositionChanged](#ondwmcompositionchanged)|デスクトップ ウィンドウ マネージャー (DWM) コンポジションを有効になっているか、無効になっているときに、フレームワークによって呼び出されます。|  
 |[CFrameWndEx::OnExitSizeMove](#onexitsizemove)|移動またはサイズ変更枠を停止したときに、フレームワークによって呼び出されます。|  
 |[CFrameWndEx::OnGetMinMaxInfo](#ongetminmaxinfo)|ウィンドウのサイズ制限を設定する、フレームのサイズが変更されたときに、フレームワークによって呼び出されます。|  
@@ -315,7 +315,7 @@ class CFrameWndEx : public CFrameWnd
   
  [CFrameWndEx](../../mfc/reference/cframewndex-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxframewndex.h  
   
 ##  <a name="activeitemrecalclayout"></a>  CFrameWndEx::ActiveItemRecalcLayout  
@@ -358,7 +358,7 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
  複数のウィンドウの位置を格納する構造体へのハンドル。 .  
   
 ### <a name="remarks"></a>Remarks  
- Hdwp 構造体の初期化によって、 [BeginDeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632672)メソッド。  
+ Hdwp 構造体の初期化によって、 [BeginDeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632672)メソッド。  
   
 ##  <a name="delayupdateframemenu"></a>  CFrameWndEx::DelayUpdateFrameMenu  
  フレームのメニューを設定し、コマンドの処理がアイドル状態のときに更新します。  
@@ -1093,7 +1093,7 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO FAR* lpMMI);
   
 ### <a name="parameters"></a>パラメーター  
  [in]*lpMMI*  
- ポインターを[MINMAXINFO](http://msdn.microsoft.com/library/windows/desktop/ms632605)構造体。  
+ ポインターを[MINMAXINFO](https://msdn.microsoft.com/library/windows/desktop/ms632605)構造体。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1129,7 +1129,7 @@ afx_msg void OnLButtonDown(
   
 ### <a name="parameters"></a>パラメーター  
  [in]*nFlags*  
- ユーザーが修飾子キーを押したかどうかを示します。 使用可能な値は、パラメーターを参照してください。 *wParam*で[WM_LBUTTONDOWN 通知](http://msdn.microsoft.com/library/windows/desktop/ms645607)します。  
+ ユーザーが修飾子キーを押したかどうかを示します。 使用可能な値は、パラメーターを参照してください。 *wParam*で[WM_LBUTTONDOWN 通知](/windows/desktop/inputdev/wm-lbuttondown)します。  
   
  [in]*ポイント*  
  X およびポインターの y 座標、ウィンドウの左上隅を基準に指定します。  
@@ -1147,7 +1147,7 @@ afx_msg void OnLButtonUp(
   
 ### <a name="parameters"></a>パラメーター  
  [in]*nFlags*  
- ユーザーが修飾子キーを押したかどうかを示します。 使用可能な値は、パラメーターを参照してください。 *wParam*で[WM_LBUTTONUP 通知](http://msdn.microsoft.com/library/windows/desktop/ms645608)します。  
+ ユーザーが修飾子キーを押したかどうかを示します。 使用可能な値は、パラメーターを参照してください。 *wParam*で[WM_LBUTTONUP 通知](/windows/desktop/inputdev/wm-lbuttonup)します。  
   
  [in]*ポイント*  
  X およびポインターの y 座標、ウィンドウの左上隅を基準に指定します。  
@@ -1221,7 +1221,7 @@ afx_msg void OnMouseMove(
   
 ### <a name="parameters"></a>パラメーター  
  [in]*nFlags*  
- ユーザーが修飾子キーを押したかどうかを示します。 使用可能な値は、パラメーターを参照してください。 *wParam*で[WM_MOUSEMOVE 通知](http://msdn.microsoft.com/library/windows/desktop/ms645616)します。  
+ ユーザーが修飾子キーを押したかどうかを示します。 使用可能な値は、パラメーターを参照してください。 *wParam*で[WM_MOUSEMOVE 通知](/windows/desktop/inputdev/wm-mousemove)します。  
   
  [in]*ポイント*  
  X と y を指定します ウィンドウの左上隅に対して相対的ポインターの座標。  
@@ -1290,7 +1290,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
  画面座標でポインターの位置。  
   
 ### <a name="return-value"></a>戻り値  
- ポインターはヒット列挙値です。 使用可能な値の一覧については、次を参照してください。 [WM_NCHITTEST 通知](http://msdn.microsoft.com/library/windows/desktop/ms645618)します。  
+ ポインターはヒット列挙値です。 使用可能な値の一覧については、次を参照してください。 [WM_NCHITTEST 通知](/windows/desktop/inputdev/wm-nchittest)します。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1305,7 +1305,7 @@ afx_msg void OnNcMouseMove(
   
 ### <a name="parameters"></a>パラメーター  
  [in]*nHitTest*  
- ポインターはヒット列挙値です。 使用可能な値の一覧については、次を参照してください。 [WM_NCHITTEST 通知](http://msdn.microsoft.com/library/windows/desktop/ms645618)します。  
+ ポインターはヒット列挙値です。 使用可能な値の一覧については、次を参照してください。 [WM_NCHITTEST 通知](/windows/desktop/inputdev/wm-nchittest)します。  
   
  [in]*ポイント*  
  画面座標でポインターの位置。  
@@ -1369,7 +1369,7 @@ afx_msg LRESULT OnPowerBroadcast(
   
 ### <a name="parameters"></a>パラメーター  
  [in]*wp*  
- 電源管理イベントです。 使用可能な値の一覧については、次を参照してください。 [WM_POWERBROADCAST メッセージ](http://msdn.microsoft.com/library/windows/desktop/aa373247)します。  
+ 電源管理イベントです。 使用可能な値の一覧については、次を参照してください。 [WM_POWERBROADCAST メッセージ](/windows/desktop/Power/wm-powerbroadcast)します。  
   
  [in]*lp*  
  このパラメーターは使用されません。  
@@ -1442,7 +1442,7 @@ afx_msg LRESULT OnSetText(
  ウィンドウのテキストへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- 呼び出しから値を返す[DefWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633572)します。  
+ 呼び出しから値を返す[DefWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633572)します。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1518,7 +1518,7 @@ afx_msg void OnSize(
   
 ### <a name="parameters"></a>パラメーター  
  [in]*%n タイプ*  
- サイズ変更の種類。 使用可能な値は、パラメーターを参照してください。 *wParam*で[WM_SIZE 通知](http://msdn.microsoft.com/library/windows/desktop/ms632646)します。  
+ サイズ変更の種類。 使用可能な値は、パラメーターを参照してください。 *wParam*で[WM_SIZE 通知](/windows/desktop/winmsg/wm-size)します。  
   
  [in]*cx*  
  ピクセル フレームの新しい幅。  
@@ -1539,7 +1539,7 @@ afx_msg void OnSizing(
   
 ### <a name="parameters"></a>パラメーター  
  [in]*fwSide*  
- 移動されるフレームの端。 パラメーターを*wParam*で[WM_SIZING 通知](http://msdn.microsoft.com/library/windows/desktop/ms632647)します。  
+ 移動されるフレームの端。 パラメーターを*wParam*で[WM_SIZING 通知](/windows/desktop/winmsg/wm-sizing)します。  
   
  [入力、出力]*pRect*  
  ポインターを[CRect](../../atl-mfc-shared/reference/crect-class.md)または[RECT](../../mfc/reference/rect-structure1.md)フレームの座標を含む構造体。  
@@ -1896,10 +1896,10 @@ virtual void WinHelp(
   
 ### <a name="parameters"></a>パラメーター  
  *指定*  
- 依存するデータ、 *nCmd*パラメーター。 使用可能な値の一覧については、次を参照してください。 [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267)します。  
+ 依存するデータ、 *nCmd*パラメーター。 使用可能な値の一覧については、次を参照してください。 [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa)します。  
   
  *nCmd*  
- Help コマンド。 使用可能な値の一覧については、次を参照してください。 [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267)します。  
+ Help コマンド。 使用可能な値の一覧については、次を参照してください。 [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa)します。  
   
 ### <a name="remarks"></a>Remarks  
   

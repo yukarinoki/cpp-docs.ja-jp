@@ -321,12 +321,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f2d01de9d2ee8fe585a55d89808bb76250c242b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: a510d163075ccefbc61364cd7efa4003dfd0b8aa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538949"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208559"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar クラス
 `CMFCToolBar`クラスに似ています[CToolBar クラス](../../mfc/reference/ctoolbar-class.md)がユーザー インターフェイス機能に対する追加のサポートを提供します。 フラット ツール バー、ホット イメージのツール バー、大きいアイコン、ページャー ボタン、ロックされたツール バー、rebar コントロール、イメージの下のテキスト、背景イメージ、およびタブ付きのツール バーなどがサポートされます。 `CMFCToolBar` クラスには、ツール バーおよびメニューに対するユーザーのカスタマイズ、ツール バーとメニューの間のドラッグ アンド ドロップ、コンボ ボックス ボタン、エディット ボックス ボタン、カラー ピッカー、およびロールアップ ボタンのサポートも組み込まれています。
@@ -916,7 +916,7 @@ virtual BOOL Create(
  ツールバーの親ウィンドウへのポインター。  
   
  [in]*dwStyle*  
- ツールバーのスタイル。 参照してください[ツール バー コントロールとボタンのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb760439)スタイルの一覧については、Windows SDK に含まれています。  
+ ツールバーのスタイル。 参照してください[ツール バー コントロールとボタンのスタイル](/windows/desktop/Controls/toolbar-control-and-button-styles)スタイルの一覧については、Windows SDK に含まれています。  
   
  [in]*nID*  
  ツールバーの子ウィンドウの ID。  
@@ -950,7 +950,7 @@ virtual BOOL CreateEx(
  埋め込まれたコントロール バー オブジェクトを作成するための追加のスタイル。  
   
  [in]*dwStyle*  
- ツールバーのスタイル。 参照してください[ツール バー コントロールとボタンのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb760439)適切なスタイルの一覧についてはします。  
+ ツールバーのスタイル。 参照してください[ツール バー コントロールとボタンのスタイル](/windows/desktop/Controls/toolbar-control-and-button-styles)適切なスタイルの一覧についてはします。  
   
  [in]*rcBorders*  
  A`CRect`ウィンドウのツールバーの境界線の幅を指定するオブジェクト。  
@@ -1493,7 +1493,7 @@ static COLORREF GetHotTextColor();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)現在強調表示されたテキストの色を表す値。  
+ A [COLORREF](/windows/desktop/gdi/colorref)現在強調表示されたテキストの色を表す値。  
   
 ### <a name="remarks"></a>Remarks  
  呼び出す[CMFCToolBar::SetHotTextColor](#sethottextcolor)を強調表示されたツール バー ボタンの新しいテキストの色を設定します。  
@@ -2222,7 +2222,7 @@ BOOL IsOneRowWithSibling();
  ツールバーと兄弟が同じ行に配置されている場合は TRUE。それ以外の場合は FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
- [Cmfccustomizebutton::createpopupmenu](http://msdn.microsoft.com/e501083e-f78e-4d8d-900c-40bd6e2bb7f8)メソッドを表示する方法を決定するには、このメソッドを呼び出す、**カスタマイズ**ポップアップ メニュー。 このメソッドは TRUE を返す場合、フレームワークが表示されます、**を 1 行に表示するボタン**ボタンをクリックします。 それ以外の場合、フレームワークが表示されます、**表示するボタンを 2 つの行で**ボタンをクリックします。  
+ [Cmfccustomizebutton::createpopupmenu](https://msdn.microsoft.com/e501083e-f78e-4d8d-900c-40bd6e2bb7f8)メソッドを表示する方法を決定するには、このメソッドを呼び出す、**カスタマイズ**ポップアップ メニュー。 このメソッドは TRUE を返す場合、フレームワークが表示されます、**を 1 行に表示するボタン**ボタンをクリックします。 それ以外の場合、フレームワークが表示されます、**表示するボタンを 2 つの行で**ボタンをクリックします。  
   
  通常、このメソッドを使用する必要はありません。 有効にする、**を 1 行に表示するボタン**または**表示するボタンを 2 つの行で**ボタン、呼び出す[cmfctoolbar::setsiblingtoolbar](#setsiblingtoolbar)します。  
   

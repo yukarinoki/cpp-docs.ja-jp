@@ -1,5 +1,5 @@
 ---
-title: リスト コントロールの通知メッセージの処理 |Microsoft ドキュメント
+title: リスト コントロールの通知メッセージの処理 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,21 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5412bbf1fcb7e139394b9563965244080e5c179
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 3362074ce0f8d4d7a3a3463d22f9089f847e747d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36932082"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208711"
 ---
 # <a name="processing-notification-messages-in-list-controls"></a>リスト コントロールでの通知メッセージの処理
-ユーザーは、列ヘッダーをクリックして、アイコンをドラッグして、ラベルというように、リスト コントロールの編集 ([CListCtrl](../mfc/reference/clistctrl-class.md))、親ウィンドウに通知メッセージを送信します。 応答として何らかの操作を行う場合は、これらのメッセージを処理します。 たとえば、ユーザーには、列ヘッダーがクリックすると、ことができますを Microsoft Outlook のように、クリックした列の内容に基づいて項目を並べ替えます。  
+ユーザーは、列ヘッダーをクリック、アイコンをドラッグして、ラベルというように、リスト コントロールの編集 ([CListCtrl](../mfc/reference/clistctrl-class.md))、親ウィンドウに通知メッセージを送信します。 応答として何らかの操作を行う場合は、これらのメッセージを処理します。 たとえば、ユーザーは、列ヘッダーをクリックすると、Microsoft Outlook のように、クリックされた列の内容に基づいて項目の並べ替えにする可能性があります。  
   
- ビューまたはダイアログ クラスのリスト コントロールから WM_NOTIFY メッセージを処理します。 [プロパティ] ウィンドウを使って作成、 [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) switch ステートメントを持つハンドラー関数が通知メッセージを処理しているに基づいて。  
+ ビューまたはダイアログ クラスのリスト コントロールから WM_NOTIFY メッセージの処理。 [プロパティ] ウィンドウを使用して作成する、 [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify)ハンドラー関数を switch ステートメントが通知メッセージの処理に基づきます。  
   
- リスト コントロールを親ウィンドウに送信できる通知の一覧は、次を参照してください。[リスト ビュー コントロールへの参照](http://msdn.microsoft.com/library/windows/desktop/bb774737)Windows SDK に含まれています。  
+ リスト コントロールが親ウィンドウに送信できる通知の一覧は、次を参照してください。[リスト ビュー コントロールのリファレンス](/windows/desktop/Controls/list-view-control-reference)Windows SDK に含まれています。  
   
 ## <a name="see-also"></a>関連項目  
- [CListCtrl の使い方](../mfc/using-clistctrl.md)   
+ [Clistctrl の使い方](../mfc/using-clistctrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 

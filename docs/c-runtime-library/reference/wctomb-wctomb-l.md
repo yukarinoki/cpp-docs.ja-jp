@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 972d8e3f1798a7498173c3d8b0677bb57231b990
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: f10422d8efcebec62e77a495a6fb04c980da6060
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451540"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215162"
 ---
 # <a name="wctomb-wctombl"></a>wctomb、_wctomb_l
 
@@ -73,17 +73,17 @@ int _wctomb_l(
 
 ## <a name="return-value"></a>戻り値
 
-場合**wctomb**ワイド文字に変換しますをマルチバイト文字のバイト数を返します (より大きいは決して**MB_CUR_MAX**) ワイド文字。 場合*wchar*ワイド null 文字 (L '\0') は、 **wctomb** 1 を返します。 場合、ターゲット ポインター *mbchar*は**NULL**、 **wctomb** 0 を返します。 現在のロケールで変換が不可能な場合**wctomb** -1 を返しますと**errno**に設定されている**EILSEQ**です。
+場合**wctomb**ワイド文字に変換をマルチバイト文字の場合は、バイト数を返します (よりも大きくなることはありません**MB_CUR_MAX**)、ワイド文字。 場合*wchar*ワイド文字の null 文字 (L '\0') は、 **wctomb** 1 を返します。 場合、ターゲット ポインター *mbchar*は**NULL**、 **wctomb** 0 を返します。 現在のロケールで変換が不可能な場合**wctomb** -1 を返しますと**errno**に設定されている**EILSEQ**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Wctomb**関数に変換、 *wchar*を対応するマルチバイト文字の引数で結果を格納および*mbchar*です。 任意のプログラムの任意のポイントからこの関数を呼び出すことができます。 **wctomb** ; すべてのロケールに依存する動作に現在のロケールを使用 **_wctomb_l**と同じ**wctomb**代わりに渡されるロケールを使用する点を除いて。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**Wctomb**関数に変換しますその*wchar*を対応するマルチバイト文字の引数で結果を格納および*mbchar*します。 任意のプログラムの任意のポイントからこの関数を呼び出すことができます。 **wctomb**ロケールに依存する動作に現在のロケールを使用 **_wctomb_l**と同じ**wctomb**を代わりに渡されたロケールを使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 **wctomb**パラメーターを検証します。 場合*mbchar*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL**関数は-1 を返します。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**wctomb**|\<stdlib.h>|
 
@@ -127,4 +127,4 @@ Convert a wide character:
 [mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs、_wcstombs_l](wcstombs-wcstombs-l.md)<br/>
-[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>
+[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

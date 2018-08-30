@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5dd17c0541b573cba40146c55b46d14143209c87
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 3db235771156380c5f1b22af225d7aacbc4989b3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853879"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203506"
 ---
 # <a name="colelinksdialog-class"></a>COleLinksDialog クラス
 OLE の [リンクの編集] ダイアログ ボックスに使用します。  
@@ -64,7 +64,7 @@ class COleLinksDialog : public COleDialog
 > [!NOTE]
 >  アプリケーション コンテナーのウィザードで生成されたコードでは、このクラスを使用します。  
   
- 詳細については、次を参照してください。、[される](http://msdn.microsoft.com/library/windows/desktop/ms678492)Windows SDK の構造体。  
+ 詳細については、次を参照してください。、[される](/windows/desktop/api/oledlg/ns-oledlg-tagoleuieditlinksa)Windows SDK の構造体。  
   
  OLE に固有のダイアログ ボックスの詳細については、記事を参照してください。 [OLE のダイアログ ボックス](../../mfc/dialog-boxes-in-ole.md)します。  
   
@@ -83,7 +83,7 @@ class COleLinksDialog : public COleDialog
   
  `COleLinksDialog`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxodlgs.h  
   
 ##  <a name="domodal"></a>  COleLinksDialog::DoModal  
@@ -100,7 +100,7 @@ virtual INT_PTR DoModal();
   
 - ユーザーには、ダイアログ ボックスが取り消された場合は IDCANCEL。  
   
-- IDABORT 場合は、エラーが発生しました。 IDABORT が返される場合、`COleDialog::GetLastError`発生したエラーの種類に関する詳細を取得します。 考えられるエラーの一覧については、次を参照してください。、[される](http://msdn.microsoft.com/library/windows/desktop/ms679703)Windows SDK 内の関数。  
+- IDABORT 場合は、エラーが発生しました。 IDABORT が返される場合、`COleDialog::GetLastError`発生したエラーの種類に関する詳細を取得します。 考えられるエラーの一覧については、次を参照してください。、[される](/windows/desktop/api/oledlg/nf-oledlg-oleuieditlinksa)Windows SDK 内の関数。  
   
 ### <a name="remarks"></a>Remarks  
  メンバーを設定して、さまざまなダイアログ ボックス コントロールを初期化する場合、[各](#m_el)構造、行う必要があります、呼び出す前に`DoModal`はダイアログ オブジェクトを構築します。  
@@ -142,7 +142,7 @@ OLEUIEDITLINKS m_el;
 ### <a name="remarks"></a>Remarks  
  この構造体のメンバーは、直接またはメンバー関数のいずれかに変更できます。  
   
- 詳細については、次を参照してください。、[される](http://msdn.microsoft.com/library/windows/desktop/ms678492)Windows SDK の構造体。  
+ 詳細については、次を参照してください。、[される](/windows/desktop/api/oledlg/ns-oledlg-tagoleuieditlinksa)Windows SDK の構造体。  
   
 ## <a name="see-also"></a>関連項目  
  [COleDialog クラス](../../mfc/reference/coledialog-class.md)   

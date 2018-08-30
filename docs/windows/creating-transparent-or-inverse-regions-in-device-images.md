@@ -30,12 +30,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f5ed2a88e8963bae06e33835f3982d8651445929
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b5bc95e75cc9a58dd6f01b8a4ca537709941f6bf
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599521"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215941"
 ---
 # <a name="creating-transparent-or-inverse-regions-in-device-images-image-editor-for-icons"></a>デバイス イメージの透明な領域または反転領域の作成 (アイコン用イメージ エディター)
 
@@ -44,7 +44,7 @@ ms.locfileid: "42599521"
 画面と反転色のアイコンに適用して、カーソル図形の色の派生イメージか逆領域を指定します。 色は、これらの属性を含むイメージの部分を表します。 編集画面の色と反転色の属性を表す色を変更することができます。 これらの変更は、アイコンまたはカーソルをアプリケーションの外観には影響しません。
 
 > [!NOTE]
-> 実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、**ヘルプ**の説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。
+> 実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、**ヘルプ**の説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio での開発設定のカスタマイズ](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。
 
 ### <a name="to-create-transparent-or-inverse-regions"></a>透明または反転領域を作成するには
 

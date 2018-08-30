@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40907720965647e076c6b516f1c2de9f1d3f9edb
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 089fe435c86b524acc41ba528452d93032d1b1a4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850567"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214494"
 ---
 # <a name="colechangeicondialog-class"></a>COleChangeIconDialog クラス
 OLE の [アイコンの変更] ダイアログ ボックスに使用します。  
@@ -67,7 +67,7 @@ class COleChangeIconDialog : public COleDialog
 ## <a name="remarks"></a>Remarks  
  クラスのオブジェクトを作成`COleChangeIconDialog`をこのダイアログ ボックスを呼び出す場合します。 後に、`COleChangeIconDialog`オブジェクトが構築された、使用することができます、[各](#m_ci)値やダイアログ ボックスのコントロールの状態を初期化するためにします。 `m_ci`型 OLEUICHANGEICON 構造です。 このダイアログ ボックスの使い方の詳細については、次を参照してください。、 [DoModal](#domodal)メンバー関数。  
   
- 詳細については、次を参照してください。、 [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) Windows SDK の構造体。  
+ 詳細については、次を参照してください。、 [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) Windows SDK の構造体。  
   
  OLE に固有のダイアログ ボックスの詳細については、記事を参照してください。 [OLE のダイアログ ボックス](../../mfc/dialog-boxes-in-ole.md)します。  
   
@@ -86,7 +86,7 @@ class COleChangeIconDialog : public COleDialog
   
  `COleChangeIconDialog`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxodlgs.h  
   
 ##  <a name="colechangeicondialog"></a>  COleChangeIconDialog::COleChangeIconDialog  
@@ -122,7 +122,7 @@ explicit COleChangeIconDialog(
 ### <a name="remarks"></a>Remarks  
  ダイアログ ボックスを表示するには[DoModal](#domodal)関数。  
   
- 詳細については、次を参照してください。、 [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) Windows SDK の構造体。  
+ 詳細については、次を参照してください。、 [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) Windows SDK の構造体。  
   
 ##  <a name="dochangeicon"></a>  COleChangeIconDialog::DoChangeIcon  
  後のダイアログ ボックスで選択されている 1 つに項目を表すアイコンに変更するには、この関数を呼び出す[DoModal](#domodal) IDOK を返します。  
@@ -152,7 +152,7 @@ virtual INT_PTR DoModal();
   
 - ユーザーには、ダイアログ ボックスが取り消された場合は IDCANCEL。  
   
-- IDABORT 場合は、エラーが発生しました。 IDABORT が返される場合、`COleDialog::GetLastError`発生したエラーの種類に関する詳細を取得します。 考えられるエラーの一覧については、次を参照してください。、 [OleUIChangeIcon](http://msdn.microsoft.com/library/windows/desktop/ms688307) Windows SDK 内の関数。  
+- IDABORT 場合は、エラーが発生しました。 IDABORT が返される場合、`COleDialog::GetLastError`発生したエラーの種類に関する詳細を取得します。 考えられるエラーの一覧については、次を参照してください。、 [OleUIChangeIcon](/windows/desktop/api/oledlg/nf-oledlg-oleuichangeicona) Windows SDK 内の関数。  
   
 ### <a name="remarks"></a>Remarks  
  メンバーを設定して、さまざまなダイアログ ボックス コントロールを初期化する場合、[各](#m_ci)構造体を呼び出す前に、これを行う必要があります`DoModal`はダイアログ オブジェクトを構築します。  
@@ -179,7 +179,7 @@ OLEUICHANGEICON m_ci;
 ### <a name="remarks"></a>Remarks  
  この構造体のメンバーは、直接またはメンバー関数のいずれかに変更できます。  
   
- 詳細については、次を参照してください。、 [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) Windows SDK の構造体。  
+ 詳細については、次を参照してください。、 [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) Windows SDK の構造体。  
   
 ## <a name="see-also"></a>関連項目  
  [COleDialog クラス](../../mfc/reference/coledialog-class.md)   

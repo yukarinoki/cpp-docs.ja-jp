@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91ec7e11272e0a7286d77e3fc96b7437007a0f8d
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a4af9fa780aca1bc1c1304b45d226984fbb5eb7e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408787"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201446"
 ---
 # <a name="member-access-operators--and--gt"></a>メンバー アクセス演算子: です。 -&gt;
 ## <a name="syntax"></a>構文  
@@ -46,7 +46,7 @@ postfix-expression -> name
   
 1.  最初のフォームでは、*後置式*構造体、クラス、または共用体の型の値を表すと*名前*の指定された構造体、共用体、またはクラス メンバーの名前します。 操作の値はの*名前*が左辺値の場合と*後置式*左辺値です。  
   
-2.  2 番目の形式で*後置式*構造体、共用体、またはクラスへのポインターを表しますと*名前*の指定された構造体、共用体、またはクラス メンバーの名前します。 値はの*名前*左辺値です。 **->** 演算子は、ポインターを逆参照します。 したがって、式 * e ***->** `member`と **(\****e***)** します。`member` (場所*e*ポインターを表します) と同じ結果を生成する (する場合を除く演算子**->** または**\*** オーバー ロードされます)。  
+2.  2 番目の形式で*後置式*構造体、共用体、またはクラスへのポインターを表しますと*名前*の指定された構造体、共用体、またはクラス メンバーの名前します。 値はの*名前*左辺値です。 **->** 演算子は、ポインターを逆参照します。 したがって、式`e->member`と`(*e).member`(場所*e*ポインターを表します) と同じ結果を生成する (する場合を除く演算子**->** または <strong>\*</strong>オーバー ロードされます)。  
   
 ## <a name="example"></a>例  
  次の例に、メンバー アクセス演算子の両方の形式を示します。  

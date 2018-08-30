@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61e4a36db71809dab5603211dce91fad3eedd082
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: e25684e0adcace0510f74bdc98968ef52ad6d797
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42541274"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209569"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver クラス
 OLE オートメーションのクライアント側を実装します。  
@@ -283,7 +283,7 @@ void AFX_CDECL InvokeHelper(
   
  この関数は VARIANTARG 値にパラメーターを変換し、呼び出す、 [idispatch::invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)メソッド。 `Invoke` の呼び出しに失敗すると、この関数は、例外をスローします。 SCODE (状態コード) がによって返される場合`IDispatch::Invoke`DISP_E_EXCEPTION は、この関数がスローされます、 [COleException](../../mfc/reference/coleexception-class.md)オブジェクト。 それ以外の場合、スロー、 [COleDispatchException](../../mfc/reference/coledispatchexception-class.md)。  
   
- 詳細については、次を参照してください[VARIANTARG](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)、 [IDispatch インターフェイスを実装する](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)、 [idispatch::invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)、および[COM エラー コードの構造。](http://msdn.microsoft.com/library/windows/desktop/ms690088) Windows SDK にします。  
+ 詳細については、次を参照してください[VARIANTARG](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)、 [IDispatch インターフェイスを実装する](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)、 [idispatch::invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)、および[COM エラー コードの構造。](/windows/desktop/com/structure-of-com-error-codes) Windows SDK にします。  
   
 ### <a name="example"></a>例  
   例をご覧ください[coledispatchdriver::createdispatch](#createdispatch)します。  
@@ -298,7 +298,7 @@ BOOL m_bAutoRelease;
 ### <a name="remarks"></a>Remarks  
  既定では、`m_bAutoRelease`コンス トラクターで TRUE に設定します。  
   
- COM オブジェクトの解放の詳細については、次を参照してください。[参照カウントを実装する](http://msdn.microsoft.com/library/windows/desktop/ms693431)と[:release](http://msdn.microsoft.com/library/windows/desktop/ms682317) Windows SDK に含まれています。  
+ COM オブジェクトの解放の詳細については、次を参照してください。[参照カウントを実装する](/windows/desktop/com/implementing-reference-counting)と[:release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCOleContainer#9](../../mfc/codesnippet/cpp/coledispatchdriver-class_5.cpp)]  

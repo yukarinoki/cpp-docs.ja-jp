@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 690c7bd36046161fb39a560b7aa2f7bf13c55828
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 06bb7101524a51872ca4d329fbe9db6b13b6b8bd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339622"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214947"
 ---
 # <a name="cgopherfilefind-class"></a>CGopherFileFind クラス
 gopher サーバーのインターネット ファイル検索を支援します。  
@@ -106,7 +106,7 @@ class CGopherFileFind : public CFileFind
   
  `CGopherFileFind`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxinet.h  
   
 ##  <a name="cgopherfilefind"></a>  CGopherFileFind::CGopherFileFind  
@@ -162,7 +162,7 @@ virtual BOOL FindFile(
 -   INTERNET_FLAG_USE_EXISTING 可能な場合は、新しいサーバーに既存の接続を再利用`FindFile`要求は、要求ごとに新しいセッションを作成する代わりにします。  
   
 ### <a name="return-value"></a>戻り値  
- 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 拡張エラー情報を取得するには、Win32 関数を呼び出す[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)します。  
+ 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 拡張エラー情報を取得するには、Win32 関数を呼び出す[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)します。  
   
 ### <a name="remarks"></a>Remarks  
  呼び出した後`FindFile`呼び出すことができますを gopher の最初のオブジェクトを取得するには、 [FindNextFile](#findnextfile)後続 gopher ファイルを取得します。  
@@ -175,7 +175,7 @@ virtual BOOL FindNextFile();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 以上のファイルがある場合、0 以外の場合ファイルが見つかりましたが、ディレクトリ内の最後の 1 つである場合や、エラーが発生した場合は 0 します。 拡張エラー情報を取得するには、Win32 関数を呼び出す[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)します。 ファイルが見つかりましたが、ディレクトリ内の最後のファイル、または一致する場合は、ファイルが見つからなかんだことができます、 `GetLastError` ERROR_NO_MORE_FILES を返します。  
+ 以上のファイルがある場合、0 以外の場合ファイルが見つかりましたが、ディレクトリ内の最後の 1 つである場合や、エラーが発生した場合は 0 します。 拡張エラー情報を取得するには、Win32 関数を呼び出す[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)します。 ファイルが見つかりましたが、ディレクトリ内の最後のファイル、または一致する場合は、ファイルが見つからなかんだことができます、 `GetLastError` ERROR_NO_MORE_FILES を返します。  
   
 ##  <a name="getcreationtime"></a>  CGopherFileFind::GetCreationTime  
  現在のファイルの作成時刻を取得します。  
@@ -187,7 +187,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
   
 ### <a name="parameters"></a>パラメーター  
  *pTimeStamp*  
- ポインターを[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)ファイルが作成された時刻を含む構造体。  
+ ポインターを[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)ファイルが作成された時刻を含む構造体。  
   
  *refTime*  
  参照を[CTime](../../atl-mfc-shared/reference/ctime-class.md)オブジェクト。  
@@ -199,7 +199,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
  呼び出す必要があります[FindNextFile](#findnextfile)呼び出す前に少なくとも 1 回`GetCreationTime`します。  
   
 > [!NOTE]
->  すべてのファイル システムでは、同じセマンティクスを使用して、この関数によって返されるタイムスタンプを実装します。 この関数は、基になるファイル システムまたはサーバーがサポートしない場合、時間属性を維持することは、その他のタイム スタンプ関数によって返されるのと同じ値を返す可能性があります。 参照してください、 [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)時刻の形式については、構造体。 一部のオペレーティング システムは、ファイルが存在するコンピューターにゾーンのローカル時刻の時刻が返されるがあります。 Win32 を参照してください。[詳細](http://msdn.microsoft.com/library/windows/desktop/ms724277)API の詳細についてはします。  
+>  すべてのファイル システムでは、同じセマンティクスを使用して、この関数によって返されるタイムスタンプを実装します。 この関数は、基になるファイル システムまたはサーバーがサポートしない場合、時間属性を維持することは、その他のタイム スタンプ関数によって返されるのと同じ値を返す可能性があります。 参照してください、 [Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)時刻の形式については、構造体。 一部のオペレーティング システムは、ファイルが存在するコンピューターにゾーンのローカル時刻の時刻が返されるがあります。 Win32 を参照してください。[詳細](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime)API の詳細についてはします。  
   
 ##  <a name="getlastaccesstime"></a>  CGopherFileFind::GetLastAccessTime  
  指定したファイルの最終アクセス時刻を取得します。  
@@ -214,7 +214,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
  参照を[CTime](../../atl-mfc-shared/reference/ctime-class.md)オブジェクト。  
   
  *pTimeStamp*  
- ポインターを[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)ファイルの最終アクセス時刻を含む構造体。  
+ ポインターを[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)ファイルの最終アクセス時刻を含む構造体。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、0 以外の場合失敗した場合は 0。 `GetLastAccessTime` 場合にのみ、0 を返します[FindNextFile](#findnextfile)がこの呼び出さ`CGopherFileFind`オブジェクト。  
@@ -223,7 +223,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
  呼び出す必要があります[FindNextFile](#findnextfile)呼び出す前に少なくとも 1 回`GetLastAccessTime`します。  
   
 > [!NOTE]
->  すべてのファイル システムでは、同じセマンティクスを使用して、この関数によって返されるタイムスタンプを実装します。 この関数は、基になるファイル システムまたはサーバーがサポートしない場合、時間属性を維持することは、その他のタイム スタンプ関数によって返されるのと同じ値を返す可能性があります。 参照してください、 [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)時刻の形式については、構造体。 一部のオペレーティング システムは、ファイルが存在するコンピューターにゾーンのローカル時刻の時刻が返されるがあります。 Win32 を参照してください。[詳細](http://msdn.microsoft.com/library/windows/desktop/ms724277)API の詳細についてはします。  
+>  すべてのファイル システムでは、同じセマンティクスを使用して、この関数によって返されるタイムスタンプを実装します。 この関数は、基になるファイル システムまたはサーバーがサポートしない場合、時間属性を維持することは、その他のタイム スタンプ関数によって返されるのと同じ値を返す可能性があります。 参照してください、 [Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)時刻の形式については、構造体。 一部のオペレーティング システムは、ファイルが存在するコンピューターにゾーンのローカル時刻の時刻が返されるがあります。 Win32 を参照してください。[詳細](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime)API の詳細についてはします。  
   
 ##  <a name="getlastwritetime"></a>  CGopherFileFind::GetLastWriteTime  
  ファイルが変更された最終時刻を取得します。  
@@ -235,7 +235,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
   
 ### <a name="parameters"></a>パラメーター  
  *pTimeStamp*  
- ポインターを[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)ファイルの最終書き込み時刻を含む構造体。  
+ ポインターを[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)ファイルの最終書き込み時刻を含む構造体。  
   
  *refTime*  
  参照を[CTime](../../atl-mfc-shared/reference/ctime-class.md)オブジェクト。  
@@ -247,7 +247,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
  呼び出す必要があります[FindNextFile](#findnextfile)呼び出す前に少なくとも 1 回`GetLastWriteTime`します。  
   
 > [!NOTE]
->  すべてのファイル システムでは、同じセマンティクスを使用して、この関数によって返されるタイムスタンプを実装します。 この関数は、基になるファイル システムまたはサーバーがサポートしない場合、時間属性を維持することは、その他のタイム スタンプ関数によって返されるのと同じ値を返す可能性があります。 参照してください、 [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)時刻の形式については、構造体。 一部のオペレーティング システムは、ファイルが存在するコンピューターにゾーンのローカル時刻の時刻が返されるがあります。 Win32 を参照してください。[詳細](http://msdn.microsoft.com/library/windows/desktop/ms724277)API の詳細についてはします。  
+>  すべてのファイル システムでは、同じセマンティクスを使用して、この関数によって返されるタイムスタンプを実装します。 この関数は、基になるファイル システムまたはサーバーがサポートしない場合、時間属性を維持することは、その他のタイム スタンプ関数によって返されるのと同じ値を返す可能性があります。 参照してください、 [Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)時刻の形式については、構造体。 一部のオペレーティング システムは、ファイルが存在するコンピューターにゾーンのローカル時刻の時刻が返されるがあります。 Win32 を参照してください。[詳細](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime)API の詳細についてはします。  
   
 ##  <a name="getlength"></a>  CGopherFileFind::GetLength  
  見つかったファイルのバイト単位の長さを取得するには、このメンバー関数を呼び出します。  
@@ -260,7 +260,7 @@ virtual ULONGLONG GetLength() const;
  見つかったファイルの長さ、(バイト単位)。  
   
 ### <a name="remarks"></a>Remarks  
- `GetLength` Win32 構造を使用して[WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)バイト単位でのファイル サイズの値を取得します。  
+ `GetLength` Win32 構造を使用して[WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)バイト単位でのファイル サイズの値を取得します。  
   
 > [!NOTE]
 >  時点で、MFC 7.0、 `GetLength` 64 ビット整数型をサポートしています。 この新しいバージョンのライブラリで構築された既存のコードは、切り捨ての警告があります。  

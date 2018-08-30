@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 043c11a6255e3b80fde176f1b2525e8285bbff12
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 1fbdc6c2285042dc3529d837de3e4b4ffd3c4fd6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464861"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215532"
 ---
 # <a name="try-finally-statement"></a>try-finally ステートメント
 **Microsoft 固有の仕様**  
@@ -90,7 +90,7 @@ __finally {
 ## <a name="abnormal-termination"></a>異常終了  
  終了、 **、try-finally**ステートメントを使用して、 [longjmp](../c-runtime-library/reference/longjmp.md)ランタイム関数が異常終了と見なされます。 移動することはできません、 **_ _try**ステートメントがジャンプして出る 1 つ。 すべて **_ _finally**出発点間アクティブであるステートメント (の正常終了、 **_ _try**ブロック) と変換先 (、 **_ _except**ブロックします。例外のハンドル) 実行する必要があります。 これは、ローカル アンワインドと呼ばれます。  
   
- 場合、**お試しください**ブロックからのジャンプを含む、何らかの理由でブロックが終了途中で、システムに関連付けられている実行**最後に**スタックをアンワインドするプロセスの一部としてブロックします。 このような場合、 [AbnormalTermination](http://msdn.microsoft.com/library/windows/desktop/ms679265)関数が返される**true**内から呼び出された場合、**最後に**ブロック以外を返しますそれ以外の場合、 **false**.  
+ 場合、**お試しください**ブロックからのジャンプを含む、何らかの理由でブロックが終了途中で、システムに関連付けられている実行**最後に**スタックをアンワインドするプロセスの一部としてブロックします。 このような場合、 [AbnormalTermination](/windows/desktop/Debug/abnormaltermination)関数が返される**true**内から呼び出された場合、**最後に**ブロック以外を返しますそれ以外の場合、 **false**.  
   
  実行中にプロセスが中止された場合、終了ハンドラーは呼び出されません、 **、try-finally**ステートメント。  
   
@@ -100,4 +100,4 @@ __finally {
  [終了ハンドラーの記述](../cpp/writing-a-termination-handler.md)   
  [構造化例外処理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)   
  [キーワード](../cpp/keywords-cpp.md)   
- [終了ハンドラーの構文](http://msdn.microsoft.com/library/windows/desktop/ms681393)
+ [終了ハンドラーの構文](/windows/desktop/Debug/termination-handler-syntax)

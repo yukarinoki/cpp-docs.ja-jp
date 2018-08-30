@@ -55,12 +55,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45e2155f830a302f316aa96ce41b65a71709bc0d
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 5b714d8b78ecfc28db9f6e69308777ed53be7987
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451798"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210874"
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l
 
@@ -104,16 +104,16 @@ unsigned char *_mbstok(
 
 ## <a name="return-value"></a>戻り値
 
-見つかった次のトークンへのポインターを返します*strToken*です。 返される**NULL**以上トークンが見つかった場合。 各呼び出しを変更*strToken*返されたトークンの後に発生する最初の区切り文字の null 文字に置き換えることによってです。
+ある次のトークンへのポインターを返します*strToken*します。 返される**NULL**以上トークンが検出されたときにします。 各呼び出しを変更します*strToken*によって返されたトークンの後に発生する最初の区切り記号の null 文字の置換します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Strtok**関数の次のトークンを検索する*strToken*です。 一連の文字で*strDelimit*で検索するトークンの可能な区切り記号を指定*strToken*現在の呼び出しで。 **wcstok**と **_mbstok**のワイド文字とマルチバイト文字バージョンは、 **strtok**です。 引数と戻り値の**wcstok**ワイド文字は、文字列以外の **_mbstok**マルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
+**Strtok**関数では、次のトークンを検索する*strToken*します。 内の文字セット*strDelimit*に含まれるトークンの可能な区切り記号を指定*strToken*現在の呼び出しで。 **wcstok**と **_mbstok**のワイド文字とマルチバイト文字バージョン**strtok**します。 引数と戻り値の**wcstok**はワイド文字列 **_mbstok**はマルチバイト文字の文字列。 それ以外では、これらの関数の動作は同じです。
 
 > [!IMPORTANT]
-> これらの関数は、バッファー オーバーランが原因で発生する可能性のある問題の影響を受けます。 バッファー オーバーランは、システムを攻撃するときによく使用される方法であり、その結果、認められていない権限が昇格されます。 詳しくは、「 [バッファー オーバーランの回避](http://msdn.microsoft.com/library/windows/desktop/ms717795)」をご覧ください。
+> これらの関数は、バッファー オーバーランが原因で発生する可能性のある問題の影響を受けます。 バッファー オーバーランは、システムを攻撃するときによく使用される方法であり、その結果、認められていない権限が昇格されます。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
-最初の呼び出しで**strtok**、関数は先行する区切り記号をスキップしの最初のトークンへのポインターを返します*strToken*、null 文字を含むトークンを終了します。 残りから複数のトークンを分けることができます*strToken*への呼び出しの系列で**strtok**です。 各呼び出し**strtok**変更*strToken*後に null 文字を挿入することで、**トークン**その呼び出しによって返されます。 次のトークンを読み取る*strToken*、呼び出す**strtok**で、 **NULL**値を*strToken*引数。 **NULL** *strToken*引数により**strtok** 、変更後の次のトークンを検索する*strToken*です。 *StrDelimit*引数取ることができる任意の値ごとに 1 回の呼び出しからように区切り記号のセットが異なる場合があります。
+最初の呼び出しで**strtok**、関数は、先行する区切り記号をスキップしの最初のトークンへのポインターを返します*strToken*トークンを null 文字で終了します。 以上のトークンの残りの部分から分割*strToken* 、一連の呼び出しの**strtok**します。 呼び出しごとに**strtok**変更*strToken*後に null 文字を挿入することで、**トークン**その呼び出しによって返されます。 次のトークンを読み取る*strToken*、呼び出す**strtok**で、 **NULL**値、 *strToken*引数。 **NULL** *strToken*引数により**strtok**修正では、次のトークンを検索する*strToken*します。 *StrDelimit*引数は、区切り記号のセットが異なる場合がありますように、次の 1 つの呼び出しから任意の値に使用できます。
 
 出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
@@ -129,7 +129,7 @@ unsigned char *_mbstok(
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**strtok**|\<string.h>|
 |**wcstok**|\<string.h> または \<wchar.h>|

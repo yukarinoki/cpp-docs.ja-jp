@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c110c0addfe14ed8ba9018345eb1f4e61fd5182
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: e6991d7ca545eef671720a38907088dc6a534d1a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338621"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216809"
 ---
 # <a name="cfontholder-class"></a>CFontHolder クラス
 ストック フォント プロパティを実装し、Windows のフォント オブジェクトと `IFont` インターフェイスの機能をカプセル化します。  
@@ -87,7 +87,7 @@ class CFontHolder
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CFontHolder`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxctl.h  
   
 ##  <a name="cfontholder"></a>  CFontHolder::CFontHolder  
@@ -171,7 +171,7 @@ void InitializeFont(
   
 ### <a name="parameters"></a>パラメーター  
  *pFontDesc*  
- フォントの説明の構造体へのポインター ( [FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782)) フォントの特性を指定します。  
+ フォントの説明の構造体へのポインター ( [FONTDESC](/windows/desktop/api/olectl/ns-olectl-tagfontdesc)) フォントの特性を指定します。  
   
  *pFontDispAmbient*  
  コンテナーのアンビエント フォント プロパティへのポインター。  
@@ -199,7 +199,7 @@ void QueryTextMetrics(LPTEXTMETRIC lptm);
   
 ### <a name="parameters"></a>パラメーター  
  *lptm*  
- ポインターを[受け取る](http://msdn.microsoft.com/library/windows/desktop/dd145132)情報を受け取る構造体。  
+ ポインターを[受け取る](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica)情報を受け取る構造体。  
   
 ##  <a name="releasefont"></a>  CFontHolder::ReleaseFont  
  この関数は切断、`CFontHolder`オブジェクトからその`IFont`インターフェイス。  

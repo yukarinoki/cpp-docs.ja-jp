@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b3f20fddd657d1e5e57caf65ecc8e2c52afbf12
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 7fc5e4b0b3e19f9a71e1ada445181bede68d65a5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42571775"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222682"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (MIDL コマンド ライン オプションの指定)
 ```  
@@ -37,7 +37,7 @@ ms.locfileid: "42571775"
  それぞれの文字について以下に説明します。  
   
  `file`  
- 含むファイルの名前[MIDL コマンド ライン オプション](http://msdn.microsoft.com/library/windows/desktop/aa366839)します。  
+ 含むファイルの名前[MIDL コマンド ライン オプション](/windows/desktop/Midl/general-midl-command-line-syntax)します。  
   
 ## <a name="remarks"></a>Remarks  
  IDL ファイル TLB ファイルへの変換のすべてのオプションを指定する必要があります`file`;MIDL コマンド ライン オプションは、リンカーのコマンドラインで指定できません。 /MIDL が指定されていない場合は、IDL ファイル名のみとしないその他のオプション、MIDL コンパイラが呼び出されます。  

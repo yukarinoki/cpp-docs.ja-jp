@@ -1,5 +1,5 @@
 ---
-title: -ASSEMBLYLINKRESOURCE (.NET Framework リソースへのリンク) |Microsoft ドキュメント
+title: -ASSEMBLYLINKRESOURCE (.NET Framework リソースへのリンク) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,36 +19,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a922ac1a96a59d574f46f7b04db8b160a5079918
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e23bd9e0816c10f41e298afc9e82edbdd27e7a5f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374051"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206489"
 ---
 # <a name="assemblylinkresource-link-to-net-framework-resource"></a>/ASSEMBLYLINKRESOURCE (.NET Framework リソースへのリンク)
 ```  
 /ASSEMBLYLINKRESOURCE:filename  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  それぞれの文字について以下に説明します。  
   
  *ファイル名*  
  アセンブリからリンクする .NET Framework のリソース ファイル。  
   
-## <a name="remarks"></a>コメント  
- /ASSEMBLYLINKRESOURCE オプションは、出力ファイルにある .NET Framework リソースへのリンクを作成します。リソース ファイルは、出力ファイルに配置されませんされます。 [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)リソース ファイル、出力ファイルに埋め込みます。  
+## <a name="remarks"></a>Remarks  
+ /ASSEMBLYLINKRESOURCE オプションは、出力ファイルで .NET Framework リソースへのリンクを作成します出力ファイルでは、リソース ファイルが配置されていません。 [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)リソース ファイル、出力ファイルに埋め込みます。  
   
- リンクされたリソースは、リンカーで作成したアセンブリでパブリックです。  
+ リンクされたリソースでは、リンカーで作成したアセンブリでパブリックです。  
   
- /ASSEMBLYLINKRESOURCE では、コンパイルが含まれている必要があります[/clr](../../build/reference/clr-common-language-runtime-compilation.md)です。[/LN](../../build/reference/ln-create-msil-module.md)または[/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md) /ASSEMBLYLINKRESOURCE では許可されません。  
+ /ASSEMBLYLINKRESOURCE では、コンパイルが含まれている必要があります[/clr](../../build/reference/clr-common-language-runtime-compilation.md);[/LN](../../build/reference/ln-create-msil-module.md)または[/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md) /ASSEMBLYLINKRESOURCE で許可されていません。  
   
- 場合*filename* 、たとえば、によって作成、.NET Framework リソース ファイルは、 [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator)または開発環境でアクセスできるメンバー間で、 **System.Resources**名前空間。 詳細については、次を参照してください。 [System.Resources.ResourceManager](https://msdn.microsoft.com/en-us/library/system.resources.resourcemanager.aspx)です。 他のすべてのリソースを使用して、**それ以外**\*内のメソッド、 **System.Reflection.Assembly**実行時にリソースにアクセスするクラス。  
+ 場合*filename*作成例についてでの .NET Framework リソース ファイルは、 [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator)または開発環境でアクセスできるメンバー間で、 **System.Resources**名前空間。 詳細については、次を参照してください。 [System.Resources.ResourceManager](https://msdn.microsoft.com/library/system.resources.resourcemanager.aspx)します。 他のすべてのリソースを使用して、**それ以外**\*メソッド、 **System.Reflection.Assembly**実行時にリソースにアクセスするクラス。  
   
- *filename*任意のファイル形式を指定できます。 たとえば、グローバル アセンブリ キャッシュにインストールし、アセンブリ内のマネージ コードからアクセスできるように、アセンブリのネイティブ DLL 部分を作成する可能性があります。  
+ *ファイル名*任意のファイル形式を指定できます。 たとえば、グローバル アセンブリ キャッシュにインストールされているし、アセンブリ内のマネージ コードからアクセスできるように、ネイティブの DLL が、アセンブリの一部を作成したい場合があります。  
   
- アセンブリの生成に影響するその他のリンカー オプションは次のとおりです。  
+ アセンブリの生成に影響するその他のリンカー オプションがあります。  
   
 -   [/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)  
   
@@ -66,9 +66,9 @@ ms.locfileid: "32374051"
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには  
   
-1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「 [Visual C プロジェクト プロパティの設定](../../ide/working-with-project-properties.md)です。  
+1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。  
   
-2.  クリックして、**リンカー**フォルダーです。  
+2.  をクリックして、**リンカー**フォルダー。  
   
 3.  **[コマンド ライン]** プロパティ ページをクリックします。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "32374051"
   
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには  
   
--   「<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>」を参照してください。  
+-   以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>  
   
 ## <a name="see-also"></a>関連項目  
  [リンカー オプションの設定](../../build/reference/setting-linker-options.md)   

@@ -16,19 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59863911072b491eb19a1296f3cb40d4f4ab4dce
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: cdc5ea4c2cd1e02e6894d2dedf8470641021f0b2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613057"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214470"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>方法: MSBuild プロジェクトでビルド イベントを使用する
 ビルド イベントは、ビルド プロセスで特定のステージで MSBuild を実行するコマンドです。 *ビルド前*イベントは、ビルドの開始前に発生します、*リンク前*、リンクの手順を開始する前にイベントが発生した、 *post-build*イベントは、ビルドの後に発生します。正常に終了します。 ビルド イベントは、関連付けられているビルド手順が発生した場合にのみ発生します。 たとえば、リンクの手順が実行されていない場合に、このリンク前イベントは発生しません。  
   
  Command 要素で、項目定義グループで表される 3 つのビルド イベントの各 (`<Command>`) 実行されると、メッセージの要素 (`<Message>`) されているときに表示される**MSBuild**ビルド イベントを実行します。 各要素は省略可能で、同じ要素を複数回指定する場合、最後に見つかったが優先されます。  
   
- 省略可能な*ビルドでの使用*要素 (`<`* ビルド-イベント ***UseInBuild**`>`) をビルド イベントが実行されるかどうかを示すプロパティ グループで指定できます。 コンテンツの価値を*ビルドでの使用*要素は、いずれかの`true`または`false`します。 しない限り、既定では、ビルド イベントが実行される、対応する*ビルドでの使用*要素に設定されて`false`します。  
+ 省略可能な*ビルドでの使用*要素 (`<`*ビルド イベント*`UseInBuild>`) をビルド イベントが実行されるかどうかを示すプロパティ グループで指定できます。 コンテンツの価値を*ビルドでの使用*要素は、いずれかの`true`または`false`します。 しない限り、既定では、ビルド イベントが実行される、対応する*ビルドでの使用*要素に設定されて`false`します。  
   
  次の表では、各ビルド イベントの XML 要素を示します。  
   

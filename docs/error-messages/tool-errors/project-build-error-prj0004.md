@@ -1,7 +1,7 @@
 ---
-title: プロジェクト ビルド エラー PRJ0004 |Microsoft ドキュメント
+title: プロジェクト ビルド エラー PRJ0004 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a10246f1d01441a84947a2fa426e962d49414782
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76847c0df06ec61c29f84efb46eca87683c86cb4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316294"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216067"
 ---
 # <a name="project-build-error-prj0004"></a>プロジェクト ビルド エラー PRJ0004
-'ツール' ツールのコマンドラインを生成できませんでした。  
-  
- 1 つまたは複数のプロパティへの呼び出しの構文を行うような方法で指定されて***ツール***が無効です。  
-  
--   形式が正しくないか、不明なマクロを指定した可能性があります。  
-  
--   お使いのコンピューターが空きディスク領域の低あります。  
-  
- 調べることで、ツールの設定を確認することも、[コマンド ライン プロパティ ページ](../../ide/command-line-property-pages.md)です。
+
+> コマンドラインを生成できませんでした、'*ツール*' ツール。
+
+呼び出しの構文を作成するように 1 つまたは複数のプロパティが指定されて*ツール*が無効です。
+
+- 指定した形式が正しくないか、不明なマクロ可能性があります。
+
+- 空きディスク領域で、コンピューターが低い可能性があります。
+
+調べることで、ツールの設定を確認することも、[コマンド ライン プロパティ ページ](../../ide/command-line-property-pages.md)します。

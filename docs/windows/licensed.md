@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b30a9a0e2d959725b5f5d94118493ef833a57579
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e57e0cd60ee1d07f29c3aba5540980cd5f4ae02b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604830"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209903"
 ---
 # <a name="licensed"></a>licensed
 
@@ -36,7 +36,7 @@ COM オブジェクトを適用するライセンスが与えられたことを�
 
 ## <a name="remarks"></a>Remarks
 
-**ライセンス**C++ 属性と同じ機能を持つ、[ライセンス](http://msdn.microsoft.com/library/windows/desktop/aa367070)MIDL 属性。
+**ライセンス**C++ 属性と同じ機能を持つ、[ライセンス](/windows/desktop/Midl/licensed)MIDL 属性。
 
 ## <a name="example"></a>例
 

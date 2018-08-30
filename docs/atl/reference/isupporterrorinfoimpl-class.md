@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2862945fa95ca45d8544eda0bb06080c5e45c2e
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: fa9ee25403464a13418081abc8e8e150c7e03500
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572417"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217460"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>ISupportErrorInfoImpl クラス
 このクラスの既定の実装を提供する、 [ISupportErrorInfo インターフェイス](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo)1 つのインターフェイスのみがオブジェクトのエラーを生成するときに使用できます。  
@@ -125,7 +125,7 @@ STDMETHOD(SetSize)int nNumThreads);
   
  場合*nNumThreads*が負の場合、その絶対値で乗算されますスレッドの合計数を取得するマシンでプロセッサの数。  
   
- 場合*nNumThreads*ゼロ、 [ATLS_DEFAULT_THREADSPERPROC](http://msdn.microsoft.com/library/e0dcf107-72a9-4122-abb4-83c63aa7d571)スレッドの合計数を取得するマシンのプロセッサ数が乗算されます。  
+ 場合*nNumThreads*ゼロ、 [ATLS_DEFAULT_THREADSPERPROC](https://msdn.microsoft.com/library/e0dcf107-72a9-4122-abb4-83c63aa7d571)スレッドの合計数を取得するマシンのプロセッサ数が乗算されます。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  

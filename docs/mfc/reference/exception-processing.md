@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e77284d36a7290f5d9070bb355a8affae9ba864f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 186a6705649cee7095d3d2e4c4bb237498fdcea0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336862"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221272"
 ---
 # <a name="exception-processing"></a>例外処理
 プログラムが実行されると、さまざまな異常な状態と「例外」というエラーが発生します。 これらには、メモリ、リソース割り当てのエラー、およびファイルを検索する障害の不足が含まれます。  
@@ -112,7 +112,7 @@ TRY
 ### <a name="example"></a>例  
  例をご覧ください[キャッチ](#catch)します。  
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 ヘッダー: afx.h
 
 ##  <a name="catch"></a>  CATCH  
@@ -167,7 +167,7 @@ CATCH_ALL(exception_object_pointer_name)
 ### <a name="example"></a>例  
  例をご覧ください[解放](../../mfc/reference/cfile-class.md#abort)します。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afx.h  
 
 ##  <a name="and_catch"></a>  AND_CATCH  
@@ -195,7 +195,7 @@ AND_CATCH(exception_class, exception_object_pointer_name)
 ### <a name="example"></a>例  
  例をご覧ください[キャッチ](#catch)します。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afx.h  
 ##  <a name="and_catch_all"></a>  AND_CATCH_ALL  
  直前に追加の例外の種類をキャッチするためのコードのブロックを定義します**お試しください**ブロックします。  
@@ -216,7 +216,7 @@ AND_CATCH_ALL(exception_object_pointer_name)
 > [!NOTE]
 >  **AND_CATCH_ALL**ブロックは (中かっこで区切られています)、C++ のスコープとして定義されます。 このスコープで変数を宣言する場合は、そのスコープ内でのみアクセスされることに注意してください。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afx.h  
   
 ##  <a name="end_catch"></a>  END_CATCH  
@@ -229,7 +229,7 @@ END_CATCH
 ### <a name="remarks"></a>Remarks  
  END_CATCH マクロの詳細については、記事を参照してください。[例外](../../mfc/exception-handling-in-mfc.md)します。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afx.h  
   
 ##  <a name="end_catch_all"></a>  END_CATCH_ALL  
@@ -239,7 +239,7 @@ END_CATCH
 END_CATCH_ALL  
 ```  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afx.h  
   
 ##  <a name="throw"></a>  THROW (MFC)  
@@ -258,7 +258,7 @@ THROW(exception_object_pointer)
   
  詳細については、この記事を参照してください。[例外](../../mfc/exception-handling-in-mfc.md)します。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afx.h  
   
 ##  <a name="throw_last"></a>  THROW_LAST  
@@ -276,7 +276,7 @@ THROW_LAST()
 ### <a name="example"></a>例  
  例をご覧ください[解放](../../mfc/reference/cfile-class.md#abort)します。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afx.h  
   
 ##  <a name="afxthrowarchiveexception"></a>  AfxThrowArchiveException  
@@ -293,7 +293,7 @@ void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
  *lpszArchiveName*  
  名前を含む文字列の指す、 `CArchive` (該当する場合)、例外の原因となったオブジェクト。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afx.h  
   
 ##  <a name="afxthrowfileexception"></a>  AfxThrowFileException  
@@ -319,7 +319,7 @@ void AfxThrowFileException(
 ### <a name="remarks"></a>Remarks  
  オペレーティング システム エラー コードに基づいて、原因を判断するためにあります。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afx.h  
 
 ## <a name="afxthrowinvalidargexception"></a>  AfxThrowInvalidArgException
@@ -333,7 +333,7 @@ void AfxThrowInvalidArgException( );
 ### <a name="remarks"></a>Remarks  
  無効な引数を使用する場合は、この関数が呼び出されます。  
    
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afx.h  
    
 ### <a name="see-also"></a>関連項目  
@@ -350,9 +350,9 @@ void AfxThrowMemoryException();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 場合、この関数を呼び出す基になるシステム メモリ アロケーターの呼び出し (など**malloc**と[GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) Windows 関数) は失敗します。 呼び出す必要はありません**新しい**ため**新しい**メモリの割り当てが失敗した場合に自動的にメモリ不足例外がスローされます。  
+ 場合、この関数を呼び出す基になるシステム メモリ アロケーターの呼び出し (など**malloc**と[GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) Windows 関数) は失敗します。 呼び出す必要はありません**新しい**ため**新しい**メモリの割り当てが失敗した場合に自動的にメモリ不足例外がスローされます。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afx.h  
   
 ##  <a name="afxthrownotsupportedexception"></a>  AfxThrowNotSupportedException  
@@ -362,7 +362,7 @@ void AfxThrowMemoryException();
 void AfxThrowNotSupportedException(); 
 ```  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afx.h  
   
 ##  <a name="afxthrowresourceexception"></a>  AfxThrowResourceException  
@@ -375,7 +375,7 @@ void  AfxThrowResourceException();
 ### <a name="remarks"></a>Remarks  
  Windows のリソースを読み込むことができないときに、この関数は通常呼び出されます。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afx.h  
   
 ##  <a name="afxthrowuserexception"></a>  AfxThrowUserException  
@@ -388,7 +388,7 @@ void AfxThrowUserException();
 ### <a name="remarks"></a>Remarks  
  この関数は、直後後に呼び出される通常`AfxMessageBox`ユーザーにエラーが報告されます。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afx.h  
   
 ##  <a name="afxthrowoledispatchexception"></a>  AfxThrowOleDispatchException  
@@ -425,7 +425,7 @@ void AFXAPI AfxThrowOleDispatchException(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCExceptions#25](../../mfc/codesnippet/cpp/exception-processing_2.cpp)]  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afx.h  
   
 ##  <a name="afxthrowoleexception"></a>  AfxThrowOleException  
@@ -444,9 +444,9 @@ void AFXAPI AfxThrowOleException(HRESULT hr);
  例外の理由を示す結果コードへのハンドルします。  
   
 ### <a name="remarks"></a>Remarks  
- 引数として HRESULT を受け取るバージョンでは、その結果コードを対応する SCODE に変換します。 HRESULT と SCODE の詳細については、次を参照してください。 [COM エラー コードの構造](http://msdn.microsoft.com/library/windows/desktop/ms690088)Windows SDK に含まれています。  
+ 引数として HRESULT を受け取るバージョンでは、その結果コードを対応する SCODE に変換します。 HRESULT と SCODE の詳細については、次を参照してください。 [COM エラー コードの構造](/windows/desktop/com/structure-of-com-error-codes)Windows SDK に含まれています。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdao.h  
   
 ##  <a name="afxthrowdaoexception"></a>  AfxThrowDaoException  
@@ -470,7 +470,7 @@ void AFXAPI AfxThrowDaoException(
   
  MFC DAO クラスに関連する例外については、クラスを参照してください。`CDaoException`この書籍と記事[例外: データベースの例外](../../mfc/exceptions-database-exceptions.md)します。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdb.h  
   
 ##  <a name="afxthrowdbexception"></a>  AfxThrowDBException  
@@ -498,7 +498,7 @@ void AfxThrowDBException(
   
  ODBC で定義された RETCODE 値については、Windows SDK の第 8 章「を取得する状態とエラー情報」を参照してください。 これらのコードを MFC の拡張機能については、クラスを参照してください。 [CDBException](../../mfc/reference/cdbexception-class.md)します。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afx.h  
   
 ##  <a name="afxabort"></a>  AfxAbort  
@@ -514,7 +514,7 @@ void  AfxAbort();
 ### <a name="example"></a>例  
  例をご覧ください[キャッチ](#catch)します。  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afx.h   
   
 ## <a name="see-also"></a>関連項目  

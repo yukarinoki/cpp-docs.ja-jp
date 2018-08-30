@@ -8,12 +8,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36b0647863076661eb130da1cde694b128f49d47
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 224f4d78aec432a27b2a0258d0d6b3d4a8f2174d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026089"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209509"
 ---
 # <a name="atl-http-utility-functions"></a>ATL HTTP ユーティリティ関数
 
@@ -27,10 +27,10 @@ ms.locfileid: "39026089"
 |[AtlGetDefaultUrlPort](#atlgetdefaulturlport)|特定のインターネット プロトコルまたはスキームに関連付けられた既定のポート番号を取得します。|  
 |[AtlIsUnsafeUrlChar](#atlisunsafeurlchar)|文字を URL で使用しても安全かどうかを判断します。|  
 |[AtlUnescapeUrl](#atlunescapeurl)|元の値に戻すエスケープ文字を変換します。|  
-|[RGBToHtml](#rgbtohtml)|変換を[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)にその色の値に対応する HTML テキスト値。|
+|[RGBToHtml](#rgbtohtml)|変換を[COLORREF](/windows/desktop/gdi/colorref)にその色の値に対応する HTML テキスト値。|
 |[SystemTimeToHttpDate](#systemtimetohttpdate)|システム時刻を HTTP ヘッダーで使用できる形式の文字列に変換します。|
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlutil.h  
 
 ## <a name="atlcanonicalizeurl"></a> どうか
@@ -69,10 +69,10 @@ inline BOOL AtlCanonicalizeUrl(
  成功した場合、true を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 現在のバージョンのように動作[InternetCanonicalizeUrl](http://msdn.microsoft.com/library/windows/desktop/aa384342) WinInet または Internet Explorer をインストールするのには必要ありません。  
+ 現在のバージョンのように動作[InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla) WinInet または Internet Explorer をインストールするのには必要ありません。  
   
 ### <a name="see-also"></a>関連項目  
- [InternetCanonicalizeUrl](http://msdn.microsoft.com/library/windows/desktop/aa384342)
+ [InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla)
 
  ## <a name="atlcombineurl"></a> AtlCombineUrl
  ベース URL と相対 URL を結合して、1 つの標準形式の URL にします。  
@@ -106,7 +106,7 @@ inline BOOL AtlCombineUrl(
  成功した場合、true を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 現在のバージョンのように動作[InternetCombineUrl](http://msdn.microsoft.com/library/windows/desktop/aa384355) WinInet または Internet Explorer をインストールするのには必要ありません。  
+ 現在のバージョンのように動作[InternetCombineUrl](/windows/desktop/api/wininet/nf-wininet-internetcombineurla) WinInet または Internet Explorer をインストールするのには必要ありません。  
   
 ## <a name="atlescapeurl"></a> AtlEscapeUrl
  すべての安全でない文字をエスケープ シーケンスに変換します。  
@@ -214,7 +214,7 @@ inline BOOL AtlUnescapeUrl(
  によって適用される変換プロセスを反転させます[AtlEscapeUrl](#atlescapeurl)します。  
   
 ## <a name="rgbtohtml"></a> RGBToHtml
-変換を[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)にその色の値に対応する HTML テキスト値。  
+変換を[COLORREF](/windows/desktop/gdi/colorref)にその色の値に対応する HTML テキスト値。  
   
 ```  
 bool inline RGBToHtml(  

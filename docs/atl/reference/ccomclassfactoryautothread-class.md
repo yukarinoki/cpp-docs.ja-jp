@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3a38f3320a507b8bd4ce3095ed2c7a02b7bf573
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: dbd258761bef7789e73fe61ac288b414902d2af8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883061"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214075"
 ---
 # <a name="ccomclassfactoryautothread-class"></a>CComClassFactoryAutoThread クラス
-このクラスは、実装、 [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)インターフェイス、およびオブジェクトを複数のアパートメントを作成できます。  
+このクラスは、実装、 [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)インターフェイス、およびオブジェクトを複数のアパートメントを作成できます。  
   
 > [!IMPORTANT]
 >  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。  
@@ -65,7 +65,7 @@ class CComClassFactoryAutoThread
   
  `CComClassFactoryAutoThread`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlcom.h  
   
 ##  <a name="createinstance"></a>  CComClassFactoryAutoThread::CreateInstance  
@@ -114,7 +114,7 @@ STDMETHODIMP LockServer(BOOL fLock);
  呼び出す`LockServer`により、クライアントは複数のオブジェクトをすばやく作成できるように、クラス ファクトリを保持します。  
   
 ## <a name="see-also"></a>関連項目  
- [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)   
+ [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)   
  [CComClassFactory2 クラス](../../atl/reference/ccomclassfactory2-class.md)   
  [CComClassFactorySingleton クラス](../../atl/reference/ccomclassfactorysingleton-class.md)   
  [CComObjectRootEx クラス](../../atl/reference/ccomobjectrootex-class.md)   

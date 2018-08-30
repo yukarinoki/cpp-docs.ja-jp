@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2625316aa731e658d9d45e495809d2402a3cb4c5
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 12b6d0b0ccc21f4ab1f8b3d7116f098a532d0418
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849751"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216262"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>CMFCToolBarFontComboBox クラス
 ユーザーは、システム フォントの一覧からフォントを選択できるコンボ ボックス コントロールを含むツール バー ボタン。  
@@ -70,7 +70,7 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
   
  ドキュメントのフォント コンボ ボックスで選択したフォントを使用して、同期するを使用して、 [CMFCToolBarFontComboBox::GetFontDesc](#getfontdesc)メソッドを選択したフォントの属性を取得し、それらの属性を使用して、作成、 [CFont クラス](../../mfc/reference/cfont-class.md)オブジェクト。  
   
- フォント コンボ ボックス ボタンは、Win32 関数を呼び出す[EnumFontFamiliesEx](http://msdn.microsoft.com/library/windows/desktop/dd162620)をシステムに利用できる画面およびプリンターのフォントを決定します。  
+ フォント コンボ ボックス ボタンは、Win32 関数を呼び出す[EnumFontFamiliesEx](/windows/desktop/api/wingdi/nf-wingdi-enumfontfamiliesexa)をシステムに利用できる画面およびプリンターのフォントを決定します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -81,7 +81,7 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
   
  [CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxtoolbarfontcombobox.h  
   
 ##  <a name="cmfctoolbarfontcombobox"></a>  CMFCToolBarFontComboBox::CMFCToolBarFontComboBox  
@@ -126,7 +126,7 @@ CMFCToolBarFontComboBox();
  TRUETYPE_FONTTYPE  
   
  [in]*nCharSet*  
- 場合 DEFAULT_CHARSET、コンボ ボックスに設定するには、すべての文字セットのフォントすべて一意となる名前にはが含まれています。 (同じ名前の 2 つのフォントがある場合は、コンボ ボックス格納うち 1 つ)。場合は、有効な文字セット値コンボ ボックスに設定するには、指定された文字セット内のフォントのみが含まれています。 参照してください[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)可能な文字の一覧を設定します。  
+ 場合 DEFAULT_CHARSET、コンボ ボックスに設定するには、すべての文字セットのフォントすべて一意となる名前にはが含まれています。 (同じ名前の 2 つのフォントがある場合は、コンボ ボックス格納うち 1 つ)。場合は、有効な文字セット値コンボ ボックスに設定するには、指定された文字セット内のフォントのみが含まれています。 参照してください[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)可能な文字の一覧を設定します。  
   
  [in]*dwStyle*  
  コンボ ボックスのスタイル。 (を参照してください[コンボ ボックス スタイル](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))  

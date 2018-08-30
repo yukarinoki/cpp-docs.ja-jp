@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f31d5d04638685b6d7636f40108b7e95bbd5d37
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 301549e26212448ae0392a356aa556358dcf6f47
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338826"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205464"
 ---
 # <a name="cevent-class"></a>CEvent クラス
 1 つのスレッドに別のイベントが発生したことを通知できるようにする同期オブジェクトであるイベントを表します。  
@@ -88,7 +88,7 @@ class CEvent : public CSyncObject
   
  `CEvent`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxmt.h  
   
 ##  <a name="cevent"></a>  CEvent::CEvent  
@@ -113,7 +113,7 @@ CEvent(
  `CEvent` オブジェクトの名前。 プロセスの境界を越えてオブジェクトを使用する場合を指定する必要があります。 名前が既存のイベントに一致する場合、コンス トラクターは新しい`CEvent`その名前のイベントを参照するオブジェクト。 名前には、イベントではない既存の同期オブジェクトが一致すると、構築は失敗します。 NULL の場合、名前が null になります。  
   
  *lpsaAttribute*  
- イベント オブジェクトのセキュリティ属性。 この構造体の詳細については、次を参照してください。 [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK に含まれています。  
+ イベント オブジェクトのセキュリティ属性。 この構造体の詳細については、次を参照してください。 [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK に含まれています。  
   
 ### <a name="remarks"></a>Remarks  
  アクセスまたはリリースを`CEvent`オブジェクトを作成、 [CMultiLock](../../mfc/reference/cmultilock-class.md)または[CSingleLock](../../mfc/reference/csinglelock-class.md)オブジェクトと呼び出しの[ロック](../../mfc/reference/csinglelock-class.md#lock)と[Unlock](../../mfc/reference/csinglelock-class.md#unlock)メンバー関数。  
@@ -121,7 +121,7 @@ CEvent(
  状態を変更する、`CEvent`シグナル状態になるオブジェクト (スレッドがないを待機する) を呼び出す[SetEvent](#setevent)または[PulseEvent](#pulseevent)します。 状態を設定する、`CEvent`非シグナル状態のオブジェクト (スレッド待つ必要があります)、呼び出す[ResetEvent](#resetevent)します。  
   
 > [!IMPORTANT]
->  作成した後、`CEvent`オブジェクトを使用して[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)ミュー テックスが既に存在していないことを確認します。 予期せずにミュー テックスが存在して、不正なプロセスが発生したり、悪意のあるミュー テックスを使用するつもりが可能性があります。 ここでは、セキュリティ意識の推奨手順は、ハンドルを終了し、クリックすると、オブジェクトの作成でエラーが発生しました。  
+>  作成した後、`CEvent`オブジェクトを使用して[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)ミュー テックスが既に存在していないことを確認します。 予期せずにミュー テックスが存在して、不正なプロセスが発生したり、悪意のあるミュー テックスを使用するつもりが可能性があります。 ここでは、セキュリティ意識の推奨手順は、ハンドルを終了し、クリックすると、オブジェクトの作成でエラーが発生しました。  
   
 ##  <a name="pulseevent"></a>  CEvent::PulseEvent  
  (使用可能) イベントをシグナルの状態を設定、待機スレッドを解放、自動的にリセットするように非シグナル (使用不可)。  
@@ -138,7 +138,7 @@ BOOL PulseEvent();
   
  スレッドが待機しているないか、すぐに解放する`PulseEvent`するイベントの状態を非シグナル状態に設定し、返します。  
   
- `PulseEvent` 基になる Win32 を使用して`PulseEvent`関数は、一時的に削除できる待機状態からカーネル モードの非同期プロシージャ呼び出しで。 そのため、`PulseEvent`の信頼性が低いと、新しいアプリケーションでは使用されません。 詳細については、次を参照してください。、 [PulseEvent 関数](http://msdn.microsoft.com/library/windows/desktop/ms684914)します。  
+ `PulseEvent` 基になる Win32 を使用して`PulseEvent`関数は、一時的に削除できる待機状態からカーネル モードの非同期プロシージャ呼び出しで。 そのため、`PulseEvent`の信頼性が低いと、新しいアプリケーションでは使用されません。 詳細については、次を参照してください。、 [PulseEvent 関数](/windows/desktop/api/winbase/nf-winbase-pulseevent)します。  
   
 ##  <a name="resetevent"></a>  CEvent::ResetEvent  
  設定するイベントの状態まで非シグナル状態に明示的にシグナル状態に設定、 [SetEvent](#setevent)メンバー関数。  

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 625518a76bb22c60a41175e649af7ae650161494
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: ad16b4955cf8128d4f54edceeadd4b6551bc6f14
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131561"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206515"
 ---
 # <a name="multithreading-creating-mfc-user-interface-threads"></a>マルチ スレッド: MFC ユーザー インターフェイス スレッドを作成します。
 ユーザー インターフェイス スレッドでは、主にユーザー入力を処理し、ユーザーが生成したイベントに応答します。この処理は、アプリケーションのほかの部分を実行しているスレッドとは無関係に行われます。 `CWinApp` の派生クラスで提供されるメイン アプリケーション スレッドは、既に生成され実行を開始しています。 このトピックでは、ユーザー インターフェイス スレッドを作成するための手順について説明します。  
@@ -49,13 +49,13 @@ MFC は、パラメーターのオーバーロードによって `AfxBeginThread
   
 - [RUNTIME_CLASS](../mfc/reference/run-time-object-model-services.md#runtime_class)から派生したクラスの`CWinThread`します。  
   
-- (省略可) 目的の優先順位。 既定の優先順位は normal です。 使用可能な優先度のレベルの詳細については、次を参照してください。 [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) Windows SDK に含まれています。  
+- (省略可) 目的の優先順位。 既定の優先順位は normal です。 使用可能な優先度のレベルの詳細については、次を参照してください。 [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) Windows SDK に含まれています。  
   
 - (省略可) スレッドのスタック サイズ。 既定値は、このスレッドを生成するスレッドのスタックと同じサイズです。  
   
 - (省略可能)CREATE_SUSPENDED スレッドの中断状態で作成する場合。 既定値 0 では、スレッドを通常どおり起動します。  
   
-- (省略可) セキュリティ属性。 既定では親スレッドと同じ値になります。 このセキュリティ情報の形式の詳細については、次を参照してください。 [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK に含まれています。  
+- (省略可) セキュリティ属性。 既定では親スレッドと同じ値になります。 このセキュリティ情報の形式の詳細については、次を参照してください。 [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK に含まれています。  
   
 `AfxBeginThread` は、スレッド生成処理の大部分を自動的に行います。 クラスの新しいオブジェクトを作成、入力すると、情報と呼び出しを使用して初期化[::createthread](../mfc/reference/cwinthread-class.md#createthread)スレッドの実行を開始します。 なんらかの原因でスレッド生成に失敗すると、スレッド生成処理全体をチェックし、すべてのオブジェクトを確実に解放します。  
   

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb3a2bce257717c695c1458b12f3e6d4f11b9d7a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a4d6bf9d62ae1cb80041145903267d4af4d88eaa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849738"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214153"
 ---
 # <a name="cmfccolordialog-class"></a>CMFCColorDialog クラス
 `CMFCColorDialog`クラスは、色の選択 ダイアログ ボックスを表します。  
@@ -63,7 +63,7 @@ class CMFCColorDialog : public CDialogEx
 |----------|-----------------|  
 |[CMFCColorDialog::GetColor](#getcolor)|現在選択されている色を返します。|  
 |[CMFCColorDialog::GetPalette](#getpalette)|色のパレットを返します。|  
-|`CMFCColorDialog::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)と[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 関数。 構文と詳細については、次を参照してください。 [cwnd::pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)します。 (`CDialogEx::PreTranslateMessage` をオーバーライドします)。|  
+|`CMFCColorDialog::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)と[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 関数。 構文と詳細については、次を参照してください。 [cwnd::pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)します。 (`CDialogEx::PreTranslateMessage` をオーバーライドします)。|  
 |[CMFCColorDialog::RebuildPalette](#rebuildpalette)|パレットは、システム パレットから派生します。|  
 |[CMFCColorDialog::SetCurrentColor](#setcurrentcolor)|現在の選択した色を設定します。|  
 |[CMFCColorDialog::SetNewColor](#setnewcolor)|指定された RGB 値に最も近い色を設定します。|  
@@ -110,7 +110,7 @@ class CMFCColorDialog : public CDialogEx
   
  [!code-cpp[NVC_MFC_NewControls#3](../../mfc/reference/codesnippet/cpp/cmfccolordialog-class_1.cpp)]  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxcolordialog.h  
   
 ##  <a name="cmfccolordialog"></a>  CMFCColorDialog::CMFCColorDialog  
@@ -149,7 +149,7 @@ COLORREF GetColor() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)色 ダイアログ ボックスで選択した色の RGB の情報を含む値。  
+ A [COLORREF](/windows/desktop/gdi/colorref)色 ダイアログ ボックスで選択した色の RGB の情報を含む値。  
   
 ### <a name="remarks"></a>Remarks  
  呼び出した後、この関数を呼び出す、`DoModal`メソッド。  
@@ -196,7 +196,7 @@ void SetNewColor(COLORREF rgb);
   
 ### <a name="parameters"></a>パラメーター  
  [in]*rgb*  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) RGB 色を指定します。  
+ A [COLORREF](/windows/desktop/gdi/colorref) RGB 色を指定します。  
   
 ### <a name="remarks"></a>Remarks  
   

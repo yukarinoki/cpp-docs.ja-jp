@@ -52,12 +52,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c7b1771b065d7a0acc4db73eb188884086ff3b1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 959f39df33c2cdcd40a71a801ca715ab7c0eccf0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414169"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213647"
 ---
 # <a name="vscprintf-vscprintfl-vscwprintf-vscwprintfl"></a>_vscprintf、_vscprintf_l、_vscwprintf、_vscwprintf_l
 
@@ -101,18 +101,18 @@ int _vscwprintf_l(
 
 ## <a name="return-value"></a>戻り値
 
-**_vscprintf**によって生成される文字列を指している場合、引数のリストを文字の数が印刷またはファイルに送信されたか、コードは、指定した書式設定を使用してバッファーを返します。 戻り値には、終端の NULL 文字は含まれません。 **_vscwprintf**ワイド文字に対して同じ機能を実行します。
+**_vscprintf**コードは、指定した書式設定を使用してバッファーまたはファイルに送信される引数の一覧で、文字列の指す場合に生成は文字数を返します。 戻り値には、終端の NULL 文字は含まれません。 **_vscwprintf**ワイド文字に対して同じ機能を実行します。
 
 これらの関数のバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
 
-場合*形式*null ポインターで説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は-1 を返します設定と**errno**に**EINVAL**です。
+場合*形式*null ポインターの場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は-1 を返し設定と**errno**に**EINVAL**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-各*引数*(存在する場合) に対応する書式指定に応じて変換*形式*です。 形式は、通常の文字と、同じ形式し、機能、*形式*引数[printf](printf-printf-l-wprintf-wprintf-l.md)です。
+各*引数*(ある場合) に対応する書式指定に応じて変換が*形式*します。 形式は、通常の文字と同じ形式し、機能、*形式*引数[printf](printf-printf-l-wprintf-wprintf-l.md)します。
 
 > [!IMPORTANT]
-> 場合に*形式*ユーザー定義の文字列では、null で終了し、正しい数とパラメーターの型を持ちます。 詳しくは、「 [バッファー オーバーランの回避](http://msdn.microsoft.com/library/windows/desktop/ms717795)」をご覧ください。
+> 場合に*形式*ユーザー定義の文字列は、null 終端であり、正しい数と型のパラメーターがあります。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -123,7 +123,7 @@ int _vscwprintf_l(
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_vscprintf**、 **_vscprintf_l**|\<stdio.h>|
 |**_vscwprintf**、 **_vscwprintf_l**|\<stdio.h> または \<wchar.h>|

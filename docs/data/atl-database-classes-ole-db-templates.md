@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 083ac7485ce2056ab97ca32142be3e88094573f9
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 91cd06ea1d8ff697da6c4959fff34fdc3798dcfd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337886"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218989"
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>ATL データベース クラス (OLE DB テンプレート)
 Microsoft では、OLE DB では、一連のさまざまな情報源や形式のデータに同じ方法でアクセスを提供する COM インターフェイスの実装がいくつか提供します。  OLE DB は正式に非推奨とされます。このドキュメントでは、レガシ コードを保持している開発者のためです。 新しいアプリケーションは、ODBC を使用して、SQL データ ソースに接続する必要があります。
@@ -46,4 +46,4 @@ Microsoft では、OLE DB では、一連のさまざまな情報源や形式の
  [OLE DB プロバイダーの作成](../data/oledb/creating-an-ole-db-provider.md)   
  [OLE DB コンシューマー テンプレート リファレンス](../data/oledb/ole-db-consumer-templates-reference.md)   
  [OLE DB プロバイダー テンプレート リファレンス](../data/oledb/ole-db-provider-templates-reference.md)   
- [OLE DB テンプレート サンプル](http://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)
+ [OLE DB テンプレート サンプル](https://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)

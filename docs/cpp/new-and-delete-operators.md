@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2648d3628b8edd8b864dcf69dcfa7acb6d07339
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 3a1470c544e624de4ef9fb570859dca9b282edde
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406664"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208067"
 ---
 # <a name="new-and-delete-operators"></a>new および delete 演算子
 
@@ -55,7 +55,7 @@ char *pch = new char[BUFFER_SIZE];
 |**: new 演算子**|Global|  
 |*クラス名* **:: new 演算子**|クラス|  
   
- 最初の引数**演算子 new**型でなければなりません`size_t`(で定義された型\<stddef.h >)、戻り値の型は常に**void \*** します。  
+ 最初の引数**演算子 new**型でなければなりません`size_t`(で定義された型\<stddef.h >)、戻り値の型は常に**void** <strong>\*</strong>.  
   
  グローバル**演算子 new**関数が呼び出されます、**新しい**を含まないクラス型のオブジェクトのユーザー定義演算子を使用して、組み込み型のオブジェクトの割り当てを**演算子 new**関数、および任意の型の配列。 ときに、**新しい**演算子を使用して、クラス型のオブジェクトを割り当てる場所、 **new 演算子**が定義されている場合、そのクラスの**new 演算子**が呼び出されます。  
   

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd7e3b405f5724abd1df5e0e8fcc35dcd2149153
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 03a47ea35740a7e5d019e4c932ec879f18e0714e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880098"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204027"
 ---
 # <a name="cpoint-class"></a>CPoint クラス
 Windows の `POINT` 構造体と同様のものです。  
@@ -65,7 +65,7 @@ class CPoint : public tagPOINT
 ## <a name="remarks"></a>Remarks  
  操作するメンバー関数も含まれています。`CPoint`と[ポイント](../../mfc/reference/point-structure1.md)構造体。  
   
- A`CPoint`オブジェクトは任意の場所を使用、`POINT`構造体を使用します。 「サイズ」と対話するこのクラスの演算子は、両方を受け付ける[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクトまたは[サイズ](http://msdn.microsoft.com/library/windows/desktop/dd145106)、構造体の 2 つは交換可能であるためです。  
+ A`CPoint`オブジェクトは任意の場所を使用、`POINT`構造体を使用します。 「サイズ」と対話するこのクラスの演算子は、両方を受け付ける[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクトまたは[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)、構造体の 2 つは交換可能であるためです。  
   
 > [!NOTE]
 >  このクラスから派生、`tagPOINT`構造体。 (名前`tagPOINT`の使用頻度の低い名には、`POINT`構造です)。つまりのデータ メンバー、`POINT`構造体、`x`と`y`のアクセス可能なデータ メンバーである`CPoint`します。  
@@ -78,7 +78,7 @@ class CPoint : public tagPOINT
   
  `CPoint`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atltypes.h  
   
 ##  <a name="cpoint"></a>  CPoint::CPoint
@@ -103,7 +103,7 @@ CPoint(LPARAM dwPoint) throw();
  [ポイント](../../mfc/reference/point-structure1.md)構造または`CPoint`初期化するために使用される値を指定する`CPoint`します。  
   
  *initSize*  
- [サイズ](http://msdn.microsoft.com/library/windows/desktop/dd145106)構造または[CSize](../../atl-mfc-shared/reference/csize-class.md)初期化するために使用される値を指定する`CPoint`します。  
+ [サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)構造または[CSize](../../atl-mfc-shared/reference/csize-class.md)初期化するために使用される値を指定する`CPoint`します。  
   
  *dwPoint*  
  セット、`x`メンバーの下位ワードを*dwPoint*と`y`メンバーの上位ワードを*dwPoint*します。  
@@ -158,7 +158,7 @@ void Offset(SIZE size) throw();
  量を指定します ([ポイント](../../mfc/reference/point-structure1.md)または`CPoint`) オフセット、`CPoint`します。  
   
  *size*  
- 量を指定します ([サイズ](http://msdn.microsoft.com/library/windows/desktop/dd145106)または[CSize](../../atl-mfc-shared/reference/csize-class.md)) オフセット、`CPoint`します。  
+ 量を指定します ([サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)または[CSize](../../atl-mfc-shared/reference/csize-class.md)) オフセット、`CPoint`します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATLMFC_Utilities#28](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_1.cpp)]  
@@ -207,7 +207,7 @@ void operator+=(POINT point) throw();
   
 ### <a name="parameters"></a>パラメーター  
  *size*  
- 含まれています、[サイズ](http://msdn.microsoft.com/library/windows/desktop/dd145106)構造または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト。  
+ 含まれています、[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)構造または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト。  
   
  *ポイント*  
  含まれています、[ポイント](../../mfc/reference/point-structure1.md)構造または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクト。  
@@ -232,7 +232,7 @@ void operator-=(POINT point) throw();
   
 ### <a name="parameters"></a>パラメーター  
  *size*  
- 含まれています、[サイズ](http://msdn.microsoft.com/library/windows/desktop/dd145106)構造または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト。  
+ 含まれています、[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)構造または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト。  
   
  *ポイント*  
  含まれています、[ポイント](../../mfc/reference/point-structure1.md)構造または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクト。  
@@ -258,7 +258,7 @@ CRect operator+(const RECT* lpRect) const throw();
   
 ### <a name="parameters"></a>パラメーター  
  *size*  
- 含まれています、[サイズ](http://msdn.microsoft.com/library/windows/desktop/dd145106)構造または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト。  
+ 含まれています、[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)構造または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト。  
   
  *ポイント*  
  含まれています、[ポイント](../../mfc/reference/point-structure1.md)構造または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクト。  
@@ -292,7 +292,7 @@ CPoint operator-() const throw();
  A[ポイント](../../mfc/reference/point-structure1.md)構造または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクト。  
   
  *size*  
- A[サイズ](http://msdn.microsoft.com/library/windows/desktop/dd145106)構造または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト。  
+ A[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)構造または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト。  
   
  *lpRect*  
  ポインターを[RECT](../../mfc/reference/rect-structure1.md)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクト。  

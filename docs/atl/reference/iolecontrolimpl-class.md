@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34bdb0af5965b300e77a02858af3708c90fa63d0
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6e3ba537568ba59c241378aeba83450db536511a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879284"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201338"
 ---
 # <a name="iolecontrolimpl-class"></a>IOleControlImpl クラス
 このクラスの既定の実装を提供する、`IOleControl`インターフェイスと実装`IUnknown`します。  
@@ -57,7 +57,7 @@ class IOleControlImpl
 |[IOleControlImpl::OnMnemonic](#onmnemonic)|ユーザーが指定されたキーストロークを押されたことをコントロールに通知します。 ATL の実装では、E_NOTIMPL を返します。|  
   
 ## <a name="remarks"></a>Remarks  
- クラス`IOleControlImpl`の既定の実装を提供します、 [IOleControl](http://msdn.microsoft.com/library/windows/desktop/ms694320)インターフェイスと実装`IUnknown`ダンプ情報を送信することによってデバッグでのデバイスをビルドします。  
+ クラス`IOleControlImpl`の既定の実装を提供します、 [IOleControl](/windows/desktop/api/ocidl/nn-ocidl-iolecontrol)インターフェイスと実装`IUnknown`ダンプ情報を送信することによってデバッグでのデバイスをビルドします。  
   
  **関連資料** [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)、 [ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)  
   
@@ -66,7 +66,7 @@ class IOleControlImpl
   
  `IOleControlImpl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlctl.h  
   
 ##  <a name="freezeevents"></a>  IOleControlImpl::FreezeEvents  
@@ -79,7 +79,7 @@ HRESULT FreezeEvents(BOOL bFreeze);
 ### <a name="remarks"></a>Remarks  
  `FreezeEvents` S_OK を返します。  
   
- 参照してください[:freezeevents](http://msdn.microsoft.com/library/windows/desktop/ms678482) Windows SDK にします。  
+ 参照してください[:freezeevents](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol-freezeevents) Windows SDK にします。  
   
 ##  <a name="getcontrolinfo"></a>  IOleControlImpl::GetControlInfo  
  コントロールのキーボード動作に関する情報が表示されます。  
@@ -89,7 +89,7 @@ HRESULT GetControlInfo(LPCONTROLINFO pCI);
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IOleControl:GetControlInfo](http://msdn.microsoft.com/library/windows/desktop/ms693730) Windows SDK にします。  
+ 参照してください[IOleControl:GetControlInfo](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol-getcontrolinfo) Windows SDK にします。  
   
 ### <a name="return-value"></a>戻り値  
  E_NOTIMPL を返します。  
@@ -105,7 +105,7 @@ HRESULT OnAmbientPropertyChange(DISPID dispid);
  S_OK を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IOleControl::OnAmbientPropertyChange](http://msdn.microsoft.com/library/windows/desktop/ms690175) Windows SDK にします。  
+ 参照してください[IOleControl::OnAmbientPropertyChange](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol-onambientpropertychange) Windows SDK にします。  
   
 ##  <a name="onmnemonic"></a>  IOleControlImpl::OnMnemonic  
  ユーザーが指定されたキーストロークを押されたことをコントロールに通知します。  
@@ -118,9 +118,9 @@ HRESULT OnMnemonic(LPMSG pMsg);
  E_NOTIMPL を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IOleControl::OnMnemonic](http://msdn.microsoft.com/library/windows/desktop/ms680699) Windows SDK にします。  
+ 参照してください[IOleControl::OnMnemonic](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol-onmnemonic) Windows SDK にします。  
   
 ## <a name="see-also"></a>関連項目  
  [IOleObjectImpl クラス](../../atl/reference/ioleobjectimpl-class.md)   
- [ActiveX コントロールのインターフェイス](http://msdn.microsoft.com/library/windows/desktop/ms692724)   
+ [ActiveX コントロールのインターフェイス](/windows/desktop/com/activex-controls-interfaces)   
  [クラスの概要](../../atl/atl-class-overview.md)

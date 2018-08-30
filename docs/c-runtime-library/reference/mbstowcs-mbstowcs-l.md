@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c14beb076a83952529155fa0a4b1da780efae3c7
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: d179e53967817bb622074987e3309e159547e819
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451863"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218106"
 ---
 # <a name="mbstowcs-mbstowcsl"></a>mbstowcs、_mbstowcs_l
 
@@ -90,26 +90,26 @@ null で終了するマルチバイト文字のシーケンスのアドレス。
 
 ## <a name="return-value"></a>戻り値
 
-場合**mbstowcs**ソース文字列を変換が正常に変換されたマルチバイト文字の数を返します。 場合、 *wcstr*引数は**NULL**、必要なサイズ (ワイド文字) のコピー先の文字列を返します。 場合**mbstowcs**に無効なマルチバイト文字を検出した-1 を返します。 場合は、戻り値は*カウント*、ワイド文字の文字列が null で終了します。
+場合**mbstowcs**元の文字列を変換が正常に変換されたマルチバイト文字の数を返します。 場合、 *wcstr*引数が**NULL**、コピー先の文字列のワイド文字) の「必要なサイズを返します。 場合**mbstowcs**無効なマルチバイト文字が検出された-1 を返します。 戻り値が場合*カウント*、ワイド文字の文字列が null で終わっていません。
 
 > [!IMPORTANT]
-> いることを確認*wcstr*と*mbstr*が重なり合わず、および*カウント*変換するマルチバイト文字の数を正確に反映します。
+> いることを確認*wcstr*と*mbstr*重複しないと*数*変換するマルチバイト文字の数を正確に反映します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Mbstowcs**変換の最大数まで*カウント*マルチバイト文字を指す*mbstr*される対応するワイド文字の文字列に現在のロケールによって決まります。 によって表されるアドレスで作成されたワイド文字列を格納*wcstr*です。 結果は、一連の呼び出しのような[mbtowc](mbtowc-mbtowc-l.md)です。 場合**mbstowcs**前に、またはときは、1 バイトの null 文字 ('\0') を検出した*カウント*発生すると、停止およびワイド null 文字 (L '\0') に null 文字に変換します。 したがって、ワイド文字列で*wcstr*が null で終わる null 文字が変換中に発生した場合にのみです。 シーケンスを指す場合*wcstr*と*mbstr*重なっているため、の動作は未定義です。
+**Mbstowcs**関数はの最大数に変換*カウント*がマルチバイト文字が指す*mbstr*は対応するワイド文字の文字列に現在のロケールによって決まります。 結果として得られるワイド文字の文字列で表されるアドレスにある格納*wcstr*します。 結果は、一連の呼び出しに似ています[mbtowc](mbtowc-mbtowc-l.md)します。 場合**mbstowcs**前に、か、1 バイトの null 文字 ('\0') が発生した*カウント*null 文字をワイド文字の null 文字 (L '\0') および停止変換が発生します。 したがって、ワイド文字の文字列で*wcstr*は null 終端 null 文字が変換中に発生した場合にのみです。 によって、シーケンスを指している場合*wcstr*と*mbstr*重なっているため、の動作は未定義です。
 
-場合、 *wcstr*引数は**NULL**、 **mbstowcs**結果は null 終端文字を含まない、変換のワイド文字の数を返します。 正しい値を返すには、ソース文字列が null で終わっている必要があります。 結果のワイド文字列を null で終了する必要がある場合は、戻り値に 1 を追加します。
+場合、 *wcstr*引数が**NULL**、 **mbstowcs** null 終端文字を含まない、変換によって得られるワイド文字の数を返します。 正しい値を返すには、ソース文字列が null で終わっている必要があります。 結果のワイド文字列を null で終了する必要がある場合は、戻り値に 1 を追加します。
 
-場合、 *mbstr*引数は**NULL**、または*カウント*は > **INT_MAX**で説明されているとおり、無効なパラメーターハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 Errno に設定されている場合は、実行の継続が許可された**EINVAL**関数は-1 を返します。
+場合、 *mbstr*引数が**NULL**、または*カウント*は > **INT_MAX** 」の説明に従って、無効なパラメーターハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 Errno に設定されて実行の継続が許可された場合**EINVAL**関数は-1 を返します。
 
-**mbstowcs** ; すべてのロケールに依存する動作に現在のロケールを使用 **_mbstowcs_l**は、代わりに渡されるロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**mbstowcs**ロケールに依存する動作に現在のロケールを使用 **_mbstowcs_l**代わりに渡されたロケールを使用すると同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**mbstowcs**|\<stdlib.h>|
 |**_mbstowcs_l**|\<stdlib.h>|
@@ -220,4 +220,4 @@ Convert back to wide-character string:
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs、_wcstombs_l](wcstombs-wcstombs-l.md)<br/>
 [wctomb、_wctomb_l](wctomb-wctomb-l.md)<br/>
-[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)<br/>
+[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>

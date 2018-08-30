@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f4e8a20ef31f4379e7ddf6b7425fd7ecc70294a
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 7c5f66975d8d9904d1a4a8f2d26d4fe98ecfdd40
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42575502"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223026"
 ---
 # <a name="localeconv"></a>localeconv
 
@@ -79,7 +79,7 @@ n_sep_by_space|書式化された負の通貨数量の値と通貨記号をス�
 p_sign_posn|書式化された負でない通貨数量での正符号の位置。
 n_sign_posn|書式化された負の通貨数量での正符号の位置。
 
-指定したメンバーのない限り、 **lconv**構造を持つ`char *`と`wchar_t *`バージョンは、文字列へのポインター。 これらに相当する **""** (または**L""** の**wchar_t \*** ) 長さが 0 のいずれかまたは現在のロケールでサポートされていません。 なお**decimal_point**と **_W_decimal_point**は常にサポートされており、長さが 0 以外。
+指定したメンバーのない限り、 **lconv**構造を持つ`char *`と`wchar_t *`バージョンは、文字列へのポインター。 これらに相当する **""** (または**L""** の**wchar_t** <strong>\*</strong>) が長さ 0 のいずれかまたは現在のサポートされていませんロケール。 なお**decimal_point**と **_W_decimal_point**は常にサポートされており、長さが 0 以外。
 
 **Char**構造体のメンバーは、文字ではなく、小さい負でない数値。 そのいずれかが **CHAR_MAX** に相当する場合は、現在のロケールではサポートされていません。
 

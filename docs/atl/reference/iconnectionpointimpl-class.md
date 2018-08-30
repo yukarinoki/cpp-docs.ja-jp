@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf1f012067c3a3b85dd5168cf93521e4b2024e00
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d578aeea847ff04bf29fab11ecf7db2a1776b04f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884046"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217604"
 ---
 # <a name="iconnectionpointimpl-class"></a>IConnectionPointImpl クラス
 このクラスは、接続ポイントを実装します。  
@@ -81,7 +81,7 @@ class ATL_NO_VTABLE IConnectionPointImpl : public _ICPLocator<piid>
   
  `IConnectionPointImpl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlcom.h  
   
 ##  <a name="advise"></a>  IConnectionPointImpl::Advise  
@@ -96,7 +96,7 @@ STDMETHOD(Advise)(
 ### <a name="remarks"></a>Remarks  
  使用[Unadvise](#unadvise)接続呼び出しを終了します。  
   
- 参照してください[iconnectionpoint::advise](http://msdn.microsoft.com/library/windows/desktop/ms678815) Windows SDK にします。  
+ 参照してください[iconnectionpoint::advise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-advise) Windows SDK にします。  
   
 ##  <a name="enumconnections"></a>  IConnectionPointImpl::EnumConnections  
  コネクション ポイントの接続を反復処理する列挙子を作成します。  
@@ -106,7 +106,7 @@ STDMETHOD(EnumConnections)(IEnumConnections** ppEnum);
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IConnectionPoint::EnumConnections](http://msdn.microsoft.com/library/windows/desktop/ms680755) Windows SDK にします。  
+ 参照してください[IConnectionPoint::EnumConnections](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-enumconnections) Windows SDK にします。  
   
 ##  <a name="getconnectioninterface"></a>  IConnectionPointImpl::GetConnectionInterface  
  接続ポイントによって表されるインターフェイスの IID を取得します。  
@@ -116,7 +116,7 @@ STDMETHOD(GetConnectionInterface)(IID* piid2);
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IConnectionPoint::GetConnectionInterface](http://msdn.microsoft.com/library/windows/desktop/ms693468) Windows SDK にします。  
+ 参照してください[IConnectionPoint::GetConnectionInterface](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-getconnectioninterface) Windows SDK にします。  
   
 ##  <a name="getconnectionpointcontainer"></a>  IConnectionPointImpl::GetConnectionPointContainer  
  接続可能オブジェクトへのインターフェイス ポインターを取得します。  
@@ -126,7 +126,7 @@ STDMETHOD(GetConnectionPointContainer)(IConnectionPointContainer** ppCPC);
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IConnectionPoint::GetConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms679669) Windows SDK にします。  
+ 参照してください[IConnectionPoint::GetConnectionPointContainer](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-getconnectionpointcontainer) Windows SDK にします。  
   
 ##  <a name="m_vec"></a>  IConnectionPointImpl::m_vec  
  コネクション ポイント オブジェクトとシンクの間の接続を管理します。  
@@ -146,8 +146,8 @@ STDMETHOD(Unadvise)(DWORD dwCookie);
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[:unadvise](http://msdn.microsoft.com/library/windows/desktop/ms686608) Windows SDK にします。  
+ 参照してください[:unadvise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-unadvise) Windows SDK にします。  
   
 ## <a name="see-also"></a>関連項目  
- [IConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms694318)   
+ [IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint)   
  [クラスの概要](../../atl/atl-class-overview.md)

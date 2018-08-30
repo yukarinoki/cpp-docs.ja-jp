@@ -62,12 +62,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 738a69ad0acd1af3b400b56f0f759414b9e28578
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: e5166ef52f88e714d1168fe25a1ec29dd5360205
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451603"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210506"
 ---
 # <a name="vsnprintf-vsnprintf-vsnprintfl-vsnwprintf-vsnwprintfl"></a>vsnprintf、_vsnprintf、_vsnprintf_l、_vsnwprintf、_vsnwprintf_l
 
@@ -168,27 +168,27 @@ int _vsnwprintf_l(
 
 ## <a name="return-value"></a>戻り値
 
-**Vsnprintf**関数は、終端の null 文字をカウントせず、書き込まれる文字の数を返します。 バッファー サイズを指定して場合*カウント*十分な大きさで指定された出力を含めるには*形式*と*定義されています*の戻り値**vsnprintf**書き込まれる、null 文字をカウントしない場合は文字数は、*カウント*が十分な大きさです。 戻り値がより大きい場合*カウント*- 1 の場合、出力が切り捨てられました。 戻り値 -1 は、エンコード エラーが発生したことを示します。
+**Vsnprintf**関数は終端の null 文字をカウントせず、書き込まれる文字の数を返します。 バッファー サイズを指定して場合*カウント*で指定された出力を格納する十分な大きさでない*形式*と*定義されています*の戻り値**vsnprintf**記述がない場合、null 文字をカウントする文字数は、*カウント*が十分な大きさであった。 戻り値がより大きい場合*カウント*- 1 の場合、出力が切り捨てられました。 戻り値 -1 は、エンコード エラーが発生したことを示します。
 
-両方 **_vsnprintf**と **_vsnwprintf**かどうかに書き込む文字の数が以下に書き込まれた文字数を返す*カウント*番号です。書き込む文字がより大きい*カウント*、これら関数の出力が切り捨てられたことを示す-1 を返します。
+両方 **_vsnprintf**と **_vsnwprintf**関数は、書き込む文字数に等しいまたはそれよりも小さいが書き込まれた文字数を返す*カウント*番号。書き込む文字がより大きい*カウント*、これら関数は出力が切り捨てられたことを示す戻り値の-1。
 
-これらすべての関数によって返される値には、書き込まれているかどうかを問わず、終端の null は含まれません。 ときに*カウント*0 の場合は、関数、書き込み、文字数は、終端の null を含む値が返されます。 この結果を用いて文字列と終端の null に対して十分なバッファー領域を割り当て、関数を再び呼び出してバッファーを埋めることができます。
+これらすべての関数によって返される値には、書き込まれているかどうかを問わず、終端の null は含まれません。 ときに*カウント*が 0 の場合は、関数は書き込みの文字の数など、終端の null 値が返されます。 この結果を用いて文字列と終端の null に対して十分なバッファー領域を割り当て、関数を再び呼び出してバッファーを埋めることができます。
 
-場合*形式*は**NULL**、または*バッファー*は**NULL**と*カウント*がゼロにこれらの関数と等しくないです。」の説明に従って、無効なパラメーター ハンドラーを呼び出す[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、これらの関数は-1 を返します設定と**errno**に**EINVAL**です。
+場合*形式*は**NULL**、または*バッファー*は**NULL**と*数*、これらの関数は 0 と等しくないです。」の説明に従って、無効なパラメーター ハンドラーを呼び出す[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、これらの関数は-1 を返し設定と**errno**に**EINVAL**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-これらの各関数は、引数リストへのポインターを使用、データを書式化して書き込みますまで*カウント*メモリへの文字を指す*バッファー*です。 **Vsnprintf**関数は、出力が切り捨てられる場合でも常に、null 終端記号を書き込みます。 使用する場合 **_vsnprintf**と **_vsnwprintf**、バッファーは null で終わります最後に余裕がある場合にのみ (書き込む文字数は場合により小さい*カウント*).
+これらの各関数は、引数リストへのポインターを使用、データを書式設定して最大書き込みます*カウント*によって示されるメモリへの文字*バッファー*します。 **Vsnprintf**関数は、出力が切り捨てられる場合でも常に、null 終端記号を書き込みます。 使用する場合 **_vsnprintf**と **_vsnwprintf**、バッファーは null で終わります最後に余裕がある場合にのみ (書き込む文字数の場合より小さい*カウント*).
 
 > [!IMPORTANT]
-> 特定の種類のセキュリティ リスクを防ぐには、*形式*はユーザー定義の文字列ではありません。 詳しくは、「 [バッファー オーバーランの回避](http://msdn.microsoft.com/library/windows/desktop/ms717795)」をご覧ください。
+> 特定の種類のセキュリティ上のリスクを回避する*形式*ユーザー定義文字列ではありません。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 > [!NOTE]
-> 呼び出すときに、終端の null 用のスペースが認識ことを確認する **_vsnprintf**、 **_vsnprintf_l**、 **_vsnwprintf**と **_vsnwprintf_l**ことを確認、*カウント*がバッファーの長さよりも厳密に小さいと、関数を呼び出す前に null にバッファーを初期化します。
+> 呼び出すときに、終端の null 用の空きが認識されていることを確認する **_vsnprintf**、 **_vsnprintf_l**、 **_vsnwprintf**と **_vsnwprintf_l**ことを確認します、*カウント*はバッファーの長さより厳密に小さいと、関数を呼び出す前に null にバッファーを初期化します。
 >
-> **Vsnprintf**常に書き込み、終端の null、*カウント*パラメーター バッファーのサイズに等しい場合があります。
+> **Vsnprintf**終端の null を常に書き込み、*カウント*パラメーター バッファーのサイズに等しい場合があります。
 
-Visual Studio 2015 および Windows 10 で UCRT と共に開始**vsnprintf**と同じでは、不要になった **_vsnprintf**です。 **Vsnprintf**は C99 規格に準拠している関数 **_vnsprintf**以前の Visual Studio コードとの下位互換性は保持されます。
+Visual Studio 2015 と Windows 10 で UCRT と共に開始**vsnprintf**と同じですが不要になった **_vsnprintf**します。 **Vsnprintf**関数は C99 規格に準拠 **_vnsprintf**以前の Visual Studio code との下位互換性は保持されます。
 
 これらの関数のバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
 
@@ -203,12 +203,12 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー (C)|必須ヘッダー (C++)|
+|ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-------------|---------------------------|-------------------------------|
 |**vsnprintf**、 **_vsnprintf**、 **_vsnprintf_l**|\<stdio.h>|\<stdio.h> または \<cstdio>|
 |**_vsnwprintf**、 **_vsnwprintf_l**|\<stdio.h> または \<wchar.h>|\<stdio.h>、\<wchar.h>、\<cstdio>、または \<cwchar>|
 
-**_Vsnprintf**、 **_vsnprintf_l**、 **_vsnwprintf**と **_vsnwprintf_l**関数は、Microsoft 固有の仕様です。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+**_Vsnprintf**、 **_vsnprintf_l**、 **_vsnwprintf**と **_vsnwprintf_l**関数は、Microsoft 固有の仕様。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -250,7 +250,7 @@ nSize: 9, buff: Hi there!
 nSize: -1, buff: Hi there!
 ```
 
-代わりに vsnprintf を使用し、パラメータに小さな文字列を指定すると、挙動が変化します。 *カウント*パラメーターは、バッファーの全体サイズを指定でき、戻り値が書き込まれている場合は文字数は、*カウント*が十分で。
+代わりに vsnprintf を使用し、パラメータに小さな文字列を指定すると、挙動が変化します。 *カウント*パラメーターは、バッファーの全体サイズを指定でき、戻り値が書き込まれた場合の文字数は、*カウント*サイズが十分で。
 
 ## <a name="example"></a>例
 

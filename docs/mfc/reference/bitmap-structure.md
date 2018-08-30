@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddc4868d7cc3c094ad2bb81b5d9706a2b749553d
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2068f3a735a14662e10f00af3fc5f81efd037592
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339348"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220762"
 ---
 # <a name="bitmap-structure"></a>BITMAP 構造体
 **ビットマップ**構造体は、高さ、幅、色の書式、および論理ビットマップのビット値を定義します。**します。**  
@@ -85,9 +85,9 @@ typedef struct tagBITMAP {  /* bm */
   
  すべてのデバイスの RASTERCAPS インデックスのビット RC_BITBLT セット ビットマップをサポートする、[は](../../mfc/reference/cdc-class.md#getdevicecaps)メンバー関数。  
   
- 各デバイスには、独自のカラー形式があります。 別に 1 つのデバイスからビットマップを転送するために使用して、 [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879)と[SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) Windows 関数。  
+ 各デバイスには、独自のカラー形式があります。 別に 1 つのデバイスからビットマップを転送するために使用して、 [GetDIBits](/windows/desktop/api/wingdi/nf-wingdi-getdibits)と[SetDIBits](/windows/desktop/api/wingdi/nf-wingdi-setdibits) Windows 関数。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** wingdi.h  
   
 ## <a name="see-also"></a>関連項目  

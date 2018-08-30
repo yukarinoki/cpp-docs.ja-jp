@@ -80,12 +80,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70e980a33e88920afef9c6f19dcd8b2ecfca5071
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: cbcc47bf7b8eff276135bb5eb2f6206471fee524
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131439"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206476"
 ---
 # <a name="numericlimits-class"></a>numeric_limits クラス
 
@@ -100,11 +100,12 @@ class numeric_limits
 
 ### <a name="parameters"></a>パラメーター
 
-*型*プロパティを持つがされている基本的な要素のデータ型をテストまたは照会または設定します。
+*Type*<br/>
+ プロパティがテスト、照会、設定対象になる基本的な要素のデータ型。
 
 ## <a name="remarks"></a>Remarks
 
-ヘッダーは、型の明示的な特殊化を定義します**wchar_t**、 **bool**、 **char**、 **char を署名**、**符号なし。char**、**短い**、 **unsigned short**、 **int**、**符号なし int**、**時間の長い**、 **unsigned long**、 **float**、**二重**、 **long double * * *、** **long**、 **unsigned long long 型**、 `char16_t`、および`char32_t`します。 これらの明示的な特殊化、メンバー [:is_specialized](#is_specialized)は**true**、関連するすべてのメンバーは有効な値がします。 プログラムによって、その他の明示的な特殊化を行えます。 クラスのほとんどのメンバー関数を記述またはの実装でテスト**float**します。
+ヘッダーは、型の明示的な特殊化を定義します**wchar_t**、 **bool**、 **char**、 **char を署名**、**符号なし。char**、**短い**、 **unsigned short**、 **int**、**符号なし int**、**時間の長い**、 **unsigned long**、 **float**、**二重**、 **long double**、 **long**、 **unsigned long long 型**、 **char16_t**、および**char32_t**します。 これらの明示的な特殊化、メンバー [:is_specialized](#is_specialized)は**true**、関連するすべてのメンバーは有効な値がします。 プログラムによって、その他の明示的な特殊化を行えます。 クラスのほとんどのメンバー関数を記述またはの実装でテスト**float**します。
 
 任意の特殊化の場合、メンバーに有効な値が含まれません。 意味のある値がないメンバー オブジェクトには 0 が格納されます (または**false**) を意味のある値を返さないメンバー関数を返しますと`Type(0)`します。
 

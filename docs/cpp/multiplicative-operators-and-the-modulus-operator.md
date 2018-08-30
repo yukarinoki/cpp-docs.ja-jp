@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b238a496718088f0251faa49281fdc8939c01c7
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a51544f1e367e1db0b5ae72948af68fbedfa7504
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408360"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209729"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>乗算演算子と剰余演算子
 ## <a name="syntax"></a>構文  
@@ -44,15 +44,15 @@ expression % expression
 ## <a name="remarks"></a>Remarks  
  乗算演算子は次のとおりです。  
   
--   乗算 (**\***)  
+-   乗算 (<strong>\*</strong>)  
   
 -   除算 (**/**)  
   
--   剰余 (除算の剰余) (`%`)  
+-   剰余 (除算の剰余) (**%**)  
   
  これらの二項演算子の結合規則は、左から右方向です。  
   
- 乗算演算子は、数値型のオペランドを受け取ります。 剰余演算子 (`%`) には、そのオペランドが整数型でなければならないという点で、より厳しい要件があります  (浮動小数点除算の剰余を取得、実行時の関数を使用する[fmod](../c-runtime-library/reference/fmod-fmodf.md))。変換は、「[標準変換](standard-conversions.md)オペランドに適用され結果は変換後の型のです。  
+ 乗算演算子は、数値型のオペランドを受け取ります。 剰余演算子 (**%**) より厳しい要件を持つことで、そのオペランドが整数型でなければなりません。 (浮動小数点除算の剰余を取得、実行時の関数を使用する[fmod](../c-runtime-library/reference/fmod-fmodf.md))。変換は、「[標準変換](standard-conversions.md)オペランドに適用され結果は変換後の型のです。  
   
  乗算演算子は、最初のオペランドを 2 番目のオペランドで乗算した結果を生成します。  
   

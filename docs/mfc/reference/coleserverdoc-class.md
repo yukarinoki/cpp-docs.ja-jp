@@ -92,12 +92,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67920590979c4b9bf3099e8c64c142aeb813b1ce
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a02ade5beb9c3a8480672211fff4b9d23fe48562
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851659"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217590"
 ---
 # <a name="coleserverdoc-class"></a>COleServerDoc クラス
 OLE サーバー ドキュメントの基底クラスです。  
@@ -191,7 +191,7 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
   
  `COleServerDoc`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxole.h  
   
 ##  <a name="activatedocobject"></a>  COleServerDoc::ActivateDocObject  
@@ -296,7 +296,7 @@ LPOLECLIENTSITE GetClientSite() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 基になるポインターを取得します[していること](http://msdn.microsoft.com/library/windows/desktop/ms693706)インターフェイス。  
+ 基になるポインターを取得します[していること](/windows/desktop/api/oleidl/nn-oleidl-ioleclientsite)インターフェイス。  
   
 ##  <a name="getdocobjectserver"></a>  COleServerDoc::GetDocObjectServer  
  新たに作成するには、この関数をオーバーライド`CDocObjectServer`項目し、ポインターを返します。  
@@ -492,7 +492,7 @@ virtual void OnClose(OLECLOSE dwCloseOption);
 ### <a name="remarks"></a>Remarks  
  既定の実装`CDocument::OnCloseDocument`します。  
   
- 詳細とその他の値は、次を参照してください。[子](http://msdn.microsoft.com/library/windows/desktop/ms680623)Windows SDK に含まれています。  
+ 詳細とその他の値は、次を参照してください。[子](/windows/desktop/api/oleidl/ne-oleidl-tagoleclose)Windows SDK に含まれています。  
   
 ##  <a name="ondeactivate"></a>  COleServerDoc::OnDeactivate  
  ユーザーが現在位置で有効になっている埋め込みまたはリンクされた項目を非アクティブ化時に、フレームワークによって呼び出されます。  
@@ -668,7 +668,7 @@ virtual void OnResizeBorder(
 ### <a name="remarks"></a>Remarks  
  この関数は、サイズを変更し、ツールバーと新しいウィンドウのサイズに従ってその他のユーザー インターフェイス要素を調整します。  
   
- 詳細については、次を参照してください。[埋め込み](http://msdn.microsoft.com/library/windows/desktop/ms680716)Windows SDK に含まれています。  
+ 詳細については、次を参照してください。[埋め込み](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceuiwindow)Windows SDK に含まれています。  
   
  これは、高度なオーバーライド可能な。  
   

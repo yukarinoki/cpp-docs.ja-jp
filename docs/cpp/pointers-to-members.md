@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c610d7f72c76e8c761de0cb01c42c8d6006e4b7
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e137f0f41c94473d47985ceb848eeef7c7c9ca08
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407781"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208517"
 ---
 # <a name="pointers-to-members"></a>メンバーへのポインター
 メンバーへのポインターの宣言は、ポインター宣言の特殊なケースです。  これらは次のシーケンスで宣言します。  
@@ -45,7 +45,7 @@ ms.locfileid: "39407781"
   - オプションの Microsoft 固有の修飾子。 詳細については、次を参照してください。 [Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)します。  
 1. 指されるメンバーが含まれるクラスの修飾名。  
   - :: 演算子。  
-  - **\*** 演算子。  
+  - <strong>\*</strong>演算子。  
   - 省略可能な**const**や**揮発性**指定子。  
   - メンバーへのポインターを指定する識別子。  
   
@@ -101,7 +101,7 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';  
 ```  
   
- 間の差、 **.\*** と**-> \*** 演算子 (メンバーへのポインター演算子) は、 **.\*** 演算子は、メンバーを選択します。 オブジェクトまたはオブジェクトの参照を指定すると、while、 **-> \*** 演算子は、ポインターからメンバーを選択します。 (詳細については、これらの演算子は、次を参照してください[メンバーへのポインター演算子を含む式](../cpp/pointer-to-member-operators-dot-star-and-star.md)。)。  
+ 間の差、 **.**<strong>\*</strong>と**->** <strong>\*</strong>演算子 (メンバーへのポインター演算子) は、 **.**<strong>\*</strong>演算子は、メンバーを選択しますオブジェクトまたはオブジェクトの参照を指定すると、while、 **->** <strong>\*</strong>演算子。ポインターからメンバーを選択します。 (詳細については、これらの演算子は、次を参照してください[メンバーへのポインター演算子を含む式](../cpp/pointer-to-member-operators-dot-star-and-star.md)。)。  
   
  メンバーへのポインター演算子の結果は、メンバーの型: この場合、`char *`します。  
   
@@ -123,7 +123,7 @@ strcat_s( szCaptionBase, sizeOfBuffer, " [View 1]" );
 ```  
   
 ## <a name="restrictions-on-pointers-to-members"></a>メンバーへのポインターに関する制約  
- 静的メンバーのアドレスは、メンバーへのポインターではありません。 それは静的メンバーの 1 つのインスタンスへの通常のポインターです。 通常アドレスの特定のクラスのすべてのオブジェクトの静的メンバーを 1 つだけのインスタンスが存在するので、 **(&)** 逆参照と **(\*)** 演算子を使用できます。  
+ 静的メンバーのアドレスは、メンバーへのポインターではありません。 それは静的メンバーの 1 つのインスタンスへの通常のポインターです。 静的メンバーの 1 つだけのインスタンスは、通常アドレスの特定のクラスのすべてのオブジェクトが存在するため (**&**) 逆参照し、(<strong>\*</strong>) 演算子を使用できます。  
   
 ## <a name="pointers-to-members-and-virtual-functions"></a>メンバーと仮想関数へのポインター  
  メンバー関数へのポインターによる仮想関数の呼び出しは、関数が直接呼び出されているように機能します。v-table から正しい関数が検索され、呼び出されます。  

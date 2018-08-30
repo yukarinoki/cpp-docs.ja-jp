@@ -1,5 +1,5 @@
 ---
-title: pgomgr |Microsoft ドキュメント
+title: pgomgr |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2018
 ms.technology:
@@ -15,16 +15,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bf7567cfe9f21effda913606ca3af9a19464f9d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70a0615debabb056110dd9d6f7a6aac86e9d464a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377207"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198316"
 ---
 # <a name="pgomgr"></a>pgomgr
 
-.Pgd ファイルを 1 つまたは複数の .pgc ファイルからプロファイル データを追加します。
+.Pgd ファイルには、1 つまたは複数の .pgc ファイルからプロファイル データを追加します。
 
 ## <a name="syntax"></a>構文
 
@@ -35,27 +35,27 @@ ms.locfileid: "32377207"
 *options*<br/>
 次のオプションを指定できます**pgomgr**:
 
-- **/help**または **/しますか?** 使用可能な表示**pgomgr**オプション。
+- **/help**または **/でしょうか。** 使用可能な表示**pgomgr**オプション。
 
 - **/clear** .pgd ファイルすべてのプロファイル情報をクリアします。 .Pgc を指定することはできませんファイル **/clear**を指定します。
 
-- **/detail**フロー グラフのカバレッジ情報を含む、詳細な統計情報を表示します。
+- **/detail**フロー グラフのカバレッジ情報を含む、詳細な統計情報が表示されます。
 
 - **/summary**表示関数ごとの統計情報。
 
-- **一意/** と共に使用する場合 **/summary**原因、装飾関数名を表示します。 既定値、**一意/** は使用しない場合、装飾されていない関数名が表示されますが、します。
+- **一意/** を使用すると **/summary**原因の装飾関数名を表示します。 既定値、**一意/** が使用されない場合は非装飾関数名が表示されます。
 
-- **/merge**[**: * * * n*] は、.pgc ファイルまたは .pgd ファイルを追加するファイルのデータ。 省略可能なパラメーター、 *n*、データを追加することを指定する*n*回です。 たとえばがの場合、シナリオよく 6 回を元に戻すことが顧客によって行うはどのくらいの頻度を反映するように、テストの実行で 1 回行うことして 6 回 .pgd ファイルに追加**した後**です。
+- **/merge**\[**:**<em>n</em>] は、.pgc ファイルまたは .pgd ファイルに追加するファイルのデータ。 省略可能なパラメーター、 *n*、データを追加する必要がありますを指定する*n*時間。 たとえば、シナリオにどのくらいの頻度は、その顧客を反映するように元に戻すの 6 倍なるよく場合、テストの実行で 1 回実行してで 6 回 .pgd ファイルに追加**した後**します。
 
 *pgcfiles*<br/>
-1 つまたは複数の .pgc ファイルの .pgd ファイルにマージするプロファイル データを含むです。 単一 .pgc ファイルまたは複数の .pgc ファイルを指定することができます。 .Pgc ファイルをすべて指定しない場合**pgomgr** .pgd ファイルと同じファイル名を持つ、すべての .pgc ファイルをマージします。
+1 つまたは複数の .pgc ファイルのプロファイル データ .pgd ファイルにマージします。 1 つ .pgc ファイルまたは複数の .pgc ファイルを指定できます。 .Pgc ファイルを指定しない場合**pgomgr** .pgd ファイルと同じファイル名を持つが、すべての .pgc ファイルをマージします。
 
-*pgdfile* .pgc ファイルまたはファイルからデータをマージ先 .pgd ファイルです。
+*pgdfile* .pgc ファイルまたはファイルからデータをマージ先 .pgd ファイル。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 > [!NOTE]
-> このツールは、Visual Studio 開発者コマンド プロンプトからのみ開始できます。 システム コマンド プロンプトやエクスプローラーからは開始できません。
+> このツールは、Visual Studio 開発者コマンド プロンプトからのみ起動できます。 システム コマンド プロンプトやエクスプローラーからは開始できません。
 
 ## <a name="example"></a>例
 
@@ -63,11 +63,11 @@ ms.locfileid: "32377207"
 
 `pgomgr /clear myapp.pgd`
 
-この例のコマンドに追加しますプロファイル データ myapp1.pgc .pgd ファイルを 3 回。
+この例のコマンドのプロファイルにデータが追加 myapp1.pgc .pgd ファイルを 3 回。
 
 `pgomgr /merge:3 myapp1.pgc myapp.pgd`
 
-この例ではすべて myapp!#.pgc ファイルからのプロファイル データが myapp.pgd ファイルに追加されます。
+この例では、すべての myapp!#.pgc ファイルからのプロファイル データは myapp.pgd ファイルに追加されます。
 
 `pgomgr -merge myapp1.pgd`
 

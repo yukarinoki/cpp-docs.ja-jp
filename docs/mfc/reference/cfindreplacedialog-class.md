@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c88a517d600536d4f89b1621e225ad80666885a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: cabd6f331ed7348fe84a585a863ccb7e90b992fc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338650"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204006"
 ---
 # <a name="cfindreplacedialog-class"></a>CFindReplaceDialog クラス
 アプリケーションで標準的な文字列検索/置換ダイアログ ボックスを実装することができます。  
@@ -95,9 +95,9 @@ class CFindReplaceDialog : public CCommonDialog
   
  1 回、`CFindReplaceDialog`オブジェクトが構築された、呼び出す必要があります、[作成](#create)メンバー関数を作成し、ダイアログ ボックスを表示します。  
   
- 使用して、 [m_fr](#m_fr)呼び出す前に ダイアログ ボックスを初期化するために`Create`します。 `m_fr`型の構造は、 [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835)します。 この構造体の詳細については、Windows SDK を参照してください。  
+ 使用して、 [m_fr](#m_fr)呼び出す前に ダイアログ ボックスを初期化するために`Create`します。 `m_fr`型の構造は、 [FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea)します。 この構造体の詳細については、Windows SDK を参照してください。  
   
- 親ウィンドウの検索/置換要求の通知を受けるためには、Windows を使用する必要があります[を通じて](http://msdn.microsoft.com/library/windows/desktop/ms644947)関数を使用して、 [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message)フレームでメッセージ マップ マクロこの登録済みのメッセージを処理するウィンドウです。  
+ 親ウィンドウの検索/置換要求の通知を受けるためには、Windows を使用する必要があります[を通じて](https://msdn.microsoft.com/library/windows/desktop/ms644947)関数を使用して、 [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message)フレームでメッセージ マップ マクロこの登録済みのメッセージを処理するウィンドウです。  
   
  ダイアログ ボックスを終了したかどうかを指定できます、`IsTerminating`メンバー関数。  
   
@@ -122,7 +122,7 @@ class CFindReplaceDialog : public CCommonDialog
   
  `CFindReplaceDialog`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdlgs.h  
   
 ##  <a name="cfindreplacedialog"></a>  CFindReplaceDialog::CFindReplaceDialog  
@@ -165,7 +165,7 @@ virtual BOOL Create(
  ダイアログ ボックスが表示されたら、既定の置換文字列へのポインター。 NULL の場合は、ダイアログ ボックスには既定の置換文字列が含まれていません。  
   
  *dwFlags*  
- 1 つまたは複数のフラグがダイアログ ボックスで、ビットごとの OR 演算子を使用して結合の設定のカスタマイズに使用することができます。 既定値は、示すで、検索が下方向に続行することを指定します。 参照してください、 [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835)これらのフラグの詳細については、Windows SDK で構造体。  
+ 1 つまたは複数のフラグがダイアログ ボックスで、ビットごとの OR 演算子を使用して結合の設定のカスタマイズに使用することができます。 既定値は、示すで、検索が下方向に続行することを指定します。 参照してください、 [FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea)これらのフラグの詳細については、Windows SDK で構造体。  
   
  *pParentWnd*  
  ウィンドウ、ダイアログ ボックスの親またはオーナー ウィンドウへのポインター。 これは、検索/置換操作を要求することを示す特殊なメッセージを受信するウィンドウです。 NULL の場合、アプリケーションのメイン ウィンドウを使用します。  
@@ -174,7 +174,7 @@ virtual BOOL Create(
  ダイアログ ボックスのオブジェクトが作成された場合は 0 以外それ以外の場合 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 親ウィンドウの検索/置換要求の通知を受けるためには、Windows を使用する必要があります[を通じて](http://msdn.microsoft.com/library/windows/desktop/ms644947)関数の戻り値は、アプリケーションのインスタンスに固有のメッセージ番号。 フレーム ウィンドウは、コールバック関数を宣言するメッセージ マップ エントリが必要 (`OnFindReplace`次の例で) この登録済みのメッセージを処理します。 次のコード フラグメントは、という名前のフレーム ウィンドウ クラスをこれを行う方法の例を示します`CMyRichEditView`:  
+ 親ウィンドウの検索/置換要求の通知を受けるためには、Windows を使用する必要があります[を通じて](https://msdn.microsoft.com/library/windows/desktop/ms644947)関数の戻り値は、アプリケーションのインスタンスに固有のメッセージ番号。 フレーム ウィンドウは、コールバック関数を宣言するメッセージ マップ エントリが必要 (`OnFindReplace`次の例で) この登録済みのメッセージを処理します。 次のコード フラグメントは、という名前のフレーム ウィンドウ クラスをこれを行う方法の例を示します`CMyRichEditView`:  
   
  [!code-cpp[NVC_MFCDocView#171](../../mfc/codesnippet/cpp/cfindreplacedialog-class_2.h)]  
   
@@ -269,7 +269,7 @@ FINDREPLACE m_fr;
 ```  
   
 ### <a name="remarks"></a>Remarks  
- `m_fr` 型の構造体は、 [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835)します。 そのメンバーは、ダイアログ ボックスのオブジェクトの特性を格納します。 構築した後、`CFindReplaceDialog`オブジェクトを使用することができます`m_fr` ダイアログ ボックスのさまざまな値を変更します。  
+ `m_fr` 型の構造体は、 [FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea)します。 そのメンバーは、ダイアログ ボックスのオブジェクトの特性を格納します。 構築した後、`CFindReplaceDialog`オブジェクトを使用することができます`m_fr` ダイアログ ボックスのさまざまな値を変更します。  
   
  この構造体の詳細については、次を参照してください。、 `FINDREPLACE` Windows SDK の構造体。  
   

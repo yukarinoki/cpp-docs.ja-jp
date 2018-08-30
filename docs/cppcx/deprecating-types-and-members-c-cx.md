@@ -9,21 +9,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aecb47db6e9d620ff49fac337454242a1bdb72a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3b2f8ab1c52297a95c89f8ee00053d24baebe39d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605702"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205481"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>型およびメンバーの非推奨化 (C++/CX)
-C++/cli CX、プロデューサーおよびコンシューマーを使用して用の Windows ランタイム型とメンバーの非推奨となる、[非推奨](http://msdn.microsoft.com/en-us/8b02ad36-3b5f-4361-888b-e6a99040e57c)属性はサポートされています。 この属性が適用された API を利用すると、その API は非推奨とされており、代替 API の使用を推奨する警告メッセージがコンパイル時に表示されます。 独自のパブリック型およびメソッドでこの属性を適用し、独自のカスタム メッセージを提供することもできます。  
+C++/cli CX、プロデューサーおよびコンシューマーを使用して用の Windows ランタイム型とメンバーの非推奨となる、[非推奨](/uwp/api/windows.foundation.metadata.deprecatedattribute)属性はサポートされています。 この属性が適用された API を利用すると、その API は非推奨とされており、代替 API の使用を推奨する警告メッセージがコンパイル時に表示されます。 独自のパブリック型およびメソッドでこの属性を適用し、独自のカスタム メッセージを提供することもできます。  
   
 > [!CAUTION]
->  [Deprecated](http://msdn.microsoft.com/en-us/8b02ad36-3b5f-4361-888b-e6a99040e57c)属性は Windows ランタイム型でのみ使用されます。 標準 C++ のクラスおよびメンバーの場合は、 [__declspec(deprecated)](http://msdn.microsoft.com/library/044swk7y.aspx)を使用します。  
+>  [Deprecated](/uwp/api/windows.foundation.metadata.deprecatedattribute)属性は Windows ランタイム型でのみ使用されます。 標準 C++ のクラスとメンバーは、次のように使用します。 [__declspec(deprecated)](../cpp/deprecated-cpp.md)します。  
   
 ### <a name="example"></a>例  
- 次の例では、たとえば Windows ランタイム コンポーネントで、独自のパブリック API を非推奨にする方法を示します。 型 [Windows:Foundation::Metadata::DeprecationType](http://msdn.microsoft.com/en-us/ee01e63d-37d0-4273-accc-fca174f88bfa) 型の 2 番目のパラメーターは、API が非推奨であるか、削除済みであるかを指定します。 現在 DeprecationType::Deprecated という値のみがサポートされています。 属性の 3 番目のパラメーターは、属性の適用対象である [Windows::Foundation::Metadata::Platform](http://msdn.microsoft.com/en-us/1eae292d-1ab7-4d97-a58c-b0beffd51ef5) を指定します。  
+ 次の例では、たとえば Windows ランタイム コンポーネントで、独自のパブリック API を非推奨にする方法を示します。 2 番目のパラメーターの型の[Windows::deprecationtype::](/uwp/api/windows.foundation.metadata.deprecationtype) API がされているかどうかを指定します。 または削除された非推奨とされます。 現在 DeprecationType::Deprecated という値のみがサポートされています。 属性の 3 番目のパラメーターを指定します、 [Windows::Foundation::Metadata::Platform](/uwp/api/windows.foundation.metadata.platformattribute)属性を適用します。  
   
 ```  
   

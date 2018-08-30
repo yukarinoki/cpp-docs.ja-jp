@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9ea6f4a5770163ddaa34478f6630ed2a24ffbd6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4594e24ddf88292d311679b64371ac981642bc5d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954969"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222722"
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf クラス
 
@@ -70,9 +70,11 @@ class basic_filebuf : public basic_streambuf<Elem, Tr>
 
 ### <a name="parameters"></a>パラメーター
 
-*Elem*ファイル バッファーの基本要素です。
+*Elem*<br/>
+ ファイル バッファーの基本要素。
 
-*Tr*ファイル バッファーの基本要素の特徴 (通常は`char_traits` <  `Elem`>)。
+*Tr*<br/>
+ ファイル バッファーの基本要素の特徴 (通常は `char_traits`< `Elem`>)。
 
 ## <a name="remarks"></a>Remarks
 
@@ -235,7 +237,7 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
 |[uflow](../standard-library/basic-streambuf-class.md#uflow)|入力ストリームから現在の要素を抽出するプロテクト仮想関数。|
 |[underflow](#underflow)|入力ストリームから現在の要素を抽出するプロテクト仮想関数。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<fstream>
 
@@ -410,11 +412,14 @@ basic_filebuf<Elem, Tr> *open(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Filename*開くファイルの名前。
+*_Filename*<br/>
+ 開くファイルの名前。
 
-*モード (_m)* 列挙値のいずれかの[ios_base::openmode](../standard-library/ios-base-class.md#openmode)します。
+*モード (_m)*<br/>
+ [ios_base::openmode](../standard-library/ios-base-class.md#openmode) の列挙値のうちの 1 つ。
 
-*_Prot*保護と同じ既定のファイル、 *shflag*パラメーター [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)します。
+*_Prot*<br/>
+ 保護のと同じ既定のファイル、 *shflag*パラメーター [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -456,7 +461,8 @@ basic_filebuf& operator=(basic_filebuf&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*への右辺値参照を[basic_filebuf](../standard-library/basic-filebuf-class.md)オブジェクト。
+*right*<br/>
+ [basic_filebuf](../standard-library/basic-filebuf-class.md) オブジェクトへの右辺値参照。
 
 ### <a name="return-value"></a>戻り値
 
@@ -476,7 +482,8 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Meta*バッファーに挿入する文字または`traits_type::eof`します。
+*_Meta*<br/>
+ バッファーに挿入する文字または`traits_type::eof`します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -484,7 +491,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 
 ### <a name="remarks"></a>Remarks
 
-場合 _ * メタ ***! = traits_type::**[eof](../standard-library/char-traits-struct.md#eof)、プロテクト仮想メンバー関数は、要素を挿入しようと**ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *メタ*) 出力バッファーにします。 これはさまざまな方法で行うことができます。
+場合 *_Meta* **! = traits_type::**[eof](../standard-library/char-traits-struct.md#eof)、プロテクト仮想メンバー関数は、要素を挿入しようと**ch = traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*_Meta*) 出力バッファーにします。 これはさまざまな方法で行うことができます。
 
 - 書き込み位置が使用可能な場合は、書き込み位置に要素を格納し、出力バッファーのネクスト ポインターをインクリメントできます。
 
@@ -502,7 +509,8 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Meta* 、バッファーに挿入する文字または`traits_type::eof`します。
+*_Meta*<br/>
+ バッファーに挿入する文字または `traits_type::eof`。
 
 ### <a name="return-value"></a>戻り値
 
@@ -538,11 +546,14 @@ virtual pos_type seekoff(off_type _Off,
 
 ### <a name="parameters"></a>パラメーター
 
-*_Off*に対して相対的にシークする位置 *_Way*します。
+*_Off*<br/>
+ に対して相対的にシークする位置 *_Way*します。
 
-*_Way*オフセット演算の開始位置。 有効値については、「[seekdir](../standard-library/ios-base-class.md#seekdir)」を参照してください。
+*_Way*<br/>
+ オフセット演算の開始位置。 有効値については、「[seekdir](../standard-library/ios-base-class.md#seekdir)」を参照してください。
 
-*_Which*ポインターの位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
+*_Which*<br/>
+ ポインター位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -566,9 +577,11 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 ### <a name="parameters"></a>パラメーター
 
-*_Sp*シークする位置。
+*_Sp*<br/>
+ シークする位置。
 
-*_Which*ポインターの位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
+*_Which*<br/>
+ ポインター位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -594,9 +607,11 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Buffer*バッファーへのポインター。
+*_Buffer*<br/>
+ バッファーへのポインター。
 
-*カウント*バッファーのサイズ。
+*count*<br/>
+ バッファーのサイズ。
 
 ### <a name="return-value"></a>戻り値
 
@@ -604,8 +619,7 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="remarks"></a>Remarks
 
-
-  `setbuf` は `setvbuf`( **fp**, ( `char`\*) `_Buffer`, `_IOFBF`, `count`\*`sizeof` ( **Elem**) ) を呼び出して、_ *Buffer* で始まる `count` 要素の配列をストリームのバッファーとして提供します。 その関数がゼロ以外の値を返す場合、関数は Null ポインターを返します。 それ以外の場合は、シグナルの成功に **this** を返します。
+`setbuf` は `setvbuf`( **fp**, ( `char`\*) `_Buffer`, `_IOFBF`, `count`\*`sizeof` ( **Elem**) ) を呼び出して、_ *Buffer* で始まる `count` 要素の配列をストリームのバッファーとして提供します。 その関数がゼロ以外の値を返す場合、関数は Null ポインターを返します。 それ以外の場合は、シグナルの成功に **this** を返します。
 
 ## <a name="swap"></a>  basic_filebuf::swap
 
@@ -617,7 +631,8 @@ void swap(basic_filebuf& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*、`lvalue`別への参照を`basic_filebuf`します。
+*right*<br/>
+ 別の `basic_filebuf` への `lvalue` 参照。
 
 ## <a name="sync"></a>  basic_filebuf::sync
 

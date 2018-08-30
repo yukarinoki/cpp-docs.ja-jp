@@ -54,12 +54,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f759ce9a4617ab0ca8e97ef308508d836b53b742
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4ede89a5290bca14c39aa16c68071edefd0ebd08
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414247"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222430"
 ---
 # <a name="strnextc-wcsnextc-mbsnextc-mbsnextcl"></a>_strnextc、_wcsnextc、_mbsnextc、_mbsnextc_l
 
@@ -97,15 +97,15 @@ unsigned int _mbsnextc_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらの各関数の整数値を返しますの次の文字の*str*です。
+次の文字の整数値を返しますの各関数*str*します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Mbsnextc**関数の次のマルチバイト文字の整数値を返します*str*、文字列ポインターを進めずにします。 **_mbsnextc**に従ってマルチバイト文字シーケンスを認識、[マルチバイト コード ページ](../../c-runtime-library/code-pages.md)現在使用中です。
+**_Mbsnextc**関数は、次のマルチバイト文字の整数値を返します*str*、文字列ポインターを進めずにします。 **_mbsnextc**に従ってマルチバイト文字シーケンスを認識、[マルチバイト コード ページ](../../c-runtime-library/code-pages.md)現在使用されています。
 
 場合*str*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL**関数は 0 を返します。
 
-**セキュリティに関するメモ** この API は、バッファー オーバーランが原因で発生する潜在的な脅威の影響を受けます。 バッファー オーバーランは、システムを攻撃するときによく使用される方法であり、その結果、認められていない権限が昇格されます。 詳しくは、「 [バッファー オーバーランの回避](http://msdn.microsoft.com/library/windows/desktop/ms717795)」をご覧ください。
+**セキュリティに関するメモ** この API は、バッファー オーバーランが原因で発生する潜在的な脅威の影響を受けます。 バッファー オーバーランは、システムを攻撃するときによく使用される方法であり、その結果、認められていない権限が昇格されます。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -113,13 +113,13 @@ unsigned int _mbsnextc_l(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsnextc**|**_strnextc**|**_mbsnextc**|**_wcsnextc**|
 
-**_strnextc**と **_wcsnextc**は 1 バイト文字の文字列とワイド文字列バージョンの **_mbsnextc**です。 **_wcsnextc**の次のワイド文字の整数値を返します*str*です。**_strnextc**の次の 1 バイト文字の整数値を返します*str*です。 **_strnextc**と **_wcsnextc**この割り当てにのみ提供され、それ以外の場合は使用できません。 詳細については、「[Using Generic-Text Mappings](../../c-runtime-library/using-generic-text-mappings.md)」(汎用テキスト マップの使用) および「[Generic-Text Mappings](../../c-runtime-library/generic-text-mappings.md)」(汎用テキスト マップ) をご覧ください。
+**_strnextc**と **_wcsnextc**は 1 バイト文字の文字列とワイド文字の文字列バージョンの **_mbsnextc**します。 **_wcsnextc**で次のワイド文字の整数値を返します*str*;**_strnextc**の次の 1 バイト文字の整数値を返します*str*します。 **_strnextc**と **_wcsnextc**このマッピングにのみ提供され、それ以外の場合は使用できません。 詳細については、「[Using Generic-Text Mappings](../../c-runtime-library/using-generic-text-mappings.md)」(汎用テキスト マップの使用) および「[Generic-Text Mappings](../../c-runtime-library/generic-text-mappings.md)」(汎用テキスト マップ) をご覧ください。
 
-**_mbsnextc_l**は、代わりに渡されたロケール パラメーターを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_mbsnextc_l**代わりに渡されたロケール パラメーターを使用すると同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_mbsnextc**|\<mbstring.h>|
 |**_mbsnextc_l**|\<mbstring.h>|

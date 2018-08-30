@@ -1,5 +1,5 @@
 ---
-title: '方法: 配列を使用して、C + + CLI |Microsoft ドキュメント'
+title: '方法: 配列を使用して、c++/cli CLI |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 14eb98f485dc60974253e85086bb25531de7105d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 865416872855be19f4848587e51edf8bfbbdb299
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33138778"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213006"
 ---
 # <a name="how-to-use-arrays-in-ccli"></a>方法: C++/CLI で配列を使用する
-C + での配列を使用する方法を説明 + CLI です。  
+この記事は、C + で配列を使用する方法を説明します/cli CLI。  
   
 ## <a name="single-dimension-arrays"></a>1 次元の配列  
- 次の例では、参照、値、およびネイティブ ポインター型の 1 次元配列を作成する方法を示します。 1 次元配列を引数として関数に渡す方法と関数から、1 次元配列を返す方法も示しています。  
+ 次の例では、参照、値、およびネイティブ ポインター型の 1 次元の配列を作成する方法を示します。 また、1 次元配列を引数として関数に渡す方法と、関数からの 1 次元配列を返す方法も説明します。  
   
 ```cpp  
 // mcppv2_sdarrays.cpp  
@@ -160,7 +160,7 @@ MyStruct1[0] = 40
 MyStruct1[1] = 41  
 ```  
   
- 次の例では、1 次元のマネージ配列に集約の初期化を実行する方法を示します。  
+ 次の例では、1 次元マネージ配列の集約の初期化を実行する方法を示します。  
   
 ```cpp  
 // mcppv2_sdarrays_aggregate_init.cpp  
@@ -258,7 +258,7 @@ int main() {
 ```  
   
 ## <a name="jagged-arrays"></a>ジャグ配列  
- このセクションでは、参照、値、およびネイティブ ポインター型のマネージ配列の 1 次元配列を作成する方法を示します。 1 次元配列を引数として関数に渡す方法と、関数からマネージ配列の 1 次元配列を返す方法も示しています。  
+ このセクションでは、参照、値、およびネイティブ ポインター型のマネージ配列の 1 次元の配列を作成する方法を示します。 また、1 次元配列を引数として関数に渡す方法と、関数からマネージ配列の 1 次元配列を取得する方法についても説明します。  
   
 ```cpp  
 // mcppv2_array_of_arrays.cpp  
@@ -460,7 +460,7 @@ MyClass0[1] = 1
 [ g h ]  
 ```  
   
-## <a name="managed-arrays-as-template-type-parameters"></a>テンプレート型パラメーターとして配列を管理  
+## <a name="managed-arrays-as-template-type-parameters"></a>テンプレート型パラメーターとして配列を管理します。  
  この例では、マネージ配列をテンプレートにパラメーターとして使用する方法を示します。  
   
 ```cpp  
@@ -506,9 +506,9 @@ int main() {
 ```  
   
 ## <a name="sorting-arrays"></a>配列の並べ替え  
- 標準の C++ 配列とは異なりマネージ配列は、共通の動作を継承する元となる配列の基本クラスから暗黙的に派生します。 例としては、`Sort`メソッドで、任意の配列内の項目の並べ替えに使用できます。  
+ 標準の C++ 配列とは異なりマネージ配列は、共通の動作を継承する元となる配列の基本クラスから暗黙的に派生します。 例としては、`Sort`メソッドは、配列内の項目の並べ替えに使用できます。  
   
- 呼び出すことができます、基本の組み込み型を含む配列に対して、`Sort`メソッドです。 並べ替えの条件をオーバーライドして、これは、必要な複雑な型の配列の並べ替えを行うときにします。 この場合、配列要素の型を実装する必要があります、 [IComparable::CompareTo](https://msdn.microsoft.com/en-us/library/system.icomparable.compareto.aspx)メソッドです。  
+ 呼び出すことができます、基本的な組み込み型を含む配列に対して、`Sort`メソッド。 並べ替えの条件をオーバーライドしては、必要な複雑な型の配列の並べ替えを行うときにします。 この場合、配列要素の型を実装する必要があります、 [IComparable::CompareTo](https://msdn.microsoft.com/library/system.icomparable.compareto.aspx)メソッド。  
   
 ```cpp  
 // array_sort.cpp  
@@ -524,9 +524,9 @@ int main() {
 ```  
   
 ## <a name="sorting-arrays-by-using-custom-criteria"></a>カスタム条件を使用して配列の並べ替え  
- 基本の組み込み型を含む配列を並べ替えるを呼び出すだけ、`Array::Sort`メソッドです。 ただし、既定の並べ替え条件を上書きする上書きまたは複合型を含む配列を並べ替えに、 [IComparable::CompareTo](https://msdn.microsoft.com/en-us/library/system.icomparable.compareto.aspx)メソッドです。  
+ 基本的な組み込み型を含む配列を並べ替えるを呼び出すだけです、`Array::Sort`メソッド。 ただし、複合型を含んでいるか、既定の並べ替え条件を上書きするにはオーバーライド並べ替え配列を[IComparable::CompareTo](https://msdn.microsoft.com/library/system.icomparable.compareto.aspx)メソッド。  
   
- 次の例では構造体の名前`Element`から派生した<xref:System.IComparable>、記述を提供して、<xref:System.IComparable.CompareTo%2A>並べ替え基準として 2 つの整数の平均値を使用するメソッド。  
+ 構造体では、次の例では、名前`Element`から派生<xref:System.IComparable>、提供に書き込まれると、<xref:System.IComparable.CompareTo%2A>並べ替え条件として 2 つの整数の平均値を使用するメソッド。  
   
 ```cpp  
 using namespace System;  
@@ -571,7 +571,7 @@ int main() {
 ```  
   
 ## <a name="array-covariance"></a>配列の共変性  
- 直接または間接基底クラス B を持つ参照クラス D を指定するには、種類 D の配列に代入できますタイプ b の配列変数  
+ 直接または間接基本クラス B を持つ参照クラス D を指定するには、種類 D の配列割り当てることができますをタイプ b の配列変数  
   
 ```cpp  
 // clr_array_covariance.cpp  
@@ -584,9 +584,9 @@ int main() {
 }  
 ```  
   
- 配列要素への代入は代入互換性である配列の動的な型にします。 互換性のない型を持つ配列要素への代入と、`System::ArrayTypeMismatchException`がスローされます。  
+ 配列要素への代入は代入互換性純益、配列の動的な型を使用します。 互換性のない型を持つ配列要素への代入と`System::ArrayTypeMismatchException`がスローされます。  
   
- 配列の共変性は、値クラス型の配列に適用されません。 たとえば、int32 型の配列をオブジェクトに変換できません ^ 配列、ボックス化を使用しても描画されません。  
+ 値クラス型の配列には、配列の共変性は適用されません。 たとえば、int32 型の配列をオブジェクトに変換できません ^ 配列、ボックス化を使用してもありません。  
   
 ```cpp  
 // clr_array_covariance2.cpp  

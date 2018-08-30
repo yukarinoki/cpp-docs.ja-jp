@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: debb983c-382b-487b-8d42-7ea26dc158b8
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: ee594cb3cfef5ebc67b953b62d05b933b71f9f1d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c70347c7226df804acd894b6271c4673ec81f72d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884194"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201156"
 ---
 # <a name="ccomclassfactorysingleton-class"></a>CComClassFactorySingleton クラス
 このクラスから派生[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)を使用して[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) 1 つのオブジェクトを構築します。  
@@ -73,7 +73,7 @@ class CComClassFactorySingleton : public CComClassFactory
   
  `CComClassFactorySingleton`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlcom.h  
   
 ##  <a name="createinstance"></a>  CComClassFactorySingleton::CreateInstance  
@@ -109,7 +109,7 @@ CComPtr<IUnknown> m_spObj;
  なお、現在のフォームの`m_spObj`方法から重大な変更を表示しますを`CComClassFactorySingleton`ATL の以前のバージョンで動作 以前のバージョンで、`CComClassFactorySingleton`オブジェクトは、サーバーの初期化中に、クラス ファクトリと同時に作成されました。 Visual C .NET 2003年では、最初の要求で、オブジェクトが遅れて、作成されます。 この変更の初期化に依存するプログラムでエラーが発生する可能性があります。  
   
 ## <a name="see-also"></a>関連項目  
- [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)   
+ [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)   
  [CComClassFactory2 クラス](../../atl/reference/ccomclassfactory2-class.md)   
  [CComClassFactoryAutoThread クラス](../../atl/reference/ccomclassfactoryautothread-class.md)   
  [CComObjectRootEx クラス](../../atl/reference/ccomobjectrootex-class.md)   

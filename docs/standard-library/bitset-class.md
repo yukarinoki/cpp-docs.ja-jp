@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01a3d5aa898dccd680ea575a5753bc5cc3b8abf9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ef37b3bae0fa6bff9353b4415a614d252ddf661e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962830"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205341"
 ---
 # <a name="bitset-class"></a>bitset クラス
 
@@ -64,7 +64,8 @@ class bitset
 
 ### <a name="parameters"></a>パラメーター
 
-*N*型の 0 以外の整数で bitset オブジェクト内のビット数を指定します。`size_t`コンパイル時に認識される必要がある必要があります。
+*N*<br/>
+ 型の 0 以外の整数で bitset オブジェクト内のビット数を指定します。`size_t`コンパイル時に認識される必要がある必要があります。
 
 ## <a name="remarks"></a>Remarks
 
@@ -123,7 +124,7 @@ class bitset
 |[operator&#124;=](#op_or_eq')|包括的 `OR` 演算を使用して、ビットセットのビットごとの組み合わせを実行します。|
 |[operator~](#op_dtor)|ターゲット `bitset` 内のすべてのビットを反転させ、その結果を返します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<bitset>
 
@@ -237,19 +238,26 @@ explicit bitset(
 
 ### <a name="parameters"></a>パラメーター
 
-*val*基本的な 2 つの表現が構築されるビットセットのビットを初期化するために使用される符号なし整数。
+*val*<br/>
+ 符号なし整数。構築中のビットセット内のビットを 2 つの表現で初期化するとき、その基数が使用されます。
 
-*str* 0 と 1 ビットセットのビット値を初期化するための文字列。
+*str*<br/>
+ ビットセットのビット値の初期化に 0 と 1 の文字列が使用されます。
 
-*_CStr* 0 と 1 ビットセットのビット値を初期化するための C スタイル文字列。
+*_CStr*<br/>
+ ビットセットのビット値の初期化に 0 と 1 の C スタイルの文字列が使用されます。
 
-*_Pos*文字列で、左から右方向と、0 から開始に数えた文字の位置がビットセットの最初のビットを初期化するために使用します。
+*_Pos*<br/>
+ 文字列内の文字の位置。左から右に数え、ゼロから始まります。ビットセット内の最初のビットの初期化に使用されます。
 
-*カウント*ビットセットのビットの初期値を指定するために使用する文字列の文字数。
+*count*<br/>
+ ビットセット内のビットの初期値を提供するために使用される文字列内の文字数。
 
-*_Zero*ゼロを表すために使用される文字。 既定値は '0' です。
+*_Zero*<br/>
+ 0 を表すために使用される文字。 既定値は '0' です。
 
-*(_O)* 1 を表すに使用される文字。 既定値は '1' です。
+*(_O)*<br/>
+ 1 を表すために使用される文字。 既定値は '1' です。
 
 ### <a name="remarks"></a>Remarks
 
@@ -465,7 +473,8 @@ bitset\<N>& flip(size_t _Pos);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Pos*値が反転させるビットの位置。
+*_Pos*<br/>
+ 値を反転させるビットの位置。
 
 ### <a name="return-value"></a>戻り値
 
@@ -473,7 +482,7 @@ bitset\<N>& flip(size_t _Pos);
 
 ### <a name="remarks"></a>Remarks
 
-2 番目のメンバー関数のスロー、 [out_of_range](../standard-library/out-of-range-class.md)をパラメーターとして指定された位置がサイズより大きい場合は例外*N*の**ビットセット\<***N*** >** が、ビットが反転されました。
+2 番目のメンバー関数のスロー、 [out_of_range](../standard-library/out-of-range-class.md)をパラメーターとして指定された位置がサイズより大きい場合は例外*N*の**ビットセット\<***N* **>** が、ビットが反転されました。
 
 ### <a name="example"></a>例
 
@@ -593,7 +602,8 @@ bool operator!=(const bitset\<N>& right) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*ターゲット ビットセットが等しくないと比較されるビットセット。
+*right*<br/>
+ 不等性についてターゲット ビットセットと比較されるビットセット。
 
 ### <a name="return-value"></a>戻り値
 
@@ -654,7 +664,8 @@ bitset\<N>& operator&=(const bitset\<N>& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*ターゲット ビットセットとビットごとに結合されるビットセット。
+*right*<br/>
+ ビット単位でターゲット ビットセットと結合するビットセット。
 
 ### <a name="return-value"></a>戻り値
 
@@ -720,7 +731,8 @@ bitset\<N> operator<<(size_t _Pos) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*_Pos*シフトするとき、ビットセットのビットを左に位置の数。
+*_Pos*<br/>
+ ビットセット内のビットを左側にシフトするときの位置数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -771,7 +783,8 @@ bitset\<N>& operator<<=(size_t _Pos);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Pos*ビットセットのビットがシフトするときは、左に位置の数。
+*_Pos*<br/>
+ ビットセット内のビットを左側にシフトするときの位置数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -817,7 +830,8 @@ bool operator==(const bitset\<N>& right) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*等しいかどうかについてターゲット ビットセットと比較されるビットセット。
+*right*<br/>
+ ターゲット ビットセットと比較し、等しいかどうかを判定するビットセット。
 
 ### <a name="return-value"></a>戻り値
 
@@ -877,7 +891,8 @@ bitset\<N> operator>>(size_t _Pos) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*_Pos*ビットセットのビットがシフトするときは、右に位置の数。
+*_Pos*<br/>
+ ビットセット内のビットを右側にシフトするときの位置数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -929,7 +944,8 @@ bitset\<N>& operator>>=(size_t _Pos);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Pos*ビットセットのビットがシフトするときは、右に位置の数。
+*_Pos*<br/>
+ ビットセット内のビットを右側にシフトするときの位置数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -977,7 +993,8 @@ reference operator[](size_t _Pos);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Pos*ビットセット内のビット位置。
+*_Pos*<br/>
+ ビットセット内のビットの位置。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1019,7 +1036,8 @@ bitset\<N>& operator^=(const bitset\<N>& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*ターゲット ビットセットとビットごとに結合されるビットセット。
+*right*<br/>
+ ビット単位でターゲット ビットセットと結合するビットセット。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1084,7 +1102,8 @@ bitset\<N>& operator|=(const bitset\<N>& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*ターゲット ビットセットとビットごとに結合されるビットセット。
+*right*<br/>
+ ビット単位でターゲット ビットセットと結合するビットセット。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1203,9 +1222,11 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*val*型のオブジェクトの値**bool**ビットセットのビットに割り当てられます。
+*val*<br/>
+ 型のオブジェクトの値**bool**ビットセットのビットに割り当てられます。
 
-*_Bitref*形式の参照*x [i]* 位置にあるビットを*は*ビットセット*x*します。
+*_Bitref*<br/>
+ フォーム *x [ i ]* のビットセット *x* の位置 *i* のビット参照。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1213,7 +1234,7 @@ public:
 
 ### <a name="remarks"></a>Remarks
 
-クラス `reference` は、ビットセット `operator[]` のヘルパー クラスとしてのみ存在します。 このメンバー クラスは、ビットセット内の個別ビットにアクセスできるオブジェクトを表します。 ように*b*型のオブジェクトである**bool**、 *x*と*y*型のオブジェクト**ビットセット\<***N*** >** 、および*は*と*j*このようなオブジェクト内で有効な位置。 表記 *x [i]* は、ビットセット *x* の位置 *i* のビットを指します。 クラス `reference` のメンバー関数は、次の演算を順に与えます。
+クラス `reference` は、ビットセット `operator[]` のヘルパー クラスとしてのみ存在します。 このメンバー クラスは、ビットセット内の個別ビットにアクセスできるオブジェクトを表します。 ように*b*型のオブジェクトである**bool**、 *x*と*y*型のオブジェクト**ビットセット\<***N* **>**、および*は*と*j*このようなオブジェクト内で有効な位置。 表記 *x [i]* は、ビットセット *x* の位置 *i* のビットを指します。 クラス `reference` のメンバー関数は、次の演算を順に与えます。
 
 |操作|定義|
 |---------------|----------------|
@@ -1316,7 +1337,8 @@ bitset\<N>& reset(size_t _Pos);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Pos*を 0 にリセットするビットセットのビットの位置。
+*_Pos*<br/>
+ ビットセット内で 0 にリセットするビットの位置。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1378,9 +1400,11 @@ bitset\<N>& set(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Pos*に設定するビットセットのビットの位置に値が割り当てられます。
+*_Pos*<br/>
+ ビットセット内で、ある値を割り当てるように設定するビットの位置。
 
-*val*指定した位置にあるビットに割り当てられる値。
+*val*<br/>
+ 指定された位置のビットに割り当てる値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1482,7 +1506,8 @@ bool test(size_t _Pos) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*_Pos*でその値をテストするビットセットのビットの位置。
+*_Pos*<br/>
+ ビットセット内でその値をテストするビットの位置。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1491,4 +1516,3 @@ bool test(size_t _Pos) const;
 ### <a name="remarks"></a>Remarks
 
 このメンバー関数は [out_of_range](../standard-library/out-of-range-class.md) をスローします。
-

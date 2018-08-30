@@ -114,12 +114,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d843b3b491973c32d8fb5ff3160327a9e82223c8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: eae771aed819577708d945cb2a62997f5b45e7fd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42543212"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199847"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 `CMFCTabCtrl`クラスは、タブ コントロールの機能を提供します。 タブ コントロールは、上または下にフラットまたは 3D のタブを持つ、ドッキング可能なウィンドウを表示します。 タブにはテキストとイメージを表示でき、アクティブな状態のときに色を変更することもできます。  
@@ -186,7 +186,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::OnDragEnter](#ondragenter)|カーソルが最初に、タブ コントロール ウィンドウにドラッグされたときに、フレームワークによって呼び出されます。|  
 |[CMFCTabCtrl::OnDragOver](#ondragover)|マウスがドロップ ターゲット ウィンドウに移動するドラッグ操作中に、フレームワークが呼び出します。 (上書き[CMFCBaseTabCtrl::OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover))。|  
 |[CMFCTabCtrl::OnShowTabDocumentsMenu](#onshowtabdocumentsmenu)|ユーザーがタブを選択し、選択されているタブは、アクティブなタブまでの待機、タブ付きウィンドウのポップアップ メニューを表示します。|  
-|`CMFCTabCtrl::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)と[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 関数。 (上書き[CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage))。|  
+|`CMFCTabCtrl::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)と[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 関数。 (上書き[CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage))。|  
 |`CMFCTabCtrl::RecalcLayout`|タブ コントロールの内部レイアウトを再計算します。 (上書き[CMFCBaseTabCtrl::RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout))。|  
 |[CMFCTabCtrl::SetActiveInMDITabGroup](#setactiveinmditabgroup)|タブ コントロールの現在のタブは、マルチ ドキュメント インターフェイスのタブ グループでアクティブなタブとして設定します。|  
 |[CMFCTabCtrl::SetActiveTab](#setactivetab)|タブをアクティブにします。(上書き[CMFCBaseTabCtrl::SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab))。|  
@@ -784,7 +784,7 @@ virtual DROPEFFECT OnDragEnter(
  ユーザーがドラッグ データを含むデータ オブジェクトへのポインター。  
   
  [in]*ドロップ*  
- 修飾子キーの状態が含まれています。 このパラメーターは、次の値のビットごとの組み合わせ (OR): MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON します。 詳細については、次を参照してください。、**メッセージ パラメーター**の[マウス入力に関する](http://msdn.microsoft.com/library/windows/desktop/ms645601)します。  
+ 修飾子キーの状態が含まれています。 このパラメーターは、次の値のビットごとの組み合わせ (OR): MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON します。 詳細については、次を参照してください。、**メッセージ パラメーター**の[マウス入力に関する](/windows/desktop/inputdev/about-mouse-input)します。  
   
  [in]*ポイント*  
  クライアント座標でのカーソルの現在の場所が含まれています。  
@@ -812,7 +812,7 @@ virtual DROPEFFECT OnDragOver(
  ポインターを[COleDataObject](../../mfc/reference/coledataobject-class.md)ドロップ ターゲット上にドラッグされているオブジェクト。  
   
  [in]*ドロップ*  
- 修飾子キーの状態は MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON のビットごとの組み合わせ (OR) です。 詳細については、「メッセージ パラメーター」を参照してください[マウス入力に関する](http://msdn.microsoft.com/library/windows/desktop/ms645601)します。  
+ 修飾子キーの状態は MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON のビットごとの組み合わせ (OR) です。 詳細については、「メッセージ パラメーター」を参照してください[マウス入力に関する](/windows/desktop/inputdev/about-mouse-input)します。  
   
  [in]*ポイント*  
  現在のマウスの位置。  
@@ -1000,7 +1000,7 @@ BOOL SynchronizeScrollBar(SCROLLINFO* pScrollInfo = NULL);
   
 ### <a name="parameters"></a>パラメーター  
  [out]*pScrollInfo*  
- ポインターを[SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537)構造体または NULL。 このメソッドが戻るとき、このパラメーターが NULL でない場合は、構造体には、スクロール バーのすべてのパラメーターが含まれています。 既定値は、NULL です。  
+ ポインターを[SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo)構造体または NULL。 このメソッドが戻るとき、このパラメーターが NULL でない場合は、構造体には、スクロール バーのすべてのパラメーターが含まれています。 既定値は、NULL です。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  

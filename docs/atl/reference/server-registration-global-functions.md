@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bed065eb959d959086133a757b7ca3594214719
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a2cc139fa0aa933131e4e19b8efa397e4bddee50
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883281"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209229"
 ---
 # <a name="server-registration-global-functions"></a>サーバー登録に関するグローバル関数
 これらの関数は、登録とオブジェクト マップ内のサーバー オブジェクトを登録解除のサポートを提供します。  
@@ -39,7 +39,7 @@ ms.locfileid: "37883281"
 |[AtlComModuleRevokeClassObjects](#atlcommodulerevokeclassobjects)|この関数は COM モジュールからクラス オブジェクトを無効にします。|  
 |[AtlComModuleGetClassObject](#atlcommodulegetclassobject)|この関数は、クラス オブジェクトを取得します。|  
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlbase.h  
    
 ##  <a name="atlcommoduleregisterserver"></a>  AtlComModuleRegisterServer  
@@ -113,10 +113,10 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
  COM モジュールへのポインター。  
   
  *dwClsContext*  
- クラスのオブジェクトが実行コンテキストを指定します。 指定できる値は、CLSCTX_INPROC_SERVER や CLSCTX_INPROC_HANDLER、CLSCTX_LOCAL_SERVER は。 参照してください[CLSCTX](http://msdn.microsoft.com/library/windows/desktop/ms693716)の詳細。  
+ クラスのオブジェクトが実行コンテキストを指定します。 指定できる値は、CLSCTX_INPROC_SERVER や CLSCTX_INPROC_HANDLER、CLSCTX_LOCAL_SERVER は。 参照してください[CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716)の詳細。  
   
  *dwFlags*  
- クラス オブジェクトへの接続の種類を決定します。 指定できる値は、REGCLS_SINGLEUSE、REGCLS_MULTIPLEUSE、または REGCLS_MULTI_SEPARATE は。 参照してください[REGCLS](http://msdn.microsoft.com/library/windows/desktop/ms679697)の詳細。  
+ クラス オブジェクトへの接続の種類を決定します。 指定できる値は、REGCLS_SINGLEUSE、REGCLS_MULTIPLEUSE、または REGCLS_MULTI_SEPARATE は。 参照してください[REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls)の詳細。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  

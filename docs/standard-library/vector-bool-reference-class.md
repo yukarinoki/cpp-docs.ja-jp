@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c87975e0b27934d091e896867620011a51b78d52
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 05486e4b75e631dcdc77855e850fe48c08d77326
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966525"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203852"
 ---
 # <a name="vectorltboolgtreference-class"></a>vector&lt;bool&gt;::reference クラス
 
@@ -29,7 +29,7 @@ ms.locfileid: "38966525"
 
 ## <a name="remarks"></a>Remarks
 
-C++ では、ネイティブにビットを直接参照しないため、シミュレートされた参照が必要です。 `vector<bool>` は、要素ごとに 1 ビットだけ使用します。このビットは、このプロキシ クラスを使用して参照できます。 ただし、参照のシミュレーションは、特定の代入が有効でないため、完全ではありません。 たとえば、`vector<bool>::reference` オブジェクトのアドレスを受け取ることができないため、[vector\<bool>::operator&#91;&#93;](http://msdn.microsoft.com/Library/97738633-690d-4069-b2d9-8c54104fbfdd) を使用する次のコードは正しくありません。
+C++ では、ネイティブにビットを直接参照しないため、シミュレートされた参照が必要です。 `vector<bool>` は、要素ごとに 1 ビットだけ使用します。このビットは、このプロキシ クラスを使用して参照できます。 ただし、参照のシミュレーションは、特定の代入が有効でないため、完全ではありません。 たとえば、`vector<bool>::reference` オブジェクトのアドレスを受け取ることができないため、[vector\<bool>::operator&#91;&#93;](https://msdn.microsoft.com/Library/97738633-690d-4069-b2d9-8c54104fbfdd) を使用する次のコードは正しくありません。
 
 ```cpp
 vector<bool> vb;
@@ -46,7 +46,7 @@ bool& refb = vb[1];   // conversion error - do not use
 |[operator bool](../standard-library/vector-bool-reference-operator-bool.md)|暗黙的な変換`vector<bool>::reference`に**bool**します。|
 |[operator=](../standard-library/vector-bool-reference-operator-assign.md)|ブール値をビットに割り当てます。または参照先の要素が保持している値をビットに割り当てます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー**: \<vector>
 

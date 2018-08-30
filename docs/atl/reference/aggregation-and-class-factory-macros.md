@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4995779a7f5595eca9dc47a29ea11d875995e959
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d964e844e8be4b741628397bf8a63bbd109820d0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881228"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210943"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>集計とクラス ファクトリに関するマクロ
 これらのマクロは、および集計を制御するためのクラス ファクトリを宣言する方法を提供します。  
@@ -52,7 +52,7 @@ ms.locfileid: "37881228"
 |[アグリゲート](#declare_protect_final_construct)|内部オブジェクトの構築時に削除されないように、外側のオブジェクトを保護します。|  
 |[DECLARE_VIEW_STATUS](#declare_view_status)|コンテナーにな VIEWSTATUS フラグを指定します。|  
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlcom.h  
    
 ##  <a name="declare_aggregatable"></a>  DECLARE_AGGREGATABLE  
@@ -86,7 +86,7 @@ DECLARE_CLASSFACTORY()
  [!code-cpp[NVC_ATL_COM#55](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_2.h)]  
   
 ##  <a name="ccomclassfactory_class"></a>  CComClassFactory クラス  
- このクラスは、実装、 [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)インターフェイス。  
+ このクラスは、実装、 [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)インターフェイス。  
   
 ```
 class CComClassFactory : public IClassFactory,
@@ -94,7 +94,7 @@ public CComObjectRootEx<CComGlobalsThreadModel>
 ```  
   
 ### <a name="remarks"></a>Remarks  
- `CComClassFactory` 実装して、 [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)インターフェイスより迅速に作成する新しいオブジェクトを許可するメモリ内のクラス ファクトリをロックするほか、CLSID が特定のオブジェクトを作成するためのメソッドが含まれています。 `IClassFactory` CLSID を割り当てることをシステム レジストリに登録するすべてのクラスを実装する必要があります。  
+ `CComClassFactory` 実装して、 [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)インターフェイスより迅速に作成する新しいオブジェクトを許可するメモリ内のクラス ファクトリをロックするほか、CLSID が特定のオブジェクトを作成するためのメソッドが含まれています。 `IClassFactory` CLSID を割り当てることをシステム レジストリに登録するすべてのクラスを実装する必要があります。  
   
  ATL オブジェクトから派生することによって、クラス ファクトリを取得する通常[CComCoClass](../../atl/reference/ccomcoclass-class.md)します。 このクラスには、マクロが含まれています。 [DECLARE_CLASSFACTORY](#declare_classfactory)、宣言する`CComClassFactory`既定のクラス ファクトリとして。 この既定の設定を無効にする、DECLARE_CLASSFACTORY のいずれかを指定*XXX*クラスの定義でマクロ。 たとえば、 [DECLARE_CLASSFACTORY_EX](#declare_classfactory_ex)マクロは、クラス ファクトリの指定したクラスを使用します。  
   
@@ -147,7 +147,7 @@ DECLARE_CLASSFACTORY2( lic )
  [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_4.h)]  
   
 ##  <a name="ccomclassfactory2_class"></a>  CComClassFactory2 クラス  
- このクラスは、実装、 [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720)インターフェイス。  
+ このクラスは、実装、 [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2)インターフェイス。  
   
 ```
 template <class license>
@@ -160,14 +160,14 @@ class  CComClassFactory2 : public IClassFactory2,
  *ライセンス*  
  次の静的関数を実装するクラス。  
   
-- **静的な BOOL VerifyLicenseKey (BSTR** `bstr` **)。**  
+- `static BOOL VerifyLicenseKey( BSTR bstr );`  
   
-- **静的な BOOL GetLicenseKey (DWORD** `dwReserved` **、BSTR\***  `pBstr` **)。**  
+- `static BOOL GetLicenseKey( DWORD dwReserved, BSTR * pBstr );`  
   
-- **静的な BOOL IsLicenseValid ();**  
+- `static BOOL IsLicenseValid( );`  
   
 ### <a name="remarks"></a>Remarks  
- `CComClassFactory2` 実装して、 [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720)インターフェイスで、拡張機能の[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)します。 `IClassFactory2` コントロール オブジェクトのライセンスで作成します。 ライセンスされたコンピューターで実行するクラス ファクトリと、実行時のライセンス キーを提供できます。 このライセンス キーにより、完全なマシンのライセンスが存在しない場合は、オブジェクトをインスタンス化するアプリケーションです。  
+ `CComClassFactory2` 実装して、 [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2)インターフェイスで、拡張機能の[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)します。 `IClassFactory2` コントロール オブジェクトのライセンスで作成します。 ライセンスされたコンピューターで実行するクラス ファクトリと、実行時のライセンス キーを提供できます。 このライセンス キーにより、完全なマシンのライセンスが存在しない場合は、オブジェクトをインスタンス化するアプリケーションです。  
   
  ATL オブジェクトから派生することによって、クラス ファクトリを取得する通常[CComCoClass](../../atl/reference/ccomcoclass-class.md)します。 このクラスには、マクロが含まれています。 [DECLARE_CLASSFACTORY](#declare_classfactory)、宣言する[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)既定のクラス ファクトリとして。 使用する`CComClassFactory2`、指定、 [DECLARE_CLASSFACTORY2](#declare_classfactory2)オブジェクトのクラス定義でマクロ。 例えば:  
   
@@ -195,7 +195,7 @@ DECLARE_CLASSFACTORY_AUTO_THREAD()
  [!code-cpp[NVC_ATL_COM#9](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_6.h)]  
   
 ##  <a name="ccomclassfactoryautothread_class"></a>  CComClassFactoryAutoThread クラス  
- このクラスは、実装、 [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)インターフェイス、およびオブジェクトを複数のアパートメントを作成できます。  
+ このクラスは、実装、 [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)インターフェイス、およびオブジェクトを複数のアパートメントを作成できます。  
   
 > [!IMPORTANT]
 >  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。  
@@ -334,7 +334,7 @@ DECLARE_VIEW_STATUS( statusFlags )
   
 ### <a name="parameters"></a>パラメーター  
  *statusFlags*  
- [in]な VIEWSTATUS フラグ。 参照してください[な VIEWSTATUS](http://msdn.microsoft.com/library/windows/desktop/ms687201)フラグの一覧についてはします。  
+ [in]な VIEWSTATUS フラグ。 参照してください[な VIEWSTATUS](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus)フラグの一覧についてはします。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_Windowing#126](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_9.h)]  

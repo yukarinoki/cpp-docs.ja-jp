@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15623673651e2c1aa02a5c1b5baa779789961e2b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c4fc2eb252c81e903174d99d4a55b2f3c1eed321
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339567"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205288"
 ---
 # <a name="ccombobox-class"></a>CComboBox クラス
 Windows のコンボ ボックスの機能が用意されています。  
@@ -265,7 +265,7 @@ class CComboBox : public CWnd
   
  `CComboBox`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="addstring"></a>  Ccombobox:  
@@ -286,7 +286,7 @@ int AddString(LPCTSTR lpszString);
  リスト ボックスが作成されていない場合、 [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)スタイル、文字列はリストの末尾に追加されます。 それ以外の場合、一覧に、文字列が挿入され、リストの並べ替え。  
   
 > [!NOTE]
->  この関数は、Windows ではサポートされていない`ComboBoxEx`コントロール。 このコントロールの詳細については、次を参照してください。 [ComboBoxEx コントロール](http://msdn.microsoft.com/library/windows/desktop/bb775738)Windows SDK に含まれています。  
+>  この関数は、Windows ではサポートされていない`ComboBoxEx`コントロール。 このコントロールの詳細については、次を参照してください。 [ComboBoxEx コントロール](/windows/desktop/Controls/comboboxex-controls)Windows SDK に含まれています。  
   
  リスト内の特定の場所には、文字列を挿入するには、使用、 [InsertString](#insertstring)メンバー関数。  
   
@@ -493,7 +493,7 @@ int Dir(
  戻り値が 0 以上の場合は、最後に、リストに追加されたファイル名の 0 から始まるインデックス。 エラーが発生した場合、戻り値は CB_ERR新しい文字列を保存する十分な空き領域がある場合は、CB_ERRSPACE を返します。  
   
 ### <a name="remarks"></a>Remarks  
- この関数は、Windows ではサポートされていない`ComboBoxEx`コントロール。 このコントロールの詳細については、次を参照してください。 [ComboBoxEx コントロール](http://msdn.microsoft.com/library/windows/desktop/bb775738)Windows SDK に含まれています。  
+ この関数は、Windows ではサポートされていない`ComboBoxEx`コントロール。 このコントロールの詳細については、次を参照してください。 [ComboBoxEx コントロール](/windows/desktop/Controls/comboboxex-controls)Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CComboBox#10](../../mfc/reference/codesnippet/cpp/ccombobox-class_10.cpp)]  
@@ -537,7 +537,7 @@ int FindString(
  戻り値が 0 以上の場合は、一致する項目の 0 から始まるインデックス。 検索が成功した場合は、CB_ERR を勧めします。  
   
 ### <a name="remarks"></a>Remarks  
- この関数は、Windows ではサポートされていない`ComboBoxEx`コントロール。 このコントロールの詳細については、次を参照してください。 [ComboBoxEx コントロール](http://msdn.microsoft.com/library/windows/desktop/bb775738)Windows SDK に含まれています。  
+ この関数は、Windows ではサポートされていない`ComboBoxEx`コントロール。 このコントロールの詳細については、次を参照してください。 [ComboBoxEx コントロール](/windows/desktop/Controls/comboboxex-controls)Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CComboBox#12](../../mfc/reference/codesnippet/cpp/ccombobox-class_12.cpp)]  
@@ -576,13 +576,13 @@ BOOL GetComboBoxInfo(PCOMBOBOXINFO pcbi) const;
   
 ### <a name="parameters"></a>パラメーター  
  *pcbi*  
- ポインター、 [COMBOBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775798)構造体。  
+ ポインター、 [COMBOBOXINFO](/windows/desktop/api/winuser/ns-winuser-tagcomboboxinfo)構造体。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、true を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [CB_GETCOMBOBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775839)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [CB_GETCOMBOBOXINFO](/windows/desktop/Controls/cb-getcomboboxinfo)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="getcount"></a>  CComboBox::GetCount  
  コンボ ボックスの一覧ボックスの部分で項目の数を取得するには、このメンバー関数を呼び出します。  
@@ -625,7 +625,7 @@ BOOL GetCueBanner(
 ### <a name="remarks"></a>Remarks  
  ヒントのテキストは、コンボ ボックス コントロールの入力領域に表示されるプロンプトです。 ユーザーが入力されるまで、ヒントのテキストが表示されます。  
   
- このメソッドは、送信、 [CB_GETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775843)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [CB_GETCUEBANNER](/windows/desktop/Controls/cb-getcuebanner)メッセージは、Windows SDK で説明します。  
   
 ##  <a name="getcursel"></a>  CComboBox::GetCurSel  
  コンボ ボックス内のどのアイテムが選択されているかを判断するには、このメンバー関数を呼び出します。  
@@ -754,13 +754,13 @@ DWORD_PTR GetItemData(int nIndex) const;
  エラーが発生した場合は、項目、または CB_ERR に関連付けられている 32 ビット値。  
   
 ### <a name="remarks"></a>Remarks  
- 32 ビット値を設定することができます、 *dwItemData*のパラメーターを[SetItemData](#setitemdata)メンバー関数の呼び出し。 使用して、`GetItemDataPtr`メンバー関数を取得する 32 ビット値がポインターの場合 ( **void\***)。  
+ 32 ビット値を設定することができます、 *dwItemData*のパラメーターを[SetItemData](#setitemdata)メンバー関数の呼び出し。 使用して、`GetItemDataPtr`メンバー関数を取得する 32 ビット値がポインターの場合 (**void** <strong>\*</strong>)。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CComboBox#21](../../mfc/reference/codesnippet/cpp/ccombobox-class_21.cpp)]  
   
 ##  <a name="getitemdataptr"></a>  CComboBox::GetItemDataPtr  
- ポインターとして指定されたコンボ ボックス アイテムに関連付けられたアプリケーションによって提供される 32 ビット値を取得します ( **void\***)。  
+ ポインターとして指定されたコンボ ボックス アイテムに関連付けられたアプリケーションによって提供される 32 ビット値を取得します (**void** <strong>\*</strong>)。  
   
 ```  
 void* GetItemDataPtr(int nIndex) const;  
@@ -869,7 +869,7 @@ int GetMinVisible() const;
  現在のドロップダウン リストに表示される項目の最小数。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、送信、 [CB_GETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [CB_GETMINVISIBLE](/windows/desktop/Controls/cb-setminvisible)メッセージは、Windows SDK で説明します。  
   
 ##  <a name="gettopindex"></a>  CComboBox::GetTopIndex  
  コンボ ボックスの一覧ボックス部分に表示される最初の項目の 0 から始まるインデックスを取得します。  
@@ -939,7 +939,7 @@ int InsertString(
  異なり、 [AddString](#addstring)メンバー関数を`InsertString`メンバー関数の一覧は発生しません、 [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)スタイルを並べ替えることができます。  
   
 > [!NOTE]
->  この関数は、Windows ではサポートされていない`ComboBoxEx`コントロール。 このコントロールの詳細については、次を参照してください。 [ComboBoxEx コントロール](http://msdn.microsoft.com/library/windows/desktop/bb775738)Windows SDK に含まれています。  
+>  この関数は、Windows ではサポートされていない`ComboBoxEx`コントロール。 このコントロールの詳細については、次を参照してください。 [ComboBoxEx コントロール](/windows/desktop/Controls/comboboxex-controls)Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CComboBox#27](../../mfc/reference/codesnippet/cpp/ccombobox-class_27.cpp)]  
@@ -1056,7 +1056,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
 ### <a name="remarks"></a>Remarks  
  ヒントのテキストは、コンボ ボックス コントロールの入力領域に表示されるプロンプトです。 ユーザーが入力されるまで、ヒントのテキストが表示されます。  
   
- このメソッドは、送信、 [CB_SETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775897)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [CB_SETCUEBANNER](/windows/desktop/Controls/cb-setcuebanner)メッセージは、Windows SDK で説明します。  
   
 ### <a name="example"></a>例  
  次のコード例は、変数を定義します。 *m_combobox*、つまり、コンボ ボックス コントロールをプログラムでアクセスするために使用します。 この変数は次の例で使用されています。  
@@ -1133,7 +1133,7 @@ BOOL SetEditSel(
  位置は、0 から始まる。 編集コントロールの最初の文字を選択するには、0 の開始位置を指定します。 終了位置は、選択する最後の文字の直後後の文字。 たとえば、エディット コントロールの最初の 4 つの文字を選択する 0 の開始位置と終了位置に 4 を使用しては。  
   
 > [!NOTE]
->  この関数は、Windows ではサポートされていない`ComboBoxEx`コントロール。 このコントロールの詳細については、次を参照してください。 [ComboBoxEx コントロール](http://msdn.microsoft.com/library/windows/desktop/bb775738)Windows SDK に含まれています。  
+>  この関数は、Windows ではサポートされていない`ComboBoxEx`コントロール。 このコントロールの詳細については、次を参照してください。 [ComboBoxEx コントロール](/windows/desktop/Controls/comboboxex-controls)Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
   例をご覧ください[CComboBox::GetEditSel](#geteditsel)します。  
@@ -1207,7 +1207,7 @@ int SetItemData(
  [!code-cpp[NVC_MFC_CComboBox#36](../../mfc/reference/codesnippet/cpp/ccombobox-class_38.cpp)]  
   
 ##  <a name="setitemdataptr"></a>  CComboBox::SetItemDataPtr  
- 指定したポインターのコンボ ボックス内の指定した項目に関連付けられている 32 ビット値の設定 ( **void\***)。  
+ 指定したポインターのコンボ ボックス内の指定した項目に関連付けられている 32 ビット値の設定 (**void** <strong>\*</strong>)。  
   
 ```  
 int SetItemDataPtr(
@@ -1297,7 +1297,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、送信、 [CB_SETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [CB_SETMINVISIBLE](/windows/desktop/Controls/cb-setminvisible)メッセージは、Windows SDK で説明します。  
   
 ### <a name="example"></a>例  
  次のコード例は、変数を定義します。 *m_combobox*、つまり、コンボ ボックス コントロールをプログラムでアクセスするために使用します。 この変数は次の例で使用されています。  

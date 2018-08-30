@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f00bfbcb02e05ac2c0eeac5aed9485607e0309a4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 246ca30c63596dd463889947a4dba9c350d449e4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954943"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202210"
 ---
 # <a name="ccombstr-class"></a>CComBSTR クラス
 このクラスは、Bstr のラッパーです。  
@@ -120,7 +120,7 @@ class CComBSTR
   
  使用する場合の注意事項の一覧については`CComBSTR`を参照してください[CComBSTR を使用したプログラミング](../../atl/programming-with-ccombstr-atl.md)します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlbase.h  
   
 ##  <a name="append"></a>  CComBSTR::Append  
@@ -411,7 +411,7 @@ bool LoadString(UINT nID) throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- 参照してください[LoadString](http://msdn.microsoft.com/library/windows/desktop/ms647486) Windows SDK にします。  
+ 参照してください[LoadString](/windows/desktop/api/winuser/nf-winuser-loadstringa) Windows SDK にします。  
   
 ### <a name="return-value"></a>戻り値  
  かどうか、文字列が正常に読み込まれる; TRUE を返しますそれ以外の場合、FALSE を返します。  
@@ -604,7 +604,7 @@ HRESULT ReadFromStream(IStream* pStream) throw();
   
 ### <a name="parameters"></a>パラメーター  
  *pStream*  
- [in]ポインター、 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)インターフェイスで、データを含むストリーム。  
+ [in]ポインター、 [IStream](/windows/desktop/api/objidl/nn-objidl-istream)インターフェイスで、データを含むストリーム。  
   
 ### <a name="return-value"></a>戻り値  
  標準の HRESULT 値。  
@@ -650,7 +650,7 @@ HRESULT WriteToStream(IStream* pStream) throw();
   
 ### <a name="parameters"></a>パラメーター  
  *pStream*  
- [in]ポインター、 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)ストリーム上のインターフェイス。  
+ [in]ポインター、 [IStream](/windows/desktop/api/objidl/nn-objidl-istream)ストリーム上のインターフェイス。  
   
 ### <a name="return-value"></a>戻り値  
  標準の HRESULT 値。  

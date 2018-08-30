@@ -9,15 +9,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c0bca9d1f60820b7ceeba633eead0aa9e572be5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8530a3c896d5c1dfa6568e166b9a0a43c0f0b0fc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612911"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208088"
 ---
 # <a name="operator-type"></a>Type^ 演算子
-[Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) から `Platform::Type`への変換を有効にします。  
+変換を有効[::interop::typename](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx)に`Platform::Type`します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -26,10 +26,10 @@ Operator Type^(Windows::UI::Xaml::Interop::TypeName typeName)
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `Platform::Type` Windows::UI::Xaml::Interop::TypeName [が指定されると、](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx)を返します。  
+ 返します、`Platform::Type`が指定されると、 [::interop::typename](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx)します。  
   
 ### <a name="remarks"></a>Remarks  
- `TypeName` は、型情報を表すための、言語に依存しない Windows ランタイムの構造体です。 [Platform::Type](../cppcx/platform-type-class.md) は C++ に固有で、アプリケーション バイナリ インターフェイス (ABI: Application Binary Interface) を通じて渡すことはできません。 `TypeName`Navigate [関数での](http://msdn.microsoft.com/library/windows/apps/hh702394.aspx) の使用例を次に示します。  
+ `TypeName` は、型情報を表すための、言語に依存しない Windows ランタイムの構造体です。 [Platform::Type](../cppcx/platform-type-class.md) は C++ に固有で、アプリケーション バイナリ インターフェイス (ABI: Application Binary Interface) を通じて渡すことはできません。 ここでの用途の 1 つは、`TypeName`の[Navigate](https://msdn.microsoft.com/library/windows/apps/hh702394.aspx)関数。  
   
 ```  
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);  

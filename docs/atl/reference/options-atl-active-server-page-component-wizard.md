@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdd3e62915b81311450cf4d798b04f8df30492ff
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 29a5209eb05958861a5c021f48bff1bf36654115
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884601"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205445"
 ---
 # <a name="options-atl-active-server-page-component-wizard"></a>オプション、ATL Active Server Page コンポーネント ウィザード
 効率の向上およびオブジェクトのエラーのサポートを設計するには、ATL Active Server Page コンポーネント ウィザードのこのページを使用します。  
@@ -35,14 +35,14 @@ ms.locfileid: "37884601"
   
 |オプション|説明|  
 |------------|-----------------|  
-|**Single**|オブジェクトが 1 つのスレッド処理モデルを使用するを指定します。 1 つのスレッド処理モデルのオブジェクトは、常にプライマリ COM スレッドで実行されます。 参照してください[シングル スレッド アパートメント](http://msdn.microsoft.com/library/windows/desktop/ms680112)と[InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390)詳細についてはします。|  
-|**アパートメント**|アパートメント スレッド オブジェクトを使用するを指定します。 1 つのと同じスレッド アパートメント。 アパートメント スレッド コンポーネントの各オブジェクトには、オブジェクトの有効期間中、そのスレッドのアパートメントが割り当てられています。ただし、複数のスレッドは、複数のオブジェクトで使用できます。 各アパートメントでは、特定のスレッドに関連付けられているしが Windows メッセージ ポンプ (既定値)。<br /><br /> 参照してください[シングル スレッド アパートメント](http://msdn.microsoft.com/library/windows/desktop/ms680112)詳細についてはします。|  
+|**Single**|オブジェクトが 1 つのスレッド処理モデルを使用するを指定します。 1 つのスレッド処理モデルのオブジェクトは、常にプライマリ COM スレッドで実行されます。 参照してください[シングル スレッド アパートメント](/windows/desktop/com/single-threaded-apartments)と[InprocServer32](/windows/desktop/com/inprocserver32)詳細についてはします。|  
+|**アパートメント**|アパートメント スレッド オブジェクトを使用するを指定します。 1 つのと同じスレッド アパートメント。 アパートメント スレッド コンポーネントの各オブジェクトには、オブジェクトの有効期間中、そのスレッドのアパートメントが割り当てられています。ただし、複数のスレッドは、複数のオブジェクトで使用できます。 各アパートメントでは、特定のスレッドに関連付けられているしが Windows メッセージ ポンプ (既定値)。<br /><br /> 参照してください[シングル スレッド アパートメント](/windows/desktop/com/single-threaded-apartments)詳細についてはします。|  
 |**両方とも**|あるオブジェクトで使用できるアパートメントまたはフリー スレッドのいずれかから、作成スレッドの種類に応じてを指定します。|  
-|**無料**|フリー スレッド オブジェクトを使用するを指定します。 フリー スレッドは、マルチ スレッド アパートメント モデルと同じです。 参照してください[マルチ スレッド アパートメント](http://msdn.microsoft.com/library/windows/desktop/ms693421)詳細についてはします。|  
+|**無料**|フリー スレッド オブジェクトを使用するを指定します。 フリー スレッドは、マルチ スレッド アパートメント モデルと同じです。 参照してください[マルチ スレッド アパートメント](/windows/desktop/com/multithreaded-apartments)詳細についてはします。|  
 |**Neutral**|どの種類のスレッドで実行できる、オブジェクト、マルチ スレッド アパートメントのガイドラインに従うことを指定します。|  
   
  **集計**  
- オブジェクトが使用するかどうかを示す[集計](http://msdn.microsoft.com/library/windows/desktop/ms686558)します。 集約オブジェクトは、クライアントに公開するインターフェイスを選択し、集約オブジェクトには、それらが実装されているかのように、インターフェイスを公開します。 集約オブジェクトのクライアントは、集約オブジェクトとのみ通信します。  
+ オブジェクトが使用するかどうかを示す[集計](/windows/desktop/com/aggregation)します。 集約オブジェクトは、クライアントに公開するインターフェイスを選択し、集約オブジェクトには、それらが実装されているかのように、インターフェイスを公開します。 集約オブジェクトのクライアントは、集約オブジェクトとのみ通信します。  
   
 |オプション|説明|  
 |------------|-----------------|  

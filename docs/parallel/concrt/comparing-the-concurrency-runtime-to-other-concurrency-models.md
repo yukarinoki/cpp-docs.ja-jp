@@ -1,5 +1,5 @@
 ---
-title: その他の同時実行モデルの同時実行ランタイムとの比較 |Microsoft ドキュメント
+title: その他の同時実行モデルの同時実行ランタイムとの比較 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3fa78ac5dbb5d3872c27db3c4ab3e8778fe1668
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fb4a588f1b9c7f5bc1d9d4f82ca9f7de767ba7e3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694070"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207212"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>同時実行ランタイムとその他の同時実行モデルの比較
 このドキュメントでは、同時実行ランタイムとその他のテクノロジの機能やプログラミング モデルの違いについて説明します。 同時実行ランタイムのメリットと他のプログラミング モデルのメリットの違いを理解しておくことによって、アプリケーションの要件に最も適したテクノロジを選択できます。  
@@ -64,7 +64,7 @@ ms.locfileid: "33694070"
  Windows API では、C プログラミング言語を使用して、プログラミング モデルを公開します。 同時実行ランタイムでは、C++ 言語の最新機能を利用する C++ プログラミング インターフェイスを提供します。 たとえば、ラムダ関数は、並列処理関数を定義するための簡潔なタイプ セーフ メカニズムを提供します。 同時実行ランタイムが使用する最新の C++ 機能の詳細については、[概要](../../parallel/concrt/asynchronous-message-blocks.md)に関するページを参照してください。  
   
 ### <a name="threads-and-thread-pools"></a>スレッドとスレッド プール  
- Windows API の中心となる同時実行メカニズムはスレッドです。 通常、 [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) 関数を使用してスレッドを作成します。 スレッドは比較的簡単に作成して使用できますが、オペレーティング システムは、それらを管理するのに時間とその他のリソースを大量に割り当てます。 さらに、各スレッドには、同じ優先順位の他のスレッドと同じ実行時間が割り当てられることが保証されていますが、関連するオーバーヘッドのために、十分に大きいタスクを作成する必要があります。 小規模なタスクまたは詳細なタスクの場合、同時実行に関連するオーバーヘッドにより、並列にタスクを実行することの利点が打ち消される可能性があります。  
+ Windows API の中心となる同時実行メカニズムはスレッドです。 通常、 [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) 関数を使用してスレッドを作成します。 スレッドは比較的簡単に作成して使用できますが、オペレーティング システムは、それらを管理するのに時間とその他のリソースを大量に割り当てます。 さらに、各スレッドには、同じ優先順位の他のスレッドと同じ実行時間が割り当てられることが保証されていますが、関連するオーバーヘッドのために、十分に大きいタスクを作成する必要があります。 小規模なタスクまたは詳細なタスクの場合、同時実行に関連するオーバーヘッドにより、並列にタスクを実行することの利点が打ち消される可能性があります。  
   
  スレッド プールは、スレッド管理のコストを削減する方法の 1 つです。 Windows API が提供しているカスタム スレッド プールとスレッド プール実装の 2 つは、小規模な作業項目を効率的に並列で実行できるようにします。 Windows スレッド プールでは、先入れ先出し (FIFO) キューに作業項目を保持します。 各作業項目は、プールに追加された順序で開始されます。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "33694070"
   
  Windows 7 および Windows Server 2008 R2 では、オペレーティング システムは同時実行とスケーラビリティをさらにサポートしています。 たとえば、これらのオペレーティング システムは、64 を超えるハードウェア スレッドが存在するコンピューターをサポートします。 Windows API を使用する既存のアプリケーションでこれらの新しい機能を利用するには、アプリケーションを変更する必要があります。 ただし、同時実行ランタイムを使用するアプリケーションは自動的にこれらの機能を使用するため、変更は必要ありません。  
   
- [base.user mode_scheduling](http://msdn.microsoft.com/library/windows/desktop/dd627187)  
+ [base.user mode_scheduling](https://msdn.microsoft.com/library/windows/desktop/dd627187)  
   
  [[トップ](#top)]  
   

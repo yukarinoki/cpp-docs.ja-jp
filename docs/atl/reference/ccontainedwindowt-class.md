@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e7e77238478e32fd5b45f96cdd8a86c2205eef7
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 94468f2499a349847f62ed65a03e88cf776536ce
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882846"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207197"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT クラス
 このクラスは、別のオブジェクト内に含まれるウィンドウを実装します。  
@@ -115,14 +115,14 @@ class CContainedWindowT : public TBase
 |コントロールの作成|[ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)|  
 |ATL でのウィンドウの使用|[ATL ウィンドウ クラス](../../atl/atl-window-classes.md)|  
 |ATL プロジェクト ウィザード|[ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)|  
-|Windows|[Windows](http://msdn.microsoft.com/library/windows/desktop/ms632595)と Windows SDK の後続のトピック|  
+|Windows|[Windows](https://msdn.microsoft.com/library/windows/desktop/ms632595)と Windows SDK の後続のトピック|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `TBase`  
   
  `CContainedWindowT`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlwin.h  
   
 ##  <a name="ccontainedwindowt"></a>  CContainedWindowT::CContainedWindowT  
@@ -214,22 +214,22 @@ HWND Create(
  [in]親またはオーナー ウィンドウのハンドル。  
   
  *rect*  
- [in]A [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)ウィンドウの位置を指定する構造体。 `RECT`ポインターまたは参照によって渡すことができます。  
+ [in]A [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)ウィンドウの位置を指定する構造体。 `RECT`ポインターまたは参照によって渡すことができます。  
   
  *szWindowName*  
  [in]ウィンドウの名前を指定します。 既定値は、NULL です。  
   
  *dwStyle*  
- [in]ウィンドウのスタイル。 既定値は WS_CHILD &#124; WS_VISIBLE します。 使用可能な値の一覧は、次を参照してください。 [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK に含まれています。  
+ [in]ウィンドウのスタイル。 既定値は WS_CHILD &#124; WS_VISIBLE します。 使用可能な値の一覧は、次を参照してください。 [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK に含まれています。  
   
  *dwExStyle*  
- [in]拡張ウィンドウ スタイル。 既定値は 0、つまり拡張スタイルはありません。 使用可能な値の一覧は、次を参照してください。 [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK に含まれています。  
+ [in]拡張ウィンドウ スタイル。 既定値は 0、つまり拡張スタイルはありません。 使用可能な値の一覧は、次を参照してください。 [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK に含まれています。  
   
  *MenuOrID*  
  [in]子ウィンドウの場合、ウィンドウの識別子。 最上位レベルのウィンドウでは、メニューはウィンドウのハンドルします。 既定値は**0 u**します。  
   
  *lpCreateParam*  
- [in]ウィンドウの作成データへのポインター。 詳細については、最後のパラメーターの説明を参照してください。 [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)します。  
+ [in]ウィンドウの作成データへのポインター。 詳細については、最後のパラメーターの説明を参照してください。 [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)します。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、新しく作成されたウィンドウを識別するハンドルそれ以外の場合は NULL です。  
@@ -268,7 +268,7 @@ LRESULT DefWindowProc(
  メッセージの処理の結果。  
   
 ### <a name="remarks"></a>Remarks  
- 既定では、`DefWindowProc`呼び出し、 [CallWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633571)ウィンドウ プロシージャで指定されたメッセージの情報を送信する Win32 関数[コンテナー内](#m_pfnsuperwindowproc)します。  
+ 既定では、`DefWindowProc`呼び出し、 [CallWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633571)ウィンドウ プロシージャで指定されたメッセージの情報を送信する Win32 関数[コンテナー内](#m_pfnsuperwindowproc)します。  
   
 ##  <a name="getcurrentmessage"></a>  CContainedWindowT::GetCurrentMessage  
  現在のメッセージが返されます (`m_pCurrentMsg`)。  

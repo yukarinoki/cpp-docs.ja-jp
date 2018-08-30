@@ -1,5 +1,5 @@
 ---
-title: 致命的なエラー C1108 |Microsoft ドキュメント
+title: 致命的なエラー C1108 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de8b00f61a70e7c40f442173acace2e9f186d1d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 84f301669e1aeead5a8c92f59fbaaaf87167fef4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225175"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203925"
 ---
 # <a name="fatal-error-c1108"></a>致命的なエラー C1108
-次の DLL ファイルが見つかりません: 'dll'  
-  
- 指定された DLL (***dll***) がパスに見つかりませんでした。  
-  
- このエラーを解決するには、Visual C++ を再インストールするか、インストール CD からコンピューターに適切な .dll ファイルをコピーします。
+
+> DLL が見つかりません: '*dll 名*'
+
+指定された DLL (*dll 名*) パスに見つかりませんでした。
+
+このエラーを解決するには、Visual C を再インストールするか、インストールに適切な .dll ファイルをコンピューターにコピーします。

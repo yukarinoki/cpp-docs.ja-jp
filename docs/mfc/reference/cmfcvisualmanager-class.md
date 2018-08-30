@@ -354,12 +354,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9ac21e909c8286ef6a7d1973837b0caf69b711c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0eb6e8da3caa9286e14072726488ad1c16f47b1e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538948"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203643"
 ---
 # <a name="cmfcvisualmanager-class"></a>CMFCVisualManager クラス
 グローバル レベルでアプリケーションの外観変更のサポートを提供します。 `CMFCVisualManager` クラスは、一貫したスタイルを使用してアプリケーションの GUI コントロールを描画する機能を提供するクラスと連携します。 これらの連携するクラスはビジュアル マネージャーと呼ばれ、 `CMFCBaseVisualManager`から継承されます。  
@@ -790,7 +790,7 @@ virtual COLORREF GetAutoHideButtonTextColor(CMFCAutoHideButton* pButton);
  自動的に隠すボタンへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)のテキストの色を指定するパラメーター *pButton*します。  
+ A [COLORREF](/windows/desktop/gdi/colorref)のテキストの色を指定するパラメーター *pButton*します。  
   
 ### <a name="remarks"></a>Remarks  
  アプリケーションで自動的に隠すボタンのテキストの色をカスタマイズする派生クラスでは、このメソッドをオーバーライドします。 これを行うには、テキストの色として使用するアプリケーションを使用する色を返します。  
@@ -820,7 +820,7 @@ virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
  キャプション バーへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)パラメーター内のテキストの色を示す*pBar*します。  
+ A [COLORREF](/windows/desktop/gdi/colorref)パラメーター内のテキストの色を示す*pBar*します。  
   
 ### <a name="remarks"></a>Remarks  
  キャプション バーのテキストの色をカスタマイズする、派生クラスでは、このメソッドをオーバーライドします。 オーバーライドされたメソッドでは、目的の色を返します。  
@@ -998,7 +998,7 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
  フレームワークを描画するプロパティ リストへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)の背景色を示すパラメーター *pPropList*します。  
+ A [COLORREF](/windows/desktop/gdi/colorref)の背景色を示すパラメーター *pPropList*します。  
   
 ### <a name="remarks"></a>Remarks  
  アプリケーションのプロパティ リストの背景色をカスタマイズするには、この関数をオーバーライドします。  
@@ -1015,7 +1015,7 @@ virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
  プロパティ リストへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)プロパティ リストのテキストの色を示すパラメーターです。  
+ A [COLORREF](/windows/desktop/gdi/colorref)プロパティ リストのテキストの色を示すパラメーターです。  
   
 ### <a name="remarks"></a>Remarks  
  アプリケーションのプロパティ リストのテキストの色をカスタマイズするには、この関数をオーバーライドします。  
@@ -1214,7 +1214,7 @@ virtual void GetTabFrameColors(
  フレームがタブを描画はタブ付きウィンドウへのポインター。  
   
  [out]*clrDark*  
- 参照を[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)パラメーターがこのメソッドが、タブの濃い境界線の色を格納します。  
+ 参照を[COLORREF](/windows/desktop/gdi/colorref)パラメーターがこのメソッドが、タブの濃い境界線の色を格納します。  
   
  [out]*clrBlack*  
  このメソッドがタブ ウィンドウの境界線の色を格納する COLORREF パラメーターへの参照。 境界線用の既定の色は黒です。  
@@ -1778,7 +1778,7 @@ virtual BOOL OnDrawBrowseButton(
  ボタンの状態を指定する列挙値。  
   
  [out]*clrText*  
- 参照を[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)パラメーター。 これは、予約済みの値があり、現在使用されているではありません。  
+ 参照を[COLORREF](/windows/desktop/gdi/colorref)パラメーター。 これは、予約済みの値があり、現在使用されているではありません。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は TRUE、それ以外の場合は FALSE。  
@@ -2578,7 +2578,7 @@ virtual COLORREF OnDrawPaneCaption(
  キャプション ボタンの境界を指定する四角形。  
   
 ### <a name="return-value"></a>戻り値  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)キャプションのテキストの色を示すパラメーターです。  
+ A [COLORREF](/windows/desktop/gdi/colorref)キャプションのテキストの色を示すパラメーターです。  
   
 ### <a name="remarks"></a>Remarks  
  ウィンドウのキャプションの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
@@ -2805,7 +2805,7 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
  キャプション バーへのポインター。 ビジュアル マネージャーでは、この描画[CMFCRibbonContextCaption クラス](../../mfc/reference/cmfcribboncontextcaption-class.md)オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)キャプション バーにテキストの色を示すパラメーターです。  
+ A [COLORREF](/windows/desktop/gdi/colorref)キャプション バーにテキストの色を示すパラメーターです。  
   
 ### <a name="remarks"></a>Remarks  
  リボン カテゴリのタイトル バーの外観をカスタマイズする派生クラスでこのメソッドをオーバーライドします。 キャプション バーの詳細については、次を参照してください。 [CMFCRibbonContextCaption クラス](../../mfc/reference/cmfcribboncontextcaption-class.md)します。  
@@ -3590,7 +3590,7 @@ virtual void OnDrawStatusBarProgress(
  進行状況バーの現在の進行状況。  
   
  [in]*clrBar*  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)進行状況バーが初期の色を示すパラメーターです。 値は、いずれかの色グラデーションの開始または終了の進行状況バーの色です。  
+ A [COLORREF](/windows/desktop/gdi/colorref)進行状況バーが初期の色を示すパラメーターです。 値は、いずれかの色グラデーションの開始または終了の進行状況バーの色です。  
   
  [in]*clrProgressBarDest*  
  進行状況バーの色グラデーションの終了位置を示す COLORREF パラメーター。 場合*clrProgressBarDest* -1 で、フレームワークは色のグラデーションとして進行状況バーを描画できません。 代わりに、全体の進行状況バーで指定された色で塗りつぶす*clrBar*します。  
@@ -4250,7 +4250,7 @@ virtual void OnFillOutlookBarCaption(
  キャプション バーの境界を指定する四角形。  
   
  [out]*clrText*  
- 参照を[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)パラメーター。 メソッドは、このパラメーターに、キャプション バーにテキストの色を書き込みます。  
+ 参照を[COLORREF](/windows/desktop/gdi/colorref)パラメーター。 メソッドは、このパラメーターに、キャプション バーにテキストの色を書き込みます。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドの既定の実装では、現在のスキンを使用して影の色でキャプション バーを塗りつぶします。 Outlook のキャプション バーの色をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
@@ -4281,7 +4281,7 @@ virtual void OnFillOutlookPageButton(
  ボタンが押されたかどうかを指定するブール型パラメーター。  
   
  [out]*clrText*  
- 参照を[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)パラメーター。 このメソッドは、このパラメーターに outlook のページ ボタンのテキストの色を格納します。  
+ 参照を[COLORREF](/windows/desktop/gdi/colorref)パラメーター。 このメソッドは、このパラメーターに outlook のページ ボタンのテキストの色を格納します。  
   
 ### <a name="remarks"></a>Remarks  
  Outlook のページ ボタンの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、この関数をオーバーライドします。  

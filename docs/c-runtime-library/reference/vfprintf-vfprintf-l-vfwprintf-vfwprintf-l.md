@@ -45,12 +45,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c45ff050a00382f8e10c38fecd5001e20efcacf4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9fb905384d2efd75c9f8059b462ed8a6949a90cb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415508"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216050"
 ---
 # <a name="vfprintf-vfprintfl-vfwprintf-vfwprintfl"></a>vfprintf、_vfprintf_l、vfwprintf、_vfwprintf_l
 
@@ -101,20 +101,20 @@ int _vfwprintf_l(
 
 ## <a name="return-value"></a>戻り値
 
-**vfprintf**と**vfwprintf**を含まない終端の null 文字または負の値の出力エラーが発生した場合、書き込まれる文字数を返します。 いずれか*ストリーム*または*形式*null ポインターで説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は-1 を返します設定と**errno**に**EINVAL**です。
+**vfprintf**と**vfwprintf**出力エラーが発生した場合に、終端の null 文字または負の値をしないなど、書き込まれる文字数を返します。 いずれか*ストリーム*または*形式*null ポインターの場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は-1 を返し設定と**errno**に**EINVAL**します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-これらの各関数は、引数リストへのポインターをとり書式化してに指定されたデータを書き込む*ストリーム*です。
+これらの各関数、引数リストへのポインターを受け取る書式設定して、特定のデータを書き込みます*ストリーム*します。
 
-**vfwprintf**のワイド文字バージョンは、 **vfprintf**; ストリームが ANSI モードで開かれている場合、2 つの関数動作は同じです。 **vfprintf** UNICODE ストリームへの出力はサポートされていません。
+**vfwprintf**のワイド文字バージョンは、 **vfprintf**; 2 つの関数は、動作、ストリームが ANSI モードで開かれている場合は同じです。 **vfprintf** UNICODE ストリームへの出力をサポートされていません。
 
 これらの関数のバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
 
 > [!IMPORTANT]
-> *format* にユーザー定義の文字列を指定しないでください。 詳しくは、「 [バッファー オーバーランの回避](http://msdn.microsoft.com/library/windows/desktop/ms717795)」をご覧ください。
+> *format* にユーザー定義の文字列を指定しないでください。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -125,7 +125,7 @@ int _vfwprintf_l(
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|省略可能なヘッダー|
+|ルーチンによって返される値|必須ヘッダー|省略可能なヘッダー|
 |-------------|---------------------|----------------------|
 |**vfprintf**、 **_vfprintf_l**|\<stdio.h> および \<stdarg.h>|\<varargs.h>*|
 |**vfwprintf**、 **_vfwprintf_l**|\<stdio.h> または \<wchar.h>、および \<stdarg.h>|\<varargs.h>*|

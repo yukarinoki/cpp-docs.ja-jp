@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3da308e92554bd573e9efccdd47aa6e6fd71e26a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 08d7edc11584f7a7c6d2b218d9bfbbcf8d3020a4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850236"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212105"
 ---
 # <a name="cmfccolorbar-class"></a>CMFCColorBar クラス
 `CMFCColorBar`クラスは、ドキュメントやアプリケーションで色を選択できるドッキング コントロール バーを表します。  
@@ -161,11 +161,11 @@ class CMFCColorBar : public CMFCPopupMenuBar
 |`m_BoxSize`|A [CSize](../../atl-mfc-shared/reference/csize-class.md)カラー バーのグリッドでセルのサイズを指定するオブジェクト。|  
 |`m_bShowDocColorsWhenDocked`|カラー バーがドッキングされているときに、ドキュメントの色を表示するかどうかを示すブール値。 詳細については、次を参照してください。 [CMFCColorBar::SetDocumentColors](#setdocumentcolors)します。|  
 |`m_bStdColorDlg`|標準のシステム カラーのダイアログ ボックスを表示するかどうかを示すブール値、または[CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)  ダイアログ ボックス。 詳細については、次を参照してください。 [CMFCColorBar::EnableOtherButton](#enableotherbutton)します。|  
-|`m_ColorAutomatic`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)自動の現在の色を格納します。 詳細については、次を参照してください。 [CMFCColorBar::EnableOtherButton](#enableotherbutton)します。|  
+|`m_ColorAutomatic`|A [COLORREF](/windows/desktop/gdi/colorref)自動の現在の色を格納します。 詳細については、次を参照してください。 [CMFCColorBar::EnableOtherButton](#enableotherbutton)します。|  
 |`m_ColorNames`|[CMap](../../mfc/reference/cmap-class.md)名で色の RGB のセットを関連付けるオブジェクト。|  
-|`m_colors`|A [CArray](../../mfc/reference/carray-class.md)の[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)カラー バー コントロールに表示される色を含む値。|  
-|`m_ColorSelected`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)値が、ユーザーがカラー バー コントロールで選択された現在の色。|  
-|`m_lstDocColors`|A [CList](../../mfc/reference/clist-class.md)の[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)ドキュメントで現在使用されている色を含む値。|  
+|`m_colors`|A [CArray](../../mfc/reference/carray-class.md)の[COLORREF](/windows/desktop/gdi/colorref)カラー バー コントロールに表示される色を含む値。|  
+|`m_ColorSelected`|A [COLORREF](/windows/desktop/gdi/colorref)値が、ユーザーがカラー バー コントロールで選択された現在の色。|  
+|`m_lstDocColors`|A [CList](../../mfc/reference/clist-class.md)の[COLORREF](/windows/desktop/gdi/colorref)ドキュメントで現在使用されている色を含む値。|  
 |`m_nCommandID`|色のボタンのコマンド ID は、符号なし整数。|  
 |`m_nHorzMargin`|色のグリッドの色のボタンの間の水平方向の余白の整数。|  
 |`m_nHorzOffset`|色のボタンの中心に水平方向のオフセットを示す整数。 この値はテキストまたは色だけでなくイメージ ボタンを表示する場合に重要です。|  
@@ -233,7 +233,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
   
  [CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxcolorbar.h  
   
 ##  <a name="adjustlocations"></a>  CMFCColorBar::AdjustLocations  

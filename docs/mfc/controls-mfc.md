@@ -1,5 +1,5 @@
 ---
-title: コントロール (MFC) |Microsoft ドキュメント
+title: コントロール (MFC) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd841b6bc3c55ed58db101c6226bbc24819b248f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1226584d52d9f09b34e9dae8d00095fc923396fd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353685"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206876"
 ---
 # <a name="controls-mfc"></a>コントロール (MFC)
 コントロールは、データを入力または操作するときにユーザーが取り扱うオブジェクトです。 通常は、ダイアログ ボックスまたはツール バー上に表示されます。 ここでは、主な 3 種類のコントロールについて説明します。  
@@ -54,34 +54,34 @@ ms.locfileid: "33353685"
   
 ### <a name="_core_windows_common_controls_and_mfc_classes"></a>  Windows コモン コントロールと MFC クラス  
   
-|コントロール|MFC クラス|説明|Windows 95 で追加|  
+|コントロール|MFC クラス|説明|Windows 95 の新機能|  
 |-------------|---------------|-----------------|------------------------|  
 |[アニメーション](../mfc/using-canimatectrl.md)|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|AVI ビデオ クリップのフレームを連続的に表示します。|[はい]|  
-|ボタン|[CButton](../mfc/reference/cbutton-class.md)|アクションを発生させるプッシュ ボタン。チェック ボックス、オプション ボタン、およびグループ ボックスにも使用します。|×|  
-|コンボ ボックス|[CComboBox](../mfc/reference/ccombobox-class.md)|エディット ボックスとリスト ボックスを組み合わせたものです。|×|  
+|ボタン|[CButton](../mfc/reference/cbutton-class.md)|アクションを発生させるプッシュ ボタン。チェック ボックス、オプション ボタン、およびグループ ボックスにも使用します。|いいえ|  
+|コンボ ボックス|[CComboBox](../mfc/reference/ccombobox-class.md)|エディット ボックスとリスト ボックスを組み合わせたものです。|いいえ|  
 |[日時指定](../mfc/using-cdatetimectrl.md)|[CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)|ユーザーが特定の日付または時刻の値を選択できます。|[はい]|  
-|エディット ボックス|[CEdit](../mfc/reference/cedit-class.md)|テキスト入力用のボックスです。|×|  
+|エディット ボックス|[CEdit](../mfc/reference/cedit-class.md)|テキスト入力用のボックスです。|いいえ|  
 |[拡張コンボ ボックス](../mfc/using-ccomboboxex.md)|[CComboBoxEx](../mfc/reference/ccomboboxex-class.md)|イメージを表示できるコンボ ボックス コントロールです。|[はい]|  
 |[ヘッダー](../mfc/using-cheaderctrl.md)|[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)|テキストの列の上に表示されるボタンで、テキストの表示幅を制御します。|[はい]|  
 |[ホット キー](../mfc/using-chotkeyctrl.md)|[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)|アクションをすばやく実行するための "ホット キー" を作成できるウィンドウです。|[はい]|  
 |[イメージ リスト。](../mfc/using-cimagelist.md)|[CImageList](../mfc/reference/cimagelist-class.md)|多数のアイコンまたはビットマップの管理に使用するイメージのコレクションです。イメージ リストは実際にはコントロールではなく、他のコントロールで使用されるリストをサポートします。|[はい]|  
 |[リスト](../mfc/using-clistctrl.md)|[CListCtrl](../mfc/reference/clistctrl-class.md)|アイコンと共にテキストのリストを表示するウィンドウです。|[はい]|  
-|リスト ボックス|[CListBox](../mfc/reference/clistbox-class.md)|文字列のリストを格納するボックスです。|×|  
+|リスト ボックス|[CListBox](../mfc/reference/clistbox-class.md)|文字列のリストを格納するボックスです。|いいえ|  
 |[月間予定表](../mfc/using-cmonthcalctrl.md)|[CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)|日付情報を表示するコントロールです。|[はい]|  
 |[progress](../mfc/using-cprogressctrl.md)|[CProgressCtrl](../mfc/reference/cprogressctrl-class.md)|時間のかかる処理を実行する場合に、その進行状況を示すウィンドウです。|[はい]|  
 |[rebar](../mfc/using-crebarctrl.md)|[CRebarCtrl](../mfc/reference/crebarctrl-class.md)|子ウィンドウをコントロールとして追加できるツール バーです。|[はい]|  
 |[リッチ エディット](../mfc/using-cricheditctrl.md)|[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)|ユーザーが文字書式および段落書式を設定して編集できるウィンドウです (「 [リッチ エディット コントロールに関連するクラス](../mfc/classes-related-to-rich-edit-controls.md)」を参照)。|[はい]|  
-|スクロール バー|[CScrollBar](../mfc/reference/cscrollbar-class.md)|ウィンドウ上ではなくダイアログ ボックス内のコントロールとして使用されるスクロール バーです。|×|  
+|スクロール バー|[CScrollBar](../mfc/reference/cscrollbar-class.md)|ウィンドウ上ではなくダイアログ ボックス内のコントロールとして使用されるスクロール バーです。|いいえ|  
 |[スライダー](../mfc/using-csliderctrl.md)|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|オプションで軸目盛りを表示できるスライダー コントロールが配置されたウィンドウです。|[はい]|  
 |[スピン ボタン](../mfc/using-cspinbuttonctrl.md)|[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)|ユーザーが値の増減をクリック操作で指定できる矢印ボタンです。増加用と減少用がペアになっています。|[はい]|  
-|静的テキスト|[CStatic](../mfc/reference/cstatic-class.md)|他のコントロールのラベルに使用するテキストです。|×|  
+|静的テキスト|[CStatic](../mfc/reference/cstatic-class.md)|他のコントロールのラベルに使用するテキストです。|いいえ|  
 |[ステータス バー](../mfc/using-cstatusbarctrl.md)|[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)|ステータス情報を表示するためのウィンドウです。MFC クラスの `CStatusBar`に似ています。|[はい]|  
 |[タブ](../mfc/using-ctabctrl.md)|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|ノートの仕切りのような役割を果たします。"タブ ダイアログ ボックス" またはプロパティ シートで使用します。|[はい]|  
 |[ツール バー](../mfc/using-ctoolbarctrl.md)|[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)|コマンド生成ボタンを持つウィンドウです。MFC クラスの `CToolBar`に似ています。|[はい]|  
 |[ツール ヒント](../mfc/using-ctooltipctrl.md)|[CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)|ツール バー ボタンなどのツールの用途の説明を表示する小さなポップアップ ウィンドウです。|[はい]|  
 |[ツリー](../mfc/using-ctreectrl.md)|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|項目を階層化されたリストとして表示するウィンドウです。|[はい]|  
   
-### <a name="what-do-you-want-to-know-more-about"></a>詳しくは次のトピックをクリックしてください。  
+### <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います  
   
 -   各コントロールへのリンクについては、上記の「 [Windows コモン コントロールと MFC クラス](#_core_windows_common_controls_and_mfc_classes) 」を参照してください。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "33353685"
   
 -   [サンプル](../mfc/common-control-sample-list.md)  
   
- Windows SDK の Windows コモン コントロールの概要については、次を参照してください。[コモン コントロール](http://msdn.microsoft.com/library/windows/desktop/bb775493)です。  
+ Windows SDK の Windows コモン コントロールについては、次を参照してください。[コモン コントロール](/windows/desktop/Controls/common-controls-intro)します。  
   
 ## <a name="see-also"></a>関連項目  
  [ユーザー インターフェイス要素](../mfc/user-interface-elements-mfc.md)   

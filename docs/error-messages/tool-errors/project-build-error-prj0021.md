@@ -1,7 +1,7 @@
 ---
-title: プロジェクト ビルド エラー PRJ0021 |Microsoft ドキュメント
+title: プロジェクト ビルド エラー PRJ0021 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1695a9bf75fe5b3f0fa05b42245067f98c5e1655
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6697fbfd23dbf07a66292ca7d15ca8ef3b064cd9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324458"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203340"
 ---
 # <a name="project-build-error-prj0021"></a>プロジェクト ビルド エラー PRJ0021
-ツール 'ツール' に、プロパティ 'property' には、無効なファイル名が含まれています。  
-  
- プロパティで指定されたファイル名***プロパティ***、ツールは、***ツール***、無効です。  
-  
- 不明または無効なマクロを使用することがあります。  
-  
- 参照してください[Visual C プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)については、プロジェクトのプロパティにアクセスする方法です。
+
+> ツール '*ツール*'、プロパティ'*プロパティ*' 無効なファイル名が含まれています。
+
+プロパティで指定されたファイル名*プロパティ*ツールの*ツール*が無効です。
+
+不明または無効なマクロを使用することがあります。
+
+参照してください[Visual C プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)については、プロジェクトのプロパティにアクセスする方法。

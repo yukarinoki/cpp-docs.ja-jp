@@ -110,12 +110,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ece09b51dba7be272a208478d48196024189180e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 2f2be7e74de20c1ecac2ea0a58c167cd7384e89a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853525"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212359"
 ---
 # <a name="cricheditview-class"></a>CRichEditView クラス
 [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)と[CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)MFC のドキュメント ビュー アーキテクチャのコンテキストでリッチ エディット コントロールの機能を提供します。  
@@ -217,7 +217,7 @@ class CRichEditView : public CCtrlView
   
  `CRichEditView`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxrich.h  
   
 ##  <a name="adjustdialogposition"></a>  CRichEditView::AdjustDialogPosition  
@@ -344,16 +344,16 @@ CHARFORMAT2& GetCharFormatSelection();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- A [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883)を現在の選択の属性を書式設定文字を含む構造体。  
+ A [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a)を現在の選択の属性を書式設定文字を含む構造体。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。、 [EM_GETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb788026)メッセージと[CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) Windows SDK の構造体。  
+ 詳細については、次を参照してください。、 [EM_GETCHARFORMAT](/windows/desktop/Controls/em-getcharformat)メッセージと[CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) Windows SDK の構造体。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#152](../../mfc/codesnippet/cpp/cricheditview-class_2.cpp)]  
   
 ##  <a name="getclipboarddata"></a>  CRichEditView::GetClipboardData  
- フレームワークの処理の一環としてこの関数を呼び出す[IRichEditOleCallback::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/bb774315)します。  
+ フレームワークの処理の一環としてこの関数を呼び出す[IRichEditOleCallback::GetClipboardData](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getclipboarddata)します。  
   
 ```  
 virtual HRESULT GetClipboardData(
@@ -365,7 +365,7 @@ virtual HRESULT GetClipboardData(
   
 ### <a name="parameters"></a>パラメーター  
  *lpchrg*  
- ポインター、[上](http://msdn.microsoft.com/library/windows/desktop/bb787885)構造体で指定されたデータ オブジェクトにコピーする文字 (と OLE アイテム) の範囲を指定する*と*します。  
+ ポインター、[上](/windows/desktop/api/richedit/ns-richedit-_charrange)構造体で指定されたデータ オブジェクトにコピーする文字 (と OLE アイテム) の範囲を指定する*と*します。  
   
  *dwReco*  
  クリップボードの操作フラグです。 これらの値のいずれかを指定できます。  
@@ -381,23 +381,23 @@ virtual HRESULT GetClipboardData(
 - クリップボードから貼り付けを RECO_PASTE します。  
   
  *lpRichDataObj*  
- ポインター、 [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421)豊富なからクリップボードのデータを格納しているオブジェクトの編集コントロール ( [IRichEditOle::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/bb774341))。  
+ ポインター、 [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject)豊富なからクリップボードのデータを格納しているオブジェクトの編集コントロール ( [IRichEditOle::GetClipboardData](/windows/desktop/api/richole/nf-richole-iricheditole-getclipboarddata))。  
   
  *と*  
  アドレスを受け取るポインター変数へのポインター、`IDataObject`オブジェクトで指定された範囲を表す、 *lpchrg*パラメーター。 値*と*エラーが返される場合は無視されます。  
   
 ### <a name="return-value"></a>戻り値  
- 操作の成功を報告する HRESULT 値。 HRESULT の詳細については、次を参照してください。 [COM エラー コードの構造](http://msdn.microsoft.com/library/windows/desktop/ms690088)Windows SDK に含まれています。  
+ 操作の成功を報告する HRESULT 値。 HRESULT の詳細については、次を参照してください。 [COM エラー コードの構造](/windows/desktop/com/structure-of-com-error-codes)Windows SDK に含まれています。  
   
 ### <a name="remarks"></a>Remarks  
  戻り値が成功すると、示された場合`IRichEditOleCallback::GetClipboardData`を返します、`IDataObject`によってアクセス*と*。 それ以外がアクセスする 1 つを返します*lpRichDataObj*します。 クリップボードのデータを提供するには、この関数をオーバーライドします。 この関数の既定の実装では、E_NOTIMPL を返します。  
   
  これは、高度なオーバーライド可能な。  
   
- 詳細については、次を参照してください[IRichEditOle::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/bb774341)、 [IRichEditOleCallback::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/bb774315)、および[上](http://msdn.microsoft.com/library/windows/desktop/bb787885)Windows SDK と参照[。IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) Windows SDK にします。  
+ 詳細については、次を参照してください[IRichEditOle::GetClipboardData](/windows/desktop/api/richole/nf-richole-iricheditole-getclipboarddata)、 [IRichEditOleCallback::GetClipboardData](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getclipboarddata)、および[上](/windows/desktop/api/richedit/ns-richedit-_charrange)Windows SDK と参照[。IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) Windows SDK にします。  
   
 ##  <a name="getcontextmenu"></a>  CRichEditView::GetContextMenu  
- フレームワークの処理の一環としてこの関数を呼び出す[IRichEditOleCallback::GetContextMenu](http://msdn.microsoft.com/library/windows/desktop/bb774317)します。  
+ フレームワークの処理の一環としてこの関数を呼び出す[IRichEditOleCallback::GetContextMenu](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getcontextmenu)します。  
   
 ```  
 virtual HMENU GetContextMenu(
@@ -414,7 +414,7 @@ virtual HMENU GetContextMenu(
  ポインター、`OLEOBJECT`選択範囲には、1 つまたは複数の OLE 項目が含まれている場合は、最初に選択した OLE オブジェクトを指定する構造体。 選択範囲に、項目が含まれていない場合*持っていないとき*は NULL です。 `OLEOBJECT` OLE オブジェクト v テーブルへのポインターを保持する構造体。  
   
  *lpchrg*  
- ポインターを[上](http://msdn.microsoft.com/library/windows/desktop/bb787885)現在の選択範囲を含む構造体。  
+ ポインターを[上](/windows/desktop/api/richedit/ns-richedit-_charrange)現在の選択範囲を含む構造体。  
   
 ### <a name="return-value"></a>戻り値  
  コンテキスト メニューへのハンドルします。  
@@ -436,7 +436,7 @@ virtual HMENU GetContextMenu(
   
  既定の実装では、NULL を返します。 これは、高度なオーバーライド可能な。  
   
- 詳細については、次を参照してください。 [IRichEditOleCallback::GetContextMenu](http://msdn.microsoft.com/library/windows/desktop/bb774317)と[上](http://msdn.microsoft.com/library/windows/desktop/bb787885)Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IRichEditOleCallback::GetContextMenu](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getcontextmenu)と[上](/windows/desktop/api/richedit/ns-richedit-_charrange)Windows SDK に含まれています。  
   
  詳細については、 `OLEOBJECT` OLE データ構造体と構造体の割り当ての記事を参照して、入力、 *OLE サポート技術情報*します。  
   
@@ -504,10 +504,10 @@ PARAFORMAT2& GetParaFormatSelection();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- A [PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942)段落の現在の選択の属性を格納する構造体。  
+ A [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2)段落の現在の選択の属性を格納する構造体。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [EM_GETPARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774182)メッセージと[PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942) Windows SDK の構造体。  
+ 詳細については、次を参照してください。 [EM_GETPARAFORMAT](/windows/desktop/Controls/em-getparaformat)メッセージと[PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) Windows SDK の構造体。  
   
 ##  <a name="getprintrect"></a>  CRichEditView::GetPrintRect  
  ページの四角形内で印刷領域の境界を取得するには、この関数を呼び出します。  
@@ -576,7 +576,7 @@ long GetTextLengthEx(
   
 ### <a name="parameters"></a>パラメーター  
  *dwFlags*  
- テキストの長さを決定する際に使用するメソッドを指定する値。 このメンバーは、いずれかを指定できますまたは以上の値のフラグのメンバーに表示されている[GETTEXTLENGTHEX](http://msdn.microsoft.com/library/windows/desktop/bb787915) Windows SDK で説明します。  
+ テキストの長さを決定する際に使用するメソッドを指定する値。 このメンバーは、いずれかを指定できますまたは以上の値のフラグのメンバーに表示されている[GETTEXTLENGTHEX](/windows/desktop/api/richedit/ns-richedit-_gettextlengthex) Windows SDK で説明します。  
   
  *uCodePage*  
  変換 (Unicode の 1200 の ANSI コード ページの CP_ACP) のコード ページです。  
@@ -585,7 +585,7 @@ long GetTextLengthEx(
  文字または、編集コントロール内のバイト数。 互換性のないフラグが設定されている場合*dwFlags*、このメンバー関数は、E_INVALIDARG を返します。  
   
 ### <a name="remarks"></a>Remarks  
- `GetTextLengthEx` テキストの長さを決定するその他の方法を提供します。 リッチ エディット 2.0 の機能をサポートします。 詳細については、次を参照してください。[リッチのエディット コントロールについて](http://msdn.microsoft.com/library/windows/desktop/bb787873)Windows SDK に含まれています。  
+ `GetTextLengthEx` テキストの長さを決定するその他の方法を提供します。 リッチ エディット 2.0 の機能をサポートします。 詳細については、次を参照してください。[リッチのエディット コントロールについて](/windows/desktop/Controls/about-rich-edit-controls)Windows SDK に含まれています。  
   
 ##  <a name="insertfileasobject"></a>  CRichEditView::InsertFileAsObject  
  指定したファイルを挿入するには、この関数を呼び出す (として、 [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)オブジェクト) に豊富なビューを編集します。  
@@ -613,7 +613,7 @@ HRESULT InsertItem(CRichEditCntrItem* pItem);
  挿入の成功を示す HRESULT 値。  
   
 ### <a name="remarks"></a>Remarks  
- HRESULT の詳細については、次を参照してください。 [COM エラー コードの構造](http://msdn.microsoft.com/library/windows/desktop/ms690088)Windows SDK に含まれています。  
+ HRESULT の詳細については、次を参照してください。 [COM エラー コードの構造](/windows/desktop/com/structure-of-com-error-codes)Windows SDK に含まれています。  
   
 ##  <a name="isricheditformat"></a>  CRichEditView::IsRichEditFormat  
  場合を判断するには、この関数を呼び出す*cf*はテキスト、リッチ テキスト、または OLE 項目を含むリッチ テキストはクリップボード形式です。  
@@ -691,7 +691,7 @@ void OnCharEffect(
 ### <a name="remarks"></a>Remarks  
  この関数に対する各呼び出しは、現在の選択範囲の指定した書式設定の効果を切り替えます。  
   
- 詳細については、 *dwMask*と*dwEffect*パラメーターと、その潜在的な値の対応するデータ メンバーを参照してください。 [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) Windows SDK に含まれています。  
+ 詳細については、 *dwMask*と*dwEffect*パラメーターと、その潜在的な値の対応するデータ メンバーを参照してください。 [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#155](../../mfc/codesnippet/cpp/cricheditview-class_5.cpp)]  
@@ -745,7 +745,7 @@ virtual BOOL OnPasteNativeObject(LPSTORAGE lpStg);
   
 ### <a name="parameters"></a>パラメーター  
  *lpStg*  
- ポインター、 [IStorage](http://msdn.microsoft.com/library/windows/desktop/aa380015)オブジェクト。  
+ ポインター、 [IStorage](/windows/desktop/api/objidl/nn-objidl-istorage)オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、0 以外の場合それ以外の場合、0 です。  
@@ -755,7 +755,7 @@ virtual BOOL OnPasteNativeObject(LPSTORAGE lpStg);
   
  これは、高度なオーバーライド可能な。  
   
- 詳細については、次を参照してください。 [IStorage](http://msdn.microsoft.com/library/windows/desktop/aa380015) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IStorage](/windows/desktop/api/objidl/nn-objidl-istorage) Windows SDK に含まれています。  
   
 ##  <a name="onparaalign"></a>  CRichEditView::OnParaAlign  
  選択した段落の段落の配置を変更するには、この関数を呼び出します。  
@@ -864,9 +864,9 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
  テキストは見つかりませんでした。  
   
 ### <a name="remarks"></a>Remarks  
- 出力の通知を変更するには、この関数をオーバーライドする[MessageBeep](http://msdn.microsoft.com/library/windows/desktop/ms680356)します。  
+ 出力の通知を変更するには、この関数をオーバーライドする[MessageBeep](/windows/desktop/api/winuser/nf-winuser-messagebeep)します。  
   
- 詳細については、次を参照してください。 [MessageBeep](http://msdn.microsoft.com/library/windows/desktop/ms680356) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [MessageBeep](/windows/desktop/api/winuser/nf-winuser-messagebeep) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#157](../../mfc/codesnippet/cpp/cricheditview-class_7.cpp)]  
@@ -894,7 +894,7 @@ void OnUpdateCharEffect(
 ### <a name="remarks"></a>Remarks  
  マスク*dwMask*文字確認を書式設定属性を指定します。 フラグ*dwEffect*文字書式セット/消去に属性を一覧表示します。  
   
- 詳細については、 *dwMask*と*dwEffect*パラメーターと、その潜在的な値の対応するデータ メンバーを参照してください。 [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) Windows SDK に含まれています。  
+ 詳細については、 *dwMask*と*dwEffect*パラメーターと、その潜在的な値の対応するデータ メンバーを参照してください。 [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#158](../../mfc/codesnippet/cpp/cricheditview-class_8.cpp)]  
@@ -1003,7 +1003,7 @@ virtual HRESULT QueryAcceptData(
   
 ### <a name="parameters"></a>パラメーター  
  *lpdataobj*  
- ポインター、 [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421)をクエリします。  
+ ポインター、 [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject)をクエリします。  
   
  *lpcfFormat*  
  許容可能なデータ形式へのポインター。  
@@ -1023,7 +1023,7 @@ virtual HRESULT QueryAcceptData(
 ### <a name="remarks"></a>Remarks  
  COM のアイテム、ドキュメントの派生クラスでの別の組織を処理するには、この関数をオーバーライドします。 これは、高度なオーバーライド可能な。  
   
- HRESULT の詳細については、`IDataObject`を参照してください[COM エラー コードの構造](http://msdn.microsoft.com/library/windows/desktop/ms690088)と[IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421)、それぞれ、Windows SDK で。  
+ HRESULT の詳細については、`IDataObject`を参照してください[COM エラー コードの構造](/windows/desktop/com/structure-of-com-error-codes)と[IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject)、それぞれ、Windows SDK で。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#160](../../mfc/codesnippet/cpp/cricheditview-class_10.cpp)]  
@@ -1037,12 +1037,12 @@ void SetCharFormat(CHARFORMAT2 cf);
   
 ### <a name="parameters"></a>パラメーター  
  *cf*  
- [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883)新しい既定の文字書式属性を含む構造体。  
+ [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a)新しい既定の文字書式属性を含む構造体。  
   
 ### <a name="remarks"></a>Remarks  
  指定された属性のみ、`dwMask`のメンバー *cf*は、この関数によって変更します。  
   
- 詳細については、次を参照してください。 [EM_SETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774230)メッセージと[CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) Windows SDK の構造体。  
+ 詳細については、次を参照してください。 [EM_SETCHARFORMAT](/windows/desktop/Controls/em-setcharformat)メッセージと[CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) Windows SDK の構造体。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#152](../../mfc/codesnippet/cpp/cricheditview-class_2.cpp)]  
@@ -1092,7 +1092,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
   
 ### <a name="parameters"></a>パラメーター  
  *pf*  
- [PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942)新しい既定の段落書式属性。  
+ [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2)新しい既定の段落書式属性。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -1100,7 +1100,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 ### <a name="remarks"></a>Remarks  
  指定された属性のみ、`dwMask`のメンバー *pf*は、この関数によって変更します。  
   
- 詳細については、次を参照してください。 [EM_SETPARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774276)メッセージと[PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942) Windows SDK の構造体。  
+ 詳細については、次を参照してください。 [EM_SETPARAFORMAT](/windows/desktop/Controls/em-setparaformat)メッセージと[PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) Windows SDK の構造体。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#162](../../mfc/codesnippet/cpp/cricheditview-class_12.cpp)]  

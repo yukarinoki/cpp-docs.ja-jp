@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f33335e193997c0988cab0580c3eab612d0cc84
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f278ffd3d3210f899e86787d0872180df2d91d98
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852304"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222860"
 ---
 # <a name="colecontrolcontainer-class"></a>COleControlContainer クラス
 ActiveX コントロールのコントロール コンテナーとして機能します。  
@@ -149,7 +149,7 @@ class COleControlContainer : public CCmdTarget
 |[COleControlContainer::m_siteMap](#m_sitemap)|サイト マップします。|  
   
 ## <a name="remarks"></a>Remarks  
- これは、1 つ以上の ActiveX コントロール サイトをサポートすることで (によって実装される`COleControlSite`)。 `COleControlContainer` 完全に実装、 [IOleInPlaceFrame](http://msdn.microsoft.com/library/windows/desktop/ms692770)と[IOleContainer](http://msdn.microsoft.com/library/windows/desktop/ms690103)インプレース項目として、必要条件を満たすために格納されている ActiveX コントロールのインターフェイス。  
+ これは、1 つ以上の ActiveX コントロール サイトをサポートすることで (によって実装される`COleControlSite`)。 `COleControlContainer` 完全に実装、 [IOleInPlaceFrame](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceframe)と[IOleContainer](/windows/desktop/api/oleidl/nn-oleidl-iolecontainer)インプレース項目として、必要条件を満たすために格納されている ActiveX コントロールのインターフェイス。  
   
  このクラスを組み合わせて使用する一般的には、`COccManager`と`COleControlSite`1 つ以上の ActiveX コントロールのカスタムのサイトで、カスタムの ActiveX コントロール コンテナーを実装します。  
   
@@ -160,7 +160,7 @@ class COleControlContainer : public CCmdTarget
   
  `COleControlContainer`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxocc.h  
   
 ##  <a name="attachcontrolsite"></a>  COleControlContainer::AttachControlSite  
@@ -449,7 +449,7 @@ virtual UINT GetDlgItemInt(
  関数の成功/失敗の値を受信するブール値変数へのポインター (成功を true、FALSE がエラーを示します)。  
   
  *bSigned*  
- 関数が先頭にマイナス記号のテキストを確認し、いずれか見つかった場合は、符号付き整数値を返すかどうかを指定します。 場合、 *bSigned*パラメーターが TRUE、戻り値をキャストを取得する値が符号付き整数値を指定する、 **int**型。 拡張エラー情報を取得するには呼び出します[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)します。  
+ 関数が先頭にマイナス記号のテキストを確認し、いずれか見つかった場合は、符号付き整数値を返すかどうかを指定します。 場合、 *bSigned*パラメーターが TRUE、戻り値をキャストを取得する値が符号付き整数値を指定する、 **int**型。 拡張エラー情報を取得するには呼び出します[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)します。  
   
 ### <a name="return-value"></a>戻り値  
  かどうかは成功すると、変数が指す*lpTrans*を TRUE に設定されていると、戻り値はコントロールのテキストの翻訳された値。  
@@ -486,7 +486,7 @@ virtual int GetDlgItemText(
 ### <a name="return-value"></a>戻り値  
  関数が成功した場合、戻り値は、終端の null 文字を含まない、バッファーにコピーされた文字数を指定します。  
   
- 関数が失敗した場合は、0 を返します。 拡張エラー情報を取得するには呼び出します[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)します。  
+ 関数が失敗した場合は、0 を返します。 拡張エラー情報を取得するには呼び出します[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)します。  
   
 ##  <a name="handlesetfocus"></a>  COleControlContainer::HandleSetFocus  
  コンテナーが WM_SETFOCUS メッセージを処理するかどうかを決定します。  

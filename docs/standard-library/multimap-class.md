@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c5bf13a675280b12872c5a5e7bbf19367ff0143
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 29e94acf4b8fad401077a5530d4b6296c30c2740
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027733"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220109"
 ---
 # <a name="multimap-class"></a>multimap クラス
 
@@ -119,15 +119,19 @@ class multimap;
 
 ### <a name="parameters"></a>パラメーター
 
-*キー* multimap に格納されるキー データを入力します。
+*Key*<br/>
+ multimap に格納されるキーのデータ型。
 
-*型*multimap に格納される要素のデータを入力します。
+*Type*<br/>
+ multimap に格納される要素のデータ型。
 
-*Traits* multimap 内の相対順序を決定する並べ替えキーとして 2 つの要素の値を比較できる関数オブジェクトを提供する型。 二項述語 `less<Key>` が既定値です。
+*Traits*<br/>
+ 2 つの要素の値を並べ替えキーとして比較して、multimap 内の要素の相対順序を決定できる関数オブジェクトを提供する型。 二項述語 `less<Key>` が既定値です。
 
 C++ 14 では、型パラメーターを使用せずに `std::less<>` 述語または `std::greater<>` 述語を指定することで、異種ルックアップを有効にすることができます。 詳細については、「[連想コンテナーの異種ルックアップ](../standard-library/stl-containers.md#heterogeneous-lookup-in-associative-containers-c14)」をご覧ください。
 
-*アロケーター*マップの割り当てとメモリの解放に関する詳細をカプセル化する格納されたアロケーター オブジェクトを表す型です。 この引数は省略可能であり、既定値は `allocator<pair <const Key, Type> >` です。
+*アロケーター*<br/>
+ メモリの map の割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値は `allocator<pair <const Key, Type> >` です。
 
 ## <a name="remarks"></a>Remarks
 
@@ -219,7 +223,7 @@ C++ 14 では、型パラメーターを使用せずに `std::less<>` 述語ま�
 |-|-|
 |[operator=](#op_eq)|別の `multimap` のコピーで `multimap` の要素を置き換えます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<map>
 
@@ -404,11 +408,11 @@ typedef implementation-defined const_iterator;
 
 `const_iterator` 型で要素の値を変更することはできません。
 
-`const_iterator`のオブジェクトを指しますが multimap によって定義された[value_type](#value_type)、これは`pair` * \< * **const Key**、**型 * * * >* します。 キーの値はペアの 1 番目のメンバー、マップされた要素の値はペアの 2 番目のメンバーを介して取得できます。
+`const_iterator`のオブジェクトを指しますが multimap によって定義された[value_type](#value_type)、これは`pair<const Key, Type>`します。 キーの値はペアの 1 番目のメンバー、マップされた要素の値はペアの 2 番目のメンバーを介して取得できます。
 
-逆参照する、 `const_iterator` `cIter` multimap 内の要素を指す、 **->** 演算子。
+逆参照する、 `const_iterator` *cIter* multimap 内の要素を指す、 **->** 演算子。
 
-要素のキーの値にアクセスするには、使用`cIter`  -> **最初**と同等 (\* `cIter`)。 **最初**します。 要素のマップされたデータの値にアクセスするには、使用`cIter`  ->  **2 番目**と同等 (\* `cIter`)。 **second**。
+要素のキーの値にアクセスするには、使用`cIter->first`と同等`(*cIter).first`します。 要素のマップされたデータの値にアクセスするには、使用`cIter->second`と同等`(*cIter).second`します。
 
 ### <a name="example"></a>例
 
@@ -490,11 +494,11 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 `const_reverse_iterator` 型は要素の値を変更できず、逆の順序で multimap を反復処理するために使用します。
 
-`const_reverse_iterator`のオブジェクトを指しますが multimap によって定義された[value_type](#value_type)、これは`pair` * \< * **const Key**、**型 * * * >* します。 キーの値はペアの 1 番目のメンバー、マップされた要素の値はペアの 2 番目のメンバーを介して取得できます。
+`const_reverse_iterator`のオブジェクトを指しますが multimap によって定義された[value_type](#value_type)、これは`pair<const Key, Type>`します。 キーの値はペアの 1 番目のメンバー、マップされた要素の値はペアの 2 番目のメンバーを介して取得できます。
 
-逆参照する、 `const_reverse_iterator` `crIter` multimap 内の要素を指す、 **->** 演算子。
+逆参照する、 `const_reverse_iterator` *crIter* multimap 内の要素を指す、 **->** 演算子。
 
-要素のキーの値にアクセスするには、使用`crIter`  -> **最初**と同等 (\* `crIter`)。 **最初**します。 要素のマップされたデータの値にアクセスするには、使用`crIter`  ->  **2 番目**と同等 (\* `crIter`)。 **最初**します。
+要素のキーの値にアクセスするには、使用`crIter->first`と同等`(*crIter).first`します。 要素のマップされたデータの値にアクセスするには、使用`crIter->second`と同等`(*crIter).first`します。
 
 ### <a name="example"></a>例
 
@@ -510,7 +514,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*照合される multimap の要素のキー。
+*key*<br/>
+ 照合される multimap の要素のキー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -910,7 +915,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*検索対象の multimap の要素の並べ替えキーと比較される引数キー。
+*key*<br/>
+ 検索対象の multimap 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -996,13 +1002,17 @@ size_type erase(
 
 ### <a name="parameters"></a>パラメーター
 
-*場所*を削除する要素の位置。
+*Where*<br/>
+ 削除される要素の位置。
 
-*最初*を削除する最初の要素の位置。
+*まずは*<br/>
+ 削除される最初の要素の位置。
 
-*最後*を削除する最後の要素の次の位置。
+*前の*<br/>
+ 削除される最後の要素の次の位置。
 
-*キー*を削除する要素のキー。
+*Key*<br/>
+ 削除する要素のキー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1027,7 +1037,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*検索対象の multimap の要素の並べ替えキーによって照合されるキーの値。
+*key*<br/>
+ 検索対象の multimap 内の要素の並べ替えキーによって照合されるキー値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1350,11 +1361,11 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>Remarks
 
-`iterator`のオブジェクトを指しますが multimap によって定義された[value_type](#value_type)、これは`pair` * \< * **const Key**、**型 * * * >* します。 キーの値はペアの 1 番目のメンバー、マップされた要素の値はペアの 2 番目のメンバーを介して取得できます。
+`iterator`のオブジェクトを指しますが multimap によって定義された[value_type](#value_type)、これは`pair<const Key, Type>`します。 キーの値はペアの 1 番目のメンバー、マップされた要素の値はペアの 2 番目のメンバーを介して取得できます。
 
-逆参照する、**反復子**`Iter` multimap 内の要素を指す、`->`演算子。
+逆参照する、 `iterator` *Iter* multimap 内の要素を指す、 **->** 演算子。
 
-要素のキーの値にアクセスするには、使用`Iter`  -> **最初**と同等 (\* `Iter`)。 **最初**します。 要素のマップされたデータの値にアクセスするには、使用`Iter`  ->  **2 番目**と同等 (\* `Iter`)。 **second**。
+要素のキーの値にアクセスするには、使用`Iter->first`と同等`(*Iter).first`します。 要素のマップされたデータの値にアクセスするには、使用`Iter->second`と同等`(*Iter).second`します。
 
 型`iterator`要素の値を変更するために使用できます。
 
@@ -1378,7 +1389,7 @@ multimap が要素の並べ替えに使用する関数オブジェクトを返�
 
 格納されているオブジェクトは以下のメンバー関数を定義します。
 
-**bool operator**( **const Key&** *x*, **const Key&** *y*);
+`bool operator( const Key& x, const Key& y);`
 
 これは、並べ替え順で *x* が厳密に *y* に先行する場合に true を返します。
 
@@ -1481,7 +1492,8 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*検索対象の multimap の要素の並べ替えキーと比較される引数キー。
+*key*<br/>
+ 検索対象の multimap 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2099,11 +2111,11 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 `reverse_iterator` 型は、逆の順序で multimap を反復処理するために使用します。
 
-`reverse_iterator`のオブジェクトを指しますが multimap によって定義された[value_type](#value_type)、これは`pair` * \< * **const Key**、**型 * * * >* します。 キーの値はペアの 1 番目のメンバー、マップされた要素の値はペアの 2 番目のメンバーを介して取得できます。
+`reverse_iterator`のオブジェクトを指しますが multimap によって定義された[value_type](#value_type)、これは`pair<const Key, Type>`します。 キーの値はペアの 1 番目のメンバー、マップされた要素の値はペアの 2 番目のメンバーを介して取得できます。
 
-逆参照する、 `reverse_iterator` `rIter` multimap 内の要素を指す、-> 演算子。
+逆参照する、 `reverse_iterator` *rIter* multimap 内の要素を指す、 **->** 演算子。
 
-要素のキーの値にアクセスするには、使用`rIter`  -> **最初**と同等 (\* `rIter`)。 **最初**します。 要素のマップされたデータの値にアクセスするには、使用`rIter`  ->  **2 番目**と同等 (\* `rIter`)。 **最初**します。
+要素のキーの値にアクセスするには、使用`rIter->first`と同等`(*rIter).first`します。 要素のマップされたデータの値にアクセスするには、使用`rIter->second`と同等`(*rIter).second`します。
 
 ### <a name="example"></a>例
 
@@ -2176,7 +2188,8 @@ void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*を交換する要素を提供する multimap または要素が multimap のものと交換される multimap`left`します。
+*right*<br/>
+ 交換する要素を提供する multimap (multimap `left` と要素を交換する multimap)。
 
 ### <a name="remarks"></a>Remarks
 
@@ -2245,7 +2258,8 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*検索対象の multimap の要素の並べ替えキーと比較される引数キー。
+*key*<br/>
+ 検索対象の multimap 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2445,7 +2459,7 @@ The values of the mapped elements are: 10 20.
 
 ## <a name="see-also"></a>関連項目
 
-[\<マップ > メンバー](http://msdn.microsoft.com/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
+[\<マップ > メンバー](https://msdn.microsoft.com/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
 [コンテナー](../cpp/containers-modern-cpp.md)<br/>
 [C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65375b764c0d8d8673a59fcfb47b4eecaf730cb5
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 817875dd32457fa47eafca9d634bc2e7cc8e079d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879957"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206571"
 ---
 # <a name="csacl-class"></a>CSacl クラス
 このクラスは、SACL (システムへのアクセス制御リスト) 構造体のラッパーです。  
@@ -72,14 +72,14 @@ class CSacl : public CAcl
   
  追加、削除、作成、およびから Ace を削除する指定されたクラスのメソッドを使用して、`SACL`オブジェクト。 参照してください[AtlGetSacl](security-global-functions.md#atlgetsacl)と[AtlSetSacl](security-global-functions.md#atlsetsacl)します。  
   
- Windows でのアクセス制御モデルの概要については、次を参照してください。[アクセス制御](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK に含まれています。  
+ Windows でのアクセス制御モデルの概要については、次を参照してください。[アクセス制御](/windows/desktop/SecAuthZ/access-control)Windows SDK に含まれています。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CAcl](../../atl/reference/cacl-class.md)  
   
  `CSacl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlsecurity.h  
   
 ##  <a name="addauditace"></a>  CSacl::AddAuditAce  
@@ -131,7 +131,7 @@ bool AddAuditAce(
 ### <a name="remarks"></a>Remarks  
  A`CSacl`オブジェクトには、セキュリティ イベント ログで監査レコードを生成するアクセス試行の種類を指定するアクセス制御エントリ (Ace) が含まれています。 このメソッドにこのような ACE を追加、`CSacl`オブジェクト。  
   
- 参照してください[ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919)で設定できるさまざまなフラグの説明については、 *AceFlags*パラメーター。  
+ 参照してください[ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header)で設定できるさまざまなフラグの説明については、 *AceFlags*パラメーター。  
   
 ##  <a name="csacl"></a>  CSacl::CSacl  
  コンストラクターです。  
@@ -208,7 +208,7 @@ void RemoveAllAces() throw();
   
 ## <a name="see-also"></a>関連項目  
  [CAcl クラス](../../atl/reference/cacl-class.md)   
- [Acl](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
- [Ace](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
+ [Acl](/windows/desktop/SecAuthZ/access-control-lists)   
+ [Ace](/windows/desktop/SecAuthZ/access-control-entries)   
  [クラスの概要](../../atl/atl-class-overview.md)   
  [セキュリティに関するグローバル関数](../../atl/reference/security-global-functions.md)

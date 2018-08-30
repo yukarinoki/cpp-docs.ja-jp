@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 935175f522dd0b41851763f7b76781228c1881c0
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 9b144e08e0f87165c284310afc86267f67b1c124
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880155"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222055"
 ---
 # <a name="ithreadpoolconfig-interface"></a>IThreadPoolConfig インターフェイス
 このインターフェイスは、スレッド プールを構成するためのメソッドを提供します。  
@@ -55,7 +55,7 @@ __interface
 ## <a name="remarks"></a>Remarks  
  このインターフェイスによって実装されます[CThreadPool](../../atl/reference/cthreadpool-class.md)します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlutil.h  
   
 ##  <a name="getsize"></a>  IThreadPoolConfig::GetSize  
@@ -105,7 +105,7 @@ STDMETHOD(SetSize)int nNumThreads);
   
  場合*nNumThreads*が負の場合、その絶対値で乗算されますスレッドの合計数を取得するマシンでプロセッサの数。  
   
- 場合*nNumThreads*ゼロ、 [ATLS_DEFAULT_THREADSPERPROC](http://msdn.microsoft.com/library/e0dcf107-72a9-4122-abb4-83c63aa7d571)スレッドの合計数を取得するマシンのプロセッサ数が乗算されます。  
+ 場合*nNumThreads*ゼロ、 [ATLS_DEFAULT_THREADSPERPROC](https://msdn.microsoft.com/library/e0dcf107-72a9-4122-abb4-83c63aa7d571)スレッドの合計数を取得するマシンのプロセッサ数が乗算されます。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5291ae4783e252341371844ca08e390958c3ff89
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 4412e30316bd2d5f43eac4dddb062adb11dc6f6e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882573"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210002"
 ---
 # <a name="catlmodule-class"></a>CAtlModule クラス
 このクラスは、いくつかの ATL モジュール クラスによって使用されるメソッドを提供します。  
@@ -89,7 +89,7 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
   
  `CAtlModule`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlbase.h  
   
 ##  <a name="addcommonrgsreplacements"></a>  CAtlModule::AddCommonRGSReplacements  
@@ -167,7 +167,7 @@ virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
   
  場合、デバッグ ビルドで、アサーション エラーが発生*ppGIT*が NULL の場合、グローバル インターフェイス テーブルのポインターを取得できない場合またはします。  
   
- 参照してください[については](http://msdn.microsoft.com/library/windows/desktop/ms678517)については、グローバル インターフェイス テーブル。  
+ 参照してください[については](/windows/desktop/api/objidl/nn-objidl-iglobalinterfacetable)については、グローバル インターフェイス テーブル。  
   
 ##  <a name="getlockcount"></a>  CAtlModule::GetLockCount  
  ロック カウントを返します。  

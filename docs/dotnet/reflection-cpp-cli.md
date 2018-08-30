@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 505049d6580f41253a483dfe1c64608d0ea9ed3d
-ms.sourcegitcommit: 27be37ae07ee7b657a54d23ed34438220d977fdc
+ms.openlocfilehash: 0b5a352d10c1fd1f825cecbe3d6a1083f6efd425
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39110009"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212170"
 ---
 # <a name="reflection-ccli"></a>リフレクション (C++/CLI)
 
@@ -42,12 +42,12 @@ ms.locfileid: "39110009"
 
 指定されたアセンブリ名が厳密な名前に注意してください (を参照してください[の作成と using strong-named Assemblies](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies))、アセンブリのバージョン、カルチャ、および署名情報が含まれます。 また、基底クラスの名前に加えて、データ型が定義されている名前空間の名前も取得できることに注目してください。
 
-リフレクションの機能にアクセスする最も一般的な方法は、<xref:System.Object.GetType%2A> メソッドを使用することです。 このメソッドがによって提供される[system::object](https://msdn.microsoft.com/en-us/library/system.object.aspx)からガベージ コレクションのすべてのクラスが派生します。
+リフレクションの機能にアクセスする最も一般的な方法は、<xref:System.Object.GetType%2A> メソッドを使用することです。 このメソッドがによって提供される[system::object](https://msdn.microsoft.com/library/system.object.aspx)からガベージ コレクションのすべてのクラスが派生します。
 
 > [!NOTE]
 > Visual C コンパイラで構築された .exe のリフレクションは、.exe に組み込まれている場合にのみ使用できます、 **/clr: 純粋な**または **/clr:safe**コンパイラ オプション。 **/Clr: 純粋な**と **/clr:safe**コンパイラ オプションは、Visual Studio 2015 で非推奨と Visual Studio 2017 では使用できません。 参照してください[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)詳細についてはします。
 
-詳細については、次を参照してください[System.Reflection Namespace。](https://msdn.microsoft.com/en-us/library/system.reflection.aspx)
+詳細については、次を参照してください[System.Reflection Namespace。](https://msdn.microsoft.com/library/system.reflection.aspx)
 
 ## <a name="example-gettype"></a>例: GetType
 
@@ -188,9 +188,9 @@ public:
 
 ## <a name="example-inspection-of-assemblies"></a>アセンブリの例: 検査
 
-このコードを vcpp_reflection_6.dll という DLL にコンパイルすると、リフレクションを使用してアセンブリの内容を確認できます。 これは、静的リフレクション API 関数を使用して[assembly::load](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.load.aspx)アセンブリを読み込みます。 この関数のアドレスを返します、**アセンブリ**モジュールと内の型について、クエリを実行できるオブジェクト。
+このコードを vcpp_reflection_6.dll という DLL にコンパイルすると、リフレクションを使用してアセンブリの内容を確認できます。 これは、静的リフレクション API 関数を使用して[assembly::load](https://msdn.microsoft.com/library/system.reflection.assembly.load.aspx)アセンブリを読み込みます。 この関数のアドレスを返します、**アセンブリ**モジュールと内の型について、クエリを実行できるオブジェクト。
 
-リフレクション システムが、アセンブリの配列を正常に読み込まれたら**型**でオブジェクトを取得、 [:gettypes](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.gettypes.aspx)関数。 各配列要素には、異なる型の情報が含まれています。ただし、この例で定義されているクラスは 1 つだけです。 ループを使用して各**型**型のメンバーを使用してこの配列をクエリ、 **:getmembers**関数。 この関数の配列を返します**MethodInfo**オブジェクト、メンバー関数は、データ メンバー、または型のプロパティに関する情報を格納している各オブジェクト。
+リフレクション システムが、アセンブリの配列を正常に読み込まれたら**型**でオブジェクトを取得、 [:gettypes](https://msdn.microsoft.com/library/system.reflection.assembly.gettypes.aspx)関数。 各配列要素には、異なる型の情報が含まれています。ただし、この例で定義されているクラスは 1 つだけです。 ループを使用して各**型**型のメンバーを使用してこの配列をクエリ、 **:getmembers**関数。 この関数の配列を返します**MethodInfo**オブジェクト、メンバー関数は、データ メンバー、または型のプロパティに関する情報を格納している各オブジェクト。
 
 定義されているメソッドの一覧が、関数には明示的に含まれているメモ**TestClass**関数が暗黙的に継承し、 **system::object**クラス。 Visual C++ 構文ではなく .NET で記述されている部分では、プロパティは get 関数と set 関数でアクセスする基底のデータ メンバーとして表示されます。 get 関数と set 関数は、通常のメソッドとしてこのリストに表示されています。 リフレクションは、Visual C++ コンパイラではなく、共通言語ランタイムを通じてサポートされています。
 

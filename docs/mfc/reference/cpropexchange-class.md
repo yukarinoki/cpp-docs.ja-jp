@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88f431ab86762e50f91571a85f0fc60e41d8d711
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f8b63de74a044a55362c2ebafc814fcf0136434d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849631"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216843"
 ---
 # <a name="cpropexchange-class"></a>CPropExchange クラス
 OLE コントロールの永続性の実装をサポートします。  
@@ -81,7 +81,7 @@ class AFX_NOVTABLE CPropExchange
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CPropExchange`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxctl.h  
   
 ##  <a name="exchangeblobprop"></a>  CPropExchange::ExchangeBlobProp  
@@ -131,7 +131,7 @@ virtual BOOL ExchangeFontProp(
  参照を[CFontHolder](../../mfc/reference/cfontholder-class.md)フォント プロパティを含むオブジェクト。  
   
  *pFontDesc*  
- ポインターを[FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782)フォント プロパティの既定の状態を初期化するための値を含む構造体と*pFontDispAmbient*は NULL です。  
+ ポインターを[FONTDESC](/windows/desktop/api/olectl/ns-olectl-tagfontdesc)フォント プロパティの既定の状態を初期化するための値を含む構造体と*pFontDispAmbient*は NULL です。  
   
  *pFontDispAmbient*  
  ポインター、`IFontDisp`フォント プロパティの既定の状態を初期化するために使用するフォントのインターフェイス。  

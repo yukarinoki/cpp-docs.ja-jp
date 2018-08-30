@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bd0aba0637101f7895be89b9d5531f77ee45b76
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7fc8ef005eea61597eb316090e26af7e83718dd8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539879"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222777"
 ---
 # <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl クラス
 `CMFCShellTreeCtrl`クラスは拡張[CTreeCtrl クラス](../../mfc/reference/ctreectrl-class.md)シェル項目の階層を表示することによって機能します。  
@@ -62,7 +62,7 @@ class CMFCShellTreeCtrl : public CTreeCtrl
 |名前|説明|  
 |----------|-----------------|  
 |[CMFCShellTreeCtrl::EnableShellContextMenu](#enableshellcontextmenu)|有効または、ショートカット メニューを無効にします。|  
-|[CMFCShellTreeCtrl::GetFlags](#getflags)|渡されるフラグの組み合わせを返します[IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066)します。|  
+|[CMFCShellTreeCtrl::GetFlags](#getflags)|渡されるフラグの組み合わせを返します[IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066)します。|  
 |[CMFCShellTreeCtrl::GetItemPath](#getitempath)|アイテムへのパスを取得します。|  
 |[CMFCShellTreeCtrl::GetRelatedList](#getrelatedlist)|ポインターを返します、 [CMFCShellListCtrl クラス](../../mfc/reference/cmfcshelllistctrl-class.md)これと共に使用されるオブジェクト`CMFCShellTreeCtrl`エクスプ ローラーのようなウィンドウを作成するオブジェクト。|  
 |[CMFCShellTreeCtrl::OnChildNotify](#onchildnotify)|このメンバー関数は、このウィンドウに適用される通知メッセージを受信すると、このウィンドウの親ウィンドウによって呼び出されます。 (上書き[CWnd::OnChildNotify](../../mfc/reference/cwnd-class.md#onchildnotify))。|  
@@ -118,7 +118,7 @@ DWORD GetFlags() const;
  現在のフラグの組み合わせを指定する DWORD 値を設定します。  
   
 ### <a name="remarks"></a>Remarks  
- フラグを設定、 `CMFCShellTreeCtrl` 、メソッドに送信される[IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066)オブジェクトが更新されるたびにします。 使用するフラグを変更することができます、 [CMFCShellTreeCtrl::SetFlags](#setflags)メソッド。  
+ フラグを設定、 `CMFCShellTreeCtrl` 、メソッドに送信される[IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066)オブジェクトが更新されるたびにします。 使用するフラグを変更することができます、 [CMFCShellTreeCtrl::SetFlags](#setflags)メソッド。  
   
 ##  <a name="getitempath"></a>  CMFCShellTreeCtrl::GetItemPath  
  内の項目のパスを取得、 [CMFCShellTreeCtrl クラス](../../mfc/reference/cmfcshelltreectrl-class.md)オブジェクト。  
@@ -254,7 +254,7 @@ void SetFlags(
  ブール値を指定するかどうか、`CMFCShellTreeCtrl`すぐに更新する必要があります。  
   
 ### <a name="remarks"></a>Remarks  
- `CMFCShellTreeCtrl`すべてにフラグを設定するパス[IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066)します。 さまざまなフラグの値の詳細については、次を参照してください。 [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066)します。  
+ `CMFCShellTreeCtrl`すべてにフラグを設定するパス[IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066)します。 さまざまなフラグの値の詳細については、次を参照してください。 [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066)します。  
   
 ##  <a name="setrelatedlist"></a>  CMFCShellTreeCtrl::SetRelatedList  
  関連付けます、 [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)オブジェクトを[CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md)オブジェクト。  

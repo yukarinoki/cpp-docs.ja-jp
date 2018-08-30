@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: COM 対応アプリケーションでの同時実行ランタイムの使用 |Microsoft ドキュメント'
+title: 'チュートリアル: COM 対応アプリケーションでの同時実行ランタイムの使用 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fd9f665f77ca5ae5311b034ee7afef6241ac489
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 12081cbc34182fc4c974bd96fd0ce7bbc78cca5f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692549"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220230"
 ---
 # <a name="walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application"></a>チュートリアル: COM 対応アプリケーションでの同時実行ランタイムの使用
 このドキュメントでは、コンポーネント オブジェクト モデル (COM) を使用するアプリケーションで同時実行ランタイムを使用する方法について説明します。  
@@ -36,27 +36,27 @@ ms.locfileid: "33692549"
   
 - [例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)  
   
- COM の詳細については、次を参照してください。[コンポーネント オブジェクト モデル (COM)](http://msdn.microsoft.com/library/windows/desktop/ms680573)です。  
+ COM の詳細については、次を参照してください。[コンポーネント オブジェクト モデル (COM)](https://msdn.microsoft.com/library/windows/desktop/ms680573)します。  
   
 ## <a name="managing-the-lifetime-of-the-com-library"></a>COM ライブラリの有効期間の管理  
  同時実行ランタイムでの COM の使用は他の同時実行機構と同じ基本原則に従いますが、これらのライブラリを組み合わせて効率よく使用するには次のガイドラインが役に立ちます。  
   
--   スレッドを呼び出す必要があります[CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) COM ライブラリを使用する前にします。  
+-   スレッドを呼び出す必要があります[CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) COM ライブラリを使用する前にします。  
   
 -   スレッドでは、同じ引数を毎回提供する場合に限り、`CoInitializeEx` を複数回呼び出すことができます。  
   
--   呼び出しごとに`CoInitializeEx`、スレッドを呼び出す必要がありますも[CoUninitialize](http://msdn.microsoft.com/library/windows/desktop/ms688715)です。 つまり、`CoInitializeEx` と `CoUninitialize` の呼び出しは、均等化する必要があります。  
+-   呼び出しごとに`CoInitializeEx`、スレッドが呼び出す必要がありますも[CoUninitialize](/windows/desktop/api/combaseapi/nf-combaseapi-couninitialize)します。 つまり、`CoInitializeEx` と `CoUninitialize` の呼び出しは、均等化する必要があります。  
   
 -   あるスレッド アパートメントから別のアパートメントに切り替えるには、スレッドは新しいスレッド処理仕様で `CoInitializeEx` を呼び出す前に、COM ライブラリを完全に解放する必要があります。  
   
  同時実行ランタイムで COM を使用する場合は、COM に関する他の基本原則が適用されます。 たとえば、オブジェクトをシングルスレッド アパートメント (STA: Single-Threaded Apartment) に作成し、そのオブジェクトを別のアパートメントにマーシャリングするアプリケーションでは、受信メッセージを処理するためのメッセージ ループも提供する必要があります。 また、アパートメント間でオブジェクトをマーシャリングすると、パフォーマンスが低下する可能性があることに注意してください。  
   
 ### <a name="using-com-with-the-parallel-patterns-library"></a>並列パターン ライブラリでの COM の使用  
- タスク グループや並列アルゴリズムなど、並列パターン ライブラリ (PPL) のコンポーネントで COM を使用するときは、各タスクまたは反復処理の間に COM ライブラリを使用する前に `CoInitializeEx` を呼び出し、各タスクまたは反復処理が終了する前に `CoUninitialize` を呼び出します。 次の例で COM ライブラリの有効期間を管理する方法を示しています、 [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)オブジェクト。  
+ タスク グループや並列アルゴリズムなど、並列パターン ライブラリ (PPL) のコンポーネントで COM を使用するときは、各タスクまたは反復処理の間に COM ライブラリを使用する前に `CoInitializeEx` を呼び出し、各タスクまたは反復処理が終了する前に `CoUninitialize` を呼び出します。 次の例では、COM ライブラリの有効期間を管理する方法を示しています、 [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)オブジェクト。  
   
  [!code-cpp[concrt-parallel-scripts#1](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_1.cpp)]  
   
- タスクまたは並列アルゴリズムを取り消すとき、またはタスクの本体で例外をスローするときは、COM ライブラリが正しく解放されていることを確認する必要があります。 タスクを確実に呼び出す`CoUninitialize`セッションを終了する前に使用して、`try-finally`ブロックまたは*Resource Acquisition Is Initialization* (RAII) パターン。 次の例では、`try-finally` ブロックを使用して、タスクが終了するとき、取り消されるとき、または例外がスローされるときに、COM ライブラリを解放しています。  
+ タスクまたは並列アルゴリズムを取り消すとき、またはタスクの本体で例外をスローするときは、COM ライブラリが正しく解放されていることを確認する必要があります。 呼び出し、作業することを保証するのには`CoUninitialize`セッションを終了する前に使用して、`try-finally`ブロックまたは*Resource Acquisition Is Initialization* (RAII) パターンです。 次の例では、`try-finally` ブロックを使用して、タスクが終了するとき、取り消されるとき、または例外がスローされるときに、COM ライブラリを解放しています。  
   
  [!code-cpp[concrt-parallel-scripts#2](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_2.cpp)]  
   
@@ -68,11 +68,11 @@ ms.locfileid: "33692549"
   
  [!code-cpp[concrt-parallel-scripts#4](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_4.cpp)]  
   
- 同時実行ランタイムでの取り消し処理の詳細については、次を参照してください。 [PPL における取り消し処理](cancellation-in-the-ppl.md)です。  
+ 同時実行ランタイムでの取り消し処理の詳細については、次を参照してください。 [PPL における取り消し処理](cancellation-in-the-ppl.md)します。  
   
 ### <a name="using-com-with-asynchronous-agents"></a>非同期エージェントでの COM の使用  
 
- 非同期エージェントで COM を使用するときに呼び出す`CoInitializeEx`での COM ライブラリを使用する前に、 [concurrency::agent::run](reference/agent-class.md#run)エージェントのメソッドです。 その後、`CoUninitialize` メソッドが返される前に `run` を呼び出します。 コンス トラクターまたは、エージェントのデストラクターでは COM 管理ルーチンを使用しないと、オーバーライドしない場合、 [concurrency::agent::start](reference/agent-class.md#start)または[concurrency::agent:: 終了](reference/agent-class.md#done)メソッドのため、これらのメソッド異なるスレッドから呼び出される、`run`メソッドです。  
+ 非同期エージェントで COM を使用するときに呼び出す`CoInitializeEx`で COM ライブラリを使用する前に、 [concurrency::agent::run](reference/agent-class.md#run)エージェントのメソッド。 その後、`CoUninitialize` メソッドが返される前に `run` を呼び出します。 コンス トラクターまたはデストラクターが、エージェントのでは COM 管理ルーチンを使用しないと、オーバーライドしない場合、 [:start](reference/agent-class.md#start)または[concurrency::agent:: 終了](reference/agent-class.md#done)メソッドのため、これらのメソッドは異なるスレッドから呼び出される、`run`メソッド。  
 
   
  次の例では、`CCoAgent` という名前の基本的なエージェント クラスを示します。このクラスは `run` メソッドで COM ライブラリを管理します。  
@@ -87,13 +87,13 @@ ms.locfileid: "33692549"
  [!code-cpp[concrt-parallel-scripts#6](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_6.cpp)]  
   
 ## <a name="an-example-of-a-com-enabled-application"></a>COM 対応のアプリケーションの例  
- このセクションを使用する完全な COM 対応アプリケーションの表示、 `IScriptControl` n を計算するスクリプトを実行するインターフェイス<sup>th</sup>フィボナッチ数。 この例では、最初にメイン スレッドからスクリプトを呼び出した後、PPL とエージェントを使用してスクリプトを同時に呼び出します。  
+ このセクションを使用する完全な COM 対応アプリケーションを示しています、 `IScriptControl` 、n を計算するスクリプトを実行するインターフェイス<sup>th</sup>フィボナッチ数。 この例では、最初にメイン スレッドからスクリプトを呼び出した後、PPL とエージェントを使用してスクリプトを同時に呼び出します。  
   
  次のようなヘルパー関数 `RunScriptProcedure` を使用します。この関数は、`IScriptControl` オブジェクトのプロシージャを呼び出します。  
   
  [!code-cpp[concrt-parallel-scripts#7](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_7.cpp)]  
   
- `wmain`関数を作成、`IScriptControl`オブジェクト、n を計算するには、スクリプト コードを追加<sup>th</sup>フィボナッチ数列を呼び出し、続いて、`RunScriptProcedure`そのスクリプトを実行する関数。  
+ `wmain`関数を作成、`IScriptControl`オブジェクトに、n を計算するスクリプト コードを追加します。<sup>th</sup>フィボナッチ数を呼び出し、その後、`RunScriptProcedure`そのスクリプトを実行する関数。  
   
  [!code-cpp[concrt-parallel-scripts#8](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_8.cpp)]  
   
@@ -152,7 +152,7 @@ fib(12) = 144
 ```  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- コード例をコピーし、Visual Studio プロジェクトに貼り付けるかという名前のファイルに貼り付けます`parallel-scripts.cpp`Visual Studio コマンド プロンプト ウィンドウで、次のコマンドを実行します。  
+ コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、という名前のファイルに貼り付ける`parallel-scripts.cpp`Visual Studio コマンド プロンプト ウィンドウで、次のコマンドを実行します。  
   
  **cl.exe/EHsc parallel-scripts.cpp/link ole32.lib**  
   

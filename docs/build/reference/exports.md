@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6645ee4c890dab65cde8eab5dc18df1c31082c1
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: e6607016e2661817de04fce505bc921a3a25320a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42571536"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219494"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -69,7 +69,7 @@ Visual C コンパイラでは、C++ の関数の名前の装飾を使用する�
   
 を使用することができます*序数*と関数名ではなく、数字には、DLL のエクスポート テーブルに予定を指定します。 多くの Windows DLL で、レガシ コードをサポートするために序数がエクスポートされます。 DLL のサイズを最小限に抑えるのに役立つため、16 ビットの Windows コードでは序数を使用することが一般的でした。 レガシ サポートのために DLL のクライアントで必要な場合を除き、関数を序数でエクスポートすることはお勧めしません。 .LIB ファイルには序数と関数のマッピングが含まれているため、DLL を使用するプロジェクトでは通常と同様に関数名を使用できます。  
   
-省略可能な `NONAME` キーワードを使用することで、序数のみでエクスポートして、生成される DLL 内のエクスポート テーブルのサイズを縮小できます。 ただし、使用する場合[GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) DLL の名前を有効にすることはできないために、序数を知る必要があります。  
+省略可能な `NONAME` キーワードを使用することで、序数のみでエクスポートして、生成される DLL 内のエクスポート テーブルのサイズを縮小できます。 ただし、使用する場合[GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) DLL の名前を有効にすることはできないために、序数を知る必要があります。  
   
 省略可能なキーワード`PRIVATE`防止*entryname* LINK によって生成されるインポート ライブラリに含まれるからです。 同じく LINK によって生成されるイメージ内のエクスポートには影響しません。  
   

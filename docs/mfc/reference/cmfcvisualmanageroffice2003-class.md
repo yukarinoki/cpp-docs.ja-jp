@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8acf472d3727534bacd70664dc559b9d8f23d16
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ef28bc57981868eaa1cadcbead3c11c8fade57e8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541802"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217090"
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>CMFCVisualManagerOffice2003 クラス
 `CMFCVisualManagerOffice2003` Microsoft Office 2003 の外観をアプリケーションに提供します。  
@@ -206,7 +206,7 @@ class CMFCVisualManagerOffice2003 : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerOffice2003::OnHighlightQuickCustomizeMenuButton](#onhighlightquickcustomizemenubutton)|フレームワークを強調表示を描画するときは、このメソッドは、メニュー ボタンをクイック-カスタマイズします。 (`CMFCVisualManagerOfficeXP::OnHighlightQuickCustomizeMenuButton` をオーバーライドします)。|  
 |[CMFCVisualManagerOffice2003::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)|フレームワークは、強調表示されたメニュー コマンドを描画するときに、このメソッドを呼び出します。 (`CMFCVisualManagerOfficeXP::OnHighlightRarelyUsedMenuItems` をオーバーライドします)。|  
 |[CMFCVisualManagerOffice2003::OnUpdateSystemColors](#onupdatesystemcolors)|フレームワークは、システムの色を変更するときに、この関数を呼び出します。 (`CMFCVisualManagerOfficeXP::OnUpdateSystemColors` をオーバーライドします)。|  
-|[CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors)|ビジュアル マネージャーは、ネイティブの Windows XP テーマの色を使用する必要がありますか、色がから取得したかどうかを指定します[GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)します。|  
+|[CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors)|ビジュアル マネージャーは、ネイティブの Windows XP テーマの色を使用する必要がありますか、色がから取得したかどうかを指定します[GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)します。|  
 |[CMFCVisualManagerOffice2003::SetStatusBarOfficeXPLook](#setstatusbarofficexplook)|Windows XP のグローバル テーマを使用することを指定します。|  
 |[CMFCVisualManagerOffice2003::SetUseGlobalTheme](#setuseglobaltheme)|ビジュアル マネージャーがグローバルのテーマを使用するかどうかを指定します。|  
   
@@ -451,10 +451,10 @@ virtual void GetSmartDockingBaseGuideColors(
   
 ### <a name="parameters"></a>パラメーター  
  [in]*clrBaseGroupBackground*  
- 参照を[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)背景色に設定します。  
+ 参照を[COLORREF](/windows/desktop/gdi/colorref)背景色に設定します。  
   
  [in]*clrBaseGroupBorder*  
- 参照を[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)境界線の色を設定します。  
+ 参照を[COLORREF](/windows/desktop/gdi/colorref)境界線の色を設定します。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -466,7 +466,7 @@ virtual COLORREF GetSmartDockingHighlightToneColor();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 返します、 [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)音の強調表示色を格納しています。  
+ 返します、 [COLORREF](/windows/desktop/gdi/colorref)音の強調表示色を格納しています。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -491,7 +491,7 @@ virtual void GetTabFrameColors(
  フレームがタブを描画はタブ付きウィンドウへのポインター。  
   
  [out]*clrDark*  
- 参照を[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)パラメーターがこのメソッドが、タブの濃い境界線の色を格納します。  
+ 参照を[COLORREF](/windows/desktop/gdi/colorref)パラメーターがこのメソッドが、タブの濃い境界線の色を格納します。  
   
  [out]*clrBlack*  
  このメソッドがタブ ウィンドウの境界線の色を格納する COLORREF パラメーターへの参照。 境界線用の既定の色は黒です。  
@@ -536,7 +536,7 @@ virtual COLORREF GetToolbarDisabledColor() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 返します、 [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)無効時の色を格納しています。  
+ 返します、 [COLORREF](/windows/desktop/gdi/colorref)無効時の色を格納しています。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1095,7 +1095,7 @@ virtual COLORREF OnDrawPaneCaption(
  キャプション ボタンの境界を指定する四角形。  
   
 ### <a name="return-value"></a>戻り値  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)キャプションのテキストの色を示すパラメーターです。  
+ A [COLORREF](/windows/desktop/gdi/colorref)キャプションのテキストの色を示すパラメーターです。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1208,7 +1208,7 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
  キャプション バーへのポインター。 ビジュアル マネージャーでは、この描画[CMFCRibbonContextCaption クラス](../../mfc/reference/cmfcribboncontextcaption-class.md)します。  
   
 ### <a name="return-value"></a>戻り値  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)キャプション バーにテキストの色を示すパラメーターです。  
+ A [COLORREF](/windows/desktop/gdi/colorref)キャプション バーにテキストの色を示すパラメーターです。  
   
 ### <a name="remarks"></a>Remarks  
  リボン カテゴリのタイトル バーの外観をカスタマイズする派生クラスでこのメソッドをオーバーライドします。  
@@ -2231,7 +2231,7 @@ virtual void OnUpdateSystemColors();
  フレームワークでは、WM_SYSCOLORCHANGE メッセージの処理の一部としてこのメソッドを呼び出します。 アプリケーションで色を変更するときに、カスタム コードを実行する場合は、派生のビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="setdefaultwinxpcolors"></a>  CMFCVisualManagerOffice2003::SetDefaultWinXPColors  
- ビジュアル マネージャーは、ネイティブの Windows XP テーマの色を使用する必要がありますか、色がから取得したかどうかを指定します[GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)します。  
+ ビジュアル マネージャーは、ネイティブの Windows XP テーマの色を使用する必要がありますか、色がから取得したかどうかを指定します[GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)します。  
   
 ```  
 static void SetDefaultWinXPColors(BOOL bDefaultWinXPColors = TRUE);

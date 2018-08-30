@@ -9,15 +9,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cf5041e6e3faa8c495d52c31d86ff25c903a174
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 50c7b6a8e62aa957c54f66ebaf87fcd86df458fb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600721"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199344"
 ---
 # <a name="operator-windowsuixamlinteroptypename"></a>Windows::UI::Xaml::Interop::TypeName 演算子
-`Platform::Type` から [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx)変換できるようになります。  
+変換を有効`Platform::Type`に[::interop::typename](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -26,10 +26,10 @@ Operator TypeName(Platform::Type^ type)
 ```  
   
 ### <a name="return-value"></a>戻り値  
- [が指定されていると、](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) Windows::UI::Xaml::Interop::TypeName `Platform::Type^`が返されます。  
+ 返します、 [::interop::typename](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx)が指定されると、`Platform::Type^`します。  
   
 ### <a name="remarks"></a>Remarks  
- `TypeName` は、型情報を表すための、言語に依存しない Windows ランタイムの構造体です。 [Platform::Type](../cppcx/platform-type-class.md) は C++ に固有で、アプリケーション バイナリ インターフェイス (ABI: Application Binary Interface) を通じて渡すことはできません。 `TypeName`Navigate [関数での](http://msdn.microsoft.com/library/windows/apps/hh702394.aspx) の使用例を次に示します。  
+ `TypeName` は、型情報を表すための、言語に依存しない Windows ランタイムの構造体です。 [Platform::Type](../cppcx/platform-type-class.md) は C++ に固有で、アプリケーション バイナリ インターフェイス (ABI: Application Binary Interface) を通じて渡すことはできません。 ここでの用途の 1 つは、`TypeName`の[Navigate](https://msdn.microsoft.com/library/windows/apps/hh702394.aspx)関数。  
   
 ```  
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);  

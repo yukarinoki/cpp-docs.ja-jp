@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ff446c22706fbcac8b14c8cb69df9a4163663c02
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: bbacec7644a05f0077c8d6ffbe3e7856c66dcc4f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599934"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222976"
 ---
 # <a name="v1enum"></a>v1_enum
 
@@ -36,7 +36,7 @@ ms.locfileid: "42599934"
 
 ## <a name="remarks"></a>Remarks
 
-**V1_enum** C++ 属性と同じ機能を持つ、 [v1_enum](http://msdn.microsoft.com/library/windows/desktop/aa367303) MIDL 属性。
+**V1_enum** C++ 属性と同じ機能を持つ、 [v1_enum](/windows/desktop/Midl/v1-enum) MIDL 属性。
 
 ## <a name="example"></a>例
 

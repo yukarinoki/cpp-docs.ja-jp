@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fdc9e12a72758129f19ccd515c705df76bfe47ad
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9f376c2294dde0cc2fe538d3896aa28a9d136627
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594602"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221044"
 ---
 # <a name="odl"></a>odl
 
@@ -36,7 +36,7 @@ ms.locfileid: "42594602"
 
 ## <a name="remarks"></a>Remarks
 
-**Odl** C++ 属性と同じ機能を持つ、 [odl](http://msdn.microsoft.com/library/windows/desktop/aa367126) MIDL 属性。
+**Odl** C++ 属性と同じ機能を持つ、 [odl](/windows/desktop/Midl/odl) MIDL 属性。
 
 ## <a name="example"></a>例
 

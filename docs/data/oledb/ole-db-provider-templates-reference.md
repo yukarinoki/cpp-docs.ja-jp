@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7832985c6095aecae5098461d36947ff4268d262
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 04ee2d36d269d3bc9324b10dffd8840f9f68a8ab
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572200"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220888"
 ---
 # <a name="ole-db-provider-templates-reference"></a>OLE DB プロバイダー テンプレート リファレンス
 クラスと OLE DB プロバイダー テンプレート用のインターフェイスは、次のカテゴリにグループ化できます。 参考資料に関する情報も含まれます、 [OLE DB プロバイダー テンプレート用マクロ](../../data/oledb/macros-for-ole-db-provider-templates.md)します。  
@@ -63,7 +63,7 @@ ms.locfileid: "42572200"
  OLE DB 実装[IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))インターフェイスで、行を削除して、新しい行を挿入する既存の行の列の値の更新が可能です。  
   
  [IRowsetCreatorImpl](../../data/oledb/irowsetcreatorimpl-class.md)  
- このクラスから継承[IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765)と上書き[IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869)します。 `IRowsetCreatorImpl` 同じ機能を実行します。`IObjectWithSite`もにより、OLE DB プロパティが`DBPROPCANSCROLLBACKWARDS`と`DBPROPCANFETCHBACKWARDS`します。  
+ このクラスから継承[IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite)と上書き[IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite)します。 `IRowsetCreatorImpl` 同じ機能を実行します。`IObjectWithSite`もにより、OLE DB プロパティが`DBPROPCANSCROLLBACKWARDS`と`DBPROPCANFETCHBACKWARDS`します。  
   
  [IRowsetIdentityImpl](../../data/oledb/irowsetidentityimpl-class.md)  
  実装、`IRowsetIdentity`インターフェイスで、2 つの行のデータが同一かどうかどうかを比較することができます。  

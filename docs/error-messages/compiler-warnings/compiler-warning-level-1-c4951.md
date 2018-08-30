@@ -1,7 +1,7 @@
 ---
-title: コンパイラの警告 (レベル 1) C4951 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4951 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3ebf012338bdf6b90cc943e754056335c6751a4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e26c4bc176a54f063a3f9bce2faf451a9c0406f0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290466"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204236"
 ---
 # <a name="compiler-warning-level-1-c4951"></a>コンパイラの警告 (レベル 1) C4951
-プロファイル データ が収集されてから、'function' が編集されました。関数のプロファイル データは使用されません。  
-  
- [/LTCG:PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md)への入力モジュールの関数が編集されたため、プロファイル データが無効になりました。 入力モジュールは、 **/LTCG:PGINSTRUMENT** の後に再コンパイルされ、***/LTCG:PGINSTRUMENT***の操作時にモジュールに含まれていたものとは異なる制御フローを使用した関数 ( **function** ) が含まれています。  
-  
- これは、情報提供の警告です。 この警告を解決するには、 **/LTCG:PGINSTRUMENT**を実行してすべてのテストを再実行し、 **/LTCG:PGOPTIMIZE**を実行します。  
-  
- **/LTCG:PGOPTIMIZE** が使用されていた場合、この警告はエラーに置き換わることがあります。
+
+> '*関数*' からプロファイル データが収集された関数のプロファイル データは使用されませんが編集されました
+
+[/LTCG:PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md)への入力モジュールの関数が編集されたため、プロファイル データが無効になりました。 後で再コンパイルされた入力モジュール **/LTCG:PGINSTRUMENT**関数であり (*関数*)、別の時点で、モジュールが制御フローと、 **/LTCG:PGINSTRUMENT**操作。
+
+これは、情報提供の警告です。 この警告を解決するには、 **/LTCG:PGINSTRUMENT**を実行してすべてのテストを再実行し、 **/LTCG:PGOPTIMIZE**を実行します。
+
+**/LTCG:PGOPTIMIZE** が使用されていた場合、この警告はエラーに置き換わることがあります。

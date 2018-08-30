@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43ee49dede1a71e8bd2a01e98a3bdd2dd53ef63d
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: fbabd502ca6d9d81c569831f9dcb0b344523bb3e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42541794"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215329"
 ---
 # <a name="cmfccolorbutton-class"></a>CMFCColorButton クラス
 `CMFCColorButton`と[CMFCColorBar クラス](../../mfc/reference/cmfccolorbar-class.md)カラー ピッカー コントロールを実装するクラスを組み合わせて使用します。  
@@ -112,10 +112,10 @@ class CMFCColorButton : public CMFCButton
 |`m_bAltColorDlg`|ブール値。 TRUE の場合、フレームワークが表示されます、 [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)色 ダイアログ ボックスの場合に、*他*ボタンをクリックすると、FALSE の場合、システムの色 ダイアログ ボックスまたはします。 既定値は TRUE です。 詳細については、次を参照してください。 [CMFCColorButton::EnableOtherButton](#enableotherbutton)します。|  
 |`m_bAutoSetFocus`|ブール値。 TRUE の場合、フレームワークは、メニューが表示されたら、または FALSE の場合がフォーカスを変更していないときに、[色] メニュー、フォーカスを設定します。 既定値は TRUE です。|  
 |[CMFCColorButton::m_bEnabledInCustomizeMode](#m_benabledincustomizemode)|色のボタンのカスタマイズ モードが有効になっているかどうかを示します。|  
-|`m_Color`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)値。 現在選択されている色が含まれています。|  
-|`m_ColorAutomatic`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)値。 現在選択されている既定の色が含まれています。|  
-|`m_Colors`|A [CArray](../../mfc/reference/carray-class.md)の[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)値。 現在使用できる色が含まれています。|  
-|`m_lstDocColors`|A [CList](../../mfc/reference/clist-class.md)の[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)値。 現在のドキュメントの色が含まれています。|  
+|`m_Color`|A [COLORREF](/windows/desktop/gdi/colorref)値。 現在選択されている色が含まれています。|  
+|`m_ColorAutomatic`|A [COLORREF](/windows/desktop/gdi/colorref)値。 現在選択されている既定の色が含まれています。|  
+|`m_Colors`|A [CArray](../../mfc/reference/carray-class.md)の[COLORREF](/windows/desktop/gdi/colorref)値。 現在使用できる色が含まれています。|  
+|`m_lstDocColors`|A [CList](../../mfc/reference/clist-class.md)の[COLORREF](/windows/desktop/gdi/colorref)値。 現在のドキュメントの色が含まれています。|  
 |`m_nColumns`|整数。 色の選択メニューでの色のグリッドに表示する列の数が含まれています。|  
 |`m_pPalette`|ポインターを[CPalette](../../mfc/reference/cpalette-class.md)します。 現在の色の選択メニューで利用できる色が含まれています。|  
 |`m_pPopup`|ポインターを[CMFCColorPopupMenu クラス](../../mfc/reference/cmfccolorpopupmenu-class.md)オブジェクト。 色のボタンをクリックすると表示される色の選択メニュー。|  
@@ -439,7 +439,7 @@ virtual void UpdateColor(COLORREF color);
  [CMFCButton クラス](../../mfc/reference/cmfcbutton-class.md)   
  [CMFCColorBar クラス](../../mfc/reference/cmfccolorbar-class.md)   
  [CMFCColorButton::OnShowColorPopup](#onshowcolorpopup)   
- [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
+ [COLORREF](/windows/desktop/gdi/colorref)   
  [CPalette クラス](../../mfc/reference/cpalette-class.md)   
  [CArray クラス](../../mfc/reference/carray-class.md)   
  [CList クラス](../../mfc/reference/clist-class.md)   

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d269dbc83c11fa4ece55d8df8f6629d1afd52c03
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 771b7d91c4c5cfdb66908870675ab5cf53f2fdd4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594514"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221021"
 ---
 # <a name="how-to-create-a-resource"></a>方法: リソースを作成する
 
@@ -48,7 +48,7 @@ ms.locfileid: "42594514"
 
 ### <a name="to-create-a-new-resource-in-class-view"></a>クラス ビューでリソースを新規作成するには
 
-1. [クラス ビュー](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)クラスを右クリックして選択**追加**、 をクリックし、**リソースの追加**ショートカット メニューから。
+1. [クラス ビュー](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)クラスを右クリックして選択**追加**、 をクリックし、**リソースの追加**ショートカット メニューから。
 
 2. [[リソースの追加] ダイアログ ボックス](../windows/add-resource-dialog-box.md)で、プロジェクトに追加するリソースを選択します。
 

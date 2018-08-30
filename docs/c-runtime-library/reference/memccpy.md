@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddb085fee2459abd4cdef8a400f291bea4f6313b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6addc369de344b40a616b2ee1efbe840e98cc6d4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401845"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199541"
 ---
 # <a name="memccpy"></a>_memccpy
 
@@ -70,17 +70,17 @@ void *_memccpy(
 
 ## <a name="return-value"></a>戻り値
 
-場合、文字*c*がコピーされます。 **_memccpy**で char へのポインターを返します*dest*文字の後にします。 場合*c*はコピーされず、返します**NULL**です。
+場合、文字*c*がコピーされる **_memccpy**で char へのポインターを返します*dest*文字の後にします。 場合*c*はコピーされず、返します**NULL**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Memccpy**関数の 0 個以上の文字をコピーする*src*に*dest*、停止するときに、文字*c*がコピーされた場合や*カウント*文字がコピーされて、どちらか早い方です。
+**_Memccpy**関数の 0 個以上の文字をコピーする*src*に*dest*、ときに停止する、文字*c*がコピーされている場合、または*カウント*文字がコピーされた、早い方です。
 
-**セキュリティに関するメモ** コピー先のバッファーのサイズがソース バッファー以上であることをご確認ください。 詳しくは、「 [バッファー オーバーランの回避](http://msdn.microsoft.com/library/windows/desktop/ms717795)」をご覧ください。
+**セキュリティに関するメモ** コピー先のバッファーのサイズがソース バッファー以上であることをご確認ください。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_memccpy**|\<memory.h> または \<string.h>|
 

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd8fe2120ad42d7df223d05a43591937ffcce6e2
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 56a6211ac26a31b1ec01fdd2ad0579e4d9b52038
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885390"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223388"
 ---
 # <a name="ccomenum-class"></a>CComEnum クラス
 このクラスは、配列ベースの COM の列挙子オブジェクトを定義します。  
@@ -40,7 +40,7 @@ class ATL_NO_VTABLE CComEnum : public CComEnumImpl<Base, piid,
   
 #### <a name="parameters"></a>パラメーター  
  *ベース*  
- COM の列挙子 ([として](https://msdn.microsoft.com/library/ms680089.aspx)) インターフェイス。  
+ COM の列挙子インターフェイス。 参照してください[IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring)例についてはします。 
   
  *piid*  
  列挙子インターフェイスのインターフェイス ID へのポインター。  
@@ -80,7 +80,7 @@ class ATL_NO_VTABLE CComEnum : public CComEnumImpl<Base, piid,
   
  `CComEnum`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlcom.h  
   
 ## <a name="example"></a>例  

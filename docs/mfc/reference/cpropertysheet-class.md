@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b65bed61f864bc5515c2639be6afe5984702ae29
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: d2e9e13f7b5838cb13497dd874f7f0cf42f34e98
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42901089"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200147"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet クラス
 
@@ -117,13 +117,13 @@ class CPropertySheet : public CWnd
 
 |名前|説明|
 |----------|-----------------|
-|[CPropertySheet::m_psh](#m_psh)|Windows [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546)構造体。 基本プロパティ シートのパラメーターへのアクセスを提供します。|
+|[CPropertySheet::m_psh](#m_psh)|Windows [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2)構造体。 基本プロパティ シートのパラメーターへのアクセスを提供します。|
 
 ## <a name="remarks"></a>Remarks
 
 プロパティ シートから成る、`CPropertySheet`オブジェクトと 1 つ以上[CPropertyPage](../../mfc/reference/cpropertypage-class.md)オブジェクト。 フレームワークは、一連のタブ インデックスと、現在選択されているページが表示される領域を持つウィンドウとして、プロパティ シートを表示します。 ユーザーは、適切なタブを使用して、特定のページに移動します。
 
-`CPropertySheet` 展開のサポートを提供します。 [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546) Windows 98 および Windows NT 2000 で導入された構造です。 構造体には、追加のフラグと「透かし」の背景ビットマップを使用をサポートするメンバーが含まれています。
+`CPropertySheet` 展開のサポートを提供します。 [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2) Windows 98 および Windows NT 2000 で導入された構造です。 構造体には、追加のフラグと「透かし」の背景ビットマップを使用をサポートするメンバーが含まれています。
 
 プロパティ シート オブジェクトに自動的にこれらの新しいイメージを表示するへの呼び出しでビットマップとパレットのイメージの有効な値を渡す[まず、](#construct)または[呼び出します](#cpropertysheet).
 
@@ -601,7 +601,7 @@ CTabCtrl* GetTabControl() const;
 
 ##  <a name="m_psh"></a>  CPropertySheet::m_psh
 
-メンバーの格納の特性構造[PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546)します。
+メンバーの格納の特性構造[PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2)します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -624,13 +624,13 @@ void MapDialogRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>パラメーター
 
 *lpRect*  
-指す、 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)  ダイアログ ボックスを含むオブジェクトを変換する座標します。
+指す、 [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)  ダイアログ ボックスを含むオブジェクトを変換する座標します。
 
 ### <a name="remarks"></a>Remarks
 
 ダイアログ ボックスのテキストに使用されるフォントの文字の高さと幅の平均から派生した現在のダイアログ ボックス ベース ユニットの観点からは、ダイアログ ボックスのユニットが記載されています。 水平方向の 1 つの単位がベースの幅の単位をダイアログ ボックスの 4 分の 1 と垂直方向の 1 つの単位が 8 分の 1 ダイアログ ボックスの高さの基本単位です。
 
-[GetDialogBaseUnits](http://msdn.microsoft.com/library/windows/desktop/ms645475) Windows 関数が、システム フォントのサイズ情報を返しますが、リソース定義ファイルで DS_SETFONT スタイルを使用する場合は、プロパティ シートごとに別のフォントを指定できます。 [MapDialogRect](http://msdn.microsoft.com/library/windows/desktop/ms645502) Windows SDK で説明されている Windows 関数がこのダイアログ ボックスの適切なフォントを使用します。
+[GetDialogBaseUnits](/windows/desktop/api/winuser/nf-winuser-getdialogbaseunits) Windows 関数が、システム フォントのサイズ情報を返しますが、リソース定義ファイルで DS_SETFONT スタイルを使用する場合は、プロパティ シートごとに別のフォントを指定できます。 [MapDialogRect](/windows/desktop/api/winuser/nf-winuser-mapdialogrect) Windows SDK で説明されている Windows 関数がこのダイアログ ボックスの適切なフォントを使用します。
 
 `MapDialogRect`メンバー関数は、ダイアログ ボックスの単位*lpRect*で画面の単位 (ピクセル単位) ダイアログ ボックスを作成したり、ボックス内のコントロールの位置四角形を使用できるようにします。
 
@@ -683,9 +683,9 @@ n ボタン: ボタンが押されるを識別します。 このパラメータ
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[PSM_PRESSBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb774597) Windows SDK Pressbutton メッセージの詳細についてはします。
+参照してください[PSM_PRESSBUTTON](/windows/desktop/Controls/psm-pressbutton) Windows SDK Pressbutton メッセージの詳細についてはします。
 
-呼び出し`PressButton`は送信しません、 [PSN_APPLY](http://msdn.microsoft.com/library/windows/desktop/bb774552)プロパティ ページから、フレームワークへの通知。 この通知を送信する呼び出し[送るに](../../mfc/reference/cpropertypage-class.md#onok)します。
+呼び出し`PressButton`は送信しません、 [PSN_APPLY](/windows/desktop/Controls/psn-apply)プロパティ ページから、フレームワークへの通知。 この通知を送信する呼び出し[送るに](../../mfc/reference/cpropertypage-class.md#onok)します。
 
 ### <a name="example"></a>例
 

@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 105a6310968844336ead5c787586d547f3952e57
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 82447c14209f2f47fb6224df7e1daeb18ed6048e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338991"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212892"
 ---
 # <a name="ckeyboardmanager-class"></a>CKeyboardManager クラス
 メイン フレーム ウィンドウおよび子フレーム ウィンドウのショートカット キーのテーブルを管理します。  
@@ -97,7 +97,7 @@ class CKeyboardManager : public CObject
   
  [CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxkeyboardmanager.h  
   
 ##  <a name="ckeyboardmanager"></a>  CKeyboardManager::CKeyboardManager  
@@ -169,7 +169,7 @@ static BOOL __stdcall IsKeyHandled(
 |-|-|  
 |パラメーター|説明|  
 |[in]*nKey*|チェックするキー。|  
-|[in]*fVirt*|ショートカット キーの動作を指定します。 使用可能な値の一覧は、次を参照してください。[アクセル構造](http://msdn.microsoft.com/library/windows/desktop/ms646340)します。|  
+|[in]*fVirt*|ショートカット キーの動作を指定します。 使用可能な値の一覧は、次を参照してください。[アクセル構造](/windows/desktop/api/winuser/ns-winuser-tagaccel)します。|  
 |[in]*pWndFrame*|フレーム ウィンドウです。 このメソッドは、ショートカット キーがこのフレームで処理されるかどうかを判断します。|  
 |[in]*bIsDefaultFrame*|示すブール値パラメーターかどうか*pWndFrame*は既定のフレーム ウィンドウです。|  
   
@@ -197,7 +197,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
  0 以外の文字が印刷可能な場合は、0 でない場合。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドへの呼び出しが失敗した[GetKeyboardState](http://msdn.microsoft.com/library/windows/desktop/ms646299)は失敗します。  
+ このメソッドへの呼び出しが失敗した[GetKeyboardState](https://msdn.microsoft.com/library/windows/desktop/ms646299)は失敗します。  
   
 ##  <a name="isshowallaccelerators"></a>  CKeyboardManager::IsShowAllAccelerators  
  メニューにメニュー コマンドに関連付けられているすべてのショートカット キーまたは既定のショートカット キーのみが表示されるかどうかを示します。  

@@ -15,17 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 037f6d7bc80956536a7098ee67275425c41a2f68
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8acb1db66e4f6cc78ca79403aea782a936bff494
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613220"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199466"
 ---
 # <a name="non-mfc-dlls-overview"></a>非 MFC DLL: 概要
 非 MFC DLL が内部的には、MFC を使わない DLL と、MFC または非 MFC の実行可能ファイル、DLL からエクスポートされた関数を呼び出すことができます。 関数から、非 MFC DLL 標準の C インターフェイスを使用して、通常はエクスポートされます。  
   
- 非 MFC Dll の詳細については、次を参照してください。[ダイナミック リンク ライブラリ](http://msdn.microsoft.com/library/windows/desktop/ms682589)Windows SDK に含まれています。  
+ 非 MFC Dll の詳細については、次を参照してください。[ダイナミック リンク ライブラリ](https://msdn.microsoft.com/library/windows/desktop/ms682589)Windows SDK に含まれています。  
   
 ## <a name="what-do-you-want-to-do"></a>実行する操作  
   

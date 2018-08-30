@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6606fd65f0f551ca9105c8f9810a75902802334d
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: d6475e2ea3ec7fe69325fd82671952dbe2c39620
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42571796"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217293"
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>Dll と Visual C ランタイム ライブラリの動作  
   
@@ -67,7 +67,7 @@ extern "C" BOOL WINAPI DllMain (
 いくつかのライブラリをラップ、`DllMain`する関数。 たとえば、レギュラー MFC DLL では、実装、`CWinApp`オブジェクトの`InitInstance`と`ExitInstance`の初期化と終了が必要な DLL を実行するメンバー関数。 詳細については、次を参照してください。、[レギュラー MFC Dll の初期化](#initializing-regular-dlls)セクション。  
   
 > [!WARNING]
-> 安全に行える、DLL エントリ ポイントには、重要な制限があります。 参照してください[一般的なベスト プラクティス](https://msdn.microsoft.com/library/windows/desktop/dn633971#general_best_practices)で呼び出しても安全ではない特定の Windows Api の`DllMain`します。 必要がある場合、最も簡単な初期化はで初期化関数、DLL の。 後の初期化関数を呼び出すアプリケーションを要求できます`DllMain`が実行し、前に、関数を呼び出す他の DLL にします。  
+> 安全に行える、DLL エントリ ポイントには、重要な制限があります。 参照してください[一般的なベスト プラクティス](/windows/desktop/Dlls/dynamic-link-library-best-practices)で呼び出しても安全ではない特定の Windows Api の`DllMain`します。 必要がある場合、最も簡単な初期化はで初期化関数、DLL の。 後の初期化関数を呼び出すアプリケーションを要求できます`DllMain`が実行し、前に、関数を呼び出す他の DLL にします。  
   
 <a name="initializing-non-mfc-dlls"></a>  
   
@@ -116,7 +116,7 @@ extern "C" BOOL WINAPI DllMain (
   
 レギュラー MFC Dll があるため、`CWinApp`オブジェクト、MFC アプリケーションと同じ場所での初期化と終了タスクを実行する必要があります: で、`InitInstance`と`ExitInstance`の DLL のメンバー関数`CWinApp`の派生クラス。 MFC に用意されているため、`DllMain`関数によって呼び出される`_DllMainCRTStartup`の`DLL_PROCESS_ATTACH`と`DLL_PROCESS_DETACH`、独自に記述する必要がありますいない`DllMain`関数。 MFC の`DllMain`関数呼び出し`InitInstance`ときに、DLL が読み込まれ、呼び出し`ExitInstance`DLL が読み込まれる前にします。  
   
-レギュラー MFC DLL を監視できる複数のスレッドを呼び出して[TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801)と[TlsGetValue](http://msdn.microsoft.com/library/windows/desktop/ms686812)でその`InitInstance`関数。 これらの関数は、スレッド固有のデータを追跡するために、DLL を許可します。  
+レギュラー MFC DLL を監視できる複数のスレッドを呼び出して[TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)と[TlsGetValue](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)でその`InitInstance`関数。 これらの関数は、スレッド固有のデータを追跡するために、DLL を許可します。  
   
 動的にリンクする MFC、または使用する、MFC OLE、MFC データベース (DAO)、または MFC ソケットをサポート、それぞれ、デバッグ MFC 拡張 Dll MFCO、レギュラー MFC DLL で*バージョン*D.dll、MFCD*バージョン*D.dll、および MFCN*バージョン*D.dll (場所*バージョン*バージョン番号です) で自動的にリンクされます。 各レギュラー MFC DLL に使用してこれらの Dll の次の定義済みの初期化関数の 1 つを呼び出す必要があります`CWinApp::InitInstance`します。  
   
@@ -179,14 +179,14 @@ MFC 拡張 Dll へのリンクが明示的に呼び出す必要のあるアプ�
   
 時間によって、MFCx0.dll が完全に初期化されるため、`DllMain`が呼び出されると、メモリを割り当てるし、内の MFC 関数を呼び出す`DllMain`(MFC の 16 ビット バージョン) とは異なりします。  
   
-処理できる拡張 Dll の処理でマルチ スレッド、`DLL_THREAD_ATTACH`と`DLL_THREAD_DETACH`でケース、`DllMain`関数。 このような場合に渡される`DllMain`スレッドがアタッチし、DLL からデタッチします。 呼び出す[TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801)によりスレッド ローカル ストレージ (TLS) は、DLL にアタッチされているすべてのスレッドのインデックスを維持するために、DLL、DLL がアタッチされます。  
+処理できる拡張 Dll の処理でマルチ スレッド、`DLL_THREAD_ATTACH`と`DLL_THREAD_DETACH`でケース、`DllMain`関数。 このような場合に渡される`DllMain`スレッドがアタッチし、DLL からデタッチします。 呼び出す[TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)によりスレッド ローカル ストレージ (TLS) は、DLL にアタッチされているすべてのスレッドのインデックスを維持するために、DLL、DLL がアタッチされます。  
   
 Afxdllx.h ヘッダー ファイルには、構造体の定義などの MFC 拡張 Dll で使用される特殊な定義が含まれています`AFX_EXTENSION_MODULE`と`CDynLinkLibrary`します。 MFC 拡張 DLL では、このヘッダー ファイルを含める必要があります。  
   
 > [!NOTE]
 >  する定義も未定義のいずれかの重要な`_AFX_NO_XXX`Stdafx.h でマクロ。 これらのマクロは、特定のターゲット プラットフォームでは、かどうか、その機能がサポートしているかどうかをチェックするためにのみ存在します。 これらのマクロをチェックするようプログラムを記述することができます (たとえば、 `#ifndef _AFX_NO_OLE_SUPPORT`)、プログラムの定義またはこれらのマクロの定義を解除する必要があることはありませんが。  
   
-マルチ スレッドのハンドルが含まれているサンプルの初期化関数[を使用してスレッド ローカル ストレージにダイナミック リンク ライブラリ](http://msdn.microsoft.com/library/windows/desktop/ms686997)Windows SDK に含まれています。 サンプルが呼び出されるエントリ ポイント関数が含まれているメモ`LibMain`、この関数の名前が`DllMain`MFC および C ランタイム ライブラリで動作するようにします。  
+マルチ スレッドのハンドルが含まれているサンプルの初期化関数[を使用してスレッド ローカル ストレージにダイナミック リンク ライブラリ](/windows/desktop/Dlls/using-thread-local-storage-in-a-dynamic-link-library)Windows SDK に含まれています。 サンプルが呼び出されるエントリ ポイント関数が含まれているメモ`LibMain`、この関数の名前が`DllMain`MFC および C ランタイム ライブラリで動作するようにします。  
   
 ## <a name="see-also"></a>関連項目  
   

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 119a4e1b39d86ef2d12565fd593ce2124cef5bd5
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 49681f240d6cee257e48c2cf1c5d2479b3678135
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848916"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208371"
 ---
 # <a name="cpaintdc-class"></a>CPaintDC クラス
 デバイス コンテキスト クラスから派生した[CDC](../../mfc/reference/cdc-class.md)します。  
@@ -61,7 +61,7 @@ class CPaintDC : public CDC
 ## <a name="remarks"></a>Remarks  
  実行、 [cwnd::beginpaint](../../mfc/reference/cwnd-class.md#beginpaint)構築時に、 [CWnd::EndPaint](../../mfc/reference/cwnd-class.md#endpaint)破棄時。  
   
- A`CPaintDC`オブジェクトに応答する場合にのみ使用できます、 [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213)メッセージでは、通常、`OnPaint`メッセージ ハンドラー メンバー関数。  
+ A`CPaintDC`オブジェクトに応答する場合にのみ使用できます、 [WM_PAINT](/windows/desktop/gdi/wm-paint)メッセージでは、通常、`OnPaint`メッセージ ハンドラー メンバー関数。  
   
  使用しての詳細については`CPaintDC`を参照してください[デバイス コンテキスト](../../mfc/device-contexts.md)します。  
   
@@ -72,7 +72,7 @@ class CPaintDC : public CDC
   
  `CPaintDC`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="cpaintdc"></a>  CPaintDC::CPaintDC  
@@ -87,7 +87,7 @@ explicit CPaintDC(CWnd* pWnd);
  指す、`CWnd`先となるオブジェクト、`CPaintDC`オブジェクトが属しています。  
   
 ### <a name="remarks"></a>Remarks  
- 例外 (型の`CResourceException`) 場合にスローされる、Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)呼び出しは失敗します。 Windows が既に割り当てられているすべての利用可能なデバイス コンテキストの場合は、デバイス コンテキストを使用しないことがあります。 アプリケーションは、共通のディスプレイ コンテキスト Windows の任意の時点でご利用いただけますの 5 つの競合します。  
+ 例外 (型の`CResourceException`) 場合にスローされる、Windows [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc)呼び出しは失敗します。 Windows が既に割り当てられているすべての利用可能なデバイス コンテキストの場合は、デバイス コンテキストを使用しないことがあります。 アプリケーションは、共通のディスプレイ コンテキスト Windows の任意の時点でご利用いただけますの 5 つの競合します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#97](../../mfc/codesnippet/cpp/cpaintdc-class_1.cpp)]  

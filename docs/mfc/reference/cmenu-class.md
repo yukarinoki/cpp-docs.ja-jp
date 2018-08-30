@@ -94,12 +94,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90c2e6f457af9dfa34b63536a79b7764d91bdbec
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 0c94542fdac3734644771f2659d894d1c8c6f907
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339476"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220803"
 ---
 # <a name="cmenu-class"></a>CMenu クラス
 Windows の `HMENU`をカプセル化したものです。  
@@ -608,7 +608,7 @@ UINT GetDefaultItem(
  関数が成功すると、戻り値は、識別子またはメニュー項目の位置。 関数が失敗した場合、戻り値は - 1 です。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 関数の動作を実装[GetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647976)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 関数の動作を実装[GetMenuDefaultItem](/windows/desktop/api/winuser/nf-winuser-getmenudefaultitem)」の説明に従って、Windows SDK。  
   
 ### <a name="example"></a>例  
   例をご覧ください[CMenu::InsertMenu](#insertmenu)します。  
@@ -635,7 +635,7 @@ BOOL GetMenuInfo(LPMENUINFO lpcmi) const;
   
 ### <a name="parameters"></a>パラメーター  
  *lpcmi*  
- ポインターを[保持](http://msdn.microsoft.com/library/windows/desktop/ms647575)メニューの情報を含む構造体。  
+ ポインターを[保持](/windows/desktop/api/winuser/ns-winuser-tagmenuinfo)メニューの情報を含む構造体。  
   
 ### <a name="return-value"></a>戻り値  
  戻り値は 0 以外の場合は、関数が成功すると、それ以外の場合、戻り値は 0 です。  
@@ -688,16 +688,16 @@ BOOL GetMenuItemInfo(
  識別子またはに関する情報を取得するメニュー項目の位置。 このパラメーターの意味は、の値によって異なります。`ByPos`します。  
   
  *lpMenuItemInfo*  
- ポインターを[MENUITEMINFO](http://msdn.microsoft.com/library/windows/desktop/ms647578)」の説明に従って Windows SDK のメニューに関する情報が含まれています。  
+ ポインターを[MENUITEMINFO](/windows/desktop/api/winuser/ns-winuser-tagmenuiteminfoa)」の説明に従って Windows SDK のメニューに関する情報が含まれています。  
   
  *どの*  
  値の意味を指定する`nIDItem`します。 既定では、 `ByPos` false では、メニュー項目の識別子を示します。 場合`ByPos`が設定されていないを FALSE にメニュー項目の位置を示します。  
   
 ### <a name="return-value"></a>戻り値  
- 関数が成功した場合、戻り値は 0 以外の値です。 関数が失敗した場合は、0 を返します。 拡張エラー情報を取得するには、Win32 関数を使用して[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)」の説明に従って、Windows SDK。  
+ 関数が成功した場合、戻り値は 0 以外の値です。 関数が失敗した場合は、0 を返します。 拡張エラー情報を取得するには、Win32 関数を使用して[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)」の説明に従って、Windows SDK。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の動作を実装する、Win32 関数の[GetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms647980)」の説明に従って、Windows SDK。 MFC 実装で`GetMenuItemInfo`メニューのハンドルを使用しません。  
+ このメンバー関数の動作を実装する、Win32 関数の[GetMenuItemInfo](/windows/desktop/api/winuser/nf-winuser-getmenuiteminfoa)」の説明に従って、Windows SDK。 MFC 実装で`GetMenuItemInfo`メニューのハンドルを使用しません。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCWindowing#26](../../mfc/reference/codesnippet/cpp/cmenu-class_6.cpp)]  
@@ -855,7 +855,7 @@ BOOL InsertMenu(
   
 |nFlags|LpszNewItem の解釈|  
 |------------|-----------------------------------|  
-|MF_OWNERDRAW|アプリケーションは、メニュー項目に関連付けられている追加のデータを維持するために使用できるアプリケーションによって提供される 32 ビット値が含まれています。 この 32 ビット値でアプリケーションに使用、`itemData`によって提供される構造体のメンバー、[よう](http://msdn.microsoft.com/library/windows/desktop/bb775925)と[WM_DRAWITEM](http://msdn.microsoft.com/library/windows/desktop/bb775923)メッセージ。 メニュー項目が最初に表示されるかが変更される、これらのメッセージが送信されます。|  
+|MF_OWNERDRAW|アプリケーションは、メニュー項目に関連付けられている追加のデータを維持するために使用できるアプリケーションによって提供される 32 ビット値が含まれています。 この 32 ビット値でアプリケーションに使用、`itemData`によって提供される構造体のメンバー、[よう](/windows/desktop/Controls/wm-measureitem)と[WM_DRAWITEM](/windows/desktop/Controls/wm-drawitem)メッセージ。 メニュー項目が最初に表示されるかが変更される、これらのメッセージが送信されます。|  
 |MF_STRING|Null で終わる文字列への long ポインターが含まれています。 これは、既定の解釈です。|  
 |MF_SEPARATOR|*LpszNewItem* (不要) パラメーターは無視されます。|  
   
@@ -889,7 +889,7 @@ BOOL InsertMenuItem(
   
 ### <a name="parameters"></a>パラメーター  
  *uItem*  
- 説明を参照してください。 *uItem*で[InsertMenuItem](http://msdn.microsoft.com/library/windows/desktop/ms647988) Windows SDK に含まれています。  
+ 説明を参照してください。 *uItem*で[InsertMenuItem](/windows/desktop/api/winuser/nf-winuser-insertmenuitema) Windows SDK に含まれています。  
   
  *lpMenuItemInfo*  
  説明を参照してください。 *lpmii*で`InsertMenuItem`Windows SDK に含まれています。  
@@ -898,7 +898,7 @@ BOOL InsertMenuItem(
  説明を参照してください。 *fByPosition*で`InsertMenuItem`Windows SDK に含まれています。  
   
 ### <a name="remarks"></a>Remarks  
- この関数をラップ[InsertMenuItem](http://msdn.microsoft.com/library/windows/desktop/ms647988)Windows SDK で説明します。  
+ この関数をラップ[InsertMenuItem](/windows/desktop/api/winuser/nf-winuser-insertmenuitema)Windows SDK で説明します。  
   
 ##  <a name="loadmenu"></a>  CMenu::LoadMenu  
  アプリケーションの実行可能ファイルからメニュー リソースを読み込みにアタッチします、`CMenu`オブジェクト。  
@@ -933,13 +933,13 @@ BOOL LoadMenuIndirect(const void* lpMenuTemplate);
   
 ### <a name="parameters"></a>パラメーター  
  *lpMenuTemplate*  
- メニューのテンプレートを指す (これは、1 つ[MENUITEMTEMPLATEHEADER](http://msdn.microsoft.com/library/windows/desktop/ms647583)構造と 1 つまたは複数のコレクション[それに続く](http://msdn.microsoft.com/library/windows/desktop/ms647581)構造)。 これら 2 つの構造の詳細については、Windows SDK を参照してください。  
+ メニューのテンプレートを指す (これは、1 つ[MENUITEMTEMPLATEHEADER](/windows/desktop/api/winuser/ns-winuser-menuitemtemplateheader)構造と 1 つまたは複数のコレクション[それに続く](/windows/desktop/api/winuser/ns-winuser-menuitemtemplate)構造)。 これら 2 つの構造の詳細については、Windows SDK を参照してください。  
   
 ### <a name="return-value"></a>戻り値  
  メニュー リソースが正常に読み込まれている場合、0 以外の場合それ以外の場合 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- メニューのテンプレートは、1 つまたは複数のコレクションに続くヘッダー[それに続く](http://msdn.microsoft.com/library/windows/desktop/ms647581)構造、各メニュー項目とポップアップ メニューの 1 つまたは複数を含めることができます。  
+ メニューのテンプレートは、1 つまたは複数のコレクションに続くヘッダー[それに続く](/windows/desktop/api/winuser/ns-winuser-menuitemtemplate)構造、各メニュー項目とポップアップ メニューの 1 つまたは複数を含めることができます。  
   
  バージョン番号は 0 になります。  
   
@@ -1131,10 +1131,10 @@ BOOL SetDefaultItem(
  値の意味を指定する*uItem*します。 このパラメーターが FALSE の場合*uItem*はメニュー項目の識別子です。 それ以外の場合、メニュー項目の位置になります。  
   
 ### <a name="return-value"></a>戻り値  
- 関数が成功した場合、戻り値は 0 以外の値です。 関数が失敗した場合は、0 を返します。 拡張エラー情報を取得するには、Win32 関数を使用して[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)」の説明に従って、Windows SDK。  
+ 関数が成功した場合、戻り値は 0 以外の値です。 関数が失敗した場合は、0 を返します。 拡張エラー情報を取得するには、Win32 関数を使用して[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)」の説明に従って、Windows SDK。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 関数の動作を実装[SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 関数の動作を実装[SetMenuDefaultItem](/windows/desktop/api/winuser/nf-winuser-setmenudefaultitem)」の説明に従って、Windows SDK。  
   
 ### <a name="example"></a>例  
   例をご覧ください[CMenu::InsertMenu](#insertmenu)します。  
@@ -1168,7 +1168,7 @@ BOOL SetMenuInfo(LPCMENUINFO lpcmi);
   
 ### <a name="parameters"></a>パラメーター  
  *lpcmi*  
- ポインターを[保持](http://msdn.microsoft.com/library/windows/desktop/ms647575)メニューの情報を含む構造体。  
+ ポインターを[保持](/windows/desktop/api/winuser/ns-winuser-tagmenuinfo)メニューの情報を含む構造体。  
   
 ### <a name="return-value"></a>戻り値  
  戻り値は 0 以外の場合は、関数が成功すると、それ以外の場合、戻り値は 0 です。  
@@ -1234,7 +1234,7 @@ BOOL SetMenuItemInfo(
   
 ### <a name="parameters"></a>パラメーター  
  *uItem*  
- 説明を参照してください。 *uItem*で[SetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms648001) Windows SDK に含まれています。  
+ 説明を参照してください。 *uItem*で[SetMenuItemInfo](/windows/desktop/api/winuser/nf-winuser-setmenuiteminfoa) Windows SDK に含まれています。  
   
  *lpMenuItemInfo*  
  説明を参照してください。 *lpmii*で`SetMenuItemInfo`Windows SDK に含まれています。  
@@ -1243,7 +1243,7 @@ BOOL SetMenuItemInfo(
  説明を参照してください。 *fByPosition*で`SetMenuItemInfo`Windows SDK に含まれています。  
   
 ### <a name="remarks"></a>Remarks  
- この関数をラップ[SetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms648001)Windows SDK で説明します。  
+ この関数をラップ[SetMenuItemInfo](/windows/desktop/api/winuser/nf-winuser-setmenuiteminfoa)Windows SDK で説明します。  
   
 ##  <a name="trackpopupmenu"></a>  CMenu::TrackPopupMenu  
  指定した位置に浮動小数点のポップアップ メニューを表示し、ポップアップ メニュー項目の選択を追跡します。  
@@ -1259,7 +1259,7 @@ BOOL TrackPopupMenu(
   
 ### <a name="parameters"></a>パラメーター  
  *nFlags*  
- フラグを画面位置とマウスの位置を指定します。 参照してください[TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002)使用可能なフラグの一覧についてはします。  
+ フラグを画面位置とマウスの位置を指定します。 参照してください[TrackPopupMenu](/windows/desktop/api/winuser/nf-winuser-trackpopupmenu)使用可能なフラグの一覧についてはします。  
   
  *x*  
  ポップアップ メニューの画面座標の水平方向の位置を指定します。 値に応じて、 *nFlags*パラメーター、メニューは左揃え、右揃え、またはこの位置から見て中央揃えにすることができます。  
@@ -1274,7 +1274,7 @@ BOOL TrackPopupMenu(
  無視されます。  
   
 ### <a name="return-value"></a>戻り値  
- このメソッド呼び出しの結果を返します[TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002) Windows SDK に含まれています。  
+ このメソッド呼び出しの結果を返します[TrackPopupMenu](/windows/desktop/api/winuser/nf-winuser-trackpopupmenu) Windows SDK に含まれています。  
   
 ### <a name="remarks"></a>Remarks  
  浮動小数点のポップアップ メニューは、画面に任意の場所に表示できます。  
@@ -1296,7 +1296,7 @@ BOOL TrackPopupMenuEx(
   
 ### <a name="parameters"></a>パラメーター  
  *fuFlags*  
- 拡張メニューのさまざまな関数を指定します。 すべての値の一覧とその意味では、次を参照してください。[バインド](http://msdn.microsoft.com/library/windows/desktop/ms648003)します。  
+ 拡張メニューのさまざまな関数を指定します。 すべての値の一覧とその意味では、次を参照してください。[バインド](/windows/desktop/api/winuser/nf-winuser-trackpopupmenuex)します。  
   
  *x*  
  ポップアップ メニューの画面座標の水平方向の位置を指定します。  
@@ -1308,15 +1308,15 @@ BOOL TrackPopupMenuEx(
  ポップアップ メニューを所有していると、[作成] メニューから、メッセージの受信ウィンドウへのポインター。 このウィンドウは、現在のアプリケーションからの任意のウィンドウを指定できますが、NULL にすることはできません。 TPM_NONOTIFY を指定する場合、 *fuFlags*パラメーター、関数はすべてのメッセージを送信しません*我が物*します。 によって示されるウィンドウ関数が返す必要があります*我が物*WM_COMMAND メッセージを受信します。  
   
  *lptpm*  
- ポインターを[TPMPARAMS](http://msdn.microsoft.com/library/windows/desktop/ms647586)メニュー画面の領域を指定する構造体が重なり合ってはなりません。 このパラメーターは、NULL を指定できます。  
+ ポインターを[TPMPARAMS](/windows/desktop/api/winuser/ns-winuser-tagtpmparams)メニュー画面の領域を指定する構造体が重なり合ってはなりません。 このパラメーターは、NULL を指定できます。  
   
 ### <a name="return-value"></a>戻り値  
  TPM_RETURNCMD を指定する場合、 *fuFlags*パラメーター、戻り値は、ユーザーが選択した項目をメニュー項目の識別子。 ユーザーが、選択を行わず、メニューを取り消した場合、またはエラーが発生した場合は、戻り値は 0 です。  
   
- TPM_RETURNCMD を指定しない場合、 *fuFlags*パラメーター、戻り値は 0 以外の場合、関数が成功した場合、0、失敗した場合。 拡張エラー情報を取得するには呼び出します[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)します。  
+ TPM_RETURNCMD を指定しない場合、 *fuFlags*パラメーター、戻り値は 0 以外の場合、関数が成功した場合、0、失敗した場合。 拡張エラー情報を取得するには呼び出します[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)します。  
   
 ### <a name="remarks"></a>Remarks  
- 浮動小数点のポップアップ メニューは、画面に任意の場所に表示できます。 ポップアップ メニューを作成するときのエラー処理の詳細については、次を参照してください。[バインド](http://msdn.microsoft.com/library/windows/desktop/ms648003)します。  
+ 浮動小数点のポップアップ メニューは、画面に任意の場所に表示できます。 ポップアップ メニューを作成するときのエラー処理の詳細については、次を参照してください。[バインド](/windows/desktop/api/winuser/nf-winuser-trackpopupmenuex)します。  
   
 ## <a name="see-also"></a>関連項目  
  [MFC サンプル CTRLTEST](../../visual-cpp-samples.md)   

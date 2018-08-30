@@ -208,12 +208,12 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3314921d528624e5f08d9053f44f171d5c45b7f2
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: f51bac0f5865a6f985436f3713d3a81abd44cddb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43132231"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203965"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 関数
 
@@ -2645,7 +2645,7 @@ bool is_sorted(
 
 ### <a name="remarks"></a>Remarks
 
-最初のテンプレート関数を返します[is_sorted_until](http://msdn.microsoft.com/bbad99d0-deaa-4fe6-ae58-eb5b3e4dded0)`( first, last ) == last`します。 `operator<`関数は、順序比較を実行します。
+最初のテンプレート関数を返します[is_sorted_until](https://msdn.microsoft.com/bbad99d0-deaa-4fe6-ae58-eb5b3e4dded0)`( first, last ) == last`します。 `operator<`関数は、順序比較を実行します。
 
 2 番目のテンプレート関数を返します`is_sorted_until( first, last , comp ) == last`します。 *Comp*述語関数は、順序比較を実行します。
 
@@ -7392,11 +7392,9 @@ void shuffle(RandomAccessIterator first,
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*シャッフル包含される範囲の最初の要素に対する反復子。 
-          `RandomAccessIterator` および `ValueSwappable` の要件を満たしている必要があります。
+*最初*シャッフル包含される範囲の最初の要素に対する反復子。 `RandomAccessIterator` および `ValueSwappable` の要件を満たしている必要があります。
 
-*最後*シャッフル排他される範囲の最後の要素に対する反復子。 
-          `RandomAccessIterator` および `ValueSwappable` の要件を満たしている必要があります。
+*最後*シャッフル排他される範囲の最後の要素に対する反復子。 `RandomAccessIterator` および `ValueSwappable` の要件を満たしている必要があります。
 
 *gen*乱数ジェネレーターを`shuffle()`関数は、操作に使用されます。 `UniformRandomNumberGenerator` の要件を満たしている必要があります。
 

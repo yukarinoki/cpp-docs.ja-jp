@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1c29a317ff2d4d8e40d6aca0d6b46ee3ba2fd88
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 5082490b9dd2e37090bac747e592b62ce51ac26a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853837"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200903"
 ---
 # <a name="cobarray-class"></a>CObArray クラス
 `CObject` ポインターの配列をサポートします。  
@@ -132,7 +132,7 @@ class CObArray : public CObject
   
  `CObArray`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxcoll.h  
   
 ##  <a name="add"></a>  CObArray::Add  
@@ -158,7 +158,7 @@ INT_PTR Add(CObject* newElement);
 |-----------|---------------------|  
 |[CByteArray](../../mfc/reference/cbytearray-class.md)|**INT_PTR の追加 (バイト** `newElement` **)。**<br /><br /> **スロー (CMemoryException\* )。**|  
 |[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**INT_PTR の追加 (DWORD** `newElement` **)。**<br /><br /> **スロー (CMemoryException\* )。**|  
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**INT_PTR の追加 (void\***  `newElement` **)。**<br /><br /> **スロー (CMemoryException\* )。**|  
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**INT_PTR の追加 (void** <strong>\*</strong> `newElement` **)。**<br /><br /> **スロー (CMemoryException\* )。**|  
 |[CStringArray](../../mfc/reference/cstringarray-class.md)|**INT_PTR の追加 (LPCTSTR** `newElement` **); スロー (CMemoryException\* )。**<br /><br /> **INT_PTR Add(const CString&** `newElement` **);**|  
 |[CUIntArray](../../mfc/reference/cuintarray-class.md)|**INT_PTR の追加 (UINT** `newElement` **)。**<br /><br /> **スロー (CMemoryException\* )。**|  
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTR の追加 (WORD** `newElement` **)。**<br /><br /> **スロー (CMemoryException\* )。**|  
@@ -516,12 +516,12 @@ void InsertAt(
   
 |クラス|メンバー関数|  
 |-----------|---------------------|  
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void InsertAt (INT_PTR** `nIndex` **、バイト** `newElement` **、int** `nCount` **= 1)。**<br /><br /> **スロー (CMemoryException\* )。**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **、CByteArray\***  `pNewArray` **)。**<br /><br /> **スロー (CMemoryException\* )。**|  
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **、DWORD** `newElement` **、int** `nCount` **= 1)。**<br /><br /> **スロー (CMemoryException\* )。**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **、CDWordArray\***  `pNewArray` **)。**<br /><br /> **スロー (CMemoryException\* )。**|  
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, void\***  `newElement` **、int** `nCount` **= 1)。**<br /><br /> **スロー (CMemoryException\* )。**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **、CPtrArray\***  `pNewArray` **)。**<br /><br /> **スロー (CMemoryException\* )。**|  
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **、LPCTSTR** `newElement` **、int** `nCount` **= 1)。**<br /><br /> **スロー (CMemoryException\* )。**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **、CStringArray\***  `pNewArray` **)。**<br /><br /> **スロー (CMemoryException\* )。**|  
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **、UINT** `newElement` **、int** `nCount` **= 1)。**<br /><br /> **スロー (CMemoryException\* )。**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **、CUIntArray\***  `pNewArray` **)。**<br /><br /> **スロー (CMemoryException\* )。**|  
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **、WORD** `newElement` **、int** `nCount` **= 1)。**<br /><br /> **スロー (CMemoryException\* )。**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **、CWordArray\***  `pNewArray` **)。**<br /><br /> **スロー (CMemoryException\* )。**|  
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void InsertAt (INT_PTR** `nIndex` **、バイト** `newElement` **、int** `nCount` **= 1)。**<br /><br /> **スロー (CMemoryException\* )。**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **、CByteArray** <strong>\*</strong> `pNewArray` **)。**<br /><br /> **スロー (CMemoryException\* )。**|  
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **、DWORD** `newElement` **、int** `nCount` **= 1)。**<br /><br /> **スロー (CMemoryException\* )。**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **、CDWordArray** <strong>\*</strong> `pNewArray` **)。**<br /><br /> **スロー (CMemoryException\* )。**|  
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, void** <strong>\*</strong> `newElement` **、int** `nCount` **= 1)。**<br /><br /> **スロー (CMemoryException\* )。**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **、CPtrArray** <strong>\*</strong> `pNewArray` **)。**<br /><br /> **スロー (CMemoryException\* )。**|  
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **、LPCTSTR** `newElement` **、int** `nCount` **= 1)。**<br /><br /> **スロー (CMemoryException\* )。**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **、CStringArray** <strong>\*</strong> `pNewArray` **)。**<br /><br /> **スロー (CMemoryException\* )。**|  
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **、UINT** `newElement` **、int** `nCount` **= 1)。**<br /><br /> **スロー (CMemoryException\* )。**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **、CUIntArray** <strong>\*</strong> `pNewArray` **)。**<br /><br /> **スロー (CMemoryException\* )。**|  
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **、WORD** `newElement` **、int** `nCount` **= 1)。**<br /><br /> **スロー (CMemoryException\* )。**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **、CWordArray** <strong>\*</strong> `pNewArray` **)。**<br /><br /> **スロー (CMemoryException\* )。**|  
   
 ### <a name="example"></a>例  
   参照してください[使われて](../../mfc/reference/coblist-class.md#coblist)の一覧については、`CAge`コレクションのすべての例で使用されるクラス。  
@@ -677,7 +677,7 @@ void SetAt(
 |-----------|---------------------|  
 |[CByteArray](../../mfc/reference/cbytearray-class.md)|**setat メソッドを void (INT_PTR** `nIndex` **、バイト** `newElement` **)。**|  
 |[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**setat メソッドを void (INT_PTR** `nIndex` **、DWORD** `newElement` **)。**|  
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**setat メソッドを void (INT_PTR** `nIndex` **, void\***  `newElement` **)。**|  
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**setat メソッドを void (INT_PTR** `nIndex` **, void** <strong>\*</strong> `newElement` **)。**|  
 |[CStringArray](../../mfc/reference/cstringarray-class.md)|**setat メソッドを void (INT_PTR** `nIndex` **、LPCTSTR** `newElement` **)。**|  
 |[CUIntArray](../../mfc/reference/cuintarray-class.md)|**setat メソッドを void (INT_PTR** `nIndex` **、UINT** `newElement` **)。**|  
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**setat メソッドを void (INT_PTR** `nIndex` **、WORD** `newElement` **)。**|  
@@ -720,7 +720,7 @@ void SetAtGrow(
 |-----------|---------------------|  
 |[CByteArray](../../mfc/reference/cbytearray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **、バイト** `newElement` **)。**<br /><br /> **スロー (CMemoryException\* )。**|  
 |[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **、DWORD** `newElement` **)。**<br /><br /> **スロー (CMemoryException\* )。**|  
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **, void\***  `newElement` **)。**<br /><br /> **スロー (CMemoryException\* )。**|  
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **, void** <strong>\*</strong> `newElement` **)。**<br /><br /> **スロー (CMemoryException\* )。**|  
 |[CStringArray](../../mfc/reference/cstringarray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **、LPCTSTR** `newElement` **)。**<br /><br /> **スロー (CMemoryException\* )。**|  
 |[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **、UINT** `newElement` **)。**<br /><br /> **スロー (CMemoryException\* )。**|  
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **、WORD** `newElement` **)。**<br /><br /> **スロー (CMemoryException\* )。**|  
@@ -763,7 +763,7 @@ void SetSize(
   
  *NGrowBy*パラメーターは、配列が増加しているときに内部メモリの割り当てに影響します。 使用には影響せず、配列のサイズによって報告された`GetSize`と`GetUpperBound`します。  
   
- 配列のサイズが大きくなった場合、すべての新しく割り当てられた**CObject \*** ポインターが NULL に設定されます。  
+ 配列のサイズが大きくなった場合、すべての新しく割り当てられた**CObject** <strong>\*</strong>ポインターが NULL に設定されます。  
   
  次の表はその他のメンバー関数に似ている`CObArray::SetSize`します。  
   

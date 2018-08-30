@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b51fd0f090eb53184572ac1ee26d30177fae1df
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: aa231a2f232c6c834e05edfbca5d6023e0326d54
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339294"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216737"
 ---
 # <a name="cgopherlocator-class"></a>CGopherLocator クラス
 Gopher「ロケーター」を gopher サーバーから取得、ロケーターの種類を決定およびロケーターを使用できるように[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)します。  
@@ -73,7 +73,7 @@ class CGopherLocator : public CObject
   
  `CGopherLocator`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxinet.h  
   
 ##  <a name="cgopherlocator"></a>  CGopherLocator::CGopherLocator  
@@ -102,7 +102,7 @@ BOOL GetLocatorType(DWORD& dwRef) const;
  ロケーターの種類を受信する DWORD への参照。 参照してください**解説**のロケーターの種類の一覧についてはします。  
   
 ### <a name="return-value"></a>戻り値  
- 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。  
+ 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。  
   
 ### <a name="remarks"></a>Remarks  
  使用可能な型は次のとおりです。  

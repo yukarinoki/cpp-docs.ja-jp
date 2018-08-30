@@ -1,5 +1,5 @@
 ---
-title: -Fp (名前です。Pch ファイル) |Microsoft ドキュメント
+title: -Fp (名前です。Pch ファイル) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,50 +25,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80f59477695b83b33dd3cfa2b37837c5b52c8002
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 723bf8d6f49157a2cdc02376e1a628ba697eceb2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376333"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217992"
 ---
 # <a name="fp-name-pch-file"></a>/Fp (.pch ファイルの名前の指定)
-プリコンパイル済みヘッダーの既定のパス名を使用する代わりに、パス名を提供します。  
+既定のパス名を使用する代わりにプリコンパイル済みヘッダーのパス名を提供します。  
   
 ## <a name="syntax"></a>構文  
   
-> **/Fp**_パス名_  
+> **/Fp**<em>パス名</em>  
   
-## <a name="remarks"></a>コメント  
- このオプションを使用して[/Yc (プリコンパイル済みヘッダー ファイルの作成)](../../build/reference/yc-create-precompiled-header-file.md)または[/Yu (プリコンパイル済みヘッダー ファイルの使用)](../../build/reference/yu-use-precompiled-header-file.md)プリコンパイル済みヘッダーの既定のパス名を使用する代わりに、パス名を指定します。 使用することも **/Fp**で **/Yc**とは異なるプリコンパイル済みヘッダー ファイルの使用を指定する、**/Yc * * * ファイル名*引数とソース ファイルのベース名から。  
+## <a name="remarks"></a>Remarks  
+ このオプションを使用[/Yc (プリコンパイル済みヘッダー ファイルの作成)](../../build/reference/yc-create-precompiled-header-file.md)または[/Yu (プリコンパイル済みヘッダー ファイルの使用)](../../build/reference/yu-use-precompiled-header-file.md)プリコンパイル済みヘッダーの既定のパス名を使用する代わりにパス名を指定します。 使用することも **/Fp**で **/Yc**とは異なるプリコンパイル済みヘッダー ファイルの使用を指定する、 **/Yc**<em>filename</em>引数とソース ファイルのベース名にします。  
   
- パス名の一部として、拡張機能を指定しないと、拡張子を .pch と見なされます。 ファイル名のないディレクトリを指定すると、既定のファイル名が VC*x*0. pch 場所*x*メジャー バージョンの Visual C の使用中です。  
+ パス名の一部として拡張機能を指定しない場合、拡張子を .pch と見なされます。 ファイル名のないディレクトリを指定する場合は、既定のファイル名、VC*x*0. pch 場所*x*使用中の Visual C のメジャー バージョンします。  
   
- 使用することも、 **/Fp**オプションは **/Yu**です。  
+ 使用することも、 **/Fp**オプションと **/Yu**します。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
   
-1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[のプロジェクト プロパティの操作](../../ide/working-with-project-properties.md)です。  
+1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。  
   
 2.  **[C/C++]** フォルダーをクリックします。  
   
-3.  クリックして、**プリコンパイル済みヘッダー**プロパティ ページ。  
+3.  をクリックして、**プリコンパイル済みヘッダー**プロパティ ページ。  
   
-4.  変更、**プリコンパイル済みヘッダー ファイル**プロパティです。  
+4.  変更、**プリコンパイル済みヘッダー ファイル**プロパティ。  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには  
   
--   「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderFile%2A>」を参照してください。  
+-   以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderFile%2A>  
   
 ## <a name="example"></a>例  
- プログラムのデバッグ バージョンのプリコンパイル済みヘッダー ファイルを作成するヘッダー ファイルとソース コードの両方をコンパイルする場合は、コマンドをなどを指定できます。  
+ プログラムのデバッグ バージョンのプリコンパイル済みヘッダー ファイルを作成するヘッダー ファイルとソース コードの両方をコンパイルする場合などのコマンドを指定できます。  
   
 ```  
 CL /DDEBUG /Zi /Yc /FpDPROG.PCH PROG.CPP  
 ```  
   
 ## <a name="example"></a>例  
- 次のコマンドは、MYPCH.pch をという名前のプリコンパイル済みヘッダー ファイルの使用を指定します。 MYAPP.h を通じて PROG.cpp 内のソース コードがプリコンパイルされていると、プリコンパイルされたコードが MYPCH.pch に格納されていると見なされます。 MYPCH.pch のコンテンツを使用し、.obj ファイルを作成する PROG.cpp の残りの部分をコンパイルします。 この例の出力は、PROG.exe をという名前のファイルです。  
+ 次のコマンドでは、MYPCH.pch をという名前のプリコンパイル済みヘッダー ファイルの使用を指定します。 MYAPP.h を通じて PROG.cpp でソース コードがプリコンパイルされていると、MYPCH.pch でプリコンパイルされたコードが置かれていると見なされます。 MYPCH.pch のコンテンツを使用し、.obj ファイルを作成する PROG.cpp の残りの部分をコンパイルします。 この例の出力は、PROG.exe という名前のファイルです。  
   
 ```  
 CL /YuMYAPP.H /FpMYPCH.PCH PROG.CPP  

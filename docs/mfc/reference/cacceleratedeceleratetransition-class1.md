@@ -1,5 +1,5 @@
 ---
-title: CAccelerateDecelerateTransition Class1 |Microsoft ドキュメント
+title: CAccelerateDecelerateTransition Class1 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4342ed03991317bd030d308dbac9945734dcbd9e
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: a9dad6f6e5353c1adef19d5040984520df7f6239
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954709"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220135"
 ---
 # <a name="cacceleratedeceleratetransition-class"></a>CAccelerateDecelerateTransition クラス
 加速減速遷移を実装します。  
@@ -45,19 +45,19 @@ class CAccelerateDecelerateTransition : public CBaseTransition;
   
 |名前|説明|  
 |----------|-----------------|  
-|[CAccelerateDecelerateTransition::Create](#create)|カプセル化された移行 COM オブジェクトを作成する遷移のライブラリを呼び出します。 (上書き[CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create))。|  
+|[CAccelerateDecelerateTransition::Create](#create)|カプセル化された移行 COM オブジェクトを作成する遷移ライブラリを呼び出します。 (上書き[CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create))。|  
   
 ### <a name="public-data-members"></a>パブリック データ メンバー  
   
 |名前|説明|  
 |----------|-----------------|  
-|[CAccelerateDecelerateTransition::m_accelerationRatio](#m_accelerationratio)|までの期間を短縮に費やされた時間の比率です。|  
-|[CAccelerateDecelerateTransition::m_decelerationRatio](#m_decelerationratio)|期間に減速費やされた時間の比率です。|  
+|[CAccelerateDecelerateTransition::m_accelerationRatio](#m_accelerationratio)|実行中に加速に費やされた時間の比率。|  
+|[CAccelerateDecelerateTransition::m_decelerationRatio](#m_decelerationratio)|期間に減速する場合に費やした時間の比率です。|  
 |[CAccelerateDecelerateTransition::m_duration](#m_duration)|移行の期間です。|  
-|[CAccelerateDecelerateTransition::m_finalValue](#m_finalvalue)|遷移の終了時、アニメーション変数の値。|  
+|[CAccelerateDecelerateTransition::m_finalValue](#m_finalvalue)|移行の最後にアニメーション変数の値。|  
   
 ## <a name="remarks"></a>Remarks  
- 加速中-減速遷移は、アニメーション変数を高速化し、速度が低下し、指定した値で終わる、切り替え効果の期間にわたっています。 変数がどの程度の速度を短縮し、異なるアクセラレータと減速率を指定することで、独立してに減速を制御できます。 アクセラレータの比率に加速する場合は、変数に要する時間の割合は、初期ベロシティが 0 の場合同様に、減速比でします。 初期ベロシティがゼロ以外の場合は、ベロシティ 0 と遷移の末尾に到達するまでの時間の割合を勧めします。 アクセラレータとの比率、減速率は、1.0 の最大合計を計算します。 すべての遷移が自動的にクリアされますをお勧めして割り当てられた新しい演算子を使用します。 カプセル化された IUIAnimationTransition COM オブジェクトは、NULL を指定してから、まで CAnimationController::AnimateGroup、によって作成されます。 この COM オブジェクトの作成も何も起こりません後は、メンバー変数を変更します。  
+ 加速中に、/減速の遷移、アニメーション変数の高速化と、指定した値で終わる、遷移の期間にわたって速度が低下します。 変数がどの程度の速度を短縮し、さまざまな加速と減速の比率を指定することで、独立してに減速を制御できます。 高速化は加速; 変数に要する時間の割合、初期速度が 0 の場合同様を減速比。 初期速度がゼロ以外の場合は、ベロシティを 0 と遷移の終了に達するまでの時間の割合。 高速化比率と減速の比率を合計すると 1.0 の最大数。 すべての遷移が自動的にクリアされますが、お勧めするそれらに割り当てられている新しい演算子を使用します。 カプセル化された IUIAnimationTransition COM オブジェクトは、null を指定し、まで、CAnimationController::AnimateGroup によって作成されます。 影響を与えませんこの COM オブジェクトの作成後は、メンバー変数を変更します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -66,7 +66,7 @@ class CAccelerateDecelerateTransition : public CBaseTransition;
   
  `CAccelerateDecelerateTransition`   
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxanimationcontroller.h  
   
 ##  <a name="cacceleratedeceleratetransition"></a>  CAccelerateDecelerateTransition::CAccelerateDecelerateTransition  
@@ -85,16 +85,16 @@ CAccelerateDecelerateTransition(
  移行の期間です。  
   
  *finalValue*  
- 遷移の終了時、アニメーション変数の値。  
+ 移行の最後にアニメーション変数の値。  
   
  *accelerationRatio*  
- までの期間を短縮に費やされた時間の比率です。  
+ 実行中に加速に費やされた時間の比率。  
   
  *decelerationRatio*  
- 期間に減速費やされた時間の比率です。  
+ 期間に減速する場合に費やした時間の比率です。  
   
 ##  <a name="create"></a>  CAccelerateDecelerateTransition::Create  
- カプセル化された移行 COM オブジェクトを作成する遷移のライブラリを呼び出します。  
+ カプセル化された移行 COM オブジェクトを作成する遷移ライブラリを呼び出します。  
   
 ```  
 virtual BOOL Create(
@@ -104,20 +104,20 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>パラメーター  
 *pLibrary*  
- ポインター、 [IUIAnimationTransitionLibrary インターフェイス](https://msdn.microsoft.com/library/windows/desktop/dd371897)、標準的な遷移のライブラリを定義します。  
+ ポインター、 [IUIAnimationTransitionLibrary インターフェイス](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)、標準的な遷移のライブラリを定義します。  
   
 ### <a name="return-value"></a>戻り値  
- 移行が正常に作成された場合は TRUE。それ以外の場合は FALSE。  
+ 移行が正常に作成された場合は TRUE。それ以外の場合は FALSE です。  
   
 ##  <a name="m_accelerationratio"></a>  CAccelerateDecelerateTransition::m_accelerationRatio  
- までの期間を短縮に費やされた時間の比率です。  
+ 実行中に加速に費やされた時間の比率。  
   
 ```  
 DOUBLE m_accelerationRatio;  
 ```  
   
 ##  <a name="m_decelerationratio"></a>  CAccelerateDecelerateTransition::m_decelerationRatio  
- 期間に減速費やされた時間の比率です。  
+ 期間に減速する場合に費やした時間の比率です。  
   
 ```  
 DOUBLE m_decelerationRatio;  
@@ -131,7 +131,7 @@ UI_ANIMATION_SECONDS m_duration;
 ```  
   
 ##  <a name="m_finalvalue"></a>  CAccelerateDecelerateTransition::m_finalValue  
- 遷移の終了時、アニメーション変数の値。  
+ 移行の最後にアニメーション変数の値。  
   
 ```  
 DOUBLE m_finalValue;  

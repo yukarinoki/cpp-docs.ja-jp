@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfc59e4652c7c758e7fb5b3ee8a228963a6b6f7d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8f07f14cca7ea0346cc6772d3dca959af07a05cd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883246"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218163"
 ---
 # <a name="catlfilemappingbase-class"></a>CAtlFileMappingBase クラス
 このクラスは、メモリ マップト ファイルを表します。  
@@ -76,9 +76,9 @@ class CAtlFileMappingBase
 ## <a name="remarks"></a>Remarks  
  ファイルのマッピングは、プロセスの仮想アドレス空間の一部で、ファイルの内容の関連付けです。 このクラスは、簡単にアクセスしてデータを共有するプログラムが使用できるファイル マッピング オブジェクトを作成するためのメソッドを提供します。  
   
- 詳細については、次を参照してください。[ファイル マッピング](http://msdn.microsoft.com/library/windows/desktop/aa366556)Windows SDK に含まれています。  
+ 詳細については、次を参照してください。[ファイル マッピング](/windows/desktop/Memory/file-mapping)Windows SDK に含まれています。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlfile.h  
   
 ##  <a name="catlfilemappingbase"></a>  CAtlFileMappingBase::CAtlFileMappingBase  
@@ -179,16 +179,16 @@ HRESULT MapFile(
  ファイル オフセット マッピングの開始位置。 オフセットの値は、システムのメモリ割り当ての粒度の倍数である必要があります。  
   
  *dwMappingProtection*  
- ファイルがマップされている場合、ファイルのビューに必要な保護。 参照してください*flProtect*で[CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) Windows SDK に含まれています。  
+ ファイルがマップされている場合、ファイルのビューに必要な保護。 参照してください*flProtect*で[CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) Windows SDK に含まれています。  
   
  *dwViewDesiredAccess*  
- ファイルのビューと、ファイルによってマップされるページの保護へのアクセスの種類を指定します。 参照してください*dwDesiredAccess*で[mapviewoffileex に](http://msdn.microsoft.com/library/windows/desktop/aa366763)Windows SDK に含まれています。  
+ ファイルのビューと、ファイルによってマップされるページの保護へのアクセスの種類を指定します。 参照してください*dwDesiredAccess*で[mapviewoffileex に](https://msdn.microsoft.com/library/windows/desktop/aa366763)Windows SDK に含まれています。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
 ### <a name="remarks"></a>Remarks  
- ファイルのサイズが、ファイル マッピング オブジェクトのサイズを超えないファイル マッピング オブジェクトが作成されたら、場合は、すべてのファイルの内容を共有するために使用可能ななります。 詳細については、次を参照してください。 [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537)と[mapviewoffileex に](http://msdn.microsoft.com/library/windows/desktop/aa366763)Windows SDK に含まれています。  
+ ファイルのサイズが、ファイル マッピング オブジェクトのサイズを超えないファイル マッピング オブジェクトが作成されたら、場合は、すべてのファイルの内容を共有するために使用可能ななります。 詳細については、次を参照してください。 [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga)と[mapviewoffileex に](https://msdn.microsoft.com/library/windows/desktop/aa366763)Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  例をご覧ください[CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)します。  
@@ -217,19 +217,19 @@ HRESULT MapSharedMem(
  設定されている場合は TRUE、マッピング オブジェクト既に BOOL 値へのポインターが存在します。  
   
  *lpsa*  
- ポインターを`SECURITY_ATTRIBUTES`を子プロセスが、返されたハンドルを継承できるかどうかを決定する構造体。 参照してください*lpAttributes*で[CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) Windows SDK に含まれています。  
+ ポインターを`SECURITY_ATTRIBUTES`を子プロセスが、返されたハンドルを継承できるかどうかを決定する構造体。 参照してください*lpAttributes*で[CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) Windows SDK に含まれています。  
   
  *dwMappingProtection*  
  ファイルがマップされている場合は、ファイルの表示に必要な保護。 参照してください*flProtect*で`CreateFileMapping`Windows SDK に含まれています。  
   
  *dwViewDesiredAccess*  
- ファイルのビューと、ファイルによってマップされるページの保護へのアクセスの種類を指定します。 参照してください*dwDesiredAccess*で[mapviewoffileex に](http://msdn.microsoft.com/library/windows/desktop/aa366763)Windows SDK に含まれています。  
+ ファイルのビューと、ファイルによってマップされるページの保護へのアクセスの種類を指定します。 参照してください*dwDesiredAccess*で[mapviewoffileex に](https://msdn.microsoft.com/library/windows/desktop/aa366763)Windows SDK に含まれています。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
 ### <a name="remarks"></a>Remarks  
- `MapShareMem` によって作成された既存のファイル マッピング オブジェクトは、 [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537)プロセス間で共有します。  
+ `MapShareMem` によって作成された既存のファイル マッピング オブジェクトは、 [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga)プロセス間で共有します。  
   
 ##  <a name="openmapping"></a>  CAtlFileMappingBase::OpenMapping  
  指定したファイルの名前付きファイル マッピング オブジェクトを開くには、このメソッドを呼び出します。  
@@ -253,7 +253,7 @@ HRESULT OpenMapping(
  ファイル オフセット マッピングの開始位置。 オフセットの値は、システムのメモリ割り当ての粒度の倍数である必要があります。  
   
  *dwViewDesiredAccess*  
- ファイルのビューと、ファイルによってマップされるページの保護へのアクセスの種類を指定します。 参照してください*dwDesiredAccess*で[mapviewoffileex に](http://msdn.microsoft.com/library/windows/desktop/aa366763)Windows SDK に含まれています。  
+ ファイルのビューと、ファイルによってマップされるページの保護へのアクセスの種類を指定します。 参照してください*dwDesiredAccess*で[mapviewoffileex に](https://msdn.microsoft.com/library/windows/desktop/aa366763)Windows SDK に含まれています。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
@@ -286,7 +286,7 @@ HRESULT Unmap() throw();
  成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[unmapviewoffile に](http://msdn.microsoft.com/library/windows/desktop/aa366882)詳細については、Windows SDK に含まれています。  
+ 参照してください[unmapviewoffile に](https://msdn.microsoft.com/library/windows/desktop/aa366882)詳細については、Windows SDK に含まれています。  
   
 ## <a name="see-also"></a>関連項目  
  [CAtlFileMapping クラス](../../atl/reference/catlfilemapping-class.md)   

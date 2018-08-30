@@ -230,12 +230,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ee202defce08d30f36fb0002bd1477957dd76bc
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: d28eaff98d2af12d24fab91797182c99d33d317d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337568"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207963"
 ---
 # <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase クラス
 HTML 編集コンポーネントを表します。  
@@ -372,7 +372,7 @@ template <class T> class CHtmlEditCtrlBase
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CHtmlEditCtrlBase`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxhtml.h  
   
 ##  <a name="addtoglyphtable"></a>  CHtmlEditCtrlBase::AddToGlyphTable  
@@ -575,7 +575,7 @@ HRESULT ExecCommand(
  実行するコマンド ID。 一覧については、次を参照してください。 [MSHTML コマンド識別子](https://msdn.microsoft.com/library/aa741315.aspx)します。  
   
  *cmdExecOpt*  
- 取得した値、[する](http://msdn.microsoft.com/library/windows/desktop/ms683930)列挙体は、オブジェクトがコマンドを実行する方法について説明します。  
+ 取得した値、[する](/windows/desktop/api/docobj/ne-docobj-olecmdexecopt)列挙体は、オブジェクトがコマンドを実行する方法について説明します。  
   
  *pInVar*  
  入力引数。  
@@ -590,7 +590,7 @@ HRESULT ExecCommand(
  成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドの機能を提供する[iolecommandtarget::exec](http://msdn.microsoft.com/library/windows/desktop/ms690300)します。  
+ このメソッドの機能を提供する[iolecommandtarget::exec](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-exec)します。  
   
 ##  <a name="font"></a>  CHtmlEditCtrlBase::Font  
  テキストの色、フォント、および現在の選択範囲のフォント サイズを変更するユーザーを有効にするのには、[フォント] ダイアログ ボックスが開きます。  
@@ -838,7 +838,7 @@ HRESULT GetIsDirty() const;
 ```  
   
 ### <a name="remarks"></a>Remarks  
- ドキュメントが変更されたかどうかを示します。 `GetIsDirty` HRESULT を返す[IPersistStorage::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910)します。  
+ ドキュメントが変更されたかどうかを示します。 `GetIsDirty` HRESULT を返す[IPersistStorage::IsDirty](/windows/desktop/api/objidl/nf-objidl-ipersiststorage-isdirty)します。  
   
 ##  <a name="getshowalignedsitetags"></a>  CHtmlEditCtrlBase::GetShowAlignedSiteTags  
  持つすべての要素のグリフを表示するかどうかを返します、`styleFloat`プロパティ。  
@@ -1469,7 +1469,7 @@ long QueryStatus(long cmdID) const;
  コマンド ID。 コマンド識別子は、CGID_MSHTML コマンドのグループから取得されます。 これらのコマンドは、Mshtmcid.h で定義されます。 オンラインにある一覧を検索することもできます。 [MSHTML コマンド識別子](http://go.microsoft.com/fwlink/p/?linkid=149220)します。  
   
 ### <a name="return-value"></a>戻り値  
- 返します、 [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237)の状態を示す*cmdID*、または 0 を返します。  
+ 返します、 [OLECMDF](/windows/desktop/api/docobj/ne-docobj-olecmdf)の状態を示す*cmdID*、または 0 を返します。  
   
 ##  <a name="radiobutton"></a>  CHtmlEditCtrlBase::RadioButton  
  現在の選択で、オプション ボタン コントロールを上書きします。  

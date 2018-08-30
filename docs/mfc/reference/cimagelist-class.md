@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63e6a7a45fc119309ce99640ab74006ae44a05bf
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: bed3e80534a651e1e5a3d7228d0746ef8f552a9a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339134"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208842"
 ---
 # <a name="cimagelist-class"></a>CImageList クラス
 Windows コモン イメージ リスト コントロールの機能が用意されています。  
@@ -169,7 +169,7 @@ class CImageList : public CObject
   
  `CImageList`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxcmn.h  
   
 ##  <a name="add"></a>  CImageList::Add  
@@ -260,7 +260,7 @@ CImageList();
 ```  
   
 ##  <a name="copy"></a>  CImageList::Copy  
- このメンバー関数は、Win32 関数の動作を実装[ImageList_Copy](http://msdn.microsoft.com/library/windows/desktop/bb761520)」の説明に従って、Windows SDK。  
+ このメンバー関数は、Win32 関数の動作を実装[ImageList_Copy](/windows/desktop/api/commctrl/nf-commctrl-imagelist_copy)」の説明に従って、Windows SDK。  
   
 ```  
 BOOL Copy(
@@ -588,16 +588,16 @@ BOOL DrawEx(
  指定したデバイス コンテキスト内で描画する場所です。  
   
  *sz*  
- イメージの左上隅に対して相対的に描画するイメージの部分のサイズ。 参照してください*dx*と*dy*で[ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) Windows SDK に含まれています。  
+ イメージの左上隅に対して相対的に描画するイメージの部分のサイズ。 参照してください*dx*と*dy*で[ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) Windows SDK に含まれています。  
   
  *clrBk*  
- イメージの背景色です。 参照してください*rgbBk*で[ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) Windows SDK に含まれています。  
+ イメージの背景色です。 参照してください*rgbBk*で[ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) Windows SDK に含まれています。  
   
  *clrFg*  
- イメージの前景色。 参照してください*rgbFg*で[ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) Windows SDK に含まれています。  
+ イメージの前景色。 参照してください*rgbFg*で[ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) Windows SDK に含まれています。  
   
  *nStyle*  
- 描画スタイルを指定するフラグ。 参照してください*は*で[ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) Windows SDK に含まれています。  
+ 描画スタイルを指定するフラグ。 参照してください*は*で[ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) Windows SDK に含まれています。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -632,7 +632,7 @@ BOOL DrawIndirect(
   
 ### <a name="parameters"></a>パラメーター  
  *pimldp*  
- ポインター、[された](http://msdn.microsoft.com/library/windows/desktop/bb761395)描画操作に関する情報を含む構造体。  
+ ポインター、[された](/windows/desktop/api/commctrl/ns-commctrl-_imagelistdrawparams)描画操作に関する情報を含む構造体。  
   
  *pDC*  
  コピー先のデバイス コンテキストへのポインター。 これを削除する必要があります[CDC](../../mfc/reference/cdc-class.md)でそれが済んだらオブジェクトします。  
@@ -641,23 +641,23 @@ BOOL DrawIndirect(
  描画するイメージの 0 から始まるインデックス。  
   
  *pt*  
- A[ポイント](http://msdn.microsoft.com/library/windows/desktop/dd162805)イメージを描画する x 座標と y 座標を含む構造体。  
+ A[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)イメージを描画する x 座標と y 座標を含む構造体。  
   
  *sz*  
- A[サイズ](http://msdn.microsoft.com/library/windows/desktop/dd145106)構造体を描画するイメージのサイズを示します。  
+ A[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)構造体を描画するイメージのサイズを示します。  
   
  *ptOrigin*  
- A[ポイント](http://msdn.microsoft.com/library/windows/desktop/dd162805)イメージ自体に関して描画操作の左上隅を指定する x 座標と y 座標を含む構造体。 左側の x 座標と y 座標の上にある画像のピクセルは描画されません。  
+ A[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)イメージ自体に関して描画操作の左上隅を指定する x 座標と y 座標を含む構造体。 左側の x 座標と y 座標の上にある画像のピクセルは描画されません。  
   
  *について*  
  描画スタイルと、必要に応じて、オーバーレイのイメージを指定するフラグ。 オーバーレイ画像では、「解説」を参照してください。 MFC の既定の実装に、イメージ リストの背景色を使用してイメージを描画します。 しますの背景色は、透過的にマスクを使用して、イメージが描画されます。  
   
- 可能なその他のスタイルは、「、*は*のメンバー、[された](http://msdn.microsoft.com/library/windows/desktop/bb761395)構造体。  
+ 可能なその他のスタイルは、「、*は*のメンバー、[された](/windows/desktop/api/commctrl/ns-commctrl-_imagelistdrawparams)構造体。  
   
  *dwRop*  
  ラスター オペレーション コードを指定する値。 これらのコードでは、最終的な色を実現するために、移行先の四角形の色データのソースの四角形に対するカラー データの結合方法を定義します。 SRCCOPY、MFC の既定の実装では、先の四角形に直接ソースの四角形をコピーします。 場合、このパラメーターは無視されます、*は*ILD_ROP フラグにパラメーターは含まれません。  
   
- その他の使用可能な値は、「、 *dwRop*のメンバー、[された](http://msdn.microsoft.com/library/windows/desktop/bb761395)構造体。  
+ その他の使用可能な値は、「、 *dwRop*のメンバー、[された](/windows/desktop/api/commctrl/ns-commctrl-_imagelistdrawparams)構造体。  
   
  *rgbBack*  
  イメージ背景の色、既定ではときです。 このパラメーターには、アプリケーション定義の RGB 値または値は次のいずれかを指定できます。  
@@ -688,7 +688,7 @@ BOOL DrawIndirect(
  Ils_aplha 使用して、このメンバーは、アルファ チャネルの値を保持します。 この値は、255 0 が完全に透明、255 は完全に不透明の 0 から指定できます。  
   
  *crEffect*  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)光彩とシャドウ効果に使用される値。  
+ A [COLORREF](/windows/desktop/gdi/colorref)光彩とシャドウ効果に使用される値。  
   
 ### <a name="return-value"></a>戻り値  
  イメージが描画できた場合は TRUE。それ以外の場合は FALSE です。  
@@ -696,7 +696,7 @@ BOOL DrawIndirect(
 ### <a name="remarks"></a>Remarks  
  自分で Win32 構造体を格納する場合は、最初のバージョンを使用します。 MFC の既定の引数の 1 つ以上の利用、または構造の管理を回避したい場合は、2 番目のバージョンを使用します。  
   
- オーバーレイ イメージでは、このメンバー関数で指定された、プライマリのイメージの上に描画されるイメージとは、*あり*パラメーター。 使用してオーバーレイ マスクを描画、[描画](#draw)、オーバーレイのマスクを使用して指定の 1 から始まるインデックスを持つメンバー関数、[から](http://msdn.microsoft.com/library/windows/desktop/bb761408)マクロ。  
+ オーバーレイ イメージでは、このメンバー関数で指定された、プライマリのイメージの上に描画されるイメージとは、*あり*パラメーター。 使用してオーバーレイ マスクを描画、[描画](#draw)、オーバーレイのマスクを使用して指定の 1 から始まるインデックスを持つメンバー関数、[から](/windows/desktop/api/commctrl/nf-commctrl-indextooverlaymask)マクロ。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CImageList#11](../../mfc/reference/codesnippet/cpp/cimagelist-class_10.cpp)]  
@@ -729,7 +729,7 @@ HICON ExtractIcon(int nImage);
  成功した場合は、アイコンのハンドルそれ以外の場合は NULL です。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、の動作に依存、 [ImageList_ExtractIcon](http://msdn.microsoft.com/library/windows/desktop/bb761401)マクロをアイコンを作成します。 参照してください、 [ImageList_ExtractIcon](http://msdn.microsoft.com/library/windows/desktop/bb761401)アイコンの作成とクリーンアップの詳細についてはマクロです。  
+ このメソッドは、の動作に依存、 [ImageList_ExtractIcon](/windows/desktop/api/commctrl/nf-commctrl-imagelist_extracticon)マクロをアイコンを作成します。 参照してください、 [ImageList_ExtractIcon](/windows/desktop/api/commctrl/nf-commctrl-imagelist_extracticon)アイコンの作成とクリーンアップの詳細についてはマクロです。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CImageList#12](../../mfc/reference/codesnippet/cpp/cimagelist-class_12.cpp)]  
@@ -798,7 +798,7 @@ static CImageList* PASCAL GetDragImage(
   
 ### <a name="parameters"></a>パラメーター  
  *lpPoint*  
- アドレスを[ポイント](http://msdn.microsoft.com/library/windows/desktop/dd162805)受け取る現在位置にドラッグします。  
+ アドレスを[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)受け取る現在位置にドラッグします。  
   
  *lpPointHotSpot*  
  アドレスを`POINT`ドラッグ位置を基準としてドラッグ イメージのオフセットを受け取る。  
@@ -833,7 +833,7 @@ BOOL GetImageInfo(
  イメージの 0 から始まるインデックス。  
   
  *pImageInfo*  
- ポインター、 [IMAGEINFO](http://msdn.microsoft.com/library/windows/desktop/bb761393)イメージに関する情報を受け取る構造体。 イメージのビットマップを直接操作は、この構造体の情報を使用できます。  
+ ポインター、 [IMAGEINFO](/windows/desktop/api/commctrl/ns-commctrl-_imageinfo)イメージに関する情報を受け取る構造体。 イメージのビットマップを直接操作は、この構造体の情報を使用できます。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -994,7 +994,7 @@ BOOL SetDragCursorImage(
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- ドラッグの関数は、ドラッグ操作中に、新しいイメージを使用するため、Windows を使用する必要があります[ShowCursor](http://msdn.microsoft.com/library/windows/desktop/ms648396)関数を呼び出した後、実際のマウス カーソルを非表示に`CImageList::SetDragCursorImage`します。 それ以外の場合、システムがドラッグ操作中にマウス カーソルが 2 つあります。  
+ ドラッグの関数は、ドラッグ操作中に、新しいイメージを使用するため、Windows を使用する必要があります[ShowCursor](/windows/desktop/api/winuser/nf-winuser-showcursor)関数を呼び出した後、実際のマウス カーソルを非表示に`CImageList::SetDragCursorImage`します。 それ以外の場合、システムがドラッグ操作中にマウス カーソルが 2 つあります。  
   
 ##  <a name="setimagecount"></a>  CImageList::SetImageCount  
  内のイメージの番号をリセットするには、このメンバー関数を呼び出す、`CImageList`オブジェクト。  

@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0ed609de9d36b602bf525a9643534cf5d1d55a8
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3c77b232fe87a722194a21d60457a01051827a7e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963035"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214167"
 ---
 # <a name="deque-class"></a>deque クラス
 
@@ -118,9 +118,11 @@ class deque
 
 ### <a name="parameters"></a>パラメーター
 
-*型*deque に格納される要素のデータを入力します。
+*Type*<br/>
+ deque に格納される要素のデータ型。
 
-*アロケーター* deque の割り当てとメモリの解放に関する詳細をカプセル化する格納されたアロケーター オブジェクトを表す型です。 この引数は省略可能で、既定値は **アロケーター\<型 > * * *。*
+*アロケーター*<br/>
+ メモリの deque の割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能で、既定値は**アロケーター\<型 >** します。
 
 ## <a name="remarks"></a>Remarks
 
@@ -204,7 +206,7 @@ deque の再割り当ては、メンバー関数がシーケンスの要素を�
 |[operator&#91;&#93;](#op_at)|指定した位置における `deque` 要素への参照を返します。|
 |[operator=](#op_eq)|別の `deque` のコピーで `deque` の要素を置き換えます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー**: \<deque>
 
@@ -243,15 +245,20 @@ void assign(initializer_list<Type> IList);
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*deque 引数からコピーされる要素の範囲の最初の要素の位置。
+*まずは*<br/>
+ deque 引数からコピーされる要素範囲内の最初の要素の位置。
 
-*最後*deque 引数からコピーされる要素の範囲を超える先頭の要素の位置。
+*前の*<br/>
+ deque 引数からコピーされる要素範囲を超える最初の要素の位置。
 
-*カウント*deque に挿入される要素のコピーの数。
+*カウント*<br/>
+ deque に挿入される要素のコピーの数。
 
-*Val* deque に挿入される要素の値。
+*val*<br/>
+ deque に挿入される要素の値。
 
-*IList* deque に挿入される initializer_list。
+*IList*<br/>
+ deque に挿入される initializer_list。
 
 ### <a name="remarks"></a>Remarks
 
@@ -325,7 +332,8 @@ const_reference at(size_type pos) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*添字 (または位置の数) の要素の deque 内で参照します。
+*pos*<br/>
+ deque 内で参照する要素を示す添字 (または位置の番号)。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1337,11 +1345,14 @@ iterator erase(iterator first, iterator last);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Where* deque から削除する要素の位置。
+*_Where*<br/>
+ deque から削除する要素の位置。
 
-*最初*の最初の要素の位置が deque から削除します。
+*first*<br/>
+ deque から削除する最初の要素の位置。
 
-*最後*の最後の要素の次の位置が deque から削除します。
+*last*<br/>
+ deque から削除する最後の要素の次の位置。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1591,7 +1602,8 @@ const_reference operator[](size_type pos) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*参照する deque 要素の位置。
+*pos*<br/>
+ 参照する deque 要素の位置。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2086,9 +2098,11 @@ void resize(size_type _Newsize, Type val);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Newsize* deque の新しいサイズ。
+*_Newsize*<br/>
+ deque の新しいサイズ。
 
-*val*新しいサイズが大きい場合、deque に追加する新しい要素の値を元のサイズ。 この値を省略した場合、新しい要素にはそのクラスの既定値が割り当てられます。
+*val*<br/>
+ 新しいサイズが元のサイズより大きい場合に、deque に追加される新しい要素の値。 この値を省略した場合、新しい要素にはそのクラスの既定値が割り当てられます。
 
 ### <a name="remarks"></a>Remarks
 
@@ -2263,9 +2277,11 @@ void swap(deque<Type, Allocator>& left, deque<Type, Allocator>& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*を交換する要素を提供する deque または要素が deque のものと交換される deque`left`します。
+*right*<br/>
+ 交換する要素を提供する deque (deque `left` と要素を交換する deque)。
 
-*左*要素が deque のものと交換される deque*右*します。
+*left*<br/>
+ 要素が deque のものと交換される deque*右*します。
 
 ### <a name="example"></a>例
 

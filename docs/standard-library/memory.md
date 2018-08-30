@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85fe930ba0616e27b06aee863285638613f7e31d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3b90a96816855e08610d0f63f3ab5c237d564453
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858930"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217950"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
@@ -85,7 +85,7 @@ ms.locfileid: "33858930"
 |-|-|
 |[allocator](../standard-library/allocator-class.md)|このテンプレート クラスは、**Type** 型のオブジェクトの配列に対し、ストレージの割り当てと解放を管理するオブジェクトを記述します。|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|アロケーター対応のコンテナーが必要とするすべての情報を指定したオブジェクトを記述します。|
-|[auto_ptr](../standard-library/auto-ptr-class.md)|このテンプレート クラスは、**Type \*** 型の割り当てられたオブジェクトを指すポインターを格納し、それが指すオブジェクトを囲んでいる auto_ptr が破棄されたときに、そのオブジェクトを確実に削除するオブジェクトを記述します。|
+|[auto_ptr](../standard-library/auto-ptr-class.md)|このテンプレート クラスは、割り当てられた型のオブジェクトへのポインターを格納するオブジェクトを表します**型** <strong>\*</strong>確実に、囲んでいる auto_ptr を取得するポイントが削除された取得オブジェクト破棄されます。|
 |[bad_weak_ptr](../standard-library/bad-weak-ptr-class.md)|weak_ptr が無効であることを示す例外を報告します。|
 |[enabled_shared_from_this](../standard-library/enable-shared-from-this-class.md)|`shared_ptr` の生成を支援します。|
 |[pointer_traits](../standard-library/pointer-traits-struct.md)|`allocator_traits` テンプレート クラスのオブジェクトが、ポインター型 `Ptr` を持つアロケーターを記述するために必要とする情報を提供します。|

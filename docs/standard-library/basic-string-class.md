@@ -126,12 +126,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7458a82cce22830dd16525a5f33ed12c6c1b6e0d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3c56cdcf59c6dad891029e21e14940598e0cfeae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957975"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209085"
 ---
 # <a name="basicstring-class"></a>basic_string クラス
 
@@ -237,7 +237,7 @@ class basic_string;
 
 被制御シーケンスの要素を指定する参照、ポインター、および反復子は、被制御シーケンスを変更する関数の呼び出しの後、または非 **const** メンバー関数への最初の呼び出しの後、無効になることがあります。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<string>
 
@@ -881,7 +881,7 @@ const value_type *c_str() const;
 
 ### <a name="remarks"></a>Remarks
 
-C++ テンプレート クラス basic_string\<char> に属している string 型のオブジェクトは、null で終了する必要はありません。 null 文字 '\0' は、C 文字列では文字列の末尾をマークするための特殊文字として使用されますが、string 型のオブジェクトでは特別な意味を持たず、他の文字と同様に文字列の一部にすることができます。 定数 **char\*** から文字列への自動変換がありますが、この文字列クラスは C スタイル文字列から **basic_string\<char >** 型のオブジェクトへの自動変換を提供していません。
+C++ テンプレート クラス basic_string\<char> に属している string 型のオブジェクトは、null で終了する必要はありません。 null 文字 '\0' は、C 文字列では文字列の末尾をマークするための特殊文字として使用されますが、string 型のオブジェクトでは特別な意味を持たず、他の文字と同様に文字列の一部にすることができます。 自動変換は**const char** <strong>\*</strong>文字列が、この文字列には、クラスは C スタイル文字列から型のオブジェクトへの自動変換提供しない**basic_string\<char >** します。
 
 返された C スタイル文字列は、変更 (文字列へのポインターが無効になる可能性があるため) または削除 (文字列には有効期限があり、クラス文字列によって所有されているため) しないでください。
 
@@ -1652,7 +1652,7 @@ const value_type *data() const;
 
 C++ テンプレート クラス basic_string \<char> に属している string 型のオブジェクトは、null で終了する必要はありません。 戻り値の型`data`null 文字が追加されないために、有効な C の文字列ではありません。 null 文字 '\0' は、C 文字列では文字列の末尾をマークするための特殊文字として使用されますが、string 型のオブジェクトでは特別な意味を持たず、他の文字と同様に文字列オブジェクトの一部にすることができます。
 
-定数 **char\*** から文字列への自動変換がありますが、この文字列クラスは C スタイル文字列から **basic_string \<char>** 型のオブジェクトへの自動変換を提供しません。
+自動変換は**const char** <strong>\*</strong>文字列が、この文字列には、クラスは C スタイル文字列から型のオブジェクトへの自動変換提供しない**basic_string \<char >** します。
 
 返された文字列は、変更 (文字列へのポインターが無効になる可能性があるため) または削除 (文字列には有効期限があり、クラス文字列によって所有されているため) しないでください。
 
@@ -3528,7 +3528,7 @@ typedef typename allocator_type::pointer pointer;
 
 この型は `allocator_type::pointer` の同意語です。
 
-型の`string`と同じになります**char\*** します。
+型の`string`と同じになります**char**<strong>\*</strong>します。
 
 ### <a name="example"></a>例
 

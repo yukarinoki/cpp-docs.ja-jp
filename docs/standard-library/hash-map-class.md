@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 713bf95a53a22b098803d08b4a2a4fd9c8a6cf2d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 08c16cd80828e973e4fff2d1a2c36e211e61f361
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954936"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211593"
 ---
 # <a name="hashmap-class"></a>hash_map クラス
 
@@ -124,13 +124,17 @@ class hash_map
 
 ### <a name="parameters"></a>パラメーター
 
-*キー* hash_map に格納されるキー データを入力します。
+*Key*<br/>
+ hash_map に格納されるキーのデータ型。
 
-*型*hash_map に格納される要素のデータを入力します。
+*Type*<br/>
+ hash_map に格納される要素のデータ型。
 
-*Traits*クラスの比較、相対的な順序と符号なしに、要素のキー値をマップする単項述語であるハッシュ関数を決定する並べ替えキーとして 2 つの要素の値を比較することの 1 つ、2 つの関数オブジェクトを含む型型の整数`size_t`します。 この引数は省略可能であり、既定値は hash_compare<`Key`, less<`Key`> > です。
+*Traits*<br/>
+ 2 つの関数オブジェクトを含む型。2 つの要素の値を並べ替えキーとして比較し、要素の相対順序を決定できるクラス比較、または要素のキー値を `size_t` 型の符号なし整数にマップする単項述語であるハッシュ関数のいずれかを使用できます。 この引数は省略可能であり、既定値は hash_compare<`Key`, less<`Key`> > です。
 
-*アロケーター* hash_map の割り当てとメモリの解放に関する詳細をカプセル化する格納されたアロケーター オブジェクトを表す型です。 この引数は省略可能であり、既定値は allocator<pair <const `Key`, `Type`>> です。
+*アロケーター*<br/>
+ メモリの hash_map の割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値は allocator<pair <const `Key`, `Type`>> です。
 
 ## <a name="remarks"></a>Remarks
 
@@ -226,7 +230,7 @@ hash_map クラスに用意されている反復子は双方向反復子です�
 |[operator&#91;&#93;](#op_at)|`hash_map` に、指定したキー値を持つ要素を挿入します。|
 |[hash_map::operator=](#op_eq)|別の `hash_map` のコピーで `hash_map` の要素を置き換えます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<hash_map>
 
@@ -523,11 +527,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 `const_iterator` 型で要素の値を変更することはできません。
 
-`const_iterator`のオブジェクトである要素を hash_map 点によって定義される[value_type](#value_type)、つまり型の`pair` *\< ***const Key, Type*** >*、その最初のメンバーは要素へのキーおよび 2 番目のメンバーは要素が保持するマップされたデータです。
+`const_iterator`のオブジェクトである要素を hash_map 点によって定義される[value_type](#value_type)、つまり型の`pair< const Key, Type >`、その最初のメンバーは要素へのキーおよび 2 番目のメンバーは要素が保持するマップされたデータです。
 
 逆参照する、 `const_iterator` `cIter` hash_map 内の要素を指す、`->`演算子。
 
-要素のキーの値にアクセスするには `cIter` **-> first** を使用しますが、これは (\* `cIter`) **.first** と同等です。 要素のマップされたデータの値にアクセスするには `cIter` **-> second** を使用しますが、これは (\* `cIter`) **.second** と同等です。
+要素のキーの値にアクセスするには、使用`cIter->first`と同等`(*cIter).first`します。 要素のマップされたデータの値にアクセスするには、使用`cIter->second`と同等`(*cIter).second`します。
 
 ### <a name="example"></a>例
 
@@ -644,7 +648,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*照合される hash_map の要素のキー値。
+*key*<br/>
+ hash_map と照合する要素のキー値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1135,7 +1140,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*検索対象の hash_map の要素の並べ替えキーと比較される引数キー値。
+*key*<br/>
+ 検索対象の hash_map 内の要素の並べ替えキーと比較される引数キー値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1223,13 +1229,17 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Where* hash_map から削除する要素の位置。
+*_Where*<br/>
+ hash_map から削除する要素の位置。
 
-*最初*hash_map から削除する最初の要素の位置。
+*first*<br/>
+ hash_map から削除する最初の要素の位置。
 
-*最後*hash_map から削除する最後の要素の次の位置。
+*last*<br/>
+ hash_map から削除する最後の要素の次の位置。
 
-*キー* hash_map から削除する要素のキー値。
+*key*<br/>
+ hash_map から削除する要素のキー値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1341,7 +1351,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*検索対象の hash_map の要素の並べ替えキーによって照合されるキーの値。
+*key*<br/>
+ 検索対象の hash_map 内の要素の並べ替えキーによって照合されるキー値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1881,7 +1892,8 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*検索対象の hash_map の要素の並べ替えキーと比較される引数キー値。
+*key*<br/>
+ 検索対象の hash_map 内の要素の並べ替えキーと比較される引数キー値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2519,7 +2531,8 @@ void swap(hash_map& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*ターゲットの hash_map を交換する要素を提供する引数の hash_map。
+*right*<br/>
+ ターゲットの hash_map と交換する要素を提供する引数の hash_map。
 
 ### <a name="remarks"></a>Remarks
 
@@ -2594,7 +2607,8 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*検索対象の hash_map の要素の並べ替えキーの値と比較される引数キー値。
+*key*<br/>
+ 検索対象の hash_map 内の要素の並べ替えキー値と比較される引数キー値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2737,7 +2751,7 @@ typedef pair<const Key, Type> value_type;
 
 ### <a name="remarks"></a>Remarks
 
-`value_type` 宣言する`pair`  *\< * **const**[key_type](#key_type)、 [mapped_type](#mapped_type)*> * および not`pair`  **\<key_type, mapped_type >** 非定数反復子または参照を使用して、連想コンテナーのキーを変更することがありますいないためです。
+`value_type` 宣言する`pair<const key_type, mapped_type>`なく`pair<key_type, mapped_type>`非定数反復子または参照を使用して、連想コンテナーのキーを変更することがありますいないためです。
 
 ### <a name="example"></a>例
 

@@ -27,12 +27,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7305ff80c50c65e4b03a9879d39960e8c47786df
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 869eba484a5ffa4e9c57c9c65a9b74e0962114e3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027340"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204041"
 ---
 # <a name="errorcondition-class"></a>error_condition クラス
 
@@ -79,7 +79,7 @@ class error_condition;
 |[operator=](#op_eq)|`error_condition` オブジェクトに新しい列挙値を代入します。|
 |[operator bool](#op_bool)|`error_condition` 型の変数をキャストします。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<system_error>
 
@@ -157,7 +157,7 @@ error_condition(_Enum _Errcode,
 
 最初のコンストラクターはゼロ エラー コード値と [generic_category](../standard-library/system-error-functions.md#generic_category) を指すポインターを格納します。
 
-2 番目のコンス トラクター ストア*val*エラー コード値とへのポインターとして[error_category](http://msdn.microsoft.com/6fe57a15-63a1-4e79-8af4-6738e43e19c8)します。
+2 番目のコンス トラクター ストア*val*エラー コード値とへのポインターとして[error_category](https://msdn.microsoft.com/6fe57a15-63a1-4e79-8af4-6738e43e19c8)します。
 
 3 番目のコンストラクターは、エラー コード値としての `(value_type)_Errcode` と [generic_category](../standard-library/system-error-functions.md#generic_category) を指すポインターを格納します。
 

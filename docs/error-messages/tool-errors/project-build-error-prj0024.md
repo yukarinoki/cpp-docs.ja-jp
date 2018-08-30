@@ -1,7 +1,7 @@
 ---
-title: プロジェクト ビルド エラー PRJ0024 |Microsoft ドキュメント
+title: プロジェクト ビルド エラー PRJ0024 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59bf76aba80093bf9e8e653bdfb9fad49687a501
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb539a5f1ee5f1aa5f9d828d93fa6d0dc8690c22
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318348"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215599"
 ---
 # <a name="project-build-error-prj0024"></a>プロジェクト ビルド エラー PRJ0024
-Unicode パス 'path' がユーザーの ANSI コード ページに変換できませんでした。  
-  
- ***パス***パス文字列の元の Unicode バージョンです。 このエラーの場合が直接に変換できない ANSI 現在のシステム コード ページの Unicode のパスが存在します。  
-  
- このエラーは、いないコンピューターにインストールされているコード ページを使用して、システムで開発されたプロジェクトを処理する場合に発生する可能性があります。  
-  
- このエラーの解決方法では、ANSI テキストを使用するかをコンピューターに、コード ページをインストールし、システムの既定値として設定のパスを更新します。
+
+> Unicode のパス '*パス*' ユーザーの ANSI コード ページに変換できませんでした。
+
+*パス*パス文字列の元の Unicode バージョンです。 場合にこのエラーは発生が Unicode パスを直接に変換できない ANSI の現在のシステム コード ページ。
+
+場合は、コンピューターではないにコード ページを使用してシステムで開発されたプロジェクトに取り組んで、このエラーが発生する可能性があります。
+
+このエラーの解決は、ANSI テキストを使用して、または、コード ページをコンピューターにインストールし、システムの既定値として設定するパスを更新するには。

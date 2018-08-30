@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d09d2f60f237439f208601fe8385cf7125e1ac20
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c4bdccc14db423d7a47545c51b31ce472f0c4308
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600782"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219522"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>名前空間と型の参照範囲 (C++/CX)
 名前空間は、関連する機能を持つ型をグループ化し、ライブラリ内での名前の衝突を回避するための、標準の C++ 構造体です。 Windows ランタイムの型システムでは、名前空間スコープで名前空間に独自のコードに含めて、すべてのパブリックの Windows ランタイム型が宣言される必要があります。 パブリック型をグローバル スコープで宣言したり、別のクラスの中に入れ子にしたりすると、コンパイル時エラーが発生します。  
@@ -43,7 +43,7 @@ ms.locfileid: "42600782"
 |`internal` または `private public`|メンバーは、アプリまたはコンポーネント内ではパブリックですが、メタデータでは非可視です。|いいえ|  
   
 ## <a name="windows-runtime-namespaces"></a>Windows ランタイム名前空間  
- Windows API は、Windows で宣言されている型::\*名前空間。 これらの名前空間は Windows 用に予約されており、それらの名前空間に型を追加できません。 **オブジェクト ブラウザー**では、windows.winmd ファイル内でこれらの名前空間を表示できます。 これらの名前空間に関するドキュメントについては、「 [Windows API](http://msdn.microsoft.com/library/windows/apps/br211377)」を参照してください。  
+ Windows API は、Windows で宣言されている型::\*名前空間。 これらの名前空間は Windows 用に予約されており、それらの名前空間に型を追加できません。 **オブジェクト ブラウザー**では、windows.winmd ファイル内でこれらの名前空間を表示できます。 これらの名前空間に関するドキュメントについては、次を参照してください。 [Windows API](https://msdn.microsoft.com/library/windows/apps/br211377)します。  
   
 ## <a name="ccx-namespaces"></a>C++/CX 名前空間  
  C++/cli CX は、Windows ランタイムの型システムのプロジェクションの一部としてこれらの名前空間で特定の種類を定義します。  

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 661735e91084bad45553de71e80a599afd674028
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: f07efa6ebbea70f83803238bf73e2d3e806ea457
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336827"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204570"
 ---
 # <a name="persistence-of-ole-controls"></a>OLE コントロールの永続化
 OLE コントロールの機能の 1 つは、プロパティの永続化 (またはシリアル化)、OLE コントロール プロパティの値を記述して、ファイルまたはストリームから読み取ったりすることができます。 コンテナー アプリケーションは、シリアル化を使用して、アプリケーションがコントロールを破棄した後でも、コントロールのプロパティの値を格納できます。 OLE コントロールのプロパティ値をファイルから読み取るまたは後でストリームの場合、コントロールの新しいインスタンスを作成します。  
@@ -93,7 +93,7 @@ hBlobDefault
   
 -   実際のバイナリ データを格納しているメモリのブロック。  
   
- なお`PX_Blob`、Windows を使用して、メモリの割り当ては[GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) API、BLOB 型のプロパティの読み込み時にします。 このメモリの解放を担当します。 そのため、コントロールのデストラクターを呼び出す必要があります[GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579)ハンドルを解放する任意の BLOB の種類プロパティをコントロールに割り当てられたメモリがアップします。  
+ なお`PX_Blob`、Windows を使用して、メモリの割り当ては[GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) API、BLOB 型のプロパティの読み込み時にします。 このメモリの解放を担当します。 そのため、コントロールのデストラクターを呼び出す必要があります[GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree)ハンドルを解放する任意の BLOB の種類プロパティをコントロールに割り当てられたメモリがアップします。  
   
 ##  <a name="px_bool"></a>  PX_Bool  
  コントロールの中でこの関数を呼び出す`DoPropExchange`をシリアル化、または BOOL 型のプロパティを初期化します。  

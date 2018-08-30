@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90e0af6a1b11b114e56e6c1d87cb293ab83dd768
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 1057d8992f6554d4d5fbbfd93b383e2ddd9dab53
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131190"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211638"
 ---
 # <a name="multithreading-creating-worker-threads-in-mfc"></a>マルチ スレッド: MFC のワーカー スレッドの作成
 ワーカー スレッドでは、主にバックグラウンド タスクを処理します。アプリケーション処理の中で、ユーザーがその終了を待つ必要がない処理はバックグラウンド タスクにできます。 再計算やバックグラウンド印刷などはワーカー スレッドの良い例です。 このトピックでは、ワーカー スレッドの作成手順について詳しく説明します。 ここでは、次の内容について説明します。  
@@ -46,13 +46,13 @@ ms.locfileid: "43131190"
   
 - 制御関数に渡すパラメーター。  
   
-- (省略可) スレッドの優先順位。 既定の優先順位は normal です。 使用可能な優先度のレベルの詳細については、次を参照してください。 [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) Windows SDK に含まれています。  
+- (省略可) スレッドの優先順位。 既定の優先順位は normal です。 使用可能な優先度のレベルの詳細については、次を参照してください。 [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) Windows SDK に含まれています。  
   
 - (省略可) スレッドのスタック サイズ。 既定値は、このスレッドを生成するスレッドのスタックと同じサイズです。  
   
 - (省略可能)CREATE_SUSPENDED スレッドの中断状態で作成する場合。 既定値 0 では、スレッドを通常どおり起動します。  
   
-- (省略可) セキュリティ属性。 既定では親スレッドと同じ値になります。 このセキュリティ情報の形式の詳細については、次を参照してください。 [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK に含まれています。  
+- (省略可) セキュリティ属性。 既定では親スレッドと同じ値になります。 このセキュリティ情報の形式の詳細については、次を参照してください。 [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK に含まれています。  
   
 `AfxBeginThread` 関数は、`CWinThread` オブジェクトを生成、初期化、および起動し、生成した CWinThread オブジェクトのアドレスを返します。このアドレスは後でプログラムから参照できます。 なんらかの原因でスレッド生成に失敗すると、スレッド生成処理全体をチェックし、すべてのオブジェクトを確実に解放します。  
   

@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2047938e25ed235d04b7a851a21a44090194660a
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: e4ce0ef6ba923332d03972e2bd8b7ebb1f1cfb9e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209119"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205704"
 ---
 # <a name="arm-exception-handling"></a>ARM 例外処理
 
@@ -25,7 +25,7 @@ ARM 版 Windows は、ハードウェアで生成される非同期例外とソ�
 
 ## <a name="arm-exception-handling"></a>ARM 例外処理
 
-ARM 上の Windows を使用して*アンワインド コード*中にスタック アンワインドを制御する[例外処理を構造化](http://msdn.microsoft.com/library/windows/desktop/ms680657)(SEH)。 アンワインド コードは、実行可能イメージの .xdata セクションに格納されるバイトのシーケンスです。 これらのコードには、関数のプロローグおよびエピローグ コードの演算を抽象的な方法で記述し、呼び出し元のスタック フレームへのアンワインドに備えて、関数のプロローグの効果を元に戻すことができるようにします。
+ARM 上の Windows を使用して*アンワインド コード*中にスタック アンワインドを制御する[例外処理を構造化](https://msdn.microsoft.com/library/windows/desktop/ms680657)(SEH)。 アンワインド コードは、実行可能イメージの .xdata セクションに格納されるバイトのシーケンスです。 これらのコードには、関数のプロローグおよびエピローグ コードの演算を抽象的な方法で記述し、呼び出し元のスタック フレームへのアンワインドに備えて、関数のプロローグの効果を元に戻すことができるようにします。
 
 ARM EABI (埋め込みアプリケーション バイナリ インターフェイス) には、アンワインド コードを使用する例外アンワインド モデルを指定しますが、Windows での SEH アンワインドの場合、プロセッサが関数のプロローグまたはエピローグの途中にある非同期の場合を処理する必要があるため、これは十分ではありません。 また、Windows では、アンワインド制御が関数レベルのアンワインドと言語固有スコープのアンワインドに分離されます。これは、ARM EABI で統合されます。 これらの理由から、ARM 版 Windows では、アンワインドのデータと手順の詳細が指定されます。
 

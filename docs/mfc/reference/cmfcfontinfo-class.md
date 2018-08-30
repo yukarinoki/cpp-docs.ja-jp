@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff2f4a6962ee70882ba85a15ea213f7fe6ffe11f
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3984ebc1568c831420e11bd7b3c9004dabcc316b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541627"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222095"
 ---
 # <a name="cmfcfontinfo-class"></a>CMFCFontInfo クラス
 `CMFCFontInfo`クラスは、名とフォントの他の属性について説明します。  
@@ -95,16 +95,16 @@ CMFCFontInfo(const CMFCFontInfo& src);
   
 ### <a name="parameters"></a>パラメーター  
  [in]*lpszName*  
- フォントの名前。 詳細については、次を参照してください。、`lfFaceName`のメンバー、 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)構造体。  
+ フォントの名前。 詳細については、次を参照してください。、`lfFaceName`のメンバー、 [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)構造体。  
   
  [in]*lpszScript*  
  フォントのスクリプト (文字セット) の名前。  
   
  [in]*nCharSet*  
- フォントの文字セット (スクリプト) を指定する値。 詳細については、次を参照してください。、`lfCharSet`のメンバー、 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)構造体。  
+ フォントの文字セット (スクリプト) を指定する値。 詳細については、次を参照してください。、`lfCharSet`のメンバー、 [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)構造体。  
   
  [in]*nPitchAndFamily*  
- ピッチとファミリのフォントを指定する値。 詳細については、次を参照してください。、`lfPitchAndFamily`のメンバー、 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)構造体。  
+ ピッチとファミリのフォントを指定する値。 詳細については、次を参照してください。、`lfPitchAndFamily`のメンバー、 [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)構造体。  
   
  [in]*%n タイプ*  
  フォントの種類を指定する値。 このパラメーターは、DEVICE_FONTTYPE、RASTER_FONTTYPE、TRUETYPE_FONTTYPE のビットごとの組み合わせ (OR) を指定できます。  
@@ -115,7 +115,7 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ### <a name="return-value"></a>戻り値  
   
 ### <a name="remarks"></a>Remarks  
- このドキュメントでは、用語*文字セット*と*スクリプト*同じ意味で。 A*スクリプト*文字と 1 つまたは複数の言語でこれらの文字を書き込むための規則のコレクションでは書記体系であるとも呼ばれます。 文字のコレクションには、アルファベットとそのスクリプトで使用される区切り記号が含まれています。 など、米国で話されていることと、そのアルファベットには a ~ Z の文字が含まれています、ラテン文字は英語に使用します。`lfCharSet`のメンバー、 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)構造体は、文字セットを指定します。 たとえば、ANSI_CHARSET 値には、ラテン文字のアルファベットを含む、ANSI 文字セットを指定します。  
+ このドキュメントでは、用語*文字セット*と*スクリプト*同じ意味で。 A*スクリプト*文字と 1 つまたは複数の言語でこれらの文字を書き込むための規則のコレクションでは書記体系であるとも呼ばれます。 文字のコレクションには、アルファベットとそのスクリプトで使用される区切り記号が含まれています。 など、米国で話されていることと、そのアルファベットには a ~ Z の文字が含まれています、ラテン文字は英語に使用します。`lfCharSet`のメンバー、 [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)構造体は、文字セットを指定します。 たとえば、ANSI_CHARSET 値には、ラテン文字のアルファベットを含む、ANSI 文字セットを指定します。  
   
 ##  <a name="getfullname"></a>  CMFCFontInfo::GetFullName  
  フォントとその文字の連結された名前のセット (スクリプト) を取得します。  

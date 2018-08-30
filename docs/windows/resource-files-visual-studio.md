@@ -27,22 +27,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e07849c151cf2e361324a83b86bf98c24525f4ce
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 99cf5f3c1eb0a81a636407a722149d6cee1bee64
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601577"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220687"
 ---
 # <a name="resource-files-visual-studio"></a>リソース ファイル (Visual Studio)
 
 > [!NOTE]
-> これは Windows デスクトップ アプリケーションだけに適用できます。 ユニバーサル Windows プラットフォーム アプリでのリソースについては、次を参照してください。[アプリ リソースの定義](http://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4)します。
+> これは Windows デスクトップ アプリケーションだけに適用できます。 ユニバーサル Windows プラットフォーム アプリでのリソースについては、次を参照してください。[アプリ リソースの定義](https://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4)します。
 >
 > マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
 >
-> .NET プログラミング言語のプロジェクトでは、リソース スクリプト ファイルは使用しないため、 **ソリューション エクスプローラー**」をご覧ください。 
-  [イメージ エディター](../windows/image-editor-for-icons.md) と [バイナリ エディター](binary-editor.md) を使用して、マネージド プロジェクトのリソース ファイルを操作できます。 編集の対象となるマネージド リソースは、リンク リソースである必要があります。 Visual Studio のリソース エディターでは、埋め込みリソースの編集はサポートしていません。
+> .NET プログラミング言語のプロジェクトでは、リソース スクリプト ファイルは使用しないため、 **ソリューション エクスプローラー**」をご覧ください。 [イメージ エディター](../windows/image-editor-for-icons.md) と [バイナリ エディター](binary-editor.md) を使用して、マネージド プロジェクトのリソース ファイルを操作できます。 編集の対象となるマネージド リソースは、リンク リソースである必要があります。 Visual Studio のリソース エディターでは、埋め込みリソースの編集はサポートしていません。
 
 "リソース ファイル" という用語は、次のようなさまざまな種類のファイルを示します。
 
@@ -98,4 +97,4 @@ Win32
 
 [リソース エディター](../windows/resource-editors.md)  
 [リソース ファイルの操作](../windows/working-with-resource-files.md)  
-[メニューとその他のリソース](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
+[メニューとその他のリソース](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

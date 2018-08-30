@@ -9,22 +9,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87b95044c3a0b874d155b227db736c5e4b81f1b1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b8a36573e72b173180e89b48403829a9387d4ee8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613031"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212506"
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>データ バッファーへのポインターの取得 (C++/CX)
-Windows ランタイム内の [Windows::Storage::Streams::IBuffer](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) インターフェイスは、言語に依存せずに、データ バッファーにアクセスするストリーム ベースの方法を提供します。 C++ では、robuffer.h 内で定義されている Windows ランタイム ライブラリの IBufferByteAccess インターフェイスを使用して、基になるバイト配列への生のポインターを取得できます。 この方法により、データの不要なコピーを作成せずに、バイト配列をその場で変更できます。  
+Windows ランタイムで、 [Windows::Storage::Streams::IBuffer](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx)インターフェイスは、ストリーム ベースの言語に依存しないデータ バッファーにアクセスする手段を提供します。 C++ では、robuffer.h 内で定義されている Windows ランタイム ライブラリの IBufferByteAccess インターフェイスを使用して、基になるバイト配列への生のポインターを取得できます。 この方法により、データの不要なコピーを作成せずに、バイト配列をその場で変更できます。  
   
- 次の図では、ソースが [Windows::UI::Xaml::Media::Imaging WriteableBitmap](http://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx)である XAML イメージ要素を示します。 どの言語で作成されたクライアント アプリケーションも、 `WriteableBitmap` への参照を C++ コードに渡すことができ、その後、C++ はその参照を使用して基になるバッファーでデータを取得できます。 C++ で記述されたユニバーサル Windows プラットフォーム アプリでは、Windows ランタイム コンポーネントにパッケージ化することがなくソース コード内で直接次の例では、関数を使用できます。  
+ 次の図は、XAML イメージ要素のソースが、 [Windows::UI::Xaml::Media::Imaging WriteableBitmap](https://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx)します。 どの言語で作成されたクライアント アプリケーションも、 `WriteableBitmap` への参照を C++ コードに渡すことができ、その後、C++ はその参照を使用して基になるバッファーでデータを取得できます。 C++ で記述されたユニバーサル Windows プラットフォーム アプリでは、Windows ランタイム コンポーネントにパッケージ化することがなくソース コード内で直接次の例では、関数を使用できます。  
   
  ![C&#43; &#43;ピクセル データに直接アクセスするコード](../cppcx/media/ibufferbyteaccessdiagram.png "IBufferByteAccessDiagram")  
   
 ## <a name="getpointertopixeldata"></a>GetPointerToPixelData  
- 次のメソッドは、 [Windows::Storage::Streams::IBuffer](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) を受け入れ、基になるバイト配列への生のポインターを返します。 この関数を呼び出すには、 [WriteableBitmap::PixelBuffer](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer.aspx) プロパティに渡します。  
+ 次のメソッドは、 [Windows::Storage::Streams::IBuffer](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx)を基になるバイト配列の生のポインターを返します。 関数を呼び出すには、渡す、 [writeablebitmap::pixelbuffer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer.aspx)プロパティ。  
   
 ```  
   

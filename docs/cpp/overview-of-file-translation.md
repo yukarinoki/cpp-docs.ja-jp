@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eec47e9810e0cc846cc351330512256a32f95aac
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e6ef9a28af02cbb22eb4e3d2ceaad206a94d6309
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406846"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199393"
 ---
 # <a name="overview-of-file-translation"></a>ファイル変換の概要
 C++ プログラムは、C プログラムと同様、1 つ以上のファイルで構成されます。 これらの各ファイルは、次の概念的な順序で変換されます (実際の順序は "as if" 規則に従います。つまり、変換は、これらの手順に従ったかのように行われる必要があります)。  
@@ -54,7 +54,7 @@ C++ プログラムは、C プログラムと同様、1 つ以上のファイル
   
 - 1 つの定義済みマクロ`__cplusplus`C++ の場合のみ定義されます。 参照してください[定義済みマクロ](../preprocessor/predefined-macros.md)で、*プリプロセッサ リファレンス*詳細についてはします。  
   
-- C プリプロセッサでは、C++ の演算子が認識されません: **.\***、 **-> \***、および`::`します。 参照してください[演算子](../cpp/cpp-built-in-operators-precedence-and-associativity.md)と[式](../cpp/expressions-cpp.md)演算子の詳細についてはします。  
+- C プリプロセッサでは、C++ の演算子が認識されません: **.**<strong>\*</strong>、 **->** <strong>\*</strong>、および **::** します。 参照してください[演算子](../cpp/cpp-built-in-operators-precedence-and-associativity.md)と[式](../cpp/expressions-cpp.md)演算子の詳細についてはします。  
   
 ## <a name="see-also"></a>関連項目  
  [構文規則](../cpp/lexical-conventions.md)

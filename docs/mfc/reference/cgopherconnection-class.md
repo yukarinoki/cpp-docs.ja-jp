@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad48c78d46928a34a43fab5bbe660750928baf51
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 176dfc9027951f06f55dd04757b9acb7c7d8a2ec
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336762"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199626"
 ---
 # <a name="cgopherconnection-class"></a>CGopherConnection クラス
 gopher インターネット サーバーへの接続を管理します。  
@@ -75,7 +75,7 @@ class CGopherConnection : public CInternetConnection
   
  `CGopherConnection`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxinet.h  
   
 ##  <a name="cgopherconnection"></a>  CGopherConnection::CGopherConnection  
@@ -158,7 +158,7 @@ static CGopherLocator CreateLocator(
  項目を取得するために、gopher サーバーに送信されるセレクター文字列へのポインター。 *pstrSelectorString* NULL を指定できます。  
   
  *dwGopherType*  
- これを指定するかどうか*pstrSelectorString*ディレクトリまたはドキュメントを参照しているかどうか、要求が gopher か gopher + とします。 構造の属性を参照してください。 [GOPHER_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa384215) Windows SDK に含まれています。  
+ これを指定するかどうか*pstrSelectorString*ディレクトリまたはドキュメントを参照しているかどうか、要求が gopher か gopher + とします。 構造の属性を参照してください。 [GOPHER_FIND_DATA](/windows/desktop/api/wininet/ns-wininet-gopher_find_dataa) Windows SDK に含まれています。  
   
  *pstrLocator*  
  開くファイルを識別する文字列へのポインター。 一般に、この文字列がへの呼び出しから返される[なった](../../mfc/reference/cgopherfilefind-class.md#getlocator)します。  
@@ -197,7 +197,7 @@ BOOL GetAttribute(
  参照を[CString](../../atl-mfc-shared/reference/cstringt-class.md)ロケーターの種類を受け取る。  
   
 ### <a name="return-value"></a>戻り値  
- 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。  
+ 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。  
   
 ##  <a name="openfile"></a>  CGopherConnection::OpenFile  
  Gopher サーバー上のファイルを開くには、このメンバー関数を呼び出します。  

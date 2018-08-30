@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65f8021bdc16dcfb2c4d1aa69936f27cfe7ac1df
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 09e209a7b3e81ac232d2c0441a84e55ded8faecf
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884819"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212858"
 ---
 # <a name="ccommultithreadmodelnocs-class"></a>CComMultiThreadModelNoCS クラス
 `CComMultiThreadModelNoCS` クリティカル セクションをロックまたはロック解除機能せず、スレッド セーフな方法を変数の値のインクリメントおよびデクリメントに提供します。  
@@ -67,7 +67,7 @@ class CComMultiThreadModelNoCS
   
  ほかに`ThreadModelNoCS`、`CComMultiThreadModelNoCS`定義`AutoCriticalSection`と`CriticalSection`します。 これら後者の 2 つ**typedef**名前参照[CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)、取得およびクリティカル セクションを解放するに関連付けられている空のメソッドを提供します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlbase.h  
   
 ##  <a name="autocriticalsection"></a>  CComMultiThreadModelNoCS::AutoCriticalSection  
@@ -117,7 +117,7 @@ typedef CComFakeCriticalSection CriticalSection;
  参照してください[CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)します。  
   
 ##  <a name="decrement"></a>  CComMultiThreadModelNoCS::Decrement  
- この静的関数は、Win32 関数を呼び出す[InterlockedDecrement](http://msdn.microsoft.com/library/windows/desktop/ms683580)を指す変数の値をデクリメント*p*します。  
+ この静的関数は、Win32 関数を呼び出す[InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement)を指す変数の値をデクリメント*p*します。  
   
 ```
 static ULONG WINAPI Decrement(LPLONG p) throw();
@@ -134,7 +134,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw();
  **InterlockedDecrement** 1 つ以上のスレッドが同時にこの変数を使用するを防ぎます。  
   
 ##  <a name="increment"></a>  CComMultiThreadModelNoCS::Increment  
- この静的関数は、Win32 関数を呼び出す[InterlockedIncrement](http://msdn.microsoft.com/library/windows/desktop/ms683614)を指す変数の値をインクリメントする*p*します。  
+ この静的関数は、Win32 関数を呼び出す[InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement)を指す変数の値をインクリメントする*p*します。  
   
 ```
 static ULONG WINAPI Increment(LPLONG p) throw();

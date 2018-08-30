@@ -1,5 +1,5 @@
 ---
-title: MFC COM |Microsoft ドキュメント
+title: MFC COM |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,21 +21,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8257631e46a1ebcf5c882d9f87c628c04ccc84f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3e8c3af361e1ffb5928132727fa124f03a99e81e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347774"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205650"
 ---
 # <a name="mfc-com"></a>MFC COM
-最もアクティブ テンプレート ライブラリ (ATL) のように設計された COM をサポートする MFC のサブセットに設計された COM プログラミング用です。 このトピックのセクションには、COM の MFC のサポートがについて説明します  
+Active Template Library (ATL) のほとんどは設計されています。 COM をサポートする MFC のサブセットがに設計された COM プログラミングします。 このセクションのトピックには、COM の MFC のサポートがについて説明します  
   
- Active テクノロジ (など、ActiveX コントロール、Active ドキュメント コンテインメント、OLE、およびなど) が使用する言語に関係なく、ネットワーク環境内で相互に対話するのにソフトウェア コンポーネントを有効にするのにコンポーネント オブジェクト モデル (COM) を使用します。作成されます。 Active テクノロジは、デスクトップまたはインターネット上で実行されるアプリケーションの作成に使用できます。 詳細については、次を参照してください。 [COM の概要](../atl/introduction-to-com.md)または[、コンポーネント オブジェクト モデル](http://msdn.microsoft.com/library/windows/desktop/ms694363)です。  
+ Active テクノロジ (など、ActiveX コントロール、Active ドキュメント コンテインメント、OLE、およびなど) が使用する言語に関係なく、ネットワーク環境で互いと対話するのにソフトウェア コンポーネントを有効にするのにコンポーネント オブジェクト モデル (COM) を使用します。作成されます。 Active テクノロジは、デスクトップまたはインターネット上で実行されるアプリケーションの作成に使用できます。 詳細については、次を参照してください。 [COM の概要](../atl/introduction-to-com.md)または[、コンポーネント オブジェクト モデル](/windows/desktop/com/the-component-object-model)します。  
   
  アクティブな技術には、次を含む、クライアントとサーバーの両方のテクノロジがあります。  
   
--   [Active ドキュメント コンテインメント](../mfc/active-document-containment.md)、MFC バージョン 4.2 ではサポートでき、後でユーザーを表示する[アクティブ ドキュメント](../mfc/active-documents.md)(Microsoft Excel または Word ファイルなど) と、ドキュメントのネイティブ インターフェイス全体をアクティブ化クライアント領域全体のアプリケーション、 [active ドキュメント コンテナー](../mfc/active-document-containers.md) Office バインダーや Microsoft Internet Explorer などです。 によって提供されるドキュメントはときに、コンテナーが、クライアントとして動作[active ドキュメント サーバー](../mfc/active-document-servers.md)です。 インターネット アプリケーションでアクティブなドキュメントの使い方の詳細についてを参照してください: [、インターネット上の Active ドキュメント](../mfc/active-documents-on-the-internet.md)です。  
+-   [Active ドキュメント コンテインメント](../mfc/active-document-containment.md)、MFC バージョン 4.2 ではサポートでき、後で、ユーザーを表示する[active ドキュメント](../mfc/active-documents.md)(Microsoft Excel または Word ファイル) などのドキュメントのネイティブ インターフェイス全体をアクティブ化アプリケーションの全体のクライアント領域で、 [active ドキュメント コンテナー](../mfc/active-document-containers.md) Microsoft Internet Explorer と Microsoft Office バインダーなど。 によって提供されるドキュメントはときに、コンテナーが、クライアントとして動作[active ドキュメント サーバー](../mfc/active-document-servers.md)します。 インターネット アプリケーションでアクティブなドキュメントの使用に関する詳細については、次を参照してください。: [、インターネット上の Active ドキュメント](../mfc/active-documents-on-the-internet.md)します。  
   
 -   ActiveX コントロールは、Web サイトなどのコンテナーで使用できる対話型のオブジェクトです。 ActiveX コントロールの詳細についてを参照してください。  
   
@@ -49,17 +49,17 @@ ms.locfileid: "33347774"
   
     -   [ActiveX コントロールのデバッグ](/visualstudio/debugger/how-to-debug-an-activex-control)  
   
--   アクティブ スクリプト ブラウザーまたはサーバーから 1 つ以上の ActiveX コントロールの統合の動作を制御します。 アクティブ スクリプトの詳細については、次を参照してください。 [、インターネット上の Active テクノロジ](../mfc/active-technology-on-the-internet.md)です。  
+-   アクティブ スクリプトからブラウザーまたはサーバーの 1 つ以上の ActiveX コントロールの統合の動作を制御します。 アクティブ スクリプトの詳細については、次を参照してください。 [、インターネット上の Active テクノロジ](../mfc/active-technology-on-the-internet.md)します。  
   
--   [オートメーション](../mfc/automation.md)(以前の OLE オートメーション) 1 つのアプリケーションを別のアプリケーションで実装されているオブジェクトを操作する、または""のオブジェクトを公開操作できるようにできるようになります。  
+-   [Automation](../mfc/automation.md) (以前の OLE オートメーション) 1 つのアプリケーションを別のアプリケーションで実装されているオブジェクトを操作する"オブジェクトを公開したり"操作できるようにすることになります。  
   
-     自動オブジェクトは、ローカルまたは別のコンピューターにネットワーク経由でアクセス可能) リモートにあります。 OLE オブジェクトと COM オブジェクトは、どちらもオートメーションを利用できます。  
+     オブジェクトの自動化には、ローカルまたはリモート (上に別のコンピューターをネットワーク経由でアクセスできる) があります。 OLE オブジェクトと COM オブジェクトは、どちらもオートメーションを利用できます。  
   
--   このセクションでの例については、MFC を使用して COM コンポーネントを記述する方法について情報を提供するも[コネクション ポイント](../mfc/connection-points.md)です。  
+-   このセクションの例については、MFC を使用する COM コンポーネントを作成する方法に関する情報も提供します[コネクション ポイント](../mfc/connection-points.md)します。  
   
- Active テクノロジを今すぐと呼ばれるものではなく OLE と呼ばれる引き続きの詳細については、トピックを参照してください。 [OLE](../mfc/ole-in-mfc.md)です。  
+ まだと呼ばれる OLE active テクノロジを今すぐと呼ばれるものと比較の詳細については、トピックを参照してください。 [OLE](../mfc/ole-in-mfc.md)します。  
   
- また、サポート技術情報の記事 Q248019 を参照してください: HOWTO: ようにサーバー ビジー状態 ダイアログ ボックスから表示中に、時間のかかる COM 操作します。  
+ また、サポート技術情報記事 Q248019 を参照してください: HOWTO: ようにサーバー ビジー状態 ダイアログ ボックスから表示中に、時間のかかる COM 操作。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [Active ドキュメント コンテインメント](../mfc/active-document-containment.md)  

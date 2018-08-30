@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26f6216d5e78ae8ee95eb9f43d70f13aeb5f4874
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: ba67a990b027ff4cd770a0583f6d857a0ee7c725
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881059"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201042"
 ---
 # <a name="ccomcontainedobject-class"></a>CComContainedObject クラス
-このクラスは実装[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)所有者オブジェクトの委任することによって`IUnknown`します。  
+このクラスは実装[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)所有者オブジェクトの委任することによって`IUnknown`します。  
   
 > [!IMPORTANT]
 >  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。  
@@ -67,14 +67,14 @@ class CComContainedObject : public Base
 |[CComContainedObject::Release](#release)|所有者オブジェクトの参照カウントをデクリメントします。|  
   
 ## <a name="remarks"></a>Remarks  
- ATL を使用して`CComContainedObject`クラスで[CComAggObject](../../atl/reference/ccomaggobject-class.md)、 [CComPolyObject](../../atl/reference/ccompolyobject-class.md)、および[CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)します。 `CComContainedObject` 実装[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)所有者オブジェクトの委任することによって`IUnknown`します。 (所有者は、集計の外側のオブジェクトまたはティアオフ インターフェイスが作成される対象のオブジェクトのいずれか)。`CComContainedObject`呼び出し`CComObjectRootEx`の`OuterQueryInterface`、 `OuterAddRef`、および`OuterRelease`から継承されたすべて、`Base`します。  
+ ATL を使用して`CComContainedObject`クラスで[CComAggObject](../../atl/reference/ccomaggobject-class.md)、 [CComPolyObject](../../atl/reference/ccompolyobject-class.md)、および[CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)します。 `CComContainedObject` 実装[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)所有者オブジェクトの委任することによって`IUnknown`します。 (所有者は、集計の外側のオブジェクトまたはティアオフ インターフェイスが作成される対象のオブジェクトのいずれか)。`CComContainedObject`呼び出し`CComObjectRootEx`の`OuterQueryInterface`、 `OuterAddRef`、および`OuterRelease`から継承されたすべて、`Base`します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `Base`  
   
  `CComContainedObject`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlcom.h  
   
 ##  <a name="addref"></a>  CComContainedObject::AddRef  

@@ -1,5 +1,5 @@
 ---
-title: ATL 接続ポイントの使用例 |Microsoft ドキュメント
+title: ATL 接続ポイントの例 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a265d26e8733a7eb2982fb84e8d69ed621922d36
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3a35b1e40718c26eb094eddb420f885a37907071
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355182"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212595"
 ---
 # <a name="atl-connection-point-example"></a>ATL 接続ポイントの例
-この例は、サポートするオブジェクトを示しています。 [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)アウトゴーイング インターフェイスとして。  
+この例は、サポートするオブジェクトを示しています。 [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)アウトゴーイング インターフェイスとして。  
   
  [!code-cpp[NVC_ATL_Windowing#84](../atl/codesnippet/cpp/atl-connection-point-example_1.h)]  
   
- 指定するときに`IPropertyNotifySink`、アウトゴーイング インターフェイスとクラスを使用して[IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md)の代わりに`IConnectionPointImpl`です。 例えば:  
+ 指定するときに`IPropertyNotifySink`クラスを使用する送信インターフェイスとして[IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md)の代わりに`IConnectionPointImpl`します。 例えば:  
   
  [!code-cpp[NVC_ATL_Windowing#85](../atl/codesnippet/cpp/atl-connection-point-example_2.h)]  
   

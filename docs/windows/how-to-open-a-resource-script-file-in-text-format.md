@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5912d4bf38824c562055432f125cdc7e75192cc5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: aae516aeecd90a46544d1e9e28e1352fc73f6e2c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610808"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221461"
 ---
 # <a name="how-to-open-a-resource-script-file-in-text-format"></a>方法: テキスト形式でリソース スクリプト ファイルを開く
 
@@ -33,7 +33,7 @@ ms.locfileid: "42610808"
 > [!NOTE]
 > プロジェクトに .rc ファイルがまだ含まれていない場合は、「 [リソース スクリプト ファイルの新規作成](../windows/how-to-create-a-resource-script-file.md)」を参照してください。
 
-含まれているすべてのリソースを表示しでサポートされているグローバルの操作を実行するテキスト形式で簡単にリソース ファイルを開くことができます、[テキスト エディター](http://msdn.microsoft.com/508e1f18-99d5-48ad-b5ad-d011b21c6ab1)します。
+含まれているすべてのリソースを表示しでサポートされているグローバルの操作を実行するテキスト形式で簡単にリソース ファイルを開くことができます、[テキスト エディター](https://msdn.microsoft.com/508e1f18-99d5-48ad-b5ad-d011b21c6ab1)します。
 
 > [!NOTE]
 > リソース エディター直接読み取りません .rc または`resource.h`ファイル。 リソース コンパイラがこれらのファイルをコンパイルして、リソース エディターで使用される .aps ファイルにします。 これはコンパイル手順のファイルで、シンボル データのみが格納されます。 通常のコンパイル プロセスと同様に、シンボル以外の情報 (コメントなど) はコンパイル プロセス中に破棄されます。 .aps ファイルと .rc ファイルが一致しなくなると、そのたびに .rc ファイルが再生成されます (たとえば、[保存] を実行すると、リソース エディターによって .rc ファイルと resource.h ファイルが上書きされます)。 リソース自体に対する変更は .rc ファイルに組み込まれたままですが、コメントは .rc ファイルが上書きされると失われます。 コメントを保持する方法については、次を参照してください。[コンパイル時にリソースを含む](../windows/how-to-include-resources-at-compile-time.md)します。

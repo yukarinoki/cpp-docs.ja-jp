@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c32aed9d50e0575893c99a9552c74e6e491ecb9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1c44abc596f5338ad82b49bc9761abfc5bb26a1a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853021"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216203"
 ---
 # <a name="colepropertiesdialog-class"></a>COlePropertiesDialog クラス
 Windows に共通の [OLE プロジェクト プロパティ] ダイアログ ボックスをカプセル化します。  
@@ -97,12 +97,11 @@ class COlePropertiesDialog : public COleDialog
   
  `COlePropertiesDialog`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxodlgs.h  
   
 ##  <a name="colepropertiesdialog"></a>  COlePropertiesDialog::COlePropertiesDialog  
- 
-          `COlePropertiesDialog` オブジェクトを作成します。  
+ `COlePropertiesDialog` オブジェクトを作成します。  
   
 ```  
 COlePropertiesDialog(
@@ -154,10 +153,10 @@ virtual INT_PTR DoModal();
 ### <a name="return-value"></a>戻り値  
  IDOK や IDCANCEL 成功した場合それ以外の場合 0 を返します。 IDOK や IDCANCEL は、ユーザーが [ok] または [キャンセル] ボタンを選択するかどうかを示す定数です。  
   
- IDCANCEL が返された場合、Windows を呼び出すことができます[情報を得る](http://msdn.microsoft.com/library/windows/desktop/ms646916)エラーが発生したかどうかを判断する関数。  
+ IDCANCEL が返された場合、Windows を呼び出すことができます[情報を得る](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror)エラーが発生したかどうかを判断する関数。  
   
 ##  <a name="m_gp"></a>  COlePropertiesDialog::m_gp  
- 型の構造体[OLEUIGNRLPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687297)OLE オブジェクトのプロパティ ダイアログ ボックスの [全般] ページを初期化するために使用される、します。  
+ 型の構造体[OLEUIGNRLPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuignrlpropsa)OLE オブジェクトのプロパティ ダイアログ ボックスの [全般] ページを初期化するために使用される、します。  
   
 ```  
 OLEUIGNRLPROPS m_gp;  
@@ -169,7 +168,7 @@ OLEUIGNRLPROPS m_gp;
  詳細については、`OLEUIGNRLPROPS`構造体を Windows SDK を参照してください。  
   
 ##  <a name="m_lp"></a>  COlePropertiesDialog::m_lp  
- 型の構造体[OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735)OLE オブジェクトのプロパティ ダイアログ ボックスの [リンク] ページを初期化するために使用される、します。  
+ 型の構造体[OLEUILINKPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa)OLE オブジェクトのプロパティ ダイアログ ボックスの [リンク] ページを初期化するために使用される、します。  
   
 ```  
 OLEUILINKPROPS m_lp;  
@@ -181,7 +180,7 @@ OLEUILINKPROPS m_lp;
  詳細については、`OLEUILINKPROPS`構造体を Windows SDK を参照してください。  
   
 ##  <a name="m_op"></a>  COlePropertiesDialog::m_op  
- 型の構造体[OLEUIOBJECTPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687199)、共通の OLE オブジェクトのプロパティ ダイアログ ボックスを初期化するために使用します。  
+ 型の構造体[OLEUIOBJECTPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiobjectpropsa)、共通の OLE オブジェクトのプロパティ ダイアログ ボックスを初期化するために使用します。  
   
 ```  
 OLEUIOBJECTPROPS m_op;  
@@ -190,10 +189,10 @@ OLEUIOBJECTPROPS m_op;
 ### <a name="remarks"></a>Remarks  
  この構造体には、[全般]、リンク、およびビュー ページを初期化するために使用されるメンバーが含まれています。  
   
- 詳細についてを参照してください、OLEUIOBJECTPROPS と[OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735) Windows SDK 内の構造体。  
+ 詳細についてを参照してください、OLEUIOBJECTPROPS と[OLEUILINKPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa) Windows SDK 内の構造体。  
   
 ##  <a name="m_psh"></a>  COlePropertiesDialog::m_psh  
- 型の構造体[PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546)メンバーを持つダイアログ オブジェクトの特性を格納します。  
+ 型の構造体[PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2)メンバーを持つダイアログ オブジェクトの特性を格納します。  
   
 ```  
 PROPSHEETHEADER m_psh;  
@@ -207,7 +206,7 @@ PROPSHEETHEADER m_psh;
  詳細については、`PROPSHEETHEADER`構造体を Windows SDK を参照してください。  
   
 ##  <a name="m_vp"></a>  COlePropertiesDialog::m_vp  
- 型の構造体[OLEUIVIEWPROPS](http://msdn.microsoft.com/library/windows/desktop/ms693751)OLE オブジェクトのプロパティ ダイアログ ボックスの [表示] ページを初期化するために使用される、します。  
+ 型の構造体[OLEUIVIEWPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiviewpropsa)OLE オブジェクトのプロパティ ダイアログ ボックスの [表示] ページを初期化するために使用される、します。  
   
 ```  
 OLEUIVIEWPROPS m_vp;  

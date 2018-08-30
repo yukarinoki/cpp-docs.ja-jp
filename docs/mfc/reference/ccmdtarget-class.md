@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6630ad9721b7a58e7da2660337660cc7916db01
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: bb4d7a06d728bddfd4ba1ee355cb4d1e0b5b9fd6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42540350"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221711"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget クラス
 Microsoft Foundation Class ライブラリのメッセージ マップ アーキテクチャの基本クラスです。  
@@ -163,19 +163,19 @@ BOOL DoOleVerb(
  動詞の数値識別子です。  
   
  *lpMsg*  
- ポインター、 [MSG](http://msdn.microsoft.com/library/windows/desktop/ms644958) (ダブルクリック) などの動詞を呼び出したイベントを記述する構造体。  
+ ポインター、 [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) (ダブルクリック) などの動詞を呼び出したイベントを記述する構造体。  
   
  *hWndParent*  
  オブジェクトを保持しているドキュメント ウィンドウのハンドル。  
   
  *lpRect*  
- ポインター、 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 、座標 (ピクセル)、オブジェクト定義を含む構造体の外接する四角形*hwndParent*します。  
+ ポインター、 [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) 、座標 (ピクセル)、オブジェクト定義を含む構造体の外接する四角形*hwndParent*します。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合は成功しましたが、それ以外の場合は FALSE。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、の実装では基本的に[IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508)します。 実行可能なアクションによって列挙[CCmdTarget::EnumOleVerbs](#enumoleverbs)します。  
+ このメンバー関数は、の実装では基本的に[IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb)します。 実行可能なアクションによって列挙[CCmdTarget::EnumOleVerbs](#enumoleverbs)します。  
   
 ##  <a name="enableautomation"></a>  CCmdTarget::EnableAutomation  
  オブジェクトの OLE オートメーションを有効にするには、この関数を呼び出します。  
@@ -229,13 +229,13 @@ BOOL EnumOleVerbs(LPENUMOLEVERB* ppenumOleVerb);
   
 ### <a name="parameters"></a>パラメーター  
  *ppenumOleVerb*  
- ポインターへのポインター、[返します](http://msdn.microsoft.com/library/windows/desktop/ms695084)インターフェイス。  
+ ポインターへのポインター、[返します](/windows/desktop/api/oleidl/nn-oleidl-ienumoleverb)インターフェイス。  
   
 ### <a name="return-value"></a>戻り値  
  オブジェクトは、少なくとも 1 つの OLE 動詞をサポートしている場合は TRUE。 (この場合\* *ppenumOleVerb*を指す、`IEnumOLEVERB`列挙子インターフェイス)、それ以外の場合は FALSE。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、の実装では基本的に[:enumverbs](http://msdn.microsoft.com/library/windows/desktop/ms692781)します。  
+ このメンバー関数は、の実装では基本的に[:enumverbs](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-enumverbs)します。  
   
 ##  <a name="fromidispatch"></a>  CCmdTarget::FromIDispatch  
  マップするには、この関数を呼び出し、`IDispatch`ポインターの場合に、クラスのメンバー関数をオートメーションから受信した、`CCmdTarget`のインターフェイスを実装するオブジェクト、`IDispatch`オブジェクト。  
@@ -263,7 +263,7 @@ virtual BOOL GetDispatchIID(IID* pIID);
   
 ### <a name="parameters"></a>パラメーター  
  *pIID*  
- インターフェイス ID へのポインター (、 [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931))。  
+ インターフェイス ID へのポインター (、 [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931))。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合は成功しましたが、それ以外の場合は FALSE。 成功した場合、 \* *pIID*プライマリ ディスパッチ インターフェイスの ID に設定されています。  
@@ -288,7 +288,7 @@ LPDISPATCH GetIDispatch(BOOL bAddRef);
  `IDispatch`オブジェクトに関連付けられたポインター。  
   
 ### <a name="remarks"></a>Remarks  
- オブジェクトを呼び出す`EnableAutomation`オートメーションを有効にできるように、コンス トラクターでこの関数の基礎クラスの実装にポインターを返す`IDispatch`を経由して通信するクライアントによって使用される、`IDispatch`インターフェイス。 呼び出しを行う必要はありませんので、ポインターへの参照を追加します自動的にこの関数を呼び出す[iunknown::addref](http://msdn.microsoft.com/library/windows/desktop/ms691379)します。  
+ オブジェクトを呼び出す`EnableAutomation`オートメーションを有効にできるように、コンス トラクターでこの関数の基礎クラスの実装にポインターを返す`IDispatch`を経由して通信するクライアントによって使用される、`IDispatch`インターフェイス。 呼び出しを行う必要はありませんので、ポインターへの参照を追加します自動的にこの関数を呼び出す[iunknown::addref](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)します。  
   
 ##  <a name="gettypeinfocount"></a>  CCmdTarget::GetTypeInfoCount  
  オブジェクトを提供する型情報インターフェイスの数を取得します。  
@@ -320,7 +320,7 @@ HRESULT GetTypeInfoOfGuid(
  ロケール識別子 ( `LCID`)。  
   
  *guid*  
- [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931)の型の説明。  
+ [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931)の型の説明。  
   
  *ppTypeInfo*  
  ポインターへのポインター、`ITypeInfo`インターフェイス。  

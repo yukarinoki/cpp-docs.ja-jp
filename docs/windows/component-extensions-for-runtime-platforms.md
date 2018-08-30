@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c939a2a96d0f8a34dbe9424ab7e07c5a60c2224
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7a8bb269f1d572fed2d7fc85ee33f07d22a98aae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610206"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220583"
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>ランタイム プラットフォームのコンポーネントの拡張機能
 
@@ -34,7 +34,7 @@ Visual C++ には、ランタイム プラットフォームに対するプロ�
 
 C + + CX はサブセットの C++/cli CLI。 拡張機能は共通する C +/cli/CX および C++/cli CLI、セマンティクスが共通言語ランタイム (CLR) または Windows ランタイムを対象にかに依存します。 Windows ランタイムで実行するアプリをコンパイルするには、指定、`/ZW`コンパイラ オプション。 CLR で動作するようにコンパイルする場合は `/clr` コンパイラ オプションを指定します。 Visual Studio を使用してプロジェクトを作成すると、これらのスイッチが自動的に設定されます。
 
-C++ でのユニバーサル Windows プラットフォーム アプリを作成する方法の詳細については、次を参照してください。 [C++ を使用してアプリを Windows ランタイム用のロードマップ](http://msdn.microsoft.com/library/windows/apps/hh700360.aspx)します。
+C++ でのユニバーサル Windows プラットフォーム アプリを作成する方法の詳細については、次を参照してください。 [C++ を使用してアプリを Windows ランタイム用のロードマップ](https://msdn.microsoft.com/library/windows/apps/hh700360.aspx)します。
 
 C +/cli CLI は ISO/ANSI C 規格を拡張し、定義下で、Ecma C +/cli CLI 標準。 詳細については、次を参照してください。 [C + での .NET プログラミング/cli (Visual c)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)します。
 

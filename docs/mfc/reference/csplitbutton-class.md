@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7fd35c351639d4b7b5f3b9dbbbce1c5e7cbcb79
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 38a624aacc302812865a785c537eb906a0489379
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541112"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207642"
 ---
 # <a name="csplitbutton-class"></a>CSplitButton クラス
 `CSplitButton`クラスは、分割ボタン コントロールを表します。 分割ボタン コントロールは、ユーザーがボタンのメイン領域をクリックすると既定の動作を実行し、ユーザーがボタンのドロップダウン矢印をクリックするとドロップダウン メニューを表示します。  
@@ -62,7 +62,7 @@ class CSplitButton : public CButton
 |[CSplitButton::OnDropDown](#ondropdown)|ユーザーが現在の分割ボタン コントロールのドロップダウン矢印をクリックすると、システムが送信される BCN_DROPDOWN 通知を処理します。|  
   
 ## <a name="remarks"></a>Remarks  
- `CSplitButton`から派生したクラスは、 [CButton](../../mfc/reference/cbutton-class.md)クラス。 分割ボタン コントロールは、スタイルが button コントロールです。 ユーザーがドロップダウンの矢印をクリックすると、カスタム メニューが表示されます。 詳細については、BS_SPLITBUTTON と BS_DEFSPLITBUTTON スタイルを参照してください。[ボタンのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb775951)します。  
+ `CSplitButton`から派生したクラスは、 [CButton](../../mfc/reference/cbutton-class.md)クラス。 分割ボタン コントロールは、スタイルが button コントロールです。 ユーザーがドロップダウンの矢印をクリックすると、カスタム メニューが表示されます。 詳細については、BS_SPLITBUTTON と BS_DEFSPLITBUTTON スタイルを参照してください。[ボタンのスタイル](/windows/desktop/Controls/button-styles)します。  
   
  次の図は、ページャー コントロールと (1) の分割ボタン コントロールを含むダイアログ ボックスを示しています。 既に (2) のドロップダウン矢印をクリックし、(3) のサブメニューを表示します。  
   
@@ -102,7 +102,7 @@ virtual BOOL Create(
 |パラメーター|説明|  
 |---------------|-----------------|  
 |[in]*dwStyle*|コントロールに適用されるスタイルのビットごとの組み合わせ (OR)。 詳細については、次を参照してください。[ボタンのスタイル](../../mfc/reference/styles-used-by-mfc.md#button-styles)します。|  
-|[in]*rect*|参照を[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)コントロールのサイズと位置を含む構造体。|  
+|[in]*rect*|参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)コントロールのサイズと位置を含む構造体。|  
 |[in]*pParentWnd*|Null 以外のポインターを[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトは、コントロールの親ウィンドウです。|  
 |[in]*nID*|コントロールの ID。|  
   
@@ -146,8 +146,8 @@ afx_msg void OnDropDown(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*pNMHDR*|ポインター、 [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514)に関する情報を格納する構造体、 [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983)通知します。|  
-|[out]*pResult*|(使用されません。 値は返されません)。値を返す、 [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983)通知します。|  
+|[in]*pNMHDR*|ポインター、 [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr)に関する情報を格納する構造体、 [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown)通知します。|  
+|[out]*pResult*|(使用されません。 値は返されません)。値を返す、 [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown)通知します。|  
   
 ### <a name="remarks"></a>Remarks  
  BCN_DROPDOWN 通知が送信され、ユーザーは、分割ボタン コントロールにドロップダウン矢印をクリックすると、メッセージを`OnDropDown`メソッド ハンドル。 ただし、`CSplitButton`オブジェクトは、分割ボタン コントロールを含むコントロールに BCN_DROPDOWN 通知を転送しません。 その結果、格納しているコントロールは、通知への応答でカスタム アクションをサポートできません。  

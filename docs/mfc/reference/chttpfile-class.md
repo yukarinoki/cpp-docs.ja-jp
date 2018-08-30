@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23c3e1b42c228ea971bdedff952c01078735948e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 422952ae459d6a6e4d9f768eb111c9c01cfbb5d0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337461"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219743"
 ---
 # <a name="chttpfile-class"></a>CHttpFile クラス
 HTTP サーバー上のファイルを要求し、読み込む機能が用意されています。  
@@ -90,7 +90,7 @@ class CHttpFile : public CInternetFile
   
  `CHttpFile`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxinet.h  
   
 ##  <a name="addrequestheaders"></a>  CHttpFile::AddRequestHeaders  
@@ -130,7 +130,7 @@ BOOL AddRequestHeaders(
  参照を[CString](../../atl-mfc-shared/reference/cstringt-class.md)要求ヘッダーまたは追加するヘッダーを含むオブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
- 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。  
+ 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。  
   
 ### <a name="remarks"></a>Remarks  
  `AddRequestHeaders` HTTP 要求のハンドルに、追加の自由な形式のヘッダーを追加します。 HTTP サーバーに送信される正確な要求の詳細に制御を必要とする高度なクライアントで使用するものでは。  
@@ -197,10 +197,10 @@ BOOL EndRequest(
   
 ### <a name="parameters"></a>パラメーター  
  *dwFlags*  
- 操作を記述するフラグ。 適切なフラグの一覧は、次を参照してください。 [HttpEndRequest](http://msdn.microsoft.com/library/windows/desktop/aa384230) Windows SDK に含まれています。  
+ 操作を記述するフラグ。 適切なフラグの一覧は、次を参照してください。 [HttpEndRequest](/windows/desktop/api/wininet/nf-wininet-httpendrequesta) Windows SDK に含まれています。  
   
  *lpBuffIn*  
- 初期化されたへのポインター[記述](http://msdn.microsoft.com/library/windows/desktop/aa385132)操作に使用される入力バッファーをについて説明します。  
+ 初期化されたへのポインター[記述](/windows/desktop/api/wininet/ns-wininet-_internet_buffersa)操作に使用される入力バッファーをについて説明します。  
   
  *独自*  
  `CHttpFile` 操作のコンテキスト識別子。 このパラメーターの詳細については、「解説」を参照してください。  
@@ -279,7 +279,7 @@ BOOL QueryInfo(
   
 - HTTP_QUERY_FLAG_REQUEST_HEADERS 通常、アプリケーションが応答ヘッダーをクエリできますが、アプリケーションは、このフラグを使用して要求ヘッダーを照会もできます。  
   
-- これらのヘッダーの値は「最終更新時刻、」などの日付/時刻文字列の HTTP_QUERY_FLAG_SYSTEMTIME このフラグが標準の Win32 とヘッダー値を返します[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)にアプリケーションを必要としない構造体データを解析します。 このフラグを使用する場合は、使用する可能性がある、`SYSTEMTIME`関数のオーバーライドします。  
+- これらのヘッダーの値は「最終更新時刻、」などの日付/時刻文字列の HTTP_QUERY_FLAG_SYSTEMTIME このフラグが標準の Win32 とヘッダー値を返します[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)にアプリケーションを必要としない構造体データを解析します。 このフラグを使用する場合は、使用する可能性がある、`SYSTEMTIME`関数のオーバーライドします。  
   
 - これらのヘッダーの値を持つは、状態コードなどの番号を HTTP_QUERY_FLAG_NUMBER このフラグは、32 ビットの数値としてデータを返します。  
   
@@ -301,10 +301,10 @@ BOOL QueryInfo(
  インデックス値。 参照してください*時*します。  
   
  *pSysTime*  
- Win32 へのポインター [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)構造体。  
+ Win32 へのポインター [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)構造体。  
   
 ### <a name="return-value"></a>戻り値  
- 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。  
+ 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。  
   
 ### <a name="remarks"></a>Remarks  
  このメンバー関数を使用して、呼び出しに成功した後のみ[SendRequest](#sendrequest)か、または、`CHttpFile`によって正常に作成されたオブジェクト[OpenURL](../../mfc/reference/cinternetsession-class.md#openurl)します。  
@@ -379,7 +379,7 @@ BOOL QueryInfoStatusCode(DWORD& dwStatusCode) const;
  状態コードへの参照。 状態コードは、要求されたイベントの成否を示します。 参照してください**解説**ステータス コードの説明のいくつか。  
   
 ### <a name="return-value"></a>戻り値  
- 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。  
+ 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。  
   
 ### <a name="remarks"></a>Remarks  
  このメンバー関数を使用して、呼び出しに成功した後のみ[SendRequest](#sendrequest)か、または、`CHttpFile`によって正常に作成されたオブジェクト[OpenURL](../../mfc/reference/cinternetsession-class.md#openurl)します。  
@@ -462,13 +462,13 @@ BOOL SendRequestEx(
  要求で送信されるバイト数。  
   
  *dwFlags*  
- 操作を記述するフラグ。 適切なフラグの一覧は、次を参照してください。 [HttpSendRequestEx](http://msdn.microsoft.com/library/windows/desktop/aa384318) Windows SDK に含まれています。  
+ 操作を記述するフラグ。 適切なフラグの一覧は、次を参照してください。 [HttpSendRequestEx](/windows/desktop/api/wininet/nf-wininet-httpsendrequestexa) Windows SDK に含まれています。  
   
  *独自*  
  `CHttpFile` 操作のコンテキスト識別子。 このパラメーターの詳細については、「解説」を参照してください。  
   
  *lpBuffIn*  
- 初期化されたへのポインター[記述](http://msdn.microsoft.com/library/windows/desktop/aa385132)操作に使用される入力バッファーをについて説明します。  
+ 初期化されたへのポインター[記述](/windows/desktop/api/wininet/ns-wininet-_internet_buffersa)操作に使用される入力バッファーをについて説明します。  
   
  *lpBuffOut*  
  操作に使用される出力バッファーを記述する初期化の記述へのポインター。  

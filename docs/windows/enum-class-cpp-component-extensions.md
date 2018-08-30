@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b1f1e19ac51e36b04dd8ecfe89dbb7e3d592d869
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 625b99751c570c47456aad4903de5b8c4049ac42
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611963"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207603"
 ---
 # <a name="enum-class--c-component-extensions"></a>enum クラス (C++ コンポーネント拡張)
 
@@ -65,7 +65,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 
 ### <a name="remarks"></a>Remarks
 
-使用例を含む詳細については、「 [列挙型](http://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx)」をご覧ください。
+詳細についてと例については、次を参照してください。[列挙型](https://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx)します。
 
 列挙子の値を定義する定数式が *underlying-type*で表すことができない場合、コンパイラはエラー メッセージを生成します。  ただし、基になる型に対して値が不適切であるというエラーは生成されません。 例えば:
 

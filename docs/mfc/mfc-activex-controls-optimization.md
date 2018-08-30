@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4459865bc2ba374048622167fadb7bcf8fb97c99
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 424bb8e7082432cea3f730bb0783c2c1912c293f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028175"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220507"
 ---
 # <a name="mfc-activex-controls-optimization"></a>MFC ActiveX コントロール : 最適化
 この記事では、パフォーマンス向上のため、ActiveX コントロールを最適化するために使用できる手法について説明します。  
@@ -53,7 +53,7 @@ ms.locfileid: "39028175"
 |**マウス ポインターの通知時に非アクティブな** チェック ボックス|選択|[コントロールがアクティブでないときのマウスとの対話](../mfc/providing-mouse-interaction-while-inactive.md)|  
 |**最適化された描画コード** チェック ボックス|選択|[コントロールの描画の最適化](../mfc/optimizing-control-drawing.md)|  
   
- これらの最適化を実装するメンバー関数の詳細については、次を参照してください。 [COleControl](../mfc/reference/colecontrol-class.md)します。 メンバー関数を使用して一覧表示[ウィンドウなしの操作](http://msdn.microsoft.com/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df)と[ポインター処理関数の非アクティブな](http://msdn.microsoft.com/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df)します。  
+ これらの最適化を実装するメンバー関数の詳細については、次を参照してください。 [COleControl](../mfc/reference/colecontrol-class.md)します。  
   
  詳細については次を参照してください:  
   

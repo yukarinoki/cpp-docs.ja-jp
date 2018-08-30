@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac3c020bbb5ff46f4684c9ed089a2fe327de252e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8de1f44b079b269d76054b1a221a8ec3e36daf5e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884364"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209326"
 ---
 # <a name="cdebugreporthook-class"></a>CDebugReportHook クラス
 このクラスを使用すると、名前付きパイプにデバッグ レポートを送信します。  
@@ -61,11 +61,11 @@ class CDebugReportHook
 ## <a name="remarks"></a>Remarks  
  サービスまたは名前付きパイプにデバッグ レポートを送信するアプリケーションのデバッグ ビルドでは、このクラスのインスタンスを作成します。 デバッグ レポートが呼び出すことによって生成される[_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)またはこの関数のラッパーをなどを使用して、 [ATLTRACE](debugging-and-error-reporting-macros.md#atltrace)と[ATLASSERT](debugging-and-error-reporting-macros.md#atlassert)マクロ。  
   
- このクラスの使用では、非対話型で実行されるコンポーネントを対話的にデバッグできます。[ウィンドウ ステーション](http://msdn.microsoft.com/library/windows/desktop/ms687096)します。  
+ このクラスの使用では、非対話型で実行されるコンポーネントを対話的にデバッグできます。[ウィンドウ ステーション](/windows/desktop/winstation/window-stations)します。  
   
  スレッドの基になるセキュリティ コンテキストを使用してデバッグ レポートを送信することに注意してください。 デバッグ レポートを低い特権のユーザーの権限の借用が行わなどの web アプリケーションでの状況で表示するように、権限借用が一時的に無効にします。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlutil.h  
   
 ##  <a name="cdebugreporthook"></a>  CDebugReportHook::CDebugReportHook  

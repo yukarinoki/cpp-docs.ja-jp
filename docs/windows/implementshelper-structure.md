@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cf80852bf058f0e27fc1261cce471adfc0d2935b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5a3a31125d8489551f1eec143013661bf385f29a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589335"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212446"
 ---
 # <a name="implementshelper-structure"></a>ImplementsHelper 構造体
 
@@ -70,5 +70,5 @@ friend struct Details::ImplementsHelper;
 
 ## <a name="see-also"></a>関連項目
 
-[リファレンス (Windows ランタイム ライブラリ)](http://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)  
+[リファレンス (Windows ランタイム ライブラリ)](https://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)  
 [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

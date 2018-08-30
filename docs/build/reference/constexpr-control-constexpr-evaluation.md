@@ -1,5 +1,5 @@
 ---
-title: constexpr (コントロールの constexpr の評価) |Microsoft ドキュメント
+title: -constexpr (constexpr の評価の制御) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/15/2017
 ms.technology:
@@ -19,37 +19,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f83f1d9a505ebc4c05ce4e367bb1e978d6a14b78
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 475702792686a3de8d1ae52bd9e40ef113c49da1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373960"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202575"
 ---
-# <a name="constexpr-control-constexpr-evaluation"></a>/constexpr (コントロールの constexpr の評価)  
+# <a name="constexpr-control-constexpr-evaluation"></a>/constexpr (constexpr の評価の制御)  
   
-使用して、 **/constexpr**コンパイラ オプションを制御するパラメーターを`constexpr`コンパイル時に評価します。  
+使用して、 **/constexpr**コンパイラのオプションを制御するパラメーターを**constexpr**コンパイル時に評価します。  
   
 ## <a name="syntax"></a>構文  
   
-> /constexpr:depth*N*  
-> /constexpr:backtrace*N*  
-> /constexpr:steps*N*  
+> **/constexpr:depth**<em>N</em>  
+> **/constexpr:backtrace**<em>N</em>  
+> **/constexpr:steps**<em>N</em>  
   
 ## <a name="arguments"></a>引数  
   
-**深さ * * * N*  
-再帰の深さを制限`constexpr`関数の呼び出しに*N*レベル。 既定値は 512 です。  
+**深さ**<em>N</em>  
+再帰の深さを制限する**constexpr**関数の呼び出しに*N*レベル。 既定値は 512 文字です。  
   
-**バック * * * N*  
-最大表示*N* `constexpr`診断で評価します。 既定値は 10 です。  
+**バック トレース**<em>N</em>  
+最大表示*N* **constexpr**診断で評価します。 既定値は 10 です。  
   
-**手順 * * * N*  
-終了`constexpr`後の評価*N*手順を実行します。 既定値は 100,000 です。  
+**手順**<em>N</em>  
+終了**constexpr**後の評価*N*手順を実行します。 既定値には 100,000 です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
-**/Constexpr**コンパイラ オプションを制御のコンパイル時に評価`constexpr`式。 評価手順、再帰レベル、およびバックの深さをコンパイラが上の時間が長くことを防ぐために制御される`constexpr`評価します。 詳細については、`constexpr`言語要素を参照してください[constexpr (C++)](../../cpp/constexpr-cpp.md)です。  
+**/Constexpr**コンパイラ オプションのコンパイル時の評価を制御する**constexpr**式。 評価手順、再帰レベル、およびバック トレースの深さが、コンパイラがあまり時間をかけることを防ぐために管理された**constexpr**評価します。 詳細については、 **constexpr**言語の要素を参照してください[constexpr (C++)](../../cpp/constexpr-cpp.md)します。  
 
 **/Constexpr**オプションは、Visual Studio 2015 以降を使用できます。  
   
@@ -59,11 +59,11 @@ ms.locfileid: "32373960"
   
 2. **構成プロパティ**、展開、 **C/C++** フォルダーを選択し、**コマンド ライン**プロパティ ページ。  
   
-3. いずれかを入力 **/constexpr**コンパイラ オプション、**追加オプション**ボックス。 選択**OK**または**適用**して変更を保存します。  
+3. 入力 **/constexpr**コンパイラ オプション、**追加オプション**ボックス。 選択**OK**または**適用**変更を保存します。  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには  
   
--   「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>」を参照してください。  
+-   以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>  
   
 ## <a name="see-also"></a>関連項目  
   

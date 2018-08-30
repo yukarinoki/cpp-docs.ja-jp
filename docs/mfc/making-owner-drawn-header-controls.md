@@ -1,5 +1,5 @@
 ---
-title: オーナー描画ヘッダー コントロールの作成 |Microsoft ドキュメント
+title: オーナー描画ヘッダー コントロールの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10315395e9699e2a93c802001ba920dcac1440f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ca5545f7ebf828a04321db999d74aaa0d8a42187
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345253"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214734"
 ---
 # <a name="making-owner-drawn-header-controls"></a>オーナー描画ヘッダー コントロールの作成
-ヘッダー コントロールの個々 の項目を定義することができます ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) オーナー描画項目となるようです。 詳細については、次を参照してください。[ヘッダー コントロールのオーナー](http://msdn.microsoft.com/library/windows/desktop/bb775238) Windows SDK に含まれています。  
+ヘッダー コントロールの個々 の項目を定義することができます ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) オーナー描画項目にします。 詳細については、次を参照してください。[ヘッダー コントロールのオーナー](/windows/desktop/Controls/header-controls) Windows SDK に含まれています。  
   
 ## <a name="see-also"></a>関連項目  
- [CHeaderCtrl の使い方](../mfc/using-cheaderctrl.md)   
+ [Cheaderctrl の使い方](../mfc/using-cheaderctrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 

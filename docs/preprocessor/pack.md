@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39d19749f44645d30d9a3826758f54737d3e68af
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 0bcbd8dcc64d26f124a7b6443a79f01aa4329414
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539218"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207493"
 ---
 # <a name="pack"></a>pack
 構造体メンバー、共用体メンバー、およびクラス メンバーのパッキング アラインメントを指定します。  
@@ -38,7 +38,7 @@ ms.locfileid: "42539218"
 
 クラスをパッキングすると、そのメンバーはメモリ内で互いの直後に配置されます。そのため、一部またはすべてのメンバーがターゲット アーキテクチャの既定のアラインメントより小さい境界内にアラインされる場合があります。 **パック**データ宣言レベルで制御します。 これに対しコンパイラ オプションから[/Zp](../build/reference/zp-struct-member-alignment.md)、モジュール レベルの制御のみを提供します。 **パック**は 1 つ目の反映**構造体**、**共用体**、または**クラス**プラグマが発生した後に宣言します。 **パック**定義に影響を与えません。 呼び出す**パック**引数セットなしで*n*コンパイラ オプションで設定された値に`/Zp`します。 コンパイラ オプションを設定しない場合、既定値は 8 になります。  
   
-構造体の配置を変更すると、メモリの領域はそれほど使用されていなくても、パフォーマンスが低下したり、アラインメントされていないアクセスについてハードウェアで生成された例外を受け取る場合があります。  この例外の動作を変更するを使用[SetErrorMode](http://msdn.microsoft.com/library/windows/desktop/ms680621)します。  
+構造体の配置を変更すると、メモリの領域はそれほど使用されていなくても、パフォーマンスが低下したり、アラインメントされていないアクセスについてハードウェアで生成された例外を受け取る場合があります。  この例外の動作を変更するを使用[SetErrorMode](https://msdn.microsoft.com/library/windows/desktop/ms680621)します。  
   
 *表示*(省略可能)  
 パッキング アラインメントの現在のバイト値を表示します。 値は警告メッセージによって表示されます。  

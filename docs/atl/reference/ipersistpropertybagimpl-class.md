@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f214a112c1baedd507a9eeeca02e955aeceedd3e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 09b0acfc1fc1f9147a6acbe8bbfe66016dc0b54b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879216"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201703"
 ---
 # <a name="ipersistpropertybagimpl-class"></a>IPersistPropertyBagImpl クラス
 このクラスは実装`IUnknown`でき、そのプロパティをクライアントが指定したプロパティ バッグに保存するオブジェクト。  
@@ -68,7 +68,7 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
   
  `IPersistPropertyBagImpl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlcom.h  
   
 ##  <a name="getclassid"></a>  IPersistPropertyBagImpl::GetClassID  
@@ -79,7 +79,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) Windows SDK にします。  
+ 参照してください[IPersist::GetClassID](/windows/desktop/api/objidl/nf-objidl-ipersist-getclassid) Windows SDK にします。  
   
 ##  <a name="initnew"></a>  IPersistPropertyBagImpl::InitNew  
  新しく作成されたオブジェクトを初期化します。  

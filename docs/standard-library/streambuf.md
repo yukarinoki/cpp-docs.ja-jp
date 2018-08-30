@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 138ec5bb28e108751a7d4b03651826db38c098fa
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: db05d1b19a67fc54a148d407fd90992a6d37c4c6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026933"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213588"
 ---
 # <a name="ltstreambufgt"></a>&lt;streambuf&gt;
 
@@ -45,7 +45,7 @@ ms.locfileid: "39026933"
 
 |クラス|説明|
 |-|-|
-|[basic_streambuf クラス](http://msdn.microsoft.com/d9c706ba-ce01-43e0-b0b2-a558fc53ea8d)|このテンプレート クラスは、ストリームの特定の表現との相互間での要素の伝送を制御する、ストリーム バッファーを派生させるための抽象基底クラスについて説明します。|
+|[basic_streambuf クラス](https://msdn.microsoft.com/d9c706ba-ce01-43e0-b0b2-a558fc53ea8d)|このテンプレート クラスは、ストリームの特定の表現との相互間での要素の伝送を制御する、ストリーム バッファーを派生させるための抽象基底クラスについて説明します。|
 
 ## <a name="see-also"></a>関連項目
 

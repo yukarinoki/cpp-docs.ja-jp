@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdd8dd32b0f805e55e17d12428c045d64820196d
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ff3a68e585cecb8affb0a5f4ffb7ff81929c955a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849406"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201104"
 ---
 # <a name="cpalette-class"></a>CPalette クラス
 Windows のカラー パレットをカプセル化します。  
@@ -94,7 +94,7 @@ class CPalette : public CGdiObject
   
  `CPalette`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="animatepalette"></a>  CPalette::AnimatePalette  
@@ -115,12 +115,12 @@ void AnimatePalette(
  アニメーション化するパレット内のエントリの数を指定します。  
   
  *lpPaletteColors*  
- 配列の最初のメンバーを指す[受け取る](http://msdn.microsoft.com/library/windows/desktop/dd162769)構造で識別されるパレット エントリを置き換え*nStartIndex*と*とも*します。  
+ 配列の最初のメンバーを指す[受け取る](https://msdn.microsoft.com/library/windows/desktop/dd162769)構造で識別されるパレット エントリを置き換え*nStartIndex*と*とも*します。  
   
 ### <a name="remarks"></a>Remarks  
  アプリケーションを呼び出すと`AnimatePalette`、ことはありません、クライアント領域を更新するため、Windows システム パレットに、新しいエントリをすぐにマップされます。  
   
- `AnimatePalette`関数は、対応する設定 PC_RESERVED フラグでエントリは変更のみ`palPaletteEntry`のメンバー、[保持](http://msdn.microsoft.com/library/windows/desktop/dd145040)構造に関連付けられている、`CPalette`オブジェクト。 この構造体の詳細については、Windows SDK での保持を参照してください。  
+ `AnimatePalette`関数は、対応する設定 PC_RESERVED フラグでエントリは変更のみ`palPaletteEntry`のメンバー、[保持](/windows/desktop/api/wingdi/ns-wingdi-taglogpalette)構造に関連付けられている、`CPalette`オブジェクト。 この構造体の詳細については、Windows SDK での保持を参照してください。  
   
 ##  <a name="cpalette"></a>  CPalette::CPalette  
  `CPalette` オブジェクトを構築します。  
@@ -147,7 +147,7 @@ BOOL CreateHalftonePalette(CDC* pDC);
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- ハーフトーン パレットは、ハーフトーンをデバイス コンテキストの伸縮モードが設定されている場合、アプリケーションで作成する必要があります。 によって返される論理ハーフトーン パレット、 [CreateHalftonePalette](http://msdn.microsoft.com/library/windows/desktop/dd183503)メンバー関数は必要がありますし、選択し、前にデバイス コンテキストに実現、 [CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt)または[StretchDIBits](http://msdn.microsoft.com/library/windows/desktop/dd145121)関数が呼び出されます。  
+ ハーフトーン パレットは、ハーフトーンをデバイス コンテキストの伸縮モードが設定されている場合、アプリケーションで作成する必要があります。 によって返される論理ハーフトーン パレット、 [CreateHalftonePalette](/windows/desktop/api/wingdi/nf-wingdi-createhalftonepalette)メンバー関数は必要がありますし、選択し、前にデバイス コンテキストに実現、 [CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt)または[StretchDIBits](/windows/desktop/api/wingdi/nf-wingdi-stretchdibits)関数が呼び出されます。  
   
  に関する詳細については、Windows SDK を参照してください`CreateHalftonePalette`と`StretchDIBits`します。  
   
@@ -160,7 +160,7 @@ BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
   
 ### <a name="parameters"></a>パラメーター  
  *lpLogPalette*  
- 指す、[保持](http://msdn.microsoft.com/library/windows/desktop/dd145040)論理パレットの色に関する情報を含む構造体。  
+ 指す、[保持](/windows/desktop/api/wingdi/ns-wingdi-taglogpalette)論理パレットの色に関する情報を含む構造体。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -227,7 +227,7 @@ UINT GetPaletteEntries(
  論理パレットを取得するエントリの数を指定します。  
   
  *lpPaletteColors*  
- 配列を指す[受け取る](http://msdn.microsoft.com/library/windows/desktop/dd162769)パレット エントリを受信するデータ構造体。 配列で指定された数以上のデータ構造を含める必要があります*とも*します。  
+ 配列を指す[受け取る](https://msdn.microsoft.com/library/windows/desktop/dd162769)パレット エントリを受信するデータ構造体。 配列で指定された数以上のデータ構造を含める必要があります*とも*します。  
   
 ### <a name="return-value"></a>戻り値  
  論理パレット; から取得されたエントリの数関数が失敗した場合は 0 を返します。  
@@ -245,7 +245,7 @@ operator HPALETTE() const;
 ### <a name="remarks"></a>Remarks  
  この演算子は、キャスト演算子です。  
   
- グラフィック オブジェクトの使用に関する詳細については、記事を参照してください。[グラフィック オブジェクト](http://msdn.microsoft.com/library/windows/desktop/dd144962)Windows SDK に含まれています。  
+ グラフィック オブジェクトの使用に関する詳細については、記事を参照してください。[グラフィック オブジェクト](/windows/desktop/gdi/graphic-objects)Windows SDK に含まれています。  
   
 ##  <a name="resizepalette"></a>  CPalette::ResizePalette  
  アタッチされている論理パレットのサイズを変更、`CPalette`オブジェクトで指定されたエントリの数を*とも*します。  
@@ -264,7 +264,7 @@ BOOL ResizePalette(UINT nNumEntries);
 ### <a name="remarks"></a>Remarks  
  アプリケーションを呼び出す場合`ResizePalette`パレットのサイズを減らすためには、サイズ変更のパレットの残りのエントリは変更されません。 アプリケーションを呼び出す場合`ResizePalette`パレットの拡大、追加パレット エントリは黒 (赤、緑、青の値はすべて 0) に設定され、その他のすべてのエントリのフラグが 0 に設定されます。  
   
- Windows API の詳細については`ResizePalette`を参照してください[ため](http://msdn.microsoft.com/library/windows/desktop/dd162928)Windows SDK に含まれています。  
+ Windows API の詳細については`ResizePalette`を参照してください[ため](/windows/desktop/api/wingdi/nf-wingdi-resizepalette)Windows SDK に含まれています。  
   
 ##  <a name="setpaletteentries"></a>  CPalette::SetPaletteEntries  
  論理パレット内のエントリの範囲内の RGB カラー値とフラグを設定します。  
@@ -284,7 +284,7 @@ UINT SetPaletteEntries(
  設定する論理パレットのエントリの数を指定します。  
   
  *lpPaletteColors*  
- 配列を指す[受け取る](http://msdn.microsoft.com/library/windows/desktop/dd162769)パレット エントリを受信するデータ構造体。 配列で指定された数以上のデータ構造を含める必要があります*とも*します。  
+ 配列を指す[受け取る](https://msdn.microsoft.com/library/windows/desktop/dd162769)パレット エントリを受信するデータ構造体。 配列で指定された数以上のデータ構造を含める必要があります*とも*します。  
   
 ### <a name="return-value"></a>戻り値  
  論理パレット内のエントリの数を設定関数が失敗した場合は 0 を返します。  
@@ -292,7 +292,7 @@ UINT SetPaletteEntries(
 ### <a name="remarks"></a>Remarks  
  アプリケーションを呼び出すときに、論理パレットがデバイス コンテキストに選択されるかどうか`SetPaletteEntries`、変更は反映されません、アプリケーションが[:realizepalette](../../mfc/reference/cdc-class.md#realizepalette)します。  
   
- Windows 構造体の詳細については`PALETTEENTRY`を参照してください[受け取る](http://msdn.microsoft.com/library/windows/desktop/dd162769)Windows SDK に含まれています。  
+ Windows 構造体の詳細については`PALETTEENTRY`を参照してください[受け取る](https://msdn.microsoft.com/library/windows/desktop/dd162769)Windows SDK に含まれています。  
   
 ## <a name="see-also"></a>関連項目  
  [MFC サンプル DIBLOOK](../../visual-cpp-samples.md)   

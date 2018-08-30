@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0edc3a255d3778711b2b8e74bde448dc34c814c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 677518f45fdfb721027cc67b0210e9b437bed859
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849092"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213151"
 ---
 # <a name="cpanedialog-class"></a>CPaneDialog クラス
 `CPaneDialog`クラスは、モードレスでドッキング可能なダイアログ ボックスをサポートしています。  
@@ -54,12 +54,12 @@ class CPaneDialog : public CDockablePane
 |[CPaneDialog::Create](#create)|ドッキング可能なダイアログ ボックスを作成しにアタッチします、`CPaneDialog`オブジェクト。|  
 |`CPaneDialog::CreateObject`|このクラス型の動的インスタンスを作成するために、フレームワークで使用されます。|  
 |`CPaneDialog::GetThisClass`|ポインターを取得する、framework によって使用される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|  
-|[CPaneDialog::HandleInitDialog](#handleinitdialog)|処理、 [WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428)メッセージ。 (再定義`CBasePane::HandleInitDialog`)。|  
-|`CPaneDialog::OnEraseBkgnd`|処理、 [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055)メッセージ。 (再定義[CWnd::OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd))。|  
-|`CPaneDialog::OnLButtonDblClk`|処理、[した](http://msdn.microsoft.com/library/windows/desktop/ms645606)メッセージ。 (再定義[CWnd::OnLButtonDblClk](../../mfc/reference/cwnd-class.md#onlbuttondblclk))。|  
-|`CPaneDialog::OnLButtonDown`|処理、 [WM_LBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms645607)メッセージ。 (再定義[CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown))。|  
-|`CPaneDialog::OnUpdateCmdUI`|ダイアログ ボックスのウィンドウを更新するためにフレームワークによって呼び出されます。 (上書き[cdockablepane::onupdatecmdui](http://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0))。|  
-|`CPaneDialog::OnWindowPosChanging`|処理、 [WM_WINDOWPOSCHANGING](http://msdn.microsoft.com/library/windows/desktop/ms632653)メッセージ。 (再定義[CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging))。|  
+|[CPaneDialog::HandleInitDialog](#handleinitdialog)|処理、 [WM_INITDIALOG](/windows/desktop/dlgbox/wm-initdialog)メッセージ。 (再定義`CBasePane::HandleInitDialog`)。|  
+|`CPaneDialog::OnEraseBkgnd`|処理、 [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd)メッセージ。 (再定義[CWnd::OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd))。|  
+|`CPaneDialog::OnLButtonDblClk`|処理、[した](/windows/desktop/inputdev/wm-lbuttondblclk)メッセージ。 (再定義[CWnd::OnLButtonDblClk](../../mfc/reference/cwnd-class.md#onlbuttondblclk))。|  
+|`CPaneDialog::OnLButtonDown`|処理、 [WM_LBUTTONDOWN](/windows/desktop/inputdev/wm-lbuttondown)メッセージ。 (再定義[CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown))。|  
+|`CPaneDialog::OnUpdateCmdUI`|ダイアログ ボックスのウィンドウを更新するためにフレームワークによって呼び出されます。 (上書き[cdockablepane::onupdatecmdui](https://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0))。|  
+|`CPaneDialog::OnWindowPosChanging`|処理、 [WM_WINDOWPOSCHANGING](/windows/desktop/winmsg/wm-windowposchanging)メッセージ。 (再定義[CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging))。|  
 |[CPaneDialog::SetOccDialogInfo](#setoccdialoginfo)|OLE コントロール コンテナーは、ダイアログ ボックスのテンプレートを指定します。|  
   
 ## <a name="remarks"></a>Remarks  
@@ -80,7 +80,7 @@ class CPaneDialog : public CDockablePane
   
  [CPaneDialog](../../mfc/reference/cpanedialog-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxpanedialog.h  
   
 ##  <a name="create"></a>  CPaneDialog::Create  
@@ -161,7 +161,7 @@ BOOL Create(
 [!code-cpp[NVC_MFC_SetPaneSize#3](../../mfc/reference/codesnippet/cpp/cpanedialog-class_2.cpp)]  
   
 ##  <a name="handleinitdialog"></a>  CPaneDialog::HandleInitDialog  
- 処理、 [WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428)メッセージ。  
+ 処理、 [WM_INITDIALOG](/windows/desktop/dlgbox/wm-initdialog)メッセージ。  
   
 ```  
 afx_msg LRESULT HandleInitDialog(

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30031a4da36e4efdf91177c983691dda38b426f4
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 13b6531dd1299235a125b1c25b0b1d84781755ed
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882677"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217841"
 ---
 # <a name="cw2aex-class"></a>CW2AEX クラス
 このクラスは、文字列変換マクロ CT2AEX、CW2TEX、CW2CTEX、および CT2CAEX、および typedef CW2A によって使用されます。  
@@ -94,7 +94,7 @@ class CW2AEX
 ## <a name="example"></a>例  
  参照してください[ATL と MFC 文字列変換マクロ](string-conversion-macros.md)のこれらの文字列変換マクロの使用例についてはします。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlconv.h  
   
 ##  <a name="cw2aex"></a>  CW2AEX::CW2AEX  
@@ -110,7 +110,7 @@ CW2AEX(LPCWSTR psz) throw(...);
  変換するテキスト文字列。  
   
  *nCodePage*  
- コード ページ変換を実行するために使用します。 Windows SDK 関数のコード ページ パラメーターの説明を参照してください。 [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)の詳細。  
+ コード ページ変換を実行するために使用します。 Windows SDK 関数のコード ページ パラメーターの説明を参照してください。 [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)の詳細。  
   
 ### <a name="remarks"></a>Remarks  
  変換プロセスで使用されるバッファーを割り当てます。  

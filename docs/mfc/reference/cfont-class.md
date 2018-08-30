@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a598a05c31c36c7defd5fe2441031d3bccdf20f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2781a41ddadc6932e1c5797f098407b7dd5e4f29
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336791"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221229"
 ---
 # <a name="cfont-class"></a>CFont クラス
 Windows のグラフィック デバイス インターフェイス (GDI) のフォントをカプセル化したもので、フォントを操作するメンバー関数を提供します。  
@@ -85,7 +85,7 @@ class CFont : public CGdiObject
   
  `CFont`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="cfont"></a>  CFont::CFont  
@@ -124,7 +124,7 @@ BOOL CreateFont(
   
 ### <a name="parameters"></a>パラメーター  
  *パラメーター nHeight*  
- フォントの高さを (論理単位) で指定します。 参照してください、`lfHeight`のメンバー、 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)説明については、Windows SDK で構造体。 絶対値*パラメーター nHeight*は変換後、16,384 デバイス単位を超えない必要があります。 すべての高さの比較は、すべてのフォントが要求されたサイズを超える場合も、フォント マッパーは要求されたサイズを超えていない最大のフォントまたは最小のフォントを探します。  
+ フォントの高さを (論理単位) で指定します。 参照してください、`lfHeight`のメンバー、 [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)説明については、Windows SDK で構造体。 絶対値*パラメーター nHeight*は変換後、16,384 デバイス単位を超えない必要があります。 すべての高さの比較は、すべてのフォントが要求されたサイズを超える場合も、フォント マッパーは要求されたサイズを超えていない最大のフォントまたは最小のフォントを探します。  
   
  *nWidth*  
  フォントで、(論理単位) での平均文字幅を指定します。 場合*nWidth*が 0 の差の絶対値によって決定される最も近い一致を検索する利用可能なフォントの業務に携わる縦横比と一致するデバイスの縦横比場合、。  
@@ -173,7 +173,7 @@ BOOL CreateFont(
  ピッチとファミリのフォントを指定します。 参照してください、`lfPitchAndFamily`内のメンバー、`LOGFONT`と詳細については値の一覧については、Windows SDK で構造体。  
   
  *lpszFacename*  
- A`CString`またはフォントのタイプフェイス名を指定する null で終わる文字列へのポインター。 この文字列の長さは 30 文字を超えない必要があります。 Windows [EnumFontFamilies](http://msdn.microsoft.com/library/windows/desktop/dd162619)関数は現在使用可能なすべてのフォントを列挙するために使用できます。 場合*lpszFacename*が null の場合、GDI がデバイスに依存しないタイプフェイスを使用します。  
+ A`CString`またはフォントのタイプフェイス名を指定する null で終わる文字列へのポインター。 この文字列の長さは 30 文字を超えない必要があります。 Windows [EnumFontFamilies](/windows/desktop/api/wingdi/nf-wingdi-enumfontfamiliesa)関数は現在使用可能なすべてのフォントを列挙するために使用できます。 場合*lpszFacename*が null の場合、GDI がデバイスに依存しないタイプフェイスを使用します。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -191,7 +191,7 @@ BOOL CreateFont(
  [!code-cpp[NVC_MFCDocView#71](../../mfc/codesnippet/cpp/cfont-class_2.cpp)]  
   
 ##  <a name="createfontindirect"></a>  CFont::CreateFontIndirect  
- 初期化します、`CFont`で指定された特性を持つオブジェクトを[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)構造体。  
+ 初期化します、`CFont`で指定された特性を持つオブジェクトを[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)構造体。  
   
 ```  
 BOOL CreateFontIndirect(const LOGFONT* lpLogFont);
@@ -207,7 +207,7 @@ BOOL CreateFontIndirect(const LOGFONT* lpLogFont);
 ### <a name="remarks"></a>Remarks  
  フォントは、任意のデバイスの現在のフォントとして後から選択できます。  
   
- このフォントにで指定された特性、 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)構造体。 使用して、フォントを選択すると、 [cdc::selectobject](../../mfc/reference/cdc-class.md#selectobject)メンバー関数は、GDI フォントとマッパーは、既存の物理フォントの論理フォントを一致するようにします。 論理フォントを正確に一致するフォント マッパーに失敗した場合は、要求の特性をできるだけ多く一致する特性を持つ別のフォントを提供します。  
+ このフォントにで指定された特性、 [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)構造体。 使用して、フォントを選択すると、 [cdc::selectobject](../../mfc/reference/cdc-class.md#selectobject)メンバー関数は、GDI フォントとマッパーは、既存の物理フォントの論理フォントを一致するようにします。 論理フォントを正確に一致するフォント マッパーに失敗した場合は、要求の特性をできるだけ多く一致する特性を持つ別のフォントを提供します。  
   
  不要になった必要がある場合、`CFont`によって作成されたオブジェクト、`CreateFontIndirect`関数を使用して`CDC::SelectObject`デバイス コンテキストに別のフォントを選択し、削除、`CFont`オブジェクトが不要です。  
   
@@ -256,7 +256,7 @@ BOOL CreatePointFontIndirect(
   
 ### <a name="parameters"></a>パラメーター  
  *lpLogFont*  
- 指す、 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)論理フォントの特性を定義する構造体。 `lfHeight`のメンバー、`LOGFONT`構造は論理ユニットではなく、ポイントの 10 分で測定されます。 (たとえば、設定`lfHeight`を 120 に 12 ポイントのフォントを指定します)。  
+ 指す、 [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)論理フォントの特性を定義する構造体。 `lfHeight`のメンバー、`LOGFONT`構造は論理ユニットではなく、ポイントの 10 分で測定されます。 (たとえば、設定`lfHeight`を 120 に 12 ポイントのフォントを指定します)。  
   
  *pDC*  
  ポインター、 [CDC](../../mfc/reference/cdc-class.md)高さでの変換を使用するオブジェクトを`lfHeight`論理ユニットにします。 NULL の場合は、画面のデバイス コンテキストが、変換に使用します。  
@@ -301,7 +301,7 @@ int GetLogFont(LOGFONT* pLogFont);
   
 ### <a name="parameters"></a>パラメーター  
  *pLogFont*  
- ポインター、 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)フォント情報を受け取る構造体。  
+ ポインター、 [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)フォント情報を受け取る構造体。  
   
 ### <a name="return-value"></a>戻り値  
  関数が成功すると、それ以外の場合 0 0 以外の値。  
@@ -320,9 +320,9 @@ operator HFONT() const;
  アタッチされている Windows GDI フォント オブジェクトのハンドル`CFont`成功。 それ以外の場合に NULL の場合。  
   
 ### <a name="remarks"></a>Remarks  
- この演算子は自動的からの変換に使用されるため`CFont`に[フォントとテキスト](http://msdn.microsoft.com/library/windows/desktop/dd144819)、渡すことができます`CFont`HFONTs を期待する関数へのオブジェクト。  
+ この演算子は自動的からの変換に使用されるため`CFont`に[フォントとテキスト](/windows/desktop/gdi/fonts-and-text)、渡すことができます`CFont`HFONTs を期待する関数へのオブジェクト。  
   
- グラフィック オブジェクトの使用に関する詳細については、次を参照してください。[グラフィック オブジェクト](http://msdn.microsoft.com/library/windows/desktop/dd144962)Windows SDK に含まれています。  
+ グラフィック オブジェクトの使用に関する詳細については、次を参照してください。[グラフィック オブジェクト](/windows/desktop/gdi/graphic-objects)Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#77](../../mfc/codesnippet/cpp/cfont-class_8.cpp)]  

@@ -20,18 +20,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 878f7b31d98a26a76b8466e7a93cd3d165ed145f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6b06fa02420b70538faa70b24137df634420dd8d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583458"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222645"
 ---
 # <a name="creating-pop-up-menus"></a>ショートカット メニューの作成
 
 [ポップアップ メニュー](../mfc/menus-mfc.md) には、頻繁に使用するコマンドが表示されます。 これらは状況依存となっていて、マウス ポインターの場所に応じて表示できます。 アプリケーションでポップアップ メニューを使用には、メニュー自体をビルドし、アプリケーション コードに接続する必要があります。
 
-メニュー リソースを作成したら、アプリケーション コードでメニュー リソースを読み込み、 [TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002) を使用してメニューを表示する必要があります。 ユーザーがメニューの外部をクリックしてポップアップ メニューを閉じるか、コマンドをクリックすると、この関数に戻ります。 ユーザーがコマンドを選択した場合は、そのコマンドのメッセージが、ハンドルが渡されたウィンドウに送信されます。
+メニュー リソースをロードして使用するメニュー リソースを作成すると、アプリケーション コードが必要な[TrackPopupMenu](/windows/desktop/api/winuser/nf-winuser-trackpopupmenu)がメニューを表示します。 ユーザーがメニューの外部をクリックしてポップアップ メニューを閉じるか、コマンドをクリックすると、この関数に戻ります。 ユーザーがコマンドを選択した場合は、そのコマンドのメッセージが、ハンドルが渡されたウィンドウに送信されます。
 
 ### <a name="to-create-a-pop-up-menu"></a>ポップアップ メニューを作成するには
 
