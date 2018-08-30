@@ -42,16 +42,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87b5b42c72f4ea2756358208f85d9c01f7863dba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d3d83c1e86c574f56b08eecdf2c29e7ab20a28b4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400565"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194319"
 ---
 # <a name="fgetchar-fgetwchar"></a>_fgetchar、_fgetwchar
 
-文字を読み取ります**stdin**です。
+文字を読み取ります**stdin**します。
 
 ## <a name="syntax"></a>構文
 
@@ -62,13 +62,13 @@ wint_t _fgetwchar( void );
 
 ## <a name="return-value"></a>戻り値
 
-**_fgetchar**として読み取られた文字を返します、 **int**または戻り値の**EOF**エラーまたはファイルの終わりを示します。 **_ * * * fgetwchar**を返します、として、 [wint_t](../../c-runtime-library/standard-types.md)、ワイド文字を読み取る文字に対応するかを返す**WEOF**エラーまたはファイルの終わりを示します。 両方の関数を使用して**feof**または**ferror**エラーと、ファイルの終端状態を識別します。
+**\_fgetchar**として読み取られた文字を返します、 **int**返しますまたは`EOF`エラーまたはファイルの終わりを示します。 **\_fgetwchar**から制御が戻るとして、 [wint_t](../../c-runtime-library/standard-types.md)、ワイド文字を読み取る文字に対応する値または`WEOF`エラーまたはファイルの終わりを示します。 両方の関数を使用して、 **feof**または**ferror**エラーと、ファイルの終わり条件とを区別します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-これらの関数から 1 つの文字を読み取る**stdin**です。 関数は、次の文字 (定義されている場合) を指すように、関連ファイルのポインターをインクリメントします。 ストリームがファイルの末尾にある場合、ストリームのファイルの末尾を示すインジケーターが設定されます。
+これらの関数から単一の文字を読み取る**stdin**します。 関数は、次の文字 (定義されている場合) を指すように、関連ファイルのポインターをインクリメントします。 ストリームがファイルの末尾にある場合、ストリームのファイルの末尾を示すインジケーターが設定されます。
 
-**_fgetchar**は等価`fgetc( stdin )`です。 等価も**getchar**関数とマクロではなく、関数としてのみ実装されているが、します。 **_fgetwchar**のワイド文字バージョンは、 **_fgetchar**です。
+**_fgetchar**と等価`fgetc( stdin )`します。 等しくも**getchar**が、関数とマクロではなく関数としてのみを実装します。 **_fgetwchar**のワイド文字バージョンは、 **_fgetchar**します。
 
 これらの関数は ANSI 規格と互換性がありません。
 
@@ -85,7 +85,7 @@ wint_t _fgetwchar( void );
 |**_fgetchar**|\<stdio.h>|
 |**_fgetwchar**|\<stdio.h> または \<wchar.h>|
 
-コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソールに関連付けられている標準ストリームのハンドル —**stdin**、 **stdout**、および**stderr**— C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります. 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+ユニバーサル Windows プラットフォーム (UWP) アプリでは、コンソールがサポートされていません。 コンソールに関連付けられている標準ストリームのハンドル、**stdin**、 **stdout**、および**stderr**-C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります. 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 611fecad210b9297b6c7cd16c83dbd0c6c3e41a8
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 68283d8dc0e8b2152b28a2fe2990ddc22fafa6d3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886168"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196398"
 ---
 # <a name="ustringorid-class"></a>_U_STRINGorID クラス
 この引数のアダプター クラスは、リソース名 (LPCTSTRs) またはリソース Id、ID を持つときはマクロを使用して文字列に変換する、呼び出し元を必要とせず、関数に渡される (ついて) のいずれかを使用できます。  
@@ -53,11 +53,11 @@ class _U_STRINGorID
 |[_U_STRINGorID::m_lpstr](#_u_stringorid__m_lpstr)|リソースの識別子です。|  
   
 ## <a name="remarks"></a>Remarks  
- このクラスがなどには、Windows リソース管理 API のラッパーを実装するために設計された、 [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042)、 [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072)、および[LoadMenu](http://msdn.microsoft.com/library/windows/desktop/ms647990)関数で、そのまま使用いずれかのリソースの名前または ID 可能性のある LPCTSTR 引数  
+ このクラスがなどには、Windows リソース管理 API のラッパーを実装するために設計された、 [FindResource](/windows/desktop/api/winbase/nf-winbase-findresourcea)、 [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona)、および[LoadMenu](/windows/desktop/api/winuser/nf-winuser-loadmenua)関数で、そのまま使用いずれかのリソースの名前または ID 可能性のある LPCTSTR 引数  
   
  クラスは、2 つのコンス トラクター オーバー ロードを定義します: LPCTSTR 引数を受け取るいずれかと UINT 引数を受け取る他。 UINT 引数を持つときはマクロと、クラスの 1 つのデータのメンバーに保存された結果を使用して Windows リソース管理機能と互換性のあるリソースの種類に変換[m_lpstr](#_u_stringorid__m_lpstr)します。 LPCTSTR コンス トラクターの引数は、変換せずに直接格納されます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlwin.h  
   
 ##  <a name="_u_stringorid__m_lpstr"></a>  _U_STRINGorID::m_lpstr  

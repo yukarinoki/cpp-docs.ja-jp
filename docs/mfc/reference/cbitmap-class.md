@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dce8ac623337d6b1b1dafbe242a9d13979b81a01
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 4a0c6b9a9f01746788a01b6528a7508db141089e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337017"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195853"
 ---
 # <a name="cbitmap-class"></a>CBitmap クラス
 Windows のグラフィック デバイス インターフェイス (GDI: Graphics Device Interface) のビットマップをカプセル化したもので、ビットマップを操作するためのメンバー関数を提供します。  
@@ -104,7 +104,7 @@ class CBitmap : public CGdiObject
   
  `CBitmap`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="cbitmap"></a>  CBitmap::CBitmap  
@@ -174,7 +174,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ### <a name="remarks"></a>Remarks  
  ディスプレイ デバイスのビットマップを直接選択することはできませんが選択できるメモリ デバイス コンテキストの現在のビットマップとしてを使用して[cdc::selectobject](../../mfc/reference/cdc-class.md#selectobject) を使用して任意の互換性のあるデバイスコンテキストにコピーおよび[Cdc::bitblt](../../mfc/reference/cdc-class.md#bitblt)または[CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt)関数。 (、 [Cdc::patblt](../../mfc/reference/cdc-class.md#patblt)関数は、現在のブラシのビットマップをディスプレイ デバイス コンテキストに直接コピーできます)。  
   
- 場合、`BITMAP`によって示される構造体、 *lpBitmap*を使用してパラメーターが入力されている、`GetObject`関数の場合、ビットマップのビットが指定されていないと、ビットマップは初期化されていません。 ビットマップを初期化するためにアプリケーション関数など、使用できる[cdc::bitblt](../../mfc/reference/cdc-class.md#bitblt)または[SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973)の最初のパラメーターで識別されるビットマップからのビットをコピーする`CGdiObject::GetObject`によって作成されたビットマップ`CreateBitmapIndirect`.  
+ 場合、`BITMAP`によって示される構造体、 *lpBitmap*を使用してパラメーターが入力されている、`GetObject`関数の場合、ビットマップのビットが指定されていないと、ビットマップは初期化されていません。 ビットマップを初期化するためにアプリケーション関数など、使用できる[cdc::bitblt](../../mfc/reference/cdc-class.md#bitblt)または[SetDIBits](/windows/desktop/api/wingdi/nf-wingdi-setdibits)の最初のパラメーターで識別されるビットマップからのビットをコピーする`CGdiObject::GetObject`によって作成されたビットマップ`CreateBitmapIndirect`.  
   
  終了したら、`CBitmap`オブジェクトを作成した`CreateBitmapIndirect`関数、まず、デバイス コンテキスト外のビットマップを選択し、削除、`CBitmap`オブジェクト。  
   
@@ -374,7 +374,7 @@ BOOL LoadMappedBitmap(
 ### <a name="remarks"></a>Remarks  
  既定では、`LoadMappedBitmap`ボタンのグリフでよく使用する色にマップされます。  
   
- マップされたビットマップを作成する方法の詳細については、Windows の関数を参照してください。 [CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562)と[カラーマップ](http://msdn.microsoft.com/library/windows/desktop/bb760448)Windows SDK の構造体。  
+ マップされたビットマップを作成する方法の詳細については、Windows の関数を参照してください。 [CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562)と[カラーマップ](/windows/desktop/api/commctrl/ns-commctrl-_colormap)Windows SDK の構造体。  
   
 ##  <a name="loadoembitmap"></a>  CBitmap::LoadOEMBitmap  
  Windows で使用される定義済みのビットマップを読み込みます。  
@@ -428,7 +428,7 @@ operator HBITMAP() const;
 ### <a name="remarks"></a>Remarks  
  この演算子はキャスト演算子の`HBITMAP`オブジェクト。  
   
- グラフィック オブジェクトの使用に関する詳細については、次を参照してください。[グラフィック オブジェクト](http://msdn.microsoft.com/library/windows/desktop/dd144962)Windows SDK に含まれています。  
+ グラフィック オブジェクトの使用に関する詳細については、次を参照してください。[グラフィック オブジェクト](/windows/desktop/gdi/graphic-objects)Windows SDK に含まれています。  
   
 ##  <a name="setbitmapbits"></a>  CBitmap::SetBitmapBits  
  ビットマップのビットを設定で指定されたビット値に*lpBits*します。  

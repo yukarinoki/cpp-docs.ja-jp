@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f19461b04f98ab06a2c828b0f61fb556f9a7d7d
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 52ded6eb4b6b757934bcdb62c280c6d57e1b171e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209171"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196061"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager クラス
 `CDrawingManager`クラスは、複雑な描画アルゴリズムを実装します。  
@@ -128,7 +128,7 @@ class CDrawingManager : public CObject
  [CObject](../../mfc/reference/cobject-class.md)  
  `CDrawingManager`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdrawmanager.h  
   
 ##  <a name="cdrawingmanager"></a>  CDrawingManager::CDrawingManager  
@@ -169,7 +169,7 @@ static HBITMAP __stdcall CreateBitmap_32(
  このメソッドが成功した場合は、新しく作成された DIB ビットマップを識別するハンドルそれ以外の場合は NULL です。  
   
 ### <a name="remarks"></a>Remarks  
- DIB ビットマップを作成する方法の詳細については、次を参照してください。 [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183491)します。  
+ DIB ビットマップを作成する方法の詳細については、次を参照してください。 [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibitmap)します。  
   
 ##  <a name="drawalpha"></a>  CDrawingManager::DrawAlpha  
  透明または半透明ピクセルのビットマップを表示します。  
@@ -196,7 +196,7 @@ void DrawAlpha(
  元の四角形。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、アルファ ブレンドを実行の 2 つのビットマップ。 アルファ ブレンドの詳細については、次を参照してください。 [AlphaBlend](http://msdn.microsoft.com/library/windows/desktop/dd183351) Windows SDK に含まれています。  
+ このメソッドは、アルファ ブレンドを実行の 2 つのビットマップ。 アルファ ブレンドの詳細については、次を参照してください。 [AlphaBlend](/windows/desktop/api/wingdi/nf-wingdi-alphablend) Windows SDK に含まれています。  
   
 ##  <a name="drawellipse"></a>  CDrawingManager::DrawEllipse  
  指定された塗りつぶしと境界線の色を使用して楕円を描画します。  

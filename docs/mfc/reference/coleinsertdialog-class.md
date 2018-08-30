@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 257573bad0650f7e721c2d584ed8f22ba7b2d31b
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 29e176742295b0e2f40e19c063aae38079ac3537
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026225"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196221"
 ---
 # <a name="coleinsertdialog-class"></a>COleInsertDialog クラス
 OLE の [オブジェクトの挿入] ダイアログ ボックスで使用されます。  
@@ -82,7 +82,7 @@ class COleInsertDialog : public COleDialog
 > [!NOTE]
 >  アプリケーション コンテナーのウィザードで生成されたコードでは、このクラスを使用します。  
   
- 詳細については、次を参照してください。、[使う](http://msdn.microsoft.com/library/windows/desktop/ms691316)Windows SDK の構造体。  
+ 詳細については、次を参照してください。、[使う](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiinsertobjecta)Windows SDK の構造体。  
   
  OLE に固有のダイアログ ボックスの詳細については、記事を参照してください。 [OLE のダイアログ ボックス](../../mfc/dialog-boxes-in-ole.md)します。  
   
@@ -101,7 +101,7 @@ class COleInsertDialog : public COleDialog
   
  `COleInsertDialog`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxodlgs.h  
   
 ##  <a name="coleinsertdialog"></a>  COleInsertDialog::COleInsertDialog  
@@ -184,7 +184,7 @@ INT_PTR
   
 -   ユーザーには、ダイアログ ボックスが取り消された場合は IDCANCEL。  
   
--   IDABORT 場合は、エラーが発生しました。 IDABORT が返される場合、 [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)発生したエラーの種類に関する詳細を取得します。 考えられるエラーの一覧については、次を参照してください。、[使う](http://msdn.microsoft.com/library/windows/desktop/ms694325)Windows SDK 内の関数。  
+-   IDABORT 場合は、エラーが発生しました。 IDABORT が返される場合、 [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)発生したエラーの種類に関する詳細を取得します。 考えられるエラーの一覧については、次を参照してください。、[使う](/windows/desktop/api/oledlg/nf-oledlg-oleuiinsertobjecta)Windows SDK 内の関数。  
   
 ### <a name="remarks"></a>Remarks  
  メンバーを設定して、さまざまなダイアログ ボックス コントロールを初期化する場合、 [m_io](#m_io)構造体を呼び出す前に、これを行う必要があります`DoModal`はダイアログ オブジェクトを構築します。  
@@ -202,7 +202,7 @@ REFCLSID GetClassID() const;
  選択した項目に関連付けられている CLSID を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [CLSID キー](http://msdn.microsoft.com/library/windows/desktop/ms691424) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [CLSID キー](/windows/desktop/com/clsid-key-hklm) Windows SDK に含まれています。  
   
 ##  <a name="getdrawaspect"></a>  COleInsertDialog::GetDrawAspect  
  ユーザーがアイコンとして選択した項目を表示する選択したかどうかを判断するには、この関数を呼び出します。  
@@ -221,7 +221,7 @@ DVASPECT GetDrawAspect() const;
 ### <a name="remarks"></a>Remarks  
  場合にのみ、この関数を呼び出す[DoModal](#domodal) IDOK を返します。  
   
- 描画の側面の詳細については、次を参照してください。 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 内のデータ構造。  
+ 描画の側面の詳細については、次を参照してください。 [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 内のデータ構造。  
   
 ##  <a name="geticonicmetafile"></a>  COleInsertDialog::GetIconicMetafile  
  選択した項目のアイコンの外観を含むメタファイルを識別するハンドルを取得するには、この関数を呼び出します。  
@@ -282,7 +282,7 @@ OLEUIINSERTOBJECT m_io;
 ### <a name="remarks"></a>Remarks  
  この構造体のメンバーは、直接またはメンバー関数のいずれかに変更できます。  
   
- 詳細については、次を参照してください。、[使う](http://msdn.microsoft.com/library/windows/desktop/ms691316)Windows SDK の構造体。  
+ 詳細については、次を参照してください。、[使う](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiinsertobjecta)Windows SDK の構造体。  
   
 ## <a name="see-also"></a>関連項目  
  [MFC サンプルの OCLIENT](../../visual-cpp-samples.md)   

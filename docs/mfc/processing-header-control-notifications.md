@@ -1,5 +1,5 @@
 ---
-title: ヘッダー コントロール通知の処理 |Microsoft ドキュメント
+title: ヘッダー コントロール通知の処理 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,19 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a0fe657089c33679cf8d18f95268a70335804c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 539e7411dcc47be17bb10a5322e30a524679ca8c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348892"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194212"
 ---
 # <a name="processing-header-control-notifications"></a>ヘッダー コントロール通知の処理
-ビューまたはダイアログ クラスで、ウィンドウを使用してプロパティを作成、 [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify)ハンドラー関数のヘッダー コントロールの switch ステートメントを持つ ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) にする通知メッセージ処理 (を参照してください[関数へのメッセージの割り当て](../mfc/reference/mapping-messages-to-functions.md))。 ユーザーがクリックするか、項目との間の区分線をドラッグが、ヘッダー項目をダブルクリックしたときに、親ウィンドウへ通知が送信されます。  
+ビューまたはダイアログ クラスで作成するプロパティ ウィンドウを使用して、 [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify)ハンドラー関数のヘッダー コントロールの switch ステートメントを ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) にする通知メッセージ処理 (を参照してください[関数へのメッセージの割り当て](../mfc/reference/mapping-messages-to-functions.md))。 ユーザーをクリックするか、項目との間の区分線をドラッグが、ヘッダー項目をダブルクリックしたときに、親ウィンドウに通知が送信されます。  
   
- ヘッダー コントロールに関連付けられている通知メッセージに記載されて[ヘッダー コントロールの参照](http://msdn.microsoft.com/library/windows/desktop/bb775239)Windows SDK に含まれています。  
+ ヘッダー コントロールに関連付けられている通知メッセージに記載されて[ヘッダー コントロールのリファレンス](https://msdn.microsoft.com/library/windows/desktop/bb775239)Windows SDK に含まれています。  
   
 ## <a name="see-also"></a>関連項目  
- [CHeaderCtrl の使い方](../mfc/using-cheaderctrl.md)   
+ [Cheaderctrl の使い方](../mfc/using-cheaderctrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 

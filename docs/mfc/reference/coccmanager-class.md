@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cabf1cde43f11997de27b2b2f148482d4f024455
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 627fb8e1ad1341257e3064ee195952c37dd4a481
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852368"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195539"
 ---
 # <a name="coccmanager-class"></a>COccManager クラス
 `COleControlContainer` オブジェクトと `COleControlSite` オブジェクトによって実装されるさまざまなカスタム コントロール サイトを管理します。  
@@ -83,7 +83,7 @@ class COccManager : public CNoTrackObject
   
  `COccManager`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxocc.h  
   
 ##  <a name="createcontainer"></a>  COccManager::CreateContainer  
@@ -334,7 +334,7 @@ static void AFX_CDECL SetDefaultButton(
 ### <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  コントロールには、OLEMISC_ACTSLIKEBUTTON ステータス ビット セットが必要です。 入りますフラグの詳細については、次を参照してください。、[入ります](http://msdn.microsoft.com/library/windows/desktop/ms678497)Windows SDK のトピックです。  
+>  コントロールには、OLEMISC_ACTSLIKEBUTTON ステータス ビット セットが必要です。 入りますフラグの詳細については、次を参照してください。、[入ります](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc)Windows SDK のトピックです。  
   
 ##  <a name="splitdialogtemplate"></a>  COccManager::SplitDialogTemplate  
  コモン ダイアログのコントロールからの ActiveX コントロールを分割するためにフレームワークによって呼び出されます。  
