@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71b7dfca165e76880370368282bdbd7728315cfa
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9884cd8aec09bfcefaa8455457a3a4d3bb5b3d3d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539492"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219232"
 ---
 # <a name="debugbreak"></a>__debugbreak
 **Microsoft 固有の仕様**  
@@ -43,7 +43,7 @@ void __debugbreak();
 |`__debugbreak`|x86、ARM、x64|\<intrin.h>|  
   
 ## <a name="remarks"></a>Remarks  
- `__debugbreak`コンパイラと同様に、組み込み[DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297.aspx)は、移植可能な Win32 手法でブレークポイントを発生します。  
+ `__debugbreak`コンパイラと同様に、組み込み[DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297.aspx)は、移植可能な Win32 手法でブレークポイントを発生します。  
   
 > [!NOTE]
 >  コンパイルするときに **/clr**を含む関数`__debugbreak`は MSIL にコンパイルされます。 `asm int 3` により、関数がネイティブにコンパイルされます。 詳細については、次を参照してください。 [_ _asm](../assembler/inline/asm.md)します。  

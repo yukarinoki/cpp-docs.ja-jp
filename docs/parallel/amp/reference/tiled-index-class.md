@@ -1,5 +1,5 @@
 ---
-title: tiled_index クラス |Microsoft ドキュメント
+title: tiled_index クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -29,15 +29,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd28ab01d0d4180cc518cff230eb7df8261f4940
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 4ed19dd2a1b62a3682d96f8c9a596fa6a4b1b377
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692146"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209434"
 ---
 # <a name="tiledindex-class"></a>tiled_index クラス
-インデックスを提供する[tiled_extent](tiled-extent-class.md)オブジェクト。 このクラスには、ローカル タイルの原点およびグローバル原点を基準として要素にアクセスするためのプロパティがあります。 並べて表示されたスペースの詳細については、次を参照してください。[を使用してタイル](../../../parallel/amp/using-tiles.md)です。  
+インデックスを提供する[tiled_extent](tiled-extent-class.md)オブジェクト。 このクラスには、ローカル タイルの原点およびグローバル原点を基準として要素にアクセスするためのプロパティがあります。 タイル スペースの詳細については、次を参照してください。[を使用してタイル](../../../parallel/amp/using-tiles.md)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -84,18 +84,18 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
   
 |名前|説明|  
 |----------|-----------------|  
-|[get_tile_extent](#tiled_index__get_tile_extent)|返します、[エクステント](extent-class.md)オブジェクトの値を持つ、`tiled_index`テンプレート引数`_Dim0`、 `_Dim1`、および`_Dim2`です。|  
+|[get_tile_extent](#tiled_index__get_tile_extent)|返します、[エクステント](extent-class.md)オブジェクトの値を持つ、`tiled_index`テンプレート引数`_Dim0`、 `_Dim1`、および`_Dim2`します。|  
 
 
   
 ### <a name="public-constants"></a>パブリック定数  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
-|[barrier 定数](#tiled_index__barrier)|ストア、 [tile_barrier](tile-barrier-class.md)のスレッドの現在のタイルのバリアを表すオブジェクト。|  
+|[barrier 定数](#tiled_index__barrier)|ストア、 [tile_barrier](tile-barrier-class.md)スレッドの現在のタイルのバリアを表すオブジェクト。|  
 |||  
-|[グローバル定数](#tiled_index__global)|ストア、[インデックス](index-class.md)グローバルを表すランク 1、2、または 3 インデックス内のオブジェクト、[グリッド](http://msdn.microsoft.com/en-us/f7d1b6a6-586c-4345-b09a-bfc26c492cb0)オブジェクト。|  
-|[ローカル定数](#tiled_index__local)|ストア、`index`オブジェクトの現在のタイルの相対を表すランク 1、2、または 3 のインデックス、 [tiled_extent](tiled-extent-class.md)オブジェクト。|  
+|[グローバル定数](#tiled_index__global)|ストア、[インデックス](index-class.md)グローバル表すランク 1、2、または 3 インデックス内のオブジェクトを[グリッド](https://msdn.microsoft.com/f7d1b6a6-586c-4345-b09a-bfc26c492cb0)オブジェクト。|  
+|[ローカル定数](#tiled_index__local)|ストア、`index`の現在のタイルで、相対パスを表すランク 1、2、または 3 のインデックスのオブジェクトを[tiled_extent](tiled-extent-class.md)オブジェクト。|  
 |[rank 定数](#tiled_index__rank)|`tiled_index` オブジェクトのランクを格納します。|  
 |[tile 定数](#tiled_index__tile)|`index` オブジェクトの現在のタイルの座標を表すランク 1、2、または 3 の `tiled_extent` オブジェクトを格納します。|  
 |[tile_dim0 定数](#tiled_index__tile_dim0)|最上位の次元の長さを格納します。|  
@@ -108,7 +108,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
   
 |名前|説明|  
 |----------|-----------------|  
-|[tile_extent](#tile_extent)|取得、[エクステント](extent-class.md)オブジェクトの値を持つ、`tiled_index`テンプレート引数`tiled_index`テンプレート引数`_Dim0`、 `_Dim1`、および`_Dim2`です。|  
+|[tile_extent](#tile_extent)|取得、[エクステント](extent-class.md)オブジェクトの値を持つ、`tiled_index`テンプレート引数`tiled_index`テンプレート引数`_Dim0`、 `_Dim1`、および`_Dim2`します。|  
 
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
@@ -141,19 +141,19 @@ tiled_index(
   
 #### <a name="parameters"></a>パラメーター  
  `_Global`  
- グローバル[インデックス](index-class.md)の構築された`tiled_index`です。  
+ グローバル[インデックス](index-class.md)の構築された`tiled_index`します。  
   
  `_Local`  
- ローカル[インデックス](index-class.md)構築済みの `tiled_index`  
+ ローカル[インデックス](index-class.md)の構築されました。 `tiled_index`  
   
  `_Tile`  
- タイル[インデックス](index-class.md)構築済みの `tiled_index`  
+ タイル[インデックス](index-class.md)の構築されました。 `tiled_index`  
   
  `_Tile_origin`  
- タイルの原点[インデックス](index-class.md)構築済みの `tiled_index`  
+ タイルの原点[インデックス](index-class.md)の構築されました。 `tiled_index`  
   
  `_Barrier`  
- [Tile_barrier](tile-barrier-class.md)オブジェクトの構築された`tiled_index`です。  
+ [Tile_barrier](tile-barrier-class.md)オブジェクトの構築された`tiled_index`します。  
   
  `_Other`  
  構築された `tile_index` にコピーされる `tiled_index` オブジェクトです。  
@@ -162,13 +162,13 @@ tiled_index(
   
 |||  
 |-|-|  
-|名前|説明|  
+|name|説明|  
 |`tiled_index(const index<rank>& _Global, const index<rank>& _Local, const index<rank>& _Tile, const index<rank>& _Tile_origin, const tile_barrier& _Barrier restrict(amp,cpu);`|グローバル座標のタイルのインデックスおよびローカル座標のタイルの相対位置から `tile_index` クラスの新しいインスタンスを初期化します。 `_Global` パラメーターおよび `_Tile_origin` パラメーターが計算されます。|  
 |`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|指定した `tile_index` オブジェクトをコピーして、`tiled_index` クラスの新しいインスタンスを初期化します。|  
 
 
 ## <a name="tiled_index__get_tile_extent"></a>  get_tile_extent
-返します、[エクステント](extent-class.md)オブジェクトの値を持つ、`tiled_index`テンプレート引数`_Dim0`、 `_Dim1`、および`_Dim2`です。  
+返します、[エクステント](extent-class.md)オブジェクトの値を持つ、`tiled_index`テンプレート引数`_Dim0`、 `_Dim1`、および`_Dim2`します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -177,10 +177,10 @@ extent<rank> get_tile_extent()restrict(amp,cpu);
 ```  
   
 ## <a name="return-value"></a>戻り値  
- `extent`オブジェクトの値を持つ、`tiled_index`テンプレート引数`_Dim0`、 `_Dim1`、および`_Dim2`です。  
+ `extent`オブジェクトの値を持つ、`tiled_index`テンプレート引数`_Dim0`、 `_Dim1`、および`_Dim2`します。  
 
 ## <a name="tiled_index__barrier"></a>  バリア   
-ストア、 [tile_barrier](tile-barrier-class.md)のスレッドの現在のタイルのバリアを表すオブジェクト。  
+ストア、 [tile_barrier](tile-barrier-class.md)スレッドの現在のタイルのバリアを表すオブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
@@ -198,7 +198,7 @@ const index<rank> global;
 ```  
   
 ## <a name="tiled_index__local"></a>  地元の   
-ストア、[インデックス](index-class.md)オブジェクトの現在のタイルの相対を表すランク 1、2、または 3 のインデックス、 [tiled_extent](tiled-extent-class.md)オブジェクト。  
+ストア、[インデックス](index-class.md)の現在のタイルで、相対パスを表すランク 1、2、または 3 のインデックスのオブジェクトを[tiled_extent](tiled-extent-class.md)オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
@@ -215,8 +215,8 @@ const index<rank> local;
 static const int rank = _Rank;  
 ```  
 
-## <a name="tiled_index__tile"></a>  並べて表示します。   
-ストア、[インデックス](index-class.md)ランク 1、2、または 3 の現在のタイルの座標を表すオブジェクト、 [tiled_extent](tiled-extent-class.md)オブジェクト。  
+## <a name="tiled_index__tile"></a>  タイル   
+ストア、[インデックス](index-class.md)ランク 1、2、または 3 の現在のタイルの座標を表すオブジェクトを[tiled_extent](tiled-extent-class.md)オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
@@ -250,7 +250,7 @@ static const int tile_dim1 = _Dim1;
 static const int tile_dim2 = _Dim2;  
 ```  
 ## <a name="tiled_index__tile_origin"></a>  tile_origin   
-ストア、[インデックス](index-class.md)内で現在のタイルの原点のグローバルを表すランク 1、2、または 3 の座標のオブジェクト、 [tiled_extent](tiled-extent-class.md)オブジェクト。  
+ストア、[インデックス](index-class.md)内で現在のタイルの原点のグローバル表すランク 1、2、または 3 の座標のオブジェクトを[tiled_extent](tiled-extent-class.md)オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
@@ -258,7 +258,7 @@ static const int tile_dim2 = _Dim2;
 const index<rank> tile_origin  
 ```  
 ## <a name="tile_extent"></a>  tile_extent
-  取得、[エクステント](extent-class.md)オブジェクトの値を持つ、`tiled_index`テンプレート引数`tiled_index`テンプレート引数`_Dim0`、 `_Dim1`、および`_Dim2`です。  
+  取得、[エクステント](extent-class.md)オブジェクトの値を持つ、`tiled_index`テンプレート引数`tiled_index`テンプレート引数`_Dim0`、 `_Dim1`、および`_Dim2`します。  
   
 ## <a name="syntax"></a>構文  
   
