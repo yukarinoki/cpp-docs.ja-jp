@@ -203,8 +203,7 @@
 ### [デストラクター](destructors-cpp.md)
 ### [メンバー関数の概要](overview-of-member-functions.md)
 #### [virtual 指定子](virtual-specifier.md)
-#### 
-  [override 指定子](override-specifier.md)
+#### [override 指定子](override-specifier.md)
 #### [final 指定子](final-specifier.md)
 ### [継承](inheritance-cpp.md)
 #### [仮想関数](virtual-functions.md)
