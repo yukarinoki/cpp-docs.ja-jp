@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cbeecff722ba25d28ba38a60d3b577ce108b61d
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: a6eea9b6005498c6c42017731db7ea706af96726
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337357"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216991"
 ---
 # <a name="cmapstringtoob-class"></a>CMapStringToOb クラス
 一意の `CString` オブジェクトを `CObject` へのポインターに割り当てる辞書コレクション クラスです。  
@@ -110,7 +110,7 @@ class CMapStringToOb : public CObject
   
  `CMapStringToOb`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxcoll.h  
   
 ##  <a name="cmapstringtoob"></a>  CMapStringToOb::CMapStringToOb  
@@ -322,8 +322,8 @@ UINT HashKey(LPCTSTR key) const;
   
 |クラス|メンバー関数|  
 |-----------|---------------------|  
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**UINT HashKey (void\***  `key` **) const です。**|  
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**UINT HashKey (void\***  `key` **) const です。**|  
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**UINT HashKey (void** <strong>\*</strong> `key` **) const です。**|  
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**UINT HashKey (void** <strong>\*</strong> `key` **) const です。**|  
 |[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**UINT HashKey (LPCTSTR** `key` **) const です。**|  
 |[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**UINT HashKey (LPCTSTR** `key` **) const です。**|  
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**UINT HashKey (WORD** `key` **) const です。**|  
@@ -410,8 +410,8 @@ BOOL Lookup(
   
 |クラス|メンバー関数|  
 |-----------|---------------------|  
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**BOOL ルックアップ (void\***  `key` **, void\* &**  `rValue` **) const です。**|  
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**BOOL ルックアップ (void\***  `key` **、WORD &** `rValue` **) const です。**|  
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**BOOL ルックアップ (void** <strong>\*</strong> `key` **, void\* &**  `rValue` **) const です。**|  
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**BOOL ルックアップ (void** <strong>\*</strong> `key` **、WORD &** `rValue` **) const です。**|  
 |[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**BOOL ルックアップ (LPCTSTR** `key` **, void\* &**  `rValue` **) const です。**|  
 |[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**BOOL ルックアップ (LPCTSTR** `key` **、CString &** `rValue` **) const です。**|  
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**BOOL ルックアップ (WORD** `key` **、CObject\* &**  `rValue` **) const です。**|  
@@ -470,12 +470,12 @@ CObject*& operator[ ](lpctstr key);
   
 |クラス|メンバー関数|  
 |-----------|---------------------|  
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void\*& operator[](void\*** `key` **\);**|  
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**WORD& operator[](void\*** `key` **\);**|  
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void\*& operator[](lpctstr** `key` **\);**|  
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**CString& operator[](lpctstr** `key` **\);**|  
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**CObject\*& 演算子 (word** `key`  **\);**|  
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void\*& operator[](word** `key` **\);**|  
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|<strong>void\*& 演算子\[] (void \*</strong>  `key`  **\);**|  
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**WORD & 演算子\[] (void** <strong>\*</strong> `key`  **\);**|  
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void\*& 演算子\[] (lpctstr** `key`  **\);**|  
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**CString & 演算子\[] (lpctstr** `key`  **\);**|  
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**CObject\*& 演算子\[] (word** `key`  **\);**|  
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void\*& 演算子\[] (word** `key`  **\);**|  
   
 ### <a name="example"></a>例  
  参照してください[使われて](../../mfc/reference/coblist-class.md#coblist)の一覧については、`CAge`コレクションのすべての例で使用されるクラス。  
@@ -539,8 +539,8 @@ BOOL RemoveKey(LPCTSTR key);
   
 |クラス|メンバー関数|  
 |-----------|---------------------|  
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**ブール値には (void\***  `key` **)。**|  
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**ブール値には (void\***  `key` **)。**|  
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**ブール値には (void** <strong>\*</strong> `key` **)。**|  
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**ブール値には (void** <strong>\*</strong> `key` **)。**|  
 |[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**ブール値には (LPCTSTR** `key` **)。**|  
 |[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**ブール値には (LPCTSTR** `key` **)。**|  
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**ブール値には (WORD** `key` **)。**|  
@@ -584,12 +584,12 @@ void SetAt(
   
 |クラス|メンバー関数|  
 |-----------|---------------------|  
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void SetAt( void\*** `key` **, void\*** `newValue` **);**|  
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**void SetAt( void\*** `key` **, WORD** `newValue` **);**|  
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void SetAt( LPCTSTR** `key` **, void\*** `newValue` **);**|  
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**setat メソッドを無効にする (void** <strong>\*</strong> `key` **, void** <strong>\*</strong> `newValue` **)。**|  
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**setat メソッドを無効にする (void** <strong>\*</strong> `key` **、WORD** `newValue` **)。**|  
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**setat メソッドを void (LPCTSTR** `key` **, void** <strong>\*</strong> `newValue` **)。**|  
 |[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**void SetAt( LPCTSTR** `key` **, LPCTSTR** `newValue` **);**|  
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**setat メソッドを void (WORD** `key` **、CObject\***  `newValue` **)。**|  
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void SetAt( WORD** `key` **, void\*** `newValue` **);**|  
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**setat メソッドを void (WORD** `key` **、CObject** <strong>\*</strong> `newValue` **)。**|  
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**setat メソッドを void (WORD** `key` **, void** <strong>\*</strong> `newValue` **)。**|  
   
 ### <a name="example"></a>例  
  参照してください[使われて](../../mfc/reference/coblist-class.md#coblist)の一覧については、`CAge`コレクションのすべての例で使用されるクラス。  

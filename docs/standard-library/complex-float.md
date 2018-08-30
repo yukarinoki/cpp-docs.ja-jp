@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af6d3ce3beca7d9bb3b14ee9c9373a8505623376
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: bf266e11f975e3ce01e5359c1dac65b46a42435a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954006"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221344"
 ---
 # <a name="complexltfloatgt"></a>complex&lt;float&gt;
 
-型のオブジェクトの順序付きペアを格納するオブジェクトについて説明します **float * * *、* 最初の複素数の値と、2 つ目の実数部を表す虚数部を表します。
+型のオブジェクトの順序付きペアを格納するオブジェクトについて説明します**float**、最初の複素数の値と、2 つ目の実数部を表す虚数部を表します。
 
 ## <a name="syntax"></a>構文
 
@@ -51,11 +51,14 @@ constexpr complex(
 
 ### <a name="parameters"></a>パラメーター
 
-*_RealVal*型の値**float**構築される複素数の実数部。
+*_RealVal*<br/>
+構築される複素数の実数部の **float** 型の値。
 
-*_ImagVal*型の値**float**構築される複素数の虚数部。
+*_ImagVal*<br/>
+構築される複素数の虚数部の **float** 型の値。
 
-*complexNum*型の複素数**二重**または型の**long double**が実数部と虚数部の部分は、型の複素数の初期化に使用される**float**構築されます。
+*complexNum*<br/>
+型の複素数**二重**または型の**long double**が実数部と虚数部の部分は、型の複素数の初期化に使用される**float**構築されます。
 
 ## <a name="return-value"></a>戻り値
 
@@ -122,7 +125,7 @@ Argument of c3 is recovered from c3 using:
 *\
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー**: \<complex>
 

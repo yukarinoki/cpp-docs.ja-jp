@@ -1,5 +1,5 @@
 ---
-title: .FPO |Microsoft ドキュメント
+title: .FPO |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df5185c0dc699764427989b2f46345d90ded1729
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 234ec5bd703a390d1e2ee60e48d99d346d4aad95
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055939"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203114"
 ---
 # <a name="fpo"></a>.FPO
-します。FPO ディレクティブは、.debug' に対する $F セグメントまたはセクションにデバッグ レコードの生成を制御します。  
+します。FPO ディレクティブは、.debug$ セグメントまたはセクションをデバッグ レコードの生成を制御します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -48,22 +48,22 @@ cbFrame
   
 #### <a name="parameters"></a>パラメーター  
  `cdwLocals`  
- ローカル変数、符号なし 32 ビット値の数です。  
+ ローカル変数を符号なし 32 ビット値の数。  
   
  `cdwParams`  
- DWORD、符号なし 16 ビット値では、パラメーターのサイズです。  
+ DWORD を符号なし 16 ビット値でパラメーターのサイズ。  
   
  *cbProlog*  
- 符号なし 8 ビット値、関数プロローグ コードのバイト数。  
+ 符号なし 8 ビット値を関数プロローグ コードのバイト数。  
   
  `cbRegs`  
- 保存されたレジスタを番号します。  
+ 保存されたレジスタの数。  
   
  `fUseBP`  
- EBP レジスタが割り当てられているかどうかを示します。 0 または 1 です。  
+ EBP レジスタが割り当てられているかどうかを示します。 0 または 1。  
   
  *cbFrame*  
- フレームの種類を示します。  参照してください[FPO_DATA](http://msdn.microsoft.com/library/windows/desktop/ms679352)詳細についてはします。  
+ フレームの種類を示します。  参照してください[FPO_DATA](/windows/desktop/api/winnt/ns-winnt-_fpo_data)詳細についてはします。  
   
 ## <a name="see-also"></a>関連項目  
  [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1acc2d5918bea040e1f004e8a1d11ceee3146f89
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 61601baca7a91d76f473281184c335cc5277f815
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848620"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201855"
 ---
 # <a name="crebar-class"></a>CReBar クラス
 Rebar コントロールのレイアウト、永続性、および状態に関する情報を提供するコントロール バーです。  
@@ -72,7 +72,7 @@ class CReBar : public CControlBar
   
  `CReBar`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxext.h  
   
 ##  <a name="addbar"></a>  CReBar::AddBar  
@@ -105,7 +105,7 @@ BOOL AddBar(
  ポインター、 `CBitmap` rebar の背景に表示するオブジェクト。 既定では NULL です。  
   
  *dwStyle*  
- Rebar に適用するスタイルを含む DWORD。 参照してください、`fStyle`関数の説明で、Win32 構造[REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393)バンド スタイルの完全な一覧についてはします。  
+ Rebar に適用するスタイルを含む DWORD。 参照してください、`fStyle`関数の説明で、Win32 構造[REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa)バンド スタイルの完全な一覧についてはします。  
   
  *clrFore*  
  Rebar の前景色を表す COLORREF 値。  
@@ -135,7 +135,7 @@ virtual BOOL Create(
  ポインター、`CWnd`ステータス バーの親である Windows ウィンドウを持つオブジェクト。 通常、フレーム ウィンドウです。  
   
  *ツール バー*  
- Rebar コントロールのスタイル。 既定では、RBS_BANDBORDERS rebar コントロール内の隣接するバンドを分離する細い線を表示します。 参照してください[Rebar コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb774377)スタイルの一覧については、Windows SDK に含まれています。  
+ Rebar コントロールのスタイル。 既定では、RBS_BANDBORDERS rebar コントロール内の隣接するバンドを分離する細い線を表示します。 参照してください[Rebar コントロールのスタイル](/windows/desktop/Controls/rebar-control-styles)スタイルの一覧については、Windows SDK に含まれています。  
   
  *dwStyle*  
  Rebar のウィンドウ スタイル。  

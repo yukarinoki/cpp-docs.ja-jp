@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4076 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4076 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cfa28469e099dbf2b6bd43213073c304d0b2894
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 928b0a78c09773e334c1a291877b74304dab66ec
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275474"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198479"
 ---
 # <a name="compiler-warning-level-1-c4076"></a>コンパイラの警告 (レベル 1) C4076
-'typemod' : 'typename' 型とは使用できません  
-  
- 型修飾子は、 **signed** か `unsigned`かにかかわらず、整数以外の型とは使用できません。 ***typemod*** は無視されます。  
+
+> '*型修飾子*': 型を使用することはできません'*typename*'
+
+## <a name="remarks"></a>Remarks
+
+型修飾子、かどうかは**署名**または**符号なし**、整数以外の型では使用できません。 *型修飾子*は無視されます。
   
 ## <a name="example"></a>例  
- 次の例では C4076 が生成されます。  
-  
-```  
+
+次の例は C4076 が生成されます。これを修正するには、削除、**符号なし**型修飾子。
+
+```cpp
 // C4076.cpp  
 // compile with: /W1 /LD  
 unsigned double x;   // C4076  

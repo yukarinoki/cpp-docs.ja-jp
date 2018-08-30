@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 132936805d948257f8d6579f0f840aaf2fd15a0d
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 60fb1c219068cc0c59f908688ea5c471946458ad
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849659"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204142"
 ---
 # <a name="cpen-class"></a>CPen クラス
 Windows のグラフィック デバイス インターフェイス (GDI) のペンをカプセル化したものです。  
@@ -57,10 +57,10 @@ class CPen : public CGdiObject
 |名前|説明|  
 |----------|-----------------|  
 |[CPen::CreatePen](#createpen)|指定したスタイル、幅、およびブラシ属性の論理表面的なまたは幾何学的ペンを作成しにアタッチします、`CPen`オブジェクト。|  
-|[CPen::CreatePenIndirect](#createpenindirect)|スタイル、幅、および色でペンを作成、 [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041)構造体、およびにアタッチします、`CPen`オブジェクト。|  
+|[CPen::CreatePenIndirect](#createpenindirect)|スタイル、幅、および色でペンを作成、 [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen)構造体、およびにアタッチします、`CPen`オブジェクト。|  
 |[CPen::FromHandle](#fromhandle)|ポインターを返します、 `CPen` Windows HPEN が指定されるとします。|  
-|[CPen::GetExtLogPen](#getextlogpen)|取得、[保持](http://msdn.microsoft.com/library/windows/desktop/dd162711)構造を基になります。|  
-|[CPen::GetLogPen](#getlogpen)|取得、 [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041)構造を基になります。|  
+|[CPen::GetExtLogPen](#getextlogpen)|取得、[保持](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen)構造を基になります。|  
+|[CPen::GetLogPen](#getlogpen)|取得、 [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen)構造を基になります。|  
   
 ### <a name="public-operators"></a>パブリック演算子  
   
@@ -78,7 +78,7 @@ class CPen : public CGdiObject
   
  `CPen`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="cpen"></a>  CPen::CPen  
@@ -144,7 +144,7 @@ CPen(
   
 - 斜め PS_JOIN_BEVEL を結合します。  
   
-- PS_JOIN_MITER 結合はマイターによって設定された現在の制限内にあるときに、 [SetMiterLimit](http://msdn.microsoft.com/library/windows/desktop/dd145076)関数。 結合では、この制限を超えている場合は斜めです。  
+- PS_JOIN_MITER 結合はマイターによって設定された現在の制限内にあるときに、 [SetMiterLimit](/windows/desktop/api/wingdi/nf-wingdi-setmiterlimit)関数。 結合では、この制限を超えている場合は斜めです。  
   
 - PS_JOIN_ROUND 結合は、round です。  
   
@@ -208,7 +208,7 @@ BOOL CreatePen(
  ペンの RGB 色が含まれています。  
   
  *終了*  
- 指す、 [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)構造体。 場合*nPenStyle* PS_COSMETIC には、`lbColor`のメンバー、`LOGBRUSH`構造体は、ペンの色を指定し、 *lbStyle*のメンバー、`LOGBRUSH`うちに構造体を設定する必要があります実線。 NPenStyle が PS_GEOMETRIC の場合は、ペンのブラシ属性を指定するすべてのメンバーを使用する必要があります。  
+ 指す、 [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush)構造体。 場合*nPenStyle* PS_COSMETIC には、`lbColor`のメンバー、`LOGBRUSH`構造体は、ペンの色を指定し、 *lbStyle*のメンバー、`LOGBRUSH`うちに構造体を設定する必要があります実線。 NPenStyle が PS_GEOMETRIC の場合は、ペンのブラシ属性を指定するすべてのメンバーを使用する必要があります。  
   
  *nStyleCount*  
  ダブルワード単位の長さを指定します、 *lpStyle*配列。 この値は場合は 0 である必要があります*nPenStyle* PS_USERSTYLE ではありません。  
@@ -290,7 +290,7 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
   
 ### <a name="parameters"></a>パラメーター  
  *pLogPen*  
- 指す、[保持](http://msdn.microsoft.com/library/windows/desktop/dd162711)ペンについての情報を含む構造体。  
+ 指す、[保持](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen)ペンについての情報を含む構造体。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -300,13 +300,13 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
   
  ペンの属性については、Windows SDK の次のトピックを参照してください。  
   
-- [Getobject メソッド](http://msdn.microsoft.com/library/windows/desktop/dd144904)  
+- [GetObject](/windows/desktop/api/wingdi/nf-wingdi-getobject)  
   
-- [保持](http://msdn.microsoft.com/library/windows/desktop/dd162711)  
+- [保持](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen)  
   
-- [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041)  
+- [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen)  
   
-- [構造体](http://msdn.microsoft.com/library/windows/desktop/dd162705)  
+- [構造体](/windows/desktop/api/wingdi/nf-wingdi-extcreatepen)  
   
 ### <a name="example"></a>例  
  次のコード例は、呼び出し元を示します`GetExtLogPen`ペンの属性を取得し、同じ色を持つ新しい、表面的なペンを作成します。  
@@ -322,7 +322,7 @@ int GetLogPen(LOGPEN* pLogPen);
   
 ### <a name="parameters"></a>パラメーター  
  *pLogPen*  
- 指す、 [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041)ペンについての情報を格納する構造体。  
+ 指す、 [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen)ペンについての情報を格納する構造体。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -334,9 +334,9 @@ int GetLogPen(LOGPEN* pLogPen);
   
  ペンの属性については、Windows SDK の次のトピックを参照してください。  
   
-- [Getobject メソッド](http://msdn.microsoft.com/library/windows/desktop/dd144904)  
+- [GetObject](/windows/desktop/api/wingdi/nf-wingdi-getobject)  
   
-- [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041)  
+- [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen)  
   
 ### <a name="example"></a>例  
  次のコード例は、呼び出し元を示します`GetLogPen`ペンの文字を取得し、同じ色を持つ新しい solid のペンを作成します。  
@@ -356,7 +356,7 @@ operator HPEN() const;
 ### <a name="remarks"></a>Remarks  
  この演算子は、キャスト演算子です。  
   
- グラフィック オブジェクトの使用に関する詳細については、記事を参照してください。[グラフィック オブジェクト](http://msdn.microsoft.com/library/windows/desktop/dd144962)Windows SDK に含まれています。  
+ グラフィック オブジェクトの使用に関する詳細については、記事を参照してください。[グラフィック オブジェクト](/windows/desktop/gdi/graphic-objects)Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#104](../../mfc/codesnippet/cpp/cpen-class_7.cpp)]  

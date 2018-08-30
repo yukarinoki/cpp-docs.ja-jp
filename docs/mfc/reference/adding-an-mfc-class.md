@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b09ed632f22ec78e6b2fd8d5bf0a64cec1512ba8
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: c865fdce61af5b5bbce6e8b8b8658946ffbf5e48
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028123"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204300"
 ---
 # <a name="adding-an-mfc-class"></a>MFC クラスの追加
-プロジェクトに Microsoft Foundation Class (MFC) ライブラリのクラスから派生したクラスを追加するには、使用、**クラスの追加**で使用できるコマンド[クラス ビュー](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)します。 新しいクラスの名前を指定、基本クラスを選択し、それが関連付けられている (該当する場合) ダイアログ ボックスの ID を選択します。 コード ウィザードでは、ヘッダー ファイルと実装ファイルを作成し、プロジェクトに追加します。  
+プロジェクトに Microsoft Foundation Class (MFC) ライブラリのクラスから派生したクラスを追加するには、使用、**クラスの追加**で使用できるコマンド[クラス ビュー](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)します。 新しいクラスの名前を指定、基本クラスを選択し、それが関連付けられている (該当する場合) ダイアログ ボックスの ID を選択します。 コード ウィザードでは、ヘッダー ファイルと実装ファイルを作成し、プロジェクトに追加します。  
   
 > [!NOTE]
 >  場合、MFC クラスを ATL COM アプリケーションに追加することができますを最初に[MFC サポートで、アプリケーションを作成する](../../atl/reference/mfc-support-in-atl-projects.md)します。 MFC をサポートする Win32 プロジェクトに MFC クラスを追加することもできます。  

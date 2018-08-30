@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b775b14cb2f6b0f87bca1c81938c1a4c05c1304
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2c539feaac9cac5bca3a41868cc03379a63bf6bb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335670"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204360"
 ---
 # <a name="rgndata-structure"></a>RGNDATA 構造体
 `RGNDATA`構造には、ヘッダーとリージョンを構成する四角形の配列が含まれています。 これらの四角形、並べ替えられた上部から下、左から右は重複しません。  
@@ -37,12 +37,12 @@ typedef struct _RGNDATA { /* rgnd */
   
 #### <a name="parameters"></a>パラメーター  
  *rdh*  
- 指定します、 [RGNDATAHEADER](http://msdn.microsoft.com/library/windows/desktop/dd162941)構造体。 (この構造体の詳細については、Windows SDK を参照してください)。この構造体のメンバーでは、リージョン (かどうかは四角形または台形)、領域、四角形構造体を格納しているバッファーのサイズを構成する四角形の数の種類を指定しにします。  
+ 指定します、 [RGNDATAHEADER](/windows/desktop/api/wingdi/ns-wingdi-_rgndataheader)構造体。 (この構造体の詳細については、Windows SDK を参照してください)。この構造体のメンバーでは、リージョン (かどうかは四角形または台形)、領域、四角形構造体を格納しているバッファーのサイズを構成する四角形の数の種類を指定しにします。  
   
  *Buffer*  
  含む、任意のサイズのバッファーを指定します、 [RECT](../../mfc/reference/rect-structure1.md)リージョンを構成します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** wingdi.h  
   
 ## <a name="see-also"></a>関連項目  

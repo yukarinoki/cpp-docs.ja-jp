@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c15dc3dc2b4c1fdf549ec90ae6d782b5f8a72509
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 928e2845321ad12a92e4ba3f42838b3f468dce70
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853813"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215516"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>CMFCToolBarEditBoxButton クラス
 編集コントロールを含むツール バー ボタン ( [CEdit クラス](../../mfc/reference/cedit-class.md))。  
@@ -105,7 +105,7 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
 |`CMFCToolBarEditBoxButton::GetThisClass`|ポインターを取得する、framework によって使用される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|  
 |[CMFCToolBarEditBoxButton::HaveHotBorder](#havehotborder)|ユーザーがボタンをクリックすると、ボタンの境界線が表示されるかどうかを判断します。 (上書き[CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder))。|  
 |[CMFCToolBarEditBoxButton::IsFlatMode](#isflatmode)|エディット ボックス ボタンのフラット スタイルかどうかを判断します。|  
-|[CMFCToolBarEditBoxButton::NotifyCommand](#notifycommand)|ボタンを処理するかどうかを指定します、 [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)メッセージ。 (上書き[CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand))。|  
+|[CMFCToolBarEditBoxButton::NotifyCommand](#notifycommand)|ボタンを処理するかどうかを指定します、 [WM_COMMAND](/windows/desktop/menurc/wm-command)メッセージ。 (上書き[CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand))。|  
 |[CMFCToolBarEditBoxButton::OnAddToCustomizePage](#onaddtocustomizepage)|ボタンが追加されたときに、フレームワークによって呼び出されます、**カスタマイズ** ダイアログ ボックス。 (上書き[CMFCToolBarButton::OnAddToCustomizePage](../../mfc/reference/cmfctoolbarbutton-class.md#onaddtocustomizepage))。|  
 |`CMFCToolBarEditBoxButton::OnCalculateSize`|指定したデバイス コンテキストおよびドッキング状態のボタンのサイズを計算するためにフレームワークによって呼び出されます。 (上書き[CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize))。|  
 |[CMFCToolBarEditBoxButton::OnChangeParentWnd](#onchangeparentwnd)|新しいツールバーにボタンが挿入されたときに、フレームワークによって呼び出されます。 (上書き[CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd))。|  
@@ -149,7 +149,7 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
   
  `CMFCToolBarEditBoxButton` 
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxtoolbareditboxbutton.h  
   
 ##  <a name="canbestretched"></a>  CMFCToolBarEditBoxButton::CanBeStretched  
@@ -361,7 +361,7 @@ static BOOL __stdcall IsFlatMode();
  既定では、エディット ボックス ボタンはフラット スタイルがあります。 使用して、 [CMFCToolBarEditBoxButton::SetFlatMode](#setflatmode)アプリケーションのフラット スタイルの外観を変更するメソッド。  
   
 ##  <a name="notifycommand"></a>  CMFCToolBarEditBoxButton::NotifyCommand  
- ボタンを処理するかどうかを指定します、 [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)メッセージ。  
+ ボタンを処理するかどうかを指定します、 [WM_COMMAND](/windows/desktop/menurc/wm-command)メッセージ。  
   
 ```  
 virtual BOOL NotifyCommand(int iNotifyCode);
@@ -375,9 +375,9 @@ virtual BOOL NotifyCommand(int iNotifyCode);
  TRUE の場合、ボタンの処理、WM_COMMAND メッセージ、または FALSE を示す親ツールバーで、メッセージを処理する必要があります。  
   
 ### <a name="remarks"></a>Remarks  
- 送信しようとしてある場合に、フレームワークはこのメソッドを呼び出して、 [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)メッセージを親ウィンドウ。  
+ 送信しようとしてある場合に、フレームワークはこのメソッドを呼び出して、 [WM_COMMAND](/windows/desktop/menurc/wm-command)メッセージを親ウィンドウ。  
   
- このメソッドが基底クラスの実装を拡張 ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)) 処理することによって、 [EN_UPDATE](http://msdn.microsoft.com/library/windows/desktop/bb761687)通知します。 このオブジェクトと同じコマンド ID を持つ各編集ボックスのテキスト ラベルをこのオブジェクトのテキスト ラベルを設定します。  
+ このメソッドが基底クラスの実装を拡張 ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)) 処理することによって、 [EN_UPDATE](/windows/desktop/Controls/en-update)通知します。 このオブジェクトと同じコマンド ID を持つ各編集ボックスのテキスト ラベルをこのオブジェクトのテキスト ラベルを設定します。  
   
 ##  <a name="onaddtocustomizepage"></a>  CMFCToolBarEditBoxButton::OnAddToCustomizePage  
  ボタンが追加されたときに、フレームワークによって呼び出されます、**カスタマイズ** ダイアログ ボックス。  

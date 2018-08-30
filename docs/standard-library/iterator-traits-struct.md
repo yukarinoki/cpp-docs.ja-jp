@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0b4221e32b6e85df0b559b1d6d4ecda381d8e3d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4188c099e676ba58b0194953110fc2e62e8aced8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959639"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204920"
 ---
 # <a name="iteratortraits-struct"></a>iterator_traits 構造体
 
@@ -57,7 +57,7 @@ struct iterator_traits {
 
 - `reference`: のシノニム`Iterator::reference`します。
 
-部分的特殊化によって、型 **Type \*** または const **Type \*** のオブジェクト ポインターに関連付けられている重要な型が決まります。
+部分的な特殊化は、型のオブジェクト ポインターに関連付けられている重要な型を判断する**型** <strong>\*</strong>または**const 型** <strong>\*</strong>.
 
 この実装では、部分的特殊化を利用しないいくつかのテンプレート関数を利用することもできます。
 
@@ -126,7 +126,7 @@ struct std::bidirectional_iterator_tag
 *\
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<iterator>
 

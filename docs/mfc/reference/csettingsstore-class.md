@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48bc0f76ce5b8b3c1bafe3fcd0d6d793a217ae63
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1731c32506ec0e9c4c392ff9429e28e5b71b3c7c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849696"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221133"
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 Windows API 関数をラップし、レジストリへのアクセスに使用するオブジェクト指向インターフェイスを提供します。  
@@ -81,7 +81,7 @@ class CSettingsStore : public CObject
   
  `CSettingsStore`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxsettingsstore.h  
   
 ##  <a name="close"></a>  CSettingsStore::Close  
@@ -112,8 +112,7 @@ virtual BOOL CreateKey(LPCTSTR pszPath);
  `CreateKey` 使用して`m_hKey`レジストリの照会のルートとして。 検索*pszPath*のサブキーとして`m_hKey`します。 キーが存在しない場合`CreateKey`によって作成されます。 それ以外の場合、キーを開きます。 `CreateKey` 設定し`m_hKey`作成または開かれたキーにします。  
   
 ##  <a name="csettingsstore"></a>  CSettingsStore::CSettingsStore  
- 
-          `CSettngsStore` オブジェクトを作成します。  
+ `CSettngsStore` オブジェクトを作成します。  
   
 ```  
 CSettingsStore(
@@ -131,7 +130,7 @@ CSettingsStore(
 ### <a name="remarks"></a>Remarks  
  場合*bAdmin*を TRUE に設定されている、`m_hKey`にメンバー変数が設定されている**HKEY_LOCAL_MACHINE**します。 設定した場合*bAdmin*を FALSE に`m_hKey`に設定されている**HKEY_CURRENT_USER**します。  
   
- セキュリティのアクセス権は異なります、 *bReadOnly*パラメーター。 場合*bReadonly* false で、セキュリティのアクセスに設定する**KEY_ALL_ACCESS**します。 場合*bReadyOnly*が true の場合、アクセスのセキュリティの組み合わせに設定されます**KEY_QUERY_VALUE、KEY_NOTIFY**と**KEY_ENUMERATE_SUB_KEYS**します。 レジストリとセキュリティのアクセスの詳細については、次を参照してください。[レジストリ キーのセキュリティとアクセス権](http://msdn.microsoft.com/library/windows/desktop/ms724878)します。  
+ セキュリティのアクセス権は異なります、 *bReadOnly*パラメーター。 場合*bReadonly* false で、セキュリティのアクセスに設定する**KEY_ALL_ACCESS**します。 場合*bReadyOnly*が true の場合、アクセスのセキュリティの組み合わせに設定されます**KEY_QUERY_VALUE、KEY_NOTIFY**と**KEY_ENUMERATE_SUB_KEYS**します。 レジストリとセキュリティのアクセスの詳細については、次を参照してください。[レジストリ キーのセキュリティとアクセス権](/windows/desktop/SysInfo/registry-key-security-and-access-rights)します。  
   
  デストラクター`CSettingsStore`解放`m_hKey`自動的にします。  
   

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dbaa4631e50b14131418b902dd008e74060dbf6
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 94532b40bb44094290eab29a2b8a1f6095a225c5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881932"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221102"
 ---
 # <a name="ccomallocator-class"></a>CComAllocator クラス
 このクラスは、COM メモリのルーチンを使用してメモリを管理するためのメソッドを提供します。  
@@ -49,7 +49,7 @@ class CComAllocator
 ## <a name="remarks"></a>Remarks  
  このクラスによって使用されます[CComHeapPtr](../../atl/reference/ccomheapptr-class.md) COM メモリ割り当てルーチンを提供します。 対応するクラス、 [CCRTAllocator](../../atl/reference/ccrtallocator-class.md)、CRT ルーチンを使用して同じメソッドを提供します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlbase.h  
   
 ##  <a name="allocate"></a>  CComAllocator::Allocate  
@@ -67,7 +67,7 @@ static void* Allocate(size_t nBytes) throw();
  メモリが不足している場合、割り当てられた領域に void ポインターを返すか、NULL を返します。  
   
 ### <a name="remarks"></a>Remarks  
- メモリを割り当てます。 参照してください[CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727)の詳細。  
+ メモリを割り当てます。 参照してください[CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc)の詳細。  
   
 ##  <a name="free"></a>  CComAllocator::Free  
  割り当てられたメモリを解放するため、この静的関数を呼び出します。  
@@ -81,7 +81,7 @@ static void Free(void* p) throw();
  割り当てられたメモリへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
- 割り当てられたメモリを解放します。 参照してください[CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722)の詳細。  
+ 割り当てられたメモリを解放します。 参照してください[CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree)の詳細。  
   
 ##  <a name="reallocate"></a>  CComAllocator::Reallocate  
  メモリを再割り当てする場合は、この静的関数を呼び出します。  
@@ -101,7 +101,7 @@ static void* Reallocate(void* p, size_t nBytes) throw();
  メモリ不足がある場合、割り当てられた領域に void ポインターを返します  
   
 ### <a name="remarks"></a>Remarks  
- 割り当てられたメモリの量を変更します。 参照してください[CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280)の詳細。  
+ 割り当てられたメモリの量を変更します。 参照してください[CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc)の詳細。  
   
 ## <a name="see-also"></a>関連項目  
  [CComHeapPtr クラス](../../atl/reference/ccomheapptr-class.md)   

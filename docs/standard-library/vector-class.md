@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10c2f3897f7fb1876ac684e2e6c77cc47f6f67ee
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: d60d47757bfcf1564d81dcb58c0727b1ca56b3ce
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42539237"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199496"
 ---
 # <a name="vector-class"></a>vector クラス
 
@@ -120,7 +120,7 @@ class vector
  ベクターに格納される要素のデータ型。
 
 *アロケーター*  
- メモリのベクターの割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能、既定値は **アロケーター * * *\<型 >。*
+ メモリのベクターの割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値は `allocator<Type>` です。
 
 ## <a name="remarks"></a>Remarks
 
@@ -1561,7 +1561,8 @@ void push_back(T&& Val);
 
 ### <a name="parameters"></a>パラメーター
 
-*Val*ベクターの末尾に追加する要素に代入する値。
+*val*<br/>
+ ベクトルの末尾に追加する要素に割り当てる値。
 
 ### <a name="example"></a>例
 

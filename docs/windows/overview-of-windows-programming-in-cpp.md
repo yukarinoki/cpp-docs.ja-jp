@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b66d6d3a7da6c9e3084ce2ef6fa18922e015a459
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 59c0a9701c1714e1d96829a28144c921e5c00e11
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604280"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206718"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>C++ でプログラミングする Windows の概要
 
@@ -58,7 +58,7 @@ UWP の詳細については一般に、表示[ユニバーサル Windows プラ
 
 ##  <a name="BK_Native"></a> デスクトップおよびサーバー アプリケーション
 
-デスクトップの Windows クライアント アプリケーションを記述するための基礎を習得するには、「 [Developing Windows Applications in C++](http://msdn.microsoft.com/vstudio//hh304489) 」 (C++ での Windows アプリケーションの開発) および「 [Windows C++ プログラミングの概要](http://msdn.microsoft.com/library/windows/desktop/ff381398\(v=vs.85\).aspx)」を参照してください。
+デスクトップの Windows クライアント アプリケーションの作成の基本については、次を参照してください。 [C++ での Windows アプリケーションの開発](https://msdn.microsoft.com/vstudio//hh304489)と[Windows c プログラミングの概要](https://msdn.microsoft.com/library/windows/desktop/ff381398\(v=vs.85\).aspx)します。
 
 Windows 10 では、さまざまな種類のデスクトップ プログラムを作成するのに Visual C を使用できます。
 

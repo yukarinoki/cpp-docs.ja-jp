@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d58fc816bea6672309e60a09528b0727c64c6fd
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 866d556c06cc7f627c2f5108384704b737eb0330
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880025"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205213"
 ---
 # <a name="ccomclassfactory-class"></a>CComClassFactory クラス
-このクラスは、実装、 [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)インターフェイス。  
+このクラスは、実装、 [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)インターフェイス。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,7 +47,7 @@ class CComClassFactory
 |[CComClassFactory::LockServer](#lockserver)|メモリ内のクラス ファクトリをロックします。|  
   
 ## <a name="remarks"></a>Remarks  
- `CComClassFactory` 実装して、 [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)インターフェイスより迅速に作成する新しいオブジェクトを許可するメモリ内のクラス ファクトリをロックするほか、CLSID が特定のオブジェクトを作成するためのメソッドが含まれています。 `IClassFactory` CLSID を割り当てることをシステム レジストリに登録するすべてのクラスを実装する必要があります。  
+ `CComClassFactory` 実装して、 [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)インターフェイスより迅速に作成する新しいオブジェクトを許可するメモリ内のクラス ファクトリをロックするほか、CLSID が特定のオブジェクトを作成するためのメソッドが含まれています。 `IClassFactory` CLSID を割り当てることをシステム レジストリに登録するすべてのクラスを実装する必要があります。  
   
  ATL オブジェクトから派生することによって、クラス ファクトリを取得する通常[CComCoClass](../../atl/reference/ccomcoclass-class.md)します。 このクラスには、マクロが含まれています。 [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)、宣言する`CComClassFactory`既定のクラス ファクトリとして。 この既定の設定を無効にするには、いずれかを指定、 `DECLARE_CLASSFACTORY` *XXX*クラスの定義でマクロ。 たとえば、 [DECLARE_CLASSFACTORY_EX](aggregation-and-class-factory-macros.md#declare_classfactory_ex)マクロは、クラス ファクトリの指定したクラスを使用します。  
   
@@ -63,7 +63,7 @@ class CComClassFactory
   
 - [DECLARE_CLASSFACTORY_SINGLETON](aggregation-and-class-factory-macros.md#declare_classfactory_singleton)使用[CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md)、1 つを構築する[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)オブジェクト。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlcom.h  
   
 ##  <a name="createinstance"></a>  CComClassFactory::CreateInstance  

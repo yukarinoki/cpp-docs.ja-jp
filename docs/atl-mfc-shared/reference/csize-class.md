@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0494b22d3166ebfd75a6aeaceba839f80b84bc1
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 9a74b7d759cd0ed7f576276f4c7948a07e161892
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884406"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220742"
 ---
 # <a name="csize-class"></a>CSize クラス
-Windows の [SIZE](http://msdn.microsoft.com/library/windows/desktop/dd145106) 構造体と同様に、相対座標や位置を実装します。  
+Windows のような[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)構造体は、相対座標や位置を実装します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -69,7 +69,7 @@ class CSize : public tagSIZE
   
  `CSize`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atltypes.h  
   
 ##  <a name="csize"></a>  CSize::CSize  
@@ -91,7 +91,7 @@ CSize( DWORD dwSize) throw();
  セット、`cy`のメンバー、`CSize`します。  
   
  *initSize*  
- [サイズ](http://msdn.microsoft.com/library/windows/desktop/dd145106)構造または`CSize`オブジェクトの初期化に使用される`CSize`します。  
+ [サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)構造または`CSize`オブジェクトの初期化に使用される`CSize`します。  
   
  *initPt*  
  [ポイント](../../mfc/reference/point-structure1.md)構造または`CPoint`オブジェクトの初期化に使用される`CSize`します。  
@@ -165,9 +165,9 @@ CRect operator+(const RECT* lpRect) const throw();
   
 - **演算子 + (** `size` **)** この操作では、2 つ追加します`CSize`値。  
   
-- **演算子 + (** `point` **)** この操作のオフセット (移動)、[ポイント](http://msdn.microsoft.com/library/windows/desktop/dd162805)(または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) この値`CSize`値。 **Cx**と**cy** this のメンバー`CSize`に値を追加、 **x**と**y**のデータ メンバー、**ポイント**値。 バージョンと似ています[CPoint::operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add)を受け取る、[サイズ](http://msdn.microsoft.com/library/windows/desktop/dd145106)パラメーター。  
+- **演算子 + (** `point` **)** この操作のオフセット (移動)、[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)(または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) この値`CSize`値。 **Cx**と**cy** this のメンバー`CSize`に値を追加、 **x**と**y**のデータ メンバー、**ポイント**値。 バージョンと似ています[CPoint::operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add)を受け取る、[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)パラメーター。  
   
-- **演算子 + (** `lpRect` **)** この操作のオフセット (移動)、 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) (または[CRect](../../atl-mfc-shared/reference/crect-class.md)) この値`CSize`値。 **Cx**と**cy** this のメンバー`CSize`に値を追加、**左**、**上部**、**右**、および**下部**のデータ メンバー、`RECT`値。 バージョンと似ています[CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add)を受け取る、[サイズ](http://msdn.microsoft.com/library/windows/desktop/dd145106)パラメーター。  
+- **演算子 + (** `lpRect` **)** この操作のオフセット (移動)、 [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) (または[CRect](../../atl-mfc-shared/reference/crect-class.md)) この値`CSize`値。 **Cx**と**cy** this のメンバー`CSize`に値を追加、**左**、**上部**、**右**、および**下部**のデータ メンバー、`RECT`値。 バージョンと似ています[CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add)を受け取る、[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)パラメーター。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATLMFC_Utilities#102](../../atl-mfc-shared/codesnippet/cpp/csize-class_6.cpp)]  
@@ -187,9 +187,9 @@ CSize operator-() const throw();
   
 - **演算子-(** `size` **)** この操作では、2 つを減算`CSize`値。  
   
-- **演算子-(** `point` **)** この操作のオフセット (移動)、[ポイント](http://msdn.microsoft.com/library/windows/desktop/dd162805)または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)これの加法逆元によって値`CSize`値。 **Cx**と**cy**この`CSize`から値が減算されて、 **x**と**y**のデータ メンバー、**ポイント**値。 バージョンと似ています[CPoint::operator -](../../atl-mfc-shared/reference/cpoint-class.md#operator_-)を受け取る、[サイズ](http://msdn.microsoft.com/library/windows/desktop/dd145106)パラメーター。  
+- **演算子-(** `point` **)** この操作のオフセット (移動)、[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)これの加法逆元によって値`CSize`値。 **Cx**と**cy**この`CSize`から値が減算されて、 **x**と**y**のデータ メンバー、**ポイント**値。 バージョンと似ています[CPoint::operator -](../../atl-mfc-shared/reference/cpoint-class.md#operator_-)を受け取る、[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)パラメーター。  
   
-- **演算子-(** `lpRect` **)** この操作のオフセット (移動)、 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)または[CRect](../../atl-mfc-shared/reference/crect-class.md)これの加法逆元によって値`CSize`値。 **Cx**と**cy** this のメンバー`CSize`から値が減算されて、**左**、**上部**、**右**、および**下部**のデータ メンバー、`RECT`値。 バージョンと似ています[CRect::operator -](../../atl-mfc-shared/reference/crect-class.md#operator_-)を受け取る、[サイズ](http://msdn.microsoft.com/library/windows/desktop/dd145106)パラメーター。  
+- **演算子-(** `lpRect` **)** この操作のオフセット (移動)、 [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)または[CRect](../../atl-mfc-shared/reference/crect-class.md)これの加法逆元によって値`CSize`値。 **Cx**と**cy** this のメンバー`CSize`から値が減算されて、**左**、**上部**、**右**、および**下部**のデータ メンバー、`RECT`値。 バージョンと似ています[CRect::operator -](../../atl-mfc-shared/reference/crect-class.md#operator_-)を受け取る、[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)パラメーター。  
   
 - **演算子-()** この操作はこれの加法逆元を返します`CSize`値。  
   

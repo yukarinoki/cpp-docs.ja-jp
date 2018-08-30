@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc6d39b3f636407e3ae72289b5afe12ed1084a4f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 23aacdfca1dbc958c16223d7d57cec39ef65267b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852511"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221802"
 ---
 # <a name="cricheditdoc-class"></a>CRichEditDoc クラス
 [CRichEditView](../../mfc/reference/cricheditview-class.md)と[CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)MFC のドキュメント ビュー アーキテクチャのコンテキストでリッチ エディット コントロールの機能を提供します。  
@@ -80,7 +80,7 @@ class CRichEditDoc : public COleServerDoc
   
  `CRichEditDoc`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxrich.h  
   
 ##  <a name="createclientitem"></a>  CRichEditDoc::CreateClientItem  
@@ -92,7 +92,7 @@ virtual CRichEditCntrItem* CreateClientItem(REOBJECT* preo = NULL) const = 0;
   
 ### <a name="parameters"></a>パラメーター  
  *preo*  
- ポインター、 [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) OLE 項目を記述する構造体。 新しい`CRichEditCntrItem`この OLE アイテム オブジェクトが構築されます。 場合*preo*が null の場合、新しいクライアントの項目が空です。  
+ ポインター、 [REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject) OLE 項目を記述する構造体。 新しい`CRichEditCntrItem`この OLE アイテム オブジェクトが構築されます。 場合*preo*が null の場合、新しいクライアントの項目が空です。  
   
 ### <a name="return-value"></a>戻り値  
  新しいへのポインター [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)オブジェクトがこのドキュメントに追加されました。  
@@ -100,7 +100,7 @@ virtual CRichEditCntrItem* CreateClientItem(REOBJECT* preo = NULL) const = 0;
 ### <a name="remarks"></a>Remarks  
  この関数では、OLE の初期化は実行されません。  
   
- 詳細については、次を参照してください。、 [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) Windows SDK の構造体。  
+ 詳細については、次を参照してください。、 [REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject) Windows SDK の構造体。  
   
 ##  <a name="getstreamformat"></a>  CRichEditDoc::GetStreamFormat  
  リッチ エディットのコンテンツをストリームのテキスト形式を判断するには、この関数を呼び出します。  

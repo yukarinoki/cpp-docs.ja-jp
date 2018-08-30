@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3da35d2134daa20faf53336902ba6612f4b9904
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 663f8f3921788e64b26a57e95537ab44c757ea17
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612104"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211421"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>チュートリアル: ユーザー インターフェイス スレッドからの処理の除去
 このドキュメントでは、同時実行ランタイムを使用して、ワーカー スレッドに Microsoft Foundation Classes (MFC) アプリケーションでユーザー インターフェイス (UI) スレッドによって実行される作業を移動する方法を示します。 このドキュメントでは、時間のかかる描画操作のパフォーマンスを向上させる方法も示します。  
@@ -40,7 +40,7 @@ ms.locfileid: "42612104"
   
 -   [PPL における取り消し処理](cancellation-in-the-ppl.md)  
   
- また、このチュートリアルを開始する前に、MFC アプリケーションの開発と GDI + の基本を理解することをお勧めします。 MFC の詳細については、次を参照してください。 [MFC Desktop Applications](../../mfc/mfc-desktop-applications.md)します。 GDI + の詳細については、次を参照してください。 [GDI +](https://msdn.microsoft.com/en-us/library/windows/desktop/ms533798)します。  
+ また、このチュートリアルを開始する前に、MFC アプリケーションの開発と GDI + の基本を理解することをお勧めします。 MFC の詳細については、次を参照してください。 [MFC Desktop Applications](../../mfc/mfc-desktop-applications.md)します。 GDI + の詳細については、次を参照してください。 [GDI +](https://msdn.microsoft.com/library/windows/desktop/ms533798)します。  
   
 ##  <a name="top"></a> セクション  
  このチュートリアルは、次のセクションで構成されています。  

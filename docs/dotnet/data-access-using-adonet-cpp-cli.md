@@ -33,12 +33,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 025c6bc072f85a1075abdbd03f3567622c3fa40d
-ms.sourcegitcommit: 27be37ae07ee7b657a54d23ed34438220d977fdc
+ms.openlocfilehash: 3d87d41b97f587f2546df246044eaf8df3bba373
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39110287"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221979"
 ---
 # <a name="data-access-using-adonet-ccli"></a>ADO.NET によるデータ アクセス (C++/CLI)
 ADO.NET はデータ アクセス用の .NET Framework API であり、電源と前のデータ アクセス ソリューションでは味わえない使いやすさを提供します。 このセクションでは、いくつかのネイティブ型のマーシャ リングなど、Visual C のユーザーに固有の ADO.NET に関連する問題について説明します。  
@@ -731,4 +731,4 @@ int main()
 
  <xref:System.Runtime.InteropServices>   
 
- [相互運用性](http://msdn.microsoft.com/afcc2e7d-3f32-48d2-8141-1c42acf29084)   
+ [相互運用性](https://msdn.microsoft.com/afcc2e7d-3f32-48d2-8141-1c42acf29084)   

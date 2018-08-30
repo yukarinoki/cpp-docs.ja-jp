@@ -14,18 +14,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb9307b68b5d664e477f0139824ff02d00b7c134
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 447f843bcc8f07d76084d1db68890237474ce200
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462119"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222153"
 ---
 # <a name="writing-an-exception-filter"></a>例外フィルターの記述
 例外は、例外ハンドラーのレベルにジャンプするか、実行を続けるかのいずれかにより、処理できます。 例外ハンドラーのコードを使用して、フォール スルーと、例外を処理するために、代わりに使用することができます*フィルター*問題をクリーンアップし、その後、-1 を返すことによってスタックを消去しないで標準フローを再開します。  
   
 > [!NOTE]
->  一部の例外は、続行できない場合があります。 場合*フィルター*評価システムにこのような例外の場合は-1、新しい例外を発生させます。 呼び出すと[RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552)、例外を続行するかどうかを判断します。  
+>  一部の例外は、続行できない場合があります。 場合*フィルター*評価システムにこのような例外の場合は-1、新しい例外を発生させます。 呼び出すと[RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552)、例外を続行するかどうかを判断します。  
   
  次のコードが関数呼び出しを使用するなど、*フィルター*式: この関数は、問題を処理し、通常の制御フローを再開する場合は-1 を返します。  
   
@@ -56,7 +56,7 @@ int Eval_Exception ( int n_except ) {
   
  内の関数呼び出しを使用することをお勧め、*フィルター*式たびに*フィルター*複雑な何もする必要があります。 式を評価すると、関数 (この場合、`Eval_Exception`) が実行されます。  
   
- 使用に注意してください[GetExceptionCode](http://msdn.microsoft.com/library/windows/desktop/ms679356)例外を判断します。 この関数は、フィルター自体の内部で呼び出す必要があります。 `Eval_Exception` 呼び出すことはできません`GetExceptionCode`、例外コードを渡す必要がありますが、します。  
+ 使用に注意してください[GetExceptionCode](/windows/desktop/Debug/getexceptioncode)例外を判断します。 この関数は、フィルター自体の内部で呼び出す必要があります。 `Eval_Exception` 呼び出すことはできません`GetExceptionCode`、例外コードを渡す必要がありますが、します。  
   
  このハンドラーは、例外が整数または浮動小数点数のオーバーフローでなければ、他のハンドラーに制御を渡します。 オーバーフローがあった場合、ハンドラーは関数 (`ResetVars` は一例で、API 関数ではありません) を呼び出して、いくつかのグローバル関数をリセットします。 *ステートメント ブロック 2*、ために、この例では、空を実行しないことができます`Eval_Exception`EXCEPTION_EXECUTE_HANDLER (1) を返すことはありません。  
   

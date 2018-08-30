@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3d6dffb4a4b0b4f5ef3a373cf2dcd0d93d1bd12
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e29d664824a01c0e2a0c0e738368f8d025a239ee
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613202"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202158"
 ---
 # <a name="build-system-changes"></a>ビルド システムの変更点
 MSBuild システムは、Visual C プロジェクトのビルドに使用されます。 ただし、Visual Studio 2008 以前のリリースで、VCBuild システム使用されました。 特定のファイルの種類と VCBuild に依存していた概念存在しないか、現在のシステムで異なる方法で表現されます。 このドキュメントでは、現在のビルド システムの違いについて説明します。  
@@ -55,7 +55,7 @@ MSBuild システムは、Visual C プロジェクトのビルドに使用され
   
  現在のリリースでは、リテラル値とプロパティのマクロの 1 つまたは複数の連結プロパティの値を指定することで継承がサポートされています。 **$ (Inherit)** と **$ (noinherit)** マクロがサポートされていません。  
   
- 次の例では、セミコロン区切りのリストはプロパティ ページのプロパティに割り当てられます。 リストの連結から成る、 *\<値 >* リテラル文字列との値、`MyProperty`マクロ表記を使用してアクセスされるプロパティ、 **$(***MyProperty***)**.  
+ 次の例では、セミコロン区切りのリストはプロパティ ページのプロパティに割り当てられます。 リストの連結から成る、 *\<値 >* リテラル文字列との値、`MyProperty`マクロ表記を使用してアクセスされるプロパティ、 **$(** <em>MyProperty</em>**)** します。  
   
 ```  
 Property=<value>;$(MyProperty)  

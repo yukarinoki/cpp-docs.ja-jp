@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6036490b21ccbd86dfed56ea90226cbb2db8d596
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 594f71d5166261dbb1bb08422a564157bfce2721
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848471"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203662"
 ---
 # <a name="createstruct-structure"></a>CREATESTRUCT 構造体
 `CREATESTRUCT`構造体は、アプリケーションのウィンドウ プロシージャに渡される初期化パラメーターを定義します。  
@@ -77,12 +77,12 @@ typedef struct tagCREATESTRUCT {
  新しいウィンドウの名前を指定する null で終わる文字列へのポインター。  
   
  *lpszClass*  
- 新しいウィンドウの Windows クラス名を指定する null で終わる文字列の指す (、 [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)構造体は、詳細については、Windows SDK を参照してください)。  
+ 新しいウィンドウの Windows クラス名を指定する null で終わる文字列の指す (、 [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576)構造体は、詳細については、Windows SDK を参照してください)。  
   
  *dwExStyle*  
  指定します、[拡張スタイル](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)新しいウィンドウの。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** winuser.h  
   
 ## <a name="see-also"></a>関連項目  

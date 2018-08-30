@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3492f71ab119bb272576fe8c67bc6d05163785fb
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6eee23ebbfc25d76ca255505322f609973f79f57
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883145"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222873"
 ---
 # <a name="catltemporaryfile-class"></a>CAtlTemporaryFile クラス
 このクラスは、一時ファイルを使用して作成メソッドを提供します。  
@@ -88,7 +88,7 @@ class CAtlTemporaryFile
 ## <a name="remarks"></a>Remarks  
  `CAtlTemporaryFile` 作成し、一時ファイルを使用できるようになります。 ファイルが自動的にという名前の開く、閉じられ、削除します。 ファイルが閉じられた後、ファイルの内容が必要な場合は、指定した名前の新しいファイルに保存できます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlfile.h  
   
 ## <a name="example"></a>例  
@@ -143,10 +143,10 @@ HRESULT Create(LPCTSTR pszDir = NULL, DWORD dwDesiredAccess = GENERIC_WRITE) thr
   
 ### <a name="parameters"></a>パラメーター  
  *pszDir*  
- 一時ファイルのパス。 この場合、null の場合、 [GetTempPath](http://msdn.microsoft.com/library/windows/desktop/aa364992)パスを割り当てるには呼び出されます。  
+ 一時ファイルのパス。 この場合、null の場合、 [GetTempPath](/windows/desktop/api/fileapi/nf-fileapi-gettemppatha)パスを割り当てるには呼び出されます。  
   
  *dwDesiredAccess*  
- 必要なアクセス。 参照してください*dwDesiredAccess*で[CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) Windows SDK に含まれています。  
+ 必要なアクセス。 参照してください*dwDesiredAccess*で[CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) Windows SDK に含まれています。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
@@ -334,7 +334,7 @@ LPCTSTR TempFileName() throw();
  ファイル名を指すを返します。  
   
 ### <a name="remarks"></a>Remarks  
- ファイル名が生成された[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)を呼び出して、 [GetTempFile](http://msdn.microsoft.com/library/windows/desktop/aa364991)Windows SDK 関数。 ファイル拡張子は、一時ファイル用 tfr「と」を必ずします。  
+ ファイル名が生成された[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)を呼び出して、 [GetTempFile](/windows/desktop/api/fileapi/nf-fileapi-gettempfilenamea)Windows SDK 関数。 ファイル拡張子は、一時ファイル用 tfr「と」を必ずします。  
   
 ##  <a name="unlockrange"></a>  CAtlTemporaryFile::UnlockRange  
  一時ファイルの領域のロックを解除するには、このメソッドを呼び出します。  

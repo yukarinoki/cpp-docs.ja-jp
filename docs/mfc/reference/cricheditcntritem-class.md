@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a0566ef5eead5950f2b4de1f6e1a220f79bcfbe
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 17f50f5e4fb8b9330a09d4964aa99fbf01f4b34d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849328"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206972"
 ---
 # <a name="cricheditcntritem-class"></a>CRichEditCntrItem クラス
 [CRichEditView](../../mfc/reference/cricheditview-class.md)と[CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)MFC のドキュメント ビュー アーキテクチャのコンテキストでリッチ エディット コントロールの機能を提供します。  
@@ -70,7 +70,7 @@ class CRichEditCntrItem : public COleClientItem
   
  `CRichEditCntrItem`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxrich.h  
   
 ##  <a name="cricheditcntritem"></a>  CRichEditCntrItem::CRichEditCntrItem  
@@ -84,7 +84,7 @@ CRichEditCntrItem(
   
 ### <a name="parameters"></a>パラメーター  
  *preo*  
- ポインター、 [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) OLE 項目を記述する構造体。 新しい`CRichEditCntrItem`この OLE アイテム オブジェクトが構築されます。 場合*preo*が null の場合、クライアントの項目が空です。  
+ ポインター、 [REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject) OLE 項目を記述する構造体。 新しい`CRichEditCntrItem`この OLE アイテム オブジェクトが構築されます。 場合*preo*が null の場合、クライアントの項目が空です。  
   
  *pContainer*  
  この項目を格納するコンテナーのドキュメントへのポインター。 場合*pContainer*が null の場合、明示的に呼び出す必要がある[COleDocument::AddItem](../../mfc/reference/coledocument-class.md#additem)ドキュメントにこのクライアントの項目を追加します。  
@@ -92,10 +92,10 @@ CRichEditCntrItem(
 ### <a name="remarks"></a>Remarks  
  この関数では、OLE の初期化は実行されません。  
   
- 詳細については、次を参照してください。、 [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) Windows SDK の構造体。  
+ 詳細については、次を参照してください。、 [REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject) Windows SDK の構造体。  
   
 ##  <a name="synctoricheditobject"></a>  CRichEditCntrItem::SyncToRichEditObject  
- デバイスの側面を同期するには、この関数を呼び出す[型](http://msdn.microsoft.com/library/windows/desktop/ms690318)、この`CRichEditCntrltem`によって指定される*reo*します。  
+ デバイスの側面を同期するには、この関数を呼び出す[型](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect)、この`CRichEditCntrltem`によって指定される*reo*します。  
   
 ```  
 void SyncToRichEditObject(REOBJECT& reo);
@@ -103,10 +103,10 @@ void SyncToRichEditObject(REOBJECT& reo);
   
 ### <a name="parameters"></a>パラメーター  
  *reo*  
- 参照、 [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) OLE 項目を記述する構造体。  
+ 参照、 [REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject) OLE 項目を記述する構造体。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。[型](http://msdn.microsoft.com/library/windows/desktop/ms690318)Windows SDK に含まれています。  
+ 詳細については、次を参照してください。[型](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect)Windows SDK に含まれています。  
   
 ## <a name="see-also"></a>関連項目  
  [ワードパッドの MFC サンプル](../../visual-cpp-samples.md)   

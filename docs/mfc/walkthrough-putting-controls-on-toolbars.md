@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 236c7df60fc023710139c8975486428fd7cd7cfd
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 2dd920f3dd8d08d6ceb766b9c10969137b8bf03c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027126"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199265"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>チュートリアル: ツール バーへのコントロールの追加
 このトピックでは、Windows コントロールを含むツール バー ボタンをツール バーに追加する方法を説明します。 Mfc では、ツール バー ボタンがある必要があります、 [CMFCToolBarButton クラス](../mfc/reference/cmfctoolbarbutton-class.md)-たとえば、クラスを派生[CMFCToolBarComboBoxButton クラス](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)、 [CMFCToolBarEditBoxButton クラス](../mfc/reference/cmfctoolbareditboxbutton-class.md)、[CMFCDropDownToolbarButton クラス](../mfc/reference/cmfcdropdowntoolbarbutton-class.md)、または[CMFCToolBarMenuButton クラス](../mfc/reference/cmfctoolbarmenubutton-class.md)します。  
@@ -65,7 +65,7 @@ ms.locfileid: "39027126"
   
 2.  新しいクラスを作成`CFindComboBox`から派生した[CComboBox クラス](../mfc/reference/ccombobox-class.md)します。  
   
-3.  `CFindComboBox` クラスで、`PreTranslateMessage` 仮想メソッドをオーバーライドします。 このメソッドは、処理するコンボ ボックスを有効になります、 [WM_KEYDOWN](http://msdn.microsoft.com/library/windows/desktop/ms646280)メッセージ。 ユーザーが Esc キーを押す (`VK_ESCAPE`) と、フォーカスがメイン フレーム ウィンドウに戻ります。 ユーザーが Enter キーを押す場合 (`VK_ENTER`) を含む WM_COMMAND メッセージをメイン フレーム ウィンドウに投稿、`ID_EDIT_FIND_COMBO`コマンド ID  
+3.  `CFindComboBox` クラスで、`PreTranslateMessage` 仮想メソッドをオーバーライドします。 このメソッドは、処理するコンボ ボックスを有効になります、 [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown)メッセージ。 ユーザーが Esc キーを押す (`VK_ESCAPE`) と、フォーカスがメイン フレーム ウィンドウに戻ります。 ユーザーが Enter キーを押す場合 (`VK_ENTER`) を含む WM_COMMAND メッセージをメイン フレーム ウィンドウに投稿、`ID_EDIT_FIND_COMBO`コマンド ID  
   
 4.  クラスを作成、**検索**から派生した、コンボ ボックス ボタン[CMFCToolBarComboBoxButton クラス](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)します。 この例では、 `CFindComboButton`という名前が付いています。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "39027126"
   
     1.  `ID_EDIT_FIND_COMBO` をコマンド ID として渡します。  
   
-    2.  使用[CCommandManager::GetCmdImage](http://msdn.microsoft.com/4094d08e-de74-4398-a483-76d27a742dca)で`ID_EDIT_FIND`イメージ インデックスを取得します。  
+    2.  使用[CCommandManager::GetCmdImage](https://msdn.microsoft.com/4094d08e-de74-4398-a483-76d27a742dca)で`ID_EDIT_FIND`イメージ インデックスを取得します。  
   
     3.  使用可能なコンボ ボックス スタイルの一覧は、次を参照してください。[コンボ ボックス スタイル](../mfc/reference/styles-used-by-mfc.md#combo-box-styles)します。  
   

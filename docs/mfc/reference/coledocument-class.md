@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb66d7435331124b4455c476c10986931b4c6e1d
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 95eea7434fdaa12a6178ebd9648e8088b24b4dc8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850057"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205949"
 ---
 # <a name="coledocument-class"></a>COleDocument クラス
 ビジュアル編集をサポートする OLE ドキュメントの基底クラスです。  
@@ -138,7 +138,7 @@ class COleDocument : public CDocument
   
  `COleDocument`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxole.h  
   
 ##  <a name="additem"></a>  COleDocument::AddItem  
@@ -176,11 +176,11 @@ BOOL ApplyPrintDevice(const PRINTDLG* ppd);
 ### <a name="remarks"></a>Remarks  
  この関数は、すべての項目の出力先のデバイスを更新が、それらの項目のプレゼンテーションのキャッシュは更新されません。 アイテムのプレゼンテーションのキャッシュを更新するには、呼び出す[COleClientItem::UpdateLink](../../mfc/reference/coleclientitem-class.md#updatelink)します。  
   
- この関数の引数には、OLE をターゲット デバイスを識別するために使用する情報が含まれています。 [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843)構造体には、一般的な印刷 ダイアログ ボックスを初期化するために Windows を使用する情報が含まれます。 ユーザーがダイアログ ボックスを閉じた後、Windows はこの構造体で、ユーザーの選択に関する情報を返します。 `m_pd`のメンバー、 [CPrintDialog](../../mfc/reference/cprintdialog-class.md)オブジェクトが、`PRINTDLG`構造体。  
+ この関数の引数には、OLE をターゲット デバイスを識別するために使用する情報が含まれています。 [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda)構造体には、一般的な印刷 ダイアログ ボックスを初期化するために Windows を使用する情報が含まれます。 ユーザーがダイアログ ボックスを閉じた後、Windows はこの構造体で、ユーザーの選択に関する情報を返します。 `m_pd`のメンバー、 [CPrintDialog](../../mfc/reference/cprintdialog-class.md)オブジェクトが、`PRINTDLG`構造体。  
   
- 詳細については、次を参照してください。、 [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843) Windows SDK の構造体。  
+ 詳細については、次を参照してください。、 [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda) Windows SDK の構造体。  
   
- 詳細については、次を参照してください。、 [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) Windows SDK の構造体。  
+ 詳細については、次を参照してください。、 [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) Windows SDK の構造体。  
   
 ##  <a name="coledocument"></a>  COleDocument::COleDocument  
  `COleDocument` オブジェクトを構築します。  

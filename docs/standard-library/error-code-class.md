@@ -29,12 +29,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e97ce9daf097e85dfc9b7b1b74bfcbf6a149fdd
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 38ceffd8a5f01cdc97ee162cc92fce319f771dbe
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027233"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221573"
 ---
 # <a name="errorcode-class"></a>error_code クラス
 
@@ -82,7 +82,7 @@ class error_code;
 |[operator=](#op_eq)|`error_code` オブジェクトに新しい列挙値を代入します。|
 |[operator bool](#op_bool)|`error_code` 型の変数をキャストします。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<system_error>
 
@@ -172,7 +172,7 @@ error_code(_Enum _Errcode,
 
 最初のコンストラクターはゼロ エラー コード値と [generic_category](../standard-library/system-error-functions.md#generic_category) を指すポインターを格納します。
 
-2 番目のコンス トラクター ストア*val*エラー コード値とへのポインターとして[error_category](http://msdn.microsoft.com/6fe57a15-63a1-4e79-8af4-6738e43e19c8)します。
+2 番目のコンス トラクター ストア*val*エラー コード値とへのポインターとして[error_category](https://msdn.microsoft.com/6fe57a15-63a1-4e79-8af4-6738e43e19c8)します。
 
 3 番目のコンストラクターは、エラー コード値としての `(value_type)_Errcode` と [generic_category](../standard-library/system-error-functions.md#generic_category) を指すポインターを格納します。
 
@@ -238,7 +238,7 @@ bool operator!=(const error_code& right) const;
 
 ## <a name="op_lt"></a>  error_code::operator&lt;
 
-[error_code](http://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31) オブジェクトが比較のために渡された `error_code` オブジェクトより小さいかどうかをテストします。
+[error_code](https://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31) オブジェクトが比較のために渡された `error_code` オブジェクトより小さいかどうかをテストします。
 
 ```cpp
 bool operator<(const error_code& right) const;
@@ -260,7 +260,7 @@ bool operator<(const error_code& right) const;
 
 ## <a name="op_eq"></a>  error_code::operator=
 
-[error_code](http://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31) オブジェクトに新しい列挙値を代入します。
+[error_code](https://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31) オブジェクトに新しい列挙値を代入します。
 
 ```cpp
 template <class _Enum>

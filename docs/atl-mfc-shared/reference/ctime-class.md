@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b68ebd20d449c11ac8c62a6a01c086dbe566811
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: ccfb9c8873ff7e954e4e8169fafb94c53e6a311e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027674"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205988"
 ---
 # <a name="ctime-class"></a>CTime クラス
 絶対時刻と日付を表します。  
@@ -66,7 +66,7 @@ class CTime
 |[CTime::Format](#format)|変換を`CTime`オブジェクトを書式設定された文字列に、ローカル タイム ゾーンに基づいて。|  
 |[CTime::FormatGmt](#formatgmt)|変換を`CTime`オブジェクトを書式設定された文字列に、UTC に基づいています。|  
 |[CTime::GetAsDBTIMESTAMP](#getasdbtimestamp)|格納されている時間の情報に変換、 `CTime` Win32 と互換性のある DBTIMESTAMP 構造体へのオブジェクト。|  
-|[CTime::GetAsSystemTime](#getassystemtime)|格納されている時間の情報に変換、 `CTime` Win32 互換性のあるオブジェクト[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)構造体。|  
+|[CTime::GetAsSystemTime](#getassystemtime)|格納されている時間の情報に変換、 `CTime` Win32 互換性のあるオブジェクト[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)構造体。|  
 |[CTime::GetCurrentTime](#getcurrenttime)|作成、 `CTime` (静的メンバー関数) の現在の時刻を表すオブジェクト。|  
 |[CTime::GetDay](#getday)|によって表される日を返します、`CTime`オブジェクト。|  
 |[CTime::GetDayOfWeek](#getdayofweek)|によって表される週の通算日を返す、`CTime`オブジェクト。|  
@@ -108,7 +108,7 @@ class CTime
 > [!NOTE]
 >  `CTime` MFC 8.0 から MFC 7.1 構造に変更します。 シリアル化する場合、`CTime`構造体を使用して、**演算子 <<** MFC 8.0 またはそれ以降のバージョンでは、結果のファイルが読み取れない MFC の以前のバージョン。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atltime.h  
   
 ##  <a name="ctime_comparison_operators"></a>  CTime 比較演算子  
@@ -210,7 +210,7 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
     > [!NOTE]
     >  コンス トラクターを使用して、`DBTIMESTAMP`パラメーターは、OLEDB.h が含まれる場合にのみ使用できます。  
   
- 詳細については、次を参照してください。、 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)と[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) Windows SDK の構造体。 参照してください、 [MS-DOS の日付と時刻](http://msdn.microsoft.com/library/windows/desktop/ms724503)Windows SDK 内のエントリ。  
+ 詳細については、次を参照してください。、 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)と[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) Windows SDK の構造体。 参照してください、 [MS-DOS の日付と時刻](/windows/desktop/SysInfo/ms-dos-date-and-time)Windows SDK 内のエントリ。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATLMFC_Utilities#148](../../atl-mfc-shared/codesnippet/cpp/ctime-class_2.cpp)]  
@@ -288,7 +288,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
  [!code-cpp[NVC_ATLMFC_Utilities#150](../../atl-mfc-shared/codesnippet/cpp/ctime-class_4.cpp)]  
   
 ##  <a name="getassystemtime"></a>  CTime::GetAsSystemTime  
- 格納されている時間の情報に変換するには、このメンバー関数を呼び出す、 `CTime` Win32 互換性のあるオブジェクト[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)構造体。  
+ 格納されている時間の情報に変換するには、このメンバー関数を呼び出す、 `CTime` Win32 互換性のあるオブジェクト[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)構造体。  
   
 ```  
 bool GetAsSystemTime(SYSTEMTIME& st) const throw();
@@ -296,7 +296,7 @@ bool GetAsSystemTime(SYSTEMTIME& st) const throw();
   
 ### <a name="parameters"></a>パラメーター  
  *timeDest*  
- 参照を[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)の変換後の日付/時刻値を保持する構造体、`CTime`オブジェクト。  
+ 参照を[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)の変換後の日付/時刻値を保持する構造体、`CTime`オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は TRUE、それ以外の場合は FALSE。  

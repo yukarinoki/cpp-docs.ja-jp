@@ -1,5 +1,5 @@
 ---
-title: オプション (MASM) |Microsoft ドキュメント
+title: オプション (MASM) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80291c805cad3ef041fffc58983ff399da07c9d9
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 4a2dcbc55d6a2d033cde3b6189618afd67bdc3fb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057722"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221510"
 ---
 # <a name="option-masm"></a>OPTION (MASM)
-有効にして、アセンブラーの機能を無効になります。  
+有効にし、アセンブラーの機能を無効にします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,7 +35,7 @@ optionlist
   
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  使用可能なオプションは次のとおりです。  
   
 |||||  
@@ -46,9 +46,9 @@ optionlist
 |**NOM510**|**NOKEYWORD**|**NOSIGNEXTEND**|**OFFSET**|  
 |**OLDMACROS**|**NOOLDMACROS**|**OLDSTRUCTS**|**NOOLDSTRUCTS**|  
 |**PROC**|**プロローグ**|**READONLY**|**NOREADONLY**|  
-|**スコープ**|**NOSCOPED**|**SEGMENT**|**SETIF2**です。|  
+|**スコープ**|**NOSCOPED**|**SEGMENT**|**SETIF2**します。|  
   
- 言語の構文は、**オプション言語: * * * x*ここで、 *x* C、SYSCALL、STDCALL、PASCAL、FORTRAN、または BASIC の 1 つです。  SYSCALL、PASCAL、FORTRAN、および BASIC ではサポートされません併用[です。モデル](../../assembler/masm/dot-model.md)フラットです。  
+ 言語の構文は、**オプション言語:**<em>x</em>ここで、 *x* C、SYSCALL、STDCALL、PASCAL、FORTRAN、BASIC のいずれかです。  SYSCALL や PASCAL、FORTRAN、BASIC ではサポートされません併用[します。モデル](../../assembler/masm/dot-model.md)フラットです。  
   
 ## <a name="see-also"></a>関連項目  
  [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)

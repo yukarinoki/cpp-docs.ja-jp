@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f82245e8e2fa338ed4abca0b97c53d653427cce
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 046ce538dafe90b172096eb37bf2309f8c75db1c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027873"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206252"
 ---
 # <a name="editing-a-message-handler"></a>メッセージ ハンドラーの編集
 メッセージ ハンドラーを定義すると、コードを追加または変更、メンバー関数の定義に移動することができます。  
   
  メンバー関数の定義にジャンプするには、[ダイアログ エディター](../../windows/dialog-editor.md)ハンドラーが既に定義されているコントロールをダブルクリックします。 選択したコントロールのメッセージ ハンドラーが定義されているファイルに移動します。  
   
- メンバー関数の定義にジャンプする[クラス ビュー](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)、クラス ビュー内の関数名をダブルクリックします。  
+ メンバー関数の定義にジャンプする[クラス ビュー](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)、クラス ビュー内の関数名をダブルクリックします。  
   
 ## <a name="see-also"></a>関連項目  
  [関数へのメッセージの割り当てください。](../../mfc/reference/mapping-messages-to-functions.md)   

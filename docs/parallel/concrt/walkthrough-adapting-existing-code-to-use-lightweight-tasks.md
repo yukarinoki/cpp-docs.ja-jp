@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: 軽量タスクを使用する既存のコードを改変. |Microsoft ドキュメント'
+title: 'チュートリアル: 軽量タスクを使用する既存のコードを改変. |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,25 +15,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4fe3bb4b576bd1f9160b4a3cdc3142be5cdff05
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b4a48720a55487531e7dcfc2c38c9a0bf54c88a8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688545"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214332"
 ---
 # <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>チュートリアル: 既存のコードを改変して軽量タスクを使用する
 ここでは、Windows API を使用する既存のコードを改変して、軽量タスクを使用するスレッドを作成および実行する方法について説明します。  
   
- A*軽量タスク*から直接スケジュールするタスク、 [concurrency::scheduler](../../parallel/concrt/reference/scheduler-class.md)または[concurrency::schedulegroup](../../parallel/concrt/reference/schedulegroup-class.md)オブジェクト。 軽量タスクは、既存のコードを改変して同時実行ランタイムのスケジュール機能を使用する場合に有用です。  
+ A*軽量タスク*から直接スケジュールするタスクを[concurrency::scheduler](../../parallel/concrt/reference/scheduler-class.md)または[concurrency::schedulegroup](../../parallel/concrt/reference/schedulegroup-class.md)オブジェクト。 軽量タスクは、既存のコードを改変して同時実行ランタイムのスケジュール機能を使用する場合に有用です。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- このチュートリアルを開始する前に、トピックを読む[タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)です。  
+ このチュートリアルを開始する前にトピックを読んで、[タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)します。  
   
 ## <a name="example"></a>例  
   
 ### <a name="description"></a>説明  
- Windows API を使用してスレッドを作成および実行する一般的な方法を次の例に示します。 この例では、 [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453)関数を呼び出して、`MyThreadFunction`別のスレッドでします。  
+ Windows API を使用してスレッドを作成および実行する一般的な方法を次の例に示します。 この例では、 [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread)関数を呼び出す、`MyThreadFunction`別のスレッドでします。  
   
 ### <a name="code"></a>コード  
  [!code-cpp[concrt-windows-threads#1](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_1.cpp)]  
@@ -61,17 +61,17 @@ Parameters = 50, 100
   
  [!code-cpp[concrt-migration-lwt#4](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_4.cpp)]  
   
-4.  変更、`MyData`構造に含まれる、 [concurrency::event](../../parallel/concrt/reference/event-class.md)タスクが完了したことをメインのアプリケーションに通知するオブジェクト。  
+4.  変更、`MyData`構造に含まれる、 [concurrency::event](../../parallel/concrt/reference/event-class.md)タスクが完了したことをメイン アプリケーションに通知するオブジェクト。  
   
  [!code-cpp[concrt-migration-lwt#5](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_5.cpp)]  
   
-5.  呼び出しを置き換える`CreateThread`を呼び出して、 [concurrency::CurrentScheduler::ScheduleTask](reference/currentscheduler-class.md#scheduletask)メソッドです。  
+5.  呼び出しに置き換えます`CreateThread`を呼び出して、 [concurrency::CurrentScheduler::ScheduleTask](reference/currentscheduler-class.md#scheduletask)メソッド。  
 
   
  [!code-cpp[concrt-migration-lwt#6](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_6.cpp)]  
   
 
-6.  呼び出しを置き換える`WaitForSingleObject`を呼び出して、 [concurrency::event::wait](reference/event-class.md#wait)メソッドがタスクの完了を待機します。  
+6.  呼び出しに置き換えます`WaitForSingleObject`を呼び出して、 [concurrency::event::wait](reference/event-class.md#wait)メソッドがタスクの完了を待機します。  
 
  [!code-cpp[concrt-migration-lwt#7](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_7.cpp)]  
   
@@ -81,7 +81,7 @@ Parameters = 50, 100
   
  [!code-cpp[concrt-migration-lwt#8](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_8.cpp)]  
   
-9. 最後に、`MyThreadFunction`関数を呼び出して、 [concurrency::event::set](reference/event-class.md#set)タスクが完了したことをメインのアプリケーションに通知するメソッド。  
+9. 最後に、`MyThreadFunction`関数を呼び出し、 [concurrency::event::set](reference/event-class.md#set)タスクが完了したことをメイン アプリケーションに通知するメソッド。  
   
  [!code-cpp[concrt-migration-lwt#9](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_9.cpp)]  
   

@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7602ca44d6f8ec8197d1ebc61b4ef1d0847133f6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00016bb191cc3a4d7b4df47f5252706a129c3583
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404624"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199732"
 ---
 # <a name="putchar-putwchar"></a>putchar、putwchar
 
@@ -67,13 +67,13 @@ wint_t putwchar(
 
 ## <a name="return-value"></a>戻り値
 
-書き込まれた文字を返します。 エラーまたはファイルの終端状態を示すために**putc**と**putchar**返します * * EOF`; **putwc`と**putwchar**返す**WEOF**です。 4 つすべてのルーチンで、[ferror](ferror.md) または [feof](feof.md) を使用して、エラーまたはファイルの終端を確認します。 Null ポインターを渡された場合*ストリーム*、」の説明に従って、これらの関数は、無効なパラメーター例外を生成[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 返されるかどうかは、引き続き実行が許可された、 **EOF**または**WEOF**設定と**errno**に**EINVAL**です。
+書き込まれた文字を返します。 エラーまたはファイルの終わりの状態を示す**putc**と**putchar**返す * * EOF`; **putwc`と**putwchar**返す**WEOF**します。 4 つすべてのルーチンで、[ferror](ferror.md) または [feof](feof.md) を使用して、エラーまたはファイルの終端を確認します。 Null ポインターを渡された場合*ストリーム*、」の説明に従って、これらの関数は、無効なパラメーター例外を生成[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 返されるかどうかは、引き続き実行が許可された、 **EOF**または**WEOF**設定と**errno**に**EINVAL**します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Putc**ルーチンは、単一の文字を書き込みます*c*出力に*ストリーム*現在位置にあります。 任意の整数に渡すことが**putc**が下位の 8 ビットのみに書き込まれます。 **Putchar**ルーチンと同じ**putc (** * c ***、stdout)** です。 各ルーチンでは、読み取りエラーが発生すると、ストリームのエラー インジケーターが設定されます。 **putc**と**putchar**のような**fputc**と **_fputchar**、それぞれ、関数およびマクロとして実装されますが、(を参照してください[関数とマクロの使い分け](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md))。 **putwc**と**putwchar**のワイド文字バージョンは、 **putc**と**putchar**、それぞれします。
+**Putc**ルーチンは、1 つの文字を書き込みます*c*出力に*ストリーム*現在の位置。 任意の整数を渡すことが**putc**が下位の 8 ビットのみに書き込まれます。 **Putchar**ルーチンと同じ`putc( c, stdout )`します。 各ルーチンでは、読み取りエラーが発生すると、ストリームのエラー インジケーターが設定されます。 **putc**と**putchar**のような**fputc**と **_fputchar**、それぞれ、関数およびマクロとして実装されますが、(を参照してください[関数とマクロの使い分け](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md))。 **putwc**と**putwchar**のワイド文字バージョン**putc**と**putchar**、それぞれします。
 
 **_nolock** サフィックスが付いているバージョンは同じものですが、他のスレッドによる干渉から保護されない点が異なります。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
 
@@ -85,12 +85,12 @@ wint_t putwchar(
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**putchar**|\<stdio.h>|
 |**putwchar**|\<stdio.h> または \<wchar.h>|
 
-コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソールに関連付けられている標準ストリームのハンドル**stdin**、 **stdout**、および**stderr**、C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります. 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+ユニバーサル Windows プラットフォーム (UWP) アプリでは、コンソールがサポートされていません。 コンソールに関連付けられている標準ストリームのハンドル**stdin**、 **stdout**、および**stderr**、C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります. 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="libraries"></a>ライブラリ
 

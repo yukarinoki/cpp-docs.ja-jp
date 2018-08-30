@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 050b11050cc280fc6d3aa8900487442bd723a57f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: fda9cab73088746ec64caf482f9e606d713eaa4f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592774"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222744"
 ---
 # <a name="delegates-ccx"></a>デリゲート (C++/CX)
 `delegate`キーワードの使用を標準 C++ での関数オブジェクトの Windows ランタイムと等価な参照型を宣言します。 関数シグネチャに似たデリゲート宣言。これは、ラップされた関数が持つ必要のある、戻り値の型およびパラメーターの型を指定します。 これは、ユーザー定義のデリゲート宣言です。  
@@ -29,7 +29,7 @@ ms.locfileid: "42592774"
 event PrimeFoundHandler^ primeFoundEvent;  
 ```  
   
- クライアントに公開されるデリゲートを宣言する、Windows ランタイムのアプリケーション バイナリ インターフェイスを使用して[Windows::Foundation::TypedEventHandler\<TSender, TResult >](http://msdn.microsoft.com/library/windows/apps/br225997.aspx)します。 このデリゲートには、デリゲートが Javascript クライアントによって利用できるようにする、事前定義されたプロキシとスタブ バイナリがあります。  
+ クライアントに公開されるデリゲートを宣言する、Windows ランタイムのアプリケーション バイナリ インターフェイスを使用して[Windows::Foundation::TypedEventHandler\<TSender, TResult >](https://msdn.microsoft.com/library/windows/apps/br225997.aspx)します。 このデリゲートには、デリゲートが Javascript クライアントによって利用できるようにする、事前定義されたプロキシとスタブ バイナリがあります。  
   
 ## <a name="consuming-delegates"></a>デリゲートの利用  
  ユニバーサル Windows プラットフォーム アプリを作成するときに頻繁に使用する Windows ランタイム クラスによって公開されるイベントの種類としてのデリゲート。 イベントにサブスクライブするには、デリゲートの署名に一致する関数 (ラムダ) を指定することで、そのデリゲート型のインスタンスを作成します。 そして、 `+=` 演算子を使用して、デリゲート オブジェクトをクラスのイベント メンバーに渡します。 これは、イベントのサブスクライブと呼ばれます。 クラスのインスタンスがイベントを "発生" させると、ユーザーのオブジェクトやその他のオブジェクトによって追加された他のハンドラーと共に、関数が呼び出されます。  

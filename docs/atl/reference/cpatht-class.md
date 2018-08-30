@@ -59,12 +59,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7b19cff6e4f90485946521824bb0fd2f6358372
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a953f94e48f3093b1c61a1567252e04d98c1beb8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885237"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208544"
 ---
 # <a name="cpatht-class"></a>CPathT クラス
 このクラスは、パスを表します。  
@@ -165,7 +165,7 @@ class CPathT
   
  `typedef CPathT< CStringW > CPathW;`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlpath.h  
   
 ##  <a name="addbackslash"></a>  CPathT::AddBackslash  
@@ -176,7 +176,7 @@ void AddBackslash();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [PathAddBackSlash](http://msdn.microsoft.com/library/windows/desktop/bb773561)します。  
+ 詳細については、次を参照してください。 [PathAddBackSlash](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddbackslasha)します。  
   
 ##  <a name="addextension"></a>  CPathT::AddExtension  
  パスにファイル拡張子を追加するには、このメソッドを呼び出します。  
@@ -193,7 +193,7 @@ BOOL AddExtension(PCXSTR pszExtension);
  成功した場合、true を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563)します。  
+ 詳細については、次を参照してください。 [PathAddExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddextensiona)します。  
   
 ##  <a name="append"></a>  CPathT::Append  
  現在のパスに文字列を追加するには、このメソッドを呼び出します。  
@@ -210,7 +210,7 @@ BOOL Append(PCXSTR pszMore);
  成功した場合、true を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [PathAppend](http://msdn.microsoft.com/library/windows/desktop/bb773565)します。  
+ 詳細については、次を参照してください。 [PathAppend](/windows/desktop/api/shlwapi/nf-shlwapi-pathappenda)します。  
   
 ##  <a name="buildroot"></a>  CPathT::BuildRoot  
  特定のドライブ番号からルート パスを作成するには、このメソッドを呼び出します。  
@@ -224,7 +224,7 @@ void BuildRoot(int iDrive);
  ドライブの数 (0 a: には、1 が b:、という具合)。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [PathBuildRoot](http://msdn.microsoft.com/library/windows/desktop/bb773567)します。  
+ 詳細については、次を参照してください。 [PathBuildRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathbuildroota)します。  
   
 ##  <a name="canonicalize"></a>  CPathT::Canonicalize  
  パスを正規の形式に変換するには、このメソッドを呼び出します。  
@@ -234,7 +234,7 @@ void Canonicalize();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [PathCanonicalize](http://msdn.microsoft.com/library/windows/desktop/bb773569)します。  
+ 詳細については、次を参照してください。 [PathCanonicalize](/windows/desktop/api/shlwapi/nf-shlwapi-pathcanonicalizea)します。  
   
 ##  <a name="combine"></a>  CPathT::Combine  
  ディレクトリ名を表す文字列と、1 つのパスにファイルのパス名を表す文字列を連結するには、このメソッドを呼び出します。  
@@ -251,7 +251,7 @@ void Combine(PCXSTR pszDir, PCXSTR  pszFile);
  ファイル パス。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [PathCombine](http://msdn.microsoft.com/library/windows/desktop/bb773571)します。  
+ 詳細については、次を参照してください。 [PathCombine](/windows/desktop/api/shlwapi/nf-shlwapi-pathcombinea)します。  
   
 ##  <a name="commonprefix"></a>  CPathT::CommonPrefix  
  指定されたパスが、現在のパスと共通プレフィックスを共有するかどうかを判断するには、このメソッドを呼び出します。  
@@ -268,7 +268,7 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
  一般的なプレフィックスを返します。  
   
 ### <a name="remarks"></a>Remarks  
- プレフィックスは、これらの型のいずれかの:"c:\\\\「,」です","..","..\\\\". 詳細については、次を参照してください。 [PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574)します。  
+ プレフィックスは、これらの型のいずれかの:"c:\\\\「,」です","..","..\\\\". 詳細については、次を参照してください。 [PathCommonPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathcommonprefixa)します。  
   
 ##  <a name="compactpath"></a>  CPathT::CompactPath  
  パス コンポーネントを省略記号に置き換えることにより、指定したピクセル幅に収まるようにファイル パスを短くには、このメソッドを呼び出します。  
@@ -288,7 +288,7 @@ BOOL CompactPath(HDC hDC, UINT nWidth);
  成功した場合、true を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [PathCompactPath](http://msdn.microsoft.com/library/windows/desktop/bb773575)します。  
+ 詳細については、次を参照してください。 [PathCompactPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpatha)します。  
   
 ##  <a name="compactpathex"></a>  CPathT::CompactPathEx  
  パス コンポーネントを省略記号に置き換えることにより、指定した文字数に収まるようにファイル パスを短くには、このメソッドを呼び出します。  
@@ -308,7 +308,7 @@ BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
  成功した場合、true を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [PathCompactPathEx](http://msdn.microsoft.com/library/windows/desktop/bb773578)します。  
+ 詳細については、次を参照してください。 [PathCompactPathEx](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpathexa)します。  
   
 ##  <a name="cpatht"></a>  CPathT::CPathT  
  コンストラクターです。  
@@ -337,7 +337,7 @@ BOOL FileExists() const;
  かどうか、ファイルが存在するそれ以外の場合は TRUE を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [PathFileExists](http://msdn.microsoft.com/library/windows/desktop/bb773584)します。  
+ 詳細については、次を参照してください。 [PathFileExists](/windows/desktop/api/shlwapi/nf-shlwapi-pathfileexistsa)します。  
   
 ##  <a name="findextension"></a>  CPathT::FindExtension  
  パス内のファイル拡張子の位置を検索するには、このメソッドを呼び出します。  
@@ -350,7 +350,7 @@ int FindExtension() const;
  位置を返します、"."前に、拡張機能。 拡張機能が見つからない場合は、-1 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [PathFindExtension](http://msdn.microsoft.com/library/windows/desktop/bb773587)します。  
+ 詳細については、次を参照してください。 [PathFindExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindextensiona)します。  
   
 ##  <a name="findfilename"></a>  CPathT::FindFileName  
  パス内のファイル名の位置を検索するには、このメソッドを呼び出します。  
@@ -363,7 +363,7 @@ int FindFileName() const;
  ファイル名の位置を返します。 ファイル名が見つからない場合は、-1 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589)します。  
+ 詳細については、次を参照してください。 [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea)します。  
   
 ##  <a name="getdrivenumber"></a>  CPathT::GetDriveNumber  
  'A' から 'Z' の範囲内のドライブ文字のパスを検索し、対応するドライブの数を返すには、このメソッドを呼び出します。  
@@ -376,7 +376,7 @@ int GetDriveNumber() const;
  ドライブ文字、または-1 がそれ以外の場合は、パスの場合に 0 ~ 25 (に対応する 'A' から 'Z') を整数としてドライブの数を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [PathGetDriveNumber](http://msdn.microsoft.com/library/windows/desktop/bb773612)します。  
+ 詳細については、次を参照してください。 [PathGetDriveNumber](/windows/desktop/api/shlwapi/nf-shlwapi-pathgetdrivenumbera)します。  
   
 ##  <a name="getextension"></a>  CPathT::GetExtension  
  パスからファイルの拡張子を取得するには、このメソッドを呼び出します。  
@@ -399,7 +399,7 @@ BOOL IsDirectory() const;
  パスがディレクトリの場合、FALSE それ以外の場合は、0 以外の値 (16) を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [PathIsDirectory](http://msdn.microsoft.com/library/windows/desktop/bb773621)します。  
+ 詳細については、次を参照してください。 [PathIsDirectory](/windows/desktop/api/shlwapi/nf-shlwapi-pathisdirectorya)します。  
   
 ##  <a name="isfilespec"></a>  CPathT::IsFileSpec  
  任意のパス区切り文字のパスを検索するには、このメソッドを呼び出す (たとえば、':' または '\\')。 パス区切り文字がない場合は、パスはファイルの仕様のパスと見なされます。  
@@ -412,7 +412,7 @@ BOOL IsFileSpec() const;
  パス内に、パス区切り文字がない場合は TRUE または FALSE の場合、パス区切り文字を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [PathIsFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773627)します。  
+ 詳細については、次を参照してください。 [PathIsFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathisfilespeca)します。  
   
 ##  <a name="isprefix"></a>  CPathT::IsPrefix  
  パスによって渡される型の有効なプレフィックスが含まれるかどうかを確認するには、このメソッドを呼び出す*pszPrefix*します。  
@@ -429,7 +429,7 @@ BOOL IsPrefix(PCXSTR pszPrefix) const;
  パスが含まれる場合、プレフィックス、または FALSE それ以外の場合は、TRUE を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [PathIsPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773650)します。  
+ 詳細については、次を参照してください。 [PathIsPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathisprefixa)します。  
   
 ##  <a name="isrelative"></a>  CPathT::IsRelative  
  パスが相対かを判断するには、このメソッドを呼び出します。  
@@ -442,7 +442,7 @@ BOOL IsRelative() const;
  絶対である場合、パスが相対パス、または FALSE の場合は TRUE を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [PathIsRelative](http://msdn.microsoft.com/library/windows/desktop/bb773660)します。  
+ 詳細については、次を参照してください。 [PathIsRelative](/windows/desktop/api/shlwapi/nf-shlwapi-pathisrelativea)します。  
   
 ##  <a name="isroot"></a>  CPathT::IsRoot  
  パスがディレクトリのルートであるかを判断するには、このメソッドを呼び出します。  
@@ -455,7 +455,7 @@ BOOL IsRoot() const;
  パスはルート、または FALSE をそれ以外の場合がある場合は、TRUE を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [PathIsRoot](http://msdn.microsoft.com/library/windows/desktop/bb773674)します。  
+ 詳細については、次を参照してください。 [PathIsRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathisroota)します。  
   
 ##  <a name="issameroot"></a>  CPathT::IsSameRoot  
  別のパスが、共通のルート コンポーネントと現在のパスを持つかどうかを判断するには、このメソッドを呼び出します。  
@@ -472,7 +472,7 @@ BOOL IsSameRoot(PCXSTR pszOther) const;
  両方の文字列には、それ以外の場合するルート コンポーネントが同じ、または FALSE がある場合は TRUE を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [PathIsSameRoot](http://msdn.microsoft.com/library/windows/desktop/bb773687)します。  
+ 詳細については、次を参照してください。 [PathIsSameRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathissameroota)します。  
   
 ##  <a name="isunc"></a>  CPathT::IsUNC  
  パスがサーバーの有効な UNC (汎用名前付け規則) パスであるかどうかを確認するには、このメソッドを呼び出すし、共有します。  
@@ -485,7 +485,7 @@ BOOL IsUNC() const;
  パスは有効な UNC パスまたは FALSE をそれ以外の場合は TRUE を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [PathIsUNC](http://msdn.microsoft.com/library/windows/desktop/bb773712)します。  
+ 詳細については、次を参照してください。 [PathIsUNC](/windows/desktop/api/shlwapi/nf-shlwapi-pathisunca)します。  
   
 ##  <a name="isuncserver"></a>  CPathT::IsUNCServer  
  パスがサーバーだけを表す有効な UNC (汎用名前付け規則) パスであるかどうかを確認するには、このメソッドを呼び出します。  
@@ -498,7 +498,7 @@ BOOL IsUNCServer() const;
  かどうか、文字列は有効なサーバーのみの UNC パス (共有を名前なし)、または FALSE それ以外の場合は TRUE を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [PathIsUNCServer](http://msdn.microsoft.com/library/windows/desktop/bb773722)します。  
+ 詳細については、次を参照してください。 [PathIsUNCServer](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncservera)します。  
   
 ##  <a name="isuncservershare"></a>  CPathT::IsUNCServerShare  
  パスが有効な UNC (汎用名前付け規則) 共有パスであるかどうかを確認するには、このメソッドを呼び出す\\ \  *server*\ *共有*します。  
@@ -511,7 +511,7 @@ BOOL IsUNCServerShare() const;
  パスが、フォームの場合は TRUE を返します\\ \  *server*\ *共有*、FALSE またはそれ以外の場合。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [PathIsUNCServerShare](http://msdn.microsoft.com/library/windows/desktop/bb773723)します。  
+ 詳細については、次を参照してください。 [PathIsUNCServerShare](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncserversharea)します。  
   
 ##  <a name="m_strpath"></a>  CPathT::m_strPath  
  パス。  
@@ -534,7 +534,7 @@ BOOL MakePretty();
  それ以外の場合、パスが変換された場合は TRUE または FALSE を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [PathMakePretty](http://msdn.microsoft.com/library/windows/desktop/bb773725)します。  
+ 詳細については、次を参照してください。 [PathMakePretty](/windows/desktop/api/shlwapi/nf-shlwapi-pathmakeprettya)します。  
   
 ##  <a name="matchspec"></a>  CPathT::MatchSpec  
  ワイルドカード一致の種類を含む文字列へのパスを検索するには、このメソッドを呼び出します。  
@@ -551,7 +551,7 @@ BOOL MatchSpec(PCXSTR pszSpec) const;
  それ以外の場合、文字列が一致する場合は TRUE または FALSE を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [PathMatchSpec](http://msdn.microsoft.com/library/windows/desktop/bb773727)します。  
+ 詳細については、次を参照してください。 [PathMatchSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathmatchspeca)します。  
   
 ##  <a name="operator_add_eq"></a>  CPathT::operator + =  
  この演算子は、パスに文字列を追加します。  
@@ -625,7 +625,7 @@ void QuoteSpaces();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [PathQuoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773739)します。  
+ 詳細については、次を参照してください。 [PathQuoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathquotespacesa)します。  
   
 ##  <a name="relativepathto"></a>  CPathT::RelativePathTo  
  1 つのファイルまたはフォルダーから別の相対パスを作成するには、このメソッドを呼び出します。  
@@ -655,7 +655,7 @@ BOOL RelativePathTo(
  成功した場合、true を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [PathRelativePathTo](http://msdn.microsoft.com/library/windows/desktop/bb773740)します。  
+ 詳細については、次を参照してください。 [PathRelativePathTo](/windows/desktop/api/shlwapi/nf-shlwapi-pathrelativepathtoa)します。  
   
 ##  <a name="removeargs"></a>  CPathT::RemoveArgs  
  パスからコマンドライン引数を削除するには、このメソッドを呼び出します。  
@@ -665,7 +665,7 @@ void RemoveArgs();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [PathRemoveArgs](http://msdn.microsoft.com/library/windows/desktop/bb773742)します。  
+ 詳細については、次を参照してください。 [PathRemoveArgs](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveargsa)します。  
   
 ##  <a name="removebackslash"></a>  CPathT::RemoveBackslash  
  パスから、末尾に円記号を削除するには、このメソッドを呼び出します。  
@@ -675,7 +675,7 @@ void RemoveBackslash();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [PathRemoveBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773743)します。  
+ 詳細については、次を参照してください。 [PathRemoveBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovebackslasha)します。  
   
 ##  <a name="removeblanks"></a>  CPathT::RemoveBlanks  
  パスからすべての先頭および末尾のスペースを削除するには、このメソッドを呼び出します。  
@@ -685,7 +685,7 @@ void RemoveBlanks();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745)します。  
+ 詳細については、次を参照してください。 [PathRemoveBlanks](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveblanksa)します。  
   
 ##  <a name="removeextension"></a>  CPathT::RemoveExtension  
  1 つを使用する必要がある場合は、パスからファイルの拡張子を削除するには、このメソッドを呼び出します。  
@@ -695,7 +695,7 @@ void RemoveExtension();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [PathRemoveExtension](http://msdn.microsoft.com/library/windows/desktop/bb773746)します。  
+ 詳細については、次を参照してください。 [PathRemoveExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveextensiona)します。  
   
 ##  <a name="removefilespec"></a>  CPathT::RemoveFileSpec  
  それらがある場合は、パスからファイル名の末尾と円記号を削除するには、このメソッドを呼び出します。  
@@ -708,7 +708,7 @@ BOOL RemoveFileSpec();
  成功した場合、true を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [PathRemoveFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773748)します。  
+ 詳細については、次を参照してください。 [PathRemoveFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovefilespeca)します。  
   
 ##  <a name="renameextension"></a>  CPathT::RenameExtension  
  このメソッドを呼び出して、新しい拡張機能で、パスにファイル名拡張子を置き換えます。 ファイル名に拡張機能が含まれていない場合は、パスの末尾に、拡張機能に接続されています。  
@@ -725,7 +725,7 @@ BOOL RenameExtension(PCXSTR pszExtension);
  成功した場合、true を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [PathRenameExtension](http://msdn.microsoft.com/library/windows/desktop/bb773749)します。  
+ 詳細については、次を参照してください。 [PathRenameExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathrenameextensiona)します。  
   
 ##  <a name="skiproot"></a>  CPathT::SkipRoot  
  ドライブ文字または UNC (汎用名前付け規則) サーバー/共有のパス部分を無視して、パスを解析するには、このメソッドを呼び出します。  
@@ -738,7 +738,7 @@ int SkipRoot() const;
  (ドライブ文字または UNC サーバー/共有) のルートの次のサブパスの開始位置を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [PathSkipRoot](http://msdn.microsoft.com/library/windows/desktop/bb773754)します。  
+ 詳細については、次を参照してください。 [PathSkipRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathskiproota)します。  
   
 ##  <a name="strippath"></a>  CPathT::StripPath  
  完全修飾パスとファイル名のパス部分を削除するには、このメソッドを呼び出します。  
@@ -748,7 +748,7 @@ void StripPath();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [PathStripPath](http://msdn.microsoft.com/library/windows/desktop/bb773756)します。  
+ 詳細については、次を参照してください。 [PathStripPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathstrippatha)します。  
   
 ##  <a name="striptoroot"></a>  CPathT::StripToRoot  
  ただし、ルート情報、パスのすべての部分を削除するには、このメソッドを呼び出します。  
@@ -761,7 +761,7 @@ BOOL StripToRoot();
  有効なドライブ文字の場合は TRUE を返しますが見つかりましたパス、または FALSE それ以外の場合。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757)します。  
+ 詳細については、次を参照してください。 [PathStripToRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathstriptoroota)します。  
   
 ##  <a name="unquotespaces"></a>  CPathT::UnquoteSpaces  
  先頭とパスの末尾から引用符を削除するには、このメソッドを呼び出します。  
@@ -771,7 +771,7 @@ void UnquoteSpaces();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763)します。  
+ 詳細については、次を参照してください。 [PathUnquoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathunquotespacesa)します。  
   
 ##  <a name="xchar"></a>  CPathT::XCHAR  
  文字型。  

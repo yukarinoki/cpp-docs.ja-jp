@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68ae5547e2cc650c65b4a67d9734f00cf88b76c8
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 69d25b87c03216b151a29c7688e61fcc278d0dd7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885615"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199170"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken クラス
 このクラスは、アクセス トークンのラッパーです。  
@@ -140,11 +140,11 @@ class CAccessToken
 |[CAccessToken::SetPrimaryGroup](#setprimarygroup)|プライマリ グループを設定するには、このメソッドを呼び出して、`CAccessToken`オブジェクト。|  
   
 ## <a name="remarks"></a>Remarks  
- [アクセス トークン](http://msdn.microsoft.com/library/windows/desktop/aa374909)プロセスまたはスレッドのセキュリティ コンテキストを示し、Windows システムにログオンしている各ユーザーに割り当てられているオブジェクトです。  
+ [アクセス トークン](/windows/desktop/SecAuthZ/access-tokens)プロセスまたはスレッドのセキュリティ コンテキストを示し、Windows システムにログオンしている各ユーザーに割り当てられているオブジェクトです。  
   
- Windows でのアクセス制御モデルの概要については、次を参照してください。[アクセス制御](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK に含まれています。  
+ Windows でのアクセス制御モデルの概要については、次を参照してください。[アクセス制御](/windows/desktop/SecAuthZ/access-control)Windows SDK に含まれています。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlsecurity.h  
   
 ##  <a name="attach"></a>  CAccessToken::Attach  
@@ -212,13 +212,13 @@ bool CreateImpersonationToken(
  新しいポインター`CAccessToken`オブジェクト。  
   
  *sil*  
- 指定します、 [SECURITY_IMPERSONATION_LEVEL](http://msdn.microsoft.com/library/windows/desktop/aa379572)新しいトークンの偽装レベルを提供する型を列挙します。  
+ 指定します、 [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level)新しいトークンの偽装レベルを提供する型を列挙します。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、true を返します。  
   
 ### <a name="remarks"></a>Remarks  
- `CreateImpersonationToken` 呼び出し[DuplicateToken](http://msdn.microsoft.com/library/windows/desktop/aa446616)新しい権限借用トークンを作成します。  
+ `CreateImpersonationToken` 呼び出し[DuplicateToken](https://msdn.microsoft.com/library/windows/desktop/aa446616)新しい権限借用トークンを作成します。  
   
 ##  <a name="createprimarytoken"></a>  CAccessToken::CreatePrimaryToken  
  新しいプライマリ トークンを作成するには、このメソッドを呼び出します。  
@@ -235,16 +235,16 @@ bool CreatePrimaryToken(
  新しいポインター`CAccessToken`オブジェクト。  
   
  *dwDesiredAccess*  
- 新しいトークンの要求されたアクセス権を指定します。 MAXIMUM_ALLOWED、既定では、呼び出し元が有効なすべてのアクセス権を要求します。 参照してください[アクセス権やアクセス マスク](http://msdn.microsoft.com/library/windows/desktop/aa374902)詳細にアクセス権限。  
+ 新しいトークンの要求されたアクセス権を指定します。 MAXIMUM_ALLOWED、既定では、呼び出し元が有効なすべてのアクセス権を要求します。 参照してください[アクセス権やアクセス マスク](/windows/desktop/SecAuthZ/access-rights-and-access-masks)詳細にアクセス権限。  
   
  *pTokenAttributes*  
- ポインターを[SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)構造体を新しいトークンのセキュリティ記述子を指定し、子プロセスが、トークンを継承できるかどうかを決定します。 場合*pTokenAttributes* null、トークンは、既定のセキュリティ記述子を取得およびハンドルは継承できません。  
+ ポインターを[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)構造体を新しいトークンのセキュリティ記述子を指定し、子プロセスが、トークンを継承できるかどうかを決定します。 場合*pTokenAttributes* null、トークンは、既定のセキュリティ記述子を取得およびハンドルは継承できません。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、true を返します。  
   
 ### <a name="remarks"></a>Remarks  
- `CreatePrimaryToken` 呼び出し[DuplicateTokenEx](http://msdn.microsoft.com/library/windows/desktop/aa446617)新しいプライマリ トークンを作成します。  
+ `CreatePrimaryToken` 呼び出し[DuplicateTokenEx](https://msdn.microsoft.com/library/windows/desktop/aa446617)新しいプライマリ トークンを作成します。  
   
 ##  <a name="createprocessasuser"></a>  CAccessToken::CreateProcessAsUser  
  によって表されるユーザーのセキュリティ コンテキストで実行されている新しいプロセスを作成するには、このメソッドを呼び出して、`CAccessToken`オブジェクト。  
@@ -271,22 +271,22 @@ bool CreateProcessAsUser(
  実行するコマンドラインを指定する null で終わる文字列へのポインター。  
   
  *pProcessInformation*  
- ポインターを[ハンドル](http://msdn.microsoft.com/library/windows/desktop/ms684873)を新しいプロセスの識別情報を受け取る構造体。  
+ ポインターを[ハンドル](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_process_information)を新しいプロセスの識別情報を受け取る構造体。  
   
  *pStartupInfo*  
- ポインターを[STARTUPINFO](http://msdn.microsoft.com/library/windows/desktop/ms686331)を新しいプロセスのメイン ウィンドウの表示方法を指定します。  
+ ポインターを[STARTUPINFO](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_startupinfoa)を新しいプロセスのメイン ウィンドウの表示方法を指定します。  
   
  *は、*  
- 優先順位クラスとプロセスの作成を制御する追加のフラグを指定します。 Win32 関数を参照してください。 [CreateProcessAsUser](http://msdn.microsoft.com/library/windows/desktop/ms682429)フラグの一覧についてはします。  
+ 優先順位クラスとプロセスの作成を制御する追加のフラグを指定します。 Win32 関数を参照してください。 [CreateProcessAsUser](https://msdn.microsoft.com/library/windows/desktop/ms682429)フラグの一覧についてはします。  
   
  *bLoadProfile*  
- ユーザーのプロファイルが読み込まれる TRUE の場合、 [LoadUserProfile](http://msdn.microsoft.com/library/windows/desktop/bb762281)します。  
+ ユーザーのプロファイルが読み込まれる TRUE の場合、 [LoadUserProfile](/windows/desktop/api/userenv/nf-userenv-loaduserprofilea)します。  
   
  *pProcessAttributes*  
- ポインターを[SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)構造体を新しいプロセスのセキュリティ記述子を指定し、返されたハンドルを子プロセスが継承するかどうかを決定します。 場合*pProcessAttributes* null、プロセスは、既定のセキュリティ記述子を取得およびハンドルは継承できません。  
+ ポインターを[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)構造体を新しいプロセスのセキュリティ記述子を指定し、返されたハンドルを子プロセスが継承するかどうかを決定します。 場合*pProcessAttributes* null、プロセスは、既定のセキュリティ記述子を取得およびハンドルは継承できません。  
   
  *pThreadAttributes*  
- ポインターを[SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)構造体を新しいスレッドのセキュリティ記述子を指定し、返されたハンドルを子プロセスが継承するかどうかを決定します。 場合*pThreadAttributes* null、スレッドは、既定のセキュリティ記述子を取得およびハンドルは継承できません。  
+ ポインターを[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)構造体を新しいスレッドのセキュリティ記述子を指定し、返されたハンドルを子プロセスが継承するかどうかを決定します。 場合*pThreadAttributes* null、スレッドは、既定のセキュリティ記述子を取得およびハンドルは継承できません。  
   
  *bInherit*  
  新しいプロセスが呼び出し元のプロセスからハンドルを継承するかどうかを示します。 TRUE の場合、呼び出し元のプロセスで継承可能な各開いているハンドルは、新しいプロセスによって継承されます。 継承されたハンドルは、元のハンドルと同じ値とアクセス権限を持っています。  
@@ -298,7 +298,7 @@ bool CreateProcessAsUser(
  成功した場合、true を返します。  
   
 ### <a name="remarks"></a>Remarks  
- `CreateProcessAsUser` 使用して、`CreateProcessAsUser`によって表されるユーザーのセキュリティ コンテキストで実行されている新しいプロセスを作成する Win32 関数、`CAccessToken`オブジェクト。 説明を参照して、 [CreateProcessAsUser](http://msdn.microsoft.com/library/windows/desktop/ms682429)関数に必要なパラメーターの詳細についてはします。  
+ `CreateProcessAsUser` 使用して、`CreateProcessAsUser`によって表されるユーザーのセキュリティ コンテキストで実行されている新しいプロセスを作成する Win32 関数、`CAccessToken`オブジェクト。 説明を参照して、 [CreateProcessAsUser](https://msdn.microsoft.com/library/windows/desktop/ms682429)関数に必要なパラメーターの詳細についてはします。  
   
  このメソッドが成功する、 `CAccessToken` (制限付きトークンである) 場合を除き、オブジェクトは AssignPrimaryToken を保持する必要がありますと IncreaseQuota 特権。  
   
@@ -330,7 +330,7 @@ bool CreateRestrictedToken(
  成功した場合、true を返します。  
   
 ### <a name="remarks"></a>Remarks  
- `CreateRestrictedToken` 使用して、 [CreateRestrictedToken](http://msdn.microsoft.com/library/windows/desktop/aa446583) Win32 関数を新しく作成する`CAccessToken`オブジェクトは、制限があります。  
+ `CreateRestrictedToken` 使用して、 [CreateRestrictedToken](https://msdn.microsoft.com/library/windows/desktop/aa446583) Win32 関数を新しく作成する`CAccessToken`オブジェクトは、制限があります。  
   
 > [!IMPORTANT]
 >  使用する場合`CreateRestrictedToken`、以下を確認する: 既存のトークンが有効な (そして、ユーザーが入っていない) と*SidsToDisable*と*PrivilegesToDelete*が有効 (かつユーザーが入力されません)。 メソッドが FALSE を返した場合は、機能を拒否します。  
@@ -486,7 +486,7 @@ bool GetImpersonationLevel(
   
 ### <a name="parameters"></a>パラメーター  
  *pImpersonationLevel*  
- ポインターを[SECURITY_IMPERSONATION_LEVEL](http://msdn.microsoft.com/library/windows/desktop/aa379572)偽装レベルの情報を受信する列挙型。  
+ ポインターを[SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level)偽装レベルの情報を受信する列挙型。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、true を返します。  
@@ -500,7 +500,7 @@ bool GetLogonSessionId(LUID* pluid) const throw(...);
   
 ### <a name="parameters"></a>パラメーター  
  *pluid*  
- ポインターを[LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)ログオン セッションの id これが表示されます。  
+ ポインターを[LUID](/windows/desktop/api/winnt/ns-winnt-_luid)ログオン セッションの id これが表示されます。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、true を返します。  
@@ -591,7 +591,7 @@ bool GetProcessToken(DWORD dwDesiredAccess, HANDLE hProcess = NULL) throw();
  成功した場合、true を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 呼び出し、 [OpenProcessToken](http://msdn.microsoft.com/library/aa379295\(vs.85\).aspx) Win32 関数。  
+ 呼び出し、 [OpenProcessToken](https://msdn.microsoft.com/library/aa379295\(vs.85\).aspx) Win32 関数。  
   
 ##  <a name="getprofile"></a>  CAccessToken::GetProfile  
  関連付けられているユーザーのプロファイルを指すハンドルを取得するには、このメソッドを呼び出して、`CAccessToken`オブジェクト。  
@@ -612,7 +612,7 @@ bool GetSource(TOKEN_SOURCE* pSource) const throw(...);
   
 ### <a name="parameters"></a>パラメーター  
  *pSource*  
- ポインターを[TOKEN_SOURCE](http://msdn.microsoft.com/library/windows/desktop/aa379631)構造体。  
+ ポインターを[TOKEN_SOURCE](/windows/desktop/api/winnt/ns-winnt-_token_source)構造体。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、true を返します。  
@@ -626,7 +626,7 @@ bool GetStatistics(TOKEN_STATISTICS* pStatistics) const throw(...);
   
 ### <a name="parameters"></a>パラメーター  
  *pStatistics*  
- ポインターを[TOKEN_STATISTICS](http://msdn.microsoft.com/library/windows/desktop/aa379632)構造体。  
+ ポインターを[TOKEN_STATISTICS](/windows/desktop/api/winnt/ns-winnt-_token_statistics)構造体。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、true を返します。  
@@ -679,7 +679,7 @@ bool GetTokenId(LUID* pluid) const throw(...);
   
 ### <a name="parameters"></a>パラメーター  
  *pluid*  
- ポインターを[LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)トークンの ID が表示されます  
+ ポインターを[LUID](/windows/desktop/api/winnt/ns-winnt-_luid)トークンの ID が表示されます  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、true を返します。  
@@ -693,7 +693,7 @@ bool GetType(TOKEN_TYPE* pType) const throw(...);
   
 ### <a name="parameters"></a>パラメーター  
  *p 入力してください。*  
- アドレス、 [TOKEN_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379633)成功した場合、トークンの種類を受け取る変数。  
+ アドレス、 [TOKEN_TYPE](/windows/desktop/api/winnt/ne-winnt-_token_type)成功した場合、トークンの種類を受け取る変数。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、true を返します。  
@@ -805,16 +805,16 @@ bool LogonUser(
  指定されたユーザー アカウントのクリア テキスト パスワードを指定する null で終わる文字列へのポインター *pszUserName*します。  
   
  *dwLogonType*  
- 実行するログオン操作の種類を指定します。 参照してください[LogonUser](http://msdn.microsoft.com/library/windows/desktop/aa378184)の詳細。  
+ 実行するログオン操作の種類を指定します。 参照してください[LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera)の詳細。  
   
  *dwLogonProvider*  
- ログオンのプロバイダーを指定します。 参照してください[LogonUser](http://msdn.microsoft.com/library/windows/desktop/aa378184)の詳細。  
+ ログオンのプロバイダーを指定します。 参照してください[LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera)の詳細。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、true を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 関連付けられる、ログオンによるトークンへのアクセス、`CAccessToken`します。 このメソッドが成功する、`CAccessToken`オブジェクトの基本の信頼されたコンピューターの一部として、所有者を識別する、SE_TCB_NAME 特権を保持する必要があります。 参照してください[LogonUser](http://msdn.microsoft.com/library/windows/desktop/aa378184)必要な権限に関する詳細についてはします。  
+ 関連付けられる、ログオンによるトークンへのアクセス、`CAccessToken`します。 このメソッドが成功する、`CAccessToken`オブジェクトの基本の信頼されたコンピューターの一部として、所有者を識別する、SE_TCB_NAME 特権を保持する必要があります。 参照してください[LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera)必要な権限に関する詳細についてはします。  
   
 ##  <a name="opencomclienttoken"></a>  CAccessToken::OpenCOMClientToken  
  COM サーバーを初期化するには、クライアントから呼び出しの処理内からこのメソッドを呼び出し、 `CAccessToken` COM クライアントからアクセス トークンを使用します。  
@@ -834,7 +834,7 @@ bool OpenCOMClientToken(
  TRUE の場合、この呼び出しが正常に完了した場合、現在のスレッドは呼び出し元の COM クライアントを偽装します。 FALSE の場合は、アクセス トークンが開きますが、この呼び出しが完了すると、スレッドは、権限借用トークンを持ちません。  
   
  *bOpenAsSelf*  
- アクセス チェックが、スレッドの呼び出し元のセキュリティ コンテキストに対して行われるかどうかを示す、 [GetThreadToken](http://msdn.microsoft.com/library/windows/desktop/ms683182)メソッドまたは呼び出し元のスレッドのプロセスのセキュリティ コンテキスト。  
+ アクセス チェックが、スレッドの呼び出し元のセキュリティ コンテキストに対して行われるかどうかを示す、 [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)メソッドまたは呼び出し元のスレッドのプロセスのセキュリティ コンテキスト。  
   
  このパラメーターが FALSE の場合は、呼び出し元のスレッドのセキュリティ コンテキストを使用してアクセス チェックが実行されます。 スレッドは、クライアントを偽装する場合のクライアント プロセスをこのセキュリティ コンテキストにできます。 このパラメーターが TRUE の場合、呼び出し元のスレッドのプロセスのセキュリティ コンテキストを使用してアクセス チェックを実行します。  
   
@@ -866,7 +866,7 @@ bool OpenNamedPipeClientToken(
  TRUE の場合、この呼び出しが正常に完了した場合、現在のスレッドは呼び出し元のパイプ クライアントを偽装します。 FALSE の場合は、アクセス トークンが開きますが、この呼び出しが完了すると、スレッドは、権限借用トークンを持ちません。  
   
  *bOpenAsSelf*  
- アクセス チェックが、スレッドの呼び出し元のセキュリティ コンテキストに対して行われるかどうかを示す、 [GetThreadToken](http://msdn.microsoft.com/library/windows/desktop/ms683182)メソッドまたは呼び出し元のスレッドのプロセスのセキュリティ コンテキスト。  
+ アクセス チェックが、スレッドの呼び出し元のセキュリティ コンテキストに対して行われるかどうかを示す、 [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)メソッドまたは呼び出し元のスレッドのプロセスのセキュリティ コンテキスト。  
   
  このパラメーターが FALSE の場合は、呼び出し元のスレッドのセキュリティ コンテキストを使用してアクセス チェックが実行されます。 スレッドは、クライアントを偽装する場合のクライアント プロセスをこのセキュリティ コンテキストにできます。 このパラメーターが TRUE の場合、呼び出し元のスレッドのプロセスのセキュリティ コンテキストを使用してアクセス チェックを実行します。  
   
@@ -898,7 +898,7 @@ bool OpenRPCClientToken(
  TRUE の場合、この呼び出しが正常に完了した場合、現在のスレッドは呼び出し元の RPC クライアントを偽装します。 FALSE の場合は、アクセス トークンが開きますが、この呼び出しが完了すると、スレッドは、権限借用トークンを持ちません。  
   
  *bOpenAsSelf*  
- アクセス チェックが、スレッドの呼び出し元のセキュリティ コンテキストに対して行われるかどうかを示す、 [GetThreadToken](http://msdn.microsoft.com/library/windows/desktop/ms683182)メソッドまたは呼び出し元のスレッドのプロセスのセキュリティ コンテキスト。  
+ アクセス チェックが、スレッドの呼び出し元のセキュリティ コンテキストに対して行われるかどうかを示す、 [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)メソッドまたは呼び出し元のスレッドのプロセスのセキュリティ コンテキスト。  
   
  このパラメーターが FALSE の場合は、呼び出し元のスレッドのセキュリティ コンテキストを使用してアクセス チェックが実行されます。 スレッドは、クライアントを偽装する場合のクライアント プロセスをこのセキュリティ コンテキストにできます。 このパラメーターが TRUE の場合、呼び出し元のスレッドのプロセスのセキュリティ コンテキストを使用してアクセス チェックを実行します。  
   
@@ -927,12 +927,12 @@ bool OpenThreadToken(
  TRUE の場合、メソッドの完了後、スレッドは、要求された権限借用レベルで左は。 FALSE の場合、スレッドは元の偽装レベルに戻ります。  
   
  *bOpenAsSelf*  
- アクセス チェックが、スレッドの呼び出し元のセキュリティ コンテキストに対して行われるかどうかを示す、 [GetThreadToken](http://msdn.microsoft.com/library/windows/desktop/ms683182)メソッドまたは呼び出し元のスレッドのプロセスのセキュリティ コンテキスト。  
+ アクセス チェックが、スレッドの呼び出し元のセキュリティ コンテキストに対して行われるかどうかを示す、 [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)メソッドまたは呼び出し元のスレッドのプロセスのセキュリティ コンテキスト。  
   
  このパラメーターが FALSE の場合は、呼び出し元のスレッドのセキュリティ コンテキストを使用してアクセス チェックが実行されます。 スレッドは、クライアントを偽装する場合のクライアント プロセスをこのセキュリティ コンテキストにできます。 このパラメーターが TRUE の場合、呼び出し元のスレッドのプロセスのセキュリティ コンテキストを使用してアクセス チェックを実行します。  
   
  *sil*  
- 指定します、 [SECURITY_IMPERSONATION_LEVEL](http://msdn.microsoft.com/library/windows/desktop/aa379572)トークンの偽装レベルを提供する型を列挙します。  
+ 指定します、 [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level)トークンの偽装レベルを提供する型を列挙します。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、true を返します。  
@@ -953,7 +953,7 @@ bool PrivilegeCheck(
   
 ### <a name="parameters"></a>パラメーター  
  *RequiredPrivileges*  
- ポインターを[PRIVILEGE_SET](http://msdn.microsoft.com/library/windows/desktop/aa379307)構造体。  
+ ポインターを[PRIVILEGE_SET](/windows/desktop/api/winnt/ns-winnt-_privilege_set)構造体。  
   
  *pbResult*  
  メソッドが設定を指定した権限の一部またはすべてがで有効かどうかを示す値へのポインター、`CAccessToken`オブジェクト。  
@@ -962,7 +962,7 @@ bool PrivilegeCheck(
  成功した場合、true を返します。  
   
 ### <a name="remarks"></a>Remarks  
- ときに`PrivilegeCheck`から制御が戻る、`Attributes`のそれぞれに所属[LUID_AND_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379263)対応する特権が有効になっている場合は、構造体を SE_PRIVILEGE_USED_FOR_ACCESS に設定します。 このメソッドは、 [PrivilegeCheck](http://msdn.microsoft.com/library/windows/desktop/aa379304) Win32 関数。  
+ ときに`PrivilegeCheck`から制御が戻る、`Attributes`のそれぞれに所属[LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes)対応する特権が有効になっている場合は、構造体を SE_PRIVILEGE_USED_FOR_ACCESS に設定します。 このメソッドは、 [PrivilegeCheck](https://msdn.microsoft.com/library/windows/desktop/aa379304) Win32 関数。  
   
 ##  <a name="revert"></a>  CAccessToken::Revert  
  権限借用トークンを使用してからスレッドを停止するには、このメソッドを呼び出します。  
@@ -1034,5 +1034,5 @@ bool SetPrimaryGroup(const CSid& rSid) throw(...);
   
 ## <a name="see-also"></a>関連項目  
  [ATLSecurity サンプル](../../visual-cpp-samples.md)   
- [アクセス トークン](http://msdn.microsoft.com/library/windows/desktop/aa374909)   
+ [アクセス トークン](/windows/desktop/SecAuthZ/access-tokens)   
  [クラスの概要](../../atl/atl-class-overview.md)

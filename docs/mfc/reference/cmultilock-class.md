@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a098f275ec0c7b553d7ac192d7b588ffa6dcfa1b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ebcfda85c82d10f2493234bb340a68129f779a28
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849874"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198113"
 ---
 # <a name="cmultilock-class"></a>CMultiLock クラス
 マルチスレッド プログラムで複数のリソースのアクセス制御に使うアクセス コントロール機構を表します。  
@@ -70,7 +70,7 @@ class CMultiLock
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CMultiLock`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxmt.h  
   
 ##  <a name="cmultilock"></a>  CMultiLock::CMultiLock  
@@ -128,7 +128,7 @@ DWORD Lock(
  待機時間のすべてのオブジェクトを返す前に同時にシグナル状態になる必要があるかどうかを指定します。 FALSE の場合、`Lock`待機オブジェクトのいずれかがシグナルを受け取るが返されます。  
   
  *dwWakeMask*  
- 待機を中止できるはその他の条件を指定します。 このパラメーターの使用可能なオプションの完全な一覧は、次を参照してください。 [MsgWaitForMultipleObjects](http://msdn.microsoft.com/library/windows/desktop/ms684242) Windows SDK に含まれています。  
+ 待機を中止できるはその他の条件を指定します。 このパラメーターの使用可能なオプションの完全な一覧は、次を参照してください。 [MsgWaitForMultipleObjects](/windows/desktop/api/winuser/nf-winuser-msgwaitformultipleobjects) Windows SDK に含まれています。  
   
 ### <a name="return-value"></a>戻り値  
  場合`Lock`失敗すると、以下の値を返します - 1。 成功した場合、次の値のいずれかが返されます。  

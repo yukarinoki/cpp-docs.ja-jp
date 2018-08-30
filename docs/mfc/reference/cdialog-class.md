@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb8dd6fbb4cbbcea6e452afadff5b0c0e081d34e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: ff3bc9ea331be6c25be80b21c14a309d47718c8e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339411"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217334"
 ---
 # <a name="cdialog-class"></a>CDialog クラス
 画面のダイアログ ボックスを表示するための基本クラス。  
@@ -115,7 +115,7 @@ class CDialog : public CWnd
   
  モーダル ダイアログ ボックスを作成するには、派生ダイアログ クラスのコンス トラクターを使用して、スタック上のオブジェクトの構築を呼び出して`DoModal`ダイアログ ウィンドウとそのコントロールを作成します。 モードレス ダイアログを作成する場合は、呼び出す`Create`ダイアログ クラスのコンス トラクター。  
   
- 使用して、メモリ内テンプレートを作成することも、 [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Windows SDK」の説明に従って、データが構造体します。 構築した後、`CDialog`オブジェクト、呼び出す[CreateIndirect](#createindirect) 、モードレスを作成するダイアログ ボックスで、または呼び出し[持たない](#initmodalindirect)と[DoModal](#domodal)モーダルを作成するにはダイアログ ボックス。  
+ 使用して、メモリ内テンプレートを作成することも、 [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) Windows SDK」の説明に従って、データが構造体します。 構築した後、`CDialog`オブジェクト、呼び出す[CreateIndirect](#createindirect) 、モードレスを作成するダイアログ ボックスで、または呼び出し[持たない](#initmodalindirect)と[DoModal](#domodal)モーダルを作成するにはダイアログ ボックス。  
   
  オーバーライドで、exchange と検証のデータ マップが書き込まれる`CWnd::DoDataExchange`新しいダイアログ クラスに追加されています。 参照してください、 [DoDataExchange](../../mfc/reference/cwnd-class.md#dodataexchange)メンバー関数で`CWnd`の詳細については、exchange と検証機能。  
   
@@ -146,7 +146,7 @@ class CDialog : public CWnd
   
  `CDialog`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="cdialog"></a>  詳細  
@@ -220,7 +220,7 @@ virtual BOOL Create(
   
  `Create`  ダイアログ ボックスが作成された後すぐに、メンバー関数が返されます。  
   
- 親ウィンドウが作成されると、ダイアログ ボックスを表示する必要がある場合は、ダイアログ ボックスのテンプレートで WS_VISIBLE スタイルを使用します。 それ以外の場合、呼び出す必要がある`ShowWindow`します。 さらにダイアログ ボックスのスタイルと、アプリケーションは、次を参照してください。、 [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Windows SDK の構造と[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)で、 *MFC リファレンス*します。  
+ 親ウィンドウが作成されると、ダイアログ ボックスを表示する必要がある場合は、ダイアログ ボックスのテンプレートで WS_VISIBLE スタイルを使用します。 それ以外の場合、呼び出す必要がある`ShowWindow`します。 さらにダイアログ ボックスのスタイルと、アプリケーションは、次を参照してください。、 [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) Windows SDK の構造と[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)で、 *MFC リファレンス*します。  
   
  使用して、`CWnd::DestroyWindow`関数によって作成されたダイアログ ボックスを破棄する、`Create`関数。  
   
@@ -244,7 +244,7 @@ virtual BOOL CreateIndirect(
   
 ### <a name="parameters"></a>パラメーター  
  *lpDialogTemplate*  
- ダイアログ ボックスを作成するために使用 ダイアログ ボックスのテンプレートが含まれるメモリへのポインター。 このテンプレートは、の形式で、 [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394)構造とコントロールは、Windows SDK で説明されているとします。  
+ ダイアログ ボックスを作成するために使用 ダイアログ ボックスのテンプレートが含まれるメモリへのポインター。 このテンプレートは、の形式で、 [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate)構造とコントロールは、Windows SDK で説明されているとします。  
   
  *pParentWnd*  
  ダイアログ オブジェクトの親ウィンドウのオブジェクトを指し示す (型の[CWnd](../../mfc/reference/cwnd-class.md))。 NULL の場合、ダイアログ オブジェクトの親ウィンドウは、アプリケーションのメイン ウィンドウに設定されます。  
@@ -261,7 +261,7 @@ virtual BOOL CreateIndirect(
 ### <a name="remarks"></a>Remarks  
  `CreateIndirect`  ダイアログ ボックスが作成された後すぐに、メンバー関数が返されます。  
   
- 親ウィンドウが作成されると、ダイアログ ボックスを表示する必要がある場合は、ダイアログ ボックスのテンプレートで WS_VISIBLE スタイルを使用します。 それ以外の場合、呼び出す必要がある`ShowWindow`表示することです。 テンプレートの他のダイアログ ボックスのスタイルを指定する方法の詳細については、次を参照してください。、 [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Windows SDK の構造体。  
+ 親ウィンドウが作成されると、ダイアログ ボックスを表示する必要がある場合は、ダイアログ ボックスのテンプレートで WS_VISIBLE スタイルを使用します。 それ以外の場合、呼び出す必要がある`ShowWindow`表示することです。 テンプレートの他のダイアログ ボックスのスタイルを指定する方法の詳細については、次を参照してください。、 [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) Windows SDK の構造体。  
   
  使用して、`CWnd::DestroyWindow`関数によって作成されたダイアログ ボックスを破棄する、`CreateIndirect`関数。  
   
@@ -275,7 +275,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- **Int**の値を指定する値、*れた*パラメーターに渡された、 [CDialog::EndDialog](#enddialog)メンバー関数は、ダイアログ ボックスを閉じるために使用します。 関数を作成できませんでした ダイアログ ボックスで、または IDABORT 出力ウィンドウがからエラー情報がどのように格納する場合、その他のエラーが発生した場合の場合、戻り値は-1 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)します。  
+ **Int**の値を指定する値、*れた*パラメーターに渡された、 [CDialog::EndDialog](#enddialog)メンバー関数は、ダイアログ ボックスを閉じるために使用します。 関数を作成できませんでした ダイアログ ボックスで、または IDABORT 出力ウィンドウがからエラー情報がどのように格納する場合、その他のエラーが発生した場合の場合、戻り値は-1 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)します。  
   
 ### <a name="remarks"></a>Remarks  
  このメンバー関数は、ダイアログ ボックスがアクティブな間、ユーザーとすべての対話を処理します。 これにより、ダイアログ ボックスがモーダル; は、します。ユーザーは、ダイアログ ボックスが閉じられるまで、他のウィンドウを操作できません。  
@@ -358,7 +358,7 @@ BOOL InitModalIndirect(
   
 ### <a name="parameters"></a>パラメーター  
  *lpDialogTemplate*  
- ダイアログ ボックスを作成するために使用 ダイアログ ボックスのテンプレートが含まれるメモリへのポインター。 このテンプレートは、の形式で、 [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394)構造とコントロールは、Windows SDK で説明されているとします。  
+ ダイアログ ボックスを作成するために使用 ダイアログ ボックスのテンプレートが含まれるメモリへのポインター。 このテンプレートは、の形式で、 [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate)構造とコントロールは、Windows SDK で説明されているとします。  
   
  *hDialogTemplate*  
  ダイアログ ボックスのテンプレートを含むグローバル メモリを識別するハンドルが含まれています。 このテンプレートは、の形式で、`DLGTEMPLATE`構造と、ダイアログ ボックス内の各コントロールのデータ。  

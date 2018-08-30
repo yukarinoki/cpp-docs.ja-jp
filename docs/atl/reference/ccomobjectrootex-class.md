@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55da0705027d6625d4140691b1b91912fb94c555
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 4ca7cfb6a3d83e69c4b447a9e953581285ffaaf0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027528"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219174"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx クラス
 このクラスは、非集計と集計の両方のオブジェクトのオブジェクト参照カウントの管理を処理するメソッドを提供します。  
@@ -99,11 +99,11 @@ class CComObjectRootEx : public CComObjectRootBase
   
  使用する利点`CComPolyObject`は両方を持つように`CComAggObject`と`CComObject`集計データおよび非集計のケースを処理するモジュールでします。 1 つ`CComPolyObject`オブジェクトは両方のケースを処理します。 そのため、vtable の 1 つだけのコピーと関数の 1 つのコピーは、モジュール内に存在します。 Vtable が大きい場合、モジュールのサイズが大幅に減りこのことができます。 ただし、vtable が小さい場合を使用して`CComPolyObject`には、集計または非集約オブジェクトは、最適化されていないために、モジュールのサイズを少し大きめにつながるは`CComAggObject`と`CComObject`します。  
   
- オブジェクトを集約すると場合、 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)によって実装される`CComAggObject`または`CComPolyObject`します。 これらのクラスに委任`QueryInterface`、 `AddRef`、および`Release`呼び出し`CComObjectRootEx`の`OuterQueryInterface`、 `OuterAddRef`、および`OuterRelease`不明な外部に転送します。 通常、オーバーライドする`CComObjectRootEx::FinalConstruct`な集約オブジェクトを作成し、オーバーライドするクラスで`CComObjectRootEx::FinalRelease`メモリを解放するオブジェクトを集計します。  
+ オブジェクトを集約すると場合、 [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)によって実装される`CComAggObject`または`CComPolyObject`します。 これらのクラスに委任`QueryInterface`、 `AddRef`、および`Release`呼び出し`CComObjectRootEx`の`OuterQueryInterface`、 `OuterAddRef`、および`OuterRelease`不明な外部に転送します。 通常、オーバーライドする`CComObjectRootEx::FinalConstruct`な集約オブジェクトを作成し、オーバーライドするクラスで`CComObjectRootEx::FinalRelease`メモリを解放するオブジェクトを集計します。  
   
  場合は、オブジェクトは集計されず`IUnknown`によって実装される`CComObject`または`CComPolyObject`します。 この場合、呼び出し`QueryInterface`、 `AddRef`、および`Release`に委任されます`CComObjectRootEx`の`InternalQueryInterface`、 `InternalAddRef`、および`InternalRelease`実際の操作を実行します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlcom.h  
   
 ##  <a name="ccomobjectrootex"></a>  CComObjectRootEx::CComObjectRootEx  
@@ -222,7 +222,7 @@ ULONG InternalRelease();
  スレッド モデルがマルチ スレッドの場合は`InterlockedDecrement`を 1 つ以上のスレッドが同時に、参照カウントを変更することを防ぐために使用します。  
   
 ##  <a name="lock"></a>  CComObjectRootEx::Lock  
- このメソッドが、Win32 API 関数を呼び出すスレッド モデルがマルチ スレッドの場合は、 [EnterCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682608)、どの待機スレッドがクリティカル セクション オブジェクトの所有権を取得できるまでは、プライベート データ メンバーを通じて取得します。  
+ このメソッドが、Win32 API 関数を呼び出すスレッド モデルがマルチ スレッドの場合は、 [EnterCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-entercriticalsection)、どの待機スレッドがクリティカル セクション オブジェクトの所有権を取得できるまでは、プライベート データ メンバーを通じて取得します。  
   
 ```
 void Lock();
@@ -279,7 +279,7 @@ IUnknown*
  不明な外部へのポインターが格納されている場合は、オブジェクトを集計すると、`m_pOuterUnknown`します。 オブジェクトは集計されず、参照カウントがによってアクセス`AddRef`と`Release`は[m_dwRef](#m_dwref)します。  
   
 ##  <a name="objectmain"></a>  CComObjectRootEx::ObjectMain  
- 表示される各クラスの[オブジェクト マップ](http://msdn.microsoft.com/b57619cc-534f-4b8f-bfd4-0c12f937202f)モジュールが初期化されると、この関数が呼び出され、もう一度が終了したとき。  
+ 表示される各クラスの[オブジェクト マップ](https://msdn.microsoft.com/b57619cc-534f-4b8f-bfd4-0c12f937202f)モジュールが初期化されると、この関数が呼び出され、もう一度が終了したとき。  
   
 ```
 static void WINAPI ObjectMain(bool bStarting);
@@ -292,7 +292,7 @@ static void WINAPI ObjectMain(bool bStarting);
 ### <a name="remarks"></a>Remarks  
  値、 *bStarting*パラメーターは、モジュールがされているかどうかを示します初期化または終了します。 既定の実装`ObjectMain`、何も行われませんが、初期化またはクラスに割り当てるリソースをクリーンアップするには、クラスでこの関数をオーバーライドすることができます。 なお`ObjectMain`クラスのすべてのインスタンスが要求される前に呼び出されます。  
   
- `ObjectMain` エントリ ポイント関数が実行できる操作の種類が制限されているために、DLL のエントリ ポイントから呼び出されます。 これらの制限の詳細については、次を参照してください。 [Dll と Visual c ランタイム ライブラリの動作](../../build/run-time-library-behavior.md)と[DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583)します。  
+ `ObjectMain` エントリ ポイント関数が実行できる操作の種類が制限されているために、DLL のエントリ ポイントから呼び出されます。 これらの制限の詳細については、次を参照してください。 [Dll と Visual c ランタイム ライブラリの動作](../../build/run-time-library-behavior.md)と[DllMain](/windows/desktop/Dlls/dllmain)します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_COM#41](../../atl/codesnippet/cpp/ccomobjectrootex-class_2.h)]  
@@ -335,7 +335,7 @@ ULONG OuterRelease();
  非デバッグ ビルドで常に 0 を返します。 デバッグ ビルドでは、テストや診断に使用する値を返します。  
   
 ##  <a name="unlock"></a>  CComObjectRootEx::Unlock  
- このメソッドが、Win32 API 関数を呼び出すスレッド モデルがマルチ スレッドの場合は、[により](http://msdn.microsoft.com/library/windows/desktop/ms684169)、クリティカル セクション オブジェクトの所有権を解放するが、プライベート データ メンバーを介して取得します。  
+ このメソッドが、Win32 API 関数を呼び出すスレッド モデルがマルチ スレッドの場合は、[により](/windows/desktop/api/synchapi/nf-synchapi-leavecriticalsection)、クリティカル セクション オブジェクトの所有権を解放するが、プライベート データ メンバーを介して取得します。  
   
 ```
 void Unlock();

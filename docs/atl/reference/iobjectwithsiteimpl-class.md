@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a9403ed1a4ba82a1e60c42ed0e57e975e73d1dd
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d4e2b1fe58ab7ea408438b703b9fe803996fa791
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883789"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219039"
 ---
 # <a name="iobjectwithsiteimpl-class"></a>IObjectWithSiteImpl クラス
 このクラスは、オブジェクトのサイトと通信を可能にするメソッドを提供します。  
@@ -60,7 +60,7 @@ template <class T>
 |[IObjectWithSiteImpl::m_spUnkSite](#m_spunksite)|サイトの管理`IUnknown`ポインター。|  
   
 ## <a name="remarks"></a>Remarks  
- [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765)インターフェイスにより、サイトと通信するオブジェクト。 クラス`IObjectWithSiteImpl`このインターフェイスの既定の実装を提供し、実装`IUnknown`ダンプ情報を送信することによってデバッグでのデバイスをビルドします。  
+ [IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite)インターフェイスにより、サイトと通信するオブジェクト。 クラス`IObjectWithSiteImpl`このインターフェイスの既定の実装を提供し、実装`IUnknown`ダンプ情報を送信することによってデバッグでのデバイスをビルドします。  
   
  `IObjectWithSiteImpl` 2 つの方法を指定します。 クライアントの最初の呼び出し`SetSite`、サイトを渡す`IUnknown`ポインター。 このポインターは、オブジェクト内に保存およびを呼び出すことによって後で取得できる`GetSite`します。  
   
@@ -71,7 +71,7 @@ template <class T>
   
  `IObjectWithSiteImpl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlcom.h  
   
 ##  <a name="getsite"></a>  IObjectWithSiteImpl::GetSite  
@@ -86,7 +86,7 @@ STDMETHOD(GetSite)(
 ### <a name="remarks"></a>Remarks  
  サイトでは、このインターフェイスをサポートする場合を使用して、ポインターが返されます。`ppvSite`します。 それ以外の場合、 `ppvSite` NULL に設定されます。  
   
- 参照してください[IObjectWithSite::GetSite](http://msdn.microsoft.com/library/windows/desktop/ms694452) Windows SDK にします。  
+ 参照してください[IObjectWithSite::GetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-getsite) Windows SDK にします。  
   
 ##  <a name="m_spunksite"></a>  IObjectWithSiteImpl::m_spUnkSite  
  サイトの管理`IUnknown`ポインター。  
@@ -120,7 +120,7 @@ STDMETHOD(SetSite)(IUnknown* pUnkSite);
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869) Windows SDK にします。  
+ 参照してください[IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite) Windows SDK にします。  
   
 ## <a name="see-also"></a>関連項目  
  [クラスの概要](../../atl/atl-class-overview.md)

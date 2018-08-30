@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96c01326056a5fd3a106e09db94d2a84435f32e3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6c9fd7cedc1e16c6f784edebf35faf055b09ed82
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879666"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217189"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc クラス
 このクラスは、プライベート オブジェクトのセキュリティ記述子オブジェクトを表します。  
@@ -65,14 +65,14 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 ## <a name="remarks"></a>Remarks  
  このクラスから派生した[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)メソッドの作成と、プライベート オブジェクトのセキュリティ記述子の管理を提供します。  
   
- Windows でのアクセス制御モデルの概要については、次を参照してください。[アクセス制御](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK に含まれています。  
+ Windows でのアクセス制御モデルの概要については、次を参照してください。[アクセス制御](/windows/desktop/SecAuthZ/access-control)Windows SDK に含まれています。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CSecurityDesc](../../atl/reference/csecuritydesc-class.md)  
   
  `CPrivateObjectSecurityDesc`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlsecurity.h  
   
 ##  <a name="converttoautoinherit"></a>  CPrivateObjectSecurityDesc::ConvertToAutoInherit  
@@ -97,13 +97,13 @@ bool ConvertToAutoInherit(
  新しいオブジェクトが他のオブジェクトを含めるかどうかを指定します。 値が true は、新しいオブジェクトがコンテナーであることを示します。 False の値は、新しいオブジェクトがコンテナーではないことを示します。  
   
  *GenericMapping*  
- ポインターを[GENERIC_MAPPING](http://msdn.microsoft.com/library/windows/desktop/aa446633)オブジェクトの特定の権限を各ジェネリック右からマッピングを指定する構造体。  
+ ポインターを[GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping)オブジェクトの特定の権限を各ジェネリック右からマッピングを指定する構造体。  
   
 ### <a name="return-value"></a>戻り値  
  正常に終了した場合は true を返します。失敗した場合は false を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは随意アクセス制御の Ace が (DACL) を一覧表示するかどうかを決定しようと現在のセキュリティ記述子のシステム アクセス制御リスト (SACL) は、親のセキュリティ記述子から継承されました。 呼び出す、 [ConvertToAutoInheritPrivateObjectSecurity](http://msdn.microsoft.com/library/windows/desktop/aa376403)関数。  
+ このメソッドは随意アクセス制御の Ace が (DACL) を一覧表示するかどうかを決定しようと現在のセキュリティ記述子のシステム アクセス制御リスト (SACL) は、親のセキュリティ記述子から継承されました。 呼び出す、 [ConvertToAutoInheritPrivateObjectSecurity](https://msdn.microsoft.com/library/windows/desktop/aa376403)関数。  
   
 ##  <a name="cprivateobjectsecuritydesc"></a>  CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc  
  コンストラクターです。  
@@ -160,7 +160,7 @@ bool Create(
  参照、 [CAccessToken](../../atl/reference/caccesstoken-class.md)オブジェクトが作成されている対象のクライアント プロセスのオブジェクト。  
   
  *GenericMapping*  
- ポインターを[GENERIC_MAPPING](http://msdn.microsoft.com/library/windows/desktop/aa446633)オブジェクトの特定の権限を各ジェネリック右からマッピングを指定する構造体。  
+ ポインターを[GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping)オブジェクトの特定の権限を各ジェネリック右からマッピングを指定する構造体。  
   
  *ObjectType*  
  ポインター、`GUID`現在のオブジェクトに関連付けられているオブジェクトの種類を識別する構造体。 設定*ObjectType*オブジェクトは、GUID を持っていない場合は NULL にします。  
@@ -169,13 +169,13 @@ bool Create(
  新しいオブジェクトが他のオブジェクトを含めるかどうかを指定します。 値が true は、新しいオブジェクトがコンテナーであることを示します。 False の値は、新しいオブジェクトがコンテナーではないことを示します。  
   
  *AutoInheritFlags*  
- アクセス制御エントリ (Ace) の継承方法を制御するビット フラグのセット*pParent*します。 参照してください[CreatePrivateObjectSecurityEx](http://msdn.microsoft.com/library/windows/desktop/aa446581)の詳細。  
+ アクセス制御エントリ (Ace) の継承方法を制御するビット フラグのセット*pParent*します。 参照してください[CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581)の詳細。  
   
 ### <a name="return-value"></a>戻り値  
  正常に終了した場合は true を返します。失敗した場合は false を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドを呼び出す[CreatePrivateObjectSercurity](http://msdn.microsoft.com/library/windows/desktop/aa376405)または[CreatePrivateObjectSecurityEx](http://msdn.microsoft.com/library/windows/desktop/aa446581)します。  
+ このメソッドを呼び出す[CreatePrivateObjectSercurity](https://msdn.microsoft.com/library/windows/desktop/aa376405)または[CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581)します。  
   
  2 番目のメソッドは、新しいオブジェクトのオブジェクトの種類の GUID を指定するか、Ace が継承される方法を制御するを許可します。  
   
@@ -193,7 +193,7 @@ bool Get(
   
 ### <a name="parameters"></a>パラメーター  
  *si*  
- 取得するセキュリティ記述子の部分を指定するビット フラグのセット。 この値の組み合わせを指定できます、 [SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573)ビット フラグです。  
+ 取得するセキュリティ記述子の部分を指定するビット フラグのセット。 この値の組み合わせを指定できます、 [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information)ビット フラグです。  
   
  *pResult*  
  ポインターを[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)を指定したセキュリティ記述子から要求された情報のコピーを受け取るオブジェクト。  
@@ -238,19 +238,19 @@ bool Set(
   
 ### <a name="parameters"></a>パラメーター  
  *si*  
- 設定するセキュリティ記述子の部分を指定するビット フラグのセット。 この値の組み合わせを指定できます、 [SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573)ビット フラグです。  
+ 設定するセキュリティ記述子の部分を指定するビット フラグのセット。 この値の組み合わせを指定できます、 [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information)ビット フラグです。  
   
  *変更*  
  ポインターを[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)オブジェクト。 このセキュリティ記述子の部分が示される、 *si*パラメーターは、オブジェクトのセキュリティ記述子に適用されます。  
   
  *GenericMapping*  
- ポインターを[GENERIC_MAPPING](http://msdn.microsoft.com/library/windows/desktop/aa446633)オブジェクトの特定の権限を各ジェネリック右からマッピングを指定する構造体。  
+ ポインターを[GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping)オブジェクトの特定の権限を各ジェネリック右からマッピングを指定する構造体。  
   
  *トークン*  
  参照、 [CAccessToken](../../atl/reference/caccesstoken-class.md)オブジェクトが作成されている対象のクライアント プロセスのオブジェクト。  
   
  *AutoInheritFlags*  
- アクセス制御エントリ (Ace) の継承方法を制御するビット フラグのセット*pParent*します。 参照してください[CreatePrivateObjectSecurityEx](http://msdn.microsoft.com/library/windows/desktop/aa446581)の詳細。  
+ アクセス制御エントリ (Ace) の継承方法を制御するビット フラグのセット*pParent*します。 参照してください[CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581)の詳細。  
   
 ### <a name="return-value"></a>戻り値  
  正常に終了した場合は true を返します。失敗した場合は false を返します。  
@@ -259,7 +259,7 @@ bool Set(
  2 番目のメソッドは、オブジェクトのオブジェクトの種類の GUID を指定することや、Ace の継承方法の制御を許可します。  
   
 ## <a name="see-also"></a>関連項目  
- [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561)   
+ [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)   
  [クラスの概要](../../atl/atl-class-overview.md)   
  [セキュリティに関するグローバル関数](../../atl/reference/security-global-functions.md)   
  [CSecurityDesc クラス](../../atl/reference/csecuritydesc-class.md)

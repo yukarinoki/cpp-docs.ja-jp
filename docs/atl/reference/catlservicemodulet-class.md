@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 993bef01eb5468b837cc0b8a51ae4b08f76ee398
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 04c2717aa5ec59241d470737f99ce2ed5f9df714
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881072"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219411"
 ---
 # <a name="catlservicemodulet-class"></a>CAtlServiceModuleT クラス
 このクラスは、サービスを実装します。  
@@ -133,7 +133,7 @@ class ATL_NO_VTABLE CAtlServiceModuleT : public CAtlExeModuleT<T>
   
  `CAtlServiceModuleT`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlbase.h  
   
 ##  <a name="catlservicemodulet"></a>  CAtlServiceModuleT::CAtlServiceModuleT  
@@ -233,7 +233,7 @@ void __cdecl LogEvent(LPCTSTR pszFormat, ...) throw();
  イベント ログに書き込まれる省略可能な余分な文字列。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、の詳細を関数を使用して、イベント ログに書き込みます[ReportEvent](http://msdn.microsoft.com/library/windows/desktop/aa363679)します。 サービスが実行されていない場合は、文字列がコンソールに送信されます。  
+ このメソッドは、の詳細を関数を使用して、イベント ログに書き込みます[ReportEvent](/windows/desktop/api/winbase/nf-winbase-reporteventa)します。 サービスが実行されていない場合は、文字列がコンソールに送信されます。  
   
 ##  <a name="m_bservice"></a>  CAtlServiceModuleT::m_bService  
  サービスとして、プログラムが実行されていることを示すフラグです。  
@@ -263,7 +263,7 @@ SERVICE_STATUS_HANDLE m_hServiceStatus;
 ```  
   
 ### <a name="remarks"></a>Remarks  
- [SERVICE_STATUS](http://msdn.microsoft.com/library/windows/desktop/ms685996)構造体には、サービスに関する情報が含まれています。  
+ [SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-_service_status)構造体には、サービスに関する情報が含まれています。  
   
 ##  <a name="m_status"></a>  CAtlServiceModuleT::m_status  
  現在のサービスの状態情報の構造体を格納するメンバー変数。  
@@ -273,7 +273,7 @@ SERVICE_STATUS m_status;
 ```  
   
 ### <a name="remarks"></a>Remarks  
- [SERVICE_STATUS](http://msdn.microsoft.com/library/windows/desktop/ms685996)構造体には、サービスに関する情報が含まれています。  
+ [SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-_service_status)構造体には、サービスに関する情報が含まれています。  
   
 ##  <a name="m_szservicename"></a>  CAtlServiceModuleT::m_szServiceName  
  登録されているサービスの名前。  
@@ -391,7 +391,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
   
 ### <a name="parameters"></a>パラメーター  
  *nShowCmd*  
- ウィンドウの表示方法を指定します。 このパラメーターで説明されている値のいずれかを指定できます、 [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559)セクション。 既定値は、SW_HIDE です。  
+ ウィンドウの表示方法を指定します。 このパラメーターで説明されている値のいずれかを指定できます、 [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)セクション。 既定値は、SW_HIDE です。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
@@ -427,7 +427,7 @@ void SetServiceStatus(DWORD dwState) throw();
   
 ### <a name="parameters"></a>パラメーター  
  *dwState*  
- 新しいステータス。 参照してください[SetServiceStatus](http://msdn.microsoft.com/library/windows/desktop/ms686241)使用可能な値。  
+ 新しいステータス。 参照してください[SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus)使用可能な値。  
   
 ### <a name="remarks"></a>Remarks  
  サービスのサービス コントロール マネージャーの状態情報を更新します。 呼び出して[catlservicemodulet::run](#run)、 [catlservicemodulet::servicemain](#servicemain)およびその他のハンドラー メソッド。 状態は、メンバー変数にも格納[CAtlServiceModuleT::m_status](#m_status)します。  
@@ -441,7 +441,7 @@ HRESULT Start(int nShowCmd) throw();
   
 ### <a name="parameters"></a>パラメーター  
  *nShowCmd*  
- ウィンドウの表示方法を指定します。 このパラメーターで説明されている値のいずれかを指定できます、 [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559)セクション。  
+ ウィンドウの表示方法を指定します。 このパラメーターで説明されている値のいずれかを指定できます、 [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)セクション。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
@@ -491,7 +491,7 @@ int WinMain(int nShowCmd) throw();
   
 ### <a name="parameters"></a>パラメーター  
  *nShowCmd*  
- ウィンドウの表示方法を指定します。 このパラメーターで説明されている値のいずれかを指定できます、 [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559)セクション。  
+ ウィンドウの表示方法を指定します。 このパラメーターで説明されている値のいずれかを指定できます、 [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)セクション。  
   
 ### <a name="return-value"></a>戻り値  
  サービスの戻り値を返します。  

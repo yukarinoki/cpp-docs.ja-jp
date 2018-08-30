@@ -112,12 +112,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b77254c78dbb84d546e080ca5bc275919aac64a
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 1f67107b17f304c5a9c4d6f68d68797370502065
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42543155"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221728"
 ---
 # <a name="clistbox-class"></a>CListBox クラス
 Windows のリスト ボックスの機能を提供します。  
@@ -644,7 +644,7 @@ DWORD_PTR GetItemData(int nIndex) const;
  [!code-cpp[NVC_MFC_CListBox#15](../../mfc/codesnippet/cpp/clistbox-class_15.cpp)]  
   
 ##  <a name="getitemdataptr"></a>  CListBox::GetItemDataPtr  
- ポインターとして指定されたリスト ボックス項目に関連付けられたアプリケーションによって提供される 32 ビット値を取得します ( **void\***)。  
+ ポインターとして指定されたリスト ボックス項目に関連付けられたアプリケーションによって提供される 32 ビット値を取得します (**void** <strong>\*</strong>)。  
   
 ```  
 void* GetItemDataPtr(int nIndex) const;  
@@ -710,7 +710,7 @@ DWORD GetListBoxInfo() const;
  各列の項目の数、`CListBox`オブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [LB_GETLISTBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775208)メッセージ、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [LB_GETLISTBOXINFO](/windows/desktop/Controls/lb-getlistboxinfo)メッセージ、Windows SDK で説明されているとします。  
   
 ##  <a name="getlocale"></a>  CListBox::GetLocale  
  リスト ボックスによって使用されるロケールを取得します。  
@@ -1144,7 +1144,7 @@ int SetItemData(
  [!code-cpp[NVC_MFC_CListBox#34](../../mfc/codesnippet/cpp/clistbox-class_34.cpp)]  
   
 ##  <a name="setitemdataptr"></a>  CListBox::SetItemDataPtr  
- 指定したポインターのリスト ボックスで指定した項目に関連付けられている 32 ビット値の設定 ( **void\***)。  
+ 指定したポインターのリスト ボックスで指定した項目に関連付けられている 32 ビット値の設定 ( **void** <strong>\*</strong>)。  
   
 ```  
 int SetItemDataPtr(

@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ace66d9528534b382eda02160372bfc56aced0f5
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 4b505b9f6164566a1e196c601bdfe3eab4b4a991
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882996"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208583"
 ---
 # <a name="ccomcontrolbase-class"></a>CComControlBase クラス
 このクラスは、作成および ATL のコントロールを管理するためのメソッドを提供します。  
@@ -198,11 +198,11 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::m_rcPos](#m_rcpos)|コンテナーの座標で表された、コントロールの位置を (ピクセル単位)。|  
 |[この](#m_sizeextent)|特定のディスプレイの HIMETRIC 単位 (各単位は 0.01 ミリメートル) 内のコントロールの範囲。|  
 |[CComControlBase::m_sizeNatural](#m_sizenatural)|HIMETRIC 単位 (各単位は 0.01 ミリメートル) コントロールの物理サイズ。|  
-|[アドバイズ](#m_spadvisesink)|コンテナーのアドバイザリ コネクションを直接ポインター (コンテナーの[IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513))。|  
+|[アドバイズ](#m_spadvisesink)|コンテナーのアドバイザリ コネクションを直接ポインター (コンテナーの[IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink))。|  
 |[CComControlBase::m_spAmbientDispatch](#m_spambientdispatch)|A`CComDispatchDriver`オブジェクトを取得し、コンテナーのプロパティを設定することができます、`IDispatch`ポインター。|  
 |[CComControlBase::m_spClientSite](#m_spclientsite)|コンテナー内のコントロールのクライアントのサイトへのポインター。|  
 |[CComControlBase::m_spDataAdviseHolder](#m_spdataadviseholder)|標準的なデータ オブジェクト間のアドバイザリ コネクションをアドバイズ シンクすることを意味を提供します。|  
-|[は](#m_spinplacesite)|コンテナーへのポインター[ビュー](http://msdn.microsoft.com/library/windows/desktop/ms686586)、[この](http://msdn.microsoft.com/library/windows/desktop/ms693461)、または[IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300)インターフェイス ポインター。|  
+|[は](#m_spinplacesite)|コンテナーへのポインター[ビュー](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite)、[この](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex)、または[IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless)インターフェイス ポインター。|  
 |[CComControlBase::m_spOleAdviseHolder](#m_spoleadviseholder)|アドバイザリ コネクションを保持するための標準的な実装を提供します。|  
   
 ## <a name="remarks"></a>Remarks  
@@ -210,7 +210,7 @@ class ATL_NO_VTABLE CComControlBase
   
  コントロールの作成の詳細については、次を参照してください。、 [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)します。 ATL プロジェクト ウィザードの詳細については、記事を参照してください。 [ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlctl.h  
   
 ##  <a name="appearancetype"></a>  CComControlBase::AppearanceType  
@@ -245,7 +245,7 @@ CComControlBase(HWND& h);
 ```  
   
 ### <a name="remarks"></a>Remarks  
- コントロールがウィンドウを持つ場合は`~CComControlBase`それを呼び出すことで破壊[DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682)します。  
+ コントロールがウィンドウを持つ場合は`~CComControlBase`それを呼び出すことで破壊[DestroyWindow](https://msdn.microsoft.com/library/windows/desktop/ms632682)します。  
   
 ##  <a name="controlqueryinterface"></a>  CComControlBase::ControlQueryInterface  
  要求されたインターフェイスへのポインターを取得します。  
@@ -447,7 +447,7 @@ HRESULT GetAmbientFont(IFont** ppFont);
   
 ### <a name="parameters"></a>パラメーター  
  *ppFont*  
- コンテナーのアンビエント[IFont](http://msdn.microsoft.com/library/windows/desktop/ms680673)インターフェイス。  
+ コンテナーのアンビエント[IFont](/windows/desktop/api/ocidl/nn-ocidl-ifont)インターフェイス。  
   
 ### <a name="return-value"></a>戻り値  
  標準の HRESULT 値の 1 つ。  
@@ -464,7 +464,7 @@ HRESULT GetAmbientFontDisp(IFontDisp** ppFont);
   
 ### <a name="parameters"></a>パラメーター  
  *ppFont*  
- コンテナーのアンビエント[IFontDisp](http://msdn.microsoft.com/library/windows/desktop/ms692695)ディスパッチ インターフェイス。  
+ コンテナーのアンビエント[IFontDisp](https://msdn.microsoft.com/library/windows/desktop/ms692695)ディスパッチ インターフェイス。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
@@ -762,7 +762,7 @@ unsigned m_bAutoSize:1;
 > [!NOTE]
 >  コントロール クラス内でこのデータ メンバーを使用するには、必要がありますとして宣言するデータ メンバーをコントロール クラス。 基本クラスの共用体で宣言されているために、コントロール クラスは、基本クラスからこのデータ メンバーを継承しません。  
   
- 追加する場合、**自動サイズ**オプション、[ストック プロパティ](../../atl/reference/stock-properties-atl-control-wizard.md)ATL コントロール ウィザード、ウィザードのタブに自動的に、コントロール クラスでこのデータ メンバーを作成します、put を作成およびプロパティのメソッドを取得をサポートしていると[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)プロパティが変更されたときに、コンテナーを自動的に通知します。  
+ 追加する場合、**自動サイズ**オプション、[ストック プロパティ](../../atl/reference/stock-properties-atl-control-wizard.md)ATL コントロール ウィザード、ウィザードのタブに自動的に、コントロール クラスでこのデータ メンバーを作成します、put を作成およびプロパティのメソッドを取得をサポートしていると[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)プロパティが変更されたときに、コンテナーを自動的に通知します。  
   
 ##  <a name="m_bdrawfromnatural"></a>  CComControlBase::m_bDrawFromNatural  
  示すフラグ`IDataObjectImpl::GetData`と`CComControlBase::GetZoomInfo`からコントロールのサイズを設定する必要があります`m_sizeNatural`からではなく`m_sizeExtent`します。  
@@ -814,7 +814,7 @@ unsigned m_bInPlaceSiteEx:1;
 > [!NOTE]
 >  コントロール クラス内でこのデータ メンバーを使用するには、必要がありますとして宣言するデータ メンバーをコントロール クラス。 基本クラスの共用体で宣言されているために、コントロール クラスは、基本クラスからこのデータ メンバーを継承しません。  
   
- データ メンバー`m_spInPlaceSite`を指す、[ビュー](http://msdn.microsoft.com/library/windows/desktop/ms686586)、[この](http://msdn.microsoft.com/library/windows/desktop/ms693461)、または[IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300)の値に応じて、インターフェイス、`m_bWndLess`と`m_bInPlaceSiteEx`フラグ。 (データ メンバー `m_bNegotiatedWnd` TRUE である必要がありますの`m_spInPlaceSite`を有効にするポインター)。  
+ データ メンバー`m_spInPlaceSite`を指す、[ビュー](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite)、[この](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex)、または[IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless)の値に応じて、インターフェイス、`m_bWndLess`と`m_bInPlaceSiteEx`フラグ。 (データ メンバー `m_bNegotiatedWnd` TRUE である必要がありますの`m_spInPlaceSite`を有効にするポインター)。  
   
  場合`m_bWndLess`false と`m_bInPlaceSiteEx`が true の場合、`m_spInPlaceSite`は、`IOleInPlaceSiteEx`インターフェイス ポインター。 参照してください[は、「](#m_spinplacesite)これら 3 つのデータ メンバーの関係を示すしますテーブル。  
   
@@ -844,7 +844,7 @@ unsigned m_bRecomposeOnResize:1;
 > [!NOTE]
 >  コントロール クラス内でこのデータ メンバーを使用するには、必要がありますとして宣言するデータ メンバーをコントロール クラス。 基本クラスの共用体で宣言されているために、コントロール クラスは、基本クラスからこのデータ メンバーを継承しません。  
   
- このフラグをチェックして[IOleObjectImpl::SetExtent](../../atl/reference/ioleobjectimpl-class.md#setextent)と TRUE の場合、`SetExtent`の変更の表示のコンテナーに通知します。 このフラグが設定されている場合に、OLEMISC_RECOMPOSEONRESIZE ビット、[入ります](http://msdn.microsoft.com/library/windows/desktop/ms678497)列挙体も設定する必要があります。  
+ このフラグをチェックして[IOleObjectImpl::SetExtent](../../atl/reference/ioleobjectimpl-class.md#setextent)と TRUE の場合、`SetExtent`の変更の表示のコンテナーに通知します。 このフラグが設定されている場合に、OLEMISC_RECOMPOSEONRESIZE ビット、[入ります](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc)列挙体も設定する必要があります。  
   
 ##  <a name="m_brequiressave"></a>  CComControlBase::m_bRequiresSave  
  最後に保存された後、コントロールが変更を示すフラグします。  
@@ -935,7 +935,7 @@ unsigned m_bWndLess:1;
 > [!NOTE]
 >  コントロール クラス内でこのデータ メンバーを使用するには、必要がありますとして宣言するデータ メンバーをコントロール クラス。 基本クラスの共用体で宣言されているために、コントロール クラスは、基本クラスからこのデータ メンバーを継承しません。  
   
- データ メンバー`m_spInPlaceSite`を指す、[ビュー](http://msdn.microsoft.com/library/windows/desktop/ms686586)、[この](http://msdn.microsoft.com/library/windows/desktop/ms693461)、または[IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300)の値に応じて、インターフェイス、`m_bWndLess`と[CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex)フラグ。 (データ メンバー[各](#m_bnegotiatedwnd)TRUE である必要がありますの[は](#m_spinplacesite)を有効にするポインター)。  
+ データ メンバー`m_spInPlaceSite`を指す、[ビュー](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite)、[この](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex)、または[IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless)の値に応じて、インターフェイス、`m_bWndLess`と[CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex)フラグ。 (データ メンバー[各](#m_bnegotiatedwnd)TRUE である必要がありますの[は](#m_spinplacesite)を有効にするポインター)。  
   
  場合`m_bWndLess`が true の場合、`m_spInPlaceSite`は、`IOleInPlaceSiteWindowless`インターフェイス ポインター。 参照してください[は](#m_spinplacesite)これらのデータ メンバーの完全な関係を示すテーブル。  
   
@@ -1008,7 +1008,7 @@ SIZE m_sizeNatural;
  グローバル関数でピクセルにサイズを変換する[AtlHiMetricToPixel](pixel-himetric-conversion-global-functions.md#atlhimetrictopixel)します。  
   
 ##  <a name="m_spadvisesink"></a>  アドバイズ  
- コンテナーのアドバイザリ コネクションを直接ポインター (コンテナーの[IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513))。  
+ コンテナーのアドバイザリ コネクションを直接ポインター (コンテナーの[IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink))。  
   
 ```
 CComPtr<IAdviseSink>
@@ -1058,12 +1058,12 @@ CComPtr<IDataAdviseHolder>
 > [!NOTE]
 >  コントロール クラス内でこのデータ メンバーを使用するには、必要がありますとして宣言するデータ メンバーをコントロール クラス。 基本クラスの共用体で宣言されているために、コントロール クラスは、基本クラスからこのデータ メンバーを継承しません。  
   
- データ オブジェクトがデータを転送して、実装するコントロール[IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421)メソッドを持つが、データの形式と転送メディアを指定します。  
+ データ オブジェクトがデータを転送して、実装するコントロール[IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject)メソッドを持つが、データの形式と転送メディアを指定します。  
   
- インターフェイス`m_spDataAdviseHolder`実装、 [IDataObject::DAdvise](http://msdn.microsoft.com/library/windows/desktop/ms692579)と[IDataObject::DUnadvise](http://msdn.microsoft.com/library/windows/desktop/ms692448)メソッドを確立し、コンテナーへのアドバイザリ コネクションを削除します。 コントロールのコンテナーがサポートすることによって、アドバイズ シンクを実装する必要があります、 [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513)インターフェイス。  
+ インターフェイス`m_spDataAdviseHolder`実装、 [IDataObject::DAdvise](/windows/desktop/api/objidl/nf-objidl-idataobject-dadvise)と[IDataObject::DUnadvise](/windows/desktop/api/objidl/nf-objidl-idataobject-dunadvise)メソッドを確立し、コンテナーへのアドバイザリ コネクションを削除します。 コントロールのコンテナーがサポートすることによって、アドバイズ シンクを実装する必要があります、 [IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink)インターフェイス。  
   
 ##  <a name="m_spinplacesite"></a>  は  
- コンテナーへのポインター[ビュー](http://msdn.microsoft.com/library/windows/desktop/ms686586)、[この](http://msdn.microsoft.com/library/windows/desktop/ms693461)、または[IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300)インターフェイス ポインター。  
+ コンテナーへのポインター[ビュー](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite)、[この](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex)、または[IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless)インターフェイス ポインター。  
   
 ```
 CComPtr<IOleInPlaceSiteWindowless>
@@ -1098,7 +1098,7 @@ CComPtr<IOleAdviseHolder>
 > [!NOTE]
 >  コントロール クラス内でこのデータ メンバーを使用するには、必要がありますとして宣言するデータ メンバーをコントロール クラス。 基本クラスの共用体で宣言されているために、コントロール クラスは、基本クラスからこのデータ メンバーを継承しません。  
   
- インターフェイス`m_spOleAdviseHolder`実装、 [IOleObject::Advise](http://msdn.microsoft.com/library/windows/desktop/ms686573)と[IOleObject::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms693749)メソッドを確立し、コンテナーへのアドバイザリ コネクションを削除します。 コントロールのコンテナーがサポートすることによって、アドバイズ シンクを実装する必要があります、 [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513)インターフェイス。  
+ インターフェイス`m_spOleAdviseHolder`実装、 [IOleObject::Advise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-advise)と[IOleObject::Unadvise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-unadvise)メソッドを確立し、コンテナーへのアドバイザリ コネクションを削除します。 コントロールのコンテナーがサポートすることによって、アドバイズ シンクを実装する必要があります、 [IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink)インターフェイス。  
   
 ##  <a name="ondraw"></a>  CComControlBase::OnDraw  
  コントロールを描画するには、このメソッドをオーバーライドします。  
@@ -1291,7 +1291,7 @@ HRESULT SendOnDataChange(DWORD advf = 0);
   
 ### <a name="parameters"></a>パラメーター  
  *advf*  
- フラグを指定することをお勧めする方法への呼び出し[IAdviseSink::OnDataChange](http://msdn.microsoft.com/library/windows/desktop/ms687283)されます。 値は、 [ADVF](http://msdn.microsoft.com/library/windows/desktop/ms693742)列挙体。  
+ フラグを指定することをお勧めする方法への呼び出し[IAdviseSink::OnDataChange](/windows/desktop/api/objidl/nf-objidl-iadvisesink-ondatachange)されます。 値は、 [ADVF](/windows/desktop/api/objidl/ne-objidl-tagadvf)列挙体。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
@@ -1344,7 +1344,7 @@ HRESULT SendOnViewChange(DWORD dwAspect, LONG lindex = -1);
  成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
 ### <a name="remarks"></a>Remarks  
- `SendOnViewChange` 呼び出し[IAdviseSink::OnViewChange](http://msdn.microsoft.com/library/windows/desktop/ms694337)します。 値だけ*lindex* -1 で、関心のある全体のビューがあることを示しますが、現在サポートされています。  
+ `SendOnViewChange` 呼び出し[IAdviseSink::OnViewChange](/windows/desktop/api/objidl/nf-objidl-iadvisesink-onviewchange)します。 値だけ*lindex* -1 で、関心のある全体のビューがあることを示しますが、現在サポートされています。  
   
 ##  <a name="setcontrolfocus"></a>  CComControlBase::SetControlFocus  
  設定またはコントロールとの間にキーボード フォーカスを削除します。  
@@ -1361,7 +1361,7 @@ BOOL SetControlFocus(BOOL bGrab);
  コントロールがフォーカスを正常に受信するかどうかは TRUE を返しますそれ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
- ウィンドウを持つコントロール、Windows API 関数の[SetFocus](http://msdn.microsoft.com/library/windows/desktop/ms646312)が呼び出されます。 ウィンドウなしのコントロールの[IOleInPlaceSiteWindowless::SetFocus](http://msdn.microsoft.com/library/windows/desktop/ms679745)が呼び出されます。 この呼び出しでは、ウィンドウなしのコントロールがキーボード フォーカスを取得やウィンドウのメッセージに応答できます。  
+ ウィンドウを持つコントロール、Windows API 関数の[SetFocus](https://msdn.microsoft.com/library/windows/desktop/ms646312)が呼び出されます。 ウィンドウなしのコントロールの[IOleInPlaceSiteWindowless::SetFocus](/windows/desktop/api/ocidl/nf-ocidl-ioleinplacesitewindowless-setfocus)が呼び出されます。 この呼び出しでは、ウィンドウなしのコントロールがキーボード フォーカスを取得やウィンドウのメッセージに応答できます。  
   
 ##  <a name="setdirty"></a>  CComControlBase::SetDirty  
  データ メンバーを設定`m_bRequiresSave`の値に*bDirty*します。  

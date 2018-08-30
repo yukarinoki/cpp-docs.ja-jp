@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee63cf7f5ec2bd0d6ed76bf891ed82492c76560d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8d9c4c43098d7f0ca8a5e9588a69a47d6e98a066
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885156"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210056"
 ---
 # <a name="string-conversion-macros"></a>文字列変換マクロ
 
@@ -38,7 +38,7 @@ ms.locfileid: "37885156"
 
 ##  <a name="devmode_and_textmetric_string_conversion_macros"></a>  DEVMODE と受け取る文字列変換マクロ
 
-これらのマクロのコピーを作成する、 [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)または[受け取る](http://msdn.microsoft.com/library/windows/desktop/dd145132)構造体であり、新しい構造内の文字列を新しい文字列型に変換します。 マクロは、新しい構造のスタックにメモリを割り当てるし、新しい構造体へのポインターを返します。  
+これらのマクロのコピーを作成する、 [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)または[受け取る](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica)構造体であり、新しい構造内の文字列を新しい文字列型に変換します。 マクロは、新しい構造のスタックにメモリを割り当てるし、新しい構造体へのポインターを返します。  
   
 ```cpp
 MACRONAME( address_of_structure )

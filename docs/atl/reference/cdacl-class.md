@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cd66c7c0637b4874f6a40bd77b3387191f00d35
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 93427eb8e842687e9bba3dc1eef12bcd07e7e167
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881202"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208012"
 ---
 # <a name="cdacl-class"></a>CDacl クラス
 このクラスは、DACL (随意アクセス制御リスト) 構造体のラッパーです。  
@@ -74,14 +74,14 @@ class CDacl : public CAcl
   
  作成、追加、削除、およびから Ace を削除する指定されたクラスのメソッドを使用して、`CDacl`オブジェクト。 参照してください[AtlGetDacl](security-global-functions.md#atlgetdacl)と[AtlSetDacl](security-global-functions.md#atlsetdacl)します。  
   
- Windows でのアクセス制御モデルの概要については、次を参照してください。[アクセス制御](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK に含まれています。  
+ Windows でのアクセス制御モデルの概要については、次を参照してください。[アクセス制御](/windows/desktop/SecAuthZ/access-control)Windows SDK に含まれています。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CAcl](../../atl/reference/cacl-class.md)  
   
  `CDacl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlsecurity.h  
   
 ##  <a name="addallowedace"></a>  CDacl::AddAllowedAce  
@@ -123,7 +123,7 @@ bool AddAllowedAce(
 ### <a name="remarks"></a>Remarks  
  A`CDacl`オブジェクトには、ユーザーとグループ オブジェクトにアクセスできるユーザーを識別する 0 個以上の Ace (アクセス制御エントリ) が含まれています。 このメソッドへのアクセスを許可する ACE を追加、`CDacl`オブジェクト。  
   
- 参照してください[ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919)で設定できるさまざまなフラグの説明については、`AceFlags`パラメーター。  
+ 参照してください[ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header)で設定できるさまざまなフラグの説明については、`AceFlags`パラメーター。  
   
 ##  <a name="adddeniedace"></a>  CDacl::AddDeniedAce  
  拒否 ACE (アクセス制御エントリ) に追加、`CDacl`オブジェクト。  
@@ -164,7 +164,7 @@ bool AddDeniedAce(
 ### <a name="remarks"></a>Remarks  
  A`CDacl`オブジェクトには、ユーザーとグループ オブジェクトにアクセスできるユーザーを識別する 0 個以上の Ace (アクセス制御エントリ) が含まれています。 このメソッドへのアクセスを拒否する ACE を追加、`CDacl`オブジェクト。  
   
- 参照してください[ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919)で設定できるさまざまなフラグの説明については、`AceFlags`パラメーター。  
+ 参照してください[ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header)で設定できるさまざまなフラグの説明については、`AceFlags`パラメーター。  
   
 ##  <a name="cdacl"></a>  CDacl::CDacl  
  コンストラクターです。  
@@ -245,7 +245,7 @@ void RemoveAllAces() throw();
 ## <a name="see-also"></a>関連項目  
  [セキュリティのサンプル](../../visual-cpp-samples.md)   
  [CAcl クラス](../../atl/reference/cacl-class.md)   
- [Acl](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
- [Ace](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
+ [Acl](/windows/desktop/SecAuthZ/access-control-lists)   
+ [Ace](/windows/desktop/SecAuthZ/access-control-entries)   
  [クラスの概要](../../atl/atl-class-overview.md)   
  [セキュリティに関するグローバル関数](../../atl/reference/security-global-functions.md)

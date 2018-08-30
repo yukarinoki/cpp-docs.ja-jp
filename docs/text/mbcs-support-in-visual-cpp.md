@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f595a048d9f2e5795f69b7d1da6c4c6cf4ca0fa2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 51472ba9c0bc15d6b12ddcd3a3b88b65a3a2682b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608681"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205197"
 ---
 # <a name="mbcs-support-in-visual-c"></a>Visual C++ における MBCS のサポート
 を、mbcs バージョンの Windows で実行時に (統合されたソース コード エディター、デバッガー、およびコマンド ライン ツールを含む)、Visual C 開発システムが mbcs、[メモリ] ウィンドウを除く。  
@@ -47,7 +47,7 @@ ms.locfileid: "42608681"
  そのためには適切な場所を問わず、visual C は 2 バイト文字を受け入れます。 ダイアログ ボックスおよび Visual C リソース エディター (ダイアログ エディターでの静的テキストなど) とアイコン エディター内の静的テキスト エントリで、テキスト エントリにパス名とファイル名が含まれます。 プリプロセッサはさらに、いくつかの 2 バイトのディレクティブを認識する — たとえば、ファイル名`#include`ステートメント、およびへの引数として、`code_seg`と`data_seg`プラグマ。 ソース コード エディターで C/C++ 言語要素 (変数名) などに、コメントと文字列リテラルで 2 バイト文字は受け入れられます。  
   
 ##  <a name="_core_support_for_the_input_method_editor_.28.ime.29"></a> サポートの入力方式エディター (IME)  
- MBCS (たとえば、日本語) を使用して、通常東アジアの市場向け両方の 1 つと 2 バイト文字を入力するための Windows IME のサポート用に記述されたアプリケーション。 Visual C の開発環境には、IME の完全なサポートが含まれています。 詳細については、次を参照してください。 [IME のサンプル: コントロールの IME モードと IME レベル 3 の実装方法を示します](http://msdn.microsoft.com/87ebdf65-cef0-451d-a6fc-d5fb64178b14)します。  
+ MBCS (たとえば、日本語) を使用して、通常東アジアの市場向け両方の 1 つと 2 バイト文字を入力するための Windows IME のサポート用に記述されたアプリケーション。 Visual C の開発環境には、IME の完全なサポートが含まれています。 詳細については、次を参照してください。 [IME のサンプル: コントロールの IME モードと IME レベル 3 の実装方法を示します](https://msdn.microsoft.com/87ebdf65-cef0-451d-a6fc-d5fb64178b14)します。  
   
  日本語キーボードでは、漢字は直接サポートしていません。 IME では、その漢字表記に、日本語のアルファベット (ローマ字やカタカナをひらがな) のいずれかで入力、音声の文字列に変換します。 あいまいさがある場合は、いくつかの選択肢から選択できます。 目的の漢字を選択すると、2 つを渡します IME`WM_CHAR`メッセージを制御するアプリケーション。  
   

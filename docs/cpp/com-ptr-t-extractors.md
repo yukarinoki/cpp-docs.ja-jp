@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8414fb0e3478b5aae906db3e511757d5d7df71d3
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: d63a09dec74fc1b7b41f8029dcff285b62b017f1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404097"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203228"
 ---
 # <a name="comptrt-extractors"></a>_com_ptr_t 抽出
 **Microsoft 固有の仕様**  
@@ -55,11 +55,11 @@ operator bool( ) const throw( );
   
 ## <a name="remarks"></a>Remarks  
   
--   **演算子インターフェイス\*** 場合 NULL にはカプセル化されたインターフェイス ポインターを返します。  
+-   **演算子インターフェイス**<strong>\*</strong>場合 NULL にはカプセル化されたインターフェイス ポインターを返します。  
   
 -   **演算子インターフェイス &** をカプセル化されたインターフェイス ポインター、参照を取得し、ポインターが NULL の場合はエラーを発行します。  
   
--   **演算子\*** 逆参照される場合に、実際のカプセル化されたインターフェイスと同様に機能するスマート ポインター オブジェクトを使用します。  
+-   **演算子**<strong>\*</strong>逆参照される場合に、実際のカプセル化されたインターフェイスと同様に機能するスマート ポインター オブジェクトを使用します。  
   
 -   **演算子 ->** 逆参照される場合に、実際のカプセル化されたインターフェイスと同様に機能するスマート ポインター オブジェクトを使用します。  
   

@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5e0c902b9de9ea4d742d96b88f86d47231597f7
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c539504e7bb6e2b02b86d99c890ed5d6ecf1fc27
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337334"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217859"
 ---
 # <a name="cftpconnection-class"></a>CFtpConnection クラス
 インターネット サーバーに FTP 接続を管理でき、そのサーバー上のディレクトリおよびファイルを直接操作できます。  
@@ -97,7 +97,7 @@ class CFtpConnection : public CInternetConnection
   
  `CFtpConnection`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxinet.h  
   
 ##  <a name="cftpconnection"></a>  CFtpConnection::CFtpConnection  
@@ -179,7 +179,7 @@ CInternetFile* Command(
 - `CmdRespRead` 応答が必要です。  
   
  *dwFlags*  
- この関数を制御するフラグが含まれている値。 完全な一覧についてを参照してください。 [FTPCommand](http://msdn.microsoft.com/library/windows/desktop/aa384133)します。  
+ この関数を制御するフラグが含まれている値。 完全な一覧についてを参照してください。 [FTPCommand](/windows/desktop/api/wininet/nf-wininet-ftpcommanda)します。  
   
  *独自*  
  コールバックでアプリケーションのコンテキストを識別するために使用されるアプリケーション定義の値が含まれている値へのポインター。  
@@ -188,7 +188,7 @@ CInternetFile* Command(
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の機能をエミュレートする、 [FTPCommand](http://msdn.microsoft.com/library/windows/desktop/aa384133)関数は、Windows SDK で説明されているとします。  
+ このメンバー関数の機能をエミュレートする、 [FTPCommand](/windows/desktop/api/wininet/nf-wininet-ftpcommanda)関数は、Windows SDK で説明されているとします。  
   
  エラーが発生する場合、MFC は型の例外をスロー [CInternetException](../../mfc/reference/cinternetexception-class.md)します。  
   
@@ -204,7 +204,7 @@ BOOL CreateDirectory(LPCTSTR pstrDirName);
  作成するディレクトリの名前を含む文字列へのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Windows 関数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。  
+ 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Windows 関数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。  
   
 ### <a name="remarks"></a>Remarks  
  使用`GetCurrentDirectory`をサーバーにこの接続の現在の作業ディレクトリを決定します。 リモート システムがルート ディレクトリにするに接続を前提としてはいません。  
@@ -238,7 +238,7 @@ BOOL GetCurrentDirectory(
 |返された場合|格納されている文字数*pstrDirName*します。 メンバー関数が失敗したし、し、ERROR_INSUFFICIENT_BUFFER が返されます*lpdwLen*アプリケーションは、文字列を受信するために割り当てる必要がありますバイト数が含まれています。|  
   
 ### <a name="return-value"></a>戻り値  
- 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。  
+ 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。  
   
 ### <a name="remarks"></a>Remarks  
  URL として代わりに、ディレクトリ名を取得する[GetCurrentDirectoryAsURL](#getcurrentdirectoryasurl)します。  
@@ -272,7 +272,7 @@ BOOL GetCurrentDirectoryAsURL(
 |返された場合|格納されている文字数*pstrDirName*します。 メンバー関数が失敗したし、し、ERROR_INSUFFICIENT_BUFFER が返されます*lpdwLen*アプリケーションは、文字列を受信するために割り当てる必要がありますバイト数が含まれています。|  
   
 ### <a name="return-value"></a>戻り値  
- 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。  
+ 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。  
   
 ### <a name="remarks"></a>Remarks  
  `GetCurrentDirectoryAsURL` 同じように動作[GetCurrentDirectory](#getcurrentdirectory)  
@@ -322,13 +322,13 @@ BOOL GetFile(
 -   FILE_ATTRIBUTE_TEMPORARY ファイルは、一時的なストレージの使用されています。 アプリケーションは、どうしても必要な場合にのみ、ファイルを書き込む必要があります。 ファイルのデータのほとんどは、ファイルがすぐに削除されるため、メディアに書き込まれずに、メモリに残ります。  
   
  *dwFlags*  
- 転送が発生する条件を指定します。 このパラメーターには、いずれかを指定できます、 *dwFlags*で説明されている値[FtpGetFile](http://msdn.microsoft.com/library/windows/desktop/aa384157) Windows SDK に含まれています。  
+ 転送が発生する条件を指定します。 このパラメーターには、いずれかを指定できます、 *dwFlags*で説明されている値[FtpGetFile](/windows/desktop/api/wininet/nf-wininet-ftpgetfilea) Windows SDK に含まれています。  
   
  *独自*  
  ファイルを取得するためのコンテキストの識別子です。 参照してください**解説**の詳細については*独自*します。  
   
 ### <a name="return-value"></a>戻り値  
- 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。  
+ 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。  
   
 ### <a name="remarks"></a>Remarks  
  `GetFile` FTP サーバーからファイルの読み取りをローカルに格納することに関連するオーバーヘッドのすべてを処理する高レベルのルーチンです。 ファイルのデータのみを取得するか閉じるファイル転送では、制御を必要とするアプリケーションを使用する必要があります`OpenFile`と[細かい](../../mfc/reference/cinternetfile-class.md#read)代わりにします。  
@@ -410,7 +410,7 @@ BOOL PutFile(
  ファイルを配置するためのコンテキストの識別子です。 参照してください**解説**の詳細については*独自*します。  
   
 ### <a name="return-value"></a>戻り値  
- 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。  
+ 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。  
   
 ### <a name="remarks"></a>Remarks  
  `PutFile` すべての FTP サーバー上のファイルを格納することに関連付けられている操作を処理する高度なルーチン。 のみ、データを送信するか、ファイルの転送の詳細にコントロールを必要とするアプリケーションを使用する必要があります[OpenFile](#openfile)と[CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write)します。  
@@ -429,7 +429,7 @@ BOOL Remove(LPCTSTR pstrFileName);
  削除するファイル名を含む文字列へのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。  
+ 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。  
   
 ### <a name="remarks"></a>Remarks  
  *PstrFileName*パラメーターは、いずれか、部分的に修飾ファイル名、現在のディレクトリに相対パスまたは完全修飾を指定できます。 円記号 (\\) またはフォワード スラッシュ (/) は、いずれかの名前のディレクトリの区切り記号として使用できます。 `Remove`関数が使用されるように、適切な文字にディレクトリ名の区切り記号を変換します。  
@@ -446,7 +446,7 @@ BOOL RemoveDirectory(LPCTSTR pstrDirName);
  削除するディレクトリを含む文字列へのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。  
+ 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。  
   
 ### <a name="remarks"></a>Remarks  
  使用[GetCurrentDirectory](#getcurrentdirectory)をサーバーの現在の作業ディレクトリを決定します。 リモート システムがルート ディレクトリにするに接続を前提としてはいません。  
@@ -470,7 +470,7 @@ BOOL Rename(
  ファイルの新しい名前を含む文字列へのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。  
+ 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。  
   
 ### <a name="remarks"></a>Remarks  
  *PstrExisting*と*pstrNew*パラメーターは、いずれか、部分的に修飾ファイル名、現在のディレクトリに相対パスまたは完全修飾を指定できます。 円記号 (\\) またはフォワード スラッシュ (/) は、いずれかの名前のディレクトリの区切り記号として使用できます。 `Rename` 使用されるように、適切な文字にディレクトリ名の区切り記号を変換します。  
@@ -487,7 +487,7 @@ BOOL SetCurrentDirectory(LPCTSTR pstrDirName);
  ディレクトリの名前を含む文字列へのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。  
+ 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。  
   
 ### <a name="remarks"></a>Remarks  
  *PstrDirName*パラメーターに現在のディレクトリに対して相対的なファイルが部分的または完全修飾することができます。 円記号 (\\) またはフォワード スラッシュ (/) は、いずれかの名前のディレクトリの区切り記号として使用できます。 `SetCurrentDirectory` 使用されるように、適切な文字にディレクトリ名の区切り記号を変換します。  

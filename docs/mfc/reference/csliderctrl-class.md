@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd58faa0cda2162f1abe906da8e38d4d62402db8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: acf85412f6fde233d592f545b6611053a2f80e01
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850210"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215358"
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl クラス
 Windows コモン スライダー コントロールの機能を提供します。  
@@ -168,7 +168,7 @@ class CSliderCtrl : public CWnd
   
  `CSliderCtrl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxcmn.h  
   
 ##  <a name="clearsel"></a>  CSliderCtrl::ClearSel  
@@ -206,10 +206,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>パラメーター  
  *dwStyle*  
- スライダー コントロールのスタイルを指定します。 任意の組み合わせを適用[スライダー コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb760147)コントロールに、Windows SDK で説明します。  
+ スライダー コントロールのスタイルを指定します。 任意の組み合わせを適用[スライダー コントロールのスタイル](/windows/desktop/Controls/trackbar-control-styles)コントロールに、Windows SDK で説明します。  
   
  *rect*  
- スライダー コントロールのサイズと位置を指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。  
+ スライダー コントロールのサイズと位置を指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。  
   
  *pParentWnd*  
  通常、スライダー コントロールの親ウィンドウを指定します、`CDialog`します。 NULL は指定できません。  
@@ -241,13 +241,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>パラメーター  
  *dwExStyle*  
- 作成されるコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK に含まれています。  
+ 作成されるコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK に含まれています。  
   
  *dwStyle*  
- スライダー コントロールのスタイルを指定します。 任意の組み合わせを適用[スライダー コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb760147)コントロールに、Windows SDK で説明します。  
+ スライダー コントロールのスタイルを指定します。 任意の組み合わせを適用[スライダー コントロールのスタイル](/windows/desktop/Controls/trackbar-control-styles)コントロールに、Windows SDK で説明します。  
   
  *rect*  
- 参照を[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。  
+ 参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。  
   
  *pParentWnd*  
  コントロールの親であるウィンドウへのポインター。  
@@ -287,7 +287,7 @@ CWnd* GetBuddy(BOOL fLocation = TRUE) const;
  ポインター、 [CWnd](../../mfc/reference/cwnd-class.md)で指定された場所にある関連ウィンドウであるオブジェクトを*fLocation*、その場所で連動ウィンドウが存在しない場合は null です。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[TBM_GETBUDDY](http://msdn.microsoft.com/library/windows/desktop/bb760178)」の説明に従って、Windows SDK。 スライダー コントロールのスタイルの説明は、次を参照してください。 [Trackbar コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb760147)Windows SDK に含まれています。  
+ このメンバー関数は、Win32 メッセージの動作を実装[TBM_GETBUDDY](/windows/desktop/Controls/tbm-getbuddy)」の説明に従って、Windows SDK。 スライダー コントロールのスタイルの説明は、次を参照してください。 [Trackbar コントロールのスタイル](/windows/desktop/Controls/trackbar-control-styles)Windows SDK に含まれています。  
   
 ##  <a name="getchannelrect"></a>  CSliderCtrl::GetChannelRect  
  スライダー コントロールのチャネルの外接する四角形の位置とサイズを取得します。  
@@ -415,7 +415,7 @@ int GetThumbLength() const;
  ピクセル単位で、スライダーの長さ。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、送信、 [TBM_GETTHUMBLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760201)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [TBM_GETTHUMBLENGTH](/windows/desktop/Controls/tbm-getthumblength)メッセージは、Windows SDK で説明します。  
   
 ##  <a name="getthumbrect"></a>  CSliderCtrl::GetThumbRect  
  スライダー コントロールのスライダー (つまみ) の外接する四角形の位置とサイズを取得します。  
@@ -477,9 +477,9 @@ CToolTipCtrl* GetToolTips() const;
  ポインターを[CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md)オブジェクト、またはツールヒントが使用されていない場合は NULL です。 スライダー コントロールが TBS_TOOLTIPS スタイルを使用しない場合、戻り値は NULL です。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[TBM_GETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb760209)」の説明に従って、Windows SDK。 このメンバー関数によって返されるメモを`CToolTipCtrl`コントロールへのハンドルではなくオブジェクト。  
+ このメンバー関数は、Win32 メッセージの動作を実装[TBM_GETTOOLTIPS](/windows/desktop/Controls/tbm-gettooltips)」の説明に従って、Windows SDK。 このメンバー関数によって返されるメモを`CToolTipCtrl`コントロールへのハンドルではなくオブジェクト。  
   
- スライダー コントロールのスタイルの説明は、次を参照してください。 [Trackbar コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb760147)Windows SDK に含まれています。  
+ スライダー コントロールのスタイルの説明は、次を参照してください。 [Trackbar コントロールのスタイル](/windows/desktop/Controls/trackbar-control-styles)Windows SDK に含まれています。  
   
 ##  <a name="setbuddy"></a>  CSliderCtrl::SetBuddy  
  スライダー コントロールの連動ウィンドウとして、ウィンドウを割り当てます。  
@@ -505,9 +505,9 @@ CWnd* SetBuddy(
  ポインターを[CWnd](../../mfc/reference/cwnd-class.md)その場所にあるスライダー コントロールに割り当てられていたオブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[TBM_SETBUDDY](http://msdn.microsoft.com/library/windows/desktop/bb760213)」の説明に従って、Windows SDK。 このメンバー関数へのポインターを使用して`CWnd`戻り値とパラメーターの両方のウィンドウ ハンドルではなく、オブジェクト。  
+ このメンバー関数は、Win32 メッセージの動作を実装[TBM_SETBUDDY](/windows/desktop/Controls/tbm-setbuddy)」の説明に従って、Windows SDK。 このメンバー関数へのポインターを使用して`CWnd`戻り値とパラメーターの両方のウィンドウ ハンドルではなく、オブジェクト。  
   
- スライダー コントロールのスタイルの説明は、次を参照してください。 [Trackbar コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb760147)Windows SDK に含まれています。  
+ スライダー コントロールのスタイルの説明は、次を参照してください。 [Trackbar コントロールのスタイル](/windows/desktop/Controls/trackbar-control-styles)Windows SDK に含まれています。  
   
 ##  <a name="setlinesize"></a>  CSliderCtrl::SetLineSize  
  スライダー コントロールの行のサイズを設定します。  
@@ -636,9 +636,9 @@ void SetThumbLength(int nLength);
 |[in]*されて*|ピクセル単位で、スライダーの長さ。|  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、トラック バー コントロールに設定する必要があります[TBS_FIXEDLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760147)スタイル。  
+ このメソッドは、トラック バー コントロールに設定する必要があります[TBS_FIXEDLENGTH](/windows/desktop/Controls/trackbar-control-styles)スタイル。  
   
- このメソッドは、送信、 [TBM_SETTHUMBLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760234)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [TBM_SETTHUMBLENGTH](/windows/desktop/Controls/tbm-setthumblength)メッセージは、Windows SDK で説明します。  
   
 ### <a name="example"></a>例  
  次のコード例は、変数を定義します。 `m_sliderCtrl`、つまり、現在のトラック バー コントロールにアクセスするために使用します。 この例では、変数にも定義します`thumbLength`、つまり trackbar コントロールのつまみのコンポーネントの既定の長さを格納するために使用します。 これらの変数は、次の例で使用されます。  
@@ -689,13 +689,13 @@ int SetTipSide(int nLocation);
   
 ### <a name="parameters"></a>パラメーター  
  *%n 場所*  
- ツール ヒント コントロールを表示する位置を表す値。 使用可能な値の一覧は、Win32 メッセージを参照してください。 [TBM_SETTIPSIDE](http://msdn.microsoft.com/library/windows/desktop/bb760240)」の説明に従って、Windows SDK。  
+ ツール ヒント コントロールを表示する位置を表す値。 使用可能な値の一覧は、Win32 メッセージを参照してください。 [TBM_SETTIPSIDE](/windows/desktop/Controls/tbm-settipside)」の説明に従って、Windows SDK。  
   
 ### <a name="return-value"></a>戻り値  
  ツール ヒント コントロールの前の場所を表す値。 戻り値では、可能な値のいずれかと等しい *%n 場所*します。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Windows SDK」の説明に従って、TBM_SETTIPSIDE、Win32 メッセージの動作を実装します。 TBS_TOOLTIPS スタイルを使用して、スライダー コントロールは、ツールヒントを表示します。 スライダー コントロールのスタイルの説明は、次を参照してください。 [Trackbar コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb760147)Windows SDK に含まれています。  
+ このメンバー関数は、Windows SDK」の説明に従って、TBM_SETTIPSIDE、Win32 メッセージの動作を実装します。 TBS_TOOLTIPS スタイルを使用して、スライダー コントロールは、ツールヒントを表示します。 スライダー コントロールのスタイルの説明は、次を参照してください。 [Trackbar コントロールのスタイル](/windows/desktop/Controls/trackbar-control-styles)Windows SDK に含まれています。  
   
 ##  <a name="settooltips"></a>  CSliderCtrl::SetToolTips  
  ツール ヒント コントロールをスライダー コントロールに割り当てます。  
@@ -709,7 +709,7 @@ void SetToolTips(CToolTipCtrl* pWndTip);
  ポインターを[CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md)スライダー コントロールで使用するツールヒントを含むオブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、Win32 メッセージの動作を実装[TBM_SETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb760242)」の説明に従って、Windows SDK。 スライダー コントロールが TBS_TOOLTIPS スタイルで作成されると、スライダーの現在の位置を表示する、スライダーの横に表示される既定のツールヒント コントロールを作成します。 スライダー コントロールのスタイルの説明は、次を参照してください。 [Trackbar コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb760147)Windows SDK に含まれています。  
+ このメンバー関数は、Win32 メッセージの動作を実装[TBM_SETTOOLTIPS](/windows/desktop/Controls/tbm-settooltips)」の説明に従って、Windows SDK。 スライダー コントロールが TBS_TOOLTIPS スタイルで作成されると、スライダーの現在の位置を表示する、スライダーの横に表示される既定のツールヒント コントロールを作成します。 スライダー コントロールのスタイルの説明は、次を参照してください。 [Trackbar コントロールのスタイル](/windows/desktop/Controls/trackbar-control-styles)Windows SDK に含まれています。  
   
 ## <a name="see-also"></a>関連項目  
  [MFC サンプル CMNCTRL2](../../visual-cpp-samples.md)   

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 16f7be95c36970ce96d04ff357831294f3a3faf1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9a775370228691e47b1b9becca8e0769ea0f7367
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571618"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221879"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>OLE DB テンプレート、属性、およびその他の実装
 ## <a name="atl-ole-db-templates"></a>ATL OLE DB テンプレート  
@@ -44,7 +44,7 @@ ms.locfileid: "42571618"
   
 -   一覧を参照してください。 [OLE DB コンシューマー クラス](../../data/oledb/ole-db-consumer-templates-reference.md)または[OLE DB プロバイダー クラス](../../data/oledb/ole-db-provider-templates-reference.md)します。  
   
--   一覧を参照してください。 [OLE DB テンプレート サンプル](http://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)します。  
+-   一覧を参照してください。 [OLE DB テンプレート サンプル](https://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)します。  
   
 -   参照してください[OLE DB プログラマーズ リファレンス](/previous-versions/windows/desktop/ms713643\(v=vs.85\))(、Windows SDK) にします。  
   

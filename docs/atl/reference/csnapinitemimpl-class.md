@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77f92e2a0a5ea65fce361c19ae52745932f58deb
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a2b120ab308e8d46ac4c874681d62bbeaaa86588
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884932"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205545"
 ---
 # <a name="csnapinitemimpl-class"></a>CSnapInItemImpl クラス
 このクラスは、スナップインからノード オブジェクトを実装するためのメソッドを提供します。  
@@ -106,11 +106,11 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
   
  `CSnapInItemImpl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlsnap.h  
   
 ##  <a name="addmenuitems"></a>  CSnapInItemImpl::AddMenuItems  
- このメソッドは、Win32 関数を実装します。 [IExtendContextMenu::AddMenuItems](http://msdn.microsoft.com/library/aa814841)します。  
+ このメソッドは、Win32 関数を実装します。 [IExtendContextMenu::AddMenuItems](https://msdn.microsoft.com/library/aa814841)します。  
   
 ```
 AddMenuItems(  
@@ -146,7 +146,7 @@ AddMenuItems(
 - CCT_UNINITIALIZED データ オブジェクトには、無効な型があります。  
   
 ##  <a name="command"></a>  CSnapInItemImpl::Command  
- このメソッドは、Win32 関数を実装します。 [IExtendContextMenu::Command](http://msdn.microsoft.com/library/aa814842)します。  
+ このメソッドは、Win32 関数を実装します。 [IExtendContextMenu::Command](https://msdn.microsoft.com/library/aa814842)します。  
   
 ```
 Command(long lCommandID, DATA_OBJECT_TYPES type);
@@ -168,7 +168,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 - CCT_UNINITIALIZED データ オブジェクトには、無効な型があります。  
   
 ##  <a name="createpropertypages"></a>  CSnapInItemImpl::CreatePropertyPages  
- このメソッドは、Win32 関数を実装します。 [IExtendPropertySheet::CreatePropertyPages](http://msdn.microsoft.com/library/aa814846)します。  
+ このメソッドは、Win32 関数を実装します。 [IExtendPropertySheet::CreatePropertyPages](https://msdn.microsoft.com/library/aa814846)します。  
   
 ```
 CreatePropertyPages(  
@@ -280,7 +280,7 @@ SCOPEDATAITEM m_scopeDataItem;
 ```  
   
 ##  <a name="m_resultdataitem"></a>  CSnapInItemImpl::m_resultDataItem  
- [RESULTDATAITEM](http://msdn.microsoft.com/library/aa815165)スナップイン データ オブジェクトの構造体。  
+ [RESULTDATAITEM](https://msdn.microsoft.com/library/aa815165)スナップイン データ オブジェクトの構造体。  
   
 ```
 RESULTDATAITEM m_resultDataItem;

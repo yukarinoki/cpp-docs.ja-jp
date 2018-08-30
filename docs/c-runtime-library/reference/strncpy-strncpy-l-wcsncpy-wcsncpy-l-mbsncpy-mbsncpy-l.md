@@ -71,12 +71,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4b4ec53451b750e92d952a57257709e9a0cde09
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f01e69129b0884b3385b7a17289a067f36f65e3a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418238"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213238"
 ---
 # <a name="strncpy-strncpyl-wcsncpy-wcsncpyl-mbsncpy-mbsncpyl"></a>strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l
 
@@ -178,20 +178,20 @@ unsigned char *_mbsncpy_l(
 
 ## <a name="return-value"></a>戻り値
 
-返します*追加される文字*です。 エラーを示す戻り値は予約されていません。
+返します*追加される文字*します。 エラーを示す戻り値は予約されていません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Strncpy**関数は、初期コピー*カウント*の文字*strSource*に*追加される文字*し、返します*追加される文字*. 場合*カウント*がの長さ未満*strSource*、コピーされた文字列に null 文字が自動的に追加されません。 場合*カウント*がの長さより大きい*strSource*、コピー先文字列が長さまで null 文字が埋め込まれた*カウント*です。 動作**strncpy**元とコピー先文字列が重なり合っている場合に定義されていません。
+**Strncpy**関数は、初期コピー*数*の文字*strSource*に*追加される文字*返します*追加される文字*. 場合*カウント*がの長さ未満*strSource*、コピーされた文字列に null 文字は自動的に追加されません。 場合*カウント*がの長さより大きい*strSource*、コピー先文字列が長さまで null 文字で埋められます*カウント*します。 動作**strncpy**元とコピー先文字列が重なり合う場合は定義されません。
 
 > [!IMPORTANT]
-> **strncpy**に十分な領域をチェックしません*追加される文字*です。 これにより、バッファー オーバーランの潜在的な原因です。 *カウント*引数がコピーされた文字の数を制限は、サイズの制限ではなく*追加される文字*です。 次の例を参照してください。 詳しくは、「 [バッファー オーバーランの回避](http://msdn.microsoft.com/library/windows/desktop/ms717795)」をご覧ください。
+> **strncpy**に十分な領域をチェックしません*追加される文字*。 これにより、バッファー オーバーランの潜在的な原因です。 *カウント*引数がコピーされた文字の数に制限は、サイズの制限ではなく*追加される文字*します。 次の例を参照してください。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
-場合*追加される文字*または*strSource*は、 **NULL**ポインター、または*カウント*と同じかそれよりも少ないには、0 は無効なパラメーター ハンドラーが呼び出される、」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、これらの関数は-1 を返します設定と**errno**に**EINVAL**です。
+場合*追加される文字*または*strSource*は、 **NULL**ポインター、または*カウント*と同じかそれよりも少ない対 0 の場合は、無効なパラメーター ハンドラーが呼び出される、」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、これらの関数は-1 を返し設定と**errno**に**EINVAL**します。
 
-**wcsncpy**と **_mbsncpy**のワイド文字とマルチバイト文字バージョンは、 **strncpy**です。 引数と戻り値の**wcsncpy**と **_mbsncpy**がそれに応じて異なります。 それ以外では、これらの関数の動作は同じです。
+**wcsncpy**と **_mbsncpy**のワイド文字とマルチバイト文字バージョン**strncpy**します。 引数と戻り値の**wcsncpy**と **_mbsncpy**それに応じて異なります。 それ以外では、これらの関数の動作は同じです。
 
-これらの関数のバージョン、 **_l**そのロケールに依存する動作に現在のロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+これらの関数のバージョン、 **_l**ロケールに依存する動作に現在のロケールではなく渡されたロケールを使用することを除き、サフィックスは同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -203,11 +203,11 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 |**_tcsncpy_l**|**_strncpy_l**|**_mbsnbcpy_l**|**_wcsncpy_l**|
 
 > [!NOTE]
-> **_strncpy_l**と **_wcsncpy_l**ロケールの依存関係を持ちません。 だけで提供される **_tcsncpy_l**直接呼び出されるものではありません。
+> **_strncpy_l**と **_wcsncpy_l**ロケール依存性を持ちません。 だけで提供される **_tcsncpy_l**し、直接呼び出すためのものではありません。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**strncpy**|\<string.h>|
 |**wcsncpy**|\<string.h> または \<wchar.h>|
@@ -217,7 +217,7 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 
 ## <a name="example"></a>例
 
-次の例で使用する**strncpy**方法、悪用される可能性がプログラムのバグやセキュリティの問題が発生するとします。 呼び出しごとに、コンパイラで警告**strncpy**に似て**crt_strncpy_x86.c(15): C4996 が警告: 'strncpy': この関数または変数がセーフである可能性があります。代わりに strncpy_s の使用を検討してください。使用されなくなったことの警告を無効にするには、_CRT_SECURE_NO_WARNINGS を使用します。詳しくは、オンライン ヘルプをご覧ください。**
+使用例を次に示します**strncpy**とプログラムのバグやセキュリティの問題が発生するどの誤用されることができます。 コンパイラは呼び出しごとに警告を生成**strncpy**のような**crt_strncpy_x86.c(15): 警告 C4996: 'strncpy': この関数または変数が安全可能性があります。代わりに strncpy_s の使用を検討してください。使用されなくなったことの警告を無効にするには、_CRT_SECURE_NO_WARNINGS を使用します。詳しくは、オンライン ヘルプをご覧ください。**
 
 ```C
 // crt_strncpy_x86.c

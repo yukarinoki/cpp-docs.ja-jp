@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19c302f08485b6db89ea2a6b66106244ed95b48c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dd6f4eed4cefba16d95baabe38fc5268c0ae8512
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601739"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216440"
 ---
 # <a name="platformobject-class"></a>Platform::Object クラス
 Ref クラスと Windows ランタイム アプリで ref 構造体に対して共通の動作を提供します。 ref クラスと ref 構造体のインスタンスは、いずれも Platform::Object^ に暗黙的に変換可能で、仮想の ToString メソッドをオーバーライドできます。  
@@ -119,7 +119,7 @@ Object::GetType()
 ### <a name="remarks"></a>Remarks  
  静的な[type::gettypecode](../cppcx/platform-type-class.md#gettypecode)を取得するために使用できる、 [platform::typecode 列挙](../cppcx/platform-typecode-enumeration.md)現在の型を表す値です。 これは主に、組み込み型に使用できます。 以外の ref クラスの型コード[platform::string](../cppcx/platform-string-class.md)オブジェクト (1) です。  
   
- [::Interop::typename](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx)クラスは、Windows コンポーネントとアプリ間で型情報を渡すことの言語に依存しない方法として Windows Api で使用されます。 T[platform::type Class](../cppcx/platform-type-class.md)間の変換演算子を持つ`Type`と`TypeName`します。  
+ [::Interop::typename](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx)クラスは、Windows コンポーネントとアプリ間で型情報を渡すことの言語に依存しない方法として Windows Api で使用されます。 T[platform::type Class](../cppcx/platform-type-class.md)間の変換演算子を持つ`Type`と`TypeName`します。  
   
  使用して、 [typeid](../windows/typeid-cpp-component-extensions.md)演算子を返す、 `Platform::Type` XAML ページ間を移動するときなど、クラス名のオブジェクト。  
   

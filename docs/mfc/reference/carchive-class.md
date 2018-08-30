@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81e76347e197469e4e4fa490d4ddfc42ef0fbd71
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b76525c6e10284109952ede7f5e7c70132684d75
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338082"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210965"
 ---
 # <a name="carchive-class"></a>CArchive クラス
 オブジェクトの複雑なネットワーク オブジェクトを削除した後が引き続き発生する永続的なバイナリ形式 (通常はディスク ストレージ) に保存することができます。  
@@ -145,7 +145,7 @@ class CArchive
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CArchive`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afx.h  
   
 ##  <a name="abort"></a>  CArchive::Abort  
@@ -561,7 +561,7 @@ CRuntimeClass* ReadClass(
   
  ランタイム クラスを使用する必要があります[DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial)と[IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial)、それ以外の`ReadClass`がスローされます、 [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)します。  
   
- 場合*pSchema*が null の場合、ストアド クラスのスキーマを呼び出すことによって取得できる[CArchive::GetObjectSchema](#getobjectschema)それ以外 **\** * * pSchema*されます。以前に格納されているランタイム クラスのスキーマが含まれます。  
+ 場合*pSchema*が null の場合、ストアド クラスのスキーマを呼び出すことによって取得できる[CArchive::GetObjectSchema](#getobjectschema)、それ以外の<strong>\*</strong> *pSchema*は保存されていたランタイム クラスのスキーマが含まれます。  
   
  使用することができます[SerializeClass](#serializeclass)の代わりに`ReadClass`、読み取りと書き込みはクラス参照の両方を処理します。  
   

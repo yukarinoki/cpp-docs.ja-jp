@@ -27,15 +27,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ea5da8b98c528eb6832c850e41b0a42c386f901
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0259716bb1106dbc5c2da5a3738cd78e5c8c877f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572274"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202476"
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject クラス
-このクラスは、実装、 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)集計オブジェクトのインターフェイス。 定義上、集約オブジェクトは外側のオブジェクト内に含まれます。 `CComAggObject`クラスと似ています、 [CComObject クラス](../../atl/reference/ccomobject-class.md)、外部クライアントに直接アクセスできるインターフェイスを公開する点が異なります。  
+このクラスは、実装、 [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)集計オブジェクトのインターフェイス。 定義上、集約オブジェクトは外側のオブジェクト内に含まれます。 `CComAggObject`クラスと似ています、 [CComObject クラス](../../atl/reference/ccomobject-class.md)、外部クライアントに直接アクセスできるインターフェイスを公開する点が異なります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -76,7 +76,7 @@ class CComAggObject : public IUnknown,
 |[CComAggObject::m_contained](#m_contained)|デリゲート`IUnknown`不明な外部への呼び出し。|  
   
 ## <a name="remarks"></a>Remarks  
- `CComAggObject` 実装[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)集約オブジェクト。 `CComAggObject` 独自`IUnknown`インターフェイス、外側のオブジェクトから個別`IUnknown`インターフェイス、および参照カウントを保持します。  
+ `CComAggObject` 実装[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)集約オブジェクト。 `CComAggObject` 独自`IUnknown`インターフェイス、外側のオブジェクトから個別`IUnknown`インターフェイス、および参照カウントを保持します。  
   
  集計の詳細については、記事を参照してください。 [ATL COM オブジェクトの基本事項](../../atl/fundamentals-of-atl-com-objects.md)します。  
   
@@ -139,7 +139,7 @@ static HRESULT WINAPI CreateInstance(
   
 ### <a name="parameters"></a>パラメーター  
  *pp*  
- [out]ポインターを **CComAggObject\<* * * に含まれている* **>** ポインター。 場合`CreateInstance`が成功すると、 *pp* NULL に設定されます。  
+ [out]ポインターを**CComAggObject\<**<em>に含まれている</em>**>** ポインター。 場合`CreateInstance`が成功すると、 *pp* NULL に設定されます。  
   
 ### <a name="return-value"></a>戻り値  
  標準の HRESULT 値。  

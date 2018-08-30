@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 359a7ff75b2036960d8d8ffd40200f9175ccc21c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c0fbc3914f10bacdd286fe89c3e82de78b726cfc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960701"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216862"
 ---
 # <a name="coledatetime-class"></a>COleDateTime クラス
 カプセル化、 `DATE` OLE オートメーションで使用されているデータ型。  
@@ -74,7 +74,7 @@ class COleDateTime
 |----------|-----------------|  
 |[近く](#format)|書式設定された文字列表現を生成、`COleDateTime`オブジェクト。|  
 |[COleDateTime::GetAsDBTIMESTAMP](#getasdbtimestamp)|時刻を取得するには、このメソッドを呼び出す、`COleDateTime`オブジェクトとして、`DBTIMESTAMP`データ構造体。|  
-|[COleDateTime::GetAsSystemTime](#getassystemtime)|時刻を取得するには、このメソッドを呼び出す、`COleDateTime`オブジェクトとして、 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)データ構造体。|  
+|[COleDateTime::GetAsSystemTime](#getassystemtime)|時刻を取得するには、このメソッドを呼び出す、`COleDateTime`オブジェクトとして、 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)データ構造体。|  
 |[COleDateTime::GetAsUDATE](#getasudate)|時刻を取得するには、このメソッドを呼び出す、`COleDateTime`として、`UDATE`データ構造体。|  
 |[COleDateTime::GetCurrentTime](#getcurrenttime)|作成、 `COleDateTime` (静的メンバー関数) の現在の時刻を表すオブジェクト。|  
 |[COleDateTime::GetDay](#getday)|この日付を返します`COleDateTime`オブジェクトは (1 ~ 31) を表します。|  
@@ -144,7 +144,7 @@ class COleDateTime
   
  詳細については、`COleDateTime`と`COleDateTimeSpan`クラスは、記事をご覧ください。[日付と時刻: オートメーション サポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** ATLComTime.h  
   
 ##  <a name="coledatetime_relational_operators"></a>  COleDateTime 関係演算子  
@@ -217,7 +217,7 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
  A`SYSTEMTIME`構造体の日付/時刻値に変換して、新しいコピーを`COleDateTime`オブジェクト。  
   
  *filetimeSrc*  
- A`FILETIME`構造体の日付/時刻値に変換して、新しいコピーを`COleDateTime`オブジェクト。 なお`FILETIME`世界協定時刻 (UTC) を使用して、現地時刻を構造に渡す場合、結果は不正確になります。 参照してください[ファイル回](http://msdn.microsoft.com/library/windows/desktop/ms724290)詳細については、Windows sdk。  
+ A`FILETIME`構造体の日付/時刻値に変換して、新しいコピーを`COleDateTime`オブジェクト。 なお`FILETIME`世界協定時刻 (UTC) を使用して、現地時刻を構造に渡す場合、結果は不正確になります。 参照してください[ファイル回](/windows/desktop/SysInfo/file-times)詳細については、Windows sdk。  
   
  *nYear*、 *nMonth*、 *%n%n*、*時間*、 *nMin*、 *nSec*  
  新しいにコピーされる日付と時刻の値を示す`COleDateTime`オブジェクト。  
@@ -256,7 +256,7 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
   
 - `COleDateTime(` *systimeSrc* **)** を構築、`COleDateTime`オブジェクトから、`SYSTEMTIME`値。  
   
-- `COleDateTime(` `filetimeSrc` **)** を構築、`COleDateTime`オブジェクトから、`FILETIME`値。 . なお`FILETIME`世界協定時刻 (UTC) を使用して、現地時刻を構造に渡す場合、結果は不正確になります。 参照してください[ファイル回](http://msdn.microsoft.com/library/windows/desktop/ms724290)詳細については、Windows sdk。  
+- `COleDateTime(` `filetimeSrc` **)** を構築、`COleDateTime`オブジェクトから、`FILETIME`値。 . なお`FILETIME`世界協定時刻 (UTC) を使用して、現地時刻を構造に渡す場合、結果は不正確になります。 参照してください[ファイル回](/windows/desktop/SysInfo/file-times)詳細については、Windows sdk。  
   
 - `COleDateTime(` `nYear`、 `nMonth`、 `nDay`、 `nHour`、 `nMin`、 `nSec` **)** を構築、`COleDateTime`オブジェクトから指定した数値。  
   
@@ -264,7 +264,7 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
   
  詳細については、`time_t`データ型を参照してください、[時間](../../c-runtime-library/reference/time-time32-time64.md)で機能、*ランタイム ライブラリ リファレンス*します。  
   
- 詳細については、次を参照してください。、 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)と[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) Windows SDK 内の構造体。  
+ 詳細については、次を参照してください。、 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)と[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) Windows SDK 内の構造体。  
   
  境界の詳細については`COleDateTime`、値は、記事をご覧ください。[日付と時刻: オートメーション サポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。  
   
@@ -294,7 +294,7 @@ CString Format(UINT nFormatID) const;
 - VAR_DATEVALUEONLY は、解析中に時刻部分を無視します。  
   
  *lcid*  
- 変換に使用するロケール ID を示します。 言語識別子の詳細については、次を参照してください。[言語識別子](http://msdn.microsoft.com/library/windows/desktop/dd318691)します。  
+ 変換に使用するロケール ID を示します。 言語識別子の詳細については、次を参照してください。[言語識別子](/windows/desktop/Intl/language-identifiers)します。  
   
  *lpszFormat*  
  ような文字列を書式設定、`printf`文字列の書式設定します。 各パーセントで前に、コードの書式設定 ( `%`) 署名は、対応する置き換え`COleDateTime`コンポーネント。 その他の文字書式指定文字列では、返される文字列をそのままコピーされます。 実行時の関数を参照してください。 [strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)詳細についてはします。 値との書式設定コードの意味`Format`は。  
@@ -359,7 +359,7 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
   
 ### <a name="parameters"></a>パラメーター  
  *sysTime*  
- 参照を[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)から変換された日付/時刻値を受け取る、`COleDateTime`オブジェクト。  
+ 参照を[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)から変換された日付/時刻値を受け取る、`COleDateTime`オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、TRUE を返しますFALSE、変換に失敗した場合、または場合、`COleDateTime`オブジェクトが NULL または無効です。  
@@ -772,17 +772,17 @@ COleDateTime& operator=(const UDATE& udate) throw();
   
 - **operator = (** `timeSrc` **)** 、`time_t`または`__time64_t`値が変換され、これにコピー`COleDateTime`オブジェクト。 変換が成功した場合は、このオブジェクトの状態が設定無効です。失敗した場合は、設定されているかどうかが無効です。  
   
-- **operator = (** *systimeSrc* **)** 、 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)値が変換され、これにコピー`COleDateTime`オブジェクト。 変換が成功した場合は、このオブジェクトの状態が設定無効です。失敗した場合は、設定されているかどうかが無効です。  
+- **operator = (** *systimeSrc* **)** 、 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)値が変換され、これにコピー`COleDateTime`オブジェクト。 変換が成功した場合は、このオブジェクトの状態が設定無効です。失敗した場合は、設定されているかどうかが無効です。  
   
 - **operator = (** `udate` **)** 、`UDATE`値が変換され、これにコピー`COleDateTime`オブジェクト。 変換が成功した場合は、このオブジェクトの状態が設定無効です。失敗した場合は、設定されているかどうかが無効です。 A`UDATE`構造体は、「開」の日付を表します。 関数を参照してください。 [VarDateFromUdate](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-vardatefromudate)の詳細。  
   
-- **operator = (** `filetimeSrc` **)** 、 [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)値が変換され、これにコピー`COleDateTime`オブジェクト。 変換が成功した場合は、このオブジェクトの状態が設定無効です。それ以外の場合に設定されている無効にします。 `FILETIME` 世界協定時刻 (UTC) を使用するは、ため、UTC 時刻を構造に渡す場合、結果は UTC 時刻を現地時刻に変換され、バリアントの時刻として格納されます。 この動作は、Visual C 6.0 および Visual C .NET 2003 SP2 のように同じです。 参照してください[ファイル回](http://msdn.microsoft.com/library/windows/desktop/ms724290)詳細については、Windows sdk。  
+- **operator = (** `filetimeSrc` **)** 、 [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)値が変換され、これにコピー`COleDateTime`オブジェクト。 変換が成功した場合は、このオブジェクトの状態が設定無効です。それ以外の場合に設定されている無効にします。 `FILETIME` 世界協定時刻 (UTC) を使用するは、ため、UTC 時刻を構造に渡す場合、結果は UTC 時刻を現地時刻に変換され、バリアントの時刻として格納されます。 この動作は、Visual C 6.0 および Visual C .NET 2003 SP2 のように同じです。 参照してください[ファイル回](/windows/desktop/SysInfo/file-times)詳細については、Windows sdk。  
   
  詳細については、次を参照してください。、[バリアント](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)Windows SDK 内のエントリ。  
   
  詳細については、`time_t`データ型を参照してください、[時間](../../c-runtime-library/reference/time-time32-time64.md)で機能、*ランタイム ライブラリ リファレンス*します。  
   
- 詳細については、次を参照してください。、 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)と[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) Windows SDK 内の構造体。  
+ 詳細については、次を参照してください。、 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)と[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) Windows SDK 内の構造体。  
   
  境界の詳細については`COleDateTime`、値は、記事をご覧ください。[日付と時刻: オートメーション サポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。  
   

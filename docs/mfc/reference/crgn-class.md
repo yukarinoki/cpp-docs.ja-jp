@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03b88f2c295ae4fa31a0afd2093251c94e1c6b79
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: d4ac334221f22dcd80434c1be2f59998709aae5e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853863"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204881"
 ---
 # <a name="crgn-class"></a>CRgn クラス
 Windows のグラフィック デバイス インターフェイス (GDI) の領域をカプセル化したものです。  
@@ -124,7 +124,7 @@ class CRgn : public CGdiObject
   
  `CRgn`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="combinergn"></a>  CRgn::CombineRgn  
@@ -678,7 +678,7 @@ operator HRGN() const;
 ### <a name="remarks"></a>Remarks  
  この演算子は、キャスト演算子です。  
   
- グラフィック オブジェクトの使用に関する詳細については、記事を参照してください。[グラフィック オブジェクト](http://msdn.microsoft.com/library/windows/desktop/dd144962)Windows SDK に含まれています。  
+ グラフィック オブジェクトの使用に関する詳細については、記事を参照してください。[グラフィック オブジェクト](/windows/desktop/gdi/graphic-objects)Windows SDK に含まれています。  
   
 ##  <a name="ptinregion"></a>  CRgn::PtInRegion  
  チェックかどうかで指定したポイント*x*と*y*に格納されているリージョンでは、`CRgn`オブジェクト。  

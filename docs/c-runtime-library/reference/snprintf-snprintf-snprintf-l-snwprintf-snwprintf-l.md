@@ -58,12 +58,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90f931153b4328c404fa4a0e6be8f0c3548c4d95
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: fe100cbd38581b733c07b5d129d215f368e27aa7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451746"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203519"
 ---
 # <a name="snprintf-snprintf-snprintfl-snwprintf-snwprintfl"></a>snprintf、_snprintf、_snprintf_l、_snwprintf、_snwprintf_l
 文字列に書式付きデータを書き込みます。 これらの関数のセキュリティを強化したバージョンを使用できます。「[_snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)」をご覧ください。
@@ -156,32 +156,32 @@ int _snwprintf_l(
 
 ## <a name="return-value"></a>戻り値
 
-Let **len**終端の null は含まない、書式付きデータ文字列の長さ。 両方**len**と*カウント*(バイト) は**snprintf**と **_snprintf**、ワイド文字 **_snwprintf**.
+ように**len**終端の null は含まない書式付きデータ文字列の長さにします。 両方**len**と*カウント*バイトにはで**snprintf**と **_snprintf**、ワイド文字 **_snwprintf**.
 
-すべての関数の場合は**len** < *カウント*、 **len**に文字が格納されている*バッファー*終端の null を追加すると、および**len**が返されます。
+すべての関数の場合は**len** < *カウント*、 **len**に文字が格納されている*バッファー*終端の null を追加すると、**len**が返されます。
 
-**Snprintf**関数には、出力が切り捨てられますときに**len**がより大きいまたは等しい*カウント*、終端の null で配置することによって`buffer[count-1]`です。 戻り値は**len**は場合に出力された文字数*カウント*に十分です。 **Snprintf**エンコード エラーが発生した場合、関数は、負の値を返します。
+**Snprintf**関数には、出力が切り捨てられますとき**len**がより大きいまたは等しい*カウント*、null 終端文字を配置することで`buffer[count-1]`します。 返される値**len**は場合に出力された文字数*カウント*のサイズが十分です。 **Snprintf**エンコード エラーが発生した場合、関数は負の値を返します。
 
-すべての関数について以外の**snprintf**場合は、 **len** = *カウント*、 **len**に文字が格納されている*バッファー*、終端の null は追加されず、および**len**が返されます。 場合**len** > *カウント*、*カウント*に文字が格納されている*バッファー*終端の null は追加、および負の値はありません値が返されます。
+すべての関数以外の**snprintf**場合は、 **len** = *カウント*、 **len**に文字が格納されている*バッファー*、終端の null は追加されず、および**len**が返されます。 場合**len** > *カウント*、*カウント*に文字が格納されている*バッファー*終端の null は追加、および負の値はありません値が返されます。
 
-場合*バッファー* null ポインターと*カウント*ゼロ、 **len**終端の null は含まない出力を書式設定に必要な文字数として返されます。 同じ成功した呼び出しを行う*引数*と*ロケール*パラメーターには、少なくともを保持するバッファーの割り当て**len** + 1 文字です。
+場合*バッファー* null ポインターと*カウント*ゼロ、 **len**は終端の null は含まない出力を書式設定に必要な文字数として返されます。 同じ成功した呼び出しを行う*引数*と*ロケール*パラメーターは、少なくともを保持するバッファーを割り当てる**len** + 1 文字。
 
-場合*バッファー* null ポインターと*カウント*0 以外の場合、または*形式*null ポインターで説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、これらの関数は-1 を返します設定と**errno**に**EINVAL**です。
+場合*バッファー* null ポインターと*カウント*0 以外の場合、または*形式*null ポインターの場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、これらの関数は-1 を返し設定と**errno**に**EINVAL**します。
 
 エラー コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Snprintf**関数および **_snprintf**関数形式およびストアのファミリ*カウント*で以下の文字*バッファー*です。 **Snprintf**関数が常に必要な場合、出力を切り捨てて、終端の null 文字を格納します。 **_Snprintf**ファミリの関数は、書式設定された文字列の長さがある場合のみ、終端の null 文字を追加未満*カウント*文字です。 各*引数*(存在する場合) は変換され、対応する書式指定に応じて*形式*です。 形式は、通常の文字と、同じ形式し、機能、*形式*引数[printf](printf-printf-l-wprintf-wprintf-l.md)です。 重なり合う文字列間でコピーした場合の動作は未定義です。
+**Snprintf**関数と **_snprintf**関数形式およびストアのファミリ*カウント*以下の文字*バッファー*します。 **Snprintf**関数は、常に必要な場合、出力の切り捨て、終端の null 文字を格納します。 **_Snprintf**ファミリの関数は、書式設定された文字列の長さがある場合のみ、終端の null 文字を付加より小さい*カウント*文字。 各*引数*(ある場合) は変換され、出力に対応する書式指定に応じて*形式*します。 形式は、通常の文字と同じ形式し、機能、*形式*引数[printf](printf-printf-l-wprintf-wprintf-l.md)します。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
 > [!IMPORTANT]
-> *format* にユーザー定義の文字列を指定しないでください。 **_Snprintf**関数では、終端の null は保証されません-具体的には、戻り値が*カウント*— null 終端文字を追加するコードに従っていることを確認してください。 詳しくは、「 [バッファー オーバーランの回避](http://msdn.microsoft.com/library/windows/desktop/ms717795)」をご覧ください。
+> *format* にユーザー定義の文字列を指定しないでください。 **_Snprintf**関数は終端の null は保証されません-具体的には、戻り値が*カウント*-null 終端文字を追加するコードに従っていることを確認します。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
-Visual Studio 2015 および Windows 10 で UCRT と共に開始**snprintf**と同じでは、不要になった **_snprintf**です。 **Snprintf**関数の動作は、現在 C99 標準に準拠していません。
+Visual Studio 2015 と Windows 10 で UCRT と共に開始**snprintf**と同じですが不要になった **_snprintf**します。 **Snprintf**関数の動作は、C99 標準に準拠しているようになりました。
 
-**_snwprintf**のワイド文字バージョンは、 **_snprintf**; ポインター引数 **_snwprintf**ワイド文字列です。 エンコーディング エラーの検出 **_snwprintf**が異なる場合が **_snprintf**です。 **_snwprintf**とまったく同様に、 **swprintf**、型の出力先ではなく文字列に出力を書き込みます**ファイル**です。
+**_snwprintf**のワイド文字バージョンは、 **_snprintf**; へのポインター引数 **_snwprintf**はワイド文字列です。 エンコーディング エラーの検出 **_snwprintf**で異なる場合があります **_snprintf**します。 **_snwprintf**と同じように、 **swprintf**、型の出力先ではなく文字列に出力を書き込む**ファイル**します。
 
-これらの関数を持つバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
+これらの関数がのバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
 
 C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、より安全な新しいバージョンを呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -194,7 +194,7 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**snprintf**、 **_snprintf**、 **_snprintf_l**|\<stdio.h>|
 |**_snwprintf**、 **_snwprintf_l**|\<stdio.h> または \<wchar.h>|

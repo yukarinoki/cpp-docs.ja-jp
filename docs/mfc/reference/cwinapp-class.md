@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c756de90967b4c9178d5e6a584990cc53ad7786c
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 58509ec4f6a3773478e1bc544f28baf92d7e97b7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42900939"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206893"
 ---
 # <a name="cwinapp-class"></a>CWinApp クラス
 
@@ -270,7 +270,7 @@ class CWinApp : public CWinThread
 |[CWinApp::OnIdle](#onidle)|オーバーライドすると、アプリケーション固有のアイドル時間の処理を実行します。|
 |[:Opendocumentfile](#opendocumentfile)|ファイルからドキュメントを開くために、フレームワークによって呼び出されます。|
 |[CWinApp::ParseCommandLine](#parsecommandline)|個々 のパラメーターと、コマンドラインでフラグを解析します。|
-|[Cwinapp::pretranslatemessage](#pretranslatemessage)|Windows 関数にディスパッチされる前に、メッセージをフィルター処理[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)と[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934)します。|
+|[Cwinapp::pretranslatemessage](#pretranslatemessage)|Windows 関数にディスパッチされる前に、メッセージをフィルター処理[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)と[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934)します。|
 |[CWinApp::ProcessMessageFilter](#processmessagefilter)|アプリケーションに到達する前に、特定のメッセージを受け取ります。|
 |[CWinApp::ProcessShellCommand](#processshellcommand)|コマンドライン引数とフラグを処理します。|
 |[CWinApp::ProcessWndProcException](#processwndprocexception)|アプリケーションのメッセージとコマンド ハンドラーによってスローされたすべてのハンドルされない例外を受け取ります。|
@@ -860,7 +860,7 @@ BOOL GetPrinterDeviceDefaults(struct tagPDA* pPrintDlg);
 ### <a name="parameters"></a>パラメーター
 
 *pPrintDlg*  
-ポインターを[PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843)構造体。
+ポインターを[PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda)構造体。
 
 ### <a name="return-value"></a>戻り値
 
@@ -912,7 +912,7 @@ BOOL GetProfileBinary(
 > `GetProfileBinary` バッファーを割り当てるしでそのアドレスを返します\* *ppData*します。 呼び出し元を使用してバッファーを解放する**delete[]** します。
 
 > [!IMPORTANT]
-> この関数が返すデータは、NULL で終わるデータとは限らないため、呼び出し元で検証を行う必要があります。 詳しくは、「 [バッファー オーバーランの回避](http://msdn.microsoft.com/library/windows/desktop/ms717795)」をご覧ください。
+> この関数が返すデータは、NULL で終わるデータとは限らないため、呼び出し元で検証を行う必要があります。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 ### <a name="example"></a>例
 
@@ -953,7 +953,7 @@ UINT GetProfileInt(
 このメンバー関数はそのため、大文字小文字を区別されていない内の文字列、*大文字、小文字*と*lpszEntry*場合パラメーターが異なる場合があります。
 
 > [!IMPORTANT]
-> この関数が返すデータは、NULL で終わるデータとは限らないため、呼び出し元で検証を行う必要があります。 詳しくは、「 [バッファー オーバーランの回避](http://msdn.microsoft.com/library/windows/desktop/ms717795)」をご覧ください。
+> この関数が返すデータは、NULL で終わるデータとは限らないため、呼び出し元で検証を行う必要があります。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 ### <a name="example"></a>例
 
@@ -990,7 +990,7 @@ CString GetProfileString(
 ### <a name="remarks"></a>Remarks
 
 > [!IMPORTANT]
-> この関数が返すデータは、NULL で終わるデータとは限らないため、呼び出し元で検証を行う必要があります。 詳しくは、「 [バッファー オーバーランの回避](http://msdn.microsoft.com/library/windows/desktop/ms717795)」をご覧ください。
+> この関数が返すデータは、NULL で終わるデータとは限らないため、呼び出し元で検証を行う必要があります。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 ### <a name="example"></a>例
 
@@ -1073,7 +1073,7 @@ virtual BOOL InitInstance();
 オーバーライド`InitInstance`を Windows で実行されているアプリケーションの新しいインスタンスを初期化します。 通常、オーバーライドする`InitInstance`をメイン ウィンドウ オブジェクトを構築し、設定、`CWinThread::m_pMainWnd`データ メンバーは、そのウィンドウをポイントします。 このメンバー関数のオーバーライドの詳細については、次を参照してください。 [CWinApp: アプリケーション クラス](../../mfc/cwinapp-the-application-class.md)します。
 
 > [!NOTE]
-> MFC アプリケーションは、シングルスレッド アパートメント (STA) として初期化する必要があります。 呼び出す場合[CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279)で、`InitInstance`オーバーライド、COINIT_APARTMENTTHREADED (COINIT_MULTITHREADED ではなく) を指定します。 詳細については、[prb] を参照してください: MFC アプリケーションとして、マルチ スレッド アパートメント (828643) でアプリケーションを初期化するときの応答を停止[ http://support.microsoft.com/default.aspxscid=kb; en-ご; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643)します。
+> MFC アプリケーションは、シングルスレッド アパートメント (STA) として初期化する必要があります。 呼び出す場合[CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex)で、`InitInstance`オーバーライド、COINIT_APARTMENTTHREADED (COINIT_MULTITHREADED ではなく) を指定します。 詳細については、[prb] を参照してください: MFC アプリケーションとして、マルチ スレッド アパートメント (828643) でアプリケーションを初期化するときの応答を停止[ http://support.microsoft.com/default.aspxscid=kb; en-ご; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643)します。
 
 ### <a name="example"></a>例
 
@@ -1109,7 +1109,7 @@ HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nID
 カーソル リソースの名前を含む null で終わる文字列へのポインター。 使用することができます、`CString`この引数にします。
 
 *可能*  
-カーソル リソースの ID。 リソースの一覧は、次を参照してください。 [LoadCursor](http://msdn.microsoft.com/library/windows/desktop/ms648391) Windows SDK に含まれています。
+カーソル リソースの ID。 リソースの一覧は、次を参照してください。 [LoadCursor](/windows/desktop/api/winuser/nf-winuser-loadcursora) Windows SDK に含まれています。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1152,7 +1152,7 @@ HICON LoadIcon(LPCTSTR lpszResourceName) const;  HICON LoadIcon(UINT nIDResource
 使用することができます、 [LoadStandardIcon](#loadstandardicon)または[LoadOEMIcon](#loadoemicon)メンバー関数は定義済みの Windows アイコンにアクセスします。
 
 > [!NOTE]
-> このメンバー関数は、Win32 API 関数を呼び出す[LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072)SM_CXICON と SM_CYICON システム メトリック値に準拠しているサイズのアイコンを読み込むことができますのみです。
+> このメンバー関数は、Win32 API 関数を呼び出す[LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona)SM_CXICON と SM_CYICON システム メトリック値に準拠しているサイズのアイコンを読み込むことができますのみです。
 
 ##  <a name="loadoemcursor"></a>  CWinApp::LoadOEMCursor
 
@@ -1262,7 +1262,7 @@ HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 ### <a name="parameters"></a>パラメーター
 
 *lpszIconName*  
-定義済みの Windows アイコンを指定するマニフェスト定数の識別子。 WINDOWS では、これらの識別子が定義されています。H. 可能な定義済みの値とその説明の一覧は、次を参照してください。、*されています*パラメーター [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072) Windows SDK にします。
+定義済みの Windows アイコンを指定するマニフェスト定数の識別子。 WINDOWS では、これらの識別子が定義されています。H. 可能な定義済みの値とその説明の一覧は、次を参照してください。、*されています*パラメーター [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona) Windows SDK にします。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1444,7 +1444,7 @@ LPCTSTR m_pszAppName;
 
 アプリケーション名に渡されたパラメーターから取得できます、 [CWinApp](#cwinapp)コンス トラクター、または、AFX_IDS_APP_TITLE の ID のリソース文字列に指定しない場合。 リソースの アプリケーション名が見つからない場合は、プログラムから取得されます。EXE ファイル名。
 
-グローバル関数によって返される[AfxGetAppName](application-information-and-management.md#afxgetappname)します。 `m_pszAppName` 型のパブリック変数**const char\*** します。
+グローバル関数によって返される[AfxGetAppName](application-information-and-management.md#afxgetappname)します。 `m_pszAppName` 型のパブリック変数**const char**<strong>\*</strong>します。
 
 > [!NOTE]
 > 値を割り当てる場合`m_pszAppName`ヒープに動的に割り当てる必要があります。 `CWinApp`デストラクター呼び出し**無料**このポインターに ()。 使用する多くの`_tcsdup`() のランタイム ライブラリ関数、割り当てを行う。 また、新しい値を割り当てる前に、現在のポインターに関連付けられているメモリを解放します。 例えば:
@@ -1465,7 +1465,7 @@ LPCTSTR m_pszExeName;
 
 ### <a name="remarks"></a>Remarks
 
-異なり[m_pszAppName](#m_pszappname)、この名前は空白を含めることはできません。 `m_pszExeName` 型のパブリック変数**const char\*** します。
+異なり[m_pszAppName](#m_pszappname)、この名前は空白を含めることはできません。 `m_pszExeName` 型のパブリック変数**const char**<strong>\*</strong>します。
 
 > [!NOTE]
 > 値を割り当てる場合`m_pszExeName`ヒープに動的に割り当てる必要があります。 `CWinApp`デストラクター呼び出し**無料**このポインターに ()。 使用する多くの`_tcsdup`() のランタイム ライブラリ関数、割り当てを行う。 また、新しい値を割り当てる前に、現在のポインターに関連付けられているメモリを解放します。 例えば:
@@ -1482,7 +1482,7 @@ LPCTSTR m_pszHelpFilePath;
 
 ### <a name="remarks"></a>Remarks
 
-既定では、フレームワークを初期化します`m_pszHelpFilePath`を使用してアプリケーションの名前に"。HLP"を追加します。 ヘルプ ファイルの名前を変更するには、次のように設定します。`m_pszHelpFilePath`目的のヘルプ ファイルの完全な名前を含む文字列を指すようにします。 これを行う便利な場所がアプリケーションの[InitInstance](#initinstance)関数。 `m_pszHelpFilePath` 型のパブリック変数**const char\*** します。
+既定では、フレームワークを初期化します`m_pszHelpFilePath`を使用してアプリケーションの名前に"。HLP"を追加します。 ヘルプ ファイルの名前を変更するには、次のように設定します。`m_pszHelpFilePath`目的のヘルプ ファイルの完全な名前を含む文字列を指すようにします。 これを行う便利な場所がアプリケーションの[InitInstance](#initinstance)関数。 `m_pszHelpFilePath` 型のパブリック変数**const char**<strong>\*</strong>します。
 
 > [!NOTE]
 > 値を割り当てる場合`m_pszHelpFilePath`ヒープに動的に割り当てる必要があります。 `CWinApp`デストラクター呼び出し**無料**このポインターに ()。 使用する多くの`_tcsdup`() のランタイム ライブラリ関数、割り当てを行う。 また、新しい値を割り当てる前に、現在のポインターに関連付けられているメモリを解放します。 例えば:
@@ -1499,7 +1499,7 @@ LPCTSTR m_pszProfileName;
 
 ### <a name="remarks"></a>Remarks
 
-`m_pszProfileName` 型のパブリック変数**const char\*** します。
+`m_pszProfileName` 型のパブリック変数**const char**<strong>\*</strong>します。
 
 > [!NOTE]
 > 値を割り当てる場合`m_pszProfileName`ヒープに動的に割り当てる必要があります。 `CWinApp`デストラクター呼び出し**無料**このポインターに ()。 使用する多くの`_tcsdup`() のランタイム ライブラリ関数、割り当てを行う。 また、新しい値を割り当てる前に、現在のポインターに関連付けられているメモリを解放します。 例えば:
@@ -1794,7 +1794,7 @@ void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 
 ##  <a name="pretranslatemessage"></a>  Cwinapp::pretranslatemessage
 
-Windows 関数にディスパッチされる前に、ウィンドウ メッセージをフィルター処理するには、この関数をオーバーライド[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)と[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934)既定の実装は、アクセラレータ キーを実行します。変換では、呼び出す必要があるため、`CWinApp::PreTranslateMessage`オーバーライドされたバージョンのメンバー関数。
+Windows 関数にディスパッチされる前に、ウィンドウ メッセージをフィルター処理するには、この関数をオーバーライド[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)と[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934)既定の実装は、アクセラレータ キーを実行します。変換では、呼び出す必要があるため、`CWinApp::PreTranslateMessage`オーバーライドされたバージョンのメンバー関数。
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -2131,7 +2131,7 @@ void SelectPrinter(
 識別するハンドルを[DEVNAMES](../../mfc/reference/devnames-structure.md)ドライバー、デバイス、および特定のプリンターの出力ポート名を識別する構造体。
 
 *hDevMode*  
-識別するハンドルを[DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)デバイスの初期化とプリンターの環境に関する情報を指定する構造体。
+識別するハンドルを[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)デバイスの初期化とプリンターの環境に関する情報を指定する構造体。
 
 *bFreeOld*  
 選択したプリンターを解放します。
@@ -2270,7 +2270,7 @@ virtual void WinHelp(
 追加のデータを指定します。 使用される値の値によって異なります、 *nCmd*パラメーター。
 
 *nCmd*  
-要求されるヘルプの種類を指定します。 使用可能な値、および影響についての一覧については、*指定*パラメーターを参照してください、 [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) Windows 関数。
+要求されるヘルプの種類を指定します。 使用可能な値、および影響についての一覧については、*指定*パラメーターを参照してください、 [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) Windows 関数。
 
 ### <a name="remarks"></a>Remarks
 

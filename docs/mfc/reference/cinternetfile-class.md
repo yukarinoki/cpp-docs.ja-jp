@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e16aa9377676e415f416dc4f7dae9cb9f2a40dab
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: ed85edeaf5400805d4628e10acab4cdf4af52082
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336567"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202731"
 ---
 # <a name="cinternetfile-class"></a>CInternetFile クラス
 インターネット プロトコルを使用するリモート システム上のファイルにアクセスをできます。  
@@ -110,7 +110,7 @@ class CInternetFile : public CStdioFile
   
  `CInternetFile`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxinet.h  
   
 ##  <a name="abort"></a>  CInternetFile::Abort  
@@ -258,7 +258,7 @@ virtual LPTSTR ReadString(
  参照、 [CString](../../atl-mfc-shared/reference/cstringt-class.md)を読み取り、行を受け取るオブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
- 取得されるプレーンなデータを格納しているバッファーへのポインター、 [CInternetFile](../../mfc/reference/cinternetfile-class.md)オブジェクト。 このメソッドに渡されたバッファーのデータ型に関係なく (たとえば、Unicode に変換) のデータに任意の操作を行いません、返されたデータを構造にマップする必要がありますので、予想として、 **void\*** 型が返されました。  
+ 取得されるプレーンなデータを格納しているバッファーへのポインター、 [CInternetFile](../../mfc/reference/cinternetfile-class.md)オブジェクト。 このメソッドに渡されたバッファーのデータ型に関係なく (たとえば、Unicode に変換) のデータに任意の操作を行いません、返されたデータを構造にマップする必要がありますので、予想として、 **void** <strong>\*</strong> 型が返されました。  
   
  すべてのデータを読み取り中にファイルの終わりに達した場合は NULL です。または、データを読み込まずにブール型、FALSE の場合、ファイルの終わりに達した場合。  
   
@@ -317,7 +317,7 @@ BOOL SetReadBufferSize(UINT nReadSize);
  バイト単位のバッファー サイズ。  
   
 ### <a name="return-value"></a>戻り値  
- 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。  
+ 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。  
   
 ### <a name="remarks"></a>Remarks  
  基になる WinInet Api はバッファー処理を実行しない、ので読み取られるデータの量に関係なく、効率的にデータを読み取るアプリケーションは、バッファー サイズを選択します。 各呼び出しの場合[読み取り](#read)通常で大量のデータ (たとえば、4 つ以上のキロバイト) は必要ありませんバッファー。 ただし、呼び出す場合`Read`、データの小さなチャンクを取得するを使用する場合または[ReadString](#readstring)読み取りバッファーはアプリケーションのパフォーマンスを向上し、一度に 1 行ずつを読み取る。  
@@ -338,7 +338,7 @@ BOOL SetWriteBufferSize(UINT nWriteSize);
  バッファーのサイズ (バイト単位)。  
   
 ### <a name="return-value"></a>戻り値  
- 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。  
+ 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。  
   
 ### <a name="remarks"></a>Remarks  
  したがって、デバッグ情報を基になる、バッファリング、WinInet Api を実行しないと選択、バッファー サイズが書き込まれるデータの量に関係なく効率的にデータを書き込むアプリケーションは、します。 各呼び出しの場合[書き込み](#write)は通常、大量のデータ (たとえば、次の 4 つまたは複数キロバイト一度に) の必要はありません、バッファー。 ただし、呼び出す場合[書き込み](#write)書き込みバッファー少量のデータを書き込むには、アプリケーションのパフォーマンスが向上します。  

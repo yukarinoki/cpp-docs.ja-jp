@@ -1,5 +1,5 @@
 ---
-title: MFC におけるユーザー コントロールをフォーム、Windows を使用して |Microsoft ドキュメント
+title: MFC では、ユーザー コントロールをフォーム、Windows を使用して |Microsoft Docs
 ms.custom: ''
 ms.date: 1/08/2018
 ms.technology:
@@ -20,36 +20,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8ceb424d6c5061ac5ccafc62d8748be4de3ab3d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 795c16a46356eb9599e02b43b51066b603b8b9ce
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33174314"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222109"
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>MFC での Windows フォーム ユーザー コントロールの使用
 
-MFC Windows フォーム サポート クラスを使用して、ホストして Windows フォーム コントロール、MFC アプリケーション内で MFC ダイアログ ボックスまたはビュー内で ActiveX コントロールとして。 さらに、Windows フォームのフォームの場合は、MFC ダイアログ ボックスとしてホストされていることができます。
+MFC Windows フォームのサポート クラスを使用してホストできます Windows フォーム コントロール、MFC アプリケーション内で MFC ダイアログ ボックスまたはビュー内で ActiveX コントロールとして。 さらに、Windows フォームのフォームの場合は、MFC ダイアログ ボックスとしてホストされていることができます。
 
 次のセクションで説明する方法。
 
-- MFC ダイアログ ボックスで、Windows フォーム コントロールをホストします。
+- MFC ダイアログ ボックスでの Windows フォーム コントロールをホストします。
 
-- MFC ビューとして Windows フォーム ユーザー コントロールをホストします。
+- MFC ビューとしての Windows フォーム ユーザー コントロールをホストします。
 
-- MFC ダイアログ ボックスとして、Windows フォームをホストします。
-
-> [!NOTE]
-> MFC Windows フォームの統合は MFC と動的にリンクするプロジェクトでのみ動作 (プロジェクトを`_AFXDLL`が定義されている)。
+- MFC ダイアログ ボックスとしては、Windows フォームをホストします。
 
 > [!NOTE]
-> MFC Windows フォームのインターフェイス DLL (mfcmifc80.dll) の場合は、プライベート (変更) コピーを使用してアプリケーションをビルドするときに、Microsoft のキーを独自の仕入先キーに置き換えますを除き、GAC にインストールするには失敗します。 アセンブリの署名の詳細については、次を参照してください。[アセンブリを使用したプログラミング](/dotnet/framework/app-domains/programming-with-assemblies)と[厳密な名前のアセンブリ (アセンブリ署名) (C + + CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)です。
+> MFC Windows フォームの統合は、MFC と動的にリンクするプロジェクトでのみ機能 (プロジェクトを`_AFXDLL`が定義されている)。
 
-Windows フォームを使用するサンプル アプリケーションでは、次を参照してください[「: Windows フォームで .NET Framework リソースを示します](http://msdn.microsoft.com/ac932aed-5502-4667-be29-709bca435317)、[電卓のサンプル: Windows フォームの型の電卓](http://msdn.microsoft.com/2283b516-3b7e-45f2-80c4-fdcfb366ce25)、および。[Scribble サンプル: MDI 描画アプリケーション](http://msdn.microsoft.com/f025da3e-659b-4222-b991-554a1b8b2358)です。
+> [!NOTE]
+> MFC Windows フォーム インターフェイス (mfcmifc80.dll へ) を DLL の場合は、プライベート (変更) コピーを使用してアプリケーションをビルドするときに、ベンダー独自キーを使用して Microsoft キーを交換しない限り、GAC にインストールするには失敗します。 アセンブリの署名の詳細については、次を参照してください。[アセンブリを使ったプログラミング](/dotnet/framework/app-domains/programming-with-assemblies)と[厳密な名前のアセンブリ (アセンブリ署名) (C +/cli CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)します。
 
-MFC で使用される Windows フォームを表示するサンプル アプリケーションを参照してください。 [MFC と Windows フォーム統合](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en)です。
-
-MFC アプリケーションでは、Windows フォームを使用する場合は、アプリケーションと共に mfcmifc80.dll を再配布する必要があります。 詳細については、次を参照してください。 [MFC ライブラリの再配布](../ide/redistributing-the-mfc-library.md)です。
+MFC アプリケーションでは、Windows フォームを使用する場合は、アプリケーションと共に mfcmifc80.dll への再配布する必要があります。 詳細については、次を参照してください。 [MFC ライブラリの再頒布](../ide/redistributing-the-mfc-library.md)します。
 
 ## <a name="in-this-section"></a>このセクションの内容
 

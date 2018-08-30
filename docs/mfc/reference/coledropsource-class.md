@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41e79ac918c1a549c7972d5feccf4f470473f98c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f0994eb1b0293bb31fdb1cd4659256b978ebd69d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852920"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219366"
 ---
 # <a name="coledropsource-class"></a>COleDropSource クラス
 によりデータがドロップ先にドラッグします。  
@@ -63,7 +63,7 @@ class COleDropSource : public CCmdTarget
   
  ドラッグ アンド ドロップ操作の詳細については、OLE を使用して記事を参照して、[ドラッグ アンド ドロップ (OLE)](../../mfc/drag-and-drop-ole.md)します。  
   
- 詳細については、次を参照してください。 [IDropSource](http://msdn.microsoft.com/library/windows/desktop/ms690071) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IDropSource](/windows/desktop/api/oleidl/nn-oleidl-idropsource) Windows SDK に含まれています。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -72,7 +72,7 @@ class COleDropSource : public CCmdTarget
   
  `COleDropSource`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxole.h  
   
 ##  <a name="coledropsource"></a>  COleDropSource::COleDropSource  
@@ -109,7 +109,7 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
 ### <a name="remarks"></a>Remarks  
  この時点で、ドロップが発生した場合、何が起こるかについてフィードバックを提供するには、この関数をオーバーライドします。 既定の実装では、OLE の既定のカーソルを使用します。 ドラッグ アンド ドロップ操作の詳細については、OLE を使用して記事を参照して、[ドラッグ アンド ドロップ (OLE)](../../mfc/drag-and-drop-ole.md)します。  
   
- 詳細については、次を参照してください。 [IDropSource::GiveFeedback](http://msdn.microsoft.com/library/windows/desktop/ms693723)、 [IDropTarget::DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129)、および[IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IDropSource::GiveFeedback](/windows/desktop/api/oleidl/nf-oleidl-idropsource-givefeedback)、 [IDropTarget::DragOver](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragover)、および[IDropTarget::DragEnter](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragenter) Windows SDK に含まれています。  
   
 ##  <a name="onbegindrag"></a>  COleDropSource::OnBeginDrag  
  メソッドを呼び出して、イベントが発生したときに、フレームワークがマウスの左ボタンを押すなどのドラッグ操作を開始します。  

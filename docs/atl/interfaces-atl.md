@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7becd9e27294c81ce6144d08c79cfac52636fbf
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1410a437d87b56b244eb4fcd711797c279bec446
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848266"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217884"
 ---
 # <a name="interfaces-atl"></a>インターフェイス (ATL)
 インターフェイスは、オブジェクトが外部にその機能を公開する方法です。 COM では、インターフェイスは、(C++ vtable) など、オブジェクトによって実装される関数へのポインターのテーブルです。 テーブルは、インターフェイスを表し、ポイントする関数は、そのインターフェイスのメソッド。 オブジェクトは、インターフェイスを多くを公開できます。  
@@ -34,5 +34,5 @@ ms.locfileid: "37848266"
   
 ## <a name="see-also"></a>関連項目  
  [COM の概要](../atl/introduction-to-com.md)   
- [COM オブジェクトとインターフェイス](http://msdn.microsoft.com/library/windows/desktop/ms690343)
+ [COM オブジェクトとインターフェイス](/windows/desktop/com/com-objects-and-interfaces)
 

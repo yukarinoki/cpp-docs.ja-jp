@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1fa026ecb0b25c17a793c31c3f64dcd0186f0e1
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 92c3ece3ddef00161a769c0c45a4d31712d6f691
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880097"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208762"
 ---
 # <a name="options-atl-control-wizard"></a>オプション、ATL コントロール ウィザード
 「検索結果」の概要をここに挿入します。  
@@ -78,7 +78,7 @@ ms.locfileid: "37880097"
   
 -   **カスタム**: VTBL によって直接メソッドを公開するインターフェイスを作成します。  
   
-     選択した場合**カスタム**、コントロールがあるかを指定することができますし、 **Automation と互換性のある**します。 選択した場合**Automation と互換性のある**、し、ウィザードを追加、 [oleautomation](../../windows/oleautomation.md)属性、IDL でインターフェイスと oleaut32.dll でユニバーサル マーシャラーによってインターフェイスをマーシャ リングすることができます。 参照してください[マーシャ リングの詳細](http://msdn.microsoft.com/library/windows/desktop/ms692621)詳細については、Windows SDK に含まれています。  
+     選択した場合**カスタム**、コントロールがあるかを指定することができますし、 **Automation と互換性のある**します。 選択した場合**Automation と互換性のある**、し、ウィザードを追加、 [oleautomation](../../windows/oleautomation.md)属性、IDL でインターフェイスと oleaut32.dll でユニバーサル マーシャラーによってインターフェイスをマーシャ リングすることができます。 参照してください[マーシャ リングの詳細](/windows/desktop/com/marshaling-details)詳細については、Windows SDK に含まれています。  
   
      さらに、選択した場合**Automation と互換性のある**コントロールのすべてのメソッドのすべてのパラメーターはバリアントにする必要がありますし、互換性のあります。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "37880097"
   
 -   **接続ポイント**: オブジェクトの接続ポイントからの派生オブジェクトのクラスを作成することにより[IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)とソース インターフェイスを公開することができます。  
   
--   **ライセンス**: コントロールのサポートが追加[ライセンス](http://msdn.microsoft.com/library/windows/desktop/ms690543)します。 クライアント コンピューターに適切なライセンスがある場合にのみ、ライセンスされたコントロールをホストすることができます。  
+-   **ライセンス**: コントロールのサポートが追加[ライセンス](/windows/desktop/com/licensing)します。 クライアント コンピューターに適切なライセンスがある場合にのみ、ライセンスされたコントロールをホストすることができます。  
   
 ## <a name="see-also"></a>関連項目  
  [ATL コントロール ウィザード](../../atl/reference/atl-control-wizard.md)

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2bf60ecf57a23de52575e3e2563c07e4f574194a
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 324acb33998246933b0c426357368247c6689c47
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42538456"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211318"
 ---
 # <a name="concurrency-namespace"></a>concurrency 名前空間
 `Concurrency` 名前空間には、C++ 向けの並列プログラミング フレームワークである同時実行ランタイムにアクセスするためのクラスおよび関数が用意されています。 詳細については、「[同時実行ランタイム](../../../parallel/concrt/concurrency-runtime.md)」を参照してください。  
@@ -52,7 +52,7 @@ namespace concurrency;
   
 |名前|説明|  
 |----------|-----------------|  
-|[concurrency::extensibility Namespace](http://msdn.microsoft.com/en-us/16a86ff2-128e-4edf-89e4-38aac79c81f9)||  
+|[concurrency::extensibility Namespace](https://msdn.microsoft.com/16a86ff2-128e-4edf-89e4-38aac79c81f9)||  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -135,7 +135,7 @@ namespace concurrency;
 |[structured_task_group クラス](structured-task-group-class.md)|`structured_task_group` クラスは、並列処理の高度に構造化されたコレクションを表します。 `structured_task_group` オブジェクトを使用して個々の並列タスクを `task_handle` のキューに配置し、それらのタスクが完了するまで待機するか、実行が完了する前にタスク グループを取り消すことができます。取り消すと、実行が開始されていないタスクはすべて中止されます。|  
 |[target_block クラス](target-block-class.md)|`target_block` クラスは、基本的なリンク管理機能と、ターゲットのみのブロックのエラー チェック機能を実現する抽象基底クラスです。|  
 |[task クラス (同時実行ランタイム)](task-class.md)|並列パターン ライブラリ (PPL) `task` クラス。 `task` オブジェクトは、非同期的に、他のタスクと同時に実行できる処理、および同時実行ランタイムの並列アルゴリズムによって生成される並列処理を表します。 正常に終了した場合は、型 `_ResultType` の結果が生成されます。 型 `task<void>` のタスクでは結果が作成されません。 タスクは、他のタスクと関係なく待機および取り消しできます。 また、continuations(`then`)、および join(`when_all`) パターンと choice(`when_any`) パターンを使用して、他のタスクと共に構成することもできます。|  
-|[task_canceled クラス](task-canceled-class.md)|このクラスは、現在のタスクを強制的に取り消すために PPL タスク レイヤーによってスローされる例外を表します。 によってもスローされます、`get()`メソッド[タスク](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f)、取り消されたタスク。|  
+|[task_canceled クラス](task-canceled-class.md)|このクラスは、現在のタスクを強制的に取り消すために PPL タスク レイヤーによってスローされる例外を表します。 によってもスローされます、`get()`メソッド[タスク](https://msdn.microsoft.com/5389e8a5-5038-40b6-844a-55e9b58ad35f)、取り消されたタスク。|  
 |[task_completion_event クラス](task-completion-event-class.md)|`task_completion_event` クラスを使用すると、条件が満たされるまで、または外部イベントに応答してタスクを開始するまで、タスクの実行を遅延できます。|  
 |[task_continuation_context クラス](task-continuation-context-class.md)|`task_continuation_context` クラスを使用すると、継続する場所を指定できます。 のみ、UWP アプリからこのクラスを使用すると便利です。 非 Windows ランタイム アプリでは、タスクの継続の実行コンテキストは、ランタイムによって決定され、構成できません。|  
 |[task_group クラス](task-group-class.md)|`task_group` クラスは、待機または取り消しができる並列処理のコレクションを表します。|  
@@ -194,7 +194,7 @@ namespace concurrency;
 |[asend 関数](concurrency-namespace-functions.md#asend)|オーバーロードされます。 ターゲット ブロックにデータを反映するタスクをスケジュールする非同期送信操作です。|  
 |[cancel_current_task 関数](concurrency-namespace-functions.md#cancel_current_task)|現在実行中のタスクを取り消します。 この関数は、タスクの実行を中止して `canceled` 状態に遷移させるために、タスクの本体から呼び出すことができます。<br /><br /> `task` の本体以外では、この関数を呼び出すシナリオはサポートされません。 これを行うと、アプリケーションのクラッシュや停止など、定義されていない動作が発生します。|  
 |[create_async 関数](concurrency-namespace-functions.md#create_async)|ユーザーが指定したラムダまたは関数オブジェクトに基づいて Windows ランタイムの非同期構造を作成します。 `create_async` の戻り値の型は、`IAsyncAction^`、`IAsyncActionWithProgress<TProgress>^`、`IAsyncOperation<TResult>^`、`IAsyncOperationWithProgress<TResult, TProgress>^` のいずれかで、メソッドに渡されるラムダのシグネチャに基づいています。|  
-|[create_task 関数](concurrency-namespace-functions.md#create_task)|オーバーロードされます。 作成、PPL[タスク](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f)オブジェクト。 `create_task` は、タスク コンストラクターを使用した任意の場所で使用できます。 タスクの作成中に `auto` キーワードが使用できるようになるため、これは参考用として用意されています。|  
+|[create_task 関数](concurrency-namespace-functions.md#create_task)|オーバーロードされます。 作成、PPL[タスク](https://msdn.microsoft.com/5389e8a5-5038-40b6-844a-55e9b58ad35f)オブジェクト。 `create_task` は、タスク コンストラクターを使用した任意の場所で使用できます。 タスクの作成中に `auto` キーワードが使用できるようになるため、これは参考用として用意されています。|  
 |[CreateResourceManager 関数](concurrency-namespace-functions.md#createresourcemanager)|同時実行ランタイムのリソース マネージャーのシングルトン インスタンスを表すインターフェイスを返します。 リソース マネージャーは、相互の連携を必要とするスケジューラにリソースを割り当てます。|  
 |[DisableTracing 関数](concurrency-namespace-functions.md#disabletracing)|同時実行ランタイムでのトレースを無効にします。 この関数は、ETW トレースが既定で未登録であるため非推奨とされます。|  
 |[EnableTracing 関数](concurrency-namespace-functions.md#enabletracing)|同時実行ランタイムでトレースを有効にします。 この関数は、ETW トレースが既定でオンであるため非推奨とされます。|  

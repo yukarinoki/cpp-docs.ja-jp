@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6749c62a5d8de0bd1da3a5d619a85a0ec874a21a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: e72c7ea788085f25dc2a4ec1b2f8682df9e20b25
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338419"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209128"
 ---
 # <a name="cgdiobject-class"></a>CGdiObject クラス
 ビットマップ、領域、ブラシ、ペン、パレット、フォントなどの Windows のさまざまな種類のグラフィックス デバイス インターフェイス (GDI) の基底クラスを提供します。  
@@ -139,7 +139,7 @@ BOOL CreateStockObject(int nIndex);
   
 ### <a name="parameters"></a>パラメーター  
  *nIndex*  
- 目的のストック オブジェクトの種類を指定する定数。 パラメーターを*fnObject*の[GetStockObject](http://msdn.microsoft.com/library/windows/desktop/dd144925) Windows sdk の適切な値の説明。  
+ 目的のストック オブジェクトの種類を指定する定数。 パラメーターを*fnObject*の[GetStockObject](/windows/desktop/api/wingdi/nf-wingdi-getstockobject) Windows sdk の適切な値の説明。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -230,14 +230,14 @@ int GetObject(
 |------------|-----------------|  
 |`CPen`|[LOGPEN](../../mfc/reference/logpen-structure.md)|  
 |`CBrush`|[LOGBRUSH](../../mfc/reference/logbrush-structure.md)|  
-|`CFont`|[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)|  
+|`CFont`|[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)|  
 |`CBitmap`|[ビットマップ](../../mfc/reference/bitmap-structure.md)|  
 |`CPalette`|WORD|  
 |`CRgn`|サポートなし|  
   
  オブジェクトの場合、`CBitmap`オブジェクト、`GetObject`幅、高さ、およびビットマップの色の書式情報のみを返します。 使用して取得できる実際のビット[列](../../mfc/reference/cbitmap-class.md#getbitmapbits)します。  
   
- オブジェクトの場合、`CPalette`オブジェクト、`GetObject`パレットのエントリの数を指定する単語を取得します。 関数を取得することはありません、[保持](http://msdn.microsoft.com/library/windows/desktop/dd145040)パレットを定義する構造体。 アプリケーションが呼び出すことによってパレット エントリに関する情報を取得できる[CPalette::GetPaletteEntries](../../mfc/reference/cpalette-class.md#getpaletteentries)します。  
+ オブジェクトの場合、`CPalette`オブジェクト、`GetObject`パレットのエントリの数を指定する単語を取得します。 関数を取得することはありません、[保持](/windows/desktop/api/wingdi/ns-wingdi-taglogpalette)パレットを定義する構造体。 アプリケーションが呼び出すことによってパレット エントリに関する情報を取得できる[CPalette::GetPaletteEntries](../../mfc/reference/cpalette-class.md#getpaletteentries)します。  
   
 ##  <a name="getobjecttype"></a>  CGdiObject::GetObjectType  
  GDI オブジェクトの型を取得します。  

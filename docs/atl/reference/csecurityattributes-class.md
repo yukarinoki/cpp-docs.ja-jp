@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bc37dd8025009e4f904373fc8aa106c93dc8210
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 47b0058cba19ac804c2d996052e9a5ec2df68bc5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879348"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208949"
 ---
 # <a name="csecurityattributes-class"></a>CSecurityAttributes クラス
 このクラスは、セキュリティ属性の構造体の thin ラッパーです。  
@@ -53,16 +53,16 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 |[Csecurityattributes::set](#set)|属性を設定するには、このメソッドを呼び出して、`CSecurityAttributes`オブジェクト。|  
   
 ## <a name="remarks"></a>Remarks  
- `SECURITY_ATTRIBUTES`構造に含まれる、[セキュリティ記述子](http://msdn.microsoft.com/library/windows/desktop/aa379561)のオブジェクトの作成に使用して、この構造体を指定することによって取得されたハンドルが継承可能かどうかを指定します。  
+ `SECURITY_ATTRIBUTES`構造に含まれる、[セキュリティ記述子](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)のオブジェクトの作成に使用して、この構造体を指定することによって取得されたハンドルが継承可能かどうかを指定します。  
   
- Windows でのアクセス制御モデルの概要については、次を参照してください。[アクセス制御](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK に含まれています。  
+ Windows でのアクセス制御モデルの概要については、次を参照してください。[アクセス制御](/windows/desktop/SecAuthZ/access-control)Windows SDK に含まれています。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `SECURITY_ATTRIBUTES`  
   
  `CSecurityAttributes`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlsecurity.h  
   
 ##  <a name="csecurityattributes"></a>  CSecurityAttributes::CSecurityAttributes  
@@ -99,7 +99,7 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
   
 ## <a name="see-also"></a>関連項目  
  [セキュリティのサンプル](../../visual-cpp-samples.md)   
- [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)   
- [セキュリティ記述子](http://msdn.microsoft.com/library/windows/desktop/aa379561)   
+ [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)   
+ [セキュリティ記述子](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)   
  [クラスの概要](../../atl/atl-class-overview.md)   
  [セキュリティに関するグローバル関数](../../atl/reference/security-global-functions.md)

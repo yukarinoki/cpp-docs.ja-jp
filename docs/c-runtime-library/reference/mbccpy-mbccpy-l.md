@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d79ab8362eaa911b7a4aa936d6351aa29f610fa8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8fca6772c00715722acecd810595a42c60f77d86
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403171"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201388"
 ---
 # <a name="mbccpy-mbccpyl"></a>_mbccpy、_mbccpy_l
 
@@ -74,21 +74,21 @@ void _mbccpy_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*dest*コピー先です。
+*dest*のコピー先。
 
-*src*コピーするマルチバイト文字。
+*src*マルチバイト文字をコピーします。
 
-*ロケール*を使用するロケール。
+*ロケール*に使用するロケール。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Mbccpy**関数から 1 つのマルチバイト文字をコピーする*src*に*dest*です。
+**_Mbccpy**関数からの 1 つのマルチバイト文字のコピー *src*に*dest*します。
 
-この関数は、パラメーターを検証します。 場合 **_mbccpy** null ポインターを渡される*dest*または*src*で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md). 続けるには、実行が許可された場合**errno**に設定されている**EINVAL**です。
+この関数は、パラメーターを検証します。 場合 **_mbccpy**が null ポインターに渡される*dest*または*src*で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md). 続けるには、実行が許可された場合**errno**に設定されている**EINVAL**します。
 
-**_mbccpy**ロケールに依存する動作に現在のロケールを使用します。 **_mbccpy_l**と同じ **_mbccpy**する点を除いて **_mbccpy_l**のすべてのロケールに依存する動作に渡されたロケールを使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_mbccpy**ロケールに依存する動作に現在のロケールを使用します。 **_mbccpy_l**と同じ **_mbccpy**する点を除いて **_mbccpy_l**の任意のロケールに依存する動作に渡されたロケールを使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-**セキュリティに関するメモ** null で終わる文字列をご使用ください。 null で終わる文字列はターゲット バッファーのサイズを超えないようにしてください。 詳しくは、「 [バッファー オーバーランの回避](http://msdn.microsoft.com/library/windows/desktop/ms717795)」をご覧ください。 バッファー オーバーランは、システムを攻撃するときによく使用される方法であり、その結果、認められていない権限が昇格されます。
+**セキュリティに関するメモ** null で終わる文字列をご使用ください。 null で終わる文字列はターゲット バッファーのサイズを超えないようにしてください。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。 バッファー オーバーランは、システムを攻撃するときによく使用される方法であり、その結果、認められていない権限が昇格されます。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -99,7 +99,7 @@ void _mbccpy_l(
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_mbccpy**|\<mbctype.h>|
 |**_mbccpy_l**|\<mbctype.h>|

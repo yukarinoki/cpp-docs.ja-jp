@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d45468674d274c5f20b5533d782390cf2a6cec6
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8944ecdb4f9996800264986a7a687df6020b0591
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881397"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209934"
 ---
 # <a name="device-context-global-functions"></a>デバイス コンテキストに関するグローバル関数
 この関数は、特定のデバイスのデバイス コンテキストを作成します。  
@@ -29,7 +29,7 @@ ms.locfileid: "37881397"
 |[AtlCreateTargetDC](#atlcreatetargetdc)|デバイス コンテキストを作成します。|  
   
 ##  <a name="atlcreatetargetdc"></a>  AtlCreateTargetDC  
- 指定されたデバイスのデバイス コンテキストを作成、 [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613)構造体。  
+ 指定されたデバイスのデバイス コンテキストを作成、 [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice)構造体。  
   
 ```
 HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);
@@ -50,7 +50,7 @@ HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);
   
  場合*hdc*が NULL でないと*ptd*が null の場合、既存の関数を返します*hdc*します。  
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlwin.h  
    
 ## <a name="see-also"></a>関連項目  

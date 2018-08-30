@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b192c0ee4bc7658fc39791545c4aa9334edd183
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 1bd8abd7971c112f0d9e872df73b431c78259981
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131946"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205423"
 ---
 # <a name="multithreading-terminating-threads-in-mfc"></a>マルチ スレッド: MFC 内のスレッドの終了
 通常、スレッドは、次の 2 つの条件で終了します。1 つは制御関数が終了した場合、もう 1 つはスレッドを最後まで実行できなかった場合です。 ワード プロセッサでバックグラウンド印刷用のスレッドを使っている場合、印刷が正常に終了すると、制御関数が正常に終了します。 ただし、ユーザーが印刷をキャンセルするときは、バッググラウンド印刷用のスレッドを途中で終了する必要があります。 このトピックでは、この 2 つの終了処理を実現する方法と、スレッド終了時の終了コードを取得する方法について説明します。  
@@ -43,7 +43,7 @@ ms.locfileid: "43131946"
  
 ワーカー スレッドでは、スレッドの正常終了は単純です。制御関数を終了し、終了理由を呼び出し元に返すだけです。 いずれかを使用することができます、 [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread)関数または**返す**ステートメント。 通常、0 を返して正常終了を通知しますが、返す値はプログラマが決めることができます。  
   
-ユーザー インターフェイス スレッドでは、そのプロセスは同じように簡単: から、ユーザー インターフェイス スレッド内で呼び出す[PostQuitMessage](http://msdn.microsoft.com/library/windows/desktop/ms644945) Windows SDK に含まれています。 唯一のパラメーターを`PostQuitMessage`受け取りますが、スレッドの終了コード。 ワーカー スレッドの場合と同じように、通常は 0 を返して正常終了を通知します。  
+ユーザー インターフェイス スレッドでは、そのプロセスは同じように簡単: から、ユーザー インターフェイス スレッド内で呼び出す[PostQuitMessage](https://msdn.microsoft.com/library/windows/desktop/ms644945) Windows SDK に含まれています。 唯一のパラメーターを`PostQuitMessage`受け取りますが、スレッドの終了コード。 ワーカー スレッドの場合と同じように、通常は 0 を返して正常終了を通知します。  
   
 ##  <a name="_core_premature_thread_termination"></a> スレッドの中断  
  
@@ -53,7 +53,7 @@ ms.locfileid: "43131946"
   
 ##  <a name="_core_retrieving_the_exit_code_of_a_thread"></a> スレッドの終了コードを取得します。  
  
-ワーカーまたはユーザー インターフェイス スレッドの終了コードを取得する、 [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)関数。 この関数については、Windows SDK を参照してください。 この関数は、スレッド ハンドルを受け取ります (に格納されている、`m_hThread`データ メンバーの`CWinThread`オブジェクト) と、DWORD のアドレス。  
+ワーカーまたはユーザー インターフェイス スレッドの終了コードを取得する、 [GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread)関数。 この関数については、Windows SDK を参照してください。 この関数は、スレッド ハンドルを受け取ります (に格納されている、`m_hThread`データ メンバーの`CWinThread`オブジェクト) と、DWORD のアドレス。  
   
 場合は、スレッドがアクティブで`GetExitCodeThread`STILL_ACTIVE に指定された DWORD アドレス配置このアドレスに終了コードを配置する場合は、します。  
   
@@ -70,4 +70,4 @@ ms.locfileid: "43131946"
 [C++ と MFC でのマルチ スレッド](multithreading-with-cpp-and-mfc.md)   
 [_endthread、_endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)   
 [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
-[ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659)
+[ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread)

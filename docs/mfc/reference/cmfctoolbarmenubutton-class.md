@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83cf5f7cbe9b903f9cdc7a96b2fa046ff3f9eab5
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 07b582c8b785adb13acce86497d898c183b3128b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541821"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205146"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>CMFCToolBarMenuButton クラス
 ポップアップ メニューを含むツール バー ボタンです。  
@@ -154,7 +154,7 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 |[CMFCToolBarMenuButton::OnAfterCreatePopupMenu](#onaftercreatepopupmenu)||  
 |[CMFCToolBarMenuButton::OnBeforeDrag](#onbeforedrag)|ボタンをドラッグできるかどうかを指定します。 (上書き[CMFCToolBarButton::OnBeforeDrag](../../mfc/reference/cmfctoolbarbutton-class.md#onbeforedrag))。|  
 |[CMFCToolBarMenuButton::OnCalculateSize](#oncalculatesize)|指定したデバイス コンテキストおよびドッキング状態のボタンのサイズを計算するためにフレームワークによって呼び出されます。 (上書き[CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize))。|  
-|[CMFCToolBarMenuButton::OnCancelMode](#oncancelmode)|処理するためにフレームワークによって呼び出されます、 [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615)メッセージ。 (上書き[CMFCToolBarButton::OnCancelMode](../../mfc/reference/cmfctoolbarbutton-class.md#oncancelmode))。|  
+|[CMFCToolBarMenuButton::OnCancelMode](#oncancelmode)|処理するためにフレームワークによって呼び出されます、 [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode)メッセージ。 (上書き[CMFCToolBarButton::OnCancelMode](../../mfc/reference/cmfctoolbarbutton-class.md#oncancelmode))。|  
 |[CMFCToolBarMenuButton::OnChangeParentWnd](#onchangeparentwnd)|新しいツールバーにボタンが挿入されたときに、フレームワークによって呼び出されます。 (上書き[CMFCToolBarButton::OnChangeParentWnd](cmfctoolbarbutton-class.md#onchangeparentwnd))。|  
 |[CMFCToolBarMenuButton::OnClick](#onclick)|ユーザーがマウス ボタンをクリックすると、フレームワークによって呼び出されます。 (上書き[CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick))。|  
 |[CMFCToolBarMenuButton::OnClickMenuItem](#onclickmenuitem)|ポップアップ メニュー項目を選択すると、フレームワークによって呼び出されます。|  

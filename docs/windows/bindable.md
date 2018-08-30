@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c529abb1ade786bf7ec0a2d5cff5c49f6197be7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2e0ce7cffb397aaa170f13bac9fc1f4c1693d25f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601590"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214853"
 ---
 # <a name="bindable"></a>bindable
 
@@ -36,15 +36,15 @@ ms.locfileid: "42601590"
 
 ## <a name="remarks"></a>Remarks
 
-**バインド可能な**C++ 属性と同じ機能を持つ、[バインド可能な](http://msdn.microsoft.com/library/windows/desktop/aa366738)MIDL 属性。 定義されたプロパティで使用することができます、 [propget](../windows/propget.md)、 [propput](../windows/propput.md)、または[propputref](../windows/propputref.md)属性、またはことにより手動でバインド可能なメソッドが定義できます。
+**バインド可能な**C++ 属性と同じ機能を持つ、[バインド可能な](/windows/desktop/Midl/bindable)MIDL 属性。 定義されたプロパティで使用することができます、 [propget](../windows/propget.md)、 [propput](../windows/propput.md)、または[propputref](../windows/propputref.md)属性、またはことにより手動でバインド可能なメソッドが定義できます。
 
 次の MFC のサンプルでの使用方法を示して**バインド可能な**:
 
-- [コントロールのサンプル: MFC ベースの ActiveX コントロール](http://msdn.microsoft.com/a44adf86-0ba0-4504-bedb-512b6cba2e63)
+- [コントロールのサンプル: MFC ベースの ActiveX コントロール](https://msdn.microsoft.com/a44adf86-0ba0-4504-bedb-512b6cba2e63)
 
-- [ActiveX コントロールの円のサンプル:](http://msdn.microsoft.com/9ba34d04-280e-49f4-90ae-41a6be44c95b)
+- [ActiveX コントロールの円のサンプル:](https://msdn.microsoft.com/9ba34d04-280e-49f4-90ae-41a6be44c95b)
 
-- [ヒントとヘルプ TESTHELP サンプル: ActiveX コントロール](http://msdn.microsoft.com/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)
+- [ヒントとヘルプ TESTHELP サンプル: ActiveX コントロール](https://msdn.microsoft.com/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)
 
 ## <a name="example"></a>例
 

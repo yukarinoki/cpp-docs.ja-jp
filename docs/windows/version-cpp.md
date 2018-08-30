@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a46a2f9b18a45e7ea627488881b0289e733ddd7b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 87186ee70b5863f51a7cd91f8695052f361bd11c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608968"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222533"
 ---
 # <a name="version-c"></a>version (C++)
 
@@ -44,7 +44,7 @@ ms.locfileid: "42608968"
 
 ## <a name="remarks"></a>Remarks
 
-**バージョン**C++ 属性と同じ機能を持つ、[バージョン](http://msdn.microsoft.com/library/windows/desktop/aa367306)MIDL 属性と、生成された .idl ファイルに渡されます。
+**バージョン**C++ 属性と同じ機能を持つ、[バージョン](/windows/desktop/Midl/version)MIDL 属性と、生成された .idl ファイルに渡されます。
 
 ## <a name="example"></a>例
 

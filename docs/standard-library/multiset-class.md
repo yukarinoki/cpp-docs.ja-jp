@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07e38d11ef25ebc2f1da888594ab84fe2261c53a
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d32b6e61ab0dbac6010c6ed233f2cd822e73c2d5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028334"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220976"
 ---
 # <a name="multiset-class"></a>multiset クラス
 
@@ -116,13 +116,16 @@ class multiset
 
 ### <a name="parameters"></a>パラメーター
 
-*キー* multiset に格納される要素のデータを入力します。
+*Key*<br/>
+ multiset に格納される要素のデータ型。
 
-*比較*multiset 内の相対順序を決定する並べ替えキーとして 2 つの要素の値を比較できる関数オブジェクトを提供する型。 二項述語 **less**\<Key> が既定値です。
+*Compare*<br/>
+ 2 つの要素の値を並べ替えキーとして比較して、multiset 内の要素の相対順序を決定できる関数オブジェクトを提供する型。 二項述語 **less**\<Key> が既定値です。
 
 C++ 14 では、型パラメーターを使用せずに `std::less<>` 述語または `std::greater<>` 述語を指定することで、異種ルックアップを有効にすることができます。 詳細については、「[連想コンテナーの異種ルックアップ](../standard-library/stl-containers.md#sequence_containers)」をご覧ください。
 
-*アロケーター* multiset の割り当てとメモリの解放に関する詳細をカプセル化する格納されたアロケーター オブジェクトを表す型です。 既定値は **アロケーター * * *\<キー >。*
+*アロケーター*<br/>
+ メモリの multiset の割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 既定値は `allocator<Key>` です。
 
 ## <a name="remarks"></a>Remarks
 
@@ -212,7 +215,7 @@ C++ 14 では、型パラメーターを使用せずに `std::less<>` 述語ま�
 |-|-|
 |[operator=](#op_eq)|別の `multiset` のコピーで `multiset` の要素を置き換えます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<set>
 
@@ -478,7 +481,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*照合される multiset の要素のキー。
+*key*<br/>
+ 照合される multiset の要素のキー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -873,7 +877,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*検索対象の multiset の要素の並べ替えキーと比較される引数キー。
+*key*<br/>
+ 検索対象の multiset 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -957,13 +962,17 @@ size_type erase(
 
 ### <a name="parameters"></a>パラメーター
 
-*場所*を削除する要素の位置。
+*Where*<br/>
+ 削除される要素の位置。
 
-*最初*を削除する最初の要素の位置。
+*まずは*<br/>
+ 削除される最初の要素の位置。
 
-*最後*を削除する最後の要素の次の位置。
+*前の*<br/>
+ 削除される最後の要素の次の位置。
 
-*キー*を削除する要素のキー値。
+*Key*<br/>
+ 削除される要素のキー値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -988,7 +997,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*検索対象の multiset の要素の並べ替えキーによって照合されるキーの値。
+*key*<br/>
+ 検索対象の multiset 内の要素の並べ替えキーと照合するキー値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1430,7 +1440,8 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*検索対象の multiset の要素の並べ替えキーと比較される引数キー。
+*key*<br/>
+ 検索対象の multiset 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2036,7 +2047,8 @@ void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*ターゲットの multiset を交換する要素を提供する引数の multiset。
+*right*<br/>
+ ターゲットの multiset と交換する要素を提供する引数の multiset。
 
 ### <a name="remarks"></a>Remarks
 
@@ -2104,7 +2116,8 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*検索対象の multiset の要素の並べ替えキーと比較される引数キー。
+*key*<br/>
+ 検索対象の multiset 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2307,7 +2320,7 @@ The multiset has elements: 10 20.
 
 ## <a name="see-also"></a>関連項目
 
-[\<設定 > メンバー](http://msdn.microsoft.com/0c2d57c0-173f-4204-b579-c5f06aad8b95)<br/>
+[\<設定 > メンバー](https://msdn.microsoft.com/0c2d57c0-173f-4204-b579-c5f06aad8b95)<br/>
 [コンテナー](../cpp/containers-modern-cpp.md)<br/>
 [C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>

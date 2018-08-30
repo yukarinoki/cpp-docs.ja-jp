@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f816e4fd83439b528e6f2ab92212c763d769bed
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: bf937f11118cfbea26db11ba48ea0ed65d903af6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853057"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217156"
 ---
 # <a name="coblist-class"></a>CObList クラス
 一意の順序付きリスト fSupports`CObject`値順番に、またはポインターによってアクセス可能なポインター。  
@@ -135,7 +135,7 @@ class CObList : public CObject
   
  `CObList`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxcoll.h  
   
 ##  <a name="addhead"></a>  CObList::AddHead  
@@ -160,8 +160,8 @@ void AddHead(CObList* pNewList);
   
 |クラス|メンバー関数|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**位置 AddHead (void\***  `newElement` **)。**<br /><br /> **void AddHead (CPtrList\***  `pNewList` **)。**|  
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**位置 AddHead (const CString &** `newElement` **)。**<br /><br /> **位置 AddHead (LPCTSTR** `newElement` **)。**<br /><br /> **void AddHead (CStringList\***  `pNewList` **)。**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**位置 AddHead (void** <strong>\*</strong> `newElement` **)。**<br /><br /> **void AddHead (CPtrList** <strong>\*</strong> `pNewList` **)。**|  
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**位置 AddHead (const CString &** `newElement` **)。**<br /><br /> **位置 AddHead (LPCTSTR** `newElement` **)。**<br /><br /> **void AddHead (CStringList** <strong>\*</strong> `pNewList` **)。**|  
   
 ### <a name="remarks"></a>Remarks  
  一覧は、操作の前に空にすることができます。  
@@ -204,8 +204,8 @@ void AddTail(CObList* pNewList);
   
 |クラス|メンバー関数|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**位置 AddTail (void\***  `newElement` **)。**<br /><br /> **AddTail を無効にする (CPtrList\***  `pNewList` **)。**|  
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**位置 AddTail (const CString &** `newElement` **)。**<br /><br /> **位置 AddTail (LPCTSTR** `newElement` **)。**<br /><br /> **AddTail を無効にする (CStringList\***  `pNewList` **)。**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**位置 AddTail (void** <strong>\*</strong> `newElement` **)。**<br /><br /> **AddTail を無効にする (CPtrList** <strong>\*</strong> `pNewList` **)。**|  
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**位置 AddTail (const CString &** `newElement` **)。**<br /><br /> **位置 AddTail (LPCTSTR** `newElement` **)。**<br /><br /> **AddTail を無効にする (CStringList** <strong>\*</strong> `pNewList` **)。**|  
   
 ### <a name="example"></a>例  
   参照してください[使われて](#coblist)の一覧については、`CAge`クラス。  
@@ -276,7 +276,7 @@ POSITION Find(
   
 |クラス|メンバー関数|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**位置検索 (void\***  `searchValue` **、位置** `startAfter` **= NULL) const です。**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**位置検索 (void** <strong>\*</strong> `searchValue` **、位置** `startAfter` **= NULL) const です。**|  
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**位置検索 (LPCTSTR** `searchValue` **、位置** `startAfter` **= NULL) const です。**|  
   
 ### <a name="example"></a>例  
@@ -598,7 +598,7 @@ POSITION InsertAfter(
   
 |クラス|メンバー関数|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**位置 InsertAfter (位置***位置* **, void\***  `newElement` **)。**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**位置 InsertAfter (位置***位置* **, void** <strong>\*</strong> `newElement` **)。**|  
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**位置 InsertAfter (位置***位置* **、const の CString &** `newElement` **)。**<br /><br /> **位置 InsertAfter (位置***位置* **、LPCTSTR** `newElement` **)。**|  
   
 ### <a name="return-value"></a>戻り値  
@@ -642,7 +642,7 @@ POSITION InsertBefore(
   
 |クラス|メンバー関数|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**位置 InsertBefore (位置***位置* **, void\***  `newElement` **)。**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**位置 InsertBefore (位置***位置* **, void** <strong>\*</strong> `newElement` **)。**|  
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**位置 InsertBefore (位置***位置* **、const の CString &** `newElement` **)。**<br /><br /> **位置 InsertBefore (位置***位置* **、LPCTSTR** `newElement` **)。**|  
   
 ### <a name="example"></a>例  

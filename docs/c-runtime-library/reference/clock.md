@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4caf2518de21a938822e443c0383c22cf170d44
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fd4b399900802d110ff5746a0ccb2424ba40e6b5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395368"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209867"
 ---
 # <a name="clock"></a>clock
 
@@ -54,17 +54,17 @@ clock_t clock( void );
 
 ## <a name="return-value"></a>戻り値
 
-CRT の初期化をプロセスの開始時からの経過時間の単位で**CLOCKS_PER_SEC** 1 秒あたりの単位。 経過時間が使用できないかとして記録できる最大の正の時間を超えた場合、 **clock_t**型、値を返します、`(clock_t)(-1)`です。
+プロセスの開始時の CRT の初期化からの経過時間の単位で**CLOCKS_PER_SEC** 1 秒あたりのユニットです。 経過時間が利用できないかとして記録できる正の最大期間を超えた場合、 **clock_t**型、関数が値を返します`(clock_t)(-1)`します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**クロック**関数は CRT の初期化プロセスの開始時以降にかかったウォール クロック時間が経過を通知します。 この関数は、厳密には ISO C (正味の CPU 時間を戻り値にすることが規定されている) に準拠していないことに注意してください。 CPU 時間を取得するには、Win32 の [GetProcessTimes](https://msdn.microsoft.com/library/windows/desktop/ms683223) 関数を使用します。 によって返される値で除算を秒単位の経過時間を確認するのには**クロック**マクロによって関数**CLOCKS_PER_SEC**です。
+**クロック**CRT の初期化プロセス開始時から経過したウォール クロック時間が関数に指示します。 この関数は、厳密には ISO C (正味の CPU 時間を戻り値にすることが規定されている) に準拠していないことに注意してください。 CPU 時間を取得するには、Win32 の [GetProcessTimes](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getprocesstimes) 関数を使用します。 経過時間 (秒) を確認するのにによって返される値で除算、**クロック**マクロによって関数**CLOCKS_PER_SEC**します。
 
-十分な時間を指定するには、によって返される値**クロック**の最大の正の値を超えることができます**clock_t**です。 ときに、プロセスが長い時間実行、によって返される値**クロック**は常に`(clock_t)(-1)`ISO C99 標準 (7.23.2.1) と ISO C11 標準 (7.27.2.1) で指定されたとおりです。 Microsoft が実装する**clock_t**として、**長い**、符号付き 32 ビット整数では、および**CLOCKS_PER_SEC**を 1000 マクロが定義されています。 こうと、最大**クロック**関数の戻り値は 2147483.647 秒、または約 24.8 日。 によって返される値に依存しない**クロック**時間より長い実行プロセスでします。 64 ビットを使用することができます[時間](time-time32-time64.md)関数または Windows [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904)何年ものレコードの処理の経過時間をする関数。
+十分な時間を指定するには、によって返される値**クロック**の正の最大値を超える**clock_t**します。 ときに、プロセスが実行時間が長い、によって返される値**クロック**は常に`(clock_t)(-1)`ISO C99 標準 (7.23.2.1) と ISO C11 標準 (7.27.2.1) で指定されたとおりです。 Microsoft の実装**clock_t**として、**長い**、符号付き 32 ビット整数では、および**CLOCKS_PER_SEC**マクロは 1000 として定義されます。 これにより、最大**クロック**関数の戻り値は 2147483.647 秒、または約 24.8 日。 によって返される値に依存しない**クロック**でこの時間より長く実行されるプロセス。 64 ビットを使用する[時間](time-time32-time64.md)関数または、Windows [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904)関数を何年ものレコードの処理の経過時間。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**clock**|\<time.h>|
 

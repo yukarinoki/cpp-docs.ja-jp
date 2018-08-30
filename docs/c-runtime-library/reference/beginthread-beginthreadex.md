@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49e07fd632459e1d668d0201c821065bfaeea72c
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: e4bdae31c3a2f84dd959baf49fae7e43a6cc9eb0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572483"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206398"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread、_beginthreadex
 
@@ -93,7 +93,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
 新しいスレッドに渡される引数リストまたは**NULL**します。
 
 *セキュリティ*<br/>
-[SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) 構造体へのポインター。この構造体は、返されたハンドルを子プロセスが継承できるかどうかを決定します。 場合*セキュリティ*は**NULL**ハンドルを継承することはできません。 必要があります**NULL** Windows 95 アプリケーション。
+[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) 構造体へのポインター。この構造体は、返されたハンドルを子プロセスが継承できるかどうかを決定します。 場合*セキュリティ*は**NULL**ハンドルを継承することはできません。 必要があります**NULL** Windows 95 アプリケーション。
 
 *initflag*<br/>
 新しいスレッドの初期状態を制御するフラグ。 設定*initflag*をすぐに実行するには 0 または**CREATE_SUSPENDED**停止状態でスレッドを作成するを使用して、 [ResumeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-resumethread)スレッドを実行します。 設定*initflag*に**STACK_SIZE_PARAM_IS_A_RESERVATION**フラグを使用する*stack_size*初期予約サイズ (バイト単位)、スタックは、このフラグが指定されていないので、 *stack_size*コミット サイズを指定します。
@@ -131,7 +131,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
 
 呼び出すことができます[_endthread](endthread-endthreadex.md)または **_endthreadex**明示的にスレッドを終了しますただし、 **_endthread**または **_endthreadex**が呼び出されます。スレッド返すパラメーターとして渡されたルーチンから場合自動的に表示します。 呼び出しのスレッドを終了 **_endthread**または **_endthreadex**確実にスレッドに割り当てられているリソースの解放できます。
 
-**_endthread**一方には、スレッド ハンドルを自動的に閉じます **_endthreadex**はありません。 したがって、使用 **_beginthread**と **_endthread**、Win32 を呼び出すことによって明示的にスレッド ハンドルを終了しないでください[CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API。 この動作は、Win32 [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) API とは異なります。
+**_endthread**一方には、スレッド ハンドルを自動的に閉じます **_endthreadex**はありません。 したがって、使用 **_beginthread**と **_endthread**、Win32 を呼び出すことによって明示的にスレッド ハンドルを終了しないでください[CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API。 この動作は、Win32 [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) API とは異なります。
 
 > [!NOTE]
 > Libcmt.lib にリンクされている実行可能ファイルを呼び出さないでください Win32 **ExitThread** API 実行時のシステムを防ぐため再利用しないようにはリソースを割り当てられます。 **_endthread**と **_endthreadex**割り当てられているスレッド リソースを解放し、呼び出す**ExitThread**します。
@@ -335,4 +335,4 @@ Counter should be 1000000; it is-> 1000000
 - [_endthread、_endthreadex](endthread-endthreadex.md)
 - [abort](abort.md)
 - [exit、_Exit、_exit](exit-exit-exit.md)
-- [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)
+- [GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread)

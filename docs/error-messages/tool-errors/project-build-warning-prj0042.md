@@ -1,7 +1,7 @@
 ---
-title: プロジェクトのビルドの警告 PRJ0042 |Microsoft ドキュメント
+title: プロジェクトのビルドの警告 PRJ0042 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,23 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c0465b160615af96da8f489bbde63684598cffc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 260da8ac336c640ea875610b2c62e6c42c7d335e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316830"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211351"
 ---
 # <a name="project-build-warning-prj0042"></a>プロジェクト ビルドの警告 PRJ0042
-**' Outputs' プロパティ ファイルのカスタム ビルド ステップに関する '**   
- ***ファイル*' が設定されていません。カスタム ビルド ステップはスキップされます。**  
-  
- 出力が指定されていないために、カスタム ビルド ステップは実行されませんでした。  
-  
- このエラーを解決するには、いずれか、次を操作します。  
-  
--   カスタム ビルド ステップをビルドから除外します。  
-  
--   出力を追加します。  
-  
--   カスタム ビルド ステップのコマンドの内容を削除します。
+
+> 'Outputs' プロパティ ファイルのカスタム ビルド ステップの'*ファイル*' が設定されていません。 カスタム ビルド ステップはスキップされます。
+
+出力が指定されていないために、カスタム ビルド ステップは実行されませんでした。
+
+このエラーを解決するには、次に行ういずれか。
+
+- カスタム ビルド ステップをビルドから除外します。
+
+- 出力を追加します。
+
+- カスタム ビルド ステップのコマンドの内容を削除します。

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d570204a997def3b295e7ba0fb3b08b9a15677b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 38267ed5755b99bd97e4c923611d297673fcc41e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853729"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215584"
 ---
 # <a name="csharedfile-class"></a>CSharedFile クラス
 [CMemFile](../../mfc/reference/cmemfile-class.md)-共有メモリ ファイルをサポートするクラスを派生します。  
@@ -56,7 +56,7 @@ class CSharedFile : public CMemFile
 ## <a name="remarks"></a>Remarks  
  メモリのファイルは、ファイルがディスクではなく RAM に格納されていることを除いて、ディスク ファイルと同様に動作します。 メモリ ファイルは高速な一時ストレージまたは生バイトを転送するために役立ちます。 または、独立したプロセスの間でオブジェクトをシリアル化します。  
   
- 使用してメモリが割り当てられた、他のメモリ ファイルの共有メモリ ファイルとは異なる、 [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) Windows 関数。 `CSharedFile`クラスは、グローバルに割り当てられたメモリ ブロックにデータを保存 (を使用して作成`GlobalAlloc`)、このメモリ ブロックを共有できる DDE、クリップボード、またはその他の OLE と COM uniform データ転送操作、たとえばを使用してを使用して、`IDataObject`します。  
+ 使用してメモリが割り当てられた、他のメモリ ファイルの共有メモリ ファイルとは異なる、 [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) Windows 関数。 `CSharedFile`クラスは、グローバルに割り当てられたメモリ ブロックにデータを保存 (を使用して作成`GlobalAlloc`)、このメモリ ブロックを共有できる DDE、クリップボード、またはその他の OLE と COM uniform データ転送操作、たとえばを使用してを使用して、`IDataObject`します。  
   
  `GlobalAlloc` によって返されたポインターなどのメモリへのポインターではなく、HGLOBAL がハンドルを返します[malloc](../../c-runtime-library/reference/malloc.md)します。 HGLOBAL ハンドルは、特定のアプリケーションで必要です。 たとえば、クリップボードにデータを格納する書き込むようが必要です。  
   
@@ -75,7 +75,7 @@ class CSharedFile : public CMemFile
   
  `CSharedFile`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxadv.h  
   
 ##  <a name="csharedfile"></a>  CSharedFile::CSharedFile  
@@ -89,7 +89,7 @@ CSharedFile(
   
 ### <a name="parameters"></a>パラメーター  
  *nAllocFlags*  
- メモリの割り当て方法を示すフラグです。 参照してください[GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574)有効なフラグ値の一覧についてはします。  
+ メモリの割り当て方法を示すフラグです。 参照してください[GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc)有効なフラグ値の一覧についてはします。  
   
  *nGrowBytes*  
  バイトのメモリ割り当てインクリメントします。  

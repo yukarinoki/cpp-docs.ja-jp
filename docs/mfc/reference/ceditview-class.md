@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7323dfa06e73342e956a9aacb1ad925b6fb022f2
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: bcc4af6f4aeb6c7a0df005d164729cf87065f613
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338497"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220831"
 ---
 # <a name="ceditview-class"></a>CEditView クラス
 Windows のエディット コントロールの機能を提供するビュー クラスの一種であり、シンプルなテキスト編集エディターを実装できます。  
@@ -120,7 +120,7 @@ class CEditView : public CCtrlView
   
  クラスの既定の実装`CEditView`次のコマンドの処理: ID_EDIT_SELECT_ALL、ID_EDIT_FIND、ID_EDIT_REPLACE、ID_EDIT_REPEAT、および ID_FILE_PRINT します。  
   
- 既定の文字制限`CEditView`は (1024 \* 1024-1 = 1048575)。 これは、基になるエディット コントロールの EM_LIMITTEXT 関数を呼び出すことによって変更できます。 ただし、制限は、オペレーティング システムによって異なりますの種類の編集コントロール (1 つまたは複数行)。 これらの制限に関する詳細については、次を参照してください。 [EM_LIMITTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761607)します。  
+ 既定の文字制限`CEditView`は (1024 \* 1024-1 = 1048575)。 これは、基になるエディット コントロールの EM_LIMITTEXT 関数を呼び出すことによって変更できます。 ただし、制限は、オペレーティング システムによって異なりますの種類の編集コントロール (1 つまたは複数行)。 これらの制限に関する詳細については、次を参照してください。 [EM_LIMITTEXT](/windows/desktop/Controls/em-limittext)します。  
   
  コントロールでは、この制限を変更する、`OnCreate()`関数を`CEditView`クラスし、次のコード行を挿入します。  
   
@@ -149,7 +149,7 @@ class CEditView : public CCtrlView
   
  `CEditView`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxext.h  
   
 ##  <a name="ceditview"></a>  CEditView::CEditView  

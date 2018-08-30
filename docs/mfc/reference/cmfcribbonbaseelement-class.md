@@ -242,12 +242,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ac1ae7ba40ead2217fd2404a243f0e02664177a
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 41b5a9f936dc47852c766370d330576dc16ca58a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028396"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213663"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement クラス
 `CMFCRibbonBaseElement`クラスは基底クラスに追加できるすべての要素に対して、[リボン バー](../../mfc/reference/cmfcribbonbar-class.md)します。 リボン要素とは、リボン ボタン、リボン チェック ボックス、リボン コンボ ボックスなどです。  
@@ -411,7 +411,7 @@ class CMFCRibbonBaseElement : public CObject
   
  [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxbaseribbonelement.h  
   
 ##  <a name="addtokeylist"></a>  CMFCRibbonBaseElement::AddToKeyList  
@@ -921,7 +921,7 @@ virtual CWnd* GetParentWnd() const;
  メソッドが成功した場合は、リボン要素の親ウィンドウへのポインターそれ以外の場合は NULL です。  
   
 ### <a name="remarks"></a>Remarks  
- リボン要素の親ウィンドウは、 [CMFCRibbonBar クラス](../../mfc/reference/cmfcribbonbar-class.md)または[CMFCRibbonPanelMenuBar](http://msdn.microsoft.com/7bd4b986-8b7b-493e-9746-bd3161b78581)します。  
+ リボン要素の親ウィンドウは、 [CMFCRibbonBar クラス](../../mfc/reference/cmfcribbonbar-class.md)または[CMFCRibbonPanelMenuBar](https://msdn.microsoft.com/7bd4b986-8b7b-493e-9746-bd3161b78581)します。  
   
 ##  <a name="getpressed"></a>  CMFCRibbonBaseElement::GetPressed  
  ユーザーが現在押した場合は、リボン要素へのポインターを取得します。  
@@ -1686,7 +1686,7 @@ virtual void Redraw();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドを呼び出してリボン要素を表示する四角形を再描画[CWnd::RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911) RDW_INVALIDATE、RDW_ERASE、および RDW_UPDATENOW フラグを設定します。  
+ このメソッドを呼び出してリボン要素を表示する四角形を再描画[CWnd::RedrawWindow](/windows/desktop/api/winuser/nf-winuser-redrawwindow) RDW_INVALIDATE、RDW_ERASE、および RDW_UPDATENOW フラグを設定します。  
   
 ##  <a name="setaccdata"></a>  Cmfcribbonbaseelement::setaccdata  
  リボン要素のアクセシビリティ データを設定します。  

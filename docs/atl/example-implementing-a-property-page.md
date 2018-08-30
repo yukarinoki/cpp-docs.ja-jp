@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4c7329e7784fc5228bca5aa5b167d04ded51aaf
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 43ce702c1da30e6f624477b74e381576539ef9e0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852285"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214783"
 ---
 # <a name="example-implementing-a-property-page"></a>例: プロパティ ページの実装
 この例は、プロパティ ページのプロパティを表示します (および変更することができます) を作成する方法を示しています、[ドキュメント クラス](../mfc/document-classes.md)インターフェイス。  
@@ -70,7 +70,7 @@ ms.locfileid: "37852285"
  これらのコントロールは、ドキュメントとその読み取り専用状態のファイル名の表示に使用されます。  
   
 > [!NOTE]
->  タブ付きファイルの場所を必要とする必要もダイアログ リソースは、フレームまたはコマンド ボタンは含まれません。 これらの機能は、呼び出すことによって作成されたものなどのプロパティ ページ フレームによって提供される[持つ](http://msdn.microsoft.com/library/windows/desktop/ms678437)します。  
+>  タブ付きファイルの場所を必要とする必要もダイアログ リソースは、フレームまたはコマンド ボタンは含まれません。 これらの機能は、呼び出すことによって作成されたものなどのプロパティ ページ フレームによって提供される[持つ](/windows/desktop/api/olectl/nf-olectl-olecreatepropertyframe)します。  
   
 ##  <a name="vcconadding_message_handlers"></a> メッセージ ハンドラーを追加します。  
  インプレース コントロールとコントロールのいずれかの値が変更されたときに、ダーティ ページの状態を更新するメッセージ ハンドラーを追加できます。  

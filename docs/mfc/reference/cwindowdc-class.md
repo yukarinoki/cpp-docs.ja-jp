@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b692d974b5397d73f7e328330f71d8f9688be3e2
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 40566ab94c9708d7b31f88de0f96b4fc33675534
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42540123"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212522"
 ---
 # <a name="cwindowdc-class"></a>CWindowDC クラス
 `CDC`の派生クラスです。  
@@ -77,7 +77,7 @@ explicit CWindowDC(CWnd* pWnd);
  デバイス コンテキスト オブジェクトがアクセス クライアント領域を持つウィンドウです。  
   
 ### <a name="remarks"></a>Remarks  
- コンス トラクターは、Windows の関数を呼び出します。 [GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947)します。  
+ コンス トラクターは、Windows の関数を呼び出します。 [GetWindowDC](/windows/desktop/api/winuser/nf-winuser-getwindowdc)します。  
   
  例外 (型の`CResourceException`) 場合にスローされる、Windows`GetWindowDC`呼び出しは失敗します。 Windows が既に割り当てられているすべての利用可能なデバイス コンテキストの場合は、デバイス コンテキストを使用しないことがあります。 アプリケーションは、共通のディスプレイ コンテキスト Windows の任意の時点でご利用いただけますの 5 つの競合します。  
   

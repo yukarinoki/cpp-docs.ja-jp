@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c79c2260b03d0530595100ba8f4c42a392900aa7
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: bb6cc740577dfcb5921332c24e3cec2d2d6cb100
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851380"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210851"
 ---
 # <a name="cmfctoolbarbutton-class"></a>CMFCToolBarButton クラス
 ツールバーのボタン機能を提供します。  
@@ -230,19 +230,19 @@ class CMFCToolBarButton : public CObject
 |[CMFCToolBarButton::IsOwnerOf](#isownerof)|ボタンが指定したウィンドウ ハンドルの所有者であるかどうかを判断します。|  
 |[CMFCToolBarButton::IsVisible](#isvisible)|ツール バー ボタンが表示されているかどうかを判断します。|  
 |[CMFCToolBarButton::IsWindowVisible](#iswindowvisible)|ボタンの基になるウィンドウ ハンドルが表示されるかどうかを判断します。|  
-|[CMFCToolBarButton::NotifyCommand](#notifycommand)|ボタンを処理するかどうかを指定します、 [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)メッセージ。|  
+|[CMFCToolBarButton::NotifyCommand](#notifycommand)|ボタンを処理するかどうかを指定します、 [WM_COMMAND](/windows/desktop/menurc/wm-command)メッセージ。|  
 |[CMFCToolBarButton::OnAddToCustomizePage](#onaddtocustomizepage)|ボタンが追加されたときに、フレームワークによって呼び出されます、**カスタマイズ** ダイアログ ボックス。|  
 |[CMFCToolBarButton::OnBeforeDrag](#onbeforedrag)|ボタンをドラッグできるかどうかを指定します。|  
 |[CMFCToolBarButton::OnBeforeDrop](#onbeforedrop)|ユーザーがターゲットのツールバーにボタンを削除できるかどうかを指定します。|  
 |[CMFCToolBarButton::OnCalculateSize](#oncalculatesize)|指定したデバイス コンテキストおよびドッキング状態のボタンのサイズを計算するためにフレームワークによって呼び出されます。|  
-|[CMFCToolBarButton::OnCancelMode](#oncancelmode)|処理するためにフレームワークによって呼び出されます、 [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615)メッセージ。|  
+|[CMFCToolBarButton::OnCancelMode](#oncancelmode)|処理するためにフレームワークによって呼び出されます、 [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode)メッセージ。|  
 |[CMFCToolBarButton::OnChangeParentWnd](#onchangeparentwnd)|新しいツールバーにボタンが挿入されたときに、フレームワークによって呼び出されます。|  
 |[CMFCToolBarButton::OnClick](#onclick)|ユーザーがマウス ボタンをクリックすると、フレームワークによって呼び出されます。|  
 |[CMFCToolBarButton::OnClickUp](#onclickup)|ユーザーがマウス ボタンを離したときに、フレームワークによって呼び出されます。|  
 |[CMFCToolBarButton::OnContextHelp](#oncontexthelp)|親ツールバー領域メッセージを処理するときに、フレームワークによって呼び出されます。|  
 |[CMFCToolBarButton::OnCtlColor](#onctlcolor)|親ツールバー WM_CTLCOLOR メッセージを処理するときに、フレームワークによって呼び出されます。|  
 |[CMFCToolBarButton::OnCustomizeMenu](#oncustomizemenu)|アプリケーションが親ツールバーのショートカット メニューを表示するときに指定されたメニューを変更するボタンを使用できます。|  
-|[CMFCToolBarButton::OnDblClk](#ondblclk)|親ツールバーを処理するときに、フレームワークによって呼び出されます、[した](http://msdn.microsoft.com/library/windows/desktop/ms645606)メッセージ。|  
+|[CMFCToolBarButton::OnDblClk](#ondblclk)|親ツールバーを処理するときに、フレームワークによって呼び出されます、[した](/windows/desktop/inputdev/wm-lbuttondblclk)メッセージ。|  
 |[CMFCToolBarButton::OnDraw](#ondraw)|指定したスタイルとオプションを使用して、ボタンを描画するためにフレームワークによって呼び出されます。|  
 |[CMFCToolBarButton::OnDrawOnCustomizeList](#ondrawoncustomizelist)|ボタンを描画するためにフレームワークによって呼び出されます、**コマンド**のウィンドウ、**カスタマイズ** ダイアログ ボックス。|  
 |[CMFCToolBarButton::OnGetCustomToolTipText](#ongetcustomtooltiptext)|ボタンのカスタム ツールヒント テキストを取得するためにフレームワークによって呼び出されます。|  
@@ -304,7 +304,7 @@ class CMFCToolBarButton : public CObject
   
  [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxtoolbarbutton.h  
   
 ##  <a name="canbedropped"></a>  CMFCToolBarButton::CanBeDropped  
@@ -446,7 +446,7 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
  このパラメーターには true、有効にする入力、または入力を無効にする場合は FALSE に設定します。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、`EnableWindow`を有効にする、または入力を無効にします。 詳細については、次を参照してください。 [EnableWindow](http://msdn.microsoft.com/library/windows/desktop/ms646291) Windows SDK に含まれています。  
+ このメソッドは、`EnableWindow`を有効にする、または入力を無効にします。 詳細については、次を参照してください。 [EnableWindow](https://msdn.microsoft.com/library/windows/desktop/ms646291) Windows SDK に含まれています。  
   
 ##  <a name="exporttomenubutton"></a>  CMFCToolBarButton::ExportToMenuButton  
  ツール バー ボタンからメニューにテキストをコピーします。  
@@ -884,7 +884,7 @@ CString m_strText;
  このデータ メンバーには、ボタンのテキスト ラベルが含まれています。 テキスト ラベルを空にすることができます。  
   
 ##  <a name="notifycommand"></a>  CMFCToolBarButton::NotifyCommand  
- ボタンを処理するかどうかを指定します、 [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)メッセージ。  
+ ボタンを処理するかどうかを指定します、 [WM_COMMAND](/windows/desktop/menurc/wm-command)メッセージ。  
   
 ```  
 virtual BOOL NotifyCommand(int iNotifyCode);
@@ -898,7 +898,7 @@ virtual BOOL NotifyCommand(int iNotifyCode);
  このメソッドは、FALSE を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 送信しようとしてある場合に、フレームワークはこのメソッドを呼び出して、 [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)メッセージを親ウィンドウ。  
+ 送信しようとしてある場合に、フレームワークはこのメソッドを呼び出して、 [WM_COMMAND](/windows/desktop/menurc/wm-command)メッセージを親ウィンドウ。  
   
  既定では、このメソッドは、FALSE を返します。 親ツールバーがメッセージを処理することを示す WM_COMMAND メッセージまたは FALSE を処理するかどうかは TRUE を返すには、このメソッドをオーバーライドします。  
   
@@ -977,14 +977,14 @@ virtual SIZE OnCalculateSize(
  非標準のボタン (たとえば、エディット ボックス ボタン) のサイズを指定する場合は、このメソッドをオーバーライドします。  
   
 ##  <a name="oncancelmode"></a>  CMFCToolBarButton::OnCancelMode  
- 処理するためにフレームワークによって呼び出されます、 [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615)メッセージ。  
+ 処理するためにフレームワークによって呼び出されます、 [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode)メッセージ。  
   
 ```  
 virtual void OnCancelMode();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドの既定の実装では、何も行われません。 このメソッドをオーバーライドして、処理する場合、 [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615)メッセージ。  
+ このメソッドの既定の実装では、何も行われません。 このメソッドをオーバーライドして、処理する場合、 [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode)メッセージ。  
   
 ##  <a name="onchangeparentwnd"></a>  CMFCToolBarButton::OnChangeParentWnd  
  新しいツールバーにボタンが挿入されたときに、フレームワークによって呼び出されます。  
@@ -1104,7 +1104,7 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
  既定の実装では、何も実行し、FALSE を返します。 このメソッドをオーバーライドし、指定されたメニューの内容を変更する場合は、0 以外の値を返します。  
   
 ##  <a name="ondblclk"></a>  CMFCToolBarButton::OnDblClk  
- 親ツールバーを処理するときに、フレームワークによって呼び出されます、[した](http://msdn.microsoft.com/library/windows/desktop/ms645606)メッセージ。  
+ 親ツールバーを処理するときに、フレームワークによって呼び出されます、[した](/windows/desktop/inputdev/wm-lbuttondblclk)メッセージ。  
   
 ```  
 virtual void OnDblClk(CWnd* pWnd);
@@ -1115,7 +1115,7 @@ virtual void OnDblClk(CWnd* pWnd);
  -   ボタンの親ウィンドウ。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドを呼び出して、`CMFCToolBar::OnLButtonDblClk`メソッドが親ツールバーを処理するとき、[した](http://msdn.microsoft.com/library/windows/desktop/ms645606)メッセージ。  
+ このメソッドを呼び出して、`CMFCToolBar::OnLButtonDblClk`メソッドが親ツールバーを処理するとき、[した](/windows/desktop/inputdev/wm-lbuttondblclk)メッセージ。  
   
  このメソッドの既定の実装では、何も行われません。  
   

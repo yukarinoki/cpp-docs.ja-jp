@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3227ebd4767bd7639bb5e5d8d5a1c73e26079dc
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5a0f00e9ad0a94aaa96afb3031b57e1c7da703dc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953422"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208190"
 ---
 # <a name="queryinterface"></a>QueryInterface
-COM の基本的なメカニズムは、使用するにはオブジェクトが静的に (前にインスタンス化されます) を提供する機能が express されるメカニズムは、`IUnknown`メソッドと呼ばれる[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)します。  
+COM の基本的なメカニズムは、使用するにはオブジェクトが静的に (前にインスタンス化されます) を提供する機能が express されるメカニズムは、`IUnknown`メソッドと呼ばれる[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))します。  
   
  派生したすべてのインターフェイスは`IUnknown`ですべてのインターフェイスの実装があるため、`QueryInterface`します。 実装に関係なくは、このメソッドは、インターフェイスを呼び出し元が、ポインターの IID を使用して、オブジェクトを照会します。 オブジェクトは、そのインターフェイスをサポートしている場合`QueryInterface`も呼び出し中に、インターフェイスへのポインターを取得します。`AddRef`します。 それ以外の場合、E_NOINTERFACE エラー コードを返します。  
   
@@ -34,5 +34,5 @@ COM の基本的なメカニズムは、使用するにはオブジェクトが�
   
 ## <a name="see-also"></a>関連項目  
  [COM の概要](../atl/introduction-to-com.md)   
- [オブジェクト内の移動を QueryInterface:](http://msdn.microsoft.com/library/windows/desktop/ms687230)
+ [オブジェクト内の移動を QueryInterface:](/windows/desktop/com/queryinterface--navigating-in-an-object)
 

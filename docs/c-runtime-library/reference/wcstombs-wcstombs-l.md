@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 604ca2d2172e340459d7d5cbf406f01c484750ff
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 5cbc89ff9a6c353b0df1df606a08a8c2515ed04a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451733"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217135"
 ---
 # <a name="wcstombs-wcstombsl"></a>wcstombs、_wcstombs_l
 
@@ -95,25 +95,25 @@ size_t _wcstombs_l(
 
 ## <a name="return-value"></a>戻り値
 
-場合**wcstombs**が正常にマルチバイト文字列を変換します (存在する場合)、終端の null を除く、マルチバイト出力文字列に書き込まれたバイト数を返します。 場合、 *mbstr*引数は**NULL**、 **wcstombs**変換先の文字列のバイト単位で必要なサイズを返します。 場合**wcstombs** 、マルチバイト文字に変換できないワイド文字を検出した型にキャストする-1 を返します**size_t**設定と**errno**に**EILSEQ**.
+場合**wcstombs**マルチバイト文字列を正常に変換 (ある場合)、終端の null を除く、マルチバイト出力文字列に書き込まれたバイト数を返します。 場合、 *mbstr*引数が**NULL**、 **wcstombs**対象文字列のバイト単位で必要なサイズを返します。 場合**wcstombs**マルチバイト文字に変換できないワイド文字が検出された型にキャストする-1 を返します**size_t**設定と**errno**に**EILSEQ**.
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Wcstombs**関数によって示されるワイド文字の文字列に変換*wcstr*に対応するマルチバイト文字し、で結果を格納、 *mbstr*配列。 *カウント*パラメーターは、マルチバイト出力文字列に格納できるバイトの最大数を示します (のサイズは、 *mbstr*)。 通常、ワイド文字列を変換するときに必要になるバイト数は不明です。 出力文字列の 1 バイトだけを必要とするワイド文字もあれば、2 バイトを必要とする文字もあります。 (ワイド文字の null を含む)、入力文字列内のそれぞれのワイド文字をマルチバイト出力文字列に 2 バイトがある場合に合わせて結果が保証されます。
+**Wcstombs**関数が指すワイド文字の文字列に変換*wcstr*に対応するマルチバイト文字の文字し、に結果を格納、 *mbstr*配列。 *カウント*パラメーターはマルチバイト出力文字列に格納できるバイトの最大数を示します (のサイズは、 *mbstr*)。 通常、ワイド文字列を変換するときに必要になるバイト数は不明です。 出力文字列の 1 バイトだけを必要とするワイド文字もあれば、2 バイトを必要とする文字もあります。 (ワイド文字の null を含む) 入力文字列内のすべてのワイド文字をマルチバイト出力文字列に 2 バイトがある場合は、結果を必ず収まります。
 
-場合**wcstombs**前に、またはとワイド文字の null 文字 (L '\0') が発生した*カウント*に変換する 8 ビット 0 と停止が発生しました。 したがって、マルチバイト文字の文字列で*mbstr*が null で終わる場合にのみ**wcstombs**ワイド null 文字を変換中に発生します。 シーケンスを指す場合*wcstr*と*mbstr*などの動作の重複**wcstombs**が定義されていません。
+場合**wcstombs**前に、かワイド文字の null 文字 (L '\0') が発生した*カウント*発生するに変換する 8 ビット 0 して停止します。 したがって、マルチバイト文字の文字列*mbstr*が null で終わる場合にのみ**wcstombs**変換中にワイド文字の null 文字を検出するとします。 によって、シーケンスを指している場合*wcstr*と*mbstr*の動作が重なる**wcstombs**が定義されていません。
 
-場合、 *mbstr*引数は**NULL**、 **wcstombs**変換先の文字列のバイト単位で必要なサイズを返します。
+場合、 *mbstr*引数が**NULL**、 **wcstombs**対象文字列のバイト単位で必要なサイズを返します。
 
-**wcstombs**パラメーターを検証します。 場合*wcstr*は**NULL**、または*カウント*がより大きい**INT_MAX**、」の説明に従って、この関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は設定**errno**に**EINVAL**し、-1 を返します。
+**wcstombs**パラメーターを検証します。 場合*wcstr*は**NULL**、または*カウント*がより大きい**INT_MAX**、」の説明に従って、この関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は設定**errno**に**EINVAL** -1 を返します。
 
-**wcstombs** ; すべてのロケールに依存する動作に現在のロケールを使用 **_wcstombs_l**は、代わりに渡されるロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**wcstombs**ロケールに依存する動作に現在のロケールを使用 **_wcstombs_l**代わりに渡されたロケールを使用すると同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**wcstombs**|\<stdlib.h>|
 |**_wcstombs_l**|\<stdlib.h>|
@@ -170,4 +170,4 @@ Convert wide-character string:
 [mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wctomb、_wctomb_l](wctomb-wctomb-l.md)<br/>
-[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>
+[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

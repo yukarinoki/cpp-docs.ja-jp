@@ -53,12 +53,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 628e942ae77449f4dcd809d519da8696cd9fec6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 39f169c18554aa91e3f66a3e30a62a801c9d345d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415768"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208989"
 ---
 # <a name="vcprintfs-vcprintfsl-vcwprintfs-vcwprintfsl"></a>_vcprintf_s、_vcprintf_s_l、_vcwprintf_s、_vcwprintf_s_l
 
@@ -107,16 +107,16 @@ int _vcwprintf_s_l(
 
 書き込まれた文字数。出力エラーが発生した場合は負の値を返します。
 
-などの場合、これらの関数の安全性の低いバージョン*形式*null ポインターで説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 さらに、バージョンとは異なり、安全性が低く、これらの関数の場合は*形式*有効な形式を指定しない、無効なパラメーター例外が生成されます。 実行の続行には、これらの関数の戻り値はエラー コード セットが許可された場合**errno**をそのエラー コードにします。 既定のエラー コードは**EINVAL**特定の値が適用されない場合。
+などの場合、これらの関数のセキュリティが低いバージョン*形式*null ポインターの場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数のセキュリティが低いバージョンとは異なり、また場合*形式*有効な形式を指定しない無効なパラメーター例外が生成されます。 実行が続行すると、これらの関数の戻り値はエラー コードとセットを許可された場合**errno**にそのエラー コード。 既定のエラー コードは**EINVAL**より特定の値が適用されない場合。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-これらの各関数は、引数リストへのポインターを使用して、指定されたデータを書式化してコンソールに書き込みます。 **_vcwprintf_s**のワイド文字バージョンは、 **_vcprintf_s**です。 引数としてワイド文字列を使用します。
+これらの各関数は、引数リストへのポインターを使用して、指定されたデータを書式化してコンソールに書き込みます。 **_vcwprintf_s**のワイド文字バージョンは、 **_vcprintf_s**します。 引数としてワイド文字列を使用します。
 
-これらの関数を持つバージョン、 **_l**サフィックスは、現在のロケールの代わりに渡されたロケール パラメーターを使用する点を除いて同じです。
+これらの関数がのバージョン、 **_l**現在のロケールの代わりに渡されるロケール パラメーターを使用することを除き、サフィックスは同じです。
 
 > [!IMPORTANT]
-> *format* にユーザー定義の文字列を指定しないでください。 詳しくは、「 [バッファー オーバーランの回避](http://msdn.microsoft.com/library/windows/desktop/ms717795)」をご覧ください。
+> *format* にユーザー定義の文字列を指定しないでください。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -127,7 +127,7 @@ int _vcwprintf_s_l(
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|省略可能なヘッダー|
+|ルーチンによって返される値|必須ヘッダー|省略可能なヘッダー|
 |-------------|---------------------|----------------------|
 |**_vcprintf_s**、 **_vcprintf_s_l**|\<conio.h> および \<stdarg.h>|\<varargs.h>*|
 |**_vcwprintf_s**、 **_vcwprintf_s_l**|\<conio.h> または \<wchar.h>、および \<stdarg.h>|\<varargs.h>*|

@@ -49,12 +49,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66fd7c468e516c25e2c2b408b8c1112061eeb5e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 17bc6d95aae70c6297836d7353deafb6a4480407
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417943"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212970"
 ---
 # <a name="vsnprintfs-vsnprintfs-vsnprintfsl-vsnwprintfs-vsnwprintfsl"></a>vsnprintf_s、_vsnprintf_s、_vsnprintf_s_l、_vsnwprintf_s、_vsnwprintf_s_l
 
@@ -122,7 +122,7 @@ int _vsnwprintf_s(
 出力の格納位置。
 
 *sizeOfBuffer*<br/>
-サイズ、*バッファー*の文字数として、出力します。
+サイズ、*バッファー*出力の文字数。
 
 *count*<br/>
 書き込む最大文字数 (終端の null は含まない)、または [_TRUNCATE](../../c-runtime-library/truncate.md)。
@@ -140,11 +140,11 @@ int _vsnwprintf_s(
 
 ## <a name="return-value"></a>戻り値
 
-**vsnprintf_s**、 **_vsnprintf_s**と **_vsnwprintf_s**を含まない、終端の null または負の値の出力エラーが発生した場合、書き込まれる文字数を返します。 **vsnprintf_s**と同じ **_vsnprintf_s**です。 **vsnprintf_s** ANSI 規格に準拠するために含まれています。 **_vnsprintf**旧バージョンとの互換性は保持されます。
+**vsnprintf_s**、 **_vsnprintf_s**と **_vsnwprintf_s**出力エラーが発生した場合に、終端の null または負の値をしないなど、書き込まれる文字数を返します。 **vsnprintf_s**ヲェヒェケェ ・ **_vsnprintf_s**します。 **vsnprintf_s**は ANSI 規格に準拠する目的で含まれます。 **_vnsprintf**旧バージョンとの互換性は保持されます。
 
-データと、終端の null を格納するために必要な記憶域を超えた場合*sizeOfBuffer*で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)がない限り、*数*は[_TRUNCATE](../../c-runtime-library/truncate.md)、後者の文字列としてとして内に収まる*バッファー*が書き込まれる、-1 が返されます。 これらの関数の設定は無効なパラメーター ハンドラーの後に実行が引き続き発生する場合*バッファー*空の文字列に次のように設定します。 **errno**に**ERANGE**、し、-1 を返します。
+データと終端の null の格納に必要なストレージを超える場合*sizeOfBuffer*で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)がない限り、*数*は[_TRUNCATE](../../c-runtime-library/truncate.md)、場合の文字列と同様に収まる*バッファー*が書き込まれると、-1 が返されます。 これらの関数の設定は無効パラメーター ハンドラーの後に実行が引き続き発生する場合*バッファー*空の文字列に次のように設定します。 **errno**に**ERANGE**、-1 を返します。
 
-場合*バッファー*または*形式*は、 **NULL**ポインター、または*カウント*と同じかそれよりも少ないをゼロに無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し、-1 を返します。
+場合*バッファー*または*形式*は、 **NULL**ポインター、または*カウント*と同じかそれよりも少ない対 0 の場合、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し、-1 を返します。
 
 ### <a name="error-conditions"></a>エラー条件
 
@@ -153,21 +153,21 @@ int _vsnwprintf_s(
 |*バッファー*は**NULL**|-1|**EINVAL**|
 |*形式*は**NULL**|-1|**EINVAL**|
 |*カウント*< = 0|-1|**EINVAL**|
-|*sizeOfBuffer*小さすぎる (および*カウント*! = **_TRUNCATE**)|-1 (および*バッファー*空の文字列に設定)|**ERANGE**|
+|*sizeOfBuffer*小さすぎる (と*カウント*! = **_TRUNCATE**)|-1 (と*バッファー*空の文字列に設定)|**ERANGE**|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-これらの各関数は、引数リストへのポインターをとり書式化してまで書き込みます*カウント*メモリに指定されたデータの文字を指す*バッファー*終端の null を追加します。
+これらの各関数、引数リストへのポインターを受け取る書式設定して最大書き込みます*カウント*によって示されるメモリに指定されたデータの文字*バッファー*終端の null を追加します。
 
-場合*カウント*は[_TRUNCATE](../../c-runtime-library/truncate.md)、これらの関数を記述できるだけ多くの文字列内に収まるよう*バッファー*終端の null の領域を確保したままです。 文字列全体 (終端の null) に収まるかどうか*バッファー*、し、これらの関数は、書き込まれた文字数 (終端の null は含まない) を返しますこれらの関数がその切り捨てを指定する場合は-1 を返しますそれ以外の場合。発生しました。
+場合*カウント*は[_TRUNCATE](../../c-runtime-library/truncate.md)、これらの関数の多くに収まる限りの文字列として書き込み*バッファー*終端の null 用の空きを残して中にします。 文字列全体 (終端の null) が内に収まるかどうか*バッファー*、し、これらの関数は、(終端の null は含まない) に書き込まれた文字数を返しますそれ以外の場合、これらの関数がその切り捨ては-1 を返します。発生しました。
 
 これらの関数のバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
 
 > [!IMPORTANT]
-> *format* にユーザー定義の文字列を指定しないでください。 詳しくは、「 [バッファー オーバーランの回避](http://msdn.microsoft.com/library/windows/desktop/ms717795)」をご覧ください。
+> *format* にユーザー定義の文字列を指定しないでください。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 > [!NOTE]
-> 終端の null 用の領域があることを確認するには、必ず*カウント*がバッファーの長さ、または使用するよりも厳密に小さい **_TRUNCATE**です。
+> 終端の null 用の空きがあることを確認するには、必ず*カウント*は、バッファーの長さ、またはより厳密に小さい **_TRUNCATE**します。
 
 C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -180,7 +180,7 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|省略可能なヘッダー|
+|ルーチンによって返される値|必須ヘッダー|省略可能なヘッダー|
 |-------------|---------------------|----------------------|
 |**vsnprintf_s**|\<stdio.h> および \<stdarg.h>|\<varargs.h>*|
 |**_vsnprintf_s**、 **_vsnprintf_s_l**|\<stdio.h> および \<stdarg.h>|\<varargs.h>*|

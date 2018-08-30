@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40a5604a1b1c469272889aa7b4e283b3ee6f23bf
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c2b2f8ab8828c994b729180805be0a51a83b3487
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882797"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203627"
 ---
 # <a name="ccomenumimpl-class"></a>CComEnumImpl クラス
 このクラスは、配列に列挙されている項目を格納する、COM の列挙子インターフェイスの実装を提供します。  
@@ -48,7 +48,7 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
   
 #### <a name="parameters"></a>パラメーター  
  *ベース*  
- COM の列挙子 ([として](https://msdn.microsoft.com/library/ms680089.aspx)) インターフェイス。  
+ COM の列挙子インターフェイス。 参照してください[IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring)例についてはします。 
   
  *piid*  
  列挙子インターフェイスのインターフェイス ID へのポインター。  
@@ -72,11 +72,11 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
   
 |名前|説明|  
 |----------|-----------------|  
-|[CComEnumImpl::Clone](#clone)|実装[IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx)します。|  
+|[CComEnumImpl::Clone](#clone)|実装、**複製**インターフェイスのメソッドを列挙します。|  
 |[保ちます](#init)|列挙子を初期化します。|  
-|[CComEnumImpl::Next](#next)|実装[IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx)します。|  
-|[CComEnumImpl::Reset](#reset)|実装[IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx)します。|  
-|[より](#skip)|実装[IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx)します。|  
+|[CComEnumImpl::Next](#next)|実装**次**します。|  
+|[CComEnumImpl::Reset](#reset)|実装**リセット**します。|  
+|[より](#skip)|実装**スキップ**します。|  
   
 ### <a name="public-data-members"></a>パブリック データ メンバー  
   
@@ -89,7 +89,7 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 |[CComEnumImpl::m_spUnk](#m_spunk)|`IUnknown`列挙されているコレクションを提供するオブジェクトのポインター。|  
   
 ## <a name="remarks"></a>Remarks  
- `CComEnumImpl` 配列内に列挙されている項目が格納 COM 列挙子インターフェイスの実装を提供します。 このクラスに似ています、`IEnumOnSTLImpl`クラス、列挙子インターフェイスの実装を提供する C++ 標準ライブラリ コンテナーに基づいています。  
+参照してください[IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring)メソッドの実装の例についてはします。 `CComEnumImpl` 配列内に列挙されている項目が格納 COM 列挙子インターフェイスの実装を提供します。 このクラスに似ています、`IEnumOnSTLImpl`クラス、列挙子インターフェイスの実装を提供する C++ 標準ライブラリ コンテナーに基づいています。  
   
 > [!NOTE]
 >  さらに間の違いについて詳しく`CComEnumImpl`と`IEnumOnSTLImpl`を参照してください[保ちます](#init)します。  
@@ -105,7 +105,7 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
   
  `CComEnumImpl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlcom.h  
   
 ##  <a name="ccomenumimpl"></a>  CComEnumImpl::CComEnumImpl  
@@ -175,7 +175,7 @@ enum CComEnumFlags
 >  このメソッドのプロトタイプでは、配列の要素を指定の型として`T`ここで、`T`クラスをテンプレート パラメーターとして定義されました。 これは、COM インターフェイスのメソッドを使用して公開されている同じ種類[CComEnumImpl::Next](#next)します。 このこととは異なり[IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)、このクラスは、別のストレージをサポートしていませんし、データ型を公開します。 配列内の要素のデータ型は COM インターフェイスを使用して公開されるデータ型と同じである必要があります。  
   
 ##  <a name="clone"></a>  CComEnumImpl::Clone  
- このメソッドの実装を提供、 [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx)メソッド型のオブジェクトを作成して`CComEnum`、同じ配列と、現在のオブジェクトで使用される反復子で初期化してにインターフェイスを返す、新しく作成されたオブジェクト。  
+ このメソッドの実装を提供、**複製**メソッド型のオブジェクトを作成して`CComEnum`、同じ配列と、現在のオブジェクトで使用される反復子で初期化して、新しく作成された、インターフェイスを返すオブジェクト。  
   
 ```
 STDMETHOD(Clone)(Base** ppEnum);
@@ -227,7 +227,7 @@ DWORD m_dwFlags;
 ```  
   
 ##  <a name="next"></a>  CComEnumImpl::Next  
- このメソッドの実装を提供、 [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx)メソッド。  
+ このメソッドの実装を提供、**次**メソッド。  
   
 ```
 STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
@@ -247,7 +247,7 @@ STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
  標準の HRESULT 値。  
   
 ##  <a name="reset"></a>  CComEnumImpl::Reset  
- このメソッドの実装を提供、 [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx)メソッド。  
+ このメソッドの実装を提供、**リセット**メソッド。  
   
 ```
 STDMETHOD(Reset)(void);
@@ -257,7 +257,7 @@ STDMETHOD(Reset)(void);
  標準の HRESULT 値。  
   
 ##  <a name="skip"></a>  より  
- このメソッドの実装を提供、 [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx)メソッド。  
+ このメソッドの実装を提供、**スキップ**メソッド。  
   
 ```
 STDMETHOD(Skip)(ULONG celt);

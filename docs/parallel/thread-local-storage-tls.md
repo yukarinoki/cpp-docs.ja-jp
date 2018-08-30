@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43abbae434c21557a83463e1691e344123a940db
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: e5720fcbc5c52936a0e29c2ccf0847309636b5f2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43132077"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211858"
 ---
 # <a name="thread-local-storage-tls"></a>スレッド ローカル ストレージ (TLS: Thread Local Storage)
 スレッド ローカル ストレージ (TLS) は、指定されたマルチスレッド プロセスの各スレッドが、スレッド固有のデータを格納する場所を割り当てるための手段です。 TLS API を使用してバインド (実行時に) スレッド固有のデータが動的にサポートされている ([TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)します。  Win32 および Visual C コンパイラでは、現在、既存の API の実装に加えて、(読み込み時に) スレッドごとに静的にバインドされるデータをサポートしています。  
@@ -113,7 +113,7 @@ __declspec( thread ) int tls_i = 1;
   
      スレッド ローカル ストレージ機能は将来拡張される可能性があるため、C++ ではこのようにスレッド データを動的に初期化することが許可されていません。  
   
-- Windows Vista では前に、の Windows オペレーティング システムで`__declspec`(スレッド) がいくつかの制限。 DLL で任意のデータまたはオブジェクトを `__declspec`( thread ) として宣言した場合、動的に読み込まれたときに保護違反が発生する可能性があります。 によって、DLL が読み込まれた後[LoadLibrary](http://msdn.microsoft.com/library/windows/desktop/ms684175)、コードで参照されるたびにシステム エラーが発生、 `__declspec`(thread) データ。 スレッドのグローバル変数領域は実行時に割り当てられるため、この領域のサイズは、アプリケーションの要件および静的にリンクされているすべての DLL の要件に基づいて計算されます。 `LoadLibrary` を使用すると、`__declspec`( thread ) を使用して宣言されたスレッド ローカル変数用にこの領域を拡張することはできません。 TLS の Api を使用して[TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801)、TLS の割り当てに DLL が読み込まれることが場合に、DLL で`LoadLibrary`します。  
+- Windows Vista では前に、の Windows オペレーティング システムで`__declspec`(スレッド) がいくつかの制限。 DLL で任意のデータまたはオブジェクトを `__declspec`( thread ) として宣言した場合、動的に読み込まれたときに保護違反が発生する可能性があります。 によって、DLL が読み込まれた後[LoadLibrary](https://msdn.microsoft.com/library/windows/desktop/ms684175)、コードで参照されるたびにシステム エラーが発生、 `__declspec`(thread) データ。 スレッドのグローバル変数領域は実行時に割り当てられるため、この領域のサイズは、アプリケーションの要件および静的にリンクされているすべての DLL の要件に基づいて計算されます。 `LoadLibrary` を使用すると、`__declspec`( thread ) を使用して宣言されたスレッド ローカル変数用にこの領域を拡張することはできません。 TLS の Api を使用して[TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)、TLS の割り当てに DLL が読み込まれることが場合に、DLL で`LoadLibrary`します。  
   
 ## <a name="see-also"></a>関連項目  
  

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9df970022ccc4f358864c3e3462ffea2b373cd00
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: fd4aadf875e16586286c97aa5bffe82d6faed31e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42541462"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222304"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA 構造体
 `AFX_GLOBAL_DATA` 構造体は、フレームワークを管理するため、またはアプリケーションの外観および動作をカスタマイズするために使用されるフィールドおよびメソッドを格納します。  
@@ -64,13 +64,13 @@ struct AFX_GLOBAL_DATA
 |[AFX_GLOBAL_DATA::IsD2DInitialized](#isd2dinitialized)|`D2D`、 `DirectWrite`、および `WIC` の各ファクトリを初期化します。 このメソッドは、メイン ウィンドウが初期化される前に呼び出します。|  
 |[AFX_GLOBAL_DATA::Is32BitIcons](#is32biticons)|定義済みの 32 ビット アイコンがサポートされているかどうかを示します。|  
 |[AFX_GLOBAL_DATA::IsD2DInitialized](#isd2dinitialized)|`D2D` が初期化されているかどうかを調べます。|  
-|[AFX_GLOBAL_DATA::IsDwmCompositionEnabled](#isdwmcompositionenabled)|Windows の [DwmIsCompositionEnabled](http://msdn.microsoft.com/library/windows/desktop/aa969518) のメソッドを簡単な方法で呼び出すことができます。|  
+|[AFX_GLOBAL_DATA::IsDwmCompositionEnabled](#isdwmcompositionenabled)|Windows を呼び出す簡単な方法を提供します。 [DwmIsCompositionEnabled](/windows/desktop/api/dwmapi/nf-dwmapi-dwmiscompositionenabled)メソッド。|  
 |[AFX_GLOBAL_DATA::IsHighContrastMode](#ishighcontrastmode)|イメージが現在、ハイ コントラストで表示されているかどうかを判定します。|  
 |[AFX_GLOBAL_DATA::OnSettingChange](#onsettingchange)|デスクトップのメニュー アニメーションとタスクバーの自動非表示機能の現在の状態を検出します。|  
 |[AFX_GLOBAL_DATA::RegisterWindowClass](#registerwindowclass)|指定された MFC ウィンドウ クラスを登録します。|  
 |[AFX_GLOBAL_DATA::ReleaseTaskBarRefs](#releasetaskbarrefs)|GetITaskbarList メソッドおよび GetITaskbarList3 メソッドを通じて取得されたインターフェイスを解放します。|  
 |[AFX_GLOBAL_DATA::Resume](#resume)|Windows をサポートするメソッドにアクセスする内部関数ポインターを再初期化[テーマと視覚スタイル](/windows/desktop/Controls/visual-styles-overview)します。|  
-|[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|Windows の [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540) メソッドを簡単な方法で呼び出すことができます。|  
+|[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|Windows を呼び出す簡単な方法を提供します。 [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540)メソッド。|  
 |[AFX_GLOBAL_DATA::SetMenuFont](#setmenufont)|指定された論理フォントを作成します。|  
 |[AFX_GLOBAL_DATA::ShellCreateItemFromParsingName](#shellcreateitemfromparsingname)|解析名からシェル項目オブジェクトを作成して初期化します。|  
 |[AFX_GLOBAL_DATA::UpdateFonts](#updatefonts)|フレームワークにより使用される論理フォントを再初期化します。|  
@@ -205,16 +205,16 @@ BOOL DrawTextOnGlass(
  [in]*hTheme*  
  ウィンドウのテーマ データへのハンドル、または NULL。 フレームワークは、このパラメーターが NULL でないテーマがサポートされている場合、テキストを描画するために、指定されたテーマを使用します。 それ以外の場合、フレームワークは、テーマを使用せずにテキストを描画します。  
   
- 使用して、 [OpenThemeData](http://msdn.microsoft.com/library/windows/desktop/bb759821) HTHEME を作成します。  
+ 使用して、 [OpenThemeData](/windows/desktop/api/uxtheme/nf-uxtheme-openthemedata) HTHEME を作成します。  
   
  [in]*pDC*  
  デバイス コンテキストへのポインター。  
   
  [in]*iPartId*  
- 目的のテキストの外観を備えたコントロールのパーツ。 詳細については、「 [Parts and States (パーツと状態)](http://msdn.microsoft.com/library/windows/desktop/bb773210)」の表の「Parts (パーツ)」列を参照してください。 この値が 0 の場合、テキストは既定のフォント、またはデバイス コンテキストに選択されているフォントで描画されます。  
+ 目的のテキストの外観を備えたコントロールのパーツ。 詳細については、テーブルの部分列を参照してください。[パーツと状態](https://msdn.microsoft.com/library/windows/desktop/bb773210)します。 この値が 0 の場合、テキストは既定のフォント、またはデバイス コンテキストに選択されているフォントで描画されます。  
   
  [in]*iStateId*  
- 目的のテキストの外観を備えたコントロールの状態。 詳細については、「 [Parts and States (パーツと状態)](http://msdn.microsoft.com/library/windows/desktop/bb773210)」の表の「States (状態)」列を参照してください。  
+ 目的のテキストの外観を備えたコントロールの状態。 詳細については、テーブルの状態列を参照してください。[パーツと状態](https://msdn.microsoft.com/library/windows/desktop/bb773210)します。  
   
  [in]*strText*  
  描画するテキスト。  
@@ -225,7 +225,7 @@ BOOL DrawTextOnGlass(
  [in]*dwFlags*  
  指定されたテキストの描画方法を指定するフラグのビットごとの組み合わせ (OR)。  
   
- 場合、 *hTheme*パラメーターが`NULL`テーマがサポートされており、有効になっていないか、*フォーマット*のパラメーター、 [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)メソッドが有効なについて説明しますフラグ。 テーマがサポートされている場合、 *dwFlags*のパラメーター、 [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317)メソッドが有効なフラグについて説明します。  
+ 場合、 *hTheme*パラメーターが`NULL`テーマがサポートされており、有効になっていないか、*フォーマット*のパラメーター、 [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)メソッドが有効なについて説明しますフラグ。 テーマがサポートされている場合、 *dwFlags*のパラメーター、 [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)メソッドが有効なフラグについて説明します。  
   
  [in]*nGlowSize*  
  指定されたテキストを描画する前に背景に描画される光彩効果のサイズ。 既定値は 0 です。  
@@ -237,16 +237,16 @@ BOOL DrawTextOnGlass(
  テーマは、指定したテキストを描画するために使用する場合は TRUE。それ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
- テーマは、アプリケーションの視覚スタイルを定義します。 場合、テキストの描画にテーマが使用できません、 *hTheme*パラメーターが null の場合、または、 [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317)メソッドがサポートされていません場合[デスクトップ ウィンドウ マネージャー](http://msdn.microsoft.com/library/windows/desktop/aa969540) (DWM) の構成無効です。  
+ テーマは、アプリケーションの視覚スタイルを定義します。 場合、テキストの描画にテーマが使用できません、 *hTheme*パラメーターが null の場合、または、 [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)メソッドがサポートされていません場合[デスクトップ ウィンドウ マネージャー](/windows/desktop/dwm/dwm-overview) (DWM) の構成無効です。  
   
 ### <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
- [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
- [パーツと状態](http://msdn.microsoft.com/library/windows/desktop/bb773210)   
+ [COLORREF](/windows/desktop/gdi/colorref)   
+ [パーツと状態](https://msdn.microsoft.com/library/windows/desktop/bb773210)   
  [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)   
- [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317)   
- [デスクトップ ウィンドウ マネージャー](http://msdn.microsoft.com/library/windows/desktop/aa969540)   
- [DWM 合成を有効化と制御](http://msdn.microsoft.com/library/windows/desktop/aa969538)
+ [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)   
+ [デスクトップ ウィンドウ マネージャー](/windows/desktop/dwm/dwm-overview)   
+ [DWM 合成を有効化と制御](/windows/desktop/dwm/composition-ovw)
 
 ## <a name="enableaccessibilitysupport"></a> AFX_GLOBAL_DATA::EnableAccessibilitySupport
 Microsoft Active Accessibility のサポートを有効または無効にします。  
@@ -323,19 +323,19 @@ COLORREF GetColor(int nColor);
   
 ### <a name="parameters"></a>パラメーター   
  [in]*nColor*  
- 色を取得、ユーザー インターフェイス要素を指定する値。 有効な値の一覧は、次を参照してください。、 *nIndex*のパラメーター、 [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)メソッド。  
+ 色を取得、ユーザー インターフェイス要素を指定する値。 有効な値の一覧は、次を参照してください。、 *nIndex*のパラメーター、 [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)メソッド。  
   
 ### <a name="return-value"></a>戻り値  
  指定されたユーザー インターフェイス要素の RGB カラー値。 詳細については、「解説」を参照してください。  
   
 ### <a name="remarks"></a>Remarks  
- 場合、 *nColor*パラメーターが範囲外には、戻り値は 0。 0 は有効な RGB 値でもあるので、システム カラーが現在のオペレーティング システムでサポートされているかどうかを判断するのにこのメソッドを使用できません。 代わりに、使用、 [GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927)メソッドで、色がサポートされていない場合は NULL を返します。  
+ 場合、 *nColor*パラメーターが範囲外には、戻り値は 0。 0 は有効な RGB 値でもあるので、システム カラーが現在のオペレーティング システムでサポートされているかどうかを判断するのにこのメソッドを使用できません。 代わりに、使用、 [GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush)メソッドで、色がサポートされていない場合は NULL を返します。  
   
 ### <a name="see-also"></a>関連項目  
 
- [GetSysColor 関数](http://msdn.microsoft.com/library/windows/desktop/ms724371)   
- [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
- [GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927)
+ [GetSysColor 関数](https://msdn.microsoft.com/library/windows/desktop/ms724371)   
+ [COLORREF](/windows/desktop/gdi/colorref)   
+ [GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush)
 
 ## <a name="getdirect2dfactory"></a> AFX_GLOBAL_DATA::GetDirect2dFactory
  グローバル データに格納されている ID2D1Factory インターフェイスへのポインターを返します。 インターフェイスが初期化されていない場合は、既定のパラメーターでインターフェイスが作成されます。  
@@ -369,14 +369,14 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
   
 ### <a name="parameters"></a>パラメーター   
  [入力、出力]*情報*  
- A [NONCLIENTMETRICS](http://msdn.microsoft.com/library/windows/desktop/ff729175)最小化されていないウィンドウの非クライアント領域に関連付けられているスケーラブルなメトリックを含む構造体。  
+ A [NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175)最小化されていないウィンドウの非クライアント領域に関連付けられているスケーラブルなメトリックを含む構造体。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
  
   
 ### <a name="see-also"></a>関連項目   
- [NONCLIENTMETRICS 構造体](http://msdn.microsoft.com/library/windows/desktop/ff729175)
+ [NONCLIENTMETRICS 構造体](https://msdn.microsoft.com/library/windows/desktop/ff729175)
 
 ## <a name="gettextheight"></a> AFX_GLOBAL_DATA::GetTextHeight
  現在のフォントのテキスト文字の高さを取得します。  
@@ -483,7 +483,7 @@ BOOL IsD2DInitialized() const;
  D2D の初期化された場合は TRUE。それ以外の場合は FALSE です。  
   
 ## <a name="isdwmcompositionenabled"></a> AFX_GLOBAL_DATA::IsDwmCompositionEnabled
-Windows の [DwmIsCompositionEnabled](http://msdn.microsoft.com/library/windows/desktop/aa969518) のメソッドを簡単な方法で呼び出すことができます。  
+Windows を呼び出す簡単な方法を提供します。 [DwmIsCompositionEnabled](/windows/desktop/api/dwmapi/nf-dwmapi-dwmiscompositionenabled)メソッド。  
   
   
 ```  
@@ -491,11 +491,11 @@ BOOL IsDwmCompositionEnabled();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- TRUE の場合[デスクトップ ウィンドウ マネージャー](http://msdn.microsoft.com/library/windows/desktop/aa969540) (DWM) コンポジションを有効になっている、それ以外は FALSE。  
+ TRUE の場合[デスクトップ ウィンドウ マネージャー](/windows/desktop/dwm/dwm-overview) (DWM) コンポジションを有効になっている、それ以外は FALSE。  
   
 ### <a name="see-also"></a>関連項目    
- [デスクトップ ウィンドウ マネージャー](http://msdn.microsoft.com/library/windows/desktop/aa969540)   
- [DWM 合成を有効化と制御](http://msdn.microsoft.com/library/windows/desktop/aa969538)
+ [デスクトップ ウィンドウ マネージャー](/windows/desktop/dwm/dwm-overview)   
+ [DWM 合成を有効化と制御](/windows/desktop/dwm/composition-ovw)
 
 ## <a name="ishighcontrastmode"></a> AFX_GLOBAL_DATA::IsHighContrastMode
  イメージが現在、ハイ コントラストで表示されているかどうかを判定します。    
@@ -649,7 +649,7 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
  登録ウィンドウ クラスの名前。  
   
 ### <a name="return-value"></a>戻り値  
- このメソッドが成功した場合は、登録されているクラスの修飾名それ以外の場合、[リソース例外](http://msdn.microsoft.com/library/ddd99292-819b-4fa4-8371-b1954ed5856d)します。  
+ このメソッドが成功した場合は、登録されているクラスの修飾名それ以外の場合、[リソース例外](https://msdn.microsoft.com/library/ddd99292-819b-4fa4-8371-b1954ed5856d)します。  
   
 ### <a name="remarks"></a>Remarks  
  戻り値はコロン区切りの一覧、 *lpszClassNamePrefix*パラメーター文字列、および現在のアプリケーション インスタンスのハンドルの 16 進数のテキスト表現の矢印は、アプリケーションのカーソル識別子を持つ IDC_ARROW; は、カーソル背景のブラシ。 MFC ウィンドウ クラスの登録の詳細については、次を参照してください。 [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)します。  
@@ -670,10 +670,10 @@ BOOL Resume();
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。 デバッグ モードでは、このメソッドは、このメソッドが成功したかどうかをアサートします。  
   
 ### <a name="remarks"></a>Remarks  
- フレームワークが受信すると、このメソッドが呼び出されます、 [WM_POWERBROADCAST](http://msdn.microsoft.com/library/windows/desktop/aa373247)メッセージ。  
+ フレームワークが受信すると、このメソッドが呼び出されます、 [WM_POWERBROADCAST](/windows/desktop/Power/wm-powerbroadcast)メッセージ。  
   
 ## <a name="setlayeredattrib"></a> AFX_GLOBAL_DATA::SetLayeredAttrib
-Windows の [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540) メソッドを簡単な方法で呼び出すことができます。  
+Windows を呼び出す簡単な方法を提供します。 [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540)メソッド。  
   
   
 ```  
@@ -689,7 +689,7 @@ BOOL SetLayeredAttrib(
  レイヤード ウィンドウへのハンドルします。  
   
  [in]*crKey*  
- 透過色キーを[デスクトップ ウィンドウ マネージャー](http://msdn.microsoft.com/library/windows/desktop/aa969540)レイヤード ウィンドウの作成に使用します。  
+ 透過色キーを[デスクトップ ウィンドウ マネージャー](/windows/desktop/dwm/dwm-overview)レイヤード ウィンドウの作成に使用します。  
   
  [in]*bAlpha*  
  レイヤード ウィンドウの不透明度を記述するために使用するアルファ値。  
@@ -701,8 +701,8 @@ BOOL SetLayeredAttrib(
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。   
  
 ### <a name="see-also"></a>関連項目   
- [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
- [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540)
+ [COLORREF](/windows/desktop/gdi/colorref)   
+ [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540)
 
 ## <a name="setmenufont"></a> AFX_GLOBAL_DATA::SetMenuFont
 指定された論理フォントを作成します。  

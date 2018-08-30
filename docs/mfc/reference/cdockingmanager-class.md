@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87fcaf93823e504f3631d50de4f981ae30e882e9
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: e61b6a9b967cc62bf8ba028783a019b8ecda7878
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027827"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200271"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager クラス
 メイン フレーム ウィンドウのドッキング レイアウトを制御するコア機能を実装します。  
@@ -307,7 +307,7 @@ class CDockingManager : public CObject
   
  [CDockingManager](../../mfc/reference/cdockingmanager-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxDockingManager.h  
   
 ##  <a name="adddocksite"></a>  CDockingManager::AddDockSite  
@@ -379,7 +379,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
   
 ### <a name="parameters"></a>パラメーター  
  [in]*hdwp*  
- 遅延のウィンドウの位置の構造体を指定します。 詳細については、「 [Windows のデータ型](http://msdn.microsoft.com/library/windows/desktop/aa383751)」を参照してください。  
+ 遅延のウィンドウの位置の構造体を指定します。 詳細については、次を参照してください。[データ型の Windows](/windows/desktop/WinProg/windows-data-types)します。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -924,7 +924,7 @@ CSmartDockingManager* GetSmartDockingManager();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ポインター、[スマート ドッキング マネージャー](http://msdn.microsoft.com/f537a1a6-fb9e-41d7-952f-0f25d5ee7534)します。  
+ ポインター、[スマート ドッキング マネージャー](https://msdn.microsoft.com/f537a1a6-fb9e-41d7-952f-0f25d5ee7534)します。  
   
 ##  <a name="getsmartdockingmanagerpermanent"></a>  CDockingManager::GetSmartDockingManagerPermanent  
  スマート ドッキング マネージャーへのポインターを取得します。  

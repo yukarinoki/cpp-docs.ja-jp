@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b889a0d9be1942d2d381b0c6a85236c94f4e6ebf
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c02db557f877f43f39286856de02d68b87959fee
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965472"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210433"
 ---
 # <a name="hashmultiset-class"></a>hash_multiset クラス
 
@@ -119,11 +119,14 @@ class hash_multiset
 
 ### <a name="parameters"></a>パラメーター
 
-*キー* hash_multiset に格納される要素のデータを入力します。
+*Key*<br/>
+ hash_multiset に格納する要素のデータ型。
 
-*Traits*クラスの 1 つ、2 つの関数オブジェクトを含む型は、相対的な順序と、ハッシュ関数は、単項述語のマッピングのキーの値を決定する並べ替えキーとして 2 つの要素の値を比較することは二項述語で比較されている、要素型の符号なし整数に`size_t`します。 この引数は省略可能で、および`hash_compare`*< キー、* **小***\<キー> >* 既定値です。
+*Traits*<br/>
+ 2 つの関数オブジェクトを含む型、クラスのいずれかの比較は、相対的な順序と符号なしの要素の単項述語のマッピングのキー値であるハッシュ関数を決定する並べ替えキーとして 2 つの要素の値を比較することは二項述語型の整数`size_t`します。 この引数は省略可能であり、既定値は `hash_compare<Key, less<Key> >` です。
 
-*アロケーター* hash_multiset の割り当てとメモリの解放に関する詳細をカプセル化する格納されたアロケーター オブジェクトを表す型です。 この引数は省略可能であり、既定値は **アロケーター***\<キー>。*
+*アロケーター*<br/>
+ hash_multiset のメモリの割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値は `allocator<Key>` です。
 
 ## <a name="remarks"></a>Remarks
 
@@ -145,7 +148,7 @@ hash_multiset は次のとおりです。
 
 値とキーを関連付ける条件をアプリケーションが満たしている場合、hash_multiset は最適な連想コンテナーとなっている必要があります。 hash_multiset の要素は複数の場合があり、それ自体の並べ替えキーとして機能する場合があるため、キーは一意ではありません。 この種類の構造体のモデルは、単語が複数回出現する可能性がある単語の順序付きのリストです。 単語が複数回出現することが許可されていない場合は、hash_set が適切なコンテナー構造体です。 一意の定義が値として一意のキーワードのリストにアタッチされている場合は、hash_map がこのデータを格納するのに適切な構造体です。 定義が一意でない場合は、hash_multimap が最適なコンテナーです。
 
-hash_multimap は、格納されているハッシュ特徴 (traits) オブジェクト ([value_compare 型](#value_compare)) を呼び出すことによって、制御するシーケンスを並べ替えます。 格納されているこのオブジェクトには、メンバー関数 [key_comp](#key_comp) を呼び出すことによってアクセスできます。 このような関数オブジェクトはクラスのオブジェクトと同様に動作する必要があります`hash_compare`*<キー、* **小***\<キー> >です。* 具体的には、すべての値の*キー*型の`Key`、呼び出し**特徴**(*キー*) 型の値の分布を生成`size_t`します。
+hash_multimap は、格納されているハッシュ特徴 (traits) オブジェクト ([value_compare 型](#value_compare)) を呼び出すことによって、制御するシーケンスを並べ替えます。 格納されているこのオブジェクトには、メンバー関数 [key_comp](#key_comp) を呼び出すことによってアクセスできます。 このような関数オブジェクトはクラスのオブジェクトと同様に動作する必要があります`hash_compare<Key, less<Key> >`します。 具体的には、すべての値の*キー*型の`Key`、呼び出し`Trait(Key)`型の値の分布を生成`size_t`します。
 
 通常、要素は、この順序を確立するために小なり比較だけを実行できる必要があります。これにより、2 つの要素が指定されたときに、それらの要素が等しいか (どちらか一方が小さくはない)、または一方が他方より小さいかを判断できます。 この結果、等価でない複数の要素間で順序が付けられます。 テクニカル ノートでは、比較関数は、数学上の標準的な意味で厳密弱順序を発生させる二項述語であると示されています。 二項述語 *f*( *x*, *y*) は、2 つの引数オブジェクト (x および y) と戻り値 (true または false) を持つ関数オブジェクトです。 hash_multiset に適用される順序付けは、二項述語が非再帰、反対称、推移的であり、等価性が推移的である (2 つのオブジェクト (x と y) が、*f*( *x*,*y*) と *f*( *y*, *x*) の両方が false の場合に等価になるように定義されている) 場合、厳密弱順序になります。 2 つのキーの等値に関する条件が等価性の条件よりも厳しく、優先される場合、順序付けは完全な順序付け (すべての要素が相互の値に基づいて並べ替えられる) となり、一致するそれぞれのキーを識別するのが難しくなります。
 
@@ -215,7 +218,7 @@ hash_multiset クラスに用意されている反復子は双方向反復子で
 |-|-|
 |[hash_multiset::operator=](#op_eq)|hash_multiset の要素を、別の hash_multiset のコピーで置き換えます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<hash_set>
 
@@ -551,7 +554,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*照合される hash_multiset の要素のキー。
+*key*<br/>
+ 照合される hash_multiset の要素のキー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1017,7 +1021,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*検索対象の hash_multiset の要素の並べ替えキーと比較される引数キー。
+*key*<br/>
+ 検索対象の hash_multiset 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1105,13 +1110,17 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Where* hash_multiset から削除する要素の位置。
+*_Where*<br/>
+ hash_multiset から削除する要素の位置。
 
-*最初*hash_multiset から削除する最初の要素の位置。
+*first*<br/>
+ hash_multiset から削除する最初の要素の位置。
 
-*最後*hash_multiset から削除する最後の要素の次の位置。
+*last*<br/>
+ hash_multiset から削除する最後の要素の次の位置。
 
-*キー* hash_multiset から削除する要素のキー。
+*key*<br/>
+ hash_multiset から削除する要素のキー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1222,7 +1231,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*検索対象の hash_multiset の要素の並べ替えキーによって照合される引数キー。
+*key*<br/>
+ 検索対象の hash_multiset 内の要素の並べ替えキーによって照合される引数キー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1656,7 +1666,8 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*検索対象の hash_multiset の要素の並べ替えキーと比較される引数キー。
+*key*<br/>
+ 検索対象の hash_multiset 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2138,7 +2149,8 @@ void swap(hash_multiset& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*をターゲットの hash_multiset と交換する要素を提供する引数の hash_multiset。
+*right*<br/>
+ ターゲットの hash_multiset と交換する要素を提供する引数の hash_multiset。
 
 ### <a name="remarks"></a>Remarks
 
@@ -2213,7 +2225,8 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*検索対象の hash_multiset の要素の並べ替えキーと比較される引数キー。
+*key*<br/>
+ 検索対象の hash_multiset 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
 

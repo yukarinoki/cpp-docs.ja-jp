@@ -64,12 +64,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8217ee5bdcad15a2c0b89f95000360b979e094ea
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 3443c85ce7f3f12e334e074e1ce37c9cab2ce9d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883620"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213615"
 ---
 # <a name="cimage-class"></a>CImage クラス
 `CImage` 読み込み、JPEG、GIF、BMP、およびポータブル ネットワーク グラフィックス (PNG) 形式で画像を保存する機能など、ビットマップの拡張サポートを提供します。  
@@ -205,7 +205,7 @@ void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 >   
 >  同様に、含める必要がある`atlimage.h`インクルードする前に`atlimpl.cpp`します。 簡単にこれを実現するには含める`atlimage.h`で、`stdafx.h`します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlimage.h  
   
 ##  <a name="alphablend"></a>  CImage::AlphaBlend  
@@ -263,7 +263,7 @@ BOOL AlphaBlend(
  アルファ ブレンドのソースとコピー先ビットマップ、グローバルのアルファ値全体の元のビットマップと元のビットマップの書式情報に適用する関数。 ソースと宛先の blend 関数は、ビットマップに制限されています。  
   
  *pointDest*  
- 参照を[ポイント](http://msdn.microsoft.com/library/windows/desktop/dd162805)論理単位で、先の四角形の左上隅を識別する構造体。  
+ 参照を[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)論理単位で、先の四角形の左上隅を識別する構造体。  
   
  *nDestWidth*  
  論理ユニットは、先の四角形の幅。  
@@ -284,7 +284,7 @@ BOOL AlphaBlend(
  論理ユニットは、元の四角形の高さ。  
   
  *rectDest*  
- 参照を[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)構造体、変換先を識別します。  
+ 参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体、変換先を識別します。  
   
  *rectSrc*  
  参照を`RECT`構造体、ソースを特定します。  
@@ -363,10 +363,10 @@ BOOL BitBlt(
  先の四角形の左上隅の論理 y 座標。  
   
  *dwROP*  
- 実行するラスター操作。 ラスター オペレーション コードは、変換先を形成するソース、変換先、およびパターンのビット (現在選択されているブラシによって定義される) とを組み合わせる方法を定義します。 参照してください[BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370)他ラスター オペレーション コードとその説明の一覧については、Windows sdk。  
+ 実行するラスター操作。 ラスター オペレーション コードは、変換先を形成するソース、変換先、およびパターンのビット (現在選択されているブラシによって定義される) とを組み合わせる方法を定義します。 参照してください[BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt)他ラスター オペレーション コードとその説明の一覧については、Windows sdk。  
   
  *pointDest*  
- A[ポイント](http://msdn.microsoft.com/library/windows/desktop/dd162805)先の四角形の左上隅を示す構造体。  
+ A[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)先の四角形の左上隅を示す構造体。  
   
  *nDestWidth*  
  論理ユニットは、先の四角形の幅。  
@@ -381,7 +381,7 @@ BOOL BitBlt(
  元の四角形の左上隅の論理 y 座標。  
   
  *rectDest*  
- A [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)先の四角形を示す構造体。  
+ A [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)先の四角形を示す構造体。  
   
  *pointSrc*  
  A`POINT`ソース四角形の左上隅を示す構造体。  
@@ -390,7 +390,7 @@ BOOL BitBlt(
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) Windows SDK に含まれています。  
   
 ##  <a name="cimage"></a>  CImage::CImage  
  `CImage` オブジェクトを構築します。  
@@ -469,7 +469,7 @@ BOOL CreateEx(
 - BI_BITFIELDS 形式が圧縮されていないと、各ピクセルの赤、緑、および青のコンポーネントをそれぞれ指定する 3 つの DWORD 色マスクのカラー テーブルで構成されます。 これは、16、32 bpp のビットマップを使用すると有効です。  
   
  *pdwBitfields*  
- 場合にのみ使用*eCompression*設定に BI_BITFIELDS、それ以外の場合があります NULL。 各ピクセルのビットが、色の赤、緑、および青のコンポーネントをそれぞれ使用されますを指定する、3 つの DWORD ビットマスクの配列へのポインター。 ビット フィールドの制限については、次を参照してください。 [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) Windows SDK に含まれています。  
+ 場合にのみ使用*eCompression*設定に BI_BITFIELDS、それ以外の場合があります NULL。 各ピクセルのビットが、色の赤、緑、および青のコンポーネントをそれぞれ使用されますを指定する、3 つの DWORD ビットマスクの配列へのポインター。 ビット フィールドの制限については、次を参照してください。 [BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) Windows SDK に含まれています。  
   
  *dwFlags*  
  Bitmap オブジェクトがアルファ チャネルを持つかどうかを指定します。 次の値の 0 個以上の組み合わせになります。  
@@ -578,13 +578,13 @@ BOOL Draw(
  論理ユニットは、元の四角形の高さ。  
   
  *rectDest*  
- 参照を[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)構造体、変換先を識別します。  
+ 参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体、変換先を識別します。  
   
  *rectSrc*  
  参照を`RECT`構造体、ソースを特定します。  
   
  *pointDest*  
- 参照を[ポイント](http://msdn.microsoft.com/library/windows/desktop/dd162805)論理単位で、先の四角形の左上隅を識別する構造体。  
+ 参照を[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)論理単位で、先の四角形の左上隅を識別する構造体。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -623,7 +623,7 @@ int GetBPP() const throw();
 ### <a name="remarks"></a>Remarks  
  この値は、各ピクセルを定義するビットの数と、ビットマップの色の最大数を決定します。  
   
- 1、4、8、16、24、または 32 ビット/ピクセルは通常は。 参照してください、`biBitCount`のメンバー [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376)この値の詳細については、Windows SDK に含まれています。  
+ 1、4、8、16、24、または 32 ビット/ピクセルは通常は。 参照してください、`biBitCount`のメンバー [BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376)この値の詳細については、Windows SDK に含まれています。  
   
 ##  <a name="getcolortable"></a>  CImage::GetColorTable  
  DIB セクションのパレット内のエントリの範囲から赤、緑、青 (RGB) の色の値を取得します。  
@@ -642,7 +642,7 @@ void GetColorTable(UINT iFirstColor,
  取得するカラー テーブル エントリの数。  
   
  *prgbColors*  
- 配列へのポインター [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938)構造体の色を取得するテーブルのエントリ。  
+ 配列へのポインター [RGBQUAD](/windows/desktop/api/wingdi/ns-wingdi-tagrgbquad)構造体の色を取得するテーブルのエントリ。  
   
 ##  <a name="getdc"></a>  CImage::GetDC  
  現在選択されているイメージを保持しているデバイス コンテキストを取得します。  
@@ -1179,10 +1179,10 @@ BOOL PlgBlt(
  モノクロのビットマップの左上隅の y 座標。  
   
  *rectSrc*  
- 参照を[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)ソース四角形の座標を指定する構造体。  
+ 参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)ソース四角形の座標を指定する構造体。  
   
  *pointMask*  
- A[ポイント](http://msdn.microsoft.com/library/windows/desktop/dd162805)マスク ビットマップの左上隅を示す構造体。  
+ A[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)マスク ビットマップの左上隅を示す構造体。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、0 以外。 それ以外の場合に 0 です。  
@@ -1190,7 +1190,7 @@ BOOL PlgBlt(
 ### <a name="remarks"></a>Remarks  
  場合*hbmMask*モノクロのビットマップが有効な`PlgBit`このビットマップを使用して、元の四角形の色データのビット マスクします。  
   
- このメソッドは、Windows NT では、バージョン 4.0 以降のみに適用されます。 参照してください[PlgBlt](http://msdn.microsoft.com/library/windows/desktop/dd162804)より詳細な情報の Windows SDK に含まれています。  
+ このメソッドは、Windows NT では、バージョン 4.0 以降のみに適用されます。 参照してください[PlgBlt](/windows/desktop/api/wingdi/nf-wingdi-plgblt)より詳細な情報の Windows SDK に含まれています。  
   
 ##  <a name="releasedc"></a>  CImage::ReleaseDC  
  デバイス コンテキストを解放します。  
@@ -1268,7 +1268,7 @@ void SetColorTable(
  設定するカラー テーブル エントリの数。  
   
  *prgbColors*  
- 配列へのポインター [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938)テーブル エントリの色を設定する構造体。  
+ 配列へのポインター [RGBQUAD](/windows/desktop/api/wingdi/ns-wingdi-tagrgbquad)テーブル エントリの色を設定する構造体。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、DIB セクション ビットマップのみをサポートします。  
@@ -1408,10 +1408,10 @@ BOOL StretchBlt(
  論理ユニットは、先の四角形の高さ。  
   
  *dwROP*  
- 実行するラスター操作。 ラスター オペレーション コードは、変換先を形成するソース、変換先、およびパターンのビット (現在選択されているブラシによって定義される) とを組み合わせる方法を定義します。 参照してください[BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370)他ラスター オペレーション コードとその説明の一覧については、Windows sdk。  
+ 実行するラスター操作。 ラスター オペレーション コードは、変換先を形成するソース、変換先、およびパターンのビット (現在選択されているブラシによって定義される) とを組み合わせる方法を定義します。 参照してください[BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt)他ラスター オペレーション コードとその説明の一覧については、Windows sdk。  
   
  *rectDest*  
- 参照を[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)構造体、変換先を識別します。  
+ 参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体、変換先を識別します。  
   
  *xSrc*  
  X 座標、元の四角形の左上隅の論理単位で。  
@@ -1432,7 +1432,7 @@ BOOL StretchBlt(
  成功した場合、0 以外。 それ以外の場合に 0 です。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [StretchBlt](http://msdn.microsoft.com/library/windows/desktop/dd145120) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [StretchBlt](/windows/desktop/api/wingdi/nf-wingdi-stretchblt) Windows SDK に含まれています。  
   
 ##  <a name="transparentblt"></a>  CImage::TransparentBlt  
  現在のデバイス コンテキストを元のデバイス コンテキストからビットマップをコピーします。  
@@ -1490,7 +1490,7 @@ BOOL TransparentBlt(
  透明色として処理するソース ビットマップの色。 既定では、CLR_INVALID は、現在のイメージの透明色として設定されている色を使用することを指定します。  
   
  *rectDest*  
- 参照を[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)構造体、変換先を識別します。  
+ 参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体、変換先を識別します。  
   
  *xSrc*  
  X 座標、元の四角形の左上隅の論理単位で。  
@@ -1548,10 +1548,10 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 ## <a name="see-also"></a>関連項目  
  [MMXSwarm サンプル](../../visual-cpp-samples.md)   
  [SimpleImage サンプル](../../visual-cpp-samples.md)   
- [デバイスに依存しないビットマップ](http://msdn.microsoft.com/library/windows/desktop/dd183562)   
- [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183494)   
- [ATL COM デスクトップ コンポーネント](../../atl/atl-com-desktop-components.md)[デバイスに依存しないビットマップ](http://msdn.microsoft.com/library/windows/desktop/dd183562)   
- [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183494)   
+ [デバイスに依存しないビットマップ](/windows/desktop/gdi/device-independent-bitmaps)   
+ [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)   
+ [ATL COM デスクトップ コンポーネント](../../atl/atl-com-desktop-components.md)[デバイスに依存しないビットマップ](/windows/desktop/gdi/device-independent-bitmaps)   
+ [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)   
 
 
 

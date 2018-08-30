@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a3b0e148104ff5620eddf7ac0d26693d96607d9
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 71312a1dfa70ca3fd83242f6f706654c08a4973c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025657"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217668"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Web ブラウザー形式の MFC アプリケーションの作成
 ネットワークおよびローカル ファイル システムで、Web ブラウザー スタイルのアプリケーション (HTML、アクティブなドキュメントなど)、インターネットまたはイントラネットでは、フォルダーから情報にアクセスできます。 アプリケーションのビューのクラスから派生することによって[CHtmlView](../../mfc/reference/chtmlview-class.md)、効果的に WebBrowser コントロールにビューを提供することで、Web ブラウザー アプリケーションを作成します。  
@@ -77,10 +77,10 @@ void CWebView::OnInitialUpdate()
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [MFC サンプル MFCIE](http://msdn.microsoft.com/7391aa0c-fca8-4994-a6c9-6c5c7470fba0)   
+ [MFC サンプル MFCIE](https://msdn.microsoft.com/7391aa0c-fca8-4994-a6c9-6c5c7470fba0)   
  [MFC アプリケーション ウィザード](../../mfc/reference/mfc-application-wizard.md)   
  [プロジェクトのプロパティの使用](../../ide/working-with-project-properties.md)   
  [プロパティ ページ](../../ide/property-pages-visual-cpp.md)   
  [プロジェクトのプロパティの使用](../../ide/working-with-project-properties.md)   
- [アプリケーションの配置](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [アプリケーションの配置](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
 

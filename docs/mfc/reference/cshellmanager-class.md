@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0752d278f0459c3558021d02fbcddb6ba234df53
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 35f186822e00f74552e3bf8d52950f3c4bbe5b45
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852387"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207393"
 ---
 # <a name="cshellmanager-class"></a>CShellManager クラス
 ID リストへのポインター (PIDL) を操作するためのさまざまなメソッドを実装します。  
@@ -87,7 +87,7 @@ class CShellManager : public CObject
   
  [CShellManager](../../mfc/reference/cshellmanager-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxshellmanager.h  
   
 ##  <a name="browseforfolder"></a>  CShellManager::BrowseForFolder  
@@ -117,7 +117,7 @@ BOOL BrowseForFolder(
  ダイアログ ボックスのタイトル。  
   
  [in]*ulFlags*  
- ダイアログ ボックスのオプションを指定するフラグ。 参照してください[BROWSEINFO](http://msdn.microsoft.com/library/windows/desktop/bb773205)詳細説明します。  
+ ダイアログ ボックスのオプションを指定するフラグ。 参照してください[BROWSEINFO](/windows/desktop/api/shlobj_core/ns-shlobj_core-_browseinfoa)詳細説明します。  
   
  [out]*piFolderImage*  
  メソッドが選択したフォルダーのイメージのインデックスを書き込む整数値へのポインター。  
@@ -153,7 +153,7 @@ LPITEMIDLIST ConcatenateItem(
  それ以外の場合、関数が成功した場合は、新しい項目リストへのポインターが NULL です。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、新しい作成[ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321)両方を格納するのに十分な大きさ*pidl1*と*pidl2*します。 コピーし、 *pidl1*と*pidl2*新しいリストにします。  
+ このメソッドは、新しい作成[ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-_itemidlist)両方を格納するのに十分な大きさ*pidl1*と*pidl2*します。 コピーし、 *pidl1*と*pidl2*新しいリストにします。  
   
 ##  <a name="copyitem"></a>  CShellManager::CopyItem  
  項目のリストをコピーします。  

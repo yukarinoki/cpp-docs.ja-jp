@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71cfea0f5dc62e9e7aee4ec5372464ed83bced15
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: c5a3746116679ba8cfee086b42359cce8003b282
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42541459"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198127"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>[高度な機能]\ (MFC アプリケーション ウィザード)
 このトピックでは、ヘルプや印刷サポートなど、アプリケーションの追加機能のためのオプションを示します。 各セクションで、これらの高度な機能の追加サポートを指定します。  
@@ -47,17 +47,17 @@ ms.locfileid: "42541459"
  TCP/IP ネットワークで通信するアプリケーションを作成するために使用できる Windows ソケットをサポートします。  
   
  **Active Accessibility**  
- サポートが追加されて[IAccessible](http://msdn.microsoft.com/library/windows/desktop/dd318466)に[CWnd](../../mfc/reference/cwnd-class.md)-派生クラスで、操作性が向上ユーザー補助クライアント ユーザー インターフェイスのカスタマイズに使用できます。  
+ サポートが追加されて[IAccessible](/windows/desktop/api/oleacc/nn-oleacc-iaccessible)に[CWnd](../../mfc/reference/cwnd-class.md)-派生クラスで、操作性が向上ユーザー補助クライアント ユーザー インターフェイスのカスタマイズに使用できます。  
   
  **コモン コントロール マニフェスト**  
  既定で有効になります。 Microsoft Windows XP 以降のオペレーティング システムに同梱されているコモン コントロール DLL を使用するためのアプリケーション マニフェストを生成します。  
   
  既存のアプリケーションで使用されている以前のバージョンのコモン コントロールが、Version 6 のコモン コントロール DLL によって自動的に更新されることはありません。 Version 6 のコモン コントロール DLL を使用するには、アプリケーションが DLL を読み込むことができるようにするためのアプリケーション マニフェストを作成する必要があります。 Version 6 のコモン コントロール DLL は、Windows XP のテーマもサポートしています。  
   
- また、アプリケーション マニフェストによって、アプリケーションに必要なその他の DLL やその他のバージョンも指定できます。 アプリケーション マニフェストの詳細については、次を参照してください。[分離アプリケーションとサイド バイ サイド アセンブリ](http://msdn.microsoft.com/library/dd408052)Windows SDK に含まれています。  
+ また、アプリケーション マニフェストによって、アプリケーションに必要なその他の DLL やその他のバージョンも指定できます。 アプリケーション マニフェストの詳細については、次を参照してください。[分離アプリケーションとサイド バイ サイド アセンブリ](/windows/desktop/SbsCs/isolated-applications-and-side-by-side-assemblies-portal)Windows SDK に含まれています。  
   
  **再起動マネージャーのサポート**  
- サポートが追加されて、 [Windows 再起動マネージャー](/windows/desktop/RstMgr/using-restart-manager)します。 このビデオは、MFC から再起動マネージャーを使用する方法を示します:[方法: 新しい再起動マネージャーを使用](http://msdn.microsoft.com/vstudio/ee886407)します。  
+ サポートが追加されて、 [Windows 再起動マネージャー](/windows/desktop/RstMgr/using-restart-manager)します。 このビデオは、MFC から再起動マネージャーを使用する方法を示します:[方法: 新しい再起動マネージャーを使用](https://msdn.microsoft.com/vstudio/ee886407)します。  
   
  **高度なフレーム ペイン**  
  |オプション|説明|  

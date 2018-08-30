@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb6a75fe2d973b0330c66faaae6c4daede224c5e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 25c9e21aa4b0f09db83632973d3a5046e3e2aa4a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880506"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206121"
 ---
 # <a name="ccommultithreadmodel-class"></a>CComMultiThreadModel クラス
 `CComMultiThreadModel` インクリメントおよびデクリメントの変数の値に対応するスレッド セーフなメソッドを提供します。  
@@ -69,7 +69,7 @@ class CComMultiThreadModel
   
  `CComMultiThreadModel` 3 つの定義自体**typedef**名。 `AutoCriticalSection` `CriticalSection`の取得と、クリティカル セクションの所有権を解放するメソッドを提供するクラスを参照します。 `ThreadModelNoCS` 参照クラス [CComMultiThreadModelNoCS(ccommultithreadmodelnocs-class.md) します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlbase.h  
   
 ##  <a name="autocriticalsection"></a>  CComMultiThreadModel::AutoCriticalSection  
@@ -158,7 +158,7 @@ typedef CComCriticalSection CriticalSection;
  参照してください[CComMultiThreadModel::AutoCriticalSection](#autocriticalsection)します。  
   
 ##  <a name="decrement"></a>  CComMultiThreadModel::Decrement  
- この静的関数は、Win32 関数を呼び出す[InterlockedDecrement](http://msdn.microsoft.com/library/windows/desktop/ms683580)を指す変数の値をデクリメント*p*します。  
+ この静的関数は、Win32 関数を呼び出す[InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement)を指す変数の値をデクリメント*p*します。  
   
 ```
 static ULONG WINAPI Decrement(LPLONG p) throw ();
@@ -175,7 +175,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw ();
  `InterlockedDecrement` 複数のスレッドが同時にこの変数を使用するを防ぎます。  
   
 ##  <a name="increment"></a>  CComMultiThreadModel::Increment  
- この静的関数は、Win32 関数を呼び出す[InterlockedIncrement](http://msdn.microsoft.com/library/windows/desktop/ms683614)を指す変数の値をインクリメントする*p*します。  
+ この静的関数は、Win32 関数を呼び出す[InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement)を指す変数の値をインクリメントする*p*します。  
   
 ```
 static ULONG WINAPI Increment(LPLONG p) throw ();

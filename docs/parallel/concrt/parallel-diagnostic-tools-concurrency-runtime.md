@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb41f9630e22d9067743b106aed49ea9c51ee4ae
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6243bd4167ec640553a6cb55d7d6f67319315e19
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541611"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217347"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>並列診断ツール (同時実行ランタイム)
 Visual Studio は、マルチ スレッド アプリケーションのデバッグおよびプロファイリングを広範にサポートします。  
@@ -31,7 +31,7 @@ Visual Studio は、マルチ スレッド アプリケーションのデバッ�
  プロファイリング ツールは、マルチ スレッド アプリケーションで、自体とその他のプログラムがどのように対話する方法についてのグラフィカルな表形式、数値の情報を表示する 3 つのデータ ビューを提供します。 ビューは、関心のある領域をすばやく識別するを有効にし、呼び出し履歴、グラフィック表示上のポイントから移動するサイト、およびソース コードを呼び出します。 詳細については、「[同時実行ビジュアライザー](/visualstudio/profiling/concurrency-visualizer)」を参照してください。  
   
 ## <a name="event-tracing"></a>イベントのトレース  
- 同時実行ランタイムを使用して[Windows のイベント トレース](http://msdn.microsoft.com/library/windows/desktop/bb968803)(ETW) にさまざまなイベントが発生したときに、プロファイラーなどのインストルメンテーション ツールを通知します。 これらのイベントには、並列アルゴリズムを開始または停止時にスケジューラがアクティブまたは非アクティブ化されたときに、コンテキストを開始、終了、ブロック、ブロックを解除すると、または結果とが含まれます。  
+ 同時実行ランタイムを使用して[Windows のイベント トレース](/windows/desktop/ETW/event-tracing-portal)(ETW) にさまざまなイベントが発生したときに、プロファイラーなどのインストルメンテーション ツールを通知します。 これらのイベントには、並列アルゴリズムを開始または停止時にスケジューラがアクティブまたは非アクティブ化されたときに、コンテキストを開始、終了、ブロック、ブロックを解除すると、または結果とが含まれます。  
   
  などのツール、[同時実行ビジュアライザー](/visualstudio/profiling/concurrency-visualizer)は、この機能を利用し、そのため、通常がありませんこれらのイベントを直接使用します。 ただし、これらのイベントは便利なカスタム プロファイラーを開発するときまたはなど、イベント トレース ツールを使用すると[Xperf](http://go.microsoft.com/fwlink/p/?linkid=160628)します。  
   

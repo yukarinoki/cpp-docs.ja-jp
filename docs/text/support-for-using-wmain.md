@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b82c233d1f03ae4679a355b6782bb9e7dd9dad15
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c0222856d3ba2956959913305a60ceb812f13f8d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604064"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205717"
 ---
 # <a name="support-for-using-wmain"></a>wmain の使用
 Visual C のサポートを定義する、 **wmain**関数と、Unicode アプリケーションにワイド文字引数を渡します。 仮パラメーターを宣言する**wmain**のような形式を使用して`main`します。 さらに、ワイド文字の引数と、必要であればワイド文字環境ポインターもプログラムに渡すことができます。 **wmain** の引数 `argv` と `envp` の型は `wchar_t*` です。 例えば:  
@@ -42,4 +42,4 @@ wmain( int argc, wchar_t *argv[ ], wchar_t *envp[ ] )
 ## <a name="see-also"></a>関連項目  
  [Unicode のサポート](../text/support-for-unicode.md)   
  [Unicode プログラミングの要約](../text/unicode-programming-summary.md)   
- [WinMain 関数](http://msdn.microsoft.com/library/windows/desktop/ms633559)
+ [WinMain 関数](https://msdn.microsoft.com/library/windows/desktop/ms633559)

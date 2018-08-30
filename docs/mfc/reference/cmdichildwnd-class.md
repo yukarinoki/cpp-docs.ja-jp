@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe649a3ca8ef0fb5e0091136fc9160ac89c248a1
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 4d31392a59707e5a7d072615ed7c930eaf1e14b9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338663"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207629"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd クラス
 ウィンドウ管理用のメンバーも含めて、Windows のマルチ ドキュメント インターフェイス (MDI: multiple document interface) の子ウィンドウの機能が用意されています。  
@@ -112,7 +112,7 @@ class CMDIChildWnd : public CFrameWnd
   
  `CMDIChildWnd`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="cmdichildwnd"></a>  CMDIChildWnd::CMDIChildWnd  
@@ -143,7 +143,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>パラメーター  
  *lpszClassName*  
- Windows クラスの名前を示す文字の null で終わる文字列の指す (、 [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)構造)。 クラス名が登録されている任意の名前を指定できます、 [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)グローバル関数。 標準の NULL にする必要があります`CMDIChildWnd`します。  
+ Windows クラスの名前を示す文字の null で終わる文字列の指す (、 [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576)構造)。 クラス名が登録されている任意の名前を指定できます、 [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)グローバル関数。 標準の NULL にする必要があります`CMDIChildWnd`します。  
   
  *したとき*  
  ウィンドウの名前を表す null で終わる文字列へのポインター。 タイトル バーのテキストとして使用します。  

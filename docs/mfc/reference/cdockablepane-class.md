@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2ce93a17dd2666469b8e6d56e1a106d508855f7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4b30aa51f284d216332225664d07d7692bd042a1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541814"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223066"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 ドッキング サイトにドッキングできる、またはタブ付きペインに含めることができるペインを実装します。  
@@ -213,7 +213,7 @@ class CDockablePane : public CPane
 |[CDockablePane::IsTabLocationBottom](#istablocationbottom)|タブが上部またはウィンドウの下部にあるかどうかを指定します。|  
 |[CDockablePane::IsTracked](#istracked)|ユーザーがペインにドラッグしているかどうかを指定します。|  
 |[CDockablePane::IsVisible](#isvisible)|現在のウィンドウが表示されるかどうかを判断します。|  
-|[Cdockablepane::loadstate](http://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917)|内部的に使用します。|  
+|[Cdockablepane::loadstate](https://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917)|内部的に使用します。|  
 |[CDockablePane::OnAfterChangeParent](#onafterchangeparent)|ウィンドウの親が変更されたときに、フレームワークによって呼び出されます。 (上書き[CPane::OnAfterChangeParent](../../mfc/reference/cpane-class.md#onafterchangeparent))。|  
 |[CDockablePane::OnAfterDockFromMiniFrame](#onafterdockfromminiframe)|フレーム ウィンドウのフローティング、ドッキング バーをドッキングすると、フレームワークによって呼び出されます。|  
 |[CDockablePane::OnBeforeChangeParent](#onbeforechangeparent)|ウィンドウの親を変更するときに、フレームワークによって呼び出されます。 (上書き[CPane::OnBeforeChangeParent](../../mfc/reference/cpane-class.md#onbeforechangeparent))。|  

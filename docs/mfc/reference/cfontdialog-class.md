@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b7f82988e8756a6894464c9d95ae47fe6baf922
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 6ef5728a20cc97d330540b10c2de325f62583b69
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336814"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203077"
 ---
 # <a name="cfontdialog-class"></a>CFontDialog クラス
 フォントの選択 ダイアログ ボックスをアプリケーションに組み込むことができます。  
@@ -96,13 +96,13 @@ class CFontDialog : public CCommonDialog
   
  構築する、`CFontDialog`オブジェクトで指定されたコンス トラクターを使用して、または、新しいサブクラスを派生し、独自のカスタム コンス トラクターを使用します。  
   
- 1 回、`CFontDialog`オブジェクトが構築された、使用することができます、`m_cf`値やダイアログ ボックスのコントロールの状態を初期化するためにします。 [構造体](#m_cf)型の構造は、 [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832)します。 この構造体の詳細については、Windows SDK を参照してください。  
+ 1 回、`CFontDialog`オブジェクトが構築された、使用することができます、`m_cf`値やダイアログ ボックスのコントロールの状態を初期化するためにします。 [構造体](#m_cf)型の構造は、 [CHOOSEFONT](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta)します。 この構造体の詳細については、Windows SDK を参照してください。  
   
  ダイアログ オブジェクトのコントロールを初期化した後、 `DoModal`  ダイアログ ボックスが表示され、ユーザーがフォントを選択できるようにするメンバー関数。 `DoModal` ユーザーが [ok] \(IDOK) またはキャンセル (IDCANCEL) ボタンを選択するかどうかを返します。  
   
  場合`DoModal`IDOK を返しますのいずれかを使用することができます`CFontDialog`のユーザーによって入力された情報を取得するメンバー関数。  
   
- Windows を使用する[情報を得る](http://msdn.microsoft.com/library/windows/desktop/ms646916) ダイアログ ボックスの初期化中にエラーが発生したかどうかを判断して、エラーに関する詳細については、関数。 この関数の詳細については、Windows SDK を参照してください。  
+ Windows を使用する[情報を得る](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) ダイアログ ボックスの初期化中にエラーが発生したかどうかを判断して、エラーに関する詳細については、関数。 この関数の詳細については、Windows SDK を参照してください。  
   
  `CFontDialog` COMMDLG に依存します。Windows 3.1 以降のバージョンに付属する DLL ファイルです。  
   
@@ -125,7 +125,7 @@ class CFontDialog : public CCommonDialog
   
  `CFontDialog`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdlgs.h  
   
 ##  <a name="cfontdialog"></a>  CFontDialog::CFontDialog  
@@ -147,13 +147,13 @@ CFontDialog(
   
 ### <a name="parameters"></a>パラメーター  
  *plfInitial*  
- ポインターを[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)データ構造をいくつかのフォントの特性を設定することができます。  
+ ポインターを[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)データ構造をいくつかのフォントの特性を設定することができます。  
   
  *charFormat*  
- ポインターを[CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881)編集コントロールのフォントの特性の一部をリッチで設定できるデータ構造体。  
+ ポインターを[CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat)編集コントロールのフォントの特性の一部をリッチで設定できるデータ構造体。  
   
  *dwFlags*  
- 1 つ以上のフォント選択フラグを指定します。 ビットごとの OR 演算子を使用して、1 つ以上の事前設定値を組み合わせることができます。 `m_cf.Flag`s 構造体メンバーを変更する場合は、変更内容でビットごとの OR 演算子を使用して、既定の動作をそのままにします。 詳細については、これらのフラグは、の説明を参照して、 [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832) Windows SDK の構造体。  
+ 1 つ以上のフォント選択フラグを指定します。 ビットごとの OR 演算子を使用して、1 つ以上の事前設定値を組み合わせることができます。 `m_cf.Flag`s 構造体メンバーを変更する場合は、変更内容でビットごとの OR 演算子を使用して、既定の動作をそのままにします。 詳細については、これらのフラグは、の説明を参照して、 [CHOOSEFONT](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta) Windows SDK の構造体。  
   
  *pdcPrinter*  
  プリンター デバイス コンテキストへのポインター。 指定すると、このパラメーターはフォントが選択されるプリンターのプリンター デバイス コンテキストを指します。  
@@ -178,7 +178,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- IDOK や IDCANCEL。 IDCANCEL が返された場合は、Windows を呼び出す[情報を得る](http://msdn.microsoft.com/library/windows/desktop/ms646916)エラーが発生したかどうかを判断する関数。  
+ IDOK や IDCANCEL。 IDCANCEL が返された場合は、Windows を呼び出す[情報を得る](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror)エラーが発生したかどうかを判断する関数。  
   
  IDOK や IDCANCEL は、ユーザーが [ok] または [キャンセル] ボタンを選択するかどうかを示す定数です。  
   
@@ -199,7 +199,7 @@ void GetCharFormat(CHARFORMAT& cf) const;
   
 ### <a name="parameters"></a>パラメーター  
  *cf*  
- A [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881)選択したフォントの文字の書式設定に関する情報を含む構造体。  
+ A [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat)選択したフォントの文字の書式設定に関する情報を含む構造体。  
   
 ##  <a name="getcolor"></a>  CFontDialog::GetColor  
  選択したフォントの色を取得するには、この関数を呼び出します。  
@@ -215,7 +215,7 @@ COLORREF GetColor() const;
  [!code-cpp[NVC_MFCDocView#79](../../mfc/codesnippet/cpp/cfontdialog-class_2.cpp)]  
   
 ##  <a name="getcurrentfont"></a>  CFontDialog::GetCurrentFont  
- メンバーに現在選択されているフォントの特性を割り当てるには、この関数を呼び出し、 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)構造体。  
+ メンバーに現在選択されているフォントの特性を割り当てるには、この関数を呼び出し、 [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)構造体。  
   
 ```  
 void GetCurrentFont(LPLOGFONT lplf);
@@ -348,7 +348,7 @@ CHOOSEFONT m_cf;
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 構築した後、`CFontDialog`オブジェクトを使用することができます`m_cf`を呼び出す前に ダイアログ ボックスのさまざまな側面を変更する、`DoModal`メンバー関数。 この構造体の詳細については、次を参照してください。 [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832) Windows SDK に含まれています。  
+ 構築した後、`CFontDialog`オブジェクトを使用することができます`m_cf`を呼び出す前に ダイアログ ボックスのさまざまな側面を変更する、`DoModal`メンバー関数。 この構造体の詳細については、次を参照してください。 [CHOOSEFONT](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#89](../../mfc/codesnippet/cpp/cfontdialog-class_12.cpp)]  

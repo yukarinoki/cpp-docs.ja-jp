@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b70e8012d6126b39129cff6fc86366f72459dc02
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 15f0b26c5c86d023d98d6a13e6b92518756a3179
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883009"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206207"
 ---
 # <a name="ienumonstlimpl-class"></a>IEnumOnSTLImpl クラス
 このクラスは、C++ 標準ライブラリ コレクションに基づいて列挙子インターフェイスを定義します。  
@@ -45,7 +45,7 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
   
 #### <a name="parameters"></a>パラメーター  
  *ベース*  
- COM の列挙子 ([として](https://msdn.microsoft.com/library/ms680089.aspx)) インターフェイス。  
+ COM の列挙子。 参照してください[IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring)例についてはします。
   
  *piid*  
  列挙子インターフェイスのインターフェイス ID へのポインター。  
@@ -65,11 +65,11 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
   
 |名前|説明|  
 |----------|-----------------|  
-|[IEnumOnSTLImpl::Clone](#clone)|実装[IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx)します。|  
+|[IEnumOnSTLImpl::Clone](#clone)|実装**複製**します。|  
 |[保ちます](#init)|列挙子を初期化します。|  
-|[IEnumOnSTLImpl::Next](#next)|実装[IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx)します。|  
-|[IEnumOnSTLImpl::Reset](#reset)|実装[IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx)します。|  
-|[IEnumOnSTLImpl::Skip](#skip)|実装[IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx)します。|  
+|[IEnumOnSTLImpl::Next](#next)|実装**次**します。|  
+|[IEnumOnSTLImpl::Reset](#reset)|実装**リセット**します。|  
+|[IEnumOnSTLImpl::Skip](#skip)|実装**スキップ**します。|  
   
 ### <a name="public-data-members"></a>パブリック データ メンバー  
   
@@ -94,7 +94,7 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
   
  `IEnumOnSTLImpl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlcom.h  
   
 ##  <a name="init"></a>  保ちます  
@@ -122,7 +122,7 @@ HRESULT Init(
  クライアントに返す列挙子インターフェイスへのポインターを渡す前に、このメソッドを呼び出す必要があります。  
   
 ##  <a name="clone"></a>  IEnumOnSTLImpl::Clone  
- このメソッドの実装を提供、 [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx)メソッド型のオブジェクトを作成して`CComEnumOnSTL`、同じコレクションと、現在のオブジェクトで使用される反復子で初期化してにインターフェイスを返す新しく作成されたオブジェクト。  
+ このメソッドの実装を提供、**複製**メソッド型のオブジェクトを作成して`CComEnumOnSTL`、同じコレクションと、現在のオブジェクトで使用される反復子で初期化してにインターフェイスを返す、新しく作成されたオブジェクト。  
   
 ```
 STDMETHOD(Clone)(Base** ppEnum);
@@ -163,7 +163,7 @@ CollType::iterator m_iter;
 ```  
   
 ##  <a name="next"></a>  IEnumOnSTLImpl::Next  
- このメソッドの実装を提供、 [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx)メソッド。  
+ このメソッドの実装を提供、**次**メソッド。  
   
 ```
 STDMETHOD(Next)(
@@ -186,7 +186,7 @@ STDMETHOD(Next)(
  標準の HRESULT 値。  
   
 ##  <a name="reset"></a>  IEnumOnSTLImpl::Reset  
- このメソッドの実装を提供、 [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx)メソッド。  
+ このメソッドの実装を提供、**リセット**メソッド。  
   
 ```
 STDMETHOD(Reset)(void);
@@ -196,7 +196,7 @@ STDMETHOD(Reset)(void);
  標準の HRESULT 値。  
   
 ##  <a name="skip"></a>  IEnumOnSTLImpl::Skip  
- このメソッドの実装を提供、 [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx)メソッド。  
+ このメソッドの実装を提供、**スキップ**メソッド。  
   
 ```
 STDMETHOD(Skip)(ULONG celt);

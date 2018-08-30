@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b9183f3ae58a7ba6b7746ae27f64ca17eede991
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3a53dd239d2c6cdba77f977cc94642828c5e91b7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540909"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216475"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>CMFCRibbonFontComboBox クラス
 フォントの一覧を含むコンボ ボックスを実装します。 このコンボ ボックスをリボン パネルに配置できます。  
@@ -144,9 +144,9 @@ CMFCRibbonFontComboBox(
  コンボ ボックスのピクセル単位の幅を指定します。  
   
 ### <a name="remarks"></a>Remarks  
- 可能な限りの詳細については*nFontType*パラメーターの値を参照してください[EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) Windows SDK のドキュメント。  
+ 可能な限りの詳細については*nFontType*パラメーターの値を参照してください[EnumFontFamProc](https://msdn.microsoft.com/library/windows/desktop/dd162621) Windows SDK のドキュメント。  
   
- 割り当てることができる有効な文字セットの詳細については*nCharSet*、および有効な値を割り当てることができる*nPitchAndFamily*を参照してください[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)で、Windows SDK のドキュメントです。  
+ 割り当てることができる有効な文字セットの詳細については*nCharSet*、および有効な値を割り当てることができる*nPitchAndFamily*を参照してください[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)で、Windows SDK のドキュメントです。  
   
 ##  <a name="getfontdesc"></a>  CMFCRibbonFontComboBox::GetFontDesc  
  詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。  

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef7db05e8e8eb0a723354bcd6f53fb283aebe0c8
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 4a2684a3aab8480738d4d64a79681f1930113c71
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880886"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218928"
 ---
 # <a name="idataobjectimpl-class"></a>IDataObjectImpl クラス
 このクラスは、汎用データ転送をサポートしていると、接続を管理するためのメソッドを提供します。  
@@ -72,9 +72,9 @@ class IDataObjectImpl
 |[IDataObjectImpl::SetData](#setdata)|データ オブジェクトに、クライアントからのデータを転送します。 ATL の実装では、E_NOTIMPL を返します。|  
   
 ## <a name="remarks"></a>Remarks  
- [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421)インターフェイスには、汎用データ転送をサポートするメソッドが用意されています。 `IDataObject` 標準の形式の構造を使用して[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)と[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)を取得し、データを格納します。  
+ [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject)インターフェイスには、汎用データ転送をサポートするメソッドが用意されています。 `IDataObject` 標準の形式の構造を使用して[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)と[STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)を取得し、データを格納します。  
   
- `IDataObject` アドバイズ シンクがデータ変更の通知を処理するためにへの接続を管理します。 クライアントがデータ オブジェクトからデータ変更の通知を受信するためには、クライアントを実装する必要があります、 [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513)アドバイズ シンクと呼ばれるオブジェクトのインターフェイス。 クライアントが、呼び出すと`IDataObject::DAdvise`、データ オブジェクトとアドバイズ シンクの間の接続が確立されています。  
+ `IDataObject` アドバイズ シンクがデータ変更の通知を処理するためにへの接続を管理します。 クライアントがデータ オブジェクトからデータ変更の通知を受信するためには、クライアントを実装する必要があります、 [IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink)アドバイズ シンクと呼ばれるオブジェクトのインターフェイス。 クライアントが、呼び出すと`IDataObject::DAdvise`、データ オブジェクトとアドバイズ シンクの間の接続が確立されています。  
   
  クラス`IDataObjectImpl`の既定の実装を提供します。`IDataObject`実装と`IUnknown`ダンプ情報を送信することによってデバッグでのデバイスをビルドします。  
   
@@ -85,7 +85,7 @@ class IDataObjectImpl
   
  `IDataObjectImpl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlctl.h  
   
 ##  <a name="dadvise"></a>  IDataObjectImpl::DAdvise  
@@ -104,7 +104,7 @@ HRESULT DAdvise(
   
  接続を終了するには、呼び出す[に](#dunadvise)します。  
   
- 参照してください[IDataObject::DAdvise](http://msdn.microsoft.com/library/windows/desktop/ms692579) Windows SDK にします。  
+ 参照してください[IDataObject::DAdvise](/windows/desktop/api/objidl/nf-objidl-idataobject-dadvise) Windows SDK にします。  
   
 ##  <a name="dunadvise"></a>  IDataObjectImpl::DUnadvise  
  以前に確立した接続が終了した[DAdvise](#dadvise)します。  
@@ -114,7 +114,7 @@ HRESULT DUnadvise(DWORD dwConnection);
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IDataObject::DUnadvise](http://msdn.microsoft.com/library/windows/desktop/ms692448) Windows SDK にします。  
+ 参照してください[IDataObject::DUnadvise](/windows/desktop/api/objidl/nf-objidl-idataobject-dunadvise) Windows SDK にします。  
   
 ##  <a name="enumdadvise"></a>  IDataObjectImpl::EnumDAdvise  
  現在のアドバイザリ コネクションを反復処理する列挙子を作成します。  
@@ -128,7 +128,7 @@ HRESULT DAdvise(
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IDataObject::EnumDAdvise](http://msdn.microsoft.com/library/windows/desktop/ms680127) Windows SDK にします。  
+ 参照してください[IDataObject::EnumDAdvise](/windows/desktop/api/objidl/nf-objidl-idataobject-enumdadvise) Windows SDK にします。  
   
 ##  <a name="enumformatetc"></a>  IDataObjectImpl::EnumFormatEtc  
  反復処理する列挙子を作成、`FORMATETC`データ オブジェクトでサポートされている構造体。  
@@ -140,7 +140,7 @@ HRESULT EnumFormatEtc(
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IDataObject::EnumFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms683979) Windows SDK にします。  
+ 参照してください[IDataObject::EnumFormatEtc](/windows/desktop/api/objidl/nf-objidl-idataobject-enumformatetc) Windows SDK にします。  
   
 ### <a name="return-value"></a>戻り値  
  E_NOTIMPL を返します。  
@@ -166,7 +166,7 @@ HRESULT GetCanonicalFormatEtc(FORMATETC* pformatetcIn, FORMATETC* pformatetcOut)
  E_NOTIMPL を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IDataObject::GetCanonicalFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms680685) Windows SDK にします。  
+ 参照してください[IDataObject::GetCanonicalFormatEtc](/windows/desktop/api/objidl/nf-objidl-idataobject-getcanonicalformatetc) Windows SDK にします。  
   
 ##  <a name="getdata"></a>  IDataObjectImpl::GetData  
  データ オブジェクトからクライアントにデータを転送します。  
@@ -180,7 +180,7 @@ HRESULT GetData(
 ### <a name="remarks"></a>Remarks  
  *PformatetcIn*パラメーター TYMED_MFPICT のストレージ メディアの種類を指定する必要があります。  
   
- 参照してください[IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) Windows SDK にします。  
+ 参照してください[IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) Windows SDK にします。  
   
 ##  <a name="getdatahere"></a>  IDataObjectImpl::GetDataHere  
  ような`GetData`を除き、クライアントを割り当てる必要があります、`STGMEDIUM`構造体。  
@@ -195,7 +195,7 @@ HRESULT GetDataHere(
  E_NOTIMPL を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IDataObject::GetDataHere](http://msdn.microsoft.com/library/windows/desktop/ms687266) Windows SDK にします。  
+ 参照してください[IDataObject::GetDataHere](/windows/desktop/api/objidl/nf-objidl-idataobject-getdatahere) Windows SDK にします。  
   
 ##  <a name="querygetdata"></a>  IDataObjectImpl::QueryGetData  
  データ オブジェクトが特定をサポートするかどうかを決定`FORMATETC`データを転送するための構造体。  
@@ -208,7 +208,7 @@ HRESULT QueryGetData(FORMATETC* pformatetc);
  E_NOTIMPL を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IDataObject::QueryGetData](http://msdn.microsoft.com/library/windows/desktop/ms680637) Windows SDK にします。  
+ 参照してください[IDataObject::QueryGetData](/windows/desktop/api/objidl/nf-objidl-idataobject-querygetdata) Windows SDK にします。  
   
 ##  <a name="setdata"></a>  IDataObjectImpl::SetData  
  データ オブジェクトに、クライアントからのデータを転送します。  
@@ -224,7 +224,7 @@ HRESULT SetData(
  E_NOTIMPL を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[IDataObject::SetData](http://msdn.microsoft.com/library/windows/desktop/ms686626) Windows SDK にします。  
+ 参照してください[IDataObject::SetData](/windows/desktop/api/objidl/nf-objidl-idataobject-setdata) Windows SDK にします。  
   
 ## <a name="see-also"></a>関連項目  
  [クラスの概要](../../atl/atl-class-overview.md)

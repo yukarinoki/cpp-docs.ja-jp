@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c85c19e4f23f7c6e9454793ac86a574614ec2fae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 81046c8472a2a741d5e59622986326ab4b399871
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847248"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207924"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -39,7 +39,7 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> Visual Studio 2017 のリリース以降、 \<filesystem > ヘッダーが、まだ C++ 標準です。 Visual C++ 2017 は、[ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf) の標準の最終ドラフトを実装しています。
+> Visual Studio 2017 のリリース以降、 \<filesystem > ヘッダーが、まだ C++ 標準。 Visual C++ 2017 は、[ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf) の標準の最終ドラフトを実装しています。
 
 このヘッダーは、ホスト オペレーティング システム (Microsoft Windows と Posix) の 2 つの広範なクラスのいずれかに対してファイル システムをサポートします。
 
@@ -112,7 +112,7 @@ using namespace std::experimental::filesystem::v1;
 
 ## <a name="structs"></a>構造体
 
-|名前|説明|
+|name|説明|
 |----------|-----------------|
 |[space_info 構造体](../standard-library/space-info-structure.md)|ボリュームに関する情報を保持します。|
 
@@ -126,9 +126,9 @@ using namespace std::experimental::filesystem::v1;
 
 ## <a name="enumerations"></a>列挙
 
-|名前|説明|
+|name|説明|
 |----------|-----------------|
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|[copy_file](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) と共に使用され、コピー先ファイルが既に存在する場合の動作を決定する列挙体です。|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|[copy_file](https://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) と共に使用され、コピー先ファイルが既に存在する場合の動作を決定する列挙体です。|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|ディレクトリ反復子のオプションを指定する列挙体。|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|ファイルの種類の列挙型。|
 |[perms](../standard-library/filesystem-enumerations.md#perms)|アクセス許可とアクセス許可に対するオプションを伝達するために使用されるビットマスク型|

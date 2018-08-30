@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8af155401492e97be6a9e3a80b72c8c4e7fbd9e
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 8910a1742bf50f178c75b5c78f250b8c1f103b04
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540447"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217978"
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar クラス
 A`CMFCReBar`オブジェクトは、コントロール バー レイアウト、永続化、および rebar コントロールの状態情報を提供します。  
@@ -69,7 +69,7 @@ class CMFCReBar : public CPane
 |[CMFCReBar::GetReBarCtrl](#getrebarctrl)|基になるに直接アクセスできる[crebarctrl の比較](../../mfc/reference/crebarctrl-class.md)コモン コントロール。|  
 |[CMFCReBar::OnShowControlBarMenu](#onshowcontrolbarmenu)|(上書き[cpane::onshowcontrolbarmenu](../../mfc/reference/cpane-class.md#onshowcontrolbarmenu))。|  
 |[CMFCReBar::OnToolHitTest](#ontoolhittest)|(上書き[CWnd::OnToolHitTest](../../mfc/reference/cwnd-class.md#ontoolhittest))。|  
-|[CMFCReBar::OnUpdateCmdUI](#onupdatecmdui)|(上書き[CBasePane::OnUpdateCmdUI](http://msdn.microsoft.com/e139f06a-9793-4ee2-bc3d-517389368c77))。|  
+|[CMFCReBar::OnUpdateCmdUI](#onupdatecmdui)|(上書き[CBasePane::OnUpdateCmdUI](https://msdn.microsoft.com/e139f06a-9793-4ee2-bc3d-517389368c77))。|  
 |[CMFCReBar::SetPaneAlignment](#setpanealignment)|(上書き[CBasePane::SetPaneAlignment](../../mfc/reference/cbasepane-class.md#setpanealignment))。|  
   
 ## <a name="remarks"></a>Remarks  
@@ -120,7 +120,7 @@ BOOL AddBar(
  Rebar の背景に表示されるビットマップを指定します。  
   
  [in]*dwStyle*  
- Band に適用するスタイルが含まれています。 バンド スタイルの完全な一覧の説明を参照してください。`fStyle`で、 [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) 、Windows SDK ドキュメントの構造体。  
+ Band に適用するスタイルが含まれています。 バンド スタイルの完全な一覧の説明を参照してください。`fStyle`で、 [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) 、Windows SDK ドキュメントの構造体。  
   
  [in]*clrFore*  
  Rebar の前景色を表します。  
@@ -147,7 +147,7 @@ BOOL Create(
  この rebar コントロールの親ウィンドウへのポインター。  
   
  [in]*ツール バー*  
- Rebar コントロールのスタイルを指定します。 既定のスタイルの値は**RBS_BANDBORDERS**これが表示されますが、rebar コントロールでの隣接するバンドの区切り線を絞り込みます。 有効なスタイルの一覧は、次を参照してください。 [Rebar コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb774377)Windows SDK のドキュメント。  
+ Rebar コントロールのスタイルを指定します。 既定のスタイルの値は**RBS_BANDBORDERS**これが表示されますが、rebar コントロールでの隣接するバンドの区切り線を絞り込みます。 有効なスタイルの一覧は、次を参照してください。 [Rebar コントロールのスタイル](/windows/desktop/Controls/rebar-control-styles)Windows SDK のドキュメント。  
   
  [in]*dwStyle*  
  Rebar コントロールのウィンドウ スタイル。 有効なスタイルの一覧は、次を参照してください。[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。  

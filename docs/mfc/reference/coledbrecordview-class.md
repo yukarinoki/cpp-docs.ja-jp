@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 623ba901d1998a899a443d235d65c6b205cfea4f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 424ee48e683bc22870900805aacd32f31fb12949
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853694"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218229"
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView クラス
 コントロール内にデータベース レコードを表示するビューです。  
@@ -56,7 +56,7 @@ class COleDBRecordView : public CFormView
 ## <a name="remarks"></a>Remarks  
  ビューが、フォーム ビューに直接接続されている、`CRowset`オブジェクト。 ビューはダイアログ テンプレート リソースから作成されのフィールドが表示されます、`CRowset`ダイアログ テンプレートのコントロール内のオブジェクト。 `COleDBRecordView`オブジェクトは、ダイアログ データ エクス チェンジ (DDX) を使用し、ナビゲーションの機能に組み込まれて`CRowset`フォーム上のコントロールと、行セットのフィールド間のデータ移動を自動化します。 `COleDBRecordView` 移動するための既定の実装を提供、最初に [次へ]、前、または最後のレコードとインターフェイス ビューで現在のレコードを更新します。  
   
- DDX 関数を使用する`COleDbRecordView`をデータベースのレコード セットから直接データを取得し、ダイアログ コントロールに表示します。 使用する必要があります、 **DDX_\*** メソッド (など`DDX_Text`) ではなく、 **DDX_Field\*** 関数 (など`DDX_FieldText`) と`COleDbRecordView`します。 `DDX_FieldText` は動作しません`COleDbRecordView`ため`DDX_FieldText`型の追加の引数を取る**CRecordset\***  (の`CRecordView`) または**CDaoRecordset\***  (`CDaoRecordView`).  
+ DDX 関数を使用する`COleDbRecordView`をデータベースのレコード セットから直接データを取得し、ダイアログ コントロールに表示します。 使用する必要があります、`DDX_*`メソッド (など`DDX_Text`) ではなく、`DDX_Field*`関数 (など`DDX_FieldText`) と`COleDbRecordView`します。 `DDX_FieldText` は動作しません`COleDbRecordView`ため`DDX_FieldText`型の追加の引数を取る`CRecordset*`(の`CRecordView`) または`CDaoRecordset*`(の`CDaoRecordView`)。  
   
 > [!NOTE]
 >  OLE DB コンシューマー テンプレート クラスではなく、データ アクセス オブジェクト (DAO) クラスで作業している場合は、クラスを使用して[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)代わりにします。 詳細については、この記事を参照してください。[概要: データベース プログラミング](../../data/data-access-programming-mfc-atl.md)します。  
@@ -80,7 +80,7 @@ class COleDBRecordView : public CFormView
   
  `COleDBRecordView`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxoledb.h  
   
 ##  <a name="coledbrecordview"></a>  COleDBRecordView::COleDBRecordView  

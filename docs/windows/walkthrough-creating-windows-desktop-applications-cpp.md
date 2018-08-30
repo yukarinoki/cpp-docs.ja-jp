@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 724772c0057d5defc8bfa3e2207df85d3a207f31
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e9a946689d563f1c681fee305ec05438bc5eb687
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590295"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204739"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>チュートリアル: 従来 Windows デスクトップ アプリケーション (C++) の作成します。
 
@@ -219,7 +219,7 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
    }
    ```
 
-   この関数を返します、`HWND`ウィンドウのハンドルであります。 ハンドルは、Windows が開いているウィンドウを追跡するために使用するポインターのようなものです。 詳細については、次を参照してください。[データ型の Windows](https://msdn.microsoft.com/library/windows/desktop/aa383751)します。
+   この関数を返します、`HWND`ウィンドウのハンドルであります。 ハンドルは、Windows が開いているウィンドウを追跡するために使用するポインターのようなものです。 詳細については、次を参照してください。[データ型の Windows](/windows/desktop/WinProg/windows-data-types)します。
 
 1. この時点では、ウィンドウが作成されたらが表示されるように Windows に指示する必要があります。 このコードを行っています。
 
@@ -340,9 +340,9 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
 
 1. `WndProc` 関数を有効にしてアプリケーションが受け取るメッセージを処理するために、switch ステートメントを実装します。
 
-   1 つの重要なメッセージを処理するためには、 [WM_PAINT](https://msdn.microsoft.com/library/windows/desktop/dd145213)メッセージ。 アプリケーションは、表示しているウィンドウの一部の更新が必要になったときにこのメッセージを受け取ります ユーザーは、ウィンドウの前にウィンドウを移動し、移動にもう一度このイベントが発生します。 このようなイベントが発生したときに、アプリケーションが認識しません。Windows のみを知っていればに通知するように`WM_PAINT`します。 最初に、ウィンドウが表示されるときにすべての更新する必要があります。
+   1 つの重要なメッセージを処理するためには、 [WM_PAINT](/windows/desktop/gdi/wm-paint)メッセージ。 アプリケーションは、表示しているウィンドウの一部の更新が必要になったときにこのメッセージを受け取ります ユーザーは、ウィンドウの前にウィンドウを移動し、移動にもう一度このイベントが発生します。 このようなイベントが発生したときに、アプリケーションが認識しません。Windows のみを知っていればに通知するように`WM_PAINT`します。 最初に、ウィンドウが表示されるときにすべての更新する必要があります。
 
-   処理するために、`WM_PAINT`メッセージ、最初の呼び出し[BeginPaint](https://msdn.microsoft.com/library/windows/desktop/dd183362)、テキスト、ボタン、およびウィンドウで、他のコントロールをレイアウトするすべてのロジックを処理し、呼び出す[EndPaint](https://msdn.microsoft.com/library/windows/desktop/dd162598)します。 このアプリケーションで、最初の呼び出しと最後の呼び出しの間のロジックは文字列「こんにちは, Windows デスクトップ!」を表示するには ウィンドウです。 次のコードでわかるように、 [TextOut](https://msdn.microsoft.com/library/windows/desktop/dd145133)関数は、文字列を表示するために使用します。
+   処理するために、`WM_PAINT`メッセージ、最初の呼び出し[BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint)、テキスト、ボタン、およびウィンドウで、他のコントロールをレイアウトするすべてのロジックを処理し、呼び出す[EndPaint](/windows/desktop/api/winuser/nf-winuser-endpaint)します。 このアプリケーションで、最初の呼び出しと最後の呼び出しの間のロジックは文字列「こんにちは, Windows デスクトップ!」を表示するには ウィンドウです。 次のコードでわかるように、 [TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta)関数は、文字列を表示するために使用します。
 
    ```cpp
    PAINTSTRUCT ps;
@@ -369,7 +369,7 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
 
    `HDC` このコードでは、Windows を使用して、グラフィックス サブシステムと通信するアプリケーションを有効にするデータ構造体である、デバイス コンテキスト ハンドルです。 `BeginPaint`と`EndPaint`関数は、アプリケーションは良き市民と同様に動作し、必要以上になったため、デバイス コンテキストを使用しないことを確認します。 これにより、グラフィックス サブシステムが他のアプリケーションで使用可能であることを確認できます。
 
-1. アプリケーションで他の多くのメッセージをたとえば、処理通常[WM_CREATE](https://msdn.microsoft.com/library/windows/desktop/ms632619)ウィンドウが最初に作成したときと[WM_DESTROY](https://msdn.microsoft.com/library/windows/desktop/ms632620)ウィンドウを閉じるときにします。 単純でも完成した `WndProc` 関数のコードを次に示します。
+1. アプリケーションで他の多くのメッセージをたとえば、処理通常[WM_CREATE](/windows/desktop/winmsg/wm-create)ウィンドウが最初に作成したときと[WM_DESTROY](/windows/desktop/winmsg/wm-destroy)ウィンドウを閉じるときにします。 単純でも完成した `WndProc` 関数のコードを次に示します。
 
    ```cpp
    LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)

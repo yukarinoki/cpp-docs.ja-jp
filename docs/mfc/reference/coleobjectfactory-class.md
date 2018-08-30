@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d2ac698466709931259f1df28d6c75aa38b30f2
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 656500e69f97481c90cdbea41b8c640f470e7b1c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850707"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210018"
 ---
 # <a name="coleobjectfactory-class"></a>COleObjectFactory クラス
 OLE クラスのファクトリを実装しています。このクラスによって、サーバー、オートメーション オブジェクト、ドキュメントなどの OLE オブジェクトを作成できます。  
@@ -114,7 +114,7 @@ class COleObjectFactory : public CCmdTarget
   
  `COleObjectFactory`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー :** afxdisp.h  
   
 ##  <a name="coleobjectfactory"></a>  COleObjectFactory::COleObjectFactory  
@@ -157,7 +157,7 @@ COleObjectFactory(
   
 - `afxRegFreeThreading` スレッド処理モデルを ThreadingModel をレジストリに設定する Free を =。  
   
-     2 つのフラグを結合する`afxRegApartmentThreading`と`afxRegFreeThreading`ThreadingModel を設定する = Both。 参照してください[InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390)スレッド モデルの登録の詳細については、Windows SDK に含まれています。  
+     2 つのフラグを結合する`afxRegApartmentThreading`と`afxRegFreeThreading`ThreadingModel を設定する = Both。 参照してください[InprocServer32](/windows/desktop/com/inprocserver32)スレッド モデルの登録の詳細については、Windows SDK に含まれています。  
   
  *lpszProgID*  
  "Excel"などの口頭でのプログラム識別子を含む文字列へのポインター  
@@ -165,7 +165,7 @@ COleObjectFactory(
 ### <a name="remarks"></a>Remarks  
  オブジェクトを使用して、ただし、する必要がありますに登録します。  
   
- 詳細については、次を参照してください。 [CLSID キー](http://msdn.microsoft.com/library/windows/desktop/ms691424) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [CLSID キー](/windows/desktop/com/clsid-key-hklm) Windows SDK に含まれています。  
   
 ##  <a name="getclassid"></a>  COleObjectFactory::GetClassID  
  このファクトリを表す OLE クラス ID への参照を返します。  
@@ -178,7 +178,7 @@ REFCLSID GetClassID() const;
  OLE クラス ID このファクトリへの参照を表します。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [CLSID キー](http://msdn.microsoft.com/library/windows/desktop/ms691424) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [CLSID キー](/windows/desktop/com/clsid-key-hklm) Windows SDK に含まれています。  
   
 ##  <a name="getlicensekey"></a>  COleObjectFactory::GetLicenseKey  
  コントロールの DLL から固有のライセンス キーを要求し、指す BSTR に格納*pbstrKey*します。  

@@ -1,5 +1,5 @@
 ---
-title: メモリ管理 |Microsoft ドキュメント
+title: メモリ管理 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,31 +18,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 928a954be6a96f5026a98f724a77bebd51be27f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 28191191572e508828a23f0e719a57d63163b08d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345079"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222352"
 ---
 # <a name="memory-management"></a>メモリ管理
-この記事のグループは、汎用サービスの Microsoft Foundation Class ライブラリ (MFC) メモリ管理に関連するを利用する方法を説明します。 メモリの割り当ては、次の 2 つの主なカテゴリに分類できます: フレーム割り当ておよびヒープ割り当てします。  
+この記事のグループには、汎用サービスの Microsoft Foundation Class ライブラリ (MFC) に関連するメモリ管理を活用する方法について説明します。 メモリの割り当ては、2 つの主なカテゴリに分類できます: フレーム割り当ておよびヒープの割り当て。  
   
- 2 つの割り当て方法の 1 つの主な違いは、こと、一般的に実際のメモリで作業するフレーム割り当てをブロック自体、ヒープ割り当ては常に表示されますへのポインターのメモリ ブロックへです。 2 つのスキームのもう 1 つの主な違いは、フレーム オブジェクトが自動的に削除されたこと、プログラマが、ヒープのオブジェクトを明示的に削除する必要があります中です。  
+ 2 つの割り当て方法の 1 つの主な違いにフレームを割り当てられる実際のメモリを操作する通常ブロック自体には、ヒープ割り当てはするが常に指定のポインターのメモリ ブロックへ。 2 つのスキームのもう 1 つの主な違いは、フレーム オブジェクトが自動的に削除されたこと、中に、ヒープのオブジェクトは、プログラマが明示的に削除する必要があります。  
   
- 非 MFC プログラムで Windows 用のメモリ管理については、次を参照してください。[メモリ管理](http://msdn.microsoft.com/library/windows/desktop/aa366779)Windows SDK に含まれています。  
+ 非 MFC プログラムで Windows 用のメモリ管理については、次を参照してください。[メモリ管理](https://msdn.microsoft.com/library/windows/desktop/aa366779)Windows SDK に含まれています。  
   
-## <a name="what-do-you-want-to-know-more-about"></a>詳しくは次のトピックをクリックしてください。  
+## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います  
   
 -   [フレーム割り当て](../mfc/memory-management-frame-allocation.md)  
   
--   [ヒープ割り当て](../mfc/memory-management-heap-allocation.md)  
+-   [ヒープの割り当て](../mfc/memory-management-heap-allocation.md)  
   
 -   [配列のメモリの割り当てください。](../mfc/memory-management-examples.md)  
   
--   [ヒープから配列にメモリを解放します。](../mfc/memory-management-examples.md)  
+-   [配列のメモリのヒープから割り当て解除](../mfc/memory-management-examples.md)  
   
--   [データ構造体のメモリの割り当てください。](../mfc/memory-management-examples.md)  
+-   [データ構造のメモリの割り当てください。](../mfc/memory-management-examples.md)  
   
 -   [オブジェクトのメモリの割り当てください。](../mfc/memory-management-examples.md)  
   

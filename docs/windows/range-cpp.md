@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c1ad17b6f658129ff33be28843ebb48b86f7845
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a4f84684c5d8f8feb8595da628976c90a2593c96
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599628"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201352"
 ---
 # <a name="range-c"></a>range (C++)
 
@@ -47,7 +47,7 @@ ms.locfileid: "42599628"
 
 ## <a name="remarks"></a>Remarks
 
-**範囲**C++ 属性と同じ機能を持つ、[範囲](http://msdn.microsoft.com/library/windows/desktop/aa367151)MIDL 属性。
+**範囲**C++ 属性と同じ機能を持つ、[範囲](/windows/desktop/Midl/range)MIDL 属性。
 
 ## <a name="example"></a>例
 

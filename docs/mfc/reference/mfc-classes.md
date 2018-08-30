@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc862ee708239878229825c9aa050c2835222b95
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 5bfff86dd688ea5029a0c0971c3f8ad6c6aef3b5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42540127"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213193"
 ---
 # <a name="mfc-classes"></a>MFC クラス
 Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示すクラスが含まれています。  
@@ -135,7 +135,7 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
  Windows のチェックリスト ボックスの機能を提供します。  
   
  [CClientDC クラス](../../mfc/reference/cclientdc-class.md)  
- 構築時の Windows 関数 [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) の呼び出しと、破棄時の [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) の呼び出しを処理します。  
+ Windows 関数の呼び出しを処理する[GetDC](/windows/desktop/api/winuser/nf-winuser-getdc)構築時に、 [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc)破棄時にします。  
   
  [CCmdTarget クラス](../../mfc/reference/ccmdtarget-class.md)  
  Microsoft Foundation Class ライブラリのメッセージ マップ アーキテクチャに関する基底クラスです。  
@@ -861,7 +861,7 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
  フローティング ツール バーの周りなどで使用される、半分の高さのフレーム ウィンドウを表します。  
   
  [CMonikerFile クラス](../../mfc/reference/cmonikerfile-class.md)  
- [IMoniker](http://msdn.microsoft.com/library/windows/desktop/aa380034)で名前が付けられたデータのストリーム ( [IStream](http://msdn.microsoft.com/library/windows/desktop/ms679705)) を表します。  
+ データのストリームを表します ([IStream](/windows/desktop/api/objidl/nn-objidl-istream)) によってという名前を[IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker)します。  
   
  [CMonthCalCtrl クラス](../../mfc/reference/cmonthcalctrl-class.md)  
  月間予定表コントロールの機能がカプセル化されています。  
@@ -930,7 +930,7 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
  クライアント側のカスタム コントロール インターフェイスをサポートします。  
   
  [COleConvertDialog クラス](../../mfc/reference/coleconvertdialog-class.md)  
- 詳細については、次を参照してください。、 [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) Windows SDK の構造体。  
+ 詳細については、次を参照してください。、 [OLEUICONVERT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiconverta) Windows SDK の構造体。  
   
  [COleCurrency クラス](../../mfc/reference/colecurrency-class.md)  
  OLE オートメーションで使用される `CURRENCY` データ型をカプセル化します。  
@@ -1173,7 +1173,7 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
  アニメーション変数の初期ベロシティによって振幅が決まる正弦波ベロシティ遷移をカプセル化します。  
   
  [CSize クラス](../../atl-mfc-shared/reference/csize-class.md)  
- Windows の [SIZE](http://msdn.microsoft.com/library/windows/desktop/dd145106) 構造体と同様に、相対座標や位置を実装します。  
+ Windows のような[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)構造体は、相対座標や位置を実装します。  
   
  [CSliderCtrl クラス](../../mfc/reference/csliderctrl-class.md)  
  Windows コモン スライダー コントロールの機能を提供します。  

@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15bddcf3d94935f56fa2e23b6ebd0398ed379c54
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 88cf46d6352f0f58a91f4e5571006090ec693c42
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34569850"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215699"
 ---
 # <a name="getosfhandle"></a>_get_osfhandle
 
@@ -61,13 +61,13 @@ intptr_t _get_osfhandle(
 
 ## <a name="return-value"></a>戻り値
 
-場合は、オペレーティング システム ファイル ハンドルを返します*fd*は無効です。 それ以外の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行は継続許可されたかどうか、この関数を返します**INVALID_HANDLE_VALUE** (-1) を設定および**errno**に**EBADF**、無効なファイル ハンドルを示すです。 コンパイラの警告を避けるためには、Win32 ファイル ハンドルを期待するルーチンで、結果を使用する場合、キャストに、**処理**型です。
+場合は、オペレーティング システム ファイル ハンドルを返します*fd*は有効です。 それ以外の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラーが呼び出されます。 かどうかは、引き続き実行が許可された、この関数を返します**INVALID_HANDLE_VALUE** (-1) を設定および**errno**に**EBADF**、無効なファイル ハンドルを示します。 コンパイラの警告を避けるためには、Win32 ファイル ハンドルを期待するルーチンで、結果を使用する場合、キャストを**処理**型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-オペレーティング システム (OS) のファイル ハンドルが取得されたファイルを閉じる **_get_osfhandle**、呼び出す[_close](close.md)ファイル記述子に*fd*です。 呼び出す必要はありません**CloseHandle**この関数の戻り値にします。 基になる OS ファイル ハンドルが所有、 *fd*ファイル記述子、および閉じるときに[_close](close.md)で呼び出される*fd*です。 ファイル記述子がによって所有されている場合、**ファイル\*** ストリーム、呼び出すことで、 [fclose](fclose-fcloseall.md)を**ファイル\*** ストリームは、両方のファイル記述子を閉じると基になる OS ファイル ハンドル。 この場合、呼び出さない[_close](close.md)ファイル記述子。
+オペレーティング システム (OS) のファイル ハンドルが取得したファイルを閉じる **_get_osfhandle**、呼び出す[_close](close.md)ファイル記述子に*fd*。 呼び出さない**CloseHandle**でこの関数の戻り値。 基になる OS ファイル ハンドルを所有、 *fd*ファイル記述子、および閉じられたときに、 [_close](close.md)で呼び出される*fd*します。 ファイル記述子が所有している場合、`FILE *`呼び出してストリーム[fclose](fclose-fcloseall.md)を`FILE *`ストリームは、両方のファイル記述子と基になる OS ファイル ハンドルを閉じます。 この場合、呼び出さない[_close](close.md)ファイル記述子。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

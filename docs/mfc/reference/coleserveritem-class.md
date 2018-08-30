@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1da24273decbee296bfa19a5c8306cb0512e3fc
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b4c5dad276db338b5efa0d15786b090779fcf41a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850249"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207506"
 ---
 # <a name="coleserveritem-class"></a>COleServerItem クラス
 OLE アイテムへのサーバー インターフェイスが用意されています。  
@@ -174,7 +174,7 @@ class COleServerItem : public CDocItem
   
  `COleServerItem`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxole.h  
   
 ##  <a name="addotherclipboarddata"></a>  COleServerItem::AddOtherClipboardData  
@@ -263,7 +263,7 @@ DROPEFFECT DoDragDrop(
   
 -   Windows 95/98 ドラッグ遅延時間は、WIN のキャッシュされたバージョンに格納されます。INI します。  
   
- レジストリのいずれかの遅延情報が格納されている方法の詳細についてはドラッグのまたはします。INI ファイルを参照してください[WriteProfileString](http://msdn.microsoft.com/library/windows/desktop/ms725504) Windows SDK に含まれています。  
+ レジストリのいずれかの遅延情報が格納されている方法の詳細についてはドラッグのまたはします。INI ファイルを参照してください[WriteProfileString](/windows/desktop/api/winbase/nf-winbase-writeprofilestringa) Windows SDK に含まれています。  
   
 ##  <a name="getclipboarddata"></a>  COleServerItem::GetClipboardData  
  指定した入力するには、この関数を呼び出す[COleDataSource](../../mfc/reference/coledatasource-class.md)を呼び出した場合、クリップボードにコピーされるすべてのデータ オブジェクト[CopyToClipboard](#copytoclipboard) (場合、同じデータを転送もがします。呼ばれる[DoDragDrop](#dodragdrop))。  
@@ -329,14 +329,14 @@ void GetEmbedSourceData(LPSTGMEDIUM lpStgMedium);
   
 ### <a name="parameters"></a>パラメーター  
  *lpStgMedium*  
- ポインター、 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) OLE アイテムの CF_EMBEDSOURCE データを受け取る構造体。  
+ ポインター、 [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) OLE アイテムの CF_EMBEDSOURCE データを受け取る構造体。  
   
 ### <a name="remarks"></a>Remarks  
  この形式には、項目のネイティブのデータが含まれています。 実装している必要があります、`Serialize`適切に機能するには、この関数のメンバー関数。  
   
  結果を使用してデータ ソースに追加された[取得](../../mfc/reference/coledatasource-class.md#cachedata)します。 この関数はによって自動的に呼び出されます[COleServerItem::OnGetClipboardData](#ongetclipboarddata)します。  
   
- 詳細については、次を参照してください。 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) Windows SDK に含まれています。  
   
 ##  <a name="getitemname"></a>  COleServerItem::GetItemName  
  項目の名前を取得するには、この関数を呼び出します。  
@@ -360,7 +360,7 @@ BOOL GetLinkSourceData(LPSTGMEDIUM lpStgMedium);
   
 ### <a name="parameters"></a>パラメーター  
  *lpStgMedium*  
- ポインター、 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) OLE アイテムの CF_LINKSOURCE データを受け取る構造体。  
+ ポインター、 [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) OLE アイテムの CF_LINKSOURCE データを受け取る構造体。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -370,7 +370,7 @@ BOOL GetLinkSourceData(LPSTGMEDIUM lpStgMedium);
   
  結果は後でデータ ソースに追加できます[取得](../../mfc/reference/coledatasource-class.md#cachedata)します。 この関数はによって自動的に呼び出されます[OnGetClipboardData](#ongetclipboarddata)します。  
   
- 詳細については、次を参照してください。 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) Windows SDK に含まれています。  
   
 ##  <a name="getobjectdescriptordata"></a>  COleServerItem::GetObjectDescriptorData  
  OLE 項目の CF_OBJECTDESCRIPTOR データを取得するには、この関数を呼び出します。  
@@ -390,12 +390,12 @@ void GetObjectDescriptorData(
  OLE 項目のサイズ。 NULL にすることができます。  
   
  *lpStgMedium*  
- ポインター、 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) OLE アイテムの CF_OBJECTDESCRIPTOR データを受け取る構造体。  
+ ポインター、 [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) OLE アイテムの CF_OBJECTDESCRIPTOR データを受け取る構造体。  
   
 ### <a name="remarks"></a>Remarks  
  情報は、コピー、`STGMEDIUM`によって示される構造*lpStgMedium*します。 この形式には、貼り付け ダイアログに必要な情報が含まれています。  
   
- 詳細については、次を参照してください。 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) Windows SDK に含まれています。  
   
 ##  <a name="isconnected"></a>  COleServerItem::IsConnected  
  OLE 項目が接続されているかどうかには、この関数を呼び出します。  
@@ -476,14 +476,14 @@ virtual void OnDoVerb(LONG iVerb);
 |- 2|別のウィンドウで項目を編集します。|OLEIVERB_OPEN|  
 |- 3|アイテムを非表示します。|OLEIVERB_HIDE|  
   
- -1 という値は、通常、他の動詞のエイリアスです。 編集のオープンがサポートされていない場合は、-1 と同じ効果が-2。 追加の値を参照してください。 [IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) Windows SDK に含まれています。  
+ -1 という値は、通常、他の動詞のエイリアスです。 編集のオープンがサポートされていない場合は、-1 と同じ効果が-2。 追加の値を参照してください。 [IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) Windows SDK に含まれています。  
   
 ### <a name="remarks"></a>Remarks  
  場合は、コンテナー アプリケーションは、Microsoft Foundation Class ライブラリで書き込まれましたが、この関数を呼び出すときに、 [COleClientItem::Activate](../../mfc/reference/coleclientitem-class.md#activate)メンバー関数は、対応する`COleClientItem`オブジェクトが呼び出されます。 既定の実装、 [OnShow](#onshow)主動詞またはでが指定されている場合、メンバー関数[OnOpen](#onopen)セカンダリ動詞または OLEIVERB_OPEN が指定されている場合と[OnHide](#onhide)は場合。 既定の実装`OnShow`場合*iVerb*上に示した動詞のいずれかではありません。  
   
  主動詞は、アイテムを表示しない場合は、この関数をオーバーライドします。 たとえば、項目が録音その主動詞が再生の場合は、項目を再生するサーバー アプリケーションを表示する必要はありません。  
   
- 詳細については、次を参照してください。 [IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) Windows SDK に含まれています。  
   
 ##  <a name="ondraw"></a>  :Ondraw  
  OLE 項目をメタファイルに表示するためにフレームワークによって呼び出されます。  
@@ -631,7 +631,7 @@ virtual BOOL OnInitFromData(
 ### <a name="remarks"></a>Remarks  
  場合*bCreation*が true の場合、コンテナーが現在の選択に基づく挿入の新しいオブジェクトを実装している場合、この関数が呼び出されます。 選択したデータは、新しい OLE 項目を作成するときに使用されます。 などのときのスプレッドシート プログラムでのセルの範囲を選択して、グラフを作成し、新しいオブジェクトの挿入を使用してに基づいて選択範囲の値。 既定の実装では、何も行われません。 によって提供されるものと、許容される形式を選択するには、この関数をオーバーライド*pDataObject*と提供されたデータに基づく OLE 項目を初期化します。 これは、高度なオーバーライド可能な。  
   
- 詳細については、次を参照してください。 [IOleObject::InitFromData](http://msdn.microsoft.com/library/windows/desktop/ms688510) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IOleObject::InitFromData](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-initfromdata) Windows SDK に含まれています。  
   
 ##  <a name="onopen"></a>  COleServerItem::OnOpen  
  配置ではなく、サーバー アプリケーションの別のインスタンスで OLE 項目を表示するためにフレームワークによって呼び出されます。  
@@ -645,7 +645,7 @@ virtual void OnOpen();
   
  OLE 項目を開くときに、特別な処理を実行する場合は、この関数をオーバーライドします。 これは、開かれたときのリンクを選択範囲を設定するリンクされた項目に共通します。  
   
- 詳細については、次を参照してください。 [IOleClientSite::OnShowWindow](http://msdn.microsoft.com/library/windows/desktop/ms688658) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IOleClientSite::OnShowWindow](/windows/desktop/api/oleidl/nf-oleidl-ioleclientsite-onshowwindow) Windows SDK に含まれています。  
   
 ##  <a name="onqueryupdateitems"></a>  COleServerItem::OnQueryUpdateItems  
  現在のサーバーのドキュメントにリンク項目が最新でないかどうかを判断するためにフレームワークによって呼び出されます。  
@@ -671,10 +671,10 @@ virtual BOOL OnRenderData(
   
 ### <a name="parameters"></a>パラメーター  
  *lpFormatEtc*  
- 指す、 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)情報が要求された形式を指定します。  
+ 指す、 [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)情報が要求された形式を指定します。  
   
  *lpStgMedium*  
- 指す、 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)データが返される構造体。  
+ 指す、 [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)データが返される構造体。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -686,7 +686,7 @@ virtual BOOL OnRenderData(
   
  これは、高度なオーバーライド可能な。 要求された形式および中規模のデータを提供するには、この関数をオーバーライドします。 データによっては、代わりにこの関数の他のバージョンの 1 つをオーバーライドすることがあります。 データが小さく、固定サイズの場合は、オーバーライド`OnRenderGlobalData`します。 データは、ファイルでは、または可変サイズは、オーバーライド`OnRenderFileData`します。  
   
- 詳細については、次を参照してください。 [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431)、 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)、 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)、と[TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata)、 [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)、 [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)、と[TYMED](/windows/desktop/api/objidl/ne-objidl-tagtymed) Windows SDK に含まれています。  
   
 ##  <a name="onrenderfiledata"></a>  COleServerItem::OnRenderFileData  
  ファイルのストレージ メディアは、指定された形式でデータを取得するためにフレームワークによって呼び出されます。  
@@ -699,7 +699,7 @@ virtual BOOL OnRenderFileData(
   
 ### <a name="parameters"></a>パラメーター  
  *lpFormatEtc*  
- 指す、 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)情報が要求された形式を指定します。  
+ 指す、 [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)情報が要求された形式を指定します。  
   
  *pFile*  
  指す、`CFile`データがレンダリングされるオブジェクト。  
@@ -712,7 +712,7 @@ virtual BOOL OnRenderFileData(
   
  これは、高度なオーバーライド可能な。 要求された形式および中規模のデータを提供するには、この関数をオーバーライドします。 データによっては、代わりにこの関数の他のバージョンの 1 つをオーバーライドする可能性があります。 複数のストレージ メディアを処理する場合は、オーバーライド[は](#onrenderdata)します。 データは、ファイルでは、または可変サイズは、オーバーライド[可変](#onrenderfiledata)します。  
   
- 詳細については、次を参照してください。 [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431)と[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata)と[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK に含まれています。  
   
 ##  <a name="onrenderglobaldata"></a>  COleServerItem::OnRenderGlobalData  
  指定したストレージ メディアがグローバル メモリに指定された形式でデータを取得するためにフレームワークによって呼び出されます。  
@@ -725,7 +725,7 @@ virtual BOOL OnRenderGlobalData(
   
 ### <a name="parameters"></a>パラメーター  
  *lpFormatEtc*  
- 指す、 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)情報が要求された形式を指定します。  
+ 指す、 [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)情報が要求された形式を指定します。  
   
  *phGlobal*  
  データが返されるグローバル メモリ ハンドルへのポインター。 メモリが割り当てられていない場合、このパラメーターは NULL を指定できます。  
@@ -740,7 +740,7 @@ virtual BOOL OnRenderGlobalData(
   
  これは、高度なオーバーライド可能な。 要求された形式および中規模のデータを提供するには、この関数をオーバーライドします。 データによっては、代わりにこの関数の他のバージョンの 1 つをオーバーライドすることがあります。 複数のストレージ メディアを処理する場合は、オーバーライド[は](#onrenderdata)します。 データは、ファイルでは、または可変サイズは、オーバーライド[可変](#onrenderfiledata)します。  
   
- 詳細については、次を参照してください。 [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431)と[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata)と[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK に含まれています。  
   
 ##  <a name="onsetcolorscheme"></a>  COleServerItem::OnSetColorScheme  
  OLE 項目を編集するときに使用するカラー パレットを指定するためにフレームワークによって呼び出されます。  
@@ -751,15 +751,15 @@ virtual BOOL OnSetColorScheme(const LOGPALETTE* lpLogPalette);
   
 ### <a name="parameters"></a>パラメーター  
  *lpLogPalette*  
- Windows へのポインター[保持](http://msdn.microsoft.com/library/windows/desktop/dd145040)構造体。  
+ Windows へのポインター[保持](/windows/desktop/api/wingdi/ns-wingdi-taglogpalette)構造体。  
   
 ### <a name="return-value"></a>戻り値  
  カラー パレットを使用する場合は 0 以外それ以外の場合 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- この関数が時に呼び出される場合は、コンテナー アプリケーションは、Microsoft Foundation Class ライブラリを使用して記述されました、 [IOleObject::SetColorScheme](http://msdn.microsoft.com/library/windows/desktop/ms683971)関数に対応する`COleClientItem`オブジェクトが呼び出されます。 既定の実装では、FALSE を返します。 推奨パレットを使用する場合は、この関数をオーバーライドします。 サーバー アプリケーションでは、推奨パレットを使用する必要はありません。  
+ この関数が時に呼び出される場合は、コンテナー アプリケーションは、Microsoft Foundation Class ライブラリを使用して記述されました、 [IOleObject::SetColorScheme](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setcolorscheme)関数に対応する`COleClientItem`オブジェクトが呼び出されます。 既定の実装では、FALSE を返します。 推奨パレットを使用する場合は、この関数をオーバーライドします。 サーバー アプリケーションでは、推奨パレットを使用する必要はありません。  
   
- 詳細については、次を参照してください。 [IOleObject::SetColorScheme](http://msdn.microsoft.com/library/windows/desktop/ms683971) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IOleObject::SetColorScheme](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setcolorscheme) Windows SDK に含まれています。  
   
 ##  <a name="onsetdata"></a>  COleServerItem::OnSetData  
  OLE 項目のデータを指定されたデータに置き換えるために、フレームワークによって呼び出されます。  
@@ -773,10 +773,10 @@ virtual BOOL OnSetData(
   
 ### <a name="parameters"></a>パラメーター  
  *lpFormatEtc*  
- ポインターを[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)データの形式を指定します。  
+ ポインターを[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)データの形式を指定します。  
   
  *lpStgMedium*  
- ポインターを[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)データが存在する構造体します。  
+ ポインターを[STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)データが存在する構造体します。  
   
  *bRelease*  
  関数呼び出しの完了後、ストレージ メディアの所有権を持っているユーザーを示します。 呼び出し元は、ストレージ メディアの代わりに割り当てられたリソースを解放するため担当するユーザーを決定します。 呼び出し元は設定することによって*bRelease*します。 場合*bRelease*が 0 以外の場合、サーバーのアイテムは所有権を取得、使用が完了したら、メディアを解放します。 ときに*bRelease* 0 は、呼び出し元が所有権を保持およびサーバー項目がストレージ メディアを使用して、呼び出しの期間に対してのみです。  
@@ -785,11 +785,11 @@ virtual BOOL OnSetData(
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 正常に取得するまで、サーバー項目によるデータの所有権はなりません。 これは所有権を取得できない場合は 0 を返します。 呼び出すことによってストレージ メディアを解放、データ ソースに所有権がある場合は、パラメーター、 [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491)関数。  
+ 正常に取得するまで、サーバー項目によるデータの所有権はなりません。 これは所有権を取得できない場合は 0 を返します。 呼び出すことによってストレージ メディアを解放、データ ソースに所有権がある場合は、パラメーター、 [ReleaseStgMedium](/windows/desktop/api/ole2/nf-ole2-releasestgmedium)関数。  
   
  既定の実装では、何も行われません。 OLE 項目のデータを指定されたデータに置き換えるには、この関数をオーバーライドします。 これは、高度なオーバーライド可能な。  
   
- 詳細については、次を参照してください。 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)、 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)、と[ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)、 [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)、と[ReleaseStgMedium](/windows/desktop/api/ole2/nf-ole2-releasestgmedium) Windows SDK に含まれています。  
   
 ##  <a name="onsetextent"></a>  COleServerItem::OnSetExtent  
  OLE 項目領域の量は、コンテナーのドキュメントで使用することを確認するためにフレームワークによって呼び出されます。  

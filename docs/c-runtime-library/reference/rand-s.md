@@ -37,16 +37,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8407848db8f442324127df8d7267a5350c077b2f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c75b2988dd00d8141c25e67c29bcc0b082270ffe
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405758"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210163"
 ---
 # <a name="rands"></a>rand_s
 
-疑似乱数を生成します。 これは、関数のバージョンがより安全な[rand](rand.md)のセキュリティが強化された」の説明に従って[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)します。
+疑似乱数を生成します。 これは、関数のバージョンがより安全な[rand](rand.md)、セキュリティが強化された」の説明に従って[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)します。
 
 ## <a name="syntax"></a>構文
 
@@ -61,24 +61,24 @@ errno_t rand_s(unsigned int* randomValue);
 
 ## <a name="return-value"></a>戻り値
 
-正常に終了した場合は 0 を返し、それ以外の場合はエラー コードを返します。 場合は入力ポインター_確率_null ポインター」の説明に従って、関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行は継続許可されたかどうか、関数を返します**EINVAL**設定と**errno**に**EINVAL**です。 その他の何らかの理由で失敗した場合 *_確率_は 0 に設定します。
+正常に終了した場合は 0 を返し、それ以外の場合はエラー コードを返します。 場合、入力ポインター _randomValue_ null ポインターの場合は、」の説明に従って、関数は、無効なパラメーター ハンドラーを呼び出す[パラメーターの検証](../../c-runtime-library/parameter-validation.md)。 かどうかは、引き続き実行が許可された、関数を返します**EINVAL**設定と**errno**に**EINVAL**します。 その他の何らかの理由で、関数が失敗した場合 *_randomValue_は 0 に設定します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Rand_s**関数は、0 ~ の擬似乱数の整数を書き込みます**UINT_MAX**入力ポインターにします。 **Rand_s**関数では、オペレーティング システムを使用して、暗号強度が高い乱数を生成します。 によって生成されたシードを使用していない、 [srand](srand.md)関数によって使用されるランダムな番号シーケンスが影響[rand](rand.md)です。
+**Rand_s**関数は、0 ~ の範囲内で擬似乱数の整数を書き込みます**UINT_MAX**入力ポインターにします。 **Rand_s**関数は、オペレーティング システムを使用して、暗号強度が高い乱数を生成します。 によって生成されたシードを使用しない、 [srand](srand.md)関数で使用されるランダムな番号のシーケンスを影響[rand](rand.md)します。
 
-**Rand_s**関数には、その定数が必要な **_CRT_RAND_S**インクルード ステートメントの宣言するのには、次の例のように、関数の前に定義します。
+**Rand_s**関数には、その定数が必要な **_CRT_RAND_S**インクルード ステートメント、関数を次の例のように、宣言の前に定義します。
 
 ```C
 #define _CRT_RAND_S
 #include <stdlib.h>
 ```
 
-**rand_s**によって異なります、 [RtlGenRandom](http://msdn.microsoft.com/library/windows/desktop/aa387694) API で、Windows XP で利用およびそれ以降は、のみです。
+**rand_s**によって異なります、 [rtlgenrandom で](/windows/desktop/api/ntsecapi/nf-ntsecapi-rtlgenrandom)API で、Windows XP で使用でき、後でのみです。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**rand_s**|\<stdlib.h>|
 
