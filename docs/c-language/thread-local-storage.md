@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c98cca6afb096cc9b5e88fe31aa949621d326c98
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6d6422162d0497ec97c3803e0aace298536cb87a
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390025"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131740"
 ---
 # <a name="thread-local-storage"></a>スレッド ローカル ストレージ
 **Microsoft 固有の仕様**  
   
- スレッド ローカル ストレージ (TLS) は、指定されたマルチスレッド プロセスの各スレッドが、スレッド固有のデータを格納するための場所を割り当てる手段です。 標準のマルチスレッド プログラムでは、データは特定のプロセスのすべてのスレッド間で共有されますが、スレッド ローカル ストレージはスレッドごとのデータを割り当てるための機能です。 スレッドの詳細については、[!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] の「[Processes and Threads (プロセスとスレッド)](http://msdn.microsoft.com/library/windows/desktop/ms684841)」をご覧ください。  
+ スレッド ローカル ストレージ (TLS) は、指定されたマルチスレッド プロセスの各スレッドが、スレッド固有のデータを格納するための場所を割り当てる手段です。 標準のマルチスレッド プログラムでは、データは特定のプロセスのすべてのスレッド間で共有されますが、スレッド ローカル ストレージはスレッドごとのデータを割り当てるための機能です。 スレッドの詳細については、Windows SDK の「[Processes and Threads](/windows/desktop/ProcThread/processes-and-threads)」 (プロセスとスレッド) をご覧ください。  
   
  Microsoft C 言語には、スレッド ローカル変数を宣言するために __declspec キーワードと共に使用される、拡張ストレージ クラスの属性、スレッドが含まれています。 たとえば、次に示すコードは、整数型のスレッド ローカル変数を宣言して特定の値に初期化します。  
   
