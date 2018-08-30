@@ -126,12 +126,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ff939abc93c38be198bf6edb21cbb3e3dc9fbaa
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 6a1c3e55f6045b0096ef614e1d3b4b054db60265
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42900853"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202396"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 
@@ -837,7 +837,7 @@ virtual HRESULT OnHyperlinkClick(const CString& strHref);
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドを呼び出す[ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153)前に、S_OK を返します。
+このメソッドを呼び出す[ShellExecute](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea)前に、S_OK を返します。
 
 カスタム動作を実装する派生クラスでこのメソッドをオーバーライドします。
 
@@ -1619,7 +1619,7 @@ HRESULT TaskDialogCallback(
 |TDN_CREATED|使用しません。|使用しません。|
 |TDN_NAVIGATED|使用しません。|使用しません。|
 |TDN_BUTTON_CLICKED|コマンド ボタン コントロールの id。|使用しません。|
-|TDN_HYPERLINK_CLICKED|使用しません。|A [LPCWSTR](http://msdn.microsoft.com/library/windows/desktop/aa383751)のリンクを含む構造体。|
+|TDN_HYPERLINK_CLICKED|使用しません。|A [LPCWSTR](/windows/desktop/WinProg/windows-data-types)のリンクを含む構造体。|
 |TDN_TIMER|以降のミリ秒単位の時間、`CTaskDialog`が作成されたか、タイマーをリセットします。|使用しません。|
 |TDN_DESTROYED|使用しません。|使用しません。|
 |TDN_RADIO_BUTTON_CLICKED|ラジオ ボタンの id。|使用しません。|

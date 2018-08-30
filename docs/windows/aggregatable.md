@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 66c85999e70e505176700ecaac69b75048ce2422
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a9d65f77126ceb4268d41610c6d5fe3a07968d02
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595243"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200569"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -49,7 +49,7 @@ COM オブジェクトを集計できるかを示すパラメーター:
 
 ## <a name="remarks"></a>Remarks
 
-**集約可能**C++ 属性と同じ機能を持つ、[集約可能](http://msdn.microsoft.com/library/windows/desktop/aa366721)MIDL 属性。 つまり、コンパイラが合格する、**集約可能**経由の属性は、生成された .idl ファイルをします。
+**集約可能**C++ 属性と同じ機能を持つ、[集約可能](/windows/desktop/Midl/aggregatable)MIDL 属性。 つまり、コンパイラが合格する、**集約可能**経由の属性は、生成された .idl ファイルをします。
 
 この属性を使用するには、 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)、または [vi_progid](../windows/vi-progid.md) 属性 (または、これらのいずれかを意味する別の属性) も同じ要素に適用する必要があります。 いずれか 1 つの属性を使用すると、他の 2 つも自動的に適用されます。 たとえば場合、`progid`が適用される`vi_progid`と`coclass`も適用されます。
 
@@ -97,4 +97,4 @@ class CMyClass {};
 [IDL 属性](../windows/idl-attributes.md)  
 [クラス属性](../windows/class-attributes.md)  
 [Typedef、Enum、Union、および Struct 型の属性](../windows/typedef-enum-union-and-struct-attributes.md)  
-[集計](http://msdn.microsoft.com/library/windows/desktop/ms686558)  
+[集計](/windows/desktop/com/aggregation)  

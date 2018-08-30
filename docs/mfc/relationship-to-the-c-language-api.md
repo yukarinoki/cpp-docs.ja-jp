@@ -1,5 +1,5 @@
 ---
-title: C 言語 API との関係 |Microsoft ドキュメント
+title: C 言語 API へのリレーションシップ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,20 +20,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d06c4adfa5493929a24c233fa923451c7bf0f95
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d0bb7aa4f647ceeb61c20cccd626d9da999b241
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379230"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200113"
 ---
 # <a name="relationship-to-the-c-language-api"></a>C 言語 API との関係
-Windows の他のクラス ライブラリとは別に、Microsoft Foundation Class (MFC) ライブラリを設定する特性の 1 つは、C 言語で記述された Windows API に非常に類似のマッピングです。 さらを混在させることが呼び出し、クラス ライブラリを自由に Windows API に直接の呼び出しをします。 この直接アクセス、ただしを意味しませんクラスが対象となる API の完全な置換です。 開発者がなど一部の Windows 関数への直接呼び出しを行う場合によってはまだ必要があります[以前](http://msdn.microsoft.com/library/windows/desktop/ms648393)と[問題](http://msdn.microsoft.com/library/windows/desktop/ms724385)、例を示します。 Windows の機能は、する作業は、明確な利点がある場合にのみ、クラス メンバー関数によってラップされます。  
+Windows の他のクラス ライブラリとは別に、Microsoft Foundation Class (MFC) ライブラリを設定する特性の 1 つは、C 言語で記述された Windows API に非常に閉じるマッピングです。 さらを混在させることがクラス ライブラリの呼び出しを自由に Windows API を直接呼び出すとします。 この直接アクセスは、ただし、限りませんクラスは、その api に完全に置き換えること。 開発者がなど一部の Windows 関数への直接呼び出しを行う場合によってはまだ必要があります[以前](/windows/desktop/api/winuser/nf-winuser-setcursor)と[GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385)など。 そう明確な利点がある場合にのみ Windows 関数がクラス メンバー関数でラップされます。  
   
- ネイティブの Windows 関数呼び出しを行う必要がある場合があります、ため、C 言語の Windows API のドキュメントへのアクセスが必要です。 このドキュメントは、Microsoft Visual C に含まれています。  
+ ネイティブ Windows 関数の呼び出しを行う必要がある場合があります、ために、C 言語の Windows API のドキュメントへのアクセスが必要です。 このドキュメントは、Microsoft Visual C に含まれています。  
   
 > [!NOTE]
->  MFC ライブラリのフレームワークの動作方法の詳細については、次を参照してください。[クラスを Windows アプリケーションの作成に使用する](../mfc/using-the-classes-to-write-applications-for-windows.md)です。  
+>  MFC ライブラリのフレームワークの動作方法の概要については、次を参照してください。 [Windows のアプリケーションを記述するクラスを使用して](../mfc/using-the-classes-to-write-applications-for-windows.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [一般的なクラス デザインの考え方](../mfc/general-class-design-philosophy.md)

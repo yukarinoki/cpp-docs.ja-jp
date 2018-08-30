@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80fdbe14539c5b32c2da80a5de75fbe0a2b64241
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a23951697a5f736305734c6d49044a2e33ac4783
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39409127"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200494"
 ---
 # <a name="indirection-operator-"></a>間接演算子: *
 ## <a name="syntax"></a>構文  
@@ -32,7 +32,7 @@ ms.locfileid: "39409127"
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 単項間接演算子 (**\***); のポインターを逆参照、ポインター値を左辺値に変換します。 間接演算子のオペランドを型へのポインターにすることはできません。 間接式の結果は、ポインター型の派生元の型です。 使用、 **\*** このコンテキストでは演算子が乗算には、二項演算子としての意味とは異なります。  
+ 単項間接演算子 (<strong>\*</strong>); のポインターを逆参照、ポインター値を左辺値に変換します。 間接演算子のオペランドを型へのポインターにすることはできません。 間接式の結果は、ポインター型の派生元の型です。 使用、 <strong>\*</strong>このコンテキストでは演算子が乗算には、二項演算子としての意味とは異なります。  
   
  オペランドが関数を指している場合、結果は関数指定子になります。 格納場所を指している場合、結果は格納場所を指定する左辺値になります。  
   

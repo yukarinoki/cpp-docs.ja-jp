@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a1e7abe1fbbf3667999852dd1810a8a337cac79
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 3ab0e457f90f3130295d287ae9a32d18ab212d50
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208664"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202604"
 ---
 # <a name="cfiletime-class"></a>CFileTime クラス
 このクラスは、ファイルに関連付けられている日付と時刻の値を管理するためのメソッドを提供します。  
@@ -107,14 +107,14 @@ class CFileTime :  public FILETIME
 |Day|1 時間\*24|  
 |週|1 日\*7|  
   
- **注**作成を記録できるすべてのファイル システムと最終アクセス時刻およびすべてのファイル システム、同じ方法でそれらを記録します。 Windows NT FAT ファイル システム上の例の作成の時間が 10 ミリ秒の解像度、書き込み時間が 2 秒単位の解像度およびアクセス時間が 1 日 (アクセス日) の解像度。 NTFS では、アクセス時間は 1 時間の解像度が。 さらに、FAT ディスク上の時刻を現地時刻に記録するが、NTFS がディスク上の時刻を UTC に記録します。 詳細については、次を参照してください。[ファイル回](http://msdn.microsoft.com/library/windows/desktop/ms724290)します。  
+ **注**作成を記録できるすべてのファイル システムと最終アクセス時刻およびすべてのファイル システム、同じ方法でそれらを記録します。 Windows NT FAT ファイル システム上の例の作成の時間が 10 ミリ秒の解像度、書き込み時間が 2 秒単位の解像度およびアクセス時間が 1 日 (アクセス日) の解像度。 NTFS では、アクセス時間は 1 時間の解像度が。 さらに、FAT ディスク上の時刻を現地時刻に記録するが、NTFS がディスク上の時刻を UTC に記録します。 詳細については、次を参照してください。[ファイル回](/windows/desktop/SysInfo/file-times)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `FILETIME`  
   
  `CFileTime`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atltime.h  
   
 ##  <a name="cfiletime"></a>  CFileTime::CFileTime  
@@ -128,7 +128,7 @@ CFileTime(ULONGLONG nTime) throw();
   
 ### <a name="parameters"></a>パラメーター  
  *ft*  
- A [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)構造体。  
+ A [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)構造体。  
   
  *nTime*  
  日付と時間を 64 ビット値として表されます。  
@@ -418,7 +418,7 @@ static const ULONGLONG Week = Day* 7;
  例をご覧ください[CFileTime::Millisecond](#millisecond)します。  
   
 ## <a name="see-also"></a>関連項目  
- [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)   
+ [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)   
  [CFileTimeSpan クラス](../../atl-mfc-shared/reference/cfiletimespan-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [ATL/MFC 共有クラス](../../atl-mfc-shared/atl-mfc-shared-classes.md)

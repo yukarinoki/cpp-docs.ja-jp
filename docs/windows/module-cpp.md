@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6e25f33e882769219200e6b9a6f8a0949a01d661
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a119ebcccea3881d7b595e0581e23f53c656b91c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593358"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200219"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -73,7 +73,7 @@ ms.locfileid: "42593358"
 ライブラリの一意の ID です。 このパラメーターを省略した場合、ライブラリの ID は自動的に生成されます。 取得する必要があります、 *uuid* 、識別子を使用して行うことができます、ライブラリ ブロックの **_ _uuidof (** *libraryname* **)** します。
 
 *lcid*  
-ローカリゼーション パラメーターです。 詳細については、「 [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) 」を参照してください。
+ローカリゼーション パラメーターです。 参照してください[lcid](/windows/desktop/Midl/lcid)詳細についてはします。
 
 *コントロール*(省略可能)  
 ライブラリ内のすべてのコクラスがコントロールであることを指定します。
@@ -82,7 +82,7 @@ ms.locfileid: "42593358"
 タイプ ライブラリを指定します。
 
 *helpstringdll* (省略可能)  
-ドキュメントの文字列を検索する .dll ファイルの名前を設定します。 詳細については、「 [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) 」を参照してください。
+ドキュメントの文字列を検索する .dll ファイルの名前を設定します。 参照してください[helpstringdll](/windows/desktop/Midl/helpstringdll)詳細についてはします。
 
 *helpfile* (省略可能)  
 名前、**ヘルプ**タイプ ライブラリ ファイル。
@@ -94,10 +94,10 @@ ms.locfileid: "42593358"
 詳細については、「 [helpstringcontext](../windows/helpstringcontext.md) 」を参照してください。
 
 *非表示*(省略可能)  
-ライブラリ全体が表示されないようにします。 これは、コントロールと共に使用します。 ホストは、拡張プロパティを使用し、コントロールをラップする新しいタイプ ライブラリを作成する必要があります。 詳細については、「 [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) 」の MIDL 属性に関する説明を参照してください。
+ライブラリ全体が表示されないようにします。 これは、コントロールと共に使用します。 ホストは、拡張プロパティを使用し、コントロールをラップする新しいタイプ ライブラリを作成する必要があります。 参照してください、[隠し](/windows/desktop/Midl/hidden)MIDL 属性に関する詳細について説明します。
 
 *制限付き*(省略可能)  
-ライブラリのメンバーは、任意に呼び出すことはできません。 詳細については、「 [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) 」の MIDL 属性に関する説明を参照してください。
+ライブラリのメンバーは、任意に呼び出すことはできません。 参照してください、[制限](/windows/desktop/Midl/restricted)MIDL 属性に関する詳細について説明します。
 
 *カスタム*(省略可能)  
 1 つ以上の属性です。これは、 [custom](../windows/custom-cpp.md) 属性と似ています。 最初のパラメーター*カスタム*属性の GUID です。 例えば:
@@ -124,15 +124,15 @@ DLL、実行可能ファイルまたはサービスの登録に使用される .
 
 - `type` = **dll**
 
-   [CAtlDllModuleT](../atl/reference/catldllmodulet-class.md) は COM サーバーに必要な基本クラスと標準の DLL エントリ ポイントとして使用されます。 これらのエントリ ポイントは、 [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583)、 [DllRegisterServer](http://msdn.microsoft.com/library/windows/desktop/ms682162)、 [DllUnRegisterServer](http://msdn.microsoft.com/library/windows/desktop/ms691457)、 [DllCanUnloadNow](http://msdn.microsoft.com/library/windows/desktop/ms690368)、および [DllGetClassObject](http://msdn.microsoft.com/library/windows/desktop/dd797891)です。
+   [CAtlDllModuleT](../atl/reference/catldllmodulet-class.md) は COM サーバーに必要な基本クラスと標準の DLL エントリ ポイントとして使用されます。 これらのエントリ ポイントは[DllMain](/windows/desktop/Dlls/dllmain)、 [DllRegisterServer](https://msdn.microsoft.com/library/windows/desktop/ms682162)、 [DllUnRegisterServer](https://msdn.microsoft.com/library/windows/desktop/ms691457)、 [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow)、および[DllGetClassObject](https://msdn.microsoft.com/library/windows/desktop/dd797891)します。
 
 - `type` = **exe**
 
-   [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) は、基本クラスおよび標準の実行可能ファイルのエントリ ポイント [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559)として使用されます。
+   [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) 、基本クラスおよび標準の実行可能ファイルのエントリ ポイントとして提供される[WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)します。
 
 - `type` = **service**
 
-   [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) は、基本クラスおよび標準の実行可能ファイルのエントリ ポイント [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559)として使用されます。
+   [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) 、基本クラスおよび標準の実行可能ファイルのエントリ ポイントとして提供される[WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)します。
 
 - `type` = **unspecified**
 
@@ -193,7 +193,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 [スタンドアロン属性](../windows/stand-alone-attributes.md)  
 [Typedef、Enum、Union、および Struct 型の属性](../windows/typedef-enum-union-and-struct-attributes.md)  
 [usesgetlasterror](../windows/usesgetlasterror.md)  
-[ライブラリ](http://msdn.microsoft.com/library/windows/desktop/aa367069)  
+[ライブラリ](/windows/desktop/Midl/library)  
 [helpcontext](../windows/helpcontext.md)  
 [helpstring](../windows/helpstring.md)  
 [helpfile](../windows/helpfile.md)  

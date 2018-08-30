@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 28501c0105ce9d62c72dc9013b881029f4bc8bfb
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: faa2a3be7260eecb16599db967336bcb7b774c99
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590667"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200127"
 ---
 # <a name="switchtype"></a>switch_type
 
@@ -43,9 +43,9 @@ type
 
 ## <a name="remarks"></a>Remarks
 
-**Switch_type** C++ 属性と同じ機能を持つ、 [switch_type](http://msdn.microsoft.com/library/windows/desktop/aa367276) MIDL 属性。
+**Switch_type** C++ 属性と同じ機能を持つ、 [switch_type](/windows/desktop/Midl/switch-type) MIDL 属性。
 
-C++ 属性をサポートしていない[共用体をカプセル化された](http://msdn.microsoft.com/library/windows/desktop/aa366811)します。 [カプセル化されていない共用体](http://msdn.microsoft.com/library/windows/desktop/aa367119)次の形式でのみサポートされます。
+C++ 属性をサポートしていない[共用体をカプセル化された](/windows/desktop/Midl/encapsulated-unions)します。 [カプセル化されていない共用体](/windows/desktop/Midl/nonencapsulated-unions)次の形式でのみサポートされます。
 
 ```cpp
 // cpp_attr_ref_switch_type.cpp

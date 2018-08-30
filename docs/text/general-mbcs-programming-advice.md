@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a23ed1283241d3582c0bd548553cb2fed9a47fa
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 532f1e060398b20d4714f461c2d687031756c910
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596796"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201123"
 ---
 # <a name="general-mbcs-programming-advice"></a>MBCS プログラミングにおける一般的なアドバイス
 次のヒントを使用します。  
@@ -41,7 +41,7 @@ ms.locfileid: "42596796"
   
 -   一部のフォントは、すべてのシステムで使用されていないため、このプロパティの値は慎重に、アプリケーションのフォントを選択します。  
   
--   使用して、ダイアログ ボックスのフォントを選択すると、 [MS Shell Dlg](http://msdn.microsoft.com/library/windows/desktop/dd374112) MS Sans Serif」または「Helvetica の代わりにします。 MS Shell Dlg は、ダイアログ ボックスを作成する前に、システムによって、適切なフォントに置き換えが。 MS Shell Dlg を使うと、このフォントを処理するオペレーティング システムのすべての変更は自動的に利用できることができます。 (MFC 置き換えます MS Shell Dlg DEFAULT_GUI_FONT またはシステム フォント Windows 95、Windows 98、および Windows NT 4 のこれらのシステムは MS Shell Dlg が正しく処理されないためです。)  
+-   使用して、ダイアログ ボックスのフォントを選択すると、 [MS Shell Dlg](/windows/desktop/Intl/using-ms-shell-dlg-and-ms-shell-dlg-2) MS Sans Serif」または「Helvetica の代わりにします。 MS Shell Dlg は、ダイアログ ボックスを作成する前に、システムによって、適切なフォントに置き換えが。 MS Shell Dlg を使うと、このフォントを処理するオペレーティング システムのすべての変更は自動的に利用できることができます。 (MFC 置き換えます MS Shell Dlg DEFAULT_GUI_FONT またはシステム フォント Windows 95、Windows 98、および Windows NT 4 のこれらのシステムは MS Shell Dlg が正しく処理されないためです。)  
   
 -   アプリケーションを設計するときは、文字列をローカライズすることができますを決定します。 不明な場合に、すべての文字列をローカライズすることを想定しています。 そのため、混在させないでくださいローカライズ可能な文字列のことができません。  
   
