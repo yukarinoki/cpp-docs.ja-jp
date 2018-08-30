@@ -53,12 +53,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa7ccf2db8447b51757f5c8a90b2e9a5b6558929
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d31ebd1e4df65ef35449c374a5cbb99b878f00a6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415794"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196785"
 ---
 # <a name="vcprintf-vcprintfl-vcwprintf-vcwprintfl"></a>_vcprintf、_vcprintf_l、_vcwprintf、_vcwprintf_l
 
@@ -105,16 +105,16 @@ int _vcwprintf_l(
 
 ## <a name="return-value"></a>戻り値
 
-書き込まれた文字数。出力エラーが発生した場合は負の値を返します。 場合*形式*null ポインターで説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL**し、-1 が返されます。
+書き込まれた文字数。出力エラーが発生した場合は負の値を返します。 場合*形式*null ポインターの場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL** -1 が返されます。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-これらの各関数は、引数リストへのポインターを使用して、指定されたデータを書式化してコンソールに書き込みます。 **_vcwprintf**のワイド文字バージョンは、 **_vcprintf**です。 引数としてワイド文字列を使用します。
+これらの各関数は、引数リストへのポインターを使用して、指定されたデータを書式化してコンソールに書き込みます。 **_vcwprintf**のワイド文字バージョンは、 **_vcprintf**します。 引数としてワイド文字列を使用します。
 
 これらの関数のバージョン、 **_l**現在のロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
 
 > [!IMPORTANT]
-> *format* にユーザー定義の文字列を指定しないでください。 詳しくは、「 [バッファー オーバーランの回避](http://msdn.microsoft.com/library/windows/desktop/ms717795)」をご覧ください。
+> *format* にユーザー定義の文字列を指定しないでください。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -125,7 +125,7 @@ int _vcwprintf_l(
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|省略可能なヘッダー|
+|ルーチンによって返される値|必須ヘッダー|省略可能なヘッダー|
 |-------------|---------------------|----------------------|
 |**_vcprintf**、 **_vcprintf_l**|\<conio.h> および \<stdarg.h>|\<varargs.h>*|
 |**_vcwprintf**、 **_vcwprintf_l**|\<conio.h> または \<wchar.h>、および \<stdarg.h>|\<varargs.h>*|

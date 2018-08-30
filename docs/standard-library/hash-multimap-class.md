@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efebe74f0f2735b9f32b0114a3db68d0839b90f2
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 857c0614288240aeaf3001d03aa5d6372ccee1c9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965010"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196306"
 ---
 # <a name="hashmultimap-class"></a>hash_multimap クラス
 
@@ -122,13 +122,17 @@ class hash_multimap
 
 ### <a name="parameters"></a>パラメーター
 
-*キー* hash_multimap に格納されるキー データを入力します。
+*Key*<br/>
+ hash_multimap に格納されるキーのデータ型。
 
-*型*hash_multimap に格納される要素のデータを入力します。
+*Type*<br/>
+ hash_multimap に格納される要素のデータ型。
 
-*Traits*クラスの 1 つ、2 つの関数オブジェクトを含む型*Traits*相対的な順序と単項述語のマッピングのキーであるハッシュ関数を決定する並べ替えキーとして 2 つの要素の値を比較することができます型の符号なし整数に要素の値`size_t`します。 この引数は省略可能であり、既定値は `hash_compare<Key, less<Key>>` です。
+*Traits*<br/>
+ クラスの 1 つ、2 つの関数オブジェクトを含む型*Traits*相対的な順序と、ハッシュ関数は、単項述語マッピングする要素のキーの値を決定する並べ替えキーとして 2 つの要素の値を比較することができます符号なし整数型の`size_t`します。 この引数は省略可能であり、既定値は `hash_compare<Key, less<Key>>` です。
 
-*アロケーター* hash_multimap の割り当てとメモリの解放に関する詳細をカプセル化する格納されたアロケーター オブジェクトを表す型です。 この引数は省略可能であり、既定値は `allocator<pair <const Key, Type>>` です。
+*アロケーター*<br/>
+ メモリの hash_multimap の割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値は `allocator<pair <const Key, Type>>` です。
 
 ## <a name="remarks"></a>Remarks
 
@@ -222,7 +226,7 @@ hash_multimap クラスに用意されている反復子は双方向反復子で
 |-|-|
 |[hash_multimap::operator=](#op_eq)|別の `hash_multimap` のコピーで `hash_multimap` の要素を置き換えます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<hash_map>
 
@@ -474,11 +478,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 `const_iterator` 型で要素の値を変更することはできません。
 
-`const_iterator`のオブジェクトを指しますの hash_multimap によって定義された[value_type](#value_type)、これは`pair` *\< ***const Key, Type*** >*. キーの値はペアの 1 番目のメンバー、マップされた要素の値はペアの 2 番目のメンバーを介して取得できます。
+`const_iterator`のオブジェクトを指しますの hash_multimap によって定義された[value_type](#value_type)、これは`pair<const Key, Type>`します。 キーの値はペアの 1 番目のメンバー、マップされた要素の値はペアの 2 番目のメンバーを介して取得できます。
 
 逆参照する、 `const_iterator` `cIter` hash_multimap 内の要素を指す、`->`演算子。
 
-要素のキーの値にアクセスするには、使用`cIter`  -> **最初**と同等 (\* `cIter`)。 **最初**します。 要素のマップされたデータの値にアクセスするには、使用`cIter`  ->  **2 番目**と同等 (\* `cIter`)。 **最初**します。
+要素のキーの値にアクセスするには、使用`cIter->first`と同等`(*cIter).first`します。 要素のマップされたデータの値にアクセスするには、使用`cIter->second`と同等`(*cIter).second`します。
 
 ### <a name="example"></a>例
 
@@ -572,11 +576,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 `const_reverse_iterator` 型は要素の値を変更できず、逆の順序で hash_multimap を反復処理するために使用します。
 
-hash_multimap によって定義される `const_reverse_iterator` は、[value_type](#value_type) のオブジェクトを指します。これは `pair`*\<***const Key, Type>** 型で、その最初のメンバーは要素へのキーであり、2 番目のメンバーは要素が保持するデータにマップされています。
+`const_reverse_iterator`のオブジェクトを指しますの hash_multimap によって定義された[value_type](#value_type)、これは`pair<const Key, Type>`、その最初のメンバーは要素へのキーおよび 2 番目のメンバーは要素が保持するマップされたデータです。
 
 逆参照する、 `const_reverse_iterator` `crIter` hash_multimap 内の要素を指す、`->`演算子。
 
-要素のキーの値にアクセスするには、使用`crIter`  -> **最初**と同等 (\* `crIter`)。 **最初**します。 要素のマップされたデータの値にアクセスするには、使用`crIter`  ->  **2 番目**と同等 (\* `crIter`)。 **最初**します。
+要素のキーの値にアクセスするには、使用`crIter->first`と同等`(*crIter).first`します。 要素のマップされたデータの値にアクセスするには、使用`crIter->second`と同等`(*crIter).second`します。
 
 ### <a name="example"></a>例
 
@@ -595,7 +599,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*照合される hash_multimap の要素のキー。
+*key*<br/>
+ 照合される hash_multimap の要素のキー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1090,7 +1095,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*検索対象の hash_multimap の要素の並べ替えキーと比較される引数キー。
+*key*<br/>
+ 検索対象の hash_multimap 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1180,13 +1186,17 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Where* hash_multimap から削除する要素の位置。
+*_Where*<br/>
+ hash_multimap から削除する要素の位置。
 
-*最初*hash_multimap から削除する最初の要素の位置。
+*first*<br/>
+ hash_multimap から削除する最初の要素の位置。
 
-*最後*hash_multimap から削除する最後の要素の次の位置。
+*last*<br/>
+ hash_multimap から削除する最後の要素の次の位置。
 
-*キー* hash_multimap から削除する要素のキー。
+*key*<br/>
+ hash_multimap から削除する要素のキー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1300,7 +1310,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*検索対象の hash_multimap の要素の並べ替えキーによって照合されるキー。
+*key*<br/>
+ 検索対象の hash_multimap 内の要素の並べ替えキーによって照合されるキー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1750,7 +1761,8 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*検索対象の hash_multimap の要素の並べ替えキーと比較される引数キー。
+*key*<br/>
+ 検索対象の hash_multimap 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2303,7 +2315,8 @@ void swap(hash_multimap& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*を交換する要素を提供する hash_multimap または要素が hash_multimap のものと交換される hash_multimap。
+*right*<br/>
+ 交換する要素を提供する hash_multimap (hash_multimap の要素と要素を交換する hash_multimap)。
 
 ### <a name="remarks"></a>Remarks
 
@@ -2376,7 +2389,8 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*検索対象の hash_multimap の要素の並べ替えキーと比較される引数キー。
+*key*<br/>
+ 検索対象の hash_multimap 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
 

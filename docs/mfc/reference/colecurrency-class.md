@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1077a9567509d98b68a864d7478ab84b94d11054
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 46c12c29fcee310e8bd1d484743b754a830541d7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42541700"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196113"
 ---
 # <a name="colecurrency-class"></a>COleCurrency クラス
 OLE オートメーションで使用される `CURRENCY` データ型をカプセル化します。  
@@ -133,7 +133,7 @@ COleCurrency(
   
 - COleCurrency() コンストラクトを`COleCurrency`オブジェクトの 0 (ゼロ) に初期化します。  
   
-- COleCurrency (`cySrc`) を構築、`COleCurrency`オブジェクトから、[通貨](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)値。  
+- COleCurrency (`cySrc`) を構築、`COleCurrency`オブジェクトから、[通貨](https://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)値。  
   
 - COleCurrency (`curSrc`) を構築、`COleCurrency`既存のオブジェクト`COleCurrency`オブジェクト。 新しいオブジェクトには、ソース オブジェクトと同じ状態があります。  
   
@@ -141,7 +141,7 @@ COleCurrency(
   
 - `COleCurrency(`nUnits`, `nFractionalUnits`) Constructs a `COleCurrency' 指定した数値のコンポーネントからのオブジェクト。 小数部分の絶対値が 10,000 を超える場合は、ユニットに適切な調整が行われます。 部と小数部が符号付き long 値が指定されているに注意してください。  
   
- 詳細については、次を参照してください。、[通貨](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)と[バリアント](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)Windows SDK 内のエントリ。  
+ 詳細については、次を参照してください。、[通貨](https://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)と[バリアント](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)Windows SDK 内のエントリ。  
   
 ### <a name="example"></a>例  
  次の例では、パラメーターの 0 と 2 つのパラメーターのコンス トラクターの効果を示します。  
@@ -230,14 +230,14 @@ enum CurrencyStatus {
  [!code-cpp[NVC_MFCOleContainer#12](../../mfc/codesnippet/cpp/colecurrency-class_3.cpp)]  
   
 ##  <a name="m_cur"></a>  COleCurrency::m_cur  
- 基になる[通貨](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)この構造体`COleCurrency`オブジェクト。  
+ 基になる[通貨](https://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)この構造体`COleCurrency`オブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
   
 > [!CAUTION]
 >  値を変更、`CURRENCY`これの値を変更する構造体のこの関数によって返されたポインターによってアクセス`COleCurrency`オブジェクト。 この状態は変更されません`COleCurrency`オブジェクト。  
   
- 詳細については、次を参照してください。、[通貨](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)Windows SDK 内のエントリ。  
+ 詳細については、次を参照してください。、[通貨](https://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)Windows SDK 内のエントリ。  
   
 ##  <a name="m_status"></a>  COleCurrency::m_status  
  このデータ メンバーの型は、列挙型`CurrencyStatus`、内で定義されている、`COleCurrency`クラス。  
@@ -304,7 +304,7 @@ const COleCurrency& operator=(const COleCurrency& curSrc);
   
 - **演算子 = (** *varSrc* **)** 場合の変換、`VARIANT`値 (または[COleVariant](../../mfc/reference/colevariant-class.md)オブジェクト) の通貨 ( `VT_CY`) は、成功すると、変換後の値はこれにコピーするは`COleCurrency`オブジェクトとその状態が有効に設定されます。 変換が成功すると、ない場合の値、`COleCurrency`オブジェクトが 0 とその状態を無効に設定します。  
   
- 詳細については、次を参照してください。、[通貨](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)と[バリアント](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)Windows SDK 内のエントリ。  
+ 詳細については、次を参照してください。、[通貨](https://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)と[バリアント](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)Windows SDK 内のエントリ。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCOleContainer#15](../../mfc/codesnippet/cpp/colecurrency-class_4.cpp)]  

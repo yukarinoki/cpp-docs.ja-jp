@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60ec526dd8874529b60558f7131c31f0bf4a2d3b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 1fdad6f34fed49ec851f027cba4c53ea08b48902
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961114"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195404"
 ---
 # <a name="ltistreamgt-operators"></a>&lt;istream&gt; 演算子
 
@@ -90,7 +90,7 @@ basic_istream<Elem, Tr>& operator>>(
 
 最大で *N* - 1 の要素を抽出し、_ *Str* から始まる配列にこれらを格納します。 `Istr`. [width](../standard-library/ios-base-class.md#width) が 0 より大きい場合、*N* は `Istr`. **幅**。 それ以外の最大の配列のサイズが`Elem`を宣言することができます。 関数は常に値を格納`Elem()`後、抽出された要素が格納されます。 抽出は、ファイルの最後の早い段階で、値 **Elem**(0) (これは抽出されません) を持つ文字、または [ws](../standard-library/istream-functions.md#ws) によって破棄される任意の要素 (これは抽出されません) で停止します。 関数が要素を抽出しなかった場合、`Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**)。 いずれの場合も、`Istr`. **幅**(0) を返します*Istr*します。
 
-**セキュリティに関する注意**入力ストリームから抽出される null で終わる文字列がコピー先のバッファーのサイズを超えない*str*します。 詳しくは、「 [バッファー オーバーランの回避](http://msdn.microsoft.com/library/windows/desktop/ms717795)」をご覧ください。
+**セキュリティに関する注意**入力ストリームから抽出される null で終わる文字列がコピー先のバッファーのサイズを超えない*str*します。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 下記のテンプレート関数は
 
@@ -110,7 +110,7 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, signed char* str);
 ```
 
-`Istr` >> ( `char`**\***) `str` を返します。
+`Istr >> ( char * ) str` が返されます。
 
 下記のテンプレート関数は
 
@@ -120,7 +120,7 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, signed char& Ch);
 ```
 
-`Istr` >> ( **char&**) `Ch` を返します。
+`Istr >> ( char& ) Ch` が返されます。
 
 下記のテンプレート関数は
 
@@ -130,7 +130,7 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, unsigned char* str);
 ```
 
-`Istr` >> ( **char \***) `str` を返します。
+`Istr >> ( char * ) str` が返されます。
 
 下記のテンプレート関数は
 
@@ -140,7 +140,7 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, unsigned char& Ch);
 ```
 
-`Istr` >> ( **char&**) `Ch` を返します。
+`Istr >> ( char& ) Ch` が返されます。
 
 下記のテンプレート関数は
 
@@ -151,7 +151,7 @@ basic_istream<Elem, Tr>& operator>>(
     Type& val);
 ```
 
-`Istr` `>>` `val` を返します (さらに、その過程で `Istr` に対する `rvalue reference` を `lvalue` に変換します)。
+返します`Istr >> val`(への右辺値参照に変換します`Istr`プロセスでは左辺値へ)。
 
 ### <a name="example"></a>例
 

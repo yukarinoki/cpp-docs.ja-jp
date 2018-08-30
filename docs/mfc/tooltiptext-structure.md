@@ -1,5 +1,5 @@
 ---
-title: TOOLTIPTEXT 構造体 |Microsoft ドキュメント
+title: TOOLTIPTEXT 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cae7efbee59b24ff34518b62ff212d436973053
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 0f65b94294b3b3d55f9839dffa99a18be61c5639
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953933"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195985"
 ---
 # <a name="tooltiptext-structure"></a>TOOLTIPTEXT 構造体
-書き込みで、[ツール ヒントの通知ハンドラー](../mfc/handling-ttn-needtext-notification-for-tool-tips.md)を使用する必要があります、 **TOOLTIPTEXT**構造体。 メンバー、 **TOOLTIPTEXT**構造は。  
+書き込みで、[ツール ヒントの通知ハンドラー](../mfc/handling-ttn-needtext-notification-for-tool-tips.md)を使用する必要がある、 **TOOLTIPTEXT**構造体。 メンバー、 **TOOLTIPTEXT**構造体には。  
   
  `typedef struct {`  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36953933"
  `} TOOLTIPTEXT, FAR *LPTOOLTIPTEXT;`  
   
  *hdr*  
- テキストを必要とするツールを識別します。 必要に応じてこの構造体の唯一のメンバーは、コントロールのコマンド id です。 コントロールのコマンド ID ができるように、 *idFrom*のメンバー、 **NMHDR**構造体、構文を使用してアクセス`hdr.idFrom`です。 参照してください[NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514)用のメンバーの詳細については、 **NMHDR**構造体。  
+ テキストを必要とするツールを識別します。 必要に応じてこの構造体の唯一のメンバーは、コントロールのコマンド id です。 コントロールのコマンド ID になります、 *idFrom*のメンバー、 **NMHDR**構造体、構文を使用してアクセス`hdr.idFrom`します。 参照してください[NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr)のメンバーの詳細については、 **NMHDR**構造体。  
   
  *lpszText*  
  ツールは、テキストを受け取る文字列のアドレス。  
@@ -55,9 +55,9 @@ ms.locfileid: "36953933"
  ツール ヒントのテキストを受け取るバッファー。 アプリケーションは、文字列のアドレスを指定する代わりに、このバッファーにテキストをコピーできます。  
   
  *hinst*  
- ツール ヒントのテキストとして使用する文字列が含まれているインスタンスのハンドルです。 場合*lpszText*アドレスは、ツール ヒントのテキストのこのメンバーは NULL です。  
+ ツール ヒントのテキストとして使用する文字列を含むインスタンスのハンドル。 場合*lpszText*アドレスは、ツール ヒントのテキストのこのメンバーには NULL です。  
   
- 処理するときに、`TTN_NEEDTEXT`通知メッセージで、次の方法のいずれかで表示される文字列を指定します。  
+ 処理するとき、`TTN_NEEDTEXT`通知メッセージで、次の方法のいずれかで表示される文字列を指定します。  
   
 -   指定されたバッファーにテキストをコピー、 *szText*メンバー。  
   

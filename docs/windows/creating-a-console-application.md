@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6e4ab4e209b53e33586346495715548cffd4df2e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0a7c3ee4f621e58e0ab7c01b409fdd80ed464051
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42587559"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197379"
 ---
 # <a name="creating-a-console-application"></a>コンソール アプリケーションの作成
 
@@ -46,4 +46,4 @@ Win32 コンソール アプリケーションを作成する最も簡単な方�
 [コンソール プロジェクト](/visualstudio/debugger/debugging-preparation-console-projects)  
 [コード ウィザードを使用した機能の追加](../ide/adding-functionality-with-code-wizards-cpp.md)  
 [プロパティ ページ](../ide/property-pages-visual-cpp.md)  
-[アプリケーションの配置](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+[アプリケーションの配置](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

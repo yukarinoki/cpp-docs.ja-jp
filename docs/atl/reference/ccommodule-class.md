@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eae4218d6c6446554d5fb45d680588127ec3e0ee
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: e1ee6ee76840774fd750df95f73c105c059cae59
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883093"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196522"
 ---
 # <a name="ccommodule-class"></a>CComModule クラス
 ATL 7.0 では、時点で`CComModule`は非推奨: を参照してください[ATL モジュール クラス](../../atl/atl-module-classes.md)の詳細。  
@@ -125,7 +125,7 @@ class CComModule : public _ATL_MODULE
   
  `CComModule`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlbase.h  
   
 ##  <a name="getclassobject"></a>  CComModule::GetClassObject  
@@ -346,10 +346,10 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
   
 ### <a name="parameters"></a>パラメーター  
  *dwClsContext*  
- [in]クラスのオブジェクトが実行コンテキストを指定します。 指定できる値は、CLSCTX_INPROC_SERVER や CLSCTX_INPROC_HANDLER、CLSCTX_LOCAL_SERVER は。 これらの値については、次を参照してください。 [CLSCTX](http://msdn.microsoft.com/library/windows/desktop/ms693716) Windows SDK に含まれています。  
+ [in]クラスのオブジェクトが実行コンテキストを指定します。 指定できる値は、CLSCTX_INPROC_SERVER や CLSCTX_INPROC_HANDLER、CLSCTX_LOCAL_SERVER は。 これらの値については、次を参照してください。 [CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716) Windows SDK に含まれています。  
   
  *dwFlags*  
- [in]クラス オブジェクトへの接続の種類を決定します。 指定できる値は、REGCLS_SINGLEUSE、REGCLS_MULTIPLEUSE、または REGCLS_MULTI_SEPARATE は。 これらの値については、次を参照してください。 [REGCLS](http://msdn.microsoft.com/library/windows/desktop/ms679697) Windows SDK に含まれています。  
+ [in]クラス オブジェクトへの接続の種類を決定します。 指定できる値は、REGCLS_SINGLEUSE、REGCLS_MULTIPLEUSE、または REGCLS_MULTI_SEPARATE は。 これらの値については、次を参照してください。 [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) Windows SDK に含まれています。  
   
 ### <a name="return-value"></a>戻り値  
  標準の HRESULT 値。  

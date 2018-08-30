@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220a4fc1b97c30be28554faf68d5338b2a8e4ea8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: c134d2e1dc6f3782446afc57b8384279a615e86f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849982"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197458"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog クラス
 印刷マージンの設定や変更の追加サポートと共に [OLE ページの設定] ダイアログ ボックスにより提供されるサービスをカプセル化します。  
@@ -90,7 +90,7 @@ class CPageSetupDialog : public CCommonDialog
   
  使用する、`CPageSetupDialog`オブジェクトは、まずを使用してオブジェクトを作成、`CPageSetupDialog`コンス トラクター。 ダイアログ ボックスが構築されると、設定または任意の値を変更、 `m_psd`  ダイアログ ボックスのコントロールの値を初期化するためにデータ メンバー。 [M_psd](#m_psd)型 PAGESETUPDLG 構造です。  
   
- ダイアログ ボックスのコントロールを初期化した後に呼び出し、 `DoModal`  ダイアログ ボックスが表示され、ユーザーが印刷オプションを選択できるようにするメンバー関数。 `DoModal` ユーザーが [ok] (IDOK) またはキャンセル (IDCANCEL) ボタンを選択するかどうかを返します。  
+ ダイアログ ボックスのコントロールを初期化した後に呼び出し、 `DoModal`  ダイアログ ボックスが表示され、ユーザーが印刷オプションを選択できるようにするメンバー関数。 `DoModal` ユーザーが [ok] \(IDOK) またはキャンセル (IDCANCEL) ボタンを選択するかどうかを返します。  
   
  場合`DoModal`IDOK を返しますのいくつかを使用することができます`CPageSetupDialog`のメンバー関数、またはアクセス、`m_psd`データ メンバーは、ユーザーが入力した情報を取得します。  
   
@@ -110,7 +110,7 @@ class CPageSetupDialog : public CCommonDialog
   
  `CPageSetupDialog`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdlgs.h  
   
 ##  <a name="cpagesetupdialog"></a>  CPageSetupDialog::CPageSetupDialog  
@@ -146,7 +146,7 @@ CPageSetupDialog(
   
 - PSD_DISABLEORIENTATION には、ページの向き ダイアログのコントロールが無効にします。  
   
-- PSD_RETURNDEFAULT により`CPageSetupDialog`を返す[DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)と[DEVNAMES](../../mfc/reference/devnames-structure.md)  ダイアログ ボックスを表示せずにシステムの既定のプリンターの初期化されている構造体。 ように仮定両方`hDevNames`と`hDevMode`エラーを返しますそれ以外の場合は NULL です。 古いプリンター ドライバー (Windows バージョン 3.0 より前)、システムの既定のプリンターがサポートされている場合のみ`hDevNames`が返されます。`hDevMode`は NULL です。  
+- PSD_RETURNDEFAULT により`CPageSetupDialog`を返す[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)と[DEVNAMES](../../mfc/reference/devnames-structure.md)  ダイアログ ボックスを表示せずにシステムの既定のプリンターの初期化されている構造体。 ように仮定両方`hDevNames`と`hDevMode`エラーを返しますそれ以外の場合は NULL です。 古いプリンター ドライバー (Windows バージョン 3.0 より前)、システムの既定のプリンターがサポートされている場合のみ`hDevNames`が返されます。`hDevMode`は NULL です。  
   
 - PSD_DISABLEPAPER には、用紙の選択コントロールが無効にします。  
   
@@ -172,7 +172,7 @@ CPageSetupDialog(
  [!code-cpp[NVC_MFCDocView#94](../../mfc/codesnippet/cpp/cpagesetupdialog-class_1.cpp)]  
   
 ##  <a name="createprinterdc"></a>  CPageSetupDialog::CreatePrinterDC  
- プリンター デバイス コンテキストを作成、 [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)と[DEVNAMES](../../mfc/reference/devnames-structure.md)構造体。  
+ プリンター デバイス コンテキストを作成、 [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)と[DEVNAMES](../../mfc/reference/devnames-structure.md)構造体。  
   
 ```  
 HDC CreatePrinterDC();
@@ -189,7 +189,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- IDOK や IDCANCEL。 IDCANCEL が返された場合は、Windows を呼び出す[情報を得る](http://msdn.microsoft.com/library/windows/desktop/ms646916)エラーが発生したかどうかを判断する関数。  
+ IDOK や IDCANCEL。 IDCANCEL が返された場合は、Windows を呼び出す[情報を得る](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror)エラーが発生したかどうかを判断する関数。  
   
  IDOK や IDCANCEL は、ユーザーが [ok] または [キャンセル] ボタンを選択するかどうかを示す定数です。  
   
@@ -223,7 +223,7 @@ LPDEVMODE GetDevMode() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)データ構造は、デバイスの初期化と印刷ドライバーの環境に関する情報が含まれています。 この構造体で、Windows によって使用されたメモリのロックを解除する必要があります[GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595)関数は、Windows SDK で説明します。  
+ [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)データ構造は、デバイスの初期化と印刷ドライバーの環境に関する情報が含まれています。 この構造体で、Windows によって使用されたメモリのロックを解除する必要があります[GlobalUnlock](/windows/desktop/api/winbase/nf-winbase-globalunlock)関数は、Windows SDK で説明します。  
   
 ##  <a name="getdrivername"></a>  CPageSetupDialog::GetDriverName  
  この関数を呼び出した後[DoModal](../../mfc/reference/cprintdialog-class.md#domodal)プリンターのシステム定義のデバイス ドライバーの名前を取得します。  
@@ -286,7 +286,7 @@ PAGESETUPDLG m_psd;
   
  変更する場合、`m_psd`データ メンバーを直接、既定の動作をオーバーライドします。  
   
- 詳細については、 [PAGESETUPDLG](http://msdn.microsoft.com/library/windows/desktop/ms646842)構造体を Windows SDK を参照してください。  
+ 詳細については、 [PAGESETUPDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpsda)構造体を Windows SDK を参照してください。  
   
  例をご覧ください[CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog)します。  
   
@@ -346,7 +346,7 @@ virtual UINT PreDrawPage(
   
 ### <a name="parameters"></a>パラメーター  
  *wPaper*  
- 用紙サイズを示す値を指定します。 この値は、のいずれかを指定できます、 **DMPAPER_** 値の説明に一覧表示、 [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)構造体。  
+ 用紙サイズを示す値を指定します。 この値は、のいずれかを指定できます、 **DMPAPER_** 値の説明に一覧表示、 [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)構造体。  
   
  *wflags が*  
  用紙または封筒の印刷の向きを示すかどうかは、プリンター、ドット マトリックスまたは HPPCL (Hewlett Packard Printer Control Language) デバイスとします。 このパラメーターには、次のいずれかの値を指定できます。  
@@ -368,7 +368,7 @@ virtual UINT PreDrawPage(
 -   0x01f (ドット マトリックス) の縦長表示モードの封筒  
   
  *pPSD*  
- `PAGESETUPDLG` 構造体へのポインター。 詳細については[PAGESETUPDLG](http://msdn.microsoft.com/library/windows/desktop/ms646842)、Windows SDK を参照してください。  
+ `PAGESETUPDLG` 構造体へのポインター。 詳細については[PAGESETUPDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpsda)、Windows SDK を参照してください。  
   
 ### <a name="return-value"></a>戻り値  
  処理された場合、0 以外の値それ以外の場合 0 を返します。  

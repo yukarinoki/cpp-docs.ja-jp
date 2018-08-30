@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f55f7d676988e43216adbf6e8a0b6c21afd958a3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d8371ec583bd8b9ee4962445e4c2b6f2fbfa6280
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884088"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196963"
 ---
 # <a name="cthreadpool-class"></a>CThreadPool クラス
 このクラスは、作業項目のキューを処理するワーカー スレッドのプールを提供します。  
@@ -83,9 +83,9 @@ class CThreadPool : public IThreadPoolConfig
 ## <a name="remarks"></a>Remarks  
  プール内のスレッドが作成され、プールの初期化、サイズ変更、またはシャット ダウンするたびに破棄します。 クラスのインスタンス*ワーカー*プール内の各ワーカー スレッドのスタック上に作成されます。 各インスタンスがスレッドの有効期間にわたって有効です。  
   
- スレッドの作成後すぐに*ワーカー*::`Initialize`はそのスレッドに関連付けられているオブジェクトで呼び出されます。 スレッドの破棄する直前に*ワーカー*::`Terminate`が呼び出されます。 両方のメソッドが受け入れる必要があります、 **void\*** 引数。 この引数の値がでスレッド プールに渡される、 *pvWorkerParam*パラメーターの[CThreadPool::Initialize](#initialize)します。  
+ スレッドの作成後すぐに*ワーカー*::`Initialize`はそのスレッドに関連付けられているオブジェクトで呼び出されます。 スレッドの破棄する直前に*ワーカー*::`Terminate`が呼び出されます。 両方のメソッドが受け入れる必要があります、 **void** <strong>\*</strong>引数。 この引数の値がでスレッド プールに渡される、 *pvWorkerParam*パラメーターの[CThreadPool::Initialize](#initialize)します。  
   
- ワーカー スレッドがキューの呼び出しからの項目をプルするがある場合に作業項目キューやワーカー スレッドで作業に使用できる、`Execute`のメソッド、*ワーカー*そのスレッドのオブジェクト。 3 つの項目は、メソッドに渡されます同じキューから項目`pvWorkerParam`に渡される*ワーカー*::`Initialize`と*ワーカー*:: `Terminate`、、へのポインター[。OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) IO 完了ポートのキューに対して使用される構造体。  
+ ワーカー スレッドがキューの呼び出しからの項目をプルするがある場合に作業項目キューやワーカー スレッドで作業に使用できる、`Execute`のメソッド、*ワーカー*そのスレッドのオブジェクト。 3 つの項目は、メソッドに渡されます同じキューから項目`pvWorkerParam`に渡される*ワーカー*::`Initialize`と*ワーカー*:: `Terminate`、、へのポインター[。OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-_overlapped) IO 完了ポートのキューに対して使用される構造体。  
   
  *ワーカー*クラスは、typedef を提供することで、スレッド プールのキューは項目の型を宣言して*ワーカー*::`RequestType`します。 この型と、ULONG_PTR の間でキャストされていることができる必要があります。  
   
@@ -98,7 +98,7 @@ class CThreadPool : public IThreadPoolConfig
   
  `CThreadPool`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlutil.h  
   
 ##  <a name="addref"></a>  CThreadPool::AddRef  
@@ -308,7 +308,7 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
  スレッド プール スレッドをシャット ダウンを待機するミリ秒単位で要求された最大時間。 このメソッドは設定されたタイムアウトを使用して、0 または値が指定されている場合[CThreadPool::SetTimeout](#settimeout)します。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、プール内のすべてのスレッドをシャット ダウン要求をポストします。 このメソッドの呼び出しがタイムアウトになると、 [TerminateThread](http://msdn.microsoft.com/library/windows/desktop/ms686717)任意のスレッドを終了しませんでした。 このメソッドは、クラスのデストラクターから自動的に呼び出されます。  
+ このメソッドは、プール内のすべてのスレッドをシャット ダウン要求をポストします。 このメソッドの呼び出しがタイムアウトになると、 [TerminateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-terminatethread)任意のスレッドを終了しませんでした。 このメソッドは、クラスのデストラクターから自動的に呼び出されます。  
   
 ## <a name="see-also"></a>関連項目  
  [IThreadPoolConfig インターフェイス](../../atl/reference/ithreadpoolconfig-interface.md)   

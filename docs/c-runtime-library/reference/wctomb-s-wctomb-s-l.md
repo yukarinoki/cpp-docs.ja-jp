@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdb9a1f13fcb387aeddf18cc0f734101463bd3eb
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: c5bdc05f903c1313d4844be8d5fc4fa619505670
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450909"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195120"
 ---
 # <a name="wctombs-wctombsl"></a>wctomb_s、_wctomb_s_l
 
@@ -77,7 +77,7 @@ errno_t _wctomb_s_l(
 マルチバイト文字のアドレス。
 
 *sizeInBytes*<br/>
-バッファーのサイズ*mbchar*です。
+バッファーのサイズ*mbchar*します。
 
 *wchar*<br/>
 ワイド文字。
@@ -97,19 +97,19 @@ errno_t _wctomb_s_l(
 |任意|>**INT_MAX**|**EINVAL**|変更されない|
 |任意|小さすぎる|**EINVAL**|変更されない|
 
-上記のいずれかのエラー条件が発生すると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラーが呼び出されます。 続けるには、実行が許可された場合**wctomb**返します**EINVAL**設定と**errno**に**EINVAL**です。
+上記のいずれかのエラー条件が発生すると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラーが呼び出されます。 続けるには、実行が許可された場合**wctomb**返します**EINVAL**設定と**errno**に**EINVAL**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Wctomb_s**関数に変換、 *wchar*を対応するマルチバイト文字の引数で結果を格納および*mbchar*です。 任意のプログラムの任意のポイントからこの関数を呼び出すことができます。
+**Wctomb_s**関数に変換しますその*wchar*を対応するマルチバイト文字の引数で結果を格納および*mbchar*します。 任意のプログラムの任意のポイントからこの関数を呼び出すことができます。
 
-場合**wctomb_s**ワイド文字に変換しますをマルチバイト文字のバイト数を配置 (より大きいは決して**MB_CUR_MAX**)を指す整数にワイド文字*pRetValue*です。 場合*wchar*ワイド null 文字 (L '\0') は、 **wctomb_s**塗りつぶします*pRetValue* 1 です。 場合、ターゲット ポインター *mbchar*は**NULL**、 **wctomb_s**に 0 を格納*pRetValue*です。 現在のロケールで変換が不可能な場合**wctomb_s**に-1 を配置*pRetValue*です。
+場合**wctomb_s**ワイド文字に変換をマルチバイト文字の場合は、バイト数が置かれる (よりも大きくなることはありません**MB_CUR_MAX**)によって示される整数に、ワイド文字*pRetValue*します。 場合*wchar*ワイド文字の null 文字 (L '\0') は、 **wctomb_s**塗りつぶします*pRetValue* 1。 場合、ターゲット ポインター *mbchar*は**NULL**、 **wctomb_s**に 0 を入れ*pRetValue*します。 現在のロケールで変換が不可能な場合**wctomb_s**に-1 を入れ*pRetValue*します。
 
-**wctomb_s**ロケールに依存する詳細については、現在のロケールを使用 **_wctomb_s_l**は、代わりに渡されるロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**wctomb_s**ロケールに依存する情報の現在のロケールを使用 **_wctomb_s_l**代わりに渡されたロケールを使用すると同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**wctomb_s**|\<stdlib.h>|
 |**_wctomb_s_l**|\<stdlib.h>|
@@ -152,4 +152,4 @@ Convert a wide character:
 [mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs、_wcstombs_l](wcstombs-wcstombs-l.md)<br/>
-[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>
+[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

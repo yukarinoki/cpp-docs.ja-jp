@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31d16279b4de6c0cca0d37161a37ce5e39b85b7b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b0e961ecf45458dc039b932bdcc96c3bcc6f7521
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339359"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196333"
 ---
 # <a name="casyncmonikerfile-class"></a>CAsyncMonikerFile クラス
 ActiveX コントロール (以前の OLE コントロール) で非同期モニカーを使用するための機能が用意されています。  
@@ -89,7 +89,7 @@ class CAsyncMonikerFile : public CMonikerFile
 |[CAsyncMonikerFile::OnStopBinding](#onstopbinding)|非同期転送が停止したときに呼び出されます。|  
   
 ## <a name="remarks"></a>Remarks  
- 派生した[CMonikerFile](../../mfc/reference/cmonikerfile-class.md)、さらにから派生する[COleStreamFile](../../mfc/reference/colestreamfile-class.md)、`CAsyncMonikerFile`を使用して、 [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)インターフェイスを任意のデータ ストリームにアクセスするにはURL から非同期的にファイルの読み込みを含む、非同期的にします。 ファイルは、ActiveX コントロールのデータパス プロパティであることができます。  
+ 派生した[CMonikerFile](../../mfc/reference/cmonikerfile-class.md)、さらにから派生する[COleStreamFile](../../mfc/reference/colestreamfile-class.md)、`CAsyncMonikerFile`を使用して、 [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker)インターフェイスを任意のデータ ストリームにアクセスするにはURL から非同期的にファイルの読み込みを含む、非同期的にします。 ファイルは、ActiveX コントロールのデータパス プロパティであることができます。  
   
  非同期モニカーは、ファイル転送中に、応答性の高いユーザー インターフェイスを提供するインターネット対応のアプリケーションと ActiveX コントロールで主に使用されます。 これの典型的な例の使用は、 [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md) ActiveX コントロールの非同期のプロパティを提供します。 `CDataPathProperty`オブジェクトは、時間のかかるプロパティ exchange プロセス中に新しいデータの可用性を通知するコールバックを順次取得します。  
   
@@ -110,7 +110,7 @@ class CAsyncMonikerFile : public CMonikerFile
   
  `CAsyncMonikerFile`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxole.h  
   
 ##  <a name="casyncmonikerfile"></a>  CAsyncMonikerFile::CAsyncMonikerFile  
@@ -156,7 +156,7 @@ virtual IUnknown* CreateBindStatusCallback(IUnknown* pUnkControlling);
   
  [CAsyncMonikerFile::Open](#open)呼び出し`CreateBindStatusCallback`します。  
   
- 非同期モニカーと非同期のバインドの詳細については、次を参照してください。、 [IBindStatusCallback](http://msdn.microsoft.com/library/ie/ms775060)インターフェイスと[非同期バインド方法およびストレージ作業](http://msdn.microsoft.com/library/windows/desktop/aa379152)します。 集計の詳細については、次を参照してください。[集計](http://msdn.microsoft.com/library/windows/desktop/ms686558)します。 3 つすべてのトピックは、Windows SDK には。  
+ 非同期モニカーと非同期のバインドの詳細については、次を参照してください。、 [IBindStatusCallback](https://msdn.microsoft.com/library/ie/ms775060)インターフェイスと[非同期バインド方法およびストレージ作業](/windows/desktop/Stg/how-asynchronous-binding-and-storage-work)します。 集計の詳細については、次を参照してください。[集計](/windows/desktop/com/aggregation)します。 3 つすべてのトピックは、Windows SDK には。  
   
 ##  <a name="getbindinfo"></a>  CAsyncMonikerFile::GetBindInfo  
  非同期モニカーをバインドする方法を指示する非同期モニカーのクライアントから呼び出されます。  
@@ -196,7 +196,7 @@ FORMATETC* GetFormatEtc() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- Windows 構造体へのポインター [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)現在開いているストリーム。 モニカーがバインドされていない場合、非同期でない場合、または非同期操作が開始されていない場合は、NULL を返します。  
+ Windows 構造体へのポインター [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)現在開いているストリーム。 モニカーがバインドされていない場合、非同期でない場合、または非同期操作が開始されていない場合は、NULL を返します。  
   
 ##  <a name="getpriority"></a>  CAsyncMonikerFile::GetPriority  
  バインディング操作のスレッドに優先順位を受信するバインディング プロセスを開始すると非同期モニカーのクライアントから呼び出されます。  
@@ -206,7 +206,7 @@ virtual LONG GetPriority() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 優先順位が非同期転送が実行されます。 標準スレッドの優先順位フラグのいずれか: THREAD_PRIORITY_ABOVE_NORMAL、THREAD_PRIORITY_BELOW_NORMAL、THREAD_PRIORITY_HIGHEST、THREAD_PRIORITY_IDLE、THREAD_PRIORITY_LOWEST、THREAD_PRIORITY_NORMAL、および THREAD_PRIORITY_TIME_CRITICAL します。 Windows 関数を参照してください。 [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277)のこれらの値の説明。  
+ 優先順位が非同期転送が実行されます。 標準スレッドの優先順位フラグのいずれか: THREAD_PRIORITY_ABOVE_NORMAL、THREAD_PRIORITY_BELOW_NORMAL、THREAD_PRIORITY_HIGHEST、THREAD_PRIORITY_IDLE、THREAD_PRIORITY_LOWEST、THREAD_PRIORITY_NORMAL、および THREAD_PRIORITY_TIME_CRITICAL します。 Windows 関数を参照してください。 [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority)のこれらの値の説明。  
   
 ### <a name="remarks"></a>Remarks  
  `GetPriority` 呼び出さないで直接します。 THREAD_PRIORITY_NORMAL は、既定の実装によって返されます。  

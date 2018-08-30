@@ -53,12 +53,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd54c27f4208dce317d9c09720cb63b65af4a54b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1e4e7776688fa95a81cd76e6db48f38f82bc076d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415742"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195295"
 ---
 # <a name="vfprintfp-vfprintfpl-vfwprintfp-vfwprintfpl"></a>_vfprintf_p、_vfprintf_p_l、_vfwprintf_p、_vfwprintf_p_l
 
@@ -109,20 +109,20 @@ int _vfwprintf_p_l(
 
 ## <a name="return-value"></a>戻り値
 
-**_vfprintf_p**と **_vfwprintf_p**を含まない終端の null 文字または負の値の出力エラーが発生した場合、書き込まれる文字数を返します。
+**_vfprintf_p**と **_vfwprintf_p**出力エラーが発生した場合に、終端の null 文字または負の値をしないなど、書き込まれる文字数を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-これらの各関数は、引数リストへのポインターをとり書式化してに指定されたデータを書き込む*ストリーム*です。 これらの関数は異なる、 **_vfprint_s**と **_vfwprint_s**バージョン位置指定パラメーターがサポートされるでのみです。 詳細については、「[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」をご覧ください。
+これらの各関数、引数リストへのポインターを受け取る書式設定して、特定のデータを書き込みます*ストリーム*します。 これらの関数は異なる、 **_vfprint_s**と **_vfwprint_s**バージョンのみをサポートする位置指定パラメーター。 詳細については、「[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」をご覧ください。
 
-**_vfwprintf_p**のワイド文字バージョンは、 **_vprintf_p**; ストリームが ANSI モードで開かれている場合、2 つの関数動作は同じです。 **_vprintf_p** UNICODE ストリームへの出力はサポートされていません。
+**_vfwprintf_p**のワイド文字バージョンは、 **_vprintf_p**; 2 つの関数は、動作、ストリームが ANSI モードで開かれている場合は同じです。 **_vprintf_p** UNICODE ストリームへの出力をサポートされていません。
 
 これらの関数のバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
 
 > [!IMPORTANT]
-> *format* にユーザー定義の文字列を指定しないでください。 詳しくは、「 [バッファー オーバーランの回避](http://msdn.microsoft.com/library/windows/desktop/ms717795)」をご覧ください。
+> *format* にユーザー定義の文字列を指定しないでください。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
-いずれか*ストリーム*または*形式*null ポインター、または書式指定文字列に無効な書式指定文字が含まれている場合、無効なパラメーター ハンドラーが呼び出される、」の説明に従って[パラメーター検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は-1 を返します設定と**errno**に**EINVAL**です。
+いずれか*ストリーム*または*形式*null ポインター、または書式指定文字列に無効な書式指定文字が含まれている場合、無効なパラメーター ハンドラーが呼び出される」の説明に従って[パラメーター検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は-1 を返し設定と**errno**に**EINVAL**します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -133,7 +133,7 @@ int _vfwprintf_p_l(
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|省略可能なヘッダー|
+|ルーチンによって返される値|必須ヘッダー|省略可能なヘッダー|
 |-------------|---------------------|----------------------|
 |**_vfprintf_p**、 **_vfprintf_p_l**|\<stdio.h> および \<stdarg.h>|\<varargs.h>*|
 |**_vfwprintf_p**、 **_vfwprintf_p_l**|\<stdio.h> または \<wchar.h>、および \<stdarg.h>|\<varargs.h>*|

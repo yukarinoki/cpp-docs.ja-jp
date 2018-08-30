@@ -1,7 +1,7 @@
 ---
-title: コンパイラの警告 (レベル 4) C4559 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 4) C4559 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,23 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c853fa55482604d97c29653fadb06b0afdd44977
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4d5743b33f62aa954c3765b729ab5c0297b20e32
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295351"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195577"
 ---
 # <a name="compiler-warning-level-4-c4559"></a>コンパイラの警告 (レベル 4) C4559
-'function': 再定義されています。関数の向上 __declspec(modifier)  
-  
- 2 つ目の定義または宣言は、_ _ を追加し、関数が再定義または再宣言**declspec**修飾子 (***修飾子***)。 これは、情報提供の警告です。 この警告を解決するには、いずれかの定義を削除します。  
-  
- 次の例では、C4559 が生成されます。  
-  
-```  
-// C4559.cpp  
-// compile with: /W4 /LD  
-void f();  
-__declspec(noalias) void f();   // C4559  
+
+> '*関数*': 再定義; 関数が _ _declspec (*修飾子*)
+
+## <a name="remarks"></a>Remarks
+
+2 番目の定義または宣言を追加し、関数が再定義または再宣言、 **_ _declspec**修飾子 (*修飾子*)。 これは、情報提供の警告です。 この警告を解決するには、定義を 1 つを削除します。
+
+## <a name="example"></a>例
+
+次の例では、C4559 が生成されます。
+
+```cpp
+// C4559.cpp
+// compile with: /W4 /LD
+void f();
+__declspec(noalias) void f();   // C4559
 ```
