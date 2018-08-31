@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9304c4e3dfd559b296c69b274c1462f2f973a04d
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ab7b12c26854903379da0b67f9f64e2158195587
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852759"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211129"
 ---
 # <a name="colestreamfile-class"></a>COleStreamFile クラス
 OLE の構造化記憶の一部として、複合ファイルのデータ ストリーム (`IStream`) を表します。  
@@ -72,7 +72,7 @@ class COleStreamFile : public CFile
   
  ストリームとストレージ操作の詳細については、記事を参照してください[コンテナー: 複合ファイル](../../mfc/containers-compound-files.md)..  
   
- 詳細については、次を参照してください。 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)と[IStorage](http://msdn.microsoft.com/library/windows/desktop/aa380015) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IStream](/windows/desktop/api/objidl/nn-objidl-istream)と[IStorage](/windows/desktop/api/objidl/nn-objidl-istorage) Windows SDK に含まれています。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -81,7 +81,7 @@ class COleStreamFile : public CFile
   
  `COleStreamFile`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxole.h  
   
 ##  <a name="attach"></a>  COleStreamFile::Attach  
@@ -98,11 +98,10 @@ void Attach(LPSTREAM lpStream);
 ### <a name="remarks"></a>Remarks  
  オブジェクトがない既にあります OLE ストリームに関連付けられています。  
   
- 詳細については、次を参照してください。 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IStream](/windows/desktop/api/objidl/nn-objidl-istream) Windows SDK に含まれています。  
   
 ##  <a name="colestreamfile"></a>  COleStreamFile::COleStreamFile  
- 
-          `COleStreamFile` オブジェクトを作成します。  
+ `COleStreamFile` オブジェクトを作成します。  
   
 ```  
 COleStreamFile(LPSTREAM lpStream = NULL);
@@ -115,7 +114,7 @@ COleStreamFile(LPSTREAM lpStream = NULL);
 ### <a name="remarks"></a>Remarks  
  場合*lpStream*が null の場合、OLE ストリームに関連付けられているオブジェクトは、それ以外の場合、オブジェクトは、指定された OLE ストリームに関連付けられています。  
   
- 詳細については、次を参照してください。 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IStream](/windows/desktop/api/objidl/nn-objidl-istream) Windows SDK に含まれています。  
   
 ##  <a name="creatememorystream"></a>  COleStreamFile::CreateMemoryStream  
  安全に、通常は、失敗、グローバル共有メモリ不足の新しいストリームを作成します。  
@@ -134,7 +133,7 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
 ### <a name="remarks"></a>Remarks  
  OLE のサブシステムによって、メモリが割り当てられます。  
   
- 詳細については、次を参照してください。 [CreateStreamOnHGlobal](http://msdn.microsoft.com/library/windows/desktop/aa378980) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [CreateStreamOnHGlobal](/windows/desktop/api/combaseapi/nf-combaseapi-createstreamonhglobal) Windows SDK に含まれています。  
   
 ##  <a name="createstream"></a>  COleStreamFile::CreateStream  
  指定されたストレージ オブジェクトが、通常は失敗で新しいストリームを安全に作成します。  
@@ -166,7 +165,7 @@ BOOL CreateStream(
 ### <a name="remarks"></a>Remarks  
  オープンに失敗した場合、ファイルの例外がスローされます、 *pError*が NULL でないです。  
   
- 詳細については、次を参照してください。 [IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IStorage::CreateStream](/windows/desktop/api/objidl/nf-objidl-istorage-createstream) Windows SDK に含まれています。  
   
 ##  <a name="detach"></a>  COleStreamFile::Detach  
  ストリームを閉じずに、オブジェクトからストリームの関連付けを解除します。  
@@ -181,7 +180,7 @@ LPSTREAM Detach();
 ### <a name="remarks"></a>Remarks  
  プログラムが終了する前に、その他のなんらかの方法でストリームを閉じる必要があります。  
   
- 詳細については、次を参照してください。 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IStream](/windows/desktop/api/objidl/nn-objidl-istream) Windows SDK に含まれています。  
   
 ##  <a name="getstream"></a>  COleStreamFile::GetStream  
  この関数では、現在のストリームへのポインターを返します。  
@@ -191,7 +190,7 @@ IStream* GetStream() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 現在のストリーム インターフェイスへのポインター ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034))。  
+ 現在のストリーム インターフェイスへのポインター ( [IStream](/windows/desktop/api/objidl/nn-objidl-istream))。  
   
 ##  <a name="openstream"></a>  COleStreamFile::OpenStream  
  既存のストリームを開きます。  
@@ -223,7 +222,7 @@ BOOL OpenStream(
 ### <a name="remarks"></a>Remarks  
  オープンに失敗した場合、ファイルの例外がスローされます、 *pError*が NULL でないです。  
   
- 詳細については、次を参照してください。 [IStorage::OpenStream](http://msdn.microsoft.com/library/windows/desktop/aa380025) Windows SDK に含まれています。  
+ 詳細については、次を参照してください。 [IStorage::OpenStream](/windows/desktop/api/objidl/nf-objidl-istorage-openstream) Windows SDK に含まれています。  
   
 ## <a name="see-also"></a>関連項目  
  [CFile クラス](../../mfc/reference/cfile-class.md)   

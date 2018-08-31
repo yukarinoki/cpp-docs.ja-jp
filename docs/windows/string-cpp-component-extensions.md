@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b962db5477294ad36997208f59265a284680fac5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6fd13c3e94f6b42bd485c645233f84272c6eae91
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604941"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194834"
 ---
 # <a name="string--c-component-extensions"></a>文字列 (C++ コンポーネント拡張)
 
@@ -48,7 +48,7 @@ using namespace default;
 
 ### <a name="remarks"></a>Remarks
 
-詳細と例については、文字列は、次を参照してください[platform::string、std::wstring、およびリテラル (プラットフォーム)。](http://msdn.microsoft.com/ec92fbc6-edf3-4137-a85e-8e29bdb857a8)
+詳細と例については、文字列は、次を参照してください[platform::string、std::wstring、およびリテラル (プラットフォーム)。](https://msdn.microsoft.com/ec92fbc6-edf3-4137-a85e-8e29bdb857a8)
 
 ### <a name="requirements"></a>要件
 
