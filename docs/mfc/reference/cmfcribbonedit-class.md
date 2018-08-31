@@ -83,12 +83,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62a27548d51d3de1a27da0b765bd85439467c024
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 46d96d574fedf9af2fe7eb46c872819cf54a364e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850223"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216460"
 ---
 # <a name="cmfcribbonedit-class"></a>CMFCRibbonEdit クラス
 リボン バー上にある編集コントロールを実装します。  
@@ -152,7 +152,7 @@ class CMFCRibbonEdit : public CMFCRibbonButton
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#7](../../mfc/reference/codesnippet/cpp/cmfcribbonedit-class_1.cpp)]  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxRibbonEdit.h  
   
 ##  <a name="canbestretched"></a>  CMFCRibbonEdit::CanBeStretched  
@@ -224,7 +224,7 @@ virtual CMFCRibbonRichEditCtrl* CreateEdit(
  親ウィンドウへのポインター、`CMFCRibbonEdit`オブジェクト。  
   
  [in]*dwEditStyle*  
- テキスト ボックスのスタイルを指定します。 「解説」セクションに記載のウィンドウ スタイルを組み合わせることができます、[コントロール スタイルを編集](http://msdn.microsoft.com/library/windows/desktop/bb775464)Windows sdk に記載されています。  
+ テキスト ボックスのスタイルを指定します。 「解説」セクションに記載のウィンドウ スタイルを組み合わせることができます、[コントロール スタイルを編集](/windows/desktop/Controls/edit-control-styles)Windows sdk に記載されています。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は、新しいテキスト ボックスへのポインターそれ以外の場合は NULL です。  
@@ -345,7 +345,7 @@ int GetTextAlign() const;
   
 - **ES_RIGHT**右揃え  
   
- これらのスタイルの詳細については、次を参照してください。[編集コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb775464)します。  
+ これらのスタイルの詳細については、次を参照してください。[編集コントロールのスタイル](/windows/desktop/Controls/edit-control-styles)します。  
   
 ##  <a name="getwidth"></a>  CMFCRibbonEdit::GetWidth  
  幅 (ピクセル単位) を取得、 [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)コントロール。  
@@ -601,7 +601,7 @@ virtual void Redraw();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドを表示する四角形を再描画、`CMFCRibbonEdit`オブジェクトを直接呼び出す[CWnd::RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911) RDW_INVALIDATE、RDW_ERASE、および RDW_UPDATENOW フラグを設定します。  
+ このメソッドを表示する四角形を再描画、`CMFCRibbonEdit`オブジェクトを直接呼び出す[CWnd::RedrawWindow](/windows/desktop/api/winuser/nf-winuser-redrawwindow) RDW_INVALIDATE、RDW_ERASE、および RDW_UPDATENOW フラグを設定します。  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonEdit::SetACCData  
  アクセシビリティ データを設定、 [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)オブジェクト。  
@@ -655,7 +655,7 @@ void SetTextAlign(int nAlign);
   
 - 右揃えの ES_RIGHT  
   
- これらのスタイルの詳細については、次を参照してください。[編集コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb775464)します。  
+ これらのスタイルの詳細については、次を参照してください。[編集コントロールのスタイル](/windows/desktop/Controls/edit-control-styles)します。  
   
 ##  <a name="setwidth"></a>  CMFCRibbonEdit::SetWidth  
  テキスト ボックスの幅を設定、 [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)コントロール。  
