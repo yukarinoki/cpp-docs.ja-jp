@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bce71c444426d5d1a2d5340c603118a09e8275f
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: e12c8eeb162d93a41c2bad85fda3570f3ffc1127
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43132244"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220217"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Visual Studio 2017 バージョン 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156)、[15.7](#improvements_157)、[15.8](#update_158) での C++ 準拠の改善
 
@@ -93,7 +93,7 @@ static_assert の message パラメーターは省略可能です。 詳細に�
 
 `register` キーワードは、以前は非推奨でしたが (コンパイラでは無視される)、言語から削除されました。 詳しくは、「[Remove Deprecated Use of the register Keyword (register キーワードの非推奨の使用の削除)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0001r1.html)」をご覧ください。
 
-Visual Studio 2015 更新プログラム 3 での準拠の機能強化の完全な一覧については、「[Visual C++ What's New 2003 through 2015](https://msdn.microsoft.com/en-us/library/mt723604.aspx)」(Visual C++ 2003 から 2015 の新機能) を参照してください。
+Visual Studio 2015 更新プログラム 3 での準拠の機能強化の完全な一覧については、「[Visual C++ What's New 2003 through 2015](https://msdn.microsoft.com/library/mt723604.aspx)」(Visual C++ 2003 から 2015 の新機能) を参照してください。
 
 ## <a name="improvements_155"></a>Visual Studio 2017 バージョン 15.5 の Git 機能の強化
 
@@ -105,8 +105,7 @@ Visual Studio の以前のバージョンでは、変数が `extern` として�
 
 ### <a name="removing-dynamic-exception-specifications"></a>動的例外指定の削除
 
-
-  [P0003R5](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0003r5.html) C++11 では動的な例外の指定は非推奨となりました。 c++ 17 から機能が削除されますが、(引き続き) `noexcept(true)` のエイリアスとして非推奨の `throw()` 仕様が維持されます。 詳細については、「[動的例外指定の削除と noexcept](#noexcept_removal)」を参照してください。
+[P0003R5](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0003r5.html) C++11 では動的な例外の指定は非推奨となりました。 c++ 17 から機能が削除されますが、(引き続き) `noexcept(true)` のエイリアスとして非推奨の `throw()` 仕様が維持されます。 詳細については、「[動的例外指定の削除と noexcept](#noexcept_removal)」を参照してください。
 
 ### <a name="notfn"></a>not_fn()
 
@@ -150,8 +149,7 @@ Visual Studio の以前のバージョンでは、変数が `extern` として�
 
 ### <a name="annex-d-features-deprecated"></a>非推奨になった Annex D 機能
 
-C++ 標準の Annex D は、`shared_ptr::unique()`、`<codecvt>`、`namespace std::tr1` を含む非推奨になったすべての機能を含んでいます。 
-  **/std:c++17** コンパイラ スイッチが設定されている場合、Annex D のほとんどすべての標準ライブラリの機能は非推奨としてマークされます。 詳細については、「[非推奨としてマークされた Annex D の標準ライブラリの機能](#annex_d)」を参照してください。
+C++ 標準の Annex D は、`shared_ptr::unique()`、`<codecvt>`、`namespace std::tr1` を含む非推奨になったすべての機能を含んでいます。 **/std:c++17** コンパイラ スイッチが設定されている場合、Annex D のほとんどすべての標準ライブラリの機能は非推奨としてマークされます。 詳細については、「[非推奨としてマークされた Annex D の標準ライブラリの機能](#annex_d)」を参照してください。
 
 `<experimental/filesystem>` の `std::tr2::sys` 名前空間は、**/std:c++14** の下では既定で非推奨の警告を出し、**/std:c++17** では既定で削除されました。
 
@@ -1156,8 +1154,7 @@ int main() {
 
 ### <a name="annex_d"></a>非推奨としてマークされた Annex D の標準ライブラリの機能
 
-
-  **/std:c++17** モード コンパイラ スイッチが設定されている場合、Annex D のほとんどすべての標準ライブラリの機能は非推奨としてマークされます。
+**/std:c++17** モード コンパイラ スイッチが設定されている場合、Annex D のほとんどすべての標準ライブラリの機能は非推奨としてマークされます。
 
 Visual Studio 2017 バージョン 15.5 では、次のコードは C4996: を発生させます。
 
