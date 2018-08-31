@@ -63,12 +63,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 728c4878736d2e0cafc94660db3d9a709f87715f
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 1da7c4102f15bf4a9c8ec583cf39e621d6872cb0
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451525"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42578171"
 ---
 # <a name="exec-wexec-functions"></a>_exec、_wexec 系関数
 この系列の各関数は、新しいプロセスを読み込んで実行します。  
@@ -90,7 +90,7 @@ ms.locfileid: "34451525"
 |`v`|コマンド ライン引数へのポインター配列 `argv` が `_exec` に渡されます。 通常は、新しいプロセスに渡すパラメーターの個数に変動がある場合に使用します。|  
   
 ## <a name="remarks"></a>コメント  
- 各 `_exec` 関数は、新しいプロセスを読み込んで実行します。 `_exec` 系関数はすべて、同じオペレーティング システム関数 ([CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425.aspx)) を使います。 `_exec` 系関数は、現在使用中のマルチバイト コード ページに従ってマルチバイト文字シーケンスを認識し、マルチバイト文字列の引数を適切な方法で自動的に処理します。 `_wexec` 系関数は、`_exec` 系関数のワイド文字バージョンです。 `_wexec` 系関数の処理内容は `_exec` 系関数とほぼ同様ですが、マルチバイト文字列は処理しません。  
+ 各 `_exec` 関数は、新しいプロセスを読み込んで実行します。 `_exec` 系関数はすべて、同じオペレーティング システム関数 ([CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa)) を使います。 `_exec` 系関数は、現在使用中のマルチバイト コード ページに従ってマルチバイト文字シーケンスを認識し、マルチバイト文字列の引数を適切な方法で自動的に処理します。 `_wexec` 系関数は、`_exec` 系関数のワイド文字バージョンです。 `_wexec` 系関数の処理内容は `_exec` 系関数とほぼ同様ですが、マルチバイト文字列は処理しません。  
   
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ  
   
@@ -113,7 +113,7 @@ ms.locfileid: "34451525"
 >  文字列に空白が含まれる場合、予期しない動作になることがあります。たとえば、`_exec` を `"hi there"` という文字列に渡すと、新しいプロセスは `"hi"` と `"there"` という 2 つの引数を使用する結果になります。 新しいプロセスでは "hi there" というファイルを開こうとするため、プロセスは失敗します。 この問題を回避するには、`"\"hi there\""` のように文字列を引用符で囲みます。  
   
 > [!IMPORTANT]
->  ユーザー入力のコンテンツを明示的にチェックしないまま `_exec` に渡さないでください。 `_exec` によって [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425.aspx) が呼び出されます。そのため、パス名が修飾されていない場合、セキュリティ上の脆弱性につながる可能性があります。  
+>  ユーザー入力のコンテンツを明示的にチェックしないまま `_exec` に渡さないでください。 `_exec` によって [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) が呼び出されます。そのため、パス名が修飾されていない場合、セキュリティ上の脆弱性につながる可能性があります。  
   
  `_exec` 関数は、パラメーターを検証します。 いずれかのパラメーターが null ポインター、空の文字列、または省略されている場合、「[パラメーターの検証](../c-runtime-library/parameter-validation.md)」で説明されているように、`_exec` 関数は無効なパラメーター ハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は `errno` を `EINVAL` に設定し、-1 を返します。 新しいプロセスは実行されません。  
   

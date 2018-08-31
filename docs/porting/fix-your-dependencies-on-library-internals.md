@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 148db60c7a3b1ae3f71269feec8024f6ff22a118
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c80bad11a13c454d8b4025e5cc0745514696a0f7
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839061"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578451"
 ---
 # <a name="fix-your-dependencies-on-library-internals"></a>ライブラリ内部の依存関係を修正する
 
@@ -34,9 +34,9 @@ Microsoft では、標準ライブラリ、ほとんどの C ランタイム ラ
   
 この依存関係を削除するためのいくつかのオプションがあります。  
 
--   `basic_string` と同じハッシュ コード構造を使用して、`const char *` シーケンスを順不同のコンテナーに挿入する予定の場合は、そのハッシュ コードを移植可能な方法で返す、`std::string_view` を取る `std::hash` テンプレート オーバーロードを使用して行うことができます。 文字列ライブラリ コードは今後、FNV-1a ハッシュの使用に依存する可能性もあれば、依存しない可能性もあります。したがって、これが特定のハッシュ アルゴリズムに依存しないようにするための最良の方法です。 
+- `basic_string` と同じハッシュ コード構造を使用して、`const char *` シーケンスを順不同のコンテナーに挿入する予定の場合は、そのハッシュ コードを移植可能な方法で返す、`std::string_view` を取る `std::hash` テンプレート オーバーロードを使用して行うことができます。 文字列ライブラリ コードは今後、FNV-1a ハッシュの使用に依存する可能性もあれば、依存しない可能性もあります。したがって、これが特定のハッシュ アルゴリズムに依存しないようにするための最良の方法です。 
   
--   任意のメモリに FNV-1a ハッシュを生成する予定の場合は、Microsoft がこのためのコードを作成しました。このコードは、GitHub の [VCSamples]( https://github.com/Microsoft/vcsamples) リポジトリ内のスタンドアロン ヘッダー ファイル [fnv1a.hpp](https://github.com/Microsoft/VCSamples/tree/master/VC2015Samples/_Hash_seq) ([MIT ライセンス](https://github.com/Microsoft/VCSamples/blob/master/license.txt)認可済み) から入手できます。 便利なコピーも含まれています。 このコードをヘッダー ファイルにコピーし、影響を受けるコードにヘッダーを追加してから `_Hash_seq` を検索して `fnv1a_hash_bytes` で置き換えることができます。 `_Hash_seq` の内部実装と同じ動作が得られます。 
+- 任意のメモリに FNV-1a ハッシュを生成する予定の場合は、Microsoft がこのためのコードを作成しました。このコードは、GitHub の [VCSamples]( https://github.com/Microsoft/vcsamples) リポジトリ内のスタンドアロン ヘッダー ファイル [fnv1a.hpp](https://github.com/Microsoft/VCSamples/tree/master/VC2015Samples/_Hash_seq) ([MIT ライセンス](https://github.com/Microsoft/VCSamples/blob/master/license.txt)認可済み) から入手できます。 便利なコピーも含まれています。 このコードをヘッダー ファイルにコピーし、影響を受けるコードにヘッダーを追加してから `_Hash_seq` を検索して `fnv1a_hash_bytes` で置き換えることができます。 `_Hash_seq` の内部実装と同じ動作が得られます。 
 
 ```cpp  
 /*
