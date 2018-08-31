@@ -1,5 +1,5 @@
 ---
-title: メッセージの処理とマップ |Microsoft ドキュメント
+title: メッセージの処理とのマッピング |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 906d84d70b3bf2ae2a9da14ce9e5b06ed92d3730
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 11ac9e794aef374012f2b15faa7e93b907f6a15c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931035"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194542"
 ---
 # <a name="message-handling-and-mapping"></a>メッセージの処理とマップ
-ここでは、MFC フレームワークがメッセージとコマンドの処理方法とハンドラー関数への接続方法を説明します。  
+ここでは、MFC フレームワークがメッセージとコマンドの処理方法と、ハンドラー関数への接続方法について説明します。  
   
- Windows 用の従来のプログラムでは、Windows メッセージは、ウィンドウ プロシージャで大きな switch ステートメントで処理されます。 MFC が代わりに使用して[メッセージ マップ](../mfc/message-categories.md)に直接メッセージを個別のクラス メンバー関数にマップします。 この目的でメッセージ マップは仮想関数よりも効率的であり最も適切な C++ オブジェクトで処理するメッセージが可能に: アプリケーション、ドキュメント、ビュー、およびなどです。 1 つのメッセージまたはメッセージ、コマンド Id の範囲をマップしたり、Id を制御できます。  
+ Windows の従来のプログラムでは、Windows メッセージは、ウィンドウ プロシージャでの大規模な switch ステートメントで処理されます。 代わりに MFC を使用して[メッセージ マップ](../mfc/message-categories.md)ダイレクト メッセージを個別のクラス メンバー関数にマップします。 メッセージ マップは、このため、仮想関数よりも効率的と最適な C++ オブジェクトによって処理されるメッセージを許可するが、アプリケーション、ドキュメント、ビュー、およびなど。 1 つのメッセージまたはメッセージ、コマンドの Id の範囲をマップしたり、コントロール Id。  
   
- WM_COMMAND メッセージ-通常、メニューのツールバーのボタン、またはアクセラレータによって生成 — もメッセージ マップ機構を使用します。 MFC 標準を定義する[ルーティング](../mfc/command-routing.md)アプリケーション間では、コマンドのメッセージのフレーム ウィンドウ、ビュー、および、プログラム内のアクティブなドキュメントです。 必要がある場合、このルーティングを上書きすることができます。  
+ WM_COMMAND メッセージ-通常、メニューのツールバーのボタン、またはアクセラレータによって生成、メッセージ マップ機構を使用しても。 MFC 標準を定義する[ルーティング](../mfc/command-routing.md)アプリケーション間では、コマンドのメッセージのフレーム ウィンドウ、ビュー、およびプログラムでのアクティブなドキュメントです。 必要がある場合、このルーティングをオーバーライドすることができます。  
   
- メッセージ マップ指定することも (メニューやツールバーのボタン) のユーザー インターフェイス オブジェクトを更新する方法を有効または無効にすることに合わせて、現在のコンテキスト。  
+ メッセージ マップは (メニューやツールバーのボタン)、ユーザー インターフェイス オブジェクトを更新する方法を指定することも有効化または無効にすることに合わせて、現在のコンテキスト。  
   
- メッセージと windows メッセージ キューの詳細については、次を参照してください。[メッセージとメッセージ キュー](http://msdn.microsoft.com/library/windows/desktop/ms632590) Windows SDK に含まれています。  
+ メッセージと Windows でのメッセージ キューの詳細については、次を参照してください。[メッセージとメッセージ キュー](https://msdn.microsoft.com/library/windows/desktop/ms632590) Windows SDK に含まれています。  
   
-## <a name="what-do-you-want-to-know-more-about"></a>詳しくは次のトピックをクリックしてください。  
+## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います  
   
 -   [フレームワークのメッセージとコマンド](../mfc/messages-and-commands-in-the-framework.md)  
   
--   [フレームワークがメッセージのハンドラーを呼び出す方法](../mfc/how-the-framework-calls-a-handler.md)  
+-   [フレームワークがメッセージ ハンドラーを呼び出す方法](../mfc/how-the-framework-calls-a-handler.md)  
   
 -   [フレームワークのメッセージ マップ検索方法](../mfc/how-the-framework-searches-message-maps.md)  
   

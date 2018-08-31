@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bc6080bf66ad9bb9d436832b1066214f8cdbfb7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7b3db7fbcf190aa2dda05cabd2d1553824fb076e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572469"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194728"
 ---
 # <a name="appearance-atl-control-wizard"></a>外観、ATL コントロール ウィザード
 「検索結果」の概要をここに挿入します。  
@@ -32,7 +32,7 @@ ms.locfileid: "42572469"
 **状態の表示**  
 コンテナー内のコントロールの外観を設定します。  
   
- -   **非透過**: VIEWSTATUS_OPAQUE のビットを設定、[な VIEWSTATUS](http://msdn.microsoft.com/library/windows/desktop/ms687201)列挙体を描画するコントロール全体の四角形が渡される、 [CComControlBase::OnDraw](../../atl/reference/ccomcontrolbase-class.md#ondraw)メソッド。 コントロールが完全に不透明が表示され、コントロールの境界の背後にあるコンテナーを示しています。      
+ -   **非透過**: VIEWSTATUS_OPAQUE のビットを設定、[な VIEWSTATUS](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus)列挙体を描画するコントロール全体の四角形が渡される、 [CComControlBase::OnDraw](../../atl/reference/ccomcontrolbase-class.md#ondraw)メソッド。 コントロールが完全に不透明が表示され、コントロールの境界の背後にあるコンテナーを示しています。      
       
         この設定によりより迅速にコントロールを描画するコンテナー。 このオプションが選択されていない場合、コントロールは、透明な部分を含めることができます。  
       
@@ -82,7 +82,7 @@ ms.locfileid: "42572469"
   
  -   **実行時に非表示**: に実行時に表示されないコントロールを設定します。 非表示のコントロールを使用して、指定された間隔でイベントを発生させるなど、バック グラウンドで操作を実行することができます。  
       
- -   **ボタンのような動作**: OLEMISC_ACTSLIKEBUTTON のビットを設定、[入ります](http://msdn.microsoft.com/library/windows/desktop/ms678497)ボタンなどのコントロールに動作を有効にする列挙体。 コンテナーには、既定のボタンとコントロールのクライアント サイトがマークされているが、このオプションを選択すると、ボタン コントロール自体を太くフレームを描画することで、既定のボタンとして表示を有効になります。 参照してください[CComControlBase::GetAmbientDisplayAsDefault](../../atl/reference/ccomcontrolbase-class.md#getambientdisplayasdefault)詳細についてはします。  
+ -   **ボタンのような動作**: OLEMISC_ACTSLIKEBUTTON のビットを設定、[入ります](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc)ボタンなどのコントロールに動作を有効にする列挙体。 コンテナーには、既定のボタンとコントロールのクライアント サイトがマークされているが、このオプションを選択すると、ボタン コントロール自体を太くフレームを描画することで、既定のボタンとして表示を有効になります。 参照してください[CComControlBase::GetAmbientDisplayAsDefault](../../atl/reference/ccomcontrolbase-class.md#getambientdisplayasdefault)詳細についてはします。  
       
   -   **ラベルのように動作**: コンテナーのネイティブのラベルを置換するコントロールを有効にする OLEMISC_ACTSLIKELABEL 入ります列挙体のビットを設定します。 コンテナーは、何も場合、このフラグの処理を決定します。  
   
