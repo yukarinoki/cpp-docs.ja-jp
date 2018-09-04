@@ -1,7 +1,7 @@
 ---
-title: インライン アセンブリでの C++ 関数の呼び出し |Microsoft ドキュメント
+title: インライン アセンブリでの C++ 関数の呼び出し |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -19,20 +19,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffbd8038d240bc2ab0240d172d914790b6ca02ab
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 4717ae24dc1a0b6f51f7a00f68f6569c2f988c65
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049624"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678945"
 ---
 # <a name="calling-c-functions-in-inline-assembly"></a>インライン アセンブリでの C++ 関数の呼び出し
-## <a name="microsoft-specific"></a>Microsoft 固有の仕様  
- `__asm`ブロックがないオーバー ロードされるグローバルの C++ 関数のみを呼び出すことができます。 オーバー ロードされたグローバル C++ 関数、または C++ メンバー関数を呼び出した場合、コンパイラ エラーが発生します。  
-  
- 宣言された任意の関数を呼び出すこともできます**extern"C"** リンケージ。 これにより、`__asm`ブロック内にすべての標準ヘッダー ファイルがライブラリ関数を宣言するために、C のライブラリ関数を呼び出し、C プログラム**extern"C"** リンケージ。  
-  
- **Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- [インライン アセンブラー](../../assembler/inline/inline-assembler.md)
+
+**Microsoft 固有の仕様**
+
+`__asm`ブロックがないオーバー ロードされるグローバルの C++ 関数のみを呼び出すことができます。 オーバー ロードのグローバルな C++ 関数、または C++ メンバー関数を呼び出すと、コンパイラはエラーを発行します。
+
+宣言された任意の関数を呼び出すこともできます**extern"C"** リンケージ。 これにより、 `__asm` 、C ライブラリ関数を呼び出すすべての標準ヘッダー ファイルがライブラリ関数を宣言するために、C++ プログラム内でブロック**extern"C"** リンケージ。
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
+[インライン アセンブラー](../../assembler/inline/inline-assembler.md)<br/>

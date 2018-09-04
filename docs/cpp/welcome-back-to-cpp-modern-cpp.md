@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d626385523cb957b44589784c2e69539b5ed8fca
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4c659262d11d929e94958cee687103648270db23
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573095"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679282"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>C++ へようこそ (Modern C++)
 C++ は世界で最も広く使用されているプログラミング言語の 1 つです。 適切に記述された C++ プログラムは、高速で効率的です。 この言語は、楽しめるゲームから、高性能な科学的ソフトウェア、デバイス ドライバー、埋め込みプログラム、さらに Windows クライアント アプリケーションに至るまで、幅広いアプリケーションの作成に使用でき、他の言語よりも柔軟性があります。 20 年以上にわたって、C++ はそれらをはじめとするさまざまなソリューション使用されてきました。 ますます多くの C++ プログラマが、旧来の C のプログラミング スタイルから卒業して、最新の C++ の手法を身に着けていることを、ご存知でない方もいるかもしれません。  
@@ -133,7 +133,7 @@ void f()
   
 -   [ABI の境界での移植性](../cpp/portability-at-abi-boundaries-modern-cpp.md)  
   
- 詳細については、StackOverflow の記事を参照してください。 [C++ の表現形式は、c++ 11 で非推奨とされます。](http://go.microsoft.com/fwlink/p/?linkid=402836)  
+ 詳細については、StackOverflow の記事を参照してください。 [C++ の表現形式は c++ 11 で非推奨と](https://stackoverflow.com/questions/9299101/which-c-idioms-are-deprecated-in-c11)します。  
   
 ## <a name="see-also"></a>関連項目  
  [C++ 言語リファレンス](../cpp/cpp-language-reference.md)   

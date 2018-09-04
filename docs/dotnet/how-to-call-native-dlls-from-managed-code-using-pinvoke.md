@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9ddd919fb621c971425e9763cf781e5ff0b1c731
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c1e3d9d3d08ef0386a1ab85e0e5b6860f5d504cc
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195669"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681282"
 ---
 # <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>方法: PInvoke を使用してマネージド コードからネイティブ DLL を呼び出す
 アンマネージ Dll に実装されている関数は、Platform Invoke (P/invoke) 機能を使用してマネージ コードから呼び出すことができます。 DLL のソース コードを使用できない場合の相互運用の唯一のオプションは、P/invoke します。 ただし、Visual C は、他の .NET 言語とは異なり、P/invoke の代替を提供します。 詳細については、次を参照してください。[を使用して C++ Interop (暗黙の PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)します。  
   
 ## <a name="example"></a>例  
- 次のコード例は、Win32 を使用して[GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385) (ピクセル単位)、画面の現在の解像度を取得します。  
+ 次のコード例は、Win32 を使用して[GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) (ピクセル単位)、画面の現在の解像度を取得します。  
   
  関数の引数として組み込み型のみを使用すると、戻り値の場合に余分な作業は必要ありません。 関数ポインター、配列、および構造体などの他のデータ型には、適切なデータのマーシャ リングすることを確認する追加属性が必要です。  
   

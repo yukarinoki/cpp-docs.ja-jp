@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02bfbe474d30088c887e7a16b6dcea079dfd9821
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 784425246c3be99acde2942633ce5190807c59b4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213067"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689559"
 ---
 # <a name="cwinthread-class"></a>CWinThread クラス
 アプリケーション内の実行中のスレッドを表します。  
@@ -96,7 +96,7 @@ class CWinThread : public CCmdTarget
 |[CWinThread::IsIdleMessage](#isidlemessage)|特別なメッセージを確認します。|  
 |[CWinThread::OnIdle](#onidle)|オーバーライドすると、スレッド固有のアイドル時間の処理を実行します。|  
 |[CWinThread::PostThreadMessage](#postthreadmessage)|別のメッセージを投稿`CWinThread`オブジェクト。|  
-|[CWinThread::PreTranslateMessage](#pretranslatemessage)|Windows 関数にディスパッチされる前に、メッセージをフィルター処理[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)と[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934)します。|  
+|[CWinThread::PreTranslateMessage](#pretranslatemessage)|Windows 関数にディスパッチされる前に、メッセージをフィルター処理[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)します。|  
 |[CWinThread::ProcessMessageFilter](#processmessagefilter)|アプリケーションに到達する前に、特定のメッセージを受け取ります。|  
 |[CWinThread::ProcessWndProcException](#processwndprocexception)|スレッドのメッセージとコマンド ハンドラーによってスローされたすべてのハンドルされない例外を受け取ります。|  
 |[CWinThread::PumpMessage](#pumpmessage)|スレッドのメッセージ ループが含まれています。|  
@@ -411,7 +411,7 @@ BOOL PostThreadMessage(
 >  Windows を呼び出すときに[次](https://msdn.microsoft.com/library/windows/desktop/ms644946)MFC メッセージ ハンドラーは呼び出されません、MFC アプリケーション内の関数。 詳細については、サポート技術情報の記事、"PRB:: MFC メッセージ ハンドラーしないというで PostThreadMessage()"(Q142415) を参照してください。  
   
 ##  <a name="pretranslatemessage"></a>  CWinThread::PreTranslateMessage  
- Windows 関数にディスパッチされる前に、ウィンドウ メッセージをフィルター処理するには、この関数をオーバーライド[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)と[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934)します。  
+ Windows 関数にディスパッチされる前に、ウィンドウ メッセージをフィルター処理するには、この関数をオーバーライド[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)します。  
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -520,7 +520,7 @@ virtual int Run();
  **Int**スレッドによって返される値。 この値は、呼び出すことによって取得できる[GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread)します。  
   
 ### <a name="remarks"></a>Remarks  
- `Run` 取得し、アプリケーションが受信するまで、Windows メッセージをディスパッチする[WM_QUIT](/windows/desktop/winmsg/wm-quit)メッセージ。 スレッドのメッセージ キューにメッセージがない場合`Run`呼び出し`OnIdle`アイドル処理を実行します。 受信メッセージに移動、 [PreTranslateMessage](#pretranslatemessage)メンバー関数の特別な処理と、Windows 関数に[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)標準キーボード変換をします。 最後に、 [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 関数が呼び出されます。  
+ `Run` 取得し、アプリケーションが受信するまで、Windows メッセージをディスパッチする[WM_QUIT](/windows/desktop/winmsg/wm-quit)メッセージ。 スレッドのメッセージ キューにメッセージがない場合`Run`呼び出し`OnIdle`アイドル処理を実行します。 受信メッセージに移動、 [PreTranslateMessage](#pretranslatemessage)メンバー関数の特別な処理と、Windows 関数に[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)標準キーボード変換をします。 最後に、 [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数が呼び出されます。  
   
  `Run` オーバーライドされることはほとんどありませんが、特別な動作を実装するためにオーバーライドできます。  
   

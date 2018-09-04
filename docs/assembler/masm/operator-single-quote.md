@@ -1,7 +1,7 @@
 ---
-title: 演算子&#39; &#39; |Microsoft ドキュメント
+title: 演算子&#39; &#39; |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,21 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43f9ec59d84d9079999626bc0b72b6391b6425f4
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 8261e94ca4a8464cdaecaad3a99b2abcb7c837fb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057278"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692119"
 ---
 # <a name="operator-39-39"></a>演算子&#39;&#39;
-処理の*テキスト*' を文字列として。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-'text'  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [演算子リファレンス](../../assembler/masm/operators-reference.md)
+
+処理の*テキスト*' を文字列として。
+
+## <a name="syntax"></a>構文
+
+> ' テキスト '
+
+## <a name="see-also"></a>関連項目
+
+[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>

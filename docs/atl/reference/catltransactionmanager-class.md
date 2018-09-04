@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15a7f6ad0620591e51d1382cd1199c52dde222ac
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: b3776f95db1a1e6fad8f885e23bb0dc8836a31ff
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882768"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681659"
 ---
 # <a name="catltransactionmanager-class"></a>CAtlTransactionManager クラス
 CAtlTransactionManager クラスは、カーネル トランザクション マネージャー (KTM) 関数のラッパーを提供します。  
@@ -86,7 +86,7 @@ class CAtlTransactionManager;
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[m_bFallback](#m_bfallback)|TRUE の場合、フォールバックがサポートされています。FALSE それ以外の場合。|  
 |[m_hTransaction](#m_htransaction)|トランザクションのハンドルです。|  
@@ -96,7 +96,7 @@ class CAtlTransactionManager;
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [ATL::CAtlTransactionManager](../../atl/reference/catltransactionmanager-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atltransactionmanager.h  
   
 ##  <a name="dtor"></a>  ~ CAtlTransactionManager  
@@ -467,7 +467,7 @@ inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
  ファイルまたはディレクトリの名前。  
   
  *dwAttributes*  
- ファイルに設定するファイル属性。 詳細については、次を参照してください。 [SetFileAttributesTransacted](http://go.microsoft.com/fwlink/p/?linkid=158699)します。  
+ ファイルに設定するファイル属性。 詳細については、次を参照してください。 [SetFileAttributesTransacted](/windows/desktop/api/winbase/nf-winbase-setfileattributestransacteda)します。  
   
 ### <a name="remarks"></a>Remarks  
  このラッパーの呼び出し、`SetFileAttributesTransacted`関数。  

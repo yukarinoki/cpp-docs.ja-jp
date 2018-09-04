@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebbb33a4f17f5b4d458c4add4d59040d698dd4b8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 58eb907841abf63d77817e106ee339ad6c49bd7b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222195"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681204"
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>アクセラレータおよび accelerator_view オブジェクトの使用
 使用することができます、[アクセラレータ](../../parallel/amp/reference/accelerator-class.md)と[accelerator_view](../../parallel/amp/reference/accelerator-view-class.md)デバイスまたはエミュレーターで、C++ AMP コードを実行するを指定するクラス。 システムには、メモリの量、共有メモリ サポート、デバッグ サポート、または倍精度サポートによって異なる複数のデバイスまたはエミュレーターがある場合があります。 C++ Accelerated Massive Parallelism (C++ AMP) には、使用できるアクセラレータの調査、既定としての設定、parallel_for_each の複数の呼び出しのための複数の accelerator_views の指定、特別なデバッグ タスクの実行のために使用できる API が用意されています。  
@@ -180,11 +180,11 @@ bool pick_accelerator()
   
 - [accelerator::direct3d_warp データ メンバー](reference/accelerator-class.md#direct3d_warp): このアクセラレータ ストリーミング SIMD 拡張命令 (SSE) を使用するマルチコア Cpu で C++ AMP コードを実行するためのフォールバック ソリューションを提供します。  
   
-- [accelerator::cpu_accelerator データ メンバー](reference/accelerator-class.md#cpu_accelerator): ステージング配列を設定するため、このアクセラレータを使用することができます。 これは C++ AMP コードを実行できません。 詳細については、次を参照してください。、 [C++ AMP のステージング配列](http://go.microsoft.com/fwlink/p/?linkId=248485)ネイティブ コードのブログでの並行プログラミングに投稿します。  
+- [accelerator::cpu_accelerator データ メンバー](reference/accelerator-class.md#cpu_accelerator): ステージング配列を設定するため、このアクセラレータを使用することができます。 これは C++ AMP コードを実行できません。 詳細については、次を参照してください。、 [C++ AMP のステージング配列](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/11/09/staging-arrays-in-c-amp/)ネイティブ コードのブログでの並行プログラミングに投稿します。  
   
 ## <a name="interoperability"></a>相互運用性  
  
-C++ AMP ランタイム間の相互運用をサポートしている、`accelerator_view`クラスと Direct3D [ID3D11Device インターフェイス](http://go.microsoft.com/fwlink/p/?linkId=248488)します。 [Create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view)メソッドは、`IUnknown`インターフェイスを返します、`accelerator_view`オブジェクト。 [Get_device](https://msdn.microsoft.com/8194125e-8396-4d62-aa8a-65831dea8439)メソッドは、`accelerator_view`オブジェクトを返します、`IUknown`インターフェイス。  
+C++ AMP ランタイム間の相互運用をサポートしている、`accelerator_view`クラスと Direct3D [ID3D11Device インターフェイス](/windows/desktop/api/d3d11/nn-d3d11-id3d11device)します。 [Create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view)メソッドは、`IUnknown`インターフェイスを返します、`accelerator_view`オブジェクト。 [Get_device](reference/concurrency-direct3d-namespace-functions-amp.md#get_device)メソッドは、`accelerator_view`オブジェクトを返します、`IUnknown`インターフェイス。  
   
 ## <a name="see-also"></a>関連項目  
  

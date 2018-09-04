@@ -1,7 +1,7 @@
 ---
-title: ML の致命的でないエラー A2044 |Microsoft ドキュメント
+title: ML の致命的でないエラー A2044 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72e7c3e3c5122298e853a80d5abd45ffda912167
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 21a4ef6a11b52221b86ec791c864505b79b7e6bb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055506"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686958"
 ---
 # <a name="ml-nonfatal-error-a2044"></a>ML の致命的でないエラー A2044
-**ファイルに無効な文字**  
-  
- ソース ファイルには、コメント、文字列、以外の文字が含まれているか、リテラルとして認識されませんでした演算子またはその他の有効な文字です。  
-  
-## <a name="see-also"></a>関連項目  
- [ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)
+
+**ファイルに無効な文字**
+
+ソース ファイルには、コメント、文字列、以外の文字が含まれているか、リテラルとして認識されませんでした、演算子、またはその他の有効な文字。
+
+## <a name="see-also"></a>関連項目
+
+[ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)<br/>

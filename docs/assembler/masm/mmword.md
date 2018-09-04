@@ -1,7 +1,7 @@
 ---
-title: MMWORD |Microsoft ドキュメント
+title: MMWORD |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,35 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e97b1e58116d633519b1a780928e05862ac1771d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 7314c6d0861195e312c7f72481d2e195e041965d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054781"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679235"
 ---
 # <a name="mmword"></a>MMWORD
-MMX と SSE (XMM) の命令で 64 ビットのマルチ メディア オペランドに使用されます。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-MMWORD  
-```  
-  
-## <a name="remarks"></a>コメント  
- `MMWORD` 型です。  MMWORD MASM に追加されている、前に、同等の機能を実現されてがでした。  
-  
-```  
-mov mm0, qword ptr [ebx]  
-```  
-  
- 両方の手順については、64 ビットのオペランドで作業中に`QWORD`は 64 ビット符号なし整数値の型と`MMWORD`は 64 ビットのマルチ メディア値の型です。  
-  
- `MMWORD` 同じ型を表すために、 [_ _m64](../../cpp/m64.md)です。  
-  
-## <a name="example"></a>例  
-  
-```  
-movq     mm0, mmword ptr [ebx]  
+
+MMX と SSE (XMM) の手順で、64 ビット マルチ メディア オペランドに使用されます。
+
+## <a name="syntax"></a>構文
+
+> MMWORD
+
+## <a name="remarks"></a>Remarks
+
+`MMWORD` 型です。  MMWORD MASM に追加されている、前に同等の機能を獲得しましたでした。
+
+```asm
+    mov mm0, qword ptr [ebx]
+```
+
+両方の手順については、64 ビットのオペランドで作業中に`QWORD`は 64 ビット符号なし整数の型と`MMWORD`は 64 ビットのマルチ メディア値の型です。
+
+`MMWORD` 同じ型を表すために、 [_ _m64](../../cpp/m64.md)します。
+
+## <a name="example"></a>例
+
+```asm
+    movq     mm0, mmword ptr [ebx]
 ```

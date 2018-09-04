@@ -1,7 +1,7 @@
 ---
-title: .ERR2 |Microsoft ドキュメント
+title: .ERR2 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ed2d4127340634d398d1bd1db76475e00032a9d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 5a23dae5eaecc73625b7580eda01d8e9b97421a1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051931"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689459"
 ---
 # <a name="err2"></a>.ERR2
-[.ERR](../../assembler/masm/dot-err.md)ブロックの場合は、すべてのアセンブリ パスで評価**オプション: SETIF2**は**TRUE です。**  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-.ERR2 [[message]]  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+
+[.ERR](../../assembler/masm/dot-err.md)ブロックの場合は、すべてのアセンブリ パスで評価**オプション: SETIF2**は**TRUE です。**
+
+## <a name="syntax"></a>構文
+
+> .ERR2 [メッセージ]
+
+## <a name="see-also"></a>関連項目
+
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>

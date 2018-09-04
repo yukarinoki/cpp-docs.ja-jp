@@ -163,12 +163,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a0ef98a17cdbc262ac8db90eba089601d8f8841
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b989cc55a76c1a982e0739a15d91544e5aeb4ddf
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216723"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678663"
 ---
 # <a name="cwindow-class"></a>CWindow クラス
 このクラスは、ウィンドウを操作するためのメソッドを提供します。  
@@ -547,10 +547,10 @@ HWND Create(
  [in]ウィンドウの名前を指定します。 既定値は、NULL です。  
   
  *dwStyle*  
- [in]ウィンドウのスタイル。 既定値が 0 を指定はスタイルれないことを意味します。 使用可能な値の一覧は、次を参照してください。 [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK に含まれています。  
+ [in]ウィンドウのスタイル。 既定値が 0 を指定はスタイルれないことを意味します。 使用可能な値の一覧は、次を参照してください。 [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows SDK に含まれています。  
   
  *dwExStyle*  
- [in]拡張ウィンドウ スタイル。 既定値が 0 を指定は、拡張スタイルれないことを意味します。 使用可能な値の一覧は、次を参照してください。 [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK に含まれています。  
+ [in]拡張ウィンドウ スタイル。 既定値が 0 を指定は、拡張スタイルれないことを意味します。 使用可能な値の一覧は、次を参照してください。 [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK に含まれています。  
   
  *MenuOrID*  
  [in]型の変数[_U_MENUorID](../../atl/reference/u-menuorid-class.md)メニューまたはウィンドウの識別子を識別するハンドルを指定します。 既定値は、0 u です。  
@@ -564,7 +564,7 @@ HWND Create(
 ### <a name="remarks"></a>Remarks  
  `CWindow::rcDefault` 見なさ`__declspec(selectany) RECT CWindow::rcDefault = {CW_USEDEFAULT, CW_USEDEFAULT, 0, 0};`します。  
   
- 参照してください[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)詳細については、Windows SDK に含まれています。  
+ 参照してください[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)詳細については、Windows SDK に含まれています。  
   
  **注**の値として 0 が使用する場合、 *MenuOrID*パラメーター 0 u として指定する必要があります (既定値)、コンパイラ エラーを回避するためにします。  
   
@@ -617,7 +617,7 @@ CWindow(HWND hWnd = NULL) throw();
  初期化します、 [m_hWnd](#m_hwnd)メンバー *hWnd*既定では NULL です。  
   
 > [!NOTE]
-> `CWindow::CWindow` ウィンドウは作成されません。 クラス[CWindowImpl](../../atl/reference/cwindowimpl-class.md)、 [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)、および[CDialogImpl](../../atl/reference/cdialogimpl-class.md) (から派生する`CWindow`) は、ウィンドウまたはダイアログ ボックスを作成する方法を提供割り当てられます`CWindow::m_hWnd`します。 使用することも、 [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) Win32 関数。  
+> `CWindow::CWindow` ウィンドウは作成されません。 クラス[CWindowImpl](../../atl/reference/cwindowimpl-class.md)、 [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)、および[CDialogImpl](../../atl/reference/cdialogimpl-class.md) (から派生する`CWindow`) は、ウィンドウまたはダイアログ ボックスを作成する方法を提供割り当てられます`CWindow::m_hWnd`します。 使用することも、 [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Win32 関数。  
   
 ##  <a name="deferwindowpos"></a>  CWindow::DeferWindowPos  
  指定したウィンドウの指定した複数ウィンドウ位置構造を更新します。  
@@ -644,7 +644,7 @@ BOOL DestroyWindow() throw();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[DestroyWindow](https://msdn.microsoft.com/library/windows/desktop/ms632682) Windows SDK にします。  
+ 参照してください[DestroyWindow](/windows/desktop/api/winuser/nf-winuser-destroywindow) Windows SDK にします。  
   
  破棄しません、`CWindow`オブジェクト自体です。  
   
@@ -1201,7 +1201,7 @@ LONG GetWindowLong(int nIndex) const throw();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[GetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633584) Windows SDK にします。  
+ 参照してください[GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga) Windows SDK にします。  
   
 > [!NOTE]
 >  Windows の 32 ビットと 64 ビットの両方のバージョンと互換性があるコードを記述するには使用[作成する](#getwindowlongptr)します。  
@@ -1328,7 +1328,7 @@ WORD GetWindowWord(int nIndex) const throw();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[GetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633584) Windows SDK にします。  
+ 参照してください[GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga) Windows SDK にします。  
   
 ##  <a name="gotodlgctrl"></a>  CWindow::GotoDlgCtrl  
  ダイアログ ボックスのコントロールにキーボード フォーカスを設定します。  
@@ -1606,13 +1606,13 @@ BOOL ModifyStyle(
  [in]スタイルの変更中に追加するウィンドウ スタイルを指定します。  
   
  *nFlags*  
- [in]ウィンドウの位置決めフラグ。 使用可能な値の一覧は、次を参照してください。、 [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 内の関数。  
+ [in]ウィンドウの位置決めフラグ。 使用可能な値の一覧は、次を参照してください。、 [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) Windows SDK 内の関数。  
   
 ### <a name="return-value"></a>戻り値  
  ウィンドウ スタイルが変更された場合は TRUE。それ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
- ビットごとの OR を使用してスタイルを追加または削除を組み合わせることができます ( &#124; ) 演算子。 参照してください、 [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)関数が使用可能なウィンドウのスタイルに関する Windows SDKfor 情報を入力します。  
+ ビットごとの OR を使用してスタイルを追加または削除を組み合わせることができます ( &#124; ) 演算子。 参照してください、 [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)関数が使用可能なウィンドウのスタイルに関する Windows SDKfor 情報を入力します。  
   
  場合*nFlags* 0 以外の場合、 `ModifyStyle` Win32 関数を呼び出す`SetWindowPos`、し、結合することで、ウィンドウを再描画*nFlags*で次の 4 つのフラグ。  
   
@@ -1647,13 +1647,13 @@ BOOL ModifyStyleEx(
  [in]スタイルの変更中に追加する拡張スタイルを指定します。  
   
  *nFlags*  
- [in]ウィンドウの位置決めフラグ。 使用可能な値の一覧は、次を参照してください。、 [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 内の関数。  
+ [in]ウィンドウの位置決めフラグ。 使用可能な値の一覧は、次を参照してください。、 [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) Windows SDK 内の関数。  
   
 ### <a name="return-value"></a>戻り値  
  拡張ウィンドウ スタイルが変更された場合は TRUE。それ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
- ビットごとの OR を使用してスタイルを追加または削除を組み合わせることができます ( &#124; ) 演算子。 参照してください、 [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)関数に関する拡張スタイルを使用可能な Windows SDKfor 情報を入力します。  
+ ビットごとの OR を使用してスタイルを追加または削除を組み合わせることができます ( &#124; ) 演算子。 参照してください、 [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)関数に関する拡張スタイルを使用可能な Windows SDKfor 情報を入力します。  
   
  場合*nFlags* 0 以外の場合、 `ModifyStyleEx` Win32 関数を呼び出す`SetWindowPos`、し、結合することで、ウィンドウを再描画*nFlags*で次の 4 つのフラグ。  
   
@@ -2230,7 +2230,7 @@ LONG SetWindowLong(int nIndex, LONG dwNewLong) throw();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) Windows SDK にします。  
+ 参照してください[SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) Windows SDK にします。  
   
 > [!NOTE]
 >  Windows の 32 ビットと 64 ビットの両方のバージョンと互換性があるコードを記述するには使用[作成する](#setwindowlongptr)します。  
@@ -2276,7 +2276,7 @@ BOOL SetWindowPos(
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK にします。  
+ 参照してください[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) Windows SDK にします。  
   
  このメソッドの 2 番目のバージョンを使用して、 [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体をウィンドウの新しい位置、幅、および高さを設定します。  
   
@@ -2311,7 +2311,7 @@ WORD SetWindowWord(int nIndex, WORD wNewWord) throw();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) Windows SDK にします。  
+ 参照してください[SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) Windows SDK にします。  
   
 ##  <a name="showcaret"></a>  CWindow::ShowCaret  
  システム キャレットが表示されます。  

@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b3f29d5b2c4343ea156d1ccd1dfbf347026a127b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 04401180cfcd82f3a699f71ba594523cf0f9cb9b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202277"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681724"
 ---
 # <a name="accelerator-editor"></a>アクセラレータ エディター
 
@@ -35,7 +35,7 @@ ms.locfileid: "43202277"
 
 通常、アクセラレータはメニューやツール バーでも使用できるプログラム コマンドのキーボード ショートカットとして使用されます。 しかし、アクセラレータ テーブルを使用すると、関連付けられているユーザー インターフェイス オブジェクトのないコマンドにキーの組み合わせを定義できます。
 
-使用することができます[クラス ビュー](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)コードへのアクセス キーのコマンドをフックします。
+使用することができます[クラス ビュー](/visualstudio/ide/viewing-the-structure-of-code)コードへのアクセス キーのコマンドをフックします。
 
 **アクセラレータ**エディターができます。
 

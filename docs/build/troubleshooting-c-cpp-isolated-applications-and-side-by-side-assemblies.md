@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4550d523a4410734c391e2e4d266ae536b4610b4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3768056a240bb8ad647287b4ca2b60f8e7ede484
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218670"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681386"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>C/C++ 分離アプリケーションおよび side-by-side アセンブリのトラブルシューティング
 依存するライブラリが見つからない場合は、C/C++ アプリケーションの読み込みに失敗する場合があります。 ここでは、C/C++ アプリケーションの読み込みに失敗するいくつかの一般的な理由について説明し、問題を解決する手順を提示します。  
@@ -46,7 +46,7 @@ ms.locfileid: "43218670"
   
 3.  アプリケーションが side-by-side アセンブリに依存していて、マニフェストが存在しない場合は、リンカーにプロジェクトのマニフェストを生成させる必要があります。 リンカー オプションをオンに**生成マニフェスト**で、**プロジェクト プロパティ**プロジェクトのダイアログ ボックス。  
   
-4.  マニフェストがライブラリ内に埋め込まれている場合は、RT_MANIFEST の ID がこのタイプのバイナリに適した ID であることを確認します。 使用するには、どのリソース ID の詳細については、次を参照してください。[を使用するサイド バイ サイド アセンブリ リソース (Windows) として](https://msdn.microsoft.com/library/windows/desktop/aa376617.aspx)します。 マニフェストが個別ファイルの場合は、XML エディターまたはテキスト エディターで開きます。 マニフェストと配置のルールの詳細については、次を参照してください。[マニフェスト](https://msdn.microsoft.com/library/aa375365)します。  
+4.  マニフェストがライブラリ内に埋め込まれている場合は、RT_MANIFEST の ID がこのタイプのバイナリに適した ID であることを確認します。 使用するには、どのリソース ID の詳細については、次を参照してください。[を使用するサイド バイ サイド アセンブリ リソース (Windows) として](/windows/desktop/SbsCs/using-side-by-side-assemblies-as-a-resource)します。 マニフェストが個別ファイルの場合は、XML エディターまたはテキスト エディターで開きます。 マニフェストと配置のルールの詳細については、次を参照してください。[マニフェスト](https://msdn.microsoft.com/library/aa375365)します。  
   
     > [!NOTE]
     >  埋め込みマニフェストと個別マニフェスト ファイルの両方が存在する場合、オペレーティング システム ローダーは埋め込みマニフェストを使用し、個別ファイルは無視します。 ただし、Windows XP ではその反対です。つまり、個別マニフェスト ファイルが使用され、埋め込みマニフェストは無視されます。  
