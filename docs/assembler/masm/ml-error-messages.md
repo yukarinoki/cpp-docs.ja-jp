@@ -1,7 +1,7 @@
 ---
-title: ML エラー メッセージ |Microsoft ドキュメント
+title: ML エラー メッセージ |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,48 +16,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbc2ae6388ad11a411850d03de421d2f6820fc03
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 836daf438fa5a7f4c797b5b15ffab89720a7af98
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057098"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43675966"
 ---
 # <a name="ml-error-messages"></a>ML エラー メッセージ
-MASM のコンポーネントによって生成されたエラー メッセージは、3 つのカテゴリに分類されます。  
-  
--   **致命的なエラー。** これらをユーティリティが通常のプロセスを完了するを妨げる重大な問題を示します。  
-  
--   **致命的でないエラーです。** ユーティリティは、そのプロセスを完了可能性があります。 場合は、その結果は希望する可能性があります。  
-  
--   **警告です。** これらのメッセージは、目的の結果を得られない可能性がありますの状態を示します。  
-  
- すべてのエラー メッセージは、次の形式をとります。  
-  
-```  
-  
-Utility: Filename (Line) : [Error_type} (Code): Message_text  
-```  
-  
- それぞれの文字について以下に説明します。  
-  
- `Utility`  
- エラー メッセージを送信するプログラム。  
-  
- *ファイル名*  
- エラーが発生する条件を含むファイルです。  
-  
- *Line*  
- エラー条件が存在するおおよその行番号。  
-  
- *Error_type*  
- 致命的なエラー、エラー、または警告です。  
-  
- *コード*  
- 一意の 5 または 6 桁のエラー コード。  
-  
- `Message_text`  
- 短期的および一般的なエラー状態の説明です。  
-  
-## <a name="see-also"></a>関連項目  
- [Microsoft Macro Assembler リファレンス](../../assembler/masm/microsoft-macro-assembler-reference.md)
+
+MASM のコンポーネントによって生成されるエラー メッセージは、3 つのカテゴリに分類されます。
+
+- **致命的なエラー。** ユーティリティが、通常のプロセスを完了するを防ぎます深刻な問題を示します。
+
+- **致命的でないエラー。** ユーティリティは、そのプロセスを完了可能性があります。 その場合、その結果は希望する可能性があります。
+
+- **警告です。** これらのメッセージは、目的の結果を取得できない可能性がある条件を示します。
+
+すべてのエラー メッセージは、次の形式をとります。
+
+> *ユーティリティ*: *Filename* (*行*): {*Error_type*} (*コード*):*テキスト*
+
+それぞれの文字について以下に説明します。
+
+*ユーティリティ*<br/>
+エラー メッセージを送信したプログラムです。
+
+*ファイル名*<br/>
+エラーが発生元条件を含むファイルです。
+
+*Line*<br/>
+おおよその行では、エラー条件が存在します。
+
+*Error_type*<br/>
+致命的なエラー、エラー、または警告。
+
+*コード*<br/>
+一意の 5 または 6 桁のエラー コード。
+
+*テキスト*<br/>
+短期保存と一般的なエラー状態の説明です。
+
+## <a name="see-also"></a>関連項目
+
+[Microsoft Macro Assembler リファレンス](../../assembler/masm/microsoft-macro-assembler-reference.md)<br/>

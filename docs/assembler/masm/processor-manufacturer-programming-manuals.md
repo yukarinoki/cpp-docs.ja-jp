@@ -1,7 +1,7 @@
 ---
-title: プロセッサの製造元のプログラミング マニュアル |Microsoft ドキュメント
+title: プロセッサの製造元のプログラミング マニュアル |Microsoft Docs
 ms.custom: ''
-ms.date: 06/01/2018
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -12,28 +12,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55d712af448b4e18d853ced3d387918561d235b0
-ms.sourcegitcommit: d1f576a0f59678edc3d93508cf46485138332178
+ms.openlocfilehash: 56e653f1870d3139031a79180cc3a02c33b162f5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753602"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676259"
 ---
 # <a name="processor-manufacturer-programming-manuals"></a>プロセッサの製造元のプログラミング マニュアル
 
-この記事では、製造、販売、されたりしない Microsoft によってサポートされているプロセッサについてのプログラミング情報を含む可能性のある web サイトへのリンクを提供します。 Microsoft が所有またはいない web サイト、またはそれらのコンテンツを制御します。
+この記事ではない製造、販売、または Microsoft によってサポートされているプロセッサについてのプログラミング情報を含む可能性のある web サイトへのリンクを提供します。 Microsoft が所有またはいない web サイトまたはそれらのコンテンツを制御します。
 
 ## <a name="processor-manufacturer-websites"></a>プロセッサの製造元の web サイト
 
-- [AMD 開発者ガイド、マニュアルおよび ISA ドキュメント](https://go.microsoft.com/fwlink/p/?linkid=874958)
+- [AMD 開発者ガイド、マニュアル、および ISA ドキュメント](https://developer.amd.com/resources/developer-guides-manuals/)
 
-- [インテル 64 および ia-32 アーキテクチャ ソフトウェア デベロッパーズ マニュアル](https://go.microsoft.com/fwlink/p/?LinkID=510021)
+- [Intel 64 および ia-32 アーキテクチャ ソフトウェア デベロッパーズ マニュアル](https://software.intel.com/articles/intel-sdm)
 
-- [Advanced Vector Extensions Intel の概要](https://go.microsoft.com/fwlink/p/?linkid=874961)
+- [Intel Advanced Vector 拡張の概要](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-Visual Studio でも、Microsoft マクロ アセンブラーは、すべてのプロセッサをサポートします。
+Visual Studio でも Microsoft Macro Assembler のすべてのプロセッサをサポートします。
 
 ## <a name="see-also"></a>関連項目
 

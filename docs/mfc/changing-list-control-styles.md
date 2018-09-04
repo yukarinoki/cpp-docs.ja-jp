@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4919d9fd947a489ee9535abd5aa57d7861ba5a37
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2fdb2bbb3681fab2bae42866df40d0ca363b7935
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197995"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676768"
 ---
 # <a name="changing-list-control-styles"></a>リスト コントロール スタイルの変更
 リスト コントロールのウィンドウ スタイルを変更することができます ([CListCtrl](../mfc/reference/clistctrl-class.md)) 作成した後、いつでもできます。 ウィンドウ スタイルを変更すると、コントロールを使用してビューの種類を変更します。 たとえば、エクスプ ローラーをエミュレートする可能性がありますを指定するメニュー項目またはツール バー ボタンのさまざまなビューでコントロールの切り替え: アイコン ビューやリスト ビュー。  
   
- たとえば、ユーザーは、メニュー項目を選択するときにへの呼び出しを作成できます[GetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633584)コントロールの現在のスタイルを取得し、呼び出す[SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591)スタイルをリセットします。 詳細については、次を参照してください。[を使用してリスト ビュー コントロール](/windows/desktop/Controls/using-list-view-controls)Windows SDK に含まれています。  
+ たとえば、ユーザーは、メニュー項目を選択するときにへの呼び出しを作成できます[GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga)コントロールの現在のスタイルを取得し、呼び出す[SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga)スタイルをリセットします。 詳細については、次を参照してください。[を使用してリスト ビュー コントロール](/windows/desktop/Controls/using-list-view-controls)Windows SDK に含まれています。  
   
  使用可能なスタイルは、「[作成](../mfc/reference/clistctrl-class.md#create)です。 スタイル**LVS_ICON**、**だけ**、 **LVS_LIST**、および**LVS_REPORT**一覧の 4 つのコントロール ビューを指定します。  
   

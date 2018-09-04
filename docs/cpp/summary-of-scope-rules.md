@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d58bf1d860bac7328c491164f6aeb77bed19b9cd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e85fc8207e9700f35b59bfaba62dcd699ee37dd5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195032"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676925"
 ---
 # <a name="summary-of-scope-rules"></a>スコープ規則の概要
 名前の使用はスコープ内で明確である必要があります (オーバーロードが決定される段階まで)。 名前が関数を表している場合、関数はパラメーターの数と型に対し明確でなければなりません。 名前のあいまいさのないままの場合[メンバー アクセス](../cpp/member-access-control-cpp.md)規則が適用されます。  
   
 ## <a name="constructor-initializers"></a>Constructor Initializers (コンストラクター初期化子)  
- コンス トラクター初期化子 (で説明されている[初期化の基底クラスとメンバー](https://msdn.microsoft.com/2f71377e-2b6b-49da-9a26-18e9b40226a1)) を指定されているコンス トラクターの最も外側のブロックのスコープで評価されます。 したがって、初期化子は、コンストラクターのパラメーター名を使用できます。  
+ [コンス トラクター初期化子](constructors-cpp.md#member_init_list)を指定されているコンス トラクターの最も外側のブロックのスコープで評価されます。 したがって、初期化子は、コンストラクターのパラメーター名を使用できます。  
   
 ## <a name="global-names"></a>Global Names (グローバルな名前)  
  オブジェクト、関数、または列挙子の名前が関数やクラスの外側に記述されているか、またはグローバル スコープの単項演算子 (`::`) が先頭に付加されており、以下のいずれかの二項演算子と共に使用されていない場合、その名前はグローバルと見なされます。  

@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b7ec520d27d52bb3e50a58780d822363016ef76
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ff46958afea8825f29941d9f3cbead20c533c76c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606864"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676986"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (共通言語ランタイムのコンパイル)
 アプリケーションおよびコンポーネントで、共通言語ランタイム (CLR) の機能を使用できるようにします。  
@@ -61,17 +61,14 @@ ms.locfileid: "42606864"
  **/clr:noAssembly**  
  アセンブリ マニフェストを出力ファイルに挿入できないことを指定します。 既定では、 **noAssembly** オプションはオフです。  
   
- 
-  **noAssembly** オプションは非推奨とされました。 代わりに、 [/LN (Create MSIL Module)](../../build/reference/ln-create-msil-module.md) を使用してください。  
+ **noAssembly** オプションは非推奨とされました。 代わりに、 [/LN (Create MSIL Module)](../../build/reference/ln-create-msil-module.md) を使用してください。  
   
  マニフェストにアセンブリ メタデータがないマネージド プログラムを、 *モジュール*と呼びます。 **noAssembly** オプションは、モジュールを生成するときのみ使用できます。 [/c](../../build/reference/c-compile-without-linking.md) と **/clr:noAssembly**を使用してコンパイルする場合は、リンカーのフェーズで [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md) オプションを指定してモジュールを作成します。  
   
  Visual C++ 2005 より前のバージョンでは、 **/clr:noAssembly** には **/LD**が必要です。 現在は、**/LD** を指定すると **/LD**が暗黙的に指定されるようになっています。  
   
  **/clr:initialAppDomain**  
- CLR のバージョン 1 で実行する Visual C アプリケーションを有効にします。 使用する場合**initialAppDomain**、記載されている問題のいくつか生じる[バグ: を使用する場合の AppDomainUnloaded 例外のマネージ Visual C コンポーネント拡張](http://go.microsoft.com/fwlink/p/?linkid=169465)microsoftWeb サイトをサポートします。  
-  
- CLR の Version 1 では ASP.NET をサポートしていないため、 **initialAppDomain** を使用してコンパイルされたアプリケーションは、ASP.NET を使用しているアプリケーションでは使用しないでください。  
+ CLR のバージョン 1 で実行する Visual C アプリケーションを有効にします。  CLR の Version 1 では ASP.NET をサポートしていないため、 **initialAppDomain** を使用してコンパイルされたアプリケーションは、ASP.NET を使用しているアプリケーションでは使用しないでください。  
   
  **/clr:nostdlib**  
  既定の \clr ディレクトリを無視するようにコンパイラに指示します。 System.dll などの DLL の複数のバージョンを含めると、コンパイラはエラーを生成します。 このオプションを使用すると、コンパイル時に使用する特定のフレームワークを指定できます。  
@@ -81,8 +78,7 @@ ms.locfileid: "42606864"
   
  マネージド型を定義および使用するアプリケーションの開発方法については、「 [Component Extensions for Runtime Platforms](../../windows/component-extensions-for-runtime-platforms.md)。  
   
- 
-  **/clr** を使用してコンパイルされたアプリケーションには、マネージド データがある場合とない場合があります。  
+ **/clr** を使用してコンパイルされたアプリケーションには、マネージド データがある場合とない場合があります。  
   
  マネージ アプリケーションでのデバッグを有効にするのを参照してください。 [/ASSEMBLYDEBUG (DebuggableAttribute の追加)](../../build/reference/assemblydebug-add-debuggableattribute.md)します。  
   
@@ -102,9 +98,7 @@ ms.locfileid: "42606864"
   
  **/clr** が使用されるときは、 `_MANAGED` シンボルは 1 に定義されます。 詳細については、「 [Predefined Macros](../../preprocessor/predefined-macros.md)」を参照してください。  
   
- 最初にネイティブなオブジェクト ファイルのグローバル変数が (実行可能ファイルが DLL の場合は DllMain の実行中に) 初期化され、その後でマネージド セクションのグローバル変数が (いずれかのマネージド コードが実行される前に) 初期化されます。 
-  `#pragma`
-  [init_seg](../../preprocessor/init-seg.md) は、マネージド カテゴリ内およびアンマネージド カテゴリ内での初期化の順序にのみ影響します。  
+ 最初にネイティブなオブジェクト ファイルのグローバル変数が (実行可能ファイルが DLL の場合は DllMain の実行中に) 初期化され、その後でマネージド セクションのグローバル変数が (いずれかのマネージド コードが実行される前に) 初期化されます。 `#pragma`[init_seg](../../preprocessor/init-seg.md) は、マネージド カテゴリ内およびアンマネージド カテゴリ内での初期化の順序にのみ影響します。  
   
 ## <a name="metadata-and-unnamed-classes"></a>メタデータと名前のないクラス  
  名前のないクラスは、メタデータに `$UnnamedClass$`*crc-of-current-file-name*`$`*index*`$`のような名前で表示されます。この *index* は、コンパイル時に名前のないクラスに与えられる連続番号です。 次のコードの例では、名前のないクラスをメタデータに生成します。  
