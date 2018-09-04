@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd96c7028f5f37d617c86e412fa238ccf141cb58
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 0d548a5cf0384a59c3fa12d88268997f1e801704
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42573138"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196662"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT クラス
 このクラスを表す、`CSimpleStringT`オブジェクト。  
@@ -471,11 +471,11 @@ PXSTR GetBufferSetLength(int nLength);
   
  参照カウントの詳細については、次の記事を参照してください。  
   
-- [参照カウントをオブジェクトの有効期間を管理する](http://msdn.microsoft.com/library/windows/desktop/ms687260)Windows SDK にします。 
+- [参照カウントをオブジェクトの有効期間を管理する](/windows/desktop/com/managing-object-lifetimes-through-reference-counting)Windows SDK にします。 
   
-- [参照カウントを実装する](http://msdn.microsoft.com/library/windows/desktop/ms693431)Windows SDK にします。
+- [参照カウントを実装する](/windows/desktop/com/implementing-reference-counting)Windows SDK にします。
   
-- [参照カウントを管理するためのルール](http://msdn.microsoft.com/library/windows/desktop/ms692481)Windows SDK にします。  
+- [参照カウントを管理するためのルール](/windows/desktop/com/rules-for-managing-reference-counts)Windows SDK にします。  
   
 ### <a name="example"></a>例  
  次の例は、`CSimpleStringT::GetBufferSetLength` の使い方を示しています。  
@@ -599,11 +599,11 @@ PXSTR LockBuffer();
   
  参照カウントの詳細については、次の記事を参照してください。  
   
-- [参照カウントをオブジェクトの有効期間を管理する](http://msdn.microsoft.com/library/windows/desktop/ms687260)Windows SDK で  
+- [参照カウントをオブジェクトの有効期間を管理する](/windows/desktop/com/managing-object-lifetimes-through-reference-counting)Windows SDK で  
   
-- [参照カウントを実装する](http://msdn.microsoft.com/library/windows/desktop/ms693431)Windows SDK で  
+- [参照カウントを実装する](/windows/desktop/com/implementing-reference-counting)Windows SDK で  
   
-- [参照カウントを管理するためのルール](http://msdn.microsoft.com/library/windows/desktop/ms692481)Windows SDK で  
+- [参照カウントを管理するためのルール](/windows/desktop/com/rules-for-managing-reference-counts)Windows SDK で  
   
 ### <a name="example"></a>例  
  次の例は、`CSimpleStringT::LockBuffer` の使い方を示しています。  
