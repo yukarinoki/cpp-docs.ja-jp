@@ -5,6 +5,6 @@ Visual Studio での特定の診断メッセージのヘルプを表示するで
 > [!NOTE]
 > すべての Visual Studio のエラーまたは警告が記載されています。 多くの場合は、診断メッセージは、使用できる情報のすべてを提供します。 使用したときに、このページに表示される場合**F1**お知らせ、エラーの考えや、警告メッセージには、追加の説明が必要があります。 このページでフィードバック フォームを使用して、[コメント] セクションで、コメントを追加できますか[GitHub で問題が発生する](https://github.com/MicrosoftDocs/cpp-docs/issues)します。 フィードバックを送信し、IDE でバグを入力できます。 Visual Studio で、メニュー バーに移動し、選択**ヘルプ > フィードバックの送信 > 問題を報告する**を使用して、提案の送信または**ヘルプ > フィードバックの送信 > 提案の送信**します。
 
-Microsoft のパブリック フォーラムで、他のサポートについてのエラーと警告のあります。 エラーまたは警告の数を検索することができます、[開発者コミュニティ](https://go.microsoft.com/fwlink/p/?linkid=820594)サイト。 [Visual C の言語](http://go.microsoft.com/fwlink/p/?linkid=158195)フォーラムでは質問や、C++ 言語の構文と MSVC コンパイラについて議論します。 [Visual C 全般](http://go.microsoft.com/fwlink/p/?linkid=158194)フォーラムではその他のフォーラムで議論されていない Visual C についての質問。 エラーと警告検索およびで質問する可能性がありますも[Stack Overflow](http://stackoverflow.com/)解決策を検索します。
+Microsoft のパブリック フォーラムで、他のサポートについてのエラーと警告のあります。 エラーまたは警告の数を検索することができます、[開発者コミュニティ](https://developercommunity.visualstudio.com/spaces/8/index.html)サイト。 エラーと警告検索およびで質問する可能性がありますも[Stack Overflow](http://stackoverflow.com/)解決策を検索します。
 
 追加のヘルプおよびコミュニティ リソースへのリンクを参照してください。 [Visual c ヘルプおよびコミュニティ](../../visual-cpp-help-and-community.md)します。

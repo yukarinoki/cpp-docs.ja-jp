@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c4acddaeac8e63ecd09860ffc9c56c97b212506
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e0a4e8c47ea924fc098458219946f440f093339c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219729"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681738"
 ---
 # <a name="single-inheritance"></a>単一継承
 継承の一般的な形態である "単一継承" では、クラスの持つ基底クラスは 1 つだけです。 次の図に示す関係を考えます。  
@@ -63,7 +63,7 @@ class PaperbackBook : public Book {};
  "有向非循環グラフ" ("DAG") と呼ばれる上記の図では、一部のクラスが複数の派生クラスの基底クラスになっています。 ただし、その逆は正しくありません。どの派生クラスにも直接基底クラスは 1 つしかありません。 図のグラフは、"単一継承" 構造を示しています。  
   
 > [!NOTE]
->  有向非循環グラフは、単一継承に特有のものではありません。 多重継承グラフを記述するためにも使用されます。 このトピックでは、「[多重継承](https://msdn.microsoft.com/3b74185e-2beb-4e29-8684-441e51d2a2ca)します。  
+>  有向非循環グラフは、単一継承に特有のものではありません。 多重継承グラフを記述するためにも使用されます。  
   
  継承の場合、派生クラスは、基底クラスのメンバーと、追加した新しいメンバーを含みます。 その結果、派生クラスは基底クラスのメンバーを参照できます (それらのメンバーが派生クラスで再定義されていない限り)。 直接または間接基底クラスのメンバーが派生クラスで再定義された場合は、スコープ解決演算子 (`::`) を使用してそれらのメンバーを参照できます。 次の例について考えます。  
   

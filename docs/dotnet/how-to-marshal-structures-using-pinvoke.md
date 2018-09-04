@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a26394a906f40d6dc194118bb312cfe1a0ce834e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6719d7b104c5dd520a8c4e8a027ea47bd76a95bc
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219885"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689511"
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>方法: PInvoke を使用して構造体をマーシャリングする
 このドキュメントでは、C スタイルの構造体から呼び出せるマネージ関数を P/invoke を使用してそのまま使用するネイティブ関数について説明します。 代わりに、C++ Interop 機能を使用することをお勧めします。 P/invoke P/invoke は、ほとんどのコンパイル時エラーを報告するため、タイプ セーフでないし、実装、アンマネージ API が DLL としてパッケージ化され、ソース コードがない場合に時間がかかることができます。P/invoke は、使用可能な唯一のオプションです。 それ以外の場合、次のドキュメントを参照してください。  
@@ -34,7 +34,7 @@ ms.locfileid: "43219885"
   
  既定では、ネイティブおよびマネージ構造体レイアウトが異なる、メモリ内構造体のマネージ/アンマネージの境界を越えて受け渡しには、データの整合性を保持するために余分な手順が必要です。 正常されます。  
   
- このドキュメントでは、ネイティブの構造と結果の構造をアンマネージ関数に渡す方法に相当するマネージドを定義するために必要な手順について説明します。 このドキュメントで単純な構造体-文字列またはポインターを含まないもの — 使用されます。 Blittable でない相互運用性については、次を参照してください。[を使用して C++ Interop (暗黙の PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)します。 P/invoke は、戻り値として非 blittable 型を含めることはできません。 Blittable 型のマネージ コードとアンマネージ コードで同じ表現であります。 詳細については、次を参照してください。 [blittable 型と非 Blittable 型](https://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)します。  
+ このドキュメントでは、ネイティブの構造と結果の構造をアンマネージ関数に渡す方法に相当するマネージドを定義するために必要な手順について説明します。 このドキュメントで単純な構造体-文字列またはポインターを含まないもの — 使用されます。 Blittable でない相互運用性については、次を参照してください。[を使用して C++ Interop (暗黙の PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)します。 P/invoke は、戻り値として非 blittable 型を含めることはできません。 Blittable 型のマネージ コードとアンマネージ コードで同じ表現であります。 詳細については、次を参照してください。 [blittable 型と非 Blittable 型](/dotnet/framework/interop/blittable-and-non-blittable-types)します。  
   
  単純なをマーシャ リングするマネージ/アンマネージの境界を越えて blittable 構造最初が必要です各ネイティブ構造体のマネージ バージョンが定義されています。 これらの構造は、任意の有効な名前を持つことができます。2 つの構造、データ レイアウト以外のネイティブおよびマネージ バージョン間の関係はありません。 したがって、管理対象のバージョンには、サイズとネイティブ バージョンと同じ順序で同じフィールドが含まれている重要なは。 (非互換性が明確にならない実行時まで、構造体のマネージ コードとネイティブ バージョン、それと同等であることを確認するためのメカニズムはありません。 2 つの構造は、同じデータのレイアウトでいることを確認するはプログラマの役目です。)  
   

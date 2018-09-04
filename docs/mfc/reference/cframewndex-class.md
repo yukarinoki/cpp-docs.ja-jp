@@ -188,12 +188,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50bb4061a13a9057a695b25ca32421c4dd7ed88b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2854199796f5d75cc4b24016def3c63327a5d511
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207825"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692043"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx クラス
 Windows のシングル ドキュメント インターフェイス (SDI: Single Document Interface) のオーバーラップ フレーム ウィンドウまたはポップアップ フレーム ウィンドウの機能を実装し、ウィンドウを管理するメンバーを提供します。 拡張、 [CFrameWnd](../../mfc/reference/cframewnd-class.md)クラス。  
@@ -1442,7 +1442,7 @@ afx_msg LRESULT OnSetText(
  ウィンドウのテキストへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- 呼び出しから値を返す[DefWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633572)します。  
+ 呼び出しから値を返す[DefWindowProc](/windows/desktop/api/winuser/nf-winuser-defwindowproca)します。  
   
 ### <a name="remarks"></a>Remarks  
   

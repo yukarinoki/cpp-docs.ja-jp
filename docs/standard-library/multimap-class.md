@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29e94acf4b8fad401077a5530d4b6296c30c2740
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: de4fa70eb4be67eb9ec29fbd24b7b1476681f7bd
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220109"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678565"
 ---
 # <a name="multimap-class"></a>multimap クラス
 
@@ -2459,7 +2459,6 @@ The values of the mapped elements are: 10 20.
 
 ## <a name="see-also"></a>関連項目
 
-[\<マップ > メンバー](https://msdn.microsoft.com/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
 [コンテナー](../cpp/containers-modern-cpp.md)<br/>
 [C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>

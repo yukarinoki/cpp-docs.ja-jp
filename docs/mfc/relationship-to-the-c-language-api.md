@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d0bb7aa4f647ceeb61c20cccd626d9da999b241
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f291a05b1347254989e4876af66c5d8137864020
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200113"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684162"
 ---
 # <a name="relationship-to-the-c-language-api"></a>C 言語 API との関係
-Windows の他のクラス ライブラリとは別に、Microsoft Foundation Class (MFC) ライブラリを設定する特性の 1 つは、C 言語で記述された Windows API に非常に閉じるマッピングです。 さらを混在させることがクラス ライブラリの呼び出しを自由に Windows API を直接呼び出すとします。 この直接アクセスは、ただし、限りませんクラスは、その api に完全に置き換えること。 開発者がなど一部の Windows 関数への直接呼び出しを行う場合によってはまだ必要があります[以前](/windows/desktop/api/winuser/nf-winuser-setcursor)と[GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385)など。 そう明確な利点がある場合にのみ Windows 関数がクラス メンバー関数でラップされます。  
+Windows の他のクラス ライブラリとは別に、Microsoft Foundation Class (MFC) ライブラリを設定する特性の 1 つは、C 言語で記述された Windows API に非常に閉じるマッピングです。 さらを混在させることがクラス ライブラリの呼び出しを自由に Windows API を直接呼び出すとします。 この直接アクセスは、ただし、限りませんクラスは、その api に完全に置き換えること。 開発者がなど一部の Windows 関数への直接呼び出しを行う場合によってはまだ必要があります[以前](/windows/desktop/api/winuser/nf-winuser-setcursor)と[GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics)など。 そう明確な利点がある場合にのみ Windows 関数がクラス メンバー関数でラップされます。  
   
  ネイティブ Windows 関数の呼び出しを行う必要がある場合があります、ために、C 言語の Windows API のドキュメントへのアクセスが必要です。 このドキュメントは、Microsoft Visual C に含まれています。  
   

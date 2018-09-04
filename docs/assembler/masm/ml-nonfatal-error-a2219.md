@@ -1,7 +1,7 @@
 ---
-title: ML の致命的でないエラー A2219 |Microsoft ドキュメント
+title: ML の致命的でないエラー A2219 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8d1ae9eb4b8535ac3f1363bb1059468cddf5636
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 365997181b0d4f4471162d7cf8f65a4429e69e74
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056120"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681646"
 ---
 # <a name="ml-nonfatal-error-a2219"></a>ML の致命的でないエラー A2219
-**不適切な配置内のオフセットのアンワインド コード**  
-  
- 演算子のオペランド[です。ALLOCSTACK](../../assembler/masm/dot-allocstack.md)と[です。SAVEREG](../../assembler/masm/dot-savereg.md) 8 の倍数である必要があります。  演算子のオペランド[です。SAVEXMM128](../../assembler/masm/dot-savexmm128.md)と[です。SETFRAME](../../assembler/masm/dot-setframe.md) 16 の倍数である必要があります。  
-  
-## <a name="see-also"></a>関連項目  
- [ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)
+
+**不適切な配置内のオフセットのアンワインド コード**
+
+オペランド[します。ALLOCSTACK](../../assembler/masm/dot-allocstack.md)と[します。SAVEREG](../../assembler/masm/dot-savereg.md) 8 の倍数である必要があります。  オペランド[します。SAVEXMM128](../../assembler/masm/dot-savexmm128.md)と[します。SETFRAME](../../assembler/masm/dot-setframe.md) 16 の倍数である必要があります。
+
+## <a name="see-also"></a>関連項目
+
+[ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)<br/>

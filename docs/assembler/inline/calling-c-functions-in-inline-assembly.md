@@ -1,7 +1,7 @@
 ---
-title: インライン アセンブリでは関数を呼び出して C |Microsoft ドキュメント
+title: インライン アセンブリで関数を呼び出して C |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -19,54 +19,57 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3f6d03ba77c7a4cdb3478a1bfe8729019dea002
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: a080c05aee58a2e6ffae17d14e99c66922aa1f17
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049519"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686688"
 ---
 # <a name="calling-c-functions-in-inline-assembly"></a>インライン アセンブリでの C 関数の呼び出し
-## <a name="microsoft-specific"></a>Microsoft 固有の仕様  
- `__asm`ブロックは、C のライブラリ ルーチンを含む、C 関数を呼び出すことができます。 次の例では、`printf`ライブラリ ルーチン。  
-  
-```  
-// InlineAssembler_Calling_C_Functions_in_Inline_Assembly.cpp  
-// processor: x86  
-#include <stdio.h>  
-  
-char format[] = "%s %s\n";  
-char hello[] = "Hello";  
-char world[] = "world";  
-int main( void )  
-{  
-   __asm  
-   {  
-      mov  eax, offset world  
-      push eax  
-      mov  eax, offset hello  
-      push eax  
-      mov  eax, offset format  
-      push eax  
-      call printf  
-      //clean up the stack so that main can exit cleanly  
-      //use the unused register ebx to do the cleanup  
-      pop  ebx  
-      pop  ebx  
-      pop  ebx  
-   }  
-}  
-```  
-  
- 単に必要な引数をプッシュする関数の引数はスタックで渡される、ため — 文字列ポインターは、前の例で、関数を呼び出す前にします。 引数は、目的の順序でスタックから送られてきたので逆の順序では、プッシュされます。 C ステートメントをエミュレートするために  
-  
-```  
-printf( format, hello, world );  
-```  
-  
- 例では、プッシュへのポインター `world`、 `hello`、および`format`、その順序、および呼び出し`printf`です。  
-  
- **Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- [インライン アセンブラー](../../assembler/inline/inline-assembler.md)
+
+**Microsoft 固有の仕様**
+
+`__asm`ブロックは、C ライブラリ ルーチンのなどの C 関数を呼び出すことができます。 次の例では、`printf`ライブラリ ルーチン。
+
+```cpp
+// InlineAssembler_Calling_C_Functions_in_Inline_Assembly.cpp
+// processor: x86
+#include <stdio.h>
+
+char format[] = "%s %s\n";
+char hello[] = "Hello";
+char world[] = "world";
+int main( void )
+{
+   __asm
+   {
+      mov  eax, offset world
+      push eax
+      mov  eax, offset hello
+      push eax
+      mov  eax, offset format
+      push eax
+      call printf
+      //clean up the stack so that main can exit cleanly
+      //use the unused register ebx to do the cleanup
+      pop  ebx
+      pop  ebx
+      pop  ebx
+   }
+}
+```
+
+必要な引数を単にプッシュする関数の引数はスタックに渡される、ため-文字列ポインターは、前の例で、関数を呼び出す前にします。 引数は、目的の順序でスタックからポップも逆の順序でプッシュされます。 C ステートメントをエミュレートするには
+
+```cpp
+printf( format, hello, world );
+```
+
+例へのポインターをプッシュする`world`、 `hello`、および`format`では、その順序、呼び出し、その後、`printf`します。
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
+[インライン アセンブラー](../../assembler/inline/inline-assembler.md)<br/>

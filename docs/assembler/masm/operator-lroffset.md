@@ -1,7 +1,7 @@
 ---
-title: LROFFSET 演算子 |Microsoft ドキュメント
+title: 演算子 LROFFSET |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 245dc24b56557c26134712ca28c75945bdd97f5a
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: dd04a306e85fbb3627729355dc05d55197d91134
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056591"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678533"
 ---
 # <a name="operator-lroffset"></a>LROFFSET 演算子
-オフセットを返します*式*です。 同じ**オフセット**が、ローダー解決オフセット、コード セグメントを再配置を生成します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-LROFFSET expression  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [演算子リファレンス](../../assembler/masm/operators-reference.md)
+
+オフセットを返します*式*します。 同じ**オフセット**が、ローダー解決オフセットにより、コード セグメントを配置する場合に Windows が生成されます。
+
+## <a name="syntax"></a>構文
+
+> LROFFSET 式
+
+## <a name="see-also"></a>関連項目
+
+[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>
