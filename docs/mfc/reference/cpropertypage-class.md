@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c6a5b0e031aebb658b4da20d3aa9a6dd47f8c2a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 632e8c0039dc0cac35fe46cff1fc539e534f8e20
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851562"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203404"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage クラス
 タブ ダイアログ ボックスとして知られているプロパティ シートの各ページを表します。  
@@ -80,7 +80,7 @@ class CPropertyPage : public CDialog
 |----------|-----------------|  
 |[CPropertyPage::CancelToClose](#canceltoclose)|[閉じる] ボタンに変更して、モーダル プロパティ シートのページで、回復不可能な変更後、[キャンセル] ボタンを無効にします。|  
 |[CPropertyPage::Construct](#construct)|`CPropertyPage` オブジェクトを構築します。 使用`Construct`、実行時に、パラメーターを指定する場合、または配列を使用している場合。|  
-|[CPropertyPage::GetPSP](#getpsp)|Windows の取得[PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548)構造に関連付けられている、`CPropertyPage`オブジェクト。|  
+|[CPropertyPage::GetPSP](#getpsp)|Windows の取得[PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2)構造に関連付けられている、`CPropertyPage`オブジェクト。|  
 |[CPropertyPage::OnApply](#onapply)|今すぐ適用 ボタンがクリックされたときに、フレームワークによって呼び出されます。|  
 |[CPropertyPage::OnCancel](#oncancel)|[キャンセル] ボタンがクリックされたときに、フレームワークによって呼び出されます。|  
 |[CPropertyPage::OnKillActive](#onkillactive)|現在のページがアクティブでなくなったときに、フレームワークによって呼び出されます。 ここでデータの検証を実行します。|  
@@ -98,7 +98,7 @@ class CPropertyPage : public CDialog
   
 |名前|説明|  
 |----------|-----------------|  
-|[CPropertyPage::m_psp](#m_psp)|Windows [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548)構造体。 基本的なプロパティ ページのパラメーターへのアクセスを提供します。|  
+|[CPropertyPage::m_psp](#m_psp)|Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2)構造体。 基本的なプロパティ ページのパラメーターへのアクセスを提供します。|  
   
 ## <a name="remarks"></a>Remarks  
  クラスを派生する標準ダイアログ ボックスで、`CPropertyPage`プロパティ シートのページごとにします。 使用する`CPropertyPage`-派生オブジェクトは、まずを作成、 [CPropertySheet](../../mfc/reference/cpropertysheet-class.md)オブジェクトし、プロパティ シートに移動する各ページのオブジェクトを作成します。 呼び出す[が](../../mfc/reference/cpropertysheet-class.md#addpage)各シートのページし、呼び出すことによって、プロパティ シートを表示[する](../../mfc/reference/cpropertysheet-class.md#domodal)モーダル プロパティ シート、または[CPropertySheet:。作成](../../mfc/reference/cpropertysheet-class.md#create)モードレス プロパティ シートです。  
@@ -118,7 +118,7 @@ class CPropertyPage : public CDialog
   
  `CPropertyPage`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdlgs.h  
   
 ##  <a name="canceltoclose"></a>  CPropertyPage::CancelToClose  
@@ -263,7 +263,7 @@ CPropertyPage(
  [!code-cpp[NVC_MFCDocView#113](../../mfc/codesnippet/cpp/cpropertypage-class_2.cpp)]  
   
 ##  <a name="getpsp"></a>  CPropertyPage::GetPSP  
- Windows の取得[PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548)構造に関連付けられている、`CPropertyPage`オブジェクト。  
+ Windows の取得[PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2)構造に関連付けられている、`CPropertyPage`オブジェクト。  
   
 ```  
 const PROPSHEETPAGE& GetPSP() const;  
@@ -275,7 +275,7 @@ PROPSHEETPAGE& GetPSP();
  参照、`PROPSHEETPAGE`構造体。  
   
 ##  <a name="m_psp"></a>  CPropertyPage::m_psp  
- `m_psp` メンバーの特性を格納する構造体は、 [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548)します。  
+ `m_psp` メンバーの特性を格納する構造体は、 [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2)します。  
   
 ```  
 PROPSHEETPAGE m_psp;  
@@ -306,7 +306,7 @@ virtual BOOL OnApply();
   
  既定の実装`OnApply`呼び出し`OnOK`します。  
   
- ユーザー プロパティ シートで、今すぐ適用または [ok] ボタンを押したときに送信される通知メッセージの詳細については、次を参照してください。 [PSN_APPLY](http://msdn.microsoft.com/library/windows/desktop/bb774552) Windows SDK に含まれています。  
+ ユーザー プロパティ シートで、今すぐ適用または [ok] ボタンを押したときに送信される通知メッセージの詳細については、次を参照してください。 [PSN_APPLY](/windows/desktop/Controls/psn-apply) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
   例をご覧ください[送るに](#onok)します。  
@@ -345,14 +345,14 @@ virtual BOOL OnKillActive();
  [!code-cpp[NVC_MFCDocView#115](../../mfc/codesnippet/cpp/cpropertypage-class_5.cpp)]  
   
 ##  <a name="onok"></a>  送るに  
- ユーザーが framework 呼び出しの直後に、[ok] または [今すぐ適用] ボタンのいずれかに、このメンバー関数が、フレームワークによって呼び出されます[OnKillActive](#onkillactive)します。  
+ ユーザーが [framework 呼び出しの直後に、[ok] または [今すぐ適用] ボタンのいずれかに、このメンバー関数が、フレームワークによって呼び出されます[OnKillActive](#onkillactive)します。  
   
 ```  
 virtual void OnOK();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- フレームワークが受信 OK または [適用] ボタンを選択すると、 [PSN_APPLY](http://msdn.microsoft.com/library/windows/desktop/bb774552)プロパティ ページからの通知です。 呼び出し`OnOK`を呼び出す場合に行われたしません[CPropertySheet::PressButton](../../mfc/reference/cpropertysheet-class.md#pressbutton)プロパティ ページによる通知の送信がそうでないためです。  
+ フレームワークが受信 OK または [適用] ボタンを選択すると、 [PSN_APPLY](/windows/desktop/Controls/psn-apply)プロパティ ページからの通知です。 呼び出し`OnOK`を呼び出す場合に行われたしません[CPropertySheet::PressButton](../../mfc/reference/cpropertysheet-class.md#pressbutton)プロパティ ページによる通知の送信がそうでないためです。  
   
  ユーザーがプロパティ シート全体を閉じる場合に、現在アクティブなページに固有の追加動作を実装するには、このメンバー関数をオーバーライドします。  
   
@@ -447,7 +447,7 @@ virtual BOOL OnWizardFinish();
   
  [完了] ボタンがクリックされたときに、ユーザーが操作を指定するには、このメンバー関数をオーバーライドすることができます。 この関数をオーバーライドする場合に、プロパティ シートが破棄されていることを防ぐために FALSE が返されます。  
   
- ウィザードのプロパティ シートで、ユーザーが [完了] ボタンを押したときに送信される通知メッセージの詳細については、次を参照してください。 [PSN_WIZFINISH](http://msdn.microsoft.com/library/windows/desktop/bb774571) Windows SDK に含まれています。  
+ ウィザードのプロパティ シートで、ユーザーが [完了] ボタンを押したときに送信される通知メッセージの詳細については、次を参照してください。 [PSN_WIZFINISH](/windows/desktop/Controls/psn-wizfinish) Windows SDK に含まれています。  
   
  ウィザード形式のプロパティ シートを作成する方法の詳細については、次を参照してください。 [CPropertySheet::SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode)します。  
   
