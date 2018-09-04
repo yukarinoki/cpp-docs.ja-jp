@@ -1,7 +1,7 @@
 ---
-title: 呼び出す |Microsoft ドキュメント
+title: 呼び出す |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27c18c83b623ce1a22ffcb5e1a9f1ce98ee6eb20
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 3e5698acf9986903a1d6d731c1047484a0ce6904
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055171"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676518"
 ---
 # <a name="invoke"></a>INVOKE
-によって指定されたアドレスでプロシージャが呼び出される*式*、スタックまたは言語の種類の標準的な呼び出し規約に従ってレジスタで引数を渡すことです。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-INVOKE   
-expression [[, arguments]]  
-```  
-  
-## <a name="remarks"></a>コメント  
- プロシージャに渡された各引数式、レジスタのペア、またはアドレス式が適用される場合があります (式に続く`ADDR`)。  
-  
-## <a name="see-also"></a>関連項目  
- [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+
+によって指定されたアドレスで、プロシージャが呼び出す*式*、スタックまたは言語タイプの標準的な呼び出し規則に従ってレジスタで引数を渡すことです。
+
+## <a name="syntax"></a>構文
+
+> INVOKE*式*[、*引数*]
+
+## <a name="remarks"></a>Remarks
+
+プロシージャに渡された各引数は、式、レジスタのペア、またはアドレス式 (式に続く`ADDR`)。
+
+## <a name="see-also"></a>関連項目
+
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>

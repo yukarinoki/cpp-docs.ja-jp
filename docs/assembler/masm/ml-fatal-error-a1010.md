@@ -1,7 +1,7 @@
 ---
-title: ML の致命的なエラー A1010 |Microsoft ドキュメント
+title: ML の致命的なエラー A1010 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b622595b6994c4c4eaa74ed8f824f28dffe89b1a
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 12b7e8698951e8ef59e0433134ec992af5d5f77f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057683"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676298"
 ---
 # <a name="ml-fatal-error-a1010"></a>ML の致命的なエラー A1010
-**一致しないブロックの入れ子。**  
-  
- ブロックの先頭には、対応する end がなかったか、ブロックの終了が開始に対応するありませんでした。 次のいずれかが関係している可能性があります。  
-  
--   などの高度なディレクティブ[です。IF](../../assembler/masm/dot-if.md)、[です。繰り返し](../../assembler/masm/dot-repeat.md)、または[です。中に](../../assembler/masm/dot-while.md)です。  
-  
--   などの条件付きアセンブリ ディレクティブ[IF](../../assembler/masm/if-masm.md)、[繰り返します](../../assembler/masm/repeat.md)、または**中**です。  
-  
--   構造体または共用体の定義。  
-  
--   プロシージャの定義。  
-  
--   セグメントの定義。  
-  
--   A [POPCONTEXT](../../assembler/masm/popcontext.md)ディレクティブです。  
-  
--   条件付きのアセンブリのように、ディレクティブ、 [ELSE](../../assembler/masm/else-masm.md)、 [ELSEIF](../../assembler/masm/elseif-masm.md)、または**ENDIF**が対応する[IF](../../assembler/masm/if-masm.md)です。  
-  
-## <a name="see-also"></a>関連項目  
- [ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)
+
+**比類のないブロックの入れ子。**
+
+ブロックの先頭に、対応する end がないか、ブロックの終了を開始に対応するありませんでした。 次のいずれかが含まれます。
+
+- などの高度なディレクティブ[します。IF](../../assembler/masm/dot-if.md)、[します。繰り返し](../../assembler/masm/dot-repeat.md)、または[します。中に](../../assembler/masm/dot-while.md)します。
+
+- などの条件付きのアセンブリ ディレクティブ[場合](../../assembler/masm/if-masm.md)、[繰り返します](../../assembler/masm/repeat.md)、または**中**します。
+
+- 構造体または共用体の定義。
+
+- プロシージャの定義。
+
+- セグメントの定義。
+
+- A [POPCONTEXT](../../assembler/masm/popcontext.md)ディレクティブ。
+
+- 条件付きアセンブリなど、ディレクティブ、 [ELSE](../../assembler/masm/else-masm.md)、 [ELSEIF](../../assembler/masm/elseif-masm.md)、または**ENDIF** 、一致することがなく[場合](../../assembler/masm/if-masm.md)。
+
+## <a name="see-also"></a>関連項目
+
+[ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)<br/>

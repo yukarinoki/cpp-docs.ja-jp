@@ -1,7 +1,7 @@
 ---
-title: SWORD |Microsoft ドキュメント
+title: 剣 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61f3e50db7c9ac7358190885d9e5b453126c8487
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: a004148476f6eb0d63e91dfac5ebcc4ca2c8ad92
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057391"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676159"
 ---
 # <a name="sword"></a>SWORD
-割り当て、必要に応じて各記憶域の符号付きの単語 (2 バイト) を初期化`initializer`です。 型指定子として使用することも、型が有効な任意の場所。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-name SWORD initializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)   
- [WORD](../../assembler/masm/word.md)
+
+割り当て、必要に応じて、各記憶域の符号付きの word (2 バイト) を初期化します`initializer`します。 型指定子としても使用できる型が有効な任意の場所。
+
+## <a name="syntax"></a>構文
+
+> 名前の剣初期化子 [] の初期化子].
+
+## <a name="see-also"></a>関連項目
+
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[WORD](../../assembler/masm/word.md)<br/>

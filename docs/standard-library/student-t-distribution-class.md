@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 309b01fac7e6461a48992ee1c2c091439353aee7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: fc995da6ce25aaed35e4e3fac04c08f37acaea7a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961013"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676145"
 ---
 # <a name="studenttdistribution-class"></a>student_t_distribution クラス
 
@@ -89,7 +89,7 @@ public:
 
 分布クラスとそのメンバーの詳細については、[\<random>](../standard-library/random.md) をご覧ください。
 
-スチューデントの *t* 分布の詳細については、Wolfram MathWorld の記事「[Students t-Distribution](http://go.microsoft.com/fwlink/p/?linkid=401094)」(スチューデントの t 分布) を参照してください。
+スチューデントの *t* 分布の詳細については、Wolfram MathWorld の記事「[Students t-Distribution](http://mathworld.wolfram.com/Studentst-Distribution.html)」(スチューデントの t 分布) を参照してください。
 
 ## <a name="example"></a>例
 
@@ -166,7 +166,7 @@ Distribution for 10 samples:
     10: 92.7084335614
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<random>
 

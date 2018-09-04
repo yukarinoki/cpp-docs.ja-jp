@@ -1,7 +1,7 @@
 ---
-title: ランタイム演算子 |Microsoft ドキュメント
+title: ランタイム演算子 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -12,15 +12,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd671af5b72f9edcf78e5a674e6604f5687197f7
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: f8bacc7f86500d96e64db392dc26486c497a425b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056049"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43675979"
 ---
 # <a name="run-time-operators"></a>ランタイム演算子
-Microsoft マクロ アセンブラー言語でランタイムの演算子の詳細については、次を参照してください。[演算子リファレンス](../../assembler/masm/operators-reference.md)です。  
-  
-## <a name="see-also"></a>関連項目  
- [演算子リファレンス](../../assembler/masm/operators-reference.md)
+
+Microsoft のマクロ アセンブラーの言語でランタイム演算子の詳細については、次を参照してください。[演算子リファレンス](../../assembler/masm/operators-reference.md)します。
+
+## <a name="see-also"></a>関連項目
+
+[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>
