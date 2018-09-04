@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ffd2a8969b4cd0edb5845310300e3b42148f816
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c74bc6a134ea31f3184912192ccbcb3908e64cd3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337617"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221526"
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket クラス
 Windows ソケットを表します: ネットワークの通信エンドポイントです。  
@@ -173,14 +173,14 @@ class CAsyncSocket : public CObject
 > [!NOTE]
 >  静的にリンクされた MFC アプリケーションでセカンダリ スレッドで MFC ソケットを使用する場合を呼び出す必要があります`AfxSocketInit`ソケット ライブラリを初期化するためにソケットを使用する各スレッドにします。 既定では、`AfxSocketInit`は、プライマリ スレッドでのみ呼び出されます。  
   
- 詳細については、次を参照してください。 [Windows ソケット: を使用してクラス CAsyncSocket](../../mfc/windows-sockets-using-class-casyncsocket.md)おり、関連する記事、だけでなく[Windows Sockets 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673)します。  
+ 詳細については、次を参照してください。 [Windows ソケット: を使用してクラス CAsyncSocket](../../mfc/windows-sockets-using-class-casyncsocket.md)おり、関連する記事、だけでなく[Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CAsyncSocket`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxsock.h  
   
 ##  <a name="accept"></a>  CAsyncSocket::Accept  
@@ -515,7 +515,7 @@ BOOL Create(
 > [!IMPORTANT]
 > `Create` **いない**スレッド セーフです。  呼び出す場合、マルチ スレッド環境でどこに呼び出すことができる同時に別のスレッドで、必ず、ミュー テックスまたはその他の同期ロックでは、各呼び出しを保護してください。  
   
- ストリームとデータグラム ソケットの詳細については、記事をご覧ください[Windows ソケット: バック グラウンド](../../mfc/windows-sockets-background.md)と[Windows ソケット: ポートとソケット アドレス](../../mfc/windows-sockets-ports-and-socket-addresses.md)と[Windows Sockets 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673)。  
+ ストリームとデータグラム ソケットの詳細については、記事をご覧ください[Windows ソケット: バック グラウンド](../../mfc/windows-sockets-background.md)と[Windows ソケット: ポートとソケット アドレス](../../mfc/windows-sockets-ports-and-socket-addresses.md)と[Windows Sockets 2 API。](/windows/desktop/WinSock/windows-sockets-start-page-2).  
   
 ##  <a name="detach"></a>  CAsyncSocket::Detach  
  ソケットのハンドルをデタッチするには、このメンバー関数を呼び出す、 *m_hSocket*からのデータ メンバー、`CAsyncSocket`オブジェクトし、設定*m_hSocket*を NULL にします。  
@@ -554,7 +554,7 @@ static int PASCAL GetLastError();
 ### <a name="remarks"></a>Remarks  
  特定のメンバー関数は、エラーが発生したことを示すとき`GetLastError`適切なエラー コードの取得を呼び出す必要があります。 該当するエラー コードの一覧については、個々 のメンバー関数の説明を参照してください。  
   
- エラー コードの詳細については、次を参照してください。 [Windows Sockets 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673)します。  
+ エラー コードの詳細については、次を参照してください。 [Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2)します。  
   
 ##  <a name="getpeername"></a>  で  
  このソケットが接続されているピア ソケットのアドレスを取得するには、このメンバー関数を呼び出します。  

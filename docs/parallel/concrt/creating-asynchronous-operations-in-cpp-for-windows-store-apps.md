@@ -15,17 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3afe558ad5d17c7c9741a1c211bb838c615c8542
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: b83531c1452174403f3ead3c5bd3d1b59b0c7d4d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42538282"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213450"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>C++ における UWP アプリ用の非同期操作の作成
 このドキュメントでは、タスク クラスを使用してユニバーサル Windows ランタイム (UWP) アプリを Windows ThreadPool ベースの非同期操作を生成するときに留意する重要な点について説明します。  
   
- 非同期プログラミングの使用は、アプリ ユーザーの入力に応答性を維持できるため、Windows ランタイム アプリ モデルのキー コンポーネントです。 UI スレッドをブロックすることなく、長時間実行されるタスクを開始することができ、後でタスクの結果を受け取ることができます。 また、タスクを取り消したり、タスクがバックグラウンドで実行される間に進行状況の通知を受け取ることができます。 ドキュメント[C++ での非同期プログラミング](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)の UWP アプリを作成するための Visual C で使用できる非同期パターンの概要を説明します。 そのドキュメントでは、両方の使用し、Windows ランタイムの非同期操作のチェーンを作成する方法について説明します。 このセクションは、ppltasks.h 内の型を別の Windows ランタイム コンポーネントで使用できる非同期操作を生成するために使用する方法を説明します、非同期作業を制御する方法を実行します。 読み取りも検討[非同期プログラミング パターンし、ヒント (C++ と XAML を使った Windows ストア アプリ) Hilo で](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)に C++ と XAML を使った Windows ランタイム アプリである Hilo での非同期操作を実装するために、タスク クラスを使用して方法について説明します。  
+ 非同期プログラミングの使用は、アプリ ユーザーの入力に応答性を維持できるため、Windows ランタイム アプリ モデルのキー コンポーネントです。 UI スレッドをブロックすることなく、長時間実行されるタスクを開始することができ、後でタスクの結果を受け取ることができます。 また、タスクを取り消したり、タスクがバックグラウンドで実行される間に進行状況の通知を受け取ることができます。 ドキュメント[C++ での非同期プログラミング](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)の UWP アプリを作成するための Visual C で使用できる非同期パターンの概要を説明します。 そのドキュメントでは、両方の使用し、Windows ランタイムの非同期操作のチェーンを作成する方法について説明します。 このセクションは、ppltasks.h 内の型を別の Windows ランタイム コンポーネントで使用できる非同期操作を生成するために使用する方法を説明します、非同期作業を制御する方法を実行します。 読み取りも検討[非同期プログラミング パターンし、ヒント (C++ と XAML を使った Windows ストア アプリ) Hilo で](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)に C++ と XAML を使った Windows ランタイム アプリである Hilo での非同期操作を実装するために、タスク クラスを使用して方法について説明します。  
   
 > [!NOTE]
 >  使用することができます、[並列パターン ライブラリ](../../parallel/concrt/parallel-patterns-library-ppl.md)(PPL) と[Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md) UWP アプリでします。 ただし、タスク スケジューラとリソース マネージャーを使用することはできません。 このドキュメントでは、追加の機能、PPL が提供する UWP アプリの場合にのみ、およびデスクトップ アプリが利用できるについて説明します。  
@@ -61,16 +61,16 @@ ms.locfileid: "42538282"
   
  Windows ランタイムを使用すると、さまざまなプログラミング言語の優れた機能を使用し、1 つのアプリに統合できます。 たとえば、JavaScript で UI を作成し、C ++ のコンポーネントで計算量が非常に多い演算を行うことができます。 計算量が非常に多い演算をバックグラウンドで行うことができるのは、UI の応答性を保つための重要な要素です。 `task`クラスは C++ に固有で、(C++ 以外の言語で記述する場合があります) が他のコンポーネントに非同期操作を通信するために、Windows ランタイム インターフェイスを使用する必要があります。 Windows ランタイムには、非同期操作を表すために使用できる 4 つのインターフェイスが用意されています。  
   
- [Windows::Foundation::IAsyncAction](http://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)  
+ [:Iasyncaction](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)  
  非同期アクションを表します。  
   
- [Windows::Foundation::IAsyncActionWithProgress\<TProgress>](http://msdn.microsoft.com/library/windows/apps/br206581.aspx)  
+ [Windows::Foundation::IAsyncActionWithProgress\<TProgress>](https://msdn.microsoft.com/library/windows/apps/br206581.aspx)  
  進行状況を報告する非同期アクションを表します。  
   
- [:Iasyncoperation\<TResult >](http://msdn.microsoft.com/library/windows/apps/br206598.aspx)  
+ [:Iasyncoperation\<TResult >](https://msdn.microsoft.com/library/windows/apps/br206598.aspx)  
  結果を返す非同期操作を表します。  
   
- [Windows::Foundation::IAsyncOperationWithProgress\<TResult, TProgress >](http://msdn.microsoft.com/library/windows/apps/br206594.aspx)  
+ [Windows::Foundation::IAsyncOperationWithProgress\<TResult, TProgress >](https://msdn.microsoft.com/library/windows/apps/br206594.aspx)  
  結果を返し、進行状況を報告する、非同期操作を表します。  
   
  *アクション* の概念は、非同期タスクが値を生成しないことを意味します ( `void`を返す関数を考えてみてください)。 *操作* の概念は、非同期タスクが値を生成することを意味します。 *進行状況* の概念は、タスクが呼び出し元に進行状況を報告できることを意味します。 JavaScript、.NET Framework および Visual C++ はそれぞれ、ABI の境界を越えて使用するため、これらのインターフェイスのインスタンスを作成する独自の方法を提供します。 Visual C++ では、PPL は [concurrency::create_async](reference/concurrency-namespace-functions.md#create_async) 関数を提供します。 この関数は、Windows ランタイムの非同期アクションまたはタスクの完了を表す操作を作成します。 `create_async`関数と処理関数 (通常はラムダ式) を受け取り、内部的に作成、`task`オブジェクト、および 4 つの非同期 Windows ランタイム インターフェイスのいずれかでタスクをラップします。  
@@ -102,7 +102,7 @@ ms.locfileid: "42538282"
  [!code-cpp[concrt-windowsstore-primes#100](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_1.cpp)]  
   
 ##  <a name="example-component"></a> 例: C++ Windows ランタイム コンポーネントを作成して C# から使用する  
- コンピューティング集中型の操作を実行するには、UI と C++ Windows ランタイム コンポーネントを定義する XAML と c# を使用するアプリを検討してください。 この例では、C++ コンポーネントは特定の範囲での素数を計算します。 4 つの Windows ランタイムの非同期タスク インターフェイス間の違いを示すためには、まず、Visual Studio で、作成、**空のソリューション**とします`Primes`します。 次に、ソリューションに **[Windows ランタイム コンポーネント]** プロジェクトを追加し、名前を `PrimesLibrary`とします。 生成された C++ ヘッダー ファイル (この例では Class1.h の名前を Primes.h に変更しています) に次のコードを追加します。 `public` の各メソッドは 4 つの非同期インターフェイスの 1 つを定義します。 値を返すメソッドを返す、 [:ivector\<int >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx)オブジェクト。 進行状況を報告するメソッドは、全体の作業のうち完了した割合を定義する `double` の値を生成します。  
+ コンピューティング集中型の操作を実行するには、UI と C++ Windows ランタイム コンポーネントを定義する XAML と c# を使用するアプリを検討してください。 この例では、C++ コンポーネントは特定の範囲での素数を計算します。 4 つの Windows ランタイムの非同期タスク インターフェイス間の違いを示すためには、まず、Visual Studio で、作成、**空のソリューション**とします`Primes`します。 次に、ソリューションに **[Windows ランタイム コンポーネント]** プロジェクトを追加し、名前を `PrimesLibrary`とします。 生成された C++ ヘッダー ファイル (この例では Class1.h の名前を Primes.h に変更しています) に次のコードを追加します。 `public` の各メソッドは 4 つの非同期インターフェイスの 1 つを定義します。 値を返すメソッドを返す、 [:ivector\<int >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx)オブジェクト。 進行状況を報告するメソッドは、全体の作業のうち完了した割合を定義する `double` の値を生成します。  
   
  [!code-cpp[concrt-windowsstore-primes#1](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_2.h)]  
   
@@ -113,7 +113,7 @@ ms.locfileid: "42538282"
   
  [!code-cpp[concrt-windowsstore-primes#2](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_3.cpp)]  
   
- 各メソッドは、最初の入力パラメーターが負でないことを確認する検証を実行します。 入力値が負数の場合、メソッドは [Platform::InvalidArgumentException](http://msdn.microsoft.com/library/windows/apps/hh755794\(v=vs.110\).aspx)をスローします。 エラー処理は、このセクションで後述します。  
+ 各メソッドは、最初の入力パラメーターが負でないことを確認する検証を実行します。 入力値が負の場合、メソッドはスロー [platform::invalidargumentexception](https://msdn.microsoft.com/library/windows/apps/hh755794\(v=vs.110\).aspx)します。 エラー処理は、このセクションで後述します。  
   
  UWP アプリからこれらのメソッドを使用するには、次を使用して Visual C #/web**空白アプリ (XAML)** 2 番目のプロジェクトを Visual Studio ソリューションに追加するテンプレート。 この例では、プロジェクトの名前を `Primes`とします。 次に、 `Primes` プロジェクトから `PrimesLibrary` プロジェクトへの参照を追加します。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "42538282"
   
  これらのメソッドは `async` と `await` のキーワードを使用して、非同期操作が完了した後で UI を更新します。 UWP アプリで非同期コードについては、次を参照してください。[スレッド処理と非同期プログラミング](/windows/uwp/threading-async)します。  
   
- `getPrimesCancellation` および `cancelGetPrimes` メソッドは連携して、ユーザーが操作の取り消しをできるようにします。 ユーザーが選択したときに、**キャンセル** ボタン、`cancelGetPrimes`メソッド呼び出し[IAsyncOperationWithProgress\<TResult, TProgress >:: キャンセル](http://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncinfo.cancel.aspx)操作をキャンセルします。 基になる非同期操作を管理する同時実行ランタイムでは、キャンセルが完了したことを通信するために、Windows ランタイムによってキャッチされた例外の内部型をスローします。 取り消しモデルの詳細については、次を参照してください。[キャンセル](../../parallel/concrt/cancellation-in-the-ppl.md)します。  
+ `getPrimesCancellation` および `cancelGetPrimes` メソッドは連携して、ユーザーが操作の取り消しをできるようにします。 ユーザーが選択したときに、**キャンセル** ボタン、`cancelGetPrimes`メソッド呼び出し[IAsyncOperationWithProgress\<TResult, TProgress >:: キャンセル](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncinfo.cancel.aspx)操作をキャンセルします。 基になる非同期操作を管理する同時実行ランタイムでは、キャンセルが完了したことを通信するために、Windows ランタイムによってキャッチされた例外の内部型をスローします。 取り消しモデルの詳細については、次を参照してください。[キャンセル](../../parallel/concrt/cancellation-in-the-ppl.md)します。  
   
 > [!IMPORTANT]
 >  操作がキャンセルされましたが、Windows ランタイムを正しくレポートする PPL を有効にするには、この種類の内部例外をキャッチしないでください。 これは、すべての例外 (`catch (...)`) をキャッチしないことを意味します。 すべてをキャッチする必要がある場合、例外は、Windows ランタイムがキャンセル操作を完了できるようにする例外を再スローします。  
@@ -136,7 +136,7 @@ ms.locfileid: "42538282"
   
  ![Windows ランタイム Primes アプリ](../../parallel/concrt/media/concrt_windows_primes.png "concrt_windows_primes")  
   
- `create_async` を使って他の言語で使用される非同期タスクを作成する例については、「 [Bing Maps Trip Optimizer のサンプルでの C++ の使用](http://msdn.microsoft.com/library/windows/apps/hh699891\(v=vs.110\).aspx) 」および「 [Windows 8 Asynchronous Operations in C++ with PPL (PPL を使った C++ による Windows 8 の非同期操作)](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d)」を参照してください。  
+ 使用する例について`create_async`他の言語で使用できる非同期タスクを作成するを参照してください[Bing マップ トリップ オプティマイザーのサンプルを使用して C++](https://msdn.microsoft.com/library/windows/apps/hh699891\(v=vs.110\).aspx)と[PPLでのC++でWindows8の非同期操作。](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).  
   
 ##  <a name="exethread"></a> 実行スレッドを制御する  
  Windows ランタイムでは、COM スレッド モデルを使用します。 このモデルでは、オブジェクトは、同期を扱う方法によって、異なるアパートメント内でホストされます。 スレッド セーフなオブジェクトは、マルチスレッド アパートメント (MTA) でホストされます。 1 つのスレッドによりアクセスされる必要があるオブジェクトは、シングルスレッド アパートメント (STA) でホストされます。  
@@ -165,7 +165,7 @@ ms.locfileid: "42538282"
 >  STA で実行される継続の本体で [concurrency::task::wait](reference/task-class.md#wait) を呼び出さないでください。 そうしないと、このメソッドが現在のスレッドをブロックして、アプリケーションが応答しなくなる場合があるため、ランタイムは [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) をスローします。 ただし、タスク ベースの継続で継続元タスクの結果を受け取るために [concurrency::task::get](reference/task-class.md#get) のメソッドを呼び出すことができます。  
   
 ##  <a name="example-app"></a> 例: C++ および XAML での Windows ランタイム アプリでの実行を制御します。  
- ディスクからファイルを読み込み、そのファイルで最もよく使われている単語を検索し、結果を UI に表示する C++ XAML アプリケーションを考えてみます。 このアプリを作成するには、まず、Visual Studio を作成、**空のアプリ (ユニバーサル Windows)** プロジェクトし、その名前を付け`CommonWords`します。 アプリケーション マニフェストで、 **[ドキュメント ライブラリ]** の機能を指定して、アプリケーションがドキュメント フォルダーにアクセスできるようにします。 また、アプリケーション マニフェストの宣言セクションにテキスト (.txt) ファイルの種類を追加します。 アプリケーションの機能および宣言に関する詳細については、「 [アプリ パッケージと展開](http://msdn.microsoft.com/library/windows/apps/hh464929.aspx)」を参照してください。  
+ ディスクからファイルを読み込み、そのファイルで最もよく使われている単語を検索し、結果を UI に表示する C++ XAML アプリケーションを考えてみます。 このアプリを作成するには、まず、Visual Studio を作成、**空のアプリ (ユニバーサル Windows)** プロジェクトし、その名前を付け`CommonWords`します。 アプリケーション マニフェストで、 **[ドキュメント ライブラリ]** の機能を指定して、アプリケーションがドキュメント フォルダーにアクセスできるようにします。 また、アプリケーション マニフェストの宣言セクションにテキスト (.txt) ファイルの種類を追加します。 アプリの機能および宣言に関する詳細については、次を参照してください。[アプリ パッケージと展開](https://msdn.microsoft.com/library/windows/apps/hh464929.aspx)します。  
   
  `Grid` 要素と `ProgressRing` 要素を含めるように、MainPage.xaml の `TextBlock` 要素を更新します。 `ProgressRing` は操作が進行中であることを示し、 `TextBlock` は計算の結果を示します。  
   
