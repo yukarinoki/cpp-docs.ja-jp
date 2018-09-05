@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16f135011f7b67debdf51f6ddbde00a79d130602
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ea2039cd9fa1c5071da143f557406d028f464d7e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199693"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676709"
 ---
 # <a name="deployment-concepts"></a>配置の概念
 
@@ -61,4 +61,4 @@ Visual C++ ライブラリは Dll としてパッケージ化され、C/C++ ア�
 
 - [デスクトップ アプリケーションの配置](../ide/deploying-native-desktop-applications-visual-cpp.md)
 - [Visual C++ アプリケーションの依存関係の理解](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)
-- [Windows インストーラーの配置](https://msdn.microsoft.com/121be21b-b916-43e2-8f10-8b080516d2a0)
+

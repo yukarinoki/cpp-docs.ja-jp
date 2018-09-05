@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f7d7bed9725e4ec1cc8ad0fc66673ce5c6212e1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cfee61f1632fad2d762c41149c1bc302a1c4b9da
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211213"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691987"
 ---
 # <a name="implementing-an-interface-visual-c"></a>インターフェイスの実装 (Visual C++)
 インターフェイスを実装するには、ATL COM アプリケーションとしてか、ATL サポートを含む MFC アプリケーションとしてプロジェクトを作成しておく必要があります。 ATL アプリケーションを作成するか、[ATL オブジェクトを MFC アプリケーションに追加して](../mfc/reference/adding-atl-support-to-your-mfc-project.md) MFC アプリケーションの ATL サポートを実装するには、[ATL プロジェクト ウィザード](../atl/reference/atl-project-wizard.md)を利用できます。  
@@ -46,7 +46,7 @@ ms.locfileid: "43211213"
 4.  クラス ビューで、オブジェクトのベースとインターフェイス ノードを展開し、実装したインターフェイスを表示してから、インターフェイスのノードを展開して、使用可能なプロパティ、メソッド、およびイベントを表示します。  
   
     > [!NOTE]
-    >  [オブジェクト ブラウザー](https://msdn.microsoft.com/f89acfc5-1152-413d-9f56-3dc16e3f0470)を使用して、インターフェイスのメンバーを参照することもできます。  
+    >  [オブジェクト ブラウザー](/visualstudio/ide/viewing-the-structure-of-code)を使用して、インターフェイスのメンバーを参照することもできます。  
   
 ## <a name="see-also"></a>参照  
  [COM インターフェイスの作成](../ide/creating-a-com-interface-visual-cpp.md)   

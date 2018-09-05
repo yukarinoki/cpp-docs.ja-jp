@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41b3565893d65990955f0fd28c6cccce7fcb1f32
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f56ee748738cd67199348c93272a9cd2ed564e2c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222244"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685700"
 ---
 # <a name="creating-and-managing-msbuild-based-visual-c-projects"></a>MSBuild ベースの Visual C++ プロジェクトの作成と管理
 MSBuild は Visual C++ のネイティブ ビルド システムであり、MFC または ATL ライブラリを使用するデスクトップ アプリケーションだけでなく、UWP アプリでの使用にも最適なビルド システムです。 MSBuild は Visual Studio IDE およびプロジェクト システムと緊密に統合されていますが、コマンド ラインから使用することもできます。 Visual Studio 2017 以降、Visual C ++ では、[[フォルダーを開く] 機能を通して CMake および他の非 MSBuild システム](non-msbuild-projects.md)をサポートしています。
@@ -67,9 +67,6 @@ Visual C++ プロジェクトを作成するには、**[ファイル &#124; 新�
 ## <a name="related-sections"></a>関連項目  
  [C/C++ プログラムのビルド](../build/building-c-cpp-programs.md)  
  コマンド ラインまたは Visual Studio の統合開発環境からプログラムをビルドする方法について説明するトピックへのリンクがあります。  
-  
- [Visual C++ リファレンス](https://msdn.microsoft.com/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
- C と C++ の言語リファレンス、Visual C++ で提供されるライブラリ、Visual C++ 機能拡張オブジェクト モデル、および MASM (Microsoft Macro Assembler) に関するトピックへのリンクがあります。  
   
 ## <a name="see-also"></a>参照  
  [Visual Studio SDK](https://msdn.microsoft.com/vstudio/extend)

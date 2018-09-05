@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 973a4b7f8a7e701f1b3230ed387dad1e6d52fc52
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 409f10dffdf6816f3ff0ab4e71060c9bcb6eaf9f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201955"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684213"
 ---
 # <a name="ltremarksgt-visual-c"></a>&lt;remarks&gt; (Visual C++)
-\<remarks> タグを使用して、型の情報を追加し、[\<summary>](../ide/summary-visual-cpp.md) で指定された情報を補足します。 この情報は[オブジェクト ブラウザー](https://msdn.microsoft.com/f89acfc5-1152-413d-9f56-3dc16e3f0470)とコード コメント Web レポートに表示されます。  
+\<remarks> タグを使用して、型の情報を追加し、[\<summary>](../ide/summary-visual-cpp.md) で指定された情報を補足します。 この情報は[オブジェクト ブラウザー](/visualstudio/ide/viewing-the-structure-of-code)とコード コメント Web レポートに表示されます。  
   
 ## <a name="syntax"></a>構文  
   

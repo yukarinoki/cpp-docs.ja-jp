@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff661394bd3b1ea9d01e8c1e1c29f747135f7aa8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: dac300f08a9b02ce6e9f4aec66618350b46af952
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194376"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692201"
 ---
 # <a name="web-references-property-page"></a>[Web 参照] プロパティ ページ
-**[Web 参照]** プロパティ ページでは、XML Web サービス プロキシ クラスの生成方法が指定されます。 プロジェクトに Web 参照を追加した場合、XML Web サービス プロキシ クラスが生成されます。 詳細については、[Web 参照の追加](https://msdn.microsoft.com/bdf05776-c591-40af-bfd7-e1e2aa1e87b5)に関するページを参照してください。  
+**[Web 参照]** プロパティ ページでは、XML Web サービス プロキシ クラスの生成方法が指定されます。 プロジェクトに Web 参照を追加した場合、XML Web サービス プロキシ クラスが生成されます。  
   
  **[Web 参照]** プロパティ ページには、以下のプロパティがあります。  
   

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fc0bc1789e4fc4f11b9d0becfda656a42d0ec95
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 29ab603001405056626af0debbde7b6f8ef78704
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214197"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690576"
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>Visual C++ プロジェクトに対して作成されるファイルの種類
 このトピックでは、従来のデスクトップ アプリケーションの Visual C++ プロジェクトに関連付けられているすべての種類のファイルについて説明します。 実際にプロジェクトにインクルードされるファイルは、プロジェクトの種類、およびウィザードで選択したオプションによって異なります。  
@@ -73,7 +73,7 @@ ms.locfileid: "43214197"
 |.HxC|プロジェクト|ヘルプ プロジェクト ファイル。|  
 |.ico|リソース|アイコンのビットマップ グラフィック ファイル。|  
 |.idb|コンパイル|ソース ファイルとクラス定義との依存関係情報が含まれているステート ファイル。最小リビルドとインクリメンタル コンパイルのときにコンパイラで使用します。 .idb ファイルの名前は [/Fd](../build/reference/fd-program-database-file-name.md) コンパイラ オプションで指定します。 詳細については、「 [/Gm (簡易リビルドの有効化)](../build/reference/gm-enable-minimal-rebuild.md) 」を参照してください。|  
-|.idl|コンパイル|インターフェイス定義言語ファイル。 詳細については、Windows SDK の「[インターフェイス定義 (IDL) ファイル](https://msdn.microsoft.com/library/windows/desktop/aa378712)」を参照してください。|  
+|.idl|コンパイル|インターフェイス定義言語ファイル。 詳細については、Windows SDK の「[インターフェイス定義 (IDL) ファイル](/windows/desktop/Rpc/the-interface-definition-language-idl-file)」を参照してください。|  
 |.ilk|リンク|インクリメンタル リンク ファイル。 詳しくは、「 [/INCREMENTAL](../build/reference/incremental-link-incrementally.md) 」をご覧ください。|  
 |.map|リンク|リンカー情報を含むテキスト ファイル。 マップ ファイルの名前は、 [/Fm](../build/reference/fm-name-mapfile.md) コンパイラ オプションで指定します。 詳細については、「 [/MAP](../build/reference/map-generate-mapfile.md) 」を参照してください。|  
 |.mfcribbon-ms|リソース|リボンのボタン、コントロール、および属性を定義する XML コードを含むリソース ファイル。 詳細については、「 [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)」を参照してください。|  
@@ -81,7 +81,7 @@ ms.locfileid: "43214197"
 |.pch|デバッグ|プリコンパイル済みヘッダー ファイル。|  
 |.rc、.rc2|リソース|リソースを生成するための[リソース スクリプト ファイル](../windows/working-with-resource-files.md) 。|  
 |.sbr|コンパイル|ソース ブラウザー中間ファイル。 [BSCMAKE](../build/reference/bscmake-options.md)の入力ファイルです。|  
-|.sln|ソリューション|[ソリューション](https://msdn.microsoft.com/a45c299d-69f5-4b67-879d-1383417df0a7) ファイル。|  
+|.sln|ソリューション|[ソリューション](/visualstudio/ide/solutions-and-projects-in-visual-studio) ファイル。|  
 |.suo|ソリューション|ソリューション オプション ファイル。|  
 |.txt|リソース|テキスト ファイル。通常は README ファイルです。|  
 |.vap|プロジェクト|Visual Studio Analyzer プロジェクト ファイル。|  
