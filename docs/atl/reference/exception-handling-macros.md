@@ -1,5 +1,5 @@
 ---
-title: 例外処理マクロ |Microsoft ドキュメント
+title: 例外処理マクロ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,58 +19,68 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05ee381aa792c252fc9b80107d25e15e7d1ecfca
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b503e36dfe04eaa3180809033187957ff8d970a0
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358978"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766816"
 ---
 # <a name="exception-handling-macros"></a>例外処理マクロ
-これらのマクロは、例外処理のサポートを提供します。  
-  
-|||  
-|-|-|  
-|[_ATLCATCH](#_atlcatch)|関連する発生したエラーを処理するステートメント`_ATLTRY`です。|  
-|[_ATLCATCHALL](#_atlcatchall)|関連する発生したエラーを処理するステートメント`_ATLTRY`です。|  
-|[_ATLTRY](#_atltry)|エラーが発生する可能性があります、保護されたコード セクションをマークします。|  
-  
+
+これらのマクロは、例外処理のサポートを提供します。
+
+|||
+|-|-|
+|[_ATLCATCH](#_atlcatch)|関連付けられているで発生するエラーを処理するステートメント`_ATLTRY`します。|
+|[_ATLCATCHALL](#_atlcatchall)|関連付けられているで発生するエラーを処理するステートメント`_ATLTRY`します。|
+|[_ATLTRY](#_atltry)|エラーが発生する可能性があります、保護されたコードのセクションをマークします。|
+
 ## <a name="requirements"></a>要件:
+
 **ヘッダー:** atldef.h
 
-##  <a name="_atlcatch"></a>  _ATLCATCH  
- 関連する発生したエラーを処理するステートメント`_ATLTRY`です。  
-  
+##  <a name="_atlcatch"></a>  _ATLCATCH
+
+関連付けられているで発生するエラーを処理するステートメント`_ATLTRY`します。
+
 ```
 _ATLCATCH(e)
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *e*  
- キャッチする例外。  
-  
-### <a name="remarks"></a>コメント  
- 組み合わせて使用`_ATLTRY`です。 C++ に解決される[(CAtlException e) をキャッチ](../../cpp/try-throw-and-catch-statements-cpp.md)C++ 例外の指定された型を処理するためです。  
-  
-##  <a name="_atlcatchall"></a>  _ATLCATCHALL  
- 関連する発生したエラーを処理するステートメント`_ATLTRY`です。  
-  
+```
+
+### <a name="parameters"></a>パラメーター
+
+*e*  
+キャッチする例外。
+
+### <a name="remarks"></a>Remarks
+
+組み合わせて使用`_ATLTRY`します。 C++ に解決される[(CAtlException e) をキャッチ](../../cpp/try-throw-and-catch-statements-cpp.md)特定の種類の C++ 例外を処理するためです。
+
+##  <a name="_atlcatchall"></a>  _ATLCATCHALL
+
+関連付けられているで発生するエラーを処理するステートメント`_ATLTRY`します。
+
 ```
 _ATLCATCHALL
-```  
-  
-### <a name="remarks"></a>コメント  
- 組み合わせて使用`_ATLTRY`です。 C++ に解決される[catch (...)](../../cpp/try-throw-and-catch-statements-cpp.md)すべての種類の C++ 例外を処理するためです。  
-  
-##  <a name="_atltry"></a>  _ATLTRY  
- エラーが発生する可能性があります、保護されたコード セクションをマークします。  
-  
+```
+
+### <a name="remarks"></a>Remarks
+
+組み合わせて使用`_ATLTRY`します。 C++ に解決される[catch (...)](../../cpp/try-throw-and-catch-statements-cpp.md)すべての種類の C++ 例外を処理するためです。
+
+##  <a name="_atltry"></a>  _ATLTRY
+
+エラーが発生する可能性があります、保護されたコードのセクションをマークします。
+
 ```
 _ATLTRY
-```  
-  
-### <a name="remarks"></a>コメント  
- 組み合わせて使用[_ATLCATCH](#_atlcatch)または[_ATLCATCHALL](#_atlcatchall)です。 C++ シンボルに解決される[再試行](../../cpp/try-throw-and-catch-statements-cpp.md)です。  
-  
-## <a name="see-also"></a>関連項目  
- [[マクロ]](../../atl/reference/atl-macros.md)
+```
+
+### <a name="remarks"></a>Remarks
+
+組み合わせて使用[_ATLCATCH](#_atlcatch)または[_ATLCATCHALL](#_atlcatchall)します。 C++ のシンボルに解決される[お試しください](../../cpp/try-throw-and-catch-statements-cpp.md)します。
+
+## <a name="see-also"></a>関連項目
+
+[[マクロ]](../../atl/reference/atl-macros.md)

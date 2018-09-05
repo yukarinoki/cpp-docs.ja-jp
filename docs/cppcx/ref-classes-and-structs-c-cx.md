@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ba5ce5b5cb2f55caf00ea6094cb4e14b2b08c236
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584121"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767608"
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Ref クラスと構造体 (C++/CX)
 C++/cli CX サポートがユーザー定義*ref クラス*と*ref 構造体*、およびユーザー定義*値クラス*と*構造体の値*します。 これらのデータ構造がどの C + によってプライマリ コンテナー/cli CX は、Windows ランタイムの型システムをサポートしています。 内容は、特定の規則に従ってメタデータに出力され、Windows ランタイム コンポーネントと C++ やその他の言語で記述されているユニバーサル Windows プラットフォーム アプリ間で渡されることができます。  

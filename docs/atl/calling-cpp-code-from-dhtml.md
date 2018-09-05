@@ -14,40 +14,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f24c7c1e3cd6cd1b24d74fcc1eee3209562a138a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: dd28c36127edf75478874867a3a14ad52391ae76
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848965"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767453"
 ---
 # <a name="calling-c-code-from-dhtml"></a>DHTML から C++ コードを呼び出す
-DHTML コントロールは、テスト コンテナーまたは Internet Explorer などのコンテナーでホストできます。 参照してください[テスト プロパティとテスト コンテナーでイベント](../mfc/testing-properties-and-events-with-test-container.md)テスト コンテナーにアクセスする方法についてはします。  
-  
- コントロールをホストするコンテナーは、通常の制御のインターフェイスを使用して、コントロールと通信します。 DHTML、C++ コードと HTML のリソースと通信するには、"UI"で終わるディスパッチ インターフェイスを使用します。 [ATL DHTML コントロールの変更](../atl/modifying-the-atl-dhtml-control.md)、これらの異なるインターフェイスによって呼び出されるメソッドの追加方法を練習することができます。  
-  
- DHTML から C++ コードの呼び出しの例を参照する[DHTML コントロール作成](../atl/creating-an-atl-dhtml-control.md)ATL コントロール ウィザードを使用して、HTML ファイルとヘッダー ファイル内のコードを確認します。  
-  
-## <a name="declaring-webbrowser-methods-in-the-header-file"></a>ヘッダー ファイル内の WebBrowser メソッドを宣言します。  
- DHTML UI から C++ のメソッドを呼び出すには、コントロールの UI のインターフェイスにメソッドを追加する必要があります。 たとえば、ATL コントロール ウィザードによって作成されたヘッダー ファイルには、C++ メソッドが含まれます。 `OnClick`、ウィザードで生成されたコントロールの UI インターフェイスのメンバーであります。  
-  
- 調べる`OnClick`コントロールの .h ファイルには。  
-  
- [!code-cpp[NVC_ATL_COM#4](../atl/codesnippet/cpp/calling-cpp-code-from-dhtml_1.h)]  
-  
- 最初のパラメーターでは、 *pdispBody*、本体オブジェクトのディスパッチ インターフェイスへのポインターです。 2 番目のパラメーターでは、 *varColor*コントロールに適用する色を識別します。  
-  
-## <a name="calling-c-code-in-the-html-file"></a>HTML ファイルでの C++ コードを呼び出す  
- ヘッダー ファイル内の WebBrowser メソッドを宣言した後は、HTML ファイルからメソッドを呼び出すことができます。 ATL コントロール ウィザードが次の 3 つの Windows ディスパッチ メソッドに挿入される HTML ファイルでの通知: 次の 3 つ`OnClick`コントロールの背景色を変更するメッセージをディスパッチするメソッド。  
-  
- HTML ファイル内のメソッドのいずれかを確認します。  
-  
- `<BUTTON onclick='window.external.OnClick(theBody, "red");'>Red</BUTTON>`  
-  
- ウィンドウの外部メソッドでは、上の HTML コードで`OnClick`、button タグの一部としてと呼びます。 メソッドには 2 つのパラメーター: `theBody`、HTML ドキュメントの本文を参照して`"red"`ボタンがクリックされたときに、コントロールの背景色が赤に変更されることを示します。 `Red`ボタンのラベルは、次のタグ。  
-  
- 参照してください[ATL DHTML コントロールの変更](../atl/modifying-the-atl-dhtml-control.md)詳細については、独自のメソッドを提供します。 参照してください[DHTML コントロール プロジェクトの要素の識別](../atl/identifying-the-elements-of-the-dhtml-control-project.md)HTML ファイルの詳細についてはします。  
-  
-## <a name="see-also"></a>関連項目  
- [DHTML コントロールのサポート](../atl/atl-support-for-dhtml-controls.md)
+
+DHTML コントロールは、テスト コンテナーまたは Internet Explorer などのコンテナーでホストできます。 参照してください[テスト プロパティとテスト コンテナーでイベント](../mfc/testing-properties-and-events-with-test-container.md)テスト コンテナーにアクセスする方法についてはします。
+
+コントロールをホストするコンテナーは、通常の制御のインターフェイスを使用して、コントロールと通信します。 DHTML、C++ コードと HTML のリソースと通信するには、"UI"で終わるディスパッチ インターフェイスを使用します。 [ATL DHTML コントロールの変更](../atl/modifying-the-atl-dhtml-control.md)、これらの異なるインターフェイスによって呼び出されるメソッドの追加方法を練習することができます。
+
+DHTML から C++ コードの呼び出しの例を参照する[DHTML コントロール作成](../atl/creating-an-atl-dhtml-control.md)ATL コントロール ウィザードを使用して、HTML ファイルとヘッダー ファイル内のコードを確認します。
+
+## <a name="declaring-webbrowser-methods-in-the-header-file"></a>ヘッダー ファイル内の WebBrowser メソッドを宣言します。
+
+DHTML UI から C++ のメソッドを呼び出すには、コントロールの UI のインターフェイスにメソッドを追加する必要があります。 たとえば、ATL コントロール ウィザードによって作成されたヘッダー ファイルには、C++ メソッドが含まれます。 `OnClick`、ウィザードで生成されたコントロールの UI インターフェイスのメンバーであります。
+
+調べる`OnClick`コントロールの .h ファイルには。
+
+[!code-cpp[NVC_ATL_COM#4](../atl/codesnippet/cpp/calling-cpp-code-from-dhtml_1.h)]
+
+最初のパラメーターでは、 *pdispBody*、本体オブジェクトのディスパッチ インターフェイスへのポインターです。 2 番目のパラメーターでは、 *varColor*コントロールに適用する色を識別します。
+
+## <a name="calling-c-code-in-the-html-file"></a>HTML ファイルでの C++ コードを呼び出す
+
+ヘッダー ファイル内の WebBrowser メソッドを宣言した後は、HTML ファイルからメソッドを呼び出すことができます。 ATL コントロール ウィザードが次の 3 つの Windows ディスパッチ メソッドに挿入される HTML ファイルでの通知: 次の 3 つ`OnClick`コントロールの背景色を変更するメッセージをディスパッチするメソッド。
+
+HTML ファイル内のメソッドのいずれかを確認します。
+
+`<BUTTON onclick='window.external.OnClick(theBody, "red");'>Red</BUTTON>`
+
+ウィンドウの外部メソッドでは、上の HTML コードで`OnClick`、button タグの一部としてと呼びます。 メソッドには 2 つのパラメーター: `theBody`、HTML ドキュメントの本文を参照して`"red"`ボタンがクリックされたときに、コントロールの背景色が赤に変更されることを示します。 `Red`ボタンのラベルは、次のタグ。
+
+参照してください[ATL DHTML コントロールの変更](../atl/modifying-the-atl-dhtml-control.md)詳細については、独自のメソッドを提供します。 参照してください[DHTML コントロール プロジェクトの要素の識別](../atl/identifying-the-elements-of-the-dhtml-control-project.md)HTML ファイルの詳細についてはします。
+
+## <a name="see-also"></a>関連項目
+
+[DHTML コントロールのサポート](../atl/atl-support-for-dhtml-controls.md)
 

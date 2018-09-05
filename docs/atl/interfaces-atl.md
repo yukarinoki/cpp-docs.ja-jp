@@ -15,24 +15,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1410a437d87b56b244eb4fcd711797c279bec446
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 04f77981bd922f73c99102c444a7c95f7240adbc
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217884"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764621"
 ---
 # <a name="interfaces-atl"></a>インターフェイス (ATL)
-インターフェイスは、オブジェクトが外部にその機能を公開する方法です。 COM では、インターフェイスは、(C++ vtable) など、オブジェクトによって実装される関数へのポインターのテーブルです。 テーブルは、インターフェイスを表し、ポイントする関数は、そのインターフェイスのメソッド。 オブジェクトは、インターフェイスを多くを公開できます。  
-  
- 各インターフェイスは、基本的な COM インターフェイスに基づいて[IUnknown](../atl/iunknown.md)します。 メソッド`IUnknown`オブジェクトによって公開されている他のインターフェイスに移動できます。  
-  
- また、各インターフェイスには、一意のインターフェイス ID (IID) が与えられます。 この一意性は、インターフェイスのバージョン管理のサポートが容易にします。 インターフェイスの新しいバージョンには、新しい IID を持つ、新しいインターフェイスだけです。  
-  
+
+インターフェイスは、オブジェクトが外部にその機能を公開する方法です。 COM では、インターフェイスは、(C++ vtable) など、オブジェクトによって実装される関数へのポインターのテーブルです。 テーブルは、インターフェイスを表し、ポイントする関数は、そのインターフェイスのメソッド。 オブジェクトは、インターフェイスを多くを公開できます。
+
+各インターフェイスは、基本的な COM インターフェイスに基づいて[IUnknown](../atl/iunknown.md)します。 メソッド`IUnknown`オブジェクトによって公開されている他のインターフェイスに移動できます。
+
+また、各インターフェイスには、一意のインターフェイス ID (IID) が与えられます。 この一意性は、インターフェイスのバージョン管理のサポートが容易にします。 インターフェイスの新しいバージョンには、新しい IID を持つ、新しいインターフェイスだけです。
+
 > [!NOTE]
->  定義済みは、標準の COM と OLE インターフェイスの Iid。  
-  
-## <a name="see-also"></a>関連項目  
- [COM の概要](../atl/introduction-to-com.md)   
- [COM オブジェクトとインターフェイス](/windows/desktop/com/com-objects-and-interfaces)
+>  定義済みは、標準の COM と OLE インターフェイスの Iid。
+
+## <a name="see-also"></a>関連項目
+
+[COM の概要](../atl/introduction-to-com.md)   
+[COM オブジェクトとインターフェイス](/windows/desktop/com/com-objects-and-interfaces)
 

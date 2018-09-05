@@ -1,7 +1,7 @@
 ---
 title: プリプロセッサの文法 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/04/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,98 +16,86 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1871d1b8281f4dd74733133ede70ed80430246b3
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 56df4d0bfdaf87ace87a9f9dcbde85166929e642
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42538444"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766117"
 ---
 # <a name="preprocessor-grammar"></a>プリプロセッサの文法
-**#define**  *identifier* *token-string*opt  
-  
-*#* **define**  *identifier*[**(** *identifier*opt **,** *...* **,** *identifier*opt **)**] *token-string*opt  
-  
-**defined(**  *identifier* **)**  
-  
-**defined**  *identifier*  
-  
-`#include` **"***path-spec***"**  
-  
-`#include` **\<***path-spec***>**  
-  
-**#line**  *digit-sequence*  **"** *filename* **"** opt  
-  
-*#* **undef**  *identifier*  
-  
-**#error**  *token-string*  
-  
-**#pragma**  *token-string*  
-  
-*条件付き*:  
-*elif の構成要素の if 部分*opt*else 部分*opt*endif 行*  
-  
-*if 部分*:  
-*if-linetext*  
-  
-*if 行*:  
-**#if**  *constant-expression*  
-  
-**#ifdef**  *identifier*  
-  
-**#ifndef**  *identifier*  
-  
-*elif パーツ*:  
-*elif 行のテキスト*  
-  
-*elif パーツ elif 行のテキスト*  
-  
-*elif 行*:  
-**#elif**  *constant-expression*  
-  
-*他の部分から成る*:  
-*else-linetext*  
-  
-*他の行*:  
-`#else`  
-  
-*endif 行*:  
-`#endif`  
-  
-*数字シーケンス*:  
-*digit*  
-  
-*digit-sequence digit*  
-  
-*数字*: のいずれか  
-**0 1 2 3 4 5 6 7 8 9**  
-  
-*トークン文字列*:  
-トークンの文字列  
-  
-*トークン*:  
-*keyword*  
-  
-*identifier*  
-  
-*constant*  
-  
-*operator*  
-  
-`punctuator`  
-  
-*ファイル名*:  
-有効なオペレーティング システム ファイル名  
-  
-*パス仕様*:  
-有効なファイル パス  
-  
-*テキスト*:  
-テキストの任意のシーケンス  
-  
+
+*コントロール行*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#define** *識別子**トークン文字列*<sub>選択</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#define** <em>識別子</em>**(** *識別子*<sub>opt</sub> **、** .**、** *識別子*<sub>opt</sub> **)** *トークン文字列*<sub>選択</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#include** **"** *パス仕様* **"**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#include** **\<** *パス仕様* **>**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#line** *数字シーケンス***"** *filename* **"**<sub>選択  </sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#undef** *識別子*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#error** *トークン文字列*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#pragma** *トークン文字列*
+
+*constant-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**定義 (** *識別子* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**定義されている***識別子*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;その他の任意の定数式
+
+*条件付き*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*if 部分* *elif パーツ*<sub>opt</sub> *else 部分*<sub>opt</sub> *endif 行*
+
+*if 部分*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*if 行**テキスト*
+
+*if 行*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#if** *定数式*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef** *識別子*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef** *識別子*
+
+*elif パーツ*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*elif 行**テキスト*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*elif パーツ* *elif 行**テキスト*
+
+*elif 行*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#elif** *定数式*
+
+*他の部分から成る*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*他の行**テキスト*
+
+*他の行*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#else**
+
+*endif 行*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#endif**
+
+*数字シーケンス*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*数字*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*数字シーケンス**桁*
+
+*数字*: のいずれか<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**
+
+*トークン文字列*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;トークンの文字列
+
+*トークン*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*キーワード*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*識別子*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*定数*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*演算子*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*などの区切り記号*
+
+*ファイル名*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;有効なオペレーティング システムのファイル名
+
+*パス仕様*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;有効なファイル パス
+
+*テキスト*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;テキストの任意のシーケンス
+
 > [!NOTE]
-> 展開する次の非終端要素、[構文規則](../cpp/lexical-conventions.md)のセクション、 *C++ 言語リファレンス*: `constant`、 `constant` -*式*、*識別子*、*キーワード*、 `operator`、および`punctuator`します。  
-  
-## <a name="see-also"></a>関連項目  
- 
+> 展開する次の非終端要素、[構文規則](../cpp/lexical-conventions.md)のセクション、 *C++ 言語リファレンス*:*定数*、*定数式*、*識別子*、*キーワード*、*演算子*、および*などの区切り記号*します。
+
+## <a name="see-also"></a>関連項目
+
 [文法の概要 (C/C++)](../preprocessor/grammar-summary-c-cpp.md)
