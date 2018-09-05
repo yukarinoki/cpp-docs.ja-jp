@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b63afd3c63fbcb05c7172a30a5a23b0418269eca
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 5b227f9d2fdd43b576f89b74f43e4cdce8476bf9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201460"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692384"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolBar クラス
 ユーザーがトップレベルのツール バー ボタンを押し続けたときに表示されるツール バーです。  
@@ -59,7 +59,7 @@ class CMFCDropDownToolBar : public CMFCToolBar
 |[CMFCDropDownToolBar::OnLButtonUp](#onlbuttonup)||  
 |[CMFCDropDownToolBar::OnMouseMove](#onmousemove)||  
 |[CMFCDropDownToolBar::OnSendCommand](#onsendcommand)|(`CMFCToolBar::OnSendCommand` をオーバーライドします)。|  
-|[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(上書き[CMFCToolBar::OnUpdateCmdUI](https://msdn.microsoft.com/571a38ab-2a56-4968-9796-273516126f80))。|  
+|[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(上書き[CMFCToolBar::OnUpdateCmdUI](cmfctoolbar-class.md)します。|  
   
 ### <a name="remarks"></a>Remarks  
  A`CMFCDropDownToolBar`オブジェクトは、ポップアップ メニューの動作では、ツールバーの外観を結合します。 ユーザーが押すし、ドロップダウン ツール バー ボタンを保持 (を参照してください[CMFCDropDownToolbarButton クラス](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md))、ドロップダウン ツールバーが表示され、ユーザーはまでスクロールし、マウスを解放してドロップダウン ツール バーからボタンを選択することができますボタンをクリックします。 ドロップダウン ツールバー ボタンを選択すると、そのボタンが最上位レベルのツールバーの現在のボタンとして表示されます。  

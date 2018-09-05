@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98b8f9f99b38d2878025546379a185aef53bb663
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6e921faf20fd7c2bbac967bf73b62dd33c8220a4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213770"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688229"
 ---
 # <a name="canimatectrl-class"></a>CAnimateCtrl クラス
 Windows コモン アニメーション コントロールの機能が用意されています。  
@@ -193,7 +193,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>パラメーター  
  *dwExStyle*  
- 作成されるコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK に含まれています。  
+ 作成されるコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK に含まれています。  
   
  *dwStyle*  
  アニメーション コントロールのスタイルを指定します。 ウィンドウの任意の組み合わせを適用し、で説明されているアニメーション コントロールのスタイル[アニメーション コントロールのスタイル](/windows/desktop/Controls/animation-control-styles)Windows SDK に含まれています。  

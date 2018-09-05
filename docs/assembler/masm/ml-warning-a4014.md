@@ -1,7 +1,7 @@
 ---
-title: ML の警告 A4014 |Microsoft ドキュメント
+title: ML の警告 A4014 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 924cf02dd9b555cf27b13141e972146f0acde0ab
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: d3108d961c213ca5035cdba5ca9e7c5c8c10317b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056942"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692152"
 ---
 # <a name="ml-warning-a4014"></a>ML の警告 A4014
-手順と初期化されたデータが BSS セグメント単位でサポートされていません  
-  
- BSS セクション内で初期化されたデータを定義しようとしました。  BSS セクションは、名前がある BSS クラスとして定義されます。  これには、簡略化のセグメントが含まれます`.data?`です。  
-  
-## <a name="see-also"></a>関連項目  
- [ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)
+
+手順と初期化されたデータが BSS セグメントでサポートされていません
+
+BSS セクション内で初期化されたデータを定義しようとしました。  BSS セクションは、名前を持つが BSS クラスとして定義されます。  これにより、簡素化されたセグメントが含まれます。`.data?`します。
+
+## <a name="see-also"></a>関連項目
+
+[ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)<br/>

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54cc51ee320c6b942c3ff0563f293cf48d1c34db
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 50be44d612f44586ff8e6c8e953efa0b1fa90948
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541085"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680638"
 ---
 # <a name="svmvmsave"></a>__svm_vmsave
 **Microsoft 固有の仕様**  
@@ -44,7 +44,7 @@ void __svm_vmsave(
 |[入力] `VmcbPhysicalAddress`|VMCB の物理アドレス。|  
   
 ## <a name="remarks"></a>Remarks  
- `__svm_vmsave`関数は、`VMSAVE`マシン語命令。 この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、検索、ドキュメントでは、"AMD64 アーキテクチャ プログラマーズ手動ボリューム 2: システム プログラミングでは、"24593 のドキュメント番号、リビジョン 3.11 またはそれ以降で、 [AMD Corporation](http://go.microsoft.com/fwlink/p/?linkid=23746)サイト。  
+ `__svm_vmsave`関数は、`VMSAVE`マシン語命令。 この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、検索、ドキュメントでは、"AMD64 アーキテクチャ プログラマーズ手動ボリューム 2: システム プログラミングでは、"24593 のドキュメント番号、リビジョン 3.11 またはそれ以降で、 [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/)サイト。  
   
 ## <a name="requirements"></a>要件  
   

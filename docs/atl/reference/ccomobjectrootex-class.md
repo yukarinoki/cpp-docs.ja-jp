@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ca7cfb6a3d83e69c4b447a9e953581285ffaaf0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c9ada8396f9d5473213f726acd27691a97a59847
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219174"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684794"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx クラス
 このクラスは、非集計と集計の両方のオブジェクトのオブジェクト参照カウントの管理を処理するメソッドを提供します。  
@@ -279,7 +279,7 @@ IUnknown*
  不明な外部へのポインターが格納されている場合は、オブジェクトを集計すると、`m_pOuterUnknown`します。 オブジェクトは集計されず、参照カウントがによってアクセス`AddRef`と`Release`は[m_dwRef](#m_dwref)します。  
   
 ##  <a name="objectmain"></a>  CComObjectRootEx::ObjectMain  
- 表示される各クラスの[オブジェクト マップ](https://msdn.microsoft.com/b57619cc-534f-4b8f-bfd4-0c12f937202f)モジュールが初期化されると、この関数が呼び出され、もう一度が終了したとき。  
+ モジュールが初期化される場合、1 回、オブジェクトのマップに表示されている各クラスのこの関数が呼び出され、もう一度が終了したとき。  
   
 ```
 static void WINAPI ObjectMain(bool bStarting);

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b774c5f99387ca4403941d1461593bef8801e5de
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1055d60d95292d3585bccf64c56962d62d4ea48e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220633"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680556"
 ---
 # <a name="c-runtime-error-r6025"></a>C ランタイム エラー R6025
 純粋仮想関数呼び出し  
@@ -41,4 +41,3 @@ ms.locfileid: "43220633"
   
  このエラーは、抽象基本クラスは、派生クラスの型へのキャストによって作成されますが、基底クラスへのポインターでは実際には、ポインターを介して仮想関数を呼び出すことによって発生します。 これからキャストする場合に発生することができます、 **void** <strong>\*</strong>クラスへのポインターにときに、 **void** <strong>\*</strong>されました基底クラスの構築時に作成されます。  
   
- 詳細については、次を参照してください。、 [Microsoft サポート](http://go.microsoft.com/fwlink/p/?linkid=75220)web サイト。

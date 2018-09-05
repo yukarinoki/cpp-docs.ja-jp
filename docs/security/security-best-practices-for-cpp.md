@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e941c15d734ce85513696d60da13184cfbfd2355
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6cb76b2802b1f582621e3e0bacb565a974894d75
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610054"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693346"
 ---
 # <a name="security-best-practices-for-c"></a>C++ のセキュリティ推奨事項
 
@@ -78,7 +78,8 @@ ms.locfileid: "42610054"
 -   セキュリティ  
   
 ## <a name="windows-application-verifier"></a>Windows アプリケーション検証ツール  
- アプリケーション検証ツール (AppVerifier) は、アプリケーションの互換性、安定性、およびセキュリティ上の問題を特定するのに役立ちます。  
+ [Application Verifier (AppVerifier)](/windows-hardware/drivers/debugger/application-verifier
+)潜在的なアプリケーションの互換性、安定性、およびセキュリティの問題を特定できます。  
   
  AppVerifier は、アプリケーションがどのようにオペレーティング システムを使用するのかを監視します。 AppVerifier は、アプリケーションの実行中に、ファイル システム、レジストリ、メモリ、および API を監視し、AppVerifier がカバーしない問題については、ソース コードの修正を推奨します。  
   
@@ -89,8 +90,6 @@ ms.locfileid: "42610054"
 -   アプリケーションにメモリ関連の問題がないかどうかを調べます。  
 
 -   アプリケーションの潜在的なセキュリティ上の問題を特定します。  
-  
- AppVerifier から利用できる Application Compatibility Toolkit の一部である、[アプリケーションの互換性](http://go.microsoft.com/fwlink/p/?linkid=91277)TechNet web サイト。  
   
 
 ## <a name="windows-user-accounts"></a>Windows ユーザー アカウント  

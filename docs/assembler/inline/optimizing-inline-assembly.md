@@ -1,7 +1,7 @@
 ---
-title: インライン アセンブリの最適化 |Microsoft ドキュメント
+title: インライン アセンブリの最適化 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -18,18 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c494594e3b7c541487f34fd33359b0e31f73dd61
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 49660bdc6d2eb84e6e1bbaeb5ebf0d57e484e9e1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050559"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687877"
 ---
 # <a name="optimizing-inline-assembly"></a>インライン アセンブリの最適化
-## <a name="microsoft-specific"></a>Microsoft 固有の仕様  
- 存在、`__asm`関数内のブロックに影響を与えるいくつかの方法で最適化します。 コンパイラはまず、最適化するために、`__asm`自体をブロックします。 アセンブリ言語で記述するはまったく取得です。 2 番目の存在、`__asm`ブロックへの影響は、変数の記憶域を登録します。 コンパイラ間でのレジスタ格納変数の回避、`__asm`でレジスタの内容が変更する場合はブロック、`__asm`ブロックします。 最後に、いくつか他の関数全体の最適化を受ける関数内のアセンブリ言語を含めることによってです。  
-  
- **Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- [インライン アセンブラー](../../assembler/inline/inline-assembler.md)
+
+**Microsoft 固有の仕様**
+
+有無、`__asm`関数内のブロックがいくつかの方法での最適化に影響します。 コンパイラはまず、最適化するために、`__asm`自体をブロックします。 アセンブリ言語で記述するものが正確に取得します。 2 番目の存在、`__asm`ブロックに影響は、変数の記憶域を登録します。 コンパイラで変数をレジスタ格納を回避できます、`__asm`ブロックでレジスタの内容に変更する場合、`__asm`ブロック。 最後に、いくつかその他の関数全体の最適化の場合は、アセンブリ言語で関数を含めることによって影響が受けるされます。
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
+[インライン アセンブラー](../../assembler/inline/inline-assembler.md)<br/>

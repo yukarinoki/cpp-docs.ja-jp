@@ -1,7 +1,7 @@
 ---
-title: '@DataSize |Microsoft ドキュメント'
+title: '@DataSize |Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec03273f42dc437da1dcfa7404a2c039f0e0e3e9
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 4d47c89c238fe86392441837ba7910b819e9838f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049116"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677576"
 ---
 # <a name="datasize"></a>@DataSize
-場合は 0**極小**、**小さな**、**中**、および**フラット**の場合は 1 をモデル化**COMPACT**と**大規模な**モデル、および 2 を**莫大**モデル (数値と等価なります)。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-@DataSize  
-  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [シンボル リファレンス](../../assembler/masm/symbols-reference.md)
+
+場合は 0**極小**、**小さな**、 **MEDIUM**、および**フラット**の場合は 1 をモデル化**COMPACT**と**大規模な**モデル、および 2**莫大**モデル (数値と同等)。
+
+## <a name="syntax"></a>構文
+
+> @DataSize
+
+## <a name="see-also"></a>関連項目
+
+[シンボル リファレンス](../../assembler/masm/symbols-reference.md)<br/>

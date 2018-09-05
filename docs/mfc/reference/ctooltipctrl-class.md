@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1225ab62dfd64a991ba5ff680e86b62e7d48f8ac
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 06f0b78938534f685f14757ca16e5ad2574412f2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200075"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684808"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 "ツールヒント コントロール" の機能をカプセル化しています。このコンロトールは、アプリケーションでツールの目的を説明する 1 行のテキストを表示する小さなポップアップ ウィンドウです。  
@@ -309,7 +309,7 @@ virtual BOOL CreateEx(
  ツール ヒント コントロールのスタイルを指定します。 参照してください、**解説**の[作成](#create)詳細についてはします。  
   
  *dwStyleEx*  
- 作成されるコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK に含まれています。  
+ 作成されるコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK に含まれています。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外。 それ以外の場合は 0。  

@@ -1,7 +1,7 @@
 ---
-title: 型と変数サイズ インライン アセンブリで |Microsoft ドキュメント
+title: 型とインライン アセンブリでの変数のサイズ |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -25,39 +25,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3466158c507e618e701df5aed35db7e5814abe52
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 3defb0b11a55258aa0a7d8c050d5a59bb6b8eb5a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050593"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683623"
 ---
 # <a name="type-and-variable-sizes-in-inline-assembly"></a>インライン アセンブリでの型と変数サイズ
-**Microsoft 固有の仕様**  
-  
- **長さ**、**サイズ**、および**型**演算子は、インライン アセンブリで制限の意味を持ちます。 まったく使用できない、`DUP`演算子 (MASM ディレクティブまたは演算子を使用してデータを定義することはできません) ためです。 それらを使用して、C または C++ の変数または型のサイズを検索することができます。  
-  
--   **長さ**演算子は、配列内の要素の数を返すことができます。 非配列変数の値 1 を返します。  
-  
--   **サイズ**演算子は、C または C++ の変数のサイズを返すことができます。 変数のサイズは、製品の**長さ**と**型**です。  
-  
--   **型**演算子は、C または C++ の型または変数のサイズを返すことができます。 変数が配列では、**型**配列の 1 つの要素のサイズを返します。  
-  
- たとえば、プログラムがある 8 要素`int`配列、  
-  
-```  
-int arr[8];  
-```  
-  
- C とアセンブリの式は次のサイズの返さ`arr`とその要素。  
-  
-|__asm|C|サイズ|  
-|-------------|-------|----------|  
-|**長さ**arr|`sizeof`(arr)/`sizeof`(arr[0])|8|  
-|**サイズ**arr|`sizeof`(arr)|32|  
-|**型**arr|`sizeof`(arr[0])|4|  
-  
- **Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- [__asm ブロックでのアセンブリ言語の使用](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+
+**Microsoft 固有の仕様**
+
+**長さ**、**サイズ**、および**型**演算子は、インライン アセンブリで制限の意味を持ちます。 まったく使用できません、`DUP`演算子 (MASM ディレクティブまたは演算子を使用してデータを定義することはできません) ためです。 ただし、それらを使用して、C または C++ の変数または型のサイズを確認することができます。
+
+- **長さ**演算子は、配列内の要素の数を返すことができます。 非配列変数の値 1 を返します。
+
+- **サイズ**演算子は、C または C++ の変数のサイズを返すことができます。 変数のサイズは、製品の**長さ**と**型**します。
+
+- **型**演算子は、C または C++ の型または変数のサイズを返すことができます。 変数が配列では、**型**配列の 1 つの要素のサイズを返します。
+
+たとえば、プログラムに 8-要素**int**配列
+
+```cpp
+int arr[8];
+```
+
+C およびアセンブリの式は次のサイズの返さ`arr`とその要素。
+
+|__asm|C|サイズ|
+|-------------|-------|----------|
+|**長さ**arr|`sizeof`(処理 arr)/`sizeof`(arr[0])|8|
+|**サイズ**arr|`sizeof`処理 (arr)|32|
+|**型**arr|`sizeof`(arr[0])|4|
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
+[__asm ブロックでのアセンブリ言語の使用](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

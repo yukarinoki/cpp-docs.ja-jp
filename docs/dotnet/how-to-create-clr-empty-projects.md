@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bcb104b5265d79c6eac41b7632a12d99a8ec236b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c46aacc776c60b7deb03495187d08a3227f43aa4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212710"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677368"
 ---
 # <a name="how-to-create-clr-empty-projects"></a>方法 : 空の CLR プロジェクトを作成する
 空の CLR プロジェクトを作成するには、使用、 **CLR 空プロジェクト**から利用できる、テンプレート、**新しいプロジェクト** ダイアログ ボックス。  
   
 > [!NOTE]
->  IDE に表示される機能は、有効にされている設定やエディションに依存し、ヘルプに記載されている内容とは異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio での開発設定のカスタマイズ](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  IDE に表示される機能は、有効にされている設定やエディションに依存し、ヘルプに記載されている内容とは異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
   
 ### <a name="to-create-a-clr-empty-project"></a>CLR 空プロジェクトを作成するには  
   

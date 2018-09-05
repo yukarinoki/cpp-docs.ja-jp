@@ -1,7 +1,7 @@
 ---
-title: ML の致命的でないエラー A2047 |Microsoft ドキュメント
+title: ML の致命的でないエラー A2047 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95d01abf57eb58dadc4f46369b3613abfd5c49b1
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: b2dae687e4ac60157e8c929bedc5e1941160848c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054898"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688105"
 ---
 # <a name="ml-nonfatal-error-a2047"></a>ML の致命的でないエラー A2047
-**空 (null) の文字列**  
-  
- 文字列を行いました区切りと 1 組の引用符文字がありません。  
-  
- 有効にして、文字列の 1 ~ 255 文字以内でなければなりません。  
-  
-## <a name="see-also"></a>関連項目  
- [ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)
+
+**空 (null) の文字列**
+
+引用符や内で文字の区切り記号のペアの文字列を行いました。
+
+有効にして、文字列の 1 ~ 255 文字以内でなければなりません。
+
+## <a name="see-also"></a>関連項目
+
+[ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)<br/>

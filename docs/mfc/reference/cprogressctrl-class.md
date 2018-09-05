@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05b259afe5c266db30ed31ed47e917f0ac1a5607
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7c4ea8cf95298918088f54c3099a8f41d9c16ca9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196191"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690153"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl クラス
 Windows コモン プログレス バー コントロールの機能が用意されています。  
@@ -143,7 +143,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>パラメーター  
  *dwStyle*  
- 進行状況バー コントロールのスタイルを指定します。 ウィンドウ stylesdescribed 内の任意の組み合わせを適用[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)次の進行状況バー コントロールのスタイルをコントロールに加え、Windows sdk:  
+ 進行状況バー コントロールのスタイルを指定します。 ウィンドウ stylesdescribed 内の任意の組み合わせを適用[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)次の進行状況バー コントロールのスタイルをコントロールに加え、Windows sdk:  
   
 - PBS_VERTICAL 表示では、進行状況を垂直方向に、上下から。 このフラグを設定せず、進行状況バー コントロールは、右に水平方向、左を表示します。  
   
@@ -181,10 +181,10 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>パラメーター  
  *dwExStyle*  
- 作成されるコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK に含まれています。  
+ 作成されるコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK に含まれています。  
   
  *dwStyle*  
- 進行状況バー コントロールのスタイルを指定します。 説明されているウィンドウのスタイルの任意の組み合わせを適用[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK に含まれています。  
+ 進行状況バー コントロールのスタイルを指定します。 説明されているウィンドウのスタイルの任意の組み合わせを適用[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows SDK に含まれています。  
   
  *rect*  
  参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。  

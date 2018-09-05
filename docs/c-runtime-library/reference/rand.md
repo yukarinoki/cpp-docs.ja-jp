@@ -35,16 +35,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5289b27ae0749d85b3e4ee60717212acc95536d5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 081e380dc639ed6a814913dd42c6fc1b55041b01
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405706"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681136"
 ---
 # <a name="rand"></a>rand
 
-よく知られていると完全に再現可能なアルゴリズムを使用して擬似乱数を生成します。 この関数のプログラムでより安全なバージョンは使用できません。参照してください[rand_s](rand-s.md)です。 によって生成された番号**rand**暗号的に安全ではありません。 乱数生成のより安全な暗号を使用して[rand_s](rand-s.md)で C++ 標準ライブラリで宣言された関数または[\<ランダム >](../../standard-library/random.md)です。
+よく知られていると完全に再現可能なアルゴリズムを使用して擬似乱数を生成します。 この関数のプログラムでより安全なバージョンは使用できません。参照してください[rand_s](rand-s.md)します。 によって生成された番号**rand**暗号的に安全ではありません。 乱数の生成のより安全な暗号を使用して[rand_s](rand-s.md) 、関数では、C++ 標準ライブラリで宣言または[\<ランダム >](../../standard-library/random.md)します。
 
 ## <a name="syntax"></a>構文
 
@@ -54,17 +54,17 @@ int rand( void );
 
 ## <a name="return-value"></a>戻り値
 
-**rand**上記の疑似乱数を返します。 エラーの戻り値はありません。
+**rand**上記疑似乱数を返します。 エラーの戻り値はありません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Rand** 、0 ~ の擬似乱数の整数を返す**RAND_MAX** (32767)。 使用して、 [srand](srand.md)関数を呼び出す前に、擬似乱数ジェネレーターのシード**rand**です。
+**Rand**関数では、擬似乱数の整数を返しますに 0 の範囲の**RAND_MAX** (32767)。 使用して、 [srand](srand.md)関数を呼び出す前に疑似乱数ジェネレーターのシード**rand**します。
 
-**Rand**関数は、よく知られているシーケンスを生成し、暗号化機能として使用するためには不適切なです。 乱数生成のより安全な暗号を使用して[rand_s](rand-s.md)で C++ 標準ライブラリで宣言された関数または[\<ランダム >](../../standard-library/random.md)です。 については、何が発生しています**rand**とどのように\<ランダム > これらの欠点に対処を参照してください[このビデオ](http://go.microsoft.com/fwlink/?LinkId=397615)です。
+**Rand**関数は、よく知られているシーケンスを生成し、暗号化関数として使用するために適切ではありません。 乱数の生成のより安全な暗号を使用して[rand_s](rand-s.md) 、関数では、C++ 標準ライブラリで宣言または[\<ランダム >](../../standard-library/random.md)します。 に関する問題について**rand**とどのように\<ランダム > このビデオ」を参照してください、これらの欠点を補い、 [rand 有害と見なされます](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful)します。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**rand**|\<stdlib.h>|
 

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f99f79e0e5f4f53356ed96528e310465b3ed2f0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 733d090073fe2ed08a0499ea205c2377b4bdb289
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220091"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679698"
 ---
 # <a name="scope-c"></a>スコープ (C)
 
@@ -114,7 +114,7 @@ class Account *Checking = new class Account( Account );
 > [!NOTE]
 > この例のように、識別子名を再使用するのは適切なプログラミング方法ではありません。
 
- ポインターの詳細については、次を参照してください。[派生型](https://msdn.microsoft.com/aa14183c-02fe-4d81-95fe-beddb0c01c7c)します。 クラス オブジェクトの宣言と初期化については、次を参照してください。[クラス、構造、および共用体](../cpp/classes-and-structs-cpp.md)します。 使用方法について、**新しい**と**削除**フリー ストア演算子を参照してください[新しい演算子と delete 演算子](new-and-delete-operators.md)します。
+クラス オブジェクトの宣言と初期化については、次を参照してください。[クラス、構造、および共用体](../cpp/classes-and-structs-cpp.md)します。 使用方法について、**新しい**と**削除**フリー ストア演算子を参照してください[新しい演算子と delete 演算子](new-and-delete-operators.md)します。
 
 ## <a name="hiding-names-with-global-scope"></a>グローバル スコープの名前の隠ぺい
 

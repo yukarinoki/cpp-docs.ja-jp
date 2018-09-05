@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b7f83175e2bf3fe1e69ef02192749916e566edd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c0477bb2dfa60b8a3803c6aff2502de7fd0ad15c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215254"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686458"
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane クラス
 詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。  
@@ -284,7 +284,7 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::IsToolBox](#istoolbox)||  
 |[CMFCTasksPane::IsWrapLabelsEnabled](#iswraplabelsenabled)|作業ウィンドウでラベルのテキストが折り返されるかどうかを示します。|  
 |[CMFCTasksPane::IsWrapTasksEnabled](#iswraptasksenabled)|作業ウィンドウでタスクのテキストが折り返されるかどうかを示します。|  
-|[CMFCTasksPane::LoadState](#loadstate)|(上書き[cdockablepane::loadstate](https://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917))。|  
+|[CMFCTasksPane::LoadState](#loadstate)|(上書き[cdockablepane::loadstate](cdockablepane-class.md#loadstate))。|  
 |[CMFCTasksPane::OnCancel](#oncancel)||  
 |[CMFCTasksPane::OnClickTask](#onclicktask)|ユーザーが作業ウィンドウ内の項目をクリックすると、フレームワークによって呼び出されます。|  
 |[CMFCTasksPane::OnOK](#onok)||  
@@ -293,17 +293,17 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::OnPressHomeButton](#onpresshomebutton)|ユーザーが [ホーム] ナビゲーション ボタンをクリックすると、フレームワークによって呼び出されます。|  
 |[CMFCTasksPane::OnPressOtherButton](#onpressotherbutton)||  
 |[CMFCTasksPane::OnSetAccData](#onsetaccdata)|(上書き[cbasepane::onsetaccdata](../../mfc/reference/cbasepane-class.md#onsetaccdata))。|  
-|[CMFCTasksPane::OnUpdateCmdUI](#onupdatecmdui)|(上書き[cdockablepane::onupdatecmdui](https://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0))。|  
-|[CMFCTasksPane::PreTranslateMessage](#pretranslatemessage)|(上書き[cdockablepane::pretranslatemessage](https://msdn.microsoft.com/49a242cc-b158-400e-9e01-0345ec9c3ffd))。|  
+|[CMFCTasksPane::OnUpdateCmdUI](#onupdatecmdui)|(上書き[cdockablepane::onupdatecmdui](cdockablepane-class.md))。|  
+|[CMFCTasksPane::PreTranslateMessage](#pretranslatemessage)|(上書き[cdockablepane::pretranslatemessage](cdockablepane-class.md))。|  
 |[CMFCTasksPane::RecalcLayout](#recalclayout)|(上書き[cpane::recalclayout](../../mfc/reference/cpane-class.md#recalclayout))。|  
 |[CMFCTasksPane::RemoveAllGroups](#removeallgroups)|指定したページ上のすべてのグループを削除します。|  
 |[CMFCTasksPane::RemoveAllPages](#removeallpages)|既定 (最初) のページを除く、すべてのページを作業ウィンドウから削除します。|  
 |[CMFCTasksPane::RemoveAllTasks](#removealltasks)|グループからすべてのタスクを削除します。|  
 |[CMFCTasksPane::RemoveGroup](#removegroup)|グループを削除します。|  
-|[CMFCTasksPane::RemovePage](#removepage)|指定されたページを作業ウィンドウから削除します。|  
+|[CMFCTasksPane::RemovePage](#removepage)|指定されたページを作業ウィンドウから削除します。|
 |[CMFCTasksPane::RemoveTask](#removetask)|タスク グループからタスクを削除します。|  
-|[CMFCTasksPane::SaveState](#savestate)|(上書き[cdockablepane::savestate](https://msdn.microsoft.com/c5c24249-8d0d-46cb-96d9-9f5c6dc191db))。|  
-|[CMFCTasksPane::Serialize](#serialize)|(上書き[cdockablepane::serialize](https://msdn.microsoft.com/09787e59-e446-4e76-894b-206d303dcfd6))。|  
+|[CMFCTasksPane::SaveState](#savestate)|(上書き[cdockablepane::savestate](cdockablepane-class.md))。|  
+|[CMFCTasksPane::Serialize](#serialize)|(上書き[cdockablepane::serialize]())。|  
 |[CMFCTasksPane::SetActivePage](#setactivepage)|作業ウィンドウの指定されたページをアクティブにします。|  
 |[CMFCTasksPane::SetCaption](#setcaption)|作業ウィンドウのキャプション名を設定します。|  
 |[CMFCTasksPane::SetGroupCaptionHeight](#setgroupcaptionheight)|グループ キャプションの高さを設定します。|  
@@ -318,7 +318,7 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::SetTaskName](#settaskname)|タスクの名前を設定します。|  
 |[CMFCTasksPane::SetTasksIconHorzOffset](#settasksiconhorzoffset)||  
 |[CMFCTasksPane::SetTasksIconVertOffset](#settasksiconvertoffset)||  
-|[CMFCTasksPane::SetTaskTextColor](#settasktextcolor)|タスクのテキストの色を設定します。|  
+|[CMFCTasksPane::SetTaskTextColor](#settasktextcolor)|タスクのテキストの色を設定します。| 
 |[CMFCTasksPane::SetTasksHorzOffset](#settaskshorzoffset)|親グループの左端および右端からタスクまでの現在の水平方向のオフセットを設定します。|  
 |[CMFCTasksPane::SetVertMargin](#setvertmargin)|作業ウィンドウとクライアント領域の端との上下の間隔を設定します。|  
 |[CMFCTasksPane::SetWindowHeight](#setwindowheight)|ウィンドウの高さを設定します。|  

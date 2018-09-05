@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08cde95cf7ce680137aa932eb9642b9cd910318a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e7a337743ece9edfa71a052ee9d6e19728b0c051
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223214"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693717"
 ---
 # <a name="ipersiststorageimpl-class"></a>IPersistStorageImpl クラス
 このクラスは、実装、 [IPersistStorage](/windows/desktop/api/objidl/nn-objidl-ipersiststorage)インターフェイス。  
@@ -66,7 +66,7 @@ class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
 ## <a name="remarks"></a>Remarks  
  `IPersistStorageImpl` 実装して、 [IPersistStorage](/windows/desktop/api/objidl/nn-objidl-ipersiststorage)インターフェイス、オブジェクトの読み込みを要求するクライアントのできるし、ストレージを使用して、永続的なデータを保存します。  
   
- このクラスの実装には、クラスが必要です。`T`の実装を、`IPersistStreamInit`インターフェイスを介して使用できる`QueryInterface`します。 通常これはそのクラス`T`から派生する必要があります[IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)、エントリを提供`IPersistStreamInit`で、 [COM マップ](https://msdn.microsoft.com/library/ead2a1e3-334d-44ad-bb1f-b94bb14c2333)を使用して、[プロパティ マップ](https://msdn.microsoft.com/library/bfe30be6-62c3-4dc2-bd49-21ef96f15427)クラスの永続的なデータを記述します。  
+ このクラスの実装には、クラスが必要です。`T`の実装を、`IPersistStreamInit`インターフェイスを介して使用できる`QueryInterface`します。 通常これはそのクラス`T`から派生する必要があります[IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)、エントリを提供`IPersistStreamInit`で、 [COM マップ](com-map-macros.md)を使用して、[プロパティ マップ](property-map-macros.md)クラスの永続的なデータを記述します。  
   
  **関連資料** [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)、 [ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)  
   

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bae7d672cf592514d60c9ec68bbf4464507b94ff
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 924cd8f502b6fe41aa4733df3dc59a372c27e6cb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539621"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683636"
 ---
 # <a name="vmxoff"></a>__vmx_off
 **Microsoft 固有の仕様**  
@@ -36,7 +36,7 @@ void __vmx_off();
 ```  
   
 ## <a name="remarks"></a>Remarks  
- `__vmx_off`関数は、`VMXOFF`マシン語命令。 この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、検索、ドキュメント、「Intel 仮想化技術仕様 ia-32 Intel アーキテクチャ向け、」で番号 C97063-002、文書化、 [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)サイト。  
+ `__vmx_off`関数は、`VMXOFF`マシン語命令。 この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、検索、ドキュメント、「Intel 仮想化技術仕様 ia-32 Intel アーキテクチャ向け、」で番号 C97063-002、文書化、 [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm)サイト。  
   
 ## <a name="requirements"></a>要件  
   

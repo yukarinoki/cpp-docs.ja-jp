@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd12bff6638ef86205b1037a8a7c7e348767ae9a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 287e540f73b202229c0355aec55aa0d8f5e0421f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221756"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690450"
 ---
 # <a name="cancellation-in-the-ppl"></a>PPL における取り消し処理
 このドキュメントでは、並列パターン ライブラリ (PPL: Parallel Patterns Library) での取り消し処理の役割、並列処理を取り消す方法、および並列処理の取り消しを判定する方法について説明します。  
@@ -150,7 +150,7 @@ ms.locfileid: "43221756"
   
 #### <a name="cancellation-tokens-and-task-composition"></a>キャンセル トークンとタスク構成  
 
- [同時実行:: ハイパーリンク"https://msdn.microsoft.com/library/system.threading.tasks.task.whenall(v=VS.110).aspx"when_all](reference/concurrency-namespace-functions.md#when_all)と[concurrency::when_any](reference/concurrency-namespace-functions.md#when_all)関数を使用して、一般的なパターンを実装するために複数のタスクを構成できます。 このセクションでは、キャンセル トークンを使用した場合のこれらの関数の動作について説明します。  
+ [Concurrency::when_all](reference/concurrency-namespace-functions.md#when_all)と[concurrency::when_any](reference/concurrency-namespace-functions.md#when_all)関数を使用して、一般的なパターンを実装するために複数のタスクを構成できます。 このセクションでは、キャンセル トークンを使用した場合のこれらの関数の動作について説明します。  
   
  キャンセル トークンを `when_all` 関数または `when_any` 関数に指定すると、その関数は、そのキャンセル トークンが取り消されたとき、または参加タスクの 1 つが取り消し状態になるか例外をスローしたときにのみ取り消します。  
   

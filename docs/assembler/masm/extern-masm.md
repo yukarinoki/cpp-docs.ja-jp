@@ -1,7 +1,7 @@
 ---
-title: EXTERN (MASM) |Microsoft ドキュメント
+title: EXTERN (MASM) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7528ea78270e4976ed3b926e83fe4f9977148498
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 0a9008e8c1153c0a9b06530b14e661436f7e62a9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054030"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693671"
 ---
 # <a name="extern-masm"></a>EXTERN (MASM)
-1 つまたは複数の外部変数、ラベル、または記号と呼ばれる定義*名前*型を持つ`type`します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-   EXTERN [[langtype]] name [[(altid)]] :  
-type [[, [[langtype]] name [[(altid)]] :type]]...  
-```  
-  
-## <a name="remarks"></a>コメント  
- `type`できます[ABS](../../assembler/masm/operator-abs.md)、どの imports*名前*定数として。 同じ[EXTRN](../../assembler/masm/extrn.md)です。  
-  
-## <a name="see-also"></a>関連項目  
- [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+
+1 つまたは複数の外部変数、ラベル、または記号と呼ばれる定義*名前*型が*型*します。
+
+## <a name="syntax"></a>構文
+
+> EXTERN [*langtype*]*名前*[(*altid*)]:*型*[、[*langtype*] *名前*[(*altid*)]:*型*].
+
+## <a name="remarks"></a>Remarks
+
+*型*できる[ABS](../../assembler/masm/operator-abs.md)、どの imports*名前*定数として。 同じ[EXTRN](../../assembler/masm/extrn.md)します。
+
+## <a name="see-also"></a>関連項目
+
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>

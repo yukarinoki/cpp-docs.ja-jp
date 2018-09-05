@@ -242,12 +242,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41b5a9f936dc47852c766370d330576dc16ca58a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8c5c2697c22384524234f90a48c396a91b3c3522
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213663"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678099"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement クラス
 `CMFCRibbonBaseElement`クラスは基底クラスに追加できるすべての要素に対して、[リボン バー](../../mfc/reference/cmfcribbonbar-class.md)します。 リボン要素とは、リボン ボタン、リボン チェック ボックス、リボン コンボ ボックスなどです。  
@@ -921,7 +921,7 @@ virtual CWnd* GetParentWnd() const;
  メソッドが成功した場合は、リボン要素の親ウィンドウへのポインターそれ以外の場合は NULL です。  
   
 ### <a name="remarks"></a>Remarks  
- リボン要素の親ウィンドウは、 [CMFCRibbonBar クラス](../../mfc/reference/cmfcribbonbar-class.md)または[CMFCRibbonPanelMenuBar](https://msdn.microsoft.com/7bd4b986-8b7b-493e-9746-bd3161b78581)します。  
+ リボン要素の親ウィンドウは、 [CMFCRibbonBar クラス](../../mfc/reference/cmfcribbonbar-class.md)または[CMFCRibbonPanelMenuBar](internal-classes.md)します。  
   
 ##  <a name="getpressed"></a>  CMFCRibbonBaseElement::GetPressed  
  ユーザーが現在押した場合は、リボン要素へのポインターを取得します。  

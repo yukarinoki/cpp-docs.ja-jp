@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2e9d9fc72791572d840b88f1d74eb736e3ad65c7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d6397e6e8355e8361ea95f03fc9b67d2f3211478
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213711"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685574"
 ---
 # <a name="commands-and-tables"></a>コマンドとテーブル
 コマンドとテーブルに行セットにアクセスすることを許可します。行セットを開き、コマンドを実行して、列をバインドします。 [CCommand](../../data/oledb/ccommand-class.md)と[CTable](../../data/oledb/ctable-class.md)クラスがそれぞれコマンドとテーブルのオブジェクトをインスタンス化します。 これらのクラスから派生[CAccessorRowset](../../data/oledb/caccessorrowset-class.md)次の図に示すようにします。  
@@ -43,7 +43,7 @@ ms.locfileid: "43213711"
   
 -   コマンドをサポートするデータ ソースで使用することができます、`CCommand`クラスの代わりにします。 コマンドを実行するには、呼び出す[オープン](../../data/oledb/ccommand-open.md)このクラスにします。 代わりに、呼び出すことができます`Prepare`を複数回実行するコマンドを準備します。  
   
-     `CCommand` 次の 3 つのテンプレート引数を持つ: アクセサーの型、行セットの種類、および結果型は (`CNoMultipleResults`、既定では、または`CMultipleResults`)。 指定した場合`CMultipleResults`、`CCommand`クラスでサポート、`IMultipleResults`インターフェイスし、複数の行セットを処理します。 [DBVIEWER](https://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832)サンプルは、複数の結果を処理する方法を示します。  
+     `CCommand` 次の 3 つのテンプレート引数を持つ: アクセサーの型、行セットの種類、および結果型は (`CNoMultipleResults`、既定では、または`CMultipleResults`)。 指定した場合`CMultipleResults`、`CCommand`クラスでサポート、`IMultipleResults`インターフェイスし、複数の行セットを処理します。 [DBVIEWER](https://github.com/Microsoft/VCSamples)サンプルは、複数の結果を処理する方法を示します。  
   
 ## <a name="see-also"></a>関連項目  
  [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)

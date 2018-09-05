@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59c0a9701c1714e1d96829a28144c921e5c00e11
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0ddfd6de46d6d0700265f5308f06458b3cdd984a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206718"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677828"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>C++ でプログラミングする Windows の概要
 
@@ -76,7 +76,7 @@ Windows 10 では、さまざまな種類のデスクトップ プログラム�
 
 - Windows サービス 詳細については、「 [Introduction to Windows Service Applications](/dotnet/framework/windows-services/introduction-to-windows-service-applications)」を参照してください。
 
-Visual C++ を使用すると、高性能なカスタム機能をほぼ種類に関係なく Win32 DLL または COM DLL にパッケージ化できます。これらは、C++ アプリまたは C# や Visual Basic など他の言語で記述されたアプリで使用できます。 WIn32 DLL の詳細については、「 [DLLs in Visual C++](../build/dlls-in-visual-cpp.md)」を参照してください。 COM 開発の詳細については、次を参照してください。[コンポーネント オブジェクト モデル (COM)](https://msdn.microsoft.com/library/windows/desktop/ms680573)します。
+Visual C++ を使用すると、高性能なカスタム機能をほぼ種類に関係なく Win32 DLL または COM DLL にパッケージ化できます。これらは、C++ アプリまたは C# や Visual Basic など他の言語で記述されたアプリで使用できます。 WIn32 DLL の詳細については、「 [DLLs in Visual C++](../build/dlls-in-visual-cpp.md)」を参照してください。 COM 開発の詳細については、次を参照してください。[コンポーネント オブジェクト モデル (COM)](/windows/desktop/com/component-object-model--com--portal)します。
 
 ## <a name="games"></a>ゲーム
 

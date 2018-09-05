@@ -1,7 +1,7 @@
 ---
-title: SDWORD |Microsoft ドキュメント
+title: SDWORD |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,24 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0435692996cc2189bcf30ab6ff10fc9ddbc0b271
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c0873a57bd9d741c2606cb0735c0d632667bae05
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32058034"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693274"
 ---
 # <a name="sdword"></a>SDWORD
-割り当て、必要に応じて各記憶域の符号付きのダブルワード (4 バイト) を初期化`initializer`です。 型指定子としても使用できる、型が有効な任意の場所。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-name SDWORD initializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)   
- [DWORD](../../assembler/masm/dword.md)   
- [DD](../../assembler/masm/dd.md)
+
+割り当て、必要に応じて、各記憶域の符号付きのダブル ワード (4 バイト) を初期化します`initializer`します。 また、型指定子として使用できる型が有効な任意の場所。
+
+## <a name="syntax"></a>構文
+
+> SDWORD 初期化子の名前 [] の初期化子].
+
+## <a name="see-also"></a>関連項目
+
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[DWORD](../../assembler/masm/dword.md)<br/>
+[DD](../../assembler/masm/dd.md)<br/>

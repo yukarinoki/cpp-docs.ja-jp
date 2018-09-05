@@ -15,18 +15,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 495f5b415aac2a59eeae45720944a03251b0faa5
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: db5fac0bc8900d15968639e8ed3909417353d596
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210698"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690748"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>チュートリアル: MFC によるリボン アプリケーションの作成
 このチュートリアルで使用する方法、 **MFC アプリケーション ウィザード**を既定では、リボンを持つアプリケーションを作成します。 追加することで、リボンを拡張することができます、**カスタム**リボン カテゴリを持つ、**お気に入り**リボン パネル、およびよく使用される一部のコマンドをそのパネルを追加します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- このチュートリアルは、使用する Visual Studio を設定することが前提としています。**汎用開発設定**します。 別の設定を使用している場合は、次の手順に示されているいくつかのユーザー インターフェイス (UI) 要素が既定では表示されないことがあります。 設定を変更する方法については、次を参照してください。[方法: 設定のリセット](https://msdn.microsoft.com/c95c51be-e609-4769-abba-65e6beedec76)します。  
+ このチュートリアルは、使用する Visual Studio を設定することが前提としています。**汎用開発設定**します。 別の設定を使用している場合は、次の手順に示されているいくつかのユーザー インターフェイス (UI) 要素が既定では表示されないことがあります。  
   
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>リボンを備えた MFC アプリケーションを作成するには  
   

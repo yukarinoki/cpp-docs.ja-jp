@@ -1,7 +1,7 @@
 ---
-title: 演算子&lt; &gt; |Microsoft ドキュメント
+title: 演算子&lt; &gt; |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,25 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 454eada609ba615398cb2ff992f2a78b0f2104de
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c85f411ee782349eff9e802e3f010b222aaa888a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054586"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679946"
 ---
 # <a name="operator-ltgt"></a>演算子 &lt;&gt;
-扱います*テキスト*単一のリテラル要素として。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-<  
-text  
->  
-  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [演算子リファレンス](../../assembler/masm/operators-reference.md)
+
+扱います*テキスト*単一のリテラル要素として。
+
+## <a name="syntax"></a>構文
+
+> \<*テキスト*>
+
+## <a name="see-also"></a>関連項目
+
+[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>

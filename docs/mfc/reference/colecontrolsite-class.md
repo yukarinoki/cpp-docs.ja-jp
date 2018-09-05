@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f79917e34a749048696f320a8311978acc2739f4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1c1d483f6ba532a6d8eeee1a8ec831cfd1d94b62
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202856"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678010"
 ---
 # <a name="colecontrolsite-class"></a>COleControlSite クラス
 クライアント側のカスタム コントロール インターフェイスをサポートします。  
@@ -797,7 +797,7 @@ virtual BOOL ModifyStyle(
  現在のウィンドウ スタイルを追加するスタイル。  
   
  *nFlags*  
- ウィンドウの配置フラグ。 使用可能な値の一覧は、次を参照してください。、 [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 内の関数。  
+ ウィンドウの配置フラグ。 使用可能な値の一覧は、次を参照してください。、 [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) Windows SDK 内の関数。  
   
 ### <a name="return-value"></a>戻り値  
  スタイルが変更された場合、それ以外の場合 0 0 以外の値。  
@@ -805,7 +805,7 @@ virtual BOOL ModifyStyle(
 ### <a name="remarks"></a>Remarks  
  WS_DISABLED の設定と一致するコントロールの在庫 Enabled プロパティが変更されます。 WS_BORDER の要求された設定と一致するコントロールの株価の罫線のスタイル プロパティが変更されます。 その他のすべてのスタイルは、1 つが存在する場合、コントロールのウィンドウのハンドルに直接適用されます。  
   
- コントロールのウィンドウ スタイルを変更します。 ビットごとの OR を使用してスタイルを追加または削除を組み合わせることができます ( &#124; ) 演算子。 参照してください、 [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)使用可能なウィンドウのスタイルについては、Windows SDK 内の関数。  
+ コントロールのウィンドウ スタイルを変更します。 ビットごとの OR を使用してスタイルを追加または削除を組み合わせることができます ( &#124; ) 演算子。 参照してください、 [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)使用可能なウィンドウのスタイルについては、Windows SDK 内の関数。  
   
  場合*nFlags* 0 以外の場合、 `ModifyStyle` Win32 関数を呼び出す`SetWindowPos`、し、結合することで、ウィンドウを再描画*nFlags*で次の 4 つのフラグ。  
   
@@ -837,7 +837,7 @@ virtual BOOL ModifyStyleEx(
  現在のウィンドウ スタイルを追加する拡張スタイル。  
   
  *nFlags*  
- ウィンドウの配置フラグ。 使用可能な値の一覧は、次を参照してください。、 [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 内の関数。  
+ ウィンドウの配置フラグ。 使用可能な値の一覧は、次を参照してください。、 [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) Windows SDK 内の関数。  
   
 ### <a name="return-value"></a>戻り値  
  スタイルが変更された場合、それ以外の場合 0 0 以外の値。  
@@ -845,7 +845,7 @@ virtual BOOL ModifyStyleEx(
 ### <a name="remarks"></a>Remarks  
  WS_EX_CLIENTEDGE の設定と一致するコントロールのストック外観プロパティが変更されます。 1 つが存在する場合、他のすべての拡張ウィンドウ スタイルがコントロールのウィンドウのハンドルに直接適用されます。  
   
- ウィンドウの拡張コントロールのサイト オブジェクトのスタイルを変更します。 ビットごとの OR を使用してスタイルを追加または削除を組み合わせることができます ( &#124; ) 演算子。 参照してください、 [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)使用可能なウィンドウのスタイルについては、Windows SDK 内の関数。  
+ ウィンドウの拡張コントロールのサイト オブジェクトのスタイルを変更します。 ビットごとの OR を使用してスタイルを追加または削除を組み合わせることができます ( &#124; ) 演算子。 参照してください、 [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)使用可能なウィンドウのスタイルについては、Windows SDK 内の関数。  
   
  場合*nFlags* 0 以外の場合、 `ModifyStyleEx` Win32 関数を呼び出す`SetWindowPos`、し、結合することで、ウィンドウを再描画*nFlags*で次の 4 つのフラグ。  
   
@@ -1051,7 +1051,7 @@ virtual BOOL SetWindowPos(
  ウィンドウの新しい高さ。  
   
  *nFlags*  
- ウィンドウのサイズ変更や配置フラグを指定します。 使用可能な値は、「解説」を参照してください。 [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK に含まれています。  
+ ウィンドウのサイズ変更や配置フラグを指定します。 使用可能な値は、「解説」を参照してください。 [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) Windows SDK に含まれています。  
   
 ### <a name="return-value"></a>戻り値  
  0 以外の場合、成功した場合は 0。  

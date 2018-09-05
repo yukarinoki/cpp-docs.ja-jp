@@ -1,7 +1,7 @@
 ---
-title: DQ |Microsoft ドキュメント
+title: DQ |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d9ba5f5fe944964c365a071cda37f5e7bdc35e1
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: bd13549977edb2b0c80673cc8cb7b6279985b67f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051144"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687487"
 ---
 # <a name="dq"></a>DQ
-割り当て、ごとに 8 バイトの記憶領域を必要に応じて初期化`initializer`です。 型指定子としても使用できる、型が有効な任意の場所。 `DQ` シノニムは、 [QWORD](../../assembler/masm/qword.md)です。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-[[name]] DQ initializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)   
- [QWORD](../../assembler/masm/qword.md)
+
+割り当て、必要に応じて、それぞれの 8 バイトのストレージを初期化します`initializer`します。 また、型指定子として使用できる型が有効な任意の場所。 `DQ` シノニムです[QWORD](../../assembler/masm/qword.md)します。
+
+## <a name="syntax"></a>構文
+
+> [name]DQ 初期化子 [] の初期化子].
+
+## <a name="see-also"></a>関連項目
+
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[QWORD](../../assembler/masm/qword.md)<br/>

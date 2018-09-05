@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7edfe929a742e5ff33e76840fa1abdfd496908e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ebe4b604958220a846ee3a91b1a6251f6f461de9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211555"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693468"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl クラス
 Windows コモン ヘッダー コントロールの機能が用意されています。  
@@ -283,7 +283,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>パラメーター  
  *dwExStyle*  
- 作成されるコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK に含まれています。  
+ 作成されるコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK に含まれています。  
   
  *dwStyle*  
  ヘッダー コントロールのスタイル。 ヘッダー コントロールのスタイルの説明は、次を参照してください。[ヘッダー コントロールのスタイル](/windows/desktop/Controls/header-control-styles)Windows SDK に含まれています。 参照してください[作成](#create)追加スタイルの一覧についてはします。  

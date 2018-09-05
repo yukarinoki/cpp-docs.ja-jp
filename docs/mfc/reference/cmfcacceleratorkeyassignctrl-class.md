@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f42be291628a1d301309adbb48dd13211cd7857
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6adb289759e2050a67f9284e2763c44461c38c0d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210324"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683529"
 ---
 # <a name="cmfcacceleratorkeyassignctrl-class"></a>CMFCAcceleratorKeyAssignCtrl クラス
 `CMFCAcceleratorKeyAssignCtrl`クラスを拡張、 [CEdit クラス](../../mfc/reference/cedit-class.md)alt キーを押し、コントロール、SHIFT などの追加のシステム ボタンをサポートするためにします。  
@@ -59,7 +59,7 @@ class CMFCAcceleratorKeyAssignCtrl : public CEdit
 |[CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel)|`CMFCAcceleratorKeyAssignCtrl` オブジェクトで押されるショートカット キーの `ACCEL` 構造体を取得します。|  
 |[CMFCAcceleratorKeyAssignCtrl::IsFocused](#isfocused)||  
 |[CMFCAcceleratorKeyAssignCtrl::IsKeyDefined](#iskeydefined)|ショートカット キーが定義されているかどうかを判断します。|  
-|[CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage](#pretranslatemessage)|クラスによって使用される[CWinApp](../../mfc/reference/cwinapp-class.md)にディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)と[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 関数。 ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドします)。|  
+|[CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage](#pretranslatemessage)|クラスによって使用される[CWinApp](../../mfc/reference/cwinapp-class.md)にディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数。 ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドします)。|  
 |[CMFCAcceleratorKeyAssignCtrl::ResetKey](#resetkey)|ショートカット キーをリセットします。|  
   
 ## <a name="remarks"></a>Remarks  

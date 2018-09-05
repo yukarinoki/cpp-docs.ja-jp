@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6735cddf401ba09d3743b178357fb740b873c21
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 76167793f7252540dbe9feedbb2d83678ebdcacb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336508"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688387"
 ---
 # <a name="cfieldexchange-class"></a>CFieldExchange クラス
 データベース クラスで使うレコード フィールド エクスチェンジ (RFX) ルーチンとバルク レコード フィールド エクスチェンジ (Bulk RFX) ルーチンをサポートします。  
@@ -68,7 +68,7 @@ class CFieldExchange
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CFieldExchange`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdb.h  
   
 ##  <a name="isfieldtype"></a>  CFieldExchange::IsFieldType  
@@ -117,7 +117,7 @@ void SetFieldType(UINT nFieldType);
 |SetFieldType パラメーターの値|パラメーターのデータ メンバーの型|  
 |----------------------------------|-----------------------------------|  
 |`CFieldExchange::inputParam`|入力パラメーターです。 レコード セットのクエリまたはストアド プロシージャに渡される値。|  
-|' * * ieldExchange::param`ame as **CFieldExchange::inputParam`します。|  
+|`CFieldExchange::param` | 同じ`CFieldExchange::inputParam`します。|  
 |`CFieldExchange::outputParam`|出力パラメーターです。 レコード セットのストアド プロシージャの戻り値。|  
 |`CFieldExchange::inoutParam`|入力/出力パラメーターです。 渡されるされ、レコード セットのストアド プロシージャから返される値。|  
   

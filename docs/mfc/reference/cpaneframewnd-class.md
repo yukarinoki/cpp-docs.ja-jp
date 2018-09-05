@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcc4ec99ea8dc7dfc0706237e274b6b96f437829
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: fe0d8b5b0679e8770bda715d3d0da0eaa3b5cce3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214992"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682857"
 ---
 # <a name="cpaneframewnd-class"></a>CPaneFrameWnd クラス
 詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。  
@@ -210,7 +210,7 @@ class CPaneFrameWnd : public CWnd
 |[CPaneFrameWnd::OnShowPane](#onshowpane)|ミニフレーム ウィンドウ内のペインが非表示になるとき、または表示されるときに、フレームワークによって呼び出されます。|  
 |[CPaneFrameWnd::PaneFromPoint](#panefrompoint)|ユーザーが指定した位置がミニフレーム ウィンドウ内のペインに含まれている場合、そのペインを返します。|  
 |[CPaneFrameWnd::Pin](#pin)||  
-|`CPaneFrameWnd::PreTranslateMessage`|クラスによって使用される[CWinApp](../../mfc/reference/cwinapp-class.md)にディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)と[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 関数。|  
+|`CPaneFrameWnd::PreTranslateMessage`|クラスによって使用される[CWinApp](../../mfc/reference/cwinapp-class.md)にディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数。|  
 |[CPaneFrameWnd::RedrawAll](#redrawall)|すべてのミニフレーム ウィンドウを再描画します。|  
 |[CPaneFrameWnd::RemoveNonValidPanes](#removenonvalidpanes)|有効でないウィンドウを削除するために、フレームワークによって呼び出されます。|  
 |[CPaneFrameWnd::RemovePane](#removepane)|ミニフレーム ウィンドウから、ペインを削除します。|  
@@ -238,7 +238,7 @@ class CPaneFrameWnd : public CWnd
   
 ### <a name="data-members"></a>データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CPaneFrameWnd::m_bUseSaveBits](#m_busesavebits)|CS_SAVEBITS クラスのスタイルを使用して、ウィンドウ クラスを登録するかどうかを指定します。|  
   
@@ -532,7 +532,7 @@ virtual int GetCaptionHeight() const;
  ミニフレーム ウィンドウのピクセル単位の高さ。  
   
 ### <a name="remarks"></a>Remarks  
- ミニフレーム ウィンドウの高さを決定するには、このメソッドを呼び出します。 既定では、高さは SM_CYSMCAPTION に設定されます。 詳細については、次を参照してください。 [GetSystemMetrics 関数](https://msdn.microsoft.com/library/windows/desktop/ms724385)します。  
+ ミニフレーム ウィンドウの高さを決定するには、このメソッドを呼び出します。 既定では、高さは SM_CYSMCAPTION に設定されます。 詳細については、次を参照してください。 [GetSystemMetrics 関数](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics)します。  
   
 ##  <a name="getcaptionrect"></a>  CPaneFrameWnd::GetCaptionRect  
  ミニフレーム ウィンドウのキャプションに外接する四角形を計算します。  

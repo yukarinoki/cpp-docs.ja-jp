@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 47914999a48b4d5924a25ad1688ee83c533398f3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cfdf224ed96484af52a84c270c93df87821a444f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218899"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684600"
 ---
 # <a name="how-to-migrate-to-clr"></a>方法: /clr に移行する
 このトピックでは、ネイティブ コードをコンパイルするときに発生する問題を説明 **/clr** (を参照してください[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)詳細については)。 **/clr** Visual C モジュールを呼び出すし、アンマネージ モジュールとの互換性を維持しながら .NET アセンブリから呼び出すことができます。 参照してください[混在 (ネイティブおよびマネージ) アセンブリ](../dotnet/mixed-native-and-managed-assemblies.md)と[ネイティブと .NET の相互運用性](../dotnet/native-and-dotnet-interoperability.md)を使用してコンパイルの利点の詳細についての **/clr**します。  
@@ -90,7 +90,7 @@ COMObj2->Method(args);  // C++ equivalent
  プロジェクトをコンパイルして Visual Studio 2010 での実行後は、用に新しいプロジェクト構成を作成する必要があります **/clr**既定の構成を変更するのではなく。 **/clr**一部のコンパイラ オプションと互換性がないと、ネイティブまたはマネージとしてプロジェクトをビルドする別の構成を作成することができます。 ときに **/clr**プロパティ ページ ダイアログ ボックスと互換性のないプロジェクトの設定が選択されている **/clr**は無効になります (場合、無効なオプションが自動的に復元されないと **/clr**は後で選択されていません)。  
   
 ### <a name="create-new-project-configurations"></a>新しいプロジェクト構成の作成  
- 使用することができます**設定のコピー元**オプション、[新しいプロジェクト構成 ダイアログ ボックス](https://msdn.microsoft.com/cca616dc-05a6-4fe3-bdc1-40c72a66f2be)既存のプロジェクト設定に基づくプロジェクト構成を作成します。 これを、デバッグ構成に対して 1 回、リリース構成に対して 1 回実行してください。 それ以降の変更を適用できます、 **/clr** -特定の構成のみ、元のプロジェクト設定はそのままです。  
+ 使用することができます**設定のコピー元**オプション、**新しいプロジェクト構成 ダイアログ ボックス**(**ビルド** > **のConfigurationManager** > **アクティブ ソリューション構成** > **新規**)、既存のプロジェクト設定に基づくプロジェクト構成を作成します。 これを、デバッグ構成に対して 1 回、リリース構成に対して 1 回実行してください。 それ以降の変更を適用できます、 **/clr** -特定の構成のみ、元のプロジェクト設定はそのままです。  
   
  カスタム ビルド規則を使用するプロジェクトには、特別な注意が必要な場合があります。  
   

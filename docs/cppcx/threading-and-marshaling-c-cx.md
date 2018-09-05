@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da198a6a807413846fdc5b45552bb74252f8acc2
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4cf37857e12eb795ebfa4c5c115bc80a1688d69e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221370"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677153"
 ---
 # <a name="threading-and-marshaling-ccx"></a>スレッドとマーシャリング (C++/CX)
 ほとんどの場合で、標準の C++ オブジェクトのように、Windows ランタイム クラスのインスタンスを任意のスレッドからアクセスできます。 このようなクラスを "アジャイル" と呼びます。 ただし、Windows に付属する Windows ランタイム クラスの数が少ない非アジャイルは、標準の C++ オブジェクトよりも、COM オブジェクトと同様により使用する必要があります。 非アジャイル クラスを使用するために COM の専門家になる必要はありませんが、クラスのスレッド モデルとマーシャリング動作を考慮する必要があります。 この技術情報では、非アジャイル クラスのインスタンスを使用する必要があるまれなシナリオの背景について説明し、ガイダンスを示します。  
@@ -100,7 +100,7 @@ ref class MyOptions
  Visual C でを"None"のマーシャ リング動作を持つ、インプロセス Windows ランタイム クラスへの参照を作成するときに、コンパイラ警告 c4451 を発行が使用を検討することは勧めません`Platform::Agile<T>`します。  コンパイラは、この警告を超えるヘルプを提供できます。従って、クラスを正しく使用して、コードがユーザー インターフェイス スレッドからのみ STA コンポーネントを呼び出すこと、およびバックグラウンド スレッドからのみ MTA コンポーネントを呼び出すことを確認するのはユーザーの責任になります。  
   
 ## <a name="authoring-agile-windows-runtime-components"></a>アジャイルの Windows ランタイム コンポーネントの作成  
- C + の ref クラスを定義する/cli CX は既定でアジャイル: が 1 は、その`ThreadingModel`= Both と`MarshallingType`アジャイルを = です。  Windows ランタイム C++ テンプレート ライブラリを使用している場合は、行うことができます、クラス アジャイルから派生することによって`FtmBase`、使用、`FreeThreadedMarshaller`します。  `ThreadingModel`=Both または `ThreadingModel`=MTA が指定されたクラスを作成する場合、クラスがスレッドセーフであることを確認します。 詳細については、次を参照してください。[消費オブジェクト (WRL) の作成と](https://msdn.microsoft.com/d5e42216-e888-4f1f-865a-b5ccd0def73e)します。  
+ C + の ref クラスを定義する/cli CX は既定でアジャイル: が 1 は、その`ThreadingModel`= Both と`MarshallingType`アジャイルを = です。  Windows ランタイム C++ テンプレート ライブラリを使用している場合は、行うことができます、クラス アジャイルから派生することによって`FtmBase`、使用、`FreeThreadedMarshaller`します。  `ThreadingModel`=Both または `ThreadingModel`=MTA が指定されたクラスを作成する場合、クラスがスレッドセーフであることを確認します。   
   
  ref クラスのスレッド モデルとマーシャリングの動作を変更できます。 ただし、クラスを非アジャイルにする変更を加えた場合は、その変更に関連付けられた影響を理解する必要があります。  
   

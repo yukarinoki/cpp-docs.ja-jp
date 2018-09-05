@@ -29,15 +29,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a448d76236c3467228b2aa57cd71284274687ac
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b6f3f28bbc2a69a5ad5c4fe9910d8312b236c34f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200432"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686499"
 ---
 # <a name="tree-control-styles"></a>ツリー コントロールのスタイル
-ツリー コントロール ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) のスタイルは、ツリー コントロールの外観の側面を制御します。 ツリー コントロールを作成するときに、初期のスタイルを設定します。 取得しを使用してツリーのコントロールを作成した後、スタイルを変更することができます、 [GetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633584)と[SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) Windows 関数を指定する**GWL_STYLE**の*nIndex*パラメーター。 スタイルの完全な一覧を参照してください。[ツリー ビュー コントロールのウィンドウ スタイル](/windows/desktop/Controls/tree-view-control-window-styles)Windows SDK に含まれています。  
+ツリー コントロール ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) のスタイルは、ツリー コントロールの外観の側面を制御します。 ツリー コントロールを作成するときに、初期のスタイルを設定します。 取得しを使用してツリーのコントロールを作成した後、スタイルを変更することができます、 [GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga)と[SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) Windows 関数を指定する**GWL_STYLE**の*nIndex*パラメーター。 スタイルの完全な一覧を参照してください。[ツリー ビュー コントロールのウィンドウ スタイル](/windows/desktop/Controls/tree-view-control-window-styles)Windows SDK に含まれています。  
   
  **線でつなぐ**スタイルは、対応する親項目に子項目をリンクしている線を描画でツリー コントロールの階層のグラフィック表現を強化します。 このスタイルは、階層のルートにある項目をリンクしていません。 これを行うには、結合する必要があります、**線でつなぐ**と**ルート項目**スタイル。  
   

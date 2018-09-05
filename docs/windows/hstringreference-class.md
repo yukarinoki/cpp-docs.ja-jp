@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4e3f7d59dd86aa15833134223854eb9ed01f6679
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b80ae92671b2ee78cd2f48e9a35958c89232e4e5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216576"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683042"
 ---
 # <a name="hstringreference-class"></a>HStringReference クラス
 
@@ -34,7 +34,7 @@ class HStringReference;
 
 ## <a name="remarks"></a>Remarks
 
-新しい HSTRING のバッキング バッファーの有効期間は、Windows ランタイムで管理されていません。 呼び出し元はソース文字列をスタック フレームに割り当てることで、ヒープ割り当てを回避し、メモリ リークのリスクを排除します。 また、呼び出し元はアタッチ済みの HSTRING の有効期間中にソース文字列が変更されないことを確認する必要があります。 詳細については、次を参照してください。 [WindowsCreateStringReference 関数](https://msdn.microsoft.com/0361bb7e-da49-4289-a93e-de7aab8712ac)します。
+新しい HSTRING のバッキング バッファーの有効期間は、Windows ランタイムで管理されていません。 呼び出し元はソース文字列をスタック フレームに割り当てることで、ヒープ割り当てを回避し、メモリ リークのリスクを排除します。 また、呼び出し元はアタッチ済みの HSTRING の有効期間中にソース文字列が変更されないことを確認する必要があります。 詳細については、次を参照してください。 [WindowsCreateStringReference 関数](/windows/desktop/api/winstring/nf-winstring-windowscreatestringreference)します。
 
 ## <a name="members"></a>メンバー
 

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae151d25af5ad1c77f2dcfc7af1902e562ffde51
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 40c8404ad2f2ab56849bed22a15bd10805888d3c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208309"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690691"
 ---
 # <a name="cwintraits-class"></a>CWinTraits クラス
 このクラスは、ウィンドウ オブジェクトを作成するときに使用するスタイルを標準化するためのメソッドを提供します。  
@@ -108,6 +108,5 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
  オブジェクトの拡張ウィンドウ スタイル。  
   
 ## <a name="see-also"></a>関連項目  
- [クラス メンバー](https://msdn.microsoft.com/dbe6a147-3f01-4aea-a3fb-fe6ebadc31f8)   
  [クラスの概要](../../atl/atl-class-overview.md)   
  [ウィンドウの特徴を理解する](../../atl/understanding-window-traits.md)

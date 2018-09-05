@@ -1,7 +1,7 @@
 ---
-title: .MMX |Microsoft ドキュメント
+title: .MMX |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c769b138b722445bccc41315dc2e2d27c74b8fad
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 25e413dba3dac1978ee567ccd0649b6b714f3ce6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050351"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688625"
 ---
 # <a name="mmx"></a>.MMX
-MMX または単一命令複数データ (SIMD) 命令のアセンブリを有効にします。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-.MMX  
-  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+
+MMX または単一の命令、複数のデータ (SIMD) 指示のアセンブリを有効にします。
+
+## <a name="syntax"></a>構文
+
+> .MMX
+
+## <a name="see-also"></a>関連項目
+
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>

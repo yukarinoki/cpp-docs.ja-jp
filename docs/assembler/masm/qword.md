@@ -1,7 +1,7 @@
 ---
-title: QWORD |Microsoft ドキュメント
+title: QWORD |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9888a6d7d918df1c9a5d83a28fca002d2ab59cf4
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: b55691b9e91b8534b530059e95d856c11be7ea0c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052913"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682011"
 ---
 # <a name="qword"></a>QWORD
-割り当て、ごとに 8 バイトの記憶領域を必要に応じて初期化`initializer`です。 型指定子としても使用できる、型が有効な任意の場所。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-[[name]] QWORD initializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)   
- [SQWORD](../../assembler/masm/qword.md)   
- [DQ](../../assembler/masm/dq.md)
+
+割り当て、必要に応じて、それぞれの 8 バイトのストレージを初期化します`initializer`します。 また、型指定子として使用できる型が有効な任意の場所。
+
+## <a name="syntax"></a>構文
+
+> [name]QWORD の初期化子 [] の初期化子].
+
+## <a name="see-also"></a>関連項目
+
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[SQWORD](../../assembler/masm/qword.md)<br/>
+[DQ](../../assembler/masm/dq.md)<br/>

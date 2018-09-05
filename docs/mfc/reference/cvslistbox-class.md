@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 453eb66fd062aa3e4df510925d2c9b0e6732b98b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 946c82d4f558974d548a40af0b14e63f7ccebf4e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212400"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680581"
 ---
 # <a name="cvslistbox-class"></a>CVSListBox クラス
 `CVSListBox`クラスが編集可能なリスト コントロールをサポートします。  
@@ -73,7 +73,7 @@ class CVSListBox : public CVSListBoxBase
 |[CVSListBox::GetItemData](#getitemdata)|編集可能なリスト コントロール項目に関連付けられているアプリケーションに固有の 32 ビット値を取得します。 (`CVSListBoxBase::GetItemData` をオーバーライドします)。|  
 |[CVSListBox::GetItemText](#getitemtext)|編集可能なリスト コントロール項目のテキストを取得します。 (`CVSListBoxBase::GetItemText` をオーバーライドします)。|  
 |[CVSListBox::GetSelItem](#getselitem)|編集可能なリスト コントロールで現在選択されている項目の 0 から始まるインデックスを取得します。 (`CVSListBoxBase::GetSelItem` をオーバーライドします)。|  
-|`CVSListBox::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)と[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 関数。 詳細とメソッド構文は、次を参照してください。 [cwnd::pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)します。 (`CVSListBoxBase::PreTranslateMessage` をオーバーライドします)。|  
+|`CVSListBox::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数。 詳細とメソッド構文は、次を参照してください。 [cwnd::pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)します。 (`CVSListBoxBase::PreTranslateMessage` をオーバーライドします)。|  
 |[CVSListBox::RemoveItem](#removeitem)|編集可能なリスト コントロールから項目を削除します。 (`CVSListBoxBase::RemoveItem` をオーバーライドします)。|  
 |[CVSListBox::SelectItem](#selectitem)|編集可能なリスト文字列を選択します。 (`CVSListBoxBase::SelectItem` をオーバーライドします)。|  
 |[CVSListBox::SetItemData](#setitemdata)|アプリケーション固有の 32 ビット値を編集可能なリスト コントロール項目に関連付けます。 (`CVSListBoxBase::SetItemData` をオーバーライドします)。|  

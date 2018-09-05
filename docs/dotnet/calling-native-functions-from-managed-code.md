@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a220f0dc2c979676ad2e28fd504ef80e0925f74d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3ef47e3aeb8cfb18dd1eb6497c593d8cec26081b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195689"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678451"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>マネージド コードからのネイティブ関数の呼び出し
 共通言語ランタイムにはプラットフォーム呼び出しサービス (PInvoke: Platform Invocation Services) が用意されており、マネージド コードでネイティブなダイナミック リンク ライブラリ (DLL : Dynamic Link Library) の C スタイルの関数を呼び出すことができます。 COM とランタイムの相互運用と、"It Just Works (そのままで動く)" つまり IJW 機構のどちらにも、同じデータ マーシャリングが使用されています。  
@@ -35,8 +35,6 @@ ms.locfileid: "43195689"
 -   [C++ での明示的な PInvoke (DllImport 属性) の使用方法](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)  
   
 -   [C++ Interop (暗黙の PInvoke) の使用](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
-  
--   [プラットフォーム呼び出しの詳細](https://msdn.microsoft.com/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
   
  このセクションのサンプルで、`PInvoke` の使い方を示します。 `PInvoke` を使用すると、マーシャリング情報を手続き的なコードで書く代わりに属性として宣言できるため、データ マーシャリングを簡単にカスタマイズできます。  
   

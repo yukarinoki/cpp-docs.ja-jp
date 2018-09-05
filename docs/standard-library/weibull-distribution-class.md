@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b651f4117cae6d3b4ed72d22ace5194e5d24446
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4f6a71770afdb541efa76f85464d9aeef7b2fb91
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957673"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681009"
 ---
 # <a name="weibulldistribution-class"></a>weibull_distribution クラス
 
@@ -103,7 +103,7 @@ class weibull_distribution
 
 分布クラスとそのメンバーの詳細については、[\<random>](../standard-library/random.md) をご覧ください。
 
-Weibull 分布の詳細については、Wolfram MathWorld の記事「[Weibull Distribution (Weibull 分布)](http://go.microsoft.com/fwlink/p/?linkid=401115)」を参照してください。
+Weibull 分布の詳細については、Wolfram MathWorld の記事「[Weibull Distribution (Weibull 分布)](http://mathworld.wolfram.com/WeibullDistribution.html)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -217,7 +217,7 @@ Distribution for 10 samples:
     10: 24.7220241239
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<random>
 

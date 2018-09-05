@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0912b7a1ff41bf7a21da198268dbd4b8dc920a9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: d8c59ad4af53a38ee28450e51adf9cdf81ec7bad
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539526"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687286"
 ---
 # <a name="svmskinit"></a>__svm_skinit
 **Microsoft 固有の仕様**  
@@ -48,7 +48,7 @@ void __svm_skinit(
   
  `SLB`パラメーターと呼ばれるメモリ 64 K のブロックの物理アドレスを指定、*ローダーのブロックをセキュリティで保護された*(SLB)。 SLB には、コンピューターのオペレーティング環境を確立し、その後セキュリティ カーネルが読み込まれますが、セキュリティで保護されたローダーのというプログラムが含まれています。  
   
- この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、検索、ドキュメントでは、"AMD64 アーキテクチャ プログラマーズ手動ボリューム 2: システム プログラミングでは、"ドキュメント番号 24593、3.11、リビジョン、 [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746)サイト。  
+ この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、検索、ドキュメントでは、"AMD64 アーキテクチャ プログラマーズ手動ボリューム 2: システム プログラミングでは、"ドキュメント番号 24593、3.11、リビジョン、 [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)サイト。  
   
 ## <a name="requirements"></a>要件  
   

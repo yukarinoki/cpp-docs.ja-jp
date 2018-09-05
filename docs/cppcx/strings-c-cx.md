@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1c75c8821a04c0270a79800e77cd4b57bf49c00
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e427d6469df3a3b82f25a26a0f9ce70642b8514c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202349"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679553"
 ---
 # <a name="strings-ccx"></a>文字列 (C++/CX)
 C++ Windows ランタイム内のテキストが表される/cli によって CX、 [platform::string Class](../cppcx/platform-string-class.md)します。 使用して、 `Platform::String Class` Windows ランタイム クラス、メソッドに文字列を前後へ渡すとき、またはアプリケーション バイナリ インターフェイス (ABI) の境界を越えて他の Windows ランタイム コンポーネントと対話します。 `Platform::String Class` は、いくつかの一般的な文字列操作のメソッドを提供しますが、すべての機能を備えた文字列クラスとしては設計されていません。 C++ モジュールでは、重要なテキスト処理のために [wstring](../standard-library/basic-string-class.md) などの標準 C++ 文字列型を使用し、パブリック インターフェイスとの間でやり取りする前に、最終結果を [Platform::String^](../cppcx/platform-string-class.md) に変換します。 `wstring` または `wchar_t*` と `Platform::String`の間で変換することは簡単かつ効率的です。  
@@ -75,5 +75,3 @@ void GetDecodedStrings(std::vector<std::wstring> strings)
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [組み込み型](https://msdn.microsoft.com/acc196fd-09da-4882-b554-6c94685ec75f)

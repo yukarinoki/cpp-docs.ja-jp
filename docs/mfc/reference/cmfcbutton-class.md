@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8385320b51efedd214424385babc5f03d5559873
-ms.sourcegitcommit: 220fd4fda829f810e15fc1a1d98ab43c46201b47
+ms.openlocfilehash: 23b830ca8a7fb7f2e799cae17209a9fa089d1881
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43352717"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690876"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton クラス
 `CMFCButton`クラスに機能を追加する、 [CButton](../../mfc/reference/cbutton-class.md)ボタン テキストの配置、ボタンのテキストとイメージの組み合わせ、カーソルの選択、ツール ヒントの指定などのクラス。  
@@ -137,7 +137,7 @@ class CMFCButton : public CButton
 |[CMFCButton::IsRadioButton](#isradiobutton)|ボタンがラジオ ボタンであるかどうかを示します。|  
 |[CMFCButton::IsWindowsThemingEnabled](#iswindowsthemingenabled)|ボタンの境界線のスタイルを現在の Windows テーマに対応するかどうかを示します。|  
 |`CMFCButton::OnDrawParentBackground`|指定された領域では、ボタンの親の背景を描画します。 (上書き[AFX_GLOBAL_DATA::DrawParentBackground](../../mfc/reference/afx-global-data-structure.md)|  
-|`CMFCButton::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)と[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 関数。 ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドします)。|  
+|`CMFCButton::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数。 ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドします)。|  
 |[CMFCButton::SetAutorepeatMode](#setautorepeatmode)|ボタンを自動繰り返しモードに設定します。|  
 |[CMFCButton::SetCheckedImage](#setcheckedimage)|チェックされているボタンのイメージを設定します。|  
 |[CMFCButton::SetFaceColor](#setfacecolor)|ボタンのテキストの背景色を設定します。|  
@@ -163,7 +163,7 @@ class CMFCButton : public CButton
   
 ### <a name="data-members"></a>データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CMFCButton::m_nAlignStyle](#m_nalignstyle)|ボタンのテキストの配置を指定します。|  
 |[CMFCButton::m_bDontUseWinXPTheme](#m_bDontUseWinXPTheme)|Windows XP テーマを使用するかどうかを指定します。|

@@ -1,7 +1,7 @@
 ---
-title: THIS 演算子 |Microsoft ドキュメント
+title: THIS 演算子 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37304563b1a986b81eec05778c420a002e75fa9f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: ae20d8f2abc7740d1716155f626c6a69316ca3fd
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057124"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692574"
 ---
 # <a name="operator-this"></a>THIS 演算子
-オペランドで指定したを返します`type`オフセットとセグメントの値を持つが、現在の場所カウンターの値に等しい。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-THIS type  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [演算子リファレンス](../../assembler/masm/operators-reference.md)
+
+オペランドで指定された返します`type`オフセットとセグメントの値を持つが、現在の場所のカウンター値に等しい。
+
+## <a name="syntax"></a>構文
+
+> この型
+
+## <a name="see-also"></a>関連項目
+
+[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>

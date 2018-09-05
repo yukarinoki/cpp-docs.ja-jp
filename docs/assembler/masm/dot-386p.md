@@ -1,7 +1,7 @@
 ---
-title: .386P |Microsoft ドキュメント
+title: .386P |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 876d52e60e645a086d02fb12064a328aea4b9e97
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: d5b70033b7ee04a17c0e6966de5b531694a5ed83
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049718"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691523"
 ---
 # <a name="386p"></a>.386P
-アセンブリの 80386 プロセッサのすべての手順 (特権も含む)以降のプロセッサで導入された命令のアセンブリを無効にします。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-.386P  
-  
-```  
-  
-## <a name="remarks"></a>コメント  
- 80387 指示こともできます。  
-  
-## <a name="see-also"></a>関連項目  
- [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+
+アセンブリの 80386 プロセッサのすべての命令 (特権を含む)以降のプロセッサで導入された命令のアセンブリを無効にします。
+
+## <a name="syntax"></a>構文
+
+> .386P
+
+## <a name="remarks"></a>Remarks
+
+手順については 80387 こともできます。
+
+## <a name="see-also"></a>関連項目
+
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>

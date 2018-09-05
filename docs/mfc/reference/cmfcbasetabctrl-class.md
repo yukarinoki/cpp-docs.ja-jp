@@ -248,12 +248,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 212637b55a422c11d82ae6ad9f548d9e429c41dd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: dbd12c98014e2adfe9617f0bdaac891f33ebc600
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198569"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693927"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 タブ付きウィンドウの基本的な機能を実装します。  
@@ -357,7 +357,7 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::OnDragOver](#ondragover)||  
 |[CMFCBaseTabCtrl::OnDrop](#ondrop)||  
 |[CMFCBaseTabCtrl::OnRenameTab](#onrenametab)||  
-|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|クラスによって使用される[CWinApp](../../mfc/reference/cwinapp-class.md)にディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)と[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 関数。 ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドします)。|  
+|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|クラスによって使用される[CWinApp](../../mfc/reference/cwinapp-class.md)にディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数。 ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドします)。|  
 |[CMFCBaseTabCtrl::RecalcLayout](#recalclayout)|タブ付きウィンドウの内部レイアウトを再計算します。|  
 |[CMFCBaseTabCtrl::RemoveAllTabs](#removealltabs)|タブ付きウィンドウからタブをすべて削除します。|  
 |[CMFCBaseTabCtrl::RemoveTab](#removetab)|タブ付きウィンドウからタブを 1 つ削除します。|  
@@ -393,7 +393,7 @@ class CMFCBaseTabCtrl : public CWnd
   
 ### <a name="data-members"></a>データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CMFCBaseTabCtrl::m_bActivateTabOnRightClick](#m_bactivatetabonrightclick)|タブを選択する場合にマウスの左クリックを使用するのか右クリックを使用するのかを指定します。|  
 |[CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow)|タブに含まれているウィンドウを自動的に破棄するかどうかを指定します。|  
@@ -1844,7 +1844,7 @@ virtual void SetActiveTabColor(COLORREF clr);
  新しい背景色を指定します。  
   
 ### <a name="remarks"></a>Remarks  
- フレームワークからのアクティブなタブの既定の背景色を取得する、 [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)メソッド。  
+ フレームワークからのアクティブなタブの既定の背景色を取得する、 [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)メソッド。  
   
 ##  <a name="setactivetabtextcolor"></a>  CMFCBaseTabCtrl::SetActiveTabTextColor  
  アクティブなタブのテキストの色を設定します。  
@@ -1858,7 +1858,7 @@ virtual void SetActiveTabTextColor(COLORREF clr);
  A [COLORREF](/windows/desktop/gdi/colorref)を新しいテキストの色を指定します。  
   
 ### <a name="remarks"></a>Remarks  
- 既定では、フレームワークがからテキストの色を取得[GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)します。 この既定の色を上書きを使用して、`SetActiveTabTextColor`メソッド。  
+ 既定では、フレームワークがからテキストの色を取得[GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)します。 この既定の色を上書きを使用して、`SetActiveTabTextColor`メソッド。  
   
 ##  <a name="setautocolors"></a>  CMFCBaseTabCtrl::SetAutoColors  
  色の自動モードでは、フレームワークを使用するタブ コントロールの色を設定します。  

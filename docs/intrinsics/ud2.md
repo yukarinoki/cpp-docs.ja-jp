@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eeb63aa411278c2ca6b2217d9243331b57cd7624
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3ac4213587137552fa51505b73edd7387a98c5cb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541430"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687554"
 ---
 # <a name="ud2"></a>__ud2
 **Microsoft 固有の仕様**  
@@ -38,7 +38,7 @@ void __ud2();
 ## <a name="remarks"></a>Remarks  
  プロセッサでは、未定義の命令を実行する場合に無効な opcode 例外が発生します。  
   
- `__ud2`関数は、`UD2`マシン語命令、およびカーネル モードでのみ使用できます。 詳細については、ドキュメントの検索"Intel アーキテクチャ ソフトウェア デベロッパーズ マニュアル、ボリューム 2: 命令セットの参照"で、 [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)サイト。  
+ `__ud2`関数は、`UD2`マシン語命令、およびカーネル モードでのみ使用できます。 詳細については、ドキュメントの検索"Intel アーキテクチャ ソフトウェア デベロッパーズ マニュアル、ボリューム 2: 命令セットの参照"で、 [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm)サイト。  
   
 ## <a name="requirements"></a>要件  
   

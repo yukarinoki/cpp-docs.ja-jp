@@ -1,7 +1,7 @@
 ---
-title: ML の致命的でないエラー A2006 |Microsoft ドキュメント
+title: ML の致命的でないエラー A2006 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31d2f7df00d1c0658ee8301fbde1efe2522b52fc
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: f287c6ab46c6af71ba6dc0032f332ce3cc489454
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054856"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677406"
 ---
 # <a name="ml-nonfatal-error-a2006"></a>ML の致命的でないエラー A2006
-**未定義のシンボル: 識別子**  
-  
- 定義されていないシンボルを使用しようとしています。  
-  
- 次のいずれかが発生した可能性があります。  
-  
--   シンボルが定義されていません。  
-  
--   フィールドは、指定された構造体のメンバーをでした。  
-  
--   含まれていないインクルード ファイルでシンボルが定義されました。  
-  
--   外部シンボルを使用していない、 [EXTERN](../../assembler/masm/extern-masm.md)または[EXTERNDEF](../../assembler/masm/externdef.md)ディレクティブです。  
-  
--   シンボル名のスペルが間違っているされました。  
-  
--   ローカル コード ラベルは、そのスコープの外部で参照されました。  
-  
-## <a name="see-also"></a>関連項目  
- [ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)
+
+**未定義のシンボル: 識別子**
+
+定義されていないシンボルの使用が試行されました。
+
+次のいずれかが発生した可能性があります。
+
+- シンボルが定義されていません。
+
+- フィールドの指定された構造体のメンバーでした。
+
+- シンボルは含まれていなかったインクルード ファイルで定義されました。
+
+- 外部シンボルを使用していない、 [EXTERN](../../assembler/masm/extern-masm.md)または[EXTERNDEF](../../assembler/masm/externdef.md)ディレクティブ。
+
+- シンボル名が間違っています。
+
+- ローカル コード ラベルは、そのスコープの外部で参照されました。
+
+## <a name="see-also"></a>関連項目
+
+[ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)<br/>

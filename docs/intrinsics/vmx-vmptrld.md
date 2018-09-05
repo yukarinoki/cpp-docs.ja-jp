@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f12ff4f0f109ac97f9e9e2e4f8d800455159a10b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: fd04350df17b6d2dfed65526d0f7681c314f07f8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538525"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682621"
 ---
 # <a name="vmxvmptrld"></a>__vmx_vmptrld
 **Microsoft 固有の仕様**  
@@ -54,7 +54,7 @@ int __vmx_vmptrld(
 ## <a name="remarks"></a>Remarks  
  VMCS ポインターは、64 ビットの物理アドレスです。  
   
- `__vmx_vmptrld`関数は、`VMPTRLD`マシン語命令。 この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、検索、ドキュメント、「Intel 仮想化技術仕様 ia-32 Intel アーキテクチャ向け、」で番号 C97063-002、文書化、 [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)サイト。  
+ `__vmx_vmptrld`関数は、`VMPTRLD`マシン語命令。 この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、検索、ドキュメント、「Intel 仮想化技術仕様 ia-32 Intel アーキテクチャ向け、」で番号 C97063-002、文書化、 [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm)サイト。  
   
 ## <a name="requirements"></a>要件  
   

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b41646dbde21f68c2cc23dfbcf977d9f5ad06c1e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: ce106727fac6b3b9903a53fae64bee94441aa038
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467840"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685077"
 ---
 # <a name="safebuffers"></a>safebuffers
 **Microsoft 固有の仕様**  
@@ -36,7 +36,7 @@ __declspec( safebuffers )
 ```  
   
 ## <a name="remarks"></a>Remarks  
- **/GS**コンパイラ オプションによって、コンパイラは、スタック上でセキュリティ チェックを挿入してバッファー オーバーランをテストします。 セキュリティ チェックの対象となるデータ構造体の型が記載されて[/GS (バッファー セキュリティ チェック)](../build/reference/gs-buffer-security-check.md)します。 バッファー オーバーランの検出の詳細については、次を参照してください。[コンパイラ セキュリティの徹底](http://go.microsoft.com/fwlink/p/?linkid=7260)MSDN Web サイト。  
+ **/GS**コンパイラ オプションによって、コンパイラは、スタック上でセキュリティ チェックを挿入してバッファー オーバーランをテストします。 セキュリティ チェックの対象となるデータ構造体の型が記載されて[/GS (バッファー セキュリティ チェック)](../build/reference/gs-buffer-security-check.md)します。 バッファー オーバーランの検出の詳細については、次を参照してください。 [MSVC のセキュリティ機能](https://blogs.msdn.microsoft.com/vcblog/2017/06/28/security-features-in-microsoft-visual-c/)します。  
   
  専門家による手動コード レビューまたは外部解析によって、関数がバッファー オーバーランしないと判断される場合もあります。 その場合は、適用することで、関数のセキュリティ チェックを抑制できます、 **__declspec(safebuffers)** 関数の宣言キーワード。  
   

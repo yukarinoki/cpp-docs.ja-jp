@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 422326f03674c541c4fdc45529bee45bf0ff5df6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a167b228b054a24a812ce5099f396521adda0d08
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201005"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690422"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl クラス
 Windows コモン SysLink コントロールの機能が用意されています。  
@@ -189,7 +189,7 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
  表示するテキストをマークされた項目を含む 0 で終わる文字列へのポインター。 詳細については、」のセクション「マークアップとリンク アクセス」を参照してください。 [SysLink コントロールの概要](/windows/desktop/Controls/syslink-overview)します。  
   
  *dwExStyle*  
- リンク コントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK に含まれています。  
+ リンク コントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK に含まれています。  
   
  *dwStyle*  
  リンク コントロールのスタイルを指定します。 コントロールのスタイルの任意の組み合わせを適用します。 詳細については、次を参照してください。[コモン コントロール スタイル](/windows/desktop/Controls/common-control-styles)Windows SDK に含まれています。  

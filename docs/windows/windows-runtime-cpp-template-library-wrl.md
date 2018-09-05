@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b40576e1b5613bfda19987167e7e43353e6b5802
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3c758226935151bd11faec12aed459aeb2606ca9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211705"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684825"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows ランタイム C++ テンプレート ライブラリ (WRL)
 
@@ -157,5 +157,5 @@ Windows ランタイム C++ テンプレート ライブラリは、いくつか
 |-|-|
 |[カテゴリ別の主要な Api](../windows/key-wrl-apis-by-category.md)|主要な Windows ランタイム C++ テンプレート ライブラリの型、関数、およびマクロを強調表示されます。|
 |[参照](../windows/wrl-reference.md)|Windows ランタイム C++ テンプレート ライブラリに関するリファレンス情報が含まれています。|
-|[クイック リファレンス (Windows ランタイムと Visual C)](http://go.microsoft.com/fwlink/p/?linkid=229180)|簡単に説明する c++/cli CX 機能、Windows ランタイムをサポートします。|
-|[Visual C での Windows ランタイム コンポーネントを使用します。](http://go.microsoft.com/fwlink/p/?linkid=229155)|C + を使用する方法を示します/cli CX 基本 Windows ランタイム コンポーネントを作成します。|
+|[クイック リファレンス (Windows ランタイムと Visual C)](../cppcx/quick-reference-c-cx.md)|簡単に説明する c++/cli CX 機能、Windows ランタイムをサポートします。|
+|[Visual C での Windows ランタイム コンポーネントを使用します。](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|C + を使用する方法を示します/cli CX 基本 Windows ランタイム コンポーネントを作成します。|

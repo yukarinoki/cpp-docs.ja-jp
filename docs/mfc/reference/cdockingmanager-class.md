@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e61b6a9b967cc62bf8ba028783a019b8ecda7878
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 08b8aa623f79c32303a0d5fb84c9b865bff918d9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200271"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683578"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager クラス
 メイン フレーム ウィンドウのドッキング レイアウトを制御するコア機能を実装します。  
@@ -267,7 +267,7 @@ class CDockingManager : public CObject
   
 ### <a name="data-members"></a>データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CDockingManager::m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode)|OLE コンテナー モードのペインがドッキング マネージャーに非表示にするかどうかを指定します。|  
 |[CDockingManager::m_dockModeGlobal](#m_dockmodeglobal)|グローバルのドッキングのモードを指定します。|  
@@ -924,7 +924,7 @@ CSmartDockingManager* GetSmartDockingManager();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ポインター、[スマート ドッキング マネージャー](https://msdn.microsoft.com/f537a1a6-fb9e-41d7-952f-0f25d5ee7534)します。  
+ スマート ドッキング マネージャーへのポインター。  
   
 ##  <a name="getsmartdockingmanagerpermanent"></a>  CDockingManager::GetSmartDockingManagerPermanent  
  スマート ドッキング マネージャーへのポインターを取得します。  

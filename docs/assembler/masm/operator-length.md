@@ -1,7 +1,7 @@
 ---
-title: LENGTH 演算子 |Microsoft ドキュメント
+title: 演算子 LENGTH |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e4f94859bd42e47595110817604288030015862
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 24f20c13e07d1e06de0a8fbd196a95c5f373bef9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057173"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682690"
 ---
 # <a name="operator-length"></a>LENGTH 演算子
-内のデータ項目の数を返します*変数*最初の初期化子で作成します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-LENGTH variable  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [演算子リファレンス](../../assembler/masm/operators-reference.md)
+
+内のデータ項目の数を返します*変数*first の初期化子を作成します。
+
+## <a name="syntax"></a>構文
+
+> 変数な長さ
+
+## <a name="see-also"></a>関連項目
+
+[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>

@@ -122,12 +122,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4779b832eaff7a322184adf1734f69d266c05331
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3b103e2409da08dc67a55aae8ba8c5f49f377434
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219110"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677692"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx クラス
 `CMDIChildWndEx`マルチ ドキュメント インターフェイス (MDI) 子ウィンドウに、Windows の機能を提供するクラス。 機能を拡張[CMDIChildWnd クラス](../../mfc/reference/cmdichildwnd-class.md)します。 ある特定の MFC クラスを MDI アプリケーションで使用するときは、フレームワークにこのクラスが必要です。  
@@ -192,7 +192,7 @@ class CMDIChildWndEx : public CMDIChildWnd
 |[CMDIChildWndEx::OnTaskbarTabThumbnailStretch](#ontaskbartabthumbnailstretch)|MDI 子フォームの Windows 7 タスク バー タブの縮小表示プレビューのビットマップを拡大する必要があるときに、フレームワークによって呼び出されます。|  
 |[CMDIChildWndEx::OnUpdateFrameTitle](#onupdateframetitle)|フレームのタイトルを更新するためにフレームワークによって呼び出されます。 (`CMDIChildWnd::OnUpdateFrameTitle` をオーバーライドします)。|  
 |[CMDIChildWndEx::PaneFromPoint](#panefrompoint)|指定したポイントを含むペインを返します。|  
-|`CMDIChildWndEx::PreTranslateMessage`|クラスによって使用される[CWinApp](../../mfc/reference/cwinapp-class.md)にディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)と[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 関数。 ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドします)。|  
+|`CMDIChildWndEx::PreTranslateMessage`|クラスによって使用される[CWinApp](../../mfc/reference/cwinapp-class.md)にディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数。 ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドします)。|  
 |[CMDIChildWndEx::RecalcLayout](#recalclayout)|ウィンドウのレイアウトを再計算します。|  
 |[CMDIChildWndEx::RegisterTaskbarTab](#registertaskbartab)|Windows 7 タスク バーのタブ付き MDI 子フォームを登録します。|  
 |[CMDIChildWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|ドッキング マネージャーから、ウィンドウを削除します。|  

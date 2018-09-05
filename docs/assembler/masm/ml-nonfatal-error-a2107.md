@@ -1,7 +1,7 @@
 ---
-title: ML の致命的でないエラー A2107 |Microsoft ドキュメント
+title: ML の致命的でないエラー A2107 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b0aa38e50c9cd1756865c1369357980a497edf7
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 0c121f45a2d5074d985ff3f81f3e8289d6e4d757
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053962"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683605"
 ---
 # <a name="ml-nonfatal-error-a2107"></a>ML の致命的でないエラー A2107
-**暗黙の相手側ジャンプまたはラベルの近くに呼び出すことはできません。**  
-  
- 遠くに移動または別のセグメントの near ラベルへの呼び出しを暗黙的に作成しようとしました。  
-  
-## <a name="see-also"></a>関連項目  
- [ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)
+
+**暗黙の相手側ジャンプまたはラベルの近くへの呼び出しを含めることはできません。**
+
+暗黙まで移動または別のセグメントでほぼラベルへの呼び出しが試行されました。
+
+## <a name="see-also"></a>関連項目
+
+[ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)<br/>

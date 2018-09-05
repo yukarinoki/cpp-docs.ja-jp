@@ -1,7 +1,7 @@
 ---
-title: ML の致命的なエラー A1008 |Microsoft ドキュメント
+title: ML の致命的なエラー A1008 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6b312e03740059866bfbf447f962538c499eb46
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 5ec709823856e17c90d4af2a06262b30c966f39c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053814"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691939"
 ---
 # <a name="ml-fatal-error-a1008"></a>ML の致命的なエラー A1008
-**一致しないマクロの入れ子**  
-  
- ファイルまたは終端ディレクティブが終わる前にマクロが終了しなかった[ENDM](../../assembler/masm/endm.md)マクロ ブロックの外側で見つかりました。  
-  
- このエラーの原因の 1 つは前にドットの省略[です。繰り返し](../../assembler/masm/dot-repeat.md)または[です。中に](../../assembler/masm/dot-while.md)です。  
-  
-## <a name="see-also"></a>関連項目  
- [ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)
+
+**比類のないマクロの入れ子**
+
+マクロをファイルまたは終了ディレクティブの終了前に終了していない[ENDM](../../assembler/masm/endm.md)マクロ ブロックの外側で見つかりました。
+
+このエラーの原因の 1 つは、前にドットの省略[します。繰り返し](../../assembler/masm/dot-repeat.md)または[します。中に](../../assembler/masm/dot-while.md)します。
+
+## <a name="see-also"></a>関連項目
+
+[ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)<br/>

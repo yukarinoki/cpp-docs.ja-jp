@@ -1,7 +1,7 @@
 ---
-title: EVEN および ALIGN ディレクティブ |Microsoft ドキュメント
+title: EVEN および ALIGN ディレクティブ |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -21,18 +21,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a43425a4038ffb140eeaa0a9d111a39fc5c11ff0
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 06a1007c50e3490e5b14e4da886494557be0d37e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057956"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688302"
 ---
 # <a name="even-and-align-directives"></a>EVEN および ALIGN ディレクティブ
-## <a name="microsoft-specific"></a>Microsoft 固有の仕様  
- では、インライン アセンブラーは、ほとんどの MASM ディレクティブをサポートしない、`EVEN`と**ALIGN**です。 これらのディレクティブを配置**NOP** (操作なし)、アセンブリ コードを特定の境界にラベルを配置に必要な手順です。 これにより、いくつかのプロセッサ命令フェッチ操作がより効率的にします。  
-  
- **Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- [__asm ブロックでのアセンブリ言語の使用](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+
+**Microsoft 固有の仕様**
+
+では、インライン アセンブラーがほとんどの MASM ディレクティブをサポートしていませんが`EVEN`と**ALIGN**します。 これらのディレクティブを配置**NOP** (操作なし)」の手順には、アセンブリのコードを特定の境界にラベルを配置するために必要とします。 これにより、一部のプロセッサの命令フェッチ操作がより効率的にします。
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
+[__asm ブロックでのアセンブリ言語の使用](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

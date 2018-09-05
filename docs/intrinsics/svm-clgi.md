@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54f1a88acef3f3f79a39a8dd68e1beb079f30fec
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: e2b430c0ac4a07ec9bc0a9315fb1ad8ca6563ee9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541443"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693773"
 ---
 # <a name="svmclgi"></a>__svm_clgi
 **Microsoft 固有の仕様**  
@@ -38,7 +38,7 @@ void __svm_clgi( void );
 ## <a name="remarks"></a>Remarks  
  `__svm_clgi`関数は、`CLGI`マシン語命令。 グローバル割り込みフラグは、マイクロプロセッサについて、無視、延期、または I/O の完了、ハードウェアの温度アラート、またはデバッグ例外などのイベントが原因の割り込み処理のでかどうかを判断します。  
   
- この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、検索、ドキュメントでは、"AMD64 アーキテクチャ プログラマーズ手動ボリューム 2: システム プログラミングでは、"ドキュメント番号 24593、3.11、リビジョン、 [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746)サイト。  
+ この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、検索、ドキュメントでは、"AMD64 アーキテクチャ プログラマーズ手動ボリューム 2: システム プログラミングでは、"ドキュメント番号 24593、3.11、リビジョン、 [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)サイト。  
   
 ## <a name="requirements"></a>要件  
   

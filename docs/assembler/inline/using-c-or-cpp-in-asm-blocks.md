@@ -1,7 +1,7 @@
 ---
-title: _ _Asm ブロックでの C または C++ の使用 |Microsoft ドキュメント
+title: _ _Asm ブロックでの C または C++ の使用 |Microsoft Docs
 ms.custom: ''
-ms.date: 06/25/2018
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -24,34 +24,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96ed46cdf44ccacee806dd03bf7eacca26eec32d
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 14b91a7925089f6a6ab747a9fd6a5813f9a14693
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37120951"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687100"
 ---
 # <a name="using-c-or-c-in-asm-blocks"></a>__asm ブロックでの C または C++ の使用
 
 * * Microsoft 固有の仕様 * *
 
-インライン アセンブリの命令は、C または C++ ステートメントと混合できる、ため、C または C++ の変数を名前で参照し、それらの言語の他の多くの要素を使用します。
+インライン アセンブリの命令を C または C++ ステートメントを混在させることができますので、C または C++ の変数を名前で参照し、それらの言語の他の多くの要素を使用できます。
 
 `__asm`ブロックは、次の言語要素を使用できます。
 
-- ラベルと変数および関数の名前を含むシンボル
+- ラベルと変数と関数の名前を含む、シンボル
 
-- 定数、シンボリック定数を含むと`enum`メンバー
+- 記号定数を含む定数と`enum`メンバー
 
 - マクロとプリプロセッサ ディレクティブ
 
 - コメント (両方__/ \* \* /__ と__//__ )
 
-- (任意の場所、MASM 型は有効になります) の名前を入力します。
+- (任意の場所、MASM 型が有効であるなどは) 名前を入力します。
 
-- `typedef` などの演算子と共に使用される通常名前**PTR**と**型**または構造体または共用体のメンバーを指定するには
+- `typedef` などの演算子で使用される一般に、名**PTR**と**型**または構造体または共用体のメンバーを指定するには
 
-内で、`__asm`ブロック、C の表記またはアセンブラー小数点表記のいずれかの整数定数を指定することができます (0x100 と h 100 は同等ですが、たとえば)。 定義できます (を使用して`#define`) C 内で定数をし、プログラムの C または C++ とアセンブリの両方の部分で使用します。 使用される定数を指定することもできます。 その前に、0、8 進数。 たとえば、0777 は 8 進数の定数を指定します。
+内で、`__asm`ブロック、C の表記またはアセンブラー小数点表記のいずれかで整数の定数を指定することができます (0x100 と h の 100 は同等ですが、たとえば)。 定義することができます (を使用して`#define`) C 内の定数をプログラムの C または C++ とアセンブリの両方の部分で使用します。 使用される定数を指定することもできます。 その前に、0、8 進数。 たとえば、0777 は、8 進数の定数を指定します。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
 
@@ -67,4 +67,4 @@ ms.locfileid: "37120951"
 
 ## <a name="see-also"></a>関連項目
 
-[インライン アセンブラー](../../assembler/inline/inline-assembler.md)
+[インライン アセンブラー](../../assembler/inline/inline-assembler.md)<br/>
