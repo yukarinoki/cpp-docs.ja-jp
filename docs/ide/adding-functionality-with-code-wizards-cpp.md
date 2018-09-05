@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55a2bb282d19a48cfd510056e327e7abca4de4ad
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 13d163ad8de9ef3ee6c8c1375c234a412c70de7d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337042"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213137"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>コード ウィザードを使用した機能の追加 (C++)
 一度プロジェクトを作成すると、そのプロジェクトの機能に変更を加えたり、追加したりすることになります。 このようなタスクには、新しいクラスの作成、新しいメンバー関数と変数の追加、オートメーション メソッドとプロパティの追加が含まれます。 コード ウィザードは、これらすべてを実行できるように設計されています。  
@@ -56,7 +56,7 @@ ms.locfileid: "33337042"
   
 -   **ソリューション エクスプローラー**で、任意のフォルダーを右クリックして、ショートカット メニューから **[追加]** をクリックすると、新しいファイルまたは既存のファイル、その他のフォルダー、項目、クラス、リソース、Web 参照をプロジェクトに追加できます。  
   
--   [クラス ビュー ウィンドウ](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)から、適切なノードを右クリックして、ショートカット メニューから **[追加]** をクリックすると、関数、変数、クラス、プロパティ、メソッド、イベント、インターフェイス、接続ポイント、またはその他のコードをプロジェクトに追加できます。  
+-   [クラス ビュー ウィンドウ](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)から、適切なノードを右クリックして、ショートカット メニューから **[追加]** をクリックすると、関数、変数、クラス、プロパティ、メソッド、イベント、インターフェイス、接続ポイント、またはその他のコードをプロジェクトに追加できます。  
   
     > [!NOTE]
     >  Visual Studio では、インターフェイスをプロジェクトに追加するウィザードは提供されません。 [ATL シンプル オブジェクト ウィザード](../atl/reference/atl-simple-object-wizard.md)を使用してシンプル オブジェクトを追加することで、インターフェイスを ALT プロジェクトに追加するか、[MFC プロジェクトに ATL サポートを追加](../mfc/reference/adding-atl-support-to-your-mfc-project.md)できます。 また、プロジェクトの .idl ファイルを開き、次のように入力してインターフェイスを作成することもできます。  

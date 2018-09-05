@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95971cceab5673755b33bd99c3365bee62610bf5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a54e0ba354e76996d03503e116008aa200b0905b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392199"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199358"
 ---
 # <a name="file-handling"></a>ファイル処理
 
@@ -88,11 +88,11 @@ C ランタイム ライブラリには、同時に開くことのできるフ�
 
  ファイルおよびパイプは、次の Win32 関数でも開くことができます。
 
-- [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858.aspx)
+- [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea)
 
-- [CreatePipe](http://msdn.microsoft.com/library/windows/desktop/aa365152.aspx)
+- [CreatePipe](https://msdn.microsoft.com/library/windows/desktop/aa365152.aspx)
 
-- [CreateNamedPipe](http://msdn.microsoft.com/library/windows/desktop/aa365150.aspx)
+- [CreateNamedPipe](/windows/desktop/api/winbase/nf-winbase-createnamedpipea)
 
 ## <a name="see-also"></a>参照
 

@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45eda098202fdf9286905bdc967b6aa1d7bd7035
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 00b19fa7166e6edad05d729c5a738a2a827086ae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327581"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212796"
 ---
 # <a name="adding-a-property-visual-c"></a>プロパティの追加 (Visual C++)
 [プロパティ追加ウィザード](../ide/names-add-property-wizard.md)を使用して、プロジェクトのインターフェイスにメソッドを追加することができます。  
   
 ### <a name="to-add-a-property-to-your-object"></a>オブジェクトにプロパティを追加するには  
   
-1.  [クラス ビュー](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)で、プロパティを追加するインターフェイスを右クリックします。  
+1.  [クラス ビュー](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)で、プロパティを追加するインターフェイスを右クリックします。  
   
     > [!NOTE]
     >  プロジェクトに属性が設定されていない限り、ライブラリ ノード内で入れ子にされるディスパッチ インターフェイスに、プロパティを追加することもできます。  
@@ -49,5 +49,5 @@ ms.locfileid: "33327581"
 ## <a name="see-also"></a>参照  
  [COM インターフェイスの作成](../ide/creating-a-com-interface-visual-cpp.md)   
  [COM インターフェイスの編集](../ide/editing-a-com-interface.md)   
- [コンポーネント オブジェクト モデル](http://msdn.microsoft.com/library/windows/desktop/ms694363)   
- [インターフェイス ポインターとインターフェイス](http://msdn.microsoft.com/library/windows/desktop/ms688484)
+ [コンポーネント オブジェクト モデル](/windows/desktop/com/the-component-object-model)   
+ [インターフェイス ポインターとインターフェイス](/windows/desktop/com/interface-pointers-and-interfaces)

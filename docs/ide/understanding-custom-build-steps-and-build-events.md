@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a50c0cf224104f720a73a4830405e7114cda74ed
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 16c1bdf088e0545292a672458c066364b5a47ff4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33338768"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206296"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>カスタム ビルド ステップとビルド イベントについて
 Visual C++ 開発環境では、ビルド処理をカスタマイズする基本的な方法が 3 つあります。  
@@ -73,4 +73,4 @@ Visual C++ 開発環境では、ビルド処理をカスタマイズする基本
 ## <a name="see-also"></a>参照  
  [Visual Studio での C++ プロジェクトのビルド](../ide/building-cpp-projects-in-visual-studio.md)   
  [ビルドのコマンドとプロパティの共通マクロ](../ide/common-macros-for-build-commands-and-properties.md)   
- [[ツールのビルド順序] ダイアログ ボックス](http://msdn.microsoft.com/en-us/6204c5b1-7ce9-4948-9ff6-0268642ee14c)
+ [[ツールのビルド順序] ダイアログ ボックス](https://msdn.microsoft.com/6204c5b1-7ce9-4948-9ff6-0268642ee14c)

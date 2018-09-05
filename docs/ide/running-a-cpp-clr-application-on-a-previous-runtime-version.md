@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f8e76930eb9191d27085d92a9d3a678812715fc
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 20a20002397e285680927fe519e4eac7b68cc343
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33323616"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216563"
 ---
 # <a name="running-a-c-clr-application-on-a-previous-runtime-version"></a>以前のランタイム バージョンでの C++ /clr アプリケーションの実行
 特に指定されていない限り、C++ .NET Framework アプリケーションは、コンパイラがアプリケーションをビルドするのに使用した共通言語ランタイム (CLR) バージョン上で実行されるようビルドされています。 ただし、ランタイムの 1 つのバージョン用にビルドされた .exe アプリケーションを、必要な機能がある他の任意のバージョン上で実行することは可能です。  
@@ -37,7 +37,7 @@ ms.locfileid: "33323616"
   
  2 つ以上ランタイム バージョンを指定し、複数のランタイム バージョンがインストールされているコンピューターでアプリケーションを実行した場合、アプリケーションでは、config ファイルで指定されてインストールされている最初のバージョンが使用されます。  
   
- 詳細については、「[方法: アプリを構成して、対象となる .NET Framework のバージョンを指定する](http://msdn.microsoft.com/en-us/5247b307-89ca-417b-8dd0-e8f9bd2f4717)」を参照してください。  
+ 詳細については、「[方法: アプリを構成して、対象となる .NET Framework のバージョンを指定する](https://msdn.microsoft.com/5247b307-89ca-417b-8dd0-e8f9bd2f4717)」を参照してください。  
   
  CLR のバージョン 1.0 またはバージョン 1.1 で実行する場合、Visual C++ コンパイラでビルドしたアプリケーションは、[/clr:initialAppDomain](../build/reference/clr-common-language-runtime-compilation.md) を使用してコンパイルされている必要があります。  
   

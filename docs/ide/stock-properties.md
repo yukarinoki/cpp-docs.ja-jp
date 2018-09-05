@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3586fb33c30148c870b096d0d49a41d7ad8c6c8
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 4a9b2aa4389d693cfc6734a29f3a744e955ca3ea
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33335443"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213794"
 ---
 # <a name="stock-properties"></a>ストック プロパティ
 [[プロパティ追加ウィザード]](../ide/idl-attributes-add-property-wizard.md) を使用し、MFC ディスパッチ インターフェイスにプロパティを追加する場合、ウィザードの [[名前]](../ide/names-add-property-wizard.md) ページの **[プロパティ名]** 一覧からストック プロパティを選択できます。 選択できるプロパティは次のとおりです。  
@@ -35,7 +35,7 @@ ms.locfileid: "33335443"
 |**フォント**|コントロールのアンビエント フォントを返すか設定します。 コントロールにフォントがない場合、Null になります。|  
 |`ForeColor`|コントロールのアンビエント `ForeColor` プロパティを返すか設定します。|  
 |**hWnd**|コントロールの **[hWnd]** プロパティを返すか設定します。 **hWnd** には、**メンバー変数**実装型がありません。|  
-|**ReadyState**|コントロールの **[ReadyState]** プロパティを返すか設定します。 コントロールの状態には、「初期化されていません」、「初期化されています」、「読み込んでいます」、「インタラクティブ」、「完了」があります。 詳細については、*インターネット SDK* の [READYSTATE](https://msdn.microsoft.com/en-us/library/aa768362.aspx) に関するページを参照してください。|  
+|**ReadyState**|コントロールの **[ReadyState]** プロパティを返すか設定します。 コントロールの状態には、「初期化されていません」、「初期化されています」、「読み込んでいます」、「インタラクティブ」、「完了」があります。 詳細については、*インターネット SDK* の [READYSTATE](https://msdn.microsoft.com/library/aa768362.aspx) に関するページを参照してください。|  
 |**[テキスト]**|コントロールに格納されているテキストを返すか設定します。 **テキスト**には、**メンバー変数**実装型がありません。|  
   
 ## <a name="see-also"></a>参照  

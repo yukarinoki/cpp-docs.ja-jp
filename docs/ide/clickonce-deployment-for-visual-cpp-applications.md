@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e85ec0dfc011aab4d2b3ac835bbe71782b055000
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 59649aeee3b0f63b496b967722205001a3de1619
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332326"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213534"
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>Visual C++ アプリケーションの ClickOnce 配置
-Visual Studio には、2 とおりの Windows アプリケーションの配置方法があります。ClickOnce 配置を使用する方法と [Windows インストーラー](http://msdn.microsoft.com/library/cc185688)配置を使用する方法です。  
+Visual Studio には、2 とおりの Windows アプリケーションの配置方法があります。ClickOnce 配置を使用する方法と [Windows インストーラー](/windows/desktop/Msi/windows-installer-portal)配置を使用する方法です。  
   
 ## <a name="clickonce-deployment-in-c"></a>C++ の ClickOnce 配置  
  Visual C++ 開発環境では ClickOnce による Visual C++ プロジェクトの配置は直接はサポートされませんが、それを使用するためのツールを利用できます。  
@@ -53,7 +53,7 @@ Visual Studio には、2 とおりの Windows アプリケーションの配置�
  [Makecert.exe (証明書作成ツール)](https://msdn.microsoft.com/library/windows/desktop/aa386968)   
  [デスクトップ アプリケーションの配置](../ide/deploying-native-desktop-applications-visual-cpp.md)   
  [アプリケーション、サービス、およびコンポーネントの配置](/visualstudio/deployment/deploying-applications-services-and-components)   
- [Windows インストーラーの配置](http://msdn.microsoft.com/en-us/121be21b-b916-43e2-8f10-8b080516d2a0)   
+ [Windows インストーラーの配置](https://msdn.microsoft.com/121be21b-b916-43e2-8f10-8b080516d2a0)   
  [ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)   
  [ブートストラップ パッケージの作成](/visualstudio/deployment/creating-bootstrapper-packages)   
  [C++/CLI (Visual C++) による .NET プログラミング](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   

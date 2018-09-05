@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7008e7fe670471301968482fbd4c6c758f0ff5e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 3ad6ef6ffaa6341e62b09920ab95d50c5720428c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340503"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195867"
 ---
 # <a name="building-c-projects-in-visual-studio"></a>Visual Studio での C++ プロジェクトのビルド
 Visual Studio 統合開発環境 (IDE) では、ソリューション全体または 1 つのプロジェクトのみをビルドする複数の方法があります。 また、ビルド設定を変更し、カスタム ビルド ステップを指定して、開発プロセスを効率的にすることもできます。  
@@ -50,7 +50,7 @@ Visual Studio 統合開発環境 (IDE) では、ソリューション全体ま�
   
  Visual Studio で Visual C++ アプリケーションをビルドする場合、プロジェクトの [プロパティ ページ] ダイアログ ボックスでビルドの設定の多くを変更できます。 プロジェクトのプロパティの設定方法については、「[プロジェクトのプロパティの操作](../ide/working-with-project-properties.md)」を参照してください。  
   
- IDE を使用して C++ プロジェクトを作成、ビルド、およびデバッグする方法の例については、「[Walkthrough: Explore the Visual Studio IDE with C++](/visualstudio/ide/getting-started-with-cpp-in-visual-studio)」(チュートリアル: C++ での Visual Studio IDE の調査) を参照してください。 IDE を使用して C++/CLR プロジェクトをビルドする方法の例については、「[チュートリアル: Visual Studio で CLR をターゲットにした C++ プログラムのコンパイル](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md)」を参照してください。 IDE を使用して Windows ランタイム アプリを作成する方法の例については、「[Create your first Windows Runtime app using C++](http://msdn.microsoft.com/library/windows/apps/hh974580.aspx)」(C++ を使った初めての Windows ランタイム アプリの作成) を参照してください。  
+ IDE を使用して C++ プロジェクトを作成、ビルド、およびデバッグする方法の例については、「[Walkthrough: Explore the Visual Studio IDE with C++](/visualstudio/ide/getting-started-with-cpp-in-visual-studio)」(チュートリアル: C++ での Visual Studio IDE の調査) を参照してください。 IDE を使用して C++/CLR プロジェクトをビルドする方法の例については、「[チュートリアル: Visual Studio で CLR をターゲットにした C++ プログラムのコンパイル](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md)」を参照してください。 IDE を使用して Windows ランタイム アプリを作成する方法の例については、「[Create your first Windows Runtime app using C++](https://msdn.microsoft.com/library/windows/apps/hh974580.aspx)」(C++ を使った初めての Windows ランタイム アプリの作成) を参照してください。  
   
  ビルド、ビルド設定の変更、およびカスタム ビルド ステップの指定を行う方法の詳細については、次の記事を参照してください。  
   
