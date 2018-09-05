@@ -19,43 +19,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf51197750e9595570a7b011c179c2ed4c7902c3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c5751fa3c5c8bc20f287ca3c48d885fc41c60ba0
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880009"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764330"
 ---
 # <a name="atlcreatewnddata-structure"></a>_AtlCreateWndData 構造体
-この構造体には、ATL でウィンドウ作成コードのクラス インスタンスのデータが含まれています。  
-  
-## <a name="syntax"></a>構文  
-  
+
+この構造体には、ATL でウィンドウ作成コードのクラス インスタンスのデータが含まれています。
+
+## <a name="syntax"></a>構文
+
 ```
     struct _AtlCreateWndData{
     void* m_pThis;
     DWORD m_dwThreadID;
     _AtlCreateWndData* m_pNext;
 };
-```  
-  
-## <a name="members"></a>メンバー  
- `m_pThis`  
- **この**ポインターをウィンドウ プロシージャで、クラスのインスタンスへのアクセスを取得するために使用します。  
-  
- `m_dwThreadID`  
- 現在のクラス インスタンスのスレッド ID。  
-  
- `m_pNext`  
- 次へのポインター`_AtlCreateWndData`オブジェクト。  
-  
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** atlbase.h  
-  
-## <a name="see-also"></a>関連項目  
- [クラスと構造体](../../atl/reference/atl-classes.md)
+```
 
+## <a name="members"></a>メンバー
 
+`m_pThis`  
+**この**ポインターをウィンドウ プロシージャで、クラスのインスタンスへのアクセスを取得するために使用します。
 
+`m_dwThreadID`  
+現在のクラス インスタンスのスレッド ID。
 
+`m_pNext`  
+次へのポインター`_AtlCreateWndData`オブジェクト。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** atlbase.h
+
+## <a name="see-also"></a>関連項目
+
+[クラスと構造体](../../atl/reference/atl-classes.md)
 

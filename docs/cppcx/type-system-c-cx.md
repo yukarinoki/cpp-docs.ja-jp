@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 6137203176722316b802a1da5bb2e67dba36848a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594022"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767778"
 ---
 # <a name="type-system-ccx"></a>型システム (C++/CX)
 Windows ランタイムのアーキテクチャを使用すると、使用することが C + + CX、Visual Basic、Visual c# および JavaScript を直接 Windows API にアクセスし、その他の Windows ランタイム アプリおよびコンポーネントと相互運用するアプリやコンポーネントを記述します。 C++ で記述されているユニバーサル Windows プラットフォーム アプリは、CPU で直接実行するネイティブ コードにコンパイルします。 C# または Visual Basic で記述されているユニバーサル Windows プラットフォーム アプリでは、Microsoft intermediate language (MSIL) にコンパイルし、共通言語ランタイム (CLR) で実行します。 JavaScript で記述されているユニバーサル Windows プラットフォーム アプリでは、実行時環境で実行します。 Windows ランタイムのオペレーティング システム コンポーネント自体は C++ で記述し、ネイティブ コードとして実行します。 これらのコンポーネントとユニバーサル Windows プラットフォーム アプリのすべては、Windows ランタイム アプリケーション バイナリ インターフェイス (ABI) を介して直接通信します。  

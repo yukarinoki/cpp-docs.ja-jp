@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f5cfe1bf4ae614bc892b4ea93d36fa44604029f1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600856"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764307"
 ---
 # <a name="properties-ccx"></a>プロパティ (C++/CX)
 Windows ランタイム型では、パブリック データをプロパティとして公開します。 クライアント コードは、パブリック データ メンバーのようにプロパティにアクセスします。 内部的には、プロパティは get アクセサー メソッドと set アクセサー メソッド、またはその両方を含むブロックとして実装されます。 アクセサー メソッドを使用すると、値を取得する前または後に追加操作を実行できます。たとえば、イベントを発生させたり、検証チェックを実行したりすることができます。  

@@ -17,39 +17,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b90afb9ae47ced33c331aef988489b567b1078b
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 53078d740d1051a928b4592d275f33944685e622
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879903"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767105"
 ---
 # <a name="ccomautodeletecriticalsection-class"></a>CComAutoDeleteCriticalSection クラス
-このクラスは、取得およびクリティカル セクション オブジェクトの所有権を解放するためのメソッドを提供します。  
-  
-## <a name="syntax"></a>構文  
-  
+
+このクラスは、取得およびクリティカル セクション オブジェクトの所有権を解放するためのメソッドを提供します。
+
+## <a name="syntax"></a>構文
+
 ```
 class CComAutoDeleteCriticalSection : public CComSafeDeleteCriticalSection
-```  
-  
-## <a name="remarks"></a>Remarks  
- `CComAutoDeleteCriticalSection` クラスから派生[CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md)します。 ただし、`CComAutoDeleteCriticalSection`オーバーライド、[用語](ccomsafedeletecriticalsection-class.md#term)メソッドを**プライベート**アクセスで、強制的にのみこのクラスのインスタンス スコープ外に出るまたは明示的に削除されたときから発生する内部メモリ クリーンアップメモリ。  
+```
 
-  
- このクラスは、その基本クラスを追加のメソッドを導入しないします。 参照してください[CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md)と[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)クリティカル セクションのヘルパー クラスの詳細についてはします。  
-  
-## <a name="inheritance-hierarchy"></a>継承階層  
- [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)  
-  
- [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md)  
-  
- `CComAutoDeleteCriticalSection`  
-  
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** atlcore.h  
-  
-## <a name="see-also"></a>関連項目  
- [CComSafeDeleteCriticalSection クラス](../../atl/reference/ccomsafedeletecriticalsection-class.md)   
- [CComCriticalSection クラス](../../atl/reference/ccomcriticalsection-class.md)   
- [クラスの概要](../../atl/atl-class-overview.md)
+## <a name="remarks"></a>Remarks
+
+`CComAutoDeleteCriticalSection` クラスから派生[CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md)します。 ただし、`CComAutoDeleteCriticalSection`オーバーライド、[用語](ccomsafedeletecriticalsection-class.md#term)メソッドを**プライベート**アクセスで、強制的にのみこのクラスのインスタンス スコープ外に出るまたは明示的に削除されたときから発生する内部メモリ クリーンアップメモリ。  
+
+このクラスは、その基本クラスを追加のメソッドを導入しないします。 参照してください[CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md)と[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)クリティカル セクションのヘルパー クラスの詳細についてはします。
+
+## <a name="inheritance-hierarchy"></a>継承階層
+
+[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)
+
+[CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md)
+
+`CComAutoDeleteCriticalSection`
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** atlcore.h
+
+## <a name="see-also"></a>関連項目
+
+[CComSafeDeleteCriticalSection クラス](../../atl/reference/ccomsafedeletecriticalsection-class.md)   
+[CComCriticalSection クラス](../../atl/reference/ccomcriticalsection-class.md)   
+[クラスの概要](../../atl/atl-class-overview.md)

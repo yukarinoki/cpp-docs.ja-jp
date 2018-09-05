@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 491b3cabd8003664a34543d8bb7a640759bd50ee
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207406"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765022"
 ---
 # <a name="attributes-ccx"></a>属性 (C++/CX)
 属性は、メタデータ作成で特定の動作を指定するには、Windows ランタイム型とメソッドの角かっこの前に付加する ref クラスの特殊なです。 複数の属性の定義済み — たとえば、 [Windows::Foundation::Metadata::WebHostHidden](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx)-C + でよく使用される/cli/CX コード。 この例では、属性がクラスに適用される方法を示します。  

@@ -83,11 +83,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c8b3772f556dd92694222e4f3d7d2e15deb051c5
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339671"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766046"
 ---
 # <a name="cdaotabledef-class"></a>CDaoTableDef クラス
 ベース テーブル、またはアタッチ テーブルの格納された定義を表現します。  
@@ -192,7 +192,7 @@ class CDaoTableDef : public CObject
   
  `CDaoTableDef`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdao.h  
   
 ##  <a name="append"></a>  CDaoTableDef::Append  

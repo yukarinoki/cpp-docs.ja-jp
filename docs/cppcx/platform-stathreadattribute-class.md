@@ -20,11 +20,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 90194dd72b5192fab71065c2275adb4e066bcb0e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590784"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767892"
 ---
 # <a name="platformstathreadattribute-class"></a>Platform::STAThreadAttribute クラス
 アプリケーションのスレッド モデルがシングル スレッド アパートメント (STA) であることを示します。  
@@ -46,7 +46,7 @@ public ref class STAThreadAttribute sealed : Attribute
 ### <a name="public-methods"></a>パブリック メソッド  
  STAThreadAttribute 属性が継承[platform::object Class](../cppcx/platform-object-class.md)します。 また STAThreadAttribute は次のメンバーもオーバーロードしたり、含んだりします。  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[STAThreadAttribute::Equals](#equals)|指定したオブジェクトが、現在のオブジェクトと等しいかどうかを判断します。|  
 |[STAThreadAttribute::GetHashCode](#gethashcode)|このインスタンスのハッシュ コードを返します。|  
