@@ -270,7 +270,7 @@ bool IsEmpty()
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 現在の String オブジェクトが `true` または空の文字列 ("") の場合は `null`。それ以外の場合は `false`。  
+ 現在の String オブジェクトが `null` または空の文字列 ("") の場合は `true`。それ以外の場合は `false`。  
   
 
 
