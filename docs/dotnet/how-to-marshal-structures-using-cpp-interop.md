@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e135dd1cbfc3aeb164449a1f09e6c1cdf6287582
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: bbf85f8da0477de2483ee2ce4b981d832421da95
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215121"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680903"
 ---
 # <a name="how-to-marshal-structures-using-c-interop"></a>方法: C++ Interop を使用して構造体をマーシャリングする
 このトピックでは、Visual C の相互運用性の 1 つのファセットを示します。 詳細については、次を参照してください。[を使用して C++ Interop (暗黙の PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)します。  
@@ -32,7 +32,7 @@ ms.locfileid: "43215121"
  次のコード例、[マネージ、アンマネージ](../preprocessor/managed-unmanaged.md)#pragma ディレクティブを実装するマネージ コードと同じファイル内の関数をアンマネージが個別のファイルに定義されている場合、これらの関数が同じ方法で相互運用。 アンマネージ関数のみを含むファイルを使用してコンパイルする必要はありません[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)します。  
   
 ## <a name="example"></a>例  
- 次の例では、マネージからアンマネージ関数では、両方の値と参照渡しで構造体を渡す方法を示します。 この例では構造体にのみ簡単な組み込みのデータ型が含まれているため (を参照してください[blittable 型と非 Blittable 型](https://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3))、特殊なマーシャ リングする必要はありません。 ポインターが含まれるものなど、blittable でない構造体をマーシャ リングする、次を参照してください。[方法: マーシャ リングする埋め込みポインターを使用して C++ Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)します。  
+ 次の例では、マネージからアンマネージ関数では、両方の値と参照渡しで構造体を渡す方法を示します。 この例では構造体にのみ簡単な組み込みのデータ型が含まれているため (を参照してください[blittable 型と非 Blittable 型](/dotnet/framework/interop/blittable-and-non-blittable-types))、特殊なマーシャ リングする必要はありません。 ポインターが含まれるものなど、blittable でない構造体をマーシャ リングする、次を参照してください。[方法: マーシャ リングする埋め込みポインターを使用して C++ Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)します。  
   
 ```  
 // PassStruct1.cpp  
@@ -89,7 +89,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>例  
- 次の例では、アンマネージからマネージ関数では、両方の値と参照渡しで構造体を渡す方法を示します。 この例では構造体にのみ簡単な組み込みのデータ型が含まれているため (を参照してください[blittable 型と非 Blittable 型](https://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3))、特殊なマーシャ リングする必要はありません。 ポインターが含まれるものなど、blittable でない構造体をマーシャ リングする、次を参照してください。[方法: マーシャ リングする埋め込みポインターを使用して C++ Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)します。  
+ 次の例では、アンマネージからマネージ関数では、両方の値と参照渡しで構造体を渡す方法を示します。 この例では構造体にのみ簡単な組み込みのデータ型が含まれているため (を参照してください[blittable 型と非 Blittable 型](/dotnet/framework/interop/blittable-and-non-blittable-types))、特殊なマーシャ リングする必要はありません。 ポインターが含まれるものなど、blittable でない構造体をマーシャ リングする、次を参照してください。[方法: マーシャ リングする埋め込みポインターを使用して C++ Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)します。  
   
 ```  
 // PassStruct2.cpp  

@@ -114,12 +114,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eae771aed819577708d945cb2a62997f5b45e7fd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 758b2039168825ec95a14b84b1c4c589618e7c24
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199847"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680105"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 `CMFCTabCtrl`クラスは、タブ コントロールの機能を提供します。 タブ コントロールは、上または下にフラットまたは 3D のタブを持つ、ドッキング可能なウィンドウを表示します。 タブにはテキストとイメージを表示でき、アクティブな状態のときに色を変更することもできます。  
@@ -186,7 +186,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::OnDragEnter](#ondragenter)|カーソルが最初に、タブ コントロール ウィンドウにドラッグされたときに、フレームワークによって呼び出されます。|  
 |[CMFCTabCtrl::OnDragOver](#ondragover)|マウスがドロップ ターゲット ウィンドウに移動するドラッグ操作中に、フレームワークが呼び出します。 (上書き[CMFCBaseTabCtrl::OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover))。|  
 |[CMFCTabCtrl::OnShowTabDocumentsMenu](#onshowtabdocumentsmenu)|ユーザーがタブを選択し、選択されているタブは、アクティブなタブまでの待機、タブ付きウィンドウのポップアップ メニューを表示します。|  
-|`CMFCTabCtrl::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)と[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 関数。 (上書き[CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage))。|  
+|`CMFCTabCtrl::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数。 (上書き[CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage))。|  
 |`CMFCTabCtrl::RecalcLayout`|タブ コントロールの内部レイアウトを再計算します。 (上書き[CMFCBaseTabCtrl::RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout))。|  
 |[CMFCTabCtrl::SetActiveInMDITabGroup](#setactiveinmditabgroup)|タブ コントロールの現在のタブは、マルチ ドキュメント インターフェイスのタブ グループでアクティブなタブとして設定します。|  
 |[CMFCTabCtrl::SetActiveTab](#setactivetab)|タブをアクティブにします。(上書き[CMFCBaseTabCtrl::SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab))。|  
@@ -202,7 +202,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
   
 ### <a name="data-members"></a>データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CMFCTabCtrl::m_bEnableActivate](#m_benableactivate)|アクティブなビューが新しいタブが挿入され、有効になっているときにフォーカスを失ったするを防ぎます。|  
   
@@ -758,7 +758,7 @@ BOOL ModifyTabStyle(Style style);
 ### <a name="remarks"></a>Remarks  
  値、*スタイル*パラメーターは、次のいずれかを指定できます`CMFCTabCtrl::Style`列挙体。  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |STYLE_3D|角が丸い長方形の 3 次元のタブが表示されます。|  
 |STYLE_3D_ONENOTE|1 つの垂直側と傾斜した 1 つの側を持ち、角が丸い 3d のタブが表示されます。|  
@@ -960,7 +960,7 @@ void SetResizeMode(ResizeMode resizeMode);
 ### <a name="remarks"></a>Remarks  
  *ResizeMode*パラメーターは、次のいずれかを指定できます`ResizeMode`列挙値。  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |RESIZE_NO|タブ コントロールのサイズを変更できません。|  
 |RESIZE_VERT|いない水平、垂直方向に、タブ コントロールのサイズを変更できます。|  

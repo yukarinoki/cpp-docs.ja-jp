@@ -1,7 +1,7 @@
 ---
-title: ML の致命的でないエラー A2083 |Microsoft ドキュメント
+title: ML の致命的でないエラー A2083 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3474c806932f4e943a0d2569c4095b15e39a38c
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: adeb6f43aba36ae7e6ccaf4cc31c6407a3c41622
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053901"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691860"
 ---
 # <a name="ml-nonfatal-error-a2083"></a>ML の致命的でないエラー A2083
-**無効なスケール値**  
-  
- 1、2、4、または 8 ではできませんでしたレジスタの小数点以下桁数が指定されました。  
-  
-## <a name="see-also"></a>関連項目  
- [ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)
+
+**無効なスケール値**
+
+1、2、4、または 8 がいないをレジスタ スケールが指定されました。
+
+## <a name="see-also"></a>関連項目
+
+[ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)<br/>

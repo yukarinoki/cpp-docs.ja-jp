@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7dbd74a8f216efb64d220747155a619d2084b3b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b022c4c42a7373f9bfc23c1fff5be2c1317709de
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211763"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692449"
 ---
 # <a name="tn003-mapping-of-windows-handles-to-objects"></a>テクニカル ノート 3: Windows ハンドルとオブジェクト間のマップ
 この注は、MFC を説明します。 Windows のマッピングをサポートするルーチンが C++ オブジェクトへのハンドルをオブジェクト。  
@@ -74,7 +74,7 @@ CWnd myWnd;
 myWnd.Attach(hWnd);
 ```  
   
- これは、永続的なマップの関連付けにエントリ*myWnd*と*hWnd*します。 呼び出す`CWnd::FromHandle(hWnd)`へのポインターを返すようになりましたが*myWnd*します。 ときに*myWnd*が削除されると、デストラクターを自動的に破棄*hWnd* 、Windows を呼び出すことによって[DestroyWindow](https://msdn.microsoft.com/library/windows/desktop/ms632682)関数。 これが望ましくない場合*hWnd*からデタッチする必要があります*myWnd*する前に*myWnd*が破棄される (位置のスコープを終了するときに通常*myWnd*が定義されている)。 `Detach`メソッドがこれです。  
+ これは、永続的なマップの関連付けにエントリ*myWnd*と*hWnd*します。 呼び出す`CWnd::FromHandle(hWnd)`へのポインターを返すようになりましたが*myWnd*します。 ときに*myWnd*が削除されると、デストラクターを自動的に破棄*hWnd* 、Windows を呼び出すことによって[DestroyWindow](/windows/desktop/api/winuser/nf-winuser-destroywindow)関数。 これが望ましくない場合*hWnd*からデタッチする必要があります*myWnd*する前に*myWnd*が破棄される (位置のスコープを終了するときに通常*myWnd*が定義されている)。 `Detach`メソッドがこれです。  
   
 ```  
 myWnd.Detach();

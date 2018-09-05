@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f8221b44d668a3ca2446913958645bb5e160dc87
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a9897be9bbcae0a03ef67996bda6f3ffbe894b8f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194905"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680453"
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>データベース属性によるデータ アクセスの簡略化
 このトピックでは、データベース操作を簡略化するデータベースの属性の使用を示します。  
@@ -207,5 +207,4 @@ HRESULT hr = Open(m_session, "Authors", pPropSet);
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB コンシューマー属性します。](../../windows/ole-db-consumer-attributes.md)   
- [属性のチュートリアル](https://msdn.microsoft.com/73df1d5d-261a-4521-98fb-06dcbf5ec0d0)
+ [OLE DB コンシューマー属性](../../windows/ole-db-consumer-attributes.md)   

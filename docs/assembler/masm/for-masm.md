@@ -1,7 +1,7 @@
 ---
-title: (MASM) の |Microsoft ドキュメント
+title: (MASM) の |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,28 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ca67b886a0fd134b4d861a516b6726dae156c3b
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: dd349a38b1de317a01f07fdcf1ba1915f6d32a42
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051944"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681116"
 ---
 # <a name="for-masm"></a>FOR (MASM)
-ごとに 1 回繰り返されるブロックをマーク`argument`、現在の`argument`交換`parameter`繰り返されるたびにします。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-   FOR   
-   parameter [[:REQ | :=default]] , <argument [[, argument]]...>  
-statements  
-ENDM  
-```  
-  
-## <a name="remarks"></a>コメント  
- 同じ[IRP](../../assembler/masm/irp.md)です。  
-  
-## <a name="see-also"></a>関連項目  
- [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+
+ごとに 1 回繰り返されるブロックをマーク*引数*、現在の*引数*交換*パラメーター*繰り返しのたびにします。
+
+## <a name="syntax"></a>構文
+
+> *パラメーター* [: REQ |: =*既定*]、 \<*引数*[、*引数*]] ><br/>
+> *ステートメント*<br/>
+> ENDM
+
+## <a name="remarks"></a>Remarks
+
+同じ[IRP](../../assembler/masm/irp.md)します。
+
+## <a name="see-also"></a>関連項目
+
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>

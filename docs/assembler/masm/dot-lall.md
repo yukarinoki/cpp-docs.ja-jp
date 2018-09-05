@@ -1,7 +1,7 @@
 ---
-title: .LALL |Microsoft ドキュメント
+title: .LALL |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,24 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a1ce0e7f2cc5fd7be8c2a7a400a582e3f819c51
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: a74d911aebcc7f337c94ab0647cea2abe7076df5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053559"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687197"
 ---
 # <a name="lall"></a>.LALL
-## <a name="syntax"></a>構文  
-  
-```  
-  
-.LALL  
-  
-```  
-  
-## <a name="remarks"></a>コメント  
- 参照してください[です。LISTMACROALL](../../assembler/masm/dot-listmacroall.md)です。  
-  
-## <a name="see-also"></a>関連項目  
- [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+
+## <a name="syntax"></a>構文
+
+> .LALL
+
+## <a name="remarks"></a>Remarks
+
+参照してください[します。LISTMACROALL](../../assembler/masm/dot-listmacroall.md)します。
+
+## <a name="see-also"></a>関連項目
+
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>

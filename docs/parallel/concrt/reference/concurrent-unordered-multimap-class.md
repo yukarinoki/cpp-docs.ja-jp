@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9fe1bcce5290d7e977dc423f146bb3a5b66d484
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 532320e275d233181868e3ab83ab307c176de765
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216085"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690175"
 ---
 # <a name="concurrentunorderedmultimap-class"></a>concurrent_unordered_multimap クラス
 `concurrent_unordered_multimap` クラスは、`std::pair<const K, _Element_type>` 型要素の可変長シーケンスを制御する同時実行セーフなコンテナーです。 このシーケンスは、同時実行セーフな追加、要素アクセス、反復子アクセス、反復子走査の各操作を実行できるように表されます。  
@@ -305,7 +305,7 @@ std::pair<const_iterator,
  検索するキー値。  
   
 ### <a name="return-value"></a>戻り値  
- A[ペア](https://msdn.microsoft.com/32e72d66-3020-4cb9-92c3-f7a5fa7998ff)最初の要素は、反復子を先頭に、2 番目の要素が、範囲の末尾に反復子です。  
+ A[ペア](../../../standard-library/pair-structure.md)最初の要素は、反復子を先頭に、2 番目の要素が、範囲の末尾に反復子です。  
   
 ### <a name="remarks"></a>Remarks  
  同時実行の挿入を begin 反復子の後と終わりの反復子の前に挿入される追加のキーが発生することができます。  

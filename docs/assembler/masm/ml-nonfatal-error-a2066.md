@@ -1,7 +1,7 @@
 ---
-title: ML の致命的でないエラー A2066 |Microsoft ドキュメント
+title: ML の致命的でないエラー A2066 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92cc0daf183f617767ff5ff119c5e95b8f34cd51
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 8cf5cbe7d5c77da7f129cbc40ffa97f4051afca6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054264"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690253"
 ---
 # <a name="ml-nonfatal-error-a2066"></a>ML の致命的でないエラー A2066
-**互換性のない CPU モードとセグメントのサイズ**  
-  
- 開くには、セグメントを圧縮しようとしました、 **USE16**、 **USE32**、または**フラット**中には、32 ビットの 16 ビットの CPU に変更するのにまたは指定された CPU との互換性がない属性セグメントです。  
-  
- **USE32**と**フラット**.386 または以上のプロセッサ ディレクティブが属性を前に必要です。  
-  
-## <a name="see-also"></a>関連項目  
- [ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)
+
+**互換性のない CPU モードとセグメントのサイズ**
+
+セグメントを開くしようとしましたが、 **USE16**、 **USE32**、または**フラット**に指定された CPU とまたは 32 ビットで 16 ビットの CPU に変更するには互換性がない属性セグメント。
+
+**USE32**と**フラット**.386 または以上のプロセッサ ディレクティブによって属性を前する必要があります。
+
+## <a name="see-also"></a>関連項目
+
+[ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)<br/>

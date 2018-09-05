@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6de4e448450aa346875bfef5e9455d713258b5d6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 043a046209d5e52439ed61165557cc6596db48e8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199922"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689322"
 ---
 # <a name="styles-used-by-mfc"></a>MFC で使用するスタイル  
   
@@ -219,7 +219,7 @@ ms.locfileid: "43199922"
   
 ## <a name="button-styles"></a> ボタンのスタイル  
   
-ボタンのスタイルを適用する[CButton クラス](../../mfc/reference/cbutton-class.md)ラジオ ボタンなどのオブジェクトのチェック ボックス、プッシュします。 スタイルの組み合わせを指定、 *dwStyle*パラメーターの[CButton::Create](../../mfc/reference/cbutton-class.md#create)します。 Windows でボタンのスタイルの詳細については、次を参照してください。[ボタンのスタイル (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951)します。  
+ボタンのスタイルを適用する[CButton クラス](../../mfc/reference/cbutton-class.md)ラジオ ボタンなどのオブジェクトのチェック ボックス、プッシュします。 スタイルの組み合わせを指定、 *dwStyle*パラメーターの[CButton::Create](../../mfc/reference/cbutton-class.md#create)します。 Windows でボタンのスタイルの詳細については、次を参照してください。[ボタンのスタイル (Windows)](/windows/desktop/Controls/button-styles)します。  
   
 ### <a name="button-types"></a>ボタンの種類  
   
@@ -288,7 +288,7 @@ ms.locfileid: "43199922"
   
 ## <a name="combo-box-styles"></a>  コンボ ボックス スタイル  
   
-MFC では、次のコンボ ボックス スタイルを使用できます。 Windows のコンボ ボックス スタイルの詳細については、次を参照してください。[コンボ ボックス スタイル (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796)します。  
+MFC では、次のコンボ ボックス スタイルを使用できます。 Windows のコンボ ボックス スタイルの詳細については、次を参照してください。[コンボ ボックス スタイル (Windows)](/windows/desktop/Controls/combo-box-styles)します。  
   
 |スタイル|説明|  
 |-----------|-----------------|  
@@ -308,7 +308,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
   
 ## <a name="edit-styles"></a>  エディット スタイル  
   
-編集スタイルを適用する[CEdit クラス](../../mfc/reference/cedit-class.md)オブジェクト。 スタイルの組み合わせを指定、 *dwStyle*パラメーターの[CEdit::Create](../../mfc/reference/cedit-class.md#create)します。 Windows での編集コントロールのスタイルの詳細については、次を参照してください。[コントロールのスタイルを編集する (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464)します。  
+編集スタイルを適用する[CEdit クラス](../../mfc/reference/cedit-class.md)オブジェクト。 スタイルの組み合わせを指定、 *dwStyle*パラメーターの[CEdit::Create](../../mfc/reference/cedit-class.md#create)します。 Windows での編集コントロールのスタイルの詳細については、次を参照してください。[コントロールのスタイルを編集する (Windows)](/windows/desktop/Controls/edit-control-styles)します。  
   
 |スタイル|説明|  
 |-----------|-----------------|  
@@ -339,7 +339,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
   
 ## <a name="list-box-styles"></a> リスト ボックス スタイル  
   
-リスト ボックス スタイルを適用する[CListBox クラス](../../mfc/reference/clistbox-class.md)オブジェクト。 スタイルの組み合わせを指定、 *dwStyle*パラメーターの[CListBox::Create](../../mfc/reference/clistbox-class.md#create)します。 Windows でリスト ボックス スタイルの詳細については、次を参照してください。[リスト ボックス スタイル (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775149)します。  
+リスト ボックス スタイルを適用する[CListBox クラス](../../mfc/reference/clistbox-class.md)オブジェクト。 スタイルの組み合わせを指定、 *dwStyle*パラメーターの[CListBox::Create](../../mfc/reference/clistbox-class.md#create)します。 Windows でリスト ボックス スタイルの詳細については、次を参照してください。[リスト ボックス スタイル (Windows)](/windows/desktop/Controls/list-box-styles)します。  
   
 |スタイル|説明|  
 |-----------|-----------------|  
@@ -362,7 +362,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
   
 ##<a name="message-box-styles"></a>  メッセージ ボックス スタイル  
   
-メッセージ ボックス スタイルを適用する[AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox)項目。 スタイルの組み合わせを指定、 *%n タイプ*パラメーターの`AfxMessageBox`します。 Windows でのメッセージ ボックス スタイルの詳細については、次を参照してください。 [MessageBox 関数 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505)します。  
+メッセージ ボックス スタイルを適用する[AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox)項目。 スタイルの組み合わせを指定、 *%n タイプ*パラメーターの`AfxMessageBox`します。 Windows でのメッセージ ボックス スタイルの詳細については、次を参照してください。 [MessageBox 関数 (Windows)](/windows/desktop/api/winuser/nf-winuser-messagebox)します。  
   
 次のメッセージ ボックス スタイルを利用できます。  
   
@@ -403,7 +403,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
   
 ## <a name="scroll-bar-styles"></a> スクロール バー スタイル  
   
-スクロール バーのスタイルを適用する[CScrollBar クラス](../../mfc/reference/cscrollbar-class.md)オブジェクト。 スタイルの組み合わせを指定、 *dwStyle*パラメーターの[CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)します。 スクロール バーの Windows でのコントロールのスタイルの詳細については、次を参照してください。[スクロール バー コントロールのスタイル (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533)します。  
+スクロール バーのスタイルを適用する[CScrollBar クラス](../../mfc/reference/cscrollbar-class.md)オブジェクト。 スタイルの組み合わせを指定、 *dwStyle*パラメーターの[CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)します。 スクロール バーの Windows でのコントロールのスタイルの詳細については、次を参照してください。[スクロール バー コントロールのスタイル (Windows)](/windows/desktop/Controls/scroll-bar-control-styles)します。  
   
 |スタイル|説明|  
 |-----------|-----------------|  
@@ -420,7 +420,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
   
 ## <a name="static-styles"></a> 静的なスタイル  
   
-静的なスタイルを適用する[CStatic クラス](../../mfc/reference/cstatic-class.md)オブジェクト。 スタイルの組み合わせを指定、 *dwStyle*パラメーターの[CStatic::Create](../../mfc/reference/cstatic-class.md#create)します。 Windows での静的コントロール スタイルの詳細については、次を参照してください。[静的コントロール スタイル (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773)します。  
+静的なスタイルを適用する[CStatic クラス](../../mfc/reference/cstatic-class.md)オブジェクト。 スタイルの組み合わせを指定、 *dwStyle*パラメーターの[CStatic::Create](../../mfc/reference/cstatic-class.md#create)します。 Windows での静的コントロール スタイルの詳細については、次を参照してください。[静的コントロール スタイル (Windows)](/windows/desktop/Controls/static-control-styles)します。  
   
 |スタイル|説明|  
 |-----------|-----------------|  
@@ -488,7 +488,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
   
 ## <a name="extended-window-styles"></a> 拡張ウィンドウ スタイル  
   
-拡張ウィンドウ スタイルを適用する[CWnd クラス](../../mfc/reference/cwnd-class.md)オブジェクト。 スタイルの組み合わせを指定、 *dwExStyle*パラメーターの[とき](../../mfc/reference/cwnd-class.md#createex)します。 Windows で拡張ウィンドウ スタイルの詳細については、次を参照してください。[拡張ウィンドウ スタイル (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543)します。  
+拡張ウィンドウ スタイルを適用する[CWnd クラス](../../mfc/reference/cwnd-class.md)オブジェクト。 スタイルの組み合わせを指定、 *dwExStyle*パラメーターの[とき](../../mfc/reference/cwnd-class.md#createex)します。 Windows で拡張ウィンドウ スタイルの詳細については、次を参照してください。[拡張ウィンドウ スタイル (Windows)](/windows/desktop/winmsg/extended-window-styles)します。  
   
 |スタイル|説明|  
 |-----------|-----------------|  
@@ -524,14 +524,14 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
 [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)  
 [CStatic::Create](../../mfc/reference/cstatic-class.md#create)  
 [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox)  
-[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)  
-[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)  
-[ボタンのスタイル (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951)  
-[コンボ ボックス スタイル (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796)  
-[編集コントロールのスタイル (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464)  
-[リスト ボックス スタイル (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775149) 
-[MessageBox 関数 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505) 
-[スクロール バー コントロールのスタイル (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533)  
-[静的コントロール スタイル (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773)  
+[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)  
+[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)  
+[ボタンのスタイル (Windows)](/windows/desktop/Controls/button-styles)  
+[コンボ ボックス スタイル (Windows)](/windows/desktop/Controls/combo-box-styles)  
+[編集コントロールのスタイル (Windows)](/windows/desktop/Controls/edit-control-styles)  
+[リスト ボックス スタイル (Windows)](/windows/desktop/Controls/list-box-styles) 
+[MessageBox 関数 (Windows)](/windows/desktop/api/winuser/nf-winuser-messagebox) 
+[スクロール バー コントロールのスタイル (Windows)](/windows/desktop/Controls/scroll-bar-control-styles)  
+[静的コントロール スタイル (Windows)](/windows/desktop/Controls/static-control-styles)  
 [ウィンドウ スタイル (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600)  
-[拡張ウィンドウ スタイル (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543)  
+[拡張ウィンドウ スタイル (Windows)](/windows/desktop/winmsg/extended-window-styles)  

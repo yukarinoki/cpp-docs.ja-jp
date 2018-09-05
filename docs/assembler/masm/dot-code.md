@@ -1,7 +1,7 @@
 ---
-title: .コード |Microsoft ドキュメント
+title: .コード |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,28 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59e376fc9c10ab8891b02e4da334341ae0534b73
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: ff2d66cfc79e84c8c4c7cf92e117c9ac8c84a555
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051237"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682488"
 ---
 # <a name="code"></a>.CODE
-使用すると[です。モデル](../../assembler/masm/dot-model.md)、コード セグメントの開始を示します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-.CODE [[name]]  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
-  
-|パラメーター|説明|  
-|---------------|-----------------|  
-|`name`|コード セグメントの名前を指定する省略可能なパラメーターです。 既定の名前は非常に小さく、small、コンパクト、およびフラット _TEXT[モデル](../../assembler/masm/dot-model.md)です。 既定の名前は*modulename*_TEXT その他のモデル。|  
-  
-## <a name="see-also"></a>関連項目  
- [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)   
- [.DATA](../../assembler/masm/dot-data.md)
+
+使用すると[します。モデル](../../assembler/masm/dot-model.md)、コード セグメントの開始を示します。
+
+## <a name="syntax"></a>構文
+
+> .コード [name]
+
+#### <a name="parameters"></a>パラメーター
+
+|パラメーター|説明|
+|---------------|-----------------|
+|`name`|コード セグメントの名前を指定する省略可能なパラメーター。 既定の名前は小さな、s、compact、およびフラット _TEXT[モデル](../../assembler/masm/dot-model.md)します。 既定の名前は*modulename*_TEXT 他のモデル。|
+
+## <a name="see-also"></a>関連項目
+
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[.DATA](../../assembler/masm/dot-data.md)<br/>

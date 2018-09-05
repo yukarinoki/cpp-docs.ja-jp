@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 829dbcc78e7d415de1745a8bd0cceb1f8c475ce0
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 2538e2b14277b24c583ae2392dd9249c93d4854b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336441"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690266"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>ウィザードで生成されたアクセサーのフィールド ステータスのデータ メンバー
 ATL OLE DB コンシューマー ウィザードを使用してコンシューマーを作成するときに、ウィザードは、列マップで指定したフィールドごとにユーザー レコード クラスのデータ メンバーを生成します。 各データ メンバーが型の`DWORD`該当するフィールドに対応する状態値が含まれています。  
@@ -85,7 +85,7 @@ END_COLUMN_MAP()
   
  特定のフィールドに NULL 値を設定するのに状態の値を使用することもできます。 これにより、フィールドの値を 0 ではなく、NULL として区別する場合に役立ちます。 NULL が有効な値、または特殊な値かどうかを判断し、アプリケーションが処理する方法を決定する責任です。 OLE DB は、ジェネリック、NULL 値を指定する適切な手段として、DBSTATUS_S_ISNULL を定義します。 コンシューマーは、データを読み取るし、値が null、status フィールドは、DBSTATUS_S_ISNULL に設定されます。 コンシューマーは、NULL 値を設定する場合、コンシューマーは、プロバイダーを呼び出す前に DBSTATUS_S_ISNULL にステータス値を設定します。  
   
- 次に、Oledb.h を開き、検索`DBSTATUSENUM`します。 に対して 0 以外の状態を表す数値を照合することができますし、`DBSTATUSENUM`列挙値。 列挙型の名前で何が問題を通知するのに十分でない場合は、"Status"、「データの値をバインドする」のセクションのトピックを参照してください、 [OLE DB プログラマ ガイド](http://go.microsoft.com/fwlink/p/?linkid=121548)します。 このトピックには、作業またはデータを設定するときに使用される状態値のテーブルが含まれています。 長さの値については、同じセクションでは、"Length"トピックを参照してください。  
+ 次に、Oledb.h を開き、検索`DBSTATUSENUM`します。 に対して 0 以外の状態を表す数値を照合することができますし、`DBSTATUSENUM`列挙値。 列挙型の名前で何が問題を通知するのに十分でない場合は、"Status"、「データの値をバインドする」のセクションのトピックを参照してください、 [OLE DB プログラマ ガイド](/previous-versions/windows/desktop/ms713643\(v=vs.85\))します。 このトピックには、作業またはデータを設定するときに使用される状態値のテーブルが含まれています。 長さの値については、同じセクションでは、"Length"トピックを参照してください。  
   
 ## <a name="retrieving-the-length-or-status-of-a-column"></a>長さまたは列のステータスを取得します。  
  可変長列の長さ、または (たとえば、DBSTATUS_S_ISNULL の確認) を列のステータスを取得できます。  

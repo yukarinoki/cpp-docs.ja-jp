@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 693a0e63e5fe67b1a3837ae71945ccc60b5fb247
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 475a4f4d5f39f7fdfa569441fb2cb0fc72b745a0
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204344"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677883"
 ---
 # <a name="ccomcoclass-class"></a>CComCoClass クラス
 このクラスは、クラスのインスタンスを作成し、そのプロパティを取得するためのメソッドを提供します。  
@@ -58,7 +58,7 @@ class CComCoClass
 |[CComCoClass::GetObjectDescription](#getobjectdescription)|(静的)オブジェクトの説明を返すようにオーバーライドします。|  
   
 ## <a name="remarks"></a>Remarks  
- `CComCoClass` オブジェクトの CLSID を取得する、エラー情報を設定およびクラスのインスタンスを作成するメソッドを提供します。 登録されている任意のクラス、[オブジェクト マップ](https://msdn.microsoft.com/b57619cc-534f-4b8f-bfd4-0c12f937202f)から派生する必要があります`CComCoClass`します。  
+ `CComCoClass` オブジェクトの CLSID を取得する、エラー情報を設定およびクラスのインスタンスを作成するメソッドを提供します。 オブジェクト マップに登録されている任意のクラスから派生する必要があります`CComCoClass`します。  
   
  `CComCoClass` また、オブジェクトの既定のクラス ファクトリと集計モデルを定義します。 `CComCoClass` 次の 2 つのマクロを使用します。  
   

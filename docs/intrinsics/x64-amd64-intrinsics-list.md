@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f966491603ad1fda04bef34181ebb4937df6a65e
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: eedbc29b5012c3a4355178d0fbd83aad81e9cb95
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209288"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680413"
 ---
 # <a name="x64-amd64-intrinsics-list"></a>x64 (amd64) 組み込み一覧
 
@@ -32,13 +32,13 @@ ms.locfileid: "39209288"
 
 - [Intel Intrinsics Guide](https://software.intel.com/sites/landingpage/IntrinsicsGuide)します。 検索ボックスを使って特定の組み込みを見つけてください。
 
-- [Intel 64 および ia-32 アーキテクチャ ソフトウェア デベロッパーズ マニュアル](https://go.microsoft.com/fwlink/p/?LinkID=510021)
+- [Intel 64 および ia-32 アーキテクチャ ソフトウェア デベロッパーズ マニュアル](https://software.intel.com/articles/intel-sdm)
 
-- [Intel アーキテクチャ命令セット拡張機能プログラミング リファレンス](https://go.microsoft.com/fwlink/p/?linkid=874960)
+- [Intel アーキテクチャ命令セット拡張機能プログラミング リファレンス](https://software.intel.com/isa-extensions)
 
-- [Intel Advanced Vector 拡張の概要](https://go.microsoft.com/fwlink/p/?linkid=874961)
+- [Intel Advanced Vector 拡張の概要](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
 
-- [AMD 開発者ガイド、マニュアル、および ISA ドキュメント](https://go.microsoft.com/fwlink/p/?linkid=874958)
+- [AMD 開発者ガイド、マニュアル、および ISA ドキュメント](https://developer.amd.com/resources/developer-guides-manuals/)
 
 次の表は、x64 プロセッサで利用可能な組み込みの一覧です。 [テクノロジ] 列に、必要な命令セットのサポートを示します。 [__cpuid](../intrinsics/cpuid-cpuidex.md) 組み込みを使用して、実行時に命令セットのサポートを確認します。 1 つの行に 2 つのエントリがある場合は、同じ組み込みに対する異なるエントリ ポイントを表しています。 [1] は、組み込みが AMD プロセッサでのみ利用可能であることを示します。 [2] は、組み込みが Intel プロセッサでのみ利用可能であることを示します。 [3] は、プロトタイプがマクロであることを示します。 関数プロトタイプに必要なヘッダーが "ヘッダー" 列に示されています。 分かりやすくするために、Intrin.h ヘッダーには immintrin.h と ammintrin.h の両方を含めています。
 

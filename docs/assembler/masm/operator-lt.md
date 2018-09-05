@@ -1,7 +1,7 @@
 ---
-title: LT 演算子 |Microsoft ドキュメント
+title: 演算子 LT |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bce31c838d8920fef95c80f2a4eb9954468bc3d8
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: de4702139148ae4448200b4fbb510803283daf72
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055242"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688722"
 ---
 # <a name="operator-lt"></a>LT 演算子
-True (-1) を返します*expression1*はより小さい*expression2*、ない場合は false (0) を返します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-expression1 LT expression2  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [演算子リファレンス](../../assembler/masm/operators-reference.md)
+
+True (-1) を返します*expression1*がより小さい*expression2*、ない場合は、false (0) を返します。
+
+## <a name="syntax"></a>構文
+
+> expression1 LT expression2
+
+## <a name="see-also"></a>関連項目
+
+[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>

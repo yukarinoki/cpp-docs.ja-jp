@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 061bfc2f083061d352fa7f93bb572456a5a23451
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a63caaa23fa59356a5904740cf03b8c36a909930
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218373"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688573"
 ---
 # <a name="atl-text-encoding-functions"></a>ATL テキスト エンコード関数
 これらの関数は、テキストのエンコードとデコードをサポートします。
@@ -451,7 +451,7 @@ inline BOOL QPDecode(
  バイト単位の長さを格納する変数を指すポインター*ときに szDest*します。 関数が成功すると、変数は、バッファーに書き込まれたバイト数を受け取ります。 関数が失敗した場合、変数は、バッファーのバイトで、必要な長さを受け取ります。  
   
  [in]*dwFlags*  
- 変換の実行方法を記述するフラグ。 参照してください[ATLSMTP_QPENCODE フラグ](https://msdn.microsoft.com/library/6b15a3ab-8e57-49e4-8104-09b26ebb96c4)します。  
+ 変換の実行方法を記述する ATLSMTP_QPENCODE フラグ。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、true を返します。  

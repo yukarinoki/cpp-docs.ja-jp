@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0baf6eb87cd73293bc02b670e915bfd4a10cbfd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a05eddd4f0ed75db4e122b1544b0347ad922eba3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219153"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688761"
 ---
 # <a name="string-and-character-literals--c"></a>文字列リテラルと文字リテラル (C++)
 C++ はさまざまな文字列と文字型をサポートし、これらの型のリテラル値を表す方法を提供しています。 ソース コードでは、文字セットを使用して文字リテラルと文字列リテラルの内容を表現します。 ユニバーサル文字名とエスケープ文字を使用すると、基本ソース文字セットのみを使用してあらゆる文字列を表現できます。 未加工文字列リテラルを使用すると、エスケープ文字の使用を避けられるとともに、全種類の文字列リテラルを表すことができます。 余分な構築または変換手順を実行することなく、std::string リテラルを作成することもできます。  
@@ -248,7 +248,7 @@ auto s4 = U"hello"; // const char32_t*
 ```  
   
 ### <a name="raw-string-literals-c11"></a>未加工の文字列リテラル (C++11)  
- 未加工文字列リテラルが null で終わる配列: 任意の文字型-、二重引用符 (")、円記号を含む、任意のグラフィック文字を格納している (\\)、または改行文字。 未加工文字列リテラルは、文字クラスを使用する正規表現や、HTML 文字列、XML 文字列でよく使用されます。 例については、次の記事を参照してください: [c++ 11 に関する Bjarne Stroustrup の FAQ](http://go.microsoft.com/fwlink/p/?linkid=401172)します。  
+ 未加工文字列リテラルが null で終わる配列: 任意の文字型-、二重引用符 (")、円記号を含む、任意のグラフィック文字を格納している (\\)、または改行文字。 未加工文字列リテラルは、文字クラスを使用する正規表現や、HTML 文字列、XML 文字列でよく使用されます。 例については、次の記事を参照してください: [c++ 11 に関する Bjarne Stroustrup の FAQ](http://www.stroustrup.com/C++11FAQ.html)します。  
   
 ```cpp  
 // represents the string: An unescaped \ character  

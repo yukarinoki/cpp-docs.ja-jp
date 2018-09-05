@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d433c76e054b16491ab7586d6107b4931dc2915
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cf8c5bf4336df95caabd26d5ba4a395190c9591a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203717"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677849"
 ---
 # <a name="composite-control-global-functions"></a>複合コントロールに関するグローバル関数
 これらの関数は、ダイアログ ボックスの作成と、作成、ホスト、および ActiveX コントロールのライセンスのサポートを提供します。  
@@ -442,7 +442,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
  コードをホストしているコントロールの初期化が成功した場合、0 以外の場合それ以外の場合は FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
- ATL コントロール ホスト API を使用する前に、この関数を呼び出す必要があります。 この関数への呼び出しの後、 **"AtlAxWin"** への呼び出しでウィンドウ クラスを使用できます[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)または[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)」の説明に従って、Windows SDK。  
+ ATL コントロール ホスト API を使用する前に、この関数を呼び出す必要があります。 この関数への呼び出しの後、 **"AtlAxWin"** への呼び出しでウィンドウ クラスを使用できます[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)または[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)」の説明に従って、Windows SDK。  
 
 ##  <a name="atlaxwinterm"></a>  AtlAxWinTerm  
  この関数の登録を解除してコードをホストしている、ATL のコントロールの初期化を解除、 **"AtlAxWin80**と **"AtlAxWinLic80"** ウィンドウ クラス。  

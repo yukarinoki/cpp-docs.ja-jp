@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef28bc57981868eaa1cadcbead3c11c8fade57e8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 33054190e94ca7d136e319b2afc9e28c9080de05
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217090"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677977"
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>CMFCVisualManagerOffice2003 クラス
 `CMFCVisualManagerOffice2003` Microsoft Office 2003 の外観をアプリケーションに提供します。  
@@ -206,7 +206,7 @@ class CMFCVisualManagerOffice2003 : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerOffice2003::OnHighlightQuickCustomizeMenuButton](#onhighlightquickcustomizemenubutton)|フレームワークを強調表示を描画するときは、このメソッドは、メニュー ボタンをクイック-カスタマイズします。 (`CMFCVisualManagerOfficeXP::OnHighlightQuickCustomizeMenuButton` をオーバーライドします)。|  
 |[CMFCVisualManagerOffice2003::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)|フレームワークは、強調表示されたメニュー コマンドを描画するときに、このメソッドを呼び出します。 (`CMFCVisualManagerOfficeXP::OnHighlightRarelyUsedMenuItems` をオーバーライドします)。|  
 |[CMFCVisualManagerOffice2003::OnUpdateSystemColors](#onupdatesystemcolors)|フレームワークは、システムの色を変更するときに、この関数を呼び出します。 (`CMFCVisualManagerOfficeXP::OnUpdateSystemColors` をオーバーライドします)。|  
-|[CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors)|ビジュアル マネージャーは、ネイティブの Windows XP テーマの色を使用する必要がありますか、色がから取得したかどうかを指定します[GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)します。|  
+|[CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors)|ビジュアル マネージャーは、ネイティブの Windows XP テーマの色を使用する必要がありますか、色がから取得したかどうかを指定します[GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)します。|  
 |[CMFCVisualManagerOffice2003::SetStatusBarOfficeXPLook](#setstatusbarofficexplook)|Windows XP のグローバル テーマを使用することを指定します。|  
 |[CMFCVisualManagerOffice2003::SetUseGlobalTheme](#setuseglobaltheme)|ビジュアル マネージャーがグローバルのテーマを使用するかどうかを指定します。|  
   
@@ -2231,7 +2231,7 @@ virtual void OnUpdateSystemColors();
  フレームワークでは、WM_SYSCOLORCHANGE メッセージの処理の一部としてこのメソッドを呼び出します。 アプリケーションで色を変更するときに、カスタム コードを実行する場合は、派生のビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="setdefaultwinxpcolors"></a>  CMFCVisualManagerOffice2003::SetDefaultWinXPColors  
- ビジュアル マネージャーは、ネイティブの Windows XP テーマの色を使用する必要がありますか、色がから取得したかどうかを指定します[GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)します。  
+ ビジュアル マネージャーは、ネイティブの Windows XP テーマの色を使用する必要がありますか、色がから取得したかどうかを指定します[GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)します。  
   
 ```  
 static void SetDefaultWinXPColors(BOOL bDefaultWinXPColors = TRUE);

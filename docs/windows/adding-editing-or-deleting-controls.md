@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 61caccd2a4511faf937f73e3ee17efe8f1b0bb2f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b28736e4e9c4b4f327f80a97b5b7ed3b6d1c7c40
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219437"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686273"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>コントロールの追加、編集、または削除
 
 使用して、**ダイアログ**エディター、追加できますが、サイズを変更、編集、およびダイアログ ボックスのコントロールを削除します。 をその ID などのコントロールのプロパティを編集することもできるかどうか、最初に表示される実行時にします。
 
-ショートカット メニューを使用することができます、**ダイアログ**エディターにすばやく追加するには、ActiveX コントロールのダイアログ ボックスが登録されているし、ActiveX コントロールを追加することができます、**ツールボックス**すばやくアクセスできます (詳細についてを参照してください[ツールボックスのカスタマイズ ダイアログ ボックス](https://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb))。
+ショートカット メニューを使用することができます、**ダイアログ**エディターにすばやく追加するには、ActiveX コントロールのダイアログ ボックスが登録されているし、ActiveX コントロールを追加することができます、**ツールボックス**すばやくアクセスできます (詳細についてを参照してください[ツールボックス](/visualstudio/ide/reference/toolbox))。
 
 - [ダイアログ ボックスにコントロールを追加します。](adding-a-control-to-a-dialog-box.md)
 

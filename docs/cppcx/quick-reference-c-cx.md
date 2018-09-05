@@ -9,15 +9,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a54774193c0274c2ee9e4f79c389cee3ffe5c49
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 272921d0a9ac00ec5ee69fb50a17a34e257b1725
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608334"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692589"
 ---
 # <a name="quick-reference-ccx"></a>クイック リファレンス (C++/CX)
-Windows ランタイムでは、信頼できるオペレーティング システム環境でのみ実行し、承認済みの関数、データ型、およびデバイスを使用して、Microsoft Store で配布されてユニバーサル Windows プラットフォーム (UWP) アプリをサポートします。 C++/cli CX の Windows ランタイム アプリの作成を簡略化します。 この記事では、クイック リファレンスです。詳細なドキュメントは、次を参照してください。[型システム](../cppcx/type-system-c-cx.md)と[Component Extensions for Runtime Platforms](http://go.microsoft.com/fwlink/p/?linkid=228720)します。  
+Windows ランタイムでは、信頼できるオペレーティング システム環境でのみ実行し、承認済みの関数、データ型、およびデバイスを使用して、Microsoft Store で配布されてユニバーサル Windows プラットフォーム (UWP) アプリをサポートします。 C++/cli CX の Windows ランタイム アプリの作成を簡略化します。 この記事では、クイック リファレンスです。詳細なドキュメントは、次を参照してください。[型システム](../cppcx/type-system-c-cx.md)します。  
   
  コマンドラインでビルドするときに使用して、 **/ZW**コンパイラ オプションを UWP アプリまたは Windows ランタイム コンポーネントをビルドします。 Windows ランタイム メタデータ (.winmd) ファイルで定義されている Windows ランタイムの宣言にアクセスする指定、`#using`ディレクティブまたは **/FU**コンパイラ オプション。 UWP アプリ用のプロジェクトを作成するときに、既定では、Visual Studio はこれらのオプションを設定し、すべての Windows ランタイム ライブラリへの参照を追加します。  
   

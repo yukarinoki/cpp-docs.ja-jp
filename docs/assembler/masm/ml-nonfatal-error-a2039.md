@@ -1,7 +1,7 @@
 ---
-title: ML の致命的でないエラー A2039 |Microsoft ドキュメント
+title: ML の致命的でないエラー A2039 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab04ad28754aab16c76c899b3eb588b7f59720c8
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: f51b1f9fcd114e1db6f8f1e3d8d0f1c5ad1989cb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057618"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687431"
 ---
 # <a name="ml-nonfatal-error-a2039"></a>ML の致命的でないエラー A2039
-**行が長すぎます**  
-  
- ソース ファイルの行では、512 文字の制限を超えました。  
-  
- 行連結文字 (\) で複数の物理行が連結された場合、結果として得られる論理行はも、512 文字に制限します。  
-  
-## <a name="see-also"></a>関連項目  
- [ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)
+
+**行が長すぎます**
+
+ソース ファイルの行には、512 文字の制限を超えています。
+
+行連結文字 (\) で複数の物理行が連結された場合、その結果、論理行は 512 文字に制限されます。
+
+## <a name="see-also"></a>関連項目
+
+[ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)<br/>

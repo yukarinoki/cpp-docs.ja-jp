@@ -1,7 +1,7 @@
 ---
-title: ラベル (MASM) |Microsoft ドキュメント
+title: ラベル (MASM) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4189d1ae5cf79d0ecf8cc07fa940e754fe314a6d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: d7fe6e6b2297cac689ed5f179b3e299488dd99cc
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054069"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690591"
 ---
 # <a name="label-masm"></a>LABEL (MASM)
-現在の場所カウンター値を割り当てることによって新しいラベルを作成し、指定された`type`に*名前*です。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-      name LABEL type  
-name LABEL [[NEAR | FAR | PROC]] PTR [[type]]   
-```  
-  
-## <a name="see-also"></a>関連項目  
- [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+
+現在の場所カウンター値を割り当てることで新しいラベルを作成しますと、指定された*型*に*名前*。
+
+## <a name="syntax"></a>構文
+
+> *名前*ラベル*型*
+
+> *名前*ラベル [NEAR |ここまで |PTR の PROC] [*型*]
+
+## <a name="see-also"></a>関連項目
+
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>

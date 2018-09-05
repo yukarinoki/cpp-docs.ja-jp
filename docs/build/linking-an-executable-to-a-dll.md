@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49973d203670eaa2aa0988d9de04784d13eaec09
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e72cc680036d2c7e3737e5512c73115e29562018
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196688"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692216"
 ---
 # <a name="link-an-executable-to-a-dll"></a>DLL と実行形式のリンク  
   
@@ -76,7 +76,7 @@ ms.locfileid: "43196688"
   
 -   DLL がある場合、`DllMain`エントリ ポイント関数では、オペレーティング システム関数を呼び出したスレッドのコンテキストで`LoadLibrary`します。 以前の呼び出しのため、プロセスに DLL が既にアタッチされている場合、エントリ ポイント関数は呼び出されません`LoadLibrary`いるかどうかに対応する呼び出し、`FreeLibrary`関数。 DLL で使用する場合、明示的なリンクと、問題が発生することができます、`DllMain`関数のスレッドが既に存在するために、プロセスの各スレッドの初期化を実行するときに`LoadLibrary`(または`AfxLoadLibrary`) と呼びますが初期化されていません。  
   
--   DLL が静的範囲としてのデータを宣言する場合`__declspec(thread)`、明示的にリンクされている場合に保護エラーが発生できます。 呼び出して、DLL が読み込まれた後`LoadLibrary`コードは、このデータを参照するたびに保護違反が発生します。 静的範囲のデータには、グローバル スタティック アイテムとローカル スタティック アイテムの両方が含まれます。そのため、DLL を作成するときにする必要がありますか、スレッド ローカル ストレージを使用しないようにまたは DLL の動的な読み込みの潜在的な落とし穴について DLL のユーザーに通知。 詳細については、次を参照してください。[ダイナミック リンク ライブラリ (Windows SDK) でスレッド ローカル ストレージを使用して](https://msdn.microsoft.com/library/windows/desktop/ms686997)します。  
+-   DLL が静的範囲としてのデータを宣言する場合`__declspec(thread)`、明示的にリンクされている場合に保護エラーが発生できます。 呼び出して、DLL が読み込まれた後`LoadLibrary`コードは、このデータを参照するたびに保護違反が発生します。 静的範囲のデータには、グローバル スタティック アイテムとローカル スタティック アイテムの両方が含まれます。そのため、DLL を作成するときにする必要がありますか、スレッド ローカル ストレージを使用しないようにまたは DLL の動的な読み込みの潜在的な落とし穴について DLL のユーザーに通知。 詳細については、次を参照してください。[ダイナミック リンク ライブラリ (Windows SDK) でスレッド ローカル ストレージを使用して](/windows/desktop/Dlls/using-thread-local-storage-in-a-dynamic-link-library)します。  
   
 <a name="linking-implicitly"></a>  
   

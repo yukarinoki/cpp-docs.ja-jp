@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac4a2c7bafc25aaaf8591f38cad47df199e74c30
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0801fab2ef5cec0da42cb40e28cd5124141c1007
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196592"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686086"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl クラス
 Windows ツール バー コモン コントロールの機能が用意されています。  
@@ -622,7 +622,7 @@ virtual BOOL Create(
   
 - WS_DISABLED ことはほとんどありません。  
   
- 参照してください[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)ウィンドウ スタイルの説明については、Windows SDK に含まれています。  
+ 参照してください[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)ウィンドウ スタイルの説明については、Windows SDK に含まれています。  
   
  組み合わせを必要に応じて適用[コモン コントロール スタイル](/windows/desktop/Controls/common-control-styles)」の説明に従って、Windows SDK。  
   
@@ -646,7 +646,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>パラメーター  
  *dwExStyle*  
- 作成されるコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK に含まれています。  
+ 作成されるコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK に含まれています。  
   
  *dwStyle*  
  ツールバー コントロールのスタイルを指定します。 ツールバーには、WS_CHILD スタイルが常に必要です。 」の説明に従って、toolbar のスタイルとウィンドウ スタイルの任意の組み合わせを指定するさらに、**解説**の[作成](#create)です。  

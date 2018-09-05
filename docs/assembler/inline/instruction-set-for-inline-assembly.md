@@ -1,7 +1,7 @@
 ---
-title: インライン アセンブリの命令セットの |Microsoft ドキュメント
+title: インライン アセンブリの命令セットの |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -17,18 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 622f5aea757506dd3bf48056a139f381e9d8a883
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 02fe69fad2e1ef9fb8aa0c5aa23913ccf403e15a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051118"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693996"
 ---
 # <a name="instruction-set-for-inline-assembly"></a>インライン アセンブリの命令セット
-## <a name="microsoft-specific"></a>Microsoft 固有の仕様  
- Visual C コンパイラでは、Pentium 4、AMD Athlon してすべてのオペコードをサポートします。 ターゲット プロセッサでサポートされている追加の指示を作成、 [_emit 疑似命令](../../assembler/inline/emit-pseudoinstruction.md)です。  
-  
- **Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- [__asm ブロックでのアセンブリ言語の使用](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+
+**Microsoft 固有の仕様**
+
+Visual C コンパイラでは、Pentium 4、AMD Athlon してすべてのオペコードをサポートします。 ターゲット プロセッサでサポートされている追加の手順で作成できる、 [_emit 疑似命令](../../assembler/inline/emit-pseudoinstruction.md)します。
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
+[__asm ブロックでのアセンブリ言語の使用](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

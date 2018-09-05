@@ -1,7 +1,7 @@
 ---
-title: .まで |Microsoft ドキュメント
+title: .まで |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8eaf4a63bda95c7cbc3a41accd44faf5d3bcc39f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 1fd0c6ef768f171694b2852c46892d60643fcfe0
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051105"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689306"
 ---
 # <a name="until"></a>.UNTIL
-参照してください[です。繰り返し](../../assembler/masm/dot-repeat.md)です。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-.UNTIL  
-  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+
+参照してください[します。繰り返し](../../assembler/masm/dot-repeat.md)します。
+
+## <a name="syntax"></a>構文
+
+> .UNTIL
+
+## <a name="see-also"></a>関連項目
+
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>

@@ -1,7 +1,7 @@
 ---
-title: INSTR |Microsoft ドキュメント
+title: INSTR |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dd640aafe78f99f50d98569792d0c1c5ef330ee
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: f540b7fffb23321c8b3aa22e154196c48f76cd58
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054534"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683059"
 ---
 # <a name="instr"></a>INSTR
-最初に見つかった*textitem2*で*textitem1*です。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-name  
- INSTR [[position,]] textitem1, textitem2  
-```  
-  
-## <a name="remarks"></a>コメント  
- 開始*位置*は省略可能です。 各テキスト アイテムは、リテラル文字列で始まる定数を指定できます、 `%`、またはマクロの関数によって返される文字列。  
-  
-## <a name="see-also"></a>関連項目  
- [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+
+最初に見つかった*textitem2*で*textitem1*します。
+
+## <a name="syntax"></a>構文
+
+> *名前*INSTR [*位置*、] *textitem1*、 *textitem2*
+
+## <a name="remarks"></a>Remarks
+
+開始*位置*は省略可能です。 各テキスト項目が前に、定数、リテラル文字列を指定できます、 `%`、またはマクロの関数によって返される文字列。
+
+## <a name="see-also"></a>関連項目
+
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>

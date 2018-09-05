@@ -1,7 +1,7 @@
 ---
-title: 配置 (MASM) |Microsoft ドキュメント
+title: ALIGN (MASM) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c66a9e29b99786cd83d8994ed2da77ac2f3e48ae
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 52d539cba3f6e00b76b36c1793f383d0615263c3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32048749"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691668"
 ---
 # <a name="align-masm"></a>ALIGN (MASM)
-次の変数またはバイトの倍数に命令配置`number`です。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-ALIGN [[  
-number  
-]]  
-  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+
+次の変数または命令のバイトの倍数である配置*数*します。
+
+## <a name="syntax"></a>構文
+
+> 配置 [*数*]
+
+## <a name="see-also"></a>関連項目
+
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>

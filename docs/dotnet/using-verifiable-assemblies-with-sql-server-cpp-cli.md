@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: dfe64e627fd3ca37ab1e1d2d820cafaf3a6a4258
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 65a3c4da1664e34e40e0961655c130f320efb17b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199966"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690704"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>SQL Server での確認可能なアセンブリの使用 (C++/CLI)
-ダイナミック リンク ライブラリ (Dll) としてパッケージ化、拡張ストアド プロシージャは、Visual C で開発した関数を使用して SQL Server の機能を拡張する手段を提供します。 拡張ストアド プロシージャは Dll 内の関数として実装されます。 拡張ストアド プロシージャも定義するだけでなく、機能[ユーザー定義型](../cpp/classes-and-structs-cpp.md)と[集計関数](https://msdn.microsoft.com/de255454-f45e-4281-81f9-bc61893ac5da)(SUM、AVG など)。  
+ダイナミック リンク ライブラリ (Dll) としてパッケージ化、拡張ストアド プロシージャは、Visual C で開発した関数を使用して SQL Server の機能を拡張する手段を提供します。 拡張ストアド プロシージャは Dll 内の関数として実装されます。 拡張ストアド プロシージャも定義するだけでなく、機能[ユーザー定義型](../cpp/classes-and-structs-cpp.md)と集計関数 (SUM、AVG など)。  
   
  クライアントは、拡張ストアド プロシージャを実行するとき、SQL Server DLL を検索は、拡張ストアド プロシージャに関連付けられているし、DLL を読み込みます。 SQL Server では、要求された拡張ストアド プロシージャを呼び出すし、指定したセキュリティ コンテキストで実行します。 拡張にストアド パスの結果が設定され、サーバーにパラメーターを返しますのプロシージャをします。  
   

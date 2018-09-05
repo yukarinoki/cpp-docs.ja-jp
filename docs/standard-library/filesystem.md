@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81046c8472a2a741d5e59622986326ab4b399871
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 88e44100e20ce40b343a82c7caed66387ca1bcd5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207924"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681041"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -112,7 +112,7 @@ using namespace std::experimental::filesystem::v1;
 
 ## <a name="structs"></a>構造体
 
-|name|説明|
+|名前|説明|
 |----------|-----------------|
 |[space_info 構造体](../standard-library/space-info-structure.md)|ボリュームに関する情報を保持します。|
 
@@ -126,9 +126,10 @@ using namespace std::experimental::filesystem::v1;
 
 ## <a name="enumerations"></a>列挙
 
-|name|説明|
+|名前|説明|
 |----------|-----------------|
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|[copy_file](https://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) と共に使用され、コピー先ファイルが既に存在する場合の動作を決定する列挙体です。|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|[copy_file](../standard-library/filesystem-functions.md#copy_file) と共に使用され、コピー先ファイルが既に存在する場合の動作を決定する列挙体です。|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|[copy_file](../standard-library/filesystem-functions.md#copy_file) と共に使用され、コピー先ファイルが既に存在する場合の動作を決定する列挙体です。|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|ディレクトリ反復子のオプションを指定する列挙体。|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|ファイルの種類の列挙型。|
 |[perms](../standard-library/filesystem-enumerations.md#perms)|アクセス許可とアクセス許可に対するオプションを伝達するために使用されるビットマスク型|

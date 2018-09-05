@@ -1,7 +1,7 @@
 ---
-title: .CONST |Microsoft ドキュメント
+title: .CONST |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0da2e3787c277763dae99837e12e83c515bc811e
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 073f4f95315827f3534f8511f3a33a4d9cea246b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051619"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681970"
 ---
 # <a name="const"></a>.CONST
-使用すると[です。モデル](../../assembler/masm/dot-model.md)、定数データ セグメントの開始 (セグメント名 CONST)。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-.CONST  
-  
-```  
-  
-## <a name="remarks"></a>コメント  
- このセグメントには、読み取り専用属性があります。  
-  
-## <a name="see-also"></a>関連項目  
- [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+
+使用すると[します。モデル](../../assembler/masm/dot-model.md)、定数データ セグメントの開始 (セグメント名定数)。
+
+## <a name="syntax"></a>構文
+
+> .CONST
+
+## <a name="remarks"></a>Remarks
+
+このセグメントには、読み取り専用の属性があります。
+
+## <a name="see-also"></a>関連項目
+
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>

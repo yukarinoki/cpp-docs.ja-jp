@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c174c904dfb43ff3fa3c032bae30da8c1e139c3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0be29ed74b2c5abf8bc3c781900caa61ada3713f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222901"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693079"
 ---
 # <a name="collections-ccx"></a>コレクション (C++/CX)
 C +/cli/CX プログラムの場合は、標準テンプレート ライブラリ (STL) コンテナー、または他のユーザー定義コレクション型を自由に使用を行うことができます。 ただし、コレクションを渡す場合、双方向 Windows ランタイム アプリケーション バイナリ インターフェイス (ABI) を越えて — たとえば、XAML コントロールまたは JavaScript クライアント: Windows ランタイムのコレクション型を使用する必要があります。  
@@ -145,6 +145,5 @@ void FindButton(UIElementCollection^ col)
   
 ## <a name="see-also"></a>関連項目  
  [型システム](../cppcx/type-system-c-cx.md)   
- [組み込み型](https://msdn.microsoft.com/acc196fd-09da-4882-b554-6c94685ec75f)   
  [Visual C 言語リファレンス](../cppcx/visual-c-language-reference-c-cx.md)   
  [名前空間参照](../cppcx/namespaces-reference-c-cx.md)

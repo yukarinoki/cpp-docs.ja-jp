@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9458e427c1954a351ffcedfa2fce0a39634d8369
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 845ca21dc4de4263c9063712b372c70cfb022059
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216366"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685806"
 ---
 # <a name="statements-c"></a>ステートメント (C++)
 C++ ステートメントは、オブジェクトをどのような順序でどのように操作するかを制御するプログラム要素です。 ここでは、以下の内容について説明します。  
@@ -42,7 +42,7 @@ C++ ステートメントは、オブジェクトをどのような順序でど�
   
     -   [ジャンプ ステートメント](../cpp/jump-statements-cpp.md)します。 これらのステートメントは、制御を関数内の別の場所にすぐに移すか、関数から制御を戻します。  
   
-    -   [宣言ステートメント](https://msdn.microsoft.com/14538558-356f-450e-9e1e-3cd62ba952b9)します。 宣言は、プログラムに名前を導入します。 ([宣言と定義](declarations-and-definitions-cpp.md)宣言に関する詳細情報を提供します)。  
+    -   [宣言ステートメント](declarations-and-definitions-cpp.md)します。 宣言は、プログラムに名前を導入します。  
   
  例外処理ステートメントについては、次を参照してください。[例外処理](../cpp/exception-handling-in-visual-cpp.md)します。  
   

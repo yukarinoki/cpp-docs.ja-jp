@@ -1,7 +1,7 @@
 ---
-title: ENDM |Microsoft ドキュメント
+title: ENDM |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2d9060d409663bf6f65845de984654583de0ad6
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: a584d95e37b26ebed13a9380628b08af4e922f72
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052727"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685387"
 ---
 # <a name="endm"></a>ENDM
-マクロまたは繰り返しのブロックを終了します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-ENDM  
-  
-```  
-  
-## <a name="remarks"></a>コメント  
- 参照してください[マクロ](../../assembler/masm/macro.md)、[の](../../assembler/masm/for-masm.md)、 [FORC](../../assembler/masm/forc.md)、[繰り返します](../../assembler/masm/repeat.md)、または**中**です。  
-  
-## <a name="see-also"></a>関連項目  
- [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+
+マクロまたは繰り返しのブロックを終了します。
+
+## <a name="syntax"></a>構文
+
+> ENDM
+
+## <a name="remarks"></a>Remarks
+
+参照してください[マクロ](../../assembler/masm/macro.md)、[の](../../assembler/masm/for-masm.md)、 [FORC](../../assembler/masm/forc.md)、[繰り返します](../../assembler/masm/repeat.md)、または**中**します。
+
+## <a name="see-also"></a>関連項目
+
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>

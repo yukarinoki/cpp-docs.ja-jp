@@ -1,7 +1,7 @@
 ---
-title: SHORT 演算子 |Microsoft ドキュメント
+title: SHORT 演算子 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -17,22 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f307482e602759c688ebca120a46efce7624a25
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 13ea2b0d7333bcdabc42e59ac3f3d4e4a24a0af3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056328"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686237"
 ---
 # <a name="operator-short"></a>SHORT 演算子
-型を設定*ラベル*を短くします。 ジャンプはすべて*ラベル*短い必要があります (範囲ジャンプ命令から + 127 バイトに-128 を*ラベル*)。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-SHORT label  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [演算子リファレンス](../../assembler/masm/operators-reference.md)
+
+型を設定*ラベル*を短くします。 ジャンプはすべて*ラベル*短い必要があります (ジャンプ命令から 127 バイトに-128 からの範囲で*ラベル*)。
+
+## <a name="syntax"></a>構文
+
+> 短いラベル
+
+## <a name="see-also"></a>関連項目
+
+[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>

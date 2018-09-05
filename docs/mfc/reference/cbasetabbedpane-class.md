@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 412010f7e8599ab9a97ea5a4e5cab55fca6051a0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c5585ad86b0c55a7ab47cd026fd0bb7032db11b9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213857"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690435"
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane クラス
 [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) の機能を拡張して、タブ付きウィンドウの作成をサポートします。  
@@ -128,7 +128,7 @@ class CBaseTabbedPane : public CDockablePane
 |[CBaseTabbedPane::RecalcLayout](#recalclayout)|ウィンドウのレイアウト情報を再計算します。 (上書き[cpane::recalclayout](../../mfc/reference/cpane-class.md#recalclayout))。|  
 |[CBaseTabbedPane::RemovePane](#removepane)|タブ付きペインから、ウィンドウを削除します。|  
 |`CBaseTabbedPane::SaveSiblingBarIDs`|シリアル化中に内部的に使用します。|  
-|`CBaseTabbedPane::Serialize`|(上書き[cdockablepane::serialize](https://msdn.microsoft.com/09787e59-e446-4e76-894b-206d303dcfd6))。|  
+|`CBaseTabbedPane::Serialize`|(上書き[cdockablepane::serialize](cdockablepane-class.md))。|  
 |`CBaseTabbedPane::SerializeTabWindow`|シリアル化中に内部的に使用します。|  
 |[CBaseTabbedPane::SetAutoDestroy](#setautodestroy)|タブ形式のコントロール バーを自動的に破棄されるかどうかを判断します。|  
 |[CBaseTabbedPane::SetAutoHideMode](#setautohidemode)|ドッキング ペインの間の表示の切り替えと自動非表示モード。 (上書き[CDockablePane::SetAutoHideMode](../../mfc/reference/cdockablepane-class.md#setautohidemode))。|  

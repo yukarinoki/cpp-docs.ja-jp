@@ -17,21 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23266ca4b4d32146ed8627c6ce3ab1cc878d59cd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c313a72a3c76b65476659e463076d61383dd43a5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600653"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682084"
 ---
 # <a name="how-user-account-control-uac-affects-your-application"></a>ユーザー アカウント制御 (UAC: User Account Control) がアプリケーションに与える影響
 ユーザー アカウント制御 (UAC: User Account Control) は、限られた特権をユーザー アカウントに付与する Windows Vista の機能です。 UAC の詳細については、以下のサイトを参照してください。  
   
--   [Windows Vista ユーザー アカウント制御のステップ バイ ステップ ガイド](http://go.microsoft.com/fwlink/p/?linkid=53781)  
-  
--   [開発者のベスト プラクティスと、最低限の特権の環境でアプリケーションのガイドライン](http://go.microsoft.com/fwlink/p/?linkid=82444)  
-  
--   [理解し、Windows Vista でのユーザー アカウント制御の構成](http://go.microsoft.com/fwlink/p/?linkid=82445)  
+-   [開発者のベスト プラクティスと、最低限の特権の環境でアプリケーションのガイドライン](/windows/desktop/uxguide/winenv-uac)  
   
 ## <a name="building-projects-after-enabling-uac"></a>UAC を有効にした後のプロジェクトのビルド  
  UAC を無効にした状態で Windows Vista で Visual C++ プロジェクトをビルドし、後で UAC を有効にする場合は、正しく動作させるためにプロジェクトを消去して、リビルドする必要があります。  

@@ -1,7 +1,7 @@
 ---
-title: ML の致命的なエラー A1017 |Microsoft ドキュメント
+title: ML の致命的なエラー A1017 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5fcb2d921a40b35c6022b2aca1e22adc2d8c45e
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: fb98eab68da417526a75beaa57870ce906c85a8d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054684"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688560"
 ---
 # <a name="ml-fatal-error-a1017"></a>ML の致命的なエラー A1017
-**ソースのファイル名がありません。**  
-  
- ML には、アセンブリまたはリンカーに渡す、ファイルを見つけられませんでした。  
-  
- ML コマンド ライン オプションの対象となるファイル名を指定せずに付与すると、このエラーが生成されます。 .Asm 拡張子を持たないファイルを構成するを使用して、 **/Ta**コマンド ライン オプションです。  
-  
- このエラーは、ML 環境変数には、コマンド ライン オプションが含まれている場合は、パラメーターなしで ML を呼び出すことによって生成することもできます。  
-  
-## <a name="see-also"></a>関連項目  
- [ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)
+
+**ソースのファイル名がありません。**
+
+ML をリンカーに渡すアセンブリまたはファイルが見つかりませんでした。
+
+対象となるファイル名を指定しないで ML コマンド ライン オプションを指定すると、このエラーが生成されます。 .Asm 拡張機能がないファイルを構成するには、使用、 **/Ta**コマンド ライン オプション。
+
+このエラーは、ML 環境変数には、コマンド ライン オプションが含まれている場合は、パラメーターなしで ML を呼び出すことによって生成することもできます。
+
+## <a name="see-also"></a>関連項目
+
+[ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)<br/>
