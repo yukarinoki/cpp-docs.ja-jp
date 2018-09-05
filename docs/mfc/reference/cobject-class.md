@@ -31,11 +31,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ccbfc00af51c3327b86386905fb7571f5cbf41fc
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852056"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43757908"
 ---
 # <a name="cobject-class"></a>CObject クラス
 MFC ライブラリの重要な基底クラスです。  
@@ -96,7 +96,7 @@ class AFX_NOVTABLE CObject
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CObject`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afx.h  
   
 ##  <a name="assertvalid"></a>  Cobject::assertvalid  

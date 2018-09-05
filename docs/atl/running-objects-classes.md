@@ -17,21 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcbc0820f98052ee29c489ca9cb556e1c913d07c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 32d1363f845014bd10e6f0126e676c12477cea16
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958573"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752316"
 ---
 # <a name="running-objects-classes"></a>実行中のオブジェクト クラス
-次のクラスは、オブジェクトを実行するためのサポートを提供します。  
-  
--   [IRunnableObjectImpl](../atl/reference/irunnableobjectimpl-class.md)決定オブジェクトが実行されている場合は、強制的に実行、実行中の状態にロックしたりします。  
-  
-## <a name="related-articles"></a>関連トピック  
- [ATL チュートリアル](../atl/active-template-library-atl-tutorial.md)  
-  
-## <a name="see-also"></a>関連項目  
- [クラスの概要](../atl/atl-class-overview.md)
+
+次のクラスは、オブジェクトを実行するためのサポートを提供します。
+
+- [IRunnableObjectImpl](../atl/reference/irunnableobjectimpl-class.md)決定オブジェクトが実行されている場合は、強制的に実行、実行中の状態にロックしたりします。
+
+## <a name="related-articles"></a>関連トピック
+
+[ATL チュートリアル](../atl/active-template-library-atl-tutorial.md)
+
+## <a name="see-also"></a>関連項目
+
+[クラスの概要](../atl/atl-class-overview.md)
 

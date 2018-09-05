@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: fda9cab73088746ec64caf482f9e606d713eaa4f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222744"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43756978"
 ---
 # <a name="delegates-ccx"></a>デリゲート (C++/CX)
 `delegate`キーワードの使用を標準 C++ での関数オブジェクトの Windows ランタイムと等価な参照型を宣言します。 関数シグネチャに似たデリゲート宣言。これは、ラップされた関数が持つ必要のある、戻り値の型およびパラメーターの型を指定します。 これは、ユーザー定義のデリゲート宣言です。  

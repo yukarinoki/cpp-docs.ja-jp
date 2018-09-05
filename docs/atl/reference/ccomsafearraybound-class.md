@@ -22,155 +22,181 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdb0acc5059fa76531421cb261cb1d640aef3709
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 457c880f7f7eb6c011637b438fa3bcc25d57303b
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954340"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758275"
 ---
 # <a name="ccomsafearraybound-class"></a>CComSafeArrayBound クラス
-このクラスは、のラッパーを[SAFEARRAYBOUND](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearraybound)構造体。  
-  
-## <a name="syntax"></a>構文  
-  
+
+このクラスは、のラッパーを[SAFEARRAYBOUND](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearraybound)構造体。
+
+## <a name="syntax"></a>構文
+
 ```
 class CComSafeArrayBound : public SAFEARRAYBOUND
-```  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="methods"></a>メソッド  
-  
-|||  
-|-|-|  
-|[CComSafeArrayBound](#ccomsafearraybound)|コンストラクターです。|  
-|[GetCount](#getcount)|要素の数を返すには、このメソッドを呼び出します。|  
-|[GetLowerBound](#getlowerbound)|下限の境界を返すには、このメソッドを呼び出します。|  
-|[です](#getupperbound)|上限の境界を返すには、このメソッドを呼び出します。|  
-|[SetCount](#setcount)|要素の数を設定するには、このメソッドを呼び出します。|  
-|[SetLowerBound](#setlowerbound)|下限の境界を設定するには、このメソッドを呼び出します。|  
-  
-### <a name="operators"></a>演算子  
-  
-|||  
-|-|-|  
-|[演算子 =](#operator_eq)|セット、`CComSafeArrayBound`に新しい値。|  
-  
-## <a name="remarks"></a>Remarks  
- このクラスは、のラッパー、`SAFEARRAYBOUND`によって使用される構造[CComSafeArray](../../atl/reference/ccomsafearray-class.md)します。 クエリおよびの 1 つのディメンションの上限と下限の境界を設定するためのメソッドを提供する`CComSafeArray`オブジェクトと含まれる要素の数。 多次元`CComSafeArray`オブジェクトの配列を使用して`CComSafeArrayBound`オブジェクト、次元ごとに 1 つ。 そのためなどのメソッドを使用[GetCount](#getcount)、このメソッドは多次元配列の要素の合計数を返しますしないことに注意してください。  
-  
- **ヘッダー:** atlsafe.h  
-  
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** atlsafe.h  
-  
-##  <a name="ccomsafearraybound"></a>  CComSafeArrayBound::CComSafeArrayBound  
- コンストラクターです。  
-  
+```
+
+## <a name="members"></a>メンバー
+
+### <a name="methods"></a>メソッド
+
+|||
+|-|-|
+|[CComSafeArrayBound](#ccomsafearraybound)|コンストラクターです。|
+|[GetCount](#getcount)|要素の数を返すには、このメソッドを呼び出します。|
+|[GetLowerBound](#getlowerbound)|下限の境界を返すには、このメソッドを呼び出します。|
+|[です](#getupperbound)|上限の境界を返すには、このメソッドを呼び出します。|
+|[SetCount](#setcount)|要素の数を設定するには、このメソッドを呼び出します。|
+|[SetLowerBound](#setlowerbound)|下限の境界を設定するには、このメソッドを呼び出します。|
+
+### <a name="operators"></a>演算子
+
+|||
+|-|-|
+|[演算子 =](#operator_eq)|セット、`CComSafeArrayBound`に新しい値。|
+
+## <a name="remarks"></a>Remarks
+
+このクラスは、のラッパー、`SAFEARRAYBOUND`によって使用される構造[CComSafeArray](../../atl/reference/ccomsafearray-class.md)します。 クエリおよびの 1 つのディメンションの上限と下限の境界を設定するためのメソッドを提供する`CComSafeArray`オブジェクトと含まれる要素の数。 多次元`CComSafeArray`オブジェクトの配列を使用して`CComSafeArrayBound`オブジェクト、次元ごとに 1 つ。 そのためなどのメソッドを使用[GetCount](#getcount)、このメソッドは多次元配列の要素の合計数を返しますしないことに注意してください。
+
+**ヘッダー:** atlsafe.h
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** atlsafe.h
+
+##  <a name="ccomsafearraybound"></a>  CComSafeArrayBound::CComSafeArrayBound
+
+コンストラクターです。
+
 ```
 CComSafeArrayBound(ULONG ulCount = 0, LONG lLowerBound = 0) throw();
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *ulCount*  
- 配列の要素数。  
-  
- *lLowerBound*  
- 配列の番号を下限値です。  
-  
-### <a name="remarks"></a>Remarks  
- 配列が、Visual C プログラムからアクセスする場合は、下限が 0 として定義することをお勧めします。 配列の Visual Basic などの他の言語で使用する場合は、別の下限値を使用する方が望ましい場合があります。  
-  
-##  <a name="getcount"></a>  CComSafeArrayBound::GetCount  
- 要素の数を返すには、このメソッドを呼び出します。  
-  
+```
+
+### <a name="parameters"></a>パラメーター
+
+*ulCount*  
+配列の要素数。
+
+*lLowerBound*  
+配列の番号を下限値です。
+
+### <a name="remarks"></a>Remarks
+
+配列が、Visual C プログラムからアクセスする場合は、下限が 0 として定義することをお勧めします。 配列の Visual Basic などの他の言語で使用する場合は、別の下限値を使用する方が望ましい場合があります。
+
+##  <a name="getcount"></a>  CComSafeArrayBound::GetCount
+
+要素の数を返すには、このメソッドを呼び出します。
+
 ```
 ULONG GetCount() const throw();
-```  
-  
-### <a name="return-value"></a>戻り値  
- 要素の数を返します。  
-  
-### <a name="remarks"></a>Remarks  
- 場合、関連付けられている`CComSafeArray`オブジェクトは、多次元配列を表す、このメソッドは最も右にあるディメンション内の要素の合計数を返しますのみです。 使用[CComSafeArray::GetCount](../../atl/reference/ccomsafearray-class.md#getcount)要素の合計数を取得します。  
-  
-##  <a name="getlowerbound"></a>  CComSafeArrayBound::GetLowerBound  
- 下限の境界を返すには、このメソッドを呼び出します。  
-  
+```
+
+### <a name="return-value"></a>戻り値
+
+要素の数を返します。
+
+### <a name="remarks"></a>Remarks
+
+場合、関連付けられている`CComSafeArray`オブジェクトは、多次元配列を表す、このメソッドは最も右にあるディメンション内の要素の合計数を返しますのみです。 使用[CComSafeArray::GetCount](../../atl/reference/ccomsafearray-class.md#getcount)要素の合計数を取得します。
+
+##  <a name="getlowerbound"></a>  CComSafeArrayBound::GetLowerBound
+
+下限の境界を返すには、このメソッドを呼び出します。
+
 ```
 LONG GetLowerBound() const throw();
-```  
-  
-### <a name="return-value"></a>戻り値  
- 下限の境界を返します、`CComSafeArrayBound`オブジェクト。  
-  
-##  <a name="getupperbound"></a>  CComSafeArrayBound::GetUpperBound  
- 上限の境界を返すには、このメソッドを呼び出します。  
-  
+```
+
+### <a name="return-value"></a>戻り値
+
+下限の境界を返します、`CComSafeArrayBound`オブジェクト。
+
+##  <a name="getupperbound"></a>  CComSafeArrayBound::GetUpperBound
+
+上限の境界を返すには、このメソッドを呼び出します。
+
 ```
 LONG GetUpperBound() const throw();
-```  
-  
-### <a name="return-value"></a>戻り値  
- 上限を返します、`CComSafeArrayBound`オブジェクト。  
-  
-### <a name="remarks"></a>Remarks  
- 上限は、要素と下限の境界値の数によって異なります。 たとえば、下限の境界が 0 で、要素の数が 10 の場合、上限が 9 を自動的に設定されます。  
-  
-##  <a name="operator_eq"></a>  CComSafeArrayBound::operator =  
- セット、`CComSafeArrayBound`に新しい値。  
-  
+```
+
+### <a name="return-value"></a>戻り値
+
+上限を返します、`CComSafeArrayBound`オブジェクト。
+
+### <a name="remarks"></a>Remarks
+
+上限は、要素と下限の境界値の数によって異なります。 たとえば、下限の境界が 0 で、要素の数が 10 の場合、上限が 9 を自動的に設定されます。
+
+##  <a name="operator_eq"></a>  CComSafeArrayBound::operator =
+
+セット、`CComSafeArrayBound`に新しい値。
+
 ```
 CComSafeArrayBound& operator= (const CComSafeArrayBound& bound) throw();
 CComSafeArrayBound& operator= (ULONG ulCount) throw();
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *バインドされています。*  
- `CComSafeArrayBound` オブジェクト。  
-  
- *ulCount*  
- 要素の数。  
-  
-### <a name="return-value"></a>戻り値  
- ポインターを返します、`CComSafeArrayBound`オブジェクト。  
-  
-### <a name="remarks"></a>Remarks  
- `CComSafeArrayBound`既存を使用してオブジェクトを割り当てることが`CComSafeArrayBound`、またはする下限の境界の場合は既定で設定を 0 には、要素の数を指定しています。  
-  
-##  <a name="setcount"></a>  CComSafeArrayBound::SetCount  
- 要素の数を設定するには、このメソッドを呼び出します。  
-  
+```
+
+### <a name="parameters"></a>パラメーター
+
+*バインドされています。*  
+`CComSafeArrayBound` オブジェクト。
+
+*ulCount*  
+要素の数。
+
+### <a name="return-value"></a>戻り値
+
+ポインターを返します、`CComSafeArrayBound`オブジェクト。
+
+### <a name="remarks"></a>Remarks
+
+`CComSafeArrayBound`既存を使用してオブジェクトを割り当てることが`CComSafeArrayBound`、またはする下限の境界の場合は既定で設定を 0 には、要素の数を指定しています。
+
+##  <a name="setcount"></a>  CComSafeArrayBound::SetCount
+
+要素の数を設定するには、このメソッドを呼び出します。
+
 ```
 ULONG SetCount(ULONG ulCount) throw();
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *ulCount*  
- 要素の数。  
-  
-### <a name="return-value"></a>戻り値  
- 内の要素の数を返します、`CComSafeArrayBound`オブジェクト。  
-  
-##  <a name="setlowerbound"></a>  CComSafeArrayBound::SetLowerBound  
- 下限の境界を設定するには、このメソッドを呼び出します。  
-  
+```
+
+### <a name="parameters"></a>パラメーター
+
+*ulCount*  
+要素の数。
+
+### <a name="return-value"></a>戻り値
+
+内の要素の数を返します、`CComSafeArrayBound`オブジェクト。
+
+##  <a name="setlowerbound"></a>  CComSafeArrayBound::SetLowerBound
+
+下限の境界を設定するには、このメソッドを呼び出します。
+
 ```
 LONG SetLowerBound(LONG lLowerBound) throw();
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *lLowerBound*  
- 下限値です。  
-  
-### <a name="return-value"></a>戻り値  
- 新しい下限の境界を返します、`CComSafeArrayBound`オブジェクト。  
-  
-### <a name="remarks"></a>Remarks  
- 配列が、Visual C プログラムからアクセスする場合は、下限が 0 として定義することをお勧めします。 配列の Visual Basic などの他の言語で使用する場合は、別の下限値を使用する方が望ましい場合があります。  
-  
- 上限は、要素と下限の境界値の数によって異なります。 たとえば、下限の境界が 0 で、要素の数が 10 の場合、上限が 9 を自動的に設定されます。  
-  
-## <a name="see-also"></a>関連項目  
- [クラスの概要](../../atl/atl-class-overview.md)
+```
+
+### <a name="parameters"></a>パラメーター
+
+*lLowerBound*  
+下限値です。
+
+### <a name="return-value"></a>戻り値
+
+新しい下限の境界を返します、`CComSafeArrayBound`オブジェクト。
+
+### <a name="remarks"></a>Remarks
+
+配列が、Visual C プログラムからアクセスする場合は、下限が 0 として定義することをお勧めします。 配列の Visual Basic などの他の言語で使用する場合は、別の下限値を使用する方が望ましい場合があります。
+
+上限は、要素と下限の境界値の数によって異なります。 たとえば、下限の境界が 0 で、要素の数が 10 の場合、上限が 9 を自動的に設定されます。
+
+## <a name="see-also"></a>関連項目
+
+[クラスの概要](../../atl/atl-class-overview.md)

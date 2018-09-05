@@ -18,26 +18,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c9176d6ac22b4b9f802efabbb53d64fee3e3fef
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 19c3dd32a99eee7b2bb460598de5b5edeb03aeda
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961799"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761736"
 ---
 # <a name="interface-pointers-classes"></a>インターフェイス ポインター クラス
-次のクラスには、特定のインターフェイス ポインターが管理します。  
-  
--   [CComPtr](../atl/reference/ccomptr-class.md)自動参照カウントを実行します。  
-  
--   [CComQIPtr](../atl/reference/ccomqiptr-class.md)と同様に`CComPtr`がも行いインターフェイスのクエリを実行します。  
-  
--   [CInterfaceArray](../atl/reference/cinterfacearray-class.md)インターフェイス ポインターを提供メソッドを COM の配列を構築するときに便利です。  
-  
--   [CInterfaceList](../atl/reference/cinterfacelist-class.md)インターフェイス ポインターを提供メソッドを COM のリストを構築するときに便利です。  
-  
--   [CComGITPtr](../atl/reference/ccomgitptr-class.md)インターフェイス ポインターとグローバル インターフェイス テーブル (GIT) への対処方法を提供します。  
-  
-## <a name="see-also"></a>関連項目  
- [クラスの概要](../atl/atl-class-overview.md)
+
+次のクラスには、特定のインターフェイス ポインターが管理します。
+
+- [CComPtr](../atl/reference/ccomptr-class.md)自動参照カウントを実行します。
+
+- [CComQIPtr](../atl/reference/ccomqiptr-class.md)と同様に`CComPtr`がも行いインターフェイスのクエリを実行します。
+
+- [CInterfaceArray](../atl/reference/cinterfacearray-class.md)インターフェイス ポインターを提供メソッドを COM の配列を構築するときに便利です。
+
+- [CInterfaceList](../atl/reference/cinterfacelist-class.md)インターフェイス ポインターを提供メソッドを COM のリストを構築するときに便利です。
+
+- [CComGITPtr](../atl/reference/ccomgitptr-class.md)インターフェイス ポインターとグローバル インターフェイス テーブル (GIT) への対処方法を提供します。
+
+## <a name="see-also"></a>関連項目
+
+[クラスの概要](../atl/atl-class-overview.md)
 

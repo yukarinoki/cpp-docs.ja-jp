@@ -18,11 +18,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 389767cdbd09cb5a2139b9302fc25fe02fb8a056
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613460"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43757121"
 ---
 # <a name="platformmtathreadattribute-class"></a>Platform::MTAThreadAttribute クラス
 アプリケーションのスレッド モデルがマルチスレッド アパートメント (MTA) であることを示します。  
@@ -44,7 +44,7 @@ public ref class MTAThreadAttribute sealed : Attribute
 ### <a name="public-methods"></a>パブリック メソッド  
  MTAThreadAttribute 属性が継承[platform::object Class](../cppcx/platform-object-class.md)します。 また MTAThreadAttribute は次のメンバーをオーバーロードしたり、含んだりします。  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[MTAThreadAttribute::Equals](#equals)|指定したオブジェクトが、現在のオブジェクトと等しいかどうかを判断します。|  
 |[MTAThreadAttribute::GetHashCode](#gethashcode)|このインスタンスのハッシュ コードを返します。|  

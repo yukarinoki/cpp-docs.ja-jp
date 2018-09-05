@@ -1,5 +1,5 @@
 ---
-title: ATL ウィンドウ クラス |Microsoft ドキュメント
+title: ATL ウィンドウ クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,41 +20,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 907b6ef49287bfb521b953e42c8f900fc4b6dc10
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e67849da9eebf9f150c4363e05a6f3fdcb943c0d
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355433"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43756390"
 ---
 # <a name="atl-window-classes"></a>ATL ウィンドウ クラス
-ATL を使用して、ウィンドウの実装では、いくつかのクラスが含まれています。 その他の ATL クラスと同様に、これらのクラスは、コードのオーバーヘッドを課しません効率的な実装を提供します。  
-  
- このセクションでは、ATL ウィンドウ クラスをについて説明し、それらを使用する方法について説明します。  
-  
-## <a name="in-this-section"></a>このセクションの内容  
- [ATL ウィンドウ クラスの概要](../atl/introduction-to-atl-window-classes.md)  
- 簡単に各 ATL ウィンドウ クラスについて説明し、それらの参考資料へのリンクを提供します。  
-  
- [ウィンドウの使用](../atl/using-a-window.md)  
- 使用する方法について説明`CWindow`ウィンドウを操作します。  
-  
- [ウィンドウの実装](../atl/implementing-a-window.md)  
- メッセージ ハンドラー、メッセージ マップ、および使用について説明`CWindowImpl`です。 スーパークラス化とサブクラスの詳細が含まれます。  
-  
- [ダイアログ ボックスの実装](../atl/implementing-a-dialog-box.md)  
- ダイアログ ボックス クラスを追加するための 2 つの方法について説明し、コード サンプルを示します。  
-  
- [含まれているウィンドウの使用](../atl/using-contained-windows.md)  
- コンテナー内のウィンドウ ATL、そのメッセージを独自のクラスで扱い、コンテナー オブジェクトをデリゲートするウィンドウについて説明します。  
-  
- [ウィンドウの特徴を理解する](../atl/understanding-window-traits.md)  
- ATL のウィンドウの特徴 (traits) クラスについて説明します これらのクラスは、window オブジェクトを作成するために使用するスタイルを標準化するための単純なメソッドを提供します。  
-  
-## <a name="related-sections"></a>関連項目  
- [ATL](../atl/active-template-library-atl-concepts.md)  
- Active Template Library を使用してプログラミングする方法に関する概念説明のトピックへのリンクを提供します。  
-  
- [Windows サポート クラス](../atl/windows-support-classes.md)  
- ATL の windows とメッセージ マップをサポートするその他の ATL クラスを一覧表示します。
+
+ATL には、使用し、windows を実装するためのいくつかのクラスが含まれています。 その他の ATL クラスと同様に、これらのクラスは、コードのオーバーヘッドを強制しません効率的な実装を提供します。
+
+このセクションでは、ATL ウィンドウ クラスをについて説明し、それらを使用する方法について説明します。
+
+## <a name="in-this-section"></a>このセクションの内容
+
+[ATL ウィンドウ クラスの概要](../atl/introduction-to-atl-window-classes.md)  
+簡単な各 ATL ウィンドウ クラスの説明し、それらの参考資料へのリンクを提供します。
+
+[ウィンドウの使用](../atl/using-a-window.md)  
+使用する方法について説明します`CWindow`ウィンドウを操作します。
+
+[ウィンドウの実装](../atl/implementing-a-window.md)  
+メッセージ ハンドラー、メッセージ マップ、および使用について説明します`CWindowImpl`します。 スーパークラス化し、サブクラス化の詳細が含まれています。
+
+[ダイアログ ボックスの実装](../atl/implementing-a-dialog-box.md)  
+ダイアログ ボックス クラスを追加するための 2 つの方法について説明し、コード サンプルが表示されます。
+
+[含まれているウィンドウの使用](../atl/using-contained-windows.md)  
+メッセージを独自のクラスで処理することではなく、コンテナー オブジェクトをデリゲートする windows、ATL で含まれているウィンドウについて説明します。
+
+[ウィンドウの特徴を理解する](../atl/understanding-window-traits.md)  
+ATL でウィンドウの特性クラスをについて説明します。 これらのクラスは、ウィンドウ オブジェクトの作成に使用されるスタイルを標準化するための単純なメソッドを提供します。
+
+## <a name="related-sections"></a>関連項目
+
+[ATL](../atl/active-template-library-atl-concepts.md)  
+Active Template Library を使用してプログラミングする方法に関する概念説明のトピックへのリンクを提供します。
+
+[Windows サポート クラス](../atl/windows-support-classes.md)  
+ATL で windows とメッセージ マップをサポートするその他の ATL クラスを一覧表示されます。
 

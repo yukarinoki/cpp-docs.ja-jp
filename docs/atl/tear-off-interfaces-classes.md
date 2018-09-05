@@ -17,20 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb7fec440902652d8ab04f688488a00340ab41aa
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 8ea912ec843cdf91d45b2a6e588c25ffd7749546
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956980"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762942"
 ---
 # <a name="tear-off-interfaces-classes"></a>ティアオフ インターフェイス クラス
-次のクラスは、ティアオフ インターフェイスのサポート。  
-  
--   [CComTearOffObject](../atl/reference/ccomtearoffobject-class.md)実装`IUnknown`ティアオフ インターフェイス。  
-  
--   [CComCachedTearOffObject](../atl/reference/ccomcachedtearoffobject-class.md)実装`IUnknown`「キャッシュされた」ティアオフ インターフェイス。  
-  
-## <a name="see-also"></a>関連項目  
- [クラスの概要](../atl/atl-class-overview.md)
+
+次のクラスは、ティアオフ インターフェイスのサポート。
+
+- [CComTearOffObject](../atl/reference/ccomtearoffobject-class.md)実装`IUnknown`ティアオフ インターフェイス。
+
+- [CComCachedTearOffObject](../atl/reference/ccomcachedtearoffobject-class.md)実装`IUnknown`「キャッシュされた」ティアオフ インターフェイス。
+
+## <a name="see-also"></a>関連項目
+
+[クラスの概要](../atl/atl-class-overview.md)
 

@@ -14,44 +14,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70b1e0e6ef1294ff23952816db6f468022609f4f
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 5699ce82a6e8537f12da50fdcb8288da167ecca3
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408376"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752240"
 ---
 # <a name="microsoft-extensions"></a>Microsoft 拡張機能
-*asm ステートメント*:  
- **_ _asm***アセンブリ命令* **;** オプトイン    
-  
- **_ _asm {***アセンブリの命令リスト***};** オプトイン      
-  
- *アセンブリの命令リスト*:  
- *アセンブリ命令* **;** オプトイン  
-  
- *アセンブリ命令* **;***アセンブリの命令リスト* **;** オプトイン  
-  
- *リスト修飾子 ms ・*:  
- *ms 修飾子 ms 修飾子リスト*選択  
-  
- *ms 修飾子*:  
- **__cdecl**  
-  
- **__fastcall**  
-  
- **__stdcall**  
-  
- **_ _syscall** (今後の実装の予約済み)  
-  
- **_ _oldcall** (今後の実装の予約済み)  
-  
- **_ _unaligned** (今後の実装の予約済み)  
-  
- *ベースの修飾子*  
-  
- *ベース修飾子*:  
- **_ _based (** *ベース型* **)**  
-  
- *ベース型*:  
- *name*  
+
+*asm ステートメント*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**_ _asm***アセンブリ命令* **;**<sub>選択  </sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**_ _asm {***アセンブリの命令リスト***};**<sub>選択    </sub>
+
+*アセンブリの命令リスト*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*アセンブリ命令* **;**<sub>選択</sub> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*アセンブリ命令* **;***アセンブリの命令リスト* **;**<sub>選択</sub>
+
+*リスト修飾子 ms ・*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*ms 修飾子**リスト修飾子 ms ・*<sub>選択</sub>
+
+*ms 修飾子*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**_ _cdecl**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**_ _fastcall**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**_ _stdcall**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**_ _syscall** (今後の実装の予約済み)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**_ _oldcall** (今後の実装の予約済み)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**_ _unaligned** (今後の実装の予約済み)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*ベースの修飾子*
+
+*ベース修飾子*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**_ _based (** *ベース型* **)**
+
+*ベース型*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*名*

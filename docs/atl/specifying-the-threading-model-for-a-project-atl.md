@@ -1,5 +1,5 @@
 ---
-title: プロジェクト (ATL) のスレッド処理モデルの指定 |Microsoft ドキュメント
+title: プロジェクト (ATL) のスレッド処理モデルの指定 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,34 +18,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f807aa82a62fb703430ace5bc6be516e08ca9dc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f8a37a3ec730b727f6e214aafad1a4acc65b1dc3
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359637"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760030"
 ---
 # <a name="specifying-the-threading-model-for-a-project-atl"></a>プロジェクトのスレッド モデルの指定 (ATL)
-次のマクロは ATL プロジェクトのスレッド モデルを指定可能です。  
-  
-|マクロ|使用に関するガイドライン|  
-|-----------|--------------------------|  
-|_ATL_SINGLE_THREADED|場合は 1 つのスレッド モデルを使用してすべてのオブジェクトを定義します。|  
-|_ATL_APARTMENT_THREADED|アパートメント スレッドを使用して 1 つまたは複数のオブジェクトの場合を定義します。|  
-|_ATL_FREE_THREADED|1 つまたは複数のオブジェクトの free またはニュートラル スレッドを使用する場合を定義します。 既存のコードが同等のマクロの参照を含めることがあります[_ATL_MULTI_THREADED](reference/compiler-options-macros.md#_atl_multi_threaded)です。|  
-  
- プロジェクトのこれらのマクロのいずれかを定義しない場合は、_ATL_FREE_THREADED が有効になります。  
-  
- マクロは、実行時のパフォーマンスを次のように影響します。  
-  
--   プロジェクト内のオブジェクトに対応するマクロを指定すると、実行時のパフォーマンスを向上させることができます。  
-  
--   上位のレベルのスレッドで、すべてのオブジェクトが 1 つ _ATL_APARTMENT_THREADED を指定する場合の例については、マクロを指定すると、実行時のパフォーマンスが若干低下します。  
-  
--   _ATL_SINGLE_THREADED いずれかを指定することもとフリー スレッドのアパートメント スレッドを使用して、オブジェクトの場合は、マクロなどの下位レベルを指定すると、アプリ実行時に失敗する可能性があります。  
-  
- 参照してください[オプション、ATL シンプル オブジェクト ウィザード](../atl/reference/options-atl-simple-object-wizard.md)ATL オブジェクトをモデル化、スレッド処理の詳細についてはします。  
-  
-## <a name="see-also"></a>関連項目  
- [概念](../atl/active-template-library-atl-concepts.md)
+
+次のマクロは、ATL プロジェクトのスレッド モデルを指定できます。
+
+|マクロ|使用に関するガイドライン|
+|-----------|--------------------------|
+|_ATL_SINGLE_THREADED|場合 1 つのスレッド処理モデルを使用して、すべてのオブジェクトを定義します。|
+|_ATL_APARTMENT_THREADED|アパートメント スレッドを使用して 1 つまたは複数のオブジェクトの場合を定義します。|
+|_ATL_FREE_THREADED|無料またはニュートラル スレッドを使用して 1 つまたは複数のオブジェクトの場合を定義します。 既存のコードは同等のマクロへの参照を含めることができます[_ATL_MULTI_THREADED](reference/compiler-options-macros.md#_atl_multi_threaded)します。|
+
+プロジェクトのこれらのマクロのいずれかを定義しない場合は、_ATL_FREE_THREADED が有効になります。
+
+マクロは、次のように実行時のパフォーマンスに影響します。
+
+- プロジェクト内のオブジェクトに対応するマクロを指定すると、実行時のパフォーマンスが向上することができます。
+
+- 高いレベルのスレッドですべてのオブジェクトが 1 つ _ATL_APARTMENT_THREADED を指定した場合の例については、マクロを指定すると、実行時のパフォーマンスが若干低下します。
+
+- _ATL_SINGLE_THREADED ときに 1 つを指定するか、またはとフリー スレッドのアパートメント スレッドを使用して、オブジェクトの場合、マクロなどの下位レベルを指定すると、アプリケーションが実行時に失敗する可能性があります。
+
+参照してください[オプション、ATL シンプル オブジェクト ウィザード](../atl/reference/options-atl-simple-object-wizard.md)ATL オブジェクトをモデル化については、スレッド処理します。
+
+## <a name="see-also"></a>関連項目
+
+[概念](../atl/active-template-library-atl-concepts.md)
 

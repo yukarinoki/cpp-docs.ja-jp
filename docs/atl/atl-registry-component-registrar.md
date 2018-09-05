@@ -1,5 +1,5 @@
 ---
-title: ATL レジストリ コンポーネント (レジストラー) |Microsoft ドキュメント
+title: ATL レジストリ コンポーネント (レジストラー) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,27 +20,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17c1aafdfd118a78aefff4fa32ac67f4e290596b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b5bf01db5baff0bda6cda1d47ffb6f64e7d9bac1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354901"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759432"
 ---
 # <a name="atl-registry-component-registrar"></a>ATL レジストリ コンポーネント (レジストラー)
-ATL レジストラーでは、カスタム インターフェイス経由でのシステム レジストリに最適にアクセスを提供します。 レジストラーでは、フリー スレッドし、C++ クライアントのコードの静的にリンクできます。  
-  
+
+ATL レジストラーでは、カスタム インターフェイス経由でシステムのレジストリに最適化されたアクセスを提供します。 レジストラーは、フリー スレッドし、C++ のクライアントのコードの静的にリンクできます。
+
 > [!NOTE]
->  ATL レジストラーのソース コードは、atlmfc\include\atliface.h で確認できます。  
-  
-## <a name="in-this-section"></a>このセクションの内容  
- [レジストラー スクリプトの作成](../atl/creating-registrar-scripts.md)  
- レジストラー スクリプトの作成のガイドです。 BNF 構文、解析ツリー、レジストリ スクリプトの例については、置き換え可能パラメーターを使用して、スクリプトの呼び出しにトピックが含まれます。  
-  
- [レジストラー コード (C++ のみ) への静的リンクを設定します。](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)  
- レジストラーに静的にリンクを設定する手順について説明します。  
-  
-## <a name="related-sections"></a>関連項目  
- [ATL](../atl/active-template-library-atl-concepts.md)  
- Active Template Library を使用してプログラミングする方法に関する概念説明のトピックへのリンクを提供します。
+>  ATL レジストラーのソース コードは、atlmfc\include\atliface.h で確認できます。
+
+## <a name="in-this-section"></a>このセクションの内容
+
+[レジストラー スクリプトの作成](../atl/creating-registrar-scripts.md)  
+レジストラー スクリプトを作成するためのガイド。 BNF 構文、解析ツリー、レジストリのスクリプトの例については、置き換え可能パラメーターを使用して、スクリプトの呼び出しについてのトピックが含まれています。
+
+[レジストラー コード (C++ のみ) に静的にリンクの設定](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)  
+レジストラーに静的にリンクを設定する手順について説明します。
+
+## <a name="related-sections"></a>関連項目
+
+[ATL](../atl/active-template-library-atl-concepts.md)  
+Active Template Library を使用してプログラミングする方法に関する概念説明のトピックへのリンクを提供します。
 

@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c4bdccc14db423d7a47545c51b31ce472f0c4308
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219522"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758795"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>名前空間と型の参照範囲 (C++/CX)
 名前空間は、関連する機能を持つ型をグループ化し、ライブラリ内での名前の衝突を回避するための、標準の C++ 構造体です。 Windows ランタイムの型システムでは、名前空間スコープで名前空間に独自のコードに含めて、すべてのパブリックの Windows ランタイム型が宣言される必要があります。 パブリック型をグローバル スコープで宣言したり、別のクラスの中に入れ子にしたりすると、コンパイル時エラーが発生します。  
@@ -37,8 +37,8 @@ ms.locfileid: "43219522"
 |修飾子|説明|メタデータに出力されるか。|  
 |private|既定のアクセシビリティ。 標準 C++ の場合と同じ意味です。|いいえ|  
 |protected|標準 C++ の場合と同じ意味であり、アプリまたはコンポーネント内およびメタデータ内では両方。|はい|  
-|public|標準 C++ の場合と同じ意味です。|[はい]|  
-|`public protected` - または - `protected public`|メタデータでは保護されたアクセシビリティ、アプリまたはコンポーネント内ではパブリック。|[はい]|  
+|public|標準 C++ の場合と同じ意味です。|はい|  
+|`public protected` - または - `protected public`|メタデータでは保護されたアクセシビリティ、アプリまたはコンポーネント内ではパブリック。|はい|  
 |`protected private` または `private protected`|メタデータでは非可視。アプリまたはコンポーネント内では保護されたアクセシビリティ。||  
 |`internal` または `private public`|メンバーは、アプリまたはコンポーネント内ではパブリックですが、メタデータでは非可視です。|いいえ|  
   
