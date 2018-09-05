@@ -828,12 +828,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cecde0bfd829cd55fb15e53fb07aa8b6645fce0e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 5cb6010d47be6fe2c771ac407bff26729c772f14
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218340"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678408"
 ---
 # <a name="cwnd-class"></a>CWnd クラス
 
@@ -1234,8 +1234,8 @@ class CWnd : public CCmdTarget
 |[CWnd::OnSizeClipboard](#onsizeclipboard)|クリップボード ビューアー ウィンドウのクライアント領域のサイズが変更されたときに呼び出されます。|
 |[CWnd::OnSizing](#onsizing)|四角形のサイズを変更中であることを示します。|
 |[CWnd::OnSpoolerStatus](#onspoolerstatus)|プリント マネージャーのキューでジョブが追加または削除されるたびに、プリント マネージャーから呼び出されます。|
-|[CWnd::OnStyleChanged](#onstylechanged)|示します、 [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) Windows 関数が変更されたは 1 つまたは複数のウィンドウのスタイル。|
-|[CWnd::OnStyleChanging](#onstylechanging)|示します、 [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) Windows 関数が 1 つまたは複数のウィンドウのスタイルを変更しようとしています。|
+|[CWnd::OnStyleChanged](#onstylechanged)|示します、 [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) Windows 関数が変更されたは 1 つまたは複数のウィンドウのスタイル。|
+|[CWnd::OnStyleChanging](#onstylechanging)|示します、 [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) Windows 関数が 1 つまたは複数のウィンドウのスタイルを変更しようとしています。|
 |[CWnd::OnSysChar](#onsyschar)|キーストロークがシステム文字に変換されるときに呼び出されます。|
 |[CWnd::OnSysColorChange](#onsyscolorchange)|システム カラーの設定が変更されたときに、すべてのトップ レベル ウィンドウで呼び出されます。|
 |[CWnd::OnSysCommand](#onsyscommand)|ユーザーがコントロール メニューからコマンドを選択するとき、または最大化ボタンまたは最小化ボタンを選択するときに呼び出されます。|
@@ -1247,7 +1247,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnTimer](#ontimer)|指定された各間隔後に呼び出される[SetTimer](#settimer)します。|
 |[CWnd::OnTouchInput](#ontouchinput)|Windows タッチからの 1 つの入力を処理します。|
 |[CWnd::OnTouchInputs](#ontouchinputs)|Windows タッチからの複数の入力を処理します。|
-|[CWnd::OnUniChar](#onunichar)|キーが押されるときに呼び出されます。 これは、現在のウィンドウにキーボード フォーカスと[WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown)によってメッセージを変換、 [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)関数。|
+|[CWnd::OnUniChar](#onunichar)|キーが押されるときに呼び出されます。 これは、現在のウィンドウにキーボード フォーカスと[WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown)によってメッセージを変換、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)関数。|
 |[CWnd::OnUnInitMenuPopup](#onuninitmenupopup)|ドロップダウン メニューやサブメニューが破棄されたときに呼び出されます。|
 |[CWnd::OnUpdateUIState](#onupdateuistate)|指定したウィンドウとすべての子ウィンドウのユーザー インターフェイス (UI) 状態を変更するときに呼び出されます。|
 |[CWnd::OnUserChanged](#onuserchanged)|ユーザーがログオンまたはログオフした後に呼び出されます。|
@@ -2244,7 +2244,7 @@ void CreateGrayCaret(
 
 パラメーター *nWidth*と*パラメーター nHeight*キャレットの幅と高さを (論理単位) で指定。 実際の幅と高さ (ピクセル単位) では、マッピング モードによって異なります。
 
-システムのウィンドウの境界線の幅または高さを取得できる、 [GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385) SM_CXBORDER と SM_CYBORDER のインデックスを持つ Windows 関数。 ウィンドウの境界線の幅または高さを使うと、キャレットが高解像度のディスプレイに表示されることができます。
+システムのウィンドウの境界線の幅または高さを取得できる、 [GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) SM_CXBORDER と SM_CYBORDER のインデックスを持つ Windows 関数。 ウィンドウの境界線の幅または高さを使うと、キャレットが高解像度のディスプレイに表示されることができます。
 
 `CreateGrayCaret`メンバー関数は前のキャレットの図形を自動的に破棄いずれかのウィンドウに関係なく、キャレットを所有している場合。 作成されると、キャレットは最初に表示されません。 カレットを表示する、 [ShowCaret](#showcaret)メンバー関数を呼び出す必要があります。
 
@@ -2278,7 +2278,7 @@ void CreateSolidCaret(
 
 パラメーター *nWidth*と*パラメーター nHeight*キャレットの幅と高さを (論理単位) で指定。 実際の幅と高さ (ピクセル単位) では、マッピング モードによって異なります。
 
-システムのウィンドウの境界線の幅または高さを取得できる、 [GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385) SM_CXBORDER と SM_CYBORDER のインデックスを持つ Windows 関数。 ウィンドウの境界線の幅または高さを使うと、キャレットが高解像度のディスプレイに表示されることができます。
+システムのウィンドウの境界線の幅または高さを取得できる、 [GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) SM_CXBORDER と SM_CYBORDER のインデックスを持つ Windows 関数。 ウィンドウの境界線の幅または高さを使うと、キャレットが高解像度のディスプレイに表示されることができます。
 
 `CreateSolidCaret`メンバー関数は前のキャレットの図形を自動的に破棄いずれかのウィンドウに関係なく、キャレットを所有している場合。 作成されると、キャレットは最初に表示されません。 カレットを表示する、 [ShowCaret](#showcaret)メンバー関数を呼び出す必要があります。
 
@@ -2767,7 +2767,7 @@ void EnableActiveAccessibility();
 
 ### <a name="remarks"></a>Remarks
 
-MFC の既定の Active Accessibility のサポートが標準の windows および ActiveX コントロールを含むコントロールだけで十分です。ただし場合、 `CWnd`-派生クラスには、ウィンドウのないユーザー インターフェイス要素が含まれています、MFC では、それらについて知ることはありません。 その場合は、する必要がありますをオーバーライドする適切な[Active Accessibility のメンバー関数](https://msdn.microsoft.com/68af04ac-4eb9-4b7d-b33f-c45512097a74)クラスでは、呼び出す必要があると`EnableActiveAccessibility`クラスのコンス トラクターでします。
+MFC の既定の Active Accessibility のサポートが標準の windows および ActiveX コントロールを含むコントロールだけで十分です。ただし場合、 `CWnd`-派生クラスには、ウィンドウのないユーザー インターフェイス要素が含まれています、MFC では、それらについて知ることはありません。 その場合は、する必要がありますをオーバーライドする適切な[Active Accessibility のメンバー関数](/windows/desktop/winauto/sdk-components)クラスでは、呼び出す必要があると`EnableActiveAccessibility`クラスのコンス トラクターでします。
 
 ##  <a name="enabledynamiclayout"></a>  CWnd::EnableDynamicLayout
 
@@ -5011,7 +5011,7 @@ CDC* GetWindowDC();
 
 `GetWindowDC` 特殊な描画効果に使用するためのものでは、`CWnd`非クライアント領域。 すべてのウィンドウの非クライアント領域の描画は推奨されません。
 
-[GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385) Windows 関数を使用して、非クライアント領域のキャプション バー、メニューのおよびスクロール バーなどのさまざまな部分のサイズを取得することです。
+[GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) Windows 関数を使用して、非クライアント領域のキャプション バー、メニューのおよびスクロール バーなどのさまざまな部分のサイズを取得することです。
 
 描画が完了した後、 [ReleaseDC](#releasedc)ディスプレイ コンテキストを解放するメンバー関数を呼び出す必要があります。 ディスプレイ コンテキストを解放する障害は、描画と同時に開くことができるデバイス コンテキストの数に制限のためのアプリケーションによって要求を真剣に影響します。
 
@@ -5441,7 +5441,7 @@ BOOL IsDialogMessage(LPMSG lpMsg);
 
 ときに、`IsDialogMessage`キーボード メッセージを対応するダイアログ ボックスの選択コマンドに変換するを確認、メッセージの処理関数です。 たとえば、TAB キーは、[次へ] のコントロールまたはコントロールのグループを選択し、下方向キー、グループ内の次のコントロールを選択します。
 
-によって処理されるメッセージを渡す必要がありますいない`IsDialogMessage`を[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)または[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934)処理済みであるため、Windows が機能します。
+によって処理されるメッセージを渡す必要がありますいない`IsDialogMessage`を[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)または[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)処理済みであるため、Windows が機能します。
 
 ##  <a name="isdlgbuttonchecked"></a>  CWnd::IsDlgButtonChecked
 
@@ -5738,9 +5738,9 @@ BOOL ModifyStyle(
 
 ### <a name="remarks"></a>Remarks
 
-ビットごとの OR を使用してスタイルを追加または削除を組み合わせることができます (&#124;) 演算子。 トピックを参照して[ウィンドウ スタイル](https://msdn.microsoft.com/library/windows/desktop/ms632600)と[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)使用可能なウィンドウのスタイルについては、Windows sdk。
+ビットごとの OR を使用してスタイルを追加または削除を組み合わせることができます (&#124;) 演算子。 トピックを参照して[ウィンドウ スタイル](https://msdn.microsoft.com/library/windows/desktop/ms632600)と[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)使用可能なウィンドウのスタイルについては、Windows sdk。
 
-場合*nFlags* 0 以外の場合、 `ModifyStyle` Windows API 関数を呼び出す[SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545)と組み合わせることで、ウィンドウを再描画*nFlags*次の 4 つのプリセットフラグ:
+場合*nFlags* 0 以外の場合、 `ModifyStyle` Windows API 関数を呼び出す[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos)と組み合わせることで、ウィンドウを再描画*nFlags*次の 4 つのプリセットフラグ:
 
 - SWP_NOSIZE では、現在のサイズを保持します。
 
@@ -5787,9 +5787,9 @@ BOOL ModifyStyleEx(
 
 ### <a name="remarks"></a>Remarks
 
-ビットごとの OR を使用してスタイルを追加または削除を組み合わせることができます (&#124;) 演算子。 トピックを参照して[拡張ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)この本でと[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)拡張スタイルを使用可能な方法については、Windows sdk
+ビットごとの OR を使用してスタイルを追加または削除を組み合わせることができます (&#124;) 演算子。 トピックを参照して[拡張ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)この本でと[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)拡張スタイルを使用可能な方法については、Windows sdk
 
-場合*nFlags* 0 以外の場合、 `ModifyStyleEx` Windows API 関数を呼び出す[SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545)と組み合わせることで、ウィンドウを再描画*nFlags*次の 4 つのプリセットフラグ:
+場合*nFlags* 0 以外の場合、 `ModifyStyleEx` Windows API 関数を呼び出す[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos)と組み合わせることで、ウィンドウを再描画*nFlags*次の 4 つのプリセットフラグ:
 
 - SWP_NOSIZE では、現在のサイズを保持します。
 
@@ -8113,7 +8113,7 @@ afx_msg BOOL OnMouseWheel(
 
 ### <a name="remarks"></a>Remarks
 
-オーバーライドされない限り、`OnMouseWheel`呼び出しの既定値は[WM_MOUSEWHEEL](/windows/desktop/inputdev/wm-mousewheel)します。 Windows は、自動的にフォーカスを持つコントロールまたは子ウィンドウにメッセージをルーティングします。 Win32 関数[DefWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633572)親チェーンを処理するウィンドウ メッセージを伝達します。
+オーバーライドされない限り、`OnMouseWheel`呼び出しの既定値は[WM_MOUSEWHEEL](/windows/desktop/inputdev/wm-mousewheel)します。 Windows は、自動的にフォーカスを持つコントロールまたは子ウィンドウにメッセージをルーティングします。 Win32 関数[DefWindowProc](/windows/desktop/api/winuser/nf-winuser-defwindowproca)親チェーンを処理するウィンドウ メッセージを伝達します。
 
 *ZDelta* 120 に設定されている、WHEEL_DELTA の倍数になります。 この値は、操作を実行するのには、しきい値と、各デルタのような 1 つのアクション (たとえば、スクロール前方 1 目盛り) が発生する必要があります。
 
@@ -9464,7 +9464,7 @@ SP_JOBSTATUS フラグを指定します。
 
 ##  <a name="onstylechanged"></a>  CWnd::OnStyleChanged
 
-フレームワークは、このメンバー関数の後、 [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591)関数は、1 つまたは複数のウィンドウのスタイルが変更されます。
+フレームワークは、このメンバー関数の後、 [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga)関数は、1 つまたは複数のウィンドウのスタイルが変更されます。
 
 ```
 afx_msg void OnStyleChanged(
@@ -9491,7 +9491,7 @@ afx_msg void OnStyleChanged(
 
 ##  <a name="onstylechanging"></a>  CWnd::OnStyleChanging
 
-フレームワークは、このメンバー関数を呼び出すときに、 [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591)関数が 1 つまたは複数のウィンドウのスタイルを変更しようとしています。
+フレームワークは、このメンバー関数を呼び出すときに、 [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga)関数が 1 つまたは複数のウィンドウのスタイルを変更しようとしています。
 
 ```
 afx_msg void OnStyleChanging(
@@ -9853,7 +9853,7 @@ afx_msg void OnTimer(UINT_PTR nIDEvent);
 
 ### <a name="remarks"></a>Remarks
 
-[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 関数の送信、 [WM_TIMER](/windows/desktop/winmsg/wm-timer)メッセージが表示されるその他のメッセージがアプリケーションのメッセージ キューではありません。
+[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数の送信、 [WM_TIMER](/windows/desktop/winmsg/wm-timer)メッセージが表示されるその他のメッセージがアプリケーションのメッセージ キューではありません。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -9960,7 +9960,7 @@ TRUE の場合は、アプリケーション プロセス Windows タッチ入�
 
 ##  <a name="onunichar"></a>  CWnd::OnUniChar
 
-フレームワークは、キーが押されたときに、このメンバー関数を呼び出します。 これは、現在のウィンドウにキーボード フォーカスと[WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown)によってメッセージを変換、 [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)関数。
+フレームワークは、キーが押されたときに、このメンバー関数を呼び出します。 これは、現在のウィンドウにキーボード フォーカスと[WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown)によってメッセージを変換、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)関数。
 
 ```
 afx_msg void OnUniChar(
@@ -10207,7 +10207,7 @@ afx_msg void OnWindowMaximizedChanged(BOOL bIsMaximized);
 
 ##  <a name="onwindowposchanged"></a>  CWnd::OnWindowPosChanged
 
-呼び出しの結果として、サイズ、位置、または Z オーダーが変更されたときにフレームワークがこのメンバー関数を呼び出し、 [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545)メンバー関数または他のウィンドウ管理関数。
+呼び出しの結果として、サイズ、位置、または Z オーダーが変更されたときにフレームワークがこのメンバー関数を呼び出し、 [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos)メンバー関数または他のウィンドウ管理関数。
 
 ```
 afx_msg void OnWindowPosChanged(WINDOWPOS* lpwndpos);
@@ -10227,7 +10227,7 @@ afx_msg void OnWindowPosChanged(WINDOWPOS* lpwndpos);
 
 ##  <a name="onwindowposchanging"></a>  CWnd::OnWindowPosChanging
 
-サイズ、位置、または Z オーダーを呼び出した結果を変更するときに、フレームワークはこのメンバー関数を呼び出し、 [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545)メンバー関数または他のウィンドウ管理関数。
+サイズ、位置、または Z オーダーを呼び出した結果を変更するときに、フレームワークはこのメンバー関数を呼び出し、 [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos)メンバー関数または他のウィンドウ管理関数。
 
 ```
 afx_msg void OnWindowPosChanging(WINDOWPOS* lpwndpos);
@@ -10602,7 +10602,7 @@ virtual void PreSubclassWindow();
 
 ##  <a name="pretranslatemessage"></a>  CWnd::PreTranslateMessage
 
-クラスによって使用される[CWinApp](../../mfc/reference/cwinapp-class.md)にディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)と[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 関数。
+クラスによって使用される[CWinApp](../../mfc/reference/cwinapp-class.md)にディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数。
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -11056,7 +11056,7 @@ int ScrollWindowEx(
 
 場合[SW_INVALIDATE](/windows/desktop/api/winuser/nf-winuser-scrollwindowex)と[SW_ERASE](/windows/desktop/api/winuser/nf-winuser-scrollwindowex)が指定されていない、`ScrollWindowEx`メンバー関数がからスクロール領域を無効になりません。 これらのフラグのいずれかを設定すると場合、`ScrollWindowEx`この領域を無効になります。 領域は、アプリケーションが更新されません、[と](/windows/desktop/api/winuser/nf-winuser-updatewindow)メンバー関数を呼び出し、 [RedrawWindow](/windows/desktop/api/winuser/nf-winuser-redrawwindow)メンバー関数 (を指定する[RDW_UPDATENOW](/windows/desktop/api/winuser/nf-winuser-redrawwindow)または[RDW_ERASENOW](/windows/desktop/api/winuser/nf-winuser-redrawwindow))、または取得、 [WM_PAINT](/windows/desktop/gdi/wm-paint)アプリケーション キューからメッセージ。
 
-ウィンドウに、 [WS_CLIPCHILDREN](https://msdn.microsoft.com/library/windows/desktop/ms632679)スタイル、返される領域で指定された*prgnUpdate*と*lpRectUpdate*する必要がありますが、スクロール ウィンドウの全領域を表す更新の必要な子ウィンドウ内の任意の領域を含むを更新します。
+ウィンドウに、 [WS_CLIPCHILDREN](/windows/desktop/api/winuser/nf-winuser-createwindowa)スタイル、返される領域で指定された*prgnUpdate*と*lpRectUpdate*する必要がありますが、スクロール ウィンドウの全領域を表す更新の必要な子ウィンドウ内の任意の領域を含むを更新します。
 
 場合、 [SW_SCROLLCHILDREN](/windows/desktop/api/winuser/nf-winuser-scrollwindowex)フラグを指定すると、Windows が正しく画面が更新されない子ウィンドウの一部がスクロール可能な場合。 元の四角形の外側にあるスクロール子ウィンドウの一部は削除されませんしが再描画されません正しく新しい終点でします。 使用して、 [DeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632681) Windows 関数を完全に内に配置されていない子ウィンドウを移動する、*形*四角形。 SW_SCROLLCHILDREN フラグが設定され、カレットの四角形には、スクロールする四角形と交差している場合、カーソルの位置を変更します。
 
@@ -11497,7 +11497,7 @@ BOOL SetLayeredWindowAttributes(
 アルファ値が、レイヤード ウィンドウの不透明度を記述するために使用します。 詳細については、次を参照してください。、`SourceConstantAlpha`のメンバー、 [BLENDFUNCTION](/windows/desktop/api/wingdi/ns-wingdi-_blendfunction)構造体。 ときに*bAlpha*が 0 の場合、ウィンドウが完全に透過的です。 ときに*bAlpha* 255 は、ウィンドウは非透過的です。
 
 *dwFlags*  
-実行するアクションを指定します。 このパラメーターには、次の値の 1 つ以上を指定できます。 使用可能な値の一覧は、次を参照してください。 [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540)します。
+実行するアクションを指定します。 このパラメーターには、次の値の 1 つ以上を指定できます。 使用可能な値の一覧は、次を参照してください。 [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -11505,7 +11505,7 @@ BOOL SetLayeredWindowAttributes(
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、関数の機能をエミュレート[SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540)」の説明に従って、Windows SDK。
+このメンバー関数は、関数の機能をエミュレート[SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)」の説明に従って、Windows SDK。
 
 ##  <a name="setmenu"></a>  CWnd::SetMenu
 
