@@ -14,24 +14,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adff92e4b5c849c7fab151e716561e163cd59fff
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 886c300cb25b9370dee7c9ad23e8b5ff31214522
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962346"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763949"
 ---
 # <a name="file-handling-classes"></a>ファイル処理クラス
-これらのクラスは、ファイル、一時ファイル、およびメモリ マップト ファイルを処理するためのメソッドを提供します。  
-  
--   [CAtlFile](../atl/reference/catlfile-class.md)このクラスは、Windows の thin ラッパーのファイル処理 API を提供します。  
-  
--   [CAtlFileMapping](../atl/reference/catlfilemapping-class.md)このクラスのメソッドへのキャスト演算子の追加メモリ マップト ファイルを表します[CAtlFileMappingBase](../atl/reference/catlfilemappingbase-class.md)します。  
-  
--   [CAtlFileMappingBase](../atl/reference/catlfilemappingbase-class.md)このクラスは、メモリ マップト ファイルを表します。  
-  
--   [CAtlTemporaryFile](../atl/reference/catltemporaryfile-class.md)このクラスの作成および一時ファイルを使用してメソッドを提供します。  
-  
-## <a name="see-also"></a>関連項目  
- [クラスの概要](../atl/atl-class-overview.md)
+
+これらのクラスは、ファイル、一時ファイル、およびメモリ マップト ファイルを処理するためのメソッドを提供します。
+
+- [CAtlFile](../atl/reference/catlfile-class.md)このクラスは、Windows の thin ラッパーのファイル処理 API を提供します。
+
+- [CAtlFileMapping](../atl/reference/catlfilemapping-class.md)このクラスのメソッドへのキャスト演算子の追加メモリ マップト ファイルを表します[CAtlFileMappingBase](../atl/reference/catlfilemappingbase-class.md)します。
+
+- [CAtlFileMappingBase](../atl/reference/catlfilemappingbase-class.md)このクラスは、メモリ マップト ファイルを表します。
+
+- [CAtlTemporaryFile](../atl/reference/catltemporaryfile-class.md)このクラスの作成および一時ファイルを使用してメソッドを提供します。
+
+## <a name="see-also"></a>関連項目
+
+[クラスの概要](../atl/atl-class-overview.md)
 

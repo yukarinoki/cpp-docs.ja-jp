@@ -18,22 +18,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70254f05dc871a8073d82f1870b30f178e0f7276
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: d1039f93d28db118dafadd88b074d788a1b861de
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959005"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752181"
 ---
 # <a name="thread-pooling-classes"></a>スレッド プール クラス
-次のクラスは、スレッド プールをサポートします。  
-  
--   [CComAutoThreadModule](../atl/reference/ccomautothreadmodule-class.md) 、複数のスレッド プール アパートメント対応の EXE モジュールを実装します。  
-  
--   [CComApartment](../atl/reference/ccomapartment-class.md)アパートメントにスレッド プールの EXE モジュールを管理します。  
-  
--   [CComSimpleThreadAllocator](../atl/reference/ccomsimplethreadallocator-class.md) EXE モジュールのスレッドの選択を管理します。  
-  
-## <a name="see-also"></a>関連項目  
- [クラスの概要](../atl/atl-class-overview.md)
+
+次のクラスは、スレッド プールをサポートします。
+
+- [CComAutoThreadModule](../atl/reference/ccomautothreadmodule-class.md) 、複数のスレッド プール アパートメント対応の EXE モジュールを実装します。
+
+- [CComApartment](../atl/reference/ccomapartment-class.md)アパートメントにスレッド プールの EXE モジュールを管理します。
+
+- [CComSimpleThreadAllocator](../atl/reference/ccomsimplethreadallocator-class.md) EXE モジュールのスレッドの選択を管理します。
+
+## <a name="see-also"></a>関連項目
+
+[クラスの概要](../atl/atl-class-overview.md)
 

@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d48d863cdbe8e5528824b3ffbad10e1117277e0c
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fb7218d7fc8886cffdcce13f09a682fdc635f84f
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885341"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759929"
 ---
 # <a name="atlbasemodule70-structure"></a>_ATL_BASE_MODULE70 構造体
-ATL を使用するすべてのプロジェクトで使用されます。  
-  
-## <a name="syntax"></a>構文  
-  
+
+ATL を使用するすべてのプロジェクトで使用されます。
+
+## <a name="syntax"></a>構文
+
 ```
 struct _ATL_BASE_MODULE70 {
     UINT cbSize;
@@ -42,43 +43,43 @@ struct _ATL_BASE_MODULE70 {
     CRITICAL_SECTION m_csResource;
     CSimpleArray<HINSTANCE> m_rgResourceInstance;
 };
-```  
-  
-## <a name="members"></a>メンバー  
- `cbSize`  
- バージョン管理に使用される、構造のサイズ。  
-  
- `m_hInst`  
- `hInstance` (Exe または dll) は、このモジュールにします。  
-  
- `m_hInstResource`  
- 既定のインスタンスのリソース ハンドル。  
-  
- `m_bNT5orWin98`  
- オペレーティング システムのバージョン情報。 ATL で内部的に使用  
-  
- `dwAtlBuildVer`  
- ATL のバージョンが格納されます。 現在は 0x0700 です。  
-  
- `pguidVer`  
- ATL の内部の GUID です。  
-  
- `m_csResource`  
- アクセスを同期するため、`m_rgResourceInstance`配列。 ATL で内部的に使用  
-  
- `m_rgResourceInstance`  
- ATL が対応であるすべてのリソース インスタンス内のリソースの検索に使用する配列。 ATL で内部的に使用  
-  
-## <a name="remarks"></a>Remarks  
- [_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module) _ATL_BASE_MODULE70 の typedef として定義されます。  
-  
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** atlcore.h  
-  
-## <a name="see-also"></a>関連項目  
- [クラスと構造体](../../atl/reference/atl-classes.md)
+```
 
+## <a name="members"></a>メンバー
 
+`cbSize`  
+バージョン管理に使用される、構造のサイズ。
 
+`m_hInst`  
+`hInstance` (Exe または dll) は、このモジュールにします。
 
+`m_hInstResource`  
+既定のインスタンスのリソース ハンドル。
+
+`m_bNT5orWin98`  
+オペレーティング システムのバージョン情報。 ATL で内部的に使用
+
+`dwAtlBuildVer`  
+ATL のバージョンが格納されます。 現在は 0x0700 です。
+
+`pguidVer`  
+ATL の内部の GUID です。
+
+`m_csResource`  
+アクセスを同期するため、`m_rgResourceInstance`配列。 ATL で内部的に使用
+
+`m_rgResourceInstance`  
+ATL が対応であるすべてのリソース インスタンス内のリソースの検索に使用する配列。 ATL で内部的に使用
+
+## <a name="remarks"></a>Remarks
+
+[_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module) _ATL_BASE_MODULE70 の typedef として定義されます。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** atlcore.h
+
+## <a name="see-also"></a>関連項目
+
+[クラスと構造体](../../atl/reference/atl-classes.md)
 

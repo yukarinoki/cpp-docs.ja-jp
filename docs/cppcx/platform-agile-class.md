@@ -21,11 +21,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f552327156d9fc1abe5e921f3b59b1fb4132ff3d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596603"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763433"
 ---
 # <a name="platformagile-class"></a>Platform::Agile クラス
 アジャイル オブジェクトとして MashalingBehavior=Standard を含むオブジェクトを表します。これはランタイム スレッドの例外の頻度を大幅に減らします。 `Agile<T>` を使うと、非アジャイル オブジェクトによる同じスレッドや別のスレッドの呼び出しや、同じスレッドや別のスレッドによる非アジャイル オブジェクトの呼び出しができるようになります。 詳細については、次を参照してください。[スレッドとマーシャ リング](../cppcx/threading-and-marshaling-c-cx.md)します。  

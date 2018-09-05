@@ -17,27 +17,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 197e9d538b51ec69c0d2b2ab5dd7395f98bee7e5
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 41068a81d52c0e30ef95cf364d759f35a39140c9
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958492"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760017"
 ---
 # <a name="class-factories-classes"></a>クラス ファクトリ クラス
-次のクラスを実装またはクラス ファクトリのサポートします。  
-  
--   [CComClassFactory](../atl/reference/ccomclassfactory-class.md)オブジェクトの作成の既定のクラス ファクトリを提供します。  
-  
--   [CComClassFactory2](../atl/reference/ccomclassfactory2-class.md)ライセンスでのオブジェクトの作成を制御します。  
-  
--   [CComClassFactoryAutoThread](../atl/reference/ccomclassfactoryautothread-class.md)により、複数のスレッド プール アパートメント内に作成するオブジェクト。  
-  
--   [CComClassFactorySingleton](../atl/reference/ccomclassfactorysingleton-class.md) 1 つのオブジェクトを作成します。  
-  
--   [CComCoClass](../atl/reference/ccomcoclass-class.md)オブジェクトのクラス ファクトリを定義します。  
-  
-## <a name="see-also"></a>関連項目  
- [クラスの概要](../atl/atl-class-overview.md)   
- [集計とクラス ファクトリに関するマクロ](../atl/reference/aggregation-and-class-factory-macros.md)
+
+次のクラスを実装またはクラス ファクトリのサポートします。
+
+- [CComClassFactory](../atl/reference/ccomclassfactory-class.md)オブジェクトの作成の既定のクラス ファクトリを提供します。
+
+- [CComClassFactory2](../atl/reference/ccomclassfactory2-class.md)ライセンスでのオブジェクトの作成を制御します。
+
+- [CComClassFactoryAutoThread](../atl/reference/ccomclassfactoryautothread-class.md)により、複数のスレッド プール アパートメント内に作成するオブジェクト。
+
+- [CComClassFactorySingleton](../atl/reference/ccomclassfactorysingleton-class.md) 1 つのオブジェクトを作成します。
+
+- [CComCoClass](../atl/reference/ccomcoclass-class.md)オブジェクトのクラス ファクトリを定義します。
+
+## <a name="see-also"></a>関連項目
+
+[クラスの概要](../atl/atl-class-overview.md)   
+[集計とクラス ファクトリに関するマクロ](../atl/reference/aggregation-and-class-factory-macros.md)
 

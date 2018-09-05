@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e330beda4770f60d5358ed8baf8d3b2fae260d3a
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: e4c5d7ad570d9745e10107f0df09faccd9eb42e3
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883035"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761554"
 ---
 # <a name="atlwinmodule70-structure"></a>_ATL_WIN_MODULE70 構造体
-ATL でウィンドウ作成コードで使用されます。  
-  
-## <a name="syntax"></a>構文  
-  
+
+ATL でウィンドウ作成コードで使用されます。
+
+## <a name="syntax"></a>構文
+
 ```
 struct _ATL_WIN_MODULE70 {
     UNIT cbSize; 
@@ -38,31 +39,31 @@ struct _ATL_WIN_MODULE70 {
     _AtlCreateWndData* m_pCreateWndList;
     CSimpleArray<ATOM> m_rgWindowClassAtoms;
 };
-```  
-  
-## <a name="members"></a>メンバー  
- `cbSize`  
- バージョン管理に使用される、構造のサイズ。  
-  
- `m_csWindowCreate`  
- ウィンドウの登録コードへのアクセスをシリアル化するために使用します。 ATL で内部的に使用  
-  
- `m_pCreateWndList`  
- Windows をそれらのオブジェクトにバインドするために使用します。 ATL で内部的に使用  
-  
- `m_rgWindowClassAtoms`  
- 終了時に正しく登録それらができるように、ウィンドウ クラスの登録を追跡するために使用します。 ATL で内部的に使用  
-  
-## <a name="remarks"></a>Remarks  
- [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)の typedef として定義されて`_ATL_WIN_MODULE70`します。  
-  
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** atlbase.h  
-  
-## <a name="see-also"></a>関連項目  
- [クラスと構造体](../../atl/reference/atl-classes.md)
+```
 
+## <a name="members"></a>メンバー
 
+`cbSize`  
+バージョン管理に使用される、構造のサイズ。
 
+`m_csWindowCreate`  
+ウィンドウの登録コードへのアクセスをシリアル化するために使用します。 ATL で内部的に使用
 
+`m_pCreateWndList`  
+Windows をそれらのオブジェクトにバインドするために使用します。 ATL で内部的に使用
+
+`m_rgWindowClassAtoms`  
+終了時に正しく登録それらができるように、ウィンドウ クラスの登録を追跡するために使用します。 ATL で内部的に使用
+
+## <a name="remarks"></a>Remarks
+
+[_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)の typedef として定義されて`_ATL_WIN_MODULE70`します。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** atlbase.h
+
+## <a name="see-also"></a>関連項目
+
+[クラスと構造体](../../atl/reference/atl-classes.md)
 

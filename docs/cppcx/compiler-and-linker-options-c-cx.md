@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1597acfdf608d5e8801870fcebb43109c2eb803d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593793"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762584"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>コンパイラとリンカーのオプション (C++/CX)
 環境変数 C + + CX のコンパイラ オプション、およびリンカー オプションは、Windows ランタイム用アプリの構築をサポートします。  

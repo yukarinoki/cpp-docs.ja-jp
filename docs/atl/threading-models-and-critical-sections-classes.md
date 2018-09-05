@@ -1,5 +1,5 @@
 ---
-title: スレッド モデルと重要なセクション クラス (ATL) |Microsoft ドキュメント
+title: スレッド処理モデルとクリティカル セクションのクラス (ATL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,40 +19,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37172c0080664f496bdf5d5c7c0ebecbd8f77898
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b87fdac5220ede47f1acf19088e952fde408a413
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359919"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755958"
 ---
-# <a name="threading-models-and-critical-sections-classes"></a>スレッド モデルと重要なセクション クラス
-次のクラスを定義、スレッド処理モデルと重要なセクション。  
-  
--   [残さ](../atl/reference/catlautothreadmodule-class.md)スレッド プール、アパートメント モデルの COM サーバーを実装します。  
-  
--   [CAtlAutoThreadModuleT](../atl/reference/catlautothreadmodulet-class.md)スレッド プール、アパートメント モデルの COM サーバーを実装するためのメソッドを提供します。  
-  
--   [CComMultiThreadModel](../atl/reference/ccommultithreadmodel-class.md)変数をインクリメントおよびデクリメントのスレッド セーフであるメソッドを提供します。 クリティカル セクションを提供します。  
-  
--   [CComMultiThreadModelNoCS](../atl/reference/ccommultithreadmodelnocs-class.md)変数をインクリメントおよびデクリメントのスレッド セーフであるメソッドを提供します。 クリティカル セクションは提供されません。  
-  
--   [CComSingleThreadModel](../atl/reference/ccomsinglethreadmodel-class.md)変数をインクリメントおよびデクリメントするためのメソッドを提供します。 クリティカル セクションは提供されません。  
-  
--   [CComObjectThreadModel](../atl/reference/atl-typedefs.md#ccomobjectthreadmodel) 1 つのオブジェクト クラスに対して適切なスレッド処理モデル クラスを決定します。  
-  
--   [CComGlobalsThreadModel](../atl/reference/atl-typedefs.md#ccomglobalsthreadmodel)はグローバルに使用できるオブジェクトに対して適切なスレッド処理モデル クラスを決定します。  
-  
--   [CComAutoCriticalSection](../atl/reference/ccomautocriticalsection-class.md)を取得し、クリティカル セクションを解放するためのメソッドが含まれます。 クリティカル セクションが自動的に初期化します。  
-  
--   [CComCriticalSection](../atl/reference/ccomcriticalsection-class.md)を取得し、クリティカル セクションを解放するためのメソッドが含まれます。 クリティカル セクションは、明示的に初期化する必要があります。  
-  
--   [CComFakeCriticalSection](../atl/reference/ccomfakecriticalsection-class.md)内のメソッドをミラー化`CComCriticalSection`クリティカル セクションを指定しなくてもします。 メソッドは、`CComFakeCriticalSection`何もしません。  
-  
--   [CRTThreadTraits](../atl/reference/crtthreadtraits-class.md) CRT スレッドの作成機能を提供します。 スレッドが CRT 関数を使用する場合は、このクラスを使用します。  
-  
--   [Win32ThreadTraits](../atl/reference/win32threadtraits-class.md) Windows スレッドの作成機能を提供します。 スレッド CRT 関数を使用しない場合は、このクラスを使用します。  
-  
-## <a name="see-also"></a>関連項目  
- [クラスの概要](../atl/atl-class-overview.md)
+# <a name="threading-models-and-critical-sections-classes"></a>スレッド処理モデルとクリティカル セクションのクラス
+
+次のクラス定義のスレッド処理モデルとクリティカル セクション。
+
+- [CAtlAutoThreadModule](../atl/reference/catlautothreadmodule-class.md)スレッド プール、アパートメント モデルの COM サーバーを実装します。
+
+- [CAtlAutoThreadModuleT](../atl/reference/catlautothreadmodulet-class.md)スレッド プール、アパートメント モデルの COM サーバーを実装するためのメソッドを提供します。
+
+- [CComMultiThreadModel](../atl/reference/ccommultithreadmodel-class.md)変数をインクリメントおよびデクリメントのスレッド セーフであるメソッドを提供します。 クリティカル セクションを提供します。
+
+- [CComMultiThreadModelNoCS](../atl/reference/ccommultithreadmodelnocs-class.md)変数をインクリメントおよびデクリメントのスレッド セーフであるメソッドを提供します。 クリティカル セクションは提供されません。
+
+- [CComSingleThreadModel](../atl/reference/ccomsinglethreadmodel-class.md)変数をインクリメントおよびデクリメントするためのメソッドを提供します。 クリティカル セクションは提供されません。
+
+- [CComObjectThreadModel](../atl/reference/atl-typedefs.md#ccomobjectthreadmodel) 1 つのオブジェクト クラスの適切なスレッド モデル クラスを決定します。
+
+- [CComGlobalsThreadModel](../atl/reference/atl-typedefs.md#ccomglobalsthreadmodel)グローバルに利用可能であるオブジェクトの適切なスレッド モデル クラスを決定します。
+
+- [CComAutoCriticalSection](../atl/reference/ccomautocriticalsection-class.md)取得およびクリティカル セクションを解放するためのメソッドが含まれています。 クリティカル セクションが自動的に初期化します。
+
+- [CComCriticalSection](../atl/reference/ccomcriticalsection-class.md)取得およびクリティカル セクションを解放するためのメソッドが含まれています。 クリティカル セクションを明示的に初期化する必要があります。
+
+- [CComFakeCriticalSection](../atl/reference/ccomfakecriticalsection-class.md)内のメソッドをミラー化`CComCriticalSection`せず、クリティカル セクション。 メソッドは、`CComFakeCriticalSection`何もしません。
+
+- [CRTThreadTraits](../atl/reference/crtthreadtraits-class.md) CRT スレッドの作成機能を提供します。 スレッドの CRT 関数が使用する場合は、このクラスを使用します。
+
+- [Win32ThreadTraits](../atl/reference/win32threadtraits-class.md) Windows スレッドの作成機能を提供します。 スレッドの CRT 関数を使用しない場合は、このクラスを使用します。
+
+## <a name="see-also"></a>関連項目
+
+[クラスの概要](../atl/atl-class-overview.md)
 

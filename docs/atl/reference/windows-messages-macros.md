@@ -14,45 +14,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3063dd1bb5bbd9c0eb957b9727027b2d01edfd7d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 58c9f26b33c3ab2bcdc4e7f0c0a676835da0e3c3
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886207"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758844"
 ---
 # <a name="windows-messages-macros"></a>Windows メッセージに関するマクロ
-このマクロは、ウィンドウ メッセージを転送します。  
-  
-|||  
-|-|-|  
+
+このマクロは、ウィンドウ メッセージを転送します。
+
+|||
+|-|-|
 |[WM_FORWARDMSG](#wm_forwardmsg)|処理するための別のウィンドウのウィンドウで受信メッセージの転送を使用します。|  
 
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** atlbase.h 
-   
-##  <a name="wm_forwardmsg"></a>  WM_FORWARDMSG  
- このマクロは、処理のための別のウィンドウのウィンドウで受信したメッセージを転送します。  
-  
+## <a name="requirements"></a>要件
+
+**ヘッダー:** atlbase.h
+
+##  <a name="wm_forwardmsg"></a>  WM_FORWARDMSG
+
+このマクロは、処理のための別のウィンドウのウィンドウで受信したメッセージを転送します。
+
 ```
 WM_FORWARDMSG
-```  
-  
-### <a name="return-value"></a>戻り値  
- 0 以外の場合、メッセージが処理された場合しない場合は 0。  
-  
-### <a name="remarks"></a>Remarks  
- 処理のための別のウィンドウのウィンドウで受信したメッセージを転送するのに WM_FORWARDMSG を使用します。 LPARAM および WPARAM パラメーターは、次のように使用されます。  
-  
-|パラメーター|使用法|  
-|---------------|-----------|  
-|WPARAM|ユーザーによって定義されたデータ|  
-|LPARAM|ポインターを`MSG`メッセージに関する情報を含む構造体|  
-  
-### <a name="example"></a>例  
- 次の例では、`m_hWndOther`このメッセージを受信する他のウィンドウを表します。  
-  
- [!code-cpp[NVC_ATL_Windowing#137](../../atl/codesnippet/cpp/windows-messages-macros_1.cpp)]  
-  
-## <a name="see-also"></a>関連項目  
- [[マクロ]](../../atl/reference/atl-macros.md)
+```
+
+### <a name="return-value"></a>戻り値
+
+0 以外の場合、メッセージが処理された場合しない場合は 0。
+
+### <a name="remarks"></a>Remarks
+
+処理のための別のウィンドウのウィンドウで受信したメッセージを転送するのに WM_FORWARDMSG を使用します。 LPARAM および WPARAM パラメーターは、次のように使用されます。
+
+|パラメーター|使用法|
+|---------------|-----------|
+|WPARAM|ユーザーによって定義されたデータ|
+|LPARAM|ポインターを`MSG`メッセージに関する情報を含む構造体|
+
+### <a name="example"></a>例
+
+次の例では、`m_hWndOther`このメッセージを受信する他のウィンドウを表します。
+
+[!code-cpp[NVC_ATL_Windowing#137](../../atl/codesnippet/cpp/windows-messages-macros_1.cpp)]
+
+## <a name="see-also"></a>関連項目
+
+[[マクロ]](../../atl/reference/atl-macros.md)

@@ -20,135 +20,159 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b82299db31a7452a05cdfe709221facda09c3615
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: ed0e105443231853442296748f0e505f3df51b48
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676076"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43753709"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>ISupportErrorInfoImpl クラス
-このクラスの既定の実装を提供する、 [ISupportErrorInfo インターフェイス](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo)1 つのインターフェイスのみがオブジェクトのエラーを生成するときに使用できます。  
-  
+
+このクラスの既定の実装を提供する、 [ISupportErrorInfo インターフェイス](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo)1 つのインターフェイスのみがオブジェクトのエラーを生成するときに使用できます。
+
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。  
-  
-## <a name="syntax"></a>構文  
-  
+>  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。
+
+## <a name="syntax"></a>構文
+
 ```
 template<const IID* piid>  
 class ATL_NO_VTABLE ISupportErrorInfoImpl 
    : public ISupportErrorInfo
-```  
-  
-#### <a name="parameters"></a>パラメーター  
- *piid*  
- サポートするインターフェイスの IID へのポインター [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo)します。  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="public-methods"></a>パブリック メソッド  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[ISupportErrorInfoImpl::InterfaceSupportsErrorInfo](#interfacesupportserrorinfo)|インターフェイスがで識別されるかどうかを示す`riid`サポート、 [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo)インターフェイス。|  
-  
-## <a name="remarks"></a>Remarks  
- [ISupportErrorInfo インターフェイス](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo)により、クライアントにエラー情報を返されることができます。 使用するオブジェクト`IErrorInfo`実装する必要があります`ISupportErrorInfo`します。  
-  
- クラス`ISupportErrorInfoImpl`の既定の実装を提供します。 `ISupportErrorInfo` 、1 つのインターフェイスのみがオブジェクトのエラーを生成するときに使用できます。 例えば:  
-  
- [!code-cpp[NVC_ATL_COM#48](../../atl/codesnippet/cpp/isupporterrorinfoimpl-class_1.h)]  
-  
-## <a name="inheritance-hierarchy"></a>継承階層  
- `ISupportErrorInfo`  
-  
- `ISupportErrorInfoImpl`  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** atlcom.h  
-  
-##  <a name="interfacesupportserrorinfo"></a>  ISupportErrorInfoImpl::InterfaceSupportsErrorInfo  
- インターフェイスがで識別されるかどうかを示す`riid`サポート、 [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo)インターフェイス。  
-  
+```
+
+#### <a name="parameters"></a>パラメーター
+
+*piid*  
+サポートするインターフェイスの IID へのポインター [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo)します。
+
+## <a name="members"></a>メンバー
+
+### <a name="public-methods"></a>パブリック メソッド
+
+|名前|説明|
+|----------|-----------------|
+|[ISupportErrorInfoImpl::InterfaceSupportsErrorInfo](#interfacesupportserrorinfo)|インターフェイスがで識別されるかどうかを示す`riid`サポート、 [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo)インターフェイス。|
+
+## <a name="remarks"></a>Remarks
+
+[ISupportErrorInfo インターフェイス](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo)により、クライアントにエラー情報を返されることができます。 使用するオブジェクト`IErrorInfo`実装する必要があります`ISupportErrorInfo`します。
+
+クラス`ISupportErrorInfoImpl`の既定の実装を提供します。 `ISupportErrorInfo` 、1 つのインターフェイスのみがオブジェクトのエラーを生成するときに使用できます。 例えば:
+
+[!code-cpp[NVC_ATL_COM#48](../../atl/codesnippet/cpp/isupporterrorinfoimpl-class_1.h)]
+
+## <a name="inheritance-hierarchy"></a>継承階層
+
+`ISupportErrorInfo`
+
+`ISupportErrorInfoImpl`
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** atlcom.h
+
+##  <a name="interfacesupportserrorinfo"></a>  ISupportErrorInfoImpl::InterfaceSupportsErrorInfo
+
+インターフェイスがで識別されるかどうかを示す`riid`サポート、 [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo)インターフェイス。
+
 ```
 STDMETHOD(InterfaceSupportsErrorInfo)(REFIID riid);
-```  
-  
-### <a name="remarks"></a>Remarks  
- 参照してください[ISupportErrorInfo::InterfaceSupportsErrorInfo](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-isupporterrorinfo-interfacesupportserrorinfo) Windows SDK にします。  
-  
-##  <a name="getsize"></a>  IThreadPoolConfig::GetSize  
- プールのスレッドの数を取得するには、このメソッドを呼び出します。  
-  
+```
+
+### <a name="remarks"></a>Remarks
+
+参照してください[ISupportErrorInfo::InterfaceSupportsErrorInfo](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-isupporterrorinfo-interfacesupportserrorinfo) Windows SDK にします。
+
+##  <a name="getsize"></a>  IThreadPoolConfig::GetSize
+
+プールのスレッドの数を取得するには、このメソッドを呼び出します。
+
 ```
 STDMETHOD(GetSize)(int* pnNumThreads);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *pnNumThreads*  
- [out]成功した場合、プールのスレッドの数を受け取る変数のアドレス。  
-  
-### <a name="return-value"></a>戻り値  
- 成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
-  
-### <a name="example"></a>例  
- [!code-cpp[NVC_ATL_Utilities#134](../../atl/codesnippet/cpp/isupporterrorinfoimpl-class_2.cpp)]  
-  
-##  <a name="gettimeout"></a>  IThreadPoolConfig::GetTimeout  
- スレッド プール スレッドをシャット ダウンを待機するミリ秒単位で最大の時刻を取得するには、このメソッドを呼び出します。  
-  
+```
+
+### <a name="parameters"></a>パラメーター
+
+*pnNumThreads*  
+[out]成功した場合、プールのスレッドの数を受け取る変数のアドレス。
+
+### <a name="return-value"></a>戻り値
+
+成功した場合、S_OK または失敗時にエラーの hresult 値を返します。
+
+### <a name="example"></a>例
+
+[!code-cpp[NVC_ATL_Utilities#134](../../atl/codesnippet/cpp/isupporterrorinfoimpl-class_2.cpp)]
+
+##  <a name="gettimeout"></a>  IThreadPoolConfig::GetTimeout
+
+スレッド プール スレッドをシャット ダウンを待機するミリ秒単位で最大の時刻を取得するには、このメソッドを呼び出します。
+
 ```
 STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *pdwMaxWait*  
- [out]成功した場合、スレッド プール スレッドをシャット ダウンを待機するミリ秒単位で時間の最大値を受け取る変数のアドレス。  
-  
-### <a name="return-value"></a>戻り値  
- 成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
-  
-### <a name="example"></a>例  
- 参照してください[IThreadPoolConfig::GetSize](#getsize)します。  
-  
-##  <a name="setsize"></a>  IThreadPoolConfig::SetSize  
- プールのスレッドの数を設定するには、このメソッドを呼び出します。  
-  
+```
+
+### <a name="parameters"></a>パラメーター
+
+*pdwMaxWait*  
+[out]成功した場合、スレッド プール スレッドをシャット ダウンを待機するミリ秒単位で時間の最大値を受け取る変数のアドレス。
+
+### <a name="return-value"></a>戻り値
+
+成功した場合、S_OK または失敗時にエラーの hresult 値を返します。
+
+### <a name="example"></a>例
+
+参照してください[IThreadPoolConfig::GetSize](#getsize)します。
+
+##  <a name="setsize"></a>  IThreadPoolConfig::SetSize
+
+プールのスレッドの数を設定するには、このメソッドを呼び出します。
+
 ```
 STDMETHOD(SetSize)int nNumThreads);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *nNumThreads*  
- 要求されたプール内のスレッド数。  
-  
- 場合*nNumThreads*が負の場合、その絶対値で乗算されますスレッドの合計数を取得するマシンでプロセッサの数。  
-  
- 場合*nNumThreads*ゼロ、ATLS_DEFAULT_THREADSPERPROC はスレッドの合計数を取得するマシンのプロセッサ数が乗算されます。  
-  
-### <a name="return-value"></a>戻り値  
- 成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
-  
-### <a name="example"></a>例  
- 参照してください[IThreadPoolConfig::GetSize](#getsize)します。  
-  
-##  <a name="settimeout"></a>  IThreadPoolConfig::SetTimeout  
- スレッド プール スレッドをシャット ダウンを待機するミリ秒単位で最大の時間を設定するには、このメソッドを呼び出します。  
-  
+```
+
+### <a name="parameters"></a>パラメーター
+
+*nNumThreads*  
+要求されたプール内のスレッド数。
+
+場合*nNumThreads*が負の場合、その絶対値で乗算されますスレッドの合計数を取得するマシンでプロセッサの数。
+
+場合*nNumThreads*ゼロ、ATLS_DEFAULT_THREADSPERPROC はスレッドの合計数を取得するマシンのプロセッサ数が乗算されます。
+
+### <a name="return-value"></a>戻り値
+
+成功した場合、S_OK または失敗時にエラーの hresult 値を返します。
+
+### <a name="example"></a>例
+
+参照してください[IThreadPoolConfig::GetSize](#getsize)します。
+
+##  <a name="settimeout"></a>  IThreadPoolConfig::SetTimeout
+
+スレッド プール スレッドをシャット ダウンを待機するミリ秒単位で最大の時間を設定するには、このメソッドを呼び出します。
+
 ```
 STDMETHOD(SetTimeout)(DWORD dwMaxWait);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *dwMaxWait*  
- スレッド プール スレッドをシャット ダウンを待機するミリ秒単位で要求された最大時間。  
-  
-### <a name="return-value"></a>戻り値  
- 成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
-  
-### <a name="example"></a>例  
- 参照してください[IThreadPoolConfig::GetSize](#getsize)します。  
-  
-## <a name="see-also"></a>関連項目  
- [クラスの概要](../../atl/atl-class-overview.md)
+```
+
+### <a name="parameters"></a>パラメーター
+
+*dwMaxWait*  
+スレッド プール スレッドをシャット ダウンを待機するミリ秒単位で要求された最大時間。
+
+### <a name="return-value"></a>戻り値
+
+成功した場合、S_OK または失敗時にエラーの hresult 値を返します。
+
+### <a name="example"></a>例
+
+参照してください[IThreadPoolConfig::GetSize](#getsize)します。
+
+## <a name="see-also"></a>関連項目
+
+[クラスの概要](../../atl/atl-class-overview.md)

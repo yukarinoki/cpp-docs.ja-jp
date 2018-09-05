@@ -18,11 +18,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a97d77f0b84366c83f09f6a6c72afe1bbb25dc6d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612130"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758831"
 ---
 # <a name="platformintptr-value-class"></a>Platform::IntPtr 値クラス
 サイズがプラットフォームに特有の (32 ビットまたは 64 ビット)、符号付きポインターまたはハンドルを表します。  

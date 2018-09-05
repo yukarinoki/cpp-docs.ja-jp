@@ -14,39 +14,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fcfffcd9508876399b30238cac0b4f65c92c733
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 04bad7c90869eb5a5b87a465b175e4ed3f0b9991
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206502"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751512"
 ---
 # <a name="object-status-macros"></a>オブジェクトの状態に関するマクロ
-このマクロは、ActiveX コントロールに属しているフラグを設定します。  
-  
-|||  
-|-|-|  
+
+このマクロは、ActiveX コントロールに属しているフラグを設定します。
+
+|||
+|-|-|
 |[DECLARE_OLEMISC_STATUS](#declare_olemisc_status)|ATL の ActiveX コントロールにおける入りますフラグを設定するために使用します。|  
 
-## <a name="requirements"></a>要件  
- **ヘッダー:** atlcom.h  
+## <a name="requirements"></a>要件
 
-##  <a name="declare_olemisc_status"></a>  DECLARE_OLEMISC_STATUS  
- ATL の ActiveX コントロールにおける入りますフラグを設定するために使用します。  
-  
+**ヘッダー:** atlcom.h  
+
+##  <a name="declare_olemisc_status"></a>  DECLARE_OLEMISC_STATUS
+
+ATL の ActiveX コントロールにおける入りますフラグを設定するために使用します。
+
 ```
 DECLARE_OLEMISC_STATUS( miscstatus )
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *miscstatus*  
- 該当するすべて入りますフラグ。  
-  
-### <a name="remarks"></a>Remarks  
- このマクロは、ActiveX コントロールの入りますフラグの設定に使用されます。 参照してください[IOleObject::GetMiscStatus](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getmiscstatus)の詳細。  
-  
-### <a name="example"></a>例  
- [!code-cpp[NVC_ATL_Windowing#124](../../atl/codesnippet/cpp/object-status-macros_1.h)]  
-  
-## <a name="see-also"></a>関連項目  
- [[マクロ]](../../atl/reference/atl-macros.md)
+```
+
+### <a name="parameters"></a>パラメーター
+
+*miscstatus*  
+該当するすべて入りますフラグ。
+
+### <a name="remarks"></a>Remarks
+
+このマクロは、ActiveX コントロールの入りますフラグの設定に使用されます。 参照してください[IOleObject::GetMiscStatus](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getmiscstatus)の詳細。
+
+### <a name="example"></a>例
+
+[!code-cpp[NVC_ATL_Windowing#124](../../atl/codesnippet/cpp/object-status-macros_1.h)]
+
+## <a name="see-also"></a>関連項目
+
+[[マクロ]](../../atl/reference/atl-macros.md)

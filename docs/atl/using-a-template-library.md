@@ -1,5 +1,5 @@
 ---
-title: Template Library (ATL) を使用して |Microsoft ドキュメント
+title: テンプレート ライブラリ (ATL) の使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,18 +14,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48d7a8838097c862e3d4c16e15ec951441b72794
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 91a9c10bef285780ded145e33800ebd3db198827
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357845"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754796"
 ---
-# <a name="using-a-template-library"></a>テンプレート ライブラリを使用します。
-テンプレートは、マクロに似ています。 同様に、マクロでは、テンプレートを呼び出すと (適切なパラメーターの置換) の展開に記述したコードをします。 ただし、テンプレート パラメーターとして渡された型に基づいて新しいクラスの作成を許可するよりもさらに移動します。 これらの新しいクラスでは、テンプレート コードで表される操作を実行する: タイプ セーフな方法を実装します。  
-  
- ATL などのテンプレート ライブラリとは異なり、従来の C++ クラス ライブラリからソース コードとしてのみ (または、もう少し、実行時のサポートのソース コードとして) 通常提供される、本質的にまたは必ずしも階層構造になっています。 目的の機能を取得するクラスから派生するのではなく、テンプレートからクラスをインスタンス化します。  
-  
-## <a name="see-also"></a>関連項目  
- [ATL の概要](../atl/introduction-to-atl.md)
+# <a name="using-a-template-library"></a>テンプレート ライブラリの使用
+
+テンプレートは、マクロに似ています。 、マクロを使用して、テンプレートを呼び出すと (適切なパラメーターの置換) の展開を記述したコードにします。 ただし、テンプレート パラメーターとして渡す型に基づいて新しいクラスの作成を許可するようによりもさらに移動します。 これらの新しいクラスは、テンプレート コードで表される操作を実行するタイプ セーフな方法を実装します。
+
+ATL などのテンプレートのライブラリは従来の C++ クラス ライブラリと異なるソース コードとしてのみ (または小さな実行時のサポートでソース コードとして) 通常提供されること、本質的にまたは必ずしも階層構造になっています。 必要な機能を取得するためのクラスから派生するのではなく、テンプレートからのクラスをインスタンス化します。
+
+## <a name="see-also"></a>関連項目
+
+[ATL の概要](../atl/introduction-to-atl.md)
 
