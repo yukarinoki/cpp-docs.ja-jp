@@ -22,29 +22,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ff30460ad68e6efb1abc3d84925b362cf03f551
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 927ab1004336787131c8f92c247512d1c66caf69
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33325774"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212757"
 ---
 # <a name="midl-property-pages-output"></a>[出力] ([MIDL] プロパティ ページ)
 **MIDL** フォルダーの **[出力]** プロパティ ページでは、次の MIDL コンパイラ オプションを指定します。  
   
--   出力ディレクトリ ([/out](http://msdn.microsoft.com/library/windows/desktop/aa367358))  
+-   出力ディレクトリ ([/out](https://msdn.microsoft.com/library/windows/desktop/aa367358))  
   
--   ヘッダー ファイル ([/h](http://msdn.microsoft.com/library/windows/desktop/aa367325))  
+-   ヘッダー ファイル ([/h](https://msdn.microsoft.com/library/windows/desktop/aa367325))  
   
--   DLL データ ファイル ([/dlldata](http://msdn.microsoft.com/library/windows/desktop/aa367322))  
+-   DLL データ ファイル ([/dlldata](https://msdn.microsoft.com/library/windows/desktop/aa367322))  
   
--   IID ファイル ([/iid](http://msdn.microsoft.com/library/windows/desktop/aa367329))  
+-   IID ファイル ([/iid](https://msdn.microsoft.com/library/windows/desktop/aa367329))  
   
--   プロキシ ファイル ([/proxy](http://msdn.microsoft.com/library/windows/desktop/aa367362))  
+-   プロキシ ファイル ([/proxy](https://msdn.microsoft.com/library/windows/desktop/aa367362))  
   
--   タイプ ライブラリの生成 ([/notlb](http://msdn.microsoft.com/library/windows/desktop/aa367343))  
+-   タイプ ライブラリの生成 ([/notlb](https://msdn.microsoft.com/library/windows/desktop/aa367343))  
   
--   タイプ ライブラリ ([/tlb](http://msdn.microsoft.com/library/windows/desktop/aa367372))  
+-   タイプ ライブラリ ([/tlb](https://msdn.microsoft.com/library/windows/desktop/aa367372))  
   
  **MIDL** フォルダーの **[出力]** プロパティ ページにアクセスする方法については、「[プロジェクトのプロパティの操作](../ide/working-with-project-properties.md)」を参照してください。  
   

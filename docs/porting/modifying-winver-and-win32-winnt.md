@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4007f8b07b78618f4fdd8031d0f6dab5f1c12916
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6593168e87f8a0dde1dd996aeadf2d225adbbe72
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912642"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194180"
 ---
 # <a name="modifying-winver-and-win32winnt"></a>WINVER および _WIN32_WINNT の変更
 
@@ -59,11 +59,11 @@ Visual C++ では、Windows 95、Windows 98、Windows ME、Windows NT、およ�
 表示している SDKDDKVer.h のコピーに Windows のすべてのバージョンがリストされていない場合、古いバージョンの Windows SDK を使用している可能性があります。 既定では、Visual Studio 2017 の Win32 プロジェクトは Windows 10 SDK を使用します。   
   
 > [!NOTE]
->  アプリケーションに内部 MFC ヘッダーを含めた場合には、値が動作する保証はありません。  
+> アプリケーションに内部 MFC ヘッダーを含めた場合には、値が動作する保証はありません。  
   
-**/D** コンパイラ オプションを使用して、このマクロを定義することもできます。 詳細については、「 [/D (Preprocessor Definitions)](../build/reference/d-preprocessor-definitions.md)」を参照してください。  
+`/D` コンパイラ オプションを使用して、このマクロを定義することもできます。 詳細については、「 [/D (Preprocessor Definitions)](../build/reference/d-preprocessor-definitions.md)」を参照してください。  
   
-これらのマクロの意味について詳しくは、「 [Windows ヘッダーの使用](https://msdn.microsoft.com/library/windows/desktop/aa383745)」をご覧ください。  
+これらのマクロの意味について詳しくは、「 [Windows ヘッダーの使用](/windows/desktop/WinProg/using-the-windows-headers)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
 

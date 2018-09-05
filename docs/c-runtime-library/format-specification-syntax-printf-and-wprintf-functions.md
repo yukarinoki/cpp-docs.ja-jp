@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c15ba418657dde291c6833caafae071ca0260a65
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cfb885a5d29c26f4a40d5b93490a06652eff1ffc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392537"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216673"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>書式指定構文: printf 関数と wprintf 関数
 
@@ -85,7 +85,7 @@ ms.locfileid: "32392537"
 |**p**|[ポインターの種類]|引数を 16 進数字のアドレスとして表示します。|
 |**s**|String|`printf` 関数で使用する場合は 1 バイト文字またはマルチバイト文字の文字列を指定し、`wprintf` 関数で使用する場合はワイド文字の文字列を指定します。 文字は、最初の null 文字が現れるか、*precision* 値に達するまで表示されます。|
 |**S**|String|`printf` 関数で使用する場合はワイド文字の文字列を指定し、`wprintf` 関数で使用する場合は 1 バイト文字またはマルチバイト文字の文字列を指定します。 文字は、最初の null 文字が現れるか、*precision* 値に達するまで表示されます。|
-|**Z**|`ANSI_STRING` または `UNICODE_STRING` 構造体|引数として [ANSI_STRING](http://msdn.microsoft.com/library/windows/hardware/ff540605.aspx) または [UNICODE_STRING](http://msdn.microsoft.com/library/windows/hardware/ff564879.aspx) 構造体のアドレスを渡すと、構造体の `Buffer` フィールドがポイントしているバッファーに含まれる文字列が表示されます。 *size* 修飾子のプレフィックスに **w** を使用して (たとえば `%wZ`)、`UNICODE_STRING` 引数を指定できます。 構造体の `Length` フィールドには、文字列の長さ (バイト単位) を設定する必要があります。 構造体の `MaximumLength` フィールドには、バッファーの長さ (バイト単位) を設定する必要があります。<br /><br /> 通常、type 文字 **Z** は、`dbgPrint` や `kdPrint` など、変換指定を使用するドライバー デバッグ関数でのみ使用します。|
+|**Z**|`ANSI_STRING` または `UNICODE_STRING` 構造体|引数として [ANSI_STRING](/windows/desktop/api/ntdef/ns-ntdef-_string) または [UNICODE_STRING](https://msdn.microsoft.com/library/windows/hardware/ff564879.aspx) 構造体のアドレスを渡すと、構造体の `Buffer` フィールドがポイントしているバッファーに含まれる文字列が表示されます。 *size* 修飾子のプレフィックスに **w** を使用して (たとえば `%wZ`)、`UNICODE_STRING` 引数を指定できます。 構造体の `Length` フィールドには、文字列の長さ (バイト単位) を設定する必要があります。 構造体の `MaximumLength` フィールドには、バッファーの長さ (バイト単位) を設定する必要があります。<br /><br /> 通常、type 文字 **Z** は、`dbgPrint` や `kdPrint` など、変換指定を使用するドライバー デバッグ関数でのみ使用します。|
 
 Visual Studio 2015 以降では、浮動小数点の変換指定子に対応する引数 (**a**、**A****e****E****f****F****g****G**) が無限、不定値、または NaN の場合、書式設定される出力は C99 標準に準拠します。 書式設定された出力を次の表に示します。
 

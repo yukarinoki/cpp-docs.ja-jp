@@ -15,17 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f5709ef6fdcaaceecc79cd635374ee77d537100
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eeb1f8e08fbb1d4f30517485c9296febab5a0de0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387389"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198757"
 ---
 # <a name="octal-and-hexadecimal-character-specifications"></a>8 進文字と 16 進文字の仕様
-シーケンス **\\***ooo* は、3 桁の 8 進数コードで ASCII 文字セットの任意の文字を指定できることを意味します。 8 進数の数値は、目的の文字またはワイド文字の値を指定します。  
+シーケンス **\\**<em>ooo</em> は、3 桁の 8 進数コードで ASCII 文字セットの任意の数を指定できることを意味します。 8 進数の数値は、目的の文字またはワイド文字の値を指定します。  
   
- 同様に、シーケンス **\x***hhh* を使用すると、ASCII 文字を 16 進文字コードとして指定できます。 たとえば、通常の C エスケープ シーケンス (**\b**) として ASCII バックスペース文字を指定するか、**\010** (8 進数) または **\x008** (16 進数) としてその文字をコード化できます。  
+ 同様に、シーケンス **\x**<em>hhh</em> を使用すると、ASCII 文字を 16 進文字コードとして指定できます。 たとえば、通常の C エスケープ シーケンス (**\b**) として ASCII バックスペース文字を指定するか、**\010** (8 進数) または **\x008** (16 進数) としてその文字をコード化できます。  
   
  8 進数のエスケープ シーケンスで使用できるのは、0 ～ 7 の数値のみです。 8 進数のエスケープ シーケンスは、3 桁を超えることはなく、8 進数値ではない最初の文字で終了します。 3 桁の数字をすべて使用する必要はありませんが、少なくとも 1 つを使用する必要があります。 たとえば、8 進数表現では、**\10** は ASCII フォールバック文字を表し、**\101** は文字 A を表します (ASCII チャートを参照)。  
   

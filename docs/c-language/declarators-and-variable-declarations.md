@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0219c5eecda84f27411ee0dca9cc43a1b5c9148e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a5ec2cf7984940421726dd0197dff4cf6d5ea0c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390607"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200360"
 ---
 # <a name="declarators-and-variable-declarations"></a>宣言子と変数宣言
 このセクションの残りの部分では、次の一覧に示す変数型の宣言の形式とその意味について説明します。 特に、残りの各セクションでは、以下を宣言する方法について説明します。  
@@ -35,7 +35,7 @@ ms.locfileid: "32390607"
 |[構造体](../c-language/structure-declarations.md)|異なる型を持つことができる値のコレクションで構成される変数|  
 |[共用体](../c-language/union-declarations.md)|同じストレージ領域を占有する異なる型の複数の値で構成される変数|  
   
- 宣言子は、宣言に含まれる、プログラムに組み込まれる名前を指定する部分です。 **\*** (ポインター) などの修飾子と Microsoft の呼び出し規約キーワードを含めることができます。  
+ 宣言子は、宣言に含まれる、プログラムに組み込まれる名前を指定する部分です。 <strong>\*</strong> (ポインター) などの修飾子と Microsoft の呼び出し規約キーワードを含めることができます。  
   
  **Microsoft 固有の仕様**  
   
@@ -63,8 +63,8 @@ __declspec(thread) char *var;
  &nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  
   
  *pointer*:  
- &nbsp;&nbsp;**\*** *type-qualifier-list*<sub>opt</sub>  
- &nbsp;&nbsp;**\*** *type-qualifier-list*<sub>opt</sub> *pointer*  
+ &nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub>  
+ &nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub> *pointer*  
   
  *type-qualifier-list*:  
  &nbsp;&nbsp;*type-qualifier*  
@@ -73,7 +73,7 @@ __declspec(thread) char *var;
 > [!NOTE]
 >  *declarator* を参照する構文については、「[宣言の概要](../c-language/overview-of-declarations.md)」または「[C 言語の構文概要](../c-language/c-language-syntax-summary.md)」にある *declaration* の構文を参照してください。  
   
- 宣言子が修飾されていない識別子で構成される場合、宣言される項目は基本型を持ちます。 アスタリスク (**\***) が識別子の左側にある場合、型はポインター型に変更されます。 識別子の後ろに角かっこ (**[ ]**) が続く場合、型は配列型に変更されます。 識別子の後ろにかっこが続く場合、型は関数型に変更されます。 宣言内での優先順位の解釈の詳細については、「[Interpreting More Complex Declarators](../c-language/interpreting-more-complex-declarators.md)」 (より複雑な宣言子の解釈) を参照してください。  
+ 宣言子が修飾されていない識別子で構成される場合、宣言される項目は基本型を持ちます。 アスタリスク (<strong>\*</strong>) が識別子の左側にある場合、型はポインター型に変更されます。 識別子の後ろに角かっこ (**[ ]**) が続く場合、型は配列型に変更されます。 識別子の後ろにかっこが続く場合、型は関数型に変更されます。 宣言内での優先順位の解釈の詳細については、「[Interpreting More Complex Declarators](../c-language/interpreting-more-complex-declarators.md)」 (より複雑な宣言子の解釈) を参照してください。  
   
  各宣言は 1 つ以上の識別子を宣言します。 宣言子で完全な宣言をするには、型指定子を含める必要があります。 型指定子は、配列型の要素の型、ポインター型によってアドレス指定されるオブジェクトの型、または関数の戻り値の型を示します。  
   

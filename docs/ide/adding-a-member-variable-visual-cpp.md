@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa2a8ef8f7bcdc2d90893acdad98705c9588a5d5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: dade9987358c1c160dffd0221b0421b4fab92c24
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33325732"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687643"
 ---
 # <a name="adding-a-member-variable--visual-c"></a>メンバー変数の追加 (Visual C++)
-クラス ビューを使用して、クラスにメンバー変数を追加することができます。 メンバー変数は、[データ交換とデータの入力規則](../mfc/dialog-data-exchange-and-validation.md)に使用するか、一般にすることができます。 データ メンバー変数ウィザードは、具体的には関連情報を取得して、適切な場所のソース ファイル内に要素を挿入するために設計されています。 [リソース ビュー](../windows/resource-view-window.md)の[ダイアログ エディター](../windows/dialog-editor.md)、または[クラス ビュー](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)からメンバー変数を追加できます。  
+クラス ビューを使用して、クラスにメンバー変数を追加することができます。 メンバー変数は、[データ交換とデータの入力規則](../mfc/dialog-data-exchange-and-validation.md)に使用するか、一般にすることができます。 データ メンバー変数ウィザードは、具体的には関連情報を取得して、適切な場所のソース ファイル内に要素を挿入するために設計されています。 [リソース ビュー](../windows/resource-view-window.md)の[ダイアログ エディター](../windows/dialog-editor.md)、または[クラス ビュー](/visualstudio/ide/viewing-the-structure-of-code)からメンバー変数を追加できます。  
   
 > [!NOTE]
 >  ダイアログ ボックスを設計および実装しているときに、ダイアログ エディターを使用して、ダイアログ ボックス コントロールを追加し、コントロールのメンバー変数を実装すると効率的である場合があります。  
@@ -49,7 +49,7 @@ ms.locfileid: "33325732"
   
 ### <a name="to-add-a-member-variable-from-class-view-using-the-add-member-variable-wizard"></a>メンバー変数の追加ウィザードを使用して、クラス ビューからメンバー変数を追加するには  
   
-1.  [クラス ビュー](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)でプロジェクト ノードを展開して、プロジェクト内のクラスを表示します。  
+1.  [クラス ビュー](/visualstudio/ide/viewing-the-structure-of-code)でプロジェクト ノードを展開して、プロジェクト内のクラスを表示します。  
   
 2.  変数を追加するクラスを右クリックします。  
   

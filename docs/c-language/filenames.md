@@ -12,19 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b13c8ddcaed382483eb96172e93da99ad0133eac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e7b1eb1b8a9bf04260a317d21df558e6f49fd78b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382316"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213934"
 ---
 # <a name="filenames"></a>ファイル名
 **ANSI 4.9.3** 有効なファイル名を構成するための規則  
   
  ファイル指定では、省略可能なドライブ文字 (コロンに続けて)、一連のオプション ディレクトリの名前 (バックスラッシュで区切られた)、およびファイル名を指定できます。  
   
- 詳細については、「[ファイルに名前を付ける](http://msdn.microsoft.com/library/windows/desktop/aa365247)」を参照してください。  
+ 詳細については、「[ファイルに名前を付ける](/windows/desktop/FileIO/naming-a-file)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [ライブラリ関数](../c-language/library-functions.md)

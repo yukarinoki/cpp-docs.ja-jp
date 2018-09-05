@@ -26,37 +26,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b99dae277fec7618c2e7caeb76229edce7a78c2
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: ed9d6ba12e65eac325008cb2a448abdab087ee46
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207761"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197961"
 ---
 # <a name="midl-property-pages-advanced"></a>[詳細] ([MIDL] プロパティ ページ)
 **MIDL** フォルダーの **[詳細]** プロパティ ページでは、次の MIDL コンパイラ オプションを指定します。  
   
--   エラー チェックを有効にする ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   エラー チェックを有効にする ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   割り当てのチェック ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   割り当てのチェック ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   範囲のチェック ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   範囲のチェック ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   列挙型の範囲のチェック ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   列挙型の範囲のチェック ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   参照ポインターのチェック ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   参照ポインターのチェック ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   スタブ データのチェック ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   スタブ データのチェック ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   パラメーターの確認 ([/robust](http://msdn.microsoft.com/library/windows/desktop/aa367363))\*  
+-   パラメーターの確認 ([/robust](https://msdn.microsoft.com/library/windows/desktop/aa367363))\*  
   
--   構造体メンバーの配置 ([/Zp](http://msdn.microsoft.com/library/windows/desktop/aa367388))  
+-   構造体メンバーの配置 ([/Zp](https://msdn.microsoft.com/library/windows/desktop/aa367388))  
   
--   出力先の変更 ([/o](http://msdn.microsoft.com/library/windows/desktop/aa367351))  
+-   出力先の変更 ([/o](https://msdn.microsoft.com/library/windows/desktop/aa367351))  
   
--   C プリプロセス オプション ([/cpp_opt](http://msdn.microsoft.com/library/windows/desktop/aa367318))  
+-   C プリプロセス オプション ([/cpp_opt](https://msdn.microsoft.com/library/windows/desktop/aa367318))  
   
--   指定したプリプロセッサ定義の無効化 ([/U](http://msdn.microsoft.com/library/windows/desktop/aa367373))  
+-   指定したプリプロセッサ定義の無効化 ([/U](https://msdn.microsoft.com/library/windows/desktop/aa367373))  
   
  \* /robust は、Windows 2000 以降のコンピューター向けとしてビルドするときにのみ使用されます。 ATL プロジェクトをビルドするとき、/robust を使用する場合、dlldatax.c ファイルでこの行を変更します。  
   

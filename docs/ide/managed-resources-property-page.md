@@ -18,14 +18,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2922a0a92a121d6838478daaf2c32f1c7a630d21
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: e88f7ccf6f510ad5bcc7178af87714ca22a97252
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340360"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688612"
 ---
-# <a name="managed-resources-property-page"></a>[マネージ リソース] プロパティ ページ
+# <a name="managed-resources-property-page"></a>[マネージド リソース] プロパティ ページ
 リソース コンパイラの設定を有効にします。  
   
  **[マネージド リソース]** プロパティ ページには、以下のプロパティが含まれます。  
@@ -42,6 +42,6 @@ ms.locfileid: "33340360"
  **[マネージド リソース]** プロパティ ページにアクセスする方法については、「[プロジェクト プロパティの操作](../ide/working-with-project-properties.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [RC の使用 (RC コマンドライン)](http://msdn.microsoft.com/library/windows/desktop/aa381055)   
+ [RC の使用 (RC コマンドライン)](/windows/desktop/menurc/using-rc-the-rc-command-line-)   
  [プロパティ ページ](../ide/property-pages-visual-cpp.md)   
- [/ASSEMBLYRESOURCE (マネージ リソースの埋め込み)](../build/reference/assemblyresource-embed-a-managed-resource.md)
+ [/ASSEMBLYRESOURCE (マネージド リソースの埋め込み)](../build/reference/assemblyresource-embed-a-managed-resource.md)

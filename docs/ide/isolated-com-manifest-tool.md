@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c425a71f8bb8a7972ade29fb0d18cf3eab7debb5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 59b19a35a70b3bdadd935f06ff7d9ae1ce7d7d95
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33330182"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216381"
 ---
 # <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>[分離された COM] ([&lt;プロジェクト名&gt; プロパティ ページ] ダイアログ ボックス - [構成プロパティ] - [マニフェスト ツール])
-このダイアログ ボックスを使用して、[Mt.exe](http://msdn.microsoft.com/library/aa375649) の**分離された COM** オプションを指定します。  
+このダイアログ ボックスを使用して、[Mt.exe](https://msdn.microsoft.com/library/aa375649) の**分離された COM** オプションを指定します。  
   
  このプロパティ ページ ダイアログ ボックスにアクセスするには、自分のプロジェクトまたはプロパティ シートのプロパティ ページを開きます。 **[共通プロパティ]** の下で **[マニフェスト ツール]** ノードを展開して、**[分離された COM]** を選択します。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "33330182"
  /replacements オプションを使用し、.rgs ファイルの置換可能文字列の値が含まれるファイルの完全パスを指定します。  
   
 ## <a name="see-also"></a>参照  
- [分離アプリケーション](http://msdn.microsoft.com/library/aa375190)   
+ [分離アプリケーション](/windows/desktop/SbsCs/isolated-applications)   
  [ClickOnce アプリケーション マニフェスト](/visualstudio/deployment/clickonce-application-manifest)   
  [マニフェスト ツールのプロパティ ページ](../ide/manifest-tool-property-pages.md)   
  [プロジェクトのプロパティの操作](../ide/working-with-project-properties.md)   

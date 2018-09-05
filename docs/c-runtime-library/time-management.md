@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c33d22f30275c9d6581d6c1cd97de4ffe68bc08
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9d5983795dbb5711452db2f59b07cb6aa8b22a8c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418342"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200206"
 ---
 # <a name="time-management"></a>時間管理
 
@@ -39,7 +39,7 @@ ms.locfileid: "32418342"
 |[asctime, _wasctime](../c-runtime-library/reference/asctime-wasctime.md), [asctime_s, _wasctime_s](../c-runtime-library/reference/asctime-s-wasctime-s.md)|時刻を **struct tm** 型から文字列に変換します。 これらの関数のうち、 **_s** サフィックスの付いているバージョンがより安全です。|
 |[clock](../c-runtime-library/reference/clock.md)|プロセスの実際の経過時間を返します。|
 |[ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64](../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)、[_ctime_s、_ctime32_s、_ctime64_s、_wctime_s、_wctime32_s、_wctime64_s](../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)|時刻を **time_t** 型、**__time32_t** 型、または **__time64_t** 型から文字列に変換します。 これらの関数のうち、 **_s** サフィックスの付いているバージョンがより安全です。|
-|[difftime、_difftime32、_difftime64](../c-runtime-library/reference/difftime-difftime32-difftime64.md)|2 つの時刻の差を計算します。|[System::DateTime::Subtract](https://msdn.microsoft.com/en-us/library/system.datetime.subtract.aspx)|
+|[difftime、_difftime32、_difftime64](../c-runtime-library/reference/difftime-difftime32-difftime64.md)|2 つの時刻の差を計算します。|[System::DateTime::Subtract](https://msdn.microsoft.com/library/system.datetime.subtract.aspx)|
 |[_ftime, _ftime32, _ftime64](../c-runtime-library/reference/ftime-ftime32-ftime64.md)、[_ftime_s, _ftime32_s, _ftime64_s](../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md)|**struct _timeb** 型または **struct __timeb64** これらの関数のうち、**_s** サフィックスの付いているバージョンがより安全です。|
 |[_futime、_futime32、_futime64](../c-runtime-library/reference/futime-futime32-futime64.md)|開いているファイルの変更時刻を設定します。|
 |[gmtime、_gmtime32、_gmtime64](../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)、[gmtime_s、_gmtime32_s、_gmtime64_s](../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)|時刻を **time_t** 型から **struct tm** に変換するか、**__time64_t** 型から **struct tm** に変換します。これらの関数のうち、**_s** サフィックスの付いているバージョンがより安全です。|

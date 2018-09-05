@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50bf1bdeeed862ecbc03270e403ccafaf32bfde8
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 94da3456cc7c4723875b6376d5d9b2411f3f7ca8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332817"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197904"
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>Visual C++ の新しい項目の追加テンプレートの使用方法
 **[新しい項目の追加]** コマンドを使って、Visual C++ プロジェクトに共通する項目を簡単に追加することができます。 **[新しい項目の追加]** コマンドを選ぶと、適切なファイルをプロジェクトに追加する項目テンプレートの一覧が [`Add New Item`] ダイアログ ボックスに表示されます。  
@@ -44,7 +44,7 @@ ms.locfileid: "33332817"
 |ヘッダー ファイル (.h)|C++ のヘッダー ファイルを作成します。|  
 |HTML ページ (.htm)|空の HTML ファイルを作成します。|  
 |アイコン ファイル (.ico)|Win32 のアイコン ファイルを作成します。|  
-|インストーラー クラス|CLR 機能を使う[インストーラー クラス](https://msdn.microsoft.com/en-us/library/system.configuration.install.installer.aspx)を継承するクラスを追加します。|  
+|インストーラー クラス|CLR 機能を使う[インストーラー クラス](https://msdn.microsoft.com/library/system.configuration.install.installer.aspx)を継承するクラスを追加します。|  
 |MIDL ファイル (.idl)|インターフェイス定義言語ファイルを作成します。|  
 |モジュール定義ファイル (.def)|DLL エクスポート定義ファイルを作成します。|  
 |プロパティ シート (.props)|Visual C++ のプロパティ シート ファイルを作成します。|  

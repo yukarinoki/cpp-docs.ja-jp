@@ -25,35 +25,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e1709c878a0b5f5325798b874e5549c5c8cb83f
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: eae97f795898c97bfb371637fc52a27c9e39039d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33329983"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204690"
 ---
 # <a name="midl-property-pages-general"></a>[全般] ([MIDL] プロパティ ページ)
 **MIDL** フォルダーの **[全般]** プロパティ ページでは、次の MIDL コンパイラ オプションを指定します。  
   
--   プリプロセッサの定義 [(/D](http://msdn.microsoft.com/library/windows/desktop/aa367321))  
+-   プリプロセッサの定義 [(/D](https://msdn.microsoft.com/library/windows/desktop/aa367321))  
   
--   追加のインクルード ディレクトリ ([/I](http://msdn.microsoft.com/library/windows/desktop/aa367328))  
+-   追加のインクルード ディレクトリ ([/I](https://msdn.microsoft.com/library/windows/desktop/aa367328))  
   
--   標準インクルード パスの無視 ([/no_def_idir](http://msdn.microsoft.com/library/windows/desktop/aa367347))  
+-   標準インクルード パスの無視 ([/no_def_idir](https://msdn.microsoft.com/library/windows/desktop/aa367347))  
   
--   MkTypLib 互換 ([/mktyplib203](http://msdn.microsoft.com/library/windows/desktop/aa367332))  
+-   MkTypLib 互換 ([/mktyplib203](https://msdn.microsoft.com/library/windows/desktop/aa367332))  
   
--   警告レベル ([/W](http://msdn.microsoft.com/library/windows/desktop/aa367383))  
+-   警告レベル ([/W](https://msdn.microsoft.com/library/windows/desktop/aa367383))  
   
--   エラーとして警告 ([/WX](http://msdn.microsoft.com/library/windows/desktop/aa367387))  
+-   エラーとして警告 ([/WX](https://msdn.microsoft.com/library/windows/desktop/aa367387))  
   
--   著作権情報の非表示 ([/nologo](http://msdn.microsoft.com/library/windows/desktop/aa367341))  
+-   著作権情報の非表示 ([/nologo](https://msdn.microsoft.com/library/windows/desktop/aa367341))  
   
--   MIDL Char 型 ([/char](http://msdn.microsoft.com/library/windows/desktop/aa367314))  
+-   MIDL Char 型 ([/char](https://msdn.microsoft.com/library/windows/desktop/aa367314))  
   
--   対象の環境 ([/env](http://msdn.microsoft.com/library/windows/desktop/aa367323))  
+-   対象の環境 ([/env](https://msdn.microsoft.com/library/windows/desktop/aa367323))  
   
--   スタブレス プロキシの生成 ([/Oicf](http://msdn.microsoft.com/library/windows/desktop/aa367352))  
+-   スタブレス プロキシの生成 ([/Oicf](https://msdn.microsoft.com/library/windows/desktop/aa367352))  
   
  **MIDL** フォルダーの **[全般]** プロパティ ページにアクセスする方法については、「[プロジェクトのプロパティの操作](../ide/working-with-project-properties.md)」を参照してください。  
   
