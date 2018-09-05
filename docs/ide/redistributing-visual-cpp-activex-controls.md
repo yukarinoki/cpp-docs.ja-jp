@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc319c2da652cd1c43f23c13456b32f978595199
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: d62669ffef0ae1e5788dcf4086a1c5b58e7728ff
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207958"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683353"
 ---
 # <a name="redistributing-visual-c-activex-controls"></a>Visual C++ ActiveX コントロールの再配布
 Visual C++ 6.0 には、アプリケーションで使用できてその後再配布する ActiveX コントロールが用意されています。 このようなコントロールは Visual C++ には含まれなくなりました。 Visual C++ 6.0 のライセンス契約に基づき、Visual C++ で開発されたアプリケーションでこれらのコントロールを再配布できます。  
@@ -43,8 +43,6 @@ Visual C++ 6.0 には、アプリケーションで使用できてその後再�
 -   Stdole2.tlb  
   
  対象のシステムでこれらの DLL が利用できない場合、該当オペレーティング システムを更新するための所定のメカニズムを利用して更新する必要があります。 Windows オペレーティング システムの最新サービス パックは [http://windowsupdate.microsoft.com](http://windowsupdate.microsoft.com) からダウンロードできます。  
-  
- データベースに接続する ActiveX コントロールのいずれかがアプリケーションで使用される場合、Microsoft Data Access Components (MDAC) を対象のシステムにインストールする必要があります。 詳細については、「[データベース サポート ファイルの再配布](../ide/redistributing-database-support-files.md)」を参照してください。  
   
  データベースに接続する ActiveX コントロールを使用するとき、対象のコンピューターでデータ ソース名を複製する必要もあります。 複製は、`ConfigDSN` などの関数を使用してプログラムで行うことができます。  
   

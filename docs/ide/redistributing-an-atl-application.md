@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c824dd4ae174a4418c6744e592dd62dc54b9595
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: a2e0309c420754c0da8f09bb38e088e473362de0
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33326385"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676750"
 ---
 # <a name="redistributing-an-atl-application"></a>ATL アプリケーションの再配布
 Visual Studio 2012 以降の Active Template Library (ATL) はヘッダーのみのライブラリです。 ATL プロジェクトには、ATL オプションへの動的リンクはありません。 再配布可能 ATL ライブラリは必要ありません。  
@@ -50,8 +50,6 @@ filename /regserver
 ```  
   
  `filename` は実行可能ファイルの名前です。  
-  
- OLE DB テンプレート アプリケーションを再配布する場合は、ターゲット コンピューターに最新バージョンの Microsoft Data Access Components (MDAC) ファイルが必要です。 詳細については、「[Redistributing Database Support Files](../ide/redistributing-database-support-files.md)」 (データベース サポート ファイルの再配布) を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Visual C++ ファイルの再配布](../ide/redistributing-visual-cpp-files.md)
