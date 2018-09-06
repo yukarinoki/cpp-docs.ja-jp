@@ -143,11 +143,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 45b9b5bb5beae8599c360d35df878a38b591b1b4
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
-ms.translationtype: HT
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43685744"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761018"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog クラス
 ファイルを開くまたは保存する操作に使用される、コモン ダイアログ ボックスをカプセル化します。  
