@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f05d7d3d3d3fd6b40a5477b7765b89409747d3ce
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d5789e353a6e15d4da3f5754d9d4d91821359d14
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845867"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42578456"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Visual C++ の紹介 (UNIX ユーザー向け)
 
@@ -37,7 +37,7 @@ Visual Studio デバッガー、IntelliSense のコード参照とステート�
   
 ## <a name="debugging-your-code"></a>コードのデバッグ  
 
-コマンドラインを使用して開発用ワークステーションでアプリケーションを実行する場合、コードでメモリ アクセス違反、ハンドルされない例外や、その他の回復不能なエラーが発生したときに、[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] デバッガーを実行するダイアログ ボックスが表示されます。 **[OK]** をクリックすると、Visual Studio の開発環境が起動し、障害発生時点でデバッガーが開きます。 この方法でアプリケーションをデバッグすることができますが、このケースでは、[/Z7、/Zi、/ZI (デバッグ情報の形式)](../build/reference/z7-zi-zi-debug-information-format.md) スイッチを使用してコンパイルした場合にのみ、ソースを利用できます。 詳細については、「[ネイティブ コードのデバッグ](/visualstudio/debugger/debugging-native-code)」および「[C++ デスクトップ開発のための Visual Studio IDE の使用](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)」を参照してください。  
+コマンドラインを使用して開発用ワークステーションでアプリケーションを実行する場合、コードでメモリ アクセス違反、ハンドルされない例外や、その他の回復不能なエラーが発生したときに、Visual Studio デバッガーを実行するダイアログ ボックスが表示されます。 **[OK]** をクリックすると、Visual Studio の開発環境が起動し、障害発生時点でデバッガーが開きます。 この方法でアプリケーションをデバッグすることができますが、このケースでは、[/Z7、/Zi、/ZI (デバッグ情報の形式)](../build/reference/z7-zi-zi-debug-information-format.md) スイッチを使用してコンパイルした場合にのみ、ソースを利用できます。 詳細については、「[ネイティブ コードのデバッグ](/visualstudio/debugger/debugging-native-code)」および「[C++ デスクトップ開発のための Visual Studio IDE の使用](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)」を参照してください。  
   
 ## <a name="using-the-development-environment"></a>開発環境を使用する  
 
@@ -47,7 +47,7 @@ Visual Studio デバッガー、IntelliSense のコード参照とステート�
   
 ## <a name="importing-your-existing-code"></a>既存のコードをインポートする 
  
-C++ コンパイラを使用すれば、メイクファイルでコンパイルするように設定した (メイクファイルを使わないことも可能) 既存のコードをビルドし、[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] プロジェクトに配置できます。 詳細については、「[方法 : 既存のコードから C++ プロジェクトを作成する](../ide/how-to-create-a-cpp-project-from-existing-code.md)」を参照してください。  
+C++ コンパイラを使用すれば、メイクファイルでコンパイルするように設定した (メイクファイルを使わないことも可能) 既存のコードをビルドし、Visual Studio プロジェクトに配置できます。 詳細については、「[方法 : 既存のコードから C++ プロジェクトを作成する](../ide/how-to-create-a-cpp-project-from-existing-code.md)」を参照してください。  
   
 ## <a name="creating-a-new-project"></a>新規プロジェクトの作成  
 
@@ -61,13 +61,13 @@ C++ コンパイラを使用すれば、メイクファイルでコンパイル�
 
 Microsoft Visual C++ コンパイラは、Windows オペレーティング システムのプログラミングをサポートする目的で、標準 C++ プログラミング言語にいくつかの拡張機能を実装します。 これらの拡張機能は、ストレージ クラス属性、関数の呼び出し規約、ベース アドレス指定などを指定するために使用されます。 サポートされているすべての C++ の拡張機能の完全な一覧については、「[Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)」を参照してください。  
   
-**/Za** コンパイラ オプションを使用して、C++ へのすべての Microsoft 固有の拡張機能を無効にすることができます。 複数のプラットフォームで実行するコードを記述する場合、このオプションが推奨されます。 **/Za** コンパイラ オプションの詳細については、「[/Za、/Ze (言語拡張機能の無効化)](../build/reference/za-ze-disable-language-extensions.md)」を参照してください。 C++ コンパイラの準拠の詳細については、「[Visual C++ 言語への準拠](../visual-cpp-language-conformance.md)」および「[非標準動作](../cpp/nonstandard-behavior.md)」を参照してください。  
+`/Za` コンパイラ オプションを使用して、C++ へのすべての Microsoft 固有の拡張機能を無効にすることができます。 複数のプラットフォームで実行するコードを記述する場合、このオプションが推奨されます。 `/Za` コンパイラ オプションの詳細については、「[/Za、/Ze (言語拡張機能の無効化)](../build/reference/za-ze-disable-language-extensions.md)」を参照してください。 C++ コンパイラの準拠の詳細については、「[Visual C++ 言語への準拠](../visual-cpp-language-conformance.md)」および「[非標準動作](../cpp/nonstandard-behavior.md)」を参照してください。  
   
 ## <a name="precompiled-headers"></a>プリコンパイル済みヘッダー  
 
 Microsoft C および C++ コンパイラは、インライン コードを含む、C または C++ コードをプリコンパイルするためのオプションを提供します。 このパフォーマンス機能を使用して、安定したコードの本体をコンパイルし、ファイル内のコードのコンパイル済みの状態を格納します。さらに、後続のコンパイル中に、プリコンパイルされたコードと開発中のコードを結合できます。 安定したコードは再コンパイルする必要がないので、後続のコンパイルが高速化します。  
   
-既定では、プリコンパイル済みのすべてのコードは、ファイル **stdafx.h** と **stdafx.cpp** で指定されます。 **[プリコンパイル済みヘッダー]** オプションをオフにしない限り、**[新しいプロジェクト]** ウィザードは自動的にこれらのファイルを作成します。 プリコンパイルされたヘッダーの詳細については、「[プリコンパイル済みヘッダー ファイルの作成](../build/reference/creating-precompiled-header-files.md)」を参照してください。  
+既定では、プリコンパイル済みのすべてのコードは、ファイル stdafx.h と stdafx.cpp で指定されます。 **[プリコンパイル済みヘッダー]** オプションをオフにしない限り、**[新しいプロジェクト]** ウィザードは自動的にこれらのファイルを作成します。 プリコンパイルされたヘッダーの詳細については、「[プリコンパイル済みヘッダー ファイルの作成](../build/reference/creating-precompiled-header-files.md)」を参照してください。  
   
 ## <a name="related-sections"></a>関連項目  
 

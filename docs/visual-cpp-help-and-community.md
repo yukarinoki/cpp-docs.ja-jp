@@ -8,16 +8,16 @@ ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cac05b17d470cdb593f4d7e1e1943f812022906
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d36f56161e352d67838bfaf68c8e2d1dcee0f33e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33851637"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583986"
 ---
 # <a name="visual-c-help-and-community"></a>Visual C++ のヘルプおよびコミュニティ
 
@@ -34,7 +34,7 @@ ms.locfileid: "33851637"
 |Title|説明|
 |-----------|-----------------|
 |[Visual C++](visual-cpp-in-visual-studio.md)|Visual C++ のリファレンスと概念説明が含まれています。 MSDN ライブラリの一部です。|
-|[Windows デベロッパー センター](http://go.microsoft.com/fwlink/p/?LinkId=256534)|C++ および他の言語を使用して [!INCLUDE[win8](build/reference/includes/win8_md.md)]用アプリを開発する方法に関する情報が含まれています。 Windows デベロッパー センターの一部です。C++ コンテンツは、ドキュメントと言語リファレンスに関するノードに含まれています。|
+|[Windows デベロッパー センター](http://go.microsoft.com/fwlink/p/?LinkId=256534)|C++ および他の言語を使用して Windows 8 用アプリを開発する方法に関する情報が含まれています。 Windows デベロッパー センターの一部です。C++ コンテンツは、ドキュメントと言語リファレンスに関するノードに含まれています。|
 
 ### <a name="online-and-offline-documentation"></a>オンラインおよびオフラインのドキュメント
 

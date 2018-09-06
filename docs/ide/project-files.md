@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e66d6e94e4938c72adc5aea1a478ce6c0658e56e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9aa8994ebbb9f00afa6858597fce17554f3c3dfc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327230"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578617"
 ---
 # <a name="project-files"></a>プロジェクト ファイル
 Visual C++ プロジェクト ファイルは、.vcxproj ファイル名拡張子を持つ XML ベースのファイルで、Visual C++ プロジェクトをビルドするために必要な情報が含まれます。  
   
 ## <a name="example"></a>例  
- 次のサンプルの .vcxproj ファイルは、**[新しいプロジェクト]** ダイアログ ボックスで **[Win32 コンソール アプリケーション]** を指定して生成されました。 プロジェクト ファイルを処理するには、コマンド ラインで msbuild.exe ツールを使用するか、[!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)] で **Build** コマンドを使用します。 (必要なソース ファイルとヘッダー ファイルが指定されていないため、このサンプルを処理することはできません。)プロジェクト ファイルの XML 要素の詳細については、[プロジェクト ファイルのスキーマ参照](/visualstudio/msbuild/msbuild-project-file-schema-reference)に関するページを参照してください。  
+ 次のサンプルの .vcxproj ファイルは、**[新しいプロジェクト]** ダイアログ ボックスで **[Win32 コンソール アプリケーション]** を指定して生成されました。 プロジェクト ファイルを処理するには、コマンド ラインで msbuild.exe ツールを使用するか、IDE で **Build** コマンドを使用します。 (必要なソース ファイルとヘッダー ファイルが指定されていないため、このサンプルを処理することはできません。)プロジェクト ファイルの XML 要素の詳細については、[プロジェクト ファイルのスキーマ参照](/visualstudio/msbuild/msbuild-project-file-schema-reference)に関するページを参照してください。  
   
 ```  
 <?xml version="1.0" encoding="utf-8"?>  

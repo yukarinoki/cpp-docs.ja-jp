@@ -21,19 +21,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d53e8020bbb7649d78232025ef9c63c1dc868fee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f360cd075ac4a86c39f5c33391e974e62f481455
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409008"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613483"
 ---
 # <a name="windows-platforms-crt"></a>Windows プラットフォーム (CRT)
 
-Visual Studio の C ランタイム ライブラリは最新バージョンの Windows と Windows Server、[!INCLUDE[win8](../build/reference/includes/win8_md.md)]、[!INCLUDE[winserver8](../build/reference/includes/winserver8_md.md)], [!INCLUDE[win7](../build/includes/win7_md.md)]、[!INCLUDE[winsvr08](../build/reference/includes/winsvr08_md.md)]、Windows Vista をサポートし、必要に応じて x86 用の [!INCLUDE[winxp](../build/includes/winxp_md.md)] Service Pack 3 (SP3)、x64 用の [!INCLUDE[winxp](../build/includes/winxp_md.md)] Service Pack 2 (SP2)、および x86 と x64 用の [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] Service Pack 2 (SP2) をサポートします。 これらすべてのオペレーティング システムで、Windows デスクトップ API (Win32) をサポートし、Unicode のサポートを提供します。 さらに、すべての Win32 アプリケーションで、マルチバイト文字セット (MBCS) を使用できます。
+Visual Studio の C ランタイム ライブラリでは最新バージョンの Windows と Windows Server、Windows 8、Windows Server 2012、Windows 7、Windows Server 2008、Windows Vista がサポートされ、必要に応じて x86 用の Windows XP Service Pack 3 (SP3)、x64 用の Windows XP Service Pack 2 (SP2)、および x86 と x64 用の Windows Server 2003 Service Pack 2 (SP2) がサポートされます。 これらすべてのオペレーティング システムで、Windows デスクトップ API (Win32) をサポートし、Unicode のサポートを提供します。 さらに、すべての Win32 アプリケーションで、マルチバイト文字セット (MBCS) を使用できます。
 
 > [!NOTE]
-> Visual Studio 2017 の **C++ を使用したデスクトップ開発**のワークロードの既定のインストールには、[!INCLUDE[winxp](../build/includes/winxp_md.md)] と [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] の開発のサポートは含まれていません。 省略可能なコンポーネントである **C++ に関する Windows XP サポート**をインストールして Windows XP プラットフォーム ツールセットを有効にする必要があります。
+> Visual Studio 2017 の **C++ を使用したデスクトップ開発**のワークロードの既定のインストールには、Windows XP と Windows Server 2003 の開発のサポートは含まれていません。 省略可能なコンポーネントである **C++ に関する Windows XP サポート**をインストールして Windows XP プラットフォーム ツールセットを有効にする必要があります。
 
 ## <a name="see-also"></a>関連項目
 

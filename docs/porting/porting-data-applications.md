@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c148c805cb4ddc5e012e9de5e8e5f7e207f47dc3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c20b9b6e8c1e96736485f302203156f627ef6794
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839882"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578388"
 ---
 # <a name="porting-data-applications"></a>データ アプリケーションの移植
 長年にわたって、Visual C ++ ではデータベースを操作するいくつかの方法を提供してきました。 2011 年に Microsoft は、ネイティブ コードから SQL Server 製品にアクセスするのに望ましいテクノロジである ODBC に合わせて調整中であると発表しました。 ODBC は業界標準であり、これを使用することで、複数のプラットフォームおよびデータ ソースでのコードの最大の移植性が得られます。 ほとんどの SQL データベース製品および多くの NoSQL 製品で ODBC がサポートされます。 ODBC は、低レベルの ODBC API を呼び出して直接使用できます。あるいは、MFC ODBC ラッパー クラス、またはサードパーティの C++ ラッパー ライブラリを使用することもできます。 
@@ -36,11 +36,12 @@ OLE DB は、COM 仕様に基づく低レベルで高パフォーマンスの AP
 
 C++/CLI を使用する場合は、引き続き、通常どおり ADO.NET を使用できます。 詳細については、「[ADO.NET によるデータ アクセス (C++/CLI)](../dotnet/data-access-using-adonet-cpp-cli.md)」と「[Visual Studio でのデータ アクセス](/visualstudio/data-tools/accessing-data-in-visual-studio)」を参照してください。  
   
--   ODBC ラッパー クラスに加え、MFC では、Access データベースに接続するための Data Access Objects (DAO) ラッパー クラスも提供されます。  ただし、DAO は廃止されています。 CDaoDatabase または CDaoRecordset に基づくすべてのコードをアップグレードする必要があります。 
+- ODBC ラッパー クラスに加え、MFC では、Access データベースに接続するための Data Access Objects (DAO) ラッパー クラスも提供されます。  ただし、DAO は廃止されています。 `CDaoDatabase` または `CDaoRecordset` に基づくコードをアップグレードします。 
 
 Microsoft Windows でのデータ アクセス テクノロジの歴史の詳細については、ウィキペディアの「[Microsoft Data Access Components](https://en.wikipedia.org/wiki/Microsoft_Data_Access_Components)」を参照してください。  
 
 ## <a name="see-also"></a>参照  
- [Visual C++ でのデータ アクセス](../data/data-access-in-cpp.md)  
- [Microsoft Open Database Connectivity (ODBC)](https://docs.microsoft.com/sql/odbc/microsoft-open-database-connectivity-odbc)  
- [データ アクセス テクノロジのロードマップ](https://msdn.microsoft.com/en-us/library/ms810810.aspx)  
+ 
+[Visual C++ でのデータ アクセス](../data/data-access-in-cpp.md)  
+[Microsoft Open Database Connectivity (ODBC)](https://docs.microsoft.com/sql/odbc/microsoft-open-database-connectivity-odbc)  
+[データ アクセス テクノロジのロードマップ](https://msdn.microsoft.com/library/ms810810.aspx)  

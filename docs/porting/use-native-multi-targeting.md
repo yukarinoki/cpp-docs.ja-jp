@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2df0bee37a0bcf0e8162fa692be79bd57b16b3cf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bb9d7b950e4c38ea53db6e459edfa1a179eb971d
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846426"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578425"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Visual Studio でネイティブ マルチターゲットを利用し、古いプロジェクトを作成する
 
@@ -28,13 +28,13 @@ ms.locfileid: "33846426"
 
 幸いにも、以前のコンパイラ ツールセットとライブラリを対象としたプロジェクトのビルドに、Visual Studio 2017 と Visual Studio 2015 を使用できます。 IDE での新機能を利用するために、Visual Studio 2010、Visual Studio 2012、Visual Studio 2013 または Visual Studio 2015 のプロジェクトをアップグレードする必要はありません。
 
- - 新しい C++ のリファクタリング機能およびエディターの試験的な機能
- - 新しい診断ツール デバッガー ウィンドウと [エラー一覧] ウィンドウ
- - 刷新されたブレークポイント、例外処理ウィンドウ、および新しい PerfTips
- - 新しいコード ナビゲーションおよび検索ツール
- - 新しい C++ クイック修正および Productivity Power Tools 拡張機能
+  - 新しい C++ のリファクタリング機能およびエディターの試験的な機能
+  - 新しい診断ツール デバッガー ウィンドウと [エラー一覧] ウィンドウ
+  - 刷新されたブレークポイント、例外処理ウィンドウ、および新しい PerfTips
+  - 新しいコード ナビゲーションおよび検索ツール
+  - 新しい C++ クイック修正および Productivity Power Tools 拡張機能
 
-Visual Studio 2008 プロジェクトを対象とすることもできますが、そのまま使用することはできません。 詳細については、Visual Studio 2008 のセクションの手順を参照してください。
+Visual Studio 2008 プロジェクトを対象とすることもできますが、そのまま使用することはできません。 詳細については、「**Visual Studio 2008 での手順**」を参照してください。
 
 最新バージョンの Visual Studio では、ネイティブ マルチターゲットとプロジェクトのラウンドトリップをサポートします。 ネイティブ マルチターゲットは、Visual Studio の以前のバージョンでインストールされたツールセットを使用してビルドできる最新の IDE の機能です。 ラウンド トリップは、プロジェクトに変更を加えずに以前のバージョンの IDE で作成されたプロジェクトを読み込むことができる最新の IDE の機能です。 既存のバージョンと Visual Studio の最新バージョンを両方インストールする場合、IDE の新しいバージョンを既存のバージョンのコンパイラやツールと併用して、プロジェクトをビルドすることができます。 チームの他のメンバーは、古いバージョンの Visual Studio でプロジェクトを引き続き使用できます。
 
@@ -54,13 +54,13 @@ Visual Studio では、プロジェクトのアップグレードが何度も要
 
 ## <a name="instructions-for-visual-studio-2008"></a>Visual Studio 2008 での手順  
   
-Visual Studio 2008 には、VCBuild という名前の C++ 専用のビルドシステムがありました。 Visual Studio 2010 以降、MSBuild を使用するように Visual C プロジェクトが変更されました。 つまり、最新バージョンの Visual Studio で Visual Studio 2008 プロジェクトをビルドするには、更新手順を実行する必要があります。 更新されたプロジェクトでは、Visual Studio 2008 IDE を使用して作成されたバイナリと完全に互換性があるバイナリを引き続き生成します。
+Visual Studio 2008 には、**VCBuild** という名前の C++ 専用のビルドシステムがありました。 Visual Studio 2010 以降、**MSBuild** を使用するように Visual C プロジェクトが変更されました。 つまり、最新バージョンの Visual Studio で Visual Studio 2008 プロジェクトをビルドするには、更新手順を実行する必要があります。 更新されたプロジェクトでは、Visual Studio 2008 IDE を使用して作成されたバイナリと完全に互換性があるバイナリを引き続き生成します。
 
-最初に、Visual Studio の現在のバージョンだけでなく、Visual Studio 2008 と同じコンピューターに Visual Studio 2010 をインストールする必要があります。 Visual Studio 2008 プロジェクトを対象とするために必要な MSBuild スクリプトをインストールするのは、Visual Studio 2010 のみです。 
+最初に、Visual Studio の現在のバージョンだけでなく、Visual Studio 2008 と同じコンピューターに Visual Studio 2010 をインストールする必要があります。 Visual Studio 2008 プロジェクトを対象とするために必要な **MSBuild** スクリプトをインストールするのは、Visual Studio 2010 のみです。 
 
 次に、Visual Studio 2008 のソリューションとプロジェクトを Visual Studio の現在のバージョンに更新する必要があります。 アップグレードの前に、プロジェクトおよびソリューション ファイルのバックアップを作成することをお勧めします。 アップグレード プロセスを開始するには、現在のバージョンの Visual Studio でソリューションを開きます。 アップグレードのプロンプトが表示された場合、表示された情報を確認し、**[OK]** を選択してアップグレードを開始します。 ソリューションに複数のプロジェクトがある場合、更新する必要があります。既存の .vcproj ファイルに加えて、ウィザードによって新しい .vcxproj プロジェクト ファイルが作成されます。 元の .sln ファイルのコピーを保持する限り、アップグレードによる既存の Visual Studio 2008 プロジェクトへの他の影響はありません。
 
-アップグレードが完了したときに、ログ レポートにいずれかのプロジェクトのエラーまたは警告がある場合は、それらを慎重に確認します。 VCBuild から MSBuild への変換には、問題が発生する可能性があります。 レポートに表示されるすべてのアクション項目を理解して実装したことを確認してください。 アップグレード ログのレポートおよび VCBuild を MSBuild に変換するときに発生する可能性のある問題の詳細については、「[C++ Native Multi-Targeting](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/)」 (C++ Native Multi-Targeting) ブログの投稿を参照してください。
+アップグレードが完了したときに、ログ レポートにいずれかのプロジェクトのエラーまたは警告がある場合は、それらを慎重に確認します。 **VCBuild** から **MSBuild** への変換には、問題が発生する可能性があります。 レポートに表示されるすべてのアクション項目を理解して実装したことを確認してください。 アップグレード ログのレポートおよび **VCBuild** を **MSBuild** に変換するときに発生する可能性のある問題の詳細については、「[C++ Native Multi-Targeting](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/)」 (C++ Native Multi-Targeting) ブログの投稿を参照してください。
 
 プロジェクトのアップグレードが完了し、ログ ファイルに記載されたすべての問題を解決したら、ソリューションの実際のターゲットが最新のツールセットになります。 最後の手順として、Visual Studio 2008 のツールセットを使用するようにソリューション内の各プロジェクトのプロパティを変更します。 現在のバージョンの Visual Studio ソリューションでソリューションを読み込んだ状態で、プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。**[ソリューション エクスプローラー]** でプロジェクトを右クリックし、**[プロパティ]** を選択します。 **[プロパティ ページ]** ダイアログ ボックスで、 **[構成]** ドロップダウン リストの値を **[すべての構成]** に変更します。 **[構成プロパティ]** で **[全般]** を選択し、 **[プラットフォーム ツールセット]** を **Visual Studio 2008 (v90)** に変更します。
 
@@ -72,12 +72,12 @@ Visual Studio 2008 には、VCBuild という名前の C++ 専用のビルドシ
 
 以下に、必要になる可能性があるいくつかの Visual Studio のダウンロードを示します。
 
-  - [Microsoft Visual Studio Community 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48146)  
-  - [Microsoft Visual Studio Express 2013 for Windows Desktop および更新プログラム 5](https://www.microsoft.com/en-us/download/details.aspx?id=48131)  
-  - [Microsoft Visual Studio Express 2012 for Windows Desktop](https://www.microsoft.com/en-us/download/details.aspx?id=34673)  
-  - [Visual Studio 2012 更新プログラム 5](https://www.microsoft.com/en-us/download/details.aspx?id=34673)  
+  - [Microsoft Visual Studio Community 2015](https://www.microsoft.com/download/details.aspx?id=48146)  
+  - [Microsoft Visual Studio Express 2013 for Windows Desktop および更新プログラム 5](https://www.microsoft.com/download/details.aspx?id=48131)  
+  - [Microsoft Visual Studio Express 2012 for Windows Desktop](https://www.microsoft.com/download/details.aspx?id=34673)  
+  - [Visual Studio 2012 更新プログラム 5](https://www.microsoft.com/download/details.aspx?id=34673)  
   - [Microsoft Visual C++ 2010 Express (Web インストーラー)](https://download.microsoft.com/download/1/D/9/1D9A6C0E-FC89-43EE-9658-B9F0E3A76983/vc_web.exe)  
-  - [Microsoft Visual Studio 2010 Service Pack 1](https://www.microsoft.com/en-us/download/details.aspx?id=23691)  
+  - [Microsoft Visual Studio 2010 Service Pack 1](https://www.microsoft.com/download/details.aspx?id=23691)  
   - [Microsoft Visual C++ 2008 Express SP1 (Web インストーラー)](https://go.microsoft.com/?linkid=7729279)  
 
 これらの製品がインストールされているときに、**[プロパティ ページ]** ダイアログ ボックスの **[プラットフォーム ツールセット]** プロパティ ドロップダウンの一覧が自動的に更新され、使用できるツールセットが表示されます。 最新バージョンの Visual Studio を使用して、古いバージョンのツールセットのプロジェクトをビルドすることができます。それらを変換またはアップグレードする必要はありません。
