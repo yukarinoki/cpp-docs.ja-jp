@@ -1,5 +1,5 @@
 ---
-title: '@ (コンパイラ応答ファイルの指定) |Microsoft ドキュメント'
+title: '@ (コンパイラ応答ファイルの指定) |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,41 +18,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f291ed9a0ccc86ea1ef6fe6703205d76cdcd0fa1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 430e6372c1ca26e946c2ff26bfcfe9180dfb0dba
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369579"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894459"
 ---
 # <a name="-specify-a-compiler-response-file"></a>@ (コンパイラ応答ファイルの指定)
-コンパイラ応答ファイルを指定します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-@response_file  
-```  
-  
-## <a name="arguments"></a>引数  
- `response_file`  
- コンパイラのコマンドを含むテキスト ファイル。  
-  
-## <a name="remarks"></a>コメント  
- 応答ファイルには、コマンドラインで指定するとどのようなコマンドを含めることができます。 これは、コマンドライン引数は、127 文字を超えた場合に便利ですできます。  
-  
- 指定することはできません、 **@** から応答ファイル内ではオプションです。 つまり、応答ファイルには、別の応答ファイルを埋め込むことはできません。  
-  
- コマンドラインから多くの応答ファイル オプションを指定できます (たとえば、 `@respfile.1 @respfile.2`) します。  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
-  
--   応答ファイルは、開発環境内から指定することはできませんし、コマンドラインで指定する必要があります。  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには  
-  
--   このコンパイラ オプションをプログラムで変更できません。  
-  
-## <a name="see-also"></a>関連項目  
- [コンパイラ オプション](../../build/reference/compiler-options.md)   
- [コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+
+コンパイラ応答ファイルを指定します。
+
+## <a name="syntax"></a>構文
+
+> **\@**<em>response_file</em>
+
+## <a name="arguments"></a>引数
+
+*response_file*  
+コンパイラのコマンドを含むテキスト ファイル。
+
+## <a name="remarks"></a>Remarks
+
+応答ファイルは、コマンドラインで指定する任意のコマンドを含めることができます。 コマンドライン引数は、127 文字を超えた場合に便利なことができます。
+
+指定することはできません、 **\@** から応答ファイル内のオプションします。 つまり、応答ファイルには、別の応答ファイルを埋め込むことはできません。
+
+コマンドラインから多くの応答ファイル オプションを指定できます (たとえば、 `@respfile.1 @respfile.2`) します。
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+
+- 応答ファイルは、開発環境内から指定することはできませんし、コマンドラインで指定する必要があります。
+
+### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
+
+- このコンパイラ オプションをプログラムで変更することはできません。
+
+## <a name="see-also"></a>関連項目
+
+[コンパイラ オプション](../../build/reference/compiler-options.md)  
+[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)  
