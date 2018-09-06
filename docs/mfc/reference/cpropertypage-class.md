@@ -51,11 +51,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 632e8c0039dc0cac35fe46cff1fc539e534f8e20
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203404"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43757511"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage クラス
 タブ ダイアログ ボックスとして知られているプロパティ シートの各ページを表します。  
@@ -345,7 +345,7 @@ virtual BOOL OnKillActive();
  [!code-cpp[NVC_MFCDocView#115](../../mfc/codesnippet/cpp/cpropertypage-class_5.cpp)]  
   
 ##  <a name="onok"></a>  送るに  
- ユーザーが [framework 呼び出しの直後に、[ok] または [今すぐ適用] ボタンのいずれかに、このメンバー関数が、フレームワークによって呼び出されます[OnKillActive](#onkillactive)します。  
+ ユーザーが framework 呼び出しの直後に、[ok] または [今すぐ適用] ボタンのいずれかに、このメンバー関数が、フレームワークによって呼び出されます[OnKillActive](#onkillactive)します。  
   
 ```  
 virtual void OnOK();
