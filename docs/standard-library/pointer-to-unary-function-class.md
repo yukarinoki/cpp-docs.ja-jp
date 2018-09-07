@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33161d622bf43b79b33c91a5abc6f703c48c4f2e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b9543ed9bec188ab810bbfd3e0ac52a764fc2fdd
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953063"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110400"
 ---
 # <a name="pointertounaryfunction-class"></a>pointer_to_unary_function クラス
 
@@ -43,9 +43,11 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*pfunc*変換する二項関数。
+*pfunc*<br/>
+変換する二項関数。
 
-*左*オブジェクトを *\*pfunc*で呼び出されます。
+*left*<br/>
+*\*pfunc* が呼び出されるオブジェクト。
 
 ## <a name="return-value"></a>戻り値
 
@@ -59,7 +61,7 @@ public:
 
 `pointer_to_unary_function` のコンストラクターが直接使用されることはほとんどありません。 `pointer_to_unary_function` アダプターの述語を宣言および使用する方法の例については、ヘルパー関数 [ptr_fun](../standard-library/functional-functions.md#ptr_fun) をご覧ください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<functional>
 

@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::make_unchecked_array_iterator [C++]
 - std::next [C++]
 - std::prev [C++]
-ms.openlocfilehash: 995aa846af4642070150f2dd41d4bf6463f46ee8
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: d14bba0e38e49145ccd7d0078f4bbfd731e08827
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964464"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110426"
 ---
 # <a name="ltiteratorgt-functions"></a>&lt;iterator&gt; 関数
 
@@ -64,9 +64,11 @@ void advance(
 
 ### <a name="parameters"></a>パラメーター
 
-*InIt*反復子がインクリメントされ、入力反復子の要件を満たす必要があります。
+*InIt*<br/>
+インクリメントされる、入力反復子の要件を満たしている必要がある反復子。
 
-*オフ*反復子の位置であるを進めるインクリメントの数を指定する、反復子の差の型に変換できる整数型。
+*Off*<br/>
+反復子の差の型に変換可能で、反復子の位置を進めるインクリメントの数を指定する整数型。
 
 ### <a name="remarks"></a>Remarks
 
@@ -134,7 +136,8 @@ back_insert_iterator<Container> back_inserter(Container& _Cont);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Cont*後方挿入を実行するコンテナー。
+*_Cont*<br/>
+後方挿入の実行対象となるコンテナー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -172,9 +175,9 @@ int main( )
 
    // Insertions can be done with template function
    back_insert_iterator<vector<int> > backiter ( vec );
- *backiter = 30;
+*backiter = 30;
    backiter++;
- *backiter = 40;
+*backiter = 40;
 
    // Alternatively, insertions can be done with the
    // back_insert_iterator member function
@@ -212,9 +215,11 @@ Ty *begin(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>パラメーター
 
-*続き*コンテナー。
+*続き*<br/>
+コンテナー。
 
-*配列*型のオブジェクトの配列`Ty`します。
+*array*<br/>
+`Ty` 型のオブジェクトの配列。
 
 ### <a name="return-value"></a>戻り値
 
@@ -305,7 +310,8 @@ auto cbegin(const Container& cont)
 
 ### <a name="parameters"></a>パラメーター
 
-*続き*コンテナーまたは initializer_list。
+*続き*<br/>
+コンテナーまたは initializer_list。
 
 ### <a name="return-value"></a>戻り値
 
@@ -337,7 +343,8 @@ auto cend(const Container& cont)
 
 ### <a name="parameters"></a>パラメーター
 
-*続き*コンテナーまたは initializer_list。
+*続き*<br/>
+コンテナーまたは initializer_list。
 
 ### <a name="return-value"></a>戻り値
 
@@ -368,9 +375,11 @@ typename iterator_traits<InputIterator>::difference_type distance(InputIterator 
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*2 番目からの距離を確認する最初の反復子。
+*first*<br/>
+2 番目の反復子からの距離を特定する 1 番目の反復子。
 
-*最後*最初からの距離を確認する 2 つ目の反復子。
+*last*<br/>
+1 番目の反復子からの距離を特定する 2 番目の反復子。
 
 ### <a name="return-value"></a>戻り値
 
@@ -447,9 +456,11 @@ Ty *end(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>パラメーター
 
-*続き*コンテナー。
+*続き*<br/>
+コンテナー。
 
-*配列*型のオブジェクトの配列`Ty`します。
+*array*<br/>
+`Ty` 型のオブジェクトの配列。
 
 ### <a name="return-value"></a>戻り値
 
@@ -472,7 +483,8 @@ front_insert_iterator<Container> front_inserter(Container& _Cont);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Cont*先頭の要素があるコンテナー オブジェクトを挿入します。
+*_Cont*<br/>
+先頭に要素が挿入されるコンテナー オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -512,7 +524,7 @@ int main( )
 
    // Using the template function to insert an element
    front_insert_iterator< list < int> > Iter(L);
- *Iter = 100;
+*Iter = 100;
 
    // Alternatively, you may use the front_insert member function
    front_inserter ( L ) = 200;
@@ -526,9 +538,9 @@ int main( )
 
 ```Output
 The list L is:
- ( -1 0 1 2 3 4 5 6 7 8 ).
+( -1 0 1 2 3 4 5 6 7 8 ).
 After the front insertions, the list L is:
- ( 200 100 -1 0 1 2 3 4 5 6 7 8 ).
+( 200 100 -1 0 1 2 3 4 5 6 7 8 ).
 ```
 
 ## <a name="inserter"></a>  inserter
@@ -545,9 +557,11 @@ inserter(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Cont*新しい要素が追加されるコンテナー。
+*_Cont*<br/>
+新しい要素が追加されるコンテナー。
 
-*_Where*の挿入ポイントを指定する反復子。
+*_Where*<br/>
+挿入位置を指定する反復子。
 
 ### <a name="remarks"></a>Remarks
 
@@ -581,7 +595,7 @@ int main( )
 
    // Using the template version to insert an element
    insert_iterator<list <int> > Iter( L, L.begin ( ) );
- *Iter = 1;
+*Iter = 1;
 
    // Alternatively, using the member function to insert an element
    inserter ( L, L.end ( ) ) = 500;
@@ -595,9 +609,9 @@ int main( )
 
 ```Output
 The list L is:
- ( 20 30 40 ).
+( 20 30 40 ).
 After the insertions, the list L is:
- ( 1 20 30 40 500 ).
+( 1 20 30 40 500 ).
 ```
 
 ## <a name="make_checked_array_iterator"></a>  make_checked_array_iterator
@@ -611,18 +625,21 @@ After the insertions, the list L is:
 template <class Iter>
 checked_array_iterator<Iter>
     make_checked_array_iterator(
- Iter Ptr,
+Iter Ptr,
     size_t Size,
     size_t Index = 0);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*Ptr*コピー先の配列へのポインター。
+*ptr*<br/>
+コピー先配列へのポインター。
 
-*サイズ*コピー先の配列のサイズ。
+*Size*<br/>
+ターゲット配列のサイズ。
 
-*インデックス*省略可能な配列のインデックス。
+*Index*<br/>
+配列のインデックス (省略可能)。
 
 ### <a name="return-value"></a>戻り値
 
@@ -704,7 +721,8 @@ make_move_iterator(const Iterator& _It);
 
 ### <a name="parameters"></a>パラメーター
 
-*_It*新しいに格納されている反復子は、反復子を移動します。
+*_It*<br/>
+新しい move 反復子に格納する反復子。
 
 ### <a name="remarks"></a>Remarks
 
@@ -725,7 +743,8 @@ unchecked_array_iterator<Iter>
 
 ### <a name="parameters"></a>パラメーター
 
-*Ptr*コピー先の配列へのポインター。
+*ptr*<br/>
+コピー先配列へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -802,9 +821,11 @@ InputIterator next(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*現在の位置。
+*first*<br/>
+現在位置を返します。
 
-*_Off*を反復処理する回数。
+*_Off*<br/>
+反復する回数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -827,9 +848,11 @@ BidirectionalIterator prev(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*現在の位置。
+*first*<br/>
+現在位置を返します。
 
-*_Off*を反復処理する回数。
+*_Off*<br/>
+反復する回数。
 
 ### <a name="remarks"></a>Remarks
 

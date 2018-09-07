@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6de5d24c0763e731b3123778e74b22c20798b729
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a767b7744f775a04f73777a21eba7bb6ef1d796d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966538"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102656"
 ---
 # <a name="isnullpointer-class"></a>is_null_pointer クラス
 
@@ -37,13 +37,14 @@ struct is_null_pointer;
 
 ### <a name="parameters"></a>パラメーター
 
-*T*照会する型。
+*T*<br/>
+照会する型。
 
 ## <a name="remarks"></a>Remarks
 
 場合、型述語のインスタンスは true を保持型*T*は`std::nullptr_t`、それ以外の場合は false を保持します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<type_traits>
 

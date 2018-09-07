@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f53732fee62906da19a5771c8598cce51fc6331
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5e096d21699d4e6218bbadedcd1cc0bcc65f92f2
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953759"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108190"
 ---
 # <a name="lockguard-class"></a>lock_guard クラス
 
@@ -52,7 +52,7 @@ class lock_guard;
 |[lock_guard](#lock_guard)|`lock_guard` オブジェクトを構築します。|
 |[lock_guard::~lock_guard デストラクター](#dtorlock_guard_destructor)|コンストラクターに渡された `mutex` をロック解除します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<mutex >
 
@@ -70,7 +70,8 @@ lock_guard(mutex_type& Mtx, adopt_lock_t);
 
 ### <a name="parameters"></a>パラメーター
 
-*続け*A *mutex 型*オブジェクト。
+*続け*<br/>
+*mutex 型*オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 

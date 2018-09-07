@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1df2f932290caac5253da3cc859abda9a05f8a41
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: cab2335a8e9adb3e4f68f8576df466be45f01504
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964861"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100794"
 ---
 # <a name="logicaland-struct"></a>logical_and 構造体
 
@@ -44,16 +44,18 @@ struct logical_and<void>
   template <class T, class U>
   auto operator()(T&& Left, U&& Right) const`
     -> decltype(std::forward<T>(Left) && std::forward<U>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *型*、 *T*、 *U*をサポートする任意の型、`operator&&`指定または推論された型のオペランドを受け取る。
 
-*左*論理積演算の左オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*T*します。
+*左*<br/>
+論理積演算の左オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*T*します。
 
-*右*論理積演算の右オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*U*します。
+*右*<br/>
+論理積演算の右オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*U*します。
 
 ## <a name="return-value"></a>戻り値
 
@@ -127,15 +129,15 @@ int main( )
 
 /* Output:
 Original deque:
- d1 = ( true true true true true false false )
+d1 = ( true true true true true false false )
 Original deque:
- d2 = ( true false true true false true false )
+d2 = ( true false true true false true false )
 The deque which is the conjuction of d1 & d2 is:
- d3 = ( true false true true false false false )
- */
+d3 = ( true false true true false false false )
+*/
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<functional>
 

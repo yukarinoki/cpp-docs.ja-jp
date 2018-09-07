@@ -6,12 +6,12 @@ ms.topic: reference
 f1_keywords:
 - chrono/std::operator modulo
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
-ms.openlocfilehash: 786713f37bc8470dd5c455eae49eb4faed72b781
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 56a8d05c3a68cf8d3e12b8a6452d43033e414cbf
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957413"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102721"
 ---
 # <a name="ltchronogt-operators"></a>&lt;chrono&gt; 演算子
 
@@ -49,13 +49,17 @@ constexpr typename common_type<Duration1, Duration2>::type
 
 ### <a name="parameters"></a>パラメーター
 
-*左*左`duration`または`time_point`オブジェクト。
+*左*<br/>
+左側の `duration` オブジェクトまたは `time_point` オブジェクト。
 
-*右*右側`duration`または`time_point`オブジェクト。
+*右*<br/>
+右側の `duration` オブジェクトまたは `time_point` オブジェクト。
 
-*時間*A`time_point`オブジェクト。
+*時刻*<br/>
+`time_point` オブジェクト。
 
-*期間*A`duration`オブジェクト。
+*期間*<br/>
+`duration` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -84,9 +88,11 @@ constexpr bool operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-`Left` 左`duration`または`time_point`オブジェクト。
+*左*<br/>
+左側の `duration` オブジェクトまたは `time_point` オブジェクト。
 
-`Right` 右側`duration`または`time_point`オブジェクト。
+*右*<br/>
+右側の `duration` オブジェクトまたは `time_point` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -114,9 +120,11 @@ constexpr duration<typename common_type<Rep1, Rep2>::type, Period2>
 
 ### <a name="parameters"></a>パラメーター
 
-*期間*A`duration`オブジェクト。
+*期間*<br/>
+`duration` オブジェクト。
 
-*Mult*を整数値。
+*Mult*<br/>
+整数値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -147,13 +155,17 @@ constexpr typename common_type<Rep1, Rep2>::type
 
 ### <a name="parameters"></a>パラメーター
 
-*期間*A`duration`オブジェクト。
+*期間*<br/>
+`duration` オブジェクト。
 
-*Div*を整数値。
+*Div*<br/>
+整数値。
 
-*左*左`duration`オブジェクト。
+*左*<br/>
+左側の `duration` オブジェクト。
 
-*右*右側`duration`オブジェクト。
+*右*<br/>
+右側の `duration` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -191,13 +203,17 @@ time_point<Clock, constexpr typename common_type<duration<Rep1, Period1>, Durati
 
 ### <a name="parameters"></a>パラメーター
 
-*左*左`duration`または`time_point`オブジェクト。
+*左*<br/>
+左側の `duration` オブジェクトまたは `time_point` オブジェクト。
 
-*右*右側`duration`または`time_point`オブジェクト。
+*右*<br/>
+右側の `duration` オブジェクトまたは `time_point` オブジェクト。
 
-*時間*A`time_point`オブジェクト。
+*時刻*<br/>
+`time_point` オブジェクト。
 
-*期間*A`duration`オブジェクト。
+*期間*<br/>
+`duration` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -224,9 +240,11 @@ constexpr bool operator<(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*左`duration`または`time_point`オブジェクト。
+*左*<br/>
+左側の `duration` オブジェクトまたは `time_point` オブジェクト。
 
-*右*右側`duration`または`time_point`オブジェクト。
+*右*<br/>
+右側の `duration` オブジェクトまたは `time_point` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -252,9 +270,11 @@ constexpr bool operator<=(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*左`duration`または`time_point`オブジェクト。
+*左*<br/>
+左側の `duration` オブジェクトまたは `time_point` オブジェクト。
 
-*右*右側`duration`または`time_point`オブジェクト。
+*右*<br/>
+右側の `duration` オブジェクトまたは `time_point` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -278,9 +298,11 @@ constexpr bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*左`duration`または`time_point`オブジェクト。
+*左*<br/>
+左側の `duration` オブジェクトまたは `time_point` オブジェクト。
 
-*右*右側`duration`または`time_point`オブジェクト。
+*右*<br/>
+右側の `duration` オブジェクトまたは `time_point` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -306,9 +328,11 @@ constexpr bool operator>(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*左`duration`または`time_point`オブジェクト。
+*左*<br/>
+左側の `duration` オブジェクトまたは `time_point` オブジェクト。
 
-*右*右側`duration`または`time_point`オブジェクト。
+*右*<br/>
+右側の `duration` オブジェクトまたは `time_point` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -332,9 +356,11 @@ constexpr bool operator>=(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*左`duration`または`time_point`オブジェクト。
+*左*<br/>
+左側の `duration` オブジェクトまたは `time_point` オブジェクト。
 
-*右*右側`duration`または`time_point`オブジェクト。
+*右*<br/>
+右側の `duration` オブジェクトまたは `time_point` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -360,13 +386,17 @@ constexpr typename common_type<duration<Rep1, _Period1>, duration<Rep2, Period2>
 
 ### <a name="parameters"></a>パラメーター
 
-*期間*A`duration`オブジェクト。
+*期間*<br/>
+`duration` オブジェクト。
 
-*Div*を整数値。
+*Div*<br/>
+整数値。
 
-*左*左`duration`オブジェクト。
+*左*<br/>
+左側の `duration` オブジェクト。
 
-*右*右側`duration`オブジェクト。
+*右*<br/>
+右側の `duration` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
