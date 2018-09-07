@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7983857b3814f8ddd9c10ab37676bc2e87e9a59c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6cdf1f5a3a8477e0af7d6bb04426599df590fffa
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964146"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102682"
 ---
 # <a name="regexerror-class"></a>regex_error クラス
 
@@ -32,7 +32,7 @@ ms.locfileid: "38964146"
 
 ```cpp
 class regex_error
- : public std::runtime_error {
+: public std::runtime_error {
 public:
     explicit regex_error(regex_constants::error_code error);
 
@@ -46,7 +46,7 @@ public:
 
 このクラスは、 `basic_regex` オブジェクトの構築時または使用時に発生したエラーを報告するためにスローされる例外オブジェクトを表します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<regex>
 
@@ -111,7 +111,8 @@ regex_error(regex_constants::error_code error);
 
 ### <a name="parameters"></a>パラメーター
 
-*エラー*エラー コード。
+*error*<br/>
+エラー コード。
 
 ### <a name="remarks"></a>Remarks
 

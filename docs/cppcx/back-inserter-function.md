@@ -15,43 +15,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6142255c00d9764e4a1a18dab094899b5e9d9e1d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4c013c769e4fc25ed1c8770bf5727a26da590680
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767248"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106426"
 ---
 # <a name="backinserter-function"></a>back_inserter 関数
-指定されたコレクションの末尾に要素を挿入するために使用される反復子を返します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
+
+指定されたコレクションの末尾に要素を挿入するために使用される反復子を返します。
+
+## <a name="syntax"></a>構文
+
+```
+
 template <typename T>
-Platform::BackInsertIterator<T>   
-    back_inserter(IVector<T>^ v);  
-  
-template<typename T>  
-Platform::BackInsertIterator<T>   
-   back_inserter(IObservableVector<T>^ v);  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
- `T`  
- テンプレート型パラメーター。  
-  
- `v`  
- 基になるコレクションへのアクセスを提供するインターフェイス ポインター。  
-  
-### <a name="return-value"></a>戻り値  
- 反復子。  
-  
-### <a name="requirements"></a>要件  
- **ヘッダー:** collection.h  
-  
- **名前空間:** Windows::Foundation::Collections  
-  
-## <a name="see-also"></a>関連項目  
- [:Foundation Namespace](../cppcx/windows-foundation-collections-namespace-c-cx.md)
+Platform::BackInsertIterator<T>
+    back_inserter(IVector<T>^ v);
+
+template<typename T>
+Platform::BackInsertIterator<T>
+   back_inserter(IObservableVector<T>^ v);
+```
+
+#### <a name="parameters"></a>パラメーター
+
+*T*<br/>
+テンプレート型パラメーター。
+
+*v*<br/>
+基になるコレクションへのアクセスを提供するインターフェイス ポインター。
+
+### <a name="return-value"></a>戻り値
+
+反復子。
+
+### <a name="requirements"></a>要件
+
+**ヘッダー:** collection.h
+
+**名前空間:** Windows::Foundation::Collections
+
+## <a name="see-also"></a>関連項目
+
+[:Foundation Namespace](../cppcx/windows-foundation-collections-namespace-c-cx.md)

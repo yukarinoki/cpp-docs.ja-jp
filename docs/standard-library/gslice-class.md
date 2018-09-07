@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5c47f91a3e029175d40bd1a762fb6e6ff527ee7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4ec465e9a829164201d61d3e60c678371cc8c3d3
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955815"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108526"
 ---
 # <a name="gslice-class"></a>gslice クラス
 
@@ -63,7 +63,7 @@ valarray での操作は、gslices によって定義されたソースとター
 |[start](#start)|`valarray` の一般的なスライスの開始インデックスを検索します。|
 |[stride](#stride)|`valarray` の一般的なスライスの要素間の距離を検索します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<valarray>
 
@@ -84,11 +84,14 @@ gslice(
 
 ### <a name="parameters"></a>パラメーター
 
-*_StartIndex*サブセット内の最初の要素の valarray インデックス。
+*_StartIndex*<br/>
+サブセットの最初の要素の valarray インデックス。
 
-*_LenArray*各スライス内の要素の数を指定する配列。
+*_LenArray*<br/>
+各スライスに要素の数を指定する配列。
 
-*_IncArray*各スライスにストライドを指定する配列。
+*_IncArray*<br/>
+各スライスにストライドを指定する配列。
 
 ### <a name="return-value"></a>戻り値
 
@@ -214,13 +217,13 @@ int main( )
 
 ```Output
 The operand valarray va is:
- ( 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ).
+( 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ).
 The size of the valarray is: 20.
 
 The valarray for vaGSlice is vaResult:
- va[vaGSlice] = ( 0 4 8 12 7 11 15 19 ).
+va[vaGSlice] = ( 0 4 8 12 7 11 15 19 ).
 The size of vaResult is:
- vaGSlice.size ( ) = ( 4 4 ).
+vaGSlice.size ( ) = ( 4 4 ).
 ```
 
 ## <a name="start"></a>  gslice::start
@@ -280,9 +283,9 @@ int main( )
 
 ```Output
 The operand valarray va is:
- ( 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ).
+( 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ).
 The valarray for vaGSlice is vaResult:
- va[vaGSlice] = ( 0 4 8 12 7 11 15 19 ).
+va[vaGSlice] = ( 0 4 8 12 7 11 15 19 ).
 The index of the first element of vaResult is: 0.
 ```
 
@@ -347,11 +350,11 @@ int main( )
 
 ```Output
 The operand valarray va is:
- ( 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ).
+( 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ).
 The valarray for vaGSlice is vaResult:
- va[vaGSlice] = ( 0 4 8 12 7 11 15 19 ).
+va[vaGSlice] = ( 0 4 8 12 7 11 15 19 ).
 The strides of vaResult are:
- vaGSlice.stride ( ) = ( 7 4 ).
+vaGSlice.stride ( ) = ( 7 4 ).
 ```
 
 ## <a name="see-also"></a>関連項目

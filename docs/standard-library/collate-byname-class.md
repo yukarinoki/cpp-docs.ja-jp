@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f104736d1c8f9d0ed60f2afd374345ab227300b4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b60e5aebcab11e839b6b1e6168aaac55a0202b7c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964913"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110241"
 ---
 # <a name="collatebyname-class"></a>collate_byname クラス
 
@@ -49,15 +49,17 @@ protected:
 
 ### <a name="parameters"></a>パラメーター
 
-*_Locname*名前付きのロケール。
+*_Locname*<br/>
+名前付きのロケール。
 
-*_Refs*最初の参照数。
+*_Refs*<br/>
+最初の参照数。
 
 ## <a name="remarks"></a>Remarks
 
 このテンプレート クラスは、[collate](../standard-library/collate-class.md#collate)\<CharType> 型の[ロケール ファセット](../standard-library/locale-class.md#facet_class)として使用できるオブジェクトを表します。 その動作によって決定されます、[という](../standard-library/locale-class.md#name)ロケール *_Locname*します。 各コンストラクターは、[collate](../standard-library/collate-class.md#collate)\<CharType>( `_Refs`) を使用して、その基本オブジェクトを初期化します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<locale>
 

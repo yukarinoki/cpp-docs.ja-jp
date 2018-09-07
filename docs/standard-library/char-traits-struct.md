@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c2346ed8a7d9cc2359c0bdf984b52993a13b05a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: bc8f906c4c084ef4cabef9b26ef9e6b48e9e33cd
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956883"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106084"
 ---
 # <a name="chartraits-struct"></a>char_traits 構造体
 
@@ -57,7 +57,8 @@ struct char_traits;
 
 ### <a name="parameters"></a>パラメーター
 
-*CharType*要素のデータ型。
+*CharType*<br/>
+要素のデータ型。
 
 ## <a name="remarks"></a>Remarks
 
@@ -93,7 +94,7 @@ struct char_traits;
 |[to_char_type](#to_char_type)|`int_type` の文字を `char_type` の対応する文字に変換し、その結果を返します。|
 |[to_int_type](#to_int_type)|`char_type` の文字を `int_type` の対応する文字に変換し、その結果を返します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<string>
 
@@ -116,11 +117,13 @@ static char_type *assign(char_type* strTo,
 
 **_** *CharFrom*値が割り当てられる文字。
 
-*_CharTo*が文字の値を割り当てられる要素。
+*_CharTo*<br/>
+文字値を割り当てられる要素。
 
 * strTo * 最初の要素が文字値を割り当てられる文字列または文字の配列。
 
-*_Num*要素の値を割り当てることの数。
+*_Num*<br/>
+値を割り当てられる要素の数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -199,7 +202,8 @@ static int compare(const char_type* str1,
 
 * str2 * 2 番目の相互に比較する 2 つの文字列。
 
-*_Num*と比較する文字列内の要素の数。
+*_Num*<br/>
+比較する文字列内の要素の数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -258,11 +262,14 @@ static char_type *copy(char_type* _To,
 
 ### <a name="parameters"></a>パラメーター
 
-*(_T)* 文字列または文字配列の先頭にある要素を対象とする、文字のコピーのシーケンスを受信します。
+*(_T)*<br/>
+コピーされた文字のシーケンスの受信ターゲットとなる文字列または文字配列の先頭にある要素。
 
-*_From*コピーされるソース文字列または文字配列の先頭にある要素。
+*_From*<br/>
+コピーされるソース文字列または文字配列の先頭にある要素。
 
-*_Num*コピーされる要素の数。
+*_Num*<br/>
+コピーする要素の数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -317,13 +324,17 @@ static char_type *_Copy_s(
 
 ### <a name="parameters"></a>パラメーター
 
-*dest*文字列または文字配列を対象とする、文字のコピーのシーケンスを受信します。
+*dest*<br/>
+コピーされた文字のシーケンスの受信ターゲットとなる文字列または文字配列。
 
-*dest_size*のサイズ*dest*します。 場合`char_type`は**char**、このサイズ (バイト単位)。 場合`char_type`は**wchar_t**、このサイズはワード数単位です。
+*dest_size*<br/>
+サイズ*dest*します。 場合`char_type`は**char**、このサイズ (バイト単位)。 場合`char_type`は**wchar_t**、このサイズはワード数単位です。
 
-*_From*コピーされるソース文字列または文字配列。
+*_From*<br/>
+コピーされるソース文字列または文字配列。
 
-*カウント*コピーされる要素の数。
+*count*<br/>
+コピーする要素の数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -425,9 +436,11 @@ static bool eq(const char_type& _Ch1, const char_type& _Ch2);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Ch1*等しいかどうかをテストする 2 つの文字の最初。
+*_Ch1*<br/>
+等しいかどうかをテストする 2 つの文字の最初の文字。
 
-*_Ch2* 2 文字の 2 番目の等しいかどうかをテストします。
+*_Ch2*<br/>
+等しいかどうかをテストする 2 つの文字の 2 番目文字。
 
 ### <a name="return-value"></a>戻り値
 
@@ -483,9 +496,11 @@ static bool eq_int_type(const int_type& _Ch1, const int_type& _Ch2);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Ch1*と等しいかどうかをテストする 2 つの文字の最初の`int_type`秒。
+*_Ch1*<br/>
+等しいかどうかをテストする 2 つの文字の最初の`int_type`秒。
 
-*_Ch2*と等しいかどうかをテストする 2 つの文字の 2 番目の`int_type`秒。
+*_Ch2*<br/>
+`int_type` として等しいかどうかをテストする 2 つの文字の 2 番目の文字。
 
 ### <a name="return-value"></a>戻り値
 
@@ -551,9 +566,9 @@ The char_types and corresponding int_types are:
     ch3 = x corresponding to int1 = 120.
 
 The int_type representation of character ch1
- is not equal to the int_type representation of ch2.
+is not equal to the int_type representation of ch2.
 The int_type representation of character ch1
- is equal to the int_type representation of ch3.
+is equal to the int_type representation of ch3.
 ```
 
 ## <a name="find"></a>  char_traits::find
@@ -568,11 +583,14 @@ static const char_type* find(const char_type* str,
 
 ### <a name="parameters"></a>パラメーター
 
-*str*検索対象の文字列の最初の文字。
+*str*<br/>
+検索される文字列の先頭の文字。
 
-*_Num*最初から数えてその位置の数で検索する範囲。
+*_Num*<br/>
+検索される範囲内で先頭から数えてその位置が何番目かを示す数。
 
-*_Ch*範囲内で検索する文字。
+*_Ch*<br/>
+範囲内で検索される文字。
 
 ### <a name="return-value"></a>戻り値
 
@@ -616,7 +634,7 @@ int main( )
 The string to be searched is: f2d-1234-abcd
 The character searched for in s1 is: d
 The string beginning with the first occurrence
- of the character 'd' is: d-1234-abcd
+of the character 'd' is: d-1234-abcd
 The result2 of the search is NULL.
 ```
 
@@ -646,7 +664,8 @@ static size_t length(const char_type* str);
 
 ### <a name="parameters"></a>パラメーター
 
-*str*長さを測定するが、C 文字列。
+*str*<br/>
+長さを測定する C 文字列。
 
 ### <a name="return-value"></a>戻り値
 
@@ -688,9 +707,11 @@ static bool lt(const char_type& _Ch1, const char_type& _Ch2);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Ch1*をテストする 2 つの文字の最初のより小さい。
+*_Ch1*<br/>
+少ないかどうかをテストする 2 つの文字の最初の文字。
 
-*_Ch2*をテストする 2 つの文字の 1 秒未満です。
+*_Ch2*<br/>
+少ないかどうかをテストする 2 つの文字の 2 番目の文字。
 
 ### <a name="return-value"></a>戻り値
 
@@ -749,11 +770,14 @@ static char_type *move(char_type* _To,
 
 ### <a name="parameters"></a>パラメーター
 
-*(_T)* 文字列または文字配列の先頭にある要素を対象とする、文字のコピーのシーケンスを受信します。
+*(_T)*<br/>
+コピーされた文字のシーケンスの受信ターゲットとなる文字列または文字配列の先頭にある要素。
 
-*_From*コピーされるソース文字列または文字配列の先頭にある要素。
+*_From*<br/>
+コピーされるソース文字列または文字配列の先頭にある要素。
 
-*_Num*ソース文字列からコピーされる要素の数。
+*_Num*<br/>
+ソース文字列からコピーされる要素の数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -823,13 +847,17 @@ static char_type *_Move_s(
 
 ### <a name="parameters"></a>パラメーター
 
-*dest*文字列または文字配列の先頭にある要素を対象とする、文字のコピーのシーケンスを受信します。
+*dest*<br/>
+コピーされた文字のシーケンスの受信ターゲットとなる文字列または文字配列の先頭にある要素。
 
-*dest_size*のサイズ*dest*します。 場合`char_type`は**char**、バイト単位です。 場合`char_type`は**wchar_t**、単語単位です。
+*dest_size*<br/>
+サイズ*dest*します。 場合`char_type`は**char**、バイト単位です。 場合`char_type`は**wchar_t**、単語単位です。
 
-*_From*コピーされるソース文字列または文字配列の先頭にある要素。
+*_From*<br/>
+コピーされるソース文字列または文字配列の先頭にある要素。
 
-*カウント*ソース文字列からコピーされる要素の数。
+*count*<br/>
+ソース文字列からコピーされる要素の数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -895,7 +923,8 @@ static int_type not_eof(const int_type& _Ch);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Ch*として表される文字、 `int_type` EOF 文字であるかどうかどうかをテストするためです。
+*_Ch*<br/>
+EOF 文字であるかどうかをテストされる `int_type` として表される文字。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1002,7 +1031,8 @@ static char_type to_char_type(const int_type& _Ch);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Ch* 、`int_type`として表現できない文字を`char_type`します。
+*_Ch*<br/>
+`char_type` として表される `int_type` 文字。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1107,7 +1137,8 @@ static int_type to_int_type(const char_type& _Ch);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Ch* 、`char_type`として表現できない文字を`int_type`します。
+*_Ch*<br/>
+`int_type` として表される `char_type` 文字。
 
 ### <a name="return-value"></a>戻り値
 

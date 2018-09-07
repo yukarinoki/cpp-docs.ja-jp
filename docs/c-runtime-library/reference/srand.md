@@ -38,16 +38,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2b527561e312ce9c50dce106a243d7e49a1d303
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7972ddfe6ae9c1d591bdbd4cc5e208d78e826037
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406889"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107554"
 ---
 # <a name="srand"></a>srand
 
-によって使用される擬似乱数ジェネレーターのシード開始値を設定、 **rand**関数。
+使用される擬似乱数ジェネレーターのシード開始値を設定、 **rand**関数。
 
 ## <a name="syntax"></a>構文
 
@@ -59,15 +59,16 @@ void srand(
 
 ### <a name="parameters"></a>パラメーター
 
-*シード*擬似乱数ジェネレーターのシード
+*シード*<br/>
+擬似乱数ジェネレーターのシード
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Srand**関数は、一連の整数の擬似乱数を生成する、現在のスレッドの開始位置を設定します。 結果の同じシーケンスを作成するコード ジェネレーターを再初期化を呼び出して、 **srand**関数を使用して、同じ*シード*引数を再度です。 その他の値の*シード*ジェネレーター、擬似乱数シーケンスのさまざまな開始位置を設定します。 **rand**生成される擬似乱数を取得します。 呼び出す**rand**への呼び出しの前に**srand**呼び出すことと同じシーケンスを生成**srand**で*シード*1 として渡されます。
+**Srand**関数は、現在のスレッドで、一連の整数の擬似乱数を生成するための開始点を設定します。 結果の同じシーケンスを作成するコード ジェネレーターを再初期化を呼び出し、 **srand**関数を使用して、同じ*シード*引数を再度します。 その他の値の*シード*ジェネレーター擬似乱数シーケンス内のさまざまな開始点を設定します。 **rand**生成される擬似乱数を取得します。 呼び出す**rand**への呼び出しの前に**srand**呼び出すことと同じシーケンスを生成**srand**で*シード*1 として渡されます。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**srand**|\<stdlib.h>|
 

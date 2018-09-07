@@ -50,12 +50,12 @@ helpviewer_keywords:
 - std::allocator_traits [C++], select_on_container_copy_construction
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bae212ec3d8edfacc7cd3afb37ab3c13dc11aef
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: fb00f7205dcb470785c9682335341ca07935aae5
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962449"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110439"
 ---
 # <a name="allocatortraits-class"></a>allocator_traits クラス
 
@@ -88,7 +88,7 @@ class allocator_traits;
 
 次の静的メソッドは、特定のアロケーター パラメーターで対応するメソッドを呼び出します。
 
-|name|説明|
+|名前|説明|
 |----------|-----------------|
 |[allocate](#allocate)|特定のアロケーター パラメーターを使用してメモリを割り当てる静的メソッド。|
 |[construct](#construct)|オブジェクトの構築に指定されたアロケーターを使用する静的メソッド。|
@@ -97,7 +97,7 @@ class allocator_traits;
 |[max_size](#max_size)|指定したアロケーターを使用して割り当てることができるオブジェクトの最大数を決定する静的メソッド。|
 |[select_on_container_copy_construction](#select_on_container_copy_construction)|指定したアロケーターで `select_on_container_copy_construction` を呼び出す静的メソッド。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<memory>
 
@@ -116,11 +116,14 @@ static pointer allocate(Alloc& al, size_type count,
 
 ### <a name="parameters"></a>パラメーター
 
-*al*アロケーター オブジェクト。
+*Al*<br/>
+アロケーター オブジェクト。
 
-*カウント*を割り当てる要素の数。
+*count*<br/>
+割り当てる要素数。
 
-*ヒント*A`const_pointer`で記憶域の要求を満たすことによって、要求の前に割り当てられたオブジェクトのアドレスを見つける、アロケーター オブジェクトを支援する可能性があります。 Null ポインターは、hint なしとして扱われます。
+*ヒント*<br/>
+記憶域への要求を、要求の前に割り当てられたオブジェクトのアドレスを見つけることで満たすことについて、アロケーター オブジェクトを支援できる `const_pointer`。 Null ポインターは、hint なしとして扱われます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -141,11 +144,14 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 
 ### <a name="parameters"></a>パラメーター
 
-*al*アロケーター オブジェクト。
+*Al*<br/>
+アロケーター オブジェクト。
 
-*ptr*オブジェクトが構築されている場所へのポインター。
+*ptr*<br/>
+オブジェクトが構築される場所へのポインター。
 
-*args*オブジェクト コンス トラクターに渡される引数のリスト。
+*引数*<br/>
+オブジェクト コンストラクターに渡される引数のリスト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -163,11 +169,14 @@ static void deallocate(Alloc al,
 
 ### <a name="parameters"></a>パラメーター
 
-*al*アロケーター オブジェクト。
+*Al*<br/>
+アロケーター オブジェクト。
 
-*ptr*が解除されるオブジェクトの開始位置を指すポインター。
+*ptr*<br/>
+割り当てを解除されるオブジェクトの開始位置へのポインター。
 
-*カウント*割り当てを解除するオブジェクトの数。
+*count*<br/>
+割り当てを解除するオブジェクトの数。
 
 ### <a name="remarks"></a>Remarks
 
@@ -186,9 +195,11 @@ static void destroy(Alloc& al, Uty* ptr);
 
 ### <a name="parameters"></a>パラメーター
 
-*al*アロケーター オブジェクト。
+*Al*<br/>
+アロケーター オブジェクト。
 
-*ptr*オブジェクトの場所へのポインター。
+*ptr*<br/>
+オブジェクトの場所へのポインター。
 
 ### <a name="remarks"></a>Remarks
 
@@ -204,7 +215,8 @@ static size_type max_size(const Alloc& al);
 
 ### <a name="parameters"></a>パラメーター
 
-*al*アロケーター オブジェクト。
+*Al*<br/>
+アロケーター オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -220,7 +232,8 @@ static Alloc select_on_container_copy_construction(const Alloc& al);
 
 ### <a name="parameters"></a>パラメーター
 
-*al*アロケーター オブジェクト。
+*Al*<br/>
+アロケーター オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 

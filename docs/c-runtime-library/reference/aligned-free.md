@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51220aaf47056f63d37471c61857f8a128a67179
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e18c02909c247af4066033fc3e3633db74327f55
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402449"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102643"
 ---
 # <a name="alignedfree"></a>_aligned_free
 
@@ -54,7 +54,8 @@ void _aligned_free (
 
 ### <a name="parameters"></a>パラメーター
 
-*_expand*に返されたメモリ ブロックへのポインター、`_aligned_malloc`または`_aligned_offset_malloc`関数。
+*_expand*  
+`_aligned_malloc` または `_aligned_offset_malloc` 関数に返されたメモリ ブロックへのポインター。
 
 ## <a name="remarks"></a>Remarks
 

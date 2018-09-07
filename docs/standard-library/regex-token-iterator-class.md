@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f5e02f1cfd7b35244c347ef0f07542e61938d7b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5d4dd1f7b428e3b19f86445bf0b191fb840ecdb9
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960968"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101003"
 ---
 # <a name="regextokeniterator-class"></a>regex_token_iterator クラス
 
@@ -87,11 +87,14 @@ private:
 
 ### <a name="parameters"></a>パラメーター
 
-*BidIt*サブマッチの反復子の型。
+*BidIt*<br/>
+サブマッチの反復子の型。
 
-*Elem*と一致する要素の型。
+*Elem*<br/>
+一致させる要素の型。
 
-*RXtraits*要素用の特性クラス。
+*RXtraits*<br/>
+要素の特徴 (traits) クラス。
 
 ## <a name="remarks"></a>Remarks
 
@@ -99,7 +102,7 @@ private:
 
 -1 のインデックス値は、前回の正規表現の一致の直後から始まる文字シーケンスまたは前回の正規表現の一致が存在しなかった場合の文字シーケンスの先頭から始まって現在の正規表現の一致の最初の文字の直前まで続く、または、現在の一致が存在しない場合の文字シーケンスの最後まで続く文字シーケンスを指定します。 その他のインデックス値 `idx` は、 `it.match[idx]`に保持されているキャプチャ グループの内容を指定します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<regex>
 
@@ -335,7 +338,8 @@ bool operator!=(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*と比較する反復子。
+*right*<br/>
+比較する反復子。
 
 ### <a name="remarks"></a>Remarks
 
@@ -679,7 +683,8 @@ bool operator==(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*と比較する反復子。
+*right*<br/>
+比較する反復子。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1144,13 +1149,17 @@ regex_token_iterator(BidIt first, BidIt last,
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*と一致するシーケンスの最初します。
+*first*<br/>
+一致させるシーケンスの先頭。
 
-*最後*と一致するシーケンスの末尾。
+*last*<br/>
+一致させるシーケンスの末尾。
 
-*re*正規表現一致。
+*re*<br/>
+照合する正規表現。
 
-*f*一致のフラグ。
+*f*<br/>
+一致のフラグ。
 
 ### <a name="remarks"></a>Remarks
 

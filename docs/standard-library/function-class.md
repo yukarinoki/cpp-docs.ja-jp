@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ca8621067c851b5a1e107eb16800d546562fbb6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3cfafc2c17ef804cb8d87c1189c8a7f3163d3c46
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959934"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104135"
 ---
 # <a name="function-class"></a>function クラス
 
@@ -89,9 +89,11 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*Fty*をラップする関数の型。
+*Fty*<br/>
+ラップする関数の型。
 
-*Ax*アロケーター関数。
+*Ax*<br/>
+アロケーター関数。
 
 ## <a name="remarks"></a>Remarks
 
@@ -140,7 +142,7 @@ public:
 |[function::operator()](#op_call)|呼び出し可能オブジェクトを呼び出します。|
 |[function::operator=](#op_eq)|格納されている呼び出し可能オブジェクトを置き換えます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<functional>
 
@@ -164,11 +166,14 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>パラメーター
 
-*_Func*呼び出し可能オブジェクト。
+*_Func*<br/>
+呼び出し可能オブジェクト。
 
-*_Fnref*を呼び出し可能オブジェクトを含む参照ラッパー。
+*_Fnref*<br/>
+呼び出し可能オブジェクトを含む参照ラッパー。
 
-*Ax*アロケーター オブジェクト。
+*Ax*<br/>
+アロケーター オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -199,17 +204,23 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*をコピーする関数オブジェクト。
+*right*<br/>
+コピーする関数オブジェクト。
 
-*[Fx]* 呼び出し可能オブジェクトの型。
+*[Fx]*<br/>
+呼び出し可能オブジェクトの型。
 
-*_Func*をラップする呼び出し可能オブジェクト。
+*_Func*<br/>
+ラップする呼び出し可能オブジェクト。
 
-*Alloc*アロケーターの型。
+*Alloc*<br/>
+アロケーター型。
 
-*Ax*アロケーター。
+*Ax*<br/>
+アロケーター。
 
-*_Fnref*をラップする呼び出し可能オブジェクトの参照。
+*_Fnref*<br/>
+ラップする呼び出し可能オブジェクトの参照。
 
 ### <a name="remarks"></a>Remarks
 
@@ -340,9 +351,11 @@ result_type operator()(
 
 ### <a name="parameters"></a>パラメーター
 
-*TN* n 番目の呼び出しの引数の型。
+*TN*<br/>
+N 番目の引数の型。
 
-*tN* n 番目の呼び出しの引数。
+*TN*<br/>
+N 番目の呼び出しの引数。
 
 ### <a name="remarks"></a>Remarks
 
@@ -391,13 +404,17 @@ template <class Fty>
 
 ### <a name="parameters"></a>パラメーター
 
-*npc* null ポインター定数。
+*npc*<br/>
+null ポインターの定数。
 
-*適切な*をコピーする関数オブジェクト。
+*right*<br/>
+コピーする関数オブジェクト。
 
-*fn*をラップする呼び出し可能オブジェクト。
+*fn*<br/>
+ラップする呼び出し可能オブジェクト。
 
-*fnref*をラップする呼び出し可能オブジェクトの参照。
+*fnref*<br/>
+ラップする呼び出し可能オブジェクトの参照。
 
 ### <a name="remarks"></a>Remarks
 
@@ -506,7 +523,8 @@ void swap(function& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*交換する関数オブジェクト。
+*right*<br/>
+入れ替える関数オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -567,7 +585,8 @@ template <class Fty2>
 
 ### <a name="parameters"></a>パラメーター
 
-*Fty2*をテストする対象の呼び出し可能オブジェクトの型。
+*Fty2*<br/>
+テスト対象の呼び出し可能オブジェクトの型。
 
 ### <a name="remarks"></a>Remarks
 

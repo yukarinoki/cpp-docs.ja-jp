@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f54f036c6e647c3f04bb202b68109e227061bf7a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 58d71ef5d3b2b50ec9d51668e4420c99ef9f3b17
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961923"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108835"
 ---
 # <a name="binarynegate-class"></a>binary_negate クラス
 
@@ -44,11 +44,14 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*Func*符号が反転される二項関数。
+*Func*<br/>
+否定する二項関数。
 
-*左*符号が反転される二項関数の左オペランド。
+*left*<br/>
+否定する二項関数の左オペランド。
 
-*適切な*符号が反転される二項関数の右オペランド。
+*right*<br/>
+否定する二項関数の右オペランド。
 
 ## <a name="return-value"></a>戻り値
 
@@ -123,7 +126,7 @@ Resorted vector v1 = ( 3739828298 3715465425 2621500314 2233879413 580942933 626
 *\
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<関数型>
 

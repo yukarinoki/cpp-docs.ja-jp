@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac1a6c39f25e42237265964ae1bfb0214aaa9087
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f9cddada58773102311027399a0b139b19568445
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961000"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099604"
 ---
 # <a name="isenum-class"></a>is_enum クラス
 
@@ -37,7 +37,8 @@ struct is_enum;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*照会する型。
+*Ty*<br/>
+照会する型。
 
 ## <a name="remarks"></a>Remarks
 
@@ -79,7 +80,7 @@ is_enum<color> == true
 is_enum<int> == false
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<type_traits>
 

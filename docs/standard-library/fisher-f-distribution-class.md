@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ab5c5c790813f57da483878cb6a86fcf2ab0f04
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 51d8a4656cac15da170d221c784105ff939983a5
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959652"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108799"
 ---
 # <a name="fisherfdistribution-class"></a>fisher_f_distribution クラス
 
@@ -79,9 +79,11 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*RealType*浮動小数点の結果の型の既定値**二重**します。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*RealType*<br/>
+浮動小数点の結果の型の既定値**二重**します。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
-*URNG* Uniform Random Number Generator エンジン。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*URNG*<br/>
+Uniform random number generator エンジン。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
@@ -240,7 +242,7 @@ Distribution for 10 samples:
     10: 3.4363333954
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<random>
 
@@ -257,11 +259,14 @@ explicit fisher_f_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*m* 、`m`分布パラメーター。
+*m*<br/>
+`m` 分布パラメーター。
 
-*n* 、`n`分布パラメーター。
+*n*<br/>
+`n` 分布パラメーター。
 
-*parm* 、`param_type`分布の作成に使用される構造体。
+*parm*<br/>
+分布の作成に使用される `param_type` の構造体。
 
 ### <a name="remarks"></a>Remarks
 
@@ -289,11 +294,14 @@ struct param_type {
 
 ### <a name="parameters"></a>パラメーター
 
-*m* 、`m`分布パラメーター。
+*m*<br/>
+`m` 分布パラメーター。
 
-*n* 、`n`分布パラメーター。
+*n*<br/>
+`n` 分布パラメーター。
 
-*適切な*、`param_type`これと比較するオブジェクト。
+*right*<br/>
+このオブジェクトと比較する `param_type` オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 

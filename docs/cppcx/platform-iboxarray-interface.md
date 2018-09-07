@@ -16,56 +16,64 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78815ed42833c48074abbb4b0c0fa0203f8c35a1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 66e3ff5a2daf0ddef41ea478b55ca2fc67298c01
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765695"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108449"
 ---
 # <a name="platformiboxarray-interface"></a>Platform::IBoxArray インターフェイス
-`IBoxArray` はアプリケーション バイナリ インターフェイス (ABI) を越えて渡されるか、XAML コントロールなどの `Platform::Object^` 要素のコレクションに格納される値型の配列のラッパーです。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-template <typename T>  
-interface class IBoxArray  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
- `T`  
- 各配列要素のボックス化された値の型。  
-  
-### <a name="remarks"></a>Remarks  
- `IBoxArray` c++/cli の CX 名前`Windows::Foundation::IReferenceArray`します。  
-  
-### <a name="members"></a>メンバー  
- `IBoxArray` インターフェイスは `IValueType` インターフェイスを継承します。 `IBoxArray` にも、次に示すメンバーがあります。  
-  
-|メソッド|説明|  
-|------------|-----------------|  
-|[値](#value)|以前にこの `IBoxArray` インスタンスに格納されていたことがあり、ボックス化が解除されている配列を返します。|  
+
+`IBoxArray` はアプリケーション バイナリ インターフェイス (ABI) を越えて渡されるか、XAML コントロールなどの `Platform::Object^` 要素のコレクションに格納される値型の配列のラッパーです。
+
+## <a name="syntax"></a>構文
+
+```cpp
+template <typename T>
+interface class IBoxArray
+```
+
+#### <a name="parameters"></a>パラメーター
+
+*T*<br/>
+各配列要素のボックス化された値の型。
+
+### <a name="remarks"></a>Remarks
+
+`IBoxArray` c++/cli の CX 名前`Windows::Foundation::IReferenceArray`します。
+
+### <a name="members"></a>メンバー
+
+`IBoxArray` インターフェイスは `IValueType` インターフェイスを継承します。 `IBoxArray` にも、次に示すメンバーがあります。
+
+|メソッド|説明|
+|------------|-----------------|
+|[値](#value)|以前にこの `IBoxArray` インスタンスに格納されていたことがあり、ボックス化が解除されている配列を返します。|
 
 ## <a name="value"></a> Iboxarray::value プロパティ
-このオブジェクトに元から格納されていた値を返します。  
-  
-### <a name="syntax"></a>構文  
-  
-```cpp  
-property T Value {T get();}  
-```  
-  
-### <a name="parameters"></a>パラメーター  
- `T`  
- ボックス化された値の型。  
-  
-### <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- このオブジェクトに元から格納されていた値を返します。  
-  
-### <a name="remarks"></a>Remarks  
- 例については、次を参照してください。[ボックス化](../cppcx/boxing-c-cx.md)します。  
-  
-  
-## <a name="see-also"></a>関連項目  
- [Array と WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)
+
+このオブジェクトに元から格納されていた値を返します。
+
+### <a name="syntax"></a>構文
+
+```cpp
+property T Value {T get();}
+```
+
+### <a name="parameters"></a>パラメーター
+
+*T*<br/>
+ボックス化された値の型。
+
+### <a name="property-valuereturn-value"></a>プロパティ値/戻り値
+
+このオブジェクトに元から格納されていた値を返します。
+
+### <a name="remarks"></a>Remarks
+
+例については、次を参照してください。[ボックス化](../cppcx/boxing-c-cx.md)します。
+
+## <a name="see-also"></a>関連項目
+
+[Array と WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)

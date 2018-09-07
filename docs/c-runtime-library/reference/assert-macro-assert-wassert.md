@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1d2bef607e80e2e972915bd8a8b0517b7c6e5eb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 67fef1231d4488b1714cc2f0f2f0e892737e627d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200668"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101938"
 ---
 # <a name="assert-macro-assert-wassert"></a>assert マクロ、_assert、_wassert
 
@@ -69,13 +69,17 @@ void _wassert(
 
 ### <a name="parameters"></a>パラメーター
 
-*式*0 以外の値に評価されるスカラー式 (ポインター式を含む) (**true**) または 0 (**false**)。
+*式*<br/>
+0 以外の値に評価されるスカラー式 (ポインター式を含む) (**true**) または 0 (**false**)。
 
-*メッセージ*表示するメッセージ。
+*message*<br/>
+表示するメッセージ。
 
-*ファイル名*ファイルに失敗したアサーションのソースの名前。
+*ファイル名*<br/>
+アサーションが失敗したソース ファイルの名前。
 
-*行*失敗したアサートのソース ファイル内の行番号。
+*行*<br/>
+失敗したアサーションのソース ファイルの行番号。
 
 ## <a name="remarks"></a>Remarks
 

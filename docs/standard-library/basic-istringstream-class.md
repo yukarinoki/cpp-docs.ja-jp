@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53760cd2d69067fd93a76a35b0ba29fcc82a4664
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9580068474eba77bcf50067efefb98b5949d464f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960070"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109890"
 ---
 # <a name="basicistringstream-class"></a>basic_istringstream クラス
 
@@ -44,11 +44,14 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 
 ### <a name="parameters"></a>パラメーター
 
-*Alloc*アロケーター クラス。
+*Alloc*<br/>
+アロケーター クラス。
 
-*Elem*文字列の基本要素の型。
+*Elem*<br/>
+文字列の基本要素の型。
 
-*Tr*文字特性は、文字列の基本要素に特化しました。
+*Tr*<br/>
+文字列の基本要素に特化した文字の特徴。
 
 ## <a name="remarks"></a>Remarks
 
@@ -80,7 +83,7 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 |-|-|
 |[operator=](#op_eq)|オブジェクト パラメーターの値をこの `basic_istringstream` オブジェクトに代入します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<sstream>
 
@@ -112,11 +115,14 @@ basic_istringstream(
 
 ### <a name="parameters"></a>パラメーター
 
-*モード (_m)* 列挙値のいずれかの[ios_base::openmode](../standard-library/ios-base-class.md#openmode)します。
+*モード (_m)*<br/>
+[ios_base::openmode](../standard-library/ios-base-class.md#openmode) の列挙値のうちの 1 つ。
 
-*str*型のオブジェクト`basic_string`します。
+*str*<br/>
+`basic_string` 型のオブジェクト。
 
-*適切な*の右辺値参照を`basic_istringstream`オブジェクト。
+*right*<br/>
+`basic_istringstream` オブジェクトの右辺値参照。
 
 ### <a name="remarks"></a>Remarks
 
@@ -136,7 +142,8 @@ basic_istringstream& operator=(basic_istringstream&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*への右辺値参照を`basic_istringstream`オブジェクト。
+*right*<br/>
+`basic_istringstream` オブジェクトへの右辺値参照。
 
 ### <a name="remarks"></a>Remarks
 
@@ -172,7 +179,8 @@ void str(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Newstr*新しい文字列。
+*_Newstr*<br/>
+新しい文字列。
 
 ### <a name="return-value"></a>戻り値
 

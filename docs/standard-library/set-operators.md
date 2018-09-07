@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (set)
 - std::operator&lt;= (set)
 - std::operator== (set)
-ms.openlocfilehash: adc817c92bfaa79422dacafd17e4b1706e5a1af8
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 43ee5b62bcda9a38946bfd61c3ed3efbc8d89523
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965644"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110072"
 ---
 # <a name="ltsetgt-operators"></a>&lt;set&gt; operators
 
@@ -46,9 +46,11 @@ bool operator!=(const set <Key, Traits, Allocator>& left, const set <Key, Traits
 
 ### <a name="parameters"></a>パラメーター
 
-*左*型のオブジェクト`set`します。
+*left*<br/>
+`set` 型のオブジェクト。
 
-*適切な*型のオブジェクト`set`します。
+*right*<br/>
+`set` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -105,9 +107,11 @@ bool operator<(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="parameters"></a>パラメーター
 
-*左*型のオブジェクト`set`します。
+*left*<br/>
+`set` 型のオブジェクト。
 
-*適切な*型のオブジェクト`set`します。
+*right*<br/>
+`set` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -164,9 +168,11 @@ bool operator!<=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>パラメーター
 
-*左*型のオブジェクト`set`します。
+*left*<br/>
+`set` 型のオブジェクト。
 
-*適切な*型のオブジェクト`set`します。
+*right*<br/>
+`set` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -230,9 +236,11 @@ bool operator!==(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>パラメーター
 
-*左*型のオブジェクト`set`します。
+*left*<br/>
+`set` 型のオブジェクト。
 
-*適切な*型のオブジェクト`set`します。
+*right*<br/>
+`set` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -289,9 +297,11 @@ bool operator>(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="parameters"></a>パラメーター
 
-*左*型のオブジェクト`set`します。
+*left*<br/>
+`set` 型のオブジェクト。
 
-*適切な*型のオブジェクト`set`します。
+*right*<br/>
+`set` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -348,9 +358,11 @@ bool operator!>=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>パラメーター
 
-*左*型のオブジェクト`set`します。
+*left*<br/>
+`set` 型のオブジェクト。
 
-*適切な*型のオブジェクト`set`します。
+*right*<br/>
+`set` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -414,9 +426,11 @@ bool operator!=(const multiset <Key, Traits, Allocator>& left, const multiset <K
 
 ### <a name="parameters"></a>パラメーター
 
-*左*型のオブジェクト`multiset`します。
+*left*<br/>
+`multiset` 型のオブジェクト。
 
-*適切な*型のオブジェクト`multiset`します。
+*right*<br/>
+`multiset` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -473,9 +487,11 @@ bool operator<(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="parameters"></a>パラメーター
 
-*左*型のオブジェクト`multiset`します。
+*left*<br/>
+`multiset` 型のオブジェクト。
 
-*適切な*型のオブジェクト`multiset`します。
+*right*<br/>
+`multiset` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -536,9 +552,11 @@ bool operator!<=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>パラメーター
 
-*左*型のオブジェクト`multiset`します。
+*left*<br/>
+`multiset` 型のオブジェクト。
 
-*適切な*型のオブジェクト`multiset`します。
+*right*<br/>
+`multiset` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -608,9 +626,11 @@ bool operator!==(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>パラメーター
 
-*左*型のオブジェクト`multiset`します。
+*left*<br/>
+`multiset` 型のオブジェクト。
 
-*適切な*型のオブジェクト`multiset`します。
+*right*<br/>
+`multiset` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -667,9 +687,11 @@ bool operator>(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="parameters"></a>パラメーター
 
-*左*型のオブジェクト`multiset`します。
+*left*<br/>
+`multiset` 型のオブジェクト。
 
-*適切な*型のオブジェクト`multiset`します。
+*right*<br/>
+`multiset` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -730,9 +752,11 @@ bool operator!>=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>パラメーター
 
-*左*型のオブジェクト`multiset`します。
+*left*<br/>
+`multiset` 型のオブジェクト。
 
-*適切な*型のオブジェクト`multiset`します。
+*right*<br/>
+`multiset` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 

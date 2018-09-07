@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b9bc37213ed2e5690f85fca738d44e6eecfaa8c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: dd9d4dfa7c10d19112cd8154ddcf3b7a70bf3034
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962050"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103893"
 ---
 # <a name="ltfunctionalgt-operators"></a>&lt;functional&gt; 演算子
 
@@ -44,11 +44,14 @@ bool operator==(null_ptr_type npc, const function<Fty>& f);
 
 ### <a name="parameters"></a>パラメーター
 
-*Fty*をラップする関数の型。
+*Fty*<br/>
+ラップする関数の型。
 
-*f*関数オブジェクト
+*f*<br/>
+関数オブジェクト
 
-*npc* null ポインター。
+*npc*<br/>
+null ポインター
 
 ### <a name="remarks"></a>Remarks
 
@@ -101,11 +104,14 @@ bool operator!=(null_ptr_type npc, const function<Fty>& f);
 
 ### <a name="parameters"></a>パラメーター
 
-*Fty*をラップする関数の型。
+*Fty*<br/>
+ラップする関数の型。
 
-*f*関数オブジェクト
+*f*<br/>
+関数オブジェクト
 
-*npc* null ポインター。
+*npc*<br/>
+null ポインター
 
 ### <a name="remarks"></a>Remarks
 

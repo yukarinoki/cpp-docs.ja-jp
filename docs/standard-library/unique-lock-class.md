@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b7cd9a949fef63e742d75bc01b199871d4950cc
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c448c551e7b800301e374fed9a8f6acb7aa7ab1b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956477"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110137"
 ---
 # <a name="uniquelock-class"></a>unique_lock クラス
 
@@ -76,9 +76,9 @@ class unique_lock;
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
-`unique_lock`
+*unique_lock*<br/>
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<mutex >
 
@@ -131,7 +131,7 @@ unique_lock& operator=(unique_lock&& Other) noexcept;
 ### <a name="parameters"></a>パラメーター
 
 *その他*  
- `unique_lock` オブジェクト。
+`unique_lock` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -182,7 +182,7 @@ void swap(unique_lock& Other) noexcept;
 ### <a name="parameters"></a>パラメーター
 
 *その他*  
- `unique_lock` オブジェクト。
+`unique_lock` オブジェクト。
 
 ## <a name="try_lock"></a>  try_lock
 
@@ -215,7 +215,7 @@ bool try_lock_for(
 ### <a name="parameters"></a>パラメーター
 
 *Rel_time*  
- メソッドが `mutex` の所有権の取得を試行する時間について、その最大値を指定する [chrono::duration](../standard-library/duration-class.md) オブジェクト。
+メソッドが `mutex` の所有権の取得を試行する時間について、その最大値を指定する [chrono::duration](../standard-library/duration-class.md) オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -241,7 +241,7 @@ bool try_lock_until(const xtime* Abs_time);
 ### <a name="parameters"></a>パラメーター
 
 *Abs_time*  
- メソッドが `mutex` の所有権の取得を止めるしきい値を指定する時点。
+メソッドが `mutex` の所有権の取得を止めるしきい値を指定する時点。
 
 ### <a name="return-value"></a>戻り値
 
@@ -284,16 +284,16 @@ unique_lock(mutex_type& Mtx,
 ### <a name="parameters"></a>パラメーター
 
 *続け*  
- mutex 型オブジェクト。
+mutex 型オブジェクト。
 
 *Rel_time*  
- メソッドが `mutex` の所有権の取得を試行する時間について、その最大値を指定する [chrono::duration](../standard-library/duration-class.md) オブジェクト。
+メソッドが `mutex` の所有権の取得を試行する時間について、その最大値を指定する [chrono::duration](../standard-library/duration-class.md) オブジェクト。
 
 *Abs_time*  
- メソッドが `mutex` の所有権の取得を止めるしきい値を指定する時点。
+メソッドが `mutex` の所有権の取得を止めるしきい値を指定する時点。
 
 *その他*  
- `unique_lock` オブジェクト。
+`unique_lock` オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 

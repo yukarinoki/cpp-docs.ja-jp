@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d20a887c5fa056ef697b087fdaf91b94702d0c0f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: cc8b144ab8cf619469723f6fd19a4ffdac085e6d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953235"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105849"
 ---
 # <a name="bernoullidistribution-class"></a>bernoulli_distribution クラス
 
@@ -76,7 +76,8 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*URNG* Uniform Random Number Generator エンジン。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*URNG*<br/>
+Uniform random number generator エンジン。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
@@ -158,10 +159,10 @@ Enter an integer value for a sample count: 100
 p == 0.45
 Histogram for 100 samples:
 false :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
- true :::::::::::::::::::::::::::::::::::::::::
+true :::::::::::::::::::::::::::::::::::::::::
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<random>
 
@@ -178,9 +179,11 @@ explicit bernoulli_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*p* 、格納されている`p`分布パラメーター。
+*p*<br/>
+格納されている `p` 分布パラメーター。
 
-*parm* 、`param_type`分布の作成に使用される構造体。
+*parm*<br/>
+分布の作成に使用される `param_type` の構造体。
 
 ### <a name="remarks"></a>Remarks
 
@@ -200,7 +203,8 @@ explicit bernoulli_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*p* 、格納されている`p`分布パラメーター。
+*p*<br/>
+格納されている `p` 分布パラメーター。
 
 ### <a name="remarks"></a>Remarks
 

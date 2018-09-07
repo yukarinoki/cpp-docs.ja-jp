@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b7b604fd58c3f320b62c022e6b5d1749c1f3a87
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f6b4faf2ac5f04a2dcc9e1e9112016038fa2fcec
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954891"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106452"
 ---
 # <a name="messages-class"></a>messages クラス
 
@@ -54,7 +54,8 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>パラメーター
 
-*CharType*ロケールの文字をエンコードする、プログラム内で使用される型。
+*CharType*<br/>
+ロケールの文字をエンコードするためにプログラム内で使用される型。
 
 ## <a name="remarks"></a>Remarks
 
@@ -86,7 +87,7 @@ class messages : public messages_base;
 |[get](#get)|メッセージ カタログを取得します。|
 |[open](#open)|メッセージ カタログを開きます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<locale>
 
@@ -114,7 +115,8 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*_Catval*終了するカタログ。
+*_Catval*<br/>
+終了するカタログ。
 
 ### <a name="remarks"></a>Remarks
 
@@ -130,7 +132,8 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*_Catval*終了するカタログ。
+*_Catval*<br/>
+終了するカタログ。
 
 ### <a name="remarks"></a>Remarks
 
@@ -156,13 +159,17 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Catval* id 値を検索するメッセージ カタログを指定します。
+*_Catval*<br/>
+検索されるメッセージ カタログを示す識別値。
 
-*設定 (_s)* 最初が識別されるメッセージ カタログ内でメッセージを検索するために使用します。
+*設定 (_s)*<br/>
+メッセージ カタログ内のメッセージの検索に使用される最初の識別値。
 
-*メッセージ (_m)* 2 つ目が識別されるメッセージ カタログ内でメッセージを検索するために使用します。
+*メッセージ (_m)*<br/>
+メッセージ カタログ内のメッセージの検索に使用される 2 番目の識別値。
 
-*_Dfault*失敗時に返される文字列。
+*_Dfault*<br/>
+失敗した場合に返される文字列。
 
 ### <a name="return-value"></a>戻り値
 
@@ -188,9 +195,11 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Catname*検索するカタログの名前。
+*_Catname*<br/>
+検索されるカタログの名前。
 
-*_Loc*カタログで検索されるロケール。
+*_Loc*<br/>
+カタログ内で検索されるロケール。
 
 ### <a name="return-value"></a>戻り値
 
@@ -220,13 +229,17 @@ string_type get(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Catval* id 値を検索するメッセージ カタログを指定します。
+*_Catval*<br/>
+検索されるメッセージ カタログを示す識別値。
 
-*設定 (_s)* 最初が識別されるメッセージ カタログ内でメッセージを検索するために使用します。
+*設定 (_s)*<br/>
+メッセージ カタログ内のメッセージの検索に使用される最初の識別値。
 
-*メッセージ (_m)* 2 つ目が識別されるメッセージ カタログ内でメッセージを検索するために使用します。
+*メッセージ (_m)*<br/>
+メッセージ カタログ内のメッセージの検索に使用される 2 番目の識別値。
 
-*_Dfault*失敗時に返される文字列。
+*_Dfault*<br/>
+失敗した場合に返される文字列。
 
 ### <a name="return-value"></a>戻り値
 
@@ -251,9 +264,11 @@ protected: messages(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Refs*オブジェクトのメモリ管理の種類を指定するために使用する整数値。
+*_Refs*<br/>
+オブジェクトのメモリ管理の種類を指定するために使用する整数値。
 
-*_Locname*ロケールの名前。
+*_Locname*<br/>
+ロケールの名前。
 
 ### <a name="remarks"></a>Remarks
 
@@ -281,9 +296,11 @@ catalog open(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Catname*検索するカタログの名前。
+*_Catname*<br/>
+検索されるカタログの名前。
 
-*_Loc*カタログで検索されるロケール。
+*_Loc*<br/>
+カタログ内で検索されるロケール。
 
 ### <a name="return-value"></a>戻り値
 

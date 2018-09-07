@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 413223636efb735303ec600b09803472370ff306
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2cea2bfd33e1f777f2c9dfcbb59897ebd72c7633
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965592"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107137"
 ---
 # <a name="isobject-class"></a>is_object クラス
 
@@ -37,7 +37,8 @@ struct is_object;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*照会する型。
+*Ty*<br/>
+照会する型。
 
 ## <a name="remarks"></a>Remarks
 
@@ -87,7 +88,7 @@ is_object<float()> == false
 is_object<void> == false
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<type_traits>
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f73559503ad427c9b7eb513d4164d3348c652948
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 789839482e623e94172bbd55342d257c2b031614
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954748"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109370"
 ---
 # <a name="istriviallyconstructible-class"></a>is_trivially_constructible クラス
 
@@ -37,15 +37,17 @@ struct is_trivially_constructible;
 
 ### <a name="parameters"></a>パラメーター
 
-*T*照会する型。
+*T*<br/>
+照会する型。
 
-*Args*のコンス トラクターで一致させる引数型*T*します。
+*Args*<br/>
+引数の型のコンス トラクターで一致するように*T*します。
 
 ## <a name="remarks"></a>Remarks
 
 場合、型述語のインスタンスは true を保持型*T*の引数の型を使用して自明に構築できるは*Args*、それ以外の場合は false を保持します。 型*T*が自明に構築できる場合は、変数定義`T t(std::declval<Args>()...);`整形式では、重要な操作を呼び出していない呼ばれます。 両方*T*とすべての種類で*Args*完全な型は、必要があります**void**、または不明なバインドの配列。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<type_traits>
 

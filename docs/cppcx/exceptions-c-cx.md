@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c82f54a365208c247e735e467157dfd29f9f271a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7e7514fdfc07fcbb4a1fff42d80fd138ab7d6043
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613410"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100249"
 ---
 # <a name="exceptions-ccx"></a>例外 (C++/CX)
 
@@ -34,7 +34,7 @@ C + + CX は、一般的な HRESULT エラーを表す標準の例外のセッ�
 
 次の表は、標準の例外の一覧を示しています。
 
-|name|基になる HRESULT|説明|
+|名前|基になる HRESULT|説明|
 |----------|------------------------|-----------------|
 |COMException|*ユーザー定義の hresult*|COM メソッドの呼び出しから認識されない HRESULT が返されるとスローされます。|
 |AccessDeniedException|E\_ACCESSDENIED|リソースや機能へのアクセスが拒否されるとスローされます。|
@@ -91,7 +91,7 @@ void App::OnUnhandledException(Platform::Object^ sender, Windows::ApplicationMod
 
     if (!err->Handled) //Propagate has not been called on it yet.
 {
-     try
+    try
     {
         err->Propagate();
     }
@@ -101,7 +101,6 @@ void App::OnUnhandledException(Platform::Object^ sender, Windows::ApplicationMod
         // TODO: Log error and either take action to recover
         // or else re-throw exception to continue fail-fast
     }
-
 }
 ```
 
@@ -111,5 +110,5 @@ C + + CX は使用しない、`finally`句。
 
 ## <a name="see-also"></a>関連項目
 
-[Visual C 言語リファレンス](visual-c-language-reference-c-cx.md)  
-[名前空間参照](namespaces-reference-c-cx.md)  
+[Visual C 言語リファレンス](visual-c-language-reference-c-cx.md)<br/>
+[名前空間参照](namespaces-reference-c-cx.md)

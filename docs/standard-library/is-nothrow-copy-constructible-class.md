@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc4f839ed955048b96f6327c63cd2cc82fef8aca
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b007b14bf6dbeb345c06f86825a794e2f1f15c90
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953774"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104265"
 ---
 # <a name="isnothrowcopyconstructible-class"></a>is_nothrow_copy_constructible クラス
 
@@ -36,13 +36,14 @@ struct is_nothrow_copy_constructible;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*照会する型。
+*Ty*<br/>
+照会する型。
 
 ## <a name="remarks"></a>Remarks
 
 場合、型述語のインスタンスは true を保持型*Ty* nothrow コピー コンス トラクターを持つ、それ以外の場合は false を保持します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<type_traits>
 

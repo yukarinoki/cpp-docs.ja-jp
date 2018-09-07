@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2fc6fe93b3c7b798a53f6989d95e83c3be4b022
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2cb6364a9f1cb74f9a002e37c278f3686b9916ca
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959821"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110124"
 ---
 # <a name="numget-class"></a>num_get クラス
 
@@ -44,9 +44,11 @@ class num_get : public locale::facet;
 
 ### <a name="parameters"></a>パラメーター
 
-*CharType*ロケールの文字をエンコードする、プログラム内で使用される型。
+*CharType*<br/>
+ロケールの文字をエンコードするためにプログラム内で使用される型。
 
-*InputIterator*数値関数を取得する反復子の型が入力を読み取る。
+*InputIterator*<br/>
+数値の get 関数が入力を読み取る反復子の型。
 
 ## <a name="remarks"></a>Remarks
 
@@ -72,7 +74,7 @@ class num_get : public locale::facet;
 |[do_get](#do_get)|文字シーケンスから数値またはブール値を抽出するために呼び出される仮想関数。|
 |[get](#get)|文字シーケンスから数値のまたはブール値を抽出します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<locale>
 
@@ -175,15 +177,20 @@ virtual iter_type do_get(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*元となる数値を読み取る文字の範囲の先頭。
+*first*<br/>
+数値を読み取る文字の範囲の開始位置。
 
-*最後*元となる数値を読み取る文字の範囲の末尾。
+*last*<br/>
+数値を読み取る文字の範囲の終了位置。
 
-*されている _Iosbase* 、 [ios_base](../standard-library/ios-base-class.md)フラグは、変換で使用します。
+*されている _Iosbase*<br/>
+変換で使用されるフラグが含まれる [Ios_base](../standard-library/ios-base-class.md)。
 
-*_State*どの failbit の状態 (を参照してください[ios_base::iostate](../standard-library/ios-base-class.md#iostate)) 障害発生時に追加されます。
+*_State*<br/>
+失敗した場合に failbit が追加される状態 (「[ios_base::iostate](../standard-library/ios-base-class.md#iostate)」を参照)。
 
-*val*読み取られた値。
+*val*<br/>
+読み取られた値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -417,15 +424,20 @@ iter_type get(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*元となる数値を読み取る文字の範囲の先頭。
+*first*<br/>
+数値を読み取る文字の範囲の開始位置。
 
-*最後*元となる数値を読み取る文字の範囲の末尾。
+*last*<br/>
+数値を読み取る文字の範囲の終了位置。
 
-*されている _Iosbase* 、 [ios_base](../standard-library/ios-base-class.md)フラグは、変換で使用します。
+*されている _Iosbase*<br/>
+変換で使用されるフラグが含まれる [Ios_base](../standard-library/ios-base-class.md)。
 
-*_State*どの failbit の状態 (を参照してください[ios_base::iostate](../standard-library/ios-base-class.md#iostate)) 障害発生時に追加されます。
+*_State*<br/>
+失敗した場合に failbit が追加される状態 (「[ios_base::iostate](../standard-library/ios-base-class.md#iostate)」を参照)。
 
-*val*読み取られた値。
+*val*<br/>
+読み取られた値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -571,7 +583,8 @@ explicit num_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Refs*オブジェクトのメモリ管理の種類を指定するために使用する整数値。
+*_Refs*<br/>
+オブジェクトのメモリ管理の種類を指定するために使用する整数値。
 
 ### <a name="remarks"></a>Remarks
 

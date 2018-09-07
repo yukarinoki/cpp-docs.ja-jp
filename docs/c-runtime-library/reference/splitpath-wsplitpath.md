@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69123bfd07d992d96c504e538ded157c49991dab
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 46d29b55e215ce426bbfd465b3d54e1d267a1bb1
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221609"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103919"
 ---
 # <a name="splitpath-wsplitpath"></a>_splitpath、_wsplitpath
 
@@ -75,15 +75,20 @@ void _wsplitpath(
 
 ### <a name="parameters"></a>パラメーター
 
-*パス*の完全なパス。
+*path*<br/>
+完全なパス。
 
-*ドライブ*ドライブ文字、コロン (**:**)。 渡すことができます**NULL**ドライブ文字を必要としない場合は、このパラメーターにします。
+*ドライブ*<br/>
+ドライブ文字、コロン (**:**)。 渡すことができます**NULL**ドライブ文字を必要としない場合は、このパラメーターにします。
 
-*dir*ディレクトリのパスを使用して、末尾のスラッシュを含めています。 スラッシュ ( **/** )、円記号 ( **\\** )、または両方を使用できます。 渡すことができます**NULL**ディレクトリ パスを必要としない場合は、このパラメーターにします。
+*dir*<br/>
+末尾のスラッシュを含むディレクトリ パス。 スラッシュ ( **/** )、円記号 ( **\\** )、または両方を使用できます。 渡すことができます**NULL**ディレクトリ パスを必要としない場合は、このパラメーターにします。
 
-*fname*基本ファイル名 (拡張子なし)。 渡すことができます**NULL**ファイル名を必要としない場合は、このパラメーターにします。
+*fname*<br/>
+基本ファイル名 (拡張子なし)。 渡すことができます**NULL**ファイル名を必要としない場合は、このパラメーターにします。
 
-*ext*先頭のピリオドを含むファイル名の拡張子 (**.**)。 渡すことができます**NULL**ファイル名拡張子が必要ない場合は、このパラメーターにします。
+*ext*<br/>
+先頭のピリオドを含むファイル名の拡張子 (**.**)。 渡すことができます**NULL**ファイル名拡張子が必要ない場合は、このパラメーターにします。
 
 ## <a name="remarks"></a>Remarks
 
@@ -103,7 +108,7 @@ void _wsplitpath(
 
 マニフェスト定数の値を次の表に示します。
 
-|name|[値]|
+|名前|[値]|
 |----------|-----------|
 |**_MAX_DRIVE**|3|
 |**_MAX_DIR**|256|

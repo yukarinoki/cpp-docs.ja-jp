@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73a051eadaf06950e606f475b2bb418425e1b19f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: aabd4a68e4ec9d9da96eff14dcf69c5bd667cc06
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958875"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107506"
 ---
 # <a name="alignedstorage-class"></a>aligned_storage クラス
 
@@ -40,9 +40,11 @@ using aligned_storage_t = typename aligned_storage<Len, Align>::type;
 
 ### <a name="parameters"></a>パラメーター
 
-*Len*オブジェクトのサイズ。
+*len*<br/>
+オブジェクトのサイズ。
 
-*Align*オブジェクトの配置。
+*配置*<br/>
+オブジェクトのアライメント。
 
 ## <a name="remarks"></a>Remarks
 
@@ -73,7 +75,7 @@ alignment_of<int> == 4
 aligned to double == 8
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<type_traits>
 

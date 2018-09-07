@@ -13,34 +13,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 915b2e0c15d3afb3f040b59c22b2de40af2aabb5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6f849b18e761fed4daf2c4a336a984242008bfd7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761769"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105186"
 ---
 # <a name="defaulttypenamegettype-method"></a>default::(type_name)::GetType メソッド
-現在の型を表す Platform::Type^ を返します。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-  
-Platform::Type^ GetType()  
-```  
-  
-### <a name="return-value"></a>戻り値  
- 現在のオブジェクトを表す [Platform::Type](../cppcx/platform-type-class.md)^ オブジェクト。  
-  
-### <a name="requirements"></a>要件  
- **クライアントがサポートされている最小:** Windows 8  
-  
- **サポートされているサーバーの最小値:** Windows Server 2012  
-  
- **名前空間:** 既定  
-  
- **ヘッダー:** vccorlib.h  
-  
-## <a name="see-also"></a>関連項目  
- [default 名前空間](../cppcx/default-namespace.md)
+
+現在の型を表す Platform::Type^ を返します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+Platform::Type^ GetType();
+```
+
+### <a name="return-value"></a>戻り値
+
+現在のオブジェクトを表す [Platform::Type](../cppcx/platform-type-class.md)^ オブジェクト。
+
+### <a name="requirements"></a>要件
+
+**クライアントがサポートされている最小:** Windows 8
+
+**サポートされているサーバーの最小値:** Windows Server 2012
+
+**名前空間:** 既定
+
+**ヘッダー:** vccorlib.h
+
+## <a name="see-also"></a>関連項目
+
+[default 名前空間](../cppcx/default-namespace.md)

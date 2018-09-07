@@ -148,12 +148,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e02be0369821cc6f8aa37210c9a3b7f9479be84
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 28fbbce7c63e60bfdeb75c32b3c919b4f38b2b2a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954722"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107465"
 ---
 # <a name="unorderedmap-class"></a>unordered_map クラス
 
@@ -247,7 +247,7 @@ class unordered_map;
 
 被制御シーケンスに対するストレージの割り当ておよび解放は、格納されている [unordered_map::allocator_type](#allocator_type) 型のアロケーター オブジェクトを介して行われます。 このアロケーター オブジェクトは、`allocator` テンプレート クラスのオブジェクトと同じ外部インターフェイスを持っている必要があります。 コンテナー オブジェクトを代入しても、格納されているアロケーター オブジェクトはコピーされない点に注意してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<unordered_map>
 
@@ -417,7 +417,8 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*keyval*をマップするキー値。
+*keyval*<br/>
+マップするキー値。
 
 ### <a name="remarks"></a>Remarks
 
@@ -457,7 +458,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket('a') == 7
 bucket_size(7) == 1
 ```
@@ -561,7 +562,7 @@ size_type bucket_size(size_type nbucket) const;
 ### <a name="parameters"></a>パラメーター
 
 *nbucket*  
- バケット番号。
+バケット番号。
 
 ### <a name="remarks"></a>Remarks
 
@@ -601,7 +602,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket('a') == 7
 bucket_size(7) == 1
 ```
@@ -718,7 +719,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 size == 0
 empty() == true
 
@@ -925,7 +926,7 @@ size_type count(const Key& keyval) const;
 ### <a name="parameters"></a>パラメーター
 
 *keyval*  
- 検索対象のキー値。
+検索対象のキー値。
 
 ### <a name="remarks"></a>Remarks
 
@@ -964,7 +965,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 count('A') == 0
 count('b') == 1
 count('C') == 0
@@ -1024,7 +1025,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 end()-begin() == 3
 begin()-end() == -3
 ```
@@ -1148,7 +1149,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 size == 0
 empty() == true
 
@@ -1190,7 +1191,7 @@ std::pair<const_iterator, const_iterator>  equal_range(const Key& keyval) const;
 ### <a name="parameters"></a>パラメーター
 
 *keyval*  
- 検索対象のキー値。
+検索対象のキー値。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1242,7 +1243,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 equal_range('x'):
 equal_range('b'): [b, 2]
 ```
@@ -1260,16 +1261,16 @@ size_type erase(const key_type& Key);
 ### <a name="parameters"></a>パラメーター
 
 *Where*  
- 削除される要素の位置。
+削除される要素の位置。
 
 *まずは*  
- 削除される最初の要素の位置。
+削除される最初の要素の位置。
 
 *前の*  
- 削除される最後の要素の次の位置。
+削除される最後の要素の次の位置。
 
 *Key*  
- 削除される要素のキー値。
+削除される要素のキー値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1292,7 +1293,7 @@ const_iterator find(const Key& keyval) const;
 ### <a name="parameters"></a>パラメーター
 
 *keyval*  
- 検索対象のキー値。
+検索対象のキー値。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1337,7 +1338,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 find('A') == false
 find('b') == true: [b, 2]
 ```
@@ -1784,7 +1785,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -1977,7 +1978,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -2009,7 +2010,7 @@ void max_load_factor(float factor);
 ### <a name="parameters"></a>パラメーター
 
 *factor*  
- 新しい最大テーブル占有率。
+新しい最大テーブル占有率。
 
 ### <a name="remarks"></a>Remarks
 
@@ -2073,7 +2074,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -2141,7 +2142,7 @@ Ty& operator[](Key&& keyval);
 
 |パラメーター|説明|
 |-|-|
-|*Keyval*|検索または挿入するキー値。|
+|*keyval*|検索または挿入するキー値。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -2203,10 +2204,10 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 c1['A'] == 0
 c1['a'] == 1
- [c, 3] [b, 2] [A, 0] [a, 1]
+[c, 3] [b, 2] [A, 0] [a, 1]
 c2[move(str)] == 0
 c2["abc"] == 1
 ```
@@ -2381,7 +2382,7 @@ void rehash(size_type nbuckets);
 ### <a name="parameters"></a>パラメーター
 
 *nbuckets*  
- 要求されたバケット数。
+要求されたバケット数。
 
 ### <a name="remarks"></a>Remarks
 
@@ -2435,7 +2436,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_load_factor() == 4
@@ -2508,7 +2509,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 size == 0
 empty() == true
 
@@ -2565,7 +2566,7 @@ void swap(unordered_map& right);
 ### <a name="parameters"></a>パラメーター
 
 *right*  
- 交換先のコンテナー。
+交換先のコンテナー。
 
 ### <a name="remarks"></a>Remarks
 
@@ -2664,7 +2665,7 @@ unordered_map(
 
 template <class InIt>
 unordered_map(
- InputIterator First,
+InputIterator First,
     InputIterator Last,
     size_type Bucket_count = N0,
     const Hash& Hash = Hash(),
@@ -2679,7 +2680,7 @@ unordered_map(
 |*Al*|格納するアロケーター オブジェクト。|
 |*コンポジション*|格納する比較関数オブジェクト。|
 |*ハッシュ*|格納するハッシュ関数オブジェクト。|
-|*bucket_count*|最小バケット数。|
+|*Bucket_count*|最小バケット数。|
 |*右*|コピーするコンテナー。|
 |*まずは*||
 |*前の*||
@@ -2820,18 +2821,18 @@ int main()
 ```
 
 ```Output
- [a, 1] [b, 2] [c, 3]
- [d, 4] [e, 5] [f, 6]
- [a, 1] [b, 2] [c, 3]
- [a, 1] [b, 2] [c, 3]
+[a, 1] [b, 2] [c, 3]
+[d, 4] [e, 5] [f, 6]
+[a, 1] [b, 2] [c, 3]
+[a, 1] [b, 2] [c, 3]
 
 [5, g] [6, h] [7, i] [8, j]
- [a, 1] [b, 2] [c, 3]
+[a, 1] [b, 2] [c, 3]
 
 [a, 1] [b, 2] [c, 3]
- [a, 1] [b, 2] [c, 3]
- [a, 1] [b, 2] [c, 3]
- ```
+[a, 1] [b, 2] [c, 3]
+[a, 1] [b, 2] [c, 3]
+```
 
 ## <a name="value_type"></a>  unordered_map::value_type
 

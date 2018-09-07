@@ -68,12 +68,12 @@ helpviewer_keywords:
 - std::kill_dependency [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b70f4df63b5a885403b91c1470c3066c33f5f123
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: c00f66eef11d2d26bbcaa07110e9d9e738fc7c2f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42543153"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110163"
 ---
 # <a name="ltatomicgt-functions"></a>&lt;atomic&gt; 関数
 
@@ -110,11 +110,14 @@ inline bool atomic_compare_exchange_strong(
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*へのポインター、*アトミック*型の値を格納するオブジェクト`Ty`します。
+*Atom*<br/>
+ポインター、*アトミック*型の値を格納するオブジェクト`Ty`します。
 
-*Exp*型の値へのポインター`Ty`します。
+*Exp*<br/>
+`Ty` 型の値へのポインター。
 
-*値*型の値`Ty`します。
+*値*<br/>
+`Ty` 型の値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -148,15 +151,20 @@ inline bool atomic_compare_exchange_strong_explicit(
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*へのポインター、`atomic`型の値を格納するオブジェクト`Ty`します。
+*Atom*<br/>
+`atomic` 型の値が格納された `Ty` オブジェクトへのポインター。
 
-*Exp*型の値へのポインター`Ty`します。
+*Exp*<br/>
+`Ty` 型の値へのポインター。
 
-*値*型の値`Ty`します。
+*値*<br/>
+`Ty` 型の値。
 
-*Order1*最初[memory_order](../standard-library/atomic-enums.md#memory_order_enum)引数。
+*Order1*<br/>
+最初の [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 引数。
 
-*Order2* 2 番目`memory_order`引数。 値*Order2*することはできません`memory_order_release`または`memory_order_acq_rel`の値よりも強力にすることはできません*Order1*します。
+*Order2*<br/>
+2 番目の `memory_order` 引数。 値*Order2*することはできません`memory_order_release`または`memory_order_acq_rel`の値よりも強力にすることはできません*Order1*します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -186,11 +194,14 @@ inline bool atomic_compare_exchange_strong(
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*へのポインター、`atomic`型の値を格納するオブジェクト`Ty`します。
+*Atom*<br/>
+`atomic` 型の値が格納された `Ty` オブジェクトへのポインター。
 
-*Exp*型の値へのポインター`Ty`します。
+*Exp*<br/>
+`Ty` 型の値へのポインター。
 
-*値*型の値`Ty`します。
+*値*<br/>
+`Ty` 型の値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -224,15 +235,20 @@ inline bool atomic_compare_exchange_weak_explicit(
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*へのポインター、`atomic`型の値を格納するオブジェクト`Ty`します。
+*Atom*<br/>
+`atomic` 型の値が格納された `Ty` オブジェクトへのポインター。
 
-*Exp*型の値へのポインター`Ty`します。
+*Exp*<br/>
+`Ty` 型の値へのポインター。
 
-*値*型の値`Ty`します。
+*値*<br/>
+`Ty` 型の値。
 
-*Order1*最初[memory_order](../standard-library/atomic-enums.md#memory_order_enum)引数。
+*Order1*<br/>
+最初の [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 引数。
 
-*Order2* 2 番目`memory_order`引数。 値*Order2*することはできません`memory_order_release`または`memory_order_acq_rel`の値よりも強くすることも*Order1*します。
+*Order2*<br/>
+2 番目の `memory_order` 引数。 値*Order2*することはできません`memory_order_release`または`memory_order_acq_rel`の値よりも強くすることも*Order1*します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -256,9 +272,11 @@ inline T atomic_exchange(atomic<Ty>* Atom, Ty Value) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*へのポインター、`atomic`型の値を格納するオブジェクト`Ty`します。
+*Atom*<br/>
+`atomic` 型の値が格納された `Ty` オブジェクトへのポインター。
 
-*値*型の値`Ty`します。
+*値*<br/>
+`Ty` 型の値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -288,11 +306,14 @@ inline Ty atomic_exchange_explicit(
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*へのポインター、`atomic`型の値を格納するオブジェクト`Ty`します。
+*Atom*<br/>
+`atomic` 型の値が格納された `Ty` オブジェクトへのポインター。
 
-*値*型の値`Ty`します。
+*値*<br/>
+`Ty` 型の値。
 
-*順序*A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)します。
+*順序*<br/>
+[memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ### <a name="return-value"></a>戻り値
 
@@ -315,9 +336,11 @@ T* atomic_fetch_add(atomic<T*>* Atom, ptrdiff_t Value) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*へのポインター、`atomic`型へのポインターを格納するオブジェクト`T`します。
+*Atom*<br/>
+`atomic` 型のポインターが格納された `T` オブジェクトへのポインター。
 
-*値*型の値`ptrdiff_t`します。
+*値*<br/>
+`ptrdiff_t` 型の値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -357,9 +380,11 @@ T* atomic_fetch_add_explicit(
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*へのポインター、`atomic`型へのポインターを格納するオブジェクト`T`します。
+*Atom*<br/>
+`atomic` 型のポインターが格納された `T` オブジェクトへのポインター。
 
-*値*型の値`ptrdiff_t`します。
+*値*<br/>
+`ptrdiff_t` 型の値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -398,9 +423,11 @@ inline T atomic_fetch_and(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*へのポインター、`atomic`型の値を格納するオブジェクト`T`します。
+*Atom*<br/>
+`atomic` 型の値が格納された `T` オブジェクトへのポインター。
 
-*値*型の値`T`します。
+*値*<br/>
+`T` 型の値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -430,11 +457,14 @@ inline T atomic_fetch_and_explicit(
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*へのポインター、`atomic`型の値を格納するオブジェクト`T`します。
+*Atom*<br/>
+`atomic` 型の値が格納された `T` オブジェクトへのポインター。
 
-*値*型の値`T`します。
+*値*<br/>
+`T` 型の値。
 
-*順序*A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)します。
+*順序*<br/>
+[memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ### <a name="return-value"></a>戻り値
 
@@ -457,9 +487,11 @@ inline T atomic_fetch_or (volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*へのポインター、`atomic`型の値を格納するオブジェクト`T`します。
+*Atom*<br/>
+`atomic` 型の値が格納された `T` オブジェクトへのポインター。
 
-*値*型の値`T`します。
+*値*<br/>
+`T` 型の値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -489,11 +521,14 @@ inline T atomic_fetch_or_explicit(
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*へのポインター、`atomic`型の値を格納するオブジェクト`T`します。
+*Atom*<br/>
+`atomic` 型の値が格納された `T` オブジェクトへのポインター。
 
-*値*型の値`T`します。
+*値*<br/>
+`T` 型の値。
 
-*順序*A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)します。
+*順序*<br/>
+[memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ### <a name="return-value"></a>戻り値
 
@@ -521,9 +556,11 @@ T* atomic_fetch_sub(
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*へのポインター、`atomic`型へのポインターを格納するオブジェクト`T`します。
+*Atom*<br/>
+`atomic` 型のポインターが格納された `T` オブジェクトへのポインター。
 
-*値*型の値`ptrdiff_t`します。
+*値*<br/>
+`ptrdiff_t` 型の値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -561,9 +598,11 @@ T* atomic_fetch_sub_explicit(
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*へのポインター、`atomic`型へのポインターを格納するオブジェクト`T`します。
+*Atom*<br/>
+`atomic` 型のポインターが格納された `T` オブジェクトへのポインター。
 
-*値*型の値`ptrdiff_t`します。
+*値*<br/>
+`ptrdiff_t` 型の値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -603,9 +642,11 @@ inline T atomic_fetch_xor(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*へのポインター、`atomic`型の値を格納するオブジェクト`T`します。
+*Atom*<br/>
+`atomic` 型の値が格納された `T` オブジェクトへのポインター。
 
-*値*型の値`T`します。
+*値*<br/>
+`T` 型の値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -635,11 +676,14 @@ inline T atomic_fetch_xor_explicit(
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*へのポインター、`atomic`型の値を格納するオブジェクト`T`します。
+*Atom*<br/>
+`atomic` 型の値が格納された `T` オブジェクトへのポインター。
 
-*値*型の値`T`します。
+*値*<br/>
+`T` 型の値。
 
-*順序*A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)します。
+*順序*<br/>
+[memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ### <a name="return-value"></a>戻り値
 
@@ -660,7 +704,8 @@ inline void atomic_flag_clear(atomic_flag* Flag) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*フラグ*へのポインター、`atomic_flag`オブジェクト。
+*フラグ*<br/>
+`atomic_flag` オブジェクトへのポインター。
 
 ## <a name="atomic_flag_clear_explicit"></a>  atomic_flag_clear_explicit
 
@@ -673,9 +718,11 @@ inline void atomic_flag_clear_explicit(atomic_flag* Flag, memory_order Order) no
 
 ### <a name="parameters"></a>パラメーター
 
-*フラグ*へのポインター、`atomic_flag`オブジェクト。
+*フラグ*<br/>
+`atomic_flag` オブジェクトへのポインター。
 
-*順序*A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)します。
+*順序*<br/>
+[memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ## <a name="atomic_flag_test_and_set"></a>  atomic_flag_test_and_set
 
@@ -688,7 +735,8 @@ inline bool atomic_flag_test_and_set(atomic_flag* Flag,) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*フラグ*へのポインター、`atomic_flag`オブジェクト。
+*フラグ*<br/>
+`atomic_flag` オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -705,9 +753,11 @@ inline bool atomic_flag_test_and_set_explicit(atomic_flag* Flag, memory_order Or
 
 ### <a name="parameters"></a>パラメーター
 
-*フラグ*へのポインター、`atomic_flag`オブジェクト。
+*フラグ*<br/>
+`atomic_flag` オブジェクトへのポインター。
 
-*順序*A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)します。
+*順序*<br/>
+[memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ### <a name="return-value"></a>戻り値
 
@@ -726,9 +776,11 @@ inline void atomic_init(atomic<Ty>* Atom, Ty Value) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*へのポインター、`atomic`型の値を格納するオブジェクト`Ty`します。
+*Atom*<br/>
+`atomic` 型の値が格納された `Ty` オブジェクトへのポインター。
 
-*値*型の値`Ty`します。
+*値*<br/>
+`Ty` 型の値。
 
 ### <a name="remarks"></a>Remarks
 
@@ -747,7 +799,8 @@ inline bool atomic_is_lock_free(const atomic<T>* Atom) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*へのポインター、`atomic`型の値を格納するオブジェクト`T`します。
+*Atom*<br/>
+`atomic` 型の値が格納された `T` オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -770,7 +823,8 @@ inline Ty atomic_load(const atomic<Ty>* Atom) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*へのポインター、`atomic`型の値を格納しているオブジェクト`Ty`します。
+*Atom*<br/>
+`atomic` 型の値が格納された `Ty` オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -793,9 +847,11 @@ inline Ty atomic_load_explicit(const atomic<Ty>* Atom, memory_order Order) noexc
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*へのポインター、`atomic`型の値を格納しているオブジェクト`Ty`します。
+*Atom*<br/>
+`atomic` 型の値が格納された `Ty` オブジェクトへのポインター。
 
-*順序*A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)します。 `memory_order_release` または `memory_order_acq_rel` を使用しないでください。
+*順序*<br/>
+[memory_order](../standard-library/atomic-enums.md#memory_order_enum)。 `memory_order_release` または `memory_order_acq_rel` を使用しないでください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -811,7 +867,8 @@ inline void atomic_signal_fence(memory_order Order) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*順序*するメモリ オーダリングのフェンスの種類を決定する制約です。
+*順序*<br/>
+フェンスの種類を決定するメモリ オーダリングの制約。
 
 ### <a name="remarks"></a>Remarks
 
@@ -839,9 +896,11 @@ inline Ty atomic_store_explicit(const atomic<Ty>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*アトミック型の値を格納しているオブジェクトへのポインター`Ty`します。
+*Atom*<br/>
+`Ty` 型の値が格納されたアトミック オブジェクトへのポインター。
 
-*値*型の値`Ty`します。
+*値*<br/>
+`Ty` 型の値。
 
 ### <a name="remarks"></a>Remarks
 
@@ -867,11 +926,14 @@ inline Ty atomic_store_explicit(
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*へのポインター、`atomic`型の値を格納しているオブジェクト`Ty`します。
+*Atom*<br/>
+`atomic` 型の値が格納された `Ty` オブジェクトへのポインター。
 
-*値*型の値`Ty`します。
+*値*<br/>
+`Ty` 型の値。
 
-*順序*A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)します。 `memory_order_consume`、`memory_order_acquire`、または `memory_order_acq_rel` を使用しないでください。
+*順序*<br/>
+[memory_order](../standard-library/atomic-enums.md#memory_order_enum)。 `memory_order_consume`、`memory_order_acquire`、または `memory_order_acq_rel` を使用しないでください。
 
 ### <a name="remarks"></a>Remarks
 
@@ -887,7 +949,8 @@ inline void atomic_thread_fence(memory_order Order) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*順序*するメモリ オーダリングのフェンスの種類を決定する制約です。
+*順序*<br/>
+フェンスの種類を決定するメモリ オーダリングの制約。
 
 ### <a name="remarks"></a>Remarks
 
@@ -913,7 +976,8 @@ Ty kill_dependency(Ty Arg) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*Arg*型の値`Ty`します。
+*arg*<br/>
+`Ty` 型の値。
 
 ### <a name="return-value"></a>戻り値
 

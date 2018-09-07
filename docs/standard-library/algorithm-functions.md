@@ -208,12 +208,12 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 334702a2c3e9a86becfb5a653b22154b5a4e197a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 9e8ec44fcdd336786707bf809ce676d866df132e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43691718"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101678"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 関数
 
@@ -268,11 +268,14 @@ ForwardIterator adjacent_find(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*検索する前方反復子の範囲の最初の要素の位置を示します。
+*first*<br/>
+検索範囲内の先頭の要素の位置を示す前方反復子。
 
-*最後*検索する前方反復子の位置を示す過去の最後の要素範囲内です。
+*last*<br/>
+検索範囲の最後の要素の 1 つ後ろの位置を示す前方反復子。
 
-*comp*二項述語の条件が検索範囲内の隣接する要素の値によって満たされるを提供します。
+*comp*<br/>
+検索範囲内の隣接する要素の値によって満たされる条件を提供する二項述語。
 
 ### <a name="return-value"></a>戻り値
 
@@ -341,9 +344,9 @@ int main()
 ```Output
 L = ( 50 40 10 20 20 )
 There are two adjacent elements that are equal.
- They have a value of 20.
+They have a value of 20.
 There are two adjacent elements where the second is twice the first.
- They have values of 10 & 20.
+They have values of 10 & 20.
 ```
 
 ## <a name="all_of"></a>  all_of
@@ -360,11 +363,14 @@ bool all_of(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*条件のチェックを開始する位置を示す入力反復子。 反復子は、要素の範囲の開始位置をマークします。
+*first*<br/>
+条件のチェックを開始する位置を示す入力反復子。 反復子は、要素の範囲の開始位置をマークします。
 
-*最後*条件をチェックする要素の範囲の終了位置を示す入力反復子。
+*last*<br/>
+条件をチェックする要素の範囲の終了を示す入力反復子。
 
-*comp*テストする条件。 これは、チェックされる要素によって満たされる条件を定義するユーザー定義の述語関数オブジェクトです。 述語は 1 つの引数を取り、**true** または **false** を返します。
+*comp*<br/>
+テストする条件。 これは、チェックされる要素によって満たされる条件を定義するユーザー定義の述語関数オブジェクトです。 述語は 1 つの引数を取り、**true** または **false** を返します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -388,11 +394,14 @@ bool any_of(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*条件の要素の範囲のチェックを開始する位置を示す入力反復子。
+*first*<br/>
+条件の要素の範囲のチェックを開始する位置を示す入力反復子。
 
-*最後*条件をチェックする要素の範囲の終了位置を示す入力反復子。
+*last*<br/>
+条件をチェックする要素の範囲の終了を示す入力反復子。
 
-*comp*テストする条件。 これは、ユーザー定義の述語関数オブジェクトによって提供されます。 述語は、テスト対象の要素によって満たされる条件を定義します。 述語は 1 つの引数を取り、**true** または **false** を返します。
+*comp*<br/>
+テストする条件。 これは、ユーザー定義の述語関数オブジェクトによって提供されます。 述語は、テスト対象の要素によって満たされる条件を定義します。 述語は 1 つの引数を取り、**true** または **false** を返します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -426,13 +435,17 @@ bool binary_search(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*検索する前方反復子の範囲の最初の要素の位置を示します。
+*first*<br/>
+検索範囲内の先頭の要素の位置を示す前方反復子。
 
-*最後*検索する前方反復子の位置を示す過去の最後の要素範囲内です。
+*last*<br/>
+検索範囲の最後の要素の 1 つ後ろの位置を示す前方反復子。
 
-*値*二項述語によって指定された要素の値または要素の値と照合するために必要な値が条件を満たす必要があります。
+*値*<br/>
+要素の値が一致する必要がある値、または二項述語で指定された要素の値によって条件を満たす必要がある値。
 
-*comp*を定義するユーザー定義の述語関数オブジェクトを検知する 1 つの要素は他よりも少なくなります。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
+*comp*<br/>
+1 つの要素が別の要素より小さいという意味を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -546,11 +559,14 @@ OutputIterator copy(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*ソース範囲の最初の要素の位置を示す入力反復子。
+*first*<br/>
+ソース範囲内の先頭の要素の位置を示す入力反復子。
 
-*最後*の 1 つのソース範囲の最後の要素の後ろの位置を示す入力反復子。
+*last*<br/>
+ソース範囲内の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*destBeg*ターゲット範囲の最初の要素の位置を示す出力反復子。
+*destBeg*<br/>
+ターゲット範囲の最初の要素の位置を示す出力反復子。
 
 ### <a name="return-value"></a>戻り値
 
@@ -636,11 +652,14 @@ BidirectionalIterator2 copy_backward(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*ソース範囲の最初の要素の位置を示す双方向反復子。
+*first*<br/>
+ソース範囲内の先頭の要素の位置を示す双方向反復子。
 
-*最後*の 1 つのソース範囲の最後の要素の後ろの位置を示す双方向反復子。
+*last*<br/>
+ソース範囲の最後の要素の 1 つ後ろの位置を示す双方向反復子。
 
-*destEnd*ターゲット範囲内の 1 つ後ろの最後の要素の位置を示す双方向反復子。
+*destEnd*<br/>
+移動先範囲の最後の要素の 1 つ後ろの位置を示す双方向反復子。
 
 ### <a name="return-value"></a>戻り値
 
@@ -724,13 +743,17 @@ OutputIterator copy_if(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*条件をチェックする範囲の開始を示す入力反復子。
+*first*<br/>
+条件をチェックする範囲の先頭を指定する入力反復子。
 
-*最後*範囲の終了位置を示す入力反復子。
+*last*<br/>
+範囲の終了位置を示す入力反復子。
 
-*dest*コピーした要素の変換先を示す出力反復子。
+*dest*<br/>
+コピーした要素のコピー先を示す出力反復子。
 
-*_Pred*範囲内のすべての要素を評価する条件。 この条件は、ユーザー定義の述語関数オブジェクトによって提供されます。 述語が 1 つの引数に受け取りを返す**true**または**false**します。
+*_Pred*<br/>
+範囲内のすべての要素がテストされる条件。 この条件は、ユーザー定義の述語関数オブジェクトによって提供されます。 述語が 1 つの引数に受け取りを返す**true**または**false**します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -758,11 +781,14 @@ OutputIterator copy_n(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*から要素をコピーする場所を示す入力反復子。
+*first*<br/>
+要素のコピー元となる場所を示す入力反復子。
 
-*カウント*A が符号付きまたは符号なしの要素の数を指定する整数型をコピーします。
+*count*<br/>
+コピーする要素の数を指定する符号付きまたは符号なし整数型。
 
-*dest*に要素をコピーする場所を示す出力反復子。
+*dest*<br/>
+要素のコピー先となる場所を示す出力反復子。
 
 ### <a name="return-value"></a>戻り値
 
@@ -786,11 +812,14 @@ typename iterator_traits<InputIterator>::difference_type count(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*走査する入力反復子の範囲の最初の要素の位置を示します。
+*first*<br/>
+走査範囲内の最初の要素の位置を示す入力反復子。
 
-*最後*走査する入力反復子の位置を示す過去の最後の要素範囲内です。
+*last*<br/>
+走査範囲内の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*val*カウントする要素の値。
+*val*<br/>
+カウントされる要素の値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -853,11 +882,14 @@ typename iterator_traits<InputIterator>::difference_type count_if(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*検索する入力反復子の範囲の最初の要素の位置を示します。
+*first*<br/>
+検索範囲内の最初の要素の位置を示す入力反復子。
 
-*最後*検索する入力反復子の位置を示す過去の最後の要素範囲内です。
+*last*<br/>
+検索範囲内の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*_Pred*要素をカウントする場合に満たされるようにする条件を定義するユーザー定義の述語関数オブジェクト。 述語は 1 つの引数を取り、**true** または **false** を返します。
+*_Pred*<br/>
+要素がカウントされる場合に満たされる条件を定義するユーザー定義の述語関数オブジェクト。 述語は 1 つの引数を取り、**true** または **false** を返します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -950,15 +982,20 @@ bool equal(
 
 ### <a name="parameters"></a>パラメーター
 
-*First1*をテストする入力反復子の最初の範囲内の最初の要素の位置を示します。
+*first1*<br/>
+テストする 1 つ目の範囲内の最初の要素の位置を示す入力反復子。
 
-*Last1*をテストする入力反復子の位置を示す最初の範囲の最後の要素。
+*last1*<br/>
+テストする 1 つ目の範囲内の最後の要素の 1 つ後の位置を示す入力反復子。
 
-*First2*をテストする入力反復子の 2 番目の範囲内の最初の要素の位置を示します。
+*first2*<br/>
+テストする 2 つ目の範囲内の最初の要素の位置を示す入力反復子。
 
-*First2*をテストする入力反復子の 2 番目の範囲内の 1 つ後ろの最後の要素の位置を示します。
+*first2*<br/>
+テストする 2 つ目の範囲内の最後の要素の 1 つ後の位置を示す入力反復子。
 
-*comp*満たされる条件を実行する場合は 2 つの要素を定義するユーザー定義の述語関数オブジェクトと同じものとして。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
+*コンポジション*<br/>
+2 つの要素が等価であると見なされた場合に条件が満たされると定義する、ユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1027,13 +1064,17 @@ pair<ForwardIterator, ForwardIterator> equal_range(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*検索する前方反復子の範囲の最初の要素の位置を示します。
+*first*<br/>
+検索範囲内の先頭の要素の位置を示す前方反復子。
 
-*最後*検索する前方反復子の位置を示す過去の最後の要素範囲内です。
+*last*<br/>
+検索範囲の最後の要素の 1 つ後ろの位置を示す前方反復子。
 
-*val*順序付けられた範囲内で検索される値。
+*val*<br/>
+順序付けられた範囲内で検索する値。
 
-*comp*の 1 つの要素が他よりも小さいという意味を定義するユーザー定義の述語関数オブジェクト。
+*comp*<br/>
+1 つの要素が別の要素より小さいという意味を定義するユーザー定義の述語関数オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1183,11 +1224,14 @@ void fill(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*走査する前方反復子の範囲の最初の要素の位置を示します。
+*first*<br/>
+走査対象の範囲内の最初の要素の位置を示す前方反復子。
 
-*最後*走査する前方反復子の位置を示す過去の最後の要素範囲内です。
+*last*<br/>
+走査対象の範囲内の最後の要素の 1 つ後ろの位置を示す前方反復子。
 
-*val*範囲内の要素に割り当てられる値 [*最初*、*最後*)。
+*val*<br/>
+範囲内の要素に割り当てられる値 [*最初*、*最後*)。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1248,11 +1292,14 @@ OutputIterator fill_n(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*値を割り当てられる出力反復子の範囲の最初の要素の位置を示す*Val*します。
+*まずは*<br/>
+値が割り当てられる出力反復子の範囲の最初の要素の位置を示す*Val*します。
 
-*カウント*A が符号付きまたは符号なしの要素の数を指定する整数型に値が割り当てられます。
+*カウント*<br/>
+値を代入する要素の数を指定する符号付きまたは符号なし整数の型。
 
-*Val*範囲内の要素に割り当てられる値 [*最初*、 *first+count*)。
+*val*<br/>
+範囲内の要素に割り当てられる値 [*最初*、 *first+count*)。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1325,11 +1372,14 @@ InputIterator find(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*指定した値を検索する入力反復子の範囲の最初の要素の位置を示します。
+*first*<br/>
+指定された値に対する検索範囲内の先頭の要素の位置を示す入力反復子。
 
-*最後*指定した値を検索する入力反復子の範囲の最後の要素の後ろの 1 つの位置を示します。
+*last*<br/>
+指定された値に対する検索範囲内の末尾の要素の 1 つ後ろの位置を示す入力反復子。
 
-*val*を検索する値。
+*val*<br/>
+検索対象の値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1364,15 +1414,20 @@ ForwardIterator1 find_end(
 
 ### <a name="parameters"></a>パラメーター
 
-*First1*検索する前方反復子の範囲の最初の要素の位置を示します。
+*first1*<br/>
+検索範囲内の先頭の要素の位置を示す前方反復子。
 
-*Last1*検索する前方反復子の位置を示す最後の要素範囲内です。
+*last1*<br/>
+検索範囲の最後の要素の 1 つ後ろの位置を示す前方反復子。
 
-*First2*を検索する前方反復子の範囲の最初の要素の位置を示します。
+*first2*<br/>
+検索範囲内の先頭の要素の位置を示す前方反復子。
 
-*Last2*を検索する前方反復子の位置を示す最後の要素範囲内です。
+*last2*<br/>
+検索範囲の最後の要素の 1 つ後ろの位置を示す前方反復子。
 
-*comp*満たされる条件を実行する場合は 2 つの要素を定義するユーザー定義の述語関数オブジェクトと同じものとして。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
+*コンポジション*<br/>
+2 つの要素が等価であると見なされた場合に条件が満たされると定義する、ユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1477,7 +1532,7 @@ List L1 = ( 5 10 15 20 )
 Vector v2 = ( 20 30 40 )
 There is a match of L1 in v1 that begins at position 7.
 There is a sequence of elements in v1 that are equivalent to those
- in v2 under the binary predicate twice and that begins at position 8.
+in v2 under the binary predicate twice and that begins at position 8.
 ```
 
 ## <a name="find_first_of"></a>  find_first_of
@@ -1503,15 +1558,20 @@ ForwardIterator1 find_first_of(
 
 ### <a name="parameters"></a>パラメーター
 
-*First1*検索する前方反復子の範囲の最初の要素の位置を示します。
+*first1*<br/>
+検索範囲内の先頭の要素の位置を示す前方反復子。
 
-*last1*検索する前方反復子の位置を示す過去の最後の要素範囲内です。
+*last1*<br/>
+検索範囲の最後の要素の 1 つ後ろの位置を示す前方反復子。
 
-*first2*一致する前方反復子の範囲の最初の要素の位置を示します。
+*first2*<br/>
+照合範囲内の先頭の要素の位置を示す前方反復子。
 
-*last2*一致する前方反復子の位置を示す過去の最後の要素範囲内です。
+*last2*<br/>
+照合範囲の最後の要素の 1 つ後ろの位置を示す前方反復子。
 
-*comp*満たされる条件を実行する場合は 2 つの要素を定義するユーザー定義の述語関数オブジェクトと同じものとして。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
+*comp*<br/>
+2 つの要素が等価であると見なされた場合に条件が満たされると定義する、ユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1616,10 +1676,10 @@ Vector v1 = ( 0 5 10 15 20 25 0 5 10 15 20 25 )
 List L1 = ( 15 20 )
 Vector v2 = ( 20 30 40 )
 There is at least one match of L1 in v1
- and the first one begins at position 3.
+and the first one begins at position 3.
 There is a sequence of elements in v1 that are equivalent
- to those in v2 under the binary predicate twice
- and the first one begins at position 2.
+to those in v2 under the binary predicate twice
+and the first one begins at position 2.
 ```
 
 ## <a name="find_if"></a>  find_if
@@ -1636,11 +1696,14 @@ InputIterator find_if(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*検索する入力反復子の範囲の最初の要素の位置を示します。
+*first*<br/>
+検索範囲内の最初の要素の位置を示す入力反復子。
 
-*最後*検索する入力反復子の位置を示す過去の最後の要素範囲内です。
+*last*<br/>
+検索範囲内の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*pred*ユーザー定義の述語関数オブジェクトまたは[ラムダ式](../cpp/lambda-expressions-in-cpp.md)検索対象の要素によって満たされる条件を定義します。 述語は 1 つの引数し、返します**true** (満たされる) または**false** (満たされていません)。 シグネチャ*pred*効果的にする必要があります`bool pred(const T& arg);`ここで、`T`先の型は、`InputIterator`逆参照時に暗黙的に変換できます。 **Const**キーワードが関数オブジェクトまたはラムダ引数は変更しないでくださいことを示すためにのみ表示されます。
+*Pred*<br/>
+ユーザー定義の述語関数オブジェクト、または検索対象の要素によって満たされる条件を定義する[ラムダ式](../cpp/lambda-expressions-in-cpp.md)。 述語は 1 つの引数し、返します**true** (満たされる) または**false** (満たされていません)。 シグネチャ*pred*効果的にする必要があります`bool pred(const T& arg);`ここで、`T`先の型は、`InputIterator`逆参照時に暗黙的に変換できます。 **Const**キーワードが関数オブジェクトまたはラムダ引数は変更しないでくださいことを示すためにのみ表示されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1750,11 +1813,14 @@ InputIterator find_if_not(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*検索する入力反復子の範囲の最初の要素の位置を示します。
+*first*<br/>
+検索範囲内の最初の要素の位置を示す入力反復子。
 
-*最後*検索する入力反復子の位置を示す過去の最後の要素範囲内です。
+*last*<br/>
+検索範囲内の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*pred*ユーザー定義の述語関数オブジェクトまたは[ラムダ式](../cpp/lambda-expressions-in-cpp.md)検索対象の要素が満たさない条件を定義します。 述語は 1 つの引数し、返します**true** (満たされる) または**false** (満たされていません)。 シグネチャ*pred*効果的にする必要があります`bool pred(const T& arg);`ここで、`T`先の型は、`InputIterator`逆参照時に暗黙的に変換できます。 **Const**キーワードが関数オブジェクトまたはラムダ引数は変更しないでくださいことを示すためにのみ表示されます。
+*Pred*<br/>
+検索対象の要素が満たさない条件を定義する、ユーザー定義の述語関数オブジェクトまたは[ラムダ式](../cpp/lambda-expressions-in-cpp.md)。 述語は 1 つの引数し、返します**true** (満たされる) または**false** (満たされていません)。 シグネチャ*pred*効果的にする必要があります`bool pred(const T& arg);`ここで、`T`先の型は、`InputIterator`逆参照時に暗黙的に変換できます。 **Const**キーワードが関数オブジェクトまたはラムダ引数は変更しないでくださいことを示すためにのみ表示されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1780,11 +1846,14 @@ Function for_each(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*で操作する範囲内の最初の要素の位置を示す入力反復子。
+*first*<br/>
+操作範囲内の最初の要素の位置を示す入力反復子。
 
-*最後*いずれかの過去の最後の要素範囲内の位置を示す入力反復処理します。
+*last*<br/>
+操作範囲内の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*_Func*範囲内の各要素に適用されるユーザー定義の関数オブジェクト。
+*_Func*<br/>
+範囲内の各要素に適用されるユーザー定義関数オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1902,13 +1971,13 @@ int main()
 ```Output
 Original vector  v1 = ( -4 -3 -2 -1 0 1 2 ).
 Multiplying the elements of the vector v1
- by the factor -2 gives:
- v1mod1 = ( 8 6 4 2 0 -2 -4 ).
+by the factor -2 gives:
+v1mod1 = ( 8 6 4 2 0 -2 -4 ).
 Multiplying the elements of the vector v1mod
- by the factor 5 gives:
- v1mod2 = ( 40 30 20 10 0 -10 -20 ).
+by the factor 5 gives:
+v1mod2 = ( 40 30 20 10 0 -10 -20 ).
 The average of the elements of v1 is:
- Average ( v1mod2 ) = 10.
+Average ( v1mod2 ) = 10.
 ```
 
 ## <a name="generate"></a>  generate
@@ -1925,11 +1994,14 @@ void generate(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*値が割り当てられる範囲内の最初の要素の位置を示す前方反復子。
+*first*<br/>
+値が割り当てられる範囲の最初の要素の位置を示す前方反復子。
 
-*最後*過去の値が割り当てられる範囲の最後の要素の位置を示す前方反復子。
+*last*<br/>
+値が割り当てられる範囲の最初の要素の 1 つ後ろの位置を示す前方反復子。
 
-*_Gen*範囲内の要素のそれぞれに割り当てられる値の生成に使用される引数なしで呼び出される関数オブジェクト。
+*_Gen*<br/>
+引数を指定しないで呼び出され、範囲内の各要素に割り当てられる値を生成するために使用される関数オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1996,11 +2068,14 @@ void generate_n(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*値が割り当てられる範囲内の最初の要素の位置を示す出力反復子。
+*まずは*<br/>
+値が割り当てられる範囲の最初の要素の位置を示す出力反復子。
 
-*カウント*A が符号付きまたは符号なし、ジェネレーター関数によって値が割り当てられる要素の数を指定する整数型。
+*カウント*<br/>
+ジェネレーター関数によって値が割り当てられる要素の数を指定する符号付きまたは符号なし整数の型。
 
-*Gen*範囲内の要素のそれぞれに割り当てられる値の生成に使用される引数なしで呼び出される関数オブジェクト。
+*汎用*<br/>
+引数を指定しないで呼び出され、範囲内の各要素に割り当てられる値を生成するために使用される関数オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -2077,15 +2152,20 @@ bool includes(
 
 ### <a name="parameters"></a>パラメーター
 
-*first1*最初の 2 つ目のすべての要素が含まれるかどうかをテストするための 2 つの並べ替えられたソース範囲の最初の最初の要素の位置を示す入力反復子。
+*first1*<br/>
+2 番目のすべての要素が 1 番目に含まれているかどうかをテストするため、2 つの並べ替えられたソース範囲の、最初の範囲の最初の要素の位置を示す入力反復子。
 
-*last1*入力反復子の位置を示す最後の要素の最初の 2 つの並べ替えられたソース範囲の最初の 2 つ目のすべての要素が含まれるかどうかをテストします。
+*last1*<br/>
+2 番目のすべての要素が 1 番目に含まれているかどうかをテストするため、2 つの並べ替えられたソース範囲の、最初の範囲の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*first2*の最初の 2 つ目のすべての要素が含まれるかどうかをテストする入力反復子の最初の要素の 2 つの連続する 2 番目の並べ替えられたソース範囲の位置を示します。
+*first2*<br/>
+2 番目のすべての要素が 1 番目に含まれているかどうかをテストするため、2 つの連続する並べ替えられたソース範囲の、2 番目の範囲の最初の要素の位置を示す入力反復子。
 
-*last2*の最初の 2 つ目のすべての要素が含まれるかどうかをテストする入力反復子最後の要素の 2 つの連続する 2 番目の並べ替えられたソース範囲の後ろの位置 1 つのアドレスを指定します。
+*last2*<br/>
+2 番目のすべての要素が 1 番目に含まれているかどうかをテストするため、2 つの連続する並べ替えられたソース範囲の、2 番目の範囲の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*comp*を定義するユーザー定義の述語関数オブジェクトを検知する 1 つの要素は他よりも少なくなります。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
+*comp*<br/>
+1 つの要素が別の要素より小さいという意味を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2238,17 +2318,17 @@ int main()
 
 ```Output
 Original vector v1a with range sorted by the
- binary predicate less than is v1a = ( -2 -1 0 1 2 3 4 ).
+binary predicate less than is v1a = ( -2 -1 0 1 2 3 4 ).
 Original vector v1b with range sorted by the
- binary predicate less than is v1b = ( -2 -1 0 1 2 3 ).
+binary predicate less than is v1b = ( -2 -1 0 1 2 3 ).
 Original vector v2a with range sorted by the
- binary predicate greater is v2a = ( 4 3 2 1 0 -1 ).
+binary predicate greater is v2a = ( 4 3 2 1 0 -1 ).
 Original vector v2b with range sorted by the
- binary predicate greater is v2b = ( 3 2 1 0 -1 -2 ).
+binary predicate greater is v2b = ( 3 2 1 0 -1 -2 ).
 Original vector v3a with range sorted by the
- binary predicate mod_lesser is v3a = ( 0 1 2 3 4 ).
+binary predicate mod_lesser is v3a = ( 0 1 2 3 4 ).
 Original vector v3b with range sorted by the
- binary predicate mod_lesser is v3b = ( 0 -1 1 -2 2 3 ).
+binary predicate mod_lesser is v3b = ( 0 -1 1 -2 2 3 ).
 All the elements in vector v1b are contained in vector v1a.
 At least one of the elements in vector v2b is not contained in vector v2a.
 At least one of the elements in vector v3b is  not contained under mod_lesser in vector v3a.
@@ -2275,13 +2355,17 @@ void inplace_merge(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*結合して 1 つの範囲に分類する最初の 2 つの連続する最初の要素が並べ替えられた範囲の位置を示す双方向反復子。
+*first*<br/>
+結合して単一の範囲に分類する 2 つの連続する並べ替えられた範囲の、最初の範囲の最初の要素の位置を示す双方向反復子。
 
-*中間*結合して 1 つの範囲に分類する最初の要素の 2 つの連続する 2 番目の並べ替えられた範囲の位置を示す双方向反復子。
+*中間*<br/>
+結合して単一の範囲に分類する 2 つの連続する並べ替えられた範囲の、2 番目の範囲の最初の要素の位置を示す双方向反復子。
 
-*最後*双方向反復子が結合して 1 つの範囲に分類する最後の要素の 2 つの連続する 2 番目の並べ替えられた範囲後ろの位置 1 つのアドレスを指定します。
+*last*<br/>
+結合して単一の範囲に分類する 2 つの連続する並べ替えられたソース範囲の、2 番目の範囲の最後の要素の 1 つ後ろの位置を示す双方向反復子。
 
-*comp*の 1 つの要素が他よりも大きいという意味を定義するユーザー定義の述語関数オブジェクト。 2 項述語は 2 つの引数を受け取り、最初の要素が 2 番目の要素より小さい場合は **true** 、そうでない場合は **false** を返す必要があります。
+*comp*<br/>
+1 つの要素が別の要素より大きいという意味を定義するユーザー定義の述語関数オブジェクト。 2 項述語は 2 つの引数を受け取り、最初の要素が 2 番目の要素より小さい場合は **true** 、そうでない場合は **false** を返す必要があります。
 
 ### <a name="remarks"></a>Remarks
 
@@ -2389,17 +2473,17 @@ int main()
 
 ```Output
 Original vector v1 with subranges sorted by the
- binary predicate less than is  v1 = ( 0 1 2 3 4 5 -5 -4 -3 -2 -1 0 )
+binary predicate less than is  v1 = ( 0 1 2 3 4 5 -5 -4 -3 -2 -1 0 )
 Original vector v2 with subranges sorted by the
- binary predicate greater is v2 = ( 5 4 3 2 1 0 0 -1 -2 -3 -4 -5 )
+binary predicate greater is v2 = ( 5 4 3 2 1 0 0 -1 -2 -3 -4 -5 )
 Original vector v3 with subranges sorted by the
- binary predicate mod_lesser is v3 = ( 0 1 2 3 4 5 0 -1 -2 -3 -4 -5 )
+binary predicate mod_lesser is v3 = ( 0 1 2 3 4 5 0 -1 -2 -3 -4 -5 )
 Merged inplace with default order,
- vector v1mod = ( -5 -4 -3 -2 -1 0 0 1 2 3 4 5 )
+vector v1mod = ( -5 -4 -3 -2 -1 0 0 1 2 3 4 5 )
 Merged inplace with binary predicate greater specified,
- vector v2mod = ( 5 4 3 2 1 0 0 -1 -2 -3 -4 -5 )
+vector v2mod = ( 5 4 3 2 1 0 0 -1 -2 -3 -4 -5 )
 Merged inplace with binary predicate mod_lesser specified,
- vector v3mod = ( 0 0 1 -1 2 -2 3 -3 4 -4 5 -5 )
+vector v3mod = ( 0 0 1 -1 2 -2 3 -3 4 -4 5 -5 )
 ```
 
 ## <a name="is_heap"></a>  is_heap
@@ -2421,11 +2505,14 @@ bool is_heap(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*ヒープをチェックする範囲の開始を示すランダム アクセス反復子。
+*first*<br/>
+ヒープをチェックする範囲の先頭を指定するランダム アクセス反復子。
 
-*最後*範囲の終了位置を示すランダム アクセス反復子。
+*last*<br/>
+範囲の最後を指定するランダム アクセス反復子。
 
-*comp* order 要素をテストする条件。 二項述語は 1 つの引数し、返します**true**または**false**します。
+*comp*<br/>
+要素の並べ替えをテストするための条件。 二項述語は 1 つの引数し、返します**true**または**false**します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2458,11 +2545,14 @@ RandomAccessIterator is_heap_until(
 
 ### <a name="parameters"></a>パラメーター
 
-*開始*ヒープをチェックする範囲の最初の要素を示すランダム アクセス反復子。
+*begin*<br/>
+ヒープを確認する範囲の最初の要素を指定するランダム アクセス反復子。
 
-*終了*ヒープをチェックする範囲の末尾を示すランダム アクセス反復子。
+*end*<br/>
+ヒープを確認する範囲の末尾を指定するランダム アクセス反復子。
 
-*比較*厳密弱順序ヒープを定義する条件を指定する二項述語。 既定の述語*比較*が指定されていないが`std::less<>`します。
+*compare*<br/>
+ヒープを定義する厳密弱順序の条件を指定する二項述語。 既定の述語*比較*が指定されていないが`std::less<>`します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2488,11 +2578,14 @@ bool is_partitioned(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*条件をチェックする範囲の開始位置を示す入力反復子。
+*first*<br/>
+条件をチェックする範囲の先頭を指定する入力反復子。
 
-*最後*範囲の終了位置を示す入力反復子。
+*last*<br/>
+範囲の終了位置を示す入力反復子。
 
-*comp*テストする条件。 これは、検索対象の要素によって満たされる条件を定義するユーザー定義の述語関数オブジェクトによって提供されます。 述語は 1 つの引数を取り、**true** または **false** を返します。
+*comp*<br/>
+テストする条件。 これは、検索対象の要素によって満たされる条件を定義するユーザー定義の述語関数オブジェクトによって提供されます。 述語は 1 つの引数を取り、**true** または **false** を返します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2539,15 +2632,20 @@ bool is_permutation(
 
 ### <a name="parameters"></a>パラメーター
 
-*First1*範囲の最初の要素を指す前方反復子。
+*first1*<br/>
+範囲の最初の要素を参照する前方反復子。
 
-*Last1*の 1 つ後ろの範囲の最後の要素を指す前方反復子。
+*last1*<br/>
+範囲の最後の要素の 1 つ後ろの要素を参照する前方反復子。
 
-*First2*比較に使用される、2 番目の範囲の最初の要素を指す前方反復子。
+*first2*<br/>
+比較に使用される、2 つ目の範囲の最初の要素を参照する前方反復子。
 
-*Last2*の 1 つ後ろの比較に使用される 2 つ目の範囲の最後の要素を指す前方反復子。
+*last2*<br/>
+比較に使用される、2 つ目の範囲の最後の要素の 1 つ後ろの要素を参照する前方反復子。
 
-*Pred*等しいかどうかをテストし、返す述語を**bool**します。
+*Pred*<br/>
+等しいかどうかをテストし、返す述語を**bool**します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2637,11 +2735,14 @@ bool is_sorted(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*をチェックする範囲の開始位置を示す前方反復子。
+*first*<br/>
+チェックする範囲の開始位置を示す前方反復子。
 
-*最後*範囲の終了位置を示す前方反復子。
+*last*<br/>
+範囲の終了位置を示す前方反復子。
 
-*comp* 2 つの要素間の順序を決定するテスト条件。 述語は 1 つの引数を取り、**true** または **false** を返します。 これは `operator<` と同じタスクを実行します。
+*comp*<br/>
+2 つの要素間の順序を決定するテストの条件。 述語は 1 つの引数を取り、**true** または **false** を返します。 これは `operator<` と同じタスクを実行します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -2659,21 +2760,24 @@ bool is_sorted(
 template<class ForwardIterator>
 ForwardIterator is_sorted_until(
     ForwardIterator first,
-    ForwardIterator last); 
+    ForwardIterator last);
 template<class ForwardIterator, class BinaryPredicate>
 ForwardIterator is_sorted_until(
     ForwardIterator first,
     ForwardIterator last,
-    BinaryPredicate comp); 
+    BinaryPredicate comp);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*をチェックする範囲の開始位置を示す前方反復子。
+*first*<br/>
+チェックする範囲の開始位置を示す前方反復子。
 
-*最後*範囲の終了位置を示す前方反復子。
+*last*<br/>
+範囲の終了位置を示す前方反復子。
 
-*comp* 2 つの要素間の順序を決定するテスト条件。 述語は 1 つの引数を取り、**true** または **false** を返します。
+*comp*<br/>
+2 つの要素間の順序を決定するテストの条件。 述語は 1 つの引数を取り、**true** または **false** を返します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2697,9 +2801,11 @@ void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
 
 ### <a name="parameters"></a>パラメーター
 
-*左*値が交換される前方反復子のいずれか。
+*left*<br/>
+値が交換される前方反復子の 1 つ。
 
-*適切な*2 番目の値が交換される前方反復子。
+*right*<br/>
+値が交換される 2 つ目の前方反復子。
 
 ### <a name="remarks"></a>Remarks
 
@@ -2830,14 +2936,14 @@ int main()
 ```Output
 The original deque of CInts is deq1 = ( CInt(5), CInt(1), CInt(10) ).
 The deque of CInts with first & last elements swapped is:
- deq1 = ( CInt(10), CInt(1), CInt(5) ).
+deq1 = ( CInt(10), CInt(1), CInt(5) ).
 The deque of CInts with first & last elements swapped back is:
- deq1 = ( CInt(5), CInt(1), CInt(10) ).
+deq1 = ( CInt(5), CInt(1), CInt(10) ).
 Vector v1 is ( 0 1 2 3 ).
 Deque deq2 is ( 4 5 ).
 After exchanging first elements,
- vector v1 is: v1 = ( 4 1 2 3 ).
- & deque deq2 is: deq2 = ( 0 5 ).
+vector v1 is: v1 = ( 4 1 2 3 ).
+& deque deq2 is: deq2 = ( 0 5 ).
 ```
 
 ## <a name="lexicographical_compare"></a>  lexicographical_compare
@@ -2864,15 +2970,20 @@ bool lexicographical_compare(
 
 ### <a name="parameters"></a>パラメーター
 
-*first1*と比較する入力反復子の最初の範囲内の最初の要素の位置を示します。
+*first1*<br/>
+比較する 1 つ目の範囲内の最初の要素の位置を示す入力反復子。
 
-*last1*と比較する入力反復子、最初の範囲の最後の要素の後ろの 1 つの位置を示します。
+*last1*<br/>
+比較する 1 つ目の範囲内の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*first2*と比較する入力反復子の 2 番目の範囲内の最初の要素の位置を示します。
+*first2*<br/>
+比較する 2 つ目の範囲内の最初の要素の位置を示す入力反復子。
 
-*last2*と比較する入力反復子過去の 2 番目の範囲の最後の要素の位置を示します。
+*last2*<br/>
+比較する 2 つ目の範囲内の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*comp*を定義するユーザー定義の述語関数オブジェクトを検知する 1 つの要素は他よりも少なくなります。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
+*comp*<br/>
+1 つの要素が別の要素より小さいという意味を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -3005,13 +3116,17 @@ ForwardIterator lower_bound(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*検索する前方反復子の範囲の最初の要素の位置を示します。
+*first*<br/>
+検索範囲内の先頭の要素の位置を示す前方反復子。
 
-*最後*検索する前方反復子の位置を示す過去の最後の要素範囲内です。
+*last*<br/>
+検索範囲の最後の要素の 1 つ後ろの位置を示す前方反復子。
 
-*値*が最初の位置や可能な最初の位置が検索対象の値の順序付けられた範囲内です。
+*値*<br/>
+順序付けられた範囲内で、最初の位置や可能な最初の位置を検索する対象の値。
 
-*comp*を定義するユーザー定義の述語関数オブジェクトを検知する 1 つの要素は他よりも少なくなります。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
+*comp*<br/>
+1 つの要素が別の要素より小さいという意味を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -3140,11 +3255,14 @@ void make_heap(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*をヒープに変換される範囲内の最初の要素の位置を示すランダム アクセス反復子。
+*first*<br/>
+ヒープに変換される範囲内の最初の要素の位置を示すランダム アクセス反復子。
 
-*最後*後ろをヒープに変換される範囲の最後の要素の 1 つの位置を示すランダム アクセス反復子。
+*last*<br/>
+ヒープに変換される範囲内の最後の要素の 1 つ後ろの位置を示すランダム アクセス反復子。
 
-*comp*を定義するユーザー定義の述語関数オブジェクトを検知する 1 つの要素は他よりも少なくなります。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
+*comp*<br/>
+1 つの要素が別の要素より小さいという意味を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -3208,30 +3326,34 @@ int main() {
 template<class Type>
 constexpr Type& max(
     const Type& left,
-    const Type& right); 
+    const Type& right);
 template<class Type, class Pr>
 constexpr Type& max(
     const Type& left,
     const Type& right,
-    BinaryPredicate comp); 
+    BinaryPredicate comp);
 template<class Type>
 constexpr Type& max (
-    initializer_list<Type> ); 
+    initializer_list<Type> );
 template<class Type, class Pr>
 constexpr Type& max(
     initializer_list<Type> ,
-    BinaryPredicate comp); 
+    BinaryPredicate comp);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*左*比較対象となる 2 つのオブジェクトの最初の数値。
+*left*<br/>
+比較される 2 つのオブジェクトの 1 番目のオブジェクト。
 
-*適切な*比較対象となる 2 つの 2 つ目のオブジェクトします。
+*right*<br/>
+比較される 2 つのオブジェクトの 2 番目のオブジェクト。
 
-*comp* 2 つのオブジェクトを比較するために使用する二項述語。
+*comp*<br/>
+2 つのオブジェクトの比較で使用される二項述語。
 
-*_IList*初期化子リストと比較するオブジェクトを格納します。
+*_IList*<br/>
+比較されるオブジェクトを含む初期化子リスト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -3424,11 +3546,14 @@ constexpr ForwardIterator max_element(ForwardIterator first, ForwardIterator las
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*最大の要素を検索する前方反復子の範囲の最初の要素の位置を示します。
+*first*<br/>
+最大の要素の検索範囲内の先頭の要素の位置を示す前方反復子。
 
-*最後*最大の要素を検索する前方反復子の範囲の最後の要素の後ろの 1 つの位置を示します。
+*last*<br/>
+最大の要素の検索範囲内の末尾の要素の 1 つ後の位置を示す前方反復子。
 
-*comp*の 1 つの要素が他よりも大きいという意味を定義するユーザー定義の述語関数オブジェクト。 2 項述語は 2 つの引数を受け取り、最初の要素が 2 番目の要素より小さい場合は **true** 、そうでない場合は **false** を返す必要があります。
+*comp*<br/>
+1 つの要素が別の要素より大きいという意味を定義するユーザー定義の述語関数オブジェクト。 2 項述語は 2 つの引数を受け取り、最初の要素が 2 番目の要素より小さい場合は **true** 、そうでない場合は **false** を返す必要があります。
 
 ### <a name="return-value"></a>戻り値
 
@@ -3566,17 +3691,23 @@ OutputIterator merge(
 
 ### <a name="parameters"></a>パラメーター
 
-*first1*結合して 1 つの範囲に分類する 2 つの並べ替えられたソース範囲の最初の最初の要素の位置を示す入力反復子。
+*first1*<br/>
+結合して単一の範囲に分類する 2 つの並べ替えられたソース範囲の、最初の範囲の最初の要素の位置を示す入力反復子。
 
-*last1*いずれかの後ろの位置の最後の要素、最初に結合して 1 つの範囲に分類する 2 つの並べ替えられたソース範囲を指定する入力反復子。
+*last1*<br/>
+結合して単一の範囲に分類する 2 つの並べ替えられたソース範囲の、最初の範囲の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*first2*結合して 1 つの範囲に分類する最初の要素の 2 つの連続する 2 番目の並べ替えられたソース範囲の位置を示す入力反復子。
+*first2*<br/>
+結合して単一の範囲に分類する 2 つの連続する並べ替えられたソース範囲の、2 番目の範囲の最初の要素の位置を示す入力反復子。
 
-*last2*後ろ結合して 1 つの範囲に分類する最後の要素の 2 つの連続する 2 番目の並べ替えられたソース範囲の 1 つの位置を示す入力反復子。
+*last2*<br/>
+結合して単一の範囲に分類する 2 つの連続する並べ替えられたソース範囲の、2 番目の範囲の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*結果*2 つのソース範囲のターゲット範囲の最初の要素の位置を示す出力反復子が 1 つの並べ替えられた範囲に結合されるは。
+*結果*<br/>
+2 つのソース範囲が単一の並べ替えられた範囲に結合されるターゲット範囲の、最初の要素の位置を示す出力反復子。
 
-*comp*の 1 つの要素が他よりも大きいという意味を定義するユーザー定義の述語関数オブジェクト。 2 項述語は 2 つの引数を受け取り、最初の要素が 2 番目の要素より小さい場合は **true** 、そうでない場合は **false** を返す必要があります。
+*comp*<br/>
+1 つの要素が別の要素より大きいという意味を定義するユーザー定義の述語関数オブジェクト。 2 項述語は 2 つの引数を受け取り、最初の要素が 2 番目の要素より小さい場合は **true** 、そうでない場合は **false** を返す必要があります。
 
 ### <a name="return-value"></a>戻り値
 
@@ -3716,31 +3847,35 @@ int main() {
 template<class Type>
 constexpr const Type& min(
     const Type& left,
-    const Type& right); 
+    const Type& right);
 template<class Type, class Pr>
 constexpr const Type& min(
     const Type& left,
     const Type& right,
-    BinaryPredicate comp); 
+    BinaryPredicate comp);
 template<class Type>
 constexpr Type min( 
-    initializer_list<Type> ); 
+    initializer_list<Type> );
 template<class Type, class Pr>
 constexpr Type min(
     initializer_list<Type>,
-    BinaryPredicate comp); 
+    BinaryPredicate comp);
 
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*左*比較対象となる 2 つのオブジェクトの最初の数値。
+*left*<br/>
+比較される 2 つのオブジェクトの 1 番目のオブジェクト。
 
-*適切な*比較対象となる 2 つの 2 つ目のオブジェクトします。
+*right*<br/>
+比較される 2 つのオブジェクトの 2 番目のオブジェクト。
 
-*comp* 2 つのオブジェクトを比較するために使用する二項述語。
+*comp*<br/>
+2 つのオブジェクトの比較で使用される二項述語。
 
-*_IList*と比較されるメンバーを含む initializer_list。
+*_IList*<br/>
+比較されるメンバーを含む initializer_list。
 
 ### <a name="return-value"></a>戻り値
 
@@ -3935,11 +4070,14 @@ constexpr ForwardIterator min_element(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*最小の要素を検索する前方反復子の範囲の最初の要素の位置を示します。
+*first*<br/>
+最小の要素の検索範囲内の先頭の要素の位置を示す前方反復子。
 
-*最後*最小の要素を検索する前方反復子の範囲の最後の要素の後ろの 1 つの位置を示します。
+*last*<br/>
+最小の要素の検索範囲内の最後の要素の 1 つ後ろの位置を示す前方反復子。
 
-*comp*の 1 つの要素が他よりも大きいという意味を定義するユーザー定義の述語関数オブジェクト。 2 項述語は 2 つの引数を受け取り、最初の要素が 2 番目の要素より小さい場合は **true** 、そうでない場合は **false** を返す必要があります。
+*comp*<br/>
+1 つの要素が別の要素より大きいという意味を定義するユーザー定義の述語関数オブジェクト。 2 項述語は 2 つの引数を受け取り、最初の要素が 2 番目の要素より小さい場合は **true** 、そうでない場合は **false** を返す必要があります。
 
 ### <a name="return-value"></a>戻り値
 
@@ -4058,7 +4196,7 @@ The smallest element in s1 is: CInt( -3 )
 Vector v1 is ( 0 1 2 3 -2 -4 -6 -8 ).
 The smallest element in v1 is: -8
 The smallest element in v1 under the mod_lesser
- binary predicate is: 0
+binary predicate is: 0
 ```
 
 ## <a name="minmax_element"></a>  minmax_element
@@ -4069,21 +4207,24 @@ The smallest element in v1 under the mod_lesser
 template<class ForwardIterator>
 constexpr pair<ForwardIterator, ForwardIterator> minmax_element(
     ForwardIterator first,
-    ForwardIterator Last); 
+    ForwardIterator Last);
 template<class ForwardIterator, class BinaryPredicate>
 constexpr pair<ForwardIterator, ForwardIterator> minmax_element(
     ForwardIterator  first,
     ForwardIterator Last,
-    BinaryPredicate  comp); 
+    BinaryPredicate  comp);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*範囲の先頭を示す前方反復子。
+*first*<br/>
+範囲の開始位置を示す前方反復子。
 
-*最後*範囲の終了位置を示す前方反復子。
+*last*<br/>
+範囲の終了位置を示す前方反復子。
 
-*comp* order 要素に使用される、省略可能なテスト。
+*comp*<br/>
+要素を並べ替えるのに使用される省略可能なテストです。
 
 ### <a name="return-value"></a>戻り値
 
@@ -4113,31 +4254,35 @@ constexpr pair<ForwardIterator, ForwardIterator> minmax_element(
 template<class Type>
 constexpr pair<const Type&, const Type&> minmax(
     const Type& left,
-    const Type& right); 
+    const Type& right);
 template<class Type, class BinaryPredicate>
 constexpr pair<const Type&, const Type&> minmax(
     const Type& left,
     const Type& right,
-    BinaryPredicate comp); 
+    BinaryPredicate comp);
 template<class Type>
- constexpr pair<Type&, Type&> minmax(
-    initializer_list<Type> ); 
+constexpr pair<Type&, Type&> minmax(
+    initializer_list<Type> );
 template<class Type, class BinaryPredicate>
 constexpr pair<Type&, Type&> minmax(
     initializer_list<Type>,
-    BinaryPredicate comp); 
+    BinaryPredicate comp);
 
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*左*比較対象となる 2 つのオブジェクトの最初の数値。
+*left*<br/>
+比較される 2 つのオブジェクトの 1 番目のオブジェクト。
 
-*適切な*比較対象となる 2 つの 2 つ目のオブジェクトします。
+*right*<br/>
+比較される 2 つのオブジェクトの 2 番目のオブジェクト。
 
-*comp* 2 つのオブジェクトを比較するために使用する二項述語。
+*comp*<br/>
+2 つのオブジェクトの比較で使用される二項述語。
 
-*_IList*と比較されるメンバーを含む initializer_list。
+*_IList*<br/>
+比較されるメンバーを含む initializer_list。
 
 ### <a name="remarks"></a>Remarks
 
@@ -4190,15 +4335,20 @@ mismatch(
 
 ### <a name="parameters"></a>パラメーター
 
-*First1*をテストする入力反復子の最初の範囲内の最初の要素の位置を示します。
+*first1*<br/>
+テストする 1 つ目の範囲内の最初の要素の位置を示す入力反復子。
 
-*Last1*をテストする入力反復子の位置を示す最初の範囲の最後の要素。
+*last1*<br/>
+テストする 1 つ目の範囲内の最後の要素の 1 つ後の位置を示す入力反復子。
 
-*First2*をテストする入力反復子の 2 番目の範囲内の最初の要素の位置を示します。
+*first2*<br/>
+テストする 2 つ目の範囲内の最初の要素の位置を示す入力反復子。
 
-*Last2*をテストする入力反復子の 2 番目の範囲内の 1 つ後ろの最後の要素の位置を示します。
+*last2*<br/>
+テストする 2 つ目の範囲内の最後の要素の 1 つ後の位置を示す入力反復子。
 
-*Comp*各範囲の現在の要素を比較し、等しいかどうかを決定します。 ユーザー定義の述語関数オブジェクト。 条件が満たされている場合は **true**、満たされていない場合は **false** を返します。
+*コンポジション*<br/>
+各範囲内の現在の要素を比較し、それらが等しいかどうかを判定するための、ユーザー定義の述語関数オブジェクト。 条件が満たされている場合は **true**、満たされていない場合は **false** を返します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -4320,16 +4470,19 @@ template<class InputIterator, class OutputIterator>
 OutputIterator move(
     InputIterator first,
     InputIterator last,
-    OutputIterator dest); 
+    OutputIterator dest);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*移動する要素の範囲の開始位置を示す入力反復子。
+*first*<br/>
+移動する要素の範囲の先頭を示す入力反復子。
 
-*最後*移動する要素の範囲の終了位置を示す入力反復子。
+*last*<br/>
+移動する要素の範囲の最後を示す入力反復子。
 
-*dest*移動された要素を格納する出力反復子。
+*dest*<br/>
+移動された要素が格納される出力反復子。
 
 ### <a name="remarks"></a>Remarks
 
@@ -4350,11 +4503,14 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*から要素の移動範囲の開始を示す反復子。
+*first*<br/>
+要素の移動元の範囲の先頭を指定する反復子。
 
-*最後*から要素の移動範囲の終了位置を示す反復子。 この要素は移動されません。
+*last*<br/>
+要素の移動元の範囲の最後を指定する反復子。 この要素は移動されません。
 
-*destEnd*ターゲット範囲内の 1 つ後ろの最後の要素の位置を示す双方向反復子。
+*destEnd*<br/>
+移動先範囲の最後の要素の 1 つ後ろの位置を示す双方向反復子。
 
 ### <a name="remarks"></a>Remarks
 
@@ -4377,11 +4533,14 @@ bool next_permutation(BidirectionalIterator first, BidirectionalIterator last, B
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*双方向反復子を範囲内の最初の要素の位置を指定する順序を変えます。
+*first*<br/>
+順序を変える範囲内の最初の要素の位置を指す双方向反復子。
 
-*最後*双方向反復子をいずれかの過去の最後の要素範囲内の位置を指すを変えます。
+*last*<br/>
+順序を変える範囲内の最後の要素の 1 つ後ろの位置を指す双方向反復子。
 
-*comp*順序の一連の要素によって満たされるように比較の基準を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
+*comp*<br/>
+順序内の次の要素によって満たされる比較条件を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -4517,21 +4676,21 @@ The original deque of CInts is deq1 = ( CInt( 5 ), CInt( 1 ), CInt( 10 ) ).
 The lexicographically next permutation exists and has
 replaced the original ordering of the sequence in deq1.
 After one application of next_permutation,
- deq1 = ( CInt( 5 ), CInt( 10 ), CInt( 1 ) ).
+deq1 = ( CInt( 5 ), CInt( 10 ), CInt( 1 ) ).
 
 Vector v1 is ( -3 -2 -1 0 1 2 3 ).
 After the first next_permutation, vector v1 is:
- v1 = ( -3 -2 -1 0 1 3 2 ).
+v1 = ( -3 -2 -1 0 1 3 2 ).
 After another next_permutation of vector v1,
- v1 =   ( -3 -2 -1 0 2 1 3 ).
+v1 =   ( -3 -2 -1 0 2 1 3 ).
 After another next_permutation of vector v1,
- v1 =   ( -3 -2 -1 0 2 3 1 ).
+v1 =   ( -3 -2 -1 0 2 3 1 ).
 After another next_permutation of vector v1,
- v1 =   ( -3 -2 -1 0 3 1 2 ).
+v1 =   ( -3 -2 -1 0 3 1 2 ).
 After another next_permutation of vector v1,
- v1 =   ( -3 -2 -1 0 3 2 1 ).
+v1 =   ( -3 -2 -1 0 3 2 1 ).
 After another next_permutation of vector v1,
- v1 =   ( -3 -2 -1 1 0 2 3 ).
+v1 =   ( -3 -2 -1 1 0 2 3 ).
 ```
 
 ## <a name="nth_element"></a>  nth_element
@@ -4543,19 +4702,23 @@ template<class RandomAccessIterator>
 void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomAccessIterator last);
 
 template<class RandomAccessIterator, class BinaryPredicate>
- void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomAccessIterator last, BinaryPredicate comp);
+void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomAccessIterator last, BinaryPredicate comp);
 
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*ランダム アクセス反復子の範囲の最初の要素の位置を示すパーティションに分割します。
+*first*<br/>
+パーティション分割される範囲内の最初の要素の位置を示すランダム アクセス反復子。
 
-*_Nth*ランダム アクセス反復子を要素の位置に、パーティションの境界で正しく並べ替えられます。
+*_Nth*<br/>
+パーティションの境界で正しく並べ替えられる要素の位置を示すランダム アクセス反復子。
 
-*最後*ランダム アクセス反復子を過去の範囲の最後の要素の位置を示すパーティションに分割します。
+*last*<br/>
+パーティション分割される範囲内の最後の要素の 1 つ後ろの位置を示すランダム アクセス反復子。
 
-*comp*順序の一連の要素によって満たされるように比較の基準を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
+*comp*<br/>
+順序内の次の要素によって満たされる比較条件を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -4644,11 +4807,14 @@ bool none_of(InputIterator first, InputIterator last, BinaryPredicate comp);
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*条件の要素の範囲のチェックを開始する位置を示す入力反復子。
+*first*<br/>
+条件の要素の範囲のチェックを開始する位置を示す入力反復子。
 
-*最後*要素の範囲の終了位置を示す入力反復子。
+*last*<br/>
+要素の範囲の最後を示す入力反復子。
 
-*comp*テストする条件。 これは、条件を定義するユーザー定義の述語関数オブジェクトによって提供されます。 述語は 1 つの引数を取り、**true** または **false** を返します。
+*comp*<br/>
+テストする条件。 これは、条件を定義するユーザー定義の述語関数オブジェクトによって提供されます。 述語は 1 つの引数を取り、**true** または **false** を返します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -4680,13 +4846,17 @@ void partial_sort(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*ランダム アクセス反復子の範囲の最初の要素の位置を並べ替えます。
+*first*<br/>
+並べ替えられる範囲内の最初の要素の位置を示すランダム アクセス反復子。
 
-*sortEnd*ランダム アクセス反復子を過去のサブ範囲の最後の要素の位置を示す並べ替えられます。
+*sortEnd*<br/>
+並べ替えられるサブ範囲内の最後の要素の 1 つ後ろの位置を示すランダム アクセス反復子。
 
-*最後*ランダム アクセス反復子、後ろの位置 1 つの最後の要素の範囲の部分的に並べ替えられます。
+*last*<br/>
+部分的に並べ替えられる範囲内の最後の要素の 1 つ後ろの位置を示すランダム アクセス反復子。
 
-*comp*順序の一連の要素によって満たされるように比較の基準を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
+*comp*<br/>
+順序内の次の要素によって満たされる比較条件を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -4750,7 +4920,7 @@ int main()
 
    // A user-defined (UD) binary predicate can also be used
    partial_sort(v1.begin( ), v1.begin( ) + 8, v1.end( ),
- UDgreater );
+UDgreater );
    cout << "Partially resorted (UDgreater) vector:\n v1 = ( " ;
    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
       cout << *Iter1 << " ";
@@ -4760,13 +4930,13 @@ int main()
 
 ```Output
 Original vector:
- v1 = ( 0 2 4 6 8 10 1 3 5 7 9 11 )
+v1 = ( 0 2 4 6 8 10 1 3 5 7 9 11 )
 Partially sorted vector:
- v1 = ( 0 1 2 3 4 5 10 8 6 7 9 11 )
+v1 = ( 0 1 2 3 4 5 10 8 6 7 9 11 )
 Partially resorted (greater) vector:
- v1 = ( 11 10 9 8 0 1 2 3 4 5 6 7 )
+v1 = ( 11 10 9 8 0 1 2 3 4 5 6 7 )
 Partially resorted (UDgreater) vector:
- v1 = ( 11 10 9 8 7 6 5 4 0 1 2 3 )
+v1 = ( 11 10 9 8 7 6 5 4 0 1 2 3 )
 ```
 
 ## <a name="partial_sort_copy"></a>  partial_sort_copy
@@ -4792,15 +4962,20 @@ RandomAccessIterator partial_sort_copy(
 
 ### <a name="parameters"></a>パラメーター
 
-*first1*ソース範囲の最初の要素の位置を示す入力反復子。
+*first1*<br/>
+ソース範囲内の先頭の要素の位置を示す入力反復子。
 
-*last1*ソース範囲の最後の要素は、過去の 1 つ位置を示す入力反復子。
+*last1*<br/>
+ソース範囲内の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*first2*並べ替えられたターゲット範囲内の最初の要素の位置を示すランダム アクセス反復子。
+*first2*<br/>
+並べ替えられたターゲット範囲内の最初の要素の位置を示すランダム アクセス反復子。
 
-*last2*後ろの位置 1 つの最後の要素の並べ替えられたターゲット範囲を示すランダム アクセス反復子。
+*last2*<br/>
+並べ替えられたターゲット範囲内の最後の要素の 1 つ後ろの位置を示すランダム アクセス反復子。
 
-*comp*満たされる条件を実行する場合は 2 つの要素を定義するユーザー定義の述語関数オブジェクトと同じものとして。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
+*comp*<br/>
+2 つの要素が等価であると見なされた場合に条件が満たされると定義する、ユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -4903,11 +5078,14 @@ BidirectionalIterator partition(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*双方向反復子の範囲の最初の要素の位置をパーティション分割します。
+*first*<br/>
+パーティション分割される範囲内の最初の要素の位置を示す双方向反復子。
 
-*最後*双方向反復子を過去の範囲の最後の要素の位置を示すパーティションに分割します。
+*last*<br/>
+パーティション分割される範囲内の最後の要素の 1 つ後ろの位置を示す双方向反復子。
 
-*comp*要素は、分類する場合に満たされるようにする条件を定義するユーザー定義の述語関数オブジェクト。 述語は 1 つの引数を取り、**true** または **false** を返します。
+*comp*<br/>
+要素が分類される場合に満たされる条件を定義するユーザー定義の述語関数オブジェクト。 述語は 1 つの引数を取り、**true** または **false** を返します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -4972,20 +5150,25 @@ pair<OutputIterator1, OutputIterator2>
     InputIterator last,
     OutputIterator1 dest1,
     OutputIterator2 dest2,
-    Predicate pred); 
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*条件をチェックする範囲の開始位置を示す入力反復子。
+*first*<br/>
+条件をチェックする範囲の先頭を指定する入力反復子。
 
-*最後*範囲の終了位置を示す入力反復子。
+*last*<br/>
+範囲の終了位置を示す入力反復子。
 
-*dest1*条件は true を返す要素をコピーするために使用する出力反復子を使用してテスト *_Pred*します。
+*dest1*<br/>
+条件は true を返す要素をコピーするために使用する出力反復子を使用してテスト *_Pred*します。
 
-*れた dest2*条件 false を返す要素をコピーするために使用する出力反復子を使用してテスト *_Pred*します。
+*れた dest2*<br/>
+使用条件の場合は false を返す要素をコピーする出力反復子を使用してテスト *_Pred*します。
 
-*_Pred*テストする条件。 これは、テストする条件を定義するユーザー定義の述語関数オブジェクトによって提供されます。 述語は 1 つの引数を取り、**true** または **false** を返します。
+*_Pred*<br/>
+テストする条件。 これは、テストする条件を定義するユーザー定義の述語関数オブジェクトによって提供されます。 述語は 1 つの引数を取り、**true** または **false** を返します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -5000,16 +5183,19 @@ template<class ForwardIterator, class Predicate>
 ForwardIterator partition_point(
     ForwardIterator first,
     ForwardIterator last,
-    Predicate comp); 
+    Predicate comp);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*A`ForwardIterator`条件をチェックする範囲の開始を示します。
+*first*<br/>
+条件をチェックする範囲の先頭を指定する `ForwardIterator`。
 
-*最後*A`ForwardIterator`範囲の末尾を示します。
+*last*<br/>
+範囲の終了位置を示す `ForwardIterator`。
 
-*comp*テストする条件。 これは、検索対象の要素によって満たされる条件を定義するユーザー定義の述語関数オブジェクトによって提供されます。 述語は 1 つの引数を取り、**true** または **false** を返します。
+*comp*<br/>
+テストする条件。 これは、検索対象の要素によって満たされる条件を定義するユーザー定義の述語関数オブジェクトによって提供されます。 述語は 1 つの引数を取り、**true** または **false** を返します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -5034,11 +5220,14 @@ void pop_heap(RandomAccessIterator first, RandomAccessIterator last, BinaryPredi
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*ヒープ内の最初の要素の位置を示すランダム アクセス反復子。
+*first*<br/>
+ヒープ内の最初の要素の位置を示すランダム アクセス反復子。
 
-*最後*ヒープで過去の最後の要素 1 つ位置を示すランダム アクセス反復子。
+*last*<br/>
+ヒープ内の最後の要素の 1 つ後ろの位置を示すランダム アクセス反復子。
 
-*comp*を定義するユーザー定義の述語関数オブジェクトを検知する 1 つの要素は他よりも少なくなります。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
+*comp*<br/>
+1 つの要素が別の要素より小さいという意味を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -5140,11 +5329,14 @@ bool prev_permutation(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*双方向反復子を範囲内の最初の要素の位置を指定する順序を変えます。
+*first*<br/>
+順序を変える範囲内の最初の要素の位置を指す双方向反復子。
 
-*最後*双方向反復子をいずれかの過去の最後の要素範囲内の位置を指すを変えます。
+*last*<br/>
+順序を変える範囲内の最後の要素の 1 つ後ろの位置を指す双方向反復子。
 
-*comp*順序の一連の要素によって満たされるように比較の基準を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
+*comp*<br/>
+順序内の次の要素によって満たされる比較条件を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -5272,24 +5464,24 @@ int main() {
 ```Output
 The original deque of CInts is deq1 = ( CInt( 1 ), CInt( 5 ), CInt( 10 ) ).
 The lexicographically previous permutation doesn't exist
- and the lexicographically smallest permutation
- has replaced the original ordering of the sequence in deq1.
+and the lexicographically smallest permutation
+has replaced the original ordering of the sequence in deq1.
 After one application of prev_permutation,
- deq1 = ( CInt( 10 ), CInt( 5 ), CInt( 1 ) ).
+deq1 = ( CInt( 10 ), CInt( 5 ), CInt( 1 ) ).
 
 Vector v1 is ( -3 -2 -1 0 1 2 3 ).
 After the first prev_permutation, vector v1 is:
- v1 = ( -3 -2 0 3 2 1 -1 ).
+v1 = ( -3 -2 0 3 2 1 -1 ).
 After another prev_permutation of vector v1,
- v1 =   ( -3 -2 0 3 -1 2 1 ).
+v1 =   ( -3 -2 0 3 -1 2 1 ).
 After another prev_permutation of vector v1,
- v1 =   ( -3 -2 0 3 -1 1 2 ).
+v1 =   ( -3 -2 0 3 -1 1 2 ).
 After another prev_permutation of vector v1,
- v1 =   ( -3 -2 0 2 3 1 -1 ).
+v1 =   ( -3 -2 0 2 3 1 -1 ).
 After another prev_permutation of vector v1,
- v1 =   ( -3 -2 0 2 -1 3 1 ).
+v1 =   ( -3 -2 0 2 -1 3 1 ).
 After another prev_permutation of vector v1,
- v1 =   ( -3 -2 0 2 -1 1 3 ).
+v1 =   ( -3 -2 0 2 -1 1 3 ).
 ```
 
 ## <a name="push_heap"></a>  push_heap
@@ -5307,11 +5499,14 @@ void push_heap( RandomAccessIterator first, RandomAccessIterator last, BinaryPre
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*ヒープ内の最初の要素の位置を示すランダム アクセス反復子。
+*first*<br/>
+ヒープ内の最初の要素の位置を示すランダム アクセス反復子。
 
-*最後*後ろをヒープに変換される範囲の最後の要素の 1 つの位置を示すランダム アクセス反復子。
+*last*<br/>
+ヒープに変換される範囲内の最後の要素の 1 つ後ろの位置を示すランダム アクセス反復子。
 
-*comp*を定義するユーザー定義の述語関数オブジェクトを検知する 1 つの要素は他よりも少なくなります。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
+*comp*<br/>
+1 つの要素が別の要素より小さいという意味を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -5408,17 +5603,20 @@ Std::random_shuffle() 関数は非推奨、置き換え[std::shuffle](../standar
 
 ```cpp
 template<class ForwardIterator, class Type>
- ForwardIterator remove(ForwardIterator first, ForwardIterator last, const Type& val);
+ForwardIterator remove(ForwardIterator first, ForwardIterator last, const Type& val);
 
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*元となる要素が削除される範囲内の最初の要素の位置を示す前方反復子。
+*first*<br/>
+要素が削除される範囲内の先頭の要素の位置を示す前方反復子。
 
-*最後*元となる要素が削除される範囲の最後の要素の後ろの 1 つの位置を示す前方反復子。
+*last*<br/>
+要素が削除される範囲内の末尾の要素の 1 つ後の位置を示す前方反復子。
 
-*val*を範囲から削除する値。
+*val*<br/>
+範囲から削除される値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -5488,19 +5686,23 @@ int main() {
 
 ```cpp
 template<class InputIterator, class OutputIterator, class Type>
- OutputIterator remove_copy(InputIterator first, InputIterator last, OutputIterator result, const Type& val);
+OutputIterator remove_copy(InputIterator first, InputIterator last, OutputIterator result, const Type& val);
 
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*元となる要素が削除される範囲内の最初の要素の位置を示す入力反復子。
+*first*<br/>
+要素が削除される範囲内の最初の要素の位置を示す入力反復子。
 
-*最後*元となる要素が削除される範囲の最後の要素の後ろの 1 つの位置を示す入力反復子。
+*last*<br/>
+要素が削除される範囲内の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*結果*要素が削除されるターゲット範囲内の最初の要素の位置を示す出力反復子。
+*結果*<br/>
+要素が削除されるターゲット範囲内の最初の要素の位置を示す出力反復子。
 
-*val*を範囲から削除する値。
+*val*<br/>
+範囲から削除される値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -5573,13 +5775,17 @@ OutputIterator remove_copy_if(InputIterator first, InputIterator Last, OutputIte
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*元となる要素が削除される範囲内の最初の要素の位置を示す入力反復子。
+*first*<br/>
+要素が削除される範囲内の最初の要素の位置を示す入力反復子。
 
-*最後*元となる要素が削除される範囲の最後の要素の後ろの 1 つの位置を示す入力反復子。
+*last*<br/>
+要素が削除される範囲内の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*結果*要素が削除されるターゲット範囲内の最初の要素の位置を示す出力反復子。
+*結果*<br/>
+要素が削除されるターゲット範囲内の最初の要素の位置を示す出力反復子。
 
-*_Pred*満たす必要がある単項述語は、要素の値が置き換えられます。
+*_Pred*<br/>
+満たす必要のある単項述語は、置き換えられる要素の値です。
 
 ### <a name="return-value"></a>戻り値
 
@@ -5664,11 +5870,14 @@ ForwardIterator remove_if(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*元となる要素が削除される範囲内の最初の要素の位置を指す前方反復子。
+*first*<br/>
+要素が削除される範囲内の最初の要素の位置を指定する前方反復子。
 
-*最後*過去の元の要素が削除される範囲の最後の要素の 1 つの位置を指す前方反復子。
+*last*<br/>
+要素が削除される範囲内の最後の要素の 1 つ後ろの位置を指定する前方反復子。
 
-*_Pred*満たす必要がある単項述語は、要素の値が置き換えられます。
+*_Pred*<br/>
+満たす必要のある単項述語は、置き換えられる要素の値です。
 
 ### <a name="return-value"></a>戻り値
 
@@ -5751,13 +5960,17 @@ void replace(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*元となる要素が置き換えられる範囲内の最初の要素の位置を指す前方反復子。
+*first*<br/>
+要素が置き換えられる範囲内の最初の要素の位置を指定する前方反復子。
 
-*最後*過去の元の要素が置き換えられる範囲の最後の要素の 1 つの位置を指す前方反復子。
+*last*<br/>
+要素が置き換えられる範囲内の最後の要素の 1 つ後ろの位置を指定する前方反復子。
 
-*_OldVal*置き換えられる要素の古い値。
+*_OldVal*<br/>
+置き換えられる要素の古い値。
 
-*_NewVal*古い値を持つ要素に割り当てられる新しい値。
+*_NewVal*<br/>
+古い値を持つ要素に割り当てられる新しい値。
 
 ### <a name="remarks"></a>Remarks
 
@@ -5823,15 +6036,20 @@ OutputIterator replace_copy(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*元となる要素が置き換えられる範囲内で最初の要素の位置を指し示す入力反復子。
+*first*<br/>
+要素が置き換えられる範囲内の最初の要素の位置を指定する入力反復子。
 
-*最後*元となる要素が置き換えられる範囲内で過去の最後の要素いずれかの位置を指し示す入力反復子。
+*last*<br/>
+要素が置き換えられる範囲内の最後の要素の 1 つ後ろの位置を指定する入力反復子。
 
-*結果*変更されたシーケンスの要素のコピー先ターゲット範囲の最初の要素を指す出力反復子。
+*結果*<br/>
+変更された要素シーケンスのコピー先ターゲット範囲の、最初の要素を指定する出力反復子。
 
-*_OldVal*置き換えられる要素の古い値。
+*_OldVal*<br/>
+置き換えられる要素の古い値。
 
-*_NewVal*古い値を持つ要素に割り当てられる新しい値。
+*_NewVal*<br/>
+古い値を持つ要素に割り当てられる新しい値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -5921,15 +6139,20 @@ OutputIterator replace_copy_if(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*元となる要素が置き換えられる範囲内で最初の要素の位置を指し示す入力反復子。
+*first*<br/>
+要素が置き換えられる範囲内の最初の要素の位置を指定する入力反復子。
 
-*最後*元となる要素が置き換えられる範囲内で過去の最後の要素いずれかの位置を指し示す入力反復子。
+*last*<br/>
+要素が置き換えられる範囲内の最後の要素の 1 つ後ろの位置を指定する入力反復子。
 
-*結果*要素のコピー先ターゲット範囲の最初の要素の位置を指し示す出力反復子。
+*結果*<br/>
+要素のコピー先ターゲット範囲内の最初の要素の位置を指し示す出力反復子。
 
-*_Pred*満たす必要がある単項述語は、要素の値が置き換えられます。
+*_Pred*<br/>
+満たす必要のある単項述語は、置き換えられる要素の値です。
 
-*val*古い値が述語を満たす要素に割り当てられる新しい値。
+*val*<br/>
+古い値が述語を満たす要素に割り当てられている新しい値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -6025,13 +6248,17 @@ void replace_if(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*元となる要素が置き換えられる範囲内の最初の要素の位置を指す前方反復子。
+*first*<br/>
+要素が置き換えられる範囲内の最初の要素の位置を指定する前方反復子。
 
-*最後*過去の元の要素が置き換えられる範囲の最後の要素の 1 つの位置を指す反復子。
+*last*<br/>
+要素が置き換えられる範囲内の最後の要素の 1 つ後ろの位置を指定する反復子。
 
-*_Pred*満たす必要がある単項述語は、要素の値が置き換えられます。
+*_Pred*<br/>
+満たす必要のある単項述語は、置き換えられる要素の値です。
 
-*val*古い値が述語を満たす要素に割り当てられる新しい値。
+*val*<br/>
+古い値が述語を満たす要素に割り当てられている新しい値。
 
 ### <a name="remarks"></a>Remarks
 
@@ -6101,9 +6328,11 @@ void reverse(BidirectionalIterator first, BidirectionalIterator last);
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*要素変えるされる範囲内の最初の要素の位置を指す双方向反復子。
+*first*<br/>
+要素の順序を変える範囲内の最初の要素の位置を指し示す双方向反復子。
 
-*最後*この要素を変える範囲内で過去の最後の要素いずれかの位置を指す双方向反復子。
+*last*<br/>
+要素の順序を変える範囲内の、最後の要素の 1 つ後ろの位置を指し示す入力反復子。
 
 ### <a name="remarks"></a>Remarks
 
@@ -6146,9 +6375,9 @@ int main() {
 
 ```Output
 The original vector v1 is:
- ( 0 1 2 3 4 5 6 7 8 9 ).
+( 0 1 2 3 4 5 6 7 8 9 ).
 The modified vector v1 with values reversed is:
- ( 9 8 7 6 5 4 3 2 1 0 ).
+( 9 8 7 6 5 4 3 2 1 0 ).
 ```
 
 ## <a name="reverse_copy"></a>  reverse_copy
@@ -6166,11 +6395,14 @@ OutputIterator reverse_copy(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*要素変えるされるソース範囲内の最初の要素の位置を指す双方向反復子。
+*first*<br/>
+要素の順序を変えるソース範囲内の最初の要素の位置を指し示す双方向反復子。
 
-*最後*要素変えるされるソース範囲内で過去の最後の要素いずれかの位置を指す双方向反復子。
+*last*<br/>
+要素の順序を変えるソース範囲内の、最後の要素の 1 つ後ろの位置を指し示す入力反復子。
 
-*結果*要素のコピー先ターゲット範囲の最初の要素の位置を指し示す出力反復子。
+*結果*<br/>
+要素のコピー先ターゲット範囲内の最初の要素の位置を指し示す出力反復子。
 
 ### <a name="return-value"></a>戻り値
 
@@ -6226,7 +6458,7 @@ int main() {
 
 ```cpp
 template<class ForwardIterator>
- void rotate(
+void rotate(
     ForwardIterator first,
     ForwardIterator middle,
     ForwardIterator last);
@@ -6235,11 +6467,14 @@ template<class ForwardIterator>
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*回転する前方反復子の範囲の最初の要素の位置を示します。
+*first*<br/>
+回転対象の範囲内の最初の要素の位置を示す前方反復子。
 
-*中間*2 番目の部分範囲の最初の部分と交換される要素が範囲内の最初の要素の位置のアドレスの範囲内で境界を定義する前方反復子。
+*中間*<br/>
+範囲の境界を定義する前方反復子。範囲の最初の部分にある要素と交換される要素が含まれる 2 番目の部分の最初の要素の位置を示します。
 
-*最後*回転する前方反復子の位置を示す過去の最後の要素範囲内です。
+*前の*<br/>
+回転対象の範囲内の最後の要素の 1 つ後ろの位置を示す前方反復子。
 
 ### <a name="remarks"></a>Remarks
 
@@ -6309,17 +6544,17 @@ Vector v1 is ( -3 -2 -1 0 1 2 3 4 5 ).
 After rotating, vector v1 is ( 0 1 2 3 4 5 -3 -2 -1 ).
 The original deque d1 is ( 0 1 2 3 4 5 ).
 After the rotation of a single deque element to the back,
- d1 is   ( 1 2 3 4 5 0 ).
+d1 is   ( 1 2 3 4 5 0 ).
 After the rotation of a single deque element to the back,
- d1 is   ( 2 3 4 5 0 1 ).
+d1 is   ( 2 3 4 5 0 1 ).
 After the rotation of a single deque element to the back,
- d1 is   ( 3 4 5 0 1 2 ).
+d1 is   ( 3 4 5 0 1 2 ).
 After the rotation of a single deque element to the back,
- d1 is   ( 4 5 0 1 2 3 ).
+d1 is   ( 4 5 0 1 2 3 ).
 After the rotation of a single deque element to the back,
- d1 is   ( 5 0 1 2 3 4 ).
+d1 is   ( 5 0 1 2 3 4 ).
 After the rotation of a single deque element to the back,
- d1 is   ( 0 1 2 3 4 5 ).
+d1 is   ( 0 1 2 3 4 5 ).
 ```
 
 ## <a name="rotate_copy"></a>  rotate_copy
@@ -6338,13 +6573,16 @@ OutputIterator rotate_copy(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*回転する前方反復子の範囲の最初の要素の位置を示します。
+*first*<br/>
+回転対象の範囲内の最初の要素の位置を示す前方反復子。
 
-*中間*2 番目の部分範囲の最初の部分と交換される要素が範囲内の最初の要素の位置のアドレスの範囲内で境界を定義する前方反復子。
+*中間*<br/>
+範囲の境界を定義する前方反復子。範囲の最初の部分にある要素と交換される要素が含まれる 2 番目の部分の最初の要素の位置を示します。
 
 _*最後*回転する前方反復子の位置を示す過去の最後の要素範囲内です。
 
-*結果*ターゲット範囲の最初の要素の位置を示す出力反復子。
+*結果*<br/>
+ターゲット範囲の最初の要素の位置を示す出力反復子。
 
 ### <a name="return-value"></a>戻り値
 
@@ -6439,15 +6677,20 @@ ForwardIterator1 search(
 
 ### <a name="parameters"></a>パラメーター
 
-*First1*検索する前方反復子の範囲の最初の要素の位置を示します。
+*first1*<br/>
+検索範囲内の先頭の要素の位置を示す前方反復子。
 
-*last1*検索する前方反復子の位置を示す過去の最後の要素範囲内です。
+*last1*<br/>
+検索範囲の最後の要素の 1 つ後ろの位置を示す前方反復子。
 
-*first2*一致する前方反復子の範囲の最初の要素の位置を示します。
+*first2*<br/>
+照合範囲内の先頭の要素の位置を示す前方反復子。
 
-*last2*一致する前方反復子の位置を示す過去の最後の要素範囲内です。
+*last2*<br/>
+照合範囲の最後の要素の 1 つ後ろの位置を示す前方反復子。
 
-*comp*満たされる条件を実行する場合は 2 つの要素を定義するユーザー定義の述語関数オブジェクトと同じものとして。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
+*comp*<br/>
+2 つの要素が等価であると見なされた場合に条件が満たされると定義する、ユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -6553,10 +6796,10 @@ Vector v1 = ( 0 5 10 15 20 25 0 5 10 15 20 25 )
 List L1 = ( 20 25 )
 Vector v2 = ( 20 30 40 )
 There is at least one match of L1 in v1
- and the first one begins at position 4.
+and the first one begins at position 4.
 There is a sequence of elements in v1 that are equivalent
- to those in v2 under the binary predicate twice
- and the first one begins at position 2.
+to those in v2 under the binary predicate twice
+and the first one begins at position 2.
 ```
 
 ## <a name="search_n"></a>  search_n
@@ -6583,15 +6826,20 @@ ForwardIterator1 search_n(
 
 ### <a name="parameters"></a>パラメーター
 
-*First1*検索する前方反復子の範囲の最初の要素の位置を示します。
+*first1*<br/>
+検索範囲内の先頭の要素の位置を示す前方反復子。
 
-*last1*検索する前方反復子の位置を示す過去の最後の要素範囲内です。
+*last1*<br/>
+検索範囲の最後の要素の 1 つ後ろの位置を示す前方反復子。
 
-*カウント*検索対象のサブシーケンスのサイズ。
+*count*<br/>
+検索対象のサブシーケンスのサイズ。
 
-*val*検索対象のシーケンス内の要素の値。
+*val*<br/>
+検索対象のシーケンス内の要素の値。
 
-*comp*満たされる条件を実行する場合は 2 つの要素を定義するユーザー定義の述語関数オブジェクトと同じものとして。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
+*comp*<br/>
+2 つの要素が等価であると見なされた場合に条件が満たされると定義する、ユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -6683,9 +6931,9 @@ int main()
 ```Output
 Vector v1 = ( 0 5 10 15 20 25 5 5 5 0 5 10 15 20 25 10 10 10 )
 There is at least one match of a sequence ( 5 5 5 )
- in v1 and the first one begins at position 6.
+in v1 and the first one begins at position 6.
 There is a match of a sequence ( 5 5 5 ) under the equivalence
- predicate one_half in v1 and the first one begins at position 15.
+predicate one_half in v1 and the first one begins at position 15.
 ```
 
 ## <a name="set_difference"></a>  set_difference
@@ -6713,17 +6961,23 @@ OutputIterator set_difference(
 
 ### <a name="parameters"></a>パラメーター
 
-*first1*に結合され、2 つのソース範囲の差を表す単一の範囲に並べ替えられる 2 つの並べ替えられたソース範囲の最初の最初の要素の位置を示す入力反復子。
+*first1*<br/>
+2 つのソース範囲の差を表すために単一の範囲に結合され並べ替えられる 2 つの並べ替え済みソース範囲の、最初の範囲の最初の要素の位置を示す入力反復子。
 
-*last1*米国して 2 つのソース範囲の差を表す単一の範囲に分類する入力反復子の位置を示す最後の要素の最初の 2 つの並べ替えられたソース範囲の。
+*last1*<br/>
+2 つのソース範囲の差を表すために単一の範囲に結合され並べ替えられる 2 つの並べ替え済みソース範囲の、最初の範囲の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*first2*米国して 2 つのソース範囲の差を表す単一の範囲に分類する入力反復子、並べ替えの 2 つの連続する 2 番目の内の最初の要素の位置のソース範囲のアドレスを指定します。
+*first2*<br/>
+2 つのソース範囲の差を表すために単一の範囲に結合され並べ替えられる 2 つの連続する並べ替え済みソース範囲の、2 番目の範囲の最初の要素の位置を示す入力反復子。
 
-*last2*米国して 2 つのソース範囲の差を表す単一の範囲に分類する入力反復子は 1 つの後ろの位置の最後の要素の 2 つの連続する 2 番目の並べ替えられたソース範囲のアドレスを指定します。
+*last2*<br/>
+2 つのソース範囲の差を表すために単一の範囲に結合され並べ替えられる 2 つの連続する並べ替え済みソース範囲の、2 番目の範囲の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*結果*2 つのソース範囲のターゲット範囲の最初の要素の位置を示す出力反復子が 2 つのソース範囲の差を表す単一の並べ替えられた範囲に結合します。
+*結果*<br/>
+2 つのソース範囲の差を表すために 2 つのソース範囲が単一の並べ替え済みの範囲に結合されるターゲット範囲の、最初の要素の位置を示す出力反復子。
 
-*comp*の 1 つの要素が他よりも大きいという意味を定義するユーザー定義の述語関数オブジェクト。 2 項述語は 2 つの引数を受け取り、最初の要素が 2 番目の要素より小さい場合は **true** 、そうでない場合は **false** を返す必要があります。
+*comp*<br/>
+1 つの要素が別の要素より大きいという意味を定義するユーザー定義の述語関数オブジェクト。 2 項述語は 2 つの引数を受け取り、最初の要素が 2 番目の要素より小さい場合は **true** 、そうでない場合は **false** を返す必要があります。
 
 ### <a name="return-value"></a>戻り値
 
@@ -6887,17 +7141,22 @@ OutputIterator set_intersection(
 
 ### <a name="parameters"></a>パラメーター
 
-*first1*に結合され、2 つのソース範囲の交差を表す単一の範囲に並べ替えられる 2 つの並べ替えられたソース範囲の最初の最初の要素の位置を示す入力反復子。
+*first1*<br/>
+2 つのソース範囲の交差を表すために単一の範囲に結合され並べ替えられる 2 つの並べ替え済みソース範囲の、最初の範囲の最初の要素の位置を示す入力反復子。
 
-*last1*米国して 2 つのソース範囲の交差を表す単一の範囲に分類する入力反復子の位置を示す最後の要素の最初の 2 つの並べ替えられたソース範囲の。
+*last1*<br/>
+2 つのソース範囲の交差を表すために単一の範囲に結合され並べ替えられる 2 つの並べ替え済みソース範囲の、最初の範囲の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*first2*米国して 2 つのソース範囲の交差を表す単一の範囲に分類する入力反復子、並べ替えの 2 つの連続する 2 番目の内の最初の要素の位置のソース範囲のアドレスを指定します。
+*first2*<br/>
+2 つのソース範囲の交差を表すために単一の範囲に結合され並べ替えられる 2 つの連続する並べ替え済みソース範囲の、2 番目の範囲の最初の要素の位置を示す入力反復子。
 
-*last2*米国して 2 つのソース範囲の交差を表す単一の範囲に分類する入力反復子は 1 つの後ろの位置の最後の要素の 2 つの連続する 2 番目の並べ替えられたソース範囲のアドレスを指定します。
+*last2*<br/>
+2 つのソース範囲の交差を表すために単一の範囲に結合され並べ替えられる 2 つの連続する並べ替え済みソース範囲の、2 番目の範囲の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
 **_** *結果*2 つのソース範囲のターゲット範囲の最初の要素の位置を示す出力反復子が 2 つのソースの交差を表す単一の並べ替えられた範囲に結合範囲です。
 
-*comp*の 1 つの要素が他よりも大きいという意味を定義するユーザー定義の述語関数オブジェクト。 2 項述語は 2 つの引数を受け取り、最初の要素が 2 番目の要素より小さい場合は **true** 、そうでない場合は **false** を返す必要があります。
+*comp*<br/>
+1 つの要素が別の要素より大きいという意味を定義するユーザー定義の述語関数オブジェクト。 2 項述語は 2 つの引数を受け取り、最初の要素が 2 番目の要素より小さい場合は **true** 、そうでない場合は **false** を返す必要があります。
 
 ### <a name="return-value"></a>戻り値
 
@@ -7036,7 +7295,7 @@ int main() {
 
 ```cpp
 template<class InputIterator1, class InputIterator2, class OutputIterator>
- OutputIterator set_symmetric_difference(
+OutputIterator set_symmetric_difference(
     InputIterator1 first1,
     InputIterator1 last1,
     InputIterator2 first2,
@@ -7056,17 +7315,22 @@ OutputIterator set_symmetric_difference(
 
 ### <a name="parameters"></a>パラメーター
 
-*first1*に結合され、2 つのソース範囲の対称差を表す単一の範囲に並べ替えられる 2 つの並べ替えられたソース範囲の最初の最初の要素の位置を示す入力反復子。
+*first1*<br/>
+2 つのソース範囲の対称差を表すために単一の範囲に結合され並べ替えられる 2 つの並べ替え済みソース範囲の、最初の範囲の最初の要素の位置を示す入力反復子。
 
-*last1*米国して 2 つのソース範囲の対称差を表す単一の範囲に分類する入力反復子の位置を示す最後の要素の最初の 2 つの並べ替えられたソース範囲の。
+*last1*<br/>
+2 つのソース範囲の対称差を表すために単一の範囲に結合され並べ替えられる 2 つの並べ替え済みソース範囲の、最初の範囲の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*first2*米国して 2 つのソース範囲の対称差を表す単一の範囲に分類する入力反復子、並べ替えの 2 つの連続する 2 番目の内の最初の要素の位置のソース範囲のアドレスを指定します。
+*first2*<br/>
+2 つのソース範囲の対称差を表すために単一の範囲に結合され並べ替えられる 2 つの連続する並べ替え済みソース範囲の、2 番目の範囲の最初の要素の位置を示す入力反復子。
 
-*last2*米国して 2 つのソース範囲の対称差を表す単一の範囲に分類する入力反復子は 1 つの後ろの位置の最後の要素の 2 つの連続する 2 番目の並べ替えられたソース範囲のアドレスを指定します。
+*last2*<br/>
+2 つのソース範囲の対称差を表すために単一の範囲に結合され並べ替えられる 2 つの連続する並べ替え済みソース範囲の、2 番目の範囲の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
 **_** *結果*2 つのソース範囲のターゲット範囲の最初の要素の位置を示す出力反復子が 2 つの対称差を表す単一の並べ替えられた範囲に結合ソースの範囲です。
 
-*comp*の 1 つの要素が他よりも大きいという意味を定義するユーザー定義の述語関数オブジェクト。 2 項述語は 2 つの引数を受け取り、最初の要素が 2 番目の要素より小さい場合は **true** 、そうでない場合は **false** を返す必要があります。
+*comp*<br/>
+1 つの要素が別の要素より大きいという意味を定義するユーザー定義の述語関数オブジェクト。 2 項述語は 2 つの引数を受け取り、最初の要素が 2 番目の要素より小さい場合は **true** 、そうでない場合は **false** を返す必要があります。
 
 ### <a name="return-value"></a>戻り値
 
@@ -7230,17 +7494,22 @@ OutputIterator set_union(
 
 ### <a name="parameters"></a>パラメーター
 
-*first1*に結合され、2 つのソース範囲の和集合を表す単一の範囲に並べ替えられる 2 つの並べ替えられたソース範囲の最初の最初の要素の位置を示す入力反復子。
+*first1*<br/>
+2 つのソース範囲の和集合を表すために単一の範囲に結合され並べ替えられる 2 つの並べ替え済みソース範囲の、最初の範囲の最初の要素の位置を示す入力反復子。
 
-*last1*米国して 2 つのソース範囲の和集合を表す単一の範囲に分類する入力反復子の位置を示す最後の要素の最初の 2 つの並べ替えられたソース範囲の。
+*last1*<br/>
+2 つのソース範囲の和集合を表すために単一の範囲に結合され並べ替えられる 2 つの並べ替え済みソース範囲の、最初の範囲の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*first2*米国して 2 つのソース範囲の和集合を表す単一の範囲に分類する入力反復子、並べ替えの 2 つの連続する 2 番目の内の最初の要素の位置のソース範囲のアドレスを指定します。
+*first2*<br/>
+2 つのソース範囲の和集合を表すために単一の範囲に結合され並べ替えられる 2 つの連続する並べ替え済みソース範囲の、2 番目の範囲の最初の要素の位置を示す入力反復子。
 
-*last2*米国して 2 つのソース範囲の和集合を表す単一の範囲に分類する入力反復子は 1 つの後ろの位置の最後の要素の 2 つの連続する 2 番目の並べ替えられたソース範囲のアドレスを指定します。
+*last2*<br/>
+2 つのソース範囲の和集合を表すために単一の範囲に結合され並べ替えられる 2 つの連続する並べ替え済みソース範囲の、2 番目の範囲の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
 **_** *結果*2 つのソース範囲のターゲット範囲の最初の要素の位置を示す出力反復子が 2 つのソース範囲の和集合を表す単一の並べ替えられた範囲に結合します。
 
-*comp*の 1 つの要素が他よりも大きいという意味を定義するユーザー定義の述語関数オブジェクト。 2 項述語は 2 つの引数を受け取り、最初の要素が 2 番目の要素より小さい場合は **true** 、そうでない場合は **false** を返す必要があります。
+*comp*<br/>
+1 つの要素が別の要素より大きいという意味を定義するユーザー定義の述語関数オブジェクト。 2 項述語は 2 つの引数を受け取り、最初の要素が 2 番目の要素より小さい場合は **true** 、そうでない場合は **false** を返す必要があります。
 
 ### <a name="return-value"></a>戻り値
 
@@ -7392,11 +7661,14 @@ void shuffle(RandomAccessIterator first,
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*シャッフル包含される範囲の最初の要素に対する反復子。 `RandomAccessIterator` および `ValueSwappable` の要件を満たしている必要があります。
+*first*<br/>
+シャッフルされる範囲 (境界を含む) の最初の要素に対する反復子。 `RandomAccessIterator` および `ValueSwappable` の要件を満たしている必要があります。
 
-*最後*シャッフル排他される範囲の最後の要素に対する反復子。 `RandomAccessIterator` および `ValueSwappable` の要件を満たしている必要があります。
+*last*<br/>
+シャッフルされる範囲 (境界を含まない) の最後の要素に対する反復子。 `RandomAccessIterator` および `ValueSwappable` の要件を満たしている必要があります。
 
-*gen*乱数ジェネレーターを`shuffle()`関数は、操作に使用されます。 `UniformRandomNumberGenerator` の要件を満たしている必要があります。
+*汎用*<br/>
+`shuffle()` 関数が操作で使用する乱数ジェネレーター。 `UniformRandomNumberGenerator` の要件を満たしている必要があります。
 
 ### <a name="remarks"></a>Remarks
 
@@ -7422,11 +7694,14 @@ template<class RandomAccessIterator, class Predicate>
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*ランダム アクセス反復子の範囲の最初の要素の位置を並べ替えます。
+*first*<br/>
+並べ替えられる範囲内の最初の要素の位置を示すランダム アクセス反復子。
 
-*最後*ランダム アクセス反復子を過去の範囲の最後の要素の位置を示す並べ替えられます。
+*last*<br/>
+並べ替えられる範囲内の最後の要素の 1 つ後ろの位置を示すランダム アクセス反復子。
 
-*comp*順序の一連の要素によって満たされるように比較の基準を定義するユーザー定義の述語関数オブジェクト。 この二項述語は 2 つの引数を受け取りし、返します**true**場合は、2 つの引数が順番と**false**それ以外の場合。 この比較子関数は、シーケンスからの要素のペアで厳密弱順序を強制する必要があります。 詳細については、「[アルゴリズム](../standard-library/algorithms.md)」を参照してください。
+*comp*<br/>
+順序内の次の要素によって満たされる比較条件を定義するユーザー定義の述語関数オブジェクト。 この二項述語は 2 つの引数を受け取りし、返します**true**場合は、2 つの引数が順番と**false**それ以外の場合。 この比較子関数は、シーケンスからの要素のペアで厳密弱順序を強制する必要があります。 詳細については、「[アルゴリズム](../standard-library/algorithms.md)」を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
@@ -7523,11 +7798,14 @@ template<class RandomAccessIterator, class Predicate>
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*ターゲット ヒープ内の最初の要素の位置を示すランダム アクセス反復子。
+*first*<br/>
+ターゲット ヒープ内の最初の要素の位置を示すランダム アクセス反復子。
 
-*最後*ターゲット ヒープ内の最後の要素の後ろの 1 つの位置を示すランダム アクセス反復子。
+*last*<br/>
+ターゲット ヒープ内の最後の要素の 1 つ後ろの位置を示すランダム アクセス反復子。
 
-*comp*を定義するユーザー定義の述語関数オブジェクトを検知する 1 つの要素は他よりも少なくなります。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
+*comp*<br/>
+1 つの要素が別の要素より小さいという意味を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -7612,11 +7890,14 @@ BidirectionalIterator stable_partition(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*双方向反復子の範囲の最初の要素の位置をパーティション分割します。
+*first*<br/>
+パーティション分割される範囲内の最初の要素の位置を示す双方向反復子。
 
-*最後*双方向反復子を過去の範囲の最後の要素の位置を示すパーティションに分割します。
+*last*<br/>
+パーティション分割される範囲内の最後の要素の 1 つ後ろの位置を示す双方向反復子。
 
-*_Pred*要素は、分類する場合に満たされるようにする条件を定義するユーザー定義の述語関数オブジェクト。 述語は 1 つの引数を取り、**true** または **false** を返します。
+*_Pred*<br/>
+要素が分類される場合に満たされる条件を定義するユーザー定義の述語関数オブジェクト。 述語は 1 つの引数を取り、**true** または **false** を返します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -7679,7 +7960,7 @@ int main() {
 
 ```cpp
 template<class BidirectionalIterator>
- void stable_sort( BidirectionalIterator first, BidirectionalIterator last );
+void stable_sort( BidirectionalIterator first, BidirectionalIterator last );
 
 template<class BidirectionalIterator, class BinaryPredicate>
 void stable_sort(
@@ -7691,11 +7972,14 @@ void stable_sort(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*双方向反復子の範囲の最初の要素の位置に並べ替えられます。
+*first*<br/>
+並べ替えられる範囲内の最初の要素の位置を示す双方向反復子。
 
-*最後*双方向反復子を 1 つの位置過去の範囲の最後の要素を並べ替えます。
+*last*<br/>
+並べ替えられる範囲内の最後の要素の 1 つ後ろの位置を示す双方向反復子。
 
-*comp*順序の一連の要素によって満たされるように比較の基準を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
+*comp*<br/>
+順序内の次の要素によって満たされる比較条件を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -7790,9 +8074,11 @@ template<class Type, size_t N>
 
 ### <a name="parameters"></a>パラメーター
 
-*左*最初のオーバーライドでは、最初のオブジェクトがそのコンテンツを交換します。 2 番目のオーバーライドでは、オブジェクトの最初の配列がそのコンテンツを交換させます。
+*left*<br/>
+最初のオーバーライドでは、最初のオブジェクトがそのコンテンツを交換させます。 2 番目のオーバーライドでは、オブジェクトの最初の配列がそのコンテンツを交換させます。
 
-*適切な*最初のオーバーライドでは、2 番目のオブジェクトがそのコンテンツを交換します。 2 番目のオーバーライドでは、オブジェクトの 2 番目の配列がそのコンテンツを交換させます。
+*right*<br/>
+最初のオーバーライドでは、2 番目のオブジェクトがそのコンテンツを交換させます。 2 番目のオーバーライドでは、オブジェクトの 2 番目の配列がそのコンテンツを交換させます。
 
 ### <a name="remarks"></a>Remarks
 
@@ -7869,11 +8155,14 @@ ForwardIterator2 swap_ranges(
 
 ### <a name="parameters"></a>パラメーター
 
-*first1*要素が交換される最初の範囲の最初の位置を指す前方反復子。
+*first1*<br/>
+要素が交換される最初の範囲の最初の位置を指す前方反復子。
 
-*last1*の 1 つ後ろの要素が交換される最初の範囲の最後の位置を指す前方反復子。
+*last1*<br/>
+要素が交換される最初の範囲の最後の位置の 1 つ後ろを指す前方反復子。
 
-*first2*要素が交換される 2 つ目の範囲の最初の位置を指す前方反復子。
+*first2*<br/>
+要素が交換される 2 番目の範囲の最初の位置を指す前方反復子。
 
 ### <a name="return-value"></a>戻り値
 
@@ -7969,15 +8258,20 @@ OutputIterator transform(
 
 ### <a name="parameters"></a>パラメーター
 
-*first1*操作する最初のソース範囲内の最初の要素の位置を示す入力反復子。
+*first1*<br/>
+操作する最初のソース範囲内の最初の要素の位置を示す入力反復子。
 
-*last1*で運用される過去の最初のソース範囲の最後の要素の位置を示す入力反復子。
+*last1*<br/>
+操作する最初のソース範囲内の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*first2*操作する 2 番目のソース範囲内の最初の要素の位置を示す入力反復子。
+*first2*<br/>
+操作する 2 番目のソース範囲内の最初の要素の位置を示す入力反復子。
 
-*結果*ターゲット範囲の最初の要素の位置を示す出力反復子。
+*結果*<br/>
+ターゲット範囲の最初の要素の位置を示す出力反復子。
 
-*_Func*最初のソース範囲またはユーザー定義 (UD) 二項関数オブジェクトに適用されるアルゴリズムの 2 番目のバージョンで使用される各要素に適用されるアルゴリズムの最初のバージョンで使用されるユーザー定義の単項関数オブジェクト2 つのソース範囲の順方向順序のペア。
+*_Func*<br/>
+最初のソース範囲内の各要素に適用されるアルゴリズムの最初のバージョンで使用されるユーザー定義の単項関数オブジェクト、または順方向順序で 2 つのソース範囲内にペアで適用されるアルゴリズムの 2 番目のバージョンで使用されるユーザー定義 (UD) の二項関数オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -8070,12 +8364,12 @@ int main()
 ```Output
 Original vector  v1 = ( -4 -3 -2 -1 0 1 2 ).
 The elements of the vector v1 multiplied by 2 in place gives:
- v1mod = ( -8 -6 -4 -2 0 2 4 ).
+v1mod = ( -8 -6 -4 -2 0 2 4 ).
 Multiplying the elements of the vector v1mod
- by the factor 5 & copying to v2 gives:
- v2 = ( -40 -30 -20 -10 0 10 20 ).
+by the factor 5 & copying to v2 gives:
+v2 = ( -40 -30 -20 -10 0 10 20 ).
 Multiplying elements of the vectors v1mod and v2 pairwise gives:
- v3 = ( 320 180 80 20 0 20 80 ).
+v3 = ( 320 180 80 20 0 20 80 ).
 ```
 
 ## <a name="unique"></a>  unique
@@ -8098,11 +8392,14 @@ template<class ForwardIterator, class Predicate>
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*重複削除のスキャン範囲内の最初の要素の位置を示す前方反復子。
+*first*<br/>
+重複削除のスキャン範囲内の先頭の要素の位置を示す前方反復子。
 
-*最後*重複除去のスキャン範囲内で過去の最後の要素いずれかの位置を示す前方反復子。
+*last*<br/>
+重複削除のスキャン範囲内の最後の要素の 1 つ後ろの位置を示す前方反復子。
 
-*comp*満たされる条件を実行する場合は 2 つの要素を定義するユーザー定義の述語関数オブジェクトと同じものとして。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
+*comp*<br/>
+2 つの要素が等価であると見なされた場合に条件が満たされると定義する、ユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -8201,10 +8498,10 @@ int main()
 ```Output
 Vector v1 is ( 5 -5 5 -5 5 -5 5 -5 4 4 4 4 7 ).
 Removing adjacent duplicates from vector v1 gives
- ( 5 -5 5 -5 5 -5 5 -5 4 7 ).
+( 5 -5 5 -5 5 -5 5 -5 4 7 ).
 Removing adjacent duplicates from vector v1 under the
   binary predicate mod_equal gives
- ( 5 4 7 ).
+( 5 4 7 ).
 Removing adjacent elements satisfying the binary
   predicate mod_equal from vector v1 gives ( 5 7 ).
 ```
@@ -8228,13 +8525,17 @@ OutputIterator unique_copy( InputIterator first,
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*コピーする前方反復子のソース範囲の最初の要素の位置を示します。
+*first*<br/>
+ソース範囲内のコピーする最初の要素の位置を示す前方反復子。
 
-*最後*コピーする前方反復子のソース範囲の最後の要素の後ろの 1 つの位置を示します。
+*last*<br/>
+ソース範囲内のコピーする最後の要素の 1 つ後ろの位置を示す前方反復子。
 
-*結果*が連続する重複コピーを受信する宛先範囲の最初の要素の位置を示す出力反復子を削除します。
+*結果*<br/>
+連続する重複が削除されたコピーを受け取るターゲット範囲の最初の要素の位置を示す出力反復子。
 
-*comp*満たされる条件を実行する場合は 2 つの要素を定義するユーザー定義の述語関数オブジェクトと同じものとして。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
+*comp*<br/>
+2 つの要素が等価であると見なされた場合に条件が満たされると定義する、ユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -8344,13 +8645,17 @@ template<class ForwardIterator, class Type, class Predicate>
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*検索対象の範囲内の最初の要素の位置。
+*first*<br/>
+検索する要素範囲内の最初の要素の位置。
 
-*最後*後ろの位置 1 つの最後の要素で検索する範囲。
+*last*<br/>
+検索する要素範囲内の最後の要素の 1 つ後ろの位置。
 
-*値*反復子によってアドレス指定された要素の値によって超過する必要がある順序付けられた範囲内の値が返されます。
+*値*<br/>
+返された反復子によってアドレス指定される要素の値が超える必要がある、順序付けられた範囲内の値。
 
-*comp*を定義するユーザー定義の述語関数オブジェクトを検知する 1 つの要素は他よりも少なくなります。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
+*comp*<br/>
+1 つの要素が別の要素より小さいという意味を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="return-value"></a>戻り値
 

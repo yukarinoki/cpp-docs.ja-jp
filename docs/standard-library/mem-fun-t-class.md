@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27182d6c1b2f3c37353f653235449982e921d692
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a32df3211d77a255421ceb794b6bd891f930733a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956389"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108540"
 ---
 # <a name="memfunt-class"></a>mem_fun_t クラス
 
@@ -41,9 +41,11 @@ class mem_fun_t : public unary_function<Type *, Result> {
 
 ### <a name="parameters"></a>パラメーター
 
-*_Pm*クラスのメンバー関数へのポインター`Type`関数オブジェクトに変換します。
+*_Pm*<br/>
+関数オブジェクトに変換されるクラス `Type` のメンバー関数へのポインター。
 
-*_Pleft*オブジェクトを *_Pm*でメンバー関数が呼び出されます。
+*_Pleft*<br/>
+オブジェクトを *_Pm*でメンバー関数が呼び出されます。
 
 ## <a name="return-value"></a>戻り値
 
@@ -57,7 +59,7 @@ class mem_fun_t : public unary_function<Type *, Result> {
 
 `mem_fun_t` のコンストラクターは通常は直接使用されません。ヘルパー関数 `mem_fun` を使用してメンバー関数を適合させます。 メンバー関数アダプターの使用例については、「[mem_fun](../standard-library/functional-functions.md#mem_fun)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<functional>
 

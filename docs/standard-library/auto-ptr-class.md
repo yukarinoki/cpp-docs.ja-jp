@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00114711f93fcc1ec057ea50b1ce681523db3a9c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 945de6e2ef7e9ec3967091f88b1d0cfeaa8df5e3
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958004"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108890"
 ---
 # <a name="autoptr-class"></a>auto_ptr クラス
 
@@ -65,9 +65,11 @@ public:
 ```
 ### <a name="parameters"></a>パラメーター
 
-*適切な*、`auto_ptr`から既存のリソースを取得します。
+*right*<br/>
+既存のリソースの取得元となる `auto_ptr`。
 
-*ptr*格納されたポインターを置換する指定されたポインター。
+*ptr*<br/>
+格納されたポインターを置換するように指定されたポインター。
 
 ## <a name="remarks"></a>Remarks
 
@@ -107,7 +109,7 @@ public:
 |[operator auto_ptr\<Other>](#op_auto_ptr_lt_other_gt)|1 つの種類の `auto_ptr` から別の種類の `auto_ptr` にキャストします。|
 |[operator auto_ptr_ref\<Other>](#op_auto_ptr_ref_lt_other_gt)|`auto_ptr` から `auto_ptr_ref` にキャストします。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<memory>
 
@@ -130,9 +132,11 @@ auto _ptr(auto _ptr<Other>& right) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*ptr*オブジェクトへのポインターを`auto_ptr`をカプセル化します。
+*ptr*<br/>
+`auto_ptr` がカプセル化するオブジェクトへのポインター。
 
-*適切な*、`auto_ptr`コンス トラクターによってコピーされるオブジェクト。
+*right*<br/>
+コンストラクターによってコピーされる `auto_ptr` オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -282,7 +286,8 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*型のオブジェクト`auto_ptr`します。
+*right*<br/>
+`auto_ptr` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -499,7 +504,8 @@ void reset(Type* ptr = 0);
 
 ### <a name="parameters"></a>パラメーター
 
-*ptr* 、格納されたポインターを置換する指定したポインター`myptr`します。
+*ptr*<br/>
+格納されているポインターを置換する指定したポインター`myptr`します。
 
 ### <a name="example"></a>例
 

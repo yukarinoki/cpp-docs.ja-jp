@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3e12028d91d488aed635adfeedc206eaffe08ae
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2050be008f89ff2d125842d5919407dc292eed40
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205814"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105836"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap クラス
 
@@ -35,13 +35,13 @@ ref class Map sealed;
 
 #### <a name="parameters"></a>パラメーター
 
-*K*  
+*K*<br/>
 キー/値ペア内のキーの型。
 
-*V*  
+*V*<br/>
 キー/値ペア内の値の型。
 
-*C*  
+*C*<br/>
 並べ替えキーとして 2 つの要素値を比較してマップ内の相対順序を決定できる関数オブジェクトを提供する型。 既定では、 [std::equal_to\<K >](../standard-library/equal-to-struct.md)します。
 
 ### <a name="remarks"></a>Remarks
@@ -87,7 +87,7 @@ ref class Map sealed;
 
 |||
 |-|-|
-|name|説明|
+|名前|説明|
 |[Map::mapchanged](#mapchanged)イベント|マップが変更されたときに発生します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
@@ -118,7 +118,7 @@ virtual void Clear();
 
 ```cpp
 virtual Windows::Foundation::Collections::IIterator<
-   Windows::Foundation::Collections::IKeyValuePair<K, V>^>^ 
+   Windows::Foundation::Collections::IKeyValuePair<K, V>^>^
    First();
 ```
 
@@ -158,7 +158,7 @@ bool HasKey(
 
 ### <a name="parameters"></a>パラメーター
 
-*key*  
+*key*<br/>
 UnorderedMap 要素の検索に使用するキー。 型*キー* typename が*K*します。
 
 ### <a name="return-value"></a>戻り値
@@ -180,10 +180,10 @@ virtual bool Insert(
 
 ### <a name="parameters"></a>パラメーター
 
-*key*  
+*key*<br/>
 キー/値ペアのキー部分。 型*キー* typename が*K*します。
 
-*値*  
+*値*<br/>
 キー/値ペアの値部分。 型*値*typename が*V*します。
 
 ### <a name="return-value"></a>戻り値
@@ -204,7 +204,7 @@ V Lookup(
 
 ### <a name="parameters"></a>パラメーター
 
-*key*  
+*key*<br/>
 UnorderedMap の要素の検索に使用するキー。 型*キー* typename が*K*します。
 
 ### <a name="return-value"></a>戻り値
@@ -242,7 +242,7 @@ virtual void Remove(
 
 ### <a name="parameters"></a>パラメーター
 
-*key*  
+*key*<br/>
 キー/値ペアのキー部分。 型*キー* typename が*K*します。
 
 ## <a name="size"></a>  Unorderedmap::size メソッド
@@ -346,31 +346,32 @@ UnorderedMap(
 
 ### <a name="parameters"></a>パラメーター
 
-*InIt*  
+*InIt*<br/>
 現在の UnorderedMap の型名。
 
-*P*  
+*P*<br/>
 2 つのキーを比較してそれらが等しいかどうかを判定できる関数オブジェクト。 このパラメーターの既定値[std::equal_to\<K >](../standard-library/equal-to-struct.md)します。
 
-*H*  
+*H*<br/>
 キーのハッシュ値を生成する関数オブジェクト。 このパラメーターの既定値[クラス 1 にハッシュ](../standard-library/hash-class.md)するキーの型のクラスをサポートします。
 
-*m*  
+*m*<br/>
 参照または[Lvalues と Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)を[std::unordered_map](../standard-library/unordered-map-class.md)現在の UnorderedMap を初期化するために使用されます。
 
-*il* A [std::initializer_list](../standard-library/initializer-list-class.md)の[std::pair](../standard-library/pair-structure.md)マップを初期化するために使用されるオブジェクト。
+*il*<br/>
+A [std::initializer_list](../standard-library/initializer-list-class.md)の[std::pair](../standard-library/pair-structure.md)マップを初期化するために使用されるオブジェクト。
 
-*first*  
+*first*<br/>
 現在の UnorderedMap を初期化するために使用される要素の範囲内の最初の要素の入力反復子。
 
-*last*  
+*last*<br/>
 現在の UnorderedMap を初期化するために使用される要素の範囲の後の最初の要素の入力反復子。
 
 ## <a name="see-also"></a>関連項目
 
-[プラットフォーム Namespace](platform-namespace-c-cx.md)  
-[Platform::Collections 名前空間](../cppcx/platform-collections-namespace.md)  
-[Platform::Collections::Map クラス](../cppcx/platform-collections-map-class.md)  
-[Platform::Collections::UnorderedMapView クラス](../cppcx/platform-collections-unorderedmapview-class.md)  
-[コレクション](../cppcx/collections-c-cx.md)  
-[C++ で Windows ランタイム コンポーネントの作成](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  
+[プラットフォーム Namespace](platform-namespace-c-cx.md)<br/>
+[Platform::Collections 名前空間](../cppcx/platform-collections-namespace.md)<br/>
+[Platform::Collections::Map クラス](../cppcx/platform-collections-map-class.md)<br/>
+[Platform::Collections::UnorderedMapView クラス](../cppcx/platform-collections-unorderedmapview-class.md)<br/>
+[コレクション](../cppcx/collections-c-cx.md)<br/>
+[C++ で Windows ランタイム コンポーネントの作成](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

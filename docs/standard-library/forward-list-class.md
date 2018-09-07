@@ -90,12 +90,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c85e1637691d602c63208cd180071c0f388c5893
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 017d5d5c2934fa687f91898b896a0ad6f1dcab6f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954956"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102578"
 ---
 # <a name="forwardlist-class"></a>forward_list クラス
 
@@ -186,7 +186,7 @@ A`forward_list`割り当ておよび解放クラスの格納されているオ�
 |-|-|
 |[operator=](#op_eq)|別の前方リストのコピーで前方リストの要素を置き換えます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<forward_list>
 
@@ -881,15 +881,20 @@ void splice_after(
 
 ### <a name="parameters"></a>パラメーター
 
-*場所*後ろに挿入するターゲットの forward_list 内の位置。
+*Where*<br/>
+ターゲットの forward_list 内の挿入位置の直前の位置。
 
-*ソース*ターゲットの forward_list に挿入するのには、ソースの forward_list。
+*Source*<br/>
+ターゲットの forward_list に挿入されるソースの forward_list。
 
-*Iter*ソースの forward_list リストから挿入される要素。
+*Iter*<br/>
+ソースの forward_list リストから挿入される要素。
 
-*最初*ソースの forward_list リストから挿入される範囲の最初の要素。
+*まずは*<br/>
+ソースの forward_list リストから挿入される範囲内の最初の要素。
 
-*最後*ソースの forward_list リストから挿入される範囲を超えた最初の位置。
+*前の*<br/>
+ソースの forward_list リストから挿入される範囲を超える最初の位置。
 
 ### <a name="remarks"></a>Remarks
 

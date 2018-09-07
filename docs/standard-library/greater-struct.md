@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06fe531330b1043c78882fb511caafe9cc3a7b6d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e467f150135fd9960747ec6bb25fd44fd8ae7e7b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963808"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106123"
 ---
 # <a name="greater-struct"></a>greater 構造体
 
@@ -47,16 +47,18 @@ struct greater<void>
   template <class T, class U>
   auto operator()(T&& Left, U&& Right) const
     ->  decltype(std::forward<T>(Left)> std::forward<U>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *型*、 *T*、 *U*をサポートする任意の型、`operator>`指定または推論された型のオペランドを受け取る。
 
-*左*か大きい方の左オペランドの比較演算。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*T*します。
+*左*<br/>
+より大きい演算の左オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*T*します。
 
-*右*か大きい方の右側のオペランドの比較演算。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*U*します。
+*右*<br/>
+より大きい演算の右オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*U*します。
 
 ## <a name="return-value"></a>戻り値
 
@@ -118,7 +120,7 @@ Sorted vector v1 = (41 6334 11478 15724 18467 19169 26500 29358)
 Resorted vector v1 = (29358 26500 19169 18467 15724 11478 6334 41)
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<functional>
 

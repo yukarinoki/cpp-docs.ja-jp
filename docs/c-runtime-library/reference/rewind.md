@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58f8eddd2cae672f2a3677ebc9af87987889d166
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 37f54ff6b2c3738550c707887f2068986ca4abd6
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406834"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100288"
 ---
 # <a name="rewind"></a>rewind
 
@@ -55,25 +55,26 @@ void rewind(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*へのポインター**ファイル**構造体。
+*ストリーム*<br/>
+**FILE** 構造体へのポインター。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 **巻き戻し**関数に関連付けられたファイル ポインターを移動する*ストリーム*ファイルの先頭にします。 **rewind** 関数の呼び出しは、次の関数の呼び出しと似ています。
 
-**fseek 定数 (void) (** _ストリーム_**、0 L、SEEK_SET) です。**
+**fseek 定数 (void) (** _ストリーム_**、0l SEEK_SET)。**
 
-ただしとは異なり[fseek](fseek-fseeki64.md)、**巻き戻し**ストリームのエラー インジケーターだけでなく、ファイルの終端のインジケーターをクリアします。 またとは異なり[fseek](fseek-fseeki64.md)、**巻き戻し**はポインターが正常に移動されたかどうかを示す値を返しません。
+ただしとは異なり[fseek](fseek-fseeki64.md)、**巻き戻し**ストリームのエラー インジケーターとファイルの終わりインジケーターをクリアします。 またとは異なり[fseek](fseek-fseeki64.md)、**巻き戻し**はポインターが正常に移動されたかどうかを示す値を返しません。
 
-キーボードのバッファーをクリアする**巻き戻し**ストリームと**stdin**既定では、キーボードに関連付けられています。
+キーボード バッファをクリアする**巻き戻し**ストリーム**stdin**、既定では、キーボードに関連付けられています。
 
-ストリームがある場合、 **NULL** 」の説明に従って、ポインター、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行は継続許可されたかどうか、この関数を返しますと**errno**に設定されている**EINVAL**です。
+ストリームがある場合、 **NULL** 」の説明に従って、ポインター、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 かどうかは、引き続き実行が許可された、この関数を返しますと**errno**に設定されている**EINVAL**します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**rewind**|\<stdio.h>|
 

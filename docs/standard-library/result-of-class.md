@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b385d822c2f58d26938b3300207a790dc1193060
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 95ac984ad164c242dcd470ed4d31f3921fa7ec56
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953050"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103267"
 ---
 # <a name="resultof-class"></a>result_of クラス
 
@@ -48,15 +48,17 @@ template<class T>
 
 ### <a name="parameters"></a>パラメーター
 
-*Fn*照会する呼び出し可能型。
+*fn*<br/>
+照会する呼び出し可能型。
 
-*ArgTypes*クエリする呼び出し可能型の引数リストの種類。
+*ArgTypes*<br/>
+照会する呼び出し可能型の引数リストの種類。
 
 ## <a name="remarks"></a>Remarks
 
 このテンプレートを使用して、コンパイル時の結果の型を決定`Fn`(`ArgTypes`) ここで、 *Fn*が呼び出し可能型、関数への参照またはで型の引数リストを使用して呼び出される呼び出し可能型への参照*ArgTypes*します。 評価されていない式 `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` が整形式の場合、テンプレート クラスの `type` メンバーによって、`decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))` の結果の型が指定されます。 それ以外の場合、このテンプレート クラスはメンバー `type` を持ちません。 型*Fn*パラメーター パック内のすべての型と*ArgTypes*完全な型は、必要があります**void**、または不明なバインドの配列。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<type_traits>
 

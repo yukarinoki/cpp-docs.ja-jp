@@ -34,16 +34,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96256f71a94f20f126f02b04511c57c831ad2a00
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 783225412b01430d1043dafd4761cb7432eaa1d7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406642"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108320"
 ---
 # <a name="setprintfcountoutput"></a>_set_printf_count_output
 
-有効にするにまたはのサポートを無効にする、 **%n**で書式設定[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-ファミリの関数。
+有効または無効のサポート、 **%n**で書式設定[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-ファミリの関数。
 
 ## <a name="syntax"></a>構文
 
@@ -55,19 +55,20 @@ int _set_printf_count_output(
 
 ### <a name="parameters"></a>パラメーター
 
-*有効にする*0 以外の値を有効にする **%n**サポートを無効にする場合は 0 **%n**をサポートします。
+*enable*<br/>
+0 以外の値が有効にする **%n**サポートを無効にするには 0 **%n**をサポートします。
 
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値
 
-状態 **%n**この関数を呼び出す前にサポート: 0 以外の場合 **%n**サポートが有効になっていると、無効にされている場合は 0 です。
+状態 **%n**この関数を呼び出す前にサポート: 0 以外の場合 **%n**サポートが有効にすると、無効にされた場合は 0。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-セキュリティ上の理由のためのサポート、 **%n**書式指定子が既定で無効になっている**printf**とそのすべてのバリエーション。 場合 **%n**で見つかりましたが、 **printf** 」の説明に従って、無効なパラメーター ハンドラーを呼び出すには、書式指定、既定の動作[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 呼び出す **_set_printf_count_output** 0 以外の引数を持つにより**printf**-ファミリの関数を解釈する **%n** 」の説明に従って[形式指定構文: printf 関数と wprintf 関数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)です。
+セキュリティ上の理由のためのサポート、 **%n**書式指定子が既定で無効になっている**printf**とそのすべてのバリアント。 場合 **%n**で発生した、 **printf** 」の説明に従って、無効なパラメーター ハンドラーを呼び出すための書式指定、既定の動作は[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 呼び出す **_set_printf_count_output** 0 以外の引数が**printf**-ファミリの関数を解釈する **%n** 」の説明に従って[形式指定構文: printf 関数と wprintf 関数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)します。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_set_printf_count_output**|\<stdio.h>|
 

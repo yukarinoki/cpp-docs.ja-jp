@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00c23cf21b8d9c5c46976f522f837dddb941f24f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 97ac9d7e8e00e5f81d974aa84befaad99881391d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964211"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108760"
 ---
 # <a name="discretedistribution-class"></a>discrete_distribution クラス
 
@@ -82,7 +82,8 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*IntType*整数の結果の型の既定値**int**します。使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*IntType*<br/>
+整数の結果の型の既定値**int**します。使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
@@ -178,7 +179,7 @@ Distribution for 100 samples:
     4 ::::::::::::::::::::::::::::::::::::
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<random>
 
@@ -209,21 +210,29 @@ explicit discrete_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*firstW*分布の作成元となるリストの最初の反復子。
+*firstW*<br/>
+分布の作成元となるリストの最初の反復子。
 
-*lastW* (非包含的反復子は、末尾の空の要素を使用するため)、分布の作成元となるリストの最後の反復子。
+*lastW*<br/>
+分布の作成元となるリストの最後の反復子 (反復子は最後に空の要素を使用するため、非包含的)。
 
-*weightlist* 、 [initializer_list](../cpp/initializers.md)分布の作成元。
+*weightlist*<br/>
+分布の作成元となる [initializer_list](../cpp/initializers.md)。
 
-*カウント*分布範囲内の要素の数。 `count==0` の場合は、既定のコンストラクターと同じです (常に 0 を生成します)。
+*count*<br/>
+分布範囲内にある要素の数。 `count==0` の場合は、既定のコンストラクターと同じです (常に 0 を生成します)。
 
-*低*分布範囲内の最小値。
+*low*<br/>
+分布範囲内の最小値。
 
-*高*分布範囲内の最大値。
+*high*<br/>
+分布範囲内の最大値。
 
-*weightfunc*分布の確率関数を表すオブジェクト。 パラメーターと戻り値の両方に変換できる必要があります**二重**します。
+*weightfunc*<br/>
+分布の確率関数を表すオブジェクト。 パラメーターと戻り値の両方に変換できる必要があります**二重**します。
 
-*parm* 、`param_type`分布の作成に使用される構造体。
+*parm*<br/>
+分布の作成に使用される `param_type` の構造体。
 
 ### <a name="remarks"></a>Remarks
 
@@ -269,21 +278,29 @@ struct param_type {
 
 ### <a name="parameters"></a>パラメーター
 
-*firstW*分布の作成元となるリストの最初の反復子。
+*firstW*<br/>
+分布の作成元となるリストの最初の反復子。
 
-*lastW* (非包含的反復子は、末尾の空の要素を使用するため)、分布の作成元となるリストの最後の反復子。
+*lastW*<br/>
+分布の作成元となるリストの最後の反復子 (反復子は最後に空の要素を使用するため、非包含的)。
 
-*weightlist* 、 [initializer_list](../cpp/initializers.md)分布の作成元。
+*weightlist*<br/>
+分布の作成元となる [initializer_list](../cpp/initializers.md)。
 
-*カウント*分布範囲内の要素の数。 *count* が 0 の場合は、既定のコンストラクターと同じです (常に 0 を生成します)。
+*count*<br/>
+分布範囲内にある要素の数。 *count* が 0 の場合は、既定のコンストラクターと同じです (常に 0 を生成します)。
 
-*低*分布範囲内の最小値。
+*low*<br/>
+分布範囲内の最小値。
 
-*高*分布範囲内の最大値。
+*high*<br/>
+分布範囲内の最大値。
 
-*weightfunc*分布の確率関数を表すオブジェクト。 パラメーターと戻り値の両方に変換できる必要があります**二重**します。
+*weightfunc*<br/>
+分布の確率関数を表すオブジェクト。 パラメーターと戻り値の両方に変換できる必要があります**二重**します。
 
-*適切な*、`param_type`これと比較するオブジェクト。
+*right*<br/>
+このオブジェクトと比較する `param_type` オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 

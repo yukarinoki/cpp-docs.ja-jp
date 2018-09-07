@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 832a7b8f864dc21214d3b2428f83fd0c68330ff9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2b4712a76be411d237ee2abc97ddbdd4b67e57f2
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959892"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108359"
 ---
 # <a name="basicfstream-class"></a>basic_fstream クラス
 
@@ -46,9 +46,11 @@ class basic_fstream : public basic_iostream<Elem, Tr>
 
 ### <a name="parameters"></a>パラメーター
 
-*Elem*ファイル バッファーの基本要素です。
+*Elem*<br/>
+ファイル バッファーの基本要素。
 
-*Tr*ファイル バッファーの基本要素の特徴 (通常は`char_traits` <  `Elem`>)。
+*Tr*<br/>
+ファイル バッファーの基本要素の特徴 (通常は `char_traits`< `Elem`>)。
 
 ## <a name="remarks"></a>Remarks
 
@@ -107,7 +109,7 @@ Writing to a basic_fstream object...
 |[rdbuf](#rdbuf)|pointer 型の格納されたストリーム バッファーのアドレスを [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> に返します。|
 |[swap](#swap)|このオブジェクトの内容を別の `basic_fstream` オブジェクトの内容と交換します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<fstream>
 
@@ -135,11 +137,14 @@ basic_fstream(basic_fstream&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Filename*開くファイルの名前。
+*_Filename*<br/>
+開くファイルの名前。
 
-*モード (_m)* 列挙値のいずれかの[ios_base::openmode](../standard-library/ios-base-class.md#openmode)します。
+*モード (_m)*<br/>
+[ios_base::openmode](../standard-library/ios-base-class.md#openmode) の列挙値のうちの 1 つ。
 
-*_Prot*保護と同じ既定のファイル、 *shflag*パラメーター [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)します。
+*_Prot*<br/>
+保護のと同じ既定のファイル、 *shflag*パラメーター [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -215,11 +220,14 @@ void open(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Filename*開くファイルの名前。
+*_Filename*<br/>
+開くファイルの名前。
 
-*モード (_m)* 列挙値のいずれかの[ios_base::openmode](../standard-library/ios-base-class.md#openmode)します。
+*モード (_m)*<br/>
+[ios_base::openmode](../standard-library/ios-base-class.md#openmode) の列挙値のうちの 1 つ。
 
-*_Prot*保護と同じ既定のファイル、 *shflag*パラメーター [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)します。
+*_Prot*<br/>
+保護のと同じ既定のファイル、 *shflag*パラメーター [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -239,7 +247,8 @@ basic_fstream& operator=(basic_fstream&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*への左辺値参照を`basic_fstream`オブジェクト。
+*right*<br/>
+`basic_fstream` オブジェクトへの左辺値参照。
 
 ### <a name="return-value"></a>戻り値
 
@@ -275,7 +284,8 @@ void swap(basic_fstream& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*、`lvalue`への参照を`basic_fstream`オブジェクト。
+*right*<br/>
+`basic_fstream` オブジェクトへの `lvalue` 参照。
 
 ### <a name="remarks"></a>Remarks
 

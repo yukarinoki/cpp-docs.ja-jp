@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b6c1c11a9c81123c518e3a0da3e56cc81d4cd5c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 02c4c537f1a420a096fbcd979580ff7b10076845
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958930"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106757"
 ---
 # <a name="timeput-class"></a>time_put クラス
 
@@ -46,10 +46,10 @@ class time_put : public locale::facet;
 ### <a name="parameters"></a>パラメーター
 
 *CharType*  
- 文字をエンコードするためにプログラム内で使用される型。
+文字をエンコードするためにプログラム内で使用される型。
 
 *OutputIterator*  
- 時刻の put 関数が出力を書き込む反復子の型。
+時刻の put 関数が出力を書き込む反復子の型。
 
 ## <a name="remarks"></a>Remarks
 
@@ -75,7 +75,7 @@ class time_put : public locale::facet;
 |[do_put](#do_put)|時刻と日付の情報を `CharType` のシーケンスとして出力する仮想関数。|
 |[put](#put)|時刻と日付の情報を `CharType` のシーケンスとして出力します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<locale>
 
@@ -109,19 +109,19 @@ virtual iter_type do_put(
 ### <a name="parameters"></a>パラメーター
 
 *next*  
- 時刻と日付を表す文字のシーケンスが挿入される出力反復子。
+時刻と日付を表す文字のシーケンスが挿入される出力反復子。
 
 *されている _Iosbase*  
- 使用されません。
+使用されません。
 
 *_Pt*  
- 出力される時刻と日付の情報。
+出力される時刻と日付の情報。
 
 *_Fmt*  
- 出力の形式。 有効な値については、「[strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)」を参照してください。
+出力の形式。 有効な値については、「[strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)」を参照してください。
 
 *_Mod*  
- 形式の修飾子。 有効な値については、「[strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)」を参照してください。
+形式の修飾子。 有効な値については、「[strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -172,28 +172,28 @@ iter_type put(iter_type next,
 ### <a name="parameters"></a>パラメーター
 
 *next*  
- 時刻と日付を表す文字のシーケンスが挿入される出力反復子。
+時刻と日付を表す文字のシーケンスが挿入される出力反復子。
 
 *されている _Iosbase*  
- 使用されません。
+使用されません。
 
 *_Fill*  
- 型の文字`CharType`スペースに使用します。
+型の文字`CharType`スペースに使用します。
 
 *_Pt*  
- 出力される時刻と日付の情報。
+出力される時刻と日付の情報。
 
 *_Fmt*  
- 出力の形式。 有効な値については、「[strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)」を参照してください。
+出力の形式。 有効な値については、「[strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)」を参照してください。
 
 *_Mod*  
- 形式の修飾子。 有効な値については、「[strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)」を参照してください。
+形式の修飾子。 有効な値については、「[strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)」を参照してください。
 
 *first*  
- 出力の書式設定文字列の先頭。 有効な値については、「[strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)」を参照してください。
+出力の書式設定文字列の先頭。 有効な値については、「[strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)」を参照してください。
 
 *last*  
- 出力の書式設定文字列の末尾。 有効な値については、「[strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)」を参照してください。
+出力の書式設定文字列の末尾。 有効な値については、「[strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -257,7 +257,8 @@ explicit time_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Refs*オブジェクトのメモリ管理の種類を指定するために使用する整数値。
+*_Refs*<br/>
+オブジェクトのメモリ管理の種類を指定するために使用する整数値。
 
 ### <a name="remarks"></a>Remarks
 

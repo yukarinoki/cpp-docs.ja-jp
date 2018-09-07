@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fac73456108669950f59f2399495526b8b319f07
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3198a2d3ef91df80429f7cd245e5616ebe7af43a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956808"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110632"
 ---
 # <a name="codecvt-class"></a>codecvt クラス
 
@@ -70,11 +70,14 @@ class codecvt : public locale::facet, codecvt_base;
 
 ### <a name="parameters"></a>パラメーター
 
-*CharType*プログラム内で文字をエンコードするために使用する型。
+*CharType*<br/>
+文字をエンコードするためにプログラム内で使用される型。
 
-*バイト*プログラム外の文字のエンコードに使用する型。
+*Byte*<br/>
+文字をエンコードするためにプログラム外で使用される型。
 
-*StateType*文字表現の内部および外部の型の間の中間の状態を表すために使用する型。
+*StateType*<br/>
+文字表現の内部型と外部型との変換の中間状態を表すために使用できる型。
 
 ## <a name="remarks"></a>Remarks
 
@@ -139,7 +142,7 @@ C++ 標準ライブラリは複数の明示的な特殊化を定義します。
 |[out](#out)|内部の `CharType` のシーケンスを外部の `Byte` のシーケンスに変換します。|
 |[unshift](#unshift)|状態に依存する変換で、`Byte` のシーケンスの最後の文字を完了するために必要な外部の `Byte` を提供します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<locale>
 
@@ -206,7 +209,8 @@ explicit codecvt(size_t _Refs = 0);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Refs*オブジェクトのメモリ管理の種類を指定するために使用する整数値。
+*_Refs*<br/>
+オブジェクトのメモリ管理の種類を指定するために使用する整数値。
 
 ### <a name="remarks"></a>Remarks
 
@@ -216,7 +220,7 @@ explicit codecvt(size_t _Refs = 0);
 
 - 1: オブジェクトの有効期間を手動で管理する必要があります。
 
-- \> 1: これらの値が定義されていません。
+- 2: これらの値が定義されていません。
 
 コンス トラクターによって初期化その`locale::facet`使用して基本オブジェクト**ロケール::**[ファセット](../standard-library/locale-class.md#facet_class)(`_Refs`)。
 
@@ -277,19 +281,26 @@ virtual result do_in(
 
 ### <a name="parameters"></a>パラメーター
 
-*_State*メンバー関数の呼び出しの間で維持される変換の状態。
+*_State*<br/>
+メンバー関数の呼び出し間で維持される変換の状態。
 
-*first1*変換されるシーケンスの先頭を指すポインター。
+*first1*<br/>
+変換されるシーケンスの先頭へのポインター。
 
-*last1*変換されるシーケンスの末尾へのポインター。
+*last1*<br/>
+変換されるシーケンスの末尾へのポインター。
 
-*next1*最初の未変換文字への変換されたシーケンスの末尾の次のポインター。
+*next1*<br/>
+変換されたシーケンスの末尾の後の、最初の非変換文字へのポインター。
 
-*first2*変換されたシーケンスの先頭を指すポインター。
+*first2*<br/>
+変換されたシーケンスの先頭へのポインター。
 
-*last2*変換されたシーケンスの末尾へのポインター。
+*last2*<br/>
+変換されたシーケンスの末尾へのポインター。
 
-*next2*へのポインター、`CharType`変換された最後の後に取得される`CharType`、対象シーケンスに変更されていない最初の文字にします。
+*next2*<br/>
+ポインター、`CharType`変換された最後の後に取得される`CharType`、対象シーケンスに変更されていない最初の文字にします。
 
 ### <a name="return-value"></a>戻り値
 
@@ -325,13 +336,17 @@ virtual int do_length(
 
 ### <a name="parameters"></a>パラメーター
 
-*_State*メンバー関数の呼び出しの間で維持される変換の状態。
+*_State*<br/>
+メンバー関数の呼び出し間で維持される変換の状態。
 
-*first1*外部シーケンスの先頭を指すポインター。
+*first1*<br/>
+外部シーケンスの先頭へのポインター。
 
-*last1*外部シーケンスの末尾へのポインター。
+*last1*<br/>
+外部シーケンスの末尾へのポインター。
 
-*_Len2*の最大数`Byte`のメンバー関数によって返されることができます。
+*_Len2*<br/>
+最大数`Byte`のメンバー関数によって返されることができます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -386,19 +401,26 @@ virtual result do_out(
 
 ### <a name="parameters"></a>パラメーター
 
-*_State*メンバー関数の呼び出しの間で維持される変換の状態。
+*_State*<br/>
+メンバー関数の呼び出し間で維持される変換の状態。
 
-*first1*変換されるシーケンスの先頭を指すポインター。
+*first1*<br/>
+変換されるシーケンスの先頭へのポインター。
 
-*last1*変換されるシーケンスの末尾へのポインター。
+*last1*<br/>
+変換されるシーケンスの末尾へのポインター。
 
-*next1*最初へのポインターへの参照の未変換`CharType`、最後の後`CharType`変換します。
+*next1*<br/>
+最初へのポインターへの参照の未変換`CharType`、最後の後`CharType`変換します。
 
-*first2*変換されたシーケンスの先頭を指すポインター。
+*first2*<br/>
+変換されたシーケンスの先頭へのポインター。
 
-*last2*変換されたシーケンスの末尾へのポインター。
+*last2*<br/>
+変換されたシーケンスの末尾へのポインター。
 
-*next2*最初へのポインターへの参照の未変換`Byte`、最後の後`Byte`変換します。
+*next2*<br/>
+最初へのポインターへの参照の未変換`Byte`、最後の後`Byte`変換します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -434,13 +456,17 @@ virtual result do_unshift(
 
 ### <a name="parameters"></a>パラメーター
 
-*_State*メンバー関数の呼び出しの間で維持される変換の状態。
+*_State*<br/>
+メンバー関数の呼び出し間で維持される変換の状態。
 
-*first2*ターゲット範囲の最初の位置を指すポインター。
+*first2*<br/>
+対象範囲内の最初の位置へのポインター。
 
-*last2*ターゲット範囲の最後の位置を指すポインター。
+*last2*<br/>
+対象範囲内の最後の位置へのポインター。
 
-*next2*対象シーケンスに変更されていない最初の要素へのポインター。
+*next2*<br/>
+対象シーケンス内の変更されていない最初の要素へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -544,19 +570,26 @@ result in(
 
 ### <a name="parameters"></a>パラメーター
 
-*_State*メンバー関数の呼び出しの間で維持される変換の状態。
+*_State*<br/>
+メンバー関数の呼び出し間で維持される変換の状態。
 
-*first1*変換されるシーケンスの先頭を指すポインター。
+*first1*<br/>
+変換されるシーケンスの先頭へのポインター。
 
-*last1*変換されるシーケンスの末尾へのポインター。
+*last1*<br/>
+変換されるシーケンスの末尾へのポインター。
 
-*next1*最初の未変換文字への変換されたシーケンスの末尾の次のポインター。
+*next1*<br/>
+変換されたシーケンスの末尾の後の、最初の未変換文字へのポインター。
 
-*first2*変換されたシーケンスの先頭を指すポインター。
+*first2*<br/>
+変換されたシーケンスの先頭へのポインター。
 
-*last2*変換されたシーケンスの末尾へのポインター。
+*last2*<br/>
+変換されたシーケンスの末尾へのポインター。
 
-*next2*へのポインター、`CharType`変換された最後の後に取得される`Chartype`対象シーケンスに変更されていない最初の文字にします。
+*next2*<br/>
+ポインター、`CharType`変換された最後の後に取得される`Chartype`対象シーケンスに変更されていない最初の文字にします。
 
 ### <a name="return-value"></a>戻り値
 
@@ -610,7 +643,7 @@ int main( )
 
 ```Output
 It worked! The converted string is:
- [This is the string to be converted!]
+[This is the string to be converted!]
 ```
 
 ## <a name="intern_type"></a>  codecvt::intern_type
@@ -639,13 +672,17 @@ int length(
 
 ### <a name="parameters"></a>パラメーター
 
-*_State*メンバー関数の呼び出しの間で維持される変換の状態。
+*_State*<br/>
+メンバー関数の呼び出し間で維持される変換の状態。
 
-*first1*外部シーケンスの先頭を指すポインター。
+*first1*<br/>
+外部シーケンスの先頭へのポインター。
 
-*last1*外部シーケンスの末尾へのポインター。
+*last1*<br/>
+外部シーケンスの末尾へのポインター。
 
-*_Len2*メンバー関数によって返されるバイトの最大数。
+*_Len2*<br/>
+メンバー関数で返すことができる Byte の最大数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -740,19 +777,26 @@ result out(
 
 ### <a name="parameters"></a>パラメーター
 
-*_State*メンバー関数の呼び出しの間で維持される変換の状態。
+*_State*<br/>
+メンバー関数の呼び出し間で維持される変換の状態。
 
-*first1*変換されるシーケンスの先頭を指すポインター。
+*first1*<br/>
+変換されるシーケンスの先頭へのポインター。
 
-*last1*変換されるシーケンスの末尾へのポインター。
+*last1*<br/>
+変換されるシーケンスの末尾へのポインター。
 
-*next1*最初へのポインターへの参照の未変換`CharType`最後後`CharType`変換します。
+*next1*<br/>
+最初へのポインターへの参照の未変換`CharType`最後後`CharType`変換します。
 
-*first2*変換されたシーケンスの先頭を指すポインター。
+*first2*<br/>
+変換されたシーケンスの先頭へのポインター。
 
-*last2*変換されたシーケンスの末尾へのポインター。
+*last2*<br/>
+変換されたシーケンスの末尾へのポインター。
 
-*next2*最初へのポインターへの参照の未変換`Byte`変換された最後後`Byte`します。
+*next2*<br/>
+最初へのポインターへの参照の未変換`Byte`変換された最後後`Byte`します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -796,7 +840,7 @@ int main( )
 
 ```Output
 It worked: The converted string is:
- [This is the wchar_t string to be converted.]
+[This is the wchar_t string to be converted.]
 ```
 
 ## <a name="state_type"></a>  codecvt::state_type
@@ -825,13 +869,17 @@ result unshift(
 
 ### <a name="parameters"></a>パラメーター
 
-*_State*メンバー関数の呼び出しの間で維持される変換の状態。
+*_State*<br/>
+メンバー関数の呼び出し間で維持される変換の状態。
 
-*first2*ターゲット範囲の最初の位置を指すポインター。
+*first2*<br/>
+対象範囲内の最初の位置へのポインター。
 
-*last2*ターゲット範囲の最後の位置を指すポインター。
+*last2*<br/>
+対象範囲内の最後の位置へのポインター。
 
-*next2*対象シーケンスに変更されていない最初の要素へのポインター。
+*next2*<br/>
+対象シーケンス内の変更されていない最初の要素へのポインター。
 
 ### <a name="return-value"></a>戻り値
 

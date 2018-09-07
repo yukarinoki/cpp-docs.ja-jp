@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 662c4915753cc49534fa9f489eb61504907744c4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0ef4b993ec628771666ac3773b575ee518c18173
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954709"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106439"
 ---
 # <a name="basiciostream-class"></a>basic_iostream クラス
 
@@ -65,7 +65,7 @@ public:
 |-|-|
 |[operator=](#op_eq)|このオブジェクトに、指定された `basic_iostream` オブジェクトの値を代入します。 これは、`rvalue` が関係する移動代入で、コピーを残しません。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<istream>
 
@@ -85,9 +85,11 @@ basic_iostream();
 
 ### <a name="parameters"></a>パラメーター
 
-*strbuf*既存`basic_streambuf`オブジェクト。
+*strbuf*<br/>
+既存の `basic_streambuf` オブジェクト。
 
-*適切な*既存`basic_iostream`新しい構築に使用されるオブジェクト`basic_iostream`します。
+*right*<br/>
+新しい `basic_iostream` の構築に使用される既存の `basic_iostream` オブジェクト
 
 ### <a name="remarks"></a>Remarks
 
@@ -105,7 +107,8 @@ basic_iostream& operator=(basic_iostream&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*、`rvalue`への参照を`basic_iostream`から自動的に割り当てるオブジェクト。
+*right*<br/>
+割り当て元の `basic_iostream` オブジェクトへの `rvalue` 参照。
 
 ### <a name="remarks"></a>Remarks
 
@@ -121,7 +124,8 @@ void swap(basic_iostream& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*、`basic_iostream`交換するオブジェクト。
+*right*<br/>
+交換する `basic_iostream` オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 

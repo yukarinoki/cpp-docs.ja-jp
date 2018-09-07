@@ -15,33 +15,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b368794aa9137144213e3ad485068ea5a9e6b10f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a8870e952b4bcba9455a6c056c9fa21a8178d122
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751388"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100262"
 ---
 # <a name="platformboolean-value-class"></a>Platform::Boolean 値クラス
-ブール値を表します。 `bool`と同じ。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-public value struct Boolean  
-```  
-  
-### <a name="members"></a>メンバー  
- ブール値には、 [Platform::Object Class](../cppcx/platform-object-class.md)から派生した Equals()、GetHashCode()、ToString() メソッドと、 [Platform::Type Class](../cppcx/platform-type-class.md)から派生した GetTypeCode() メソッドがあります。  
-  
-### <a name="requirements"></a>要件  
- **クライアントがサポートされている最小:** Windows 8  
-  
- **サポートされているサーバーの最小値:** Windows Server 2012  
-  
- **名前空間:** Platform  
-  
- **メタデータ:** platform.winmd  
-  
-## <a name="see-also"></a>関連項目  
- [Platform 名前空間](../cppcx/platform-namespace-c-cx.md)
+
+ブール値を表します。 `bool`と同じ。
+
+## <a name="syntax"></a>構文
+
+```cpp
+public value struct Boolean
+```
+
+### <a name="members"></a>メンバー
+
+ブール値には、 [Platform::Object Class](../cppcx/platform-object-class.md)から派生した Equals()、GetHashCode()、ToString() メソッドと、 [Platform::Type Class](../cppcx/platform-type-class.md)から派生した GetTypeCode() メソッドがあります。
+
+### <a name="requirements"></a>要件
+
+**クライアントがサポートされている最小:** Windows 8
+
+**サポートされているサーバーの最小値:** Windows Server 2012
+
+**名前空間:** Platform
+
+**メタデータ:** platform.winmd
+
+## <a name="see-also"></a>関連項目
+
+[Platform 名前空間](../cppcx/platform-namespace-c-cx.md)

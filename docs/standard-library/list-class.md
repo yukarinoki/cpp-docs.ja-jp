@@ -108,12 +108,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b31f1562e5db85f0638dfd32ba6e2db0f6f70fea
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 86e1c74d3aa53dd64a48676e4fe9bdbc2065b9c5
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962918"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107489"
 ---
 # <a name="list-class"></a>list クラス
 
@@ -128,9 +128,11 @@ class list
 
 ### <a name="parameters"></a>パラメーター
 
-*型*リストに格納される要素のデータを入力します。
+*Type*<br/>
+list に格納される要素のデータ型。
 
-*アロケーター*リストの割り当てとメモリの解放に関する詳細をカプセル化する格納されたアロケーター オブジェクトを表す型です。 この引数は省略可能で、既定値は**アロケーター**\<*型*>。
+*アロケーター*<br/>
+メモリの list の割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能で、既定値は**アロケーター**\<*型*>。
 
 ## <a name="remarks"></a>Remarks
 
@@ -210,7 +212,7 @@ C++ 標準ライブラリ標準ヘッダー \<list> を定義するには、[コ
 |-|-|
 |[list::operator=](#op_eq)|別のリストのコピーでリストの要素を置き換えます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー**: \<list>
 
@@ -250,15 +252,20 @@ void assign(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*引数リストからコピーされる要素の範囲の最初の要素の位置。
+*まずは*<br/>
+引数リストからコピーされる要素範囲内の最初の要素の位置。
 
-*最後*引数リストからコピーされる要素の範囲を越えた最初の要素の位置。
+*前の*<br/>
+引数リストからコピーされる要素範囲を超える最初の要素の位置。
 
-*カウント*リストに挿入される要素のコピーの数。
+*カウント*<br/>
+リストに挿入される要素のコピーの数。
 
-*Val*リストに挿入される要素の値。
+*val*<br/>
+リストに挿入される要素の値。
 
-*IList*を挿入する要素を含む initializer_list。
+*IList*<br/>
+挿入される要素を含む initializer_list。
 
 ### <a name="remarks"></a>Remarks
 
@@ -952,7 +959,7 @@ int main( )
    cout << "The last integer of c1 is " << *c1_Iter << endl;
 
    c1_Iter--;
- *c1_Iter = 400;
+*c1_Iter = 400;
    cout << "The new next-to-last integer of c1 is "
         << *c1_Iter << endl;
 
@@ -983,11 +990,14 @@ iterator erase(iterator first, iterator last);
 
 ### <a name="parameters"></a>パラメーター
 
-*場所*一覧から削除する要素の位置。
+*Where*<br/>
+リストから削除される要素の位置。
 
-*最初*一覧から削除する最初の要素の位置。
+*first*<br/>
+リストから削除される最初の要素の位置。
 
-*最後*の最後の要素の次の位置が、一覧から削除します。
+*last*<br/>
+リストから削除される最後の要素の次の位置。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1437,9 +1447,11 @@ void merge(list<Type, Allocator>& right, Traits comp);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*ターゲット リストにマージする引数リスト。
+*right*<br/>
+対象のリストにマージする引数リスト。
 
-*comp*ターゲット リストの要素の並べ替えに使用される比較演算子。
+*comp*<br/>
+対象のリストの要素の並べ替えに使用する比較演算子。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1834,7 +1846,7 @@ int main( )
    cout << endl;
 
    c1_rIter = c1.rbegin( );
- *c1_rIter = 40;
+*c1_rIter = 40;
    cout << "The last element in the list is now " << *c1_rIter << "." << endl;
 }
 ```
@@ -1892,7 +1904,8 @@ void remove(const Type& val);
 
 ### <a name="parameters"></a>パラメーター
 
-*val*要素によって保持されている場合に、一覧からその要素の削除が発生する値。
+*val*<br/>
+要素によって保持されている場合、リストからその要素が削除される原因となる値。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1949,7 +1962,8 @@ void remove_if(Predicate pred)
 
 ### <a name="parameters"></a>パラメーター
 
-*pred*その一覧からその要素の削除結果、要素によって満たされる場合、単項述語。
+*Pred*<br/>
+要素によって満たされる場合、単項述語は結果的にリストからその要素を削除します。
 
 ### <a name="example"></a>例
 
@@ -2099,9 +2113,11 @@ void resize(size_type _Newsize, Type val);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Newsize*リストの新しいサイズ。
+*_Newsize*<br/>
+リストの新しいサイズ。
 
-*val*新しいサイズが大きい場合、一覧に追加する新しい要素の値を元のサイズ。 この値を省略した場合、新しい要素にはそのクラスの既定値が割り当てられます。
+*val*<br/>
+新しいサイズが元のサイズよりも大きい場合に、リストに追加される新しい要素の値。 この値を省略した場合、新しい要素にはそのクラスの既定値が割り当てられます。
 
 ### <a name="remarks"></a>Remarks
 
@@ -2279,7 +2295,8 @@ void sort(Traits comp);
 
 ### <a name="parameters"></a>パラメーター
 
-*comp*連続する要素の並べ替えに使用される比較演算子。
+*comp*<br/>
+連続する要素の並べ替えに使用される比較演算子。
 
 ### <a name="remarks"></a>Remarks
 
@@ -2350,15 +2367,20 @@ void splice(const_iterator Where, list<Type, Allocator>&& Source, const_iterator
 
 ### <a name="parameters"></a>パラメーター
 
-*場所*を挿入する前に、ターゲット リスト内の位置。
+*Where*<br/>
+挿入されるターゲット リスト内の位置。
 
-*ソース*ターゲット リストに挿入されるソース リスト。
+*Source*<br/>
+ターゲット リストに挿入されるソース リスト。
 
-*Iter*ソース リストから挿入される要素。
+*Iter*<br/>
+ソース リストから挿入される要素。
 
-*最初*ソース リストから挿入される範囲の最初の要素。
+*まずは*<br/>
+ソース リストから挿入される範囲内の最初の要素。
 
-*最後*ソース リストから挿入される範囲内の最後の要素を超える最初の位置。
+*前の*<br/>
+ソース リストから挿入される範囲内の最後の要素を超える最初の位置。
 
 ### <a name="remarks"></a>Remarks
 
@@ -2460,9 +2482,11 @@ friend void swap(list<Type, Allocator>& left, list<Type, Allocator>& right)
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*を交換する要素を提供するリストまたはリストのものと交換される要素がリスト*左*します。
+*right*<br/>
+交換する要素を提供するリストまたはリストのものと交換される要素がリスト*左*します。
 
-*左*要素がリストのものと交換されるリスト*右*します。
+*left*<br/>
+要素がリストのものと交換されるリスト*右*します。
 
 ### <a name="example"></a>例
 
@@ -2525,7 +2549,8 @@ void unique(BinaryPredicate pred);
 
 ### <a name="parameters"></a>パラメーター
 
-*pred*一連の要素を比較するために使用する二項述語。
+*Pred*<br/>
+一連の要素の比較に使用する二項述語。
 
 ### <a name="remarks"></a>Remarks
 

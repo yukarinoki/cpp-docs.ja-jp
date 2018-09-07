@@ -13,12 +13,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: 782acd7fda671d84252ab226d095fe21c75645bf
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4c4db60d3573629447bbf675c408586feec61f12
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965459"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107128"
 ---
 # <a name="ltarraygt-operators"></a>&lt;array&gt; 演算子
 
@@ -42,13 +42,17 @@ bool operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*要素の型。
+*Ty*<br/>
+要素の型。
 
-*N*配列のサイズ。
+*N*<br/>
+配列のサイズ。
 
-*左*を比較する左のコンテナー。
+*left*<br/>
+比較する左のコンテナー。
 
-*適切な*を比較する右のコンテナー。
+*right*<br/>
+比較する右のコンテナー。
 
 ### <a name="remarks"></a>Remarks
 
@@ -111,13 +115,17 @@ bool operator<(
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*要素の型。
+*Ty*<br/>
+要素の型。
 
-*N*配列のサイズ。
+*N*<br/>
+配列のサイズ。
 
-*左*を比較する左のコンテナー。
+*left*<br/>
+比較する左のコンテナー。
 
-*適切な*を比較する右のコンテナー。
+*right*<br/>
+比較する右のコンテナー。
 
 ### <a name="remarks"></a>Remarks
 
@@ -181,13 +189,17 @@ bool operator<=(
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*要素の型。
+*Ty*<br/>
+要素の型。
 
-*N*配列のサイズ。
+*N*<br/>
+配列のサイズ。
 
-*左*を比較する左のコンテナー。
+*left*<br/>
+比較する左のコンテナー。
 
-*適切な*を比較する右のコンテナー。
+*right*<br/>
+比較する右のコンテナー。
 
 ### <a name="remarks"></a>Remarks
 
@@ -251,13 +263,17 @@ bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*要素の型。
+*Ty*<br/>
+要素の型。
 
-*N*配列のサイズ。
+*N*<br/>
+配列のサイズ。
 
-*左*を比較する左のコンテナー。
+*left*<br/>
+比較する左のコンテナー。
 
-*適切な*を比較する右のコンテナー。
+*right*<br/>
+比較する右のコンテナー。
 
 ### <a name="remarks"></a>Remarks
 
@@ -321,13 +337,17 @@ bool operator>(
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*要素の型。
+*Ty*<br/>
+要素の型。
 
-*N*配列のサイズ。
+*N*<br/>
+配列のサイズ。
 
-*左*を比較する左のコンテナー。
+*left*<br/>
+比較する左のコンテナー。
 
-*適切な*を比較する右のコンテナー。
+*right*<br/>
+比較する右のコンテナー。
 
 ### <a name="remarks"></a>Remarks
 
@@ -391,13 +411,17 @@ bool operator>=(
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*要素の型。
+*Ty*<br/>
+要素の型。
 
-*N*配列のサイズ。
+*N*<br/>
+配列のサイズ。
 
-*左*を比較する左のコンテナー。
+*left*<br/>
+比較する左のコンテナー。
 
-*適切な*を比較する右のコンテナー。
+*right*<br/>
+比較する右のコンテナー。
 
 ### <a name="remarks"></a>Remarks
 

@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d50b53f9c06c5edbd159e7e2bac112f6f30432df
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 20566e34200b5c0e89b532d7096821d58a5f564f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954917"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103704"
 ---
 # <a name="queue-class"></a>queue クラス
 
@@ -52,9 +52,11 @@ class queue
 
 ### <a name="parameters"></a>パラメーター
 
-*型*キューに格納される要素のデータ型
+*Type*<br/>
+キューに格納される要素のデータ型。
 
-*コンテナー*キューの実装に使用される基になるコンテナーの種類。
+*コンテナー*<br/>
+キューの実装に使用する基になるコンテナーの型。
 
 ## <a name="remarks"></a>Remarks
 
@@ -97,7 +99,7 @@ C++ 標準ライブラリで定義されたコンテナー アダプターには
 |[push](#push)|`queue` の後ろに要素を追加します。|
 |[size](#size)|`queue` 内の要素数を返します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<queue>
 
@@ -331,7 +333,8 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>パラメーター
 
-*val*キューの後ろに追加する要素。
+*val*<br/>
+キューの一番後ろに追加する要素。
 
 ### <a name="remarks"></a>Remarks
 
@@ -381,7 +384,8 @@ explicit queue(const container_type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*、 **const**コンテナーが作成されたキューをコピーがあります。
+*right*<br/>
+構築されるキューのコピー元となる **const** コンテナ―。
 
 ### <a name="remarks"></a>Remarks
 

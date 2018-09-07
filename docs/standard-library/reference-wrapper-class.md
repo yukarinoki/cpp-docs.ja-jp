@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70ffecdfdf661e7423a4db0898b05dfa2f5ce832
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4937676b085988153b9b36875ae6bed4762d271c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954644"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102474"
 ---
 # <a name="referencewrapper-class"></a>reference_wrapper クラス
 
@@ -94,7 +94,7 @@ private:
 |-|-|
 |[reference_wrapper::operator Ty&amp;](#op_ty_amp)|ラップされた参照へのポインターを取得します。|
 |[reference_wrapper::operator()](#op_call)|ラップされた参照を呼び出します。|
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<functional>
 
@@ -186,9 +186,11 @@ auto operator()(Types&&... args);
 
 ### <a name="parameters"></a>パラメーター
 
-*型*引数リストの型。
+*型*<br/>
+引数リストの型。
 
-*args*引数リスト。
+*引数*<br/>
+引数リスト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -229,9 +231,11 @@ reference_wrapper(Ty& val) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*をラップする型。
+*Ty*<br/>
+ラップする型。
 
-*val*をラップする値。
+*val*<br/>
+ラップする値。
 
 ### <a name="remarks"></a>Remarks
 

@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd876ec21379d59445b88bdc08a1c7b831cb94fa
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: 82df045c5a41767093e690ec35ffeb3d81032474
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33954035"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110657"
 ---
 # <a name="recursivedirectoryiterator-class"></a>recursive_directory_iterator クラス
 
-ディレクトリ内のファイル名を走査する入力反復子を記述します。反復子は再帰的にサブディレクトリに下ることができます。 反復子 X の場合、式 *X の結果は、ファイル名とそのステータスに関する既知の情報をラップする directory_entry クラスのオブジェクトになります。
+入力反復子のディレクトリにファイル名を走査する可能性がある再帰的にサブディレクトリ降順をについて説明します。 反復子のため`X`、式`*X`クラスのオブジェクトを指す`directory_entry`ファイル名とその状態に関する既知の情報をラップします。
 
 詳細およびコード例については、「[ファイル システムのナビゲーション (C++)](../standard-library/file-system-navigation.md)」を参照してください。
 
@@ -33,89 +33,157 @@ ms.locfileid: "33954035"
 class recursive_directory_iterator;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 テンプレート クラスは以下を格納します。
 
-1. 走査するディレクトリのネストを表す stack<pair\<directory_iterator, path>> 型のオブジェクト。ここでは、このオブジェクトに mystack という名前を付けて説明を進めます。
+1. 型のオブジェクト`stack<pair<directory_iterator, path>>`という`mystack`シーケンス処理するディレクトリのネストを表す説明のためには、ここで
 
-1. ディレクトリ シーケンス内の現在のファイル名を表す directory_entry 型のオブジェクト。ここでは、myentry という名前を付けます。
+1. 型のオブジェクト`directory_entry`と呼ばれる`myentry`ここでは、ディレクトリ シーケンス内の現在のファイル名を表します
 
-1. 再帰的にサブディレクトリに下ることが無効になっているかどうかを記録する bool 型のオブジェクト。ここでは、no_push という名前を付けます。
+1. 型のオブジェクト`bool`という`no_push`ここでは、サブディレクトリへの再帰ディセントが無効になっているかどうかを記録します。
 
-1. 構築時に設定されたオプションを記録する directory_options 型のオブジェクト。ここでは、myoptions という名前を付けます。
+1. 型のオブジェクト`directory_options`という`myoptions`ここでは、構築時に設定されたオプションを記録します。
 
-既定で構築される recursive_directory_entry 型のオブジェクトは、mystack.top().first に end-of-sequence 反復子を持つため、シーケンスの終端を示す反復子を表します。たとえば、def (ディレクトリ)、def/ghi、および jkl というエントリを持つディレクトリ abc がある場合、次のコードは
+型の既定で構築されるオブジェクト`recursive_directory_entry`でシーケンス末尾の反復子のある`mystack.top().first`シーケンス末尾の反復子を表します。 たとえば、ディレクトリを指定`abc`エントリを含む`def`(ディレクトリ) `def/ghi`、および`jkl`コード。
 
 ```cpp
 for (recursive_directory_iterator next(path("abc")), end; next != end; ++next)
     visit(next->path());
 ```
 
-引数 `path("abc/def/ghi") and path("abc/jkl").`を使用して visit を呼び出します。次の 2 つの方法でディレクトリ サブツリーの走査の条件を指定できます。
+引数を使用して visit を呼び出します`path("abc/def/ghi")`と`path("abc/jkl")`します。 2 つの方法でディレクトリ サブツリーの走査を修飾することができます。
 
-1. 値が directory_options::follow_directory_symlink の directory_options 引数を使って recursive_directory_iterator を構築した場合にのみ、ディレクトリ symlink がスキャンされます。
+1. 構築する場合にのみ、ディレクトリ symlink がスキャンされます、`recursive_directory_iterator`で、`directory_options`引数の値が`directory_options::follow_directory_symlink`します。
 
-1. disable_recursion_pending を呼び出した場合は、インクリメント中に検出された後続ディレクトリは再帰的にスキャンされません。
+1. 呼び出す場合`disable_recursion_pending`インクリメント中に発生した後続ディレクトリは再帰的にスキャンができません。
 
-## <a name="recursivedirectoryiteratordepth"></a>recursive_directory_iterator::depth
+### <a name="constructors"></a>コンストラクター
+
+|コンストラクター|説明|
+|-|-|
+|[recursive_directory_iterator](#recursive_directory_iterator)|`recursive_directory_iterator` を構築します。|
+
+### <a name="member-functions"></a>メンバー関数
+
+|メンバー関数|説明|
+|-|-|
+|[深さ](#depth)|返します`mystack.size() - 1`ため、`pval`深さ 0 です。|
+|[disable_recursion_pending](#disable_recursion_pending)|ストア**true**で`no_push`します。|
+|[increment](#increment)|シーケンス内の次のファイル名に進みます。|
+|[options](#options)|`myoptions` を返します。|
+|[pop](#pop)|次のオブジェクトを返します。|
+|[recursion_pending](#recursion_pending)|`!no_push` を返します。|
+
+### <a name="operators"></a>演算子
+
+|演算子|説明|
+|-|-|
+|[operator!=](#op_neq)|`!(*this == right)` を返します。|
+|[operator=](#op_as)|この既定のメンバー代入演算子は想定どおりに動作します。|
+|[operator==](#op_eq)|返します**true**両方の場合にのみ`*this`と*右*シーケンス末尾の反復子またはその両方がないエンド-の-シーケンスの反復子。|
+|[operator*](#op_multiply)|`myentry` を返します。|
+|[operator->](#op_cast)|`&**this` を返します。|
+|[operator++](#op_increment)|インクリメント、`recursive_directory_iterator`します。|
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** \<filesystem >
+
+**名前空間:** std::tr2::sys
+
+## <a name="depth"></a> recursive_directory_iterator::depth
+
+返します`mystack.size() - 1`ため、`pval`深さ 0 です。
 
 ```cpp
 int depth() const;
 ```
 
-mystack.size() - 1 を返すため、pval が深さ 0 になります。
+## <a name="disable_recursion_pending"></a> recursive_directory_iterator::disable_recursion_pending
 
-## <a name="recursivedirectoryiteratordisablerecursionpending"></a>recursive_directory_iterator::disable_recursion_pending
+ストア**true**で`no_push`します。
 
 ```cpp
 void disable_recursion_pending();
 ```
 
-このメンバー関数は、no_push に true を格納します。
+## <a name="increment"></a> recursive_directory_iterator::increment
 
-## <a name="recursivedirectoryiteratoroperator"></a>recursive_directory_iterator::operator!=
+シーケンス内の次のファイル名に進みます。
+
+```cpp
+recursive_directory_iterator& increment(error_code& ec) noexcept;
+```
+
+### <a name="parameters"></a>パラメーター
+
+*ec*<br/>
+エラー コードを指定します。
+
+### <a name="remarks"></a>Remarks
+
+この関数は、ネストされたシーケンス内の次のファイル名に進もうとします。 かどうかは成功すると、そのファイル名を格納で`myentry`。 それ以外の場合、シーケンス末尾の反復子が生成されます。
+
+## <a name="op_neq"></a> recursive_directory_iterator::operator! =
+
+`!(*this == right)` を返します。
 
 ```cpp
 bool operator!=(const recursive_directory_iterator& right) const;
 ```
 
-このメンバー演算子は、!(*this == right) を返します。
+### <a name="parameters"></a>パラメーター
 
-## <a name="recursivedirectoryiteratoroperator"></a>recursive_directory_iterator::operator=
+*right*<br/>
+[Recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md)比較します。
+
+## <a name="op_as"></a> recursive_directory_iterator::operator =
+
+この既定のメンバー代入演算子は想定どおりに動作します。
 
 ```cpp
 recursive_directory_iterator& operator=(const recursive_directory_iterator&) = default;
 recursive_directory_iterator& operator=(recursive_directory_iterator&&) noexcept = default;
 ```
 
-この既定のメンバー代入演算子は想定どおりに動作します。
+### <a name="parameters"></a>パラメーター
 
-## <a name="recursivedirectoryiteratoroperator"></a>recursive_directory_iterator::operator==
+*recursive_directory_iterator*<br/>
+[Recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md)にコピーされる、`recursive_directory_iterator`します。
+
+## <a name="op_eq"></a> recursive_directory_iterator::operator = =
+
+返します**true**両方の場合にのみ`*this`と*右*シーケンス末尾の反復子またはその両方がないエンド-の-シーケンスの反復子。
 
 ```cpp
 bool operator==(const recursive_directory_iterator& right) const;
 ```
 
-このメンバー演算子は、*this と right の両方が end-of-sequence 反復子の場合または両方が end-of-sequence 反復子でない場合にのみ、true を返します。
+### <a name="parameters"></a>パラメーター
 
-## <a name="recursivedirectoryiteratoroperator"></a>recursive_directory_iterator::operator*
+*right*<br/>
+[Recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md)比較します。
+
+## <a name="op_multiply"></a> recursive_directory_iterator::operator *
+
+`myentry` を返します。
 
 ```cpp
 const directory_entry& operator*() const;
 ```
 
-このメンバー演算子は、myentry を返します。
+## <a name="op_cast"></a> recursive_directory_iterator::operator -> します。
 
-## <a name="recursivedirectoryiteratoroperator-"></a>recursive_directory_iterator::operator->
+`&**this` を返します。
 
 ```cpp
 const directory_entry * operator->() const;
 ```
 
-&**this を返します。
+## <a name="op_increment"></a> recursive_directory_iterator::operator:operator++
 
-## <a name="recursivedirectoryiteratoroperator"></a>recursive_directory_iterator::operator++
+インクリメント、`recursive_directory_iterator`します。
 
 ```cpp
 recursive_directory_iterator& operator++();
@@ -123,33 +191,46 @@ recursive_directory_iterator& operator++();
 recursive_directory_iterator& operator++(int);
 ```
 
-1 つ目のメンバー関数は、increment() を呼び出してから、*this を返します。 2 つ目のメンバー関数は、オブジェクトのコピーを作成して、increment() を呼び出してから、そのコピーを返します。
+### <a name="parameters"></a>パラメーター
 
-## <a name="recursivedirectoryiteratoroptions"></a>recursive_directory_iterator::options
+*int*<br/>
+指定された増分値。
+
+### <a name="remarks"></a>Remarks
+
+最初のメンバー関数の呼び出し`increment()`、戻ります`*this`します。 2 番目のメンバー関数の呼び出し、オブジェクトのコピー`increment()`コピーを返します。
+
+## <a name="options"></a> recursive_directory_iterator::options
+
+`myoptions` を返します。
 
 ```cpp
 directory_options options() const;
 ```
 
-myoptions を返します。
+## <a name="pop"></a> recursive_directory_iterator::pop
 
-## <a name="recursivedirectoryiteratorpop"></a>recursive_directory_iterator::pop
+次のオブジェクトを返します。
 
 ```cpp
 void pop();
 ```
 
-depth() == 0 の場合は、オブジェクトが end-of-sequence 反復子になります。 そうでない場合、メンバー関数は現在の (最も深い) ディレクトリのスキャンを中断し、1 つ下の深さから再開します。
+### <a name="remarks"></a>Remarks
 
-## <a name="recursivedirectoryiteratorrecursionpending"></a>recursive_directory_iterator::recursion_pending
+場合`depth() == 0`シーケンス末尾の反復子になります。 そうでない場合、メンバー関数は現在の (最も深い) ディレクトリのスキャンを中断し、1 つ下の深さから再開します。
+
+## <a name="recursion_pending"></a> recursive_directory_iterator::recursion_pending
+
+`!no_push` を返します。
 
 ```cpp
 bool recursion_pending() const;
 ```
 
-!no_push を返します。
+## <a name="recursive_directory_iterator"></a> recursive_directory_iterator::recursive_directory_iterator
 
-## <a name="recursivedirectoryiteratorrecursivedirectoryiterator"></a>recursive_directory_iterator::recursive_directory_iterator
+`recursive_directory_iterator` を構築します。
 
 ```cpp
 recursive_directory_iterator() noexcept;
@@ -167,23 +248,25 @@ recursive_directory_iterator(const recursive_directory_iterator&) = default;
 recursive_directory_iterator(recursive_directory_iterator&&) noexcept = default;
 ```
 
-1 つ目のコンストラクターは、end-of-sequence 反復子を生成します。 2 つ目と 3 つ目のコンストラクターは、no_push に false を、myoptions に directory_options::none を格納してから、pval をディレクトリとして開いて読み取ろうとします。 成功した場合は、ネストされたシーケンスに含まれる、ディレクトリでない 1 つ目のファイル名を指すように mystack と myentry を初期化します。成功しなかった場合は、end-of-sequence 反復子を生成します。
+### <a name="parameters"></a>パラメーター
 
-4 つ目と 5 つ目のコンストラクターは、最初に myoptions に opts を格納することを除いて、2 つ目と 3 つ目のコンストラクターと同じ動作をします。 既定のコンストラクターは想定どおりの動作をします。
+*pval*<br/>
+指定するパス。
 
-## <a name="recursivedirectoryiteratorincrement"></a>recursive_directory_iterator::increment
+*error_code*<br/>
+指定したエラー コード。
 
-```cpp
-recursive_directory_iterator& increment(error_code& ec) noexcept;
-```
+*opts*<br/>
+指定したディレクトリのオプション。
 
-この関数は、ネストされたシーケンス内の次のファイル名に進もうとします。 成功した場合は、myentry にそのファイル名を格納します。成功しなかった場合は、end-of-sequence 反復子を生成します。
+*recursive_directory_iterator*<br/>
+構築された `recursive_directory_iterator` のコピー元となる `recursive_directory_iterator`。
 
-## <a name="requirements"></a>要件
+### <a name="remarks"></a>Remarks
 
-**ヘッダー:** \<filesystem >
+1 つ目のコンストラクターは、end-of-sequence 反復子を生成します。 2 番目と 3 番目のコンス トラクター ストア**false**で`no_push`と`directory_options::none`で`myoptions`、開いて読み取ろうと試みます*pval*ディレクトリとして。 初期化が成功すると、`mystack`と`myentry`; 入れ子になったシーケンス内の最初のディレクトリでないファイル名を指定するシーケンスの末尾の反復子を生成します。
 
-**名前空間:** std::tr2::sys
+4 番目と 5 番目のコンス トラクターと動作、2 番目と 3 つ目として格納している点を除いて*opts*で`myoptions`します。 既定のコンストラクターは想定どおりの動作をします。
 
 ## <a name="see-also"></a>関連項目
 

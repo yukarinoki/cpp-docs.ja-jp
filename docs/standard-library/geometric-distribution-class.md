@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8468cb290b6845050943159aaa69b9cd000d2bc7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4ca6120a8cd649b1c4d3d5d662cb987d950b9b4e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960295"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110387"
 ---
 # <a name="geometricdistribution-class"></a>geometric_distribution クラス
 
@@ -76,9 +76,11 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*IntType*整数の結果の型の既定値**int**します。使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*IntType*<br/>
+整数の結果の型の既定値**int**します。使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
-*URNG* Uniform Random Number Generator エンジン。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*URNG*<br/>
+Uniform random number generator エンジン。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
@@ -211,7 +213,7 @@ Distribution for 100 samples:
    35 :
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<random>
 
@@ -228,9 +230,11 @@ explicit geometric_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*p* 、`p`分布パラメーター。
+*P*<br/>
+`p` 分布パラメーター。
 
-*parm*分布の作成に使用されるパラメーターの構造体。
+*parm*<br/>
+分布の作成に使用されるパラメーターの構造体。
 
 ### <a name="remarks"></a>Remarks
 
@@ -257,9 +261,11 @@ struct param_type {
 
 ### <a name="parameters"></a>パラメーター
 
-*p* 、`p`分布パラメーター。
+*P*<br/>
+`p` 分布パラメーター。
 
-*適切な*、`param_type`インスタンスを比較します。
+*right*<br/>
+これと比較する `param_type` インスタンス。
 
 ### <a name="remarks"></a>Remarks
 

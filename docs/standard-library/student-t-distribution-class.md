@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc995da6ce25aaed35e4e3fac04c08f37acaea7a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 2ef525ee1b000c7f374260961de17076eb4734e7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676145"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108851"
 ---
 # <a name="studenttdistribution-class"></a>student_t_distribution クラス
 
@@ -74,7 +74,8 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*RealType*浮動小数点の結果の型の既定値**二重**します。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*RealType*<br/>
+浮動小数点の結果の型の既定値**二重**します。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
@@ -184,9 +185,10 @@ explicit student_t_distribution(const param_type& parm);
 ### <a name="parameters"></a>パラメーター
 
 *n*  
- `n` 分布パラメーター。
+`n` 分布パラメーター。
 
-*parm*分布の作成に使用されるパラメーター パッケージ。
+*parm*<br/>
+分布の作成に使用されるパラメーター パッケージ。
 
 ### <a name="remarks"></a>Remarks
 

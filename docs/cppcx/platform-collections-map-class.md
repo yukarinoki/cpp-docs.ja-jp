@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e199df62aa6bc0c3dc670bd2951a7af2667e7faa
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9eccefff291dc509f846bce951cfe9508834876e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758379"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103880"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map クラス
 
@@ -46,17 +46,16 @@ ref class Map sealed;
 
 ### <a name="parameters"></a>パラメーター
 
-*K*  
- キー/値ペア内のキーの型。
+*K*<br/>
+キー/値ペア内のキーの型。
 
-*V*  
+*V*<br/>
 キー/値ペア内の値の型。
 
-*C*  
+*C*<br/>
 並べ替えキーとして 2 つの要素値を比較してマップ内の相対順序を決定できる関数オブジェクトを提供する型。 既定では、 [std::less\<K >](../standard-library/less-struct.md)します。
 
-*__is_valid_winrt_type()*  
-コンパイラによって生成された関数の種類を検証する*K*と*V*し型にマップに格納できない場合は、わかりやすいエラー メッセージを提供します。
+*__is_valid_winrt_type()* コンパイラによって生成された関数の種類を検証する*K*と*V*し型にマップに格納できない場合は、わかりやすいエラー メッセージを提供します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -169,7 +168,7 @@ bool HasKey(K key);
 
 ### <a name="parameters"></a>パラメーター
 
-*key*  
+*key*<br/>
 Map 要素の検索に使用するキー。 型*キー* typename が*K*します。
 
 ### <a name="return-value"></a>戻り値
@@ -188,10 +187,10 @@ virtual bool Insert(K key, V value);
 
 ### <a name="parameters"></a>パラメーター
 
-*key*  
+*key*<br/>
 キー/値ペアのキー部分。 型*キー* typename が*K*します。
 
-*値*  
+*値*<br/>
 キー/値ペアの値部分。 型*値*typename が*V*します。
 
 ### <a name="return-value"></a>戻り値
@@ -210,7 +209,7 @@ V Lookup(K key);
 
 ### <a name="parameters"></a>パラメーター
 
-*key*  
+*key*<br/>
 マップの要素の検索に使用するキー。 型*キー* typename が*K*します。
 
 ### <a name="return-value"></a>戻り値
@@ -240,19 +239,19 @@ Map(
 
 ### <a name="parameters"></a>パラメーター
 
-*InIt*  
+*InIt*<br/>
 現在のマップの型名。
 
-*comp*  
+*comp*<br/>
 並べ替えキーとして 2 つの要素値を比較してマップ内の相対順序を決定できる関数オブジェクトを提供する型。
 
-*m*  
+*m*<br/>
 参照または[Lvalues と Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)を`map Class`現在のマップを初期化するために使用されます。
 
-*first*  
+*first*<br/>
 現在のマップを初期化するために使用される要素の範囲内の最初の要素の入力反復子。
 
-*last*  
+*last*<br/>
 現在のマップを初期化するために使用される要素の範囲の後の最初の要素の入力反復子。
 
 ## <a name="mapchanged"></a>  Map::mapchanged イベント
@@ -285,7 +284,7 @@ virtual void Remove(K key);
 
 ### <a name="parameters"></a>パラメーター
 
-*key*  
+*key*<br/>
 キー/値ペアのキー部分。 型*キー* typename が*K*します。
 
 ## <a name="size"></a>  Map::size メソッド
@@ -304,5 +303,5 @@ virtual property unsigned int Size;
 
 ## <a name="see-also"></a>関連項目
 
-[プラットフォーム Namespace](platform-namespace-c-cx.md)  
-[C++ で Windows ランタイム コンポーネントの作成](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  
+[プラットフォーム Namespace](platform-namespace-c-cx.md)<br/>
+[C++ で Windows ランタイム コンポーネントの作成](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

@@ -45,12 +45,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fd388e2963a0e28389fbf7cc2c4bd146ac9b61e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8942dbaddcc1f4ab1ec5d571d08d95d8669d302d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401439"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107056"
 ---
 # <a name="ftime-ftime32-ftime64"></a>_ftime、_ftime32、_ftime64
 
@@ -66,11 +66,12 @@ void _ftime64( struct __timeb64 *timeptr );
 
 ### <a name="parameters"></a>パラメーター
 
-*timeptr*へのポインター、 **_timeb**、 **__timeb32**、または **_ _timeb64**構造体。
+*timeptr*<br/>
+ポインターを **_timeb**、 **__timeb32**、または **_ _timeb64**構造体。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Ftime**関数は、現在の現地時刻を取得しが指す構造体に格納*timeptr*です。 **_Timeb**、 **__timeb32**、および **_ _timeb64**で構造体が定義されている\<sys\\timeb.h >。 これらは、次の表に示す 4 つのフィールドを含んでいます。
+**_Ftime**関数は、現在の現地時刻を取得しが指す構造体に格納*timeptr*します。 **_Timeb**、 **__timeb32**、および **_ _timeb64**で構造が定義されている\<sys\\timeb.h >。 これらは、次の表に示す 4 つのフィールドを含んでいます。
 
 |フィールド|説明|
 |-|-|
@@ -79,11 +80,11 @@ void _ftime64( struct __timeb64 *timeptr );
 |**time**|世界協定時刻 (UTC: Coordinated Universal Time) の 1970 年 1 月 1 日の深夜 00:00:00 から経過した時間 (秒単位)。|
 |**timezone**|西に移動するときの UTC と現地時刻の間の差 (分単位)。 値**タイムゾーン**グローバル変数の値から設定されている **_timezone** (を参照してください **_tzset**)。|
 
-**_Ftime64**関数を使用して、 **_ _timeb64**構造体、ことができますを UTC; 3000 年 12 月 31 日 23時 59分: 59 秒を表現するファイルの作成日 **_ftime32**のみの 2038 年 1 月 18 日 23時 59分: 59 までの日付を表します。 これらの関数の日付範囲の下限は、いずれも 1970 年 1 月 1 日の午前 0 時です。
+**_Ftime64**関数を使用して、 **_ _timeb64**構造体、ことができますを UTC; 3000 年 12 月 31 日 23時 59分: 59 秒を表すファイルの作成日 **_ftime32**のみの 2038 年 1 月 18 日 23時 59分: 59 までの日付を表します。 これらの関数の日付範囲の下限は、いずれも 1970 年 1 月 1 日の午前 0 時です。
 
-**_Ftime**関数と同じ **_ftime64**、および **_timeb**しない限り、64 ビットの時刻を含む **_USE_32BIT_TIME_T**がで定義されている、この場合、従来の動作は、有効になります。**_ftime** 32 ビットの時刻を使用し、 **_timeb** 32 ビットの時刻が含まれています。
+**_Ftime**関数は等価 **_ftime64**、および **_timeb**しない限り、64 ビットの時刻が含まれています **_USE_32BIT_TIME_T**で、定義は、この場合、以前の動作が有効になります。**_ftime**は 32 ビットの時刻を使用し、 **_timeb** 32 ビットの時刻が含まれています。
 
-**_ftime**パラメーターを検証します。 として null ポインターを渡された場合*timeptr*、」の説明に従って、関数が無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は設定**errno**に**EINVAL**です。
+**_ftime**パラメーターを検証します。 として null ポインターを渡された場合*timeptr*、」の説明に従って、関数は、無効なパラメーター ハンドラーを呼び出す[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は設定**errno**に**EINVAL**します。
 
 ## <a name="requirements"></a>要件
 
