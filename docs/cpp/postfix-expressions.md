@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a951c45da8c5c6b672540c03bc1d97b5d54d9338
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e7ab8ad911869cab56df12b08b9688b9912f2a63
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403142"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895163"
 ---
 # <a name="postfix-expressions"></a>後置式
 後置式は、1 次式、または後置演算子が 1 次式に続く式で構成されます。 次の表は、後置演算子の一覧です。  
@@ -50,7 +50,7 @@ postfix-expression[expression]postfix-expression(expression-list)simple-type-nam
 func(1)->GetValue()++  
 ```  
   
- 上記の式で`func`基本の式は、`func(1)`は関数後置式では、 `func(1)->GetData` 、クラスのメンバーを指定する後置式は、`func(1)->GetData()`は別の関数後置式全体式は、GetData の戻り値をインクリメントする後置式です。  全体として式の意味は、「引数として 1 を渡す関数を呼び出し、戻り値としてクラスへのポインターを取得します。  呼び出して`GetValue()`、そのクラスで返される値をインクリメントします。  
+ 上記の式で`func`基本の式は、`func(1)`は関数後置式では、 `func(1)->GetValue` 、クラスのメンバーを指定する後置式は、`func(1)->GetValue()`は別の関数後置式全体式は、GetValue の戻り値をインクリメントする後置式です。  全体として式の意味は、「引数として 1 を渡す関数を呼び出し、戻り値としてクラスへのポインターを取得します。  呼び出して`GetValue()`、そのクラスで返される値をインクリメントします。  
   
  前の式は、代入式です。つまり、これらの式の結果が右辺値である必要があります。  
   

@@ -1,7 +1,7 @@
 ---
 title: ロケール名、言語、および国/地域識別文字列 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/13/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: conceptual
@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f28262a1402d81bd5dcd0933f943b420a37f044
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: c072074c24466458ebd19e1335f49169c5c22bd5
+ms.sourcegitcommit: 3b78ddea5fd3e22b7c5cd2d787ec71a518a52223
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606736"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578382"
 ---
 # <a name="locale-names-languages-and-countryregion-strings"></a>ロケール名、言語、および国/地域識別文字列
 
@@ -44,9 +44,9 @@ ms.locfileid: "39606736"
 
 コード ページは、ロケールに関連付けられた ANSI/OEM コード ページです。 コード ページは、言語または言語と国/地域のみによってロケールを指定すると決定されます。 特殊な値 `.ACP` は国/地域の ANSI コード ページを指定します。 特殊な値 `.OCP` は国/地域の OEM コード ページを指定します。 たとえば、ロケールとして `"Greek_Greece.ACP"` を指定すると、ロケールは `Greek_Greece.1253` (ギリシャ語の ANSI コード ページ) として格納されます。また、ロケールとして `"Greek_Greece.OCP"` を指定すると、 `Greek_Greece.737` (ギリシャ語の OEM のコード ページ) として格納されます。 コード ページの詳細については、「 [Code Pages](../c-runtime-library/code-pages.md)」を参照してください。 Windows でサポートされているコード ページの一覧については、「 [コード ページの識別子](/windows/desktop/Intl/code-page-identifiers)」を参照してください。
 
-ロケールを指定するためにコード ページだけを使用する場合、システムの既定の言語と国または地域が使用されます。 たとえば、英語 (米国) に構成されたシステムのロケールとして `".1254"` (ANSI トルコ語) を指定した場合は、格納されているロケールは `English_United States.1254`です。 この形式はお勧めしません。これにより一貫性のない動作が実行される可能性があるためです。
+ロケールを指定するためにコード ページだけを使用する場合、ユーザーの既定の言語と国または地域 ([GetUserDefaultLocaleName](/windows/desktop/api/winnls/nf-winnls-getuserdefaultlocalename) で報告される) が使用されます。 たとえば、英語 (米国) に構成されたユーザーのロケールとして `".1254"` (ANSI トルコ語) を指定した場合は、格納されているロケールは `English_United States.1254` です。 この形式はお勧めしません。これにより一貫性のない動作が実行される可能性があるためです。
 
-`C` の*ロケール*引数値は、C 翻訳のための ANSI に準拠した最小環境を指定します。 `C` ロケールは、任意の `char` データ型が 1 バイトであり、値は常に 256 未満であると推定します。 *ロケール*が空の文字列をポイントしている場合は、実装定義のネイティブ環境になります。
+`C` の*ロケール*引数値は、C 翻訳のための ANSI に準拠した最小環境を指定します。 `C` ロケールは、任意の **char** データ型が 1 バイトであり、値は常に 256 未満であると推定します。 *ロケール*が空の文字列をポイントしている場合は、実装定義のネイティブ環境になります。
 
 `setlocale` 関数と `_wsetlocale` 関数に `LC_ALL` カテゴリを使用して、ロケールのカテゴリのすべてを同時に指定できます。 カテゴリはすべて同じロケールに設定できますが、次の形式を持つロケール引数を使用して各カテゴリを個別に設定できます。
 

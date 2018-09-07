@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 454507a3a3f33b43af0e50c25dab6703aa75a56b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 36aad914fc9552cea06eabd0898fe33b9b09481e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332781"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605832"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-a-setup-project"></a>チュートリアル: セットアップ プロジェクトを使用した Visual C++ アプリケーションの配置
 セットアップ プロジェクトを使用して、Visual C++ アプリケーションを展開する方法について説明します。  
@@ -27,7 +27,7 @@ ms.locfileid: "33332781"
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
--   [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] がインストールされているコンピューター。  
+-   Visual Studio 2012 がインストールされているコンピューター。  
   
 -   Visual C++ ライブラリがない別のコンピューター。  
   

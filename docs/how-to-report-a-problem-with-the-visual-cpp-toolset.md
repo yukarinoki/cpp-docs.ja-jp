@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1735f890c0f106d82884a5ad7d63a5a3f0f8920
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: 359c9d3f72ffa87abf49c6e3ca90743ad0fc80a3
+ms.sourcegitcommit: 9be4b66efa45dc132cef06eb3b258c2252ea23a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322369"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42583900"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Visual C++ ツールセットまたはドキュメントの問題を報告する方法
 
@@ -335,7 +335,7 @@ C++ コンパイラのモジュール機能を使用している場合は、前�
 
 1. **mkdir linkrepro** を入力して、リンク再現コードのディレクトリを作成します。
 
-1. コマンド **set link\_repro=linkrepro** を入力して、作成したディレクトリに **link\_repro** 環境変数を設定します。
+1. コマンド **set link\_repro=linkrepro** を入力して、作成したディレクトリに **link\_repro** 環境変数を設定します。 複雑なプロジェクトでよくあるように、別のディレクトリからビルドを実行する場合は、代わりに **link\_repro** を linkrepro ディレクトリへの完全なパスに設定します。
 
 1. Visual Studio で再現コード プロジェクトをビルドするには、開発者コマンド プロンプト コンソール ウィンドウで、コマンド **devenv** を入力します。 これにより、**link\_repro** 環境変数の値を Visual Studio で認識できるようになります。 コマンド ラインでプロジェクトをビルドするには、上でキャプチャしたコマンド ライン引数を使用して再現コード ビルドを複製します。
 

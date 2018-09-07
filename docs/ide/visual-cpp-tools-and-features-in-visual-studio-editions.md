@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5eace3ef3cfd07847c995151554ba70ca23f820
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 79814d96bac185e73cc1c42a98be6d7b35e9a75d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337250"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42578523"
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>さまざまな Visual Studio エディションの Visual C++ ツールおよび機能
 
@@ -45,8 +45,8 @@ Visual Studio で使用できる Visual C++ の機能を次の表に示します
 |--------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |32 ビット X86 コンパイラ|x|x|x|x|
 |X86_arm cross-compiler|x||x|x|
-|64 ビット [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] コンパイラ|||x|x|
-|X86_ [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] cross-compiler|x|x|x|x|
+|64 ビット x64 コンパイラ|||x|x|
+|X86_ x64 クロス コンパイラ|x|x|x|x|
 
 ## <a name="libraries-and-headers"></a>ライブラリおよびヘッダー
 
@@ -113,7 +113,7 @@ Visual Studio で使用できる Visual C++ の機能を次の表に示します
 |ネイティブ デバッグ|x|x|x|x|
 |natvis (ネイティブ型の視覚エフェクト)|x|x|x|x|
 |グラフィックスのデバッグ|x||x|x|
-|マネージ デバッグ||x|x|x|
+|マネージド デバッグ||x|x|x|
 |GPU 使用率|x||x|x|
 |メモリ使用量|x||x|x|
 |リモート デバッグ|x|x|x|x|
@@ -152,7 +152,7 @@ Visual Studio で使用できる Visual C++ の機能を次の表に示します
 |------------------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |コマンド ライン ビルド (msbuild.exe)|x|x|x|x|
 |ネイティブ マルチ ターゲット||x|x|x|
-|マネージ マルチ ターゲット||x|x|x|
+|マネージド マルチ ターゲット||x|x|x|
 |平行ビルド|x|x|x|x|
 |カスタマイズのビルド|x|x|x|x|
 |プロパティ ページの機能拡張|x|x|x|x|
@@ -174,7 +174,7 @@ Visual Studio で使用できる Visual C++ の機能を次の表に示します
 |-|-|-|-|-|
 |ツール|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional/Community|Visual Studio Enterprise|
 |単体テスト (ネイティブ フレームワーク)|x|x|x|x|
-|単体テスト (マネージ フレームワーク)||x|x|x|
+|単体テスト (マネージド フレームワーク)||x|x|x|
 |コード カバレッジ||||x|
 |手動テスト||||x|
 |探索的テスト||||x|
