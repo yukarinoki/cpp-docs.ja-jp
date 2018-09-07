@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b475f497509249a29eb466c1a353111661b744e6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5efee5c6c867cf7b9b58e94f7475f365dee580ae
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959473"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102591"
 ---
 # <a name="piecewiselineardistribution-class"></a>piecewise_linear_distribution クラス
 
@@ -90,7 +90,8 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*RealType*浮動小数点の結果の型、既定値は**二重**します。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*RealType*<br/>
+浮動小数点の結果の型、既定値は**二重**します。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
@@ -222,7 +223,7 @@ Distribution for 100 samples:
    14-15 :::::
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<random>
 
@@ -258,23 +259,32 @@ explicit piecewise_linear_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*firstI*分布範囲内の最初の要素の入力反復子。
+*firstI*<br/>
+ターゲット範囲内の先頭の要素を示す入力反復子。
 
-*lastI*分布範囲内の最後の要素の入力反復子。
+*lastI*<br/>
+ターゲット範囲内の末尾の要素を示す入力反復子。
 
-*firstW*重みの範囲の最初の要素の入力反復子。
+*firstW*<br/>
+重み範囲内の先頭の要素を示す入力反復子。
 
-*間隔*、 [initializer_list](../cpp/initializers.md)分布の区間を含むです。
+*intervals*<br/>
+分布の区間を含む [initializer_list](../cpp/initializers.md)。
 
-*カウント*分布範囲内の要素の数。
+*count*<br/>
+分布範囲内にある要素の数。
 
-*xmin*分布範囲内の最小値。
+*xmin*<br/>
+分布範囲内の最小値。
 
-*xmax*分布範囲内の最大値。 *xmin* より大きくなければなりません。
+*xmax*<br/>
+分布範囲内の最大値。 *xmin* より大きくなければなりません。
 
-*weightfunc*分布の確率関数を表すオブジェクト。 パラメーターと戻り値の両方に変換できる必要があります**二重**します。
+*weightfunc*<br/>
+分布の確率関数を表すオブジェクト。 パラメーターと戻り値の両方に変換できる必要があります**二重**します。
 
-*parm*分布の作成に使用されるパラメーターの構造体。
+*parm*<br/>
+分布の作成に使用されるパラメーターの構造体。
 
 ### <a name="remarks"></a>Remarks
 

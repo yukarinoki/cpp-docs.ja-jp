@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19bed4a455ea2b0b894ba842f349aa304e9f261d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 1577f067b398a53ab4f91847f890beaa96f0639f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964684"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102812"
 ---
 # <a name="istriviallycopyable-class"></a>is_trivially_copyable クラス
 
@@ -37,13 +37,14 @@ struct is_trivially_copyable;
 
 ### <a name="parameters"></a>パラメーター
 
-*T*照会する型。
+*T*<br/>
+照会する型。
 
 ## <a name="remarks"></a>Remarks
 
 場合、型述語のインスタンスは true を保持型*T*は普通にコピー可能型、それ以外の場合は false を保持します。 自明にコピー可能な型とは、自明でないコピー操作、移動操作、デストラクターが含まれない型のことです。 通常、ビット単位のコピーとして実装可能なコピー操作は自明であるとみなされます。 組み込みの型と自明にコピー可能な型の配列は、両方とも自明にコピー可能です。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<type_traits>
 

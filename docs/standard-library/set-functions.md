@@ -7,12 +7,12 @@ f1_keywords:
 - set/std::swap (map)
 - set/std::swap (multiset)
 ms.assetid: d1277d14-8502-46c0-b820-bcda820f9406
-ms.openlocfilehash: b25194dc1cdc45bc93d9e5188715e3ea01258af4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0baea9b63bb012396847c6408625bbcc62001d0d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966333"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110293"
 ---
 # <a name="ltsetgt-functions"></a>&lt;set&gt; 系関数
 
@@ -31,9 +31,11 @@ void swap(set<Key, Traits, Allocator>& left, set<Key, Traits, Allocator>& right)
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*を交換する要素を提供するセットまたはセットと交換される要素がセット*左*します。
+*right*<br/>
+交換する要素を提供するセットまたはセットと交換される要素がセット*左*します。
 
-*左*のセットと交換される要素がセット*右*します。
+*left*<br/>
+セットと交換される要素がセット*右*します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -58,9 +60,11 @@ void swap(multiset<Key, Traits, Allocator>& left, multiset<Key, Traits, Allocato
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*を交換する要素を提供する multiset または要素が multiset と交換される multiset*左*します。
+*right*<br/>
+交換する要素を提供する multiset または要素が multiset と交換される multiset*左*します。
 
-*左*要素が multiset と交換される multiset*右*します。
+*left*<br/>
+要素が multiset と交換される multiset*右*します。
 
 ### <a name="remarks"></a>Remarks
 

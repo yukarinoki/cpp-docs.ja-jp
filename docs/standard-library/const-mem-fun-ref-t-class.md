@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5051fe82a4d197a1518ccf9c0f3c797108c665e0
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 99f9219c8f22cf0050c667eac679070151b82ef6
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961250"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100334"
 ---
 # <a name="constmemfunreft-class"></a>const_mem_fun_ref_t クラス
 
@@ -32,18 +32,20 @@ ms.locfileid: "38961250"
 ```cpp
 template <class Result, class Type>
 class const_mem_fun_ref_t
- : public unary_function<Type, Result>
+: public unary_function<Type, Result>
 {
     explicit const_mem_fun_t(Result (Type::* Pm)() const);
     Result operator()(const Type& left) const;
- };
+};
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*Pm*クラスのメンバー関数へのポインター`Type`関数オブジェクトに変換します。
+*Pm*<br/>
+関数オブジェクトに変換されるクラス `Type` のメンバー関数へのポインター。
 
-*左*オブジェクトを*Pm*でメンバー関数が呼び出されます。
+*left*<br/>
+オブジェクトを*Pm*でメンバー関数が呼び出されます。
 
 ## <a name="return-value"></a>戻り値
 
@@ -57,7 +59,7 @@ class const_mem_fun_ref_t
 
 `const_mem_fun_ref_t` のコンストラクターは通常は直接使用されません。ヘルパー関数 `mem_fun_ref` を使用してメンバー関数を適合させます。 メンバー関数アダプターの使用例については、「[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<functional>
 
