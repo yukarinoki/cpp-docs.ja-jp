@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 67d1b32fe880a278bc2b737148a90afa5bd2ad6e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c0cbc2e88bc123b4de82ca69a41a17a41729bb4a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592083"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691193"
 ---
 # <a name="working-with-resource-files"></a>リソース ファイルの操作
 
 > [!WARNING]
-> このセクションは、C++ で記述された Windows デスクトップ アプリケーションに適用されます。 C++ で記述されたユニバーサル Windows プラットフォーム アプリでのリソースについては、次を参照してください。[アプリ リソースの定義](http://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4)します。
+> このセクションは、C++ で記述された Windows デスクトップ アプリケーションに適用されます。 C++ で記述されたユニバーサル Windows プラットフォーム アプリでのリソースについては、次を参照してください。[アプリ リソースの定義](/windows/uwp/app-resources/)します。
 >
 > C++ のリソースを追加する方法について/cli CLI プロジェクトを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。
 
@@ -53,13 +53,10 @@ Visual Studio で提供されるリソース エディターと各エディタ�
 [Visual C++](../visual-cpp-in-visual-studio.md)  
 Visual C++ のドキュメントへのリンクを示します。
 
-[Visual Studio の概要](http://msdn.microsoft.com/99997089-56ff-4d60-81a9-447062dc98ac)  
-同じ統合開発環境 (IDE: Integrated Development Environment) を使用し、混合言語ソリューションを作成するときにツールを共有し、作業を簡易化するための開発ツールの完全なセットについて説明します。
-
 [ご意見](/visualstudio/ide/talk-to-us)  
 ドキュメント セットの使用方法、製品サポートへの連絡、アクセシビリティ機能の使用に関する情報へのリンクを示します。
 
 ## <a name="see-also"></a>関連項目
 
 [Windows デスクトップ アプリケーション](../windows/windows-desktop-applications-cpp.md)  
-[メニューとその他のリソース](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
+[メニューとその他のリソース](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

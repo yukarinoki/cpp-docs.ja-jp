@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6c4f108b30babcc30ffc5f2fc4c63fe764db2e3
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9d4e90ace469614d6d422e0b75445eae5696bc26
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33339775"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681603"
 ---
 # <a name="add-class-dialog-box"></a>[クラスの追加] ダイアログ ボックス
 **[クラスの追加]** ダイアログ ボックスのテンプレートを使用すると、次の操作を実行できます。  
@@ -32,7 +32,7 @@ ms.locfileid: "33339775"
   
 -   適したファイルおよびソース コードをプロジェクトに追加して、新しいクラスを自動作成する。  
   
- **[クラスの追加]** ダイアログ ボックスには、**[プロジェクト]** メニュー、**ソリューション エクスプローラー**、[クラス ビュー](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)からアクセスできます。  
+ **[クラスの追加]** ダイアログ ボックスには、**[プロジェクト]** メニュー、**ソリューション エクスプローラー**、[クラス ビュー](/visualstudio/ide/viewing-the-structure-of-code)からアクセスできます。  
   
 > [!NOTE]
 >  現在のプロジェクトに対応しないクラスを追加しようとすると、エラー メッセージが表示されます。 **[OK]** をクリックすると、 **[クラスの追加]** ダイアログ ボックスに戻ります。  

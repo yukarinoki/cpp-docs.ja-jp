@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8256a6d49166b5a002a400892f0808706c66eba9
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0e0bade8cc233b438f98c3b73b04bf644bb37cbf
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212463"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692290"
 ---
 # <a name="parallel-containers-and-objects"></a>並列コンテナーと並列オブジェクト
 並列パターン ライブラリ (PPL) では、いくつかのコンテナーとその要素へのスレッド セーフなアクセスを提供するオブジェクトが含まれています。  
@@ -186,14 +186,14 @@ ms.locfileid: "43212463"
   
 |演算子|説明|  
 |--------------|-----------------|  
-|[operator++](https://msdn.microsoft.com/4cfdd07e-927a-42f8-aaa0-d6881687f413)|キュー内の次の項目に進みます。 この演算子は、前のインクリメントと後置インクリメントの両方のセマンティクスを提供するオーバー ロードします。|  
-|[operator*](https://msdn.microsoft.com/a0e671fc-76e6-4fb4-b95c-ced4dd2b2017)|現在のアイテムへの参照を取得します。|  
-|[operator->](https://msdn.microsoft.com/41fa393d-ae1e-4a38-bb4b-19e8df709ca9)|現在の項目へのポインターを取得します。|  
+|`operator++`|キュー内の次の項目に進みます。 この演算子は、前のインクリメントと後置インクリメントの両方のセマンティクスを提供するオーバー ロードします。|  
+|`operator*`|現在のアイテムへの参照を取得します。|  
+|`operator->`|現在の項目へのポインターを取得します。|  
   
  [[トップ](#top)]  
   
 ##  <a name="unordered_map"></a> concurrent_unordered_map クラス  
- [HYPERLINK"file:///C:\\\Users\\\thompet\\\AppData\\\Local\\\Temp\\\DxEditor\\\DduePreview\\\Default\\\798d7037-df37-4310-858b-6f590bbf6ebf\\\HTM\\\html\\\a217b4ac-af2b-4d41-94eb-09a75ee28622"concurrency::concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md)クラスは、連想コンテナー クラスと同じようにする、 [std::unordered_map](../../standard-library/unordered-map-class.md)クラス、型の要素の可変長シーケンスを制御[std::pair\<const Key, Ty >](../../standard-library/pair-structure.md)します。 順序なしのマップにキーと値のペアを追加したり、キーに値を検索しているディクショナリと考えます。 このクラスは、複数のスレッドまたは同時に共有コンテナーへのアクセス、挿入、または更新する必要があるタスクがある場合に便利です。  
+ [Concurrency::concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md)クラスは、連想コンテナー クラスと同じようにする、 [std::unordered_map](../../standard-library/unordered-map-class.md)クラス、型の要素の可変長シーケンスを制御します。[std::pair\<const Key, Ty >](../../standard-library/pair-structure.md)します。 順序なしのマップにキーと値のペアを追加したり、キーに値を検索しているディクショナリと考えます。 このクラスは、複数のスレッドまたは同時に共有コンテナーへのアクセス、挿入、または更新する必要があるタスクがある場合に便利です。  
   
  次の例を使用するための基本的な構造を示しています。`concurrent_unordered_map`します。 この例では、['a'、' i'] の範囲の文字のキーを挿入します。 操作の順序が決定しないため、各キーの最終的な値も不定です。 ただし、並列で、挿入処理を実行しても安全です。  
   

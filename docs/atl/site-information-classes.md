@@ -16,20 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68a8c96983443f39f05004493d0393f51f7ee19e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4ac1821f34269a54fc0fb10a3ae797a815d5acd9
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959957"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758324"
 ---
 # <a name="site-information-classes"></a>サイト情報クラス
-次のクラスは、サイトと通信するオブジェクトを許可します。  
-  
--   [IObjectWithSiteImpl](../atl/reference/iobjectwithsiteimpl-class.md)を取得し、オブジェクトのサイトへのポインターを設定します。 コントロールではないオブジェクトを使用します。  
-  
--   [IOleObjectImpl](../atl/reference/ioleobjectimpl-class.md)を取得し、オブジェクトのサイトへのポインターを設定します。 コントロールに使用されます。  
-  
-## <a name="see-also"></a>関連項目  
- [クラスの概要](../atl/atl-class-overview.md)
+
+次のクラスは、サイトと通信するオブジェクトを許可します。
+
+- [IObjectWithSiteImpl](../atl/reference/iobjectwithsiteimpl-class.md)を取得し、オブジェクトのサイトへのポインターを設定します。 コントロールではないオブジェクトを使用します。
+
+- [IOleObjectImpl](../atl/reference/ioleobjectimpl-class.md)を取得し、オブジェクトのサイトへのポインターを設定します。 コントロールに使用されます。
+
+## <a name="see-also"></a>関連項目
+
+[クラスの概要](../atl/atl-class-overview.md)
 

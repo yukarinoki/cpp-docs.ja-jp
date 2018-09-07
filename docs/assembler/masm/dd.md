@@ -1,7 +1,7 @@
 ---
-title: DD |Microsoft ドキュメント
+title: DD |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff556b6ba25743df05073b56b57611346d316cb4
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: f8095700d3e1f54b4909c779563d8d67337dc326
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050676"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692662"
 ---
 # <a name="dd"></a>DD
-割り当て、必要に応じて 1 ダブルワード (4 バイト) を各記憶域の初期化`initializer`です。 `DD` シノニムは、 [DWORD](../../assembler/masm/dword.md)です。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-[[name]] DD initializer [[, initializer]]...  
-```  
-  
-## <a name="remarks"></a>コメント  
- 型指定子として使用することも、型が有効な任意の場所。  
-  
-## <a name="see-also"></a>関連項目  
- [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+
+割り当て、必要に応じてストレージの各ダブル ワード (4 バイト) を初期化します`initializer`します。 `DD` シノニムです[DWORD](../../assembler/masm/dword.md)します。
+
+## <a name="syntax"></a>構文
+
+> [name]DD の初期化子 [] の初期化子].
+
+## <a name="remarks"></a>Remarks
+
+型指定子としても使用できる型が有効な任意の場所。
+
+## <a name="see-also"></a>関連項目
+
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>

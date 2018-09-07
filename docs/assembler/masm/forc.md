@@ -1,7 +1,7 @@
 ---
-title: FORC |Microsoft ドキュメント
+title: FORC |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,27 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e804083069243c333d3ac87dc701ada13afd739f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: f4a16af6b8af984c887402669469e4ba9ea5ab28
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054472"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685051"
 ---
 # <a name="forc"></a>FORC
-内の各文字の 1 回繰り返されるブロックをマーク`string`、現在の文字の置換と`parameter`繰り返されるたびにします。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-   FORC  
-parameter, <string> statements  
-ENDM  
-```  
-  
-## <a name="remarks"></a>コメント  
- 同じ[IRPC](../../assembler/masm/irpc.md)です。  
-  
-## <a name="see-also"></a>関連項目  
- [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+
+内の各文字の 1 回繰り返されるブロックをマーク*文字列*、現在の文字の置換と*パラメーター*繰り返しのたびにします。
+
+## <a name="syntax"></a>構文
+
+> FORC*パラメーター*、 \<*文字列*><br/>
+> *ステートメント*<br/>
+> ENDM
+
+## <a name="remarks"></a>Remarks
+
+同じ[IRPC](../../assembler/masm/irpc.md)します。
+
+## <a name="see-also"></a>関連項目
+
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>

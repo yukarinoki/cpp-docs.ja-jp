@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccce0633ca9dad6b4754db2fb6b10aa32dcbdaaa
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 1b5160061233f9d0a474385bccd324333ed9549a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33322875"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686288"
 ---
 # <a name="resources-property-pages"></a>リソース プロパティ ページ
-リソース コンパイラの使用の詳細については、「[Using RC (The RC Command Line)](http://msdn.microsoft.com/library/windows/desktop/aa381055)」 (RC の使用 (RC コマンド ライン)) を参照してください。  
+リソース コンパイラの使用の詳細については、「[Using RC (The RC Command Line)](/windows/desktop/menurc/using-rc-the-rc-command-line-)」 (RC の使用 (RC コマンド ライン)) を参照してください。  
   
  **[リソース]** プロパティ ページにアクセスする方法については、「[プロジェクト プロパティの操作](../ide/working-with-project-properties.md)」を参照してください。  
   

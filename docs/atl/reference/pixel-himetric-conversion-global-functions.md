@@ -15,68 +15,77 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14b28ec031cf4570ec98e9ab2cebfa3954a88754
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 086310efe565e060645320db30526b03d57a68af
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881163"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752411"
 ---
 # <a name="pixelhimetric-conversion-global-functions"></a>ピクセル/HIMETRIC 変換に関するグローバル関数
-これらの関数は、ピクセルと HIMETRIC 単位から変換するためのサポートを提供します。  
-  
+
+これらの関数は、ピクセルと HIMETRIC 単位から変換するためのサポートを提供します。
+
 > [!IMPORTANT]
->  Windows ランタイムで実行するアプリケーションでは、次の表に示す関数を使用できません。  
-  
-|||  
-|-|-|  
-|[AtlHiMetricToPixel](#atlhimetrictopixel)|(各単位は 0.01 ミリメートル) HIMETRIC 単位をピクセルに変換します。|  
-|[AtlPixelToHiMetric](#atlpixeltohimetric)|ピクセル HIMETRIC 単位に変換 (各単位は 0.01 ミリメートル)。|  
-  
-##  <a name="atlhimetrictopixel"></a>  AtlHiMetricToPixel  
- HIMETRIC 単位 (各単位は 0.01 mm) のオブジェクトのサイズを画面デバイス上のピクセル単位のサイズに変換します。  
-  
- 
+>  Windows ランタイムで実行するアプリケーションでは、次の表に示す関数を使用できません。
+
+|||
+|-|-|
+|[AtlHiMetricToPixel](#atlhimetrictopixel)|(各単位は 0.01 ミリメートル) HIMETRIC 単位をピクセルに変換します。|
+|[AtlPixelToHiMetric](#atlpixeltohimetric)|ピクセル HIMETRIC 単位に変換 (各単位は 0.01 ミリメートル)。|
+
+##  <a name="atlhimetrictopixel"></a>  AtlHiMetricToPixel
+
+HIMETRIC 単位 (各単位は 0.01 mm) のオブジェクトのサイズを画面デバイス上のピクセル単位のサイズに変換します。
+
 ```
 extern void AtlHiMetricToPixel(
-  const SIZEL* lpSizeInHiMetric, 
-  LPSIZEL lpSizeInPix);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *lpSizeInHiMetric*  
- [in]HIMETRIC 単位内のオブジェクトのサイズへのポインター。  
-  
- *lpSizeInPix*  
- [out]オブジェクトのサイズ (ピクセル単位) が返されるへのポインター。  
-  
-### <a name="example"></a>例  
- [!code-cpp[NVC_ATL_COM#49](../../atl/codesnippet/cpp/pixel-himetric-conversion-global-functions_1.cpp)]  
+    const SIZEL* lpSizeInHiMetric, 
+    LPSIZEL lpSizeInPix);
+```
 
-### <a name="requirements"></a>必要条件  
- **ヘッダー:** atlwin.h  
-  
-##  <a name="atlpixeltohimetric"></a>  AtlPixelToHiMetric  
- 画面デバイス上のピクセル単位のオブジェクトのサイズを HIMETRIC 単位 (各単位は 0.01 mm) のサイズに変換します。  
-  
+### <a name="parameters"></a>パラメーター
+
+*lpSizeInHiMetric*  
+[in]HIMETRIC 単位内のオブジェクトのサイズへのポインター。
+
+*lpSizeInPix*  
+[out]オブジェクトのサイズ (ピクセル単位) が返されるへのポインター。
+
+### <a name="example"></a>例
+
+[!code-cpp[NVC_ATL_COM#49](../../atl/codesnippet/cpp/pixel-himetric-conversion-global-functions_1.cpp)]  
+
+### <a name="requirements"></a>要件
+
+**ヘッダー:** atlwin.h
+
+##  <a name="atlpixeltohimetric"></a>  AtlPixelToHiMetric
+
+画面デバイス上のピクセル単位のオブジェクトのサイズを HIMETRIC 単位 (各単位は 0.01 mm) のサイズに変換します。
+
 ```
 extern void AtlPixelToHiMetric(
     const SIZEL* lpSizeInPix, 
     LPSIZEL lpSizeInHiMetric);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *lpSizeInPix*  
- [in]オブジェクトのサイズ (ピクセル単位) へのポインター。  
-  
- *lpSizeInHiMetric*  
- [out]HIMETRIC 単位オブジェクトのサイズが返されるへのポインター。  
-  
-### <a name="example"></a>例  
- [!code-cpp[NVC_ATL_COM#51](../../atl/codesnippet/cpp/pixel-himetric-conversion-global-functions_2.cpp)]  
+```
 
-### <a name="requirements"></a>必要条件  
- **ヘッダー:** atlwin.h  
+### <a name="parameters"></a>パラメーター
 
-## <a name="see-also"></a>関連項目  
- [関数](../../atl/reference/atl-functions.md)
+*lpSizeInPix*  
+[in]オブジェクトのサイズ (ピクセル単位) へのポインター。
+
+*lpSizeInHiMetric*  
+[out]HIMETRIC 単位オブジェクトのサイズが返されるへのポインター。
+
+### <a name="example"></a>例
+
+[!code-cpp[NVC_ATL_COM#51](../../atl/codesnippet/cpp/pixel-himetric-conversion-global-functions_2.cpp)]  
+
+### <a name="requirements"></a>要件
+
+**ヘッダー:** atlwin.h  
+
+## <a name="see-also"></a>関連項目
+
+[関数](../../atl/reference/atl-functions.md)

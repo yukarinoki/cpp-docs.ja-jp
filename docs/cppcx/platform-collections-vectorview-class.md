@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0020937bae5f6392c7d9e5e8daf22f3cc4e6a31
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 598b5f6fcfefa03fe733ac7b6e5a8417278e6f01
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584107"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690608"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView クラス
 インデックスによって個別にアクセスできるオブジェクトのシーケンシャル コレクションの読み取り専用ビューを表します。 コレクション内の各オブジェクトの型は、テンプレート パラメーターによって指定されます。  
@@ -45,7 +45,7 @@ template <typename T, typename E>
  `T`型の値との等値性をテストするための二項述語を指定します。 既定値は `std::equal_to<T>` です。  
   
 ### <a name="remarks"></a>Remarks  
- `VectorView`クラスが実装する、 [Windows::Foundation::Collections::IVectorView\<T >](http://go.microsoft.com/fwlink/p/?LinkId=262411)インターフェイス、および標準テンプレート ライブラリ反復子をサポートします。  
+ `VectorView`クラスが実装する、 [Windows::Foundation::Collections::IVectorView\<T >](/uwp/api/Windows.Foundation.Collections.IVectorView_T_)インターフェイス、および標準テンプレート ライブラリ反復子をサポートします。  
   
 ### <a name="members"></a>メンバー  
   

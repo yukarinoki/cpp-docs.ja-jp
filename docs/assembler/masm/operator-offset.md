@@ -1,7 +1,7 @@
 ---
-title: OFFSET 演算子 |Microsoft ドキュメント
+title: OFFSET 演算子 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eb2eb1e26371c394ae53508678d03cd0627e552
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c20717057a4a5980ac6a6c70c0d99cabe621990d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052665"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690487"
 ---
 # <a name="operator-offset"></a>OFFSET 演算子
-関連するセグメントのオフセットを返します*式*です。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-OFFSET expression  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [演算子リファレンス](../../assembler/masm/operators-reference.md)
+
+関連するセグメントにオフセットを返します*式*します。
+
+## <a name="syntax"></a>構文
+
+> オフセットを示す
+
+## <a name="see-also"></a>関連項目
+
+[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>

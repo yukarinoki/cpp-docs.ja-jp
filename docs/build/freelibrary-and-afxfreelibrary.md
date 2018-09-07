@@ -1,5 +1,5 @@
 ---
-title: FreeLibrary と AfxFreeLibrary |Microsoft ドキュメント
+title: FreeLibrary と AfxFreeLibrary |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,23 +23,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1e1bf5f1a05438ddf89af86c9b0d12e7885b901
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 063c858253c12cfedbf252a124029b8cbc16a691
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367512"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680964"
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>FreeLibrary と AfxFreeLibrary
-DLL の呼び出しに明示的にリンクされるプロセス、 [FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188) DLL モジュールが不要になったときに機能します。 これは、モジュールの参照カウントをデクリメントに機能し、参照カウントが 0 の場合は、プロセスのアドレス空間から割り当てを解除します。  
+明示的にリンクする DLL の呼び出しプロセス、 [FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152(v=vs.85).aspx) DLL モジュールが不要になったときに機能します。 モジュールの参照カウントをデクリメントを関数し、参照カウントが 0 の場合は、プロセスのアドレス空間からマッピングを解除します。  
   
- MFC アプリケーションで使用して[AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)の代わりに`FreeLibrary`MFC 拡張 DLL をアンロードします。 インターフェイス (関数プロトタイプ)`AfxFreeLibrary`と同じ`FreeLibrary`です。  
+ MFC アプリケーションで使用して[AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)の代わりに`FreeLibrary`MFC 拡張 DLL をアンロードします。 インターフェイス (関数プロトタイプ)`AfxFreeLibrary`と同じ`FreeLibrary`します。  
   
 ## <a name="what-do-you-want-to-do"></a>実行する操作  
   
--   [DLL を暗黙的にリンクする方法](../build/linking-an-executable-to-a-dll.md#linking-implicitly)  
+-   [DLL と暗黙的にリンクする方法](../build/linking-an-executable-to-a-dll.md#linking-implicitly)  
   
--   [リンク方式を使い分け](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)  
+-   [リンク方式の使用](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください  
   
@@ -49,5 +49,5 @@ DLL の呼び出しに明示的にリンクされるプロセス、 [FreeLibrary
   
 ## <a name="see-also"></a>関連項目  
  [Visual C の Dll](../build/dlls-in-visual-cpp.md)   
- [FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188)   
+ [FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152(v=vs.85).aspx)   
  [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)

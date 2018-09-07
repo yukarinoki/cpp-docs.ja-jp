@@ -16,18 +16,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5df4f70d069c2d77cf828665986c892281ba27cd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: eaf582d364ddddb41c066c901af7ccd806c5484d
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956684"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767817"
 ---
 # <a name="class-information-classes"></a>クラス情報クラス
-次のクラスは、クラスの情報を取得するためのサポートを提供します。  
-  
--   [IProvideClassInfo2Impl](../atl/reference/iprovideclassinfo2impl-class.md)情報の入力へのアクセスを提供します。 オブジェクトの既定のイベントのセットの送信の IID を取得します。  
-  
-## <a name="see-also"></a>関連項目  
- [クラスの概要](../atl/atl-class-overview.md)
+
+次のクラスは、クラスの情報を取得するためのサポートを提供します。
+
+- [IProvideClassInfo2Impl](../atl/reference/iprovideclassinfo2impl-class.md)情報の入力へのアクセスを提供します。 オブジェクトの既定のイベントのセットの送信の IID を取得します。
+
+## <a name="see-also"></a>関連項目
+
+[クラスの概要](../atl/atl-class-overview.md)
 

@@ -19,123 +19,137 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3603f93c5b6430cd5aa11e4f43c99f75a838497
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 147814856e1e447894fd9826b9620ea8d762d48c
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879245"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764980"
 ---
 # <a name="ca2caex-class"></a>CA2CAEX クラス
-このクラスは、文字列変換マクロ CA2CTEX と CT2CAEX、typedef CA2CA によって使用されます。  
-  
+
+このクラスは、文字列変換マクロ CA2CTEX と CT2CAEX、typedef CA2CA によって使用されます。
+
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。  
-  
-## <a name="syntax"></a>構文  
-  
+>  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。
+
+## <a name="syntax"></a>構文
+
 ```
 template<int t_nBufferLength = 128>  
 class CA2CAEX
-```  
-  
-#### <a name="parameters"></a>パラメーター  
- *t_nBufferLength*  
- 変換プロセスで使用されるバッファーのサイズ。 既定の長さは 128 バイトです。  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="public-constructors"></a>パブリック コンストラクター  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[CA2CAEX::CA2CAEX](#ca2caex)|コンストラクターです。|  
-|[CA2CAEX:: ~ CA2CAEX](#dtor)|デストラクターです。|  
-  
-### <a name="public-operators"></a>パブリック演算子  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[CA2CAEX::operator LPCSTR](#operator_lpcstr)|変換演算子。|  
-  
-### <a name="public-data-members"></a>パブリック データ メンバー  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[CA2CAEX::m_psz](#m_psz)|ソース文字列が格納されるデータ メンバー。|  
-  
-## <a name="remarks"></a>Remarks  
- 追加の機能が必要でない限り、独自のコードで CA2CTEX、CT2CAEX、または CA2CA を使用します。  
-  
- このクラスは、安全にループ内で使用し、スタック オーバーフローが発生しません。 既定では、ATL 変換クラスとマクロは、現在のスレッドの ANSI コード ページを変換に使用します。  
-  
- 次のマクロは、このクラスに基づいています。  
-  
-- CA2CTEX  
-  
-- CT2CAEX  
-  
- 次の typedef は、このクラスに基づいています。  
-  
-- CA2CA  
-  
- これらのテキスト変換マクロの詳細については、次を参照してください。 [ATL と MFC 文字列変換マクロ](string-conversion-macros.md)します。  
-  
-## <a name="example"></a>例  
- 参照してください[ATL と MFC 文字列変換マクロ](string-conversion-macros.md)のこれらの文字列変換マクロの使用例についてはします。  
-  
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** atlconv.h  
-  
-##  <a name="ca2caex"></a>  CA2CAEX::CA2CAEX  
- コンストラクターです。  
-  
+```
+
+#### <a name="parameters"></a>パラメーター
+
+*t_nBufferLength*  
+変換プロセスで使用されるバッファーのサイズ。 既定の長さは 128 バイトです。
+
+## <a name="members"></a>メンバー
+
+### <a name="public-constructors"></a>パブリック コンストラクター
+
+|名前|説明|
+|----------|-----------------|
+|[CA2CAEX::CA2CAEX](#ca2caex)|コンストラクターです。|
+|[CA2CAEX:: ~ CA2CAEX](#dtor)|デストラクターです。|
+
+### <a name="public-operators"></a>パブリック演算子
+
+|名前|説明|
+|----------|-----------------|
+|[CA2CAEX::operator LPCSTR](#operator_lpcstr)|変換演算子。|
+
+### <a name="public-data-members"></a>パブリック データ メンバー
+
+|名前|説明|
+|----------|-----------------|
+|[CA2CAEX::m_psz](#m_psz)|ソース文字列が格納されるデータ メンバー。|
+
+## <a name="remarks"></a>Remarks
+
+追加の機能が必要でない限り、独自のコードで CA2CTEX、CT2CAEX、または CA2CA を使用します。
+
+このクラスは、安全にループ内で使用し、スタック オーバーフローが発生しません。 既定では、ATL 変換クラスとマクロは、現在のスレッドの ANSI コード ページを変換に使用します。
+
+次のマクロは、このクラスに基づいています。
+
+- CA2CTEX
+
+- CT2CAEX
+
+次の typedef は、このクラスに基づいています。
+
+- CA2CA
+
+これらのテキスト変換マクロの詳細については、次を参照してください。 [ATL と MFC 文字列変換マクロ](string-conversion-macros.md)します。
+
+## <a name="example"></a>例
+
+参照してください[ATL と MFC 文字列変換マクロ](string-conversion-macros.md)のこれらの文字列変換マクロの使用例についてはします。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** atlconv.h
+
+##  <a name="ca2caex"></a>  CA2CAEX::CA2CAEX
+
+コンストラクターです。
+
 ```
 CA2CAEX(LPCSTR psz, UINT nCodePage) throw(...);
 CA2CAEX(LPCSTR psz) throw(...);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *2 つ*  
- 変換するテキスト文字列。  
-  
- *nCodePage*  
- このクラスで使用されていません。  
-  
-### <a name="remarks"></a>Remarks  
- 翻訳のために必要なバッファーを作成します。  
-  
-##  <a name="dtor"></a>  CA2CAEX:: ~ CA2CAEX  
- デストラクターです。  
-  
+```
+
+### <a name="parameters"></a>パラメーター
+
+*2 つ*  
+変換するテキスト文字列。
+
+*nCodePage*  
+このクラスで使用されていません。
+
+### <a name="remarks"></a>Remarks
+
+翻訳のために必要なバッファーを作成します。
+
+##  <a name="dtor"></a>  CA2CAEX:: ~ CA2CAEX
+
+デストラクターです。
+
 ```
 ~CA2CAEX() throw();
-```  
-  
-### <a name="remarks"></a>Remarks  
- 割り当てられたバッファーを解放します。  
-  
-##  <a name="m_psz"></a>  CA2CAEX::m_psz  
- ソース文字列が格納されるデータ メンバー。  
-  
+```
+
+### <a name="remarks"></a>Remarks
+
+割り当てられたバッファーを解放します。
+
+##  <a name="m_psz"></a>  CA2CAEX::m_psz
+
+ソース文字列が格納されるデータ メンバー。
+
 ```
 LPCSTR m_psz;
-```  
-  
-##  <a name="operator_lpcstr"></a>  CA2CAEX::operator LPCSTR  
- 変換演算子。  
-  
+```
+
+##  <a name="operator_lpcstr"></a>  CA2CAEX::operator LPCSTR
+
+変換演算子。
+
 ```  
 operator LPCSTR() const throw();
-```  
-  
-### <a name="return-value"></a>戻り値  
- LPCSTR の種類としては、テキスト文字列を返します。  
-  
-## <a name="see-also"></a>関連項目  
- [CA2AEX クラス](../../atl/reference/ca2aex-class.md)   
- [CA2WEX クラス](../../atl/reference/ca2wex-class.md)   
- [CW2AEX クラス](../../atl/reference/cw2aex-class.md)   
- [CW2CWEX クラス](../../atl/reference/cw2cwex-class.md)   
- [CW2WEX クラス](../../atl/reference/cw2wex-class.md)   
- [クラスの概要](../../atl/atl-class-overview.md)
+```
+
+### <a name="return-value"></a>戻り値
+
+LPCSTR の種類としては、テキスト文字列を返します。
+
+## <a name="see-also"></a>関連項目
+
+[CA2AEX クラス](../../atl/reference/ca2aex-class.md)   
+[CA2WEX クラス](../../atl/reference/ca2wex-class.md)   
+[CW2AEX クラス](../../atl/reference/cw2aex-class.md)   
+[CW2CWEX クラス](../../atl/reference/cw2cwex-class.md)   
+[CW2WEX クラス](../../atl/reference/cw2wex-class.md)   
+[クラスの概要](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: ATL プロジェクトへのオブジェクトやコントロールの追加 |Microsoft ドキュメント
+title: ATL プロジェクトへのオブジェクトやコントロールの追加 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,43 +21,45 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a6f9102aeebd0cc60765c70cf74fb2329bc801f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e70ac6f333312fc62854478897912fc28f3c2f8e
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357774"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43756562"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>ATL プロジェクトへのオブジェクトやコントロールの追加
-ATL または MFC ベースでのプロジェクトにオブジェクトやコントロールを追加するのにには、ATL コード ウィザードのいずれかを使用します。 COM オブジェクトやコントロールを追加すると、.cpp、.h ファイルだけでなく .rgs ファイル スクリプト ベースのレジストリのサポートについては、ウィザードが生成されます。 Visual Studio で、次の ATL コード ウィザードを紹介します。  
-  
-||||  
-|-|-|-|  
-|[ATL シンプル オブジェクト](../../atl/reference/atl-simple-object-wizard.md)|[ATL ダイアログ](../../atl/reference/atl-dialog-wizard.md)|[ATL コントロール](../../atl/reference/atl-control-wizard.md)|  
-|[ATL プロパティ ページ](../../atl/reference/atl-property-page-wizard.md)|[ATL Active Server Page コンポーネント](../../atl/reference/atl-active-server-page-component-wizard.md)|[ATL OLE DB コンシューマー](../../atl/reference/atl-ole-db-consumer-wizard.md)|  
-|[MFC に ATL サポートを追加します。](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)|[ATL COM+ 1.0 コンポーネント ウィザード](../../atl/reference/atl-com-plus-1-0-component-wizard.md)|[ATL OLE DB プロバイダー](../../atl/reference/atl-ole-db-provider-wizard.md)|  
-  
+
+ATL または MFC ベースのプロジェクトにオブジェクトまたはコントロールを追加するのにには、ATL コード ウィザードのいずれかを使用します。 追加する COM オブジェクトまたはコントロールごとに、.cpp、.h ファイルとともにに .rgs ファイル スクリプト ベースのレジストリのサポートをウィザードが生成されます。 次の ATL コード ウィザードは、Visual Studio で使用できます。
+
+||||
+|-|-|-|
+|[ATL シンプル オブジェクト](../../atl/reference/atl-simple-object-wizard.md)|[ATL ダイアログ](../../atl/reference/atl-dialog-wizard.md)|[ATL コントロール](../../atl/reference/atl-control-wizard.md)|
+|[ATL プロパティ ページ](../../atl/reference/atl-property-page-wizard.md)|[ATL Active Server Page コンポーネント](../../atl/reference/atl-active-server-page-component-wizard.md)|[ATL OLE DB コンシューマー](../../atl/reference/atl-ole-db-consumer-wizard.md)|
+|[MFC に ATL サポートを追加します。](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)|[ATL COM+ 1.0 コンポーネント ウィザード](../../atl/reference/atl-com-plus-1-0-component-wizard.md)|[ATL OLE DB プロバイダー](../../atl/reference/atl-ole-db-provider-wizard.md)|
+
 > [!NOTE]
->  ATL オブジェクトをプロジェクトに追加する前に、詳細とその関連するヘルプ トピック内のオブジェクトの要件を確認してください。  
-  
-### <a name="to-add-an-object-or-a-control-using-the-atl-control-wizard"></a>オブジェクトまたは ATL コントロール ウィザードを使用してコントロールを追加するには  
-  
-1.  ソリューション エクスプ ローラーでプロジェクト ノードを右クリックし、をクリックして**追加**ショートカット メニューからです。 をクリックして**クラスを追加**です。  
-  
-     [クラスの追加](../../ide/add-class-dialog-box.md) ダイアログ ボックスが表示されます。  
-  
-2.  [カテゴリ] ペインで選択した ATL フォルダーで、[テンプレート] ペインからを挿入するオブジェクトを選択します。 をクリックして**開く**です。 選択したオブジェクトのコード ウィザードが表示されます。  
-  
-    > [!NOTE]
-    >  MFC プロジェクトに ATL オブジェクトを追加する場合は、既存のプロジェクトに ATL サポートを追加する必要があります。 次の手順でこれを行う[MFC プロジェクトへの ATL サポートの追加](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)です。  
-  
-     または、以前の ATL サポートを追加することがなく MFC プロジェクトに ATL オブジェクトを追加しようとすると、Visual Studio するように求められます ATL サポートをプロジェクトに追加するかどうかを指定します。 をクリックして**はい**をプロジェクトに ATL サポートを追加して、選択した ATL ウィザードを開きます。  
-  
-## <a name="see-also"></a>関連項目  
- [ATL プロジェクト ウィザード](../../atl/reference/atl-project-wizard.md)   
- [Visual C プロジェクトの種類](../../ide/visual-cpp-project-types.md)   
- [アプリケーション ウィザードを使用したデスクトップ プロジェクトの作成](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
- [ATL COM オブジェクトの基本事項](../../atl/fundamentals-of-atl-com-objects.md)   
- [ATL および C ランタイム コードによるプログラミング](../../atl/programming-with-atl-and-c-run-time-code.md)   
- [ATL プロジェクトの既定の構成](../../atl/reference/default-atl-project-configurations.md)
+> ATL オブジェクトをプロジェクトに追加する前に、詳細とその関連するヘルプ トピック内のオブジェクトの要件を確認してください。
+
+### <a name="to-add-an-object-or-a-control-using-the-atl-control-wizard"></a>オブジェクトまたは ATL コントロール ウィザードを使用してコントロールを追加するには
+
+1. ソリューション エクスプ ローラーでプロジェクト ノードを右クリックし、をクリックして**追加**ショートカット メニューから。 クリックして**クラスを追加**します。
+
+   [クラスの追加](../../ide/add-class-dialog-box.md) ダイアログ ボックスが表示されます。
+
+2. [カテゴリ] ペインで選択した ATL フォルダー、[テンプレート] ペインからを挿入するオブジェクトを選択します。 クリックして**オープン**します。 選択したオブジェクトのコード ウィザードが表示されます。
+
+   > [!NOTE]
+   >  MFC プロジェクトへの ATL オブジェクトを追加する場合は、既存のプロジェクトに ATL サポートを追加する必要があります。 次の手順でこれを行う[MFC プロジェクトへの ATL サポートの追加](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)します。
+
+   代わりに、以前の ATL サポートを追加せず、MFC プロジェクトに ATL オブジェクトを追加しようとした場合は、Visual Studio するように求められますをプロジェクトに追加した ATL サポートをするかどうかを指定します。 クリックして**はい**をプロジェクトに ATL サポートを追加し、選択した ATL ウィザードを開きます。
+
+## <a name="see-also"></a>関連項目
+
+[ATL プロジェクト ウィザード](../../atl/reference/atl-project-wizard.md)   
+[Visual C++ プロジェクトの種類](../../ide/visual-cpp-project-types.md)   
+[アプリケーション ウィザードを使用したデスクトップ プロジェクトの作成](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
+[ATL COM オブジェクトの基礎](../../atl/fundamentals-of-atl-com-objects.md)   
+[ATL および C ランタイム コードによるプログラミング](../../atl/programming-with-atl-and-c-run-time-code.md)   
+[ATL プロジェクトの既定の構成](../../atl/reference/default-atl-project-configurations.md)
 

@@ -20,23 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8d7366a2c0a1b8ae9ed4e37eaaa89de9baf794d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bbb47eae81df8b1080480843bfa5a444f6eb989f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388907"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196977"
 ---
 # <a name="one-dimensional-arrays"></a>1 次元配列
 角かっこ (**[ ]**) が続く後置式は、配列オブジェクトの要素の添字表現です。 添字式は、次のように表現されると、*postfix-expression* を超える *expression* 位置にあるアドレスにある値を表します。  
   
 ```  
-  
-postfix-expression  
-[  
-expression  
-]  
-  
+postfix-expression [ expression ]
 ```  
   
  通常、*postfix-expression* によって表される値はポインター値 (配列 ID など) であり、*expression* は整数値です。 ただし、構文上必要なのは、一方の式がポインター型で、もう一方が整数型であることです。 したがって、*postfix-expression* の位置に整数値があり、*expression* の角かっこ内や添字の位置にポインター値がある可能性もあります。 たとえば、次のコードは有効です。  
@@ -52,7 +47,7 @@ int main() {
   
  添字式は、通常、配列要素を参照するために使用されますが、任意のポインターに添字を適用できます。 値の順序に関係なく、*expression* は角かっこ (**[ ]**) で囲む必要があります。  
   
- 添字式は、ポインター値に整数値を追加し、結果に間接演算子 (**\***) を適用することによって評価されます (間接演算子については、「[間接演算子とアドレス演算子](../c-language/indirection-and-address-of-operators.md)」を参照してください)。実際には、1 次元配列では、次の 4 つの式は、`a` がポインターで `b` が整数である場合、等価です。  
+ 添字式は、ポインター値に整数値を追加し、結果に間接演算子 (<strong>\*</strong>) を適用することによって評価されます (間接演算子については、「[間接演算子とアドレス演算子](../c-language/indirection-and-address-of-operators.md)」を参照してください)。実際には、1 次元配列では、次の 4 つの式は、`a` がポインターで `b` が整数である場合、等価です。  
   
 ```  
 a[b]  

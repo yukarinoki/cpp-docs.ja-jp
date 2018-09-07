@@ -16,11 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: de406267a4c18cace88882b26f6b249fc5a0efa3
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42586712"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761044"
 ---
 # <a name="windowsfoundationcollections-namespace-ccx"></a>Windows::Foundation::Collections 名前空間 (C++/CX)
 C + + CX Vector、VectorView、マップ、および MapView コレクション クラスを使用して単純化する関数を持つ:foundation 名前空間を補足するものです。  

@@ -18,19 +18,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e67ad87f1dce47f3d02dcbe907285cf0513a8ce9
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 09d65a19ecf573cc11d71fe49cdb40c1a748aafa
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337549"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681918"
 ---
 # <a name="redistributing-visual-c-files"></a>Visual C++ ファイルの再配布
 
 > [!NOTE]
 > Visual C++ ランタイム ファイルのいずれかのダウンロードをお探しの場合は、 [Microsoft](http://www.microsoft.com/) Web サイトに移動して、検索ボックスに「**Visual C++ 再頒布可能パッケージ**」と入力します。 次に、お使いのコンピューターのアーキテクチャ用の再頒布可能パッケージ (たとえば、64 ビット Windows を実行している場合は x64) と、必要な Visual C++ のバージョン (たとえば、2015) をダウンロードしてインストールします。
 
-アプリケーションを配置する場合は、アプリケーションをサポートするために必要なすべてのファイルも配置する必要があります。 必要なファイルに Microsoft から提供されるファイルが含まれる場合、それを再配布する権限を持っているかどうか確認します。 Visual Studio のライセンス条項を確認するには、IDE の Microsoft Visual Studio のバージョン情報ダイアログ ボックスでライセンス条項リンクを参照するか、[マイクロソフト ソフトウェア ライセンス条項](http://go.microsoft.com/fwlink/p/?LinkId=831114)ファイルをダウンロードします。 Visual Studio の特定のエディションのマイクロソフト ソフトウェア ライセンス条項の「頒布可能コード」セクションで言及されている "再頒布リスト" を表示する場合は、「[Microsoft Visual Studio 2017 の頒布可能コード (ユーティリティ、機能拡張、および BuildServer ファイルを含む)](http://go.microsoft.com/fwlink/p/?LinkId=823098)」を参照してください。Visual Studio 2015 の場合は、「[Microsoft Visual Studio 2015 および Microsoft Visual Studio 2015 SDK の頒布可能コード (ユーティリティおよび BuildServer ファイルを含む)](http://go.microsoft.com/fwlink/p/?LinkId=523763)」を参照してください。 再頒布可能ファイルの詳細については、「[再配布する Dll の決定](../ide/determining-which-dlls-to-redistribute.md)」と「[配置例](../ide/deployment-examples.md)」を参照してください。
+アプリケーションを配置する場合は、アプリケーションをサポートするために必要なすべてのファイルも配置する必要があります。 必要なファイルに Microsoft から提供されるファイルが含まれる場合、それを再配布する権限を持っているかどうか確認します。 Visual Studio のライセンス条項を確認するには、IDE の Microsoft Visual Studio のバージョン情報ダイアログ ボックスでライセンス条項リンクを参照するか、[マイクロソフト ソフトウェア ライセンス条項](https://visualstudio.microsoft.com/license-terms/mlt687465/)ファイルをダウンロードします。 Visual Studio の特定のエディションのマイクロソフト ソフトウェア ライセンス条項の「頒布可能コード」セクションで言及されている "再頒布リスト" を表示する場合は、「[Microsoft Visual Studio 2017 の頒布可能コード (ユーティリティ、機能拡張、および BuildServer ファイルを含む)](/visualstudio/productinfo/2017-redistribution-vs)」を参照してください。Visual Studio 2015 の場合は、「[Microsoft Visual Studio 2015 および Microsoft Visual Studio 2015 SDK の頒布可能コード (ユーティリティおよび BuildServer ファイルを含む)](/visualstudio/productinfo/2015-redistribution-vs)」を参照してください。 再頒布可能ファイルの詳細については、「[再配布する Dll の決定](../ide/determining-which-dlls-to-redistribute.md)」と「[配置例](../ide/deployment-examples.md)」を参照してください。
 
 再頒布可能な Visual C++ ファイルを配置する場合は、Visual Studio に含まれている Visual C++ 再頒布可能パッケージ (VCRedist\_x86.exe、VCRedist\_x64.exe、または VCRedist\_arm.exe) を使用できます。 Visual Studio 2017 では、これらのファイルは Program Files[(x86)]\\Microsoft Visual Studio\\2017\\_edition_\\VC\\Redist\\MSVC\\_lib-version_ フォルダーにあります。ここで、_edition_ はインストールされている Visual Studio のエディション、_lib-version_ は再配布するライブラリのバージョンです。 Visual Studio 2015 では、これらのファイルは、Visual Studio インストール ディレクトリ (Program Files [(x86)]\Microsoft Visual Studio *バージョン*\VC\redist\\*locale*\\) にあります。 再頒布可能マージ モジュール (.msm ファイル) を使用することもできます。Visual Studio 2017 の場合、このモジュールは、Program Files [(x86)]\\Microsoft Visual Studio\\2017\\_edition_\\VC\\Redist\\MSVC\\_lib-version_\\MergeModules\\ フォルダーにあります。 Visual Studio 2015 の場合は、Program Files [(x86)]\Common Files\Merge Modules\\ にあります。 実行可能なアプリケーション ファイルを含むフォルダーである、*アプリケーション ローカル フォルダー*に再頒布可能な Visual C++ DLL を直接インストールすることもできます。 サービス上の理由から、このインストール場所を使用することはお勧めしません。
 
@@ -52,7 +52,6 @@ Windows でご利用のアプリケーションに必要な再頒布可能ライ
 |-----------|-----------------|
 |[マージ モジュールを使用した再配布](../ide/redistributing-components-by-using-merge-modules.md)|Visual C++ 再頒布可能マージ モジュールを使用して、Visual C++ ランタイム ライブラリを共有 DLL として %windir%\system32\ フォルダーにインストールする方法について説明します。|
 |[Visual C++ ActiveX コントロールの再頒布](../ide/redistributing-visual-cpp-activex-controls.md)|ActiveX コントロールを使用するアプリケーションを再配布する方法について説明します。|
-|[データベース サポート ファイルの再頒布](../ide/redistributing-database-support-files.md)|データ アクセス オブジェクト (DAO: Data Access Object) 用のサポート ファイルの再配布、および Microsoft Data Access SDK のデータベース テクノロジのサポート ファイルの再配布について説明します。|
 |[MFC ライブラリの再頒布](../ide/redistributing-the-mfc-library.md)|MFC を使用するアプリケーションを再配布する方法について説明します。|
 |[ATL アプリケーションの再頒布](../ide/redistributing-an-atl-application.md)|ATL を使用するアプリケーションを再頒布する方法について説明します。 Visual Studio 2012 以降では、ATL 用の再頒布可能ライブラリは必要ありません。|
 |[配置例](../ide/deployment-examples.md)|Visual C++ アプリケーションを配置する方法の例にリンクします。|

@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 310f462414ce5e579ea16b40c44ce543bd74b107
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 468ce7d65e31a70192e1a48bf21126dd96a1936e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337519"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678913"
 ---
 # <a name="deployment-in-visual-c"></a>Visual C++ での配置
 
@@ -58,7 +58,7 @@ Visual C++ ライブラリを集中配置する場合、インストールする
 
 ## <a name="troubleshooting-deployment-issues"></a>配置に関する問題のトラブルシューティング
 
-Visual C++ ライブラリの読み込み順序はシステムに依存します。 ローダーの問題を診断するには、depends.exe または where.exe を使用します。 詳細については、[ダイナミック リンク ライブラリの検索順序 (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682586.aspx) に関するページを参照してください。
+Visual C++ ライブラリの読み込み順序はシステムに依存します。 ローダーの問題を診断するには、depends.exe または where.exe を使用します。 詳細については、[ダイナミック リンク ライブラリの検索順序 (Windows)](/windows/desktop/Dlls/dynamic-link-library-search-order) に関するページを参照してください。
 
 ## <a name="see-also"></a>関連項目
 

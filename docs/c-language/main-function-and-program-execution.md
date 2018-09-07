@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca08ecc5be82ec256320c87a9a49e354dccd40f8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fd6dae49eb655856247ea70e61582e16228db454
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387500"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578321"
 ---
 # <a name="main-function-and-program-execution"></a>main 関数とプログラム実行
 すべての C プログラムには主要な (メイン) 関数があり、その名前は **main** である必要があります。 コードが Unicode プログラミング モデルに準拠する場合、**main** のワイド文字バージョンである **wmain** を使用できます。 **main** 関数は、プログラム実行の開始点として動作します。 通常は、プログラム内の他の関数への呼び出しを指示することによって、プログラムの実行を制御します。 プログラムは通常、**main** の最後に実行を停止しますが、さまざまな理由により、プログラムのその他の場所で終了する場合もあります。 特定のエラーが検出された場合などに、プログラムを強制的に終了することもできます。 そのためには、**exit** 関数を使用します。 [exit](../c-runtime-library/reference/exit-exit-exit.md) 関数の説明および使用例については、「*ランタイム ライブラリ リファレンス*」を参照してくださ。  
@@ -45,4 +45,5 @@ main( int argc, char *argv[ ], char *envp[ ] )
  **main** のワイド文字バージョンについては、「[wmain の使用](../c-language/using-wmain.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [main: プログラムの起動](../cpp/main-program-startup.md)
+ [main: プログラムの起動](../cpp/main-program-startup.md)   
+ [C コマンド ライン引数の解析](../c-language/parsing-c-command-line-arguments.md)

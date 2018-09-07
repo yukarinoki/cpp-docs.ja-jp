@@ -1,5 +1,5 @@
 ---
-title: タスク マネージャーを使用して |Microsoft ドキュメント
+title: タスク マネージャーを使用して |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95d5018667101312355e7e7263c18ce723690d88
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2236f6f7c343f5555ae31ad20ac0d79b6c9279d9
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361031"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754736"
 ---
 # <a name="using-task-manager"></a>タスク マネージャーを使用します。
-サービスをデバッグする最も簡単な方法の 1 つは、タスク マネージャーを使用することです。 サービスが実行されている場合、中に、タスク マネージャーを起動し、をクリックして、**プロセス**タブです。Exe ファイルの名前を右クリックし、をクリックして**デバッグ**です。 これは、実行中のプロセスにアタッチされている Visual C を起動します。 をクリックして**中断**上、**デバッグ**コードにブレークポイントを設定するためのメニュー。 をクリックして**実行**を指定したブレークポイントを実行します。  
-  
-## <a name="see-also"></a>関連項目  
- [デバッグのヒント](../atl/debugging-tips.md)
+
+サービスをデバッグする最も簡単な方法の 1 つは、タスク マネージャーを使用してです。 サービスが実行されている場合、中に、タスク マネージャーを起動し、をクリックして、**プロセス**タブ。Exe ファイルの名前を右クリックし、**デバッグ**します。 これは、実行中のプロセスにアタッチされている Visual C を起動します。 をクリックして**中断**で、**デバッグ**メニュー、コードにブレークポイントを設定するようにします。 をクリックして**実行**を指定したブレークポイントを実行します。
+
+## <a name="see-also"></a>関連項目
+
+[デバッグのヒント](../atl/debugging-tips.md)
 

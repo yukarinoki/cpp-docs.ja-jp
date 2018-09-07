@@ -191,8 +191,7 @@
 ### [/ASSEMBLYDEBUG (DebuggableAttribute の追加)](assemblydebug-add-debuggableattribute.md)
 ### [/ASSEMBLYLINKRESOURCE (.NET Framework リソースへのリンク)](assemblylinkresource-link-to-dotnet-framework-resource.md)
 ### [/ASSEMBLYMODULE (MSIL モジュールのアセンブリへの追加)](assemblymodule-add-a-msil-module-to-the-assembly.md)
-### 
-  [/ASSEMBLYRESOURCE (マネージド リソースの埋め込み)](assemblyresource-embed-a-managed-resource.md)
+### [/ASSEMBLYRESOURCE (マネージド リソースの埋め込み)](assemblyresource-embed-a-managed-resource.md)
 ### [/BASE (ベース アドレス)](base-base-address.md)
 ### [/CGTHREADS (コンパイラ スレッド)](cgthreads-compiler-threads.md)
 ### [/CLRIMAGETYPE (CLR イメージのタイプの指定)](clrimagetype-specify-type-of-clr-image.md)

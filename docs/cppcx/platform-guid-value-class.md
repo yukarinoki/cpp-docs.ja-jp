@@ -16,11 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d971d4cce8dc3a9d01a666bc8e0e6333f85260c8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201375"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751570"
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid 値クラス
 表す、 [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) Windows ランタイムの型システム内の型。  

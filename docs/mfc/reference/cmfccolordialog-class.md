@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4d6bf9d62ae1cb80041145903267d4af4d88eaa
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6a1d5c2d7bb2da2ba293ac29a59948f80c1bed59
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214153"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680611"
 ---
 # <a name="cmfccolordialog-class"></a>CMFCColorDialog クラス
 `CMFCColorDialog`クラスは、色の選択 ダイアログ ボックスを表します。  
@@ -63,7 +63,7 @@ class CMFCColorDialog : public CDialogEx
 |----------|-----------------|  
 |[CMFCColorDialog::GetColor](#getcolor)|現在選択されている色を返します。|  
 |[CMFCColorDialog::GetPalette](#getpalette)|色のパレットを返します。|  
-|`CMFCColorDialog::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)と[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 関数。 構文と詳細については、次を参照してください。 [cwnd::pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)します。 (`CDialogEx::PreTranslateMessage` をオーバーライドします)。|  
+|`CMFCColorDialog::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数。 構文と詳細については、次を参照してください。 [cwnd::pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)します。 (`CDialogEx::PreTranslateMessage` をオーバーライドします)。|  
 |[CMFCColorDialog::RebuildPalette](#rebuildpalette)|パレットは、システム パレットから派生します。|  
 |[CMFCColorDialog::SetCurrentColor](#setcurrentcolor)|現在の選択した色を設定します。|  
 |[CMFCColorDialog::SetNewColor](#setnewcolor)|指定された RGB 値に最も近い色を設定します。|  
@@ -72,7 +72,7 @@ class CMFCColorDialog : public CDialogEx
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |`m_bIsMyPalette`|色の選択 ダイアログ ボックスで、独自のカラー パレットを使用する場合は TRUE または FALSE の場合、ダイアログ ボックスで指定されているパレットを使用して、`CMFCColorDialog`コンス トラクター。|  
 |`m_bPickerMode`|TRUE に、ユーザーが選択 ダイアログ ボックスから色の選択それ以外の場合、FALSE です。|  

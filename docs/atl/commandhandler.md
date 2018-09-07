@@ -16,50 +16,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ad124f0819dbfd9cfd0117cb91fbcffba05a400
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4799d0b9c36ade8b1e203ca106605db75752b02f
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201277"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752816"
 ---
 # <a name="commandhandler"></a>CommandHandler
-`CommandHandler` 関数は、メッセージ マップに COMMAND_HANDLER マクロの 3 番目のパラメーターによって識別されます。  
-  
-## <a name="syntax"></a>構文  
-  
+
+`CommandHandler` 関数は、メッセージ マップに COMMAND_HANDLER マクロの 3 番目のパラメーターによって識別されます。
+
+## <a name="syntax"></a>構文
+
 ```  
- 
-    LRESULT 
-    CommandHandler 
- (
+LRESULT CommandHandler(
     WORD wNotifyCode,  
     WORD wID,  
     HWND hWndCtl,  
     BOOL& bHandled);
-```  
-  
-#### <a name="parameters"></a>パラメーター  
- *wNotifyCode*  
- 通知コード。  
-  
- *wID*  
- メニュー項目、コントロール、またはアクセラレータの識別子。  
-  
- *hWndCtl*  
- ウィンドウ コントロールへのハンドル。  
-  
- *bHandled*  
- メッセージ マップ セット*bHandled*する前に TRUE を`CommandHandler`が呼び出されます。 場合`CommandHandler`、メッセージを完全に処理しない設定があります*bHandled*を FALSE に、メッセージは、さらに処理が必要かを示します。  
-  
-## <a name="return-value"></a>戻り値  
- メッセージの処理の結果。 成功した場合は 0 を返します。  
-  
-## <a name="remarks"></a>Remarks  
- このメッセージ ハンドラーを使用して、メッセージ マップの例は、次を参照してください。 [COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler)します。  
-  
-## <a name="see-also"></a>関連項目  
- [ウィンドウの実装](../atl/implementing-a-window.md)   
- [メッセージ マップ](../atl/message-maps-atl.md)   
- [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)
+```
+
+#### <a name="parameters"></a>パラメーター
+
+*wNotifyCode*  
+通知コード。
+
+*wID*  
+メニュー項目、コントロール、またはアクセラレータの識別子。
+
+*hWndCtl*  
+ウィンドウ コントロールへのハンドル。
+
+*bHandled*  
+メッセージ マップ セット*bHandled*する前に TRUE を`CommandHandler`が呼び出されます。 場合`CommandHandler`、メッセージを完全に処理しない設定があります*bHandled*を FALSE に、メッセージは、さらに処理が必要かを示します。
+
+## <a name="return-value"></a>戻り値
+
+メッセージの処理の結果。 成功した場合は 0 を返します。
+
+## <a name="remarks"></a>Remarks
+
+このメッセージ ハンドラーを使用して、メッセージ マップの例は、次を参照してください。 [COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler)します。
+
+## <a name="see-also"></a>関連項目
+
+[ウィンドウの実装](../atl/implementing-a-window.md)   
+[メッセージ マップ](../atl/message-maps-atl.md)   
+[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)
 

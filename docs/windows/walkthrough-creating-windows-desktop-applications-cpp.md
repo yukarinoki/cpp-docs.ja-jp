@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e9a946689d563f1c681fee305ec05438bc5eb687
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 34342fbca00a127d1fdee13d29626bc2a3dfe53f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204739"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679206"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>チュートリアル: 従来 Windows デスクトップ アプリケーション (C++) の作成します。
 
@@ -181,7 +181,7 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
    }
    ```
 
-1. これで、ウィンドウを作成できます。 使用して、 [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)関数。
+1. これで、ウィンドウを作成できます。 使用して、 [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)関数。
 
    ```cpp
    static TCHAR szWindowClass[] = _T("DesktopApp");
@@ -247,7 +247,7 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
    return (int) msg.wParam;
    ```
 
-   構造体とメッセージ ループ内の関数の詳細については、次を参照してください[MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958)、 [GetMessage](https://msdn.microsoft.com/library/windows/desktop/ms644936)、 [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)、および[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934)。
+   構造体とメッセージ ループ内の関数の詳細については、次を参照してください[MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958)、 [GetMessage](https://msdn.microsoft.com/library/windows/desktop/ms644936)、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)、および[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)。
 
    この段階では、 `WinMain` 関数のコードは次のようになります。
 

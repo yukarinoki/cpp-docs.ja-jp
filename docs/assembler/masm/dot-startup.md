@@ -1,7 +1,7 @@
 ---
-title: .スタートアップ |Microsoft ドキュメント
+title: .スタートアップ |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eff392b277e214d66dca7660f96188ff78508b80
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c4c11c485c0adc83dd7751726c8353f9669fb2b6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051573"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679161"
 ---
 # <a name="startup"></a>.STARTUP
-プログラムのスタートアップ コードを生成します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-.STARTUP  
-  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+
+プログラムのスタートアップ コードを生成します。
+
+## <a name="syntax"></a>構文
+
+> .STARTUP
+
+## <a name="see-also"></a>関連項目
+
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>

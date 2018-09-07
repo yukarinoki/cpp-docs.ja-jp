@@ -1,7 +1,7 @@
 ---
-title: REAL4 |Microsoft ドキュメント
+title: REAL4 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1459e86841e722a0eba2389b8aac31cb8a98128
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c017e318d1d88a09260bf155ded2e96f1930c5e3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057644"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682707"
 ---
 # <a name="real4"></a>REAL4
-割り当て、必要に応じて各単精度 (4 バイト) の浮動小数点数を初期化*初期化子*です。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-name REAL4 initializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+
+割り当て、必要に応じて、各単精度 (4 バイト) 浮動小数点数を初期化します*初期化子*します。
+
+## <a name="syntax"></a>構文
+
+> REAL4 初期化子の名前 [] の初期化子].
+
+## <a name="see-also"></a>関連項目
+
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>

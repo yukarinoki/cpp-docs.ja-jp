@@ -15,12 +15,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 743f15cdb9fe8b0233f5b59ca399c0f47704d441
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: bbc19b4c8e698c520be2283376ac5297cdae33df
+ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269541"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42900513"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Linux CMake プロジェクトを構成する
 
@@ -30,7 +30,7 @@ Visual Studio に Linux C++ ワークロードをインストールすると、L
 このトピックは、Visual Studio の CMake サポートに関する基本的な知識が読者にあるものとして作成されています。 詳細については、「[CMake Tools for Visual C++](../ide/cmake-tools-for-visual-cpp.md)」 (Visual C++ の CMake ツール) をご覧ください。 CMake 自体の詳細については、「[Build, Test and Package Your Software With CMake](https://cmake.org/)」 (CMake でソフトウェアをビルド、テスト、パッケージ化する) を参照してください。
 
 > [!NOTE]  
-> Visual Studio で CMake を利用するには、CMake 3.8 で導入されたサーバー モードに対応する必要があります。 パッケージ マネージャーで古いバージョンの CMake が提供される場合は、[ソースから CMake をビルドする](#build-a-supported-cmake release-from-source)か、公式の [CMake ダウンロード ページ](https://cmake.org/download/)からダウンロードすることで、これを回避できます。 Visual Studio で [CMake ターゲット ビュー](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) ウィンドウをサポートする、Microsoft 提供の CMake バリアントの場合は、[https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) で最新のビルド済みバイナリをダウンロードします。
+> Visual Studio で CMake を利用するには、CMake 3.8 で導入されたサーバー モードに対応する必要があります。 Visual Studio で [CMake ターゲット ビュー](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) ウィンドウをサポートする、Microsoft 提供の CMake バリアントの場合は、[https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) で最新のビルド済みバイナリをダウンロードします。 パッケージ マネージャーで 3.8 より古いバージョンの CMake が提供される場合は、[ソースから CMake をビルドする](#build-a-supported-cmake-release-from-source)か、標準の CMake の使用が好ましい場合、公式の [CMake ダウンロード ページ](https://cmake.org/download/)からダウンロードすることで、これを回避できます。 
 
 ## <a name="open-a-folder"></a>フォルダーを開く
 
@@ -87,10 +87,16 @@ Linux ターゲットを指定すると、ソースが Linux マシンにコピ�
       "remoteCMakeListsRoot": "/var/tmp/src/${workspaceHash}/${name}",
       "cmakeExecutable": "/usr/local/bin/cmake",
       "buildRoot": "${env.LOCALAPPDATA}\\CMakeBuilds\\${workspaceHash}\\build\\${name}",
+      "installRoot": "${env.LOCALAPPDATA}\\CMakeBuilds\\${workspaceHash}\\install\\${name}",
       "remoteBuildRoot": "/var/tmp/build/${workspaceHash}/build/${name}",
+      "remoteInstallRoot": "/var/tmp/build/${workspaceHash}/install/${name}",
       "remoteCopySources": true,
       "remoteCopySourcesOutputVerbosity": "Normal",
       "remoteCopySourcesConcurrentCopies": "10",
+      "remoteCopySourcesMethod": "rsync",
+      "remoteCopySourcesExclusionList": [".vs", ".git"],
+      "rsyncCommandArgs" : "-t --delete --delete-excluded",
+      "remoteCopyBuildOutput" : "false",
       "cmakeCommandArgs": "",
       "buildCommandArgs": "",
       "ctestCommandArgs": "",
@@ -98,7 +104,19 @@ Linux ターゲットを指定すると、ソースが Linux マシンにコピ�
 }
 ```
 
-`name` 値には、任意の値を指定できます。 リモート システムが複数存在する場合、`remoteMachineName` 値によって、ターゲットとなるリモート システムが指定されます。 このフィールドには IntelliSense が有効になっており、適切なシステムの選択を支援します。 フィールド `remoteCMakeListsRoot` によって、リモート システム上にある、プロジェクト ソースのコピー先が指定されます。 フィールド `remoteBuildRoot` は、リモート システムでビルド出力が生成される場所です。 その出力は、`buildRoot` によって指定される場所にもローカル コピーされます。
+`name` 値には、任意の値を指定できます。 リモート システムが複数存在する場合、`remoteMachineName` 値によって、ターゲットとなるリモート システムが指定されます。 このフィールドには IntelliSense が有効になっており、適切なシステムの選択を支援します。 フィールド `remoteCMakeListsRoot` によって、リモート システム上にある、プロジェクト ソースのコピー先が指定されます。 フィールド `remoteBuildRoot` は、リモート システムでビルド出力が生成される場所です。 その出力は、`buildRoot` によって指定される場所にもローカル コピーされます。 cmake インストールを行うときに適用されることを除き、`remoteInstallRoot` フィールドと `installRoot` フィールドは `remoteBuildRoot` と `buildRoot` に似ています。 `remoteCopySources` エントリにより、ローカル ソースがリモート コンピューターにコピーされるかどうかが制御されます。 ファイルが大量にあり、自分で既にソースを同期している場合、これを false に設定することがあります。 `remoteCopyOutputVerbosity` 値により、エラーを診断する必要がある場合のコピー ステップの詳細度が制御されます。 `remoteCopySourcesConcurrentCopies` エントリにより、コピーのために生成されるプロセスの数が制御されます。 `remoteCopySourcesMethod` 値は rsync または sftp になります。 `remoteCopySourcesExclusionList` フィールドでは、リモート コンピューターにコピーされる内容を制御できます。 `rsyncCommandArgs` 値では、コピーの rsync メソッドを制御できます。 `remoteCopyBuildOutput` フィールドにより、リモート ビルド出力がローカル ビルド フォルダーにコピーされるかどうかが制御されます。
+
+さらに制御するためのオプション設定もいくつかあります。
+
+```json
+{
+      "remotePreBuildCommand": "",
+      "remotePreGenerateCommand": "",
+      "remotePostBuildCommand": "",
+}
+```
+
+そうしたオプションでは、ビルドの前後や CMake 生成の前にリモート ボックスでコマンドを実行できます。 リモート ボックスで有効なコマンドになります。 出力はパイプで Visual Studio に戻されます。
 
 ## <a name="build-a-supported-cmake-release-from-source"></a>サポートされている CMake リリースをソースからビルドする
 

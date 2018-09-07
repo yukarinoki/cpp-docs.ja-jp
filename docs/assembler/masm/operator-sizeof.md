@@ -1,7 +1,7 @@
 ---
-title: SIZEOF 演算子 |Microsoft ドキュメント
+title: SIZEOF 演算子 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -17,22 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e39bc76f8430cbecee35f855b7c954a48b769389
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: e13f04a6d41a2f5bc982dcb36a0eb4cdc1ca5f95
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051210"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689733"
 ---
 # <a name="operator-sizeof"></a>SIZEOF 演算子
-内のバイト数を返します*変数*または`type`です。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-SIZEOF {variable | type}  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [演算子リファレンス](../../assembler/masm/operators-reference.md)
+
+内のバイト数を返します*変数*または`type`します。
+
+## <a name="syntax"></a>構文
+
+> SIZEOF {変数 | 型}
+
+## <a name="see-also"></a>関連項目
+
+[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>

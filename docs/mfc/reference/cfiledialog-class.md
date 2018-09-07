@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8743619b1c47f085aacd569a7b90d716f175842
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 45b9b5bb5beae8599c360d35df878a38b591b1b4
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210806"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761018"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog クラス
 ファイルを開くまたは保存する操作に使用される、コモン ダイアログ ボックスをカプセル化します。  
@@ -1398,7 +1398,7 @@ BOOL SetProperties(LPCWSTR lpszPropList);
   
 ### <a name="parameters"></a>パラメーター  
  *lpszPropList*  
- ";" で区切られた定義済みプロパティのリスト。 フラグの一覧は、次を参照してください。、**フラグ**の[OPENFILENAME](https://msdn.microsoft.com/8cecfd45-f7c1-4f8d-81a0-4e7fecc3b104)します。  
+ ";" で区切られた定義済みプロパティのリスト。 フラグの一覧は、次を参照してください。、**フラグ**の[OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna)します。  
   
 ### <a name="remarks"></a>Remarks  
   

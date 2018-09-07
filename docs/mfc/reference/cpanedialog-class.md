@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 677518f45fdfb721027cc67b0210e9b437bed859
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cc74f89708132b0895c8980538b852c15087b5e6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213151"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682328"
 ---
 # <a name="cpanedialog-class"></a>CPaneDialog クラス
 `CPaneDialog`クラスは、モードレスでドッキング可能なダイアログ ボックスをサポートしています。  
@@ -58,7 +58,7 @@ class CPaneDialog : public CDockablePane
 |`CPaneDialog::OnEraseBkgnd`|処理、 [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd)メッセージ。 (再定義[CWnd::OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd))。|  
 |`CPaneDialog::OnLButtonDblClk`|処理、[した](/windows/desktop/inputdev/wm-lbuttondblclk)メッセージ。 (再定義[CWnd::OnLButtonDblClk](../../mfc/reference/cwnd-class.md#onlbuttondblclk))。|  
 |`CPaneDialog::OnLButtonDown`|処理、 [WM_LBUTTONDOWN](/windows/desktop/inputdev/wm-lbuttondown)メッセージ。 (再定義[CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown))。|  
-|`CPaneDialog::OnUpdateCmdUI`|ダイアログ ボックスのウィンドウを更新するためにフレームワークによって呼び出されます。 (上書き[cdockablepane::onupdatecmdui](https://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0))。|  
+|`CPaneDialog::OnUpdateCmdUI`|ダイアログ ボックスのウィンドウを更新するためにフレームワークによって呼び出されます。 (上書き[cdockablepane::onupdatecmdui](cdockablepane-class.md))。|  
 |`CPaneDialog::OnWindowPosChanging`|処理、 [WM_WINDOWPOSCHANGING](/windows/desktop/winmsg/wm-windowposchanging)メッセージ。 (再定義[CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging))。|  
 |[CPaneDialog::SetOccDialogInfo](#setoccdialoginfo)|OLE コントロール コンテナーは、ダイアログ ボックスのテンプレートを指定します。|  
   

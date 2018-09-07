@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 8465572cf5b921f56e357ae554ecdeaf9943b725
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606377"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767579"
 ---
 # <a name="events-ccx"></a>イベント (C++/CX)
 (発行、) を Windows ランタイム型を宣言できますイベント、および同じコンポーネント内またはその他のコンポーネントでのクライアント コードと呼ばれるメソッドを関連付けることによってそれらのイベントにサブスクライブできる*イベント ハンドラー*イベントにします。 複数のイベント ハンドラーを単一のイベントに関連付けることもできます。 発行オブジェクトがイベントを発生させた時点で、すべてのイベント ハンドラーが呼び出される結果になります。 この方法で、発行側がイベントを発生させたときに、サブスクライブ側クラスはあらゆる適切なカスタム アクションを実行できます。 各イベントには、そのイベントにサブスクライブしようとするすべてのイベント ハンドラーが所有している必要があるシグネチャを指定するデリゲート型があります。  

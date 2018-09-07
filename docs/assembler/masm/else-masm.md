@@ -1,7 +1,7 @@
 ---
-title: ELSE (MASM) |Microsoft ドキュメント
+title: その他 (MASM) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b9f74d0f2f9272987d4d56a1dcc16c11ab2ab4b
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 2cf048636b669586f93d12eeacf084c87a4139f1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054095"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679090"
 ---
 # <a name="else-masm"></a>ELSE (MASM)
-条件付きブロック内で代替のブロックの先頭をマークします。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-ELSE  
-  
-```  
-  
-## <a name="remarks"></a>コメント  
- 参照してください[IF](../../assembler/masm/if-masm.md)です。  
-  
-## <a name="see-also"></a>関連項目  
- [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+
+条件付きブロック内で別のブロックの先頭をマークします。
+
+## <a name="syntax"></a>構文
+
+> ELSE
+
+## <a name="remarks"></a>Remarks
+
+参照してください[場合](../../assembler/masm/if-masm.md)します。
+
+## <a name="see-also"></a>関連項目
+
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>

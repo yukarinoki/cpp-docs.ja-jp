@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf2ddf83b7a03f8d4e01b61f82e46e0d26a5547b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c43619fcb1d684d7e0d2d6645b7a5feaac61e472
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340542"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195196"
 ---
 # <a name="implement-interface-wizard"></a>インターフェイス実装ウィザード
 このウィザードは、COM オブジェクトのインターフェイスを実装します。 Visual Studio と Windows で利用できる COM ライブラリには、多くのインターフェイスの実装が含まれています。 インターフェイスの実装は、オブジェクトのインスタンスの作成時にそのオブジェクトに関連付けられ、オブジェクトで提供されるサービスを提供します。  
   
- インターフェイスと実装の詳細については、Windows SDK の「[Interfaces and Interface Implementations](http://msdn.microsoft.com/library/windows/desktop/ms694356)」 (インターフェイスとインターフェイスの実装) を参照してください。  
+ インターフェイスと実装の詳細については、Windows SDK の「[Interfaces and Interface Implementations](/windows/desktop/com/interfaces-and-interface-implementations)」 (インターフェイスとインターフェイスの実装) を参照してください。  
   
  **インターフェイスの実装元**  
  インターフェイスの作成元となる、タイプ ライブラリの場所を指定します。  

@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58509ec4f6a3773478e1bc544f28baf92d7e97b7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c940ec56b0f522e90410b786d595f4cbf929ed89
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206893"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688546"
 ---
 # <a name="cwinapp-class"></a>CWinApp クラス
 
@@ -270,7 +270,7 @@ class CWinApp : public CWinThread
 |[CWinApp::OnIdle](#onidle)|オーバーライドすると、アプリケーション固有のアイドル時間の処理を実行します。|
 |[:Opendocumentfile](#opendocumentfile)|ファイルからドキュメントを開くために、フレームワークによって呼び出されます。|
 |[CWinApp::ParseCommandLine](#parsecommandline)|個々 のパラメーターと、コマンドラインでフラグを解析します。|
-|[Cwinapp::pretranslatemessage](#pretranslatemessage)|Windows 関数にディスパッチされる前に、メッセージをフィルター処理[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)と[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934)します。|
+|[Cwinapp::pretranslatemessage](#pretranslatemessage)|Windows 関数にディスパッチされる前に、メッセージをフィルター処理[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)します。|
 |[CWinApp::ProcessMessageFilter](#processmessagefilter)|アプリケーションに到達する前に、特定のメッセージを受け取ります。|
 |[CWinApp::ProcessShellCommand](#processshellcommand)|コマンドライン引数とフラグを処理します。|
 |[CWinApp::ProcessWndProcException](#processwndprocexception)|アプリケーションのメッセージとコマンド ハンドラーによってスローされたすべてのハンドルされない例外を受け取ります。|
@@ -333,7 +333,7 @@ class CWinApp : public CWinThread
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
-|name|説明|
+|名前|説明|
 |----------|-----------------|
 |[CWinApp::m_dwRestartManagerSupportFlags](#m_dwrestartmanagersupportflags)|再起動マネージャーの動作を決定するフラグ。|
 |[CWinApp::m_nAutosaveInterval](#m_nautosaveinterval)|自動保存の間隔をミリ秒で時間の長さ。|
@@ -1794,7 +1794,7 @@ void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 
 ##  <a name="pretranslatemessage"></a>  Cwinapp::pretranslatemessage
 
-Windows 関数にディスパッチされる前に、ウィンドウ メッセージをフィルター処理するには、この関数をオーバーライド[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)と[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934)既定の実装は、アクセラレータ キーを実行します。変換では、呼び出す必要があるため、`CWinApp::PreTranslateMessage`オーバーライドされたバージョンのメンバー関数。
+Windows 関数にディスパッチされる前に、ウィンドウ メッセージをフィルター処理するには、この関数をオーバーライド[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)既定の実装は、アクセラレータ キーを実行します。変換では、呼び出す必要があるため、`CWinApp::PreTranslateMessage`オーバーライドされたバージョンのメンバー関数。
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);

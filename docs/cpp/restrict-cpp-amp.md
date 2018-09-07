@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 758862d5296cf0a51cc0e04d849b044b3694e087
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e3385e68b7a5a112e5ff63b63afe5dd83603cf72
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461889"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678198"
 ---
 # <a name="restrict-c-amp"></a>restrict (C++ AMP)
 制限指定子は、関数宣言およびラムダ宣言に適用できます。 制限は、関数のコードに適用され、また、C++ Accelerated Massive Parallelism (C++ AMP) ランタイムを使用するアプリケーションの関数の動作に適用されます。  
@@ -87,7 +87,7 @@ ms.locfileid: "39461889"
   
     -   可変個引数  
   
- 関数の制限事項の詳細については、次を参照してください。 [restrict (amp) 制限](http://go.microsoft.com/fwlink/p/?LinkId=251089)します。  
+ 関数の制限事項の詳細については、次を参照してください。 [(amp) の制限を制限する](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/12/19/restrictamp-restrictions-part-0-of-n-introduction/)します。  
   
 ## <a name="example"></a>例  
  次の例は、使用する方法を示します、`restrict(amp)`句。  

@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33683ebe349fbfdcb3fd51179ed6bc3140510c00
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 3600e5541c095b3879fe60404c9a5994c2a91088
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33330298"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42578218"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>デバッグ バージョンのアプリケーションを実行するテスト用コンピューターの準備
 Visual C++ でビルドしたデバッグ バージョンのアプリケーションをテストする際は、そのアプリケーションが依存している Visual C++ ライブラリ DLL のデバッグ バージョンをテスト用のコンピューターに配置する必要があります。 配置する必要がある DLL を特定するには、「[Visual C++ アプリケーションの依存関係の理解](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)」の手順に従ってください。 Visual C++ ライブラリ DLL のデバッグ バージョンには、通常、"d" で終わる名前が付いています。たとえば、msvcr100.dll のデバッグ バージョンには、msvcr100d.dll という名前が付けられています。  
@@ -43,5 +43,5 @@ Visual C++ でビルドしたデバッグ バージョンのアプリケーシ�
 ## <a name="see-also"></a>参照  
  
  [Visual C++ での配置](../ide/deployment-in-visual-cpp.md)   
- [Windows インストーラーのコマンド ライン オプション](http://msdn.microsoft.com/library/windows/desktop/aa367988.aspx)   
+ [Windows インストーラーのコマンド ライン オプション](/windows/desktop/Msi/command-line-options)   
  [展開例](../ide/deployment-examples.md) [リモート デバッグ](/visualstudio/debugger/remote-debugging.md)

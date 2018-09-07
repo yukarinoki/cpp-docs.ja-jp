@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0ccc526b196982402ca3b795276df8c790ad35a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 45c03ed2c057781c082988ac15e838249db0f28a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404257"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689716"
 ---
 # <a name="getdcwd-wgetdcwd"></a>_getdcwd、_wgetdcwd
 
@@ -79,28 +79,28 @@ wchar_t *_wgetdcwd(
 *バッファー*<br/>
 パスの格納場所または **NULL**。
 
-場合**NULL**を指定すると、この関数はバッファーを割り当てるには、少なくとも*maxlen*を使用してサイズ**malloc**、および戻り値の **_getdcwd**、割り当てられたバッファーへのポインターです。 バッファーを呼び出すことによって解放できます**空き**し、ポインターを渡します。
+場合**NULL**を指定すると、この関数は、少なくとものバッファーを割り当てます*maxlen*を使用してサイズ**malloc**、および戻り値の **_getdcwd**、割り当てられたバッファーへのポインターです。 呼び出すことによって、バッファーを解放できる**無料**ポインターに渡すとします。
 
 *maxlen*<br/>
-文字数で、パスの最大長を指定する 0 以外正の整数: **char**の **_getdcwd**と**wchar_t**の **_wgetdcwd**.
+文字数で、パスの最大長を指定する 0 以外の場合正の整数: **char**の **_getdcwd**と**wchar_t**の **_wgetdcwd**.
 
-場合*maxlen*ゼロより大きく、記載されている無効なパラメーター ハンドラーがない[パラメーターの検証](../../c-runtime-library/parameter-validation.md)が呼び出されます。
+場合*maxlen*ゼロより大きく、記載されている無効なパラメーター ハンドラーが[パラメーターの検証](../../c-runtime-library/parameter-validation.md)が呼び出されます。
 
 ## <a name="return-value"></a>戻り値
 
-指定したドライブ上の現在の作業ディレクトリの完全パスを表す文字列へのポインターまたは**NULL**エラーを示します。
+指定したドライブ上の現在の作業ディレクトリの完全なパスを表す文字列へのポインターまたは**NULL**エラーを示します。
 
-場合*バッファー*として指定された**NULL**に割り当てる十分なメモリがあると*maxlen*文字で、エラーが発生し、 **errno**は設定**ENOMEM**です。 終端の null 文字を含むパスの長さを超えた場合*maxlen*、エラーが発生し、 **errno**に設定されている**ERANGE**です。 これらのエラー コードの詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
+場合*バッファー*として指定されて**NULL**が不足しているメモリを割り当てることがあると*maxlen*文字、エラーが発生し、 **errno**は設定**ENOMEM**します。 を、終端の null 文字を含むパスの長さを超えた場合*maxlen*、エラーが発生し、 **errno**に設定されている**ERANGE**します。 これらのエラー コードの詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Getdcwd**関数は、指定したドライブ上の現在の作業ディレクトリの完全なパスを取得しに格納*バッファー*です。 現在の作業ディレクトリがルートに設定されている場合、文字列は円記号 (\\) で終わります。 現在の作業ディレクトリがルート以外のディレクトリに設定されている場合、文字列は、円記号ではなく、ディレクトリの名前で終わります。
+**_Getdcwd**関数は、指定したドライブ上の現在の作業ディレクトリの完全なパスを取得しに格納*バッファー*します。 現在の作業ディレクトリがルートに設定されている場合、文字列は円記号 (\\) で終わります。 現在の作業ディレクトリがルート以外のディレクトリに設定されている場合、文字列は、円記号ではなく、ディレクトリの名前で終わります。
 
-**_wgetdcwd**のワイド文字バージョンは、 **_getdcwd**、およびその*バッファー*パラメーターと戻り値はワイド文字列です。 それ以外の場合、 **_wgetdcwd**と **_getdcwd**動作は同じです。
+**_wgetdcwd**のワイド文字バージョンは、 **_getdcwd**、およびその*バッファー*パラメーターと戻り値はワイド文字の文字列。 それ以外の場合、 **_wgetdcwd**と **_getdcwd**動作は同じです。
 
-この関数は、スレッドセーフではない **GetFullPathName**に依存しますが、スレッドセーフです。 ただし、マルチスレッド アプリケーションでこの関数と **GetFullPathName**を両方とも呼び出した場合、スレッド セーフを侵害する可能性があります。 詳細については、[MSDN ライブラリ](http://go.microsoft.com/fwlink/p/?linkid=150542) にアクセスし、**GetFullPathName** を検索します。
+この関数は、スレッドセーフではない **GetFullPathName**に依存しますが、スレッドセーフです。 マルチ スレッド アプリケーションは、この両方の関数を呼び出す場合、スレッド セーフを侵害するただし、および[GetFullPathNameA](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)します。
 
-この関数のバージョン、 **_nolock**サフィックス同じように動作するこの関数はスレッド セーフではありませんで他のスレッドによる干渉から保護されないという点を除いて。 詳細については、[_getdcwd_nolock、_wgetdcwd_nolock](getdcwd-nolock-wgetdcwd-nolock.md) を参照してください。
+この関数のバージョン、 **_nolock**サフィックスの動作と同じこの関数はスレッド セーフではなく、他のスレッドによる干渉から保護されない点が異なります。 詳細については、[_getdcwd_nolock、_wgetdcwd_nolock](getdcwd-nolock-wgetdcwd-nolock.md) を参照してください。
 
 ときに **_DEBUG**と **_CRTDBG_MAP_ALLOC**への呼び出しで定義されている **_getdcwd**と **_wgetdcwd** への呼び出しによって置き換えられます **_getdcwd_dbg**と **_wgetdcwd_dbg**メモリ割り当てをデバッグできるようにします。 詳細については、[_getdcwd_dbg、_wgetdcwd_dbg](getdcwd-dbg-wgetdcwd-dbg.md) を参照してください。
 
@@ -112,7 +112,7 @@ wchar_t *_wgetdcwd(
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_getdcwd**|\<direct.h>|
 |**_wgetdcwd**|\<direct.h> または \<wchar.h>|

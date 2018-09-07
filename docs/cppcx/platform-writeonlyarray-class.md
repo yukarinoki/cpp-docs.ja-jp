@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3871b6ad3aead88c32c906726f689d949eb945ba
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 44beeca9b860e2010b092739d8c39044ad0bb5b1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603347"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680926"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray クラス
 メソッドで設定する配列を呼び出し元から渡すときに入力パラメーターとして使用される 1 次元配列を表します。  
@@ -43,7 +43,7 @@ private ref class WriteOnlyArray<T, 1>
 ### <a name="public-methods"></a>パブリック メソッド  
  これらのメソッドのアクセシビリティは内部です。つまり、これらのメソッドには C++ アプリまたはコンポーネント内でのみアクセスできます。  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 
 |[Writeonlyarray::begin](#begin)|配列の最初の要素を指す反復子 |。  
@@ -187,7 +187,7 @@ T& set(
 
   
 ### <a name="remarks"></a>Remarks  
- HRESULT 値を解釈する方法の詳細については、次を参照してください。 [COM エラー コードの構造](http://go.microsoft.com/fwlink/p/?LinkId=262045)します。  
+ HRESULT 値を解釈する方法の詳細については、次を参照してください。 [COM エラー コードの構造](/windows/desktop/com/structure-of-com-error-codes)します。  
   
   
 ## <a name="see-also"></a>関連項目  

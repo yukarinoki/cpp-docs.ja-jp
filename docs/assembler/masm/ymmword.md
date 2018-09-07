@@ -1,7 +1,7 @@
 ---
-title: YMMWORD |Microsoft ドキュメント
+title: YMMWORD |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f82d9c8066334ff0d8765e1aa4da41a253d3064
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 67ea3d2319f6c89abccc3acbba4e1fea94197210
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057111"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682184"
 ---
 # <a name="ymmword"></a>YMMWORD
-Intel Advanced Vector Extensions (AVX) の命令で 256 ビットのマルチ メディア オペランドに使用されます。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-YMMWORD  
-```  
-  
-## <a name="remarks"></a>コメント  
- `YMMWORD` 同じ型を表すために、 `__m256` AVX 組み込みのです。  
-  
-## <a name="see-also"></a>関連項目  
- [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+
+Intel Advanced Vector Extensions (AVX) 命令で 256 ビットのマルチ メディア オペランドに使用されます。
+
+## <a name="syntax"></a>構文
+
+> YMMWORD
+
+## <a name="remarks"></a>Remarks
+
+`YMMWORD` 同じ型を表すために、 `__m256` AVX 組み込みの。
+
+## <a name="see-also"></a>関連項目
+
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>

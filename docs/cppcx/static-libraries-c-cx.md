@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5bb69b65d78b6369d872fd6f953f6ddde382c21b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602290"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759445"
 ---
 # <a name="static-libraries-ccx"></a>スタティック ライブラリ (C++/CX)
 ユニバーサル Windows プラットフォーム (UWP) アプリで使用されている静的ライブラリ STL の型、および Windows ランタイム アプリのプラットフォームから除外されていない Win32 Api の呼び出しを含む、ISO 標準の C++ コードを含めることができます。 スタティック ライブラリは、Windows ランタイム コンポーネントを使用して、特定の制限の Windows ランタイム コンポーネントを作成します。  

@@ -321,12 +321,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a510d163075ccefbc61364cd7efa4003dfd0b8aa
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 43eb3f239f50b59245714069c70655a997882c64
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208559"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689233"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar クラス
 `CMFCToolBar`クラスに似ています[CToolBar クラス](../../mfc/reference/ctoolbar-class.md)がユーザー インターフェイス機能に対する追加のサポートを提供します。 フラット ツール バー、ホット イメージのツール バー、大きいアイコン、ページャー ボタン、ロックされたツール バー、rebar コントロール、イメージの下のテキスト、背景イメージ、およびタブ付きのツール バーなどがサポートされます。 `CMFCToolBar` クラスには、ツール バーおよびメニューに対するユーザーのカスタマイズ、ツール バーとメニューの間のドラッグ アンド ドロップ、コンボ ボックス ボタン、エディット ボックス ボタン、カラー ピッカー、およびロールアップ ボタンのサポートも組み込まれています。
@@ -513,7 +513,7 @@ class CMFCToolBar : public CMFCBaseToolBar
   
 ### <a name="data-members"></a>データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CMFCToolBar::m_bDontScaleImages](#m_bdontscaleimages)|高 DPI モードでは、スケールするかどうか、またはツールバーのイメージを指定します。|  
 |[CMFCToolBar::m_dblLargeImageRatio](#m_dbllargeimageratio)|大きいイメージの大きさ (高さまたは幅) と通常のイメージのサイズの比率を指定します。|  
@@ -2222,7 +2222,7 @@ BOOL IsOneRowWithSibling();
  ツールバーと兄弟が同じ行に配置されている場合は TRUE。それ以外の場合は FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
- [Cmfccustomizebutton::createpopupmenu](https://msdn.microsoft.com/e501083e-f78e-4d8d-900c-40bd6e2bb7f8)メソッドを表示する方法を決定するには、このメソッドを呼び出す、**カスタマイズ**ポップアップ メニュー。 このメソッドは TRUE を返す場合、フレームワークが表示されます、**を 1 行に表示するボタン**ボタンをクリックします。 それ以外の場合、フレームワークが表示されます、**表示するボタンを 2 つの行で**ボタンをクリックします。  
+ [Cmfccustomizebutton::createpopupmenu](internal-classes.md)メソッドを表示する方法を決定するには、このメソッドを呼び出す、**カスタマイズ**ポップアップ メニュー。 このメソッドは TRUE を返す場合、フレームワークが表示されます、**を 1 行に表示するボタン**ボタンをクリックします。 それ以外の場合、フレームワークが表示されます、**表示するボタンを 2 つの行で**ボタンをクリックします。  
   
  通常、このメソッドを使用する必要はありません。 有効にする、**を 1 行に表示するボタン**または**表示するボタンを 2 つの行で**ボタン、呼び出す[cmfctoolbar::setsiblingtoolbar](#setsiblingtoolbar)します。  
   

@@ -1,7 +1,7 @@
 ---
-title: EXTERNDEF |Microsoft ドキュメント
+title: EXTERNDEF |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b010f52f91a04388f34052fcc5c374690cff13df
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: d5c3d42cabb88c38ce1d98da24cd2cb4ddec8d5b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052701"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683662"
 ---
 # <a name="externdef"></a>EXTERNDEF
-1 つまたは複数の外部変数、ラベル、または記号と呼ばれる定義*名前*型を持つ`type`します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-EXTERNDEF [[langtype]] name:type [[, [[langtype]] name:type]]...  
-```  
-  
-## <a name="remarks"></a>コメント  
- 場合*名前*が定義されているモジュールでは、そのとして扱われます[パブリック](../../assembler/masm/public-masm.md)です。 場合*名前*が参照されているモジュールでは、そのとして扱われます[EXTERN](../../assembler/masm/extern-masm.md)です。 場合*名前*が参照されないと、これは無視されます。 `type`できます[ABS](../../assembler/masm/operator-abs.md)、どの imports*名前*定数として。 通常使用されるインクルード ファイルに含めます。  
-  
-## <a name="see-also"></a>関連項目  
- [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+
+1 つまたは複数の外部変数、ラベル、または記号と呼ばれる定義*名前*型が`type`します。
+
+## <a name="syntax"></a>構文
+
+> EXTERNDEF [langtype] の名前: [、[langtype] の名前: 型の型].
+
+## <a name="remarks"></a>Remarks
+
+場合*名前*が定義されていると見なされます、モジュールで[パブリック](../../assembler/masm/public-masm.md)します。 場合*名前*参照として扱われます、モジュールで[EXTERN](../../assembler/masm/extern-masm.md)。 場合*名前*が参照されていない場合、これは無視されます。 `type`できる[ABS](../../assembler/masm/operator-abs.md)、どの imports*名前*定数として。 通常使用されるインクルード ファイル内で。
+
+## <a name="see-also"></a>関連項目
+
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>

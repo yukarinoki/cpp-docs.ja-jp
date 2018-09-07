@@ -1,7 +1,7 @@
 ---
 title: CMFCButton クラス |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/28/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 155aa704efe0686fc03be6e2b12c076656fad7a1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 23b830ca8a7fb7f2e799cae17209a9fa089d1881
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217510"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690876"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton クラス
 `CMFCButton`クラスに機能を追加する、 [CButton](../../mfc/reference/cbutton-class.md)ボタン テキストの配置、ボタンのテキストとイメージの組み合わせ、カーソルの選択、ツール ヒントの指定などのクラス。  
@@ -137,7 +137,7 @@ class CMFCButton : public CButton
 |[CMFCButton::IsRadioButton](#isradiobutton)|ボタンがラジオ ボタンであるかどうかを示します。|  
 |[CMFCButton::IsWindowsThemingEnabled](#iswindowsthemingenabled)|ボタンの境界線のスタイルを現在の Windows テーマに対応するかどうかを示します。|  
 |`CMFCButton::OnDrawParentBackground`|指定された領域では、ボタンの親の背景を描画します。 (上書き[AFX_GLOBAL_DATA::DrawParentBackground](../../mfc/reference/afx-global-data-structure.md)|  
-|`CMFCButton::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)と[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 関数。 ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドします)。|  
+|`CMFCButton::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数。 ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドします)。|  
 |[CMFCButton::SetAutorepeatMode](#setautorepeatmode)|ボタンを自動繰り返しモードに設定します。|  
 |[CMFCButton::SetCheckedImage](#setcheckedimage)|チェックされているボタンのイメージを設定します。|  
 |[CMFCButton::SetFaceColor](#setfacecolor)|ボタンのテキストの背景色を設定します。|  
@@ -163,14 +163,19 @@ class CMFCButton : public CButton
   
 ### <a name="data-members"></a>データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
-|[CMFCButton::m_bDrawFocus](#m_bdrawfocus)|ボタンの周囲のフォーカス四角形を描画するかどうかを示します。|  
-|[CMFCButton::m_bHighlightChecked](#m_bhighlightchecked)|上にカーソルを重ねると、BS_CHECKBOX スタイルのボタンを強調表示するかどうかを示します。|  
-|[CMFCButton::m_bRightImage](#m_brightimage)|ボタンの右側にあるイメージを表示するかどうかを示します。|  
-|[CMFCButton::m_bTransparent](#m_btransparent)|ボタンが透明かどうかを示します。|  
 |[CMFCButton::m_nAlignStyle](#m_nalignstyle)|ボタンのテキストの配置を指定します。|  
+|[CMFCButton::m_bDontUseWinXPTheme](#m_bDontUseWinXPTheme)|Windows XP テーマを使用するかどうかを指定します。|
+|[CMFCButton::m_bDrawFocus](#m_bdrawfocus)|ボタンの周囲のフォーカス四角形を描画するかどうかを示します。| 
 |[CMFCButton::m_nFlatStyle](#m_nflatstyle)|ボーダーレス、フラットな半のフラットまたは 3D など、ボタンのスタイルを指定します。|  
+|[CMFCButton::m_bGrayDisabled](#m_bGrayDisabled)|TRUE の場合、淡色として描画する無効なボタンを有効にします。|
+|[CMFCButton::m_bHighlightChecked](#m_bhighlightchecked)|上にカーソルを重ねると、BS_CHECKBOX スタイルのボタンを強調表示するかどうかを示します。|  
+|[CMFCButton::m_bResponseOnButtonDown](#m_bResponseOnButtonDown)|ボタンを押すイベントに応答するかどうかを示します。|
+|[CMFCButton::m_bRightImage](#m_brightimage)|ボタンの右側にあるイメージを表示するかどうかを示します。|
+|[CMFCButton::m_bTopImage](#m_bTopImage)| ボタンの上にイメージであるかどうかを示します。|
+|[CMFCButton::m_bTransparent](#m_btransparent)|ボタンが透明かどうかを示します。|  
+|[CMFCButton::m_bWasDblClk](#m_bWasDblClk)| イベントをダブルクリックして、最後にをクリックするかどうかを示します。|
   
 ## <a name="remarks"></a>Remarks  
  派生したその他の種類のボタンは、`CMFCButton`クラスなど、 [CMFCURLLinkButton](../../mfc/reference/cmfclinkctrl-class.md)ハイパーリンクをサポートするクラスと`CMFCColorButton`カラー ピッカー ダイアログ ボックスをサポートするクラス。  
@@ -376,7 +381,16 @@ static BOOL IsWindowsThemingEnabled();
   
 ### <a name="return-value"></a>戻り値  
  ボタンの境界線のスタイルは、現在の Windows テーマに対応している場合は TRUE。それ以外の場合、FALSE です。  
-  
+
+
+
+## <a name="a-namembdontusewinxptheme-cmfcbuttonmbdontusewinxptheme"></a><a name="m_bDontUseWinXPTheme"/> CMFCButton::m_bDontUseWinXPTheme
+ボタンを描画するときに、Windows XP テーマを使用するかどうかを指定します。
+
+```  
+BOOL m_bDontUseWinXPTheme;  
+```
+
 ##  <a name="m_bdrawfocus"></a>  CMFCButton::m_bDrawFocus  
  ボタンの周囲のフォーカス四角形を描画するかどうかを示します。  
   
@@ -388,7 +402,15 @@ BOOL m_bDrawFocus;
  設定、`m_bDrawFocus`フレームワークは、ボタンのテキストを囲むフォーカス四角形を描画し、イメージの場合は、ボタンにフォーカスを指定する場合は TRUE をメンバー。  
   
  `CMFCButton`コンス トラクターを TRUE には、このメンバーを初期化します。  
-  
+
+##  <a name="m_bGrayDisabled"></a>  CMFCButton::m_bGrayDisabled
+TRUE の場合、淡色として描画する無効なボタンを有効にします。
+
+
+```  
+BOOL m_bGrayDisabled;  
+```
+
 ##  <a name="m_bhighlightchecked"></a>  CMFCButton::m_bHighlightChecked  
  上にカーソルを重ねると、BS_CHECKBOX スタイルのボタンを強調表示するかどうかを示します。  
   
@@ -398,14 +420,29 @@ BOOL m_bHighlightChecked;
   
 ### <a name="remarks"></a>Remarks  
  設定、`m_bHighlightChecked`メンバー上にマウスを重ねると、フレームワークが BS_CHECKBOX スタイルのボタンをハイライトことを指定する場合は TRUE にします。  
-  
+
+##  <a name="m_bResponseOnButtonDown"></a> CMFCButton::m_bResponseOnButtonDown
+ボタンを押すイベントに応答するかどうかを示します。
+
+```  
+BOOL m_bResponseOnButtonDown;  
+```  
+
 ##  <a name="m_brightimage"></a>  CMFCButton::m_bRightImage  
  ボタンの右側にあるイメージを表示するかどうかを示します。  
   
 ```  
 BOOL m_bRightImage;  
 ```  
-  
+
+
+##  <a name="m_bTopImage"></a>  CMFCButton::m_bTopImage](#m_bTopImage)
+ボタンの上にイメージであるかどうかを示します。
+
+```  
+BOOL m_bTopImage;  
+```
+
 ### <a name="remarks"></a>Remarks  
  設定、`m_bRightImage`メンバーを TRUE に、フレームワークが、ボタンのテキスト ラベルの右側にボタンのイメージを表示するように指定します。  
   
@@ -436,7 +473,14 @@ AlignStyle m_nAlignStyle;
 |ALIGN_RIGHT|ボタンのテキスト、ボタンの右側に揃えて配置します。|  
   
  `CMFCButton`コンス トラクターが ALIGN_CENTER にこのメンバーを初期化します。  
-  
+
+##  <a name="m_bWasDblClk"></a>  CMFCButton::m_bWasDblClk](#m_bWasDblClk) | 
+イベントがダブルクリックで最後にをクリックするかどうかを示します |。
+
+```  
+BOOL m_bWasDblClk;  
+```  
+
 ##  <a name="m_nflatstyle"></a>  CMFCButton::m_nFlatStyle  
  ボーダーレス、フラットな半のフラットまたは 3D など、ボタンのスタイルを指定します。  
   

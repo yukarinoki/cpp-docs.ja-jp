@@ -1,5 +1,5 @@
 ---
-title: 複合コントロールの挿入 |Microsoft ドキュメント
+title: 複合コントロールの挿入 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 796974bb9fb7ab7965fd2af0b62378d62d621652
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c5a2c99992d84757aebcb50dca828dbdc23870b8
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358691"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764167"
 ---
 # <a name="inserting-a-composite-control"></a>複合コントロールの挿入
-**クラスの追加** ダイアログ ボックスでは、プロジェクトに ATL オブジェクトを挿入することができます。 指す、ソリューション エクスプ ローラーでプロジェクト名を右クリックしてこのダイアログ ボックスを開く**追加**、クリックして**クラスの追加**です。  
-  
- **クラスの追加** ダイアログ ボックスで、選択**ATL コントロール**です。 これが開始され、 [ATL コントロール ウィザード](../atl/reference/atl-control-wizard.md)です。 複合コントロールを作成するには、選択、**オプション**タブをクリックし、をクリックして、**複合コントロール**チェック ボックスをオンします。  
-  
- コントロールを表示するため、既定の HTML ページが作成されます。  
-  
-## <a name="see-also"></a>関連項目  
- [複合コントロールの基本](../atl/atl-composite-control-fundamentals.md)
+
+**クラスの追加** ダイアログ ボックスでは、プロジェクトに ATL オブジェクトを挿入することができます。 指す、ソリューション エクスプ ローラーでプロジェクト名を右クリックしてこのダイアログ ボックスをアクセス**追加**、 をクリックし、**クラスの追加**します。
+
+**クラスの追加** ダイアログ ボックスで、選択**ATL コントロール**します。 これは、開始、 [ATL コントロール ウィザード](../atl/reference/atl-control-wizard.md)します。 複合コントロールを作成するには、選択、**オプション** タブの  をクリックし、**複合コントロール**チェック ボックスをオンします。
+
+コントロールを表示するため、既定の HTML ページが作成されます。
+
+## <a name="see-also"></a>関連項目
+
+[複合コントロールの基本](../atl/atl-composite-control-fundamentals.md)
 

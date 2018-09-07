@@ -19,16 +19,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 17b594cbad486688997bba4c6dbebd66f6bf2c00
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3c8cca379b9b9ba6498908469761acefce189117
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608883"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686989"
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Typedef、Enum、Union、および Struct 型の属性
 
-次の属性を適用する、 [typedef](http://msdn.microsoft.com/cc96cf26-ba93-4179-951e-695d1f5fdcf1)、[構造体](../cpp/struct-cpp.md)、および[列挙](../cpp/enumerations-cpp.md)C++ のキーワード。
+次の属性を適用する、 [typedef](../cpp/aliases-and-typedefs-cpp.md)、[構造体](../cpp/struct-cpp.md)、および[列挙](../cpp/enumerations-cpp.md)C++ のキーワード。
 
 ### <a name="typedef"></a>Typedef
 

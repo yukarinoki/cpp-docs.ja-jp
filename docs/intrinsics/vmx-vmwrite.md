@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec022fe2d317ec38bc1d9b06f459b9efc7818c92
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 132841c8c24e2b625dad218aaaef2a19cba0a264
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540303"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680499"
 ---
 # <a name="vmxvmwrite"></a>__vmx_vmwrite
 **Microsoft 固有の仕様**  
@@ -56,7 +56,7 @@ unsigned char __vmx_vmwrite(
  有効な状態がないため操作は失敗しました。  
   
 ## <a name="remarks"></a>Remarks  
- `__vmx_vmwrite`関数は、`VMWRITE`マシン語命令。 値、`Field`パラメーターは、Intel のドキュメントで説明されているエンコードされたフィールドのインデックス。 詳細については、検索、ドキュメント、「Intel 仮想化技術仕様 ia-32 Intel アーキテクチャ向け、」で番号 C97063-002、文書化、 [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)サイト、および、その付録 C を参照してくださいドキュメントです。  
+ `__vmx_vmwrite`関数は、`VMWRITE`マシン語命令。 値、`Field`パラメーターは、Intel のドキュメントで説明されているエンコードされたフィールドのインデックス。 詳細については、検索、ドキュメント、「Intel 仮想化技術仕様 ia-32 Intel アーキテクチャ向け、」で番号 C97063-002、文書化、 [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm)サイト、および、その付録 C を参照してくださいドキュメントです。  
   
 ## <a name="requirements"></a>要件  
   

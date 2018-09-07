@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7d305b2bc74455abd6fdbcfb29ed7ef4103bf19
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ffb239db12111f80e894c68cff568338bb3ed038
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391901"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207271"
 ---
 # <a name="structure-declarations"></a>構造体宣言
 "構造体宣言" では、型に名前を付け、異なる型を持つことのできる変数値のシーケンス (構造体の "メンバー" または "フィールド" と呼びます) を指定します。 "タグ" と呼ばれる省略可能な識別子で構造体の型に名前を付けると、その後はタグを使用してその構造体型を参照できます。 構造体型の変数は、その型で定義されているシーケンス全体を保持します。 C の構造体は、他の言語で "レコード" と呼ばれる型に似ています。  
@@ -163,7 +163,7 @@ struct somestruct
   
  コンパイラは、構造体の最後のメンバーとして可変長配列またはサイズが 0 の配列を許可します。 これは、使用されるさまざまな状況によって定数配列のサイズが異なるときに便利な場合があります。 このような構造体の宣言は次のようになります。  
   
- `struct` *identifier***{** *set-of-declarations* *type array-name***[ ];};**  
+**struct** *identifier* **{** *set-of-declarations* *type* <em>array-name</em>**\[]; };**  
   
  可変長配列は、構造体の最後のメンバーとしてのみ使用できます。 可変長配列宣言を含む構造体は、外側のどの構造体でもそれ以上メンバーが宣言されていなければ、他の構造体内に入れ子にできます。 ただし、そのような構造体を配列にすることはできません。 この型の変数またはこの型自体に `sizeof` 演算子を適用すると、可変長配列のサイズには 0 が想定されます。  
   

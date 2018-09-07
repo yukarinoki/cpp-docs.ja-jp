@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b962db5477294ad36997208f59265a284680fac5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5e37a3a934fbc66af62a30fd2fc2c23e1c659ef2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604941"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692099"
 ---
 # <a name="string--c-component-extensions"></a>文字列 (C++ コンポーネント拡張)
 
@@ -45,10 +45,6 @@ using namespace default;
    String^ MyString2 = "jumped over the lazy dog.";
    String^ MyString3 = "Hello, world!";
 ```
-
-### <a name="remarks"></a>Remarks
-
-詳細と例については、文字列は、次を参照してください[platform::string、std::wstring、およびリテラル (プラットフォーム)。](http://msdn.microsoft.com/ec92fbc6-edf3-4137-a85e-8e29bdb857a8)
 
 ### <a name="requirements"></a>要件
 

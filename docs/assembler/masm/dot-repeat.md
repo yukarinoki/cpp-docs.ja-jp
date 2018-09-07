@@ -1,7 +1,7 @@
 ---
 title: .REPEAT | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,24 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41e3dadaa95cb4bf0ca4a17af32332d5b5471245
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 8856ed0e1d86277a413baac2c56e5c5ca2ea9ff0
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052451"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687953"
 ---
 # <a name="repeat"></a>.REPEAT
-ブロックの実行を繰り返し表示されるコードを生成*ステートメント*まで`condition`は true になります。 [.UNTILCXZ](../../assembler/masm/dot-untilcxz.md)の置き換えられる可能性がありますが true になる CX が 0、[です。まで](../../assembler/masm/dot-until.md)です。 `condition`は省略可能**です。UNTILCXZ**です。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-   .REPEAT  
-statements  
-.UNTIL condition  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+
+コードのブロックの実行が繰り返される生成*ステートメント*まで`condition`が true になった。 [.UNTILCXZ](../../assembler/masm/dot-untilcxz.md)の代用 CX が 0 の場合は true。 なります[します。まで](../../assembler/masm/dot-until.md)します。 `condition`は省略可能で**します。UNTILCXZ**します。
+
+## <a name="syntax"></a>構文
+
+> .REPEAT<br/>
+> ステートメント<br/>
+> .UNTIL 条件
+
+## <a name="see-also"></a>関連項目
+
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>

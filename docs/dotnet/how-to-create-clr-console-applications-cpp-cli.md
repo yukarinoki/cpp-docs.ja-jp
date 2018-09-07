@@ -1,5 +1,5 @@
 ---
-title: '方法: CLR コンソール アプリケーションを作成 (C + + CLI) |Microsoft ドキュメント'
+title: '方法: CLR コンソール アプリケーションを作成 (C +/cli CLI) |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3257d690ac949edff7958615656db052c3468c01
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 60804b3863a4b44bc963f289b1d6a8c2f2d5cbf7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33132571"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211158"
 ---
 # <a name="how-to-create-clr-console-applications-ccli"></a>方法: CLR コンソール アプリケーションを作成する (C++/CLI)
 コンソール アプリケーション テンプレートを使用すると、重要なプロジェクト参照とファイルが既に含まれるコンソール アプリ プロジェクトを作成できます。  
@@ -32,7 +32,7 @@ ms.locfileid: "33132571"
   
 -   次の .NET Framework 名前空間への参照  
   
-    -   [System](https://msdn.microsoft.com/en-us/library/system.appdomainmanager.appdomainmanager.aspx)- 一般的な値の型と参照データの型、イベントとイベント ハンドラー、インターフェイス、属性、および例外処理を定義する、基礎的なクラスと基底クラスが含まれます。  
+    -   [システム](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx)-Contains 基礎的なクラスと一般的に定義する基底クラスは、値と参照データの型、イベントとイベント ハンドラー、インターフェイス、属性、および例外処理を使用します。  
   
     -   mscorlib - .NET Framework 開発をサポートするアセンブリ DLL。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "33132571"
   
     -   コンソール (.cpp ファイル) - 作成したアプリのエントリ ポイントへのメイン ソース ファイルとエントリ ポイント。 プロジェクトの .dll ファイルと、プロジェクトの名前空間を特定します。 このファイルには、独自のコードを記述します。  
   
-    -   AssemblyInfo.cpp - プロジェクトのアセンブリ メタデータの変更に使用できる属性、ファイル、リソース、型、バージョン管理情報、署名情報などが含まれます。 詳細については、次を参照してください。[アセンブリの内容](/dotnet/framework/app-domains/assembly-contents)です。  
+    -   AssemblyInfo.cpp - プロジェクトのアセンブリ メタデータの変更に使用できる属性、ファイル、リソース、型、バージョン管理情報、署名情報などが含まれます。 詳細については、次を参照してください。[アセンブリの内容を](/dotnet/framework/app-domains/assembly-contents)します。  
   
     -   Stdafx.cpp - Win32.pch という名前のプリコンパイル済みヘッダー ファイルと、StdAfx.obj という名前のプリコンパイル済み型ファイルをビルドするために使用されます。  
   

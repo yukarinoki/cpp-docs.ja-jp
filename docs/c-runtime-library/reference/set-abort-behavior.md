@@ -33,19 +33,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb308e527cc955d91af0b12547d52aa5e6316af5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 299801cc4276118fc73a4be625a3df8cc84d58b2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407276"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692935"
 ---
 # <a name="setabortbehavior"></a>_set_abort_behavior
 
 プログラムが異常終了した場合に実行するアクションを指定します。
 
 > [!NOTE]
-> 使用しないで、[中止](abort.md)テスト シナリオまたはデバッグ シナリオを除く、Microsoft ストアのアプリをシャット ダウンする関数。 ストア アプリを閉じる方法はプログラムや UI はに従って許可されていません、 [Microsoft ストアのポリシー](http://go.microsoft.com/fwlink/?LinkId=865936)です。 詳細については、次を参照してください。 [UWP アプリのライフ サイクル](http://go.microsoft.com/fwlink/p/?LinkId=865934)です。
+> 使用しないでください、[中止](abort.md)関数をテストまたはデバッグ シナリオにを除き、Microsoft Store アプリをシャット ダウンします。 ストア アプリを終了するプログラムや UI の方法はに従って許可されていません、 [Microsoft Store ポリシー](/legal/windows/agreements/store-policies)します。 詳細については、次を参照してください。 [UWP アプリのライフ サイクル](/windows/uwp/launch-resume/app-lifecycle)します。
 
 ## <a name="syntax"></a>構文
 
@@ -68,13 +68,13 @@ unsigned int _set_abort_behavior(
 
 フラグの元の値。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-2 つ[中止](abort.md)フラグ: **_WRITE_ABORT_MSG**と **_CALL_REPORTFAULT**です。 **_WRITE_ABORT_MSG**プログラムが異常終了したときに、説明のテキスト メッセージを印刷するかどうかを決定します。 そのアプリケーションが呼び出される、メッセージの状態、[中止](abort.md)関数。 既定の動作はメッセージを表示することです。 **_CALL_REPORTFAULT**場合は、設定、ワトソン クラッシュ ダンプが生成され、ときに報告されることを示す[中止](abort.md)と呼びます。 既定では、クラッシュ ダンプのレポートは、非デバッグ ビルドで有効になっています。
+2 つ[中止](abort.md)フラグ: **_WRITE_ABORT_MSG**と **_CALL_REPORTFAULT**します。 **_WRITE_ABORT_MSG**プログラムが異常終了したときに、テキスト メッセージが印刷されるかどうかを決定します。 メッセージは、アプリケーションが呼び出されていることを示す、[中止](abort.md)関数。 既定の動作はメッセージを表示することです。 **_CALL_REPORTFAULT**場合は、設定、報告されたときにワトソン クラッシュ ダンプが生成されることを指定します[中止](abort.md)が呼び出されます。 既定では、クラッシュ ダンプのレポートは、非デバッグ ビルドで有効になっています。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_set_abort_behavior**|\<stdlib.h>|
 

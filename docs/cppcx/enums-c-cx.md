@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 725e2b9edb7ba2a84418e900ffb1aafe4c5064af
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593965"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758902"
 ---
 # <a name="enums-ccx"></a>列挙型 (C++/CX)
 C +/cli CX のサポート、`public enum class`キーワード、標準の C++ に似ている`scoped  enum`します。 `public enum class` キーワードを使用して宣言された列挙子を使用する場合、列挙体識別子を使用して各列挙子値の範囲を指定する必要があります。  

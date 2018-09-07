@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9a4827900f30dba168f9f5b1b6a93c2aa7e331b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e835da146cb609abc873e7e53eb617b8635af0e5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215736"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689108"
 ---
 # <a name="cbrush-class"></a>CBrush クラス
 Windows のグラフィック デバイス インターフェイス (GDI) のブラシをカプセル化します。  
@@ -313,7 +313,7 @@ BOOL CreateSysColorBrush(int nIndex);
   
 ### <a name="parameters"></a>パラメーター  
  *nIndex*  
- 色のインデックスを指定します。 この値は、ウィンドウ要素のいずれかの描画に使用する色に対応します。 参照してください[GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)値の一覧については、Windows SDK に含まれています。  
+ 色のインデックスを指定します。 この値は、ウィンドウ要素のいずれかの描画に使用する色に対応します。 参照してください[GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)値の一覧については、Windows SDK に含まれています。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  

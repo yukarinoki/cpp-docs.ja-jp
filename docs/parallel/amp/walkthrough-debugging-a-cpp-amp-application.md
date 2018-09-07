@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bec76b407221fb9029662ba982a10edc4ca9c77
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3a8c5affeaee73be7dd464ea44ea62db35257f7b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604921"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689757"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>チュートリアル : C++ AMP アプリケーションのデバッグ
 このトピックでは、グラフィックス処理装置 (GPU) を活用するために C++ Accelerated Massive Parallelism (C++ AMP) を使用するアプリケーションをデバッグする方法を示します。 整数の大きな配列を合計する並列削減プログラムを使用します。 このチュートリアルでは、次の作業について説明します。  
@@ -398,4 +398,4 @@ GPU スレッド データヒント
 [GPU コードのデバッグ](/visualstudio/debugger/debugging-gpu-code)   
 [方法: GPU スレッド ウィンドウを使用](/visualstudio/debugger/how-to-use-the-gpu-threads-window)   
 [方法: 並列ウォッチ ウィンドウの使用](/visualstudio/debugger/how-to-use-the-parallel-watch-window)   
-[同時実行ビジュアライザーで C++ AMP コードの分析](http://go.microsoft.com/fwlink/p/?linkid=253987&clcid=0x409)
+[同時実行ビジュアライザーで C++ AMP コードの分析](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)

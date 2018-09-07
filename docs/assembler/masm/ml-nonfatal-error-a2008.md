@@ -1,7 +1,7 @@
 ---
-title: ML の致命的でないエラー A2008 |Microsoft ドキュメント
+title: ML の致命的でないエラー A2008 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50f7329f698d23f875a29bc316067c39e8d1b8c1
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 774cf4c2a51bf084fb63e572cc99b0c8e3cba26f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055220"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679376"
 ---
 # <a name="ml-nonfatal-error-a2008"></a>ML の致命的でないエラー A2008
-**構文エラー:**  
-  
- 現在の場所にトークンには、構文エラーが発生しました。  
-  
- 次のいずれかが発生した可能性があります。  
-  
--   ドット プレフィックスを追加またはディレクティブから省略するとします。  
-  
--   予約語 (など**C**または**サイズ**) 識別子として使用されました。  
-  
--   現在のプロセッサまたはコプロセッサの選択を利用できなかった命令が使用されました。  
-  
--   比較の実行時演算子 (など`==`)、関係演算子ではなく条件付きの assembly ステートメントで使用されていた (など[EQ](../../assembler/masm/operator-eq.md))。  
-  
--   命令またはディレクティブが少なすぎますオペランドが指定されました。  
-  
--   旧式のディレクティブが使用されました。  
-  
-## <a name="see-also"></a>関連項目  
- [ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)
+
+**構文エラー:**
+
+現在の場所にあるトークンには、構文エラーが発生しました。
+
+次のいずれかが発生した可能性があります。
+
+- ドット プレフィックスに追加またはディレクティブから省略するとします。
+
+- 予約語 (など**C**または**サイズ**) 識別子として使用されました。
+
+- 現在のプロセッサまたはコプロセッサの選択で提供されていなかった命令が使用されました。
+
+- 実行時の比較演算子 (など`==`) 関係演算子ではなく、アセンブリの条件付きステートメントで使用された (など[EQ](../../assembler/masm/operator-eq.md))。
+
+- 命令またはディレクティブもいくつかのオペランドが指定されました。
+
+- 古い形式のディレクティブが使用されました。
+
+## <a name="see-also"></a>関連項目
+
+[ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)<br/>

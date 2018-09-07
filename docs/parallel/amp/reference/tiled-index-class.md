@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ed19dd2a1b62a3682d96f8c9a596fa6a4b1b377
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 715fcc37c41251b0a42fd6508f8a358758105a1f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209434"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680196"
 ---
 # <a name="tiledindex-class"></a>tiled_index クラス
 インデックスを提供する[tiled_extent](tiled-extent-class.md)オブジェクト。 このクラスには、ローカル タイルの原点およびグローバル原点を基準として要素にアクセスするためのプロパティがあります。 タイル スペースの詳細については、次を参照してください。[を使用してタイル](../../../parallel/amp/using-tiles.md)します。  
@@ -90,11 +90,11 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
   
 ### <a name="public-constants"></a>パブリック定数  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[barrier 定数](#tiled_index__barrier)|ストア、 [tile_barrier](tile-barrier-class.md)スレッドの現在のタイルのバリアを表すオブジェクト。|  
 |||  
-|[グローバル定数](#tiled_index__global)|ストア、[インデックス](index-class.md)グローバル表すランク 1、2、または 3 インデックス内のオブジェクトを[グリッド](https://msdn.microsoft.com/f7d1b6a6-586c-4345-b09a-bfc26c492cb0)オブジェクト。|  
+|[グローバル定数](#tiled_index__global)|ストア、[インデックス](index-class.md)グリッド オブジェクトのグローバル インデックスを表すランク 1、2、または 3 のオブジェクト。|  
 |[ローカル定数](#tiled_index__local)|ストア、`index`の現在のタイルで、相対パスを表すランク 1、2、または 3 のインデックスのオブジェクトを[tiled_extent](tiled-extent-class.md)オブジェクト。|  
 |[rank 定数](#tiled_index__rank)|`tiled_index` オブジェクトのランクを格納します。|  
 |[tile 定数](#tiled_index__tile)|`index` オブジェクトの現在のタイルの座標を表すランク 1、2、または 3 の `tiled_extent` オブジェクトを格納します。|  
@@ -162,7 +162,7 @@ tiled_index(
   
 |||  
 |-|-|  
-|name|説明|  
+|名前|説明|  
 |`tiled_index(const index<rank>& _Global, const index<rank>& _Local, const index<rank>& _Tile, const index<rank>& _Tile_origin, const tile_barrier& _Barrier restrict(amp,cpu);`|グローバル座標のタイルのインデックスおよびローカル座標のタイルの相対位置から `tile_index` クラスの新しいインスタンスを初期化します。 `_Global` パラメーターおよび `_Tile_origin` パラメーターが計算されます。|  
 |`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|指定した `tile_index` オブジェクトをコピーして、`tiled_index` クラスの新しいインスタンスを初期化します。|  
 

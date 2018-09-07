@@ -1,7 +1,7 @@
 ---
-title: 演算子 + |Microsoft ドキュメント
+title: 演算子 + |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -20,23 +20,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47e269d711cf3d4bd0d3bd172b7c0c0b2797a148
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: e911472910e465a05bcd97a3b0c0939601af741a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056133"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680466"
 ---
 # <a name="operator-"></a>演算子 +
-最初の演算子を返します*expression1* plus *expression2*です。 2 番目の演算子の符号を反転させます*式*です。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-      expression1 + expression2  
--expression  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [演算子リファレンス](../../assembler/masm/operators-reference.md)
+
+1 つ目の演算子を返します*expression1* plus *expression2*します。
+
+## <a name="syntax"></a>構文
+
+> *expression1* + *expression2*
+
+## <a name="see-also"></a>関連項目
+
+[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>

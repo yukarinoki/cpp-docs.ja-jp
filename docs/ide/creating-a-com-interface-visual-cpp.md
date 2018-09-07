@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2844e9051c5e6adf14085bcd7bfcd8096c6f8f7
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c31dfc72e6d552cacd46f3e0b49aedc18bf4c7f2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332583"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683314"
 ---
 # <a name="creating-a-com-interface-visual-c"></a>COM インターフェイスの作成 (Visual C++)
 Visual C++ には、COM オブジェクトとオートメーション クラスのインターフェイスとディスパッチ インターフェイスを定義する COM を使用するプロジェクトを作成するためのウィザードとテンプレートが用意されています。  
@@ -67,7 +67,7 @@ interface IMyInterface {
   
  詳細については、「[インターフェイスの実装](../ide/implementing-an-interface-visual-cpp.md)」および「[Adding Objects and Controls to an ATL Project](../atl/reference/adding-objects-and-controls-to-an-atl-project.md)」 (ALT プロジェクトへのオブジェクトとコントロールの追加) を参照してください。  
   
- Visual C++ では、いくつかの方法を使用して、プロジェクトに対して定義された [COM インターフェイスを表示および編集](../ide/editing-a-com-interface.md)できます。 [クラス ビュー](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)には、C++ プロジェクトの .idl ファイルで定義されている任意のインターフェイスまたはディスパッチ インターフェイスのアイコンが表示されます。  
+ Visual C++ では、いくつかの方法を使用して、プロジェクトに対して定義された [COM インターフェイスを表示および編集](../ide/editing-a-com-interface.md)できます。 [クラス ビュー](/visualstudio/ide/viewing-the-structure-of-code)には、C++ プロジェクトの .idl ファイルで定義されている任意のインターフェイスまたはディスパッチ インターフェイスのアイコンが表示されます。  
   
  ATL ベースの COM オブジェクト クラスの場合、クラス ビューは、ATL クラスの COM マップを読み込み、ATL クラスとそれが実装するインターフェイスの間の関係を表示します。  
   

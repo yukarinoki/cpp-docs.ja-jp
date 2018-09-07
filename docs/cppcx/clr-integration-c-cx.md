@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0c2acf17831e5cb3a2e0118ffe3606bc7beef25
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d75b8cb328ec69d5c322538a073fac5fc1761aed
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212989"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683679"
 ---
 # <a name="clr-integration-ccx"></a>CLR 統合 (C++/CX)
 いくつかの Windows ランタイム型では、特別な処理を受け取る c++/cli CX および共通言語ランタイム (CLR) に基づく言語です。 この記事では、1 つの言語のいくつかの型から別の言語へのマップの仕組みについて説明します。 たとえば、CLR は Windows.Foundation.IVector を System.Collections.IList へ、Windows.Foundation.IMap を System.Collections.IDictionary へ、というようにマップします。 同様に、C + + CX は platform::delegate や platform::string などの型を特別にマップします。  
@@ -22,7 +22,7 @@ ms.locfileid: "43212989"
 ## <a name="mapping-the-windows-runtime-to-ccx"></a>Windows ランタイムをマッピングする C + + CX  
  ときに C +/cli CX は Windows メタデータ (.winmd) ファイルを読み取り、コンパイラは一般的な Windows ランタイム名前空間と型を自動的にマップすると c++/cli/CX 名前空間と型。 たとえば、数値の Windows ランタイム型`UInt32`に自動的にマップされます`default::uint32`します。  
   
- C +/cli CX に他のいくつかの Windows ランタイム型をマップする、**プラットフォーム**名前空間。 たとえば、 **windows::foundation**読み取り専用の Unicode テキスト文字列を表す、HSTRING ハンドルが C + マップ/cli CX`Platform::String`クラス。 C + にマップされている Windows のランタイム操作には、エラーの hresult 値が返される、ときに/cli CX`Platform::Exception`します。 詳細については、次を参照してください。[組み込み型](https://msdn.microsoft.com/acc196fd-09da-4882-b554-6c94685ec75f)します。  
+ C +/cli CX に他のいくつかの Windows ランタイム型をマップする、**プラットフォーム**名前空間。 たとえば、 **windows::foundation**読み取り専用の Unicode テキスト文字列を表す、HSTRING ハンドルが C + マップ/cli CX`Platform::String`クラス。 C + にマップされている Windows のランタイム操作には、エラーの hresult 値が返される、ときに/cli CX`Platform::Exception`します。   
   
  C++/cli CX では、特定の種類を型の機能を強化するために Windows ランタイム名前空間にもマップされます。 このような種類 C + + CX ヘルパー コンス トラクターとは C++ に固有であり、型の標準 .winmd ファイルでは使用できませんメソッドを提供します。  
   

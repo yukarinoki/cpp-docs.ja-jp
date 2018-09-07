@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38bcd102e94ac98aba56a4eb98b69df6d3f16111
-ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
+ms.openlocfilehash: b0e7852ad3fbd88b815aea8266bafc2879494d8a
+ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36238566"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42900668"
 ---
 # <a name="cmake-projects-in-visual-c"></a>Visual C++ での CMake プロジェクト
 
@@ -221,6 +221,8 @@ Visual Studio ジェネレーターを指定するには、メイン メニュ�
 1. **variables**: **-D**<_名前_>**=**<_値_> として CMake に渡される、CMake 変数の名前と値のペアを含みます。 CMake プロジェクトのビルド命令で CMake キャッシュ ファイルに直接変数を追加するように指定している場合は、代わりにここで追加することをお勧めします。
 1. **cmakeCommandArgs**: CMake.exe に渡す追加のスイッチを指定します。
 1. **configurationType**: 選択したジェネレーターのビルド構成の種類を定義します。 現在サポートされている値は、"Debug"、"MinSizeRel"、"Release"、"RelWithDebInfo" です。
+1. **ctestCommandArgs**: テストの実行時に CTest に渡される追加スイッチを指定します。
+1. **buildCommandArgs**: 基礎となるビルド システムに渡される追加スイッチを指定します。 たとえば、Ninja ジェネレーターの使用時に -v を渡すと、コマンド ラインの出力が Ninja に強制されます。
 
 ### <a name="environment-variables"></a>環境変数
 

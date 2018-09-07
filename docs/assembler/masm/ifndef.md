@@ -1,7 +1,7 @@
 ---
-title: IFNDEF |Microsoft ドキュメント
+title: IFNDEF |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ef6c8446b2e7d7461dd1572186378f551442c23
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 548d680ddab9eaeab8c07e95e26c04e837f78141
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056149"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680324"
 ---
 # <a name="ifndef"></a>IFNDEF
-場合は、アセンブリを付与*名前*が定義されていません。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-IFNDEF name  
-```  
-  
-## <a name="remarks"></a>コメント  
- 参照してください[IF](../../assembler/masm/if-masm.md)の完全な構文です。  
-  
-## <a name="see-also"></a>関連項目  
- [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+
+場合、アセンブリの許可*名前*が定義されていません。
+
+## <a name="syntax"></a>構文
+
+> IFNDEF 名
+
+## <a name="remarks"></a>Remarks
+
+参照してください[場合](../../assembler/masm/if-masm.md)の完全な構文です。
+
+## <a name="see-also"></a>関連項目
+
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>

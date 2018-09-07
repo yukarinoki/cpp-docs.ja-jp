@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67dab7c8e280f8fbbdcc66beef031d1e9430ac1f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f3838fc2888567fa700eebd127bc7990175bdbc8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215809"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693589"
 ---
 # <a name="tn014-custom-controls"></a>テクニカル ノート 14: カスタム コントロール
 
@@ -122,7 +122,7 @@ MFC 標準サンプル[CTRLTEST](../visual-cpp-samples.md)自己描画メニュ�
 
 既に存在するオブジェクトの機能を変更することがあります。 前の例には、作成された前に、コントロールをカスタマイズすることが必要です。 動的なサブクラス化では、既に作成されているコントロールをカスタマイズすることができます。
 
-サブクラス化は、Windows という用語を置換するため、 [WndProc](https://msdn.microsoft.com/94ba8ffa-3c36-46d4-ac74-9bd10b1ffd26)カスタマイズされたウィンドウの`WndProc`古いを呼び出すと`WndProc`の既定の機能です。
+サブクラス化は、Windows という用語を置換するため、<xref:System.Windows.Forms.Control.WndProc%2A>カスタマイズされたウィンドウの`WndProc`古いを呼び出すと`WndProc`の既定の機能です。
 
 これと混同しない C++ クラスの派生です。 詳細については、C++ の用語*基本クラス*と*クラスを派生*に似ています*スーパークラス*と*サブクラス*Windows でオブジェクト モデル。 MFC と Windows のサブクラス化における C++ の派生が、機能的によく似た、C++ では、動的なサブクラス化をサポートしていません。
 

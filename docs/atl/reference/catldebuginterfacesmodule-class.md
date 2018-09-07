@@ -1,5 +1,5 @@
 ---
-title: CAtlDebugInterfacesModule クラス |Microsoft ドキュメント
+title: CAtlDebugInterfacesModule クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,28 +18,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 265bc9c59e240dc11ecf71b67719fc8dd1ea5ad4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6dbac5c07f04725400423e72d1cc38eb0f25e48f
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359223"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755527"
 ---
 # <a name="catldebuginterfacesmodule-class"></a>CAtlDebugInterfacesModule クラス
-このクラスは、デバッグのインターフェイスのサポートを提供します。  
-  
-## <a name="syntax"></a>構文  
-  
+
+このクラスは、デバッグのインターフェイスのサポートを提供します。
+
+## <a name="syntax"></a>構文
+
 ```
 class CAtlDebugInterfacesModule
-```  
-  
-## <a name="remarks"></a>コメント  
- `CAtlDebugInterfacesModule` デバッグのインターフェイスに必要なサポートを提供します。 シンボルを定義する他のプロジェクトに含まれている[_ATL_DEBUG_QI](debugging-and-error-reporting-macros.md#_atl_debug_qi)です。  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** atlbase.h  
-  
-## <a name="see-also"></a>関連項目  
- [クラスの概要](../../atl/atl-class-overview.md)   
- [モジュール クラス](../../atl/atl-module-classes.md)
+```
+
+## <a name="remarks"></a>Remarks
+
+`CAtlDebugInterfacesModule` デバッグのインターフェイスに必要なサポートを提供します。 シンボルを定義する任意のプロジェクトに含まれる[_ATL_DEBUG_QI](debugging-and-error-reporting-macros.md#_atl_debug_qi)します。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** atlbase.h
+
+## <a name="see-also"></a>関連項目
+
+[クラスの概要](../../atl/atl-class-overview.md)   
+[モジュール クラス](../../atl/atl-module-classes.md)

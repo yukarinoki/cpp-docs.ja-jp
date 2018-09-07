@@ -1,5 +1,5 @@
 ---
-title: C ランタイム エラー R6002 R6035 から |Microsoft ドキュメント
+title: C ランタイム エラー R6002 ~ R6035 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2017
 ms.technology:
@@ -14,20 +14,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d856fef8e8915683b77ada2bb8f669e303f1b5a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e7a8c7c544ef89f1b54459a7f02b90424e6c7c5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300021"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693562"
 ---
 # <a name="c-runtime-errors-r6002-through-r6035"></a>C ランタイム エラー R6002 ～ R6035
 
-このセクションは、アプリの読み込みまたは実行時に、C ランタイム ライブラリ (CRT) によって生成される可能性のあるエラーに関するリファレンスです。 メッセージは、Microsoft Visual C ランタイムを参照している場合でも、これらのエラーは、アプリのコードのバグまたはメモリ不足など、ランタイム ライブラリで処理できない条件のいずれかを示します。 それらを実行する条件を防ぐために、アプリのコードまたはこれらのエラーをキャプチャし、ユーザーにわかりやすいメッセージを提示するコードを記述しない場合、アプリのエンドユーザーはこれらのエラーを表示可能性があります。
+このセクションは、アプリの読み込みまたは実行時に、C ランタイム ライブラリ (CRT) によって生成される可能性のあるエラーに関するリファレンスです。 メッセージは、Microsoft Visual C ランタイムを参照している場合でも、これらのエラーは、アプリのコードでバグまたはメモリ不足など、ランタイム ライブラリを処理できない条件のいずれかを示します。 アプリのエンドユーザーをそれらが発生する条件を防ぐために、アプリのコードまたはこれらのエラーをキャプチャし、ユーザーにわかりやすいメッセージを提示するコードを記述しない場合、これらのエラーを表示可能性があります。
 
-Microsoft のパブリック フォーラムで、他のサポートについてのエラーおよび警告に対してはあります。 エラーまたは警告の数を検索することができます、[開発者コミュニティ](https://go.microsoft.com/fwlink/p/?linkid=820594)サイトです。 [Visual C の言語](http://go.microsoft.com/fwlink/p/?linkid=158195)フォーラムは、質問および C++ 言語の構文と MSVC コンパイラについて議論します。 [Visual C++ 全般](http://go.microsoft.com/fwlink/p/?linkid=158194)フォーラムは、Visual C に関する質問について他のフォーラムで議論されていないこと。 エラーと警告を検索してに関して質問することがも[スタック オーバーフロー](http://stackoverflow.com/)ソリューションを見つける。
+Microsoft のパブリック フォーラムで、他のサポートについてのエラーと警告のあります。 エラーまたは警告の数を検索することができます、[開発者コミュニティ](https://developercommunity.visualstudio.com)サイト。 [Visual C 全般](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vcgeneral)フォーラムではその他のフォーラムで議論されていない Visual C についての質問。 エラーと警告検索およびで質問する可能性がありますも[Stack Overflow](http://stackoverflow.com/)解決策を検索します。
 
-追加のヘルプおよびコミュニティ リソースへのリンクを参照してください。 [Visual c ヘルプおよびコミュニティ](../../visual-cpp-help-and-community.md)です。
+追加のヘルプおよびコミュニティ リソースへのリンクを参照してください。 [Visual c ヘルプおよびコミュニティ](../../visual-cpp-help-and-community.md)します。
 
 ## <a name="c-runtime-errors"></a>C ランタイム エラー
 

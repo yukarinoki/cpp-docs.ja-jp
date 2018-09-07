@@ -16,11 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a28f07990d5958f48f032b1355a565d2a4a559e9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611583"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758975"
 ---
 # <a name="platformruntimeinteropservices-namespace"></a>Platform::Runtime::InteropServices 名前空間
 この名前空間は内部使用のみを意図しており、開発で使用するためのものではありません。  
@@ -37,7 +37,7 @@ namespace Platform {
 ### <a name="members"></a>メンバー  
  この名前空間は内部使用のためのものですが、ブラウザーでこの名前空間の次のメンバーを表示できます。  
   
-|name|コメント|  
+|名前|コメント|  
 |----------|------------|  
 |ComInterfaceType|列挙体|  
 |InterfaceTypeAttribute||  

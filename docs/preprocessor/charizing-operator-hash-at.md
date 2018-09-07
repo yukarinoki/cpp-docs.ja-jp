@@ -18,38 +18,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6aa18936497f0415da331697aceb26f26345500
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: d86c49c8d7d0cda91ba2415167cc79c810a96b3d
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42545786"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895306"
 ---
 # <a name="charizing-operator-"></a>文字定数化演算子 (#@)
-**Microsoft 固有の仕様**  
-  
-文字定数化演算子は、マクロの引数でのみ使用できます。 場合`#@`仮パラメーターの前に、実引数の単一引用符で囲まれているし、マクロが展開されている場合は、文字として扱わマクロの定義でします。 例えば:  
-  
-```  
-#define makechar(x)  #@x  
-```  
-  
-は、次のステートメント  
-  
-```  
-a = makechar(b);  
-```  
-  
-を次のように展開します  
-  
-```  
-a = 'b';  
-```  
-  
-単一引用符文字は charizing 演算子では使用できません。  
-  
-**Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- 
+**Microsoft 固有の仕様**
+
+文字定数化演算子は、マクロの引数でのみ使用できます。 場合`#@`仮パラメーターの前に、実引数の単一引用符で囲まれているし、マクロが展開されている場合は、文字として扱わマクロの定義でします。 例えば:
+
+```
+#define makechar(x)  #@x
+```
+
+は、次のステートメント
+
+```
+a = makechar(b);
+```
+
+を次のように展開します
+
+```
+a = 'b';
+```
+
+単一引用符文字は charizing 演算子では使用できません。
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
 [プリプロセッサ演算子](../preprocessor/preprocessor-operators.md)

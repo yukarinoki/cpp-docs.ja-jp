@@ -14,17 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2221430522329616dd19f32484b66dc957593c3a
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 16a5033a2656cea3f1cecea1e5b97f4ad9c117ad
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33321988"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222208"
 ---
 # <a name="manifest-tool-property-pages"></a>マニフェスト ツールのプロパティ ページ
 **[マニフェスト ツール]** プロパティ ページを使用して、mt.exe のビルド オプションを設定します。  
   
- マニフェスト ツールの詳細については、「[Mt.exe](http://msdn.microsoft.com/library/aa375649)」を参照してください。  
+ マニフェスト ツールの詳細については、「[Mt.exe](https://msdn.microsoft.com/library/aa375649)」を参照してください。  
   
  [[全般] ([\<プロジェクト名> プロパティ ページ] ダイアログ ボックス - [構成プロパティ] - [マニフェスト ツール])](../ide/general-manifest-tool-configuration-properties.md)  
   

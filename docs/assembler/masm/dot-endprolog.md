@@ -1,7 +1,7 @@
 ---
 title: .ENDPROLOG | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa74b469dba3bee1b4fa0a5c1e066f93826c3477
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 370db59c6be4b3f53c9596c1ca443374acd2d2c8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051652"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685423"
 ---
 # <a name="endprolog"></a>.ENDPROLOG
-プロローグの宣言の終了を通知します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-.ENDPROLOG  
-```  
-  
-## <a name="remarks"></a>コメント  
- プロローグの宣言のいずれかの間の領域の外部で使用すると、エラーは[PROC](../../assembler/masm/proc.md)フレームとします。ENDPROLOG です。  
-  
- 詳細については、次を参照してください。 [x64 用 MASM (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)です。  
-  
-## <a name="see-also"></a>関連項目  
- [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+
+プロローグの宣言の終了を通知します。
+
+## <a name="syntax"></a>構文
+
+> .ENDPROLOG
+
+## <a name="remarks"></a>Remarks
+
+プロローグの宣言のいずれかの間の領域の外部で使用するとエラーが[PROC](../../assembler/masm/proc.md)フレームとします。ENDPROLOG します。
+
+詳細については、次を参照してください。 [x64 用 MASM (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)します。
+
+## <a name="see-also"></a>関連項目
+
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b352d3f99ccee103f7f08e54fb96634bad4a32a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c66ca089a54f00148cf683612e529f1cd0505445
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216488"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685407"
 ---
 # <a name="mfc-dll-wizard"></a>MFC DLL ウィザード
 MFC DLL ウィザードを使用して MFC DLL プロジェクトを作成するときに表示される作業のスターター アプリケーション組み込み機能を備えた、コンパイルの基本的な機能を実装すると、 [DLL](../../build/dlls-in-visual-cpp.md)します。 MFC のスターター プログラムには、C++ ソース (.cpp) ファイル、リソース (.rc) ファイル、およびプロジェクト (.vcxproj) ファイルが含まれています。 これらのスターター ファイルで生成されたコードは、MFC に基づいています。 詳細については、Visual Studio でプロジェクト用に生成する Readme.txt 内のファイルの詳細を参照してくださいと[クラスと MFC DLL ウィザードによって生成された関数](../../mfc/reference/classes-and-functions-generated-by-the-mfc-dll-wizard.md)  
@@ -50,7 +50,6 @@ MFC DLL ウィザードを使用して MFC DLL プロジェクトを作成する
  [Visual C++ プロジェクトの作成および管理](../../ide/creating-and-managing-visual-cpp-projects.md)   
  [プロパティ ページ](../../ide/property-pages-visual-cpp.md)   
  [プロジェクトのプロパティの使用](../../ide/working-with-project-properties.md)   
- [アプリケーションの配置](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)   
  [MFC クラス](../../mfc/reference/adding-an-mfc-class.md)   
  [メンバー関数の追加](../../ide/adding-a-member-function-visual-cpp.md)   
  [インターフェイスの実装](../../ide/implementing-an-interface-visual-cpp.md)   

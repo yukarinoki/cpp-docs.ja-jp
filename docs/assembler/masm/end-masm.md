@@ -1,7 +1,7 @@
 ---
-title: 終了 (MASM) |Microsoft ドキュメント
+title: 終了 (MASM) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a38d8e116f5a3bf018f4edecccb887dd9533407d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 3d82b875e44a363ed6d70edaa81457f75531cc44
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050910"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693439"
 ---
 # <a name="end-masm"></a>END (MASM)
-モジュールの終了をマークし、必要に応じて、プログラムのエントリ ポイントを設定*アドレス*です。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-END [[address]]  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+
+モジュールの終了をマークし、必要に応じて、プログラムのエントリ ポイントを設定*アドレス*します。
+
+## <a name="syntax"></a>構文
+
+> 終了 [address]
+
+## <a name="see-also"></a>関連項目
+
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>

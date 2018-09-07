@@ -1,7 +1,7 @@
 ---
-title: ML の致命的でないエラー A2050 |Microsoft ドキュメント
+title: ML の致命的でないエラー A2050 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 159ed131c13166435114234b3b16a82cd4d41d1f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: bd2e0e6c2fc818ef9286fd303c07a26bdd8b4e5a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056195"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680672"
 ---
 # <a name="ml-nonfatal-error-a2050"></a>ML の致命的でないエラー A2050
-**real または BCD 番号は使用できません。**  
-  
- 浮動小数点 (実際) の数または binary coded decimal (BCD) 定数が以外に使用したデータの初期化子として。  
-  
- 次のいずれかが発生しました。  
-  
--   実数または BCD は、式で使用されました。  
-  
--   以外のディレクティブを初期化するために使用された実数[DWORD](../../assembler/masm/dword.md)、 [QWORD](../../assembler/masm/qword.md)、または[TBYTE](../../assembler/masm/tbyte.md)です。  
-  
--   以外のディレクティブを初期化するために使用された BCD`TBYTE`です。  
-  
-## <a name="see-also"></a>関連項目  
- [ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)
+
+**リアルタイムまたは 10 進数を許可されていません**
+
+(実際) の浮動小数点数またはバイナリのコード化された 10 進数 (BCD) の定数が他にも使用されたデータの初期化子として。
+
+次のいずれかが発生しました。
+
+- 実数値または BCD は、式で使用されました。
+
+- 以外のディレクティブを初期化するために使用された実数[DWORD](../../assembler/masm/dword.md)、 [QWORD](../../assembler/masm/qword.md)、または[TBYTE](../../assembler/masm/tbyte.md)します。
+
+- BCD は以外のディレクティブを初期化するために使用された`TBYTE`します。
+
+## <a name="see-also"></a>関連項目
+
+[ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)<br/>

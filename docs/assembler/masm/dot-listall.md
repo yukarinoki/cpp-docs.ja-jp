@@ -1,7 +1,7 @@
 ---
-title: .|Microsoft ドキュメント
+title: .|Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 525f7af2b4b0fe7dce2e4adacfa8b01f862c46bc
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: e5fa0f90abeaae6b0b24ec780de7108bec58dd66
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057291"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691176"
 ---
 # <a name="listall"></a>.LISTALL
-すべてのステートメントの一覧を開始します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-.LISTALL  
-  
-```  
-  
-## <a name="remarks"></a>コメント  
- 組み合わせに相当する[です。リスト](../../assembler/masm/dot-list.md)、[です。リスト](../../assembler/masm/dot-listif.md)、および[です。LISTMACROALL](../../assembler/masm/dot-listmacroall.md)です。  
-  
-## <a name="see-also"></a>関連項目  
- [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+
+すべてのステートメントの一覧表示を開始します。
+
+## <a name="syntax"></a>構文
+
+> .LISTALL
+
+## <a name="remarks"></a>Remarks
+
+組み合わせに相当[します。リスト](../../assembler/masm/dot-list.md)、[します。リスト](../../assembler/masm/dot-listif.md)、および[します。LISTMACROALL](../../assembler/masm/dot-listmacroall.md)します。
+
+## <a name="see-also"></a>関連項目
+
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>

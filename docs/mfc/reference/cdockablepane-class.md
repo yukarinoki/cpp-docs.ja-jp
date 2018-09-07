@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b30aa51f284d216332225664d07d7692bd042a1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 456772306c854d4450a7be3996285e90a1d5783f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223066"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679465"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 ドッキング サイトにドッキングできる、またはタブ付きペインに含めることができるペインを実装します。  
@@ -213,7 +213,7 @@ class CDockablePane : public CPane
 |[CDockablePane::IsTabLocationBottom](#istablocationbottom)|タブが上部またはウィンドウの下部にあるかどうかを指定します。|  
 |[CDockablePane::IsTracked](#istracked)|ユーザーがペインにドラッグしているかどうかを指定します。|  
 |[CDockablePane::IsVisible](#isvisible)|現在のウィンドウが表示されるかどうかを判断します。|  
-|[Cdockablepane::loadstate](https://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917)|内部的に使用します。|  
+|[Cdockablepane::loadstate](#loadstate)|内部的に使用します。|  
 |[CDockablePane::OnAfterChangeParent](#onafterchangeparent)|ウィンドウの親が変更されたときに、フレームワークによって呼び出されます。 (上書き[CPane::OnAfterChangeParent](../../mfc/reference/cpane-class.md#onafterchangeparent))。|  
 |[CDockablePane::OnAfterDockFromMiniFrame](#onafterdockfromminiframe)|フレーム ウィンドウのフローティング、ドッキング バーをドッキングすると、フレームワークによって呼び出されます。|  
 |[CDockablePane::OnBeforeChangeParent](#onbeforechangeparent)|ウィンドウの親を変更するときに、フレームワークによって呼び出されます。 (上書き[CPane::OnBeforeChangeParent](../../mfc/reference/cpane-class.md#onbeforechangeparent))。|  
@@ -248,7 +248,7 @@ class CDockablePane : public CPane
   
 ### <a name="data-members"></a>データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CDockablePane::m_bDisableAnimation](#m_bdisableanimation)|ドッキング可能なウィンドウのアニメーションを自動的に隠すが無効になっているかどうかを指定します。|  
 |[CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode)|ウィンドウが自動的に隠すモードの場合は、ウィンドウの動作を決定します。|  
@@ -1153,7 +1153,18 @@ virtual BOOL IsVisible() const;
  ドッキング可能ペインが自動的に隠すモードの場合と`IsHideInAutoHideMode`可視性の状態は、関連自動的に隠すツールバーの可視性の状態によって異なります。 TRUE を返します。  
   
  可視性の状態の判断基準自動非表示モードでのドッキング可能なウィンドウがない場合、 [CBasePane::IsVisible](../../mfc/reference/cbasepane-class.md#isvisible)メソッド。  
-  
+
+## ##  <a name="loadstate"></a>  Cdockablepane::loadstate  
+内部使用のみ。 詳細については、Visual Studio のインストールの VC\atlmfc\src\mfc フォルダーにあるソース コードを参照してください。
+
+```
+virtual BOOL LoadState(
+   LPCTSTR lpszProfileName = NULL,
+   int nIndex = -1,
+   UINT uiID = (UINT) -1
+);  
+```
+
 ##  <a name="m_bdisableanimation"></a>  CDockablePane::m_bDisableAnimation  
  ドッキング可能なウィンドウのアニメーションを自動的に隠す が無効になっているかどうかを指定します。  
   

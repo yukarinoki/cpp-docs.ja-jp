@@ -1,7 +1,7 @@
 ---
-title: ML の致命的でないエラー A2019 |Microsoft ドキュメント
+title: ML の致命的でないエラー A2019 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 829ec55616dad97d9cbaabadbb16559aa73fd56e
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 1991e32a3ae0e4bb67f698b25aece643dc53d39c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057566"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681792"
 ---
 # <a name="ml-nonfatal-error-a2019"></a>ML の致命的でないエラー A2019
-**オペランドは、レコードの種類またはフィールドをする必要があります。**  
-  
- オペランド以下、[幅](../../assembler/masm/operator-width.md)または[マスク](../../assembler/masm/operator-mask.md)演算子が無効でした。  
-  
- [幅](../../assembler/masm/operator-width.md)演算子は、フィールドまたはレコードの名前を表すオペランドを受け取る。 [マスク](../../assembler/masm/operator-mask.md)操作は、フィールドまたはレコードの種類の名前は、オペランドを使用します。  
-  
-## <a name="see-also"></a>関連項目  
- [ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)
+
+**オペランドはレコードの種類またはフィールドでなければなりません**
+
+オペランド以下、[幅](../../assembler/masm/operator-width.md)または[マスク](../../assembler/masm/operator-mask.md)演算子が無効です。
+
+[幅](../../assembler/masm/operator-width.md)演算子は、フィールドまたはレコードの名前であるオペランドを受け取る。 [マスク](../../assembler/masm/operator-mask.md)演算子は、フィールドやレコードの種類の名前であるオペランドを受け取る。
+
+## <a name="see-also"></a>関連項目
+
+[ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)<br/>

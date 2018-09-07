@@ -1,5 +1,5 @@
 ---
-title: C.1 表記 |Microsoft ドキュメント
+title: C.1 表記 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,24 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39e8610524e20aa99ea316d62f36b512700e377e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3d3ada700955c3acd2e96aa3e8a98c25c51393c1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686816"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766153"
 ---
 # <a name="c1-notation"></a>C.1 表記
-文法規則は、非終端、名の後に別の行に交換用の代替手段を続けて、コロンです。  
-  
- 構文の式 termopt では、という用語は、置換内で省略可能なことを示します。  
-  
- 構文の式*用語*optseq は等価*用語 seq*次の追加の規則の選択。  
-  
- *用語 seq* :  
-  
- *用語*  
-  
- *用語 seq 用語*  
-  
- *用語 seq* 、*用語*
+文法規則は、非-ターミナルでの名前の後に別の行に交換用の代替手段を続けて、コロンです。
+
+式の構文用語<sub>opt</sub>という用語が置換内で省略可能であることを示します。
+
+構文の式*用語*<sub>optseq</sub>と等価*用語 seq*<sub>opt</sub>次の追加の規則で。
+
+*用語 seq* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*用語*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*用語 seq* *用語*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*用語 seq* **、** *用語*

@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c3626fbdba9fcf34364237e8970e5b941ecce9d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cd480e7b1ffb0923e33361c545bca68202ec3f4f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201527"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687717"
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx クラス
 イメージ リストをサポートすることにより、コンボ ボックス コントロールを拡張します。  
@@ -200,7 +200,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>パラメーター  
  *dwExStyle*  
- 作成されるコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK に含まれています。  
+ 作成されるコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK に含まれています。  
   
  *dwStyle*  
  コンボ ボックス コントロールのスタイル。 参照してください[作成](#create)スタイルの一覧。  
@@ -381,7 +381,7 @@ CImageList* SetImageList(CImageList* pImageList);
  ポインターを[CImageList](../../mfc/reference/cimagelist-class.md)で以前に使用されるイメージを格納しているオブジェクト、`CComboBoxEx`コントロール。 以前にイメージの一覧が設定されていない場合は NULL です。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、メッセージの機能を実装[CBEM_SETIMAGELIST](/windows/desktop/Controls/cbem-setimagelist)」の説明に従って、Windows SDK。 既定の編集コントロールの高さを変更する場合は、Win32 関数を呼び出す[SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545)を呼び出した後、コントロールのサイズを変更する`SetImageList`、正しく表示されるか。  
+ このメンバー関数は、メッセージの機能を実装[CBEM_SETIMAGELIST](/windows/desktop/Controls/cbem-setimagelist)」の説明に従って、Windows SDK。 既定の編集コントロールの高さを変更する場合は、Win32 関数を呼び出す[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos)を呼び出した後、コントロールのサイズを変更する`SetImageList`、正しく表示されるか。  
   
  `CImageList`戻り値によってポイントされるオブジェクトは一時オブジェクトし、[次へ] のアイドル状態の処理時に破棄します。  
   

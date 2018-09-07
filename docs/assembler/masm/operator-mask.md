@@ -1,7 +1,7 @@
 ---
-title: MASK 演算子 |Microsoft ドキュメント
+title: MASK 演算子 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6e7fe7b71fbb28be7cd99dc6fc7a6d437a4253c
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 22d1133257db825ac36beb8b83d5f170664472c2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057927"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689693"
 ---
 # <a name="operator-mask"></a>MASK 演算子
-返しますが、ビット マスク内のビット*recordfieldname*または*レコード*が設定され、その他のすべてのビットが消去します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-MASK {recordfieldname | record}  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [演算子リファレンス](../../assembler/masm/operators-reference.md)
+
+返しますがビット マスク内のビット*recordfieldname*または*レコード*が設定し、その他のすべてのビットがクリアされます。
+
+## <a name="syntax"></a>構文
+
+> マスク {recordfieldname | レコード}
+
+## <a name="see-also"></a>関連項目
+
+[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>

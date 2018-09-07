@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2192786a9ebb14061e31655fd63e0f7c67b5100
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e199df62aa6bc0c3dc670bd2951a7af2667e7faa
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218424"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758379"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map クラス
 
@@ -72,7 +72,7 @@ ref class Map sealed;
 
 - パブリック列挙型クラス
 
-マップは、基本的に [std::map](../standard-library/map-class.md)のラッパーです。 C++ の具象実装では、 [Windows::Foundation::Collections::IMap < Windows::Foundation::Collections::IKeyValuePair\<K, V >>](http://go.microsoft.com/fwlink/p/?LinkId=262408)と[IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_)Windows ランタイム インターフェイスのパブリックの間で渡される型。 パブリックの戻り値またはパラメーターで `Platform::Collections::Map` 型を使用しようとすると、コンパイラ エラー C3986 が発生します。 パラメーターまたは戻り値の型を変更することで、エラーを修正する[Windows::Foundation::Collections::IMap\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262408)します。
+マップは、基本的に [std::map](../standard-library/map-class.md)のラッパーです。 C++ の具象実装では、 [Windows::Foundation::Collections::IMap < Windows::Foundation::Collections::IKeyValuePair\<K, V >>](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)と[IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_)Windows ランタイム インターフェイスのパブリックの間で渡される型。 パブリックの戻り値またはパラメーターで `Platform::Collections::Map` 型を使用しようとすると、コンパイラ エラー C3986 が発生します。 パラメーターまたは戻り値の型を変更することで、エラーを修正する[Windows::Foundation::Collections::IMap\<K, V >](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)します。
 
 詳細については、次を参照してください。[コレクション](../cppcx/collections-c-cx.md)します。
 
@@ -101,7 +101,7 @@ ref class Map sealed;
 
 |||
 |-|-|
-|name|説明|
+|名前|説明|
 |[Map::mapchanged](#mapchanged-event.md) `event`|マップが変更されたときに発生します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層

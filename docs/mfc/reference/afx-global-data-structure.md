@@ -7,6 +7,54 @@ ms.technology:
 ms.topic: reference
 f1_keywords:
 - AFX_GLOBAL_DATA
+- AFXGLOBALS/AFX_GLOBAL_DATA::AFX_GLOBAL_DATA
+- AFXGLOBALS/AFX_GLOBAL_DATA::~AFX_GLOBAL_DATA
+- AFXGLOBALS/AFX_GLOBAL_DATA::CleanUp
+- AFXGLOBALS/AFX_GLOBAL_DATA::D2D1MakeRotateMatrix
+- AFXGLOBALS/AFX_GLOBAL_DATA::DrawParentBackground
+- AFXGLOBALS/AFX_GLOBAL_DATA::DrawTextOnGlass
+- AFXGLOBALS/AFX_GLOBAL_DATA::ExcludeTag
+- AFXGLOBALS/AFX_GLOBAL_DATA::GetColor
+- AFXGLOBALS/AFX_GLOBAL_DATA::GetDirect2dFactory
+- AFXGLOBALS/AFX_GLOBAL_DATA::GetHandCursor
+- AFXGLOBALS/AFX_GLOBAL_DATA::GetITaskbarList
+- AFXGLOBALS/AFX_GLOBAL_DATA::GetITaskbarList3
+- AFXGLOBALS/AFX_GLOBAL_DATA::GetNonClientMetrics
+- AFXGLOBALS/AFX_GLOBAL_DATA::GetShellAutohideBars
+- AFXGLOBALS/AFX_GLOBAL_DATA::GetTextHeight
+- AFXGLOBALS/AFX_GLOBAL_DATA::GetWICFactory
+- AFXGLOBALS/AFX_GLOBAL_DATA::GetWriteFactory
+- AFXGLOBALS/AFX_GLOBAL_DATA::IsD2DInitialized
+- AFXGLOBALS/AFX_GLOBAL_DATA::Is32BitIcons
+- AFXGLOBALS/AFX_GLOBAL_DATA::IsD2DInitialized
+- AFXGLOBALS/AFX_GLOBAL_DATA::IsDwmCompositionEnabled
+- AFXGLOBALS/AFX_GLOBAL_DATA::IsHighContrastMode
+- AFXGLOBALS/AFX_GLOBAL_DATA::OnSettingChange
+- AFXGLOBALS/AFX_GLOBAL_DATA::RegisterWindowClass
+- AFXGLOBALS/AFX_GLOBAL_DATA::ReleaseTaskBarRefs
+- AFXGLOBALS/AFX_GLOBAL_DATA::Resume
+- AFXGLOBALS/AFX_GLOBAL_DATA::SetLayeredAttrib
+- AFXGLOBALS/AFX_GLOBAL_DATA::SetMenuFont
+- AFXGLOBALS/AFX_GLOBAL_DATA::ShellCreateItemFromParsingName
+- AFXGLOBALS/AFX_GLOBAL_DATA::UpdateFonts
+- AFXGLOBALS/AFX_GLOBAL_DATA::UpdateSysColors
+- AFXGLOBALS/AFX_GLOBAL_DATA::EnableAccessibilitySupport
+- AFXGLOBALS/AFX_GLOBAL_DATA::IsAccessibilitySupport
+- AFXGLOBALS/AFX_GLOBAL_DATA::IsWindowsLayerSupportAvailable
+- AFXGLOBALS/AFX_GLOBAL_DATA::bIsOSAlphaBlendingSupport
+- AFXGLOBALS/AFX_GLOBAL_DATA::bIsWindows7
+- AFXGLOBALS/AFX_GLOBAL_DATA::clrActiveCaptionGradient
+- AFXGLOBALS/AFX_GLOBAL_DATA::clrInactiveCaptionGradient
+- AFXGLOBALS/AFX_GLOBAL_DATA::m_bUseBuiltIn32BitIcons
+- AFXGLOBALS/AFX_GLOBAL_DATA::m_bUseSystemFont
+- AFXGLOBALS/AFX_GLOBAL_DATA::m_hcurHand
+- AFXGLOBALS/AFX_GLOBAL_DATA::m_hcurStretch
+- AFXGLOBALS/AFX_GLOBAL_DATA::m_hcurStretchVert
+- AFXGLOBALS/AFX_GLOBAL_DATA::m_hiconTool
+- AFXGLOBALS/AFX_GLOBAL_DATA::m_nAutoHideToolBarMargin
+- AFXGLOBALS/AFX_GLOBAL_DATA::m_nAutoHideToolBarSpacing
+- AFXGLOBALS/AFX_GLOBAL_DATA::m_nDragFrameThicknessDock
+- AFXGLOBALS/AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,12 +65,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd4aadf875e16586286c97aa5bffe82d6faed31e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 60b38ae134d761ea186b50545f9886275700dbc3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222304"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677458"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA 構造体
 `AFX_GLOBAL_DATA` 構造体は、フレームワークを管理するため、またはアプリケーションの外観および動作をカスタマイズするために使用されるフィールドおよびメソッドを格納します。  
@@ -32,7 +80,7 @@ ms.locfileid: "43222304"
 ```  
 struct AFX_GLOBAL_DATA  
 ```  
-  
+
 ## <a name="members"></a>メンバー  
   
 ### <a name="public-constructors"></a>パブリック コンストラクター  
@@ -70,7 +118,7 @@ struct AFX_GLOBAL_DATA
 |[AFX_GLOBAL_DATA::RegisterWindowClass](#registerwindowclass)|指定された MFC ウィンドウ クラスを登録します。|  
 |[AFX_GLOBAL_DATA::ReleaseTaskBarRefs](#releasetaskbarrefs)|GetITaskbarList メソッドおよび GetITaskbarList3 メソッドを通じて取得されたインターフェイスを解放します。|  
 |[AFX_GLOBAL_DATA::Resume](#resume)|Windows をサポートするメソッドにアクセスする内部関数ポインターを再初期化[テーマと視覚スタイル](/windows/desktop/Controls/visual-styles-overview)します。|  
-|[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|Windows を呼び出す簡単な方法を提供します。 [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540)メソッド。|  
+|[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|Windows を呼び出す簡単な方法を提供します。 [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)メソッド。|  
 |[AFX_GLOBAL_DATA::SetMenuFont](#setmenufont)|指定された論理フォントを作成します。|  
 |[AFX_GLOBAL_DATA::ShellCreateItemFromParsingName](#shellcreateitemfromparsingname)|解析名からシェル項目オブジェクトを作成して初期化します。|  
 |[AFX_GLOBAL_DATA::UpdateFonts](#updatefonts)|フレームワークにより使用される論理フォントを再初期化します。|  
@@ -86,7 +134,7 @@ struct AFX_GLOBAL_DATA
   
 ### <a name="data-members"></a>データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[AFX_GLOBAL_DATA::bIsOSAlphaBlendingSupport](#bisosalphablendingsupport)|現在のオペレーティング システムがアルファ ブレンドをサポートするかどうかを示します。|  
 |[AFX_GLOBAL_DATA::bIsWindows7](#biswindows7)|アプリケーションが Windows 7 OS 以上で実行されているかどうかを示します。|  
@@ -323,7 +371,7 @@ COLORREF GetColor(int nColor);
   
 ### <a name="parameters"></a>パラメーター   
  [in]*nColor*  
- 色を取得、ユーザー インターフェイス要素を指定する値。 有効な値の一覧は、次を参照してください。、 *nIndex*のパラメーター、 [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)メソッド。  
+ 色を取得、ユーザー インターフェイス要素を指定する値。 有効な値の一覧は、次を参照してください。、 *nIndex*のパラメーター、 [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)メソッド。  
   
 ### <a name="return-value"></a>戻り値  
  指定されたユーザー インターフェイス要素の RGB カラー値。 詳細については、「解説」を参照してください。  
@@ -333,7 +381,7 @@ COLORREF GetColor(int nColor);
   
 ### <a name="see-also"></a>関連項目  
 
- [GetSysColor 関数](https://msdn.microsoft.com/library/windows/desktop/ms724371)   
+ [GetSysColor 関数](/windows/desktop/api/winuser/nf-winuser-getsyscolor)   
  [COLORREF](/windows/desktop/gdi/colorref)   
  [GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush)
 
@@ -649,7 +697,7 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
  登録ウィンドウ クラスの名前。  
   
 ### <a name="return-value"></a>戻り値  
- このメソッドが成功した場合は、登録されているクラスの修飾名それ以外の場合、[リソース例外](https://msdn.microsoft.com/library/ddd99292-819b-4fa4-8371-b1954ed5856d)します。  
+ このメソッドが成功した場合は、登録されているクラスの修飾名それ以外の場合、[リソース例外](exception-processing.md#afxthrowresourceexception)します。  
   
 ### <a name="remarks"></a>Remarks  
  戻り値はコロン区切りの一覧、 *lpszClassNamePrefix*パラメーター文字列、および現在のアプリケーション インスタンスのハンドルの 16 進数のテキスト表現の矢印は、アプリケーションのカーソル識別子を持つ IDC_ARROW; は、カーソル背景のブラシ。 MFC ウィンドウ クラスの登録の詳細については、次を参照してください。 [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)します。  
@@ -673,7 +721,7 @@ BOOL Resume();
  フレームワークが受信すると、このメソッドが呼び出されます、 [WM_POWERBROADCAST](/windows/desktop/Power/wm-powerbroadcast)メッセージ。  
   
 ## <a name="setlayeredattrib"></a> AFX_GLOBAL_DATA::SetLayeredAttrib
-Windows を呼び出す簡単な方法を提供します。 [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540)メソッド。  
+Windows を呼び出す簡単な方法を提供します。 [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)メソッド。  
   
   
 ```  
@@ -702,7 +750,7 @@ BOOL SetLayeredAttrib(
  
 ### <a name="see-also"></a>関連項目   
  [COLORREF](/windows/desktop/gdi/colorref)   
- [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540)
+ [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)
 
 ## <a name="setmenufont"></a> AFX_GLOBAL_DATA::SetMenuFont
 指定された論理フォントを作成します。  

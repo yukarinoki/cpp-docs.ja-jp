@@ -1,7 +1,7 @@
 ---
-title: .リスト |Microsoft ドキュメント
+title: .リスト |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 682f15bbd86f5252beb770ac8d4c4c3dbc7223d6
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: d5b58ea2276da8589f73a20cc2c9d9abcbc02c99
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050273"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685234"
 ---
 # <a name="list"></a>.LIST
-ステートメントの一覧を開始します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-.LIST  
-  
-```  
-  
-## <a name="remarks"></a>コメント  
- 既定値です。  
-  
-## <a name="see-also"></a>関連項目  
- [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+
+ステートメントの一覧表示を開始します。
+
+## <a name="syntax"></a>構文
+
+> .LIST
+
+## <a name="remarks"></a>Remarks
+
+既定値です。
+
+## <a name="see-also"></a>関連項目
+
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>

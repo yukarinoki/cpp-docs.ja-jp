@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3650482cca0e974a229e303ae20ebdb455aae02
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1485e997afda54a80cf4c44787881d8ffdb15ac4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218684"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683753"
 ---
 # <a name="cbasepane-class"></a>CBasePane クラス
 MFC でのすべてのペインの基本クラス。  
@@ -291,7 +291,7 @@ class CBasePane : public CWnd
 |[Cbasepane::onsetaccdata](#onsetaccdata)|`CBasePane` このメソッドを使用しません。|  
 |`CBasePane::OnUpdateCmdUI`|内部的に使用します。|  
 |[CBasePane::PaneFromPoint](#panefrompoint)|指定したポイントを含むペインを返します。|  
-|`CBasePane::PreTranslateMessage`|クラスによって使用される[CWinApp](../../mfc/reference/cwinapp-class.md)にディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)と[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 関数。 ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドします)。|  
+|`CBasePane::PreTranslateMessage`|クラスによって使用される[CWinApp](../../mfc/reference/cwinapp-class.md)にディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数。 ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドします)。|  
 |[CBasePane::RecalcLayout](#recalclayout)|`CBasePane` このメソッドを使用しません。|  
 |[CBasePane::RemovePaneFromDockManager](#removepanefromdockmanager)|ウィンドウの登録を解除し、ドッキング マネージャーの一覧から削除されます。|  
 |[CBasePane::SaveState](#savestate)|レジストリにペインの状態を保存します。|  

@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4efef4c7dfb907120778390874a5e56222889350
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 46018d2ec8747b1fac459e1ac1d28b59eea2385b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392303"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203473"
 ---
 # <a name="debug-routines"></a>デバッグ ルーチン
 
@@ -73,7 +73,7 @@ C ランタイム ライブラリのデバッグ バージョンには、プロ�
 |[_calloc_dbg](../c-runtime-library/reference/calloc-dbg.md)|デバッグ ヘッダーと上書きバッファー用の追加の領域を持つ、指定された数のメモリ ブロックをヒープに割り当てます|
 |[_expand_dbg](../c-runtime-library/reference/expand-dbg.md)|ブロックの拡張や縮小によって、ヒープ内の指定されたメモリのブロックをサイズ変更します|
 |[_free_dbg](../c-runtime-library/reference/free-dbg.md)|ヒープ上のメモリのブロックを解放します|
-|[_fullpath_dbg、_wfullpath_dbg](../c-runtime-library/reference/fullpath-dbg-wfullpath-dbg.md)|指定された相対パス名の絶対または完全パス名を作成します。メモリを割り当てるために、[_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) が使われます。|[System::IO::File::Create](https://msdn.microsoft.com/en-us/library/system.io.file.create.aspx)|
+|[_fullpath_dbg、_wfullpath_dbg](../c-runtime-library/reference/fullpath-dbg-wfullpath-dbg.md)|指定された相対パス名の絶対または完全パス名を作成します。メモリを割り当てるために、[_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) が使われます。|[System::IO::File::Create](https://msdn.microsoft.com/library/system.io.file.create.aspx)|
 |[_getcwd_dbg、_wgetcwd_dbg](../c-runtime-library/reference/getcwd-dbg-wgetcwd-dbg.md)|現在の作業ディレクトリを取得します。メモリを割り当てるために、[_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) が使われます。|
 |[_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md)|デバッグ ヘッダーと上書きバッファー用の追加の領域を持つ、メモリ ブロックをヒープに割り当てます|
 |[_msize_dbg](../c-runtime-library/reference/msize-dbg.md)|ヒープ内のメモリ ブロックのサイズを計算します|

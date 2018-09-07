@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d63e5da79b0f78e701f3ababaf54bef41fbf88a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 127cf8683d4d2627bdc19bef4a9ddfa93e3d7387
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418381"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216935"
 ---
 # <a name="vprintf-functions"></a>vprintf 系関数
 `vprintf` の各関数は引数リストへのポインターを受け取り、指定されたデータを書式設定して特定の出力先に書き込みます。 各関数のパラメーターの検証内容は、ワイド文字列と 1 バイト文字列のどちらを使用するか、出力先がどこか、書式設定文字列でのパラメーターの使用順序を指定できるか、などの点が異なります。  
@@ -89,7 +89,7 @@ ms.locfileid: "32418381"
  **vsprintf**、`vswprintf`、`_vsnprintf`、および `_vsnwprintf` については、重なり合う文字列間でコピーした場合の動作は未定義です。  
   
 > [!IMPORTANT]
->  *format* にユーザー定義の文字列を指定しないでください。 詳しくは、「 [バッファー オーバーランの回避](http://msdn.microsoft.com/library/windows/desktop/ms717795)」をご覧ください。 これらの関数 (サフィックス **_s** または **_p** のどちらか) のセキュリティが強化されたバージョンを使用する場合、ユーザー指定の書式設定文字列は、ユーザー指定文字列に無効な書式設定文字が含まれている場合に無効なパラメーター例外をトリガーします。  
+>  *format* にユーザー定義の文字列を指定しないでください。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。 これらの関数 (サフィックス **_s** または **_p** のどちらか) のセキュリティが強化されたバージョンを使用する場合、ユーザー指定の書式設定文字列は、ユーザー指定文字列に無効な書式設定文字が含まれている場合に無効なパラメーター例外をトリガーします。  
   
 ## <a name="see-also"></a>参照  
  [ストリーム入出力](../c-runtime-library/stream-i-o.md)   

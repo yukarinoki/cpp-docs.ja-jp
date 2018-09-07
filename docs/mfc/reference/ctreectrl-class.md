@@ -172,12 +172,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60eed80d9f26ad33ce7f2af48cfca0a90c7d26b6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6ebae1828d102881d866e05d41f1831e35e01a51
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210252"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679248"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 Windows コモン ツリー ビュー コントロールの機能が用意されています。  
@@ -318,7 +318,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>パラメーター  
  *dwStyle*  
- ツリー ビュー コントロールのスタイルを指定します。 説明されているウィンドウのスタイルを適用[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)の任意の組み合わせと[ツリー ビュー コントロールのスタイル](/windows/desktop/Controls/tree-view-control-window-styles)Windows SDK で説明されているとします。  
+ ツリー ビュー コントロールのスタイルを指定します。 説明されているウィンドウのスタイルを適用[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)の任意の組み合わせと[ツリー ビュー コントロールのスタイル](/windows/desktop/Controls/tree-view-control-window-styles)Windows SDK で説明されているとします。  
   
  *rect*  
  ツリー ビュー コントロールのサイズと位置を指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。  
@@ -356,10 +356,10 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>パラメーター  
  *dwExStyle*  
- 作成されるコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK に含まれています。  
+ 作成されるコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK に含まれています。  
   
  *dwStyle*  
- ツリー ビュー コントロールのスタイルを指定します。 説明されているウィンドウのスタイルを適用[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)の任意の組み合わせと[ツリー ビュー コントロールのスタイル](/windows/desktop/Controls/tree-view-control-window-styles)Windows SDK で説明されているとします。  
+ ツリー ビュー コントロールのスタイルを指定します。 説明されているウィンドウのスタイルを適用[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)の任意の組み合わせと[ツリー ビュー コントロールのスタイル](/windows/desktop/Controls/tree-view-control-window-styles)Windows SDK で説明されているとします。  
   
  *rect*  
  参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。  

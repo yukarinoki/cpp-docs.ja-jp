@@ -16,11 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f1a755314adec83e8853c2c29d9c9d9bb363575b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607807"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759591"
 ---
 # <a name="platformmetadata-namespace"></a>Platform::Metadata 名前空間
 この名前空間には、型の宣言を変更する属性が含まれます。  
@@ -37,7 +37,7 @@ namespace Platform {
 ### <a name="members"></a>メンバー  
  この名前空間は内部使用のためのものですが、ブラウザーでこの名前空間の次のメンバーを表示できます。  
   
-|name|コメント|  
+|名前|コメント|  
 |----------|------------|  
 |属性|属性の基底クラス。|  
 |[Platform::Metadata::DefaultMemberAttribute 属性](../cppcx/platform-metadata-defaultmemberattribute-attribute.md)|使用できる複数のオーバーロード関数から呼び出す、推奨される関数を示します。|  

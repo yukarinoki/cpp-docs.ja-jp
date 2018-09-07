@@ -1,5 +1,5 @@
 ---
-title: CAtlServiceModuleT::Handler 関数 |Microsoft ドキュメント
+title: Catlservicemodulet::handler 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,19 +18,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0c0386cd17e7a33628790520e356c706f9743b9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dbc7c74e0fd6fdd34ba9a0c386c028469113c88e
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354995"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767086"
 ---
-# <a name="catlservicemodulethandler-function"></a>CAtlServiceModuleT::Handler 関数
-`CAtlServiceModuleT::Handler` サービス コントロール マネージャー (SCM) 呼び出し、サービスの状態を取得し、(停止または一時停止) などのさまざまな指示を付けますルーチンです。 SCM を操作するコードを渡します`Handler`を示す、サービスが行う必要があります。 既定の ATL で生成されたサービスは、stop 命令を処理するのみです。 SCM には、stop 命令が成功した場合、サービスは、プログラムを停止するが、SCM を指示します。 サービスを呼び出すし`PostThreadMessage`自体に終了メッセージを送信します。 メッセージ ループを終了このし、サービスが最終的に終了します。  
-  
- 詳細については、処理を変更する必要があります、`m_status`データ メンバーの初期化で、`CAtlServiceModuleT`コンス トラクターです。 このデータ メンバーは、サービスが、コントロール パネルの サービス アプリケーションで選択したときに有効にするボタン、SCM を指示します。  
-  
-## <a name="see-also"></a>関連項目  
- [サービス](../atl/atl-services.md)   
- [CAtlServiceModuleT::Handler](../atl/reference/catlservicemodulet-class.md#handler)
+# <a name="catlservicemodulethandler-function"></a>Catlservicemodulet::handler 関数
+
+`CAtlServiceModuleT::Handler` サービス コントロール マネージャー (SCM) は、サービスの状態を取得し、さまざまな命令 (など、停止または一時停止) を付けますを呼び出すルーチンです。 SCM を操作するコードを渡します`Handler`を示す、サービスが行う必要があります。 既定の ATL によって生成されたサービスでは、stop 命令のみ処理します。 SCM には、stop 命令が成功した場合、サービスは、プログラムが停止しようとしていますが、SCM を指示します。 サービスを呼び出して`PostThreadMessage`自体に中止メッセージを投稿します。 メッセージ ループを終了このし、サービスが最終的に終了します。
+
+詳細な手順についてを処理するためには、変更する必要があります、`m_status`データ メンバーの初期化で、`CAtlServiceModuleT`コンス トラクター。 このデータ メンバーは、コントロール パネルの サービス アプリケーションで、サービスが選択されているときに有効にするボタンを SCM に指示します。
+
+## <a name="see-also"></a>関連項目
+
+[サービス](../atl/atl-services.md)   
+[Catlservicemodulet::handler](../atl/reference/catlservicemodulet-class.md#handler)
 

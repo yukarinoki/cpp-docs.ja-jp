@@ -1,5 +1,5 @@
 ---
-title: C.2 規則 |Microsoft ドキュメント
+title: C.2 規則 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,308 +12,216 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3bdf26435fdfeea2196b9ef281d656805f51bf2
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: bb83b35a03608e272e9af67159b61e5dbf4e1ec6
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694993"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755022"
 ---
 # <a name="c2-rules"></a>C.2 規則
-表記法は、C 規格の 6.1 で説明します。 この文法付録では、OpenMP C および C++ のディレクティブの基本言語の文法に拡張機能を示します。  
-  
- **/\* C++ (ISO/IEC 14882:1998) \*/**  
-  
- *ステートメント seq*:  
-  
- *statement*  
-  
- *openmp ディレクティブ*  
-  
- *ステートメント seq ステートメント*  
-  
- *ステートメント seq openmp ディレクティブ*  
-  
- **/\* C90 で (ISO/IEC 9899: 1990) \*/**  
-  
- *statement-list*:  
-  
- *statement*  
-  
- *openmp ディレクティブ*  
-  
- *statement-list statement*  
-  
- *ステートメントの一覧の openmp ディレクティブ*  
-  
- **/\* C99 (ISO/IEC 9899:1999) \*/**  
-  
- *ブロック アイテム*:  
-  
- *declaration*  
-  
- *statement*  
-  
- *openmp ディレクティブ*  
-  
- *statement*:  
-  
- **/\* 標準的なステートメント \*/**  
-  
- *openmp コンストラクト*  
-  
- *openmp コンストラクト*:  
-  
- *並列コンストラクト*  
-  
- *for コンストラクト*  
-  
- *セクション構成体*  
-  
- *単一コンストラクト*  
-  
- *並列-for のコンストラクト*  
-  
- *並列セクション コンストラクト*  
-  
- *マスター construc*  
-  
- *critical コンストラクト*  
-  
- *atomic コンストラクト*  
-  
- *順序付けコンストラクト*  
-  
- *openmp ディレクティブ*:  
-  
- *barrier ディレクティブ*  
-  
- *flush ディレクティブ*  
-  
- *構造化ブロック*:  
-  
- *statement*  
-  
- *並列構築*:  
-  
- *並列ディレクティブ構造化ブロック*  
-  
- *並列ディレクティブ*:  
-  
- **# プラグマ omp parallel***並列句*optseq*新しい行*   
-  
- *並列句*:  
-  
- *一意な並列句*  
-  
- *データ句*  
-  
- *一意な並列句*:  
-  
- **場合 (** *式* **)**  
-  
- **num_threads (** *式* **)**  
-  
- *for コンストラクト*:  
-  
- *ディレクティブの繰り返しステートメント*  
-  
- *for ディレクティブ*:  
-  
- **# プラグマ omp** *for 句*optseq*新しい行*  
-  
- *for 句*:  
-  
- *for 句一意*  
-  
- *データ句*  
-  
- **nowait**  
-  
- *句の一意な*:  
-  
- **順序付け**  
-  
- **スケジュール (** *スケジュール種類* **)**  
-  
- **スケジュール (** *スケジュール種類* **、** *式* **)**  
-  
- *スケジュール種類*:  
-  
- **static**  
-  
- **dynamic**  
-  
- **ガイド付き**  
-  
- **ランタイム**  
-  
- *セクションではコンストラクト*:  
-  
- *セクション ディレクティブ セクション スコープ*  
-  
- *セクション ディレクティブ*:  
-  
- **# プラグマ omp セクション***セクション句*optseq*新しい行*  
-  
- *セクションでは句*:  
-  
- *データ句*  
-  
- **nowait**  
-  
- *セクション スコープ*:  
-  
- *{セクション シーケンス}*  
-  
- *セクション シーケンス*:  
-  
- *セクション ディレクティブ*opt*構造化ブロック*  
-  
- *セクション シーケンス セクション ディレクティブ構造化ブロック*  
-  
- *セクション ディレクティブ*:  
-  
- **# プラグマ omp セクション***新しい行*  
-  
- *単一コンストラクト*:  
-  
- *単一ディレクティブ構造化ブロック*  
-  
- *単一ディレクティブ*:  
-  
- **1 つ # プラグマ omp** *単一句*optseq*新しい行*  
-  
- *単一句*:  
-  
- *データ句*  
-  
- **nowait**  
-  
- *並列-for のコンストラクト*:  
-  
- *並列-ディレクティブの繰り返しステートメント*  
-  
- *並列-ディレクティブの*:  
-  
- **並列 # プラグマ omp** *並列-句の*optseq*新しい行*  
-  
- *並列-句の*:  
-  
- *一意な並列句*  
-  
- *for 句一意*  
-  
- *データ句*  
-  
- *並列セクション コンストラクト*:  
-  
- *並列 sections ディレクティブ セクション スコープ*  
-  
- *並列 sections ディレクティブ*:  
-  
- **# プラグマ omp parallel セクション***並列セクション句*optseq*新しい行*  
-  
- *並列セクション句*:  
-  
- *一意な並列句*  
-  
- *データ句*  
-  
- *master コンストラクト*:  
-  
- *マスター ディレクティブ構造化ブロック*  
-  
- *マスター ディレクティブ*:  
-  
- **# プラグマ omp マスター** *新しい行*  
-  
- *critical コンストラクト*:  
-  
- *重要なディレクティブ構造化ブロック*  
-  
- *重要なディレクティブ*:  
-  
- **重要な # プラグマ omp** *地域語句*opt*新しい行*  
-  
- *地域語句*:  
-  
- *(識別子)*  
-  
- *barrier ディレクティブ*:  
-  
- **# プラグマ omp バリア***新しい行*  
-  
- *atomic コンストラクト*:  
-  
- *atomic ディレクティブの式ステートメント*  
-  
- *atomic ディレクティブ*:  
-  
- **# プラグマ omp atomic** *新しい行*  
-  
- *flush ディレクティブ*:  
-  
- **# プラグマ omp フラッシュ***フラッシュ var*opt*新しい行*  
-  
- *フラッシュ var*:  
-  
- *(変数リスト)*  
-  
- *順序付けコンストラクト*:  
-  
- *ordered ディレクティブ構造化ブロック*  
-  
- *ordered ディレクティブ*:  
-  
- **順序付けに # プラグマ omp** *新しい行*  
-  
- *宣言*:  
-  
- **/\* 標準的な宣言 \*/**  
-  
- *threadprivate ディレクティブ*  
-  
- *threadprivate ディレクティブ*:  
-  
- **# プラグマ omp threadprivate (** *変数一覧***)** *新しい行*   
-  
- *データ句*:  
-  
- **プライベート (** *変数一覧* **)**  
-  
- **copyprivate (***変数一覧***)**   
-  
- **firstprivate (***変数一覧***)**   
-  
- **lastprivate (** *変数一覧***)**   
-  
- **共有 (** *変数一覧* **)**  
-  
- **既定の (共有)**  
-  
- **既定値 (なし)**  
-  
- **削減 (***減少演算子***:***変数一覧***)**   
-  
- **copyin (***変数一覧***)**   
-  
- *減少演算子*:  
-  
- *いずれかの*:  **+  \* -(& a) ^ &#124; (& a) (& a)&#124;&#124;**  
-  
- **/\* C では \*/**  
-  
- *変数リスト*:  
-  
- *identifier*  
-  
- *変数リスト* **、** *識別子*  
-  
- **/\* C++ では \*/**  
-  
- *変数リスト*:  
-  
- *id 式*  
-  
- *変数リスト* **、** *id 式*
+表記法は、C 規格の 6.1 で説明します。 この文章の付録では、OpenMP C および C++ のディレクティブの基本言語の文法を拡張機能を示します。
+
+**/\* C++ (ISO/IEC 14882:1998) \*/**
+
+*ステートメント seq*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*ステートメント*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*openmp ディレクティブ*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*ステートメント seq ステートメント*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*ステートメント seq openmp ディレクティブ*
+
+**/\* C90 で (ISO/IEC 9899:1990) \*/**
+
+*statement-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*ステートメント*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*openmp ディレクティブ*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*ステートメント list ステートメント*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*ステートメントの一覧の openmp ディレクティブ*
+
+**/\* C99 (ISO/IEC 9899:1999) \*/**
+
+*ブロック アイテム*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*宣言*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*ステートメント*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*openmp ディレクティブ*
+
+**/\* 標準的なステートメント \*/**
+
+*statement*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*openmp コンストラクト*
+
+*openmp コンストラクト*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*並列のコンス トラクター*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*for コンストラクト*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*セクションのコンス トラクター*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*1 つのコンス トラクター*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*並列-for のコンストラクト*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*並列のセクションでは、コンス トラクター*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*master コンストラクト*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*critical コンストラクト*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*atomic コンストラクト*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*順序付けのコンス トラクター*
+
+*openmp ディレクティブ*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*barrier ディレクティブ*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*flush ディレクティブ*
+
+*構造化ブロック*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*ステートメント*
+
+*並列構造*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*並列ディレクティブ構造化ブロック*
+
+*並列ディレクティブ*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# プラグマ omp parallel** *並列句*<sub>optseq</sub> *新しい行*
+
+*並列句*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*一意な並列句*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*データ句*
+
+*並列句では一意*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**場合 (** *式* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**num_threads (** *式* **)**
+
+*コンス トラクターの*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*イテレーション ステートメントの for ディレクティブ*
+
+*ディレクティブの*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# プラグマ omp** *for 句*<sub>optseq</sub> *新しい行*
+
+*for 句*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*for 句一意*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*データ句*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**nowait**
+
+*for 句一意*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**順序付け**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**スケジュール (** *スケジュールの種類* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**スケジュール (** *スケジュールの種類* **、** *式* **)**
+
+*スケジュールの種類*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**静的**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**動的**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**ガイド付き**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**ランタイム**
+
+*セクションのコンス トラクター*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*セクション ディレクティブのセクションのスコープ*
+
+*セクション ディレクティブ*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# プラグマ omp セクション***セクション句*<sub>optseq</sub> *新しい行*
+
+*セクション句*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*データ句*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**nowait**
+
+*セクション スコープ*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*{0} セクション シーケンス}*
+
+*セクション シーケンス*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*セクション ディレクティブ*<sub>opt</sub> *構造化ブロック*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*セクション シーケンス構造セクション ディレクティブのブロック*
+
+*セクション ディレクティブ*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# プラグマ omp セクション***新しい行*
+
+*1 つのコンス トラクター*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*単一ディレクティブ構造化ブロック*
+
+*単一ディレクティブ*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**1 つの # プラグマ omp** *単一句*<sub>optseq</sub> *新しい行*
+
+*単一句*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*データ句*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**nowait**
+
+*並列のコンストラクトの*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*ディレクティブの並列の繰り返しステートメント*
+
+*並列-ディレクティブの*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# プラグマ omp の並列***並列-句の*<sub>optseq</sub> *新しい行*
+
+*並列-句の*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*一意な並列句*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*for 句一意*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*データ句*
+
+*並列のセクションでは、コンス トラクター*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*並列のセクションでは、ディレクティブのセクション スコープ*
+
+*ディレクティブのセクションでは並列*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# プラグマ omp parallel セクション***句のセクションでは並列*<sub>optseq</sub> *新しい行*
+
+*句のセクションでは並列*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*一意な並列句*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*データ句*
+
+*マスター コンストラクト*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*master ディレクティブ構造化ブロック*
+
+*master ディレクティブ*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# プラグマ omp マスター** *新しい行*
+
+*critical コンストラクト*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*critical ディレクティブ構造化ブロック*
+
+*critical ディレクティブ*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# プラグマ omp の重要な***リージョン語句*<sub>opt</sub> *新しい行*
+
+*リージョン語句*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*(識別子)*
+
+*barrier ディレクティブ*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# プラグマ omp バリア***新しい行*
+
+*atomic コンストラクト*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*atomic ディレクティブの式ステートメント*
+
+*atomic ディレクティブ*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# プラグマ omp atomic** *新しい行*
+
+*flush ディレクティブ*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# プラグマ omp フラッシュ***フラッシュ var*<sub>opt</sub> *新しい行*
+
+*フラッシュ var*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*(変数リスト)*
+
+*順序付けられたコンストラクト*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*ordered ディレクティブ構造化ブロック*
+
+*ordered ディレクティブ*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# プラグマ omp 注文***新しい行*
+
+**/\* 標準の宣言 \*/**
+
+*宣言*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*threadprivate ディレクティブ*
+
+*threadprivate ディレクティブ*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# プラグマ omp threadprivate (** *変数一覧***)** *新しい行* 
+
+*データ句*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**プライベート (** *変数一覧* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**copyprivate (***変数一覧***)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**firstprivate (***変数一覧***)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**lastprivate (** *変数一覧***)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**共有 (** *変数一覧* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**既定の (共有)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**既定 (なし)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**削減 (***減少演算子***:***変数一覧***)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**copyin (***変数一覧***)** 
+
+*減少演算子*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;いずれか:  **+  \* -(& a) ^ &#124; (& a) (& a)&#124;&#124;**
+
+**/\* C で \*/**
+
+*変数リスト*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*識別子*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*変数リスト* **、** *識別子*
+
+**/\* C++ では \*/**
+
+*変数リスト*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*id 式*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*変数リスト* **、** *id 式*

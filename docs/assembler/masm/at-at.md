@@ -1,7 +1,7 @@
 ---
-title: '@@: |Microsoft ドキュメント'
+title: '@@: |Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac2c3494f82e7a0fc99853494e5020b51b905292
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 1f9f1bd26862147bb365349e25709a7086085c0a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056462"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691327"
 ---
 # <a name=""></a>@@:
-コードの間でのみ認識可能なラベルを定義*label1*と*label2*ここで、 *label1*はコードの開始、または前の`@@:`ラベル、および*label2*はコードの末尾、または、次へ`@@:`ラベル。 参照してください[ @B ](../../assembler/masm/at-b.md)と[ @F](../../assembler/masm/at-f.md)です。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-@@:  
-  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [シンボル リファレンス](../../assembler/masm/symbols-reference.md)
+
+コードの間でのみ認識可能なラベルを定義します*label1*と*label2*ここで、 *label1* 、コードの先頭または前`@@:`ラベル、および *。label2*はコードの末尾または次のいずれか`@@:`ラベル。 参照してください[ @B ](../../assembler/masm/at-b.md)と[ @F](../../assembler/masm/at-f.md)します。
+
+## <a name="syntax"></a>構文
+
+> @@:
+
+## <a name="see-also"></a>関連項目
+
+[シンボル リファレンス](../../assembler/masm/symbols-reference.md)<br/>

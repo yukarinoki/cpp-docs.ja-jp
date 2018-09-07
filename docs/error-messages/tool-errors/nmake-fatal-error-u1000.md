@@ -1,7 +1,7 @@
 ---
-title: NMAKE の致命的なエラー U1000 |Microsoft ドキュメント
+title: NMAKE の致命的なエラー U1000 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a8d4e0f150d82482dd8391efa1f2251ac37bc8f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69909c542a02baf8aa261c8ef78413a877a223a7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325267"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194889"
 ---
 # <a name="nmake-fatal-error-u1000"></a>NMAKE の致命的なエラー U1000
-構文エラー: ')' マクロの呼び出し時にありません  
-  
- 左かっこ **(** 右かっこの一致するない **)** マクロの呼び出しで。 正しい形式は、 **$(***名前***)** です。`$` *n*の 1 つの文字の名前は許可されています。
+
+> 構文エラー: ')' のマクロ呼び出しがありません
+
+左かっこ、 **(** かっこが一致することがなく、 **)** マクロの呼び出しで。 正しい形式は、 **$(**<em>名前</em>**)**;**$** <em>n</em>は 1 つの文字の名前は許可されています。
