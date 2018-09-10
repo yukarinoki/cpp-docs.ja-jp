@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4250a2b13740b5aa71ca10300a90560ed615f68e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 51dc841efa3e9f64a106002945c07ce10bcf7565
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200029"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102617"
 ---
 # <a name="basicistream-class"></a>basic_istream クラス
 
@@ -193,11 +193,14 @@ basic_istream(basic_istream&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*strbuf*型のオブジェクト[basic_streambuf](../standard-library/basic-streambuf-class.md)します。
+*strbuf*<br/>
+[basic_streambuf](../standard-library/basic-streambuf-class.md) 型のオブジェクト。
 
-*_Isstd* **true**場合、これは、標準的なストリームです。 それ以外の場合、 **false**します。
+*_Isstd*<br/>
+**true**場合、これは、標準的なストリームです。 それ以外の場合、 **false**します。
 
-*適切な*A`basic_istream`オブジェクトにコピーします。
+*right*<br/>
+コピーする `basic_istream` オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -277,15 +280,20 @@ basic_istream<Elem, Tr>& get(basic_streambuf<Elem, Tr>& strbuf, Elem Delim);
 
 ### <a name="parameters"></a>パラメーター
 
-*カウント*から読み取る文字数`strbuf`します。
+*count*<br/>
+`strbuf` から読み取る文字の数。
 
-*Delim*をする前にこれが発生した場合、読み取りを終了する文字*カウント*します。
+*delim*<br/>
+前にこれが発生した場合、読み取りを終了する文字*カウント*します。
 
-*str*書き込み先の文字列。
+*str*<br/>
+書き込み先の文字列。
 
-*Ch*取得する文字。
+*ch*<br/>
+取得する文字。
 
-*strbuf*書き込み先のバッファー。
+*strbuf*<br/>
+書き込み先のバッファー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -356,11 +364,14 @@ basic_istream<Elem, Tr>& getline(
 
 ### <a name="parameters"></a>パラメーター
 
-*カウント*から読み取る文字数`strbuf`します。
+*count*<br/>
+`strbuf` から読み取る文字の数。
 
-*Delim*をする前にこれが発生した場合、読み取りを終了する文字*カウント*します。
+*delim*<br/>
+前にこれが発生した場合、読み取りを終了する文字*カウント*します。
 
-*str*書き込み先の文字列。
+*str*<br/>
+書き込み先の文字列。
 
 ### <a name="return-value"></a>戻り値
 
@@ -414,9 +425,11 @@ basic_istream<Elem, Tr>& ignore(
 
 ### <a name="parameters"></a>パラメーター
 
-*カウント*数、現在からスキップする要素の読み取り位置。
+*count*<br/>
+現在の読み取り位置からスキップする要素の数。
 
-*Delim* before count、発生した場合に発生する要素`ignore`を返すの後にすべての要素を許可して*Delim*を読み取る。
+*delim*<br/>
+Before count、発生した場合に発生する要素`ignore`を返すの後にすべての要素を許可して*Delim*を読み取る。
 
 ### <a name="return-value"></a>戻り値
 
@@ -474,11 +487,14 @@ basic_istream& operator>>(long double& val);
 
 ### <a name="parameters"></a>パラメーター
 
-*Pfn*関数ポインター。
+*pfn*<br/>
+関数ポインター。
 
-*strbuf*型のオブジェクト`stream_buf`します。
+*strbuf*<br/>
+`stream_buf` 型のオブジェクト。
 
-*val*ストリームから読み取る値。
+*val*<br/>
+ストリームから読み取る値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -584,7 +600,8 @@ basic_istream& operator=(basic_istream&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*、`rvalue`への参照を`basic_ifstream`オブジェクト。
+*right*<br/>
+`basic_ifstream` オブジェクトへの `rvalue` 参照。
 
 ### <a name="return-value"></a>戻り値
 
@@ -653,7 +670,8 @@ basic_istream<Elem, Tr>& putback(
 
 ### <a name="parameters"></a>パラメーター
 
-*Ch*に文字をストリームに戻されます。
+*ch*<br/>
+ストリームに戻す文字。
 
 ### <a name="return-value"></a>戻り値
 
@@ -702,9 +720,11 @@ basic_istream<Elem, Tr>& read(
 
 ### <a name="parameters"></a>パラメーター
 
-*str*文字の読み取り先の配列。
+*str*<br/>
+文字の読み取り先の配列。
 
-*カウント*読み取る文字の数。
+*count*<br/>
+読み取る文字の数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -764,9 +784,11 @@ streamsize readsome(
 
 ### <a name="parameters"></a>パラメーター
 
-*str*先の配列`readsome`が読み取る文字を格納します。
+*str*<br/>
+`readsome` が読み取る文字を格納する配列。
 
-*カウント*読み取る文字の数。
+*count*<br/>
+読み取る文字の数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -819,11 +841,14 @@ basic_istream<Elem, Tr>& seekg(off_type off, ios_base::seekdir way);
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*読み取りポインターを移動先の絶対位置。
+*pos*<br/>
+読み取りポインターの移動先の絶対位置。
 
-*オフ*に対して相対的に読み取りポインターを移動するオフセット*方法*します。
+*オフ*<br/>
+に対して相対的に読み取りポインターを移動するオフセット*方法*します。
 
-*方法*の 1 つ、 [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir)列挙体。
+*方法*<br/>
+[ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) 列挙体のうちの 1 つ。
 
 ### <a name="return-value"></a>戻り値
 
@@ -887,7 +912,8 @@ void swap(basic_istream& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*への左辺値参照を`basic_istream`オブジェクト。
+*right*<br/>
+`basic_istream` オブジェクトへの左辺値参照。
 
 ### <a name="remarks"></a>Remarks
 

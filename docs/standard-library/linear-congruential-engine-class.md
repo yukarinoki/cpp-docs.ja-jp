@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4069dc5151dd231773e926aadf17de7c03d3770
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a3b5ed9880a29e0738f67ca30695ea87c81de6b7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958280"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110215"
 ---
 # <a name="linearcongruentialengine-class"></a>linear_congruential_engine クラス
 
@@ -55,13 +55,17 @@ class linear_congruential_engine{
 
 ### <a name="parameters"></a>パラメーター
 
-*UIntType*符号なし整数の結果の型。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*UIntType*<br/>
+結果を表す符号なし整数型。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
-*A* **乗数**します。 **Precondition**: セクションの「解説」を参照してください。
+*A*<br/>
+**乗数**します。 **Precondition**: セクションの「解説」を参照してください。
 
-*C* **インクリメント**します。 **Precondition**: セクションの「解説」を参照してください。
+*C*<br/>
+**インクリメント**します。 **Precondition**: セクションの「解説」を参照してください。
 
-*M* **剰余**します。 **Precondition**:「解説」を参照してください。
+*M*<br/>
+**剰余**します。 **Precondition**:「解説」を参照してください。
 
 ## <a name="members"></a>メンバー
 
@@ -100,7 +104,7 @@ typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_ra
 
 線形合同法エンジン アルゴリズムの詳細については、Wikipedia の記事「[Linear congruential generator (線形合同法)](http://go.microsoft.com/fwlink/p/?linkid=402446)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<random>
 

@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ae2acae1664656883f4f2eba85c57c8e7725b26
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 81a176bd911203d04797f3437539730042b8dbae
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965566"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108981"
 ---
 # <a name="numpunct-class"></a>numpunct クラス
 
@@ -60,7 +60,8 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>パラメーター
 
-*CharType*ロケールの文字をエンコードする、プログラム内で使用される型。
+*CharType*<br/>
+ロケールの文字をエンコードするためにプログラム内で使用される型。
 
 ## <a name="remarks"></a>Remarks
 
@@ -94,7 +95,7 @@ class numpunct : public locale::facet;
 |[thousands_sep](#thousands_sep)|桁区切り記号として使用するロケール固有の要素を返します。|
 |[truename](#truename)|**true** 値のテキスト表現として使用する文字列を返します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<locale>
 
@@ -341,7 +342,7 @@ int main( )
 
 ```Output
 German_Germany.1252 international grouping:
- the 0th group to the left of the radix character is of size 3
+the 0th group to the left of the radix character is of size 3
 ```
 
 ## <a name="numpunct"></a>  numpunct::numpunct
@@ -354,7 +355,8 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Refs*オブジェクトのメモリ管理の種類を指定するために使用する整数値。
+*_Refs*<br/>
+オブジェクトのメモリ管理の種類を指定するために使用する整数値。
 
 ### <a name="remarks"></a>Remarks
 

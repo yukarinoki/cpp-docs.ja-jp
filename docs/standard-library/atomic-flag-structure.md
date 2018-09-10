@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6a5162057944ac3d91d2465cfefe99c68dd5fb3
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f763181424bafc4b8b3af41c135753dbe2f2577b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961416"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110319"
 ---
 # <a name="atomicflag-structure"></a>atomic_flag 構造体
 
@@ -46,7 +46,7 @@ struct atomic_flag;
 
 `atomic_flag` オブジェクトは、[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)、[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)、[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)、および [atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit) の非メンバー関数に渡すことができます。 これらは、`ATOMIC_FLAG_INIT` の値を使用して初期化できます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<atomic >
 
@@ -63,7 +63,8 @@ void atomic_flag::clear(memory_order Order = memory_order_seq_cst) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*順序*A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)します。
+*順序*<br/>
+[memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ## <a name="test_and_set"></a>  atomic_flag::test_and_set
 
@@ -76,7 +77,8 @@ bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) noexce
 
 ### <a name="parameters"></a>パラメーター
 
-*順序*A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)します。
+*順序*<br/>
+[memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ### <a name="return-value"></a>戻り値
 

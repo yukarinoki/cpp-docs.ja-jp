@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2192ea954df1e7a63157d6deb04c7d34cd42337c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c4cdc26c66c05cda821b43367b806ecc2a2a8168
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966486"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100807"
 ---
 # <a name="enableif-class"></a>enable_if クラス
 
@@ -37,9 +37,11 @@ struct enable_if;
 
 ### <a name="parameters"></a>パラメーター
 
-*B*結果の型の存在を決定する値。
+*B*<br/>
+結果の型の存在を定義する値。
 
-*T*場合をインスタンス化する型*B*は true。
+*T*<br/>
+場合をインスタンス化する型*B*は true。
 
 ## <a name="remarks"></a>Remarks
 
@@ -64,12 +66,12 @@ C++ では、テンプレート パラメーターの置き換えの失敗は、
     template <your_stuff>
 typename enable_if<your_condition, your_return_type>::type
     yourfunction(args) {// ...
- }
+}
 // The alias template makes it more concise:
     template <your_stuff>
 enable_if_t<your_condition, your_return_type>
 yourfunction(args) {// ...
- }
+}
 ```
 
 - シナリオ 2: 既定の引数を持つ関数パラメーターを追加する
@@ -78,7 +80,7 @@ yourfunction(args) {// ...
     template <your_stuff>
 your_return_type_if_present
     yourfunction(args, enable_if_t<your condition, FOO> = BAR) {// ...
- }
+}
 ```
 
 - シナリオ 3: 既定の引数を持つテンプレート パラメーターを追加する
@@ -95,7 +97,7 @@ rest_of_function_declaration_goes_here
 void your_function(const T& t,
     enable_if_t<is_something<T>::value, const string&>
 s) {// ...
- }
+}
 ```
 
 シナリオ 1 は、コンストラクターおよび変換演算子では機能しません。それらは戻り値の型を持たないためです。
@@ -139,7 +141,7 @@ func(make_pair("foo", "bar"));
 
 C++11 は、`enable_if` を使用してこの曖昧さを解決しました。`pair<A, B>(const pair<X, Y>&)` が、以下の場合**のみ**、つまり `const X&` が `A` に暗黙に変換され、`const Y&` が `B` に暗黙に変換される場合のみ存在するようにしています。  これにより、オーバーロード解決は、`pair<const char *, const char *>` が `pair<int, int>` に変換されないこと、および `pair<string, string>` となるオーバーロードが実行可能であることを決定できます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<type_traits>
 

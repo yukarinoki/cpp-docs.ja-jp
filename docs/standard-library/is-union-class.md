@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ea1f79d9f57c34bf6deed94f04354b87759d794
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 433e3ab596fb5f7b2399e2834e78e84366e4c56c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966588"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109941"
 ---
 # <a name="isunion-class"></a>is_union クラス
 
@@ -37,7 +37,8 @@ struct is_union;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*照会する型。
+*Ty*<br/>
+照会する型。
 
 ## <a name="remarks"></a>Remarks
 
@@ -82,7 +83,7 @@ is_union<int> == false
 is_union<ints> == true
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<type_traits>
 

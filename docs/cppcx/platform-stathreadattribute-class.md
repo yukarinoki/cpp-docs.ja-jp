@@ -19,105 +19,108 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90194dd72b5192fab71065c2275adb4e066bcb0e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d56cbab412af93bf0a9694cb8f686e14cb9c1937
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767892"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102053"
 ---
 # <a name="platformstathreadattribute-class"></a>Platform::STAThreadAttribute クラス
-アプリケーションのスレッド モデルがシングル スレッド アパートメント (STA) であることを示します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-public ref class STAThreadAttribute sealed : Attribute  
-```  
-  
-### <a name="members"></a>メンバー  
-  
-### <a name="public-constructors"></a>パブリック コンストラクター  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[STAThreadAttribute コンストラクター 1](#ctor)|クラスの新しいインスタンスを初期化します。|  
-  
-### <a name="public-methods"></a>パブリック メソッド  
- STAThreadAttribute 属性が継承[platform::object Class](../cppcx/platform-object-class.md)します。 また STAThreadAttribute は次のメンバーもオーバーロードしたり、含んだりします。  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[STAThreadAttribute::Equals](#equals)|指定したオブジェクトが、現在のオブジェクトと等しいかどうかを判断します。|  
-|[STAThreadAttribute::GetHashCode](#gethashcode)|このインスタンスのハッシュ コードを返します。|  
-|[STAThreadAttribute::ToString](#tostring)|現在のオブジェクトを表す文字列を返します。|  
-  
-## <a name="inheritance-hierarchy"></a>継承階層  
- `Platform`  
-  
-### <a name="requirements"></a>要件  
- **ヘッダー:** collection.h  
-  
- **名前空間:** Platform  
 
+アプリケーションのスレッド モデルがシングル スレッド アパートメント (STA) であることを示します。
 
+## <a name="syntax"></a>構文
+
+```
+public ref class STAThreadAttribute sealed : Attribute
+```
+
+### <a name="members"></a>メンバー
+
+### <a name="public-constructors"></a>パブリック コンストラクター
+
+|名前|説明|
+|----------|-----------------|
+|[STAThreadAttribute コンストラクター 1](#ctor)|クラスの新しいインスタンスを初期化します。|
+
+### <a name="public-methods"></a>パブリック メソッド
+
+STAThreadAttribute 属性が継承[platform::object Class](../cppcx/platform-object-class.md)します。 また STAThreadAttribute は次のメンバーもオーバーロードしたり、含んだりします。
+
+|名前|説明|
+|----------|-----------------|
+|[STAThreadAttribute::Equals](#equals)|指定したオブジェクトが、現在のオブジェクトと等しいかどうかを判断します。|
+|[STAThreadAttribute::GetHashCode](#gethashcode)|このインスタンスのハッシュ コードを返します。|
+|[STAThreadAttribute::ToString](#tostring)|現在のオブジェクトを表す文字列を返します。|
+
+## <a name="inheritance-hierarchy"></a>継承階層
+
+`Platform`
+
+### <a name="requirements"></a>要件
+
+**ヘッダー:** collection.h
+
+**名前空間:** Platform
 
 ## <a name="ctor"></a> STAThreadAttribute constructor
-STAThreadAttribute クラスの新しいインスタンスを初期化します。  
-  
-### <a name="syntax"></a>構文  
-  
-```cpp  
-public:STAThreadAttribute()  
-```  
-  
 
+STAThreadAttribute クラスの新しいインスタンスを初期化します。
+
+### <a name="syntax"></a>構文
+
+```cpp
+public:STAThreadAttribute();
+```
 
 ## <a name="equals"></a> STAThreadAttribute::Equals
-指定したオブジェクトが、現在のオブジェクトと等しいかどうかを判断します。  
-  
-### <a name="syntax"></a>構文  
-  
-```cpp  
-public:virtual override bool Equals(  Object^ obj)  
-```  
-  
-### <a name="parameters"></a>パラメーター  
- obj  
- 比較対象のオブジェクト。  
-  
-### <a name="return-value"></a>戻り値  
- オブジェクトが等しい場合は `true`。それ以外の場合は `false`。  
-  
 
+指定したオブジェクトが、現在のオブジェクトと等しいかどうかを判断します。
+
+### <a name="syntax"></a>構文
+
+```cpp
+public:virtual override bool Equals( Object^ obj );
+```
+
+### <a name="parameters"></a>パラメーター
+
+*obj*<br/>
+比較対象のオブジェクト。
+
+### <a name="return-value"></a>戻り値
+
+オブジェクトが等しい場合は `true`。それ以外の場合は `false`。
 
 ## <a name="gethashcode"></a> STAThreadAttribute::GetHashCode
-このインスタンスのハッシュ コードを返します。  
-  
-### <a name="syntax"></a>構文  
-  
-```cpp  
-public:int GetHashCode()  
-```  
-  
-### <a name="return-value"></a>戻り値  
- 対象のインスタンスのハッシュ コード。  
-  
 
+このインスタンスのハッシュ コードを返します。
+
+### <a name="syntax"></a>構文
+
+```cpp
+public:int GetHashCode();
+```
+
+### <a name="return-value"></a>戻り値
+
+対象のインスタンスのハッシュ コード。
 
 ## <a name="tostring"></a> STAThreadAttribute::ToString
-現在のオブジェクトを表す文字列を返します。  
-  
-### <a name="syntax"></a>構文  
-  
-```cpp  
-public:String^ ToString()  
-```  
-  
-### <a name="return-value"></a>戻り値  
- 現在のオブジェクトを表す文字列。  
-  
 
-  
-## <a name="see-also"></a>関連項目  
- [プラットフォーム Namespace](platform-namespace-c-cx.md)
+現在のオブジェクトを表す文字列を返します。
+
+### <a name="syntax"></a>構文
+
+```cpp
+public:String^ ToString();
+```
+
+### <a name="return-value"></a>戻り値
+
+現在のオブジェクトを表す文字列。
+
+## <a name="see-also"></a>関連項目
+
+[プラットフォーム Namespace](platform-namespace-c-cx.md)

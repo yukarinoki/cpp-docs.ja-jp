@@ -13,33 +13,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d6461e6c94a6889c956ac0319c55c9ee5d2a361
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: edcb67686db871e4ebddb961ed254d260b630139
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751381"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107149"
 ---
 # <a name="defaulttypenamegethashcode-method"></a>default::(type_name)::GetHashCode メソッド
-このインスタンスのハッシュ コードを返します。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-public:int GetHashCode()  
-```  
-  
-### <a name="return-value"></a>戻り値  
- 対象のインスタンスのハッシュ コード。  
-  
-### <a name="requirements"></a>要件  
- **クライアントがサポートされている最小:** Windows 8  
-  
- **サポートされているサーバーの最小値:** Windows Server 2012  
-  
- **名前空間:** 既定  
-  
- **ヘッダー:** vccorlib.h  
-  
-## <a name="see-also"></a>関連項目  
- [default 名前空間](../cppcx/default-namespace.md)
+
+このインスタンスのハッシュ コードを返します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+public:int GetHashCode();
+```
+
+### <a name="return-value"></a>戻り値
+
+対象のインスタンスのハッシュ コード。
+
+### <a name="requirements"></a>要件
+
+**クライアントがサポートされている最小:** Windows 8
+
+**サポートされているサーバーの最小値:** Windows Server 2012
+
+**名前空間:** 既定
+
+**ヘッダー:** vccorlib.h
+
+## <a name="see-also"></a>関連項目
+
+[default 名前空間](../cppcx/default-namespace.md)

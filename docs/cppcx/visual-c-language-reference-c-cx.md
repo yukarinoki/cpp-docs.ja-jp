@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bad7a0a5263d001d9dc77dd8d9e8cf0cf70100b4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a7d1381e511bc98b446e3f58be4d2a1c5ac15070
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219640"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105706"
 ---
 # <a name="visual-c-language-reference-ccx"></a>Visual C++ の言語リファレンス (C++/CX)
 
@@ -24,7 +24,6 @@ C + + CX は Windows アプリと C++ の最新にできるだけ近い表現で
 > C +/cli WinRT は、標準的な新しい c++ 17 の言語プロジェクションの Windows ランタイム Api です。 バージョン 1803 以降から最新の Windows 10 SDK で使用可能になります。 C +/cli WinRT がヘッダー ファイルで完全に実装し、最新の Windows API に最上級アクセスを提供するように設計します。
 
 > C++/cli WinRT、両方を使用して標準に準拠した c++ 17 コンパイラを使用して Windows ランタイム Api を作成します。 C +/cli WinRT は通常、パフォーマンスが向上し、Windows ランタイムの他の言語オプションよりも小さいバイナリを生成します。 C + をサポートするために引き続き/cli CX および WRL、C + 新しいアプリケーションを使用するを強くお勧めしますが、/cli WinRT します。 詳細については、次を参照してください。 [C +/cli WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index)します。
-
 
 C + を使用して/cli CX を作成できます。
 

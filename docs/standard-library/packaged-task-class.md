@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::packaged_task [C++], valid
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7eb5b8d003682f5b941dd805f424afbe4a36cc85
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3d64c848e69cd7670b966159128ff340ac7dbf5f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964796"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107098"
 ---
 # <a name="packagedtask-class"></a>packaged_task クラス
 
@@ -75,7 +75,7 @@ class packaged_task;
 |[packaged_task::operator()](#op_call)|関連付けられた非同期状態に格納された呼び出し可能オブジェクトを呼び出し、戻り値をアトミックに格納し、状態を *ready* に設定します。|
 |[packaged_task::operator bool](#op_bool)|オブジェクトが関連付けられた非同期状態であるかどうかを指定します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<将来 >
 
@@ -123,7 +123,8 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="parameters"></a>パラメーター
 
-*右*A`packaged_task`オブジェクト。
+*右*<br/>
+`packaged_task` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -178,11 +179,14 @@ template <class Fn, class Alloc>
 
 ### <a name="parameters"></a>パラメーター
 
-*右*A`packaged_task`オブジェクト。
+*右*<br/>
+`packaged_task` オブジェクト。
 
-*alloc*メモリ アロケーター。 詳細については、「[\<allocators>](../standard-library/allocators-header.md)」を参照してください。
+*Alloc*<br/>
+メモリ割り当て。 詳細については、「[\<allocators>](../standard-library/allocators-header.md)」を参照してください。
 
-*fn*関数オブジェクト。
+*fn*<br/>
+関数オブジェクトを指定します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -228,7 +232,8 @@ void swap(packaged_task& Right) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*右*A`packaged_task`オブジェクト。
+*右*<br/>
+`packaged_task` オブジェクト。
 
 ## <a name="valid"></a>  packaged_task::valid
 

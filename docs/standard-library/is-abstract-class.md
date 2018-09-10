@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f58436bb281af2746197e5d979e1b038a6a5ce1
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 97ed218405fac96e926aefc3a15ebc81dd44863f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961696"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108261"
 ---
 # <a name="isabstract-class"></a>is_abstract クラス
 
@@ -37,7 +37,8 @@ struct is_abstract;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*照会する型。
+*Ty*<br/>
+照会する型。
 
 ## <a name="remarks"></a>Remarks
 
@@ -77,7 +78,7 @@ is_abstract<trivial> == false
 is_abstract<abstract> == true
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<type_traits>
 

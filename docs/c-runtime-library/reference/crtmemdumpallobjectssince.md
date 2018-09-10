@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24cf01facaba326c36454ea5410da8dbb05848f2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 92d6148f6cbe49799a122d1745a6a6cde4c8be30
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396870"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100380"
 ---
 # <a name="crtmemdumpallobjectssince"></a>_CrtMemDumpAllObjectsSince
 
@@ -53,21 +53,22 @@ void _CrtMemDumpAllObjectsSince(
 
 ### <a name="parameters"></a>パラメーター
 
-*状態*ダンプを開始するヒープ状態へのポインターまたは**NULL**です。
+*state*<br/>
+ダンプの開始点となるヒープ状態へのポインターまたは **NULL**。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_CrtMemDumpAllObjectsSince**関数は、ユーザーが判読できる形式でヒープに割り当てられたオブジェクトのデバッグ ヘッダー情報をダンプします。 ダンプ情報は、割り当ての追跡とメモリの問題の検出のためにアプリケーションで使用できます。 ときに[_DEBUG](../../c-runtime-library/debug.md)が定義されていないへの呼び出し **_CrtMemDumpAllObjectsSince**プリプロセス時に削除されます。
+**_CrtMemDumpAllObjectsSince**関数は、ユーザーが判読できる形式でヒープに割り当てられたオブジェクトのデバッグ ヘッダー情報をダンプします。 ダンプ情報は、割り当ての追跡とメモリの問題の検出のためにアプリケーションで使用できます。 ときに[_DEBUG](../../c-runtime-library/debug.md)が定義されていない、呼び出し **_CrtMemDumpAllObjectsSince**プリプロセス時に削除されます。
 
-**_CrtMemDumpAllObjectsSince**の値を使用して、*状態*パラメーター ダンプ操作を開始する場所を決定します。 指定されたヒープ状態、ダンプを開始する、*状態*パラメーターへのポインターをする必要があります、 **_CrtMemState**構造内で入力された[_CrtMemCheckpoint](crtmemcheckpoint.md)する前に **_CrtMemDumpAllObjectsSince**が呼び出されました。 ときに*状態*は**NULL**関数は、プログラム実行の開始からダンプを開始します。
+**_CrtMemDumpAllObjectsSince**の値を使用して、*状態*ダンプ操作を開始する場所を特定するパラメーター。 指定したヒープ状態からダンプを開始する、*状態*パラメーターはへのポインターである必要があります、 **_CrtMemState**構造内で塗りつぶされて[_CrtMemCheckpoint](crtmemcheckpoint.md)する前に **_CrtMemDumpAllObjectsSince**が呼び出されました。 ときに*状態*は**NULL**関数は、プログラムの実行開始からダンプを開始します。
 
-アプリケーションがダンプ フック関数を呼び出すことによってインストールされている場合[_CrtSetDumpClient](crtsetdumpclient.md)、たびに、 **_CrtMemDumpAllObjectsSince**に関する情報をダンプする **_CLIENT_BLOCK**型ブロックでのアプリケーションによって提供されたダンプ関数も呼び出します。 既定では、内部 C ランタイム ブロック (**_CRT_BLOCK**) メモリ ダンプ操作には含まれません。 [_CrtSetDbgFlag](crtsetdbgflag.md)を有効にする関数を使用することができます、 **_CRTDBG_CHECK_CRT_DF**ビットの **_crtDbgFlag**これらのブロックを含めるようにします。 また、解放済みまたは無視としてマークされているブロック (**_FREE_BLOCK**、**_IGNORE_BLOCK**) は、メモリ ダンプに含まれません。
+アプリケーションが呼び出してダンプ フック関数をインストールした場合[_CrtSetDumpClient](crtsetdumpclient.md)、たび **_CrtMemDumpAllObjectsSince**についての情報をダンプする **_CLIENT_BLOCK**型のブロック、アプリケーションによって提供されたダンプ関数も呼び出します。 既定では、内部 C ランタイム ブロック (**_CRT_BLOCK**) メモリ ダンプ操作には含まれません。 [_CrtSetDbgFlag](crtsetdbgflag.md)を有効にする関数を使用できます、 **_CRTDBG_CHECK_CRT_DF**のビット **_crtDbgFlag**これらのブロックを含めるようにします。 また、解放済みまたは無視としてマークされているブロック (**_FREE_BLOCK**、**_IGNORE_BLOCK**) は、メモリ ダンプに含まれません。
 
-ヒープ状態関数の詳細については、 **_CrtMemState**構造体は、「[ヒープ状態をレポートする関数](/visualstudio/debugger/crt-debug-heap-details)です。 デバッグ バージョンのベース ヒープでのメモリ ブロックの割り当て、初期化、管理の方法について詳しくは、「 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。
+ヒープ状態関数の詳細については、 **_CrtMemState**構造体は、「 [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details)します。 デバッグ バージョンのベース ヒープでのメモリ ブロックの割り当て、初期化、管理の方法について詳しくは、「 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_CrtMemDumpAll-ObjectsSince**|\<crtdbg.h>|
 
@@ -79,7 +80,7 @@ void _CrtMemDumpAllObjectsSince(
 
 ## <a name="example"></a>例
 
-使用する方法のサンプルについては **_CrtMemDumpAllObjectsSince**を参照してください[crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2)です。
+使用する方法の例については **_CrtMemDumpAllObjectsSince**を参照してください[crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2)します。
 
 ## <a name="see-also"></a>関連項目
 

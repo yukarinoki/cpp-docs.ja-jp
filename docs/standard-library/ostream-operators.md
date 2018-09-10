@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4819f5b5d5d6a16720bce29dd176fd0eb873014a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 766ab6f9a93cc617c2a3ecb4c305775d670a9640
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955934"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108955"
 ---
 # <a name="ltostreamgt-operators"></a>&lt;ostream&gt; 演算子
 
@@ -88,17 +88,23 @@ basic_ostream <_Elem, _Tr>& operator<<(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Ch*文字。
+*_Ch*<br/>
+単一の文字。
 
-*_Elem*要素の型。
+*_Elem*<br/>
+要素型。
 
-*_Ostr* A`basic_ostream`オブジェクト。
+*_Ostr*<br/>
+`basic_ostream` オブジェクト。
 
-*str*文字の文字列。
+*str*<br/>
+文字列。
 
-*_Tr*文字の特徴です。
+*_Tr*<br/>
+文字の特徴 (traits)。
 
-*val*型
+*val*<br/>
+型
 
 ### <a name="return-value"></a>戻り値
 

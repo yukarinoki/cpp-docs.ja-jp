@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a2b776fb155d8927b610de38bdd79370f4c0803
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 5c93f32a7684d32cba0d2822571bd138f9206f46
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208651"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107414"
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;functional&gt; 関数
 
@@ -70,13 +70,17 @@ unspecified bind(Fty fn, T1 t1, T2 t2, ..., TN tN);
 
 ### <a name="parameters"></a>パラメーター
 
-*Fty*を呼び出すオブジェクトの型。
+*Fty*<br/>
+呼び出すオブジェクトの型。
 
-*TN* n 番目の呼び出しの引数の型。
+*TN*<br/>
+N 番目の引数の型。
 
-*fn*を呼び出すオブジェクト。
+*fn*<br/>
+呼び出すオブジェクト。
 
-*tN* n 番目の呼び出しの引数。
+*TN*<br/>
+N 番目の呼び出しの引数。
 
 ### <a name="remarks"></a>Remarks
 
@@ -165,9 +169,11 @@ binder1st <Operation> bind1st (const Operation& func, const Type& left);
 
 ### <a name="parameters"></a>パラメーター
 
-*func*単項関数オブジェクトに変換する二項関数オブジェクト。
+*func*<br/>
+単項関数オブジェクトに変換する二項関数オブジェクト。
 
-*左*二項関数オブジェクトの最初の引数がバインドされる値。
+*left*<br/>
+二項関数オブジェクトの最初の引数がバインドされている値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -257,9 +263,11 @@ binder2nd <Operation> bind2nd(const Operation& func, const Type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*func*単項関数オブジェクトに変換する二項関数オブジェクト。
+*func*<br/>
+単項関数オブジェクトに変換する二項関数オブジェクト。
 
-*適切な*二項関数オブジェクトの 2 番目の引数がバインドされる値。
+*right*<br/>
+二項関数オブジェクトの 2 つ目の引数がバインドされている値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -348,7 +356,7 @@ struct bit_and : public binary_function<Type, Type, Type> {
     Type operator()(
     const Type& Left,
     const Type& Right) const;
- };
+};
 
 // specialized transparent functor for operator&
 template <>
@@ -364,9 +372,11 @@ struct bit_and<void>
 
 *型*、 *T*、 *U*をサポートする任意の型、`operator&`指定または推論された型のオペランドを受け取る。
 
-*左*ビットごとの AND 演算の左オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*T*します。
+*左*<br/>
+ビットごとの AND 演算の左オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*T*します。
 
-*右*ビットごとの AND 演算の右オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*U*します。
+*右*<br/>
+ビットごとの AND 演算の右オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*U*します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -383,24 +393,26 @@ struct bit_and<void>
 ```cpp
 template <class Type = void>
 struct bit_not : public unary_function<Type, Type>
- {
+{
     Type operator()(const Type& Right) const;
- };
+};
 
 // specialized transparent functor for operator~
 template <>
 struct bit_not<void>
- {
+{
     template <class Type>
     auto operator()(Type&& Right) const  ->  decltype(~std::forward<Type>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*型*単項演算子をサポートする型`operator~`します。
+*Type*<br/>
+単項 `operator~` をサポートする型。
 
-*右*ビットごとの補数演算のオペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートに完全推論された型の左辺値または右辺値参照引数の転送を行います*型*します。
+*右*<br/>
+ビットごとの補数演算の右オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートに完全推論された型の左辺値または右辺値参照引数の転送を行います*型*します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -420,7 +432,7 @@ struct bit_or : public binary_function<Type, Type, Type> {
     Type operator()(
     const Type& Left,
     const Type& Right) const;
- };
+};
 
 // specialized transparent functor for operator|
 template <>
@@ -436,9 +448,11 @@ struct bit_or<void>
 
 *型*、 *T*、 *U*をサポートする任意の型、`operator|`指定または推論された型のオペランドを受け取る。
 
-*左*ビットごとの OR 演算の左オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*T*します。
+*左*<br/>
+ビットごとの OR 演算の左オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*T*します。
 
-*右*ビットごとの OR 演算の右オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*U*します。
+*右*<br/>
+ビットごとの OR 演算の右オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*U*します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -458,7 +472,7 @@ struct bit_xor : public binary_function<Type, Type, Type> {
     Type operator()(
     const Type& Left,
     const Type& Right) const;
- };
+};
 
 // specialized transparent functor for operator^
 template <>
@@ -474,9 +488,11 @@ struct bit_xor<void>
 
 *型*、 *T*、 *U*をサポートする任意の型、`operator^`指定または推論された型のオペランドを受け取る。
 
-*左*ビットごとの XOR 演算の左オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*T*します。
+*左*<br/>
+ビットごとの XOR 演算の左オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*T*します。
 
-*右*ビットごとの XOR 演算の右オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*U*します。
+*右*<br/>
+ビットごとの XOR 演算の右オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*U*します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -500,9 +516,11 @@ reference_wrapper<const Ty> cref(const reference_wrapper<Ty>& arg);
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*をラップする引数の型。
+*Ty*<br/>
+ラップする引数の型。
 
-*arg*ラップする引数。
+*arg*<br/>
+ラップする引数。
 
 ### <a name="remarks"></a>Remarks
 
@@ -552,9 +570,11 @@ unspecified mem_fn(Ret Ty::*pm);
 
 ### <a name="parameters"></a>パラメーター
 
-*Ret*ラップされた関数の戻り値の型。
+*ret*<br/>
+ラップされた関数の戻り値の型。
 
-*Ty*メンバー関数ポインターの型。
+*Ty*<br/>
+メンバー関数ポインターの型。
 
 ### <a name="remarks"></a>Remarks
 
@@ -623,7 +643,8 @@ const_mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pmem)(Arg) const);
 
 ### <a name="parameters"></a>パラメーター
 
-*pmem*クラスのメンバー関数へのポインター`Type`関数オブジェクトに変換します。
+*pmem*<br/>
+関数オブジェクトに変換されるクラス `Type` のメンバー関数へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -709,7 +730,8 @@ const_mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (T::* pmem)(Arg) cons
 
 ### <a name="parameters"></a>パラメーター
 
-*pmem*クラスのメンバー関数へのポインター`Type`関数オブジェクトに変換します。
+*pmem*<br/>
+関数オブジェクトに変換されるクラス `Type` のメンバー関数へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -804,7 +826,8 @@ unary_negate<UnaryPredicate> not1(const UnaryPredicate& pred);
 
 ### <a name="parameters"></a>パラメーター
 
-*pred*符号が反転される単項述語。
+*Pred*<br/>
+符号が反転される単項述語。
 
 ### <a name="return-value"></a>戻り値
 
@@ -875,7 +898,8 @@ binary_negate<BinaryPredicate> not2(const BinaryPredicate& func);
 
 ### <a name="parameters"></a>パラメーター
 
-*func*符号が反転される二項述語。
+*func*<br/>
+符号が反転される二項述語。
 
 ### <a name="return-value"></a>戻り値
 
@@ -953,7 +977,8 @@ pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(R
 
 ### <a name="parameters"></a>パラメーター
 
-*pfunc*適応性のある関数に変換する単項演算子または二項関数ポインター。
+*pfunc*<br/>
+アダプター関数に変換される単項関数ポインターまたは二項関数ポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1072,11 +1097,14 @@ void swap(function<Fty>& f1, function<Fty>& f2);
 
 ### <a name="parameters"></a>パラメーター
 
-*Fty*関数オブジェクトによって制御される型。
+*Fty*<br/>
+関数オブジェクトによって制御される型。
 
-*f1*最初の関数オブジェクト。
+*F1*<br/>
+最初の関数オブジェクト。
 
-*f2* 2 番目の関数オブジェクト。
+*F2*<br/>
+2 番目の関数オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 

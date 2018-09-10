@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d21fcc27b5b4f92b690d8fae7669a18a5fcc1c46
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ecd065ff80b5c45bca863534e28bc467b3a4105c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964939"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105381"
 ---
 # <a name="islvaluereference-class"></a>is_lvalue_reference クラス
 
@@ -37,13 +37,14 @@ struct is_lvalue_reference;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*照会する型。
+*Ty*<br/>
+照会する型。
 
 ## <a name="remarks"></a>Remarks
 
 場合はこの型述語のインスタンスは true を保持型*Ty*または関数の場合、それ以外の場合は false を保持するオブジェクトへの参照です。 なお*Ty*右辺値参照ができない可能性があります。 右辺値の詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」をご覧ください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<type_traits>
 

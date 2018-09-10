@@ -16,33 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ded5bb355b961e7d271fdb51d2cf6aac9a134f1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 32061f76462b089a649d89dccd8c76f7a0d722f0
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753481"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109759"
 ---
 # <a name="platformoutofmemoryexception-class"></a>Platform::OutOfMemoryException クラス
-メモリが不足して操作を完了できないときにスローされます。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-public ref class OutOfMemoryException : COMException,    IException,    IPrintable,    IEquatable  
-```  
-  
-### <a name="remarks"></a>Remarks  
- 詳細については、 [COMException](../cppcx/platform-comexception-class.md) クラスを参照してください。  
-  
-### <a name="requirements"></a>要件  
- **クライアントがサポートされている最小:** Windows 8  
-  
- **サポートされているサーバーの最小値:** Windows Server 2012  
-  
- **名前空間:** Platform  
-  
- **メタデータ:** platform.winmd  
-  
-## <a name="see-also"></a>関連項目  
- [Platform::COMException クラス](../cppcx/platform-comexception-class.md)
+
+メモリが不足して操作を完了できないときにスローされます。
+
+## <a name="syntax"></a>構文
+
+```cpp
+public ref class OutOfMemoryException : COMException,    IException,    IPrintable,    IEquatable
+```
+
+### <a name="remarks"></a>Remarks
+
+詳細については、 [COMException](../cppcx/platform-comexception-class.md) クラスを参照してください。
+
+### <a name="requirements"></a>要件
+
+**クライアントがサポートされている最小:** Windows 8
+
+**サポートされているサーバーの最小値:** Windows Server 2012
+
+**名前空間:** Platform
+
+**メタデータ:** platform.winmd
+
+## <a name="see-also"></a>関連項目
+
+[Platform::COMException クラス](../cppcx/platform-comexception-class.md)

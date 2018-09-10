@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6484d70488da834d0acea79cbe9b02968e0e2a35
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: d979cab4dc25898b772c434f5a50682573ce4016
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957286"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099539"
 ---
 # <a name="istrstream-class"></a>istrstream クラス
 
@@ -54,7 +54,7 @@ class istrstream : public istream
 |[rdbuf](#rdbuf)|ストリームの関連付けられた `strstreambuf` オブジェクトへのポインターを返します。|
 |[str](#str)|[freeze](../standard-library/strstreambuf-class.md#freeze) を呼び出し、被制御シーケンスの先頭へのポインターを返します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<strstream>
 
@@ -82,9 +82,11 @@ istrstream(
 
 ### <a name="parameters"></a>パラメーター
 
-*カウント*バッファーの長さ (*ptr*)。
+*count*<br/>
+バッファーの長さ (*ptr*)。
 
-*ptr*バッファーが初期化されている内容。
+*ptr*<br/>
+バッファーが初期化されているコンテンツ。
 
 ### <a name="remarks"></a>Remarks
 

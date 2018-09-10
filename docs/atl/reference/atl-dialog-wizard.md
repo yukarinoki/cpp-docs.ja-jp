@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe3311e46ea28424717a0274fbe9e956610cdc54
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3a6854a3b11d5c5850d790e749789e91a7cb986a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767713"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110045"
 ---
 # <a name="atl-dialog-wizard"></a>ATL ダイアログ ウィザード
 
@@ -35,7 +35,7 @@ ms.locfileid: "43767713"
 **短い名前**  
 ATL ダイアログ オブジェクトの省略名を設定します。 指定した名前では、これらのフィールドを個別に変更しない限り、クラス名とファイル (.cpp、.h) 名を決定します。
 
-`Class`  
+**クラス**  
 作成するクラスの名前を設定します。 この名前がで指定した名前に基づいて**短い名前**'C'、クラス名の一般的なプレフィックスが付いた、します。
 
 **.h ファイル**  

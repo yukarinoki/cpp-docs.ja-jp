@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3af5cbeae84b5b582077f543a39cfe408575bc71
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 12647c6f2243b0804343f0485737a28c79afc6f0
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960059"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100236"
 ---
 # <a name="ismoveassignable-class"></a>is_move_assignable クラス
 
@@ -36,13 +36,14 @@ struct is_move_assignable;
 
 ### <a name="parameters"></a>パラメーター
 
-*T*照会する型。
+*T*<br/>
+照会する型。
 
 ## <a name="remarks"></a>Remarks
 
 型への右辺値参照を型の参照に割り当てる事ができる場合、その型は移動代入可能です。 型述語は `is_assignable<T&, T&&>` と同じです。 移動代入できる型には、コンパイラにより生成された移動代入演算子またはユーザー定義の移動代入演算子を含む参照可能なスカラー型やクラス型があります。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<type_traits>
 

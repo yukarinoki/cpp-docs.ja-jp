@@ -19,12 +19,12 @@ helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: 2491cb859de8908bbe0710f03d12f836bbd80e2f
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: de26779c569326f46794ba76b7b886f994cd8b11
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208677"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110195"
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;complex&gt; 演算子
 
@@ -58,9 +58,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*複素数または非等値をテストするには、そのパラメーター型のオブジェクト。
+*left*<br/>
+非等値をテストする複素数またはそのパラメーター型のオブジェクト。
 
-*適切な*複素数または非等値をテストするには、そのパラメーター型のオブジェクト。
+*right*<br/>
+非等値をテストする複素数またはそのパラメーター型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -196,9 +198,11 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*最初の 2 つの複素数または数値で乗算される複素数のパラメーターの型を\*操作。
+*left*<br/>
+最初の 2 つの複素数または数値で乗算される複素数のパラメーターの型を\*操作。
 
-*適切な*2 番目の 2 つの複素数または数値で乗算される複素数のパラメーターの型を\*操作。
+*right*<br/>
+2 番目の 2 つの複素数または数値で乗算される複素数のパラメーターの型を\*操作。
 
 ### <a name="return-value"></a>戻り値
 
@@ -295,9 +299,11 @@ complex<Type> operator+(const complex<Type>& left);
 
 ### <a name="parameters"></a>パラメーター
 
-*左*最初の 2 つの複素数またはで加算される複素数のパラメーターの型の数、+ 操作。
+*left*<br/>
+2 つの複素数の 1 番目、または + 演算で加算される複素数のパラメーター型の数値。
 
-*適切な*2 番目の 2 つの複素数またはで加算される複素数のパラメーターの型の数、+ 操作。
+*right*<br/>
+2 つの複素数の 2 番目、または + 演算で加算される複素数のパラメーター型の数値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -402,7 +408,7 @@ The argument of cs3 is: 0.463648 radians, which is 26.5651 degrees.
 
 The right-side complex number is cr4 = (3,4)
 The result of the unary application of + to the right-side
- complex number is: cs4 = (3,4)
+complex number is: cs4 = (3,4)
 The modulus of cs4 is: 5
 The argument of cs4 is: 0.927295 radians, which is 53.1301 degrees.
 ```
@@ -433,9 +439,11 @@ complex<Type> operator-(const complex<Type>& left);
 
 ### <a name="parameters"></a>パラメーター
 
-*左*最初の 2 つの複素数または - 演算で減算される複素数のパラメーター型の数。
+*left*<br/>
+2 つの複素数の 1 番目、または - 演算で減算される複素数のパラメーター型の数値。
 
-*適切な*2 番目の 2 つの複素数または - 演算で減算される複素数のパラメーター型の数。
+*right*<br/>
+2 つの複素数の 2 番目、または - 演算で減算される複素数のパラメーター型の数値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -542,7 +550,7 @@ The argument of cs3 is: -1.10715 radians, which is -63.4349 degrees.
 
 The right-side complex number is cr4 = (3,4)
 The result of the unary application of - to the right-side
- complex number is: cs4 = (-3,-4)
+complex number is: cs4 = (-3,-4)
 The modulus of cs4 is: 5
 The argument of cs4 is: -2.2143 radians, which is -126.87 degrees.
 ```
@@ -570,9 +578,11 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*複素数または分母で除算される分子である複素数のパラメーター型の数、/操作。
+*left*<br/>
+複素数、または / 演算における分母で除算される分子である複素数のパラメーター型の数値。
 
-*適切な*複素数、または、分母で分子を除算するために使用するのには、複素数のパラメーター型の数、/操作。
+*right*<br/>
+複素数、または / 演算における分子を除算する場合に使用される分母である複素数のパラメーター型の数値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -678,9 +688,11 @@ basic_ostream<Elem, Traits>& operator<<(
 
 ### <a name="parameters"></a>パラメーター
 
-*Ostr*複素数が入力されている先の出力ストリーム。
+*Ostr*<br/>
+複素数が入力される出力ストリーム。
 
-*適切な*出力ストリームに入力される複素数の値
+*right*<br/>
+出力ストリームに入力される複素数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -749,9 +761,11 @@ bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*複素数または非等値をテストするには、そのパラメーター型のオブジェクト。
+*left*<br/>
+非等値をテストする複素数またはそのパラメーター型のオブジェクト。
 
-*適切な*複素数または非等値をテストするには、そのパラメーター型のオブジェクト。
+*right*<br/>
+非等値をテストする複素数またはそのパラメーター型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -877,9 +891,11 @@ basic_istream<Elem, Traits>& operator>>(
 
 ### <a name="parameters"></a>パラメーター
 
-*Istr*複素数の抽出元となる入力ストリーム。
+*Istr*<br/>
+複素数が抽出される入力ストリーム。
 
-*適切な*入力ストリームから抽出される複素数。
+*right*<br/>
+入力ストリームから抽出される複素数。
 
 ### <a name="return-value"></a>戻り値
 

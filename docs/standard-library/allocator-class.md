@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4062ebc1e6c78bcd6e50adca4c372012030f75d0
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: eceb6c0b4bb6a43616ceae66701e762e08713bf9
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964510"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101081"
 ---
 # <a name="allocator-class"></a>allocator クラス
 
@@ -64,7 +64,8 @@ class allocator
 
 ### <a name="parameters"></a>パラメーター
 
-*型*記憶されている対象のオブジェクトの種類を割り当てまたは割り当て解除します。
+*Type*<br/>
+ストレージが割り当てまたは割り当て解除されるオブジェクトの型。
 
 ## <a name="remarks"></a>Remarks
 
@@ -126,7 +127,7 @@ class allocator
 |-|-|
 |[operator=](#op_eq)|`allocator` オブジェクトを別の `allocator` オブジェクトに割り当てます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<memory>
 
@@ -143,7 +144,8 @@ const_pointer address(const_reference val) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*val*アドレスが検索対象のオブジェクトの const または nonconst 値。
+*val*<br/>
+アドレスが検索対象となっているオブジェクトの const 値または nonconst 値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -193,7 +195,7 @@ int main( )
 
 ```Output
 The original vector v1 is:
- ( 2 4 6 8 10 12 14 ).
+( 2 4 6 8 10 12 14 ).
 The integer addressed by v1Ptr has a value of: *v1Ptr = 8.
 ```
 
@@ -207,9 +209,11 @@ pointer allocate(size_type count, const void* _Hint);
 
 ### <a name="parameters"></a>パラメーター
 
-*カウント*十分な記憶域を割り当てられる要素の数。
+*count*<br/>
+十分な記憶域を割り当てる要素の数。
 
-*_Hint*ような場合は、アロケーター オブジェクトの const ポインターでは、記憶域の要求を満たす要求の前に割り当てられたオブジェクトのアドレスを見つけることです。
+*_Hint*<br/>
+アロケーター オブジェクトを支援できる const ポインターは、記憶域への要求を、要求の前に割り当てられたオブジェクトのアドレスを見つけることで満たします。
 
 ### <a name="return-value"></a>戻り値
 
@@ -268,7 +272,8 @@ allocator(const allocator<Other>& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*コピーするアロケーター オブジェクト。
+*right*<br/>
+コピーするアロケーター オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -388,7 +393,7 @@ int main( )
 
 ```Output
 The original vector v1 is:
- ( 2 4 6 8 10 12 14 ).
+( 2 4 6 8 10 12 14 ).
 The integer's address found has a value of: 10.
 ```
 
@@ -442,7 +447,7 @@ int main( )
    // vcref = 150;
    // but the value of the first element could be modified through
    // its nonconst iterator and the const reference would remain valid
- *vfIter = 175;
+*vfIter = 175;
    cout << "The value of the element referred to by vcref,"
         <<"\n after nofication through its nonconst iterator, is: "
         << vcref << "." << endl;
@@ -451,11 +456,11 @@ int main( )
 
 ```Output
 The original vector v is:
- ( 100 200 300 400 500 600 700 ).
+( 100 200 300 400 500 600 700 ).
 The value of the element referred to by vref is: 100,
- the first element in the vector.
+the first element in the vector.
 The value of the element referred to by vcref,
- after nofication through its nonconst iterator, is: 175.
+after nofication through its nonconst iterator, is: 175.
 ```
 
 ## <a name="construct"></a>  allocator::construct
@@ -471,9 +476,11 @@ void construct(pointer ptr, _Other&&...   val);
 
 ### <a name="parameters"></a>パラメーター
 
-*ptr*オブジェクトが構築されている場所へのポインター。
+*ptr*<br/>
+オブジェクトが構築される場所へのポインター。
 
-*val*が構築されるオブジェクトが初期化する値。
+*val*<br/>
+構築されるオブジェクトが初期化される値。
 
 ### <a name="remarks"></a>Remarks
 
@@ -523,9 +530,9 @@ int main( )
 
 ```Output
 The original vector v1 is:
- ( 3 6 9 12 15 18 21 ).
+( 3 6 9 12 15 18 21 ).
 The modified vector v1 is:
- ( 3 7 9 12 15 18 21 ).
+( 3 7 9 12 15 18 21 ).
 ```
 
 ## <a name="deallocate"></a>  allocator::deallocate
@@ -538,9 +545,11 @@ void deallocate(pointer ptr, size_type count);
 
 ### <a name="parameters"></a>パラメーター
 
-*ptr*記憶域割り当てを解除するのには、最初のオブジェクトへのポインター。
+*ptr*<br/>
+記憶域から割り当てを解除される最初のオブジェクトへのポインター。
 
-*カウント*記憶域から割り当てを解除するオブジェクトの数。
+*count*<br/>
+記憶域から割り当てを解除されるオブジェクトの数。
 
 ### <a name="remarks"></a>Remarks
 
@@ -560,7 +569,8 @@ void destroy(pointer ptr);
 
 ### <a name="parameters"></a>パラメーター
 
-*ptr*破棄するオブジェクトのアドレスを指定するポインター。
+*ptr*<br/>
+破棄するオブジェクトのアドレスを指定するポインター。
 
 ### <a name="remarks"></a>Remarks
 
@@ -610,9 +620,9 @@ int main( )
 
 ```Output
 The original vector v1 is:
- ( 2 4 6 8 10 12 14 ).
+( 2 4 6 8 10 12 14 ).
 The modified vector v1 is:
- ( 2 4 6 8 10 -99 14 ).
+( 2 4 6 8 10 -99 14 ).
 ```
 
 ## <a name="difference_type"></a>  allocator::difference_type
@@ -670,7 +680,7 @@ int main( )
 
 ```Output
 The original vector v1 is:
- ( 0 2 4 6 8 10 12 14 ).
+( 0 2 4 6 8 10 12 14 ).
 Pointer v1PtrA addresses 4.
 Pointer v1PtrB addresses 12.
 The difference between the integer's addresses is: 8.
@@ -756,7 +766,8 @@ allocator<Type>& operator=(const allocator<Other>& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*このようなオブジェクト別に割り当てられるアロケーター オブジェクト。
+*right*<br/>
+このような別のオブジェクトに割り当てられるアロケーター オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -842,7 +853,7 @@ int main( )
       v1.push_back( 3 * i );
    }
 
-   cout << "The original vector v1 is:\n ( " ;
+   cout << "The original vector v1 is:\n( " ;
    for ( v1Iter = v1.begin( ) ; v1Iter != v1.end( ) ; v1Iter++ )
       cout << *v1Iter << " ";
    cout << ")." << endl;
@@ -858,7 +869,7 @@ int main( )
 
 ```Output
 The original vector v1 is:
- ( 3 6 9 12 15 18 21 ).
+( 3 6 9 12 15 18 21 ).
 The integer addressed by v1Ptr has a value of: *v1Ptr = 12.
 ```
 
@@ -870,7 +881,8 @@ struct rebind {    typedef allocator<_Other> other ;    };
 ```
 ### <a name="parameters"></a>パラメーター
 
-*その他の*メモリが割り当てられる要素の型。
+*other*<br/>
+メモリが割り当てられる要素の型。
 
 ### <a name="remarks"></a>Remarks
 
@@ -969,9 +981,9 @@ int main( )
 
 ```Output
 The original vector v is:
- ( 100 200 300 400 500 600 700 ).
+( 100 200 300 400 500 600 700 ).
 The value of the element referred to by vref is: 100,
- the first element in the vector.
+the first element in the vector.
 The element referred to by vref after being modified is: 150.
 ```
 
@@ -1061,7 +1073,7 @@ int main( )
 
    vfIter = v.begin( );
    allocator<double>::value_type vecVal = 150.0;
- *vfIter = vecVal;
+*vfIter = vecVal;
    cout << "The value of the element addressed by vfIter is: "
         << *vfIter << ",\n the first element in the vector." << endl;
 
@@ -1074,11 +1086,11 @@ int main( )
 
 ```Output
 The original vector v is:
- ( 100 200 300 400 500 600 700 ).
+( 100 200 300 400 500 600 700 ).
 The value of the element addressed by vfIter is: 150,
- the first element in the vector.
+the first element in the vector.
 The modified vector v is:
- ( 150 200 300 400 500 600 700 ).
+( 150 200 300 400 500 600 700 ).
 ```
 
 ## <a name="see-also"></a>関連項目

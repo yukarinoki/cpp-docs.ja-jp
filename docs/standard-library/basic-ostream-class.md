@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be74641b229fbf888504df72a97f8a5c025d9b7b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f30e2b226524e1d4a62c9f8cc950f4dd30846861
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963717"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100977"
 ---
 # <a name="basicostream-class"></a>basic_ostream クラス
 
@@ -50,9 +50,11 @@ class basic_ostream : virtual public basic_ios<Elem, Tr>
 
 ### <a name="parameters"></a>パラメーター
 
-*Elem* A`char_type`します。
+*Elem*<br/>
+`char_type`。
 
-*Tr*文字`traits_type`します。
+*Tr*<br/>
+文字 `traits_type`。
 
 ## <a name="remarks"></a>Remarks
 
@@ -63,16 +65,16 @@ iostate state = goodbit;
 const sentry ok(*this);
 
 if (ok)
- {try
- {<convert and insert elements
+{try
+{<convert and insert elements
     accumulate flags in state> }
     catch (...)
- {try
- {setstate(badbit);
+{try
+{setstate(badbit);
 
 }
     catch (...)
- {}
+{}
     if ((exceptions()& badbit) != 0)
     throw; }}
 width(0);
@@ -91,16 +93,16 @@ const sentry ok(*this);
 if (!ok)
     state |= badbit;
 else
- {try
- {<obtain and insert elements
+{try
+{<obtain and insert elements
     accumulate flags in state> }
     catch (...)
- {try
- {setstate(badbit);
+{try
+{setstate(badbit);
 
 }
     catch (...)
- {}
+{}
     if ((exceptions()& badbit) != 0)
     throw; }}
 setstate(state);
@@ -141,7 +143,7 @@ basic_istream\< **Elem**, **Tr**> クラスのオブジェクトは、[basic_ios
 |[operator=](#basic_ostream_operator_eq)|指定された `basic_ostream` オブジェクト パラメーターの値をこのオブジェクトに代入します。|
 |[operator<<](#basic_ostream_operator_lt_lt)|ストリームに書き込みます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<ostream>
 
@@ -161,11 +163,14 @@ basic_ostream(basic_ostream&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*strbuf*型のオブジェクト[basic_streambuf](../standard-library/basic-streambuf-class.md)します。
+*strbuf*<br/>
+[basic_streambuf](../standard-library/basic-streambuf-class.md) 型のオブジェクト。
 
-*_Isstd* **true**場合、これは、標準的なストリームです。 それ以外の場合、 **false**します。
+*_Isstd*<br/>
+**true**場合、これは、標準的なストリームです。 それ以外の場合、 **false**します。
 
-*適切な*型のオブジェクトへの右辺値参照`basic_ostream`します。
+*right*<br/>
+`basic_ostream` 型のオブジェクトへの右辺値参照。
 
 ### <a name="remarks"></a>Remarks
 
@@ -242,11 +247,14 @@ basic_ostream<Elem, Tr>& operator<<(const void* val);
 
 ### <a name="parameters"></a>パラメーター
 
-*Pfn*関数ポインター。
+*pfn*<br/>
+関数ポインター。
 
-*strbuf*へのポインターを`stream_buf`オブジェクト。
+*strbuf*<br/>
+ポインターを`stream_buf`オブジェクト。
 
-*val*ストリームに書き込む要素。
+*val*<br/>
+ストリームに書き込む要素。
 
 ### <a name="return-value"></a>戻り値
 
@@ -360,7 +368,8 @@ basic_ostream& operator=(basic_ostream&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*、`rvalue`への参照を`basic_ostream`オブジェクト。
+*right*<br/>
+`basic_ostream` オブジェクトへの `rvalue` 参照。
 
 ### <a name="remarks"></a>Remarks
 
@@ -376,7 +385,8 @@ basic_ostream<Elem, Tr>& put(char_type _Ch);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Ch*文字。
+*_Ch*<br/>
+単一の文字。
 
 ### <a name="return-value"></a>戻り値
 
@@ -419,11 +429,14 @@ basic_ostream<Elem, Tr>& seekp(off_type _Off, ios_base::seekdir _Way);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Pos*ストリーム内の位置。
+*_Pos*<br/>
+ストリーム内の位置。
 
-*_Off*への相対オフセット *_Way*します。
+*_Off*<br/>
+相対オフセット *_Way*します。
 
-*_Way*の 1 つ、 [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir)列挙体。
+*_Way*<br/>
+[ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) 列挙体のうちの 1 つ。
 
 ### <a name="return-value"></a>戻り値
 
@@ -485,7 +498,8 @@ void swap(basic_ostream& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*への参照を`basic_ostream`オブジェクト。
+*right*<br/>
+`basic_ostream` オブジェクトへの参照。
 
 ### <a name="remarks"></a>Remarks
 
@@ -521,9 +535,11 @@ basic_ostream<Elem, Tr>& write(const char_type* str, streamsize count);
 
 ### <a name="parameters"></a>パラメーター
 
-*カウント*をストリームに文字数。
+*count*<br/>
+ストリームに渡す文字の数。
 
-*str*ストリームに格納する文字。
+*str*<br/>
+ストリームに渡す文字。
 
 ### <a name="return-value"></a>戻り値
 

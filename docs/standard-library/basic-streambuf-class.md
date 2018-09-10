@@ -104,12 +104,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bacb90052b46b687349e9069fd7c47f825f0221
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6bc4fa8da5d9fa2d15febc3c7b016622e614129a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202793"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100964"
 ---
 # <a name="basicstreambuf-class"></a>basic_streambuf クラス
 
@@ -124,9 +124,11 @@ class basic_streambuf;
 
 ### <a name="parameters"></a>パラメーター
 
-*Elem* A [char_type](#char_type)します。
+*Elem*<br/>
+[char_type](#char_type)。
 
-*Tr*文字[traits_type](#traits_type)します。
+*Tr*<br/>
+文字の [traits_type](#traits_type)。
 
 ## <a name="remarks"></a>Remarks
 
@@ -250,7 +252,8 @@ basic_streambuf(const basic_streambuf& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*への左辺値参照、`basic_streambuf`これの値を設定するために使用するオブジェクト`basic_streambuf`オブジェクト。
+*right*<br/>
+この `basic_streambuf` オブジェクトに値を設定するために使用される `basic_streambuf` オブジェクトへの左辺値参照。
 
 ### <a name="remarks"></a>Remarks
 
@@ -312,7 +315,8 @@ void gbump(int count);
 
 ### <a name="parameters"></a>パラメーター
 
-*カウント*をマウス ポインターを進める量。
+*count*<br/>
+マウス ポインターを進める量。
 
 ## <a name="getloc"></a>  basic_streambuf::getloc
 
@@ -370,7 +374,8 @@ virtual void imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Loc*ロケールへの参照。
+*_Loc*<br/>
+ロケールへの参照。
 
 ### <a name="remarks"></a>Remarks
 
@@ -436,7 +441,8 @@ basic_streambuf& operator=(const basic_streambuf& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*への左辺値参照、`basic_streambuf`このオブジェクトに値を割り当てるために使用するオブジェクト。
+*right*<br/>
+このオブジェクトに値を代入するために使用される `basic_streambuf` オブジェクトへの左辺値参照。
 
 ### <a name="remarks"></a>Remarks
 
@@ -452,7 +458,8 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>パラメーター
 
-*_Meta* 、バッファーに挿入する文字または**traits_type::**[eof](../standard-library/char-traits-struct.md#eof)します。
+*_Meta*<br/>
+バッファーまたは **traits_type::**[eof](../standard-library/char-traits-struct.md#eof) に挿入する文字。
 
 ### <a name="return-value"></a>戻り値
 
@@ -486,7 +493,8 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>パラメーター
 
-*_Meta* 、バッファーに挿入する文字または**traits_type::**[eof](../standard-library/char-traits-struct.md#eof)します。
+*_Meta*<br/>
+バッファーまたは **traits_type::**[eof](../standard-library/char-traits-struct.md#eof) に挿入する文字。
 
 ### <a name="return-value"></a>戻り値
 
@@ -524,7 +532,8 @@ void pbump(int count);
 
 ### <a name="parameters"></a>パラメーター
 
-*カウント*フォワード、ライトを移動する文字数を配置します。
+*count*<br/>
+書き込み位置を前方に移動する文字数。
 
 ## <a name="pos_type"></a>  basic_streambuf::pos_type
 
@@ -556,7 +565,8 @@ locale pubimbue(const locale& _Loc);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Loc*ロケールへの参照。
+*_Loc*<br/>
+ロケールへの参照。
 
 ### <a name="return-value"></a>戻り値
 
@@ -582,11 +592,14 @@ pos_type pubseekoff(off_type _Off,
 
 ### <a name="parameters"></a>パラメーター
 
-*_Off*に対して相対的にシークする位置 *_Way*します。
+*_Off*<br/>
+に対して相対的にシークする位置 *_Way*します。
 
-*_Way*オフセット演算の開始位置。 有効値については、「[seekdir](../standard-library/ios-base-class.md#seekdir)」を参照してください。
+*_Way*<br/>
+オフセット演算の開始位置。 有効値については、「[seekdir](../standard-library/ios-base-class.md#seekdir)」を参照してください。
 
-*_Which*ポインターの位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
+*_Which*<br/>
+ポインター位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -606,9 +619,11 @@ pos_type pubseekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in | ios
 
 ### <a name="parameters"></a>パラメーター
 
-*_Sp*シークする位置。
+*_Sp*<br/>
+シークする位置。
 
-*_Which*ポインターの位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
+*_Which*<br/>
+ポインター位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -630,9 +645,11 @@ basic_streambuf<Elem, Tr> *pubsetbuf(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Buffer*へのポインター`char_type`のこのインスタンス化します。
+*_Buffer*<br/>
+このインスタンス化の `char_type` を指すポインター。
 
-*カウント*バッファーのサイズ。
+*count*<br/>
+バッファーのサイズ。
 
 ### <a name="return-value"></a>戻り値
 
@@ -707,11 +724,14 @@ virtual pos_type seekoff(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Off*に対して相対的にシークする位置 *_Way*します。
+*_Off*<br/>
+に対して相対的にシークする位置 *_Way*します。
 
-*_Way*オフセット演算の開始位置。 有効値については、「[seekdir](../standard-library/ios-base-class.md#seekdir)」を参照してください。
+*_Way*<br/>
+オフセット演算の開始位置。 有効値については、「[seekdir](../standard-library/ios-base-class.md#seekdir)」を参照してください。
 
-*_Which*ポインターの位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
+*_Which*<br/>
+ポインター位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -741,9 +761,11 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 ### <a name="parameters"></a>パラメーター
 
-*_Sp*シークする位置。
+*_Sp*<br/>
+シークする位置。
 
-*_Which*ポインターの位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
+*_Which*<br/>
+ポインター位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -769,9 +791,11 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Buffer*バッファーへのポインター。
+*_Buffer*<br/>
+バッファーへのポインター。
 
-*カウント*バッファーのサイズ。
+*count*<br/>
+バッファーのサイズ。
 
 ### <a name="return-value"></a>戻り値
 
@@ -793,11 +817,14 @@ void setg(char_type* _Gbeg,
 
 ### <a name="parameters"></a>パラメーター
 
-*_Gbeg*バッファーの先頭へのポインター。
+*_Gbeg*<br/>
+バッファーの先頭を指すポインター。
 
-*_Gnext*別の場所へのポインター、バッファーの途中でします。
+*_Gnext*<br/>
+バッファーの中心付近を指すポインター。
 
-*_Gend*バッファーの末尾へのポインター。
+*_Gend*<br/>
+バッファーの末尾を指すポインター。
 
 ## <a name="setp"></a>  basic_streambuf::setp
 
@@ -809,9 +836,11 @@ void setp(char_type* _Pbeg, char_type* _Pend);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Pbeg*バッファーの先頭へのポインター。
+*_Pbeg*<br/>
+バッファーの先頭を指すポインター。
 
-*_Pend*バッファーの末尾へのポインター。
+*_Pend*<br/>
+バッファーの末尾を指すポインター。
 
 ## <a name="sgetc"></a>  basic_streambuf::sgetc
 
@@ -863,9 +892,11 @@ streamsize sgetn(
 
 ### <a name="parameters"></a>パラメーター
 
-*ptr*抽出した文字を格納するバッファー。
+*ptr*<br/>
+抽出した文字を格納するバッファー。
 
-*カウント*読み取られる要素の数。
+*count*<br/>
+読み取られる要素数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -967,7 +998,8 @@ int_type sputbackc(char_type _Ch);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Ch*文字。
+*_Ch*<br/>
+文字。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1014,7 +1046,8 @@ int_type sputc(char_type _Ch);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Ch*文字。
+*_Ch*<br/>
+文字。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1056,9 +1089,11 @@ streamsize sputn(const char_type* ptr, streamsize count);
 
 ### <a name="parameters"></a>パラメーター
 
-*ptr*文字の文字列。
+*ptr*<br/>
+文字列。
 
-*カウント*文字の数。
+*count*<br/>
+文字数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1281,9 +1316,11 @@ virtual streamsize xsgetn(
 
 ### <a name="parameters"></a>パラメーター
 
-*ptr*抽出した文字を格納するバッファー。
+*ptr*<br/>
+抽出した文字を格納するバッファー。
 
-*カウント*を抽出する要素の数。
+*count*<br/>
+抽出する要素数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1303,9 +1340,11 @@ virtual streamsize xsputn(const char_type* ptr, streamsize count);
 
 ### <a name="parameters"></a>パラメーター
 
-*ptr*を挿入する要素を指すポインター。
+*ptr*<br/>
+挿入する要素へのポインター。
 
-*カウント*を挿入する要素の数。
+*count*<br/>
+挿入する要素の数。
 
 ### <a name="return-value"></a>戻り値
 

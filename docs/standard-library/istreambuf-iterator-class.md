@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f96fbe8525ee4eef44da70261bd62e079aa279a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 381316cd7b05f62ba8b730c376e266e5fd0a70cb
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960592"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109286"
 ---
 # <a name="istreambufiterator-class"></a>istreambuf_iterator クラス
 
@@ -49,9 +49,11 @@ class istreambuf_iterator
 
 ### <a name="parameters"></a>パラメーター
 
-*CharType* istreambuf_iterator の文字の種類を表す型です。
+*CharType*<br/>
+istreambuf_iterator の文字型を表す型。
 
-*Traits* istreambuf_iterator の文字の種類を表す型です。 この引数は省略可能であり、既定値は `char_traits`\< *CharType>* です。
+*Traits*<br/>
+istreambuf_iterator の文字型を表す型。 この引数は省略可能であり、既定値は `char_traits`\< *CharType>* です。
 
 ## <a name="remarks"></a>Remarks
 
@@ -89,7 +91,7 @@ null 以外の格納されたポインターを使用して istreambuf_iterator 
 |[operator++](#op_add_add)|入力ストリームから次の文字を返すか、オブジェクトをインクリメントする前にオブジェクトをコピーして、そのコピーを返します。|
 |[operator->](#op_arrow)|メンバーの値 (存在する場合) を返します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<iterator>
 
@@ -150,7 +152,8 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*等しいかどうかを確認する対象の反復子。
+*right*<br/>
+等価性をチェックする反復子。
 
 ### <a name="return-value"></a>戻り値
 
@@ -246,9 +249,11 @@ istreambuf_iterator(istream_type& _Istr) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*strbuf*入力ストリーム バッファーへ、`istreambuf_iterator`が関連付けられています。
+*strbuf*<br/>
+`istreambuf_iterator` が関連付けられている入力ストリーム バッファー。
 
-*_Istr*先の入力ストリーム、`istreambuf_iterator`が関連付けられています。
+*_Istr*<br/>
+`istreambuf_iterator` が関連付けられている入力ストリーム。
 
 ### <a name="remarks"></a>Remarks
 
@@ -319,7 +324,7 @@ int main( )
    ostreambuf_iterator<char> outpos ( cout );
    while ( inpos != endpos )
    {
- *outpos = *inpos;   //Put value of outpos equal to inpos
+*outpos = *inpos;   //Put value of outpos equal to inpos
       ++inpos;
       ++outpos;
    }
@@ -364,7 +369,7 @@ int main( )
    ostreambuf_iterator<char> outpos ( cout );
    while ( inpos != endpos )
    {
- *outpos = *inpos;
+*outpos = *inpos;
       ++inpos;   //Increment istreambuf_iterator
       ++outpos;
    }

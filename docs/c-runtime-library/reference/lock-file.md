@@ -34,16 +34,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a7be40c729faff78c75c4ee751737a7b53592aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 705210881faed70a32c1ddd52d7257b5b5e5f161
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400659"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107496"
 ---
 # <a name="lockfile"></a>_lock_file
 
-ロック、**ファイル**オブジェクトにアクセスするスレッドの一貫性を確保する、**ファイル**オブジェクトを同時にします。
+ロックを**ファイル**オブジェクトにアクセスするスレッドの一貫性を確保する、**ファイル**オブジェクトを同時にします。
 
 ## <a name="syntax"></a>構文
 
@@ -53,15 +53,16 @@ void _lock_file( FILE* file );
 
 ### <a name="parameters"></a>パラメーター
 
-*ファイル*ファイル ハンドル。
+*file*<br/>
+ファイル ハンドルです。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Lock_file**関数のロック、**ファイル**で指定されたオブジェクト*ファイル*です。 によって、基になるファイルがロックされていない **_lock_file**です。 ファイルのロックを解除するには、[_unlock_file](unlock-file.md) を使用します。 呼び出す **_lock_file**と **_unlock_file**のスレッドに一致する必要があります。
+**_Lock_file**ロック機能、**ファイル**で指定されたオブジェクト*ファイル*します。 によって、基になるファイルがロックされていない **_lock_file**します。 ファイルのロックを解除するには、[_unlock_file](unlock-file.md) を使用します。 呼び出す **_lock_file**と **_unlock_file**スレッド内で一致する必要があります。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_lock_file**|\<stdio.h>|
 

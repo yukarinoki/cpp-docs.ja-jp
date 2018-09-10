@@ -15,53 +15,57 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f60349203ce55a927ffac3d095988e5198bedd87
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b78d205956f026fe730848afa4c0d6fe7b52b52c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764096"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102003"
 ---
 # <a name="platformsizet-value-class"></a>Platform::SizeT 値クラス
-オブジェクトのサイズを表します。 SizeT は符号なしのデータ型です。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-public ref class SizeT sealed : ValueType  
-```  
-  
-### <a name="members"></a>メンバー  
-  
-|メンバー|説明|  
-|------------|-----------------|  
-|[SizeT::SizeT コンストラクター](#ctor)|指定された値で、クラスの新しいインスタンスを初期化します。|  
-  
-### <a name="requirements"></a>要件  
- **クライアントがサポートされている最小:** Windows 8  
-  
- **サポートされているサーバーの最小値:** Windows Server 2012  
-  
- **名前空間:** Platform  
-  
- **メタデータ:** platform.winmd  
 
- ## <a name="ctor"></a>  Sizet::sizet コンス トラクター
-指定された値を持つ SizeT の新しいインスタンスを初期化します。  
-  
-### <a name="syntax"></a>構文  
-  
-```cpp  
-SizeT( uint32 value1 );   SizeT( void* value2 );  
-```  
-  
-### <a name="parameters"></a>パラメーター  
- value1  
- 符号なし 32 ビット値。  
-  
- value2  
- 符号なし 32 ビット値へのポインター。  
-  
-  
-## <a name="see-also"></a>関連項目  
- [Platform 名前空間](../cppcx/platform-namespace-c-cx.md)
+オブジェクトのサイズを表します。 SizeT は符号なしのデータ型です。
+
+## <a name="syntax"></a>構文
+
+```cpp
+public ref class SizeT sealed : ValueType
+```
+
+### <a name="members"></a>メンバー
+
+|メンバー|説明|
+|------------|-----------------|
+|[SizeT::SizeT コンストラクター](#ctor)|指定された値で、クラスの新しいインスタンスを初期化します。|
+
+### <a name="requirements"></a>要件
+
+**クライアントがサポートされている最小:** Windows 8
+
+**サポートされているサーバーの最小値:** Windows Server 2012
+
+**名前空間:** Platform
+
+**メタデータ:** platform.winmd
+
+## <a name="ctor"></a>  Sizet::sizet コンス トラクター
+
+指定された値を持つ SizeT の新しいインスタンスを初期化します。
+
+### <a name="syntax"></a>構文
+
+```cpp
+SizeT( uint32 value1 );   SizeT( void* value2 );
+```
+
+### <a name="parameters"></a>パラメーター
+
+*Value1*<br/>
+符号なし 32 ビット値。
+
+*Value2*<br/>
+符号なし 32 ビット値へのポインター。
+
+## <a name="see-also"></a>関連項目
+
+[Platform 名前空間](../cppcx/platform-namespace-c-cx.md)

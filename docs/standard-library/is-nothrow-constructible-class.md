@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c4a96224b86cb12af4e3abfed1f02b33e8a2594
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0726839baadf5265d604f231615f1add069ccfcb
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966564"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106528"
 ---
 # <a name="isnothrowconstructible-class"></a>is_nothrow_constructible クラス
 
@@ -37,15 +37,17 @@ struct is_nothrow_constructible;
 
 ### <a name="parameters"></a>パラメーター
 
-*T*照会する型。
+*T*<br/>
+照会する型。
 
-*Args*のコンス トラクターで一致させる引数型*T*します。
+*Args*<br/>
+引数の型のコンス トラクターで一致するように*T*します。
 
 ## <a name="remarks"></a>Remarks
 
 場合、型述語のインスタンスは true を保持型*T*の引数の型を使用して構築できる*Args*、コンス トラクターがコンパイラによってスローしないと判明あり、それ以外の場合は false を保持します。 型*T*を構築できる場合は、変数定義`T t(std::declval<Args>()...);`が整形式。 両方*T*とすべての種類で*Args*完全な型は、必要があります**void**、または不明なバインドの配列。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<type_traits>
 

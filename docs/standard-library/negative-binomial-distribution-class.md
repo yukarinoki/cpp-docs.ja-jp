@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52f9c1335304cc3eefec76abde641e62932eb727
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 7d2035a1146c5e620d8f75dd6bba5095a7630e0a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964409"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103998"
 ---
 # <a name="negativebinomialdistribution-class"></a>negative_binomial_distribution クラス
 
@@ -81,7 +81,8 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*IntType*整数の結果の型の既定値**int**します。使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*IntType*<br/>
+整数の結果の型の既定値**int**します。使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
@@ -225,7 +226,7 @@ Histogram for 100 samples:
     69 ::::
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<random>
 
@@ -242,11 +243,14 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*k* 、`k`分布パラメーター。
+*k*<br/>
+`k` 分布パラメーター。
 
-*p* 、`p`分布パラメーター。
+*p*<br/>
+`p` 分布パラメーター。
 
-*parm*分布の作成に使用されるパラメーターの構造体。
+*parm*<br/>
+分布の作成に使用されるパラメーターの構造体。
 
 ### <a name="remarks"></a>Remarks
 
@@ -266,11 +270,14 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*k* 、`k`分布パラメーター。
+*k*<br/>
+`k` 分布パラメーター。
 
-*p* 、`p`分布パラメーター。
+*p*<br/>
+`p` 分布パラメーター。
 
-*適切な*、`param_type`構造体を比較するために使用します。
+*right*<br/>
+比較に使用される `param_type` 構造体。
 
 ### <a name="remarks"></a>Remarks
 

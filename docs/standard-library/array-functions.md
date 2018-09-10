@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d369ba9b2af313c27e96e9981129fe2cf1da3c8
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a67a22b8236646b549032e236006cd4855c3a43c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961072"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108727"
 ---
 # <a name="ltarraygt-functions"></a>&lt;array&gt; 関数
 
@@ -50,13 +50,17 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*インデックス*要素のオフセット。
+*Index*<br/>
+要素のオフセット。
 
-*T*要素の型。
+*T*<br/>
+要素の型。
 
-*N*配列内の要素の数。
+*N*<br/>
+配列の要素数。
 
-*arr*から選択する配列。
+*arr*<br/>
+選択する配列。
 
 ### <a name="example"></a>例
 
@@ -101,13 +105,17 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*要素の型。
+*Ty*<br/>
+要素の型。
 
-*N*配列のサイズ。
+*N*<br/>
+配列のサイズ。
 
-*左*スワップする最初の配列。
+*left*<br/>
+交換する最初の配列。
 
-*適切な*交換する 2 番目の配列。
+*right*<br/>
+交換する 2 番目の配列。
 
 ### <a name="remarks"></a>Remarks
 

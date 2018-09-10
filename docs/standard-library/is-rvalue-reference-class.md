@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acba0f78df8cc537aecd5d2fc33380e4674e5721
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6bbaa215335a299eee8971b113fdcf3860e9b740
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956922"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106497"
 ---
 # <a name="isrvaluereference-class"></a>is_rvalue_reference クラス
 
@@ -37,13 +37,14 @@ struct is_rvalue_reference;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*照会する型。
+*Ty*<br/>
+照会する型。
 
 ## <a name="remarks"></a>Remarks
 
 場合はこの型述語のインスタンスは true を保持型*Ty*は、[右辺値参照](../cpp/rvalue-reference-declarator-amp-amp.md)します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<type_traits>
 

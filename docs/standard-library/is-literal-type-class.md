@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a14b2fe5a14eaf264377a1f818227d73e134b030
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: fd4481be124cbcbba04f6b45b4c5a08beb34f04d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957968"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103306"
 ---
 # <a name="isliteraltype-class"></a>is_literal_type クラス
 
@@ -37,13 +37,14 @@ struct is_literal_type;
 
 ### <a name="parameters"></a>パラメーター
 
-*T*照会する型。
+*T*<br/>
+照会する型。
 
 ## <a name="remarks"></a>Remarks
 
 場合、型述語のインスタンスは true を保持型*T*は、*リテラル型*、それ以外の場合は false を保持します。 リテラル型は、いずれかの**void**、スカラー型、参照型、リテラルの型の配列またはリテラル クラス型。 リテラル クラス型は、単純なデストラクターを持つクラス型であり、集計の型であるか、または少なくとも 1 つのムーブ禁止、コピー禁止の `constexpr` コンストラクターを持ち、そのすべての基底クラスと非静的データ メンバーは、非 volatile のリテラル型です。 リテラルの型は常にリテラル型ですが、リテラル型の概念は、コンパイラがコンパイル時に `constexpr` として評価できるあらゆるものを含みます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<type_traits>
 

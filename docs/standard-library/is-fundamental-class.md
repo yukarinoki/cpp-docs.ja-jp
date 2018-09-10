@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63b2c11b7a5a8d48e3fe068807b641489c6aa323
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: d27d141b4ec475f3df6e4bf56dba80850767beb0
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957361"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106770"
 ---
 # <a name="isfundamental-class"></a>is_fundamental クラス
 
@@ -37,7 +37,8 @@ struct is_fundamental;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*照会する型。
+*Ty*<br/>
+照会する型。
 
 ## <a name="remarks"></a>Remarks
 
@@ -79,7 +80,7 @@ is_fundamental<const float> == true
 is_fundamental<void> == true
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<type_traits>
 

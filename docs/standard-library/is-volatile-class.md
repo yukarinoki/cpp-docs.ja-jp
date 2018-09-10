@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8e3ec18d00c50db29c6a08956d4c3375a4dc7ae
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: d35b28025370f7f8dc66c83a12a8e6142e6085ef
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962385"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104278"
 ---
 # <a name="isvolatile-class"></a>is_volatile クラス
 
@@ -37,7 +37,8 @@ struct is_volatile;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*照会する型。
+*Ty*<br/>
+照会する型。
 
 ## <a name="remarks"></a>Remarks
 
@@ -79,7 +80,7 @@ is_volatile<int> == false
 is_volatile<volatile int> == true
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<type_traits>
 

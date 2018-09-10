@@ -16,33 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee6e30b4f55b5d87ee5b1f67d39d3cc96932f065
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8ac52615a9cc00a3fbfdb253e44c7ce5d239009a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760761"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103688"
 ---
 # <a name="platformnotimplementedexception-class"></a>Platform::NotImplementedException クラス
-インターフェイス メンバーが派生型で実装されていない場合にスローされます。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-public ref class NotImplementedException : COMException,    IException,    IPrintable,    IEquatable  
-```  
-  
-### <a name="remarks"></a>Remarks  
- 詳細については、 [COMException](../cppcx/platform-comexception-class.md) クラスを参照してください。  
-  
-### <a name="requirements"></a>要件  
- **クライアントがサポートされている最小:** Windows 8  
-  
- **サポートされているサーバーの最小値:** Windows Server 2012  
-  
- **名前空間:** Platform  
-  
- **メタデータ:** platform.winmd  
-  
-## <a name="see-also"></a>関連項目  
- [Platform::COMException クラス](../cppcx/platform-comexception-class.md)
+
+インターフェイス メンバーが派生型で実装されていない場合にスローされます。
+
+## <a name="syntax"></a>構文
+
+```cpp
+public ref class NotImplementedException : COMException,    IException,    IPrintable,    IEquatable
+```
+
+### <a name="remarks"></a>Remarks
+
+詳細については、 [COMException](../cppcx/platform-comexception-class.md) クラスを参照してください。
+
+### <a name="requirements"></a>要件
+
+**クライアントがサポートされている最小:** Windows 8
+
+**サポートされているサーバーの最小値:** Windows Server 2012
+
+**名前空間:** Platform
+
+**メタデータ:** platform.winmd
+
+## <a name="see-also"></a>関連項目
+
+[Platform::COMException クラス](../cppcx/platform-comexception-class.md)

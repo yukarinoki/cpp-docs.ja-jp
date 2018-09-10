@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4dfbd3bc6a020dba4b6e5eb868e21ec37fcc1ab
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ffd7a429bbddc81458538ace0ccc138dec65b9aa
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955248"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106573"
 ---
 # <a name="moveiterator-class"></a>move_iterator クラス
 
@@ -90,7 +90,7 @@ class move_iterator;
 |[move_iterator::operator+=](#op_add_eq)|右辺値を格納されている反復子に加算し、`*this` を返します。|
 |[move_iterator::operator-=](#operator-_eq)|右辺値を格納されている反復子から減算し、`*this` を返します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<iterator>
 
@@ -157,7 +157,8 @@ move_iterator(const move_iterator<Type>& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*格納された反復子として使用する反復子。
+*right*<br/>
+格納されている反復子として使用する反復子。
 
 ### <a name="remarks"></a>Remarks
 
@@ -173,7 +174,8 @@ move_iterator& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Off*新しい現在位置を決定するには、現在の位置に追加するオフセット。
+*_Off*<br/>
+新しい現在位置を決定するために現在位置に追加するオフセット。
 
 ### <a name="return-value"></a>戻り値
 

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::chrono [C++], duration
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4b85fd369e82ceab0a6b5255267e32d864eab67
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: bb4d2c813b53a180f13d5047dc0d78dae98fe59f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956867"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100912"
 ---
 # <a name="duration-class"></a>duration クラス
 
@@ -85,7 +85,7 @@ class duration <duration<Rep, Period1>, Period2>;
 |[duration::operator+=](#op_add_eq)|指定した `duration` オブジェクトのティック カウントを、格納されたティック カウントに加算します。|
 |[duration::operator-=](#operator-_eq)|指定した `duration` オブジェクトのティック カウントを、格納されたティック カウントから減算します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<chrono >
 
@@ -120,13 +120,17 @@ constexpr duration(const duration<Rep2, Period2>& Dur);
 
 ### <a name="parameters"></a>パラメーター
 
-*Rep2*タイマー刻みの数を表す演算型。
+*Rep2*<br/>
+ティック数を表す演算型。
 
-*Period2* A`std::ratio`を秒単位でティック期間を表すテンプレートの特殊化します。
+*Period2*<br/>
+秒単位でティック期間を表すための `std::ratio` テンプレートの特殊化。
 
-*R*既定の期間のタイマー刻みの数。
+*R*<br/>
+既定の期間のティック数。
 
-*期間*によって指定された期間のタイマー刻み数*Period2*します。
+*期間*<br/>
+によって指定された期間のタイマー刻み数*Period2*します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -202,7 +206,8 @@ duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>パラメーター
 
-*Div*最初の方法では、 *Div*ティック数を表します。 2 番目のメソッドでは、 *Div*は、`duration`ティック カウントを格納しているオブジェクト。
+*Div*<br/>
+最初の方法では、 *Div*ティック数を表します。 2 番目のメソッドでは、 *Div*は、`duration`ティック カウントを格納しているオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -218,7 +223,8 @@ duration& operator*=(const rep& Mult);
 
 ### <a name="parameters"></a>パラメーター
 
-*Mult*で指定された型の値`duration::rep`します。
+*Mult*<br/>
+`duration::rep` によって指定される型の値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -234,7 +240,8 @@ duration& operator/=(const rep& Div);
 
 ### <a name="parameters"></a>パラメーター
 
-*Div*で指定された型の値`duration::rep`します。
+*Div*<br/>
+`duration::rep` によって指定される型の値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -274,7 +281,8 @@ duration& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>パラメーター
 
-*期間*A`duration`オブジェクト。
+*期間*<br/>
+`duration` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -290,7 +298,8 @@ duration& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>パラメーター
 
-*期間*A`duration`オブジェクト。
+*期間*<br/>
+`duration` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -314,7 +323,8 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>パラメーター
 
-*Div* duration オブジェクトまたはティック カウントを表す値のいずれかであると、除数。
+*Div*<br/>
+除数。duration オブジェクトまたはティック カウントを表す値のいずれかです。
 
 ### <a name="remarks"></a>Remarks
 

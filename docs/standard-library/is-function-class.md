@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ef542ea54c0fc570443fa07908968ffa3398232
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f668a1439f1694263405932c290cc5b54543ac84
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953786"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101029"
 ---
 # <a name="isfunction-class"></a>is_function クラス
 
@@ -37,7 +37,8 @@ struct is_function;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*照会する型。
+*Ty*<br/>
+照会する型。
 
 ## <a name="remarks"></a>Remarks
 
@@ -81,7 +82,7 @@ is_function<functional> == false
 is_function<float()> == true
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<type_traits>
 

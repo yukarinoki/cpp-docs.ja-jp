@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b933029f7180292e1c9e392bf2ab09e8dbcb204
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e4f1f34e43f04d19efb38ba32488b43845d42260
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963226"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110413"
 ---
 # <a name="stack-class"></a>stack クラス
 
@@ -50,9 +50,11 @@ class stack
 
 ### <a name="parameters"></a>パラメーター
 
-*型*スタックに格納される要素のデータを入力します。
+*Type*<br/>
+スタックに格納される要素のデータ型。
 
-*コンテナー*スタックを実装するために使用される基になるコンテナーの種類。 既定値は、クラス `deque`*\<Type>* です。
+*コンテナー*<br/>
+スタックを実装するために使用する基になるコンテナーの型。 既定値は、クラス `deque`*\<Type>* です。
 
 ## <a name="remarks"></a>Remarks
 
@@ -92,7 +94,7 @@ Stack オブジェクトは、等値比較できる場合、場合にのみを�
 |[size](#size)|`stack` 内の要素数を返します。|
 |[top](#top)|`stack` の先頭にある要素への参照を返します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<stack>
 
@@ -227,7 +229,8 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>パラメーター
 
-*val*スタックの一番上に追加する要素。
+*val*<br/>
+スタックの先頭に追加される要素。
 
 ### <a name="remarks"></a>Remarks
 
@@ -334,7 +337,8 @@ explicit stack(const container_type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*構築されたスタックをコピーがあるコンテナー。
+*right*<br/>
+構築される container のコピー元となる container。
 
 ### <a name="example"></a>例
 

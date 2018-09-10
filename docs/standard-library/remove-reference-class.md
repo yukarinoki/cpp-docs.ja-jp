@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 343acc8d23e2b67c1e9f7556ffe2268c94bb3c63
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 34f52d6eb1e93de112176e58a23cf6163ce84a62
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957903"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110111"
 ---
 # <a name="removereference-class"></a>remove_reference クラス
 
@@ -40,7 +40,8 @@ using remove_reference_t = typename remove_reference<T>::type;
 
 ### <a name="parameters"></a>パラメーター
 
-*T*を変更する型。
+*T*<br/>
+変更する型。
 
 ## <a name="remarks"></a>Remarks
 
@@ -68,7 +69,7 @@ int main()
 remove_reference_t<int&> == int
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<type_traits>
 

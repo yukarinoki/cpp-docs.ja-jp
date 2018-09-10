@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65ac9dc44da5126673ee1f0699f5a5dd9dcb87e1
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 863c842fe3d5635848b569ad0cad6dad0556e302
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960782"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102539"
 ---
 # <a name="iscopyassignable-class"></a>is_copy_assignable クラス
 
@@ -36,13 +36,14 @@ struct is_copy_assignable;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*照会する型。
+*Ty*<br/>
+照会する型。
 
 ## <a name="remarks"></a>Remarks
 
 場合、型述語のインスタンスは true を保持型*Ty*はコピー代入演算子を持つ、それ以外の場合は false を保持するクラスです。 is_assignable\<Ty&, const Ty&> に相当します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<type_traits>
 

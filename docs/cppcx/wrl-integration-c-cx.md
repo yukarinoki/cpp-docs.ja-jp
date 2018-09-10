@@ -9,17 +9,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff2fc36582e6ffbff8f7608a5a26cc472687132e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1bd61fd12c555c42f3226d523a519c29f1d09c10
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760979"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102695"
 ---
 # <a name="wrl-integration-ccx"></a>WRL 統合 (C++/CX)
 
 自由に WRL コードと Windows ランタイム C++ テンプレート ライブラリ (WRL) のコードを混在できます。 同じ翻訳単位で、WRL からオブジェクトへのハンドルで宣言されたオブジェクトを使用することができます (`^`) 表記と WRL のスマート ポインター (`ComPtr<T>`) 表記法。 ただし、戻り値、および WRL HRESULT エラー コードおよび WRL の例外を手動で処理する必要があります。
-  
+
 ## <a name="wrl-development"></a>WRL の開発
 
 作成と WRL コンポーネントを利用する方法の詳細についてを参照してください。 [Windows ランタイム C++ テンプレート ライブラリ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)します。
@@ -115,9 +115,8 @@ IVector<String^>^ GetTypeMethods(Object^ instance)
     }
     return retVal;
 }
-
 ```
 
 ## <a name="see-also"></a>関連項目
 
-[その他の言語との相互運用](interoperating-with-other-languages-c-cx.md)  
+[その他の言語との相互運用](interoperating-with-other-languages-c-cx.md)

@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4c92b24dbd5ccfbd308cb1b52dee7347f1df1e4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ee9e6af44c77c16099dc5e30c78ac4a5f39aa54a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959862"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108548"
 ---
 # <a name="normaldistribution-class"></a>normal_distribution クラス
 
@@ -81,7 +81,8 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*RealType*浮動小数点の結果の型の既定値**二重**します。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*RealType*<br/>
+浮動小数点の結果の型の既定値**二重**します。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
@@ -191,7 +192,7 @@ Distribution for 10 samples:
     10: 2.7821317338
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<random>
 
@@ -208,11 +209,14 @@ explicit normal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*意味*、`mean`分布パラメーター。
+*mean*<br/>
+`mean` 分布パラメーター。
 
-*stddev* 、`stddev`分布パラメーター。
+*stddev*<br/>
+`stddev` 分布パラメーター。
 
-*parm*分布の作成に使用されるパラメーターの構造体。
+*parm*<br/>
+分布の作成に使用されるパラメーターの構造体。
 
 ### <a name="remarks"></a>Remarks
 
@@ -239,11 +243,14 @@ struct param_type {
 ```
 ### <a name="parameters"></a>パラメーター
 
-*意味*、`mean`分布パラメーター。
+*mean*<br/>
+`mean` 分布パラメーター。
 
-*stddev* 、`stddev`分布パラメーター。
+*stddev*<br/>
+`stddev` 分布パラメーター。
 
-*適切な*、`param_type`構造体を比較するために使用します。
+*right*<br/>
+比較に使用される `param_type` 構造体。
 
 ### <a name="remarks"></a>Remarks
 

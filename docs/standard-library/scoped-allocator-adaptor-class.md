@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7025e0d52aa882c26e2785279626959ca6b29ac1
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 62bdeeddf0e81cf017c49eac51ca0e2eaaf046c1
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962931"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104068"
 ---
 # <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor クラス
 
@@ -75,7 +75,7 @@ class scoped_allocator_adaptor;
 
 ### <a name="constructors"></a>コンストラクター
 
-|name|説明|
+|名前|説明|
 |----------|-----------------|
 |[scoped_allocator_adaptor](#scoped_allocator_adaptor)|`scoped_allocator_adaptor` オブジェクトを構築します。|
 
@@ -98,7 +98,7 @@ class scoped_allocator_adaptor;
 
 ### <a name="structs"></a>構造体
 
-|name|説明|
+|名前|説明|
 |----------|-----------------|
 |[scoped_allocator_adaptor::rebind 構造体](#rebind_struct)|`scoped_allocator_adaptor\<Other, Inner...>` のシノニムとして `Outer::rebind\<Other>::other` 型を定義します。|
 
@@ -115,7 +115,7 @@ class scoped_allocator_adaptor;
 |[outer_allocator](#outer_allocator)|`outer_allocator_type` 型の格納されているオブジェクトへの参照を取得します。|
 |[select_on_container_copy_construction](#select_on_container_copy_construction)|対応するアロケーターごとに `select_on_container_copy_construction` を呼び出すことによって、格納されている各アロケーター オブジェクトが初期化された新しい `scoped_allocator_adaptor` オブジェクトを作成します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<scoped_allocator>
 
@@ -131,9 +131,11 @@ pointer allocate(size_type count);pointer allocate(size_type count, const_void_p
 
 ### <a name="parameters"></a>パラメーター
 
-*カウント*十分な記憶域を割り当てられる要素の数。
+*count*<br/>
+十分な記憶域を割り当てる要素の数。
 
-*ヒント*要求の前に割り当てられたオブジェクトのアドレスを配置することにより、アロケーター オブジェクトを支援できるポインター。
+*ヒント*<br/>
+要求の前に割り当てられたオブジェクトのアドレスを見つけることによって、アロケーター オブジェクトを支援できるポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -168,15 +170,20 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*ptr*オブジェクトが構築されているメモリ位置へのポインター。
+*ptr*<br/>
+オブジェクトが構築されるメモリの場所へのポインター。
 
-*args*引数のリスト。
+*引数*<br/>
+引数リスト。
 
-*最初*ペアの最初の型のオブジェクト。
+*first*<br/>
+ペアの最初の型のオブジェクト。
 
-*2 番目*ペアの 2 番目の型のオブジェクト。
+*second*<br/>
+ペアの 2 番目の型のオブジェクト。
 
-*適切な*移動またはコピーする既存のオブジェクト。
+*right*<br/>
+移動またはコピーされる既存のオブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -208,9 +215,11 @@ void deallocate(pointer ptr, size_type count);
 
 ### <a name="parameters"></a>パラメーター
 
-*ptr*が解除されるオブジェクトの開始位置を指すポインター。
+*ptr*<br/>
+割り当てを解除されるオブジェクトの開始位置へのポインター。
 
-*カウント*割り当てを解除するオブジェクトの数。
+*count*<br/>
+割り当てを解除するオブジェクトの数。
 
 ## <a name="destroy"></a>  scoped_allocator_adaptor::destroy
 
@@ -223,7 +232,8 @@ void destroy(Ty* ptr)
 
 ### <a name="parameters"></a>パラメーター
 
-*ptr*破棄するオブジェクトへのポインター。
+*ptr*<br/>
+破棄するオブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -283,10 +293,10 @@ scoped_allocator_adaptor();
 scoped_allocator_adaptor(const scoped_allocator_adaptor& right) noexcept;
 template <class Outer2>
 scoped_allocator_adaptor(
- const scoped_allocator_adaptor<Outer2, Inner...>& right) noexcept;
+const scoped_allocator_adaptor<Outer2, Inner...>& right) noexcept;
 template <class Outer2>
 scoped_allocator_adaptor(
- scoped_allocator_adaptor<Outer2, Inner...>&& right) noexcept;
+scoped_allocator_adaptor<Outer2, Inner...>&& right) noexcept;
 template <class Outer2>
 scoped_allocator_adaptor(Outer2&& al,
     const Inner&... rest) noexcept;
@@ -294,11 +304,14 @@ scoped_allocator_adaptor(Outer2&& al,
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*既存`scoped_allocator_adaptor`します。
+*right*<br/>
+既存の `scoped_allocator_adaptor`。
 
-*al*外側のアロケーターとして使用する既存のアロケーター。
+*Al*<br/>
+外側のアロケーターとして使用する既存のアロケーター。
 
-*rest*内側のアロケーターとして使用するアロケーターのリスト。
+*残りの部分*<br/>
+内側のアロケーターとして使用するアロケーターのリスト。
 
 ### <a name="remarks"></a>Remarks
 

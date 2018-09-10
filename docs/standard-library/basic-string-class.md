@@ -126,12 +126,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c56cdcf59c6dad891029e21e14940598e0cfeae
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9a44cccd38d64f3e6b0c2b7af390d06292f70157
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209085"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105667"
 ---
 # <a name="basicstring-class"></a>basic_string クラス
 
@@ -146,11 +146,14 @@ class basic_string;
 
 ### <a name="parameters"></a>パラメーター
 
-*CharType*文字列に格納される単一文字のデータ型。 C++ 標準ライブラリの型定義は、このテンプレート クラスの特殊化を提供する[文字列](../standard-library/string-typedefs.md#string)型の要素に対して**char**、 [wstring](../standard-library/string-typedefs.md#wstring)の**wchar_t**、 [u16string](../standard-library/string-typedefs.md#u16string)の`char16_t`、および[u32string](../standard-library/string-typedefs.md#u32string)の`char32_t`します。
+*CharType*<br/>
+文字列に格納される単一文字のデータ型。 C++ 標準ライブラリの型定義は、このテンプレート クラスの特殊化を提供する[文字列](../standard-library/string-typedefs.md#string)型の要素に対して**char**、 [wstring](../standard-library/string-typedefs.md#wstring)の**wchar_t**、 [u16string](../standard-library/string-typedefs.md#u16string)の`char16_t`、および[u32string](../standard-library/string-typedefs.md#u32string)の`char32_t`します。
 
-*Traits*のさまざまな重要なプロパティ、 `CharType` basic_string 特化の要素がクラスで説明されている`Traits`します。 既定値は `char_traits`< `CharType`> です。
+*Traits*<br/>
+さまざまな重要なプロパティ、 `CharType` basic_string 特化の要素がクラスで説明されている`Traits`します。 既定値は `char_traits`< `CharType`> です。
 
-*アロケーター*文字列の割り当てとメモリの解放に関する詳細をカプセル化する格納されたアロケーター オブジェクトを表す型です。 既定値は **allocator**< `CharType`> です。
+*アロケーター*<br/>
+メモリの文字列の割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 既定値は **allocator**< `CharType`> です。
 
 ### <a name="constructors"></a>コンストラクター
 
@@ -314,19 +317,26 @@ basic_string<CharType, Traits, Allocator>& append(
 
 ### <a name="parameters"></a>パラメーター
 
-*ptr*追加される C 文字列。
+*ptr*<br/>
+追加される C 文字列。
 
-*str*文字が追加される文字列。
+*str*<br/>
+文字が追加される文字列。
 
-*_Off*追加する文字を指定するソース文字列の一部のインデックス。
+*_Off*<br/>
+追加する文字の元の文字列の一部のインデックス。
 
-*カウント*追加される、最大では、ソース文字列から文字の数。
+*count*<br/>
+ソース文字列から追加される最大文字数。
 
-*_Ch*追加される文字の値。
+*_Ch*<br/>
+追加される文字値。
 
-*最初*追加する入力反復子の範囲の最初の要素をアドレス指定します。
+*first*<br/>
+追加される範囲内の先頭の要素の位置を示す入力反復子。
 
-*最後*入力反復子、const_pointer、または const_iterator 範囲内の最後の要素の次の位置に追加されます。
+*last*<br/>
+追加される範囲の最後の要素の次の要素の位置を示す、入力反復子、const_pointer、または const_iterator。
 
 ### <a name="return-value"></a>戻り値
 
@@ -468,19 +478,26 @@ basic_string<CharType, Traits, Allocator>& assign(
 
 ### <a name="parameters"></a>パラメーター
 
-*ptr*対象の文字列に割り当てられる C 文字列の文字へのポインター。
+*ptr*<br/>
+対象の文字列に割り当てられる C 文字列の文字を指すポインター。
 
-*カウント*ソース文字列から割り当てられる文字数。
+*count*<br/>
+ソース文字列から割り当てられる文字数。
 
-*str*文字が対象の文字列に割り当てられるソース文字列。
+*str*<br/>
+対象の文字列に割り当てられる文字のソース文字列。
 
-*_Ch*割り当てられる文字値。
+*_Ch*<br/>
+割り当てられる文字値。
 
-*最初*入力反復子、const_pointer、または const_iterator ソース文字列の範囲の最初の文字をターゲット範囲に割り当てられます。
+*first*<br/>
+ターゲット範囲に割り当てられるソース文字列の範囲の最初の文字の位置を示す、入力反復子、const_pointer、または const_iterator。
 
-*最後*入力反復子、const_pointer、または const_iterator ソース文字列のいずれかの範囲の最後の文字を超えるターゲット範囲に割り当てられます。
+*last*<br/>
+ターゲット範囲に割り当てられるソース文字列の範囲の最後の文字の次の文字の位置を示す、入力反復子、const_pointer、または const_iterator。
 
-*オフ*を割り当てられる新しい文字の開始位置。
+*オフ*<br/>
+割り当てられる新しい文字の開始位置。
 
 ### <a name="return-value"></a>戻り値
 
@@ -595,7 +612,8 @@ reference at(size_type _Off);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Off*参照される要素の位置のインデックス。
+*_Off*<br/>
+参照される要素の位置のインデックス。
 
 ### <a name="return-value"></a>戻り値
 
@@ -721,12 +739,12 @@ basic_string(
 
 template <class InputIterator>
 basic_string(
- InputIterator first,
+InputIterator first,
     InputIterator last);
 
 template <class InputIterator>
 basic_string(
- InputIterator first,
+InputIterator first,
     InputIterator last,
     const allocator_type& _Al);
 
@@ -741,21 +759,29 @@ basic_string(
 
 ### <a name="parameters"></a>パラメーター
 
-*ptr*文字が初期化に使用される C 文字列、`string`構築されます。 この値を null ポインターにすることはできません。
+*ptr*<br/>
+作成される `string` の初期化に使用される文字が含まれた C 文字列。 この値を null ポインターにすることはできません。
 
-*_Al*構築される文字列オブジェクトのストレージ アロケーター クラス。
+*_Al*<br/>
+作成される文字列オブジェクトのストレージ アロケーター クラス。
 
-*カウント*初期化される文字の数。
+*count*<br/>
+初期化される文字数。
 
-*適切な*作成される文字列を初期化する文字列。
+*right*<br/>
+作成される文字列を初期化するための文字列。
 
-*_Roff*が最初に作成される文字列の文字値の初期化に使用する文字列内の文字のインデックス。
+*_Roff*<br/>
+作成される文字列の文字値を初期化するために最初に使用される、文字列内の文字のインデックス。
 
-*_Ch*作成される文字列にコピーされる文字の値。
+*_Ch*<br/>
+作成される文字列にコピーされる文字値。
 
-*最初*入力反復子、const_pointer、または const_iterator ソース範囲の最初の要素を挿入します。
+*first*<br/>
+挿入されるソース範囲内の先頭の要素の位置を示す、入力反復子、const_pointer、または const_iterator。
 
-*最後*入力反復子、const_pointer、または const_iterator ソース範囲の最後の要素の次の位置に挿入します。
+*last*<br/>
+挿入されるソース範囲の最後の要素の次の要素の位置を示す、入力反復子、const_pointer、または const_iterator。
 
 ### <a name="return-value"></a>戻り値
 
@@ -851,7 +877,7 @@ int main( ) {
    cout << "The full original string str1 is: " << str1 << endl;
 
    // The dereferenced iterator can be used to modify a character
- *str1_Iter = 'G';
+*str1_Iter = 'G';
    cout << "The first character of the modified str1 is now: "
         << *str1_Iter << endl;
    cout << "The full modified string str1 is now: " << str1 << endl;
@@ -1148,19 +1174,26 @@ int compare(
 
 ### <a name="parameters"></a>パラメーター
 
-*str*オペランド文字列と比較する文字列。
+*str*<br/>
+オペランド文字列と比較する文字列。
 
-*_Pos1*比較が開始されるオペランド文字列のインデックス。
+*_Pos1*<br/>
+比較の開始位置を示すオペランド文字列のインデックス。
 
-*_Num1*と比較するオペランド文字列から文字の最大数。
+*_Num1*<br/>
+比較するオペランド文字列の最大文字数。
 
-*_Num2*と比較するパラメーターの文字列から文字の最大数。
+*_Num2*<br/>
+比較するパラメーター文字列の最大文字数。
 
-*_Off*比較が開始されるパラメーターの文字列のインデックス。
+*_Off*<br/>
+比較の開始位置を示すパラメーター文字列のインデックス。
 
-*カウント*と比較するパラメーターの文字列から文字の最大数。
+*count*<br/>
+比較するパラメーター文字列の最大文字数。
 
-*ptr*オペランド文字列と比較する C 文字列。
+*ptr*<br/>
+オペランド文字列と比較する C 文字列。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1341,14 +1374,14 @@ The operand string is equal to the parameter string.
 The operand string is: AACAB
 The parameter string is: CAB
 The last three characters of the operand string
- are equal to the parameter string.
+are equal to the parameter string.
 The first three characters of the operand string
- are less than the parameter string.
+are less than the parameter string.
 
 The operand string is: AACAB
 The parameter string is: DCABD
 The three characters from position 2 of the operand string are equal to
- the 3 characters parameter string from position 1.
+the 3 characters parameter string from position 1.
 
 The operand string is: ABC
 The parameter C-string is: DEF
@@ -1357,12 +1390,12 @@ The operand string is less than the parameter C-string.
 The operand string is: AACAB
 The parameter string is: CAB
 The last three characters of the operand string
- are equal to the parameter C-string.
+are equal to the parameter C-string.
 
 The operand string is: AACAB
 The parameter C-string is: ACAB
 The 3 characters from position 2 of the operand string are equal to
- the first 3 characters of the parameter C-string.
+the first 3 characters of the parameter C-string.
 ```
 
 ## <a name="const_iterator"></a>  basic_string::const_iterator
@@ -1470,11 +1503,13 @@ size_type copy(
 
 ### <a name="parameters"></a>パラメーター
 
-*ptr*要素がコピーされるターゲット文字配列。
+*ptr*<br/>
+要素のコピー先のターゲット文字配列。
 
 _*カウント*からコピーされる、最大では、ソース文字列の文字数。
 
-*_Off*コピーが作成される元のソース文字列の先頭位置。
+*_Off*<br/>
+ソース文字列内のコピーの作成開始位置。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1573,13 +1608,16 @@ size_type _Copy_s(
 
 ### <a name="parameters"></a>パラメーター
 
-*dest*要素がコピーされるターゲット文字配列。
+*dest*<br/>
+要素のコピー先のターゲット文字配列。
 
-*dest_size*のサイズ*dest*します。
+*dest_size*<br/>
+サイズ*dest*します。
 
 _*カウント*からコピーされる、最大では、ソース文字列の文字数。
 
-*_Off*コピーが作成される元のソース文字列の先頭位置。
+*_Off*<br/>
+ソース文字列内のコピーの作成開始位置。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1847,7 +1885,7 @@ int main( )
    cout << endl;
 
    // The dereferenced iterator can be used to modify a character
- *str1_Iter = 'T';
+*str1_Iter = 'T';
    cout << "The last character-letter of the modified str1 is now: "
         << *str1_Iter << endl;
    cout << "The modified string str1 is now: " << str1 << endl;
@@ -1891,15 +1929,20 @@ basic_string<CharType, Traits, Allocator>& erase(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*消去する範囲の最初の要素の位置を示す反復子。
+*first*<br/>
+消去範囲内の最初の要素の位置を示す反復子。
 
-*最後*消去する範囲の最後の要素いずれかの位置を示す反復子。
+*last*<br/>
+消去範囲内の最後の要素の次の位置を示す反復子。
 
-*_It*消去する、文字列内の要素の位置を示す反復子。
+*_It*<br/>
+消去される文字列内の要素の位置を示す反復子。
 
-*_Pos*を削除する文字列の最初の文字のインデックス。
+*_Pos*<br/>
+削除される文字列内の最初の文字のインデックス。
 
-*カウント*で始まる文字列の範囲内に同じ数がある場合に削除される要素の数 *_Pos*します。
+*count*<br/>
+*_Pos* で始まる文字列の範囲内に同じ数の要素がある場合に削除される要素の数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1998,15 +2041,20 @@ size_type find(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Ch*メンバー関数が検索対象の文字の値。
+*_Ch*<br/>
+メンバー関数が検索される文字値。
 
-*_Off*の検索が開始される位置のインデックス。
+*_Off*<br/>
+検索を開始する位置のインデックス。
 
-*ptr*メンバー関数が検索される C 文字列。
+*ptr*<br/>
+メンバー関数が検索される C 文字列。
 
-*カウント*メンバー関数が検索される C 文字列で、最初の文字から数えて、文字数。
+*count*<br/>
+メンバー関数が検索される C 文字列で、最初の文字から順方向に数えた文字数。
 
-*str*メンバー関数を検索する文字列。
+*str*<br/>
+メンバー関数が検索される文字列。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2130,7 +2178,7 @@ The Character 'x' was not found in str1.
 
 The original string str2 is: Let me make this perfectly clear.
 The index of the 1st element of 'perfect' after
- the 5th position in str2 is: 17
+the 5th position in str2 is: 17
 The substring 'imperfect' was not found in str2 .
 
 The original string str3 is: This is a sample string for this program
@@ -2139,7 +2187,7 @@ The index of the next occurrence of 'for' is in str3 begins at: 24
 
 The original string str4 is: clearly this perfectly unclear.
 The index of the 1st element of 'clear' after
- the 5th position in str4 is: 25
+the 5th position in str4 is: 25
 The index of the 1st element of 'clear' in str4 is: 0
 ```
 
@@ -2171,15 +2219,20 @@ size_type find_first_not_of(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Ch*メンバー関数が検索対象の文字の値。
+*_Ch*<br/>
+メンバー関数が検索される文字値。
 
-*_Off*の検索が開始される位置のインデックス。
+*_Off*<br/>
+検索を開始する位置のインデックス。
 
-*ptr*メンバー関数が検索される C 文字列。
+*ptr*<br/>
+メンバー関数が検索される C 文字列。
 
-*カウント*メンバー関数が検索される C 文字列で、最初の文字から数えて、文字数。
+*count*<br/>
+メンバー関数が検索される C 文字列で、最初の文字から順方向に数えた文字数。
 
-*str*メンバー関数を検索する文字列。
+*str*<br/>
+メンバー関数が検索される文字列。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2312,21 +2365,21 @@ The index of the 'non x' found in str1 is: 1
 
 The original string str2 is: BBB-1111
 Elements of the substring 'B1' were not
- found in str2 after the 6th position.
+found in str2 after the 6th position.
 The index of the 1st element of 'B2' after
- the 0th position in str2 is: 3
+the 0th position in str2 is: 3
 
 The original string str3 is: 444-555-GGG
 The index of the 1st occurrence of an element in str3
- other than one of the characters in '45G' is: 3
+other than one of the characters in '45G' is: 3
 The index of the second occurrence of an element of '45G' in str3
- after the 0th position is: 7
+after the 0th position is: 7
 
 The original string str4 is: 12-ab-12-ab
 The index of the 1st non occurrence of an element of 'ba3' in str4 after
- the 5th position is: 5
+the 5th position is: 5
 The index of the 1st non occurrence of an element of '12' in str4 after
- the 0th position is: 2
+the 0th position is: 2
 ```
 
 ## <a name="find_first_of"></a>  basic_string::find_first_of
@@ -2357,15 +2410,20 @@ size_type find_first_of(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Ch*メンバー関数が検索対象の文字の値。
+*_Ch*<br/>
+メンバー関数が検索される文字値。
 
-*_Off*の検索が開始される位置のインデックス。
+*_Off*<br/>
+検索を開始する位置のインデックス。
 
-*ptr*メンバー関数が検索される C 文字列。
+*ptr*<br/>
+メンバー関数が検索される C 文字列。
 
-*カウント*メンバー関数が検索される C 文字列で、最初の文字から数えて、文字数。
+*count*<br/>
+メンバー関数が検索される C 文字列で、最初の文字から順方向に数えた文字数。
 
-*str*メンバー関数を検索する文字列。
+*str*<br/>
+メンバー関数が検索される文字列。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2497,21 +2555,21 @@ The character 'x' was not found in str1.
 
 The original string str2 is: ABCD-1234-ABCD-1234
 The index of the 1st occurrence of an element of 'B1' in str2 after
- the 6th position is: 11
+the 6th position is: 11
 The index of the 1st element of 'D2' after
- the 0th position in str2 is: 3
+the 0th position in str2 is: 3
 
 The original string str3 is: 123-abc-123-abc-456-EFG-456-EFG
 The index of the 1st occurrence of an element of '5G' in str3 after
- the 0th position is: 17
+the 0th position is: 17
 The index of the second occurrence of an element of '5G' in str3
- after the 0th position is: 22
+after the 0th position is: 22
 
 The original string str4 is: 12-ab-12-ab
 The index of the 1st occurrence of an element of 'ba3' in str4 after
- the 5th position is: 9
+the 5th position is: 9
 The index of the 1st occurrence of an element of 'a2' in str4 after
- the 0th position is: 1
+the 0th position is: 1
 ```
 
 ## <a name="find_last_not_of"></a>  basic_string::find_last_not_of
@@ -2542,15 +2600,20 @@ size_type find_last_not_of(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Ch*メンバー関数が検索対象の文字の値。
+*_Ch*<br/>
+メンバー関数が検索される文字値。
 
-*_Off*検索が終了位置のインデックス。
+*_Off*<br/>
+検索を終了する位置のインデックス。
 
-*ptr*メンバー関数が検索される C 文字列。
+*ptr*<br/>
+メンバー関数が検索される C 文字列。
 
-*カウント*メンバー関数が検索される C 文字列で、最初の文字から数えて、文字数。
+*count*<br/>
+メンバー関数が検索される C 文字列で、最初の文字から順方向に数えた文字数。
 
-*str*メンバー関数を検索する文字列。
+*str*<br/>
+メンバー関数が検索される文字列。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2680,25 +2743,25 @@ int main( )
 ```Output
 The original string str1 is: dddd-1dd4-abdd
 The index of the last non 'd'
- found before the 7th position in str1 is: 5
+found before the 7th position in str1 is: 5
 The index of the non 'd' found in str1 is: 11
 
 The original string str2 is: BBB-1111
 The index of the last occurrence of a element
- not of 'B1' in str2 before the 6th position is: 3
+not of 'B1' in str2 before the 6th position is: 3
 The elements of the substring 'B-1' were not found in str2 .
 
 The original string str3 is: 444-555-GGG
 The index of the last occurrence of an element in str3
- other than one of the characters in '45G' is: 7
+other than one of the characters in '45G' is: 7
 The index of the penultimate occurrence of an element
- not in '45G' in str3 is: 3
+not in '45G' in str3 is: 3
 
 The original string str4 is: 12-ab-12-ab
 The index of the last occurrence of an element not
- in 'b-a' in str4 before the 5th position is: 1
+in 'b-a' in str4 before the 5th position is: 1
 The index of the last occurrence of an element not in '12'
- in str4 before the end position is: 10
+in str4 before the end position is: 10
 ```
 
 ## <a name="find_last_of"></a>  basic_string::find_last_of
@@ -2729,15 +2792,20 @@ size_type find_last_of(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Ch*メンバー関数が検索対象の文字の値。
+*_Ch*<br/>
+メンバー関数が検索される文字値。
 
-*_Off*検索が終了位置のインデックス。
+*_Off*<br/>
+検索を終了する位置のインデックス。
 
-*ptr*メンバー関数が検索される C 文字列。
+*ptr*<br/>
+メンバー関数が検索される C 文字列。
 
-*カウント*メンバー関数が検索される C 文字列で、最初の文字から数えて、文字数。
+*count*<br/>
+メンバー関数が検索される C 文字列で、最初の文字から順方向に数えた文字数。
 
-*str*メンバー関数を検索する文字列。
+*str*<br/>
+メンバー関数が検索される文字列。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2858,19 +2926,19 @@ The character 'x' was not found in str1.
 
 The original string str2 is: ABCD-1234-ABCD-1234
 The index of the last occurrence of an element of 'B1' in str2 before
- the 12th position is: 11
+the 12th position is: 11
 The index of the last element of 'D2' after
- the 0th position in str2 is: 16
+the 0th position in str2 is: 16
 
 The original string str3 is: 456-EFG-456-EFG
 The index of the last occurrence of an element of '5E' in str3 before
- the 8th position is: 4
+the 8th position is: 4
 
 The original string str4 is: 12-ab-12-ab
 The index of the last occurrence of an element of 'ba3' in str4 before
- the 8th position is: 4
+the 8th position is: 4
 The index of the last occurrence of an element of 'a2' in str4 before
- the 0th position is: 9
+the 0th position is: 9
 ```
 
 ## <a name="front"></a>  basic_string::front
@@ -2992,23 +3060,32 @@ void insert(
 
 ### <a name="parameters"></a>パラメーター
 
-*_P0*挿入ポイントの背後の位置のインデックス、新しい文字。
+*_P0*<br/>
+新しい文字の挿入ポイントの背後の位置にあるインデックス。
 
-*ptr* C 文字列全体または一部に挿入する文字列。
+*ptr*<br/>
+C 文字列全体または一部がこの文字列に挿入されます。
 
-*カウント*を挿入する文字数。
+*count*<br/>
+挿入する文字の数。
 
-*str*全体または一部に挿入されるターゲット文字列の文字列。
+*str*<br/>
+文字列全体または一部が対象の文字列に挿入されます。
 
-*_Off*追加する文字を指定するソース文字列の一部のインデックス。
+*_Off*<br/>
+追加する文字の元の文字列の一部のインデックス。
 
-*_Ch*を挿入する要素の文字の値。
+*_Ch*<br/>
+挿入する要素の文字の値。
 
-*_It*が背後にある文字が挿入される位置を示す反復子。
+*_It*<br/>
+文字を挿入する背後の位置を示す反復子。
 
-*最初*入力反復子、const_pointer、または const_iterator ソース範囲の最初の要素を挿入します。
+*first*<br/>
+挿入されるソース範囲内の先頭の要素の位置を示す、入力反復子、const_pointer、または const_iterator。
 
-*最後*入力反復子、const_pointer、または const_iterator ソース範囲の最後の要素の次の位置に挿入します。
+*last*<br/>
+挿入されるソース範囲の最後の要素の次の要素の位置を示す、入力反復子、const_pointer、または const_iterator。
 
 ### <a name="return-value"></a>戻り値
 
@@ -3288,11 +3365,14 @@ basic_string<CharType, Traits, Allocator>& operator+=(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Ch*追加される文字。
+*_Ch*<br/>
+追加される文字。
 
-*ptr*追加される C 文字列の文字。
+*ptr*<br/>
+追加される C 文字列の文字。
 
-*適切な*追加される文字列の文字。
+*right*<br/>
+追加される文字列の文字。
 
 ### <a name="return-value"></a>戻り値
 
@@ -3377,11 +3457,14 @@ basic_string<CharType, Traits, Allocator>& operator=(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Ch*割り当てられる文字値。
+*_Ch*<br/>
+割り当てられる文字値。
 
-*ptr*対象の文字列に割り当てられる C 文字列の文字へのポインター。
+*ptr*<br/>
+対象の文字列に割り当てられる C 文字列の文字を指すポインター。
 
-*適切な*文字が対象の文字列に割り当てられるソース文字列。
+*right*<br/>
+対象の文字列に割り当てられる文字のソース文字列。
 
 ### <a name="return-value"></a>戻り値
 
@@ -3459,7 +3542,8 @@ reference operator[](size_type _Off);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Off*参照される要素の位置のインデックス。
+*_Off*<br/>
+参照される要素の位置のインデックス。
 
 ### <a name="return-value"></a>戻り値
 
@@ -3575,7 +3659,8 @@ void push_back(value_type _Ch);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Ch*文字列の末尾に追加する文字。
+*_Ch*<br/>
+文字列の末尾に追加する文字。
 
 ### <a name="remarks"></a>Remarks
 
@@ -3667,7 +3752,7 @@ int main( )
    cout << endl;
 
    // The dereferenced iterator can be used to modify a character
- *str1_rIter = 'A';
+*str1_rIter = 'A';
    cout << "The first character-letter of the modified str1 is now: "
         << *str1_rIter << endl;
    cout << "The full modified reversed string str1 is now:\n ";
@@ -3689,10 +3774,10 @@ int main( )
 ```Output
 The first character-letter of the reversed string str1 is: a
 The full reversed string str1 is:
- ablE was I ere I saw elbA
+ablE was I ere I saw elbA
 The first character-letter of the modified str1 is now: A
 The full modified reversed string str1 is now:
- AblE was I ere I saw elbA
+AblE was I ere I saw elbA
 The string str2 is empty.
 ```
 
@@ -3766,7 +3851,7 @@ int main( )
    cout << endl;
 
    // The dereferenced iterator can be used to modify a character
- *str1_rIter = 'o';
+*str1_rIter = 'o';
    cout << "The last character-letter of the modified str1 is now: "
         << *str1_rIter << endl;
    cout << "The full modified reversed string str1 is now:\n ";
@@ -3788,10 +3873,10 @@ int main( )
 ```Output
 The last character-letter of the reversed string str1 is: A
 The full reversed string str1 is:
- ablE was I ere I saw elbA
+ablE was I ere I saw elbA
 The last character-letter of the modified str1 is now: o
 The full modified reversed string str1 is now:
- ablE was I ere I saw elbo
+ablE was I ere I saw elbo
 The string str2 is empty.
 ```
 
@@ -3873,29 +3958,39 @@ basic_string<CharType, Traits, Allocator>& replace(
 
 ### <a name="parameters"></a>パラメーター
 
-*str*オペランド文字列の文字のソースである文字列。
+*str*<br/>
+オペランド文字列の文字のソースとなる文字列。
 
-*_Pos1*交換が開始されるオペランド文字列のインデックス。
+*_Pos1*<br/>
+置換の開始位置を示すオペランド文字列のインデックス。
 
-*_Num1*オペランド文字列内で置換する文字の最大数。
+*_Num1*<br/>
+オペランド文字列内で置換する最大文字数。
 
-*_Pos2*コピーが開始されるパラメーターの文字列のインデックス。
+*_Pos2*<br/>
+コピーの開始位置を示すパラメーター文字列のインデックス。
 
-*_Num2*パラメーター C 文字列から使用する文字の最大数。
+*_Num2*<br/>
+パラメーター C 文字列から使用する最大文字数。
 
-*ptr*オペランド文字列の文字のソースを使用する場合は C 文字列。
+*ptr*<br/>
+オペランド文字列の文字のソースとなる C 文字列。
 
-*_Ch*オペランド文字列にコピーする文字。
+*_Ch*<br/>
+オペランド文字列にコピーする文字。
 
 * first0 * をオペランド文字列で削除される最初の文字を示す反復子。
 
 * last0 * をオペランド文字列で削除される最後の文字を示す反復子。
 
-*最初*反復子、const_pointer、または const_iterator 最初の文字パラメーター文字列にコピーします。
+*first*<br/>
+パラメーター文字列にコピーされる最初の文字を指定する、反復子、const_pointer、または const_iterator。
 
-*最後*反復子、const_pointer、または const_iterator 最後の文字パラメーター文字列にコピーします。
+*last*<br/>
+パラメーター文字列にコピーされる最後の文字を指定する、反復子、const_pointer、または const_iterator。
 
-*カウント*回数 *_Ch*オペランド文字列にコピーされます。
+*count*<br/>
+回数 *_Ch*オペランド文字列にコピーされます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -4039,45 +4134,45 @@ The operand string s1o is: AAAAAAAA
 The parameter string s1p is: BBB
 The parameter C-string cs1p is: CCC
 The result of s1o.replace ( 1 , 3 , s1p )
- is the string: ABBBAAAA.
+is the string: ABBBAAAA.
 The result of s1o.replace ( 5 , 3 , cs1p )
- is the string: ABBBACCC.
+is the string: ABBBACCC.
 
 The operand string s2o is: AAAAAAAA
 The parameter string s1p is: BBB
 The parameter C-string cs2p is: CCC
 The result of s2o.replace (1, 3, s2p, 1, 2)
- is the string: ABBAAAA.
+is the string: ABBAAAA.
 The result of s2o.replace (4 ,3 ,cs2p)
- is the string: ABBAC.
+is the string: ABBAC.
 
 The operand string s3o is: AAAAAAAA
 The parameter character c1p is: C
 The result of s3o.replace(1, 3, 4, ch3p)
- is the string: ACCCCAAAA.
+is the string: ACCCCAAAA.
 
 The operand string s4o is: AAAAAAAA
 The parameter string s4p is: BBB
 The parameter C-string cs4p is: CCC
 The result of s1o.replace (IterF0, IterL0, s4p)
- is the string: BBBAAAAA.
+is the string: BBBAAAAA.
 The result of s4o.replace (IterF0, IterL0, cs4p)
- is the string: CCCAAAAA.
+is the string: CCCAAAAA.
 
 The operand string s5o is: AAAAAAAF
 The parameter C-string cs5p is: CCCBB
 The result of s5o.replace (IterF1, IterL1, cs4p ,4)
- is the string: CCCBAAAF.
+is the string: CCCBAAAF.
 
 The operand string s6o is: AAAAAAAG
 The parameter character ch6p is: q
 The result of s6o.replace (IterF1, IterL1, 4, ch6p)
- is the string: qqqqAAAAG.
+is the string: qqqqAAAAG.
 
 The operand string s7o is: OOOOOOO
 The parameter string s7p is: PPPP
 The result of s7o.replace (IterF3 ,IterL3 ,IterF4 ,IterL4)
- is the string: OPPOOOO.
+is the string: OPPOOOO.
 ```
 
 ## <a name="reserve"></a>  basic_string::reserve
@@ -4090,7 +4185,8 @@ void reserve(size_type count = 0);
 
 ### <a name="parameters"></a>パラメーター
 
-*カウント*メモリが予約されている文字数。
+*count*<br/>
+メモリが予約されている文字数。
 
 ### <a name="remarks"></a>Remarks
 
@@ -4184,9 +4280,11 @@ void resize(
 
 ### <a name="parameters"></a>パラメーター
 
-*カウント*文字列の新しいサイズ。
+*count*<br/>
+文字列の新しいサイズ。
 
-*_Ch*文字が追加された値は、追加の要素が必要な場合に初期化されます。
+*_Ch*<br/>
+文字が追加された値は、追加の要素が必要な場合は初期化されます。
 
 ### <a name="remarks"></a>Remarks
 
@@ -4321,15 +4419,20 @@ size_type rfind(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Ch*メンバー関数が検索対象の文字の値。
+*_Ch*<br/>
+メンバー関数が検索される文字値。
 
-*_Off*の検索が開始される位置のインデックス。
+*_Off*<br/>
+検索を開始する位置のインデックス。
 
-*ptr*メンバー関数が検索される C 文字列。
+*ptr*<br/>
+メンバー関数が検索される C 文字列。
 
-*カウント*メンバー関数が検索される C 文字列で、最初の文字から数えて、文字数。
+*count*<br/>
+メンバー関数が検索される C 文字列で、最初の文字から順方向に数えた文字数。
 
-*str*メンバー関数を検索する文字列。
+*str*<br/>
+メンバー関数が検索される文字列。
 
 ### <a name="return-value"></a>戻り値
 
@@ -4454,7 +4557,7 @@ The character 'x' was not found in str1.
 
 The original string str2 is: Let me make this perfectly clear.
 The index of the 1st element of 'perfect' before
- the 30th position in str2 is: 17
+the 30th position in str2 is: 17
 The substring 'imperfect' was not found in str2 .
 
 The original string str3 is: It is a nice day. I am happy.
@@ -4599,9 +4702,11 @@ basic_string<CharType, Traits, Allocator> substr(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Off*元の文字列のコピーが行われる既定値は 0 の位置にある要素を検索するインデックス。
+*_Off*<br/>
+文字列のコピーが作成された位置の要素を特定するインデックス (既定値は 0)。
 
-*カウント*が存在する場合にコピーする文字数。
+*count*<br/>
+コピーされる文字数 (ある場合)。
 
 ### <a name="return-value"></a>戻り値
 
@@ -4635,13 +4740,13 @@ int main( )
 
 ```Output
 The original string str1 is:
- Heterological paradoxes are persistent.
+Heterological paradoxes are persistent.
 
 The substring str1 copied is: logical
 
 The default substring str3 is:
- Heterological paradoxes are persistent.
- which is the entire original string.
+Heterological paradoxes are persistent.
+which is the entire original string.
 ```
 
 ## <a name="swap"></a>  basic_string::swap
@@ -4655,7 +4760,8 @@ void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-*str*要素がコピー先の文字列と交換されるソース文字列。
+*str*<br/>
+要素がターゲットの文字列内の要素と交換されるソース文字列。
 
 ### <a name="remarks"></a>Remarks
 
@@ -4697,11 +4803,11 @@ int main( )
 
 ```Output
 Before swapping string s1 and s2:
- The basic_string s1 = Tweedledee.
- The basic_string s2 = Tweedledum.
+The basic_string s1 = Tweedledee.
+The basic_string s2 = Tweedledum.
 After swapping string s1 and s2:
- The basic_string s1 = Tweedledum.
- The basic_string s2 = Tweedledee.
+The basic_string s1 = Tweedledum.
+The basic_string s2 = Tweedledee.
 ```
 
 ## <a name="traits_type"></a>  basic_string::traits_type

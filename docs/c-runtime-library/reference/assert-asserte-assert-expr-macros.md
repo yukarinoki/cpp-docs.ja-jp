@@ -36,16 +36,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aa84e5c032cefa49ef3a9d21d3bbfc2073d02e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 254550acf94acb846826bc0efe76ef26753c54b8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399739"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107591"
 ---
 # <a name="assert-asserte-assertexpr-macros"></a>_ASSERT、_ASSERTE、_ASSERT_EXPR マクロ
 
-式を評価し、結果は場合、デバッグ レポートを生成**False** (デバッグ バージョンのみ)。
+式を評価し、結果がデバッグ レポートを生成**False** (デバッグ バージョンのみ)。
 
 ## <a name="syntax"></a>構文
 
@@ -58,19 +58,21 @@ _ASSERTE( booleanExpression );
 
 ### <a name="parameters"></a>パラメーター
 
-*ブール式*0 以外 (true) または 0 (false) に評価されるスカラー式 (ポインター式を含む)。
+*ブール式*<br/>
+0 以外 (true) または 0 (false) に評価されるスカラー式 (ポインター式)。
 
-*メッセージ*レポートの一部として表示するワイド文字列です。
+*message*<br/>
+レポートの一部として表示するワイド文字列。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_ASSERT_EXPR**、 **_ASSERT**と **_ASSERTE**マクロ、デバッグ中に前提条件の確認のクリーンでシンプルなメカニズムをアプリケーションに提供します。 アプリケーションの製品版ビルドで呼び出されないようにするために `#ifdef` ステートメントで囲む必要がないため、これらのマクロには高い柔軟性があります。 この柔軟性は、 [_DEBUG](../../c-runtime-library/debug.md) マクロを使用することで実現されます。 **_ASSERT_EXPR**、 **_ASSERT**と **_ASSERTE**変更するにはのみ **_DEBUG**はコンパイル時に定義します。 ときに **_DEBUG**が定義されていない、これらのマクロの呼び出しはプリプロセス時に削除されます。
+**_ASSERT_EXPR**、 **_ASSERT**と **_ASSERTE**マクロ、デバッグ中に前提条件をチェックするためのクリーンでシンプルなメカニズムをアプリケーションに提供します。 アプリケーションの製品版ビルドで呼び出されないようにするために `#ifdef` ステートメントで囲む必要がないため、これらのマクロには高い柔軟性があります。 この柔軟性は、 [_DEBUG](../../c-runtime-library/debug.md) マクロを使用することで実現されます。 **_ASSERT_EXPR**、 **_ASSERT**と **_ASSERTE**変更するにはのみ **_DEBUG**はコンパイル時に定義します。 ときに **_DEBUG**が定義されていない場合、これらのマクロの呼び出しはプリプロセス時に削除されます。
 
-**_ASSERT_EXPR**、 **_ASSERT**と **_ASSERTE**評価、*ブール式*引数場合と、結果が**false**(0)、メッセージを出力を診断し呼び出し[_CrtDbgReportW](crtdbgreport-crtdbgreportw.md)デバッグ レポートを生成します。 **_ASSERT**マクロは、単純な診断メッセージを出力 **_ASSERTE**メッセージで失敗した式の文字列表現が含まれていますと **_ASSERT_EXPR**含まれています、*メッセージ*診断メッセージの文字列。 これらのマクロは、何もしないときに*ブール式*0 以外の値に評価します。
+**_ASSERT_EXPR**、 **_ASSERT**と **_ASSERTE**評価、*ブール式*引数とすると、結果は**false**(0)、出力メッセージを診断し呼び出し[_CrtDbgReportW](crtdbgreport-crtdbgreportw.md)デバッグ レポートを生成します。 **_ASSERT**マクロは、単純な診断メッセージを出力します **_ASSERTE**メッセージで失敗した式の文字列表現が含まれていますと **_ASSERT_EXPR**含まれています、*メッセージ*診断メッセージ内の文字列。 これらのマクロは何もしない場合に*ブール式*0 以外の値に評価されます。
 
-**_ASSERT_EXPR**、 **_ASSERT**と **_ASSERTE**呼び出す **_CrtDbgReportW**、ワイド文字内にあるすべての出力が発生します。 **_ASSERTE**に Unicode 文字を正しく出力*ブール式*と **_ASSERT_EXPR**に Unicode 文字を出力*メッセージ*です。
+**_ASSERT_EXPR**、 **_ASSERT**と **_ASSERTE**呼び出す **_CrtDbgReportW**、これにより、すべての出力がワイド文字。 **_ASSERTE**の Unicode 文字を正しく印刷*ブール式*と **_ASSERT_EXPR**の Unicode 文字を出力します*メッセージ*します。
 
-**_ASSERTE**マクロが失敗した式を指定し、 **_ASSERT_EXPR**により、生成されたレポートでメッセージを指定するを参照しなくても、問題の識別にユーザーを有効にする、アプリケーションのソース コードです。 ただし、欠点をすべて*メッセージ*によって印刷される **_ASSERT_EXPR**とすべての式によって評価される **_ASSERTE**出力 (デバッグ バージョン) に含まれる文字列定数として、アプリケーションのファイルです。 したがって場合の数が多いに対して呼び出しを行う **_ASSERT_EXPR**または **_ASSERTE**、これらの式が、出力ファイルのサイズを大幅に増加します。
+**_ASSERTE**マクロが失敗した式を指定および **_ASSERT_EXPR**により生成されたレポートでのメッセージを指定するを参照しなくても、問題を識別するためにユーザーを有効にする、アプリケーションのソース コード。 ただし、欠点をすべて*メッセージ*によって出力される **_ASSERT_EXPR**とすべての式によって評価 **_ASSERTE**出力 (デバッグ バージョン) に含まれる文字列定数として、アプリケーションのファイルです。 そのため、多くの場合は呼び出しが **_ASSERT_EXPR**または **_ASSERTE**、これらの式が、出力ファイルのサイズを大幅に増加します。
 
 [_CrtSetReportMode](crtsetreportmode.md) や [_CrtSetReportFile](crtsetreportfile.md) 関数で明示的に指定しない限り、以下と等しい設定を持つメッセージがポップアップ ダイアログ ボックスに表示されます。
 
@@ -78,13 +80,13 @@ _ASSERTE( booleanExpression );
 _CrtSetReportMode(CRT_ASSERT, _CRTDBG_MODE_WNDW);
 ````
 
-**_CrtDbgReportW**デバッグ レポートを生成し、その変換先または変換先、基に現在のレポート モードまたはモードおよびに対して定義されているファイルの決定、 **_CRT_ASSERT**レポートの種類。 既定では、アサーション エラーとエラーは、デバッグ メッセージ ウィンドウに送られます。 [_CrtSetReportMode](crtsetreportmode.md) 関数と [_CrtSetReportFile](crtsetreportfile.md) 関数は、各レポートの種類の宛先を定義するために使用されます。
+**_CrtDbgReportW**デバッグ レポートを生成し、宛先または現在のレポート モードまたはモードと定義されているファイルに基づいて、変換先を決定します、 **_CRT_ASSERT**レポートの種類。 既定では、アサーション エラーとエラーは、デバッグ メッセージ ウィンドウに送られます。 [_CrtSetReportMode](crtsetreportmode.md) 関数と [_CrtSetReportFile](crtsetreportfile.md) 関数は、各レポートの種類の宛先を定義するために使用されます。
 
-宛先がデバッグ メッセージ ウィンドウとユーザーの場合をクリックする、**再試行**ボタン、 **_CrtDbgReportW** 1 を返しますの原因、 **_ASSERT_EXPR**、 **_ASSERT**と **_ASSERTE**マクロ デバッガーを起動する、ジャスト イン タイム (JIT) デバッグが有効になっています。
+クリックしたときに、変換先は、デバッグ メッセージ ウィンドウで、ユーザー、**再試行**ボタン、 **_CrtDbgReportW** 1 を返しますの原因、 **_ASSERT_EXPR**、 **_ASSERT**と **_ASSERTE**マクロを・ イン タイム (JIT) デバッグが有効なデバッガーを開始します。
 
 レポート処理の詳細については、 [_CrtDbgReport、_CrtDbgReportW](crtdbgreport-crtdbgreportw.md) 関数を参照してください。 アサーション失敗を解決し、これらのマクロをデバッグ エラーの処理機構として使用する方法の詳細については、「 [確認とレポートのためのマクロの使用](/visualstudio/debugger/macros-for-reporting)」を参照してください。
 
-加え、 **_ASSERT** 、マクロ、[アサート](assert-macro-assert-wassert.md)マクロはプログラム ロジックの検証に使用できます。 このマクロは、ライブラリのデバッグ バージョンとリリース バージョンの両方で使用できます。 [_RPT、_RPTF](rpt-rptf-rptw-rptfw-macros.md) デバッグ マクロをデバッグ レポート生成のために使用することもできますが、式の評価は行いません。 **_RPT**マクロは、簡単なレポートを生成します。 **_RPTF**マクロでは、生成されたレポートのレポート マクロが呼び出されたソース ファイルと行番号。 これらのマクロのワイド文字バージョンは使用可能な (**_RPTW**、 **_RPTFW**)。 ワイド文字バージョンは、ワイド文字列がすべての文字列パラメーターと出力で使用できるという点を除き、ナロー文字バージョンと同一です。
+加え、 **_ASSERT** 、マクロ、[アサート](assert-macro-assert-wassert.md)マクロはプログラム ロジックの検証に使用できます。 このマクロは、ライブラリのデバッグ バージョンとリリース バージョンの両方で使用できます。 [_RPT、_RPTF](rpt-rptf-rptw-rptfw-macros.md) デバッグ マクロをデバッグ レポート生成のために使用することもできますが、式の評価は行いません。 **_RPT**マクロは、簡単なレポートを生成します。 **_RPTF**マクロは、生成されたレポートがレポート マクロが呼び出されたソース ファイルと行番号を含めます。 これらのマクロのワイド文字バージョンを利用できます (**_RPTW**、 **_RPTFW**)。 ワイド文字バージョンは、ワイド文字列がすべての文字列パラメーターと出力で使用できるという点を除き、ナロー文字バージョンと同一です。
 
 **_ASSERT_EXPR**、 **_ASSERT**と **_ASSERTE**マクロを含めることによって利用され\<crtdbg.h >、アプリケーションは、デバッグとリンクする必要がありますC ランタイム ライブラリのバージョンと **_DEBUG**が定義されているは、これらのマクロは、その他のランタイム関数を呼び出すためです。
 
@@ -96,7 +98,7 @@ _CrtSetReportMode(CRT_ASSERT, _CRTDBG_MODE_WNDW);
 
 ## <a name="example"></a>例
 
-このプログラムの呼び出しが行われるに、 **_ASSERT**と **_ASSERTE**条件をテストするマクロ`string1 == string2`です。 条件が失敗した場合、これらのマクロは診断メッセージを出力します。 **_RPT**と **_RPTF**マクロのグループが実行することも、このプログラムでの代わりに、 **printf**関数。
+このプログラムで呼び出しが、 **_ASSERT**と **_ASSERTE**条件をテストするマクロ`string1 == string2`します。 条件が失敗した場合、これらのマクロは診断メッセージを出力します。 **_RPT**と **_RPTF**マクロのグループの代替手段としてこのプログラムで実行がも、 **printf**関数。
 
 ```C
 // crt_ASSERT_macro.c

@@ -96,16 +96,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a53a069138b4e54988be008917e5ca2b24fa0a6c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 69347ab698661346b8d598dda1bb007d071a21f8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411885"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104148"
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT、_RPTF、_RPTW、_RPTFW のマクロ
 
-デバッグ レポートを生成してアプリケーションの進行状況を追跡します (デバッグ バージョンのみ)。 なお*n*内の引数の数を指定*args* 0、1、2、3、4、または 5 を指定できます。
+デバッグ レポートを生成してアプリケーションの進行状況を追跡します (デバッグ バージョンのみ)。 なお*n*引数の数を指定します*args* 0、1、2、3、4、または 5 を指定できます。
 
 ## <a name="syntax"></a>構文
 
@@ -136,35 +136,38 @@ _RPTFWn(
 
 ### <a name="parameters"></a>パラメーター
 
-*reportType*レポートの種類:**前述**、 **_CRT_ERROR**、または **_CRT_ASSERT**です。
+*reportType*<br/>
+レポートの種類:**前述**、 **_CRT_ERROR**、または **_CRT_ASSERT**します。
 
-*形式*ユーザー メッセージの作成に使用するコントロールの書式設定文字列。
+*format*<br/>
+ユーザー メッセージの作成に使用される書式指定文字列。
 
-*args*で使用される代替引数*形式*です。
+*引数*<br/>
+使用される代替引数*形式*します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-すべてのマクロ、 *reportType*と*形式*パラメーター。 また、マクロ名に追加された数字で示される最大 4 つの追加引数を受け取る場合もあります。 たとえば、 **_RPT0**と **_RPTF0**追加の引数を受け取らない **_RPT1**と **_RPTF1**かかる*arg1*、 **_RPT2**と **_RPTF2**かかる*arg1*と**arg2**のようにします。
+すべてのマクロ、 *reportType*と*形式*パラメーター。 また、マクロ名に追加された数字で示される最大 4 つの追加引数を受け取る場合もあります。 たとえば、 **_RPT0**と **_RPTF0**追加の引数を受け取らず **_RPT1**と **_RPTF1**かかる*arg1*、 **_RPT2**と **_RPTF2**かかる*arg1*と**arg2**など。
 
-**_RPT**と **_RPTF**マクロと似ています、 [printf](printf-printf-l-wprintf-wprintf-l.md)デバッグ プロセス中にアプリケーションの進行状況を追跡するために使用されることがあるために機能します。 ただし、これらのマクロはより柔軟な**printf**で囲む必要がないため **#ifdef**れないようにするステートメントは、アプリケーションの製品版ビルドでと呼ばれます。 この柔軟性を使用して、 [_DEBUG](../../c-runtime-library/debug.md)マクロ以外の場合は、 **_RPT**と **_RPTF**のマクロはのみ使用可能な場合に、 **_DEBUG**フラグは、定義されています。 ときに **_DEBUG**が定義されていない、これらのマクロの呼び出しはプリプロセス時に削除されます。
+**_RPT**と **_RPTF**マクロと似ています、 [printf](printf-printf-l-wprintf-wprintf-l.md)関数は、デバッグ プロセス中に、アプリケーションの進行状況を追跡する際に使用することができます。 ただし、これらのマクロはより柔軟な**printf**で囲む必要がないので **#ifdef**れないようにするステートメントは、アプリケーションの製品版ビルドでと呼ばれます。 この柔軟性を使用して、 [_DEBUG](../../c-runtime-library/debug.md)マクロ、 **_RPT**と **_RPTF**ときにマクロが使用可能なだけ、 **_DEBUG**フラグは、定義されています。 ときに **_DEBUG**が定義されていない場合、これらのマクロの呼び出しはプリプロセス時に削除されます。
 
-**_RPTW**と **_RPTFW**マクロは、これらのマクロのワイド文字バージョンです。 ようなもの**wprintf**を引数としてワイド文字列を実行します。
+**_RPTW**と **_RPTFW**マクロは、これらのマクロのワイド文字バージョンです。 このユーザーは、 **wprintf**引数としてワイド文字列を実行します。
 
-**_RPT**マクロの呼び出し、 [_CrtDbgReport](crtdbgreport-crtdbgreportw.md)ユーザー メッセージを含むデバッグ レポートを生成する関数。 **_RPTW**マクロの呼び出し、 **_CrtDbgReportW**ワイド文字と同じレポートを生成する関数。 **_RPTF**と **_RPTFW**マクロは、ここで、レポート マクロが呼び出された、さらに、ユーザー メッセージをソース ファイルと行番号を持つデバッグ レポートを作成します。 置き換えることによって、ユーザー メッセージの作成、 **arg**[*n*] 引数を*形式*文字列、によって定義されている同じ規則を使用して、 [printf](printf-printf-l-wprintf-wprintf-l.md)関数。
+**_RPT**マクロ呼び出し、 [_CrtDbgReport](crtdbgreport-crtdbgreportw.md)ユーザー メッセージを含むデバッグ レポートを生成する関数。 **_RPTW**マクロ呼び出し、 **_CrtDbgReportW**ワイド文字と同じレポートを生成する関数。 **_RPTF**と **_RPTFW**マクロでは、デバッグ レポートを作成、レポート マクロが呼び出されると、さらに、ユーザー メッセージにソース ファイルと行番号。 ユーザー メッセージは置き換えることによって作成された、 **arg**[*n*] 引数、*形式*によって定義された同じルールを使用して、文字列、 [printf](printf-printf-l-wprintf-wprintf-l.md)関数。
 
-**_CrtDbgReport**または **_CrtDbgReportW**デバッグ レポートを生成し、その現在のレポート モードに基づいて変換先およびに対して定義されているファイルを決定*reportType*です。 [_CrtSetReportMode](crtsetreportmode.md) 関数と [_CrtSetReportFile](crtsetreportfile.md) 関数は、各レポートの種類の宛先を定義するために使用されます。
+**_CrtDbgReport**または **_CrtDbgReportW**デバッグ レポートを生成し、現在のレポート モードに基づいて変換先と定義されているファイルを決定します*reportType*します。 [_CrtSetReportMode](crtsetreportmode.md) 関数と [_CrtSetReportFile](crtsetreportfile.md) 関数は、各レポートの種類の宛先を定義するために使用されます。
 
-場合、 **_RPT**マクロが呼び出されると、どちらも **_CrtSetReportMode**も **_CrtSetReportFile**されました呼び出されると、メッセージは次のように表示します。
+場合、 **_RPT**マクロが呼び出されるあり **_CrtSetReportMode**も **_CrtSetReportFile**が呼び出されると、メッセージは次のように表示します。
 
 |レポートの種類|出力先|
 |-----------------|------------------------|
 |**前述**|警告テキストは表示されません。|
 |**_CRT_ERROR**|ポップアップ ウィンドウ。 `_CrtSetReportMode(_CRT_ERROR, _CRTDBG_MODE_WNDW);` が指定されている場合と同じです。|
-|**_CRT_ASSERT**|同じ **_CRT_ERROR**です。|
+|**_CRT_ASSERT**|同じ **_CRT_ERROR**します。|
 
-宛先がデバッグ メッセージ ウィンドウと、ユーザーが選択した場合、**再試行**ボタン、 **_CrtDbgReport**または **_CrtDbgReportW**原因でこれらのマクロを開始する、1 を返します、デバッガー、ジャスト イン タイム (JIT) デバッグが有効になっています。 これらのマクロをデバッグ エラーの処理機構として使用する方法の詳細については、[確認とレポート用マクロの使用](/visualstudio/debugger/macros-for-reporting)に関するページを参照してください。
+宛先がデバッグ メッセージ ウィンドウと、ユーザーが選択した、**再試行**ボタン、 **_CrtDbgReport**または **_CrtDbgReportW**を開始するこれらのマクロの原因の 1 を返します、デバッガー、ジャスト イン タイム (JIT) デバッグが有効になっています。 これらのマクロをデバッグ エラーの処理機構として使用する方法の詳細については、[確認とレポート用マクロの使用](/visualstudio/debugger/macros-for-reporting)に関するページを参照してください。
 
-デバッグ レポートを生成するマクロが他にも 2 つ存在します。 [_ASSERT](assert-asserte-assert-expr-macros.md) マクロは、その式の引数が FALSE に評価される場合にのみ、レポートを生成します。 [_ASSERTE](assert-asserte-assert-expr-macros.md)は同様 **_ASSERT**、生成されたレポートで失敗した式が含まれています。
+デバッグ レポートを生成するマクロが他にも 2 つ存在します。 [_ASSERT](assert-asserte-assert-expr-macros.md) マクロは、その式の引数が FALSE に評価される場合にのみ、レポートを生成します。 [_ASSERTE](assert-asserte-assert-expr-macros.md)とまったく同じでは **_ASSERT**、生成されたレポートで失敗した式が含まれています。
 
 ## <a name="requirements"></a>要件
 

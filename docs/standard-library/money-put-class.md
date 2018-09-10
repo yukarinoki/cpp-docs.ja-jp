@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de84f708957074878fba84ebfe3db600a1b6ed86
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 299d11ea29afa5331ef79c7947ccd2684713b29e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954813"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108903"
 ---
 # <a name="moneyput-class"></a>money_put クラス
 
@@ -47,9 +47,11 @@ class money_put : public locale::facet;
 
 ### <a name="parameters"></a>パラメーター
 
-*CharType*ロケールの文字をエンコードする、プログラム内で使用される型。
+*CharType*<br/>
+ロケールの文字をエンコードするためにプログラム内で使用される型。
 
-*OutputIterator*その出力を書き込む反復子を通貨の put 関数の型。
+*OutputIterator*<br/>
+通貨の put 関数が出力を書き込む反復子の型。
 
 ## <a name="remarks"></a>Remarks
 
@@ -76,7 +78,7 @@ class money_put : public locale::facet;
 |[do_put](#do_put)|通貨値を表す文字シーケンスから数値または文字列を抽出するために呼び出される仮想関数。|
 |[put](#put)|数値または文字列を通貨値を表す文字シーケンスに変換します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<locale>
 
@@ -117,15 +119,20 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>パラメーター
 
-*[次へ]* 挿入された文字列の最初の要素を示す反復子。
+*next*<br/>
+挿入された文字列の先頭の要素を示す反復子。
 
-*_Intl*を示すブール値のシーケンスで期待される通貨記号の種類を示す: **true**場合、国際**false**国内場合。
+*_Intl*<br/>
+シーケンスで期待される通貨記号の種類を示すブール値。国際通貨の場合は **true**、国内通貨の場合は **false**。
 
-*されている _Iosbase*形式にフラグを設定すると設定は、通貨記号が省略可能であることを示しますこれは必要な場合は、。
+*されている _Iosbase*<br/>
+書式設定フラグ。これが設定されている場合、通貨記号は省略可能です。それ以外の場合は必須です
 
-*_Fill*間隔に使用される文字。
+*_Fill*<br/>
+スペースに使用される文字。
 
-*val*変換する文字列オブジェクト。
+*val*<br/>
+変換される文字列オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -195,7 +202,8 @@ explicit money_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Refs*オブジェクトのメモリ管理の種類を指定するために使用する整数値。
+*_Refs*<br/>
+オブジェクトのメモリ管理の種類を指定するために使用する整数値。
 
 ### <a name="remarks"></a>Remarks
 
@@ -234,15 +242,20 @@ iter_type put(
 
 ### <a name="parameters"></a>パラメーター
 
-*[次へ]* 挿入された文字列の最初の要素を示す反復子。
+*next*<br/>
+挿入された文字列の先頭の要素を示す反復子。
 
-*_Intl*を示すブール値のシーケンスで期待される通貨記号の種類を示す: **true**場合、国際**false**国内場合。
+*_Intl*<br/>
+シーケンスで期待される通貨記号の種類を示すブール値。国際通貨の場合は **true**、国内通貨の場合は **false**。
 
-*されている _Iosbase*形式にフラグを設定すると設定は、通貨記号が省略可能であることを示しますこれは必要な場合は、。
+*されている _Iosbase*<br/>
+書式設定フラグ。これが設定されている場合、通貨記号は省略可能です。それ以外の場合は必須です
 
-*_Fill*間隔に使用される文字。
+*_Fill*<br/>
+スペースに使用される文字。
 
-*val*変換する文字列オブジェクト。
+*val*<br/>
+変換される文字列オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 

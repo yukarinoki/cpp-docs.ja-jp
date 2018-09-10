@@ -82,12 +82,12 @@ helpviewer_keywords:
 - std::uninitialized_fill_n [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d104d8a64dd60e5aaa7244e5bf5f535343f6e132
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 762cc70c40c2d6e201b42c0c10ed83c981c97ec7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957426"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101665"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt; 関数
 
@@ -113,7 +113,8 @@ T* addressof(T& Val);
 
 ### <a name="parameters"></a>パラメーター
 
-*Val*オブジェクトまたは実際のアドレスを取得する対象の関数。
+*val*<br/>
+実際のアドレスを取得する対象のオブジェクトまたは関数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -136,13 +137,17 @@ void* align(
 
 ### <a name="parameters"></a>パラメーター
 
-*配置*しようとするアラインメントの境界します。
+*アラインメント*<br/>
+試行するアラインメントの境界。
 
-*サイズ*アラインされたストレージのバイト単位のサイズ。
+*Size*<br/>
+アラインされたストレージのサイズ (バイト単位)。
 
-*Ptr*を使用する使用可能な連続した記憶域プールの開始アドレス。 このパラメーターは、出力パラメーターでも、配置が成功した場合、新しい開始アドレスに設定されます。 `align()` が失敗した場合、このパラメーターは変更されません。
+*ptr*<br/>
+使用する利用可能な一連の記憶域プールの開始アドレス。 このパラメーターは、出力パラメーターでも、配置が成功した場合、新しい開始アドレスに設定されます。 `align()` が失敗した場合、このパラメーターは変更されません。
 
-*領域*できる総容量`align()`アラインされたストレージの作成に使用します。 このパラメーターは出力パラメーターでもあり、アラインされたストレージと関連するオーバーヘッドが差し引かれた後の記憶域バッファーに残されている調整された領域を格納します。
+*スペース*<br/>
+アラインされた記憶域の作成に使用する `align()` で利用可能な合計領域。 このパラメーターは出力パラメーターでもあり、アラインされたストレージと関連するオーバーヘッドが差し引かれた後の記憶域バッファーに残されている調整された領域を格納します。
 
 `align()` が失敗した場合、このパラメーターは変更されません。
 
@@ -189,9 +194,11 @@ allocate_shared(Allocator Alloc, Types&&... Args);
 
 ### <a name="parameters"></a>パラメーター
 
-*Alloc*オブジェクトの作成に使用されるアロケーター。
+*Alloc*<br/>
+オブジェクトを作成するために使用されるアロケーター。
 
-*Args*オブジェクトになる、0 個以上の引数。
+*Args*<br/>
+オブジェクトになるゼロ個以上の引数。
 
 ### <a name="remarks"></a>Remarks
 
@@ -209,11 +216,14 @@ const_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*返されたによって制御される型がポインターを共有します。
+*Ty*<br/>
+返される共有ポインターによって制御される型。
 
-*その他の*引数の共有ポインターによって制御される型。
+*その他*<br/>
+引数の共有ポインターによって制御される型。
 
-*その他の*引数の共有ポインター。
+*その他*<br/>
+引数の共有ポインター。
 
 ### <a name="remarks"></a>Remarks
 
@@ -275,7 +285,8 @@ void declare_reachable(void* ptr);
 
 ### <a name="parameters"></a>パラメーター
 
-*ptr*到達可能で割り当てられた、有効なストレージ領域へのポインター。
+*ptr*<br/>
+到達可能な割り当て済みの有効なストレージ領域へのポインター。
 
 ### <a name="remarks"></a>Remarks
 
@@ -296,7 +307,8 @@ struct default_delete {
 
 ### <a name="parameters"></a>パラメーター
 
-*Ptr*を削除するオブジェクトへのポインター。
+*ptr*<br/>
+削除するオブジェクトへのポインター。
 
 その他の要素を削除する配列内の型。
 
@@ -316,11 +328,14 @@ dynamic_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*返されたによって制御される型がポインターを共有します。
+*Ty*<br/>
+返される共有ポインターによって制御される型。
 
-*その他の*引数の共有ポインターによって制御される型。
+*その他*<br/>
+引数の共有ポインターによって制御される型。
 
-*sp*引数の共有ポインター。
+*sp*<br/>
+引数の共有ポインター。
 
 ### <a name="remarks"></a>Remarks
 
@@ -373,11 +388,14 @@ D* get_deleter(const shared_ptr<Ty>& sp);
 
 ### <a name="parameters"></a>パラメーター
 
-*D*削除子の型。
+*D*<br/>
+削除子の型。
 
-*Ty*の共有ポインターによって制御される型。
+*Ty*<br/>
+共有ポインターによって制御される型。
 
-*sp*共有ポインター。
+*sp*<br/>
+共有ポインター。
 
 ### <a name="remarks"></a>Remarks
 
@@ -451,7 +469,8 @@ pair<Type *, ptrdiff_t> get_temporary_buffer(ptrdiff_t count);
 
 ### <a name="parameters"></a>パラメーター
 
-*カウント*メモリに対して要求された要素の最大数は、割り当てられます。
+*count*<br/>
+メモリの割り当て対象となる、必要な要素の最大数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -619,15 +638,20 @@ make_unique(Types&&...) = delete;
 
 ### <a name="parameters"></a>パラメーター
 
-*T*オブジェクトの型を`unique_ptr`を指します。
+*T*<br/>
+`unique_ptr` が指すオブジェクトの型。
 
-*型*によって指定されたコンス トラクター引数の型*Args*します。
+*型*<br/>
+指定されたコンス トラクター引数の型*Args*します。
 
-*Args*型のオブジェクトのコンス トラクターに渡される引数*T*します。
+*Args*<br/>
+型のオブジェクトのコンス トラクターに渡される引数*T*します。
 
-*Elem*型の要素の配列*T*します。
+*Elem*<br/>
+型の要素の配列*T*します。
 
-*サイズ*新しい配列に領域を割り当てる要素の数。
+*Size*<br/>
+新しい配列に領域を割り当てる要素の数。
 
 ### <a name="remarks"></a>Remarks
 
@@ -684,9 +708,11 @@ struct owner_less<weak_ptr<Type>>
 
 ### <a name="parameters"></a>パラメーター
 
-*_ 左*共有またはウィーク ポインター。
+*_ 左*<br/>
+共有またはウィーク ポインター。
 
-*適切な*共有またはウィーク ポインター。
+*right*<br/>
+共有またはウィーク ポインター。
 
 ### <a name="remarks"></a>Remarks
 
@@ -703,7 +729,8 @@ void return_temporary_buffer(Type* _Pbuf);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Pbuf*解放するメモリへのポインター。
+*_Pbuf*<br/>
+割り当てを解放するメモリへのポインター。
 
 ### <a name="remarks"></a>Remarks
 
@@ -744,7 +771,7 @@ int main( )
 ```Output
 The number of integers in the array is: 7.
 The number of elements that the allocated memory
- could store is given by: resultPair.second = 7.
+could store is given by: resultPair.second = 7.
 ```
 
 ## <a name="static_pointer_cast"></a>  static_pointer_cast
@@ -759,11 +786,14 @@ static_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*返されたによって制御される型がポインターを共有します。
+*Ty*<br/>
+返される共有ポインターによって制御される型。
 
-*その他の*引数の共有ポインターによって制御される型。
+*その他*<br/>
+引数の共有ポインターによって制御される型。
 
-*その他の*引数の共有ポインター。
+*その他*<br/>
+引数の共有ポインター。
 
 ### <a name="remarks"></a>Remarks
 
@@ -818,13 +848,17 @@ void swap(weak_ptr<Ty>& left, weak_ptr<Other>& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*左辺の共有/ウィーク ポインターによって制御される型。
+*Ty*<br/>
+左辺の共有/ウィーク ポインターによって制御される型。
 
-*その他の*右辺の共有/ウィーク ポインターによって制御される型。
+*その他*<br/>
+右辺の共有/ウィーク ポインターによって制御される型。
 
-*左*左辺の共有/ウィーク ポインター。
+*left*<br/>
+左辺の共有/ウィーク ポインター。
 
-*適切な*右辺の共有/ウィーク ポインター。
+*right*<br/>
+右辺の共有/ウィーク ポインター。
 
 ### <a name="remarks"></a>Remarks
 
@@ -927,11 +961,14 @@ ForwardIterator uninitialized_copy(InputIterator first, InputIterator last, Forw
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*ソース範囲の最初の要素を示す入力反復子。
+*first*<br/>
+ソース範囲内の先頭の要素を示す入力反復子。
 
-*最後*ソース範囲の最後の要素を示す入力反復子。
+*last*<br/>
+ソース範囲内の最後の要素を示す入力反復子。
 
-*dest*ターゲット範囲の最初の要素を示す前方反復子。
+*dest*<br/>
+ターゲット範囲内の先頭の要素を示す前方反復子。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1032,11 +1069,14 @@ ForwardIterator uninitialized_copy_n(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*をコピーするオブジェクトを参照する入力反復子。
+*first*<br/>
+コピーするオブジェクトを参照する入力反復子。
 
-*カウント*A が符号付きまたは符号なしオブジェクトをコピーする回数を指定する整数型。
+*count*<br/>
+オブジェクトをコピーする回数を指定する符号付きまたは符号なし整数型。
 
-*dest*新しいコピーが移動先を参照する前方反復子。
+*dest*<br/>
+新しいコピー先を参照する前方反復子。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1066,11 +1106,14 @@ void uninitialized_fill(ForwardIterator first, ForwardIterator last, const Type&
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*初期化されるターゲット範囲の最初の要素を示す前方反復子。
+*first*<br/>
+初期化されるターゲット範囲内の先頭の要素を示す前方反復子。
 
-*最後*初期化されるターゲット範囲の最後の要素を示す前方反復子。
+*last*<br/>
+初期化されるターゲット範囲内の末尾の要素を示す前方反復子。
 
-*val*宛先範囲を初期化するために使用される値。
+*val*<br/>
+ターゲット範囲を初期化するために使用される値。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1135,11 +1178,14 @@ void uninitialized_fill_n(ForwardIterator first, Size count, const Type& val);
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*が開始される前方反復子、ターゲット範囲の最初の要素をアドレス指定します。
+*first*<br/>
+初期化されるターゲット範囲内の先頭の要素を示す前方反復子。
 
-*カウント*初期化する要素の数。
+*count*<br/>
+初期化される要素の数。
 
-*val*宛先範囲を初期化するために使用される値。
+*val*<br/>
+ターゲット範囲を初期化するために使用される値。
 
 ### <a name="remarks"></a>Remarks
 

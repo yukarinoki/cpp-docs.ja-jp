@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7091ba3c7f4d40a2b16c48afadfd5068bcd794bb
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: d74c9930816f353be7594bb67bf5e44b5251aa6c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961741"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106732"
 ---
 # <a name="checkedarrayiterator-class"></a>checked_array_iterator クラス
 
@@ -145,7 +145,7 @@ int main()
     return 0;
 }
 \* Output:
- 0 1 2 3 4 5 6 7 8 9
+0 1 2 3 4 5 6 7 8 9
 *\
 ```
 
@@ -189,7 +189,7 @@ int main()
 |[operator-](#operator-)|反復子からオフセットをデクリメントし、新しいオフセット位置に挿入された要素をアドレス指定する新しい `checked_array_iterator` アドレスを返します。|
 |[operator&#91;&#93;](#op_at)|`checked_array_iterator` によってアドレス指定される要素からの要素のオフセットへの参照を返します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<iterator>
 
@@ -253,11 +253,14 @@ checked_array_iterator(
 
 ### <a name="parameters"></a>パラメーター
 
-*ptr*配列へのポインター。
+*ptr*<br/>
+配列データへのポインター。
 
-*サイズ*配列のサイズ。
+*size*<br/>
+配列のサイズ。
 
-*インデックス*(オプション)、配列内の要素を反復子を初期化します。  既定では、反復子は、配列内の最初の要素に初期化されます。
+*index*<br/>
+(省略可能) 反復子を初期化するための配列内の要素。  既定では、反復子は、配列内の最初の要素に初期化されます。
 
 ### <a name="remarks"></a>Remarks
 
@@ -325,7 +328,8 @@ bool operator==(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*、`checked_array_iterator`対象となると、等しいかどうかを確認します。
+*right*<br/>
+等しいかどうかを確認する対象の `checked_array_iterator`。
 
 ### <a name="remarks"></a>Remarks
 
@@ -380,7 +384,8 @@ bool operator!=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*、`checked_array_iterator`に対して非等値をチェックします。
+*right*<br/>
+等しくないかどうかを確認する対象の `checked_array_iterator`。
 
 ### <a name="remarks"></a>Remarks
 
@@ -435,7 +440,8 @@ bool operator<(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*、`checked_array_iterator`に対して非等値をチェックします。
+*right*<br/>
+等しくないかどうかを確認する対象の `checked_array_iterator`。
 
 ### <a name="remarks"></a>Remarks
 
@@ -490,7 +496,8 @@ bool operator>(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*、`checked_array_iterator`と比較します。
+*right*<br/>
+比較対象の `checked_array_iterator`。
 
 ### <a name="remarks"></a>Remarks
 
@@ -508,7 +515,8 @@ bool operator<=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*、`checked_array_iterator`と比較します。
+*right*<br/>
+比較対象の `checked_array_iterator`。
 
 ### <a name="remarks"></a>Remarks
 
@@ -526,7 +534,8 @@ bool operator>=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*、`checked_array_iterator`と比較します。
+*right*<br/>
+比較対象の `checked_array_iterator`。
 
 ### <a name="remarks"></a>Remarks
 
@@ -756,7 +765,8 @@ checked_array_iterator<_Iterator>& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Off*反復子をインクリメントするオフセット。
+*_Off*<br/>
+反復子をインクリメントするオフセット。
 
 ### <a name="return-value"></a>戻り値
 
@@ -803,7 +813,8 @@ checked_array_iterator<_Iterator> operator+(difference_type _Off) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*_Off*に追加するオフセット、`checked_array_iterator`します。
+*_Off*<br/>
+`checked_array_iterator` に追加するオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -850,7 +861,8 @@ checked_array_iterator<_Iterator>& operator-=(difference_type _Off);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Off*反復子をインクリメントするオフセット。
+*_Off*<br/>
+反復子をインクリメントするオフセット。
 
 ### <a name="return-value"></a>戻り値
 
@@ -900,7 +912,8 @@ difference_type operator-(const checked_array_iterator& right) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*_Off*からデクリメントされるオフセット、`checked_array_iterator`します。
+*_Off*<br/>
+`checked_array_iterator` からデクリメントされるオフセット。
 
 ### <a name="return-value"></a>戻り値
 
@@ -922,7 +935,8 @@ reference operator[](difference_type _Off) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*_Off*からのオフセット、`checked_array_iterator`アドレス。
+*_Off*<br/>
+`checked_array_iterator` アドレスからのオフセット。
 
 ### <a name="return-value"></a>戻り値
 

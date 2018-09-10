@@ -118,12 +118,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aec1d5291526360157b4e1a0b5b4eff9ae9fd454
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 66818710a1d5811f2ff52acf7f9785de09ba0c53
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956461"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101691"
 ---
 # <a name="iosbase-class"></a>ios_base クラス
 
@@ -228,7 +228,7 @@ ios_base クラスのオブジェクトでは、ストリームの状態情報�
 |-|-|
 |[operator=](#op_eq)|`ios_base` オブジェクトの代入演算子。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<ios>
 
@@ -272,11 +272,14 @@ typedef void (__cdecl *event_callback)(
 
 ### <a name="parameters"></a>パラメーター
 
-*(_E)* 、[イベント](#event)します。
+*_E*<br/>
+[イベント](#event)。
 
-*(_B)* イベントが呼び出されたストリーム。
+*(_B)*<br/>
+イベントが呼び出されたストリーム。
 
-*(_I)* ユーザー定義の数。
+*_I*<br/>
+ユーザー定義された番号。
 
 ### <a name="remarks"></a>Remarks
 
@@ -349,7 +352,8 @@ fmtflags flags(fmtflags fmtfl);
 
 ### <a name="parameters"></a>パラメーター
 
-*fmtfl*新しい`fmtflags`設定します。
+*fmtfl*<br/>
+新しい `fmtflags` 設定。
 
 ### <a name="return-value"></a>戻り値
 
@@ -499,7 +503,8 @@ locale imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Loc*新しいロケール設定。
+*_Loc*<br/>
+新しいロケール設定。
 
 ### <a name="return-value"></a>戻り値
 
@@ -575,7 +580,8 @@ long& iword(int idx);
 
 ### <a name="parameters"></a>パラメーター
 
-*idx*として格納する値のインデックス、`iword`します。
+*idx*<br/>
+`iword` として格納する値のインデックス。
 
 ### <a name="remarks"></a>Remarks
 
@@ -649,7 +655,8 @@ ios_base& operator=(const ios_base& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*型のオブジェクト`ios_base`します。
+*right*<br/>
+`ios_base` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -672,7 +679,8 @@ streamsize precision(streamsize _Prec);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Prec*表示するには有効桁数または固定小数点表記で小数点より後の桁数。
+*_Prec*<br/>
+表示する有効桁数または固定小数点表記での小数点の後の桁数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -716,7 +724,8 @@ void *& pword(int _Idx);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Idx*として格納する値のインデックスを`pword`します。
+*_Idx*<br/>
+`pword` として格納する値のインデックス。
 
 ### <a name="remarks"></a>Remarks
 
@@ -741,9 +750,11 @@ void register_callback(
 
 ### <a name="parameters"></a>パラメーター
 
-*pfn*コールバック関数へのポインター。
+*pfn*<br/>
+コールバック関数へのポインター。
 
-*idx*ユーザー定義の数。
+*idx*<br/>
+ユーザー定義された番号。
 
 ### <a name="remarks"></a>Remarks
 
@@ -901,17 +912,19 @@ fmtflags setf(
 
 ### <a name="parameters"></a>パラメーター
 
-*マスク (_m)* を有効にするフラグ。
+*マスク (_m)*<br/>
+オンにするフラグ。
 
-*_Unset*オフにするフラグ。
+*_Unset*<br/>
+オフにするフラグ。
 
 ### <a name="return-value"></a>戻り値
 
-    The previous format flags
+前の書式指定フラグ
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-    The first member function effectively calls [flags](#flags)(_ *Mask* &#124; \_ *Flags*) (set selected bits) and then returns the previous format flags. The second member function effectively calls **flags**(\_ *Mask* **& fmtfl, flags& ~**`_Mask`) (replace selected bits under a mask) and then returns the previous format flags.
+最初のメンバー関数は効果的に呼び出す[フラグ](#flags)(_*マスク* &#124; \_ *フラグ*) (選択したビットを設定) し、前の書式設定フラグを返します。 2 番目のメンバー関数は効果的に呼び出す**フラグ**(\_ *マスク* **& fmtfl、フラグ (& a) ~**`_Mask`) (選択されているビット マスクを置換)前の書式設定フラグを返します。
 
 ### <a name="example"></a>例
 
@@ -949,15 +962,16 @@ static bool sync_with_stdio(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Sync*すべてのストリームが同期しているかどうか`stdio`します。
+*_Sync*<br/>
+すべてのストリームが同期しているかどうか`stdio`します。
 
 ### <a name="return-value"></a>戻り値
 
-    Previous setting for this function.
+この関数の以前の設定。
 
 ### <a name="remarks"></a>Remarks
 
-    The static member function stores a `stdio` sync flag, which is initially **true**. When **true**, this flag ensures that operations on the same file are properly synchronized between the [iostreams](../standard-library/iostreams-conventions.md) functions and those defined in the C++ Standard Library. Otherwise, synchronization may or may not be guaranteed, but performance may be improved. The function stores *_Sync* in the `stdio` sync flag and returns its previous stored value. You can call it reliably only before performing any operations on the standard streams.
+静的メンバー関数のストアを`stdio`同期フラグは、最初に**true**します。 ときに**true**、このフラグにより間で同じファイルでの操作が正しく同期されている、 [iostreams](../standard-library/iostreams-conventions.md)関数と C++ 標準ライブラリで定義されています。 それ以外の場合、同期が保証されませんはパフォーマンスが向上する可能性があります。 関数は *_Sync*で、`stdio`フラグを同期し、格納されている以前の値を返します。 標準ストリームに対するすべての操作を実行する前にのみに確実に呼び出すことができます。
 
 ## <a name="unsetf"></a> ios_base::unsetf
 
@@ -971,15 +985,16 @@ void unsetf(
 
 ### <a name="parameters"></a>パラメーター
 
-*マスク (_m)* オフするフラグ。
+*マスク (_m)*<br/>
+オフにしたいフラグ。
 
 ### <a name="remarks"></a>Remarks
 
-    The member function effectively calls [flags](#flags)(`~`*_Mask* **& flags**) (clear selected bits).
+メンバー関数は、効果的に呼び出す[フラグ](#flags)(`~`*_Mask* **& フラグ**) (選択したビットをオフに)。
 
 ### <a name="example"></a>例
 
-    See [ios_base::setf](#setf) for a sample of using `unsetf`.
+参照してください[ios_base::setf](#setf)を使用するサンプルの`unsetf`します。
 
 ## <a name="width"></a> ios_base::width
 
@@ -994,15 +1009,16 @@ streamsize width(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Wide*出力ストリームの目的のサイズ。
+*_Wide*<br/>
+出力ストリームの必要なサイズ。
 
 ### <a name="return-value"></a>戻り値
 
-    The current width setting.
+現在の幅の設定。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-    The first member function returns the stored field width. The second member function stores *_Wide* in the field width and returns its previous stored value.
+最初のメンバー関数は、ストアド フィールドの幅を返します。 2 番目のメンバー関数は *_Wide*でフィールドの幅を返します前の値を格納します。
 
 ### <a name="example"></a>例
 
@@ -1027,7 +1043,7 @@ int main( ) {
 
 ## <a name="xalloc"></a> ios_base::xalloc
 
-    Specifies that a variable is part of the stream.
+変数は、ストリームの一部であることを指定します。
 
 ```cpp
 static int xalloc( );
@@ -1035,11 +1051,11 @@ static int xalloc( );
 
 ### <a name="return-value"></a>戻り値
 
-    The static member function returns a stored static value, which it increments on each call.
+静的メンバー関数は、呼び出しのたびにインクリメントされますが格納されている静的な値を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-    You can use the return value as a unique index argument when calling the member functions [iword](#iword) or [pword](#pword).
+メンバー関数を呼び出すときに、一意のインデックスの引数として戻り値を使用することができます[iword](#iword)または[pword](#pword)します。
 
 ### <a name="example"></a>例
 

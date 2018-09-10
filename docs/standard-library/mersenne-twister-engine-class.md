@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb03b35ed792bda7c506fd06d6102dda83c768e6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f868a6f2ec63e38573d49a1dc4b3b7a122f4d8f2
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959272"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100223"
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine クラス
 
@@ -39,23 +39,32 @@ class mersenne_twister_engine;
 
 ### <a name="parameters"></a>パラメーター
 
-*UIntType*符号なし整数の結果の型。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*UIntType*<br/>
+結果を表す符号なし整数型。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
-*W* **ワード サイズ**します。 状態シーケンスの各ワードのサイズ (ビット数)。 **前提条件**: `2u < W ≤ numeric_limits<UIntType>::digits`
+*W*<br/>
+**ワード サイズ**。 状態シーケンスの各ワードのサイズ (ビット数)。 **前提条件**: `2u < W ≤ numeric_limits<UIntType>::digits`
 
-*N* **状態のサイズ**します。 状態シーケンス内の要素 (値) の数。
+*N*<br/>
+**状態のサイズ**。 状態シーケンス内の要素 (値) の数。
 
-*M* **シフト サイズ**します。 ひねりを加えるごとにスキップする要素の数。 **前提条件**: `0 < M ≤ N`
+*M*<br/>
+**シフト サイズ**。 ひねりを加えるごとにスキップする要素の数。 **前提条件**: `0 < M ≤ N`
 
-*R* **マスク ビット**します。 **前提条件**: `R ≤ W`
+*R*<br/>
+**マスク ビット**。 **前提条件**: `R ≤ W`
 
-*A* **XOR マスク**します。 **前提条件**: `A ≤ (1u<<W) - 1u`
+*A*<br/>
+**XOR マスク**。 **前提条件**: `A ≤ (1u<<W) - 1u`
 
-*U*、 *S*、 *T*、 *L* **Tempering シフト パラメーター**します。 スクランブル (調律) 時のシフト値として使用されます。 前提条件: `U,S,T,L ≤ W`
+*U*、 *S*、 *T*、 *L*<br/>
+**調律のシフト パラメーター**。 スクランブル (調律) 時のシフト値として使用されます。 前提条件: `U,S,T,L ≤ W`
 
-*D*、 *B*、 *C* **Tempering ビット マスク パラメーター**します。 スクランブル (調律) 時のビット マスク値として使用されます。 前提条件: `D,B,C ≤ (1u<<W) - 1u`
+*D*、 *B*、 *C*<br/>
+**調律のビット マスク パラメーター**。 スクランブル (調律) 時のビット マスク値として使用されます。 前提条件: `D,B,C ≤ (1u<<W) - 1u`
 
-*F* **初期化乗数**します。 シーケンスの初期化を支援するために使用されます。 前提条件: `F ≤ (1u<<W) - 1u`
+*F*<br/>
+**初期化乗数**。 シーケンスの初期化を支援するために使用されます。 前提条件: `F ≤ (1u<<W) - 1u`
 
 ## <a name="members"></a>メンバー
 
@@ -106,7 +115,7 @@ typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,
 
 コード例については、[\<random>](../standard-library/random.md) をご覧ください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<random>
 

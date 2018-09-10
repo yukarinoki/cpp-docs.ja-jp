@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::condition_variable::wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca85765d6fed21938a61f52f25c1a377ec43c499
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0e4d31a93ac8e0f7785ea567821c0ac6b0ad6a58
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965179"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109837"
 ---
 # <a name="conditionvariable-class"></a>condition_variable クラス
 
@@ -66,7 +66,7 @@ class condition_variable;
 |[wait_for](#wait_for)|スレッドをブロックし、スレッドがブロック解除されるまでの時間間隔を設定します。|
 |[wait_until](#wait_until)|スレッドをブロックし、スレッドがブロック解除される最大の時刻を設定します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<condition_variable >
 
@@ -125,9 +125,11 @@ void wait(unique_lock<mutex>& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>パラメーター
 
-*Lck* A [unique_lock\<mutex >](../standard-library/unique-lock-class.md)オブジェクト。
+*Lck*<br/>
+[unique_lock\<mutex>](../standard-library/unique-lock-class.md) オブジェクト。
 
-*Pred*を返す任意の式**true**または**false**します。
+*Pred*<br/>
+任意の式を返す**true**または**false**します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -159,11 +161,14 @@ bool wait_for(
 
 ### <a name="parameters"></a>パラメーター
 
-*Lck* A [unique_lock\<mutex >](../standard-library/unique-lock-class.md)オブジェクト。
+*Lck*<br/>
+[unique_lock\<mutex>](../standard-library/unique-lock-class.md) オブジェクト。
 
-*Rel_time* A`chrono::duration`スリープ状態にする前に、スレッドの量を指定するオブジェクト。
+*Rel_time*<br/>
+スレッドが開始するまでの時間の長さを指定する `chrono::duration` オブジェクト。
 
-*Pred*を返す任意の式**true**または**false**します。
+*Pred*<br/>
+任意の式を返す**true**または**false**します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -214,11 +219,14 @@ bool wait_until(
 
 ### <a name="parameters"></a>パラメーター
 
-*Lck* A [unique_lock\<mutex >](../standard-library/unique-lock-class.md)オブジェクト。
+*Lck*<br/>
+[unique_lock\<mutex>](../standard-library/unique-lock-class.md) オブジェクト。
 
-*Abs_time* A [chrono::time_point](../standard-library/time-point-class.md)オブジェクト。
+*Abs_time*<br/>
+[chrono::time_point](../standard-library/time-point-class.md) オブジェクト。
 
-*Pred*を返す任意の式**true**または**false**します。
+*Pred*<br/>
+任意の式を返す**true**または**false**します。
 
 ### <a name="return-value"></a>戻り値
 

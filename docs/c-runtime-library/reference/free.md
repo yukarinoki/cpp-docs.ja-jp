@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc6dfd832d18dbabc1ebc10aec252cc8afe15346
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 35a1ae1a27b08db14673b125ecbc2978fd4738a3
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402518"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100484"
 ---
 # <a name="free"></a>free
 
@@ -53,19 +53,20 @@ void free(
 
 ### <a name="parameters"></a>パラメーター
 
-*_expand*以前に割り当てられたメモリ ブロックは解放されません。
+*_expand*<br/>
+以前割り当てられ、解放されるメモリ ブロック。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**空き**関数にメモリ ブロックの割り当てを解除 (*_expand*) への呼び出しによって割り当てられていた**calloc**、 **malloc**、または**realloc**です。 解放されたバイト数が、要求されたバイト数、ブロックが割り当てられたときと同じ (またはの場合、再割り当てされた**realloc**)。 場合 *_expand*は**NULL**、ポインターは無視されますと**空き**が直ちに返されます。 無効なポインターを解放しようとしています (によって割り当てられていないメモリ ブロックへのポインター **calloc**、 **malloc**、または**realloc**) 以降の割り当て要求に影響を与える可能性がありますエラーが発生します。
+**無料**関数メモリ ブロックの割り当てを解除 (*_expand*) への呼び出しによって割り当てられていた**calloc**、 **malloc**、または**realloc**します。 解放されるバイトの数、ブロックが割り当てられたときに要求されたバイト数と同じです (の場合は再割り当てまたは**realloc**)。 場合 *_expand*は**NULL**、ポインターは無視されますと**無料**が直ちに返されます。 無効なポインターを解放しようとしています (によって割り当てられていないメモリ ブロックへのポインター **calloc**、 **malloc**、または**realloc**) 以降の割り当て要求に影響を与える可能性がありますエラーが発生します。
 
-場合は、メモリの解放でエラーが発生した**errno**エラーの性質に関するオペレーティング システムからの情報に設定します。 詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+場合は、メモリの解放でエラーが発生した**errno**が障害の性質に関するオペレーティング システムからの情報を設定します。 詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 メモリ ブロックを解放すると、[_heapmin](heapmin.md) が、未使用の領域を結合して、それらをオペレーティング システムに戻すことで、ヒープ上の空きメモリの量を最小限に抑えます。 オペレーティング システムにリリースされない解放されたメモリは、空きプールに復元され、再度割り当てに使用できます。
 
-C ランタイム ライブラリのデバッグ バージョンとリンクするアプリケーション**空き**に解決される[_free_dbg](free-dbg.md)です。 デバッグ プロセス中のヒープの管理方法の詳細については、「[CRT デバッグ ヒープ](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。
+アプリケーションが、C ランタイム ライブラリのデバッグ バージョンにリンクされている場合**無料**に解決される[_free_dbg](free-dbg.md)します。 デバッグ プロセス中のヒープの管理方法の詳細については、「[CRT デバッグ ヒープ](/visualstudio/debugger/crt-debug-heap-details)」を参照してください。
 
-**空き**がマークされている`__declspec(noalias)`関数がグローバル変数を変更せず保証されることを意味します。 詳細については、「[noalias](../../cpp/noalias.md)」を参照してください。
+**無料**がマークされている`__declspec(noalias)`、グローバル変数を変更することがなく、関数が保証されることを意味します。 詳細については、「[noalias](../../cpp/noalias.md)」を参照してください。
 
 [_malloca](malloca.md) を使用して割り当てられたメモリを解放するには、[_freea](freea.md) を使用します。
 

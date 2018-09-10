@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81bdbd07e06ef2ec24a5f220fcd11a228b783888
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 19e08d1544a23ad1272bde5066a63f37b1e511fd
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965991"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100925"
 ---
 # <a name="numput-class"></a>num_put クラス
 
@@ -45,9 +45,11 @@ class num_put : public locale::facet;
 
 ### <a name="parameters"></a>パラメーター
 
-*CharType*ロケールの文字をエンコードする、プログラム内で使用される型。
+*CharType*<br/>
+ロケールの文字をエンコードするためにプログラム内で使用される型。
 
-*OutputIterator*その出力を書き込む反復子を数値 put 関数の型。
+*OutputIterator*<br/>
+数値 put 関数が出力を書き込む反復子の型。
 
 ## <a name="remarks"></a>Remarks
 
@@ -73,7 +75,7 @@ class num_put : public locale::facet;
 |[do_put](#do_put)|数値を、特定のロケールで書式設定された数値を表す `CharType` のシーケンスに変換するために呼び出される仮想関数。|
 |[put](#put)|数値を、特定のロケールで書式設定された数値を表す `CharType` のシーケンスに変換します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<locale>
 
@@ -153,13 +155,17 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>パラメーター
 
-*[次へ]* 挿入された文字列の最初の要素を示す反復子。
+*next*<br/>
+挿入された文字列の先頭の要素を示す反復子。
 
-*されている _Iosbase*を出力し、出力の書式設定するためのフラグの句読点を付けるに使用される numpunct ファセットでロケールを含むストリームを指定します。
+*されている _Iosbase*<br/>
+出力に句読点を付けるために使用される numpunct ファセットを持つロケールおよび出力を書式設定するためのフラグを含むストリームを指定します。
 
-*_Fill*間隔に使用される文字。
+*_Fill*<br/>
+スペースに使用される文字。
 
-*val*数または出力する場合はブール型。
+*val*<br/>
+出力する数値またはブール型。
 
 ### <a name="return-value"></a>戻り値
 
@@ -318,7 +324,8 @@ explicit num_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Refs*オブジェクトのメモリ管理の種類を指定するために使用する整数値。
+*_Refs*<br/>
+オブジェクトのメモリ管理の種類を指定するために使用する整数値。
 
 ### <a name="remarks"></a>Remarks
 
@@ -397,13 +404,17 @@ iter_type put(
 
 ### <a name="parameters"></a>パラメーター
 
-*dest*挿入された文字列の最初の要素を示す反復子。
+*dest*<br/>
+挿入された文字列の先頭の要素を示す反復子。
 
-*されている _Iosbase*ロケールには出力し、出力の書式設定するためのフラグの句読点を付けるに使用される numpunct ファセットが含まれているストリームを指定します。
+*されている _Iosbase*<br/>
+出力に句読点を付けるために使用される numpunct ファセットを持つロケールおよび出力を書式設定するためのフラグを含むストリームを指定します。
 
-*_Fill*間隔に使用される文字。
+*_Fill*<br/>
+スペースに使用される文字。
 
-*val*数または出力する場合はブール型。
+*val*<br/>
+出力する数値またはブール型。
 
 ### <a name="return-value"></a>戻り値
 

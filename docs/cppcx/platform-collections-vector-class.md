@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeaed487db1063efd14dddbca28480a169b13522
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 36fe82bc5d17cd3c4951b008af28ba89b171c78f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761112"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103933"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector クラス
 
@@ -49,10 +49,10 @@ template <typename T, typename E>
 
 ### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 Vector オブジェクトに含まれている要素の型。
 
-*E*  
+*E*<br/>
 型の値と等しいかどうかをテストする二項述語を指定します*T*します。既定値は `std::equal_to<T>` です。
 
 ### <a name="remarks"></a>Remarks
@@ -128,7 +128,7 @@ virtual void Append(T item);
 
 ### <a name="parameters"></a>パラメーター
 
-*index*  
+*index*<br/>
 Vector に挿入する項目。 型*項目*によって定義されます、 *T* typename。
 
 ## <a name="clear"></a>  Vector::clear メソッド
@@ -173,7 +173,7 @@ virtual T GetAt(unsigned int index);
 
 ### <a name="parameters"></a>パラメーター
 
-*index*  
+*index*<br/>
 ベクター オブジェクト内の特定の要素を指定する、0 から始まる符号なし整数。
 
 ### <a name="return-value"></a>戻り値
@@ -194,10 +194,10 @@ virtual unsigned int GetMany(
 
 ### <a name="parameters"></a>パラメーター
 
-*startIndex*  
+*startIndex*<br/>
 取得する項目の 0 から始まるインデックス。
 
-*dest*  
+*dest*<br/>
 指定した要素から開始する項目の呼び出し元が割り当てた配列*startIndex*とベクターの最後の要素で終了します。
 
 ### <a name="return-value"></a>戻り値
@@ -234,10 +234,10 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 ### <a name="parameters"></a>パラメーター
 
-*値*  
+*値*<br/>
 検索する項目。
 
-*index*  
+*index*<br/>
 項目の 0 から始まるインデックス場合パラメーター*値*。 それ以外は 0。
 
 *インデックス*項目は、ベクターの最初の要素か、項目が見つからなかった場合、パラメーターが 0 です。 戻り値が `true` の場合、項目が見つかり、項目は最初の要素です。それ以外の場合は、項目は見つかっていません。
@@ -262,10 +262,10 @@ virtual void InsertAt(unsigned int index, T item)
 
 ### <a name="parameters"></a>パラメーター
 
-*index*  
+*index*<br/>
 ベクター オブジェクト内の特定の要素を指定する、0 から始まる符号なし整数。
 
-*item*  
+*item*<br/>
 指定された要素の後にベクターに挿入する項目*インデックス*します。 型*項目*によって定義されます、 *T* typename。
 
 ## <a name="removeat"></a>  Vector::removeat メソッド
@@ -280,7 +280,7 @@ virtual void RemoveAt(unsigned int index);
 
 ### <a name="parameters"></a>パラメーター
 
-*index*  
+*index*<br/>
 ベクター オブジェクト内の特定の要素を指定する、0 から始まる符号なし整数。
 
 ## <a name="removeatend"></a>  Vector::removeatend メソッド
@@ -305,7 +305,7 @@ virtual void ReplaceAll(const ::Platform::Array<T>^ arr);
 
 ### <a name="parameters"></a>パラメーター
 
-*arr*  
+*arr*<br/>
 型が定義されているオブジェクトの配列、 *T* typename。
 
 ## <a name="setat"></a>  Vector::setat メソッド
@@ -320,10 +320,10 @@ virtual void SetAt(unsigned int index, T item);
 
 ### <a name="parameters"></a>パラメーター
 
-*index*  
+*index*<br/>
 ベクター オブジェクト内の特定の要素を指定する、0 から始まる符号なし整数。
 
-*item*  
+*item*<br/>
 指定された要素に代入する値。 型*項目*によって定義されます、 *T* typename。
 
 ## <a name="size"></a>  Vector::size メソッド
@@ -365,40 +365,40 @@ Vector(std::initializer_list<T> il);
 
 ### <a name="parameters"></a>パラメーター
 
-*a*  
+*a*<br/>
 A [std::array](../standard-library/array-class-stl.md)ベクターを初期化するために使用されます。
 
-*arr*  
+*arr*<br/>
 A [platform::array](../cppcx/platform-array-class.md)ベクターを初期化するために使用されます。
 
-*InIt*  
+*InIt*<br/>
 現在のベクターを初期化するために使用されるオブジェクトのコレクションの型。
 
-*il*  
+*il*<br/>
 A [std::initializer_list](../standard-library/initializer-list-class.md)型のオブジェクトの*T*ベクターを初期化するために使用されます。
 
-*N*  
+*N*<br/>
 現在のベクターを初期化するために使用されるオブジェクトのコレクションの要素数。
 
-*size*  
+*size*<br/>
 ベクターの要素数。
 
-*値*  
+*値*<br/>
 現在のベクターの各要素を初期化するために使用される値。
 
-*v*  
+*v*<br/>
 [Lvalues と Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)を[std::vector](../standard-library/vector-class.md)現在のベクターを初期化するために使用されます。
 
-*ptr*  
+*ptr*<br/>
 現在のベクターを初期化するために使用される `std::vector` へのポインター。
 
-*first*  
+*first*<br/>
 現在のベクターを初期化するために使用されるオブジェクトのシーケンスの最初の要素。 型*最初*によって渡される*完全転送*します。 詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
 
-*last*  
+*last*<br/>
 現在のベクターを初期化するために使用されるオブジェクトのシーケンスの最後の要素。 型*最後*によって渡される*完全転送*します。 詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[プラットフォーム Namespace](platform-namespace-c-cx.md)  
-[C++ で Windows ランタイム コンポーネントの作成](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  
+[プラットフォーム Namespace](platform-namespace-c-cx.md)<br/>
+[C++ で Windows ランタイム コンポーネントの作成](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

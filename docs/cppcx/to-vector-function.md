@@ -15,39 +15,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00ecb00a890629c69994019c9232ff559ea93c96
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a3dcccc332a5d768a614414838003e1400f3c6a6
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758879"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107628"
 ---
 # <a name="tovector-function"></a>to_vector 関数
-値が、指定された IVector または IVectorView パラメーターの基になるコレクションと同じである `std::vector` を返します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-template <typename T>  
-inline ::std::vector<T> to_vector(IVector<T>^ v); 
- 
-template <typename T>  
-inline ::std::vector<T> to_vector(IVectorView<T>^ v);  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
- `T`  
- テンプレート型パラメーター。  
-  
- `v`  
- 基になる Vector または VectorView オブジェクトへのアクセスを提供する IVector または IVectorView インターフェイス。  
-  
-### <a name="return-value"></a>戻り値  
-  
-### <a name="requirements"></a>要件  
- **ヘッダー:** collection.h  
-  
- **名前空間:** Windows::Foundation::Collections  
-  
-## <a name="see-also"></a>関連項目  
- [:Foundation Namespace](../cppcx/windows-foundation-collections-namespace-c-cx.md)
+
+値が、指定された IVector または IVectorView パラメーターの基になるコレクションと同じである `std::vector` を返します。
+
+## <a name="syntax"></a>構文
+
+```
+template <typename T>
+inline ::std::vector<T> to_vector(IVector<T>^ v);
+
+template <typename T>
+inline ::std::vector<T> to_vector(IVectorView<T>^ v);
+```
+
+#### <a name="parameters"></a>パラメーター
+
+*T*<br/>
+テンプレート型パラメーター。
+
+*v*<br/>
+基になる Vector または VectorView オブジェクトへのアクセスを提供する IVector または IVectorView インターフェイス。
+
+### <a name="return-value"></a>戻り値
+
+### <a name="requirements"></a>要件
+
+**ヘッダー:** collection.h
+
+**名前空間:** Windows::Foundation::Collections
+
+## <a name="see-also"></a>関連項目
+
+[:Foundation Namespace](../cppcx/windows-foundation-collections-namespace-c-cx.md)

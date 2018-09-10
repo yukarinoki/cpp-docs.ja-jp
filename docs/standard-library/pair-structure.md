@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ad86773fdc78f3cb8d5219ce14919a035755f3b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: dcee56d93059e30bc07e3f964b581624f0bb555d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955333"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108826"
 ---
 # <a name="pair-structure"></a>pair 構造体
 
@@ -54,11 +54,14 @@ struct pair
 
 ### <a name="parameters"></a>パラメーター
 
-*Val1*の最初の要素を初期化する値`pair`します。
+*Val1*<br/>
+`pair` の最初の要素を初期化する値。
 
-*Val2*の 2 番目の要素を初期化する値`pair`します。
+*Val2*<br/>
+`pair` の 2 番目の要素を初期化する値。
 
-*右*別の 1 組の要素を初期化するために使用するのには、値がペア。
+*右*<br/>
+別のペアの要素を初期化するために値が使用されるペア。
 
 ## <a name="return-value"></a>戻り値
 
@@ -158,12 +161,12 @@ The pair p3 is: ( 10, 0.011 ).
 The element pairs of the map m1 are: ( 1, 10 ) ( 2, 20 ) ( 3, 30 ).
 The element (4,40) was inserted successfully in m1.
 The element with a key value of
- ( (pr2.first) -> first ) = 1 is already in m1,
- so the insertion failed.
+( (pr2.first) -> first ) = 1 is already in m1,
+so the insertion failed.
 *\
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<utility>
 

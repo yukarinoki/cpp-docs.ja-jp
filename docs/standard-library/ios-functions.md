@@ -52,12 +52,12 @@ helpviewer_keywords:
 - std::skipws [C++]
 - std::unitbuf [C++]
 - std::uppercase [C++]
-ms.openlocfilehash: 23689b7c7d6770816db02e4a463fd63080abbaf4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a19d023400179e1e7e16541b7e3d7ef38ad963ba
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959093"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101094"
 ---
 # <a name="ltiosgt-functions"></a>&lt;ios&gt; 関数
 
@@ -82,7 +82,8 @@ ios_base& boolalpha(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
+*str*<br/>
+[ios_base](../standard-library/ios-base-class.md) 型のオブジェクトまたは `ios_base` から継承した型への参照。
 
 ### <a name="return-value"></a>戻り値
 
@@ -133,7 +134,8 @@ ios_base& dec(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
+*str*<br/>
+[ios_base](../standard-library/ios-base-class.md) 型のオブジェクトまたは `ios_base` から継承した型への参照。
 
 ### <a name="return-value"></a>戻り値
 
@@ -185,7 +187,8 @@ ios_base& defaultfloat(ios_base& _Iosbase);
 
 ### <a name="parameters"></a>パラメーター
 
-*されている _Iosbase* 、`ios_base`オブジェクト。
+*されている _Iosbase*<br/>
+`ios_base` オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -201,7 +204,8 @@ ios_base& fixed(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
+*str*<br/>
+[ios_base](../standard-library/ios-base-class.md) 型のオブジェクトまたは `ios_base` から継承した型への参照。
 
 ### <a name="return-value"></a>戻り値
 
@@ -248,7 +252,8 @@ ios_base& hex(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
+*str*<br/>
+[ios_base](../standard-library/ios-base-class.md) 型のオブジェクトまたは `ios_base` から継承した型への参照。
 
 ### <a name="return-value"></a>戻り値
 
@@ -274,7 +279,8 @@ ios_base& internal(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
+*str*<br/>
+[ios_base](../standard-library/ios-base-class.md) 型のオブジェクトまたは `ios_base` から継承した型への参照。
 
 ### <a name="return-value"></a>戻り値
 
@@ -319,7 +325,8 @@ ios_base& left(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
+*str*<br/>
+[ios_base](../standard-library/ios-base-class.md) 型のオブジェクトまたは `ios_base` から継承した型への参照。
 
 ### <a name="return-value"></a>戻り値
 
@@ -361,7 +368,8 @@ ios_base& noboolalpha(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
+*str*<br/>
+[ios_base](../standard-library/ios-base-class.md) 型のオブジェクトまたは `ios_base` から継承した型への参照。
 
 ### <a name="return-value"></a>戻り値
 
@@ -389,7 +397,8 @@ ios_base& noshowbase(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
+*str*<br/>
+[ios_base](../standard-library/ios-base-class.md) 型のオブジェクトまたは `ios_base` から継承した型への参照。
 
 ### <a name="return-value"></a>戻り値
 
@@ -415,7 +424,8 @@ ios_base& noshowpoint(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
+*str*<br/>
+[ios_base](../standard-library/ios-base-class.md) 型のオブジェクトまたは `ios_base` から継承した型への参照。
 
 ### <a name="return-value"></a>戻り値
 
@@ -461,7 +471,8 @@ ios_base& noshowpos(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
+*str*<br/>
+[ios_base](../standard-library/ios-base-class.md) 型のオブジェクトまたは `ios_base` から継承した型への参照。
 
 ### <a name="return-value"></a>戻り値
 
@@ -487,7 +498,8 @@ ios_base& noskipws(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
+*str*<br/>
+[ios_base](../standard-library/ios-base-class.md) 型のオブジェクトまたは `ios_base` から継承した型への参照。
 
 ### <a name="return-value"></a>戻り値
 
@@ -528,7 +540,8 @@ ios_base& nounitbuf(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
+*str*<br/>
+[ios_base](../standard-library/ios-base-class.md) 型のオブジェクトまたは `ios_base` から継承した型への参照。
 
 ### <a name="return-value"></a>戻り値
 
@@ -550,7 +563,8 @@ ios_base& nouppercase(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
+*str*<br/>
+[ios_base](../standard-library/ios-base-class.md) 型のオブジェクトまたは `ios_base` から継承した型への参照。
 
 ### <a name="return-value"></a>戻り値
 
@@ -574,7 +588,8 @@ ios_base& oct(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
+*str*<br/>
+[ios_base](../standard-library/ios-base-class.md) 型のオブジェクトまたは `ios_base` から継承した型への参照。
 
 ### <a name="return-value"></a>戻り値
 
@@ -600,7 +615,8 @@ ios_base& right(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
+*str*<br/>
+[ios_base](../standard-library/ios-base-class.md) 型のオブジェクトまたは `ios_base` から継承した型への参照。
 
 ### <a name="return-value"></a>戻り値
 
@@ -656,7 +672,8 @@ ios_base& scientific(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
+*str*<br/>
+[ios_base](../standard-library/ios-base-class.md) 型のオブジェクトまたは `ios_base` から継承した型への参照。
 
 ### <a name="return-value"></a>戻り値
 
@@ -700,7 +717,8 @@ ios_base& showbase(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
+*str*<br/>
+[ios_base](../standard-library/ios-base-class.md) 型のオブジェクトまたは `ios_base` から継承した型への参照。
 
 ### <a name="return-value"></a>戻り値
 
@@ -753,7 +771,8 @@ ios_base& showpoint(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
+*str*<br/>
+[ios_base](../standard-library/ios-base-class.md) 型のオブジェクトまたは `ios_base` から継承した型への参照。
 
 ### <a name="return-value"></a>戻り値
 
@@ -779,7 +798,8 @@ ios_base& showpos(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
+*str*<br/>
+[ios_base](../standard-library/ios-base-class.md) 型のオブジェクトまたは `ios_base` から継承した型への参照。
 
 ### <a name="return-value"></a>戻り値
 
@@ -823,7 +843,8 @@ ios_base& skipws(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
+*str*<br/>
+[ios_base](../standard-library/ios-base-class.md) 型のオブジェクトまたは `ios_base` から継承した型への参照。
 
 ### <a name="return-value"></a>戻り値
 
@@ -876,7 +897,8 @@ ios_base& unitbuf(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
+*str*<br/>
+[ios_base](../standard-library/ios-base-class.md) 型のオブジェクトまたは `ios_base` から継承した型への参照。
 
 ### <a name="return-value"></a>戻り値
 
@@ -900,7 +922,8 @@ ios_base& uppercase(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
+*str*<br/>
+[ios_base](../standard-library/ios-base-class.md) 型のオブジェクトまたは `ios_base` から継承した型への参照。
 
 ### <a name="return-value"></a>戻り値
 

@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ce85d846d142e2c15a0fba6d2d3fb76c924b97f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 914f3623e3ac288a27554edac848686efc025896
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966603"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105888"
 ---
 # <a name="fpos-class"></a>fpos クラス
 
@@ -47,7 +47,8 @@ class fpos
 
 ### <a name="parameters"></a>パラメーター
 
-*Statetype*状態情報。
+*Statetype*<br/>
+状態情報。
 
 ### <a name="constructors"></a>コンストラクター
 
@@ -74,7 +75,7 @@ class fpos
 |[operator==](#op_eq_eq)|ファイル位置インジケーターが等しいかどうかをテストします。|
 |[operator streamoff](#op_streamoff)|`fpos` 型のオブジェクトを `streamoff` 型のオブジェクトにキャストします。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<ios>
 
@@ -92,11 +93,14 @@ fpos(Statetype _State, fpos_t _Filepos);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Off*ストリームへのオフセット。
+*_Off*<br/>
+ストリームへのオフセット。
 
-*_State*の開始時の状態、`fpos`オブジェクト。
+*_State*<br/>
+`fpos` オブジェクトの開始状態。
 
-*_Filepos*ストリームへのオフセット。
+*_Filepos*<br/>
+ストリームへのオフセット。
 
 ### <a name="remarks"></a>Remarks
 
@@ -114,7 +118,8 @@ bool operator!=(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*を比較する対象のファイル位置インジケーター。
+*right*<br/>
+比較するファイル位置インジケーター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -186,7 +191,8 @@ fpos<Statetype> operator+(streamoff _Off) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*_Off*ファイル位置インジケーターをインクリメントするオフセット。
+*_Off*<br/>
+ファイル位置インジケーターをインクリメントするオフセット。
 
 ### <a name="return-value"></a>戻り値
 
@@ -210,7 +216,8 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Off*ファイル位置インジケーターをインクリメントするオフセット。
+*_Off*<br/>
+ファイル位置インジケーターをインクリメントするオフセット。
 
 ### <a name="return-value"></a>戻り値
 
@@ -236,9 +243,11 @@ fpos<Statetype> operator-(streamoff _Off) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*ファイルの位置。
+*right*<br/>
+ファイルの位置。
 
-*_Off* Stream オフセット。
+*_Off*<br/>
+ストリームのオフセット。
 
 ### <a name="return-value"></a>戻り値
 
@@ -258,7 +267,8 @@ fpos<Statetype>& operator-=(streamoff _Off);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Off* Stream オフセット。
+*_Off*<br/>
+ストリームのオフセット。
 
 ### <a name="return-value"></a>戻り値
 
@@ -282,7 +292,8 @@ bool operator==(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*を比較する対象のファイル位置インジケーター。
+*right*<br/>
+比較するファイル位置インジケーター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -355,7 +366,8 @@ void state(Statetype _State);
 
 ### <a name="parameters"></a>パラメーター
 
-*_State*新しい変換状態。
+*_State*<br/>
+新しい変換状態。
 
 ### <a name="return-value"></a>戻り値
 

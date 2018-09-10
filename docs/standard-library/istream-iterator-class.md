@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e41abbc4d7fa3cd18363982b806811b0698b44f4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e565d5f10bdb06bff6ad8c17047ed3e11070364d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959869"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099591"
 ---
 # <a name="istreamiterator-class"></a>istream_iterator クラス
 
@@ -38,7 +38,7 @@ ms.locfileid: "38959869"
 ```cpp
 template <class Type, class CharType = char, class Traits = char_traits<CharType>, class Distance = ptrdiff_t,>
 class istream_iterator
- : public iterator<
+: public iterator<
     input_iterator_tag, Type, Distance,
     const Type *,
     const Type&>;
@@ -46,13 +46,17 @@ class istream_iterator
 
 ### <a name="parameters"></a>パラメーター
 
-*型*入力ストリームから抽出されるオブジェクトの型。
+*Type*<br/>
+入力ストリームから抽出されるオブジェクトの型。
 
-*CharType*の文字の種類を表す型、`istream_iterator`します。 この引数は省略可能、既定値は**char**します。
+*CharType*<br/>
+`istream_iterator` の文字型を表す型。 この引数は省略可能、既定値は**char**します。
 
-*Traits*の文字の種類を表す型、`istream_iterator`します。 この引数は省略可能であり、既定値は `char_traits`< `CharType`> です。
+*Traits*<br/>
+`istream_iterator` の文字型を表す型。 この引数は省略可能であり、既定値は `char_traits`< `CharType`> です。
 
-*距離*署名付きの差の型を表す整数型、`istream_iterator`します。 この引数は省略可能であり、既定値は `ptrdiff_t` です。
+*Distance*<br/>
+`istream_iterator` の相違点の種類を表す符号付き整数型。 この引数は省略可能であり、既定値は `ptrdiff_t` です。
 
 null 以外の格納されたポインターを使用して istream_iterator クラスのオブジェクトを構築またはインクリメントすると、オブジェクトは、関連付けられている入力ストリームから `Type` 型のオブジェクトを抽出および格納することを試行します。 抽出が失敗した場合、オブジェクトは効果的に格納されたポインターを null ポインターに置き換え、シーケンス終端のインジケーターを作成します。
 
@@ -78,7 +82,7 @@ null 以外の格納されたポインターを使用して istream_iterator ク
 |[operator->](#op_arrow)|メンバーの値 (存在する場合) を返します。|
 |[operator++](#op_add_add)|入力ストリームからインクリメントされたオブジェクトを抽出するか、オブジェクトをインクリメントする前にオブジェクトをコピーして、そのコピーを返します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<iterator>
 
@@ -144,7 +148,8 @@ istream_iterator(istream_type& _Istr);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Istr*を使用して読み取る入力ストリームを初期化する、`istream_iterator`します。
+*_Istr*<br/>
+`istream_iterator` を初期化するために読み込まれる入力ストリーム。
 
 ### <a name="remarks"></a>Remarks
 

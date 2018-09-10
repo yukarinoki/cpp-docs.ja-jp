@@ -20,176 +20,178 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44beeca9b860e2010b092739d8c39044ad0bb5b1
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 3fb37261de4bd68a73b27baa6bdab5200b616cd6
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680926"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106692"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray クラス
-メソッドで設定する配列を呼び出し元から渡すときに入力パラメーターとして使用される 1 次元配列を表します。  
-  
- この ref クラスは vccorlib.h でプライベートとして宣言されています。したがって、メタデータには出力されず、C++ からのみ使用できます。 このクラスは、呼び出し元が割り当てた配列を受け取る入力パラメーターとして使用することのみを目的としています。 ユーザー コードから構築することはできません。 このクラスでは、C++ メソッドでその配列に直接書き込むことができます。このパターンは、 *FillArray* パターンと呼ばれます。 詳細については、次を参照してください。 [Array と WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)します。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-private ref class WriteOnlyArray<T, 1>  
-```  
-  
-### <a name="members"></a>メンバー  
-  
-### <a name="public-methods"></a>パブリック メソッド  
- これらのメソッドのアクセシビリティは内部です。つまり、これらのメソッドには C++ アプリまたはコンポーネント内でのみアクセスできます。  
-  
-|名前|説明|  
-|----------|-----------------|  
 
-|[Writeonlyarray::begin](#begin)|配列の最初の要素を指す反復子 |。  
-|[Writeonlyarray::data](#data)|データ バッファーへのポインター |。  
-|[Writeonlyarray::end](#end)|1 つ後ろの配列の最後の要素を指す反復子 |。  
-|[Writeonlyarray::fastpass](#fastpass)|配列が、システムによって透過的に実行される最適化です FastPass 機構を使用できるかどうかを示します。 コードでこれを使用しません |  
-|[Writeonlyarray::length](#length)|配列の要素の数を返します |。  
-|[Writeonlyarray::set](#set)|指定した要素を指定した値に設定します |。  
+メソッドで設定する配列を呼び出し元から渡すときに入力パラメーターとして使用される 1 次元配列を表します。
 
-  
-## <a name="inheritance-hierarchy"></a>継承階層  
- `WriteOnlyArray`  
-  
-### <a name="requirements"></a>要件  
- コンパイラ オプション: **/ZW**  
-  
- **メタデータ:** Platform.winmd  
-  
- **名前空間:** Platform  
+この ref クラスは vccorlib.h でプライベートとして宣言されています。したがって、メタデータには出力されず、C++ からのみ使用できます。 このクラスは、呼び出し元が割り当てた配列を受け取る入力パラメーターとして使用することのみを目的としています。 ユーザー コードから構築することはできません。 このクラスでは、C++ メソッドでその配列に直接書き込むことができます。このパターンは、 *FillArray* パターンと呼ばれます。 詳細については、次を参照してください。 [Array と WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+private ref class WriteOnlyArray<T, 1>
+```
+
+### <a name="members"></a>メンバー
+
+### <a name="public-methods"></a>パブリック メソッド
+
+これらのメソッドのアクセシビリティは内部です。つまり、これらのメソッドには C++ アプリまたはコンポーネント内でのみアクセスできます。
+
+|名前|説明|
+|----------|-----------------|
+
+|[Writeonlyarray::begin](#begin)|配列の最初の要素を指す反復子 |。|[Writeonlyarray::data](#data)|データ バッファーへのポインター |。|[Writeonlyarray::end](#end)|1 つ後ろの配列の最後の要素を指す反復子 |。|[Writeonlyarray::fastpass](#fastpass)|配列が、システムによって透過的に実行される最適化です FastPass 機構を使用できるかどうかを示します。 コードでこれを使用しません | |[Writeonlyarray::length](#length)|配列の要素の数を返します |。|[Writeonlyarray::set](#set)|指定した要素を指定した値に設定します |。
+
+## <a name="inheritance-hierarchy"></a>継承階層
+
+`WriteOnlyArray`
+
+### <a name="requirements"></a>要件
+
+コンパイラ オプション: **/ZW**
+
+**メタデータ:** Platform.winmd
+
+**名前空間:** Platform
 
 ## <a name="begin"></a>  WriteOnlyArray::begin メソッド
-配列内の最初の要素へのポインターを返します。  
-  
-### <a name="syntax"></a>構文  
-  
-```cpp  
-T* begin() const;  
-```  
-  
-### <a name="return-value"></a>戻り値  
- 配列内の最初の要素へのポインター。  
-  
-### <a name="remarks"></a>Remarks  
- この反復子は、配列の要素を操作するために `std::sort` などの STL アルゴリズムと共に使用できます。  
-  
 
+配列内の最初の要素へのポインターを返します。
+
+### <a name="syntax"></a>構文
+
+```cpp
+T* begin() const;
+```
+
+### <a name="return-value"></a>戻り値
+
+配列内の最初の要素へのポインター。
+
+### <a name="remarks"></a>Remarks
+
+この反復子は、配列の要素を操作するために `std::sort` などの STL アルゴリズムと共に使用できます。
 
 ## <a name="data"></a>  WriteOnlyArray::Data プロパティ
-データ バッファーへのポインター。  
-  
-### <a name="syntax"></a>構文  
-  
-```cpp  
-property T* Data{  
-   T* get() const;  
-}  
-```  
-  
-### <a name="return-value"></a>戻り値  
- 生配列バイトへのポインター。  
-  
 
+データ バッファーへのポインター。
+
+### <a name="syntax"></a>構文
+
+```cpp
+property T* Data{
+   T* get() const;
+}
+```
+
+### <a name="return-value"></a>戻り値
+
+生配列バイトへのポインター。
 
 ## <a name="end"></a>  WriteOnlyArray::end メソッド
-配列内の最後の要素の 1 つ後ろを指すポインターを返します。  
-  
-### <a name="syntax"></a>構文  
-  
-```cpp  
-T* end() const;  
-```  
-  
-### <a name="return-value"></a>戻り値  
- 配列内の最後の要素の 1 つ後ろを指すポインター反復子。  
-  
-### <a name="remarks"></a>Remarks  
- この反復子は、配列要素に対して `std::sort` などの操作を実行するために STL アルゴリズムと共に使用できます。  
-  
 
+配列内の最後の要素の 1 つ後ろを指すポインターを返します。
+
+### <a name="syntax"></a>構文
+
+```cpp
+T* end() const;
+```
+
+### <a name="return-value"></a>戻り値
+
+配列内の最後の要素の 1 つ後ろを指すポインター反復子。
+
+### <a name="remarks"></a>Remarks
+
+この反復子は、配列要素に対して `std::sort` などの操作を実行するために STL アルゴリズムと共に使用できます。
 
 ## <a name="fastpass"></a>  WriteOnlyArray::FastPass プロパティ
-内部の FastPass 最適化を実行できるかどうかを示します。 ユーザー コードでの使用を目的としたものではありません。  
-  
-### <a name="syntax"></a>構文  
-  
-```cpp  
-property bool FastPass{  
-   bool get() const;  
-}  
-```  
-  
-### <a name="return-value"></a>戻り値  
- 配列が FastPass かどうかを示すブール値。  
-  
 
+内部の FastPass 最適化を実行できるかどうかを示します。 ユーザー コードでの使用を目的としたものではありません。
+
+### <a name="syntax"></a>構文
+
+```cpp
+property bool FastPass{
+   bool get() const;
+}
+```
+
+### <a name="return-value"></a>戻り値
+
+配列が FastPass かどうかを示すブール値。
 
 ## <a name="get"></a>  Writeonlyarray::get メソッド
-指定したインデックス位置にある要素を返します。  
-  
-### <a name="syntax"></a>構文  
-  
-```cpp  
-T& get(  
-   unsigned int indexArg) const;  
-```  
-  
-### <a name="parameters"></a>パラメーター  
- `indexArg`  
-  
-### <a name="return-value"></a>戻り値  
-  
 
+指定したインデックス位置にある要素を返します。
+
+### <a name="syntax"></a>構文
+
+```cpp
+T& get(unsigned int indexArg) const;
+```
+
+### <a name="parameters"></a>パラメーター
+
+*indexArg*<br/>
+使用するインデックス。
+
+### <a name="return-value"></a>戻り値
 
 ## <a name="length"></a>  WriteOnlyArray::Length プロパティ
-呼び出し元が割り当てた配列内の要素の数を返します。  
-  
-### <a name="syntax"></a>構文  
-  
-```cpp  
-property unsigned int Length{  
-   unsigned int get() const;  
-}  
-```  
-  
-### <a name="return-value"></a>戻り値  
- 配列の要素数。  
-  
 
+呼び出し元が割り当てた配列内の要素の数を返します。
+
+### <a name="syntax"></a>構文
+
+```cpp
+property unsigned int Length{
+   unsigned int get() const;
+}
+```
+
+### <a name="return-value"></a>戻り値
+
+配列の要素数。
 
 ## <a name="set"></a>  WriteOnlyArray::set 関数
-配列内の指定されたインデックス位置に指定された値を設定します。  
-  
-### <a name="syntax"></a>構文  
-  
-```cpp  
-T& set(  
-   unsigned int indexArg,  
-   T valueArg);  
-```  
-  
-### <a name="parameters"></a>パラメーター  
- `indexArg`  
- 設定する要素のインデックス。  
-  
- `valueArg`  
- `indexArg` に設定する値。  
-  
-### <a name="return-value"></a>戻り値  
- 設定された要素への参照。  
-  
 
-  
-### <a name="remarks"></a>Remarks  
- HRESULT 値を解釈する方法の詳細については、次を参照してください。 [COM エラー コードの構造](/windows/desktop/com/structure-of-com-error-codes)します。  
-  
-  
-## <a name="see-also"></a>関連項目  
- [プラットフォーム Namespace](platform-namespace-c-cx.md)   
- [C++ で Windows ランタイム コンポーネントの作成](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
+配列内の指定されたインデックス位置に指定された値を設定します。
+
+### <a name="syntax"></a>構文
+
+```cpp
+T& set(
+   unsigned int indexArg,
+   T valueArg);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*indexArg*<br/>
+設定する要素のインデックス。
+
+*valueArg*<br/>
+`indexArg` に設定する値。
+
+### <a name="return-value"></a>戻り値
+
+設定された要素への参照。
+
+### <a name="remarks"></a>Remarks
+
+HRESULT 値を解釈する方法の詳細については、次を参照してください。 [COM エラー コードの構造](/windows/desktop/com/structure-of-com-error-codes)します。
+
+## <a name="see-also"></a>関連項目
+
+[プラットフォーム Namespace](platform-namespace-c-cx.md)<br/>
+[C++ で Windows ランタイム コンポーネントの作成](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
