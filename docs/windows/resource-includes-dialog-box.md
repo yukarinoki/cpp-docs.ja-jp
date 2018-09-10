@@ -1,5 +1,5 @@
 ---
-title: '[リソース インクルード] ダイアログ ボックス |Microsoft Docs'
+title: '[リソース インクルード] ダイアログ ボックス (C++) |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,29 +10,28 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Resource Includes dialog box
-- rc files, changing storage
-- symbol header files, changing
-- compiling source code, including resources
-- .rc files, changing storage
-- symbol header files, read-only
-- symbols, symbol header files
+- Resource Includes dialog box [C++]
+- rc files [C++], changing storage
+- symbol header files [C++], changing
+- .rc files [C++], changing storage
+- symbol header files [C++], read-only
+- symbols [C++], symbol header files
 ms.assetid: 659a54e6-e416-4045-8411-798730ff4ce3
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 96ee92f1b21d67321b95a169cbc4c47eaca2de17
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 1ea89cdd21f4debfa23716a04630e34e3b9203c1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610662"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313339"
 ---
-# <a name="resource-includes-dialog-box"></a>[リソース インクルード] ダイアログ ボックス
+# <a name="resource-includes-dialog-box-c"></a>[リソース インクルード] ダイアログ ボックス (C++)
 
-使用することができます、**リソースが含まれています**を通常の作業配置プロジェクトの .rc ファイル内のすべてのリソースを格納する環境の変更 ダイアログ ボックス[シンボル](../windows/symbols-resource-identifiers.md)Resource.h にします。
+使用することができます、**リソースが含まれています**プロジェクトの .rc ファイル内のすべてのリソースを格納する、環境の通常の作業配置を変更する C++ プロジェクトのダイアログ ボックス[シンボル](../windows/symbols-resource-identifiers.md)Resource.h にします。
 
 開くには、**リソースが含まれています**ダイアログ ボックスで、右クリックして .rc ファイル[リソース ビュー](../windows/resource-view-window.md)を選択し、**リソースが含まれています**ショートカット メニューから。
 
