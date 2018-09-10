@@ -1,5 +1,5 @@
 ---
-title: グラフィカル リソース (アイコン用イメージ エディター) の編集 |Microsoft Docs
+title: グラフィカル リソース (アイコン用イメージ エディターを C++) の編集 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,14 +22,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d66345685dbb6780b0ecf11d91d699c8b6866c47
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c46f8391f39d65c84860f8c0ca62f69288d834c8
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608862"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44312637"
 ---
-# <a name="editing-graphical-resources-image-editor-for-icons"></a>グラフィカル リソースの編集 (アイコン用イメージ エディター)
+# <a name="editing-graphical-resources-c-image-editor-for-icons"></a>グラフィカル リソースの編集 (アイコン用イメージ エディターを C++)
 
 グラフィカル リソースは、アプリケーション用に定義したイメージです。 フリーハンドの描画または図形を使用して描画できます。 編集、反転、またはサイズ変更、イメージの一部を選択またはイメージの選択したパーツからカスタム ブラシを作成してそのブラシを使用して描画します。 画像のプロパティを定義、異なる形式で画像を保存、およびイメージの 1 つの形式から変換することができます。
 
