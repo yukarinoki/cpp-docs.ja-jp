@@ -56,12 +56,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ed808d8b28071978e89d873d0af9735167e4dbf
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3a3c45dc2762c85a2b0f191b8dcf858ccb33b24b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957510"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110098"
 ---
 # <a name="moneypunct-class"></a>moneypunct クラス
 
@@ -76,9 +76,11 @@ class moneypunct;
 
 ### <a name="parameters"></a>パラメーター
 
-*CharType*プログラム内で文字をエンコードするために使用する型。
+*CharType*<br/>
+文字をエンコードするためにプログラム内で使用される型。
 
-*Intl*国際的な規則が見られるかどうかを指定するフラグ。
+*Intl*<br/>
+国際的な規則を確認するかどうかを指定するフラグ。
 
 ## <a name="remarks"></a>Remarks
 
@@ -122,7 +124,7 @@ const 静的オブジェクト intl は、テンプレート パラメーター 
 |[positive_sign](#positive_sign)|正の記号として使用する要素のロケール固有のシーケンスを返します。|
 |[thousands_sep](#thousands_sep)|桁区切り記号として使用する要素のロケール固有のシーケンスを返します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<locale>
 
@@ -442,14 +444,14 @@ int main( )
 
 ```Output
 German_Germany.1252 international grouping:
- the 0th group to the left of the radix character is of size 3
+the 0th group to the left of the radix character is of size 3
 German_Germany.1252 international frac_digits
- to the right of the radix character: 2
+to the right of the radix character: 2
 
 German_Germany.1252 domestic grouping:
- the 0th group to the left of the radix character is of size 3
+the 0th group to the left of the radix character is of size 3
 German_Germany.1252 domestic frac_digits
- to the right of the radix character: 2
+to the right of the radix character: 2
 ```
 
 ## <a name="grouping"></a>  moneypunct::grouping
@@ -511,14 +513,14 @@ int main( )
 
 ```Output
 German_Germany.1252 international grouping:
- the 0th group to the left of the radix character is of size 3
+the 0th group to the left of the radix character is of size 3
 German_Germany.1252 international frac_digits
- to the right of the radix character: 2
+to the right of the radix character: 2
 
 German_Germany.1252 domestic grouping:
- the 0th group to the left of the radix character is of size 3
+the 0th group to the left of the radix character is of size 3
 German_Germany.1252 domestic frac_digits
- to the right of the radix character: 2
+to the right of the radix character: 2
 ```
 
 ## <a name="moneypunct"></a>  moneypunct::moneypunct
@@ -531,7 +533,8 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Refs*オブジェクトのメモリ管理の種類を指定するために使用する整数値。
+*_Refs*<br/>
+オブジェクトのメモリ管理の種類を指定するために使用する整数値。
 
 ### <a name="remarks"></a>Remarks
 

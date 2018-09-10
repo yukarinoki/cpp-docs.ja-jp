@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::endl [C++]
 - std::ends [C++]
 - std::flush [C++]
-ms.openlocfilehash: d30ad23956c978ee47ef447463a0d5422a94d4b9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 494c750ec80000ef9090824e0436f6e443593847
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962323"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107615"
 ---
 # <a name="ltostreamgt-functions"></a>&lt;ostream&gt; 関数
 
@@ -42,11 +42,14 @@ basic_ostream<Elem, Tr>& endl(
 
 ### <a name="parameters"></a>パラメーター
 
-*Elem*要素の型。
+*Elem*<br/>
+要素型。
 
-*Ostr*型のオブジェクト**basic_ostream**します。
+*Ostr*<br/>
+型のオブジェクト**basic_ostream**します。
 
-*Tr*文字の特徴です。
+*Tr*<br/>
+文字の特徴 (traits)。
 
 ### <a name="return-value"></a>戻り値
 
@@ -86,11 +89,14 @@ basic_ostream<Elem, Tr>& ends(
 
 ### <a name="parameters"></a>パラメーター
 
-*Elem*要素の型。
+*Elem*<br/>
+要素型。
 
-*Ostr*型のオブジェクト`basic_ostream`します。
+*Ostr*<br/>
+`basic_ostream` 型のオブジェクト。
 
-*Tr*文字の特徴です。
+*Tr*<br/>
+文字の特徴 (traits)。
 
 ### <a name="return-value"></a>戻り値
 
@@ -132,11 +138,14 @@ basic_ostream<Elem, Tr>& flush(
 
 ### <a name="parameters"></a>パラメーター
 
-*Elem*要素の型。
+*Elem*<br/>
+要素型。
 
-*Ostr*型のオブジェクト`basic_ostream`します。
+*Ostr*<br/>
+`basic_ostream` 型のオブジェクト。
 
-*Tr*文字の特徴です。
+*Tr*<br/>
+文字の特徴 (traits)。
 
 ### <a name="return-value"></a>戻り値
 
@@ -177,13 +186,17 @@ void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-*Elem*要素の型。
+*Elem*<br/>
+要素型。
 
-*Tr*文字の特徴です。
+*Tr*<br/>
+文字の特徴 (traits)。
 
-*左*への左辺値参照を`basic_ostream`オブジェクト。
+*left*<br/>
+`basic_ostream` オブジェクトへの左辺値参照。
 
-*適切な*への左辺値参照を`basic_ostream`オブジェクト。
+*right*<br/>
+`basic_ostream` オブジェクトへの左辺値参照。
 
 ### <a name="remarks"></a>Remarks
 

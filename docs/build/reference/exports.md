@@ -1,7 +1,7 @@
 ---
 title: エクスポート |Microsoft Docs
 ms.custom: ''
-ms.date: 08/20/2018
+ms.date: 09/07/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 299d300cb3b2247a4dfa698a53c486bcef6164e3
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: f3ea5c28fe54e5d117ef40430912ef3f8ea0efd8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894552"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104291"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -38,9 +38,7 @@ EXPORTS
 
 エクスポートの構文は、*定義*は。
 
-```DEF
-entryname[=internal_name|other_module.another_exported_name] [@Ordinal [NONAME]] [[PRIVATE] | [DATA]]
-```
+> *entryname*\[__=__*internal_name*|*other_module.exported_name*] \[**\@**_序数_ \[ **NONAME**] \[ \[**プライベート**] |\[**データ**]
 
 *entryname*にエクスポートする関数または変数の名前です。 これは必須です。 DLL の名前からエクスポートする名前が異なる場合、エクスポートの名前、DLL を使用して指定*internal_name*します。 たとえば、DLL で関数 `func1` をエクスポートし、呼び出し元がそれを `func2` として使用する場合は、次のように指定します。
 
@@ -56,18 +54,18 @@ EXPORTS
    func2=other_module.func1
 ```
 
-序数でエクスポートする別のモジュールからエクスポートする名前がある場合の指定を使用して、エクスポートの DLL で序数に基づく*other_module。 #ordinal_number*します。 たとえば、DLL から他のモジュールでは序数の 42 し、呼び出し元として使用する関数のエクスポート`func2`、指定します。
+序数でエクスポートする別のモジュールからエクスポートする名前がある場合の指定を使用して、エクスポートの DLL で序数に基づく*other_module*.__#__ *序数*します。 たとえば、DLL から他のモジュールでは序数の 42 し、呼び出し元として使用する関数のエクスポート`func2`、指定します。
 
 ```DEF
 EXPORTS
    func2=other_module.#42
 ```
 
-Visual C コンパイラでは、C++ の関数の名前の装飾を使用するため、装飾名 internal_name を使用して、いずれか、ソース コードでは、extern"C"を使用して、エクスポートされた関数を定義する必要があります。 コンパイラを使用する C 関数を装飾も、 [_ _stdcall](../../cpp/stdcall.md)呼び出し規約をアンダー スコア (\_) のプレフィックスとサフィックスで構成される、アット マーク (\@) (10 進数) のバイト数の後に、引数リスト。
+装飾名を使用する必要がありますか、Visual C コンパイラでは、C++ の関数に名前の装飾を使用しているため、 *internal_name*を使用して、エクスポートされた関数を定義または`extern "C"`ソース コードにします。 コンパイラを使用する C 関数を装飾も、 [_ _stdcall](../../cpp/stdcall.md)呼び出し規約をアンダー スコア (\_) のプレフィックスとサフィックスで構成される、アット マーク (\@) (10 進数) のバイト数の後に、引数リスト。
 
 コンパイラによって生成された装飾名を検索するには、使用、 [DUMPBIN](../../build/reference/dumpbin-reference.md)ツールまたはリンカー [/map](../../build/reference/map-generate-mapfile.md)オプション。 装飾名はコンパイラ固有です。 装飾名を .DEF ファイルにエクスポートする場合、DLL にリンクする実行可能ファイルも同じバージョンのコンパイラを使用してビルドする必要があります。 これにより、呼び出し元の装飾名は .DEF ファイルのエクスポート名と一致します。
 
-使用することができます\@*序数*と関数名ではなく、数字には、DLL のエクスポート テーブルに予定を指定します。 多くの Windows DLL で、レガシ コードをサポートするために序数がエクスポートされます。 DLL のサイズを最小限に抑えるのに役立つため、16 ビットの Windows コードでは序数を使用することが一般的でした。 レガシ サポートのために DLL のクライアントで必要な場合を除き、関数を序数でエクスポートすることはお勧めしません。 .LIB ファイルには序数と関数のマッピングが含まれているため、DLL を使用するプロジェクトでは通常と同様に関数名を使用できます。
+使用することができます\@*序数*数値、および関数名ではなくが DLL のエクスポート テーブルに移動を指定します。 多くの Windows DLL で、レガシ コードをサポートするために序数がエクスポートされます。 DLL のサイズを最小限に抑えるのに役立つため、16 ビットの Windows コードでは序数を使用することが一般的でした。 レガシ サポートのために DLL のクライアントで必要な場合を除き、関数を序数でエクスポートすることはお勧めしません。 .LIB ファイルには序数と関数のマッピングが含まれているため、DLL を使用するプロジェクトでは通常と同様に関数名を使用できます。
 
 オプションを使用して**NONAME**キーワード、序数のみをエクスポートし、結果の DLL のエクスポート テーブルのサイズを小さくことができます。 ただし、使用する場合[GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) DLL の名前を有効にすることはできないために、序数を知る必要があります。
 
@@ -88,9 +86,16 @@ EXPORTS
 
 3. [/Export](../../build/reference/export-exports-a-function.md) LINK コマンド内の指定
 
-4. A[コメント](../../preprocessor/comment-c-cpp.md)形式のソース コードにディレクティブ `#pragma comment(linker, "/export: definition ")`  
+4. A[コメント](../../preprocessor/comment-c-cpp.md)形式のソース コードにディレクティブ`#pragma comment(linker, "/export: definition ")`します。 次の例は、関数宣言の前に、の #pragma comment ディレクティブ、`PlainFuncName`非装飾の名前と`_PlainFuncName@4`関数の装飾の名前を指定します。
 
-同じプログラムで 4 つの方法すべてを使用できます。 エクスポートを含むプログラムが LINK によってビルドされる際に、ビルドで .EXP ファイルが使用されていない限り、インポート ライブラリも作成されます。
+    ```cpp
+    #pragma comment(linker, "/export:PlainFuncName=_PlainFuncName@4")
+    BOOL CALLBACK PlainFuncName( Things * lpParams)
+    ```
+
+#Pragma ディレクティブは、(たとえば、32 ビットまたは 64 ビットのビルド) でビルド構成によっては別のエクスポートをして、装飾されていない関数の名前をエクスポートする必要がある場合に便利です。
+
+同じプログラムで 4 つの方法すべてを使用できます。 エクスポートを含むプログラムが LINK によってビルドされる際に、ビルドで .EXP ファイルが使用されていない限り、インポート ライブラリも作成されます。 
 
 次に、EXPORTS セクションの例を示します。
 

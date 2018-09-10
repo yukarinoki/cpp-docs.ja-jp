@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::future [C++], wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77b3c96d2c579b9fa3081ad7223ac254a727a88b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e55f5d9759de0993f0202612e237bb778a195602
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956639"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106653"
 ---
 # <a name="future-class"></a>future クラス
 
@@ -77,7 +77,7 @@ class future;
 |----------|-----------------|
 |[future::operator=](#op_eq)|指定したオブジェクトから関連付けられた非同期状態を転送します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<将来 >
 
@@ -94,7 +94,8 @@ future(future&& Other) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*その他の*A`future`オブジェクト。
+*その他*<br/>
+`future` オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -134,7 +135,8 @@ future& operator=(future&& Right) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*右*A`future`オブジェクト。
+*右*<br/>
+`future` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -191,7 +193,8 @@ future_status wait_for(const chrono::duration<Rep, Period>& Rel_time) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*Rel_time* A [chrono::duration](../standard-library/duration-class.md)最大時間間隔を指定するオブジェクトをそのスレッドはブロックします。
+*Rel_time*<br/>
+スレッドがブロックする最大の時間間隔を指定する [chrono::duration](../standard-library/duration-class.md) オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -212,7 +215,8 @@ future_status wait_until(const chrono::time_point<Clock, Duration>& Abs_time) co
 
 ### <a name="parameters"></a>パラメーター
 
-*Abs_time* A [chrono::time_point](../standard-library/time-point-class.md)その後、スレッド ブロックを解除できる時間を指定するオブジェクト。
+*Abs_time*<br/>
+スレッドがブロックを解除できる時間を指定する [chrono::time_point](../standard-library/time-point-class.md) オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 

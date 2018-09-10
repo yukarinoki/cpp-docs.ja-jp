@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31f3f2a4c01645df17af8992cc7f6b92dd57966a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ab9674ffafbf6563f566778d11991f8aa95c44d8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960932"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106471"
 ---
 # <a name="regextraits-class"></a>regex_traits クラス
 
@@ -92,7 +92,8 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*Elem*を記述する文字要素の型。
+*Elem*<br/>
+記述する文字要素の型。
 
 ## <a name="remarks"></a>Remarks
 
@@ -100,7 +101,7 @@ public:
 
 各 `regex_traits` オブジェクトは、そのオブジェクトの一部のメンバー関数が使用する `regex_traits::locale` 型のオブジェクトを保持します。 既定のロケールは、 `regex_traits::locale()`のコピーです。 メンバー関数 `imbue` は、ロケール オブジェクトを置き換えます。また、メンバー関数 `getloc` は、ロケール オブジェクトのコピーを返します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<regex>
 
@@ -365,7 +366,8 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>パラメーター
 
-*loc*を格納するロケール オブジェクト。
+*Loc*<br/>
+格納するロケール オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -452,9 +454,11 @@ bool isctype(char_type ch, char_class_type cls) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*ch*をテストする要素。
+*ch*<br/>
+テストする要素。
 
-*cls*をテストするクラス。
+*cls*<br/>
+テストするクラス。
 
 ### <a name="remarks"></a>Remarks
 
@@ -541,7 +545,7 @@ static size_type length(const char_type *str);
 
 ### <a name="parameters"></a>パラメーター
 
-*str*
+*str*<br/>
 
 Null 終端シーケンス。
 
@@ -714,9 +718,11 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*を検索するシーケンスの最初します。
+*first*<br/>
+検索するシーケンスの最初。
 
-*最後*を検索するシーケンスの末尾。
+*last*<br/>
+検索するシーケンスの最後。
 
 ### <a name="remarks"></a>Remarks
 
@@ -808,9 +814,11 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*を検索するシーケンスの最初します。
+*first*<br/>
+検索するシーケンスの最初。
 
-*最後*を検索するシーケンスの末尾。
+*last*<br/>
+検索するシーケンスの最後。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1149,9 +1157,11 @@ string_type transform(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*変換するシーケンスの最初から開始します。
+*first*<br/>
+変換するシーケンスの最初。
 
-*最後*を変換するシーケンスの末尾。
+*last*<br/>
+変換するシーケンスの最後。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1239,9 +1249,11 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*変換するシーケンスの最初から開始します。
+*first*<br/>
+変換するシーケンスの最初。
 
-*最後*を変換するシーケンスの末尾。
+*last*<br/>
+変換するシーケンスの最後。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1328,7 +1340,8 @@ char_type translate(char_type ch) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*ch*に変換する要素。
+*ch*<br/>
+変換する要素。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1415,7 +1428,8 @@ char_type translate_nocase(char_type ch) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*ch*に変換する要素。
+*ch*<br/>
+変換する要素。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1502,9 +1516,11 @@ int value(Elem ch, int radix) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*ch*に変換する要素。
+*ch*<br/>
+変換する要素。
 
-*基数*を使用する基数。
+*radix*<br/>
+使用する算術的な基数。
 
 ### <a name="remarks"></a>Remarks
 

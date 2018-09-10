@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d000dce4c0009341c787a211ed8ef41d1728b51b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63b0950aaea5520849f9a32b2b08ab138cd8099b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407773"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107547"
 ---
 # <a name="unlockfile"></a>_unlock_file
 
@@ -56,15 +56,16 @@ void _unlock_file(
 
 ### <a name="parameters"></a>パラメーター
 
-*ファイル*ファイル ハンドル。
+*file*<br/>
+ファイル ハンドルです。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Unlock_file**関数によって指定されたファイルのロックを解除*ファイル*です。 ファイルのロックを解除すると、他のプロセスがそのファイルにアクセスできるようになります。 しない限り、この関数を呼び出すことはできません **_lock_file**でが呼び出された、*ファイル*ポインター。 呼び出す **_unlock_file**ロックされていないファイルのデッドロックにつながる可能性があります。 例については、「[_lock_file](lock-file.md)」をご覧ください。
+**_Unlock_file**関数で指定されたファイルのロックを解除*ファイル*します。 ファイルのロックを解除すると、他のプロセスがそのファイルにアクセスできるようになります。 しない限り、この関数を呼び出さないで **_lock_file**が呼び出されていた、*ファイル*ポインター。 呼び出す **_unlock_file**でロックされていないファイルもデッドロックにつながる可能性があります。 例については、「[_lock_file](lock-file.md)」をご覧ください。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_unlock_file**|\<stdio.h>|
 

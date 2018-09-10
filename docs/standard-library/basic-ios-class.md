@@ -65,12 +65,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28854866824b1750fb1887d5e822d2165034f687
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3abc3c08b46577f7d59b2831a68ded812a5da60a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956844"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110019"
 ---
 # <a name="basicios-class"></a>basic_ios クラス
 
@@ -86,9 +86,11 @@ class basic_ios : public ios_base
 
 ### <a name="parameters"></a>パラメーター
 
-*Elem*型。
+*Elem*<br/>
+型。
 
-*Traits*型の変数`char_traits`します。
+*Traits*<br/>
+`char_traits` 型の変数。
 
 ## <a name="remarks"></a>Remarks
 
@@ -152,7 +154,7 @@ class basic_ios : public ios_base
 |[operator void *](#op_void_star)|ストリームが依然として良好かどうかを示します。|
 |[operator!](#op_not)|ストリームが悪化していないかどうかを示します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<ios>
 
@@ -202,7 +204,8 @@ basic_ios();
 
 ### <a name="parameters"></a>パラメーター
 
-*sb*入力または出力の要素を格納する標準のバッファー。
+*sb*<br/>
+入力要素または出力要素を格納する標準のバッファー。
 
 ### <a name="remarks"></a>Remarks
 
@@ -256,7 +259,8 @@ const basic_ios<Elem, Traits>& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*ストリームにコピーするフラグ。
+*right*<br/>
+フラグをコピーするストリーム。
 
 ### <a name="return-value"></a>戻り値
 
@@ -338,7 +342,8 @@ void exceptions(io_state Newexcept);
 
 ### <a name="parameters"></a>パラメーター
 
-*Newexcept*例外をスローするフラグ。
+*Newexcept*<br/>
+例外をスローするフラグ。
 
 ### <a name="return-value"></a>戻り値
 
@@ -426,7 +431,8 @@ char_type fill(char_type Char);
 
 ### <a name="parameters"></a>パラメーター
 
-*Char*充填文字として使用文字。
+*Char*<br/>
+充填文字として必要な文字。
 
 ### <a name="return-value"></a>戻り値
 
@@ -489,7 +495,8 @@ locale imbue(const locale& Loc);
 
 ### <a name="parameters"></a>パラメーター
 
-*Loc*ロケール文字列。
+*Loc*<br/>
+ロケールの文字列。
 
 ### <a name="return-value"></a>戻り値
 
@@ -531,9 +538,11 @@ void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Sb*入力または出力の要素を格納する標準のバッファー。
+*_Sb*<br/>
+入力要素または出力要素を格納する標準のバッファー。
 
-*_Isstd*これは、標準のストリームであるかどうかを指定します。
+*_Isstd*<br/>
+これが標準のストリームかどうかを指定します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -577,7 +586,8 @@ void move(basic_ios&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*、`ios_base`から値を移動するオブジェクト。
+*right*<br/>
+値の移動元となる `ios_base` オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -593,9 +603,11 @@ char narrow(char_type Char, char Default = '\0') const;
 
 ### <a name="parameters"></a>パラメーター
 
-*Char* 、 **char**に変換します。
+*Char*<br/>
+**Char**に変換します。
 
-*既定の*、 **char**する返された同等が見つからない場合。
+*既定値*<br/>
+**Char**する返された同等が見つからない場合。
 
 ### <a name="return-value"></a>戻り値
 
@@ -726,7 +738,8 @@ basic_streambuf<Elem, Traits>* _Sb);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Sb*ストリーム。
+*_Sb*<br/>
+ストリーム。
 
 ### <a name="remarks"></a>Remarks
 
@@ -817,7 +830,8 @@ void setstate(iostate _State);
 
 ### <a name="parameters"></a>パラメーター
 
-*_State*追加のフラグを設定します。
+*_State*<br/>
+設定する追加のフラグ。
 
 ### <a name="remarks"></a>Remarks
 
@@ -866,7 +880,8 @@ basic_streambuf<Elem, Tr>* strbuf)
 
 ### <a name="parameters"></a>パラメーター
 
-*strbuf*読み取りバッファーにストリーム バッファー。
+*strbuf*<br/>
+読み取りバッファーになるストリーム バッファー。
 
 ### <a name="remarks"></a>Remarks
 
@@ -884,7 +899,8 @@ basic_ostream<Elem, Traits>* str);
 
 ### <a name="parameters"></a>パラメーター
 
-*str*ストリーム。
+*str*<br/>
+ストリーム。
 
 ### <a name="return-value"></a>戻り値
 
@@ -930,7 +946,8 @@ char_type widen(char Char) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*Char*変換する文字。
+*Char*<br/>
+変換する文字。
 
 ### <a name="return-value"></a>戻り値
 
@@ -971,7 +988,8 @@ void swap(basic_ios&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*、`basic_ios`の値を交換するために使用するオブジェクト。
+*right*<br/>
+値を交換するために使用される `basic_ios` オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 

@@ -106,12 +106,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf54b113e5eb3750d02b887945345880dca94775
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ac07884d3ac7390bdb3aba4144c1c436041434f0
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960044"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110059"
 ---
 # <a name="array-class-c-standard-library"></a>array クラス (C++ 標準ライブラリ)
 
@@ -184,7 +184,7 @@ array<int, 4> ai = { 1, 2, 3 };
 
 このコードは、4 つの整数値を保持するオブジェクト `ai` を作成し、最初の 3 つの要素はそれぞれ値 1、2、3 に初期化し、4 番目の要素は 0 に初期化します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **Header:** \<array>
 
@@ -202,7 +202,8 @@ array(const array& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*オブジェクトまたは範囲を挿入します。
+*right*<br/>
+挿入するオブジェクトまたは範囲。
 
 ### <a name="remarks"></a>Remarks
 
@@ -257,7 +258,8 @@ void assign(const Ty& val);
 
 ### <a name="parameters"></a>パラメーター
 
-*val*代入する値。
+*val*<br/>
+代入する値。
 
 ### <a name="remarks"></a>Remarks
 
@@ -313,7 +315,8 @@ constexpr const_reference at(size_type off) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*オフ*にアクセスする要素の位置。
+*オフ*<br/>
+アクセスする要素の位置。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1173,7 +1176,8 @@ constexpr const_reference operator[](size_type off) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*オフ*にアクセスする要素の位置。
+*オフ*<br/>
+アクセスする要素の位置。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1225,7 +1229,8 @@ array <Value>%  operator=(array <Value>% right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*コンテナーにコピーします。
+*right*<br/>
+コピーするコンテナー。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1602,7 +1607,8 @@ void swap(array& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*コンテンツを交換する配列。
+*right*<br/>
+コンテンツを交換する配列。
 
 ### <a name="remarks"></a>Remarks
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822d19e1333163dbe37a1734ce315048f81cb802
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a785c7868f3a1f3262283cf131bbd3cc3ae88e4c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964373"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102157"
 ---
 # <a name="codecvtbyname-class"></a>codecvt_byname クラス
 
@@ -53,9 +53,11 @@ protected:
 
 ### <a name="parameters"></a>パラメーター
 
-*_Locname*名前付きのロケール。
+*_Locname*<br/>
+名前付きのロケール。
 
-*_Refs*最初の参照数。
+*_Refs*<br/>
+最初の参照数。
 
 ## <a name="remarks"></a>Remarks
 
@@ -63,7 +65,7 @@ protected:
 
 名前付きのロケールでその動作が決まります *_Locname*します。 各コンストラクターは、[codecvt](../standard-library/codecvt-class.md)\<CharType, Byte, StateType>( `_Refs`) を使用して、その基本オブジェクトを初期化します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<locale>
 

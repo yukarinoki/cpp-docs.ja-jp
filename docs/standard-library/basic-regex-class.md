@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f13dfb45073a1a21e8d6a7b4585f0dfc5c71b8e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 372dc829810fd08e3cc872abfb769221b2ca2a58
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959749"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100886"
 ---
 # <a name="basicregex-class"></a>basic_regex クラス
 
@@ -84,9 +84,11 @@ class basic_regex {
 
 ### <a name="parameters"></a>パラメーター
 
-*Elem*と一致する要素の型。
+*Elem*<br/>
+一致させる要素の型。
 
-*RXtraits*要素用の特性クラス。
+*RXtraits*<br/>
+要素の特徴 (traits) クラス。
 
 ## <a name="remarks"></a>Remarks
 
@@ -108,7 +110,7 @@ class basic_regex {
 
 これらのメンバー関数を引数として受け取ります`flags`で説明されているものに加えて正規表現の解釈のさまざまなオプションを指定する、 *RXtraits*型。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<regex>
 
@@ -148,27 +150,37 @@ basic_regex& assign(
 
 ### <a name="parameters"></a>パラメーター
 
-*STtraits*文字列ソースの特性クラス。
+*STtraits*<br/>
+文字列ソースの特徴 (traits) クラス。
 
-*STalloc*文字列ソースのアロケーター クラス。
+*STalloc*<br/>
+文字列ソースのアロケーター クラス。
 
-*InIt*範囲ソースの反復子の型を入力します。
+*InIt*<br/>
+範囲ソースの入力反復子の型。
 
-*適切な*コピーする Regex ソース。
+*right*<br/>
+コピーする Regex ソース。
 
-*ptr*をコピーするシーケンスの先頭を指すポインター。
+*ptr*<br/>
+コピーするシーケンスの先頭を指すポインター。
 
-*フラグ*コピー中に追加する構文オプション フラグ。
+*flags*<br/>
+コピー中に追加する構文オプション フラグ。
 
 *len/TD >* をコピーするシーケンスの長さ。
 
-*str*コピーする文字列。
+*str*<br/>
+コピーする文字列。
 
-*最初*をコピーするシーケンスの最初します。
+*first*<br/>
+コピーするシーケンスの最初。
 
-*最後*をコピーするシーケンスの末尾。
+*last*<br/>
+コピーするシーケンスの最後。
 
-*IList*をコピーする initializer_list。
+*IList*<br/>
+コピーする initializer_list。
 
 ### <a name="remarks"></a>Remarks
 
@@ -293,27 +305,37 @@ explicit basic_regex(
 
 ### <a name="parameters"></a>パラメーター
 
-*STtraits*文字列ソースの特性クラス。
+*STtraits*<br/>
+文字列ソースの特徴 (traits) クラス。
 
-*STalloc*文字列ソースのアロケーター クラス。
+*STalloc*<br/>
+文字列ソースのアロケーター クラス。
 
-*InIt*範囲ソースの反復子の型を入力します。
+*InIt*<br/>
+範囲ソースの入力反復子の型。
 
-*適切な*コピーする Regex ソース。
+*right*<br/>
+コピーする Regex ソース。
 
-*ptr*をコピーするシーケンスの先頭を指すポインター。
+*ptr*<br/>
+コピーするシーケンスの先頭を指すポインター。
 
-*フラグ*コピー中に追加する構文オプション フラグ。
+*flags*<br/>
+コピー中に追加する構文オプション フラグ。
 
 *len/TD >* をコピーするシーケンスの長さ。
 
-*str*コピーする文字列。
+*str*<br/>
+コピーする文字列。
 
-*最初*をコピーするシーケンスの最初します。
+*first*<br/>
+コピーするシーケンスの最初。
 
-*最後*をコピーするシーケンスの末尾。
+*last*<br/>
+コピーするシーケンスの最後。
 
-*IList*をコピーする initializer_list。
+*IList*<br/>
+コピーする initializer_list。
 
 ### <a name="remarks"></a>Remarks
 
@@ -706,7 +728,8 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>パラメーター
 
-*loc*を格納するロケール オブジェクト。
+*Loc*<br/>
+格納するロケール オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1006,13 +1029,17 @@ basic_regex& operator=(const basic_string<Elem, STtraits, STalloc>& str);
 
 ### <a name="parameters"></a>パラメーター
 
-*STtraits*文字列ソースの特性クラス。
+*STtraits*<br/>
+文字列ソースの特徴 (traits) クラス。
 
-*STalloc*文字列ソースのアロケーター クラス。
+*STalloc*<br/>
+文字列ソースのアロケーター クラス。
 
-*適切な*コピーする Regex ソース。
+*right*<br/>
+コピーする Regex ソース。
 
-*str*コピーする文字列。
+*str*<br/>
+コピーする文字列。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1113,7 +1140,8 @@ void swap(basic_regex& right) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*交換する正規表現オブジェクト。
+*right*<br/>
+交換する正規表現オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 

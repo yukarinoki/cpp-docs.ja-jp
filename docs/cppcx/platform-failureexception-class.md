@@ -16,33 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e644ec013b4beac6ebc4f7c774f926711dc1093e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 12fd236f0b34020d6c368f603b81fe50729dcb7f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758961"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105147"
 ---
 # <a name="platformfailureexception-class"></a>Platform::FailureException クラス
-操作が失敗したときにスローされます。 これは E_FAIL HRESULT と同等です。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-public ref class FailureException : COMException,    IException,    IPrintable,    IEquatable  
-```  
-  
-### <a name="remarks"></a>Remarks  
- 詳細については、 [COMException](../cppcx/platform-comexception-class.md) クラスを参照してください。  
-  
-### <a name="requirements"></a>要件  
- **クライアントがサポートされている最小:** Windows 8  
-  
- **サポートされているサーバーの最小値:** Windows Server 2012  
-  
- **名前空間:** Platform  
-  
- **メタデータ:** platform.winmd  
-  
-## <a name="see-also"></a>関連項目  
- [Platform::COMException クラス](../cppcx/platform-comexception-class.md)
+
+操作が失敗したときにスローされます。 これは E_FAIL HRESULT と同等です。
+
+## <a name="syntax"></a>構文
+
+```cpp
+public ref class FailureException : COMException,    IException,    IPrintable,    IEquatable
+```
+
+### <a name="remarks"></a>Remarks
+
+詳細については、 [COMException](../cppcx/platform-comexception-class.md) クラスを参照してください。
+
+### <a name="requirements"></a>要件
+
+**クライアントがサポートされている最小:** Windows 8
+
+**サポートされているサーバーの最小値:** Windows Server 2012
+
+**名前空間:** Platform
+
+**メタデータ:** platform.winmd
+
+## <a name="see-also"></a>関連項目
+
+[Platform::COMException クラス](../cppcx/platform-comexception-class.md)

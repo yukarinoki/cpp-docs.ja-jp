@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbd2f2c652c619a954b789a3b765fc636a03c33e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 040687a4218f24bb57f20ea3307dbf69ffa3f37d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962725"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108398"
 ---
 # <a name="binder2nd-class"></a>binder2nd クラス
 
@@ -53,11 +53,14 @@ protected:
 
 ### <a name="parameters"></a>パラメーター
 
-*func*単項関数オブジェクトに変換する二項関数オブジェクト。
+*Func*<br/>
+単項関数オブジェクトに変換する二項関数オブジェクト。
 
-*適切な*二項関数オブジェクトの 2 番目の引数がバインドされる値。
+*right*<br/>
+二項関数オブジェクトの 2 つ目の引数がバインドされている値。
 
-*左*適合のバイナリ オブジェクトが 2 番目の引数の固定値を比較する引数の値。
+*left*<br/>
+調整後の二項オブジェクトが 2 つ目の引数の固定値と比較する引数の値。
 
 ## <a name="return-value"></a>戻り値
 
@@ -119,7 +122,7 @@ The number of elements in v1 less than 10 is: 2.
 */
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<functional>
 

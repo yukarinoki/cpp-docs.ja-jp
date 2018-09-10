@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f6a71770afdb541efa76f85464d9aeef7b2fb91
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: f684ad5e6487378e8f85aa1c30af0ae9d9038075
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43681009"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109850"
 ---
 # <a name="weibulldistribution-class"></a>weibull_distribution クラス
 
@@ -80,7 +80,8 @@ class weibull_distribution
 
 ### <a name="parameters"></a>パラメーター
 
-*RealType*浮動小数点の結果の型の既定値**二重**します。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*RealType*<br/>
+浮動小数点の結果の型の既定値**二重**します。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 

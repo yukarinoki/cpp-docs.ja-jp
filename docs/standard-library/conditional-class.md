@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57e01cbfd7cb291ff7d2651e3244b74ae96adbea
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 7a553c2975dd5a58673bd4caa6e7c9ba25d33183
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962401"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106614"
 ---
 # <a name="conditional-class"></a>conditional クラス
 
@@ -40,17 +40,20 @@ using conditional_t = typename conditional<_Test, _T1, _T2>::type;
 
 ### <a name="parameters"></a>パラメーター
 
-*B*選択した型を決定する値。
+*B*<br/>
+選択される型を決定する値。
 
-*T1* B が true の場合の型の結果。
+*T1*<br/>
+B が true の場合の型の結果。
 
-*T2* B が false の場合の型の結果。
+*T2*<br/>
+B が false の場合の型の結果。
 
 ## <a name="remarks"></a>Remarks
 
 テンプレート メンバー typedef`conditional<B, T1, T2>::type`に評価される*T1*とき*B*に評価される**true**に評価されると*T2*とき*B*に評価される**false**します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<type_traits>
 

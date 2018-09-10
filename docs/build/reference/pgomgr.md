@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70a0615debabb056110dd9d6f7a6aac86e9d464a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 217346a08f4dc800c3d335baa77c355e0f327336
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198316"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105316"
 ---
 # <a name="pgomgr"></a>pgomgr
 
@@ -50,7 +50,8 @@ ms.locfileid: "43198316"
 *pgcfiles*<br/>
 1 つまたは複数の .pgc ファイルのプロファイル データ .pgd ファイルにマージします。 1 つ .pgc ファイルまたは複数の .pgc ファイルを指定できます。 .Pgc ファイルを指定しない場合**pgomgr** .pgd ファイルと同じファイル名を持つが、すべての .pgc ファイルをマージします。
 
-*pgdfile* .pgc ファイルまたはファイルからデータをマージ先 .pgd ファイル。
+*pgdfile*<br/>
+.Pgc ファイルまたはファイルからデータをマージ先 .pgd ファイル。
 
 ## <a name="remarks"></a>Remarks
 

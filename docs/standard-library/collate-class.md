@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 604d8a2082d609e85e4c55f1d4ae3b6d15c4ce22
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 054246ce78601abf61f36d070500845275b61761
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966460"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110374"
 ---
 # <a name="collate-class"></a>collate クラス
 
@@ -52,7 +52,8 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>パラメーター
 
-*CharType*プログラム内で文字をエンコードするために使用する型。
+*CharType*<br/>
+文字をエンコードするためにプログラム内で使用される型。
 
 ## <a name="remarks"></a>Remarks
 
@@ -82,7 +83,7 @@ class collate : public locale::facet;
 |[hash](#hash)|ファセット固有の規則に従ってシーケンスのハッシュ値を決定します。|
 |[transform](#transform)|ロケールの文字シーケンスを、同じロケールから同様に変換された他の文字シーケンスとの辞書式の比較で使用できる文字列に変換します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<locale>
 
@@ -111,15 +112,17 @@ public:
 
 protected:
     collate(
- const char* _Locname,
+const char* _Locname,
     size_t _Refs = 0);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*_Refs*オブジェクトのメモリ管理の種類を指定するために使用する整数値。
+*_Refs*<br/>
+オブジェクトのメモリ管理の種類を指定するために使用する整数値。
 
-*_Locname*ロケールの名前。
+*_Locname*<br/>
+ロケールの名前。
 
 ### <a name="remarks"></a>Remarks
 
@@ -146,13 +149,17 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>パラメーター
 
-*first1*と比較する最初のシーケンスの最初の要素へのポインター。
+*first1*<br/>
+比較する最初のシーケンスの最初の要素へのポインター。
 
-*last1*と比較する最初のシーケンスの最後の要素へのポインター。
+*last1*<br/>
+比較する最初のシーケンスの最後の要素へのポインター。
 
-*first2*と比較する 2 番目のシーケンスの最初の要素へのポインター。
+*first2*<br/>
+比較する 2 番目のシーケンスの最初の要素へのポインター。
 
-*last2*と比較する 2 番目のシーケンスの最後の要素へのポインター。
+*last2*<br/>
+比較する 2 番目のシーケンスの最後の要素へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -208,13 +215,17 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>パラメーター
 
-*first1*と比較する最初のシーケンスの最初の要素へのポインター。
+*first1*<br/>
+比較する最初のシーケンスの最初の要素へのポインター。
 
-*last1*と比較する最初のシーケンスの最後の要素へのポインター。
+*last1*<br/>
+比較する最初のシーケンスの最後の要素へのポインター。
 
-*first2*と比較する 2 番目のシーケンスの最初の要素へのポインター。
+*first2*<br/>
+比較する 2 番目のシーケンスの最初の要素へのポインター。
 
-*last2*と比較する 2 番目のシーケンスの最後の要素へのポインター。
+*last2*<br/>
+比較する 2 番目のシーケンスの最後の要素へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -244,9 +255,11 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*値のシーケンスの最初の文字へのポインターを確認します。
+*first*<br/>
+値を決定するシーケンスの最初の文字へのポインター。
 
-*最後*値のシーケンスの最後の文字へのポインターを確認します。
+*last*<br/>
+値を決定するシーケンスの最後の文字へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -270,9 +283,11 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*変換されるシーケンスの最初の文字へのポインター。
+*first*<br/>
+変換対象となるシーケンスの最初の文字へのポインター。
 
-*最後*変換されるシーケンスの最後の文字へのポインター。
+*last*<br/>
+変換対象となるシーケンスの最後の文字へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -296,9 +311,11 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*値のシーケンスの最初の文字へのポインターを確認します。
+*first*<br/>
+値を決定するシーケンスの最初の文字へのポインター。
 
-*最後*値のシーケンスの最後の文字へのポインターを確認します。
+*last*<br/>
+値を決定するシーケンスの最後の文字へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -364,9 +381,11 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*変換されるシーケンスの最初の文字へのポインター。
+*first*<br/>
+変換対象となるシーケンスの最初の文字へのポインター。
 
-*最後*変換されるシーケンスの最後の文字へのポインター。
+*last*<br/>
+変換対象となるシーケンスの最後の文字へのポインター。
 
 ### <a name="return-value"></a>戻り値
 

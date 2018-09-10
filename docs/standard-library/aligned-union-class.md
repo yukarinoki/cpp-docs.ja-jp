@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdd2a8417f66c0e095f571c914d5a4624179fdb6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4017fceab100689847ea99df80016aaba2fbd10f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962114"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107667"
 ---
 # <a name="alignedunion-class"></a>aligned_union クラス
 
@@ -39,9 +39,11 @@ using aligned_union_t = typename aligned_union<Len, Types...>::type;
 
 ### <a name="parameters"></a>パラメーター
 
-*Len*共用体の最大の型のアラインメント値です。
+*len*<br/>
+共用体内の最大の型に関するアラインメント値を指定します。
 
-*型*基になる共用体での個別の型。
+*型*<br/>
+基になる共用体内の個別の型。
 
 ## <a name="remarks"></a>Remarks
 
@@ -85,7 +87,7 @@ int main()
 value of u->i is 1065353216
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<type_traits>
 

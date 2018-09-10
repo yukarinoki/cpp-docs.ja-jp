@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::promise [C++], swap
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a1ddfd30a1e061426f0a19ac1118aa5ade1de17
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a56e188e581ea5d9dcafaa222ab4367e0b4b33fe
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958565"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100301"
 ---
 # <a name="promise-class"></a>promise クラス
 
@@ -75,9 +75,9 @@ class promise;
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
-`promise`
+*promise*<br/>
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<将来 >
 
@@ -107,7 +107,8 @@ promise& operator=(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*その他の*A`promise`オブジェクト。
+*その他*<br/>
+`promise` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -130,9 +131,11 @@ promise(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*Al*メモリ アロケーター。 詳細については、「[\<allocators>](../standard-library/allocators-header.md)」をご覧ください。
+*Al*<br/>
+メモリ割り当て。 詳細については、「[\<allocators>](../standard-library/allocators-header.md)」をご覧ください。
 
-*その他の*A`promise`オブジェクト。
+*その他*<br/>
+`promise` オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -152,7 +155,8 @@ void set_exception(exception_ptr Exc);
 
 ### <a name="parameters"></a>パラメーター
 
-*排他*、 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)このメソッドにより例外結果として格納されています。
+*排他*<br/>
+このメソッドにより例外結果として格納されている [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)。
 
 ### <a name="remarks"></a>Remarks
 
@@ -172,7 +176,8 @@ void set_exception_at_thread_exit(exception_ptr Exc);
 
 ### <a name="parameters"></a>パラメーター
 
-*排他*、 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)このメソッドにより例外結果として格納されています。
+*排他*<br/>
+このメソッドにより例外結果として格納されている [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)。
 
 ### <a name="remarks"></a>Remarks
 
@@ -195,7 +200,8 @@ void promise<void>::set_value();
 
 ### <a name="parameters"></a>パラメーター
 
-*Val*結果として格納される値。
+*val*<br/>
+結果として格納される値。
 
 ### <a name="remarks"></a>Remarks
 
@@ -226,7 +232,8 @@ void promise<void>::set_value_at_thread_exit();
 
 ### <a name="parameters"></a>パラメーター
 
-*Val*結果として格納される値。
+*val*<br/>
+結果として格納される値。
 
 ### <a name="remarks"></a>Remarks
 
@@ -254,7 +261,8 @@ void swap(promise& Other) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*その他の*A`promise`オブジェクト。
+*その他*<br/>
+`promise` オブジェクト。
 
 ## <a name="see-also"></a>関連項目
 

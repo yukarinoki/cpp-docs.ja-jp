@@ -16,33 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e937625530c6dc8576ce8e850a97d11ea24ca05
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d2f4cea4199615ccaecf9d3de915c4666a20d1a9
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763507"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108561"
 ---
 # <a name="platformoperationcanceledexception-class"></a>Platform::OperationCanceledException クラス
-操作が中止されるとスローされます。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-public ref class OperationCanceledException : COMException,    IException,    IPrintable,    IEquatable  
-```  
-  
-### <a name="remarks"></a>Remarks  
- 詳細については、 [COMException](../cppcx/platform-comexception-class.md) クラスを参照してください。  
-  
-### <a name="requirements"></a>要件  
- **クライアントがサポートされている最小:** Windows 8  
-  
- **サポートされているサーバーの最小値:** Windows Server 2012  
-  
- **名前空間:** Platform  
-  
- **メタデータ:** platform.winmd  
-  
-## <a name="see-also"></a>関連項目  
- [Platform::COMException クラス](../cppcx/platform-comexception-class.md)
+
+操作が中止されるとスローされます。
+
+## <a name="syntax"></a>構文
+
+```cpp
+public ref class OperationCanceledException : COMException,    IException,    IPrintable,    IEquatable
+```
+
+### <a name="remarks"></a>Remarks
+
+詳細については、 [COMException](../cppcx/platform-comexception-class.md) クラスを参照してください。
+
+### <a name="requirements"></a>要件
+
+**クライアントがサポートされている最小:** Windows 8
+
+**サポートされているサーバーの最小値:** Windows Server 2012
+
+**名前空間:** Platform
+
+**メタデータ:** platform.winmd
+
+## <a name="see-also"></a>関連項目
+
+[Platform::COMException クラス](../cppcx/platform-comexception-class.md)

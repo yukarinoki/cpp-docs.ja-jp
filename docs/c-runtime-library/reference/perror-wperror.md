@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 455bf63cdac425217c40068853b302edefb94f16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1df9e064ac7af761a858c6e18d99526a9b3c7ffb
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404283"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103789"
 ---
 # <a name="perror-wperror"></a>perror、_wperror
 
@@ -64,11 +64,12 @@ void _wperror(
 
 ### <a name="parameters"></a>パラメーター
 
-*メッセージ*文字列メッセージを印刷します。
+*message*<br/>
+印刷する文字列メッセージ。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Perror**関数は、エラー メッセージが、出力**stderr**です。 **_wperror**のワイド文字バージョンは、 **_perror**;*メッセージ*に渡す引数 **_wperror**ワイド文字列です。 **_wperror**と **_perror**それ以外の場合の動作は同じです。
+**Perror**関数にエラー メッセージを出力する**stderr**します。 **_wperror**のワイド文字バージョンです **_perror**、*メッセージ*引数 **_wperror**はワイド文字列です。 **_wperror**と **_perror**動作は同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -76,17 +77,17 @@ void _wperror(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tperror**|**perror**|**perror**|**_wperror**|
 
-*メッセージ*エラーが発生した最後のライブラリ呼び出しのシステム エラー メッセージ、コロンで後に最初に、印刷が最後に改行文字でします。 場合*メッセージ*null ポインターまたは null 文字列へのポインターは**perror**システム エラー メッセージのみを表示します。
+*メッセージ*続けて、コロン、次に、エラーが発生した最後のライブラリ呼び出しのシステム エラー メッセージが最初に、印刷が最後に改行文字で。 場合*メッセージ*が null ポインター、または null の文字列へのポインター **perror**システム エラー メッセージのみを表示します。
 
-エラー番号は、変数 [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (ERRNO.H で定義) に格納されます。 システム エラー メッセージは、エラー番号順のメッセージの配列である変数 [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) を使用してアクセスできます。 **perror**適切なエラー メッセージを使用して、印刷、 **errno**値へのインデックスとして **_sys_errlist**です。 変数の値[_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)内の要素の最大数として定義される、 **_sys_errlist**配列。
+エラー番号は、変数 [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (ERRNO.H で定義) に格納されます。 システム エラー メッセージは、エラー番号順のメッセージの配列である変数 [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) を使用してアクセスできます。 **perror** 、適切なエラー メッセージを使用して印刷、 **errno**値へのインデックスとして **_sys_errlist**します。 変数の値[_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)内の要素の最大数として定義される、 **_sys_errlist**配列。
 
 正確な結果は、呼び出す**perror**ライブラリ ルーチンがエラーを返した後すぐにします。 それ以外の場合、後続の呼び出しを上書きできる、 **errno**値。
 
-オペレーティング システム、一部の Windows で**errno** ERRNO の値が一覧表示します。H、使用されません。 これらの値は、UNIX オペレーティング システムで使用するために予約されたものです。 参照してください[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)の一覧については**errno** Windows オペレーティング システムによって使用される値。 **perror**のいずれか、空の文字列を出力**errno**値がこれらのプラットフォームでは使用されません。
+いくつか、Windows オペレーティング システム、 **errno** ERRNO の値が一覧表示します。H、使用されません。 これらの値は、UNIX オペレーティング システムで使用するために予約されたものです。 参照してください[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)の一覧については**errno** Windows オペレーティング システムによって使用される値。 **perror**は空の文字列を出力します**errno**これらのプラットフォームで使用されていない値。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**perror**|\<stdio.h> または \<stdlib.h>|
 |**_wperror**|\<stdio.h> または \<wchar.h>|

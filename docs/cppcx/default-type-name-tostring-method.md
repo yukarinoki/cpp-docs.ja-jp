@@ -13,34 +13,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3855da95342098c9ae260dc1d238c77f0fe69b86
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 756fbf28a73314ad4e335f658a48527f90975e55
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752503"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108573"
 ---
 # <a name="defaulttypenametostring-method"></a>default::(type_name)::ToString メソッド
-現在の型を表す文字列を返します。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-  
-String^ ToString()  
-```  
-  
-### <a name="return-value"></a>戻り値  
- 現在のオブジェクトを表す文字列。  
-  
-### <a name="requirements"></a>要件  
- **クライアントがサポートされている最小:** Windows 8  
-  
- **サポートされているサーバーの最小値:** Windows Server 2012  
-  
- **名前空間:** 既定  
-  
- **ヘッダー:** vccorlib.h  
-  
-## <a name="see-also"></a>関連項目  
- [default 名前空間](../cppcx/default-namespace.md)
+
+現在の型を表す文字列を返します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+String^ ToString();
+```
+
+### <a name="return-value"></a>戻り値
+
+現在のオブジェクトを表す文字列。
+
+### <a name="requirements"></a>要件
+
+**クライアントがサポートされている最小:** Windows 8
+
+**サポートされているサーバーの最小値:** Windows Server 2012
+
+**名前空間:** 既定
+
+**ヘッダー:** vccorlib.h
+
+## <a name="see-also"></a>関連項目
+
+[default 名前空間](../cppcx/default-namespace.md)

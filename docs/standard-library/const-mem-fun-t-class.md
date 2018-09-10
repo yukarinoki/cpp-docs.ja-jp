@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc28cdb34148a525b193a93bec8d881bbbeb43f8
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3b813128f07376d017a3ea76d6bb359db437f6f3
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963002"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100197"
 ---
 # <a name="constmemfunt-class"></a>const_mem_fun_t クラス
 
@@ -35,14 +35,16 @@ class const_mem_fun_t : public unary_function <Type *, Result>
 {
     explicit const_mem_fun_t(Result (Type::* Pm)() const);
     Result operator()(const Type* Pleft) const;
- };
+};
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*Pm*クラスのメンバー関数へのポインター`Type`関数オブジェクトに変換します。
+*Pm*<br/>
+関数オブジェクトに変換されるクラス `Type` のメンバー関数へのポインター。
 
-*Pleft*オブジェクトを*Pm*でメンバー関数が呼び出されます。
+*Pleft*<br/>
+オブジェクトを*Pm*でメンバー関数が呼び出されます。
 
 ## <a name="return-value"></a>戻り値
 
@@ -56,7 +58,7 @@ class const_mem_fun_t : public unary_function <Type *, Result>
 
 `const_mem_fun_t` のコンストラクターは通常は直接使用されません。ヘルパー関数 `mem_fun` を使用してメンバー関数を適合させます。 メンバー関数アダプターの使用例については、「[mem_fun](../standard-library/functional-functions.md#mem_fun)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<functional>
 

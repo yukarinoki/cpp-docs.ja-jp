@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::terminate [C++]
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
-ms.openlocfilehash: 5734c745f19d22c562f68aa2b518c9b4315ba12e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9401772e35527c63f47dc10bbb0e501029558825
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962274"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105407"
 ---
 # <a name="ltexceptiongt-functions"></a>&lt;exception&gt; 関数
 
@@ -75,7 +75,8 @@ exception_ptr make_exception_ptr(E Except);
 
 ### <a name="parameters"></a>パラメーター
 
-*除く*をコピーする例外を持つクラス。 通常は、[例外クラス](../standard-library/exception-class.md) オブジェクトを `make_exception_ptr` 関数への引数として指定しますが、任意のクラスのオブジェクトを引数に使用できます。
+*除く*<br/>
+コピーする例外を持つクラス。 通常は、[例外クラス](../standard-library/exception-class.md) オブジェクトを `make_exception_ptr` 関数への引数として指定しますが、任意のクラスのオブジェクトを引数に使用できます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -97,7 +98,8 @@ void rethrow_exception(exception_ptr P);
 
 ### <a name="parameters"></a>パラメーター
 
-*P*を再スローをキャッチした例外。 場合*P* null [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)、関数はスロー [std::bad_exception](../standard-library/bad-exception-class.md)します。
+*P*<br/>
+再スローするためにキャッチされる例外。 場合*P* null [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)、関数はスロー [std::bad_exception](../standard-library/bad-exception-class.md)します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -121,7 +123,8 @@ terminate_handler set_terminate(terminate_handler fnew) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*fnew*終了時に呼び出される関数。
+*fnew*<br/>
+終了時に呼び出される関数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -178,7 +181,8 @@ unexpected_handler set_unexpected(unexpected_handler fnew) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*fnew*予期しない例外が発生したときに呼び出される関数。
+*fnew*<br/>
+予期しない例外が発生したときに呼び出される関数。
 
 ### <a name="return-value"></a>戻り値
 

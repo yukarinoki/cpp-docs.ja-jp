@@ -92,12 +92,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcf3a5fcdb8c604dac368b60cf4a368bdb1c3f14
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f766df104df31ba2ba154c081338f7a6d1d4a05c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33865755"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107527"
 ---
 # <a name="regexconstants-class"></a>regex_constants クラス
 
@@ -110,10 +110,10 @@ namespace regex_constants {
     enum syntax_option_type;
     enum match_flag_type;
     enum error_type;
- }
+}
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 `regex_constants` 名前空間は、各種のフラグおよび関連するフラグ値をカプセル化します。
 
@@ -148,7 +148,7 @@ enum error_type
     };
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、エラー フラグを保持できるオブジェクトを表す列挙型です。 次に、それぞれのフラグ値を示します。
 
@@ -208,13 +208,13 @@ enum match_flag_type
     };
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、テキスト シーケンスを正規表現に照らして照合するときに使用されるオプションと、テキストを置き換えるときに使用される書式設定フラグを表すビットマスク型です。 オプションは `|`を使用して連結できます。
 
 照合オプションは次のとおりです。
 
-`match_default`
+*match_default*<br/>
 
 `match_not_bol` - ターゲット シーケンス内の先頭の位置を行の始まりとして処理しません
 
@@ -264,7 +264,7 @@ enum syntax_option_type
     };
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、正規表現をコンパイルするときに使用される言語指定子と構文修飾子を表すビットマスク型です。 オプションは `|`を使用して連結できます。 一度に使用できる言語指定子は 1 つだけです。
 

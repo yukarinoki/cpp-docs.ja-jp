@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 410566c623595cc941ab6e6ad21dd95bd70fe516
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 1924b82f7c3035ea2aecb463199558c9ead45c91
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963668"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102066"
 ---
 # <a name="istriviallycopyconstructible-class"></a>is_trivially_copy_constructible クラス
 
@@ -36,7 +36,8 @@ struct is_trivially_copy_constructible;
 
 ### <a name="parameters"></a>パラメーター
 
-*T*照会する型。
+*T*<br/>
+照会する型。
 
 ## <a name="remarks"></a>Remarks
 
@@ -44,7 +45,7 @@ struct is_trivially_copy_constructible;
 
 クラスのコピー コンス トラクター *T*は暗黙的に宣言しても、クラスに自明*T* 、仮想関数または仮想基底クラス、すべての直接基本クラスのない*T*が自明なコピー コンス トラクターは、クラス型のすべての非静的データ メンバーのクラスに自明なコピー コンス トラクターがあるし、クラスの型配列のすべての非静的データ メンバーのクラスが自明なコピー コンス トラクターを持ちます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<type_traits>
 

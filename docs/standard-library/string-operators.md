@@ -24,12 +24,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: 728a0f643a77b47bf857d409517407bec3a1b8b4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0b4ec7d6d79f70423b2d7c30e1de73e05eb04d9c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966629"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101811"
 ---
 # <a name="ltstringgt-operators"></a>&lt;string&gt; 演算子
 
@@ -107,9 +107,11 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*C スタイル文字列または型のオブジェクト`basic_string`連結します。
+*left*<br/>
+連結する C スタイルの文字列または型 `basic_string` のオブジェクト。
 
-*適切な*C スタイル文字列または型のオブジェクト`basic_string`連結します。
+*right*<br/>
+連結する C スタイルの文字列または型 `basic_string` のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -194,9 +196,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*C スタイル文字列または型のオブジェクト`basic_string`と比較します。
+*left*<br/>
+比較する C スタイルの文字列または `basic_string` 型のオブジェクト。
 
-*適切な*C スタイル文字列または型のオブジェクト`basic_string`と比較します。
+*right*<br/>
+比較する C スタイルの文字列または `basic_string` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -283,9 +287,11 @@ bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*C スタイル文字列または型のオブジェクト`basic_string`と比較します。
+*left*<br/>
+比較する C スタイルの文字列または `basic_string` 型のオブジェクト。
 
-*適切な*C スタイル文字列または型のオブジェクト`basic_string`と比較します。
+*right*<br/>
+比較する C スタイルの文字列または `basic_string` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -372,9 +378,11 @@ bool operator<(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*C スタイル文字列または型のオブジェクト`basic_string`と比較します。
+*left*<br/>
+比較する C スタイルの文字列または `basic_string` 型のオブジェクト。
 
-*適切な*C スタイル文字列または型のオブジェクト`basic_string`と比較します。
+*right*<br/>
+比較する C スタイルの文字列または `basic_string` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -466,9 +474,11 @@ bool operator<=(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*C スタイル文字列または型のオブジェクト`basic_string`と比較します。
+*left*<br/>
+比較する C スタイルの文字列または `basic_string` 型のオブジェクト。
 
-*適切な*C スタイル文字列または型のオブジェクト`basic_string`と比較します。
+*right*<br/>
+比較する C スタイルの文字列または `basic_string` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -557,9 +567,11 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Ostr*に書き込まれている出力ストリーム。
+*_Ostr*<br/>
+書き込み先の出力ストリーム。
 
-*str*出力ストリームに入力される文字列。
+*str*<br/>
+出力ストリームに入力される文字列。
 
 ### <a name="return-value"></a>戻り値
 
@@ -592,9 +604,11 @@ bool operator>(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*C スタイル文字列または型のオブジェクト`basic_string`と比較します。
+*left*<br/>
+比較する C スタイルの文字列または `basic_string` 型のオブジェクト。
 
-*適切な*C スタイル文字列または型のオブジェクト`basic_string`と比較します。
+*right*<br/>
+比較する C スタイルの文字列または `basic_string` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -693,9 +707,11 @@ bool operator>=(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*C スタイル文字列または型のオブジェクト`basic_string`と比較します。
+*left*<br/>
+比較する C スタイルの文字列または `basic_string` 型のオブジェクト。
 
-*適切な*C スタイル文字列または型のオブジェクト`basic_string`と比較します。
+*right*<br/>
+比較する C スタイルの文字列または `basic_string` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -784,9 +800,11 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Istr*シーケンスを抽出するために使用する入力ストリーム
+*_Istr*<br/>
+シーケンスを抽出するために使用する入力ストリーム
 
-*適切な*入力ストリームから抽出されている文字列。
+*right*<br/>
+入力ストリームから抽出される文字列。
 
 ### <a name="return-value"></a>戻り値
 

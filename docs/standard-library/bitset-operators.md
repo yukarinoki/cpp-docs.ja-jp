@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (bitset)
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d01a9ad5ef0b5cc3198231ae2b361e04856449f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 83e6e1bc3d35f076d3a1b8fd2151ad4c94c060cb
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955021"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107656"
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset&gt; 演算子
 
@@ -48,9 +48,11 @@ operator&(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*最初の 2 つのビットセットのビットごとに結合するそれぞれの要素が、`AND`します。
+*left*<br/>
+それぞれの要素が `AND` でビットごとに結合される 2 つのビットセットのうちの最初。
 
-*適切な*2 番目のビットごとに結合するそれぞれの要素が、2 つの valarray`AND`します。
+*right*<br/>
+それぞれの要素が `AND` でビットごとに結合される 2 つの valarray のうちの 2 つ目。
 
 ### <a name="return-value"></a>戻り値
 
@@ -98,7 +100,8 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*型のオブジェクト**ビットセット\<N >** を文字列として出力ストリームに挿入します。
+*right*<br/>
+文字列として出力ストリームに挿入する型 **bitset\<N>** のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -157,9 +160,11 @@ _Istr,
 
 ### <a name="parameters"></a>パラメーター
 
-*_Istr*ビットセットに挿入する入力ストリームに入力される文字列。
+*_Istr*<br/>
+ビットセットに挿入する入力ストリームに入力される文字列。
 
-*適切な*を入力ストリームからビットを受け取るビットセット。
+*right*<br/>
+入力ストリームからビットを受け取るビットセット。
 
 ### <a name="return-value"></a>戻り値
 
@@ -240,9 +245,11 @@ operator^(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*最初の 2 つのビットセットのビットごとに結合するそれぞれの要素が、`EXCLUSIVE-OR`します。
+*left*<br/>
+それぞれの要素が `EXCLUSIVE-OR` でビットごとに結合される 2 つのビットセットのうちの最初。
 
-*適切な*2 番目のビットごとに結合するそれぞれの要素が、2 つの valarray`EXCLUSIVE-OR`します。
+*right*<br/>
+それぞれの要素が `EXCLUSIVE-OR` でビットごとに結合される 2 つの valarray のうちの 2 つ目。
 
 ### <a name="return-value"></a>戻り値
 
@@ -290,9 +297,11 @@ operator|(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*最初の 2 つのビットセットのビットごとに結合するそれぞれの要素が、`OR`します。
+*left*<br/>
+それぞれの要素が `OR` でビットごとに結合される 2 つのビットセットのうちの最初。
 
-*適切な*2 番目のビットごとに結合するそれぞれの要素が、2 つの valarray`OR`します。
+*right*<br/>
+それぞれの要素が `OR` でビットごとに結合される 2 つの valarray のうちの 2 つ目。
 
 ### <a name="return-value"></a>戻り値
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b632fabe8f596d46a0423d670ff57bb12de93cd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: cdef0e68e50085513871d1fcacd9cfdb302e9f51
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953457"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107569"
 ---
 # <a name="pointertobinaryfunction-class"></a>pointer_to_binary_function クラス
 
@@ -44,11 +44,14 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*pfunc*変換する二項関数。
+*pfunc*<br/>
+変換する二項関数。
 
-*左*左辺のオブジェクトを *\*pfunc*で呼び出されます。
+*left*<br/>
+*\*pfunc* が呼び出される左辺のオブジェクト。
 
-*適切な*右側のオブジェクトを *\*pfunc*で呼び出されます。
+*right*<br/>
+*\*pfunc* が呼び出される右側のオブジェクト。
 
 ## <a name="return-value"></a>戻り値
 
@@ -62,7 +65,7 @@ public:
 
 `pointer_to_binary_function` のコンストラクターが直接使用されることはほとんどありません。 `pointer_to_binary_function` アダプターの述語を宣言および使用する方法の例については、ヘルパー関数 [ptr_fun](../standard-library/functional-functions.md#ptr_fun) をご覧ください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<functional>
 

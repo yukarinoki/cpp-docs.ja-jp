@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30234c932aad28d16830b80fd19e4ad334ba407c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a61276cc47e13205f0076789049881305faf0760
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962817"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106721"
 ---
 # <a name="ispointer-class"></a>is_pointer クラス
 
@@ -37,7 +37,8 @@ struct is_pointer;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*照会する型。
+*Ty*<br/>
+照会する型。
 
 ## <a name="remarks"></a>Remarks
 
@@ -82,7 +83,7 @@ is_pointer<int> == false
 is_pointer<int *> == true
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<type_traits>
 

@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeedb217466262d8643a851b5f93cb9ac26fb0a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2975e63f79818e5eac430056258b72b9c6641a49
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408446"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100275"
 ---
 # <a name="swab"></a>_swab
 
@@ -59,25 +59,28 @@ void _swab(
 
 ## <a name="parameters"></a>パラメーター
 
-*src*データをコピーし、スワップします。
+*src*<br/>
+コピーおよび交換されるデータ。
 
-*dest*スワップ データの格納場所。
+*dest*<br/>
+交換したデータの格納場所。
 
-*n*をコピーし、スワップのバイト数。
+*n*<br/>
+コピーおよび交換対象のバイト数。
 
 ## <a name="return-value"></a>戻り値
 
-**Swab**関数が値を返しません。 関数のセットを**errno**に**EINVAL**いずれか、 *src*または*dest*ポインターが null または*n*が小さい無効なパラメーター ハンドラーが呼び出される」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。
+**Swab**関数が値を返しません。 関数のセット**errno**に**EINVAL**場合、 *src*または*dest*ポインターが null または*n*が小さい0 の場合と無効なパラメーター ハンドラーが呼び出されます、」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。
 
 戻り値の詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-場合*n*が偶数の **_swab**関数のコピー *n*からバイト*src*、隣接する (バイト単位) の各ペアを交換およびで結果を格納*dest*です。 場合*n*が奇数 **_swab**をコピーし、最初の交換*n*-1 バイトまでの*src*と最後のバイトはコピーされません。 **_Swab**関数は、通常、異なるバイト順を使用するマシンに転送するためのバイナリ データを準備するのに使用します。
+場合*n*が偶数、 **_swab**関数コピー *n*からバイト*src*、隣接する (バイト単位) の各ペアを交換およびで結果を格納*dest*します。 場合*n*が奇数 **_swab**コピーして、最初のスワップ*n*-1 バイトまでの*src*と最後のバイトはコピーされません。 **_Swab**関数は、通常、異なるバイト順を使用するマシンに転送するためのバイナリ データの準備に使用します。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_swab**|C: \<stdlib.h> C++: \<cstdlib> または \<stdlib.h>|
 

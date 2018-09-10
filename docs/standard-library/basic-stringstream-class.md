@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbac9637083a61b7fce03a844201530116b882b4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 60a12c18ec4e174087900f7386d948ea3ab16a89
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964360"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102487"
 ---
 # <a name="basicstringstream-class"></a>basic_stringstream クラス
 
@@ -42,11 +42,14 @@ class basic_stringstream : public basic_iostream<Elem, Tr>
 
 ### <a name="parameters"></a>パラメーター
 
-*Alloc*アロケーター クラス。
+*Alloc*<br/>
+アロケーター クラス。
 
-*Elem*文字列の基本要素の型。
+*Elem*<br/>
+文字列の基本要素の型。
 
-*Tr*文字特性は、文字列の基本要素に特化しました。
+*Tr*<br/>
+文字列の基本要素に特化した文字の特徴。
 
 ## <a name="remarks"></a>Remarks
 
@@ -71,7 +74,7 @@ class basic_stringstream : public basic_iostream<Elem, Tr>
 |[rdbuf](#rdbuf)|型 `pointer` の格納されたストリーム バッファーのアドレスを [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`, `Alloc`> に返します。|
 |[str](#str)|文字列バッファー内のテキストを設定または取得します。書き込み位置は変更しません。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<sstream>
 
@@ -97,9 +100,11 @@ explicit basic_stringstream(const basic_string<Elem, Tr, Alloc>& str, ios_base::
 
 ### <a name="parameters"></a>パラメーター
 
-*モード (_m)* 列挙値のいずれかの[ios_base::openmode](../standard-library/ios-base-class.md#openmode)します。
+*モード (_m)*<br/>
+[ios_base::openmode](../standard-library/ios-base-class.md#openmode) の列挙値のうちの 1 つ。
 
-*str*型のオブジェクト`basic_string`します。
+*str*<br/>
+`basic_string` 型のオブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -137,7 +142,8 @@ void str(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Newstr*新しい文字列。
+*_Newstr*<br/>
+新しい文字列。
 
 ### <a name="return-value"></a>戻り値
 

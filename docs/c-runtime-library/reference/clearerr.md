@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c78355277fbb987d82bed46fb0b5f4ffd848b6a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c4bfc37a53e3b2b4e3c185c101685b7009d9d354
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395303"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105277"
 ---
 # <a name="clearerr"></a>clearerr
 
@@ -54,19 +54,20 @@ void clearerr(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*へのポインター**ファイル**構造体。
+*ストリーム*<br/>
+**FILE** 構造体へのポインター。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Clearerr**関数は、エラー インジケーターとのファイルの終端のインジケーターをリセット*ストリーム*です。 エラー インジケーターは自動的にクリアされません。このストリームでの操作が引き続きまでエラー値を返します、指定したストリームのエラー インジケーターを設定すると、 **clearerr**、 [fseek](fseek-fseeki64.md)、 **fsetpos**、または[巻き戻し](rewind.md)と呼びます。
+**Clearerr**関数は、エラー インジケーターとファイルの終わりインジケーターをリセット*ストリーム*します。 エラー インジケーターは自動的にクリアされません。そのストリームに対する操作が引き続きまでエラー値を返し、指定したストリームのエラー インジケーターを設定すると、 **clearerr**、 [fseek](fseek-fseeki64.md)、 **fsetpos**、または[巻き戻し](rewind.md)が呼び出されます。
 
-場合*ストリーム*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、この関数が設定**errno**に**EINVAL**を返します。 詳細については**errno**エラー コードを参照してください、 [errno 定数](../../c-runtime-library/errno-constants.md)です。
+場合*ストリーム*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、この関数が設定**errno**に**EINVAL**を返します。 詳細については**errno** 、エラー コードを参照してくださいと[errno 定数](../../c-runtime-library/errno-constants.md)します。
 
 この関数のセキュリティが強化されたバージョンについては、「[clearerr_s](clearerr-s.md)」を参照してください。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**clearerr**|\<stdio.h>|
 

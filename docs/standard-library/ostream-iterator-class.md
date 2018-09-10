@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 308254fded0ac38a794233fb3f4eacd4d7d6fd19
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: c166b39a6252c3b49427f06d88c179bd9ca25ce8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207920"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108333"
 ---
 # <a name="ostreamiterator-class"></a>ostream_iterator クラス
 
@@ -42,11 +42,14 @@ class ostream_iterator
 
 ### <a name="parameters"></a>パラメーター
 
-*型*出力ストリームに挿入するオブジェクトの型。
+*Type*<br/>
+出力ストリームに挿入されるオブジェクトの型。
 
-*CharType*の文字の種類を表す型、`ostream_iterator`します。 この引数は省略可能、既定値は**char**します。
+*CharType*<br/>
+`ostream_iterator` の文字型を表す型。 この引数は省略可能、既定値は**char**します。
 
-*Traits*の文字の種類を表す型、`ostream_iterator`します。 この引数は省略可能であり、既定値は `char_traits`\< *CharType>* です。
+*Traits*<br/>
+`ostream_iterator` の文字型を表す型。 この引数は省略可能であり、既定値は `char_traits`\< *CharType>* です。
 
 ostream_iterator クラスは出力反復子の要件を満たす必要があります。 アルゴリズムは `ostream_iterator` を使用して出力ストリームに直接書き込むことができます。
 
@@ -72,7 +75,7 @@ ostream_iterator クラスは出力反復子の要件を満たす必要があり
 |[operator++](#op_add_add)|操作が呼び出される前に示したものと同じオブジェクトに `ostream_iterator` を返す、実質的な機能を持たないインクリメント演算子。|
 |[operator=](#op_eq)|出力反復子の式を実装するために使用される代入演算子\* `i`  =  `x`出力ストリームに書き込むためです。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<iterator>
 
@@ -114,9 +117,9 @@ int main( )
    // elements to the output stream:
    cout << "The integers written to the output stream\n"
         << "by intOut are:" << endl;
- *intOut = 10;
- *intOut = 20;
- *intOut = 30;
+*intOut = 10;
+*intOut = 20;
+*intOut = 30;
 }
 \* Output:
 The integers written to the output stream
@@ -163,10 +166,10 @@ int main( )
    // Standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *intOut = 10;
+*intOut = 10;
    intOut++;      // No effect on iterator position
- *intOut = 20;
- *intOut = 30;
+*intOut = 20;
+*intOut = 30;
 }
 \* Output:
 Elements written to output stream:
@@ -213,10 +216,10 @@ int main( )
    // standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *intOut = 10;
+*intOut = 10;
    intOut++;      // No effect on iterator position
- *intOut = 20;
- *intOut = 30;
+*intOut = 20;
+*intOut = 30;
 }
 \* Output:
 Elements written to output stream:
@@ -236,7 +239,8 @@ ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
 
 ### <a name="parameters"></a>パラメーター
 
-*val*型のオブジェクトの値`Type`出力ストリームに挿入します。
+*val*<br/>
+出力ストリームに挿入される `Type` 型のオブジェクトの値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -266,10 +270,10 @@ int main( )
    // Standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *intOut = 10;
+*intOut = 10;
    intOut++;      // No effect on iterator position
- *intOut = 20;
- *intOut = 30;
+*intOut = 20;
+*intOut = 30;
 }
 \* Output:
 Elements written to output stream:
@@ -294,9 +298,11 @@ ostream_iterator(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Ostr*型の出力ストリーム[ostream_iterator::ostream_type](#ostream_type)を反復処理します。
+*_Ostr*<br/>
+反復処理する [ostream_iterator::ostream_type](#ostream_type) 型の出力ストリーム。
 
-*_Delimiter*値の間での出力ストリームに挿入する区切り記号。
+*_Delimiter*<br/>
+出力ストリームで値の間に挿入される区切り記号。
 
 ### <a name="remarks"></a>Remarks
 
@@ -319,9 +325,9 @@ int main( )
 
    // ostream_iterator for stream cout
    ostream_iterator<int> intOut ( cout , "\n" );
- *intOut = 10;
+*intOut = 10;
    intOut++;
- *intOut = 20;
+*intOut = 20;
    intOut++;
 
    int i;
@@ -404,9 +410,9 @@ int main( )
    // elements to the output stream:
    cout << "The integers written to output stream\n"
         << "by intOut are:" << endl;
- *intOut = 1;
- *intOut = 10;
- *intOut = 100;
+*intOut = 1;
+*intOut = 10;
+*intOut = 100;
 }
 \* Output:
 The integers written to output stream

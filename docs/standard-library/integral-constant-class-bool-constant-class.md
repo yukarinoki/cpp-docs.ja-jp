@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bff57549307eeaa9245c0bb4083b206471fe726
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 053816fcf18ec29b5e405f84b545432e848d2b59
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962534"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104011"
 ---
 # <a name="integralconstant-class-boolconstant-class"></a>integral_constant クラス、bool_constant クラス
 
@@ -46,9 +46,11 @@ struct integral_constant {
 
 ### <a name="parameters"></a>パラメーター
 
-*T*定数の型。
+*T*<br/>
+定数の型。
 
-*v*定数の値。
+*v*<br/>
+定数の値。
 
 ## <a name="remarks"></a>Remarks
 
@@ -81,7 +83,7 @@ integral_constant<int, 5> == 5
 integral_constant<bool, false> == false
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<type_traits>
 

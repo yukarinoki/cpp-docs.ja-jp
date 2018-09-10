@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fdad6f34fed49ec851f027cba4c53ea08b48902
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 82a5a02ed85e3a02c1131a413eb8588dd49dee90
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195404"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100899"
 ---
 # <a name="ltistreamgt-operators"></a>&lt;istream&gt; 演算子
 
@@ -64,13 +64,17 @@ basic_istream<Elem, Tr>& operator>>(
 
 ### <a name="parameters"></a>パラメーター
 
-*Ch*文字。
+*ch*<br/>
+単一の文字。
 
-*Istr*ストリーム。
+*Istr*<br/>
+ストリーム。
 
-*str*文字列。
+*str*<br/>
+文字列。
 
-*val*型。
+*val*<br/>
+型。
 
 ### <a name="return-value"></a>戻り値
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1de239e408adf4f66e7868ce9b91d7da574fffde
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e03cb627e7e9db40d56a69112977d87141626696
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958036"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100445"
 ---
 # <a name="messagesbyname-class"></a>messages_byname クラス
 
@@ -49,15 +49,17 @@ protected:
 
 ### <a name="parameters"></a>パラメーター
 
-*_Locname*名前付きのロケール。
+*_Locname*<br/>
+名前付きのロケール。
 
-*_Refs*最初の参照数。
+*_Refs*<br/>
+最初の参照数。
 
 ## <a name="remarks"></a>Remarks
 
 名前付きのロケールでその動作が決まります *_Locname*します。 各コンストラクターは、[messages](../standard-library/messages-class.md#messages)\<CharType>( `_Refs`) を使用して、その基本オブジェクトを初期化します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<locale>
 

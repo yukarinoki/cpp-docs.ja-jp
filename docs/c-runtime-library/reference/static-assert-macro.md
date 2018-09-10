@@ -28,16 +28,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbbab8314a038d796ebd1a13342f3054e59f3e68
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8eda76666679b133b2d5486d21cd4c8e24d1fdf3
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407367"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105084"
 ---
 # <a name="staticassert-macro"></a>_STATIC_ASSERT マクロ
 
-コンパイル時に式を評価し、結果とエラーが生成**FALSE**です。
+コンパイル時に式を評価し、結果がエラーを生成**FALSE**します。
 
 ## <a name="syntax"></a>構文
 
@@ -49,15 +49,16 @@ _STATIC_ASSERT(
 
 ### <a name="parameters"></a>パラメーター
 
-*ブール式*0 以外に評価される式 (ポインターを含む) (**TRUE**) または 0 (**FALSE**)。
+*ブール式*<br/>
+0 以外の値に評価される式 (ポインターを含む) (**TRUE**) または 0 (**FALSE**)。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-このマクロに似ています、 [_assert マクロと _ASSERTE マクロ](assert-asserte-assert-expr-macros.md)する点を除いて、*ブール式*は実行時ではなく、コンパイル時に評価されます。 場合*ブール式*に評価される**FALSE** (0)、[コンパイラ エラー C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md)が生成されます。
+このマクロに似ています、 [_assert マクロと _ASSERTE マクロ](assert-asserte-assert-expr-macros.md)ことを除いて、*ブール式*は実行時ではなく、コンパイル時に評価されます。 場合*ブール式*に評価される**FALSE** (0)、[コンパイラ エラー C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md)が生成されます。
 
 ## <a name="example"></a>例
 
-この例では確認かどうか、 [sizeof](../../c-language/sizeof-operator-c.md) 、 **int**より大きいか、または 2 バイトは、かどうかおよび、 [sizeof](../../c-language/sizeof-operator-c.md) 、**長い**1 バイトです。 プログラムはコンパイルされませんされが生成されます[コンパイラ エラー C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md)ため、**長い**1 バイトを超えています。
+この例で確認かどうか、 [sizeof](../../c-language/sizeof-operator-c.md) 、 **int** 2 バイト以上かどうかおよび、 [sizeof](../../c-language/sizeof-operator-c.md) 、**長い**1 バイトします。 プログラムはコンパイルされずが生成されます[コンパイラ エラー C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md)ため、**長い**が 1 バイトを超えています。
 
 ```C
 // crt__static_assert.c

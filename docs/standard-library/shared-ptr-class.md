@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9192f52b35ec50c7acb1672e03ea248d140c7f71
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 999b4bcee00c633184795e22865bc5c75ee64846
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957523"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109876"
 ---
 # <a name="sharedptr-class"></a>shared_ptr クラス
 
@@ -117,23 +117,17 @@ null ポインターを使用して初期化される `shared_ptr` オブジェ�
 
 引数なし: 結果として生成されるオブジェクトは、空の `shared_ptr` オブジェクトまたは空の `weak_ptr` オブジェクトです。
 
+`ptr` -- 管理対象リソースへの `Other*` 型のポインター。 `T` は完全な型である必要があります。 コントロール ブロックを割り当てることができないため関数が失敗した場合、`delete ptr` という式が評価されます。
 
-  `ptr` -- 管理対象リソースへの `Other*` 型のポインター。 `T` は完全な型である必要があります。 コントロール ブロックを割り当てることができないため関数が失敗した場合、`delete ptr` という式が評価されます。
+`ptr, dtor`: 管理対象リソースに対する `Other*` 型のポインターおよびそのリソースの削除子です。 コントロール ブロックを割り当てることができなかったことが原因で関数が失敗した場合、`dtor(ptr)` が呼び出されます (明確に定義されていることが必要)。
 
+`ptr, dtor, alloc` -- 管理対象リソース、そのリソースの削除子、および割り当てと解放を行う必要があるすべてのストレージを管理するためのアロケーターへの `Other*` 型のポインター。 コントロール ブロックを割り当てることができなかったことが原因で関数が失敗した場合、`dtor(ptr)` が呼び出されます (明確に定義されていることが必要)。
 
-  `ptr, dtor`: 管理対象リソースに対する `Other*` 型のポインターおよびそのリソースの削除子です。 コントロール ブロックを割り当てることができなかったことが原因で関数が失敗した場合、`dtor(ptr)` が呼び出されます (明確に定義されていることが必要)。
+`sp`: 管理対象のリソースを所有する `shared_ptr<Other>` オブジェクトです。
 
+`wp`: 管理対象のリソースを指し示す `weak_ptr<Other>` オブジェクトです。
 
-  `ptr, dtor, alloc` -- 管理対象リソース、そのリソースの削除子、および割り当てと解放を行う必要があるすべてのストレージを管理するためのアロケーターへの `Other*` 型のポインター。 コントロール ブロックを割り当てることができなかったことが原因で関数が失敗した場合、`dtor(ptr)` が呼び出されます (明確に定義されていることが必要)。
-
-
-  `sp`: 管理対象のリソースを所有する `shared_ptr<Other>` オブジェクトです。
-
-
-  `wp`: 管理対象のリソースを指し示す `weak_ptr<Other>` オブジェクトです。
-
-
-  `ap`: 管理対象のリソースへのポインターを保持する `auto_ptr<Other>` オブジェクトです。 関数が成功した場合は、`ap.release()` が呼び出されます。関数が失敗した場合は、`ap` は変更されません。
+`ap`: 管理対象のリソースへのポインターを保持する `auto_ptr<Other>` オブジェクトです。 関数が成功した場合は、`ap.release()` が呼び出されます。関数が失敗した場合は、`ap` は変更されません。
 
 いずれの場合も、ポインターの型 `Other*` は `T*` に変換可能である必要があります。
 
@@ -176,7 +170,7 @@ null ポインターを使用して初期化される `shared_ptr` オブジェ�
 |[shared_ptr::operator=](#op_eq)|所有されたリソースを置き換えます。|
 |[shared_ptr::operator-&gt;](#op_arrow)|指定された値へのポインターを取得します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<memory>
 
@@ -357,9 +351,11 @@ shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
 
 ### <a name="parameters"></a>パラメーター
 
-*sp*コピー先の共有ポインター。
+*sp*<br/>
+コピーする共有ポインター。
 
-*アジア太平洋*をコピーする自動ポインター。
+*アジア太平洋*<br/>
+コピーする自動ポインター。
 
 ### <a name="remarks"></a>Remarks
 
@@ -447,7 +443,8 @@ bool owner_before(const weak_ptr<Other>& ptr);
 
 ### <a name="parameters"></a>パラメーター
 
-*ptr* 、`lvalue`への参照を`shared_ptr`または`weak_ptr`します。
+*ptr*<br/>
+`shared_ptr` または `weak_ptr` への `lvalue` 参照。
 
 ### <a name="remarks"></a>Remarks
 
@@ -472,17 +469,23 @@ void reset(Other *ptr, D dtor, A alloc);
 
 ### <a name="parameters"></a>パラメーター
 
-*その他の*引数ポインターによって制御される型。
+*その他*<br/>
+引数ポインターによって制御される型。
 
-*D*削除子の型。
+*D*<br/>
+削除子の型。
 
-*ptr*コピーへのポインター。
+*ptr*<br/>
+コピーするポインター。
 
-*dtor*をコピーする削除子。
+*dtor*<br/>
+コピーする削除子。
 
-*A*アロケーターの型。
+*A*<br/>
+アロケーターの型。
 
-*alloc*をコピーするアロケーター。
+*Alloc*<br/>
+コピーするアロケーター。
 
 ### <a name="remarks"></a>Remarks
 
@@ -587,23 +590,32 @@ shared_ptr(const unique_ptr<Other, D>& up) = delete;
 
 ### <a name="parameters"></a>パラメーター
 
-*その他の*引数ポインターによって制御される型。
+*その他*<br/>
+引数ポインターによって制御される型。
 
-*ptr*コピーへのポインター。
+*ptr*<br/>
+コピーするポインター。
 
-*D*削除子の型。
+*D*<br/>
+削除子の型。
 
-*A*アロケーターの型。
+*A*<br/>
+アロケーターの型。
 
-*dtor*削除子。
+*dtor*<br/>
+削除子。
 
-*ator*アロケーター。
+*ator*<br/>
+アロケーター。
 
-*sp*をコピーするスマート ポインター。
+*sp*<br/>
+コピーするスマート ポインター。
 
-*wp*ウィーク ポインター。
+*wp*<br/>
+ウィーク ポインター。
 
-*アジア太平洋*をコピーする自動ポインター。
+*アジア太平洋*<br/>
+コピーする自動ポインター。
 
 ### <a name="remarks"></a>Remarks
 
@@ -728,7 +740,8 @@ void swap(shared_ptr& sp);
 
 ### <a name="parameters"></a>パラメーター
 
-*sp*とスワップする共有ポインター。
+*sp*<br/>
+交換先の共有ポインター。
 
 ### <a name="remarks"></a>Remarks
 

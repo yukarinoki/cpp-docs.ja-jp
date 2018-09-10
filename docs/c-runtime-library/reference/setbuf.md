@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f8592e8008fa78402ced307b60188ea8610960a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea1c979b261b81f80d95e4219f948dd2a3f5849e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407315"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100354"
 ---
 # <a name="setbuf"></a>setbuf
 
@@ -54,19 +54,21 @@ void setbuf(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*へのポインター**ファイル**構造体。
+*ストリーム*<br/>
+**FILE** 構造体へのポインター。
 
-*バッファー*ユーザーに割り当てられたバッファー。
+*バッファー*<br/>
+ユーザー割り当てのバッファー。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Setbuf**関数のコントロールでのバッファー処理*ストリーム*です。 *ストリーム*引数は、読み取りまたは書き込みがされてがいないを開いているファイルを参照する必要があります。 場合、*バッファー*引数は**NULL**ストリームがされていない ffered ではありません。 場合は、バッファーする必要がありますの長さの文字配列**BUFSIZ**ここで、 **BUFSIZ** STDIO で定義されているバッファーのサイズは、します。H. 所定のストリームに対してシステムによって割り当てられた既定のバッファーではなく、ユーザーが指定したバッファーが I/O バッファー処理に使用されます。 **Stderr**ストリームは既定では、されていない ffered ではありませんが、使用することができます**setbuf**へのバッファーを割り当てる**stderr**です。
+**Setbuf**関数のバッファリングを制御*ストリーム*します。 *ストリーム*引数は、読み取りまたは書き込みがされてがいないを開いているファイルを指す必要があります。 場合、*バッファー*引数が**NULL**ストリームはバッファー処理されません。 場合は、バッファーが長さの文字配列 をポイントする必要があります、 **BUFSIZ**ここで、 **BUFSIZ** STDIO で定義されているバッファー サイズは、します。H. 所定のストリームに対してシステムによって割り当てられた既定のバッファーではなく、ユーザーが指定したバッファーが I/O バッファー処理に使用されます。 **Stderr**ストリームは既定では、バッファー処理ではありませんが、使用することができます**setbuf**にバッファーを割り当てる**stderr**します。
 
-**setbuf**代わりました[setvbuf](setvbuf.md)、新しいコード優先のルーチンであります。 **setbuf**既存のコードとの互換性は保持されます。
+**setbuf**置き換わりました[setvbuf](setvbuf.md)、これは、新しいコード用の優先ルーチンです。 **setbuf**既存のコードとの互換性は保持されます。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**setbuf**|\<stdio.h>|
 

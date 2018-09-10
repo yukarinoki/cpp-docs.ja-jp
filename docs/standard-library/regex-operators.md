@@ -14,12 +14,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: ccabc523ed502a3841cb9299ea2ccd2115115743
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 667de3f580734230cbc70afbe29c17aee8e35950
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961543"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107030"
 ---
 # <a name="ltregexgt-operators"></a>&lt;regex&gt; 演算子
 
@@ -70,15 +70,20 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>パラメーター
 
-*BidIt*反復子の型。
+*BidIt*<br/>
+反復子の型。
 
-*IOtraits*文字列の特性クラス。
+*IOtraits*<br/>
+文字列の特徴 (traits) クラス。
 
-*Alloc*アロケーター クラス。
+*Alloc*<br/>
+アロケーター クラス。
 
-*左*を比較する左のオブジェクト。
+*left*<br/>
+比較する左のオブジェクト。
 
-*適切な*を比較する右のオブジェクト。
+*right*<br/>
+比較する右のオブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -181,15 +186,20 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>パラメーター
 
-*BidIt*反復子の型。
+*BidIt*<br/>
+反復子の型。
 
-*IOtraits*文字列の特性クラス。
+*IOtraits*<br/>
+文字列の特徴 (traits) クラス。
 
-*Alloc*アロケーター クラス。
+*Alloc*<br/>
+アロケーター クラス。
 
-*左*を比較する左のオブジェクト。
+*left*<br/>
+比較する左のオブジェクト。
 
-*適切な*を比較する右のオブジェクト。
+*right*<br/>
+比較する右のオブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -262,17 +272,23 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 
 ### <a name="parameters"></a>パラメーター
 
-*Elem*要素の型。
+*Elem*<br/>
+要素型。
 
-*IOtraits*文字列の特性クラス。
+*IOtraits*<br/>
+文字列の特徴 (traits) クラス。
 
-*Alloc*アロケーター クラス。
+*Alloc*<br/>
+アロケーター クラス。
 
-*BidIt*反復子の型。
+*BidIt*<br/>
+反復子の型。
 
-*os*出力ストリーム。
+*os*<br/>
+出力ストリーム。
 
-*適切な*挿入するオブジェクト。
+*right*<br/>
+挿入するオブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -342,15 +358,20 @@ bool operator<=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>パラメーター
 
-*BidIt*反復子の型。
+*BidIt*<br/>
+反復子の型。
 
-*IOtraits*文字列の特性クラス。
+*IOtraits*<br/>
+文字列の特徴 (traits) クラス。
 
-*Alloc*アロケーター クラス。
+*Alloc*<br/>
+アロケーター クラス。
 
-*左*を比較する左のオブジェクト。
+*left*<br/>
+比較する左のオブジェクト。
 
-*適切な*を比較する右のオブジェクト。
+*right*<br/>
+比較する右のオブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -452,15 +473,20 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>パラメーター
 
-*BidIt*反復子の型。
+*BidIt*<br/>
+反復子の型。
 
-*IOtraits*文字列の特性クラス。
+*IOtraits*<br/>
+文字列の特徴 (traits) クラス。
 
-*Alloc*アロケーター クラス。
+*Alloc*<br/>
+アロケーター クラス。
 
-*左*を比較する左のオブジェクト。
+*left*<br/>
+比較する左のオブジェクト。
 
-*適切な*を比較する右のオブジェクト。
+*right*<br/>
+比較する右のオブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -571,15 +597,20 @@ bool operator>(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>パラメーター
 
-*BidIt*反復子の型。
+*BidIt*<br/>
+反復子の型。
 
-*IOtraits*文字列の特性クラス。
+*IOtraits*<br/>
+文字列の特徴 (traits) クラス。
 
-*Alloc*アロケーター クラス。
+*Alloc*<br/>
+アロケーター クラス。
 
-*左*を比較する左のオブジェクト。
+*left*<br/>
+比較する左のオブジェクト。
 
-*適切な*を比較する右のオブジェクト。
+*right*<br/>
+比較する右のオブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -677,15 +708,20 @@ bool operator>=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>パラメーター
 
-*BidIt*反復子の型。
+*BidIt*<br/>
+反復子の型。
 
-*IOtraits*文字列の特性クラス。
+*IOtraits*<br/>
+文字列の特徴 (traits) クラス。
 
-*Alloc*アロケーター クラス。
+*Alloc*<br/>
+アロケーター クラス。
 
-*左*を比較する左のオブジェクト。
+*left*<br/>
+比較する左のオブジェクト。
 
-*適切な*を比較する右のオブジェクト。
+*right*<br/>
+比較する右のオブジェクト。
 
 ### <a name="remarks"></a>Remarks
 

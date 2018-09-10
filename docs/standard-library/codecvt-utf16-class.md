@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdfcf3c6a562f7aab0164e3d63d468ba39ec0023
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9614303e62d3d1ca374eecca8c04cc30a7f94106
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954100"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109798"
 ---
 # <a name="codecvtutf16"></a>codecvt_utf16
 
@@ -34,9 +34,12 @@ class codecvt_utf16 : public std::codecvt<Elem, char, StateType>
 
 ## <a name="parameters"></a>パラメーター
 
-*Elem*ワイド文字要素の型。
-*Maxcode*ロケール ファセットの文字の最大数。
-*モード*ロケール ファセットの構成情報。
+*Elem*<br/>
+ワイド文字要素型。
+*Maxcode*<br/>
+ロケール ファセットの文字の最大数。
+*モード*<br/>
+ロケール ファセットの構成情報。
 
 ## <a name="remarks"></a>Remarks
 
@@ -44,6 +47,6 @@ class codecvt_utf16 : public std::codecvt<Elem, char, StateType>
 
 このバイト ストリームはバイナリ ファイルに書き込む必要があります。テキスト ファイルに書き込むと、破損する場合があります。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 ヘッダー: \<codecvt> 名前空間: std

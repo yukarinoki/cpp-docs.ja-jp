@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6f45f8a445420d85c539de2f5ba485c0a47127b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 264f61ede0fb47e198459593b2eea154846cc7b9
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962557"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108292"
 ---
 # <a name="regexiterator-class"></a>regex_iterator クラス
 
@@ -75,11 +75,14 @@ private:
 
 ### <a name="parameters"></a>パラメーター
 
-*BidIt*サブマッチの反復子の型。
+*BidIt*<br/>
+サブマッチの反復子の型。
 
-*Elem*と一致する要素の型。
+*Elem*<br/>
+一致させる要素の型。
 
-*RXtraits*要素用の特性クラス。
+*RXtraits*<br/>
+要素の特徴 (traits) クラス。
 
 ## <a name="remarks"></a>Remarks
 
@@ -97,7 +100,7 @@ private:
 
 - [swap](../standard-library/regex-functions.md#swap)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<regex>
 
@@ -223,7 +226,8 @@ bool operator!=(const regex_iterator& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*と比較する反復子。
+*right*<br/>
+比較する反復子。
 
 ### <a name="remarks"></a>Remarks
 
@@ -395,7 +399,8 @@ bool operator==(const regex_iterator& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*と比較する反復子。
+*right*<br/>
+比較する反復子。
 
 ### <a name="remarks"></a>Remarks
 
@@ -625,13 +630,17 @@ regex_iterator(BidIt first,
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*と一致するシーケンスの最初します。
+*first*<br/>
+一致させるシーケンスの先頭。
 
-*最後*と一致するシーケンスの末尾。
+*last*<br/>
+一致させるシーケンスの末尾。
 
-*re*正規表現一致。
+*re*<br/>
+照合する正規表現。
 
-*f*一致のフラグ。
+*f*<br/>
+一致のフラグ。
 
 ### <a name="remarks"></a>Remarks
 

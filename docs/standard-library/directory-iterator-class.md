@@ -35,26 +35,26 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_iterator::operator++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b46e4d8fc7b59f8b4919a7e36a85f29f626aa80b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 36cbf9e8d4ebdf62cbbfdc5a37ca1c49d7106a42
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845831"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105214"
 ---
 # <a name="directoryiterator-class"></a>directory_iterator クラス
 
 ディレクトリのファイル名を走査する入力反復子を表します。 反復子 X の場合、式 *X の結果は、ファイル名とそのステータスに関する既知の情報をラップする directory_entry クラスのオブジェクトになります。
 
-このクラスは、走査するディレクトリの名前を表す path 型のオブジェクト (ここでは、説明のために mydir という名前にします) と、ディレクトリ シーケンス内の現在のファイル名を表す directory_entry 型のオブジェクト (myentry という名前にします) を格納します。 既定で構築される型 directory_entry のオブジェクトは、空の mydir のパス名を持ち、end-of-sequence 反復子を表します。
+クラスと呼ばれる、path 型のオブジェクトを格納する`mydir`、シーケンス処理するディレクトリの名前を表す説明のためには、ここで、型 directory_entry のオブジェクトと呼ばれる`myentry`ここでは、現在のファイル名を表しますディレクトリのシーケンス。 Directory_entry 型の既定で構築されるオブジェクトが、空`mydir`パス名をシーケンス末尾の反復子を表します。
 
 たとえば、def と ghi のエントリを持つディレクトリ abc がある場合、次のコードは
 
 `for (directory_iterator next(path("abc")), end; next != end; ++next)     visit(next->path());`
 
-引数 path("abc/def") および path("abc/ghi") を使用して visit を呼び出します。
+呼び出す`visit`引数 path("abc/def") と path("abc/ghi") を使用します。
 
-詳細およびコード例については、「[ファイル システムのナビゲーション (C++)](../standard-library/file-system-navigation.md)」をご覧ください。
+詳細およびコード例については、「[ファイル システムのナビゲーション (C++)](../standard-library/file-system-navigation.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -62,7 +62,40 @@ ms.locfileid: "33845831"
 class directory_iterator;
 ```
 
-## <a name="directoryiteratordirectoryiterator"></a>directory_iterator::directory_iterator
+### <a name="constructors"></a>コンストラクター
+
+|コンストラクター|説明|
+|-|-|
+|[directory_iterator](#directory_iterator)|ディレクトリにファイル名を走査する入力反復子を構築します。|
+
+### <a name="member-functions"></a>メンバー関数
+
+|メンバー関数|説明|
+|-|-|
+|[increment](#increment)|この関数は、ディレクトリ内の次のファイル名に進もうとします。|
+
+### <a name="operators"></a>演算子
+
+|演算子|説明|
+|-|-|
+|[operator!=](#op_neq)|`!(*this == right)` を返します。|
+|[operator=](#op_as)|この既定のメンバー代入演算子は想定どおりに動作します。|
+|[operator==](#op_eq)|返します**true**両方の場合にのみ`*this`と*右*シーケンス末尾の反復子またはその両方がないエンド-の-シーケンスの反復子。|
+|[operator*](#op_star)|`myentry` を返します。|
+|[operator->](#op_cast)|`&**this` を返します。|
+|[operator++](#op_increment)|呼び出し`increment()`、戻ります`*this`を呼び出し、オブジェクトのコピーを作成または`increment()`コピーを返します。|
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** \<experimental/filesystem>
+
+**名前空間:** std::experimental::filesystem
+
+## <a name="directory_iterator"></a> directory_iterator::directory_iterator
+
+1 つ目のコンストラクターは、end-of-sequence 反復子を生成します。 2 番目と 3 番目のコンス トラクター ストア*pval*で`mydir`、開いて読み取ろうと試みます`mydir`ディレクトリとして。 かどうかは成功すると、これら最初のファイル名をディレクトリに格納で`myentry`; シーケンス末尾の反復子を生成します。
+
+既定のコンストラクターは想定どおりの動作をします。
 
 ```cpp
 directory_iterator() noexcept;
@@ -73,73 +106,94 @@ directory_iterator(const directory_iterator&) = default;
 directory_iterator(directory_iterator&&) noexcept = default;
 ```
 
-1 つ目のコンストラクターは、end-of-sequence 反復子を生成します。 2 番目と 3 番目のコンストラクターは、mydir に pval を格納してから、mydir をディレクトリとして開いて読み取ろうとします。 成功した場合は、ディレクトリの最初のファイル名を myentry に格納し、成功しなかった場合は end-of-sequence 反復子を生成します。
+### <a name="parameters"></a>パラメーター
 
-既定のコンストラクターは想定どおりの動作をします。
+*pval*<br/>
+格納されているファイル名のパス。
 
-## <a name="directoryiteratorincrement"></a>directory_iterator::increment
+*ec*<br/>
+状態エラー コード。 
+
+*directory_iterator*<br/>
+格納されているオブジェクト。
+
+## <a name="increment"></a> directory_iterator::increment
+
+この関数は、ディレクトリ内の次のファイル名に進もうとします。 かどうかは成功すると、そのファイル名を格納で`myentry`。 それ以外の場合、シーケンス末尾の反復子が生成されます。
 
 ```cpp
 directory_iterator& increment(error_code& ec) noexcept;
 ```
 
-この関数は、ディレクトリ内の次のファイル名に進もうとします。 成功した場合は、myentry にそのファイル名を格納します。成功しなかった場合は、end-of-sequence 反復子を生成します。
+## <a name="op_neq"></a> directory_iterator::operator! =
 
-## <a name="directoryiteratoroperator"></a>directory_iterator::operator! =
+このメンバー演算子は、 `!(*this == right)`を返します。
 
 ```cpp
 bool operator!=(const directory_iterator& right) const;
 ```
 
-このメンバー演算子は、!(*this == right) を返します。
+### <a name="parameters"></a>パラメーター
 
-## <a name="directoryiteratoroperator"></a>directory_iterator::operator=
+*right*<br/>
+[Directory_iterator](../standard-library/directory-iterator-class.md)と比較される、`directory_iterator`します。
+
+## <a name="op_as"></a> directory_iterator::operator =
+
+この既定のメンバー代入演算子は想定どおりに動作します。
 
 ```cpp
 directory_iterator& operator=(const directory_iterator&) = default;
 directory_iterator& operator=(directory_iterator&&) noexcept = default;
 ```
 
-この既定のメンバー代入演算子は想定どおりに動作します。
+### <a name="parameters"></a>パラメーター
 
-## <a name="directoryiteratoroperator"></a>directory_iterator::operator==
+*right*<br/>
+[Directory_iterator](../standard-library/directory-iterator-class.md)にコピーされる、`directory_iterator`します。
+
+## <a name="op_eq"></a> directory_iterator::operator = =
+
+メンバー演算子を返します**true**両方の場合にのみ`*this`と*右*シーケンス末尾の反復子またはその両方がないエンド-の-シーケンスの反復子。
 
 ```cpp
 bool operator==(const directory_iterator& right) const;
 ```
 
-このメンバー演算子は、*this と right の両方が end-of-sequence 反復子の場合または両方が end-of-sequence 反復子でない場合にのみ、true を返します。
+### <a name="parameters"></a>パラメーター
 
-## <a name="directoryiteratoroperator"></a>directory_iterator::operator*
+*right*<br/>
+[Directory_iterator](../standard-library/directory-iterator-class.md)と比較される、`directory_iterator`します。
+
+## <a name="op_star"></a> directory_iterator::operator *
+
+このメンバー演算子は、 `myentry`を返します。
 
 ```cpp
 const directory_entry& operator*() const;
 ```
 
-このメンバー演算子は、myentry を返します。
+## <a name="op_cast"></a> directory_iterator::operator -> します。
 
-## <a name="directoryiteratoroperator-"></a>directory_iterator::operator->
+このメンバー関数は、`&**this` を返します。
 
 ```cpp
 const directory_entry * operator->() const;
 ```
 
-このメンバー関数は、&**this を返します。
+## <a name="op_increment"></a> directory_iterator::operator++
 
-## <a name="directoryiteratoroperator"></a>directory_iterator::operator++
+最初のメンバー関数の呼び出し`increment()`、戻ります`*this`します。 2 番目のメンバー関数の呼び出し、オブジェクトのコピー`increment()`コピーを返します。
 
 ```cpp
 directory_iterator& operator++();
 directory_iterator& operator++(int);
 ```
 
-1 つ目のメンバー関数は、increment() を呼び出してから、*this を返します。 2 つ目のメンバー関数は、オブジェクトのコピーを作成して、increment() を呼び出してから、そのコピーを返します。
+### <a name="parameters"></a>パラメーター
 
-## <a name="requirements"></a>要件
-
-**ヘッダー:** \<experimental/filesystem>
-
-**名前空間:** std::experimental::filesystem
+*int*<br/>
+インクリメントの数。
 
 ## <a name="see-also"></a>関連項目
 

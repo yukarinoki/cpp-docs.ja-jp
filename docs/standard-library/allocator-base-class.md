@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f27cb2bc1a711b77006fa496cc080f546e539ab
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f55a332032b081cba45d2235f263adafde7e10f8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962460"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101783"
 ---
 # <a name="allocatorbase-class"></a>allocator_base クラス
 
@@ -104,7 +104,7 @@ class allocator_base
 |[destroy](#destroy)|オブジェクトが格納されたメモリの割り当てを解除せずに、オブジェクトのデストラクターを呼び出します。|
 |[max_size](#max_size)|空きメモリがすべて使用される前にクラス アロケーター オブジェクトによって割り当てることのできる、*Type* 型の要素の数を返します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<allocators>
 
@@ -163,7 +163,8 @@ const_pointer address(const_reference val);
 
 ### <a name="parameters"></a>パラメーター
 
-*val*アドレスが検索対象のオブジェクトの const または nonconst 値。
+*val*<br/>
+アドレスが検索対象となっているオブジェクトの const 値または nonconst 値。
 
 ### <a name="return-value"></a>戻り値
 

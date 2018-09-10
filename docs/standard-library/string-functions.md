@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::to_wstring [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6534d93b4f04826188fa13c942efd080e152aebe
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a80749e6eaffe02d748167f462580782a2755f89
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954904"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106744"
 ---
 # <a name="ltstringgt-functions"></a>&lt;string&gt; 関数
 
@@ -85,11 +85,14 @@ basic_istream<Allocator, Traits>& getline(
 
 ### <a name="parameters"></a>パラメーター
 
-*is*文字列の抽出元の入力ストリーム。
+*is*<br/>
+文字列の抽出元となる入力ストリーム。
 
-*str*先は、文字のストリームから読み取った入力文字列。
+*str*<br/>
+入力ストリームから抽出した文字の読み込み先となる文字列。
 
-*delim*行の区切り記号。
+*delim*<br/>
+行の区切り記号。
 
 ### <a name="return-value"></a>戻り値
 
@@ -426,9 +429,11 @@ void swap(basic_string<CharType, Traits, Allocator>& left, basic_string<CharType
 
 ### <a name="parameters"></a>パラメーター
 
-*左*別の文字列を交換する要素が 1 つの文字列。
+*left*<br/>
+もう一方の文字列と要素を交換する 1 つの文字列。
 
-*適切な*要素が最初の文字列を交換する他の文字列。
+*right*<br/>
+最初の文字列と要素を交換するもう一方の文字列。
 
 ### <a name="remarks"></a>Remarks
 

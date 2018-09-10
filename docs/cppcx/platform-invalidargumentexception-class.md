@@ -16,33 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea9a2d1e2e956ae83498a5fc99878c5a4ef7bb3a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2ccd6a2ac0b47db7d808f3f90a228ecf497e95be
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761382"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101861"
 ---
 # <a name="platforminvalidargumentexception-class"></a>Platform::InvalidArgumentException クラス
-メソッドに渡された引数のいずれかが無効な場合にスローされます。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-public ref class InvalidArgumentException : COMException,    IException,    IPrintable,    IEquatable  
-```  
-  
-### <a name="remarks"></a>Remarks  
- 詳細については、 [COMException](../cppcx/platform-comexception-class.md) クラスを参照してください。  
-  
-### <a name="requirements"></a>要件  
- **クライアントがサポートされている最小:** Windows 8  
-  
- **サポートされているサーバーの最小値:** Windows Server 2012  
-  
- **名前空間:** Platform  
-  
- **メタデータ:** platform.winmd  
-  
-## <a name="see-also"></a>関連項目  
- [Platform::COMException クラス](../cppcx/platform-comexception-class.md)
+
+メソッドに渡された引数のいずれかが無効な場合にスローされます。
+
+## <a name="syntax"></a>構文
+
+```cpp
+public ref class InvalidArgumentException : COMException,    IException,    IPrintable,    IEquatable
+```
+
+### <a name="remarks"></a>Remarks
+
+詳細については、 [COMException](../cppcx/platform-comexception-class.md) クラスを参照してください。
+
+### <a name="requirements"></a>要件
+
+**クライアントがサポートされている最小:** Windows 8
+
+**サポートされているサーバーの最小値:** Windows Server 2012
+
+**名前空間:** Platform
+
+**メタデータ:** platform.winmd
+
+## <a name="see-also"></a>関連項目
+
+[Platform::COMException クラス](../cppcx/platform-comexception-class.md)

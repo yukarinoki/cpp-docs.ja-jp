@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80cb3dd5d60665fbfb510fb2fddf94f17ef9f171
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 7fc38fe11fa267fe4f14d149d883da4ad5ec02e0
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963795"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100755"
 ---
 # <a name="locale-class"></a>locale クラス
 
@@ -189,7 +189,7 @@ cout.imbue(loc);
 |[facet](#facet_class)|すべてのロケールのファセットの基底クラスとして機能するクラス。|
 |[ID](#id_class)|このメンバー クラスは、ロケール内でファセットを検索するためのインデックスとして使用される一意のファセット ID を提供します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<locale>
 
@@ -301,7 +301,8 @@ locale combine(const locale& Loc) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*Loc*ターゲット ロケールに挿入されるファセットを含むロケール。
+*Loc*<br/>
+ターゲット ロケールに挿入されるファセットを含むロケール。
 
 ### <a name="return-value"></a>戻り値
 
@@ -369,7 +370,8 @@ static locale global(const locale& Loc);
 
 ### <a name="parameters"></a>パラメーター
 
-*Loc*プログラムによって既定のロケールとして使用するロケール。
+*Loc*<br/>
+プログラムによって既定のロケールとして使用されるロケール。
 
 ### <a name="return-value"></a>戻り値
 
@@ -436,15 +438,20 @@ locale(const locale& Loc, const Facet* Fac);
 
 ### <a name="parameters"></a>パラメーター
 
-*Locname*ロケールの名前。
+*Locname*<br/>
+ロケールの名前。
 
-*Loc*新しいロケールの構築にコピーされるロケール。
+*Loc*<br/>
+新しいロケールを構築する際にコピーされるロケール。
 
-*その他の*カテゴリを選択するロケール。
+*その他*<br/>
+カテゴリの選択元となるロケール。
 
-*Cat*構築されるロケールを代わりに使用するカテゴリ。
+*Cat*<br/>
+構築されるロケール内での置換後のカテゴリ。
 
-*Fac*構築されるロケールを代わりに使用するファセット。
+*Fac*<br/>
+構築されるロケール内での置換後のファセット。
 
 ### <a name="remarks"></a>Remarks
 
@@ -555,7 +562,8 @@ bool operator!=(const locale& right) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*不等性をテストするロケールのいずれか。
+*right*<br/>
+不等性をテストする一方のロケール。
 
 ### <a name="return-value"></a>戻り値
 
@@ -600,9 +608,9 @@ int main( )
 
 ```Output
 locales loc1 (German_Germany.1252) and
- loc2 (German_Germany.1252) are equal.
+loc2 (German_Germany.1252) are equal.
 locales loc1 (German_Germany.1252) and
- loc3 (English_United States.1252) are not equal.
+loc3 (English_United States.1252) are not equal.
 ```
 
 ## <a name="op_call"></a>  locale::operator()
@@ -618,9 +626,11 @@ bool operator()(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*左側の文字列。
+*left*<br/>
+左側の文字列。
 
-*適切な*適切な文字列。
+*right*<br/>
+右側の文字列。
 
 ### <a name="return-value"></a>戻り値
 
@@ -685,7 +695,8 @@ bool operator==(const locale& right) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*適切な*等しいかどうかをテストするロケールのいずれか。
+*right*<br/>
+等しいかどうかをテストする一方のロケール。
 
 ### <a name="return-value"></a>戻り値
 
@@ -734,9 +745,9 @@ int main( )
 
 ```Output
 locales loc1 (German_Germany.1252)
- and loc2 (German_Germany.1252) are equal.
+and loc2 (German_Germany.1252) are equal.
 locales loc1 (German_Germany.1252)
- and loc3 (English_United States.1252) are not equal.
+and loc3 (English_United States.1252) are not equal.
 ```
 
 ## <a name="see-also"></a>関連項目

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58599777f3e680b7ea124d9e9dfa427fd55b4051
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0a826d258cf9b88294a2d870cf802763a588520e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956935"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105732"
 ---
 # <a name="negate-struct"></a>negate 構造体
 
@@ -44,14 +44,16 @@ struct negate<void>
   template <class Type>
   auto operator()(Type&& Left) const`
     -> decltype(-std::forward<Type>(Left));
- };
+};
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*型*をサポートする任意の型、`operator-`指定または推論された型のオペランドを受け取る。
+*Type*<br/>
+指定または推論された型のオペランドを受け取る `operator-` をサポートする任意の型。
 
-*左*符号が反転されるオペランド。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*型*します。
+*左*<br/>
+符号を反転されるオペランド。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*型*します。
 
 ## <a name="return-value"></a>戻り値
 
@@ -99,7 +101,7 @@ The negated elements of the vector = ( 10 5 0 -5 -10 -15 -20 -25 )
 *\
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<functional>
 

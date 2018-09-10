@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 5882a2fc31d5c9369429cdc39fb86a1c08e0c828
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 673289f5ac8b739dfe7c1a4de446a37d85763452
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208833"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108410"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; 関数
 
@@ -55,9 +55,11 @@ T7 get_money(Money& _Amount, bool _Intl);
 
 ### <a name="parameters"></a>パラメーター
 
-*(_A)* 抽出した通貨値。
+*(_A)*<br/>
+抽出した通貨値。
 
-*_Intl*場合**true**、国際対応形式を使用します。 既定値は **false** です。
+*_Intl*<br/>
+場合**true**、国際対応形式を使用します。 既定値は **false** です。
 
 ### <a name="remarks"></a>Remarks
 
@@ -76,9 +78,11 @@ T10 put_time(struct tm *_Tptr, const Elem *_Fmt);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Tptr*時間構造体の形式の時刻。
+*_Tptr*<br/>
+時間構造体の形式の時刻。
 
-*_Fmt*目的の形式を使用して、時刻の値を取得します。
+*_Fmt*<br/>
+時刻値を取得するために使用する目的の形式。
 
 ### <a name="remarks"></a>Remarks
 
@@ -95,9 +99,11 @@ T8 put_money(const Money& _Amount, bool _Intl);
 
 ### <a name="parameters"></a>パラメーター
 
-*(_A)* ストリームに挿入する金額。
+*(_A)*<br/>
+ストリームに挿入する金額。
 
-*_Intl*設定**true**マニピュレーターが国際化の形式を使用する場合**false**が不要な場合。
+*_Intl*<br/>
+設定**true**マニピュレーターが国際化の形式を使用する場合**false**が不要な場合。
 
 ### <a name="return-value"></a>戻り値
 
@@ -120,9 +126,11 @@ T10 put_time(struct tm* _Tptr, const Elem* _Fmt);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Tptr*時間構造体で提供される、ストリームに書き込む時刻値。
+*_Tptr*<br/>
+時間構造体で提供される、ストリームに書き込む時刻値。
 
-*_Fmt*時間値の書き込みに必要な形式です。
+*_Fmt*<br/>
+時刻値を書き込むための目的の形式。
 
 ### <a name="remarks"></a>Remarks
 
@@ -141,11 +149,14 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 
 ### <a name="parameters"></a>パラメーター
 
-*str* std::string、char\*、文字列リテラルまたは未加工の文字列リテラル、またはこれらのさまざまなバージョン (例: std::wstring, wchar_t\*)。
+*str*<br/>
+Std::string、char\*、文字列リテラルまたは未加工の文字列リテラル、またはこれらのさまざまなバージョン (例: std::wstring, wchar_t\*)。
 
-*区切り記号*A ユーザー指定の文字またはワイド文字、先頭と文字列の末尾の区切り記号として使用します。
+*区切り記号*<br/>
+文字列の先頭と末尾の区切り記号として使用するユーザー指定の文字またはワイド文字。
 
-*エスケープ*A ユーザー指定の文字またはワイド文字、文字列内のエスケープ シーケンスのエスケープ文字として使用します。
+*エスケープ*<br/>
+文字列内のエスケープ シーケンスのエスケープ文字として使用する、ユーザー指定の文字またはワイド文字。
 
 ### <a name="remarks"></a>Remarks
 
@@ -303,7 +314,8 @@ T1 resetiosflags(ios_base::fmtflags Mask);
 
 ### <a name="parameters"></a>パラメーター
 
-*マスク*フラグをオフにします。
+*マスク*<br/>
+オフにするフラグ。
 
 ### <a name="return-value"></a>戻り値
 
@@ -323,7 +335,8 @@ T3 setbase(int _Base);
 
 ### <a name="parameters"></a>パラメーター
 
-*(_B)* 基数。
+*(_B)*<br/>
+基数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -352,7 +365,8 @@ T4 setfill(Elem Ch);
 
 ### <a name="parameters"></a>パラメーター
 
-*Ch*右揃えの表示でスペースを埋めるために使用する文字。
+*ch*<br/>
+右揃えの表示でスペースを埋めるために使用する文字。
 
 ### <a name="return-value"></a>戻り値
 
@@ -372,7 +386,8 @@ T2 setiosflags(ios_base::fmtflags Mask);
 
 ### <a name="parameters"></a>パラメーター
 
-*マスク*設定するフラグ。
+*マスク*<br/>
+設定するフラグ。
 
 ### <a name="return-value"></a>戻り値
 
@@ -392,7 +407,8 @@ T5 setprecision(streamsize Prec);
 
 ### <a name="parameters"></a>パラメーター
 
-*Prec*浮動小数点値の有効桁数。
+*prec*<br/>
+浮動小数点値の有効桁数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -412,7 +428,8 @@ T6 setw(streamsize Wide);
 
 ### <a name="parameters"></a>パラメーター
 
-*ワイド*表示フィールドの幅。
+*ワイド*<br/>
+表示フィールドの幅です。
 
 ### <a name="return-value"></a>戻り値
 

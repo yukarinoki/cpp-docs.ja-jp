@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b14733ea906fa47e7339c23efb8942763e928828
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 139526c689a54929d9e77b9c23c6ea34f2cc8449
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956310"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105810"
 ---
 # <a name="removecv-class"></a>remove_cv クラス
 
@@ -40,7 +40,8 @@ using remove_cv_t = typename remove_cv<T>::type;
 
 ### <a name="parameters"></a>パラメーター
 
-*T*を変更する型。
+*T*<br/>
+変更する型。
 
 ## <a name="remarks"></a>Remarks
 
@@ -68,7 +69,7 @@ int main()
 remove_cv_t<const volatile int> == int
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<type_traits>
 

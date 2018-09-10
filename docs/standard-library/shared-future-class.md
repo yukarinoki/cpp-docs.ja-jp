@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::shared_future [C++], wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f27162b1dfc96b4797184b3fefc1ad8ecc464f55
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c3f59bcb792d17f031b7a8ce7363158630d87506
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954995"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100781"
 ---
 # <a name="sharedfuture-class"></a>shared_future クラス
 
@@ -76,7 +76,7 @@ class shared_future;
 |----------|-----------------|
 |[shared_future::operator=](#op_eq)|新しい関連付けられた非同期状態を割り当てます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<将来 >
 
@@ -115,7 +115,8 @@ shared_future& operator=(const shared_future& Right);
 
 ### <a name="parameters"></a>パラメーター
 
-*右*A`shared_future`オブジェクト。
+*右*<br/>
+`shared_future` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -140,7 +141,8 @@ shared_future(const shared_future& Right);
 
 ### <a name="parameters"></a>パラメーター
 
-*右*A[将来](../standard-library/future-class.md)または`shared_future`オブジェクト。
+*右*<br/>
+[future](../standard-library/future-class.md) または `shared_future` オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -186,7 +188,8 @@ future_status wait_for(
 
 ### <a name="parameters"></a>パラメーター
 
-*Rel_time* A [chrono::duration](../standard-library/duration-class.md)最大時間間隔を指定するオブジェクトをそのスレッドはブロックします。
+*Rel_time*<br/>
+スレッドがブロックする最大の時間間隔を指定する [chrono::duration](../standard-library/duration-class.md) オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -208,7 +211,8 @@ future_status wait_until(
 
 ### <a name="parameters"></a>パラメーター
 
-*Abs_time* A [chrono::time_point](../standard-library/time-point-class.md)その後、スレッド ブロックを解除できる時間を指定するオブジェクト。
+*Abs_time*<br/>
+スレッドがブロックを解除できる時間を指定する [chrono::time_point](../standard-library/time-point-class.md) オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 

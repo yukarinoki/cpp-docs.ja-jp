@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22f96b81836a8c1a9daa971ff8fb1961edb60cfb
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 87eb15654be3f709da92d561d048b3a7961c985f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209005"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099617"
 ---
 # <a name="backinsertiterator-class"></a>back_insert_iterator クラス
 
@@ -40,7 +40,8 @@ class back_insert_iterator;
 
 ### <a name="parameters"></a>パラメーター
 
-*コンテナー*によって挿入される要素の背面にコンテナーの型は、`back_insert_iterator`します。
+*コンテナー*<br/>
+要素が `back_insert_iterator` によって後方に挿入されるコンテナーの型。
 
 ## <a name="remarks"></a>Remarks
 
@@ -67,7 +68,7 @@ class back_insert_iterator;
 |[operator++](#op_add_add)|値を格納できる次の位置に `back_insert_iterator` をインクリメントします。|
 |[operator=](#op_eq)|出力反復子の式を実装するために使用される代入演算子\* `i`  =  `x`後方挿入の。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー**: \<iterator>
 
@@ -83,7 +84,8 @@ explicit back_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Cont*コンテナーを`back_insert_iterator`に要素を挿入します。
+*_Cont*<br/>
+`back_insert_iterator` が要素を挿入するためのコンテナー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -121,9 +123,9 @@ int main( )
 
    // Alternatively, insertions can be done with template function
    back_insert_iterator<vector<int> > backiter ( vec );
- *backiter = 600;
+*backiter = 600;
    backiter++;
- *backiter = 700;
+*backiter = 700;
 
    cout << "After the insertions, the vector vec is: ( ";
    for ( vIter = vec.begin ( ) ; vIter != vec.end ( ); vIter++)
@@ -234,9 +236,9 @@ int main( )
    cout << ")." << endl;
 
    back_insert_iterator<vector<int> > backiter ( vec );
- *backiter = 10;
+*backiter = 10;
    backiter++;      // Increment to the next element
- *backiter = 20;
+*backiter = 20;
    backiter++;
 
    cout << "After the insertions, the vector vec becomes: ( ";
@@ -295,9 +297,9 @@ int main( )
    cout << ")." << endl;
 
    back_insert_iterator<vector<int> > backiter ( vec );
- *backiter = 30;
+*backiter = 30;
    backiter++;      // Increment to the next element
- *backiter = 40;
+*backiter = 40;
    backiter++;
 
    cout << "After the insertions, the vector vec becomes: ( ";
@@ -323,7 +325,8 @@ back_insert_iterator<Container>& operator=(typename Container::value_type&& val)
 
 ### <a name="parameters"></a>パラメーター
 
-*val*コンテナーに挿入する値。
+*val*<br/>
+コンテナーに挿入される値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -366,9 +369,9 @@ int main( )
    cout << ")." << endl;
 
    back_insert_iterator<vector<int> > backiter ( vec );
- *backiter = 10;
+*backiter = 10;
    backiter++;      // Increment to the next element
- *backiter = 20;
+*backiter = 20;
    backiter++;
 
    cout << "After the insertions, the vector vec becomes: ( ";

@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16ec6be15635ebfc085615015b1221231645970d
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 5063eae507ee6c83cbed2ae7fc92679098b91f36
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894795"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104620"
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (関数のエクスポート)
 
@@ -36,26 +36,35 @@ ms.locfileid: "43894795"
 
 ## <a name="remarks"></a>Remarks
 
-他のプログラムは、関数を呼び出すことができますができるように、/EXPORT オプションと、関数、プログラムからにエクスポートできます。 データをエクスポートすることもできます。 エクスポートは、通常は DLL で定義されます。
+**/Export**オプションが他のプログラムを関数を呼び出すか、データを使用するために、プログラムからエクスポートする関数またはデータ項目を指定します。 エクスポートは、通常は DLL で定義されます。
 
-*Entryname*関数またはデータ項目の名前は、呼び出し元プログラムで使用されます。 `ordinal` 範囲 1 ~ 65,535 です。 エクスポート テーブルにインデックスを指定します。指定しない場合`ordinal`、いずれかのリンクが割り当てられます。 **NONAME**キーワード関数をエクスポート序数としてのみせず、 *entryname*します。
+*Entryname*関数またはデータ項目の名前は、呼び出し元プログラムで使用されます。 *序数に基づく*を指定しない場合は、1 ~ 65,535; の範囲内のエクスポート テーブルにインデックスを指定します*序数*、いずれかのリンクが割り当てられます。 **NONAME**キーワード関数をエクスポート序数としてのみせず、 *entryname*します。
 
 **データ**キーワードは、エクスポートされた項目がデータ項目を指定します。 使用して、クライアント プログラム内のデータ項目を宣言する必要があります**extern _declspec**します。
 
-使用の推奨される順序で、定義をエクスポートするための 3 つの方法はあります。
+使用の推奨される順序で、定義をエクスポートするための 4 つの方法はあります。
 
 1. [方式](../../cpp/dllexport-dllimport.md)でソース コード
 
-2. [エクスポート](../../build/reference/exports.md).def ファイル内のステートメント
+1. [エクスポート](../../build/reference/exports.md).def ファイル内のステートメント
 
-3. LINK コマンドで、/EXPORT 仕様
+1. LINK コマンドで、/EXPORT 仕様
 
-3 つのメソッドは、同じプログラム内で使用できます。 リンクは、エクスポートを含むプログラムをビルドも作成、インポート ライブラリのビルドで .exp ファイルを使用しない場合。
+1. A[コメント](../../preprocessor/comment-c-cpp.md)形式のソース コードにディレクティブ`#pragma comment(linker, "/export: definition ")`します。
+
+これらすべてのメソッドは、同じプログラム内で使用できます。 リンクは、エクスポートを含むプログラムをビルドも作成、インポート ライブラリのビルドで .exp ファイルを使用しない場合。
 
 リンクは、装飾された識別子の形式。 コンパイラは、.obj ファイルの作成時に識別子を修飾します。 場合*entryname*その非装飾にはリンカーに指定された形式 (ソース コードに表示されます)、リンクは、名前を照合しようとしています。 一意の一致が見つからない場合、リンクは、エラー メッセージを発行します。 使用して、 [DUMPBIN](../../build/reference/dumpbin-reference.md)を取得するためのツール、[装飾名](../../build/reference/decorated-names.md)リンカーに指定する必要がある場合は、識別子の形式。
 
 > [!NOTE]
 > 宣言されている C 識別子の装飾形式を指定しない`__cdecl`または`__stdcall`します。
+
+非装飾関数名をエクスポートし、ビルド構成に応じてさまざまなエクスポートが (たとえば、32 ビットまたは 64 ビットのビルド) である必要がある場合は、各構成の別の DEF ファイルを使用できます。 (プリプロセッサの条件付きディレクティブは使用できません DEF ファイルにします。)代わりに、使用することができます、`#pragma comment`関数宣言の前にディレクティブここで、`PlainFuncName`非装飾の名前と`_PlainFuncName@4`関数の装飾の名前を指定します。
+
+```cpp
+#pragma comment(linker, "/export:PlainFuncName=_PlainFuncName@4")
+BOOL CALLBACK PlainFuncName( Things * lpParams)
+```
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 

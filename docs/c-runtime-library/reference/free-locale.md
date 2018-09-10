@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b74725ddd7884bcc714e1048b28c53f201ebe4e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce945499505b7efcaaf010585f27fbfaf42a06b8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397133"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103320"
 ---
 # <a name="freelocale"></a>_free_locale
 
@@ -57,13 +57,14 @@ void _free_locale(
 
 ### <a name="parameters"></a>パラメーター
 
-*ロケール*ロケール オブジェクトを解放します。
+*locale*<br/>
+解放するロケール オブジェクト。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Free_locale**への呼び出しから取得したロケール オブジェクトを解放する関数が使用される **_get_current_locale**または **_create_locale**です。
+**_Free_locale**への呼び出しから取得したロケール オブジェクトを解放する関数が使用される **_get_current_locale**または **_create_locale**します。
 
-この関数の以前の名前 **_ _free_locale** (2 つのアンダー) は推奨されていません。
+この関数は、の以前の名前 **_ _free_locale** (先頭にアンダー スコア 2 つ) では推奨されていません。
 
 ## <a name="requirements"></a>要件
 

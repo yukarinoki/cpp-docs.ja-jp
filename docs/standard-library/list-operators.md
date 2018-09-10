@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (list)
 - std::operator&lt;= (list)
 - std::operator== (list)
-ms.openlocfilehash: ba77722abb28f246d305b44fb78379b2297ccc14
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 809dae9fb6bd255d36f9d7417bf6ab606b1309be
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965718"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102734"
 ---
 # <a name="ltlistgt-operators"></a>&lt;list&gt; 演算子
 
@@ -46,9 +46,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*型のオブジェクト`list`します。
+*left*<br/>
+`list` 型のオブジェクト。
 
-*適切な*型のオブジェクト`list`します。
+*right*<br/>
+`list` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -95,9 +97,11 @@ bool operator<(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*型のオブジェクト`list`します。
+*left*<br/>
+`list` 型のオブジェクト。
 
-*適切な*型のオブジェクト`list`します。
+*right*<br/>
+`list` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -148,9 +152,11 @@ bool operator<=(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*型のオブジェクト`list`します。
+*left*<br/>
+`list` 型のオブジェクト。
 
-*適切な*型のオブジェクト`list`します。
+*right*<br/>
+`list` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -201,9 +207,11 @@ bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*型のオブジェクト`list`します。
+*left*<br/>
+`list` 型のオブジェクト。
 
-*適切な*型のオブジェクト`list`します。
+*right*<br/>
+`list` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -250,9 +258,11 @@ bool operator>(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*型のオブジェクト`list`します。
+*left*<br/>
+`list` 型のオブジェクト。
 
-*適切な*型のオブジェクト`list`します。
+*right*<br/>
+`list` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -303,9 +313,11 @@ bool operator>=(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*型のオブジェクト`list`します。
+*left*<br/>
+`list` 型のオブジェクト。
 
-*適切な*型のオブジェクト`list`します。
+*right*<br/>
+`list` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
