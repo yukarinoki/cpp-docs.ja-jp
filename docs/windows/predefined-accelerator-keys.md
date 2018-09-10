@@ -1,5 +1,5 @@
 ---
-title: 定義済みのアクセラレータ キー |Microsoft Docs
+title: 定義済みのアクセラレータ キー (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,21 +12,21 @@ dev_langs:
 helpviewer_keywords:
 - accelerator keys
 - keyboard shortcuts
-- keyboard shortcuts, predefined
+- keyboard shortcuts [C++], predefined
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3f5ed6d95b48a4ecbe2fa23a377d8aac7a73feb9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5e6498e0b0722b5de28b5569c5f3565b0f033ea9
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603794"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315679"
 ---
-# <a name="predefined-accelerator-keys"></a>定義済みのアクセラレータ キー
+# <a name="predefined-accelerator-keys-c"></a>定義済みのアクセラレータ キー (C++)
 
 Windows アプリケーション プロジェクトの一部として使用できるいくつかの定義済みのアクセラレータ キーがあります。 これらの仮想キーの一部は、Windows 環境用です。 その他の仮想キーは、ブラウザーや Unicode アプリケーションで使用できます。 どのアクセラレータでもこれらのキーを使用できます。
 

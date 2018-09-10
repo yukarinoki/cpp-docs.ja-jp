@@ -23,16 +23,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6c89e2550c01db695aa513a98d6d1cc8f116ca0
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: dea292ad348a155c6acdf64352dae47e858140b0
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42572648"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314106"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>左 shift キーおよび右シフト演算子 (&gt; &gt;と&lt; &lt;)
 
-ビット処理シフト演算子は、右シフト演算子 (>>) のビットを移動する*シフト式*に右と左シフト演算子 (<<) のビットを移動する*をシフト式*左にします。 <sup>1</sup>
+ビット処理シフト演算子は、右シフト演算子 (**&gt;&gt;**) のビットを移動する*シフト式*に右と左シフト演算子 (**&lt; &lt;**)、移動のビット*シフト式*左にします。 <sup>1</sup>
 
 ## <a name="syntax"></a>構文
 

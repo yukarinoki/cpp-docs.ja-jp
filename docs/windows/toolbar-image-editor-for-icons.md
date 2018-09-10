@@ -1,5 +1,5 @@
 ---
-title: ツールバー (アイコン用イメージ エディター) |Microsoft Docs
+title: ツールバー (アイコン用イメージ エディターを C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,14 +22,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2fbad27020b18bafe2f9fc60ee08282d9101ea5a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9a454d067881a15f6d125430c304f4b5af71b5d1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604137"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314405"
 ---
-# <a name="toolbar-image-editor-for-icons"></a>ツール バー (アイコン用イメージ エディター)
+# <a name="toolbar-c-image-editor-for-icons"></a>ツールバー (アイコン用イメージ エディターを C++)
 
 **イメージ エディター**ツールバーには、描画、描画、テキストを入力する、消去、およびビューを操作するためのツールが含まれています。 オプション セレクターで、各ツールを使用するためのオプションを選択することができますも含まれています。 たとえば、さまざまなブラシの幅、拡大率、および線のスタイルから選択することができます。
 

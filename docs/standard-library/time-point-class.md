@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::chrono [C++], time_point
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99209063e8856ffe9ea26ffaaf0917e1f6cd487b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 72ce06a3f722bca0147d220fb8602ab9e30f8751
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954261"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319020"
 ---
 # <a name="timepoint-class"></a>time_point クラス
 
@@ -71,7 +71,7 @@ class time_point;
 |[time_point::operator+=](#op_add_eq)|指定した値を格納された期間に加算します。|
 |[time_point::operator-=](#operator-_eq)|指定した値を格納された期間から減算します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<chrono >
 
@@ -160,7 +160,7 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 
 最初のコンストラクターは、格納されている `duration` 値が [duration::zero](../standard-library/duration-class.md#zero) と等しいオブジェクトを構築します。
 
-2 番目のコンス トラクターは、格納された期間の値と等しいオブジェクトを構築します。*期間*します。 `is_convertible<Duration2, duration>` が *true を保持*しない限り、2 番目のコンストラクターはオーバーロードの解決に関与しません。 詳細については、「[<type_traits>](../standard-library/type-traits.md)」を参照してください。
+2 番目のコンス トラクターは、格納された期間の値と等しいオブジェクトを構築します。*期間*します。 しない限り、`is_convertible<Duration2, duration>`は true を保持、2 番目のコンス トラクターはオーバー ロードの解決に関与しません。 詳細については、「[<type_traits>](../standard-library/type-traits.md)」を参照してください。
 
 3 番目のコンストラクターは、`duration` を使用してその `Tp.time_since_epoch()` 値を初期化します。
 

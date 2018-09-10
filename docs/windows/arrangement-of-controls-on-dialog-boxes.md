@@ -1,5 +1,5 @@
 ---
-title: ダイアログ ボックスのコントロールの配置 |Microsoft Docs
+title: ダイアログ ボックス (C++) のコントロールの配置 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,22 +9,22 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - controls [C++], positioning
-- dialog box controls, placement
-- Dialog editor, arranging controls
+- dialog box controls [C++], placement
+- Dialog Editor [C++], arranging controls
 ms.assetid: 832491cf-98af-42e5-a854-2cb135fd45c6
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d47e3602e151f64fab0a543882c759225410f6dc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 46bc2d627c9efbb49227e17c809d188aa3a8b5fc
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583568"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315237"
 ---
-# <a name="arrangement-of-controls-on-dialog-boxes"></a>ダイアログ ボックスのコントロールの配置
+# <a name="arrangement-of-controls-on-dialog-box-ces"></a>ダイアログ コントロールの配置 (C++) es のボックス
 
 **ダイアログ**エディターには、整列やコントロールを自動的にサイズ調整されるレイアウト ツールが用意されています。 ほとんどのタスクを使用することができます、[ダイアログ エディター ツールバー](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)します。 すべて**ダイアログ エディター**ツールバーのコマンドはまた、**形式**メニューで、ほとんどが[ショートカット キー](../windows/accelerator-keys-for-the-dialog-editor.md)します。
 

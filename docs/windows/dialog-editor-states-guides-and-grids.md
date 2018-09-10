@@ -1,5 +1,5 @@
 ---
-title: ダイアログ エディターの状態 (ガイドとグリッド) |Microsoft Docs
+title: ダイアログ エディターの状態 (ガイドとグリッド) (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -8,21 +8,21 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- Dialog editor, guides and margins
+- Dialog Editor [C++], guides and margins
 ms.assetid: dbacf9ef-e8b0-4125-a7ce-84911c482e98
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6386531e12bdeb75e51976ad2ed9798200ea2c6d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 22e27a5dddacf87a9768d7f6b8d27765d902b5ff
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602886"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318370"
 ---
-# <a name="dialog-editor-states-guides-and-grids"></a>ダイアログ エディターの状態 (ガイドとグリッド)
+# <a name="dialog-editor-states-guides-and-grids-c"></a>ダイアログ エディターの状態 (ガイドとグリッド) (C++) 
 
 ダイアログ ボックスのコントロールを配置することができます、**ダイアログ**エディターで次の 3 つの異なる状態のいずれか。
 

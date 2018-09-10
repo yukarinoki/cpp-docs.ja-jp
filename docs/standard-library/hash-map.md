@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: caae1a52c36c5d21e55e90a821b280f2face7ede
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0ef090aec97308a6d423c18daab5ee540efdd8a1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959775"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316323"
 ---
 # <a name="lthashmapgt"></a>&lt;hash_map&gt;
 
@@ -32,7 +32,7 @@ ms.locfileid: "38959775"
 
 ## <a name="syntax"></a>構文
 
-> #<a name="include-hashmap"></a>< hash_map > を含める
+> #<a name="include-hashmap"></a>含める\<hash_map >
 
 ### <a name="operators"></a>演算子
 
@@ -56,7 +56,7 @@ ms.locfileid: "38959775"
 |[hash_map クラス](hash-map-class.md)|一意の並べ替えキーとそれに関連付けられている値のペアを要素として持つコレクションのデータを格納したり、迅速に取得したりするために使用されます。|
 |[hash_multimap クラス](hash-multimap-class.md)|必ずしも一意ではない並べ替えキーとそれに関連付けられている値のペアを要素として持つコレクションのデータを格納したり、迅速に取得したりするために使用されます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<hash_map>
 
@@ -64,6 +64,6 @@ ms.locfileid: "38959775"
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](cpp-standard-library-header-files.md)
-[C++ 標準ライブラリ内のスレッド セーフ](thread-safety-in-the-cpp-standard-library.md)
+[ヘッダー ファイル リファレンス](cpp-standard-library-header-files.md)<br/>
+[C++ 標準ライブラリ内のスレッド セーフ](thread-safety-in-the-cpp-standard-library.md)<br/>
 [C++ 標準ライブラリ リファレンス](cpp-standard-library-reference.md)

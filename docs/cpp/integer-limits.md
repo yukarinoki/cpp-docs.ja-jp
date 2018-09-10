@@ -17,18 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b9a516ef366952f9d55e16891dfcb7bb81fac7e
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 6f49e224520751e08ba6aa7e37932314e11ef8a5
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406020"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315188"
 ---
 # <a name="integer-limits"></a>整数の制限
 
 **Microsoft 固有の仕様**
 
-次の表に、整数型の制限を示します。 これらの制限も、標準ヘッダー ファイルの < limits.h > で定義されます。
+次の表に、整数型の制限を示します。 これらの制限が、標準ヘッダー ファイルで定義されても\<limits.h >。
 
 ## <a name="limits-on-integer-constants"></a>整数定数の制限
 
@@ -59,4 +59,5 @@ ms.locfileid: "39406020"
 **Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
- [浮動小数点の制限](../cpp/floating-limits.md)  
+
+[浮動小数点の制限](../cpp/floating-limits.md)

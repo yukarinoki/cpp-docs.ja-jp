@@ -1,5 +1,5 @@
 ---
-title: カスタム カラー セレクター ダイアログ ボックス (アイコン用イメージ エディター) |Microsoft Docs
+title: カスタム カラー セレクター ダイアログ ボックス (C++) (アイコン用イメージ エディター) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,22 +10,22 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Custom Color Selector dialog box
-- colors, image
+- Custom Color Selector dialog box [C++]
+- colors [C++], image
 ms.assetid: 534d0c2a-b3f6-4f09-9346-3bbf85bb3dd7
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 254734bec6649c7181e67d4d2330493b0f22197b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ee1d2cac587db64451fbc3622351461d4651b2f8
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609438"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318915"
 ---
-# <a name="custom-color-selector-dialog-box-image-editor-for-icons"></a>[色の調整] ダイアログ ボックス (アイコン用イメージ エディター)
+# <a name="custom-color-selector-dialog-box-c-image-editor-for-icons"></a>カスタム カラー セレクター ダイアログ ボックス (C++) (アイコン用イメージ エディター)
 
 このダイアログ ボックスを使用してイメージを使用する色をカスタマイズすることができます。 詳細については、次を参照してください。[カスタマイズまたは変更する色](../windows/customizing-or-changing-colors-image-editor-for-icons.md)します。
 

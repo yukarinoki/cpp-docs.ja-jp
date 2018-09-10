@@ -255,12 +255,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1a157bcd3ecdce16a25d5bb6523ed6962a94a18
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 49677077761a11df93a540a749e140485fa9485f
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42539619"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319072"
 ---
 # <a name="compiler-errors-c3500-through-c3999"></a>コンパイラ エラー C3500 C3999 から
 
@@ -496,7 +496,7 @@ ms.locfileid: "42539619"
 |[コンパイラ エラー C3721](compiler-error-c3721.md)|'*署名*': イベントの署名は互換性がありません|
 |[コンパイラ エラー C3722](compiler-error-c3722.md)|汎用イベントは許可されていません|
 |[コンパイラ エラー C3723](compiler-error-c3723.md)|'*関数*': イベントを解決できませんでした|
-|[コンパイラ エラー C3724](compiler-error-c3724.md)|必要があります # < windows.h > を使用する include イベントでマルチ スレッド|
+|[コンパイラ エラー C3724](compiler-error-c3724.md)|必要があります #include \<windows.h > を使用すると、イベントのマルチ スレッド|
 |コンパイラ エラー C3725|互換性のために残されています。|
 |コンパイラ エラー C3726|互換性のために残されています。|
 |[コンパイラ エラー C3727](compiler-error-c3727.md)|'*イベント*': マネージ イベントが、メンバー関数またはデリゲートへのポインターであるデータ メンバーにする必要があります|

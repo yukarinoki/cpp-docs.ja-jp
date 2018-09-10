@@ -1,5 +1,5 @@
 ---
-title: バイナリ編集するリソースを開く |Microsoft Docs
+title: バイナリ編集 (C++) のリソースを開く |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,21 +11,21 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - binary data, editing
-- resources [Visual Studio], opening for binary editing
+- resources [C++], opening for binary editing
 ms.assetid: d3cdb0e4-da66-410d-8e49-b29073ff2929
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4ad125c2931049fe912724b1391c8470f6cb4495
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5c489d1b17df579ecec6c118826a8f770f5664eb
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589278"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316355"
 ---
-# <a name="opening-a-resource-for-binary-editing"></a>バイナリ編集するリソースのオープン
+# <a name="opening-a-resource-for-binary-editing-c"></a>バイナリ編集 (C++) のリソースを開く
 
 ### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>バイナリ編集用に Windows デスクトップ リソースを開くには
 
@@ -48,8 +48,7 @@ ms.locfileid: "42589278"
 3. **[プログラムから開く]** ダイアログ ボックスで、 **バイナリ エディター**を選択します。
 
    > [!NOTE]
-   > 
-  [イメージ エディター](../windows/image-editor-for-icons.md) と [バイナリ エディター](binary-editor.md) を使用して、マネージド プロジェクトのリソース ファイルを操作できます。 編集の対象となるマネージド リソースは、リンク リソースである必要があります。 Visual Studio のリソース エディターでは、埋め込みリソースの編集はサポートしていません。
+   > [イメージ エディター](../windows/image-editor-for-icons.md) と [バイナリ エディター](binary-editor.md) を使用して、マネージド プロジェクトのリソース ファイルを操作できます。 編集の対象となるマネージド リソースは、リンク リソースである必要があります。 Visual Studio のリソース エディターでは、埋め込みリソースの編集はサポートしていません。
 
    > [!NOTE]
    > マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
