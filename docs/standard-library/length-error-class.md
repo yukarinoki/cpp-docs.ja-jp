@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ed0976a8323eaaef0ba289c020cf5d0a0c5837e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 11529c0fd8f5f64562e7b0c02c44698641cef2c8
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912915"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317551"
 ---
 # <a name="lengtherror-class"></a>length_error クラス
 
@@ -39,7 +39,7 @@ public:
 };
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 [what](../standard-library/exception-class.md) によって返される値は、**message**`.`[data](../standard-library/basic-string-class.md#data) のコピーです。
 
@@ -79,10 +79,10 @@ int main( )
       cerr << "Type " << typeid( e ).name( ) << endl;
    };
 }
-\* Output:
+/* Output:
 Caught vector<T> too long
 Type class std::length_error
-*\
+*/
 ```
 
 ## <a name="requirements"></a>要件

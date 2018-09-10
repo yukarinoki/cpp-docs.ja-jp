@@ -1,5 +1,5 @@
 ---
-title: 'シンボル: リソース識別子 |Microsoft Docs'
+title: 'シンボル: リソース識別子 (C++) |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,25 +10,25 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- symbols, resource identifiers
-- symbols, creating
+- symbols [C++], resource identifiers
+- symbols [C++], creating
 - resource symbols
-- symbols, editing
-- resource editors, resource symbols
+- symbols [C++], editing
+- resource editors [C++], resource symbols
 ms.assetid: 8fccc09a-0237-4a65-b9c4-57d60c59e324
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d1914f13a74a9af33fc2008f759062ea22c20c5b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8a1a0b16ebee0ebac141d5c1675d7ff7560b374b
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604339"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318214"
 ---
-# <a name="symbols-resource-identifiers"></a>シンボル: リソース識別子
+# <a name="symbols-resource-identifiers-c"></a>シンボル: リソース識別子 (C++)
 
 シンボルは、2 つの部分で構成されるリソース識別子 (ID) です。1 つはテキスト文字列 (シンボル名) で、整数値 (シンボル値) にマップされます。 例えば:
 
@@ -45,8 +45,7 @@ IDC_EDITNAME = 5100
 > [!NOTE]
 > リソースやリソース オブジェクトを 1 つの .rc ファイルから別のファイルにコピーする際、Visual C++ は、転送されるリソースのシンボル値、またはシンボル名と値を変更する可能性があります。これは、既存のファイルのシンボル名や値との競合を回避するためです。
 
-アプリケーションのサイズが大きくなり、複雑になるにつれ、リソースとシンボルの数も増えます。 いくつかのファイルに散在する大量のシンボルを追跡することは困難な場合があります。 
-  [[リソース シンボル] ダイアログ ボックス](../windows/resource-symbols-dialog-box.md) を使用すると、シンボルを簡単に管理することができます。これは集中ツールであり、以下を行えます。
+アプリケーションのサイズが大きくなり、複雑になるにつれ、リソースとシンボルの数も増えます。 いくつかのファイルに散在する大量のシンボルを追跡することは困難な場合があります。 [[リソース シンボル] ダイアログ ボックス](../windows/resource-symbols-dialog-box.md) を使用すると、シンボルを簡単に管理することができます。これは集中ツールであり、以下を行えます。
 
 - [リソース シンボルの表示](../windows/viewing-resource-symbols.md)
 

@@ -1,5 +1,5 @@
 ---
-title: アクセラレータ テーブルの編集 |Microsoft Docs
+title: アクセラレータ テーブル (C++) の編集 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c258f691b7dbea814c707cbf1f3825b9db5ba42
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 14f9e82e87d395341dc1f05f1de49a20d58fec52
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596404"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314886"
 ---
-# <a name="editing-accelerator-tables"></a>アクセラレータ テーブルの編集
+# <a name="editing-accelerator-tables-c"></a>アクセラレータ テーブル (C++) の編集
 
-Visual C では、直接のインプレース編集アクセラレータ テーブルを編集できます、**アクセラレータ**エディター。
+インプレース編集を直接アクセラレータ テーブルを編集する C++ プロジェクトで、**アクセラレータ**エディター。
 
 以下の手順は、標準のプロパティ ページの使用を参照してください、ただし、インプレース編集とプロパティ ページのメソッドの両方にある同じ結果になります。 プロパティ ページを使用して、またはインプレース編集を使用して行われた変更は、アクセラレータ テーブルですぐに反映されます。
 

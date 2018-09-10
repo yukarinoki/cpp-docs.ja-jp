@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4eb91708545d2303304177093e79ea49e8fa9208
-ms.sourcegitcommit: 894b3b3a91fcd8894b582747b03135c0be450c1f
+ms.openlocfilehash: 6645bb81a1fd4a2b42eb7419a0d008b9ac7692ad
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37850421"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319085"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>コンパイラのバージョンによるコンパイラの警告
 
@@ -404,7 +404,7 @@ C4694|'*型*': シールドされた抽象クラスは基底クラス' を含め
 C4720|インライン アセンブラー レポート: '*説明*'
 C4721|'*説明*': 組み込み関数として使用できません。
 C4722|'*説明*': デストラクターに値がメモリ リークの可能性
-C4726|ARM arch4/4T だけがサポートされます ' < cpsr_f > または < spsr_f >' では、イミディ エイト値
+C4726|ARM arch4/4T だけがサポートされます '\<cpsr_f > または\<spsr_f >' では、イミディ エイト値
 C4727|という名前の PCH*名前*にある同じタイムスタンプを持つ*名前*と*名前*します。  最初の PCH を使用します。
 C4729|フロー グラフ ベースの警告の関数が大きすぎます。
 C4730|'*説明*': _m64 と浮動小数点式は、不適切なコード、可能性があります

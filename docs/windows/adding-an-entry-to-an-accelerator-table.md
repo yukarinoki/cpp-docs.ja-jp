@@ -1,5 +1,5 @@
 ---
-title: アクセラレータ テーブルへのエントリの追加 |Microsoft Docs
+title: アクセラレータ テーブル (C++) へのエントリの追加 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6d463dc59e88dbd5c302de632d5261f29d8a4aab
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7055c21a2b9e7d0e32f3dac56641513b19953e18
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595568"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315581"
 ---
-# <a name="adding-an-entry-to-an-accelerator-table"></a>アクセラレータ テーブルへのエントリの追加
+# <a name="adding-an-entry-to-an-accelerator-table-c"></a>アクセラレータ テーブル (C++) へのエントリの追加
 
 ### <a name="to-add-an-entry-to-an-accelerator-table"></a>アクセラレータ テーブルにエントリを追加するには
 
-1. アイコンをダブルクリックして、アクセラレータ テーブルを開く[リソース ビュー](../windows/resource-view-window.md)します。
+1. C++ プロジェクトでのアイコンをダブルクリックして、アクセラレータ テーブルを開く[リソース ビュー](../windows/resource-view-window.md)します。
 
    > [!NOTE]
    > プロジェクトに .rc ファイルがまだ含まれていない場合は、「 [リソース スクリプト ファイルの新規作成](../windows/how-to-create-a-resource-script-file.md)」を参照してください。

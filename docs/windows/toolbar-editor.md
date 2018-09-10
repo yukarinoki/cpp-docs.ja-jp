@@ -1,5 +1,5 @@
 ---
-title: ツール バー エディター |Microsoft Docs
+title: ツール バー エディター (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,7 +10,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- resource editors, Toolbar editor
+- resource editors [C++], Toolbar editor
 - editors, toolbars
 - toolbars [C++], editing
 - Toolbar editor
@@ -20,16 +20,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b0f9c4977ff82bd3f4af40af657a4bfed3a90568
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c51c8a5dc321d61b6167fb6a1e5b71d52145d81d
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197877"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316953"
 ---
-# <a name="toolbar-editor"></a>ツール バー エディター
+# <a name="toolbar-editor-c"></a>ツール バー エディター (C++)
 
-**ツールバー**エディターでは、ツールバーのリソースを作成し、ビットマップをツール バー リソースに変換することができます。 **ツールバー**エディターでは、グラフィカルな表示を使用して、ツールバーとほぼ同じに完成したアプリケーションでどのように表示されるがボタンを表示します。
+**ツールバー**エディターでは、C++ のツールバーのリソースを作成し、ビットマップをツール バー リソースに変換することができます。 **ツールバー**エディターでは、グラフィカルな表示を使用して、ツールバーとほぼ同じに完成したアプリケーションでどのように表示されるがボタンを表示します。
 
 **ツールバー**エディターができます。
 

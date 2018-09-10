@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15e872faab5beee296e4543c8404141428345842
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1dfc9c50503fcd277f34e8f5dfc4a630d888eebf
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402404"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318279"
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>例外の仕様 (スロー、noexcept) (C++)
 
@@ -43,7 +43,7 @@ void MyFunction(int i) noexcept;
 
 |例外の指定|説明|
 |-----------------------------|-------------|
-|`noexcept`<br>`noexcept(true)`<br>`throw()`|関数は例外をスローしません。 [/Std:c + + 14](../build/reference/std-specify-language-standard-version.md)モード (既定)、`noexcept`と`noexcept(true)`は同等です。 宣言されている関数から例外をスローするときに`noexcept`または`noexcept(true)`、 [std::terminate](../standard-library/exception-functions.md#terminate)が呼び出されます。 として宣言されている関数から例外をスローするときに`throw()`で **/std:c + + + 14**モードでは、結果は未定義の動作です。 特定の関数は呼び出されません。 これは、コンパイラを呼び出すを必要とする、標準の c++ 14 からの逸脱[std::unexpected](../standard-library/exception-functions.md#unexpected)します。  <br> **Visual Studio 2017 バージョン 15.5 以降**: で **/std:c + + 17**モード、 `noexcept`、 `noexcept(true)`、および`throw()`はすべて同等です。 **/Std:c + + 17**モード、`throw()`の別名です`noexcept(true)`します。 **/Std:c + + + 17**モードで、これらの仕様のいずれかで宣言された関数から例外がスローされたときに[std::terminate](../standard-library/exception-functions.md#terminate)が呼び出される標準の c++ 17 で必要とします。|
+|`noexcept`<br/>`noexcept(true)`<br/>`throw()`|関数は例外をスローしません。 [/Std:c + + 14](../build/reference/std-specify-language-standard-version.md)モード (既定)、`noexcept`と`noexcept(true)`は同等です。 宣言されている関数から例外をスローするときに`noexcept`または`noexcept(true)`、 [std::terminate](../standard-library/exception-functions.md#terminate)が呼び出されます。 として宣言されている関数から例外をスローするときに`throw()`で **/std:c + + + 14**モードでは、結果は未定義の動作です。 特定の関数は呼び出されません。 これは、コンパイラを呼び出すを必要とする、標準の c++ 14 からの逸脱[std::unexpected](../standard-library/exception-functions.md#unexpected)します。  <br/> **Visual Studio 2017 バージョン 15.5 以降**: で **/std:c + + 17**モード、 `noexcept`、 `noexcept(true)`、および`throw()`はすべて同等です。 **/Std:c + + 17**モード、`throw()`の別名です`noexcept(true)`します。 **/Std:c + + + 17**モードで、これらの仕様のいずれかで宣言された関数から例外がスローされたときに[std::terminate](../standard-library/exception-functions.md#terminate)が呼び出される標準の c++ 17 で必要とします。|
 |`noexcept(false)`<br/>`throw(...)`<br/>なしの仕様|関数は、任意の型の例外をスローできます。|
 |`throw(type)`| (**C++ 14 以降**)、関数型の例外をスローする`type`します。 コンパイラは、構文を受け入れますが、として解釈`noexcept(false)`します。 **/Std:c + + 17**モード、コンパイラは警告 C5040 を発行します。|
 
@@ -64,9 +64,9 @@ void MyFunction(int i) noexcept;
 
 |関数|/EHsc|/EHs|/EHa|/EHac|
 |--------------|------------|-----------|-----------|------------|
-|例外を指定していない C++ 関数|[はい]|[はい]|[はい]|[はい]|
-|C++ 関数`noexcept`、 `noexcept(true)`、または`throw()`例外の指定|いいえ|×|[はい]|[はい]|
-|C++ 関数`noexcept(false)`、 `throw(...)`、または`throw(type)`例外の指定|[はい]|[はい]|[はい]|[はい]|
+|例外を指定していない C++ 関数|はい|[はい]|[はい]|はい|
+|C++ 関数`noexcept`、 `noexcept(true)`、または`throw()`例外の指定|いいえ|×|[はい]|はい|
+|C++ 関数`noexcept(false)`、 `throw(...)`、または`throw(type)`例外の指定|はい|[はい]|[はい]|はい|
 
 ## <a name="example"></a>例
 

@@ -1,5 +1,5 @@
 ---
-title: アクセラレータ キー (アイコン用イメージ エディター) |Microsoft Docs
+title: アクセラレータ キー (アイコン用イメージ エディターを C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f211b15134ad292c9e7e4d3ed92d81ea59dd3b86
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 26818aaaec16e06553bde24ba7e5d6d350971cef
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43683301"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317746"
 ---
-# <a name="accelerator-keys-image-editor-for-icons"></a>アクセラレータ キー (アイコン用イメージ エディター)
+# <a name="accelerator-keys-c-image-editor-for-icons"></a>アクセラレータ キー (アイコン用イメージ エディターを C++)
 
 既定では、キーにバインドされているイメージ エディターのコマンドをアクセラレータ キーを以下に示します。 アクセラレータ キーを変更するには、次のようにクリックします。**オプション**上、**ツール**] メニューの [選び、**キーボード**下、**環境**フォルダー。 詳細については、「[Visual Studio でのキーボード ショートカットの識別とカスタマイズ](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio)」をご覧ください。
 

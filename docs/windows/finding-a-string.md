@@ -1,5 +1,5 @@
 ---
-title: 文字列の検索 |Microsoft Docs
+title: 検索文字列リソース (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3e04caa4aa927bd24bc1a5cd86f5d390e1c376b7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1e331401a3a2a789b13bc21b76c9b1cbfcb30e33
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197536"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318501"
 ---
-# <a name="finding-a-string"></a>文字列の検索
+# <a name="finding-a-string-resource-c"></a>検索文字列リソース (C++)
 
 文字列テーブル内 1 つまたは複数の文字列を検索して使用することができます[正規](/visualstudio/ide/using-regular-expressions-in-visual-studio)で、**ファイル内の検索**コマンド (**編集**メニュー) 文字列のすべてのインスタンスを検索するにはパターンに一致します。
 

@@ -1,5 +1,5 @@
 ---
-title: 新しいツールバー ダイアログ ボックス |Microsoft Docs
+title: 新しいツールバー ダイアログ ボックス (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,23 +10,23 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- New Toolbar Resource dialog box
+- New Toolbar Resource dialog box [C++]
 ms.assetid: 52dd01ad-e748-4ab2-b3eb-59f5df990ca6
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6952fa51115d5bec9650ef6d6012e3c7aff2d127
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6ca09463a2934db0097c09d6a4f928f108fd0760
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602171"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316303"
 ---
-# <a name="new-toolbar-resource-dialog-box"></a>[新規ツール バー リソース] ダイアログ ボックス
+# <a name="new-toolbar-resource-dialog-box-c"></a>新しいツールバー ダイアログ ボックス (C++)
 
-**新規ツール バー リソース** ダイアログ ボックスでは、ツール バー リソースを追加するボタンの高さと幅を指定できます。 既定では 16 × 15 ピクセルです。
+**新規ツール バー リソース** ダイアログ ボックスでは、C++ プロジェクトのツール バー リソースを追加するボタンの高さと幅を指定できます。 既定では 16 × 15 ピクセルです。
 
 ツールバーを作成するために使用するビットマップが 2048 の最大の幅です。 設定した場合は、**ボタンの幅**512 には、4 つのボタンのみができます。 513 幅を設定する場合は、3 つのボタンのみができます。
 
