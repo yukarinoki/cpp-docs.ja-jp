@@ -1,7 +1,7 @@
 ---
 title: regex_error クラス | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cdf1f5a3a8477e0af7d6bb04426599df590fffa
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7358af41e1a7172daec619bec3e701ff4541fd0c
+ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102682"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44384983"
 ---
 # <a name="regexerror-class"></a>regex_error クラス
 
@@ -32,19 +32,24 @@ ms.locfileid: "44102682"
 
 ```cpp
 class regex_error
-: public std::runtime_error {
-public:
-    explicit regex_error(regex_constants::error_code error);
-
-    regex_constants::error_code code() const;
-
-
-};
+: public std::runtime_error
 ```
 
 ## <a name="remarks"></a>Remarks
 
 このクラスは、 `basic_regex` オブジェクトの構築時または使用時に発生したエラーを報告するためにスローされる例外オブジェクトを表します。
+
+### <a name="constructors"></a>コンストラクター
+
+|コンストラクター|説明|
+|-|-|
+|[regex_error](#regex_error)|オブジェクトを構築します。|
+
+### <a name="member-functions"></a>メンバー関数
+
+|メンバー関数|説明|
+|-|-|
+|[コード](#code)|エラー コードを返します。|
 
 ## <a name="requirements"></a>要件
 
@@ -52,22 +57,10 @@ public:
 
 **名前空間:** std
 
-## <a name="code"></a>  regex_error::code
-
-エラー コードを返します。
+## <a name="example"></a>例
 
 ```cpp
-regex_constants::error_code code() const;
-```
-
-### <a name="remarks"></a>Remarks
-
-このメンバー関数は、オブジェクトのコンストラクターに渡された値を返します。
-
-### <a name="example"></a>例
-
-```cpp
-// std__regex__regex_error_code.cpp
+// std__regex__regex_error.cpp
 // compile with: /EHsc
 #include <regex>
 #include <iostream>
@@ -83,8 +76,7 @@ int main()
     catch (const std::regex_error& rerr)
         {
         std::cout << "regex error: "
-            << (rerr.code() == paren.code()
-                 "unbalanced parentheses" : "")
+            << (rerr.code() == paren.code() ? "unbalanced parentheses" : "")
             << std::endl;
         }
     catch (...)
@@ -94,12 +86,23 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
 regex error: unbalanced parentheses
 ```
+
+## <a name="code"></a>  regex_error::code
+
+エラー コードを返します。
+
+```cpp
+regex_constants::error_code code() const;
+```
+
+### <a name="remarks"></a>Remarks
+
+このメンバー関数は、オブジェクトのコンストラクターに渡された値を返します。
 
 ## <a name="regex_error"></a>  regex_error::regex_error
 
@@ -117,43 +120,6 @@ regex_error(regex_constants::error_code error);
 ### <a name="remarks"></a>Remarks
 
 コンス トラクターは、値を保持するオブジェクトを構築します。*エラー*します。
-
-### <a name="example"></a>例
-
-```cpp
-// std__regex__regex_error_construct.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-int main()
-    {
-    std::regex_error paren(std::regex_constants::error_paren);
-
-    try
-        {
-        std::regex rx("(a");
-        }
-    catch (const std::regex_error& rerr)
-        {
-        std::cout << "regex error: "
-            << (rerr.code() == paren.code()
-                 "unbalanced parentheses" : "")
-            << std::endl;
-        }
-    catch (...)
-        {
-        std::cout << "unknown exception" << std::endl;
-        }
-
-    return (0);
-    }
-
-```
-
-```Output
-regex error: unbalanced parentheses
-```
 
 ## <a name="see-also"></a>関連項目
 
