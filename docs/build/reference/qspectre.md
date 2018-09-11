@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec3509b71d78221c3e15607d34f674fc38d9f635
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 2d3b238b9a5bc01fa3ee053acdb3c7c84b95df71
+ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43130990"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44385009"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -44,7 +44,7 @@ Spectre バリアント 1 セキュリティの脆弱性を軽減するための
 
 ### <a name="availability"></a>可用性
 
-**/Qspectre**オプションは Visual Studio 2017 バージョン 15.5.5、2018 年 1 月 23 日以降に行われたすべての更新を Microsoft Visual C コンパイラ (MSVC) で使用できます。
+**/Qspectre**オプションは Visual Studio 2017 バージョン 15.5.5、2018 年 1 月 23 日以降に行われたすべての更新を Microsoft Visual C コンパイラ (MSVC) で使用できます。 Visual Studio インストーラーを使用して、個々 のコンポーネントとして、Spectre 軽減ライブラリをインストールして、コンパイラを更新します。 **/Qspectre**オプションも Visual Studio 2015 Update 3 で修正プログラムを利用します。 詳細については、次を参照してください。 [KB 4338871](https://support.microsoft.com/help/4338871)します。
 
 15.5 とすべてのプレビューの Visual Studio バージョン 15.6 に文書化されていないオプションでは、既に含まれている Visual Studio 2017 バージョンのすべてのバージョン **/d2guardspecload**、つまりと同等の初期動作 **/Qspectre**. 使用することができます **/d2guardspecload**これらのバージョンのコンパイラでは、コードに同じの軽減策を適用します。 使用するようにビルドを更新してください。 **/Qspectre** ; オプションをサポートするためのコンパイラで、 **/Qspectre**オプションは新しい軽減策を以降のバージョンのコンパイラでサポートも可能性があります。
 

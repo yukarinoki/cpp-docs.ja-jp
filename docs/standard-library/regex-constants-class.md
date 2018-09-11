@@ -1,7 +1,7 @@
 ---
 title: regex_constants クラス | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -92,14 +92,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f766df104df31ba2ba154c081338f7a6d1d4a05c
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 0e330cccb83ad702994b3d31d762cc0203e78de0
+ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107527"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44384996"
 ---
-# <a name="regexconstants-class"></a>regex_constants クラス
+# <a name="regexconstants-namespace"></a>regex_constants 名前空間
 
 正規表現フラグの名前空間です。
 
@@ -116,6 +116,12 @@ namespace regex_constants {
 ## <a name="remarks"></a>Remarks
 
 `regex_constants` 名前空間は、各種のフラグおよび関連するフラグ値をカプセル化します。
+
+|||
+|-|-|
+|[error_type](#error_type)|正規表現の構文エラーを報告するためのフラグです。|
+|[match_flag_type](#match_flag_type)|正規表現照合オプションのフラグ。|
+|[syntax_option_type](#syntax_option_type)|構文オプションを選択するためのフラグ。|
 
 ## <a name="requirements"></a>要件
 
