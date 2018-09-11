@@ -1,5 +1,5 @@
 ---
-title: ダイアログ ボックスにコントロールの追加 |Microsoft Docs
+title: コントロールの追加 ダイアログ ボックス (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,23 +10,21 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- dialog boxes, adding controls to
-- dialog box controls, adding to dialog boxes
-- controls [C++], adding to dialog boxes
+- dialog boxes [C++], adding controls to
 ms.assetid: b2a26d19-093f-49ca-93da-fef00dfbb381
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 17c3756dc62fd8872adb8a0fb1b89112ed9771f9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e60c64777ea4b5726721a267bcdd700cd71b4214
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608612"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317902"
 ---
-# <a name="adding-a-control-to-a-dialog-box"></a>ダイアログ ボックスへのコントロールの追加
+# <a name="adding-a-control-to-a-dialog-box-c"></a>コントロールの追加 ダイアログ ボックス (C++)
 
 ### <a name="to-add-a-control-to-a-dialog-box"></a>ダイアログ ボックスにコントロールを追加するには
 
@@ -44,7 +42,7 @@ ms.locfileid: "42608612"
 
    - コントロールをダブルクリック、**ツールボックス**ウィンドウ (ダイアログ ボックスに表示) したい場所にコントロールを再配置します。
 
-使用できるコントロールの種類については、**ツールボックス**ウィンドウを参照してください[ダイアログ エディター タブ、[ツールボックス] ウィンドウ](../windows/dialog-editor-tab-toolbox.md)します。
+使用できるコントロールの種類については、**ツールボックス**ウィンドウを参照してください[ダイアログ エディタータブ、[ツールボックス] ウィンドウ](../windows/dialog-editor-tab-toolbox.md)します。
 
 マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
 
