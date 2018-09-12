@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46062043959c3ea525273e8bcf1a4112a0f42a67
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb5ba3c26355917d993f1d82b945c77bde918b0f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391962"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206134"
 ---
 # <a name="is-isw-routines"></a>is、isw 系ルーチン
 |||  
@@ -80,7 +80,7 @@ ms.locfileid: "32391962"
  `__iscsymf`  
  文字またはアンダースコア。  
   
- **isdigit**  
+ `isdigit`  
  10 進数 (0 - 9)。  
   
  `isgraph`  
@@ -121,17 +121,16 @@ ms.locfileid: "32391962"
  `iswcntrl`  
  制御ワイド文字。  
   
- **__iswcsym**  
- **isalnum**が true になる任意のワイド文字または '_' 文字。  
+ `__iswcsym`  
+ `isalnum` が true である任意のワイド文字または '_' 文字。  
   
- **__iswcsymf**  
+ `__iswcsymf`  
  `iswalpha` が true である任意のワイド文字または '_' 文字。  
   
  `iswctype`  
  文字には、`desc` 引数で指定されたプロパティがあります。 `desc` の `iswctype` 引数の有効な値には、次の表に示すようにそれぞれ同等のワイド文字分類ルーチンがあります。  
   
- **iswctype(**   
- ***c, desc* ) と同等のその他の isw テスト ルーチン**  
+ ### <a name="equivalence-of-iswctypec-desc-to-other-isw-testing-routines"></a>iswctype(c, desc) と同等のその他の isw テスト ルーチン
   
 |*desc* 引数の値|iswctype( *c, desc* ) と同等|  
 |------------------------------|----------------------------------------|  

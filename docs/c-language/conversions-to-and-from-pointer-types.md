@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81cfe434397d45ef42b2f8ee3ebceae61098e36f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8ddcaa55e3b88e715428ea8fa44c897ab5f8b4f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384297"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216099"
 ---
 # <a name="conversions-to-and-from-pointer-types"></a>Conversions to and from Pointer Types (ポインター型との間の変換)
 ある型の値へのポインターは、別の型へのポインターに変換できます。 ただし、結果は、各型のストレージのアラインメント要件とサイズの違いにより、未定義になることがあります。 オブジェクトへのポインターは、型のストレージ アラインメントの厳密さが同じか、それ以下のオブジェクトへのポインターに変更でき、変更なしで元に戻すことができます。  
@@ -43,7 +43,7 @@ ms.locfileid: "32384297"
   
 -   整数型のサイズがポインター型のサイズと異なる場合、整数型は最初に「[符号付き整数型からの変換](../c-language/conversions-from-signed-integral-types.md)」と「[符号なし整数型からの変換](../c-language/conversions-from-unsigned-integral-types.md)」の表で指定された変換パスを使用して、ポインターのサイズに変換されます。 その後、これがポインター値として扱われます。  
   
- 値 0 の整数定数式、または **void \*** 型にキャストされた整数定数式は、型キャスト、代入、または任意の型のポインターとの比較によって変換できます。 これによって、同じ型の別の null ポインターと等しい null ポインターが生成されます。しかし、この null ポインターは、関数またはオブジェクトへのポインターとは等しくありません。 定数 0 以外の整数はポインター型に変換することができますが、結果は移植できません。  
+ 値 0 の整数定数式、または **void** <strong>\*</strong> 型にキャストされた整数定数式は、型キャスト、代入、または任意の型のポインターとの比較によって変換できます。 これによって、同じ型の別の null ポインターと等しい null ポインターが生成されます。しかし、この null ポインターは、関数またはオブジェクトへのポインターとは等しくありません。 定数 0 以外の整数はポインター型に変換することができますが、結果は移植できません。  
   
 ## <a name="see-also"></a>参照  
  [代入の変換](../c-language/assignment-conversions.md)

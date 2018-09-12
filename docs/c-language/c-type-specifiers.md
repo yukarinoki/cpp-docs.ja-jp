@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e37ac421627d4c4503d75eaf65188bbe234af015
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f965481ae1d3abea40577680b1af72004f793123
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388384"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197229"
 ---
 # <a name="c-type-specifiers"></a>C 型指定子
 
@@ -79,7 +79,7 @@ pi = pu;  /* Now generates warning */
 
 **void** 型の式の副作用が評価されます。 型が **void** の式の (存在しない) 値は使用できません。また、**void** 式を、**void** 以外の型に (暗黙または明示的な変換で) 変換することもできません。 **void** 式が必要なコンテキストでその他の型の式を使用している場合、その値は破棄されます。
 
-ANSI 仕様に準拠するには、**void\*\*** は **int\*\*** として使用できません。 指定されていない型へのポインターとして使用できるのは、**void\*** だけです。
+ANSI 仕様に準拠するには、<strong>void\*\*</strong> は <strong>int\*\*</strong> として使用できません。 指定されていない型へのポインターとして使用できるのは、**void**<strong>\*</strong> だけです。
 
 **Microsoft 固有の仕様はここまで**
 

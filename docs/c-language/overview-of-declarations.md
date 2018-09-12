@@ -15,43 +15,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd8670815b908f66a6e2ed400bc87ca07c369ee4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ac843ef83d2de4f9cf84a44c67859becaead6ec6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392628"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218505"
 ---
 # <a name="overview-of-declarations"></a>宣言の概要
 "宣言" は、一連の識別子の解釈と属性を指定します。 識別子に指定されたオブジェクトまたは関数のためにストレージを予約する宣言は "定義" と呼ばれます。 C における変数、関数、および型の宣言では、次の構文に従います。  
   
-## <a name="syntax"></a>構文  
- `declaration`:  
- *declaration-specifiers* *attribute-seq*opt*init-declarator-list*opt **;**  
-  
- /\* *attribute-seq*opt は Microsoft 仕様です */  
-  
- *declaration-specifiers*:  
- *storage-class-specifier declaration-specifiers*opt  
-  
- *type-specifier declaration-specifiers*opt  
-  
- *type-qualifier declaration-specifiers*opt  
-  
- *init-declarator-list*:  
- *init-declarator*  
-  
- *init-declarator-list* , *init-declarator*  
-  
- *init-declarator*:  
- *declarator*  
-  
- *declarator*  **=**  *initializer*  
+## <a name="syntax"></a>構文
+
+*declaration*:  
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub>**;**
+
+/\* *attribute-seq*<sub>opt</sub> は Microsoft 仕様です */
+
+*declaration-specifiers*:  
+&nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub>  
+&nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declaration-specifiers*<sub>opt</sub>  
+&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *declaration-specifiers*<sub>opt</sub>  
+
+*init-declarator-list*:  
+&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator*  
+&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator-list* **,** *init-declarator*  
+
+*init-declarator*:  
+&nbsp;&nbsp;&nbsp;&nbsp;*declarator*  
+&nbsp;&nbsp;&nbsp;&nbsp;*declarator* **=** *initializer*  
   
 > [!NOTE]
->  この `declaration` 構文は、以降のセクションで繰り返されません。 以降のセクションの構文は通常、非終端要素である `declarator` から始まります。  
+> この *declaration* 構文は、以降のセクションで繰り返されません。 以降のセクションの構文は通常、非終端要素である *declarator* から始まります。  
   
- *init-declarator-list* 内の宣言では、名前が付けられた識別子が含まれます。*init* は、initializer (初期化子) の省略形です。 *init-declarator-list* は、コンマで区切られた宣言子のシーケンスで、それぞれの宣言子が追加の型情報または初期化子 (またはその両方) を持ちます。 `declarator` には、宣言されている識別子 (存在する場合) が含まれます。 非終端要素である *declaration-specifiers* は、リンケージ、ストレージ存続期間、および少なくとも宣言子が示すエンティティの型の一部を指定する、一連の型指定子とストレージ クラス指定子で構成されます。 したがって、宣言は、ストレージ クラス指定子、型指定子、型修飾子、宣言子、および初期化子の組み合わせで構成されます。  
+ *init-declarator-list* 内の宣言では、名前が付けられた識別子が含まれます。*init* は、initializer (初期化子) の省略形です。 *init-declarator-list* は、コンマで区切られた宣言子のシーケンスで、それぞれの宣言子が追加の型情報または初期化子 (またはその両方) を持ちます。 *declarator* には、宣言されている識別子 (存在する場合) が含まれます。 非終端要素である *declaration-specifiers* は、リンケージ、ストレージ存続期間、および少なくとも宣言子が示すエンティティの型の一部を指定する、一連の型指定子とストレージ クラス指定子で構成されます。 したがって、宣言は、ストレージ クラス指定子、型指定子、型修飾子、宣言子、および初期化子の組み合わせで構成されます。  
   
  宣言には *attribute-seq* に示されている省略可能な属性を 1 つ以上含めることができます。*seq* は、sequence (シーケンス) の省略形です。 これらの Microsoft 固有の属性は、さまざまな機能を実行します。詳細については、このブック全体で説明します。  
   
@@ -63,7 +60,7 @@ int const *fp;
   
  このコードは、`fp` という名前の変数を、変更不可能な (**const**) `int` 値へのポインターとして宣言します。 コンマで区切った複数の宣言子を使用して、複数の変数を宣言で定義できます。  
   
- 宣言は、少なくとも 1 つの宣言子を持つか、その型指定子が構造体タグ、共用体タグ、または列挙のメンバーを宣言する必要があります。 宣言子は、識別子に関するその他の情報を提供します。 宣言子は、配列、ポインター、または関数型を宣言するための角かっこ (**[ ]**)、アスタリスク (**\***)、またはかっこ (**( )**) で変更できる識別子です。 単純な変数 (文字、整数、浮動小数点項目など) または単純な変数の構造体/共用体を宣言する場合、`declarator` は単なる識別子です。 宣言子の詳細については、「[宣言子と変数宣言](../c-language/declarators-and-variable-declarations.md)」を参照してください。  
+ 宣言は、少なくとも 1 つの宣言子を持つか、その型指定子が構造体タグ、共用体タグ、または列挙のメンバーを宣言する必要があります。 宣言子は、識別子に関するその他の情報を提供します。 宣言子は、配列、ポインター、または関数型を宣言するための角かっこ (**[ ]**)、アスタリスク (<strong>\*</strong>)、またはかっこ (**( )**) で変更できる識別子です。 単純な変数 (文字、整数、浮動小数点項目など) または単純な変数の構造体/共用体を宣言する場合、`declarator` は単なる識別子です。 宣言子の詳細については、「[宣言子と変数宣言](../c-language/declarators-and-variable-declarations.md)」を参照してください。  
   
  すべての定義は暗黙の宣言ですが、すべての宣言が定義というわけではありません。 たとえば、`extern` ストレージ クラス指定子で始まる変数宣言は、"定義" 宣言ではなく "参照" 宣言になります。 外部変数を定義する前に参照する場合、または外部変数を使用されている場所とは異なるソース ファイルで定義する場合は、`extern` 宣言が必要です。 ストレージは "参照" 宣言によって割り当てられず、変数は宣言で初期化できません。  
   
