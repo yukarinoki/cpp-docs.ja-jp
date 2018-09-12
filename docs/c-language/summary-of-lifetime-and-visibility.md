@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f2c8b6f9c6be0b07dba710e50f71f96bdf3f0eb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dcda68906e281bdf33ebe95a8019851bcb3cdb11
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389781"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752301"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>有効期間と可視性の概要
 次の表は、ほとんどの識別子について、有効期間と可視性をまとめたものです。 最初の 3 列は、有効期間および可視性を定義する属性を示します。 最初の 3 列によって指定された属性を持つ識別子には、4 番目および 5 番目の列に表示される有効期間および可視性があります。 ただし、表には、使用可能なすべてのケースは示されていません。 詳細については、[ストレージ クラス](../c-language/c-storage-classes.md)に関するページを参照してください。  
@@ -30,17 +30,17 @@ ms.locfileid: "32389781"
 |属性: <br /><br /> レベル|アイテム|ストレージ クラス<br /><br /> 指定子|結果: <br /><br /> 有効期間|可視性|  
 |---------------------------|----------|----------------------------------|--------------------------|----------------|  
 |ファイル スコープ|変数定義|**static**|Global|発生元のソース ファイルの剰余残りの部分|  
-||変数宣言|`extern`|Global|発生元のソース ファイルの剰余残りの部分|  
+||変数宣言|**extern**|Global|発生元のソース ファイルの剰余残りの部分|  
 ||関数プロトタイプまたは定義|**static**|Global|単一のソース ファイル|  
-||関数プロトタイプ|`extern`|Global|ソース ファイルの残りの部分|  
-|ブロック スコープ|変数宣言|`extern`|Global|ブロック|  
+||関数プロトタイプ|**extern**|Global|ソース ファイルの残りの部分|  
+|ブロック スコープ|変数宣言|**extern**|Global|ブロック|  
 ||変数定義|**static**|Global|ブロック|  
 ||変数定義|**auto** か **register**|ローカル|ブロック|  
   
 ## <a name="example"></a>例  
   
 ### <a name="description"></a>説明  
- 次の例は、変数のブロック、入れ子、可視性を示します。  
+次の例は、変数のブロック、入れ子、可視性を示します。  
   
 ### <a name="code"></a>コード  
   
@@ -71,7 +71,7 @@ int main()  // main function defined at external level
 ```  
   
 ### <a name="comments"></a>コメント  
- この例では、4 つの表示レベルとして、外部レベルと 3 つのブロック レベルがあります。 値は、各ステートメントに続くコメントに示すとおりに画面に出力されます。  
+この例では、4 つの表示レベルとして、外部レベルと 3 つのブロック レベルがあります。 値は、各ステートメントに続くコメントに示すとおりに画面に出力されます。  
   
 ## <a name="see-also"></a>参照  
- [有効期間、スコープ、可視性、およびリンケージ](../c-language/lifetime-scope-visibility-and-linkage.md)
+[有効期間、スコープ、可視性、およびリンケージ](../c-language/lifetime-scope-visibility-and-linkage.md)

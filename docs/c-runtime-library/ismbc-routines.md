@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95c2bff6aa96ad5c2eea127fa643641d268e3cd9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4aaf456e83968cf47573a9ea2e765f9e7d552625
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392576"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760251"
 ---
 # <a name="ismbc-routines"></a>_ismbc 系ルーチン
 これらの各 **_ismbc** ルーチンは、特定の条件で特定のマルチバイト文字 `c` をテストします。  
@@ -43,9 +43,9 @@ ms.locfileid: "32392576"
 |[_ismbchira、_ismbchira_l、_ismbckata、_ismbckata_l](../c-runtime-library/reference/ismbchira-ismbchira-l-ismbckata-ismbckata-l.md)|[_ismbclower、_ismbclower_l、_ismbcupper、 _ismbcupper_l](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|  
   
 ## <a name="remarks"></a>コメント  
- 各 **_ismbc** ルーチンのテスト結果は、有効なマルチバイト コード ページによって異なります。 マルチバイトのコード ページには、1 バイトの英字があります。 既定では、マルチバイト コード ページは、プログラムの開始時にオペレーティング システムから取得したシステム既定の ANSI コード ページに設定されます。 [_getmbcp](../c-runtime-library/reference/getmbcp.md)、または [_setmbcp](../c-runtime-library/reference/setmbcp.md) によって、使用中のマルチバイト コード ページをそれぞれ照会または変更できます。  
+各 **_ismbc** ルーチンのテスト結果は、有効なマルチバイト コード ページによって異なります。 マルチバイトのコード ページには、1 バイトの英字があります。 既定では、マルチバイト コード ページは、プログラムの開始時にオペレーティング システムから取得したシステム既定の ANSI コード ページに設定されます。 [_getmbcp](../c-runtime-library/reference/getmbcp.md)、または [_setmbcp](../c-runtime-library/reference/setmbcp.md) によって、使用中のマルチバイト コード ページをそれぞれ照会または変更できます。  
   
- 出力値は、ロケールの `LC_CTYPE` カテゴリ設定に影響されます。詳細については、「[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。  
+出力値は、ロケールの `LC_CTYPE` カテゴリ設定に影響されます。詳細については、「[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。  
   
 |ルーチンによって返される値|テスト条件|コード ページ 932 の例|  
 |-------------|--------------------|---------------------------|  
@@ -62,9 +62,9 @@ ms.locfileid: "32392576"
 |[_ismbcsymbol、_ismbcsymbol_l](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|マルチバイトの記号|0x8141<=`c`<=0x81AC の場合にのみ、0 以外の値を返します。|  
 |[_ismbcupper、_ismbcupper_l](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|大文字の英字|`c` が ASCII 大文字の英字 (0x41<=`c`<=0x5A) の 1 バイト表現である場合に限り、0 以外の値を返します。|  
   
- **コード ページ 932 固有情報**  
+**コード ページ 932 固有情報**  
   
- 次のルーチンは、コード ページ 932 に固有です。  
+次のルーチンは、コード ページ 932 に固有です。  
   
 |ルーチンによって返される値|テスト条件 (コード ページ 932 のみ)|  
 |-------------|-------------------------------------------|  
@@ -74,11 +74,11 @@ ms.locfileid: "32392576"
 |[_ismbcl1、_ismbcl1_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|JIS のレベル 1: 0x889F<=`c`<=0x9872。|  
 |[_ismbcl2、_ismbcl2_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|JIS のレベル 2: 0x989F<=`c`<=0xEA9E。|  
   
- `_ismbcl0`、`_ismbcl1`、および `_ismbcl2` は、指定された値 `c` が、上の表に記載のテスト条件に一致するかどうかをチェックしますが、`c` が有効なマルチバイト文字かどうかはチェックしません。 下位バイトが範囲 0x00 - 0x3F、0x7F、または 0xFD - 0xFF にある場合、これらの関数は 0 以外の値を返し、文字がテスト条件を満たすことを示します。 マルチバイト文字が定義されているかどうかをテストするために [_ismbbtrail、_ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md) を使用します。  
+`_ismbcl0`、`_ismbcl1`、および `_ismbcl2` は、指定された値 `c` が、上の表に記載のテスト条件に一致するかどうかをチェックしますが、`c` が有効なマルチバイト文字かどうかはチェックしません。 下位バイトが範囲 0x00 - 0x3F、0x7F、または 0xFD - 0xFF にある場合、これらの関数は 0 以外の値を返し、文字がテスト条件を満たすことを示します。 マルチバイト文字が定義されているかどうかをテストするために [_ismbbtrail、_ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md) を使用します。  
   
- **コード ページ 932 固有情報終了**  
+**コード ページ 932 固有情報終了**  
   
 ## <a name="see-also"></a>参照  
- [文字分類](../c-runtime-library/character-classification.md)   
- [is、isw 系ルーチン](../c-runtime-library/is-isw-routines.md)   
- [_ismbb 系ルーチン](../c-runtime-library/ismbb-routines.md)
+[文字分類](../c-runtime-library/character-classification.md)   
+[is、isw 系ルーチン](../c-runtime-library/is-isw-routines.md)   
+[_ismbb 系ルーチン](../c-runtime-library/ismbb-routines.md)
