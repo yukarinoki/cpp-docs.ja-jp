@@ -1,7 +1,7 @@
 ---
 title: カスタム ビルド ステップまたはビルド イベントの出力の書式設定 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -19,43 +19,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7da71e6391d2d3223b47ba528686d2fec003ab3a
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 8a975951142c028ffcfb8ece870ab3ac2d2b60fc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33321351"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203250"
 ---
 # <a name="formatting-the-output-of-a-custom-build-step-or-build-event"></a>カスタム ビルド ステップまたはビルド イベントの出力の書式設定
-カスタム ビルド ステップまたはビルド イベントの出力形式が正しい場合、ユーザーには次の利点があります。  
-  
--   警告とエラーが、**[出力]** ウィンドウにカウントされます。  
-  
--   出力が、**[タスク一覧]** ウィンドウに表示されます。  
-  
--   **[出力]** ウィンドウの出力をクリックすると、該当するトピックが表示されます。  
-  
--   **[タスク一覧]** ウィンドウまたは **[出力]** ウィンドウでは、F1 キーの操作を使用できます。  
-  
- 出力形式は、次のとおりです。  
-  
- {*<ファイル名>* (*<行番号>* [, *<列番号>*]) &#124; *<ツール名>*} **:**  
-  
- [*<任意のテキスト>*] {**<エラー>** &#124; **<警告>**} *<コード番号>***:***<ローカライズ可能な文字列>*  
-  
- [ *<任意のテキスト>* ]  
-  
- この場合、  
-  
--   {*a* &#124; *b*} には、*a* または *b* を選択します。  
-  
--   [`ccc`] は任意の文字列またはパラメーターです。  
-  
- 例:  
-  
- C:\\*sourcefile.cpp*(134) : エラー C2143: 構文エラー: ';' が '}' の前にありません  
-  
- LINK : 致命的なエラー LNK1104: '*somelib.lib*' を開くことができません。  
-  
-## <a name="see-also"></a>参照  
- [カスタム ビルド ステップとビルド イベントについて](../ide/understanding-custom-build-steps-and-build-events.md)
+
+カスタム ビルド ステップまたはビルド イベントの出力形式が正しい場合、ユーザーには次の利点があります。
+
+- 警告とエラーが、**[出力]** ウィンドウにカウントされます。
+
+- 出力が、**[タスク一覧]** ウィンドウに表示されます。
+
+- **[出力]** ウィンドウの出力をクリックすると、該当するトピックが表示されます。
+
+- **[タスク一覧]** ウィンドウまたは **[出力]** ウィンドウでは、F1 キーの操作を使用できます。
+
+出力形式は、次のとおりです。
+
+> {<em>filename</em>**(**<em>line#</em> \[**,** <em>column#</em>]**)** &#124; *toolname*} **:** \[ <em>any text</em> ] {**error** &#124; **warning**} <em>code+number</em>**:**<em>localizable string</em> \[ <em>any text</em> ]
+
+この場合、
+
+- {*a* &#124; *b*} には、*a* または *b* を選択します。
+
+- \[<em>項目</em>] は任意の文字列またはパラメーターです。
+
+- **太字**はリテラルを表します。
+
+例:
+
+> C:\\*sourcefile.cpp*(134) : エラー C2143: 構文エラー: ';' が '}' の前にありません
+
+> LINK : 致命的なエラー LNK1104: '*somelib.lib*' を開くことができません。
+
+## <a name="see-also"></a>関連項目
+
+[カスタム ビルド ステップとビルド イベントについて](../ide/understanding-custom-build-steps-and-build-events.md)
