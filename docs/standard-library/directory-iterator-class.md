@@ -1,7 +1,7 @@
 ---
 title: directory_iterator クラス | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -35,24 +35,24 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_iterator::operator++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36cbf9e8d4ebdf62cbbfdc5a37ca1c49d7106a42
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 09970c0d3cf8771317c93670c0ec7f029e1ace2a
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105214"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691589"
 ---
 # <a name="directoryiterator-class"></a>directory_iterator クラス
 
-ディレクトリのファイル名を走査する入力反復子を表します。 反復子 X の場合、式 *X の結果は、ファイル名とそのステータスに関する既知の情報をラップする directory_entry クラスのオブジェクトになります。
+ディレクトリのファイル名を走査する入力反復子を表します。 反復子のため`X`、式`*X`クラスのオブジェクトを指す`directory_entry`ファイル名とその状態に関する既知の情報をラップします。
 
-クラスと呼ばれる、path 型のオブジェクトを格納する`mydir`、シーケンス処理するディレクトリの名前を表す説明のためには、ここで、型 directory_entry のオブジェクトと呼ばれる`myentry`ここでは、現在のファイル名を表しますディレクトリのシーケンス。 Directory_entry 型の既定で構築されるオブジェクトが、空`mydir`パス名をシーケンス末尾の反復子を表します。
+クラス型のオブジェクトを格納する`path`という`mydir`をシーケンス処理するディレクトリの名前を表す、説明のため、型のオブジェクトの`directory_entry`と呼ばれる`myentry`ここでは、現在を表しますディレクトリ シーケンス内のファイル名。 型の既定で構築されるオブジェクト`directory_entry`が空`mydir`パス名をシーケンス末尾の反復子を表します。
 
-たとえば、def と ghi のエントリを持つディレクトリ abc がある場合、次のコードは
+たとえば、ディレクトリを指定`abc`エントリを含む`def`と`ghi`コード。
 
 `for (directory_iterator next(path("abc")), end; next != end; ++next)     visit(next->path());`
 
-呼び出す`visit`引数 path("abc/def") と path("abc/ghi") を使用します。
+呼び出す`visit`引数`path("abc/def")`と`path("abc/ghi")`します。
 
 詳細およびコード例については、「[ファイル システムのナビゲーション (C++)](../standard-library/file-system-navigation.md)」を参照してください。
 
@@ -72,7 +72,7 @@ class directory_iterator;
 
 |メンバー関数|説明|
 |-|-|
-|[increment](#increment)|この関数は、ディレクトリ内の次のファイル名に進もうとします。|
+|[increment](#increment)|ディレクトリで次のファイル名に進もうとします。|
 
 ### <a name="operators"></a>演算子
 

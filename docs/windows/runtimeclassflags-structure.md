@@ -1,28 +1,30 @@
 ---
 title: RuntimeClassFlags 構造体 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/07/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::RuntimeClassFlags
+- implements/Microsoft::WRL::RuntimeClassFlags::value
 dev_langs:
 - C++
 helpviewer_keywords:
-- RuntimeClassFlags structure
+- Microsoft::WRL::RuntimeClassFlags structure
+- Microsoft::WRL::RuntimeClassFlags::value constant
 ms.assetid: 7098d605-bd14-4d51-82f4-3def8296a938
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f0a32fc373900af1a4322f4f2511c44417d2916a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6c3cb141576598aa39c718316048900622c4df41
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594275"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691459"
 ---
 # <a name="runtimeclassflags-structure"></a>RuntimeClassFlags 構造体
 
@@ -46,9 +48,9 @@ A [RuntimeClassType 列挙型](../windows/runtimeclasstype-enumeration.md)値。
 
 ### <a name="public-constants"></a>パブリック定数
 
-|name|説明|
+|名前|説明|
 |----------|-----------------|
-|[RuntimeClassFlags::value 定数](../windows/runtimeclassflags-value-constant.md)|含まれています、 [RuntimeClassType 列挙型](../windows/runtimeclasstype-enumeration.md)値。|
+|[RuntimeClassFlags::value 定数](#value-constant)|含まれています、 [RuntimeClassType 列挙型](../windows/runtimeclasstype-enumeration.md)値。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -60,6 +62,10 @@ A [RuntimeClassType 列挙型](../windows/runtimeclasstype-enumeration.md)値。
 
 **名前空間:** Microsoft::WRL
 
-## <a name="see-also"></a>関連項目
+## <a name="value-constant"></a>Runtimeclassflags::value 定数
 
-[Microsoft::WRL 名前空間](../windows/microsoft-wrl-namespace.md)
+含むフィールドを[RuntimeClassType 列挙型](../windows/runtimeclasstype-enumeration.md)値。
+  
+```cpp
+static const unsigned int value = flags;
+```

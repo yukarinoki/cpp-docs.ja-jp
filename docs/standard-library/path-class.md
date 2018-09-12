@@ -1,7 +1,7 @@
 ---
 title: path クラス | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4559bec84d7e6051155ad73f68a1ef8ae13ca6cc
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e47310a93a3901f072330a57619c2655aefb7ff5
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104161"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691511"
 ---
 # <a name="path-class"></a>path クラス
 
-**path** クラスとは、string\_type 型のオブジェクトを格納するクラスであり、パス名としての使用に適したクラスです。ここでは、このオブジェクトに myname という名前を付けて説明を進めます。 string\_type は、basic\_string\<value_type> のシノニムです。この value\_type は、Windows では char のシノニムになり、Posix では wchar_t のシノニムになります。
+**パス**クラス型のオブジェクトを格納する`string_type`という`myname`パス名として使用するための適切な説明の目的でここをクリックします。 `string_type` シノニムです`basic_string<value_type>`ここで、`value_type`のシノニムです**char** Windows 下または**wchar_t** Posix の下。
 
 詳細およびコード例については、[ファイル システムのナビゲーション (C++)](../standard-library/file-system-navigation.md) に関する記事を参照してください。
 
@@ -443,7 +443,7 @@ class iterator
 
 ## <a name="make_preferred"></a> path::make_preferred
 
-必要に応じて preferred_separator に各区切り記号に変換します。
+各区切り記号を変換、`preferred_separator`に応じて。
 
 ```cpp
 path& make_preferred();
@@ -529,7 +529,7 @@ path& operator+=(Elem elem);
 
 1. `concat(source);`
 
-1. `concat(path(basic_string\<Elem>(1, elem)));`
+1. `concat(path(basic_string<Elem>(1, elem)));`
 
 ## <a name="op_divide"></a> path::operator/=
 
@@ -576,7 +576,7 @@ path parent_path() const;
 
 ### <a name="remarks"></a>Remarks
 
-親のパス コンポーネントを返します`myname`、具体的には、プレフィックス`myname`を削除した後`filename().native()`と、直前のディレクトリの区切り記号。 (同様に場合、`begin() != end()`は [begin(), --end() operator/= を連続して適用しています範囲内のすべての要素の組み合わせ)。このコンポーネントは、空になることもあります。
+親のパス コンポーネントを返します`myname`、具体的には、プレフィックス`myname`を削除した後`filename().native()`と、直前のディレクトリの区切り記号。 (同様に場合、 `begin() != end()`、範囲内のすべての要素の結合は`[begin(), --end())`連続して適用することで`operator/=`)。このコンポーネントは、空になることもあります。
 
 ## <a name="path"></a> path::path
 
@@ -687,7 +687,7 @@ path& replace_extension(const path& newext = path());
 
 ### <a name="remarks"></a>Remarks
 
-最初に、サフィックスを削除`extension().native()`から`myname`します。 場合、 `!newext.empty() && newext[0] != dot` (場所`dot`は`*path(".").c_str()`)、し`dot`に追加される`myname`します。 `newext`に追加される`myname`します。
+最初に、サフィックスを削除`extension().native()`から`myname`します。 場合、 `!newext.empty() && newext[0] != dot` (場所`dot`は`*path(".").c_str()`)、し`dot`に追加される`myname`します。 *Newext*に追加される`myname`します。
 
 ## <a name="replace_filename"></a> path::replace_filename
 
@@ -747,7 +747,7 @@ path root_path() const;
 
 ### <a name="remarks"></a>Remarks
 
-ルート パス コンポーネントを返します`myname`、具体的には、root_name() または root_directory します。 このコンポーネントは、空になることもあります。
+ルート パス コンポーネントを返します`myname`、特に`root_name()`  / `root_directory`します。 このコンポーネントは、空になることもあります。
 
 ## <a name="stem"></a> path::stem
 
@@ -773,7 +773,7 @@ string string() const;
 
 ### <a name="remarks"></a>Remarks
 
-最初の (テンプレート) メンバー関数は、mypath に格納されているシーケンスを次と同じ方法で変換します。
+最初の (テンプレート) メンバー関数が格納されているシーケンスに変換します`mypath`と同じ方法。
 
 1. `string<char, Traits, Alloc>()` の `string()`
 
@@ -783,7 +783,7 @@ string string() const;
 
 1. `string<char32_t, Traits, Alloc>()` の `u32string()`
 
-2 番目のメンバー関数が格納されているシーケンスに変換します`mypath`ホスト システムに適した char シーケンスを返しますが文字列型のオブジェクトに格納されていることをエンコーディングします。
+2 番目のメンバー関数が格納されているシーケンスに変換します`mypath`をホスト システムに適したエンコーディングを**char**シーケンスと型のオブジェクトに格納されていることを返します。`string`します。
 
 ## <a name="string_type"></a> path::string_type
 
@@ -827,7 +827,7 @@ string u8string() const;
 
 ## <a name="value_type"></a> path::value_type
 
-この型は、ホスト オペレーティング システムに適したパス要素を表します。
+型について説明します、`path`をホスト オペレーティング システムの要素。
 
 ```cpp
 #if _WIN32_C_LIB
@@ -839,7 +839,7 @@ typedef char value_type;
 
 ## <a name="wstring"></a> path::wstring
 
-格納されているシーケンスに変換します`mypath`をホスト システムに適したエンコーディングを`wchar_t`シーケンスと型のオブジェクトに格納されていることを返します。`wstring`します。
+格納されているシーケンスに変換します`mypath`をホスト システムに適したエンコーディングを**wchar_t**シーケンスと型のオブジェクトに格納されていることを返します。`wstring`します。
 
 ```cpp
 wstring wstring() const;

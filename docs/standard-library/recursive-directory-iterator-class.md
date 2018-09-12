@@ -1,7 +1,7 @@
 ---
 title: recursive_directory_iterator クラス | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82df045c5a41767093e690ec35ffeb3d81032474
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 0d3765f57ee299a70a54e3b69dbaee0e0687a64c
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110657"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691654"
 ---
 # <a name="recursivedirectoryiterator-class"></a>recursive_directory_iterator クラス
 
@@ -41,7 +41,7 @@ class recursive_directory_iterator;
 
 1. 型のオブジェクト`directory_entry`と呼ばれる`myentry`ここでは、ディレクトリ シーケンス内の現在のファイル名を表します
 
-1. 型のオブジェクト`bool`という`no_push`ここでは、サブディレクトリへの再帰ディセントが無効になっているかどうかを記録します。
+1. 型のオブジェクト**bool**という`no_push`ここでは、サブディレクトリへの再帰ディセントが無効になっているかどうかを記録します。
 
 1. 型のオブジェクト`directory_options`という`myoptions`ここでは、構築時に設定されたオプションを記録します。
 
