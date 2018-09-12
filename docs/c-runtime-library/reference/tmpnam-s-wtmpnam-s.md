@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8c6298c7b66c8967a4e5e23a37c3614edcddf3d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2c5272f662580eff92e9ec15860b978ab739e613
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415527"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691602"
 ---
 # <a name="tmpnams-wtmpnams"></a>tmpnam_s、_wtmpnam_s
 
@@ -90,17 +90,17 @@ errno_t _wtmpnam_s(
 |-|-|-|-|
 |*str*|*sizeInChars*|**戻り値**|**内容***str* |
 |**NULL**|任意|**EINVAL**|変更されない|
-|いない**NULL** (有効なメモリが指す)|短すぎる|**ERANGE**|変更されない|
+|いない**NULL** (有効なメモリを指す)|短すぎる|**ERANGE**|変更されない|
 
-場合*str*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**返す**EINVAL**です。
+場合*str*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**戻って**EINVAL**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-これらの各関数は、現在存在しないファイルの名前を返します。 **tmpnam_s**名を返します。 現在の作業ディレクトリ内で一意です。 ファイル名の前に円記号が付いていてパス情報がない場合 (\fname21 など)、その名前は現在の作業ディレクトリに対して有効なので注意してください。
+これらの各関数は、現在存在しないファイルの名前を返します。 **tmpnam_s**によって返される指定された Windows 一時ディレクトリに一意の名前を[GetTempPathW](/windows/desktop/api/fileapi/nf-fileapi-gettemppathw)します。 ファイル名の前に円記号が付いていてパス情報がない場合 (\fname21 など)、その名前は現在の作業ディレクトリに対して有効なので注意してください。
 
-**Tmpnam_s**でこの生成されたファイル名を格納する*str*です。 によって返される文字列の最大長**tmpnam_s**は**L_tmpnam_s**STDIO で定義されている。H. 場合*str*は**NULL**、し**tmpnam_s**内部の静的バッファーに、結果を残します。 したがって後続の呼び出しは、この値を破棄します。 によって生成された名前**tmpnam_s**プログラムで生成されたファイル名と後の最初の呼び出しで構成されています**tmpnam_s**、基本 32 の連続する番号のファイル拡張子 (.1 .1vvvvvu、when **TMP_MAX_S** STDIO にします。H は**INT_MAX**)。
+**Tmpnam_s**では、この生成されたファイル名を格納する*str*します。 によって返される文字列の最大長**tmpnam_s**は**L_tmpnam_s**STDIO で定義されている。H. 場合*str*は**NULL**、し**tmpnam_s**内部の静的バッファーに結果を残します。 したがって後続の呼び出しは、この値を破棄します。 によって生成された名前**tmpnam_s**プログラムで生成されたファイル名と最初の呼び出し後**tmpnam_s**、base 32 で連番のファイル拡張子 (.1 .1vvvvvu、when **TMP_MAX_S** STDIO でします。H は**INT_MAX**)。
 
-**tmpnam_s** OEM コード ページに基づいてマルチバイト文字のシーケンスを認識し、必要に応じてハンドル マルチバイト文字の文字列の引数が、オペレーティング システムから自動的に取得します。 **_wtmpnam_s**のワイド文字バージョンは、 **tmpnam_s**; の引数と戻り値 **_wtmpnam_s**ワイド文字列です。 **_wtmpnam_s**と**tmpnam_s**という点以外の動作は同じ **_wtmpnam_s**マルチバイト文字の文字列を処理しません。
+**tmpnam_s** OEM コード ページに従ってマルチバイト文字シーケンスを認識し、必要に応じてハンドル マルチバイト文字の文字列の引数が、オペレーティング システムから自動的に取得します。 **_wtmpnam_s**のワイド文字バージョンは、 **tmpnam_s**; の引数と戻り値 **_wtmpnam_s**はワイド文字列です。 **_wtmpnam_s**と**tmpnam_s**動作は同じことを除いて **_wtmpnam_s**マルチバイト文字の文字列を処理しません。
 
 C++ では、テンプレートのオーバーロードによってこれらの関数を簡単に使用できます。オーバーロードでは、バッファー長を自動的に推論できるため、サイズ引数を指定する必要がなくなります。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -112,7 +112,7 @@ C++ では、テンプレートのオーバーロードによってこれらの�
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**tmpnam_s**|\<stdio.h>|
 |**_wtmpnam_s**|\<stdio.h> または \<wchar.h>|
@@ -150,6 +150,24 @@ int main( void )
       }
    }
 }
+```
+
+```Output
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.0 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.1 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.2 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.3 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.4 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.5 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.6 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.7 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.8 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.9 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.a is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.b is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.c is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.d is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.e is safe to use as a temporary file.
 ```
 
 ## <a name="see-also"></a>関連項目

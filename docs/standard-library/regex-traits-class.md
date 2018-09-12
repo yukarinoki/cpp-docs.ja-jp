@@ -1,7 +1,7 @@
 ---
 title: regex_traits クラス | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab9674ffafbf6563f566778d11991f8aa95c44d8
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 747737125a54ab67f042d286074414d8b4a1e878
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106471"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691576"
 ---
 # <a name="regextraits-class"></a>regex_traits クラス
 
@@ -63,34 +63,10 @@ ms.locfileid: "44106471"
 
 ```cpp
 template<class Elem>
-class regex_traits {
-public:
-   typedef Elem char_type;
-   typedef size_t size_type;
-   typedef basic_string<Elem> string_type;
-   typedef locale locale_type;
-   typedef ctype_base::mask char_class_type;
-
-   regex_traits();
-   static size_type length(const char_type *str);
-   char_type translate(char_type ch) const;
-   char_type translate_nocase(char_type ch) const;
-   template <class FwdIt>
-   string_type transform(FwdIt first, FwdIt last) const;
-   template <class FwdIt>
-   string_type transform_primary(FwdIt first, FwdIt last) const;
-   template <class FwdIt>
-   char_class_type lookup_classname(FwdIt first, FwdIt last) const;
-   template <class FwdIt>
-   string_type lookup_collatename(FwdIt first, FwdIt last) const;
-   bool isctype(char_type ch, char_class_type cls) const;
-   int value(char_type ch, int base) const;
-   locale_type imbue(locale_type loc);
-   locale_type getloc() const;
-};
+class regex_traits 
 ```
 
-### <a name="parameters"></a>パラメーター
+## <a name="parameters"></a>パラメーター
 
 *Elem*<br/>
 記述する文字要素の型。
@@ -101,11 +77,113 @@ public:
 
 各 `regex_traits` オブジェクトは、そのオブジェクトの一部のメンバー関数が使用する `regex_traits::locale` 型のオブジェクトを保持します。 既定のロケールは、 `regex_traits::locale()`のコピーです。 メンバー関数 `imbue` は、ロケール オブジェクトを置き換えます。また、メンバー関数 `getloc` は、ロケール オブジェクトのコピーを返します。
 
+### <a name="constructors"></a>コンストラクター
+
+|コンストラクター|説明|
+|-|-|
+|[regex_traits](#regex_traits)|オブジェクトを構築します。|
+
+### <a name="typedefs"></a>Typedefs
+
+|型名|説明|
+|-|-|
+|[char_class_type](#char_class_type)|文字クラス指定子の型。|
+|[char_type](#char_type)|要素の型。|
+|[locale_type](#locale_type)|格納されているロケール オブジェクトの型。|
+|[size_type](#size_type)|シーケンスの長さの型。|
+|[string_type](#string_type)|要素の文字列の型。|
+
+### <a name="member-functions"></a>メンバー関数
+
+|メンバー関数|説明|
+|-|-|
+|[getloc](#getloc)|格納されているロケール オブジェクトを返します。|
+|[imbue](#imbue)|格納されているロケール オブジェクトを変更します。|
+|[isctype](#isctype)|クラスのメンバーシップをテストします。|
+|[length](#length)|Null で終わるシーケンスの長さを返します。|
+|[lookup_classname](#lookup_classname)|シーケンスを文字クラスにマップします。|
+|[lookup_collatename](#lookup_collatename)|シーケンスを照合要素にマップします。|
+|[transform](#transform)|同等の順序付けられたシーケンスに変換します。|
+|[transform_primary](#transform_primary)|同等のケースレス順序付きシーケンスに変換します。|
+|[翻訳](#translate)|一致する同等の要素に変換します。|
+|[translate_nocase](#translate_nocase)|一致する同等のケースレス要素に変換します。|
+|[value](#value)|要素を数値に変換します。|
+
 ## <a name="requirements"></a>要件
 
 **ヘッダー:** \<regex>
 
 **名前空間:** std
+
+## <a name="example"></a>例
+
+```cpp
+// std__regex__regex_traits.cpp
+// compile with: /EHsc
+#include <regex>
+#include <iostream>
+
+typedef std::regex_traits<char> Mytr;
+int main()
+    {
+    Mytr tr;
+
+    Mytr::char_type ch = tr.translate('a');
+    std::cout << "translate('a') == 'a' == " << std::boolalpha
+        << (ch == 'a') << std::endl;
+
+    std::cout << "nocase 'a' == 'A' == " << std::boolalpha
+        << (tr.translate_nocase('a') == tr.translate_nocase('A'))
+        << std::endl;
+
+    const char *lbegin = "abc";
+    const char *lend = lbegin + strlen(lbegin);
+    Mytr::size_type size = tr.length(lbegin);
+    std::cout << "length(\"abc\") == " << size <<std::endl;
+
+    Mytr::string_type str = tr.transform(lbegin, lend);
+    std::cout << "transform(\"abc\") < \"abc\" == " << std::boolalpha
+        << (str < "abc") << std::endl;
+
+    const char *ubegin = "ABC";
+    const char *uend = ubegin + strlen(ubegin);
+    std::cout << "primary \"ABC\" < \"abc\" == " << std::boolalpha
+        << (tr.transform_primary(ubegin, uend) <
+            tr.transform_primary(lbegin, lend))
+        << std::endl;
+
+    const char *dig = "digit";
+    Mytr::char_class_type cl = tr.lookup_classname(dig, dig + 5);
+    std::cout << "class digit == d == " << std::boolalpha
+        << (cl == tr.lookup_classname(dig, dig + 1))
+        << std::endl;
+
+    std::cout << "'3' is digit == " <<std::boolalpha
+        << tr.isctype('3', tr.lookup_classname(dig, dig + 5))
+        << std::endl;
+
+    std::cout << "hex C == " << tr.value('C', 16) << std::endl;
+
+// other members
+    str = tr.lookup_collatename(dig, dig + 5);
+
+    Mytr::locale_type loc = tr.getloc();
+    tr.imbue(loc);
+
+    return (0);
+    }
+```
+
+```Output
+translate('a') == 'a' == true
+nocase 'a' == 'A' == true
+length("abc") == 3
+transform("abc") < "abc" == false
+primary "ABC" < "abc" == false
+class digit == d == true
+'3' is digit == true
+hex C == 12
+```
 
 ## <a name="char_class_type"></a>  regex_traits::char_class_type
 
@@ -119,77 +197,6 @@ typedef T8 char_class_type;
 
 この型は、文字クラスを指定する未指定の型のシノニムです。 この型の値は、 `|` 演算子で連結して、オペランドで指定されたクラスの共用体である文字クラスを指定することができます。
 
-### <a name="example"></a>例
-
-```cpp
-// std__regex__regex_traits_char_class_type.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_traits<char> Mytr;
-int main()
-    {
-    Mytr tr;
-
-    Mytr::char_type ch = tr.translate('a');
-    std::cout << "translate('a') == 'a' == " << std::boolalpha
-        << (ch == 'a') << std::endl;
-
-    std::cout << "nocase 'a' == 'A' == " << std::boolalpha
-        << (tr.translate_nocase('a') == tr.translate_nocase('A'))
-        << std::endl;
-
-    const char *lbegin = "abc";
-    const char *lend = lbegin + strlen(lbegin);
-    Mytr::size_type size = tr.length(lbegin);
-    std::cout << "length(\"abc\") == " << size <<std::endl;
-
-    Mytr::string_type str = tr.transform(lbegin, lend);
-    std::cout << "transform(\"abc\") < \"abc\" == " << std::boolalpha
-        << (str < "abc") << std::endl;
-
-    const char *ubegin = "ABC";
-    const char *uend = ubegin + strlen(ubegin);
-    std::cout << "primary \"ABC\" < \"abc\" == " << std::boolalpha
-        << (tr.transform_primary(ubegin, uend) <
-            tr.transform_primary(lbegin, lend))
-        << std::endl;
-
-    const char *dig = "digit";
-    Mytr::char_class_type cl = tr.lookup_classname(dig, dig + 5);
-    std::cout << "class digit == d == " << std::boolalpha
-        << (cl == tr.lookup_classname(dig, dig + 1))
-        << std::endl;
-
-    std::cout << "'3' is digit == " <<std::boolalpha
-        << tr.isctype('3', tr.lookup_classname(dig, dig + 5))
-        << std::endl;
-
-    std::cout << "hex C == " << tr.value('C', 16) << std::endl;
-
-// other members
-    str = tr.lookup_collatename(dig, dig + 5);
-
-    Mytr::locale_type loc = tr.getloc();
-    tr.imbue(loc);
-
-    return (0);
-    }
-
-```
-
-```Output
-translate('a') == 'a' == true
-nocase 'a' == 'A' == true
-length("abc") == 3
-transform("abc") < "abc" == false
-primary "ABC" < "abc" == false
-class digit == d == true
-'3' is digit == true
-hex C == 12
-```
-
 ## <a name="char_type"></a>  regex_traits::char_type
 
 要素の型。
@@ -202,77 +209,6 @@ typedef Elem char_type;
 
 この typedef は、テンプレート引数 `Elem` のシノニムです。
 
-### <a name="example"></a>例
-
-```cpp
-// std__regex__regex_traits_char_type.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_traits<char> Mytr;
-int main()
-    {
-    Mytr tr;
-
-    Mytr::char_type ch = tr.translate('a');
-    std::cout << "translate('a') == 'a' == " << std::boolalpha
-        << (ch == 'a') << std::endl;
-
-    std::cout << "nocase 'a' == 'A' == " << std::boolalpha
-        << (tr.translate_nocase('a') == tr.translate_nocase('A'))
-        << std::endl;
-
-    const char *lbegin = "abc";
-    const char *lend = lbegin + strlen(lbegin);
-    Mytr::size_type size = tr.length(lbegin);
-    std::cout << "length(\"abc\") == " << size <<std::endl;
-
-    Mytr::string_type str = tr.transform(lbegin, lend);
-    std::cout << "transform(\"abc\") < \"abc\" == " << std::boolalpha
-        << (str < "abc") << std::endl;
-
-    const char *ubegin = "ABC";
-    const char *uend = ubegin + strlen(ubegin);
-    std::cout << "primary \"ABC\" < \"abc\" == " << std::boolalpha
-        << (tr.transform_primary(ubegin, uend) <
-            tr.transform_primary(lbegin, lend))
-        << std::endl;
-
-    const char *dig = "digit";
-    Mytr::char_class_type cl = tr.lookup_classname(dig, dig + 5);
-    std::cout << "class digit == d == " << std::boolalpha
-        << (cl == tr.lookup_classname(dig, dig + 1))
-        << std::endl;
-
-    std::cout << "'3' is digit == " <<std::boolalpha
-        << tr.isctype('3', tr.lookup_classname(dig, dig + 5))
-        << std::endl;
-
-    std::cout << "hex C == " << tr.value('C', 16) << std::endl;
-
-// other members
-    str = tr.lookup_collatename(dig, dig + 5);
-
-    Mytr::locale_type loc = tr.getloc();
-    tr.imbue(loc);
-
-    return (0);
-    }
-
-```
-
-```Output
-translate('a') == 'a' == true
-nocase 'a' == 'A' == true
-length("abc") == 3
-transform("abc") < "abc" == false
-primary "ABC" < "abc" == false
-class digit == d == true
-'3' is digit == true
-hex C == 12
-```
-
 ## <a name="getloc"></a>  regex_traits::getloc
 
 格納されているロケール オブジェクトを返します。
@@ -284,77 +220,6 @@ locale_type getloc() const;
 ### <a name="remarks"></a>Remarks
 
 メンバー関数は、格納されている `locale` オブジェクトを返します。
-
-### <a name="example"></a>例
-
-```cpp
-// std__regex__regex_traits_getloc.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_traits<char> Mytr;
-int main()
-    {
-    Mytr tr;
-
-    Mytr::char_type ch = tr.translate('a');
-    std::cout << "translate('a') == 'a' == " << std::boolalpha
-        << (ch == 'a') << std::endl;
-
-    std::cout << "nocase 'a' == 'A' == " << std::boolalpha
-        << (tr.translate_nocase('a') == tr.translate_nocase('A'))
-        << std::endl;
-
-    const char *lbegin = "abc";
-    const char *lend = lbegin + strlen(lbegin);
-    Mytr::size_type size = tr.length(lbegin);
-    std::cout << "length(\"abc\") == " << size <<std::endl;
-
-    Mytr::string_type str = tr.transform(lbegin, lend);
-    std::cout << "transform(\"abc\") < \"abc\" == " << std::boolalpha
-        << (str < "abc") << std::endl;
-
-    const char *ubegin = "ABC";
-    const char *uend = ubegin + strlen(ubegin);
-    std::cout << "primary \"ABC\" < \"abc\" == " << std::boolalpha
-        << (tr.transform_primary(ubegin, uend) <
-            tr.transform_primary(lbegin, lend))
-        << std::endl;
-
-    const char *dig = "digit";
-    Mytr::char_class_type cl = tr.lookup_classname(dig, dig + 5);
-    std::cout << "class digit == d == " << std::boolalpha
-        << (cl == tr.lookup_classname(dig, dig + 1))
-        << std::endl;
-
-    std::cout << "'3' is digit == " <<std::boolalpha
-        << tr.isctype('3', tr.lookup_classname(dig, dig + 5))
-        << std::endl;
-
-    std::cout << "hex C == " << tr.value('C', 16) << std::endl;
-
-// other members
-    str = tr.lookup_collatename(dig, dig + 5);
-
-    Mytr::locale_type loc = tr.getloc();
-    tr.imbue(loc);
-
-    return (0);
-    }
-
-```
-
-```Output
-translate('a') == 'a' == true
-nocase 'a' == 'A' == true
-length("abc") == 3
-transform("abc") < "abc" == false
-primary "ABC" < "abc" == false
-class digit == d == true
-'3' is digit == true
-hex C == 12
-```
 
 ## <a name="imbue"></a>  regex_traits::imbue
 
@@ -372,77 +237,6 @@ locale_type imbue(locale_type loc);
 ### <a name="remarks"></a>Remarks
 
 メンバー関数のコピー *loc*に格納されている`locale`オブジェクトし、格納されているは、前の値のコピーを返します`locale`オブジェクト。
-
-### <a name="example"></a>例
-
-```cpp
-// std__regex__regex_traits_imbue.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_traits<char> Mytr;
-int main()
-    {
-    Mytr tr;
-
-    Mytr::char_type ch = tr.translate('a');
-    std::cout << "translate('a') == 'a' == " << std::boolalpha
-        << (ch == 'a') << std::endl;
-
-    std::cout << "nocase 'a' == 'A' == " << std::boolalpha
-        << (tr.translate_nocase('a') == tr.translate_nocase('A'))
-        << std::endl;
-
-    const char *lbegin = "abc";
-    const char *lend = lbegin + strlen(lbegin);
-    Mytr::size_type size = tr.length(lbegin);
-    std::cout << "length(\"abc\") == " << size <<std::endl;
-
-    Mytr::string_type str = tr.transform(lbegin, lend);
-    std::cout << "transform(\"abc\") < \"abc\" == " << std::boolalpha
-        << (str < "abc") << std::endl;
-
-    const char *ubegin = "ABC";
-    const char *uend = ubegin + strlen(ubegin);
-    std::cout << "primary \"ABC\" < \"abc\" == " << std::boolalpha
-        << (tr.transform_primary(ubegin, uend) <
-            tr.transform_primary(lbegin, lend))
-        << std::endl;
-
-    const char *dig = "digit";
-    Mytr::char_class_type cl = tr.lookup_classname(dig, dig + 5);
-    std::cout << "class digit == d == " << std::boolalpha
-        << (cl == tr.lookup_classname(dig, dig + 1))
-        << std::endl;
-
-    std::cout << "'3' is digit == " <<std::boolalpha
-        << tr.isctype('3', tr.lookup_classname(dig, dig + 5))
-        << std::endl;
-
-    std::cout << "hex C == " << tr.value('C', 16) << std::endl;
-
-// other members
-    str = tr.lookup_collatename(dig, dig + 5);
-
-    Mytr::locale_type loc = tr.getloc();
-    tr.imbue(loc);
-
-    return (0);
-    }
-
-```
-
-```Output
-translate('a') == 'a' == true
-nocase 'a' == 'A' == true
-length("abc") == 3
-transform("abc") < "abc" == false
-primary "ABC" < "abc" == false
-class digit == d == true
-'3' is digit == true
-hex C == 12
-```
 
 ## <a name="isctype"></a>  regex_traits::isctype
 
@@ -464,77 +258,6 @@ bool isctype(char_type ch, char_class_type cls) const;
 
 場合にのみ、メンバー関数は true を返します文字*ch*によって指定された文字クラスでは、 *cls*します。
 
-### <a name="example"></a>例
-
-```cpp
-// std__regex__regex_traits_isctype.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_traits<char> Mytr;
-int main()
-    {
-    Mytr tr;
-
-    Mytr::char_type ch = tr.translate('a');
-    std::cout << "translate('a') == 'a' == " << std::boolalpha
-        << (ch == 'a') << std::endl;
-
-    std::cout << "nocase 'a' == 'A' == " << std::boolalpha
-        << (tr.translate_nocase('a') == tr.translate_nocase('A'))
-        << std::endl;
-
-    const char *lbegin = "abc";
-    const char *lend = lbegin + strlen(lbegin);
-    Mytr::size_type size = tr.length(lbegin);
-    std::cout << "length(\"abc\") == " << size <<std::endl;
-
-    Mytr::string_type str = tr.transform(lbegin, lend);
-    std::cout << "transform(\"abc\") < \"abc\" == " << std::boolalpha
-        << (str < "abc") << std::endl;
-
-    const char *ubegin = "ABC";
-    const char *uend = ubegin + strlen(ubegin);
-    std::cout << "primary \"ABC\" < \"abc\" == " << std::boolalpha
-        << (tr.transform_primary(ubegin, uend) <
-            tr.transform_primary(lbegin, lend))
-        << std::endl;
-
-    const char *dig = "digit";
-    Mytr::char_class_type cl = tr.lookup_classname(dig, dig + 5);
-    std::cout << "class digit == d == " << std::boolalpha
-        << (cl == tr.lookup_classname(dig, dig + 1))
-        << std::endl;
-
-    std::cout << "'3' is digit == " <<std::boolalpha
-        << tr.isctype('3', tr.lookup_classname(dig, dig + 5))
-        << std::endl;
-
-    std::cout << "hex C == " << tr.value('C', 16) << std::endl;
-
-// other members
-    str = tr.lookup_collatename(dig, dig + 5);
-
-    Mytr::locale_type loc = tr.getloc();
-    tr.imbue(loc);
-
-    return (0);
-    }
-
-```
-
-```Output
-translate('a') == 'a' == true
-nocase 'a' == 'A' == true
-length("abc") == 3
-transform("abc") < "abc" == false
-primary "ABC" < "abc" == false
-class digit == d == true
-'3' is digit == true
-hex C == 12
-```
-
 ## <a name="length"></a>  regex_traits::length
 
 Null で終わるシーケンスの長さを返します。
@@ -553,77 +276,6 @@ Null 終端シーケンス。
 
 この静的メンバー関数は `std::char_traits<char_type>::length(str)`を返します。
 
-### <a name="example"></a>例
-
-```cpp
-// std__regex__regex_traits_length.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_traits<char> Mytr;
-int main()
-    {
-    Mytr tr;
-
-    Mytr::char_type ch = tr.translate('a');
-    std::cout << "translate('a') == 'a' == " << std::boolalpha
-        << (ch == 'a') << std::endl;
-
-    std::cout << "nocase 'a' == 'A' == " << std::boolalpha
-        << (tr.translate_nocase('a') == tr.translate_nocase('A'))
-        << std::endl;
-
-    const char *lbegin = "abc";
-    const char *lend = lbegin + strlen(lbegin);
-    Mytr::size_type size = tr.length(lbegin);
-    std::cout << "length(\"abc\") == " << size <<std::endl;
-
-    Mytr::string_type str = tr.transform(lbegin, lend);
-    std::cout << "transform(\"abc\") < \"abc\" == " << std::boolalpha
-        << (str < "abc") << std::endl;
-
-    const char *ubegin = "ABC";
-    const char *uend = ubegin + strlen(ubegin);
-    std::cout << "primary \"ABC\" < \"abc\" == " << std::boolalpha
-        << (tr.transform_primary(ubegin, uend) <
-            tr.transform_primary(lbegin, lend))
-        << std::endl;
-
-    const char *dig = "digit";
-    Mytr::char_class_type cl = tr.lookup_classname(dig, dig + 5);
-    std::cout << "class digit == d == " << std::boolalpha
-        << (cl == tr.lookup_classname(dig, dig + 1))
-        << std::endl;
-
-    std::cout << "'3' is digit == " <<std::boolalpha
-        << tr.isctype('3', tr.lookup_classname(dig, dig + 5))
-        << std::endl;
-
-    std::cout << "hex C == " << tr.value('C', 16) << std::endl;
-
-// other members
-    str = tr.lookup_collatename(dig, dig + 5);
-
-    Mytr::locale_type loc = tr.getloc();
-    tr.imbue(loc);
-
-    return (0);
-    }
-
-```
-
-```Output
-translate('a') == 'a' == true
-nocase 'a' == 'A' == true
-length("abc") == 3
-transform("abc") < "abc" == false
-primary "ABC" < "abc" == false
-class digit == d == true
-'3' is digit == true
-hex C == 12
-```
-
 ## <a name="locale_type"></a>  regex_traits::locale_type
 
 格納されているロケール オブジェクトの型。
@@ -634,78 +286,7 @@ typedef T7 locale_type;
 
 ### <a name="remarks"></a>Remarks
 
-typedef は、ロケールをカプセル化する型の同意語です。 特化された型である `regex_traits<char>` と `regex_traits<wchar_t>` では、 `std::locale`の同意語です。
-
-### <a name="example"></a>例
-
-```cpp
-// std__regex__regex_traits_locale_type.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_traits<char> Mytr;
-int main()
-    {
-    Mytr tr;
-
-    Mytr::char_type ch = tr.translate('a');
-    std::cout << "translate('a') == 'a' == " << std::boolalpha
-        << (ch == 'a') << std::endl;
-
-    std::cout << "nocase 'a' == 'A' == " << std::boolalpha
-        << (tr.translate_nocase('a') == tr.translate_nocase('A'))
-        << std::endl;
-
-    const char *lbegin = "abc";
-    const char *lend = lbegin + strlen(lbegin);
-    Mytr::size_type size = tr.length(lbegin);
-    std::cout << "length(\"abc\") == " << size <<std::endl;
-
-    Mytr::string_type str = tr.transform(lbegin, lend);
-    std::cout << "transform(\"abc\") < \"abc\" == " << std::boolalpha
-        << (str < "abc") << std::endl;
-
-    const char *ubegin = "ABC";
-    const char *uend = ubegin + strlen(ubegin);
-    std::cout << "primary \"ABC\" < \"abc\" == " << std::boolalpha
-        << (tr.transform_primary(ubegin, uend) <
-            tr.transform_primary(lbegin, lend))
-        << std::endl;
-
-    const char *dig = "digit";
-    Mytr::char_class_type cl = tr.lookup_classname(dig, dig + 5);
-    std::cout << "class digit == d == " << std::boolalpha
-        << (cl == tr.lookup_classname(dig, dig + 1))
-        << std::endl;
-
-    std::cout << "'3' is digit == " <<std::boolalpha
-        << tr.isctype('3', tr.lookup_classname(dig, dig + 5))
-        << std::endl;
-
-    std::cout << "hex C == " << tr.value('C', 16) << std::endl;
-
-// other members
-    str = tr.lookup_collatename(dig, dig + 5);
-
-    Mytr::locale_type loc = tr.getloc();
-    tr.imbue(loc);
-
-    return (0);
-    }
-
-```
-
-```Output
-translate('a') == 'a' == true
-nocase 'a' == 'A' == true
-length("abc") == 3
-transform("abc") < "abc" == false
-primary "ABC" < "abc" == false
-class digit == d == true
-'3' is digit == true
-hex C == 12
-```
+typedef は、ロケールをカプセル化する型の同意語です。 特化された型である `regex_traits<char>` と `regex_traits<wchar_t>` では、`std::locale` の同意語です。
 
 ## <a name="lookup_classname"></a>  regex_traits::lookup_classname
 
@@ -732,77 +313,6 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 
 特殊化した`regex_traits<wchar_t>` は、大文字と小文字の区別に関係なく、各種の名前 (`L"d"`、`L"s"`、`L"w"`、`L"alnum"`、`L"alpha"`、`L"blank"`、`L"cntrl"`、`L"digit"`、`L"graph"`、`L"lower"`、`L"print"`、`L"punct"`、`L"space"`、`L"upper"`、`L"xdigit"` など) を認識します。
 
-### <a name="example"></a>例
-
-```cpp
-// std__regex__regex_traits_lookup_classname.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_traits<char> Mytr;
-int main()
-    {
-    Mytr tr;
-
-    Mytr::char_type ch = tr.translate('a');
-    std::cout << "translate('a') == 'a' == " << std::boolalpha
-        << (ch == 'a') << std::endl;
-
-    std::cout << "nocase 'a' == 'A' == " << std::boolalpha
-        << (tr.translate_nocase('a') == tr.translate_nocase('A'))
-        << std::endl;
-
-    const char *lbegin = "abc";
-    const char *lend = lbegin + strlen(lbegin);
-    Mytr::size_type size = tr.length(lbegin);
-    std::cout << "length(\"abc\") == " << size <<std::endl;
-
-    Mytr::string_type str = tr.transform(lbegin, lend);
-    std::cout << "transform(\"abc\") < \"abc\" == " << std::boolalpha
-        << (str < "abc") << std::endl;
-
-    const char *ubegin = "ABC";
-    const char *uend = ubegin + strlen(ubegin);
-    std::cout << "primary \"ABC\" < \"abc\" == " << std::boolalpha
-        << (tr.transform_primary(ubegin, uend) <
-            tr.transform_primary(lbegin, lend))
-        << std::endl;
-
-    const char *dig = "digit";
-    Mytr::char_class_type cl = tr.lookup_classname(dig, dig + 5);
-    std::cout << "class digit == d == " << std::boolalpha
-        << (cl == tr.lookup_classname(dig, dig + 1))
-        << std::endl;
-
-    std::cout << "'3' is digit == " <<std::boolalpha
-        << tr.isctype('3', tr.lookup_classname(dig, dig + 5))
-        << std::endl;
-
-    std::cout << "hex C == " << tr.value('C', 16) << std::endl;
-
-// other members
-    str = tr.lookup_collatename(dig, dig + 5);
-
-    Mytr::locale_type loc = tr.getloc();
-    tr.imbue(loc);
-
-    return (0);
-    }
-
-```
-
-```Output
-translate('a') == 'a' == true
-nocase 'a' == 'A' == true
-length("abc") == 3
-transform("abc") < "abc" == false
-primary "ABC" < "abc" == false
-class digit == d == true
-'3' is digit == true
-hex C == 12
-```
-
 ## <a name="lookup_collatename"></a>  regex_traits::lookup_collatename
 
 シーケンスを照合要素にマップします。
@@ -824,77 +334,6 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 
 このメンバー関数は、シーケンス `[first, last)` に対応する照合要素を含んだ文字列オブジェクトを返します。シーケンスが有効な照合要素でない場合は、空の文字列を返します。
 
-### <a name="example"></a>例
-
-```cpp
-// std__regex__regex_traits_lookup_collatename.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_traits<char> Mytr;
-int main()
-    {
-    Mytr tr;
-
-    Mytr::char_type ch = tr.translate('a');
-    std::cout << "translate('a') == 'a' == " << std::boolalpha
-        << (ch == 'a') << std::endl;
-
-    std::cout << "nocase 'a' == 'A' == " << std::boolalpha
-        << (tr.translate_nocase('a') == tr.translate_nocase('A'))
-        << std::endl;
-
-    const char *lbegin = "abc";
-    const char *lend = lbegin + strlen(lbegin);
-    Mytr::size_type size = tr.length(lbegin);
-    std::cout << "length(\"abc\") == " << size <<std::endl;
-
-    Mytr::string_type str = tr.transform(lbegin, lend);
-    std::cout << "transform(\"abc\") < \"abc\" == " << std::boolalpha
-        << (str < "abc") << std::endl;
-
-    const char *ubegin = "ABC";
-    const char *uend = ubegin + strlen(ubegin);
-    std::cout << "primary \"ABC\" < \"abc\" == " << std::boolalpha
-        << (tr.transform_primary(ubegin, uend) <
-            tr.transform_primary(lbegin, lend))
-        << std::endl;
-
-    const char *dig = "digit";
-    Mytr::char_class_type cl = tr.lookup_classname(dig, dig + 5);
-    std::cout << "class digit == d == " << std::boolalpha
-        << (cl == tr.lookup_classname(dig, dig + 1))
-        << std::endl;
-
-    std::cout << "'3' is digit == " <<std::boolalpha
-        << tr.isctype('3', tr.lookup_classname(dig, dig + 5))
-        << std::endl;
-
-    std::cout << "hex C == " << tr.value('C', 16) << std::endl;
-
-// other members
-    str = tr.lookup_collatename(dig, dig + 5);
-
-    Mytr::locale_type loc = tr.getloc();
-    tr.imbue(loc);
-
-    return (0);
-    }
-
-```
-
-```Output
-translate('a') == 'a' == true
-nocase 'a' == 'A' == true
-length("abc") == 3
-transform("abc") < "abc" == false
-primary "ABC" < "abc" == false
-class digit == d == true
-'3' is digit == true
-hex C == 12
-```
-
 ## <a name="regex_traits"></a>  regex_traits::regex_traits
 
 オブジェクトを構築します。
@@ -906,77 +345,6 @@ regex_traits();
 ### <a name="remarks"></a>Remarks
 
 コンストラクターは、格納された `locale` オブジェクトが既定ロケールに初期化されるオブジェクトを作成します。
-
-### <a name="example"></a>例
-
-```cpp
-// std__regex__regex_traits_construct.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_traits<char> Mytr;
-int main()
-    {
-    Mytr tr;
-
-    Mytr::char_type ch = tr.translate('a');
-    std::cout << "translate('a') == 'a' == " << std::boolalpha
-        << (ch == 'a') << std::endl;
-
-    std::cout << "nocase 'a' == 'A' == " << std::boolalpha
-        << (tr.translate_nocase('a') == tr.translate_nocase('A'))
-        << std::endl;
-
-    const char *lbegin = "abc";
-    const char *lend = lbegin + strlen(lbegin);
-    Mytr::size_type size = tr.length(lbegin);
-    std::cout << "length(\"abc\") == " << size <<std::endl;
-
-    Mytr::string_type str = tr.transform(lbegin, lend);
-    std::cout << "transform(\"abc\") < \"abc\" == " << std::boolalpha
-        << (str < "abc") << std::endl;
-
-    const char *ubegin = "ABC";
-    const char *uend = ubegin + strlen(ubegin);
-    std::cout << "primary \"ABC\" < \"abc\" == " << std::boolalpha
-        << (tr.transform_primary(ubegin, uend) <
-            tr.transform_primary(lbegin, lend))
-        << std::endl;
-
-    const char *dig = "digit";
-    Mytr::char_class_type cl = tr.lookup_classname(dig, dig + 5);
-    std::cout << "class digit == d == " << std::boolalpha
-        << (cl == tr.lookup_classname(dig, dig + 1))
-        << std::endl;
-
-    std::cout << "'3' is digit == " <<std::boolalpha
-        << tr.isctype('3', tr.lookup_classname(dig, dig + 5))
-        << std::endl;
-
-    std::cout << "hex C == " << tr.value('C', 16) << std::endl;
-
-// other members
-    str = tr.lookup_collatename(dig, dig + 5);
-
-    Mytr::locale_type loc = tr.getloc();
-    tr.imbue(loc);
-
-    return (0);
-    }
-
-```
-
-```Output
-translate('a') == 'a' == true
-nocase 'a' == 'A' == true
-length("abc") == 3
-transform("abc") < "abc" == false
-primary "ABC" < "abc" == false
-class digit == d == true
-'3' is digit == true
-hex C == 12
-```
 
 ## <a name="size_type"></a>  regex_traits::size_type
 
@@ -992,77 +360,6 @@ Typedef は符号なし整数型の同意語です。 特化された型であ�
 
 typedef は、`std::size_t` の同意語です。
 
-### <a name="example"></a>例
-
-```cpp
-// std__regex__regex_traits_size_type.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_traits<char> Mytr;
-int main()
-    {
-    Mytr tr;
-
-    Mytr::char_type ch = tr.translate('a');
-    std::cout << "translate('a') == 'a' == " << std::boolalpha
-        << (ch == 'a') << std::endl;
-
-    std::cout << "nocase 'a' == 'A' == " << std::boolalpha
-        << (tr.translate_nocase('a') == tr.translate_nocase('A'))
-        << std::endl;
-
-    const char *lbegin = "abc";
-    const char *lend = lbegin + strlen(lbegin);
-    Mytr::size_type size = tr.length(lbegin);
-    std::cout << "length(\"abc\") == " << size <<std::endl;
-
-    Mytr::string_type str = tr.transform(lbegin, lend);
-    std::cout << "transform(\"abc\") < \"abc\" == " << std::boolalpha
-        << (str < "abc") << std::endl;
-
-    const char *ubegin = "ABC";
-    const char *uend = ubegin + strlen(ubegin);
-    std::cout << "primary \"ABC\" < \"abc\" == " << std::boolalpha
-        << (tr.transform_primary(ubegin, uend) <
-            tr.transform_primary(lbegin, lend))
-        << std::endl;
-
-    const char *dig = "digit";
-    Mytr::char_class_type cl = tr.lookup_classname(dig, dig + 5);
-    std::cout << "class digit == d == " << std::boolalpha
-        << (cl == tr.lookup_classname(dig, dig + 1))
-        << std::endl;
-
-    std::cout << "'3' is digit == " <<std::boolalpha
-        << tr.isctype('3', tr.lookup_classname(dig, dig + 5))
-        << std::endl;
-
-    std::cout << "hex C == " << tr.value('C', 16) << std::endl;
-
-// other members
-    str = tr.lookup_collatename(dig, dig + 5);
-
-    Mytr::locale_type loc = tr.getloc();
-    tr.imbue(loc);
-
-    return (0);
-    }
-
-```
-
-```Output
-translate('a') == 'a' == true
-nocase 'a' == 'A' == true
-length("abc") == 3
-transform("abc") < "abc" == false
-primary "ABC" < "abc" == false
-class digit == d == true
-'3' is digit == true
-hex C == 12
-```
-
 ## <a name="string_type"></a>  regex_traits::string_type
 
 要素の文字列の型。
@@ -1074,77 +371,6 @@ typedef basic_string<Elem> string_type;
 ### <a name="remarks"></a>Remarks
 
 typedef は、`basic_string<Elem>` の同意語です。
-
-### <a name="example"></a>例
-
-```cpp
-// std__regex__regex_traits_string_type.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_traits<char> Mytr;
-int main()
-    {
-    Mytr tr;
-
-    Mytr::char_type ch = tr.translate('a');
-    std::cout << "translate('a') == 'a' == " << std::boolalpha
-        << (ch == 'a') << std::endl;
-
-    std::cout << "nocase 'a' == 'A' == " << std::boolalpha
-        << (tr.translate_nocase('a') == tr.translate_nocase('A'))
-        << std::endl;
-
-    const char *lbegin = "abc";
-    const char *lend = lbegin + strlen(lbegin);
-    Mytr::size_type size = tr.length(lbegin);
-    std::cout << "length(\"abc\") == " << size <<std::endl;
-
-    Mytr::string_type str = tr.transform(lbegin, lend);
-    std::cout << "transform(\"abc\") < \"abc\" == " << std::boolalpha
-        << (str < "abc") << std::endl;
-
-    const char *ubegin = "ABC";
-    const char *uend = ubegin + strlen(ubegin);
-    std::cout << "primary \"ABC\" < \"abc\" == " << std::boolalpha
-        << (tr.transform_primary(ubegin, uend) <
-            tr.transform_primary(lbegin, lend))
-        << std::endl;
-
-    const char *dig = "digit";
-    Mytr::char_class_type cl = tr.lookup_classname(dig, dig + 5);
-    std::cout << "class digit == d == " << std::boolalpha
-        << (cl == tr.lookup_classname(dig, dig + 1))
-        << std::endl;
-
-    std::cout << "'3' is digit == " <<std::boolalpha
-        << tr.isctype('3', tr.lookup_classname(dig, dig + 5))
-        << std::endl;
-
-    std::cout << "hex C == " << tr.value('C', 16) << std::endl;
-
-// other members
-    str = tr.lookup_collatename(dig, dig + 5);
-
-    Mytr::locale_type loc = tr.getloc();
-    tr.imbue(loc);
-
-    return (0);
-    }
-
-```
-
-```Output
-translate('a') == 'a' == true
-nocase 'a' == 'A' == true
-length("abc") == 3
-transform("abc") < "abc" == false
-primary "ABC" < "abc" == false
-class digit == d == true
-'3' is digit == true
-hex C == 12
-```
 
 ## <a name="transform"></a>  regex_traits::transform
 
@@ -1167,77 +393,6 @@ string_type transform(FwdIt first, FwdIt last) const;
 
 このメンバー関数は、格納されている `locale` オブジェクトによって異なる変換規則を使用して生成された文字列を返します。 反復子の範囲の `[first1, last1)` と `[first2, last2)`で指定された 2 つの文字シーケンスでは、反復子の範囲 `transform(first1, last1) < transform(first2, last2)` で指定された文字シーケンスが、反復子の範囲 `[first1, last1)` で指定された文字シーケンスより前に来る場合は、 `[first2, last2)`です。
 
-### <a name="example"></a>例
-
-```cpp
-// std__regex__regex_traits_transform.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_traits<char> Mytr;
-int main()
-    {
-    Mytr tr;
-
-    Mytr::char_type ch = tr.translate('a');
-    std::cout << "translate('a') == 'a' == " << std::boolalpha
-        << (ch == 'a') << std::endl;
-
-    std::cout << "nocase 'a' == 'A' == " << std::boolalpha
-        << (tr.translate_nocase('a') == tr.translate_nocase('A'))
-        << std::endl;
-
-    const char *lbegin = "abc";
-    const char *lend = lbegin + strlen(lbegin);
-    Mytr::size_type size = tr.length(lbegin);
-    std::cout << "length(\"abc\") == " << size <<std::endl;
-
-    Mytr::string_type str = tr.transform(lbegin, lend);
-    std::cout << "transform(\"abc\") < \"abc\" == " << std::boolalpha
-        << (str < "abc") << std::endl;
-
-    const char *ubegin = "ABC";
-    const char *uend = ubegin + strlen(ubegin);
-    std::cout << "primary \"ABC\" < \"abc\" == " << std::boolalpha
-        << (tr.transform_primary(ubegin, uend) <
-            tr.transform_primary(lbegin, lend))
-        << std::endl;
-
-    const char *dig = "digit";
-    Mytr::char_class_type cl = tr.lookup_classname(dig, dig + 5);
-    std::cout << "class digit == d == " << std::boolalpha
-        << (cl == tr.lookup_classname(dig, dig + 1))
-        << std::endl;
-
-    std::cout << "'3' is digit == " <<std::boolalpha
-        << tr.isctype('3', tr.lookup_classname(dig, dig + 5))
-        << std::endl;
-
-    std::cout << "hex C == " << tr.value('C', 16) << std::endl;
-
-// other members
-    str = tr.lookup_collatename(dig, dig + 5);
-
-    Mytr::locale_type loc = tr.getloc();
-    tr.imbue(loc);
-
-    return (0);
-    }
-
-```
-
-```Output
-translate('a') == 'a' == true
-nocase 'a' == 'A' == true
-length("abc") == 3
-transform("abc") < "abc" == false
-primary "ABC" < "abc" == false
-class digit == d == true
-'3' is digit == true
-hex C == 12
-```
-
 ## <a name="transform_primary"></a>  regex_traits::transform_primary
 
 同等のケースレス順序付きシーケンスに変換します。
@@ -1259,77 +414,6 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 
 このメンバー関数は、格納されている `locale` オブジェクトによって異なる変換規則を使用して生成された文字列を返します。 反復子の範囲の `[first1, last1)` と `[first2, last2)`で指定された 2 つの文字シーケンスでは、反復子の範囲 `transform_primary(first1, last1) < transform_primary(first2, last2)` で指定された文字シーケンスが、ケースやアクセントに関係なく、反復子の範囲 `[first1, last1)` で指定された文字シーケンスより前に来る場合は、 `[first2, last2)` です。
 
-### <a name="example"></a>例
-
-```cpp
-// std__regex__regex_traits_transform_primary.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_traits<char> Mytr;
-int main()
-    {
-    Mytr tr;
-
-    Mytr::char_type ch = tr.translate('a');
-    std::cout << "translate('a') == 'a' == " << std::boolalpha
-        << (ch == 'a') << std::endl;
-
-    std::cout << "nocase 'a' == 'A' == " << std::boolalpha
-        << (tr.translate_nocase('a') == tr.translate_nocase('A'))
-        << std::endl;
-
-    const char *lbegin = "abc";
-    const char *lend = lbegin + strlen(lbegin);
-    Mytr::size_type size = tr.length(lbegin);
-    std::cout << "length(\"abc\") == " << size <<std::endl;
-
-    Mytr::string_type str = tr.transform(lbegin, lend);
-    std::cout << "transform(\"abc\") < \"abc\" == " << std::boolalpha
-        << (str < "abc") << std::endl;
-
-    const char *ubegin = "ABC";
-    const char *uend = ubegin + strlen(ubegin);
-    std::cout << "primary \"ABC\" < \"abc\" == " << std::boolalpha
-        << (tr.transform_primary(ubegin, uend) <
-            tr.transform_primary(lbegin, lend))
-        << std::endl;
-
-    const char *dig = "digit";
-    Mytr::char_class_type cl = tr.lookup_classname(dig, dig + 5);
-    std::cout << "class digit == d == " << std::boolalpha
-        << (cl == tr.lookup_classname(dig, dig + 1))
-        << std::endl;
-
-    std::cout << "'3' is digit == " <<std::boolalpha
-        << tr.isctype('3', tr.lookup_classname(dig, dig + 5))
-        << std::endl;
-
-    std::cout << "hex C == " << tr.value('C', 16) << std::endl;
-
-// other members
-    str = tr.lookup_collatename(dig, dig + 5);
-
-    Mytr::locale_type loc = tr.getloc();
-    tr.imbue(loc);
-
-    return (0);
-    }
-
-```
-
-```Output
-translate('a') == 'a' == true
-nocase 'a' == 'A' == true
-length("abc") == 3
-transform("abc") < "abc" == false
-primary "ABC" < "abc" == false
-class digit == d == true
-'3' is digit == true
-hex C == 12
-```
-
 ## <a name="translate"></a>  regex_traits::translate
 
 一致する同等の要素に変換します。
@@ -1347,77 +431,6 @@ char_type translate(char_type ch) const;
 
 このメンバー関数は、格納されている `locale` オブジェクトによって異なる変換規則を使用して生成された文字を返します。 2 つの `char_type` オブジェクト `ch1` と `ch2`があるとします。一方が正規表現の定義に出現し、もう一方がターゲット シーケンス内の対応する位置に出現した場合にロケールを区別して比較して `translate(ch1) == translate(ch2)` と `ch1` が一致するときのみ、 `ch2` になります。
 
-### <a name="example"></a>例
-
-```cpp
-// std__regex__regex_traits_translate.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_traits<char> Mytr;
-int main()
-    {
-    Mytr tr;
-
-    Mytr::char_type ch = tr.translate('a');
-    std::cout << "translate('a') == 'a' == " << std::boolalpha
-        << (ch == 'a') << std::endl;
-
-    std::cout << "nocase 'a' == 'A' == " << std::boolalpha
-        << (tr.translate_nocase('a') == tr.translate_nocase('A'))
-        << std::endl;
-
-    const char *lbegin = "abc";
-    const char *lend = lbegin + strlen(lbegin);
-    Mytr::size_type size = tr.length(lbegin);
-    std::cout << "length(\"abc\") == " << size <<std::endl;
-
-    Mytr::string_type str = tr.transform(lbegin, lend);
-    std::cout << "transform(\"abc\") < \"abc\" == " << std::boolalpha
-        << (str < "abc") << std::endl;
-
-    const char *ubegin = "ABC";
-    const char *uend = ubegin + strlen(ubegin);
-    std::cout << "primary \"ABC\" < \"abc\" == " << std::boolalpha
-        << (tr.transform_primary(ubegin, uend) <
-            tr.transform_primary(lbegin, lend))
-        << std::endl;
-
-    const char *dig = "digit";
-    Mytr::char_class_type cl = tr.lookup_classname(dig, dig + 5);
-    std::cout << "class digit == d == " << std::boolalpha
-        << (cl == tr.lookup_classname(dig, dig + 1))
-        << std::endl;
-
-    std::cout << "'3' is digit == " <<std::boolalpha
-        << tr.isctype('3', tr.lookup_classname(dig, dig + 5))
-        << std::endl;
-
-    std::cout << "hex C == " << tr.value('C', 16) << std::endl;
-
-// other members
-    str = tr.lookup_collatename(dig, dig + 5);
-
-    Mytr::locale_type loc = tr.getloc();
-    tr.imbue(loc);
-
-    return (0);
-    }
-
-```
-
-```Output
-translate('a') == 'a' == true
-nocase 'a' == 'A' == true
-length("abc") == 3
-transform("abc") < "abc" == false
-primary "ABC" < "abc" == false
-class digit == d == true
-'3' is digit == true
-hex C == 12
-```
-
 ## <a name="translate_nocase"></a>  regex_traits::translate_nocase
 
 一致する同等のケースレス要素に変換します。
@@ -1434,77 +447,6 @@ char_type translate_nocase(char_type ch) const;
 ### <a name="remarks"></a>Remarks
 
 このメンバー関数は、格納されている `locale` オブジェクトによって異なる変換規則を使用して生成された文字を返します。 2 つの `char_type` オブジェクト `ch1` と `ch2`では、 `translate_nocase(ch1) == translate_nocase(ch2)` と `ch1` のいずれか一方が正規表現の定義で出現し、もう一方がターゲット シーケンス内の対応する位置に出現し、大文字と小文字を区別せずに比較して両者が一致する場合に限り、 `ch2` になります。
-
-### <a name="example"></a>例
-
-```cpp
-// std__regex__regex_traits_translate_nocase.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_traits<char> Mytr;
-int main()
-    {
-    Mytr tr;
-
-    Mytr::char_type ch = tr.translate('a');
-    std::cout << "translate('a') == 'a' == " << std::boolalpha
-        << (ch == 'a') << std::endl;
-
-    std::cout << "nocase 'a' == 'A' == " << std::boolalpha
-        << (tr.translate_nocase('a') == tr.translate_nocase('A'))
-        << std::endl;
-
-    const char *lbegin = "abc";
-    const char *lend = lbegin + strlen(lbegin);
-    Mytr::size_type size = tr.length(lbegin);
-    std::cout << "length(\"abc\") == " << size <<std::endl;
-
-    Mytr::string_type str = tr.transform(lbegin, lend);
-    std::cout << "transform(\"abc\") < \"abc\" == " << std::boolalpha
-        << (str < "abc") << std::endl;
-
-    const char *ubegin = "ABC";
-    const char *uend = ubegin + strlen(ubegin);
-    std::cout << "primary \"ABC\" < \"abc\" == " << std::boolalpha
-        << (tr.transform_primary(ubegin, uend) <
-            tr.transform_primary(lbegin, lend))
-        << std::endl;
-
-    const char *dig = "digit";
-    Mytr::char_class_type cl = tr.lookup_classname(dig, dig + 5);
-    std::cout << "class digit == d == " << std::boolalpha
-        << (cl == tr.lookup_classname(dig, dig + 1))
-        << std::endl;
-
-    std::cout << "'3' is digit == " <<std::boolalpha
-        << tr.isctype('3', tr.lookup_classname(dig, dig + 5))
-        << std::endl;
-
-    std::cout << "hex C == " << tr.value('C', 16) << std::endl;
-
-// other members
-    str = tr.lookup_collatename(dig, dig + 5);
-
-    Mytr::locale_type loc = tr.getloc();
-    tr.imbue(loc);
-
-    return (0);
-    }
-
-```
-
-```Output
-translate('a') == 'a' == true
-nocase 'a' == 'A' == true
-length("abc") == 3
-transform("abc") < "abc" == false
-primary "ABC" < "abc" == false
-class digit == d == true
-'3' is digit == true
-hex C == 12
-```
 
 ## <a name="value"></a>  regex_traits::value
 
@@ -1525,77 +467,6 @@ int value(Elem ch, int radix) const;
 ### <a name="remarks"></a>Remarks
 
 このメンバー関数は文字で表される値を返します*ch*ベース*基数*、場合は-1 *ch*ベースで有効な数字でない*基数*. 関数でのみ呼び出される、*基数*8、10、または 16 の引数。
-
-### <a name="example"></a>例
-
-```cpp
-// std__regex__regex_traits_value.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_traits<char> Mytr;
-int main()
-    {
-    Mytr tr;
-
-    Mytr::char_type ch = tr.translate('a');
-    std::cout << "translate('a') == 'a' == " << std::boolalpha
-        << (ch == 'a') << std::endl;
-
-    std::cout << "nocase 'a' == 'A' == " << std::boolalpha
-        << (tr.translate_nocase('a') == tr.translate_nocase('A'))
-        << std::endl;
-
-    const char *lbegin = "abc";
-    const char *lend = lbegin + strlen(lbegin);
-    Mytr::size_type size = tr.length(lbegin);
-    std::cout << "length(\"abc\") == " << size <<std::endl;
-
-    Mytr::string_type str = tr.transform(lbegin, lend);
-    std::cout << "transform(\"abc\") < \"abc\" == " << std::boolalpha
-        << (str < "abc") << std::endl;
-
-    const char *ubegin = "ABC";
-    const char *uend = ubegin + strlen(ubegin);
-    std::cout << "primary \"ABC\" < \"abc\" == " << std::boolalpha
-        << (tr.transform_primary(ubegin, uend) <
-            tr.transform_primary(lbegin, lend))
-        << std::endl;
-
-    const char *dig = "digit";
-    Mytr::char_class_type cl = tr.lookup_classname(dig, dig + 5);
-    std::cout << "class digit == d == " << std::boolalpha
-        << (cl == tr.lookup_classname(dig, dig + 1))
-        << std::endl;
-
-    std::cout << "'3' is digit == " <<std::boolalpha
-        << tr.isctype('3', tr.lookup_classname(dig, dig + 5))
-        << std::endl;
-
-    std::cout << "hex C == " << tr.value('C', 16) << std::endl;
-
-// other members
-    str = tr.lookup_collatename(dig, dig + 5);
-
-    Mytr::locale_type loc = tr.getloc();
-    tr.imbue(loc);
-
-    return (0);
-    }
-
-```
-
-```Output
-translate('a') == 'a' == true
-nocase 'a' == 'A' == true
-length("abc") == 3
-transform("abc") < "abc" == false
-primary "ABC" < "abc" == false
-class digit == d == true
-'3' is digit == true
-hex C == 12
-```
 
 ## <a name="see-also"></a>関連項目
 
