@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e30fb37be6738b7100b84a1898c02ab4230c41b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 63c4998ae0ff6efc6fa520c66a4cabff2476f0d0
+ms.sourcegitcommit: 6e479e33e8fd8e30ea32801edbff2e3415f31bf7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597574"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45556755"
 ---
 # <a name="za-ze-disable-language-extensions"></a>/Za、/Ze (言語拡張機能の無効化)
 **/Za**コンパイラ オプションは、ANSI C89 または ISO C 11 と互換性がない言語コンストラクトに対してエラーを生成します。 **/Ze**コンパイラ オプションは、既定では、Microsoft の拡張機能を使用します。  
@@ -54,8 +54,8 @@ ms.locfileid: "42597574"
   
  指定することで、言語拡張機能を無効にすることをお勧め、 **/Za**他の環境にプログラムを移植する予定の場合はオプションです。 ときに **/Za**を指定すると、コンパイラは、Microsoft の単純な識別子としてのキーワードの拡張し、その他の Microsoft 拡張機能を無効にし、自動的に定義されます、 `__STDC__` C プログラムの定義済みマクロがあります。  
   
- 他のコンパイラ オプション併用 **/Za**コンパイラは標準への準拠、方法に影響を与えることができます。 たとえば、 **/Za**と[/fp (浮動小数点の動作の指定)](../../build/reference/fp-specify-floating-point-behavior.md) ISO C99 または c++ 11 標準に準拠していない浮動小数点型の昇格動作が発生可能性があります。  
-  
+ 他のコンパイラ オプション併用 **/Za**コンパイラは標準への準拠、方法に影響を与えることができます。
+
  特定の標準に準拠した動作の設定を指定する方法は、次を参照してください。、 [/Zc](../../build/reference/zc-conformance.md)コンパイラ オプション。  
   
  Visual C の準拠の問題の詳細については、次を参照してください。[非標準動作](../../cpp/nonstandard-behavior.md)します。  
