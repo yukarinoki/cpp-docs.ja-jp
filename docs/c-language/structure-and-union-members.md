@@ -21,60 +21,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cf98987323b96c8b3977e9a6d2bc590e0b612b8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a5b497745177bce165277e3a6e4ece2a3c47f20a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392251"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194876"
 ---
 # <a name="structure-and-union-members"></a>構造体と共用体のメンバー
 "メンバー選択式" は構造体と共用体のメンバーを参照します。 このような式には、選択したメンバーの値と型が割り当てられます。  
   
-```  
+> *postfix-expression* **.** *identifier*  
+> *postfix-expression* **->** *identifier*
   
-postfix-expression  
-.  
-identifier  
-postfix-expression  
-->  
-identifier  
+ここでは、メンバー選択式の 2 つの形式について説明します。  
   
-```  
-  
- ここでは、メンバー選択式の 2 つの形式について説明します。  
-  
-1.  最初の形式で、*postfix-expression* は `struct` 型または **union** 型の値を表し、*identifier* はその構造体または共用体のメンバーを指定します。 *postfix-expression* が左辺値の場合、この演算の値は *identifier* の値で、左辺値です。 詳細については、「[左辺値と右辺値の式](../c-language/l-value-and-r-value-expressions.md)」を参照してください。  
+1.  最初の形式で、*postfix-expression* は **struct** 型または **union** 型の値を表し、*identifier* はその構造体または共用体のメンバーを指定します。 *postfix-expression* が左辺値の場合、この演算の値は *identifier* の値で、左辺値です。 詳細については、「[左辺値と右辺値の式](../c-language/l-value-and-r-value-expressions.md)」を参照してください。  
   
 2.  2 番目の形式では、*postfix-expression* は構造体または共用体へのポインターを表し、*identifier* はその構造体または共用体のメンバーを指定します。 値は *identifier* の値で、左辺値です。  
   
  どちらの形式のメンバー選択式でも同じ結果が得られます。  
   
- 実際、ピリオド (**.**) を用いた式の左側部分に間接演算子 (**\***) が適用されている場合、その簡潔バージョンとしてメンバー選択演算子 (**->**) を用いた式を使用できます。 次に例を示します。  
-  
-```  
-  
-expression  
-->  
-identifier  
-  
-```  
-  
- 上記の式は、次の式と同じです。  
-  
-```  
-  
-(*  
-expression  
-) .  
-identifier  
-  
-```  
-  
+ 実際、ピリオド (**.**) を用いた式の左側部分に間接演算子 (<strong>\*</strong>) が適用されている場合、その簡潔バージョンとしてメンバー選択演算子 (**->**) を用いた式を使用できます。 次に例を示します。  
+
+```cpp
+expression->identifier  
+```
+
+上記の式は、次の式と同じです。  
+
+```cpp
+(*expression).identifier
+```
+
  *expression* はポインター値になります。  
   
 ## <a name="examples"></a>使用例  
- 次に、この構造体宣言の例を示します。 これらの例で使用されている間接演算子 (**\***) については、「[間接演算子とアドレス演算子](../c-language/indirection-and-address-of-operators.md)」を参照してください。  
+ 次に、この構造体宣言の例を示します。 これらの例で使用されている間接演算子 (<strong>\*</strong>) については、「[間接演算子とアドレス演算子](../c-language/indirection-and-address-of-operators.md)」を参照してください。  
   
 ```  
 struct pair   
