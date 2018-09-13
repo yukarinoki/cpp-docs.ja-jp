@@ -1,7 +1,7 @@
 ---
-title: 'MFC ActiveX コントロール: ストック メソッドの追加 |Microsoft ドキュメント'
+title: 'MFC ActiveX コントロール: ストック メソッドの追加 |Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -16,27 +16,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2005391c6d91ee09703194eb8b8062ecfe08ba77
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 604a095ab26abf4953d56786e00461cabd07e579
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929800"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534951"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>MFC ActiveX コントロール : ストック メソッドの追加
-ストック メソッドは、クラスによって既に実装されている点で、カスタム メソッドとは異なります。 [COleControl](../mfc/reference/colecontrol-class.md)です。 たとえば、`COleControl`コントロールの更新メソッドをサポートしている定義済みのメンバー関数が含まれています。 このストック メソッドのディスパッチ マップ エントリは、DISP_STOCKFUNC_REFRESH です。  
+ストック メソッドは、クラスによって既に実装されている点で、カスタム メソッドとは異なります。 [COleControl](../mfc/reference/colecontrol-class.md)します。 たとえば、`COleControl`コントロールの更新メソッドをサポートしている定義済みのメンバー関数が含まれています。 このストック メソッドのディスパッチ マップ エントリは、DISP_STOCKFUNC_REFRESH です。
+
+>[!IMPORTANT]
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の上書きの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。  
   
- `COleControl` 2 つのストック メソッドをサポートしています: DoClick および更新します。 更新は、すぐに、コントロールの外観を更新するコントロールのユーザーによって呼び出されます。コントロールのクリックを発生させる DoClick が呼び出されるイベント。  
+ `COleControl` 2 つのメソッドをサポートしています: DoClick および更新します。 更新は、すぐに、コントロールの外観を更新するコントロールのユーザーによって呼び出されます。コントロールのクリックを起動する DoClick が呼び出されるイベント。  
   
 |メソッド|ディスパッチ マップ エントリ|コメント|  
 |------------|------------------------|-------------|  
-|`DoClick`|**DISP_STOCKPROP_DOCLICK に関するページ)**|Click イベントを発生させます。|  
-|`Refresh`|**DISP_STOCKPROP_REFRESH に関するページ)**|コントロールの外観はすぐに更新します。|  
+|`DoClick`|**DISP_STOCKPROP_DOCLICK)**|クリック イベントを発生させます。|  
+|`Refresh`|**DISP_STOCKPROP_REFRESH)**|コントロールの外観はすぐに更新します。|  
   
-##  <a name="_core_adding_a_stock_method_using_classwizard"></a> ストック メソッドを使用して、追加する、メソッドの追加ウィザード  
- 単純なストック メソッドの追加を使用して、[メソッド追加ウィザード](../ide/add-method-wizard.md)です。 次の手順では、MFC ActiveX コントロール ウィザードを使用して作成されたコントロールへの更新メソッドの追加を示します。  
+##  <a name="_core_adding_a_stock_method_using_classwizard"></a> ストック メソッドを使用して、追加、メソッド追加ウィザード  
+ ストック メソッドを追加することは単純なを使用して、[メソッド追加ウィザード](../ide/add-method-wizard.md)します。 次の手順では、MFC ActiveX コントロール ウィザードを使用して作成されたコントロールに Refresh メソッドを追加することを示します。  
   
-#### <a name="to-add-the-stock-refresh-method-using-the-add-method-wizard"></a>メソッド追加ウィザードを使用して在庫の更新メソッドを追加するには  
+#### <a name="to-add-the-stock-refresh-method-using-the-add-method-wizard"></a>メソッドの追加ウィザードを使用して、株価の更新メソッドを追加するには  
   
 1.  コントロールのプロジェクトを読み込みます。  
   
@@ -44,20 +47,20 @@ ms.locfileid: "36929800"
   
 3.  コントロールのインターフェイス ノード (ライブラリ ノードの 2 番目のノード) を右クリックし、ショートカット メニューを開きます。  
   
-4.  ショートカット メニューから **[追加]** をクリックし、**メソッドの追加**です。  
+4.  ショートカット メニューでは、次のようにクリックします。**追加** をクリックし、**メソッドの追加**します。  
   
-     メソッド追加ウィザードが開きます。  
+     メソッドの追加ウィザードが開きます。  
   
-5.  **メソッド名**ボックスで、クリックして**更新**です。  
+5.  **メソッド名**ボックスで、**更新**します。  
   
 6.  **[完了]** をクリックします。  
   
 ##  <a name="_core_classwizard_changes_for_stock_methods"></a> ストック メソッドのメソッド ウィザードの変更を追加します。  
- Refresh ストック メソッドが、コントロールの基底クラスでサポートされているため、**メソッド追加ウィザード**任意の方法でコントロールのクラスの宣言を変更することはできません。 コントロールのディスパッチ マップにされ、メソッドのエントリを追加、します。IDL ファイルです。 次の行がその実装にあるコントロールのディスパッチ マップに追加 (です。Cpp):  
+ ストックの Refresh メソッドは、コントロールの基本クラスでサポートされているため、**メソッド追加ウィザード**何らかの方法でコントロールのクラス宣言を変更することはできません。 コントロールのディスパッチ マップにされ、メソッドのエントリを追加、します。IDL ファイルです。 次の行は、その実装にあるコントロールのディスパッチ マップに追加されます (します。CPP) ファイル:  
   
  [!code-cpp[NVC_MFC_AxUI#16](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-methods_1.cpp)]  
   
- これにより、コントロールのユーザーに更新メソッドが使用可能なにします。  
+ これにより、コントロールのユーザーに Refresh メソッドを使用可能なにします。  
   
  コントロールの次の行が追加されます。IDL ファイル:  
   

@@ -1,7 +1,7 @@
 ---
 title: MFC ActiveX コントロールの作成 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -17,15 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96ecae8445368357da3bc7b271156f961c1c1dca
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0278ce0349b24680252100704031645c995fef51
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43687147"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535081"
 ---
 # <a name="creating-an-mfc-activex-control"></a>MFC ActiveX コントロールの作成
 ActiveX コントロール プログラムは、親アプリケーションに特定の機能を提供するモジュール プログラムです。 たとえば、ダイアログ ボックスのボタンや Web ページのツール バーなどのコントロールを作成できます。  
+
+>[!IMPORTANT]
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 詳細については、次を参照してください。 [ActiveX コントロール](../activex-controls.md)します。
   
  MFC ActiveX コントロールを作成する最も簡単な方法が使用するには、 [MFC ActiveX コントロール ウィザード](../../mfc/reference/mfc-activex-control-wizard.md)します。  
   

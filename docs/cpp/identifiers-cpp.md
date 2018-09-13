@@ -1,7 +1,7 @@
 ---
 title: 識別子 (C++) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d112e7ca192e56ede21d06e7ff17a775d661d01
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: cad3c53be23d472a8ce40dae9056d73ab1de1c89
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405231"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535146"
 ---
 # <a name="identifiers-c"></a>識別子 (C++)
 識別子は、次のいずれかを示すために使用される文字のシーケンスです。  
@@ -104,7 +104,7 @@ int main() {
   
  識別子をキーワードとまったく同じスペルおよび大文字小文字にすることはできません。 キーワードを含む識別子は有効です。 たとえば、`Pint`が含まれている場合でも、有効な識別子を**int**、キーワードします。  
   
- 識別子の先頭での 2 つの連続するアンダースコア文字 ( **__** )、または 1 つのアンダースコア文字と 1 つの大文字の使用は、すべてのスコープで C++ の実装のために予約されています。 現在または将来の予約済み識別子と競合する可能性があるため、ファイルのスコープを含む名前には、先頭の 1 つのアンダースコアとそれに続く子文字を使用しないようにする必要があります。  
+ 2 つの連続したアンダー スコア文字の使用 ( **_ _** ) 識別子、または大文字の後に 1 つ先頭のアンダー スコアでは、すべてのスコープで C++ の実装用に予約されています。 現在または将来の予約済み識別子と競合する可能性があるため、ファイルのスコープを含む名前には、先頭の 1 つのアンダースコアとそれに続く子文字を使用しないようにする必要があります。  
   
 ## <a name="see-also"></a>関連項目  
  [構文規則](../cpp/lexical-conventions.md)
