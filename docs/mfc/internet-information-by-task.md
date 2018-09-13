@@ -1,7 +1,7 @@
 ---
 title: タスク別のインターネット情報 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -14,15 +14,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87cca4472ebc0cf5f6b31d377fd82f2c51d25946
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: a0e9fc861340f4289e7f50ebc59248b1ed317db3
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677548"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535003"
 ---
 # <a name="internet-information-by-task"></a>タスク別のインターネット情報
 このトピックのタスクは実行するタスクに基づいて並べ替えられます。  
+
+>[!IMPORTANT]
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の上書きの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
   
  次のタスクのカテゴリは、このトピックのとおりです。  
   
@@ -34,13 +37,9 @@ ms.locfileid: "43677548"
   
 ###  <a name="_core_activex_controls.2c_.documents_and_asynchronous_moniker_tasks"></a> ActiveX コントロール、ドキュメント、およびタスクの非同期モニカー  
   
--   [アクティブなドキュメントについて説明します](../mfc/active-documents-on-the-internet.md)  
-  
 -   [非同期モニカーについて説明します](../mfc/asynchronous-monikers-on-the-internet.md)  
   
 -   [インターネットのコンテキストでの ActiveX コントロールの概要について説明します](../mfc/activex-controls-on-the-internet.md)  
-  
--   [インターネットのコンテキストでアクティブなドキュメントについて説明します](../mfc/active-documents-on-the-internet.md)  
   
 -   [ActiveX コントロールを最適化します。](../mfc/mfc-activex-controls-optimization.md)  
   

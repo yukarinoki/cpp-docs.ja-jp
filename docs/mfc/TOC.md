@@ -141,7 +141,6 @@
 ### [MFC アプリケーションの作成](writing-mfc-applications.md)
 ### [インターネット上の ActiveX コントロール](activex-controls-on-the-internet.md)
 ### [既存の ActiveX コントロールのアップグレード](upgrading-an-existing-activex-control.md)
-### [インターネット上の Active ドキュメント](active-documents-on-the-internet.md)
 ### [インターネット上の非同期モニカー](asynchronous-monikers-on-the-internet.md)
 ### [インターネット アプリケーションのテスト](testing-internet-applications.md)
 ### [インターネット セキュリティ (C++)](internet-security-cpp.md)

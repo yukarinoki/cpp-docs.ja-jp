@@ -1,7 +1,7 @@
 ---
 title: CEdit クラス |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27ea5ccb0d15bd57a526c78cd3c57a4e83369ed0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4d3c7f9e1d638c547b2b340a610a52af9318c714
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757791"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535406"
 ---
 # <a name="cedit-class"></a>CEdit Class
 Windows のエディット コントロールの機能が用意されています。  
@@ -520,7 +520,7 @@ BOOL GetHighlight(
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、送信、 [EM_GETHILITE](/windows/desktop/Controls/em-gethilite)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [EM_GETHILITE](/windows/desktop/Controls/em-gethilite)メッセージは、Windows SDK で説明します。 両方`SetHighlight`と`GetHighlight`UNICODE ビルドのみの場合、現在有効になっています。 
   
 ##  <a name="getlimittext"></a>  CEdit::GetLimitText  
  このテキストの上限を取得するには、このメンバー関数を呼び出す`CEdit`オブジェクト。  
@@ -985,7 +985,7 @@ void SetHighlight(
 |[in]*ichEnd*|強調表示するテキストの範囲の最後の文字の 0 から始まるインデックス。|  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、送信、 [EM_SETHILITE](/windows/desktop/Controls/em-sethilite)メッセージは、Windows SDK で説明します。  
+ このメソッドは、送信、 [EM_SETHILITE](/windows/desktop/Controls/em-sethilite)メッセージは、Windows SDK で説明します。  このメソッドは、送信、 [EM_SETHILITE](/windows/desktop/Controls/em-sethilite)メッセージは、Windows SDK で説明します。 両方`SetHighlight`と`GetHighlight`の UNICODE ビルドでのみ有効になっています。 
   
 ##  <a name="setlimittext"></a>  CEdit::SetLimitText  
  このテキストの上限を設定するには、このメンバー関数を呼び出す`CEdit`オブジェクト。  

@@ -1,7 +1,7 @@
 ---
 title: CDocObjectServerItem クラス |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 985333deaeceeed594e11223c417f3217e8b0322
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 9c9104dd36696b00dd334141b77b5f6fe1531e43
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43682044"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535107"
 ---
 # <a name="cdocobjectserveritem-class"></a>CDocObjectServerItem クラス
 OLE サーバー動詞を DocObject サーバー用に実装します。  
@@ -67,7 +67,7 @@ class CDocObjectServerItem : public COleServerItem
   
  使用する`CDocObjectServerItem`、確認するため、 [OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem)で上書き、 `COleServerDoc`-新しい派生クラスを返します`CDocObjectServerItem`オブジェクト。 機能で、項目を変更する必要がある場合は、独自の新しいインスタンスを作成することができます`CDocObjectServerItem`-クラスを派生します。  
   
- DocObjects については、次を参照してください。 [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md)と[COleCmdUI](../../mfc/reference/colecmdui-class.md)で、 *MFC リファレンス*します。 参照してください[インターネットの最初の手順: Active ドキュメント](../../mfc/active-documents-on-the-internet.md)と[Active ドキュメント](../../mfc/active-documents-on-the-internet.md)します。  
+ DocObjects については、次を参照してください。 [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md)と[COleCmdUI](../../mfc/reference/colecmdui-class.md)で、 *MFC リファレンス*します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  

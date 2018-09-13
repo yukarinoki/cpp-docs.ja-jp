@@ -1,28 +1,36 @@
 ---
 title: 構造体の実装 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/11/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Implements
+- implements/Microsoft::WRL::Implements::CanCastTo
+- implements/Microsoft::WRL::Implements::CastToUnknown
+- implements/Microsoft::WRL::Implements::FillArrayWithIid
+- implements/Microsoft::WRL::Implements::IidCount
 dev_langs:
 - C++
 helpviewer_keywords:
-- Implements structure
+- Microsoft::WRL::Implements structure
+- Microsoft::WRL::Implements::CanCastTo method
+- Microsoft::WRL::Implements::CastToUnknown method
+- Microsoft::WRL::Implements::FillArrayWithIid method
+- Microsoft::WRL::Implements::IidCount method
 ms.assetid: 29b13e90-34d4-4a0b-babd-5187c9eb0c36
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 417f384b54833786c68fe2b13dc9e7e53b1bc975
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 18616b1010dfe6a23861c512b1113c30fe5251ce
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603289"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535354"
 ---
 # <a name="implements-structure"></a>Implements 構造体
 
@@ -104,23 +112,23 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
-|名前|説明|
-|----------|-----------------|
-|`ClassFlags`|`RuntimeClassFlags<WinRt>` と同義。|
+| 名前        | 説明                               |
+| ----------- | ----------------------------------------- |
+| `ClassFlags`| `RuntimeClassFlags<WinRt>` と同義。 |
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
-|名前|説明|
-|----------|-----------------|
-|[Implements::CanCastTo メソッド](../windows/implements-cancastto-method.md)|指定したインターフェイスへのポインターを取得します。|
-|[Implements::CastToUnknown メソッド](../windows/implements-casttounknown-method.md)|基になるポインターを取得します。`IUnknown`インターフェイス。|
-|[Implements::FillArrayWithIid メソッド](../windows/implements-fillarraywithiid-method.md)|指定した配列の要素に現在の 0 番目のテンプレート パラメーターで指定されたインターフェイス ID を挿入します。|
+| 名前                                              | 説明                                                                                                   |
+| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| [Implements::cancastto](#cancastto)               | 指定したインターフェイスへのポインターを取得します。                                                                    |
+| [Implements::casttounknown](#casttounknown)       | 基になるポインターを取得します。`IUnknown`インターフェイス。                                                        |
+| [Implements::fillarraywithiid](#fillarraywithiid) | 指定した配列の要素に現在の 0 番目のテンプレート パラメーターで指定されたインターフェイス ID を挿入します。 |
 
 ### <a name="protected-constants"></a>保護されている定数
 
-|name|説明|
-|----------|-----------------|
-|[Implements::IidCount 定数](../windows/implements-iidcount-constant.md)|実装されたインターフェイス Id の数を保持します。|
+| 名前                              | 説明                                    |
+| --------------------------------- | ---------------------------------------------- |
+| [Implements::iidcount](#iidcount) | 実装されたインターフェイス Id の数を保持します。 |
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -142,6 +150,76 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
 
 **名前空間:** Microsoft::WRL
 
-## <a name="see-also"></a>関連項目
+## <a name="cancastto"></a>Implements::cancastto
 
-[Microsoft::WRL 名前空間](../windows/microsoft-wrl-namespace.md)
+指定したインターフェイスへのポインターを取得します。
+
+```cpp
+__forceinline HRESULT CanCastTo(
+   REFIID riid,
+   _Deref_out_ void **ppv
+);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*riid*  
+インターフェイス ID への参照
+
+*ppv*  
+かどうかは成功すると、インターフェイスへのポインターで指定された*riid*します。
+
+### <a name="return-value"></a>戻り値
+
+成功した場合は s_ok を返します。それ以外の場合、E_NOINTERFACE など、エラーを示す HRESULT。
+
+### <a name="remarks"></a>Remarks
+
+これは、QueryInterface 操作を実行する内部のヘルパー関数です。
+
+## <a name="casttounknown"></a>Implements::casttounknown
+
+基になるポインターを取得します。`IUnknown`インターフェイス。
+
+```cpp
+__forceinline IUnknown* CastToUnknown();
+```
+
+### <a name="return-value"></a>戻り値
+
+この操作は、常に成功し、返された、`IUnknown`ポインター。
+
+### <a name="remarks"></a>Remarks
+
+内部のヘルパー関数です。
+
+## <a name="fillarraywithiid"></a>Implements::fillarraywithiid
+
+指定した配列の要素に現在の 0 番目のテンプレート パラメーターで指定されたインターフェイス ID を挿入します。
+
+```cpp
+__forceinline static void FillArrayWithIid(
+   unsigned long &index,
+   _In_ IID* iids
+);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*index*  
+この操作の開始の配列要素を示す 0 から始まるインデックス。 この操作が完了したら、*インデックス*1 ずつインクリメントされます。
+
+*iid*  
+IID 型の配列。
+
+### <a name="remarks"></a>Remarks
+
+内部のヘルパー関数です。
+
+## <a name="iidcount"></a>Implements::iidcount
+
+実装されたインターフェイス Id の数を保持します。
+
+```cpp
+static const unsigned long IidCount;
+```

@@ -1,5 +1,5 @@
 ---
-title: CReBarCtrl の使い方 |Microsoft ドキュメント
+title: Crebarctrl の使い方 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,21 +18,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5fbd58954e5b5b0bf16a052e3a667e28f6bc981
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 29f678eb776e17fc9dc7cbd07e9a0fa91eef530c
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/13/2018
 ms.locfileid: "33383310"
 ---
 # <a name="using-crebarctrl"></a>CReBarCtrl の使い方
-Rebar コントロールは、子ウィンドウのコンテナーとして機能します。 Rebar コントロール バンドには、これらの子ウィンドウ、多くの場合、その他のコントロールが割り当てられます。 Rebar コントロールでは、グリップ バー、ビットマップ、テキスト ラベル、および子ウィンドウの任意の組み合わせを 1 つまたは複数のバンドを含めることができます。 ただし、バンドは、1 つ以上の子ウィンドウを含めることはできません。  
+Rebar コントロールは、子ウィンドウのコンテナーとして機能します。 Rebar コントロール バンドには、これらの子ウィンドウ、多くの場合、他のコントロールが割り当てられます。 Rebar コントロールのグリップ バー、ビットマップ、テキスト ラベル、および子ウィンドウの任意の組み合わせを 1 つまたは複数のバンドを含めることができます。 ただし、バンドは、1 つ以上の子ウィンドウを含めることはできません。  
   
- 次の図は、2 つのバンドを持つ rebar コントロールを示します。 グリッパー バー テキスト ラベル ("Address")、コンボ ボックスの子ウィンドウが含まれています。 その他のバンドには、グリップ バー、テキスト ラベル、および、フラット ツールバー (子ウィンドウで実装) が含まれています。  
+ 次の図は、2 つのバンドを持つ rebar コントロールを示します。 グリッパー バー、テキスト ラベル ("Address")、およびコンボ ボックスの子ウィンドウが含まれています。 その他のバンドには、グリッパー バー、テキスト ラベル、およびフラット ツールバー (子ウィンドウで実装) が含まれています。  
   
  ![2 つのバンドを持つ rebar コントロール](../mfc/media/vc4ruz1.gif "vc4ruz1")  
   
-## <a name="what-do-you-want-to-know-more-about"></a>詳しくは次のトピックをクリックしてください。  
+## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います  
   
 -   [CReBar とCReBarCtrl の比較](../mfc/crebar-vs-crebarctrl.md)  
   

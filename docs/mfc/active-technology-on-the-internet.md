@@ -1,7 +1,7 @@
 ---
-title: インターネット上の active テクノロジ |Microsoft ドキュメント
+title: インターネット上の active テクノロジ |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -14,34 +14,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a7062ae67c9fdfbe79efe20ce3251eba37cc926
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 295873282f8d4cf44c2d00ba0bdec3a2c88fdd13
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338589"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535016"
 ---
 # <a name="active-technology-on-the-internet"></a>インターネット上の Active テクノロジ
-Active テクノロジは、オープン プラットフォームにより、開発者は魅力的な動的コンテンツおよびアプリケーションのグローバル インターネットまたはイントラネットと呼ばれる、会社の内部ネットワークを作成します。 インターネットのプログラミング用に Microsoft によって提供される主要なテクノロジは次のとおりです。  
+Active テクノロジは、開発者が魅力的な動的コンテンツとアプリケーションのグローバル インターネットまたはイントラネットと呼ばれる、会社の内部ネットワークを作成できるオープン プラットフォームです。 インターネットのプログラミング用に Microsoft によって提供される主要なテクノロジを以下に示します。  
+
+>[!IMPORTANT]
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の上書きの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
   
 ## <a name="activex-controls"></a>ActiveX コントロール  
- ActiveX コントロール (以前の OLE コントロール) の Web ページまたは ActiveX コントロール コンテナーであるその他のアプリケーションに挿入するオブジェクトです。 例についてには、ボタン、株式相場表示、およびグラフ コントロールが含まれます。 詳細については、次を参照してください。 [、インターネット上の ActiveX コントロール](../mfc/activex-controls-on-the-internet.md)です。  
-  
-## <a name="active-documents"></a>Active ドキュメント  
- アクティブなドキュメントは、Web ブラウザーまたはドキュメント ビューアーで表示できます。 従来の埋め込みオブジェクトは、1 つのページに制限されていましたされ、ドキュメントに埋め込まれているが表示されていました。 Active テクノロジを使用するドキュメントを表示することができます、全体のクライアント領域のウィンドウでフル フレーム。 詳細については、次を参照してください。 [、インターネット上の Active ドキュメント](../mfc/active-documents-on-the-internet.md)です。  
+ ActiveX コントロール (以前の OLE コントロール) は、Web ページや ActiveX コントロール コンテナーは、その他のアプリケーションに挿入できるオブジェクトです。 例には、ボタン、株式相場表示、およびグラフ コントロールが含まれます。 詳細については、次を参照してください。[インターネット上の ActiveX コントロール](../mfc/activex-controls-on-the-internet.md)します。  
   
 ## <a name="internet-data-download-services"></a>インターネットのデータのダウンロード サービス  
- 一般的なプロトコルを使用して、インターネット経由でデータをダウンロードできます: HTTP、FTP、および gopher です。 MFC WinInet クラスしやすいように、TCP/IP および WinSock プロトコルを抽象化され、HTTP、FTP、および gopher プロトコルを使用してデータを転送します。 MFC の非同期モニカー クラスは、ラージ オブジェクトを非同期的に表示するためにブロックすることがなくファイルをダウンロードする方法を提供します。 詳細については、次を参照してください。 [Win32 インターネット拡張機能 (WinInet)](../mfc/win32-internet-extensions-wininet.md)です。  
+ 一般的なプロトコルを使用してインターネット経由でデータをダウンロードできます: HTTP、FTP、および gopher します。 MFC WinInet クラスを簡単に抽象化して、TCP/IP および WinSock プロトコルで HTTP、FTP、および gopher プロトコルを使用してデータを転送します。 MFC の非同期モニカー クラスでは、ラージ オブジェクトを非同期的に表示するためにブロックすることがなくファイルをダウンロードする方法を提供します。 詳細については、次を参照してください。 [Win32 インターネット拡張機能 (WinInet)](../mfc/win32-internet-extensions-wininet.md)します。  
   
 ## <a name="active-scripts"></a>アクティブ スクリプト  
- VBScript およびその他のスクリプト言語は、コントロールを接続し、Web ページに対話機能を追加します。 スクリプトがその処理をサーバーからクライアントに移動します。 たとえば、フォームのエントリをクライアント上で検証し、サーバーに送信されます。  
+ VBScript および他のスクリプト言語は、コントロールを接続し、Web ページに対話型機能を追加します。 スクリプトがその処理をサーバーからクライアントに移動します。 たとえば、フォームのエントリをクライアントで検証し、サーバーに送信されます。  
   
-## <a name="html-extensions"></a>HTML 拡張機能  
- コントロールとスクリプトをサポートするために、object タグなどの HTML の拡張機能が追加されました。  
+## <a name="html-extensions"></a>HTML の拡張機能  
+ コントロールとスクリプトをサポートするために、オブジェクト タグなどの HTML の拡張機能が追加されました。  
   
 ## <a name="see-also"></a>関連項目  
  [MFC インターネット プログラミングの基礎](../mfc/mfc-internet-programming-basics.md)   
  [インターネット上の ActiveX コントロール](../mfc/activex-controls-on-the-internet.md)   
- [インターネット上の active ドキュメント](../mfc/active-documents-on-the-internet.md)   
  [Win32 インターネット拡張機能 (WinInet)](../mfc/win32-internet-extensions-wininet.md)
 
