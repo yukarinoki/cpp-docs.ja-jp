@@ -1,7 +1,7 @@
 ---
 title: 反復子のデバッグのサポート | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/13/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 237ce1e956cd05f21a34d0b2b159ba104167ca37
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ffcd69475d13277884deaf9ee114f3cd8d86516f
+ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959593"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601471"
 ---
 # <a name="debug-iterator-support"></a>Debug Iterator Support
 
@@ -38,7 +38,7 @@ C++ 標準では、メンバー関数によってコンテナーに対する反�
 
 - プッシュまたは挿入を使って [vector](../standard-library/vector.md) のサイズを大きくすると、`vector` に対する反復子が無効になります。
 
-## <a name="example"></a>例
+## <a name="invalid-iterators"></a>無効な反復子
 
 デバッグ モードで次のサンプル プログラムをコンパイルすると、実行時にアサートして終了します。
 
@@ -49,12 +49,7 @@ C++ 標準では、メンバー関数によってコンテナーに対する反�
 #include <iostream>
 
 int main() {
-   std::vector<int> v ;
-
-   v.push_back(10);
-   v.push_back(15);
-   v.push_back(20);
-
+   std::vector<int> v {10, 15, 20};
    std::vector<int>::iterator i = v.begin();
    ++i;
 
@@ -69,7 +64,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="using-iteratordebuglevel"></a>_ITERATOR_DEBUG_LEVEL を使用します。
 
 プリプロセッサ マクロ [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) を使って、デバッグ ビルドで反復子デバッグ機能を無効にできます。 このプログラムはアサートしませんが、それでも未定義の動作をトリガーします。
 
@@ -81,11 +76,7 @@ int main() {
 #include <iostream>
 
 int main() {
-   std::vector<int> v ;
-
-   v.push_back(10);
-   v.push_back(15);
-   v.push_back(20);
+    std::vector<int> v {10, 15, 20};
 
    std::vector<int>::iterator i = v.begin();
    ++i;
@@ -106,7 +97,7 @@ int main() {
 -572662307
 ```
 
-## <a name="example"></a>例
+## <a name="unitialized-iterators"></a>反復子が初期化されていません。
 
 次の例に示すように、初期化する前に反復子を使おうとした場合も、アサートが発生します。
 
@@ -123,7 +114,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="incompatible-iterators"></a>互換性のない反復子
 
 次のコード例では、[for_each](../standard-library/algorithm-functions.md#for_each) アルゴリズムに対する 2 つの反復子の間に互換性がないため、アサーションが発生します。 アルゴリズムは、提供された反復子が同じコンテナーを参照しているかどうかを確認します。
 
@@ -136,14 +127,8 @@ using namespace std;
 
 int main()
 {
-    vector<int> v1;
-    vector<int> v2;
-
-    v1.push_back(10);
-    v1.push_back(20);
-
-    v2.push_back(10);
-    v2.push_back(20);
+    vector<int> v1 {10, 20};
+    vector<int> v2 {10, 20};
 
     // The next line asserts because v1 and v2 are
     // incompatible.
@@ -153,7 +138,7 @@ int main()
 
 この例では、ファンクターの代わりにラムダ式 `[] (int& elem) { elem *= 2; }` が使われていることに注意してください。 このようにしてもアサート失敗に影響はありませんが (似たファンクターが同じエラーの原因になります)、ラムダはコンパクトな関数オブジェクト タスクを実行する非常に便利な方法です。 ラムダ式について詳しくは、「[ラムダ式](../cpp/lambda-expressions-in-cpp.md)」をご覧ください。
 
-## <a name="example"></a>例
+## <a name="iterators-going-out-of-scope"></a>反復子のスコープ外に出ると
 
 デバッグ反復子のチェックで宣言されている反復子変数が発生することも、**の**ループ外になりますき、**の**ループにスコープが終了します。
 
@@ -163,11 +148,7 @@ int main()
 #include <vector>
 #include <iostream>
 int main() {
-   std::vector<int> v ;
-
-   v.push_back(10);
-   v.push_back(15);
-   v.push_back(20);
+   std::vector<int> v {10, 15, 20};
 
    for (std::vector<int>::iterator i = v.begin(); i != v.end(); ++i)
       ;   // do nothing
@@ -175,9 +156,9 @@ int main() {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="destructors-for-debug-iterators"></a>デバッグ反復子のデストラクター
 
-反復子のデバッグには重要なデストラクターがあります。 何らかの理由でデストラクターが実行されない場合、アクセス違反とデータの破損が発生する可能性があります。 次の例について考えます。
+反復子のデバッグには重要なデストラクターがあります。 デストラクターが実行されない場合は、オブジェクトのメモリを解放アクセス違反とデータの破損が発生する可能性があります。 次の例について考えます。
 
 ```cpp
 // iterator_debugging_5.cpp
@@ -195,11 +176,10 @@ struct derived : base {
 };
 
 int main() {
-   std::vector<int> vect( 10 );
-   base * pb = new derived( vect.begin() );
-   delete pb;  // doesn't call ~derived()
-   // access violation
-}
+  auto vect = std::vector<int>(10);
+  auto sink = new auto(std::begin(vect));
+  ::operator delete(sink); // frees the memory without calling ~iterator()
+} // access violation
 ```
 
 ## <a name="see-also"></a>関連項目
