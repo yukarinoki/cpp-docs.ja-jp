@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76dc54662fac3dc769e0bbf72c672908196ef351
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 09390e25ffe06ce6702aef68d73c352e063a48ef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598248"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716782"
 ---
 # <a name="generic-classes-ccli"></a>ジェネリック クラス (C++/CLI)
 
@@ -47,8 +47,8 @@ class-body
 
 上記の構文では、次の用語が使用されます。
 
-*属性*(省略可能)  
-追加の宣言情報。 属性と属性クラスの詳細については、属性を参照してください。
+*属性*  
+(省略可能)追加の宣言情報。 属性と属性クラスの詳細については、属性を参照してください。
 
 *クラス キー*  
 いずれか**クラス**または**typename**
@@ -58,7 +58,7 @@ class-body
 *制約句*  
 リスト (コンマ区切りされません)**場所**句の型パラメーター制約を指定します。 形式をとります。
 
-`where`  *型の識別子パラメーター*`:`*制約リスト*  `...`
+> **場所***型の識別子パラメーター* **:** *制約リスト***.** 
 
 *制約リスト*  
 *クラスまたはインターフェイス*[`,` *.*]
@@ -69,8 +69,8 @@ class-body
 *identifier*  
 ジェネリックのクラスでは、任意の有効な C++ 識別子の名前。
 
-*修飾子*(省略可能)  
-修飾子は、許可されている**シール**と**抽象**します。
+*修飾子*  
+(省略可能)修飾子は、許可されている**シール**と**抽象**します。
 
 *基本リスト*  
 1 つの基本クラスとそのいずれかを含むリストには、インターフェイス、コンマで区切ってが実装されています。

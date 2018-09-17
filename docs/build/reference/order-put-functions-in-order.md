@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87fafb0f6eba5130524a373a065fb86ea7eacfc9
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: d8ea4df02e87a64d70ce773ed35d1a3cb0509f8b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894513"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717787"
 ---
 # <a name="order-put-functions-in-order"></a>/ORDER (関数の順序)
 
@@ -39,7 +39,7 @@ ms.locfileid: "43894513"
 
 ### <a name="parameters"></a>パラメーター
 
-*ファイル名*  
+*ファイル名*<br/>
 COMDAT 関数のリンクの順序を指定するテキスト ファイルです。
 
 ## <a name="remarks"></a>Remarks
@@ -83,5 +83,5 @@ Comdat の装飾名を検索するには、使用、 [DUMPBIN](../../build/refer
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)  
+[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
 [リンカー オプション](../../build/reference/linker-options.md)

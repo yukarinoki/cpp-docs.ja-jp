@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09f086673ba015b168211261bed68db479ef77a9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: efe15f53cda42089b35d620ae9965050595121c7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539311"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720227"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 `CMFCDesktopAlertWnd`クラスは、イベントについてユーザーに通知する画面に表示されるモードレス ダイアログ ボックスの機能を実装します。  
@@ -166,20 +166,20 @@ virtual BOOL Create(
  [in][out]*pWndOwner*  
  通知ウィンドウの所有者を指定します。 その所有者しデスクトップ通知ウィンドウのすべての通知を受け取ります。 この値は NULL をすることはできません。  
   
- [in]*uiDlgResID*  
- 通知ウィンドウのリソース ID を指定します。  
+*uiDlgResID*<br/>
+[in]通知ウィンドウのリソース ID を指定します。  
   
- [in]*hMenu*  
- ユーザーがメニュー ボタンをクリックしたときに表示されるメニューを指定します。 NULL の場合、メニュー ボタンは表示されません。  
+*hMenu*<br/>
+[in]ユーザーがメニュー ボタンをクリックしたときに表示されるメニューを指定します。 NULL の場合、メニュー ボタンは表示されません。  
   
- [in]*ptPos*  
- 通知ウィンドウが表示される初期位置を指定、画面座標を使用します。 このパラメーターは、(-1,-1) には、画面の右下隅で、[アラート] ウィンドウが表示されます。  
+*ptPos*<br/>
+[in]通知ウィンドウが表示される初期位置を指定、画面座標を使用します。 このパラメーターは、(-1,-1) には、画面の右下隅で、[アラート] ウィンドウが表示されます。  
   
- [in]*pRTIDlgBar*  
- アラートのウィンドウのクライアント領域を網羅するカスタム ダイアログ ボックス クラスのランタイム クラス情報。  
+*pRTIDlgBar*<br/>
+[in]アラートのウィンドウのクライアント領域を網羅するカスタム ダイアログ ボックス クラスのランタイム クラス情報。  
   
- [in]*params*  
- 通知ウィンドウの作成に使用されるパラメーターを指定します。  
+*params*<br/>
+[in]通知ウィンドウの作成に使用されるパラメーターを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  通知ウィンドウが正常に作成された場合は TRUE。それ以外の場合、FALSE です。  
@@ -311,8 +311,8 @@ virtual BOOL OnClickLinkButton(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiCmdID*  
- このパラメーターは使用されません。  
+*uiCmdID*<br/>
+[in]このパラメーターは使用されません。  
   
 ### <a name="return-value"></a>戻り値  
  常に FALSE です。  
@@ -330,8 +330,8 @@ virtual BOOL OnCommand(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*wParam*  
- [in]*lParam*  
+*wParam*<br/>
+[in][in]*lParam*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -371,8 +371,8 @@ void SetAnimationSpeed(UINT nSpeed);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nSpeed*  
- 新しいアニメーションの速度をミリ秒単位で指定します。  
+*nSpeed*<br/>
+[in]新しいアニメーションの速度をミリ秒単位で指定します。  
   
 ### <a name="remarks"></a>Remarks  
  アラートのウィンドウのアニメーションの速度を設定するには、このメソッドを呼び出します。 既定のアニメーションの速度は、30 ミリ秒です。  
@@ -385,8 +385,8 @@ void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*型*  
- アニメーションの種類を指定します。  
+*type*<br/>
+[in]アニメーションの種類を指定します。  
   
 ### <a name="remarks"></a>Remarks  
  アニメーションの種類を設定するには、このメソッドを呼び出します。 次のいずれかの値を指定できます。  
@@ -409,8 +409,8 @@ void SetAutoCloseTime(int nTime);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nTime*  
- 通知ウィンドウが自動的に閉じるまでの経過する時間 (ミリ秒単位)。  
+*nTime*<br/>
+[in]通知ウィンドウが自動的に閉じるまでの経過する時間 (ミリ秒単位)。  
   
 ### <a name="remarks"></a>Remarks  
  ユーザーは、ウィンドウと対話しない場合、指定時間後に、[アラート] ウィンドウが自動的に閉じます。  
@@ -423,8 +423,8 @@ void SetSmallCaption(BOOL bSmallCaption = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bSmallCaption*  
- 通知ウィンドウが小さいキャプションを表示することを指定する場合は TRUEそれ以外の場合、通知ウィンドウが標準サイズのキャプションを表示することを指定する場合は FALSE。  
+*bSmallCaption*<br/>
+[in]通知ウィンドウが小さいキャプションを表示することを指定する場合は TRUEそれ以外の場合、通知ウィンドウが標準サイズのキャプションを表示することを指定する場合は FALSE。  
   
 ### <a name="remarks"></a>Remarks  
  小規模または標準サイズのキャプションを表示するには、このメソッドを呼び出します。 既定では、小さいキャプションは、高 7 ピクセルです。 通常のキャプションのサイズを取得するには、Windows API 関数を呼び出すことによって`GetSystemMetrics(SM_CYCAPTION)`します。  
@@ -437,8 +437,8 @@ void SetTransparency(BYTE nTransparency);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nTransparency*  
- 透過性レベルを指定します。 この値は、0 から 255 までの間である必要があります。 この値が大きい、不透明度を高くウィンドウ。  
+*nTransparency*<br/>
+[in]透過性レベルを指定します。 この値は、0 から 255 までの間である必要があります。 この値が大きい、不透明度を高くウィンドウ。  
   
 ### <a name="remarks"></a>Remarks  
  ポップアップ ウィンドウの透明度レベルを設定するには、この関数を呼び出します。  

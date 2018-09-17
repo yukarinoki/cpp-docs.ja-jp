@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d941b112047dc8f90a8cdc4686e422f028b6d7e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: a3fa9720e519336b39299e84e3061860f34cf24a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335959"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716305"
 ---
 # <a name="cdialogex-class"></a>CDialogEx クラス
 `CDialogEx` クラスは、ダイアログ ボックスの背景色と背景イメージを指定します。   
@@ -72,7 +72,7 @@ class CDialogEx : public CDialog
   
  [CDialogEx](../../mfc/reference/cdialogex-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdialogex.h  
   
 ##  <a name="cdialogex"></a>  CDialogEx::CDialogEx  
@@ -90,17 +90,17 @@ CDialogEx(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nIDTemplate*  
- ダイアログ ボックス テンプレートのリソース ID。  
+*nIDTemplate*<br/>
+[in]ダイアログ ボックス テンプレートのリソース ID。  
   
- [in]*lpszTemplateName*  
- ダイアログ ボックス テンプレートのリソースの名前。  
+*lpszTemplateName*<br/>
+[in]ダイアログ ボックス テンプレートのリソースの名前。  
   
- [in]*pParent*  
- 親ウィンドウへのポインター。 既定値は、NULL です。  
+*pParent*<br/>
+[in]親ウィンドウへのポインター。 既定値は、NULL です。  
   
- [in]*pParentWnd*  
- 親ウィンドウへのポインター。 既定値は、NULL です。  
+*pParentWnd*<br/>
+[in]親ウィンドウへのポインター。 既定値は、NULL です。  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -116,11 +116,11 @@ void SetBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*色*  
- RGB 色の値。  
+*色*<br/>
+[in]RGB 色の値。  
   
- [in]*bRepaint*  
- 画面をすぐに更新する場合は TRUEそれ以外の場合、FALSE です。 既定値は TRUE です。  
+*bRepaint*<br/>
+[in]画面をすぐに更新する場合は TRUEそれ以外の場合、FALSE です。 既定値は TRUE です。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -142,20 +142,20 @@ BOOL SetBackgroundImage(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*hBitmap*  
- 背景イメージへのハンドル。  
+*hBitmap*<br/>
+[in]背景イメージへのハンドル。  
   
- [in]*uiBmpResId*  
- 背景イメージのリソース ID。  
+*uiBmpResId*<br/>
+[in]背景イメージのリソース ID。  
   
- [in]*場所*  
- 1 つ、`CDialogEx::BackgroundLocation`イメージの場所を指定する値。 有効な値には、BACKGR_TILE、BACKGR_TOPLEFT、BACKGR_TOPRIGHT、BACKGR_BOTTOMLEFT、および BACKGR_BOTTOMRIGHT が含まれます。 既定値は、BACKGR_TILE です。  
+*location*<br/>
+[in]1 つ、`CDialogEx::BackgroundLocation`イメージの場所を指定する値。 有効な値には、BACKGR_TILE、BACKGR_TOPLEFT、BACKGR_TOPRIGHT、BACKGR_BOTTOMLEFT、および BACKGR_BOTTOMRIGHT が含まれます。 既定値は、BACKGR_TILE です。  
   
- [in]*bAutoDestroy*  
- 背景イメージを自動的に破棄する場合は TRUEそれ以外の場合、FALSE です。  
+*bAutoDestroy*<br/>
+[in]背景イメージを自動的に破棄する場合は TRUEそれ以外の場合、FALSE です。  
   
- [in]*bRepaint*  
- ダイアログ ボックスがすぐに再描画する場合は TRUEそれ以外の場合、FALSE です。  
+*bRepaint*<br/>
+[in]ダイアログ ボックスがすぐに再描画する場合は TRUEそれ以外の場合、FALSE です。  
   
 ### <a name="return-value"></a>戻り値  
  2 番目のメソッドでオーバー ロードの構文、true の場合、メソッドが成功した場合それ以外の場合、FALSE です。  

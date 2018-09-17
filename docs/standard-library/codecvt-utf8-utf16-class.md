@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04c4ac6b599e294f5514f8a2f487ed9072f3f875
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 272e4007c3421613acfecc95fdd9548663dfceeb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44099565"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719993"
 ---
 # <a name="codecvtutf8utf16"></a>codecvt_utf8_utf16
 
@@ -36,8 +36,10 @@ class codecvt_utf8_utf16 : public _STD codecvt<Elem, char, StateType>
 
 *Elem*<br/>
 ワイド文字要素型。
+
 *Maxcode*<br/>
 ロケール ファセットの文字の最大数。
+
 *モード*<br/>
 ロケール ファセットの構成情報。
 
@@ -47,5 +49,6 @@ class codecvt_utf8_utf16 : public _STD codecvt<Elem, char, StateType>
 
 ## <a name="requirements"></a>要件
 
-ヘッダー: \<codecvt >  
+ヘッダー: \<codecvt >
+
 Namespace: std

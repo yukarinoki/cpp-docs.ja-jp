@@ -1,5 +1,5 @@
 ---
-title: 入力 (エントリ ポイント シンボル) |Microsoft ドキュメント
+title: -ENTRY (エントリ ポイント シンボル) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,59 +20,61 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74d7e6e05af98bb3d3175d352fb3d5de1b70b12b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 53f5a18b061cbd956731ced6788e86f871ea97bd
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375400"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719577"
 ---
 # <a name="entry-entry-point-symbol"></a>/ENTRY (エントリ ポイント シンボル)
-```  
-/ENTRY:function  
-```  
-  
-## <a name="remarks"></a>コメント  
- それぞれの文字について以下に説明します。  
-  
- *function*  
- ユーザーが定義した開始を指定する関数は、.exe ファイルまたは DLL のアドレスします。  
-  
-## <a name="remarks"></a>コメント  
- /ENTRY オプションは、.exe ファイルまたは DLL の開始アドレスとしてエントリ ポイント関数を指定します。  
-  
- 使用する関数を定義する必要があります、`__stdcall`呼び出し規約です。 パラメーターと戻り値かどうか、プログラムは、コンソール アプリケーション、windows アプリケーションまたは DLL に依存します。 エントリ ポイントを設定して、C ランタイム ライブラリは正しく初期化されており、静的オブジェクト用の C++ コンス トラクターが実行されるようにリンカーを使用することをお勧めします。  
-  
- 既定では、開始アドレスは、C ランタイム ライブラリの関数名がします。 リンカーは、プログラムの属性に従って次の表に示すように、ように選択します。  
-  
-|関数名|既定値|  
-|-------------------|-----------------|  
-|**mainCRTStartup** (または**wmainCRTStartup**)|/SUBSYSTEM:CONSOLE; を使用するアプリケーション呼び出し`main`(または`wmain`)|  
-|**WinMainCRTStartup** (または**wWinMainCRTStartup**)|/SUBSYSTEM を使用するアプリケーションを:**WINDOWS**; 呼び出し`WinMain`(または`wWinMain`)、使用が定義されている必要があります `__stdcall`|  
-|**_DllMainCRTStartup**|DLL です。呼び出し`DllMain`、存在する場合を定義する必要があるには `__stdcall`|  
-  
- 場合、 [/DLL](../../build/reference/dll-build-a-dll.md)または[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)をリンカーがかどうかに応じて、サブシステムとエントリ ポイントを選択して、オプションが指定されていない`main`または`WinMain`が定義されています。  
-  
- 関数は、 `main`、 `WinMain`、および`DllMain`ユーザー定義のエントリ ポイントの 3 つの形式です。  
-  
- /ENTRY に指定された関数のシグネチャがありますをマネージ イメージを作成する場合 (LPVOID *var1*、DWORD *var2*、LPVOID *var3*)。  
-  
- 独自に定義する方法について`DllMain`エントリ ポイントを参照してください[Dll および Visual C ランタイム ライブラリの動作](../../build/run-time-library-behavior.md)です。  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには  
-  
-1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「 [Visual C プロジェクト プロパティの設定](../../ide/working-with-project-properties.md)です。  
-  
-2.  クリックして、**リンカー**フォルダーです。  
-  
-3.  クリックして、**詳細**プロパティ ページ。  
-  
-4.  変更、**エントリ ポイント**プロパティです。  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには  
-  
--   「<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EntryPointSymbol%2A>」を参照してください。  
-  
-## <a name="see-also"></a>関連項目  
- [リンカー オプションの設定](../../build/reference/setting-linker-options.md)   
- [リンカー オプション](../../build/reference/linker-options.md)
+
+```
+/ENTRY:function
+```
+
+## <a name="arguments"></a>引数
+
+*function*<br/>
+ユーザーが定義した開始を指定する関数は、.exe ファイルまたは DLL のアドレスします。
+
+## <a name="remarks"></a>Remarks
+
+/ENTRY オプションは、.exe ファイルまたは DLL の開始アドレスとしてエントリ ポイント関数を指定します。
+
+使用する関数を定義する必要があります、`__stdcall`呼び出し規約。 パラメーターと戻り値のかどうか、プログラムはコンソール アプリケーション、windows アプリケーションまたは DLL に依存します。 エントリ ポイントを設定して、C ランタイム ライブラリが正しく初期化され、静的オブジェクトに対して C++ コンス トラクターが実行されるようにリンカーを使用することをお勧めします。
+
+既定では、開始アドレスは、C ランタイム ライブラリから関数名です。 リンカーは、プログラムの属性に基づいて次の表に示すように、ように選択します。
+
+|関数名|既定値|
+|-------------------|-----------------|
+|**mainCRTStartup** (または**wmainCRTStartup**)|/SUBSYSTEM:CONSOLE; を使用するアプリケーション呼び出し`main`(または`wmain`)|
+|**WinMainCRTStartup** (または**wWinMainCRTStartup**)|/SUBSYSTEM を使用するアプリケーション:**WINDOWS**; 呼び出し`WinMain`(または`wWinMain`) を使用して定義されている必要があります `__stdcall`|
+|**_DllMainCRTStartup**|DLL。呼び出し`DllMain`する必要がありますを使用する定義が存在する場合 `__stdcall`|
+
+場合、 [/DLL](../../build/reference/dll-build-a-dll.md)または[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)をリンカーがかどうかに応じてサブシステムとエントリ ポイントを選択して、オプションが指定されていない`main`または`WinMain`が定義されています。
+
+関数は、 `main`、 `WinMain`、および`DllMain`ユーザー定義のエントリ ポイントの 3 つの形式します。
+
+管理対象イメージを作成するには、/ENTRY に指定された関数での署名が必要 (LPVOID *var1*、DWORD *var2*、LPVOID *var3*)。
+
+独自に定義する方法については`DllMain`、エントリ ポイントを参照してください[Dll と Visual C ランタイム ライブラリの動作](../../build/run-time-library-behavior.md)します。
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
+
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
+
+1. をクリックして、**リンカー**フォルダー。
+
+1. をクリックして、**詳細**プロパティ ページ。
+
+1. 変更、**エントリ ポイント**プロパティ。
+
+### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
+
+- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EntryPointSymbol%2A>
+
+## <a name="see-also"></a>関連項目
+
+[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
+[リンカー オプション](../../build/reference/linker-options.md)

@@ -1,5 +1,5 @@
 ---
-title: 依存関係の |Microsoft ドキュメント
+title: 累積的な依存関係 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,52 +16,54 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d502912a8aeee2e6b3782e7795f44238386e1dba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5a66b153a52da06cca14845b9a58fcef0f42676d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366976"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725713"
 ---
 # <a name="cumulative-dependencies"></a>依存関係の追加
-ターゲットが繰り返し発生する場合は、依存関係を記述ブロックで累積されます。  
-  
- たとえば、このルールをセット、  
-  
-```Output  
-bounce.exe : jump.obj  
-bounce.exe : up.obj  
-   echo Building bounce.exe...  
-```  
-  
- この評価されます。  
-  
-```Output  
-bounce.exe : jump.obj up.obj  
-   echo Building bounce.exe...  
-```  
-  
- 説明が 1 つのブロック内の複数の依存関係行の複数のターゲットは、個別の記述ブロック内で指定された各は、依存関係の最後の行に含まれていないターゲットがコマンドのブロックを使用しないかのように評価されます。 (Nmake の) は、このような対象に対して推論規則を使用しようとします。  
-  
- たとえば、このルールをセット、  
-  
-```Output  
-leap.exe bounce.exe : jump.obj  
-bounce.exe climb.exe : up.obj  
-   echo Building bounce.exe...  
-```  
-  
- この評価されます。  
-  
-```Output  
-  
-leap.exe : jump.obj  
-# invokes an inference rule  
-bounce.exe : jump.obj up.obj  
-   echo Building bounce.exe...  
-climb.exe : up.obj  
-   echo Building bounce.exe...  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [ターゲット](../build/targets.md)
+
+ターゲットが繰り返し発生する場合は、依存関係を記述ブロックで累積されます。
+
+たとえば、この、ルールの設定
+
+```Output
+bounce.exe : jump.obj
+bounce.exe : up.obj
+   echo Building bounce.exe...
+```
+
+この評価されます。
+
+```Output
+bounce.exe : jump.obj up.obj
+   echo Building bounce.exe...
+```
+
+1 つ記述ブロックで複数の依存関係の行で複数のターゲットとして評価されます、個別の記述ブロックでそれぞれ指定されましたが、依存関係の最後の行ではありません。 ターゲットでコマンド ブロックを使用しないでください。 (Nmake の) は、このようなターゲットの推論規則を使用しようとします。
+
+たとえば、この、ルールの設定
+
+```Output
+leap.exe bounce.exe : jump.obj
+bounce.exe climb.exe : up.obj
+   echo Building bounce.exe...
+```
+
+この評価されます。
+
+```Output
+
+leap.exe : jump.obj
+# invokes an inference rule
+bounce.exe : jump.obj up.obj
+   echo Building bounce.exe...
+climb.exe : up.obj
+   echo Building bounce.exe...
+```
+
+## <a name="see-also"></a>関連項目
+
+[ターゲット](../build/targets.md)

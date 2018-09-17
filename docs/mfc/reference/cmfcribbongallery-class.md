@@ -88,12 +88,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ed6fde4ffb510c30189e49639112edfadfcfd14
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: de624d9775160d1cbe7f048baf2dd83a592cfbe3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540329"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724796"
 ---
 # <a name="cmfcribbongallery-class"></a>CMFCRibbonGallery クラス
 Office 2007 スタイルのリボン ギャラリーを実装します。  
@@ -195,20 +195,20 @@ void AddGroup(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszGroupName*  
- グループの名前を指定します。  
+*lpszGroupName*<br/>
+[in]グループの名前を指定します。  
   
- [in]*uiImagesPaletteResID*  
- グループのイメージを格納するイメージの一覧のリソース ID を指定します。  
+*uiImagesPaletteResID*<br/>
+[in]グループのイメージを格納するイメージの一覧のリソース ID を指定します。  
   
- [in]*cxPaletteImage*  
- イメージのピクセル単位の幅を指定します。  
+*cxPaletteImage*<br/>
+[in]イメージのピクセル単位の幅を指定します。  
   
- [in]*imagesGroup*  
- イメージのグループ化を含むイメージ リストへの参照。  
+*imagesGroup*<br/>
+[in]イメージのグループ化を含むイメージ リストへの参照。  
   
- [in]*nIconsNum*  
- グループでアイコンの数を指定します。 カスタム (オーナー描画) に対してのみ、このパラメーターを指定する必要がありますグループ。  
+*nIconsNum*<br/>
+[in]グループでアイコンの数を指定します。 カスタム (オーナー描画) に対してのみ、このパラメーターを指定する必要がありますグループ。  
   
 ### <a name="remarks"></a>Remarks  
  リボン ギャラリーの項目は、このメソッドを呼び出すことによって複数のグループに分割できます。 各グループには、キャプションを設定できます。  
@@ -224,14 +224,14 @@ void AddSubItem(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pSubItem*  
- メニューに追加する項目へのポインター。  
+*pSubItem*<br/>
+[in]メニューに追加する項目へのポインター。  
   
- [in]*nIndex*  
- 場所の 0 から始まるインデックスに項目を挿入する場所を指定します。  
+*nIndex*<br/>
+[in]場所の 0 から始まるインデックスに項目を挿入する場所を指定します。  
   
- [in]*bOnTop*  
- リボン ギャラリーの前に、項目を挿入することを指定する場合は TRUEそれ以外の場合、FALSE です。  
+*bOnTop*<br/>
+[in]リボン ギャラリーの前に、項目を挿入することを指定する場合は TRUEそれ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドを呼び出すことによって、ポップアップ メニュー項目を含むポップアップ ギャラリーを組み合わせることができます。 メニュー項目は、ギャラリーの前後に配置できます。  
@@ -325,11 +325,11 @@ void EnableMenuResize(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- メニューのサイズ変更を有効にする場合は TRUEそれ以外の場合、FALSE です。  
+*bEnable*<br/>
+[in]メニューのサイズ変更を有効にする場合は TRUEそれ以外の場合、FALSE です。  
   
- [in]*bVertcalOnly*  
- ギャラリーが垂直方向にのみ変更できるように指定する場合は TRUE場合は、ギャラリーに垂直方向および水平方向に変更できるように指定する場合は FALSE。  
+*bVertcalOnly*<br/>
+[in]ギャラリーが垂直方向にのみ変更できるように指定する場合は TRUE場合は、ギャラリーに垂直方向および水平方向に変更できるように指定する場合は FALSE。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドを使用して、有効またはリボン ギャラリーのサイズ変更を無効にします。 サイズ変更を有効にすると、リボン ギャラリーはサイズを変更するユーザーが使用できるグリップを表示します。  
@@ -342,8 +342,8 @@ void EnablMenuSideBar(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- サイド バーが有効であるかを指定する場合は TRUEそれ以外の場合、FALSE です。  
+*bEnable*<br/>
+[in]サイド バーが有効であるかを指定する場合は TRUEそれ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
  有効または、メニューの左側にある Office XP スタイルのサイド バーを無効にするには、このメソッドを呼び出します。  
@@ -381,8 +381,8 @@ LPCTSTR GetGroupName(int nGroupIndex) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nGroupIndex*  
- グループの名前を取得するの 0 から始まるインデックスを指定します。  
+*nGroupIndex*<br/>
+[in]グループの名前を取得するの 0 から始まるインデックスを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  指定したインデックス位置にあるグループの名前。 無効なインデックスを渡すと、失敗したアサーションが発生します。  
@@ -420,8 +420,8 @@ LPCTSTR GetItemToolTip(int nItemIndex) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nItemIndex*  
- ツールヒント テキストを取得する対象の項目の 0 から始まるインデックスを指定します。  
+*nItemIndex*<br/>
+[in]ツールヒント テキストを取得する対象の項目の 0 から始まるインデックスを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  リボン ギャラリー内の項目に割り当てられているツールヒント文字列へのポインター。 ツールヒントがその項目に割り当てられていない場合は、NULL をられます。  
@@ -436,8 +436,8 @@ static int GetLastSelectedItem(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiCmdID*  
- リボン ギャラリーを開くメニュー項目のコマンド ID を指定します。  
+*uiCmdID*<br/>
+[in]リボン ギャラリーを開くメニュー項目のコマンド ID を指定します。  
   
 ### <a name="return-value"></a>戻り値  
  ユーザーは、リボン ギャラリーのいずれかの項目を選択するときに、ライブラリ リボン ギャラリーを開くメニュー ボタンのコマンド ID と共に WM_COMMAND メッセージを送信します。  
@@ -576,20 +576,20 @@ virtual void OnDrawPaletteIcon(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- 描画に使用されているデバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]描画に使用されているデバイス コンテキストへのポインター。  
   
- [in]*rectIcon*  
- 描画するために、アイコンの外接する四角形を指定します。  
+*rectIcon*<br/>
+[in]描画するために、アイコンの外接する四角形を指定します。  
   
- [in]*nIconIndex*  
- 描画するために、アイコンのギャラリーのアイコンのイメージ リスト内の 0 から始まるインデックスを指定します。  
+*nIconIndex*<br/>
+[in]描画するために、アイコンのギャラリーのアイコンのイメージ リスト内の 0 から始まるインデックスを指定します。  
   
- [in]*pIcon*  
- 描画されているアイコンへのポインター。  
+*pIcon*<br/>
+[in]描画されているアイコンへのポインター。  
   
- [in]*clrText*  
- 描画する項目のテキストの色を指定します。  
+*clrText*<br/>
+[in]描画する項目のテキストの色を指定します。  
   
 ### <a name="remarks"></a>Remarks  
  リボン ギャラリーの外観をカスタマイズする派生クラスでは、このメソッドをオーバーライドすることができます。  
@@ -659,11 +659,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pParent*  
- リボン ギャラリーのウィンドウの親ウィンドウです。  
+*pParent*<br/>
+[in]リボン ギャラリーのウィンドウの親ウィンドウ。  
   
- [out]*データ*  
- リボン ギャラリーのユーザー補助データを受信する `CAccessibilityData` オブジェクト。  
+*data*<br/>
+[out]A`CAccessibilityData`リボン ギャラリーからのアクセシビリティ データを受け取るオブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -678,8 +678,8 @@ void SetButtonMode(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bSet*  
- ドロップダウン メニューのボタンとしてリボン ギャラリーを表示する場合は TRUEリボン上で直接リボン ギャラリーの内容を表示する場合は FALSE。  
+*bSet*<br/>
+[in]ドロップダウン メニューのボタンとしてリボン ギャラリーを表示する場合は TRUEリボン上で直接リボン ギャラリーの内容を表示する場合は FALSE。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -693,11 +693,11 @@ void SetGroupName(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nGroupIndex*  
- 名前が変更されているグループの 0 から始まるインデックスを指定します。  
+*nGroupIndex*<br/>
+[in]名前が変更されているグループの 0 から始まるインデックスを指定します。  
   
- [in]*lpszGroupName*  
- グループの新しい名前を指定します。  
+*lpszGroupName*<br/>
+[in]グループの新しい名前を指定します。  
   
 ### <a name="remarks"></a>Remarks  
  グループの名前が変更されている必要がありますが追加されましたを使用して、 [CMFCRibbonGallery::AddGroup](#addgroup)メソッド。  
@@ -710,8 +710,8 @@ void SetIconsInRow(int nIconsInRow);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nIconsInRow*  
- ギャラリーの行ごとに表示する項目の数を指定します。  
+*nIconsInRow*<br/>
+[in]ギャラリーの行ごとに表示する項目の数を指定します。  
   
 ### <a name="remarks"></a>Remarks  
  リボン ギャラリーの幅を指定するのにには、このメソッドを使用します。  
@@ -726,11 +726,11 @@ void SetItemToolTip(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nItemIndex*  
- 関連付けるツールヒント パレット項目の 0 から始まるインデックス。  
+*nItemIndex*<br/>
+[in]関連付けるツールヒント パレット項目の 0 から始まるインデックス。  
   
- [in]*lpszToolTip*  
- ツールヒントに表示するテキスト。  
+*lpszToolTip*<br/>
+[in]ツールヒントに表示するテキスト。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -747,14 +747,14 @@ void SetPalette(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*imagesPalette*  
- ギャラリーに表示するアイコンを格納するイメージ リストを指定します。  
+*imagesPalette*<br/>
+[in]ギャラリーに表示するアイコンを格納するイメージ リストを指定します。  
   
- [in]*uiImagesPaletteResID*  
- ギャラリーに表示するアイコンを格納するイメージ リストのリソース ID を指定します。  
+*uiImagesPaletteResID*<br/>
+[in]ギャラリーに表示するアイコンを格納するイメージ リストのリソース ID を指定します。  
   
- [in]*cxPaletteImage*  
- ギャラリーのイメージのピクセル単位の幅を指定します。  
+*cxPaletteImage*<br/>
+[in]ギャラリーのイメージのピクセル単位の幅を指定します。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -766,8 +766,8 @@ void SetPaletteID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nID*  
- ユーザーがギャラリー項目を選択すると、WM_COMMAND メッセージで送信されたコマンド ID を指定します。  
+*nID*<br/>
+[in]ユーザーがギャラリー項目を選択すると、WM_COMMAND メッセージで送信されたコマンド ID を指定します。  
   
 ### <a name="remarks"></a>Remarks  
  ギャラリーから、ユーザーが選択した特定の項目を確認するのには、呼び出し、 [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem)静的メソッド。  

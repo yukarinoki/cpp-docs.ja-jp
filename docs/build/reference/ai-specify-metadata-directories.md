@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f932e186630d1bc6c846c78af99f98262861068
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 985ff4eb96b904dc9c5b4377b336109b00e06b40
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110670"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716593"
 ---
 # <a name="ai-specify-metadata-directories"></a>/AI (メタデータ ディレクトリの指定)
 
@@ -42,6 +42,7 @@ ms.locfileid: "44110670"
 コンパイラが検索するディレクトリまたはパス。
 
 ## <a name="remarks"></a>Remarks
+
 1 つだけのディレクトリを渡すことができます、 **/AI**呼び出し。 いずれかを指定 **/AI**コンパイラで検索するパスごとにオプション。 コンパイラ検索パスに C:\Project\Meta と C:\Common\Meta の両方を追加する例では、`#using`ディレクティブを追加`/AI"C:\Project\Meta" /AI"C:\Common\Meta"`コンパイラのコマンドラインを各ディレクトリを追加または、**に関する追加の #using ディレクトリの using**Visual Studio のプロパティです。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
@@ -58,6 +59,6 @@ ms.locfileid: "44110670"
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)   
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)   
+[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
+[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)<br/>
 [#using ディレクティブ](../../preprocessor/hash-using-directive-cpp.md)

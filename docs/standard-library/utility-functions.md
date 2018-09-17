@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::make_pair [C++]
 - std::move [C++]
 - std::swap [C++]
-ms.openlocfilehash: 9c7f053466e8c6297b7ccd9a2a40c5980e23ccba
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 12e8b2c4dfb0d7d36974fb2e5979d82b69c89316
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960308"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718331"
 ---
 # <a name="ltutilitygt-functions"></a>&lt;utility&gt; 関数
 
@@ -41,11 +41,11 @@ T exchange(T& val, Other&& new_val)
 
 ### <a name="parameters"></a>パラメーター
 
-*val*  
- new_val の値を受け取るオブジェクト。
+*val*<br/>
+new_val の値を受け取るオブジェクト。
 
-*new_val*  
- 値が val にコピーまたは移動されるオブジェクト。
+*new_val*<br/>
+値が val にコピーまたは移動されるオブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -163,17 +163,17 @@ constexpr T2&& get(pair<T1, T2>&& Pr) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*Index*  
- 指定した要素の 0 ベースのインデックス。
+*Index*<br/>
+指定した要素の 0 ベースのインデックス。
 
-*T1*  
- 1 番目の pair 要素の型。
+*T1*<br/>
+1 番目の pair 要素の型。
 
-*T2*  
- 2 番目の pair 要素の型。
+*T2*<br/>
+2 番目の pair 要素の型。
 
-*プル要求*  
- 選択する pair。
+*プル要求*<br/>
+選択する pair。
 
 ### <a name="remarks"></a>Remarks
 
@@ -234,11 +234,11 @@ pair<T, U> make_pair(T&& Val1, U&& Val2);
 
 ### <a name="parameters"></a>パラメーター
 
-*Val1*  
- `pair` の最初の要素を初期化する値。
+*Val1*<br/>
+`pair` の最初の要素を初期化する値。
 
-*Val2*  
- `pair` の 2 番目の要素を初期化する値。
+*Val2*<br/>
+`pair` の 2 番目の要素を初期化する値。
 
 ### <a name="return-value"></a>戻り値
 

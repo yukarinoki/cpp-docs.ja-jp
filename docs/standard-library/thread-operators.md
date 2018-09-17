@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: ac9a436637f9acf5f3818454706eb146d814b3bc
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5c9eba152ddaf0ab35fc1a331905a457ff339f28
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964822"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725986"
 ---
 # <a name="ltthreadgt-operators"></a>&lt;thread&gt; 演算子
 
@@ -49,11 +49,11 @@ bool operator>= (
 
 ### <a name="parameters"></a>パラメーター
 
-*左*  
- 左側の `thread::id` オブジェクト。
+*左*<br/>
+左側の `thread::id` オブジェクト。
 
-*右*  
- 右側の `thread::id` オブジェクト。
+*右*<br/>
+右側の `thread::id` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -75,11 +75,11 @@ bool operator> (
 
 ### <a name="parameters"></a>パラメーター
 
-*左*  
- 左側の `thread::id` オブジェクト。
+*左*<br/>
+左側の `thread::id` オブジェクト。
 
-*右*  
- 右側の `thread::id` オブジェクト。
+*右*<br/>
+右側の `thread::id` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -101,11 +101,11 @@ bool operator<= (
 
 ### <a name="parameters"></a>パラメーター
 
-*左*  
- 左側の `thread::id` オブジェクト。
+*左*<br/>
+左側の `thread::id` オブジェクト。
 
-*右*  
- 右側の `thread::id` オブジェクト。
+*右*<br/>
+右側の `thread::id` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -127,11 +127,11 @@ bool operator<(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*  
- 左側の `thread::id` オブジェクト。
+*左*<br/>
+左側の `thread::id` オブジェクト。
 
-*右*  
- 右側の `thread::id` オブジェクト。
+*右*<br/>
+右側の `thread::id` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -155,11 +155,11 @@ bool operator!= (
 
 ### <a name="parameters"></a>パラメーター
 
-*左*  
- 左側の `thread::id` オブジェクト。
+*左*<br/>
+左側の `thread::id` オブジェクト。
 
-*右*  
- 右側の `thread::id` オブジェクト。
+*右*<br/>
+右側の `thread::id` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -180,12 +180,12 @@ bool operator== (
 ```
 
 ### <a name="parameters"></a>パラメーター
- 
-*左*  
- 左側の `thread::id` オブジェクト。
 
-*右*  
- 右側の `thread::id` オブジェクト。
+*左*<br/>
+左側の `thread::id` オブジェクト。
+
+*右*<br/>
+右側の `thread::id` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -207,11 +207,11 @@ basic_ostream<Elem, Tr>& operator<<(
 
 ### <a name="parameters"></a>パラメーター
 
-*Ostr*  
- [basic_ostream](../standard-library/basic-ostream-class.md) オブジェクト。
+*Ostr*<br/>
+[basic_ostream](../standard-library/basic-ostream-class.md) オブジェクト。
 
-*Id*  
- `thread::id` オブジェクト。
+*Id*<br/>
+`thread::id` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 

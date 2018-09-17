@@ -65,12 +65,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3abc3c08b46577f7d59b2831a68ded812a5da60a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 175d7895331ec960244354870c6bd6845baf37d1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110019"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725323"
 ---
 # <a name="basicios-class"></a>basic_ios クラス
 
@@ -230,9 +230,11 @@ void clear(io_state state);
 
 ### <a name="parameters"></a>パラメーター
 
-*状態*(省略可能) をすべてのフラグを消去した後に設定するフラグ。 既定値は `goodbit` です。
+*state*<br/>
+(省略可能)すべてのフラグを消去した後に設定するフラグ。 既定値は `goodbit` です。
 
-*reraise* (省略可能) を指定します、例外が再発生するかどうか。 既定値は**false** (再、が例外を発生していません)。
+*reraise*<br/>
+(省略可能)例外が再発生するかどうかを指定します。 既定値は**false** (再、が例外を発生していません)。
 
 ### <a name="remarks"></a>Remarks
 

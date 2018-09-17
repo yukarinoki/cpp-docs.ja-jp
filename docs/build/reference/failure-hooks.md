@@ -1,5 +1,5 @@
 ---
-title: エラー フック |Microsoft ドキュメント
+title: エラー フック |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,37 +14,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be598a77ca48eeee03360a3b598b0567abc6ee4b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e4c69759034dbb7233970bd89616a062a369cc13
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371786"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721280"
 ---
 # <a name="failure-hooks"></a>エラー フック
-エラー フックと同じ方法で有効になっている、[通知フック](../../build/reference/notification-hooks.md)です。 フック ルーチンの必要性を処理できるように、適切な値を返すことが続行する (HINSTANCE か FARPROC) または 0 で、例外をスローすることを示します。  
-  
- ユーザー定義関数を参照するポインター変数は。  
-  
-```  
-// This is the failure hook, dliNotify = {dliFailLoadLib|dliFailGetProc}  
-ExternC  
-PfnDliHook   __pfnDliFailureHook2;  
-```  
-  
- **DelayLoadInfo**から値を含むエラーの正確なレポートに必要な適切なデータが構造に含まれる`GetLastError`です。  
-  
- 場合は、通知は**dliFailLoadLib**、フック関数が返すことができます。  
-  
--   エラーを処理できない場合は 0。  
-  
--   HMODULE は、エラー フックが修正される問題と、ライブラリ自体をロードします。  
-  
- 場合は、通知は**dliFailGetProc**、フック関数が返すことができます。  
-  
--   エラーを処理できない場合は 0。  
-  
--   有効な proc アドレス (インポート関数アドレス) 場合は、障害のフックは、自体アドレスの取得に成功しました。  
-  
-## <a name="see-also"></a>関連項目  
- [エラー処理と通知](../../build/reference/error-handling-and-notification.md)
+
+エラー フックと同じ方法で有効になっている、[通知フック](../../build/reference/notification-hooks.md)します。 (HINSTANCE または FARPROC) を行うフックの日常的なニーズを処理するために適切な値を返すまたは 0 に、例外をスローする必要があります。
+
+ユーザー定義関数を参照するポインター変数は次のとおりです。
+
+```
+// This is the failure hook, dliNotify = {dliFailLoadLib|dliFailGetProc}
+ExternC
+PfnDliHook   __pfnDliFailureHook2;
+```
+
+**DelayLoadInfo**構造体にはから値を含むエラーの正確なレポートに必要な関連データが含まれています`GetLastError`します。
+
+通知が場合**dliFailLoadLib**、フック関数が返すことができます。
+
+- エラーを処理できない場合は 0。
+
+- HMODULE は、エラー フックは、問題が解決され、ライブラリ自体を読み込まれた場合。
+
+通知が場合**dliFailGetProc**、フック関数が返すことができます。
+
+- エラーを処理できない場合は 0。
+
+- 有効なプロシージャのアドレス (インポート関数アドレス)、障害をフックする場合は、アドレス自体を取得に成功しました。
+
+## <a name="see-also"></a>関連項目
+
+[エラー処理と通知](../../build/reference/error-handling-and-notification.md)

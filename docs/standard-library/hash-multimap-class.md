@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 857c0614288240aeaf3001d03aa5d6372ccee1c9
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ca81fa18bb5f63f57c057eaa9e64c35df01e33f1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196306"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726766"
 ---
 # <a name="hashmultimap-class"></a>hash_multimap クラス
 
@@ -123,16 +123,16 @@ class hash_multimap
 ### <a name="parameters"></a>パラメーター
 
 *Key*<br/>
- hash_multimap に格納されるキーのデータ型。
+hash_multimap に格納されるキーのデータ型。
 
 *Type*<br/>
- hash_multimap に格納される要素のデータ型。
+hash_multimap に格納される要素のデータ型。
 
 *Traits*<br/>
- クラスの 1 つ、2 つの関数オブジェクトを含む型*Traits*相対的な順序と、ハッシュ関数は、単項述語マッピングする要素のキーの値を決定する並べ替えキーとして 2 つの要素の値を比較することができます符号なし整数型の`size_t`します。 この引数は省略可能であり、既定値は `hash_compare<Key, less<Key>>` です。
+クラスの 1 つ、2 つの関数オブジェクトを含む型*Traits*相対的な順序と、ハッシュ関数は、単項述語マッピングする要素のキーの値を決定する並べ替えキーとして 2 つの要素の値を比較することができます符号なし整数型の`size_t`します。 この引数は省略可能であり、既定値は `hash_compare<Key, less<Key>>` です。
 
 *アロケーター*<br/>
- メモリの hash_multimap の割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値は `allocator<pair <const Key, Type>>` です。
+メモリの hash_multimap の割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値は `allocator<pair <const Key, Type>>` です。
 
 ## <a name="remarks"></a>Remarks
 
@@ -600,7 +600,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
- 照合される hash_multimap の要素のキー。
+照合される hash_multimap の要素のキー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -895,7 +895,7 @@ int main()
 
 ```Output
 After the emplace insertion, hm1 contains:
- 1 => a
+1 => a
 ```
 
 ## <a name="emplace_hint"></a>  hash_multimap::emplace_hint
@@ -955,7 +955,7 @@ int main()
 
 ```Output
 After the emplace insertion, hm1 contains:
- 1 => a
+1 => a
 ```
 
 ## <a name="empty"></a>  hash_multimap::empty
@@ -1096,7 +1096,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
- 検索対象の hash_multimap 内の要素の並べ替えキーと比較される引数キー。
+検索対象の hash_multimap 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1187,16 +1187,16 @@ size_type erase(const key_type& key);
 ### <a name="parameters"></a>パラメーター
 
 *_Where*<br/>
- hash_multimap から削除する要素の位置。
+hash_multimap から削除する要素の位置。
 
 *first*<br/>
- hash_multimap から削除する最初の要素の位置。
+hash_multimap から削除する最初の要素の位置。
 
 *last*<br/>
- hash_multimap から削除する最後の要素の次の位置。
+hash_multimap から削除する最後の要素の次の位置。
 
 *key*<br/>
- hash_multimap から削除する要素のキー。
+hash_multimap から削除する要素のキー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1311,7 +1311,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
- 検索対象の hash_multimap 内の要素の並べ替えキーによって照合されるキー。
+検索対象の hash_multimap 内の要素の並べ替えキーによって照合されるキー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1505,18 +1505,18 @@ hash_multimap(
 
 template <class InputIterator>
 hash_multimap(
- InputIterator First,
+    InputIterator First,
     InputIterator Last);
 
 template <class InputIterator>
 hash_multimap(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Compare& Comp);
 
 template <class InputIterator>
 hash_multimap(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Compare& Comp,
     const Allocator& Al);
@@ -1762,7 +1762,7 @@ const_iterator lower_bound(const Key& key) const;
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
- 検索対象の hash_multimap 内の要素の並べ替えキーと比較される引数キー。
+検索対象の hash_multimap 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2316,7 +2316,7 @@ void swap(hash_multimap& right);
 ### <a name="parameters"></a>パラメーター
 
 *right*<br/>
- 交換する要素を提供する hash_multimap (hash_multimap の要素と要素を交換する hash_multimap)。
+交換する要素を提供する hash_multimap (hash_multimap の要素と要素を交換する hash_multimap)。
 
 ### <a name="remarks"></a>Remarks
 
@@ -2390,7 +2390,7 @@ const_iterator upper_bound(const Key& key) const;
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
- 検索対象の hash_multimap 内の要素の並べ替えキーと比較される引数キー。
+検索対象の hash_multimap 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
 

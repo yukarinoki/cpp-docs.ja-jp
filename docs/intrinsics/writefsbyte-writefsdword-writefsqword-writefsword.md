@@ -1,5 +1,5 @@
 ---
-title: _ _writefsbyte、_ _writefsdword、_ _writefsqword、_ _writefsword |Microsoft ドキュメント
+title: _ _writefsbyte、_ _writefsdword、_ _writefsqword、_ _writefsword |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,17 +26,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85749ff1325c3535c265a445ce76d37522bc252a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77791bdf33f38417d38ebdec3c73b83d96bde36f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338303"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718472"
 ---
 # <a name="writefsbyte-writefsdword-writefsqword-writefsword"></a>__writefsbyte、__writefsdword、__writefsqword、__writefsword
 **Microsoft 固有の仕様**  
   
- FS セグメントの先頭からの相対オフセットで指定された場所にメモリを書き込みます。  
+ FS セグメントの先頭の相対オフセットで指定された場所には、メモリを書き込みます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -60,11 +60,11 @@ void __writefsqword(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力] `Offset`  
- FS への書き込みの先頭からのオフセット。  
+*オフセット*<br/>
+[in]FS への書き込みの先頭からのオフセット。  
   
- [入力] `Data`  
- 書き込む値。  
+*データ*<br/>
+[in]書き込む値。  
   
 ## <a name="requirements"></a>要件  
   
@@ -77,7 +77,7 @@ void __writefsqword(
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  これらのルーチンは組み込みとしてのみ使用できます。  
   
 **Microsoft 固有の仕様はここまで**  

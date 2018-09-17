@@ -1,5 +1,5 @@
 ---
-title: リンカ ツール エラー LNK1120 |Microsoft ドキュメント
+title: リンカ ツール エラー LNK1120 |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 05/17/2017
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fab2b937f8bf941219c678c638e9757903ee7698
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f1d2a55d683e9c8b9d6a0da2b3e5fa78d5a39933
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298513"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725570"
 ---
 # <a name="linker-tools-error-lnk1120"></a>リンカ ツール エラー LNK1120
-*数*未解決の外部項目  
+
+> *数*未解決の外部参照  
   
-数を報告するエラー LNK1120 (*数*) このリンク操作の未解決の外部シンボル エラーのです。 ほとんどの未解決の外部シンボル エラーが個別にによって[リンカ ツール エラー LNK2001](../../error-messages/tool-errors/linker-tools-error-lnk2001.md)と[リンカ ツール エラー LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)、各未解決の外部に 1 回、このエラー メッセージの前にします。シンボルのエラーです。  
+数を報告するエラー LNK1120 (*数*) のこのリンク操作の未解決の外部シンボル エラー。 ほとんどの未解決の外部シンボル エラーが報告によって個別に[リンカー ツール エラー LNK2001](../../error-messages/tool-errors/linker-tools-error-lnk2001.md)と[リンカー ツール エラー LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)、各未解決の外部に対して 1 回、このエラー メッセージの前にします。シンボルのエラーです。  
   
-このエラーを解決するには、すべての他の未解決の外部エラーまたはビルド出力に先行するその他のリンカー エラーを修正します。 未解決の外部エラーが残っていない場合、このエラーは報告されません。  
+このエラーを解決するには、すべての他の未解決の外部エラーまたはビルドの出力における直前の他のリンカー エラーを修正します。 未解決の外部エラーも残っていない場合は、このエラーは報告されません。  

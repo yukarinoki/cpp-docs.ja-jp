@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b807f24f03c5880b4b60708d6919052183ec564f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b3c1ec84569058b11b20270ea1006bfc438288cf
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605211"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717159"
 ---
 # <a name="safemodulus"></a>SafeModulus
 
@@ -41,14 +41,14 @@ inline bool SafeModulus (
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*t*  
-除数。 これは、型でなければなりません`T`します。
+*t*<br/>
+[in]除数。 これは、型でなければなりません`T`します。
 
-[in]*u*  
-被除数。 これは、型でなければなりません`U`します。
+*u*<br/>
+[in]被除数。 これは、型でなければなりません`U`します。
 
-[out]*結果*  
-パラメーターで**SafeModulus**結果を格納します。
+*結果*<br/>
+[out]パラメーターで**SafeModulus**結果を格納します。
 
 ## <a name="return-value"></a>戻り値
 

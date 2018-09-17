@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2eb1695383e5bb1a700305fd0cc8487590afd7c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 114ddba64de255c0f034fb9dbcbe55a45ca72bba
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217042"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723971"
 ---
 # <a name="coleipframewndex-class"></a>COleIPFrameWndEx クラス
 `COleIPFrameWndEx` クラスは、MFC をサポートする OLE コンテナーを実装します。 アプリケーションの埋め込み先フレーム ウィンドウ クラスを、 `COleIPFrameWndEx` COleIPFrameWnd [クラスからではなく、](../../mfc/reference/coleipframewnd-class.md)クラスから派生させる必要があります 詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。   
@@ -216,8 +216,8 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pControlBar*  
- [in]*bTail*  
+*pControlBar*<br/>
+[in][in]*bTail*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -246,8 +246,8 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pBar*  
- [in]*辺*  
+*pBar*<br/>
+[in][in]*辺*  
  [in]*lpRect*  
   
 ### <a name="remarks"></a>Remarks  
@@ -262,11 +262,11 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pBar*  
- ドッキング ウィンドウへのポインター。  
+*pBar*<br/>
+[in]ドッキング ウィンドウへのポインター。  
   
- [in]*pLeftOf*  
- 配信元として機能するウィンドウへのポインター。  
+*pLeftOf*<br/>
+[in]配信元として機能するウィンドウへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  操作が成功した場合に TRUE を返します。 それ以外の場合、FALSE を返します。  
@@ -316,12 +316,12 @@ void EnablePaneMenu(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- [in]*uiCustomizeCmd*  
- [in]*strCustomizeLabel*  
- [in]*uiViewToolbarsMenuEntryID*  
- [in]*bContextMenuShowsToolbarsOnly*  
- [in]*bViewMenuShowsToolbarsOnly*  
+*bEnable*<br/>
+[in][in]*uiCustomizeCmd*  
+*strCustomizeLabel*<br/>
+[in][in]*uiViewToolbarsMenuEntryID*  
+*bContextMenuShowsToolbarsOnly*<br/>
+[in][in]*bViewMenuShowsToolbarsOnly*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -445,11 +445,11 @@ virtual BOOL GetToolbarButtonToolTipText(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pButton*  
- ボタンへのポインター。  
+*pButton*<br/>
+[in]ボタンへのポインター。  
   
- [in]*strTTText*  
- ツールヒントのテキストへのポインター。  
+*strTTText*<br/>
+[in]ツールヒントのテキストへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  既定の実装では、0 を返します。  
@@ -468,14 +468,14 @@ void InitUserToolbars(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszRegEntry*  
- レジストリ エントリは、ライブラリがユーザーのツールバーの設定を格納する場所です。  
+*lpszRegEntry*<br/>
+[in]レジストリ エントリは、ライブラリがユーザーのツールバーの設定を格納する場所です。  
   
- [in]*uiUserToolbarFirst*  
- 最初のユーザー定義のツールバーに割り当てられているコントロール ID。  
+*uiUserToolbarFirst*<br/>
+[in]最初のユーザー定義のツールバーに割り当てられているコントロール ID。  
   
- [in]*uiUserToolbarLast*  
- 最後のユーザー定義のツールバーに割り当てられているコントロール ID。  
+*uiUserToolbarLast*<br/>
+[in]最後のユーザー定義のツールバーに割り当てられているコントロール ID。  
   
 ### <a name="remarks"></a>Remarks  
  この関数を使用して、ユーザーを動的に定義するツールバーへの割り当てのコントロール Id の範囲を初期化します。 パラメーター *uiUserToolbarFirst*と*uiUserToolbarLast*許可されているツールバーのコントロール Id の範囲を定義します。 ユーザー定義のツールバーの作成を無効にするには設定*uiUserToolbarFirst*または*uiUserToolbarLast*を-1 にします。  
@@ -491,8 +491,8 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pControlBar*  
- [in]*pTarget*  
+*pControlBar*<br/>
+[in][in]*pTarget*  
  [in]*bAfter*  
   
 ### <a name="return-value"></a>戻り値  
@@ -523,8 +523,8 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ポイント*  
- [in]*dwBarAlignment*  
+*ポイント*<br/>
+[in][in]*dwBarAlignment*  
  [in]*bOuterEdge*  
   
 ### <a name="return-value"></a>戻り値  
@@ -543,10 +543,10 @@ virtual BOOL LoadFrame(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*可能*  
- [in]*dwDefaultStyle*  
- [in]*pParentWnd*  
- [in]*pContext*  
+*可能*<br/>
+[in][in]*dwDefaultStyle*  
+*pParentWnd*<br/>
+[in][in]*pContext*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -588,8 +588,8 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pMenuPopup*  
- ポップアップ メニュー オブジェクトへのポインター。  
+*pMenuPopup*<br/>
+[in]ポップアップ メニュー オブジェクトへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
  通知を受信するには、このメソッドをオーバーライド`CMFCPopupMenu`WM_DESTROY メッセージの処理時にオブジェクトします。  
@@ -606,10 +606,10 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nID*  
- [in]*nCode*  
- [in]*pExtra*  
- [in]*pHandlerInfo*  
+*nID*<br/>
+[in][in]*nCode*  
+*pExtra*<br/>
+[in][in]*pHandlerInfo*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -626,14 +626,14 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pMenuButton*  
- メニュー ボタンへのポインター。  
+*pMenuButton*<br/>
+[in]メニュー ボタンへのポインター。  
   
- [in]*rectImage*  
- メニュー項目に関連付けられたイメージ。  
+*rectImage*<br/>
+[in]メニュー項目に関連付けられたイメージ。  
   
 ### <a name="return-value"></a>戻り値  
  既定の実装では、何も実行し、0 を返します。  
@@ -652,14 +652,14 @@ virtual void OnDrawMenuLogo(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pMenu*  
- ポップアップ メニュー オブジェクトへのポインター。  
+*pMenu*<br/>
+[in]ポップアップ メニュー オブジェクトへのポインター。  
   
- [in]*rectLogo*  
- 表示するロゴへのポインター。  
+*rectLogo*<br/>
+[in]表示するロゴへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
  によって所有されている、メニュー バーに関連付けられたポップアップ メニューにロゴを表示するには、このメソッドをオーバーライド、 `COleIPFrameWndEx`-派生オブジェクト。 既定の実装では、何も行われません。  
@@ -710,8 +710,8 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bPreview*  
- [in]*pState*  
+*bPreview*<br/>
+[in][in]*pState*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -725,8 +725,8 @@ virtual BOOL OnShowCustomizePane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pMenuPane*  
- [in]*uiToolbarID*  
+*pMenuPane*<br/>
+[in][in]*uiToolbarID*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -754,8 +754,8 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenuPopup);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pMenuPopup*  
- 表示されるポップアップ メニューへのポインター。  
+*pMenuPopup*<br/>
+[in]表示されるポップアップ メニューへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  既定の実装では、何も実行し、0 以外の値を返します。 ポップアップ メニューを表示できない場合、実装は FALSE を返す必要があります。  
@@ -773,11 +773,11 @@ virtual BOOL OnTearOffMenu(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pMenuPopup*  
- ユーザーが選択されているポップアップ メニューへのポインター。  
+*pMenuPopup*<br/>
+[in]ユーザーが選択されているポップアップ メニューへのポインター。  
   
- [in]*pBar*  
- メニューをホストするウィンドウへのポインター。  
+*pBar*<br/>
+[in]メニューをホストするウィンドウへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  ポップアップ メニューをアクティブにする場合は TRUE。それ以外の場合は FALSE です。 既定値は TRUE です。  
@@ -803,10 +803,10 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ポイント*  
- [in]*nSensitivity*  
- [in]*bExactBar*  
- [in]*pRTCBarType*  
+*ポイント*<br/>
+[in][in]*nSensitivity*  
+*bExactBar*<br/>
+[in][in]*pRTCBarType*  
  [in]*場合*  
   
 ### <a name="return-value"></a>戻り値  
@@ -852,10 +852,10 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pControlBar*  
- [in]*bDestroy*  
- [in]*bAdjustLayout*  
- [in]*bAutoHide*  
+*pControlBar*<br/>
+[in][in]*bDestroy*  
+*bAdjustLayout*<br/>
+[in][in]*bAutoHide*  
  [in]*pBarReplacement*  
   
 ### <a name="remarks"></a>Remarks  
@@ -868,8 +868,8 @@ void SetDockState(const CDockState& state);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*状態*  
- ドッキング状態を指定します。  
+*state*<br/>
+[in]ドッキング状態を指定します。  
   
 ### <a name="remarks"></a>Remarks  
  この関数に属しているウィンドウの新しいドッキング状態の指定を使用して、`COleIPFrameWndEx`オブジェクト。  
@@ -885,14 +885,14 @@ void SetupToolbarMenu(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*メニュー*  
- 参照を[CMenu](../../mfc/reference/cmenu-class.md)オブジェクトを変更します。  
+*メニュー*<br/>
+[in]参照を[CMenu](../../mfc/reference/cmenu-class.md)オブジェクトを変更します。  
   
- [in]*uiViewUserToolbarCmdFirst*  
- ユーザー定義の最初のコマンドを指定します。  
+*uiViewUserToolbarCmdFirst*<br/>
+[in]ユーザー定義の最初のコマンドを指定します。  
   
- [in]*uiViewUserToolbarCmdLast*  
- ユーザー定義の最後のコマンドを指定します。  
+*uiViewUserToolbarCmdLast*<br/>
+[in]ユーザー定義の最後のコマンドを指定します。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -908,10 +908,10 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pBar*  
- [in]*bShow*  
- [in]*bDelay*  
- [in]*bActivate*  
+*pBar*<br/>
+[in][in]*bShow*  
+*bDelay*<br/>
+[in][in]*bActivate*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -928,8 +928,8 @@ virtual void WinHelp(
  [入力] dwData  
  指定されたヘルプの種類に必要なデータを指定します。 *nCmd*します。  
   
- [in]*nCmd*  
- 要求されるヘルプの種類を指定します。 使用可能な値、および影響についての一覧については、*指定*パラメーターを参照してください、 [WinHelp 関数](/windows/desktop/api/winuser/nf-winuser-winhelpa)Windows SDK にします。  
+*nCmd*<br/>
+[in]要求されたヘルプの種類を指定します。 使用可能な値、および影響についての一覧については、*指定*パラメーターを参照してください、 [WinHelp 関数](/windows/desktop/api/winuser/nf-winuser-winhelpa)Windows SDK にします。  
   
 ### <a name="remarks"></a>Remarks  
   

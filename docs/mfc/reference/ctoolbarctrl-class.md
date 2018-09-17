@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0801fab2ef5cec0da42cb40e28cd5124141c1007
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1f97559dd962fefbb4e727c0e75d0102898c8f13
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686086"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724075"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl クラス
 Windows ツール バー コモン コントロールの機能が用意されています。  
@@ -532,8 +532,8 @@ BOOL ChangeBitmap(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*idButton*|新しいビットマップを受信するボタンのコマンド id。|  
-|[in]*iBitmap*|現在のツール バー コントロールのイメージ リスト内のイメージの 0 から始まるインデックス。|  
+|*idButton*|[in]新しいビットマップを受信するボタンのコマンド id。|  
+|*iBitmap*|[in]現在のツール バー コントロールのイメージ リスト内のイメージの 0 から始まるインデックス。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -841,7 +841,7 @@ CString GetButtonText(int idButton) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*idButton*|表示テキストを取得するボタンの識別子。|  
+|*idButton*|[in]表示テキストを取得するボタンの識別子。|  
   
 ### <a name="return-value"></a>戻り値  
  A [CString](../../atl-mfc-shared/using-cstring.md)指定したボタンの表示テキストを格納しています。  
@@ -860,7 +860,7 @@ BOOL GetColorScheme(COLORSCHEME* lpColorScheme) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[out]*lpColorScheme*|ポインターを[COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme)色スキームの情報を受け取る構造体。 このメソッドが戻るとき、強調表示色と影の色、ツール バー コントロールの構造について説明します。|  
+|*lpColorScheme*|[out]ポインターを[COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme)色スキームの情報を受け取る構造体。 このメソッドが戻るとき、強調表示色と影の色、ツール バー コントロールの構造について説明します。|  
   
 ### <a name="return-value"></a>戻り値  
 このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -1053,8 +1053,8 @@ BOOL GetPadding(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[out]*pnHorzPadding*|整数 (ピクセル単位)、ツール バー コントロールの水平方向の埋め込みを受け取るです。|  
-|[out]*pnVertPadding*|整数 (ピクセル単位)、ツール バー コントロールの垂直方向の埋め込みを受け取るです。|  
+|*pnHorzPadding*|[out]整数 (ピクセル単位)、ツール バー コントロールの水平方向の埋め込みを受け取るです。|  
+|*pnVertPadding*|[out]整数 (ピクセル単位)、ツール バー コントロールの垂直方向の埋め込みを受け取るです。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -1349,8 +1349,8 @@ BOOL IsButtonHighlighted(int nID) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nID*  
- ツール バー ボタンのコマンド ID。  
+*nID*<br/>
+[in]ツール バー ボタンのコマンド ID。  
   
 ### <a name="return-value"></a>戻り値  
  正の整数、ボタンが強調表示されている場合、ボタンが強調表示されていない場合は 0 または-1 の場合にエラーが発生します。  
@@ -1363,8 +1363,8 @@ BOOL IsButtonIndeterminate(int nID) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nID*  
- ツールバーのボタンのコマンド id。  
+*nID*<br/>
+[in]ツールバーのボタンのコマンド id。  
   
 ### <a name="return-value"></a>戻り値  
  正の整数ボタンが不確定か-1 にエラーが発生する場合は、ボタンが不確定である場合 0 します。  
@@ -1491,11 +1491,11 @@ BOOL PressButton(int nID, BOOL bPress = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nID*  
- コマンド ボタンを押すか、リリースの id。  
+*nID*<br/>
+[in]コマンド ボタンを押すか、リリースの id。  
   
- [in]*bPress*  
- 指定したボタンを押す場合は TRUE。指定したボタンを解放する場合は FALSE。 既定値は TRUE です。  
+*bPress*<br/>
+[in]指定したボタンを押す場合は TRUE。指定したボタンを解放する場合は FALSE。 既定値は TRUE です。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -1516,7 +1516,7 @@ BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*pReplaceBitmap*|ポインターを[TBREPLACEBITMAP](/windows/desktop/api/commctrl/ns-commctrl-tbreplacebitmap)ビットマップを交換して、新しいビットマップを記述する構造体。|  
+|*pReplaceBitmap*|[in]ポインターを[TBREPLACEBITMAP](/windows/desktop/api/commctrl/ns-commctrl-tbreplacebitmap)ビットマップを交換して、新しいビットマップを記述する構造体。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -1593,8 +1593,8 @@ BOOL SetAnchorHighlight(BOOL fAnchor = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*fAnchor*  
- アンカーの強調表示を有効になっているまたは無効になっているかどうかを指定します。 この値が 0 以外の場合、アンカーの強調表示を有効になります。 この値が 0 の場合は、アンカーの強調表示が無効になります  
+*fAnchor*<br/>
+[in]アンカーの強調表示を有効になっているまたは無効になっているかどうかを指定します。 この値が 0 以外の場合、アンカーの強調表示を有効になります。 この値が 0 の場合は、アンカーの強調表示が無効になります  
   
 ### <a name="return-value"></a>戻り値  
  以前のアンカー設定します。 強調表示が有効になっている場合、この値は 0 以外の場合は。 強調表示が有効になっていない場合は、この値は 0 です。  
@@ -1729,7 +1729,7 @@ void SetColorScheme(const COLORSCHEME* lpColorScheme);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*lpColorScheme*|ポインターを[COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme)強調表示色とコントロールは、ツールバーの影の色を記述する構造体。|  
+|*lpColorScheme*|[in]ポインターを[COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme)強調表示色とコントロールは、ツールバーの影の色を記述する構造体。|  
   
 ### <a name="remarks"></a>Remarks  
  Windows Vista のビジュアル テーマが設定されている場合は、このメソッドを指定しても効果はありません。  
@@ -1952,8 +1952,8 @@ DWORD SetPadding(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*nHorzPadding*|ピクセル単位で、ツール バー コントロールの水平方向の余白を指定します。|  
-|[in]*nVertPadding*|ピクセル単位で、ツール バー コントロールの垂直方向の余白を指定します。|  
+|*nHorzPadding*|[in]ピクセル単位で、ツール バー コントロールの水平方向の余白を指定します。|  
+|*nVertPadding*|[in]ピクセル単位で、ツール バー コントロールの垂直方向の余白を指定します。|  
   
 ### <a name="return-value"></a>戻り値  
  下位ワードには、前の水平方向の余白の値が含まれています。 上位ワードには、前の垂直方向の余白の値が含まれています。 DWORD。 パディング値は、ピクセル単位で測定されます。  
@@ -1979,8 +1979,8 @@ CImagelist* SetPressedImageList(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*iImageID*|イメージ リストの 0 から始まるインデックス。 1 つだけのイメージ リストを使用する場合は、このパラメーターを 0 に設定します。|  
-|[in]*pImageList*|ポインターを[CImageList](../../mfc/reference/cimagelist-class.md)新しいイメージ リストを格納しています。|  
+|*iImageID*|[in]イメージ リストの 0 から始まるインデックス。 1 つだけのイメージ リストを使用する場合は、このパラメーターを 0 に設定します。|  
+|*pImageList*|[in]ポインターを[CImageList](../../mfc/reference/cimagelist-class.md)新しいイメージ リストを格納しています。|  
   
 ### <a name="return-value"></a>戻り値  
  ポインターを[CImageList](../../mfc/reference/cimagelist-class.md)このようなイメージの一覧が設定されていない場合、現在のコントロール、または NULL の前のイメージ リストを格納します。  

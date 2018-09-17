@@ -1,5 +1,5 @@
 ---
-title: 前処理でプログラムを実行する |Microsoft ドキュメント
+title: プリプロセスでのプログラムの実行 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da87a87a2e97736d202b7ddb9be2dbec54fed44d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e2b0571e67e7c5d24cf31dce6fce548735cad966
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367200"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721462"
 ---
 # <a name="executing-a-program-in-preprocessing"></a>プリプロセスでのプログラムの実行
-プリプロセス時にコマンドの終了コードを使用するには、角かっこ () 内の任意の引数を指定して、コマンドを指定します。 すべてのマクロは、コマンドを実行前に展開します。 (Nmake の) は、コマンドの仕様を前処理を制御する式の中で使用できるコマンドの終了コードに置き換えます。  
-  
-## <a name="see-also"></a>関連項目  
- [メイクファイル プリプロセスの式](../build/expressions-in-makefile-preprocessing.md)
+
+プリプロセス時にコマンドの終了コードを使用するには、角かっこ () 内の任意の引数を持つ、コマンドを指定します。 コマンドが実行される前に、すべてのマクロが展開されます。 NMAKE は、コマンドの仕様を前処理を制御する式の中で使用できるコマンドの終了コードに置き換えます。
+
+## <a name="see-also"></a>関連項目
+
+[メイクファイル プリプロセスの式](../build/expressions-in-makefile-preprocessing.md)

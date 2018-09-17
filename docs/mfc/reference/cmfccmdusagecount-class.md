@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44172ffdf7985b7ab304e232eb03b859313df6bc
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a1e28b9c28823e77244bc6e686db163e5110a8fa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853765"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719967"
 ---
 # <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount クラス
 など、ユーザーがメニューから項目を選択すると、Windows メッセージの使用率カウントを追跡します。  
@@ -73,7 +73,7 @@ class CMFCCmdUsageCount : public CObject
   
 |||  
 |-|-|  
-|name|説明|  
+|名前|説明|  
 |`m_CmdUsage`|A`CMap`コマンドを使用状況カウントにマップするオブジェクト。|  
 |`m_nMinUsagePercentage`|頻繁に使用するコマンドの使用率の最小の割合。|  
 |`m_nStartCount`|このオブジェクトが追跡データの最小量を収集するかどうかを決定するために使用される開始カウンター。|  
@@ -89,7 +89,7 @@ class CMFCCmdUsageCount : public CObject
   
  [CMFCCmdUsageCount](../../mfc/reference/cmfccmdusagecount-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxcmdusagecount.h  
   
 ##  <a name="addcmd"></a>  CMFCCmdUsageCount::AddCmd  
@@ -104,7 +104,7 @@ void AddCmd(UINT uiCmd);
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*uiCmd*|インクリメントするコマンドのカウンターを指定します。|  
+|*uiCmd*|[in]インクリメントするコマンドのカウンターを指定します。|  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、コマンドの数のマップの構造に新しいエントリを追加`m_CmdUsage`エントリが存在しない場合、します。  
@@ -129,7 +129,7 @@ UINT GetCount(UINT uiCmd) const;
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*uiCmd*|取得するコマンドのカウンターの ID。|  
+|*uiCmd*|[in]取得するコマンドのカウンターの ID。|  
   
 ### <a name="return-value"></a>戻り値  
  指定されたコマンド ID に関連付けられている使用率カウント  
@@ -161,7 +161,7 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*uiCmd*|チェックするには、コマンドを指定します。|  
+|*uiCmd*|[in]チェックするには、コマンドを指定します。|  
   
 ### <a name="return-value"></a>戻り値  
  コマンドが頻繁に使用する場合、0 以外の場合それ以外の場合 0 を返します。  
@@ -193,7 +193,7 @@ virtual void Serialize(CArchive& ar);
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*ar*|A`CArchive`をシリアル化するオブジェクト。|  
+|*ar*|[in]A`CArchive`をシリアル化するオブジェクト。|  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、コマンドの数のマップの構造体をシリアル化します`m_CmdUsage`、および合計コマンドの使用法、 `m_nTotalUsage`、または指定されたアーカイブするカウンター。  
@@ -214,8 +214,8 @@ static BOOL __stdcall SetOptions(
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*nStartCount*|すべての追跡コマンドの新しい最初の数。|  
-|[in]*nMinUsagePercentage*|新しい使用率の最小割合。|  
+|*nStartCount*|[in]すべての追跡コマンドの新しい最初の数。|  
+|*nMinUsagePercentage*|[in]新しい使用率の最小割合。|  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合、FALSE 場合は TRUE、 *nMinUsagePercentage*よりも大きいか、または 100 になります。  

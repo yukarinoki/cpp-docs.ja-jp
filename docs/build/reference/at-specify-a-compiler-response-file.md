@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 430e6372c1ca26e946c2ff26bfcfe9180dfb0dba
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 9c86d49aea2ce7a8d8b438c64cd883b71e5a4646
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894459"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720851"
 ---
 # <a name="-specify-a-compiler-response-file"></a>@ (コンパイラ応答ファイルの指定)
 
@@ -35,7 +35,7 @@ ms.locfileid: "43894459"
 
 ## <a name="arguments"></a>引数
 
-*response_file*  
+*response_file*<br/>
 コンパイラのコマンドを含むテキスト ファイル。
 
 ## <a name="remarks"></a>Remarks
@@ -56,5 +56,5 @@ ms.locfileid: "43894459"
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)  
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)  
+[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
+[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)

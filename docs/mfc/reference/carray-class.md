@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53089439c3857dd947a263a80f3330aad3f03f7b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: f59cc50e864a241608e460a45f3336e7cb89ecbb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339439"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717640"
 ---
 # <a name="carray-class"></a>CArray クラス
 C 言語の配列に似ていますが、できる動的に削減し必要に応じて大きくなる配列をサポートしています。  
@@ -69,12 +69,13 @@ template <class TYPE, class ARG_TYPE = const TYPE&>
 class CArray : public CObject  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- *TYPE*  
- 配列に格納されているオブジェクトの種類を指定するテンプレート パラメーター。 *型*によって返されるパラメーターは、`CArray`します。  
-  
- *ARG* *_* *型*  
- 配列に格納されているオブジェクトへのアクセスに使用される引数の型を指定するテンプレート パラメーター。 参照を多くの場合、*型*します。 *中*に渡されるパラメーターは、`CArray`します。  
+#### <a name="parameters"></a>パラメーター
+
+*TYPE*<br/>
+配列に格納されているオブジェクトの種類を指定するテンプレート パラメーター。 *型*によって返されるパラメーターは、`CArray`します。
+
+*中*<br/>
+配列に格納されているオブジェクトへのアクセスに使用される引数の型を指定するテンプレート パラメーター。 参照を多くの場合、*型*します。 *中*に渡されるパラメーターは、`CArray`します。  
   
 ## <a name="members"></a>メンバー  
   
@@ -136,8 +137,8 @@ class CArray : public CObject
   
  `CArray`  
   
-## <a name="requirements"></a>必要条件  
- `Header:` afxtempl.h  
+## <a name="requirements"></a>要件  
+**ヘッダー:** afxtempl.h  
   
 ##  <a name="add"></a>  CArray::Add  
  配列を 1 つの拡張、配列の末尾に新しい要素を追加します。  

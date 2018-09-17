@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58772f3690a68dc3a0d22c2db863fc7ad4904a1c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c17a9b6970f612c31ba9491ca2e3483b4a3fa37b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538530"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720552"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>CMFCVisualManagerWindows7 クラス
 `CMFCVisualManagerWindows7` Windows 7 アプリケーションの外観をアプリケーションに提供します。  
@@ -149,17 +149,17 @@ virtual COLORREF GetRibbonEditBackgroundColor (
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pEdit*  
- エディット コントロールへのポインター。 この値は NULL をすることはできません。  
+*pEdit*<br/>
+[in]エディット コントロールへのポインター。 この値は NULL をすることはできません。  
   
- [out]*bIsHighlighted*  
- リボンのボックスが強調表示されているかどうかを返します。  
+*bIsHighlighted*<br/>
+[out]リボンのボックスが強調表示されているかどうかを返します。  
   
- [out]*bIsPaneHighlighted*  
- 含むリボン パネルする場合は TRUE を返します*pEdit*が強調表示されます。  
+*bIsPaneHighlighted*<br/>
+[out]含むリボン パネルする場合は TRUE を返します*pEdit*が強調表示されます。  
   
- [out]*bIsDisabled*  
- 返すかどうか*pEdit*は無効です。  
+*bIsDisabled*<br/>
+[out]返すかどうか*pEdit*は無効です。  
   
 ### <a name="return-value"></a>戻り値  
  編集ボックスの背景色*pEdit*します。  
@@ -178,17 +178,17 @@ virtual void OnFillMenuImageRect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- メニュー ボタンのデバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]メニュー ボタンのデバイス コンテキストへのポインター。  
   
- [in]*pButton*  
- ポインター、`CMFCToolBarButton`します。 フレームワークは、このボタンの背景を塗りつぶします。  
+*pButton*<br/>
+[in]ポインター、`CMFCToolBarButton`します。 フレームワークは、このボタンの背景を塗りつぶします。  
   
- [in]*rect*  
- メニュー ボタンの画像領域の境界を指定する四角形。  
+*rect*<br/>
+[in]メニュー ボタンの画像領域の境界を指定する四角形。  
   
- [in]*状態*  
- ボタンの状態。  
+*state*<br/>
+[in]ボタンの状態。  
   
 ### <a name="remarks"></a>Remarks  
   

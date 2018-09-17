@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e24a86ead18cde836fd52df4e0c279f69b4c67a1
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: e2fe0b0523fb411b8ef4700a7dea7832c1cdfc52
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "43687936"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726300"
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary と AfxLoadLibrary
 
@@ -39,7 +39,7 @@ MFC 拡張 Dll を読み込む MFC アプリケーションでは、私たちに
 
 Windows が DLL を読み込むことができない場合は、プロセスでエラーからの回復を試みることができます。 たとえば、プロセスがユーザーにエラーを通知して、ユーザーに DLL への別のパスを指定するよう要求できます。
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > すべての Dll の完全なパスを指定してください。 ファイルが読み込まれるときに、現在のディレクトリを最初に検索します。 ファイルのパスを指定していないと、目的のファイルでないファイルが読み込まれる場合があります。 これを防ぐために別の方法を使用して、 [/DEPENDENTLOADFLAG](../build/reference/dependentloadflag.md)リンカー オプション。
 
 ## <a name="what-do-you-want-to-do"></a>実行する操作

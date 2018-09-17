@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2b0c2bb91f21b48554ca523a3523e82eee09d2fe
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 81f30386946c7fd187f1044804b9f1737a94c58f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600584"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718654"
 ---
 # <a name="safeequals"></a>SafeEquals
 
@@ -40,11 +40,11 @@ inline bool SafeEquals (
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*t*  
-比較する最初の数値。 これは T 型である必要があります。
+*t*<br/>
+[in]比較する最初の数値。 これは T 型である必要があります。
 
-[in]*u*  
-比較する 2 番目の数値。 これは、型 U のある必要があります。
+*u*<br/>
+[in]比較する 2 番目の数値。 これは、型 U のある必要があります。
 
 ## <a name="return-value"></a>戻り値
 

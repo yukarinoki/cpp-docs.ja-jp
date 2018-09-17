@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c832ee24d500eba28c14713d1c0a092baf90a440
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: c6a980a96198db80f0956895292d37f123d0351c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894617"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723308"
 ---
 # <a name="building-an-import-library-and-export-file"></a>インポート ライブラリとエクスポート ファイルのビルド
 
@@ -60,7 +60,7 @@ ms.locfileid: "43894617"
 
 次のオプションは、インポート ライブラリをビルドに適用され、ファイルのエクスポートします。
 
-> **/入力出力:** *インポート*  
+> **/入力出力:** *インポート*
 
 既定の出力ファイル名をオーバーライド、*インポート*ライブラリを作成します。 既定の名前は、最初のオブジェクト ファイルまたは LIB コマンドと、拡張機能ライブラリのベース名で/OUT が指定されていない場合。 lib します。 エクスポート ファイルがインポート ライブラリと拡張機能として同じ基本名を指定します。 exp します。
 

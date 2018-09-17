@@ -1,5 +1,5 @@
 ---
-title: NMAKE の終了コード |Microsoft ドキュメント
+title: NMAKE で返される終了コード |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,26 +15,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e71442e1e36dbd69afa65051cbf08f403bf8b31
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b5a593e38efb5230630ed01e65f4bfb1f2ba92a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367096"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722619"
 ---
 # <a name="exit-codes-from-nmake"></a>NMAKE で返される終了コード
-(Nmake の) には、次の終了コードが返されます。  
-  
-|コード|説明|  
-|----------|-------------|  
-|0|エラー (場合によっては警告)|  
-|1|(発行/K を使用する場合にのみ) ビルドが不完全です。|  
-|2|プログラム エラー: 次のいずれかの原因として考えられます。|  
-||-メイクファイルで構文エラー|  
-||のコマンドからエラーまたは終了コード|  
-||-ユーザーにより中断|  
-|4|システム エラー: メモリ不足|  
-|255|ターゲットが最新でありません (/Q を使用する場合にのみ発行)|  
-  
-## <a name="see-also"></a>関連項目  
- [NMAKE の実行](../build/running-nmake.md)
+
+NMAKE では、次の終了コードが返されます。
+
+|コード|説明|
+|----------|-------------|
+|0|エラー (場合によっては警告)|
+|1|(/K を使用する場合にのみを発行する) 不完全なビルド|
+|2|プログラム エラー: 次のいずれかの原因として考えられます。|
+||-メイクファイルに構文エラー|
+||-コマンドからのエラーまたは終了コード|
+||-ユーザーにより中断|
+|4|システム エラー: メモリ不足|
+|255|ターゲットが最新でない (/Q を使用する場合にのみ発行)|
+
+## <a name="see-also"></a>関連項目
+
+[NMAKE の実行](../build/running-nmake.md)

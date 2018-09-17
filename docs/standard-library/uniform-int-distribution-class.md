@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b37279ef28073e758be2ebc849d6657168c22339
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: c97b80031c60dabb22d3dfea905c9a46f7731f67
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104200"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716444"
 ---
 # <a name="uniformintdistribution-class"></a>uniform_int_distribution クラス
 
@@ -201,13 +201,13 @@ explicit uniform_int_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*a*  
+*a*<br/>
 乱数値の下限 (包含的)。
 
-*b*  
+*b*<br/>
 乱数値の上限 (包含的)。
 
-*parm*  
+*parm*<br/>
 分布の作成に使用される `param_type` の構造体。
 
 ### <a name="remarks"></a>Remarks
@@ -237,13 +237,13 @@ struct param_type {
 
 ### <a name="parameters"></a>パラメーター
 
-*a*  
+*a*<br/>
 乱数値の下限 (包含的)。
 
-*b*  
+*b*<br/>
 乱数値の上限 (包含的)。
 
-*right*  
+*right*<br/>
 このオブジェクトと比較する `param_type` オブジェクト。
 
 ### <a name="remarks"></a>Remarks

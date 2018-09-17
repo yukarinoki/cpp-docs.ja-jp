@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7601913b3940de8e6ade2c76100f4d773281db7
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: ca2582e4c792e0ef60cb11d632c6f4e88891852d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42538705"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726051"
 ---
 # <a name="section"></a>section
 .obj ファイルにセクションを作成します。  
@@ -43,30 +43,17 @@ ms.locfileid: "42538705"
 *セクション名*セクションの名前となる必須パラメーターです。 標準セクション名と競合する名前は付けられません。 参照してください[/section](../build/reference/section-specify-section-attributes.md)に対して一連の名前のセクションを作成するときに使用する必要があります。  
   
 *属性*属性から成る 1 つまたは複数コンマで区切られた、セクションに割り当てる省略可能なパラメーターです。 考えられる*属性*は。  
-  
-**read**  
-データの読み取り操作を有効にします。  
-  
-**write**  
-データの書き込み操作を有効にします。  
-  
-**execute**  
-コードを実行できるようにします。  
-  
-**shared**  
-イメージを読み込んだすべてのプロセス間でセクションを共有します。  
-  
-**nopage**  
-セクションをページング不可にします。Win32 デバイス ドライバー用です。  
-  
-**nocache**  
-セクションをキャッシュ不可にします。Win32 デバイス ドライバー用です。  
-  
-**discard**  
-セクションを破棄可能にします。Win32 デバイス ドライバー用です。  
-  
-**remove**  
-セクションをメモリ非常駐; としてマークします。仮想デバイス ドライバー (V*x*D) のみです。  
+
+|属性|説明|
+|-|-|
+|**read**|データの読み取り操作を有効にします。|
+|**write**|データの書き込み操作を有効にします。|
+|**execute**|コードを実行できるようにします。|
+|**shared**|イメージを読み込んだすべてのプロセス間でセクションを共有します。|
+|**nopage**|セクションをページング不可にします。Win32 デバイス ドライバー用です。|
+|**nocache**|セクションをキャッシュ不可にします。Win32 デバイス ドライバー用です。|
+|**discard**|セクションを破棄可能にします。Win32 デバイス ドライバー用です。|
+|**remove**|セクションをメモリ非常駐; としてマークします。仮想デバイス ドライバー (V*x*D) のみです。|
   
 属性を指定しない場合、セクションには読み取り属性と書き込み属性が設定されます。  
   

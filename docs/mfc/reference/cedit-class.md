@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d3c7f9e1d638c547b2b340a610a52af9318c714
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: e8442f771cda2b7130a60148582288a31977fa59
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535406"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726636"
 ---
 # <a name="cedit-class"></a>CEdit Class
 Windows のエディット コントロールの機能が用意されています。  
@@ -445,11 +445,11 @@ CString GetCueBanner() const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*lpszText*  
- ヒントのテキストを含む文字列へのポインター。  
+*lpszText*<br/>
+[out]ヒントのテキストを含む文字列へのポインター。  
   
- [in]*cchText*  
- 受信できる文字数。 この数値には、終端の NULL 文字が含まれます。  
+*cchText*<br/>
+[in]受信できる文字数。 この数値には、終端の NULL 文字が含まれます。  
   
 ### <a name="return-value"></a>戻り値  
  最初のオーバー ロードのメソッドが成功した場合は TRUE します。それ以外の場合は FALSE です。  
@@ -513,8 +513,8 @@ BOOL GetHighlight(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[out]*pichStart*|強調表示されているテキストの範囲の最初の文字の 0 から始まるインデックス。|  
-|[out]*pichEnd*|強調表示されているテキストの範囲の最後の文字の 0 から始まるインデックス。|  
+|*pichStart*|[out]強調表示されているテキストの範囲の最初の文字の 0 から始まるインデックス。|  
+|*pichEnd*|[out]強調表示されているテキストの範囲の最後の文字の 0 から始まるインデックス。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -917,11 +917,11 @@ BOOL SetCueBanner(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszText*  
- エディット コントロールに表示されるヒントを含む文字列へのポインター。  
+*lpszText*<br/>
+[in]エディット コントロールに表示されるヒントを含む文字列へのポインター。  
   
- [in]*fDrawWhenFocused*  
- FALSE の場合、ユーザーがエディット コントロールでクリックするし、コントロール、フォーカス キュー バナーは描画されません。  
+*fDrawWhenFocused*<br/>
+[in]FALSE の場合、ユーザーがエディット コントロールでクリックするし、コントロール、フォーカス キュー バナーは描画されません。  
   
  TRUE の場合、コントロールにフォーカスがある場合でも、キュー バナーを描画します。 キュー バナーは、ユーザーがコントロールに入力を開始すると表示されなくなります。  
   
@@ -981,8 +981,8 @@ void SetHighlight(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*ichStart*|強調表示するテキストの範囲の最初の文字の 0 から始まるインデックス。|  
-|[in]*ichEnd*|強調表示するテキストの範囲の最後の文字の 0 から始まるインデックス。|  
+|*ichStart*|[in]強調表示するテキストの範囲の最初の文字の 0 から始まるインデックス。|  
+|*ichEnd*|[in]強調表示するテキストの範囲の最後の文字の 0 から始まるインデックス。|  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、送信、 [EM_SETHILITE](/windows/desktop/Controls/em-sethilite)メッセージは、Windows SDK で説明します。  このメソッドは、送信、 [EM_SETHILITE](/windows/desktop/Controls/em-sethilite)メッセージは、Windows SDK で説明します。 両方`SetHighlight`と`GetHighlight`の UNICODE ビルドでのみ有効になっています。 
@@ -1245,10 +1245,10 @@ BOOL ShowBalloonTip(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*pEditBalloonTip*|ポインター、 [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip)バルーン ヒントを記述する構造体。|  
-|[in]*lpszTitle*|バルーン ヒントのタイトルを含む Unicode 文字列へのポインター。|  
-|[in]*lpszText*|バルーン ヒントのテキストを含む Unicode 文字列へのポインター。|  
-|[in]*ttiIcon*|**INT**バルーン ヒントに関連付けるアイコンの種類を指定します。 既定値は、TTI_NONE です。 詳細については、次を参照してください。、`ttiIcon`のメンバー、 [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip)構造体。|  
+|*pEditBalloonTip*|[in]ポインター、 [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip)バルーン ヒントを記述する構造体。|  
+|*lpszTitle*|[in]バルーン ヒントのタイトルを含む Unicode 文字列へのポインター。|  
+|*lpszText*|[in]バルーン ヒントのテキストを含む Unicode 文字列へのポインター。|  
+|*ttiIcon*|[in]**INT**バルーン ヒントに関連付けるアイコンの種類を指定します。 既定値は、TTI_NONE です。 詳細については、次を参照してください。、`ttiIcon`のメンバー、 [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip)構造体。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  

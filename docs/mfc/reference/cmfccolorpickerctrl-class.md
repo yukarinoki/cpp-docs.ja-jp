@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 709992c42cf7fd489fbe8fe8d4ebf40bf92a989e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 0ea0bf6ed8361419af3519a41edbe6bb3c4b4a77
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849966"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725661"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl クラス
 `CMFCColorPickerCtrl`クラスには、色の選択に使用するための機能が用意されています。  
@@ -134,7 +134,7 @@ class CMFCColorPickerCtrl : public CButton
   
  [CMFCColorPickerCtrl](../../mfc/reference/cmfccolorpickerctrl-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxcolorpickerctrl.h  
   
 ##  <a name="cmfccolorpickerctrl"></a>  CMFCColorPickerCtrl::CMFCColorPickerCtrl  
@@ -158,11 +158,11 @@ virtual void DrawCursor(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rect*  
- 選択した色の周りの四角形の領域を指定します。  
+*rect*<br/>
+[in]選択した色の周りの四角形の領域を指定します。  
   
 ### <a name="remarks"></a>Remarks  
  選択した色をポイントするカーソルの形状を変更する必要がある場合は、このメソッドをオーバーライドします。  
@@ -190,14 +190,14 @@ void GetHLS(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*hue*  
- Hue の情報を受け取る double 型の変数へのポインター。  
+*Hue*<br/>
+[out]Hue の情報を受け取る double 型の変数へのポインター。  
   
- [out]*輝度*  
- 輝度情報を受け取る double 型の変数へのポインター。  
+*輝度*<br/>
+[out]輝度情報を受け取る double 型の変数へのポインター。  
   
- [out]*彩度*  
- 鮮やかさの情報を受け取る double 型の変数へのポインター。  
+*彩度*<br/>
+[out]鮮やかさの情報を受け取る double 型の変数へのポインター。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -253,20 +253,20 @@ BOOL SelectCellHexagon(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*R*  
- 赤のカラー コンポーネント。  
+*R*<br/>
+[in]赤のカラー コンポーネント。  
   
- [in]*G*  
- 緑のカラー コンポーネント。  
+*G*<br/>
+[in]緑のカラー コンポーネント。  
   
- [in]*B*  
- 青のコンポーネント。  
+*B*<br/>
+[in]青のコンポーネント。  
   
- [in]*x*  
- セルの六角形を指すと、カーソルの x 座標。  
+*x*<br/>
+[in]セルの六角形を指すと、カーソルの x 座標。  
   
- [in]*y*  
- セルの六角形を指すと、カーソルの y 座標。  
+*y*<br/>
+[in]セルの六角形を指すと、カーソルの y 座標。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドの 2 番目のオーバー ロードは、常に FALSE を返します。  
@@ -284,8 +284,8 @@ void SetColor(COLORREF Color);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*色*  
- RGB 色の値。  
+*色*<br/>
+[in]RGB 色の値。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -301,17 +301,17 @@ void SetHLS(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*hue*  
- 色合いの値。  
+*Hue*<br/>
+[in]色合いの値。  
   
- [in]*輝度*  
- 輝度値。  
+*輝度*<br/>
+[in]輝度値。  
   
- [in]*彩度*  
- 鮮やかさの値。  
+*彩度*<br/>
+[in]鮮やかさの値。  
   
- [in]*bInvalidate*  
- ウィンドウが強制的にすぐに新しい色を更新する場合は TRUEそれ以外の場合、FALSE です。 既定では TRUE です。  
+*bInvalidate*<br/>
+[in]ウィンドウが強制的にすぐに新しい色を更新する場合は TRUEそれ以外の場合、FALSE です。 既定では TRUE です。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -323,8 +323,8 @@ void SetHue(double Hue);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*Hue*  
- 色合いの値。  
+*Hue*<br/>
+[in]色合いの値。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -336,8 +336,8 @@ void SetLuminance(double Luminance);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*輝度*  
- 輝度値。  
+*輝度*<br/>
+[in]輝度値。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -349,8 +349,8 @@ void SetLuminanceBarWidth(int w);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*w*  
- 輝度バーの幅はピクセル単位で測定されます。  
+*w*<br/>
+[in]輝度バーの幅はピクセル単位で測定されます。  
   
 ### <a name="remarks"></a>Remarks  
  これには輝度バーのサイズを変更するには、このメソッドを使用して、**カスタム**カラー ピッカー コントロールのタブ。 *W*輝度バーの新しい幅を指定します。 幅の値には、クライアント領域の幅の 4 分の 3 を超えている場合は無視されます。  
@@ -363,8 +363,8 @@ void SetOriginalColor(COLORREF ref);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ref*  
- RGB 色の値。  
+*ref*<br/>
+[in]RGB 色の値。  
   
 ### <a name="remarks"></a>Remarks  
  カラー ピッカー コントロールが初期化されるときに、このメソッドを呼び出します。  
@@ -377,8 +377,8 @@ void SetPalette(CPalette* pPalette);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pPalette*  
- カラー パレットを指すポインター。  
+*pPalette*<br/>
+[in]カラー パレットを指すポインター。  
   
 ### <a name="remarks"></a>Remarks  
  色パレットは、カラー ピッカー コントロールで表示される色の配列を定義します。  
@@ -391,8 +391,8 @@ void SetSaturation(double Saturation);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*彩度*  
- 鮮やかさの値。  
+*彩度*<br/>
+[in]鮮やかさの値。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -404,8 +404,8 @@ void SetType(COLORTYPE colorType);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*colorType*  
- カラー ピッカー コントロールの種類。  
+*colorType*<br/>
+[in]カラー ピッカー コントロールの種類。  
   
  によって、型が定義されている、`CMFCColorPickerCtrl::COLORTYPE`列挙体。 輝度、ピッカー、16 進数および HEX_GREYSCALE のタイプがあります。 既定の種類は、選択します。  
   

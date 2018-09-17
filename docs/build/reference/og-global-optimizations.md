@@ -1,5 +1,5 @@
 ---
-title: -Og (グローバルの最適化) |Microsoft ドキュメント
+title: -Og (グローバルの最適化) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 09/22/2017
 ms.technology:
@@ -23,30 +23,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03ef87f31e478bfbc8691b7e678186dd1a0621e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8443ae8111476cdd3339982c8df0b4b7e3e9c475
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377158"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722528"
 ---
 # <a name="og-global-optimizations"></a>/Og (グローバルの最適化)
 
-非推奨。 ローカルおよびグローバルの最適化は、自動レジスタ割り当て、およびループ最適化します。 いずれかを使用することをお勧め[/O1 (サイズを最小限に抑える)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)または[/O2 (速度)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)代わりにします。
+非推奨。 ローカルとグローバルの最適化を提供して自動レジスタ割り当て、および最適化をループします。 いずれかを使用することをお勧めします。 [/O1 (サイズを最小限に抑える)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)または[/O2 (速度)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)代わりにします。
 
 ## <a name="syntax"></a>構文
 
 > /Og
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**/Og**は推奨されなくなりました。 これらの最適化は既定では一般に有効になりました。 最適化の詳細については、次を参照してください。 [/O1、/O2 (サイズの最小化、最大速度)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)または[/Ox (有効にする最も速度の最適化)](../../build/reference/ox-full-optimization.md)です。
+**/Og**は非推奨とされます。 これらの最適化は既定では一般的に有効になりました。 最適化の詳細については、次を参照してください。 [/O1、/O2 (サイズの最小化、速度の最大化)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)または[/Ox (有効にする最もの速度の最適化)](../../build/reference/ox-full-optimization.md)します。
 
-次の最適化が 利用可能な **/Og**:
+次の最適化は **/Og**:
 
-- ローカルおよびグローバルの共通部分式の削除
+- ローカルとグローバルの共通部分式の削除
 
-     この最適化では、共通部分式の値は 1 回計算します。 次の例では場合の値`b`と`c`3 つの式の間で変更しないで、コンパイラでの計算を割り当てることができます`b + c`を一時変数には変数を使用してください`b + c`:
+   この最適化では、共通部分式の値が 1 回計算されます。 次の例では場合の値`b`と`c`3 つの式の間で変更しないで、コンパイラでの計算を割り当てることができます`b + c`一時変数の変数を置き換える`b + c`:
 
     ```C
     a = b + c;
@@ -54,15 +54,15 @@ ms.locfileid: "32377158"
     e = b + c;
     ```
 
-     ローカルの共通部分最適化のため、コンパイラは、共通部分式のコードの短いセクションです。 グローバルの共通部分最適化は、コンパイラは、すべての関数に共通部分式を検索します。
+   ローカルの共通部分式最適化では、コンパイラは共通部分式のコードの短いセクションを調べます。 グローバルの共通部分式最適化では、コンパイラは、すべての関数に共通部分式を検索します。
 
 - 自動レジスタ割り当て
 
-     この最適化により、レジスタにも頻繁に使用されるストアの変数と部分式は、コンパイラ`register`キーワードは無視されます。
+   この最適化により、レジスタにも、コンパイラは頻繁に使用されるストアの変数と部分式`register`キーワードは無視されます。
 
 - ループの最適化
 
-     この最適化は、ループの本体から不変の部分式を削除します。 最適なループには、ループの実行するたびに値が変わる式だけが含まれています。 次の例では、式で`x + y`ループの本体に反映されません。
+   この最適化では、ループの本体からインバリアント部分式を削除します。 最適なループには、ループの各実行により変更する値を持つ式のみが含まれています。 次の例では、式で`x + y`ループの本体が変更されていません。
 
     ```C
     i = -100;
@@ -71,7 +71,7 @@ ms.locfileid: "32377158"
     }
     ```
 
-     最適化後に、`x + y`ループが実行されるたびにではなく 1 回計算されます。
+   最適化後`x + y`ループが実行されるたびにではなく 1 回計算されます。
 
     ```C
     i = -100;
@@ -81,16 +81,16 @@ ms.locfileid: "32377158"
     }
     ```
 
-     設定するエイリアスと仮定できますコンパイラがない場合は、ループの最適化ははるかに効果的な[_ _restrict](../../cpp/extension-restrict.md)、 [noalias](../../cpp/noalias.md)、または[制限](../../cpp/restrict.md)です。
+   コンパイラ偽物ではなく、エイリアスで設定するときに、ループの最適化がはるかに効果的[_ _restrict](../../cpp/extension-restrict.md)、 [noalias](../../cpp/noalias.md)、または[制限](../../cpp/restrict.md)します。
 
-    > [!NOTE]
-    > 有効にするにまたはを使用して、関数によってごとにグローバルな最適化を無効にすることができます、`optimize`と共にプラグマ、`g`オプション。
+   > [!NOTE]
+   > 有効にまたはを使用して、関数ごとにグローバルな最適化を無効にすることができます、`optimize`プラグマと組み合わせて、`g`オプション。
 
- 関連情報については、次を参照してください。 [/Oi (組み込み関数の生成)](../../build/reference/oi-generate-intrinsic-functions.md)と[/Ox (有効にする最も速度の最適化)](../../build/reference/ox-full-optimization.md)です。
+関連情報については、次を参照してください。 [/Oi (組み込み関数の生成)](../../build/reference/oi-generate-intrinsic-functions.md)と[/Ox (有効にする最もの速度の最適化)](../../build/reference/ox-full-optimization.md)します。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[のプロジェクト プロパティの操作](../../ide/working-with-project-properties.md)です。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 
 1. **[C/C++]** フォルダーをクリックします。
 
@@ -100,7 +100,7 @@ ms.locfileid: "32377158"
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
-- 「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>」を参照してください。
+- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>
 
 ## <a name="see-also"></a>関連項目
 

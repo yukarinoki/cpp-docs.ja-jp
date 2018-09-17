@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0231c2514805479c0ec999698ebd027ab51e3119
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 72ed2d47c995e19bdfa473c0abd79034e3e51430
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42545813"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720942"
 ---
 # <a name="movsq"></a>__movsq
 **Microsoft 固有の仕様**  
@@ -41,14 +41,14 @@ void __movsq(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [出力] `Dest`  
- 操作の転送先。  
+*追加先*<br/>
+[out]操作の転送先。  
   
- [入力] `Source`  
- 操作のソース。  
+*Source*<br/>
+[in]操作のソース。  
   
- [入力] `Count`  
- コピーする (クワドワード)。 の数。  
+*カウント*<br/>
+[in]コピーする (クワドワード)。 の数。  
   
 ## <a name="requirements"></a>要件  
   

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e996a83cfc2a79d4bf5cc458ccc5bdd586355b64
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6884face758cd7f7b9b507405f41f4fcbac8f188
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541603"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721306"
 ---
 # <a name="umul128"></a>_umul128
 **Microsoft 固有の仕様**  
@@ -39,14 +39,14 @@ unsigned __int64 _umul128(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力] `Multiplier`  
- 乗算する最初の 64 ビット整数。  
+*乗数*<br/>
+[in]乗算する最初の 64 ビット整数。  
   
- [入力] `Multiplicand`  
- 乗算する 2 番目の 64 ビット整数。  
+*Multiplicand*<br/>
+[in]乗算する 2 つ目の 64 ビット整数。  
   
- [出力] `HighProduct`  
- 積の上位 64 ビット。  
+*HighProduct*<br/>
+[out]製品の上位 64 ビット。  
   
 ## <a name="return-value"></a>戻り値  
  積の下位 64 ビット。  

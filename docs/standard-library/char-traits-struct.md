@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8f906c4c084ef4cabef9b26ef9e6b48e9e33cd
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: ba56cef1ecdcee246b9041b930eeb5bf04728def
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106084"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724608"
 ---
 # <a name="chartraits-struct"></a>char_traits 構造体
 
@@ -120,7 +120,8 @@ static char_type *assign(char_type* strTo,
 *_CharTo*<br/>
 文字値を割り当てられる要素。
 
-* strTo * 最初の要素が文字値を割り当てられる文字列または文字の配列。
+*strTo*<br/>
+最初の要素が割り当てられた文字値になる文字列または文字の配列。
 
 *_Num*<br/>
 値を割り当てられる要素の数。
@@ -198,9 +199,11 @@ static int compare(const char_type* str1,
 
 ### <a name="parameters"></a>パラメーター
 
-* str1 * 相互に比較する最初の 2 つの文字列。
+*str1*<br/>
+相互に比較する 2 つの文字列の最初の文字列。
 
-* str2 * 2 番目の相互に比較する 2 つの文字列。
+*str2*<br/>
+相互に比較する 2 つの文字列の 2 番目の文字列。
 
 *_Num*<br/>
 比較する文字列内の要素の数。

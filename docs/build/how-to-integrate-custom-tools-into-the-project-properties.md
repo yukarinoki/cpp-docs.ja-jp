@@ -16,35 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 047427c344e8768fafa984ac72984c968d60238f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 800652b845294ebad4e1cca5310e0b95f6d79151
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693842"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720404"
 ---
 # <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>方法: カスタム ツールをプロジェクト プロパティに統合する
-カスタム ツール オプションを追加するには、Visual studio**プロパティ ページ**ウィンドウを基になる XML スキーマ ファイルを作成します。  
-  
- **構成プロパティ**のセクション、**プロパティ ページ**ウィンドウと呼ばれる設定グループが表示されます。*ルール*します。 すべてのルールには、ツールまたは機能のグループの設定が含まれています。 たとえば、**リンカー**ルールには、リンカー ツールの設定が含まれています。 ルールの設定に分割できる*カテゴリ*します。  
-  
- このドキュメントでは、Visual Studio の起動時に、プロパティが読み込まれるように、カスタム ツールのプロパティを含むセット ディレクトリにファイルを作成する方法について説明します。 ファイルを変更する方法については、次を参照してください。[プラットフォーム機能拡張の第 2 部](https://blogs.msdn.microsoft.com/vsproject/2009/06/18/platform-extensibility-part-2/)Visual Studio プロジェクトのチームのブログ。  
-  
-### <a name="to-add-or-change-project-properties"></a>プロジェクトのプロパティを追加または変更  
-  
-1.  XML エディターでは、XML ファイルを作成します。  
-  
-2.  Visual Studio 2017 でファイルを保存`VCTargets\1033`フォルダー。 インストールされている Visual Studio 2017 の各エディションと言語ごとに異なるパスになります。 たとえば、英語版の Visual Studio Enterprise edition のフォルダー パスは`%ProgramFiles%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\1033`します。 言語と Visual Studio のエディションの経路を調整します。 すべてのルールで、**プロパティ ページ**ウィンドウはこのフォルダー内の XML ファイルで表されます。 フォルダー内のファイルの名前は一意にすることを確認します。  
-  
-3.  内容をコピー`%ProgramFiles%\Microsoft Visual Studio\2017\<VS Edition>\Common7\IDE\VC\VCTargets\<LCID>\cl.xml`変更を保存しないで閉じます、および、新しい XML ファイルにコンテンツを貼り付けます。 任意の XML スキーマ ファイルを使用する - これは、テンプレートを使用して開始するために使用できる機能を 1 つ。  
-  
-4.  新しい XML ファイルでは、ニーズに合わせてコンテンツを変更します。 変更することを確認、**ルール名**と**Rule.DisplayName**ファイルの上部にあります。  
-  
-5.  変更を保存し、ファイルを閉じます。  
-  
-6.  XML ファイル`%ProgramFiles%\Microsoft Visual Studio\2017\<VS Edition>\Common7\IDE\VC\VCTargets\<LCID>`は、Visual Studio の起動時に読み込まれます。 そのため、新しいファイルをテストするには、Visual Studio を再起動します。  
-  
-7.  **ソリューション エクスプ ローラー**プロジェクトを右クリックし、クリックして**プロパティ**します。 **プロパティ ページ**ウィンドウで、左側のウィンドウで、ルールの名前を持つ新しいノードがあることを確認します。  
-  
-## <a name="see-also"></a>関連項目  
- [MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)
+
+カスタム ツール オプションを追加するには、Visual studio**プロパティ ページ**ウィンドウを基になる XML スキーマ ファイルを作成します。
+
+**構成プロパティ**のセクション、**プロパティ ページ**ウィンドウと呼ばれる設定グループが表示されます。*ルール*します。 すべてのルールには、ツールまたは機能のグループの設定が含まれています。 たとえば、**リンカー**ルールには、リンカー ツールの設定が含まれています。 ルールの設定に分割できる*カテゴリ*します。
+
+このドキュメントでは、Visual Studio の起動時に、プロパティが読み込まれるように、カスタム ツールのプロパティを含むセット ディレクトリにファイルを作成する方法について説明します。 ファイルを変更する方法については、次を参照してください。[プラットフォーム機能拡張の第 2 部](https://blogs.msdn.microsoft.com/vsproject/2009/06/18/platform-extensibility-part-2/)Visual Studio プロジェクトのチームのブログ。
+
+### <a name="to-add-or-change-project-properties"></a>プロジェクトのプロパティを追加または変更
+
+1. XML エディターでは、XML ファイルを作成します。
+
+1. Visual Studio 2017 でファイルを保存`VCTargets\1033`フォルダー。 インストールされている Visual Studio 2017 の各エディションと言語ごとに異なるパスになります。 たとえば、英語版の Visual Studio Enterprise edition のフォルダー パスは`%ProgramFiles%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\1033`します。 言語と Visual Studio のエディションの経路を調整します。 すべてのルールで、**プロパティ ページ**ウィンドウはこのフォルダー内の XML ファイルで表されます。 フォルダー内のファイルの名前は一意にすることを確認します。
+
+1. 内容をコピー`%ProgramFiles%\Microsoft Visual Studio\2017\<VS Edition>\Common7\IDE\VC\VCTargets\<LCID>\cl.xml`変更を保存しないで閉じます、および、新しい XML ファイルにコンテンツを貼り付けます。 任意の XML スキーマ ファイルを使用する - これは、テンプレートを使用して開始するために使用できる機能を 1 つ。
+
+1. 新しい XML ファイルでは、ニーズに合わせてコンテンツを変更します。 変更することを確認、**ルール名**と**Rule.DisplayName**ファイルの上部にあります。
+
+1. 変更を保存し、ファイルを閉じます。
+
+1. XML ファイル`%ProgramFiles%\Microsoft Visual Studio\2017\<VS Edition>\Common7\IDE\VC\VCTargets\<LCID>`は、Visual Studio の起動時に読み込まれます。 そのため、新しいファイルをテストするには、Visual Studio を再起動します。
+
+1. **ソリューション エクスプ ローラー**プロジェクトを右クリックし、クリックして**プロパティ**します。 **プロパティ ページ**ウィンドウで、左側のウィンドウで、ルールの名前を持つ新しいノードがあることを確認します。
+
+## <a name="see-also"></a>関連項目
+
+[MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)

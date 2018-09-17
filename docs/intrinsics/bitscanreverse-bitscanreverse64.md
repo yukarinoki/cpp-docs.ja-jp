@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fe9fc90556c15cdab13f68647f07b877aa15abf
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ab174484cb305e26c23d1c1d6b5e573341c9035c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538546"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716968"
 ---
 # <a name="bitscanreverse-bitscanreverse64"></a>_BitScanReverse、_BitScanReverse64
 **Microsoft 固有の仕様**  
@@ -47,11 +47,11 @@ unsigned char _BitScanReverse64(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [出力] `Index`  
- 最初に見つかった設定済みビット (1) のビット位置が読み込まれます。  
+*Index*<br/>
+[out]見つかった最初のビット セット (1) のビット位置が読み込まれます。  
   
- [入力] `Mask`  
- 検索する 32 ビットまたは 64 ビットの値。  
+*マスク*<br/>
+[in]検索する 32 ビットまたは 64 ビット値。  
   
 ## <a name="return-value"></a>戻り値  
  `Index` が設定された場合は 0 以外、設定済みビットが見つからなかった場合は 0。  

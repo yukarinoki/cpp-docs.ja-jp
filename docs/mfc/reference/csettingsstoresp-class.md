@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cf84e2e7db6f829cb7afcd1831521b4f94535bd
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 4223ce5c358f4e95ab94baac9d5cf0edda5ad73f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850784"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716360"
 ---
 # <a name="csettingsstoresp-class"></a>CSettingsStoreSP クラス
 `CSettingsStoreSP`クラスは、インスタンスの作成に使用できるヘルパー クラス、 [CSettingsStore クラス](../../mfc/reference/csettingsstore-class.md)します。  
@@ -55,7 +55,7 @@ class CSettingsStoreSP
   
 ### <a name="data-members"></a>データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |`m_dwUserData`|カスタム ユーザー データに格納されている、`CSettingsStoreSP`オブジェクト。 コンス トラクターでは、このデータを指定する、`CSettingsStoreSP`オブジェクト。|  
 |`m_pRegistry`|`CSettingsStore`の派生オブジェクトを`Create`メソッドを作成します。|  
@@ -75,7 +75,7 @@ class CSettingsStoreSP
   
  `CSettingsStoreSP::SetRuntimeClass` グローバルな静的変数を使用します。 そのため、1 つだけのカスタム ストアは、時に使用できます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxsettingsstore.h  
   
 ##  <a name="create"></a>  CSettingsStoreSP::Create  
@@ -88,11 +88,11 @@ CSettingsStore& CSettingsStoreSP Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bAdmin*  
- 決定するブール値パラメーターかどうかを`CSettingsStore`管理者モードでオブジェクトを作成します。  
+*bAdmin*<br/>
+[in]決定するブール値パラメーターかどうかを`CSettingsStore`管理者モードでオブジェクトを作成します。  
   
- [in]*bReadOnly*  
- 決定するブール値パラメーターかどうかを`CSettingsStore`読み取り専用アクセスのオブジェクトを作成します。  
+*bReadOnly*<br/>
+[in]決定するブール値パラメーターかどうかを`CSettingsStore`読み取り専用アクセスのオブジェクトを作成します。  
   
 ### <a name="return-value"></a>戻り値  
  新しく作成されたへの参照を`CSettingsStore`オブジェクト。  
@@ -117,8 +117,8 @@ CSettingsStoreSP::CSettingsStoreSP(DWORD dwUserData = 0);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*dwUserData*  
- ユーザー定義データを`CSettingsStoreSP`オブジェクト ストアです。  
+*dwUserData*<br/>
+[in]ユーザー定義データを`CSettingsStoreSP`オブジェクト ストアです。  
   
 ### <a name="remarks"></a>Remarks  
  `CSettingsStoreSP`オブジェクトからデータを格納する*dwUserData*プロテクト メンバー変数に`m_dwUserData`します。  
@@ -131,8 +131,8 @@ static BOOL __stdcall CSettingsStoreSP::SetRuntimeClass(CRuntimeClass* pRTI);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pRTI*  
- 派生したクラスのランタイム クラス情報へのポインター、 [CSettingsStore クラス](../../mfc/reference/csettingsstore-class.md)します。  
+*pRTI*<br/>
+[in]派生したクラスのランタイム クラス情報へのポインター、 [CSettingsStore クラス](../../mfc/reference/csettingsstore-class.md)します。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は TRUE。FALSE の場合、クラスがで識別される*pRTI*から派生していない`CSettingsStore`します。  

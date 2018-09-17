@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e5ee2ddc29c2a014aceb8ac6356cae9e42a916d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: def07f92cc05828c132ba7d34d3dcc06d4aecf50
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027324"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721449"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>ARM32 ABI 規則の概要
 
@@ -64,16 +64,16 @@ ARM 上の Windows の命令セットは Thumb-2 に厳密に制限されてい�
 - ターゲット命令は、次のいずれかである必要があります。
 
    |16 ビット オペコード|クラス|制約|
-    |---------------------|-----------|------------------|
-    |MOV, MVN|移動|Rm != PC, Rd != PC|
-    |LDR, LDR[S]B, LDR[S]H|メモリからの読み込み|ただし、LDR リテラル形式ではありません|
-    |STR, STRB, STRH|メモリへの格納||
-    |ADD, ADC, RSB, SBC, SUB|加算または減算|ただし、ADD/SUB SP、SP、imm7 形式ではありません<br /><br /> Rm != PC, Rdn != PC, Rdm != PC|
-    |CMP, CMN|Compare|Rm != PC, Rn != PC|
-    |MUL|乗算||
-    |ASR, LSL, LSR, ROR|ビット シフト||
-    |AND, BIC, EOR, ORR, TST|ビット単位の算術||
-    |BX|レジスタへの分岐|Rm != PC|
+   |---------------------|-----------|------------------|
+   |MOV, MVN|移動|Rm != PC, Rd != PC|
+   |LDR, LDR[S]B, LDR[S]H|メモリからの読み込み|ただし、LDR リテラル形式ではありません|
+   |STR, STRB, STRH|メモリへの格納||
+   |ADD, ADC, RSB, SBC, SUB|加算または減算|ただし、ADD/SUB SP、SP、imm7 形式ではありません<br /><br /> Rm != PC, Rdn != PC, Rdm != PC|
+   |CMP, CMN|Compare|Rm != PC, Rn != PC|
+   |MUL|乗算||
+   |ASR, LSL, LSR, ROR|ビット シフト||
+   |AND, BIC, EOR, ORR, TST|ビット単位の算術||
+   |BX|レジスタへの分岐|Rm != PC|
 
 現在の ARMv7 CPU は許可されていない命令形式の使用を報告できませんが、将来の世代では報告可能になる予定です。 このような形式が検出された場合は、これらの形式を使用しているプログラムが未定義の命令の例外で終了します。
 
@@ -233,5 +233,5 @@ Windows を実行中の ARM プロセッサは、サイクル カウンターを
 
 ## <a name="see-also"></a>関連項目
 
-[Visual C++ の ARM への移行に関する一般的な問題](../build/common-visual-cpp-arm-migration-issues.md)  
-[ARM 例外処理](../build/arm-exception-handling.md)  
+[Visual C++ の ARM への移行に関する一般的な問題](../build/common-visual-cpp-arm-migration-issues.md)<br/>
+[ARM 例外処理](../build/arm-exception-handling.md)
