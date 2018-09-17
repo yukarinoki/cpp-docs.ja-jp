@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e61f1ac30c2a50cbbefe6c0cbd9e28011a0d0bd
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: bb24ed970d3b02835d5545cb0eaf1d9fd8e81c7e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571488"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713428"
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (複数のプロセスを使用したビルド)
 
@@ -127,7 +127,7 @@ Visual Studio を使用して、 [MSBuild.exe](/visualstudio/msbuild/msbuild-ref
 
 ソリューションのビルド時間は、部分的に、ビルドを実行するプロセスの数に依存しています。 *数*の引数、 [/maxcpucount](/visualstudio/msbuild/msbuild-command-line-reference) MSBuild オプションを同時にビルドするプロジェクトの最大数を指定します。 同様に、 *processMax*の引数、 **/MP**コンパイラ オプションを同時にビルドをコンパイル単位の最大数を指定します。 場合、 **/maxcpucount**オプションを指定します*P*プロジェクトと **/MP**オプションを指定します*C*を処理する最大*P* x *C*プロセスを同時に実行します。
 
- MSBuild を使用するかどうかを決定するためのガイドラインまたは **/MP**テクノロジは、次のようにします。
+MSBuild を使用するかどうかを決定するためのガイドラインまたは **/MP**テクノロジは、次のようにします。
 
 - 各プロジェクトでいくつかのファイルで多くのプロジェクトがある場合は、MSBuild ツールを使用します。
 

@@ -147,12 +147,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f455ce1f09822d4705a8c700e9dbc93d4a2e79c
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 52073a97e062d4ab96e50fed534edc24add0f8c5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104607"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715599"
 ---
 # <a name="unorderedmultimap-class"></a>unordered_multimap クラス
 
@@ -369,7 +369,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*keyval*  
+*keyval*<br/>
 マップするキー値。
 
 ### <a name="remarks"></a>Remarks
@@ -514,7 +514,7 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*nbucket*  
+*nbucket*<br/>
 バケット番号。
 
 ### <a name="remarks"></a>Remarks
@@ -880,7 +880,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*keyval*  
+*keyval*<br/>
 検索対象のキー値。
 
 ### <a name="remarks"></a>Remarks
@@ -1201,7 +1201,7 @@ std::pair<const_iterator, const_iterator>
 
 ### <a name="parameters"></a>パラメーター
 
-*keyval*  
+*keyval*<br/>
 検索対象のキー値。
 
 ### <a name="remarks"></a>Remarks
@@ -1277,16 +1277,16 @@ size_type erase(
 
 ### <a name="parameters"></a>パラメーター
 
-*Where*  
+*Where*<br/>
 削除される要素の位置。
 
-*まずは*  
+*まずは*<br/>
 削除される最初の要素の位置。
 
-*前の*  
+*前の*<br/>
 削除される最後の要素の次の位置。
 
-*Key*  
+*Key*<br/>
 削除される要素のキー値。
 
 ### <a name="return-value"></a>戻り値
@@ -1309,7 +1309,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*keyval*  
+*keyval*<br/>
 検索対象のキー値。
 
 ### <a name="remarks"></a>Remarks
@@ -2011,7 +2011,7 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>パラメーター
 
-*factor*  
+*factor*<br/>
 新しい最大テーブル占有率。
 
 ### <a name="remarks"></a>Remarks
@@ -2291,7 +2291,7 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>パラメーター
 
-*nbuckets*  
+*nbuckets*<br/>
 要求されたバケット数。
 
 ### <a name="remarks"></a>Remarks

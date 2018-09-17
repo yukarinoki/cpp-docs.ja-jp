@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a167b228b054a24a812ce5099f396521adda0d08
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: f81b1e675f6b0c12330d84d17b2e6b1635503dfc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690422"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704939"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl クラス
 Windows コモン SysLink コントロールの機能が用意されています。  
@@ -237,7 +237,7 @@ int GetIdealSize(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*cxMaxWidth*|ピクセル単位で、リンクの最大の幅。|  
+|*cxMaxWidth*|[in]ピクセル単位で、リンクの最大の幅。|  
 |[out]\* *pSize*|Windows へのポインター[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)構造体。 このメソッドが戻るとき、 *cy*のメンバー、`SIZE`構造で指定されているリンクのテキスト幅の理想的なリンクのテキストの高さに含まれる*cxMaxWidth*します。 *Cx*構造体のメンバーには、実際に必要なリンクのテキストの幅が含まれています。|  
   
 ### <a name="return-value"></a>戻り値  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::swap (unordered_map/multimap)
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76210e9ae860f8a7de0f22db2b7108e90e09e5be
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3a6d8a925f493a8299cf1afd8e851456277a68e9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965553"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715521"
 ---
 # <a name="ltunorderedmapgt-functions"></a>&lt;unordered_map&gt; 関数
 
@@ -42,26 +42,26 @@ void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-*Key*  
- キーの型。
+*Key*<br/>
+キーの型。
 
-*Ty*  
- マップされた型。
+*Ty*<br/>
+マップされた型。
 
-*ハッシュ*  
- ハッシュ関数のオブジェクト型。
+*ハッシュ*<br/>
+ハッシュ関数のオブジェクト型。
 
-*Pred*  
- 等価比較関数のオブジェクト型。
+*Pred*<br/>
+等価比較関数のオブジェクト型。
 
-*Alloc*  
- アロケーター クラス。
+*Alloc*<br/>
+アロケーター クラス。
 
-*left*  
- スワップする最初のコンテナー。
+*left*<br/>
+スワップする最初のコンテナー。
 
-*right*  
- スワップする 2 番目のコンテナー。
+*right*<br/>
+スワップする 2 番目のコンテナー。
 
 ### <a name="remarks"></a>Remarks
 
@@ -136,26 +136,26 @@ void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-*Key*  
- キーの型。
+*Key*<br/>
+キーの型。
 
-*Ty*  
- マップされた型。
+*Ty*<br/>
+マップされた型。
 
-*ハッシュ*  
- ハッシュ関数のオブジェクト型。
+*ハッシュ*<br/>
+ハッシュ関数のオブジェクト型。
 
-*Pred*  
- 等価比較関数のオブジェクト型。
+*Pred*<br/>
+等価比較関数のオブジェクト型。
 
-*Alloc*  
- アロケーター クラス。
+*Alloc*<br/>
+アロケーター クラス。
 
-*left*  
- スワップする最初のコンテナー。
+*left*<br/>
+スワップする最初のコンテナー。
 
-*right*  
- スワップする 2 番目のコンテナー。
+*right*<br/>
+スワップする 2 番目のコンテナー。
 
 ### <a name="remarks"></a>Remarks
 

@@ -58,12 +58,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7eff5cab57c1288af1f6e1109fae458c35e0fa7b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b301483e2c2f76838054059af838b282aee2d523
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611384"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711257"
 ---
 # <a name="interlockedcompareexchange-intrinsic-functions"></a>_InterlockedCompareExchange の組み込み関数
 **Microsoft 固有の仕様**  
@@ -186,14 +186,14 @@ __int64 _InterlockedCompareExchange64_rel(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力、出力] `Destination`  
- 対象値へのポインター。 符号は無視されます。  
+*変換先*<br/>
+[入力、出力]宛先値へのポインター。 符号は無視されます。  
   
- [入力] `Exchange`  
- Exchange の値。 符号は無視されます。  
+*Exchange*<br/>
+[in]Exchange の値。 符号は無視されます。  
   
- [入力] `Comparand`  
- 対象と比較する値。 符号は無視されます。  
+*比較対照値*<br/>
+[in]対象と比較する値。 符号は無視されます。  
   
 ## <a name="return-value"></a>戻り値  
  戻り値は、`Destination` ポインターの初期値です。  

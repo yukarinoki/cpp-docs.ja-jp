@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 79f2ae3edaf7f820008882e5ce035446f67b7ce9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 003f2c9241a4ba81e370204ce2102b60e420df04
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608138"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700545"
 ---
 # <a name="safemultiply"></a>SafeMultiply
 
@@ -41,14 +41,14 @@ inline bool SafeMultiply (
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*t*  
-乗算対象の最初の数。 これは、型でなければなりません`T`します。
+*t*<br/>
+[in]乗算する最初の数値。 これは、型でなければなりません`T`します。
 
-[in]*u*  
-乗算対象の 2 番目の数。 これは、型でなければなりません`U`します。
+*u*<br/>
+[in]乗算する 2 番目の数値。 これは、型でなければなりません`U`します。
 
-[out]*結果*  
-パラメーターで**SafeMultiply**結果を格納します。
+*結果*<br/>
+[out]パラメーターで**SafeMultiply**結果を格納します。
 
 ## <a name="return-value"></a>戻り値
 

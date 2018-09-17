@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebe4b604958220a846ee3a91b1a6251f6f461de9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 763849c2f13e88c11280ec7594385afd85552080
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758857"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712739"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl クラス
 Windows コモン ヘッダー コントロールの機能が用意されています。  
@@ -490,8 +490,8 @@ BOOL GetItemDropDownRect(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*iItem*|スタイルがヘッダー項目の 0 から始まるインデックス。 詳細については、次を参照してください。、`fmt`のメンバー、 [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema)構造体。|  
-|[out]*lpRect*|ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)外接する四角形の情報を受け取る構造体。|  
+|*iItem*|[in]スタイルがヘッダー項目の 0 から始まるインデックス。 詳細については、次を参照してください。、`fmt`のメンバー、 [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema)構造体。|  
+|*lpRect*|[out]ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)外接する四角形の情報を受け取る構造体。|  
   
 ### <a name="return-value"></a>戻り値  
  この関数が成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -567,7 +567,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[out]*lpRect*|ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)外接する四角形の情報を受け取る構造体。|  
+|*lpRect*|[out]ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)外接する四角形の情報を受け取る構造体。|  
   
 ### <a name="return-value"></a>戻り値  
  この関数が成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -598,7 +598,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力、出力]*phdhti*|ポインターを[HDHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-_hd_hittestinfo)をテストする点を指定し、テストの結果を受け取る構造体。|  
+|*phdhti*|[入力、出力]ポインターを[HDHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-_hd_hittestinfo)をテストする点を指定し、テストの結果を受け取る構造体。|  
   
 ### <a name="return-value"></a>戻り値  
  指定した位置に存在する場合、ヘッダー項目の 0 から始まるインデックスそれ以外の場合、-1 を返します。  
@@ -726,7 +726,7 @@ BOOL SetFocusedItem(int iItem);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*iItem*|ヘッダー項目の 0 から始まるインデックス。|  
+|*iItem*|[in]ヘッダー項目の 0 から始まるインデックス。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  

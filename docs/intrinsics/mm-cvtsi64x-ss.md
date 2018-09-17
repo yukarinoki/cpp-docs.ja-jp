@@ -1,5 +1,5 @@
 ---
-title: _mm_cvtsi64x_ss |Microsoft Docs
+title: _mm_cvtsi64x_ss |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae300569c4aa04a313f44a23fe988f1de7b826a1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: eb253ab776565339aeaeade26d6d355b4f6a742b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539318"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700003"
 ---
 # <a name="mmcvtsi64xss"></a>_mm_cvtsi64x_ss
 **Microsoft 固有の仕様**  
@@ -39,11 +39,11 @@ __m128 _mm_cvtsi64x_ss(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力] `a`  
- `__m128` 4 つの単精度浮動小数点値を含む構造体。  
+*a*<br/>
+[in]`__m128` 4 つの単精度浮動小数点値を含む構造体。  
   
- [入力] `b`  
- 浮動小数点値に変換する 64 ビット整数。  
+*b*<br/>
+[in]浮動小数点値に変換する 64 ビット整数。  
   
 ## <a name="return-value"></a>戻り値  
  `__m128`最初の浮動小数点値が変換の結果は、構造体。 その他の 3 つの値から変更されていないコピー`a`します。  

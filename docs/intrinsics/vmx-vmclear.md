@@ -1,5 +1,5 @@
 ---
-title: _ _vmx_vmclear |Microsoft Docs
+title: _ _vmx_vmclear |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 083bb7258197bbc11118eaf3d3c3e3423c473310
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: fd5661a2b6aa257c91babcc3d17b1babb0b4d2c2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678325"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707162"
 ---
 # <a name="vmxvmclear"></a>__vmx_vmclear
 **Microsoft 固有の仕様**  
@@ -41,7 +41,7 @@ unsigned char __vmx_vmclear(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `VmcsPhysicalAddress`|クリアする VMCS の物理アドレスを格納する 64 ビット メモリ位置へのポインター。|  
+|*VmcsPhysicalAddress*|[in]クリアする VMCS の物理アドレスを格納する 64 ビット メモリ位置へのポインター。|  
   
 ## <a name="return-value"></a>戻り値  
   

@@ -1,5 +1,5 @@
 ---
-title: -showincludes (一覧は、ファイルを含める) |Microsoft ドキュメント
+title: -showincludes (インクルード ファイル一覧) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,54 +22,57 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6eac7df694994b625e08ded710d43837d857df2d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 51305212f97482c6963ee2ba0d272c5c4692416e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378341"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709394"
 ---
 # <a name="showincludes-list-include-files"></a>/showIncludes (インクルード ファイル一覧)
-コンパイラでインクルード ファイルの一覧を出力します。 入れ子になった含めるファイルも表示されている (含まれているファイルからファイルをインクルードする)。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-/showIncludes  
-```  
-  
-## <a name="remarks"></a>コメント  
- コンパイル時に、インクルード ファイルを検出したときにメッセージは、出力がたとえばです。  
-  
-```  
-Note: including file: d:\MyDir\include\stdio.h  
-```  
-  
- 入れ子になった含めるなどのファイルは、インデントは、入れ子のレベルごとに 1 つのスペースで示されます。  
-  
-```  
-Note: including file: d:\temp\1.h  
-Note: including file:  d:\temp\2.h  
-```  
-  
- この場合、`2.h`が内から含まれている`1.h`、したがってインデントします。  
-  
- **/ShowIncludes**オプションを出力する`stderr`ではなく、`stdout`です。  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
-  
-1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[のプロジェクト プロパティの操作](../../ide/working-with-project-properties.md)です。  
-  
-2.  **[C/C++]** フォルダーをクリックします。  
-  
-3.  クリックして、**詳細**プロパティ ページ。  
-  
-4.  変更、**インクルード ファイルの表示**プロパティです。  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには  
-  
--   「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ShowIncludes%2A>」を参照してください。  
-  
-## <a name="see-also"></a>関連項目  
- [コンパイラ オプション](../../build/reference/compiler-options.md)   
- [コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+
+コンパイラでインクルード ファイルのリストを出力します。 入れ子になった含めるファイルも表示されている (に含まれるファイルを含むファイルから)。
+
+## <a name="syntax"></a>構文
+
+```
+/showIncludes
+```
+
+## <a name="remarks"></a>Remarks
+
+インクルード ファイルがコンパイル時に発生したときに、メッセージは、出力をなどです。
+
+```
+Note: including file: d:\MyDir\include\stdio.h
+```
+
+入れ子になった含めるなどのファイルは、インデントは、入れ子のレベルごとに 1 つの領域で示されます。
+
+```
+Note: including file: d:\temp\1.h
+Note: including file:  d:\temp\2.h
+```
+
+この場合、`2.h`内から含まれていました`1.h`、そのため、インデントします。
+
+**/ShowIncludes**オプションを生成する`stderr`ではなく、`stdout`します。
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+
+1. **[C/C++]** フォルダーをクリックします。
+
+1. をクリックして、**詳細**プロパティ ページ。
+
+1. 変更、 **インクルード ファイルの**プロパティ。
+
+### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
+
+- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ShowIncludes%2A>
+
+## <a name="see-also"></a>関連項目
+
+[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
+[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)

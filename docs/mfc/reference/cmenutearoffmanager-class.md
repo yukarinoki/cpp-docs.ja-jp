@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b05c93bbdfd09bc28288b27a55520c5ac664b723
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0ca3af6aba4c208672038de2ca663efdb2cc9d9a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540103"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700935"
 ---
 # <a name="cmenutearoffmanager-class"></a>CMenuTearOffManager クラス
 ティアオフ メニューを管理します。 ティアオフ メニューはメニュー バー上のメニューの一種です。 ユーザーは、ティアオフ メニューをメニュー バーから外して、フローティング メニューにすることができます。  
@@ -99,8 +99,8 @@ void Build(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiTearOffBarID*  
- [in]*strText*  
+*uiTearOffBarID*<br/>
+[in][in]*strText*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -136,14 +136,14 @@ BOOL Initialize(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszRegEntry*  
- レジストリ エントリのパスを含む文字列。 アプリケーションには、このレジストリ エントリでティアオフ バーの設定が格納されます。  
+*lpszRegEntry*<br/>
+[in]レジストリ エントリのパスを含む文字列。 アプリケーションには、このレジストリ エントリでティアオフ バーの設定が格納されます。  
   
- [in]*uiTearOffMenuFirst*  
- ティアオフ メニューの最初のメニューの ID。  
+*uiTearOffMenuFirst*<br/>
+[in]ティアオフ メニューの最初のメニューの ID。  
   
- [in]*uiTearOffMenuLast*  
- ティアオフ メニューの最後のメニューの ID。  
+*uiTearOffMenuLast*<br/>
+[in]ティアオフ メニューの最後のメニューの ID。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -201,8 +201,8 @@ void SetInUse(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiCmdId*  
- [in]*bUse*  
+*uiCmdId*<br/>
+[in][in]*bUse*  
   
 ### <a name="remarks"></a>Remarks  
   

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a119ebcccea3881d7b595e0581e23f53c656b91c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ac443927c2dcbb00cc01dd3cd63a95441a4a1bf0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200219"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711816"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -52,8 +52,8 @@ ms.locfileid: "43200219"
 
 ### <a name="parameters"></a>パラメーター
 
-*型*(省略可能)  
-次のいずれかの値を指定します。
+*type*  
+(省略可能)次のいずれかを指定できます。
 
 - `dll` 結果の DLL がインプロセス COM サーバーとして機能できるようにする関数およびクラスを追加します。 これが既定値です。
 
@@ -63,11 +63,11 @@ ms.locfileid: "43200219"
 
 - `unspecified` モジュール属性に関連する ATL コードの挿入を無効にします。 の ATL モジュール クラス、グローバル インスタンス _AtlModule およびエントリ ポイント関数。 プロジェクト内のその他の属性による ATL コードの挿入は無効になりせん。
 
-*name* (省略可能)  
-ライブラリ ブロックの名前です。
+*name*  
+(省略可能)ライブラリ ブロックの名前。
 
-*バージョン*(省略可能)  
-ライブラリ ブロックに割り当てるバージョン番号です。 既定値は 1.0 です。
+*version*  
+(省略可能)ライブラリ ブロックを割り当てるバージョン番号です。 既定値は 1.0 です。
 
 *uuid*  
 ライブラリの一意の ID です。 このパラメーターを省略した場合、ライブラリの ID は自動的に生成されます。 取得する必要があります、 *uuid* 、識別子を使用して行うことができます、ライブラリ ブロックの **_ _uuidof (** *libraryname* **)** します。
@@ -75,32 +75,32 @@ ms.locfileid: "43200219"
 *lcid*  
 ローカリゼーション パラメーターです。 参照してください[lcid](/windows/desktop/Midl/lcid)詳細についてはします。
 
-*コントロール*(省略可能)  
-ライブラリ内のすべてのコクラスがコントロールであることを指定します。
+*control*  
+(省略可能)ライブラリ内のすべてのコクラスのコントロールを指定します。
 
 *helpstring*  
 タイプ ライブラリを指定します。
 
-*helpstringdll* (省略可能)  
-ドキュメントの文字列を検索する .dll ファイルの名前を設定します。 参照してください[helpstringdll](/windows/desktop/Midl/helpstringdll)詳細についてはします。
+*helpstringdll*  
+(省略可能)使用してドキュメントの文字列検索を実行する .dll ファイルの名前を設定します。 参照してください[helpstringdll](/windows/desktop/Midl/helpstringdll)詳細についてはします。
 
-*helpfile* (省略可能)  
-名前、**ヘルプ**タイプ ライブラリ ファイル。
+*helpfile*  
+(省略可能)名前、**ヘルプ**タイプ ライブラリ ファイル。
 
-*helpcontext* (省略可能)  
-**ヘルプ ID**このタイプ ライブラリ。
+*helpcontext*  
+(省略可能)**ヘルプ ID**このタイプ ライブラリ。
 
-*helpstringcontext* (省略可能)  
-詳細については、「 [helpstringcontext](../windows/helpstringcontext.md) 」を参照してください。
+*helpstringcontext*  
+(省略可能)参照してください[helpstringcontext](../windows/helpstringcontext.md)詳細についてはします。
 
-*非表示*(省略可能)  
-ライブラリ全体が表示されないようにします。 これは、コントロールと共に使用します。 ホストは、拡張プロパティを使用し、コントロールをラップする新しいタイプ ライブラリを作成する必要があります。 参照してください、[隠し](/windows/desktop/Midl/hidden)MIDL 属性に関する詳細について説明します。
+*hidden*  
+(省略可能)ライブラリ全体が表示されないようにします。 これは、コントロールと共に使用します。 ホストは、拡張プロパティを使用し、コントロールをラップする新しいタイプ ライブラリを作成する必要があります。 参照してください、[隠し](/windows/desktop/Midl/hidden)MIDL 属性に関する詳細について説明します。
 
-*制限付き*(省略可能)  
-ライブラリのメンバーは、任意に呼び出すことはできません。 参照してください、[制限](/windows/desktop/Midl/restricted)MIDL 属性に関する詳細について説明します。
+*restricted*  
+(省略可能)ライブラリのメンバーは、任意に呼び出すことはできません。 参照してください、[制限](/windows/desktop/Midl/restricted)MIDL 属性に関する詳細について説明します。
 
-*カスタム*(省略可能)  
-1 つ以上の属性です。これは、 [custom](../windows/custom-cpp.md) 属性と似ています。 最初のパラメーター*カスタム*属性の GUID です。 例えば:
+*custom*  
+(省略可能)1 つまたは複数の属性です。これに似ています、[カスタム](../windows/custom-cpp.md)属性。 最初のパラメーター*カスタム*属性の GUID です。 例えば:
 
 ```
 [module(custom={guid,1}, custom={guid1,2})]

@@ -126,12 +126,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a44cccd38d64f3e6b0c2b7af390d06292f70157
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e6c22d91bafc45699371dd40d317b66cf3d1ca11
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105667"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706616"
 ---
 # <a name="basicstring-class"></a>basic_string クラス
 
@@ -3979,9 +3979,11 @@ basic_string<CharType, Traits, Allocator>& replace(
 *_Ch*<br/>
 オペランド文字列にコピーする文字。
 
-* first0 * をオペランド文字列で削除される最初の文字を示す反復子。
+*first0*<br/>
+オペランド文字列内で削除される最初の文字を指定する反復子。
 
-* last0 * をオペランド文字列で削除される最後の文字を示す反復子。
+*last0*<br/>
+オペランド文字列内で削除される最後の文字を指定する反復子。
 
 *first*<br/>
 パラメーター文字列にコピーされる最初の文字を指定する、反復子、const_pointer、または const_iterator。

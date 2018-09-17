@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 243881a2ca18ba54e3a6c9cafee407f07746baca
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 5cbdb880c7165f314c004a7cbcad44dd3b76fd36
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336986"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709840"
 ---
 # <a name="cdoctemplate-class"></a>CDocTemplate クラス
 ドキュメント テンプレートの基本的な機能を定義する抽象基底クラスです。  
@@ -134,7 +134,7 @@ class CDocTemplate : public CCmdTarget
   
  `CDocTemplate`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="adddocument"></a>  CDocTemplate::AddDocument  
@@ -431,11 +431,11 @@ virtual CDocument* OpenDocumentFile(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*終了*  
- 開かれているドキュメントを含むファイルのパスへのポインター。  
+*終了*<br/>
+[in]開かれているドキュメントを含むファイルのパスへのポインター。  
   
- [in]*baddtomru です*  
- TRUE は、ドキュメントが最新のファイルのいずれかを示しますFALSE は、ドキュメントがない最新のファイルのいずれかを示します。  
+*baddtomru です。*<br/>
+[in]TRUE は、ドキュメントが最新のファイルのいずれかを示しますFALSE は、ドキュメントがない最新のファイルのいずれかを示します。  
   
 ### <a name="return-value"></a>戻り値  
  ファイルの名前は、ドキュメントへのポインター*終了*;失敗した場合は NULL です。  

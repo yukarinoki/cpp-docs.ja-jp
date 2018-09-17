@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a51544f1e367e1db0b5ae72948af68fbedfa7504
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cc842aa40b732543c496bb209b4b163635a19bb1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209729"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713859"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>乗算演算子と剰余演算子
 ## <a name="syntax"></a>構文  
@@ -72,11 +72,13 @@ f / 0.0
 > [!NOTE]
 >  乗算演算子によって実行される変換ではオーバーフロー条件やアンダーフロー条件が提供されないため、乗算演算の結果を変換後のオペランドの型で表すことができない場合、情報が失われる可能性があります。  
   
-## <a name="microsoft-specific"></a>Microsoft 固有の仕様  
- Microsoft C++ では、剰余式の結果は常に最初のオペランドと同じ符号になります。  
-  
-**Microsoft 固有の仕様はここまで**  
- 2 つの整数の計算された除算が正確ではなく、1 つのオペランドだけが負の値の場合、結果は、除算演算で算出された正確な値未満の最大の整数 (大きさでは、符号を無視します) になります。 たとえば、-11 計算値-3.666666666 は。 整数の除算の結果は-3 です。  
+**Microsoft 固有の仕様**
+
+Microsoft C++ では、剰余式の結果は常に最初のオペランドと同じ符号になります。
+
+**Microsoft 固有の仕様はここまで**
+
+2 つの整数の計算された除算が正確ではなく、1 つのオペランドだけが負の値の場合、結果は、除算演算で算出された正確な値未満の最大の整数 (大きさでは、符号を無視します) になります。 たとえば、-11 計算値-3.666666666 は。 整数の除算の結果は-3 です。  
   
  乗算演算子の間のリレーションシップは、id で指定されます (*e1* / *e2*) \* *e2*  +  *e1* % *e2* == *e1*します。  
   

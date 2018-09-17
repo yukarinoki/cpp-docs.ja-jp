@@ -172,12 +172,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ebae1828d102881d866e05d41f1831e35e01a51
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e623c0990477c5ee24fb4dcc782a6f243dce3337
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679248"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712172"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 Windows コモン ツリー ビュー コントロールの機能が用意されています。  
@@ -465,7 +465,7 @@ BOOL EndEditLabelNow(BOOL fCancelWithoutSave);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*fCancelWithoutSave*|編集操作、または、操作を終える前に、ツリー ビュー項目に変更を保存する場合は FALSE を終える前に、ツリー ビュー項目への変更を破棄する場合は TRUE。|  
+|*fCancelWithoutSave*|[in]編集操作、または、操作を終える前に、ツリー ビュー項目に変更を保存する場合は FALSE を終える前に、ツリー ビュー項目への変更を破棄する場合は TRUE。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -732,7 +732,7 @@ int GetItemExpandedImageIndex(HTREEITEM hItem)const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*hItem*|ツリー ビュー コントロールの項目へのハンドルします。|  
+|*hItem*|[in]ツリー ビュー コントロールの項目へのハンドルします。|  
   
 ### <a name="return-value"></a>戻り値  
  指定した項目が展開された状態を表示するイメージのインデックス。  
@@ -798,9 +798,9 @@ BOOL GetItemPartRect(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*hItem*|ツリー ビュー コントロールの項目へのハンドルします。|  
-|[in]*nPart*|パーツの識別子です。 TVGIPR_BUTTON に設定する必要があります。|  
-|[out]*lpRect*|ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。 指定された一部の四角形の座標がその構造体にこのメソッドが成功した場合は、 *hItem*と*nPart*します。|  
+|*hItem*|[in]ツリー ビュー コントロールの項目へのハンドルします。|  
+|*nPart*|[in]パーツの識別子です。 TVGIPR_BUTTON に設定する必要があります。|  
+|*lpRect*|[out]ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。 指定された一部の四角形の座標がその構造体にこのメソッドが成功した場合は、 *hItem*と*nPart*します。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -879,7 +879,7 @@ UINT GetItemStateEx(HTREEITEM hItem) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*hItem*|ツリー ビュー コントロールの項目へのハンドルします。|  
+|*hItem*|[in]ツリー ビュー コントロールの項目へのハンドルします。|  
   
 ### <a name="return-value"></a>戻り値  
  項目の拡張の状態。 詳細については、次を参照してください。、`uStateEx`のメンバー、 [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa)構造体。  
@@ -1322,7 +1322,7 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*uAccId*|ツリー ビュー項目内の要素のアクセシビリティの識別子。|  
+|*uAccId*|[in]ツリー ビュー項目内の要素のアクセシビリティの識別子。|  
   
 ### <a name="return-value"></a>戻り値  
  ツリー ビュー アイテムを識別するハンドル ( `HTREEITEM`) に対応する、 *uAccId*パラメーター。 詳細については、次を参照してください。、 *hItem*のメンバー、 [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa)構造体。  
@@ -1353,7 +1353,7 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*hItem*|コントロール内のツリー ビュー アイテムのハンドル。 詳細については、次を参照してください。、 *hItem*のメンバー、 [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa)構造体。|  
+|*hItem*|[in]コントロール内のツリー ビュー アイテムのハンドル。 詳細については、次を参照してください。、 *hItem*のメンバー、 [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa)構造体。|  
   
 ### <a name="return-value"></a>戻り値  
  対応するユーザー補助機能の識別子、 *hItem*パラメーター。  
@@ -1474,8 +1474,8 @@ BOOL SetAutoscrollInfo(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*uPixelsPerSec*|スクロールする 1 秒あたりのピクセルの数。|  
-|[in]*uUpdateTime*|コントロールの更新プログラムの間の時間間隔。|  
+|*uPixelsPerSec*|[in]スクロールする 1 秒あたりのピクセルの数。|  
+|*uUpdateTime*|[in]コントロールの更新プログラムの間の時間間隔。|  
   
 ### <a name="return-value"></a>戻り値  
  常に TRUE を返します。  
@@ -1555,8 +1555,8 @@ DWORD SetExtendedStyle(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*dwExMask*|このメソッドによって、現在のツリー ビュー コントロールのスタイルを指定するビットマスクです。 このパラメーターが 0 の場合は無視されますと、値、 *dwExStyles*パラメーターは、ツリー ビュー コントロールに割り当てられています。<br /><br /> 0 またはで説明されているスタイルのビットごとの組み合わせ (OR) を指定[ツリー ビュー コントロールの拡張スタイル](/windows/desktop/Controls/tree-view-control-window-extended-styles)します。|  
-|[in]*dwExStyles*|現在のツリー ビューのスタイルを設定または解除に制御を指定するビットマスク。<br /><br /> スタイルの組み合わせを設定するで説明されているスタイルのビットごとの組み合わせ (OR) を指定[ツリー ビュー コントロールの拡張スタイル](/windows/desktop/Controls/tree-view-control-window-extended-styles)します。 一連のスタイルをクリアするには、0 を指定します。|  
+|*dwExMask*|[in]このメソッドによって、現在のツリー ビュー コントロールのスタイルを指定するビットマスクです。 このパラメーターが 0 の場合は無視されますと、値、 *dwExStyles*パラメーターは、ツリー ビュー コントロールに割り当てられています。<br /><br /> 0 またはで説明されているスタイルのビットごとの組み合わせ (OR) を指定[ツリー ビュー コントロールの拡張スタイル](/windows/desktop/Controls/tree-view-control-window-extended-styles)します。|  
+|*dwExStyles*|[in]現在のツリー ビューのスタイルを設定または解除に制御を指定するビットマスク。<br /><br /> スタイルの組み合わせを設定するで説明されているスタイルのビットごとの組み合わせ (OR) を指定[ツリー ビュー コントロールの拡張スタイル](/windows/desktop/Controls/tree-view-control-window-extended-styles)します。 一連のスタイルをクリアするには、0 を指定します。|  
   
 ### <a name="return-value"></a>戻り値  
  前を含む値では、コントロールのスタイルを拡張します。  
@@ -1747,8 +1747,8 @@ BOOL SetItemExpandedImageIndex(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*hItem*|ツリー ビュー コントロールの項目へのハンドルします。|  
-|[in]*iExpandedImage*|指定した項目が展開された状態を表示するイメージのインデックス。|  
+|*hItem*|[in]ツリー ビュー コントロールの項目へのハンドルします。|  
+|*iExpandedImage*|[in]指定した項目が展開された状態を表示するイメージのインデックス。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -1858,8 +1858,8 @@ BOOL SetItemStateEx(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*hItem*|ツリー ビュー コントロールの項目へのハンドルします。|  
-|[in]*uStateEx*|項目の拡張の状態。 詳細については、次を参照してください。、`uStateEx`のメンバー、 [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa)構造体。|  
+|*hItem*|[in]ツリー ビュー コントロールの項目へのハンドルします。|  
+|*uStateEx*|[in]項目の拡張の状態。 詳細については、次を参照してください。、`uStateEx`のメンバー、 [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa)構造体。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -1984,7 +1984,7 @@ void ShowInfoTip(HTREEITEM hItem);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*hItem*|コントロールのツリー ビュー項目へのハンドル。 詳細については、次を参照してください。、`hItem`のメンバー、 [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa)構造体。|  
+|*hItem*|[in]コントロールのツリー ビュー項目へのハンドル。 詳細については、次を参照してください。、`hItem`のメンバー、 [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa)構造体。|  
   
 ### <a name="remarks"></a>Remarks  
  ツールヒントとヒントの違いの詳細については、検索では、「ツールヒントとヒント」トピックの[Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322)します。  

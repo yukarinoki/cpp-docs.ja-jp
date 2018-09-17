@@ -1,5 +1,5 @@
 ---
-title: db_column |Microsoft Docs
+title: db_column |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 10acf2b69eaa6b49145e671d437f18dfaff8e499
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d89fef6c2ed3f8ff1a4211cdf8da59d8406e7031
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195791"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715404"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -51,20 +51,20 @@ ms.locfileid: "43195791"
 [db_column(L"city_name")] TCHAR szCity[30];
 ```
 
-*dbtype* (省略可能)  
-OLE DB[型インジケーター](/previous-versions/windows/desktop/ms711251\(v=vs.85\))列エントリにします。
+*dbtype*  
+(省略可能)OLE DB[型インジケーター](/previous-versions/windows/desktop/ms711251\(v=vs.85\))列エントリにします。
 
-*有効桁数*(省略可能)  
-列のエントリに使用する有効桁数です。 詳細については、説明を参照してください、`bPrecision`の要素、 [DBBINDING 構造体](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+*precision*  
+(省略可能)列のエントリに使用する有効桁数です。 詳細については、説明を参照してください、`bPrecision`の要素、 [DBBINDING 構造体](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*スケール*(省略可能)  
-列のエントリに使用する小数点以下桁数。 詳細については、説明を参照してください`bScale`の要素、 [DBBINDING 構造体。](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+*スケール*  
+(省略可能)列のエントリに使用する小数点以下桁数。 詳細については、説明を参照してください`bScale`の要素、 [DBBINDING 構造体。](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*ステータス*(省略可能)  
-この列の状態を保持するために使用するメンバー変数です。 状態は、列の値がデータ値や NULL など、他のいくつかの値であるかどうかを示します。 使用可能な値は、次を参照してください。[状態](/previous-versions/windows/desktop/ms722617\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。
+*status*  
+(省略可能)この列の状態を保持するために使用するメンバー変数です。 状態は、列の値がデータ値や NULL など、他のいくつかの値であるかどうかを示します。 使用可能な値は、次を参照してください。[状態](/previous-versions/windows/desktop/ms722617\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。
 
-*長さ*(省略可能)  
-メンバー変数 (バイト単位)、列のサイズを保持するために使用します。
+*length*  
+(省略可能)メンバー変数 (バイト単位)、列のサイズを保持するために使用します。
 
 ## <a name="remarks"></a>Remarks
 

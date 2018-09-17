@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d3e54f13f6b165288402bbb1d783a2f1979f4ac
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: abad906c7fcc5c86a6901757ddfbb5dfeff2ec29
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607700"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704901"
 ---
 # <a name="generic-interfaces-visual-c"></a>ジェネリック インターフェイス (Visual C++)
 
@@ -42,8 +42,8 @@ ms.locfileid: "42607700"
 
 ## <a name="remarks"></a>Remarks
 
-*属性*(省略可能)  
-追加の宣言情報。 属性と属性クラスの詳細については、次を参照してください。**属性**します。
+*属性*  
+(省略可能)追加の宣言情報。 属性と属性クラスの詳細については、次を参照してください。**属性**します。
 
 *クラス キー*  
 **クラス**または**typename**
@@ -54,20 +54,20 @@ ms.locfileid: "42607700"
 *型パラメーター制約句*  
 指定された形式の[ジェネリック型パラメーターの制約 (C +/cli CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)
 
-*アクセシビリティ修飾子*(省略可能)  
-アクセシビリティ修飾子 (例:**パブリック、プライベート**)。
+*アクセシビリティ修飾子*  
+(省略可能)アクセシビリティ修飾子 (例:**パブリック、プライベート**)。
 
 *identifier*  
 インターフェイスの名前。
 
-*基本リスト*(省略可能)  
-1 つまたは複数明示的な基本インターフェイス コンマ区切りを含むリスト。
+*基本リスト*  
+(省略可能)1 つまたは複数明示的な基本インターフェイス コンマ区切りを含むリスト。
 
 *インターフェイス本体*  
 インターフェイス メンバーの宣言。
 
-*宣言子*(省略可能)  
-この型に基づいた変数の宣言。
+*宣言子*  
+(省略可能)この型に基づいた変数の宣言。
 
 ## <a name="example"></a>例
 

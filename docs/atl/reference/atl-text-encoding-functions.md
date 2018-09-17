@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5043b421d4ca63b22cde0f413e68b3a666a483b3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a5147b8079d694e59141c244a860f12c59f42f7b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757472"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706837"
 ---
 # <a name="atl-text-encoding-functions"></a>ATL テキスト エンコード関数
 
@@ -494,20 +494,20 @@ inline BOOL QPDecode(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pbSrcData*  
-デコードするデータを保持するバッファー。
+*pbSrcData*<br/>
+[in]デコードするデータを保持するバッファー。
 
-[in]*nSrcLen*  
-バイト長*pbSrcData*します。
+*nSrcLen*<br/>
+[in]バイト長*pbSrcData*します。
 
-[out]*ときに szDest*  
-デコードされたデータを受信する呼び出し元が割り当てたバッファー。
+*ときに szDest*<br/>
+[out]デコードされたデータを受信する呼び出し元が割り当てたバッファー。
 
-[out]*pnDestLen*  
-バイト単位の長さを格納する変数を指すポインター*ときに szDest*します。 関数が成功すると、変数は、バッファーに書き込まれたバイト数を受け取ります。 関数が失敗した場合、変数は、バッファーのバイトで、必要な長さを受け取ります。
+*pnDestLen*<br/>
+[out]バイト単位の長さを格納する変数を指すポインター*ときに szDest*します。 関数が成功すると、変数は、バッファーに書き込まれたバイト数を受け取ります。 関数が失敗した場合、変数は、バッファーのバイトで、必要な長さを受け取ります。
 
-[in]*dwFlags*  
-変換の実行方法を記述する ATLSMTP_QPENCODE フラグ。
+*dwFlags*<br/>
+[in]変換の実行方法を記述する ATLSMTP_QPENCODE フラグ。
 
 ### <a name="return-value"></a>戻り値
 

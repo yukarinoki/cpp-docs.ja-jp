@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b3254d61295e0cfe0fc398e4aa2a2f2a926dbb1
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 80c501c74d0e36d7a1c564e107101782468708c3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43130911"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709073"
 ---
 # <a name="std-specify-language-standard-version"></a>/std (言語標準バージョンの指定)
 
@@ -46,27 +46,27 @@ ms.locfileid: "43130911"
 - [u8 文字リテラル](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4267.html)
 
 追加情報をどの C++ 14 と c++ 17 機能では有効になっているときに **/std:c + + + 14**はでノートを参照して指定すると、 [Visual C 言語への準拠](../../visual-cpp-language-conformance.md)します。
-  
-**/Std:c + + 17**オプションは、C++ 17 機能 Visual C コンパイラによって実装の完全なセットを使用できます。 このオプションによって、C++17 後の C++ 標準のワーキング ドラフトおよび不具合の更新のバージョンで変更または更新された機能に対するコンパイラと標準ライブラリのサポートが無効になります。  
-  
-**/Std:c + + 最新**オプションは、最も追跡するために Visual C によって実装される C++ 言語とライブラリの機能のセットを使用できます。 最新 c++ 20 ワーキング ドラフトおよび不具合の更新、C++ 標準の c++ 17 では含まれません。 このスイッチを使用して、取得、投稿のコンパイラと標準ライブラリでサポートされている c++ 17 の言語機能。 サポートされている言語とライブラリの機能の一覧は、次を参照してください。 [Visual c の新](../../what-s-new-for-visual-cpp-in-visual-studio.md)します。 **/Std:c + + 最新**オプションが守られている機能を有効にしない、 **]、[実験用**スイッチします。  
-  
+
+**/Std:c + + 17**オプションは、C++ 17 機能 Visual C コンパイラによって実装の完全なセットを使用できます。 このオプションによって、C++17 後の C++ 標準のワーキング ドラフトおよび不具合の更新のバージョンで変更または更新された機能に対するコンパイラと標準ライブラリのサポートが無効になります。
+
+**/Std:c + + 最新**オプションは、最も追跡するために Visual C によって実装される C++ 言語とライブラリの機能のセットを使用できます。 最新 c++ 20 ワーキング ドラフトおよび不具合の更新、C++ 標準の c++ 17 では含まれません。 このスイッチを使用して、取得、投稿のコンパイラと標準ライブラリでサポートされている c++ 17 の言語機能。 サポートされている言語とライブラリの機能の一覧は、次を参照してください。 [Visual c の新](../../what-s-new-for-visual-cpp-in-visual-studio.md)します。 **/Std:c + + 最新**オプションが守られている機能を有効にしない、 **]、[実験用**スイッチします。
+
 **/Std** C++ のコンパイル時に有効なオプションを使用して検出できる、 [ \_MSVC\_LANG](../../preprocessor/predefined-macros.md)プリプロセッサ マクロ。 詳細については、次を参照してください。[プリプロセッサ マクロ](../../preprocessor/predefined-macros.md)します。
 
 **/Std:c + + + 14**と **/std:c + + 最新**オプションは、使用可能な Visual C 2015 Update 3 以降。 **/Std:c + + 17**オプションは、Visual C 2017 バージョン 15.3 で以降を使用できます。 によって動作が有効な c++ 17 標準上に示した、 **/std:c + + + 14**オプションが他のすべての C++ 17 機能がで有効になって **/std:c + + 17**します。
-  
+
 > [!NOTE]
-> Visual C のコンパイラ バージョンまたは更新プログラム レベルに応じて特定の C++ 14 または c++ 17 機能は完全に実装できませんまたは完全に準拠するを指定すると、 **/std:c + + 14**または **/std:c + + 17**オプション。 など、Visual C 2017 RTM コンパイラで c++ 14 の準拠が完全にサポートされていない`constexpr`、式 SFINAE、または 2 段階名前検索します。 Visual C のリリース バージョンでの C++ 言語準拠の概要については、次を参照してください。 [Visual c 言語への準拠](../../visual-cpp-language-conformance.md)します。 
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
-  
-1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。  
-  
-2.  選択**構成プロパティ**、 **C/C++**、**言語**します。  
-  
-3.  **C 言語標準**を選択し、ボックスの一覧から、サポート言語標準を選択**OK**または**適用**変更を保存します。  
-  
-## <a name="see-also"></a>関連項目  
-  
-[コンパイラ オプション](../../build/reference/compiler-options.md)   
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)   
+> Visual C のコンパイラ バージョンまたは更新プログラム レベルに応じて特定の C++ 14 または c++ 17 機能は完全に実装できませんまたは完全に準拠するを指定すると、 **/std:c + + 14**または **/std:c + + 17**オプション。 など、Visual C 2017 RTM コンパイラで c++ 14 の準拠が完全にサポートされていない`constexpr`、式 SFINAE、または 2 段階名前検索します。 Visual C のリリース バージョンでの C++ 言語準拠の概要については、次を参照してください。 [Visual c 言語への準拠](../../visual-cpp-language-conformance.md)します。
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+
+1. 選択**構成プロパティ**、 **C/C++**、**言語**します。
+
+1. **C 言語標準**を選択し、ボックスの一覧から、サポート言語標準を選択**OK**または**適用**変更を保存します。
+
+## <a name="see-also"></a>関連項目
+
+[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
+[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)

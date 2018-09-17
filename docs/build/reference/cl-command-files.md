@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a1e2b25330bd326ac32dbe1c1b8abcc37c89d09
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 8458462304a9b739c61997505724d21bb56763f6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894760"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708671"
 ---
 # <a name="cl-command-files"></a>CL のコマンド ファイル
 
@@ -37,25 +37,25 @@ ms.locfileid: "43894760"
 
 たとえば、RESP という名前のファイルが、次のコマンドの場合。
 
-```  
+```
 /Og /link LIBC.LIB
-```  
+```
 
 次のような CL コマンドを指定します。
 
-```  
+```
 CL /Ob2 @RESP MYAPP.C
-```  
+```
 
 CL のコマンドは次のとおりです。
 
-```  
+```
 CL /Ob2 /Og MYAPP.C /link LIBC.LIB
-```  
+```
 
 コマンドラインおよびコマンド ファイルが効果的にまとめられることに注意してください。
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)<br/>
 [コンパイラ オプション](../../build/reference/compiler-options.md)

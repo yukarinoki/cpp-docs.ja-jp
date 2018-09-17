@@ -1,5 +1,5 @@
 ---
-title: _InterlockedAddLargeStatistic |Microsoft ドキュメント
+title: _InterlockedAddLargeStatistic |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 602cfb415c17c9e57d9fc1e932777cd1929e5f40
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ee14f187545e09bbdca81f760b85e771fba3936d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331398"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703912"
 ---
 # <a name="interlockedaddlargestatistic"></a>_InterlockedAddLargeStatistic
 **Microsoft 固有の仕様**  
   
- 最初のオペランドの 64 ビット値、インタロックされた加算を実行します。  
+ 最初のオペランドが 64 ビット値はインタロックされた加算を実行します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,11 +40,11 @@ long _InterlockedAddLargeStatistic(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力、出力] `Addend`  
- 追加操作の最初のオペランドへのポインター。 示される値は、加算の結果によって置き換えられます。  
+*加数*<br/>
+[入力、出力]追加操作の最初のオペランドへのポインター。 指す値は、加算の結果によって置き換えられます。  
   
- [入力] `Value`  
- 2 番目のオペランドです。最初のオペランドを加算する値。  
+*値*<br/>
+[in]2 番目のオペランド。最初のオペランドを加算する値。  
   
 ## <a name="return-value"></a>戻り値  
  2 番目のオペランドの値。  
@@ -57,13 +57,13 @@ long _InterlockedAddLargeStatistic(
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
- この組み込みはアトミック 2 つの別々 のロックされた手順としては実装されているためです。 組み込みの実行中に別のスレッドで発生するアトミックの 64 ビット読み取り、一貫性のない値が読み取られている可能性があります。  
+## <a name="remarks"></a>Remarks  
+ この組み込みはアトミックため 2 つの個別のロックされている指示として実装されます。 組み込みこれの実行中に別のスレッドで発生するアトミックの 64 ビット読み取りは、読み取られる一貫性のない値になる可能性があります。  
   
- この関数は、読み取り/書き込みのバリアとしては動作します。 詳細については、次を参照してください。 [_ReadWriteBarrier](../intrinsics/readwritebarrier.md)です。  
+ この関数は、読み取り/書き込みバリアとして動作します。 詳細については、次を参照してください。 [_ReadWriteBarrier](../intrinsics/readwritebarrier.md)します。  
   
 **Microsoft 固有の仕様はここまで**  
   
 ## <a name="see-also"></a>関連項目  
- [コンパイラ組み込み関数](../intrinsics/compiler-intrinsics.md)   
+ [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)   
  [x86 コンパイラとの競合](../build/conflicts-with-the-x86-compiler.md)

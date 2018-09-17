@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 356aa3448c3912c1842d5e04c697fc86fc9714c0
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c3e9c9e5122e4bef7007a767fb3225483984e11d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338400"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711686"
 ---
 # <a name="cmfccaptionbutton-class"></a>CMFCCaptionButton クラス
 `CMFCCaptionButton`クラスは、ドッキング ペインまたはミニフレーム ウィンドウのキャプション バーに表示されるボタンを実装します。 通常は、フレームワークがキャプション ボタンを自動的に作成します。  
@@ -54,7 +54,7 @@ class CMFCCaptionButton : public CObject
   
 ### <a name="constructors"></a>コンストラクター  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CMFCCaptionButton::CMFCCaptionButton](#cmfccaptionbutton)|CMFCCaptionButton オブジェクトを構築します。|  
   
@@ -90,7 +90,7 @@ class CMFCCaptionButton : public CObject
   
  [CMFCCaptionButton](../../mfc/reference/cmfccaptionbutton-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxcaptionbutton.h  
   
 ##  <a name="cmfccaptionbutton"></a>  CMFCCaptionButton::CMFCCaptionButton  
@@ -106,11 +106,11 @@ CMFCCaptionButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nHit*  
- ボタンに関連付けられているコマンド。  
+*nHit*<br/>
+[in]ボタンに関連付けられているコマンド。  
   
- [in]*bLeftAlign*  
- ボタンは、左に配置されているかどうかを指定します。  
+*bLeftAlign*<br/>
+[in]ボタンは、左に配置されているかどうかを指定します。  
   
  次の表に指定できる値の一覧、 *nHit*パラメーター。  
   
@@ -161,11 +161,11 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bHorz*  
- 左側または右側の矢印のイメージ Id の場合は TRUE。FALSE を上下の矢印のイメージ Id。  
+*bHorz*<br/>
+[in]左側または右側の矢印のイメージ Id の場合は TRUE。FALSE を上下の矢印のイメージ Id。  
   
- [in]*bMaximized*  
- TRUE の最大化イメージ ID。最小化イメージ ID の場合は FALSE。  
+*bMaximized*<br/>
+[in]TRUE の最大化イメージ ID。最小化イメージ ID の場合は FALSE。  
   
 ### <a name="return-value"></a>戻り値  
  イメージ id。  
@@ -221,11 +221,11 @@ void Move(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ptTo*  
- 新しい位置。  
+*ptTo*<br/>
+[in]新しい場所です。  
   
- [in]*bHide*  
- ボタンを表示するかどうか。  
+*bHide*<br/>
+[in]ボタンを表示するかどうか。  
   
 ##  <a name="ondraw"></a>  CMFCCaptionButton::OnDraw  
  キャプション ボタンを描画します。  
@@ -240,20 +240,20 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- ボタンのデバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]ボタンのデバイス コンテキストへのポインター。  
   
- [in]*描画*  
- アクティブなボタン イメージを描画するかどうか。  
+*描画*<br/>
+[in]アクティブなボタン イメージを描画するかどうか。  
   
- [in]*bHorz*  
- 派生クラスで使用するために予約されています。  
+*bHorz*<br/>
+[in]派生クラスで使用するために予約されています。  
   
- [in]*bMaximized*  
- 最大化ボタンのイメージを描画するかどうか。  
+*bMaximized*<br/>
+[in]最大化ボタンのイメージを描画するかどうか。  
   
- [in]*bDisabled*  
- ボタンが有効なイメージを描画するかどうか。  
+*bDisabled*<br/>
+[in]ボタンが有効なイメージを描画するかどうか。  
   
 ### <a name="remarks"></a>Remarks  
  *BMaximized*パラメーターは、ボタンは、最大にする場合に使用または最小化ボタン。  
@@ -266,8 +266,8 @@ void SetMiniFramebutton(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bSet*  
- TRUE のミニのタイトル バーの高さ。既定のタイトル バーの高さの場合は FALSE。  
+*bSet*<br/>
+[in]TRUE のミニのタイトル バーの高さ。既定のタイトル バーの高さの場合は FALSE。  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

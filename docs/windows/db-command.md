@@ -1,5 +1,5 @@
 ---
-title: db_command |Microsoft Docs
+title: db_command |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 07/10/2018
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0b34cbd2cebea2b1c4d6bf32e61a7f496b70d7a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 47fcbdb82501744c8155432e4f4cf220ed945dec
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596269"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709905"
 ---
 # <a name="dbcommand"></a>db_command
 
@@ -99,26 +99,26 @@ TCHAR m_state[3] = 'CA';
 ]
 ```
 
-*name* (省略可能)  
-行セットの操作に使用するハンドルの名前。 *name*を指定した場合、 **db_command** は指定された *name*のクラスを生成します。このクラスを使用して、行セットを走査したり、複数のアクション クエリを実行したりできます。 *name*を指定しないと、複数の結果行をユーザーに返すことはできません。
+*name*  
+(省略可能)行セットの操作に使用するためのハンドルの名前。 *name*を指定した場合、 **db_command** は指定された *name*のクラスを生成します。このクラスを使用して、行セットを走査したり、複数のアクション クエリを実行したりできます。 *name*を指定しないと、複数の結果行をユーザーに返すことはできません。
 
-*source_name* (省略可能)  
-`CSession` 変数、または `db_source` 属性が適用された、コマンドが実行されるクラスのインスタンス。 「 [db_source](../windows/db-source.md)」をご覧ください。
+*source_name*  
+(省略可能)`CSession`変数またはを持つクラスのインスタンス、`db_source`コマンドが実行されることに適用される属性。 「 [db_source](../windows/db-source.md)」をご覧ください。
 
 **db_command** は *source_name* に使用されている変数が有効であることを確認するので、指定する変数は関数スコープまたはグローバル スコープに存在する必要があります。
 
-*hresult* (省略可能)  
-このデータベース コマンドの HRESULT を受け取る変数を識別します。 変数が存在しない場合は、属性によって自動的に挿入されます。
+*hresult*  
+(省略可能)このデータベース コマンドの HRESULT を受け取る変数を識別します。 変数が存在しない場合は、属性によって自動的に挿入されます。
 
-*bindings* (省略可能)  
-OLE DB コマンドからバインディング パラメーターを分離できます。
+*バインド*  
+(省略可能)OLE DB コマンドからバインディング パラメーターを分離することができます。
 
 値を指定する場合*バインド*、 **db_command**は関連付けられている値を解析し、解析しません、 \[ *bindtype*] パラメーターです。 これにより、OLE DB プロバイダーの構文を使用できます。 パラメーターをバインドせず、解析を無効にするには指定`Bindings=""`します。
 
 値を指定しない場合*バインド*、 **db_command**を探して、バインディング パラメーター ブロックは解析 '**(**'、その後に **\[** _bindtype_**]** で後に角かっこ、1 つまたは複数以前に宣言された C++ メンバー変数を続けて '**)**'。 かっこで囲まれたすべてのテキストが最終的なコマンドから削除され、これらのパラメーターを使用してこのコマンドの列とパラメーターのバインディングが作成されます。
 
-*bulk_fetch* (省略可能)  
-フェッチする行数を指定する整数値。
+*bulk_fetch*  
+(省略可能)フェッチする行の数を指定する整数値。
 
 既定値は 1 で、単一行のフェッチを指定します (行セットは [CRowset](../data/oledb/crowset-class.md)型です)。
 

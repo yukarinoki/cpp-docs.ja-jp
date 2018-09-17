@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e6ec22be873dcec06f224913eb905a2779e4efd
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: dac2df26f393b7491d94abdb6d987a8e424723e1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540659"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715560"
 ---
 # <a name="region-endregion"></a>region、endregion
 `#pragma region` 展開したり折りたたむを使用する場合のコードのブロックを指定することができます、[アウトライン機能](/visualstudio/ide/outlining)の Visual Studio コード エディター。  
@@ -40,11 +40,11 @@ ms.locfileid: "42540659"
 ```  
   
 ### <a name="parameters"></a>パラメーター  
-*コメント*(省略可能)  
-コード エディターに表示されるコメント。  
+*comment*  
+(省略可能)コード エディターに表示されるコメントです。  
   
-*name* (省略可能)  
-領域の名前。  この名前はコード エディターに表示されます。  
+*name*  
+(省略可能)領域の名前。  この名前はコード エディターに表示されます。  
   
 ## <a name="remarks"></a>Remarks  
  

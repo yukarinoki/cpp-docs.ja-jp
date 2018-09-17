@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c92ccfe9dbf25fa1355885a5f6dd3570df4884b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 2c594e86c0e0bcb74fe624743c863c70a1c7f9e6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538552"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707812"
 ---
 # <a name="cglobalutils-class"></a>CGlobalUtils クラス
 詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。  
@@ -104,8 +104,8 @@ void AdjustRectToworkArea(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力、出力]*rect*  
- [in]*pRectDelta*  
+*rect*<br/>
+[入力、出力][in]*pRectDelta*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -123,12 +123,12 @@ void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*barContainerManager*  
- [in]*pWndTodock*  
- [in]*ptMouse*  
- [out]*rectResult*  
- [out]*bDrawTab*  
- [out]*ppTargetBar*  
+*barContainerManager*<br/>
+[in][in]*pWndTodock*  
+*ptMouse*<br/>
+[in][out]*rectResult*  
+*bDrawTab*<br/>
+[out][out]*ppTargetBar*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -176,14 +176,14 @@ BOOL CheckAlignment(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ポイント*  
- [in]*pBar*  
- [in]*nSensitivity*  
- [in]*pDockManager*  
- [in]*bOuterEdge*  
- [out]*場合*  
- [in]*dwEnabledDockBars*  
- [in]*lpRectBounds*  
+*ポイント*<br/>
+[in][in]*pBar*  
+*nSensitivity*<br/>
+[in][in]*pDockManager*  
+*bOuterEdge*<br/>
+[in][out]*場合*  
+*dwEnabledDockBars*<br/>
+[in][in]*lpRectBounds*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -199,8 +199,8 @@ BOOL CyFromString(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*cy*  
- [in]*しました。*  
+*cy*<br/>
+[out][in]*しました。*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -216,8 +216,8 @@ BOOL DecimalFromString(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*10 進数*  
- [in]*しました。*  
+*decimal*<br/>
+[out][in]*しました。*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -233,8 +233,8 @@ void FlipRect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力、出力]*rect*  
- [in]*nDegrees*  
+*rect*<br/>
+[入力、出力][in]*nDegrees*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -249,8 +249,8 @@ void ForceAdjustLayout(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力、出力]*pDockManager*  
- [in]*bForce*  
+*pDockManager*<br/>
+[入力、出力][in]*bForce*  
  [in]*bForceInvisible*  
   
 ### <a name="remarks"></a>Remarks  
@@ -297,12 +297,12 @@ BOOL GetPaneAndAlignFromPoint(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*barContainerManager*  
- [in]*pt*  
- [out]*ppTargetControlBar*  
- [out]*場合*  
- [out]*bTabArea*  
- [out]*bCaption*  
+*barContainerManager*<br/>
+[in][in]*pt*  
+*ppTargetControlBar*<br/>
+[out][out]*場合*  
+*bTabArea*<br/>
+[out][out]*bCaption*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -333,8 +333,8 @@ void SetNewParent(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lstControlBars*  
- [in]*pNewParent*  
+*lstControlBars*<br/>
+[in][in]*pNewParent*  
  [in]*bCheckVisibility*  
   
 ### <a name="remarks"></a>Remarks  
@@ -349,8 +349,8 @@ BOOL StringFromCy(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*str*  
- [in]*cy*  
+*str*<br/>
+[out][in]*cy*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -366,8 +366,8 @@ BOOL StringFromDecimal(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*str*  
- [in]*10 進数*  
+*str*<br/>
+[out][in]*10 進数*  
   
 ### <a name="return-value"></a>戻り値  
   

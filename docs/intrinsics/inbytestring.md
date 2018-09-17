@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f31ea898462fee04d94f379e8fffd323667eda1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7569c7034184adecf6bb452d7c406a762af4e20b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540888"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711660"
 ---
 # <a name="inbytestring"></a>__inbytestring
 **Microsoft 固有の仕様**  
@@ -41,14 +41,14 @@ void __inbytestring(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力] `Port`  
- 読み取るポート。  
+*ポート*<br/>
+[in]読み取るポート。  
   
- [出力] `Buffer`  
- ここでは、ポートから読み取ったデータを書き込まれます。  
+*Buffer*<br/>
+[out]ここでは、ポートから読み取ったデータを書き込まれます。  
   
- [入力] `Count`  
- 読み取るデータのバイト数。  
+*カウント*<br/>
+[in]読み取るデータのバイト数。  
   
 ## <a name="requirements"></a>要件  
   

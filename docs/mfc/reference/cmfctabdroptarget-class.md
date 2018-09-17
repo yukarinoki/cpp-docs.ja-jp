@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2991135d7cbb7e2e9df66e871b5d047e69b93d16
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 717be77589e31292fe6adbb4920a704794979a57
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852969"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711634"
 ---
 # <a name="cmfctabdroptarget-class"></a>CMFCTabDropTarget クラス
 タブ コントロールと OLE ライブラリ間の通信機構を提供します。  
@@ -81,7 +81,7 @@ class CMFCTabDropTarget : public COleDropTarget
   
  [CMFCTabDropTarget](../../mfc/reference/cmfctabdroptarget-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxbasetabctrl.h  
   
 ##  <a name="ondragenter"></a>  CMFCTabDropTarget::OnDragEnter  
@@ -100,10 +100,10 @@ virtual DROPEFFECT OnDragEnter(
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*我が物*|使用されません。|  
-|[in]*pDataObject*|ユーザーがドラッグされるオブジェクトへのポインター。|  
-|[in]*ドロップ*|修飾子キーの状態が含まれています。 これは、次の任意の数の組み合わせ: MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON します。|  
-|[in]*ポイント*|クライアント座標でのカーソルの位置。|  
+|*我が物*|[in]使用されていません。|  
+|*pDataObject*|[in]ユーザーがドラッグされるオブジェクトへのポインター。|  
+|*ドロップ*|[in]修飾子キーの状態が含まれています。 これは、次の任意の数の組み合わせ: MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON します。|  
+|*ポイント*|[in]クライアント座標でのカーソルの位置。|  
   
 ### <a name="return-value"></a>戻り値  
  によって指定された場所にドロップが発生した場合に発生する影響*ポイント*します。 次の 1 つ以上を指定できます。  
@@ -135,7 +135,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*我が物*|使用されません。|  
+|*我が物*|[in]使用されていません。|  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、`CMFCBaseTabCtrl::OnDragLeave`ドラッグ操作を実行するメソッド。  
@@ -156,10 +156,10 @@ virtual DROPEFFECT OnDragOver(
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*我が物*|使用されません。|  
-|[in]*pDataObject*|ユーザーがドラッグされるオブジェクトへのポインター。|  
-|[in]*ドロップ*|修飾子キーの状態が含まれています。 これは、次の任意の数の組み合わせ: MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON します。|  
-|[in]*ポイント*|クライアント座標でマウス ポインターの位置。|  
+|*我が物*|[in]使用されていません。|  
+|*pDataObject*|[in]ユーザーがドラッグされるオブジェクトへのポインター。|  
+|*ドロップ*|[in]修飾子キーの状態が含まれています。 これは、次の任意の数の組み合わせ: MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON します。|  
+|*ポイント*|[in]クライアント座標でマウス ポインターの位置。|  
   
 ### <a name="return-value"></a>戻り値  
  によって指定された場所にドロップが発生した場合に発生する影響*ポイント*します。 次の 1 つ以上を指定できます。  
@@ -196,11 +196,11 @@ virtual DROPEFFECT OnDropEx(
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*我が物*|使用されません。|  
-|[in]*pDataObject*|ユーザーがドラッグされるオブジェクトへのポインター。|  
-|[in]*dropEffect*|既定のドロップ操作。|  
-|[in]*ドロップダウン リスト*|使用されません。|  
-|[in]*ポイント*|クライアント座標でマウス ポインターの位置。|  
+|*我が物*|[in]使用されていません。|  
+|*pDataObject*|[in]ユーザーがドラッグされるオブジェクトへのポインター。|  
+|*dropEffect*|[in]既定のドロップ操作。|  
+|*ドロップダウン リスト*|[in]使用されていません。|  
+|*ポイント*|[in]クライアント座標でマウス ポインターの位置。|  
   
 ### <a name="return-value"></a>戻り値  
  結果として得られるドロップ効果。 次の 1 つ以上を指定できます。  
@@ -232,7 +232,7 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*pOwner*|ドロップ先として登録するタブ コントロール。|  
+|*pOwner*|[in]ドロップ先として登録するタブ コントロール。|  
   
 ### <a name="return-value"></a>戻り値  
  登録が成功した場合、0 以外の場合それ以外の場合 0 を返します。  

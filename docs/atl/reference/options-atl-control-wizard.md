@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28342c71602409f3d62023e6d7923d49ca63a96f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 25116b0750016fdbb4ffd792d0b16efb6c6c1793
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766244"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711949"
 ---
 # <a name="options-atl-control-wizard"></a>オプション、ATL コントロール ウィザード
 
@@ -31,10 +31,11 @@ ms.locfileid: "43766244"
 
 ## <a name="uielement-list"></a>UIElement の一覧
 
-**コントロール型**  
+### <a name="control-type"></a>コントロール型
+
 作成するコントロールの種類。
 
-- **標準コントロール: ActiveX コントロール。**
+- **標準コントロール**: ActiveX コントロール。
 
 - **複合コントロール**: ActiveX コントロール (ダイアログ ボックスに似ています) を含めることができる他の ActiveX コントロールまたは Windows のコントロール。 複合コントロールを次のとおりです。
 
@@ -54,10 +55,12 @@ ms.locfileid: "43766244"
 
      詳細については、次を参照してください。 [DHTML コントロール プロジェクトの要素の識別](../../atl/identifying-the-elements-of-the-dhtml-control-project.md)します。
 
-**最小限の制御**  
+### <a name="minimal-control"></a>最小限の制御
+
 ほとんどのコンテナーで絶対に必要なインターフェイスのみをサポートしています。 設定できる**最小限の制御**コントロールの種類のいずれかの: 最小限の標準的な制御、最小限の複合コントロールまたは最小限の DHTML コントロールを作成することができます。
 
-**集計**  
+### <a name="aggregation"></a>集約
+
 作成するコントロールの集計のサポートを追加します。 詳細については、次を参照してください。[集計](../../atl/aggregation.md)します。
 
 - **[はい]**: 集計が可能なコントロールを作成します。
@@ -66,25 +69,28 @@ ms.locfileid: "43766244"
 
 - **のみ**: 集計をのみインスタンス化するコントロールを作成します。
 
-**スレッド モデル**  
+### <a name="threading-model"></a>スレッド モデル
+
 スレッド処理モデルが、コントロールによって使用されることを指定します。
 
 - **1 つ**: コントロールがプライマリ COM スレッドでのみ実行されます。
 
 - **アパートメント**: 任意の 1 つのスレッド アパートメントでコントロールを作成できます。 これが既定値です。
 
-**Interface**  
+### <a name="interface"></a>Interface
+
 このコントロールがコンテナーに公開するインターフェイスの型。
 
 - **デュアル**: プロパティとメソッドを公開するインターフェイスを作成します。 `IDispatch` 、VTBL を介して直接、します。
 
 - **カスタム**: VTBL によって直接メソッドを公開するインターフェイスを作成します。
 
-     選択した場合**カスタム**、コントロールがあるかを指定することができますし、 **Automation と互換性のある**します。 選択した場合**Automation と互換性のある**、し、ウィザードを追加、 [oleautomation](../../windows/oleautomation.md)属性、IDL でインターフェイスと oleaut32.dll でユニバーサル マーシャラーによってインターフェイスをマーシャ リングすることができます。 参照してください[マーシャ リングの詳細](/windows/desktop/com/marshaling-details)詳細については、Windows SDK に含まれています。
+   選択した場合**カスタム**、コントロールがあるかを指定することができますし、 **Automation と互換性のある**します。 選択した場合**Automation と互換性のある**、し、ウィザードを追加、 [oleautomation](../../windows/oleautomation.md)属性、IDL でインターフェイスと oleaut32.dll でユニバーサル マーシャラーによってインターフェイスをマーシャ リングすることができます。 参照してください[マーシャ リングの詳細](/windows/desktop/com/marshaling-details)詳細については、Windows SDK に含まれています。
 
-     さらに、選択した場合**Automation と互換性のある**コントロールのすべてのメソッドのすべてのパラメーターはバリアントにする必要がありますし、互換性のあります。
+   さらに、選択した場合**Automation と互換性のある**コントロールのすべてのメソッドのすべてのパラメーターはバリアントにする必要がありますし、互換性のあります。
 
-**サポート**  
+### <a name="support"></a>サポート
+
 コントロールの他のサポートを設定します。
 
 - **接続ポイント**: オブジェクトの接続ポイントからの派生オブジェクトのクラスを作成することにより[IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)とソース インターフェイスを公開することができます。

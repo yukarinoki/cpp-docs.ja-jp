@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2f53aa98d7743ccee804ed7a89df160368c8a23
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 57c7c55ae2214c4123973e93c65f5e189d32b99a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849166"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701650"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>CMFCTasksPaneTaskGroup クラス
 `CMFCTasksPaneTaskGroup`クラスで使用されるヘルパー クラス、 [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)コントロール。 `CMFCTasksPaneTaskGroup` 型のオブジェクトは *タスク グループ*を表します。 タスク グループは、閉じるボタンがある独立したボックスにフレームワークによって表示される項目の一覧です。 このボックスには、オプションのキャプション (グループ名) があります。 グループが閉じると、タスクの一覧は表示されません。  
@@ -67,7 +67,7 @@ class CMFCTasksPaneTaskGroup : public CObject
   
 ### <a name="data-members"></a>データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CMFCTasksPaneTaskGroup::m_bIsBottom](#m_bisbottom)|タスク グループを作業ウィンドウ コントロールの下部に配置されているかどうかを判断します。|  
 |[CMFCTasksPaneTaskGroup::m_bIsCollapsed](#m_biscollapsed)|タスク グループが折りたたまれているかどうかを判断します。|  
@@ -99,7 +99,7 @@ class CMFCTasksPaneTaskGroup : public CObject
   
  [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxTasksPane.h  
   
 ##  <a name="cmfctaskspanetaskgroup"></a>  CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup  
@@ -216,11 +216,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pParent*  
- 現在のタスク グループの親ウィンドウを表します。  
+*pParent*<br/>
+[in]現在のタスク グループの親ウィンドウを表します。  
   
- [out]*データ*  
- 型のオブジェクト`CAccessibilityData`の現在のタスク グループのユーザー補助データに設定されます。  
+*data*<br/>
+[out]型のオブジェクト`CAccessibilityData`の現在のタスク グループのユーザー補助データに設定されます。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合、*データ*パラメーターが正常に現在のタスク グループのユーザー補助データと共に設定されている場合は FALSE。  

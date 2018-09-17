@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 122c9cc8f1500132f507eb3477e108c3a5c67768
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 861cb216dba1e8b3d451d6120dba897e06ba910a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217120"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713194"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 
@@ -34,10 +34,10 @@ ms.locfileid: "43217120"
 
 ## <a name="grammar"></a>文法
 
-*try-ステートメントを除く*:  
+*try-ステートメントを除く*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**_ _try** *複合ステートメント* **_ _except** **(** *式* **)** *複合ステートメント*
 
-*try-最後に、ステートメント*:  
+*try-最後に、ステートメント*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**_ _try** *複合ステートメント* **_ _finally** *複合ステートメント*
 
 ## <a name="remarks"></a>Remarks
@@ -72,7 +72,7 @@ SEH メカニズムには次の 2 つがあります。
 
 - [終了ハンドラーの記述](../cpp/writing-a-termination-handler.md)
 
-- [C++ で構造化例外を処理します。](../cpp/exception-handling-differences.md)
+- [C++ での構造化例外の処理](../cpp/exception-handling-differences.md)
 
 ## <a name="example"></a>例
 

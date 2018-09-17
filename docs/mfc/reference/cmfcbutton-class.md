@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23b830ca8a7fb7f2e799cae17209a9fa089d1881
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1ded79786aaed0bf917ef57f445882c3f7d05719
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690876"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709957"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton クラス
 `CMFCButton`クラスに機能を追加する、 [CButton](../../mfc/reference/cbutton-class.md)ボタン テキストの配置、ボタンのテキストとイメージの組み合わせ、カーソルの選択、ツール ヒントの指定などのクラス。  
@@ -223,8 +223,8 @@ void EnableFullTextTooltip(BOOL bOn=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bOn*  
- すべてのテキストを表示する場合は TRUE切り捨て表示テキストには FALSE です。  
+*bOn*<br/>
+[in]すべてのテキストを表示する場合は TRUE切り捨て表示テキストには FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -238,11 +238,11 @@ void EnableMenuFont(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bOn*  
- ボタン テキストのフォントとしてアプリケーション メニューのフォントを使用する場合は TRUEシステム フォントを使用する場合は FALSE。 既定では TRUE です。  
+*bOn*<br/>
+[in]ボタン テキストのフォントとしてアプリケーション メニューのフォントを使用する場合は TRUEシステム フォントを使用する場合は FALSE。 既定では TRUE です。  
   
- [in]*bRedraw*  
- 画面をすぐに再描画する場合は TRUEそれ以外の場合、FALSE です。 既定では TRUE です。  
+*bRedraw*<br/>
+[in]画面をすぐに再描画する場合は TRUEそれ以外の場合、FALSE です。 既定では TRUE です。  
   
 ### <a name="remarks"></a>Remarks  
  ボタン テキストのフォントを指定するこのメソッドを使用しない場合のフォントを指定できます、 [cwnd::setfont](../../mfc/reference/cwnd-class.md#setfont)メソッド。 フォントがまったく指定しない場合、フレームワークは、既定のフォントを設定します。  
@@ -255,8 +255,8 @@ static void EnableWindowsTheming(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- ボタンの境界線を描画するために、現在の Windows テーマを使用する場合は TRUEWindows テーマを使用しない場合は FALSE。 既定では TRUE です。  
+*bEnable*<br/>
+[in]ボタンの境界線を描画するために、現在の Windows テーマを使用する場合は TRUEWindows テーマを使用しない場合は FALSE。 既定では TRUE です。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドから派生した、アプリケーションでのすべてのボタンの影響、`CMFCButton`クラス。  
@@ -517,14 +517,14 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rect*  
- ボタンの外接する四角形への参照。  
+*rect*<br/>
+[in]ボタンの外接する四角形への参照。  
   
- [in]*uiState*  
- ボタンの現在の状態。 詳細については、次を参照してください。、`itemState`のメンバー、 [DRAWITEMSTRUCT 構造体](../../mfc/reference/drawitemstruct-structure.md)トピック。  
+*uiState*<br/>
+[in]ボタンの現在の状態。 詳細については、次を参照してください。、`itemState`のメンバー、 [DRAWITEMSTRUCT 構造体](../../mfc/reference/drawitemstruct-structure.md)トピック。  
   
 ### <a name="remarks"></a>Remarks  
  独自のコードを使用して、ボタンを描画するには、このメソッドをオーバーライドします。  
@@ -540,14 +540,14 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rectClient*  
- ボタンの外接する四角形への参照。  
+*rectClient*<br/>
+[in]ボタンの外接する四角形への参照。  
   
- [in]*uiState*  
- ボタンの現在の状態。 詳細については、次を参照してください。、`itemState`のメンバー、 [DRAWITEMSTRUCT 構造体](../../mfc/reference/drawitemstruct-structure.md)トピック。  
+*uiState*<br/>
+[in]ボタンの現在の状態。 詳細については、次を参照してください。、`itemState`のメンバー、 [DRAWITEMSTRUCT 構造体](../../mfc/reference/drawitemstruct-structure.md)トピック。  
   
 ### <a name="remarks"></a>Remarks  
  境界線を描画するために、独自のコードを使用するには、このメソッドをオーバーライドします。  
@@ -562,11 +562,11 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rectClient*  
- ボタンの外接する四角形への参照。  
+*rectClient*<br/>
+[in]ボタンの外接する四角形への参照。  
   
 ### <a name="remarks"></a>Remarks  
  フォーカスされた四角形を描画するために、独自のコードを使用するには、このメソッドをオーバーライドします。  
@@ -584,20 +584,20 @@ virtual void OnDrawText(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rect*  
- ボタンの外接する四角形への参照。  
+*rect*<br/>
+[in]ボタンの外接する四角形への参照。  
   
- [in]*strText*  
- 描画するテキスト。  
+*strText*<br/>
+[in]描画するテキスト。  
   
- [in]*uiDTFlags*  
- テキストの書式設定する方法を指定するフラグ。 詳細については、次を参照してください。、*フォーマット*のパラメーター、 [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)メソッド。  
+*uiDTFlags*<br/>
+[in]テキストの書式設定する方法を指定するフラグ。 詳細については、次を参照してください。、*フォーマット*のパラメーター、 [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)メソッド。  
   
- [in]*uiState*  
- (予約されています。)  
+*uiState*<br/>
+[in]予約されています。
   
 ### <a name="remarks"></a>Remarks  
  独自のコードを使用して、ボタンのテキストを描画するには、このメソッドをオーバーライドします。  
@@ -612,11 +612,11 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rectClient*  
- ボタンの外接する四角形への参照。  
+*rectClient*<br/>
+[in]ボタンの外接する四角形への参照。  
   
 ### <a name="remarks"></a>Remarks  
  ボタンの背景を描画するために、独自のコードを使用するには、このメソッドをオーバーライドします。  
@@ -629,8 +629,8 @@ virtual CFont* SelectFont(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  独自のコードを使用して、フォントを取得するには、このメソッドをオーバーライドします。  
@@ -645,8 +645,8 @@ void SetAutorepeatMode(int nTimeDelay=500);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nTimeDelay*  
- 親ウィンドウに送信されるメッセージの間隔を示す負でない数値。 間隔はミリ秒単位で計測し、その既定値は 500 ミリ秒です。 自動繰り返しはメッセージ モードを無効にする、0 を指定します。  
+*nTimeDelay*<br/>
+[in]親ウィンドウに送信されるメッセージの間隔を示す負でない数値。 間隔はミリ秒単位で計測し、その既定値は 500 ミリ秒です。 自動繰り返しはメッセージ モードを無効にする、0 を指定します。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、常に、ボタンが解放されるまで、親ウィンドウに WM_COMMAND メッセージを送信するボタンまたは*nTimeDelay*パラメーターが 0 に設定されます。  
@@ -678,41 +678,41 @@ void SetCheckedImage(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*hIcon*  
- ビットマップと、新しいイメージのマスクを含むアイコンへのハンドルします。  
+*hIcon*<br/>
+[in]ビットマップと、新しいイメージのマスクを含むアイコンへのハンドルします。  
   
- [in]*bAutoDestroy*  
- ビットマップ リソースを自動的に破棄することを指定する場合は TRUEそれ以外の場合、FALSE です。 既定では TRUE です。  
+*bAutoDestroy*<br/>
+[in]ビットマップ リソースを自動的に破棄することを指定する場合は TRUEそれ以外の場合、FALSE です。 既定では TRUE です。  
   
- [in]*hIconHot*  
- 選択した状態のイメージを含むアイコンへのハンドルします。  
+*hIconHot*<br/>
+[in]選択した状態のイメージを含むアイコンへのハンドルします。  
   
- [in]*hBitmap*  
- 選択されていない状態のイメージを含むビットマップへのハンドルします。  
+*hBitmap*<br/>
+[in]選択されていない状態のイメージを含むビットマップへのハンドルします。  
   
- [in]*hBitmapHot*  
- 選択した状態のイメージを含むビットマップへのハンドルします。  
+*hBitmapHot*<br/>
+[in]選択した状態のイメージを含むビットマップへのハンドルします。  
   
- [in]*bMap3dColors*  
- ボタンの背景の透明色を指定しますつまり、ボタンのイメージ。 (192, 192, 192) の RGB 色の値を使用する場合は TRUEによって定義された色の値を使用する場合は FALSE`AFX_GLOBAL_DATA::clrBtnFace`します。  
+*bMap3dColors*<br/>
+[in]ボタンの背景の透明色を指定しますつまり、ボタンのイメージ。 (192, 192, 192) の RGB 色の値を使用する場合は TRUEによって定義された色の値を使用する場合は FALSE`AFX_GLOBAL_DATA::clrBtnFace`します。  
   
- [in]*uiBmpResId*  
- 選択されていないイメージのリソース ID。  
+*uiBmpResId*<br/>
+[in]選択されていないイメージのリソース ID。  
   
- [in]*uiBmpHotResId*  
- 選択したイメージのリソース ID。  
+*uiBmpHotResId*<br/>
+[in]選択したイメージのリソース ID。  
   
- [in]*hIconDisabled*  
- 無効なイメージのアイコンへのハンドルします。  
+*hIconDisabled*<br/>
+[in]無効なイメージのアイコンへのハンドルします。  
   
- [in]*hBitmapDisabled*  
- 無効なイメージを含むビットマップへのハンドルします。  
+*hBitmapDisabled*<br/>
+[in]無効なイメージを含むビットマップへのハンドルします。  
   
- [in]*uiBmpDsblResID*  
- 無効化されたビットマップのリソース ID。  
+*uiBmpDsblResID*<br/>
+[in]無効化されたビットマップのリソース ID。  
   
- [in]*bAlphaBlend*  
- アルファ チャネルを使用するのみの 32 ビット イメージを使用する場合は TrueFALSE のみのアルファ チャネル イメージを使用しないようにします。 既定では FALSE です。  
+*bAlphaBlend*<br/>
+[in]アルファ チャネルを使用するのみの 32 ビット イメージを使用する場合は TrueFALSE のみのアルファ チャネル イメージを使用しないようにします。 既定では FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -726,11 +726,11 @@ void SetFaceColor(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*crFace*  
- RGB 色の値。  
+*crFace*<br/>
+[in]RGB 色の値。  
   
- [in]*bRedraw*  
- 画面をすぐに再描画する場合は TRUEそれ以外の場合、FALSE です。  
+*bRedraw*<br/>
+[in]画面をすぐに再描画する場合は TRUEそれ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドを使用すると、新しい (フェイス) ボタンの背景の塗りつぶしの色を定義します。 ときに、バック グラウンドでないので注意が入力、 [CMFCButton::m_bTransparent](#m_btransparent)メンバー変数は TRUE になります。  
@@ -762,41 +762,41 @@ void SetImage(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*hIcon*  
- ビットマップと、新しいイメージのマスクを含むアイコンへのハンドルします。  
+*hIcon*<br/>
+[in]ビットマップと、新しいイメージのマスクを含むアイコンへのハンドルします。  
   
- [in]*bAutoDestroy*  
- ビットマップ リソースを自動的に破棄することを指定する場合は TRUEそれ以外の場合、FALSE です。 既定では TRUE です。  
+*bAutoDestroy*<br/>
+[in]ビットマップ リソースを自動的に破棄することを指定する場合は TRUEそれ以外の場合、FALSE です。 既定では TRUE です。  
   
- [in]*hIconHot*  
- 選択した状態のイメージを含むアイコンへのハンドルします。  
+*hIconHot*<br/>
+[in]選択した状態のイメージを含むアイコンへのハンドルします。  
   
- [in]*hBitmap*  
- 選択されていない状態のイメージを含むビットマップへのハンドルします。  
+*hBitmap*<br/>
+[in]選択されていない状態のイメージを含むビットマップへのハンドルします。  
   
- [in]*hBitmapHot*  
- 選択した状態のイメージを含むビットマップへのハンドルします。  
+*hBitmapHot*<br/>
+[in]選択した状態のイメージを含むビットマップへのハンドルします。  
   
- [in]*uiBmpResId*  
- 選択されていないイメージのリソース ID。  
+*uiBmpResId*<br/>
+[in]選択されていないイメージのリソース ID。  
   
- [in]*uiBmpHotResId*  
- 選択したイメージのリソース ID。  
+*uiBmpHotResId*<br/>
+[in]選択したイメージのリソース ID。  
   
- [in]*bMap3dColors*  
- ボタンの背景の透明色を指定しますつまり、ボタンのイメージ。 (192, 192, 192) の RGB 色の値を使用する場合は TRUEによって定義された色の値を使用する場合は FALSE`AFX_GLOBAL_DATA::clrBtnFace`します。  
+*bMap3dColors*<br/>
+[in]ボタンの背景の透明色を指定しますつまり、ボタンのイメージ。 (192, 192, 192) の RGB 色の値を使用する場合は TRUEによって定義された色の値を使用する場合は FALSE`AFX_GLOBAL_DATA::clrBtnFace`します。  
   
- [in]*hIconDisabled*  
- 無効なイメージのアイコンへのハンドルします。  
+*hIconDisabled*<br/>
+[in]無効なイメージのアイコンへのハンドルします。  
   
- [in]*hBitmapDisabled*  
- 無効なイメージを含むビットマップへのハンドルします。  
+*hBitmapDisabled*<br/>
+[in]無効なイメージを含むビットマップへのハンドルします。  
   
- [in]*uiBmpDsblResID*  
- 無効化されたビットマップのリソース ID。  
+*uiBmpDsblResID*<br/>
+[in]無効化されたビットマップのリソース ID。  
   
- [in]*bAlphaBlend*  
- アルファ チャネルを使用するのみの 32 ビット イメージを使用する場合は TrueFALSE のみのアルファ チャネル イメージを使用しないようにします。 既定では FALSE です。  
+*bAlphaBlend*<br/>
+[in]アルファ チャネルを使用するのみの 32 ビット イメージを使用する場合は TrueFALSE のみのアルファ チャネル イメージを使用しないようにします。 既定では FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -814,8 +814,8 @@ void SetMouseCursor(HCURSOR hcursor);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*hcursor*  
- カーソルのハンドル。  
+*hcursor*<br/>
+[in]カーソルのハンドル。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドを使用して、ボタンとハンド カーソルをなど、カーソルのイメージを関連付けます。 カーソルは、アプリケーション リソースから読み込まれます。  
@@ -847,14 +847,14 @@ void SetStdImage(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*id*  
- 定義されているボタン イメージの識別子のいずれか、`CMenuImage::IMAGES_IDS`列挙体。 イメージの値は、矢印、pin、ラジオ ボタンなどのイメージを指定します。  
+*ID*<br/>
+[in]定義されているボタン イメージの識別子のいずれか、`CMenuImage::IMAGES_IDS`列挙体。 イメージの値は、矢印、pin、ラジオ ボタンなどのイメージを指定します。  
   
- [in]*状態*  
- 定義されているボタンのイメージの状態の識別子のいずれか、`CMenuImages::IMAGE_STATE`列挙体。 イメージの状態は、黒、灰色、明るい灰色、白、および濃い灰色などのボタンの色を指定します。 既定値は `CMenuImages::ImageBlack` です。  
+*state*<br/>
+[in]定義されているボタンのイメージの状態の識別子のいずれか、`CMenuImages::IMAGE_STATE`列挙体。 イメージの状態は、黒、灰色、明るい灰色、白、および濃い灰色などのボタンの色を指定します。 既定値は `CMenuImages::ImageBlack` です。  
   
- [in]*idDisabled*  
- 定義されているボタン イメージの識別子のいずれか、`CMenuImage::IMAGES_IDS`列挙体。 イメージは、ボタンが無効になっていることを示します。 既定値は、最初のボタンのイメージ ( `CMenuImages::IdArrowDown`)。  
+*idDisabled*<br/>
+[in]定義されているボタン イメージの識別子のいずれか、`CMenuImage::IMAGES_IDS`列挙体。 イメージは、ボタンが無効になっていることを示します。 既定値は、最初のボタンのイメージ ( `CMenuImages::IdArrowDown`)。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -866,8 +866,8 @@ void SetTextColor(COLORREF clrText);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*clrText*  
- RGB 色の値。  
+*clrText*<br/>
+[in]RGB 色の値。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -879,8 +879,8 @@ void SetTextHotColor(COLORREF clrTextHot);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*clrTextHot*  
- RGB 色の値。  
+*clrTextHot*<br/>
+[in]RGB 色の値。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -892,8 +892,8 @@ void SetTooltip(LPCTSTR lpszToolTipText);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszToolTipText*  
- ツールヒントのテキストへのポインター。 ツールヒントを無効にする NULL を指定します。  
+*lpszToolTipText*<br/>
+[in]ツールヒントのテキストへのポインター。 ツールヒントを無効にする NULL を指定します。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -905,8 +905,8 @@ virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bCalcOnly*  
- のボタンの新しいサイズを変更しないを計算する場合は TRUEボタンのサイズを変更する場合は FALSE。 既定では FALSE です。  
+*bCalcOnly*<br/>
+[in]のボタンの新しいサイズを変更しないを計算する場合は TRUEボタンのサイズを変更する場合は FALSE。 既定では FALSE です。  
   
 ### <a name="return-value"></a>戻り値  
  A`CSize`ボタンの新しいサイズを格納しているオブジェクト。  

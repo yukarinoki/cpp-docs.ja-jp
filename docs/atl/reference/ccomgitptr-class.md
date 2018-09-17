@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5782cf051fe680cb99dcd99c8e9c2d050c4184cc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7bfa501834102e37c14de11ee1af84a21e82c35f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758132"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703847"
 ---
 # <a name="ccomgitptr-class"></a>CComGITPtr クラス
 
@@ -130,17 +130,17 @@ CComGITPtr(CComGITPtr&& rv);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*p*  
-グローバル インターフェイス テーブル (GIT) に格納されるインターフェイス ポインター。
+*p*<br/>
+[in]グローバル インターフェイス テーブル (GIT) に格納されるインターフェイス ポインター。
 
-[in]*git*  
-既存への参照を`CComGITPtr`オブジェクト。
+*Git*<br/>
+[in]既存への参照を`CComGITPtr`オブジェクト。
 
-[in]*dwCookie*  
-インターフェイス ポインターを識別するために使用されるクッキー。
+*dwCookie*<br/>
+[in]インターフェイス ポインターを識別するために使用されるクッキー。
 
-[in]*rv*  
-ソース`CComGITPtr`からデータを移動するオブジェクト。
+*rv*<br/>
+[in]ソース`CComGITPtr`からデータを移動するオブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -238,17 +238,17 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*p*  
-インターフェイスへのポインター。
+*p*<br/>
+[in]インターフェイスへのポインター。
 
-[in]*git*  
-`CComGITPtr` オブジェクトへの参照。
+*Git*<br/>
+[in]参照を`CComGITPtr`オブジェクト。
 
-[in]*dwCookie*  
-インターフェイス ポインターを識別するために使用されるクッキー。
+*dwCookie*<br/>
+[in]インターフェイス ポインターを識別するために使用されるクッキー。
 
-[in]*rv*  
-`CComGITPtr`からデータを移動します。
+*rv*<br/>
+[in]`CComGITPtr`からデータを移動します。
 
 ### <a name="return-value"></a>戻り値
 

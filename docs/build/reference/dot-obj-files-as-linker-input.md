@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd1fbd635b1d3d3a5f9963edaa9f22e22472dad1
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: decd015a184b66fa5867435177c07fdf23ad53ae
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43691752"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704380"
 ---
 # <a name="obj-files-as-linker-input"></a>リンカー入力としての .obj ファイル
 
@@ -42,9 +42,9 @@ Visual Studio 2005 以降では、Microsoft Visual C コンパイラは、ISO/IE
 
 ## <a name="see-also"></a>関連項目
 
-[LINK の入力ファイル](../../build/reference/link-input-files.md)  
-[リンカー オプション](../../build/reference/linker-options.md)  
-[Unicode のサポート](../../text/support-for-unicode.md)  
-[コンパイラおよびリンカーでの Unicode のサポート](../../build/reference/unicode-support-in-the-compiler-and-linker.md)  
-[Unicode 標準](http://www.unicode.org/)  
-[PE 形式](/windows/desktop/Debug/pe-format)  
+[LINK の入力ファイル](../../build/reference/link-input-files.md)<br/>
+[リンカー オプション](../../build/reference/linker-options.md)<br/>
+[Unicode のサポート](../../text/support-for-unicode.md)<br/>
+[コンパイラおよびリンカーでの Unicode のサポート](../../build/reference/unicode-support-in-the-compiler-and-linker.md)<br/>
+[Unicode 標準](http://www.unicode.org/)<br/>
+[PE 形式](/windows/desktop/Debug/pe-format)

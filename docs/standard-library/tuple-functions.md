@@ -17,12 +17,12 @@ helpviewer_keywords:
 - std::get [C++]
 - std::make_tuple [C++]
 - std::tie [C++]
-ms.openlocfilehash: f0b995c4a966481e02ebd96748b247fd8844f19f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c9280de6a2fde3ce2758b5884437704a2cdd879f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966408"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712765"
 ---
 # <a name="lttuplegt-functions"></a>&lt;tuple&gt; 関数
 
@@ -64,17 +64,17 @@ template <class T, class... Types>
 
 ### <a name="parameters"></a>パラメーター
 
-*Index*  
- 取得する要素のインデックス。
+*Index*<br/>
+取得する要素のインデックス。
 
-*型*  
- タプルで宣言された型のシーケンス (宣言順)。
+*型*<br/>
+タプルで宣言された型のシーケンス (宣言順)。
 
-*T*  
- 取得する要素の型。
+*T*<br/>
+取得する要素の型。
 
-*Tuple*  
- 任意の数の要素を含む std::tuple。
+*Tuple*<br/>
+任意の数の要素を含む std::tuple。
 
 ### <a name="remarks"></a>Remarks
 
@@ -122,11 +122,11 @@ template <class T1, class T2, ..., class TN>
 
 ### <a name="parameters"></a>パラメーター
 
-*TN*  
- N 番目の関数パラメーターの型。
+*TN*<br/>
+N 番目の関数パラメーターの型。
 
-*TN*  
- N 番目の関数パラメーターの値。
+*TN*<br/>
+N 番目の関数パラメーターの値。
 
 ### <a name="remarks"></a>Remarks
 
@@ -180,8 +180,8 @@ tuple<T1&, T2&, ..., TN&> tie(T1& t1, T2& t2, ..., TN& tN);
 
 ### <a name="parameters"></a>パラメーター
 
-*TN*  
- N 番目の tuple 要素の基本データ型。
+*TN*<br/>
+N 番目の tuple 要素の基本データ型。
 
 ### <a name="remarks"></a>Remarks
 

@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbabd502ca6d9d81c569831f9dcb0b344523bb3e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a6313bcf0a4acfaa705cb4718570dd49374530b4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215329"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707532"
 ---
 # <a name="cmfccolorbutton-class"></a>CMFCColorButton クラス
 `CMFCColorButton`と[CMFCColorBar クラス](../../mfc/reference/cmfccolorbar-class.md)カラー ピッカー コントロールを実装するクラスを組み合わせて使用します。  
@@ -107,7 +107,7 @@ class CMFCColorButton : public CMFCButton
   
 ### <a name="data-members"></a>データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |`m_bAltColorDlg`|ブール値。 TRUE の場合、フレームワークが表示されます、 [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)色 ダイアログ ボックスの場合に、*他*ボタンをクリックすると、FALSE の場合、システムの色 ダイアログ ボックスまたはします。 既定値は TRUE です。 詳細については、次を参照してください。 [CMFCColorButton::EnableOtherButton](#enableotherbutton)します。|  
 |`m_bAutoSetFocus`|ブール値。 TRUE の場合、フレームワークは、メニューが表示されたら、または FALSE の場合がフォーカスを変更していないときに、[色] メニュー、フォーカスを設定します。 既定値は TRUE です。|  
@@ -159,14 +159,14 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszLabel*  
- 自動ボタンのテキストを指定します。  
+*lpszLabel*<br/>
+[in]自動ボタンのテキストを指定します。  
   
- [in]*colorAutomatic*  
- 自動ボタンの既定の色を指定する RGB 値を指定します。  
+*colorAutomatic*<br/>
+[in]自動ボタンの既定の色を指定する RGB 値を指定します。  
   
- [in]*bEnable*  
- 自動ボタンが有効になっているかどうかを指定します。  
+*bEnable*<br/>
+[in]自動ボタンが有効になっているかどうかを指定します。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -181,14 +181,14 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszLabel*  
- ボタンのテキストを指定します。  
+*lpszLabel*<br/>
+[in]ボタンのテキストを指定します。  
   
- [in]*bAltColorDlg*  
- 指定するかどうか、 [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)  ダイアログ ボックスまたはシステムの色 ダイアログ ボックスを開いたときに、ユーザーがボタンをクリックします。  
+*bAltColorDlg*<br/>
+[in]指定するかどうか、 [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)  ダイアログ ボックスまたはシステムの色 ダイアログ ボックスを開いたときに、ユーザーがボタンをクリックします。  
   
- [in]*bEnable*  
- 「その他」ボタンが有効になっているかどうかを指定します。  
+*bEnable*<br/>
+[in]「その他」ボタンが有効になっているかどうかを指定します。  
   
 ### <a name="remarks"></a>Remarks  
  「その他」の色 ダイアログ ボックスを表示するボタンをクリックします。 場合、 *bAltColorDlg*パラメーターが true の場合、 [CMFCColorDialog クラス](../../mfc/reference/cmfccolordialog-class.md)が表示されます。 それ以外の場合、システムの色 ダイアログ ボックスが表示されます。  
@@ -249,14 +249,14 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- ボタンのイメージを表示するために使用されるデバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]ボタンのイメージを表示するために使用されるデバイス コンテキストへのポインター。  
   
- [in]*rect*  
- ボタンの外接する四角形にします。  
+*rect*<br/>
+[in]ボタンの外接する四角形にします。  
   
- [in]*uiState*  
- ボタンのビジュアル状態を指定します。  
+*uiState*<br/>
+[in]ボタンのビジュアル状態を指定します。  
   
 ### <a name="remarks"></a>Remarks  
  レンダリング プロセスをカスタマイズするには、このメソッドをオーバーライドします。  
@@ -272,14 +272,14 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- 境界線の描画に使用するデバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]境界線の描画に使用するデバイス コンテキストへのポインター。  
   
- [in]*rectClient*  
- 指定されているデバイス コンテキスト内の四角形、 *pDC*を描画するボタンの境界を定義するパラメーター。  
+*rectClient*<br/>
+[in]指定されているデバイス コンテキスト内の四角形、 *pDC*を描画するボタンの境界を定義するパラメーター。  
   
- [in]*uiState*  
- ボタンのビジュアル状態を指定します。  
+*uiState*<br/>
+[in]ボタンのビジュアル状態を指定します。  
   
 ### <a name="remarks"></a>Remarks  
  色のボタンの境界線の外観をカスタマイズするには、この関数をオーバーライドします。  
@@ -294,11 +294,11 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- フォーカスされた四角形を描画するために使用するデバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]フォーカスされた四角形を描画するために使用するデバイス コンテキストへのポインター。  
   
- [in]*rectClient*  
- 指定されたデバイス コンテキスト内の四角形、 *pDC*ボタンの境界を定義するパラメーター。  
+*rectClient*<br/>
+[in]指定されたデバイス コンテキスト内の四角形、 *pDC*ボタンの境界を定義するパラメーター。  
   
 ### <a name="remarks"></a>Remarks  
  フォーカスされた四角形の外観をカスタマイズするには、このメソッドをオーバーライドします。  
@@ -323,7 +323,7 @@ void RebuildPalette(CPalette* pPal);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*pPal*|論理パレットまたは NULL へのポインター。 NULL の場合、既定のシステム パレットが使用されます。|  
+|*pPal*|[in]論理パレットまたは NULL へのポインター。 NULL の場合、既定のシステム パレットが使用されます。|  
   
 ##  <a name="setcolor"></a>  CMFCColorButton::SetColor  
  ボタンの色を指定します。  
@@ -333,8 +333,8 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*色*  
- RGB 値。  
+*色*<br/>
+[in]RGB 値。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -348,11 +348,11 @@ static void SetColorName(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*色*  
- 色の RGB 値。  
+*色*<br/>
+[in]色の RGB 値。  
   
- [in]*strName*  
- 色の名前。  
+*strName*<br/>
+[in]色の名前。  
   
 ### <a name="remarks"></a>Remarks  
  色の名前の一覧は、アプリケーションごとにグローバルです。 その結果、このメソッドは移動するには、そのパラメーター [CMFCColorBar::SetColorName](../../mfc/reference/cmfccolorbar-class.md#setcolorname)します。  
@@ -365,8 +365,8 @@ void SetColumnsNumber(int nColumns);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nColumns*  
- 列の数を指定します。  
+*nColumns*<br/>
+[in]列の数を指定します。  
   
 ### <a name="remarks"></a>Remarks  
  ユーザーは、定義済みの色の一覧が表示されるポップアップ カラー バーから色を選択することができます。 このメソッドを使用すると、テーブルの列の数を定義できます。  
@@ -381,11 +381,11 @@ void SetDocumentColors(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszLabel*  
- ドキュメントの色のセットを表示するラベルを指定します。  
+*lpszLabel*<br/>
+[in]ドキュメントの色のセットを表示するラベルを指定します。  
   
- [in]*lstColors*  
- RGB 値の一覧への参照。  
+*lstColors*<br/>
+[in]RGB 値の一覧への参照。  
   
 ### <a name="remarks"></a>Remarks  
  A`CMFCColorButton`オブジェクトに転送する RGB 値のリストを保持する、 [CMFCColorBar クラス](../../mfc/reference/cmfccolorbar-class.md)オブジェクト。 これらの色はラベルがで指定された特別なセクションに示したカラー バーが表示されたら、 *lpszLabel*パラメーター。  
@@ -398,8 +398,8 @@ void SetPalette(CPalette* pPalette);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pPalette*  
- 色パレットへのポインター。  
+*pPalette*<br/>
+[in]色パレットへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -411,8 +411,8 @@ virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bCalcOnly*  
- 0 以外の場合は、ボタン コントロールの新しいサイズが計算されますが、実際のサイズは変更されません。  
+*bCalcOnly*<br/>
+[in]0 以外の場合は、ボタン コントロールの新しいサイズが計算されますが、実際のサイズは変更されません。  
   
 ### <a name="return-value"></a>戻り値  
  A`CSize`新しいボタン コントロールのサイズを指定するオブジェクト。  
@@ -427,8 +427,8 @@ virtual void UpdateColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*色*  
- ユーザーが選択した色。  
+*色*<br/>
+[in]ユーザーが選択した色。  
   
 ### <a name="remarks"></a>Remarks  
  `UpdateColor`関数は、現在選択されているボタンの色を変更し、BN_CLICKED 標準通知 WM_COMMAND メッセージを送信することによって、親に通知します。 使用して、 [CMFCColorButton::GetColor](#getcolor)選択した色を取得します。  

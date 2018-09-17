@@ -17,23 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8f505694cd0efed303558438b2c2ed2fbff888b7
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1e5aff6796804d7868b4d61c94e4a181b88e9ab6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313196"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704840"
 ---
 # <a name="custom-image-dialog-box-c-image-editor-for-icons"></a>カスタム イメージ ダイアログ ボックス (C++) (アイコン用イメージ エディター)
+
 カスタムのサイズと色の数で新しいイメージを作成できます。
- **Width**  
- カスタム イメージの幅をピクセル (1 ~ 512 の制限を 2048) で入力する場所を提供します。
+
+- **Width**
+
+   カスタム イメージの幅をピクセル (1 ~ 512 の制限を 2048) で入力する場所を提供します。
   
- **Height**  
- ピクセル (1 ~ 512 の制限を 2048) でカスタム イメージの高さを入力する場所を提供します。
+- **Height**
+
+   ピクセル (1 ~ 512 の制限を 2048) でカスタム イメージの高さを入力する場所を提供します。
   
- **色**  
- カスタム イメージの色の数を選択する場所を提供します。 2、16、または 256 です。
+- **色**
+
+   カスタム イメージの色の数を選択する場所を提供します。 2、16、または 256 です。
   
 ## <a name="requirements"></a>要件
  なし

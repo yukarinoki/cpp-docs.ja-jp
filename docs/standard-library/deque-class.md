@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c77b232fe87a722194a21d60457a01051827a7e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: afcf2528ba84edd90179ef6eb29d356466372633
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214167"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713307"
 ---
 # <a name="deque-class"></a>deque クラス
 
@@ -119,10 +119,10 @@ class deque
 ### <a name="parameters"></a>パラメーター
 
 *Type*<br/>
- deque に格納される要素のデータ型。
+deque に格納される要素のデータ型。
 
 *アロケーター*<br/>
- メモリの deque の割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能で、既定値は**アロケーター\<型 >** します。
+メモリの deque の割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能で、既定値は**アロケーター\<型 >** します。
 
 ## <a name="remarks"></a>Remarks
 
@@ -246,19 +246,19 @@ void assign(initializer_list<Type> IList);
 ### <a name="parameters"></a>パラメーター
 
 *まずは*<br/>
- deque 引数からコピーされる要素範囲内の最初の要素の位置。
+deque 引数からコピーされる要素範囲内の最初の要素の位置。
 
 *前の*<br/>
- deque 引数からコピーされる要素範囲を超える最初の要素の位置。
+deque 引数からコピーされる要素範囲を超える最初の要素の位置。
 
 *カウント*<br/>
- deque に挿入される要素のコピーの数。
+deque に挿入される要素のコピーの数。
 
 *val*<br/>
- deque に挿入される要素の値。
+deque に挿入される要素の値。
 
 *IList*<br/>
- deque に挿入される initializer_list。
+deque に挿入される initializer_list。
 
 ### <a name="remarks"></a>Remarks
 
@@ -333,7 +333,7 @@ const_reference at(size_type pos) const;
 ### <a name="parameters"></a>パラメーター
 
 *pos*<br/>
- deque 内で参照する要素を示す添字 (または位置の番号)。
+deque 内で参照する要素を示す添字 (または位置の番号)。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1314,7 +1314,7 @@ int main( )
    cout << "The last integer of c1 is " << *c1_Iter << endl;
 
    c1_Iter--;
- *c1_Iter = 400;
+   *c1_Iter = 400;
    cout << "The new next-to-last integer of c1 is " << *c1_Iter << endl;
 
    // If a const iterator had been declared instead with the line:
@@ -1346,13 +1346,13 @@ iterator erase(iterator first, iterator last);
 ### <a name="parameters"></a>パラメーター
 
 *_Where*<br/>
- deque から削除する要素の位置。
+deque から削除する要素の位置。
 
 *first*<br/>
- deque から削除する最初の要素の位置。
+deque から削除する最初の要素の位置。
 
 *last*<br/>
- deque から削除する最後の要素の次の位置。
+deque から削除する最後の要素の次の位置。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1603,7 +1603,7 @@ const_reference operator[](size_type pos) const;
 ### <a name="parameters"></a>パラメーター
 
 *pos*<br/>
- 参照する deque 要素の位置。
+参照する deque 要素の位置。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1714,7 +1714,7 @@ int main( )
 
    cout << "     ";
    S<MyDeque&&>::show ( move< MyDeque& > (d1) );
- }
+}
 ```
 
 ## <a name="pointer"></a>  deque::pointer
@@ -1951,7 +1951,7 @@ int main( )
    cout << endl;
 
    c1_rIter = c1.rbegin( );
- *c1_rIter = 40;  // This would have caused an error if a
+   *c1_rIter = 40;  // This would have caused an error if a
                     // const_reverse iterator had been declared as
                     // noted above
    cout << "Last element in deque is now " << *c1_rIter << "." << endl;
@@ -2069,7 +2069,7 @@ int main( )
    c1_rIter = c1.rend( );
    c1_rIter--; // Decrementing the reverse iterator moves it backward
                // in the reversed deque (to the last element here)
- *c1_rIter = 40; // This modification of the last element would
+   *c1_rIter = 40; // This modification of the last element would
                    // have caused an error if a const_reverse
                    // iterator had been declared (as noted above)
    cout << "The modified reversed deque is: ";
@@ -2099,10 +2099,10 @@ void resize(size_type _Newsize, Type val);
 ### <a name="parameters"></a>パラメーター
 
 *_Newsize*<br/>
- deque の新しいサイズ。
+deque の新しいサイズ。
 
 *val*<br/>
- 新しいサイズが元のサイズより大きい場合に、deque に追加される新しい要素の値。 この値を省略した場合、新しい要素にはそのクラスの既定値が割り当てられます。
+新しいサイズが元のサイズより大きい場合に、deque に追加される新しい要素の値。 この値を省略した場合、新しい要素にはそのクラスの既定値が割り当てられます。
 
 ### <a name="remarks"></a>Remarks
 
@@ -2278,10 +2278,10 @@ void swap(deque<Type, Allocator>& left, deque<Type, Allocator>& right);
 ### <a name="parameters"></a>パラメーター
 
 *right*<br/>
- 交換する要素を提供する deque (deque `left` と要素を交換する deque)。
+交換する要素を提供する deque (deque `left` と要素を交換する deque)。
 
 *left*<br/>
- 要素が deque のものと交換される deque*右*します。
+要素が deque のものと交換される deque*右*します。
 
 ### <a name="example"></a>例
 

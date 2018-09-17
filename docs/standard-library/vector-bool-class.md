@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5f0d38ebd24c38579f73bceea0fff50ab361638
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b158f6bedd2dba2d65f7b0778758eafe08e88851
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962781"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702911"
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt; クラス
 
@@ -74,7 +74,7 @@ class vector<bool, Allocator>
 |-|-|
 |[vector\<bool> reference クラス](#reference_class)|`bool&` の動作をシミュレートするためのプロキシとして機能するクラスで、そのオブジェクトは `vector<bool>` オブジェクト内の要素 (単一ビット) への参照を提供できます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー**: \<vector>
 
@@ -293,11 +293,11 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>パラメーター
 
-*右*  
- 値がビットに割り当てられている要素の参照。
+*右*<br/>
+値がビットに割り当てられている要素の参照。
 
-*val*  
- ビットに割り当てられるブール値。
+*val*<br/>
+ビットに割り当てられるブール値。
 
 #### <a name="example"></a>例
 
@@ -382,11 +382,11 @@ static void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*  
- 要素と交換される、*右*要素。
+*左*<br/>
+要素と交換される、*右*要素。
 
-*右*  
- 要素と交換される、*左*要素。
+*右*<br/>
+要素と交換される、*左*要素。
 
 ### <a name="remarks"></a>Remarks
 

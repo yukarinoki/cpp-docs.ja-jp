@@ -1,5 +1,5 @@
 ---
-title: -NOENTRY (エントリ ポイントなし) |Microsoft ドキュメント
+title: -NOENTRY (エントリ ポイントなし) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,38 +22,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44f35c995a0c839fdc0d4ccf3d286e332793cf70
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bd90cb7824050e9bd0110e75f7120c4f004b8b47
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374038"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713467"
 ---
 # <a name="noentry-no-entry-point"></a>/NOENTRY (エントリ ポイントなし)
-```  
-/NOENTRY  
-```  
-  
-## <a name="remarks"></a>コメント  
- /NOENTRY オプションは、実行可能コードが含まれていない、リソースだけの DLL を作成するために必要です。 詳細については、次を参照してください。 [Resource-Only DLL の作成](../../build/creating-a-resource-only-dll.md)です。  
-  
- このオプションを使用すると、`_main` 関数への参照が DLL ファイルにリンクされなくなります。  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには  
-  
-1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「 [Visual C プロジェクト プロパティの設定](../../ide/working-with-project-properties.md)です。  
-  
-2.  選択、**リンカー**フォルダーです。  
-  
-3.  選択、**詳細**プロパティ ページ。  
-  
-4.  変更、**エントリ ポイントなし**プロパティです。  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには  
-  
-1.  「<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ResourceOnlyDLL%2A>」を参照してください。  
-  
-## <a name="see-also"></a>関連項目  
- [リソース専用 DLL の作成](../../build/creating-a-resource-only-dll.md)   
- [リンカー オプションの設定](../../build/reference/setting-linker-options.md)   
- [リンカー オプション](../../build/reference/linker-options.md)
+
+```
+/NOENTRY
+```
+
+## <a name="remarks"></a>Remarks
+
+/NOENTRY オプションは、実行可能コードが含まれていない、リソースだけの DLL を作成するために必要です。 詳細については、次を参照してください。 [Resource-Only DLL を作成する](../../build/creating-a-resource-only-dll.md)します。
+
+このオプションを使用すると、`_main` 関数への参照が DLL ファイルにリンクされなくなります。
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
+
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
+
+1. 選択、**リンカー**フォルダー。
+
+1. 選択、**詳細**プロパティ ページ。
+
+1. 変更、**エントリ ポイントなし**プロパティ。
+
+### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
+
+1. 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ResourceOnlyDLL%2A>
+
+## <a name="see-also"></a>関連項目
+
+[リソースのみの DLL の作成](../../build/creating-a-resource-only-dll.md)<br/>
+[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
+[リンカー オプション](../../build/reference/linker-options.md)

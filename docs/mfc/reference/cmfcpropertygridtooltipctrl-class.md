@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: befbf65c8faa74e889d837a0b310eda4bc6fe576
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 227c7d43334419326670dae5fabad28d18ec58a0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676781"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716171"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>CMFCPropertyGridToolTipCtrl クラス
 ツールヒントの実装を制御する、 [CMFCPropertyGridCtrl クラス](../../mfc/reference/cmfcpropertygridctrl-class.md)を使用してツールヒントを表示します。  
@@ -106,8 +106,8 @@ BOOL Create(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWndParent*  
- 親ウィンドウへのポインター。  
+*pWndParent*<br/>
+[in]親ウィンドウへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  ウィンドウが作成された場合は TRUE。それ以外の場合、FALSE です。  
@@ -130,8 +130,8 @@ void GetLastRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*rect*  
- ツール ヒント コントロールの最後の位置が含まれています。  
+*rect*<br/>
+[out]ツール ヒント コントロールの最後の位置が含まれています。  
   
 ##  <a name="hide"></a>  CMFCPropertyGridToolTipCtrl::Hide  
  ツール ヒント コントロールを非表示にします。  
@@ -148,8 +148,8 @@ void SetTextMargin(int nTextMargin);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nTextMargin*  
- ツールヒント コントロールのテキストと、ツールヒント ウィンドウの枠線の間隔を指定します。 既定値は、10 ピクセルです。  
+*nTextMargin*<br/>
+[in]ツールヒント コントロールのテキストと、ツールヒント ウィンドウの枠線の間隔を指定します。 既定値は、10 ピクセルです。  
   
 ##  <a name="track"></a>  CMFCPropertyGridToolTipCtrl::Track  
  ツール ヒント コントロールを表示します。  
@@ -161,11 +161,11 @@ void Track(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*rect*  
- ツール ヒント コントロールのサイズと位置を指定します。  
+*rect*<br/>
+[in]ツール ヒント コントロールのサイズと位置を指定します。  
   
- [in]*strText*  
- ツールヒントに表示されるテキストを指定します。  
+*strText*<br/>
+[in]ツールヒントに表示されるテキストを指定します。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドで指定したサイズ、位置にあるツール ヒント コントロールを表示します*rect*します。 位置、サイズ、およびテキストがこのメソッドが呼び出された最後の時刻以降に変更されていない場合は、このメソッドに効果がありません。  

@@ -1,5 +1,5 @@
 ---
-title: -Fi (出力ファイル名のプリプロセス) |Microsoft ドキュメント
+title: -Fi (出力ファイル名のプリプロセス) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,41 +19,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e7fe5ffbb8a6ccdd5ef02d2cf3feb6b94d48233
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dfe9e54dbafbcbd27763060dc9d81b21bac2503d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371513"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709404"
 ---
 # <a name="fi-preprocess-output-file-name"></a>/Fi (出力ファイル名のプリプロセス)
-出力ファイルの名前を指定、 [/P (プリプロセス出力ファイルへの)](../../build/reference/p-preprocess-to-a-file.md)コンパイラ オプションは、プリプロセス済みの出力を書き込みます。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-/Fipathname  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
-  
-|パラメーター|説明|  
-|---------------|-----------------|  
-|`pathname`|によって生成される出力ファイルのパスと名前、 **/P**コンパイラ オプション。|  
-  
-## <a name="remarks"></a>コメント  
- 使用して、 **/Fi**コンパイラ オプションと組み合わせて、 **/P**コンパイラ オプション。  
-  
- パスのみを指定する場合、`pathname`プリプロセス済みの出力ファイルの基本名とパラメーター、ソース ファイルのベース名を使用します。 `pathname`パラメーターでは、特定のファイル名拡張子は必要ありません。 ただし、".i"の拡張機能は、ファイル名拡張子が指定されていない場合に使用されます。  
-  
-## <a name="example"></a>例  
- 次のコマンド ライン PROGRAM.cpp を前処理し、コメントを保持、追加[#line](../../preprocessor/hash-line-directive-c-cpp.md)ディレクティブは、その結果を MYPROCESS.i ファイルに書き込みます。  
-  
-```  
-CL /P /FiMYPROCESS.I PROGRAM.CPP  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [コンパイラ オプション](../../build/reference/compiler-options.md)   
- [/P (ファイルへのプリプロセス)](../../build/reference/p-preprocess-to-a-file.md)   
- [パス名の指定](../../build/reference/specifying-the-pathname.md)
+
+出力ファイルの名前を指定します、 [/P (ファイルへのプリプロセス)](../../build/reference/p-preprocess-to-a-file.md)コンパイラ オプションは、前処理済みの出力を書き込みます。
+
+## <a name="syntax"></a>構文
+
+```
+/Fipathname
+```
+
+#### <a name="parameters"></a>パラメーター
+
+|パラメーター|説明|
+|---------------|-----------------|
+|`pathname`|によって生成された出力ファイルのパスと名前、 **/P**コンパイラ オプション。|
+
+## <a name="remarks"></a>Remarks
+
+使用して、 **/Fi**コンパイラ オプションと組み合わせて、 **/P**コンパイラ オプション。
+
+パスを指定する場合、`pathname`パラメーター、ソース ファイルの基本名、前処理済みの出力ファイルのベース名として使用されます。 `pathname`パラメーターでは、特定のファイル名拡張子は必要ありません。 ただし、".i"の拡張機能は、ファイル名拡張子を指定しない場合に使用されます。
+
+## <a name="example"></a>例
+
+次のコマンド ライン PROGRAM.cpp を前処理し、コメントを保持、追加[#line](../../preprocessor/hash-line-directive-c-cpp.md)ディレクティブ、MYPROCESS.i ファイルに結果を書き出すとします。
+
+```
+CL /P /FiMYPROCESS.I PROGRAM.CPP
+```
+
+## <a name="see-also"></a>関連項目
+
+[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
+[/P (ファイルの前処理)](../../build/reference/p-preprocess-to-a-file.md)
+[パス名の指定](../../build/reference/specifying-the-pathname.md)

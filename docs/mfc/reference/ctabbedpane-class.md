@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fcf4f2cb2c619b2dfe3dae4b669f6139382b2b4
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 5a73d5bb3ef67469ad1cc12b2a2c2757cf1ce137
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42901012"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712838"
 ---
 # <a name="ctabbedpane-class"></a>CTabbedPane クラス
 
@@ -81,7 +81,7 @@ class CTabbedPane : public CBaseTabbedPane
 
 ### <a name="data-members"></a>データ メンバー
 
-|name|説明|
+|名前|説明|
 |----------|-----------------|
 |[CTabbedPane::m_bTabsAlwaysTop](#m_btabsalwaystop)|アプリケーション内のタブの既定の場所。|
 |[CTabbedPane::m_pTabWndRTC](#m_ptabwndrtc)|カスタムの `CMFCTabCtrl` から派生したオブジェクトに関するランタイム クラス情報。|
@@ -201,8 +201,8 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bEnable*  
-タブの自動の色分け表示を有効にする場合は TRUEそれ以外の場合、FALSE です。
+*bEnable*<br/>
+[in]タブの自動の色分け表示を有効にする場合は TRUEそれ以外の場合、FALSE です。
 
 ### <a name="remarks"></a>Remarks
 
@@ -224,10 +224,10 @@ virtual BOOL FloatTab(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pBar*  
-[in]*nTabID*  
-[in]*dockMethod*  
-[in]*bHide*  
+*pBar*<br/>
+[in][in]*nTabID*  
+*dockMethod*<br/>
+[in][in]*bHide*  
 
 ### <a name="return-value"></a>戻り値
 
@@ -245,11 +245,11 @@ virtual void GetTabArea(
 
 ### <a name="parameters"></a>パラメーター
 
-[out]*rectTabAreaTop*  
-上部のタブ領域の画面座標での位置とサイズが含まれています。
+*rectTabAreaTop*<br/>
+[out]上部のタブ領域の画面座標での位置とサイズが含まれています。
 
-[out]*rectTabAreaBottom*  
-下のタブ領域の画面座標での位置とサイズが含まれています。
+*rectTabAreaBottom*<br/>
+[out]下のタブ領域の画面座標での位置とサイズが含まれています。
 
 ### <a name="remarks"></a>Remarks
 
@@ -340,8 +340,8 @@ static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*arColors*  
-設定する色の配列が含まれています。
+*arColors*<br/>
+[in]設定する色の配列が含まれています。
 
 ### <a name="remarks"></a>Remarks
 

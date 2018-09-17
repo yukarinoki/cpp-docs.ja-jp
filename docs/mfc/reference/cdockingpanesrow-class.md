@@ -100,12 +100,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 128334398b268c91ec7e6b938bcbd0d2e6e37dd0
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: d98940ffbd1c6ff021712ee50721908d7760abee
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538320"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712128"
 ---
 # <a name="cdockingpanesrow-class"></a>CDockingPanesRow クラス
 ドッキング サイトの同じ水平または垂直の行 (列) に配置されるペインの一覧を管理します。  
@@ -201,10 +201,10 @@ virtual void AddPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pControlBar*  
- [in]*dockMethod*  
- [in]*lpRect*  
- [in]*bAddLast*  
+*pControlBar*<br/>
+[in][in]*dockMethod*  
+*lpRect*<br/>
+[in][in]*bAddLast*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -218,8 +218,8 @@ virtual void AddPaneFromRow(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pControlBar*  
- [in]*dockMethod*  
+*pControlBar*<br/>
+[in][in]*dockMethod*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -233,11 +233,11 @@ virtual void ArrangePanes(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nMargin*  
- 行の左上隅から最初のウィンドウのピクセル単位のオフセットを指定します。  
+*nMargin*<br/>
+[in]行の左上隅から最初のウィンドウのピクセル単位のオフセットを指定します。  
   
- [in]*nSpacing*  
- ウィンドウのピクセル単位で間隔を指定します。  
+*nSpacing*<br/>
+[in]ウィンドウのピクセル単位で間隔を指定します。  
   
 ### <a name="remarks"></a>Remarks  
  行が、ドッキング ウィンドウを整列するには、このメソッドを呼び出します。 このメソッドを呼び出した後に呼び出す必要がある`CDockingPanesRow::FixupVirtualRects(FALSE, NULL)`します。  
@@ -252,8 +252,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bStretch*  
- [in]*bHorz*  
+*bStretch*<br/>
+[in][in]*bHorz*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -270,8 +270,8 @@ CDockingPanesRow(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pParentDockBar*  
- [in]*nOffset*  
+*pParentDockBar*<br/>
+[in][in]*nOffset*  
  [in]*パラメーター nHeight*  
   
 ### <a name="remarks"></a>Remarks  
@@ -315,8 +315,8 @@ void FixupVirtualRects(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bMoveBackToVirtualRect*  
- [in]*pBarToExclude*  
+*bMoveBackToVirtualRect*<br/>
+[in][in]*pBarToExclude*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -390,8 +390,8 @@ void GetGroupFromPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pBar*  
- [in]*lst*  
+*pBar*<br/>
+[in][in]*lst*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -599,14 +599,14 @@ void MovePane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pControlBar*  
- [in]*ptOffset*  
- [in]*bSwapControlBars*  
- [in]*hdwp*  
- [in]*rectTarget*  
- [in]*nOffset*  
- [in]*bForward*  
- [in]*nAbsolutOffset*  
+*pControlBar*<br/>
+[in][in]*ptOffset*  
+*bSwapControlBars*<br/>
+[in][in]*hdwp*  
+*rectTarget*<br/>
+[in][in]*nOffset*  
+*bForward*<br/>
+[in][in]*nAbsolutOffset*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -653,8 +653,8 @@ virtual BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pBarOld*  
- [in]*pBarNew*  
+*pBarOld*<br/>
+[in][in]*pBarNew*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -672,10 +672,10 @@ virtual void RepositionPanes(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*rectNewParentBarArea*  
- [in]*nSide*  
- [in]*bExpand*  
- [in]*nOffset*  
+*rectNewParentBarArea*<br/>
+[in][in]*nSide*  
+*bExpand*<br/>
+[in][in]*nOffset*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -729,8 +729,8 @@ void SetExtra(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nExtraSpace*  
- [in]*rowExtraAlign*  
+*nExtraSpace*<br/>
+[in][in]*rowExtraAlign*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -744,8 +744,8 @@ virtual void ShowDockSiteRow(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bShow*  
- [in]*bDelay*  
+*bShow*<br/>
+[in][in]*bDelay*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -760,8 +760,8 @@ virtual BOOL ShowPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pControlBar*  
- [in]*bShow*  
+*pControlBar*<br/>
+[in][in]*bShow*  
  [in]*bDelay*  
   
 ### <a name="return-value"></a>戻り値  

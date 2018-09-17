@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 991b8c55c02272613ce329be9a053ff0110f1926
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 817c828c56fe2e95756e517c3d930d365714ad99
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764876"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701715"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd クラス
 ウィンドウを管理するメンバーと共に、Windows のシングル ドキュメント インターフェイス (SDI: Single Document Interface) のオーバーラップ フレーム ウィンドウまたはポップアップ フレーム ウィンドウの機能を提供します。  
@@ -986,7 +986,7 @@ virtual BOOL SetMenuBarState(DWORD nState);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*状態*|メニューを表示または非表示にするかどうかを指定します。 *状態*パラメーターは、次の値を持つことができます。<br /><br /> AFX_MBS_VISIBLE (0x01) - 場合は、非表示が表示されている場合は、効果はありませんが、メニューを表示します。<br />AFX_MBS_HIDDEN (0x02) - には、メニューが非表示に、表示されても、非表示になっている場合は、効果がありません。|  
+|*状態*|[in]メニューを表示または非表示にするかどうかを指定します。 *状態*パラメーターは、次の値を持つことができます。<br /><br /> AFX_MBS_VISIBLE (0x01) - 場合は、非表示が表示されている場合は、効果はありませんが、メニューを表示します。<br />AFX_MBS_HIDDEN (0x02) - には、メニューが非表示に、表示されても、非表示になっている場合は、効果がありません。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドは、メニューの状態を正常に変更された場合は TRUE。それ以外の場合、FALSE です。  
@@ -1005,7 +1005,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*nStyle*|かどうか、メニューは既定では、非表示が表示されるやフォーカスがあるを指定します。 *NStyle*パラメーターは、次の値を持つことができます。<br /><br /> AFX_MBV_KEEPVISIBLE (0X01)-<br />     メニューは、常に表示され、既定ではありませんが、フォーカス。<br />AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     既定では、メニューは表示されません。 メニューが表示されない場合は、メニューを表示し、フォーカスに ALT キーを押します。 メニューが表示される場合は、メニューを非表示に alt キーまたは ESC キーを押します。<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     (ビットごとの組み合わせ (OR)) - 既定では、メニューは表示されません。 メニューが表示されない場合は、メニューを表示し、フォーカスを F10 キーを押します。 メニューが表示される場合は、オンまたはオフ、メニューにフォーカスを切り替える F10 キーを押します。 非表示にする、alt キーまたは ESC キーを押すまで、メニューが表示されます。|  
+|*nStyle*|[in]かどうか、メニューは既定では、非表示が表示されるやフォーカスがあるを指定します。 *NStyle*パラメーターは、次の値を持つことができます。<br /><br /> AFX_MBV_KEEPVISIBLE (0X01)-<br />     メニューは、常に表示され、既定ではありませんが、フォーカス。<br />AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     既定では、メニューは表示されません。 メニューが表示されない場合は、メニューを表示し、フォーカスに ALT キーを押します。 メニューが表示される場合は、メニューを非表示に alt キーまたは ESC キーを押します。<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     (ビットごとの組み合わせ (OR)) - 既定では、メニューは表示されません。 メニューが表示されない場合は、メニューを表示し、フォーカスを F10 キーを押します。 メニューが表示される場合は、オンまたはオフ、メニューにフォーカスを切り替える F10 キーを押します。 非表示にする、alt キーまたは ESC キーを押すまで、メニューが表示されます。|  
   
 ### <a name="remarks"></a>Remarks  
  場合の値、 *nStyle*パラメーターが有効でないこのメソッドはデバッグ モードで発生させ、アサート[CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)リリース モードでします。 このメソッドはデバッグ モードでアサートし、派生した例外を発生させます。 その他のランタイム エラーが発生した場合、 [CException](../../mfc/reference/cexception-class.md)クラス。  

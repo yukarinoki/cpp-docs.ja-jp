@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f55be256ec7b400be6c46f928a2f2309d047ca2c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 84965abc66bf3aa58dce550dfb5e1b820fb25d12
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539303"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715736"
 ---
 # <a name="bittestandreset-bittestandreset64"></a>_bittestandreset、_bittestandreset64
 **Microsoft 固有の仕様**  
@@ -47,11 +47,11 @@ unsigned char _bittestandreset64(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力、出力] `a`  
- 検査するメモリへのポインター。  
+*a*<br/>
+[入力、出力]検査するメモリへのポインター。  
   
- [入力] `b`  
- テストするビット位置。  
+*b*<br/>
+[in]テストするビット位置。  
   
 ## <a name="return-value"></a>戻り値  
  指定した位置にあるビット。  

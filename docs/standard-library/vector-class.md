@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d60d47757bfcf1564d81dcb58c0727b1ca56b3ce
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2fdb8fea78d62202dd460f5dd219f2686bd99c6b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199496"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710236"
 ---
 # <a name="vector-class"></a>vector クラス
 
@@ -116,11 +116,11 @@ class vector
 
 ### <a name="parameters"></a>パラメーター
 
-*Type*  
- ベクターに格納される要素のデータ型。
+*Type*<br/>
+ベクターに格納される要素のデータ型。
 
-*アロケーター*  
- メモリのベクターの割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値は `allocator<Type>` です。
+*アロケーター*<br/>
+メモリのベクターの割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値は `allocator<Type>` です。
 
 ## <a name="remarks"></a>Remarks
 
@@ -234,20 +234,20 @@ void assign(InputIterator First, InputIterator Last);
 
 ### <a name="parameters"></a>パラメーター
 
-*まずは*  
- コピーする要素範囲内の最初の要素の位置。
+*まずは*<br/>
+コピーする要素範囲内の最初の要素の位置。
 
-*前の*  
- コピーする要素範囲を超える最初の要素の位置。
+*前の*<br/>
+コピーする要素範囲を超える最初の要素の位置。
 
-*カウント*  
- ベクターに挿入される要素のコピーの数。
+*カウント*<br/>
+ベクターに挿入される要素のコピーの数。
 
-*val*  
- ベクターに挿入される要素の値。
+*val*<br/>
+ベクターに挿入される要素の値。
 
-*IList*  
- 挿入する要素を含む initializer_list。
+*IList*<br/>
+挿入する要素を含む initializer_list。
 
 ### <a name="remarks"></a>Remarks
 
@@ -313,8 +313,8 @@ const_reference at(size_type _Pos) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*_Pos*  
- ベクター内で参照する要素を示す添字または位置の番号。
+*_Pos*<br/>
+ベクター内で参照する要素を示す添字または位置の番号。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1562,7 +1562,7 @@ void push_back(T&& Val);
 ### <a name="parameters"></a>パラメーター
 
 *val*<br/>
- ベクトルの末尾に追加する要素に割り当てる値。
+ベクトルの末尾に追加する要素に割り当てる値。
 
 ### <a name="example"></a>例
 
@@ -1726,8 +1726,8 @@ void reserve(size_type count);
 
 ### <a name="parameters"></a>パラメーター
 
-*count*  
- ベクターに割り当てる記憶域の最小長。
+*count*<br/>
+ベクターに割り当てる記憶域の最小長。
 
 ### <a name="example"></a>例
 
@@ -1768,11 +1768,11 @@ void resize(size_type Newsize, Type Val);
 
 ### <a name="parameters"></a>パラメーター
 
-*Newsize*  
- ベクターの新しいサイズ。
+*Newsize*<br/>
+ベクターの新しいサイズ。
 
-*val*  
- 新しいサイズが元のサイズよりも大きい場合に、ベクターに追加される新しい要素の初期化値。 この値を省略した場合、新しいオブジェクトは既定のコンストラクターを使用します。
+*val*<br/>
+新しいサイズが元のサイズよりも大きい場合に、ベクターに追加される新しい要素の初期化値。 この値を省略した場合、新しいオブジェクトは既定のコンストラクターを使用します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -2010,11 +2010,11 @@ friend void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-*right*  
- 交換する要素を提供するベクター、またはベクターと交換される要素とするベクトル*左*します。
+*right*<br/>
+交換する要素を提供するベクター、またはベクターと交換される要素とするベクトル*左*します。
 
-*left*  
- 要素とベクターと交換される、ベクトル*右*します。
+*left*<br/>
+要素とベクターと交換される、ベクトル*右*します。
 
 ### <a name="example"></a>例
 

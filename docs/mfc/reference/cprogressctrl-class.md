@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c4ea8cf95298918088f54c3099a8f41d9c16ca9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: f20a5f2767da015bb92a8e64491c2e5226f58aa5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690153"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705914"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl クラス
 Windows コモン プログレス バー コントロールの機能が用意されています。  
@@ -347,7 +347,7 @@ COLORREF SetBarColor(COLORREF clrBar);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*clrBar*|A [COLORREF](/windows/desktop/gdi/colorref)新しい進行状況インジケーターのバーの色を指定する値。 既定の色を使用する進行状況バーが発生するときを指定します。|  
+|*clrBar*|[in]A [COLORREF](/windows/desktop/gdi/colorref)新しい進行状況インジケーターのバーの色を指定する値。 既定の色を使用する進行状況バーが発生するときを指定します。|  
   
 ### <a name="return-value"></a>戻り値  
 
@@ -399,8 +399,8 @@ BOOL SetMarquee(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*fMarqueeMode*|True、on、または選択範囲のモードをオフにする場合は FALSE マーキー モードを有効にします。|  
-|[in]*nInterval*|時間マーキー アニメーションの更新間隔 (ミリ秒)。|  
+|*fMarqueeMode*|[in]True、on、または選択範囲のモードをオフにする場合は FALSE マーキー モードを有効にします。|  
+|*nInterval*|[in]時間マーキー アニメーションの更新間隔 (ミリ秒)。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドは、常に TRUE を返します。  
@@ -478,7 +478,7 @@ int SetState(int iState);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*iState*|進行状況バーに設定する状態。 次のいずれかの値を使用します。<br /><br /> -PBST_NORMAL - 進行中です。<br />-PBST_ERROR - エラー<br />-PBST_PAUSED - 一時停止|  
+|*iState*|[in]進行状況バーを設定する状態。 次のいずれかの値を使用します。<br /><br /> -PBST_NORMAL - 進行中です。<br />-PBST_ERROR - エラー<br />-PBST_PAUSED - 一時停止|  
   
 ### <a name="return-value"></a>戻り値  
  現在の進行状況バー コントロールの直前の状態。  

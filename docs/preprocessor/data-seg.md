@@ -1,5 +1,5 @@
 ---
-title: data_seg |Microsoft Docs
+title: data_seg |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1be97919f0f5b55d6e63eca8e59eb15e8ef9dff
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 9841b74d7bef74a117350b84747a606043d05d67
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42541001"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707669"
 ---
 # <a name="dataseg"></a>data_seg
 初期化された変数が格納される、.obj ファイルのデータ セグメントを指定します。  
@@ -34,31 +34,33 @@ ms.locfileid: "42541001"
 #pragma data_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
+### <a name="parameters"></a>パラメーター
+
+**push**<br/>
+(省略可能)内部コンパイラ スタックには、レコードを設定します。 A**プッシュ**できますが、*識別子*と*セグメント名*します。  
+
+**pop**<br/>
+(省略可能)内部コンパイラ スタックの上部からレコードを削除します。  
+  
+*identifier*<br/>
+(省略可能)使用すると**プッシュ**、内部コンパイラ スタックのレコードに名前を割り当てます。 使用すると**pop**、レコードまで内部スタックからポップ*識別子*が削除された場合*識別子*は内部のスタックに何もポップされます。  
+  
+*識別子*により、複数のレコードを 1 つのポップを**pop**コマンド。  
+  
+*「セグメント名」*<br/>
+(省略可能)セグメントの名前。 使用すると**pop**、スタックがポップされ、*セグメント名*がアクティブなセグメント名になります。  
+  
+*「セグメント クラス」*<br/>
+(省略可能)C++ との互換性をバージョン 2.0 より前に含まれています。 これは無視されます。  
+  
 ## <a name="remarks"></a>Remarks 
 
 用語の意味*セグメント*と*セクション*はこのトピックでは互換性があります。  
   
 OBJ ファイルを表示できる、 [dumpbin](../build/reference/dumpbin-command-line.md)アプリケーション。 初期化される変数の .obj ファイルの既定セグメントは、.data です。 初期化されていない変数は、ゼロに初期化されたものと見なされ、bss に格納されます。  
   
-**data_seg**パラメーターなしで、セグメントを .data にリセットします。  
-  
-*プッシュ*(省略可能)  
-レコードを内部コンパイラ スタックに格納します。 A*プッシュ*できますが、*識別子*と*セグメント名*します。  
-  
-*pop* (省略可能)  
-内部コンパイラ スタックの最上部からレコードを削除します。  
-  
-*識別子*(省略可能)  
-使用すると*プッシュ*、内部コンパイラ スタックのレコードに名前を割り当てます。 使用すると*pop*、レコードまで内部スタックからポップ*識別子*が削除された場合*識別子*は内部のスタックに何もポップされます。  
-  
-*識別子*により、複数のレコードを 1 つのポップを*pop*コマンド。  
-  
-*"segment-name"*(optional)  
-引数の名前。 使用すると*pop*、スタックがポップされ、*セグメント名*がアクティブなセグメント名になります。  
-  
-*「セグメント クラス」* (省略可能)  
-Version 2.0 未満の C++ との互換性のために残されています。 これは無視されます。  
-  
+**data_seg**パラメーターなしで、セグメントを .data にリセットします。
+
 ## <a name="example"></a>例  
   
 ```cpp  

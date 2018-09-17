@@ -1,5 +1,5 @@
 ---
-title: -LINENUMBERS |Microsoft ドキュメント
+title: -LINENUMBERS |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9202d7f46dbd3a619e379d076db217544bd4291
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c9b969f51733d9eb4c45ac5609b42920765a7ad5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371760"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704055"
 ---
 # <a name="linenumbers"></a>/LINENUMBERS
-```  
-/LINENUMBERS  
-```  
-  
-## <a name="remarks"></a>コメント  
- このオプションは、COFF 行番号を表示します。 C7 互換プログラム データベース (/Zi) でコンパイルされた場合に、行番号がオブジェクト ファイルに存在 (/Z7)、または行番号のみ (/Zd)。 実行可能ファイルまたは DLL が含まれています行 coff にはデバッグ情報の生成にリンクされている場合 (/debug)。  
-  
- のみ、 [/HEADERS](../../build/reference/headers.md) DUMPBIN オプションはにより生成されるファイルで使用できるよう、 [/GL](../../build/reference/gl-whole-program-optimization.md)コンパイラ オプション。  
-  
-## <a name="see-also"></a>関連項目  
- [DUMPBIN オプション](../../build/reference/dumpbin-options.md)
+
+```
+/LINENUMBERS
+```
+
+## <a name="remarks"></a>Remarks
+
+このオプションは、COFF 行番号を表示します。 C7 互換プログラム データベース (/Zi) でコンパイルされた場合に、行番号がオブジェクト ファイルに存在 (/Z7)、または行番号のみ (/Zd)。 実行可能ファイルまたは DLL が含まれています行 coff にはデバッグ情報の生成にリンクされている場合 (/debug)。
+
+のみ、 [/HEADERS](../../build/reference/headers.md) DUMPBIN オプションがで生成されたファイルで使用できる、 [/GL](../../build/reference/gl-whole-program-optimization.md)コンパイラ オプション。
+
+## <a name="see-also"></a>関連項目
+
+[DUMPBIN オプション](../../build/reference/dumpbin-options.md)

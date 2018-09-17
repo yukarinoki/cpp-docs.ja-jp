@@ -1,5 +1,5 @@
 ---
-title: _ _indwordstring |Microsoft Docs
+title: _ _indwordstring |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00c0f8e67a535d126eab3a19bf17b0bf8bfd7440
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 2c504b4f9a17c65affbcc2635ef63ec743f7ad93
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540686"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700896"
 ---
 # <a name="indwordstring"></a>__indwordstring
 **Microsoft 固有の仕様**  
@@ -41,14 +41,14 @@ void __indwordstring(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力] `Port`  
- 読み取るポート。  
+*ポート*<br/>
+[in]読み取るポート。  
   
- [出力] `Buffer`  
- ここでは、ポートから読み取ったデータを書き込まれます。  
+*Buffer*<br/>
+[out]ここでは、ポートから読み取ったデータを書き込まれます。  
   
- [入力] `Count`  
- 読み取るデータのバイト数。  
+*カウント*<br/>
+[in]読み取るデータのバイト数。  
   
 ## <a name="requirements"></a>要件  
   

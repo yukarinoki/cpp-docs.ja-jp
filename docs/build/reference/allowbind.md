@@ -1,5 +1,5 @@
 ---
-title: -ALLOWBIND |Microsoft ドキュメント
+title: -ALLOWBIND |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,27 +18,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af4a9f3d898d0087f0e8e861ccfe72e4adadb1de
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0ce0a33ebb0b8b9ba34ac241c8335e9524dec08b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368916"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715575"
 ---
 # <a name="allowbind"></a>/ALLOWBIND
-DLL をバインドできるかどうかを指定します。  
-  
-```  
-  
-/ALLOWBIND[:NO]  
-```  
-  
-## <a name="remarks"></a>コメント  
- **/ALLOWBIND**オプションは、ビットを示す Bind.exe にバインドする、イメージが許可されている DLL のヘッダーを設定します。 バインディングは、読み込みも高速、ローダーが再配置して、参照される各 DLL のアドレスのフィックス アップを実行する必要があるないときにイメージを許可できます。 デジタル署名されている場合にバインドする DLL は好ましくありません-バインドには、署名が無効になります。 バインドも何も起こりませんアドレス space layout randomization (機能) が有効な場合、イメージを使用して **/DYNAMICBASE** ASLR をサポートする Windows のバージョンにします。  
-  
- 使用して **/ALLOWBIND:NO**を Bind.exe が DLL をバインドするを防ぐためにします。  
-  
- 詳細については、次を参照してください。、 [/ALLOWBIND](../../build/reference/allowbind-prevent-dll-binding.md)リンカー オプション。  
-  
-## <a name="see-also"></a>関連項目  
- [EDITBIN オプション](../../build/reference/editbin-options.md)
+
+DLL をバインドできるかどうかを指定します。
+
+```
+
+/ALLOWBIND[:NO]
+```
+
+## <a name="remarks"></a>Remarks
+
+**/ALLOWBIND**オプションは、ビット イメージがバインドできることを Bind.exe に指示を示します DLL のヘッダーを設定します。 バインディングは、高速に読み込むリベースを各参照されている DLL をアドレスのフィックス アップを実行する、ローダーがない場合にイメージを許可できます。 デジタル署名されている場合にバインドする DLL は避けたい-バインドには、署名が無効になります。 バインディングには効果がないを使用して、イメージのアドレス空間レイアウト randomization (ASLR) が有効になっている場合 **/DYNAMICBASE** ASLR をサポートする Windows のバージョン。
+
+使用 **/ALLOWBIND:NO** Bind.exe が DLL をバインドするを防ぐためにします。
+
+詳細については、次を参照してください。、 [/ALLOWBIND](../../build/reference/allowbind-prevent-dll-binding.md)リンカー オプション。
+
+## <a name="see-also"></a>関連項目
+
+[EDITBIN オプション](../../build/reference/editbin-options.md)

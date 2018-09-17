@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 876373b5646790f9f8de0042442b2ab56d9d2971
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: dff53f7a4db12e32bca2494ba99f5b3b8203d48f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "40242869"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706668"
 ---
 # <a name="sourcelink-include-sourcelink-file-in-pdb"></a>/SOURCELINK (PDB に含める Sourcelink ファイル)
 
@@ -33,7 +33,7 @@ ms.locfileid: "40242869"
 
 ## <a name="arguments"></a>引数
 
-*ファイル名*  
+*ファイル名*<br/>
 JSON 形式の構成ファイルの Url へのローカル ファイル パスの単純なマッピングを含むソース ファイルを取得できる、デバッガーによって表示を指定します。 このファイルの形式の詳細については、次を参照してください。[ソース リンクの JSON スキーマ](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md#source-link-json-schema)します。
 
 ## <a name="remarks"></a>Remarks
@@ -48,11 +48,11 @@ SourceLink は、ソースのバイナリのデバッグを提供するために
 
 1. **追加オプション**ボックスで、追加 **/SOURCELINK:**_filename_選び、 **[ok]** または**適用**、変更を保存します。
 
-### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには  
-  
+### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
+
 - このオプションでは、同等のプログラムはありません。
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)  
-[リンカー オプション](../../build/reference/linker-options.md)  
+[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
+[リンカー オプション](../../build/reference/linker-options.md)

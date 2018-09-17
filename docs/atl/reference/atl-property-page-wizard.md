@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94bca969b150718450da166501abaea9c89b75d7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 671cb2fa19d920b0e60acd8d34623a05fe4a048e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760384"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703796"
 ---
 # <a name="atl-property-page-wizard"></a>ATL プロパティ ページ ウィザード
 
@@ -56,17 +56,20 @@ Visual Studio 2008 以降では、このウィザードによって生成され�
 
 オブジェクトの COM 機能に関する情報を提供します。
 
-**コクラス**  
-オブジェクトによってサポートされるインターフェイスの一覧を含むコンポーネント クラスの名前を設定します。
+- **コクラス**
 
-> [!NOTE]
->  属性を使用してプロジェクトを作成するか、指定したこのウィザード ページで、プロパティ ページが属性を使用する場合は、ATL が含まれていないためこのオプションを変更することはできません、`coclass`属性。
+   オブジェクトによってサポートされるインターフェイスの一覧を含むコンポーネント クラスの名前を設定します。
 
-**Type**  
-レジストリに表示されるオブジェクトの説明を設定します。
+   > [!NOTE]
+   > 属性を使用してプロジェクトを作成するか、指定したこのウィザード ページで、プロパティ ページが属性を使用する場合は、ATL が含まれていないためこのオプションを変更することはできません、`coclass`属性。
 
-**ProgID**  
-コンテナーは、オブジェクトの CLSID の代わりに使用できる名前を設定します。
+- **Type**
+
+   レジストリに表示されるオブジェクトの説明を設定します。
+
+- **ProgID**
+
+   コンテナーは、オブジェクトの CLSID の代わりに使用できる名前を設定します。
 
 ## <a name="see-also"></a>関連項目
 

@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9dc88b6b4488115390f4e6be57fbba2caadcc01
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 02806f26f623b2f4ad7f19cd67216018da984e42
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853635"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713701"
 ---
 # <a name="cmfcpopupmenubar-class"></a>CMFCPopupMenuBar クラス
 ポップアップ メニューに埋め込まれたメニュー バーです。  
@@ -100,7 +100,7 @@ class CMFCPopupMenuBar : public CMFCToolBar
   
 ### <a name="data-members"></a>データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CMFCPopupMenuBar::m_bDisableSideBarInXPMode](#m_bdisablesidebarinxpmode)|アプリケーションがある Windows XP の外観とグレーのサイドバーが表示されるかどうかを指定します。|  
   
@@ -129,7 +129,7 @@ class CMFCPopupMenuBar : public CMFCToolBar
   
  [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxpopupmenubar.h  
   
 ##  <a name="adjustsizeimmediate"></a>  CMFCPopupMenuBar::AdjustSizeImmediate  
@@ -140,8 +140,8 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bRecalcLayout*  
- ポップアップ メニュー バー ペインのレイアウトを自動的に再計算する場合は TRUEそれ以外の場合、FALSE です。  
+*bRecalcLayout*<br/>
+[in]ポップアップ メニュー バー ペインのレイアウトを自動的に再計算する場合は TRUEそれ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -153,8 +153,8 @@ BOOL BuildOrigItems(UINT uiMenuResID);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiMenuResID*  
- 読み込むメニュー リソースのメニュー ID を指定します。  
+*uiMenuResID*<br/>
+[in]読み込むメニュー リソースのメニュー ID を指定します。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は TRUE またはしない場合は FALSE を返します。  
@@ -190,8 +190,8 @@ CMFCToolBar* FindDestintationToolBar(CPoint point);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ポイント*  
- 画面上のポイント。  
+*ポイント*<br/>
+[in]画面上のポイント。  
   
 ### <a name="return-value"></a>戻り値  
  ハンドルを返します、ツールバーにポイントにある、1 つを使用する必要がある場合やない場合は NULL です。  
@@ -257,11 +257,11 @@ virtual BOOL ImportFromMenu(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*hMenu*  
- ポップアップ メニュー ボタンのインポート元のメニュー。  
+*hMenu*<br/>
+[in]ポップアップ メニュー ボタンのインポート元のメニュー。  
   
- [in]*bShowAllCommands*  
- メニューの TRUE の場合は、すべてのコマンドでは、インポート、または FALSE の場合、使用頻度の低いものが非表示にします。  
+*bShowAllCommands*<br/>
+[in]メニューの TRUE の場合は、すべてのコマンドでは、インポート、または FALSE の場合、使用頻度の低いものが非表示にします。  
   
 ### <a name="return-value"></a>戻り値  
  メニュー ボタンが正常にインポートされた場合は FALSE またはメニューからない場合は、TRUE を返します。  
@@ -325,8 +325,8 @@ BOOL LoadFromHash(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*hMenu*  
- 読み込みにアーカイブされたメニューへのハンドル。  
+*hMenu*<br/>
+[in]読み込みにアーカイブされたメニューへのハンドル。  
   
 ### <a name="return-value"></a>戻り値  
  メニューが正常に読み込まれたまたはしない場合は FALSE の場合は、TRUE を返します。  
@@ -364,11 +364,11 @@ virtual void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nIndex*  
- スタイルを設定するが、ツール バー ボタンの 0 から始まるインデックス。  
+*nIndex*<br/>
+[in]スタイルを設定するが、ツール バー ボタンの 0 から始まるインデックス。  
   
- [in]*nStyle*  
- ボタンのスタイル。 参照してください[ツール バー コントロールのスタイル](../../mfc/reference/toolbar-control-styles.md)利用できるツール バー ボタンのスタイルの一覧についてはします。  
+*nStyle*<br/>
+[in]ボタンのスタイル。 参照してください[ツール バー コントロールのスタイル](../../mfc/reference/toolbar-control-styles.md)利用できるツール バー ボタンのスタイルの一覧についてはします。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -380,8 +380,8 @@ void SetOffset(int iOffset);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iOffset*  
- ポップアップ メニュー バーをオフセットするか行の数。  
+*iOffset*<br/>
+[in]ポップアップ メニュー バーをオフセットするか行の数。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -395,11 +395,11 @@ void StartPopupMenuTimer(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pMenuButton*  
- 遅延タイマーを設定する対象のメニュー ボタンへのポインター。  
+*pMenuButton*<br/>
+[in]遅延タイマーを設定する対象のメニュー ボタンへのポインター。  
   
- [in]*nDelayFactor*  
- 遅延係数、標準のメニューの遅延時間 (0.5 秒間一般に、5 秒) に乗算する 1 以上に等しい。  
+*nDelayFactor*<br/>
+[in]遅延係数、標準のメニューの遅延時間 (0.5 秒間一般に、5 秒) に乗算する 1 以上に等しい。  
   
 ### <a name="remarks"></a>Remarks  
   

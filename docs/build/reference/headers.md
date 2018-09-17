@@ -1,5 +1,5 @@
 ---
-title: ヘッダー |Microsoft ドキュメント
+title: ヘッダー |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94d9b49983ff75af7064e89279209447d099f0d1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: afc569f0c0158b1bab327dc0b6c32951fd28e483
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370294"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713610"
 ---
 # <a name="headers"></a>/HEADERS
-```  
-/HEADERS  
-```  
-  
-## <a name="remarks"></a>コメント  
- このオプションは、ファイル ヘッダーと各セクションのヘッダーを出力します。 このオプションをライブラリに対して指定すると、各メンバー オブジェクトのヘッダーが出力されます。  
-  
- のみ、 **/HEADERS** DUMPBIN オプションはにより生成されるファイルで使用できるよう、 [/GL](../../build/reference/gl-whole-program-optimization.md)コンパイラ オプション。  
-  
-## <a name="see-also"></a>関連項目  
- [DUMPBIN オプション](../../build/reference/dumpbin-options.md)
+
+```
+/HEADERS
+```
+
+## <a name="remarks"></a>Remarks
+
+このオプションは、ファイル ヘッダーと各セクションのヘッダーを出力します。 このオプションをライブラリに対して指定すると、各メンバー オブジェクトのヘッダーが出力されます。
+
+のみ、 **/HEADERS** DUMPBIN オプションがで生成されたファイルで使用できる、 [/GL](../../build/reference/gl-whole-program-optimization.md)コンパイラ オプション。
+
+## <a name="see-also"></a>関連項目
+
+[DUMPBIN オプション](../../build/reference/dumpbin-options.md)

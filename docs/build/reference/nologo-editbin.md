@@ -1,5 +1,5 @@
 ---
-title: -NOLOGO (EDITBIN) |Microsoft ドキュメント
+title: -NOLOGO (EDITBIN) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,20 +18,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de5591caab2488b4e55464e783df063859e538e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9b800e827daebbe7656a69888617a74081eb3ef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370502"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709463"
 ---
 # <a name="nologo-editbin"></a>/NOLOGO (EDITBIN)
-```  
-/NOLOGO  
-```  
-  
-## <a name="remarks"></a>コメント  
- このオプションは、EDITBIN 著作権メッセージとバージョン番号の表示を抑制します。  
-  
-## <a name="see-also"></a>関連項目  
- [EDITBIN オプション](../../build/reference/editbin-options.md)
+
+```
+/NOLOGO
+```
+
+## <a name="remarks"></a>Remarks
+
+このオプションは、EDITBIN 著作権メッセージとバージョン番号の表示を抑制します。
+
+## <a name="see-also"></a>関連項目
+
+[EDITBIN オプション](../../build/reference/editbin-options.md)

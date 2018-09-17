@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b0f4660e9221855c93835a0a5ba5e0557178a66
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: b46f61ef727c1b283137bb3d537d2dbad416c1d8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109863"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703821"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (共通言語ランタイムのコンパイル)
 
@@ -40,7 +40,7 @@ ms.locfileid: "44109863"
 
 ## <a name="arguments"></a>引数
 
-*options*  
+*options*<br/>
 次の 1 つまたは複数のスイッチをコンマで区切って指定します。
 
 - none
@@ -140,5 +140,5 @@ C++ のマネージド拡張を使用するコードを使用している場合�
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)   
+[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
 [コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)

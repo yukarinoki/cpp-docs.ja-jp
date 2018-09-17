@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9de39d2054f3c75e00e8827ebb4aaefac9970d59
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 81e027108d0f7b62ba707718c5396432396bdc5e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42544472"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711881"
 ---
 # <a name="ctooltipmanager-class"></a>CTooltipManager クラス
 ツールヒントに関するランタイム情報を保持します。 `CTooltipManager` クラスのインスタンスは、アプリケーションごとに 1 回作成されます。  
@@ -76,14 +76,14 @@ static BOOL CreateToolTip(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*pToolTip*  
- ツールヒントのポインターへの参照。 新しく作成されたツールヒントを指すように、関数が返されるときに設定されます。  
+*pToolTip*<br/>
+[out]ツールヒントのポインターへの参照。 新しく作成されたツールヒントを指すように、関数が返されるときに設定されます。  
   
- [in]*pWndParent*  
- ツールヒントの親です。  
+*pWndParent*<br/>
+[in]ツールヒントの親です。  
   
- [in]*%n タイプ*  
- ツールヒントの型。  
+*%n タイプ*<br/>
+[in]ツールヒントの型。  
   
 ### <a name="return-value"></a>戻り値  
  0 以外の場合、ツールヒントが正常に作成されました。  
@@ -117,8 +117,8 @@ static void DeleteToolTip(CToolTipCtrl*& pToolTip);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力、出力]*pToolTip*  
- 破棄するツールヒントへのポインターへの参照。  
+*pToolTip*<br/>
+[入力、出力]破棄するツールヒントへのポインターへの参照。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドの各呼び出し[CToolTipCtrl クラス](../../mfc/reference/ctooltipctrl-class.md)によって作成された[CTooltipManager::CreateToolTip](#createtooltip)します。 親コントロールからこのメソッドを呼び出す必要があります、`OnDestroy`ハンドラー。 これは、framework からヒントを正しく削除に必要です。 このメソッドは、設定*pToolTip*を返す前に NULL にします。  
@@ -134,14 +134,14 @@ void SetTooltipParams(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nTypes*  
- コントロールの種類を指定します。  
+*nTypes*<br/>
+[in]コントロールの種類を指定します。  
   
- [in]*pRTC*  
- カスタム ツールヒントのランタイム クラスです。  
+*pRTC*<br/>
+[in]カスタム ツールヒントのランタイム クラスです。  
   
- [in]*pParams*  
- ツールヒントのパラメーターです。  
+*pParams*<br/>
+[in]ツールヒントのパラメーターです。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドを設定、ランタイム クラスと最初のパラメーターを[CToolTipManager](../../mfc/reference/ctooltipmanager-class.md)ツールヒントを作成するときに使用します。 コントロールを呼び出すと[CTooltipManager::CreateToolTip](#createtooltip)ツールヒント内のパスである型で示される型のいずれかと*nTypes*、ツールヒント マネージャーのインスタンスであるツールヒント コントロールを作成する、指定されたランタイム クラス*pRTC*で指定されたパラメーターを渡す*pParams*新しいヒントにします。  
@@ -168,20 +168,20 @@ static void SetTooltipText(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pTI*  
- TOOLINFO オブジェクトへのポインター。  
+*PTI*<br/>
+[in]TOOLINFO オブジェクトへのポインター。  
   
- [入力、出力]*pToolTip*  
- テキストと説明を設定する対象のツールヒント コントロールへのポインター。  
+*pToolTip*<br/>
+[入力、出力]テキストと説明を設定する対象のツールヒント コントロールへのポインター。  
   
- [in]*%n タイプ*  
- このツールヒントが関連付けられているコントロールの種類を指定します。  
+*%n タイプ*<br/>
+[in]このツールヒントが関連付けられているコントロールの種類を指定します。  
   
- [in]*strText*  
- ツールヒントのテキストとして設定するテキスト。  
+*strText*<br/>
+[in]ツールヒントのテキストとして設定するテキスト。  
   
- [in]*lpszDescr*  
- ツールヒントの説明へのポインター。 NULL にすることができます。  
+*lpszDescr*<br/>
+[in]ツールヒントの説明へのポインター。 NULL にすることができます。  
   
 ### <a name="remarks"></a>Remarks  
  値 *%n タイプ*と同じ値である必要があります、 *%n タイプ*パラメーターの[CTooltipManager::CreateToolTip](#createtooltip)ツールヒントを作成するときにします。  

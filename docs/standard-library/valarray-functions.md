@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::tan [C++]
 - std::tanh [C++]
-ms.openlocfilehash: 855b58c9a970b569da533d84ffb21728bdf90157
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a770e240f28dbd8e904a288beb10a9a6abe7431c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962472"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715677"
 ---
 # <a name="ltvalarraygt-functions"></a>&lt;valarray&gt; 関数
 
@@ -69,8 +69,8 @@ valarray<Type> abs(const valarray<Type>& left);
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- 要素がこのメンバー関数の演算の対象となる入力 valarray。
+*left*<br/>
+要素がこのメンバー関数の演算の対象となる入力 valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -124,8 +124,8 @@ valarray<Type> acos(const valarray<Type>& left);
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- 要素がこのメンバー関数の演算の対象となる入力 valarray。
+*left*<br/>
+要素がこのメンバー関数の演算の対象となる入力 valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -197,8 +197,8 @@ valarray<Type> asin(const valarray<Type>& left);
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- 要素がこのメンバー関数の演算の対象となる入力 valarray。
+*left*<br/>
+要素がこのメンバー関数の演算の対象となる入力 valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -270,8 +270,8 @@ valarray<Type> atan(const valarray<Type>& left);
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- 要素がこのメンバー関数の演算の対象となる入力 valarray。
+*left*<br/>
+要素がこのメンバー関数の演算の対象となる入力 valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -352,11 +352,11 @@ valarray<Type> atan2(const Type& left, const valarray<Type>& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- 定数の数値データ型、またはアークタンジェント引数の y 座標の値を提供する要素から成る入力 valarray。
+*left*<br/>
+定数の数値データ型、またはアークタンジェント引数の y 座標の値を提供する要素から成る入力 valarray。
 
-*right*  
- 定数の数値データ型、またはアークタンジェント引数の x 座標の値を提供する要素から成る入力 valarray。
+*right*<br/>
+定数の数値データ型、またはアークタンジェント引数の x 座標の値を提供する要素から成る入力 valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -440,8 +440,8 @@ valarray<Type> cos(const valarray<Type>& left);
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- 要素がこのメンバー関数の演算の対象となる入力 valarray。
+*left*<br/>
+要素がこのメンバー関数の演算の対象となる入力 valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -517,8 +517,8 @@ valarray<Type> cosh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- 要素がこのメンバー関数の演算の対象となる入力 valarray。
+*left*<br/>
+要素がこのメンバー関数の演算の対象となる入力 valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -600,8 +600,8 @@ valarray<Type> exp(const valarray<Type>& left);
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- 要素がこのメンバー関数の演算の対象となる入力 valarray。
+*left*<br/>
+要素がこのメンバー関数の演算の対象となる入力 valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -663,8 +663,8 @@ valarray<Type> log(const valarray<Type>& left);
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- 要素がこのメンバー関数の演算の対象となる入力 valarray。
+*left*<br/>
+要素がこのメンバー関数の演算の対象となる入力 valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -726,8 +726,8 @@ valarray<Type> log10(const valarray<Type>& left);
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- 要素がこのメンバー関数の演算の対象となる入力 valarray。
+*left*<br/>
+要素がこのメンバー関数の演算の対象となる入力 valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -806,11 +806,11 @@ pow(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- 各要素を累乗する底を指定する要素から成る入力 valarray。
+*left*<br/>
+各要素を累乗する底を指定する要素から成る入力 valarray。
 
-*right*  
- 各要素を累乗する指数を指定する要素から成る入力 valarray。
+*right*<br/>
+各要素を累乗する指数を指定する要素から成る入力 valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -888,8 +888,8 @@ valarray<Type> sin(const valarray<Type>& left);
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- 要素がこのメンバー関数の演算の対象となる入力 valarray。
+*left*<br/>
+要素がこのメンバー関数の演算の対象となる入力 valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -965,8 +965,8 @@ valarray<Type> sinh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- 要素がこのメンバー関数の演算の対象となる入力 valarray。
+*left*<br/>
+要素がこのメンバー関数の演算の対象となる入力 valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1048,8 +1048,8 @@ valarray<Type> sqrt(const valarray<Type>& left);
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- 要素がこのメンバー関数の演算の対象となる入力 valarray。
+*left*<br/>
+要素がこのメンバー関数の演算の対象となる入力 valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1124,8 +1124,8 @@ valarray<Type> tan(const valarray<Type>& left);
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- 要素がこのメンバー関数の演算の対象となる入力 valarray。
+*left*<br/>
+要素がこのメンバー関数の演算の対象となる入力 valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1201,8 +1201,8 @@ valarray<Type> tanh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- 要素がこのメンバー関数の演算の対象となる入力 valarray。
+*left*<br/>
+要素がこのメンバー関数の演算の対象となる入力 valarray。
 
 ### <a name="return-value"></a>戻り値
 

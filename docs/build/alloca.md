@@ -1,5 +1,5 @@
 ---
-title: alloca |Microsoft ドキュメント
+title: alloca |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,17 +12,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f58d0c959008196798087d139b44715a67f567b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e0c73abcb52b991ee6bd4de839861aa4ef684181
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360421"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702747"
 ---
 # <a name="alloca"></a>alloca
-[_alloca](../c-runtime-library/reference/alloca.md)配置し、さらにフレーム ポインターを使用するために必要なは、16 バイトにする必要です。  
-  
- 割り当てられているスタック含める必要がある、以降の呼び出し先関数のパラメーターにその下の領域で説明したよう[スタック割り当て](../build/stack-allocation.md)です。  
-  
-## <a name="see-also"></a>関連項目  
- [スタックの使用](../build/stack-usage.md)
+
+[_alloca](../c-runtime-library/reference/alloca.md) 16 バイトに揃えられ、またフレーム ポインターを使用する必要がありますが必要です。
+
+説明したように、その後に呼び出された関数のパラメーターをその下の領域を含める必要がありますに割り当てられるスタック[スタック割り当て](../build/stack-allocation.md)します。
+
+## <a name="see-also"></a>関連項目
+
+[スタックの使用](../build/stack-usage.md)

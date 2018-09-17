@@ -1,5 +1,5 @@
 ---
-title: .ファイルをリンカー入力として lib |Microsoft ドキュメント
+title: .リンカー入力としての lib ファイル |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,57 +24,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8382e43398c4b6e5241542e6b41fdee8e2f70eff
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 774fe236b66bbe6222956de05efbfe89fab3de9f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374545"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706499"
 ---
 # <a name="lib-files-as-linker-input"></a>リンカー入力としての .lib ファイル
-形式の標準ライブラリおよび COFF インポート ライブラリ、どちらも通常、拡張子であるリンクを受け入れます。 lib です。 標準ライブラリでは、オブジェクトが含まれており、LIB ツールによって作成されます。 インポート ライブラリは他のプログラムでのエクスポートに関する情報が含まれてし、作成するにはリンクによってエクスポートを含むプログラムをビルドするとき、または LIB ツールによってです。 標準的な作成またはインポート ライブラリに LIB の使用方法の詳細については、次を参照してください。 [LIB リファレンス](../../build/reference/lib-reference.md)です。 リンクを使用して、インポート ライブラリを作成する方法の詳細については、「、 [/DLL](../../build/reference/dll-build-a-dll.md)オプション。  
-  
-ライブラリは、ファイル名の引数、または既定のライブラリとしてリンクに指定されます。 リンクは、最初に、コマンドラインで指定されたライブラリを検索して外部参照を解決し、ライブラリがで指定された既定の[/DEFAULTLIB](../../build/reference/defaultlib-specify-default-library.md)オプション、既定のライブラリが指定の .obj ファイル内とします。 パスを指定するには、ライブラリの名前、そのディレクトリでは、ライブラリのリンクが検索されます。 パスが指定されていないリンクからのリンクを実行して、ディレクトリにし、その後、LIB 環境変数で指定されたディレクトリで検索されます。  
-  
-## <a name="to-add-lib-files-as-linker-input-in-the-development-environment"></a>開発環境でリンカー入力としての .lib ファイルを追加するには  
-  
-1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[のプロジェクト プロパティの操作](../../ide/working-with-project-properties.md)です。  
-  
-2.  選択、**入力**プロパティ ページで、**リンカー**フォルダーです。  
-  
-3.  変更、**追加の依存関係**.lib ファイルを追加するプロパティです。  
-  
-## <a name="to-programmatically-add-lib-files-as-linker-input"></a>リンカー入力としての .lib ファイルをプログラムで追加するには  
-  
--   参照してください[AdditionalDependencies](https://msdn.microsoft.com/library/microsoft.visualstudio.vcprojectengine.vclinkertool.additionaldependencies.aspx)です。  
-  
-## <a name="example"></a>例  
-次の例では、構築し、.lib ファイルを使用する方法を示します。 .Lib ファイルを最初に、ビルドするには。  
-  
-```cpp  
-// lib_link_input_1.cpp  
-// compile by using: cl /LD lib_link_input_1.cpp  
-__declspec(dllexport) int Test() {  
-   return 213;  
-}  
-```  
-  
-次に、作成した .lib ファイルを使用してこのサンプルをコンパイルします。  
-  
-```cpp  
-// lib_link_input_2.cpp  
-// compile by using: cl /EHsc lib_link_input_1.lib lib_link_input_2.cpp   
-__declspec(dllimport) int Test();  
-#include <iostream>  
-int main() {  
-   std::cout << Test() << std::endl;  
-}  
-```  
-  
-```Output  
-213  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [LINK の入力ファイル](../../build/reference/link-input-files.md)   
- [リンカー オプション](../../build/reference/linker-options.md)
+
+リンクを受け入れる形式の標準ライブラリと COFF インポート ライブラリ、どちらも通常は拡張子が付いています。 lib します。 標準ライブラリでは、オブジェクトが含まれており、LIB ツールによって作成されます。 インポート ライブラリは、他のプログラムのエクスポートについての情報が含まれてし、エクスポートを含むプログラムをビルドするとき、またはライブラリをリンクするか作成します。 LIB を使用して、標準的な作成またはライブラリをインポートする方法の詳細については、次を参照してください。 [LIB リファレンス](../../build/reference/lib-reference.md)します。 リンクを使用して、インポート ライブラリを作成する方法の詳細については、次を参照してください。、 [/DLL](../../build/reference/dll-build-a-dll.md)オプション。
+
+ライブラリは、ファイル名の引数または既定のライブラリのいずれかとしてリンクに指定されます。 リンクでは、外部参照を解決して、コマンドラインで指定されたライブラリを最初に検索し、ライブラリがで指定された既定の[/DEFAULTLIB](../../build/reference/defaultlib-specify-default-library.md)オプションで、既定のライブラリという名前の .obj ファイル内とします。 パスを指定するには、ライブラリ名を持つ、リンクはそのディレクトリでライブラリを検索します。 パスが指定されていない場合、リンクはリンクを実行しているディレクトリにし、その後、LIB 環境変数で指定されたディレクトリで検索します。
+
+## <a name="to-add-lib-files-as-linker-input-in-the-development-environment"></a>開発環境でリンカー入力としての .lib ファイルを追加するには
+
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+
+1. 選択、**入力**プロパティ ページで、**リンカー**フォルダー。
+
+1. 変更、**追加の依存関係**.lib ファイルを追加するプロパティ。
+
+## <a name="to-programmatically-add-lib-files-as-linker-input"></a>リンカー入力としての .lib ファイルをプログラムで追加するには
+
+- 参照してください[AdditionalDependencies](https://msdn.microsoft.com/library/microsoft.visualstudio.vcprojectengine.vclinkertool.additionaldependencies.aspx)します。
+
+## <a name="example"></a>例
+
+次の例では、ビルドし、.lib ファイルを使用する方法を示します。 .Lib ファイルを最初に、ビルドするには。
+
+```cpp
+// lib_link_input_1.cpp
+// compile by using: cl /LD lib_link_input_1.cpp
+__declspec(dllexport) int Test() {
+   return 213;
+}
+```
+
+作成した .lib ファイルを使用してこのサンプルをコンパイルします。
+
+```cpp
+// lib_link_input_2.cpp
+// compile by using: cl /EHsc lib_link_input_1.lib lib_link_input_2.cpp
+__declspec(dllimport) int Test();
+#include <iostream>
+int main() {
+   std::cout << Test() << std::endl;
+}
+```
+
+```Output
+213
+```
+
+## <a name="see-also"></a>関連項目
+
+[LINK の入力ファイル](../../build/reference/link-input-files.md)<br/>
+[リンカー オプション](../../build/reference/linker-options.md)

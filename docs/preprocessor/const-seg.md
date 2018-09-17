@@ -1,7 +1,7 @@
 ---
 title: const_seg |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/17/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3081837cc4516750f8c2c0d75cfc37eef208f9d
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: db73d212a11fe096c07a7e14d033c21e6b61311c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42545785"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705212"
 ---
 # <a name="constseg"></a>const_seg
 セグメントを指定場所[const](../cpp/const-cpp.md)変数は、.obj ファイルに格納されます。  
@@ -34,33 +34,35 @@ ms.locfileid: "42545785"
 #pragma const_seg ( [ [ { push | pop}, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
-## <a name="remarks"></a>Remarks  
- 
+### <a name="parameters"></a>パラメーター
+
+**push**<br/>
+(省略可能)内部コンパイラ スタックには、レコードを設定します。 A**プッシュ**できますが、*識別子*と*セグメント名*します。  
+  
+**pop**<br/>
+(省略可能)内部コンパイラ スタックの上部からレコードを削除します。  
+  
+*identifier*<br/>
+(省略可能)使用すると**プッシュ**、内部コンパイラ スタックのレコードに名前を割り当てます。 使用すると**pop**、レコードまで内部スタックからポップ*識別子*が削除された場合*識別子*は内部のスタックに何もポップされます。  
+  
+使用して*識別子*により、複数のレコードを 1 つのポップを**pop**コマンド。  
+  
+"*セグメント名*"<br/>  
+(省略可能)セグメントの名前。 使用すると**pop**、スタックがポップされ、*セグメント名*がアクティブなセグメント名になります。  
+  
+"*セグメント クラス*"<br/>
+(省略可能)C++ との互換性をバージョン 2.0 より前に含まれています。 これは無視されます。  
+  
+## <a name="remarks"></a>Remarks
+
 用語の意味*セグメント*と*セクション*はこのトピックでは互換性があります。  
   
 OBJ ファイルを表示できる、 [dumpbin](../build/reference/dumpbin-command-line.md)アプリケーション。 `const` 変数の .obj ファイルの既定セグメントは、.rdata です。 スカラーのような一部の `const` 変数は、コード ストリームに自動的にインライン展開されます。 インライン コードは、.rdata には現れません。  
   
 `const_seg` 内に動的な初期化を必要とするオブジェクトを定義すると、未定義の動作が発生します。  
   
-パラメーターなしの `#pragma const_seg` は、セグメントを .rdata にリセットします。  
-  
-*プッシュ*(省略可能)  
-レコードを内部コンパイラ スタックに格納します。 A*プッシュ*できますが、*識別子*と*セグメント名*します。  
-  
-*pop* (省略可能)  
-内部コンパイラ スタックの最上部からレコードを削除します。  
-  
-*識別子*(省略可能)  
-使用すると*プッシュ*、内部コンパイラ スタックのレコードに名前を割り当てます。 使用すると*pop*、レコードまで内部スタックからポップ*識別子*が削除された場合*識別子*は内部のスタックに何もポップされます。  
-  
-使用して*識別子*により、複数のレコードを 1 つのポップを*pop*コマンド。  
-  
-"*セグメント名*"(省略可能)  
-引数の名前。 使用すると*pop*、スタックがポップされ、*セグメント名*がアクティブなセグメント名になります。  
-  
-"*セグメント クラス*"(省略可能)  
-Version 2.0 未満の C++ との互換性のために残されています。 これは無視されます。  
-  
+パラメーターなしの `#pragma const_seg` は、セグメントを .rdata にリセットします。
+
 ## <a name="example"></a>例  
   
 ```cpp  

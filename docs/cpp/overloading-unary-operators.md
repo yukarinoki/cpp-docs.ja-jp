@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c00f9d40fedd084afa2da6e2e7bfaf0ee831b3a9
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 54529bed25fc60815f80ea8660bcf5786cb2887c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401881"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700684"
 ---
 # <a name="overloading-unary-operators"></a>単項演算子のオーバーロード
 オーバーロードできる単項演算子は次のとおりです。  
@@ -55,15 +55,15 @@ ms.locfileid: "39401881"
   
  次の規則は他のすべての単項演算子に適用されます。 単項演算子関数を非静的メンバーとして宣言するには、次の形式で宣言する必要があります。  
   
- `ret-type operator` `op` `()`  
+> *ret 型***演算子** *op* **)**  
   
- `ret-type` は戻り値の型であり、`op` は前の表に示している演算子の 1 つです。  
+ 場所*ret 型*は戻り値の型と*op*が演算子の 1 つは、上記の表に表示されています。  
   
  単項演算子関数をグローバル関数として宣言するには、次の形式で宣言する必要があります。  
   
- `ret-type operator` `op` (`arg` )  
+> *ret 型***演算子** *op* **(** *arg* **)**  
   
- `ret-type` と `op` はメンバー演算子関数での説明と同様です。`arg` は操作対象のクラス型の引数です。  
+ 場所*ret 型*と*op*メンバー演算子関数について説明したとおり、 *arg*は操作対象のクラス型の引数です。  
   
 > [!NOTE]
 >  単項演算子の戻り値の型に制限はありません。 たとえば、論理 NOT (`!`) が整数値を返すのは正しい使い方ですが、強制ではありません。  
