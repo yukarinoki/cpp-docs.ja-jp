@@ -65,12 +65,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60b38ae134d761ea186b50545f9886275700dbc3
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0f5297b6764ba29805b842329403557ad2aa4c3b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677458"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701923"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA 構造体
 `AFX_GLOBAL_DATA` 構造体は、フレームワークを管理するため、またはアプリケーションの外観および動作をカスタマイズするために使用されるフィールドおよびメソッドを格納します。  
@@ -220,14 +220,14 @@ BOOL DrawParentBackground(
 ```  
   
 ### <a name="parameters"></a>パラメーター   
- [in]*我が物*  
- コントロールのウィンドウへのポインター。  
+*我が物*<br/>
+[in]コントロールのウィンドウへのポインター。  
   
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*lpRect*  
- 描画する領域に外接する四角形を指すポインター。 既定値は、NULL です。  
+*lpRect*<br/>
+[in]描画する領域に外接する四角形を指すポインター。 既定値は、NULL です。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -250,36 +250,36 @@ BOOL DrawTextOnGlass(
 ```  
   
 ### <a name="parameters"></a>パラメーター   
- [in]*hTheme*  
- ウィンドウのテーマ データへのハンドル、または NULL。 フレームワークは、このパラメーターが NULL でないテーマがサポートされている場合、テキストを描画するために、指定されたテーマを使用します。 それ以外の場合、フレームワークは、テーマを使用せずにテキストを描画します。  
+*hTheme*<br/>
+[in]ウィンドウのテーマ データへのハンドル、または NULL。 フレームワークは、このパラメーターが NULL でないテーマがサポートされている場合、テキストを描画するために、指定されたテーマを使用します。 それ以外の場合、フレームワークは、テーマを使用せずにテキストを描画します。  
   
  使用して、 [OpenThemeData](/windows/desktop/api/uxtheme/nf-uxtheme-openthemedata) HTHEME を作成します。  
   
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*iPartId*  
- 目的のテキストの外観を備えたコントロールのパーツ。 詳細については、テーブルの部分列を参照してください。[パーツと状態](https://msdn.microsoft.com/library/windows/desktop/bb773210)します。 この値が 0 の場合、テキストは既定のフォント、またはデバイス コンテキストに選択されているフォントで描画されます。  
+*iPartId*<br/>
+[in]目的のテキストの外観を備えたコントロールの部分。 詳細については、テーブルの部分列を参照してください。[パーツと状態](https://msdn.microsoft.com/library/windows/desktop/bb773210)します。 この値が 0 の場合、テキストは既定のフォント、またはデバイス コンテキストに選択されているフォントで描画されます。  
   
- [in]*iStateId*  
- 目的のテキストの外観を備えたコントロールの状態。 詳細については、テーブルの状態列を参照してください。[パーツと状態](https://msdn.microsoft.com/library/windows/desktop/bb773210)します。  
+*iStateId*<br/>
+[in]目的のテキストの外観を備えたコントロールの状態。 詳細については、テーブルの状態列を参照してください。[パーツと状態](https://msdn.microsoft.com/library/windows/desktop/bb773210)します。  
   
- [in]*strText*  
- 描画するテキスト。  
+*strText*<br/>
+[in]描画するテキスト。  
   
- [in]*rect*  
- 指定されたテキストが描画される領域の境界。  
+*rect*<br/>
+[in]指定したテキストが描画される領域の境界です。  
   
- [in]*dwFlags*  
- 指定されたテキストの描画方法を指定するフラグのビットごとの組み合わせ (OR)。  
+*dwFlags*<br/>
+[in]指定したテキストの描画方法を指定するフラグのビットごとの組み合わせ (OR)。  
   
  場合、 *hTheme*パラメーターが`NULL`テーマがサポートされており、有効になっていないか、*フォーマット*のパラメーター、 [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)メソッドが有効なについて説明しますフラグ。 テーマがサポートされている場合、 *dwFlags*のパラメーター、 [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)メソッドが有効なフラグについて説明します。  
   
- [in]*nGlowSize*  
- 指定されたテキストを描画する前に背景に描画される光彩効果のサイズ。 既定値は 0 です。  
+*nGlowSize*<br/>
+[in]指定したテキストを描画する前に、背景に描画される光彩効果のサイズ。 既定値は 0 です。  
   
- [in]*clrText*  
- 指定されたテキストの描画に使用される色。 既定値は既定の色です。  
+*clrText*<br/>
+[in]指定したテキストを描画する色です。 既定値は既定の色です。  
   
 ### <a name="return-value"></a>戻り値  
  テーマは、指定したテキストを描画するために使用する場合は TRUE。それ以外の場合、FALSE です。  
@@ -305,8 +305,8 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター   
- [in]*bEnable*  
- ユーザー補助のサポートを有効にする場合は TRUEユーザー補助のサポートを無効にする場合は FALSE。 既定値は TRUE です。  
+*bEnable*<br/>
+[in]ユーザー補助のサポートを有効にする場合は TRUEユーザー補助のサポートを無効にする場合は FALSE。 既定値は TRUE です。  
   
 ### <a name="remarks"></a>Remarks  
  Active Accessibility は、プログラムと支援技術製品と共に、Windows オペレーティング システムの作業を改善する COM ベース テクノロジです。 ユーザー インターフェイス要素に関する情報を公開するための信頼性の高いメソッドを提供します。 ただし、Microsoft UI オートメーションと呼ばれる新しいユーザー補助モデルでは、使用できるようになりました。 2 つのテクノロジの比較は、次を参照してください。 [UI オートメーションと Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)します。  
@@ -331,17 +331,17 @@ BOOL ExcludeTag(
 ```  
   
 ### <a name="parameters"></a>パラメーター   
- [in]*strBuffer*  
- テキストのバッファー。  
+*strBuffer*<br/>
+[in]テキストのバッファー。  
   
- [in]*lpszTag*  
- タグと終了 XML タグのペアの名前。  
+*lpszTag*<br/>
+[in]タグと終了 XML タグのペアの名前。  
   
- [out]*strTag*  
- このメソッドが戻るとき、 *strTag*パラメーターには間にある開始タグと終了 XML タグで指定されたテキストが含まれています、 *lpszTag*パラメーター。 先頭または末尾の空白は結果からトリミングされます。  
+*strTag*<br/>
+[out]このメソッドが戻るとき、 *strTag*パラメーターには間にある開始タグと終了 XML タグで指定されたテキストが含まれています、 *lpszTag*パラメーター。 先頭または末尾の空白は結果からトリミングされます。  
   
- [in]*bIsCharsList*  
- エスケープ文字のシンボルを変換する場合は True、 *strTag*パラメーターに実際のエスケープ文字。変換を実行するには、ない場合は FALSE。既定値は FALSE です。 詳細については、「解説」を参照してください。  
+*bIsCharsList*<br/>
+[in]エスケープ文字のシンボルを変換する場合は True、 *strTag*パラメーターに実際のエスケープ文字。変換を実行するには、ない場合は FALSE。既定値は FALSE です。 詳細については、「解説」を参照してください。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -370,8 +370,8 @@ COLORREF GetColor(int nColor);
 ```  
   
 ### <a name="parameters"></a>パラメーター   
- [in]*nColor*  
- 色を取得、ユーザー インターフェイス要素を指定する値。 有効な値の一覧は、次を参照してください。、 *nIndex*のパラメーター、 [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)メソッド。  
+*nColor*<br/>
+[in]色を取得、ユーザー インターフェイス要素を指定する値。 有効な値の一覧は、次を参照してください。、 *nIndex*のパラメーター、 [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)メソッド。  
   
 ### <a name="return-value"></a>戻り値  
  指定されたユーザー インターフェイス要素の RGB カラー値。 詳細については、「解説」を参照してください。  
@@ -416,8 +416,8 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ```  
   
 ### <a name="parameters"></a>パラメーター   
- [入力、出力]*情報*  
- A [NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175)最小化されていないウィンドウの非クライアント領域に関連付けられているスケーラブルなメトリックを含む構造体。  
+*情報*<br/>
+[入力、出力]A [NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175)最小化されていないウィンドウの非クライアント領域に関連付けられているスケーラブルなメトリックを含む構造体。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -435,8 +435,8 @@ int GetTextHeight(BOOL bHorz = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター   
- [in]*bHorz*  
- テキストの水平方向に実行時に、文字の高さを取得する場合は TRUEテキストの垂直方向に実行時に、文字の高さを取得する場合は FALSE。 既定値は TRUE です。  
+*bHorz*<br/>
+[in]テキストの水平方向に実行時に、文字の高さを取得する場合は TRUEテキストの垂直方向に実行時に、文字の高さを取得する場合は FALSE。 既定値は TRUE です。  
   
 ### <a name="return-value"></a>戻り値  
  そのベースラインから測定されますが、現在のフォントの高さ。  
@@ -693,8 +693,8 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
 ```  
   
 ### <a name="parameters"></a>パラメーター   
- [in]*lpszClassNamePrefix*  
- 登録ウィンドウ クラスの名前。  
+*lpszClassNamePrefix*<br/>
+[in]登録ウィンドウ クラスの名前。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は、登録されているクラスの修飾名それ以外の場合、[リソース例外](exception-processing.md#afxthrowresourceexception)します。  
@@ -733,17 +733,17 @@ BOOL SetLayeredAttrib(
 ```  
   
 ### <a name="parameters"></a>パラメーター   
- [in]*hwnd*  
- レイヤード ウィンドウへのハンドルします。  
+*hwnd*<br/>
+[in]レイヤード ウィンドウへのハンドルします。  
   
- [in]*crKey*  
- 透過色キーを[デスクトップ ウィンドウ マネージャー](/windows/desktop/dwm/dwm-overview)レイヤード ウィンドウの作成に使用します。  
+*crKey*<br/>
+[in]透過色キーを[デスクトップ ウィンドウ マネージャー](/windows/desktop/dwm/dwm-overview)レイヤード ウィンドウの作成に使用します。  
   
- [in]*bAlpha*  
- レイヤード ウィンドウの不透明度を記述するために使用するアルファ値。  
+*bAlpha*<br/>
+[in]レイヤード ウィンドウの不透明度を記述するために使用するアルファ値。  
   
- [in]*dwFlags*  
- 使用するメソッド パラメーターを指定するフラグのビットごとの組み合わせ (OR)。 使用する LWA_COLORKEY の指定、 *crKey*透過色としてパラメーター。 使用する LWA_ALPHA の指定、 *bAlpha*レイヤード ウィンドウの不透明度を決定するパラメーター。  
+*dwFlags*<br/>
+[in]使用するメソッド パラメーターを指定するフラグのビットごとの組み合わせ (OR)。 使用する LWA_COLORKEY の指定、 *crKey*透過色としてパラメーター。 使用する LWA_ALPHA の指定、 *bAlpha*レイヤード ウィンドウの不透明度を決定するパラメーター。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。   
@@ -763,11 +763,11 @@ BOOL SetMenuFont(
 ```  
   
 ### <a name="parameters"></a>パラメーター   
- [in]*lpLogFont*  
- フォントの属性を格納する構造体へのポインター。  
+*lpLogFont*<br/>
+[in]フォントの属性を格納する構造体へのポインター。  
   
- [in]*bHorz*  
- テキストを水平方向に実行するように指定する場合は TRUEテキストが垂直方向に実行するように指定する場合は FALSE。  
+*bHorz*<br/>
+[in]テキストを水平方向に実行するように指定する場合は TRUEテキストが垂直方向に実行するように指定する場合は FALSE。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。 デバッグ モードでは、このメソッドは、このメソッドが成功したかどうかをアサートします。  

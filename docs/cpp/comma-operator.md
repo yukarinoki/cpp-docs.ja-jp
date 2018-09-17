@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a139efed1fadd8f7b821363b7cb9cdbf97c9a29
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: d9beadf4f532d24ca1f4023ad95dd8583d653c11
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39409187"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707769"
 ---
 # <a name="comma-operator-"></a>コンマ演算子: ,
 1 つのステートメントが期待される場所で 2 つのステートメントをグループ化します。  
@@ -37,11 +37,7 @@ expression , expression
   
  コンマは、関数の引数リストなどの一部のコンテキストで、区切り記号として使用できます。 区切り記号としてのコンマの使用と演算子としての使用を混同しないでください。この 2 つの用途は、まったく別のものです。  
   
- 次の式を考えます。  
-  
- *e1* 、 *e2*  
-  
- 型と式の値は型と値の*e2*; の評価結果*e1*は破棄されます。 結果は、右オペランドが左辺値の場合は左辺値です。  
+ 式 `e1, e2` を考えます。 型と式の値は型と値の*e2*; の評価結果*e1*は破棄されます。 結果は、右オペランドが左辺値の場合は左辺値です。  
   
  通常、コンマが区切り記号として使用される場所 (たとえば、関数の実引数や集約の初期化子) では、コンマ演算子とそのオペランドをかっこで囲む必要があります。 例えば:  
   

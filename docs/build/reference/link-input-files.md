@@ -1,5 +1,5 @@
 ---
-title: 入力ファイルのリンク |Microsoft ドキュメント
+title: 入力ファイルのリンク |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,43 +24,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d61a24916c3b56cf666a85483414f86753f7f59
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5974914e736278ebb336b6814661845740855fe6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374828"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710243"
 ---
 # <a name="link-input-files"></a>LINK の入力ファイル
-リンカーは、オブジェクト、インポートおよび標準ライブラリ、リソース、モジュールの定義、およびコマンドの入力を含むファイルを提供します。 リンクは、ファイルの内容に関する想定を行うにはファイル拡張子を使用しません。 代わりに、リンクは、各入力ファイルがファイルの種類を判断するを調べます。  
-  
- コマンドラインでのオブジェクト ファイルは、コマンドラインに表示される順序で処理されます。 ライブラリは、次に注意して同様に、コマンドラインの順序で検索されます: シンボルは未解決の場合、ライブラリからのオブジェクト ファイルで最初に検索されるのライブラリで、し、コマンドラインから次のライブラリ[/DEFAULTLIB (既定のライブラリの指定)](../../build/reference/defaultlib-specify-default-library.md)ディレクティブは、その後に、コマンドラインの先頭のすべてのライブラリです。  
-  
+
+リンカーは、オブジェクト、インポートと標準ライブラリ、リソース、モジュールの定義、およびコマンドの入力が含まれているファイルに指定します。 リンクは、ファイルの内容に関する判断を行うファイルの拡張機能を使用しません。 代わりに、リンクは、各入力ファイルがファイルの種類を判断するを調べます。
+
+コマンドラインでのオブジェクト ファイルは、コマンドラインで表示される順序で処理されます。 ライブラリは、次の注意点がありますも、コマンドラインの順序で検索されます: ときライブラリからのオブジェクト ファイルでは検索ライブラリで最初に、され、コマンドラインから次のライブラリの未解決のシンボルを[/DEFAULTLIB (既定のライブラリの指定)](../../build/reference/defaultlib-specify-default-library.md)ディレクティブ、およびコマンドラインの先頭にすべてのライブラリにします。
+
 > [!NOTE]
->  リンクでは、応答ファイルおよび順序ファイルでコメントの始まりとしてセミコロン (またはその他の文字) を不要になった受け取ります。 セミコロンは、モジュール定義ファイル (.def) 内のコメントの始まりとしてのみ認識されます。  
-  
- リンクは、入力ファイルの次の種類を使用します。  
-  
--   [.obj ファイル](../../build/reference/dot-obj-files-as-linker-input.md)  
-  
--   [.netmodule ファイル](../../build/reference/netmodule-files-as-linker-input.md)  
-  
--   [.lib ファイル](../../build/reference/dot-lib-files-as-linker-input.md)  
-  
--   [.exp ファイル](../../build/reference/dot-exp-files-as-linker-input.md)  
-  
--   [.def ファイル](../../build/reference/dot-def-files-as-linker-input.md)  
-  
--   [.pdb ファイル](../../build/reference/dot-pdb-files-as-linker-input.md)  
-  
--   [.res ファイル](../../build/reference/dot-res-files-as-linker-input.md)  
-  
--   [.exe ファイル](../../build/reference/dot-exe-files-as-linker-input.md)  
-  
--   [.txt ファイル](../../build/reference/dot-txt-files-as-linker-input.md)  
-  
--   [.ilk ファイル](../../build/reference/dot-ilk-files-as-linker-input.md)  
-  
-## <a name="see-also"></a>関連項目  
- [リンカー オプションの設定](../../build/reference/setting-linker-options.md)   
- [リンカー オプション](../../build/reference/linker-options.md)
+>  リンクでは、応答ファイルおよびファイルの順序でのコメントの始まりとしてセミコロン (またはその他の任意の文字) を不要になった受け取ります。 セミコロンは、モジュール定義ファイル (.def) 内のコメントの始まりとしてのみ認識されます。
+
+リンクは、次の種類の入力ファイルを使用します。
+
+- [.obj ファイル](../../build/reference/dot-obj-files-as-linker-input.md)
+
+- [.netmodule ファイル](../../build/reference/netmodule-files-as-linker-input.md)
+
+- [.lib ファイル](../../build/reference/dot-lib-files-as-linker-input.md)
+
+- [.exp ファイル](../../build/reference/dot-exp-files-as-linker-input.md)
+
+- [.def ファイル](../../build/reference/dot-def-files-as-linker-input.md)
+
+- [.pdb ファイル](../../build/reference/dot-pdb-files-as-linker-input.md)
+
+- [.res ファイル](../../build/reference/dot-res-files-as-linker-input.md)
+
+- [.exe ファイル](../../build/reference/dot-exe-files-as-linker-input.md)
+
+- [.txt ファイル](../../build/reference/dot-txt-files-as-linker-input.md)
+
+- [.ilk ファイル](../../build/reference/dot-ilk-files-as-linker-input.md)
+
+## <a name="see-also"></a>関連項目
+
+[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
+[リンカー オプション](../../build/reference/linker-options.md)

@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 625b99751c570c47456aad4903de5b8c4049ac42
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 72c312bdec9248cdc38150163d914b2ac7036ab8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207603"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711088"
 ---
 # <a name="enum-class--c-component-extensions"></a>enum クラス (C++ コンポーネント拡張)
 
@@ -101,11 +101,11 @@ accessenum structname [:type] { enumerator-list } var;
 *name*  
 列挙型の名前。 匿名のマネージド列挙型は使用できません。
 
-*型*(省略可能)  
-*識別子*の基になる型。 符号付きまたは符号なしのバージョンなどの任意のスカラー型を指定できます**int**、**短い**、または**長い**します。  **bool**または**char**も使用できます。
+*type*  
+(省略可能)基になる型、*識別子*します。 符号付きまたは符号なしのバージョンなどの任意のスカラー型を指定できます**int**、**短い**、または**長い**します。  **bool**または**char**も使用できます。
 
-*var* (省略可能)  
-列挙型の変数の名前。
+*var*  
+(省略可能) 列挙型の変数の名前。
 
 ### <a name="remarks"></a>Remarks
 

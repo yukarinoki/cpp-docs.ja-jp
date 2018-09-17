@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f052d8acaceee88b6b9a727e176666180b1bb9d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: bf762718e507309e47d36b06baacf54c6cb01e3e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214181"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713740"
 ---
 # <a name="section-specify-section-attributes"></a>/SECTION (セクション属性の指定)
 
@@ -89,7 +89,7 @@ K および P は、それらに対応するセクションのフラグが負の
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **リンカー** > **コマンドライン**プロパティ ページ。
 
@@ -101,5 +101,5 @@ K および P は、それらに対応するセクションのフラグが負の
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)  
-[リンカー オプション](../../build/reference/linker-options.md)  
+[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
+[リンカー オプション](../../build/reference/linker-options.md)

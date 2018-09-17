@@ -1,5 +1,5 @@
 ---
-title: CMFCBaseToolBar クラス |Microsoft ドキュメント
+title: CMFCBaseToolBar クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 597adf6d7a32b537f31f9a824049dc9ffedf899f
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 6cececaa0380f2e3806348e40debbf9b9ca2c351
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037845"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705238"
 ---
 # <a name="cmfcbasetoolbar-class"></a>CMFCBaseToolBar クラス
 ツールバーの基本クラス。  
@@ -54,7 +54,7 @@ class CMFCBaseToolBar : public CPane
 |`CMFCBaseToolBar::CreateObject`|このクラス型の動的インスタンスを作成するために、フレームワークで使用されます。|  
 |[CMFCBaseToolBar::GetDockingMode](#getdockingmode)|ドッキングのモードを返します。 (上書き[cbasepane::getdockingmode](../../mfc/reference/cbasepane-class.md#getdockingmode))。|  
 |[CMFCBaseToolBar::GetMinSize](#getminsize)|ツールバーの最小サイズを返します。 (上書き[CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize))。|  
-|[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|ウィンドウの親の変更後に、フレームワークによって呼び出されます。 (上書き[CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent))。|  
+|[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|ウィンドウの親が変更された後、フレームワークによって呼び出されます。 (上書き[CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent))。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -69,7 +69,7 @@ class CMFCBaseToolBar : public CPane
   
  [CMFCBaseToolBar](../../mfc/reference/cmfcbasetoolbar-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxbasetoolbar.h  
   
 ##  <a name="getdockingmode"></a>  CMFCBaseToolBar::GetDockingMode  
@@ -80,7 +80,7 @@ virtual AFX_DOCK_TYPE GetDockingMode() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ドッキングのモードです。  
+ ドッキングのモード。  
   
 ##  <a name="getminsize"></a>  CMFCBaseToolBar::GetMinSize  
  ツールバーの最小サイズを返します。  
@@ -90,19 +90,19 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*サイズ*  
- ツールバーの最小サイズ。  
+*size*<br/>
+[out]ツールバーの最小サイズ。  
   
 ##  <a name="onafterchangeparent"></a>  CMFCBaseToolBar::OnAfterChangeParent  
- ウィンドウの親の変更後に、フレームワークによって呼び出されます。  
+ ウィンドウの親が変更された後、フレームワークによって呼び出されます。  
   
 ```  
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWndOldParent*  
- 前の親ウィンドウへのポインター。  
+*pWndOldParent*<br/>
+[in]前の親ウィンドウへのポインター。  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

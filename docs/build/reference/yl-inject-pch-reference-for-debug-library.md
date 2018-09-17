@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fda6ac3336b1f2a5e910355b5460633916b0803
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 378d8e6b43a391c6d94c55b278bc71789981d9e3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894656"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712375"
 ---
 # <a name="yl-inject-pch-reference-for-debug-library"></a>/Yl (デバッグ ライブラリの PCH 参照の挿入)
 
@@ -31,16 +31,16 @@ ms.locfileid: "43894656"
 
 ## <a name="syntax"></a>構文
 
->**/Yl**  
->**/Yl**_name_  
->**/Yl-**  
+>**/Yl**
+> **/Yl**_名前_
+> **/Yl-**
 
 ### <a name="arguments"></a>引数
 
-*name*  
+*name*<br/>
 一意のシンボルの一部として使用される、省略可能な名前です。
 
-*\-*  
+*\-*<br/>
 ダッシュ (-) を明示的に無効にします、 **/Yl**コンパイラ オプション。
 
 ## <a name="remarks"></a>Remarks
@@ -75,5 +75,5 @@ ms.locfileid: "43894656"
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)  
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)  
+[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
+[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)

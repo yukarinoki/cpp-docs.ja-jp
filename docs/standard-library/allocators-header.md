@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a1d2d710631c01a39b910e7d9b15f14179b3125
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: dcda07b5d2ab499a769c389538e8f272fd8441a6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965744"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713168"
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 
@@ -47,9 +47,10 @@ C++ 標準ライブラリのノード ベースのコンテナー (std::list、s
 
 アロケーターは、この型のすべてのテンプレートです。
 
-`template<class` `Type` `>`
-
-`class allocator;`
+```cpp
+template<class Type>
+class allocator;
+```
 
 ここでテンプレート引数 `Type` は、アロケーター インスタンスによって管理されている型です。 C++ 標準ライブラリには、既定のアロケーター、テンプレート クラス [allocator](../standard-library/allocator-class.md) が用意されています。これは [\<memory>](../standard-library/memory.md) で定義されます。 \<allocators> ヘッダーは、次のアロケーターを提供します。
 
@@ -169,7 +170,7 @@ _Lst1 は、`allocator_chunklist` と [sync_per_thread](../standard-library/sync
 |[sync_per_thread](../standard-library/sync-per-thread-class.md)|スレッドごとに個別のキャッシュ オブジェクトを提供する同期フィルターを記述します。|
 |[sync_shared](../standard-library/sync-shared-class.md)|すべてのアロケーターによって共有されているキャッシュ オブジェクトへのアクセスを制御するためにミューテックスを使用する同期フィルターを表します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<allocators>
 

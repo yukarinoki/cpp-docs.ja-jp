@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bce47084065e10da418ff652f070f41bb79278
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9858bfe4dc1d2451e4cd5054c5909aab27ef86c3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955621"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710009"
 ---
 # <a name="timegetbyname-class"></a>time_get_byname クラス
 
@@ -50,17 +50,17 @@ protected:
 
 ### <a name="parameters"></a>パラメーター
 
-*_Locname*  
- 名前付きのロケール。
+*_Locname*<br/>
+名前付きのロケール。
 
-*_Refs*  
- 最初の参照数。
+*_Refs*<br/>
+最初の参照数。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 名前付きのロケールでその動作が決まります *_Locname*します。 各コンストラクターは、[time_get](../standard-library/time-get-class.md#time_get)\<CharType, InputIterator>( `_Refs`) を使用して、その基本オブジェクトを初期化します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<locale>
 

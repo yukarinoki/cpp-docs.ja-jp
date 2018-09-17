@@ -1,5 +1,5 @@
 ---
-title: _ _ll_lshift |Microsoft Docs
+title: _ _ll_lshift |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 364ad39bfe47ff04c4a1eefb52b32ed4bddb7809
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4bfb567774191edb86a9eb34a38be69344f19575
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539089"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702079"
 ---
 # <a name="lllshift"></a>__ll_lshift
 **Microsoft 固有の仕様**  
@@ -40,11 +40,11 @@ unsigned __int64 __ll_lshift(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力] `Mask`  
- 左にシフトする 64 ビット整数値。  
+*マスク*<br/>
+[in]左にシフトする 64 ビット整数値。  
   
- [入力] `nBit`  
- シフトするビット数。  
+*nBit*<br/>
+[in]シフトするビット数。  
   
 ## <a name="return-value"></a>戻り値  
  マスクを左にシフト`nBit`ビット。  

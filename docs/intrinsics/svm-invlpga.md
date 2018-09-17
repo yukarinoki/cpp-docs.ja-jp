@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77ada66d0478996eac30c8218793d962e8fcf7ca
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: c2f962ec4a348cca7ffdf43852cb01d673f3fb18
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680089"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706603"
 ---
 # <a name="svminvlpga"></a>__svm_invlpga
 **Microsoft 固有の仕様**  
@@ -41,8 +41,8 @@ void __svm_invlpga(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `Va`|無効にするページの仮想アドレス。|  
-|[入力] `ASID`|無効にするページのアドレス空間識別子 (ASID)。|  
+|*Va*|[in]無効にするページの仮想アドレス。|  
+|*ASID*|[in]無効にするページのアドレス空間識別子 (ASID)。|  
   
 ## <a name="remarks"></a>Remarks  
  `__svm_invlpga`関数は、`INVLPGA`マシン語命令。 この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、検索、ドキュメントでは、"AMD64 アーキテクチャ プログラマーズ手動ボリューム 2: システム プログラミングでは、"ドキュメント番号 24593、3.11、リビジョン、 [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)サイト。  

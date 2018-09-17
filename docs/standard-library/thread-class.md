@@ -33,12 +33,12 @@ helpviewer_keywords:
 - std::thread [C++], swap
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47afdbd5e4a5045ec5f91f8f766b45d3d547ba3e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f0606258ada9a3b4298bdb9710f3c3021e793b8e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958206"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706889"
 ---
 # <a name="thread-class"></a>thread クラス
 
@@ -88,7 +88,7 @@ class thread;
 |----------|-----------------|
 |[thread::operator=](#op_eq)|現在のスレッドを関連付ける**スレッド**オブジェクト。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<スレッド >
 
@@ -200,8 +200,8 @@ thread& operator=(thread&& Other) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*その他*  
- A**スレッド**オブジェクト。
+*その他*<br/>
+A**スレッド**オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -223,8 +223,8 @@ void swap(thread& Other) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*その他*  
- A**スレッド**オブジェクト。
+*その他*<br/>
+A**スレッド**オブジェクト。
 
 ## <a name="thread"></a>  thread::thread コンストラクター
 
@@ -240,14 +240,14 @@ thread(thread&& Other) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*F*  
- スレッドによって実行されるアプリケーション定義関数。
+*F*<br/>
+スレッドによって実行されるアプリケーション定義関数。
 
-*A*  
- 渡される引数のリスト*F*します。
+*A*<br/>
+渡される引数のリスト*F*します。
 
-*その他*  
- 既存の**スレッド**オブジェクト。
+*その他*<br/>
+既存の**スレッド**オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 

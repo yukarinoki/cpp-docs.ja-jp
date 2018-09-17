@@ -1,5 +1,5 @@
 ---
-title: _Declspec (dllimport) を使用してデータのインポート |Microsoft ドキュメント
+title: _Declspec を使ったデータのインポート |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,51 +19,53 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9877c5a229c3cabcb7703dd2617d1d57e3512f0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a024d7488eb1683f40548839ab843da1e56f65e8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368513"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710217"
 ---
 # <a name="importing-data-using-declspecdllimport"></a>__declspec(dllimport) を使ったデータのインポート
-使用して、データの場合 **_declspec**は、間接レイヤーの役割を削除する便利な項目です。 DLL からデータをインポートするときにまだインポート アドレス テーブルを通過する必要があります。 前に **_declspec (dllimport)**、つまりを DLL からエクスポートされたデータにアクセスするときに、余分なレベルの間接参照を行うには注意する必要がありました。  
-  
-```  
-// project.h  
-#ifdef _DLL   // If accessing the data from inside the DLL  
-   ULONG ulDataInDll;  
-  
-#else         // If accessing the data from outside the DLL  
-   ULONG *ulDataInDll;  
-#endif  
-```  
-  
- 内のデータはエクスポートし、します。DEF ファイル:  
-  
-```  
-// project.def  
-LIBRARY project  
-EXPORTS  
-   ulDataInDll   CONSTANT  
-```  
-  
- DLL の外部にアクセスします。  
-  
-```  
-if (*ulDataInDll == 0L)   
-{  
-   // Do stuff here  
-}  
-```  
-  
- としてデータをマークする **_declspec**コンパイラに自動的に、間接参照のコードを生成します。 不要になった、上記の手順について心配する必要があります。 既に説明したようには使用しないでください **_declspec (dllimport)** DLL を作成するときにデータを宣言します。 DLL 内の関数では、データ オブジェクトにアクセスするのにインポート アドレス テーブルを使用しないでください。そのため、追加のレベルの間接参照の存在はありません。  
-  
- DLL から自動的にデータをエクスポートするには、この宣言を使用します。  
-  
-```  
-__declspec(dllexport) ULONG ulDataInDLL;  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [アプリケーションへのインポート](../build/importing-into-an-application.md)
+
+使用して、データの場合は **_declspec**は間接レイヤーの役割を削除する便利な項目です。 DLL からデータをインポートするときにも、インポート アドレス テーブルを通じて行う必要があります。 前に **_declspec**、つまり、DLL からエクスポートされたデータにアクセスするときに、追加のレベルの間接参照を実行する必要があります。
+
+```
+// project.h
+#ifdef _DLL   // If accessing the data from inside the DLL
+   ULONG ulDataInDll;
+
+#else         // If accessing the data from outside the DLL
+   ULONG *ulDataInDll;
+#endif
+```
+
+内のデータをエクスポートしは、します。DEF ファイル:
+
+```
+// project.def
+LIBRARY project
+EXPORTS
+   ulDataInDll   CONSTANT
+```
+
+DLL の外部のアクセスします。
+
+```
+if (*ulDataInDll == 0L)
+{
+   // Do stuff here
+}
+```
+
+データとしてマークすると **_declspec**コンパイラは、の間接参照コードを自動的に生成されます。 不要になった、上記の手順について心配する必要があるとします。 既に説明したようには使用しないでください **_declspec** DLL のビルド時にデータを宣言します。 DLL 内の関数では、データ オブジェクトにアクセスするのにインポート アドレス テーブルを使用しないでください。そのため、余分な間接参照が存在するレベルはありません。
+
+DLL から自動的にデータをエクスポートするには、この宣言を使用します。
+
+```
+__declspec(dllexport) ULONG ulDataInDLL;
+```
+
+## <a name="see-also"></a>関連項目
+
+[アプリケーションへのインポート](../build/importing-into-an-application.md)

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 878fa1f530a73a9d872a1b094d0ea0ee1b822971
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 81feb345c25ea1c1e9d15dba8dceebb7a2cdb418
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756364"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709801"
 ---
 # <a name="idispatchimpl-class"></a>IDispatchImpl クラス
 
@@ -52,23 +52,23 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 
 #### <a name="parameters"></a>パラメーター
 
-[in]*T*  
-デュアル インターフェイスです。
+*T*<br/>
+[in]デュアル インターフェイスです。
 
-[in]*piid*  
-ポインターの IID を*T*します。
+*piid*<br/>
+[in]ポインターの IID を*T*します。
 
-[in]*plibid*  
-インターフェイスに関する情報を格納するタイプ ライブラリの LIBID へのポインター。 既定では、サーバー レベルのタイプ ライブラリが渡されます。
+*plibid*<br/>
+[in]インターフェイスに関する情報を格納するタイプ ライブラリの LIBID へのポインター。 既定では、サーバー レベルのタイプ ライブラリが渡されます。
 
-[in]*wMajor*  
-タイプ ライブラリのメジャー バージョンです。 既定では、値は 1 です。
+*wMajor*<br/>
+[in]タイプ ライブラリのメジャー バージョン。 既定では、値は 1 です。
 
-[in]*wMinor*  
-タイプ ライブラリのマイナー バージョンです。 既定では、値は 0 です。
+*wMinor*<br/>
+[in]タイプ ライブラリのマイナー バージョン。 既定では、値は 0 です。
 
-[in]*tihclass*  
-型情報を管理するために使用するクラス*T*します。既定では、値は `CComTypeInfoHolder` です。
+*tihclass*<br/>
+[in]型情報を管理するために使用するクラス*T*します。既定では、値は `CComTypeInfoHolder` です。
 
 ## <a name="members"></a>メンバー
 

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b39a6889dfd8a28d65aebcab04881d4bc28ce1e
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: b86c2c4031e1257e2a8a8e0f7b504686ea1c4588
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403668"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701690"
 ---
 # <a name="inline-functions-c"></a>インライン関数 (C++)
 クラス宣言の本体で定義される関数はインライン関数です。  
@@ -156,7 +156,8 @@ private:
   
  再帰関数はインラインで置き換えるによって指定される深度を指定できます、 [inline_depth](../preprocessor/inline-depth.md)プラグマを最大 16 の呼び出し。 その深さの後、再帰関数の呼び出しは、関数のインスタンスへの呼び出しとして扱われます。  再帰関数がインライン ヒューリスティックによってチェックされる深さは、16 を超えることはできません。 [Inline_recursion](../preprocessor/inline-recursion.md)プラグマは、現在展開中の関数のインライン展開を制御します。 参照してください、[関数のインライン展開](../build/reference/ob-inline-function-expansion.md)(/Ob) 関連情報については、コンパイラ オプション。  
   
-**Microsoft 固有の仕様はここまで**  
+**Microsoft 固有の仕様はここまで**
+
  使用しての詳細については、**インライン**指定子を参照してください。  
   
 -   [インライン クラス メンバー関数します。](../cpp/inline-functions-cpp.md)  

@@ -65,12 +65,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d25fccd56522d420a96b589796ef77cc30148d3
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d438d31088c6ded53df3137e76ebc6a2953890e6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600893"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700922"
 ---
 # <a name="interlockedexchangeadd-intrinsic-functions"></a>_InterlockedExchangeAdd の組み込み関数
 **Microsoft 固有の仕様**  
@@ -164,11 +164,11 @@ __int64 _InterlockedExchangeAdd64_HLERelease(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力、出力] `Addend`  
- 加算される値。加算の結果によって置き換えられます。  
+*加数*<br/>
+[入力、出力]に追加する値加算の結果で置き換えられます。  
   
- [入力] `Value`  
- 加算する値。  
+*値*<br/>
+[in]追加する値。  
   
 ## <a name="return-value"></a>戻り値  
  戻り値は `Addend` パラメーターが指す変数の初期値です。  

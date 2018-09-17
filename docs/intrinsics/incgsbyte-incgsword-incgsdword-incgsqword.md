@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74e1b74c95f143aac7a915b3f148a85da9c5a3d3
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 611786246df9da54d94e673da1a5e48940ca7241
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541263"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711127"
 ---
 # <a name="incgsbyte-incgsword-incgsdword-incgsqword"></a>__incgsbyte、__incgsword、__incgsdword、__incgsqword
 **Microsoft 固有の仕様**  
@@ -56,8 +56,8 @@ void __incgsqword(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力] `Offset`  
- 先頭からのオフセット`GS`します。  
+*オフセット*<br/>
+[in]先頭からのオフセット`GS`します。  
   
 ## <a name="requirements"></a>要件  
   

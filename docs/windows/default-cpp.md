@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d1055c0865988edf9b54539c0d214cebcda13735
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6baefb7ef0af5054cb46ed4ad74b6a6bf80fbb61
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220421"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699922"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -46,8 +46,8 @@ ms.locfileid: "43220421"
 
 既定のインターフェイスが指定されていない場合は、最初に見つかったソース以外のインターフェイスが既定値として使用されます。
 
-*interface2*(省略可能)  
-既定のソース インターフェイス。 このインターフェイスを指定する場合は、 [source](../windows/source-cpp.md) 属性も使用する必要があります。
+*interface2*<br/>
+(省略可能)既定のソース インターフェイス。 このインターフェイスを指定する場合は、 [source](../windows/source-cpp.md) 属性も使用する必要があります。
 
 既定のソース インターフェイスが指定されていない場合は、最初のソース インターフェイスが既定値として使用されます。
 

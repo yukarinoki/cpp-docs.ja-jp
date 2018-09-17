@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0816a490a4375504168b11d8055ddbe41dae2109
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 165dbf85e22a6f30089bbf1523068057b972b7e8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538731"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709333"
 ---
 # <a name="cmfcribbonslider-class"></a>CMFCRibbonSlider クラス
 `CMFCRibbonSlider`クラスは、リボン バーまたはリボン ステータス バーに追加できるスライダー コントロールを実装します。 リボン スライダー コントロールは、Office 2007 アプリケーションに表示されるズーム スライダーに似ています。  
@@ -112,8 +112,8 @@ CMFCRibbonSlider(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nID*  
- スライダーの id。  
+*nID*<br/>
+[in]スライダーの id。  
   
  [in]。 *nWidth*  
  スライダーの幅 (ピクセル単位)。  
@@ -207,11 +207,11 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nPos*  
- スライダーに設定する位置を指定します。 位置では、スライダーの開始位置を基準です。  
+*nPos*<br/>
+[in]スライダーに設定する位置を指定します。 位置では、スライダーの開始位置を基準です。  
   
- [in]*bRedraw*  
- TRUE の場合、スライダーが再描画されます。  
+*bRedraw*<br/>
+[in]TRUE の場合、スライダーが再描画されます。  
   
 ##  <a name="setrange"></a>  CMFCRibbonSlider::SetRange  
  スライダー コントロールの値の範囲を設定します。  
@@ -223,11 +223,11 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nMin*  
- スライダー コントロールの最小値を指定します。  
+*nMin*<br/>
+[in]スライダー コントロールの最小値を指定します。  
   
- [in]*nMax*  
- スライダー コントロールの最大値を指定します。  
+*nMax*<br/>
+[in]スライダー コントロールの最大値を指定します。  
   
 ### <a name="remarks"></a>Remarks  
  スライダー コントロールの値の範囲を指定するには、最小値と最大値を設定します。  
@@ -251,8 +251,8 @@ void SetZoomIncrement(int nZoomIncrement);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nZoomIncrement*  
- スライダー コントロールのズーム インクリメントを指定します。  
+*nZoomIncrement*<br/>
+[in]スライダー コントロールのズーム インクリメントを指定します。  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

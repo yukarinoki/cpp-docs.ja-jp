@@ -1,5 +1,5 @@
 ---
-title: _ _fastfail |Microsoft Docs
+title: _ _fastfail |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a0346be9f7a48defc702c9f2ef6aa187c37f187
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7e04f2898caf1f62a9499096ffab09fce8da86ab
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540444"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700181"
 ---
 # <a name="fastfail"></a>__fastfail
 **Microsoft 固有の仕様**  
@@ -31,8 +31,8 @@ void __fastfail(unsigned int code);
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力] `code`  
- プロセス終了の理由を示す、winnt.h または wdm.h からの `FAST_FAIL_<description>` シンボリック定数。  
+*コード*<br/>
+[in]A `FAST_FAIL_<description>` winnt.h または wdm.h プロセス終了の理由を示すシンボリック定数。  
   
 ## <a name="return-value"></a>戻り値  
  `__fastfail` 組み込みには戻り値はありません。  

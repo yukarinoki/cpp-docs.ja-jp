@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07581805edd92e5b577889c8dfb12c5cf08ac20b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: b035f496a8daf34334d6e3a6690046c862795dc9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680760"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714559"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl クラス
 `CNetAddressCtrl` クラスは、ネットワーク アドレス コントロールを表します。このコントロールを使用すると、IPv4 アドレス、IPv6 アドレス、および名前付き DNS アドレスの形式を入力して検証できます。  
@@ -127,10 +127,10 @@ virtual BOOL Create(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*dwStyle*|コントロールに適用されるスタイルのビットごとの組み合わせ。 詳細については、次を参照してください。[スタイルの編集](../../mfc/reference/styles-used-by-mfc.md#edit-styles)します。|  
-|[in]*rect*|参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)コントロールのサイズと位置を含む構造体。|  
-|[in]*pParentWnd*|Null 以外のポインターを[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトは、コントロールの親ウィンドウです。|  
-|[in]*nID*|コントロールの ID。|  
+|*dwStyle*|[in]コントロールに適用されるスタイルのビットごとの組み合わせ。 詳細については、次を参照してください。[スタイルの編集](../../mfc/reference/styles-used-by-mfc.md#edit-styles)します。|  
+|*rect*|[in]参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)コントロールのサイズと位置を含む構造体。|  
+|*pParentWnd*|[in]Null 以外のポインターを[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトは、コントロールの親ウィンドウです。|  
+|*nID*|[in]コントロールの ID。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -151,11 +151,11 @@ virtual BOOL CreateEx(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*dwExStyle*|コントロールに適用する拡張スタイルのビットごとの組み合わせ (OR)。 詳細については、次を参照してください。、 *dwExStyle*のパラメーター、 [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)関数。|  
-|[in]*dwStyle*|コントロールに適用されるスタイルのビットごとの組み合わせ (OR)。 詳細については、次を参照してください。[スタイルの編集](../../mfc/reference/styles-used-by-mfc.md#edit-styles)します。|  
-|[in]*rect*|参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)コントロールのサイズと位置を含む構造体。|  
-|[in]*pParentWnd*|Null 以外のポインターを[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトは、コントロールの親ウィンドウです。|  
-|[in]*nID*|コントロールの ID。|  
+|*dwExStyle*|[in]コントロールに適用する拡張スタイルのビットごとの組み合わせ (OR)。 詳細については、次を参照してください。、 *dwExStyle*のパラメーター、 [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)関数。|  
+|*dwStyle*|[in]コントロールに適用されるスタイルのビットごとの組み合わせ (OR)。 詳細については、次を参照してください。[スタイルの編集](../../mfc/reference/styles-used-by-mfc.md#edit-styles)します。|  
+|*rect*|[in]参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)コントロールのサイズと位置を含む構造体。|  
+|*pParentWnd*|[in]Null 以外のポインターを[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトは、コントロールの親ウィンドウです。|  
+|*nID*|[in]コントロールの ID。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -183,10 +183,9 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
-  
-|パラメーター|説明|  
-|---------------|-----------------|  
-|[入力、出力]*pAddress*|ポインター、 [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address)構造体。  設定、 *pAddrInfo*のアドレスにこの構造体のメンバー、 [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346) GetAddress メソッドを呼び出す前に構造体します。|  
+
+*pAddress*<br/>
+[入力、出力]ポインター、 [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address)構造体。  設定、 *pAddrInfo*のアドレスにこの構造体のメンバー、 [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346) GetAddress メソッドを呼び出す前に構造体します。
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は S_OK 値それ以外の場合、COM エラー コード。 可能性のあるエラー コードの詳細については、の戻り値を参照してください、 [NetAddr_GetAddress](/windows/desktop/api/shellapi/nf-shellapi-netaddr_getaddress)マクロ。  
@@ -222,7 +221,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*dwAddrMask*|アドレスの種類を指定するフラグのビットごとの組み合わせ (OR)、ネットワーク アドレス コントロールをサポートできます。 詳細については、次を参照してください。 [NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586)します。|  
+|*dwAddrMask*|[in]アドレスの種類を指定するフラグのビットごとの組み合わせ (OR)、ネットワーク アドレス コントロールをサポートできます。 詳細については、次を参照してください。 [NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586)します。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は s_ok を返します。それ以外の場合、COM エラー コード。  

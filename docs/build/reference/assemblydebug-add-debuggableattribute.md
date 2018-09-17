@@ -1,5 +1,5 @@
 ---
-title: -ASSEMBLYDEBUG (DebuggableAttribute の追加) |Microsoft ドキュメント
+title: -ASSEMBLYDEBUG (DebuggableAttribute の追加) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,71 +19,74 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1a6060059609488eb902cbaba4f825663d3475b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 81e60050fb577d3513b06fb67a3438ed3cb1d03b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372471"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706226"
 ---
 # <a name="assemblydebug-add-debuggableattribute"></a>/ASSEMBLYDEBUG (DebuggableAttribute の追加)
-```  
-/ASSEMBLYDEBUG[:DISABLE]  
-```  
-  
- /ASSEMBLYDEBUG を出力、 **DebuggableAttribute**属性デバッグ情報の追跡と無効に JIT 最適化を有効にします。 これは、ソースで、次の属性を指定すると同じです。  
-  
-```  
-[assembly:Debuggable(true, true)];   // same as /ASSEMBLYDEBUG  
-```  
-  
- /ASSEMBLYDEBUG:DISABLE を出力、 **DebuggableAttribute**属性がデバッグ情報の追跡を無効にし、JIT 最適化を有効にします。 これは、ソースで、次の属性を指定すると同じです。  
-  
-```  
-[assembly:Debuggable(false, false)];   // same as /ASSEMBLYDEBUG:DISABLE  
-```  
-  
- 既定では出力されませんが、 **DebuggableAttribute**属性。  
-  
- DebuggableAttribute は、ソース コードで直接アセンブリにも追加できます。 たとえば、オブジェクトに適用された  
-  
-```  
-[assembly:Debuggable(true, true)];   // same as /ASSEMBLYDEBUG  
-```  
-  
-## <a name="remarks"></a>コメント  
- マネージ イメージがデバッグ可能であることを明示的に指定する必要があります。 使用して[/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)単独では不十分です。  
-  
- アセンブリの生成に影響するその他のリンカー オプションは次のとおりです。  
-  
--   [/ASSEMBLYLINKRESOURCE](../../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)  
-  
--   [/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)  
-  
--   [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)  
-  
--   [/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)  
-  
--   [/KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)  
-  
--   [/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)  
-  
--   [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには  
-  
-1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「 [Visual C プロジェクト プロパティの設定](../../ide/working-with-project-properties.md)です。  
-  
-2.  クリックして、**リンカー**フォルダーです。  
-  
-3.  クリックして、**デバッグ**プロパティ ページ。  
-  
-4.  変更、**デバッグできるアセンブリ**プロパティです。  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには  
-  
--   「<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AssemblyDebug%2A>」を参照してください。  
-  
-## <a name="see-also"></a>関連項目  
- [リンカー オプションの設定](../../build/reference/setting-linker-options.md)   
- [リンカー オプション](../../build/reference/linker-options.md)
+
+```
+/ASSEMBLYDEBUG[:DISABLE]
+```
+
+/ASSEMBLYDEBUG 出力、 **DebuggableAttribute**デバッグ情報の追跡と無効にします。 JIT の最適化を持つ属性です。 これは、ソースで、次の属性を指定すると同じです。
+
+```
+[assembly:Debuggable(true, true)];   // same as /ASSEMBLYDEBUG
+```
+
+/ASSEMBLYDEBUG:DISABLE 出力、 **DebuggableAttribute**属性がデバッグ情報の追跡を無効にし、JIT の最適化を有効します。 これは、ソースで、次の属性を指定すると同じです。
+
+```
+[assembly:Debuggable(false, false)];   // same as /ASSEMBLYDEBUG:DISABLE
+```
+
+既定では出力されません、 **DebuggableAttribute**属性。
+
+DebuggableAttribute は、ソース コードで直接アセンブリにも追加できます。 たとえば、オブジェクトに適用された
+
+```
+[assembly:Debuggable(true, true)];   // same as /ASSEMBLYDEBUG
+```
+
+## <a name="remarks"></a>Remarks
+
+管理対象イメージがデバッグ可能であることを明示的に指定する必要があります。 使用して[/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)単独では不十分です。
+
+アセンブリの生成に影響するその他のリンカー オプションがあります。
+
+- [/ASSEMBLYLINKRESOURCE](../../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)
+
+- [/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)
+
+- [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)
+
+- [/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)
+
+- [/KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)
+
+- [/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)
+
+- [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
+
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
+
+1. をクリックして、**リンカー**フォルダー。
+
+1. をクリックして、**デバッグ**プロパティ ページ。
+
+1. 変更、**デバッグできるアセンブリ**プロパティ。
+
+### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
+
+- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AssemblyDebug%2A>
+
+## <a name="see-also"></a>関連項目
+
+[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
+[リンカー オプション](../../build/reference/linker-options.md)

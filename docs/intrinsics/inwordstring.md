@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb3f563d94d2e7685c1a83e497b1db082f131842
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: a7075a20fa552a169505b445f592448f77bcdc9d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540321"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711114"
 ---
 # <a name="inwordstring"></a>__inwordstring
 **Microsoft 固有の仕様**  
@@ -41,14 +41,14 @@ void __inwordstring(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力] `Port`  
- 読み取るポート。  
+*ポート*<br/>
+[in]読み取るポート。  
   
- [出力] `Buffer`  
- ここでは、ポートから読み取ったデータを書き込まれます。  
+*Buffer*<br/>
+[out]ここでは、ポートから読み取ったデータを書き込まれます。  
   
- [入力] `Count`  
- 読み取るデータの文字数です。  
+*カウント*<br/>
+[in]読み取るデータの文字数です。  
   
 ## <a name="requirements"></a>要件  
   

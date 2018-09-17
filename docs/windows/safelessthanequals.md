@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a0795f3c1fe176434049516c642a9aa5b198774c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a291b7a2cd8c33e743a31d53c6330f67e915662a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606355"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713064"
 ---
 # <a name="safelessthanequals"></a>SafeLessThanEquals
 
@@ -40,11 +40,11 @@ inline bool SafeLessThanEquals (
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*t*  
-比較する最初の数値。 これは、型でなければなりません`T`します。
+*t*<br/>
+[in]比較する最初の数値。 これは、型でなければなりません`T`します。
 
-[in]*u*  
-比較する 2 番目の数値。 これは、型でなければなりません`U`します。
+*u*<br/>
+[in]比較する 2 番目の数値。 これは、型でなければなりません`U`します。
 
 ## <a name="return-value"></a>戻り値
 

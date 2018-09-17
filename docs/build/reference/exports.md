@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3ea5c28fe54e5d117ef40430912ef3f8ea0efd8
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 62b49c20248ca4825bcf2c95b6c7adc956a39025
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104291"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714527"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -30,7 +30,7 @@ ms.locfileid: "44104291"
 ```DEF
 EXPORTS
    definition
-```  
+```
 
 ## <a name="remarks"></a>Remarks
 
@@ -76,7 +76,7 @@ EXPORTS
 ```DEF
 EXPORTS
    exported_global DATA
-```  
+```
 
 定義をエクスポートするには 4 つの方法があり、それらを推奨される順序で示します。
 
@@ -95,7 +95,7 @@ EXPORTS
 
 #Pragma ディレクティブは、(たとえば、32 ビットまたは 64 ビットのビルド) でビルド構成によっては別のエクスポートをして、装飾されていない関数の名前をエクスポートする必要がある場合に便利です。
 
-同じプログラムで 4 つの方法すべてを使用できます。 エクスポートを含むプログラムが LINK によってビルドされる際に、ビルドで .EXP ファイルが使用されていない限り、インポート ライブラリも作成されます。 
+同じプログラムで 4 つの方法すべてを使用できます。 エクスポートを含むプログラムが LINK によってビルドされる際に、ビルドで .EXP ファイルが使用されていない限り、インポート ライブラリも作成されます。
 
 次に、EXPORTS セクションの例を示します。
 
@@ -106,7 +106,7 @@ EXPORTS
    DllGetClassObject    @4 NONAME   PRIVATE
    DllRegisterServer    @7
    DllUnregisterServer
-```  
+```
 
 .DEF ファイルを使用して DLL から変数をエクスポートする場合、変数に `__declspec(dllexport)` を指定する必要はありません。 ただし、DLL を使用するファイルでは、データの宣言で `__declspec(dllimport)` を引き続き使用する必要があります。
 

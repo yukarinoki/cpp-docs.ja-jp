@@ -1941,12 +1941,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 030ac6bb2e6fb7acd9745d4fa818e89d29ee1832
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 1a504df1dfb2826b5056b5feb5b13ac3555515ae
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208976"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712804"
 ---
 # <a name="arm-intrinsics"></a>ARM 組み込み
 Visual C++ コンパイラでは、ARM アーキテクチャ上で次の組み込みが使用できるようになります。 ARM の詳細については、次を参照してください。、 [ARM アーキテクチャ リファレンス マニュアル](http://go.microsoft.com/fwlink/p/?LinkId=522049)と[ARM アセンブラー ツール ガイド](http://go.microsoft.com/fwlink/p/?LinkId=246102)、ARM Infocenter web サイトにします。  
@@ -2165,8 +2165,8 @@ void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)
  `Location`  
  読み取る、または書き込むメモリ位置のアドレスです。  
   
- `Value` (ストア用組み込みのみ)  
- 指定されたメモリ位置に書き込む値です。  
+ `Value`  
+ 指定したメモリ位置 (ストア用組み込みのみ) に書き込む値。  
   
  **戻り値 (ロード用組み込みのみ)**  
   
@@ -2176,9 +2176,8 @@ void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)
   
  組み込みの `__iso_volatile_load8/16/32/64` および `__iso_volatile_store8/16/32/64` を使用すると、コンパイラによる最適化の対象にはならないメモリ アクセスを明示的に実行することができます。 コンパイラはこれらの操作の相対順序を削除、合成、または変更できませんが、暗黙的なハードウェア メモリ バリアを生成しません。 したがって、ハードウェアでも複数のスレッド間で観察可能なメモリ アクセスの順序が変更される場合があります。 正確には、これらの組み込みでコンパイルされる、次の式に相当 **/volatile:iso**します。  
   
-```  
-  
-      int a = __iso_volatile_load32(p);    // equivalent to: int a = *(const volatile __int32*)p;   
+```cpp
+int a = __iso_volatile_load32(p);    // equivalent to: int a = *(const volatile __int32*)p;   
 __iso_volatile_store32(p, a);        // equivalent to: *(volatile __int32*)p = a;  
 ```  
   

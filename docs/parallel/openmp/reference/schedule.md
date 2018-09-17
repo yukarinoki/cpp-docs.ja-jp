@@ -1,5 +1,5 @@
 ---
-title: スケジュール |Microsoft ドキュメント
+title: スケジュール |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d00db7daf5c2c9882c1d54ac054ee285de1fdac4
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 32c05f2c4740e978d58540727067ea0d76d95871
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691834"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712154"
 ---
 # <a name="schedule"></a>スケジュール
-適用されます、[の](../../../parallel/openmp/reference/for-openmp.md)ディレクティブです。  
+適用されます、[の](../../../parallel/openmp/reference/for-openmp.md)ディレクティブ。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,11 +44,11 @@ schedule(type[,size])
   
 -   `static`  
   
- `size` (省略可能)  
- イテレーションのサイズを指定します。 `size` 整数を指定する必要があります。 有効でない場合に`type`は`runtime`します。  
+*size*<br/>
+(省略可能)イテレーションのサイズを指定します。 `size` 整数である必要があります。 有効でない場合に`type`は`runtime`します。  
   
-## <a name="remarks"></a>コメント  
- 詳細については、次を参照してください。 [2.4.1 for のコンストラクト](../../../parallel/openmp/2-4-1-for-construct.md)です。  
+## <a name="remarks"></a>Remarks  
+ 詳細については、次を参照してください。 [2.4.1 for のコンストラクト](../../../parallel/openmp/2-4-1-for-construct.md)します。  
   
 ## <a name="example"></a>例  
   

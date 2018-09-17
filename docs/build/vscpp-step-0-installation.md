@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ee0763608edde0f7ceff81983a324190b605ff7
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: b3e0fef319fbe119118e3a915a66bea3546bbb9a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43130892"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702898"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Visual Studio での C++ のサポートをインストール
 
@@ -37,9 +37,9 @@ ms.locfileid: "43130892"
 
 ## <a name="visual-studio-2015-installation"></a>Visual Studio 2015 のインストール
 
- Visual Studio 2015 をインストールするには[Visual Studio の以前のバージョンをダウンロード](https://www.visualstudio.com/vs/older-downloads/)します。 セットアップ プログラムを実行し、選択**カスタム インストール**し、C++ コンポーネントを選択します。 
+Visual Studio 2015 をインストールするには、[以前のバージョンの Visual Studio のダウンロード](https://www.visualstudio.com/vs/older-downloads/) ページに移動してください。 セットアップ プログラムを実行し、**カスタム インストール**で C++ コンポーネントを選択します。
 
- 一般に、Visual Studio 2015 のコンパイラを使用してコードをコンパイルする必要がある場合でも、Visual Studio 2017 を使用することを強くお勧めします。 詳細については、「[Visual Studio でネイティブ マルチ ターゲットを利用し、古いプロジェクトを作成する](../porting/use-native-multi-targeting.md)」を参照してください。
+一般に、Visual Studio 2015 のコンパイラを使用してコードをコンパイルする必要がある場合でも、Visual Studio 2017 を使用することを強くお勧めします。 詳細については、「[Visual Studio でネイティブ マルチ ターゲットを利用し、古いプロジェクトを作成する](../porting/use-native-multi-targeting.md)」を参照してください。
 
 ## <a name="visual-studio-2017-installation"></a>Visual Studio 2017 のインストール
 
@@ -59,13 +59,13 @@ ms.locfileid: "43130892"
 
    ![C++ によるデスクトップ開発](../build/media/desktop-development-with-cpp.png "C++ によるデスクトップ開発")
 
-    C++ の場合は、**[C++ ワークロードを使用したデスクトップ開発]** を選択し、それから **[インストール]** を選択してください。
+   C++ の場合は、**[C++ ワークロードを使用したデスクトップ開発]** を選択し、それから **[インストール]** を選択してください。
 
    ![C++ のワークロードを使用したデスクトップ開発をインストール](../build/media/vscpp-concierge-choose-workload.gif "C++ ワークロードでのデスクトップ開発のインストール")
 
 1. インストールが完了したら、**[起動]** ボタンを選択して Visual Studio を起動します。
 
-   初めて Visual Studio を実行する時には、Microsoft アカウントでサインインするように求められます。 アカウントをお持ちでない場合は、新しいアカウントを無料で作成できます。 テーマを選択する必要もあります。 後で変更することもできるので、ご安心ください。 
+   初めて Visual Studio を実行する時には、Microsoft アカウントでサインインするように求められます。 アカウントをお持ちでない場合は、新しいアカウントを無料で作成できます。 テーマを選択する必要もあります。 後で変更することもできるので、ご安心ください。
 
    Visual Studio をいくつかでかかる場合がありますを準備する分を使用して、初めて実行します。 どのようになるかを、短いコマ撮りで次に示します。
 

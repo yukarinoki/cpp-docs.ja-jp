@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11c83332c12daa6753add0618367b90f8c759532
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a13c7971e65a926799cc0134c811845c292161d4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848769"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709191"
 ---
 # <a name="cmfcribbonundobutton-class"></a>CMFCRibbonUndoButton クラス
 `CMFCRibbonUndoButton`クラスは、最新のユーザーのコマンドを含むドロップダウン リスト ボタンを実装します。 ユーザーは、1 つ以上の最新のコマンドを元に戻すかやり直すにドロップダウン リストから選択できます。  
@@ -78,7 +78,7 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
   
  [CMFCRibbonUndoButton](../../mfc/reference/cmfcribbonundobutton-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxribbonundobutton.h  
   
 ##  <a name="addundoaction"></a>  CMFCRibbonUndoButton::AddUndoAction  
@@ -89,8 +89,8 @@ void AddUndoAction(LPCTSTR lpszLabel);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszLabel*  
- ドロップダウン リストで表示されるアクション ラベル。  
+*lpszLabel*<br/>
+[in]ドロップダウン リストで表示されるアクション ラベル。  
   
 ##  <a name="cleanupundolist"></a>  CMFCRibbonUndoButton::CleanUpUndoList  
  アクションの一覧で、ドロップダウン リストをクリアします。  
@@ -117,20 +117,20 @@ CMFCRibbonUndoButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nID*  
- コマンド識別子を指定します。  
+*nID*<br/>
+[in]コマンド識別子を指定します。  
   
- [in]*lpszText*  
- ボタンのテキスト ラベルを指定します。  
+*lpszText*<br/>
+[in]ボタンのテキスト ラベルを指定します。  
   
- [in]*nSmallImageIndex*  
- ボタンの小さな画像の親オブジェクトのイメージ リスト内の 0 から始まるインデックス。  
+*nSmallImageIndex*<br/>
+[in]ボタンの小さな画像の親オブジェクトのイメージ リスト内の 0 から始まるインデックス。  
   
- [in]*nLargeImageIndex*  
- 親オブジェクトのイメージ リスト内の 0 から始まるインデックス、ボタンのイメージの大規模なのです。  
+*nLargeImageIndex*<br/>
+[in]親オブジェクトのイメージ リスト内の 0 から始まるインデックス、ボタンのイメージの大規模なのです。  
   
- [in]*hIcon*  
- ボタンのイメージとして使用できるアイコンへのハンドル。  
+*hIcon*<br/>
+[in]ボタンのイメージとして使用できるアイコンへのハンドル。  
   
 ##  <a name="getactionnumber"></a>  CMFCRibbonUndoButton::GetActionNumber  
  ドロップダウン リストから、ユーザーが選択した項目の数を決定します。  

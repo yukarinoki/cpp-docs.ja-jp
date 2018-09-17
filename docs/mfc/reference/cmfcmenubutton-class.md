@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77762fe12ed74f11f0b7e633f2a0c77523a7efaa
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: aae4caaa73970818a4c3deee9a82b94260629e17
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849790"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700914"
 ---
 # <a name="cmfcmenubutton-class"></a>CMFCMenuButton クラス
 ポップアップ メニューを表示してユーザーのメニュー選択を報告するボタンです。  
@@ -65,7 +65,7 @@ class CMFCMenuButton : public CMFCButton
   
 ### <a name="data-members"></a>データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CMFCMenuButton::m_bOSMenu](#m_bosmenu)|使用するか、既定のシステムのポップアップ メニューを表示するかどうかを指定します[CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu)します。|  
 |[CMFCMenuButton::m_bRightArrow](#m_brightarrow)|下にあるか、ボタンの右側に、ポップアップ メニューに表示されるかどうかを指定します。|  
@@ -97,7 +97,7 @@ class CMFCMenuButton : public CMFCButton
   
  [CMFCMenuButton](../../mfc/reference/cmfcmenubutton-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxmenubutton.h  
   
 ##  <a name="cmfcmenubutton"></a>  CMFCMenuButton::CMFCMenuButton  
@@ -167,8 +167,8 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pMsg*  
- 指す、 [MSG](../../mfc/reference/msg-structure1.md)処理するメッセージを含む構造体。  
+*pMsg*<br/>
+[in]指す、 [MSG](../../mfc/reference/msg-structure1.md)処理するメッセージを含む構造体。  
   
 ### <a name="return-value"></a>戻り値  
  以外の場合は、メッセージが変換されたおよびディスパッチできないする必要があります。メッセージが変換されていないと、ディスパッチする必要がある場合は 0。  
@@ -183,8 +183,8 @@ virtual CSize SizeToContent(BOOL bCalcOnly = FALSE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bCalcOnly*  
- このメソッドが、ボタンをサイズ変更するかどうかを示すブール値パラメーター。  
+*bCalcOnly*<br/>
+[in]このメソッドが、ボタンをサイズ変更するかどうかを示すブール値パラメーター。  
   
 ### <a name="return-value"></a>戻り値  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md)ボタンの新しいサイズを指定するオブジェクト。  

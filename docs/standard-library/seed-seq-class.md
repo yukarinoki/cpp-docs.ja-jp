@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e466d8a176d5c4c7fd1e2250373b42ee263a6d4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c4e86ff5ad4e1ebdba728202904324d9dc9e66f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856333"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711751"
 ---
 # <a name="seedseq-class"></a>seed_seq Class
 
@@ -68,30 +68,63 @@ public:
 
 ## <a name="types"></a>種類
 
-`typedef unsigned int result_type;` シード シーケンスの要素の型。 32 ビット符号なし整数型。
+```cpp
+typedef unsigned int result_type;
+```
+
+シード シーケンスの要素の型。 32 ビット符号なし整数型。
 
 ## <a name="constructors"></a>コンストラクター
 
-`seed_seq();` 既定のコンス トラクターに空の内部シーケンスを初期化します。
+```cpp
+seed_seq();
+```
 
-`template<class T>` `seed_seq(initializer_list<T> initlist);` 使用して`initlist`内部シーケンスを設定します。
+既定のコンストラクター。空の内部シーケンスを持つために初期化します。
+
+```cpp
+template<class T>
+seed_seq(initializer_list<T> initlist);
+```
+
+内部シーケンスを設定するには、`initlist` を使用します。
 `T` は整数型である必要があります。
 
-`template<class InputIterator>` `seed_seq(InputIterator begin, InputIterator end);` 指定された入力反復子の範囲内のすべての要素を使用して、内部シーケンスを初期化します。
+```cpp
+template<class InputIterator>
+seed_seq(InputIterator begin, InputIterator end);
+```
+
+指定された入力反復子の範囲内のすべての要素を使用して、内部シーケンスを初期化します。
 `iterator_traits<InputIterator>::value_type` は整数型である必要があります。
 
 ## <a name="members"></a>メンバー
 
 ### <a name="generating-functions"></a>関数の生成
 
-`template<class RandomAccessIterator> void generate(RandomAccessIterator begin,          RandomAccessIterator end);` 内部アルゴリズムを使用して、指定されたシーケンスの要素を追加します。 このアルゴリズムは、`seed_seq` が初期化された内部シーケンスによって影響を受けます。
+```cpp
+template<class RandomAccessIterator>
+void generate(RandomAccessIterator begin,
+          RandomAccessIterator end);
+```
+
+内部アルゴリズムを使用して、指定されたシーケンスの要素を設定します。 このアルゴリズムは、`seed_seq` が初期化された内部シーケンスによって影響を受けます。
 `begin == end` の場合は何も処理しません。
 
 ### <a name="property-functions"></a>プロパティ関数
 
-`size_t size() const;` 内の要素の数を返します、`seed_seq`です。
+```cpp
+size_t size() const;
+```
 
-`template<class OutputIterator> void param(OutputIterator dest) const;` 出力反復子に内部シーケンスをコピー`dest`です。
+`seed_seq` 内の要素数を返します。
+
+```cpp
+template<class OutputIterator>
+void param(OutputIterator dest) const;
+```
+
+内部シーケンスを、出力反復子 `dest` へコピーします。
 
 ## <a name="example"></a>例
 
@@ -162,7 +195,7 @@ Generating a sequence of 5 elements into an array:
 1985355432
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 このクラスのメンバー関数は例外をスローしません。
 

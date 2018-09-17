@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82447c14209f2f47fb6224df7e1daeb18ed6048e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3026e614b00f48b7668420aee20fd5915c270da2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212892"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707487"
 ---
 # <a name="ckeyboardmanager-class"></a>CKeyboardManager クラス
 メイン フレーム ウィンドウおよび子フレーム ウィンドウのショートカット キーのテーブルを管理します。  
@@ -134,17 +134,17 @@ static BOOL FindDefaultAccelerator(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiCmd*  
- コマンド ID。  
+*uiCmd*<br/>
+[in]コマンド id。  
   
- [out]*str*  
- `CString` オブジェクトへの参照。  
+*str*<br/>
+[out]参照を`CString`オブジェクト。  
   
- [in]*pWndFrame*  
- フレーム ウィンドウへのポインター。  
+*pWndFrame*<br/>
+[in]フレーム ウィンドウへのポインター。  
   
- [in]*bIsDefaultFrame*  
- フレーム ウィンドウが既定のフレーム ウィンドウであるかどうかを指定します。  
+*bIsDefaultFrame*<br/>
+[in]フレーム ウィンドウが既定のフレーム ウィンドウであるかどうかを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  ショートカットが見つかった場合は 0 以外それ以外の場合 0 を返します。  
@@ -168,10 +168,10 @@ static BOOL __stdcall IsKeyHandled(
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*nKey*|チェックするキー。|  
-|[in]*fVirt*|ショートカット キーの動作を指定します。 使用可能な値の一覧は、次を参照してください。[アクセル構造](/windows/desktop/api/winuser/ns-winuser-tagaccel)します。|  
-|[in]*pWndFrame*|フレーム ウィンドウです。 このメソッドは、ショートカット キーがこのフレームで処理されるかどうかを判断します。|  
-|[in]*bIsDefaultFrame*|示すブール値パラメーターかどうか*pWndFrame*は既定のフレーム ウィンドウです。|  
+|*nKey*|[in]チェックするキー。|  
+|*fVirt*|[in]ショートカット キーの動作を指定します。 使用可能な値の一覧は、次を参照してください。[アクセル構造](/windows/desktop/api/winuser/ns-winuser-tagaccel)します。|  
+|*pWndFrame*|[in]フレーム ウィンドウです。 このメソッドは、ショートカット キーがこのフレームで処理されるかどうかを判断します。|  
+|*bIsDefaultFrame*|[in]示すブール値パラメーターかどうか*pWndFrame*は既定のフレーム ウィンドウです。|  
   
 ### <a name="return-value"></a>戻り値  
  ショートカット キーが処理される場合は TRUE。 FALSE、キーが処理されない場合、または場合*pWndFrame*は NULL です。  
@@ -191,7 +191,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*nChar*|このメソッドをチェックする文字。|  
+|*NChar*|[in]このメソッドをチェックする文字。|  
   
 ### <a name="return-value"></a>戻り値  
  0 以外の文字が印刷可能な場合は、0 でない場合。  
@@ -222,11 +222,11 @@ BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszProfileName*  
- レジストリ パスを`CKeyboardManager`データを保存します。  
+*lpszProfileName*<br/>
+[in]レジストリ パスを`CKeyboardManager`データを保存します。  
   
- [in]*pDefaultFrame*  
- 既定のウィンドウとして使用するフレーム ウィンドウへのポインター。  
+*pDefaultFrame*<br/>
+[in]既定のウィンドウとして使用するフレーム ウィンドウへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  以外の場合は、状態が正常に読み込まれたか 0 それ以外の場合。  
@@ -256,11 +256,11 @@ BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszProfileName*  
- 保存するためのレジストリ パス、`CKeyboardManager`状態。  
+*lpszProfileName*<br/>
+[in]保存するためのレジストリ パス、`CKeyboardManager`状態。  
   
- [in]*pDefaultFrame*  
- 既定のウィンドウになったフレーム ウィンドウへのポインター。  
+*pDefaultFrame*<br/>
+[in]既定のウィンドウになったフレーム ウィンドウへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  キーボード マネージャーの状態が正常に保存されている場合は 0 以外。 それ以外の場合は 0。  
@@ -280,11 +280,11 @@ static void ShowAllAccelerators(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bShowAll*  
- TRUE の場合、すべてのショートカット キーが表示されます。 FALSE の場合、最初のショートカット キーのみが表示されます。  
+*bShowAll*<br/>
+[in]TRUE の場合、すべてのショートカット キーが表示されます。 FALSE の場合、最初のショートカット キーのみが表示されます。  
   
- [in]*lpszDelimiter*  
- ショートカット キーの間に挿入する文字列。 1 つのショートカット キーが表示されている場合のみ、この区切り記号による影響はありません。  
+*lpszDelimiter*<br/>
+[in]ショートカット キーの間に挿入する文字列。 1 つのショートカット キーが表示されている場合のみ、この区切り記号による影響はありません。  
   
 ### <a name="remarks"></a>Remarks  
  既定では、コマンドは、1 つ以上のショートカット キーがそれに関連付けられている場合、最初のショートカット キーのみ表示されます。 この関数では、すべてのコマンドに関連付けられているすべてのショートカット キーを一覧表示することができます。  
@@ -299,8 +299,8 @@ static UINT TranslateCharToUpper(const UINT nChar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nChar*  
- 変換する文字。  
+*NChar*<br/>
+[in]変換する文字。  
   
 ### <a name="return-value"></a>戻り値  
  入力パラメーターの大文字のレジスタにある文字。  
@@ -323,20 +323,20 @@ BOOL UpdateAccelTable(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pTemplate*  
- ドキュメント テンプレートへのポインター。  
+*pTemplate*<br/>
+[in]ドキュメント テンプレートへのポインター。  
   
- [in]*lpAccel*  
- 新しいショートカット キーへのポインター。  
+*lpAccel*<br/>
+[in]新しいショートカット キーへのポインター。  
   
- [in]*nSize*  
- 新しいショートカットのテーブルのサイズ。  
+*nSize*<br/>
+[in]新しいショートカットのテーブルのサイズ。  
   
- [in]*pDefaultFrame*  
- 既定のフレーム ウィンドウへのポインター。  
+*pDefaultFrame*<br/>
+[in]既定のフレーム ウィンドウへのポインター。  
   
- [in]*hAccelNew*  
- 新しいショートカット テーブルへのハンドル。  
+*hAccelNew*<br/>
+[in]新しいショートカット テーブルへのハンドル。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合、0 以外の場合それ以外の場合 0 を返します。  

@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1ea89cdd21f4debfa23716a04630e34e3b9203c1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1263b5037d9e5ed3cf81eaa55f6e4accb8737e6b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313339"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705849"
 ---
 # <a name="resource-includes-dialog-box-c"></a>[リソース インクルード] ダイアログ ボックス (C++)
 
@@ -35,14 +35,17 @@ ms.locfileid: "44313339"
 
 開くには、**リソースが含まれています**ダイアログ ボックスで、右クリックして .rc ファイル[リソース ビュー](../windows/resource-view-window.md)を選択し、**リソースが含まれています**ショートカット メニューから。
 
-**シンボル ヘッダー ファイル**  
-リソース ファイルのシンボル定義が格納されているヘッダー ファイルの名前を変更することができます。 詳細については、次を参照してください。[シンボル ヘッダー ファイルの名前を変更する](../windows/changing-the-names-of-symbol-header-files.md)します。
+- **シンボル ヘッダー ファイル**
 
-**読み取り専用シンボル ディレクティブ**  
-編集セッション中に変更してはいけないシンボルが格納されているヘッダー ファイルをインクルードすることができます。 たとえば、いくつかのプロジェクト間で共有されるシンボル ファイルをインクルードできます。 MFC の .h ファイルをインクルードすることもできます。 詳細については、次を参照してください。[共有 (読み取り専用) または計算型シンボル](../windows/including-shared-read-only-or-calculated-symbols.md)します。
+   リソース ファイルのシンボル定義が格納されているヘッダー ファイルの名前を変更することができます。 詳細については、次を参照してください。[シンボル ヘッダー ファイルの名前を変更する](../windows/changing-the-names-of-symbol-header-files.md)します。
 
-**コンパイル時ディレクティブ**  
-メイン リソース ファイルのリソースとは個別に作成および編集されたリソース ファイルをインクルードしたり、コンパイル時ディレクティブ (たとえば、条件付きでリソースをインクルードするディレクティブなど) を含めたり、カスタム形式のリソースを含めたりすることができます。 使用することも、**コンパイル時ディレクティブ ボックス**標準 MFC リソース ファイルをインクルードします。 詳細については、次を参照してください。[コンパイル時にリソースを含む](../windows/how-to-include-resources-at-compile-time.md)します。
+- **読み取り専用シンボル ディレクティブ**
+
+   編集セッション中に変更してはいけないシンボルが格納されているヘッダー ファイルをインクルードすることができます。 たとえば、いくつかのプロジェクト間で共有されるシンボル ファイルをインクルードできます。 MFC の .h ファイルをインクルードすることもできます。 詳細については、次を参照してください。[共有 (読み取り専用) または計算型シンボル](../windows/including-shared-read-only-or-calculated-symbols.md)します。
+
+- **コンパイル時ディレクティブ**
+
+   メイン リソース ファイルのリソースとは個別に作成および編集されたリソース ファイルをインクルードしたり、コンパイル時ディレクティブ (たとえば、条件付きでリソースをインクルードするディレクティブなど) を含めたり、カスタム形式のリソースを含めたりすることができます。 使用することも、**コンパイル時ディレクティブ ボックス**標準 MFC リソース ファイルをインクルードします。 詳細については、次を参照してください。[コンパイル時にリソースを含む](../windows/how-to-include-resources-at-compile-time.md)します。
 
 > [!NOTE]
 > マークされた .rc ファイルにこれらのテキスト ボックス内のエントリが表示される`TEXTINCLUDE 1`、 `TEXTINCLUDE 2`、および`TEXTINCLUDE 3`それぞれします。 詳細については、次を参照してください。 [TN035: 複数のリソース ファイルを使用すると Visual c ヘッダー ファイル](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)します。

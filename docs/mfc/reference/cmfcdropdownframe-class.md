@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 600bdb29a06d9aef84f2f4d914a458f9a4090c4a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 99b4a84109db8a412f0a3d64967a522d18ada930
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849449"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713454"
 ---
 # <a name="cmfcdropdownframe-class"></a>CMFCDropDownFrame クラス
 ドロップダウン ツールバーとドロップダウン ツール バー ボタンのドロップダウン リストのフレーム ウィンドウの機能を提供します。  
@@ -88,7 +88,7 @@ class CMFCDropDownFrame : public CMiniFrameWnd
   
  [CMFCDropDownFrame](../../mfc/reference/cmfcdropdownframe-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdropdowntoolbar.h  
   
 ##  <a name="create"></a>  CMFCDropDownFrame::Create  
@@ -107,10 +107,10 @@ virtual BOOL Create(
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*pWndParent*|ドロップダウン リストのフレームの親ウィンドウ。|  
-|[in]*x*|ドロップダウンのフレームの位置の水平画面座標。|  
-|[in]*y*|ドロップダウンのフレームの位置の垂直画面座標。|  
-|[in]*pWndOriginToolbar*|このツールバーは、このメソッドを使用して新しいドロップダウン フレーム オブジェクトに設定するドロップダウン ボタンがあります。|  
+|*pWndParent*|[in]ドロップダウン リストのフレームの親ウィンドウ。|  
+|*x*|[in]ドロップダウンのフレームの位置の水平画面座標。|  
+|*y*|[in]ドロップダウンのフレームの位置の垂直画面座標。|  
+|*pWndOriginToolbar*|[in]このツールバーは、このメソッドを使用して新しいドロップダウン フレーム オブジェクトに設定するドロップダウン ボタンがあります。|  
   
 ### <a name="return-value"></a>戻り値  
  ドロップダウン リストのフレームが作成された場合は TRUE。それ以外の場合は FALSE です。  
@@ -158,7 +158,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*bNotify*|使用されません。|  
+|*bNotify*|[in]使用されていません。|  
   
 ### <a name="remarks"></a>Remarks  
  フレームワークは、ドロップダウンのフレームが作成されるか、親ウィンドウのサイズが変更されたときに、このメソッドを呼び出します。 このメソッドは、親ウィンドウのサイズと位置を使用して、ドロップダウン リストのフレームのサイズと位置を計算します。  
@@ -171,8 +171,8 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bAutoDestroy*  
- ドロップダウン ツール バーが関連付けられているウィンドウを自動的に破棄する場合は TRUEそれ以外の場合、FALSE です。  
+*bAutoDestroy*<br/>
+[in]ドロップダウン ツール バーが関連付けられているウィンドウを自動的に破棄する場合は TRUEそれ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
  場合*bAutoDestroy*が true の場合、次に、`CMFCDropDownFrame`デストラクターが関連付けられているドロップダウン ツール バー ウィンドウを破棄します。 既定値は TRUE です。  

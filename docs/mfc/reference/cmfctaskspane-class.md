@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0477bb2dfa60b8a3803c6aff2502de7fd0ad15c
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 453bbb5d99d87a03a8627d231e45316cb5456794
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686458"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702054"
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane クラス
 詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。  
@@ -399,20 +399,20 @@ int AddGroup(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nPageIdx*  
- ページの 0 から始まるインデックスを指定します。  
+*nPageIdx*<br/>
+[in]ページの 0 から始まるインデックスを指定します。  
   
- [in]*lpszGroupName*  
- グループ名を指定します。  
+*lpszGroupName*<br/>
+[in]グループ名を指定します。  
   
- [in]*bBottomLocation*  
- 作業ウィンドウ コントロールの下部にあるグループを作成する場合は TRUEそれ以外の場合、FALSE です。  
+*bBottomLocation*<br/>
+[in]作業ウィンドウ コントロールの下部にあるグループを作成する場合は TRUEそれ以外の場合、FALSE です。  
   
- [in]*bSpecial*  
- このグループとしてマークする場合は TRUE、*特殊*グループ化しない場合は FALSE。 特別なグループの詳細については、の「解説」を参照してください。`CMFCTasksPane`します。  
+*bSpecial*<br/>
+[in]このグループとしてマークする場合は TRUE、*特殊*グループ化しない場合は FALSE。 特別なグループの詳細については、の「解説」を参照してください。`CMFCTasksPane`します。  
   
- [in]*hIcon*  
- グループ キャプションに表示するアイコンを指定します。  
+*hIcon*<br/>
+[in]グループ キャプションに表示するアイコンを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  内部リストにクラスを保持するグループのグループの 0 から始まるインデックス。  
@@ -434,17 +434,17 @@ int AddLabel(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*n グループ*  
- グループのラベルを追加する位置のインデックスを指定します。  
+*n グループ*<br/>
+[in]グループのラベルを追加する位置のインデックスを指定します。  
   
- [in]*lpszLabelName*  
- ラベルの名前を指定します。  
+*lpszLabelName*<br/>
+[in]ラベルの名前を指定します。  
   
- [in]*nTaskIcon*  
- ラベルの横に表示するアイコンを指定します。 フレームワークは、イメージの一覧で、アイコンを格納します。 このパラメーターは、そのリストへのインデックスです。  
+*nTaskIcon*<br/>
+[in]ラベルの横に表示するアイコンを指定します。 フレームワークは、イメージの一覧で、アイコンを格納します。 このパラメーターは、そのリストへのインデックスです。  
   
- [in]*bIsBold*  
- 太字のテキストにラベルを表示する場合は TRUEそれ以外の場合、FALSE です。  
+*bIsBold*<br/>
+[in]太字のテキストにラベルを表示する場合は TRUEそれ以外の場合、FALSE です。  
   
 ### <a name="return-value"></a>戻り値  
  ラベルが追加されたグループの 0 から始まるインデックス、またはグループがで指定された場合は-1*英*存在しません。  
@@ -462,11 +462,11 @@ int AddMRUFilesList(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*n グループ*  
- グループのインデックスを指定します。 このメソッドは、このパラメーターで指定されたグループに、MRU ファイル リストを追加します。  
+*n グループ*<br/>
+[in]グループのインデックスを指定します。 このメソッドは、このパラメーターで指定されたグループに、MRU ファイル リストを追加します。  
   
- [in]*nMaxFiles*  
- MRU ファイル リストに表示するファイルの数を指定します。  
+*nMaxFiles*<br/>
+[in]MRU ファイル リストに表示するファイルの数を指定します。  
   
 ### <a name="return-value"></a>戻り値  
  MRU ファイル リストが追加されたグループの 0 から始まるインデックス、またはグループがで指定された場合は-1*英*存在しません。  
@@ -479,8 +479,8 @@ int AddPage(LPCTSTR lpszPageLabel);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszPageLabel*  
- ページのラベルを指定します。  
+*lpszPageLabel*<br/>
+[in]ページのラベルを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  新しいページの 0 から始まるインデックス。  
@@ -512,20 +512,20 @@ int AddTask(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*n グループ*  
- タスクを追加する位置グループ インデックスを指定します。  
+*n グループ*<br/>
+[in]タスクを追加する位置グループ インデックスを指定します。  
   
- [in]*lpszTaskName*  
- タスクの名前を指定します。  
+*lpszTaskName*<br/>
+[in]タスクの名前を指定します。  
   
- [in]*nTaskIcon*  
- タスクの横に表示するアイコンを指定します。 フレームワークは、イメージの一覧で、アイコンを格納します。 このパラメーターは、そのリストへのインデックスです。  
+*nTaskIcon*<br/>
+[in]タスクの横に表示するアイコンを指定します。 フレームワークは、イメージの一覧で、アイコンを格納します。 このパラメーターは、そのリストへのインデックスです。  
   
- [in]*uiCommandID*  
- ユーザーがタスクを実行するコマンドのコマンド ID を指定します。 場合、タスクは、ラベルとして扱われます*uiCommandID*は 0 です。  
+*uiCommandID*<br/>
+[in]ユーザーがタスクを実行するコマンドのコマンド ID を指定します。 場合、タスクは、ラベルとして扱われます*uiCommandID*は 0 です。  
   
- [in]*dwUserData*  
- タスクに関連するユーザー定義データを指定します。  
+*dwUserData*<br/>
+[in]タスクに関連するユーザー定義データを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  タスクが追加されたグループの 0 から始まるインデックス、またはグループがで指定された場合は-1*英*存在しません。  
@@ -543,20 +543,20 @@ int AddWindow(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*n グループ*  
- ウィンドウの追加先グループ インデックスを指定します。  
+*n グループ*<br/>
+[in]ウィンドウの追加先グループ インデックスを指定します。  
   
- [in]*hwndTask*  
- 追加するには、ウィンドウのハンドルを指定します。  
+*hwndTask*<br/>
+[in]追加するには、ウィンドウのハンドルを指定します。  
   
- [in]*nWndHeight*  
- ウィンドウの高さを指定します。  
+*nWndHeight*<br/>
+[in]ウィンドウの高さを指定します。  
   
- [in]*bAutoDestroyWindow*  
- タスクが削除されたときにウィンドウを破棄する場合は TRUEそれ以外の場合、FALSE です。  
+*bAutoDestroyWindow*<br/>
+[in]タスクが削除されたときにウィンドウを破棄する場合は TRUEそれ以外の場合、FALSE です。  
   
- [in]*dwUserData*  
- タスクに関連付けられているユーザー定義データを指定します。  
+*dwUserData*<br/>
+[in]タスクに関連付けられているユーザー定義データを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  ウィンドウが追加されたグループの 0 から始まるインデックス、またはグループがで指定された場合は-1*英*存在しません。  
@@ -584,8 +584,8 @@ void CollapseAllGroups(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bCollapse*  
- [in]*nPageIdx*  
+*bCollapse*<br/>
+[in][in]*nPageIdx*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -604,14 +604,14 @@ BOOL CollapseGroup(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pGroup*  
- 折りたたむには、グループを指定します。  
+*pGroup*<br/>
+[in]折りたたむには、グループを指定します。  
   
- [in]*bCollapse*  
- グループを折りたたむ場合は TRUE。グループを展開する場合は FALSE。  
+*bCollapse*<br/>
+[in]グループを折りたたむ場合は TRUE。グループを展開する場合は FALSE。  
   
- [in]*n グループ*  
- グループの内部一覧に折りたたむには、グループの 0 から始まるインデックスを指定します。  
+*n グループ*<br/>
+[in]グループの内部一覧に折りたたむには、グループの 0 から始まるインデックスを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  グループを折りたたむか、正常に展開する場合は TRUE。それ以外の場合、FALSE です。  
@@ -656,8 +656,8 @@ void EnableAnimation(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- タスク グループを展開または折りたたむ場合に発生するアニメーションを有効にする場合は TRUEそれ以外の場合、FALSE です。  
+*bEnable*<br/>
+[in]タスク グループを展開または折りたたむ場合に発生するアニメーションを有効にする場合は TRUEそれ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
  既定では、タスク グループを展開または折りたたむ場合に発生するアニメーションが有効にします。  
@@ -670,8 +670,8 @@ void EnableGroupCollapse(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- ユーザーがタスク グループを折りたたむ場合は TRUE。それ以外の場合、FALSE です。  
+*bEnable*<br/>
+[in]ユーザーがタスク グループを折りたたむ場合は TRUE。それ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
  折りたたまれたタスク グループには、グループ キャプションのみが表示されます。タスクの一覧は表示されません。  
@@ -684,8 +684,8 @@ void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- ドロップダウン メニューを有効にする場合は True、**次**と**前**ナビゲーション ボタン場合は FALSE。  
+*bEnable*<br/>
+[in]ドロップダウン メニューを有効にする場合は True、**次**と**前**ナビゲーション ボタン場合は FALSE。  
   
 ### <a name="remarks"></a>Remarks  
  既定では、ドロップダウン メニュー、**次**と**前**ボタンが無効になっています。  
@@ -706,17 +706,17 @@ void EnableNavigationToolbar(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- ナビゲーション ツールバーを有効にする場合は TRUEそれ以外の場合、FALSE です。  
+*bEnable*<br/>
+[in]ナビゲーション ツールバーを有効にする場合は TRUEそれ以外の場合、FALSE です。  
   
- [in]*uiToolbarBmpRes*  
- ツールバーに表示するイメージを保持するビットマップのリソース ID を指定します。  
+*uiToolbarBmpRes*<br/>
+[in]ツールバーに表示するイメージを保持するビットマップのリソース ID を指定します。  
   
- [in]*sizeToolbarImage*  
- ツール バー イメージのサイズを指定します。  
+*sizeToolbarImage*<br/>
+[in]ツール バー イメージのサイズを指定します。  
   
- [in]*sizeToolbarButton*  
- ツール バー ボタンのサイズを指定します。  
+*sizeToolbarButton*<br/>
+[in]ツール バー ボタンのサイズを指定します。  
   
 ### <a name="remarks"></a>Remarks  
  ナビゲーション ツールバーは、フレームワークが作業ウィンドウの上部に表示するツールバーです。 ナビゲーション ツールバーが含まれています、**戻る**、**フォワード**と**ホーム**ナビゲーション ボタンと使用可能なページの一覧を含むメニュー ボタンをクリックします。  
@@ -743,8 +743,8 @@ void EnableScrollButtons(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- スクロール バーではなく、作業ウィンドウのスクロール ボタンを表示する場合は TRUEそれ以外の場合、FALSE です。  
+*bEnable*<br/>
+[in]スクロール バーではなく、作業ウィンドウのスクロール ボタンを表示する場合は TRUEそれ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
  既定では、フレームワークには、作業ウィンドウで、スクロール ボタンが表示されます。  
@@ -757,8 +757,8 @@ void EnableWrapLabels(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- 作業ウィンドウに表示されるラベルのテキストをラップする場合は Trueそれ以外の場合、FALSE です。  
+*bEnable*<br/>
+[in]作業ウィンドウに表示されるラベルのテキストをラップする場合は Trueそれ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
  既定では、フレームワークは、ラベルのテキストをラップしません。 テキストの折り返しが有効にすると、ラベルのテキストは、複数の行に表示できます。 ラベルに改行マーカーなどを含める`\n`と下線マーカー`&`します。  
@@ -771,8 +771,8 @@ void EnableWrapTasks(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- 作業ウィンドウでタスクをラップする場合は TRUEそれ以外の場合、FALSE です。  
+*bEnable*<br/>
+[in]作業ウィンドウでタスクをラップする場合は TRUEそれ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
  既定では、タスクのワード ラップは無効です。  
@@ -840,11 +840,11 @@ BOOL GetGroupLocation(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pGroup*  
- 位置を取得するタスク グループを指定します。  
+*pGroup*<br/>
+[in]位置を取得するタスク グループを指定します。  
   
- [out]*n グループ*  
- タスク グループの 0 から始まるインデックスが含まれています。  
+*n グループ*<br/>
+[out]タスク グループの 0 から始まるインデックスが含まれています。  
   
 ### <a name="return-value"></a>戻り値  
  タスク グループが見つかった場合は TRUE。それ以外の場合、FALSE です。  
@@ -894,11 +894,11 @@ BOOL GetPageByGroup(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*n グループ*  
- タスク グループの 0 から始まるインデックスを指定します。  
+*n グループ*<br/>
+[in]タスク グループの 0 から始まるインデックスを指定します。  
   
- [out]*n ページ レイアウト*  
- 指定したグループのページ インデックスが含まれています。 タスク グループには、既定のページのみが含まれる場合、返される値は 0 です。  
+*n ページ レイアウト*<br/>
+[out]指定したグループのページ インデックスが含まれています。 タスク グループには、既定のページのみが含まれる場合、返される値は 0 です。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合、グループ*英*が存在します。 それ以外の場合、FALSE。  
@@ -949,11 +949,11 @@ CMFCTasksPaneTask* GetTask(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*n グループ*  
- タスクが含まれているグループの 0 から始まるインデックスを指定します。  
+*n グループ*<br/>
+[in]タスクが含まれているグループの 0 から始まるインデックスを指定します。  
   
- [in]*%n タスク*  
- によって指定されたリストで、タスクの 0 から始まるインデックスを指定します。*英*します。  
+*%n タスク*<br/>
+[in]によって指定されたリストで、タスクの 0 から始まるインデックスを指定します。*英*します。  
   
 ### <a name="return-value"></a>戻り値  
  指定したインデックス位置にあるタスク。  
@@ -966,8 +966,8 @@ int GetTaskCount(int nGroup) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*n グループ*  
- タスク グループのインデックスを指定します。  
+*n グループ*<br/>
+[in]タスク グループのインデックスを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  0 の場合、指定したグループまたはタスクの数*英*が無効です。  
@@ -980,8 +980,8 @@ CMFCTasksPaneTaskGroup* GetTaskGroup(int nGroup) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*n グループ*  
- 取得するには、グループの 0 から始まるインデックスを指定します。  
+*n グループ*<br/>
+[in]取得するには、グループの 0 から始まるインデックスを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  指定したインデックス位置にあるタスクのグループ。  
@@ -1007,20 +1007,20 @@ BOOL GetTaskLocation(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiCommandID*  
- 検索するタスクのコマンド ID を指定します。  
+*uiCommandID*<br/>
+[in]検索するタスクのコマンド ID を指定します。  
   
- [out]*n グループ*  
- タスクのグループのインデックスが含まれています。  
+*n グループ*<br/>
+[out]タスクのグループのインデックスが含まれています。  
   
- [out]*%n タスク*  
- タスク グループ内のタスクのインデックスが含まれています。  
+*%n タスク*<br/>
+[out]タスク グループ内のタスクのインデックスが含まれています。  
   
- [in]*hwndTask*  
- タスクに関連付けられているウィンドウを指定します。  
+*hwndTask*<br/>
+[in]タスクに関連付けられているウィンドウを指定します。  
   
- [in]*pTask*  
- 検索するタスクを指定します。  
+*pTask*<br/>
+[in]検索するタスクを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  タスクの場所が見つかった場合は TRUE。指定したタスクが存在しない場合は FALSE です。  
@@ -1199,8 +1199,8 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszProfileName*  
- [in]*nIndex*  
+*lpszProfileName*<br/>
+[in][in]*nIndex*  
  [in]*uiID*  
   
 ### <a name="return-value"></a>戻り値  
@@ -1238,17 +1238,17 @@ virtual void OnClickTask(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nGroupNumber*  
- クリックされたタスクを含むグループの 0 から始まるインデックスを指定します。  
+*nGroupNumber*<br/>
+[in]クリックされたタスクを含むグループの 0 から始まるインデックスを指定します。  
   
- [in]*nTaskNumber*  
- クリックされたタスクの 0 から始まるインデックスを指定します。  
+*nTaskNumber*<br/>
+[in]クリックされたタスクの 0 から始まるインデックスを指定します。  
   
- [in]*uiCommandID*  
- タスクに関連付けられているコマンド ID を指定します。  
+*uiCommandID*<br/>
+[in]タスクに関連付けられているコマンド ID を指定します。  
   
- [in]*dwUserData*  
- クリックされたタスクに関連付けられているユーザー定義のデータが含まれています。  
+*dwUserData*<br/>
+[in]クリックされたタスクに関連付けられているユーザー定義のデータが含まれています。  
   
 ### <a name="remarks"></a>Remarks  
  フレームワークは、ユーザーがタスクをクリックすると、このメソッドを呼び出します。 既定では、フレームワーク、クリックされたタスクに関連付けられたコマンド ID を確認し、0 でない場合は、作業ウィンドウ コントロールの所有者に WM_COMMAND メッセージを送信します。  
@@ -1310,8 +1310,8 @@ virtual void OnPressOtherButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pbtn*  
- [in]*pWndOwner*  
+*pbtn*<br/>
+[in][in]*pWndOwner*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1339,8 +1339,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pTarget*  
- [in]*持たず*  
+*pTarget*<br/>
+[in][in]*持たず*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1378,8 +1378,8 @@ void RemoveAllGroups(int nPageIdx = 0);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nPageIdx*  
- ページの 0 から始まるインデックスを指定します。  
+*nPageIdx*<br/>
+[in]ページの 0 から始まるインデックスを指定します。  
   
 ### <a name="remarks"></a>Remarks  
  指定されたページ上のすべてのグループを削除します*nPageIdx*、または既定のページのみがある場合、すべてのグループ。  
@@ -1399,8 +1399,8 @@ void RemoveAllTasks(int nGroup);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*n グループ*  
- グループの 0 から始まるインデックスを指定します。  
+*n グループ*<br/>
+[in]グループの 0 から始まるインデックスを指定します。  
   
 ##  <a name="removegroup"></a>  CMFCTasksPane::RemoveGroup  
  グループを削除します。  
@@ -1410,8 +1410,8 @@ void RemoveGroup(int nGroup);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*n グループ*  
- 削除するグループの 0 から始まるインデックスを指定します。  
+*n グループ*<br/>
+[in]削除するグループの 0 から始まるインデックスを指定します。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、1 つのグループを削除します。 すべてのグループを削除するには、呼び出す[CMFCTasksPane::RemoveAllGroups](#removeallgroups)代わりにします。  
@@ -1426,8 +1426,8 @@ void RemovePage(int nPageIdx);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nPageIdx*  
- 削除するページの 0 から始まるインデックスを指定します。  
+*nPageIdx*<br/>
+[in]削除するページの 0 から始まるインデックスを指定します。  
   
 ##  <a name="removetask"></a>  CMFCTasksPane::RemoveTask  
  タスク グループからタスクを削除します。  
@@ -1440,14 +1440,14 @@ BOOL RemoveTask(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*n グループ*  
- 削除するタスクが含まれているタスク グループの 0 から始まるインデックスを指定します。  
+*n グループ*<br/>
+[in]削除するタスクが含まれているタスク グループの 0 から始まるインデックスを指定します。  
   
- [in]*%n タスク*  
- 削除するタスクの 0 から始まるインデックスを指定します。  
+*%n タスク*<br/>
+[in]削除するタスクの 0 から始まるインデックスを指定します。  
   
- [in]*bRedraw*  
- 作業ウィンドウを再描画する場合は TRUEそれ以外の場合、FALSE です。  
+*bRedraw*<br/>
+[in]作業ウィンドウを再描画する場合は TRUEそれ以外の場合、FALSE です。  
   
 ### <a name="return-value"></a>戻り値  
  関数が成功した場合は TRUE。場合は FALSE*英*または *%n タスク*が無効です。  
@@ -1463,8 +1463,8 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszProfileName*  
- [in]*nIndex*  
+*lpszProfileName*<br/>
+[in][in]*nIndex*  
  [in]*uiID*  
   
 ### <a name="return-value"></a>戻り値  
@@ -1491,8 +1491,8 @@ void SetActivePage(int nPageIdx);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nPageIdx*  
- 表示するページの 0 から始まるインデックスを指定します。  
+*nPageIdx*<br/>
+[in]表示するページの 0 から始まるインデックスを指定します。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドはアサート場合、 *nPageIdx*が無効です。  
@@ -1505,8 +1505,8 @@ void SetCaption(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszName*  
- キャプション名を指定します。  
+*lpszName*<br/>
+[in]キャプション名を指定します。  
   
 ### <a name="remarks"></a>Remarks  
  作業ウィンドウに複数のページがある場合は、既定のページは、この関数を使用して設定されたキャプションが。  
@@ -1519,8 +1519,8 @@ void SetGroupCaptionHeight(int n = -1);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*n*  
- キャプションの高さを指定します。  
+*n*<br/>
+[in]キャプションの高さを指定します。  
   
 ### <a name="remarks"></a>Remarks  
  作業ウィンドウの要素の余白をカスタマイズするには、このメソッドを呼び出します。  
@@ -1535,8 +1535,8 @@ void SetGroupCaptionHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*n*  
- グループ キャプションの水平オフセットを指定します。  
+*n*<br/>
+[in]グループ キャプションの水平オフセットを指定します。  
   
 ##  <a name="setgroupcaptionvertoffset"></a>  CMFCTasksPane::SetGroupCaptionVertOffset  
  グループ キャプションの垂直方向のオフセットを設定します。  
@@ -1546,8 +1546,8 @@ void SetGroupCaptionVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*n*  
- グループ キャプションのピクセル単位では、垂直方向のオフセットを指定します。  
+*n*<br/>
+[in]グループ キャプションのピクセル単位では、垂直方向のオフセットを指定します。  
   
 ##  <a name="setgroupname"></a>  CMFCTasksPane::SetGroupName  
  グループ名を設定します。  
@@ -1559,11 +1559,11 @@ BOOL SetGroupName(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*n グループ*  
- グループの 0 から始まるインデックスを指定します。  
+*n グループ*<br/>
+[in]グループの 0 から始まるインデックスを指定します。  
   
- [in]*lpszGroupName*  
- グループの名前を指定します。  
+*lpszGroupName*<br/>
+[in]グループの名前を指定します。  
   
 ### <a name="return-value"></a>戻り値  
  グループ名が正しく設定されている場合は TRUE。それ以外の場合、FALSE です。  
@@ -1579,14 +1579,14 @@ BOOL SetGroupTextColor(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*n グループ*  
- グループの 0 から始まるインデックスを指定します。  
+*n グループ*<br/>
+[in]グループの 0 から始まるインデックスを指定します。  
   
- [in]*色*  
- テキストの色を指定します。  
+*色*<br/>
+[in]テキストの色を指定します。  
   
- [in]*colorHot*  
- 強調表示されているグループのテキストの色を指定します。 -1 の場合、既定の強調表示色が使用されます。  
+*colorHot*<br/>
+[in]強調表示されているグループのテキストの色を指定します。 -1 の場合、既定の強調表示色が使用されます。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合、グループのテキストの色が変更されました。それ以外の場合、FALSE です。  
@@ -1599,8 +1599,8 @@ void SetGroupVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*n*  
- 垂直方向のオフセットを指定します。  
+*n*<br/>
+[in]垂直方向のオフセットを指定します。  
   
 ### <a name="remarks"></a>Remarks  
  垂直方向のオフセットは、タスク グループと、作業ウィンドウの境界線の間の距離です。  
@@ -1615,8 +1615,8 @@ void SetHorzMargin(int n = -1);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*n*  
- ピクセル単位で、余白を指定します。  
+*n*<br/>
+[in]ピクセル単位で、余白を指定します。  
   
 ### <a name="remarks"></a>Remarks  
  水平方向の余白は、タスク ウィンドウとクライアント領域の上端または下端の距離です。  
@@ -1636,17 +1636,17 @@ void SetIconsList(HIMAGELIST hIcons);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiImageListResID*  
- イメージ リストのリソース ID を指定します。  
+*uiImageListResID*<br/>
+[in]イメージ リストのリソース ID を指定します。  
   
- [in]*cx*  
- イメージ リスト内のアイコンのサイズを指定します。  
+*cx*<br/>
+[in]イメージ リスト内のアイコンのサイズを指定します。  
   
- [in]*clrTransparent*  
- 透明色を指定します。  
+*clrTransparent*<br/>
+[in]透明色を指定します。  
   
- [in]*hIcons*  
- 作業ウィンドウのアイコンを格納しているイメージ リストを指定します。  
+*hIcons*<br/>
+[in]作業ウィンドウのアイコンを格納しているイメージ リストを指定します。  
   
 ### <a name="remarks"></a>Remarks  
  フレームワークは、イメージ リストのアイコンを格納します。 タスクは、そのリストに格納されているアイコンに関連付けられます。  
@@ -1663,11 +1663,11 @@ void SetPageCaption(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nPageIdx*  
- ページの 0 から始まるインデックスを指定します。  
+*nPageIdx*<br/>
+[in]ページの 0 から始まるインデックスを指定します。  
   
- [in]*lpszName*  
- ページに表示するキャプション テキストを指定します。  
+*lpszName*<br/>
+[in]ページに表示するキャプション テキストを指定します。  
   
 ### <a name="remarks"></a>Remarks  
  作業ウィンドウに複数のページがある場合は、既定のページは、このメソッドを使用して設定されたキャプションが。  
@@ -1683,14 +1683,14 @@ BOOL SetTaskName(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*n グループ*  
- タスク グループの 0 から始まるインデックスを指定します。  
+*n グループ*<br/>
+[in]タスク グループの 0 から始まるインデックスを指定します。  
   
- [in]*%n タスク*  
- タスクの 0 から始まるインデックスを指定します。  
+*%n タスク*<br/>
+[in]タスクの 0 から始まるインデックスを指定します。  
   
- [in]*lpszTaskName*  
- タスク名を指定します。  
+*lpszTaskName*<br/>
+[in]タスク名を指定します。  
   
 ### <a name="return-value"></a>戻り値  
  タスク名が正しく設定されている場合は TRUE。それ以外の場合、FALSE です。  
@@ -1703,8 +1703,8 @@ void SetTasksHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*n*  
- 水平方向のオフセットを指定します。  
+*n*<br/>
+[in]水平方向のオフセットを指定します。  
   
 ### <a name="remarks"></a>Remarks  
  水平方向のオフセットは、グループの左端および右端からのピクセル単位で距離です。  
@@ -1749,17 +1749,17 @@ BOOL SetTaskTextColor(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*n グループ*  
- タスクが含まれているタスク グループの 0 から始まるインデックスを指定します。  
+*n グループ*<br/>
+[in]タスクが含まれているタスク グループの 0 から始まるインデックスを指定します。  
   
- [in]*%n タスク*  
- タスクの 0 から始まるインデックスを指定します。  
+*%n タスク*<br/>
+[in]タスクの 0 から始まるインデックスを指定します。  
   
- [in]*色*  
- タスクのテキストの色を指定します。  
+*色*<br/>
+[in]タスクのテキストの色を指定します。  
   
- [in]*colorHot*  
- 強調表示されているグループのテキストの色を指定します。 -1 の場合、このメソッドは、既定の強調表示色を使用します。  
+*colorHot*<br/>
+[in]強調表示されているグループのテキストの色を指定します。 -1 の場合、このメソッドは、既定の強調表示色を使用します。  
   
 ### <a name="return-value"></a>戻り値  
  タスクのテキストの色が正しく設定されている場合は TRUE。それ以外の場合、FALSE です。  
@@ -1772,8 +1772,8 @@ void SetVertMargin(int n = -1);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*n*  
- 設定するのには、縦の余白を指定します。  
+*n*<br/>
+[in]設定するのには、縦の余白を指定します。  
   
 ### <a name="remarks"></a>Remarks  
  縦の余白は、作業ウィンドウとクライアント領域の垂直方向の端との間の距離です。  
@@ -1796,14 +1796,14 @@ BOOL SetWindowHeight(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*n グループ*  
- ウィンドウ コントロールを含むグループの 0 から始まるインデックスを指定します。  
+*n グループ*<br/>
+[in]ウィンドウ コントロールを含むグループの 0 から始まるインデックスを指定します。  
   
- [in]*hwndTask*  
- ウィンドウ コントロールを識別するハンドルを指定します。  
+*hwndTask*<br/>
+[in]ウィンドウ コントロールを識別するハンドルを指定します。  
   
- [in]*nWndHeight*  
- 設定する高さを指定します。  
+*nWndHeight*<br/>
+[in]設定する高さを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  ウィンドウ コントロールの高さが正常に設定された場合は TRUE。場合は FALSE*英*有効でない場合、または*hwndTask*が存在しません。  
@@ -1835,17 +1835,17 @@ BOOL ShowTask(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*n グループ*  
- グループの 0 から始まるインデックスを指定します。  
+*n グループ*<br/>
+[in]グループの 0 から始まるインデックスを指定します。  
   
- [in]*%n タスク*  
- 表示または非表示にするタスクの 0 から始まるインデックスを指定します。  
+*%n タスク*<br/>
+[in]表示または非表示にするタスクの 0 から始まるインデックスを指定します。  
   
- [in]*bShow*  
- タスクを表示する場合は TRUEタスクを非表示にする場合は FALSE。  
+*bShow*<br/>
+[in]タスクを表示する場合は TRUEタスクを非表示にする場合は FALSE。  
   
- [in]*bRedraw*  
- 作業ウィンドウを再描画する場合は TRUEそれ以外の場合、FALSE です。  
+*bRedraw*<br/>
+[in]作業ウィンドウを再描画する場合は TRUEそれ以外の場合、FALSE です。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合、タスクが正常に表示または非表示になります。指定したグループまたはタスクが存在しない場合は FALSE です。  
@@ -1864,14 +1864,14 @@ BOOL ShowTaskByCmdId(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiCommandID*  
- または非表示には、タスクのコマンド ID を指定します。  
+*uiCommandID*<br/>
+[in]または非表示には、タスクのコマンド ID を指定します。  
   
- [in]*bShow*  
- タスクを表示する場合は TRUEタスクを非表示にする場合は FALSE。  
+*bShow*<br/>
+[in]タスクを表示する場合は TRUEタスクを非表示にする場合は FALSE。  
   
- [in]*bRedraw*  
- 作業ウィンドウを再描画する場合は TRUEそれ以外の場合、FALSE です。  
+*bRedraw*<br/>
+[in]作業ウィンドウを再描画する場合は TRUEそれ以外の場合、FALSE です。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合、タスクが正常に表示または非表示になります。FALSE の場合、指定したコマンドを使用して、タスク ID がありません。  

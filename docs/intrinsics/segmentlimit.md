@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eacffcd5e66d73cd7594207f58356a4a8a0ecb47
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7e9ca899b7ad0f83faed4b8aefe318d2c62abb76
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541820"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704991"
 ---
 # <a name="segmentlimit"></a>__segmentlimit
 **Microsoft 固有の仕様**  
@@ -38,8 +38,8 @@ unsigned long __segmentlimit(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力] `a`  
- セグメントのセレクターを指定する定数。  
+*a*<br/>
+[in]セグメントのセレクターを指定する定数。  
   
 ## <a name="return-value"></a>戻り値  
  セグメントの数で指定されたセグメント セレクター`a`セレクターが現在のアクセス許可レベルで有効であり、表示されているが、します。  

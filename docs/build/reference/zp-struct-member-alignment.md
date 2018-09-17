@@ -1,5 +1,5 @@
 ---
-title: -Zp (構造体メンバーの配置) |Microsoft ドキュメント
+title: -Zp (構造体メンバーの配置) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/30/2018
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1666da40f748d18c762eae19595692addcdbf78a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0268f5c5d5d34d8fa244dc6260889bea6b1e837a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380863"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715911"
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp (構造体メンバーの配置)
 
@@ -36,26 +36,26 @@ ms.locfileid: "32380863"
 
 > **/Zp**[**1**|**2**|**4**|**8** | **16**]
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-指定すると、 **/Zp**_n_オプション、最初は、メンバー型のサイズのどちらかに格納された後は、各構造体メンバーまたは*n*-バイト境界 (ここで*n*が 1、2、4、8、または 16)、小さい方です。
+指定した場合、 **/Zp**_n_オプションを 1 つ目がメンバーの種類のサイズのどちらかに格納されている各構造体メンバーまたは*n*-バイト境界 (場所*n*が 1、2、4、8、または 16)、小さい方です。
 
-使用可能なパッキング値は次の表に説明します。
+パッキングの使用可能な値は、次の表で説明します。
 
 |/Zp 引数|効果|
 |-|-|
-|1|構造体は、1 バイト境界でパックします。 同じ **/Zp**です。|
-|2|構造体は、2 バイト境界でパックします。|
+|1|構造体は、1 バイト境界でパックします。 同じ **/Zp**します。|
+|2|構造体を 2 バイト境界でパックします。|
 |4|構造体は、4 バイト境界でパックします。|
-|8|構造体は、(既定値) の 8 バイト境界でパックします。|
+|8|8 バイト境界 (既定値) の構造体にパックします。|
 |16| 構造体を 16 バイト境界でパックします。|
 
 特定のアラインメント要件がない限りは、このオプションを使用する必要があります。
 
-> [!WARNING]  
-> Windows SDK での C++ ヘッダーがあると **/zp8 です**梱包です。 メモリの破損が生じる場合、 **/Zp** Windows SDK のヘッダーを使用する場合、設定を変更します。
+> [!WARNING]
+> Windows SDK の C++ ヘッダーと **、/zp8 です**梱包です。 メモリの破損が生じる場合、 **/Zp** Windows SDK のヘッダーを使用する場合、設定を変更します。
 
-使用することも[パック](../../preprocessor/pack.md)制御構造体のパッキングにします。 アラインメントの詳細については、次のトピックを参照してください。
+使用することも[パック](../../preprocessor/pack.md)制御構造のパッキングにします。 アラインメントの詳細については、次のトピックを参照してください。
 
 - [align](../../cpp/align-cpp.md)
 
@@ -67,17 +67,17 @@ ms.locfileid: "32380863"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[のプロジェクト プロパティの操作](../../ide/working-with-project-properties.md)です。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 
 1. 選択、 **C/C++** > **コード生成**プロパティ ページ。
 
-1. 変更、**構造体メンバーの配置**プロパティです。
+1. 変更、**構造体メンバーのアラインメント**プロパティ。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
--   「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StructMemberAlignment%2A>」を参照してください。
+- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StructMemberAlignment%2A>
 
 ## <a name="see-also"></a>関連項目
 
-- [コンパイラ オプション](../../build/reference/compiler-options.md)   
+- [コンパイラ オプション](../../build/reference/compiler-options.md)
 - [コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d78b37971cda2ca1bcf468a794abf69555efc3e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: eb4af8f218a6040080cdf429b061205269cbc4dc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462252"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703587"
 ---
 # <a name="smart-pointers-modern-c"></a>スマート ポインター (Modern C++)
 標準ライブラリに含まれる最新の C++ プログラミングで*スマート ポインター*メモリの空きプログラムを確実に使用されますが、およびリソースのリークし例外セーフです。  
@@ -69,8 +69,9 @@ ms.locfileid: "39462252"
 ## <a name="kinds-of-smart-pointers"></a>スマート ポインターの種類  
  次のセクションでは、Windows プログラミング環境で使用できるさまざまな種類のスマート ポインターの概要を示し、使用するタイミングについて説明します。  
   
- **C++ 標準ライブラリのスマート ポインター**  
- これらのスマート ポインターは、Plain Old C++ Object (POCO) にポインターをカプセル化する最初のオプションとして使用します。  
+### <a name="c-standard-library-smart-pointers"></a>C++ 標準ライブラリのスマート ポインター
+
+これらのスマート ポインターは、Plain Old C++ Object (POCO) にポインターをカプセル化する最初のオプションとして使用します。  
   
 -   `unique_ptr`   
      基になるポインターの所有者は、厳密に 1 人許可されます。 `shared_ptr` が必要であることがわかっている場合を除き、POCO の既定のオプションとして使用します。 新しい所有者に移動できますが、コピーおよび共有することはできません。 非推奨とされた `auto_ptr` を置き換えます。 `boost::scoped_ptr` に相当します。 `unique_ptr` 小さく効率的です。サイズは 1 つのポインターを高速な挿入および C++ 標準ライブラリ コレクションから取得するための右辺値参照をサポートしています。 ヘッダー ファイルは `<memory>` です。 詳細については、次を参照してください。[方法: unique_ptr インスタンスを作成して](../cpp/how-to-create-and-use-unique-ptr-instances.md)と[unique_ptr クラス](../standard-library/unique-ptr-class.md)します。  
@@ -81,8 +82,9 @@ ms.locfileid: "39462252"
 -   `weak_ptr`   
     `shared_ptr` と同時に使用する特殊ケースのスマート ポインターです。 `weak_ptr` は、1 つ以上の `shared_ptr` インスタンスが所有するオブジェクトへのアクセスを提供しますが、参照カウントには参加しません。 オブジェクトを観察するが、オブジェクトを維持しておく必要はない場合に使用します。 `shared_ptr` インスタンス間の循環参照を解除するいくつかのケースで必要です。 ヘッダー ファイルは `<memory>` です。 詳細については、次を参照してください。[方法: weak_ptr インスタンスを作成して](../cpp/how-to-create-and-use-weak-ptr-instances.md)と[weak_ptr クラス](../standard-library/weak-ptr-class.md)します。  
   
- **COM オブジェクト (従来の Windows プログラミング) 用のスマート ポインター**  
- COM オブジェクトを使用する場合、スマート ポインターの適切な型でインターフェイス ポインターをラップします。 Active Template Library (ATL) は、さまざまな目的で複数のスマート ポインターを定義します。 さらに、コンパイラが .tlb ファイルからラッパー クラスを作成するときに使用する `_com_ptr_t` スマート ポインターの型を使用することもできます。 これは、ATL ヘッダー ファイルをインクルードしたくない場合に最も適しています。  
+### <a name="smart-pointers-for-com-objects-classic-windows-programming"></a>COM オブジェクト用のスマート ポインター (従来の Windows プログラミング)
+
+COM オブジェクトを使用する場合、スマート ポインターの適切な型でインターフェイス ポインターをラップします。 Active Template Library (ATL) は、さまざまな目的で複数のスマート ポインターを定義します。 さらに、コンパイラが .tlb ファイルからラッパー クラスを作成するときに使用する `_com_ptr_t` スマート ポインターの型を使用することもできます。 これは、ATL ヘッダー ファイルをインクルードしたくない場合に最も適しています。  
   
  [CComPtr クラス](../atl/reference/ccomptr-class.md)  
  ATL を使用できない場合以外は、これを使用してください。 `AddRef` メソッドと `Release` メソッドを使用して、参照カウントを実行します。 詳細については、次を参照してください。[方法: 作成と使用の CComPtr および CComQIPtr インスタンス](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)します。  
@@ -99,8 +101,9 @@ ms.locfileid: "39462252"
  [_com_ptr_t クラス](../cpp/com-ptr-t-class.md)  
  機能の点では `CComQIPtr` に似ていますが、ATL ヘッダーには依存しません。  
   
- **POCO オブジェクト用の ATL スマート ポインター**  
- COM オブジェクト用のスマート ポインターに加えて、ATL は Plain Old C++ Object 用のスマート ポインター、およびスマート ポインター コレクションも定義します。 特に、コードの移植性が必要でない場合、または C++ 標準ライブラリと ATL のプログラミング モデルを混合しない従来の Windows プログラミングでは、これらの型が、C++ 標準ライブラリ コレクションに便利な代替手段は  
+### <a name="atl-smart-pointers-for-poco-objects"></a>POCO オブジェクト用の ATL スマート ポインター
+
+COM オブジェクト用のスマート ポインターに加えて、ATL は Plain Old C++ Object 用のスマート ポインター、およびスマート ポインター コレクションも定義します。 特に、コードの移植性が必要でない場合、または C++ 標準ライブラリと ATL のプログラミング モデルを混合しない従来の Windows プログラミングでは、これらの型が、C++ 標準ライブラリ コレクションに便利な代替手段は  
   
  [CAutoPtr クラス](../atl/reference/cautoptr-class.md)  
  コピー時に所有権を移動することで一意の所有権を強制するスマート ポインターです。 非推奨とされた `std::auto_ptr` クラスに相当します。  

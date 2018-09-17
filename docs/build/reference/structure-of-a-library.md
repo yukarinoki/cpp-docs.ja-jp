@@ -1,5 +1,5 @@
 ---
-title: ライブラリの構造 |Microsoft ドキュメント
+title: ライブラリの構造 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6eff0000aef01790106b44b49b4855218fcf9332
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03c2c66d45ee415ddc4f3ba27b6a100c5e2ec1dc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373102"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702105"
 ---
 # <a name="structure-of-a-library"></a>ライブラリの構造
-ライブラリには、COFF オブジェクトが含まれています。 オブジェクトをライブラリには、関数とプログラムの他のオブジェクトで外部から参照可能なデータを含めます。 ライブラリ内のオブジェクトは、ライブラリのメンバーとも呼ばれます。  
-  
- /LINKERMEMBER オプションを使用して、DUMPBIN ツールを実行して、ライブラリの内容に関する追加情報を取得できます。 詳細については、このオプションは、次を参照してください。 [DUMPBIN リファレンス](../../build/reference/dumpbin-reference.md)です。  
-  
-## <a name="see-also"></a>関連項目  
- [LIB の概要](../../build/reference/overview-of-lib.md)
+
+ライブラリには、COFF オブジェクトが含まれています。 ライブラリ内のオブジェクトには、関数とプログラムの他のオブジェクトで外部から参照できるデータが含まれます。 ライブラリ内のオブジェクトは、ライブラリのメンバーとも呼ばれます。
+
+/LINKERMEMBER オプションを使用して、DUMPBIN ツールを実行して、ライブラリの内容に関する追加情報を取得できます。 このオプションの詳細については、次を参照してください。 [DUMPBIN リファレンス](../../build/reference/dumpbin-reference.md)します。
+
+## <a name="see-also"></a>関連項目
+
+[LIB の概要](../../build/reference/overview-of-lib.md)

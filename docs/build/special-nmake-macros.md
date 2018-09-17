@@ -1,5 +1,5 @@
 ---
-title: 特殊 NMAKE マクロ |Microsoft ドキュメント
+title: NMAKE の特殊マクロ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1eb74d09c1facf664c39781f8134d653f3105c9c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fe854d4e3c625d23a5b83cee50ab468b76abcfff
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380015"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710204"
 ---
 # <a name="special-nmake-macros"></a>NMAKE の特殊マクロ
-(Nmake の) は、さまざまなファイル名とコマンドを表すいくつかの特別なマクロを提供します。 これらのマクロの一部の 1 つの用途は、あらかじめ定義された推論規則です。 すべてのマクロのように、マクロ (nmake の) によって提供されるは大文字小文字を区別します。  
-  
--   [ファイル名マクロ](../build/filename-macros.md)  
-  
--   [再帰マクロ](../build/recursion-macros.md)  
-  
--   [コマンド マクロおよびオプション マクロ](../build/command-macros-and-options-macros.md)  
-  
--   [環境変数マクロ](../build/environment-variable-macros.md)  
-  
-## <a name="see-also"></a>関連項目  
- [マクロと NMAKE](../build/macros-and-nmake.md)
+
+NMAKE では、さまざまなファイル名とコマンドを表すいくつかの特殊なマクロを提供します。 定義済みの推論規則ではこれらのマクロの 1 つ使用します。 すべてのマクロのようには、NMAKE によって提供されるマクロは大文字小文字を区別します。
+
+- [ファイル名マクロ](../build/filename-macros.md)
+
+- [再帰マクロ](../build/recursion-macros.md)
+
+- [コマンド マクロとオプション マクロ](../build/command-macros-and-options-macros.md)
+
+- [環境変数マクロ](../build/environment-variable-macros.md)
+
+## <a name="see-also"></a>関連項目
+
+[マクロと NMAKE](../build/macros-and-nmake.md)

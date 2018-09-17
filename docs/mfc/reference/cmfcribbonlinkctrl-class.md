@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53e9396148a89a4778d7e12066a814f2065bbac6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c326a13e55ed14f93b35ed486f7ee4596c643758
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539513"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712518"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>CMFCRibbonLinkCtrl クラス
 リボン上に配置するハイパーリンクを実装します。 ハイパーリンクをクリックすると、Web ページが表示されます。  
@@ -106,14 +106,14 @@ CMFCRibbonLinkCtrl(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nID*  
- リンク コントロールがクリックされたときに実行されるコマンドのコマンド ID を指定します。  
+*nID*<br/>
+[in]リンク コントロールがクリックされたときに実行されるコマンドのコマンド ID を指定します。  
   
- [in]*lpszText*  
- リンク コントロールに表示するラベルを指定します。  
+*lpszText*<br/>
+[in]リンク コントロールに表示するラベルを指定します。  
   
- [in]*lpszLink*  
- リンク コントロールに関連付けられたハイパーリンクを指定します。  
+*lpszLink*<br/>
+[in]リンク コントロールに関連付けられたハイパーリンクを指定します。  
   
 ### <a name="example"></a>例  
  次の例では、コンス トラクターを使用する方法、`CMFCRibbonLinkCtrl`クラス。 このコード スニペットの一部、[リボン ガジェット サンプル](../../visual-cpp-samples.md)します。  
@@ -263,8 +263,8 @@ void SetLink(LPCTSTR lpszLink);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszLink*  
- ハイパーリンクのテキストを指定します。  
+*lpszLink*<br/>
+[in]ハイパーリンクのテキストを指定します。  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

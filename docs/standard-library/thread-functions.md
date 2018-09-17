@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: 948c00f7c0b773bf366f4ea9e102c832e9878d9b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 25c03be7ffb504f2bec47677aec70360d0f8b38f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960451"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704256"
 ---
 # <a name="ltthreadgt-functions"></a>&lt;thread&gt; 関数
 
@@ -54,8 +54,8 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>パラメーター
 
-*Rel_time*  
- 期間を指定する [duration](../standard-library/duration-class.md) オブジェクト。
+*Rel_time*<br/>
+期間を指定する [duration](../standard-library/duration-class.md) オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -74,8 +74,8 @@ void sleep_until(const xtime *Abs_time);
 
 ### <a name="parameters"></a>パラメーター
 
-*Abs_time*  
- 特定の時点を表します。
+*Abs_time*<br/>
+特定の時点を表します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -91,11 +91,11 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*左*  
- 左**スレッド**オブジェクト。
+*左*<br/>
+左**スレッド**オブジェクト。
 
-*右*  
- 右側**スレッド**オブジェクト。
+*右*<br/>
+右側**スレッド**オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 

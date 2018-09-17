@@ -1,5 +1,5 @@
 ---
-title: _mm_stream_ss |Microsoft ドキュメント
+title: _mm_stream_ss |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5058ac6c415f155b6a7cab712002d4769983d1f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef5910f47fdf9c058cfb4493c9df486749da18fc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339489"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714390"
 ---
 # <a name="mmstreamss"></a>_mm_stream_ss  
   
 **Microsoft 固有の仕様**  
   
- キャッシュを汚染せずに、32 ビットのデータをメモリ位置に書き込みます。  
+ メモリ位置に、キャッシュを汚染することがなく 32 ビットのデータを書き込みます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,11 +41,11 @@ void _mm_stream_ss(
   
 #### <a name="parameters"></a>パラメーター  
   
- [出力] `Dest`  
- ソース データが書き込まれる場所へのポインター。  
+*追加先*<br/>
+[out]ソース データが書き込まれる場所へのポインター。  
   
- [入力] `Source`  
- 128 ビットの数値を含む、 `float` 32 ビットの下に書き込まれる値.  
+*Source*<br/>
+[in]128 ビットの数値を含む、`float`値を 32 ビットの下で記述する.  
   
 ## <a name="return-value"></a>戻り値  
   
@@ -61,9 +61,9 @@ void _mm_stream_ss(
   
 ## <a name="remarks"></a>コメント  
   
-この組み込みを生成、`movntss`命令します。 この命令のハードウェア サポートを確認するのには、呼び出し、`__cpuid`で組み込み`InfoType=0x80000001`のビット 6 をチェックし、`CPUInfo[2] (ECX)`です。 このビットは、それ以外の場合、命令がサポートされている場合は 1 および 0 です。  
+この組み込み関数は`movntss`命令を生成します。 この命令のハードウェアのサポートを確認するのには、呼び出し、`__cpuid`で組み込み`InfoType=0x80000001`のビット 6 をチェックおよび`CPUInfo[2] (ECX)`します。 このビットは、それ以外の場合、命令がサポートされている場合は 1 と 0 です。  
   
-使用するコードを実行する場合、`_mm_stream_ss`サポートしていないハードウェアの組み込み、`movntss`命令、結果は予測できません。  
+使用するコードを実行する場合、`_mm_stream_ss`がサポートされていないハードウェアに組み込み、`movntss`命令の場合、結果は予測できません。  
   
 ## <a name="example"></a>例  
   
@@ -99,7 +99,7 @@ f[2] = -3, f[3] = 3
   
 **Microsoft 固有の仕様はここまで**  
 
-高度なマイクロ デバイス, Inc. によって copyright 2007All rights reserved. 高度なマイクロ デバイス, Inc. のアクセス許可を持つ再現  
+高度なマイクロ デバイス, inc. copyright 2007All rights reserved. 高度なマイクロ デバイス, Inc. からのアクセス許可を持つ再現  
   
 ## <a name="see-also"></a>関連項目  
  [_mm_stream_sd](../intrinsics/mm-stream-sd.md)   

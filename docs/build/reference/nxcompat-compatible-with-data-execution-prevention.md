@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f6e2c3f1c297493b2af72f280ac5eabcb6f17ce
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 52cf47335c1bed55ca38d508789d65902b335f0f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690320"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707630"
 ---
 # <a name="nxcompat-compatible-with-data-execution-prevention"></a>/NXCOMPAT (データ実行防止との互換性)
 
@@ -60,5 +60,5 @@ ms.locfileid: "43690320"
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)  
-[リンカー オプション](../../build/reference/linker-options.md)  
+[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
+[リンカー オプション](../../build/reference/linker-options.md)

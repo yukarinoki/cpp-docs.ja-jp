@@ -1,5 +1,5 @@
 ---
-title: .Netmodule の形式を選択する入力ファイル |Microsoft ドキュメント
+title: .Netmodule の形式の選択の入力ファイル |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,36 +12,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62575d3e816bdc10587e7a4c9cebcea735329ec1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1eaa48769525a907ecdcc1d0612d67a169fb6cd1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372722"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715807"
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>.netmodule 入力ファイルの形式の選択
-MSIL .obj ファイル (でコンパイルされた[/clr](../../build/reference/clr-common-language-runtime-compilation.md)) .netmodule ファイルとしても使用できます。  .obj ファイルには、メタデータおよびネイティブ シンボルが含まれます。  .netmodule には、メタデータにはのみが含まれています。  
-  
- できますが、/addmodule コンパイラ オプションを使用して、他の Visual Studio コンパイラに MSIL .obj ファイルを渡す (は、.obj ファイルは、生成されたアセンブリの一部になるし、アセンブリと共に出荷する必要がありますに注意してください)。  たとえば、Visual c# および Visual Basic/addmodule コンパイラ オプションがあります。  
-  
+
+MSIL の .obj ファイル (でコンパイルされた[/clr](../../build/reference/clr-common-language-runtime-compilation.md)) .netmodule ファイルとしても使用できます。  .obj ファイルには、メタデータとネイティブのシンボルが含まれます。  .netmodule には、メタデータにはのみが含まれます。
+
+できます/addmodule コンパイラ オプションを使用して、MSIL の .obj ファイルをその他の Visual Studio コンパイラに渡す (が .obj ファイルは、生成されたアセンブリの一部になるし、アセンブリに付属する必要がありますに注意してください)。  たとえば、Visual c# および Visual Basic には、/addmodule コンパイラ オプションがあります。
+
 > [!NOTE]
->  ほとんどの場合は、.net モジュールを作成するコンパイルから .obj ファイルをリンカーに渡す必要があります。  .Dll ファイルまたは .netmodule の MSIL モジュールのファイルをリンカーに渡すと、LNK1107 可能性があります。  
-  
- .obj ファイルから参照を関連付けられている .h ファイルと一緒に # 元に、include、C++ アプリケーションで使用できるマネージ型のみ .netmodule ファイルに対し、モジュールでは、ネイティブ型を使用する C++ アプリケーションを許可します。  .Obj ファイルに渡すしようとすると #using、ネイティブ型に関する情報は使用できません。#include .obj ファイルの .h ファイル代わりにします。  
-  
- 他の Visual Studio コンパイラは、モジュールからのマネージ型のみを使用できます。  
-  
- .Netmodule または .obj ファイルを Visual C リンカーのモジュールの入力として使用するのに必要があるかどうかを決定するのにには、次を使用します。  
-  
--   Visual C 以外の Visual Studio コンパイラで構築する、.netmodule を生成しをリンカー入力として、.netmodule を使用します。  
-  
--   モジュールを生成し、モジュールはライブラリ以外のものをビルドに使用するかどうか、Visual C コンパイラを使用している場合は、リンカーへのモジュールの入力として、コンパイラによって生成された .obj ファイルを使用してください。入力としては、.netmodule ファイルを使用しないでください。  
-  
--   場合は、モジュールを使用して、マネージ ネイティブ ライブラリをビルド、.obj ファイルをリンカーにモジュールの入力として使用し、.lib ライブラリ ファイルを生成します。  
-  
--   モジュールを使用して、マネージ ライブラリをビルドし、リンカーへのすべてのモジュール入力は検証可能である (/clr:safe で生成される) 場合は、.obj ファイルをリンカーにモジュールの入力として使用し、.dll ファイル (アセンブリ) または .netmodule (モジュール) のライブラリ ファイルを生成します。  
-  
--   マネージ ライブラリをビルドに使用される、モジュール、リンカーに 1 つまたは複数のモジュールの入力は単なる/clr で生成する場合、リンカーにモジュールの入力としての .obj ファイルを使用し、.dll (アセンブリ) を生成します。  ライブラリ コンポーネント モジュール (、また出荷する各モジュールの .h ファイルの .obj ファイルのライブラリでは、ライブラリからのマネージ型とする場合も、ライブラリ内のネイティブ型を使用する C++ アプリケーションを公開する場合は、、を参照できるように # ソース コードから include)。  
-  
-## <a name="see-also"></a>関連項目  
- [.netmodule ファイル (リンカー入力)](../../build/reference/netmodule-files-as-linker-input.md)
+>  ほとんどの場合は、.net モジュールを作成したコンパイルの .obj ファイルをリンカーに渡す必要があります。  .Dll または .netmodule の MSIL モジュールのファイルをリンカーに渡すと、LNK1107 可能性があります。
+
+.obj ファイルを使用して参照するには関連付けられている .h ファイルと一緒に # ソースに include、.netmodule ファイルで、C++ アプリケーションでマネージ型のみを使用できますが、モジュール内のネイティブ型を使用する C++ アプリケーションを許可します。  .Obj ファイルをしようとした場合は、# を using ネイティブ型に関する情報は使用できません。# 代わりに include .obj ファイルの .h ファイル。
+
+その他の Visual Studio コンパイラは、モジュールからのマネージ型のみを使用できます。
+
+次を使用すると、Visual C リンカーへのモジュールの入力としての .netmodule または .obj ファイルを使用するのに必要があるかどうかを決定します。
+
+- Visual C 以外の Visual Studio コンパイラを構築している場合、.netmodule を生成およびリンカーへの入力として、.netmodule を使用します。
+
+- モジュールとモジュールがライブラリ以外のものをビルドに使用されるかどうかに生成するために、Visual C コンパイラを使用する場合は、モジュール、リンカー入力として、コンパイラによって生成された .obj ファイルを使用してください。入力としての .netmodule ファイルを使わないでください。
+
+- ネイティブ、マネージ ライブラリをビルドするモジュールを使用する場合は、リンカーへのモジュールの入力としての .obj ファイルを使用し、.lib ライブラリ ファイルを生成します。
+
+- モジュールを使用して、マネージ ライブラリをビルドして、リンカーへのすべてのモジュール入力する場合は検証可能 (/clr:safe により生成) は、リンカーへのモジュールの入力としての .obj ファイルを使用し、(アセンブリ) .dll または .netmodule (モジュール) ライブラリのファイルを生成します。
+
+- モジュールを使用して、マネージ ライブラリをビルドして、リンカーに 1 つまたは複数のモジュールの入力は単なる/clr で生成する場合は、リンカーへのモジュールの入力としての .obj ファイルを使用し、.dll (アセンブリ) を生成します。  ライブラリ コンポーネント モジュール (はもに送付する各モジュールの .h ファイルの .obj ファイルのライブラリでは、ライブラリからのマネージ型とする場合も、ライブラリ内のネイティブ型を使用する C++ アプリケーションを公開する場合は、、を参照できるように #include ソース コードから)。
+
+## <a name="see-also"></a>関連項目
+
+[.netmodule ファイル (リンカー入力)](../../build/reference/netmodule-files-as-linker-input.md)

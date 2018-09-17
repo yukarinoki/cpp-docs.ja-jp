@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cae819ccffae37ca27d1e062ae9a766e7acba1f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 991c8c9505485e84aa4e8e1e0e8955b5ad2ac23a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201752"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712857"
 ---
 # <a name="moneyget-class"></a>money_get クラス
 
@@ -47,10 +47,10 @@ class money_get : public locale::facet;
 ### <a name="parameters"></a>パラメーター
 
 *CharType*<br/>
- ロケールの文字をエンコードするためにプログラム内で使用される型。
+ロケールの文字をエンコードするためにプログラム内で使用される型。
 
 *InputIterator*<br/>
- get 関数が入力を読み取る反復子の型。
+get 関数が入力を読み取る反復子の型。
 
 ## <a name="remarks"></a>Remarks
 
@@ -116,22 +116,22 @@ virtual iter_type do_get(iter_type first,
 ### <a name="parameters"></a>パラメーター
 
 *first*<br/>
- 変換されるシーケンスの開始位置を示す入力反復子。
+変換されるシーケンスの開始位置を示す入力反復子。
 
 *last*<br/>
- 変換されるシーケンスの終了位置を示す入力反復子。
+変換されるシーケンスの終了位置を示す入力反復子。
 
 *Intl*<br/>
- シーケンスで期待される通貨記号の種類を示すブール値。国際通貨の場合は **true**、国内通貨の場合は **false**。
+シーケンスで期待される通貨記号の種類を示すブール値。国際通貨の場合は **true**、国内通貨の場合は **false**。
 
 *iosbase*<br/>
- 書式設定フラグ。これが設定されている場合、通貨記号は省略可能です。それ以外の場合は必須です。
+書式設定フラグ。これが設定されている場合、通貨記号は省略可能です。それ以外の場合は必須です。
 
 *状態*<br/>
- 操作が成功したか失敗したかに基づいて、ストリームの状態に適したビットマスク要素を設定します。
+操作が成功したか失敗したかに基づいて、ストリームの状態に適したビットマスク要素を設定します。
 
 *val*<br/>
- 変換後のシーケンスを格納する文字列。
+変換後のシーケンスを格納する文字列。
 
 ### <a name="return-value"></a>戻り値
 
@@ -198,22 +198,22 @@ iter_type get(iter_type first,
 ### <a name="parameters"></a>パラメーター
 
 *first*<br/>
- 変換されるシーケンスの開始位置を示す入力反復子。
+変換されるシーケンスの開始位置を示す入力反復子。
 
 *last*<br/>
- 変換されるシーケンスの終了位置を示す入力反復子。
+変換されるシーケンスの終了位置を示す入力反復子。
 
 *Intl*<br/>
- シーケンスで期待される通貨記号の種類を示すブール値。国際通貨の場合は **true**、国内通貨の場合は **false**。
+シーケンスで期待される通貨記号の種類を示すブール値。国際通貨の場合は **true**、国内通貨の場合は **false**。
 
 *iosbase*<br/>
- 書式設定フラグ。これが設定されている場合、通貨記号は省略可能です。それ以外の場合は必須です
+書式設定フラグ。これが設定されている場合、通貨記号は省略可能です。それ以外の場合は必須です
 
 *状態*<br/>
- 操作が成功したかどうかに基づき、ストリームの状態に適したビットマスク要素を設定します。
+操作が成功したかどうかに基づき、ストリームの状態に適したビットマスク要素を設定します。
 
 *val*<br/>
- 変換後のシーケンスを格納する文字列。
+変換後のシーケンスを格納する文字列。
 
 ### <a name="return-value"></a>戻り値
 
@@ -295,7 +295,7 @@ explicit money_get(size_t _Refs = 0);
 ### <a name="parameters"></a>パラメーター
 
 *_Refs*<br/>
- オブジェクトのメモリ管理の種類を指定するために使用する整数値。
+オブジェクトのメモリ管理の種類を指定するために使用する整数値。
 
 ### <a name="remarks"></a>Remarks
 

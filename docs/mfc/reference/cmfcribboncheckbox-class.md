@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97b143311f6326e938e9ac61175b02c82d3c8c2c
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 44ccd0c1625e971fd74e913b9618d7f3ae811be5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027181"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712494"
 ---
 # <a name="cmfcribboncheckbox-class"></a>CMFCRibbonCheckBox クラス
 `CMFCRibbonCheckBox` クラスは、リボン パネル、クイック アクセス ツール バー、またはポップアップ メニューに追加できるチェック ボックスを実装します。  
@@ -90,7 +90,7 @@ CMFCRibbonCheckBox (UINT nID, LPCTSTR lpszText)
   
  [CMFCRibbonCheckBox](../../mfc/reference/cmfcribboncheckbox-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxribboncheckbox.h  
   
 ##  <a name="cmfcribboncheckbox"></a>  CMFCRibbonCheckBox::CMFCRibbonCheckBox  
@@ -103,11 +103,11 @@ CMFCRibbonCheckBox(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nID*  
- コマンド ID を指定します  
+*nID*<br/>
+[in]コマンド ID を指定します  
   
- [in]*lpszText*  
- テキスト ラベルを指定します。  
+*lpszText*<br/>
+[in]テキスト ラベルを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  リボンのチェック ボックス オブジェクトを構築します。  
@@ -125,8 +125,8 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- チェック ボックスに関連付けられている CDC へのポインター。  
+*pDC*<br/>
+[in]チェック ボックスに関連付けられている CDC へのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  返します、`CSize`チェック ボックスのコンパクト サイズを格納しているオブジェクト。  
@@ -142,8 +142,8 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- このチェック ボックスをオンに関連付けられている CDC へのポインター。  
+*pDC*<br/>
+[in]このチェック ボックスをオンに関連付けられている CDC へのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  A`CSize`中間サイズのチェック ボックスを含むオブジェクト。  
@@ -159,8 +159,8 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- このチェック ボックスをオンに関連付けられている CDC オブジェクトへのポインター。  
+*pDC*<br/>
+[in]このチェック ボックスをオンに関連付けられている CDC オブジェクトへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  返します、`CSize`チェック ボックスの標準サイズを格納しているオブジェクト。  
@@ -188,8 +188,8 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- チェック ボックスを描画するための CDC へのポインター。  
+*pDC*<br/>
+[in]チェック ボックスを描画するための CDC へのポインター。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -204,8 +204,8 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
  [in]*CDC**  
  チェック ボックスに関連付けられている CDC へのポインター。  
   
- [in]*CRect*  
- A`CRect`メニュー画像を描画する四角形を指定するオブジェクト。  
+*CRect*<br/>
+[in]A`CRect`メニュー画像を描画する四角形を指定するオブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合は、イメージが描画された、またはしない場合は FALSE を返します。  
@@ -227,23 +227,23 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- チェック ボックスを描画するためのデバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]チェック ボックスを描画するためのデバイス コンテキストへのポインター。  
   
- [in]*strText*  
- 表示テキスト。  
+*strText*<br/>
+[in]表示テキスト。  
   
- [in]*nTextOffset*  
- テキストを表示、リスト ボックスの左側からのピクセル単位の距離です。  
+*nTextOffset*<br/>
+[in]テキストを表示、リスト ボックスの左側からのピクセル単位の距離です。  
   
- [in]*rect*  
- チェック ボックスを表示する四角形。  
+*rect*<br/>
+[in]チェック ボックスを表示する四角形。  
   
- [in]*bIsSelected*  
- TRUE の場合、チェック ボックスが選択されている、またはしない場合は FALSE。  
+*bIsSelected*<br/>
+[in]TRUE の場合、チェック ボックスが選択されている、またはしない場合は FALSE。  
   
- [in]*bHighlighted*  
- TRUE の場合、チェック ボックスが強調表示されている、またはしない場合は FALSE。  
+*bHighlighted*<br/>
+[in]TRUE の場合、チェック ボックスが強調表示されている、またはしない場合は FALSE。  
   
 ### <a name="remarks"></a>Remarks  
   

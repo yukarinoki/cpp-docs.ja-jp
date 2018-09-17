@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9be1d106257787d5a5dd919372726c8d31a1edc1
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 604ccf9ba0695cf9d17790f149be1f0738266076
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339281"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701767"
 ---
 # <a name="cdatarecoveryhandler-class"></a>CDataRecoveryHandler クラス
 `CDataRecoveryHandler`自動保存を文書化し、アプリケーションが予期せず終了した場合に復元します。  
@@ -156,7 +156,7 @@ class CDataRecoveryHandler : public CObject
   
  `CDataRecoveryHandler`クラスは、再起動マネージャーを密接に関連して`CDataRecoveryHandler`グローバル パラメーターに依存する`m_dwRestartManagerSupportFlags`します。 このパラメーターは、再起動マネージャーがどのようなアクセス許可と、アプリケーションと対話する方法を決定します。 再起動マネージャーを既存のアプリケーションに組み込むに割り当てる必要があります`m_dwRestartManagerSupportFlags`メイン アプリケーションのコンス トラクターで適切な値。 再起動マネージャーを使用する方法の詳細については、次を参照してください。[方法: 再起動マネージャーのサポートを追加](../../mfc/how-to-add-restart-manager-support.md)します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdatarecovery.h  
   
 ##  <a name="autosavealldocumentinfo"></a>  CDataRecoveryHandler::AutosaveAllDocumentInfo  
@@ -188,8 +188,8 @@ virtual BOOL AutosaveDocumentInfo(
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*pDocument*|ポインター、`CDocument`を保存します。|  
-|[in]*bResetModifiedFlag*|True を`CDataRecoveryHandler`考慮*pDocument* ; 変更するにはフレームワークを考慮する場合は false *pDocument*変更します。 このフラグの効果の詳細については「解説」を参照してください。|  
+|*pDocument*|[in]ポインター、`CDocument`を保存します。|  
+|*bResetModifiedFlag*|[in]True を`CDataRecoveryHandler`考慮*pDocument* ; 変更するにはフレームワークを考慮する場合は false *pDocument*変更します。 このフラグの効果の詳細については「解説」を参照してください。|  
   
 ### <a name="return-value"></a>戻り値  
  適切なフラグが設定されている場合は TRUE と*pDocument*は有効な`CDocument`オブジェクト。  
@@ -218,8 +218,8 @@ CDataRecoveryHandler(
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*dwRestartManagerSupportFlags*|再起動マネージャーのオプションがサポートされていることを示します。|  
-|[in]*nAutosaveInterval*|自動保存までの時間。 このパラメーターは、ミリ秒単位です。|  
+|*dwRestartManagerSupportFlags*|[in]再起動マネージャーのオプションがサポートされていることを示します。|  
+|*nAutosaveInterval*|[in]自動保存までの時間。 このパラメーターは、ミリ秒単位です。|  
   
 ### <a name="remarks"></a>Remarks  
  MFC フレームワークが自動的に作成、`CDataRecoveryHandler`を使用する場合、アプリケーションのオブジェクト、**新しいプロジェクト**ウィザード。 データの回復の動作をカスタマイズすることも、再起動マネージャーをする場合は、しない限り、作成しないようにする、`CDataRecoveryHandler`オブジェクト。  
@@ -237,7 +237,7 @@ virtual BOOL CreateDocumentInfo(CDocument* pDocument);
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*pDocument*|ポインター、`CDocument`します。 このメソッドは、このドキュメントの情報を作成します。`CDocument`します。|  
+|*pDocument*|[in]ポインター、`CDocument`します。 このメソッドは、このドキュメントの情報を作成します。`CDocument`します。|  
   
 ### <a name="return-value"></a>戻り値  
  既定の実装では、TRUE を返します。  
@@ -269,7 +269,7 @@ virtual BOOL DeleteAutosavedFile(const CString& strAutosavedFile);
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*strAutosavedFile*|自動保存されたファイル名を含む文字列。|  
+|*strAutosavedFile*|[in]自動保存されたファイル名を含む文字列。|  
   
 ### <a name="return-value"></a>戻り値  
  既定の実装を常に TRUE を返します。  
@@ -285,8 +285,8 @@ virtual CString GenerateAutosaveFileName(const CString& strDocumentName) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*strDocumentName*  
- ドキュメント名を含む文字列。 `GenerateAutosaveFileName` このドキュメントの名前を使用すると、対応する自動保存ファイル名を生成します。  
+*strDocumentName*<br/>
+[in]ドキュメント名を含む文字列。 `GenerateAutosaveFileName` このドキュメントの名前を使用すると、対応する自動保存ファイル名を生成します。  
   
 ### <a name="return-value"></a>戻り値  
  自動保存ファイル名から生成された*strDocumentName*します。  
@@ -326,7 +326,7 @@ virtual CString GetDocumentListName(CDocument* pDocument) const;
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*pDocument*|ポインター、`CDocument`します。 `GetDocumentListName` このドキュメントの名前を取得`CDocument`します。|  
+|*pDocument*|[in]ポインター、`CDocument`します。 `GetDocumentListName` このドキュメントの名前を取得`CDocument`します。|  
   
 ### <a name="return-value"></a>戻り値  
  ドキュメント名から*pDocument*します。  
@@ -346,7 +346,7 @@ virtual CString GetNormalDocumentTitle(CDocument* pDocument);
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*pDocument*|ポインター、`CDocument`します。|  
+|*pDocument*|[in]ポインター、`CDocument`します。|  
   
 ### <a name="return-value"></a>戻り値  
  指定した文書の通常のタイトル。  
@@ -362,8 +362,8 @@ virtual CString GetRecoveredDocumentTitle(const CString& strDocumentTitle) const
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*strDocumentTitle*  
- 通常のドキュメントのタイトル。  
+*strDocumentTitle*<br/>
+[in]通常のドキュメントのタイトル。  
   
 ### <a name="return-value"></a>戻り値  
  回復したドキュメントのタイトル。  
@@ -462,7 +462,7 @@ virtual BOOL RemoveDocumentInfo(CDocument* pDocument);
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*pDocument*|削除するドキュメントへのポインター。|  
+|*pDocument*|[in]削除するドキュメントへのポインター。|  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合*pDocument*は、一覧から削除されましたエラーが発生した場合は FALSE です。  
@@ -529,8 +529,8 @@ Virtual void SetAutosaveInterval(int nAutosaveInterval);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nAutosaveInterval*  
- ミリ秒単位での新しい自動保存の間隔。  
+*nAutosaveInterval*<br/>
+[in]ミリ秒単位での新しい自動保存の間隔。  
   
 ##  <a name="setautosavepath"></a>  CDataRecoveryHandler::SetAutosavePath  
  自動保存されたファイルが格納されるディレクトリを設定します。  
@@ -544,7 +544,7 @@ virtual void SetAutosavePath(const CString& strAutosavePath);
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*strAutosavePath*|自動保存ファイルが格納されるパス。|  
+|*strAutosavePath*|[in]自動保存ファイルが格納されるパス。|  
   
 ### <a name="remarks"></a>Remarks  
  自動保存ディレクトリを変更するファイルは移動されません現在自動保存されます。  
@@ -561,7 +561,7 @@ virtual void SetRestartIdentifier(const CString& strRestartIdentifier);
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*strRestartIdentifier*|再起動マネージャーの一意の識別子。|  
+|*strRestartIdentifier*|[in]再起動マネージャーの一意の識別子。|  
   
 ### <a name="remarks"></a>Remarks  
  再起動マネージャーは、レジストリで開かれているドキュメントについての情報を記録します。 この情報は、再起動の一意の識別子を持つキーとして格納されます。 再起動の識別子は、アプリケーションの各インスタンスに対して一意であるため、アプリケーションの複数のインスタンスが予期せず終了可能性があり、再起動マネージャーが回復し、各します。  
@@ -578,7 +578,7 @@ virtual void SetSaveDocumentInfoOnIdle(BOOL bSaveOnIdle);
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*bSaveOnIdle*|ドキュメントについては、現在のアイドル状態サイクル中に保存する場合は TRUE保存を実行する場合は FALSE。|  
+|*bSaveOnIdle*|[in]ドキュメントについては、現在のアイドル状態サイクル中に保存する場合は TRUE保存を実行する場合は FALSE。|  
   
 ##  <a name="setshutdownbyrestartmanager"></a>  CDataRecoveryHandler::SetShutdownByRestartManager  
  再起動マネージャーによって、アプリケーションの以前の終了が発生したかどうかを設定します。  
@@ -592,7 +592,7 @@ virtual void SetShutdownByRestartManager(BOOL bShutdownByRestartManager);
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*bShutdownByRestartManager*|再起動マネージャーのアプリケーションを終了する原因となったことを指定する場合は TRUEもう 1 つの理由で、アプリケーションが終了していることを示す場合は FALSE。|  
+|*bShutdownByRestartManager*|[in]再起動マネージャーのアプリケーションを終了する原因となったことを指定する場合は TRUEもう 1 つの理由で、アプリケーションが終了していることを示す場合は FALSE。|  
   
 ### <a name="remarks"></a>Remarks  
  フレームワークでは、前回の終了が予想されるかどうか、または再起動マネージャーによって開始されたかどうかに基づいて異なる方法では動作します。  
@@ -609,7 +609,7 @@ virtual BOOL UpdateDocumentInfo(CDocument* pDocument);
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*pDocument*|保存されたドキュメントへのポインター。|  
+|*pDocument*|[in]保存されたドキュメントへのポインター。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドは、自動保存されたドキュメントを削除し、文書の情報を更新する場合は TRUE。エラーが発生した場合は FALSE です。  

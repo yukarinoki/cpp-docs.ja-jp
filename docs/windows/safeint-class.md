@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75c5e4df92cf23198d7225dfe337a5c82ecf5596
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b765f6393b9bd2d632539abb5fb7cd17c29297b6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609205"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701754"
 ---
 # <a name="safeint-class"></a>SafeInt クラス
 
@@ -45,9 +45,9 @@ class SafeInt;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|[in]*rhs*|スタンドアロンの関数をいくつかの演算子の右側にある値を表す入力パラメーター。|
-|[in]*しました*|スタンドアロンの関数をいくつかの演算子の右側にある値を表す入力パラメーター。|
-|[in]*ビット*|スタンドアロンの関数をいくつかの演算子の右側にある値を表す入力パラメーター。|
+|*rhs*|[in]スタンドアロンの関数をいくつかの演算子の右側にある値を表す入力パラメーター。|
+|*i*|[in]スタンドアロンの関数をいくつかの演算子の右側にある値を表す入力パラメーター。|
+|*Bits*|[in]スタンドアロンの関数をいくつかの演算子の右側にある値を表す入力パラメーター。|
 
 ## <a name="members"></a>メンバー
 
@@ -59,7 +59,7 @@ class SafeInt;
 
 ### <a name="assignment-operators"></a>代入演算子
 
-|name|構文|
+|名前|構文|
 |----------|------------|
 |=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator= (const U& rhs)`|
 |=|`SafeInt<T,E>& operator= (const T& rhs) throw()`|
@@ -68,7 +68,7 @@ class SafeInt;
 
 ### <a name="casting-operators"></a>キャスト演算子
 
-|name|構文|
+|名前|構文|
 |----------|------------|
 |bool|`operator bool() throw()`|
 |char|`operator char() const`|
@@ -86,7 +86,7 @@ class SafeInt;
 
 ### <a name="comparison-operators"></a>比較演算子
 
-|name|構文|
+|名前|構文|
 |----------|------------|
 |<|`template<typename U>`<br /><br /> `bool operator< (U rhs) const throw()`|
 |<|`bool operator< (SafeInt<T,E> rhs) const throw()`|
@@ -105,7 +105,7 @@ class SafeInt;
 
 ### <a name="arithmetic-operators"></a>算術演算子
 
-|name|構文|
+|名前|構文|
 |----------|------------|
 |+|`const SafeInt<T,E>& operator+ () const throw()`|
 |-|`SafeInt<T,E> operator- () const`|
@@ -138,7 +138,7 @@ class SafeInt;
 
 ### <a name="logical-operators"></a>論理演算子
 
-|name|構文|
+|名前|構文|
 |----------|------------|
 |!|`bool operator !() const throw()`|
 |~|`SafeInt<T,E> operator~ () const throw()`|

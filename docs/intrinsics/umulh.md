@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afddee0ec2afc43bef22250d37daef201a0fe8dd
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 07d1bf4dcf942fe358b0367f02ed0486ee10bd39
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538547"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706915"
 ---
 # <a name="umulh"></a>__umulh
 **Microsoft 固有の仕様**  
@@ -38,11 +38,11 @@ unsigned __int64 __umulh(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力] `a`  
- 乗算対象の最初の数。  
+*a*<br/>
+[in]乗算する最初の数値。  
   
- [入力] `b`  
- 乗算対象の 2 番目の数。  
+*b*<br/>
+[in]乗算する 2 番目の数値。  
   
 ## <a name="return-value"></a>戻り値  
  乗算で得られる 128 ビットの結果の上位 64 ビット。  

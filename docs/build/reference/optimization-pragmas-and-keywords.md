@@ -1,5 +1,5 @@
 ---
-title: 最適化のプラグマおよびキーワードと |Microsoft ドキュメント
+title: 最適化のプラグマおよびキーワード |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8004b6d9d73cfbcac832bd64672595ed4d232d9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 154bfe9242c4a5737e7a539b33316d9fcd0d913f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374753"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706083"
 ---
 # <a name="optimization-pragmas-and-keywords"></a>最適化に影響するプラグマおよびキーワード
-いくつかのキーワードと、C または C++ コードで使用するプラグマ最適化に影響します。  
-  
--   [__asm](../../assembler/inline/asm.md)  
-  
--   [__assume](../../intrinsics/assume.md)  
-  
--   [インラインで _inline、または\__forceinline](../../cpp/inline-functions-cpp.md)  
-  
--   [#pragma auto_inline](../../preprocessor/auto-inline.md)  
-  
--   [#pragma check_stack](../../preprocessor/check-stack.md)  
-  
--   [#pragma 関数](../../preprocessor/function-c-cpp.md)  
-  
--   [#pragma inline_depth](../../preprocessor/inline-depth.md)  
-  
--   [#pragma inline_recursion](../../preprocessor/inline-recursion.md)  
-  
--   [#pragma intrinsic](../../preprocessor/intrinsic.md)  
-  
--   [#pragma optimize します。](../../preprocessor/optimize.md)  
-  
--   [register キーワード](../../cpp/storage-classes-cpp.md#register)  
-  
-## <a name="see-also"></a>関連項目  
- [コードの最適化](../../build/reference/optimizing-your-code.md)
+
+いくつかのキーワードとプラグマ、C または C++ コードで使用する最適化に影響します。
+
+- [__asm](../../assembler/inline/asm.md)
+
+- [__assume](../../intrinsics/assume.md)
+
+- [インラインで _inline、または\__forceinline](../../cpp/inline-functions-cpp.md)
+
+- [#pragma auto_inline](../../preprocessor/auto-inline.md)
+
+- [#pragma check_stack](../../preprocessor/check-stack.md)
+
+- [#pragma 関数](../../preprocessor/function-c-cpp.md)
+
+- [#pragma inline_depth](../../preprocessor/inline-depth.md)
+
+- [#pragma inline_recursion](../../preprocessor/inline-recursion.md)
+
+- [#pragma intrinsic](../../preprocessor/intrinsic.md)
+
+- [#pragma optimize します。](../../preprocessor/optimize.md)
+
+- [register キーワード](../../cpp/storage-classes-cpp.md#register)
+
+## <a name="see-also"></a>関連項目
+
+[コードの最適化](../../build/reference/optimizing-your-code.md)

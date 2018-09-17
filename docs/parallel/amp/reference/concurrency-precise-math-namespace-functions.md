@@ -98,12 +98,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8265b8c179f9e317fa3e2a66df4797660528f444
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 60c2b85c3a5c1ca5e2da9b0ef3b42148510b59e1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107431"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711061"
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Concurrency::precise_math 名前空間関数
 ||||
@@ -1564,8 +1564,8 @@ inline double modf(
 `_X`  
 浮動小数点値
 
-`_Iptr` (out パラメーター)  
-浮動小数点値としての、`_X` の整数部分。
+`_Iptr`  
+[out]整数部分`_X`、浮動小数点値として。
 
 ### <a name="return-value"></a>戻り値
 `_X` の符号付の小数部分。
@@ -1891,8 +1891,8 @@ inline double remquo(
 `_Y`  
 2 番目の浮動小数点引数。
 
-`_Quo` (out パラメーター)  
-`_X` の小数部ビットを `_Y` の小数部ビットで割った商を返すために使用される整数のアドレス。
+`_Quo`  
+[out]小数部のビットの商を返すために使用される整数のアドレス`_X`の小数部ビットで割った値`_Y`します。
 
 ### <a name="return-value"></a>戻り値
 `_X` を `_Y` で割った剰余を返します。
@@ -1914,8 +1914,8 @@ inline float remquof(
 `_Y`  
 2 番目の浮動小数点引数。
 
-`_Quo` (out パラメーター)  
-`_X` の小数部ビットを `_Y` の小数部ビットで割った商を返すために使用される整数のアドレス。
+`_Quo`  
+[out]小数部のビットの商を返すために使用される整数のアドレス`_X`の小数部ビットで割った値`_Y`します。
 
 ### <a name="return-value"></a>戻り値
 `_X` を `_Y` で割った剰余を返します。

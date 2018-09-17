@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00f71faa5a7b81931c8ee3fbce00ea4b7e66249b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9cc4c44807a40425d4531c747526148837e0a25c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538306"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711166"
 ---
 # <a name="readgsbyte-readgsdword-readgsqword-readgsword"></a>__readgsbyte、__readgsdword、__readgsqword、__readgsword
 **Microsoft 固有の仕様**  
@@ -52,8 +52,8 @@ unsigned __int64 __readgsqword(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力] `Offset`  
- 先頭からのオフセット`GS`から読み取る。  
+*オフセット*<br/>
+[in]先頭からのオフセット`GS`から読み取る。  
   
 ## <a name="return-value"></a>戻り値  
  メモリの内容をバイト、ワード、ダブルワード、quadword (として呼び出される関数の名前で示されます) の場所に`GS:[Offset]`します。  

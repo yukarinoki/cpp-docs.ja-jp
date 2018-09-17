@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0fb7c8d6816475232f5a7ed5d50b2b6036a829d
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c209036f6d606bfd25cf41e828eb6488a1d16036
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541614"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712531"
 ---
 # <a name="indword"></a>__indword
 **Microsoft 固有の仕様**  
@@ -39,8 +39,8 @@ unsigned long __indword(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力] `Port`  
- 読み取るポート。  
+*ポート*<br/>
+[in]読み取るポート。  
   
 ## <a name="return-value"></a>戻り値  
  単語は、ポートから読み取ります。  

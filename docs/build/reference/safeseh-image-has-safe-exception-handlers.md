@@ -18,107 +18,109 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9156fd0d4d0433cfb975c242bc87008471bc4723
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 035485540135fb3b3b082de630b31d6bf934b3d9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573092"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713883"
 ---
 # <a name="safeseh-image-has-safe-exception-handlers"></a>/SAFESEH (安全な例外ハンドラーがあるイメージ)
-```  
-/SAFESEH[:NO]  
-```  
-  
- ときに **/SAFESEH**リンカーはイメージの安全な例外ハンドラーのテーブルも生成できる場合、イメージ生成のみを指定します。 このテーブルは、どの例外ハンドラーがイメージに対して有効であるかをオペレーティング システムに指定します。  
-  
- **/SAFESEH**は x86 をリンクするときにのみ有効なターゲット。 **/SAFESEH**例外ハンドラーが既に存在するプラットフォームはサポートされていません。 たとえば、x64 と ARM では、すべての例外ハンドラーは PDATA にコメントされています。 ML64.exe には、コメントを追加して SEH 情報 (XDATA および PDATA) をイメージに出力する機能をサポートしているため、ml64 関数からのアンワインドが可能です。 参照してください[x64 用 MASM (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)詳細についてはします。  
-  
- 場合 **/SAFESEH**が指定されていない、すべてのモジュールに安全な例外処理機能と互換性がある場合、リンカーで安全な例外ハンドラーのテーブルを使用したイメージは生成します。 いずれかのモジュールに安全な例外処理機能との互換性がない場合、生成されるイメージには安全な例外ハンドラーのテーブルが含まれません。 場合[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) WINDOWSCE または efi _ *、オプションのいずれかを指定するサブシステムのどちらでもないことと、リンカーはイメージと安全な例外のハンドラーのテーブルを生成を試行しません情報を使用します。  
-  
- 場合 **/SAFESEH:NO**を指定すると、すべてのモジュールは、安全な例外処理機能と互換性がある場合でも、リンカーを安全な例外ハンドラーのテーブルを持つイメージ生成しません。  
-  
- リンカーがイメージを生成できない最も一般的な理由は、リンカーへの入力ファイル (モジュール) の 1 つ以上に、安全な例外ハンドラー機能との互換性がないためです。 モジュールに安全な例外ハンドラーとの互換性がない一般的な理由は、以前のバージョンの Visual C++ のコンパイラでそのモジュールが作成されているためです。  
-  
- 使用して、構造化例外ハンドラーとして関数を登録することも[します。SAFESEH](../../assembler/masm/dot-safeseh.md)します。  
-  
- 既存のバイナリを、安全な例外ハンドラーがある、または例外ハンドラーがないものとしてマークすることはできません。安全な例外処理の情報は、ビルド時に追加する必要があります。  
-  
- リンカーが安全な例外ハンドラーのテーブルを生成できるかどうかは、C ランタイム ライブラリを使用しているアプリケーションによって決まります。 リンクしている場合[/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)を安全な例外ハンドラーのテーブルに読み込み構成構造体 (loadcfg.c CRT ソース ファイルで見つかるなど) を指定する必要がある Visual C に対して定義されているすべてのエントリを格納しています。 例えば:  
-  
-```  
-#include <windows.h>  
-extern DWORD_PTR __security_cookie;  /* /GS security cookie */  
-  
-/*  
- * The following two names are automatically created by the linker for any  
- * image that has the safe exception table present.  
-*/  
-  
-extern PVOID __safe_se_handler_table[]; /* base of safe handler entry table */  
-extern BYTE  __safe_se_handler_count;  /* absolute symbol whose address is  
-                                           the count of table entries */  
-typedef struct {  
-    DWORD       Size;  
-    DWORD       TimeDateStamp;  
-    WORD        MajorVersion;  
-    WORD        MinorVersion;  
-    DWORD       GlobalFlagsClear;  
-    DWORD       GlobalFlagsSet;  
-    DWORD       CriticalSectionDefaultTimeout;  
-    DWORD       DeCommitFreeBlockThreshold;  
-    DWORD       DeCommitTotalFreeThreshold;  
-    DWORD       LockPrefixTable;            // VA  
-    DWORD       MaximumAllocationSize;  
-    DWORD       VirtualMemoryThreshold;  
-    DWORD       ProcessHeapFlags;  
-    DWORD       ProcessAffinityMask;  
-    WORD        CSDVersion;  
-    WORD        Reserved1;  
-    DWORD       EditList;                   // VA  
-    DWORD_PTR   *SecurityCookie;  
-    PVOID       *SEHandlerTable;  
-    DWORD       SEHandlerCount;  
-} IMAGE_LOAD_CONFIG_DIRECTORY32_2;  
-  
-const IMAGE_LOAD_CONFIG_DIRECTORY32_2 _load_config_used = {  
-    sizeof(IMAGE_LOAD_CONFIG_DIRECTORY32_2),  
-    0,  
-    0,  
-    0,  
-    0,  
-    0,  
-    0,  
-    0,  
-    0,  
-    0,  
-    0,  
-    0,  
-    0,  
-    0,  
-    0,  
-    0,  
-    0,  
-    &__security_cookie,  
-    __safe_se_handler_table,  
-    (DWORD)(DWORD_PTR) &__safe_se_handler_count  
-};  
-```  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには  
-  
-1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。  
-  
-2.  選択、**リンカー**フォルダー。  
-  
-3.  選択、**コマンドライン**プロパティ ページ。  
-  
-4.  オプションを入力して、**追加オプション**ボックス。  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには  
-  
--   以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>  
-  
-## <a name="see-also"></a>関連項目  
- [リンカー オプションの設定](../../build/reference/setting-linker-options.md)   
- [リンカー オプション](../../build/reference/linker-options.md)
+
+```
+/SAFESEH[:NO]
+```
+
+ときに **/SAFESEH**リンカーはイメージの安全な例外ハンドラーのテーブルも生成できる場合、イメージ生成のみを指定します。 このテーブルは、どの例外ハンドラーがイメージに対して有効であるかをオペレーティング システムに指定します。
+
+**/SAFESEH**は x86 をリンクするときにのみ有効なターゲット。 **/SAFESEH**例外ハンドラーが既に存在するプラットフォームはサポートされていません。 たとえば、x64 と ARM では、すべての例外ハンドラーは PDATA にコメントされています。 ML64.exe には、コメントを追加して SEH 情報 (XDATA および PDATA) をイメージに出力する機能をサポートしているため、ml64 関数からのアンワインドが可能です。 参照してください[x64 用 MASM (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)詳細についてはします。
+
+場合 **/SAFESEH**が指定されていない、すべてのモジュールに安全な例外処理機能と互換性がある場合、リンカーで安全な例外ハンドラーのテーブルを使用したイメージは生成します。 いずれかのモジュールに安全な例外処理機能との互換性がない場合、生成されるイメージには安全な例外ハンドラーのテーブルが含まれません。 場合[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) WINDOWSCE または efi _ *、オプションのいずれかを指定するサブシステムのどちらでもないことと、リンカーはイメージと安全な例外のハンドラーのテーブルを生成を試行しません情報を使用します。
+
+場合 **/SAFESEH:NO**を指定すると、すべてのモジュールは、安全な例外処理機能と互換性がある場合でも、リンカーを安全な例外ハンドラーのテーブルを持つイメージ生成しません。
+
+リンカーがイメージを生成できない最も一般的な理由は、リンカーへの入力ファイル (モジュール) の 1 つ以上に、安全な例外ハンドラー機能との互換性がないためです。 モジュールに安全な例外ハンドラーとの互換性がない一般的な理由は、以前のバージョンの Visual C++ のコンパイラでそのモジュールが作成されているためです。
+
+使用して、構造化例外ハンドラーとして関数を登録することも[します。SAFESEH](../../assembler/masm/dot-safeseh.md)します。
+
+既存のバイナリを、安全な例外ハンドラーがある、または例外ハンドラーがないものとしてマークすることはできません。安全な例外処理の情報は、ビルド時に追加する必要があります。
+
+リンカーが安全な例外ハンドラーのテーブルを生成できるかどうかは、C ランタイム ライブラリを使用しているアプリケーションによって決まります。 リンクしている場合[/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)を安全な例外ハンドラーのテーブルに読み込み構成構造体 (loadcfg.c CRT ソース ファイルで見つかるなど) を指定する必要がある Visual C に対して定義されているすべてのエントリを格納しています。 例えば:
+
+```
+#include <windows.h>
+extern DWORD_PTR __security_cookie;  /* /GS security cookie */
+
+/*
+* The following two names are automatically created by the linker for any
+* image that has the safe exception table present.
+*/
+
+extern PVOID __safe_se_handler_table[]; /* base of safe handler entry table */
+extern BYTE  __safe_se_handler_count;  /* absolute symbol whose address is
+                                           the count of table entries */
+typedef struct {
+    DWORD       Size;
+    DWORD       TimeDateStamp;
+    WORD        MajorVersion;
+    WORD        MinorVersion;
+    DWORD       GlobalFlagsClear;
+    DWORD       GlobalFlagsSet;
+    DWORD       CriticalSectionDefaultTimeout;
+    DWORD       DeCommitFreeBlockThreshold;
+    DWORD       DeCommitTotalFreeThreshold;
+    DWORD       LockPrefixTable;            // VA
+    DWORD       MaximumAllocationSize;
+    DWORD       VirtualMemoryThreshold;
+    DWORD       ProcessHeapFlags;
+    DWORD       ProcessAffinityMask;
+    WORD        CSDVersion;
+    WORD        Reserved1;
+    DWORD       EditList;                   // VA
+    DWORD_PTR   *SecurityCookie;
+    PVOID       *SEHandlerTable;
+    DWORD       SEHandlerCount;
+} IMAGE_LOAD_CONFIG_DIRECTORY32_2;
+
+const IMAGE_LOAD_CONFIG_DIRECTORY32_2 _load_config_used = {
+    sizeof(IMAGE_LOAD_CONFIG_DIRECTORY32_2),
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    &__security_cookie,
+    __safe_se_handler_table,
+    (DWORD)(DWORD_PTR) &__safe_se_handler_count
+};
+```
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
+
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
+
+1. 選択、**リンカー**フォルダー。
+
+1. 選択、**コマンドライン**プロパティ ページ。
+
+1. オプションを入力して、**追加オプション**ボックス。
+
+### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
+
+- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>
+
+## <a name="see-also"></a>関連項目
+
+[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
+[リンカー オプション](../../build/reference/linker-options.md)

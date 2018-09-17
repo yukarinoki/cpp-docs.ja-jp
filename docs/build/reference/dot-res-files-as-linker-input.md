@@ -1,5 +1,5 @@
 ---
-title: .リンカー入力として res ファイル |Microsoft ドキュメント
+title: .リンカー入力として res ファイル |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71344bb752ff7a328ddd5f718a5de1c1f42b65be
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5a6a572013a29420670a2aef8c91c9c4bc64e871
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370668"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706316"
 ---
 # <a name="res-files-as-linker-input"></a>リンカー入力としての .res ファイル
-プログラムをリンクするときに、.res ファイルを指定できます。 リソース コンパイラ (RC) では、.res ファイルが作成されます。 リンクは、COFF に .res ファイルを自動的に変換します。 CVTRES.exe ツールは、LINK.exe と同じディレクトリか、PATH 環境変数で指定されたディレクトリにする必要があります。  
-  
-## <a name="see-also"></a>関連項目  
- [LINK の入力ファイル](../../build/reference/link-input-files.md)   
- [リンカー オプション](../../build/reference/linker-options.md)
+
+プログラムをリンクするときに、.res ファイルを指定できます。 リソース コンパイラ (RC) では、.res ファイルが作成されます。 リンクは、COFF に .res ファイルを自動的に変換します。 CVTRES.exe ツールは、LINK.exe と同じディレクトリ内、または、PATH 環境変数で指定したディレクトリである必要があります。
+
+## <a name="see-also"></a>関連項目
+
+[LINK の入力ファイル](../../build/reference/link-input-files.md)<br/>
+[リンカー オプション](../../build/reference/linker-options.md)

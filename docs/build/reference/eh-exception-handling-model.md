@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5136826b62fb5c0e6b8e7affd06be3aa81c03d6
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: e946406a708f26685d6f1b7307476b6253c5362e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42571884"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713294"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (例外処理モデル)
 
@@ -117,8 +117,8 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)  
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)  
-[エラーと例外処理](../../cpp/errors-and-exception-handling-modern-cpp.md)  
-[例外の仕様 (スロー)](../../cpp/exception-specifications-throw-cpp.md)  
-[構造化例外処理 (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)  
+[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
+[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)<br/>
+[エラーと例外処理](../../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[例外の仕様 (スロー)](../../cpp/exception-specifications-throw-cpp.md)
+[構造化例外処理 (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)

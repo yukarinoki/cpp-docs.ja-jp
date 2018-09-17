@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af6e9ce4c252e2d798615292291dcd3e21cbd72a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 810a375fce13d8628db5ff00d89964d84c83b525
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853671"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704048"
 ---
 # <a name="cmfckeymapdialog-class"></a>CMFCKeyMapDialog クラス
 `CMFCKeyMapDialog`クラスは、コマンドをキーボードのキーにマップされるコントロールをサポートしています。  
@@ -97,7 +97,7 @@ class CMFCKeyMapDialog : public CDialogEx
   
  [CMFCKeyMapDialog](../../mfc/reference/cmfckeymapdialog-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxkeymapdialog.h  
   
 ##  <a name="cmfckeymapdialog"></a>  CMFCKeyMapDialog::CMFCKeyMapDialog  
@@ -110,11 +110,11 @@ CMFCKeyMapDialog(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWndParentFrame*  
- 親ウィンドウへのポインター、`CMFCKeyMapDialog`オブジェクト。  
+*pWndParentFrame*<br/>
+[in]親ウィンドウへのポインター、`CMFCKeyMapDialog`オブジェクト。  
   
- [in]*bEnablePrint*  
- アクセラレータ キーの一覧を印刷する場合は TRUE。それ以外の場合、FALSE です。 既定では FALSE です。  
+*bEnablePrint*<br/>
+[in]アクセラレータ キーの一覧を印刷する場合は TRUE。それ以外の場合、FALSE です。 既定では FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -144,8 +144,8 @@ virtual CString FormatItem(int nItem) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nItem*  
- キー マッピングの内部リストの項目の 0 から始まるインデックス。  
+*nItem*<br/>
+[in]キー マッピングの内部リストの項目の 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  A`CString`書式設定された項目のテキストを格納しているオブジェクト。  
@@ -160,8 +160,8 @@ virtual CString GetCommandKeys(UINT uiCmdID) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiCmdID*  
- コマンド id。  
+*uiCmdID*<br/>
+[in]コマンド id。  
   
 ### <a name="return-value"></a>戻り値  
  セミコロンで区切られた、指定したコマンドに関連付けられているショートカット キーの (';') の一覧。  
@@ -178,11 +178,11 @@ virtual void OnInsertItem(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pButton*  
- コマンドの名前と説明をキーボードのキーの組み合わせにマップするために使用するツール バー ボタンへのポインター。 キー マップ項目は、内部のリスト コントロールに格納されます。  
+*pButton*<br/>
+[in]コマンドの名前と説明をキーボードのキーの組み合わせにマップするために使用するツール バー ボタンへのポインター。 キー マップ項目は、内部のリスト コントロールに格納されます。  
   
- [in]*nItem*  
- 内部リスト コントロールに新しいキー マップ項目を挿入する場所を指定する 0 から始まるインデックス。  
+*nItem*<br/>
+[in]内部リスト コントロールに新しいキー マップ項目を挿入する場所を指定する 0 から始まるインデックス。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -197,14 +197,14 @@ virtual int OnPrintHeader(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*dc*  
- プリンター デバイス コンテキスト。  
+*dc*<br/>
+[in]プリンター デバイス コンテキスト。  
   
- [in]*n ページ レイアウト*  
- 印刷するページ番号。  
+*n ページ レイアウト*<br/>
+[in]印刷するページ番号。  
   
- [in]*cx*  
- ピクセル単位でヘッダーの水平オフセット。  
+*cx*<br/>
+[in]ピクセル単位でヘッダーの水平オフセット。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、印刷したテキストの高さ。 詳細については、の戻り値のセクションを参照してください。 [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)します。  
@@ -225,20 +225,20 @@ virtual int OnPrintItem(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*dc*  
- プリンター デバイス コンテキスト。  
+*dc*<br/>
+[in]プリンター デバイス コンテキスト。  
   
- [in]*nItem*  
- 印刷する項目の 0 から始まるインデックス。  
+*nItem*<br/>
+[in]印刷する項目の 0 から始まるインデックス。  
   
- [in]*y*  
- ページの上部および項目の位置間の垂直オフセット。  
+*y*<br/>
+[in]ページの上部および項目の位置間の垂直オフセット。  
   
- [in]*cx*  
- ページの左側と項目の位置の水平オフセット。  
+*cx*<br/>
+[in]ページの左側と項目の位置の水平オフセット。  
   
- [in]*bCalcHeight*  
- 印刷の項目の最適な高さを計算する場合は TRUE既定の領域に収まるように、印刷の項目を切り捨てる場合は FALSE。  
+*bCalcHeight*<br/>
+[in]印刷の項目の最適な高さを計算する場合は TRUE既定の領域に収まるように、印刷の項目を切り捨てる場合は FALSE。  
   
 ### <a name="return-value"></a>戻り値  
  印刷された項目の高さ。  
