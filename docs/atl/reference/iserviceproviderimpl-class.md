@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca7a39149969b7e85685930d6e901bf81db99d64
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d14d00e57cbbb04c77f0b84c584ebb1c4f4260e5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759402"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703210"
 ---
 # <a name="iserviceproviderimpl-class"></a>IServiceProviderImpl クラス
 
@@ -83,14 +83,14 @@ STDMETHOD(QueryService)(
 
 ### <a name="parameters"></a>パラメーター
 
-[IN]*guidService*  
-サービス id (SID) へのポインター。
+*guidService*<br/>
+[in]サービス id (SID) へのポインター。
 
-[IN]*riid*  
-呼び出し元がアクセスできるインターフェイスの識別子です。
+*riid*<br/>
+[in]呼び出し元がアクセスできるインターフェイスの識別子です。
 
-[OUT]*ppvObj*  
-要求されたインターフェイスへの間接ポインター。
+*ppvObj*<br/>
+[out]要求されたインターフェイスへの間接ポインター。
 
 ### <a name="return-value"></a>戻り値
 

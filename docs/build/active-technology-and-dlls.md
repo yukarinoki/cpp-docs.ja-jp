@@ -1,5 +1,5 @@
 ---
-title: Active テクノロジと Dll |Microsoft ドキュメント
+title: Active テクノロジと Dll |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,21 +18,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5e0296b994f7944d5b26e98ba1b0545a03ec55b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: efa9a5cf17a4578fc7be9cbadc51605ee32c1650
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360114"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706252"
 ---
 # <a name="active-technology-and-dlls"></a>Active テクノロジと DLL
-Active テクノロジにより、オブジェクトのサーバーを DLL 内部に完全に実装します。 この種類のサーバーには、インプロセス サーバーは呼び出されます。 MFC は、Active テクノロジは、サーバーをコンテナーのメイン メッセージ ループにフックするための手段を提供しないために主に、ビジュアル編集の機能は、すべてのプロセスでサーバーを完全にできません。 MFC には、アクセラレータ キーとアイドル処理を処理するコンテナー アプリケーションのメッセージ ループへのアクセスが必要です。  
-  
- オートメーション サーバーを作成しているユーザー インターフェイスを持っていない場合は、インプロセス サーバー、サーバーを作成でき、DLL に完全に移行できます。  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください  
-  
--   [オートメーション サーバー](../mfc/automation-servers.md)  
-  
-## <a name="see-also"></a>関連項目  
- [Visual C++ の DLL](../build/dlls-in-visual-cpp.md)
+
+Active テクノロジは、オブジェクトのサーバーを DLL 内部に完全に実装できます。 この種類のサーバーには、インプロセス サーバーは呼び出されます。 MFC は、Active テクノロジは、サーバーをコンテナーのメイン メッセージ ループにフックする方法を提供していないため、主に、ビジュアル編集のすべての機能のプロセスでサーバーを完全にできません。 MFC では、アクセラレータ キーとアイドル状態時の処理を処理するコンテナー アプリケーションのメッセージ ループへのアクセスが必要です。
+
+オートメーション サーバーを作成しているユーザー インターフェイスを持っていない場合は、サーバーをインプロセス サーバーを作成し、DLL に完全に配置できます。
+
+## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
+
+- [オートメーション サーバー](../mfc/automation-servers.md)
+
+## <a name="see-also"></a>関連項目
+
+[Visual C++ の DLL](../build/dlls-in-visual-cpp.md)

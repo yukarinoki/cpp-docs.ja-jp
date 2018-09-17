@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::operator&lt; (valarray)
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
-ms.openlocfilehash: b828081fea1f9886c1a661323e2d0e0c79d1ae96
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 83958ee300143463a1da9b10d2edb6eb1707ec4f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315029"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703561"
 ---
 # <a name="ltvalarraygt-operators"></a>&lt;valarray&gt; 演算子
 
@@ -78,11 +78,11 @@ operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- 要素が等しくないことをテストする 2 つの valarray のうち 1 つ目の valarray。
+*left*<br/>
+要素が等しくないことをテストする 2 つの valarray のうち 1 つ目の valarray。
 
-*right*  
- 要素が等しくないことをテストする 2 つの valarray のうち 2 つ目の valarray。
+*right*<br/>
+要素が等しくないことをテストする 2 つの valarray のうち 2 つ目の valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -173,11 +173,11 @@ operator%(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- 被除数の役割を果たし、別の値または valarray で除算する値または valarray。
+*left*<br/>
+被除数の役割を果たし、別の値または valarray で除算する値または valarray。
 
-*right*  
- 除数の役割を果たし、別の値または valarray を除算する値または valarray。
+*right*<br/>
+除数の役割を果たし、別の値または valarray を除算する値または valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -256,11 +256,11 @@ operator&(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- それぞれの要素をビットごとに `AND` で結合する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素とビットごとに結合する要素型の指定値。
+*left*<br/>
+それぞれの要素をビットごとに `AND` で結合する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素とビットごとに結合する要素型の指定値。
 
-*right*  
- それぞれの要素をビットごとに `AND` で結合する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素とビットごとに結合する要素型の指定値。
+*right*<br/>
+それぞれの要素をビットごとに `AND` で結合する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素とビットごとに結合する要素型の指定値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -345,11 +345,11 @@ operator&&(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- それぞれの要素を論理 `AND` で結合する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と結合する要素型の指定値。
+*left*<br/>
+それぞれの要素を論理 `AND` で結合する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と結合する要素型の指定値。
 
-*right*  
- それぞれの要素を論理 `AND` で結合する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と結合する要素型の指定値。
+*right*<br/>
+それぞれの要素を論理 `AND` で結合する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と結合する要素型の指定値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -432,11 +432,11 @@ operator>(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- それぞれの要素を比較する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と比較する指定値。
+*left*<br/>
+それぞれの要素を比較する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と比較する指定値。
 
-*right*  
- それぞれの要素を比較する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と比較する指定値。
+*right*<br/>
+それぞれの要素を比較する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と比較する指定値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -523,11 +523,11 @@ operator>=(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- それぞれの要素を比較する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と比較する指定値。
+*left*<br/>
+それぞれの要素を比較する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と比較する指定値。
 
-*right*  
- それぞれの要素を比較する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と比較する指定値。
+*right*<br/>
+それぞれの要素を比較する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と比較する指定値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -614,11 +614,11 @@ operator>>(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- シフトする値、またはシフトする値を要素とする valarray。
+*left*<br/>
+シフトする値、またはシフトする値を要素とする valarray。
 
-*right*  
- 右シフトの量を示す値か、要素ごとの右シフトの量を示す要素から成る valarray。
+*right*<br/>
+右シフトの量を示す値か、要素ごとの右シフトの量を示す要素から成る valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -701,11 +701,11 @@ operator<(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- それぞれの要素を比較する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と比較する指定値。
+*left*<br/>
+それぞれの要素を比較する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と比較する指定値。
 
-*right*  
- それぞれの要素を比較する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と比較する指定値。
+*right*<br/>
+それぞれの要素を比較する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と比較する指定値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -792,11 +792,11 @@ operator<=(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- それぞれの要素を比較する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と比較する指定値。
+*left*<br/>
+それぞれの要素を比較する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と比較する指定値。
 
-*right*  
- それぞれの要素を比較する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と比較する指定値。
+*right*<br/>
+それぞれの要素を比較する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と比較する指定値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -883,11 +883,11 @@ operator<<(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- シフトする値、またはシフトする値を要素とする valarray。
+*left*<br/>
+シフトする値、またはシフトする値を要素とする valarray。
 
-*right*  
- 左シフトの量を示す値か、要素ごとの左シフトの量を示す要素から成る valarray。
+*right*<br/>
+左シフトの量を示す値か、要素ごとの左シフトの量を示す要素から成る valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -970,11 +970,11 @@ operator*(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- それぞれの要素を乗算する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と乗算する指定値。
+*left*<br/>
+それぞれの要素を乗算する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と乗算する指定値。
 
-*right*  
- それぞれの要素を乗算する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と乗算する指定値。
+*right*<br/>
+それぞれの要素を乗算する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と乗算する指定値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1053,11 +1053,11 @@ operator+(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- それぞれの要素を加算する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と加算する指定値。
+*left*<br/>
+それぞれの要素を加算する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と加算する指定値。
 
-*right*  
- それぞれの要素を加算する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と加算する指定値。
+*right*<br/>
+それぞれの要素を加算する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と加算する指定値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1136,11 +1136,11 @@ operator-(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- 被減数の役割を果たし、これから他の値または valarray を減算して差を求める値または valarray。
+*left*<br/>
+被減数の役割を果たし、これから他の値または valarray を減算して差を求める値または valarray。
 
-*right*  
- 減数の役割を果たし、他の値または valarray から減算して差を求める値または valarray。
+*right*<br/>
+減数の役割を果たし、他の値または valarray から減算して差を求める値または valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1225,11 +1225,11 @@ operator/(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- 被除数の役割を果たし、別の値または valarray で除算して商を求める値または valarray。
+*left*<br/>
+被除数の役割を果たし、別の値または valarray で除算して商を求める値または valarray。
 
-*right*  
- 除数の役割を果たし、別の値または valarray を除算して商を求める値または valarray。
+*right*<br/>
+除数の役割を果たし、別の値または valarray を除算して商を求める値または valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1314,11 +1314,11 @@ operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- 要素が等しいことをテストする 2 つの valarray のうち 1 つ目の valarray。
+*left*<br/>
+要素が等しいことをテストする 2 つの valarray のうち 1 つ目の valarray。
 
-*right*  
- 要素が等しいことをテストする 2 つの valarray のうち 2 つ目の valarray。
+*right*<br/>
+要素が等しいことをテストする 2 つの valarray のうち 2 つ目の valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1405,11 +1405,11 @@ operator^(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- それぞれの要素をビットごとに **XOR** で結合する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素とビットごとに結合する要素型の指定値。
+*left*<br/>
+それぞれの要素をビットごとに **XOR** で結合する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素とビットごとに結合する要素型の指定値。
 
-*right*  
- それぞれの要素をビットごとに **XOR** で結合する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素とビットごとに結合する要素型の指定値。
+*right*<br/>
+それぞれの要素をビットごとに **XOR** で結合する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素とビットごとに結合する要素型の指定値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1498,11 +1498,11 @@ operator|(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- それぞれの要素をビットごとに `OR` で結合する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素とビットごとに結合する要素型の指定値。
+*left*<br/>
+それぞれの要素をビットごとに `OR` で結合する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素とビットごとに結合する要素型の指定値。
 
-*right*  
- それぞれの要素をビットごとに `OR` で結合する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素とビットごとに結合する要素型の指定値。
+*right*<br/>
+それぞれの要素をビットごとに `OR` で結合する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素とビットごとに結合する要素型の指定値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1591,11 +1591,11 @@ operator||(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- それぞれの要素を論理 `OR` で結合する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と結合する要素型の指定値。
+*left*<br/>
+それぞれの要素を論理 `OR` で結合する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と結合する要素型の指定値。
 
-*right*  
- それぞれの要素を論理 `OR` で結合する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と結合する要素型の指定値。
+*right*<br/>
+それぞれの要素を論理 `OR` で結合する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と結合する要素型の指定値。
 
 ### <a name="return-value"></a>戻り値
 

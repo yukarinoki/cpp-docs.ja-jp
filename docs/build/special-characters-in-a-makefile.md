@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40d9ad442e4838ee837c93ada0352f230fc0cbed
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 3ae77e769672dcc88a9dd41c901424c8c8150e6b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894435"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709364"
 ---
 # <a name="special-characters-in-a-makefile"></a>メイクファイルの特殊文字
 
 NMAKE の特殊文字をリテラル文字として使用するには、その前にキャレット (^) を配置します。 NMAKE では、その他の文字の前にキャレットを無視します。 特殊文字は次のとおりです。
 
-`:  ;  #  (  )  $  ^  \  {  }  !  @  —`  
+`:  ;  #  (  )  $  ^  \  {  }  !  @  —`
 
 引用符で囲まれた文字列内のキャレット (^) は、キャレットのリテラル文字として扱われます。 行の末尾のキャレットは、文字列またはマクロでリテラルの改行文字を挿入します。
 

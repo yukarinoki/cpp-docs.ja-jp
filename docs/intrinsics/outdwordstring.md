@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adc104e3325a2a9fda922f8ef32aa84982f35366
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3ff43920400028e0fb13fc17615fb58cc551726b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539074"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704224"
 ---
 # <a name="outdwordstring"></a>__outdwordstring
 **Microsoft 固有の仕様**  
@@ -41,14 +41,14 @@ void __outdwordstring(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力] `Port`  
- データを送信するポート。  
+*ポート*<br/>
+[in]データを送信するポート。  
   
- [入力] `Buffer`  
- 指定したポートを送信するデータへのポインター。  
+*Buffer*<br/>
+[in]指定したポートを送信するデータへのポインター。  
   
- [入力] `Count`  
- 送信するダブルワードの数。  
+*カウント*<br/>
+[in]送信するダブルワードの数。  
   
 ## <a name="requirements"></a>要件  
   

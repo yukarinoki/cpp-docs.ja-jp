@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4720ca4a65a543ca09412ac0c1eb1e65bf6cdd23
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: e563e7240c1797bf863ee0762f923e91a6f05bb0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540290"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699891"
 ---
 # <a name="bitscanforward-bitscanforward64"></a>_BitScanForward、_BitScanForward64
 **Microsoft 固有の仕様**  
@@ -47,11 +47,11 @@ unsigned char _BitScanForward64(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [出力] `Index`  
- 最初に見つかった設定済みビット (1) のビット位置が読み込まれます。  
+*Index*<br/>
+[out]見つかった最初のビット セット (1) のビット位置が読み込まれます。  
   
- [入力] `Mask`  
- 検索する 32 ビットまたは 64 ビットの値。  
+*マスク*<br/>
+[in]検索する 32 ビットまたは 64 ビット値。  
   
 ## <a name="return-value"></a>戻り値  
  マスクが 0 の場合は 0。それ以外の場合は 0 以外。  

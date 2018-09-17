@@ -1,5 +1,5 @@
 ---
-title: 推論による依存ファイル |Microsoft ドキュメント
+title: 推論による依存ファイル |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a86ed1a8fe6c97ae11af50f59cb639ef6fd7c1da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 631c5631b60f0e05dd1f1541facc767f35944d3d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367899"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701481"
 ---
 # <a name="inferred-dependents"></a>推論による依存ファイル
-推論による依存ファイルでは、推論規則からは派生し、明示的な依存オブジェクトの前に評価されます。 推論による依存ファイルがターゲットと比べて古い場合は、(nmake の) は、依存関係のコマンド ブロックを呼び出します。 推論による依存ファイルが存在しないか、独自の依存オブジェクトに対して最新ではないが場合、(nmake の) は、推論による依存ファイルを最初に更新されます。 推論による依存ファイルの詳細については、次を参照してください。[推論規則](../build/inference-rules.md)です。  
-  
-## <a name="see-also"></a>関連項目  
- [依存](../build/dependents.md)
+
+推定の依存は推論規則から派生し、明示的な依存ファイルの前に評価されます。 推論による依存ファイルをそのターゲットに対して最新ではない場合は、(nmake の) は、依存関係のコマンド ブロックを呼び出します。 場合は、推論による依存ファイルが存在しないか、独自の依存オブジェクトと比べて古い、NMAKE はまず推論による依存ファイルを更新します。 推論による依存ファイルの詳細については、次を参照してください。[推論規則](../build/inference-rules.md)します。
+
+## <a name="see-also"></a>関連項目
+
+[依存](../build/dependents.md)

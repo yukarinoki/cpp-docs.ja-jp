@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 202e982d30fd0877814fa0c0fe967091057f920f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 6731bb6a06f775c06ba16eb4885a3982d934f3cd
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43685978"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699872"
 ---
 # <a name="sidt"></a>__sidt
 **Microsoft 固有の仕様**  
@@ -40,7 +40,7 @@ void __sidt(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `Destination`|IDTR が格納されているメモリ位置へのポインター。|  
+|*変換先*|[in]IDTR が格納されているメモリ位置へのポインター。|  
   
 ## <a name="requirements"></a>要件  
   

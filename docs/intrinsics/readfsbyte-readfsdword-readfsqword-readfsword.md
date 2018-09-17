@@ -1,5 +1,5 @@
 ---
-title: _ _readfsbyte、_ _readfsdword、_ _readfsqword、_ _readfsword |Microsoft ドキュメント
+title: _ _readfsbyte、_ _readfsdword、_ _readfsqword、_ _readfsword |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,17 +26,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2dc016dbd2b17552d50dfdedd1208dcd3e6af22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a1a60bde6b522cbd42ac458e79e153450e09030
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333197"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705695"
 ---
 # <a name="readfsbyte-readfsdword-readfsqword-readfsword"></a>__readfsbyte、__readfsdword、__readfsqword、__readfsword
 **Microsoft 固有の仕様**  
   
- FS セグメントの先頭からの相対オフセットで指定された場所からメモリを読み取ります。  
+ FS セグメントの先頭の相対オフセットで指定された場所からは、メモリを読み取ります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -56,11 +56,11 @@ unsigned __int64 __readfsqword(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力] `Offset`  
- 先頭からのオフセット`FS`から読み取れません。  
+*オフセット*<br/>
+[in]先頭からのオフセット`FS`から読み取る。  
   
 ## <a name="return-value"></a>戻り値  
- メモリの内容をバイト、ワード、ダブルワード、または quadword (ように呼び出される関数の名前で示されます) の場所に`FS:[Offset]`です。  
+ メモリの内容をバイト、ワード、ダブルワードを quadword (として呼び出される関数の名前で示されます) の場所に`FS:[Offset]`します。  
   
 ## <a name="requirements"></a>要件  
   
@@ -73,7 +73,7 @@ unsigned __int64 __readfsqword(
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  これらのルーチンは組み込みとしてのみ使用できます。  
   
 **Microsoft 固有の仕様はここまで**  

@@ -13,12 +13,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 985232af68daebe924cd51300974d614bf6d6756
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: f99df40d5718a450019fb7cd26aa0c00a59c0a48
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42572518"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701859"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>アルファベット順のコンパイラ オプション
 
@@ -59,8 +59,7 @@ ms.locfileid: "42572518"
 |[/Fo](fo-object-file-name.md)|オブジェクト ファイルを作成します。|
 |[/fp](fp-specify-floating-point-behavior.md)|浮動小数点の動作を指定します。|
 |[/Fp](fp-name-dot-pch-file.md)|プリコンパイル済みヘッダー ファイルの名前を指定します。|
-|[/FR](fr-fr-create-dot-sbr-file.md)<br /><br /> [/Fr](fr-fr-create-dot-sbr-file.md)|ブラウザー ファイルを生成します。 
-  **/Fr** は非推奨とされました。|
+|[/FR](fr-fr-create-dot-sbr-file.md)<br /><br /> [/Fr](fr-fr-create-dot-sbr-file.md)|ブラウザー ファイルを生成します。 **/Fr** は非推奨とされました。|
 |[/FS](fs-force-synchronous-pdb-writes.md)|プログラム データベース (PDB) ファイルへの書き込みを MSPDBSRV.EXE によりシリアル化します。|
 |[/FU](fu-name-forced-hash-using-file.md)|[#using](../../preprocessor/hash-using-directive-cpp.md) ディレクティブに渡された場合と同じ方法でファイル名の使用を強制します。|
 |[/Fx](fx-merge-injected-code.md)|挿入されたコードをソース ファイルとマージします。|
@@ -174,4 +173,7 @@ ms.locfileid: "42572518"
 |[/ZW](zw-windows-runtime-compilation.md)|Windows ランタイムで実行する出力ファイルを作成します。|
 
 ## <a name="see-also"></a>関連項目
- [C/C++ ビルドのリファレンス](c-cpp-building-reference.md)[コンパイラ オプション](compiler-options.md)[コンパイラ オプションの設定](setting-compiler-options.md)
+
+[C/C++ ビルドのリファレンス](c-cpp-building-reference.md)<br/>
+[コンパイラ オプション](compiler-options.md)<br/>
+[コンパイラ オプションの設定](setting-compiler-options.md)

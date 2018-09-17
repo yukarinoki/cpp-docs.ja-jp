@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c448c551e7b800301e374fed9a8f6acb7aa7ab1b
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 780ccdb7f16ed79ef8205c07e1390e778bc33ef5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110137"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711387"
 ---
 # <a name="uniquelock-class"></a>unique_lock クラス
 
@@ -130,7 +130,7 @@ unique_lock& operator=(unique_lock&& Other) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*その他*  
+*その他*<br/>
 `unique_lock` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -181,7 +181,7 @@ void swap(unique_lock& Other) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*その他*  
+*その他*<br/>
 `unique_lock` オブジェクト。
 
 ## <a name="try_lock"></a>  try_lock
@@ -214,7 +214,7 @@ bool try_lock_for(
 
 ### <a name="parameters"></a>パラメーター
 
-*Rel_time*  
+*Rel_time*<br/>
 メソッドが `mutex` の所有権の取得を試行する時間について、その最大値を指定する [chrono::duration](../standard-library/duration-class.md) オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -240,7 +240,7 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>パラメーター
 
-*Abs_time*  
+*Abs_time*<br/>
 メソッドが `mutex` の所有権の取得を止めるしきい値を指定する時点。
 
 ### <a name="return-value"></a>戻り値
@@ -283,16 +283,16 @@ unique_lock(mutex_type& Mtx,
 
 ### <a name="parameters"></a>パラメーター
 
-*続け*  
+*続け*<br/>
 mutex 型オブジェクト。
 
-*Rel_time*  
+*Rel_time*<br/>
 メソッドが `mutex` の所有権の取得を試行する時間について、その最大値を指定する [chrono::duration](../standard-library/duration-class.md) オブジェクト。
 
-*Abs_time*  
+*Abs_time*<br/>
 メソッドが `mutex` の所有権の取得を止めるしきい値を指定する時点。
 
-*その他*  
+*その他*<br/>
 `unique_lock` オブジェクト。
 
 ### <a name="remarks"></a>Remarks

@@ -1,5 +1,5 @@
 ---
-title: /INTEGRITYCHECK |Microsoft ドキュメント
+title: /INTEGRITYCHECK |Microsoft Docs
 ms.custom: ''
 ms.date: 12/28/2017
 ms.technology:
@@ -17,23 +17,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b0adf9add2d191ae89aec0a5d756ade8e9f7725
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 062ce019fe1b622661be880d8a06eac9c5971103
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370249"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709204"
 ---
 # <a name="integritycheck"></a>/INTEGRITYCHECK
 
 読み込み時にバイナリ イメージのデジタル署名を確認する必要があることを指定します。
 
-> **/INTEGRITYCHECK****[: いいえ]**
+> **/INTEGRITYCHECK****[: NO]**
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-DLL ファイルまたは実行可能ファイルのヘッダーで、このオプションは、Windows でイメージを読み込むために、メモリ マネージャーによるデジタル署名の確認を必要とするフラグを設定します。 Windows Vista 以前の Windows は、このフラグを無視します。 このオプションは、カーネル モード コードを実装する 64 ビット DLL には設定する必要があり、またすべてのデバイス ドライバーに推奨されます。 詳細については、次を参照してください。[カーネル モード コードの署名要件](/windows-hardware/drivers/install/kernel-mode-code-signing-requirements--windows-vista-and-later-)です。
+DLL ファイルまたは実行可能ファイルのヘッダーで、このオプションは、Windows でイメージを読み込むために、メモリ マネージャーによるデジタル署名の確認を必要とするフラグを設定します。 Windows Vista 以前の Windows は、このフラグを無視します。 このオプションは、カーネル モード コードを実装する 64 ビット DLL には設定する必要があり、またすべてのデバイス ドライバーに推奨されます。 詳細については、次を参照してください。[カーネル モード コード署名要件](/windows-hardware/drivers/install/kernel-mode-code-signing-requirements--windows-vista-and-later-)します。
 
 ## <a name="see-also"></a>関連項目
 
-[EDITBIN オプション](../../build/reference/editbin-options.md)  
+[EDITBIN オプション](../../build/reference/editbin-options.md)

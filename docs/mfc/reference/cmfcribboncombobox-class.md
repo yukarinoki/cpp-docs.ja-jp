@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2ccefbc435cac5b48cd2c9509831699dcec70af
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 68746d76c9c7842e9fc8c16addeca2cb44f31211
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849670"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701741"
 ---
 # <a name="cmfcribboncombobox-class"></a>CMFCRibbonComboBox クラス
 `CMFCRibbonComboBox`クラスは、リボン バー、リボン パネル、またはリボン ポップアップ メニューに追加できるコンボ ボックス コントロールを実装します。  
@@ -70,7 +70,7 @@ class CMFCRibbonComboBox : public CMFCRibbonEdit
   
 ### <a name="constructors"></a>コンストラクター  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CMFCRibbonComboBox::CMFCRibbonComboBox](#cmfcribboncombobox)|CMFCRibbonComboBox オブジェクトを構築します。|  
   
@@ -114,7 +114,7 @@ class CMFCRibbonComboBox : public CMFCRibbonEdit
   
  [CMFCRibbonComboBox](../../mfc/reference/cmfcribboncombobox-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxribboncombobox.h  
   
 ##  <a name="additem"></a>  CMFCRibbonComboBox::AddItem  
@@ -127,11 +127,11 @@ virtual INT_PTR AddItem(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszItem*  
- 追加する項目の文字列。  
+*lpszItem*<br/>
+[in]追加する項目の文字列。  
   
- [in]*指定*  
- 追加する項目に関連付けられたデータ。  
+*指定*<br/>
+[in]追加する項目に関連付けられたデータ。  
   
 ### <a name="return-value"></a>戻り値  
  追加する項目の 0 から始まるインデックス。  
@@ -153,20 +153,20 @@ CMFCRibbonComboBox();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nID*  
- コンボ ボックスの ID。  
+*nID*<br/>
+[in]コンボ ボックスの ID。  
   
- [in]*bHasEditBox*  
- コントロール内で、編集ボックスを使用する場合は TRUE。FALSE それ以外の場合。  
+*bHasEditBox*<br/>
+[in]コントロール内で、編集ボックスを使用する場合は TRUE。FALSE それ以外の場合。  
   
- [in]*nWidth*  
- ピクセルのコンボ ボックスの幅または、既定の幅の場合は-1。  
+*nWidth*<br/>
+[in]ピクセルのコンボ ボックスの幅または、既定の幅の場合は-1。  
   
- [in]*lpszLabel*  
- コンボ ボックスのラベルを表示します。  
+*lpszLabel*<br/>
+[in]コンボ ボックスのラベルを表示します。  
   
- [in]*あり*  
- コンボ ボックスの小さいイメージのインデックス。  
+*あり*<br/>
+[in]コンボ ボックスの小さいイメージのインデックス。  
   
 ### <a name="remarks"></a>Remarks  
  既定の幅は、108 ピクセルです。  
@@ -182,14 +182,14 @@ BOOL DeleteItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iIndex*  
- 削除する項目の 0 から始まるインデックス。  
+*iIndex*<br/>
+[in]削除する項目の 0 から始まるインデックス。  
   
- [in]*指定*  
- 削除する項目に関連付けられたデータ。  
+*指定*<br/>
+[in]削除する項目に関連付けられたデータ。  
   
- [in]*lpszText*  
- 削除する項目の文字列。 同じ文字列のアイテムが複数ある場合は、最初の項目が削除されます。  
+*lpszText*<br/>
+[in]削除する項目の文字列。 同じ文字列のアイテムが複数ある場合は、最初の項目が削除されます。  
   
 ### <a name="return-value"></a>戻り値  
  指定した項目が削除された場合は TRUE。それ以外の場合、FALSE です。  
@@ -204,8 +204,8 @@ void EnableDropDownListResize(BOOL bEnable=FALSE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- 有効にするサイズ変更する場合は Trueサイズ変更を無効にする場合は FALSE。  
+*bEnable*<br/>
+[in]有効にするサイズ変更する場合は Trueサイズ変更を無効にする場合は FALSE。  
   
 ### <a name="remarks"></a>Remarks  
  サイズ変更を有効にすると、リスト ボックスに表示する項目に合わせてサイズが変わります。  
@@ -218,8 +218,8 @@ int FindItem(LPCTSTR lpszText) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszText*  
- リスト ボックス内の項目の文字列。  
+*lpszText*<br/>
+[in]リスト ボックス内の項目の文字列。  
   
 ### <a name="return-value"></a>戻り値  
  項目の 0 から始まるインデックスまたは、項目が見つからない場合は-1。  
@@ -268,8 +268,8 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- コンボ ボックスのデバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]コンボ ボックスのデバイス コンテキストへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  コンボ ボックスのサイズ。  
@@ -285,8 +285,8 @@ LPCTSTR GetItem(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iIndex*  
- リスト ボックス内の項目の 0 から始まるインデックス。  
+*iIndex*<br/>
+[in]リスト ボックス内の項目の 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  アイテムに関連付けられている文字列へのポインターそれ以外の場合、インデックス パラメーターが有効でない場合、またはインデックスのパラメーターが-1 とコンボ ボックスで選択した項目がない場合は NULL です。  
@@ -301,8 +301,8 @@ DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iIndex*  
- リスト ボックス内の項目の 0 から始まるインデックス。  
+*iIndex*<br/>
+[in]リスト ボックス内の項目の 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  項目に関連付けられたデータ0 または項目が存在しない場合、またはインデックスのパラメーターが-1 とリスト ボックスで選択した項目がない場合。  
@@ -340,8 +340,8 @@ virtual void OnSelectItem(int nItem);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nItem*  
- 選択した項目のインデックス。  
+*nItem*<br/>
+[in]選択した項目のインデックス。  
   
 ### <a name="remarks"></a>Remarks  
  ユーザー入力の選択を処理する場合は、このメソッドをオーバーライドします。  
@@ -366,14 +366,14 @@ BOOL SelectItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iIndex*  
- リスト ボックス内の項目の 0 から始まるインデックス。  
+*iIndex*<br/>
+[in]リスト ボックス内の項目の 0 から始まるインデックス。  
   
- [in]*指定*  
- リスト ボックス内の項目に関連付けられたデータ。  
+*指定*<br/>
+[in]リスト ボックス内の項目に関連付けられたデータ。  
   
- [in]*lpszText*  
- リスト ボックス内の項目の文字列。  
+*lpszText*<br/>
+[in]リスト ボックス内の項目の文字列。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE。それ以外の場合は FALSE です。  
@@ -388,8 +388,8 @@ void SetDropDownHeight(int nHeight);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*パラメーター nHeight*  
- リスト ボックスのピクセル単位の高さ。  
+*パラメーター nHeight*<br/>
+[in]リスト ボックスのピクセル単位の高さ。  
   
 ### <a name="remarks"></a>Remarks  
  既定の高さは、150 ピクセルです。  

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10c01fcc7c75fb3ea9abf5803f5f17d3bd378333
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 62d78fb7c2b9cbaee62baf59636303f90177cf7b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953902"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699596"
 ---
 # <a name="timeputbyname-class"></a>time_put_byname クラス
 
@@ -50,17 +50,17 @@ protected:
 
 ### <a name="parameters"></a>パラメーター
 
-*_Locname*  
- ロケール名。
+*_Locname*<br/>
+ロケール名。
 
-*_Refs*  
- 最初の参照数。
+*_Refs*<br/>
+最初の参照数。
 
 ## <a name="remarks"></a>Remarks
 
 その動作によって決定されます、[という](../standard-library/locale-class.md#name)ロケール *_Locname*します。 各コンス トラクターを使用してその基本オブジェクトを初期化します[time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator > (`_Refs`)。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<locale>
 

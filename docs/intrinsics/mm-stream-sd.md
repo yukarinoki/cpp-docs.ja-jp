@@ -1,5 +1,5 @@
 ---
-title: _mm_stream_sd |Microsoft ドキュメント
+title: _mm_stream_sd |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e8a65066ad19b78319867782255d70da8d5b721
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2fb8608e03a514228ecdbaf321124c17a00aeb5c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333145"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700168"
 ---
 # <a name="mmstreamsd"></a>_mm_stream_sd
+
 **Microsoft 固有の仕様**  
   
- キャッシュを汚染せずに、64 ビットのデータをメモリ位置に書き込みます。  
+ キャッシュの汚染せずメモリ位置を 64 ビットのデータを書き込みます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,11 +40,11 @@ void _mm_stream_sd(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [出力] `Dest`  
- ソース データの書き込み先の場所へのポインター。  
+*追加先*<br/>
+[out]ソース データの書き込み先の場所へのポインター。  
   
- [入力] `Source`  
- 128 ビットの値を含む、`double`値の 64 ビットの下で記述する.  
+*Source*<br/>
+[in]128 ビット値を含む、 `double` 64 ビットの下には書き込まれる値.  
   
 ## <a name="return-value"></a>戻り値  
  なし。  
@@ -57,9 +58,9 @@ void _mm_stream_sd(
  **ヘッダー ファイル** \<intrin.h >  
   
 ## <a name="remarks"></a>コメント  
- この組み込みを生成、`movntsd`命令します。 この命令のハードウェア サポートを確認するのには、呼び出し、`__cpuid`で組み込み`InfoType=0x80000001`のビット 6 をチェックし、`CPUInfo[2] (ECX)`です。 ハードウェアがサポートする場合、この命令と 0 それ以外の場合、このビットは 1 です。  
+ この組み込み関数は`movntsd`命令を生成します。 この命令のハードウェアのサポートを確認するのには、呼び出し、`__cpuid`で組み込み`InfoType=0x80000001`のビット 6 をチェックおよび`CPUInfo[2] (ECX)`します。 ハードウェアがサポートする場合、この命令と 0 それ以外の場合、このビットは 1 です。  
   
- 使用するコードを実行する場合、`_mm_stream_sd`サポートしていないハードウェアの組み込み、`movntsd`命令、結果は予測できません。  
+ 使用するコードを実行する場合、`_mm_stream_sd`がサポートされていないハードウェアに組み込み、`movntsd`命令の場合、結果は予測できません。  
   
 ## <a name="example"></a>例  
   
@@ -89,7 +90,8 @@ d[0] = -1, d[1] = 1
 ```  
   
 **Microsoft 固有の仕様はここまで**  
- 高度なマイクロ デバイス, Inc. によって copyright 2007All rights reserved. 高度なマイクロ デバイス, Inc. のアクセス許可を持つ再現  
+
+高度なマイクロ デバイス, inc. copyright 2007All rights reserved. 高度なマイクロ デバイス, Inc. からのアクセス許可を持つ再現  
   
 ## <a name="see-also"></a>関連項目  
  [_mm_stream_ss](../intrinsics/mm-stream-ss.md)   

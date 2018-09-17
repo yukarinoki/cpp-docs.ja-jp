@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a6f3d8f8a3527e193ed1bec0f7dc4b563593b84
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 8c01e10a77278f0a02658778ec178f0a4226eb36
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541258"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704861"
 ---
 # <a name="writeeflags"></a>__writeeflags
 指定した値をプログラムに書き込みますステータスと制御 (空文) を登録します。  
@@ -37,7 +37,7 @@ void __writeeflags(unsigned __int64 Value);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `Value`|立てるレジスタに書き込む値。 `Value`パラメーターは、32 ビット、32 ビット プラットフォームの時間の長いと 64 ビット、64 ビット プラットフォームの時間の長い。|  
+|*値*|[in]立てるレジスタに書き込む値。 `Value`パラメーターは、32 ビット、32 ビット プラットフォームの時間の長いと 64 ビット、64 ビット プラットフォームの時間の長い。|  
   
 ## <a name="remarks"></a>Remarks  
  これらのルーチンは組み込みとしてのみ使用できます。  
