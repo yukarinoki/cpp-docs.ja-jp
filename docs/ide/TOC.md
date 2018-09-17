@@ -144,7 +144,6 @@
 ### [ビルドのカスタマイズのトラブルシューティング](troubleshooting-build-customizations.md)
 ### [カスタム ビルド ステップまたはビルド イベントの出力の書式設定](formatting-the-output-of-a-custom-build-step-or-build-event.md)
 ## [ビルドのコマンドとプロパティの共通マクロ](common-macros-for-build-commands-and-properties.md)
-## [外部プロジェクトのビルド](building-external-projects.md)
 ## [プロジェクト ファイル](project-files.md)
 ## [チュートリアル: Visual Studio で CLR をターゲットにした C++ プログラムのコンパイル](walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md)
 # [C++ デスクトップ開発のための Visual Studio IDE の使用](using-the-visual-studio-ide-for-cpp-desktop-development.md)
