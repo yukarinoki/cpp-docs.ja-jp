@@ -1,5 +1,5 @@
 ---
-title: -arch (最小の CPU アーキテクチャ) |Microsoft ドキュメント
+title: -arch (最小限の CPU アーキテクチャ) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d1232697619eafa5633f3dc61d1a1c3520e21b6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c6750b2d998976b1c19dcc5b687f407a3c32faef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368991"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720331"
 ---
 # <a name="arch-minimum-cpu-architecture"></a>/arch (最小限の CPU アーキテクチャ)
-アーキテクチャのオプションは、コード生成のアーキテクチャを指定します。 参照してください/arch、そのターゲット プラットフォーム用のオプションを使用している基本のハードウェア アーキテクチャを選択します。  
-  
--   [/arch (x86)](../../build/reference/arch-x86.md)  
-  
--   [/arch (x64)](../../build/reference/arch-x64.md)  
-  
--   [/arch (ARM)](../../build/reference/arch-arm.md)  
-  
-## <a name="see-also"></a>関連項目  
- [コンパイラ オプション](../../build/reference/compiler-options.md)   
- [コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+
+アーキテクチャのオプションは、コード生成のアーキテクチャを指定します。 そのターゲット プラットフォーム オプションを参照してください/arch を使用しているハードウェアの基本アーキテクチャを選択します。
+
+- [/arch (x86)](../../build/reference/arch-x86.md)
+
+- [/arch (x64)](../../build/reference/arch-x64.md)
+
+- [/arch (ARM)](../../build/reference/arch-arm.md)
+
+## <a name="see-also"></a>関連項目
+
+[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
+[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)

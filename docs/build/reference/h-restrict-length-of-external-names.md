@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d178fcd62c39c65d9f4f8958fde3b178a074671
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 61a931ac5f9793f800157ed02ffcb7ff5071f4df
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895319"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724400"
 ---
 # <a name="h-restrict-length-of-external-names"></a>/H (外部名の長さの制限)
 
@@ -37,7 +37,7 @@ ms.locfileid: "43895319"
 
 ## <a name="arguments"></a>引数
 
-*数*  
+*数*<br/>
 プログラムで許可される外部名の最大長を指定します。
 
 ## <a name="remarks"></a>Remarks
@@ -96,5 +96,5 @@ void func2(void) {}
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)   
+[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
 [コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)

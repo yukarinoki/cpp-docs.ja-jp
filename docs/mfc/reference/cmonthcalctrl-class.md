@@ -100,12 +100,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14fbe2bf5f74a2d6d2f6ae3f394c2e6e74a4e76f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8405c41f5235ecba580bbf453a1129a38b4d8421
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206191"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719102"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl クラス
 月間予定表コントロールの機能がカプセル化されています。  
@@ -297,7 +297,7 @@ BOOL GetCalendarGridInfo(PMCGRIDINFO pmcGridInfo) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[out]*pmcGridInfo*|ポインターを[受け取る](/windows/desktop/api/commctrl/ns-commctrl-tagmcgridinfo)現在の月のカレンダー コントロールに関する情報を受け取る構造体。 呼び出し元は、割り当てと、この構造体を初期化します。|  
+|*pmcGridInfo*|[out]ポインターを[受け取る](/windows/desktop/api/commctrl/ns-commctrl-tagmcgridinfo)現在の月のカレンダー コントロールに関する情報を受け取る構造体。 呼び出し元は、割り当てと、この構造体を初期化します。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -733,7 +733,7 @@ void SetCalendarBorder(int cxyBorder);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*cxyBorder*|ピクセル単位で、罫線の幅。|  
+|*cxyBorder*|[in]ピクセル単位で、罫線の幅。|  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドが成功すると、罫線の幅に設定されて、 *cxyBorder*パラメーター。 境界線の幅は、現在指定されている既定値にリセットするそれ以外の場合、[テーマ](/windows/desktop/Controls/visual-styles-overview)テーマが使用されていない場合は 0。  
@@ -773,7 +773,7 @@ BOOL SetCalID(CALID calid);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*calid*|1 つ、[カレンダー識別子](/windows/desktop/Intl/calendar-identifiers)定数。|  
+|*calid*|[in]1 つ、[カレンダー識別子](/windows/desktop/Intl/calendar-identifiers)定数。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -851,7 +851,7 @@ BOOL SetCurrentView(DWORD dwNewView);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*dwNewView*|毎月、毎年、10 年間、または 2 桁の年のビューを指定する値は次のいずれか。<br /><br /> MCMV_MONTH: 月単位ビュー<br /><br /> MCMV_YEAR: 年のビュー<br /><br /> MCMV_DECADE: 10 年のビュー<br /><br /> MCMV_CENTURY: 2 桁の年のビュー|  
+|*dwNewView*|[in]毎月、毎年、10 年間、または 2 桁の年のビューを指定する値は次のいずれか。<br /><br /> MCMV_MONTH: 月単位ビュー<br /><br /> MCMV_YEAR: 年のビュー<br /><br /> MCMV_DECADE: 10 年のビュー<br /><br /> MCMV_CENTURY: 2 桁の年のビュー|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -1137,7 +1137,7 @@ LPRECT SizeRectToMin(LPRECT lpRect);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*lpRect*|ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)カレンダーの必要な数を含む四角形を定義する構造体。|  
+|*lpRect*|[in]ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)カレンダーの必要な数を含む四角形を定義する構造体。|  
   
 ### <a name="return-value"></a>戻り値  
  ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)によってサイズが小さい四角形、四角形を定義する構造が定義されている、 *lpRect*パラメーター。  

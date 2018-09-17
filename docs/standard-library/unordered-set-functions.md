@@ -7,12 +7,12 @@ f1_keywords:
 - unordered_set/std::swap (set)
 - unordered_set/std::swap (unordered_multiset)
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
-ms.openlocfilehash: f832c31ca1659a9275c6c424ca4fb143574672f0
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 28fb028f3383225d89a8366461400bf704c7a4dd
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956671"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720084"
 ---
 # <a name="ltunorderedsetgt-functions"></a>&lt;unordered_set&gt; 関数
 
@@ -34,23 +34,23 @@ void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-*Key*  
- キーの型。
+*Key*<br/>
+キーの型。
 
-*ハッシュ*  
- ハッシュ関数のオブジェクト型。
+*ハッシュ*<br/>
+ハッシュ関数のオブジェクト型。
 
-*Pred*  
- 等価比較関数のオブジェクト型。
+*Pred*<br/>
+等価比較関数のオブジェクト型。
 
-*Alloc*  
- アロケーター クラス。
+*Alloc*<br/>
+アロケーター クラス。
 
-*left*  
- スワップする最初のコンテナー。
+*left*<br/>
+スワップする最初のコンテナー。
 
-*right*  
- スワップする 2 番目のコンテナー。
+*right*<br/>
+スワップする 2 番目のコンテナー。
 
 ### <a name="remarks"></a>Remarks
 
@@ -126,23 +126,23 @@ void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-*Key*  
- キーの型。
+*Key*<br/>
+キーの型。
 
-*ハッシュ*  
- ハッシュ関数のオブジェクト型。
+*ハッシュ*<br/>
+ハッシュ関数のオブジェクト型。
 
-*Pred*  
- 等価比較関数のオブジェクト型。
+*Pred*<br/>
+等価比較関数のオブジェクト型。
 
-*Alloc*  
- アロケーター クラス。
+*Alloc*<br/>
+アロケーター クラス。
 
-*left*  
- スワップする最初のコンテナー。
+*left*<br/>
+スワップする最初のコンテナー。
 
-*right*  
- スワップする 2 番目のコンテナー。
+*right*<br/>
+スワップする 2 番目のコンテナー。
 
 ### <a name="remarks"></a>Remarks
 

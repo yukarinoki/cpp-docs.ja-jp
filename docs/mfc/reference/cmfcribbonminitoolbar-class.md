@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 789a8165a12977d11220d299e2c99549121dba64
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ef348275059fd2623ca83b40730f010a7d18d6d5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540468"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721176"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>CMFCRibbonMiniToolBar クラス
 コンテキスト ポップアップ ツール バーを実装します。  
@@ -98,11 +98,11 @@ void SetCommands(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pRibbonBar*  
- リボン バー、ミニ ツールバーを表示するボタンを検索します。  
+*pRibbonBar*<br/>
+[in]リボン バー、ミニ ツールバーを表示するボタンを検索します。  
   
- [in]*lstCommands*  
- ミニ ツールバーに表示するコマンドの一覧。 関連付けられたボタンを検索するには、すべてのリボン カテゴリが検索されます。  
+*lstCommands*<br/>
+[in]ミニ ツールバーに表示するコマンドの一覧。 関連付けられたボタンを検索するには、すべてのリボン カテゴリが検索されます。  
   
 ### <a name="remarks"></a>Remarks  
  この関数を使用すると、ミニ ツールバーに表示されるコマンドの一覧を設定できます。  
@@ -122,11 +122,11 @@ BOOL Show(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*x*  
- 画面座標では、ミニ ツールバーの水平方向の位置を指定します。  
+*x*<br/>
+[in]画面座標では、ミニ ツールバーの水平方向の位置を指定します。  
   
- [in]*y*  
- 画面座標では、ミニ ツールバーの垂直位置を指定します。  
+*y*<br/>
+[in]画面座標では、ミニ ツールバーの垂直位置を指定します。  
   
 ### <a name="return-value"></a>戻り値  
  ミニ ツールバーが正常に表示されている場合は TRUE。それ以外の場合、FALSE です。  
@@ -143,17 +143,17 @@ BOOL ShowWithContextMenu(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*x*  
- 画面座標では、コンテキスト メニューの水平方向の位置を指定します。  
+*x*<br/>
+[in]画面座標では、コンテキスト メニューの水平方向の位置を指定します。  
   
- [in]*y*  
- 画面座標で、コンテキスト メニューの垂直位置を指定します。  
+*y*<br/>
+[in]画面座標で、コンテキスト メニューの垂直位置を指定します。  
   
- [in]*uiMenuResID*  
- 表示するコンテキスト メニューのリソース ID を指定します。  
+*uiMenuResID*<br/>
+[in]表示するコンテキスト メニューのリソース ID を指定します。  
   
- [in]*pWndOwner*  
- コンテキスト メニューからメッセージを受信するウィンドウを識別します。  
+*pWndOwner*<br/>
+[in]コンテキスト メニューからメッセージを受信するウィンドウを識別します。  
   
 ### <a name="return-value"></a>戻り値  
  コンテキスト メニューが正常に表示されている場合は TRUE。それ以外の場合、FALSE です。  

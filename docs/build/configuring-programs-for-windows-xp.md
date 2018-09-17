@@ -12,18 +12,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 205241f2306885800813597568ed9ae8cf3858b3
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2c2b1dc80cec8ba18522d8238752857105993074
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598234"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720734"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Windows XP 用プログラムの構成
 
 Visual Studio では、複数のプラットフォーム ツールセットをサポートするために、オペレーティング システムと、既定のツールセットでサポートされていないランタイム ライブラリを対象ことができます。 たとえば、プラットフォーム ツールセットを切り替えることで c++ 11、c++ 14、および Visual Studio での Visual C コンパイラでサポートされている c++ 17 の言語の機能強化が Windows XP および Windows Server 2003 を対象とするアプリを作成するのにに使用します。 バイナリ互換性のあるレガシ コードを維持するためにも以前のプラットフォーム ツールセットを使用し、Visual Studio IDE の最新の機能も利用できます。
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>Windows XP プラットフォーム ツールセットをインストールします。
+
 Visual Studio 2017 で、プラットフォームのツールセットとターゲットの Windows XP および Windows Server 2003 にコンポーネントを取得するには、Visual Studio インストーラーを実行します。 最初に Visual Studio をインストールするとき、または選択した**変更**、既存のインストールを変更することを確認します、 **C++ によるデスクトップ開発**ワークロードを選択します。 このワークロードのオプションのコンポーネントの一覧で選択**C++ に関する Windows XP サポート**を選び、**インストール**または**変更**します。
 
 ## <a name="windows-xp-targeting-experience"></a>Windows XP 対応のエクスペリエンス
@@ -72,7 +73,7 @@ Windows XP プラットフォーム ツールセット、C ランタイム ラ�
 
 - **DirectX グラフィックスのデバッグ**
 
-     グラフィックス デバッガーは direct3d9 API をサポートしていないために、Windows XP または Windows Server 2003 で Direct3D を使用するアプリのデバッグに使用できません。 ただし、アプリが Direct3D 10 または Direct3D 11 の API を使用する代替のレンダラーを実装する場合、これらの API を使用する場合の問題の診断にグラフィックス デバッガーを利用できます。
+   グラフィックス デバッガーは direct3d9 API をサポートしていないために、Windows XP または Windows Server 2003 で Direct3D を使用するアプリのデバッグに使用できません。 ただし、アプリが Direct3D 10 または Direct3D 11 の API を使用する代替のレンダラーを実装する場合、これらの API を使用する場合の問題の診断にグラフィックス デバッガーを利用できます。
 
 - **HLSL の構築**
 

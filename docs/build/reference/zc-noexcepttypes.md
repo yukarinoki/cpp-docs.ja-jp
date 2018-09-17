@@ -1,5 +1,5 @@
 ---
-title: '-Zc: noexceptTypes (c++ 17 noexcept の規則) |Microsoft ドキュメント'
+title: '-Zc: noexceptTypes (c++ 17 noexcept ルール) |Microsoft Docs'
 ms.date: 11/14/2017
 ms.technology:
 - cpp-tools
@@ -17,28 +17,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25ad2a662af2cda49e3e8dd8c769fa75dafee94b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 78657b293562e82e4691ae54f8ee60d490d78ba7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379550"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716678"
 ---
-# <a name="zcnoexcepttypes-c17-noexcept-rules"></a>/Zc:noexceptTypes (c++ 17 noexcept ルール)
+# <a name="zcnoexcepttypes-c17-noexcept-rules"></a>/Zc: noexcepttypes (c++ 17 noexcept ルール)
 
-C++ 17 規格は、`throw()`のエイリアスとして`noexcept`、削除`throw(<type list>)`と`throw(...)`、特定の種類を含めることができ`noexcept`です。 C++ 14 またはそれ以前に準拠しているコードでこの、さまざまなソースの互換性の問題の可能性があります。 **/Zc:noexceptTypes**オプションは、c++ 17 規格に準拠するを指定したり、c++ 17 モードでコードがコンパイルされるときに、c++ 14 およびそれ以前の動作を許可します。
+標準の c++ 17 で`throw()`のエイリアスとして`noexcept`、削除`throw(<type list>)`と`throw(...)`、でき、特定の種類を含める`noexcept`。 C++ 14 またはそれ以前に準拠したコードでのさまざまなソースの互換性の問題が生じる。 **/Zc: noexcepttypes**オプションは、c++ 17 標準に適合するを指定したり、c++ 17 モードでコードがコンパイルされるときに、c++ 14 と以前の動作を許可します。
 
 ## <a name="syntax"></a>構文
 
 > **/Zc:noexceptTypes**[-]
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-ときに、 **/Zc:noexceptTypes**オプションを指定すると、コンパイラは、c++ 17 規格に準拠しているし、処理[throw()](../../cpp/exception-specifications-throw-cpp.md)のエイリアスとして[noexcept](../../cpp/noexcept-cpp.md)、削除`throw(<type list>)`と`throw(...)`、特定の種類を含めることができ`noexcept`です。 **/Zc:noexceptTypes**オプションは、のみ使用可能な場合に[/std:c + + 17](std-specify-language-standard-version.md)または[/std:latest](std-specify-language-standard-version.md)を有効にします。 **/Zc:noexceptTypes** ISO c++ 17 規格に準拠するように既定で有効にします。 [寛容/-](permissive-standards-conformance.md)オプションには影響しません **/Zc:noexceptTypes**です。 指定して、このオプションをオフに **/Zc:noexceptTypes-** 、c++ 14 の動作に戻すには`noexcept`とき **/std::C:operator++ 17**または **/std::latest**が指定されています。
+ときに、 **/zc: noexcepttypes**オプションを指定すると、コンパイラは、標準の c++ 17 に準拠しているし、処理[throw()](../../cpp/exception-specifications-throw-cpp.md)のエイリアスとして[noexcept](../../cpp/noexcept-cpp.md)を削除します`throw(<type list>)`。と`throw(...)`、特定の種類を含めることができ`noexcept`します。 **/Zc: noexcepttypes**場合オプションは使用のみ[/std:c + + 17](std-specify-language-standard-version.md)または[/std:latest](std-specify-language-standard-version.md)を有効にします。 **/Zc: noexcepttypes** ISO C 17 標準に準拠するように既定で有効です。 [/Permissive -](permissive-standards-conformance.md)オプションには影響しません **/zc: noexcepttypes**します。 指定することで、このオプションをオフに **/Zc:noexceptTypes-** の c++ 14 動作に戻す`noexcept`とき **/std::C + + 17**または **/std::latest**が指定されてです。
 
-C++ コンパイラを診断する Visual Studio 2017 バージョン 15.5 以降、c++ 17 モードでの宣言で複数の一致しない例外の指定場合や、[寛容/-](permissive-standards-conformance.md)オプションを指定します。
+C コンパイラで Visual Studio 2017 バージョン 15.5 以降では、c++ 17 モードでの宣言で複数の一致しない例外の指定を診断または、 [/permissive -](permissive-standards-conformance.md)オプションを指定します。
 
-この例では、例外の指定子と宣言ときの動作、 **/Zc:noexceptTypes**オプションを設定するか、または無効になっています。 動作を示すを設定するを使用してコンパイル`cl /EHsc /W4 noexceptTypes.cpp`です。 表示するには無効にしたときの動作を使用してコンパイル`cl /EHsc /W4 /Zc:noexceptTypes- noexceptTypes.cpp`です。
+この例では、例外の指定子で宣言ときの動作、 **/zc: noexcepttypes**オプションを設定するか、または無効になっています。 動作を設定するを使用してコンパイル`cl /EHsc /W4 noexceptTypes.cpp`します。 無効になっているときの動作を表示するを使用してコンパイル`cl /EHsc /W4 /Zc:noexceptTypes- noexceptTypes.cpp`します。
 
 ```cpp
 // noexceptTypes.cpp
@@ -60,7 +60,7 @@ struct B : A
 };
 ```
 
-既定の設定を使用して、コンパイル時に **/Zc:noexceptTypes**サンプルが表示されている警告を生成します。 コードを更新するには、次の使用を代わりに。
+既定の設定を使用して、コンパイル時に **/zc: noexcepttypes**サンプルには、表示されている警告が生成されます。 コードを更新するには、次の使用を代わりに。
 
 ```cpp
 void f() noexcept;
@@ -82,14 +82,14 @@ Visual C++ の準拠に関する問題について詳しくは、「 [Nonstandar
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[のプロジェクト プロパティの操作](../../ide/working-with-project-properties.md)です。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 
 1. 選択、**構成プロパティ** > **C/C++** > **コマンドライン**プロパティ ページ。
 
-1. 変更、**追加オプション**含めるプロパティを **/Zc:noexceptTypes**または **/Zc:noexceptTypes-** を選択し**OK**です。
+1. 変更、**追加オプション**含めるプロパティを **/zc: noexcepttypes**または **/Zc:noexceptTypes-** 選び、 **OK**します。
 
 ## <a name="see-also"></a>関連項目
 
-[/Zc (準拠)](../../build/reference/zc-conformance.md)  
-[noexcept](../../cpp/noexcept-cpp.md)  
-[例外の仕様 (スロー)](../../cpp/exception-specifications-throw-cpp.md)  
+[/Zc (準拠)](../../build/reference/zc-conformance.md)
+[noexcept](../../cpp/noexcept-cpp.md)<br/>
+[例外の仕様 (スロー)](../../cpp/exception-specifications-throw-cpp.md)

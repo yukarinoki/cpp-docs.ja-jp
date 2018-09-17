@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c43e01a1417710751bf0604e5365beaf143a293
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 1f6f287f98b542a3d8eb24f9cc2b5e725e27dceb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895215"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725973"
 ---
 # <a name="base-base-address"></a>/BASE (ベース アドレス)
 
@@ -60,11 +60,11 @@ ms.locfileid: "43895215"
 
 *キー*英数字の文字列は、大文字小文字は区別されません。 通常、DLL の名前が必要はありません。 *キー*ベースが続く*アドレス*C 言語、16 進数、または 10 進表記で、省略可能な最大*サイズ*します。 3 つの引数は、スペースまたはタブで区切られます。 場合、リンカーが警告を発行した*サイズ*は、プログラムに必要な仮想アドレス空間よりも少ない。 A*コメント*をセミコロンで指定された (**;**)、同一または別の行を指定できます。 リンカーでは、行の末尾にセミコロンからすべてのテキストは無視されます。 この例では、このようなファイルの一部を示します。
 
-```  
+```
 main   0x00010000    0x08000000    ; for PROJECT.exe
 one    0x28000000    0x00100000    ; for DLLONE.DLL
 two    0x28100000    0x00300000    ; for DLLTWO.DLL
-```  
+```
 
 これらの行を含むファイルには、DLLS.txt を呼び出すと、次のコマンドの例には、この情報が適用されます。
 
@@ -88,5 +88,5 @@ link dlltwo.obj /dll /base:@dlls.txt,two
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)  
+[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
 [リンカー オプション](../../build/reference/linker-options.md)

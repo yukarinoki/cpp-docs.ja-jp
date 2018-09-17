@@ -1,5 +1,5 @@
 ---
-title: 重要な |Microsoft ドキュメント
+title: 重要な |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cb5747530f4c3aaa7bcfddc7a44c0c8d91e1270
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 90638ad00f120e23e4c9168710d1e099c2c74d09
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691301"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716951"
 ---
 # <a name="critical"></a>critical
-されたコードが、一度に 1 つのスレッドで実行するのみを指定します。  
+コードは一度に 1 つのスレッドでのみ実行することを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,16 +35,15 @@ ms.locfileid: "33691301"
 }  
 ```  
   
-## <a name="remarks"></a>コメント  
- 指定項目  
+## <a name="arguments"></a>引数
+
+*name*<br/>
+(省略可能)Critical コードを識別する名前。 その名前をかっこで囲む必要がありますに注意してください。  
   
- (`name`) (省略可能)  
- クリティカルなコードを識別する名前。 その名前は、かっこで囲む必要がありますに注意してください。  
+## <a name="remarks"></a>Remarks  
+ **重要な**ディレクティブに OpenMP 句がサポートされていません。  
   
-## <a name="remarks"></a>コメント  
- **重大**ディレクティブに OpenMP 句がサポートされていません。  
-  
- 詳細については、次を参照してください。 [2.6.2 重要な構築](../../../parallel/openmp/2-6-2-critical-construct.md)です。  
+ 詳細については、次を参照してください。 [2.6.2 の重要な構築](../../../parallel/openmp/2-6-2-critical-construct.md)します。  
   
 ## <a name="example"></a>例  
   

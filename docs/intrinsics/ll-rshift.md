@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd8189f15f38d5d3008c1f20959573ca9d2337c9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 8df70d0ba5c0f957620ee204256b6c92ce4c01f1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540709"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722073"
 ---
 # <a name="llrshift"></a>__ll_rshift
 **Microsoft 固有の仕様**  
@@ -40,11 +40,11 @@ __int64 __ll_rshift(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力] `Mask`  
- 右にシフトする 64 ビット整数値。  
+*マスク*<br/>
+[in]右にシフトする 64 ビット整数値。  
   
- [入力] `nBit`  
- モジュロ x64 で 64 および x86 上で 32 剰余をシフトするビット数。  
+*nBit*<br/>
+[in]モジュロ x64 で 64 および x86 上で 32 剰余をシフトするビット数。  
   
 ## <a name="return-value"></a>戻り値  
  マスクがずれる`nBit`ビット。  

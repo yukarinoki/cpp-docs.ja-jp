@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e49fcc87c4c074494164a085e01581077bbfe118
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3c4ec16ba621ee268be65bfee11798fb4b358673
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953863"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720292"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
@@ -83,17 +83,17 @@ void swap (
 
 ### <a name="parameters"></a>パラメーター
 
-*Type*  
- ベクター内に格納されるデータ型に対するテンプレート パラメーター。
+*Type*<br/>
+ベクター内に格納されるデータ型に対するテンプレート パラメーター。
 
-*アロケーター*  
- メモリの割り当てと解放を担当する格納されたアロケーター オブジェクトのテンプレート パラメーター。
+*アロケーター*<br/>
+メモリの割り当てと解放を担当する格納されたアロケーター オブジェクトのテンプレート パラメーター。
 
-*left*  
- 比較演算の最初の (左辺の) ベクター
+*left*<br/>
+比較演算の最初の (左辺の) ベクター
 
-*right*  
- 比較演算の 2 つ目の (右辺の) ベクター。
+*right*<br/>
+比較演算の 2 つ目の (右辺の) ベクター。
 
 ### <a name="operators"></a>演算子
 
@@ -118,7 +118,7 @@ void swap (
 |-|-|
 |[vector\<bool> クラス](../standard-library/vector-bool-class.md)|テンプレート クラス vector を型 `bool` の要素に対して完全に特殊化したもので、基になる型のアロケーターを特殊化で使用します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<vector>
 

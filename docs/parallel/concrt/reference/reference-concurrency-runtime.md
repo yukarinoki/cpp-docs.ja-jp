@@ -1,5 +1,5 @@
 ---
-title: 参照 (同時実行ランタイム) |Microsoft ドキュメント
+title: 参照 (同時実行ランタイム) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -463,21 +463,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3caa4ed0cb4a14cea913d141a88d9f2dd079f9bb
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d06bac8aef674472b817817fde4191f1d655365e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693453"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723230"
 ---
 # <a name="reference-concurrency-runtime"></a>参照 (同時実行ランタイム)
 このセクションには、同時実行ランタイムに関するリファレンス情報が含まれています。
-**注**標準 C++ の言語には、ライブラリなどの実装のアンダー スコア (_) 文字で始まる識別子の使用が予約されています。 この名前はコードで使用しないでください。 この規則に従った名前を持つコード要素の動作は永続的に保証されたものではなく、今後のリリースで変更されることがあります。 これらの理由から、このようなコード要素は、同時実行ランタイムのドキュメントから省略されています。
+
+> [!Note]
+> C++ 言語の標準では、ライブラリなどの実装のアンダー スコア (_) 文字で始まる識別子の使用を予約します。 この名前はコードで使用しないでください。 この規則に従った名前を持つコード要素の動作は永続的に保証されたものではなく、今後のリリースで変更されることがあります。 これらの理由から、このようなコード要素は、同時実行ランタイムのドキュメントから除外されます。
 
 ## <a name="in-this-section"></a>このセクションの内容
-[同時実行 Namespace](concurrency-namespace.md) concurrency 名前空間は、クラスを提供し、同時実行ランタイム、C++ 向けの並列プログラミング フレームワークへのアクセスを提供する関数。 詳細については、「[同時実行ランタイム](../concurrency-runtime.md)」を参照してください。
+
+[同時実行 Namespace](concurrency-namespace.md) concurrency 名前空間のクラスを提供して、同時実行ランタイム、C++ の同時実行のプログラミング フレームワークへのアクセスを提供する関数。 詳細については、「[同時実行ランタイム](../concurrency-runtime.md)」を参照してください。
 
 [std 名前空間](std-namespace.md)
+
 [stdx 名前空間](stdx-namespace.md)
-
-

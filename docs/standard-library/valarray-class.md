@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02bd6b1c5ed9cf29b87dc2a218f7a5e9eda3e3dc
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 9f95c9d85ab3649c1710881c73df1ae325f9cb60
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44319059"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724816"
 ---
 # <a name="valarray-class"></a>valarray クラス
 
@@ -132,10 +132,10 @@ valarray<Type> apply(Type _Func(constType&)) const;
 ### <a name="parameters"></a>パラメーター
 
 *_Func(Type)*<br/>
- オペランド valarray の各要素に適用する関数オブジェクト。
+オペランド valarray の各要素に適用する関数オブジェクト。
 
 *_Func(const Type&)*<br/>
- オペランド valarray の各要素に適用する const の関数オブジェクト。
+オペランド valarray の各要素に適用する const の関数オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -204,8 +204,8 @@ valarray<Type> cshift(int count) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*count*  
- 要素を前方向へシフトする位置数。
+*count*<br/>
+要素を前方向へシフトする位置数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -463,8 +463,8 @@ valarray<Type>& operator%=(const Type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*  
- オペランド valarray を要素ごとに除算する、valarray、またはオペランド valarray と同一の要素型の値。
+*right*<br/>
+オペランド valarray を要素ごとに除算する、valarray、またはオペランド valarray と同一の要素型の値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -528,8 +528,8 @@ valarray<Type>& operator&=(const Type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*  
- Valarray または要素型の結合するオペランド valarray と同一で、論理により、要素ごとの値`AND`オペランド valarray とします。
+*right*<br/>
+Valarray または要素型の結合するオペランド valarray と同一で、論理により、要素ごとの値`AND`オペランド valarray とします。
 
 ### <a name="return-value"></a>戻り値
 
@@ -599,8 +599,8 @@ valarray<Type>& operator>>=(const Type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*  
- 右シフトの量を示す値か、要素ごとの右シフトの量を示す要素から成る valarray。
+*right*<br/>
+右シフトの量を示す値か、要素ごとの右シフトの量を示す要素から成る valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -668,8 +668,8 @@ valarray<Type>& operator<<=(const Type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*  
- 左シフトの量を示す値か、要素ごとの左シフトの量を示す要素から成る valarray。
+*right*<br/>
+左シフトの量を示す値か、要素ごとの左シフトの量を示す要素から成る valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -738,8 +738,8 @@ valarray<Type>& operator*=(const Type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*  
- オペランド valarray に対して要素ごとに乗算する、valarray、またはオペランド valarray と同一の要素型の値。
+*right*<br/>
+オペランド valarray に対して要素ごとに乗算する、valarray、またはオペランド valarray と同一の要素型の値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -854,8 +854,8 @@ valarray<Type>& operator+=(const Type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*  
- オペランド valarray に対して要素ごとに加算する、valarray、またはオペランド valarray と同一の要素型の値。
+*right*<br/>
+オペランド valarray に対して要素ごとに加算する、valarray、またはオペランド valarray と同一の要素型の値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -970,8 +970,8 @@ valarray<Type>& operator-=(const Type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*  
- オペランド valarray から要素ごとに減算する、valarray、またはオペランド valarray と同一の要素型の値。
+*right*<br/>
+オペランド valarray から要素ごとに減算する、valarray、またはオペランド valarray と同一の要素型の値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1035,8 +1035,8 @@ valarray<Type>& operator/=(const Type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*  
- オペランド valarray を要素ごとに除算する、valarray、またはオペランド valarray と同一の要素型の値。
+*right*<br/>
+オペランド valarray を要素ごとに除算する、valarray、またはオペランド valarray と同一の要素型の値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1110,23 +1110,23 @@ valarray<Type>& operator=(const indirect_array<Type>& _Indarray);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*  
- オペランド valarray にコピーされる valarray。
+*right*<br/>
+オペランド valarray にコピーされる valarray。
 
-*val*  
- オペランド valarray の要素に代入される値。
+*val*<br/>
+オペランド valarray の要素に代入される値。
 
-*_Slicearray*  
- オペランド valarray にコピーされる slice_array。
+*_Slicearray*<br/>
+オペランド valarray にコピーされる slice_array。
 
-*_Gslicearray*  
- オペランド valarray にコピーされる gslice_array。
+*_Gslicearray*<br/>
+オペランド valarray にコピーされる gslice_array。
 
-*_Maskarray*  
- オペランド valarray にコピーされる mask_array。
+*_Maskarray*<br/>
+オペランド valarray にコピーされる mask_array。
 
-*_Indarray*  
- オペランド valarray にコピーされる indirect_array。
+*_Indarray*<br/>
+オペランド valarray にコピーされる indirect_array。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1228,20 +1228,20 @@ valarray<Type> operator[](const valarray<size_t>& _Indarray) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*_Off*  
- 値を代入する要素のインデックス。
+*_Off*<br/>
+値を代入する要素のインデックス。
 
-*_Slicearray*  
- 選択される、または新しい valarray に返されるサブセットを指定する、valarray の slice_array。
+*_Slicearray*<br/>
+選択される、または新しい valarray に返されるサブセットを指定する、valarray の slice_array。
 
-*_Gslicearray*  
- 選択される、または新しい valarray に返されるサブセットを指定する、valarray の gslice_array。
+*_Gslicearray*<br/>
+選択される、または新しい valarray に返されるサブセットを指定する、valarray の gslice_array。
 
-*_Boolarray*  
- 選択される、または新しい valarray に返されるサブセットを指定する、valarray の bool_array。
+*_Boolarray*<br/>
+選択される、または新しい valarray に返されるサブセットを指定する、valarray の bool_array。
 
-*_Indarray*  
- 選択される、または新しい valarray に返されるサブセットを指定する、valarray の indirect_array。
+*_Indarray*<br/>
+選択される、または新しい valarray に返されるサブセットを指定する、valarray の indirect_array。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1269,8 +1269,8 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*  
- オペランド valarray との排他的論理 **XOR** により要素ごとに結合する、valarray、またはオペランド valarray と同一の要素型の値。
+*right*<br/>
+オペランド valarray との排他的論理 **XOR** により要素ごとに結合する、valarray、またはオペランド valarray と同一の要素型の値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1342,8 +1342,8 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*  
- オペランド valarray とのビット演算 `OR` により要素ごとに結合する、valarray、またはオペランド valarray と同一の要素型の値。
+*right*<br/>
+オペランド valarray とのビット演算 `OR` により要素ごとに結合する、valarray、またはオペランド valarray と同一の要素型の値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1518,11 +1518,11 @@ void resize(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Newsize*  
- サイズ変更後の valarray 内の要素の数。
+*_Newsize*<br/>
+サイズ変更後の valarray 内の要素の数。
 
-*val*  
- サイズ変更後の valarray の要素に与えられる値。
+*val*<br/>
+サイズ変更後の valarray の要素に与えられる値。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1589,8 +1589,8 @@ valarray<Type> shift(int count) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*count*  
- 要素を前方向へシフトする位置数。
+*count*<br/>
+要素を前方向へシフトする位置数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1839,32 +1839,32 @@ valarray(
 
 ### <a name="parameters"></a>パラメーター
 
-*カウント*  
- valarray 内の要素の数。
+*カウント*<br/>
+valarray 内の要素の数。
 
-*val*  
- valarray 内の要素の初期化に使用する値。
+*val*<br/>
+valarray 内の要素の初期化に使用する値。
 
-*ptr*  
- valarray 内の要素の初期化に使用する値へのポインター。
+*ptr*<br/>
+valarray 内の要素の初期化に使用する値へのポインター。
 
-*右*  
- 新しい valarray を初期化するための既存の valarray。
+*右*<br/>
+新しい valarray を初期化するための既存の valarray。
 
-*SliceArray*  
- 構築する valarray の要素の初期化に使用される要素の値を持つ slice_array。
+*SliceArray*<br/>
+構築する valarray の要素の初期化に使用される要素の値を持つ slice_array。
 
-*GsliceArray*  
- 構築する valarray の要素の初期化に使用される要素の値を持つ gslice_array。
+*GsliceArray*<br/>
+構築する valarray の要素の初期化に使用される要素の値を持つ gslice_array。
 
-*MaskArray*  
- 構築する valarray の要素の初期化に使用される要素の値を持つ mask_array。
+*MaskArray*<br/>
+構築する valarray の要素の初期化に使用される要素の値を持つ mask_array。
 
-*IndArray*  
- 構築する valarray の要素の初期化に使用される要素の値を持つ indirect_array。
+*IndArray*<br/>
+構築する valarray の要素の初期化に使用される要素の値を持つ indirect_array。
 
-*IList*  
- コピーする要素を含む initializer_list。
+*IList*<br/>
+コピーする要素を含む initializer_list。
 
 ### <a name="remarks"></a>Remarks
 

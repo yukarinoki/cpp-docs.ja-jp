@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a12e5abcc02017acbd06c841cc9ab62a9d25bdf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 810b59bb85d374b1cf65985a64be32c645e6f3b5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757102"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718082"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl クラス
 Windows コモン スピン ボタン コントロールの機能が用意されています。  
@@ -352,9 +352,10 @@ void SetRange32(
     int nUpper);
 ```  
   
-### <a name="parameters"></a>パラメーター  
- *上限値*と*下限*  
- コントロールの上限と下限。 `SetRange`UD_MINVAL; より小さいさらに、2 つの制限の違いできません ud_maxval やも制限は UD_MAXVAL より大きくすることができます。 `SetRange32` 制限; での制限を配置しません。任意の整数を使用します。  
+### <a name="parameters"></a>パラメーター
+
+*上限値*と*下限*<br/>
+コントロールの上限と下限。 `SetRange`UD_MINVAL; より小さいさらに、2 つの制限の違いできません ud_maxval やも制限は UD_MAXVAL より大きくすることができます。 `SetRange32` 制限; での制限を配置しません。任意の整数を使用します。  
   
 ### <a name="remarks"></a>Remarks  
  メンバー関数は、`SetRange32`スピン ボタン コントロールの 32 ビットの範囲を設定します。  

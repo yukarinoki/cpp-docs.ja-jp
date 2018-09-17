@@ -144,12 +144,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f601d636ab280a5f7346447b907c3326a4fdecd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ddfbb4887a1b34770a1a350f4d2863635c837db0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965488"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725910"
 ---
 # <a name="unorderedmultiset-class"></a>unordered_multiset クラス
 
@@ -238,7 +238,7 @@ class unordered_multiset;
 
 被制御シーケンスに対するストレージの割り当ておよび解放は、格納されている [unordered_multiset::allocator_type](#allocator_type) 型のアロケーター オブジェクトを介して行われます。 このアロケーター オブジェクトは、`allocator` テンプレート クラスのオブジェクトと同じ外部インターフェイスを持っている必要があります。 コンテナー オブジェクトを代入しても、格納されているアロケーター オブジェクトはコピーされない点に注意してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<unordered_set >
 
@@ -363,7 +363,8 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>パラメーター
 
-keyval をマップするキー値。
+*keyval*<br/>
+マップするキー値。
 
 ### <a name="remarks"></a>Remarks
 
@@ -507,8 +508,8 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*nbucket*  
- バケット番号。
+*nbucket*<br/>
+バケット番号。
 
 ### <a name="remarks"></a>Remarks
 
@@ -873,8 +874,8 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*keyval*  
- 検索対象のキー値。
+*keyval*<br/>
+検索対象のキー値。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1119,8 +1120,8 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*nbucket*  
- バケット番号。
+*nbucket*<br/>
+バケット番号。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1187,8 +1188,8 @@ std::pair<const_iterator, const_iterator>
 
 ### <a name="parameters"></a>パラメーター
 
-*keyval*  
- 検索対象のキー値。
+*keyval*<br/>
+検索対象のキー値。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1261,17 +1262,17 @@ size_type erase(
 
 ### <a name="parameters"></a>パラメーター
 
-*Where*  
- 削除される要素の位置。
+*Where*<br/>
+削除される要素の位置。
 
-*まずは*  
- 削除される最初の要素の位置。
+*まずは*<br/>
+削除される最初の要素の位置。
 
-*前の*  
- 削除される最後の要素の次の位置。
+*前の*<br/>
+削除される最後の要素の次の位置。
 
-*Key*  
- 削除される要素のキー値。
+*Key*<br/>
+削除される要素のキー値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1293,8 +1294,8 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*keyval*  
- 検索対象のキー値。
+*keyval*<br/>
+検索対象のキー値。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1906,8 +1907,8 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>パラメーター
 
-*factor*  
- 新しい最大テーブル占有率。
+*factor*<br/>
+新しい最大テーブル占有率。
 
 ### <a name="remarks"></a>Remarks
 
@@ -2188,8 +2189,8 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>パラメーター
 
-*nbuckets*  
- 要求されたバケット数。
+*nbuckets*<br/>
+要求されたバケット数。
 
 ### <a name="remarks"></a>Remarks
 
@@ -2372,8 +2373,8 @@ void swap(unordered_multiset& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*  
- 交換先のコンテナー。
+*right*<br/>
+交換先のコンテナー。
 
 ### <a name="remarks"></a>Remarks
 
@@ -2495,7 +2496,7 @@ unordered_multiset(
 |*Al*|格納するアロケーター オブジェクト。|
 |*コンポジション*|格納する比較関数オブジェクト。|
 |*ハッシュ*|格納するハッシュ関数オブジェクト。|
-|*bucket_count*|最小バケット数。|
+|*Bucket_count*|最小バケット数。|
 |*右*|コピーするコンテナー。|
 |*IList*|コピー元の initializer_list。|
 

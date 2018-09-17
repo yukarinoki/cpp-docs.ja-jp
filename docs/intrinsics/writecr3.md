@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f2e88c7b4b19dd558a211327988dc68f81cc9d1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 10acb6af23dffef0a7067883ac5dbac5abd9234f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541445"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724252"
 ---
 # <a name="writecr3"></a>__writecr3
 **Microsoft 固有の仕様**  
@@ -37,8 +37,8 @@ void writecr3(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力] `Data`  
- CR3 レジスタに書き込む値。  
+*データ*<br/>
+[in]CR3 レジスタに書き込む値。  
   
 ## <a name="requirements"></a>要件  
   

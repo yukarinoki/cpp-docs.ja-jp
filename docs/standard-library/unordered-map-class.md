@@ -148,12 +148,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28fbbce7c63e60bfdeb75c32b3c919b4f38b2b2a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9082e4a8269e692bf9e1d9b8a27f61291b2707a9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107465"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726233"
 ---
 # <a name="unorderedmap-class"></a>unordered_map クラス
 
@@ -561,7 +561,7 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*nbucket*  
+*nbucket*<br/>
 バケット番号。
 
 ### <a name="remarks"></a>Remarks
@@ -925,7 +925,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*keyval*  
+*keyval*<br/>
 検索対象のキー値。
 
 ### <a name="remarks"></a>Remarks
@@ -1190,7 +1190,7 @@ std::pair<const_iterator, const_iterator>  equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*keyval*  
+*keyval*<br/>
 検索対象のキー値。
 
 ### <a name="remarks"></a>Remarks
@@ -1260,16 +1260,16 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>パラメーター
 
-*Where*  
+*Where*<br/>
 削除される要素の位置。
 
-*まずは*  
+*まずは*<br/>
 削除される最初の要素の位置。
 
-*前の*  
+*前の*<br/>
 削除される最後の要素の次の位置。
 
-*Key*  
+*Key*<br/>
 削除される要素のキー値。
 
 ### <a name="return-value"></a>戻り値
@@ -1292,7 +1292,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*keyval*  
+*keyval*<br/>
 検索対象のキー値。
 
 ### <a name="remarks"></a>Remarks
@@ -2009,7 +2009,7 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>パラメーター
 
-*factor*  
+*factor*<br/>
 新しい最大テーブル占有率。
 
 ### <a name="remarks"></a>Remarks
@@ -2381,7 +2381,7 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>パラメーター
 
-*nbuckets*  
+*nbuckets*<br/>
 要求されたバケット数。
 
 ### <a name="remarks"></a>Remarks
@@ -2565,7 +2565,7 @@ void swap(unordered_map& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*  
+*right*<br/>
 交換先のコンテナー。
 
 ### <a name="remarks"></a>Remarks

@@ -1,5 +1,5 @@
 ---
-title: DUMPBIN コマンドライン |Microsoft ドキュメント
+title: DUMPBIN コマンドライン |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc807a8f67ddaae894a0e0cba55475b804a0abce
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c9028cebd7c75bb37bbfa958186ebb2e5d206094
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370515"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724785"
 ---
 # <a name="dumpbin-command-line"></a>DUMPBIN コマンド ライン
-DUMPBIN を実行するには、次の構文を使用します。  
-  
-```  
-DUMPBIN [options] files...  
-```  
-  
- 情報を制御するために必要なすべてのオプションと共に、1 つ以上のバイナリ ファイルを指定します。 DUMPBIN には、標準出力に情報が表示されます。 ファイルにリダイレクトするか、/OUT オプションを使用して、出力ファイル名を指定します。  
-  
- 実行すると DUMPBIN ファイルで、オプションを指定せず、DUMPBIN 表示、/SUMMARY 出力します。  
-  
- コマンドを入力すると`dumpbin`DUMPBIN がそのオプションをまとめたものを法を表示するその他のコマンド ライン入力なし。  
-  
-## <a name="see-also"></a>関連項目  
- [C/C++ ビルド ツール](../../build/reference/c-cpp-build-tools.md)   
- [DUMPBIN リファレンス](../../build/reference/dumpbin-reference.md)
+
+DUMPBIN を実行するには、次の構文を使用します。
+
+```
+DUMPBIN [options] files...
+```
+
+情報を制御するために必要なすべてのオプションと共に、1 つまたは複数のバイナリ ファイルを指定します。 DUMPBIN には、標準出力に情報が表示されます。 ファイルにリダイレクトするか、/OUT オプションを使用して、出力ファイル名を指定します。
+
+DUMPBIN が、/summary がありませんを表示するオプションを指定せず、ファイルで DUMPBIN を実行すると出力します。
+
+コマンドを入力するときに`dumpbin`DUMPBIN 他のコマンド ライン入力なしには、オプション、使用量明細が表示されます。
+
+## <a name="see-also"></a>関連項目
+
+[C/C++ のビルド ツール](../../build/reference/c-cpp-build-tools.md)<br/>
+[DUMPBIN リファレンス](../../build/reference/dumpbin-reference.md)

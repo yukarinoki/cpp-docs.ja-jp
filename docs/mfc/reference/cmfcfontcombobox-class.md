@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ec8840e4a379ce50b9474c114f0a2879d2e7bca
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e0294a16c13941d74ccd3955f78e22e33ef8fc7a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686158"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725182"
 ---
 # <a name="cmfcfontcombobox-class"></a>CMFCFontComboBox クラス
 `CMFCFontComboBox`クラスは、フォントの一覧を含むコンボ ボックス コントロールを作成します。  
@@ -132,14 +132,14 @@ BOOL SelectFont(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDesc*  
- フォントの説明オブジェクトを指します。  
+*pDesc*<br/>
+[in]フォントの説明オブジェクトを指します。  
   
- [in]*lpszName*  
- フォント名を指定します。  
+*lpszName*<br/>
+[in]フォント名を指定します。  
   
- [in]*nCharSet*  
- 文字セットを指定します。 既定値は、DEFAULT_CHARSET です。 詳細については、次を参照してください。、`lfCharSet`のメンバー、 [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)構造体。  
+*nCharSet*<br/>
+[in]文字セットを指定します。 既定値は、DEFAULT_CHARSET です。 詳細については、次を参照してください。、`lfCharSet`のメンバー、 [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)構造体。  
   
 ### <a name="return-value"></a>戻り値  
  フォント コンボ ボックス内の項目は、説明オブジェクトの指定したフォントまたはフォントの名前と charset; と一致する場合は TRUE。それ以外の場合、FALSE です。  
@@ -164,14 +164,14 @@ BOOL Setup(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nFontType*  
- フォントの種類を指定します。 既定値は、DEVICE_FONTTYPE、RASTER_FONTTYPE、TRUETYPE_FONTTYPE のビットごとの組み合わせ (OR です)。  
+*nFontType*<br/>
+[in]フォントの種類を指定します。 既定値は、DEVICE_FONTTYPE、RASTER_FONTTYPE、TRUETYPE_FONTTYPE のビットごとの組み合わせ (OR です)。  
   
- [in]*nCharSet*  
- フォントの文字セットを指定します。 既定値は、DEFAULT_CHARSET です。  
+*nCharSet*<br/>
+[in]フォントの文字セットを指定します。 既定値は、DEFAULT_CHARSET です。  
   
- [in]*nPitchAndFamily*  
- フォントのピッチとファミリを指定します。 既定値は、DEFAULT_PITCH です。  
+*nPitchAndFamily*<br/>
+[in]フォントのピッチとファミリを指定します。 既定値は、DEFAULT_PITCH です。  
   
 ### <a name="return-value"></a>戻り値  
  フォント コンボ ボックスが正常に初期化されている場合は TRUE。それ以外の場合、FALSE です。  

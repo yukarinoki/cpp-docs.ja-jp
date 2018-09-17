@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6793cbb120b44456a880a47ffd114c346662376
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a3aee777cf7d003beb2d1f76d57bf029d358aba6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208886"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726792"
 ---
 # <a name="application-information-and-management"></a>アプリケーションの情報と管理
 1 つを作成するアプリケーションを作成するときに[CWinApp](../../mfc/reference/cwinapp-class.md)の派生オブジェクト。 外部からは、このオブジェクトに関する情報を取得する可能性がありますが、 `CWinApp`-派生オブジェクト。 または、他のグローバル「マネージャー」オブジェクトにアクセスする必要があります。
@@ -406,8 +406,8 @@ BOOL AFXAPI AfxInitRichEdit2();
 BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );  
 ```
 ### <a name="parameters"></a>パラメーター  
- [in]*我が物*  
- `CWnd`から派生したオブジェクトへのポインター。  
+*我が物*<br/>
+[in]派生したオブジェクトへのポインター`CWnd`します。  
    
 ### <a name="return-value"></a>戻り値  
  指定されたウィンドウが拡張フレーム オブジェクトは、TRUE を返します。それ以外の場合は FALSE です。  
@@ -442,8 +442,8 @@ BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);  
 ```
 ### <a name="parameters"></a>パラメーター  
- [in]*我が物*  
- `CWnd`から派生したオブジェクトへのポインター。  
+*我が物*<br/>
+[in]派生したオブジェクトへのポインター`CWnd`します。  
    
 ### <a name="return-value"></a>戻り値  
  指定されたウィンドウは、ツールバーのオブジェクトは、TRUE を返します。それ以外の場合は FALSE です。  
@@ -636,8 +636,8 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- TRUE は、HKCU ノードにレジストリ情報が送られることを示しますFALSE は、アプリケーションが既定のノードにレジストリ情報を書き出すことを示します。 既定のノードが**HKEY_CLASSES_ROOT** ( **HKCR**)。  
+*bEnable*<br/>
+[in]TRUE は、HKCU ノードにレジストリ情報が送られることを示しますFALSE は、アプリケーションが既定のノードにレジストリ情報を書き出すことを示します。 既定のノードが**HKEY_CLASSES_ROOT** ( **HKCR**)。  
   
 ### <a name="remarks"></a>Remarks  
 

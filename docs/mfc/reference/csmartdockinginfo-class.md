@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a900ab0e0307cd059aaeb6f4333ef6d28f98dad6
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: efd214e4368e122a800e51e9bd90cb72a6a4616b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849816"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725856"
 ---
 # <a name="csmartdockinginfo-class"></a>CSmartDockingInfo クラス
 スマート ドッキング マーカーの外観を定義します。  
@@ -68,7 +68,7 @@ class CSmartDockingInfo : public CObject
   
 ### <a name="data-members"></a>データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CSmartDockingInfo::m_bUseThemeColorInShading](#m_busethemecolorinshading)|フレームワークはスマート ドッキング マーカーを表示するときに、現在のテーマの色を使用するかどうかを指定します。|  
 |[CSmartDockingInfo::m_clrBaseBackground](#m_clrbasebackground)|スマート ドッキング マーカーの基本の背景色を指定します。|  
@@ -108,7 +108,7 @@ class CSmartDockingInfo : public CObject
   
  [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxDockingManager.h  
   
 ##  <a name="copyto"></a>  CSmartDockingInfo::CopyTo  
@@ -119,8 +119,8 @@ void CopyTo(CSmartDockingInfo& params);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*params*  
- 型のオブジェクト`CSmartDockingInfo`スマート ドッキングの現在のパラメーターに設定されます。  
+*params*<br/>
+[out]型のオブジェクト`CSmartDockingInfo`スマート ドッキングの現在のパラメーターに設定されます。  
   
 ##  <a name="m_busethemecolorinshading"></a>  CSmartDockingInfo::m_bUseThemeColorInShading  
  フレームワークはスマート ドッキング マーカーを表示するときに、現在のテーマの色を使用するかどうかを指定します。  

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7b21651bdab6bf2e4603a8fa012480a6201e34b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: db5c1ee0a381d45ce951c627d5f59bfb6eb97ea3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336224"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724829"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>CMFCBaseVisualManager クラス
 派生のビジュアル マネージャーと Windows テーマ API の間のレイヤー。  
@@ -100,7 +100,7 @@ class CMFCBaseVisualManager: public CObject
   
  [CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxvisualmanager.h  
   
 ##  <a name="cleanupthemes"></a>  CMFCBaseVisualManager::CleanUpThemes  
@@ -136,25 +136,25 @@ virtual BOOL DrawCheckBox(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター  
   
- [in]*rect*  
- チェック ボックスの外接する四角形。  
+*rect*<br/>
+[in]チェック ボックスの外接する四角形。  
   
- [in]*bHighlighted*  
- チェック ボックスが強調表示されているかどうかを指定します。  
+*bHighlighted*<br/>
+[in]チェック ボックスが強調表示されているかどうかを指定します。  
   
- [in]*状態*  
- 0 のチェックの通常のチェックを行わない、1  
+*状態*<br/>
+[in] 0 チェックの通常のチェックを行わない、1  
   
  混合で通常の 2。  
   
- [in]*bEnabled*  
- チェック ボックスが有効になっているかどうかを指定します。  
+*bEnabled*<br/>
+[in]チェック ボックスが有効になっているかどうかを指定します。  
   
- [in]*bPressed*  
- チェック ボックスが押されたかどうかを指定します。  
+*bPressed*<br/>
+[in]チェック ボックスが押されたかどうかを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  テーマの API が有効な場合は TRUE。それ以外の場合は FALSE です。  
@@ -181,20 +181,20 @@ virtual BOOL DrawComboBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rect*  
- コンボ ボックスの枠線の外接する四角形。  
+*rect*<br/>
+[in]コンボ ボックスの枠線の外接する四角形。  
   
- [in]*bDisabled*  
- コンボ ボックスの枠線が無効になっているかどうかを指定します。  
+*bDisabled*<br/>
+[in]コンボ ボックスの枠線が無効になっているかどうかを指定します。  
   
- [in]*bIsDropped*  
- コンボ ボックスの枠線が削除されるかどうかを指定します。  
+*bIsDropped*<br/>
+[in]コンボ ボックスの枠線が削除されるかどうかを指定します。  
   
- [in]*bIsHighlighted*  
- コンボ ボックスの枠線が強調表示されているかどうかを指定します。  
+*bIsHighlighted*<br/>
+[in]コンボ ボックスの枠線が強調表示されているかどうかを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  テーマの API が有効な場合は TRUE。それ以外の場合は FALSE です。  
@@ -215,11 +215,11 @@ virtual BOOL DrawComboDropButton(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*pDC*|デバイス コンテキストへのポインター。|  
-|[in]*rect*|コンボ ボックスのドロップダウン ボタンの外接する四角形。|  
-|[in]*bDisabled*|コンボ ボックスのドロップダウン ボタンが無効になっているかどうかを指定します。|  
-|[in]*bIsDropped*|コンボ ボックスのドロップダウン ボタンが削除されるかどうかを指定します。|  
-|[in]*bIsHighlighted*|コンボ ボックスのドロップダウン ボタンが強調表示されているかどうかを指定します。|  
+|*pDC*|[in]デバイス コンテキストへのポインター。|  
+|*rect*|[in]コンボ ボックスのドロップダウン ボタンの外接する四角形。|  
+|*bDisabled*|[in]コンボ ボックスのドロップダウン ボタンが無効になっているかどうかを指定します。|  
+|*bIsDropped*|[in]コンボ ボックスのドロップダウン ボタンが削除されるかどうかを指定します。|  
+|*bIsHighlighted*|[in]コンボ ボックスのドロップダウン ボタンが強調表示されているかどうかを指定します。|  
   
 ### <a name="return-value"></a>戻り値  
  テーマの API が有効な場合は TRUE。それ以外の場合は FALSE です。  
@@ -236,17 +236,17 @@ virtual BOOL DrawPushButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rect*  
- プッシュ ボタンの外接する四角形。  
+*rect*<br/>
+[in]プッシュ ボタンの外接する四角形。  
   
- [in]*pButton*  
- ポインター、 [CMFCButton クラス](../../mfc/reference/cmfcbutton-class.md)を描画するオブジェクト。  
+*pButton*<br/>
+[in]ポインター、 [CMFCButton クラス](../../mfc/reference/cmfcbutton-class.md)を描画するオブジェクト。  
   
- [in]*uiState*  
- 無視されます。 状態がから取得した*pButton*します。  
+*uiState*<br/>
+[in]無視されます。 状態がから取得した*pButton*します。  
   
 ### <a name="return-value"></a>戻り値  
  テーマの API が有効な場合は TRUE。それ以外の場合は FALSE です。  
@@ -265,23 +265,23 @@ virtual BOOL DrawRadioButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rect*  
- オプション ボタンの外接する四角形。  
+*rect*<br/>
+[in]オプション ボタンの外接する四角形。  
   
- [in]*bHighlighted*  
- ラジオ ボタンが強調表示されているかどうかを指定します。  
+*bHighlighted*<br/>
+[in]ラジオ ボタンが強調表示されているかどうかを指定します。  
   
- [in]*bChecked*  
- ラジオ ボタンがオンになっているかどうかを指定します。  
+*bChecked*<br/>
+[in]ラジオ ボタンがオンになっているかどうかを指定します。  
   
- [in]*bEnabled*  
- ラジオ ボタンが有効になっているかどうかを指定します。  
+*bEnabled*<br/>
+[in]ラジオ ボタンが有効になっているかどうかを指定します。  
   
- [in]*bPressed*  
- ラジオ ボタンが押されたかどうかを指定します。  
+*bPressed*<br/>
+[in]ラジオ ボタンが押されたかどうかを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  テーマの API が有効な場合は TRUE。それ以外の場合は FALSE です。  
@@ -303,32 +303,32 @@ virtual BOOL DrawStatusBarProgress(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pStatusBar*  
- ステータス バーへのポインター。 この値は無視されます。  
+*pStatusBar*<br/>
+[in]ステータス バーへのポインター。 この値は無視されます。  
   
- [in]*rectProgress*  
- 外接する四角形で進行状況バー *pDC*座標。  
+*rectProgress*<br/>
+[in]外接する四角形で進行状況バー *pDC*座標。  
   
- [in]*nProgressTotal*  
- 進行状況の合計値。  
+*nProgressTotal*<br/>
+[in]進行状況の合計値。  
   
- [in]*nProgressCurr*  
- 現在の進行状況の値。  
+*nProgressCurr*<br/>
+[in]現在の進行状況の値。  
   
- [in]*clrBar*  
- 開始色。 `CMFCBaseVisualManager` これは無視されます。 派生クラスを色のグラデーションを使用できます。  
+*clrBar*<br/>
+[in]開始色。 `CMFCBaseVisualManager` これは無視されます。 派生クラスを色のグラデーションを使用できます。  
   
- [in]*clrProgressBarDest*  
- 最後の色。 `CMFCBaseVisualManager` これは無視されます。 派生クラスを色のグラデーションを使用できます。  
+*clrProgressBarDest*<br/>
+[in]最後の色。 `CMFCBaseVisualManager` これは無視されます。 派生クラスを色のグラデーションを使用できます。  
   
- [in]*clrProgressText*  
- 進行中テキストの色。 `CMFCBaseVisualManager` これは無視されます。 テキストの色がによって定義されている`afxGlobalData.clrBtnText`します。  
+*clrProgressText*<br/>
+[in]進行中テキストの色。 `CMFCBaseVisualManager` これは無視されます。 テキストの色がによって定義されている`afxGlobalData.clrBtnText`します。  
   
- [in]*bProgressText*  
- 進行中テキストを表示するかどうかを指定します。  
+*bProgressText*<br/>
+[in]進行中テキストを表示するかどうかを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  テーマの API が有効な場合は TRUE。それ以外の場合は FALSE です。  
@@ -344,14 +344,14 @@ virtual void FillReBarPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pBar*  
- 背景を描画するウィンドウへのポインター。  
+*pBar*<br/>
+[in]背景を描画するウィンドウへのポインター。  
   
- [in]*rectClient*  
- 格納する領域の外接する四角形。  
+*rectClient*<br/>
+[in]格納する領域の外接する四角形。  
   
 ### <a name="return-value"></a>戻り値  
  テーマの API が有効な場合は TRUE。それ以外の場合は FALSE です。  

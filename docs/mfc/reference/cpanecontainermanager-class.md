@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3a0372d5892ec4b563275d0a5bb8f309cf6fc47
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 679445f9d80a971f0febe2ba92e7826c3ada5ca1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541437"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721618"
 ---
 # <a name="cpanecontainermanager-class"></a>CPaneContainerManager クラス
 `CPaneContainerManager`クラスは、ストレージと、現在のドッキング レイアウトの表示を管理します。  
@@ -237,10 +237,10 @@ virtual BOOL AddPaneContainerManager(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*srcManager*  
- [in]*bOuterEdge*  
- [in]*pTargetControlBar*  
- [in]*場合*  
+*srcManager*<br/>
+[in][in]*bOuterEdge*  
+*pTargetControlBar*<br/>
+[in][in]*場合*  
  [in]*bCopy*  
   
 ### <a name="return-value"></a>戻り値  
@@ -257,8 +257,8 @@ virtual BOOL AddPaneContainerManagerToDockablePane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pTargetControlBar*  
- [in]*srcManager*  
+*pTargetControlBar*<br/>
+[in][in]*srcManager*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -274,8 +274,8 @@ void AddPanesToList(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*plstControlBars*  
- [in]*plstSliders*  
+*plstControlBars*<br/>
+[in][in]*plstSliders*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -301,8 +301,8 @@ virtual CDockablePane* AddPaneToRecentPaneContainer(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pBarToAdd*  
- [in]*pRecentContainer*  
+*pBarToAdd*<br/>
+[in][in]*pRecentContainer*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -323,12 +323,12 @@ void CalcRects(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*rectOriginal*  
- [in]*rectInserted*  
- [in]*rectSlider*  
- [in]*dwSliderStyle*  
- [in]*場合*  
- [in]*sizeMinOriginal*  
+*rectOriginal*<br/>
+[in][in]*rectInserted*  
+*rectSlider*<br/>
+[in][in]*dwSliderStyle*  
+*場合*<br/>
+[in][in]*sizeMinOriginal*  
  [in]*sizeMinInserted*  
   
 ### <a name="remarks"></a>Remarks  
@@ -368,8 +368,8 @@ virtual BOOL CheckForMiniFrameAndCaption(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ポイント*  
- [in]*ppTargetControlBar*  
+*ポイント*<br/>
+[in][in]*ppTargetControlBar*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -386,8 +386,8 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pParentWnd*  
- [in]*pDefaultSlider*  
+*pParentWnd*<br/>
+[in][in]*pDefaultSlider*  
  [in]*pContainerRTC*  
   
 ### <a name="return-value"></a>戻り値  
@@ -438,8 +438,8 @@ virtual CPaneContainer* FindPaneContainer(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pBar*  
- [in]*bLeftBar*  
+*pBar*<br/>
+[in][in]*bLeftBar*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -527,10 +527,10 @@ virtual void GetMinMaxOffset(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pSlider*  
- [in]*nMinOffset*  
- [in]*nMaxOffset*  
- [in]*nStep*  
+*pSlider*<br/>
+[in][in]*nMinOffset*  
+*nMaxOffset*<br/>
+[in][in]*nStep*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -635,10 +635,10 @@ virtual BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pControlBarToInsert*  
- [in]*pTargetControlBar*  
- [in]*場合*  
- [in]*lpRect*  
+*pControlBarToInsert*<br/>
+[in][in]*pTargetControlBar*  
+*場合*<br/>
+[in][in]*lpRect*  
  [in]*dockMethod*  
   
 ### <a name="return-value"></a>戻り値  
@@ -699,10 +699,10 @@ virtual int OnPaneDividerMove(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pSlider*  
- [in]*uFlags*  
- [in]*nOffset*  
- [in]*hdwp*  
+*pSlider*<br/>
+[in][in]*uFlags*  
+*nOffset*<br/>
+[in][in]*hdwp*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -718,8 +718,8 @@ virtual BOOL OnShowPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pBar*  
- [in]*bShow*  
+*pBar*<br/>
+[in][in]*bShow*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -738,10 +738,10 @@ virtual CDockablePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ポイント*  
- [in]*nSensitivity*  
- [in]*bExactBar*  
- [in]*bIsTabArea*  
+*ポイント*<br/>
+[in][in]*nSensitivity*  
+*bExactBar*<br/>
+[in][in]*bIsTabArea*  
  [in]*bCaption*  
   
 ### <a name="return-value"></a>戻り値  
@@ -811,8 +811,8 @@ virtual BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pBarOld*  
- [in]*pBarNew*  
+*pBarOld*<br/>
+[in][in]*pBarNew*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -835,10 +835,10 @@ virtual void ResizePaneContainers(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nSide*  
- [in]*bExpand*  
- [in]*nOffset*  
- [in]*hdwp*  
+*nSide*<br/>
+[in][in]*bExpand*  
+*nOffset*<br/>
+[in][in]*hdwp*  
  [in]*rect*  
   
 ### <a name="remarks"></a>Remarks  

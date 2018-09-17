@@ -144,12 +144,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf2179666943dd5ad26f173368edd809fdf17bcd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2ce2228c5ee81fc6974f2a60ccbdf0a7e4d53901
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954839"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726688"
 ---
 # <a name="unorderedset-class"></a>unordered_set クラス
 
@@ -239,7 +239,7 @@ class unordered_set;
 
 被制御シーケンスに対するストレージの割り当ておよび解放は、格納されている [unordered_set::allocator_type](#allocator_type) 型のアロケーター オブジェクトを介して行われます。 このアロケーター オブジェクトは、`allocator` テンプレート クラスのオブジェクトと同じ外部インターフェイスを持っている必要があります。 コンテナー オブジェクトを代入しても、格納されているアロケーター オブジェクトはコピーされない点に注意してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<unordered_set >
 
@@ -373,8 +373,8 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*keyval*  
- マップするキー値。
+*keyval*<br/>
+マップするキー値。
 
 ### <a name="remarks"></a>Remarks
 
@@ -513,8 +513,8 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*nbucket*  
- バケット番号。
+*nbucket*<br/>
+バケット番号。
 
 ### <a name="remarks"></a>Remarks
 
@@ -865,8 +865,8 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*keyval*  
- 検索対象のキー値。
+*keyval*<br/>
+検索対象のキー値。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1175,8 +1175,8 @@ equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*keyval*  
- 検索対象のキー値。
+*keyval*<br/>
+検索対象のキー値。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1243,17 +1243,17 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>パラメーター
 
-*Where*  
- 削除される要素の位置。
+*Where*<br/>
+削除される要素の位置。
 
-*まずは*  
- 削除される最初の要素の位置。
+*まずは*<br/>
+削除される最初の要素の位置。
 
-*前の*  
- 削除される最後の要素の次の位置。
+*前の*<br/>
+削除される最後の要素の次の位置。
 
-*Key*  
- 削除される要素のキー値。
+*Key*<br/>
+削除される要素のキー値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1275,8 +1275,8 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*keyval*  
- 検索対象のキー値。
+*keyval*<br/>
+検索対象のキー値。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1874,8 +1874,8 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>パラメーター
 
-*factor*  
- 新しい最大テーブル占有率。
+*factor*<br/>
+新しい最大テーブル占有率。
 
 ### <a name="remarks"></a>Remarks
 
@@ -2148,8 +2148,8 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>パラメーター
 
-*nbuckets*  
- 要求されたバケット数。
+*nbuckets*<br/>
+要求されたバケット数。
 
 ### <a name="remarks"></a>Remarks
 
@@ -2326,8 +2326,8 @@ void swap(unordered_set& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*  
- 交換先のコンテナー。
+*right*<br/>
+交換先のコンテナー。
 
 ### <a name="remarks"></a>Remarks
 

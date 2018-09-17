@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7079cf657d1be545f8ddb915815448a1d3b870f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 1007a0bc5d63f5836aaf8925bced6b5ef84b020f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339333"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726207"
 ---
 # <a name="clist-class"></a>CList クラス
 オブジェクト (重複あり) を順に並べたリストをサポートします。このリストには、シーケンシャル アクセスまたは値指定によるアクセスを行うことができます。  
@@ -115,7 +115,7 @@ class CList : public CObject
  *TYPE*  
  リストに格納されているオブジェクトの型。  
   
- *ARG* *_* *型*  
+ *中*  
  型リストに格納されているオブジェクトを参照するために使用します。 参照であることができます。  
   
 ## <a name="remarks"></a>Remarks  
@@ -139,7 +139,7 @@ class CList : public CObject
   
  `CList`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxtempl.h  
   
 ##  <a name="addhead"></a>  CList::AddHead  

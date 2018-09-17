@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aef6192218f5fae40bca6aa6fb8202a0d238091a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b2ae5b321ce9de1e834119e764a65df638d97e10
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195833"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721189"
 ---
 # <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl クラス
 `CMFCShellListCtrl`クラスは、Windows リスト コントロールの機能を提供し、シェル項目の一覧を表示する機能を含めることによってを展開します。  
@@ -130,11 +130,11 @@ virtual HRESULT DisplayFolder(LPAFX_SHELLITEMINFO lpItemInfo);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszPath*  
- フォルダーのパスを含む文字列。  
+*lpszPath*<br/>
+[in]フォルダーのパスを含む文字列。  
   
- [in]*lpItemInfo*  
- ポインター、`LPAFX_SHELLITEMINFO`構造を表示するフォルダーについて説明します。  
+*lpItemInfo*<br/>
+[in]ポインター、`LPAFX_SHELLITEMINFO`構造を表示するフォルダーについて説明します。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は s_ok を返します。E_FAIL をそれ以外の場合。  
@@ -157,8 +157,8 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- ショートカット メニューをフレームワークが有効かどうかを指定するブール値。  
+*bEnable*<br/>
+[in]ショートカット メニューをフレームワークが有効かどうかを指定するブール値。  
   
 ##  <a name="getcurrentfolder"></a>  CMFCShellListCtrl::GetCurrentFolder  
  現在選択されているフォルダーのパスを取得、 [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)オブジェクト。  
@@ -168,8 +168,8 @@ BOOL GetCurrentFolder(CString& strPath) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*strPath*  
- メソッドを書き込むパス文字列のパラメーターへの参照。  
+*strPath*<br/>
+[out]メソッドを書き込むパス文字列のパラメーターへの参照。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、0 以外の場合それ以外の場合は 0 です。  
@@ -185,8 +185,8 @@ BOOL GetCurrentFolderName(CString& strName) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*strName*  
- メソッド名の書き込み先の文字列パラメーターへの参照。  
+*strName*<br/>
+[out]メソッド名の書き込み先の文字列パラメーターへの参照。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、0 以外の場合それ以外の場合は 0 です。  
@@ -227,11 +227,11 @@ BOOL GetItemPath(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*strPath*  
- パスを受け取る文字列への参照。  
+*strPath*<br/>
+[out]パスを受け取る文字列への参照。  
   
- [in]*iItem*  
- リスト項目のインデックス。  
+*iItem*<br/>
+[in]リスト項目のインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は TRUE。FALSE それ以外の場合。  
@@ -273,8 +273,8 @@ virtual int OnCompareItems(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lParam1*  
- [in]*lParam2*  
+*lParam1*<br/>
+[in][in]*lParam2*  
  [in]*iColumn*  
   
 ### <a name="return-value"></a>戻り値  
@@ -291,11 +291,11 @@ virtual void OnFormatFileDate(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*tmFile*  
- ファイルに関連付けられている日付。  
+*tmFile*<br/>
+[in]ファイルに関連付けられている日付。  
   
- [out]*str*  
- 書式設定されたファイルの日付を含む文字列。  
+*str*<br/>
+[out]書式設定されたファイルの日付を含む文字列。  
   
 ### <a name="remarks"></a>Remarks  
  ときに、 [CMFCShellListCtrl クラス](../../mfc/reference/cmfcshelllistctrl-class.md)オブジェクトは、ファイルに関連付けられている日付を表示します。、、その日付を文字列形式に変換する必要があります。 `CMFCShellListCtrl`このメソッドを使用して、その変換を行います。 既定では、このメソッドは、現在のロケールを使用して日付の書式設定文字列にします。  
@@ -310,11 +310,11 @@ virtual void OnFormatFileSize(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lFileSize*  
- フレームワークは、表示されるファイルのサイズ。  
+*lFileSize*<br/>
+[in]フレームワークは、表示されるファイルのサイズ。  
   
- [out]*str*  
- 書式設定されたファイルのサイズを含む文字列。  
+*str*<br/>
+[out]書式設定されたファイルのサイズを含む文字列。  
   
 ### <a name="remarks"></a>Remarks  
  ときに、 [CMFCShellListCtrl クラス](../../mfc/reference/cmfcshelllistctrl-class.md)オブジェクトは、ファイルのサイズを表示する必要がある、ファイルのサイズを文字列形式に変換する必要があります。 `CMFCShellListCtrl`このメソッドを使用して、その変換を行います。 既定では、このメソッドは、バイトから、ファイルのサイズをキロバイト単位に変換し、サイズの書式設定文字列に現在のロケールを使用します。  
@@ -329,11 +329,11 @@ virtual int OnGetItemIcon(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iItem*  
- 項目のインデックス。  
+*iItem*<br/>
+[in]項目のインデックス。  
   
- [in]*pItem*  
- 項目を説明する LPAFX_SHELLITEMINFO パラメーター。  
+*pItem*<br/>
+[in]項目を説明する LPAFX_SHELLITEMINFO パラメーター。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は、アイコン イメージのインデックス関数が失敗した場合は-1。  
@@ -354,14 +354,14 @@ virtual CString OnGetItemText(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iItem*  
- 項目のインデックス。  
+*iItem*<br/>
+[in]項目のインデックス。  
   
- [in]*iColumn*  
- 関心のある列です。  
+*iColumn*<br/>
+[in]関心のある列です。  
   
- [in]*pItem*  
- 項目を説明する LPAFX_SHELLITEMINFO パラメーター。  
+*pItem*<br/>
+[in]項目を説明する LPAFX_SHELLITEMINFO パラメーター。  
   
 ### <a name="return-value"></a>戻り値  
  A`CString`アイテムに関連付けられているテキストを格納しています。  
@@ -402,8 +402,8 @@ void SetItemTypes(SHCONTF nTypes);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nTypes*  
- リスト項目の種類、`CMFCShellListCtrl`サポートしています。  
+*nTypes*<br/>
+[in]リスト項目の種類、`CMFCShellListCtrl`サポートしています。  
   
 ### <a name="remarks"></a>Remarks  
  項目の種類の一覧については、次を参照してください。 [SHCONTF](/windows/desktop/api/shobjidl_core/ne-shobjidl_core-_shcontf)します。  

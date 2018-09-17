@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d99f0b2ea50e84e3eb5e89d1f2e24a181653893c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 38dcb010df79e0a5c5a54079b4c98021cc406c8d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852478"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720279"
 ---
 # <a name="cmousemanager-class"></a>CMouseManager クラス
 別のコマンドを関連付ける特定のユーザーは、 [CView](../../mfc/reference/cview-class.md)ユーザーがそのビューの内側でダブルクリックしたときのオブジェクトします。  
@@ -73,7 +73,7 @@ class CMouseManager : public CObject
   
  `CMouseManager`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxmousemanager.h  
   
 ##  <a name="addview"></a>  CMouseManager::AddView  
@@ -93,20 +93,20 @@ BOOL AddView(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iViewId*  
- ビューの id。  
+*iViewId*<br/>
+[in]ビューの id。  
   
- [in]*uiViewNameResId*  
- ビュー名を参照するリソースの文字列 ID。  
+*uiViewNameResId*<br/>
+[in]ビュー名を参照するリソースの文字列 ID。  
   
- [in]*uiIconId*  
- ビューのアイコンの id。  
+*uiIconId*<br/>
+[in]ビューのアイコンの id。  
   
- [in]*iId*  
- ビューの id。  
+*iId*<br/>
+[in]ビューの id。  
   
- [in]*lpszViewName*  
- ビューの名前。  
+*lpszViewName*<br/>
+[in]ビューの名前。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -131,8 +131,8 @@ UINT GetViewDblClickCommand(int iId) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iId*  
- ビューの id。  
+*iId*<br/>
+[in]ビューの id。  
   
 ### <a name="return-value"></a>戻り値  
  ビューが; コマンドを使用して関連付けられている場合は、コマンド識別子それ以外の場合 0 を返します。  
@@ -145,8 +145,8 @@ UINT GetViewIconId(int iViewId) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iViewId*  
- ビューの id。  
+*iViewId*<br/>
+[in]ビューの id。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は、アイコン リソースの識別子それ以外の場合 0 を返します。  
@@ -162,8 +162,8 @@ int GetViewIdByName(LPCTSTR lpszName) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszName*  
- ビューの名前。  
+*lpszName*<br/>
+[in]ビューの名前。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は、ビュー IDそれ以外の場合 0 を返します。  
@@ -179,8 +179,8 @@ void GetViewNames(CStringList& listOfNames) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*listOfNames*  
- 参照を`CStringList`オブジェクト。  
+*listOfNames*<br/>
+[out]参照を`CStringList`オブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドによって、パラメーター`listOfNames`を使用して登録されているすべてのビューの名前を持つ[CMouseManager::AddView](#addview)します。  
@@ -193,8 +193,8 @@ BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszProfileName*  
- レジストリ キーのパス。  
+*lpszProfileName*<br/>
+[in]レジストリ キーのパス。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -212,8 +212,8 @@ BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszProfileName*  
- レジストリ キーのパス。  
+*lpszProfileName*<br/>
+[in]レジストリ キーのパス。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -233,11 +233,11 @@ void SetCommandForDblClk(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iViewId*  
- ビューの識別子です。  
+*iViewId*<br/>
+[in]ビューの識別子です。  
   
- [in]*uiCmd*  
- コマンドの識別子です。  
+*uiCmd*<br/>
+[in]コマンドの識別子です。  
   
 ### <a name="remarks"></a>Remarks  
  ビューを使用してカスタム コマンドを関連付けるためにする必要があります最初、ビューを使用して登録[CMouseManager::AddView](#addview)します。 `AddView`メソッドには、入力パラメーターとしてビュー識別子が必要です。 ビューを登録すると呼び出す`CMouseManager::SetCommandForDblClk`を同じビュー識別子入力パラメーターに指定した`AddView`します。 その後、ユーザーが登録されているビューでマウスをダブルクリックしたときに、アプリケーションはコマンドを実行、によって示される*uiCmd します。* カスタムのマウスの動作をサポートするためには、マウスのマネージャーに登録されているビューをカスタマイズする必要があります。 カスタムのマウスの動作の詳細については、次を参照してください。[キーボードとマウスのカスタマイズ](../keyboard-and-mouse-customization.md)します。  

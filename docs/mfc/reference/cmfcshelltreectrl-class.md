@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fc8ef005eea61597eb316090e26af7e83718dd8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 126e23064bdc599ba230efc5dde472cd05a1aa69
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760846"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720747"
 ---
 # <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl クラス
 `CMFCShellTreeCtrl`クラスは拡張[CTreeCtrl クラス](../../mfc/reference/ctreectrl-class.md)シェル項目の階層を表示することによって機能します。  
@@ -104,8 +104,8 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- ショートカット メニューを有効にするかどうかを指定するブール値。  
+*bEnable*<br/>
+[in]ショートカット メニューを有効にするかどうかを指定するブール値。  
   
 ##  <a name="getflags"></a>  CMFCShellTreeCtrl::GetFlags  
  設定されているフラグを返します、 [CMFCShellTreeCtrl クラス](../../mfc/reference/cmfcshelltreectrl-class.md)オブジェクト。  
@@ -130,11 +130,11 @@ BOOL GetItemPath(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*strPath*  
- 文字列パラメーターへの参照。 メソッドは、このパラメーターに、項目のパスを書き込みます。  
+*strPath*<br/>
+[out]文字列パラメーターへの参照。 メソッドは、このパラメーターに、項目のパスを書き込みます。  
   
- [in]*htreeItem*  
- メソッドは、このツリー コントロール項目のパスを取得します。  
+*htreeItem*<br/>
+[in]メソッドは、このツリー コントロール項目のパスを取得します。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、0 以外の場合それ以外の場合は 0 です。  
@@ -169,10 +169,10 @@ virtual BOOL OnChildNotify(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*メッセージ*  
- [in]*wParam*  
- [in]*lParam*  
- [in]*pLResult*  
+*message*<br/>
+[in][in]*wParam*  
+*lParam*<br/>
+[in][in]*pLResult*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -188,8 +188,8 @@ virtual int OnGetItemIcon(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pItem*  
- [in]*bSelected*  
+*pItem*<br/>
+[in][in]*bSelected*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -228,11 +228,11 @@ BOOL SelectPath(LPCITEMIDLIST lpidl);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszPath*  
- アイテムのパスを指定する文字列。  
+*lpszPath*<br/>
+[in]アイテムのパスを指定する文字列。  
   
- [in]*lpidl*  
- 項目を指定する PIDL  
+*lpidl*<br/>
+[in]項目を指定する PIDL  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は s_ok を返します。E_FAIL をそれ以外の場合。  
@@ -247,11 +247,11 @@ void SetFlags(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*dwFlags*  
- 設定するフラグ。  
+*dwFlags*<br/>
+[in]設定するフラグ。  
   
- [in]*bRefresh*  
- ブール値を指定するかどうか、`CMFCShellTreeCtrl`すぐに更新する必要があります。  
+*bRefresh*<br/>
+[in]ブール値を指定するかどうか、`CMFCShellTreeCtrl`すぐに更新する必要があります。  
   
 ### <a name="remarks"></a>Remarks  
  `CMFCShellTreeCtrl`すべてにフラグを設定するパス[IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066)します。 さまざまなフラグの値の詳細については、次を参照してください。 [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066)します。  
@@ -264,8 +264,8 @@ void SetRelatedList(CMFCShellListCtrl* pShellList);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pShellList*  
- ポインターを`CMFCShellListCtrl`オブジェクト。  
+*pShellList*<br/>
+[in]ポインターを`CMFCShellListCtrl`オブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドを関連付けます、`CMFCShellListCtrl`で、`CMFCShellTreeCtrl`します。 これらのオブジェクトは、エクスプ ローラーのようなウィンドウとして表示される可能性があります: ユーザーが内のオブジェクトを選択した場合、 `CMFCShellTreeCtrl`、内の項目に関連付けられている、`CMFCShellListCtrl`が自動的に更新します。  

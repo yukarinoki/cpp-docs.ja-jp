@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 554b6a1c405060c975e914340b5e4b312d9b25b7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: fc013ca5cc8c941e0208b5921a73daebdae2264b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961556"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725193"
 ---
 # <a name="uniqueptr-class"></a>unique_ptr クラス
 
@@ -104,17 +104,17 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*右*  
- `unique_ptr`。
+*右*<br/>
+`unique_ptr`。
 
-*関数*  
- `rvalue` 型の `std::nullptr_t`。
+*関数*<br/>
+`rvalue` 型の `std::nullptr_t`。
 
-*ptr*  
- `pointer`。
+*ptr*<br/>
+`pointer`。
 
-*削除子*  
- `deleter` にバインドされている `unique_ptr` 関数。
+*削除子*<br/>
+`deleter` にバインドされている `unique_ptr` 関数。
 
 ## <a name="exceptions"></a>例外
 
@@ -167,7 +167,7 @@ public:
 |`operator*`|このメンバー関数は、`*stored_ptr` を返します。|
 |[unique_ptr operator=](#unique_ptr_operator_eq)|現在の `unique_ptr` に `unique_ptr` (または `pointer-type`) の値を割り当てます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<memory>
 
@@ -348,8 +348,8 @@ void swap(unique_ptr& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*  
- ポインターを交換するために使用される `unique_ptr`。
+*right*<br/>
+ポインターを交換するために使用される `unique_ptr`。
 
 ### <a name="remarks"></a>Remarks
 

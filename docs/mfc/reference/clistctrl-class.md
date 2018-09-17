@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 094cf61c2535ef40991d2ab6ab9a1bc4a9dff014
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: f1e869fd70fb8f2d0b52d69dedb555c600fd390b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684958"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726818"
 ---
 # <a name="clistctrl-class"></a>CListCtrl クラス
 "リスト ビュー コントロール" の機能をカプセル化します。このコントロールには項目のコレクションを表示され、各項目はイメージ リストのアイコンとラベルで構成されます。  
@@ -1276,8 +1276,8 @@ BOOL GetGroupInfoByIndex(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*iIndex*|グループの 0 から始まるインデックス。|  
-|[out]*pGroup*|ポインター、 [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup)構造体で指定されたグループに関する情報を受け取る、 *iIndex*パラメーター。<br /><br /> メンバーを初期化するため、呼び出し元は、 [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup)構造体。 設定、`cbSize`メンバー構造体のサイズおよびのフラグ、`mask`メンバーを取得する情報を指定します。|  
+|*iIndex*|[in]グループの 0 から始まるインデックス。|  
+|*pGroup*|[out]ポインター、 [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup)構造体で指定されたグループに関する情報を受け取る、 *iIndex*パラメーター。<br /><br /> メンバーを初期化するため、呼び出し元は、 [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup)構造体。 設定、`cbSize`メンバー構造体のサイズおよびのフラグ、`mask`メンバーを取得する情報を指定します。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -1353,9 +1353,9 @@ BOOL GetGroupRect(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*iGroupId*|グループを指定します。|  
-|[入力、出力]*lpRect*|ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。 指定されているグループの四角形の座標がその構造体にこのメソッドが成功した場合は、 *iGroupId*します。|  
-|[in]*iCoords*|取得する四角形の座標を指定します。 これらの値のいずれかを使用します。<br /><br /> -LVGGR_GROUP - 展開されたグループ全体の座標を (既定値)。<br />-LVGGR_HEADER - のみヘッダー (折りたたまれたグループ) の座標。<br />-LVGGR_SUBSETLINK - のサブセットのリンク (サブセットのマークアップ) のみを調整します。|  
+|*iGroupId*|[in]グループを指定します。|  
+|*lpRect*|[入力、出力]ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。 指定されているグループの四角形の座標がその構造体にこのメソッドが成功した場合は、 *iGroupId*します。|  
+|*iCoords*|[in]取得する四角形の座標を指定します。 これらの値のいずれかを使用します。<br /><br /> -LVGGR_GROUP - 展開されたグループ全体の座標を (既定値)。<br />-LVGGR_HEADER - のみヘッダー (折りたたまれたグループ) の座標。<br />-LVGGR_SUBSETLINK - のサブセットのリンク (サブセットのマークアップ) のみを調整します。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -1406,8 +1406,8 @@ UINT GetGroupState(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*iGroupId*|グループの 0 から始まるインデックス。|  
-|[in]*dwMask*|指定したグループを取得する状態の値を指定するマスク。 詳細については、次を参照してください。、`mask`のメンバー、 [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup)構造体。|  
+|*iGroupId*|[in]グループの 0 から始まるインデックス。|  
+|*dwMask*|[in]指定したグループを取得する状態の値を指定するマスク。 詳細については、次を参照してください。、`mask`のメンバー、 [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup)構造体。|  
   
 ### <a name="return-value"></a>戻り値  
  指定したグループまたはグループが見つからない場合は 0 の要求された状態。  
@@ -1660,10 +1660,10 @@ BOOL GetItemIndexRect(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*pItemIndex*|ポインター、[記述](https://msdn.microsoft.com/library/windows/desktop/bb774762)サブ項目の親項目の構造体。<br /><br /> 呼び出し元がのメンバーを設定したり、[記述](https://msdn.microsoft.com/library/windows/desktop/bb774762)構造体。 このパラメーターは、NULL にすることはできません。|  
-|[in]*iColumn*|コントロール内の列の 0 から始まるインデックス。|  
-|[in]*rectType*|外接する四角形を取得するリスト ビューのサブ項目の部分です。 次のいずれかの値を指定します。<br /><br /> LVIR_BOUNDS - アイコンとラベルを含む全体のサブ項目の外接する四角形を返します。<br /><br /> LVIR_ICON は、アイコンまたは小さいアイコンのサブ項目の外接する四角形を返します。<br /><br /> LVIR_LABEL - は、サブ項目のテキストの外接する四角形を返します。|  
-|[out]*pRect*|ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)サブ項目の外接する四角形に関する情報を受け取る構造体。<br /><br /> 呼び出し元を割り当て、 [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。 このパラメーターは、NULL にすることはできません。|  
+|*pItemIndex*|[in]ポインター、[記述](https://msdn.microsoft.com/library/windows/desktop/bb774762)サブ項目の親項目の構造体。<br /><br /> 呼び出し元がのメンバーを設定したり、[記述](https://msdn.microsoft.com/library/windows/desktop/bb774762)構造体。 このパラメーターは、NULL にすることはできません。|  
+|*iColumn*|[in]コントロール内の列の 0 から始まるインデックス。|  
+|*rectType*|[in]外接する四角形を取得するリスト ビューのサブ項目の部分です。 次のいずれかの値を指定します。<br /><br /> LVIR_BOUNDS - アイコンとラベルを含む全体のサブ項目の外接する四角形を返します。<br /><br /> LVIR_ICON は、アイコンまたは小さいアイコンのサブ項目の外接する四角形を返します。<br /><br /> LVIR_LABEL - は、サブ項目のテキストの外接する四角形を返します。|  
+|*pRect*|[out]ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)サブ項目の外接する四角形に関する情報を受け取る構造体。<br /><br /> 呼び出し元を割り当て、 [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。 このパラメーターは、NULL にすることはできません。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -1821,9 +1821,9 @@ BOOL GetItemSpacing(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*fSmall*|アイテム間の間隔を取得するビュー。 小さいアイコンのビュー、またはアイコンのビューの場合は FALSE、TRUE を指定します。|  
-|[out]*pnHorzSpacing*|項目間の左右の間隔が含まれています。|  
-|[out]*pnVertSpacing*|項目間の上下の間隔が含まれています。|  
+|*fSmall*|[in]アイテム間の間隔を取得するビュー。 小さいアイコンのビュー、またはアイコンのビューの場合は FALSE、TRUE を指定します。|  
+|*pnHorzSpacing*|[out]項目間の左右の間隔が含まれています。|  
+|*pnVertSpacing*|[out]項目間の上下の間隔が含まれています。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -1944,8 +1944,8 @@ BOOL GetNextItemIndex(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力、出力]*pItemIndex*|ポインター、[記述](https://msdn.microsoft.com/library/windows/desktop/bb774762)検索開始位置となる項目を記述する構造体または内のフラグに一致する最初の項目を検索する場合は-1、 *nFlags*パラメーター。<br /><br /> このメソッドが成功した場合、`LVITEMINDEX`構造体には、検索で見つかった項目がについて説明します。|  
-|[in]*nFlags*|検索を実行する方法を指定するフラグのビットごとの組み合わせ (OR)。<br /><br /> 検索インデックス、状態、または、ターゲット項目の外観に依存またはで指定された項目を基準としたターゲット項目の物理的な位置、 *pItemIndex*パラメーター。 詳細については、次を参照してください。、*フラグ*パラメーター、 [LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059)メッセージ。|  
+|*pItemIndex*|[入力、出力]ポインター、[記述](https://msdn.microsoft.com/library/windows/desktop/bb774762)検索開始位置となる項目を記述する構造体または内のフラグに一致する最初の項目を検索する場合は-1、 *nFlags*パラメーター。<br /><br /> このメソッドが成功した場合、`LVITEMINDEX`構造体には、検索で見つかった項目がについて説明します。|  
+|*nFlags*|[in]検索を実行する方法を指定するフラグのビットごとの組み合わせ (OR)。<br /><br /> 検索インデックス、状態、または、ターゲット項目の外観に依存またはで指定された項目を基準としたターゲット項目の物理的な位置、 *pItemIndex*パラメーター。 詳細については、次を参照してください。、*フラグ*パラメーター、 [LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059)メッセージ。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -2647,7 +2647,7 @@ BOOL IsItemVisible(int index) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*インデックス*|現在のリスト ビュー コントロール内の項目の 0 から始まるインデックス。|  
+|*index*|[in]現在のリスト ビュー コントロール内の項目の 0 から始まるインデックス。|  
   
 ### <a name="return-value"></a>戻り値  
  指定した項目が表示されている以外の場合、FALSE の場合は TRUE。  
@@ -2666,7 +2666,7 @@ UINT MapIDToIndex(UINT id) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*id*|項目の一意の ID。|  
+|*ID*|[in]項目の一意の ID。|  
   
 ### <a name="return-value"></a>戻り値  
  現在のインデックスを指定した id。  
@@ -2689,7 +2689,7 @@ UINT MapIndexToID(UINT index) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*インデックス*|項目の 0 から始まるインデックス。|  
+|*index*|[in]項目の 0 から始まるインデックス。|  
   
 ### <a name="return-value"></a>戻り値  
  指定した項目の一意の ID。  
@@ -2773,11 +2773,11 @@ void MoveItemToGroup(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*idItemFrom*  
- 移動する項目のインデックス。  
+*idItemFrom*<br/>
+[in]移動する項目のインデックス。  
   
- [in]*idGroupTo*  
- グループの識別子、項目に移動されます。  
+*idGroupTo*<br/>
+[in]グループの識別子、項目に移動されます。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -3496,9 +3496,9 @@ BOOL SetItemIndexState(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*pItemIndex*|ポインター、[記述](https://msdn.microsoft.com/library/windows/desktop/bb774762)項目を記述する構造体。 呼び出し元は、この構造体を割り当てると、そのメンバーを設定します。|  
-|[in]*dwState*|項目を設定する状態のビットごとの組み合わせである[ビュー項目の状態を一覧表示](/windows/desktop/Controls/list-view-item-states)します。 0 にリセット、または、状態を設定するいずれかを指定します。|  
-|[in]*dwMask*|指定された状態の有効なビット マスク、 *dwState*パラメーター。 ビットごとの組み合わせ (OR) を指定[ビュー項目の状態を一覧表示](/windows/desktop/Controls/list-view-item-states)します。|  
+|*pItemIndex*|[in]ポインター、[記述](https://msdn.microsoft.com/library/windows/desktop/bb774762)項目を記述する構造体。 呼び出し元は、この構造体を割り当てると、そのメンバーを設定します。|  
+|*dwState*|[in]項目を設定する状態のビットごとの組み合わせである[ビュー項目の状態を一覧表示](/windows/desktop/Controls/list-view-item-states)します。 0 にリセット、または、状態を設定するいずれかを指定します。|  
+|*dwMask*|[in]指定された状態の有効なビット マスク、 *dwState*パラメーター。 ビットごとの組み合わせ (OR) を指定[ビュー項目の状態を一覧表示](/windows/desktop/Controls/list-view-item-states)します。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -3838,13 +3838,13 @@ BOOL SortItems(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pfnCompare*  
- アプリケーション定義の比較関数のアドレス。  
+*pfnCompare*<br/>
+[in]アプリケーション定義の比較関数のアドレス。  
   
  並べ替え操作では、2 つのリスト項目の相対順序を決定する必要があるたびに、比較関数を呼び出します。 比較関数は、クラスの静的メンバーまたは任意のクラスのメンバーではないスタンドアロン関数のいずれかである必要があります。  
   
- [in]*指定*  
- 比較関数に渡されるアプリケーション定義の値。  
+*指定*<br/>
+[in]比較関数に渡されるアプリケーション定義の値。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合、メソッドが正常に実行それ以外の場合は FALSE です。  
@@ -3899,8 +3899,8 @@ BOOL SortItemsEx(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*pfnCompare*|アプリケーション定義の比較関数のアドレス。<br /><br /> 並べ替え操作では、2 つのリスト項目の相対順序を決定する必要があるたびに、比較関数を呼び出します。 比較関数は、クラスの静的メンバーまたは任意のクラスのメンバーではないスタンドアロン関数のいずれかである必要があります。|  
-|[in]*指定*|アプリケーション定義の値は、比較関数に渡されます。|  
+|*pfnCompare*|[in]アプリケーション定義の比較関数のアドレス。<br /><br /> 並べ替え操作では、2 つのリスト項目の相対順序を決定する必要があるたびに、比較関数を呼び出します。 比較関数は、クラスの静的メンバーまたは任意のクラスのメンバーではないスタンドアロン関数のいずれかである必要があります。|  
+|*指定*|[in]アプリケーション定義の値は、比較関数に渡されます。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  

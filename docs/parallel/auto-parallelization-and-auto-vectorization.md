@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 240cd4588cb36125b571462b26fcee3853412218
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: c1ff172fde385b4e814508aaf2b567ac15874069
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42543152"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720403"
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>自動並行化と自動ベクター化
 自動並行化と自動ベクター化は、コード内のループのパフォーマンスが自動的に向上するように設計されています。  
@@ -75,8 +75,10 @@ void test() {
   
  生成される出力:  
   
-**---分析関数: _ _cdecl test(void) を無効にします。**   
-**d:\myproject\mytest.cpp(4): ループを並列化**  
+```Output
+--- Analyzing function: void __cdecl test(void)
+d:\myproject\mytest.cpp(4) : loop parallelized
+```
   
 次のコマンドを使用してコンパイル:  
   
@@ -84,9 +86,11 @@ void test() {
   
 生成される出力:  
   
-**---分析関数: _ _cdecl test(void) を無効にします。**   
-**d:\myproject\mytest.cpp(4): ループを並列化**   
-**d:\myproject\mytest.cpp(4): ループは理由 '1008' により並列化できません**  
+```Output
+--- Analyzing function: void __cdecl test(void)
+d:\myproject\mytest.cpp(4) : loop parallelized
+d:\myproject\mytest.cpp(4) : loop not parallelized due to reason '1008'
+```
   
 2 つの異なる出力に違いに注意してください[/Qpar-report (自動並行化レポート作成レベル)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md)オプション。 `/Qpar-report:1` を指定した場合は、正常に並行化されたループのみに関する並行化メッセージが出力されます。 `/Qpar-report:2` を指定した場合は、並行化したループと並行化しなかったループの両方に関する並行化メッセージが出力されます。  
   

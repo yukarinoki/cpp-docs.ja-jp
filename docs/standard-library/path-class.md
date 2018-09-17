@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e47310a93a3901f072330a57619c2655aefb7ff5
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: fd8fa524d0c41d437575a61ff4e4456fd9933404
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691511"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725310"
 ---
 # <a name="path-class"></a>path クラス
 
@@ -638,7 +638,7 @@ path(InIt first, InIt last, const locale& loc);
 
 ## <a name="preferred_separator"></a> path::preferred_separator
 
-この定数オブジェクトでは、パスのコンポーネントを区切るために推奨される文字を指定します。この文字は、ホスト オペレーティング システムによって異なります。 
+この定数オブジェクトでは、パスのコンポーネントを区切るために推奨される文字を指定します。この文字は、ホスト オペレーティング システムによって異なります。
 
 ```cpp
 #if _WIN32_C_LIB
@@ -654,7 +654,7 @@ Windows では、ほとんどのコンテキストで、L'/' の代用が許容�
 
 ## <a name="relative_path"></a> path::relative_path
 
-相対パス コンポーネントを返します`myname`します。 
+相対パス コンポーネントを返します`myname`します。
 
 ```cpp
 path relative_path() const;
@@ -674,7 +674,7 @@ path& remove_filename();
 
 ## <a name="replace_extension"></a> path::replace_extension
 
-拡張機能を置き換える`myname`します。 
+拡張機能を置き換える`myname`します。
 
 ```cpp
 path& replace_extension(const path& newext = path());
@@ -715,7 +715,7 @@ return (*this);
 
 ## <a name="root_directory"></a> path::root_directory
 
-ルート ディレクトリ コンポーネントを返します`myname`します。 
+ルート ディレクトリ コンポーネントを返します`myname`します。
 
 ```cpp
 path root_directory() const;
@@ -727,7 +727,7 @@ path root_directory() const;
 
 ## <a name="root_name"></a> path::root_name
 
-ルート名の部分を返します`myname`します。 
+ルート名の部分を返します`myname`します。
 
 ```cpp
 path root_name() const;

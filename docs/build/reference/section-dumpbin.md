@@ -1,5 +1,5 @@
 ---
-title: -SECTION (DUMPBIN) |Microsoft ドキュメント
+title: -SECTION (DUMPBIN) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9921ad7bad5e3e09402ecf74d182e9812cc63bad
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c384ef6e842213e75ec0d8a7f7e9b03b576f8d6b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373892"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721163"
 ---
 # <a name="section-dumpbin"></a>/SECTION (DUMPBIN)
-```  
-/SECTION:section  
-```  
-  
-## <a name="remarks"></a>コメント  
- このオプションは、指定した情報に出力を制限*セクション*です。 使用して、 [/HEADERS](../../build/reference/headers.md)ファイルのセクションの一覧を取得するにはオプションです。  
-  
- のみ、 [/HEADERS](../../build/reference/headers.md) DUMPBIN オプションはにより生成されるファイルで使用できるよう、 [/GL](../../build/reference/gl-whole-program-optimization.md)コンパイラ オプション。  
-  
-## <a name="see-also"></a>関連項目  
- [DUMPBIN オプション](../../build/reference/dumpbin-options.md)
+
+```
+/SECTION:section
+```
+
+## <a name="remarks"></a>Remarks
+
+このオプションは、指定した情報に出力を制限*セクション*します。 使用して、 [/HEADERS](../../build/reference/headers.md)ファイルのセクションの一覧を取得するにはオプションです。
+
+のみ、 [/HEADERS](../../build/reference/headers.md) DUMPBIN オプションがで生成されたファイルで使用できる、 [/GL](../../build/reference/gl-whole-program-optimization.md)コンパイラ オプション。
+
+## <a name="see-also"></a>関連項目
+
+[DUMPBIN オプション](../../build/reference/dumpbin-options.md)

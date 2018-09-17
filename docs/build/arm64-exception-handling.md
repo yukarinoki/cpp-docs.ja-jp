@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e24997fa2eb6e6e5c3d8438b137e168c2f70b1f
-ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
+ms.openlocfilehash: 7dfcf1839048f3c110bbca6754d1549161b63301
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39034739"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716559"
 ---
 # <a name="arm64-exception-handling"></a>ARM64 例外処理
 
@@ -129,7 +129,7 @@ ARM64 の Windows では、同じ構造化例外処理は非同期のハード�
         sub    sp,#framesz-72           // allocate the remaining local area
     ```
 
-    保存 r19 のみ:
+   保存 r19 のみ:
 
     ```asm
         sub    sp, sp, #16              // reg save area allocation*
@@ -636,5 +636,5 @@ EpilogStart インデックス [0] は、プロローグのアンワインド �
 
 ## <a name="see-also"></a>関連項目
 
-[ARM64 ABI 規則の概要](arm64-windows-abi-conventions.md)  
-[ARM 例外処理](../build/arm-exception-handling.md)  
+[ARM64 ABI 規則の概要](arm64-windows-abi-conventions.md)<br/>
+[ARM 例外処理](../build/arm-exception-handling.md)

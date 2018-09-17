@@ -1,5 +1,5 @@
 ---
-title: -WHOLEARCHIVE (すべてのライブラリ オブジェクト ファイルを含める) |Microsoft ドキュメント
+title: -WHOLEARCHIVE (すべてのライブラリ オブジェクト ファイルを含める) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,37 +10,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6de1aa92938a1523b86a90c58cc2d27f1181bfc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d3a59ed53227e0c9bf598f96b1bb72247a3341b0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376870"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722255"
 ---
 # <a name="wholearchive-include-all-library-object-files"></a>/WHOLEARCHIVE (すべてのライブラリ オブジェクト ファイルを含む)
-リンクされた実行可能ファイルでのスタティック ライブラリですべてのオブジェクト ファイルを含めるようにリンカーを強制します。  
-  
-## <a name="syntax"></a>構文  
-  
-> /WHOLEARCHIVE [:*ライブラリ*]  
-  
-## <a name="remarks"></a>コメント  
-  
-/WHOLEARCHIVE オプションでは、リンカーが、指定された静的ライブラリからすべてのオブジェクト ファイルを含めるまたはライブラリが指定されていない場合に、リンクに指定されたすべての静的ライブラリからコマンドを強制します。 複数のライブラリの/WHOLEARCHIVE オプションを指定するには、リンカーのコマンドラインで/WHOLEARCHIVE スイッチが 1 つ以上を使用できます。 既定では、リンカー ファイルが含まれるオブジェクト リンクの出力実行可能ファイル内の他のオブジェクト ファイルで参照されているシンボルをエクスポートする場合にのみです。 /WHOLEARCHIVE オプションは、リンカーのコマンドラインで個別に指定した場合とスタティック ライブラリでアーカイブされたすべてのオブジェクト ファイルを扱うリンカーを使用します。  
-  
-/WHOLEARCHIVE オプションは、スタティック ライブラリからのすべてのシンボルを再度エクスポートに使用できます。 これにより、すべてのライブラリ コード、リソース、およびメタデータがある含まれる 1 つ以上の静的ライブラリからコンポーネントを作成するときにかどうかを確認できます。 警告 LNK4264 スタティック ライブラリを作成するときに、エクスポート用の Windows ランタイム コンポーネントが含まれていますを表示する場合は、そのライブラリを別のコンポーネントまたはアプリにリンクするときに/WHOLEARCHIVE オプションを使用します。  
-  
-/WHOLEARCHIVE オプションは、Visual Studio 2015 Update 2 で導入されました。  
-  
-### <a name="to-set-this-linker-option-in-visual-studio"></a>このリンカー オプションを Visual Studio で設定するには  
-  
-1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。[のプロジェクト プロパティの操作](../../ide/working-with-project-properties.md)です。  
-  
-1.  選択、**コマンドライン**プロパティ ページ**構成プロパティ**、**リンカー**です。  
-  
-1.  追加する/WHOLEARCHIVE オプション、**追加のオプション**テキスト ボックス。  
-  
-  
-## <a name="see-also"></a>関連項目  
- [リンカー オプションの設定](../../build/reference/setting-linker-options.md)   
- [リンカー オプション](../../build/reference/linker-options.md)
+
+リンクされた実行可能ファイルでのスタティック ライブラリですべてのオブジェクト ファイルを含めるようにリンカーを強制します。
+
+## <a name="syntax"></a>構文
+
+> /WHOLEARCHIVE [:*ライブラリ*]
+
+## <a name="remarks"></a>Remarks
+
+/WHOLEARCHIVE オプションは、リンカーに指定された静的ライブラリのいずれかからすべてのオブジェクト ファイルを含めるまたはライブラリが指定されていない場合、リンクに指定されたすべての静的ライブラリからコマンドを強制します。 複数のライブラリの/WHOLEARCHIVE オプションを指定するには、リンカー コマンドラインに/WHOLEARCHIVE スイッチが 1 つ以上を使用できます。 既定では、実行可能ファイルには、他のオブジェクト ファイルで参照されているシンボルをエクスポートする場合にのみ、リンカーはリンクされた出力オブジェクト ファイルを含めます。 /WHOLEARCHIVE オプションでは、リンカーのコマンドラインで個別に指定した場合と、スタティック ライブラリでアーカイブされたすべてのオブジェクト ファイルを扱うリンカーを使用します。
+
+/WHOLEARCHIVE オプションは、静的ライブラリからのすべてのシンボルを再エクスポートに使用できます。 これにより、すべてのライブラリ コード、リソース、およびメタデータが含まれる 1 つ以上の静的ライブラリからコンポーネントを作成するときになっていることを確認することができます。 警告 LNK4264 スタティック ライブラリを作成するときにエクスポート用の Windows ランタイム コンポーネントを含んでいる場合は、別のコンポーネントまたはアプリにそのライブラリをリンクするときに、/WHOLEARCHIVE オプションを使用します。
+
+/WHOLEARCHIVE オプションは、Visual Studio 2015 Update 2 で導入されました。
+
+### <a name="to-set-this-linker-option-in-visual-studio"></a>このリンカー オプションを Visual Studio で設定するには
+
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクト プロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+
+1. 選択、**コマンドライン**プロパティ ページ**構成プロパティ**、**リンカー**します。
+
+1. /WHOLEARCHIVE オプションを追加、**追加オプション**テキスト ボックス。
+
+## <a name="see-also"></a>関連項目
+
+[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
+[リンカー オプション](../../build/reference/linker-options.md)

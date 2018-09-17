@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3984ebc1568c831420e11bd7b3c9004dabcc316b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: eef400f13e36ac543fbcd73ccb7aedf4bc053037
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222095"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718095"
 ---
 # <a name="cmfcfontinfo-class"></a>CMFCFontInfo クラス
 `CMFCFontInfo`クラスは、名とフォントの他の属性について説明します。  
@@ -60,7 +60,7 @@ class CMFCFontInfo : public CObject
   
 ### <a name="data-members"></a>データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CMFCFontInfo::m_nCharSet](#m_ncharset)|フォントに関連付けられている文字セット (スクリプト) を指定する値。|  
 |[CMFCFontInfo::m_nPitchAndFamily](#m_npitchandfamily)|ピッチとファミリのフォントを指定する値。|  
@@ -94,23 +94,23 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszName*  
- フォントの名前。 詳細については、次を参照してください。、`lfFaceName`のメンバー、 [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)構造体。  
+*lpszName*<br/>
+[in]フォントの名前。 詳細については、次を参照してください。、`lfFaceName`のメンバー、 [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)構造体。  
   
- [in]*lpszScript*  
- フォントのスクリプト (文字セット) の名前。  
+*lpszScript*<br/>
+[in]フォントのスクリプト (文字セット) の名前。  
   
- [in]*nCharSet*  
- フォントの文字セット (スクリプト) を指定する値。 詳細については、次を参照してください。、`lfCharSet`のメンバー、 [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)構造体。  
+*nCharSet*<br/>
+[in]フォントの文字セット (スクリプト) を指定する値。 詳細については、次を参照してください。、`lfCharSet`のメンバー、 [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)構造体。  
   
- [in]*nPitchAndFamily*  
- ピッチとファミリのフォントを指定する値。 詳細については、次を参照してください。、`lfPitchAndFamily`のメンバー、 [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)構造体。  
+*nPitchAndFamily*<br/>
+[in]ピッチとファミリのフォントを指定する値。 詳細については、次を参照してください。、`lfPitchAndFamily`のメンバー、 [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)構造体。  
   
- [in]*%n タイプ*  
- フォントの種類を指定する値。 このパラメーターは、DEVICE_FONTTYPE、RASTER_FONTTYPE、TRUETYPE_FONTTYPE のビットごとの組み合わせ (OR) を指定できます。  
+*%n タイプ*<br/>
+[in]フォントの種類を指定する値。 このパラメーターは、DEVICE_FONTTYPE、RASTER_FONTTYPE、TRUETYPE_FONTTYPE のビットごとの組み合わせ (OR) を指定できます。  
   
- [in]*src*  
- 既存の`CMFCFontInfo`オブジェクト メンバーがこれを構築するため`CMFCFontInfo`オブジェクト。  
+*src*<br/>
+[in]既存の`CMFCFontInfo`オブジェクト メンバーがこれを構築するため`CMFCFontInfo`オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
   

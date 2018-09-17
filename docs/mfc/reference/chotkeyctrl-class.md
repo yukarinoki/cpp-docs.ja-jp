@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47acba5c5bb6164dc7a9ac73fa8f777c99226466
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 592deab171a8085e2260a27ae642b3cd5c4af810
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43681626"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722248"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl クラス
 Windows コモン ホット キー コントロールの機能が用意されています。  
@@ -176,11 +176,11 @@ void GetHotKey(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*wVirtualKeyCode*  
- キーボード ショートカットの仮想キー コード。 標準の仮想キー コードの一覧は、Winuser.h を参照してください。  
+*wVirtualKeyCode*<br/>
+[out]キーボード ショートカットの仮想キー コード。 標準の仮想キー コードの一覧は、Winuser.h を参照してください。  
   
- [out]*と*  
- キーボード ショートカット キーの修飾子キーを示すフラグのビットごとの組み合わせ (OR)。  
+*と*<br/>
+[out]キーボード ショートカット キーの修飾子キーを示すフラグのビットごとの組み合わせ (OR)。  
   
  修飾フラグは次のとおりです。  
   
@@ -245,11 +245,11 @@ void SetHotKey(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*wVirtualKeyCode*  
- キーボード ショートカットの仮想キー コード。 標準の仮想キー コードの一覧は、Winuser.h を参照してください。  
+*wVirtualKeyCode*<br/>
+[in]キーボード ショートカットの仮想キー コード。 標準の仮想キー コードの一覧は、Winuser.h を参照してください。  
   
- [in]*と*  
- キーボード ショートカット キーの修飾子キーを示すフラグのビットごとの組み合わせ (OR)。  
+*と*<br/>
+[in]キーボード ショートカット キーの修飾子キーを示すフラグのビットごとの組み合わせ (OR)。  
   
  修飾フラグは次のとおりです。  
   

@@ -1,5 +1,5 @@
 ---
-title: 1 つ |Microsoft ドキュメント
+title: 1 つ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dd5349331ac23998511a8f1b838d2cd13b01998
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7ff1a255933b79d39b6eedbb9362ff76a34e0f8a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691860"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716990"
 ---
 # <a name="single"></a>single
-コードのセクションをシングル スレッドで実行するように指定することができます。  
+コードのセクションは、シングル スレッドで実行する必要があります指定できます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,10 +36,11 @@ ms.locfileid: "33691860"
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `clause` (省略可能)  
- 0 個以上の句。 サポートされている句の一覧については、「解説」セクションを参照してください**単一**です。  
+
+`clause`  
+(省略可能)0 個以上の句。 サポートされている句の一覧については、「解説」を参照してください。**単一**します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **単一**ディレクティブは、次の OpenMP 句をサポートしています。  
   
 -   [copyprivate](../../../parallel/openmp/reference/copyprivate.md)  
@@ -52,7 +53,7 @@ ms.locfileid: "33691860"
   
  [マスター](../../../parallel/openmp/reference/master.md)ディレクティブを使用して、コードのセクションをマスター スレッドでのみ実行するように指定できます。  
   
- 詳細については、次を参照してください。 [2.4.3 1 つ構築](../../../parallel/openmp/2-4-3-single-construct.md)です。  
+ 詳細については、次を参照してください。 [2.4.3 の 1 つ構築](../../../parallel/openmp/2-4-3-single-construct.md)します。  
   
 ## <a name="example"></a>例  
   

@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02c4c537f1a420a096fbcd979580ff7b10076845
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 27a200ba94be8c4937342820fadf89e4225ba97d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106757"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719954"
 ---
 # <a name="timeput-class"></a>time_put クラス
 
@@ -45,10 +45,10 @@ class time_put : public locale::facet;
 
 ### <a name="parameters"></a>パラメーター
 
-*CharType*  
+*CharType*<br/>
 文字をエンコードするためにプログラム内で使用される型。
 
-*OutputIterator*  
+*OutputIterator*<br/>
 時刻の put 関数が出力を書き込む反復子の型。
 
 ## <a name="remarks"></a>Remarks
@@ -108,19 +108,19 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>パラメーター
 
-*next*  
+*next*<br/>
 時刻と日付を表す文字のシーケンスが挿入される出力反復子。
 
-*されている _Iosbase*  
+*されている _Iosbase*<br/>
 使用されません。
 
-*_Pt*  
+*_Pt*<br/>
 出力される時刻と日付の情報。
 
-*_Fmt*  
+*_Fmt*<br/>
 出力の形式。 有効な値については、「[strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)」を参照してください。
 
-*_Mod*  
+*_Mod*<br/>
 形式の修飾子。 有効な値については、「[strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)」を参照してください。
 
 ### <a name="return-value"></a>戻り値
@@ -171,28 +171,28 @@ iter_type put(iter_type next,
 
 ### <a name="parameters"></a>パラメーター
 
-*next*  
+*next*<br/>
 時刻と日付を表す文字のシーケンスが挿入される出力反復子。
 
-*されている _Iosbase*  
+*されている _Iosbase*<br/>
 使用されません。
 
-*_Fill*  
+*_Fill*<br/>
 型の文字`CharType`スペースに使用します。
 
-*_Pt*  
+*_Pt*<br/>
 出力される時刻と日付の情報。
 
-*_Fmt*  
+*_Fmt*<br/>
 出力の形式。 有効な値については、「[strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)」を参照してください。
 
-*_Mod*  
+*_Mod*<br/>
 形式の修飾子。 有効な値については、「[strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)」を参照してください。
 
-*first*  
+*first*<br/>
 出力の書式設定文字列の先頭。 有効な値については、「[strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)」を参照してください。
 
-*last*  
+*last*<br/>
 出力の書式設定文字列の末尾。 有効な値については、「[strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)」を参照してください。
 
 ### <a name="return-value"></a>戻り値

@@ -1,5 +1,5 @@
 ---
-title: -Fo (オブジェクト ファイルの名前) |Microsoft ドキュメント
+title: -Fo (オブジェクト ファイル名) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,48 +21,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea552b149270b8e644140a4dd51f220648ef376e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d9ab671cbae276796ce89ec12cecbc16334e234e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374009"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724256"
 ---
 # <a name="fo-object-file-name"></a>/Fo (オブジェクト ファイルの名前の指定)
-既定値の代わりに使用する、オブジェクト (.obj) ファイルの名前またはディレクトリを指定します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-/Fopathname  
-```  
-  
-## <a name="remarks"></a>コメント  
- このオプションを使用しない場合、オブジェクト ファイルは、ソース ファイルと .obj 拡張機能の基本名を使用します。 任意の名前と、拡張機能を使用することができますが、推奨される規則は、使用する obj.。  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
-  
-1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[のプロジェクト プロパティの操作](../../ide/working-with-project-properties.md)です。  
-  
-2.  **[C/C++]** フォルダーをクリックします。  
-  
-3.  **[出力ファイル]** プロパティ ページをクリックします。  
-  
-4.  変更、**オブジェクト ファイルの名前**プロパティです。  オブジェクト ファイルの開発環境での拡張機能を持つ必要があります obj.。  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには  
-  
--   「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ObjectFile%2A>」を参照してください。  
-  
-## <a name="example"></a>例  
- 次のコマンド ライン THIS.obj をという名前の既存のディレクトリ、\OBJECT、ドライブ B にオブジェクト ファイルを作成します。  
-  
-```  
-CL /FoB:\OBJECT\ THIS.C  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [出力ファイル (/F) オプション](../../build/reference/output-file-f-options.md)   
- [コンパイラ オプション](../../build/reference/compiler-options.md)   
- [コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)   
- [パス名の指定](../../build/reference/specifying-the-pathname.md)
+
+既定値の代わりに使用する、オブジェクト (.obj) ファイルの名前またはディレクトリを指定します。
+
+## <a name="syntax"></a>構文
+
+```
+/Fopathname
+```
+
+## <a name="remarks"></a>Remarks
+
+このオプションを使用しない場合、オブジェクト ファイルには、ソース ファイルと .obj 拡張機能の基本名が使用されます。 任意の名前と、拡張機能を使用できますが、推奨される規則は、使用する obj.。
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+
+1. **[C/C++]** フォルダーをクリックします。
+
+1. **[出力ファイル]** プロパティ ページをクリックします。
+
+1. 変更、**オブジェクト ファイルの名前**プロパティ。  オブジェクト ファイル、開発環境での拡張機能をいる必要があります obj.。
+
+### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
+
+- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ObjectFile%2A>
+
+## <a name="example"></a>例
+
+次のコマンド ラインが既存のディレクトリに、\OBJECT、ドライブ B に THIS.obj をという名前のオブジェクト ファイルを作成します
+
+```
+CL /FoB:\OBJECT\ THIS.C
+```
+
+## <a name="see-also"></a>関連項目
+
+[出力ファイル (/F) オプション](../../build/reference/output-file-f-options.md)
+[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
+[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)<br/>
+[パス名の指定](../../build/reference/specifying-the-pathname.md)

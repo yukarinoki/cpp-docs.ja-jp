@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 946c82d4f558974d548a40af0b14e63f7ccebf4e
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: afabb17847f1c94ce7fae1db05e589f03a79506a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680581"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721254"
 ---
 # <a name="cvslistbox-class"></a>CVSListBox クラス
 `CVSListBox`クラスが編集可能なリスト コントロールをサポートします。  
@@ -124,14 +124,14 @@ virtual int AddItem(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*strIext*  
- 文字列への参照。  
+*strIext*<br/>
+[in]文字列への参照。  
   
- [in]*指定*  
- 文字列に関連付けられているアプリケーション固有の 32 ビット値。 既定値は 0 です。  
+*指定*<br/>
+[in]文字列に関連付けられているアプリケーション固有の 32 ビット値。 既定値は 0 です。  
   
- [in]*iIndex*  
- 文字列を保持する位置の 0 から始まるインデックス。 場合、 *iIndex*パラメーターが-1 の場合、文字列はリストの末尾に追加されます。 既定値は -1 です。  
+*iIndex*<br/>
+[in]文字列を保持する位置の 0 から始まるインデックス。 場合、 *iIndex*パラメーターが-1 の場合、文字列はリストの末尾に追加されます。 既定値は -1 です。  
   
 ### <a name="return-value"></a>戻り値  
  文字列のリスト コントロール内の位置の 0 から始まるインデックス。  
@@ -158,8 +158,8 @@ virtual BOOL EditItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iIndex*  
- リスト コントロール項目の 0 から始まるインデックス。  
+*iIndex*<br/>
+[in]リスト コントロール項目の 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  編集操作が正常に開始する場合は TRUE。それ以外の場合、FALSE です。  
@@ -188,8 +188,8 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iIndex*  
- 編集可能なリスト コントロール項目の 0 から始まるインデックス。  
+*iIndex*<br/>
+[in]編集可能なリスト コントロール項目の 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  指定した項目に関連付けられている 32 ビット値。  
@@ -205,8 +205,8 @@ virtual CString GetItemText(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `iIndex`  
- 編集可能なリスト コントロール項目の 0 から始まるインデックス。  
+*iIndex*<br/>
+[in]編集可能なリスト コントロール項目の 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md)指定した項目のテキストを含むオブジェクト。  
@@ -246,8 +246,8 @@ virtual BOOL RemoveItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iIndex*  
- 編集可能なリスト コントロール項目の 0 から始まるインデックス。  
+*iIndex*<br/>
+[in]編集可能なリスト コントロール項目の 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  指定した項目が削除された場合は TRUE。それ以外の場合、FALSE です。  
@@ -262,8 +262,8 @@ virtual BOOL SelectItem(int iItem);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iItem*  
- 編集可能なリスト コントロール項目の 0 から始まるインデックス。  
+*iItem*<br/>
+[in]編集可能なリスト コントロール項目の 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -281,11 +281,11 @@ virtual void SetItemData(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iIndex*  
- 編集可能なリスト コントロール項目の 0 から始まるインデックス。  
+*iIndex*<br/>
+[in]編集可能なリスト コントロール項目の 0 から始まるインデックス。  
   
- [in]*指定*  
- 32 ビット値。 この値は、アプリケーション固有の整数またはその他のデータへのポインターを指定できます。  
+*指定*<br/>
+[in]32 ビット値。 この値は、アプリケーション固有の整数またはその他のデータへのポインターを指定できます。  
   
 ### <a name="remarks"></a>Remarks  
   

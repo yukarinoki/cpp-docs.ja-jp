@@ -1,5 +1,5 @@
 ---
-title: CTabView クラス |Microsoft ドキュメント
+title: CTabView クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,15 +32,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d64d503c4bad0d452be174064e2932ed100d7de
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: ce47dc5fc0a1d05d2f7200539718fb11c60d810e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121758"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718862"
 ---
 # <a name="ctabview-class"></a>CTabView クラス
-`CTabView`クラス タブのコントロール クラスの使用を簡略化 ( [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)) MFC のドキュメント/ビュー アーキテクチャを使用するアプリケーションでします。  
+`CTabView`クラスは、タブ コントロール クラスの使用を簡略化 ( [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)) MFC のドキュメント/ビュー アーキテクチャを使用するアプリケーションでします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -58,29 +58,29 @@ class CTabbedView : public CView
 |[CTabView::FindTab](#findtab)|タブ コントロールで、指定されたビューのインデックスを返します。|  
 |[CTabView::GetActiveView](#getactiveview)|現在アクティブなビューへのポインターを返します|  
 |[CTabView::GetTabControl](#gettabcontrol)|ビューに関連付けられているタブ コントロールへの参照を返します。|  
-|[CTabView::RemoveView](#removeview)|タブ コントロールからビューを削除します。|  
+|[CTabView::RemoveView](#removeview)|タブ コントロールから、ビューを削除します。|  
 |[CTabView::SetActiveView](#setactiveview)|ビューをアクティブになります。|  
   
 ### <a name="protected-methods"></a>プロテクト メソッド  
   
 |名前|説明|  
 |----------|-----------------|  
-|[CTabView::IsScrollBar](#isscrollbar)|タブのビューに共有の水平スクロール バーがあるかどうかを確認する タブのビューを作成するときに、フレームワークによって呼び出されます。|  
+|[CTabView::IsScrollBar](#isscrollbar)|タブのビューが共有の水平スクロール バーを持つかどうかを判断するタブのビューを作成するときに、フレームワークによって呼び出されます。|  
 |[CTabView::OnActivateView](#onactivateview)|アクティブまたは非アクティブなタブの表示が行われたときに、フレームワークによって呼び出されます。|  
   
 ## <a name="remarks"></a>Remarks  
- このクラスでは、簡単にドキュメント/ビュー アプリケーションにタブ付きビューを追加します。 `CTabView` `CView`の埋め込みを含むクラスを派生`CMFCTabCtrl`オブジェクト。 `CTabView` サポートするために必要なすべてのメッセージ処理、`CMFCTabCtrl`オブジェクト。 単にからクラスを派生`CTabView`、アプリケーションに接続し、追加`CView`-派生したクラスを使用して、`AddView`メソッドです。 タブ コントロールのタブとしてそれらのビューが表示されます。  
+ このクラスは、簡単にドキュメント/ビュー アプリケーションに、タブ付きビューを追加します。 `CTabView` `CView`-埋め込みを含むクラスを派生`CMFCTabCtrl`オブジェクト。 `CTabView` サポートに必要なすべてのメッセージ処理、`CMFCTabCtrl`オブジェクト。 クラスを単純に派生`CTabView`を追加し、アプリケーションに組み込む`CView`-を使用して派生クラス、`AddView`メソッド。 タブ コントロールのタブとしてこれらのビューが表示されます。  
   
- たとえば、さまざまな方法で表すことができるドキュメントがあります: として、スプレッドシート、グラフ、編集可能なフォーム、およびなどです。 作成できます。 必要に応じて、データの描画の個々 のビューに挿入、 `CTabView`-オブジェクトを派生し、追加のコーディングなしタブ付きことができます。  
+ たとえば、さまざまな方法で表すことができるドキュメントがあります: スプレッドシート、グラフ、編集可能なフォーム、およびなどとして。 挿入に、必要に応じて、データを描画する個々 のビューを作成できます、 `CTabView`-オブジェクトを派生し、コードを追加せずにタブ付きもらいます。  
   
- [TabbedView サンプル: MFC タブ付きビュー アプリケーション](../../visual-cpp-samples.md)の使用方法を示します`CTabView`です。  
+ [TabbedView サンプル: MFC タブ付きビュー アプリケーション](../../visual-cpp-samples.md)の使用法を示します`CTabView`します。  
   
 ## <a name="example"></a>例  
- 例を次にどのように`CTabView`TabbedView サンプルで使用します。  
+ 次の例はどのように`CTabView`TabbedView サンプルで使用します。  
   
  [!code-cpp[NVC_MFC_TabbedView#1](../../mfc/reference/codesnippet/cpp/ctabview-class_1.h)]  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxTabView.h  
   
 ##  <a name="addview"></a>  CTabView::AddView  
@@ -95,23 +95,23 @@ int AddView(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pViewClass*  
- 挿入されたビューのランタイム クラスへのポインター。  
+*pViewClass*<br/>
+[in]挿入されたビューのランタイム クラスへのポインター。  
   
- [in]*strViewLabel*  
- タブのテキストを指定します。  
+*strViewLabel*<br/>
+[in]タブのテキストを指定します。  
   
- [in]*iIndex*  
- ビューを挿入する位置を示す 0 から始まる位置を指定します。 位置が-1 の場合、新しいタブが最後に挿入されます。  
+*iIndex*<br/>
+[in]ビューを挿入する位置の 0 から始まる位置を指定します。 位置が-1 の場合は、新しいタブが最後に挿入されます。  
   
- [in]*pContext*  
- ポインター、`CCreateContext`ビューのです。  
+*pContext*<br/>
+[in]ポインター、`CCreateContext`のビュー。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合、ビューのインデックス。 それ以外の場合、-1 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- ビューをフレームに埋め込まれているタブ コントロールに追加するには、この関数を呼び出します。  
+ フレームに埋め込まれたタブ コントロールにビューを追加するには、この関数を呼び出します。  
   
 ##  <a name="findtab"></a>  CTabView::FindTab  
  タブ コントロールで、指定されたビューのインデックスを返します。  
@@ -121,11 +121,11 @@ int FindTab(HWND hWndView) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*hWndView*  
- ビューのハンドルです。  
+*hWndView*<br/>
+[in]ビューのハンドル。  
   
 ### <a name="return-value"></a>戻り値  
- 見つかった場合は、ビューのインデックスそれ以外の場合、-1 を返します。  
+ 見つかった場合、ビューのインデックスそれ以外の場合、-1 を返します。  
   
 ### <a name="remarks"></a>Remarks  
  指定したハンドルを持つビューのインデックスを取得するには、この関数を呼び出します。  
@@ -138,7 +138,7 @@ CView* GetActiveView() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- アクティブなビュー、または NULL のアクティブなビューが存在しない場合に有効なポインター。  
+ アクティブなビュー、またはアクティブなビューがない場合は NULL に有効なポインター。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -150,22 +150,22 @@ DECLARE_DYNCREATE CMFCTabCtrl& GetTabControl();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ビューに関連付けられているタブ コントロールへの参照。  
+ ビューに関連付けられたタブ コントロールへの参照。  
   
 ##  <a name="isscrollbar"></a>  CTabView::IsScrollBar  
- タブのビューに共有の水平スクロール バーがあるかどうかを確認する タブのビューを作成するときに、フレームワークによって呼び出されます。  
+ タブのビューが共有の水平スクロール バーを持つかどうかを判断するタブのビューを作成するときに、フレームワークによって呼び出されます。  
   
 ```  
 virtual BOOL IsScrollBar() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- TRUE の場合、共有のスクロール バーと共に タブのビューを作成する必要があります。 それ以外の場合は FALSE です。  
+ TRUE の場合、共有のスクロール バーとタブのビューを作成する必要があります。 それ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
- フレームワークがこのメソッドを呼び出すときに、 *CTabView*オブジェクトが作成されます。  
+ フレームワークは、このメソッドを呼び出すときに、 *CTabView*オブジェクトが作成されます。  
   
- 上書き、 *IsScrollBar*メソッドで、 *CTabView*-クラスを派生し、共有の水平スクロール バーを持つビューを作成する場合に TRUE を返します。  
+ 上書き、 *IsScrollBar*メソッドで、 *CTabView*-クラスを派生し、共有の水平スクロール バーのあるビューを作成する場合に TRUE を返します。  
   
 ##  <a name="onactivateview"></a>  CTabView::OnActivateView  
  アクティブまたは非アクティブなタブの表示が行われたときに、フレームワークによって呼び出されます。  
@@ -175,22 +175,22 @@ virtual void OnActivateView(CView* view);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ビュー*  
- ビューへのポインター。  
+*ビュー*<br/>
+[in]ビューへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
  既定の実装では、何も行われません。 このメソッドをオーバーライドする`CTabView`-この通知を処理するクラスを派生します。  
   
 ##  <a name="removeview"></a>  CTabView::RemoveView  
- タブ コントロールからビューを削除します。  
+ タブ コントロールから、ビューを削除します。  
   
 ```  
 BOOL RemoveView(int iTabNum);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iTabNum*  
- 削除するビューのインデックス。  
+*iTabNum*<br/>
+[in]削除するビューのインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合、削除されたビューのインデックス。 それ以外の場合は-1。  
@@ -205,14 +205,14 @@ BOOL SetActiveView(int iTabNum);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iTabNum*  
- タブのビューの 0 から始まるインデックス。  
+*iTabNum*<br/>
+[in]タブのビューの 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合は、指定されたビューがアクティブにされた、false の場合、ビューのインデックスが有効でない場合。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [CMFCTabCtrl::SetActiveTab](../../mfc/reference/cmfctabctrl-class.md#setactivetab)です。  
+ 詳細については、次を参照してください。 [CMFCTabCtrl::SetActiveTab](../../mfc/reference/cmfctabctrl-class.md#setactivetab)します。  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

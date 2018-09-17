@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61d37405a9853fda79c8717f16abbd931ed947e7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 34fedf8a30a5ed47837f593012e4cd836782bb66
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540311"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720136"
 ---
 # <a name="movsb"></a>__movsb
 **Microsoft 固有の仕様**  
@@ -41,14 +41,14 @@ void __movsb(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [出力] `Destination`  
- コピー先へのポインター。  
+*変換先*<br/>
+[out]コピー先へのポインター。  
   
- [入力] `Source`  
- コピーのソースへのポインター。  
+*Source*<br/>
+[in]コピーのソースへのポインター。  
   
- [入力] `Count`  
- コピーするバイト数。  
+*カウント*<br/>
+[in]コピーするバイト数。  
   
 ## <a name="requirements"></a>要件  
   

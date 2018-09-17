@@ -1,5 +1,5 @@
 ---
-title: インライン ファイルを再利用して |Microsoft ドキュメント
+title: インライン ファイルの再利用 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 017364061093ef7a3c3e006f58c331c48a8009e8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 37544db8076d40e638b6ddf6f340070298229149
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379901"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722463"
 ---
 # <a name="reusing-inline-files"></a>インライン ファイルの再利用
-インライン ファイルを再利用するには指定 <<*filename*ファイルが定義されていて、最初に使用される、それを再利用*filename*せず << 同一または別の後半コマンド。 インライン ファイルを作成するコマンドは、ファイルを使用するすべてのコマンドの前に実行する必要があります。  
-  
-## <a name="see-also"></a>関連項目  
- [メイクファイルのインライン ファイル](../build/inline-files-in-a-makefile.md)
+
+インライン ファイルを再利用するには指定 <<*filename*ファイルが定義されている、最初に使用される場合は、再利用*ファイル名*せず << 同一または別のコマンド。 インライン ファイルを作成するコマンドは、ファイルを使用するすべてのコマンドの前に実行する必要があります。
+
+## <a name="see-also"></a>関連項目
+
+[メイクファイルのインライン ファイル](../build/inline-files-in-a-makefile.md)

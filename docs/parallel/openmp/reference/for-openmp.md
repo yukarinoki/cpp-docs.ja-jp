@@ -1,5 +1,5 @@
 ---
-title: (OpenMP) の |Microsoft ドキュメント
+title: (OpenMP) の |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10f5aebaf586581446293147f56dfbce8bd3519a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 73b840eba35ec4291ffb6e57b17c9002b6c501a2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694863"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721657"
 ---
 # <a name="for-openmp"></a>for (OpenMP)
-行われる動作、スレッド間で除算、並行領域内の for ループします。  
+行われる動作、スレッド間で除算する、並行領域内の for ループします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,16 +33,15 @@ ms.locfileid: "33694863"
    for_statement  
 ```  
   
-## <a name="remarks"></a>コメント  
- 指定項目  
+## <a name="arguments"></a>引数
+
+*句*<br/>
+(省略可能)0 個以上の句。 サポートされている句の一覧については、「解説」を参照してください。**の**します。  
   
- `clause` (省略可能)  
- 0 個以上の句。 サポートされている句の一覧については、「解説」セクションを参照してください**の**します。  
+*for_statement*<br/>
+For ループします。 ユーザー コードで未定義の動作が発生、ループ インデックス変数を変更します。  
   
- `for_statement`  
- For ループ A します。 ユーザー コードで未定義の動作が発生、ループは、インデックス変数を変更します。  
-  
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **の**ディレクティブは、次の OpenMP 句をサポートしています。  
   
 -   [firstprivate](../../../parallel/openmp/reference/firstprivate.md)  
@@ -59,9 +58,9 @@ ms.locfileid: "33694863"
   
 -   [schedule](../../../parallel/openmp/reference/schedule.md)  
   
- 場合**並列**も指定すると、`clause`認めることができる句によって、**並列**または**の**ディレクティブを除く**nowait**.  
+ 場合**並列**が指定されても、`clause`句受け入れ可能で、**並列**または**の**ディレクティブを除く**nowait**.  
   
- 詳細については、次を参照してください。 [2.4.1 for のコンストラクト](../../../parallel/openmp/2-4-1-for-construct.md)です。  
+ 詳細については、次を参照してください。 [2.4.1 for のコンストラクト](../../../parallel/openmp/2-4-1-for-construct.md)します。  
   
 ## <a name="example"></a>例  
   

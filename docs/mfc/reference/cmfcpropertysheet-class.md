@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9e4d2bc62ffadb59565ba64e28311cd1283cb5d
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: bae44c3d92c2e27802c3c1b0849fa23266e2f753
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43691437"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723529"
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet クラス
 `CMFCPropertySheet` クラスは、各プロパティ ページがページ タブ、ツール バー ボタン、ツリー コントロールのノード、またはリスト項目で示されるプロパティ シートをサポートします。  
@@ -151,8 +151,8 @@ void AddPage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pPage*  
- ページ オブジェクトへのポインター。 このパラメーターは、NULL にすることはできません。  
+*pPage*<br/>
+[in]ページ オブジェクトへのポインター。 このパラメーターは、NULL にすることはできません。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、プロパティ シートの一番右のタブとして、指定したプロパティ ページを追加します。 そのため、このメソッドを使用して、左から右の順序でページを追加します。  
@@ -171,17 +171,17 @@ void AddPageToTree(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pCategory*  
- 親ツリー ノード、または NULL に指定したページを最上位のノードに関連付けるへのポインター。 呼び出す、 [CMFCPropertySheet::AddTreeCategory](#addtreecategory)このポインターを取得します。  
+*pCategory*<br/>
+[in]親ツリー ノード、または NULL に指定したページを最上位のノードに関連付けるへのポインター。 呼び出す、 [CMFCPropertySheet::AddTreeCategory](#addtreecategory)このポインターを取得します。  
   
- [in]*pPage*  
- プロパティ ページのオブジェクトへのポインター。  
+*pPage*<br/>
+[in]プロパティ ページのオブジェクトへのポインター。  
   
- [in]*nIconNum*  
- アイコン、またはアイコンを使用しない場合は-1 の 0 から始まるインデックス。 ページが選択されていないときは、ツリー コントロールのプロパティ ページの横にある、アイコンが表示されます。 既定値は -1 です。  
+*nIconNum*<br/>
+[in]アイコン、またはアイコンを使用しない場合は-1 の 0 から始まるインデックス。 ページが選択されていないときは、ツリー コントロールのプロパティ ページの横にある、アイコンが表示されます。 既定値は -1 です。  
   
- [in]*nSelIconNum*  
- アイコン、またはアイコンを使用しない場合は-1 の 0 から始まるインデックス。 ページを選択すると、ツリー コントロールのプロパティ ページの横にアイコンが表示されます。 既定値は -1 です。  
+*nSelIconNum*<br/>
+[in]アイコン、またはアイコンを使用しない場合は-1 の 0 から始まるインデックス。 ページを選択すると、ツリー コントロールのプロパティ ページの横にアイコンが表示されます。 既定値は -1 です。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、ツリー コントロールのリーフとしてプロパティ ページを追加します。 プロパティ ページを追加するには、作成、`CMFCPropertySheet`オブジェクトを呼び出し、 [:setlook](#setlook)メソッドを*検索*パラメーターに設定`CMFCPropertySheet::PropSheetLook_Tree`、し、このメソッドを使用して、プロパティ ページを追加.  
@@ -198,17 +198,17 @@ CMFCPropertySheetCategoryInfo* AddTreeCategory(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszLabel*  
- ノードの名前。  
+*lpszLabel*<br/>
+[in]ノードの名前。  
   
- [in]*nIconNum*  
- アイコン、またはアイコンを使用しない場合は-1 の 0 から始まるインデックス。 ページが選択されていないときは、ツリー コントロールのプロパティ ページの横にある、アイコンが表示されます。 既定値は -1 です。  
+*nIconNum*<br/>
+[in]アイコン、またはアイコンを使用しない場合は-1 の 0 から始まるインデックス。 ページが選択されていないときは、ツリー コントロールのプロパティ ページの横にある、アイコンが表示されます。 既定値は -1 です。  
   
- [in]*nSelectedIconNum*  
- アイコン、またはアイコンを使用しない場合は-1 の 0 から始まるインデックス。 ページを選択すると、ツリー コントロールのプロパティ ページの横にアイコンが表示されます。 既定値は -1 です。  
+*nSelectedIconNum*<br/>
+[in]アイコン、またはアイコンを使用しない場合は-1 の 0 から始まるインデックス。 ページを選択すると、ツリー コントロールのプロパティ ページの横にアイコンが表示されます。 既定値は -1 です。  
   
- [in]*pParentCategory*  
- 親ツリー ノード、または NULL に指定したページを最上位のノードに関連付けるへのポインター。 このパラメーターを設定、 [CMFCPropertySheet::AddTreeCategory](#addtreecategory)メソッド。  
+*pParentCategory*<br/>
+[in]親ツリー ノード、または NULL に指定したページを最上位のノードに関連付けるへのポインター。 このパラメーターを設定、 [CMFCPropertySheet::AddTreeCategory](#addtreecategory)メソッド。  
   
 ### <a name="return-value"></a>戻り値  
  ツリー コントロールで新しいノードへのポインター。  
@@ -234,17 +234,17 @@ CMFCPropertySheet(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pszCaption*  
- プロパティ シートのタイトルを含む文字列。 Nll は指定できません。  
+*pszCaption*<br/>
+[in]プロパティ シートのタイトルを含む文字列。 Nll は指定できません。  
   
- [in]*nIDCaption*  
- プロパティ シートのキャプションを表すリソース ID。  
+*nIDCaption*<br/>
+[in]プロパティ シートのキャプションを表すリソース ID。  
   
- [in]*pParentWnd*  
- プロパティ シート、または NULL の場合は、親ウィンドウは、アプリケーションのメイン ウィンドウの親ウィンドウへのポインター。 既定値は、NULL です。  
+*pParentWnd*<br/>
+[in]プロパティ シート、または NULL の場合は、親ウィンドウは、アプリケーションのメイン ウィンドウの親ウィンドウへのポインター。 既定値は、NULL です。  
   
- [in]*iSelectPage*  
- 最上位のプロパティ ページの 0 から始まるインデックス。 既定値は 0 です。  
+*iSelectPage*<br/>
+[in]最上位のプロパティ ページの 0 から始まるインデックス。 既定値は 0 です。  
   
 ### <a name="remarks"></a>Remarks  
  詳細については、パラメーターを参照してください、[呼び出します](../../mfc/reference/cpropertysheet-class.md#cpropertysheet)コンス トラクター。  
@@ -257,8 +257,8 @@ void EnablePageHeader(int nHeaderHeight);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nHeaderHeight*  
- ピクセル単位でヘッダーの高さ。  
+*nHeaderHeight*<br/>
+[in]ピクセル単位でヘッダーの高さ。  
   
 ### <a name="remarks"></a>Remarks  
  値を使用する、 *nHeaderHeight*カスタム ヘッダーを描画するためにパラメーターを上書きする、 [CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader)メソッド。  
@@ -334,8 +334,8 @@ virtual void OnActivatePage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pPage*  
- Enabled プロパティ ページを表すプロパティ ページ オブジェクトへのポインター。  
+*pPage*<br/>
+[in]Enabled プロパティ ページを表すプロパティ ページ オブジェクトへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
  既定では、このメソッドは、有効なプロパティ ページをスクロールして表示を確認します。 現在のプロパティ シートのスタイルに Microsoft Outlook のウィンドウが含まれている場合、このメソッドは、チェックされた状態を対応する Outlook ボタンを設定します。  
@@ -351,14 +351,14 @@ virtual void OnDrawPageHeader(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*n ページ レイアウト*  
- プロパティの 0 から始まるページ番号。  
+*n ページ レイアウト*<br/>
+[in]プロパティの 0 から始まるページ番号。  
   
- [in]*rectHeader*  
- ヘッダーを描画する場所を指定する外接する四角形。  
+*rectHeader*<br/>
+[in]ヘッダーを描画する場所を指定する外接する四角形。  
   
 ### <a name="remarks"></a>Remarks  
  既定では、このメソッドは何もしません。 このメソッドをオーバーライドする場合、 [CMFCPropertySheet::EnablePageHeader](#enablepageheader)メソッドの前に、フレームワークは、このメソッドを呼び出します。  
@@ -371,8 +371,8 @@ virtual BOOL OnRemoveTreePage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pPage*  
- 削除するプロパティ ページを表すプロパティ ページ オブジェクトへのポインター。  
+*pPage*<br/>
+[in]削除するプロパティ ページを表すプロパティ ページ オブジェクトへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -385,8 +385,8 @@ void RemoveCategory(CMFCPropertySheetCategoryInfo* pCategory);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pCategory*  
- 削除するカテゴリ (ノード) へのポインター。  
+*pCategory*<br/>
+[in]削除するカテゴリ (ノード) へのポインター。  
   
 ### <a name="remarks"></a>Remarks  
  呼ばれるカテゴリでは、ツリー コントロールから、ノードを削除するのにには、このメソッドを使用します。 使用して、 [CMFCPropertySheet::AddTreeCategory](#addtreecategory)にツリー コントロール ノードを追加するメソッド。  
@@ -400,11 +400,11 @@ void RemovePage(int nPage);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pPage*  
- 削除するプロパティ ページを表す page オブジェクトのプロパティへのポインター。 Nll は指定できません。  
+*pPage*<br/>
+[in]削除するプロパティ ページを表す page オブジェクトのプロパティへのポインター。 Nll は指定できません。  
   
- [in]*n ページ レイアウト*  
- 削除するページの 0 から始まるインデックス。  
+*n ページ レイアウト*<br/>
+[in]削除するページの 0 から始まるインデックス。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、指定したプロパティ ページを削除し、その関連付けられているウィンドウを破棄します。 オブジェクトのプロパティ ページ、 *pPage*パラメーターを指定するまでは破棄されません、 [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md)ウィンドウが閉じられます。  
@@ -421,17 +421,17 @@ void SetIconsList(HIMAGELIST hIcons);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiImageListResID*  
- イメージ リストのリソース ID。  
+*uiImageListResID*<br/>
+[in]イメージ リストのリソース ID。  
   
- [in]*cx*  
- ピクセル単位でイメージ リストのアイコンの幅。  
+*cx*<br/>
+[in]ピクセル単位でイメージ リストのアイコンの幅。  
   
- [in]*clrTransparent*  
- イメージの透明色。 この色には、イメージの部分は透明になります。 既定値は、マゼンタ、RGB(255,0,255) です。  
+*clrTransparent*<br/>
+[in]イメージの透明色。 この色には、イメージの部分は透明になります。 既定値は、マゼンタ、RGB(255,0,255) です。  
   
- [in]*hIcons*  
- 既存のイメージ リストへのハンドル。  
+*hIcons*<br/>
+[in]既存のイメージ リストへのハンドル。  
   
 ### <a name="return-value"></a>戻り値  
  最初のメソッドでオーバー ロードの構文では、true の場合このメソッドが成功した場合それ以外の場合、FALSE です。  
@@ -451,11 +451,11 @@ void SetLook(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*検索*  
- プロパティ シートの外観を指定する列挙値の 1 つ。 プロパティ シートの既定のスタイルは`CMFCPropertySheet::PropSheetLook_Tabs`します。 詳細については、このトピックの「解説」セクションの表を参照してください。  
+*ほら*<br/>
+[in]プロパティ シートの外観を指定する列挙値の 1 つ。 プロパティ シートの既定のスタイルは`CMFCPropertySheet::PropSheetLook_Tabs`します。 詳細については、このトピックの「解説」セクションの表を参照してください。  
   
- [in]*nNavControlWidth*  
- ピクセル単位で、ナビゲーション コントロールの幅。 既定値は 100 です。  
+*nNavControlWidth*<br/>
+[in]ピクセル単位で、ナビゲーション コントロールの幅。 既定値は 100 です。  
   
 ### <a name="remarks"></a>Remarks  
  既定以外のスタイルのプロパティ シートを表示するには、プロパティ シート ウィンドウを作成する前に、このメソッドを呼び出します。  

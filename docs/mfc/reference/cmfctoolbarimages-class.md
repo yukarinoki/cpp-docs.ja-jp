@@ -150,12 +150,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 682f4ecbbc4d048f6353be6844bfef042efbc45f
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 95d9da94e2fa7a79db6696649854fafa989941f4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539083"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726272"
 ---
 # <a name="cmfctoolbarimages-class"></a>CMFCToolBarImages クラス
 ツールバー上のイメージ。 `CMFCToolBarImages`クラスがアプリケーションのリソースまたはファイルから読み込んだツール バー イメージを管理します。  
@@ -251,7 +251,7 @@ class CMFCToolBarImages : public CObject
   
 ### <a name="data-members"></a>データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CMFCToolBarImages::m_bDisableTrueColorAlpha](#m_bdisabletruecoloralpha)|True カラーのアルファ ブレンド (32 ビット色) が無効になっている場合は TRUE。|  
   
@@ -282,8 +282,8 @@ void AdaptColors(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*clrBase*  
- [in]*clrTone*  
+*clrBase*<br/>
+[in][in]*clrTone*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -297,11 +297,11 @@ int AddIcon(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*hIcon*  
- 追加するアイコンへのハンドル。  
+*hIcon*<br/>
+[in]追加するアイコンへのハンドル。  
   
- [in]*bAlphaBlend*  
- TRUE の場合は、このアイコンがアルファ ブレンドの使用します。それ以外の場合は FALSE です。  
+*bAlphaBlend*<br/>
+[in]TRUE の場合は、このアイコンがアルファ ブレンドの使用します。それ以外の場合は FALSE です。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合に追加されたツール バー イメージの 0 から始まるインデックスそれ以外の場合は-1。  
@@ -320,17 +320,17 @@ int AddImage(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*hbmp*  
- 追加するビットマップ ハンドル。  
+*hbmp*<br/>
+[in]追加するビットマップ ハンドル。  
   
- [in]*bSetBitPerPixel*  
- TRUE の場合、`CMFCToolBarImages`オブジェクトは、新しいイメージの色深度 (1 ピクセルあたりのビット) を使用FALSE の場合、`CMFCToolbarImages`オブジェクトが現在の色深度を保持します。  
+*bSetBitPerPixel*<br/>
+[in]TRUE の場合、`CMFCToolBarImages`オブジェクトは、新しいイメージの色深度 (1 ピクセルあたりのビット) を使用FALSE の場合、`CMFCToolbarImages`オブジェクトが現在の色深度を保持します。  
   
- [in]*imageList*  
- 参照を`CMFCToolbarImages`を追加するイメージを含むオブジェクト。  
+*イメージ リスト*<br/>
+[in]参照を`CMFCToolbarImages`を追加するイメージを含むオブジェクト。  
   
- [in]*nIndex*  
- ソースのインデックス`CMFCToolbarImages`を追加するイメージのオブジェクト。  
+*nIndex*<br/>
+[in]ソースのインデックス`CMFCToolbarImages`を追加するイメージのオブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  イメージのツールバーの数、`CMFCToolBarImages`オブジェクトは、新しいビットマップを正常に追加した後、保持操作に失敗した場合は-1。  
@@ -397,8 +397,8 @@ BOOL CreateFromImageList(const CImageList& imageList);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*imageList*  
- ツール バー イメージのソースとして使用するイメージ リスト。  
+*イメージ リスト*<br/>
+[in]ツール バー イメージのソースとして使用するイメージ リスト。  
   
 ### <a name="return-value"></a>戻り値  
  常に TRUE を返します。  
@@ -416,8 +416,8 @@ static HRGN __stdcall CreateRegionFromImage(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bmp*  
- [in]*clrTransparent*  
+*bmp*<br/>
+[in][in]*clrTransparent*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -431,8 +431,8 @@ BOOL DeleteImage(int iImage);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*画像を*  
- 削除するイメージの 0 から始まるインデックスを指定します。  
+*画像を*<br/>
+[in]削除するイメージの 0 から始まるインデックスを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  イメージが正常に削除された場合は TRUE。イメージのインデックスが有効でない場合は FALSE、`CMFCToolbarImages`オブジェクトが一時的なもので、`CMFCToolbarImages`オブジェクトには、ユーザー定義のイメージが含まれていない、または場合、その他のエラーが発生しました。  
@@ -455,35 +455,35 @@ BOOL Draw(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*x*  
- イメージが描画される四角形の左辺の X 座標。  
+*x*<br/>
+[in]イメージが描画される四角形の左辺の X 座標。  
   
- [in]*y*  
- イメージが描画される四角形の上辺の Y 座標。  
+*y*<br/>
+[in]イメージが描画される四角形の上辺の Y 座標。  
   
- [in]*iImageIndex*  
- 表示するイメージの 0 から始まるインデックス。  
+*iImageIndex*<br/>
+[in]表示するイメージの 0 から始まるインデックス。  
   
- [in]*bHilite*  
- イメージが強調表示する場合は TRUE。それ以外の場合は FALSE です。  
+*bHilite*<br/>
+[in]イメージが強調表示する場合は TRUE。それ以外の場合は FALSE です。  
   
- [in]*bDisabled*  
- イメージが無効なスタイルで描画する場合は TRUE。それ以外の場合は FALSE です。  
+*bDisabled*<br/>
+[in]イメージが無効なスタイルで描画する場合は TRUE。それ以外の場合は FALSE です。  
   
- [in]*bIndeterminate*  
- イメージが、中間状態のスタイルで描画する場合は TRUE。それ以外の場合は FALSE です。  
+*bIndeterminate*<br/>
+[in]イメージが、中間状態のスタイルで描画する場合は TRUE。それ以外の場合は FALSE です。  
   
- [in]*bShadow*  
- イメージがドロップ シャドウを描画する場合は TRUE。それ以外の場合は FALSE です。  
+*bShadow*<br/>
+[in]イメージがドロップ シャドウを描画する場合は TRUE。それ以外の場合は FALSE です。  
   
- [in]*bInactive*  
- イメージが、非アクティブな状態のスタイルで描画する場合は TRUE。それ以外の場合は FALSE です。  
+*bInactive*<br/>
+[in]イメージが、非アクティブな状態のスタイルで描画する場合は TRUE。それ以外の場合は FALSE です。  
   
- [in]*alphaSrc*  
- アルファ チャネル (不透明度) の値。 255 の値は、イメージ、描画の不透明な。 値 0 をすると、イメージが透明な描画されます。 この値は、32 ビット カラー イメージおよび Windows Vista ガラスのスタイルを表示するイメージに対してのみ使用されます。  
+*alphaSrc*<br/>
+[in]アルファ チャネル (不透明度) の値。 255 の値は、イメージ、描画の不透明な。 値 0 をすると、イメージが透明な描画されます。 この値は、32 ビット カラー イメージおよび Windows Vista ガラスのスタイルを表示するイメージに対してのみ使用されます。  
   
 ### <a name="return-value"></a>戻り値  
  指定したイメージが正常に表示されている場合は TRUE。イメージのインデックスが無効か、その他のエラーが発生した場合は FALSE。  
@@ -506,14 +506,14 @@ BOOL DrawEx(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*rect*  
- [in]*iImageIndex*  
- [in]*horzAlign*  
- [in]*vertAlign*  
- [in]*rectSrc*  
- [in]*0*  
- [in]*0)*  
+*pDC*<br/>
+[in][in]*rect*  
+*iImageIndex*<br/>
+[in][in]*horzAlign*  
+*vertAlign*<br/>
+[in][in]*rectSrc*  
+*0*<br/>
+[in][in]*0)*  
  [in]*alphaSrc*  
   
 ### <a name="return-value"></a>戻り値  
@@ -540,8 +540,8 @@ void EndDrawImage(CAfxDrawState& ds);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ds*  
- 参照、`CAfxDrawState`に渡されたオブジェクト、`PrepareDrawImage`メソッド。  
+*ds*<br/>
+[in]参照、`CAfxDrawState`に渡されたオブジェクト、`PrepareDrawImage`メソッド。  
   
 ##  <a name="extracticon"></a>  CMFCToolBarImages::ExtractIcon  
  ツール バー イメージからイメージを指定したインデックス位置にあるアイコンを返します。  
@@ -551,8 +551,8 @@ HICON ExtractIcon(int nIndex);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nIndex*  
- アイコンとして抽出するイメージがあるイメージ リスト内の 0 から始まるインデックス。  
+*nIndex*<br/>
+[in]アイコンとして抽出するイメージがあるイメージ リスト内の 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  抽出のアイコンへのハンドルまたは場合は NULL *nIndex*が範囲外です。  
@@ -567,11 +567,11 @@ static void FillDitheredRect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rect*  
- 塗りつぶす四角形の座標。  
+*rect*<br/>
+[in]塗りつぶす四角形の座標。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドを使用すると、システム カラー COLOR_BTNFACE と COLOR_BTNHIGHLIGHT の平均値である色で四角形を入力します。 場合は、システムは、256 色以下を使用して、四角形で塗りつぶされますディザー パターンその 2 つの色の代わりにします。  
@@ -629,8 +629,8 @@ SIZE GetImageSize(BOOL bDest=FALSE) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bDest*  
- 送信先のサイズを取得する場合は TRUEソース イメージのサイズを取得する場合は FALSE。  
+*bDest*<br/>
+[in]送信先のサイズを取得する場合は TRUEソース イメージのサイズを取得する場合は FALSE。  
   
 ### <a name="return-value"></a>戻り値  
  A`SIZE`構造体は、イメージのサイズをピクセル単位で指定します。  
@@ -719,8 +719,8 @@ int GetResourceOffset(UINT uiResId) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiResId*  
- イメージ リソースの id。  
+*uiResId*<br/>
+[in]イメージ リソースの id。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合、イメージのインデックス指定したリソース ID を持つイメージが存在しない場合は-1。  
@@ -744,8 +744,8 @@ BOOL GrayImages(int nGrayImageLuminancePercentage);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nGrayImageLuminancePercentage*  
- 輝度の割合。  
+*nGrayImageLuminancePercentage*<br/>
+[in]輝度の割合。  
   
 ### <a name="return-value"></a>戻り値  
  コレクション内のイメージが正常に淡色表示された場合は TRUE。それ以外の場合は FALSE です。  
@@ -844,20 +844,20 @@ BOOL Load(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiResID*  
- ビットマップ リソースの ID。  
+*uiResID*<br/>
+[in]ビットマップ リソースの ID。  
   
- [in]*hinstRes*  
- リソース DLL のインスタンス。  
+*hinstRes*<br/>
+[in]リソース DLL のインスタンス。  
   
- [in]*bAdd*  
- 既存のビットマップを置換する読み込まれたビットマップ FALSE か、既存のビットマップを追加する場合は TRUE。  
+*bAdd*<br/>
+[in]既存のビットマップを置換する読み込まれたビットマップ FALSE か、既存のビットマップを追加する場合は TRUE。  
   
- [in]*lpszBmpFileName*  
- ビットマップの読み込み元のディスク ファイルへのパス。  
+*lpszBmpFileName*<br/>
+[in]ビットマップの読み込み元のディスク ファイルへのパス。  
   
- [in]*nMaxFileSize*  
- ビットマップ ファイル内のバイトの最大数または、ファイル サイズに関係なく、ビットマップを読み込む場合は 0。 ファイルのサイズは、この最大サイズを超える場合、メソッドは FALSE を返します、ビットマップは読み込まれません。  
+*nMaxFileSize*<br/>
+[in]ビットマップ ファイル内のバイトの最大数または、ファイル サイズに関係なく、ビットマップを読み込む場合は 0。 ファイルのサイズは、この最大サイズを超える場合、メソッドは FALSE を返します、ビットマップは読み込まれません。  
   
 ### <a name="return-value"></a>戻り値  
  ビットマップが正常に読み込まれている場合は TRUE。それ以外の場合は FALSE です。  
@@ -876,8 +876,8 @@ BOOL LoadStr(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszResourceName*  
- [in]*hinstRes*  
+*lpszResourceName*<br/>
+[in][in]*hinstRes*  
  [in]*bAdd*  
   
 ### <a name="return-value"></a>戻り値  
@@ -894,8 +894,8 @@ static COLORREF __stdcall MapFromSysColor(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*色*  
- [in]*bUseRGBQUAD*  
+*色*<br/>
+[in][in]*bUseRGBQUAD*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -912,8 +912,8 @@ BOOL MapTo3dColors(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bUseRGBQUAD*  
- [in]*clrSrc*  
+*bUseRGBQUAD*<br/>
+[in][in]*clrSrc*  
  [in]*clrDest*  
   
 ### <a name="return-value"></a>戻り値  
@@ -930,8 +930,8 @@ static COLORREF __stdcall MapToSysColor(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*色*  
- [in]*bUseRGBQUAD*  
+*色*<br/>
+[in][in]*bUseRGBQUAD*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -974,11 +974,11 @@ static BOOL MirrorBitmap(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力、出力]*hbmp*  
- ミラー化するビットマップへのハンドル。  
+*hbmp*<br/>
+[入力、出力]ミラー化するビットマップへのハンドル。  
   
- [in]*cxImage*  
- ピクセル単位でイメージの幅。  
+*cxImage*<br/>
+[in]ピクセル単位でイメージの幅。  
   
 ### <a name="return-value"></a>戻り値  
  イメージが正常にミラー化された場合は TRUE。それ以外の場合は FALSE です。  
@@ -996,8 +996,8 @@ static BOOL __stdcall MirrorBitmapVert(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*hbmp*  
- [in]*cyImage*  
+*hbmp*<br/>
+[in][in]*cyImage*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -1035,8 +1035,8 @@ BOOL PreMultiplyAlpha(HBITMAP hbmp);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*hbmp*  
- [in]*bAutoCheckPremlt*  
+*hbmp*<br/>
+[in][in]*bAutoCheckPremlt*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -1066,14 +1066,14 @@ BOOL PrepareDrawImage(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ds*  
- 参照を`CAfxDrawState`構造体は、イメージ レンダリング段階の間で割り当てられたリソースを格納します。  
+*ds*<br/>
+[in]参照を`CAfxDrawState`構造体は、イメージ レンダリング段階の間で割り当てられたリソースを格納します。  
   
- [in]*sizeImageDest*  
- コピー先の画像のサイズを指定します。  
+*sizeImageDest*<br/>
+[in]コピー先の画像のサイズを指定します。  
   
- [in]*bFadeInactive*  
- 非アクティブなイメージを描画するがフェードアウトされている場合は TRUE。  
+*bFadeInactive*<br/>
+[in]非アクティブなイメージを描画するがフェードアウトされている場合は TRUE。  
   
 ### <a name="return-value"></a>戻り値  
  ツール バー イメージを描画するために必要なリソースが正常に場合は FALSE で割り当てられた場合は TRUE。  
@@ -1118,8 +1118,8 @@ static void SetDisabledImageAlpha(BYTE nValue);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*値*  
- アルファ チャネルの新しい値。  
+*値*<br/>
+[in]アルファ チャネルの新しい値。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドを使用すると、無効なイメージのカスタムのアルファ値を設定できます。 既定値は 127 文字で、それが原因で無効にされたボタンのイメージを半透明にします。 0 の値を設定する場合は、無効なイメージが完全に透過的になります。 255 の値を設定する場合は、無効なイメージが完全に不透明になります。  
@@ -1146,8 +1146,8 @@ void SetImageSize(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*sizeImage*  
- ツール バー イメージの新しいサイズ。  
+*sizeImage*<br/>
+[in]ツール バー イメージの新しいサイズ。  
   
 ### <a name="remarks"></a>Remarks  
  既定では、ツール バー イメージのサイズは 16 x 15 ピクセルです。 異なるサイズのツール バー イメージを使用する場合は、このメソッドを呼び出します。  
@@ -1205,8 +1205,8 @@ COLORREF SetTransparentColor(COLORREF clrTransparent);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*clrTransparent*  
- RGB 値。  
+*clrTransparent*<br/>
+[in]RGB 値。  
   
 ### <a name="return-value"></a>戻り値  
  前の透明色。  
@@ -1224,11 +1224,11 @@ BOOL UpdateImage(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*画像を*  
- 更新するイメージの 0 から始まるインデックス。  
+*画像を*<br/>
+[in]更新するイメージの 0 から始まるインデックス。  
   
- [in]*hbmp*  
- 元のイメージを更新するビットマップへのハンドル。  
+*hbmp*<br/>
+[in]元のイメージを更新するビットマップへのハンドル。  
   
 ### <a name="return-value"></a>戻り値  
  イメージが正常に更新された場合は TRUE。イメージ リストがないと、ユーザー定義または一時的な場合は FALSE。  

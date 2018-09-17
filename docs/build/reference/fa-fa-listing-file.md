@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4014c58a7e562aa632dba62dcac04c835352cbf
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 03b2f4e746632cc91b652ca76587ddad18afd165
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44101730"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717965"
 ---
 # <a name="fa-fa-listing-file"></a>/FA、/Fa (リスティング ファイル)
 
@@ -49,38 +49,38 @@ ms.locfileid: "44101730"
 
 ### <a name="fa-arguments"></a>/FA 引数
 
-none  
+none<br/>
 アセンブラー言語だけでは、一覧に含まれます。
 
-**c**  
+**c**<br/>
 任意。 一覧で、マシン語コードが含まれています。
 
-**s**  
+**s**<br/>
 任意。 一覧で、ソース コードが含まれています。
 
-**u**  
+**u**<br/>
 任意。 Utf-8 形式でリスティング ファイルをエンコードし、バイト順マーカーが含まれています。 既定では、ファイルは ANSI としてエンコードされます。 使用`u`、任意のシステムに正しく表示される、リスティング ファイルを作成するコンパイラへの入力として Unicode を使用しているかどうか、またはソース コード ファイル。
 
 両方**s**と**u**が指定され、ソース コード ファイルの場合は、utf-8 では、その .asm ファイルにコード行が正しく表示されない場合があります以外の Unicode エンコーディングを使用します。
 
 ### <a name="fa-argument"></a>/Fa 引数
 
-none  
+none<br/>
 1 つ*ソース*.asm ファイルがコンパイル時にソース コード ファイルごとに作成されます。
 
-*ファイル名*  
+*ファイル名*<br/>
 という名前の一覧ファイル*filename*.asm は、現在のディレクトリに配置されます。 1 つのソース コード ファイルをコンパイルするときにのみ有効です。
 
-*filename.extension*  
+*filename.extension*<br/>
 という名前の一覧ファイル*filename.extension*は、現在のディレクトリに配置されます。 1 つのソース コード ファイルをコンパイルするときにのみ有効です。
 
-*ディレクトリ*__\\__  
+*ディレクトリ*__\\__<br/>
 1 つ*source_file*.asm ファイルが作成され、指定した配置*ディレクトリ*コンパイル時にソース コード ファイルごとにします。 必要なバック スラッシュに注意してください。 現在のディスク上のパスのみが許可されます。
 
-*ディレクトリ*__\\__*ファイル名*  
+*ディレクトリ*__\\__*ファイル名*<br/>
 という名前の一覧ファイル*filename*.asm の配置で指定した*ディレクトリ*。 1 つのソース コード ファイルをコンパイルするときにのみ有効です。
 
-*ディレクトリ*__\\__*filename.extension*  
+*ディレクトリ*__\\__*filename.extension*<br/>
 という名前の一覧ファイル*filename.extension*に配置されますが、指定した*ディレクトリ*します。 1 つのソース コード ファイルをコンパイルするときにのみ有効です。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
@@ -98,6 +98,7 @@ none
 - 詳細については、「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerListingLocation%2A>」または「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerOutput%2A>」を参照してください。 指定する**は/FAu**を参照してください<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>します。
 
 ## <a name="example"></a>例
+
 次のコマンドラインは、結合されたソースを生成し、マシン語コード リスティング ファイル hello.cod:
 
 ```cmd
@@ -106,7 +107,7 @@ CL /FAcs HELLO.CPP
 
 ## <a name="see-also"></a>関連項目
 
-[出力ファイル (/F) オプション](../../build/reference/output-file-f-options.md)   
-[コンパイラ オプション](../../build/reference/compiler-options.md)   
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)   
+[出力ファイル (/F) オプション](../../build/reference/output-file-f-options.md)
+[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
+[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)<br/>
 [パス名の指定](../../build/reference/specifying-the-pathname.md)

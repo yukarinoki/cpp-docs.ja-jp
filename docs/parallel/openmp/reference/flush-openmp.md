@@ -1,5 +1,5 @@
 ---
-title: フラッシュ (OpenMP) |Microsoft ドキュメント
+title: フラッシュ (OpenMP) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6933c5d74e1277b209d15aefb93a159d55f93dd
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5ea89d4feb7a554c2495c11aa8acaeeaa8bc775f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696241"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722060"
 ---
 # <a name="flush-openmp"></a>flush (OpenMP)
-すべてのスレッドがすべての共有オブジェクトのメモリについて同じビューを持つことを指定します。  
+すべてのスレッドがすべての共有オブジェクトのメモリの同じビューを持つことを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -32,16 +32,15 @@ ms.locfileid: "33696241"
 #pragma omp flush [(var)]  
 ```  
   
-## <a name="remarks"></a>コメント  
- 指定項目  
+## <a name="arguments"></a>引数
+
+*var*<br/>
+(省略可能)同期するオブジェクトを表す変数のコンマ区切りの一覧。 場合`var`が指定されていない、すべてのメモリをフラッシュします。  
   
- `var` (省略可能)  
- 同期するオブジェクトを表す変数のコンマ区切り一覧。 場合`var`が指定されていない、すべてのメモリをフラッシュします。  
-  
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **フラッシュ**ディレクティブに OpenMP 句がサポートされていません。  
   
- 詳細については、次を参照してください。 [2.6.5 flush ディレクティブ](../../../parallel/openmp/2-6-5-flush-directive.md)です。  
+ 詳細については、次を参照してください。 [2.6.5 flush ディレクティブ](../../../parallel/openmp/2-6-5-flush-directive.md)します。  
   
 ## <a name="example"></a>例  
   

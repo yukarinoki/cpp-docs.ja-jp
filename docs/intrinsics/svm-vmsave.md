@@ -1,5 +1,5 @@
 ---
-title: _ _svm_vmsave |Microsoft Docs
+title: _ _svm_vmsave |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50be44d612f44586ff8e6c8e953efa0b1fa90948
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: bc66784a9f5b6c953516bb30271c973779340e09
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680638"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722853"
 ---
 # <a name="svmvmsave"></a>__svm_vmsave
 **Microsoft 固有の仕様**  
@@ -41,7 +41,7 @@ void __svm_vmsave(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `VmcbPhysicalAddress`|VMCB の物理アドレス。|  
+|*VmcbPhysicalAddress*|[in]VMCB の物理アドレス。|  
   
 ## <a name="remarks"></a>Remarks  
  `__svm_vmsave`関数は、`VMSAVE`マシン語命令。 この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、検索、ドキュメントでは、"AMD64 アーキテクチャ プログラマーズ手動ボリューム 2: システム プログラミングでは、"24593 のドキュメント番号、リビジョン 3.11 またはそれ以降で、 [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/)サイト。  

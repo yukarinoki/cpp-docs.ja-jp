@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e6a8364c6f0491344eef7faf381d701944f66d9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 84f94e4e7a3486f036af47f0444d85d0f2fe4446
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965670"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726701"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
@@ -54,11 +54,7 @@ ms.locfileid: "38965670"
 
 複素数を表す*z* = (*、*、 *b*) 形式で*z* = *、*  + *双*ここで、*は*<sup>2</sup> =-1 の場合、規則の複素数のセットとその要素の実際の数値のセットの代数を適用できます。 例えば:
 
-   (1 + 2*は*) \* (2 + 3*は*)  
-   = 1 \* (2 + 3*は*) + 2*は* \* (2 + 3*は*)  
-   = (2 + 3*は*) + (4*は*6 +*は*<sup>2</sup>)  
-   = (2 - 6) + (3 + 4)*は*  
-   = -4 + 7*i*
+   (1 + 2*は*) \* (2 + 3*は*) = 1 \* (2 + 3*は*) + 2*は* \* (2 + 3*i*)= (2 + 3*は*) + (4*は*6 +*は*<sup>2</sup>) (2. ~ 6.) + (3 + 4) =*は*-4 7 + =*は*
 
 複素数系は体 (field) ですが、順序体 (ordered field) ではありません。 実際の数値およびそのサブセットでは、フィールドが実数には、複素数に不等式を適用できませんので、複素数の順序がありません。
 

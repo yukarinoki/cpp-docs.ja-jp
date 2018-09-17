@@ -122,12 +122,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b103e2409da08dc67a55aae8ba8c5f49f377434
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: cc9965371de0ea75ece0cb31c7ec5187b9279cef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677692"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726714"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx クラス
 `CMDIChildWndEx`マルチ ドキュメント インターフェイス (MDI) 子ウィンドウに、Windows の機能を提供するクラス。 機能を拡張[CMDIChildWnd クラス](../../mfc/reference/cmdichildwnd-class.md)します。 ある特定の MFC クラスを MDI アプリケーションで使用するときは、フレームワークにこのクラスが必要です。  
@@ -239,11 +239,11 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pControlBar*  
- ペインへのポインター。  
+*pControlBar*<br/>
+[in]ペインへのポインター。  
   
- [in]*bTail*  
- ペインの一覧の末尾に、ドッキング マネージャーに、ウィンドウを追加する場合は TRUEそれ以外の場合、FALSE です。  
+*bTail*<br/>
+[in]ペインの一覧の末尾に、ドッキング マネージャーに、ウィンドウを追加する場合は TRUEそれ以外の場合、FALSE です。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合、ウィンドウはドッキング マネージャーに正常に登録されましたそれ以外の場合、FALSE です。  
@@ -256,8 +256,8 @@ void AddTabbedPane(CDockablePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pControlBar*  
- ペインへのポインター。  
+*pControlBar*<br/>
+[in]ペインへのポインター。  
   
 ##  <a name="adjustdockinglayout"></a>  CMDIChildWndEx::AdjustDockingLayout  
  ドッキング レイアウトを調整します。  
@@ -267,8 +267,8 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*hdwp*  
- 遅延のウィンドウの位置の構造体へのハンドルします。  
+*hdwp*<br/>
+[in]遅延のウィンドウの位置の構造体へのハンドルします。  
   
 ##  <a name="canshowonmditabs"></a>  CMDIChildWndEx::CanShowOnMDITabs  
 
@@ -305,14 +305,14 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pBar*  
- ペインへのポインター。  
+*pBar*<br/>
+[in]ペインへのポインター。  
   
- [in]*辺*  
- ペインの ID。  
+*辺*<br/>
+[in]ペインの ID。  
   
- [in]*lpRect*  
- 四角形へのポインター。  
+*lpRect*<br/>
+[in]四角形へのポインター。  
   
 ### <a name="remarks"></a>Remarks  
  *LpRect*パラメーターは使用されません。  
@@ -349,8 +349,8 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*dwDockStyle*  
- 有効になっているメイン フレーム ウィンドウの辺を指定します。 次のフラグの 1 つ以上を使用します。  
+*dwDockStyle*<br/>
+[in]有効になっているメイン フレーム ウィンドウの辺を指定します。 次のフラグの 1 つ以上を使用します。  
   
 - CBRS_ALIGN_LEFT  
   
@@ -371,8 +371,8 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*dwDockStyle*  
- 有効にするドッキングの配置を指定します。  
+*dwDockStyle*<br/>
+[in]有効にするドッキングの配置を指定します。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE。それ以外の場合は FALSE です。  
@@ -453,8 +453,8 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nID*  
- 検索する、ウィンドウのコントロール ID。  
+*nID*<br/>
+[in]検索する、ウィンドウのコントロール ID。  
   
 ### <a name="return-value"></a>戻り値  
  見つかった場合 NULL それ以外の場合、ウィンドウへのポインター。  
@@ -506,14 +506,14 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pControlBar*  
- 挿入するウィンドウへのポインター。  
+*pControlBar*<br/>
+[in]挿入するウィンドウへのポインター。  
   
- [in]*pTarget*  
- 隣接するウィンドウへのポインター。  
+*pTarget*<br/>
+[in]隣接するウィンドウへのポインター。  
   
- [in]*bAfter*  
- TRUE の場合、 *pControlBar*後に挿入されます*pTarget*します。 FALSE の場合、 *pControlBar*前に挿入されます*pTarget*します。  
+*bAfter*<br/>
+[in]TRUE の場合、 *pControlBar*後に挿入されます*pTarget*します。 FALSE の場合、 *pControlBar*前に挿入されます*pTarget*します。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合、FALSE それ以外の場合は TRUE。  
@@ -529,14 +529,14 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ポイント*  
- 指定した点。  
+*ポイント*<br/>
+[in]指定した点。  
   
- [in]*dwBarAlignment*  
- どちらの端点が近いを指定します。 指定できる値は CBRS_ALIGN_LEFT、CBRS_ALIGN_RIGHT、CBRS_ALIGN_TOP、および CBRS_ALIGN_BOTTOM です。  
+*dwBarAlignment*<br/>
+[in]どちらの端点が近いを指定します。 指定できる値は CBRS_ALIGN_LEFT、CBRS_ALIGN_RIGHT、CBRS_ALIGN_TOP、および CBRS_ALIGN_BOTTOM です。  
   
- [in]*bOuterEdge*  
- ポイントが、ドッキング サイトの外側の境界線の近くにある場合は TRUE。FALSE それ以外の場合。  
+*bOuterEdge*<br/>
+[in]ポイントが、ドッキング サイトの外側の境界線の近くにある場合は TRUE。FALSE それ以外の場合。  
   
 ### <a name="return-value"></a>戻り値  
  点がドッキング サイトに近い場合は TRUE。それ以外の場合は FALSE です。  
@@ -580,8 +580,8 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pFrame*  
- ミニフレーム ウィンドウへのポインター。  
+*pFrame*<br/>
+[in]ミニフレーム ウィンドウへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合、メソッドが成功した場合は FALSE。  
@@ -596,11 +596,11 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bPreview*  
- TRUE の場合は、印刷プレビュー モードを入力します。 FALSE の場合、終了印刷プレビュー モードです。  
+*bPreview*<br/>
+[in]TRUE の場合は、印刷プレビュー モードを入力します。 FALSE の場合、終了印刷プレビュー モードです。  
   
- [in]*pState*  
- 印刷プレビュー状態の構造体へのポインター。  
+*pState*<br/>
+[in]印刷プレビュー状態の構造体へのポインター。  
   
 ##  <a name="onupdateframetitle"></a>  CMDIChildWndEx::OnUpdateFrameTitle  
  フレームのタイトルを更新するためにフレームワークによって呼び出されます。  
@@ -610,8 +610,8 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bAddToTitle*  
- TRUE の場合は、タイトルにドキュメント名を追加します。  
+*bAddToTitle*<br/>
+[in]TRUE の場合は、タイトルにドキュメント名を追加します。  
   
 ##  <a name="panefrompoint"></a>  CMDIChildWndEx::PaneFromPoint  
  指定したポイントを含むペインを返します。  
@@ -631,20 +631,20 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ポイント*  
- 確認の画面座標で、ポイントを指定します。  
+*ポイント*<br/>
+[in]確認の画面座標で、ポイントを指定します。  
   
- [in]*nSensitivity*  
- この金額には、検索領域を増やします。 ペインは、指定したポイントが拡大された領域内にある場合に、検索条件を満たします。  
+*nSensitivity*<br/>
+[in]この金額には、検索領域を増やします。 ペインは、指定したポイントが拡大された領域内にある場合に、検索条件を満たします。  
   
- [in]*bExactBar*  
- 無視する場合は TRUE、 *nSensitivity*パラメーター場合は FALSE。  
+*bExactBar*<br/>
+[in]無視する場合は TRUE、 *nSensitivity*パラメーター場合は FALSE。  
   
- [in]*pRTCBarType*  
- NULL 以外の場合、メソッドは、指定した型のウィンドウだけを検索します。  
+*pRTCBarType*<br/>
+[in]NULL 以外の場合、メソッドは、指定した型のウィンドウだけを検索します。  
   
- [in]*場合*  
- 指定した時点で、ウィンドウが見つかった場合、このパラメーターには、指定したポイントに最も近いいたペインの横にはが含まれています。 詳細については、「解説」を参照してください。  
+*場合*<br/>
+[in]指定した時点で、ウィンドウが見つかった場合、このパラメーターには、指定したポイントに最も近いいたペインの横にはが含まれています。 詳細については、「解説」を参照してください。  
   
 ### <a name="return-value"></a>戻り値  
  ポインター、 `CBasePane`-ウィンドウが見つからなかった場合は、特定のポイント、または NULL を含む派生オブジェクト。  
@@ -662,8 +662,8 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bNotify*  
- TRUE の場合、ウィンドウのアクティブなインプレース項目は、レイアウトの変更の通知を受け取ります。  
+*bNotify*<br/>
+[in]TRUE の場合、ウィンドウのアクティブなインプレース項目は、レイアウトの変更の通知を受け取ります。  
   
 ##  <a name="removepanefromdockmanager"></a>  CMDIChildWndEx::RemovePaneFromDockManager  
  ドッキング マネージャーから、ウィンドウを削除します。  
@@ -678,20 +678,20 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pControlBar*  
- 削除するウィンドウへのポインター。  
+*pControlBar*<br/>
+[in]削除するウィンドウへのポインター。  
   
- [in]*bDestroy*  
- TRUE の場合、削除されたウィンドウが破棄されます。  
+*bDestroy*<br/>
+[in]TRUE の場合、削除されたウィンドウが破棄されます。  
   
- [in]*bAdjustLayout*  
- TRUE の場合は、すぐにドッキング レイアウトを調整します。  
+*bAdjustLayout*<br/>
+[in]TRUE の場合は、すぐにドッキング レイアウトを調整します。  
   
- [in]*bAutoHide*  
- TRUE の場合、ドッキング レイアウトは自動的に隠すバーのリストに関連します。 FALSE の場合、ドッキング レイアウトに関連する標準のペインの一覧。  
+*bAutoHide*<br/>
+[in]TRUE の場合、ドッキング レイアウトは自動的に隠すバーのリストに関連します。 FALSE の場合、ドッキング レイアウトに関連する標準のペインの一覧。  
   
- [in]*pBarReplacement*  
- 削除されたウィンドウを置換するウィンドウへのポインター。  
+*pBarReplacement*<br/>
+[in]削除されたウィンドウを置換するウィンドウへのポインター。  
   
 ##  <a name="setrelatedtabgroup"></a>  CMDIChildWndEx::SetRelatedTabGroup  
 
@@ -717,10 +717,10 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pBar*  
- [in]*bShow*  
- [in]*bDelay*  
- [in]*bActivate*  
+*pBar*<br/>
+[in][in]*bShow*  
+*bDelay*<br/>
+[in][in]*bActivate*  
   
 ### <a name="remarks"></a>Remarks  
   

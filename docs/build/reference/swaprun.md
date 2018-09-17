@@ -1,5 +1,5 @@
 ---
-title: -SWAPRUN |Microsoft ドキュメント
+title: -SWAPRUN |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,28 +18,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6e8af5b23d2e6cd0759f75c4054e0a811f687e1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a93b854dba2855fa68bb3be163cecdcd3570df0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375049"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723100"
 ---
 # <a name="swaprun"></a>/SWAPRUN
-```  
-/SWAPRUN:{[!]NET|[!]CD}  
-```  
-  
-## <a name="remarks"></a>コメント  
- このオプションは、オペレーティング システム イメージをスワップ ファイルにコピーし、そこから実行するよう通知する画像を編集します。 ネットワークまたはリムーバブル メディア上に存在するイメージには、このオプションを使用します。  
-  
- 追加または NET または CD の修飾子を削除することができます。  
-  
--   NET は、イメージがネットワーク上に存在することを示します。  
-  
--   CD では、イメージを CD-ROM やリムーバブル メディアに存在することを示します。  
-  
--   使用してください NET および!。NET と CD の効果を反転させる CD。  
-  
-## <a name="see-also"></a>関連項目  
- [EDITBIN オプション](../../build/reference/editbin-options.md)
+
+```
+/SWAPRUN:{[!]NET|[!]CD}
+```
+
+## <a name="remarks"></a>Remarks
+
+このオプションは、スワップ ファイルにイメージをコピーし、そこから実行するオペレーティング システムに指示するイメージを編集します。 ネットワークまたはリムーバブル メディア上に存在するイメージには、このオプションを使用します。
+
+追加または NET または CD の修飾子を削除できます。
+
+- NET は、ネットワーク上のイメージが置かれていることを示します。
+
+- CD では、CD-ROM やリムーバブル メディアで、イメージが置かれていることを示します。
+
+- 使用してください NET と!。NET と CD の効果を反転する CD。
+
+## <a name="see-also"></a>関連項目
+
+[EDITBIN オプション](../../build/reference/editbin-options.md)

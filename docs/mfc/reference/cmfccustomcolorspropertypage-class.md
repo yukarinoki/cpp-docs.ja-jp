@@ -1,5 +1,5 @@
 ---
-title: CMFCCustomColorsPropertyPage クラス |Microsoft ドキュメント
+title: CMFCCustomColorsPropertyPage クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8123db8e4a8dfba94e469881af8fbb2ecb40e2a0
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 6c8fea125c61bebe836a31c0b2718741e8c531d3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041982"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716862"
 ---
 # <a name="cmfccustomcolorspropertypage-class"></a>CMFCCustomColorsPropertyPage クラス
-色のダイアログ ボックスで作成した色を選択できるプロパティ ページを表します。  
+色のダイアログ ボックスで、カスタムの色を選択できるプロパティ ページを表します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,14 +49,14 @@ class CMFCCustomColorsPropertyPage : public CPropertyPage
 |-|-|  
 |名前|説明|  
 |`CMFCCustomColorsPropertyPage::CreateObject`|このクラス型の動的インスタンスを作成するために、フレームワークで使用されます。|  
-|`CMFCCustomColorsPropertyPage::GetThisClass`|ポインターを取得するために、フレームワークで使用される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|  
+|`CMFCCustomColorsPropertyPage::GetThisClass`|ポインターを取得する、framework によって使用される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|  
 |[CMFCCustomColorsPropertyPage::Setup](#setup)|プロパティ ページの色要素を設定します。|  
   
 ### <a name="remarks"></a>Remarks  
- `CMFCColorDialog`クラスでは、このクラスを使用してカスタムの色 ページを表示します。 詳細については`CMFCColorDialog`を参照してください[CMFCColorDialog クラス](../../mfc/reference/cmfccolordialog-class.md)です。  
+ `CMFCColorDialog`クラスでは、このクラスを使用して、カスタムの色 ページを表示します。 詳細については`CMFCColorDialog`を参照してください[CMFCColorDialog クラス](../../mfc/reference/cmfccolordialog-class.md)します。  
   
 ## <a name="example"></a>例  
- 次の例で作成する方法、`CMFCCustomColorsPropertyPage`オブジェクトし、プロパティ ページの色要素を設定します。  
+ 次の例は、構築する方法を示します、`CMFCCustomColorsPropertyPage`オブジェクトし、プロパティ ページの色のコンポーネントを設定します。  
   
  [!code-cpp[NVC_MFC_RibbonApp#35](../../mfc/reference/codesnippet/cpp/cmfccustomcolorspropertypage-class_1.cpp)]  
   
@@ -73,7 +73,7 @@ class CMFCCustomColorsPropertyPage : public CPropertyPage
   
  [CMFCCustomColorsPropertyPage](../../mfc/reference/cmfccustomcolorspropertypage-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxcustomcolorspropertypage.h  
   
 ##  <a name="setup"></a>  CMFCCustomColorsPropertyPage::Setup  
@@ -91,12 +91,12 @@ void Setup(
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*R*|RGB 値の赤の要素。|  
-|[in]*G*|RGB 値の緑の成分。|  
-|[in]*B*|RGB 値の青のコンポーネント。|  
+|*R*|[in]RGB 値の赤のコンポーネント。|  
+|*G*|[in]RGB 値の緑のコンポーネント。|  
+|*B*|[in]RGB 値の青のコンポーネント。|  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、現在の RGB と関連付けられている HLS (色合い、明度、および鮮やかさ) の色の値、プロパティ ページを更新します。 [CMFCColorDialog::SetPageTwo](../../mfc/reference/cmfccolordialog-class.md#setpagetwo)メソッドは、フレームワークは、色のダイアログ ボックスを初期化または、ユーザーがマウスの左ボタンを押したときにこのメソッドを呼び出します。 詳細については`CMFCColorDialog`を参照してください[CMFCColorDialog クラス](../../mfc/reference/cmfccolordialog-class.md)です。  
+ このメソッドは、現在の RGB と関連付けられている HLS (色合い、明度、および彩度) のカラー値、プロパティ ページを更新します。 [CMFCColorDialog::SetPageTwo](../../mfc/reference/cmfccolordialog-class.md#setpagetwo)メソッドがフレームワークには、色のダイアログ ボックスを初期化しますまたは、ユーザーがマウスの左ボタンを押したときに、このメソッドを呼び出します。 詳細については`CMFCColorDialog`を参照してください[CMFCColorDialog クラス](../../mfc/reference/cmfccolordialog-class.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49d67f9a2e91e3a2e0a2731e61fc0e1c2ec55679
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: cc115fbc77ac68c774b85bb86fd0cf9eac1fa51b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028542"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716639"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>ARM64 ABI 規則の概要
 
@@ -173,7 +173,7 @@ IEEE 浮動小数点例外のサポートは、AArch64 システムでは省略�
 
 11. NGRN は 8 に設定されます。
 
-12. 最大 NSAA が丸められます 8 または引数の型の自然なアラインメントのうち、大きい方. 
+12. 最大 NSAA が丸められます 8 または引数の型の自然なアラインメントのうち、大きい方.
 
 13. 引数が複合型の場合、引数は、調整された NSAA でメモリにコピーされます。 NSAA が引数のサイズだけインクリメントされます。 引数が割り当てられましたようになりました。
 
@@ -189,7 +189,7 @@ IEEE 浮動小数点例外のサポートは、AArch64 システムでは省略�
 
 2. SIMD と浮動小数点レジスタは使用されません。
 
-実質的にこれは、次の規則を場所スタックの最初の 64 バイトが x0 x7 に読み込まれ、残りのスタック引数は通常、虚数部のスタックへの引数を割り当てる C.12–C.15 に相当します。 
+実質的にこれは、次の規則を場所スタックの最初の 64 バイトが x0 x7 に読み込まれ、残りのスタック引数は通常、虚数部のスタックへの引数を割り当てる C.12–C.15 に相当します。
 
 ## <a name="return-values"></a>戻り値
 
@@ -231,5 +231,5 @@ ARM EABI では、アンワインド コードを活用して例外アンワイ�
 
 ## <a name="see-also"></a>関連項目
 
-[Visual C++ の ARM への移行に関する一般的な問題](../build/common-visual-cpp-arm-migration-issues.md)  
-[ARM64 例外処理](../build/arm64-exception-handling.md)  
+[Visual C++ の ARM への移行に関する一般的な問題](../build/common-visual-cpp-arm-migration-issues.md)<br/>
+[ARM64 例外処理](../build/arm64-exception-handling.md)

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af74ab381293e04c08a1fa8c601558edaeacf6c4
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0336cb9bd2f0e12c834615647cb4a442ab261316
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43689193"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721514"
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar クラス
 A`CMFCReBar`オブジェクトは、コントロール バー レイアウト、永続化、および rebar コントロールの状態情報を提供します。  
@@ -113,20 +113,20 @@ BOOL AddBar(
  [in][out]*pBar*  
  Rebar に挿入するのには、子ウィンドウへのポインター。 参照先オブジェクトには、 **WS_CHILD**ウィンドウ スタイル。  
   
- [in]*pszText*  
- Rebar に表示されるテキストを指定します。 子ウィンドウの一部でないテキスト。 代わりに、rebar 自体に表示されます。  
+*pszText*<br/>
+[in]Rebar に表示されるテキストを指定します。 子ウィンドウの一部でないテキスト。 代わりに、rebar 自体に表示されます。  
   
  [in][out]*pbmp*  
  Rebar の背景に表示されるビットマップを指定します。  
   
- [in]*dwStyle*  
- Band に適用するスタイルが含まれています。 バンド スタイルの完全な一覧の説明を参照してください。`fStyle`で、 [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) 、Windows SDK ドキュメントの構造体。  
+*dwStyle*<br/>
+[in]Band に適用するスタイルが含まれています。 バンド スタイルの完全な一覧の説明を参照してください。`fStyle`で、 [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) 、Windows SDK ドキュメントの構造体。  
   
- [in]*clrFore*  
- Rebar の前景色を表します。  
+*clrFore*<br/>
+[in]Rebar の前景色を表します。  
   
- [in]*clrBack*  
- Rebar の背景色を表します。  
+*clrBack*<br/>
+[in]Rebar の背景色を表します。  
   
 ### <a name="return-value"></a>戻り値  
  バンドが rebar; に正常に追加する場合は TRUE。それ以外の場合、FALSE です。  
@@ -146,14 +146,14 @@ BOOL Create(
  [in][out]*pParentWnd*  
  この rebar コントロールの親ウィンドウへのポインター。  
   
- [in]*ツール バー*  
- Rebar コントロールのスタイルを指定します。 既定のスタイルの値は**RBS_BANDBORDERS**これが表示されますが、rebar コントロールでの隣接するバンドの区切り線を絞り込みます。 有効なスタイルの一覧は、次を参照してください。 [Rebar コントロールのスタイル](/windows/desktop/Controls/rebar-control-styles)Windows SDK のドキュメント。  
+*ツール バー*<br/>
+[in]Rebar コントロールのスタイルを指定します。 既定のスタイルの値は**RBS_BANDBORDERS**これが表示されますが、rebar コントロールでの隣接するバンドの区切り線を絞り込みます。 有効なスタイルの一覧は、次を参照してください。 [Rebar コントロールのスタイル](/windows/desktop/Controls/rebar-control-styles)Windows SDK のドキュメント。  
   
- [in]*dwStyle*  
- Rebar コントロールのウィンドウ スタイル。 有効なスタイルの一覧は、次を参照してください。[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。  
+*dwStyle*<br/>
+[in]Rebar コントロールのウィンドウ スタイル。 有効なスタイルの一覧は、次を参照してください。[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。  
   
- [in]*nID*  
- Rebar の子ウィンドウの id。  
+*nID*<br/>
+[in]Rebar の子ウィンドウの id。  
   
 ### <a name="return-value"></a>戻り値  
  Rebar が正常に作成された場合は TRUE。それ以外の場合、FALSE です。  
@@ -183,8 +183,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bStretch*  
- [in]*bHorz*  
+*bStretch*<br/>
+[in][in]*bHorz*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -248,8 +248,8 @@ virtual INT_PTR OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ポイント*  
- [in]*pTI*  
+*ポイント*<br/>
+[in][in]*pTI*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -265,8 +265,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pTarget*  
- [in]*持たず*  
+*pTarget*<br/>
+[in][in]*持たず*  
   
 ### <a name="remarks"></a>Remarks  
   

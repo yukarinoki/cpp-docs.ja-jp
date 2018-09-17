@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b32317f4fd67a627a272ea8eefcc949d1b0e63c8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 32dd81b005570761088cdeb874ad0524bc543df2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852995"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721865"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>CMFCColorPopupMenu クラス
 ユーザーが文書またはアプリケーションで色の選択に使用するポップアップ メニューを表します。  
@@ -64,7 +64,7 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
   
 |||  
 |-|-|  
-|name|説明|  
+|名前|説明|  
 |`m_bEnabledInCustomizeMode`|カラー バーを表示するかどうかを決定するブール値。|  
 |`m_wndColorBar`|`CMFCColorBar`色の選択を提供するオブジェクト。|  
   
@@ -88,7 +88,7 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
   
  [CMFCColorPopupMenu](../../mfc/reference/cmfccolorpopupmenu-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxcolorpopupmenu.h  
   
 ##  <a name="cmfccolorpopupmenu"></a>  CMFCColorPopupMenu::CMFCColorPopupMenu  
@@ -133,51 +133,51 @@ CMFCColorPopupMenu(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*色*  
- フレームワークは、ポップアップ メニューに表示する色の配列。  
+*色*<br/>
+[in]フレームワークは、ポップアップ メニューに表示する色の配列。  
   
- [in]*色*  
- 選択されている既定の色。  
+*色*<br/>
+[in]選択されている既定の色。  
   
- [in]*lpszAutoColor*  
- テキスト ラベル、*自動*(既定値) の色のボタン、または NULL。  
+*lpszAutoColor*<br/>
+[in]テキスト ラベル、*自動*(既定値) の色のボタン、または NULL。  
   
  自動ボタンの標準的なラベルが**自動**します。  
   
- [in]*lpszOtherColor*  
- テキスト ラベル、*他*ボタンが表示されるより色の選択、または NULL。  
+*lpszOtherColor*<br/>
+[in]テキスト ラベル、*他*ボタンが表示されるより色の選択、または NULL。  
   
  その他のボタンの標準のラベルは**他の色**。  
   
- [in]*lpszDocColors*  
- ドキュメントの色のボタンのテキスト ラベル。 ドキュメントのカラー パレットには、ドキュメントが現在使用されているすべての色が一覧表示します。  
+*lpszDocColors*<br/>
+[in]ドキュメントの色のボタンのテキスト ラベル。 ドキュメントのカラー パレットには、ドキュメントが現在使用されているすべての色が一覧表示します。  
   
- [in]*lstDocColors*  
- ドキュメントが現在使用されている色の一覧。  
+*lstDocColors*<br/>
+[in]ドキュメントが現在使用されている色の一覧。  
   
- [in]*nColumns*  
- 色の配列を含む列の数。  
+*nColumns*<br/>
+[in]色の配列を含む列の数。  
   
- [in]*nHorzDockRows*  
- カラー バーが水平方向にドッキングされている行の数。  
+*nHorzDockRows*<br/>
+[in]カラー バーが水平方向にドッキングされている行の数。  
   
- [in]*nVertDockColumns*  
- カラー バーが垂直方向にドッキングされている列の数。  
+*nVertDockColumns*<br/>
+[in]カラー バーが垂直方向にドッキングされている列の数。  
   
- [in]*colorAutomatic*  
- 自動ボタンをクリックすると、フレームワークが適用される既定の色。  
+*colorAutomatic*<br/>
+[in]自動ボタンをクリックすると、フレームワークが適用される既定の色。  
   
- [in]*uiCommandID*  
- カラー バーのコントロールのコマンド id。  
+*uiCommandID*<br/>
+[in]カラー バーのコントロールのコマンド id。  
   
- [in]*bStdColorDlg*  
- 標準のシステム カラーのダイアログ ボックスを表示するかどうかを示すブール値、または[CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)  ダイアログ ボックス。  
+*bStdColorDlg*<br/>
+[in]標準のシステム カラーのダイアログ ボックスを表示するかどうかを示すブール値、または[CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)  ダイアログ ボックス。  
   
- [in]*pParentBtn*  
- 親ボタンへのポインター。  
+*pParentBtn*<br/>
+[in]親ボタンへのポインター。  
   
- [in]*nID*  
- コマンド ID。  
+*nID*<br/>
+[in]コマンド id。  
   
 ### <a name="remarks"></a>Remarks  
  それぞれのオーバー ロードされたコンス トラクターのセット、`m_bEnabledInCustomizeMode`メンバーを FALSE にします。  
@@ -202,9 +202,9 @@ virtual CPane* CreateTearOffBar(
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*pWndMain*|ティアオフ バーの親ウィンドウへのポインター。|  
-|[in]*uiID*|ティアオフ バーのコマンド ID。|  
-|[in]*lpszName*|ティアオフ バーのウィンドウのテキスト。|  
+|*pWndMain*|[in]ティアオフ バーの親ウィンドウへのポインター。|  
+|*uiID*|[in]ティアオフ バーのコマンド ID。|  
+|*lpszName*|[in]ティアオフ バーのウィンドウのテキスト。|  
   
 ### <a name="return-value"></a>戻り値  
  新しいティアオフ コントロール バー オブジェクトへのポインター。  
@@ -233,8 +233,8 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWndList*  
- プロパティ グリッド コントロール オブジェクトへのポインター。  
+*pWndList*<br/>
+[in]プロパティ グリッド コントロール オブジェクトへのポインター。  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

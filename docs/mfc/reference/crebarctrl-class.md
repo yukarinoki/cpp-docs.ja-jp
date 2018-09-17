@@ -108,12 +108,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 702cc504032f7c4702dcc1b317c517d53b9cccc9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0b88e53d7f5cfdd03728f8d1a474ee5171ca5daa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693881"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717588"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl クラス
 Rebar コントロールの機能がカプセル化されています。Rebar コントロールは、子ウィンドウを含むコンテナーです。  
@@ -766,8 +766,8 @@ BOOL SetBandWidth(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*uBand*|Rebar バンドの 0 から始まるインデックス。|  
-|[in]*cxWidth*|Rebar バンドをピクセル単位での新しい幅。|  
+|*uBand*|[in]Rebar バンドの 0 から始まるインデックス。|  
+|*cxWidth*|[in]Rebar バンドをピクセル単位での新しい幅。|  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -846,8 +846,8 @@ DWORD SetExtendedStyle(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*dwMask*|どのフラグを指定するフラグのビットごとの組み合わせ (OR)、 *dwStyleEx*パラメーターを適用します。 次の値の 1 つ以上を使用します。<br /><br /> RBS_EX_SPLITTER: 既定で表示、スプリッター下部にある横モードで、右側に縦モードでします。<br /><br /> RBS_EX_TRANSPARENT: 転送、 [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd)メッセージを親ウィンドウ。|  
-|[in]*dwStyleEx*|適用するスタイルを指定するフラグのビットごとの組み合わせ (OR)。 スタイルを設定するで使用されている同じフラグを指定、 *dwMask*パラメーター。 スタイルをリセットするには、バイナリのゼロを指定します。|  
+|*dwMask*|[in]どのフラグを指定するフラグのビットごとの組み合わせ (OR)、 *dwStyleEx*パラメーターを適用します。 次の値の 1 つ以上を使用します。<br /><br /> RBS_EX_SPLITTER: 既定で表示、スプリッター下部にある横モードで、右側に縦モードでします。<br /><br /> RBS_EX_TRANSPARENT: 転送、 [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd)メッセージを親ウィンドウ。|  
+|*dwStyleEx*|[in]適用するスタイルを指定するフラグのビットごとの組み合わせ (OR)。 スタイルを設定するで使用されている同じフラグを指定、 *dwMask*パラメーター。 スタイルをリセットするには、バイナリのゼロを指定します。|  
   
 ### <a name="return-value"></a>戻り値  
  以前の拡張スタイル。  

@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97e0a81fc5e317f018924efd3d564d39618cb2b5
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 36817eba04d630ea4e56140af582bf49fa6f54ce
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850083"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718121"
 ---
 # <a name="cmfcheaderctrl-class"></a>CMFCHeaderCtrl Class
 `CMFCHeaderCtrl`クラスは、ヘッダー コントロールの複数の列の並べ替えをサポートしています。  
@@ -106,7 +106,7 @@ class CMFCHeaderCtrl : public CHeaderCtrl
   
  [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxheaderctrl.h  
   
 ##  <a name="cmfcheaderctrl"></a>  CMFCHeaderCtrl::CMFCHeaderCtrl  
@@ -137,8 +137,8 @@ void EnableMultipleSort(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- 複数列の並べ替えモードを有効にする場合は TRUE複数の列の並べ替えモードを無効にして、並べ替えられた列の一覧から列を削除する場合は FALSE。 既定値は TRUE です。  
+*bEnable*<br/>
+[in]複数列の並べ替えモードを有効にする場合は TRUE複数の列の並べ替えモードを無効にして、並べ替えられた列の一覧から列を削除する場合は FALSE。 既定値は TRUE です。  
   
 ### <a name="remarks"></a>Remarks  
  有効または複数の列の並べ替えモードを無効にするには、このメソッドを使用します。 ヘッダー コントロールが複数の列の並べ替えモードの場合、2 つ以上の列が並べ替えで参加できます。  
@@ -151,8 +151,8 @@ int GetColumnState(int iColumn) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iColumn*  
- 列の 0 から始まるインデックス。  
+*iColumn*<br/>
+[in]列の 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  指定された列の並べ替え状態を示す値。 次の表では、使用可能な値を示します。  
@@ -227,20 +227,20 @@ virtual void OnDrawItem(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*iItem*  
- 描画するために、項目の 0 から始まるインデックス。  
+*iItem*<br/>
+[in]描画するために、項目の 0 から始まるインデックス。  
   
- [in]*rect*  
- 描画する項目の外接する四角形。  
+*rect*<br/>
+[in]描画する項目の外接する四角形。  
   
- [in]*bIsPressed*  
- 押された状態で項目を描画する場合は TRUEそれ以外の場合、FALSE です。  
+*bIsPressed*<br/>
+[in]押された状態で項目を描画する場合は TRUEそれ以外の場合、FALSE です。  
   
- [in]*bIsHighlighted*  
- 強調表示された状態で項目を描画する場合は TRUEそれ以外の場合、FALSE です。  
+*bIsHighlighted*<br/>
+[in]強調表示された状態で項目を描画する場合は TRUEそれ以外の場合、FALSE です。  
   
 ##  <a name="ondrawsortarrow"></a>  CMFCHeaderCtrl::OnDrawSortArrow  
  並べ替え矢印を描画するためにフレームワークによって呼び出されます。  
@@ -252,11 +252,11 @@ virtual void OnDrawSortArrow(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rectArrow*  
- 並べ替え矢印の外接する四角形。  
+*rectArrow*<br/>
+[in]並べ替え矢印の外接する四角形。  
   
 ##  <a name="onfillbackground"></a>  CMFCHeaderCtrl::OnFillBackground  
  ヘッダー コントロールの列の背景を塗りつぶすために、フレームワークによって呼び出されます。  
@@ -266,8 +266,8 @@ virtual void OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -279,8 +279,8 @@ void RemoveSortColumn(int iColumn);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iColumn*  
- 削除する列の 0 から始まるインデックス。  
+*iColumn*<br/>
+[in]削除する列の 0 から始まるインデックス。  
   
 ##  <a name="setsortcolumn"></a>  CMFCHeaderCtrl::SetSortColumn  
  ヘッダー コントロールの指定された列の並べ替え順序を設定します。  
@@ -293,14 +293,14 @@ void SetSortColumn(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iColumn*  
- ヘッダー コントロールの列の 0 から始まるインデックス。 このパラメーターが 0 より小さい場合、このメソッドは、並べ替え列の一覧からすべての列を削除します。  
+*iColumn*<br/>
+[in]ヘッダー コントロールの列の 0 から始まるインデックス。 このパラメーターが 0 より小さい場合、このメソッドは、並べ替え列の一覧からすべての列を削除します。  
   
- [in]*bAscending*  
- 列の並べ替え順序を指定する、 *iColumn*パラメーターを指定します。 昇順を設定する場合は TRUE降順の順序を設定する場合は FALSE。 既定値は TRUE です。  
+*bAscending*<br/>
+[in]列の並べ替え順序を指定する、 *iColumn*パラメーターを指定します。 昇順を設定する場合は TRUE降順の順序を設定する場合は FALSE。 既定値は TRUE です。  
   
- [in]*bAdd*  
- True を列の並べ替え順序の設定、 *iColumn*パラメーターを指定します。  
+*bAdd*<br/>
+[in]True を列の並べ替え順序の設定、 *iColumn*パラメーターを指定します。  
   
  現在のヘッダー コントロールの場合*複数列の並べ替え*モードでは、このメソッドは、並べ替え列の一覧に指定された列を追加します。 使用[CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort)を複数の列の並べ替えモードを設定します。  
   

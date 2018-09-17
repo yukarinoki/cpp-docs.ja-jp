@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afb57f408c52f6884c68e93af88671d49815ef69
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 156eca047946ad13b1e4f09057edceb9f0bc6b34
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840343"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719187"
 ---
 # <a name="1-object"></a>_1 オブジェクト
 
@@ -35,12 +35,12 @@ ms.locfileid: "33840343"
 namespace placeholders {
     extern unspecified _1,
     _2, ... _M
- } // namespace placeholders (within std)
+} // namespace placeholders (within std)
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-オブジェクト`_1, _2, ... _M`プレース ホルダーは、最初に、2 番目、…、によって返されるオブジェクトへの関数呼び出しでそれぞれの m 番目の引数を指定する[バインド](../standard-library/functional-functions.md#bind)です。 bind 式が評価されるときに N 番目の引数が挿入される場所を指定するには、`_N` を使用します。
+オブジェクト`_1, _2, ... _M`指定するプレース ホルダーは、1 番目、…、番目の引数、関数呼び出しによって返されるオブジェクトでそれぞれ[バインド](../standard-library/functional-functions.md#bind)します。 bind 式が評価されるときに N 番目の引数が挿入される場所を指定するには、`_N` を使用します。
 
 この実装では、`M` の値は 20 です。
 
