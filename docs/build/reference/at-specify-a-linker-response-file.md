@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ff031c64ab57373beadd8a88235d018f2e5c0f5
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: f692dd8006618661d6710ee6e8e681047fea3b1f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894422"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706310"
 ---
 # <a name="-specify-a-linker-response-file"></a>@ (リンカー応答ファイルの指定)
 
@@ -37,7 +37,7 @@ ms.locfileid: "43894422"
 
 ## <a name="arguments"></a>引数
 
-*response_file*  
+*response_file*<br/>
 リンカーのコマンドを指定するテキスト ファイルです。
 
 ## <a name="remarks"></a>Remarks
@@ -54,5 +54,5 @@ ms.locfileid: "43894422"
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)  
+[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
 [リンカー オプション](../../build/reference/linker-options.md)

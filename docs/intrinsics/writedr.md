@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 598b95df8fd2f4dd2826fcfa1f59a7e2daa8d523
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b559edf26c847404d718440e86037cab4026297b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541628"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704952"
 ---
 # <a name="writedr"></a>__writedr
 指定されたデバッグ登録するには、指定した値を書き込みます。  
@@ -34,11 +34,11 @@ void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue);
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力] `DebugRegister`  
- デバッグを識別する 0 ~ 7 の数値を登録します。  
+*DebugRegister*<br/>
+[in]デバッグを識別する 0 ~ 7 の数値を登録します。  
   
- [入力] `DebugValue`  
- デバッグ用に記述する値を登録します。  
+*DebugValue*<br/>
+[in]デバッグ用に記述する値を登録します。  
   
 ## <a name="remarks"></a>Remarks  
  これらの組み込みはカーネル モードでのみ使用できますし、ルーチンは組み込みとしてのみ使用できます。  

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12b6d0b0ccc21f4ab1f8b3d7116f098a532d0418
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b510b05c80ba7cdbea0bbf0ec580e88daa55fbed
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216262"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704367"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>CMFCToolBarFontComboBox クラス
 ユーザーは、システム フォントの一覧からフォントを選択できるコンボ ボックス コントロールを含むツール バー ボタン。  
@@ -110,14 +110,14 @@ CMFCToolBarFontComboBox();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiID*  
- コンボ ボックスのコマンド ID。  
+*uiID*<br/>
+[in]コンボ ボックスのコマンド ID。  
   
- [in]*画像を*  
- ツール バー イメージの 0 から始まるインデックス。 イメージにある、 [CMFCToolBarImages クラス](../../mfc/reference/cmfctoolbarimages-class.md)オブジェクトを[CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md)クラスを保持します。  
+*画像を*<br/>
+[in]ツール バー イメージの 0 から始まるインデックス。 イメージにある、 [CMFCToolBarImages クラス](../../mfc/reference/cmfctoolbarimages-class.md)オブジェクトを[CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md)クラスを保持します。  
   
- [in]*nFontType*  
- コンボ ボックスを含むフォントの種類。 このパラメーターは、次の値の組み合わせ (論理 OR) を指定できます。  
+*nFontType*<br/>
+[in]コンボ ボックスを含むフォントの種類。 このパラメーターは、次の値の組み合わせ (論理 OR) を指定できます。  
   
  DEVICE_FONTTYPE  
   
@@ -125,20 +125,20 @@ CMFCToolBarFontComboBox();
   
  TRUETYPE_FONTTYPE  
   
- [in]*nCharSet*  
- 場合 DEFAULT_CHARSET、コンボ ボックスに設定するには、すべての文字セットのフォントすべて一意となる名前にはが含まれています。 (同じ名前の 2 つのフォントがある場合は、コンボ ボックス格納うち 1 つ)。場合は、有効な文字セット値コンボ ボックスに設定するには、指定された文字セット内のフォントのみが含まれています。 参照してください[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)可能な文字の一覧を設定します。  
+*nCharSet*<br/>
+[in]場合 DEFAULT_CHARSET、コンボ ボックスに設定するには、すべての文字セットのフォントすべて一意となる名前にはが含まれています。 (同じ名前の 2 つのフォントがある場合は、コンボ ボックス格納うち 1 つ)。場合は、有効な文字セット値コンボ ボックスに設定するには、指定された文字セット内のフォントのみが含まれています。 参照してください[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)可能な文字の一覧を設定します。  
   
- [in]*dwStyle*  
- コンボ ボックスのスタイル。 (を参照してください[コンボ ボックス スタイル](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))  
+*dwStyle*<br/>
+[in]コンボ ボックスのスタイル。 (を参照してください[コンボ ボックス スタイル](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))  
   
- [in]*iWidth*  
- 編集コントロールのピクセル単位の幅。  
+*iWidth*<br/>
+[in]編集コントロールのピクセル単位の幅。  
   
- [in]*nPitchAndFamily*  
- 場合 DEFAULT_PITCH、コンボ ボックスに設定するには、ピッチに関係なくフォントが含まれています。 かどうか FIXED_PITCH または VARIABLE_PITCH に設定すると、コンボ ボックス フォントのみを含む、ピッチ タイプにします。 フォント ファミリに基づくフィルター処理は現在サポートされていません。  
+*nPitchAndFamily*<br/>
+[in]場合 DEFAULT_PITCH、コンボ ボックスに設定するには、ピッチに関係なくフォントが含まれています。 かどうか FIXED_PITCH または VARIABLE_PITCH に設定すると、コンボ ボックス フォントのみを含む、ピッチ タイプにします。 フォント ファミリに基づくフィルター処理は現在サポートされていません。  
   
- [out]*pLstFontsExternal*  
- ポインターを[CObList クラス](../../mfc/reference/coblist-class.md)利用可能なフォントを格納するオブジェクトです。  
+*pLstFontsExternal*<br/>
+[out]ポインターを[CObList クラス](../../mfc/reference/coblist-class.md)利用可能なフォントを格納するオブジェクトです。  
   
 ### <a name="remarks"></a>Remarks  
  通常、`CMFCToolBarFontComboBox`オブジェクトは、単一の共有に利用可能なフォントの一覧を格納`CObList`オブジェクト。 コンス トラクターの 2 つ目のオーバー ロードを使用する有効なポインターを提供していて*pLstFontsExternal*、その`CMFCToolBarFontComboBox`オブジェクトの塗りつぶしが代わりに、`CObList`を*pLstFontsExternal*利用可能なフォントでへのポインター。  
@@ -156,8 +156,8 @@ const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iIndex*  
- コンボ ボックスの項目の 0 から始まるインデックスを指定します。  
+*iIndex*<br/>
+[in]コンボ ボックスの項目の 0 から始まるインデックスを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  ポインターを`CMFCFontInfo`オブジェクト。 場合*iIndex*有効なアイテムのインデックスで指定されていない戻り値は NULL です。  
@@ -183,14 +183,14 @@ BOOL SetFont(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszName*  
- フォント名のプレフィックスを指定します。  
+*lpszName*<br/>
+[in]フォント名のプレフィックスを指定します。  
   
- [in]*nCharSet*  
- 文字セットを指定します。  
+*nCharSet*<br/>
+[in]文字セットを指定します。  
   
- [in]*bExact*  
- 指定するかどうか*lpszName*フォント名またはフォントのプレフィックスが含まれています。  
+*bExact*<br/>
+[in]指定するかどうか*lpszName*フォント名またはフォントのプレフィックスが含まれています。  
   
 ### <a name="return-value"></a>戻り値  
  フォントが正常に選択された場合、0 以外の場合それ以外の場合 0 を返します。  

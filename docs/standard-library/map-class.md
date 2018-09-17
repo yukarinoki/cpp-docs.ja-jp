@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2eb6baf664c2cac7bfc1ed2c95a5fbd204d289b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: ccab97a7ac1fd0ad073a3f507dfa6687f311efc4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686800"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703925"
 ---
 # <a name="map-class"></a>map クラス
 
@@ -124,18 +124,18 @@ class map;
 ### <a name="parameters"></a>パラメーター
 
 *Key*<br/>
- map に格納されるキーのデータ型。
+map に格納されるキーのデータ型。
 
 *Type*<br/>
- map に格納される要素のデータ型。
+map に格納される要素のデータ型。
 
 *Traits*<br/>
- 2 つの要素の値を並べ替えキーとして比較して、map 内の要素の相対順序を決定できる関数オブジェクトを提供する型。 この引数は省略可能であり、既定値は二項述語 `less<Key>` です。
+2 つの要素の値を並べ替えキーとして比較して、map 内の要素の相対順序を決定できる関数オブジェクトを提供する型。 この引数は省略可能であり、既定値は二項述語 `less<Key>` です。
 
 C++ 14 では、型パラメーターを使用せずに std::less<> 述語を指定することで、異種ルックアップを有効にすることができます。 詳細については、「[連想コンテナーの異種ルックアップ](../standard-library/stl-containers.md#sequence_containers)」をご覧ください。
 
 *アロケーター*<br/>
- メモリの map の割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値は `allocator<pair<const Key, Type> >` です。
+メモリの map の割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値は `allocator<pair<const Key, Type> >` です。
 
 ## <a name="remarks"></a>Remarks
 
@@ -577,7 +577,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
- 照合される map の要素のキー値。
+照合される map の要素のキー値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1041,7 +1041,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
- 検索対象の map 内の要素の並べ替えキーと比較される引数キー値。
+検索対象の map 内の要素の並べ替えキーと比較される引数キー値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1128,16 +1128,16 @@ size_type erase(
 ### <a name="parameters"></a>パラメーター
 
 *Where*<br/>
- 削除される要素の位置。
+削除される要素の位置。
 
 *まずは*<br/>
- 削除される最初の要素の位置。
+削除される最初の要素の位置。
 
 *前の*<br/>
- 削除される最後の要素の次の位置。
+削除される最後の要素の次の位置。
 
 *Key*<br/>
- 削除される要素のキー値。
+削除される要素のキー値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1240,7 +1240,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
- 検索対象の map 内の要素の並べ替えキーによって照合されるキー値。
+検索対象の map 内の要素の並べ替えキーによって照合されるキー値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1702,7 +1702,7 @@ const_iterator lower_bound(const Key& key) const;
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
- 検索対象の map 内の要素の並べ替えキーと比較される引数キー値。
+検索対象の map 内の要素の並べ替えキーと比較される引数キー値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2492,7 +2492,7 @@ void swap(
 ### <a name="parameters"></a>パラメーター
 
 *right*<br/>
- ターゲットの map と交換する要素を提供する引数の map。
+ターゲットの map と交換する要素を提供する引数の map。
 
 ### <a name="remarks"></a>Remarks
 
@@ -2563,7 +2563,7 @@ const_iterator upper_bound(const Key& key) const;
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
- 検索対象の map 内の要素の並べ替えキー値と比較される引数キー値。
+検索対象の map 内の要素の並べ替えキー値と比較される引数キー値。
 
 ### <a name="return-value"></a>戻り値
 

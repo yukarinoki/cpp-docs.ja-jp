@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9a3fdc9b094ebb81db1bfe841d7974c5df89ca0
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 627e6bfdb33561e3d4be55aebf07e831b6cdc035
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540298"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705134"
 ---
 # <a name="writemsr"></a>__writemsr
 **Microsoft 固有の仕様**  
@@ -40,11 +40,11 @@ void __writemsr(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力] `Register`  
- モデル専用レジスタの場合。  
+*登録*<br/>
+[in]モデル専用レジスタの場合。  
   
- [入力] `Value`  
- 書き込む値。  
+*値*<br/>
+[in]書き込む値。  
   
 ## <a name="requirements"></a>要件  
   

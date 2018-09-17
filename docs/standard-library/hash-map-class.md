@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08c16cd80828e973e4fff2d1a2c36e211e61f361
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 809391ea93c3baacd510df7d81f2000e1d6309b7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211593"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702028"
 ---
 # <a name="hashmap-class"></a>hash_map クラス
 
@@ -125,16 +125,16 @@ class hash_map
 ### <a name="parameters"></a>パラメーター
 
 *Key*<br/>
- hash_map に格納されるキーのデータ型。
+hash_map に格納されるキーのデータ型。
 
 *Type*<br/>
- hash_map に格納される要素のデータ型。
+hash_map に格納される要素のデータ型。
 
 *Traits*<br/>
- 2 つの関数オブジェクトを含む型。2 つの要素の値を並べ替えキーとして比較し、要素の相対順序を決定できるクラス比較、または要素のキー値を `size_t` 型の符号なし整数にマップする単項述語であるハッシュ関数のいずれかを使用できます。 この引数は省略可能であり、既定値は hash_compare<`Key`, less<`Key`> > です。
+2 つの関数オブジェクトを含む型。2 つの要素の値を並べ替えキーとして比較し、要素の相対順序を決定できるクラス比較、または要素のキー値を `size_t` 型の符号なし整数にマップする単項述語であるハッシュ関数のいずれかを使用できます。 この引数は省略可能であり、既定値は hash_compare<`Key`, less<`Key`> > です。
 
 *アロケーター*<br/>
- メモリの hash_map の割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値は allocator<pair <const `Key`, `Type`>> です。
+メモリの hash_map の割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値は allocator<pair <const `Key`, `Type`>> です。
 
 ## <a name="remarks"></a>Remarks
 
@@ -649,7 +649,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
- hash_map と照合する要素のキー値。
+hash_map と照合する要素のキー値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -940,7 +940,7 @@ int main()
 
 ```Output
 After the emplace insertion, hm1 contains:
- 1 => a
+1 => a
 ```
 
 ## <a name="emplace_hint"></a>  hash_map::emplace_hint
@@ -1000,7 +1000,7 @@ int main()
 
 ```Output
 After the emplace insertion, hm1 contains:
- 1 => a
+1 => a
 ```
 
 ## <a name="empty"></a>  hash_map::empty
@@ -1141,7 +1141,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
- 検索対象の hash_map 内の要素の並べ替えキーと比較される引数キー値。
+検索対象の hash_map 内の要素の並べ替えキーと比較される引数キー値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1188,7 +1188,7 @@ int main( )
 
    cout << "A direct call of upper_bound( 2 ) gives "
         << hm1_RcIter -> second << "," << endl
-        << " matching the 2nd element of the pair"
+        << "matching the 2nd element of the pair"
         << " returned by equal_range( 2 )." << endl;
 
    p2 = hm1.equal_range( 4 );
@@ -1208,7 +1208,7 @@ int main( )
 The lower bound of the element with a key of 2 in the hash_map hm1 is: 20.
 The upper bound of the element with a key of 2 in the hash_map hm1 is: 30.
 A direct call of upper_bound( 2 ) gives 30,
- matching the 2nd element of the pair returned by equal_range( 2 ).
+matching the 2nd element of the pair returned by equal_range( 2 ).
 The hash_map hm1 doesn't have an element with a key less than 40.
 ```
 
@@ -1230,16 +1230,16 @@ size_type erase(const key_type& key);
 ### <a name="parameters"></a>パラメーター
 
 *_Where*<br/>
- hash_map から削除する要素の位置。
+hash_map から削除する要素の位置。
 
 *first*<br/>
- hash_map から削除する最初の要素の位置。
+hash_map から削除する最初の要素の位置。
 
 *last*<br/>
- hash_map から削除する最後の要素の次の位置。
+hash_map から削除する最後の要素の次の位置。
 
 *key*<br/>
- hash_map から削除する要素のキー値。
+hash_map から削除する要素のキー値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1352,7 +1352,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
- 検索対象の hash_map 内の要素の並べ替えキーによって照合されるキー値。
+検索対象の hash_map 内の要素の並べ替えキーによって照合されるキー値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1525,18 +1525,18 @@ hash_map(
 
 template <class InputIterator>
 hash_map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last);
 
 template <class InputIterator>
 hash_map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Traits& Comp);
 
 template <class InputIterator>
 hash_map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Traits& Comp,
     const Allocator& Al
@@ -1893,7 +1893,7 @@ const_iterator lower_bound(const Key& key) const;
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
- 検索対象の hash_map 内の要素の並べ替えキーと比較される引数キー値。
+検索対象の hash_map 内の要素の並べ替えキーと比較される引数キー値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2532,7 +2532,7 @@ void swap(hash_map& right);
 ### <a name="parameters"></a>パラメーター
 
 *right*<br/>
- ターゲットの hash_map と交換する要素を提供する引数の hash_map。
+ターゲットの hash_map と交換する要素を提供する引数の hash_map。
 
 ### <a name="remarks"></a>Remarks
 
@@ -2608,7 +2608,7 @@ const_iterator upper_bound(const Key& key) const;
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
- 検索対象の hash_map 内の要素の並べ替えキー値と比較される引数キー値。
+検索対象の hash_map 内の要素の並べ替えキー値と比較される引数キー値。
 
 ### <a name="return-value"></a>戻り値
 

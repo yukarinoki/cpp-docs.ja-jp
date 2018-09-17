@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::timed_mutex [C++], unlock
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7181b4c5c1c74d5726fd37e98366225aecf7f63a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4ed4f12e127c6ceef212ffefc512e764dd53fb19
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962661"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706551"
 ---
 # <a name="timedmutex-class"></a>timed_mutex クラス
 
@@ -64,7 +64,7 @@ class timed_mutex;
 |[try_lock_until](#try_lock_until)|指定した時刻まで `mutex` の所有権の取得を試みます。|
 |[unlock](#unlock)|`mutex` の所有権を解放します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<mutex >
 
@@ -129,8 +129,8 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>パラメーター
 
-*Rel_time*  
- メソッドが `mutex` の所有権の取得を試行する時間について、その最大値を指定する [chrono::duration](../standard-library/duration-class.md) オブジェクト。
+*Rel_time*<br/>
+メソッドが `mutex` の所有権の取得を試行する時間について、その最大値を指定する [chrono::duration](../standard-library/duration-class.md) オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -153,8 +153,8 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>パラメーター
 
-*Abs_time*  
- メソッドが `mutex` の所有権の取得を止めるしきい値を指定する時点。
+*Abs_time*<br/>
+メソッドが `mutex` の所有権の取得を止めるしきい値を指定する時点。
 
 ### <a name="return-value"></a>戻り値
 

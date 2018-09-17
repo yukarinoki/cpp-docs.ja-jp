@@ -18,15 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e059b8144518f3d0cacdde5d7f438c04b7933a2
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: dc6625e9f9137bc6adbe10270ef7192d2f1672f0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467870"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700857"
 ---
 # <a name="sptr-uptr"></a>__sptr、__uptr
-**Microsoft 固有の仕様**  
+**Microsoft 固有の仕様**
+
  使用して、 **_ _sptr**または **_ _uptr**コンパイラが 32 ビット ポインターを 64 ビット ポインターに変換する方法を指定する 32 ビット ポインターの宣言に修飾子。 たとえば、32 ビット ポインターが 64 ビット ポインター変数に割り当てられたときや、64 ビット プラットフォーム上で 32 ビット ポインターが逆参照される場合などに変換が必要になります。  
   
  64 ビット プラットフォームをサポートする Microsoft のドキュメントでは、32 ビット ポインターの最上位ビットを符号ビットと呼んでいる場合があります。 既定では、コンパイラは符号拡張を使用して 32 ビット ポインターを 64 ビット ポインターに変換します。 つまり、64 ビット ポインターの下位 32 ビットに 32 ビット ポインターの値が設定され、上位 32 ビットに 32 ビット ポインターの符号ビットの値が設定されます。 符号ビットが 0 の場合はこの変換で正しい結果が得られますが、符号ビットが 1 の場合は正しい結果が得られません。 たとえば、32 ビット アドレス 0x7FFFFFFF はこれと同等の 64 ビットアドレス 0x000000007FFFFFFF になりますが、32 ビット アドレス 0x80000000 は誤って 0xFFFFFFFF80000000 に変換されます。  

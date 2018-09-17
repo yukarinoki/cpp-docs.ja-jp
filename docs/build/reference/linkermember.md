@@ -1,5 +1,5 @@
 ---
-title: -LINKERMEMBER |Microsoft ドキュメント
+title: -LINKERMEMBER |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac961f985de65bb7eea9a4ad0f5d10b75fbe60d3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0979009260381eb210e7992377bab8b5ae613338
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371500"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700610"
 ---
 # <a name="linkermember"></a>/LINKERMEMBER
-```  
-/LINKERMEMBER[:{1|2}]  
-```  
-  
-## <a name="remarks"></a>コメント  
- このオプションは、ライブラリで定義されているパブリック シンボルを表示します。 そのオフセットと共に、オブジェクトの順序で記号を表示する 1 つの引数を指定します。 オフセットと、オブジェクトのインデックス番号を表示する 2 つの引数を指定してシンボルごとにオブジェクトのインデックスと共にのアルファベット順に一覧表示されます。 両方の出力を取得するには、数値の引数を指定せず/LINKERMEMBER を指定します。  
-  
- のみ、 [/HEADERS](../../build/reference/headers.md) DUMPBIN オプションはにより生成されるファイルで使用できるよう、 [/GL](../../build/reference/gl-whole-program-optimization.md)コンパイラ オプション。  
-  
-## <a name="see-also"></a>関連項目  
- [DUMPBIN オプション](../../build/reference/dumpbin-options.md)
+
+```
+/LINKERMEMBER[:{1|2}]
+```
+
+## <a name="remarks"></a>Remarks
+
+このオプションは、ライブラリで定義されたパブリック シンボルを表示します。 そのオフセットと共に、オブジェクトの順序でシンボルを表示する 1 引数を指定します。 オフセットとオブジェクトのインデックス番号を表示する 2 つの引数を指定し、各オブジェクトのインデックスと共に、アルファベット順にシンボルを一覧表示します。 両方の出力を取得するには、数値の引数なし/LINKERMEMBER を指定します。
+
+のみ、 [/HEADERS](../../build/reference/headers.md) DUMPBIN オプションがで生成されたファイルで使用できる、 [/GL](../../build/reference/gl-whole-program-optimization.md)コンパイラ オプション。
+
+## <a name="see-also"></a>関連項目
+
+[DUMPBIN オプション](../../build/reference/dumpbin-options.md)

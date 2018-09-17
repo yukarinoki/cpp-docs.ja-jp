@@ -102,12 +102,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: faf782f4386cf2b2640ed65f3a2b24bbf4c5d693
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c339ffcf3fb32c7ff8ad45fca792a91c96848d9e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573156"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703730"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl クラス
 `IRowset` インターフェイスの実装を提供します。  
@@ -244,11 +244,11 @@ virtual DBSTATUS GetDBStatus(RowClass* currentRow,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [in]*currentRow*  
- 現在の行。  
+*currentRow*<br/>
+[in]現在の行。  
   
- [in]*columnNames*  
- 状態を要求する対象の列です。  
+*columnNames*<br/>
+[in]状態を要求する対象の列です。  
   
 ### <a name="return-value"></a>戻り値  
  [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\))列のフラグ。 

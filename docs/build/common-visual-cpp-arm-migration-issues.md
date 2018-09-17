@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e09767927a91c61f564e2013bf1b3e0930821193
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: c0e42cd14c5707f728f5577a77b2dd613c5ef2a0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42572742"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709619"
 ---
 # <a name="common-visual-c-arm-migration-issues"></a>Visual C++ の ARM への移行に関する一般的な問題
 
@@ -110,4 +110,4 @@ MSVC コンパイラ サポートの 2 つの異なる解釈、`volatile`記憶�
 
 ## <a name="see-also"></a>関連項目
 
-[ARM プロセッサ用の Visual C ++ の構成する](../build/configuring-programs-for-arm-processors-visual-cpp.md)  
+[ARM プロセッサ用の Visual C ++ の構成する](../build/configuring-programs-for-arm-processors-visual-cpp.md)
