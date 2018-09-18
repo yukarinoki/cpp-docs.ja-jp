@@ -1,5 +1,5 @@
 ---
-title: omp_set_lock |Microsoft ドキュメント
+title: omp_set_lock |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d905da37b6e3203fcf37611d7404fa2e4f9ea96
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 390090b0f4bf5f8795373db9f61f8365257ee95b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691103"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024912"
 ---
 # <a name="ompsetlock"></a>omp_set_lock
 ロックが利用可能になるまで、スレッドの実行をブロックします。  
@@ -34,14 +34,13 @@ void omp_set_lock(
 );  
 ```  
   
-## <a name="remarks"></a>コメント  
- 指定項目  
+### <a name="parameters"></a>パラメーター
   
- `lock`  
- 型の変数[omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md)で初期化された[omp_init_lock 関数](../../../parallel/openmp/reference/omp-init-lock.md)です。  
+*lock*<br/>
+型の変数[omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md)で初期化された[omp_init_lock 関数](../../../parallel/openmp/reference/omp-init-lock.md)します。  
   
-## <a name="remarks"></a>コメント  
- 詳細については、次を参照してください。 [3.2.3 omp_set_lock 関数と omp_set_nest_lock 関数](../../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md)です。  
+## <a name="remarks"></a>Remarks  
+ 詳細については、次を参照してください。 [3.2.3 omp_set_lock 関数と omp_set_nest_lock 関数](../../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md)します。  
   
 ## <a name="examples"></a>使用例  
  参照してください[omp_init_lock 関数](../../../parallel/openmp/reference/omp-init-lock.md)の使用例については`omp_set_lock`します。  

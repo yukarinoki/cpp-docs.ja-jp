@@ -16,32 +16,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 090fd7ed027738ebe7bc9276e3b3f124b9212c4a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 52ea719a2c9296ca1e64d881ac150994c041e206
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463468"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018731"
 ---
 # <a name="varianttsetstring"></a>_variant_t::SetString
-**Microsoft 固有の仕様**  
-  
- この `_variant_t` オブジェクトに文字列を代入します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-void SetString(const char* pSrc);  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
- *pSrc*  
- 文字列へのポインター。  
-  
-## <a name="remarks"></a>Remarks  
- ANSI 文字列を Unicode `BSTR` 文字列に変換し、この `_variant_t` オブジェクトに割り当てます。  
-  
- **Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- [_variant_t クラス](../cpp/variant-t-class.md)
+
+**Microsoft 固有の仕様**
+
+この `_variant_t` オブジェクトに文字列を代入します。
+
+## <a name="syntax"></a>構文
+
+```
+void SetString(const char* pSrc);
+```
+
+#### <a name="parameters"></a>パラメーター
+
+*pSrc*<br/>
+文字列へのポインター。
+
+## <a name="remarks"></a>Remarks
+
+ANSI 文字列を Unicode `BSTR` 文字列に変換し、この `_variant_t` オブジェクトに割り当てます。
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
+[_variant_t クラス](../cpp/variant-t-class.md)

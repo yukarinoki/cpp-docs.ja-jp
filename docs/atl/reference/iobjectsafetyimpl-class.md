@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae4aaffc76e12734038b0d325e7b540393c6cc6d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e760bab6fb3ad420fc6fe0f5c8a2ea6addc652ac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754931"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019426"
 ---
 # <a name="iobjectsafetyimpl-class"></a>IObjectSafetyImpl クラス
 
@@ -40,16 +40,16 @@ ms.locfileid: "43754931"
 ## <a name="syntax"></a>構文
 
 ```
-template <class T,DWORD dwSupportedSafety>  
+template <class T,DWORD dwSupportedSafety>
 class IObjectSafetyImpl
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 派生したクラス、`IObjectSafetyImpl`します。
 
-*dwSupportedSafety*  
+*dwSupportedSafety*<br/>
 コントロールのサポートされている安全性のオプションを指定します。 次のいずれかの値になります。
 
 - INTERFACESAFE_FOR_UNTRUSTED_CALLER で識別されるインターフェイス、 [SetInterfaceSafetyOptions](#setinterfacesafetyoptions)パラメーター`riid`スクリプトに対して安全で行う必要があります。
@@ -139,5 +139,5 @@ HRESULT SetInterfaceSafetyOptions(
 
 ## <a name="see-also"></a>関連項目
 
-[IObjectSafety インターフェイス](https://msdn.microsoft.com/library/aa768224.aspx)   
+[IObjectSafety インターフェイス](https://msdn.microsoft.com/library/aa768224.aspx)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: リンカ ツール エラー LNK1224 |Microsoft ドキュメント
+title: リンカ ツール エラー LNK1224 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd2be38847d9804279758ce8e224c06d655dc382
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f7953e2e4df82bf271babaa385eabd93e98ae39e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302774"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022464"
 ---
 # <a name="linker-tools-error-lnk1224"></a>リンカ ツール エラー LNK1224
-無効なイメージのベース アドレス  
-  
- イメージのベース アドレスが無効です指定しました。 ベース アドレスは 64 KB に配置する必要があります (最後の 4 つの 16 進数の桁を 0 にする必要があります) と基本イメージは、32 ビット符号付きまたは符号なしの値内に収まる必要があります。
+
+無効なイメージのベース アドレス
+
+イメージのベース アドレスが無効です指定しました。 ベース アドレスは 64 KB に配置する必要があります (最後の 4 つの 16 進数字は 0 である必要があります) と基本イメージは、32 ビット符号付きまたは符号なし値内に収まる必要があります。

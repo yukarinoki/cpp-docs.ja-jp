@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2800 |Microsoft ドキュメント
+title: コンパイラ エラー C2800 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dd9723513042ae7ef6d63914f5abecd63192e37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23441361ea0c8dbc241f5bf655186f0399b6b42f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235598"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016378"
 ---
 # <a name="compiler-error-c2800"></a>コンパイラ エラー C2800
-'operator 演算子' をオーバー ロードできません。  
-  
- 次の演算子はオーバー ロードできません: クラス メンバーに対するアクセス (`.`)、メンバーへのポインター (`.*`)、スコープ解決 (`::`)、条件式 (`? :`)、および`sizeof`です。  
-  
- 次の例では、C2800 が生成されます。  
-  
-```  
-// C2800.cpp  
-// compile with: /c  
-class C {  
-   operator:: ();   // C2800  
-};  
+
+'operator 演算子' をオーバー ロードできません。
+
+次の演算子をオーバー ロードできません: クラス メンバー アクセス (`.`)、メンバーへのポインター (`.*`)、スコープ解決 (`::`)、条件式 (`? :`)、および`sizeof`します。
+
+次の例では、C2800 が生成されます。
+
+```
+// C2800.cpp
+// compile with: /c
+class C {
+   operator:: ();   // C2800
+};
 ```

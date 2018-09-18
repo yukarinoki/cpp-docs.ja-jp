@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed6e32ec0e474f901818618af662a91e3e46efed
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3ce6099b904c088399dcb43635a1b254567e8320
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763699"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024916"
 ---
 # <a name="message-map-macros-atl"></a>メッセージ マップ マクロ (ATL)
 
@@ -109,7 +109,7 @@ ALT_MSG_MAP(msgMapID)
 
 ### <a name="parameters"></a>パラメーター
 
-*msgMapID*  
+*msgMapID*<br/>
 [in]メッセージ マップの識別子。
 
 ### <a name="remarks"></a>Remarks
@@ -148,7 +148,7 @@ BEGIN_MSG_MAP(theClass)
 
 ### <a name="parameters"></a>パラメーター
 
-*クラス*  
+*クラス*<br/>
 [in]メッセージ マップを含むクラスの名前。
 
 ### <a name="remarks"></a>Remarks
@@ -227,10 +227,10 @@ CHAIN_MSG_MAP_ALT(theChainClass, msgMapID)
 
 ### <a name="parameters"></a>パラメーター
 
-*theChainClass*  
+*theChainClass*<br/>
 [in]メッセージ マップを含む基本クラスの名前。
 
-*msgMapID*  
+*msgMapID*<br/>
 [in]メッセージ マップの識別子。
 
 ### <a name="remarks"></a>Remarks
@@ -256,10 +256,10 @@ CHAIN_MSG_MAP_ALT_MEMBER(theChainMember, msgMapID)
 
 ### <a name="parameters"></a>パラメーター
 
-*theChainMember*  
+*theChainMember*<br/>
 [in]メッセージ マップを含むデータ メンバーの名前。
 
-*msgMapID*  
+*msgMapID*<br/>
 [in]メッセージ マップの識別子。
 
 ### <a name="remarks"></a>Remarks
@@ -285,7 +285,7 @@ CHAIN_MSG_MAP(theChainClass)
 
 ### <a name="parameters"></a>パラメーター
 
-*theChainClass*  
+*theChainClass*<br/>
 [in]メッセージ マップを含む基本クラスの名前。
 
 ### <a name="remarks"></a>Remarks
@@ -323,7 +323,7 @@ CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
 
 ### <a name="parameters"></a>パラメーター
 
-*dynaChainID*  
+*dynaChainID*<br/>
 [in]オブジェクトのメッセージ マップの一意の識別子。
 
 ### <a name="remarks"></a>Remarks
@@ -349,7 +349,7 @@ CHAIN_MSG_MAP_MEMBER(theChainMember)
 
 ### <a name="parameters"></a>パラメーター
 
-*theChainMember*  
+*theChainMember*<br/>
 [in]メッセージ マップを含むデータ メンバーの名前。
 
 ### <a name="remarks"></a>Remarks
@@ -387,10 +387,10 @@ COMMAND_CODE_HANDLER(code, func)
 
 ### <a name="parameters"></a>パラメーター
 
-*コード*  
+*コード*<br/>
 [in]通知コード。
 
-*func*  
+*func*<br/>
 [in]メッセージ ハンドラー関数の名前。
 
 ### <a name="requirements"></a>要件
@@ -407,13 +407,13 @@ COMMAND_HANDLER(id, code, func)
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*  
+*ID*<br/>
 [in]メニュー項目、コントロール、またはアクセラレータの識別子。
 
-*コード*  
+*コード*<br/>
 [in]通知コード。
 
-*func*  
+*func*<br/>
 [in]メッセージ ハンドラー関数の名前。
 
 ### <a name="remarks"></a>Remarks
@@ -449,10 +449,10 @@ COMMAND_ID_HANDLER(id, func)
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*  
+*ID*<br/>
 [in]メニュー項目、コントロール、またはメッセージを送信するアクセラレータの識別子。
 
-*func*  
+*func*<br/>
 [in]メッセージ ハンドラー関数の名前。
 
 ### <a name="requirements"></a>要件
@@ -469,16 +469,16 @@ COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
 
 ### <a name="parameters"></a>パラメーター
 
-*idFirst*  
+*idFirst*<br/>
 [in]コントロールの識別子の連続する範囲の先頭をマークします。
 
-*idLast*  
+*idLast*<br/>
 [in]コントロールの識別子の連続する範囲の末尾をマークします。
 
-*コード*  
+*コード*<br/>
 [in]通知コード。
 
-*func*  
+*func*<br/>
 [in]メッセージ ハンドラー関数の名前。
 
 ### <a name="remarks"></a>Remarks
@@ -499,13 +499,13 @@ COMMAND_RANGE_HANDLER( idFirst, idLast, func)
 
 ### <a name="parameters"></a>パラメーター
 
-*idFirst*  
+*idFirst*<br/>
 [in]コントロールの識別子の連続する範囲の先頭をマークします。
 
-*idLast*  
+*idLast*<br/>
 [in]コントロールの識別子の連続する範囲の末尾をマークします。
 
-*func*  
+*func*<br/>
 [in]メッセージ ハンドラー関数の名前。
 
 ### <a name="remarks"></a>Remarks
@@ -598,10 +598,10 @@ MESSAGE_HANDLER( msg, func )
 
 ### <a name="parameters"></a>パラメーター
 
-*メッセージ*  
+*メッセージ*<br/>
 [in]Windows メッセージ。
 
-*func*  
+*func*<br/>
 [in]メッセージ ハンドラー関数の名前。
 
 ### <a name="remarks"></a>Remarks
@@ -639,13 +639,13 @@ MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
 
 ### <a name="parameters"></a>パラメーター
 
-*msgFirst*  
+*msgFirst*<br/>
 [in]メッセージの連続する範囲の先頭をマークします。
 
-*msgLast*  
+*msgLast*<br/>
 [in]メッセージの連続する範囲の末尾をマークします。
 
-*func*  
+*func*<br/>
 [in]メッセージ ハンドラー関数の名前。
 
 ### <a name="requirements"></a>要件
@@ -662,10 +662,10 @@ NOTIFY_CODE_HANDLER(cd, func)
 
 ### <a name="parameters"></a>パラメーター
 
-*cd*  
+*cd*<br/>
 [in]通知コード。
 
-*func*  
+*func*<br/>
 [in]メッセージ ハンドラー関数の名前。
 
 ### <a name="requirements"></a>要件
@@ -682,13 +682,13 @@ NOTIFY_HANDLER( id, cd, func )
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*  
+*ID*<br/>
 [in]メッセージを送信するコントロールの識別子です。
 
-*cd*  
+*cd*<br/>
 [in]通知コード。
 
-*func*  
+*func*<br/>
 [in]メッセージ ハンドラー関数の名前。
 
 ### <a name="remarks"></a>Remarks
@@ -726,10 +726,10 @@ NOTIFY_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*  
+*ID*<br/>
 [in]メッセージを送信するコントロールの識別子です。
 
-*func*  
+*func*<br/>
 [in]メッセージ ハンドラー関数の名前。
 
 ### <a name="requirements"></a>要件
@@ -746,16 +746,16 @@ NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 
 ### <a name="parameters"></a>パラメーター
 
-*idFirst*  
+*idFirst*<br/>
 [in]コントロールの識別子の連続する範囲の先頭をマークします。
 
-*idLast*  
+*idLast*<br/>
 [in]コントロールの識別子の連続する範囲の末尾をマークします。
 
-*cd*  
+*cd*<br/>
 [in]通知コード。
 
-*func*  
+*func*<br/>
 [in]メッセージ ハンドラー関数の名前。
 
 ### <a name="remarks"></a>Remarks
@@ -776,13 +776,13 @@ NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 
 ### <a name="parameters"></a>パラメーター
 
-*idFirst*  
+*idFirst*<br/>
 [in]コントロールの識別子の連続する範囲の先頭をマークします。
 
-*idLast*  
+*idLast*<br/>
 [in]コントロールの識別子の連続する範囲の末尾をマークします。
 
-*func*  
+*func*<br/>
 [in]メッセージ ハンドラー関数の名前。
 
 ### <a name="remarks"></a>Remarks
@@ -819,10 +819,10 @@ REFLECTED_COMMAND_CODE_HANDLER( code, func )
 
 ### <a name="parameters"></a>パラメーター
 
-*コード*  
+*コード*<br/>
 [in]通知コード。
 
-*func*  
+*func*<br/>
 [in]メッセージ ハンドラー関数の名前。  
 
 ### <a name="requirements"></a>要件
@@ -839,13 +839,13 @@ REFLECTED_COMMAND_HANDLER( id, code, func )
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*  
+*ID*<br/>
 [in]メニュー項目、コントロール、またはアクセラレータの識別子。
 
-*コード*  
+*コード*<br/>
 [in]通知コード。
 
-*func*  
+*func*<br/>
 [in]メッセージ ハンドラー関数の名前。  
 
 ### <a name="requirements"></a>要件
@@ -862,10 +862,10 @@ REFLECTED_COMMAND_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*  
+*ID*<br/>
 [in]メニュー項目、コントロール、またはアクセラレータの識別子。
 
-*func*  
+*func*<br/>
 [in]メッセージ ハンドラー関数の名前。  
 
 ### <a name="requirements"></a>要件
@@ -882,16 +882,16 @@ REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
 
 ### <a name="parameters"></a>パラメーター
 
-*idFirst*  
+*idFirst*<br/>
 [in]コントロールの識別子の連続する範囲の先頭をマークします。
 
-*idLast*  
+*idLast*<br/>
 [in]コントロールの識別子の連続する範囲の末尾をマークします。
 
-*コード*  
+*コード*<br/>
 [in]通知コード。
 
-*func*  
+*func*<br/>
 [in]メッセージ ハンドラー関数の名前。  
 
 ### <a name="requirements"></a>要件
@@ -908,13 +908,13 @@ REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
 
 ### <a name="parameters"></a>パラメーター
 
-*idFirst*  
+*idFirst*<br/>
 [in]コントロールの識別子の連続する範囲の先頭をマークします。
 
-*idLast*  
+*idLast*<br/>
 [in]コントロールの識別子の連続する範囲の末尾をマークします。
 
-*func*  
+*func*<br/>
 [in]メッセージ ハンドラー関数の名前。  
 
 ### <a name="requirements"></a>要件
@@ -931,10 +931,10 @@ REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
 
 ### <a name="parameters"></a>パラメーター
 
-*cd*  
+*cd*<br/>
 [in]通知コード。
 
-*func*  
+*func*<br/>
 [in]メッセージ ハンドラー関数の名前。  
 
 ### <a name="requirements"></a>要件
@@ -951,13 +951,13 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*  
+*ID*<br/>
 [in]メニュー項目、コントロール、またはアクセラレータの識別子。
 
-*cd*  
+*cd*<br/>
 [in]通知コード。
 
-*func*  
+*func*<br/>
 [in]メッセージ ハンドラー関数の名前。  
 
 ### <a name="requirements"></a>要件
@@ -974,10 +974,10 @@ REFLECTED_NOTIFY_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*  
+*ID*<br/>
 [in]メニュー項目、コントロール、またはアクセラレータの識別子。
 
-*func*  
+*func*<br/>
 [in]メッセージ ハンドラー関数の名前。  
 
 ### <a name="requirements"></a>要件
@@ -994,16 +994,16 @@ REFLECTED_NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 
 ### <a name="parameters"></a>パラメーター
 
-*idFirst*  
+*idFirst*<br/>
 [in]コントロールの識別子の連続する範囲の先頭をマークします。
 
-*idLast*  
+*idLast*<br/>
 [in]コントロールの識別子の連続する範囲の末尾をマークします。
 
-*cd*  
+*cd*<br/>
 [in]通知コード。
 
-*func*  
+*func*<br/>
 [in]メッセージ ハンドラー関数の名前。
 
 ### <a name="requirements"></a>要件
@@ -1020,13 +1020,13 @@ REFLECTED_NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 
 ### <a name="parameters"></a>パラメーター
 
-*idFirst*  
+*idFirst*<br/>
 [in]コントロールの識別子の連続する範囲の先頭をマークします。
 
-*idLast*  
+*idLast*<br/>
 [in]コントロールの識別子の連続する範囲の末尾をマークします。
 
-*func*  
+*func*<br/>
 [in]メッセージ ハンドラー関数の名前。
 
 ## <a name="see-also"></a>関連項目

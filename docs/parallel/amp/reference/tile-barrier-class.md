@@ -1,5 +1,5 @@
 ---
-title: tile_barrier クラス |Microsoft ドキュメント
+title: tile_barrier クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62e81b7cab8d7e8774e6ac50c5de5f256d76b232
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: a91cbb816deb18d9c4cf7356faa879c09a9d276c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686491"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025205"
 ---
 # <a name="tilebarrier-class"></a>tile_barrier クラス
 `wait` メソッドを使用してスレッド グループ (タイル) で実行されているスレッドの実行を同期します。 ランタイムのみがこのクラスをインスタンス化できます。  
@@ -64,7 +64,7 @@ class tile_barrier;
  **名前空間:** Concurrency  
 
 ## <a name="tile_barrier__ctor"></a>  tile_barrier コンス トラクター  
- 既存のものをコピーして、クラスの新しいインスタンスを初期化します。  
+ 既存のものをコピーすることによって、クラスの新しいインスタンスを初期化します。  
   
 ### <a name="syntax"></a>構文 
   
@@ -74,8 +74,8 @@ tile_barrier(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Other`  
- コピーする `tile_barrier` オブジェクト。  
+*_Other*<br/>
+コピーする `tile_barrier` オブジェクト。  
 
 ## <a name="wait"></a>  wait 
 タイルのすべてのスレッドの待機が完了するまで実行を停止するには、スレッド グループ (タイル) のすべてのスレッドに指示します。  
@@ -106,7 +106,7 @@ void wait_with_global_memory_fence() const  restrict(amp);
 ```
 
 ## <a name="wait_with_tile_static_memory_fence"></a>  wait_with_tile_static_memory_fence   
-タイルのすべてのスレッドがこの呼び出しに到達するまで、タイルのすべてのスレッドの実行をブロックします。 これにより、`tile_static`メモリ アクセスがスレッド タイルの他のスレッドから参照でき、プログラムの順序で実行されます。  
+タイルのすべてのスレッドがこの呼び出しに到達するまで、タイルのすべてのスレッドの実行をブロックします。 これにより`tile_static`メモリ アクセスがスレッド タイルの他のスレッドから参照でき、プログラムの順序で実行されます。  
   
 ### <a name="syntax"></a>構文 
   

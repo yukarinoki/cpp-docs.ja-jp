@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8af4a1b2ee763dfc28288058d27b1b08721fd97
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3bef300671894e054ddf9b1ca0ab9dcf3b135370
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756065"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019420"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>デバッグとエラー報告に関するグローバル関数
 
@@ -63,7 +63,7 @@ AtlHresultFromWin32(DWORD error);
 
 ### <a name="parameters"></a>パラメーター
 
-*error*  
+*error*<br/>
 変換するエラー値。
 
 ### <a name="remarks"></a>Remarks
@@ -129,28 +129,28 @@ HRESULT WINAPI AtlReportError(
 
 ### <a name="parameters"></a>パラメーター
 
-*clsid*  
+*clsid*<br/>
 [in]エラーを報告するオブジェクトの CLSID。
 
-*lpszDesc*  
+*lpszDesc*<br/>
 [in]エラーを説明する文字列。 Unicode バージョンを指定する*lpszDesc*の入力 LPCOLESTR; ANSI バージョンは、LPCSTR の種類を指定します。
 
-*iid*  
+*iid*<br/>
 [in]エラーがオペレーティング システムによって定義されている場合は、エラーまたは GUID_ を定義するインターフェイスの IID。
 
-*hRes*  
+*hRes*<br/>
 [in]呼び出し元に必要な HRESULT が返されます。
 
-*nID*  
+*nID*<br/>
 [in]エラー説明文字列が格納されているリソースの識別子です。 この値は 0x0200 と 0 xffff の範囲である必要があります。 デバッグ ビルドで、 **ASSERT**なります*nID*有効な文字列のインデックスを作成しません。 リリース ビルドでエラーを説明する文字列を「不明なエラー」に設定されます。
 
-*dwHelpID*  
+*dwHelpID*<br/>
 [in]エラーのヘルプ コンテキスト識別子。
 
-*lpszHelpFile*  
+*lpszHelpFile*<br/>
 [in]パスとエラーを説明するヘルプ ファイルの名前。
 
-*hInst*  
+*hInst*<br/>
 [in]リソースへのハンドル。 このパラメーターは、既定では、`__AtlBaseModuleModule::GetResourceInstance`ここで、`__AtlBaseModuleModule`のグローバル インスタンス[CAtlBaseModule](../../atl/reference/catlbasemodule-class.md)またはその派生クラス。
 
 ### <a name="return-value"></a>戻り値
@@ -182,7 +182,7 @@ __declspec(noreturn) inline void AtlThrow(HRESULT hr);
 
 ### <a name="parameters"></a>パラメーター
 
-*hr*  
+*hr*<br/>
 標準の HRESULT 値。
 
 ### <a name="remarks"></a>Remarks
@@ -233,6 +233,6 @@ ATL プロジェクトでシンボルが定義されていない場合、関数�
 
 ## <a name="see-also"></a>関連項目
 
-[関数](../../atl/reference/atl-functions.md)   
+[関数](../../atl/reference/atl-functions.md)<br/>
 [デバッグとエラー報告に関するマクロ](../../atl/reference/debugging-and-error-reporting-macros.md)
 

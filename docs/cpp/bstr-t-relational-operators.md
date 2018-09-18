@@ -39,34 +39,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97595b29c2d79cd6209479e39987208cafe6f0f8
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 0804e2a3e9d2f1fc37fae1eb72599f481e6b8c7e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401783"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021003"
 ---
 # <a name="bstrt-relational-operators"></a>_bstr_t 関係演算子
-**Microsoft 固有の仕様**  
-  
- 2 つの `_bstr_t` オブジェクトを比較します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-bool operator!( ) const throw( );   
-bool operator==(const _bstr_t& str) const throw( );  
-bool operator!=(const _bstr_t& str) const throw( );  
-bool operator<(const _bstr_t& str) const throw( );  
-bool operator>(const _bstr_t& str) const throw( );  
-bool operator<=(const _bstr_t& str) const throw( );  
-bool operator>=(const _bstr_t& str) const throw( );  
-```  
-  
-## <a name="remarks"></a>Remarks  
- これらの演算子は 2 つの `_bstr_t` オブジェクトを辞書式に比較します。 演算子は TRUE を返します、比較が保持している場合は FALSE を返しますそれ以外の場合。  
-  
- **Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- [_bstr_t クラス](../cpp/bstr-t-class.md)
+
+**Microsoft 固有の仕様**
+
+2 つの `_bstr_t` オブジェクトを比較します。
+
+## <a name="syntax"></a>構文
+
+```
+bool operator!( ) const throw( ); 
+bool operator==(const _bstr_t& str) const throw( );
+bool operator!=(const _bstr_t& str) const throw( );
+bool operator<(const _bstr_t& str) const throw( );
+bool operator>(const _bstr_t& str) const throw( );
+bool operator<=(const _bstr_t& str) const throw( );
+bool operator>=(const _bstr_t& str) const throw( );
+```
+
+## <a name="remarks"></a>Remarks
+
+これらの演算子は 2 つの `_bstr_t` オブジェクトを辞書式に比較します。 演算子は TRUE を返します、比較が保持している場合は FALSE を返しますそれ以外の場合。
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
+[_bstr_t クラス](../cpp/bstr-t-class.md)

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 324df7657be7f74cade6fc4b50b98d6790245ab4
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 69882f9b22d11de139951b6196b58729af70a36a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027090"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018146"
 ---
 # <a name="cwinformsdialog-class"></a>CWinFormsDialog クラス
 Windows フォーム ユーザー コントロールをホストする MFC ダイアログ クラスのラッパーです。  
@@ -43,8 +43,8 @@ class CWinFormsDialog :
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `TManagedControl`  
- MFC アプリケーションに表示される .NET Framework ユーザー コントロール。  
+*TManagedControl*<br/>
+MFC アプリケーションに表示される .NET Framework ユーザー コントロール。  
   
 ## <a name="members"></a>メンバー  
   
@@ -64,7 +64,7 @@ class CWinFormsDialog :
   
 ### <a name="public-operators"></a>パブリック演算子  
   
-|name||  
+|名前||  
 |----------|-|  
 |[CWinFormsDialog::operator-&gt;](#operator_-_gt)|置換[CWinFormsDialog::GetControl](#getcontrol)式で。|  
 |[CWinFormsDialog::operator TManagedControl ^](#operator_tmanagedcontrol)|Windows フォーム ユーザー コントロールへの参照として型をキャストします。|  
@@ -74,7 +74,7 @@ class CWinFormsDialog :
   
  Windows フォームの使用に関する詳細については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)と[MFC ダイアログ ボックスとしての Windows フォーム ユーザー コントロールをホストしている](../../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md)します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwinforms.h  
   
 ##  <a name="cwinformsdialog"></a>  CWinFormsDialog::CWinFormsDialog  

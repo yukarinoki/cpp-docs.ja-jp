@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cb05f61d3cd90177fe5e44ce432430ba8f74dd5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: af215609ac9579a357539a0d2d0a85c78f6dbc13
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754814"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017964"
 ---
 # <a name="cdynamicchain-class"></a>CDynamicChain クラス
 
@@ -104,22 +104,22 @@ BOOL CallChain(
 
 ### <a name="parameters"></a>パラメーター
 
-*dwChainID*  
+*dwChainID*<br/>
 [in]チェーンされたオブジェクトとそのメッセージ マップに関連付けられている一意の識別子。
 
-*hWnd*  
+*hWnd*<br/>
 [in]メッセージを受信するウィンドウ ハンドル。
 
-*uMsg*  
+*uMsg*<br/>
 [in]ウィンドウに送信されるメッセージ。
 
-*wParam*  
+*wParam*<br/>
 [in]追加のメッセージに固有の情報。
 
-*lParam*  
+*lParam*<br/>
 [in]追加のメッセージに固有の情報。
 
-*lResult*  
+*lResult*<br/>
 [out]メッセージの処理の結果。
 
 ### <a name="return-value"></a>戻り値
@@ -162,7 +162,7 @@ BOOL RemoveChainEntry(DWORD dwChainID);
 
 ### <a name="parameters"></a>パラメーター
 
-*dwChainID*  
+*dwChainID*<br/>
 [in]チェーンされたオブジェクトとそのメッセージ マップに関連付けられている一意の識別子。 最初の呼び出しによってこの値を定義する[SetChainEntry](#setchainentry)します。
 
 ### <a name="return-value"></a>戻り値
@@ -182,13 +182,13 @@ BOOL SetChainEntry(
 
 ### <a name="parameters"></a>パラメーター
 
-*dwChainID*  
+*dwChainID*<br/>
 [in]チェーンされたオブジェクトとそのメッセージ マップに関連付けられている一意の識別子。
 
-*pObject*  
+*pObject*<br/>
 [in]メッセージ マップを宣言するチェーン オブジェクトへのポインター。 このオブジェクトはから派生する必要があります[CMessageMap](../../atl/reference/cmessagemap-class.md)します。
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in]チェーンされたオブジェクトでメッセージ マップの識別子。 既定値は 0 で、既定のメッセージ マップを使用して宣言を識別する[送るに](message-map-macros-atl.md#begin_msg_map)します。 宣言された、代替メッセージ マップを指定する[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)、渡す`msgMapID`します。
 
 ### <a name="return-value"></a>戻り値
@@ -201,5 +201,5 @@ TRUE の場合、メッセージ マップがコレクションに追加され�
 
 ## <a name="see-also"></a>関連項目
 
-[CWindowImpl クラス](../../atl/reference/cwindowimpl-class.md)   
+[CWindowImpl クラス](../../atl/reference/cwindowimpl-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

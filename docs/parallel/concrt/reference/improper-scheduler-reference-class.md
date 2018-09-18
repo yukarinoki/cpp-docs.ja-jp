@@ -1,5 +1,5 @@
 ---
-title: improper_scheduler_reference クラス |Microsoft ドキュメント
+title: improper_scheduler_reference クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 320e0f4560baa5b07c982ca9af6134cf2bfdc292
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: adc6467a66163eeef5916580181005cac1a0a4b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695656"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016938"
 ---
 # <a name="improperschedulerreference-class"></a>improper_scheduler_reference クラス
 このクラスは、終了中の `Reference` オブジェクトで、スケジューラに属していないコンテキストから `Scheduler` メソッドが呼び出された場合にスローされる例外を表します。  
@@ -63,8 +63,8 @@ improper_scheduler_reference() throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Message`  
- エラーの説明メッセージ。  
+*メッセージ (_m)*<br/>
+エラーの説明メッセージ。  
   
 ## <a name="see-also"></a>関連項目  
  [同時実行 Namespace](concurrency-namespace.md)   

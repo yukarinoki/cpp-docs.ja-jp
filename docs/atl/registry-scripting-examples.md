@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dc28d8a0d5dc24d0f0c665e5a17fc38e0c9d08f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eabb923b165d407f77554d88d710cd7c67a14240
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753150"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022112"
 ---
 # <a name="registry-scripting-examples"></a>レジストリ スクリプトの例
 
@@ -32,17 +32,17 @@ ms.locfileid: "43753150"
 
 次の解析ツリーは、1 つのキーをシステム レジストリに追加する単純なスクリプトを示しています。 具体的には、スクリプトは、キーを追加します。`MyVeryOwnKey`を`HKEY_CURRENT_USER`します。 既定の文字列値を割り当てます`HowGoesIt`新しいキー。
 
-```  
-HKEY_CURRENT_USER  
+```
+HKEY_CURRENT_USER
 {  
-'MyVeryOwnKey' = s 'HowGoesIt'  
-}  
+    'MyVeryOwnKey' = s 'HowGoesIt'
+}
 ```
 
 このスクリプトは、複数のサブキーを次のように定義を簡単に拡張できます。
 
-```  
-HKCU  
+```
+HKCU
 {  
     'MyVeryOwnKey' = s 'HowGoesIt'  
     {  
@@ -51,8 +51,8 @@ HKCU
             'PrettyCool' = d '55'  
             val 'ANameValue' = s 'WithANamedValue'  
         }  
-    }  
-}  
+    }
+}
 ```
 
 ここで、スクリプトは、サブキーを追加します。`HasASubkey`を`MyVeryOwnKey`します。 追加どちらも、このサブキーに、`PrettyCool`サブキー (既定値は、 `DWORD` 55 の値)、`ANameValue`名前付きの値 (の文字列値を持つ`WithANamedValue`)。
@@ -61,8 +61,8 @@ HKCU
 
 次のスクリプトでは、レジストラーの COM サーバー自体を登録します。
 
-```  
-HKCR  
+```
+HKCR
 {  
     ATL.Registrar = s 'ATL Registrar Class'  
     {  
@@ -78,8 +78,8 @@ HKCR
                 val ThreadingModel = s 'Apartment'  
             }  
         }  
-    }  
-}  
+    }
+}
 ```
 
 この解析ツリーを追加、実行時に、`ATL.Registrar`キー`HKEY_CLASSES_ROOT`します。 この新しいキーにし、it:
@@ -106,15 +106,15 @@ HKCR
 
 スクリプトでは、複数の解析ツリーを指定するには、別の最後に 1 つのツリーを配置します。 たとえば、次のスクリプトは、キーを追加します`MyVeryOwnKey`、両方の解析ツリーを`HKEY_CLASSES_ROOT`と`HKEY_CURRENT_USER`:。
 
-```  
-HKCR  
+```
+HKCR
 {  
-    'MyVeryOwnKey' = s 'HowGoesIt'  
-}  
-HKEY_CURRENT_USER  
+    'MyVeryOwnKey' = s 'HowGoesIt'
+}
+HKEY_CURRENT_USER
 {  
-    'MyVeryOwnKey' = s 'HowGoesIt'  
-}  
+    'MyVeryOwnKey' = s 'HowGoesIt'
+}
 ```
 
 > [!NOTE]

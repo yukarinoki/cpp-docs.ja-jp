@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97c88b73499948db4e8fc0645b2d59f7b92b3cfe
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 77e7cd29c38706078dbcb2cc9718827d8c8cc583
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753179"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022995"
 ---
 # <a name="csid-class"></a>CSid クラス
 
@@ -156,22 +156,22 @@ explicit CSid(
 
 ### <a name="parameters"></a>パラメーター
 
-*rhs*  
+*rhs*<br/>
 既存の`CSid`オブジェクトまたは`SID`(セキュリティ識別子) 構造体。
 
-*IdentifierAuthority*  
+*IdentifierAuthority*<br/>
 証明機関。
 
-*nSubAuthorityCount*  
+*nSubAuthorityCount*<br/>
 副機関の数。
 
-*pszAccountName*  
+*pszAccountName*<br/>
 アカウント名。
 
-*pszSystem*  
+*pszSystem*<br/>
 システム名。 この文字列には、リモート コンピューターの名前を使用できます。 この文字列が NULL の場合は、代わりにローカル システムが使用されます。
 
-*pSid*  
+*pSid*<br/>
 ポインター、`SID`構造体。
 
 ### <a name="remarks"></a>Remarks
@@ -233,7 +233,7 @@ bool EqualPrefix(const CSid& rhs) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*rhs*  
+*rhs*<br/>
 `SID` (セキュリティ識別子) 構造体または`CSid`と比較するオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -300,7 +300,7 @@ DWORD GetSubAuthority(DWORD nSubAuthority) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nSubAuthority*  
+*nSubAuthority*<br/>
 副機関。
 
 ### <a name="return-value"></a>戻り値
@@ -363,13 +363,13 @@ bool LoadAccount(
 
 ### <a name="parameters"></a>パラメーター
 
-*pszAccountName*  
+*pszAccountName*<br/>
 アカウント名。
 
-*pszSystem*  
+*pszSystem*<br/>
 システム名。 この文字列には、リモート コンピューターの名前を使用できます。 この文字列が NULL の場合は、代わりにローカル システムが使用されます。
 
-*pSid*  
+*pSid*<br/>
 ポインターを[SID](/windows/desktop/api/winnt/ns-winnt-_sid)構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -385,13 +385,13 @@ bool LoadAccount(
 代入演算子。
 
 ```
-CSid& operator= (const CSid& rhs) throw(...);  
+CSid& operator= (const CSid& rhs) throw(...);
 CSid& operator= (const SID& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*rhs*  
+*rhs*<br/>
 `SID` (セキュリティ識別子) または`CSid`に割り当てる、`CSid`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -410,10 +410,10 @@ bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-*lhs*  
+*lhs*<br/>
 `SID` (セキュリティ識別子) または`CSid`の左側に表示される、演算子 = =。
 
-*rhs*  
+*rhs*<br/>
 `SID` (セキュリティ識別子) または`CSid`の右側に表示される、演算子 = =。
 
 ### <a name="return-value"></a>戻り値
@@ -432,10 +432,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-*lhs*  
+*lhs*<br/>
 `SID` (セキュリティ識別子) または`CSid`の左側に表示される、! = 演算子。
 
-*rhs*  
+*rhs*<br/>
 `SID` (セキュリティ識別子) または`CSid`の右側に表示される、! = 演算子。
 
 ### <a name="return-value"></a>戻り値
@@ -454,10 +454,10 @@ bool operator<(
 
 ### <a name="parameters"></a>パラメーター
 
-*lhs*  
+*lhs*<br/>
 `SID` (セキュリティ識別子) または`CSid`の左側に表示される、! = 演算子。
 
-*rhs*  
+*rhs*<br/>
 `SID` (セキュリティ識別子) または`CSid`の右側に表示される、! = 演算子。
 
 ### <a name="return-value"></a>戻り値
@@ -476,10 +476,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>パラメーター
 
-*lhs*  
+*lhs*<br/>
 `SID` (セキュリティ識別子) または`CSid`の左側に表示される、! = 演算子。
 
-*rhs*  
+*rhs*<br/>
 `SID` (セキュリティ識別子) または`CSid`の右側に表示される、! = 演算子。
 
 ### <a name="return-value"></a>戻り値
@@ -498,10 +498,10 @@ bool operator>(
 
 ### <a name="parameters"></a>パラメーター
 
-*lhs*  
+*lhs*<br/>
 `SID` (セキュリティ識別子) または`CSid`の左側に表示される、! = 演算子。
 
-*rhs*  
+*rhs*<br/>
 `SID` (セキュリティ識別子) または`CSid`の右側に表示される、! = 演算子。
 
 ### <a name="return-value"></a>戻り値
@@ -520,10 +520,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>パラメーター
 
-*lhs*  
+*lhs*<br/>
 `SID` (セキュリティ識別子) または`CSid`の左側に表示される、! = 演算子。
 
-*rhs*  
+*rhs*<br/>
 `SID` (セキュリティ識別子) または`CSid`の右側に表示される、! = 演算子。
 
 ### <a name="return-value"></a>戻り値
@@ -534,7 +534,7 @@ TRUE の場合*lhs*がより大きいまたは等しい*rhs*、それ以外の�
 
 キャストを`CSid`オブジェクトへのポインターを`SID`(セキュリティ識別子) 構造体。
 
-```  
+```
 operator const SID *() const throw(...);
 ```
 
@@ -584,7 +584,7 @@ SID_NAME_USE SidNameUse() const throw();
 
 ## <a name="see-also"></a>関連項目
 
-[セキュリティのサンプル](../../visual-cpp-samples.md)   
-[クラスの概要](../../atl/atl-class-overview.md)   
-[セキュリティに関するグローバル関数](../../atl/reference/security-global-functions.md)   
+[セキュリティのサンプル](../../visual-cpp-samples.md)<br/>
+[クラスの概要](../../atl/atl-class-overview.md)<br/>
+[セキュリティに関するグローバル関数](../../atl/reference/security-global-functions.md)<br/>
 [演算子](../../atl/reference/atl-operators.md)

@@ -1,5 +1,5 @@
 ---
-title: auto_handle::auto_handle |Microsoft ドキュメント
+title: auto_handle::auto_handle |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: af9ca3d472aa3c942b86d338a6b6f8f25a573ca8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 67cc2393feff127e2b4278f5a5257ea2be102237
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104433"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018601"
 ---
 # <a name="autohandleautohandle"></a>auto_handle::auto_handle
-`auto_handle`コンス トラクターです。  
+`auto_handle`コンス トラクター。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,11 +47,11 @@ auto_handle(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `_ptr`  
- 所有するオブジェクト。  
+*_ptr*<br/>
+所有するオブジェクト。  
   
- `_right`  
- 既存の `auto_handle`。  
+*(_r)*<br/>
+既存の `auto_handle`。  
   
 ## <a name="example"></a>例  
   
@@ -124,6 +124,6 @@ done
  **Namespace** msclr  
   
 ## <a name="see-also"></a>関連項目  
- [auto_handle メンバー](../dotnet/auto-handle-members.md)   
+ [auto_handle のメンバー](../dotnet/auto-handle-members.md)   
  [auto_handle::operator =](../dotnet/auto-handle-operator-assign.md)   
  [auto_handle::~auto_handle](../dotnet/auto-handle-tilde-auto-handle.md)

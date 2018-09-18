@@ -25,14 +25,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: eca3e25e1476023ef4b7192efd2ffbd4170e88ca
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b90d89a5a9541f0c3c68efc8031e6cb1dd87ad84
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571786"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019030"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl クラス
+
 実装を提供、 [ISessionProperties](/previous-versions/windows/desktop/ms713721\(v=vs.85\))インターフェイス。  
   
 ## <a name="syntax"></a>構文
@@ -45,14 +46,16 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- *T*  
- 派生したクラス、`ISessionPropertiesImpl`します。  
+
+*T*<br/>
+派生したクラス、`ISessionPropertiesImpl`します。  
   
- *PropClass*  
- その既定値はユーザー定義プロパティ クラス*T*します。  
+*PropClass*<br/>
+その既定値はユーザー定義プロパティ クラス*T*します。  
 
 ## <a name="requirements"></a>要件  
- **ヘッダー:** atldb.h  
+
+**ヘッダー:** atldb.h  
   
 ## <a name="members"></a>メンバー  
   
@@ -64,9 +67,11 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 |[SetProperties](#setproperties)|セッション プロパティ グループのプロパティを設定します。|  
   
 ## <a name="remarks"></a>Remarks  
- セッションの必須インターフェイス。 このクラスでは、セッションのプロパティを実装によって定義された静的関数を呼び出すことによって、[プロパティ セットのマップ](../../data/oledb/begin-propset-map.md)します。 セッション クラスでは、プロパティ セットのマップを指定する必要があります。  
+
+セッションの必須インターフェイス。 このクラスでは、セッションのプロパティを実装によって定義された静的関数を呼び出すことによって、[プロパティ セットのマップ](../../data/oledb/begin-propset-map.md)します。 セッション クラスでは、プロパティ セットのマップを指定する必要があります。  
   
 ## <a name="getproperties"></a> Isessionpropertiesimpl::getproperties
+
 プロパティの一覧を返します、`DBPROPSET_SESSION`セッションで現在設定されているプロパティ グループ。  
   
 ### <a name="syntax"></a>構文  
@@ -79,9 +84,11 @@ STDMETHOD(GetProperties)(ULONG cPropertyIDSets,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[ISessionProperties::GetProperties](/previous-versions/windows/desktop/ms723643\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。 
+
+参照してください[ISessionProperties::GetProperties](/previous-versions/windows/desktop/ms723643\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。 
 
 ## <a name="setproperties"></a> Isessionpropertiesimpl::setproperties
+
 プロパティを設定、`DBPROPSET_SESSION`プロパティ グループ。  
   
 ### <a name="syntax"></a>構文  
@@ -92,8 +99,10 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[ISessionProperties::SetProperties](/previous-versions/windows/desktop/ms714405\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+
+参照してください[ISessionProperties::SetProperties](/previous-versions/windows/desktop/ms714405\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

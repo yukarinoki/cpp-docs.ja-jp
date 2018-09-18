@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4910 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4910 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,19 +14,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34ed2ec16f579b05a572cf6bfc236cd8d5743f63
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e6db959e467ea449a66feb3ee07c202f4dee002
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290349"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018952"
 ---
 # <a name="compiler-warning-level-1-c4910"></a>コンパイラの警告 (レベル 1) C4910
-'\<識別子 >': '関数' と 'extern' 明示的なインスタンス化に互換性がありません  
-  
- という名前の明示的なテンプレート インスタンス化*\<識別子 >* 両方によって変更、`__declspec(dllexport)`と`extern`キーワード。 ただし、これらのキーワードは、相互に排他的です。 `__declspec(dllexport)` キーワードは、テンプレート クラスのインスタンス化を意味しますが、 `extern` キーワードは、テンプレート クラスを自動的にインスタンス化しないことを意味します。  
-  
-## <a name="see-also"></a>関連項目  
- [明示的なインスタンス化](../../cpp/explicit-instantiation.md)   
- [dllexport、dllimport](../../cpp/dllexport-dllimport.md)   
- [一般的な規則と制約](../../cpp/general-rules-and-limitations.md)
+
+'\<識別子 >': '関数' と 'extern' 明示的なインスタンス化の互換性がありません
+
+という名前の明示的なテンプレートをインスタンス化*\<識別子 >* 両方で変更されたが、`__declspec(dllexport)`と`extern`キーワード。 ただし、これらのキーワードは、相互に排他的です。 `__declspec(dllexport)` キーワードは、テンプレート クラスのインスタンス化を意味しますが、 `extern` キーワードは、テンプレート クラスを自動的にインスタンス化しないことを意味します。
+
+## <a name="see-also"></a>関連項目
+
+[明示的なインスタンス化](../../cpp/explicit-instantiation.md)<br/>
+[dllexport、dllimport](../../cpp/dllexport-dllimport.md)<br/>
+[一般的な規則と制約](../../cpp/general-rules-and-limitations.md)
