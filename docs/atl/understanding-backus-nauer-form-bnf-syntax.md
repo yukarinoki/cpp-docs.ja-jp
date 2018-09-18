@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9acb054c7d991e2d9e98df3ce9bba8c7093f281a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e615068580bcc9078959cc6cdd7831d05b5a4acd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761483"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020876"
 ---
 # <a name="understanding-backus-nauer-form-bnf-syntax"></a>バッカスナウア記法 (Bnf) 構文を理解します。
 
@@ -54,56 +54,56 @@ ATL レジストラー スクリプトで表記と文字列リテラルのしく
 
 ### <a name="syntax-example-1"></a>構文の例 1
 
-```  
-<registry expression> ::= <Add Key>  
+```
+<registry expression> ::= <Add Key>
 ```
 
 指定します`registry expression`と等価`Add Key`します。
 
 ### <a name="syntax-example-2"></a>構文例 2
 
-```  
-<registry expression> ::= <Add Key> | <Delete Key>  
+```
+<registry expression> ::= <Add Key> | <Delete Key>
 ```
 
 指定します`registry expression`はいずれかに相当`Add Key`または`Delete Key`します。
 
 ### <a name="syntax-example-3"></a>構文例 3
 
-```  
-<Key Name> ::= '<AlphaNumeric>+'  
+```
+<Key Name> ::= '<AlphaNumeric>+'
 ```
 
 指定します`Key Name`は 1 つ以上に相当`AlphaNumerics`します。
 
 ### <a name="syntax-example-4"></a>構文例 4
 
-```  
-<Add Key> ::= [ForceRemove | NoRemove | val]<Key Name>  
+```
+<Add Key> ::= [ForceRemove | NoRemove | val]<Key Name>
 ```
 
 指定します`Add Key`と等価`Key Name`、および、文字列リテラル`ForceRemove`、 `NoRemove`、および`val`は省略可能です。
 
 ### <a name="syntax-example-5"></a>構文例 5
 
-```  
-<AlphaNumeric> ::= any character not NULL, that is, ASCII 0  
+```
+<AlphaNumeric> ::= any character not NULL, that is, ASCII 0
 ```
 
 指定します`AlphaNumeric`を NULL 以外の文字と同じです。
 
 ### <a name="syntax-example-6"></a>構文例 6
 
-```  
-val 'testmulti' = m 'String 1\0String 2\0'  
+```
+val 'testmulti' = m 'String 1\0String 2\0'
 ```
 
 指定します、キー名`testmulti`が複数行文字列の値から成る`String 1`と`String 2`します。
 
 ### <a name="syntax-example-7"></a>構文例 7
 
-```  
-val 'testhex' = d '&H55'  
+```
+val 'testhex' = d '&H55'
 ```
 
 指定します、キー名`testhex`DWORD 値は 16 進数の 55 (10 進 85) に設定されます。 この形式に準拠するメモ、 **& H**として表記、Visual Basic 仕様に記載します。

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b389e5b137ef3cdb94ffbb1fc381ebe2e5813963
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4c7751929a55993876034bb3c1918b82193681fc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603971"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016885"
 ---
 # <a name="asyncstatusinternal-enumeration"></a>AsyncStatusInternal 列挙型
 
@@ -40,19 +40,19 @@ enum AsyncStatusInternal;
 
 ## <a name="members"></a>メンバー
 
-`_Created`  
+`_Created`<br/>
 `::Windows::Foundation::AsyncStatus::Created` と同じ意味です。
 
-`_Started`  
+`_Started`<br/>
 `::Windows::Foundation::AsyncStatus::Started` と同じ意味です。
 
-`_Completed`  
+`_Completed`<br/>
 `::Windows::Foundation::AsyncStatus::Completed` と同じ意味です。
 
-`_Cancelled`  
+`_Cancelled`<br/>
 `::Windows::Foundation::AsyncStatus::Cancelled` と同じ意味です。
 
-`_Error`  
+`_Error`<br/>
 `::Windows::Foundation::AsyncStatus::Error` と同じ意味です。
 
 ## <a name="requirements"></a>要件

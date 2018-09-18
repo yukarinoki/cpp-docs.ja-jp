@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed0e105443231853442296748f0e505f3df51b48
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5a3f912f7ba3a5455f7583ba2a5036548ac65df2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753709"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022176"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>ISupportErrorInfoImpl クラス
 
@@ -37,14 +37,14 @@ ms.locfileid: "43753709"
 ## <a name="syntax"></a>構文
 
 ```
-template<const IID* piid>  
+template<const IID* piid>
 class ATL_NO_VTABLE ISupportErrorInfoImpl 
    : public ISupportErrorInfo
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*piid*  
+*piid*<br/>
 サポートするインターフェイスの IID へのポインター [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo)します。
 
 ## <a name="members"></a>メンバー
@@ -95,7 +95,7 @@ STDMETHOD(GetSize)(int* pnNumThreads);
 
 ### <a name="parameters"></a>パラメーター
 
-*pnNumThreads*  
+*pnNumThreads*<br/>
 [out]成功した場合、プールのスレッドの数を受け取る変数のアドレス。
 
 ### <a name="return-value"></a>戻り値
@@ -116,7 +116,7 @@ STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 
 ### <a name="parameters"></a>パラメーター
 
-*pdwMaxWait*  
+*pdwMaxWait*<br/>
 [out]成功した場合、スレッド プール スレッドをシャット ダウンを待機するミリ秒単位で時間の最大値を受け取る変数のアドレス。
 
 ### <a name="return-value"></a>戻り値
@@ -137,7 +137,7 @@ STDMETHOD(SetSize)int nNumThreads);
 
 ### <a name="parameters"></a>パラメーター
 
-*nNumThreads*  
+*nNumThreads*<br/>
 要求されたプール内のスレッド数。
 
 場合*nNumThreads*が負の場合、その絶対値で乗算されますスレッドの合計数を取得するマシンでプロセッサの数。
@@ -162,7 +162,7 @@ STDMETHOD(SetTimeout)(DWORD dwMaxWait);
 
 ### <a name="parameters"></a>パラメーター
 
-*dwMaxWait*  
+*dwMaxWait*<br/>
 スレッド プール スレッドをシャット ダウンを待機するミリ秒単位で要求された最大時間。
 
 ### <a name="return-value"></a>戻り値

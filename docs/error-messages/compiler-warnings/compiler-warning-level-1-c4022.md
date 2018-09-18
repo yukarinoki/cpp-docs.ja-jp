@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4022 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4022 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b4c8f4fcac08fa98064f6def6c04feb43b4b581
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b8d081106435bba8465da2c99f40d62275f5a9b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271744"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018445"
 ---
 # <a name="compiler-warning-level-1-c4022"></a>コンパイラの警告 (レベル 1) C4022
-'function': ポインター実際のパラメーター 'number' が一致しません  
-  
- 実際のパラメーターのポインターの型は、対応する仮パラメーターのポインターの型によって異なります。 実際のパラメーターは、変更せずに渡されます。
+
+'function': 実パラメーター 'number' のポインターが一致しません
+
+実際のパラメーターのポインターの型は、対応する仮パラメーターのポインターの型によって異なります。 実際のパラメーターは、変更せずに渡されます。

@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3276 |Microsoft ドキュメント
+title: コンパイラ エラー C3276 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 337418220b31fc9bad82dce46eef1047ac16f4ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bae371b0e50dca96da49b66d8c9226ba9c25ef06
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248243"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016314"
 ---
 # <a name="compiler-error-c3276"></a>コンパイラ エラー C3276
-'keyword': _ _finally/finally にブロックからのジャンプが動作を終了処理時に定義されていません  
-  
- このエラーと同じ、 [C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md)警告します。 ただし、/clr を使用しているときにこの条件できません無効にすると、[警告](../../preprocessor/warning.md)プラグマ。
+
+'keyword': _ _finally/finally にブロックからのジャンプでが終了処理中に、動作が定義されていません
+
+このエラーは同じ、 [C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md)警告します。 ただし、/clr を使用しているときにこの条件を無効にできませんで、[警告](../../preprocessor/warning.md)プラグマ。

@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0934a3c6690b75ffa2eca18f1fd38662bc2a9fd9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9e747386c37e760793ceaa0396f217304cbe621d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756991"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022683"
 ---
 # <a name="ccomautothreadmodule-class"></a>CComAutoThreadModule クラス
 
@@ -44,13 +44,13 @@ ATL 7.0 では、時点で`CComAutoThreadModule`は廃止されています。 �
 ## <a name="syntax"></a>構文
 
 ```
-template <class ThreadAllocator = CComSimpleThreadAllocator>  
+template <class ThreadAllocator = CComSimpleThreadAllocator>
 class CComAutoThreadModule : public CComModule
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-`ThreadAllocator`  
+*テンプレートパラ*<br/>
 [in]スレッドの選択を管理するクラスです。 既定値は[CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md)します。
 
 ## <a name="members"></a>メンバー
@@ -122,13 +122,13 @@ HRESULT CreateInstance(
 
 ### <a name="parameters"></a>パラメーター
 
-*pfnCreateInstance*  
+*pfnCreateInstance*<br/>
 [in]作成者関数へのポインター。
 
-*riid*  
+*riid*<br/>
 [in]要求されたインターフェイスの IID。
 
-*ppvObj*  
+*ppvObj*<br/>
 [out]によって識別されるインターフェイス ポインターへのポインター *riid*します。 オブジェクトは、このインターフェイスをサポートしていない場合*ppvObj* NULL に設定されます。
 
 ### <a name="return-value"></a>戻り値
@@ -181,16 +181,16 @@ HRESULT Init(
 
 ### <a name="parameters"></a>パラメーター
 
-*p*  
+*p*<br/>
 [in]オブジェクト マップ エントリの配列へのポインター。
 
-*h*  
+*h*<br/>
 [in]渡される、HINSTANCE`DLLMain`または`WinMain`します。
 
-*plibid*  
+*plibid*<br/>
 [in]プロジェクトに関連付けられているタイプ ライブラリの LIBID へのポインター。
 
-*nThreads*  
+*nThreads*<br/>
 [in]作成されるスレッドの数。 既定では、 *nThreads*によって返される値は、 [GetDefaultThreads](#getdefaultthreads)します。
 
 ### <a name="remarks"></a>Remarks
@@ -269,5 +269,5 @@ LONG Unlock();
 
 ## <a name="see-also"></a>関連項目
 
-[クラスの概要](../../atl/atl-class-overview.md)   
+[クラスの概要](../../atl/atl-class-overview.md)<br/>
 [モジュール クラス](../../atl/atl-module-classes.md)

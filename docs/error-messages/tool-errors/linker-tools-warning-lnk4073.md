@@ -1,5 +1,5 @@
 ---
-title: リンカー ツールの警告 LNK4073 |Microsoft ドキュメント
+title: リンカー ツールの警告 LNK4073 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4197d850dbc7a064ebc7c6e33183d83fb9916ebe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eab8643706b3c7468b589bd63c508ec0c2bf5306
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299202"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021915"
 ---
 # <a name="linker-tools-warning-lnk4073"></a>リンカー ツールの警告 LNK4073
-.ilk ファイルのマップを作成することはできません。インクリメンタル リンク  
-  
- 存在していなかった大規模なインクリメンタル ステータス (.ilk) ファイルを作成するリンクの共有メモリ内の連続する十分な領域。 リンクは、ノンインクリメンタル ビルドを実行します。
+
+.ilk ファイルのマップを作成することはできません。インクリメンタル リンク
+
+大規模なインクリメンタル ステータス (.ilk) ファイルを作成するリンクの共有メモリで十分な連続した領域。 リンクは、ノンインクリメンタル ビルドを実行します。

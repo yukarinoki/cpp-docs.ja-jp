@@ -1,5 +1,5 @@
 ---
-title: 場合 (OpenMP) |Microsoft ドキュメント
+title: 場合 (OpenMP) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2467c295c4f2724ec6d258e844f2bdaa84cfe29
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 83e1920ab2cb44815e9547e4f7f4a07999c1c588
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692241"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020954"
 ---
 # <a name="if-openmp"></a>if (OpenMP)
-並列または直列に、ループを実行するかどうかを指定します。  
+直列または並列でループを実行する必要があるかどうかを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -32,13 +32,12 @@ ms.locfileid: "33692241"
 if(expression)  
 ```  
   
-## <a name="remarks"></a>コメント  
- 指定項目  
+### <a name="parameters"></a>パラメーター
   
- `expression`  
- True (ゼロ以外) と評価された場合は、並列実行する並列領域で、コードを原因となる整数式です。 式の評価が false (0)、並列領域が (1 つのスレッド) を直列に実行されます。  
+*式*<br/>
+場合は true (0 以外) に評価されますを並列実行する並列領域で、コードが発生する整数式。 式の評価が false (0) 場合、並列領域は、(1 つのスレッド) をシリアルで実行されます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `if` 次のディレクティブに適用されます。  
   
 -   [parallel](../../../parallel/openmp/reference/parallel.md)  
@@ -47,7 +46,7 @@ if(expression)
   
 -   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
   
- 詳細については、次を参照してください。 [2.3 parallel コンストラクト](../../../parallel/openmp/2-3-parallel-construct.md)です。  
+ 詳細については、次を参照してください。 [2.3 parallel コンストラクト](../../../parallel/openmp/2-3-parallel-construct.md)します。  
   
 ## <a name="example"></a>例  
   

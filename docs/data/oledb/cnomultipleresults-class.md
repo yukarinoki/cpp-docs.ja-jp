@@ -1,5 +1,5 @@
 ---
-title: CNoMultipleResults クラス |Microsoft ドキュメント
+title: CNoMultipleResults クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c2e588021b1600b1b3ac6e04f91ab07649755a2e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 67658f6edadd7723789288ab268b97cecdd611d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33096829"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017355"
 ---
 # <a name="cnomultipleresults-class"></a>CNoMultipleResults クラス
-テンプレート引数として使用 (*TMultiple*) に[CCommand](../../data/oledb/ccommand-class.md)セットを 1 つの結果を処理する最適化されたコマンドを作成します。  
+
+テンプレート引数として使用 (*TMultiple*) に[CCommand](../../data/oledb/ccommand-class.md) 1 つの結果を処理する最適化されたコマンドを作成するには設定します。  
   
 ## <a name="syntax"></a>構文
 
@@ -35,12 +36,15 @@ ms.locfileid: "33096829"
 class CNoMultipleResults  
 ```  
   
-## <a name="remarks"></a>コメント  
- 複数の結果セットを処理するコマンドを実行する場合に、使用[CMultipleResults](../../data/oledb/cmultipleresults-class.md)代わりにします。  
+## <a name="remarks"></a>Remarks  
+
+複数の結果セットを処理するためのコマンドを実行する場合に、使用[CMultipleResults](../../data/oledb/cmultipleresults-class.md)代わりにします。  
   
 ## <a name="requirements"></a>要件  
- **ヘッダー:** atldbcli.h  
+
+**ヘッダー:** atldbcli.h  
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)

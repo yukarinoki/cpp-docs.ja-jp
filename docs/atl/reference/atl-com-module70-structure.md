@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf975b0b434218d1917c2d630582e32cd287e298
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7cfa52749f6789ef8bfe65f9bdcdf5238923216f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755074"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019383"
 ---
 # <a name="atlcommodule70-structure"></a>_ATL_COM_MODULE70 構造体
 
@@ -44,19 +44,19 @@ struct _ATL_COM_MODULE70 {
 
 ## <a name="members"></a>メンバー
 
-`cbSize`  
+`cbSize`<br/>
 バージョン管理に使用される、構造のサイズ。
 
-`m_hInstTypeLib`  
+`m_hInstTypeLib`<br/>
 このモジュールのタイプ ライブラリへのハンドルのインスタンス。
 
-`m_ppAutoObjMapFirst`  
+`m_ppAutoObjMapFirst`<br/>
 このモジュールのオブジェクトのマップ エントリの先頭を示す、配列要素のアドレス。
 
-`m_ppAutoObjMapLast`  
+`m_ppAutoObjMapLast`<br/>
 このモジュールのオブジェクトのマップ エントリの終了を示す、配列要素のアドレス。
 
-`m_csObjMap`  
+`m_csObjMap`<br/>
 オブジェクトのマップ エントリへのアクセスをシリアル化するクリティカル セクション。 ATL で内部的に使用
 
 ## <a name="remarks"></a>Remarks

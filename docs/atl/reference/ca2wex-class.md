@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9ac0528f383f1d379699c153a87507a1a292e21
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eff9e2211d0ddf9cf2d9c4bb0c10040ae20a53e6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767505"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020261"
 ---
 # <a name="ca2wex-class"></a>CA2WEX クラス
 
@@ -43,7 +43,7 @@ class CA2WEX
 
 #### <a name="parameters"></a>パラメーター
 
-*t_nBufferLength*  
+*t_nBufferLength*<br/>
 変換プロセスで使用されるバッファーのサイズ。 既定の長さは 128 バイトです。
 
 ## <a name="members"></a>メンバー
@@ -113,10 +113,10 @@ CA2WEX(LPCSTR psz) throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*2 つ*  
+*2 つ*<br/>
 変換するテキスト文字列。
 
-*nCodePage*  
+*nCodePage*<br/>
 コード ページ変換を実行するために使用します。 Windows SDK 関数のコード ページ パラメーターの説明を参照してください。 [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)の詳細。
 
 ### <a name="remarks"></a>Remarks
@@ -155,7 +155,7 @@ wchar_t m_szBuffer[t_nBufferLength];
 
 変換演算子。
 
-```  
+```
 operator LPWSTR() const throw();
 ```
 
@@ -165,9 +165,9 @@ LPWSTR を入力すると、テキスト文字列を返します。
 
 ## <a name="see-also"></a>関連項目
 
-[CA2AEX クラス](../../atl/reference/ca2aex-class.md)   
-[CA2CAEX クラス](../../atl/reference/ca2caex-class.md)   
-[CW2AEX クラス](../../atl/reference/cw2aex-class.md)   
-[CW2CWEX クラス](../../atl/reference/cw2cwex-class.md)   
-[CW2WEX クラス](../../atl/reference/cw2wex-class.md)   
+[CA2AEX クラス](../../atl/reference/ca2aex-class.md)<br/>
+[CA2CAEX クラス](../../atl/reference/ca2caex-class.md)<br/>
+[CW2AEX クラス](../../atl/reference/cw2aex-class.md)<br/>
+[CW2CWEX クラス](../../atl/reference/cw2cwex-class.md)<br/>
+[CW2WEX クラス](../../atl/reference/cw2wex-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

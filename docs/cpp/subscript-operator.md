@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb54752efb23db7599538e6dc2b71ea3bf5eb3a3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cf12d517647e36c8a0d9428b818f3812bfea2e1d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197336"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020617"
 ---
 # <a name="subscript-operator-"></a>添字演算子
 
@@ -64,7 +64,7 @@ double aDbl[2];
 
 *expression1* **[** *expression2* **] [** *expression3* **]** .
 
-添字式は、左から右へ関連付けられます。 左端の添字式、 *expression1* **[** *expression2* **]**、最初に評価されます。 *expression1* と *expression2* を加算した結果として得られるアドレスからポインター式が形成され、次にこのポインター式に *expression3* が加算されて新しいポインター式が形成されます。このようにして、最後の添字式が加算されるまで処理が行われます。 間接演算子 (<strong>\*</strong>) 最終的なポインター値が配列型に対応しない限り、最後の添字式が評価された後に適用します。
+添字式は、左から右へ関連付けられます。 左端の添字式、*expression1* **[** *expression2* **]** が最初に評価されます。 *expression1* と *expression2* を加算した結果として得られるアドレスからポインター式が形成され、次にこのポインター式に *expression3* が加算されて新しいポインター式が形成されます。このようにして、最後の添字式が加算されるまで処理が行われます。 間接演算子 (<strong>\*</strong>) 最終的なポインター値が配列型に対応しない限り、最後の添字式が評価された後に適用します。
 
 複数の添字を持つ式は、多次元配列の要素を参照します。 多次元配列は、要素が配列である配列です。 たとえば、3 次元配列の最初の要素は 2 次元配列です。 次の例では、文字の単純な 2 次元配列を宣言して初期化しています。
 
@@ -120,6 +120,6 @@ int main() {
 
 [後置式](../cpp/postfix-expressions.md)<br/>
 [C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
-[配列](../cpp/arrays-cpp.md)
+[配列](../cpp/arrays-cpp.md)<br/>
 [1 次元配列](../c-language/one-dimensional-arrays.md)<br/>
 [多次元配列](../c-language/multidimensional-arrays-c.md)<br/>

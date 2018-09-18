@@ -41,14 +41,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 85f08ae7a996a762be915bcce820c33a0a8e549c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: afae1f91907e8fd22640dd87fe607a067900edfa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572269"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024646"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset クラス
+
 行セットと 1 つのクラスに関連付けられているそのアクセサーをカプセル化します。  
   
 ## <a name="syntax"></a>構文
@@ -60,14 +61,16 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- *TAccessor*  
- アクセサー クラス。  
+
+*TAccessor*<br/>
+アクセサー クラス。  
   
- *TRowset*  
- 行セット クラスです。  
+*TRowset*<br/>
+行セット クラスです。  
 
 ## <a name="requirements"></a>要件  
- **ヘッダー:** atldbcli.h  
+
+**ヘッダー:** atldbcli.h  
   
 ## <a name="members"></a>メンバー  
   
@@ -75,16 +78,18 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
   
 |||  
 |-|-|  
-|[バインド](#bind)|バインドを作成します (際に使用される`bBind`として指定されて**false**で[ccommand::open](../../data/oledb/ccommand-open.md))。|  
+|[Bind](#bind)|バインドを作成します (際に使用される`bBind`として指定されて**false**で[ccommand::open](../../data/oledb/ccommand-open.md))。|  
 |[CAccessorRowset](#caccessorrowset)|コンストラクターです。|  
 |[閉じる](#close)|行セットとすべてのアクセサーを閉じます。|  
 |[FreeRecordMemory](#freerecordmemory)|解放する必要がある現在のレコード内の列を解放します。|  
 |[GetColumnInfo](#getcolumninfo)|実装[icolumnsinfo::getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))します。|  
   
 ## <a name="remarks"></a>Remarks  
- クラス`TAccessor`アクセサーを管理します。 クラス*TRowset*行セットを管理します。  
+
+クラス`TAccessor`アクセサーを管理します。 クラス*TRowset*行セットを管理します。  
 
 ## <a name="bind"></a> Caccessorrowset::bind
+
 指定した場合は、バインドを作成します。`bBind`として**false**で[ccommand::open](../../data/oledb/ccommand-open.md)します。  
   
 ### <a name="syntax"></a>構文  
@@ -94,9 +99,11 @@ HRESULT Bind();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 標準の HRESULT です。  
+
+標準の HRESULT です。  
 
 ## <a name="caccessorrowset"></a> Caccessorrowset::caccessorrowset
+
 `CAccessorRowset` オブジェクトを初期化します。  
   
 ### <a name="syntax"></a>構文  
@@ -106,6 +113,7 @@ CAccessorRowset();
 ```  
 
 ## <a name="close"></a> Caccessorrowset::close
+
 アクティブなアクセサーと行セットを解放します。  
   
 ### <a name="syntax"></a>構文  
@@ -115,9 +123,11 @@ void Close();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 関連付けられているメモリを解放します。  
+
+関連付けられているメモリを解放します。  
 
 ## <a name="freerecordmemory"></a> Caccessorrowset::freerecordmemory
+
 解放する必要がある現在のレコード内の列を解放します。  
   
 ### <a name="syntax"></a>構文  
@@ -127,6 +137,7 @@ void FreeRecordMemory();
 ```  
 
 ## <a name="getcolumninfo"></a> Caccessorrowset::getcolumninfo
+
 開かれた行セットから列情報を取得します。  
   
 ### <a name="syntax"></a>構文  
@@ -141,16 +152,20 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[icolumnsinfo::getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+
+参照してください[icolumnsinfo::getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の HRESULT です。  
+
+標準の HRESULT です。  
   
 ### <a name="remarks"></a>Remarks  
- ユーザーは、返される列情報と文字列バッファーを解放する必要があります。 使用する場合は、このメソッドの 2 番目のバージョンを使用して[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)バインディングをオーバーライドする必要があります。  
+
+ユーザーは、返される列情報と文字列バッファーを解放する必要があります。 使用する場合は、このメソッドの 2 番目のバージョンを使用して[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)バインディングをオーバーライドする必要があります。  
   
- 詳細については、次を参照してください。 [icolumnsinfo::getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+詳細については、次を参照してください。 [icolumnsinfo::getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)

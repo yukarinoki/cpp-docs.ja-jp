@@ -1,5 +1,5 @@
 ---
-title: progress_reporter クラス |Microsoft ドキュメント
+title: progress_reporter クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5d4dc98c4fb411a4d63fdfad5049cf0df723bec
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 6d4a1b76966216a6dc7b2e7249bddb1ac629376f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686566"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016768"
 ---
 # <a name="progressreporter-class"></a>progress_reporter クラス
 progress reporter クラスは、特定の型の進行状況の通知をレポートできます。 各 progress_reporter オブジェクトが、特定の非同期アクションまたは操作にバインドされます。  
@@ -37,8 +37,8 @@ class progress_reporter;
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `_ProgressType`  
- progress_reporter クラスによって報告される進行状況の各通知のペイロードの種類。  
+*_ProgressType*<br/>
+progress_reporter クラスによって報告される進行状況の各通知のペイロードの種類。  
   
 ## <a name="members"></a>メンバー  
   
@@ -54,7 +54,7 @@ class progress_reporter;
 |----------|-----------------|  
 |[report](#report)|progress reporter クラスのバインド先となる非同期アクションまたは非同期操作に、進行状況レポートを送信します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  この型は、Windows ランタイム アプリをできるだけです。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
@@ -80,8 +80,8 @@ void report(const _ProgressType& val) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `val`  
- 進行状況を示す通知によって報告されるペイロード。  
+*val*<br/>
+進行状況を示す通知によって報告されるペイロード。  
   
 ## <a name="see-also"></a>関連項目  
  [concurrency 名前空間](concurrency-namespace.md)

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bf2ede32583715a19840ce861aa3ed6445fd7cd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 46a42c92115ee60a0387e58b2acd5ce640e60eae
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766406"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46015638"
 ---
 # <a name="persistence-classes"></a>永続化クラス
 
@@ -40,6 +40,6 @@ ms.locfileid: "43766406"
 
 ## <a name="see-also"></a>関連項目
 
-[クラスの概要](../atl/atl-class-overview.md)   
+[クラスの概要](../atl/atl-class-overview.md)<br/>
 [プロパティ マップに関するマクロ](../atl/reference/property-map-macros.md)
 

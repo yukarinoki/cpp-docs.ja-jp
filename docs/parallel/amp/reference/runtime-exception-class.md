@@ -1,5 +1,5 @@
 ---
-title: runtime_exception クラス |Microsoft ドキュメント
+title: runtime_exception クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff10cb3958ffa82e3ef2bb70d8370d1a52c4a929
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 8f0cd5e025e8f8b442c47cb5e115766478ff1d4f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695747"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019904"
 ---
 # <a name="runtimeexception-class"></a>runtime_exception クラス
 C++ Accelerated Massive Parallelism (AMP) ライブラリ内の例外の基本型。  
@@ -85,14 +85,14 @@ runtime_exception(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Message`  
- この例外の原因になったエラーの説明。  
+*メッセージ (_m)*<br/>
+この例外の原因になったエラーの説明。  
   
- `_Hresult`  
- この例外の原因になったエラーの HRESULT。  
+*_Hresult*<br/>
+この例外の原因になったエラーの HRESULT。  
   
- `_Other`  
- コピーする `runtime_exception` オブジェクト。  
+*_Other*<br/>
+コピーする `runtime_exception` オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  `runtime_exception` オブジェクト。  
@@ -128,8 +128,8 @@ runtime_exception & operator= (    const runtime_exception & _Other ) throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Other`  
- コピーする `runtime_exception` オブジェクト。  
+*_Other*<br/>
+コピーする `runtime_exception` オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  この `runtime_exception` オブジェクトへの参照。  

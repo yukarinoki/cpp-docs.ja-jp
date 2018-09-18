@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 3) C4265 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 3) C4265 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0c859e69095b1a7e6b756b0bcc7ca8e74ba8826
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0df54714038ab0fb6020e34aa35d677af5e899b4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302790"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016131"
 ---
 # <a name="compiler-warning-level-3-c4265"></a>コンパイラの警告 (レベル 3) C4265
-'class': クラスは仮想関数を含んでいますが、デストラクターが仮想ではありません。  
-  
- 非仮想デストラクターですが仮想関数をクラスには、ときにオブジェクト型の可能性があります破棄されません正しくクラスが基底クラスへのポインターから破棄されるときにします。  
-  
- 既定では、この警告はオフに設定されています。 詳細については、「 [既定で無効になっているコンパイラ警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 」を参照してください。  
-  
- 次の例では、C4265 が生成されます。  
-  
-```  
-// C4265.cpp  
-// compile with: /W3 /c  
-#pragma warning(default : 4265)  
-class B  
-{  
-public:  
-   virtual void vmf();  
-  
-   ~B();  
-   // try the following line instead  
-   // virtual ~B();  
-};   // C4265  
-  
-int main()  
-{  
-   B b;  
-}  
+
+'class': クラスは仮想関数を含んでいますが、デストラクターが仮想ではありません。
+
+クラスは、非仮想デストラクターですが仮想関数が、オブジェクト型の可能性があります破棄されません正しく、基底クラスのポインターを介して、クラスが破棄されるときに。
+
+既定では、この警告はオフに設定されています。 詳細については、「 [既定で無効になっているコンパイラ警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 」を参照してください。
+
+次の例では、C4265 が生成されます。
+
+```
+// C4265.cpp
+// compile with: /W3 /c
+#pragma warning(default : 4265)
+class B
+{
+public:
+   virtual void vmf();
+
+   ~B();
+   // try the following line instead
+   // virtual ~B();
+};   // C4265
+
+int main()
+{
+   B b;
+}
 ```

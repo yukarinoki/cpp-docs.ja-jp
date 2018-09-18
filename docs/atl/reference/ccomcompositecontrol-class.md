@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a0622e939d1c0cb93579baeb5fa35e11be516e5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5940461a16dcb86fbb062937fe7330c1b6e04f75
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756575"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021136"
 ---
 # <a name="ccomcompositecontrol-class"></a>CComCompositeControl クラス
 
@@ -43,13 +43,13 @@ ms.locfileid: "43756575"
 ## <a name="syntax"></a>構文
 
 ```
-template <class T>  
+template <class T>
 class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 派生したクラス、 [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)または[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)複合コントロールをサポートするために必要なその他のすべてのインターフェイスからも、します。
 
 ## <a name="members"></a>メンバー
@@ -122,28 +122,19 @@ HRESULT AdviseSinkMap(bool bAdvise);
 
 ### <a name="parameters"></a>パラメーター
 
-*bAdvise*  
+*bAdvise*<br/>
 すべてのコントロールがあることをお勧めします。 には、true を返します。それ以外の場合は false。
 
 ### <a name="return-value"></a>戻り値
 
-S_OK  
-すべてのコントロール、イベント シンク マップに接続されたか、イベント ソースから正常に切断します。
-
-E_FAIL  
-すべてを制御、イベント シンク マップを接続されているか、イベント ソースから正常に切断された可能性があります。
-
-E_POINTER  
-このエラーは、コントロールのイベント シンク マップ内のエントリの問題またはで使用されるテンプレート引数の問題には、通常を示します、`IDispEventImpl`または`IDispEventSimpleImpl`基本クラス。
-
-CONNECT_E_ADVISELIMIT  
-接続ポイントは、接続の上限に既に達してし、以上を受け入れることはできません。
-
-CONNECT_E_CANNOTCONNECT  
-シンクは、このコネクション ポイントが必要なインターフェイスをサポートしていません。
-
-CONNECT_E_NOCONNECTION  
-Cookie の値は、有効な接続を表していません。 このエラーは、コントロールのイベント シンク マップ内のエントリの問題またはで使用されるテンプレート引数の問題には、通常を示します、`IDispEventImpl`または`IDispEventSimpleImpl`基本クラス。
+|||
+|-|-|
+|S_OK  |すべてのコントロール、イベント シンク マップに接続されたか、イベント ソースから正常に切断します。|
+|E_FAIL  |すべてを制御、イベント シンク マップを接続されているか、イベント ソースから正常に切断された可能性があります。|
+|E_POINTER  |このエラーは、コントロールのイベント シンク マップ内のエントリの問題またはで使用されるテンプレート引数の問題には、通常を示します、`IDispEventImpl`または`IDispEventSimpleImpl`基本クラス。|
+|CONNECT_E_ADVISELIMIT  |接続ポイントは、接続の上限に既に達してし、以上を受け入れることはできません。|
+|CONNECT_E_CANNOTCONNECT  |シンクは、このコネクション ポイントが必要なインターフェイスをサポートしていません。|
+|CONNECT_E_NOCONNECTION  |Cookie の値は、有効な接続を表していません。 このエラーは、コントロールのイベント シンク マップ内のエントリの問題またはで使用されるテンプレート引数の問題には、通常を示します、`IDispEventImpl`または`IDispEventSimpleImpl`基本クラス。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -159,7 +150,7 @@ BOOL CalcExtent(SIZE& size);
 
 ### <a name="parameters"></a>パラメーター
 
-*size*  
+*size*<br/>
 参照を`SIZE`このメソッドが格納される構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -183,13 +174,13 @@ HWND Create(
 
 ### <a name="parameters"></a>パラメーター
 
-*hWndParent*  
+*hWndParent*<br/>
 コントロールの親ウィンドウへのハンドル。
 
-*rcPos*  
+*rcPos*<br/>
 予約済み。
 
-*dwInitParam*  
+*dwInitParam*<br/>
 コントロールの作成時に、コントロールに渡されるデータ。 として、データが渡される*dwInitParam*の LPARAM パラメーターとして表示されます、 [WM_INITDIALOG](/windows/desktop/dlgbox/wm-initdialog)メッセージで、作成時に、複合コントロールに送信されます。
 
 ### <a name="return-value"></a>戻り値
@@ -236,10 +227,10 @@ virtual HWND CreateControlWindow(
 
 ### <a name="parameters"></a>パラメーター
 
-*hWndParent*  
+*hWndParent*<br/>
 コントロールの親ウィンドウへのハンドル。
 
-*rcPos*  
+*rcPos*<br/>
 クライアントでの複合コントロールの位置四角形の座標を基準とする*hWndParent*します。
 
 ### <a name="return-value"></a>戻り値
@@ -280,6 +271,6 @@ HRESULT SetBackgroundColorFromAmbient();
 
 ## <a name="see-also"></a>関連項目
 
-[CComControl クラス](../../atl/reference/ccomcontrol-class.md)   
-[複合コントロールの基本](../../atl/atl-composite-control-fundamentals.md)   
+[CComControl クラス](../../atl/reference/ccomcontrol-class.md)<br/>
+[複合コントロールの基本](../../atl/atl-composite-control-fundamentals.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

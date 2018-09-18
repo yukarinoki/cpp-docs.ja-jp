@@ -1,5 +1,5 @@
 ---
-title: auto_handle::swap |Microsoft ドキュメント
+title: auto_handle::swap |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 87a0a59197a7ebe22c5419e992f681787cd3ea7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 059f56485dee9668105c7e44fdee6fb910844810
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103919"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018029"
 ---
 # <a name="autohandleswap"></a>auto_handle::swap
-他のオブジェクトを交換`auto_handle`です。  
+別のオブジェクトを交換`auto_handle`します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,8 +39,8 @@ void swap(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `_right`  
- `auto_handle`交換先のオブジェクトします。  
+*(_r)*<br/>
+`auto_handle`交換先のオブジェクトします。  
   
 ## <a name="example"></a>例  
   
@@ -75,5 +75,5 @@ s1 = 'string two', s2 = 'string one'
  **Namespace** msclr  
   
 ## <a name="see-also"></a>関連項目  
- [auto_handle メンバー](../dotnet/auto-handle-members.md)   
+ [auto_handle のメンバー](../dotnet/auto-handle-members.md)   
  [swap 関数 (auto_handle)](../dotnet/swap-function-auto-handle.md)

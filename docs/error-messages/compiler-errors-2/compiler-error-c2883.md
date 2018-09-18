@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2883 |Microsoft ドキュメント
+title: コンパイラ エラー C2883 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc3119db27127521f5078a5753bb82c82da381ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50cc5b2abb34fae21bea78aa146e74b9aa9491c4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244948"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019264"
 ---
 # <a name="compiler-error-c2883"></a>コンパイラ エラー C2883
-'name': 関数宣言が 'identifier' を使用して宣言によって導入されると競合しています  
-  
- 関数を複数回定義しようとするとします。 最初の定義が、名前空間から行われた、`using`宣言します。 2 つ目は、ローカルの定義をでした。  
-  
- 次の例では、C2883 が生成されます。  
-  
-```  
-// C2883.cpp  
-namespace A {  
-   void z(int);  
-}  
-  
-int main() {  
-   using A::z;  
-   void z(int);   // C2883  z is already defined  
-}  
+
+'name': 'identifier' を使用して宣言によって導入されると競合して関数の宣言
+
+関数を複数回定義しようとしました。 最初の定義が、名前空間から行われた、`using`宣言します。 2 つ目は、ローカルの定義をしました。
+
+次の例では、C2883 が生成されます。
+
+```
+// C2883.cpp
+namespace A {
+   void z(int);
+}
+
+int main() {
+   using A::z;
+   void z(int);   // C2883  z is already defined
+}
 ```

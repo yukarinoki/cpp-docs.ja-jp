@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3653 |Microsoft ドキュメント
+title: コンパイラ エラー C3653 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a78dd5a9c52c9dfc845de43c62ae38180d0d079f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d0409317cb0cdf6a248554cba2e18d7f9d2e0e0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266462"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019004"
 ---
 # <a name="compiler-error-c3653"></a>コンパイラ エラー C3653
-'function': 名前付きオーバーライドとして使用することはできません: が見つかりませんオーバーライドされる関数。関数の名前、明示的に使用する忘れました、:: 演算子ですか?  
-  
- 明示的なオーバーライドでは、任意のインターフェイスに見つからなかった関数が指定されます。 詳細については、次を参照してください。[明示的なオーバーライド](../../windows/explicit-overrides-cpp-component-extensions.md)です。  
-  
- 次の例では、C3653 が生成されます。  
-  
-```  
-// C3653.cpp  
-// compile with: /clr  
-public interface struct I {  
-   void h();  
-};  
-  
-public ref struct X : public I {  
-   virtual void f() new sealed = J {};   // C3653 no J in scope  
-   virtual void g() {}   // OK  
-   virtual void h() new sealed = I::h {};   // OK  
-};  
+
+'function': 名前付きオーバーライドとして使用できません: が見つかりませんオーバーライドされる関数。関数の明示的に名前を使用してください、:: 演算子でしょうか。
+
+明示的なオーバーライドでは、任意のインターフェイスに見つからなかった関数が指定します。 詳細については、次を参照してください。[明示的なオーバーライド](../../windows/explicit-overrides-cpp-component-extensions.md)します。
+
+次の例では、C3653 が生成されます。
+
+```
+// C3653.cpp
+// compile with: /clr
+public interface struct I {
+   void h();
+};
+
+public ref struct X : public I {
+   virtual void f() new sealed = J {};   // C3653 no J in scope
+   virtual void g() {}   // OK
+   virtual void h() new sealed = I::h {};   // OK
+};
 ```

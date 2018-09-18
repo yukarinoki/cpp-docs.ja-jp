@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2891 |Microsoft ドキュメント
+title: コンパイラ エラー C2891 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01741d1cc67f0045c46ab392212625b9e1a2d8ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 86d81662cb02fa3c8f6af75009daf4dab9b70196
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246371"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016560"
 ---
 # <a name="compiler-error-c2891"></a>コンパイラ エラー C2891
-'parameter': テンプレート パラメーターのアドレスを取得できません  
-  
- 左辺値である場合を除き、テンプレート パラメーターのアドレスを取得できません。 型パラメーターは、アドレスがないために、左辺値ではありません。 また、左辺値ではないテンプレート パラメーター リスト内の非型の値には、アドレスがありません。 これは、テンプレート パラメーターとして渡された値がコンパイラによって生成されたテンプレート引数のコピーであるために、コンパイラ エラー C2891 を原因となったコードの例です。  
-  
-```  
-template <int i> int* f() { return &i; }  
-```  
-  
- テンプレート パラメーターなど、参照型の左辺値であることができますが、アドレスを取得します。  
-  
-```  
-template <int& r> int* f() { return &r; }  
-```  
-  
- このエラーを修正するにはなりませんテンプレート パラメーターのアドレスは左辺値である場合を除き。
+
+'parameter': テンプレート パラメーターのアドレスを取得できません
+
+左辺値である場合を除きは、テンプレートのパラメーターのアドレスを取得できません。 型パラメーターは、アドレスがないために、左辺値ではありません。 また、左辺値ではない、テンプレート パラメーター リスト内の非型の値には、アドレスがありません。 これは、テンプレート パラメーターとして渡される値がコンパイラによって生成されたテンプレート引数のコピーであるために、コンパイラ エラー C2891、原因となるコードの例です。
+
+```
+template <int i> int* f() { return &i; }
+```
+
+など、参照型の左辺値であるテンプレート パラメーターが、アドレスを取ることができます。
+
+```
+template <int& r> int* f() { return &r; }
+```
+
+このエラーを修正するにはなりませんテンプレートのパラメーターのアドレスを左辺値である場合を除き。

@@ -19,44 +19,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2050a444ca228554cfbb3b6bba2693c55e53c4a2
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 87b8b6893c8fdd04374919ceff1d28a61bc315e5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217551"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024668"
 ---
 # <a name="rowset-object-interfaces"></a>行セット オブジェクト インターフェイス
+
 次の表では、行セット オブジェクトの OLE DB で定義されている必須および省略可能なインターフェイスを示します。  
   
 |Interface|必須?|OLE DB テンプレートによって実装されるでしょうか。|  
 |---------------|---------------|--------------------------------------|  
-|[IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\))|必須|[はい]|  
-|[IColumnsInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\))|必須|[はい]|  
-|[IConvertType](/previous-versions/windows/desktop/ms715926\(v=vs.85\))|必須|[はい]|  
-|[IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\))|必須|[はい]|  
-|[IRowsetInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\))|必須|[はい]|  
+|[IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\))|必須|はい|  
+|[IColumnsInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\))|必須|はい|  
+|[IConvertType](/previous-versions/windows/desktop/ms715926\(v=vs.85\))|必須|はい|  
+|[IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\))|必須|はい|  
+|[IRowsetInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\))|必須|はい|  
 |[IChapteredRowset](/previous-versions/windows/desktop/ms718180\(v=vs.85\))|Optional|いいえ|  
 |[IColumnsInfo2](/previous-versions/windows/desktop/ms712953\(v=vs.85\))|Optional|いいえ|  
 |[IColumnsRowset](/previous-versions/windows/desktop/ms722657\(v=vs.85\))|Optional|いいえ|  
 |[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Optional|はい (ATL) を使用|  
 |[IDBAsynchStatus](/previous-versions/windows/desktop/ms709832\(v=vs.85\))|Optional|いいえ|  
 |[IGetRow](/previous-versions/windows/desktop/ms718047\(v=vs.85\))|Optional|いいえ|  
-|[IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))|Optional|[はい]|  
+|[IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))|Optional|はい|  
 |[IRowsetChapterMember](/previous-versions/windows/desktop/ms725430\(v=vs.85\))|Optional|いいえ|  
 |[IRowsetCurrentIndex](/previous-versions/windows/desktop/ms709700\(v=vs.85\))|Optional|いいえ|  
 |[IRowsetFind](/previous-versions/windows/desktop/ms724221\(v=vs.85\))|Optional|いいえ|  
-|[IRowsetIdentity](/previous-versions/windows/desktop/ms715913\(v=vs.85\))|(ただし、レベル 0 のプロバイダーに必要) (省略可能)|[はい]|  
+|[IRowsetIdentity](/previous-versions/windows/desktop/ms715913\(v=vs.85\))|(ただし、レベル 0 のプロバイダーに必要) (省略可能)|はい|  
 |[IRowsetIndex](/previous-versions/windows/desktop/ms719604\(v=vs.85\))|Optional|いいえ|  
-|[IRowsetLocate](/previous-versions/windows/desktop/ms721190\(v=vs.85\))|Optional|[はい]|  
+|[IRowsetLocate](/previous-versions/windows/desktop/ms721190\(v=vs.85\))|Optional|はい|  
 |[IRowsetRefresh](/previous-versions/windows/desktop/ms714892\(v=vs.85\))|Optional|いいえ|  
 |[IRowsetScroll](/previous-versions/windows/desktop/ms712984\(v=vs.85\))|Optional|いいえ|  
-|[IRowsetUpdate](/previous-versions/windows/desktop/ms714401\(v=vs.85\))|Optional|[はい]|  
+|[IRowsetUpdate](/previous-versions/windows/desktop/ms714401\(v=vs.85\))|Optional|はい|  
 |[IRowsetView](/previous-versions/windows/desktop/ms709755\(v=vs.85\))|Optional|いいえ|  
-|[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816\(v=vs.85\))|Optional|[はい]|  
+|[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816\(v=vs.85\))|Optional|はい|  
 |[IRowsetBookmark](/previous-versions/windows/desktop/ms714246\(v=vs.85\))|Optional|いいえ|  
   
- ウィザードで生成された行セット オブジェクトを実装して`IAccessor`、`IRowset`と`IRowsetInfo`継承を使用します。 `IAccessorImpl`両方の出力列をバインドします。 `IRowset`インターフェイスは、行のフェッチとデータを処理します。 `IRowsetInfo`インターフェイスは、行セット プロパティを処理します。  
+ウィザードで生成された行セット オブジェクトを実装して`IAccessor`、`IRowset`と`IRowsetInfo`継承を使用します。 `IAccessorImpl`両方の出力列をバインドします。 `IRowset`インターフェイスは、行のフェッチとデータを処理します。 `IRowsetInfo`インターフェイスは、行セット プロパティを処理します。  
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)
