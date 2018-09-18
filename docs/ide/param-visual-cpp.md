@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69e2950fcc0b29fb819445f3216ef262a2657e4a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e88890917986e54b3b912d50e97da77032abab34
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686422"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078791"
 ---
 # <a name="ltparamgt-visual-c"></a>&lt;param&gt; (Visual C++)
 \<param> タグは、メソッドのいずれか 1 つのパラメーターを説明するためにメソッドの宣言のコメントで使用する必要があります。  
@@ -35,11 +35,11 @@ ms.locfileid: "43686422"
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `name`  
- メソッド パラメーターの名前です。  名前は、一重引用符または二重引用符で囲みます。  コンパイラは、`name` が見つからない場合に警告を発行します。  
+*name*<br/>
+メソッド パラメーターの名前です。  名前は、一重引用符または二重引用符で囲みます。  コンパイラは、`name` が見つからない場合に警告を発行します。  
   
- `description`  
- パラメーターの説明です。  
+*description*<br/>
+パラメーターの説明です。  
   
 ## <a name="remarks"></a>コメント  
  \<param> タグのテキストは、IntelliSense、[オブジェクト ブラウザー](/visualstudio/ide/viewing-the-structure-of-code)、コード コメント Web レポートに表示されます。  
@@ -48,7 +48,7 @@ ms.locfileid: "43686422"
   
 ## <a name="example"></a>例  
   
-```  
+```cpp  
 // xml_param_tag.cpp  
 // compile with: /clr /doc /LD  
 // post-build command: xdcmake xml_param_tag.dll  
