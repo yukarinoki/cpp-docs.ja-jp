@@ -21,20 +21,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82bb280036bf8ad1886d2943c3ec3e546c2eaff2
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: cac6b61176b1559ea5810dc061638642926b3969
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466177"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077075"
 ---
 # <a name="wildcard-expansion"></a>ワイルドカードの展開
-## <a name="microsoft-specific"></a>Microsoft 固有の仕様  
- コマンド ラインでファイル名とパスの引数を指定するときに、ワイルドカード (疑問符 (?) およびアスタリスク (*)) を使用できます。  
-  
- コマンドライン引数はというルーチンによって処理される`_setargv`(または`_wsetargv`ワイド文字環境で)、ワイルドカードの展開で個別の文字列に既定ではありません、`argv`文字列配列。 ワイルドカードの展開の有効化の詳細についてを参照してください[ワイルドカード引数の展開](../c-language/expanding-wildcard-arguments.md)します。  
-  
-**Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- [main: プログラムの起動](../cpp/main-program-startup.md)
+
+## <a name="microsoft-specific"></a>Microsoft 固有の仕様
+
+コマンド ラインでファイル名とパスの引数を指定するときに、ワイルドカード (疑問符 (?) およびアスタリスク (*)) を使用できます。
+
+コマンドライン引数はというルーチンによって処理される`_setargv`(または`_wsetargv`ワイド文字環境で)、ワイルドカードの展開で個別の文字列に既定ではありません、`argv`文字列配列。 ワイルドカードの展開の有効化の詳細についてを参照してください[ワイルドカード引数の展開](../c-language/expanding-wildcard-arguments.md)します。
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
+[main: プログラムの起動](../cpp/main-program-startup.md)

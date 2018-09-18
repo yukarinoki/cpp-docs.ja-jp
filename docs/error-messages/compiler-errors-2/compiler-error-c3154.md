@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3154 |Microsoft ドキュメント
+title: コンパイラ エラー C3154 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33afc69bb44488d56b51797c72f2cd5ea4105420
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 92a888020e306e762ffb242cb92636cc14680bf5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251112"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074657"
 ---
 # <a name="compiler-error-c3154"></a>コンパイラ エラー C3154
-予想 ',' は、省略記号の前にします。 非コンマ区切りの省略記号パラメーター配列関数でサポートされていません。  
-  
- 可変個引数関数が正しく宣言されませんでした。  
-  
- 詳細については、次を参照してください[可変個引数リスト (...)。(C + + CLI)](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).  
-  
-## <a name="example"></a>例  
- 次の例では、C3154 を生成します。  
-  
-```  
-// C3154.cpp  
-// compile with: /clr  
-ref struct R {  
-   void Func(int ... array<int> ^);   // C3154  
-   void Func2(int i, ... array<int> ^){}   // OK  
-   void Func3(array<int> ^){}   // OK  
-   void Func4(... array<int> ^){}   // OK  
-};  
-  
-int main() {  
-   R ^ r = gcnew R;  
-   r->Func4(1,2,3);  
-}  
+
+予想 '、' は、省略記号の前にします。 非コンマ区切りの省略記号パラメーター配列関数でサポートされていません。
+
+可変個引数関数は正しく宣言されませんでした。
+
+詳細については、次を参照してください[可変個引数リスト (...)。(C +/CLI CLI)](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+
+## <a name="example"></a>例
+
+次の例では、C3154 が生成されます。
+
+```
+// C3154.cpp
+// compile with: /clr
+ref struct R {
+   void Func(int ... array<int> ^);   // C3154
+   void Func2(int i, ... array<int> ^){}   // OK
+   void Func3(array<int> ^){}   // OK
+   void Func4(... array<int> ^){}   // OK
+};
+
+int main() {
+   R ^ r = gcnew R;
+   r->Func4(1,2,3);
+}
 ```

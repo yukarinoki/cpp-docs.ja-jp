@@ -21,26 +21,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e395bcb32858bc63b3e848f20a7d794156876e26
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 2ca1913376ef4b1e6afc19be81ce7814ce92699c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402030"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071940"
 ---
 # <a name="naked-function-calls"></a>naked 関数呼び出し
-## <a name="microsoft-specific"></a>Microsoft 固有の仕様  
- 宣言された関数、 **naked**属性を使用して、独自のカスタム プロローグとエピローグ シーケンスを記述できるように、プロローグまたはエピローグのコードがなくても出力されます、[インライン アセンブラー](../assembler/inline/inline-assembler.md)します。 naked 関数は高度な機能です。 これにより、C/C++ 以外のコンテキストから呼び出される関数を宣言して、パラメーターの存在する場所や保持されるレジスタについて、異なる想定をすることができます。 例としては、割り込みハンドラーのようなルーチンが挙げられます。 この機能は、仮想デバイス ドライバー (VxD) を作成するときに特に便利です。  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください  
-  
--   [naked](../cpp/naked-cpp.md)  
-  
--   [naked 関数に関する規則と制限](../cpp/rules-and-limitations-for-naked-functions.md)  
-  
--   [プロローグ/エピローグ コードの記述に関する考慮事項](../cpp/considerations-for-writing-prolog-epilog-code.md)  
-  
-**Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- [呼び出し規約](../cpp/calling-conventions.md)
+
+## <a name="microsoft-specific"></a>Microsoft 固有の仕様
+
+宣言された関数、 **naked**属性を使用して、独自のカスタム プロローグとエピローグ シーケンスを記述できるように、プロローグまたはエピローグのコードがなくても出力されます、[インライン アセンブラー](../assembler/inline/inline-assembler.md)します。 naked 関数は高度な機能です。 これにより、C/C++ 以外のコンテキストから呼び出される関数を宣言して、パラメーターの存在する場所や保持されるレジスタについて、異なる想定をすることができます。 例としては、割り込みハンドラーのようなルーチンが挙げられます。 この機能は、仮想デバイス ドライバー (VxD) を作成するときに特に便利です。
+
+## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
+
+- [naked](../cpp/naked-cpp.md)
+
+- [naked 関数に関する規則と制限](../cpp/rules-and-limitations-for-naked-functions.md)
+
+- [プロローグ/エピローグ コードの記述に関する考慮事項](../cpp/considerations-for-writing-prolog-epilog-code.md)
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
+[呼び出し規約](../cpp/calling-conventions.md)

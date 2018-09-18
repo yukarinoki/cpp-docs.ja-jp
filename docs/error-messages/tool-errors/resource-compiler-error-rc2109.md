@@ -1,5 +1,5 @@
 ---
-title: リソース コンパイラ エラー RC2109 |Microsoft ドキュメント
+title: リソース コンパイラ エラー RC2109 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b5a5a01458c4117fb6cb49c967cc8ca94a77226
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5ef826dcdb439a28630221bdc9b4a90e9f6f324f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319970"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072967"
 ---
 # <a name="resource-compiler-error-rc2109"></a>リソース コンパイラ エラー RC2109
-ダイアログの数値定数が必要です。  
-  
- A**ダイアログ**ステートメントの整数値が必要です、 *x、y、幅*、および*高さ*フィールドです。 これらの値は後に含まれるかどうかを確認、**ダイアログ**キーワードと負の値ではないというです。
+
+ダイアログの数値定数が必要です。
+
+A**ダイアログ**ステートメントの整数値が必要です、 *x、y、幅*、および*高さ*フィールド。 これらの値は後に含まれるかどうかを確認、**ダイアログ**キーワードと負の値ではないというします。

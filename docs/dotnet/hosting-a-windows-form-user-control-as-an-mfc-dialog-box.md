@@ -1,5 +1,5 @@
 ---
-title: ユーザー コントロールを MFC ダイアログ ボックスとしてフォーム、Windows をホストしている |Microsoft ドキュメント
+title: MFC ダイアログ ボックスとしてユーザー コントロールをフォーム、Windows のホスト |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,39 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b356bff4974b43445524d9bc07e1e37c62a6f8d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 47914a73880f5cea13f1bc64c231604a0d5d05dd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33138679"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073811"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>MFC ダイアログ ボックスとしての Windows フォーム ユーザー コントロールのホスト
-MFC には、このテンプレート クラスは[CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) Windows フォーム ユーザー コントロールをホストできるように (<xref:System.Windows.Forms.UserControl>) モーダルまたはモードレスの MFC ダイアログ ボックスでします。 `CWinFormsDialog` MFC クラスから派生した[CDialog](../mfc/reference/cdialog-class.md)ので、ダイアログ ボックスをモーダルまたはモードレスとして起動することができます。  
+MFC は、テンプレート クラスを提供します。 [CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md)する Windows フォーム ユーザー コントロールをホストできるように (<xref:System.Windows.Forms.UserControl>) モーダルまたはモードレスの MFC ダイアログ ボックスでします。 `CWinFormsDialog` MFC クラスから派生[CDialog](../mfc/reference/cdialog-class.md)ので、ダイアログ ボックスをモーダルまたはモードレスとして起動することができます。  
   
- プロセスを`CWinFormsDialog`ユーザー コントロールをホストするために使用に似ていますで説明されている[MFC ダイアログ ボックスで Windows フォーム ユーザー コントロールをホストしている](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md)です。 ただし、`CWinFormsDialog` は、ユーザー コントロールの初期化およびホストを管理するため、手動でプログラムを作成する必要はありません。  
+ プロセスを`CWinFormsDialog`ユーザー コントロールをホストするために使用が記載されているに似ています。 [MFC ダイアログ ボックスでは、Windows フォーム ユーザー コントロールをホストしている](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md)します。 ただし、`CWinFormsDialog` は、ユーザー コントロールの初期化およびホストを管理するため、手動でプログラムを作成する必要はありません。  
   
- MFC で使用される Windows フォームを表示するサンプル アプリケーションを参照してください。 [MFC と Windows フォーム統合](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en)です。  
+ Windows フォームと MFC を示すサンプル アプリケーションの場合、次を参照してください。 [MFC と Windows フォーム統合](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en)します。  
   
 ### <a name="to-create-the-mfc-host-application"></a>MFC ホスト アプリケーションを作成するには  
   
 1.  MFC アプリケーション プロジェクトを作成します。  
   
-     **ファイル**メニューの **新規**、クリックして**プロジェクト**です。 **Visual C**フォルダーを選択**MFC アプリケーション**です。  
+     **ファイル**メニューの [**新規**、] をクリックし、**プロジェクト**します。 **Visual C**フォルダーで、 **MFC アプリケーション**します。  
   
-     **名前**ボックスに、入力`MFC03`ソリューションの設定を変更および**ソリューションに追加**です。をクリックして**OK**です。  
+     **名前**ボックスに、入力`MFC03`ソリューションの設定を変更および**ソリューションに追加**します。クリックして**OK**します。  
   
-     **MFC アプリケーション ウィザード**すべての既定値をそのまま使用し、クリックして**完了**です。 これにより、マルチ ドキュメント インターフェイスを持つ MFC アプリケーションが作成されます。  
+     **MFC アプリケーション ウィザード**すべての既定値をそのまま使用し、クリックして**完了**します。 これにより、マルチ ドキュメント インターフェイスを持つ MFC アプリケーションが作成されます。  
   
 2.  プロジェクトを構成します。  
   
-     **ソリューション エクスプ ローラー**を右クリックし、 **MFC03**プロジェクト ノード、および選択**プロパティ**です。 **プロパティ ページ** ダイアログ ボックスが表示されます。  
+     **ソリューション エクスプ ローラー**を右クリックし、 **MFC03**プロジェクト ノード、**プロパティ**します。 **プロパティ ページ** ダイアログ ボックスが表示されます。  
   
-     **プロパティ ページ** ダイアログ ボックスで、**構成プロパティ**ツリー コントロールで、**全般**、次に、**プロジェクトの既定値**セクションで、設定**共通言語ランタイム サポート**に**共通言語ランタイム サポート (/clr)** です。 **[OK]** をクリックします。  
+     **プロパティ ページ** ダイアログ ボックスで、**構成プロパティ**ツリー コントロールで、**全般**、次に、**プロジェクトの既定値**セクションで、設定**共通言語ランタイム サポート**に**共通言語ランタイム サポート (/clr)** します。 **[OK]** をクリックします。  
   
 3.  .NET コントロールへの参照を追加します。  
   
-     **ソリューション エクスプ ローラー**を右クリックし、 **MFC03**プロジェクト ノードと選択**追加**、**参照**です。 **プロパティ ページ**、 をクリックして**新しい参照の追加**、WindowsControlLibrary1 を選択 (下にある、**プロジェクト** タブ)、 をクリック**OK**です。 形式での参照を追加、 [/FU](../build/reference/fu-name-forced-hash-using-file.md)コンパイラ オプションは、プログラムのコンパイル。 WindowsControlLibrary1.dll にもコピー、`MFC03`プログラムを実行できるように、プロジェクト ディレクトリ。  
+     **ソリューション エクスプ ローラー**を右クリックし、 **MFC03**プロジェクト ノード**追加**、**参照**します。 **プロパティ ページ**、 をクリックして**新しい参照の追加**、WindowsControlLibrary1 を選択します (下、**プロジェクト** タブ)、 をクリック**OK**。 形式での参照が追加されます、 [/FU](../build/reference/fu-name-forced-hash-using-file.md)コンパイラは、プログラムをコンパイルするためのオプションは、WindowsControlLibrary1.dll にもコピー、`MFC03`プログラムを実行するためのプロジェクト ディレクトリ。  
   
 4.  stdafx.h の既存の `#include <afxwinforms.h>` ステートメントの最後に `#include` を追加します。  
   
@@ -65,23 +65,24 @@ MFC には、このテンプレート クラスは[CWinFormsDialog](../mfc/refer
   
      CMFC03App::InitInstance の定義内の return ステートメントの前に、次のコードを追加します。  
   
-     `CHostForWinForm m_HostForWinForm;`  
-  
-     `m_HostForWinForm.DoModal();`  
+    ```cpp
+    CHostForWinForm m_HostForWinForm;
+    m_HostForWinForm.DoModal();
+    ```
   
 8.  プロジェクトをビルドして実行します。  
   
      **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。  
   
-     **デバッグ** メニューのをクリックして**デバッグなしで開始**です。  
+     **デバッグ** メニューのをクリックして**デバッグなしで開始**します。  
   
      次に、MFC アプリケーションから Windows フォーム上のコントロールの状態を監視するコードを追加します。  
   
 9. OnInitDialog のハンドラーを追加します。  
   
-     表示、**プロパティ**ウィンドウ (F4)。 **クラス ビュー**CHostForWinForm を選択します。 **プロパティ**ウィンドウで、選択をオーバーライドおよび OnInitDialog の行、左側の列内をクリックし、選択\<追加 >。 これにより、次の行が CHostForWinForm.h に追加されます。  
+     表示、**プロパティ**ウィンドウ (F4)。 **クラス ビュー**CHostForWinForm を選択します。 **プロパティ**ウィンドウで、選択をオーバーライドし、OnInitDialog の行、左側の列内をクリックし、選択\<追加 >。 これにより、次の行が CHostForWinForm.h に追加されます。  
   
-    ```  
+    ```cpp  
     virtual BOOL OnInitDialog();  
     ```  
   

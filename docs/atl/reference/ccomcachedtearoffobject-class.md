@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a6835cb1f8fb6365149b91c30881b4966b4b644
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 40dddf2bb1619bd896ecf50008f80fca968ef8c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765659"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075710"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>CComCachedTearOffObject クラス
 
@@ -49,7 +49,7 @@ public CComObjectRootEx<contained
 
 #### <a name="parameters"></a>パラメーター
 
-`contained`  
+*含まれています。*<br/>
 ティアオフ クラスから派生した`CComTearOffObjectBase`ティアオフ オブジェクトをサポートする場合、インターフェイスです。
 
 ## <a name="members"></a>メンバー
@@ -121,7 +121,7 @@ CComCachedTearOffObject(void* pv);
 
 ### <a name="parameters"></a>パラメーター
 
-*現在価値*  
+*現在価値*<br/>
 [in]ポインター、`IUnknown`の`CComCachedTearOffObject`します。
 
 ### <a name="remarks"></a>Remarks
@@ -170,7 +170,7 @@ CcomContainedObject <contained> m_contained;
 
 ### <a name="parameters"></a>パラメーター
 
-*含まれています。*  
+*含まれています。*<br/>
 [in]ティアオフ クラスから派生した`CComTearOffObjectBase`ティアオフ オブジェクトをサポートする場合、インターフェイスです。
 
 ### <a name="remarks"></a>Remarks
@@ -187,10 +187,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>パラメーター
 
-*iid*  
+*iid*<br/>
 [in]要求されているインターフェイスの GUID です。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]によって識別されるインターフェイス ポインターへのポインター *iid*インターフェイスが見つからない場合は null です。
 
 ### <a name="return-value"></a>戻り値
@@ -215,6 +215,6 @@ STDMETHOD_(ULONG, Release)();
 
 ## <a name="see-also"></a>関連項目
 
-[CComTearOffObject クラス](../../atl/reference/ccomtearoffobject-class.md)   
-[CComObjectRootEx クラス](../../atl/reference/ccomobjectrootex-class.md)   
+[CComTearOffObject クラス](../../atl/reference/ccomtearoffobject-class.md)<br/>
+[CComObjectRootEx クラス](../../atl/reference/ccomobjectrootex-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

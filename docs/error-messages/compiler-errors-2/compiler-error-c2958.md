@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2958 |Microsoft ドキュメント
+title: コンパイラ エラー C2958 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 006e19565f6e7393bb081be72ef64aae03361a6d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1eb7743fed9f7269e3d81ddd7cefdd37c9a7b2a0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256949"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075158"
 ---
 # <a name="compiler-error-c2958"></a>コンパイラ エラー C2958
-左側の 'location' で見つかった区切り文字が正しく対応していません  
-  
- 区切り文字が正しく一致していません。  
-  
- このエラーは、関数テンプレートの宣言に一致しないかっこが発生することができます。
+
+'location' にある左側の区切り文字が正しく対応していません
+
+区切り記号が正しく一致しません。
+
+このエラーは、関数テンプレートの宣言に一致しないかっこが発生することができます。

@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4010 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4010 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06ab6307a34887fe2d8a8719e20c31da9728664b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 52449689d329cee45cc69b63c315ce9335befbe0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274655"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073103"
 ---
 # <a name="compiler-warning-level-1-c4010"></a>コンパイラの警告 (レベル 1) C4010
-単一行コメントには、行連結文字が含まれています。  
-  
- 導入された、単一行のコメント//、円記号が含まれています (\\) 行連結文字として機能します。 コンパイラでは、継続タスクを次の行を考慮し、コメントとして扱われます。  
-  
- 一部の構文向けエディターは、コメントとして連結文字の次の行を示していません。 構文の色分けでこの警告が発生した行を無視します。  
-  
- 次の例では、C4010 が生成されます。  
-  
-```  
-// C4010.cpp  
-// compile with: /WX  
-int main() {  
-   // the next line is also a comment because of the backslash \  
-   int a = 3; // C4010  
-   a++;  
-}  
+
+単一行コメントには、行連結文字が含まれています。
+
+導入された単一行のコメント//、円記号が含まれています (\\) 行連結文字として機能します。 コンパイラは、続きとなる次の行を考慮し、コメントとして扱われます。
+
+いくつか構文エディターは、コメントとして連結文字の次の行を示していません。 構文の色分けで、この警告が発生した行を無視します。
+
+次の例では、C4010 が生成されます。
+
+```
+// C4010.cpp
+// compile with: /WX
+int main() {
+   // the next line is also a comment because of the backslash \
+   int a = 3; // C4010
+   a++;
+}
 ```

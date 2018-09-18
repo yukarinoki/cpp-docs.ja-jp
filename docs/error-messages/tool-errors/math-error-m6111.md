@@ -1,5 +1,5 @@
 ---
-title: 数値演算エラー M6111 |Microsoft ドキュメント
+title: 数値演算エラー M6111 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b03937ed442b169b960d573b44c0eb6ebca9660
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95a55ec6b7cdf0b6e4c15bd283dde77c610698fa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317997"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074826"
 ---
 # <a name="math-error-m6111"></a>数値演算エラー M6111
-スタック アンダー フロー  
-  
- 浮動小数点演算では、8087/287/387 コプロセッサまたはエミュレーター スタック アンダー フローが発生しました。  
-  
- このエラーの原因への呼び出しでは、多くの場合、`long double`値を返さない関数。 たとえば、次このエラーを生成コンパイルして実行時に。  
-  
-```  
-long double ld() {};  
-main ()  
-{  
-  ld();  
-}  
-```  
-  
- プログラムは、終了コード 139 で終了します。
+
+スタックのアンダー フロー
+
+浮動小数点演算では、8087/287/387 コプロセッサまたはエミュレーター スタック アンダー フローが発生しました。
+
+呼び出しによってこのエラーが原因となった多くの場合、`long double`値を返さない関数。 たとえば、次このエラーを生成コンパイルと実行。
+
+```
+long double ld() {};
+main ()
+{
+  ld();
+}
+```
+
+終了コード 139 でプログラムを終了します。

@@ -17,21 +17,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f3f447c2cc45e0ccc96a1480b9d521f1bde09c9e
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 99d647e2e5a98c7e4c4433baaface66d1f987b32
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677210"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073674"
 ---
 # <a name="ole-db-programming"></a>OLE DB プログラミング
+
 Microsoft OLE DB は、レガシ テクノロジです。新しいアプリケーションのリンクされた SQL サーバーの必要なデータ アクセス API になります。 その他のすべての新しいアプリケーションでは、ODBC を使用する必要があります。 SQL Server の現在の OLE DB プロバイダーでは、SQLNCLI11 です。DLL です。 プロバイダーは SQL Server 2016 で引き続き出荷されています。 このドキュメントは、OLE DB を既に使用している既存のアプリケーションを保持している開発者を対象としています。
   
- OLE DB テンプレートは、一般的に使用される多数の OLE DB インターフェイスを実装するクラスを提供して、高性能な OLE DB データベース テクノロジを使いやすくする C++ テンプレートです。 このテンプレート ライブラリはコンシューマー テンプレートとプロバイダー テンプレートに分かれています。  
+OLE DB テンプレートは、一般的に使用される多数の OLE DB インターフェイスを実装するクラスを提供して、高性能な OLE DB データベース テクノロジを使いやすくする C++ テンプレートです。 このテンプレート ライブラリはコンシューマー テンプレートとプロバイダー テンプレートに分かれています。  
   
- Visual C++ には OLE DB のスターター アプリケーションを作成するためのウィザードのサポートもあります。  
+Visual C++ には OLE DB のスターター アプリケーションを作成するためのウィザードのサポートもあります。  
   
- また、属性を使って OLE DB コンシューマー テンプレートを実装することもできます。  
+また、属性を使って OLE DB コンシューマー テンプレートを実装することもできます。  
   
 |詳細情報|参照トピック|  
 |-------------------------|---------|  
@@ -45,4 +46,5 @@ Microsoft OLE DB は、レガシ テクノロジです。新しいアプリケ�
 |ODBC の概念説明のトピック|[ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)|  
 
 ## <a name="see-also"></a>関連項目  
- [データ アクセス](../data-access-in-cpp.md)
+
+[データ アクセス](../data-access-in-cpp.md)

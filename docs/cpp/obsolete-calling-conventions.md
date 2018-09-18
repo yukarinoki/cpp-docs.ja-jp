@@ -22,20 +22,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 922103e808541e2829350749a04d6004ba36577f
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: eec6f8370103ed0256471c009d6e97cc693a1cd7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403421"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071342"
 ---
 # <a name="obsolete-calling-conventions"></a>廃止された呼び出し規則
-## <a name="microsoft-specific"></a>Microsoft 固有の仕様  
- **_ _Pascal**、 **_ _fortran**、および **_ _syscall**呼び出し規約はサポートされなくなりました。 サポートされる呼び出し規則および適切なリンカー オプションの 1 つを使用して、それらの機能をエミュレートできます。  
-  
- \<windows.h > WINAPI マクロは、ターゲットの適切な呼び出し規約に変換するようになりました。 Pascal 形式を以前に使用される WINAPI を使用して、または **__far \__pascal**します。  
-  
-**Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- [引数の渡し規則と名前付け規則](../cpp/argument-passing-and-naming-conventions.md)
+
+## <a name="microsoft-specific"></a>Microsoft 固有の仕様
+
+**_ _Pascal**、 **_ _fortran**、および **_ _syscall**呼び出し規約はサポートされなくなりました。 サポートされる呼び出し規則および適切なリンカー オプションの 1 つを使用して、それらの機能をエミュレートできます。
+
+\<windows.h > WINAPI マクロは、ターゲットの適切な呼び出し規約に変換するようになりました。 Pascal 形式を以前に使用される WINAPI を使用して、または **__far \__pascal**します。
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
+[引数の渡し規則と名前付け規則](../cpp/argument-passing-and-naming-conventions.md)

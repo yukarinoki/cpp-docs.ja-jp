@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2490 |Microsoft ドキュメント
+title: コンパイラ エラー C2490 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc366178c31f900b031aacca278e39cc0c2eb493
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36e4a44a6a2288ce712c77538edbd710f22f5315
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198704"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071810"
 ---
 # <a name="compiler-error-c2490"></a>コンパイラ エラー C2490
-' keyword' は 'naked' 属性を持つ関数では使用できません。  
-  
- として定義されている関数[naked](../../cpp/naked-cpp.md)構造化例外処理を使用することはできません。  
-  
- 次の例では、C2490 が生成されます。  
-  
-```  
-// C2490.cpp  
-// processor: x86  
-__declspec( naked ) int func() {  
-   __try{}   // C2490, structured exception handling  
-}  
+
+' keyword' は 'naked' 属性を持つ関数では使用できません。
+
+として定義されている関数[naked](../../cpp/naked-cpp.md)構造化例外処理を使用することはできません。
+
+次の例では、C2490 が生成されます。
+
+```
+// C2490.cpp
+// processor: x86
+__declspec( naked ) int func() {
+   __try{}   // C2490, structured exception handling
+}
 ```

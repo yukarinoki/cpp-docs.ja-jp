@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43581995e8979ec733d8c82374896009c843166b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2359bb3909c803e4df1efdeef9058a3553908ff9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766647"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074059"
 ---
 # <a name="cstringelementtraits-class"></a>CStringElementTraits クラス
 
@@ -38,13 +38,13 @@ ms.locfileid: "43766647"
 ## <a name="syntax"></a>構文
 
 ```
-template <typename T>  
+template <typename T>
 class CStringElementTraits
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 コレクションに格納されるデータの型。
 
 ## <a name="members"></a>メンバー
@@ -86,10 +86,10 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2);
 
 ### <a name="parameters"></a>パラメーター
 
-*str1*  
+*str1*<br/>
 最初の要素を文字列します。
 
-*str2*  
+*str2*<br/>
 2 番目の文字列要素。
 
 ### <a name="return-value"></a>戻り値
@@ -106,10 +106,10 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2);
 
 ### <a name="parameters"></a>パラメーター
 
-*str1*  
+*str1*<br/>
 最初の要素を文字列します。
 
-*str2*  
+*str2*<br/>
 2 番目の文字列要素。
 
 ### <a name="return-value"></a>戻り値
@@ -129,13 +129,13 @@ static void CopyElements(
 
 ### <a name="parameters"></a>パラメーター
 
-*pDest*  
+*pDest*<br/>
 コピー元のデータを受信する最初の要素へのポインター。
 
-*pSrc*  
+*pSrc*<br/>
 コピーする最初の要素へのポインター。
 
-*nElements*  
+*nElements*<br/>
 コピーする要素の数。
 
 ### <a name="remarks"></a>Remarks
@@ -152,7 +152,7 @@ static ULONG Hash(INARGTYPE str);
 
 ### <a name="parameters"></a>パラメーター
 
-*str*  
+*str*<br/>
 文字列の要素。
 
 ### <a name="return-value"></a>戻り値
@@ -188,13 +188,13 @@ static void RelocateElements(
 
 ### <a name="parameters"></a>パラメーター
 
-*pDest*  
+*pDest*<br/>
 再配置されたデータを受信する最初の要素へのポインター。
 
-*pSrc*  
+*pSrc*<br/>
 配置する場合に、最初の要素へのポインター。
 
-*nElements*  
+*nElements*<br/>
 配置する場合に要素の数。
 
 ### <a name="remarks"></a>Remarks
@@ -203,6 +203,6 @@ static void RelocateElements(
 
 ## <a name="see-also"></a>関連項目
 
-[CElementTraitsBase クラス](../../atl/reference/celementtraitsbase-class.md)   
-[CStringElementTraitsI クラス](../../atl/reference/cstringelementtraitsi-class.md)   
+[CElementTraitsBase クラス](../../atl/reference/celementtraitsbase-class.md)<br/>
+[CStringElementTraitsI クラス](../../atl/reference/cstringelementtraitsi-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

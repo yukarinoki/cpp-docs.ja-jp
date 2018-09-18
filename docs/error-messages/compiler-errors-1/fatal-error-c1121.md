@@ -1,5 +1,5 @@
 ---
-title: 致命的なエラー C1121 |Microsoft ドキュメント
+title: 致命的なエラー C1121 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 129bde75de99e979edd2bb5c7f23acd4ddbdb12f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e46196bdf7b3fea7d5884c3805b7244b516271a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197261"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071875"
 ---
 # <a name="fatal-error-c1121"></a>致命的なエラー C1121
-CryptoAPI への呼び出しに失敗しました  
-  
- コンパイラによって、CryptoAPI への呼び出しと呼び出しに失敗しました。 Visual Studio を再インストールし、オペレーティング システムの再インストールします。
+
+CryptoAPI への呼び出しに失敗しました
+
+コンパイラによって、CryptoAPI への呼び出しと呼び出しに失敗しました。 Visual Studio を再インストールし、オペレーティング システムの再インストールします。

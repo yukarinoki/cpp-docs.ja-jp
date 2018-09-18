@@ -1,5 +1,5 @@
 ---
-title: ptr::operator = |Microsoft ドキュメント
+title: ptr::operator = |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c4f9e54ce2bcd6ff402e6ad239b269a3e314286d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8a8b87afba71836876554e1abbe04014cb09772
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33161032"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075083"
 ---
 # <a name="ptroperator"></a>ptr::operator=
-COM オブジェクトをアタッチ、`com::ptr`です。  
+COM オブジェクトのアタッチ、`com::ptr`します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,22 +39,22 @@ ptr<_interface_type> % operator=(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `_right`  
- アタッチする COM インターフェイス ポインター。  
+*(_r)*<br/>
+アタッチする COM インターフェイス ポインター。  
   
 ## <a name="return-value"></a>戻り値  
- 追跡参照に、`com::ptr`です。  
+ 追跡参照、`com::ptr`します。  
   
 ## <a name="exceptions"></a>例外  
- 場合、 `com::ptr` COM オブジェクトへの参照が既に所有して`operator=`スロー<xref:System.InvalidOperationException>です。  
+ 場合、 `com::ptr` 、COM オブジェクトへの参照を既に所有している`operator=`スロー<xref:System.InvalidOperationException>します。  
   
-## <a name="remarks"></a>コメント  
- COM オブジェクトを割り当てる、 `com::ptr` COM オブジェクトを参照していますが、呼び出し元の参照を解放しません。  
+## <a name="remarks"></a>Remarks  
+ COM オブジェクトを割り当て、 `com::ptr` COM オブジェクトを参照しますが、呼び出し元の参照を解放しません。  
   
  この演算子と同じ効果を持つ`Attach`します。  
   
 ## <a name="example"></a>例  
- この例を使用して CLR クラスを実装して、`com::ptr`をそのプライベート メンバーをラップする`IXMLDOMDocument`オブジェクト。  `ReplaceDocument`メンバー関数を最初に呼び出す`Release`いずれかで所有していたオブジェクトおよび、使用`operator=`ドキュメントでは新しいオブジェクトをアタッチします。  
+ この例の実装を使用する CLR クラス、`com::ptr`のプライベート メンバーをラップする`IXMLDOMDocument`オブジェクト。  `ReplaceDocument`メンバー関数の最初の呼び出し`Release`いずれかで所有していたオブジェクトおよび、使用`operator=`新しい document オブジェクトをアタッチします。  
   
 ```  
 // comptr_op_assign.cpp  
@@ -134,7 +134,7 @@ int main() {
  **Namespace** msclr::com  
   
 ## <a name="see-also"></a>関連項目  
- [ptr メンバー](../dotnet/ptr-members.md)   
+ [ptr のメンバー](../dotnet/ptr-members.md)   
  [ptr::Attach](../dotnet/ptr-attach.md)   
  [ptr::Detach](../dotnet/ptr-detach.md)   
  [ptr::Release](../dotnet/ptr-release.md)

@@ -1,5 +1,5 @@
 ---
-title: unorm クラス |Microsoft ドキュメント
+title: unorm クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e235930b73c4e9c2bc110d142ad734669f9c6ccc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1d0769697dfbb0c43be9fb7326a5ad4361a2aecd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695682"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071225"
 ---
 # <a name="unorm-class"></a>unorm クラス
 Unorm 数を表します。 各要素は、浮動小数点 [0.0 f, 1.0f] の範囲の数。  
@@ -45,10 +45,10 @@ class unorm;
 |名前|説明|  
 |----------|-----------------|  
 |unorm::operator--||  
-|unorm::operator float|変換演算子です。 Unorm 数、浮動小数点に変換する値をポイントします。|  
+|unorm::operator float|変換演算子。 Unorm 数値に変換する浮動小数点値。|  
 |unorm::operator * =||  
 |unorm::operator/=||  
-|+ + unorm::operator||  
+|unorm::operator +||  
 |unorm::operator+=||  
 |unorm::operator=||  
 |unorm::operator-=||  
@@ -102,11 +102,11 @@ inline explicit unorm(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_V`  
- 初期化するために使用する値。  
+*(_V).*<br/>
+初期化するために使用される値。  
   
- `_Other`  
- 初期化するために使用される norm オブジェクト。  
+*_Other*<br/>
+初期化するために使用される norm オブジェクト。  
   
 ## <a name="see-also"></a>関連項目  
  [Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)

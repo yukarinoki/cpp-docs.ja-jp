@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2626 |Microsoft ドキュメント
+title: コンパイラ エラー C2626 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b7b2ea1473b4226382e9aa3bd17b0bfc092f5cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9929da1f0cf9ffd9c70048017fdef1d854c1fcc9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232426"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074683"
 ---
 # <a name="compiler-error-c2626"></a>コンパイラ エラー C2626
-'identifier': プライベートまたはプロテクト データ メンバーは、匿名構造体または共用体では許可されていません  
-  
- 匿名構造体または共用体のメンバーは、パブリック アクセスを持つ必要があります。  
-  
- 次の例では C2626 が生成されます。  
-  
-```  
-// C2626.cpp  
-int main() {  
-   union {  
-   protected:  
-      int j;     // C2626, j is protected  
-   private:  
-      int k;     // C2626, k is private  
-   };  
-}  
-```  
-  
- この問題を解決するには、プライベートまたはプロテクト タグを削除します。  
-  
-```  
-// C2626b.cpp  
-int main() {  
-   union {  
-   public:  
-      int i;   // OK, i is public  
-   };  
-}  
+
+'identifier': プライベートまたはプロテクト データ メンバーは、匿名構造体または共用体では許可されていません
+
+匿名構造体または共用体のメンバーは、パブリック アクセスを持つ必要があります。
+
+次の例では C2626 が生成されます。
+
+```
+// C2626.cpp
+int main() {
+   union {
+   protected:
+      int j;     // C2626, j is protected
+   private:
+      int k;     // C2626, k is private
+   };
+}
+```
+
+この問題を解決するには、プライベートまたはプロテクト タグを削除します。
+
+```
+// C2626b.cpp
+int main() {
+   union {
+   public:
+      int i;   // OK, i is public
+   };
+}
 ```

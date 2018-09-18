@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 747fe2cd742686a7fda1f5031224cf7ab1607fb2
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 156a0a827a67e80369ca8b834b62bcf0e431ab14
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754619"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076347"
 ---
 # <a name="ithreadpoolconfig-interface"></a>IThreadPoolConfig インターフェイス
 
@@ -71,7 +71,7 @@ STDMETHOD(GetSize)(int* pnNumThreads);
 
 ### <a name="parameters"></a>パラメーター
 
-*pnNumThreads*  
+*pnNumThreads*<br/>
 [out]成功した場合、プールのスレッドの数を受け取る変数のアドレス。
 
 ### <a name="return-value"></a>戻り値
@@ -92,7 +92,7 @@ STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 
 ### <a name="parameters"></a>パラメーター
 
-*pdwMaxWait*  
+*pdwMaxWait*<br/>
 [out]成功した場合、スレッド プール スレッドをシャット ダウンを待機するミリ秒単位で時間の最大値を受け取る変数のアドレス。
 
 ### <a name="return-value"></a>戻り値
@@ -113,7 +113,7 @@ STDMETHOD(SetSize)int nNumThreads);
 
 ### <a name="parameters"></a>パラメーター
 
-*nNumThreads*  
+*nNumThreads*<br/>
 要求されたプール内のスレッド数。
 
 場合*nNumThreads*が負の場合、その絶対値で乗算されますスレッドの合計数を取得するマシンでプロセッサの数。
@@ -138,7 +138,7 @@ STDMETHOD(SetTimeout)(DWORD dwMaxWait);
 
 ### <a name="parameters"></a>パラメーター
 
-*dwMaxWait*  
+*dwMaxWait*<br/>
 スレッド プール スレッドをシャット ダウンを待機するミリ秒単位で要求された最大時間。
 
 ### <a name="return-value"></a>戻り値
@@ -151,5 +151,5 @@ STDMETHOD(SetTimeout)(DWORD dwMaxWait);
 
 ## <a name="see-also"></a>関連項目
 
-[クラス](../../atl/reference/atl-classes.md)   
+[クラス](../../atl/reference/atl-classes.md)<br/>
 [CThreadPool クラス](../../atl/reference/cthreadpool-class.md)

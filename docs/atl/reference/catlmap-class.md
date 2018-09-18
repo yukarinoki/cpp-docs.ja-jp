@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c1095df6caae94cac86e5e205507e0ed9eeb98e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 564ff010756a2afa9210fc71dd47fce2b72dcbca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755087"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075723"
 ---
 # <a name="catlmap-class"></a>CAtlMap クラス
 
@@ -70,15 +70,16 @@ class CAtlMap
 
 #### <a name="parameters"></a>パラメーター
 
-*K*  
+*K*<br/>
 キーの要素の型。
 
-*V*値要素の型。
+*V*<br/>
+要素の値の型。
 
-*KTraits*  
+*KTraits*<br/>
 コピーまたは主要な要素を移動するために使用するコードです。 参照してください[CElementTraits クラス](../../atl/reference/celementtraits-class.md)の詳細。
 
-*VTraits*  
+*VTraits*<br/>
 コピーまたは値の要素を移動するために使用するコードです。
 
 ## <a name="members"></a>メンバー
@@ -195,19 +196,19 @@ CAtlMap(
 
 ### <a name="parameters"></a>パラメーター
 
-*nBins*  
+*nBins*<br/>
 格納されている要素へのポインターを提供するビンの数。 ビンの詳細については、このトピックの後半の「解説」を参照してください。
 
-*fOptimalLoad*  
+*fOptimalLoad*<br/>
 最適な読み込みの比率です。
 
-*fLoThreshold*  
+*fLoThreshold*<br/>
 負荷率の下限しきい値。
 
-*fHiThreshold*  
+*fHiThreshold*<br/>
 負荷率の上限しきい値。
 
-*nBlockSize*  
+*nBlockSize*<br/>
 ブロック サイズ。
 
 ### <a name="remarks"></a>Remarks
@@ -297,13 +298,13 @@ CPair* GetAt(POSITION& pos) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*  
+*pos*<br/>
 以前の呼び出しによって返される位置カウンター [CAtlMap::GetNextAssoc](#getnextassoc)または[CAtlMap::GetStartPosition](#getstartposition)します。
 
-*key*  
+*key*<br/>
 マップのキーの種類を指定するテンプレート パラメーター。
 
-*値*  
+*値*<br/>
 マップの値の型を指定するテンプレート パラメーター。
 
 ### <a name="return-value"></a>戻り値
@@ -352,7 +353,7 @@ const K& GetKeyAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*  
+*pos*<br/>
 以前の呼び出しによって返される位置カウンター [CAtlMap::GetNextAssoc](#getnextassoc)または[CAtlMap::GetStartPosition](#getstartposition)します。
 
 ### <a name="return-value"></a>戻り値
@@ -374,7 +375,7 @@ const CPair* GetNext(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*  
+*pos*<br/>
 以前の呼び出しによって返される位置カウンター [CAtlMap::GetNextAssoc](#getnextassoc)または[CAtlMap::GetStartPosition](#getstartposition)します。
 
 ### <a name="return-value"></a>戻り値
@@ -394,13 +395,13 @@ void GetNextAssoc(
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*  
+*pos*<br/>
 以前の呼び出しによって返される位置カウンター [CAtlMap::GetNextAssoc](#getnextassoc)または[CAtlMap::GetStartPosition](#getstartposition)します。
 
-*key*  
+*key*<br/>
 マップのキーの種類を指定するテンプレート パラメーター。
 
-*値*  
+*値*<br/>
 マップの値の型を指定するテンプレート パラメーター。
 
 ### <a name="remarks"></a>Remarks
@@ -417,7 +418,7 @@ const K& GetNextKey(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*  
+*pos*<br/>
 以前の呼び出しによって返される位置カウンター [CAtlMap::GetNextAssoc](#getnextassoc)または[CAtlMap::GetStartPosition](#getstartposition)します。
 
 ### <a name="return-value"></a>戻り値
@@ -439,7 +440,7 @@ const V& GetNextValue(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*  
+*pos*<br/>
 以前の呼び出しによって返される位置カウンター [CAtlMap::GetNextAssoc](#getnextassoc)または[CAtlMap::GetStartPosition](#getstartposition)します。
 
 ### <a name="return-value"></a>戻り値
@@ -488,7 +489,7 @@ const V& GetValueAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*  
+*pos*<br/>
 以前の呼び出しによって返される位置カウンター [CAtlMap::GetNextAssoc](#getnextassoc)または[CAtlMap::GetStartPosition](#getstartposition)します。
 
 ### <a name="return-value"></a>戻り値
@@ -507,10 +508,10 @@ bool InitHashTable(
 
 ### <a name="parameters"></a>パラメーター
 
-*nBins*  
+*nBins*<br/>
 ハッシュ テーブルで使用されるビンの数。 参照してください[CAtlMap::CAtlMap](#catlmap)説明します。
 
-*bAllocNow*  
+*bAllocNow*<br/>
 フラグの表示メモリを割り当てる必要がある場合。
 
 ### <a name="return-value"></a>戻り値
@@ -567,10 +568,10 @@ CPair* Lookup(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*key*  
+*key*<br/>
 検索する要素を識別するキーを指定します。
 
-*値*  
+*値*<br/>
 検索する値を受け取る変数。
 
 ### <a name="return-value"></a>戻り値
@@ -591,7 +592,7 @@ V& operator[](kinargtype key) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*key*  
+*key*<br/>
 追加または置換する要素のキー。
 
 ### <a name="return-value"></a>戻り値
@@ -612,7 +613,7 @@ void Rehash(UINT nBins = 0);
 
 ### <a name="parameters"></a>パラメーター
 
-*nBins*  
+*nBins*<br/>
 ハッシュ テーブルで使用する新しいビン数。 参照してください[CAtlMap::CAtlMap](#catlmap)説明します。
 
 ### <a name="remarks"></a>Remarks
@@ -641,7 +642,7 @@ void RemoveAtPos(POSITION pos) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*  
+*pos*<br/>
 以前の呼び出しによって返される位置カウンター [CAtlMap::GetNextAssoc](#getnextassoc)または[CAtlMap::GetStartPosition](#getstartposition)します。
 
 ### <a name="remarks"></a>Remarks
@@ -658,7 +659,7 @@ bool RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*key*  
+*key*<br/>
 削除する要素のペアに対応するキー。
 
 ### <a name="return-value"></a>戻り値
@@ -681,10 +682,10 @@ POSITION SetAt(
 
 ### <a name="parameters"></a>パラメーター
 
-*key*  
+*key*<br/>
 追加するキー値、`CAtlMap`オブジェクト。
 
-*値*  
+*値*<br/>
 追加する値、`CAtlMap`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -709,16 +710,16 @@ void SetOptimalLoad(
 
 ### <a name="parameters"></a>パラメーター
 
-*fOptimalLoad*  
+*fOptimalLoad*<br/>
 最適な読み込みの比率です。
 
-*fLoThreshold*  
+*fLoThreshold*<br/>
 負荷率の下限しきい値。
 
-*fHiThreshold*  
+*fHiThreshold*<br/>
 負荷率の上限しきい値。
 
-*bRehashNow*  
+*bRehashNow*<br/>
 ハッシュ テーブルを再計算する場合を示すフラグします。
 
 ### <a name="remarks"></a>Remarks
@@ -737,10 +738,10 @@ void SetValueAt(
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*  
+*pos*<br/>
 以前の呼び出しによって返される位置カウンター [CAtlMap::GetNextAssoc](#getnextassoc)または[CAtlMap::GetStartPosition](#getstartposition)します。
 
-*値*  
+*値*<br/>
 追加する値、`CAtlMap`オブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -773,7 +774,7 @@ const K m_key;
 
 ### <a name="parameters"></a>パラメーター
 
-*K*  
+*K*<br/>
 キーの要素の型。
 
 ##  <a name="m_value"></a>  CAtlMap::CPair::m_value
@@ -786,11 +787,11 @@ V  m_value;
 
 ### <a name="parameters"></a>パラメーター
 
-*V*  
+*V*<br/>
 要素の値の型。
 
 ## <a name="see-also"></a>関連項目
 
-[マーキーのサンプル](../../visual-cpp-samples.md)   
-[UpdatePV サンプル](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)   
+[マーキーのサンプル](../../visual-cpp-samples.md)<br/>
+[UpdatePV サンプル](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)
