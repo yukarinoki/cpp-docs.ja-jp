@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75afd44b8c0a31d9f3731a4c6f9fb86c15de4328
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 618a8053bea59896615d23514c2cf8aff29bea93
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389421"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087483"
 ---
 # <a name="indirection-and-address-of-operators"></a>間接演算子とアドレス演算子
 
@@ -52,7 +52,6 @@ ms.locfileid: "32389421"
 
 オペランドが単項 __& #42;__ 演算子の結果である場合、演算子は評価されず、両方が省略されたかのような結果になります。 結果は左辺値ではなく、演算子の制約が引き続き適用されます。 オペランドが __&#91;&#93;__ の結果である場合、 __&__ 演算子も、__&#91;&#93;__ 演算子によって暗黙的に指定される単項 __&#42;__ も評価されません。 結果は __&__ 演算子を削除して __&#91;&#93;__ 演算子を __+__ 演算子に変更する場合と同じ効果があります。 それ以外の場合、結果はオブジェクトへのポインターまたは演算子によって指定された関数になります。
 
-
 ## <a name="examples"></a>使用例
 
 以下に挙げる例では、次の一般的な宣言を使用します。
@@ -65,7 +64,7 @@ double d;
 
 このステートメントは address-of 演算子 (**&**) を使用して、配列 `a` の 6 番目の要素のアドレスを受け取ります。 結果は、ポインター変数 `pa` に格納されます。
 
-```C  
+```C
 pa = &a[5];
 ```
 
@@ -89,11 +88,11 @@ int roundup( void );     /* Function declaration */
 int  *proundup  = roundup;
 int  *pround  = &roundup;
 assert( pround == proundup );
-```  
+```
 
 関数 `roundup` を宣言した後、`roundup` への 2 つのポインターを宣言して、初期化しています。 最初のポインター、`proundup` は、関数名のみを使用して初期化され、2 番目のポインター、`pround` は、初期化時にアドレス演算子が使用されています。 これらの初期化は同じ意味を持ちます。
 
 ## <a name="see-also"></a>関連項目
 
-[間接演算子: &#42;](../cpp/indirection-operator-star.md)  
-[address-of 演算子: &](../cpp/address-of-operator-amp.md)  
+[間接演算子: &#42;](../cpp/indirection-operator-star.md)<br/>
+[address-of 演算子: &](../cpp/address-of-operator-amp.md)
