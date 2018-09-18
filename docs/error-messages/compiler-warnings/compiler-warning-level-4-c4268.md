@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 4) C4268 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 4) C4268 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bef62649af39df950c3966ef93dddb6c71ec2fd6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f91a8152ef690b9ded63b91b2b6e6f1da6dc2524
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293372"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063711"
 ---
 # <a name="compiler-warning-level-4-c4268"></a>コンパイラの警告 (レベル 4) C4268
-'identifier': コンパイラによって生成された既定のコンス トラクターで初期化 'const' static/global データ オブジェクトをゼロでの入力  
-  
- A **const**コンパイラによって生成された既定のコンス トラクターを持つ重要なクラスのグローバルまたは静的のインスタンスを初期化します。  
-  
-## <a name="example"></a>例  
-  
-```  
-// C4268.cpp  
-// compile with: /c /LD /W4  
-class X {  
-public:  
-   int m_data;  
-};  
-  
-const X x1;   // C4268  
-```  
-  
- クラスのこのインスタンスが格納される**const**の値`m_data`は変更できません。
+
+'identifier': 'const' static/global データがコンパイラによって生成された既定のコンス トラクターで初期化オブジェクトをゼロでの入力
+
+A **const**自明でないクラスのグローバルまたは静的インスタンスは、コンパイラによって生成された既定のコンス トラクターで初期化されます。
+
+## <a name="example"></a>例
+
+```
+// C4268.cpp
+// compile with: /c /LD /W4
+class X {
+public:
+   int m_data;
+};
+
+const X x1;   // C4268
+```
+
+クラスのこのインスタンスは**const**の値`m_data`変更ことはできません。

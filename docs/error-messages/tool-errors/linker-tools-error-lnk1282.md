@@ -1,5 +1,5 @@
 ---
-title: リンカ ツール エラー LNK1282 |Microsoft ドキュメント
+title: リンカ ツール エラー LNK1282 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6640f288bef2601bedeb33fa9fad4b2f3e4389f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d00c23eab3e21064076b9bd8663b0c3a593d997b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298195"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057100"
 ---
 # <a name="linker-tools-error-lnk1282"></a>リンカ ツール エラー LNK1282
-/REBASE ファイルにできません。署名されています  
-  
- /REBASE オプションを使って署名されたアセンブリのベース アドレスを変更しようとしています。 [editbin](../../build/reference/editbin-reference.md)です。 これを行うには、最初にベース アドレスを変更し、アセンブリに署名しています。
+
+/REBASE ファイルにできません。署名されています
+
+/REBASE のオプションで署名されたアセンブリのベース アドレスを変更しようとしています。 [editbin](../../build/reference/editbin-reference.md)します。 これを行うには、まず、ベース アドレスを変更し、アセンブリに署名しています。

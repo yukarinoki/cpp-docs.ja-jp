@@ -1,5 +1,5 @@
 ---
-title: CVTRES の致命的なエラー CVT1100 |Microsoft ドキュメント
+title: CVTRES の致命的なエラー CVT1100 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32085c4c37c82567eb78f46b52bcc4a6c41daae5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 18a5508301c54637fb34a751c8f1c4e307e47d50
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302660"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068963"
 ---
 # <a name="cvtres-fatal-error-cvt1100"></a>CVTRES の致命的なエラー CVT1100
-リソースの複製-型: 型、名前: name、言語: 言語、フラグ: フラグ、サイズ: サイズ  
-  
- 指定されたリソースが複数回指定されました。  
-  
- リンカーが、タイプ ライブラリを作成して、指定しなかった場合は、このエラーを取得できます[/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md)プロジェクトのリソースが既に 1 を使用しています。 この場合、/TLBID を指定しから 65535 までの数字を指定します。
+
+リソースが重複しています-型: 型、名前: 名前、言語の言語、フラグ: フラグ、サイズ: サイズ
+
+特定のリソースが複数回指定されました。
+
+リンカーがタイプ ライブラリを作成して、指定しなかった場合は、このエラーを取得できます[/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md) 1 を既に使用して、プロジェクト内のリソースとします。 この場合、/TLBID を指定し、65535 までの数字を指定します。

@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2601 |Microsoft ドキュメント
+title: コンパイラ エラー C2601 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49598223c3f68271065cc6212da19767020c51e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 522abe9c3cb4b9922a6b307055a3d85f40253793
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230826"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062957"
 ---
 # <a name="compiler-error-c2601"></a>コンパイラ エラー C2601
-'function': ローカル関数定義が正しくありません  
-  
- コードは、関数内で関数を定義しようとします。  
-  
- または、C2601 エラーの前に、ソース コードで余分な中かっこがある可能性があります。  
-  
- 次の例では、C2601 が生成されます。  
-  
-```  
-// C2601.cpp  
-int main() {  
-   int i = 0;  
-  
-   void funcname(int j) {   // C2601  
-      j++;  
-   }  
-}  
+
+'function': ローカル関数の定義が正しくありません
+
+コードは、関数内で関数を定義しようとします。
+
+または、C2601 エラーの場所の前に、ソース コードで、余分なかっこがある可能性があります。
+
+次の例では、C2601 が生成されます。
+
+```
+// C2601.cpp
+int main() {
+   int i = 0;
+
+   void funcname(int j) {   // C2601
+      j++;
+   }
+}
 ```

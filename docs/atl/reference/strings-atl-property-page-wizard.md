@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27a67430b82e1badc2beb5fecd72c55802e690cd
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6e63745a75b5aec644ae49931015e27b74eba91b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724361"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033538"
 ---
 # <a name="strings-atl-property-page-wizard"></a>文字列、ATL プロパティ ページ ウィザード
 
@@ -41,6 +41,6 @@ ms.locfileid: "45724361"
 
 ## <a name="see-also"></a>関連項目
 
-[ATL プロパティ ページ ウィザード](../../atl/reference/atl-property-page-wizard.md)   
+[ATL プロパティ ページ ウィザード](../../atl/reference/atl-property-page-wizard.md)<br/>
 [オプション、ATL プロパティ ページ ウィザード](../../atl/reference/options-atl-property-page-wizard.md)
 

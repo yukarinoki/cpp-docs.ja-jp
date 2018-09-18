@@ -1,5 +1,5 @@
 ---
-title: Concurrency::graphics 名前空間の関数 |Microsoft ドキュメント
+title: Concurrency::graphics 名前空間関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,14 +13,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fc00f1754358eca0d6e90d484153b79c0a67130
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 6a31a205a90480ae91740ecaf859f411c331bd69
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687050"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037984"
 ---
-# <a name="concurrencygraphics-namespace-functions"></a>Concurrency::graphics 名前空間の関数
+# <a name="concurrencygraphics-namespace-functions"></a>Concurrency::graphics 名前空間関数
 |||  
 |-|-|  
 |[copy](#copy)|[copy_async](#copy_async)|  
@@ -132,47 +132,47 @@ void copy (
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Copy_extent`  
- コピーするテクスチャのセクションの範囲。  
+*_Copy_extent*<br/>
+コピーするテクスチャのセクションの範囲。  
   
- `_Dst`  
- コピー先のオブジェクト。  
+*_Dst*<br/>
+コピー先のオブジェクト。  
   
- `_Dst_byte_size`  
- コピー先のバイト数。  
+*_Dst_byte_size*<br/>
+コピー先のバイト数。  
   
- `_Dst_type`  
- コピー先のオブジェクトの型。  
+*_Dst_type*<br/>
+コピー先のオブジェクトの型。  
   
- `_Dst_offset`  
- コピー開始位置でのコピー先へのオフセット。  
+*_Dst_offset*<br/>
+コピー開始位置でのコピー先へのオフセット。  
   
- `InputIterator`  
- 入力列挙子の型。  
+*InputIterator*<br/>
+入力列挙子の型。  
   
- `OutputIterator`  
- 出力反復子の型。  
+*OutputIterator*<br/>
+出力反復子の型。  
   
- `_Src`  
- コピーするオブジェクト。  
+*_Src*<br/>
+コピーするオブジェクト。  
   
- `_Src_byte_size`  
- コピー元のバイト数。  
+*_Src_byte_size*<br/>
+コピー元のバイト数。  
   
- `_Src_type`  
- コピー元のオブジェクトの型。  
+*_Src_type*<br/>
+コピー元のオブジェクトの型。  
   
- `_Src_offset`  
- コピー開始位置からのコピー元へのオフセット。  
+*_Src_offset*<br/>
+コピー開始位置からのコピー元へのオフセット。  
   
- `first`  
- ソース コンテナーへの先頭の反復子。  
+*first*<br/>
+ソース コンテナーへの先頭の反復子。  
   
- `last`  
- ソース コンテナーへの終了の反復子。  
+*last*<br/>
+ソース コンテナーへの終了の反復子。  
   
 ##  <a name="copy_async"></a>  copy_async 関数 (concurrency::graphics Namespace)  
- コピー先のバッファーにソース テクスチャを非同期的にコピーまたは転送先のバッファーにコピー元のバッファーをコピーしてから返します、 [completion_future](completion-future-class.md)待機できるオブジェクト。 アクセラレータでコードを実行しているときにデータはコピーできません。 この関数の一般的な形式は `copy(src, dest)` です。  
+ コピー先のバッファーにソース テクスチャを非同期的にコピーまたは元のバッファーをコピー先のバッファーにコピーを返します、 [completion_future](completion-future-class.md)待機できるオブジェクト。 アクセラレータでコードを実行しているときにデータはコピーできません。 この関数の一般的な形式は `copy(src, dest)` です。  
   
 ```  
 template<
@@ -274,44 +274,44 @@ concurrency::completion_future copy_async(_Src_type& _Src,
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Copy_extent`  
- コピーするテクスチャのセクションの範囲。  
+*_Copy_extent*<br/>
+コピーするテクスチャのセクションの範囲。  
   
- `_Dst`  
- コピー先のオブジェクト。  
+*_Dst*<br/>
+コピー先のオブジェクト。  
   
- `_Dst_byte_size`  
- コピー先のバイト数。  
+*_Dst_byte_size*<br/>
+コピー先のバイト数。  
   
- `_Dst_type`  
- コピー先のオブジェクトの型。  
+*_Dst_type*<br/>
+コピー先のオブジェクトの型。  
   
- `_Dst_offset`  
- コピー開始位置でのコピー先へのオフセット。  
+*_Dst_offset*<br/>
+コピー開始位置でのコピー先へのオフセット。  
   
- `InputIterator`  
- 入力列挙子の型。  
+*InputIterator*<br/>
+入力列挙子の型。  
   
- `OutputIterator`  
- 出力反復子の型。  
+*OutputIterator*<br/>
+出力反復子の型。  
   
- `_Src`  
- コピーするオブジェクト。  
+*_Src*<br/>
+コピーするオブジェクト。  
   
- `_Src_byte_size`  
- コピー元のバイト数。  
+*_Src_byte_size*<br/>
+コピー元のバイト数。  
   
- `_Src_type`  
- コピー元のオブジェクトの型。  
+*_Src_type*<br/>
+コピー元のオブジェクトの型。  
   
- `_Src_offset`  
- コピー開始位置からのコピー元へのオフセット。  
+*_Src_offset*<br/>
+コピー開始位置からのコピー元へのオフセット。  
   
- `first`  
- ソース コンテナーへの先頭の反復子。  
+*first*<br/>
+ソース コンテナーへの先頭の反復子。  
   
- `last`  
- ソース コンテナーへの終了の反復子。  
+*last*<br/>
+ソース コンテナーへの終了の反復子。  
 
 ## <a name="requirements"></a>要件  
  **ヘッダー:** amp_graphics.h  

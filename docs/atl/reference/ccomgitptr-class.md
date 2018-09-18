@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bfa501834102e37c14de11ee1af84a21e82c35f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 5707a7fd4ab83c8e3de3c4868ad41e3525621b07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703847"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033954"
 ---
 # <a name="ccomgitptr-class"></a>CComGITPtr クラス
 
@@ -38,13 +38,13 @@ ms.locfileid: "45703847"
 ## <a name="syntax"></a>構文
 
 ```
-template <class T>  
+template <class T>
 class CComGITPtr
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-`T`  
+*T*<br/>
 GIT で格納されるインターフェイス ポインターの型。
 
 ## <a name="members"></a>メンバー
@@ -102,10 +102,10 @@ HRESULT Attach(DWORD dwCookie) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*p*  
+*p*<br/>
 GIT に追加するインターフェイス ポインター。
 
-*dwCookie*  
+*dwCookie*<br/>
 インターフェイス ポインターを識別するために使用されるクッキー。
 
 ### <a name="return-value"></a>戻り値
@@ -170,7 +170,7 @@ HRESULT CopyTo(T** pp) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pp*  
+*pp*<br/>
 これは、インターフェイスを受信するポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -262,7 +262,7 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 
 関連付けられているクッキーを返します、`CComGITPtr`オブジェクト。
 
-```  
+```
 operator DWORD() const;
 ```
 
@@ -288,7 +288,7 @@ GIT から、インターフェイスを削除します。
 
 ## <a name="see-also"></a>関連項目
 
-[フリー スレッド マーシャラー](../../atl/atl-and-the-free-threaded-marshaler.md)   
-[アパートメント間でインターフェイスへのアクセス](/windows/desktop/com/accessing-interfaces-across-apartments)   
-[グローバル インターフェイス テーブルを使用する場合](/windows/desktop/com/when-to-use-the-global-interface-table)   
+[フリー スレッド マーシャラー](../../atl/atl-and-the-free-threaded-marshaler.md)<br/>
+[アパートメント間でインターフェイスへのアクセス](/windows/desktop/com/accessing-interfaces-across-apartments)<br/>
+[グローバル インターフェイス テーブルを使用する場合](/windows/desktop/com/when-to-use-the-global-interface-table)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

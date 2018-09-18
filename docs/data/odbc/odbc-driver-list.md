@@ -1,5 +1,5 @@
 ---
-title: ODBC ドライバーの一覧 |Microsoft ドキュメント
+title: ODBC ドライバーの一覧 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 310f0c6d3b36f63d4ba9d1f165c808b6d417c321
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 10c5a4fd9b7f15e5f6532bbaf6b5d8af4d3c86ba
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087794"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068002"
 ---
 # <a name="odbc-driver-list"></a>ODBC ドライバーの一覧
-Visual C には、次のデータベースについての ODBC ドライバーが用意されています。  
+
+Visual C では、次のデータベースの ODBC ドライバーを提供します。  
   
--   SQL Server  
+- SQL Server  
   
--   Microsoft Access  
+- Microsoft Access  
   
--   Microsoft Excel  
+- Microsoft Excel  
   
--   DBASE  
+- dBASE  
   
--   Paradox  
+- Paradox  
   
--   Microsoft Oracle ODBC  
+- Microsoft Oracle ODBC  
   
--   テキスト ファイル  
+- テキスト ファイル  
   
- Microsoft と ODBC ドライバー パックを含む、他の企業から使用可能な ODBC ドライバーに関する情報についてマイクロソフト製品サポート サービスに問い合わせてください。  
+ODBC ドライバーから Microsoft および他の企業が、ODBC ドライバーのパックを含む使用可能な情報は、マイクロソフト製品サポート サービスにお問い合わせください。  
   
 ## <a name="see-also"></a>関連項目  
- [ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)
+
+[ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)

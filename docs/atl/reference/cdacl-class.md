@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3ce384c2478359b3496aa2d816a30e9a240c998
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f96fe03288495eb109795e31c6dfd2bd3928d47c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760745"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036139"
 ---
 # <a name="cdacl-class"></a>CDacl クラス
 
@@ -108,19 +108,19 @@ bool AddAllowedAce(
 
 ### <a name="parameters"></a>パラメーター
 
-*rSid*  
+*rSid*<br/>
 A [CSid](../../atl/reference/csid-class.md)オブジェクト。
 
-*AccessMask*  
+*AccessMask*<br/>
 許可されるアクセス権のマスクを指定します、指定された`CSid`オブジェクト。
 
-*AceFlags*  
+*AceFlags*<br/>
 ACE の継承を制御するビット フラグのセット。
 
-*pObjectType*  
+*pObjectType*<br/>
 オブジェクトの型。
 
-*pInheritedObjectType*  
+*pInheritedObjectType*<br/>
 継承されたオブジェクトの種類。
 
 ### <a name="return-value"></a>戻り値
@@ -153,19 +153,19 @@ bool AddDeniedAce(
 
 ### <a name="parameters"></a>パラメーター
 
-*rSid*  
+*rSid*<br/>
 `CSid` オブジェクト。
 
-*AccessMask*  
+*AccessMask*<br/>
 拒否するアクセス権のマスクを指定します、指定された`CSid`オブジェクト。
 
-*AceFlags*  
+*AceFlags*<br/>
 ACE の継承を制御するビット フラグのセット。 既定値は、メソッドの最初のフォームでは 0 です。
 
-*pObjectType*  
+*pObjectType*<br/>
 オブジェクトの型。
 
-*pInheritedObjectType*  
+*pInheritedObjectType*<br/>
 継承されたオブジェクトの種類。
 
 ### <a name="return-value"></a>戻り値
@@ -183,13 +183,13 @@ A`CDacl`オブジェクトには、ユーザーとグループ オブジェク�
 コンストラクターです。
 
 ```
-CDacl (const ACL& rhs) throw(...);  
+CDacl (const ACL& rhs) throw(...);
 CDacl () throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*rhs*  
+*rhs*<br/>
 既存の`ACL`(アクセス制御リスト) の構造体。
 
 ### <a name="remarks"></a>Remarks
@@ -230,7 +230,7 @@ CDacl& operator= (const ACL& rhs) throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*rhs*  
+*rhs*<br/>
 既存のオブジェクトに割り当てる ACL (アクセス制御リスト)。
 
 ### <a name="return-value"></a>戻り値
@@ -251,7 +251,7 @@ void RemoveAce(UINT nIndex) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nIndex*  
+*nIndex*<br/>
 削除する ACE のエントリのインデックスです。
 
 ### <a name="remarks"></a>Remarks
@@ -272,9 +272,9 @@ void RemoveAllAces() throw();
 
 ## <a name="see-also"></a>関連項目
 
-[セキュリティのサンプル](../../visual-cpp-samples.md)   
-[CAcl クラス](../../atl/reference/cacl-class.md)   
-[Acl](/windows/desktop/SecAuthZ/access-control-lists)   
-[Ace](/windows/desktop/SecAuthZ/access-control-entries)   
-[クラスの概要](../../atl/atl-class-overview.md)   
+[セキュリティのサンプル](../../visual-cpp-samples.md)<br/>
+[CAcl クラス](../../atl/reference/cacl-class.md)<br/>
+[Acl](/windows/desktop/SecAuthZ/access-control-lists)<br/>
+[Ace](/windows/desktop/SecAuthZ/access-control-entries)<br/>
+[クラスの概要](../../atl/atl-class-overview.md)<br/>
 [セキュリティに関するグローバル関数](../../atl/reference/security-global-functions.md)

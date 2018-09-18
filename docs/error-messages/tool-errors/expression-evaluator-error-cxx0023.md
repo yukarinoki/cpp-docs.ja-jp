@@ -1,5 +1,5 @@
 ---
-title: 式エバリュエーター エラー CXX0023 |Microsoft ドキュメント
+title: 式エバリュエーター エラー CXX0023 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 426e074035d7f336963696e8924dfe641572f858
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 94536a0499b4c226f1343bd27c44cc52bbbf3558
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296999"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034604"
 ---
 # <a name="expression-evaluator-error-cxx0023"></a>式エバリュエーター エラー CXX0023
-無効な基数です。  
-  
- C の式エバリュエーターでは、指定された基数は認識されません。 のみ使用できる基数は 10 進数、16 進数、および 8 進数が無効です。  
-  
- このエラーは、can0023 と同じものと同じです。
+
+無効な基数です。
+
+C の式エバリュエーターでは、指定された基数は認識されません。 のみ使用できる基数は 10 進数、16 進数、および 8 進数が無効です。
+
+このエラーは、can0023 と同じものと同じです。

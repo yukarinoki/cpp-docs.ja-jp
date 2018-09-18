@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3eb361d0b92a3977547388ebfd612915431ec98
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 955c3574358d59d23b644a31e42ee91ce6ce76eb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463682"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068339"
 ---
 # <a name="restrict"></a>restrict
 
@@ -32,21 +32,21 @@ ms.locfileid: "39463682"
 
 ## <a name="syntax"></a>構文
 
-> **__declspec(restrict)** *pointer_return_type* *function*();  
-  
+> **__declspec(restrict)** *pointer_return_type* *function*();
+
 ## <a name="remarks"></a>Remarks
 
 コンパイラの伝達 **__declspec(restrict)** します。 たとえば、CRT`malloc`関数を **__declspec(restrict)** 装飾、およびそのため、コンパイラは、メモリの場所にポインターが初期化されることを想定しています`malloc`されてもいないエイリアスになって以前既存のポインター。
 
-コンパイラでは、返されたポインターが実際には別名ではありませんはチェックしません。 プログラムにエイリアスがないとマークされているポインターの開発者の責任は、 **_ _declspec を制限する**修飾子。  
-  
+コンパイラでは、返されたポインターが実際には別名ではありませんはチェックしません。 プログラムにエイリアスがないとマークされているポインターの開発者の責任は、 **_ _declspec を制限する**修飾子。
+
 変数によく似たセマンティクスは、次を参照してください。 [_ _restrict](../cpp/extension-restrict.md)します。
- 
+
 関数内のエイリアスに適用される別の注釈を参照してください。[内](../cpp/noalias.md)します。
-  
-については、**制限**キーワードは C++ AMP の一部であるを参照してください[制限 (C++ AMP)](../cpp/restrict-cpp-amp.md)します。  
- 
-## <a name="example"></a>例  
+
+については、**制限**キーワードは C++ AMP の一部であるを参照してください[制限 (C++ AMP)](../cpp/restrict-cpp-amp.md)します。
+
+## <a name="example"></a>例
 
 次の例では、使用 **__declspec(restrict)** します。
 
@@ -122,6 +122,7 @@ int main()
 **Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
- [キーワード](../cpp/keywords-cpp.md)  
- [__declspec](../cpp/declspec.md)  
- [内](../cpp/noalias.md)  
+
+[キーワード](../cpp/keywords-cpp.md)<br/>
+[__declspec](../cpp/declspec.md)<br/>
+[内](../cpp/noalias.md)

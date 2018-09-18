@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2086 |Microsoft ドキュメント
+title: コンパイラ エラー C2086 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04f1a21c06adeeda5d9db428e984da51f06addb5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d0e0d8b105d58b0585bc31b8d340d3d7ba5fb29e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170256"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029846"
 ---
 # <a name="compiler-error-c2086"></a>コンパイラ エラー C2086
-'identifier': 再定義されています  
-  
- 識別子が 2 回以上定義されているか、後の宣言と前の 1 つは異なります。  
-  
- C2086 は、C# の場合、参照先アセンブリをインクリメンタル ビルドの結果もできます。 このエラーを解決するには、c# アセンブリを再構築します。  
-  
- 次の例では、C2086 が生成されます。  
-  
-```  
-// C2086.cpp  
-main() {  
-  int a;  
-  int a;   // C2086 not an error in ANSI C  
-}  
+
+'identifier': 再定義されています
+
+識別子が複数回定義されているまたはそれ以降の宣言と前の 1 つは異なります。
+
+C2086 は、c# アセンブリが参照先のインクリメンタル ビルドの結果もできます。 このエラーを解決するには、c# アセンブリを再構築します。
+
+次の例では、C2086 が生成されます。
+
+```
+// C2086.cpp
+main() {
+  int a;
+  int a;   // C2086 not an error in ANSI C
+}
 ```

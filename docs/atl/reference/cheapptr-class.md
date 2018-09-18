@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34a6b019c2e3f71b70253ad2c15bc4b2758eeae7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8ea4fd429395fc78f36d1f9b3244068c737be49a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762081"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033980"
 ---
 # <a name="cheapptr-class"></a>CHeapPtr クラス
 
@@ -37,16 +37,16 @@ ms.locfileid: "43762081"
 ## <a name="syntax"></a>構文
 
 ```
-template<typename T, class Allocator=CCRTAllocator>  
+template<typename T, class Allocator=CCRTAllocator>
 class CHeapPtr : public CHeapPtrBase<T, Allocator>
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 ヒープに格納されるオブジェクトの種類。
 
-*アロケーター*  
+*アロケーター*<br/>
 メモリの割り当ては、使用するクラス。
 
 ## <a name="members"></a>メンバー
@@ -94,7 +94,7 @@ bool Allocate(size_t nElements = 1) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nElements*  
+*nElements*<br/>
 割り当てるメモリの量を計算するために使用する要素の数。 既定値は 1 です。
 
 ### <a name="return-value"></a>戻り値
@@ -121,7 +121,7 @@ CHeapPtr(CHeapPtr<T, Allocator>& p) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*p*  
+*p*<br/>
 既存のヒープ ポインターまたは`CHeapPtr`します。
 
 ### <a name="remarks"></a>Remarks
@@ -143,7 +143,7 @@ CHeapPtr<T, Allocator>& operator=(
 
 ### <a name="parameters"></a>パラメーター
 
-*p*  
+*p*<br/>
 既存の `CHeapPtr` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -164,7 +164,7 @@ bool Reallocate(size_t nElements) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nElements*  
+*nElements*<br/>
 新しいに割り当てるメモリの量を計算するための要素数。
 
 ### <a name="return-value"></a>戻り値
@@ -177,6 +177,6 @@ bool Reallocate(size_t nElements) throw();
 
 ## <a name="see-also"></a>関連項目
 
-[CHeapPtrBase クラス](../../atl/reference/cheapptrbase-class.md)   
-[CCRTAllocator クラス](../../atl/reference/ccrtallocator-class.md)   
+[CHeapPtrBase クラス](../../atl/reference/cheapptrbase-class.md)<br/>
+[CCRTAllocator クラス](../../atl/reference/ccrtallocator-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

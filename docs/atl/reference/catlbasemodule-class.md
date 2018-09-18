@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067edba7bc0a8819925af533dd48a34c6f6e4536
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c4b3c7d53e3500b5dd97fdbd49e4006916cd1a80
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767752"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055456"
 ---
 # <a name="catlbasemodule-class"></a>CAtlBaseModule クラス
 
@@ -93,7 +93,7 @@ bool AddResourceInstance(HINSTANCE hInst) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*hInst*  
+*hInst*<br/>
 追加するリソースのインスタンス。
 
 ### <a name="return-value"></a>戻り値
@@ -122,7 +122,7 @@ HINSTANCE GetHInstanceAt(int i) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*i*  
+*i*<br/>
 リソース インスタンスの数。
 
 ### <a name="return-value"></a>戻り値
@@ -175,7 +175,7 @@ bool RemoveResourceInstance(HINSTANCE hInst) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*hInst*  
+*hInst*<br/>
 削除するリソースのインスタンス。
 
 ### <a name="return-value"></a>戻り値
@@ -192,7 +192,7 @@ HINSTANCE SetResourceInstance(HINSTANCE hInst) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*hInst*  
+*hInst*<br/>
 リソースの新しいインスタンス。
 
 ### <a name="return-value"></a>戻り値
@@ -201,5 +201,5 @@ HINSTANCE SetResourceInstance(HINSTANCE hInst) throw();
 
 ## <a name="see-also"></a>関連項目
 
-[クラスの概要](../../atl/atl-class-overview.md)   
+[クラスの概要](../../atl/atl-class-overview.md)<br/>
 [モジュール クラス](../../atl/atl-module-classes.md)

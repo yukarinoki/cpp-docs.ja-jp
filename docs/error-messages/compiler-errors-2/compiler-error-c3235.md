@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3235 |Microsoft ドキュメント
+title: コンパイラ エラー C3235 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6101d6f3d15e0276697130f26627ced593fef0a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d156a9c1a6cda2ad8bb15e31034927b39a1a82e8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252246"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027870"
 ---
 # <a name="compiler-error-c3235"></a>コンパイラ エラー C3235
-'specialization' : ジェネリック クラスの明示的または部分的な特殊化は使用できません  
-  
- ジェネリック クラスは、明示的または部分的な特殊化には使用できません。  
-  
-## <a name="example"></a>例  
- 次の例では C3235 が生成されます。  
-  
-```  
-// C3235.cpp  
-// compile with: /clr  
-generic<class T>  
-public ref class C {};  
-  
-generic<>  
-public ref class C<int> {};   // C3235 Remove this specialization to resolve this error.  
+
+'specialization' : ジェネリック クラスの明示的または部分的な特殊化は使用できません
+
+ジェネリック クラスは、明示的または部分的な特殊化には使用できません。
+
+## <a name="example"></a>例
+
+次の例では C3235 が生成されます。
+
+```
+// C3235.cpp
+// compile with: /clr
+generic<class T>
+public ref class C {};
+
+generic<>
+public ref class C<int> {};   // C3235 Remove this specialization to resolve this error.
 ```

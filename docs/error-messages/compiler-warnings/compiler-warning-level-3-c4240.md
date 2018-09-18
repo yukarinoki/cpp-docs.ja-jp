@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 3) C4240 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 3) C4240 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f0691230454ffd935d67c99f58b857cdc1ce0f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2f3c059e63bcca9bbde9e863cc17c9e240e4f78
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292702"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057016"
 ---
 # <a name="compiler-warning-level-3-c4240"></a>コンパイラの警告 (レベル 3) C4240
-使用される標準の拡張機能: 'のアクセス指定子' である 'classname' が 'アクセス指定子'、以前のバージョンで現在定義へのアクセスが定義されました  
-  
- ANSI 互換 ([/Za](../../build/reference/za-ze-disable-language-extensions.md))、入れ子になったクラスに、アクセスを変更することはできません。 既定 Microsoft 拡張機能 (/Ze)、することができますがこの警告が発生します。  
-  
-## <a name="example"></a>例  
-  
-```  
-// C4240.cpp  
-// compile with: /W3  
-class X  
-{  
-private:  
-   class N;  
-public:  
-   class N  
-   {   // C4240  
-   };  
-};  
-  
-int main()  
-{  
-}  
+
+標準の拡張機能を使用します 'アクセス指定子' を 'classname' を 'へのアクセス指定子'、以前のバージョンで定義されましたへのアクセスが定義されました。
+
+ANSI 互換 ([/Za](../../build/reference/za-ze-disable-language-extensions.md))、入れ子になったクラスにアクセス権を変更することはできません。 既定の Microsoft 拡張 (/Ze) で、この警告をできます。
+
+## <a name="example"></a>例
+
+```
+// C4240.cpp
+// compile with: /W3
+class X
+{
+private:
+   class N;
+public:
+   class N
+   {   // C4240
+   };
+};
+
+int main()
+{
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: invalid_scheduler_policy_value クラス |Microsoft ドキュメント
+title: invalid_scheduler_policy_value クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec11d7ebc7d2c074344e9651a7c548fe1ad01943
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ae46d9f9de26e80a97d4ea2e9a692caec3445c75
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689728"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068157"
 ---
 # <a name="invalidschedulerpolicyvalue-class"></a>invalid_scheduler_policy_value クラス
 このクラスは、`SchedulerPolicy` オブジェクトのポリシー キーがそのキーの無効な値に設定された場合にスローされる例外を表します。  
@@ -62,8 +62,8 @@ invalid_scheduler_policy_value() throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Message`  
- エラーの説明メッセージ。  
+*メッセージ (_m)*<br/>
+エラーの説明メッセージ。  
   
 
 ## <a name="see-also"></a>関連項目  

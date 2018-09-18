@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3242 |Microsoft ドキュメント
+title: コンパイラ エラー C3242 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb9c30ef9a2662a705b7fa9d3620f1d6d89edea8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a426ffa92337b227a9f79c8d30f2890b639a056
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247140"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026427"
 ---
 # <a name="compiler-error-c3242"></a>コンパイラ エラー C3242
-'function': 仮想関数は明示的なオーバーライドのみ可能です  
-  
- 非仮想メソッドを明示的にオーバーライドしようとしました。
+
+'function': 仮想関数は明示的なオーバーライドのみ可能です
+
+非仮想メソッドを明示的にオーバーライドしようとしました。

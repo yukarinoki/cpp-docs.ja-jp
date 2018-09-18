@@ -19,32 +19,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95df1e21bee99914d2f20f194d68e5bfae29e203
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 622c0720f55e638d6640094f095e59d2d5e5f931
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763556"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069340"
 ---
 # <a name="specifying-compiler-optimization-for-an-atl-project"></a>ATL プロジェクトのコンパイラ最適化を指定します。
 
 既定で、 [ATL コントロール ウィザード](../../atl/reference/atl-control-wizard.md)ATL_NO_VTABLE マクロでは、新しいクラスを次のように生成されます。
 
-```  
-class ATL_NO_VTABLE CProjName  
-{  
-...  
-};  
+```
+class ATL_NO_VTABLE CProjName
+{
+...
+};
 ```
 
 ATL し、_ATL_NO_VTABLE を次のように定義します。
 
-```  
-#ifdef _ATL_DISABLE_NO_VTABLE  
-#define ATL_NO_VTABLE  
-#else  
-#define ATL_NO_VTABLE __declspec(novtable)  
-#endif  
+```
+#ifdef _ATL_DISABLE_NO_VTABLE
+#define ATL_NO_VTABLE
+#else
+#define ATL_NO_VTABLE __declspec(novtable)
+#endif
 ```
 
 _ATL_DISABLE_NO_VTABLE を定義していない場合、ATL_NO_VTABLE マクロ展開`declspec(novtable)`します。 使用して`declspec(novtable)`クラスで宣言がクラスのコンス トラクターとデストラクターで初期化されない vtable ポインターを防止します。 プロジェクトをビルドするときに、リンカーは、vtable と vtable がポイントするすべての関数を排除します。
@@ -55,19 +55,19 @@ ATL_NO_VTABLE を使用する必要があり、その結果`declspec(novtable)`�
 
 使用する必要があるかどうかが不明の場合、`declspec(novtable)`修飾子は、任意のクラス定義から ATL_NO_VTABLE マクロを削除するかを指定してグローバルに無効にできます
 
-```  
-#define _ATL_DISABLE_NO_VTABLE  
+```
+#define _ATL_DISABLE_NO_VTABLE
 ```
 
 stdafx.h に、その他のすべての ATL の前にヘッダー ファイルが含まれます。
 
 ## <a name="see-also"></a>関連項目
 
-[ATL プロジェクト ウィザード](../../atl/reference/atl-project-wizard.md)   
-[Visual C++ プロジェクトの種類](../../ide/visual-cpp-project-types.md)   
-[アプリケーション ウィザードを使用したデスクトップ プロジェクトの作成](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
-[ATL および C ランタイム コードによるプログラミング](../../atl/programming-with-atl-and-c-run-time-code.md)   
-[ATL COM オブジェクトの基礎](../../atl/fundamentals-of-atl-com-objects.md)   
-[novtable](../../cpp/novtable.md)   
+[ATL プロジェクト ウィザード](../../atl/reference/atl-project-wizard.md)<br/>
+[Visual C++ プロジェクトの種類](../../ide/visual-cpp-project-types.md)<br/>
+[アプリケーション ウィザードを使用したデスクトップ プロジェクトの作成](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[ATL および C ランタイム コードによるプログラミング](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
+[ATL COM オブジェクトの基礎](../../atl/fundamentals-of-atl-com-objects.md)<br/>
+[novtable](../../cpp/novtable.md)<br/>
 [ATL プロジェクトの既定の構成](../../atl/reference/default-atl-project-configurations.md)
 

@@ -1,5 +1,5 @@
 ---
-title: リソース コンパイラ エラー RC2015 |Microsoft ドキュメント
+title: リソース コンパイラ エラー RC2015 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9d9f0507f0e71e9417c6b0e577d8626c63c402e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 247282e7371ab79f40bfdb99031348100ee25d6d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320279"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037399"
 ---
 # <a name="resource-compiler-error-rc2015"></a>リソース コンパイラ エラー RC2015
-定数に文字数が多すぎます  
-  
- 文字定数には、3 つ以上の文字が含まれています。  
-  
- 文字定数は、1 文字 (標準の文字定数) または 2 つの文字 (長い文字定数) に制限されます。  
-  
- エスケープ シーケンス (たとえば、タブ \t) は 1 つの文字に変換されていることに注意してください。
+
+定数に文字数が多すぎます
+
+文字定数には、2 つ以上の文字が含まれています。
+
+文字定数は、1 つの文字 (標準の文字定数) または 2 つの文字 (長い文字定数) に制限されます。
+
+エスケープ シーケンス (たとえば、タブ \t) は 1 つの文字に変換されていることに注意してください。

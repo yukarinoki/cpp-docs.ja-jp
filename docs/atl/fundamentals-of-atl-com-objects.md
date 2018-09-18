@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7873b7006962449a40a8e67d118b6699ac61f263
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b90d8901a60b5945b2b29db2c378a0cd29939f63
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762094"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059278"
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>ATL COM オブジェクトの基礎
 
@@ -57,30 +57,30 @@ ATL COM オブジェクトの他の側面は、他のクラスによって処理
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[CComObjectRootEx の実装](../atl/implementing-ccomobjectrootex.md)  
+[CComObjectRootEx の実装](../atl/implementing-ccomobjectrootex.md)<br/>
 実装するための COM マップ エントリの例を表示する`CComObjectRootEx`します。
 
-[CComObject、CComAggObject、CComPolyObject の実装](../atl/implementing-ccomobject-ccomaggobject-and-ccompolyobject.md)  
+[CComObject、CComAggObject、CComPolyObject の実装](../atl/implementing-ccomobject-ccomaggobject-and-ccompolyobject.md)<br/>
 について説明しますが、どのように**DECLARE_\*_AGGREGATABLE**マクロの使用に影響`CComObject`、`CComAggObject`と`CComPolyObject`します。
 
-[IDispatch と IErrorInfo のサポート](../atl/supporting-idispatch-and-ierrorinfo.md)  
+[IDispatch と IErrorInfo のサポート](../atl/supporting-idispatch-and-ierrorinfo.md)<br/>
 サポートするために使用する ATL 実装クラスの一覧、`IDispatch`と`IErrorInfo`インターフェイス。
 
-[IDispEventImpl のサポート](../atl/supporting-idispeventimpl.md)  
+[IDispEventImpl のサポート](../atl/supporting-idispeventimpl.md)<br/>
 クラスの接続ポイントを実装する手順について説明します。
 
-[既定のクラス ファクトリと集計モデルの変更](../atl/changing-the-default-class-factory-and-aggregation-model.md)  
+[既定のクラス ファクトリと集計モデルの変更](../atl/changing-the-default-class-factory-and-aggregation-model.md)<br/>
 使用して、既定のクラス ファクトリと集計モデルを変更するには、どのようなマクロを表示します。
 
-[集計オブジェクトの作成](../atl/creating-an-aggregated-object.md)  
+[集計オブジェクトの作成](../atl/creating-an-aggregated-object.md)<br/>
 集約オブジェクトを作成する手順を一覧表示します。
 
 ## <a name="related-sections"></a>関連項目
 
-[ATL プロジェクトの作成](../atl/reference/creating-an-atl-project.md)  
+[ATL プロジェクトの作成](../atl/reference/creating-an-atl-project.md)<br/>
 ATL COM オブジェクトを作成する方法について説明します。
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Active Template Library を使用してプログラミングする方法に関する概念説明のトピックへのリンクを提供します。
 
 ## <a name="see-also"></a>関連項目

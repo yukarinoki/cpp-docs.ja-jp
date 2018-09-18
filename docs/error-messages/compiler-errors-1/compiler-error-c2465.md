@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2465 |Microsoft ドキュメント
+title: コンパイラ エラー C2465 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5318fd04a79de7e49a3218dbbef6100c4fbe3dba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f27ea349e4955bc78b2115d3de4622a09290eb22
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240806"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060552"
 ---
 # <a name="compiler-error-c2465"></a>コンパイラ エラー C2465
-名前のない構造体、共用体、または、列挙型がかっこの式内で定義されました。  
-  
- 匿名構造体、共用体、または列挙型は、かっこで囲まれた式の内部で定義されます。 この定義は関数スコープにおいて意味がないため、これは C++ では無効です。
+
+名前のない構造体、共用体、または、列挙型がかっこの式内で定義されました。
+
+匿名構造体、共用体、または列挙型は、かっこで囲まれた式の内部で定義されます。 この定義は関数スコープにおいて意味がないため、これは C++ では無効です。

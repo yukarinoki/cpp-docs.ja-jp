@@ -1,5 +1,5 @@
 ---
-title: 式エバリュエーター エラー CXX0066 |Microsoft ドキュメント
+title: 式エバリュエーター エラー CXX0066 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a4e2f71de2f883e54a17a08aa4735f63f167915
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2985583b24decfbfd2da1a1a4bfb1344f57bac49
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298422"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026740"
 ---
 # <a name="expression-evaluator-error-cxx0066"></a>式エバリュエーター エラー CXX0066
-静的メンバーは存在しません  
-  
- クラスの静的メンバーは見つかりませんでしたまたはが定義されていません。 このエラーが発生することができます、静的クラスからが宣言されているメンバー定義またはのみ定義され、デバッグ情報が含まれていないモジュール内で参照します。  
-  
- このエラーは、can0066 と同じものと同じです。
+
+静的メンバーは存在しません
+
+クラスの静的メンバーは見つかりませんでしたまたはが定義されていません。 このエラーは発生する静的クラスからメンバーが宣言されている定義、またはのみ定義されデバッグ情報が含まれていないモジュールで参照されています。
+
+このエラーは、can0066 と同じものと同じです。

@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85a31aea113514651fc3e81ac147b5ea2974920c
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 2ea52c91391800b25ab9a71d977300dd1705fb51
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604295"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025530"
 ---
 # <a name="floating-limits"></a>浮動小数点の制限
 
 **Microsoft 固有の仕様**
 
-次の表に、浮動小数点定数の値に関する制限を示します。 これらの制限が、標準ヘッダー ファイルで定義されても\<float.h >。  
+次の表に、浮動小数点定数の値に関する制限を示します。 これらの制限が、標準ヘッダー ファイルで定義されても\<float.h >。
 
 ## <a name="limits-on-floating-point-constants"></a>浮動小数点定数の制限
 
@@ -57,4 +57,4 @@ ms.locfileid: "39604295"
 
 ## <a name="see-also"></a>関連項目
 
-[整数の制限](../cpp/integer-limits.md)  
+[整数の制限](../cpp/integer-limits.md)

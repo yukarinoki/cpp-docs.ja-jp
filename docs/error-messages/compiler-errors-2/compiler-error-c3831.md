@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3831 |Microsoft ドキュメント
+title: コンパイラ エラー C3831 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47c0295f598b79436d1f892114615473d16275e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8525df7eb854ee56eef7bc9167d3630ea3c72ad5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268062"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029885"
 ---
 # <a name="compiler-error-c3831"></a>コンパイラ エラー C3831
-'member': 'class' は、ピン留めしたデータ メンバー、またはピン ポインターを返すメンバー関数を持つことはできません  
-  
- [pin_ptr (C + + CLI)](../../windows/pin-ptr-cpp-cli.md)正しく使用されていません。  
-  
-## <a name="example"></a>例  
- 次の例では、C3831 が生成されます。  
-  
-```  
-// C3831a.cpp  
-// compile with: /clr  
-ref class Y  
-{  
-public:  
-   int i;  
-};  
-  
-ref class X  
-{  
-   pin_ptr<int> mbr_Y;   // C3831  
-   int^ mbr_Y2;   // OK  
-};  
-  
-int main() {  
-   Y y;  
-   pin_ptr<int> p = &y.i;  
-}  
-```  
+
+'member': 'class' は、ピン留めされたデータ メンバー、またはピン ポインターを返すメンバー関数を含めることはできません
+
+[pin_ptr (C +/cli CLI)](../../windows/pin-ptr-cpp-cli.md)正しく使用されていません。
+
+## <a name="example"></a>例
+
+次の例では、C3831 が生成されます。
+
+```
+// C3831a.cpp
+// compile with: /clr
+ref class Y
+{
+public:
+   int i;
+};
+
+ref class X
+{
+   pin_ptr<int> mbr_Y;   // C3831
+   int^ mbr_Y2;   // OK
+};
+
+int main() {
+   Y y;
+   pin_ptr<int> p = &y.i;
+}
+```

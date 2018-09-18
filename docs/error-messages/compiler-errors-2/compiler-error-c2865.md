@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2865 |Microsoft ドキュメント
+title: コンパイラ エラー C2865 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70b2c6c831fde18f9054e139a120d834a75b6950
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cc0a49f8e6ab42f7e607cd5f4f7cc91f6895abe0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246217"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035169"
 ---
 # <a name="compiler-error-c2865"></a>コンパイラ エラー C2865
-'function': handle_or_pointer 比較が正しくありません  
-  
- 参照を比較する[クラスと構造体](../../windows/classes-and-structs-cpp-component-extensions.md)マネージ参照型の等値に対してのみを同じオブジェクト (= =) または別のオブジェクトを参照しているかを確認または (! =)。  
-  
- 比較できませんの .NET ランタイムは、いつでも管理オブジェクトを移動する可能性がありますので順序指定テストの結果を変更します。
+
+'function': handle_or_pointer 比較が正しくありません
+
+参照を比較する[クラスと構造体](../../windows/classes-and-structs-cpp-component-extensions.md)または別のオブジェクトを同じオブジェクト (= =) を参照しているかを確認するだけの等価性参照型をマネージまたは (! =)。
+
+比較できません .NET ランタイムが、いつでも管理オブジェクトを移動するため、順序付けのテストの結果を変更します。

@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 4) C4207 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 4) C4207 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e5ed69cfcbaa71a6bb0093944aab7de2f516cc3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a5aa7f364eb8f60d680dde4c252b9c84e258cda0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297642"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068833"
 ---
 # <a name="compiler-warning-level-4-c4207"></a>コンパイラの警告 (レベル 4) C4207
-使用される標準の拡張機能: 初期化子フォームを拡張  
-  
- Microsoft 拡張機能 (/Ze) での可変長配列を初期化することができます`char`中かっこ内の文字列を使用します。  
-  
-## <a name="example"></a>例  
-  
-```  
-// C4207.c  
-// compile with: /W4  
-char c[] = { 'a', 'b', "cdefg" }; // C4207  
-  
-int main()  
-{  
-}  
-```  
-  
- このような初期化は ANSI 互換では有効ではありません ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。
+
+使用される標準の拡張機能: 初期化子フォームを拡張
+
+可変長配列を初期化するには、Microsoft 拡張機能 (/Ze)、`char`中かっこ内の文字列を使用します。
+
+## <a name="example"></a>例
+
+```
+// C4207.c
+// compile with: /W4
+char c[] = { 'a', 'b', "cdefg" }; // C4207
+
+int main()
+{
+}
+```
+
+このような初期化が有効で ANSI 互換でない ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b977875655182f1cbc822540cf021635f525f7e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7cab0ea4ecf4bfabede365b9e0fbc9d4a02e2515
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756419"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057458"
 ---
 # <a name="ccomunkarray-class"></a>CComUnkArray クラス
 
@@ -45,7 +45,7 @@ class CComUnkArray
 
 #### <a name="parameters"></a>パラメーター
 
-*nMaxSize*  
+*nMaxSize*<br/>
 最大数`IUnknown`静的配列に格納できるポインター。
 
 ## <a name="members"></a>メンバー
@@ -92,7 +92,7 @@ DWORD Add(IUnknown* pUnk);
 
 ### <a name="parameters"></a>パラメーター
 
-*pUnk*  
+*pUnk*<br/>
 追加するには、このメソッドを呼び出す、`IUnknown`配列へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -159,7 +159,7 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
 
 ### <a name="parameters"></a>パラメーター
 
-*ppFind*  
+*ppFind*<br/>
 `IUnknown`ポインターに関連付けられている cookie が必要です。
 
 ### <a name="return-value"></a>戻り値
@@ -180,7 +180,7 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 
 ### <a name="parameters"></a>パラメーター
 
-*dwCookie*  
+*dwCookie*<br/>
 Cookie を関連付けられている`IUnknown`ポインターが必要です。
 
 ### <a name="return-value"></a>戻り値
@@ -197,7 +197,7 @@ BOOL Remove(DWORD dwCookie);
 
 ### <a name="parameters"></a>パラメーター
 
-*dwCookie*  
+*dwCookie*<br/>
 Cookie を参照すること、`IUnknown`ポインター、配列から削除します。
 
 ### <a name="return-value"></a>戻り値
@@ -206,5 +206,5 @@ Cookie を参照すること、`IUnknown`ポインター、配列から削除し
 
 ## <a name="see-also"></a>関連項目
 
-[CComDynamicUnkArray クラス](../../atl/reference/ccomdynamicunkarray-class.md)   
+[CComDynamicUnkArray クラス](../../atl/reference/ccomdynamicunkarray-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2365 |Microsoft ドキュメント
+title: コンパイラ エラー C2365 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 952d1ea71f0388b26d72e3cbdcb10185813242e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b8809c4137cd9b3c1d45960387b8a28bdb007ac8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33223636"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029153"
 ---
 # <a name="compiler-error-c2365"></a>コンパイラ エラー C2365
-'class member': 再定義; 以前の定義は 'class member' でした  
-  
- クラス メンバーを再定義しようとしました。  
-  
- 次の例では C2365 が生成されます。  
-  
-```  
-// C2365.cpp  
-// compile with: /c  
-class C1 {  
-   int CFunc();  
-   char *CFunc;   // C2365, already exists as a member function  
-  
-   int CMem;  
-   char *CMem();   // C2365, already exists as a data member  
-};  
+
+'class member': 再定義; 以前の定義は 'class member' でした
+
+クラス メンバーを再定義しようとしました。
+
+次の例では C2365 が生成されます。
+
+```
+// C2365.cpp
+// compile with: /c
+class C1 {
+   int CFunc();
+   char *CFunc;   // C2365, already exists as a member function
+
+   int CMem;
+   char *CMem();   // C2365, already exists as a data member
+};
 ```

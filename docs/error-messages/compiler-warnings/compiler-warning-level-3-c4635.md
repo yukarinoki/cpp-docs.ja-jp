@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 3) C4635 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 3) C4635 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2dcc4b7466ed53a187b7f34ec45084a94adb59b4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7651012d4c48d420734a9c6ec2ff051718f82007
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291773"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038114"
 ---
 # <a name="compiler-warning-level-3-c4635"></a>コンパイラの警告 (レベル 3) C4635
-XML ドキュメント コメント対象: XML の形式が正しくありません: 理由  
-  
- コンパイラは XML タグに何らかの問題を検出しました。  問題を修正して再コンパイルします  
-  
- 次の例では C4635 が生成されます。  
-  
-```  
-// C4635.cpp  
-// compile with: /doc /clr /W3 /c  
-/// <summary>     
-/// The contents of the folder have changed.  
-/// <summary/>   // C4635  
-  
-// try the following line instead  
-// /// </summary>  
-public ref class Test {};  
-```  
-  
- このサンプルの次の出力に注意してください: **'member' の終了タグが開始タグ 'summary' と一致しません。**  
-  
- このサンプルでの問題は、終了タグの\<概要 > が不完全で、コンパイラが認識しないこととして、\<概要 > 終了タグ。  \<メンバー > タグは、/doc のコンパイルごとに、コンパイラによって .xdc ファイルに埋め込まれています。  そのため、ここでの問題は、終了タグ\</member >、コンパイラが処理される前の開始タグと一致しません (\<概要 >。
+
+XML ドキュメント コメント対象: XML の形式が正しくありません: 理由
+
+コンパイラは XML タグに何らかの問題を検出しました。  問題を修正して再コンパイルします
+
+次の例では C4635 が生成されます。
+
+```
+// C4635.cpp
+// compile with: /doc /clr /W3 /c
+/// <summary>
+/// The contents of the folder have changed.
+/// <summary/>   // C4635
+
+// try the following line instead
+// /// </summary>
+public ref class Test {};
+```
+
+このサンプルの次の出力に注意してください: **'member' の終了タグが開始タグ 'summary' と一致しません。**
+
+このサンプルで問題なの終了タグは\<概要 > が不完全で、コンパイラがそれを認識しないと、\<概要 > 終了タグ。  \<メンバー > タグは、/doc のコンパイルごとに、コンパイラによって .xdc ファイルに埋め込まれています。  ここで問題なはそのため、終了タグ\</member >、コンパイラが処理される前の開始タグと一致しません (\<概要 >。

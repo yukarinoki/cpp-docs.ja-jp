@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2014 |Microsoft ドキュメント
+title: コンパイラ エラー C2014 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 839fececb10897c799473ae328afb9f422b4c390
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4a9167d71e717490b89c1861abe9a9da9e0ab6a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165962"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064855"
 ---
 # <a name="compiler-error-c2014"></a>コンパイラ エラー C2014
-最初の空白としてプリプロセッサ コマンドを起動する必要があります。  
-  
- `#`プリプロセッサ ディレクティブの記号が空白ではない行の最初の文字にする必要があります。  
-  
- 次の例では、C2014 が生成されます。  
-  
-```  
-// C2014.cpp  
-int k; #include <stdio.h>   // C2014  
-```  
-  
- 考えられる解決方法:  
-  
-```  
-// C2014b.cpp  
-// compile with: /c  
-int k;   
-#include <stdio.h>  
+
+プリプロセッサ コマンドは、最初の空白として起動する必要があります。
+
+`#`プリプロセッサ ディレクティブの記号が空白でない行の最初の文字にする必要があります。
+
+次の例では、C2014 が生成されます。
+
+```
+// C2014.cpp
+int k; #include <stdio.h>   // C2014
+```
+
+考えられる解決方法:
+
+```
+// C2014b.cpp
+// compile with: /c
+int k;
+#include <stdio.h>
 ```

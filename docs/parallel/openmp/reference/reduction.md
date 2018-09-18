@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2b90ef2eeca60a305cd8836e09dc81940392d2c
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: e004c129fb5482ed1bb50d091c8e4e53becbf20b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42540282"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059096"
 ---
 # <a name="reduction"></a>reduction
 各スレッドに対してプライベートである 1 つまたは複数の変数を並行領域の最後のリダクション演算の件名を指定します。  
@@ -32,14 +32,13 @@ ms.locfileid: "42540282"
 reduction(operation:var)  
 ```  
   
-## <a name="remarks"></a>Remarks  
- 指定項目  
+### <a name="parameters"></a>パラメーター
   
- `operation`  
- 変数に対して実行する操作の演算子 (`var`)、並列領域の最後にします。  
+*操作*<br/>
+変数に対して実行する操作の演算子 (`var`)、並列領域の最後にします。  
   
- `var`  
- スカラー リダクションを実行する 1 つまたは複数の変数。 1 つ以上の変数が指定されている場合は、変数名をコンマで区切ります。  
+*var*<br/>
+スカラー リダクションを実行する 1 つまたは複数の変数。 1 つ以上の変数が指定されている場合は、変数名をコンマで区切ります。  
   
 ## <a name="remarks"></a>Remarks  
  `reduction` 次のディレクティブに適用されます。  

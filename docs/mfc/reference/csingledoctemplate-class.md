@@ -1,5 +1,5 @@
 ---
-title: 関数クラス |Microsoft ドキュメント
+title: CSingleDocTemplate クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 4f3a8212-81ee-48a0-ad22-e0ed7c36a391
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: efdd8f5b806b7e5745aed0091a2638c8592a6ecc
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: ea133213b8d1d91a6c0932c7f0b7a94c5d5a368a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079066"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026766"
 ---
-# <a name="csingledoctemplate-class"></a>関数クラス
+# <a name="csingledoctemplate-class"></a>CSingleDocTemplate クラス
 SDI (シングル ドキュメント インターフェイス) を実装するドキュメント テンプレートを定義します。  
   
 ## <a name="syntax"></a>構文  
@@ -41,21 +41,21 @@ class CSingleDocTemplate : public CDocTemplate
 |[CSingleDocTemplate::CSingleDocTemplate](#csingledoctemplate)|`CSingleDocTemplate` オブジェクトを構築します。|  
   
 ## <a name="remarks"></a>Remarks  
- SDI アプリケーションでは、メイン フレーム ウィンドウを使用して、ドキュメントを表示1 つだけのドキュメントは、一度に開くことができます。  
+ SDI アプリケーションでは、メイン フレーム ウィンドウを使用して、ドキュメントを表示します。1 つだけのドキュメントは、一度に開くことができます。  
   
- ドキュメント テンプレートには、3 種類のクラス間のリレーションシップを定義します。  
+ ドキュメント テンプレートでは、3 種類のクラス間のリレーションシップを定義します。  
   
--   派生するドキュメント クラス`CDocument`です。  
+-   ドキュメント クラスから派生した`CDocument`します。  
   
--   ビュー クラス上に示したドキュメント クラスのデータを表示します。 このクラスから派生できます`CView`、 `CScrollView`、 `CFormView`、または`CEditView`です。 (使用することも`CEditView`直接)。  
+-   ビュー クラスの上に表示されるドキュメント クラスからのデータが表示されます。 このクラスから派生できます`CView`、 `CScrollView`、 `CFormView`、または`CEditView`します。 (使用することも`CEditView`直接)。  
   
--   ビューを含むフレーム ウィンドウ クラスです。 SDI ドキュメント テンプレートからこのクラスを派生できます`CFrameWnd`以外のかどうかは、メインの動作をカスタマイズする必要はありませんフレーム ウィンドウは、使用できます`CFrameWnd`独自のクラスを派生することがなく、直接です。  
+-   ビューを含むフレーム ウィンドウ クラス。 SDI ドキュメント テンプレートからこのクラスを派生できます`CFrameWnd`かどうかは、メインの動作をカスタマイズする必要はありません。 フレーム ウィンドウを使用できます`CFrameWnd`、独自のクラスを派生させることなく直接します。  
   
- SDI アプリケーション通常をサポートしている 1 つの種類のドキュメントを 1 つだけがあるため`CSingleDocTemplate`オブジェクト。 1 つだけのドキュメントは、一度に開くことができます。  
+ SDI アプリケーションは、1 つだけがある、通常、ドキュメントの 1 つの種類をサポート`CSingleDocTemplate`オブジェクト。 1 つだけのドキュメントは、一度に開くことができます。  
   
- 任意のメンバーの関数を呼び出す必要はありません`CSingleDocTemplate`コンス トラクターを除きます。 Framework ハンドル`CSingleDocTemplate`オブジェクトを内部的にします。  
+ すべてのメンバーの関数を呼び出す必要はありません`CSingleDocTemplate`コンス トラクターを除きます。 Framework ハンドル`CSingleDocTemplate`オブジェクトを内部的にします。  
   
- 使用する方法についての`CSingleDocTemplate`を参照してください[ドキュメント テンプレートとドキュメント/ビューの作成手順](../../mfc/document-templates-and-the-document-view-creation-process.md)です。  
+ 使用しての詳細については`CSingleDocTemplate`を参照してください[ドキュメント テンプレートとドキュメント/ビューの作成手順](../../mfc/document-templates-and-the-document-view-creation-process.md)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -66,7 +66,7 @@ class CSingleDocTemplate : public CDocTemplate
   
  `CSingleDocTemplate`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="csingledoctemplate"></a>  CSingleDocTemplate::CSingleDocTemplate  
@@ -82,32 +82,30 @@ CSingleDocTemplate(
   
 ### <a name="parameters"></a>パラメーター  
  *可能*  
- ドキュメントの種類で使用するリソースの ID を指定します。 これには、メニューのアイコン、アクセラレータ テーブル、および文字列リソースが含まれます。  
+ ドキュメントの種類で使用するリソースの ID を指定します。 これには、メニューのアイコン、アクセラレータ テーブル、および文字列リソースを含めることができます。  
   
- 文字列リソースは、'\n' 文字で区切られた最大 7 つの部分文字列で構成されます (部分文字列が含まれていない場合、プレース ホルダーとして '\n' 文字が必要ですただし、末尾の '\n' 文字は必要ありません;)。これらの部分文字列では、ドキュメントの種類について説明します。 部分文字列の詳細については、次を参照してください。 [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)です。 この文字列リソースについては、アプリケーションのリソース ファイルにあります。 例えば:  
+ 文字列リソースは、'\n' 文字で区切られた最大 7 つの部分文字列で構成されます (部分文字列が含まれていない場合、'\n' 文字は、プレース ホルダーとして必要ですただし、末尾の '\n' 文字は必要ありません);。これらの部分文字列には、ドキュメントの種類について説明します。 部分文字列の詳細については、次を参照してください。 [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)します。 この文字列リソースには、アプリケーションのリソース ファイルが記載されています。 例えば:  
   
- `// MYCALC.RC`  
+```RC
+// MYCALC.RC
+STRINGTABLE PRELOAD DISCARDABLE
+BEGIN
+  IDR_MAINFRAME "MyCalc Windows Application\nSheet\nWorksheet\n Worksheets (*.myc)\n.myc\nMyCalcSheet\n MyCalc Worksheet"
+END
+```
   
- `STRINGTABLE PRELOAD DISCARDABLE`  
+ ストリング エディターを使用してこの文字列を編集できます。文字列全体は、7 つの個別のエントリとしてではなく文字列エディターで、1 つのエントリとして表示されます。  
   
- `BEGIN`  
-  
- `IDR_MAINFRAME "MyCalc Windows Application\nSheet\nWorksheet\n Worksheets (*.myc)\n.myc\nMyCalcSheet\n MyCalc Worksheet"`  
-  
- `END`  
-  
- ストリング エディターを使用してこの文字列を編集することができます。文字列全体は、7 つの独立したエントリとしてではなく文字列エディターで、1 つのエントリとして表示されます。  
-  
- これらのリソースの種類の詳細については、次を参照してください。、[ストリング エディター](../../windows/string-editor.md)です。  
+ これらのリソースの種類の詳細については、次を参照してください。、[文字列エディター](../../windows/string-editor.md)します。  
   
  *pDocClass*  
  指す、`CRuntimeClass`ドキュメント クラスのオブジェクト。 このクラスは、 `CDocument`-ドキュメントを表すために定義するクラスを派生します。  
   
  *pFrameClass*  
- 指す、`CRuntimeClass`フレーム ウィンドウ クラスのオブジェクト。 このクラスにすることができます、 `CFrameWnd`-派生クラスにすることもできます`CFrameWnd`自体、メイン フレーム ウィンドウの既定の動作をする場合。  
+ 指す、`CRuntimeClass`フレーム ウィンドウ クラスのオブジェクト。 このクラスにすることができます、 `CFrameWnd`-クラスを派生することもできます`CFrameWnd`自体、メイン フレーム ウィンドウの既定の動作をする場合。  
   
  *pViewClass*  
- 指す、`CRuntimeClass`ビュー クラスのオブジェクト。 このクラスは、 `CView`-、ドキュメントを表示を定義するクラスを派生します。  
+ 指す、`CRuntimeClass`ビュー クラスのオブジェクト。 このクラスは、 `CView`-ドキュメントの表示を定義するクラスを派生します。  
   
 ### <a name="remarks"></a>Remarks  
  動的に割り当てる、`CSingleDocTemplate`オブジェクトに渡すと`CWinApp::AddDocTemplate`から、`InitInstance`アプリケーション クラスのメンバー関数。  

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49e25fa8a730ea31caf747d07ce30a0622c4bd01
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4cff60e5316202842b2ee22c5c6ba10813839b5d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714689"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035852"
 ---
 # <a name="application-settings-atl-project-wizard"></a>[アプリケーションの設定] (ATL プロジェクト ウィザード)
 
@@ -68,7 +68,7 @@ ms.locfileid: "45714689"
 
 ## <a name="see-also"></a>関連項目
 
-[ATL プロジェクト ウィザード](../../atl/reference/atl-project-wizard.md)   
-[ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)   
+[ATL プロジェクト ウィザード](../../atl/reference/atl-project-wizard.md)<br/>
+[ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)<br/>
 [ATL プロジェクトの既定の構成](../../atl/reference/default-atl-project-configurations.md)
 

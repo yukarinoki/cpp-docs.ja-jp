@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2311 |Microsoft ドキュメント
+title: コンパイラ エラー C2311 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa68a79b8255b1e64884ec7da1d1847021b8bc2f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f19e2a1b41c499605f22575f934b3d4872457011
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172993"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065102"
 ---
 # <a name="compiler-error-c2311"></a>コンパイラ エラー C2311
-'exception': 行番号 '…' によってキャッチされました  
-  
- 省略記号 (...) の catch ハンドラーは、スロー、最後のハンドラーをする必要があります。  
-  
- 次の例では、C2311 が生成されます。  
-  
-```  
-// C2311.cpp  
-// compile with: /EHsc  
-#include <eh.h>  
-int main() {  
-   try {  
-      throw "ooops!";  
-   }  
-   catch( ... ) {}  
-   catch( int ) {}   // C2311  ellipsis handler not last catch  
-}  
+
+'exception': 行番号 '…' によってキャッチされました
+
+省略記号 (...) の catch ハンドラーを throw の最後のハンドラーにする必要があります。
+
+次の例では、C2311 が生成されます。
+
+```
+// C2311.cpp
+// compile with: /EHsc
+#include <eh.h>
+int main() {
+   try {
+      throw "ooops!";
+   }
+   catch( ... ) {}
+   catch( int ) {}   // C2311  ellipsis handler not last catch
+}
 ```

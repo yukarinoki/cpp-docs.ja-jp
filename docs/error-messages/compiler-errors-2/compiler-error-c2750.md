@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2750 |Microsoft ドキュメント
+title: コンパイラ エラー C2750 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06731b0b386b200b74697592137aac10a48a8e82
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3f40894c4879c9b3598429c02bb0811db658bb0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233267"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069515"
 ---
 # <a name="compiler-error-c2750"></a>コンパイラ エラー C2750
-'type': 参照型で 'new' は使用できません'gcnew' を代わりに使用します。  
-  
- ガベージ コレクション ヒープ上に配置するインスタンスが発生した場合、CLR の型のインスタンスを作成する必要がありますを使用して[gcnew](../../windows/ref-new-gcnew-cpp-component-extensions.md)です。  
-  
- 次の例では、C2750 が生成されます。  
-  
-```  
-// C2750.cpp  
-// compile with: /clr  
-ref struct Y1 {};  
-  
-int main() {  
-   Y1 ^ x = new Y1;   // C2750  
-  
-   // try the following line instead  
-   Y1 ^ x2 = gcnew Y1;  
-}  
+
+'type': 'new' は参照型で使用できません代わりに 'gcnew'
+
+ガベージ コレクション ヒープに配置するインスタンスが発生した場合、CLR の型のインスタンスの作成に使用する必要があります[gcnew](../../windows/ref-new-gcnew-cpp-component-extensions.md)します。
+
+次の例では、C2750 が生成されます。
+
+```
+// C2750.cpp
+// compile with: /clr
+ref struct Y1 {};
+
+int main() {
+   Y1 ^ x = new Y1;   // C2750
+
+   // try the following line instead
+   Y1 ^ x2 = gcnew Y1;
+}
 ```

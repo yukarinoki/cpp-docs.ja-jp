@@ -19,14 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6ba5262577fc9176669916a7fc30d299d06770a8
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 9a127b5cd611177c28e6e434b04060edf3bdcb55
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336655"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028637"
 ---
 # <a name="traversing-a-simple-rowset"></a>単純な行セットの走査
+
 次の例では、コマンドを含まない素早く簡単にデータベースへのアクセスを示します。 ATL プロジェクトで、次のコンシューマー コードという名前のテーブルからレコードを取得する*アーティスト*ODBC 用の Microsoft OLE DB プロバイダーを使用して、データベースの Microsoft Access でします。 このコードを作成、 [CTable](../../data/oledb/ctable-class.md)アクセサーを使用してテーブルのオブジェクトは、ユーザー レコード クラスに基づく`CArtists`します。 接続を開き、接続、セッションを開きますをセッションでテーブルを開きます。  
   
 ```cpp  
@@ -53,7 +54,7 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- ユーザー レコードでは、 `CArtists`、ようになります。  
+ユーザー レコードでは、 `CArtists`、ようになります。  
   
 ```cpp  
 class CArtists  
@@ -73,4 +74,5 @@ END_COLUMN_MAP()
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB コンシューマー テンプレートの操作](../../data/oledb/working-with-ole-db-consumer-templates.md)
+
+[OLE DB コンシューマー テンプレートの操作](../../data/oledb/working-with-ole-db-consumer-templates.md)

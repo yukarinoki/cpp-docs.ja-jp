@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2571 |Microsoft ドキュメント
+title: コンパイラ エラー C2571 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96dea582cf5d1211d57eac94a7f70458a51542ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 30cc078251d0511da77e08690db275a788973ffb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230773"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067936"
 ---
 # <a name="compiler-error-c2571"></a>コンパイラ エラー C2571
-'function': 仮想関数は、'union' 共用体にすることはできません  
-  
- 仮想関数を持つ共用体が宣言されています。 クラスまたは構造体でのみ仮想関数を宣言することができます。  考えられる解決策:  
-  
-1.  クラスまたは構造体、共用体を変更します。  
-  
-2.  非仮想関数を作成します。  
-  
- 次の例では、C2571 が生成されます。  
-  
-```  
-// C2571.cpp  
-// compile with: /c  
-union A {  
-   virtual void func1();   // C2571  
-   void func2();   // OK  
-};  
+
+'function': 仮想関数は、共用体 'union' にすることはできません
+
+仮想関数を持つ共用体が宣言されています。 クラスまたは構造体でのみ仮想関数を宣言することができます。  考えられる解決策:
+
+1. クラスまたは構造体、共用体に変更します。
+
+1. 非仮想関数を作成します。
+
+次の例では、C2571 が生成されます。
+
+```
+// C2571.cpp
+// compile with: /c
+union A {
+   virtual void func1();   // C2571
+   void func2();   // OK
+};
 ```

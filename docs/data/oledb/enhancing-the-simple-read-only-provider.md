@@ -1,5 +1,5 @@
 ---
-title: 単純な読み取り専用プロバイダーの向上 |Microsoft ドキュメント
+title: 単純な読み取り専用プロバイダーの向上 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,23 +18,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7c88714e4e1651839cdc5fd4b92d3c5222aa08d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 28a92f6193053baca80ca078bddc0de862f50279
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33100019"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036450"
 ---
 # <a name="enhancing-the-simple-read-only-provider"></a>単純な読み取り専用プロバイダーの機能の拡張
-このセクションの内容を強化する方法を示しています、[単純な読み取り専用プロバイダー](../../data/oledb/implementing-the-simple-read-only-provider.md)前のセクションで作成します。 `IRowsetLocateImpl` 実装が作成、`IRowsetLocate`インターフェイスし、ブックマーク サポートを追加します。  
+
+このセクションを拡張する方法を示しています、[単純な読み取り専用プロバイダー](../../data/oledb/implementing-the-simple-read-only-provider.md)前のセクションで作成します。 `IRowsetLocateImpl` 実装が作成、`IRowsetLocate`インターフェイスし、ブックマーク サポートを追加します。  
   
- プロバイダーがある場合は、ときに、機能を拡張して、トランザクションの処理または行をフェッチするアルゴリズムのパフォーマンスの向上は、プロバイダーの更新を行うことができます。 ほとんどのプロバイダーの機能強化には、既存の COM オブジェクトへのインターフェイスの追加が含まれます。  
+プロバイダーがある場合は、機能を拡張して、トランザクションの処理または行をフェッチするアルゴリズムのパフォーマンスの向上は、プロバイダーの更新を行うしたい場合があります。 ほとんどのプロバイダーの拡張機能には、既存の COM オブジェクトへのインターフェイスの追加が含まれます。  
   
- 次のトピックの例では追加することによって行フェッチのメカニズムの強化、`IRowsetLocate`インターフェイスを`CAgentRowset`です。 トピックが方法を説明します。  
+次のトピックの例では、追加することで行フェッチ メカニズムを強化する、`IRowsetLocate`インターフェイス`CAgentRowset`します。 その方法について説明します。  
   
--   [RMyProviderRowset IRowsetLocate から継承する](../../data/oledb/modifying-the-inheritance-of-rmyproviderrowset.md)です。  
+- [RMyProviderRowset IRowsetLocate から継承する](../../data/oledb/modifying-the-inheritance-of-rmyproviderrowset.md)します。  
   
--   [コンシューマーに返される列を動的に決定](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md)です。  
+- [コンシューマーに返される列を動的に決定](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md)します。  
   
 ## <a name="see-also"></a>関連項目  
- [単純な読み取り専用プロバイダーの作成](../../data/oledb/creating-a-simple-read-only-provider.md)
+
+[単純な読み取り専用プロバイダーの作成](../../data/oledb/creating-a-simple-read-only-provider.md)

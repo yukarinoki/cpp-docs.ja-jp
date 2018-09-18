@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 920cfbde9229131c5148c359f6a82ce002d7fb3a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 411b8f58b38d2b35c1353d1ff446407026977d66
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758519"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030145"
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray クラス
 
@@ -58,7 +58,7 @@ class CComSafeArray
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 配列に格納されるデータの型。
 
 ## <a name="members"></a>メンバー
@@ -158,19 +158,19 @@ HRESULT Add(const T& t, BOOL bCopy = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-*psaSrc*  
+*psaSrc*<br/>
 ポインターを`SAFEARRAY`オブジェクト。
 
-*ulCount*  
+*ulCount*<br/>
 配列に追加するオブジェクトの数。
 
-*pT*  
+*pT*<br/>
 配列に追加する 1 つまたは複数のオブジェクトへのポインター。
 
-*t*  
+*t*<br/>
 配列に追加するオブジェクトへの参照。
 
-*bCopy*  
+*bCopy*<br/>
 データのコピーを作成するかどうかを示します。 既定値は TRUE です。
 
 ### <a name="return-value"></a>戻り値
@@ -193,7 +193,7 @@ HRESULT Attach(const SAFEARRAY* psaSrc);
 
 ### <a name="parameters"></a>パラメーター
 
-*psaSrc*  
+*psaSrc*<br/>
 ポインター、`SAFEARRAY`構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -220,25 +220,25 @@ CComSafeArray(const SAFEARRAY* psaSrc);
 
 ### <a name="parameters"></a>パラメーター
 
-*バインドされています。*  
+*バインドされています。*<br/>
 `SAFEARRAYBOUND` 構造。
 
-*ulCount*  
+*ulCount*<br/>
 配列の要素数。
 
-*lLBound*  
+*lLBound*<br/>
 下限値。つまり、配列の最初の要素のインデックス。
 
-*pBound*  
+*pBound*<br/>
 ポインター、`SAFEARRAYBOUND`構造体。
 
-*uDims*  
+*uDims*<br/>
 配列の次元の数。
 
-*saSrc*  
+*saSrc*<br/>
 参照を`SAFEARRAY`構造または`CComSafeArray`オブジェクト。 いずれの場合も、コンス トラクターは作成した後、配列は参照しないように、配列のコピーを作成するのにこの参照を使用します。
 
-*psaSrc*  
+*psaSrc*<br/>
 ポインター、`SAFEARRAY`構造体。 コンス トラクターは、作成した後、配列は参照しないように、配列のコピーを作成するのにこのアドレスを使用します。
 
 ### <a name="remarks"></a>Remarks
@@ -267,7 +267,7 @@ HRESULT CopyFrom(LPSAFEARRAY* ppArray);
 
 ### <a name="parameters"></a>パラメーター
 
-*ppArray*  
+*ppArray*<br/>
 ポインター、`SAFEARRAY`にコピーします。
 
 ### <a name="return-value"></a>戻り値
@@ -288,7 +288,7 @@ HRESULT CopyTo(LPSAFEARRAY* ppArray);
 
 ### <a name="parameters"></a>パラメーター
 
-*ppArray*  
+*ppArray*<br/>
 新しいを作成するための場所へのポインター`SAFEARRAY`します。
 
 ### <a name="return-value"></a>戻り値
@@ -310,16 +310,16 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
 
 ### <a name="parameters"></a>パラメーター
 
-*pBound*  
+*pBound*<br/>
 ポインターを`SAFEARRAYBOUND`オブジェクト。
 
-*uDims*  
+*uDims*<br/>
 配列の次元の数。
 
-*ulCount*  
+*ulCount*<br/>
 配列の要素数。
 
-*lLBound*  
+*lLBound*<br/>
 下限値。つまり、配列の最初の要素のインデックス。
 
 ### <a name="return-value"></a>戻り値
@@ -372,7 +372,7 @@ T& GetAt(LONG lIndex) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*lIndex*  
+*lIndex*<br/>
 返される配列内の値のインデックス番号。
 
 ### <a name="return-value"></a>戻り値
@@ -389,7 +389,7 @@ ULONG GetCount(UINT uDim = 0) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*uDim*  
+*uDim*<br/>
 配列の次元。
 
 ### <a name="return-value"></a>戻り値
@@ -422,7 +422,7 @@ LONG GetLowerBound(UINT uDim = 0) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*uDim*  
+*uDim*<br/>
 下限の境界を取得する対象の配列の次元。 省略した場合、既定値は 0 です。
 
 ### <a name="return-value"></a>戻り値
@@ -485,7 +485,7 @@ LONG GetUpperBound(UINT uDim = 0) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*uDim*  
+*uDim*<br/>
 上限を取得する対象の配列の次元。 省略した場合、既定値は 0 です。
 
 ### <a name="return-value"></a>戻り値
@@ -526,10 +526,10 @@ HRESULT MultiDimGetAt(const LONG* alIndex, T& t);
 
 ### <a name="parameters"></a>パラメーター
 
-*alIndex*  
+*alIndex*<br/>
 配列内の各ディメンションのインデックスのベクターへのポインター。 (最上位) の一番左の次元は`alIndex[0]`します。
 
-*t*  
+*t*<br/>
 返されるデータへの参照。
 
 ### <a name="return-value"></a>戻り値
@@ -546,10 +546,10 @@ HRESULT MultiDimSetAt(const LONG* alIndex, const T& t);
 
 ### <a name="parameters"></a>パラメーター
 
-*alIndex*  
+*alIndex*<br/>
 配列内の各ディメンションのインデックスのベクターへのポインター。 右端 (最下位) ディメンションが`alIndex`[0]。
 
-*T*  
+*T*<br/>
 新しい要素の値を指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -571,7 +571,7 @@ T& operator[]int nindex) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*lIndex、nIndex*  
+*lIndex、nIndex*<br/>
 配列内の必要な要素のインデックス番号。
 
 ### <a name="return-value"></a>戻り値
@@ -593,10 +593,10 @@ ATL::CComSafeArray<T>& operator=(const SAFEARRAY* psaSrc);
 
 ### <a name="parameters"></a>パラメーター
 
-*saSrc*  
+*saSrc*<br/>
 `CComSafeArray` オブジェクトへの参照。
 
-*psaSrc*  
+*psaSrc*<br/>
 ポインターを`SAFEARRAY`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -626,13 +626,13 @@ HRESULT Resize(ULONG ulCount, LONG lLBound = 0);
 
 ### <a name="parameters"></a>パラメーター
 
-*pBound*  
+*pBound*<br/>
 ポインターを`SAFEARRAYBOUND`要素の数と、配列の下限の境界に情報を含む構造体。
 
-*ulCount*  
+*ulCount*<br/>
 要求されたサイズを変更した配列内のオブジェクト数。
 
-*lLBound*  
+*lLBound*<br/>
 下限値です。
 
 ### <a name="return-value"></a>戻り値
@@ -653,13 +653,13 @@ HRESULT SetAt(LONG lIndex, const T& t, BOOL bCopy = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-*lIndex*  
+*lIndex*<br/>
 設定する配列要素のインデックス番号。
 
-*t*  
+*t*<br/>
 指定した要素の新しい値。
 
-*bCopy*  
+*bCopy*<br/>
 データのコピーを作成するかどうかを示します。 既定値は TRUE です。
 
 ### <a name="return-value"></a>戻り値
@@ -672,7 +672,7 @@ HRESULT SetAt(LONG lIndex, const T& t, BOOL bCopy = TRUE);
 
 ## <a name="see-also"></a>関連項目
 
-[SAFEARRAY Data Type](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)   
-[Ccomsafearray::create](#create)   
-[Ccomsafearray::destroy](#destroy)   
+[SAFEARRAY Data Type](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)<br/>
+[オブジェクトは、](#create)<br/>
+[CComSafeArray::Destroy](#destroy)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

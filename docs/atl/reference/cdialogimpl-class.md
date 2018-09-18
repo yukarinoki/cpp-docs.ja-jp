@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1780a4f77cce4812ebdb03ebc89936da0dc0d5d0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ba47b7f78e372f05a851d2180590bbc68a8c61ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767056"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068443"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl クラス
 
@@ -51,10 +51,10 @@ template <class T,
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 派生したクラス、`CDialogImpl`します。
 
-*TBase*  
+*TBase*<br/>
 新しいクラスの基本クラス。 既定の基本クラスは[CWindow](../../atl/reference/cwindow-class.md)します。
 
 ## <a name="members"></a>メンバー
@@ -113,7 +113,7 @@ template <class T,
 
 モードレス ダイアログ ボックスを作成します。
 
-```  
+```
 HWND Create(
     HWND hWndParent,  
     LPARAM dwInitParam = NULL );  
@@ -121,18 +121,17 @@ HWND Create(
 HWND Create(
     HWND hWndParent,  
     RECT&, 
-    LPARAM dwInitParam = NULL); 
+    LPARAM dwInitParam = NULL);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*hWndParent*  
+*hWndParent*<br/>
 [in]オーナー ウィンドウのハンドル。
 
-**RECT &** *rect*  
-[in]A [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)  ダイアログ ボックスのサイズと位置を指定する構造体。
+**RECT &** *rect* [in] A [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)  ダイアログ ボックスのサイズと位置を指定する構造体。
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in]ダイアログ ボックスに渡す値を指定します、 *lParam* WM_INITDIALOG メッセージのパラメーター。
 
 ### <a name="return-value"></a>戻り値
@@ -173,16 +172,16 @@ static LRESULT CALLBACK DialogProc(
 
 ### <a name="parameters"></a>パラメーター
 
-*hWnd*  
+*hWnd*<br/>
 [in]ダイアログ ボックスへのハンドル。
 
-*uMsg*  
+*uMsg*<br/>
 [in]ダイアログ ボックスに送信されるメッセージ。
 
-*wParam*  
+*wParam*<br/>
 [in]追加のメッセージに固有の情報。
 
-*lParam*  
+*lParam*<br/>
 [in]追加のメッセージに固有の情報。
 
 ### <a name="return-value"></a>戻り値
@@ -199,18 +198,18 @@ static LRESULT CALLBACK DialogProc(
 
 モーダル ダイアログ ボックスを作成します。
 
-```   
+```
 INT_PTR DoModal(  
     HWND hWndParent = ::GetActiveWindow(),   
-    LPARAM dwInitParam = NULL); 
+    LPARAM dwInitParam = NULL);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*hWndParent*  
+*hWndParent*<br/>
 [in]オーナー ウィンドウのハンドル。 既定値はの戻り値、 [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) Win32 関数。
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in]ダイアログ ボックスに渡す値を指定します、 *lParam* WM_INITDIALOG メッセージのパラメーター。
 
 ### <a name="return-value"></a>戻り値
@@ -227,13 +226,13 @@ INT_PTR DoModal(
 
 モーダル ダイアログ ボックスを破棄します。
 
-```   
-BOOL EndDialog(int nRetCode); 
+```
+BOOL EndDialog(int nRetCode);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*終了*  
+*終了*<br/>
 [in]によって返される値[CDialogImpl::DoModal](#domodal)します。
 
 ### <a name="return-value"></a>戻り値
@@ -251,8 +250,8 @@ BOOL EndDialog(int nRetCode);
 
 返します`DialogProc`、現在のダイアログ ボックス プロシージャ。
 
-```   
-virtual WNDPROC GetDialogProc(); 
+```
+virtual WNDPROC GetDialogProc();
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -267,13 +266,13 @@ virtual WNDPROC GetDialogProc();
 
 (Maps) 画面に指定した四角形のダイアログ ボックスのユニット単位 (ピクセル単位) に変換します。
 
-```   
-BOOL MapDialogRect(LPRECT lpRect); 
+```
+BOOL MapDialogRect(LPRECT lpRect);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*lpRect*  
+*lpRect*<br/>
 指す、`CRect`オブジェクトまたは[RECT](../../mfc/reference/rect-structure1.md)更新領域を囲む更新プログラムのクライアント座標を受け取る構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -288,13 +287,13 @@ BOOL MapDialogRect(LPRECT lpRect);
 
 最後のメッセージの受信後に呼び出されます (通常`WM_NCDESTROY`)。
 
-```   
-virtual void OnFinalMessage(HWND hWnd); 
+```
+virtual void OnFinalMessage(HWND hWnd);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*hWnd*  
+*hWnd*<br/>
 [in]破棄されているウィンドウへのハンドル。
 
 ### <a name="remarks"></a>Remarks
@@ -305,26 +304,26 @@ virtual void OnFinalMessage(HWND hWnd);
 
 ダイアログ ボックスに送信されるメッセージを処理する最初のメッセージを受信すると、1 回だけ呼び出されます。
 
-```   
+```
 static LRESULT CALLBACK StartDialogProc(
     HWND hWnd,  
     UINT uMsg,  
     WPARAM wParam,  
-    LPARAM lParam); 
+    LPARAM lParam);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*hWnd*  
+*hWnd*<br/>
 [in]ダイアログ ボックスへのハンドル。
 
-*uMsg*  
+*uMsg*<br/>
 [in]ダイアログ ボックスに送信されるメッセージ。
 
-*wParam*  
+*wParam*<br/>
 [in]追加のメッセージに固有の情報。
 
-*lParam*  
+*lParam*<br/>
 [in]追加のメッセージに固有の情報。
 
 ### <a name="return-value"></a>戻り値
@@ -337,5 +336,5 @@ static LRESULT CALLBACK StartDialogProc(
 
 ## <a name="see-also"></a>関連項目
 
-[送るに](message-map-macros-atl.md#begin_msg_map)   
+[送るに](message-map-macros-atl.md#begin_msg_map)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

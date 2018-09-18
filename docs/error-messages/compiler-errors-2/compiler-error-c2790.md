@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2790 |Microsoft ドキュメント
+title: コンパイラ エラー C2790 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11f1c90fed93666fad7513e2b4186a5baa2aa406
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc2c6b238fab7e42c0754e613b62756a86a5bb31
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232818"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069574"
 ---
 # <a name="compiler-error-c2790"></a>コンパイラ エラー C2790
-'super': このキーワードはクラス メンバー関数の本体内でのみ使用できます  
-  
- ユーザーがこれまでしようとする場合は、キーワードを使用してこのエラー メッセージが表示される[super](../../cpp/super.md)メンバー関数のコンテキスト外でします。  
-  
- 次の例では、C2790 が生成されます。  
-  
-```  
-// C2790.cpp  
-void f() {  
-   __super::g();   // C2790  
-}  
+
+'super': このキーワードはクラスのメンバー関数の本体でのみ使用できます
+
+ユーザーがこれまでしようとする場合は、キーワードを使用してこのエラー メッセージが表示される[super](../../cpp/super.md)メンバー関数のコンテキスト外でします。
+
+次の例では、C2790 が生成されます。
+
+```
+// C2790.cpp
+void f() {
+   __super::g();   // C2790
+}
 ```

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d231f493fd2b2f2c492eec224a0ae041f175f53d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eb4611c52f65595eb84248507dfb3a85d1ab26fa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767351"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035965"
 ---
 # <a name="ispecifypropertypagesimpl-class"></a>ISpecifyPropertyPagesImpl クラス
 
@@ -37,14 +37,14 @@ ms.locfileid: "43767351"
 ## <a name="syntax"></a>構文
 
 ```
-template<class T>  
+template<class T>
 class ATL_NO_VTABLE ISpecifyPropertyPagesImpl 
    : public ISpecifyPropertyPages
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 派生したクラス、`ISpecifyPropertyPagesImpl`します。
 
 ## <a name="members"></a>メンバー
@@ -90,6 +90,6 @@ ATL では、オブジェクトのプロパティのマップを使用して、�
 
 ## <a name="see-also"></a>関連項目
 
-[IPropertyPageImpl クラス](../../atl/reference/ipropertypageimpl-class.md)   
-[IPerPropertyBrowsingImpl クラス](../../atl/reference/iperpropertybrowsingimpl-class.md)   
+[IPropertyPageImpl クラス](../../atl/reference/ipropertypageimpl-class.md)<br/>
+[IPerPropertyBrowsingImpl クラス](../../atl/reference/iperpropertybrowsingimpl-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

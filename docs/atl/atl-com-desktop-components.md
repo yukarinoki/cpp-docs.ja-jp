@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b16f2fd1a82d6199f1e035b06f8c0598810f0dfd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eadbcd138bd9fc73835938b8ff59d694ede152b8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752168"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065622"
 ---
 # <a name="atl-com-desktop-components"></a>ATL COM デスクトップ コンポーネント
 
@@ -28,37 +28,37 @@ ATL リファレンスで、Active Template Library (ATL)、一連のコンポ�
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[ATL のクラスの概要](../atl/atl-class-overview.md)  
+[ATL のクラスの概要](../atl/atl-class-overview.md)<br/>
 カテゴリ別に整理された ATL クラスの簡単な説明とへのリンクを提供します。
 
-[ATL クラスと構造体](../atl/reference/atl-classes.md)  
+[ATL クラスと構造体](../atl/reference/atl-classes.md)<br/>
 クラスと構造体のアルファベット順のリファレンス資料を提供します。
 
-[ATL 関数](../atl/reference/atl-functions.md)  
+[ATL 関数](../atl/reference/atl-functions.md)<br/>
 グローバル関数をアルファベット順リファレンス資料を提供します。 カテゴリに関数のトピックが含まれています。
 
-[ATL グローバル変数](../atl/reference/atl-global-variables.md)  
+[ATL グローバル変数](../atl/reference/atl-global-variables.md)<br/>
 アルファベット順のグローバル変数のリファレンス資料を提供します。
 
-[ATL マクロ](../atl/reference/atl-macros.md)  
+[ATL マクロ](../atl/reference/atl-macros.md)<br/>
 アルファベット順のマクロに関するリファレンス資料を提供します。 マクロのカテゴリにトピックが含まれています。
 
-[ATL Typedefs](../atl/reference/atl-typedefs.md)  
+[ATL Typedefs](../atl/reference/atl-typedefs.md)<br/>
 アルファベット順の typedef のリファレンス資料を提供します。
 
-[ワーカーのアーキタイプ](../atl/reference/worker-archetype.md)  
+[ワーカーのアーキタイプ](../atl/reference/worker-archetype.md)<br/>
 ATL のワーカーのアーキタイプへのリンクを提供します。
 
 ## <a name="related-sections"></a>関連項目
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Active Template Library (ATL) を使用してプログラミングする方法に関するトピックを提供します。
 
-[ATL チュートリアル](../atl/active-template-library-atl-tutorial.md)  
+[ATL チュートリアル](../atl/active-template-library-atl-tutorial.md)<br/>
 コントロールの作成について説明し、プロセスで、ATL の基本事項をいくつかを示します。
 
-[ATL のサンプル](../visual-cpp-samples.md)  
+[ATL のサンプル](../visual-cpp-samples.md)<br/>
 ATL を使用して、COM オブジェクトを記述する方法を示すサンプル コード。
 
-[OLE DB テンプレート](../data/oledb/ole-db-templates.md)  
+[OLE DB テンプレート](../data/oledb/ole-db-templates.md)<br/>
 OLE DB のコンシューマーおよびプロバイダーのテンプレートのリファレンスが用意されています。このテンプレート クラスのセットは、一般的に使用される多くの OLE DB インターフェイスを実装します。  

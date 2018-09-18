@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bc13eb70dd2efc479cef7185ee0cdfa147ec507
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 69411a727c3f590e9a45a46ecb4ea2eb0eab05c8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408047"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029469"
 ---
 # <a name="c-bit-fields"></a>C++ ビット フィールド
 
@@ -38,7 +38,7 @@ ms.locfileid: "39408047"
 > [!NOTE]
 > 幅 0 の名前のないビット フィールドでは、次のビット フィールドの配置を強制的に、[次へ]**型**境界、場所**型**メンバーの種類です。
 
- 次の例では、ビット フィールドを持つ構造体を宣言します。
+次の例では、ビット フィールドを持つ構造体を宣言します。
 
 ```cpp
 // bit_fields1.cpp
@@ -94,4 +94,5 @@ struct Date {
 - 以外の初期化**const**ビット フィールドで参照します。
 
 ## <a name="see-also"></a>関連項目
- [クラスと構造体](../cpp/classes-and-structs-cpp.md)
+
+[クラスと構造体](../cpp/classes-and-structs-cpp.md)

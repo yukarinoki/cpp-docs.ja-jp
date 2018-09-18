@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2061 |Microsoft ドキュメント
+title: コンパイラ エラー C2061 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,45 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4d4b018dbab16e8e376a3331a85d0f1b1004f5d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 896fdb21c57e0f558b87ec23e2be309cf49f8095
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167380"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057965"
 ---
 # <a name="compiler-error-c2061"></a>コンパイラ エラー C2061
-構文エラー: 識別子 'identifier'  
-  
- コンパイラは、ことが想定されている識別子を検出します。 確認して`identifier`が宣言されているは、使用する前にします。  
-  
- 初期化子は、かっこで囲むことがあります。 この問題を避けるためには、宣言子をかっこで囲みますまたはやすく、`typedef`です。  
-  
- コンパイラが、クラス テンプレート引数として式を検出したときに、このエラーを発生する可能性がありますも使用して[typename](../../cpp/typename.md)これは、型をコンパイラに指示します。  
-  
- 次の例では、C2061 が生成されます。  
-  
-```  
-// C2061.cpp  
-// compile with: /c  
-template < A a >   // C2061  
-// try the following line instead  
-// template < typename b >  
-class c{};  
-```  
-  
- C2061 は、インスタンス名を渡す場合に発生する可能性が[typeid](../../windows/typeid-cpp-component-extensions.md):  
-  
-```  
-// C2061b.cpp  
-// compile with: /clr  
-ref struct G {  
-   int i;  
-};  
-  
-int main() {  
-   G ^ pG = gcnew G;  
-   System::Type ^ pType = typeid<pG>;   // C2061  
-   System::Type ^ pType2 = typeid<G>;   // OK  
-}  
+
+構文エラー: 識別子 'identifier'
+
+コンパイラは、識別子を検出されなかったが必要です。 確認します`identifier`使用する前に宣言されています。
+
+初期化子は、かっこで囲むことができます。 この問題を避けるためには、宣言子をかっこで囲むかを`typedef`します。
+
+コンパイラはクラス テンプレート引数として式を検出したときに、このエラーを発生する可能性がありますも使用して、 [typename](../../cpp/typename.md)には、型をコンパイラに指示します。
+
+次の例では、C2061 が生成されます。
+
+```
+// C2061.cpp
+// compile with: /c
+template < A a >   // C2061
+// try the following line instead
+// template < typename b >
+class c{};
+```
+
+C2061 は、インスタンス名を渡す場合に発生する可能性が[typeid](../../windows/typeid-cpp-component-extensions.md):
+
+```
+// C2061b.cpp
+// compile with: /clr
+ref struct G {
+   int i;
+};
+
+int main() {
+   G ^ pG = gcnew G;
+   System::Type ^ pType = typeid<pG>;   // C2061
+   System::Type ^ pType2 = typeid<G>;   // OK
+}
 ```

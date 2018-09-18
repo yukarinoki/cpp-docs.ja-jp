@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04f77981bd922f73c99102c444a7c95f7240adbc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ef93476e669b923d642f79f480c602229d6a4322
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764621"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071160"
 ---
 # <a name="interfaces-atl"></a>インターフェイス (ATL)
 
@@ -35,6 +35,6 @@ ms.locfileid: "43764621"
 
 ## <a name="see-also"></a>関連項目
 
-[COM の概要](../atl/introduction-to-com.md)   
+[COM の概要](../atl/introduction-to-com.md)<br/>
 [COM オブジェクトとインターフェイス](/windows/desktop/com/com-objects-and-interfaces)
 

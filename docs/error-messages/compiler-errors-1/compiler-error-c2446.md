@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2446 |Microsoft ドキュメント
+title: コンパイラ エラー C2446 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0274aaf606d039cc4dcf4482f5d8ea1e3ef8e86d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7eeeab46bd7ed5be5b820d1740dd4ff8d377633a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196663"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062801"
 ---
 # <a name="compiler-error-c2446"></a>コンパイラ エラー C2446
-'operator': 'type1' から 'type2' への変換はありません  
-  
- コンパイラは変換できません`type1`に`type2`です。 変換がない有意義 C と C++ のセマンティクスに違反しているためです。
+
+'operator': 'type1' から 'type2' への変換はありません
+
+コンパイラは変換できません`type1`に`type2`します。 C と C++ のセマンティクスに違反しているため、変換が意味、ありません。

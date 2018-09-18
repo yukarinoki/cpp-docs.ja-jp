@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4584 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4584 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df3f92142fe42451ca7ae8272463d9347a263121
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9db97bf35034f7ca628f860924bfb9a1fccc942f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281165"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036255"
 ---
 # <a name="compiler-warning-level-1-c4584"></a>コンパイラの警告 (レベル 1) C4584
-'class1': 基底クラス 'class2' が 'class3' の基底クラスでは既に  
-  
- 定義したクラスから別の継承の 1 つ、2 つのクラスから継承されます。 例えば:  
-  
-```  
-// C4584.cpp  
-// compile with: /W1 /LD  
-class A {  
-};  
-  
-class B : public A {  
-};  
-  
-class C : public A, public B { // C4584  
-};  
-```  
-  
- ここでは、警告がクラス C に発行されます両方クラス A および B で、クラス A からも継承クラスから継承しているためこの警告は、アラームのこれらの基本クラスからのメンバーの使用を完全に修飾する必要がありますか、参照するクラスのメンバーがに関してあいまいなので、コンパイラ エラーが生成されることとして機能します。
+
+'class1': 基底クラス 'class2' が 'class3' の基底クラスでは既に
+
+定義したクラスは、うちの 1 つが継承、他の 2 つのクラスから継承します。 例えば:
+
+```
+// C4584.cpp
+// compile with: /W1 /LD
+class A {
+};
+
+class B : public A {
+};
+
+class C : public A, public B { // C4584
+};
+```
+
+この場合、警告がクラス C に発行されますクラス A と B で、クラス A からも継承クラスの両方から継承するためこの警告は、これらの基本クラスからメンバーの使用を完全に修飾する必要がありますか、参照するどのクラスのメンバーか、あいまいさのため、コンパイラ エラーが生成されることを知らせるリマインダーとして機能します。

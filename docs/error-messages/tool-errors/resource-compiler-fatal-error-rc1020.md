@@ -1,5 +1,5 @@
 ---
-title: リソース コンパイラの致命的なエラー RC1020 |Microsoft ドキュメント
+title: リソース コンパイラの致命的なエラー RC1020 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c90d3a5bb880ad10dcc4fb24d31fdc107f898840
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fe19b079a0407f07796bd8141db2cbedaf02cbbb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320344"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032966"
 ---
 # <a name="resource-compiler-fatal-error-rc1020"></a>リソース コンパイラの致命的なエラー RC1020
-予期しない ' #endif'  
-  
- `#endif`が対応するディレクティブが登場した`#if`、 **#ifdef**、または **#ifndef**ディレクティブです。  
-  
- 一致するかどうかを確認`#endif`各`#if`、 **#ifdef**、および **#ifndef**ステートメントです。
+
+予期しない ' #endif'
+
+`#endif`ディレクティブは、対応する表示されていた`#if`、 **#ifdef**、または **#ifndef**ディレクティブ。
+
+一致が確認`#endif`各`#if`、 **#ifdef**、および **#ifndef**ステートメント。

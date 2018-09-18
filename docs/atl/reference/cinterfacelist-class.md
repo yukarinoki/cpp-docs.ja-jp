@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9b0eb225f9da88db356fc4f04d25d2219876604
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1ac378e0a923e2a906bf99995432bfc87e39b8d5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752750"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032433"
 ---
 # <a name="cinterfacelist-class"></a>CInterfaceList クラス
 
@@ -32,7 +32,7 @@ ms.locfileid: "43752750"
 ## <a name="syntax"></a>構文
 
 ```
-template<class I, const IID* piid =& __uuidof(I)>  
+template<class I, const IID* piid =& __uuidof(I)>
 class CInterfaceList 
    : public CAtlList<ATL::CComQIPtr<I, piid>,
                      CComQIPtrElementTraits<I, piid>>
@@ -40,10 +40,10 @@ class CInterfaceList
 
 #### <a name="parameters"></a>パラメーター
 
-*I*  
+*I*<br/>
 COM インターフェイスを格納するポインターの種類を指定します。
 
-*piid*  
+*piid*<br/>
 ポインターの IID を*は*します。
 
 ## <a name="members"></a>メンバー
@@ -80,7 +80,7 @@ CInterfaceList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nBlockSize*  
+*nBlockSize*<br/>
 既定値は 10 でのブロック サイズ。
 
 ### <a name="remarks"></a>Remarks
@@ -89,7 +89,7 @@ CInterfaceList(UINT nBlockSize = 10) throw();
 
 ## <a name="see-also"></a>関連項目
 
-[CAtlList クラス](../../atl/reference/catllist-class.md)   
-[CComQIPtr クラス](../../atl/reference/ccomqiptr-class.md)   
-[CComQIPtrElementTraits クラス](../../atl/reference/ccomqiptrelementtraits-class.md)   
+[CAtlList クラス](../../atl/reference/catllist-class.md)<br/>
+[CComQIPtr クラス](../../atl/reference/ccomqiptr-class.md)<br/>
+[CComQIPtrElementTraits クラス](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

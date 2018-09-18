@@ -1,5 +1,5 @@
 ---
-title: リンカー ツールの警告 LNK4102 |Microsoft ドキュメント
+title: リンカー ツールの警告 LNK4102 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16d13dcbc6d15efd7cf3a7ea0a310de4ab7b0c93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9daaffc4ddfa9a869c2e60e2c05dc2b7e296d94b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302647"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031862"
 ---
 # <a name="linker-tools-warning-lnk4102"></a>リンカー ツールの警告 LNK4102
-削除するデストラクター 'name';イメージは正しく動作しない可能性があります。  
-  
- プログラムは削除するデストラクターをエクスポートしようとしています。 結果として得られる削除は、DLL の境界を越えて、プロセスが所有していないメモリを解放するように発生します。 特定のシンボルが、.def ファイルに表示されていないことと、シンボルがの引数として表示されていないことを確認してください、 **/インポート**または **/export**リンカーのコマンドラインでオプションです。  
-  
- C ランタイム ライブラリを再構築する場合は、このメッセージを無視できます。
+
+削除するデストラクター 'name';イメージは正しく動作しない可能性があります。
+
+プログラムが削除するデストラクターをエクスポートしようとしました。 Delete は、DLL 境界を越えて、プロセスが所有していないメモリを解放するように発生します。 .Def ファイルで指定されたシンボルが表示されていないことと、シンボルがの引数として表示されていないことを確認、 **/インポート**または **/export**リンカー コマンドラインのオプション。
+
+C ランタイム ライブラリを再構築する場合は、このメッセージを無視できます。

@@ -1,5 +1,5 @@
 ---
-title: 致命的なエラー C1038 |Microsoft ドキュメント
+title: 致命的なエラー C1038 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3592d583ff136a9b45486f3626d23dc4f0821259
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc8d80ff392a9e0d649a4d0fc2cac9f07207d79b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196689"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060583"
 ---
 # <a name="fatal-error-c1038"></a>致命的なエラー C1038
-コンパイラの制限: function: 制御フローが複雑すぎます。関数を単純化してください  
-  
- 関数の制御フローの数が、コンパイラで処理できる量を超えています。 制御フローを簡単にするか、関数を小さな関数に分割してください。
+
+コンパイラの制限: function: 制御フローが複雑すぎます。関数を単純化してください
+
+関数の制御フローの数が、コンパイラで処理できる量を超えています。 制御フローを簡単にするか、関数を小さな関数に分割してください。

@@ -1,5 +1,5 @@
 ---
-title: リソース コンパイラの警告 RC4005 |Microsoft ドキュメント
+title: リソース コンパイラの警告 RC4005 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 724764e443d4ab999c1df1247e9f5572ebdb2078
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 589fd008b3927887a8144b2fc63d2cbbde2af913
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322485"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028520"
 ---
 # <a name="resource-compiler-warning-rc4005"></a>リソース コンパイラの警告 RC4005
-'identifier': 再定義はマクロ  
-  
- 識別子が 2 回定義されています。 コンパイラは、2 番目のマクロ定義を使用します。  
-  
- この警告は、コマンドラインで、コードでは、マクロを定義することによって生じること、`#define`ディレクティブです。 これにはインクルード ファイルからインポートされたマクロで発生することできます。  
-  
- 警告をなくすため、削除するいずれかの定義かを使用して、`#undef`ディレクティブを 2 つ目の定義の前にします。
+
+'identifier': 再定義はマクロ
+
+識別子は、2 回定義されます。 コンパイラは、2 つ目のマクロ定義を使用します。
+
+この警告は、コマンドラインで、コードで、マクロの定義によって発生すること、`#define`ディレクティブ。 それも可能性がありますインクルード ファイルからインポートされたマクロで。
+
+警告を排除するために、定義の 1 つを削除またはのいずれかを使用して、`#undef`ディレクティブを 2 番目の定義。

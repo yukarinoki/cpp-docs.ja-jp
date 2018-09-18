@@ -1,5 +1,5 @@
 ---
-title: 式エバリュエーター エラー CXX0019 |Microsoft ドキュメント
+title: 式エバリュエーター エラー CXX0019 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52e1679374e105ab06ce245ba68cfe92706689e1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3fba76b75c640917b3b99cd41500d682cb1b32f0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302491"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031809"
 ---
 # <a name="expression-evaluator-error-cxx0019"></a>式エバリュエーター エラー CXX0019
-不適切な型キャスト  
-  
- C の式エバリュエーターでは、型キャストを実行できません。  
-  
- このエラーは、can0019 と同じものと同じです。  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>次のような原因をチェックして問題を解決するには  
-  
-1.  指定した型が不明です。  
-  
-2.  ポインター型のレベルが多すぎますが発生しました。 たとえば、型キャスト  
-  
-    ```  
-    (char **)h_message  
-    ```  
-  
-     C の式エバリュエーターによって評価できません。
+
+無効な型キャスト
+
+C の式エバリュエーターでは、型キャストを実行できません。
+
+このエラーは、can0019 と同じものと同じです。
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>次のような原因をチェックして問題を解決するには
+
+1. 指定した型が不明です。
+
+1. ポインター型のレベルが多すぎますが発生しました。 たとえば、型キャスト
+
+    ```
+    (char **)h_message
+    ```
+
+     C の式エバリュエーターによって評価ことはできません。

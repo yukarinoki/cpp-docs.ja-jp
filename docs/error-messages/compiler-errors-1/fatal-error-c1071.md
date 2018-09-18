@@ -1,5 +1,5 @@
 ---
-title: 致命的なエラー C1071 |Microsoft ドキュメント
+title: 致命的なエラー C1071 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9cef64c327c0fd3b668947de52f2776cca2833c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1b4487de60148e1da7668bc44c996c5dfb955a9d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227196"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033005"
 ---
 # <a name="fatal-error-c1071"></a>致命的なエラー C1071
-コメント内で予期しない EOF が見つかりました。  
-  
- コンパイラでは、コメントのスキャン中に、ファイルの末尾に達しました。  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>次のような原因をチェックして問題を解決するには  
-  
-1.  コメントの終端記号がありません (*/)。  
-  
-2.  ソース ファイルの最後の行のコメントの後に改行文字がありません。  
-  
- 次の例では、C1071 が生成されます。  
-  
-```  
-// C1071.cpp  
-int main() {  
-}  
-  
-/* this comment is fine */  
-/* forgot the closing tag        // C1071  
+
+コメント内で予期しない EOF が見つかりました。
+
+コンパイラでは、コメントのスキャン中に、ファイルの末尾に達しました。
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>次のような原因をチェックして問題を解決するには
+
+1. コメントの終端記号がありません (*/)。
+
+1. ソース ファイルの最後の行でのコメントの後ろに改行文字がありません。
+
+次の例では、C1071 が生成されます。
+
+```
+// C1071.cpp
+int main() {
+}
+
+/* this comment is fine */
+/* forgot the closing tag        // C1071
 ```

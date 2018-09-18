@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4730 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4730 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 467d9fd04e2fef78d480fc4db1417b6e4c8d5641
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d740e1574d4cc538a27471c07795b7c95dd17565
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33285474"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070458"
 ---
 # <a name="compiler-warning-level-1-c4730"></a>コンパイラの警告 (レベル 1) C4730
-'main': _m64 と浮動小数点式が不適切なコードで発生する可能性があります  
-  
- 関数を使用して[_ _m64](../../cpp/m64.md)と**float**/**二重**型です。 MMX と浮動小数点レジスタは、同じ物理を共有するための登録スペース (ことはできません同時に使用) を使用して`__m64`と**float**/**二重**同じ内の型関数は、データの破損、可能性のある例外の原因になります。  
-  
- 安全に行う`__m64`、型の 1 つを使用する各命令を指定する型と同じ関数内の浮動小数点型では、 **_m_empty()** (MMX) 用または **_m_femms()** (用 3 dnow!)組み込みです。  
-  
- 次の例では、C4730 が生成されます。  
-  
-```  
-// C4730.cpp  
-// compile with: /W1  
-// processor: x86  
-#include "mmintrin.h"  
-  
-void func(double)  
-{  
-}  
-  
-int main(__m64 a, __m64 b)  
-{  
-   __m64 m;  
-   double f;  
-   f = 1.0;  
-   m = _m_paddb(a, b);  
-   // uncomment the next line to resolve C4730  
-   // _m_empty();  
-   func(f * 3.0);   // C4730  
-}  
+
+'main': _m64 と浮動小数点式は、不適切なコード、可能性があります
+
+関数を使用して[_ _m64](../../cpp/m64.md)と**float**/**二重**型。 MMX と浮動小数点レジスタは、同じ物理を共有するためのレジスタ スペース (ことはできません同時に使用) を使用して`__m64`と**float**/**二重**同じ型関数は、データの破損、例外を発生させる可能性がある可能性があります。
+
+安全に使用する`__m64`、型のいずれかを使用するそれぞれの命令を指定する型と同じ関数での浮動小数点型の場合は、 **_m_empty()** (MMX) 用または **_m_femms()** (用 3DNow!)組み込み。
+
+次の例では、C4730 が生成されます。
+
+```
+// C4730.cpp
+// compile with: /W1
+// processor: x86
+#include "mmintrin.h"
+
+void func(double)
+{
+}
+
+int main(__m64 a, __m64 b)
+{
+   __m64 m;
+   double f;
+   f = 1.0;
+   m = _m_paddb(a, b);
+   // uncomment the next line to resolve C4730
+   // _m_empty();
+   func(f * 3.0);   // C4730
+}
 ```

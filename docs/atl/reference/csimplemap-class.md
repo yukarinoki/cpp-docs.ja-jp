@@ -33,12 +33,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53a37083335c42d8042167e737b68ccad517fa00
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 0fa2c3b421aa0aa60194f8ed949c023d78b70c2d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756351"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070301"
 ---
 # <a name="csimplemap-class"></a>CSimpleMap クラス
 
@@ -47,19 +47,19 @@ ms.locfileid: "43756351"
 ## <a name="syntax"></a>構文
 
 ```
-template <class TKey, class TVal, class TEqual = CSimpleMapEqualHelper<TKey, TVal>>  
+template <class TKey, class TVal, class TEqual = CSimpleMapEqualHelper<TKey, TVal>>
 class CSimpleMap
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*TKey*  
+*TKey*<br/>
 キーの要素の型。
 
-*TVal*  
+*TVal*<br/>
 要素の値の型。
 
-*TEqual*  
+*TEqual*<br/>
 型の要素に対して等値テストを定義する、特徴オブジェクト`T`します。
 
 ## <a name="members"></a>メンバー
@@ -124,10 +124,10 @@ BOOL Add(const TKey& key, const TVal& val);
 
 ### <a name="parameters"></a>パラメーター
 
-*key*  
+*key*<br/>
 キー。
 
-*val*  
+*val*<br/>
 関連する値。
 
 ### <a name="return-value"></a>戻り値
@@ -188,7 +188,7 @@ int FindKey(const TKey& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*key*  
+*key*<br/>
 検索対象のキー。
 
 ### <a name="return-value"></a>戻り値
@@ -205,7 +205,7 @@ int FindVal(const TVal& val) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*val*  
+*val*<br/>
 検索対象の値。
 
 ### <a name="return-value"></a>戻り値
@@ -222,7 +222,7 @@ TKey& GetKeyAt(int nIndex) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*nIndex*  
+*nIndex*<br/>
 返すキーのインデックス。
 
 ### <a name="return-value"></a>戻り値
@@ -255,7 +255,7 @@ TVal& GetValueAt(int nIndex) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*nIndex*  
+*nIndex*<br/>
 戻り値のインデックス。
 
 ### <a name="return-value"></a>戻り値
@@ -276,7 +276,7 @@ TVal Lookup(const TKey& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*key*  
+*key*<br/>
 キー。
 
 ### <a name="return-value"></a>戻り値
@@ -293,7 +293,7 @@ BOOL Remove(const TKey& key);
 
 ### <a name="parameters"></a>パラメーター
 
-*key*  
+*key*<br/>
 キー。
 
 ### <a name="return-value"></a>戻り値
@@ -322,7 +322,7 @@ BOOL RemoveAt(int nIndex);
 
 ### <a name="parameters"></a>パラメーター
 
-*nIndex*  
+*nIndex*<br/>
 キーと関連付けられている値を削除するインデックス。
 
 ### <a name="return-value"></a>戻り値
@@ -339,7 +339,7 @@ TKey ReverseLookup(const TVal& val) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*val*  
+*val*<br/>
 値。
 
 ### <a name="return-value"></a>戻り値
@@ -356,10 +356,10 @@ BOOL SetAt(const TKey& key, const TVal& val);
 
 ### <a name="parameters"></a>パラメーター
 
-*key*  
+*key*<br/>
 キー。
 
-*val*  
+*val*<br/>
 割り当てる新しい値。
 
 ### <a name="return-value"></a>戻り値
@@ -379,13 +379,13 @@ BOOL SetAtIndex(
 
 ### <a name="parameters"></a>パラメーター
 
-*nIndex*  
+*nIndex*<br/>
 キーと値のペアを変更するを参照するインデックス。
 
-*key*  
+*key*<br/>
 新しいキー。
 
-*val*  
+*val*<br/>
 新しい値。
 
 ### <a name="return-value"></a>戻り値

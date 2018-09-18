@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a312ca8aa7afe39a301607e6b091341adbb89bc4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c3066f4586d34c4742cc03511d7f8739b642ccbd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761083"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066246"
 ---
 # <a name="cautoptr-class"></a>CAutoPtr クラス
 
@@ -39,13 +39,13 @@ ms.locfileid: "43761083"
 ## <a name="syntax"></a>構文
 
 ```
-template <typename T>  
+template <typename T>
 class CAutoPtr
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 ポインター型。
 
 ## <a name="members"></a>メンバー
@@ -109,7 +109,7 @@ void Attach(T* p) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*p*  
+*p*<br/>
 `CAutoPtr` This ポインターの所有権を持つオブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -133,16 +133,16 @@ explicit CAutoPtr(T* p) throw();
 template<typename TSrc>
 CAutoPtr(CAutoPtr<TSrc>& p) throw();
 
-template<> 
+template<>
 CAutoPtr(CAutoPtr<T>& p) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*p*  
+*p*<br/>
 既存のポインター。
 
-*TSrc*  
+*TSrc*<br/>
 別に管理されている型`CAutoPtr`、現在のオブジェクトを初期化するために使用します。
 
 ### <a name="remarks"></a>Remarks
@@ -223,10 +223,10 @@ CAutoPtr<T>& operator= (CAutoPtr<TSrc>& p);
 
 ### <a name="parameters"></a>パラメーター
 
-*p*  
+*p*<br/>
 ポインター。
 
-*TSrc*  
+*TSrc*<br/>
 クラスの型。
 
 ### <a name="return-value"></a>戻り値
@@ -265,7 +265,7 @@ T* operator->() const throw();
 
 キャスト演算子です。
 
-```  
+```
 operator T* () const throw();
 ```
 
@@ -279,6 +279,6 @@ operator T* () const throw();
 
 ## <a name="see-also"></a>関連項目
 
-[CHeapPtr クラス](../../atl/reference/cheapptr-class.md)   
-[CAutoVectorPtr クラス](../../atl/reference/cautovectorptr-class.md)   
+[CHeapPtr クラス](../../atl/reference/cheapptr-class.md)<br/>
+[CAutoVectorPtr クラス](../../atl/reference/cautovectorptr-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

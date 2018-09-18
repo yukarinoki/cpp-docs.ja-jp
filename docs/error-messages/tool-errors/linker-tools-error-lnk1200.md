@@ -1,5 +1,5 @@
 ---
-title: リンカ ツール エラー LNK1200 |Microsoft ドキュメント
+title: リンカ ツール エラー LNK1200 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab32939c55dce5e27f907f3d23e639b24741cdc3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 03ecd51142bf30230b6b177a36e007345e93bf2c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298825"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059317"
 ---
 # <a name="linker-tools-error-lnk1200"></a>リンカ ツール エラー LNK1200
-プログラム データベース 'filename' を読み取り中にエラー  
-  
- プログラム データベース (PDB) が読み取れませんでした。  
-  
- このエラーは、ファイルの破損によって発生することができます。  
-  
- 場合`filename`PDB は、オブジェクト ファイルの場合、ファイルを使用してオブジェクトを再コンパイル[/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)です。  
-  
- 場合`filename`PDB と再リンクの削除、メイン出力ファイルの PDB は、インクリメンタル リンク中にこのエラーが発生しました。
+
+プログラム データベース 'filename' を読み取り中にエラー
+
+プログラム データベース (PDB) を読み取ることができませんでした。
+
+このエラーは、ファイルの破損によって発生することができます。
+
+場合`filename`pdb ファイルは、オブジェクトのファイルで、ファイルを使用してオブジェクトを再コンパイル[/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)します。
+
+場合`filename`PDB および再リンクの削除、メイン出力ファイルの PDB であり、インクリメンタル リンク中にこのエラーが発生しました。

@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c01adc1893d73840ecbec7a2e2251c8e55beb582
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e0e4eba9940546e72f11c220dc03a6538750ae85
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701728"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028338"
 ---
 # <a name="registry-and-typelib-global-functions"></a>レジストリとタイプ ライブラリに関するグローバル関数
 
@@ -72,8 +72,8 @@ ms.locfileid: "45701728"
 
 ### <a name="syntax"></a>構文
 
-```  
-ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);  
+```
+ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -101,22 +101,22 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 
 ### <a name="syntax"></a>構文
 
-```  
-LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);  
+```
+LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*hKey*  
+*hKey*<br/>
 開いているレジストリ キーへのハンドル。
 
-*いったん*  
+*いったん*<br/>
 この関数を開くか作成するキーの名前。
 
-*phkResult*  
+*phkResult*<br/>
 開くか、作成したキーを識別するハンドルを受け取る変数へのポインター。
 
-*pTM*  
+*pTM*<br/>
 ポインターを`CAtlTransactionManager`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -133,19 +133,19 @@ LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTr
 
 ### <a name="syntax"></a>構文
 
-```  
-LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager* pTM = NULL);  
+```
+LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager* pTM = NULL);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*hKey*  
+*hKey*<br/>
 開いているレジストリ キーへのハンドル。
 
-*いったん*  
+*いったん*<br/>
 削除するキーの名前。
 
-*pTM*  
+*pTM*<br/>
 ポインターを`CAtlTransactionManager`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -162,19 +162,19 @@ LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager*
 
 ### <a name="syntax"></a>構文
 
-```  
-BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeName, LPCTSTR lpszFilterExt);  
+```
+BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeName, LPCTSTR lpszFilterExt);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszCLSID*  
+*lpszCLSID*<br/>
 ハンドラーの CLSID を指定します。
 
-*lpszShortTypeName*  
+*lpszShortTypeName*<br/>
 ハンドラーの ProgID を指定します。
 
-*lpszFilterExt*  
+*lpszFilterExt*<br/>
 このハンドラーに登録されているファイル拡張子を指定します。
 
 ### <a name="requirements"></a>要件
@@ -191,10 +191,10 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 
 ### <a name="parameters"></a>パラメーター
 
-*hInstTypeLib*  
+*hInstTypeLib*<br/>
 モジュールのインスタンスへのハンドル。
 
-*lpszIndex*  
+*lpszIndex*<br/>
 形式の文字列"\\\N"、N はタイプ ライブラリのリソースの整数インデックス。 インデックスが必要ない場合、NULL を指定できます。
 
 ### <a name="return-value"></a>戻り値
@@ -203,7 +203,8 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 
 ### <a name="remarks"></a>Remarks
 
-このヘルパー関数が利用[AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver)と[CAtlComModule::RegisterTypeLib](../../atl/reference/catlcommodule-class.md#registertypelib)します。  
+このヘルパー関数が利用[AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver)と[CAtlComModule::RegisterTypeLib](../../atl/reference/catlcommodule-class.md#registertypelib)します。
+
 ### <a name="requirements"></a>要件
 
 **ヘッダー:** atlbase.h
@@ -214,22 +215,22 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 
 ### <a name="syntax"></a>構文
 
-```  
-LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);  
+```
+LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*hKey*  
+*hKey*<br/>
 開いているレジストリ キーへのハンドル。
 
-*いったん*  
+*いったん*<br/>
 この関数を開くか作成するキーの名前。
 
-*phkResult*  
+*phkResult*<br/>
 作成されたキーを識別するハンドルを受け取る変数へのポインター。
 
-*pTM*  
+*pTM*<br/>
 ポインターを`CAtlTransactionManager`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -246,28 +247,28 @@ LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTran
 
 ### <a name="syntax"></a>構文
 
-```  
-LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM samDesired, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);  
+```
+LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM samDesired, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*hKey*  
+*hKey*<br/>
 開いているレジストリ キーへのハンドル。
 
-*いったん*  
+*いったん*<br/>
 この関数を開くか作成するキーの名前。
 
-*ulOptions*  
+*ulOptions*<br/>
 このパラメーターは予約されており、0 にする必要があります。
 
-*samDesired*  
+*samDesired*<br/>
 キーに必要なアクセス権を指定するマスク。
 
-*phkResult*  
+*phkResult*<br/>
 開いているキーへのハンドルを受け取る変数へのポインター。
 
-*pTM*  
+*pTM*<br/>
 ポインターを`CAtlTransactionManager`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -284,13 +285,13 @@ LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM
 
 ### <a name="syntax"></a>構文
 
-```  
-BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);  
+```
+BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszCLSID*  
+*lpszCLSID*<br/>
 登録解除するハンドラーの CLSID を指定します。
 
 ### <a name="requirements"></a>要件
@@ -303,13 +304,13 @@ BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);
 
 ### <a name="syntax"></a>構文
 
-```  
-ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);  
+```
+ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*bEnable*  
+*bEnable*<br/>
 [in]TRUE は、レジストリ情報に送られることを示します、 **HKCU**ノードです。FALSE は、アプリケーションが既定のノードにレジストリ情報を書き出すことを示します。 既定のノードが**HKEY_CLASSES_ROOT** (**HKCR**)。
 
 ### <a name="return-value"></a>戻り値
@@ -321,6 +322,7 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 既定では、レジストリのリダイレクトが有効になっていません。 このオプションを有効にすると、レジストリへのアクセスにリダイレクトされます**する**します。
 
 リダイレクトはグローバルではありません。 MFC と ATL のフレームワークは、このレジストリのリダイレクトの影響を受けます。  
+
 ### <a name="requirements"></a>要件
 
 **ヘッダー:** atlbase.h  
@@ -339,10 +341,10 @@ ATLAPI AtlUnRegisterTypeLib(
 
 ### <a name="parameters"></a>パラメーター
 
-*hInstTypeLib*  
+*hInstTypeLib*<br/>
 モジュールのインスタンスへのハンドル。
 
-*lpszIndex*  
+*lpszIndex*<br/>
 形式の文字列"\\\N"、N はタイプ ライブラリのリソースの整数インデックス。 インデックスが必要ない場合、NULL を指定できます。
 
 ### <a name="return-value"></a>戻り値
@@ -352,6 +354,7 @@ ATLAPI AtlUnRegisterTypeLib(
 ### <a name="remarks"></a>Remarks
 
 このヘルパー関数が利用[CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib)と[AtlComModuleUnregisterServer](#atlcommoduleunregisterserver)します。  
+
 ### <a name="requirements"></a>要件
 
 **ヘッダー:** atlbase.h
@@ -372,16 +375,16 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
 
 ### <a name="parameters"></a>パラメーター
 
-*hInstTypeLib*  
+*hInstTypeLib*<br/>
 タイプ ライブラリに関連付けられているモジュールへのハンドルします。
 
-*lpszIndex*  
+*lpszIndex*<br/>
 形式の文字列"\\\N"、N はタイプ ライブラリのリソースの整数インデックス。 インデックスが必要ない場合、NULL を指定できます。
 
-*pbstrPath*  
+*pbstrPath*<br/>
 正常に返された場合は、タイプ ライブラリに関連付けられているモジュールの完全なパスが含まれています。
 
-*ppTypeLib*  
+*ppTypeLib*<br/>
 正常に返された場合は、読み込まれたタイプ ライブラリへのポインターへのポインターを格納します。
 
 ### <a name="return-value"></a>戻り値
@@ -415,13 +418,13 @@ HRESULT RegistryDataExchange(
 
 ### <a name="parameters"></a>パラメーター
 
-*pT*  
+*pT*<br/>
 現在のオブジェクトへのポインター。
 
-*rdxOp*  
+*rdxOp*<br/>
 どの操作を示す列挙値、関数を実行する必要があります。 使用できる値は、「解説」表を参照してください。
 
-*pItem*  
+*pItem*<br/>
 読み取り、またはレジストリに書き込まれるデータへのポインター。 データでは、レジストリから削除するキーを表すこともできます。 既定値は、NULL です。
 
 ### <a name="return-value"></a>戻り値
@@ -446,5 +449,5 @@ HRESULT RegistryDataExchange(
 
 ## <a name="see-also"></a>関連項目
 
-[関数](atl-functions.md)   
+[関数](atl-functions.md)<br/>
 [レジストリ データ エクスチェンジに関するマクロ](registry-data-exchange-macros.md)

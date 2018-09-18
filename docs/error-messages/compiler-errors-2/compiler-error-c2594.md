@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2594 |Microsoft ドキュメント
+title: コンパイラ エラー C2594 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b1de853b8992d3c02eb94c0b050d72539fc3282
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9be22544930bb94c36ec5906cbf60d5caac143fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230691"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058017"
 ---
 # <a name="compiler-error-c2594"></a>コンパイラ エラー C2594
-'operator': 'type1' から 'type2' へのあいまいな変換  
-  
- 変換なし*type1*に*type2*が他のより直接的なです。 変換を 2 つの考えられる解決策をお勧め*type1*に*type2*です。 直接変換を定義する 1 つ目は*type1*に*type2*からの変換のシーケンスを指定するのには、2 番目のオプションと*type1*に*type2*です。  
-  
- 次の例では、C2594 を生成します。 エラーに推奨される解決策は、変換のシーケンスを示します。  
-  
-```  
-// C2594.cpp  
-// compile with: /c  
-struct A{};  
-struct I1 : A {};  
-struct I2 : A {};  
-struct D : I1, I2 {};  
-  
-A *f (D *p) {  
-   return (A*) (p);    // C2594  
-  
-// try the following line instead  
-// return static_cast<A *>(static_cast<I1 *>(p));  
-}  
+
+'operator': 'type1' から 'type2' へのあいまいな変換
+
+変換なし*type1*に*type2*が他よりも直接的な。 変換する 2 つの考えられる解決策をお勧め*type1*に*type2*します。 最初のオプションからの直接変換を定義する*type1*に*type2*、2 番目のオプションからの変換のシーケンスを指定して*type1*に*type2*します。
+
+次の例では、C2594 が生成されます。 エラーに提案された解決策は、変換のシーケンスを示します。
+
+```
+// C2594.cpp
+// compile with: /c
+struct A{};
+struct I1 : A {};
+struct I2 : A {};
+struct D : I1, I2 {};
+
+A *f (D *p) {
+   return (A*) (p);    // C2594
+
+// try the following line instead
+// return static_cast<A *>(static_cast<I1 *>(p));
+}
 ```

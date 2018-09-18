@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: WRL および Media Foundation を使用して UWP アプリの作成 |Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/17/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2775e0348f6bfe1e7fe960a105ebf0c31fcaae96
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3eb82c5c86411af63ea79a4dbcf2e54d2d3ce5f5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214832"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038309"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>チュートリアル: WRL および Media Foundation を使用して UWP アプリの作成
 
@@ -101,7 +101,7 @@ Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用�
 
    1. **入力**、用、**モジュール定義ファイル**、指定`GrayScaleTransform.def`します。
 
-   2. また**入力**、追加`runtimeobject.lib`、 `mfuuid.lib`、および`mfplatf.lib`を**追加の依存関係**プロパティ。
+   2. また**入力**、追加`runtimeobject.lib`、 `mfuuid.lib`、および`mfplat.lib`を**追加の依存関係**プロパティ。
 
    3. **Windows メタデータ**設定**Windows メタデータの生成**に**はい (/WINMD)** します。
 

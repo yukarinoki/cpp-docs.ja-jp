@@ -1,5 +1,5 @@
 ---
-title: 致命的なエラー C1022 |Microsoft ドキュメント
+title: 致命的なエラー C1022 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4a6ec241a9a8e175d542b1f3b9db9ea1cdc3ba0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ddeea660515ea0a71e4807a34d2172413796046
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198184"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036736"
 ---
 # <a name="fatal-error-c1022"></a>致命的なエラー C1022
-#endif が必要です。  
-  
- `#if`、 `#ifdef`、 `#ifndef` の各ディレクティブに対応する `#endif` ディレクティブがありません。 各 `#if`、 `#ifdef`、 `#ifndef` に対応する `#endif`を指定してください。  
-  
- 次の例では C1022 が生成されます。  
-  
-```  
-// C1022.cpp  
-#define true 1  
-  
-#if (true)  
-#else   
-#else    // C1022  
-```  
-  
- 考えられる解決方法:  
-  
-```  
-// C1022b.cpp  
-// compile with: /c  
-#define true 1  
-  
-#if (true)  
-#else   
-#endif  
+
+#endif が必要です。
+
+`#if`、 `#ifdef`、 `#ifndef` の各ディレクティブに対応する `#endif` ディレクティブがありません。 各 `#if`、 `#ifdef`、 `#ifndef` に対応する `#endif`を指定してください。
+
+次の例では C1022 が生成されます。
+
+```
+// C1022.cpp
+#define true 1
+
+#if (true)
+#else
+#else    // C1022
+```
+
+考えられる解決方法:
+
+```
+// C1022b.cpp
+// compile with: /c
+#define true 1
+
+#if (true)
+#else
+#endif
 ```

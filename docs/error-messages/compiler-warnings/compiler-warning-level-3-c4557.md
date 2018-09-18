@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 3) C4557 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 3) C4557 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1065d412a2f977e1784ba739d1226d08e28bc8ea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97423da084c005e427b21043e75ebe850623c63b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289959"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055313"
 ---
 # <a name="compiler-warning-level-3-c4557"></a>コンパイラの警告 (レベル 3) C4557
-'__assume' は影響 'effect' を含んでいます。  
-  
- 渡された値、 [_ _assume](../../intrinsics/assume.md) statement2 が変更されました。  
-  
- 既定では、この警告はオフに設定されています。 詳細については、「 [既定で無効になっているコンパイラ警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 」を参照してください。  
-  
- 次の例では、C4557 が生成されます。  
-  
-```  
-// C4557.cpp  
-// compile with: /W3  
-#pragma warning(default : 4557)  
-int main()  
-{  
-   int i;  
-   __assume(i++);   // C4557  
-}  
+
+'__assume' は影響 'effect' を含んでいます。
+
+渡される値、 [_assume](../../intrinsics/assume.md)ステートメント 2 が変更されました。
+
+既定では、この警告はオフに設定されています。 詳細については、「 [既定で無効になっているコンパイラ警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 」を参照してください。
+
+次の例では、C4557 が生成されます。
+
+```
+// C4557.cpp
+// compile with: /W3
+#pragma warning(default : 4557)
+int main()
+{
+   int i;
+   __assume(i++);   // C4557
+}
 ```

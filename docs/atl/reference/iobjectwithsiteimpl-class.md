@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1684c8fa380a7d17c802ad404c38c59f2257c979
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eea09c8490bd2b34cc4c5cd99946d0d9dca7a44c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752028"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068215"
 ---
 # <a name="iobjectwithsiteimpl-class"></a>IObjectWithSiteImpl クラス
 
@@ -42,7 +42,7 @@ template <class T>
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 派生したクラス、`IObjectWithSiteImpl`します。
 
 ## <a name="members"></a>メンバー
@@ -117,7 +117,7 @@ HRESULT SetChildSite(IUnknown* pUnkSite);
 
 ### <a name="parameters"></a>パラメーター
 
-*pUnkSite*  
+*pUnkSite*<br/>
 [in]ポインター、`IUnknown`このオブジェクトを管理するサイトのインターフェイス ポインター。 NULL の場合、オブジェクトを呼び出す必要があります`IUnknown::Release`既存のサイトがこの時点でオブジェクトいいえを認識できなくなり、サイトにします。
 
 ### <a name="return-value"></a>戻り値

@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2152 |Microsoft ドキュメント
+title: コンパイラ エラー C2152 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e241f918191547812854de9734995b9f0b10770
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b3a2215e43573b08a69501edfbd0c7c86897fdd3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169674"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064916"
 ---
 # <a name="compiler-error-c2152"></a>コンパイラ エラー C2152
-'identifier': 異なる属性を持つ関数へのポインター  
-  
- 1 つの呼び出し規約を持つ関数へのポインター (`__cdecl`、 `__stdcall`、または`__fastcall`) が別の呼び出し規約を持つ関数へのポインターに割り当てられます。
+
+'identifier': 異なる属性を持つ関数へのポインター
+
+1 つの呼び出し規約を持つ関数へのポインター (`__cdecl`、 `__stdcall`、または`__fastcall`) が別の呼び出し規約を持つ関数へのポインターに割り当てられます。

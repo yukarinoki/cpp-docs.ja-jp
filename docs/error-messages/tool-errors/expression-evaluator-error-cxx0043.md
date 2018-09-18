@@ -1,5 +1,5 @@
 ---
-title: 式エバリュエーター エラー CXX0043 |Microsoft ドキュメント
+title: 式エバリュエーター エラー CXX0043 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5b27c1fffca8c21a0fa3e3e79eedae0c17ae580
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 01deb34c2e490eb8a2d6529a426aedca40f98901
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295393"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070575"
 ---
 # <a name="expression-evaluator-error-cxx0043"></a>式エバリュエーター エラー CXX0043
-このポインターはメンバー関数の外で使用  
-  
- **この**ポインターは、非静的メンバー関数に対してのみ使用できます。  
-  
- このエラーは、can0043 と同じものと同じです。
+
+このポインターは、メンバー関数の外を使用します。
+
+**この**ポインターは、非静的メンバー関数にのみ使用できます。
+
+このエラーは、can0043 と同じものと同じです。

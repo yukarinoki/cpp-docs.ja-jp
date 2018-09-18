@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 2) C4056 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 2) C4056 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bf5a5855d0b4291105826679e2ae81ed6d69e5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6e069867d4aef749f9f6e42f46a34745d9e8aa62
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290567"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067508"
 ---
 # <a name="compiler-warning-level-2-c4056"></a>コンパイラの警告 (レベル 2) C4056
-浮動小数点定数演算でオーバーフローしました。  
-  
- 浮動小数点定数演算では、許容される最大値を超える結果が生成されます。  
-  
- この警告は、定数演算中に実行されるコンパイラの最適化によって可能性があります。 場合はそれが停止してからの最適化をオフにするときに安全にこの警告は無視できます ([/Od](../../build/reference/od-disable-debug.md))。  
-  
- 次の例では、C4056 が生成されます。  
-  
-```  
-// C4056.cpp  
-// compile with: /W2 /LD  
-#pragma warning (default : 4056)  
-float fp_val = 1.0e300 * 1.0e300;   // C4056  
+
+浮動小数点定数演算でオーバーフローしました。
+
+浮動小数点定数演算では、許容される最大値を超える結果が生成されます。
+
+この警告を生成して、定数演算中に実行されるコンパイラ最適化されることができます。 最適化をオフにするときに発生する場合、この警告を無視しても問題ありません ([/Od](../../build/reference/od-disable-debug.md))。
+
+次の例では、C4056 が生成されます。
+
+```
+// C4056.cpp
+// compile with: /W2 /LD
+#pragma warning (default : 4056)
+float fp_val = 1.0e300 * 1.0e300;   // C4056
 ```

@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 715fcc37c41251b0a42fd6508f8a358758105a1f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 47cd4cc765459acc6270c64b6cc37fe328f36757
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680196"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069418"
 ---
 # <a name="tiledindex-class"></a>tiled_index クラス
 インデックスを提供する[tiled_extent](tiled-extent-class.md)オブジェクト。 このクラスには、ローカル タイルの原点およびグローバル原点を基準として要素にアクセスするためのプロパティがあります。 タイル スペースの詳細については、次を参照してください。[を使用してタイル](../../../parallel/amp/using-tiles.md)します。  
@@ -62,14 +62,14 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `_Dim0`  
- 最上位の次元の長さ。  
+*_Dim0*<br/>
+最上位の次元の長さ。  
   
- `_Dim1`  
- 最上位の次の次元の長さ。  
+*_Dim1*<br/>
+最上位の次の次元の長さ。  
   
- `_Dim2`  
- 最下位の次元の長さ。  
+*_Dim2*<br/>
+最下位の次元の長さ。  
   
 ## <a name="members"></a>メンバー  
   
@@ -140,23 +140,23 @@ tiled_index(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `_Global`  
- グローバル[インデックス](index-class.md)の構築された`tiled_index`します。  
+*_Global*<br/>
+グローバル[インデックス](index-class.md)の構築された`tiled_index`します。  
   
- `_Local`  
- ローカル[インデックス](index-class.md)の構築されました。 `tiled_index`  
+*(_L)*<br/>
+ローカル[インデックス](index-class.md)の構築されました。 `tiled_index`  
   
- `_Tile`  
- タイル[インデックス](index-class.md)の構築されました。 `tiled_index`  
+*_Tile*<br/>
+タイル[インデックス](index-class.md)の構築されました。 `tiled_index`  
   
- `_Tile_origin`  
- タイルの原点[インデックス](index-class.md)の構築されました。 `tiled_index`  
+*_Tile_origin*<br/>
+タイルの原点[インデックス](index-class.md)の構築されました。 `tiled_index`  
   
- `_Barrier`  
- [Tile_barrier](tile-barrier-class.md)オブジェクトの構築された`tiled_index`します。  
+*_Barrier*<br/>
+[Tile_barrier](tile-barrier-class.md)オブジェクトの構築された`tiled_index`します。  
   
- `_Other`  
- 構築された `tile_index` にコピーされる `tiled_index` オブジェクトです。  
+*_Other*<br/>
+構築された `tile_index` にコピーされる `tiled_index` オブジェクトです。  
   
 ## <a name="overloads"></a>Overloads  
   

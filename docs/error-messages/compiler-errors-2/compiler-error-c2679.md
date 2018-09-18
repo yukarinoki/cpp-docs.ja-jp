@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2679 |Microsoft ドキュメント
+title: コンパイラ エラー C2679 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24a304d88ccc6044c5358759efffa2a38dfeaf67
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a01a79dfdff06c50b65bde33de62676e6df64a82
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231814"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069496"
 ---
 # <a name="compiler-error-c2679"></a>コンパイラ エラー C2679
-binary 'operator': 'type' 型の右側のオペランドを扱う演算子が見つかりません (または許容可能な変換はありません)  
-  
- この演算子を使うには、型を指定してこの演算子をオーバーロードするか、この演算子が定義された型への変換を定義する必要があります。  
-  
- 次の例では、C2679 が生成されます。  
-  
-```  
-// C2679.cpp  
-class C {  
-public:  
-   C();   // no constructor with an int argument  
-} c;  
-  
-class D {  
-public:  
-   D(int) {}  
-   D(){}  
-} d;  
-  
-int main() {  
-   c = 10;   // C2679  
-   d = 10;   // OK  
-}  
+
+二項 'operator': 'type' 型の右辺のオペランドを扱う演算子が見つかりません (または、変換はありません)
+
+この演算子を使うには、型を指定してこの演算子をオーバーロードするか、この演算子が定義された型への変換を定義する必要があります。
+
+次の例では、C2679 が生成されます。
+
+```
+// C2679.cpp
+class C {
+public:
+   C();   // no constructor with an int argument
+} c;
+
+class D {
+public:
+   D(int) {}
+   D(){}
+} d;
+
+int main() {
+   c = 10;   // C2679
+   d = 10;   // OK
+}
 ```

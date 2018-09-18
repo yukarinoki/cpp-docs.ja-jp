@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3141 |Microsoft ドキュメント
+title: コンパイラ エラー C3141 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a394fb06fce8f482f42271052a3cf97b3711eaf2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fda465b7cad2b46510b6f5e2dc4dc5d5fe82ecaf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249981"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038322"
 ---
 # <a name="compiler-error-c3141"></a>コンパイラ エラー C3141
-'interface_name': インターフェイスはパブリック継承のみをサポート  
-  
- 定義されているインターフェイス、[インターフェイス (または _ _interface)](../../cpp/interface.md)キーワードはパブリック継承のみをサポートします。  
-  
- 次の例では、C3141 が生成されます。  
-  
-```  
-// C3141.cpp  
-__interface IBase {};  
-__interface IDerived1 : protected IBase {};  // C3141  
-__interface IDerived2 : private IBase {};    // C3141  
+
+'interface_name': インターフェイスはパブリック継承のみをサポート
+
+インターフェイスで定義されている、[インターフェイス (または _ _interface)](../../cpp/interface.md)キーワードはパブリック継承のみをサポートします。
+
+次の例では、C3141 が生成されます。
+
+```
+// C3141.cpp
+__interface IBase {};
+__interface IDerived1 : protected IBase {};  // C3141
+__interface IDerived2 : private IBase {};    // C3141
 ```
