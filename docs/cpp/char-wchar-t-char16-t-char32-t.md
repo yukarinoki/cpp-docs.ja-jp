@@ -25,7 +25,7 @@ ms.lasthandoff: 08/01/2018
 ms.locfileid: "39402615"
 ---
 # <a name="char-wchart-char16t-char32t"></a>char、wchar_t、char16_t、char32_t
-種類**char**、 **wchar_t**、 **char16_t**と**char32_t**は文字の英数字を表す組み込み型だけでなく英数字以外のグリフと印刷されない文字。
+**char**、 **wchar_t**、 **char16_t** `および **char32_t**型は、英数字以外のグリフや非印字文字を表す組み込み型です。
 
 ## <a name="syntax"></a>構文
 
