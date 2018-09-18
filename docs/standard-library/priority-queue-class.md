@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e63f13c07ceb6220ba3dc8e7932c7357ed649188
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8e431b09d0eab84bd6b58e64f71d5f5d98b728fa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199239"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714364"
 ---
 # <a name="priorityqueue-class"></a>priority_queue クラス
 
@@ -51,13 +51,13 @@ class priority_queue
 ### <a name="parameters"></a>パラメーター
 
 *Type*<br/>
- priority_queue に格納される要素のデータ型。
+priority_queue に格納される要素のデータ型。
 
 *コンテナー*<br/>
- priority_queue を実装するために使用する基になるコンテナーの型。
+priority_queue を実装するために使用する基になるコンテナーの型。
 
 *Compare*<br/>
- 2 つの要素の値を並べ替えキーとして比較して、priority_queue 内の要素の相対順序を決定できる関数オブジェクトを提供する型。 この引数は省略可能であり、既定値は二項述語 `less<typename Container::value_type>` です。
+2 つの要素の値を並べ替えキーとして比較して、priority_queue 内の要素の相対順序を決定できる関数オブジェクトを提供する型。 この引数は省略可能であり、既定値は二項述語 `less<typename Container::value_type>` です。
 
 ## <a name="remarks"></a>Remarks
 
@@ -253,19 +253,19 @@ priority_queue(InputIterator first, InputIterator last, const Traits&_comp, cons
 ### <a name="parameters"></a>パラメーター
 
 *_ comp*<br/>
- priority_queue 内の要素の並べ替えに使用される、**constTraits** 型の比較関数。既定では基本コンテナーの関数を比較します。
+priority_queue 内の要素の並べ替えに使用される、**constTraits** 型の比較関数。既定では基本コンテナーの関数を比較します。
 
 *_Cont*<br/>
- 構築された priority_queue がコピーになる元の基本コンテナー。
+構築された priority_queue がコピーになる元の基本コンテナー。
 
 *right*<br/>
- 構築される set のコピー元となる priority_queue。
+構築される set のコピー元となる priority_queue。
 
 *first*<br/>
- コピーする要素範囲内の最初の要素の位置。
+コピーする要素範囲内の最初の要素の位置。
 
 *last*<br/>
- コピーする要素範囲を超える最初の要素の位置。
+コピーする要素範囲を超える最初の要素の位置。
 
 ### <a name="remarks"></a>Remarks
 
@@ -397,7 +397,7 @@ void push(const Type& val);
 ### <a name="parameters"></a>パラメーター
 
 *val*<br/>
- priority_queue の最上位に追加された要素。
+priority_queue の最上位に追加された要素。
 
 ### <a name="remarks"></a>Remarks
 

@@ -828,12 +828,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cb6010d47be6fe2c771ac407bff26729c772f14
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: a35d65509de75e117bdbeef679618b8d49ef37a2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678408"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711621"
 ---
 # <a name="cwnd-class"></a>CWnd クラス
 
@@ -1680,11 +1680,11 @@ virtual void CalcWindowRect(
 
 ### <a name="parameters"></a>パラメーター
 
-[入力、出力]*lpClientRect*  
-四角形構造体へのポインター。 入力では、この構造体には、クライアントの四角形が含まれています。 メソッドが完了すると、この構造体には、指定したクライアントの四角形を含むことのできるウィンドウの四角形が含まれています。
+*lpClientRect*<br/>
+[入力、出力]四角形構造体へのポインター。 入力では、この構造体には、クライアントの四角形が含まれています。 メソッドが完了すると、この構造体には、指定したクライアントの四角形を含むことのできるウィンドウの四角形が含まれています。
 
-[in]*nAdjustType*  
-使用して、 `CWnd::adjustBorder` WS_EX_CLIENTEDGE スタイル; ウィンドウの座標を計算する場合は、使用`CWnd::adjustOutside`します。
+*nAdjustType*<br/>
+[in]使用して、 `CWnd::adjustBorder` WS_EX_CLIENTEDGE スタイル; ウィンドウの座標を計算する場合は、使用`CWnd::adjustOutside`します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1924,26 +1924,26 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*lpszClassName*  
-登録されているシステム ウィンドウ クラスの名前を含む null で終わる文字列へのポインターまたは、定義済みのシステムのウィンドウ クラスの名前。
+*lpszClassName*<br/>
+[in]登録されているシステム ウィンドウ クラスの名前を含む null で終わる文字列へのポインターまたは、定義済みのシステムのウィンドウ クラスの名前。
 
-[in]*したとき*  
-ウィンドウを含む null で終わる文字列へのポインターの表示名それ以外の場合は NULL のウィンドウの表示名がありません。
+*したとき*<br/>
+[in]ウィンドウを含む null で終わる文字列へのポインターの表示名それ以外の場合は NULL のウィンドウの表示名がありません。
 
-[in]*dwStyle*  
-ビットごとの組み合わせ (OR)[ウィンドウ スタイル](styles-used-by-mfc.md#window-styles)します。 WS_POPUP オプションが有効なスタイルではありません。
+*dwStyle*<br/>
+[in]ビットごとの組み合わせ (OR)[ウィンドウ スタイル](styles-used-by-mfc.md#window-styles)します。 WS_POPUP オプションが有効なスタイルではありません。
 
-[in]*rect*  
-サイズと、親ウィンドウの左上隅に対して相対的ウィンドウの位置。
+*rect*<br/>
+[in]サイズと、親ウィンドウの左上隅に対して相対的ウィンドウの位置。
 
-[in]*pParentWnd*  
-親ウィンドウへのポインター。
+*pParentWnd*<br/>
+[in]親ウィンドウへのポインター。
 
-[in]*nID*  
-ウィンドウの ID。
+*nID*<br/>
+[in]ウィンドウの ID。
 
-[in]*pContext*  
-ポインターを[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)アプリケーションのドキュメント/ビュー アーキテクチャをカスタマイズするために使用する構造体。
+*pContext*<br/>
+[in]ポインターを[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)アプリケーションのドキュメント/ビュー アーキテクチャをカスタマイズするために使用する構造体。
 
 ### <a name="return-value"></a>戻り値
 
@@ -5985,10 +5985,10 @@ afx_msg void OnAppCommand(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|[in]*我が物*|ポインター、`CWnd`ユーザーがコンマ ボタンをクリックしてまたは、コマンド キーを押してウィンドウを表すオブジェクト。 このウィンドウは、メッセージを受信するウィンドウの子ウィンドウにすることができます。|
-|[in]*nCmd*|アプリケーション コマンドを示します。 使用可能な値の一覧は、下にあるコマンドを参照してください、 *cmd*のセクション、 *lParam*パラメーターの[WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand)します。|
-|[in]*nDevice*|入力イベントを生成した入力デバイス。 使用可能な値の一覧は、下にあるデバイスを参照してください、 *uDevice*のセクション、 *lParam*パラメーターの[WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand)します。|
-|[in]*nKey*|CTRL キーまたはマウスの左ボタンなどのすべての仮想キーを示します。 使用可能な値の一覧は、下のキーを参照してください、 *dwKeys*のセクション、 *lParam*パラメーターの[WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand)します。 詳細についてを参照してくださいで「メッセージ パラメーター」subheading[マウス入力に関する](/windows/desktop/inputdev/about-mouse-input)します。|
+|*我が物*|[in]ポインター、`CWnd`ユーザーがコンマ ボタンをクリックしてまたは、コマンド キーを押してウィンドウを表すオブジェクト。 このウィンドウは、メッセージを受信するウィンドウの子ウィンドウにすることができます。|
+|*nCmd*|[in]アプリケーション コマンドを示します。 使用可能な値の一覧は、下にあるコマンドを参照してください、 *cmd*のセクション、 *lParam*パラメーターの[WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand)します。|
+|*nDevice*|[in]入力イベントを生成した入力デバイス。 使用可能な値の一覧は、下にあるデバイスを参照してください、 *uDevice*のセクション、 *lParam*パラメーターの[WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand)します。|
+|*nKey*|[in]CTRL キーまたはマウスの左ボタンなどのすべての仮想キーを示します。 使用可能な値の一覧は、下のキーを参照してください、 *dwKeys*のセクション、 *lParam*パラメーターの[WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand)します。 詳細についてを参照してくださいで「メッセージ パラメーター」subheading[マウス入力に関する](/windows/desktop/inputdev/about-mouse-input)します。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -6273,8 +6273,8 @@ afx_msg void OnColorizationColorChanged(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|[in]*dwColorizationColor*|新しい彩色の色を指定します。<br /><br /> 色形式は、4 つのコンポーネントの各範囲 0x00 から 0 xff までフォーム 0xAARRGGBB、数が 16 進数です。 AA コンポーネントは、アルファ値、RR は色が赤、GG は緑、および BB は青で表示します。|
-|[in]*bOpacity*|新しい色を不透明度を適用する場合は TRUE。ない場合は FALSE です。|
+|*dwColorizationColor*|[in]新しい彩色の色を指定します。<br /><br /> 色形式は、4 つのコンポーネントの各範囲 0x00 から 0 xff までフォーム 0xAARRGGBB、数が 16 進数です。 AA コンポーネントは、アルファ値、RR は色が赤、GG は緑、および BB は青で表示します。|
+|*bOpacity*|[in]新しい色を不透明度を適用する場合は TRUE。ない場合は FALSE です。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -7127,9 +7127,9 @@ afx_msg void OnHotKey(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|[in]*nHotKeyId*|メッセージを生成したホット キーの識別子。 メッセージがシステム定義のホット キーによって生成された、このパラメーターには、次の値のいずれかになります。<br /><br /> -IDHOT_SNAPDESKTOP - スナップイン デスクトップ ホット キーが押されました。<br />-IDHOT_SNAPWINDOW - スナップイン ウィンドウ ホット キーが押されました。|
-|[in]*nKey1*|指定されたキーの組み合わせで押されたキーを示すフラグのビットごとの組み合わせ (OR)、 *nKey2*パラメーター。 次の値を指定できます。<br /><br /> -MOD_ALT - いずれかの ALT キーが開催されました。<br />-MOD_CONTROL - CTRL キーをいずれかが開催されました。<br />-MOD_SHIFT - か SHIFT キーが開催されました。<br />-MOD_WIN - か WINDOWS キーが開催されました。 これらのキーには、Microsoft Windows ロゴが付いています。|
-|[in]*nKey2*|ホット キーの仮想キー コード。|
+|*nHotKeyId*|[in]メッセージを生成したホット キーの識別子。 メッセージがシステム定義のホット キーによって生成された、このパラメーターには、次の値のいずれかになります。<br /><br /> -IDHOT_SNAPDESKTOP - スナップイン デスクトップ ホット キーが押されました。<br />-IDHOT_SNAPWINDOW - スナップイン ウィンドウ ホット キーが押されました。|
+|*nKey1*|[in]指定されたキーの組み合わせで押されたキーを示すフラグのビットごとの組み合わせ (OR)、 *nKey2*パラメーター。 次の値を指定できます。<br /><br /> -MOD_ALT - いずれかの ALT キーが開催されました。<br />-MOD_CONTROL - CTRL キーをいずれかが開催されました。<br />-MOD_SHIFT - か SHIFT キーが開催されました。<br />-MOD_WIN - か WINDOWS キーが開催されました。 これらのキーには、Microsoft Windows ロゴが付いています。|
+|*nKey2*|[in]ホット キーの仮想キー コード。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -7321,7 +7321,7 @@ afx_msg void OnInputDeviceChange(unsigned short uFlag);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|[in]*uFlag*|このフラグは、次の値を含めることができます。<br /><br /> -GIDC_ARRIVAL - 新しいデバイスがシステムに追加されました。<br />-GIDC_REMOVAL - デバイスは、システムから削除されました。|
+|*uFlag*|[in]このフラグは、次の値を含めることができます。<br /><br /> -GIDC_ARRIVAL - 新しいデバイスがシステムに追加されました。<br />-GIDC_REMOVAL - デバイスは、システムから削除されました。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -7344,8 +7344,8 @@ afx_msg void OnInputLangChange(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|[in]*nCharSet*|新しいロケールの文字セット。 詳細については、次を参照してください。、 *lfCharSet*のパラメーター、 [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)構造体。|
-|[in]*nLocaleId*|入力ロケール識別子です。 詳細については、次を参照してください。[言語識別子の定数と文字列](/windows/desktop/Intl/language-identifier-constants-and-strings)します。|
+|*nCharSet*|[in]新しいロケールの文字セット。 詳細については、次を参照してください。、 *lfCharSet*のパラメーター、 [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)構造体。|
+|*nLocaleId*|[in]入力ロケール識別子です。 詳細については、次を参照してください。[言語識別子の定数と文字列](/windows/desktop/Intl/language-identifier-constants-and-strings)します。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -7368,8 +7368,8 @@ afx_msg void OnInputLangChangeRequest(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|[in]*nFlags*|新しいロケールのロケールでは、インストールされている一覧の前または次のロケールの選択または入力ロケールの新しいキーボード レイアウトをシステムの文字セットで使用できることを示すフラグのビットごと (OR) の組み合わせ。<br /><br /> 使用可能な値は INPUTLANGCHANGE_BACKWARD、INPUTLANGCHANGE_FORWARD、および INPUTLANGCHANGE_SYSCHARSET です。|
-|[in]*nLocaleId*|入力ロケール識別子です。 詳細については、次を参照してください。[言語識別子の定数と文字列](/windows/desktop/Intl/language-identifier-constants-and-strings)します。|
+|*nFlags*|[in]新しいロケールのロケールでは、インストールされている一覧の前または次のロケールの選択または入力ロケールの新しいキーボード レイアウトをシステムの文字セットで使用できることを示すフラグのビットごと (OR) の組み合わせ。<br /><br /> 使用可能な値は INPUTLANGCHANGE_BACKWARD、INPUTLANGCHANGE_FORWARD、および INPUTLANGCHANGE_SYSCHARSET です。|
+|*nLocaleId*|[in]入力ロケール識別子です。 詳細については、次を参照してください。[言語識別子の定数と文字列](/windows/desktop/Intl/language-identifier-constants-and-strings)します。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -7800,8 +7800,8 @@ afx_msg UINT OnMenuDrag(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|[in]*nPos*|ドラッグ操作が開始されるときにメニュー項目のインデックス位置。|
-|[in]*pMenu*|ポインター、 [CMenu](../../mfc/reference/cmenu-class.md)メニュー項目を格納しているオブジェクト。|
+|*nPos*|[in]ドラッグ操作が開始されるときにメニュー項目のインデックス位置。|
+|*pMenu*|[in]ポインター、 [CMenu](../../mfc/reference/cmenu-class.md)メニュー項目を格納しているオブジェクト。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -7829,7 +7829,7 @@ afx_msg UINT OnMenuGetObject(MENUGETOBJECTINFO* pMenuGetObjectInfo);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|[in]*pMenu*|ポインターを[MENUGETOBJECTINFO](/windows/desktop/api/winuser/ns-winuser-tagmenugetobjectinfo)がドラッグ アンド ドロップ メニュー、マウスのカーソルに関する情報を含む構造体。|
+|*pMenu*|[in]ポインターを[MENUGETOBJECTINFO](/windows/desktop/api/winuser/ns-winuser-tagmenugetobjectinfo)がドラッグ アンド ドロップ メニュー、マウスのカーソルに関する情報を含む構造体。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -7859,8 +7859,8 @@ afx_msg void OnMenuRButtonUp(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|[in]*nPos*|マウスの右ボタンが離されたときにメニュー項目のインデックス位置。|
-|[in]*pMenu*|ポインター、 [CMenu](../../mfc/reference/cmenu-class.md)メニュー項目を格納しているオブジェクト。|
+|*nPos*|[in]マウスの右ボタンが離されたときにメニュー項目のインデックス位置。|
+|*pMenu*|[in]ポインター、 [CMenu](../../mfc/reference/cmenu-class.md)メニュー項目を格納しているオブジェクト。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -7977,8 +7977,8 @@ afx_msg void OnMouseHover(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|[in]*nFlags*|どの修飾子キーが押されたかを示すフラグのビットごとの組み合わせ (OR)。 たとえば、MK_CONTROL フラグは、CTRL キーが押されたことを示します。|
-|[in]*ポイント*|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)を指定するオブジェクト、 *x*と*y*クライアント領域の左上隅に対して相対的カーソルの座標。|
+|*nFlags*|[in]どの修飾子キーが押されたかを示すフラグのビットごとの組み合わせ (OR)。 たとえば、MK_CONTROL フラグは、CTRL キーが押されたことを示します。|
+|*ポイント*|[in]A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)を指定するオブジェクト、 *x*と*y*クライアント領域の左上隅に対して相対的カーソルの座標。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -8014,9 +8014,9 @@ afx_msg void OnMouseHWheel(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|[in]*nFlags*|どの修飾子キーが押されたかを示すフラグのビットごとの組み合わせ (OR)。 たとえば、MK_CONTROL フラグは、CTRL キーが押されたことを示します。<br /><br /> フラグの一覧を参照してくださいで「メッセージ パラメーター」subheading[マウス入力に関する](/windows/desktop/inputdev/about-mouse-input)します。|
-|[in]*zDelta*|ホイールを回転すると、120 は倍数または WHEEL_DELTA の区分線で表される距離を示します。 正の値は、ホイールが右に回転したことを示します負の値は、ホイールを左に回転されたことを示します。|
-|[in]*pt*|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)を指定するオブジェクト、 *x*と*y*クライアント領域の左上隅に対して相対的カーソルの座標。|
+|*nFlags*|[in]どの修飾子キーが押されたかを示すフラグのビットごとの組み合わせ (OR)。 たとえば、MK_CONTROL フラグは、CTRL キーが押されたことを示します。<br /><br /> フラグの一覧を参照してくださいで「メッセージ パラメーター」subheading[マウス入力に関する](/windows/desktop/inputdev/about-mouse-input)します。|
+|*zDelta*|[in]ホイールを回転すると、120 は倍数または WHEEL_DELTA の区分線で表される距離を示します。 正の値は、ホイールが右に回転したことを示します負の値は、ホイールを左に回転されたことを示します。|
+|*pt*|[in]A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)を指定するオブジェクト、 *x*と*y*クライアント領域の左上隅に対して相対的カーソルの座標。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -8441,8 +8441,8 @@ afx_msg void OnNcMouseHover(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|[in]*nHitTest*|によって返されるヒット テスト値、 [CWnd::DefWindowProc](#defwindowproc)関数の処理の結果として、 [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)メッセージ。|
-|[in]*ポイント*|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)を指定するオブジェクト、 *x*と*y*画面の左上隅に対して相対的カーソルの座標。|
+|*nHitTest*|[in]によって返されるヒット テスト値、 [CWnd::DefWindowProc](#defwindowproc)関数の処理の結果として、 [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)メッセージ。|
+|*ポイント*|[in]A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)を指定するオブジェクト、 *x*と*y*画面の左上隅に対して相対的カーソルの座標。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -8586,7 +8586,7 @@ afx_msg void OnNcRenderingChanged(BOOL bIsRendering);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|[in]*bIsRendering*|ウィンドウの非クライアント領域のデスクトップ ウィンドウ マネージャー (DWM) のレンダリングが有効になっている場合は TRUE。レンダリングが無効になっている場合は FALSE。|
+|*bIsRendering*|[in]ウィンドウの非クライアント領域のデスクトップ ウィンドウ マネージャー (DWM) のレンダリングが有効になっている場合は TRUE。レンダリングが無効になっている場合は FALSE。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -8610,9 +8610,9 @@ void OnNcXButtonDblClk(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|[in]*nHitTest*|によって返されるヒット テスト値、 [CWnd::DefWindowProc](#defwindowproc)関数の処理の結果として、 [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)メッセージ。|
-|[in]*n ボタン*|値の場合は、Microsoft Intellimouse X の最初のボタンがダブルクリックされた、XBUTTON1 または xbutton2 を押す場合は、2 つ目 [X] ボタンがダブルクリックされました。|
-|[in]*ポイント*|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)を指定するオブジェクト、 *x*と*y*クライアント領域の左上隅に対して相対的カーソルの座標。|
+|*nHitTest*|[in]によって返されるヒット テスト値、 [CWnd::DefWindowProc](#defwindowproc)関数の処理の結果として、 [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)メッセージ。|
+|*n ボタン*|[in]値の場合は、Microsoft Intellimouse X の最初のボタンがダブルクリックされた、XBUTTON1 または xbutton2 を押す場合は、2 つ目 [X] ボタンがダブルクリックされました。|
+|*ポイント*|[in]A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)を指定するオブジェクト、 *x*と*y*クライアント領域の左上隅に対して相対的カーソルの座標。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -8636,9 +8636,9 @@ afx_msg void OnNcXButtonDown(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|[in]*nHitTest*|によって返されるヒット テスト値、 [CWnd::DefWindowProc](#defwindowproc)関数の処理の結果として、 [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)メッセージ。|
-|[in]*n ボタン*|値の最初のマウスの X ボタンが押された場合の XBUTTON1 または xbutton2 を押す場合は 2 番目の X ボタンが押されました。|
-|[in]*ポイント*|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)を指定するオブジェクト、 *x*と*y*画面の左上隅に対して相対的カーソルの座標。|
+|*nHitTest*|[in]によって返されるヒット テスト値、 [CWnd::DefWindowProc](#defwindowproc)関数の処理の結果として、 [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)メッセージ。|
+|*n ボタン*|[in]値の最初のマウスの X ボタンが押された場合の XBUTTON1 または xbutton2 を押す場合は 2 番目の X ボタンが押されました。|
+|*ポイント*|[in]A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)を指定するオブジェクト、 *x*と*y*画面の左上隅に対して相対的カーソルの座標。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -8662,9 +8662,9 @@ afx_msg void OnNcXButtonUp(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|[in]*nHitTest*|によって返されるヒット テスト値、 [CWnd::DefWindowProc](#defwindowproc)関数の処理の結果として、 [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)メッセージ。|
-|[in]*n ボタン*|値の最初のマウスの X ボタンを離した場合 XBUTTON1 または xbutton2 を押す場合は 2 番目の X ボタンが離されました。|
-|[in]*ポイント*|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)を指定するオブジェクト、 *x*と*y*画面の左上隅に対して相対的カーソルの座標。|
+|*nHitTest*|[in]によって返されるヒット テスト値、 [CWnd::DefWindowProc](#defwindowproc)関数の処理の結果として、 [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)メッセージ。|
+|*n ボタン*|[in]値の最初のマウスの X ボタンを離した場合 XBUTTON1 または xbutton2 を押す場合は 2 番目の X ボタンが離されました。|
+|*ポイント*|[in]A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)を指定するオブジェクト、 *x*と*y*画面の左上隅に対して相対的カーソルの座標。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -8687,8 +8687,8 @@ afx_msg void OnNextMenu(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|[in]*nKey*|どの修飾子キーが押されたかを示すフラグのビットごとの組み合わせ (OR)。 たとえば、MK_CONTROL フラグは、CTRL キーが押されたことを示します。<br /><br /> フラグの一覧を参照してくださいで「メッセージ パラメーター」subheading[マウス入力に関する](/windows/desktop/inputdev/about-mouse-input)します。|
-|[in]*lpMdiNextMenu*|ポインターを[MDINEXTMENU](/windows/desktop/api/winuser/ns-winuser-tagmdinextmenu)アクティブ化するメニューに関する情報を含む構造体。|
+|*nKey*|[in]どの修飾子キーが押されたかを示すフラグのビットごとの組み合わせ (OR)。 たとえば、MK_CONTROL フラグは、CTRL キーが押されたことを示します。<br /><br /> フラグの一覧を参照してくださいで「メッセージ パラメーター」subheading[マウス入力に関する](/windows/desktop/inputdev/about-mouse-input)します。|
+|*lpMdiNextMenu*|[in]ポインターを[MDINEXTMENU](/windows/desktop/api/winuser/ns-winuser-tagmdinextmenu)アクティブ化するメニューに関する情報を含む構造体。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -8745,8 +8745,8 @@ afx_msg UINT OnNotifyFormat(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|[in]*我が物*|ポインターを`CWnd`送信ウィンドウを表すオブジェクトを[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)メッセージ。<br /><br /> このパラメーターには、コントロールへのポインターがある場合、 *%n %n されたコマンド*場合パラメーターが NF_QUERY、またはコントロールの親ウィンドウへのポインター *%n %n されたコマンド*がされます。|
-|[in]*%n %n されたコマンド*|WM_NOTIFY メッセージを専門とするコマンドの値。 次の値を指定できます。<br /><br /> -NF_QUERY-<br />     メッセージは、ANSI または Unicode 構造を WM_NOTIFY メッセージで使用する必要があるかどうかを決定するクエリです。 このメッセージは、このメッセージのされますフォームに応答して、コントロールの作成時に親ウィンドウにコントロールから送信されます。<br />-されます-<br />     メッセージは、親ウィンドウにこのメッセージの NF_QUERY フォームを送信する制御の要求です。 この要求は、親ウィンドウから送信され、再クエリする WM_NOTIFY メッセージで使用する構造体の型について、親コントロールを尋ねます。 場合、 *%n %n されたコマンド*パラメーターは、されます、戻り値が再実行操作の結果。|
+|*我が物*|[in]ポインターを`CWnd`送信ウィンドウを表すオブジェクトを[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)メッセージ。<br /><br /> このパラメーターには、コントロールへのポインターがある場合、 *%n %n されたコマンド*場合パラメーターが NF_QUERY、またはコントロールの親ウィンドウへのポインター *%n %n されたコマンド*がされます。|
+|*%n されたコマンド*|[in]WM_NOTIFY メッセージを専門とするコマンドの値。 次の値を指定できます。<br /><br /> -NF_QUERY-<br />     メッセージは、ANSI または Unicode 構造を WM_NOTIFY メッセージで使用する必要があるかどうかを決定するクエリです。 このメッセージは、このメッセージのされますフォームに応答して、コントロールの作成時に親ウィンドウにコントロールから送信されます。<br />-されます-<br />     メッセージは、親ウィンドウにこのメッセージの NF_QUERY フォームを送信する制御の要求です。 この要求は、親ウィンドウから送信され、再クエリする WM_NOTIFY メッセージで使用する構造体の型について、親コントロールを尋ねます。 場合、 *%n %n されたコマンド*パラメーターは、されます、戻り値が再実行操作の結果。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -8910,8 +8910,8 @@ afx_msg UINT OnPowerBroadcast(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|[in]*nPowerEvent*|電源管理イベントです。|
-|[in]*nEventData*|イベントに固有のデータ。|
+|*nPowerEvent*|[in]電源管理イベントです。|
+|*nEventData*|[in]イベントに固有のデータ。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -9022,8 +9022,8 @@ afx_msg void OnRawInput(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|[in]*nInputCode*|かどうか、入力が、アプリケーションの中に発生したかどうかを示す入力のコードは、フォア グラウンドででした。 どちらの場合、アプリケーションを呼び出す必要があります[CWnd::DefWindowProc](#defwindowproc)システムは、クリーンアップを実行できるようにします。<br /><br /> このパラメーターには、次の値のいずれかを指定できます。<br /><br /> アプリケーションがフォア グラウンドででした - RIM_INPUT - 入力が発生しました。<br />アプリケーションがフォア グラウンドで - RIM_INPUTSINK - 入力が発生しました。|
-|[in]*hRawInput*|ハンドルを[RAWINPUT](https://msdn.microsoft.com/library/windows/desktop/ms645562)デバイスから生の入力を含む構造体。|
+|*nInputCode*|[in]かどうか、入力が、アプリケーションの中に発生したかどうかを示す入力のコードは、フォア グラウンドででした。 どちらの場合、アプリケーションを呼び出す必要があります[CWnd::DefWindowProc](#defwindowproc)システムは、クリーンアップを実行できるようにします。<br /><br /> このパラメーターには、次の値のいずれかを指定できます。<br /><br /> アプリケーションがフォア グラウンドででした - RIM_INPUT - 入力が発生しました。<br />アプリケーションがフォア グラウンドで - RIM_INPUTSINK - 入力が発生しました。|
+|*hRawInput*|[in]ハンドルを[RAWINPUT](https://msdn.microsoft.com/library/windows/desktop/ms645562)デバイスから生の入力を含む構造体。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -9208,8 +9208,8 @@ afx_msg void OnSessionChange(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|[in]*nSessionState*|状態コードでは、セッション状態の変更について説明します。|
-|[in]*nId*|セッションの識別子です。|
+|*nSessionState*|[in]状態コードでは、セッション状態の変更について説明します。|
+|*nId*|[in]セッションの識別子です。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -9973,9 +9973,9 @@ afx_msg void OnUniChar(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|[in]*nChar*|押されたキーの文字のコードを指定します。|
-|[in]*nRepCnt*|現在のメッセージの繰り返し回数を指定します。 値は、キーストロークは、キーを押しながら、ユーザーの結果として autorepeated 回数の合計です。 キーストロークが保持されるのに十分な場合は、複数のメッセージが送信されます。 ただし、繰り返し回数は、累積的ではありません。|
-|[in]*nFlags*|次の表に示すように、コードのスキャン、拡張キー、コンテキストのコード、以前のキーの状態および遷移の状態を指定するフラグ。<br /><br /> **0-7:** スキャン コードを指定します。 値は、供給 (OEM) に依存します。<br /><br /> **8:** 拡張 101 または 102 key キーボードに表示される右 ALT および CTRL キーなど、拡張キーを指定します。 キーが拡張キーである場合、このフラグは 1それ以外の場合は 0 です。<br /><br /> **9-12:** Windows によって内部的に使用します。<br /><br /> **13:** コンテキスト コードを指定します。 ALT キーを押した状態でキーを押した場合、フラグが 1それ以外の場合、値は 0 です。<br /><br /> **14:** 前のキーの状態を指定します。 フラグは、メッセージが送信される前に、キーがダウンした場合、1 または 0 がキーをします。<br /><br /> **15:** 遷移状態を指定します。 フラグは、キーが押された場合は、キーがリリースされている場合は 1 または 0 です。|
+|*NChar*|[in]押されたキーの文字のコードを指定します。|
+|*nRepCnt*|[in]現在のメッセージの繰り返し回数を指定します。 値は、キーストロークは、キーを押しながら、ユーザーの結果として autorepeated 回数の合計です。 キーストロークが保持されるのに十分な場合は、複数のメッセージが送信されます。 ただし、繰り返し回数は、累積的ではありません。|
+|*nFlags*|[in]次の表に示すように、コードのスキャン、拡張キー、コンテキストのコード、以前のキーの状態および遷移の状態を指定するフラグ。<br /><br /> **0-7:** スキャン コードを指定します。 値は、供給 (OEM) に依存します。<br /><br /> **8:** 拡張 101 または 102 key キーボードに表示される右 ALT および CTRL キーなど、拡張キーを指定します。 キーが拡張キーである場合、このフラグは 1それ以外の場合は 0 です。<br /><br /> **9-12:** Windows によって内部的に使用します。<br /><br /> **13:** コンテキスト コードを指定します。 ALT キーを押した状態でキーを押した場合、フラグが 1それ以外の場合、値は 0 です。<br /><br /> **14:** 前のキーの状態を指定します。 フラグは、メッセージが送信される前に、キーがダウンした場合、1 または 0 がキーをします。<br /><br /> **15:** 遷移状態を指定します。 フラグは、キーが押された場合は、キーがリリースされている場合は 1 または 0 です。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -9998,8 +9998,8 @@ afx_msg void OnUnInitMenuPopup(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|[in]*pMenu*|ポインター、 [CMenu](../../mfc/reference/cmenu-class.md)メニューまたはサブメニューを表すオブジェクト。|
-|[in]*nFlags*|このメニューが破棄されました。 現時点では、ウィンドウ メニューの ならばはなります。|
+|*pMenu*|[in]ポインター、 [CMenu](../../mfc/reference/cmenu-class.md)メニューまたはサブメニューを表すオブジェクト。|
+|*nFlags*|[in]このメニューが破棄されました。 現時点では、ウィンドウ メニューの ならばはなります。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -10196,7 +10196,7 @@ afx_msg void OnWindowMaximizedChanged(BOOL bIsMaximized);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|[in]*bIsMaximized*|TRUE の場合、現在のウィンドウが最大化し、ない場合は FALSE。|
+|*bIsMaximized*|[in]TRUE の場合、現在のウィンドウが最大化し、ない場合は FALSE。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -10324,9 +10324,9 @@ afx_msg void OnXButtonDblClk(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|[in]*nFlags*|どの修飾子キーが押されたかを示すフラグのビットごとの組み合わせ (OR)。 たとえば、MK_CONTROL フラグは、CTRL キーが押されたことを示します。|
-|[in]*n ボタン*|値の場合は、Microsoft Intellimouse X の最初のボタンがダブルクリックされた、XBUTTON1 または xbutton2 を押す場合は、2 つ目 [X] ボタンがダブルクリックされました。|
-|[in]*ポイント*|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)を指定するオブジェクト、 *x*と*y*クライアント領域の左上隅に対して相対的カーソルの座標。|
+|*nFlags*|[in]どの修飾子キーが押されたかを示すフラグのビットごとの組み合わせ (OR)。 たとえば、MK_CONTROL フラグは、CTRL キーが押されたことを示します。|
+|*n ボタン*|[in]値の場合は、Microsoft Intellimouse X の最初のボタンがダブルクリックされた、XBUTTON1 または xbutton2 を押す場合は、2 つ目 [X] ボタンがダブルクリックされました。|
+|*ポイント*|[in]A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)を指定するオブジェクト、 *x*と*y*クライアント領域の左上隅に対して相対的カーソルの座標。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -10362,9 +10362,9 @@ afx_msg void OnXButtonDown(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|[in]*nFlags*|どの修飾子キーが押されたかを示すフラグのビットごとの組み合わせ (OR)。 たとえば、MK_CONTROL フラグは、CTRL キーが押されたことを示します。|
-|[in]*n ボタン*|XBUTTON1、Microsoft Intellimouse X の最初のボタンがクリックされた場合の値または xbutton2 を押す場合は 2 番目の X ボタンがクリックされました。|
-|[in]*ポイント*|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)を指定するオブジェクト、 *x*と*y*クライアント領域の左上隅に対して相対的カーソルの座標。|
+|*nFlags*|[in]どの修飾子キーが押されたかを示すフラグのビットごとの組み合わせ (OR)。 たとえば、MK_CONTROL フラグは、CTRL キーが押されたことを示します。|
+|*n ボタン*|[in]XBUTTON1、Microsoft Intellimouse X の最初のボタンがクリックされた場合の値または xbutton2 を押す場合は 2 番目の X ボタンがクリックされました。|
+|*ポイント*|[in]A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)を指定するオブジェクト、 *x*と*y*クライアント領域の左上隅に対して相対的カーソルの座標。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -10400,9 +10400,9 @@ afx_msg void OnXButtonUp(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|[in]*nFlags*|どの修飾子キーが押されたかを示すフラグのビットごとの組み合わせ (OR)。 たとえば、MK_CONTROL フラグは、CTRL キーが押されたことを示します。|
-|[in]*n ボタン*|値の場合は、Microsoft Intellimouse X の最初のボタンがダブルクリックされたときに、XBUTTON1 または xbutton2 を押す場合は、2 つ目 [X] ボタンがダブルクリックされました。|
-|[in]*ポイント*|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)を指定するオブジェクト、 *x*と*y*クライアント領域の左上隅に対して相対的カーソルの座標。|
+|*nFlags*|[in]どの修飾子キーが押されたかを示すフラグのビットごとの組み合わせ (OR)。 たとえば、MK_CONTROL フラグは、CTRL キーが押されたことを示します。|
+|*n ボタン*|[in]値の場合は、Microsoft Intellimouse X の最初のボタンがダブルクリックされたときに、XBUTTON1 または xbutton2 を押す場合は、2 つ目 [X] ボタンがダブルクリックされました。|
+|*ポイント*|[in]A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)を指定するオブジェクト、 *x*と*y*クライアント領域の左上隅に対して相対的カーソルの座標。|
 
 ### <a name="remarks"></a>Remarks
 
