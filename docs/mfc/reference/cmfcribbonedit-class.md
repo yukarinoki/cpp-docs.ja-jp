@@ -83,12 +83,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46d96d574fedf9af2fe7eb46c872819cf54a364e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c96b5b18530cd9b983e5a4c022883919261cc22c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216460"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701611"
 ---
 # <a name="cmfcribbonedit-class"></a>CMFCRibbonEdit クラス
 リボン バー上にある編集コントロールを実装します。  
@@ -181,17 +181,17 @@ CMFCRibbonEdit();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nID*  
- コマンドの ID、`CMFCRibbonEdit`コントロール。  
+*nID*<br/>
+[in]コマンドの ID、`CMFCRibbonEdit`コントロール。  
   
- [in]*nWidth*  
- 幅 (ピクセル単位) のテキスト ボックス、`CMFCRibbonEdit`コントロール。  
+*nWidth*<br/>
+[in]幅 (ピクセル単位) のテキスト ボックス、`CMFCRibbonEdit`コントロール。  
   
- [in]*lpszLabel*  
- ラベル、`CMFCRibbonEdit`コントロール。  
+*lpszLabel*<br/>
+[in]ラベル、`CMFCRibbonEdit`コントロール。  
   
- [in]*あり*  
- 使用する小さいイメージのインデックス、`CMFCRibbonEdit`コントロール。 小さいイメージのコレクションは、親のリボン カテゴリによって管理されます。  
+*あり*<br/>
+[in]使用する小さいイメージのインデックス、`CMFCRibbonEdit`コントロール。 小さいイメージのコレクションは、親のリボン カテゴリによって管理されます。  
   
 ### <a name="remarks"></a>Remarks  
  `CMFCRibbonEdit`コントロールで大きいイメージを使用しません。  
@@ -204,8 +204,8 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*src*  
- ソース `CMFCRibbonEdit` オブジェクト。  
+*src*<br/>
+[in]ソース`CMFCRibbonEdit`オブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
  *Src*パラメーター型でなければなりません`CMFCRibbonEdit`します。  
@@ -220,11 +220,11 @@ virtual CMFCRibbonRichEditCtrl* CreateEdit(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWndParent*  
- 親ウィンドウへのポインター、`CMFCRibbonEdit`オブジェクト。  
+*pWndParent*<br/>
+[in]親ウィンドウへのポインター、`CMFCRibbonEdit`オブジェクト。  
   
- [in]*dwEditStyle*  
- テキスト ボックスのスタイルを指定します。 「解説」セクションに記載のウィンドウ スタイルを組み合わせることができます、[コントロール スタイルを編集](/windows/desktop/Controls/edit-control-styles)Windows sdk に記載されています。  
+*dwEditStyle*<br/>
+[in]テキスト ボックスのスタイルを指定します。 「解説」セクションに記載のウィンドウ スタイルを組み合わせることができます、[コントロール スタイルを編集](/windows/desktop/Controls/edit-control-styles)Windows sdk に記載されています。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は、新しいテキスト ボックスへのポインターそれ以外の場合は NULL です。  
@@ -273,11 +273,11 @@ void EnableSpinButtons(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nMin*  
- スピン ボタンの最小値。  
+*nMin*<br/>
+[in]スピン ボタンの最小値。  
   
- [in]*nMax*  
- スピン ボタンの最大値。  
+*nMax*<br/>
+[in]スピン ボタンの最大値。  
   
 ### <a name="remarks"></a>Remarks  
  スピン ボタンは表示下矢印をクリックし、値の固定セットを移動するユーザーを有効にします。  
@@ -290,8 +290,8 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター、`CMFCRibbonEdit`オブジェクト。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター、`CMFCRibbonEdit`オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  コンパクト サイズ、`CMFCRibbonEdit`オブジェクト。  
@@ -318,8 +318,8 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター、`CMFCRibbonEdit`オブジェクト。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター、`CMFCRibbonEdit`オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  中間のサイズ、`CMFCRibbonEdit`オブジェクト。  
@@ -355,8 +355,8 @@ int GetWidth(BOOL bInFloatyMode = FALSE) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bInFloatyMode*  
- TRUE の場合、`CMFCRibbonEdit`コントロールが浮動小数点モードです。 それ以外の場合、FALSE。  
+*bInFloatyMode*<br/>
+[in]TRUE の場合、`CMFCRibbonEdit`コントロールが浮動小数点モードです。 それ以外の場合、FALSE。  
   
 ### <a name="return-value"></a>戻り値  
  幅 (ピクセル単位) の`CMFCRibbonEdit`コントロール。  
@@ -433,8 +433,8 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター、`CMFCRibbonEdit`コントロール。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター、`CMFCRibbonEdit`コントロール。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -446,8 +446,8 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター、`CMFCRibbonEdit`コントロール。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター、`CMFCRibbonEdit`コントロール。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -459,8 +459,8 @@ virtual void OnDrawLabelAndImage(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター、`CMFCRibbonEdit`コントロール。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター、`CMFCRibbonEdit`コントロール。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -478,23 +478,23 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター、`CMFCRibbonEdit`コントロール。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター、`CMFCRibbonEdit`コントロール。  
   
- [in]*strText*  
- 表示テキスト[ ] (../../mfc/reference/cmfcribbonedit-class.md "cmfcribbonedit クラス")します。  
+*strText*<br/>
+[in]表示テキスト[ ] (../../mfc/reference/cmfcribbonedit-class.md "cmfcribbonedit クラス")します。  
   
- [in]*nTextOffset*  
- 距離 (ピクセル)、テキストを表示、リスト ボックスの左側にあるからです。  
+*nTextOffset*<br/>
+[in]距離 (ピクセル)、テキストを表示、リスト ボックスの左側にあるからです。  
   
- [in]*rect*  
- 表示する四角形、`CMFCRibbonEdit`コントロール。  
+*rect*<br/>
+[in]表示する四角形、`CMFCRibbonEdit`コントロール。  
   
- [in]*bIsSelected*  
- このパラメーターは使用されません。  
+*bIsSelected*<br/>
+[in]このパラメーターは使用されません。  
   
- [in]*bHighlighted*  
- このパラメーターは使用されません。  
+*bHighlighted*<br/>
+[in]このパラメーターは使用されません。  
   
 ### <a name="remarks"></a>Remarks  
  コマンドのリスト ボックスには、クイック アクセス ツールバーをカスタマイズするユーザーを有効にするリボン コントロールが表示されます。  
@@ -507,8 +507,8 @@ virtual void OnEnable(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- コントロールを有効にする場合は TRUEコントロールを無効にする場合は FALSE。  
+*bEnable*<br/>
+[in]コントロールを有効にする場合は TRUEコントロールを無効にする場合は FALSE。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -520,8 +520,8 @@ virtual void OnHighlight(BOOL bHighlight);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bHighlight*  
- ポインターがの境界内にある場合は TRUE、`CMFCRibbonEdit`制御します。 それ以外の場合、FALSE。  
+*bHighlight*<br/>
+[in]ポインターがの境界内にある場合は TRUE、`CMFCRibbonEdit`制御します。 それ以外の場合、FALSE。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -533,8 +533,8 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bIsMenuKey*  
- Keytip がポップアップ メニューが表示される場合は TRUE。それ以外の場合、FALSE です。  
+*bIsMenuKey*<br/>
+[in]Keytip がポップアップ メニューが表示される場合は TRUE。それ以外の場合、FALSE です。  
   
 ### <a name="return-value"></a>戻り値  
  イベントが処理された場合は TRUE。それ以外の場合、FALSE です。  
@@ -549,8 +549,8 @@ virtual void OnLButtonDown(CPoint point);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ポイント*  
- このパラメーターは使用されません。  
+*ポイント*<br/>
+[in]このパラメーターは使用されません。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -562,8 +562,8 @@ virtual void OnLButtonUp(CPoint point);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ポイント*  
- このパラメーターは使用されません。  
+*ポイント*<br/>
+[in]このパラメーターは使用されません。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -575,8 +575,8 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bIsRTL*  
- レイアウトは右から左の場合は TRUE。レイアウトが左から右の場合は FALSE です。  
+*bIsRTL*<br/>
+[in]レイアウトは右から左の場合は TRUE。レイアウトが左から右の場合は FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -588,8 +588,8 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bShow*  
- コントロールを表示する場合は TRUEコントロールを非表示にする場合は FALSE。  
+*bShow*<br/>
+[in]コントロールを表示する場合は TRUEコントロールを非表示にする場合は FALSE。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -632,8 +632,8 @@ void SetEditText(CString strText);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*strText*  
- テキスト ボックスのテキスト。  
+*strText*<br/>
+[in]テキスト ボックスのテキスト。  
   
 ##  <a name="settextalign"></a>  CMFCRibbonEdit::SetTextAlign  
  テキスト ボックスのテキストの配置を設定します。  
@@ -643,8 +643,8 @@ void SetTextAlign(int nAlign);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nAlign*  
- テキストの配置の列挙値。 使用可能な値は、「解説」を参照してください。  
+*nAlign*<br/>
+[in]テキストの配置の列挙値。 使用可能な値は、「解説」を参照してください。  
   
 ### <a name="remarks"></a>Remarks  
  パラメーター *nAlign*コントロールのスタイルは、次の編集のいずれか。  
@@ -667,8 +667,8 @@ void SetWidth(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nWidth*  
- テキスト ボックスのピクセル単位の幅。  
+*nWidth*<br/>
+[in]テキスト ボックスのピクセル単位の幅。  
   
  *bInFloatyMode*  
  浮動小数点モードの幅を設定する場合は TRUE通常モードの幅を設定する場合は FALSE。  
