@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13ce6a5f26cba69aff8ebb296a6f4a716adf1c46
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: abf907fe12f55b44e7f2e184b8752d2e09a326f8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107680"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071732"
 ---
 # <a name="array-class"></a>array クラス
 データをアクセラレータに移動するために使用するデータ コンテナーを表します。
@@ -50,10 +50,10 @@ friend class array;
 ```  
 
 #### <a name="parameters"></a>パラメーター
-`value_type`  
+*value_type*<br/>
 データの要素型。
 
-`_Rank`  
+*_Rank*<br/>
 配列のランク。
 
 ## <a name="members"></a>メンバー
@@ -404,46 +404,46 @@ array(array&& _Other) restrict(cpu);
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_Associated_Av`  
+*_Associated_Av*<br/>
 配列の優先ターゲットの位置を指定する accelerator_view。
 
-`_Av`  
+*_Av*<br/>
 [Accelerator_view](accelerator-view-class.md)オブジェクト、配列の位置を指定します。
 
-`_Cpu_access_type`  
+*_Cpu_access_type*<br/>
 必要な[access_type](concurrency-namespace-enums-amp.md#access_type) CPU 上の配列。 このパラメーターには、CPU の `access_type_auto` 決定をランタイムに任せる `access_type` の既定値があります。 配列の実際の CPU `access_type` は `get_cpu_access_type` メソッドを使用してクエリを実行できます。
 
-`_Extent`  
+*_Extent*<br/>
 配列の各次元の範囲。
 
-`_E0`  
+*_E0*<br/>
 このセクションの範囲の最上位のコンポーネント。
 
-`_E1`  
+*_E1*<br/>
 このセクションの範囲の最上位の次のコンポーネント。
 
-`_E2`  
+*_E2*<br/>
 このセクションの範囲の最下位のコンポーネント。
 
-`_InputIterator`  
+*_InputIterator*<br/>
 入力列挙子の型。
 
-`_Src`  
+*_Src*<br/>
 コピーするオブジェクト。
 
-`_Src_first`  
+*_Src_first*<br/>
 ソース コンテナーへの先頭の反復子。
 
-`_Src_last`  
+*_Src_last*<br/>
 ソース コンテナーへの終了の反復子。
 
-`_Other`  
+*_Other*<br/>
 その他のデータ ソース。
 
-`_Rank`  
+*_Rank*<br/>
 セクションのランク。
 
-`value_type`  
+*value_type*<br/>
 コピーされた要素のデータ型。
 
 ##  <a name="associated_accelerator_view"></a> associated_accelerator_view
@@ -467,7 +467,7 @@ void copy_to(
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_Dest`  
+*_Dest*<br/>
 [Array_view](array-view-class.md)オブジェクトにコピーします。
 
 ##  <a name="cpu_access_type"></a> cpu_access_type
@@ -551,7 +551,7 @@ operator std::vector<value_type>() const restrict(cpu);
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`value_type`  
+*value_type*<br/>
 ベクターの要素のデータ型。
 
 ### <a name="return-value"></a>戻り値
@@ -580,19 +580,19 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_Index`  
+*_Index*<br/>
 要素の場所。
 
-`_I0`  
+*_I0*<br/>
 このセクションの原点の最上位のコンポーネント。
 
-`_I1`  
+*_I1*<br/>
 このセクションの原点の最上位の次のコンポーネント。
 
-`_I2`  
+*_I2*<br/>
 このセクションの原点の最下位のコンポーネント。
 
-`_I`  
+*_I*<br/>
 要素の場所。
 
 ### <a name="return-value"></a>戻り値
@@ -614,10 +614,10 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_Index`  
+*_Index*<br/>
 インデックス。
 
-`_I`  
+*_I*<br/>
 インデックス。
 
 ### <a name="return-value"></a>戻り値
@@ -637,10 +637,10 @@ array& operator= (
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_Other`  
+*_Other*<br/>
 コピー元の `array` オブジェクト。
 
-`_Src`  
+*_Src*<br/>
 コピー元の `array` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -752,40 +752,40 @@ array_view<const value_type,3> section(
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_E0`  
+*_E0*<br/>
 このセクションの範囲の最上位のコンポーネント。
 
-`_E1`  
+*_E1*<br/>
 このセクションの範囲の最上位の次のコンポーネント。
 
-`_E2`  
+*_E2*<br/>
 このセクションの範囲の最下位のコンポーネント。
 
-`_Ext`  
+*展開*<br/>
 [エクステント](extent-class.md)セクションの範囲を指定するオブジェクト。 原点は 0 です。
 
-`_Idx`  
+*_Idx*<br/>
 [インデックス](index-class.md)元の場所を指定するオブジェクト。 サブセクションは残りの範囲です。
 
-`_I0`  
+*_I0*<br/>
 このセクションの原点の最上位のコンポーネント。
 
-`_I1`  
+*_I1*<br/>
 このセクションの原点の最上位の次のコンポーネント。
 
-`_I2`  
+*_I2*<br/>
 このセクションの原点の最下位のコンポーネント。
 
-`_Rank`  
+*_Rank*<br/>
 セクションのランク。
 
-`_Section_extent`  
+*_Section_extent*<br/>
 [エクステント](extent-class.md)セクションの範囲を指定するオブジェクト。
 
-`_Section_origin`  
+*_Section_origin*<br/>
 [インデックス](index-class.md)元の場所を指定するオブジェクト。
 
-`value_type`  
+*value_type*<br/>
 コピーされた要素のデータ型。
 
 ### <a name="return-value"></a>戻り値
@@ -807,13 +807,13 @@ array_view<const value_type,_New_rank> view_as(
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_New_rank`  
+*_New_rank*<br/>
 パラメーターとして渡された `extent` オブジェクトのランク。
 
-`_View_extent`  
+*_View_extent*<br/>
 新しいを作成するために使用する範囲[array_view](array-view-class.md)オブジェクト。
 
-`value_type`  
+*value_type*<br/>
 元の両方の要素のデータ型`array`オブジェクトおよび返された`array_view`オブジェクト。
 
 ### <a name="return-value"></a>戻り値

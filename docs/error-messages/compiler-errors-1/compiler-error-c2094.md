@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2094 |Microsoft ドキュメント
+title: コンパイラ エラー C2094 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4db86a805118cbdbf74f21737b4a331fc59237c3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6e3591fef423bc24562a2f2edf18f7f2774cfcc4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167321"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073526"
 ---
 # <a name="compiler-error-c2094"></a>コンパイラ エラー C2094
-ラベル 'identifier' が定義されていません  
-  
-[goto](../../cpp/goto-statement-cpp.md) ステートメントで使用されるラベルが関数に存在しません。  
-  
-## <a name="example"></a>例  
-次の例では C2094 が生成されます。  
-  
-```cpp  
-// C2094.c  
-int main() {  
-   goto test;  
-}   // C2094  
-```  
-  
- 考えられる解決方法:  
-  
-```cpp  
-// C2094b.c  
-int main() {  
-   goto test;  
-   test:   
-   {  
-   }  
-}  
+
+ラベル 'identifier' が定義されていません
+
+[goto](../../cpp/goto-statement-cpp.md) ステートメントで使用されるラベルが関数に存在しません。
+
+## <a name="example"></a>例
+
+次の例では C2094 が生成されます。
+
+```cpp
+// C2094.c
+int main() {
+   goto test;
+}   // C2094
+```
+
+考えられる解決方法:
+
+```cpp
+// C2094b.c
+int main() {
+   goto test;
+   test:
+   {
+   }
+}
 ```

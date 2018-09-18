@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4615 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4615 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c631a8a08b643a7f5daba62d991c338161692805
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd260e37fb3f98f3e23d1c99c9ff53cae4f0198f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33282068"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073708"
 ---
 # <a name="compiler-warning-level-1-c4615"></a>コンパイラの警告 (レベル 1) C4615
-\#pragma 警告: 不明な警告型  
-  
- 無効な警告指定子が使用されて**プラグマ**[警告](../../preprocessor/warning.md)です。 エラーを解決するには、有効な警告指定子を使用します。  
-  
- 次の例では、C4615 が生成されます。  
-  
-```  
-// C4615.cpp  
-// compile with: /W1 /LD  
-#pragma warning(enable : 4401)   // C4615, 'enable' not valid specifier  
-  
-// use the code below to resolve the error  
-// #pragma warning(default : 4401)  
+
+\#pragma 警告: 不明な警告型
+
+無効な警告指定子が使用されていた**プラグマ**[警告](../../preprocessor/warning.md)します。 エラーを解決するには、有効な警告指定子を使用します。
+
+次の例では、C4615 が生成されます。
+
+```
+// C4615.cpp
+// compile with: /W1 /LD
+#pragma warning(enable : 4401)   // C4615, 'enable' not valid specifier
+
+// use the code below to resolve the error
+// #pragma warning(default : 4401)
 ```

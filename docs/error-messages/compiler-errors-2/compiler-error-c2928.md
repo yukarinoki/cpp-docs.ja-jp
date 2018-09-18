@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2928 |Microsoft ドキュメント
+title: コンパイラ エラー C2928 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e88e3c86bb88f8b46c6e88f55cb57799ccf42bd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77f1b71d47ecd8cbf110367ccf00ed0f936978ae
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241805"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076035"
 ---
 # <a name="compiler-error-c2928"></a>コンパイラ エラー C2928
-明示的なインスタンス生成。'identifier' はテンプレート クラス 'class' の関数または静的なデータ メンバーのいずれでもありません  
-  
- 関数でも `class` 変数でもない `static` のメンバーは、明示的にインスタンス化できません。
+
+明示的なインスタンス生成。'identifier' はテンプレート クラス 'class' の関数または静的なデータ メンバーのいずれでもありません
+
+関数でも `class` 変数でもない `static` のメンバーは、明示的にインスタンス化できません。

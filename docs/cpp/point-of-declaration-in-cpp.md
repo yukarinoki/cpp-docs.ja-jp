@@ -14,29 +14,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89f94cdee6be18436b3f39f840fb7880e5860adb
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 68ac24fcfe35701dd75d74800661aa5e41c005f8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39409377"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072068"
 ---
 # <a name="point-of-declaration-in-c"></a>C++ での宣言の位置
-名前は宣言子の直後、ただし初期化子 (省略可能) よりも前の位置で宣言されるものと見なされます (宣言子の詳細については、次を参照してください[宣言と定義](declarations-and-definitions-cpp.md)。)。  
-  
- 次の例について考えます。  
-  
-```cpp 
-// point_of_declaration1.cpp  
-// compile with: /W1   
-double dVar = 7.0;  
-int main()  
-{  
-   double dVar = dVar;   // C4700  
-}  
-```  
-  
- 場合は、宣言の位置が*後*、初期化では、次に、ローカル`dVar`7.0 では、グローバル変数の値に初期化が`dVar`します。 しかし、実際にはそうでないため、`dVar` は未定義の値に初期化されます。  
-  
-## <a name="see-also"></a>関連項目  
- [スコープ](../cpp/scope-visual-cpp.md)
+
+名前は宣言子の直後、ただし初期化子 (省略可能) よりも前の位置で宣言されるものと見なされます (宣言子の詳細については、次を参照してください[宣言と定義](declarations-and-definitions-cpp.md)。)。
+
+次の例について考えます。
+
+```cpp
+// point_of_declaration1.cpp
+// compile with: /W1
+double dVar = 7.0;
+int main()
+{
+   double dVar = dVar;   // C4700
+}
+```
+
+場合は、宣言の位置が*後*、初期化では、次に、ローカル`dVar`7.0 では、グローバル変数の値に初期化が`dVar`します。 しかし、実際にはそうでないため、`dVar` は未定義の値に初期化されます。
+
+## <a name="see-also"></a>関連項目
+
+[スコープ](../cpp/scope-visual-cpp.md)

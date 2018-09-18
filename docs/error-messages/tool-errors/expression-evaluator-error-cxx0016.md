@@ -1,5 +1,5 @@
 ---
-title: 式エバリュエーター エラー CXX0016 |Microsoft ドキュメント
+title: 式エバリュエーター エラー CXX0016 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cace3caf930c2b51bb1306b02bb7126373ddfe74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e03b0567b77b1ef3f64e5cf98cbe11dab502e1a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297490"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075423"
 ---
 # <a name="expression-evaluator-error-cxx0016"></a>式エバリュエーター エラー CXX0016
-定数が大きすぎます。  
-  
- C の式エバリュエーターには、符号なし整数の定数 4,294,967,295 (0FFFFFFFF 16 進数) より大きいまたは絶対値が最大値よりも大きい浮動小数点定数を受け入れることはできません。  
-  
- このエラーは、can0016 と同じものと同じです。
+
+定数が大きすぎます。
+
+C の式エバリュエーターには、符号なし整数の定数 4,294,967,295 (0FFFFFFFF 16 進数) よりも大きい絶対値が最大値より大きい浮動小数点定数のいずれかを受け入れることはできません。
+
+このエラーは、can0016 と同じものと同じです。

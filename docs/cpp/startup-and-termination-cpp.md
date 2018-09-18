@@ -12,15 +12,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e71541c20831180a0097780e9ee6b2fd9dfb2c43
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a16edcc40c0e81453e10275189384d81151123d9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463182"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071964"
 ---
 # <a name="startup-and-termination-c"></a>起動と終了 (C++)
-プログラムの起動と終了は 2 つの関数を使用して容易になります:[メイン](../cpp/main-program-startup.md)と[終了](../cpp/program-termination.md)します。 他の開始コードと終了コードを実行することもできます。  
-  
-## <a name="see-also"></a>関連項目  
- [基本的な概念](../cpp/basic-concepts-cpp.md)
+
+プログラムの起動と終了は 2 つの関数を使用して容易になります:[メイン](../cpp/main-program-startup.md)と[終了](../cpp/program-termination.md)します。 他の開始コードと終了コードを実行することもできます。
+
+## <a name="see-also"></a>関連項目
+
+[基本的な概念](../cpp/basic-concepts-cpp.md)

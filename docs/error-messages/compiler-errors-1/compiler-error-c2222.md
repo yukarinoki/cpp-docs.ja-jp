@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2222 |Microsoft ドキュメント
+title: コンパイラ エラー C2222 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78679021289e41ed9c584abdd94348b55e30184e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f97e96a7a5548de25ba9b0b45f76e4cdef87baa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170038"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072590"
 ---
 # <a name="compiler-error-c2222"></a>コンパイラ エラー C2222
-不要な型 'type': 基底クラスまたはメンバーが必要です  
-  
- 初期化子リストで初期化できるのは、1 つの型の基底クラスまたはメンバーのみです。 このエラーを修正するには、初期化子リストでその型の基底クラスまたはメンバーのみが初期化されていることを確認します。
+
+不要な型 'type': 基底クラスまたはメンバーが必要です
+
+初期化子リストで初期化できるのは、1 つの型の基底クラスまたはメンバーのみです。 このエラーを修正するには、初期化子リストでその型の基底クラスまたはメンバーのみが初期化されていることを確認します。

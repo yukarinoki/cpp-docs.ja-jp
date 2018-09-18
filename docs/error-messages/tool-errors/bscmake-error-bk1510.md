@@ -1,5 +1,5 @@
 ---
-title: BSCMAKE エラー BK1510 |Microsoft ドキュメント
+title: BSCMAKE エラー BK1510 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3db32beb2f63a67a34045eab8a89ad82312ac4ac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 062e035f2689539dbfbc415bf200471aa7580bda
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292949"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077140"
 ---
 # <a name="bscmake-error-bk1510"></a>BSCMAKE エラー BK1510
-壊れています。SBR ファイルのファイル名  
-  
- 指定した .sbr ファイルには、必要な形式はありません。 新しい .sbr を作成する再コンパイルします。
+
+壊れています。SBR ファイルのファイル名
+
+指定した .sbr ファイルには、必要な形式はありません。 再コンパイルして新しい .sbr を作成します。

@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3198a2d3ef91df80429f7cd245e5616ebe7af43a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: f02f6a2810f5ac3a51abb80245c22a7f0c2df434
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110632"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074150"
 ---
 # <a name="codecvt-class"></a>codecvt クラス
 
@@ -91,21 +91,24 @@ class codecvt : public locale::facet, codecvt_base;
 
 C++ 標準ライブラリは複数の明示的な特殊化を定義します。
 
-`template<>`
-
-`codecvt<wchar_t, char, mbstate_t>`
+```cpp
+template<>
+codecvt<wchar_t, char, mbstate_t>
+```
 
 間の変換を**wchar_t**と**char**シーケンス。
 
-`template<>`
-
-`codecvt<char16_t, char, mbstate_t>`
+```cpp
+template<>
+codecvt<char16_t, char, mbstate_t>
+```
 
 間の変換を`char16_t`utf-16 としてエンコードされたシーケンスと**char**シーケンスを utf-8 としてエンコードします。
 
-`template<>`
-
-`codecvt<char32_t, char, mbstate_t>`
+```cpp
+template<>
+codecvt<char32_t, char, mbstate_t>
+```
 
 間の変換を`char32_t`utf-32 (ucs-4) としてエンコードされたシーケンスと**char**シーケンスを utf-8 としてエンコードします。
 

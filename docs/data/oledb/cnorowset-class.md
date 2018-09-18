@@ -21,14 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e92c9bfb49bbb64faca633f04bb87f40028b6e1e
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: a838bc904a4f09f72962ce7c991bab8e5ac8fcbf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339563"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074839"
 ---
 # <a name="cnorowset-class"></a>CNoRowset クラス
+
 テンプレート引数として使用できます (`TRowset`) の[CCommand](../../data/oledb/ccommand-class.md)または[CTable](../../data/oledb/ctable-class.md)します。  
   
 ## <a name="syntax"></a>構文
@@ -39,31 +40,35 @@ class CNoRowset
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- *TAccessor*  
- アクセサー クラス。 既定値は `CAccessorBase` です。  
+
+*TAccessor*<br/>
+アクセサー クラス。 既定値は `CAccessorBase` です。  
   
 ## <a name="remarks"></a>Remarks  
- 使用`CNoRowset`コマンドが行セットを返さない場合は、テンプレート引数として。  
+
+使用`CNoRowset`コマンドが行セットを返さない場合は、テンプレート引数として。  
   
- `CNoRowset` 次のスタブ メソッドは、それぞれのメソッドに対応するその他のアクセサー クラスを実装します。  
+`CNoRowset` 次のスタブ メソッドは、それぞれのメソッドに対応するその他のアクセサー クラスを実装します。  
   
--   `BindFinished` -バインドが完了したことを示します (返します`S_OK`)。  
+- `BindFinished` -バインドが完了したことを示します (返します`S_OK`)。  
   
--   `Close` -行と、現在の IRowset インターフェイスを解放します。  
+- `Close` -行と、現在の IRowset インターフェイスを解放します。  
   
--   `GetIID` -接続ポイントのインターフェイス ID を取得します。  
+- `GetIID` -接続ポイントのインターフェイス ID を取得します。  
   
--   `GetInterface` -インターフェイスを取得します。  
+- `GetInterface` -インターフェイスを取得します。  
   
--   `GetInterfacePtr` -カプセル化されたインターフェイス ポインターを取得します。  
+- `GetInterfacePtr` -カプセル化されたインターフェイス ポインターを取得します。  
   
--   `SetAccessor` -アクセサーにポインターを設定します。  
+- `SetAccessor` -アクセサーにポインターを設定します。  
   
--   `SetupOptionalRowsetInterfaces` -行セットの省略可能なインターフェイスを設定します。  
+- `SetupOptionalRowsetInterfaces` -行セットの省略可能なインターフェイスを設定します。  
   
 ## <a name="requirements"></a>要件  
- **ヘッダー:** atldbcli.h  
+
+**ヘッダー:** atldbcli.h  
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)
