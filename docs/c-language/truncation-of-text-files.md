@@ -15,17 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 837361ce7116deb0b425e380959de3acb6dafa57
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ed3d760989d131ecdc2491d0b1952e657949fb03
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385577"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065674"
 ---
 # <a name="truncation-of-text-files"></a>テキスト ファイルの切り捨て
-**ANSI 4.9.3** テキスト ストリームに書き込むと関連付けられたファイルがそれ以降切り捨てられるかどうか  
-  
- テキスト ストリームへの書き込みで、それ以降、ファイルが切り捨てられることはありません。  
-  
-## <a name="see-also"></a>参照  
- [ライブラリ関数](../c-language/library-functions.md)
+
+**ANSI 4.9.3** テキスト ストリームに書き込むと関連付けられたファイルがそれ以降切り捨てられるかどうか
+
+テキスト ストリームへの書き込みで、それ以降、ファイルが切り捨てられることはありません。
+
+## <a name="see-also"></a>参照
+
+[ライブラリ関数](../c-language/library-functions.md)

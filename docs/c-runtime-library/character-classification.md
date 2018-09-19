@@ -17,20 +17,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 262479a4538843cef2af61be0ec56347c7afc75f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f4c194432c3d7442677a78046ac893e5e3e2a7ee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222449"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101346"
 ---
 # <a name="character-classification"></a>文字分類
 
 これらのルーチンでは、指定された 1 バイト文字、ワイド文字、またはマルチバイト文字について条件を満たすかどうかをテストします。 (定義上、0 ～ 127 の間の ASCII 文字セットは、すべてのマルチバイト文字セットのサブセットと考えることができます。 たとえば、日本語のカタカナには ASCII 文字と非 ASCII 文字が含まれています)。
 
- テスト条件は、ロケールの **LC_CTYPE** カテゴリの設定で決まります。詳細については、「[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。
+テスト条件は、ロケールの **LC_CTYPE** カテゴリの設定で決まります。詳細については、「[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。
 
- 通常、これらのルーチンはテストを記述するより速く実行されるため、こちらを使用するようにしてください。 たとえば、次のコードを実行するより `isalpha(c)` を呼び出した方が高速に処理できます。
+通常、これらのルーチンはテストを記述するより速く実行されるため、こちらを使用するようにしてください。 たとえば、次のコードを実行するより `isalpha(c)` を呼び出した方が高速に処理できます。
 
 ```C
 if ((c >= 'A') && (c <= 'Z')) || ((c >= 'a') && (c <= 'z'))

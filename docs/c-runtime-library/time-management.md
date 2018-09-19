@@ -19,18 +19,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d5983795dbb5711452db2f59b07cb6aa8b22a8c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f63bfe358e3f077bff780e2c5b4436fb841fd145
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200206"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083978"
 ---
 # <a name="time-management"></a>時間管理
 
 以下の関数を使用すると、現在の時刻を取得して、必要に応じて変換、調整、保存を行うことができます。 現在の時刻とはシステム時刻のことです。
 
- **_ftime** および **localtime** ルーチンでは **TZ** 環境変数が使用されます。 **TZ** が設定されていない場合、ランタイム ライブラリはオペレーティング システムで指定されるタイム ゾーン情報を使用します。 この情報が使用できないとき、これらの関数では既定値 PST8PDT が使用されます。 **TZ** の詳細については、「[_tzset](../c-runtime-library/reference/tzset.md)」のほか、「[_daylight、timezone、および _tzname](../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)」も参照してください。
+**_ftime** および **localtime** ルーチンでは **TZ** 環境変数が使用されます。 **TZ** が設定されていない場合、ランタイム ライブラリはオペレーティング システムで指定されるタイム ゾーン情報を使用します。 この情報が使用できないとき、これらの関数では既定値 PST8PDT が使用されます。 **TZ** の詳細については、「[_tzset](../c-runtime-library/reference/tzset.md)」のほか、「[_daylight、timezone、および _tzname](../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)」も参照してください。
 
 ### <a name="time-routines"></a>時間のルーチン
 

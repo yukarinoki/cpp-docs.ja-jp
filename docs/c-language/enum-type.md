@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 521143207c9ecc873cfea1f857b6849a787500eb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e4e2419ff6b333eabb896ff4c3a059d80d2c2bd6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382758"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069197"
 ---
 # <a name="enum-type"></a>enum 型
-**ANSI 3.5.2.2** 列挙型の値を表すために選択した整数型  
-  
- `enum` として宣言された変数は `int` です。  
-  
-## <a name="see-also"></a>参照  
- [構造体、共用体、列挙体、ビット フィールド](../c-language/structures-unions-enumerations-and-bit-fields.md)
+
+**ANSI 3.5.2.2** 列挙型の値を表すために選択した整数型
+
+`enum` として宣言された変数は `int` です。
+
+## <a name="see-also"></a>参照
+
+[構造体、共用体、列挙体、ビット フィールド](../c-language/structures-unions-enumerations-and-bit-fields.md)

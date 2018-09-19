@@ -23,15 +23,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47f23fd421d5108648d88c9eeda83c255f9861dc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6cc17e429c0750b9f0cc8d9eb24bc94adf00484e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388228"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070601"
 ---
 # <a name="exception-handling-constants"></a>例外処理定数
-**try-except** ステートメントの保護されたセクションの実行中に例外が発生すると、定数 `EXCEPTION_CONTINUE_SEARCH`、`EXCEPTION_CONTINUE_EXECUTION`、または `EXCEPTION_EXECUTE_HANDLER` が返されます。 例外を処理する方法は戻り値によって決まります。 詳細については、『*C++ 言語リファレンス*』の「[try-except ステートメント](../cpp/try-except-statement.md)」をご覧ください。  
-  
-## <a name="see-also"></a>参照  
- [グローバル定数](../c-runtime-library/global-constants.md)
+
+**try-except** ステートメントの保護されたセクションの実行中に例外が発生すると、定数 `EXCEPTION_CONTINUE_SEARCH`、`EXCEPTION_CONTINUE_EXECUTION`、または `EXCEPTION_EXECUTE_HANDLER` が返されます。 例外を処理する方法は戻り値によって決まります。 詳細については、『*C++ 言語リファレンス*』の「[try-except ステートメント](../cpp/try-except-statement.md)」をご覧ください。
+
+## <a name="see-also"></a>参照
+
+[グローバル定数](../c-runtime-library/global-constants.md)

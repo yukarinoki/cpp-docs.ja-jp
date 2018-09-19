@@ -33,36 +33,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bb491e8073acf2af525814b595ce79365df0fa1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63da23d30b12859c79427432bce38e1156e190de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389040"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063334"
 ---
 # <a name="math-error-constants"></a>数値演算エラー定数
-## <a name="syntax"></a>構文  
-  
-```  
-  
-#include <math.h>  
-  
-```  
-  
-## <a name="remarks"></a>コメント  
- ランタイム ライブラリの数値演算ルーチンでは、数値演算エラー定数が生成されることがあります。  
-  
- 次に記載するこれらのエラーは、MATH.H で定義されている例外の種類に対応し、数値演算エラーが発生したときに `_matherr` 関数によって返されます。  
-  
-|定数|説明|  
-|--------------|-------------|  
-|`_DOMAIN`|関数の引数が、関数の定義域外です。|  
-|`_OVERFLOW`|関数の戻り値の型で表現するには結果が大きすぎます。|  
-|`_PLOSS`|有効桁の部分的損失が発生しました。|  
-|`_SING`|引数の特異点: 関数への引数が無効な値です。 (たとえば、値 0 は 0 以外の値を必要とする関数に渡されます。)|  
-|`_TLOSS`|有効桁の完全損失が発生しました。|  
-|`_UNDERFLOW`|結果が小さすぎて表現できません。|  
-  
-## <a name="see-also"></a>参照  
- [_matherr](../c-runtime-library/reference/matherr.md)   
- [グローバル定数](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>構文
+
+```
+
+#include <math.h>
+
+```
+
+## <a name="remarks"></a>コメント
+
+ランタイム ライブラリの数値演算ルーチンでは、数値演算エラー定数が生成されることがあります。
+
+次に記載するこれらのエラーは、MATH.H で定義されている例外の種類に対応し、数値演算エラーが発生したときに `_matherr` 関数によって返されます。
+
+|定数|説明|
+|--------------|-------------|
+|`_DOMAIN`|関数の引数が、関数の定義域外です。|
+|`_OVERFLOW`|関数の戻り値の型で表現するには結果が大きすぎます。|
+|`_PLOSS`|有効桁の部分的損失が発生しました。|
+|`_SING`|引数の特異点: 関数への引数が無効な値です。 (たとえば、値 0 は 0 以外の値を必要とする関数に渡されます。)|
+|`_TLOSS`|有効桁の完全損失が発生しました。|
+|`_UNDERFLOW`|結果が小さすぎて表現できません。|
+
+## <a name="see-also"></a>参照
+
+[_matherr](../c-runtime-library/reference/matherr.md)<br/>
+[グローバル定数](../c-runtime-library/global-constants.md)

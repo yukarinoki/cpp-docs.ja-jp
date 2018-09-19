@@ -15,25 +15,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cd26eea35da463211b144e98faa0636f5204f6f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0c62633d8c7532f15d725018d80f045cf3a37838
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383694"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081001"
 ---
 # <a name="character-types"></a>文字型
-前に文字 **L** が付かない整数の文字定数には、`int` 型があります。 単一の文字を含む整数の文字定数の値は整数として解釈される文字の数値です。 たとえば、文字 `a` の数値は、10 進形式では 97 で、16 進形式では 61 です。  
-  
- 構文上、"ワイド文字定数" は、文字 **L** がプレフィックスとして付けられている文字定数です。ワイド文字定数は、`wchar_t` 型 (STDDEF.H ヘッダー ファイルで定義されている整数型) を持ちます。 例:  
-  
-```  
-char    schar =  'x';   /* A character constant          */  
-wchar_t wchar = L'x';   /* A wide-character constant for   
-                            the same character           */  
-```  
-  
- ワイド文字定数は、16 ビット幅で、拡張実行文字セットのメンバーを指定します。 これにより、`char` 型で表すには大きすぎる文字をアルファベットで表現することができます。 ワイド文字の詳細については、「[マルチバイト文字とワイド文字](../c-language/multibyte-and-wide-characters.md)」を参照してください。  
-  
-## <a name="see-also"></a>参照  
- [C 文字定数](../c-language/c-character-constants.md)
+
+前に文字 **L** が付かない整数の文字定数には、`int` 型があります。 単一の文字を含む整数の文字定数の値は整数として解釈される文字の数値です。 たとえば、文字 `a` の数値は、10 進形式では 97 で、16 進形式では 61 です。
+
+構文上、"ワイド文字定数" は、文字 **L** がプレフィックスとして付けられている文字定数です。ワイド文字定数は、`wchar_t` 型 (STDDEF.H ヘッダー ファイルで定義されている整数型) を持ちます。 例:
+
+```
+char    schar =  'x';   /* A character constant          */
+wchar_t wchar = L'x';   /* A wide-character constant for
+                            the same character           */
+```
+
+ワイド文字定数は、16 ビット幅で、拡張実行文字セットのメンバーを指定します。 これにより、`char` 型で表すには大きすぎる文字をアルファベットで表現することができます。 ワイド文字の詳細については、「[マルチバイト文字とワイド文字](../c-language/multibyte-and-wide-characters.md)」を参照してください。
+
+## <a name="see-also"></a>参照
+
+[C 文字定数](../c-language/c-character-constants.md)
