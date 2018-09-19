@@ -18,17 +18,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e5433e2d1ddf94f23a3f483a8857e3032c27be3
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7e7499bdb615edfb6c03c54ba7fe8272d0fa6b26
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540084"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721124"
 ---
 # <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
+
 **Microsoft 固有の仕様**  
   
- 128 ビットのインタロックされた比較および交換を実行します。  
+128 ビットのインタロックされた比較および交換を実行します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,17 +43,17 @@ unsigned char _InterlockedCompareExchange128(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力、出力] `Destination`  
- 2 つの 64 ビット整数の配列は、変換先へのポインターは、128 ビット フィールドとしてと見なされます。 変換先のデータが一般保護違反を回避するために、配置、16 バイトである必要があります。  
+*変換先*<br/>
+[入力、出力]2 つの 64 ビット整数の配列は、変換先へのポインターは、128 ビット フィールドとしてと見なされます。 変換先のデータが一般保護違反を回避するために、配置、16 バイトである必要があります。  
   
- [入力] `ExchangeHigh`  
- 64 ビットの整数で、変換先の高い部分と交換される可能性があります。  
+*ExchangeHigh*<br/>
+[in]64 ビットの整数で、変換先の高い部分と交換される可能性があります。  
   
- [入力] `ExchangeLow`  
- 64 ビットの整数で、変換先の低い部分と交換される可能性があります。  
+*ExchangeLow*<br/>
+[in]64 ビットの整数で、変換先の低い部分と交換される可能性があります。  
   
- [入力、出力] `ComparandResult`  
- (128 ビット フィールドとしてと見なされます) 2 つの 64 ビット整数の配列へのポインターのコピー先と比較します。  出力では、これは、変換先の元の値で上書きされます。  
+*ComparandResult*<br/>
+[入力、出力](128 ビット フィールドとしてと見なされます) 2 つの 64 ビット整数の配列へのポインターのコピー先と比較します。  出力では、これは、変換先の元の値で上書きされます。  
   
 ## <a name="return-value"></a>戻り値  
  128 ビットの比較対照値が変換先の元の値に等しい場合は 1。 `ExchangeHigh` `ExchangeLow` 128 ビットの変換先を上書きします。  
@@ -128,8 +129,9 @@ int main(void)
 BigInt.Int[1] = 34, BigInt.Int[0] = 12  
 ```  
   
-**Microsoft 固有の仕様はここまで**  
- 高度なマイクロ デバイス, inc. copyright 2007All rights reserved. 高度なマイクロ デバイス, Inc. からのアクセス許可を持つ再現  
+**Microsoft 固有の仕様はここまで**
+
+高度なマイクロ デバイス, inc. copyright 2007All rights reserved. 高度なマイクロ デバイス, Inc. からのアクセス許可を持つ再現  
   
 ## <a name="see-also"></a>関連項目  
  [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)   
