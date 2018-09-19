@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8d226f508f5f5e8c717bd671413f21377c0ae01
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7b8de310f8abb3b417abbe96576d910513e25717
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202291"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398678"
 ---
 # <a name="restricted"></a>restricted
 
@@ -38,7 +38,7 @@ ms.locfileid: "43202291"
 
 ### <a name="parameters"></a>パラメーター
 
-*interfaces*  
+*interfaces*<br/>
 COM オブジェクトに任意に呼ぶことが 1 つまたは複数のインターフェイス。 このパラメーターはクラスに適用される場合に有効です。
 
 ## <a name="remarks"></a>Remarks
@@ -87,6 +87,6 @@ class c : public a, public b
 
 ## <a name="see-also"></a>関連項目
 
-[IDL 属性](../windows/idl-attributes.md)  
-[インターフェイス属性](../windows/interface-attributes.md)  
+[IDL 属性](../windows/idl-attributes.md)<br/>
+[インターフェイス属性](../windows/interface-attributes.md)<br/>
 [メソッド属性](../windows/method-attributes.md)  

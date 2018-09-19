@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 63da1f6ffb684cd2971808f4a56167e19f7bd347
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 329f1d21489b57130531db20014e249588f101a6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313404"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400511"
 ---
 # <a name="including-shared-read-only-or-calculated-symbols"></a>共有シンボル (読み取り専用) または計算型シンボルのインクルード
 
@@ -82,7 +82,7 @@ Win32
 
 ## <a name="see-also"></a>関連項目
 
-[シンボル名の制限](../windows/symbol-name-restrictions.md)  
-[シンボル値の制限](../windows/symbol-value-restrictions.md)  
-[定義済みシンボル ID](../windows/predefined-symbol-ids.md)  
+[シンボル名の制限](../windows/symbol-name-restrictions.md)<br/>
+[シンボル値の制限](../windows/symbol-value-restrictions.md)<br/>
+[定義済みシンボル ID](../windows/predefined-symbol-ids.md)<br/>
 [シンボル: リソース識別子](../windows/symbols-resource-identifiers.md)

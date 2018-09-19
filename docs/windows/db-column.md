@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d89fef6c2ed3f8ff1a4211cdf8da59d8406e7031
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: bde6909716b55298a515aac32580a24f26c823fc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715404"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406647"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -43,7 +43,7 @@ ms.locfileid: "45715404"
 
 #### <a name="parameters"></a>パラメーター
 
-*序数*  
+*序数*<br/>
 列の序数 (`DBCOLUMNINFO`序数) またはデータをバインドする行セット内のフィールドに対応する列の名前 (ANSI または Unicode 文字列)。 番号を使用する場合は、連続する序数を省略できます (例: 1、2、3、5)。 使用する OLE DB プロバイダーでサポートされている場合、名前はスペースを含めることがあります。 たとえば、次の形式のいずれかを使用できます。
 
 ```cpp
@@ -51,19 +51,19 @@ ms.locfileid: "45715404"
 [db_column(L"city_name")] TCHAR szCity[30];
 ```
 
-*dbtype*  
+*dbtype*<br/>
 (省略可能)OLE DB[型インジケーター](/previous-versions/windows/desktop/ms711251\(v=vs.85\))列エントリにします。
 
-*precision*  
+*precision*<br/>
 (省略可能)列のエントリに使用する有効桁数です。 詳細については、説明を参照してください、`bPrecision`の要素、 [DBBINDING 構造体](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*スケール*  
+*スケール*<br/>
 (省略可能)列のエントリに使用する小数点以下桁数。 詳細については、説明を参照してください`bScale`の要素、 [DBBINDING 構造体。](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*status*  
+*status*<br/>
 (省略可能)この列の状態を保持するために使用するメンバー変数です。 状態は、列の値がデータ値や NULL など、他のいくつかの値であるかどうかを示します。 使用可能な値は、次を参照してください。[状態](/previous-versions/windows/desktop/ms722617\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。
 
-*length*  
+*length*<br/>
 (省略可能)メンバー変数 (バイト単位)、列のサイズを保持するために使用します。
 
 ## <a name="remarks"></a>Remarks
@@ -131,5 +131,5 @@ class CProducts {
 
 ## <a name="see-also"></a>関連項目
 
-[OLE DB コンシューマー属性](../windows/ole-db-consumer-attributes.md)  
+[OLE DB コンシューマー属性](../windows/ole-db-consumer-attributes.md)<br/>
 [クラス属性](../windows/class-attributes.md)  

@@ -17,46 +17,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cff8c2e8abfff713b4044ce58104c58b0a96da12
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 684461d1d758db2a0c5850219c00d158342b8a3d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719271"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398171"
 ---
 # <a name="outbyte"></a>__outbyte
-**Microsoft 固有の仕様**  
-  
- 生成、`out`で指定された 1 バイトを送信するには、命令`Data`で指定した I/O ポートから`Port`。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-void __outbyte(   
-   unsigned short Port,   
-   unsigned char Data   
-);  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
+
+**Microsoft 固有の仕様**
+
+生成、`out`で指定された 1 バイトを送信するには、命令`Data`で指定した I/O ポートから`Port`。
+
+## <a name="syntax"></a>構文
+
+```
+void __outbyte( 
+   unsigned short Port, 
+   unsigned char Data 
+);
+```
+
+#### <a name="parameters"></a>パラメーター
+
 *ポート*<br/>
-[in]データを送信するポート。  
-  
+[in]データを送信するポート。
+
 *データ*<br/>
-[in]指定したポートを送信するバイト。  
-  
-## <a name="requirements"></a>要件  
-  
-|組み込み|アーキテクチャ|  
-|---------------|------------------|  
-|`__outbyte`|x86、x64|  
-  
- **ヘッダー ファイル** \<intrin.h >  
-  
-## <a name="remarks"></a>Remarks  
- このルーチンは、組み込みとしてのみ使用できます。  
-  
-**Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)
+[in]指定したポートを送信するバイト。
+
+## <a name="requirements"></a>要件
+
+|組み込み|アーキテクチャ|
+|---------------|------------------|
+|`__outbyte`|x86、x64|
+
+**ヘッダー ファイル** \<intrin.h >
+
+## <a name="remarks"></a>Remarks
+
+このルーチンは、組み込みとしてのみ使用できます。
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

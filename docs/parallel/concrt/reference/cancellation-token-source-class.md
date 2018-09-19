@@ -21,161 +21,172 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5bda0dd4b756ba9228fac8cc5b0de70b6d71f7a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 03bf785ddd5885558045f0394870e114b81e0cfe
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46053649"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400459"
 ---
 # <a name="cancellationtokensource-class"></a>cancellation_token_source クラス
-`cancellation_token_source` クラスは、取り消し可能な操作を取り消す機能を表します。  
-  
-## <a name="syntax"></a>構文  
-  
+
+`cancellation_token_source` クラスは、取り消し可能な操作を取り消す機能を表します。
+
+## <a name="syntax"></a>構文
+
 ```
 class cancellation_token_source;
-```  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="public-constructors"></a>パブリック コンストラクター  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[cancellation_token_source](#ctor)|オーバーロードされます。 新しい `cancellation_token_source` を構築します。 ソースを使用して、一部の取り消し可能な操作について取り消しのフラグを設定できます。|  
-|[~ cancellation_token_source デストラクター](#dtor)||  
-  
-### <a name="public-methods"></a>パブリック メソッド  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[キャンセル](#cancel)|トークンを取り消します。 トークンを利用するすべての `task_group`、`structured_task_group`、および `task` は、このメソッドが呼び出されたときに取り消され、次の割り込みポイントで例外がスローされます。|  
-|[create_linked_source](#create_linked_source)|オーバーロードされます。 指定されたトークンが取り消されたときに取り消される `cancellation_token_source` を作成します。|  
-|[get_token](#get_token)|このソースに関連付けられたキャンセル トークンを返します。 返されたトークンは、取り消すためにポーリングしたり、取り消しが発生した場合にコールバックを指定したりできます。|  
-  
-### <a name="public-operators"></a>パブリック演算子  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[operator!=](#operator_neq)||  
-|[operator=](#operator_eq)||  
-|[operator==](#operator_eq_eq)||  
-  
-## <a name="inheritance-hierarchy"></a>継承階層  
- `cancellation_token_source`  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** pplcancellation_token.h  
-  
- **名前空間:** concurrency  
-  
-##  <a name="dtor"></a> ~ cancellation_token_source 
+```
+
+## <a name="members"></a>メンバー
+
+### <a name="public-constructors"></a>パブリック コンストラクター
+
+|名前|説明|
+|----------|-----------------|
+|[cancellation_token_source](#ctor)|オーバーロードされます。 新しい `cancellation_token_source` を構築します。 ソースを使用して、一部の取り消し可能な操作について取り消しのフラグを設定できます。|
+|[~ cancellation_token_source デストラクター](#dtor)||
+
+### <a name="public-methods"></a>パブリック メソッド
+
+|名前|説明|
+|----------|-----------------|
+|[キャンセル](#cancel)|トークンを取り消します。 トークンを利用するすべての `task_group`、`structured_task_group`、および `task` は、このメソッドが呼び出されたときに取り消され、次の割り込みポイントで例外がスローされます。|
+|[create_linked_source](#create_linked_source)|オーバーロードされます。 指定されたトークンが取り消されたときに取り消される `cancellation_token_source` を作成します。|
+|[get_token](#get_token)|このソースに関連付けられたキャンセル トークンを返します。 返されたトークンは、取り消すためにポーリングしたり、取り消しが発生した場合にコールバックを指定したりできます。|
+
+### <a name="public-operators"></a>パブリック演算子
+
+|名前|説明|
+|----------|-----------------|
+|[operator!=](#operator_neq)||
+|[operator=](#operator_eq)||
+|[operator==](#operator_eq_eq)||
+
+## <a name="inheritance-hierarchy"></a>継承階層
+
+`cancellation_token_source`
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** pplcancellation_token.h
+
+**名前空間:** concurrency
+
+##  <a name="dtor"></a> ~ cancellation_token_source
 
 ```
 ~cancellation_token_source();
-```  
-  
-##  <a name="cancel"></a> キャンセル 
+```
 
- トークンを取り消します。 トークンを利用するすべての `task_group`、`structured_task_group`、および `task` は、このメソッドが呼び出されたときに取り消され、次の割り込みポイントで例外がスローされます。  
-  
+##  <a name="cancel"></a> キャンセル
+
+トークンを取り消します。 トークンを利用するすべての `task_group`、`structured_task_group`、および `task` は、このメソッドが呼び出されたときに取り消され、次の割り込みポイントで例外がスローされます。
+
 ```
 void cancel() const;
-```  
-  
-##  <a name="ctor"></a> cancellation_token_source 
+```
 
- 新しい `cancellation_token_source` を構築します。 ソースを使用して、一部の取り消し可能な操作について取り消しのフラグを設定できます。  
-  
+##  <a name="ctor"></a> cancellation_token_source
+
+新しい `cancellation_token_source` を構築します。 ソースを使用して、一部の取り消し可能な操作について取り消しのフラグを設定できます。
+
 ```
 cancellation_token_source();
 
 cancellation_token_source(const cancellation_token_source& _Src);
 
 cancellation_token_source(cancellation_token_source&& _Src);
-```  
-  
-### <a name="parameters"></a>パラメーター  
-*_Src*<br/>
-オブジェクトをコピーまたは移動します。  
-  
-##  <a name="create_linked_source"></a> create_linked_source 
+```
 
- 指定されたトークンが取り消されたときに取り消される `cancellation_token_source` を作成します。  
-  
+### <a name="parameters"></a>パラメーター
+
+*_Src*<br/>
+オブジェクトをコピーまたは移動します。
+
+##  <a name="create_linked_source"></a> create_linked_source
+
+指定されたトークンが取り消されたときに取り消される `cancellation_token_source` を作成します。
+
 ```
 static cancellation_token_source create_linked_source(
     cancellation_token& _Src);
 
 template<typename _Iter>
 static cancellation_token_source create_linked_source(_Iter _Begin, _Iter _End);
-```  
-  
-### <a name="parameters"></a>パラメーター  
+```
+
+### <a name="parameters"></a>パラメーター
+
 *_Iter*<br/>
 反復子の型。
 
 *_Src*<br/>
-取り消された場合は、返されるトークン ソースの取り消しの原因となるトークン。 このパラメーターに含まれるソースとは関係なく、返されるトークン ソースも取り消されることに注意してください。  
-  
-*開始 (_b)*<br/>
-C++ 標準ライブラリ反復子に対応するトークンの範囲の先頭の取り消しをリッスンします。  
-  
-*(_E)*<br/>
-C++ 標準ライブラリする反復子のトークンの範囲の終了に対応する取り消しをリッスンします。  
-  
-### <a name="return-value"></a>戻り値  
- `cancellation_token_source` パラメーターによって指定されたトークンが取り消されたときに取り消される `_Src`。  
-  
-##  <a name="get_token"></a> get_token 
+取り消された場合は、返されるトークン ソースの取り消しの原因となるトークン。 このパラメーターに含まれるソースとは関係なく、返されるトークン ソースも取り消されることに注意してください。
 
- このソースに関連付けられたキャンセル トークンを返します。 返されたトークンは、取り消すためにポーリングしたり、取り消しが発生した場合にコールバックを指定したりできます。  
-  
+*開始 (_b)*<br/>
+C++ 標準ライブラリ反復子に対応するトークンの範囲の先頭の取り消しをリッスンします。
+
+*(_E)*<br/>
+C++ 標準ライブラリする反復子のトークンの範囲の終了に対応する取り消しをリッスンします。
+
+### <a name="return-value"></a>戻り値
+
+`cancellation_token_source` パラメーターによって指定されたトークンが取り消されたときに取り消される `_Src`。
+
+##  <a name="get_token"></a> get_token
+
+このソースに関連付けられたキャンセル トークンを返します。 返されたトークンは、取り消すためにポーリングしたり、取り消しが発生した場合にコールバックを指定したりできます。
+
 ```
 cancellation_token get_token() const;
-```  
-  
-### <a name="return-value"></a>戻り値  
- このソースに関連付けられたキャンセル トークン。  
-  
-##  <a name="operator_neq"></a> operator!= 
+```
+
+### <a name="return-value"></a>戻り値
+
+このソースに関連付けられたキャンセル トークン。
+
+##  <a name="operator_neq"></a> operator!=
 
 ```
 bool operator!= (const cancellation_token_source& _Src) const;
-```  
-  
-### <a name="parameters"></a>パラメーター  
+```
+
+### <a name="parameters"></a>パラメーター
+
 *_Src*<br/>
 オペランド。
-  
-### <a name="return-value"></a>戻り値  
-  
-##  <a name="operator_eq"></a> 演算子 = 
+
+### <a name="return-value"></a>戻り値
+
+##  <a name="operator_eq"></a> 演算子 =
 
 ```
 cancellation_token_source& operator= (const cancellation_token_source& _Src);
 
 cancellation_token_source& operator= (cancellation_token_source&& _Src);
-```  
-  
-### <a name="parameters"></a>パラメーター  
+```
+
+### <a name="parameters"></a>パラメーター
+
 *_Src*<br/>
 オペランド。
 
-### <a name="return-value"></a>戻り値  
-  
-##  <a name="operator_eq_eq"></a> 演算子 = = 
+### <a name="return-value"></a>戻り値
+
+##  <a name="operator_eq_eq"></a> 演算子 = =
 
 ```
 bool operator== (const cancellation_token_source& _Src) const;
-```  
-  
-### <a name="parameters"></a>パラメーター  
+```
+
+### <a name="parameters"></a>パラメーター
+
 *_Src*<br/>
 オペランド。
-  
-### <a name="return-value"></a>戻り値  
-  
-## <a name="see-also"></a>関連項目  
- [concurrency 名前空間](concurrency-namespace.md)
+
+### <a name="return-value"></a>戻り値
+
+## <a name="see-also"></a>関連項目
+
+[コンカレンシー名前空間](concurrency-namespace.md)

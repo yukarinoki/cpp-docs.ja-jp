@@ -1,5 +1,5 @@
 ---
-title: CAnimateCtrl の使い方 |Microsoft ドキュメント
+title: Canimatectrl の使い方 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,26 +18,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5685d6aed00cd57f4329b3865f96fa75226d7cf6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b02a07b1f5a433ffa9525da8e8a7f942c9034d54
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381619"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398457"
 ---
 # <a name="using-canimatectrl"></a>CAnimateCtrl の使い方
-クラスによって表される、アニメーション コントロール[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)、オーディオ Video Interleaved (AVI) 形式でクリップを表示するウィンドウは、-、標準の Windows ビデオ/オーディオ形式です。 AVI クリップは、一連の映画のように、ビットマップ フレームです。  
-  
- スレッドは、AVI クリップが表示されている間の実行を続行、ために、アニメーション コントロールの一般的な用途の 1 つは、時間のかかる操作中にシステムの利用状況を示すためには。 たとえば、Windows の検索 ダイアログ ボックスは、システム ファイルを検索しますとして移動虫眼鏡を表示します。  
-  
- アニメーション コントロールは、単純な AVI クリップ、再生できるし、サウンドをサポートしていません。 (完了の制限事項の一覧を表示するには、次を参照してください[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)。)。アニメーション コントロールの機能は厳しく制限するため、変更の対象は、マルチ メディアの再生または録音機能を提供する制御が必要な場合、MCIWnd コントロールなどの代わりを使用してください。 MCIWnd 制御の詳細については、マルチ メディアのドキュメントを参照してください。  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>詳しくは次のトピックをクリックしてください。  
-  
--   [アニメーション コントロールの使い方](../mfc/using-an-animation-control.md)  
-  
--   [アニメーション コントロールによる通知の送信](../mfc/notifications-sent-by-animation-controls.md)  
-  
-## <a name="see-also"></a>関連項目  
- [コントロール](../mfc/controls-mfc.md)
+
+アニメーション コントロール、クラスによって表される[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)、オーディオ Video Interleaved (AVI) 形式でクリップを表示するウィンドウ-Windows の標準のビデオ/オーディオ形式。 AVI クリップは、一連の映画のように、ビットマップ フレームです。
+
+スレッドの継続実行 AVI クリップが表示されますが、ために、アニメーション コントロールの 1 つの一般的な用途は、時間のかかる操作中にシステムの使用状況を示すは。 たとえば、Windows の検索 ダイアログ ボックスでは、システム ファイルを検索として移動虫眼鏡が表示されます。
+
+アニメーション コントロールは、単純な AVI クリップを再生できますのみと、サウンドをサポートしていません。 (完了の制限事項の一覧を表示するには、次を参照してください[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)。)。アニメーション コントロールの機能が大幅に限定されるため、変更される可能性は、マルチ メディアの再生または録音機能を提供するコントロールを必要がある場合、MCIWnd コントロールなどの代替を使用してください。 MCIWnd 管理の詳細については、マルチ メディアのドキュメントを参照してください。
+
+## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+
+- [アニメーション コントロールの使い方](../mfc/using-an-animation-control.md)
+
+- [アニメーション コントロールによる通知の送信](../mfc/notifications-sent-by-animation-controls.md)
+
+## <a name="see-also"></a>関連項目
+
+[コントロール](../mfc/controls-mfc.md)
 

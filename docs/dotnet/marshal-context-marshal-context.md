@@ -1,5 +1,5 @@
 ---
-title: marshal_context::marshal_context |Microsoft ドキュメント
+title: marshal_context::marshal_context |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,34 +20,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1e8838864c4ec1c6414401608b848cb12b01c16e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 02f238a8d9b9d484073794b9a75888325d95107b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33140121"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399445"
 ---
 # <a name="marshalcontextmarshalcontext"></a>marshal_context::marshal_context
-構築、`marshal_context`マネージ コードとネイティブのデータ型の間でデータ変換を使用するオブジェクト。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-marshal_context();  
-```  
-  
-## <a name="remarks"></a>コメント  
- 一部のデータ変換では、マーシャ リング コンテキストが必要です。 参照してください[概要の C++ におけるマーシャ リング](../dotnet/overview-of-marshaling-in-cpp.md)コンテキストが必要にどの翻訳あり、マーシャ リング ファイル、アプリケーションに含まれるの詳細についてはします。  
-  
-## <a name="example"></a>例  
- 例を参照して[marshal_context::marshal_as](../dotnet/marshal-context-marshal-as.md)です。  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー ファイル:** \<msclr\marshal.h >、 \<msclr\marshal_windows.h >、 \<msclr\marshal_cppstd.h >、または\<msclr\marshal_atl.h >  
-  
- **Namespace:** msclr::interop  
-  
-## <a name="see-also"></a>関連項目  
- [C++ におけるマーシャ リングの概要](../dotnet/overview-of-marshaling-in-cpp.md)   
- [marshal_as](../dotnet/marshal-as.md)   
- [marshal_context クラス](../dotnet/marshal-context-class.md)
+
+構築、`marshal_context`マネージとネイティブのデータ型間のデータ変換に使用するオブジェクト。
+
+## <a name="syntax"></a>構文
+
+```
+marshal_context();
+```
+
+## <a name="remarks"></a>Remarks
+
+一部のデータ変換には、マーシャ リング コンテキストが必要です。 参照してください[c++ Overview of Marshaling](../dotnet/overview-of-marshaling-in-cpp.md)詳細については、コンテキストが必要にどの翻訳とマーシャ リングするファイルは、アプリケーションに含める必要があります。
+
+## <a name="example"></a>例
+
+例をご覧ください[marshal_context::marshal_as](../dotnet/marshal-context-marshal-as.md)します。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー ファイル:** \<msclr\marshal.h >、 \<msclr\marshal_windows.h >、 \<msclr\marshal_cppstd.h >、または\<msclr\marshal_atl.h >
+
+**Namespace:** msclr::interop
+
+## <a name="see-also"></a>関連項目
+
+[C++ におけるマーシャリングの概要](../dotnet/overview-of-marshaling-in-cpp.md)<br/>
+[marshal_as](../dotnet/marshal-as.md)<br/>
+[marshal_context クラス](../dotnet/marshal-context-class.md)

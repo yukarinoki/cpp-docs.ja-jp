@@ -1,5 +1,5 @@
 ---
-title: ダイアログ ボックスで Windows メッセージの処理 |Microsoft ドキュメント
+title: ダイアログ ボックスでの Windows メッセージの処理 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7adaa21be5aada2de4cb5a4dd883e591e066185
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b8773f7b93c67441fdf1cf6b6b992b152da14619
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343809"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401018"
 ---
 # <a name="handling-windows-messages-in-your-dialog-box"></a>ダイアログ ボックスでの Windows メッセージの処理
-ダイアログ ボックスでは、適切なハンドラー関数を指定する場合に Windows メッセージを処理できるように、windows がされます。 クラスの追加ウィザードとダイアログ クラスを作成するときに、ウィザードは、空のメッセージ マップをクラスに追加します。 任意の Windows メッセージや、クラスを処理するコマンドにマップするのにには、[プロパティ] ウィンドウを使用します。  
-  
- 参照してください[ダイアログ クラスの Windows メッセージの割り当て](../mfc/mapping-windows-messages-to-your-class.md)詳細についてはします。  
-  
-## <a name="see-also"></a>関連項目  
- [ダイアログ ボックスの有効期間](../mfc/life-cycle-of-a-dialog-box.md)
+
+ダイアログ ボックスでは、適切なハンドラー関数を指定する場合に Windows メッセージを処理できるように、windows がされます。 クラスの追加ウィザードとダイアログ クラスを作成するときに、ウィザードは、空のメッセージ マップをクラスに追加します。 任意の Windows メッセージやコマンドを処理するのにクラスにマップするのにには、[プロパティ] ウィンドウを使用します。
+
+参照してください[ダイアログ クラスの Windows メッセージの割り当て](../mfc/mapping-windows-messages-to-your-class.md)詳細についてはします。
+
+## <a name="see-also"></a>関連項目
+
+[ダイアログ ボックスの有効期間](../mfc/life-cycle-of-a-dialog-box.md)
 
