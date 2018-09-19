@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75caf648b0c62827e9532fa3776def1a4e459a64
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4a502cbf61f3542c010a89b82131a95f94856cda
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764011"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042885"
 ---
 # <a name="cregkey-class"></a>CRegKey クラス
 
@@ -153,7 +153,7 @@ void Attach(HKEY hKey) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*hKey*  
+*hKey*<br/>
 レジストリ キーのハンドル。
 
 ### <a name="remarks"></a>Remarks
@@ -189,25 +189,25 @@ LONG Create(
 
 ### <a name="parameters"></a>パラメーター
 
-*hKeyParent*  
+*hKeyParent*<br/>
 オープンするキーのハンドル。
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 作成または開かれたキーの名前を指定します。 この名前のサブキーである必要があります*hKeyParent*します。
 
-*lpszClass*  
+*lpszClass*<br/>
 作成または開くキーのクラスを指定します。 既定値は、REG_NONE します。
 
-*dwOptions*  
+*dwOptions*<br/>
 キーのオプション。 既定値は、REG_OPTION_NON_VOLATILE です。 使用可能な値と説明の一覧は、次を参照してください。 [RegCreateKeyEx](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) Windows SDK に含まれています。
 
-*samDesired*  
+*samDesired*<br/>
 キーのセキュリティのアクセス。 既定値は KEY_READ &#124; KEY_WRITE します。 使用可能な値と説明の一覧は、次を参照してください。`RegCreateKeyEx`します。
 
-*lpSecAttr*  
+*lpSecAttr*<br/>
 ポインターを[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)キーのハンドルを子プロセスが継承できるかどうかを示す構造体。 既定では、このパラメーターが NULL (つまり、ハンドルを継承することはできませんです)。
 
-*lpdwDisposition*  
+*lpdwDisposition*<br/>
 [out]NULL 以外の場合は、REG_CREATED_NEW_KEY (キーが存在せず作成した場合) またはポインターを取得し、(キーが存在し、開かれた) 場合。
 
 ### <a name="return-value"></a>戻り値
@@ -231,13 +231,13 @@ CRegKey(CAtlTransactionManager* pTM) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*key*  
+*key*<br/>
 `CRegKey` オブジェクトへの参照。
 
-*hKey*  
+*hKey*<br/>
 レジストリ キーへのハンドル。
 
-*pTM*  
+*pTM*<br/>
 CAtlTransactionManager オブジェクトへのポインター。
 
 ### <a name="remarks"></a>Remarks
@@ -266,7 +266,7 @@ LONG DeleteSubKey(LPCTSTR lpszSubKey) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszSubKey*  
+*lpszSubKey*<br/>
 削除するキーの名前を指定します。 この名前のサブキーである必要があります[m_hKey](#m_hkey)します。
 
 ### <a name="return-value"></a>戻り値
@@ -287,7 +287,7 @@ LONG DeleteValue(LPCTSTR lpszValue) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszValue*  
+*lpszValue*<br/>
 削除する値のフィールドを指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -320,16 +320,16 @@ LONG EnumKey(
 
 ### <a name="parameters"></a>パラメーター
 
-*iIndex*  
+*iIndex*<br/>
 サブキーのインデックス。 このパラメーターは、最初の呼び出しの 0 にする必要があります、後続の呼び出しだけインクリメントされます。
 
-*pszName*  
+*pszName*<br/>
 終端の null 文字を含む、サブキーの名前を受け取るバッファーへのポインター。 バッファーに完全なキーの階層ではないサブキーの名前のみがコピーされます。
 
-*戻る*  
+*戻る*<br/>
 指定したバッファーの Tchar で、サイズを指定する変数へのポインター、 *pszName*パラメーター。 このサイズは、終端の null 文字を含める必要があります。 メソッドが返す場合は、変数が指す*戻る*バッファーに格納されている文字の数が含まれています。 返されるカウントでは、終端の null 文字は含まれません。
 
-*pftLastWriteTime*  
+*pftLastWriteTime*<br/>
 時間を受信する変数へのポインター、列挙するサブキーに最後に書き込んだ。
 
 ### <a name="return-value"></a>戻り値
@@ -369,13 +369,13 @@ LONG GetKeySecurity(
 
 ### <a name="parameters"></a>パラメーター
 
-*si*  
+*si*<br/>
 [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information)要求されたセキュリティ情報を示す値。
 
-*psd*  
+*psd*<br/>
 要求されたセキュリティ記述子のコピーを受け取るバッファーへのポインター。
 
-*pnBytes*  
+*pnBytes*<br/>
 指し示されるバッファーのバイト単位のサイズを*psd*します。
 
 ### <a name="return-value"></a>戻り値
@@ -418,10 +418,10 @@ LONG NotifyChangeKeyValue(
 
 ### <a name="parameters"></a>パラメーター
 
-*bWatchSubtree*  
+*bWatchSubtree*<br/>
 指定したキーとそのすべてのサブキーで、または指定したキーでのみ変更をレポートするかどうかを示すフラグを指定します。 このパラメーターが TRUE の場合、メソッドは、キーおよびそのサブキーに変更を報告します。 パラメーターが FALSE の場合、メソッドは、キーの変更のみを報告します。
 
-*dwNotifyFilter*  
+*dwNotifyFilter*<br/>
 変更を制御するフラグのセットを報告するかを指定します。 このパラメーターは、次の値の組み合わせを指定できます。
 
 |[値]|説明|
@@ -431,10 +431,10 @@ LONG NotifyChangeKeyValue(
 |REG_NOTIFY_CHANGE_LAST_SET|キーの値への変更の呼び出し元に通知します。 これには、追加や、値を削除する既存の値の変更を含めることができます。|
 |REG_NOTIFY_CHANGE_SECURITY|キーのセキュリティ記述子への変更の呼び出し元に通知します。|
 
-*hEvent*  
+*hEvent*<br/>
 イベントに対するハンドル。 場合、 *bAsync*パラメーターが TRUE の場合、メソッドからすぐに、このイベントを通知することによって変更が報告されます。 場合*bAsync* false で、 *hEvent*は無視されます。
 
-*bAsync*  
+*bAsync*<br/>
 メソッドで変更を報告する方法を示すフラグを指定します。 このパラメーターが TRUE の場合、このメソッドは直ちに返され、レポートは、指定されたイベントを通知することによって変更。 このパラメーターが FALSE の場合、変更が発生するまで、メソッドは返しません。 場合*hEvent*有効なイベントで指定されていない、 *bAsync*パラメーターが TRUE にすることはできません。
 
 ### <a name="return-value"></a>戻り値
@@ -461,13 +461,13 @@ LONG Open(
 
 ### <a name="parameters"></a>パラメーター
 
-*hKeyParent*  
+*hKeyParent*<br/>
 オープンするキーのハンドル。
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 作成または開かれたキーの名前を指定します。 この名前のサブキーである必要があります*hKeyParent*します。
 
-*samDesired*  
+*samDesired*<br/>
 キーのセキュリティのアクセス。 既定値は、KEY_ALL_ACCESS です。 使用可能な値と説明の一覧は、次を参照してください。 [RegCreateKeyEx](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) Windows SDK に含まれています。
 
 ### <a name="return-value"></a>戻り値
@@ -484,7 +484,7 @@ LONG Open(
 
 変換を`CRegKey`HKEY するオブジェクト。
 
-```  
+```
 operator HKEY() const throw();
 ```
 
@@ -498,7 +498,7 @@ CRegKey& operator= (CRegKey& key) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*key*  
+*key*<br/>
 コピーするキー。
 
 ### <a name="return-value"></a>戻り値
@@ -522,13 +522,13 @@ LONG QueryBinaryValue(
 
 ### <a name="parameters"></a>パラメーター
 
-*pszValueName*  
+*pszValueName*<br/>
 クエリに値の名前を含む null で終わる文字列へのポインター。
 
-*pValue*  
+*pValue*<br/>
 値のデータを受け取るバッファーへのポインター。
 
-*pnBytes*  
+*pnBytes*<br/>
 バッファーのバイト単位で、サイズを指定する変数へのポインターが指す、 *pValue*パラメーター。 メソッドが戻るときに、この変数には、バッファーにコピーされたデータのサイズが含まれています。
 
 ### <a name="return-value"></a>戻り値
@@ -554,10 +554,10 @@ LONG QueryDWORDValue(
 
 ### <a name="parameters"></a>パラメーター
 
-*pszValueName*  
+*pszValueName*<br/>
 クエリに値の名前を含む null で終わる文字列へのポインター。
 
-*dwValue*  
+*dwValue*<br/>
 Dword 値を受け取るバッファーへのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -583,10 +583,10 @@ LONG QueryGUIDValue(
 
 ### <a name="parameters"></a>パラメーター
 
-*pszValueName*  
+*pszValueName*<br/>
 クエリに値の名前を含む null で終わる文字列へのポインター。
 
-*guidValue*  
+*guidValue*<br/>
 GUID を受け取る変数へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -613,13 +613,13 @@ LONG QueryMultiStringValue(
 
 ### <a name="parameters"></a>パラメーター
 
-*pszValueName*  
+*pszValueName*<br/>
 クエリに値の名前を含む null で終わる文字列へのポインター。
 
-*終端*  
+*終端*<br/>
 複数行文字列のデータを受信するバッファーへのポインター。 複数文字列は、2 つの null 文字で終端の null で終わる文字列の配列です。
 
-*が*  
+*が*<br/>
 サイズが指すバッファーの Tchar*終端*します。 メソッドが戻るときに*が*Tchar、終端の null 文字も含めて取得するには、複数のサイズが含まれています。
 
 ### <a name="return-value"></a>戻り値
@@ -645,10 +645,10 @@ LONG QueryQWORDValue(
 
 ### <a name="parameters"></a>パラメーター
 
-*pszValueName*  
+*pszValueName*<br/>
 クエリに値の名前を含む null で終わる文字列へのポインター。
 
-*qwValue*  
+*qwValue*<br/>
 QWORD を受け取るバッファーへのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -675,13 +675,13 @@ LONG QueryStringValue(
 
 ### <a name="parameters"></a>パラメーター
 
-*pszValueName*  
+*pszValueName*<br/>
 クエリに値の名前を含む null で終わる文字列へのポインター。
 
-*終端*  
+*終端*<br/>
 文字列データを受信するバッファーへのポインター。
 
-*が*  
+*が*<br/>
 サイズが指すバッファーの Tchar*終端*します。 メソッドが戻るときに*が*Tchar、終端の null 文字も含めて取得するには、文字列のサイズが含まれています。
 
 ### <a name="return-value"></a>戻り値
@@ -718,28 +718,28 @@ ATL_DEPRECATED LONG QueryValue(
 
 ### <a name="parameters"></a>パラメーター
 
-*pszValueName*  
+*pszValueName*<br/>
 クエリに値の名前を含む null で終わる文字列へのポインター。 場合*pszValueName*が NULL または空の文字列""、メソッド型を取得、およびキーのデータの名前のないまたは既定値が存在する場合。
 
-*pdwType*  
+*pdwType*<br/>
 指定した値に格納されたデータの種類を示すコードを受け取る変数へのポインター。 *PdwType*型コードが必要ない場合、パラメーターは NULL を指定できます。
 
-*pData*  
+*pData*<br/>
 値のデータを受け取るバッファーへのポインター。 このパラメーターは、データが必要ない場合、NULL にすることができます。
 
-*pnBytes*  
+*pnBytes*<br/>
 バッファーのバイト単位で、サイズを指定する変数へのポインターが指す、 *pData*パラメーター。 この変数にコピーされたデータのサイズが含まれています、メソッドが戻るとき*pData します。*
 
-*dwValue*  
+*dwValue*<br/>
 値フィールドの数値データ。
 
-*lpszValueName*  
+*lpszValueName*<br/>
 クエリを実行する、値フィールドを指定します。
 
-*szValue*  
+*szValue*<br/>
 値フィールドの文字列データです。
 
-*pdwCount*  
+*pdwCount*<br/>
 文字列データのサイズ。 サイズには、その値は設定された最初に、 *szValue*バッファー。
 
 ### <a name="return-value"></a>戻り値
@@ -765,7 +765,7 @@ LONG RecurseDeleteKey(LPCTSTR lpszKey) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszKey*  
+*lpszKey*<br/>
 削除するキーの名前を指定します。 この名前のサブキーである必要があります[m_hKey](#m_hkey)します。
 
 ### <a name="return-value"></a>戻り値
@@ -789,13 +789,13 @@ LONG SetBinaryValue(
 
 ### <a name="parameters"></a>パラメーター
 
-*pszValueName*  
+*pszValueName*<br/>
 設定する値の名前を格納する文字列へのポインター。 この名前の値がまだ存在しない場合は、メソッドによりキーに追加されます。
 
-*pValue*  
+*pValue*<br/>
 指定された値の名前で格納されるデータを格納するバッファーへのポインター。
 
-*nBytes*  
+*nBytes*<br/>
 によって示される情報のバイト単位でサイズを指定、 *pValue*パラメーター。
 
 ### <a name="return-value"></a>戻り値
@@ -816,10 +816,10 @@ LONG SetDWORDValue(LPCTSTR pszValueName, DWORD dwValue) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pszValueName*  
+*pszValueName*<br/>
 設定する値の名前を格納する文字列へのポインター。 この名前の値がまだ存在しない場合は、メソッドによりキーに追加されます。
 
-*dwValue*  
+*dwValue*<br/>
 指定された値の名前を格納する DWORD データ。
 
 ### <a name="return-value"></a>戻り値
@@ -840,10 +840,10 @@ LONG SetGUIDValue(LPCTSTR pszValueName, REFGUID guidValue) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pszValueName*  
+*pszValueName*<br/>
 設定する値の名前を格納する文字列へのポインター。 この名前の値がまだ存在しない場合は、メソッドによりキーに追加されます。
 
-*guidValue*  
+*guidValue*<br/>
 指定された値の名前で格納される GUID への参照。
 
 ### <a name="return-value"></a>戻り値
@@ -867,13 +867,13 @@ LONG SetKeyValue(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 作成または開かれたキーの名前を指定します。 この名前のサブキーである必要があります[m_hKey](#m_hkey)します。
 
-*lpszValue*  
+*lpszValue*<br/>
 データを格納するを指定します。 このパラメーターは、NULL 以外である必要があります。
 
-*lpszValueName*  
+*lpszValueName*<br/>
 設定する値のフィールドを指定します。 キーにもこの名前の値のフィールドがまだ存在しない場合は、追加されます。
 
 ### <a name="return-value"></a>戻り値
@@ -894,7 +894,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*si*  
+*si*<br/>
 設定するセキュリティ記述子のコンポーネントを指定します。 値は、次の値の組み合わせを指定できます。
 
 |[値]|説明|
@@ -904,7 +904,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 |OWNER_SECURITY_INFORMATION|キーの所有者の SID を設定します。 キーは WRITE_OWNER アクセスが必要または呼び出し元のプロセスがオブジェクトの所有者であるか、有効になっている SE_TAKE_OWNERSHIP_NAME 権限を持っている必要があります。|
 |SACL_SECURITY_INFORMATION|キーのシステム アクセス制御リスト (SACL) を設定します。 ACCESS_SYSTEM_SECURITY アクセス キーが必要です。 このアクセスを取得するための適切が SE_SECURITY_NAME を有効にするには[特権](https://msdn.microsoft.com/library/windows/desktop/aa379306)呼び出し元の現在のアクセス トークンで ACCESS_SYSTEM_SECURITY へのアクセスのためのハンドルを開くし、特権を無効にします。|
 
-*psd*  
+*psd*<br/>
 ポインターを[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)構造を指定したキーに設定するセキュリティ属性を指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -925,10 +925,10 @@ LONG SetMultiStringValue(LPCTSTR pszValueName, LPCTSTR pszValue) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pszValueName*  
+*pszValueName*<br/>
 設定する値の名前を格納する文字列へのポインター。 この名前の値がまだ存在しない場合は、メソッドによりキーに追加されます。
 
-*終端*  
+*終端*<br/>
 指定された値の名前で保存する複数行文字列のデータへのポインター。 複数文字列は、2 つの null 文字で終端の null で終わる文字列の配列です。
 
 ### <a name="return-value"></a>戻り値
@@ -949,10 +949,10 @@ LONG SetQWORDValue(LPCTSTR pszValueName, ULONGLONG qwValue) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pszValueName*  
+*pszValueName*<br/>
 設定する値の名前を格納する文字列へのポインター。 この名前の値がまだ存在しない場合は、メソッドによりキーに追加されます。
 
-*qwValue*  
+*qwValue*<br/>
 指定された値の名前で格納される QWORD データ。
 
 ### <a name="return-value"></a>戻り値
@@ -976,13 +976,13 @@ LONG SetStringValue(
 
 ### <a name="parameters"></a>パラメーター
 
-*pszValueName*  
+*pszValueName*<br/>
 設定する値の名前を格納する文字列へのポインター。 この名前の値がまだ存在しない場合は、メソッドによりキーに追加されます。
 
-*終端*  
+*終端*<br/>
 指定された値名で格納される文字列データへのポインター。
 
-*dwType*  
+*dwType*<br/>
 レジストリに書き込む文字列の型。REG_SZ (既定値) または REG_EXPAND_SZ (複数文字列の場合)。
 
 ### <a name="return-value"></a>戻り値
@@ -1023,37 +1023,37 @@ ATL_DEPRECATED LONG SetValue(
 
 ### <a name="parameters"></a>パラメーター
 
-*pszValueName*  
+*pszValueName*<br/>
 設定する値の名前を格納する文字列へのポインター。 この名前の値がキーに存在しないメソッドにより、キーに追加します。 場合*pszValueName*が NULL または空の文字列""の種類を設定する方法、およびキーのデータの名前のないまたは既定値。
 
-*dwType*  
+*dwType*<br/>
 参照するデータの種類を示すコードを指定します、 *pValue*パラメーター。
 
-*pValue*  
+*pValue*<br/>
 指定された値の名前で格納されるデータを格納するバッファーへのポインター。
 
-*nBytes*  
+*nBytes*<br/>
 によって示される情報のバイト単位でサイズを指定、 *pValue*パラメーター。 データの型が REG_SZ、REG_EXPAND_SZ、または、REG_MULTI_SZ の場合*nBytes*終端の null 文字のサイズを含める必要があります。
 
-*hKeyParent*  
+*hKeyParent*<br/>
 オープンするキーのハンドル。
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 作成または開かれたキーの名前を指定します。 この名前のサブキーである必要があります*hKeyParent*します。
 
-*lpszValue*  
+*lpszValue*<br/>
 データを格納するを指定します。 このパラメーターは、NULL 以外である必要があります。
 
-*lpszValueName*  
+*lpszValueName*<br/>
 設定する値のフィールドを指定します。 キーにもこの名前の値のフィールドがまだ存在しない場合は、追加されます。
 
-*dwValue*  
+*dwValue*<br/>
 データを格納するを指定します。
 
-*bMulti*  
+*bMulti*<br/>
 False の場合は、REG_SZ 型の文字列を示します。 True の場合は、文字列は、REG_MULTI_SZ の種類の複数文字列を示します。
 
-*nValueLen*  
+*nValueLen*<br/>
 場合*bMulti*が true の場合*nValueLen*の長さ、 *lpszValue*文字列の文字。 場合*bMulti*が false の場合、値-1 は、メソッドの計算で、長さが自動的に処理されますを示します。
 
 ### <a name="return-value"></a>戻り値
@@ -1068,5 +1068,5 @@ False の場合は、REG_SZ 型の文字列を示します。 True の場合は�
 
 ## <a name="see-also"></a>関連項目
 
-[DCOM のサンプル](../../visual-cpp-samples.md)   
+[DCOM のサンプル](../../visual-cpp-samples.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac6e8215cc46fd190703981869a065df8d46b18d
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8ad44aaaf22adce58cfdf01d108f172dc7cdf372
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690472"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043938"
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl クラス
 Windows のコモン タブ コントロールの機能が用意されています。  
@@ -391,30 +391,34 @@ BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;
 ### <a name="remarks"></a>Remarks  
  メッセージが送信されるときに、`mask`メンバーが返される属性を指定します。 場合、`mask`メンバー TCIF_TEXT 値を指定する、`pszText`メンバーは、項目のテキストを受け取るバッファーのアドレスを含める必要があります、`cchTextMax`メンバーは、バッファーのサイズを指定する必要があります。  
   
- `mask`  
- これを指定する値`TCITEM`構造メンバーを取得または設定します。 このメンバーには、0 または次の値の組み合わせを指定できます。  
+- `mask`
+
+   これを指定する値`TCITEM`構造メンバーを取得または設定します。 このメンバーには、0 または次の値の組み合わせを指定できます。  
   
-- TCIF_TEXT、`pszText`メンバーは有効です。  
+   - TCIF_TEXT、`pszText`メンバーは有効です。  
   
-- TCIF_IMAGE、`iImage`メンバーは有効です。  
+   - TCIF_IMAGE、`iImage`メンバーは有効です。  
   
-- TCIF_PARAM、`lParam`メンバーは有効です。  
+   - TCIF_PARAM、`lParam`メンバーは有効です。  
   
-- TCIF_RTLREADING テキストの`pszText`ヘブライ語やアラビア語のシステムで右から左への読み取り順序を使用して表示されます。  
+   - TCIF_RTLREADING テキストの`pszText`ヘブライ語やアラビア語のシステムで右から左への読み取り順序を使用して表示されます。  
   
-- TCIF_STATE、`dwState`メンバーは有効です。  
+   - TCIF_STATE、`dwState`メンバーは有効です。  
   
- `pszText`  
- 構造体には、タブについての情報が含まれている場合は、タブのテキストを含む null で終わる文字列へのポインター。構造情報の受信は、このメンバーは、タブのテキストを受け取るバッファーのアドレスを指定します。  
+- `pszText`  
+
+   構造体には、タブについての情報が含まれている場合は、タブのテキストを含む null で終わる文字列へのポインター。構造情報の受信は、このメンバーは、タブのテキストを受け取るバッファーのアドレスを指定します。  
   
- `cchTextMax`  
- バッファーのサイズが指す`pszText`します。 このメンバーには、構造体は、情報を受信していない場合は無視されます。  
+- `cchTextMax`  
+
+   バッファーのサイズが指す`pszText`します。 このメンバーには、構造体は、情報を受信していない場合は無視されます。  
   
- `iImage`  
+- `iImage`  
  タブの画像がない場合は、タブ コントロールのイメージ リスト、または 1 をインデックスです。  
   
- lParam  
- タブに関連付けられているアプリケーション定義のデータ。4 バイトを超えるタブごとのアプリケーション定義のデータがある場合は、アプリケーションする必要があります構造体を定義しの代わりに使用、`TCITEM`構造体。 アプリケーション定義の構造体の最初のメンバーである必要があります、[アプリケーション定義](/windows/desktop/api/commctrl/ns-commctrl-tagtcitemheadera)構造体。 `TCITEMHEADER`構造体のと同じですが、`TCITEM`構造体が、`lParam`メンバー。 構造のサイズとのサイズの差、`TCITEMHEADER`構造はタブごとの追加のバイト数と等しく必要があります。  
+- `lParam`  
+
+   タブに関連付けられているアプリケーション定義のデータ。4 バイトを超えるタブごとのアプリケーション定義のデータがある場合は、アプリケーションする必要があります構造体を定義しの代わりに使用、`TCITEM`構造体。 アプリケーション定義の構造体の最初のメンバーである必要があります、[アプリケーション定義](/windows/desktop/api/commctrl/ns-commctrl-tagtcitemheadera)構造体。 `TCITEMHEADER`構造体のと同じですが、`TCITEM`構造体が、`lParam`メンバー。 構造のサイズとのサイズの差、`TCITEMHEADER`構造はタブごとの追加のバイト数と等しく必要があります。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CTabCtrl#4](../../mfc/reference/codesnippet/cpp/ctabctrl-class_4.cpp)]  

@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 41859ae16ecd7f4c3261d644ce37d86fe416ec94
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dcc942bc69ebb37a7aba59e722b1a4cebbbab3ff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589643"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071365"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>方法: winmdidl.exe と midlrt.exe を使用して、Windows メタデータから .h ファイルを作成する
 
@@ -42,24 +42,25 @@ winmdidl.exe と midlrt.exe によって、ネイティブ C++ コードと Wind
 Winmdidl.exe [/nologo] [/supressversioncheck] [/time] [/outdir:dir] [/banner:file] [/utf8] Winmdfile
 ```
 
-`/nologo`  
+**/nologo**<br/>
 winmdidl の著作権メッセージとバージョン番号のコンソール表示を防ぎます。
 
-`/supressversioncheck`  
+**/supressversioncheck**<br/>
 使用しません。
 
-`/time`  
+**/時間**<br/>
 コンソール出力に総実行時間を表示します。
 
-パック ファイル:\<dir > 出力ディレクトリを指定します。 パスに空白が含まれる場合は、引用符を使用します。 既定の出力ディレクトリは*\<ドライブ >*: \Users\\*\<ユーザー名 >* \AppData\Local\VirtualStore\Program Files (x86) \Microsoft VisualStudio 12.0\\します。
+**パック ファイル:**<em>dir</em><br/>
+出力ディレクトリを指定します。 パスに空白が含まれる場合は、引用符を使用します。 既定の出力ディレクトリは*\<ドライブ >*: \Users\\*\<ユーザー名 >* \AppData\Local\VirtualStore\Program Files (x86) \Microsoft VisualStudio 12.0\\します。
 
-`/banner:<file>`  
+**バナー/:**<em>ファイル</em><br/>
 生成された .idl ファイルの先頭にある既定の著作権メッセージと winmdidl のバージョン番号に付加するカスタム テキストを含むファイルを指定します。 パスに空白が含まれる場合は、引用符を使用します。
 
-`/utf8`  
+**/utf8**<br/>
 ファイルを UTF-8 として書式設定します。
 
-`Winmdfile`  
+*Winmdfile*<br/>
 解析する .winmd ファイルの名前。 パスに空白が含まれる場合は、引用符を使用します。
 
 ## <a name="midlrt-command-line-arguments"></a>midlrt のコマンド ライン引数

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 521e08b22abb40b6e1b1fedce2375a6e33cc7e73
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 6453d718454f7cfef3bb0211d05eb26a712eaf0f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43130785"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218314"
 ---
 # <a name="supported-platforms-visual-c"></a>サポートされるプラットフォーム (Visual C++)
 
@@ -28,8 +28,8 @@ Visual Studio を使用してビルドしたアプリケーションは、次の
 
 |オペレーティング システム|x86|X64|ARM|
 |----------------------|---------|---------|---------|
-|Windows XP|X*|X*||
-|Windows Server 2003|X*|X*||
+|Windows XP|X\*|X\*||
+|Windows Server 2003|X\*|X\*||
 |Windows Vista|x|x||
 |Windows Server 2008|x|x||
 |Windows 7|x|x||
@@ -37,9 +37,9 @@ Visual Studio を使用してビルドしたアプリケーションは、次の
 |Windows 8|x|x|x|
 |Windows 8.1|x|x|x|
 |Windows 10|x|x|x|
-|Android **|x|x|x|
-|iOS **|x|x|x|
-|Linux ***|x|x|x|
+|Android \*\*|x|x|x|
+|iOS \*\*|x|x|x|
+|Linux \*\*\*|x|x|x|
 
 \* Visual Studio 2017、Visual Studio 2015、Visual Studio 2013、Visual Studio 2012 Update 1 以降に含まれている Windows XP プラットフォーム ツールセットを使用して、Windows XP および Windows Server 2003 プロジェクトを構築できます。 このプラットフォーム ツールセットを使用する方法については、「[Windows XP 用プログラムの構成](build/configuring-programs-for-windows-xp.md)」を参照してください。 プラットフォーム ツールセットの変更に関する詳細については、「[方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更する](build/how-to-modify-the-target-framework-and-platform-toolset.md)」を参照してください。
 

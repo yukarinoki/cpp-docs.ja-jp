@@ -1,5 +1,5 @@
 ---
-title: プロジェクト ビルド エラー PRJ0032 |Microsoft ドキュメント
+title: プロジェクト ビルド エラー PRJ0032 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6be9a343ae9d9ce1e3d862cc0a397f1d61ccdea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 106b1c3f470bbdb134a5fd53ebaef65a4392fd4b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318664"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053577"
 ---
 # <a name="project-build-error-prj0032"></a>プロジェクト ビルド エラー PRJ0032
-プロジェクト レベルのカスタム ビルド ステップの 'Outputs' プロパティには、評価を出す 'macro_expansion' の ' macro' が含まれています。  
-  
- プロジェクトでカスタム ビルド ステップには、おそらくマクロ評価の問題により、不正な出力が必要があります。 このエラー意味する場合も、パスの形式が文字またはファイル パスに無効な文字の組み合わせを含むです。  
-  
- このエラーを解決するには、マクロを修正するか、パスの指定を修正します。 パスには、プロジェクト ディレクトリからの絶対パスを指定します。
+
+プロジェクト レベルのカスタム ビルド ステップに 'Outputs' プロパティには、評価を出す 'macro_expansion' の ' macro' が含まれています。
+
+プロジェクトでカスタム ビルド ステップでは、おそらくマクロ評価の問題により、不正な出力がありました。 このエラーにあるパス形式が正しくない、文字またはファイル パスでは無効な文字の組み合わせを含むもします。
+
+このエラーを解決するのには、マクロを修正するか、パスの指定を修正します。 パスには、プロジェクト ディレクトリからの絶対パスを指定します。

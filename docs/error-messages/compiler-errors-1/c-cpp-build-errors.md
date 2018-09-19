@@ -1,5 +1,5 @@
 ---
-title: C/C++ ビルド エラー |Microsoft ドキュメント
+title: C/C++ ビルド エラー |Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2017
 ms.technology:
@@ -310,20 +310,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65a6eb5fe80c25912c76e3446efb1ee00413fff1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 14529f9246572299fc6629ec13ff4eab837bb5fd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171273"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095847"
 ---
 # <a name="cc-build-errors"></a>C/C++ ビルド エラー
 
-ドキュメントのこのセクションの記事では、診断エラー メッセージと、ビルド ツールによって生成される警告メッセージを説明します。
+ドキュメントのこのセクションの記事では、診断エラー メッセージと、ビルド ツールによって生成される警告メッセージについて説明します。
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
 ## <a name="see-also"></a>関連項目
 
-[C/C++ ビルドのリファレンス](../../build/reference/c-cpp-building-reference.md)   
+[C/C++ ビルドのリファレンス](../../build/reference/c-cpp-building-reference.md)<br/>
 [Visual Studio でのデバッグ](/visualstudio/debugger/debugging-in-visual-studio)

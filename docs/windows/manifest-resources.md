@@ -1,5 +1,5 @@
 ---
-title: マニフェスト リソース |Microsoft Docs
+title: マニフェスト リソース (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -8,24 +8,24 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- manifest resources
-- resources [Visual Studio], manifest
+- manifest resources [C++]
+- resources [C++], manifest
 ms.assetid: 8615334c-22a0-44c0-93e0-5924528c9917
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0f06e2d430867d04600547312fbc484ec6257c53
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 6d58e89250708f264ff6bb96c75e8124ffa02509
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43685153"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316446"
 ---
-# <a name="manifest-resources"></a>マニフェスト リソース
+# <a name="manifest-resources-c"></a>マニフェスト リソース (C++)
 
-マニフェスト リソースは、アプリケーションで使用される依存関係を記述する XML ファイルです。 たとえば Visual Studio では、MFC ウィザードで生成されたマニフェスト ファイルで、アプリケーションがバージョン 5.0 と 6.0 のどちらの Windows コモン コントロール DLL を使用するかを定義します。
+C++ デスクトップ プロジェクトでは、マニフェスト リソースは、アプリケーションが使用する依存関係を記述する XML ファイルです。 たとえば Visual Studio では、MFC ウィザードで生成されたマニフェスト ファイルで、アプリケーションがバージョン 5.0 と 6.0 のどちらの Windows コモン コントロール DLL を使用するかを定義します。
 
 ```xml
 <description>Your app description here</description>

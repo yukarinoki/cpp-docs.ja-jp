@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccdec81251589ba36209f878f1fa8b727d7d2b98
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8cd45a20557eb3a7b2af3b1c2ecba3cc858af503
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409278"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205261"
 ---
 # <a name="sbcs-and-mbcs-data-types"></a>SBCS および MBCS データ型
 
@@ -34,7 +34,7 @@ ms.locfileid: "32409278"
 
 そのため、マルチバイト文字のバイトを 8 ビット `unsigned char` で表すことが最善の方法となります。 また、負の結果を避けるためには、単に型 **char** の 1 バイト文字を **int** または **long** に変換する前に `unsigned char` に変換します。
 
-SBCS の文字列処理関数の中には、(符号付きの) **char\*** パラメーターを受け取るものがあります。このため、**_MBCS** を定義すると、型の不一致を知らせるコンパイラの警告が生成されます。 この警告を回避する方法を 3 つ、効率の順に次に示します。
+SBCS の文字列処理関数の中には、(符号付きの) **char**<strong>\*</strong> パラメーターを受け取るものがあります。このため、**_MBCS** を定義すると、型の不一致を知らせるコンパイラの警告が生成されます。 この警告を回避する方法を 3 つ、効率の順に次に示します。
 
 1. TCHAR.H のタイプ セーフなインライン関数を使用します。 これが既定の動作です。
 

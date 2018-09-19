@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0da9a0299679ec140888e9536329f0957a786279
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 208c89cad441a1fae70f5532204ec7856459de7f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760004"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095860"
 ---
 # <a name="atl-com-property-pages"></a>ATL COM プロパティ ページ
 
@@ -38,18 +38,18 @@ ms.locfileid: "43760004"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[プロパティ ページの指定](../atl/specifying-property-pages.md)  
+[プロパティ ページの指定](../atl/specifying-property-pages.md)<br/>
 コントロールのプロパティ ページを指定するための手順と、クラスの例を示します。
 
-[プロパティ ページの実装](../atl/implementing-property-pages.md)  
+[プロパティ ページの実装](../atl/implementing-property-pages.md)<br/>
 オーバーライドするメソッドを含めて、プロパティ ページを実装するための手順を一覧表示します。 ATLPages サンプル プログラムに基づく完全な例を示します。
 
 ## <a name="related-sections"></a>関連項目
 
-[例](../visual-cpp-samples.md)  
+[例](../visual-cpp-samples.md)<br/>
 使用してプロパティ ページを実装する例のサンプルの要約`IPropertyPageImpl`します。
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Active Template Library を使用してプログラミングする方法に関する概念説明のトピックへのリンクを提供します。
 
 ## <a name="see-also"></a>関連項目

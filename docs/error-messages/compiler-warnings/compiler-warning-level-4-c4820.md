@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 4) C4820 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 4) C4820 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea99ca177a90281ca02e44265f603045b72845f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c27466912956988a2396b8e3c52fc41ed2caa604
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294220"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016340"
 ---
 # <a name="compiler-warning-level-4-c4820"></a>コンパイラの警告 (レベル 4) C4820
-'バイト' : 'バイト' バイトのパディングを 'コンスラクト' 'member_name' の後に追加しました。  
-  
- 要素の順序と型、構造体の末尾にスペースを追加するコンパイラを発生します。 参照してください[整列](../../cpp/align-cpp.md)構造体に埋め込みについての詳細。  
-  
- 既定では、この警告はオフに設定されています。 詳細については、「 [既定で無効になっているコンパイラ警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 」を参照してください。  
-  
- 次の例では、C4820 が生成されます。  
-  
-```  
-// C4820.cpp  
-// compile with: /W4 /c  
-#pragma warning(default : 4820)   
-  
-// Delete the following 4 lines to resolve.  
-__declspec(align(2)) struct MyStruct {  
-   char a;  
-   int i;   // C4820  
-};  
-  
-// OK  
-#pragma pack(1)  
-__declspec(align(1)) struct MyStruct2 {  
-   char a;  
-   int i;  
-};  
+
+'バイト' : 'バイト' バイトのパディングを 'コンスラクト' 'member_name' の後に追加しました。
+
+型と要素の順序は、構造体の末尾に埋め込みの追加をコンパイラに発生します。 参照してください[align](../../cpp/align-cpp.md)構造体に埋め込みの詳細についてはします。
+
+既定では、この警告はオフに設定されています。 詳細については、「 [既定で無効になっているコンパイラ警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 」を参照してください。
+
+次の例では、C4820 が生成されます。
+
+```
+// C4820.cpp
+// compile with: /W4 /c
+#pragma warning(default : 4820)
+
+// Delete the following 4 lines to resolve.
+__declspec(align(2)) struct MyStruct {
+   char a;
+   int i;   // C4820
+};
+
+// OK
+#pragma pack(1)
+__declspec(align(1)) struct MyStruct2 {
+   char a;
+   int i;
+};
 ```

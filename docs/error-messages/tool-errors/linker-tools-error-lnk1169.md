@@ -1,5 +1,5 @@
 ---
-title: リンカ ツール エラー LNK1169 |Microsoft ドキュメント
+title: リンカ ツール エラー LNK1169 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79682f58111804b3c1340aa7dc5ab5f0c97e0d68
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d30171eedd43695b26be24f6c7e2c9751ae8fcdb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302699"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036047"
 ---
 # <a name="linker-tools-error-lnk1169"></a>リンカ ツール エラー LNK1169
-1 つまたは複数の乗算に定義されたシンボルが見つかりました  
-  
- 1 つまたは複数のシンボルの複数の定義により、ビルドが失敗しました。 このエラーのエラーが続く[LNK2005](../../error-messages/tool-errors/linker-tools-error-lnk2005.md)です。  
-  
- [/Force](../../build/reference/force-force-file-output.md)または **/FORCE:MULTIPLE**オプションは、このエラーをオーバーライドします。
+
+1 つまたは複数の乗算に定義されたシンボルが見つかりました
+
+1 つまたは複数のシンボルの複数の定義により、ビルドが失敗しました。 このエラーの前にエラーが発生して[LNK2005](../../error-messages/tool-errors/linker-tools-error-lnk2005.md)します。
+
+[/Force](../../build/reference/force-force-file-output.md)または **/FORCE:MULTIPLE**オプションは、このエラーをオーバーライドします。

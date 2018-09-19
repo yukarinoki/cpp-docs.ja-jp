@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18f26f9ac0cd00758d1259ac368b2408a7a2e8cf
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a8ea3976a510817e183271921c6730692e5b0b3c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214622"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711072"
 ---
 # <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>_InterlockedCompareExchangePointer の組み込み関数
 **Microsoft 固有の仕様**  
@@ -87,14 +87,14 @@ long _InterlockedCompareExchangePointer_rel (
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力、出力] `Destination`  
- 対象値へのポインターへのポインター。 符号は無視されます。  
+*変換先*<br/>
+[入力、出力]宛先値へのポインターへのポインター。 符号は無視されます。  
   
- [入力] `Exchange`  
- Exchange へのポインター。 符号は無視されます。  
+*Exchange*<br/>
+[in]Exchange へのポインター。 符号は無視されます。  
   
- [入力] `Comparand`  
- 対象と比較するポインター。 符号は無視されます。  
+*比較対照値*<br/>
+[in]対象と比較するポインター。 符号は無視されます。  
   
 ## <a name="return-value"></a>戻り値  
  戻り値は、対象の初期値です。  

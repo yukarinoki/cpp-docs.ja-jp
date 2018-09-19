@@ -15,18 +15,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68f13848c01f91f9302246a763dd478ee8fccdda
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 45558f9546b996d824d8cf9e8782b7323dcb91fb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403924"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114502"
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>左辺値と右辺値 (Visual C)
 
 すべての C++ 式の型を持つし、に属する、*値カテゴリ*します。 値のカテゴリは、コンパイラが作成、コピー、および式の評価中に一時オブジェクトを移動するときに従う必要があるルールの基礎です。
 
- 標準の c++ 17 では、次のように式の値のカテゴリを定義します。
+標準の c++ 17 では、次のように式の値のカテゴリを定義します。
 
 - A *glvalue*式を指定するオブジェクト、ビット フィールド、または関数の id を決定します。
 - A *prvalue*をオブジェクトまたはビット フィールドを初期化しますまたは、演算子のオペランドの値を計算コンテキストで指定された、その次のように表示されます。 式を指定します。
@@ -36,40 +36,40 @@ ms.locfileid: "39403924"
 
 次の図は、カテゴリ間の関係を示しています。
 
- ![C++ 式の値のカテゴリ](media/value_categories.png "C++ 式の値のカテゴリ")
+![C++ 式の値のカテゴリ](media/value_categories.png "C++ 式の値のカテゴリ")
 
- 左辺値では、プログラムにアクセスできるアドレスがあります。 左辺値式の例を含む、変数名を含める**const**関数を左辺値参照をビット フィールド、共用体、およびクラス メンバーを返す呼び出しの変数、配列の要素。
+左辺値では、プログラムにアクセスできるアドレスがあります。 左辺値式の例を含む、変数名を含める**const**関数を左辺値参照をビット フィールド、共用体、およびクラス メンバーを返す呼び出しの変数、配列の要素。
 
- Prvalue 式には、プログラムからアクセス可能なアドレスがありません。 Prvalue 式の例には、リテラル、非参照型を返す関数呼び出しと、コンパイラでのみアクセスできますが、式の評価中に作成される一時オブジェクトが含まれます。
+Prvalue 式には、プログラムからアクセス可能なアドレスがありません。 Prvalue 式の例には、リテラル、非参照型を返す関数呼び出しと、コンパイラでのみアクセスできますが、式の評価中に作成される一時オブジェクトが含まれます。
 
- Xvalue 式がアドレスをプログラムでアクセス不可能になってが式へのアクセスを提供する、右辺値参照を初期化するために使用できます。 例には、返された関数呼び出し、右辺値参照と配列の添字、メンバー、およびポインター メンバー式に、配列またはオブジェクトが右辺値参照が含まれます。
+Xvalue 式がアドレスをプログラムでアクセス不可能になってが式へのアクセスを提供する、右辺値参照を初期化するために使用できます。 例には、返された関数呼び出し、右辺値参照と配列の添字、メンバー、およびポインター メンバー式に、配列またはオブジェクトが右辺値参照が含まれます。
 
 ## <a name="example"></a>例
 
- 次の例は、左辺値と右辺値の正しい使用方法と間違った使用方法のいくつかを示しています。
+次の例は、左辺値と右辺値の正しい使用方法と間違った使用方法のいくつかを示しています。
 
 ```cpp
 // lvalues_and_rvalues2.cpp
 int main()
 {
- int i, j, *p;
+int i, j, *p;
 
- // Correct usage: the variable i is an lvalue and the literal 7 is a prvalue.
- i = 7;
+// Correct usage: the variable i is an lvalue and the literal 7 is a prvalue.
+i = 7;
 
- // Incorrect usage: The left operand must be an lvalue (C2106).`j * 4` is a prvalue.
- 7 = i; // C2106
- j * 4 = 7; // C2106
+// Incorrect usage: The left operand must be an lvalue (C2106).`j * 4` is a prvalue.
+7 = i; // C2106
+j * 4 = 7; // C2106
 
- // Correct usage: the dereferenced pointer is an lvalue.
- *p = i;
+// Correct usage: the dereferenced pointer is an lvalue.
+*p = i;
 
- const int ci = 7;
- // Incorrect usage: the variable is a non-modifiable lvalue (C3892).
- ci = 9; // C3892
+const int ci = 7;
+// Incorrect usage: the variable is a non-modifiable lvalue (C3892).
+ci = 9; // C3892
 
- // Correct usage: the conditional operator returns an lvalue.
- ((i < 3) ? i : j) = 7;
+// Correct usage: the conditional operator returns an lvalue.
+((i < 3) ? i : j) = 7;
 }
 ```
 
@@ -79,6 +79,7 @@ int main()
 条件*左辺値*と*rvalue*オブジェクト参照を参照する場合は、よく使用します。 参照の詳細については、次を参照してください。[左辺値参照宣言子: &](../cpp/lvalue-reference-declarator-amp.md)と[右辺値参照宣言子: & &](../cpp/rvalue-reference-declarator-amp-amp.md)します。
 
 ## <a name="see-also"></a>関連項目
- [基本的な概念](../cpp/basic-concepts-cpp.md)  
- [左辺値参照宣言子: &](../cpp/lvalue-reference-declarator-amp.md)  
- [右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)
+
+[基本的な概念](../cpp/basic-concepts-cpp.md)<br/>
+[左辺値参照宣言子: &](../cpp/lvalue-reference-declarator-amp.md)<br/>
+[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)

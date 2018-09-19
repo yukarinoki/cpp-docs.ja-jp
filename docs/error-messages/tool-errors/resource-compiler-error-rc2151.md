@@ -1,5 +1,5 @@
 ---
-title: リソース コンパイラ エラー RC2151 |Microsoft ドキュメント
+title: リソース コンパイラ エラー RC2151 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8349aa14de6aec96fa1b526cbcffbe79036f804d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a15f3f1237df9e4b706a2c2048dddd6d5db395d5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323473"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109783"
 ---
 # <a name="resource-compiler-error-rc2151"></a>リソース コンパイラ エラー RC2151
-文字列定数を再利用することはできません。  
-  
- 2 回の同じ値を使用している、 **STRINGTABLE**ステートメントです。 10 進数と 16 進数の値の重複を混在させてされていないことを確認してください。  
-  
- 内の各 ID、 **STRINGTABLE**一意である必要があります。 効率が最大使用 16 の倍数を開始する連続した定数。
+
+文字列定数を再利用することはできません。
+
+2 回の同じ値を使用している、 **STRINGTABLE**ステートメント。 10 進数と 16 進数の値が重複している混在させていないことを確認します。
+
+各 ID で、 **STRINGTABLE**で一意である必要があります。 効率を最大化使用の連続する定数は、16 の倍数でを起動します。

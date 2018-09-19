@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9693fdc524953c9fa1070ec5e286cb2a999f5a0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9182241b1d33c63aae523cae0c2c9602466e4c2e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767726"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090426"
 ---
 # <a name="windows-support-classes"></a>Windows サポート クラス
 
@@ -64,7 +64,7 @@ ms.locfileid: "43767726"
 
 ## <a name="see-also"></a>関連項目
 
-[クラスの概要](../atl/atl-class-overview.md)   
-[メッセージ マップ マクロ](../atl/reference/message-map-macros-atl.md)   
+[クラスの概要](../atl/atl-class-overview.md)<br/>
+[メッセージ マップ マクロ](../atl/reference/message-map-macros-atl.md)<br/>
 [Windows クラスに関するマクロ](../atl/reference/window-class-macros.md)
 

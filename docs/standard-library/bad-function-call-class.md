@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e00dd485478a5a6fb7ff029afdad7bf7212fd56
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4b6a450d26480a0e89a115efc5731725f8f8b913
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839947"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714195"
 ---
 # <a name="badfunctioncall-class"></a>bad_function_call クラス
 
@@ -30,11 +30,9 @@ ms.locfileid: "33839947"
 ## <a name="syntax"></a>構文
 
 ```cpp
-class bad_function_call
- : public std::exception {
- };
+class bad_function_call : public std::exception {};
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 このクラスは、[function クラス](../standard-library/function-class.md)での `operator()` への呼び出しを示すためにスローされる例外を記述します。

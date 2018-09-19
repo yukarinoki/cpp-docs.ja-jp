@@ -20,45 +20,51 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 59e890e9d38ff0a37114f2f15217a748c21fff44
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 76dc4cb86601be714e7ca1d442eb904d016e877b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571418"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102786"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>OLE DB でのトランザクションのサポート
+
 A[トランザクション](../../data/transactions-mfc-data-access.md)グループ、またはバッチの場合は、コミットない (場合のいずれかが失敗した) か、または成功すべてが同時にコミットして、一連のデータ ソースを更新する方法は、トランザクション全体がロールバックされます。 このプロセスは、データ ソースの結果の整合性を維持します。  
   
- OLE DB では、次の 3 つの方法でトランザクションをサポートしています。  
+OLE DB では、次の 3 つの方法でトランザクションをサポートしています。  
   
--   [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786\(v=vs.85\))  
+- [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786\(v=vs.85\))  
   
--   [ITransaction::Commit](/previous-versions/windows/desktop/ms713008\(v=vs.85\))  
+- [ITransaction::Commit](/previous-versions/windows/desktop/ms713008\(v=vs.85\))  
   
--   [ITransaction::Abort](/previous-versions/windows/desktop/ms709833\(v=vs.85\))  
+- [ITransaction::Abort](/previous-versions/windows/desktop/ms709833\(v=vs.85\))  
   
 ## <a name="relationship-of-sessions-and-transactions"></a>セッションとトランザクションの関係  
- 1 つのデータ ソース オブジェクトは、特定の時点でトランザクションのスコープの内外をそれぞれが 1 つまたは複数のセッション オブジェクトを作成できます。  
+
+1 つのデータ ソース オブジェクトは、特定の時点でトランザクションのスコープの内外をそれぞれが 1 つまたは複数のセッション オブジェクトを作成できます。  
   
- セッションに、トランザクションが入力していない場合、そのセッションで、データ ストアに対して行われたすべての作業はメソッド呼び出しのたびに即座にコミットします。 (これとも呼ば自動コミット モードまたは暗黙的なモードです。)  
+セッションに、トランザクションが入力していない場合、そのセッションで、データ ストアに対して行われたすべての作業はメソッド呼び出しのたびに即座にコミットします。 (これとも呼ば自動コミット モードまたは暗黙的なモードです。)  
   
- セッションでは、トランザクションが入ると、そのセッションで、データ ストアに対して行われたすべての作業がトランザクションの一部とがコミットまたは中止単一ユニットとして。 (これとも呼ば手動コミット モードです。)  
+セッションでは、トランザクションが入ると、そのセッションで、データ ストアに対して行われたすべての作業がトランザクションの一部とがコミットまたは中止単一ユニットとして。 (これとも呼ば手動コミット モードです。)  
   
- トランザクションのサポートは、プロバイダー固有です。 使用するプロバイダーは、トランザクションをサポートしているセッション オブジェクトをサポートしている場合`ITransaction`と`ITransactionLocal`単純なを入力できます (つまり、入れ子になっていない) トランザクション。 OLE DB テンプレート クラス[CSession](../../data/oledb/csession-class.md) Visual C にトランザクションのサポートを実装することをお勧めの方法であり、これらのインターフェイスをサポートしています。  
+トランザクションのサポートは、プロバイダー固有です。 使用するプロバイダーは、トランザクションをサポートしているセッション オブジェクトをサポートしている場合`ITransaction`と`ITransactionLocal`単純なを入力できます (つまり、入れ子になっていない) トランザクション。 OLE DB テンプレート クラス[CSession](../../data/oledb/csession-class.md) Visual C にトランザクションのサポートを実装することをお勧めの方法であり、これらのインターフェイスをサポートしています。  
   
 ## <a name="starting-and-ending-the-transaction"></a>最初と最後のトランザクション  
- 呼び出す、 `StartTransaction`、 `Commit`、および`Abort`コンシューマーの行セット オブジェクト内のメソッド。  
+
+呼び出す、 `StartTransaction`、 `Commit`、および`Abort`コンシューマーの行セット オブジェクト内のメソッド。  
   
- 呼び出す`ITransactionLocal::StartTransaction`新しいローカル トランザクションが開始されます。 トランザクションを開始するときに後続の操作で要求されるすべての変更は実際には適用されませんをデータ ストアに、トランザクションをコミットするまで。  
+呼び出す`ITransactionLocal::StartTransaction`新しいローカル トランザクションが開始されます。 トランザクションを開始するときに後続の操作で要求されるすべての変更は実際には適用されませんをデータ ストアに、トランザクションをコミットするまで。  
   
- 呼び出す`ITransaction::Commit`または`ITransaction::Abort`トランザクションを終了します。 `Commit` データ ストアに適用するトランザクションのスコープ内のすべての変更を発生します。 `Abort` トランザクションを開始する前に、トランザクションを中止して、データ ストアのスコープ内のすべての変更は、状態のままに、その原因がありました。  
+呼び出す`ITransaction::Commit`または`ITransaction::Abort`トランザクションを終了します。 `Commit` データ ストアに適用するトランザクションのスコープ内のすべての変更を発生します。 `Abort` トランザクションを開始する前に、トランザクションを中止して、データ ストアのスコープ内のすべての変更は、状態のままに、その原因がありました。  
   
 ## <a name="nested-transactions"></a>入れ子になったトランザクション  
- A[トランザクションを入れ子になった](/previous-versions/windows/desktop/ms716985\(v=vs.85\))セッションにアクティブなトランザクションが存在する場合は、新しいローカル トランザクションを開始するときに発生します。 現在のトランザクションの下に入れ子になったトランザクションとしての新しいトランザクションを開始します。 呼び出して、プロバイダーが入れ子になったトランザクションをサポートしていない場合`StartTransaction`XACT_E_XTIONEXISTS が返されます、セッションにアクティブなトランザクションがあるときにします。  
+
+A[トランザクションを入れ子になった](/previous-versions/windows/desktop/ms716985\(v=vs.85\))セッションにアクティブなトランザクションが存在する場合は、新しいローカル トランザクションを開始するときに発生します。 現在のトランザクションの下に入れ子になったトランザクションとしての新しいトランザクションを開始します。 呼び出して、プロバイダーが入れ子になったトランザクションをサポートしていない場合`StartTransaction`XACT_E_XTIONEXISTS が返されます、セッションにアクティブなトランザクションがあるときにします。  
   
 ## <a name="distributed-transactions"></a>分散トランザクション  
- 分散トランザクションは分散型のデータを更新するトランザクションです。つまり、1 つ以上のネットワーク コンピューターのシステム データ。 分散システムでトランザクションをサポートする場合は、OLE DB のトランザクション サポートではなく、.NET Framework を使用する必要があります。  
+
+分散トランザクションは分散型のデータを更新するトランザクションです。つまり、1 つ以上のネットワーク コンピューターのシステム データ。 分散システムでトランザクションをサポートする場合は、OLE DB のトランザクション サポートではなく、.NET Framework を使用する必要があります。  
   
 ## <a name="see-also"></a>関連項目  
- [アクセサーの使用](../../data/oledb/using-accessors.md)
+
+[アクセサーの使用](../../data/oledb/using-accessors.md)

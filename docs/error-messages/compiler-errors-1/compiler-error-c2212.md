@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2212 |Microsoft ドキュメント
+title: コンパイラ エラー C2212 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 152b38be30b50684684bb0c2c39a035b748915b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 773dff4c731830d300c97f1960b24923d2b7d67f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168738"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089880"
 ---
 # <a name="compiler-error-c2212"></a>コンパイラ エラー C2212
-'identifier': _ _based 指定は関数へのポインターの使用  
-  
- 関数へのポインターを宣言できません。`__based`です。 コード ベースのデータを必要がある場合、`__declspec`キーワードまたは`data_seg`プラグマ。
+
+'identifier': _ _based 指定は関数へのポインターの使用
+
+関数へのポインターを宣言することはできません`__based`します。 コード ベースのデータが必要な場合は、使用、`__declspec`キーワードまたは`data_seg`プラグマ。

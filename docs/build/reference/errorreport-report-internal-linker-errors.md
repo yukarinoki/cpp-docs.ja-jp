@@ -1,5 +1,5 @@
 ---
-title: -ERRORREPORT (内部リンカー エラーの報告) |Microsoft ドキュメント
+title: -ERRORREPORT (内部リンカー エラーの報告) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/28/2017
 ms.technology:
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72e620e5347d422a8de66cba3ea9cfd601bb3f29
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 30cc9cbab9a3575eee2f791b0af7dfcaffc1538d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374337"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701091"
 ---
 # <a name="errorreport-report-internal-linker-errors"></a>/ERRORREPORT (内部リンカー エラーの報告)
 
@@ -32,38 +32,38 @@ ms.locfileid: "32374337"
 
 ## <a name="arguments"></a>引数
 
-**none**  
+**none**<br/>
 内部コンパイラ エラーに関するレポートは、収集されず、マイクロソフトに送信されません。
 
-**prompt**  
+**prompt**<br/>
 内部コンパイラ エラーを受信したときにレポートを送信するかどうか確認するメッセージを表示します。 **プロンプト**開発環境でアプリケーションのコンパイル時に既定値です。
 
-**queue**  
-エラー レポートを待ち行列に入れます。 管理者特権使用してログインするときに、ウィンドウが表示され、前回のログに記録されたエラーを報告する (いない求められます 3 日間に 2 回以上のエラー レポートを送信する)。 **キュー**コマンド プロンプトで、アプリケーションのコンパイル時に既定値です。
+**queue**<br/>
+エラー レポートを待ち行列に入れます。 管理者特権を使用してログインすると、前回のログに記録されたエラーを報告できるように、ウィンドウが表示されます。 (ことが求められない 3 日間に 2 回以上のエラー レポートを送信する)。 **キュー**コマンド プロンプトで、アプリケーションのコンパイル時に既定値です。
 
-**send**  
-自動的に Windows エラー報告サービスの設定でレポートが有効になっている場合は、Microsoft に内部コンパイラ エラー レポートを送信します。
+**send**<br/>
+自動的に Windows エラー報告サービスの設定でレポートが有効になっている場合は、内部コンパイラ エラーのレポートを Microsoft に送信します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**/ERRORREPORT**オプションでは、Microsoft に直接内部コンパイラ エラー (ICE) 情報を提供することができます。
+**/ERRORREPORT**オプションを使用して、内部コンパイラ エラー (ICE) 情報を Microsoft に直接提供できます。
 
-オプション **/errorreport:send** Windows エラー報告サービスの設定で有効になっている場合は、Microsoft にエラー情報を自動的に送信します。
+オプション **/errorreport:send** Windows エラー報告サービスの設定を有効になっている場合は、Microsoft にエラー情報を自動的に送信します。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。[のプロジェクト プロパティの操作](../../ide/working-with-project-properties.md)です。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクト プロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 
 1. 開く、**構成プロパティ** > **リンカー** > **詳細**プロパティ ページ。
 
-1. 変更、**エラー報告**プロパティです。
+1. 変更、**エラー報告**プロパティ。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
-- 「<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ErrorReporting%2A>」を参照してください。
+- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ErrorReporting%2A>
 
 ## <a name="see-also"></a>関連項目
 
-[/errorReport (内部コンパイラ エラーの報告)](../../build/reference/errorreport-report-internal-compiler-errors.md)  
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)  
-[リンカー オプション](../../build/reference/linker-options.md)  
+[/errorReport (内部コンパイラ エラーを報告する)](../../build/reference/errorreport-report-internal-compiler-errors.md)
+[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
+[リンカー オプション](../../build/reference/linker-options.md)

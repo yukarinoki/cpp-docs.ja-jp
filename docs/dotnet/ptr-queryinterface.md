@@ -1,5 +1,5 @@
 ---
-title: ptr::QueryInterface |Microsoft ドキュメント
+title: ptr::QueryInterface |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: dd25661fc14cb9539d4b8e68f42c29895ce0d70e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a3416f057d32a003eba1b9776456a60d915de95
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33160967"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090141"
 ---
 # <a name="ptrqueryinterface"></a>ptr::QueryInterface
-インターフェイスの COM オブジェクトのクエリを実行し、結果を別に添付`com::ptr`です。  
+インターフェイスの所有されている COM オブジェクトのクエリを実行し、結果を別に添付`com::ptr`します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,17 +40,17 @@ void QueryInterface(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `other`  
- `com::ptr`インターフェイスを取得します。  
+*other*<br/>
+`com::ptr`インターフェイスを取得します。  
   
 ## <a name="exceptions"></a>例外  
- 内部的には、`QueryInterface`所有されている COM オブジェクトおよびすべてのエラーで呼び出される`HRESULT`で例外に変換<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>です。  
+ 内部的には、`QueryInterface`所有されている COM オブジェクトおよびすべてのエラーで呼び出される`HRESULT`で例外に変換されます<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>します。  
   
-## <a name="remarks"></a>コメント  
- このメソッドを使用すると、現在のラッパーが所有する COM オブジェクトの別のインターフェイスに対して COM ラッパーを作成できます。 このメソッドを呼び出す`QueryInterface`所有されている COM オブジェクト、COM の特定のインターフェイスへのポインターを要求を使ってオブジェクトを渡されたに返されたインターフェイス ポインターをアタッチ`com::ptr`です。  
+## <a name="remarks"></a>Remarks  
+ 現在のラッパーによって所有されている COM オブジェクトのさまざまなインターフェイスを COM ラッパーを作成するのにには、このメソッドを使用します。 このメソッドを呼び出す`QueryInterface`を介して COM オブジェクト、COM の特定のインターフェイスへのポインターを要求するオブジェクトし、を渡されるに返されるインターフェイス ポインターをアタッチします`com::ptr`します。  
   
 ## <a name="example"></a>例  
- この例を使用して CLR クラスを実装して、`com::ptr`をそのプライベート メンバーをラップする`IXMLDOMDocument`オブジェクト。 `WriteTopLevelNode`メンバー関数を使用して`QueryInterface`ローカルを入力する`com::ptr`で、`IXMLDOMNode`し渡します、 `com::ptr` (追跡参照) をノードの名前、およびテキストのプロパティをコンソールに出力するプライベート メンバー関数をします。  
+ この例の実装を使用する CLR クラス、`com::ptr`のプライベート メンバーをラップする`IXMLDOMDocument`オブジェクト。 `WriteTopLevelNode`メンバー関数を使用して`QueryInterface`ローカルを入力する`com::ptr`で、`IXMLDOMNode`し、渡します、 `com::ptr` (追跡参照) をノードの名前とテキストのプロパティをコンソールに書き込まれるプライベート メンバー関数。  
   
 ```  
 // comptr_queryinterface.cpp  
@@ -161,5 +161,5 @@ int main() {
  **Namespace** msclr::com  
   
 ## <a name="see-also"></a>関連項目  
- [ptr メンバー](../dotnet/ptr-members.md)   
+ [ptr のメンバー](../dotnet/ptr-members.md)   
  [ptr::GetInterface](../dotnet/ptr-getinterface.md)

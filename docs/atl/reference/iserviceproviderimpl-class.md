@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca7a39149969b7e85685930d6e901bf81db99d64
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ef8c497a681ae1b54ec833a048cddba29a72be7f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759402"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067594"
 ---
 # <a name="iserviceproviderimpl-class"></a>IServiceProviderImpl クラス
 
@@ -33,13 +33,13 @@ ms.locfileid: "43759402"
 ## <a name="syntax"></a>構文
 
 ```
-template <class T>  
+template <class T>
 class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 派生したクラス、`IServiceProviderImpl`します。
 
 ## <a name="members"></a>メンバー
@@ -83,14 +83,14 @@ STDMETHOD(QueryService)(
 
 ### <a name="parameters"></a>パラメーター
 
-[IN]*guidService*  
-サービス id (SID) へのポインター。
+*guidService*<br/>
+[in]サービス id (SID) へのポインター。
 
-[IN]*riid*  
-呼び出し元がアクセスできるインターフェイスの識別子です。
+*riid*<br/>
+[in]呼び出し元がアクセスできるインターフェイスの識別子です。
 
-[OUT]*ppvObj*  
-要求されたインターフェイスへの間接ポインター。
+*ppvObj*<br/>
+[out]要求されたインターフェイスへの間接ポインター。
 
 ### <a name="return-value"></a>戻り値
 

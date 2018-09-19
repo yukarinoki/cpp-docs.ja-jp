@@ -1,5 +1,5 @@
 ---
-title: 致命的なエラー C1026 |Microsoft ドキュメント
+title: 致命的なエラー C1026 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24c034d45b7f8b222471094f4580902ae1b8dc66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db9167383df48dad274ef8941defaa53f51d3bfa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198106"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068989"
 ---
 # <a name="fatal-error-c1026"></a>致命的なエラー C1026
-プログラムの解析でコンパイラ内でスタック オーバーフローが発生しました。プログラムが複雑すぎます。  
-  
- プログラムの解析に必要な領域には、コンパイラ スタック オーバーフローが発生します。  
-  
- 式の複雑さを軽減するには。  
-  
--   内の入れ子構造の減少`for`と`switch`ステートメントです。 別の関数により深く入れ子になったステートメントを配置します。  
-  
--   コンマ演算子や関数呼び出しを含む長い式に分割することです。
+
+プログラムの解析でコンパイラ内でスタック オーバーフローが発生しました。プログラムが複雑すぎます。
+
+プログラムの解析に必要な領域には、コンパイラ スタック オーバーフローが発生します。
+
+式の複雑さを軽減するには。
+
+- 内に入れ子の減少`for`と`switch`ステートメント。 別の関数より深く入れ子になったステートメントを配置します。
+
+- コンマ演算子や関数呼び出しを含む長い式を分割します。

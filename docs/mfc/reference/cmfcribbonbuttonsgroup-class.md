@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 855bc48da10e8ca4dd83cf091e155746450a33f1
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 0d9b730e9cb1ca78b5247ea09f1f24a9bb8c307c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848520"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709788"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>CMFCRibbonButtonsGroup クラス
 `CMFCRibbonButtonsGroup`クラスは、リボン ボタンのセットをグループにまとめることができます。 グループ内のすべてのボタンは互いに隣接して水平に並べられ、1 つの枠で囲まれます。  
@@ -95,7 +95,7 @@ class CMFCRibbonButtonsGroup : public CMFCRibbonBaseElement
   
  [CMFCRibbonButtonsGroup](../../mfc/reference/cmfcribbonbuttonsgroup-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxribbonbuttonsgroup.h  
   
 ##  <a name="addbutton"></a>  CMFCRibbonButtonsGroup::AddButton  
@@ -106,8 +106,8 @@ void AddButton(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pButton*  
- 追加するボタンへのポインター。  
+*pButton*<br/>
+[in]追加するボタンへのポインター。  
   
 ##  <a name="addbuttons"></a>  CMFCRibbonButtonsGroup::AddButtons  
  ボタンのリストをグループに追加します。  
@@ -118,8 +118,8 @@ void AddButtons(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lstButtons*  
- 追加するボタンへのポインターのリスト。  
+*lstButtons*<br/>
+[in]追加するボタンへのポインターのリスト。  
   
 ##  <a name="cmfcribbonbuttonsgroup"></a>  CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup  
  `CMFCRibbonButtonsGroup` オブジェクトを構築します。  
@@ -130,8 +130,8 @@ CMFCRibbonButtonsGroup(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pButton*  
- 新しく作成されたに追加するボタンを指定`CMFCRibbonButtonsGroup`オブジェクト。  
+*pButton*<br/>
+[in]新しく作成されたに追加するボタンを指定`CMFCRibbonButtonsGroup`オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -145,8 +145,8 @@ CMFCRibbonBaseElement* GetButton(int i) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*しました*  
- 返すボタンの 0 から始まるインデックス。  
+*i*<br/>
+[in]返すボタンの 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  指定したインデックス位置にあるボタンへのポインター。 指定したインデックスが範囲外の場合は NULL です。  
@@ -183,8 +183,8 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- リボン グループのデバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]リボン グループのデバイス コンテキストへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -214,17 +214,17 @@ virtual void OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター、`CMFCRibbonButtonsGroup`オブジェクト。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター、`CMFCRibbonButtonsGroup`オブジェクト。  
   
- [in]*rectImage*  
- イメージを描画する四角形。  
+*rectImage*<br/>
+[in]イメージを描画する四角形。  
   
- [in]*pButton*  
- イメージを描画するためのボタンをクリックします。  
+*pButton*<br/>
+[in]イメージを描画するためのボタンをクリックします。  
   
- [in]*nImageIndex*  
- (通常、強調表示されている、または無効になっているボタンの 3 つのイメージの配列のいずれか) のボタンを描画するイメージのインデックス。  
+*nImageIndex*<br/>
+[in](通常、強調表示されている、または無効になっているボタンの 3 つのイメージの配列のいずれか) のボタンを描画するイメージのインデックス。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -248,14 +248,14 @@ void SetImages(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pImages*  
- 通常のイメージ。  
+*pImages*<br/>
+[in]通常のイメージ。  
   
- [in]*pHotImages*  
- ホット イメージ。  
+*pHotImages*<br/>
+[in]ホット イメージ。  
   
- [in]*pDisabledImages*  
- 無効なイメージ。  
+*pDisabledImages*<br/>
+[in]無効なイメージ。  
   
 ### <a name="remarks"></a>Remarks  
  呼び出す`SetImages`ボタンをグループに追加する前にします。 イメージの数は、グループに追加するボタンの数以上である必要があります。  
@@ -271,8 +271,8 @@ virtual void SetParentCategory(CMFCRibbonCategory* pCategory);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pCategory*  
- 設定を親カテゴリへのポインター (リボン コントロールのタブ付きグループはカテゴリで呼ばれます)。  
+*pCategory*<br/>
+[in]設定を親カテゴリへのポインター (リボン コントロールのタブ付きグループはカテゴリで呼ばれます)。  
   
 ### <a name="remarks"></a>Remarks  
   

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4983984c8bf1cad2996818625091b60cdb732a9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1aecfcb493bfc35e0d6f059c296af1b358eee93f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758558"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103214"
 ---
 # <a name="cdefaultcomparetraits-class"></a>CDefaultCompareTraits クラス
 
@@ -33,13 +33,13 @@ ms.locfileid: "43758558"
 ## <a name="syntax"></a>構文
 
 ```
-template<typename T>  
+template<typename T>
 class CDefaultCompareTraits
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 コレクションに格納されるデータの型。
 
 ## <a name="members"></a>メンバー
@@ -71,10 +71,10 @@ static bool CompareElements(const T& element1, const T& element2);
 
 ### <a name="parameters"></a>パラメーター
 
-*element1*  
+*element1*<br/>
 1 番目の要素。
 
-*element2*  
+*element2*<br/>
 2 番目の要素。
 
 ### <a name="return-value"></a>戻り値
@@ -95,10 +95,10 @@ static int CompareElementsOrdered(const T& element1, const T& element2);
 
 ### <a name="parameters"></a>パラメーター
 
-*element1*  
+*element1*<br/>
 1 番目の要素。
 
-*element2*  
+*element2*<br/>
 2 番目の要素。
 
 ### <a name="return-value"></a>戻り値

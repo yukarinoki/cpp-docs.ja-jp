@@ -1,5 +1,5 @@
 ---
-title: ツールバーのボタンの移動 |Microsoft Docs
+title: ツール バー ボタン (C++) の移動 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -8,24 +8,24 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- toolbar buttons (in Toolbar editor), moving
-- Toolbar editor, moving buttons
+- toolbar buttons [C++], moving
+- Toolbar editor [C++], moving buttons
 ms.assetid: 7625f2ce-8ac4-4428-a3f8-a95bfdf6f95f
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bf80c1cae57b46b1de57b8f1d2adf62df1a89b81
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: bf8cec4505c7b981920ed8af946e668d3d0f16ca
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611768"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315718"
 ---
 # <a name="moving-a-toolbar-button"></a>ツール バー ボタンの移動
 
-### <a name="to-move-a-toolbar-button"></a>ツール バー ボタンを移動するには
+### <a name="to-move-a-toolbar-button-c"></a>ツール バー ボタン (C++) を移動するには
 
 1. **ツールバー ビュー**ウィンドウで、ツールバーの新しい位置に移動するボタンをドラッグします。
 

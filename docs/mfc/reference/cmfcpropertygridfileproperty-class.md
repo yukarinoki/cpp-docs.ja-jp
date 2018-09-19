@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79089a7457d1a3f08c58c374ae2501a48feca79d
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 82d1b4c3790f50032ac9775febf920e0e8c6c547
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42539722"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700838"
 ---
 # <a name="cmfcpropertygridfileproperty-class"></a>CMFCPropertyGridFileProperty クラス
 `CMFCPropertyGridFileProperty`クラスは、ファイルの選択 ダイアログ ボックスを開くプロパティ リスト コントロール項目をサポートしています。  
@@ -78,29 +78,29 @@ CMFCPropertyGridFileProperty(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*strName*  
- プロパティ名。  
+*strName*<br/>
+[in]プロパティ名。  
   
- [in]*bOpenFileDialog*  
- オープンする場合は True、**ファイルを開く**; ダイアログ ボックス開く場合は FALSE、**ファイルを保存** ダイアログ ボックス。  
+*bOpenFileDialog*<br/>
+[in]オープンする場合は True、**ファイルを開く**; ダイアログ ボックス開く場合は FALSE、**ファイルを保存** ダイアログ ボックス。  
   
- [in]*strFileName*  
- 初期ファイル名。  
+*strFileName*<br/>
+[in]初期ファイル名。  
   
- [in]*lpszDefExt*  
- 1 つ以上のファイル名拡張子の文字列。 既定値は、NULL です。  
+*lpszDefExt*<br/>
+[in]1 つまたは複数のファイル名拡張子の文字列。 既定値は、NULL です。  
   
- [in]*dwFlags*  
- ダイアログ ボックスのフラグ。 既定値は OFN_HIDEREADONLY と OFN_OVERWRITEPROMPT のビットごとの組み合わせ (OR) です。  
+*dwFlags*<br/>
+[in]ダイアログ ボックスのフラグ。 既定値は OFN_HIDEREADONLY と OFN_OVERWRITEPROMPT のビットごとの組み合わせ (OR) です。  
   
- [in]*lpszFilter*  
- 1 つ以上のファイル フィルターの文字列。 既定値は、NULL です。  
+*lpszFilter*<br/>
+[in]1 つまたは複数のファイル フィルターの文字列。 既定値は、NULL です。  
   
- [in]*lpszDescr*  
- プロパティ項目の説明。 既定値は、NULL です。  
+*lpszDescr*<br/>
+[in]プロパティ項目の説明。 既定値は、NULL です。  
   
- [in]*指定*  
- プロパティ項目に関連付けられたアプリケーション固有のデータ。 たとえば、32 ビット整数またはその他のデータへのポインター。 既定値は 0 です。  
+*指定*<br/>
+[in]プロパティ項目に関連付けられているアプリケーションに固有のデータ。 たとえば、32 ビット整数またはその他のデータへのポインター。 既定値は 0 です。  
   
 ### <a name="return-value"></a>戻り値  
   

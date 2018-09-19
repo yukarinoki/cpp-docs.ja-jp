@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3227 |Microsoft ドキュメント
+title: コンパイラ エラー C3227 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c4d156e70a1ac2c0b05e212ace81b8ccc32d8f2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ddf2ec945a8bdbe103631d8346641e1370eda216
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249536"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096627"
 ---
 # <a name="compiler-error-c3227"></a>コンパイラ エラー C3227
-'parameter': 'キーワード' を使用して、ジェネリック型を割り当てることはできません  
-  
- 型をインスタンス化するのには、適切なコンス トラクターが必要です。 ただし、コンパイラは、適切なコンス トラクターを使用できるようにすることはできません。  
-  
- ジェネリックではなくテンプレートを使用するには、このエラーを解決するのにまたはいくつかの方法のいずれかを使用して、型のインスタンスを作成することができます。  
-  
-## <a name="example"></a>例  
- 次の例では、C3227 を生成します。  
-  
-```  
-// C3227.cpp  
-// compile with: /clr /c  
-generic<class T> interface class ICreate {  
-   static T Create();  
-};  
-  
-generic <class T>  
-where T : ICreate<T>  
-ref class C {  
-   void f() {  
-      T t = new T;   // C3227  
-  
-      // OK  
-      T t2 = ICreate<T>::Create();  
-      T t3 = safe_cast<T>( System::Activator::CreateInstance(T::typeid) );  
-   }  
-};  
+
+'parameter': 'keyword' を使用して、ジェネリック型を割り当てることはできません
+
+型をインスタンス化するために適切なコンス トラクターが必要です。 ただし、コンパイラでは、適切なコンス トラクターが使用できることを確認することはありません。
+
+ジェネリックではなくテンプレートを使用するには、このエラーを解決するのには、またはいくつかのメソッドのいずれかを使用して、型のインスタンスを作成することができます。
+
+## <a name="example"></a>例
+
+次の例では、C3227 が生成されます。
+
+```
+// C3227.cpp
+// compile with: /clr /c
+generic<class T> interface class ICreate {
+   static T Create();
+};
+
+generic <class T>
+where T : ICreate<T>
+ref class C {
+   void f() {
+      T t = new T;   // C3227
+
+      // OK
+      T t2 = ICreate<T>::Create();
+      T t3 = safe_cast<T>( System::Activator::CreateInstance(T::typeid) );
+   }
+};
 ```

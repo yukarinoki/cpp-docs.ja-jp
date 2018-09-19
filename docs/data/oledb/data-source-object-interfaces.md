@@ -20,29 +20,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 25fca5e7e51789aceef8fb92cf48cc238a8e26fa
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e1e64d5f41950492c3c7076160e6d134f7eb62cf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195998"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099650"
 ---
 # <a name="data-source-object-interfaces"></a>データ ソース オブジェクト インターフェイス
+
 次の表では、データ ソース オブジェクトの OLE DB で定義されている必須および省略可能なインターフェイスを示します。  
   
 |Interface|必須?|OLE DB テンプレートによって実装されるでしょうか。|  
 |---------------|---------------|--------------------------------------|  
-|`IDBCreateSession`|必須|[はい]|  
-|`IDBInitialize`|必須|[はい]|  
-|`IDBProperties`|必須|[はい]|  
-|[IPersist](/windows/desktop/api/objidl/nn-objidl-ipersist)|必須|[はい]|  
+|`IDBCreateSession`|必須|はい|  
+|`IDBInitialize`|必須|はい|  
+|`IDBProperties`|必須|はい|  
+|[IPersist](/windows/desktop/api/objidl/nn-objidl-ipersist)|必須|はい|  
 |[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Optional|いいえ|  
 |`IDBDataSourceAdmin`|Optional|いいえ|  
 |`IDBInfo`|Optional|いいえ|  
 |[IPersistFile](/windows/desktop/api/objidl/nn-objidl-ipersistfile)|Optional|いいえ|  
 |`ISupportErrorInfo`|Optional|いいえ|  
   
- データ ソース オブジェクトの実装、 `IDBProperties`、 `IDBInitialize`、および`IDBCreateSession`インターフェイス継承を使用します。 継承するか、これらの実装クラスのいずれかから継承せず、追加の機能をサポートするために選択できます。 サポートする場合、`IDBDataSourceAdmin`インターフェイスから継承する必要があります、`IDBDataSourceAdminImpl`クラス。  
+データ ソース オブジェクトの実装、 `IDBProperties`、 `IDBInitialize`、および`IDBCreateSession`インターフェイス継承を使用します。 継承するか、これらの実装クラスのいずれかから継承せず、追加の機能をサポートするために選択できます。 サポートする場合、`IDBDataSourceAdmin`インターフェイスから継承する必要があります、`IDBDataSourceAdminImpl`クラス。  
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

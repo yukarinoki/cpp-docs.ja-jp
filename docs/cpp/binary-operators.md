@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b76250926ab89c14dfa26f0df3bb5571c1dae10
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 6c5ad5997657ce9f8a61383a2cd7e685f0a28751
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408817"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036554"
 ---
 # <a name="binary-operators"></a>二項演算子
 
@@ -29,7 +29,7 @@ ms.locfileid: "39408817"
 
 ## <a name="redefinable-binary-operators"></a>再定義可能な二項演算子
 
-|演算子|name|
+|演算子|名前|
 |--------------|----------|
 |**、**|コンマ|
 |**\!=**|非等値|
@@ -80,4 +80,5 @@ ms.locfileid: "39408817"
 > 二項演算子の戻り値の型に制限はありません。ただし、ほとんどのユーザー定義の二項演算子は、クラス型かクラス型への参照を返します。
 
 ## <a name="see-also"></a>関連項目
- [演算子のオーバーロード](../cpp/operator-overloading.md)
+
+[演算子のオーバーロード](../cpp/operator-overloading.md)

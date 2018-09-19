@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bbfb34d34f6bd920744621042f5f3e09143e896
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d2b70e7332c5f0a24af80ddb5cfd14a8ecf146de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751320"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025153"
 ---
 # <a name="icollectiononstlimpl-class"></a>ICollectionOnSTLImpl クラス
 
@@ -35,25 +35,25 @@ ms.locfileid: "43751320"
 ## <a name="syntax"></a>構文
 
 ```
-template <class T, class CollType, class ItemType, class CopyItem, class EnumType>  
+template <class T, class CollType, class ItemType, class CopyItem, class EnumType>
 class ICollectionOnSTLImpl : public T
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 COM コレクションのインターフェイス。
 
-*CollType*  
+*CollType*<br/>
 C++ 標準ライブラリ コンテナー クラス。
 
-*ItemType*  
+*ItemType*<br/>
 コンテナー インターフェイスによって公開される項目の種類。
 
-*CopyItem*  
+*CopyItem*<br/>
 A[コピー ポリシー クラス](../../atl/atl-copy-policy-classes.md)します。
 
-*EnumType*  
+*EnumType*<br/>
 A [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)-互換性のある列挙子クラス。
 
 ## <a name="members"></a>メンバー
@@ -111,7 +111,7 @@ STDMETHOD(getcount)(long* pcount);
 
 ### <a name="parameters"></a>パラメーター
 
-*pcount*  
+*pcount*<br/>
 [out]コレクション内の要素の数。
 
 ### <a name="return-value"></a>戻り値
@@ -128,10 +128,10 @@ STDMETHOD(get_Item)(long Index, ItemType* pvar);
 
 ### <a name="parameters"></a>パラメーター
 
-*Index*  
+*Index*<br/>
 [in]コレクション内の項目の 1 から始まるインデックス。
 
-*pvar*  
+*pvar*<br/>
 [out]対応する項目*インデックス*します。
 
 ### <a name="return-value"></a>戻り値
@@ -152,7 +152,7 @@ STDMETHOD(get__NewEnum)(IUnknown** ppUnk);
 
 ### <a name="parameters"></a>パラメーター
 
-*ppUnk*  
+*ppUnk*<br/>
 [out]**IUnknown**新しく作成された列挙子オブジェクトのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -173,5 +173,5 @@ CollType m_coll;
 
 ## <a name="see-also"></a>関連項目
 
-[ATLCollections サンプル](../../visual-cpp-samples.md)   
+[ATLCollections サンプル](../../visual-cpp-samples.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

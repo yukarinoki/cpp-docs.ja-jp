@@ -1,5 +1,5 @@
 ---
-title: concurrent_priority_queue クラス |Microsoft ドキュメント
+title: concurrent_priority_queue クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed193eea8209611640b6d125d79ffec1748a7f7f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d52598f5ef987ce05eb664c6d3ef24ab86e002d0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693667"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096152"
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue クラス
 `concurrent_priority_queue` クラスは、複数のスレッドが項目を同時にプッシュおよびポップできるようにするコンテナーです。 項目は優先順位の順にポップされます。この優先順位は、テンプレート引数として指定されたファンクタによって決まります。  
@@ -46,14 +46,14 @@ template <typename T,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `T`  
- 優先度のキューに格納される要素のデータ型。  
+*T*<br/>
+優先順位キューに格納される要素のデータ型。  
   
- `_Compare`  
- 優先順位キュー内の相対順序を決定する並べ替えキーとして 2 つの要素値を比較できる関数オブジェクトの型。 この引数は省略可能であり、既定値は二項述語 `less<T>` です。  
+*_Compare*<br/>
+優先順位キューでは、次の相対順序を決定する並べ替えキーとして 2 つの要素の値を比較できる関数オブジェクトの型。 この引数は省略可能であり、既定値は二項述語 `less<T>` です。  
   
- `_Ax`  
- 割り当てと同時実行の優先順位キュー用のメモリの解放に関する詳細をカプセル化する格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値は `allocator<T>` です。  
+*_Ax*<br/>
+割り当てと、同時実行の優先順位キューのメモリの解放に関する詳細をカプセル化する格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値は `allocator<T>` です。  
   
 ## <a name="members"></a>メンバー  
   
@@ -62,7 +62,7 @@ template <typename T,
 |名前|説明|  
 |----------|-----------------|  
 |`allocator_type`|同時実行の優先順位キューのアロケーター クラスを表す型。|  
-|`const_reference`|同時実行の優先順位キューに格納されている型の要素への const 参照を表しますする型。|  
+|`const_reference`|同時実行の優先順位キューに格納されている型の要素への const 参照を表す型。|  
 |`reference`|同時実行の優先順位キューに格納されている型の要素への参照を表す型。|  
 |`size_type`|同時実行の優先順位キュー内の要素の数をカウントする型。|  
 |`value_type`|同時実行の優先順位キューに格納されているデータ型を表す型。|  
@@ -79,11 +79,11 @@ template <typename T,
 |----------|-----------------|  
 |[clear](#clear)|同時実行の優先度のすべての要素を消去します。 このメソッドは同時実行セーフではありません。|  
 |[empty](#empty)|テスト時に、同時実行の優先順位キューが空の場合、このメソッドが呼び出されます。 このメソッドは同時実行セーフです。|  
-|[get_allocator](#get_allocator)|同時実行の優先キューを構築するために使用されるアロケーターのコピーを返します。 このメソッドは同時実行セーフです。|  
+|[get_allocator](#get_allocator)|同時実行の優先順位キューの構築に使用するアロケーターのコピーを返します。 このメソッドは同時実行セーフです。|  
 |[push](#push)|オーバーロードされます。 同時実行の優先順位キューに要素を追加します。 このメソッドは同時実行セーフです。|  
 |[size](#size)|同時実行の優先順位キュー内の要素の数を返します。 このメソッドは同時実行セーフです。|  
 |[swap](#swap)|2 つの同時実行の優先順位キューの内容を交換します。 このメソッドは同時実行セーフではありません。|  
-|[try_pop](#try_pop)|削除し、キューが空でない場合、キューから最高の優先度要素を返します。 このメソッドは同時実行セーフです。|  
+|[try_pop](#try_pop)|削除し、キューが空でない場合は、キューから最高の優先順位の要素を返します。 このメソッドは同時実行セーフです。|  
   
 ### <a name="public-operators"></a>パブリック演算子  
   
@@ -91,8 +91,8 @@ template <typename T,
 |----------|-----------------|  
 |[operator=](#operator_eq)|オーバーロードされます。 別の `concurrent_priority_queue` オブジェクトの内容をこのオブジェクトに割り当てます。 このメソッドは同時実行セーフではありません。|  
   
-## <a name="remarks"></a>コメント  
- 詳細については、`concurrent_priority_queue`クラスを参照してください[並列コンテナーと並列オブジェクト](../../../parallel/concrt/parallel-containers-and-objects.md)です。  
+## <a name="remarks"></a>Remarks  
+ 詳細については、`concurrent_priority_queue`クラスを参照してください[並列コンテナーとオブジェクト](../../../parallel/concrt/parallel-containers-and-objects.md)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `concurrent_priority_queue`  
@@ -110,8 +110,8 @@ template <typename T,
 void clear();
 ```  
   
-### <a name="remarks"></a>コメント  
- `clear` 同時実行セーフではありません。 他のスレッドがメソッドを呼び出していない同時実行の優先順位キューにこのメソッドを呼び出すとを確認する必要があります。 `clear` メモリを解放しません。  
+### <a name="remarks"></a>Remarks  
+ `clear` 同時実行セーフではありません。 他のスレッドがメソッドを呼び出していない、同時実行の優先順位キューにこのメソッドを呼び出すとすることを確認する必要があります。 `clear` メモリを解放しません。  
   
 ##  <a name="ctor"></a> concurrent_priority_queue 
 
@@ -146,36 +146,36 @@ concurrent_priority_queue(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_InputIterator`  
- 入力反復子の型。  
+*_InputIterator*<br/>
+入力反復子の型。  
   
- `_Al`  
- このオブジェクトに対して使用するアロケーター クラス。  
+*_Al*<br/>
+このオブジェクトに対して使用するアロケーター クラス。  
   
- `_Init_capacity`  
- `concurrent_priority_queue` オブジェクトの初期容量。  
+*_Init_capacity*<br/>
+`concurrent_priority_queue` オブジェクトの初期容量。  
   
- `_Begin`  
- コピーする要素範囲内の最初の要素の位置。  
+*開始 (_b)*<br/>
+コピーする要素範囲内の最初の要素の位置。  
   
- `_End`  
- コピーする要素範囲を超える最初の要素の位置。  
+*(_E)*<br/>
+コピーする要素範囲を超える最初の要素の位置。  
   
- `_Src`  
- 要素のコピー元または移動元の `concurrent_priority_queue` オブジェクト。  
+*_Src*<br/>
+要素のコピー元または移動元の `concurrent_priority_queue` オブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  すべてのコンス トラクターは、アロケーター オブジェクトを格納`_Al`優先順位キューを初期化します。  
   
- 最初のコンス トラクターは、空の初期優先キューを指定し、必要に応じてのアロケーターを指定します。  
+ 最初のコンス トラクターは、空の初期の優先順位キューを指定し、アロケーターを指定します。  
   
- 2 番目のコンス トラクターは、初期容量を持つ優先キューを指定する`_Init_capacity`オプションでのアロケーターを指定します。  
+ 2 番目のコンス トラクターは、初期容量を使用した優先順位キューを指定します`_Init_capacity`し必要に応じて、アロケーターを指定します。  
   
- 3 番目のコンス トラクターは、反復子の範囲で指定された値を指定する [ `_Begin`、 `_End`) し、必要に応じてのアロケーターを指定します。  
+ 3 番目のコンス トラクターは、反復子の範囲で指定された値を指定する [ `_Begin`、 `_End`) し、必要に応じて、アロケーターを指定します。  
   
- 4 番目と 5 番目のコンス トラクターは、優先順位キューのコピーを指定`_Src`です。  
+ 4 番目と 5 番目のコンス トラクターは、優先順位キューのコピーを指定`_Src`します。  
   
- 6 番目と 7 番目のコンス トラクターは、優先順位キューの移動を指定`_Src`です。  
+ 6 番目と 7 番目のコンス トラクターは、優先順位キューの移動を指定`_Src`します。  
   
 ##  <a name="empty"></a> 空 
 
@@ -190,14 +190,14 @@ bool empty() const;
   
 ##  <a name="get_allocator"></a> get_allocator 
 
- 同時実行の優先キューを構築するために使用されるアロケーターのコピーを返します。 このメソッドは同時実行セーフです。  
+ 同時実行の優先順位キューの構築に使用するアロケーターのコピーを返します。 このメソッドは同時実行セーフです。  
   
 ```
 allocator_type get_allocator() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 構築するために使用されるアロケーターのコピー、`concurrent_priority_queue`オブジェクト。  
+ 構築に使用するアロケーターのコピー、`concurrent_priority_queue`オブジェクト。  
   
 ##  <a name="operator_eq"></a> 演算子 = 
 
@@ -210,8 +210,8 @@ concurrent_priority_queue& operator= (concurrent_priority_queue&& _Src);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Src`  
- ソース `concurrent_priority_queue` オブジェクト。  
+*_Src*<br/>
+ソース `concurrent_priority_queue` オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  この `concurrent_priority_queue` オブジェクトへの参照。  
@@ -227,8 +227,8 @@ void push(value_type&& _Elem);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Elem`  
- 同時実行の優先順位キューに追加する要素。  
+*_Elem*<br/>
+同時実行の優先順位キューに追加する要素。  
   
 ##  <a name="size"></a> サイズ 
 
@@ -241,8 +241,8 @@ size_type size() const;
 ### <a name="return-value"></a>戻り値  
  この要素の数`concurrent_priority_queue`オブジェクト。  
   
-### <a name="remarks"></a>コメント  
- 返されるサイズが、関数への呼び出しによって追加されたすべての要素を含めることが保証`push`です。 ただし、保留中の同時実行操作の結果は反映されません可能性があります。  
+### <a name="remarks"></a>Remarks  
+ 返されるサイズ、関数の呼び出しによって追加されたすべての要素を含めることが保証されます`push`します。 ただし、保留中の同時実行操作の結果は反映されません可能性があります。  
   
 ##  <a name="swap"></a> スワップ 
 
@@ -253,20 +253,20 @@ void swap(concurrent_priority_queue& _Queue);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Queue`  
- `concurrent_priority_queue`でコンテンツを交換するオブジェクト。  
+*_Fronty*<br/>
+`concurrent_priority_queue`コンテンツを交換するオブジェクト。  
   
 ##  <a name="try_pop"></a> try_pop 
 
- 削除し、キューが空でない場合、キューから最高の優先度要素を返します。 このメソッドは同時実行セーフです。  
+ 削除し、キューが空でない場合は、キューから最高の優先順位の要素を返します。 このメソッドは同時実行セーフです。  
   
 ```
 bool try_pop(reference _Elem);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Elem`  
- キューが空でない場合に、最高の優先順位の要素に取り込まれる変数への参照。  
+*_Elem*<br/>
+キューが空でない場合に、最高の優先順位の要素で設定される変数への参照。  
   
 ### <a name="return-value"></a>戻り値  
  `true` 値がポップされ場合、`false`それ以外の場合。  

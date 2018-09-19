@@ -1,5 +1,5 @@
 ---
-title: マクロを定義する場所 |Microsoft ドキュメント
+title: マクロを定義する where |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cf3e87a50362c770d45f00c4dc17ac3d264f611
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 29a2899d7dba0b34c0ac3319c253c8056912d883
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380915"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713818"
 ---
 # <a name="where-to-define-macros"></a>マクロを定義する場所
-コマンドライン、コマンド ファイル、メイクファイルでも tools.ini マクロを定義します。  
-  
- メイクファイルまたは Tools.ini ファイルでは、各マクロ定義は個別の行に表示する必要があり、スペースまたはタブで始めることはできません。スペースや、等号の隣のタブは無視されます。 すべて[文字の文字列](../build/defining-an-nmake-macro.md)リテラルを囲む引用符と埋め込み型スペースなどです。  
-  
- コマンドラインまたはコマンド ファイルは、引数を区切るスペースとタブと、等号 (=) を囲むことはできません。 場合`string`スペースまたはタブが埋め込まれる、文字列自体または全体のマクロのいずれかを二重引用符で囲みます ("") です。  
-  
-## <a name="see-also"></a>関連項目  
- [NMAKE マクロの定義](../build/defining-an-nmake-macro.md)
+
+コマンドライン、コマンド ファイル、メイクファイルでまたは tools.ini マクロを定義します。
+
+メイクファイルまたは Tools.ini ファイルでは、各マクロ定義が別々 の行に表示する必要があり、スペースまたはタブで始めることはできません。スペースや等号 (=) の周囲のタブは無視されます。 すべて[文字の文字列](../build/defining-an-nmake-macro.md)リテラルを囲む引用符と埋め込み型スペースなどです。
+
+コマンド ファイルまたはコマンドラインで引数を区切るスペースとタブと、等号 (=) で囲むことはできません。 場合`string`スペースまたはタブが埋め込まれて、文字列自体または全体のマクロのいずれかを二重引用符で囲みます ("")。
+
+## <a name="see-also"></a>関連項目
+
+[NMAKE マクロの定義](../build/defining-an-nmake-macro.md)

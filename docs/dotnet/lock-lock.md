@@ -1,5 +1,5 @@
 ---
-title: lock::lock |Microsoft ドキュメント
+title: lock::lock |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: df35eed8711e83174316ac9912f7ba535ef9ebf9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 128a86b59ebf43ab87b0f4f4bcb7e9c684e4ad07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33135028"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051824"
 ---
 # <a name="locklock"></a>lock::lock
-構築、`lock`オブジェクト、必要に応じて、指定された時間、またはまったく恒久的に、ロックの取得を待機しています。  
+構築、`lock`必要に応じて一定の時間、またはすべてではなく、永久にロックの取得を待機しているオブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
@@ -51,26 +51,26 @@ template<class T> lock(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `_object`  
- ロックするオブジェクト。  
+*(_o)*<br/>
+ロックするオブジェクト。  
   
- `_timeout`  
- タイムアウト値 (ミリ秒単位) として、<xref:System.TimeSpan>です。  
+*タイムアウト _t*<br/>
+タイムアウト値 (ミリ秒単位) またはとして、<xref:System.TimeSpan>します。  
   
 ## <a name="exceptions"></a>例外  
- スロー<xref:System.ApplicationException>ロックの取得がタイムアウトする前に発生しない場合。  
+ スロー<xref:System.ApplicationException>ロック取得がタイムアウトする前に発生しない場合。  
   
-## <a name="remarks"></a>コメント  
- コンス トラクターの最初の 3 つのフォームに対するロックの取得しようとしました。 `_object` 、指定されたタイムアウト期間内 (または<xref:System.Threading.Timeout.Infinite>が指定されない場合)。  
+## <a name="remarks"></a>Remarks  
+ コンス トラクターの最初の 3 つのロックを取得しようとしました。 `_object` 、指定されたタイムアウト期間内 (または<xref:System.Threading.Timeout.Infinite>が指定されない場合)。  
   
- コンス トラクターの 4 番目の形式でのロックを取得しない`_object`です。 `lock_later` メンバーである、 [lock_when 列挙](../dotnet/lock-when-enum.md)です。 使用して[lock::acquire](../dotnet/lock-acquire.md)または[lock::try_acquire](../dotnet/lock-try-acquire.md)ここでは、ロックを取得します。  
+ コンス トラクターの 4 番目のフォームでのロックを取得しない`_object`します。 `lock_later` メンバーである、 [lock_when 列挙](../dotnet/lock-when-enum.md)します。 使用[lock::acquire](../dotnet/lock-acquire.md)または[lock::try_acquire](../dotnet/lock-try-acquire.md)ここで、ロックを取得します。  
   
  デストラクターが呼び出されたときに、ロックが自動的に解放されます。  
   
  `_object` として <xref:System.Threading.ReaderWriterLock> を使用することはできません。  場合は、コンパイラ エラーが発生します。  
   
 ## <a name="example"></a>例  
- この例では、複数のスレッド間でクラスの 1 つのインスタンスで使用します。  クラスは、その内部データへのアクセスがスレッドごとに一貫していることを確認するのに自体に対するロックを使用します。  メイン アプリケーション スレッドは、ワーカー スレッドがまだ存在していて、そのタスクを完了したすべてのワーカー スレッドまで終了を待機を定期的に確認するクラスの同じインスタンスでロックを使用します。  
+ この例では、複数のスレッド クラスの 1 つのインスタンスを使用します。  クラスでは、その内部データへのアクセスがスレッドごとに一貫性のあることを確認するのに自体に対するロックを使用します。  メイン アプリケーション スレッドは、すべてのワーカー スレッドがまだ存在していて、そのタスクが完了するまでのすべてのワーカー スレッドの終了を待機を定期的に確認するクラスの同じインスタンスでロックを使用します。  
   
 ```  
 // msl_lock_lock.cpp  

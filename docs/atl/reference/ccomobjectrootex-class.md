@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5dcaa927bc9fe38ca45cf938a20cf08713ecff1d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f24cf6cce5cdf268367f547e8a536dcdae7cc859
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755515"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098954"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx クラス
 
@@ -44,13 +44,13 @@ ms.locfileid: "43755515"
 ## <a name="syntax"></a>構文
 
 ```
-template<class ThreadModel>  
+template<class ThreadModel>
 class CComObjectRootEx : public CComObjectRootBase
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*表*  
+*表*<br/>
 目的のスレッド処理モデルのメソッドとして実装するクラスです。 スレッド処理モデルを設定して明示的に選択できます*表*に[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)、 [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)、または[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)します。 設定して、サーバーの既定のスレッド モデルをそのまま使用できる*表*に[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)または[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)します。  
 
 ## <a name="members"></a>メンバー
@@ -205,16 +205,16 @@ static HRESULT InternalQueryInterface(
 
 ### <a name="parameters"></a>パラメーター
 
-*pThis*  
+*pThis*<br/>
 [in]COM に公開されるインターフェイスのマップを格納しているオブジェクトへのポインター`QueryInterface`します。
 
-*pEntries*  
+*pEntries*<br/>
 [in]ポインター、`_ATL_INTMAP_ENTRY`使用可能なインターフェイスのマップにアクセスする構造体。
 
-*iid*  
+*iid*<br/>
 [in]要求されているインターフェイスの GUID です。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]指定されたインターフェイス ポインターへのポインター *iid*インターフェイスが見つからない場合は null です。
 
 ### <a name="return-value"></a>戻り値
@@ -308,7 +308,7 @@ static void WINAPI ObjectMain(bool bStarting);
 
 ### <a name="parameters"></a>パラメーター
 
-*bStarting*  
+*bStarting*<br/>
 [out]値が TRUE の場合は、クラス初期化しています。それ以外の場合は FALSE です。
 
 ### <a name="remarks"></a>Remarks
@@ -343,10 +343,10 @@ HRESULT OuterQueryInterface(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>パラメーター
 
-*iid*  
+*iid*<br/>
 [in]要求されているインターフェイスの GUID です。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]指定されたインターフェイス ポインターへのポインター *iid*集計は、インターフェイスをサポートしていない場合は null です。
 
 ### <a name="return-value"></a>戻り値
@@ -381,7 +381,7 @@ void Unlock();
 
 ## <a name="see-also"></a>関連項目
 
-[CComAggObject クラス](../../atl/reference/ccomaggobject-class.md)   
-[CComObject クラス](../../atl/reference/ccomobject-class.md)   
-[CComPolyObject クラス](../../atl/reference/ccompolyobject-class.md)   
+[CComAggObject クラス](../../atl/reference/ccomaggobject-class.md)<br/>
+[CComObject クラス](../../atl/reference/ccomobject-class.md)<br/>
+[CComPolyObject クラス](../../atl/reference/ccompolyobject-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

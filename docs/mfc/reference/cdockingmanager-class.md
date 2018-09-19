@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08b8aa623f79c32303a0d5fb84c9b865bff918d9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 2ddfeb41f9036e783fbf2b303a796fddf48405c9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43683578"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701793"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager クラス
 メイン フレーム ウィンドウのドッキング レイアウトを制御するコア機能を実装します。  
@@ -320,11 +320,11 @@ BOOL AddDockSite(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*情報*  
- 含む情報構造体への参照はドッキング ペインの配置です。  
+*情報*<br/>
+[in]含む情報構造体への参照はドッキング ペインの配置です。  
   
- [out]*ppDockBar*  
- 新しいドッキング ペインへのポインターへのポインター。  
+*ppDockBar*<br/>
+[out]新しいドッキング ペインへのポインターへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  ドッキング ウィンドウが正常に作成された場合は TRUE。FALSE それ以外の場合。  
@@ -337,8 +337,8 @@ void AddHiddenMDITabbedBar(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pBar*  
- バーへのポインターのウィンドウ  
+*pBar*<br/>
+[in]バーへのポインターのウィンドウ  
   
 ##  <a name="addpane"></a>  CDockingManager::AddPane  
  ペインをドッキング マネージャーに登録します。  
@@ -352,17 +352,17 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力、出力]*我が物*  
- ドッキング マネージャーに追加するウィンドウを指定します。  
+*我が物*<br/>
+[入力、出力]ドッキング マネージャーに追加するウィンドウを指定します。  
   
- [in]*bTail*  
- ペインの一覧の末尾に、ドッキング マネージャーに、ウィンドウを追加する場合は TRUEそれ以外の場合、FALSE です。  
+*bTail*<br/>
+[in]ペインの一覧の末尾に、ドッキング マネージャーに、ウィンドウを追加する場合は TRUEそれ以外の場合、FALSE です。  
   
- [in]*bAutoHide*  
- 内部使用のみ。 常に既定値 FALSE を使用します。  
+*bAutoHide*<br/>
+[in]内部使用のみです。 常に既定値 FALSE を使用します。  
   
- [in]*bInsertForOuterEdge*  
- 内部使用のみ。 常に既定値 FALSE を使用します。  
+*bInsertForOuterEdge*<br/>
+[in]内部使用のみです。 常に既定値 FALSE を使用します。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合、ウィンドウはドッキング マネージャーに正常に登録されましたそれ以外の場合、FALSE です。  
@@ -378,8 +378,8 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*hdwp*  
- 遅延のウィンドウの位置の構造体を指定します。 詳細については、次を参照してください。[データ型の Windows](/windows/desktop/WinProg/windows-data-types)します。  
+*hdwp*<br/>
+[in]遅延のウィンドウの位置の構造体を指定します。 詳細については、次を参照してください。[データ型の Windows](/windows/desktop/WinProg/windows-data-types)します。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -391,8 +391,8 @@ virtual BOOL AddMiniFrame(CPaneFrameWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*我が物*  
- フレームへのポインター。  
+*我が物*<br/>
+[in]フレームへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  フレームがミニフレームの一覧にないし、正常に追加された場合は TRUE。FALSE それ以外の場合。  
@@ -416,11 +416,11 @@ virtual BOOL AdjustRectToClientArea(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*rectResult*  
- 参照を`CRect`オブジェクト  
+*rectResult*<br/>
+[in]参照を`CRect`オブジェクト  
   
- [in]*場合*  
- 配置、`CRect`オブジェクト  
+*場合*<br/>
+[in]配置、`CRect`オブジェクト  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合の配置、`CRect`オブジェクトが調整されました。FALSE それ以外の場合。  
@@ -446,11 +446,11 @@ void AlignAutoHidePane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDefaultSlider*  
- ドッキングのスライダー ペイン。  
+*pDefaultSlider*<br/>
+[in]ドッキングのスライダー ペイン。  
   
- [in]*bIsVisible*  
- ドッキング ペインを表示する場合は TRUE。FALSE それ以外の場合。  
+*bIsVisible*<br/>
+[in]ドッキング ペインを表示する場合は TRUE。FALSE それ以外の場合。  
   
 ##  <a name="autohidepane"></a>  CDockingManager::AutoHidePane  
  自動的に隠すツールバーを作成します。  
@@ -462,11 +462,11 @@ CMFCAutoHideToolBar* AutoHidePane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pBar*  
- バーへのポインターのウィンドウ。  
+*pBar*<br/>
+[in]バーへのポインターのウィンドウ。  
   
- [in]*pCurrAutoHideToolBar*  
- 自動へのポインターには、ツールバーが非表示にします。  
+*pCurrAutoHideToolBar*<br/>
+[in]自動へのポインターには、ツールバーが非表示にします。  
   
 ### <a name="return-value"></a>戻り値  
  自動ツールバーを非表示にする場合は NULL は作成されませんでした。それ以外の場合、新しいツールバーへのポインター。  
@@ -481,11 +481,11 @@ void BringBarsToTop(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*場合*  
- 他のウィンドウの一番上に置かれるドッキング バーの配置です。  
+*場合*<br/>
+[in]他のウィンドウの一番上に置かれるドッキング バーの配置です。  
   
- [in]*bExcludeDockedBars*  
- 一番上にからドッキング バーを除外する場合は TRUEそれ以外の場合は FALSE です。  
+*bExcludeDockedBars*<br/>
+[in]一番上にからドッキング バーを除外する場合は TRUEそれ以外の場合は FALSE です。  
   
 ##  <a name="buildpanesmenu"></a>  CDockingManager::BuildPanesMenu  
  メニューには、ドッキング ペインおよびツールバーの名前を追加します。  
@@ -497,11 +497,11 @@ void BuildPanesMenu(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*メニュー*  
- ドッキング ペインおよびツールバーの名前を追加するメニュー。  
+*メニュー*<br/>
+[in]ドッキング ペインおよびツールバーの名前を追加するメニュー。  
   
- [in]*bToolbarsOnly*  
- メニューにのみツールバー名を追加する場合は TRUEFALSE それ以外の場合。  
+*bToolbarsOnly*<br/>
+[in]メニューにのみツールバー名を追加する場合は TRUEFALSE それ以外の場合。  
   
 ##  <a name="calcexpecteddockedrect"></a>  CDockingManager::CalcExpectedDockedRect  
  ドッキング ウィンドウの予想される四角形を計算します。  
@@ -516,20 +516,20 @@ void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*我が物*  
- ドッキングするウィンドウへのポインター。  
+*我が物*<br/>
+[in]ドッキングするウィンドウへのポインター。  
   
- [in]*ptMouse*  
- マウスの位置。  
+*ptMouse*<br/>
+[in]マウスの位置。  
   
- [out]*rectResult*  
- 計算される四角形。  
+*rectResult*<br/>
+[out]計算される四角形。  
   
- [in]*bDrawTab*  
- タブを描画する場合は Trueそれ以外の場合は FALSE です。  
+*bDrawTab*<br/>
+[in]タブを描画する場合は Trueそれ以外の場合は FALSE です。  
   
- [out]*ppTargetBar*  
- [ターゲット] ウィンドウへのポインターへのポインター。  
+*ppTargetBar*<br/>
+[out][ターゲット] ウィンドウへのポインターへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、ウィンドウがユーザーによって指定されたポイントに、ウィンドウをドラッグした場合に使用される四角形を計算*ptMouse*し、そこにドッキングします。  
@@ -542,8 +542,8 @@ BOOL Create(CFrameWnd* pParentWnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pParentWnd*  
- ドッキングのマネージャーの親フレームへのポインター。 この値は、NULL は指定できません。  
+*pParentWnd*<br/>
+[in]ドッキングのマネージャーの親フレームへのポインター。 この値は、NULL は指定できません。  
   
 ### <a name="return-value"></a>戻り値  
  常に true を設定します。  
@@ -562,23 +562,23 @@ virtual AFX_CS_STATUS DeterminePaneAndStatus(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pt*  
- 確認するウィンドウの場所。  
+*pt*<br/>
+[in]確認するウィンドウの場所。  
   
- [in]*nSensitivity*  
- チェックされている各ウィンドウのウィンドウの四角形を増加する値。 ペインは、この増加のリージョンでの指定したポイントがある場合に、検索条件を満たします。  
+*nSensitivity*<br/>
+[in]チェックされている各ウィンドウのウィンドウの四角形を増加する値。 ペインは、この増加のリージョンでの指定したポイントがある場合に、検索条件を満たします。  
   
- [in]*dwEnabledAlignment*  
- ドッキング ウィンドウの配置です。  
+*dwEnabledAlignment*<br/>
+[in]ドッキング ウィンドウの配置です。  
   
- [out]*ppTargetBar*  
- [ターゲット] ウィンドウへのポインターへのポインター。  
+*ppTargetBar*<br/>
+[out][ターゲット] ウィンドウへのポインターへのポインター。  
   
- [in]*pBarToIgnore*  
- このウィンドウは、メソッドは無視します。  
+*pBarToIgnore*<br/>
+[in]このウィンドウは、メソッドは無視します。  
   
- [in]*pBarToDock*  
- このウィンドウがドッキングされています。  
+*pBarToDock*<br/>
+[in]このウィンドウがドッキングされています。  
   
 ### <a name="return-value"></a>戻り値  
  ドッキング状態です。  
@@ -601,8 +601,8 @@ void DisableRestoreDockState(BOOL bDisable = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bDisable*  
- レジストリからのドッキング レイアウトの読み込みを無効にする場合は Trueそれ以外の場合、FALSE です。  
+*bDisable*<br/>
+[in]レジストリからのドッキング レイアウトの読み込みを無効にする場合は Trueそれ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドを呼び出すアプリケーションの状態の読み込み時に、ドッキング ペインおよびツールバーの現在のレイアウトを維持する必要があります。  
@@ -618,14 +618,14 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pBar*  
- バーへのポインターにドッキングするウィンドウ。  
+*pBar*<br/>
+[in]バーへのポインターにドッキングするウィンドウ。  
   
- [in]*辺*  
- ドッキングするのには、バーの id。  
+*辺*<br/>
+[in]ドッキングするのには、バーの id。  
   
- [in]*lpRect*  
- 先の四角形。  
+*lpRect*<br/>
+[in]先の四角形。  
   
 ##  <a name="dockpaneleftof"></a>  CDockingManager::DockPaneLeftOf  
  ペインを別のペインの左側にドッキングします。  
@@ -637,11 +637,11 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pBarToDock*  
- 左側にドッキングするウィンドウへのポインター *pTargetBar*します。  
+*pBarToDock*<br/>
+[in]左側にドッキングするウィンドウへのポインター *pTargetBar*します。  
   
- [in]*pTargetBar*  
- [ターゲット] ウィンドウへのポインター。  
+*pTargetBar*<br/>
+[in][ターゲット] ウィンドウへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  ウィンドウが正常にドッキングされている場合は TRUE。それ以外の場合、FALSE です。  
@@ -654,8 +654,8 @@ BOOL EnableAutoHidePanes(DWORD dwStyle);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*dwStyle*  
- ドッキングの配置。  
+*dwStyle*<br/>
+[in]ドッキングの配置。  
   
 ### <a name="return-value"></a>戻り値  
  ドッキング ウィンドウが正常に作成された場合は TRUE。FALSE それ以外の場合。  
@@ -668,8 +668,8 @@ BOOL EnableDocking(DWORD dwStyle);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*dwStyle*  
- ドッキングの配置。  
+*dwStyle*<br/>
+[in]ドッキングの配置。  
   
 ### <a name="return-value"></a>戻り値  
  ドッキング ウィンドウが正常に作成された場合は TRUE。FALSE それ以外の場合。  
@@ -682,8 +682,8 @@ static void EnableDockSiteMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- ドッキング サイトのメニューを有効にする場合は TRUEそれ以外の場合、FALSE です。  
+*bEnable*<br/>
+[in]ドッキング サイトのメニューを有効にする場合は TRUEそれ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
  ドッキング サイトのメニューには、ウィンドウのドッキング状態を変更するために、次のオプションが表示されます。  
@@ -710,17 +710,17 @@ void EnablePaneContextMenu(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- ライブラリは、自動のコンテキスト メニューのサポートをオンに TRUE の場合、FALSE の場合、ライブラリは、自動のコンテキスト メニューのサポートをオフにします。  
+*bEnable*<br/>
+[in]ライブラリは、自動のコンテキスト メニューのサポートをオンに TRUE の場合、FALSE の場合、ライブラリは、自動のコンテキスト メニューのサポートをオフにします。  
   
- [in]*uiCustomizeCmd*  
- コマンド id を**カスタマイズ**メニュー項目。  
+*uiCustomizeCmd*<br/>
+[in]コマンド id を**カスタマイズ**メニュー項目。  
   
- [in]*strCustomizeText*  
- テキスト、**カスタマイズ**項目。  
+*strCustomizeText*<br/>
+[in]テキスト、**カスタマイズ**項目。  
   
- [in]*bToolbarsOnly*  
- TRUE の場合、メニューがアプリケーション ツールバーの一覧のみを表示しますFALSE の場合、ライブラリは、アプリケーションのドッキング ペインをこの一覧に追加します。  
+*bToolbarsOnly*<br/>
+[in]TRUE の場合、メニューがアプリケーション ツールバーの一覧のみを表示しますFALSE の場合、ライブラリは、アプリケーションのドッキング ペインをこの一覧に追加します。  
   
 ##  <a name="finddocksite"></a>  CDockingManager::FindDockSite  
  バーを取得します。 指定した位置にあると、指定された配置を持つウィンドウです。  
@@ -732,11 +732,11 @@ virtual CDockSite* FindDockSite(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*場合*  
- バーの配置ウィンドウ。  
+*場合*<br/>
+[in]バーの配置ウィンドウ。  
   
- [in]*bOuter*  
- TRUE の場合は、コントロール バーの一覧で、ヘッドの位置にあるバーを取得します。 それ以外の場合、コントロール バーのリストの末尾位置にあるバーを取得します。  
+*bOuter*<br/>
+[in]TRUE の場合は、コントロール バーの一覧で、ヘッドの位置にあるバーを取得します。 それ以外の場合、コントロール バーのリストの末尾位置にあるバーを取得します。  
   
 ### <a name="return-value"></a>戻り値  
  指定した位置が; ドッキング ペインそれ以外の場合は NULL です。  
@@ -751,11 +751,11 @@ virtual CBasePane* FindPaneByID(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uBarID*  
- 検索する、ウィンドウのコントロール ID を指定します。  
+*uBarID*<br/>
+[in]検索する、ウィンドウのコントロール ID を指定します。  
   
- [in]*bSearchMiniFrames*  
- すべての浮動ペインを検索に含めるには TRUE です。 ドッキング ペインのみを含める場合は FALSE。  
+*bSearchMiniFrames*<br/>
+[in]すべての浮動ペインを検索に含めるには TRUE です。 ドッキング ペインのみを含める場合は FALSE。  
   
 ### <a name="return-value"></a>戻り値  
  [CBasePane](../../mfc/reference/cbasepane-class.md)を指定したウィンドウが見つからない場合は、指定したコントロール ID、または NULL を持つオブジェクト。  
@@ -770,8 +770,8 @@ virtual CDockSite* FindDockSiteByPane(CPane* pTargetBar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pTargetBar*  
- バーの [ターゲット] ウィンドウへのポインター。  
+*pTargetBar*<br/>
+[in]バーの [ターゲット] ウィンドウへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  バー ターゲット バー ペインの id を持つウィンドウバー ウィンドウなどが存在しない場合は NULL です。  
@@ -797,14 +797,14 @@ virtual CPaneFrameWnd* FrameFromPoint(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pt*  
- 確認の画面座標で、ポイントを指定します。  
+*pt*<br/>
+[in]確認の画面座標で、ポイントを指定します。  
   
- [in]*pFrameToExclude*  
- 除外するフレームへのポインター。  
+*pFrameToExclude*<br/>
+[in]除外するフレームへのポインター。  
   
- [in]*bFloatMultiOnly*  
- インスタンスではないするフレームを除外する場合は True `CMultiPaneFrameWnd`;FALSE それ以外の場合。  
+*bFloatMultiOnly*<br/>
+[in]インスタンスではないするフレームを除外する場合は True `CMultiPaneFrameWnd`;FALSE それ以外の場合。  
   
 ### <a name="return-value"></a>戻り値  
  特定のポイントでは; を含むフレームそれ以外の場合は NULL です。  
@@ -819,8 +819,8 @@ void GetClientAreaBounds(CRect& rcClient);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*rcClient*  
- クライアント領域の境界を含む四角形への参照。  
+*rcClient*<br/>
+[out]クライアント領域の境界を含む四角形への参照。  
   
 ### <a name="return-value"></a>戻り値  
  クライアント領域の境界を含む四角形。  
@@ -899,17 +899,17 @@ void GetPaneList(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力、出力]*lstBars*  
- 現在、ドッキング マネージャーのすべてのペインが含まれています。  
+*lstBars*<br/>
+[入力、出力]現在、ドッキング マネージャーのすべてのペインが含まれています。  
   
- [in]*bIncludeAutohide*  
- 自動的に隠すモードであるペインを含める場合は TRUE。それ以外の場合、FALSE です。  
+*bIncludeAutohide*<br/>
+[in]自動的に隠すモードであるペインを含める場合は TRUE。それ以外の場合、FALSE です。  
   
- [in]*pRTCFilter*  
- NULL 以外の場合、返された一覧には、指定されたランタイム クラスのみのペインが含まれています。  
+*pRTCFilter*<br/>
+[in]NULL 以外の場合、返された一覧には、指定されたランタイム クラスのみのペインが含まれています。  
   
- [in]*bIncludeTabs*  
- True に設定する; タブそれ以外の場合、FALSE です。  
+*bIncludeTabs*<br/>
+[in]True に設定する; タブそれ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
  ポインターを返します、ドッキング マネージャーに任意のタブ付きペインがある場合は、 [CBaseTabbedPane クラス](../../mfc/reference/cbasetabbedpane-class.md)オブジェクトとする必要があります列挙タブ明示的にします。  
@@ -958,11 +958,11 @@ void HideAutoHidePanes(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pBarToExclude*  
- 隠ぺいから除外するバーへのポインター。  
+*pBarToExclude*<br/>
+[in]隠ぺいから除外するバーへのポインター。  
   
- [in]*bImmediately*  
- すぐに、ウィンドウを非表示にする場合は TRUE自動非表示効果にウィンドウを非表示にする場合は FALSE。  
+*bImmediately*<br/>
+[in]すぐに、ウィンドウを非表示にする場合は TRUE自動非表示効果にウィンドウを非表示にする場合は FALSE。  
   
 ##  <a name="insertdocksite"></a>  CDockingManager::InsertDockSite  
  ドッキング ペインを作成し、コントロール バーのリストに挿入します。  
@@ -975,14 +975,14 @@ BOOL InsertDockSite(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*情報*  
- ドッキング ウィンドウの配置情報を含む構造体。  
+*情報*<br/>
+[in]ドッキング ウィンドウの配置情報を含む構造体。  
   
- [in]*dwAlignToInsertAfter*  
- ドッキング ウィンドウの配置です。  
+*dwAlignToInsertAfter*<br/>
+[in]ドッキング ウィンドウの配置です。  
   
- [out]*ppDockBar*  
- ドッキング ペインへのポインターへのポインター。  
+*ppDockBar*<br/>
+[out]ドッキング ペインへのポインターへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  ドッキング ウィンドウが正常に作成された場合は TRUE。FALSE それ以外の場合。  
@@ -998,14 +998,14 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pControlBar*  
- コントロール ウィンドウへのポインター。  
+*pControlBar*<br/>
+[in]コントロール ウィンドウへのポインター。  
   
- [in]*pTarget*  
- [ターゲット] ウィンドウへのポインター。  
+*pTarget*<br/>
+[in][ターゲット] ウィンドウへのポインター。  
   
- [in]*bAfter*  
- ウィンドウの [ターゲット] ウィンドウで; の位置より後に挿入する場合は TRUEFALSE それ以外の場合。  
+*bAfter*<br/>
+[in]ウィンドウの [ターゲット] ウィンドウで; の位置より後に挿入する場合は TRUEFALSE それ以外の場合。  
   
 ### <a name="return-value"></a>戻り値  
  コントロールのウィンドウが正常にコントロール バーのリストに追加する場合は TRUE。FALSE それ以外の場合。  
@@ -1060,14 +1060,14 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ポイント*  
- 指定した点。  
+*ポイント*<br/>
+[in]指定した点。  
   
- [out]*dwBarAlignment*  
- どちらの端点が近いを指定します。 使用可能な値は、CBRS_ALIGN_LEFT、CBRS_ALIGN_RIGHT、CBRS_ALIGN_TOP、CBRS_ALIGN_BOTTOM です。  
+*dwBarAlignment*<br/>
+[out]どちらの端点が近いを指定します。 使用可能な値は、CBRS_ALIGN_LEFT、CBRS_ALIGN_RIGHT、CBRS_ALIGN_TOP、CBRS_ALIGN_BOTTOM です。  
   
- [out]*bOuterEdge*  
- ポイントが、ドッキング サイトの外側の境界線の近くにある場合は TRUE。FALSE それ以外の場合。  
+*bOuterEdge*<br/>
+[out]ポイントが、ドッキング サイトの外側の境界線の近くにある場合は TRUE。FALSE それ以外の場合。  
   
 ### <a name="return-value"></a>戻り値  
  点がドッキング サイトに近い場合は TRUE。それ以外の場合は FALSE です。  
@@ -1092,11 +1092,11 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszProfileName*  
- プロファイルの名前。  
+*lpszProfileName*<br/>
+[in]プロファイルの名前。  
   
- [in]*uiID*  
- ドッキングのマネージャーの id。  
+*uiID*<br/>
+[in]ドッキングのマネージャーの id。  
   
 ### <a name="return-value"></a>戻り値  
  ドッキング マネージャーの状態が正常に読み込まれている場合は TRUE。それ以外の場合は FALSE です。  
@@ -1109,8 +1109,8 @@ void LockUpdate(BOOL bLock);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ブロック*  
- TRUE の場合は、ウィンドウがロックされています。FALSE それ以外の場合。  
+*ブロック*<br/>
+[in]TRUE の場合は、ウィンドウがロックされています。FALSE それ以外の場合。  
   
 ### <a name="remarks"></a>Remarks  
  ウィンドウがロックされると、移動することはできず、それを再描画することはできません。  
@@ -1173,8 +1173,8 @@ virtual void OnActivateFrame(BOOL bActivate);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bActivate*  
- TRUE の場合、フレーム ウィンドウがアクティブになります。FALSE の場合、フレーム ウィンドウが非アクティブ化します。  
+*bActivate*<br/>
+[in]TRUE の場合、フレーム ウィンドウがアクティブになります。FALSE の場合、フレーム ウィンドウが非アクティブ化します。  
   
 ##  <a name="onclosepopupmenu"></a>  CDockingManager::OnClosePopupMenu  
  アクティブなポップアップ メニューが WM_DESTROY メッセージを処理するときに、フレームワークによって呼び出されます。  
@@ -1194,8 +1194,8 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pFrame*  
- ミニフレーム ウィンドウへのポインター。  
+*pFrame*<br/>
+[in]ミニフレーム ウィンドウへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE。それ以外の場合は FALSE です。  
@@ -1208,8 +1208,8 @@ void OnPaneContextMenu(CPoint point);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ポイント*  
- メニューの場所を指定します。  
+*ポイント*<br/>
+[in]メニューの場所を指定します。  
   
 ##  <a name="panefrompoint"></a>  CDockingManager::PaneFromPoint  
  指定したポイントを含むペインを返します。  
@@ -1232,26 +1232,26 @@ virtual CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ポイント*  
- 確認の画面座標で、ポイントを指定します。  
+*ポイント*<br/>
+[in]確認の画面座標で、ポイントを指定します。  
   
- [in]*nSensitivity*  
- チェックされている各ウィンドウのウィンドウの四角形を拡大するための値。 ペインは、指定したポイントが高めのこの領域の場合、検索条件を満たします。  
+*nSensitivity*<br/>
+[in]チェックされている各ウィンドウのウィンドウの四角形を拡大するための値。 ペインは、指定したポイントが高めのこの領域の場合、検索条件を満たします。  
   
- [in]*bExactBar*  
- 無視する場合は TRUE、 *nSensitivity*パラメーター場合は FALSE。  
+*bExactBar*<br/>
+[in]無視する場合は TRUE、 *nSensitivity*パラメーター場合は FALSE。  
   
- [in]*pRTCBarType*  
- NULL 以外の場合、メソッドは、指定した型のウィンドウだけを検索します。  
+*pRTCBarType*<br/>
+[in]NULL 以外の場合、メソッドは、指定した型のウィンドウだけを検索します。  
   
- [in]*bCheckVisibility*  
- 表示ペインにのみを確認する場合は TRUEそれ以外の場合、FALSE です。  
+*bCheckVisibility*<br/>
+[in]表示ペインにのみを確認する場合は TRUEそれ以外の場合、FALSE です。  
   
- [out]*場合*  
- 指定した時点で、ウィンドウが見つかった場合、このパラメーターには、指定したポイントに最も近いいたペインの横にはが含まれています。 詳細については、「解説」を参照してください。  
+*場合*<br/>
+[out]指定した時点で、ウィンドウが見つかった場合、このパラメーターには、指定したポイントに最も近いいたペインの横にはが含まれています。 詳細については、「解説」を参照してください。  
   
- [in]*pBarToIgnore*  
- NULL 以外の場合、メソッドは、このパラメーターで指定されたウィンドウを無視します。  
+*pBarToIgnore*<br/>
+[in]NULL 以外の場合、メソッドは、このパラメーターで指定されたウィンドウを無視します。  
   
 ### <a name="return-value"></a>戻り値  
  [CBasePane](../../mfc/reference/cbasepane-class.md)-ウィンドウが見つからなかった場合は、特定のポイント、または NULL を含む派生オブジェクト。  
@@ -1271,17 +1271,17 @@ BOOL ProcessPaneContextMenuCommand(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nID*  
- メニュー コントロール バーの id。  
+*nID*<br/>
+[in]メニュー コントロール バーの id。  
   
- [in]*nCode*  
- コマンド通知コード。  
+*nCode*<br/>
+[in]コマンド通知コード。  
   
- [in]*pExtra*  
- Void をへのポインターがへのポインターにキャストされる`CCmdUI`場合*nCode* CN_UPDATE_COMMAND_UI が。  
+*pExtra*<br/>
+[in]Void をへのポインターがへのポインターにキャストされる`CCmdUI`場合*nCode* CN_UPDATE_COMMAND_UI が。  
   
- [in]*pHandlerInfo*  
- 情報構造体へのポインター。 このパラメーターは使用されません。  
+*pHandlerInfo*<br/>
+[in]情報構造体へのポインター。 このパラメーターは使用されません。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合*pEXtra*が NULL でないと*nCode* CN_UPDATE_COMMAND_UI、等しい、指定したコントロール バーがある場合、または*nID*。  
@@ -1294,8 +1294,8 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bNotify*  
- このパラメーターは使用されません。  
+*bNotify*<br/>
+[in]このパラメーターは使用されません。  
   
 ##  <a name="releaseemptypanecontainers"></a>  CDockingManager::ReleaseEmptyPaneContainers  
  空のペインのコンテナーを解放します。  
@@ -1312,8 +1312,8 @@ void RemoveHiddenMDITabbedBar(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pBar*  
- バーへのポインターを削除するウィンドウ。  
+*pBar*<br/>
+[in]バーへのポインターを削除するウィンドウ。  
   
 ##  <a name="removeminiframe"></a>  CDockingManager::RemoveMiniFrame  
  ミニフレームの一覧から、指定したフレームを削除します。  
@@ -1323,8 +1323,8 @@ virtual BOOL RemoveMiniFrame(CPaneFrameWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*我が物*  
- 削除するためのフレームへのポインター。  
+*我が物*<br/>
+[in]削除するためのフレームへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  指定したフレームが削除された場合は TRUE。FALSE それ以外の場合。  
@@ -1342,20 +1342,20 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*我が物*  
- 削除する ウィンドウへのポインター。  
+*我が物*<br/>
+[in]削除するウィンドウへのポインター。  
   
- [in]*bDestroy*  
- TRUE の場合、削除されたウィンドウが破棄されます。  
+*bDestroy*<br/>
+[in]TRUE の場合、削除されたウィンドウが破棄されます。  
   
- [in]*bAdjustLayout*  
- TRUE の場合は、すぐにドッキング レイアウトを調整します。  
+*bAdjustLayout*<br/>
+[in]TRUE の場合は、すぐにドッキング レイアウトを調整します。  
   
- [in]*bAutoHide*  
- TRUE の場合、ウィンドウが自動的に隠すバーのリストから削除されます。 FALSE の場合、ウィンドウは、一定のペインの一覧から削除されます。  
+*bAutoHide*<br/>
+[in]TRUE の場合、ウィンドウが自動的に隠すバーのリストから削除されます。 FALSE の場合、ウィンドウは、一定のペインの一覧から削除されます。  
   
- [in]*pBarReplacement*  
- 削除されたウィンドウを置換するウィンドウへのポインター。  
+*pBarReplacement*<br/>
+[in]削除されたウィンドウを置換するウィンドウへのポインター。  
   
 ##  <a name="replacepane"></a>  CDockingManager::ReplacePane  
  ペインを別のペインに置き換えます。  
@@ -1367,11 +1367,11 @@ BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pOriginalBar*  
- 元のウィンドウへのポインター。  
+*pOriginalBar*<br/>
+[in]元のウィンドウへのポインター。  
   
- [in]*pNewBar*  
- 元のウィンドウを置換するウィンドウへのポインター。  
+*pNewBar*<br/>
+[in]元のウィンドウを置換するウィンドウへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合、ウィンドウは正常に置き換えられました。FALSE それ以外の場合。  
@@ -1393,11 +1393,11 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszProfileName*  
- レジストリ キーへのパス。  
+*lpszProfileName*<br/>
+[in]レジストリ キーへのパス。  
   
- [in]*uiID*  
- ドッキング マネージャー id。  
+*uiID*<br/>
+[in]ドッキング マネージャー id。  
   
 ### <a name="return-value"></a>戻り値  
  状態が正常に保存されている場合は TRUE。それ以外の場合は FALSE です。  
@@ -1416,14 +1416,14 @@ BOOL SendMessageToMiniFrames(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uMessage*  
- 送信されるメッセージ。  
+*uMessage*<br/>
+[in]送信されるメッセージ。  
   
- [in]*wParam*  
- 追加のメッセージの依存情報です。  
+*wParam*<br/>
+[in]追加のメッセージの依存情報です。  
   
- [in]*lParam*  
- 追加のメッセージの依存情報です。  
+*lParam*<br/>
+[in]追加のメッセージの依存情報です。  
   
 ### <a name="return-value"></a>戻り値  
  常に true を設定します。  
@@ -1436,8 +1436,8 @@ void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ar*  
- アーカイブ オブジェクトへの参照。  
+*ar*<br/>
+[in]アーカイブ オブジェクトへの参照。  
   
 ### <a name="remarks"></a>Remarks  
  アーカイブ ファイルに、ドッキング マネージャーを書き込むには、ドッキング コントロール バーやスライダー、およびアーカイブへのコントロール バー、ミニ フレーム、自動的に隠すバー、および MDI タブ付きの横棒の書き込みの数を決定する必要があります。  
@@ -1450,8 +1450,8 @@ void SetAutohideZOrder(CDockablePane* pAHDockingBar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pAHDockingBar*  
- ドッキング可能ペインへのポインター。  
+*pAHDockingBar*<br/>
+[in]ドッキング可能ペインへのポインター。  
   
 ##  <a name="setdockingmode"></a>  CDockingManager::SetDockingMode  
  ドッキングのモードを設定します。  
@@ -1497,11 +1497,11 @@ void SetPrintPreviewMode(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bPreview*  
- 印刷プレビュー モードが設定されている場合は TRUE。FALSE それ以外の場合。  
+*bPreview*<br/>
+[in]印刷プレビュー モードが設定されている場合は TRUE。FALSE それ以外の場合。  
   
- [in]*pState*  
- プレビュー状態へのポインター。 このパラメーターは使用されません。  
+*pState*<br/>
+[in]プレビュー状態へのポインター。 このパラメーターは使用されません。  
   
 ##  <a name="setsmartdockingparams"></a>  CDockingManager::SetSmartDockingParams  
  スマート ドッキングの動作を定義するパラメーターを設定します。  
@@ -1511,8 +1511,8 @@ static void SetSmartDockingParams(CSmartDockingInfo& params);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力、出力]*params*  
- スマート ドッキングのパラメーターを定義します。  
+*params*<br/>
+[入力、出力]スマート ドッキングのパラメーターを定義します。  
   
 ### <a name="remarks"></a>Remarks  
  外観、色、またはスマート ドッキング マーカーの図形をカスタマイズする場合は、このメソッドを呼び出します。  
@@ -1527,8 +1527,8 @@ void ShowDelayShowMiniFrames(BOOL bshow);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bShow*  
- 表示されるフレームのウィンドウをアクティブな場合は TRUEフレームのウィンドウを非表示にする場合は FALSE。  
+*bShow*<br/>
+[in]表示されるフレームのウィンドウをアクティブな場合は TRUEフレームのウィンドウを非表示にする場合は FALSE。  
   
 ##  <a name="showpanes"></a>  CDockingManager::ShowPanes  
  コントロールと自動的に隠すバーのウィンドウの表示と非表示を切り替えます。  
@@ -1538,8 +1538,8 @@ virtual BOOL ShowPanes(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bShow*  
- ウィンドウを表示する場合は TRUE。ウィンドウを非表示にする場合は FALSE。  
+*bShow*<br/>
+[in]ウィンドウを表示する場合は TRUE。ウィンドウを非表示にする場合は FALSE。  
   
 ### <a name="return-value"></a>戻り値  
  常に FALSE です。  
@@ -1552,8 +1552,8 @@ void StartSDocking(CWnd* pDockingWnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDockingWnd*  
- ドッキングするウィンドウへのポインター。  
+*pDockingWnd*<br/>
+[in]ドッキングするウィンドウへのポインター。  
   
 ##  <a name="stopsdocking"></a>  CDockingManager::StopSDocking  
  スマート ドッキングを停止します。  

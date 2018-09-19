@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47fabb7120cc13eeca38bc9d06428f686fc9f1b9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: fd0a8bbffd3a6e0f03635b659dd3743e12c9f077
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955567"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700766"
 ---
 # <a name="istriviallyassignable-class"></a>is_trivially_assignable クラス
 
@@ -37,15 +37,17 @@ struct is_trivially_assignable;
 
 ### <a name="parameters"></a>パラメーター
 
-オブジェクトの型には、割り当てを受け取る。
+*目的*<br/>
+代入を受け取るオブジェクトの型。
 
-オブジェクトの型から値を提供します。
+*From*<br/>
+値を渡すオブジェクトの型。
 
 ## <a name="remarks"></a>Remarks
 
 式 `declval<To>() = declval<From>()` は正しい形式である必要があり、トリビアルでない演算を必要としないことがコンパイラに判明している必要があります。 両方`From`と`To`完全な型は、必要があります**void**、または不明なバインドの配列。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<type_traits>
 

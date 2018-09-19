@@ -1,5 +1,5 @@
 ---
-title: multi_link_registry クラス |Microsoft ドキュメント
+title: multi_link_registry クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fbe52298f267fabb2ba326e3e1c7b66f4ad49ef
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 93d13e7d74a499091a8ad0c592b3cee45a9bbb5e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688935"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029595"
 ---
 # <a name="multilinkregistry-class"></a>multi_link_registry クラス
 `multi_link_registry` オブジェクトは、複数のソース ブロックまたは複数のターゲット ブロックを管理する `network_link_registry` です。  
@@ -42,8 +42,8 @@ class multi_link_registry : public network_link_registry<_Block>;
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `_Block`  
- ブロックのデータ型に格納されている、`multi_link_registry`オブジェクト。  
+*(_B)*<br/>
+ブロックのデータ型に格納されている、`multi_link_registry`オブジェクト。  
   
 ## <a name="members"></a>メンバー  
   
@@ -59,7 +59,7 @@ class multi_link_registry : public network_link_registry<_Block>;
 |名前|説明|  
 |----------|-----------------|  
 |[add](#add)|リンクを追加、`multi_link_registry`オブジェクト。 (上書き[network_link_registry::add](network-link-registry-class.md#add))。|  
-|[begin](#begin)|最初の要素を指す反復子を返します、`multi_link_registry`オブジェクト。 (上書き[network_link_registry::begin](network-link-registry-class.md#begin))。|  
+|[begin](#begin)|最初の要素に反復子を返します、`multi_link_registry`オブジェクト。 (上書き[network_link_registry::begin](network-link-registry-class.md#begin))。|  
 |[contains](#contains)|検索、`multi_link_registry`の指定されたブロックのオブジェクト。 (上書き[network_link_registry::contains](network-link-registry-class.md#contains))。|  
 |[count](#count)|内の項目の数をカウント、`multi_link_registry`オブジェクト。 (上書き[network_link_registry::count](network-link-registry-class.md#count))。|  
 |[remove](#remove)|リンクを削除、`multi_link_registry`オブジェクト。 (上書き[network_link_registry::remove](network-link-registry-class.md#remove))。|  
@@ -75,7 +75,7 @@ class multi_link_registry : public network_link_registry<_Block>;
   
  **名前空間:** concurrency  
   
-##  <a name="add"></a> 追加 
+##  <a name="add"></a> 追加します。 
 
  リンクを追加、`multi_link_registry`オブジェクト。  
   
@@ -84,25 +84,25 @@ virtual void add(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Link`  
- 追加されるブロックへのポインター。  
+*リンク (_l)*<br/>
+追加するブロックへのポインター。  
   
-### <a name="remarks"></a>コメント  
- メソッドをスロー、 [invalid_link_target](invalid-link-target-class.md)例外リンクは既に、レジストリに存在する場合、または場合、バインドは既に設定されてと、`set_bound`関数とのリンクは削除されました。  
+### <a name="remarks"></a>Remarks  
+ メソッドはスロー、 [invalid_link_target](invalid-link-target-class.md)例外のリンクが既にレジストリに存在する場合、または場合、バインドが既にで設定された、`set_bound`関数とのリンクが削除されたためです。  
   
 ##  <a name="begin"></a> 開始 
 
- 最初の要素を指す反復子を返します、`multi_link_registry`オブジェクト。  
+ 最初の要素に反復子を返します、`multi_link_registry`オブジェクト。  
   
 ```
 virtual iterator begin();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 最初の要素を指定する反復子、`multi_link_registry`オブジェクト。  
+ 最初の要素を示す反復子、`multi_link_registry`オブジェクト。  
   
-### <a name="remarks"></a>コメント  
- 最終の状態がによって示される、`NULL`リンクします。  
+### <a name="remarks"></a>Remarks  
+ 最終の状態が付いて、`NULL`リンク。  
   
 ##  <a name="contains"></a> 含まれています 
 
@@ -113,11 +113,11 @@ virtual bool contains(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Link`  
- 内で検索するのには、ブロックへのポインター、`multi_link_registry`オブジェクト。  
+*リンク (_l)*<br/>
+内で検索するのには、ブロックへのポインター、`multi_link_registry`オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
- `true` 指定されたブロックが見つかった場合は`false`それ以外の場合。  
+ `true` 指定されたブロックが見つかった場合`false`それ以外の場合。  
   
 ##  <a name="count"></a> カウント 
 
@@ -128,7 +128,7 @@ virtual size_t count();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 内の項目数、`multi_link_registry`オブジェクト。  
+ 内の項目の数、`multi_link_registry`オブジェクト。  
   
 ##  <a name="ctor"></a> multi_link_registry 
 
@@ -146,8 +146,8 @@ multi_link_registry();
 virtual ~multi_link_registry();
 ```  
   
-### <a name="remarks"></a>コメント  
- メソッドをスロー、 [invalid_operation](invalid-operation-class.md)すべてのリンクが削除される前に呼び出された場合は例外です。  
+### <a name="remarks"></a>Remarks  
+ メソッドはスロー、 [invalid_operation](invalid-operation-class.md)すべてのリンクを削除する前に呼び出す場合は例外です。  
   
 ##  <a name="remove"></a> 削除します。 
 
@@ -158,11 +158,11 @@ virtual bool remove(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Link`  
- 削除する場合はブロックへのポインターが見つかりました。  
+*リンク (_l)*<br/>
+削除する場合、ブロックへのポインターが見つかりました。  
   
 ### <a name="return-value"></a>戻り値  
- `true` リンクが検出され、削除、`false`それ以外の場合。  
+ `true` 場合は、リンクが見つかり、削除、`false`それ以外の場合。  
   
 ##  <a name="set_bound"></a> set_bound 
 
@@ -173,11 +173,11 @@ void set_bound(size_t _MaxLinks);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_MaxLinks`  
- 最大数をリンクする、`multi_link_registry`オブジェクトを保持できます。  
+*_MaxLinks*<br/>
+最大数をリンクする、`multi_link_registry`オブジェクトを保持できます。  
   
-### <a name="remarks"></a>コメント  
- 制限を設定すると、エントリのリンクを解除するとが、`multi_link_registry`オブジェクト不変の状態を入力する場所への呼び出しをさらに`add`がスローされます、`invalid_link_target`例外。  
+### <a name="remarks"></a>Remarks  
+ エントリのリンクを解除が発生する、バインドを設定すると後、`multi_link_registry`不変の状態を入力するオブジェクトへの呼び出しをさらに、`add`がスローされます、`invalid_link_target`例外。  
   
 ## <a name="see-also"></a>関連項目  
  [同時実行 Namespace](concurrency-namespace.md)   

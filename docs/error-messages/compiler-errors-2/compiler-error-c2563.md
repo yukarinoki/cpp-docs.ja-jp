@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2563 |Microsoft ドキュメント
+title: コンパイラ エラー C2563 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85a4de195c681ce8d11b789a9aca102629cc2bac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eec8526df1c5ff69899dd0a2d103cb5f28d4c00c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228594"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067404"
 ---
 # <a name="compiler-error-c2563"></a>コンパイラ エラー C2563
-正式なパラメーター リストが一致しません  
-  
- 関数 (または関数へのポインター) の仮パラメーター リストには、別の関数 (またはメンバー関数へのポインター) のものと一致しません。 その結果、または関数ポインターの代入を行うことはできません。  
-  
- 次の例では、C2563 が生成されます。  
-  
-```  
-// C2563.cpp  
-void func( int );  
-void func( int, int );  
-int main() {  
-   void *fp();  
-   fp = func;   // C2563  
-}  
+
+仮パラメーター リストが一致しません
+
+関数 (または関数へのポインター) の仮パラメーター リストには、別の関数 (またはメンバー関数へのポインター) のものと一致しません。 結果として、または関数ポインターの割り当ては行われたことはできません。
+
+次の例では、C2563 が生成されます。
+
+```
+// C2563.cpp
+void func( int );
+void func( int, int );
+int main() {
+   void *fp();
+   fp = func;   // C2563
+}
 ```

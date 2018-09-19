@@ -1,5 +1,5 @@
 ---
-title: 式エバリュエーター エラー CXX0039 |Microsoft ドキュメント
+title: 式エバリュエーター エラー CXX0039 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8681d73d2889433516b205a47c500193bbeabdb0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b5397426618c5dfcbaa6307105781ff2e6f2eb97
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297769"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048332"
 ---
 # <a name="expression-evaluator-error-cxx0039"></a>式エバリュエーター エラー CXX0039
-シンボルがあいまいです。  
-  
- C の式エバリュエーターは、式で使用するシンボルのインスタンスを特定できません。 シンボルは、継承ツリー内で複数回発生します。  
-  
- スコープ解決演算子を使用する必要があります (`::`)、式で使用するインスタンスを明示的に指定します。  
-  
- このエラーは、can0039 と同じものと同じです。
+
+シンボルがあいまいです。
+
+C の式エバリュエーターでは、式で使用するシンボルのどのインスタンスを特定できません。 シンボルは、継承ツリー内で複数回に発生します。
+
+スコープ解決演算子を使用する必要があります (`::`)、式で使用するインスタンスを明示的に指定します。
+
+このエラーは、can0039 と同じものと同じです。

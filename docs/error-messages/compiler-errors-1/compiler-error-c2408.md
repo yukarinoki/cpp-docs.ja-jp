@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2408 |Microsoft ドキュメント
+title: コンパイラ エラー C2408 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a20a965fba2f914c0d6e4e940479963485bf9926
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aaafc5bac40a7322afb54675c7774231edd324f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195452"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021461"
 ---
 # <a name="compiler-error-c2408"></a>コンパイラ エラー C2408
-'context' での PTR 演算子の引数の型指定が、正しくありません。  
-  
- `PTR` 演算子の最初のパラメーターが、有効な型指定ではありません。
+
+'context' での PTR 演算子の引数の型指定が、正しくありません。
+
+`PTR` 演算子の最初のパラメーターが、有効な型指定ではありません。

@@ -198,12 +198,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73f4f14f01cd9d881c0e9da0db8aa23d7946e719
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ce8706b36af848fadba041871233204e664cabf4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541132"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712440"
 ---
 # <a name="cmfcribbonbar-class"></a>CMFCRibbonBar クラス
 `CMFCRibbonBar` クラスは、Office 2007 で使用されているものに似たリボン バーを実装します。  
@@ -353,8 +353,8 @@ BOOL ActivateContextCategory(UINT uiContextID);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiContextID*  
- コンテキスト カテゴリの id。  
+*uiContextID*<br/>
+[in]コンテキスト カテゴリの id。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合にコンテキスト カテゴリ*uiContextID*が見つかったとアクティブ化された場合は FALSE。  
@@ -376,26 +376,26 @@ CMFCRibbonCategory* AddCategory(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszName*  
- リボン カテゴリの名前。  
+*lpszName*<br/>
+[in]リボン カテゴリの名前。  
   
- [in]*uiSmallImagesResID*  
- リボン カテゴリの小さいイメージ リストのリソース ID。  
+*uiSmallImagesResID*<br/>
+[in]リボン カテゴリの小さいイメージ リストのリソース ID。  
   
- [in]*uiLargeImagesResID*  
- リボン カテゴリの大きいイメージ リストのリソース ID。  
+*uiLargeImagesResID*<br/>
+[in]リボン カテゴリの大きいイメージ リストのリソース ID。  
   
- [in]*sizeSmallImage*  
- リボン カテゴリの小さいイメージのサイズを指定します。  
+*sizeSmallImage*<br/>
+[in]リボン カテゴリの小さいイメージのサイズを指定します。  
   
- [in]*sizeLargeImage*  
- リボン カテゴリの大きいイメージのサイズを指定します。  
+*sizeLargeImage*<br/>
+[in]リボン カテゴリの大きいイメージのサイズを指定します。  
   
- [in]*nInsertAt*  
- カテゴリの位置の 0 から始まるインデックス。  
+*nInsertAt*<br/>
+[in]カテゴリの位置の 0 から始まるインデックス。  
   
- [in]*pRTI*  
- ポインターを[CMFCRibbonCategory クラス](../../mfc/reference/cmfcribboncategory-class.md)ランタイム クラスを動的に実行時にリボン カテゴリを作成します。  
+*pRTI*<br/>
+[in]ポインターを[CMFCRibbonCategory クラス](../../mfc/reference/cmfcribboncategory-class.md)ランタイム クラスを動的に実行時にリボン カテゴリを作成します。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は、新しいリボン カテゴリへのポインターそれ以外の場合は NULL です。  
@@ -427,32 +427,32 @@ CMFCRibbonCategory* AddContextCategory(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszName*  
- カテゴリの名前。  
+*lpszName*<br/>
+[in]カテゴリの名前。  
   
- [in]*lpszContextName*  
- コンテキスト カテゴリ キャプションの名前です。  
+*lpszContextName*<br/>
+[in]コンテキスト カテゴリ キャプションの名前です。  
   
- [in]*uiContextID*  
- コンテキスト id。  
+*uiContextID*<br/>
+[in]コンテキスト id。  
   
- [in]*clrContext*  
- コンテキスト カテゴリ キャプションの色です。  
+*clrContext*<br/>
+[in]コンテキスト カテゴリ キャプションの色です。  
   
- [in]*uiSmallImagesResID*  
- コンテキスト カテゴリの小さな画像のリソース ID。  
+*uiSmallImagesResID*<br/>
+[in]コンテキスト カテゴリの小さな画像のリソース ID。  
   
- [in]*uiLargeImagesResID*  
- コンテキスト カテゴリの大きいイメージのリソース ID。  
+*uiLargeImagesResID*<br/>
+[in]コンテキスト カテゴリの大きいイメージのリソース ID。  
   
- [in]*sizeSmallImage*  
- 小さいイメージのサイズ。  
+*sizeSmallImage*<br/>
+[in]小さいイメージのサイズ。  
   
- [in]*sizeLargeImage*  
- 大きいイメージのサイズ。  
+*sizeLargeImage*<br/>
+[in]大きいイメージのサイズ。  
   
- [in]*pRTI*  
- ランタイム クラスへのポインター。  
+*pRTI*<br/>
+[in]ランタイム クラスへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  新しく作成したカテゴリへのポインターまたは NULL の場合、`CreateObject`メソッドの*pRTI*指定したカテゴリを作成することはできません。  
@@ -493,20 +493,20 @@ CMFCRibbonMainPanel* AddMainCategory(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszName*  
- メイン リボン カテゴリの名前。  
+*lpszName*<br/>
+[in]メイン リボン カテゴリの名前。  
   
- [in]*uiSmallImagesResID*  
- 小さいイメージのリソース ID。  
+*uiSmallImagesResID*<br/>
+[in]小さいイメージのリソース ID。  
   
- [in]*uiLargeImagesResID*  
- 大きいイメージのリソース ID。  
+*uiLargeImagesResID*<br/>
+[in]大きいイメージのリソース ID。  
   
- [in]*sizeSmallImage*  
- 小さいイメージのサイズ。  
+*sizeSmallImage*<br/>
+[in]小さいイメージのサイズ。  
   
- [in]*sizeLargeImage*  
- 大きいイメージのサイズ。  
+*sizeLargeImage*<br/>
+[in]大きいイメージのサイズ。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は、新しいメイン リボン カテゴリへのポインターそれ以外の場合は NULL です。  
@@ -544,14 +544,14 @@ CMFCRibbonCategory* AddQATOnlyCategory(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszName*  
- カテゴリの名前。  
+*lpszName*<br/>
+[in]カテゴリの名前。  
   
- [in]*uiSmallImagesResID*  
- カテゴリのイメージ リストのリソース ID。  
+*uiSmallImagesResID*<br/>
+[in]カテゴリのイメージ リストのリソース ID。  
   
- [in]*sizeSmallImage*  
- カテゴリ内のリボン要素のイメージのサイズ。  
+*sizeSmallImage*<br/>
+[in]カテゴリ内のリボン要素のイメージのサイズ。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合、新しいカテゴリへのポインターそれ以外の場合は NULL です。  
@@ -567,8 +567,8 @@ void AddToTabs(CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pElement*  
- リボン要素へのポインター。  
+*pElement*<br/>
+[in]リボン要素へのポインター。  
   
 ### <a name="remarks"></a>Remarks  
  リボン要素は、システム ボタンの前に配置されます。  
@@ -581,8 +581,8 @@ CMFCRibbonBar(BOOL bReplaceFrameCaption = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bReplaceFrameCaption*  
- メイン フレーム ウィンドウのキャプションを置換するリボン バーの場合は TRUE。メイン フレーム ウィンドウのキャプションの下にリボン バーを検索する場合は FALSE。  
+*bReplaceFrameCaption*<br/>
+[in]メイン フレーム ウィンドウのキャプションを置換するリボン バーの場合は TRUE。メイン フレーム ウィンドウのキャプションの下にリボン バーを検索する場合は FALSE。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -597,14 +597,14 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pParentWnd*  
- リボン バーの親ウィンドウへのポインター。  
+*pParentWnd*<br/>
+[in]リボン バーの親ウィンドウへのポインター。  
   
- [in]*dwStyle*  
- 新しいウィンドウのスタイルの論理の組み合わせ。  
+*dwStyle*<br/>
+[in]新しいウィンドウのスタイルの論理の組み合わせ。  
   
- [in]*nID*  
- 新しいウィンドウの ID。  
+*nID*<br/>
+[in]新しいウィンドウの ID。  
   
 ### <a name="return-value"></a>戻り値  
  ウィンドウが作成された場合は TRUE。それ以外の場合は FALSE です。  
@@ -628,17 +628,17 @@ BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pParentWnd*  
- リボン バーの親ウィンドウへのポインター。  
+*pParentWnd*<br/>
+[in]リボン バーの親ウィンドウへのポインター。  
   
- [in]*ツール バー*  
- このパラメーターは使用されません。  
+*ツール バー*<br/>
+[in]このパラメーターは使用されません。  
   
- [in]*dwStyle*  
- 新しいウィンドウのスタイルの論理の組み合わせ。  
+*dwStyle*<br/>
+[in]新しいウィンドウのスタイルの論理の組み合わせ。  
   
- [in]*nID*  
- 新しいウィンドウの ID。  
+*nID*<br/>
+[in]新しいウィンドウの ID。  
   
 ### <a name="return-value"></a>戻り値  
  ウィンドウが作成された場合は TRUE。それ以外の場合は FALSE です。  
@@ -653,8 +653,8 @@ void DeactivateKeyboardFocus(BOOL bSetFocus = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bSetFocus*  
- リボン バーの親ウィンドウにフォーカスを設定する場合は TRUE。  
+*bSetFocus*<br/>
+[in]リボン バーの親ウィンドウにフォーカスを設定する場合は TRUE。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -669,14 +669,14 @@ BOOL DrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- メニュー ボタンのデバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]メニュー ボタンのデバイス コンテキストへのポインター。  
   
- [in]*pMenuItem*  
- ツールバーのメニュー ボタンへのポインター。  
+*pMenuItem*<br/>
+[in]ツールバーのメニュー ボタンへのポインター。  
   
- [in]*rectImage*  
- メニュー ボタンを表示する四角形。  
+*rectImage*<br/>
+[in]メニュー ボタンを表示する四角形。  
   
 ### <a name="return-value"></a>戻り値  
  イメージが描画された場合は TRUE。それ以外の場合は FALSE です。  
@@ -700,8 +700,8 @@ void EnableKeyTips(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- Keytip 機能を有効にする場合は TRUEKeytip の機能を無効にする場合は FALSE。  
+*bEnable*<br/>
+[in]Keytip 機能を有効にする場合は TRUEKeytip の機能を無効にする場合は FALSE。  
   
 ### <a name="remarks"></a>Remarks  
  この機能を有効にすると、ユーザーが alt キーまたは f10 キーを押してボタンを押したときに重要なヒントが表示されます。 ユーザーは、ALT キーを押すと、200 ミリ秒の遅延時間で重要なヒントが表示されます。 この遅延にショートカットを押したときは、ALT キーを含むその他の組み合わせには影響しないように実行できます。  
@@ -714,8 +714,8 @@ void EnablePrintPreview(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- 有効にする場合は True、**印刷プレビュー**機能です。無効にする場合は FALSE、**印刷プレビュー**機能します。  
+*bEnable*<br/>
+[in]有効にする場合は True、**印刷プレビュー**機能です。無効にする場合は FALSE、**印刷プレビュー**機能します。  
   
 ### <a name="remarks"></a>Remarks  
  場合*bEnable*が FALSE と、印刷プレビューのカテゴリが存在すると、削除されます。  
@@ -732,11 +732,11 @@ void EnableToolTips(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- リボン バーへのツールヒントを有効にする場合は TRUEリボン バーのツールヒントを無効にする場合は FALSE。  
+*bEnable*<br/>
+[in]リボン バーへのツールヒントを有効にする場合は TRUEリボン バーのツールヒントを無効にする場合は FALSE。  
   
- [in]*bEnableDescr*  
- ツールヒントの説明を有効にする場合は TRUEツール ヒントのツールヒントの説明を無効にする場合は FALSE。  
+*bEnableDescr*<br/>
+[in]ツールヒントの説明を有効にする場合は TRUEツール ヒントのツールヒントの説明を無効にする場合は FALSE。  
   
 ### <a name="remarks"></a>Remarks  
  *BEnable*リボン要素上でマウスを重ねると、ツールヒントが表示されるかどうかを判別します。 *BEnableDescr*パラメーターが追加の説明テキストがツールヒント テキストを表示されるかどうかを決定します。  
@@ -751,11 +751,11 @@ CMFCRibbonBaseElement* FindByData(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*指定*  
- リボン要素に関連付けられたデータ。  
+*指定*<br/>
+[in]リボン要素に関連付けられたデータ。  
   
- [in]*bVisibleOnly*  
- 表示されるリボン要素のみを検索する場合は TRUEすべてのリボン要素を検索する場合は FALSE。  
+*bVisibleOnly*<br/>
+[in]表示されるリボン要素のみを検索する場合は TRUEすべてのリボン要素を検索する場合は FALSE。  
   
 ### <a name="return-value"></a>戻り値  
  指定されたデータと表示状態がある場合は、リボン要素へのポインターそれ以外の場合は NULL です。  
@@ -774,14 +774,14 @@ CMFCRibbonBaseElement* FindByID(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiCmdID*  
- リボン要素のコマンド ID。  
+*uiCmdID*<br/>
+[in]リボン要素のコマンド ID。  
   
- [in]*bVisibleOnly*  
- 表示されるリボン要素のみを検索する場合は TRUEすべてのリボン要素を検索する場合は FALSE。  
+*bVisibleOnly*<br/>
+[in]表示されるリボン要素のみを検索する場合は TRUEすべてのリボン要素を検索する場合は FALSE。  
   
- [in]*bExcludeQAT*  
- クイック アクセス ツールバー要素を検索から除外する場合は TRUEそれ以外の場合、FALSE です。  
+*bExcludeQAT*<br/>
+[in]クイック アクセス ツールバー要素を検索から除外する場合は TRUEそれ以外の場合、FALSE です。  
   
 ### <a name="return-value"></a>戻り値  
  指定したコマンド ID と検索値がある場合は、リボン要素へのポインターそれ以外の場合は NULL です。  
@@ -799,8 +799,8 @@ int FindCategoryIndexByData(DWORD dwData) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*指定*  
- リボン カテゴリに関連付けられたデータ。  
+*指定*<br/>
+[in]リボン カテゴリに関連付けられたデータ。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は、リボン カテゴリの 0 から始まるインデックスそれ以外の場合は-1。  
@@ -859,8 +859,8 @@ CMFCRibbonCategory* GetCategory(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nIndex*  
- リボン バーに含まれているリボン カテゴリの一覧にあるリボン カテゴリの 0 から始まるインデックス。  
+*nIndex*<br/>
+[in]リボン バーに含まれているリボン カテゴリの一覧にあるリボン カテゴリの 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  指定したインデックスにあるリボン カテゴリへのポインターそれ以外の場合、NULL の場合*nIndex*が範囲外です。  
@@ -896,8 +896,8 @@ int GetCategoryIndex(CMFCRibbonCategory* pCategory) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pCategory*  
- リボン カテゴリへのポインター。  
+*pCategory*<br/>
+[in]リボン カテゴリへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  指定されたリボン カテゴリの 0 から始まるインデックス*pCategory*; リボン カテゴリが存在しない場合は-1。  
@@ -912,11 +912,11 @@ BOOL GetContextName(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiContextID*  
- リボン カテゴリ コンテキスト id です。  
+*uiContextID*<br/>
+[in]リボン カテゴリ コンテキスト id です。  
   
- [out]*strName*  
- コンテキスト カテゴリ キャプションの名前。  
+*strName*<br/>
+[out]コンテキスト カテゴリ キャプションの名前。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE。それ以外の場合、FALSE の場合*uiContextID* 0 がまたはコンテキスト カテゴリ キャプションが見つかりませんでした。  
@@ -943,11 +943,11 @@ void GetElementsByID(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiCmdID*  
- リボン要素のコマンド ID。  
+*uiCmdID*<br/>
+[in]リボン要素のコマンド ID。  
   
- [out]*arButtons*  
- リボン要素へのポインターの配列。  
+*arButtons*<br/>
+[out]リボン要素へのポインターの配列。  
   
 ### <a name="remarks"></a>Remarks  
  複数のリボン要素は、クイック アクセス ツールバーにいくつかのリボン要素をコピーできるため、同じコマンド ID を持つことができます。  
@@ -980,11 +980,11 @@ void GetItemIDsList(CList<UINT, UINT>& lstItems,
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*lstItems*  
- リボン バーに含まれるリボン要素のコマンド Id の一覧。  
+*lstItems*<br/>
+[out]リボン バーに含まれるリボン要素のコマンド Id の一覧。  
   
- [in]*bHiddenOnly*  
- 表示されているリボン要素を除外する場合は TRUEリボン バーにすべてのリボン要素を含める場合は FALSE。  
+*bHiddenOnly*<br/>
+[in]表示されているリボン要素を除外する場合は TRUEリボン バーにすべてのリボン要素を含める場合は FALSE。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1081,8 +1081,8 @@ void GetQuickAccessCommands(CList<UINT,UINT>& lstCommands);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*lstCommands*  
- クイック アクセス ツールバーにあるリボン要素のコマンド Id の一覧。  
+*lstCommands*<br/>
+[out]クイック アクセス ツールバーにあるリボン要素のコマンド Id の一覧。  
   
 ### <a name="remarks"></a>Remarks  
  一覧にコントロールの区切り記号のリボン要素が含まれていません。  
@@ -1183,14 +1183,14 @@ virtual CMFCRibbonBaseElement* HitTest(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ポイント*  
- リボン バー内のポイントの場所を調整します。  
+*ポイント*<br/>
+[in]リボン バー内のポイントの場所を調整します。  
   
- [in]*bCheckActiveCategory*  
- アクティブなカテゴリを検索する場合は TRUEアクティブなカテゴリを検索するには、ない場合は FALSE。  
+*bCheckActiveCategory*<br/>
+[in]アクティブなカテゴリを検索する場合は TRUEアクティブなカテゴリを検索するには、ない場合は FALSE。  
   
- [in]*bCheckPanelCaption*  
- あるポイントを使用して、リボン パネルのキャプションをテストする場合は TRUE含まれているポイントと、リボン パネルのキャプションをテストする場合は FALSE。 詳細については、次の「解説」を参照してください。  
+*bCheckPanelCaption*<br/>
+[in]あるポイントを使用して、リボン パネルのキャプションをテストする場合は TRUE含まれているポイントと、リボン パネルのキャプションをテストする場合は FALSE。 詳細については、次の「解説」を参照してください。  
   
 ### <a name="return-value"></a>戻り値  
  指定した位置にあるリボン要素へのポインターそれ以外の場合、ポイントがリボン要素内に存在しない場合は NULL です。  
@@ -1271,8 +1271,8 @@ virtual BOOL IsShowGroupBorder(CMFCRibbonButtonsGroup* pGroup) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pGroup*  
- このパラメーターは使用されません。  
+*pGroup*<br/>
+[in]このパラメーターは使用されません。  
   
 ### <a name="return-value"></a>戻り値  
  常に FALSE を返します。  
@@ -1325,11 +1325,11 @@ virtual void OnClickButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pButton*  
- クリックしてされたボタンへのポインター。  
+*pButton*<br/>
+[in]クリックしてされたボタンへのポインター。  
   
- [in]*ポイント*  
- このパラメーターは使用されません。  
+*ポイント*<br/>
+[in]このパラメーターは使用されません。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1343,8 +1343,8 @@ virtual void OnEditContextMenu(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pEdit*  
- [in]*ポイント*  
+*pEdit*<br/>
+[in][in]*ポイント*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1356,8 +1356,8 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bIsRTL*  
- レイアウトは右から左の場合は TRUE。レイアウトが左から右の場合は FALSE です。  
+*bIsRTL*<br/>
+[in]レイアウトは右から左の場合は TRUE。レイアウトが左から右の場合は FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、新しいレイアウトの方向のリボン バー上のすべてのコントロールのレイアウトを調整します。  
@@ -1390,10 +1390,10 @@ virtual BOOL OnShowRibbonContextMenu(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*我が物*  
- [in]*x*  
- [in]*y*  
- [in]*pHit*  
+*我が物*<br/>
+[in][in]*x*  
+*y*<br/>
+[in][in]*pHit*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -1411,10 +1411,10 @@ virtual BOOL OnShowRibbonQATMenu(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*我が物*  
- [in]*x*  
- [in]*y*  
- [in]*pHit*  
+*我が物*<br/>
+[in][in]*x*  
+*y*<br/>
+[in][in]*pHit*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -1431,14 +1431,14 @@ BOOL OnSysKeyDown(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pFrameWnd*  
- リボン バーの親のメイン フレーム ウィンドウへのポインター。  
+*pFrameWnd*<br/>
+[in]リボン バーの親のメイン フレーム ウィンドウへのポインター。  
   
- [in]*wParam*  
- キーが押された仮想キー コード。  
+*wParam*<br/>
+[in]キーが押された仮想キー コード。  
   
- [in]*lParam*  
- キーボードの状態フラグをキーが押されたときに設定します。  
+*lParam*<br/>
+[in]キーボードの状態フラグをキーが押されたときに設定します。  
   
 ### <a name="return-value"></a>戻り値  
  キー入力イベントが処理された場合は TRUE。それ以外の場合は FALSE です。  
@@ -1456,14 +1456,14 @@ BOOL OnSysKeyUp(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pFrameWnd*  
- リボン バーの親のメイン フレーム ウィンドウへのポインター。  
+*pFrameWnd*<br/>
+[in]リボン バーの親のメイン フレーム ウィンドウへのポインター。  
   
- [in]*wParam*  
- リリースされているキーの仮想キー コード。  
+*wParam*<br/>
+[in]リリースされているキーの仮想キー コード。  
   
- [in]*lParam*  
- このパラメーターは使用されません。  
+*lParam*<br/>
+[in]このパラメーターは使用されません。  
   
 ### <a name="return-value"></a>戻り値  
  キー入力イベントが処理された場合は TRUE。それ以外の場合は FALSE です。  
@@ -1487,8 +1487,8 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pMsg*  
- メッセージへのポインター。  
+*pMsg*<br/>
+[in]メッセージへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  リボン バーによって、メッセージが処理された場合は TRUE。それ以外の場合は FALSE です。  
@@ -1533,8 +1533,8 @@ BOOL RemoveCategory(int nIndex);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nIndex*  
- リボン バーに含まれているリボン カテゴリの一覧でカテゴリの 0 から始まるインデックス。  
+*nIndex*<br/>
+[in]リボン バーに含まれているリボン カテゴリの一覧でカテゴリの 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  指定されたリボン カテゴリが削除された場合は TRUE。それ以外の場合は FALSE です。  
@@ -1552,11 +1552,11 @@ BOOL SetActiveCategory(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pCategory*  
- リボン バーに含まれているリボン カテゴリ。  
+*pCategory*<br/>
+[in]リボン バーに含まれているリボン カテゴリ。  
   
- [in]*bForceRestore*  
- 最小化されている場合は、リボン バーを最大化する場合は TRUEリボン バーを最小限に抑える場合に、ポップアップ ウィンドウで、アクティブなカテゴリを表示する場合は FALSE。  
+*bForceRestore*<br/>
+[in]最小化されている場合は、リボン バーを最大化する場合は TRUEリボン バーを最小限に抑える場合に、ポップアップ ウィンドウで、アクティブなカテゴリを表示する場合は FALSE。  
   
 ### <a name="return-value"></a>戻り値  
  指定したカテゴリは、アクティブなカテゴリとして設定されている場合は TRUE。それ以外の場合は FALSE です。  
@@ -1574,8 +1574,8 @@ void SetActiveMDIChild(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*我が物*  
- MDI 子ウィンドウへのポインター。  
+*我が物*<br/>
+[in]MDI 子ウィンドウへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1589,11 +1589,11 @@ void SetApplicationButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pButton*  
- アプリケーションのリボン ボタンへのポインター。  
+*pButton*<br/>
+[in]アプリケーションのリボン ボタンへのポインター。  
   
- [in]*sizeButton*  
- アプリケーションのリボン ボタンのサイズ。  
+*sizeButton*<br/>
+[in]アプリケーションのリボン ボタンのサイズ。  
   
 ### <a name="remarks"></a>Remarks  
  アプリケーションのリボン ボタンは、リボン コントロールの左上隅にある大きな丸いボタンです。  
@@ -1614,14 +1614,14 @@ BOOL SetElementKeys(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiCmdID*  
- リボン要素のコマンド ID。  
+*uiCmdID*<br/>
+[in]リボン要素のコマンド ID。  
   
- [in]*lpszKeys*  
- Keytip します。  
+*lpszKeys*<br/>
+[in]Keytip します。  
   
- [in]*lpszMenuKeys*  
- メニューの keytip します。  
+*lpszMenuKeys*<br/>
+[in]メニューの keytip します。  
   
 ### <a name="return-value"></a>戻り値  
  少なくとも 1 つのリボン要素のキー ヒントが設定されている場合は TRUE。それ以外の場合は FALSE です。  
@@ -1639,11 +1639,11 @@ void SetKeyboardNavigationLevel(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pLevel*  
- 現在のキーボード ナビゲーションのオブジェクトへのポインター。  
+*pLevel*<br/>
+[in]現在のキーボード ナビゲーションのオブジェクトへのポインター。  
   
- [in]*bSetFocus*  
- リボン バーにキーボード フォーカスを設定する場合は TRUE。  
+*bSetFocus*<br/>
+[in]リボン バーにキーボード フォーカスを設定する場合は TRUE。  
   
 ### <a name="remarks"></a>Remarks  
  ユーザーが alt キーまたは F10 キーを押したときに、リボン バーのキーボード ナビゲーションが開始します。 ユーザーは、リボン バーの keytip を押して、[次へ] のナビゲーション レベルを選択します。 ユーザーは、esc キーを押して、前のナビゲーション レベルに戻ることができます。  
@@ -1658,11 +1658,11 @@ void SetMaximizeMode(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bMax*  
- リボン バーで、MDI 子ウィンドウのシステム ボタンを表示する場合は TRUEリボン バーから MDI 子ウィンドウのシステム ボタンを削除する場合は FALSE。  
+*bMax*<br/>
+[in]リボン バーで、MDI 子ウィンドウのシステム ボタンを表示する場合は TRUEリボン バーから MDI 子ウィンドウのシステム ボタンを削除する場合は FALSE。  
   
- [in]*我が物*  
- リボン バーのメイン フレーム ウィンドウへのポインター。  
+*我が物*<br/>
+[in]リボン バーのメイン フレーム ウィンドウへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
  リボン バーは、MDI 子ウィンドウが最大化されると、タブ行に MDI 子ウィンドウのシステム ボタンを表示します。  
@@ -1677,11 +1677,11 @@ void SetQuickAccessCommands(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lstCommands*  
- クイック アクセス ツールバーに配置するコマンドの一覧。  
+*lstCommands*<br/>
+[in]クイック アクセス ツールバーに配置するコマンドの一覧。  
   
- [in]*bRecalcLayout*  
- TRUE の場合はリボン要素を追加した後、リボンを再描画します。FALSE それ以外の場合。  
+*bRecalcLayout*<br/>
+[in]TRUE の場合はリボン要素を追加した後、リボンを再描画します。FALSE それ以外の場合。  
   
 ### <a name="example"></a>例  
  次の例では、使用する方法、`SetQuickAccessCommands`メソッドで、`CMFCRibbonBar`クラス。  
@@ -1696,8 +1696,8 @@ void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& 
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*状態*  
- クイック アクセス ツールバーの既定の状態。  
+*state*<br/>
+[in]クイック アクセス ツールバーの既定の状態。  
   
 ### <a name="remarks"></a>Remarks  
  クイック アクセス ツールバーの状態には、コマンドとその可視性の一覧が含まれています。  
@@ -1715,8 +1715,8 @@ void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bOnTop*  
- クイック アクセス ツールバーがリボン バーの上に配置する場合は TRUEリボン バーの下のクイック アクセス ツールバーに配置する場合は FALSE。  
+*bOnTop*<br/>
+[in]クイック アクセス ツールバーがリボン バーの上に配置する場合は TRUEリボン バーの下のクイック アクセス ツールバーに配置する場合は FALSE。  
   
 ##  <a name="settooltipfixedwidth"></a>  CMFCRibbonBar::SetTooltipFixedWidth  
  リボン バーの固定幅ツールヒントの正規表現と大きなサイズを設定します。  
@@ -1728,11 +1728,11 @@ void SetTooltipFixedWidth(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nWidthRegular*  
- 定期的な固定サイズのツールヒントのピクセル単位の幅。  
+*nWidthRegular*<br/>
+[in]定期的な固定サイズのツールヒントのピクセル単位の幅。  
   
- [in]*nWidthLargeImage*  
- 大規模な固定の (ピクセル単位)、幅は、ツールヒントを設定します。  
+*nWidthLargeImage*<br/>
+[in]大規模な固定の (ピクセル単位)、幅は、ツールヒントを設定します。  
   
 ### <a name="remarks"></a>Remarks  
  パラメーターを 0 に設定すると、変更に対応する幅。  
@@ -1747,11 +1747,11 @@ void ShowCategory(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nIndex*  
- リボン カテゴリのインデックス。  
+*nIndex*<br/>
+[in]リボン カテゴリのインデックス。  
   
- [in]*bShow*  
- TRUE の場合は、リボン カテゴリを表示します。それ以外の場合、リボン カテゴリを非表示にします。  
+*bShow*<br/>
+[in]TRUE の場合は、リボン カテゴリを表示します。それ以外の場合、リボン カテゴリを非表示にします。  
   
 ##  <a name="showcontextcategories"></a>  CMFCRibbonBar::ShowContextCategories  
  指定された ID を持つコンテキスト カテゴリを表示または非表示にします。  
@@ -1763,11 +1763,11 @@ void ShowContextCategories(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiContextID*  
- コンテキスト カテゴリの id。  
+*uiContextID*<br/>
+[in]コンテキスト カテゴリの id。  
   
- [in]*bShow*  
- TRUE の場合、指定した ID; を持つカテゴリを表示します。それ以外の場合、指定した ID を持つカテゴリを非表示します。  
+*bShow*<br/>
+[in]TRUE の場合、指定した ID; を持つカテゴリを表示します。それ以外の場合、指定した ID を持つカテゴリを非表示します。  
   
 ##  <a name="showkeytips"></a>  CMFCRibbonBar::ShowKeyTips  
  リボン バーで、リボンの各要素のキー ヒントを示しています。  
@@ -1798,8 +1798,8 @@ virtual BOOL TranslateChar(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nChar*  
- ユーザー キーの文字コード。  
+*NChar*<br/>
+[in]ユーザー キーの文字コード。  
   
 ### <a name="return-value"></a>戻り値  
  文字のコードは、リボン バーによって処理された場合は TRUE。それ以外の場合は FALSE です。  

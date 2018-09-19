@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3803 |Microsoft ドキュメント
+title: コンパイラ エラー C3803 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d720e2f94cc4a480122413e31b897ec1718ebc15
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6a841dbaae4142e92d8e0987b0618285e4f71f60
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269258"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075867"
 ---
 # <a name="compiler-error-c3803"></a>コンパイラ エラー C3803
-'property': プロパティは、そのアクセサー 'accessor' のいずれかの互換性がない型  
-  
- 定義されているプロパティの型[プロパティ](../../cpp/property-cpp.md)アクセサー関数の 1 つの戻り値の型と一致しません。  
-  
- 次の例では、C3803 が生成されます。  
-  
-```  
-// C3803.cpp  
-struct A  
-{  
-   __declspec(property(get=GetIt)) int i;  
-   char GetIt()  
-   {  
-      return 0;  
-   }  
-  
-   /*  
-   // try the following definition instead  
-   int GetIt()  
-   {  
-      return 0;  
-   }  
-   */  
-}; // C3803  
-  
-int main()  
-{  
-}  
+
+'property': プロパティのアクセサー 'accessor' のいずれかの互換性のない型には
+
+定義されているプロパティの型[プロパティ](../../cpp/property-cpp.md)のアクセサー関数の 1 つの戻り値の型と一致しません。
+
+次の例では、C3803 が生成されます。
+
+```
+// C3803.cpp
+struct A
+{
+   __declspec(property(get=GetIt)) int i;
+   char GetIt()
+   {
+      return 0;
+   }
+
+   /*
+   // try the following definition instead
+   int GetIt()
+   {
+      return 0;
+   }
+   */
+}; // C3803
+
+int main()
+{
+}
 ```

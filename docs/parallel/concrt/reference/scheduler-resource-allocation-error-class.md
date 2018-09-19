@@ -1,5 +1,5 @@
 ---
-title: scheduler_resource_allocation_error クラス |Microsoft ドキュメント
+title: scheduler_resource_allocation_error クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3b11a548bc98c44697de45c628205dc3e720971
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 9ede37cec7b654c2d5ead32f117e4fe76f28fa60
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686686"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101697"
 ---
 # <a name="schedulerresourceallocationerror-class"></a>scheduler_resource_allocation_error クラス
 このクラスは、同時実行ランタイムでクリティカル リソースを取得できないためにスローされる例外を表します。  
@@ -49,8 +49,8 @@ class scheduler_resource_allocation_error : public std::exception;
 |----------|-----------------|  
 |[get_error_code](#get_error_code)|例外の原因となったエラー コードを返します。|  
   
-## <a name="remarks"></a>コメント  
- 同時実行ランタイムの内部から、オペレーティング システムへの呼び出しが失敗したときに、この例外はスロー通常。 通常は Win32 メソッドへの呼び出しから返されるエラー コード`GetLastError`型の値に変換されます`HRESULT`とを使用して取得できる、`get_error_code`メソッドです。  
+## <a name="remarks"></a>Remarks  
+ 同時実行ランタイムの内部からオペレーティング システムへの呼び出しが失敗した場合、この例外はスロー通常。 Win32 メソッドの呼び出しから返されるエラー コード`GetLastError`型の値に変換されます`HRESULT`を使用して取得できると、`get_error_code`メソッド。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `exception`  
@@ -87,11 +87,11 @@ explicit _CRTIMP scheduler_resource_allocation_error(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Message`  
- エラーの説明メッセージ。  
+*メッセージ (_m)*<br/>
+エラーの説明メッセージ。  
   
- `_Hresult`  
- `HRESULT`例外の原因となったエラーの値。  
+*_Hresult*<br/>
+`HRESULT`例外の原因となったエラーの値。  
   
 ## <a name="see-also"></a>関連項目  
  [concurrency 名前空間](concurrency-namespace.md)

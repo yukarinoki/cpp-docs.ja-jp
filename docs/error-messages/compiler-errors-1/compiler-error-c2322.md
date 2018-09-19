@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2322 |Microsoft ドキュメント
+title: コンパイラ エラー C2322 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5f33eef216e336e8b90e48002a0f2620f3846e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97151522585407ccbc0312976a18f73e9abf066c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195660"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052440"
 ---
 # <a name="compiler-error-c2322"></a>コンパイラ エラー C2322
-'identifier' : dllimport 'dllimport' のアドレスは静的ではありません  
-  
- `dllimport`で宣言された関数のアドレスとして、静的でない値が指定されます。
+
+'identifier' : dllimport 'dllimport' のアドレスは静的ではありません
+
+`dllimport`で宣言された関数のアドレスとして、静的でない値が指定されます。

@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 733d090073fe2ed08a0499ea205c2377b4bdb289
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: eb9d21eee8e561e2caa8a7c4088774435d3ce273
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679698"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080442"
 ---
 # <a name="scope-c"></a>スコープ (C)
 
 クラス、関数、または変数などのプログラム要素を宣言するときにその名前のみ「表示」でき、プログラムの特定の部分で使用します。 名前が表示されるコンテキストを呼び出すその*スコープ*します。 たとえば、変数を宣言する`x`関数の内部`x`はのみその関数本体の内部に表示されます。 *ローカル スコープ*します。 同じ名前でその他の変数をプログラムでがあります。さまざまなスコープをされている限り、単一定義規則に違反しないし、エラーは発生しません。
 
-自動の非静的変数のスコープに作成し、プログラム実行用メモリの破棄のときにも決定します。 
+自動の非静的変数のスコープに作成し、プログラム実行用メモリの破棄のときにも決定します。
 
 スコープの 6 つの種類があります。
 
@@ -51,9 +51,9 @@ ms.locfileid: "43679698"
 
 囲まれたブロック内で名前を宣言すると、その名前が非表示になります。 次の図では、内側のブロックで `i` が再宣言されています。そのため、外側のブロック スコープでは `i` に関連付けられた変数が隠し変数になります。
 
- ![ブロック&#45;スコープの名前の隠ぺい](../cpp/media/vc38sf1.png "vc38SF1")ブロック スコープと名前が非表示
+![ブロック&#45;スコープの名前の隠ぺい](../cpp/media/vc38sf1.png "vc38SF1")ブロック スコープと名前が非表示
 
- このプログラムの出力を次の図に示します。
+このプログラムの出力を次の図に示します。
 
 ```cpp
 i = 0
@@ -67,7 +67,7 @@ i = 0
 
 ## <a name="hiding-class-names"></a>クラス名の非表示
 
- 関数、オブジェクト、変数、または列挙子を同じスコープ内で宣言することで、クラス名を非表示にできます。 ただし、クラス名もアクセスできますキーワードを使用するプレフィックスと**クラス**します。
+関数、オブジェクト、変数、または列挙子を同じスコープ内で宣言することで、クラス名を非表示にできます。 ただし、クラス名もアクセスできますキーワードを使用するプレフィックスと**クラス**します。
 
 ```cpp
 // hiding_class_names.cpp
@@ -91,7 +91,7 @@ double Account = 15.37;            // Hides class name Account
 
 int main()
 {
-    class Account Checking( Account ); // Qualifies Account as 
+    class Account Checking( Account ); // Qualifies Account as
                                        //  class name
 
     cout << "Opening account with balance of: "
@@ -103,13 +103,13 @@ int main()
 > [!NOTE]
 > 任意の場所、クラス名 (`Account`) を呼び出すときは、class キーワードは、グローバル スコープ変数 Account と区別するために使用する必要があります。 スコープ解決演算子 (::) の左側がクラス名の場合は、この規則が適用されません。 スコープ解決演算子の左側の名前は、常にクラス名と見なされます。
 
- 次の例は、型のオブジェクトへのポインターを宣言する方法を示します`Account`を使用して、**クラス**キーワード。
+次の例は、型のオブジェクトへのポインターを宣言する方法を示します`Account`を使用して、**クラス**キーワード。
 
 ```cpp
 class Account *Checking = new class Account( Account );
 ```
 
- `Account` (かっこ内)、前のステートメントで初期化子内でグローバル スコープには型である**二重**します。
+`Account` (かっこ内)、前のステートメントで初期化子内でグローバル スコープには型である**二重**します。
 
 > [!NOTE]
 > この例のように、識別子名を再使用するのは適切なプログラミング方法ではありません。
@@ -118,7 +118,7 @@ class Account *Checking = new class Account( Account );
 
 ## <a name="hiding-names-with-global-scope"></a>グローバル スコープの名前の隠ぺい
 
- ブロック スコープで同じ名前を明示的に宣言することで、グローバル スコープを持つ名前を非表示にできます。 スコープ解決演算子を使用してグローバル スコープ名にアクセスできますが、(`::`)。
+ブロック スコープで同じ名前を明示的に宣言することで、グローバル スコープを持つ名前を非表示にできます。 スコープ解決演算子を使用してグローバル スコープ名にアクセスできますが、(`::`)。
 
 ```cpp
 #include <iostream>
@@ -139,4 +139,5 @@ Global-scoped i has the value: 7
 ```
 
 ## <a name="see-also"></a>関連項目
- [基本的な概念](../cpp/basic-concepts-cpp.md)
+
+[基本的な概念](../cpp/basic-concepts-cpp.md)

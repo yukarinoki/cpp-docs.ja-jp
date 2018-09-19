@@ -1,5 +1,5 @@
 ---
-title: invalid_compute_domain クラス |Microsoft ドキュメント
+title: invalid_compute_domain クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 588f12e04f3a2833da6d67c07ab41929d916a4b5
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: def102ecb8063f82d90d41b2b678ff22638b1f8b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705212"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116010"
 ---
 # <a name="invalidcomputedomain-class"></a>invalid_compute_domain クラス
-ランタイムがで指定された計算ドメインを使用して、カーネルを起動できない場合にスローされる例外、 [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)呼び出しサイトです。  
+ランタイムがで指定された計算ドメインを使用してカーネルを起動できない場合にスローされる例外、 [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)呼び出しサイト。  
 
   
 ## <a name="syntax"></a>構文  
@@ -70,8 +70,8 @@ invalid_compute_domain() throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Message`  
- エラーの説明。  
+*メッセージ (_m)*<br/>
+エラーの説明。  
   
 ### <a name="return-value"></a>戻り値  
  `invalid_compute_domain` クラスのインスタンス。  

@@ -1,5 +1,5 @@
 ---
-title: 遅延読み込みヘルパー関数を Visual C 6.0 以降の DLL 内の変更 |Microsoft ドキュメント
+title: 遅延読み込みヘルパー関数を Visual C 6.0 以降の DLL 内の変更 |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,47 +17,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3af68e5ba92a96502e295e75520cd182b4633dae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0caf74f02b005ef65e8ac30750fdf244ddeeed0d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371854"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712271"
 ---
 # <a name="changes-in-the-dll-delayed-loading-helper-function-since-visual-c-60"></a>Visual C++ 6.0 以降の DLL 遅延読み込みヘルパー関数の変更点
-コンピューターに複数のバージョンの Visual C が場合や、独自のヘルパー関数を定義した場合、による影響は、DLL に加えられた変更の遅延読み込みヘルパー関数。 例えば:  
-  
--   **_ _delayloadhelper**現在 **_ _delayloadhelper2**  
-  
--   **__pfnDliNotifyHook**現在 **__pfnDliNotifyHook2**  
-  
--   **__pfnDliFailureHook**現在 **__pfnDliFailureHook2**  
-  
--   **__FUnloadDelayLoadedDLL**現在 **__FUnloadDelayLoadedDLL2**  
-  
+
+コンピューターに複数のバージョンの Visual C があるか、独自のヘルパー関数を定義する場合を受ける可能性がありますには、DLL に加えられた変更が遅延読み込みヘルパー関数。 例えば:
+
+- **_ _delayloadhelper**が **_ _delayloadhelper2**
+
+- **__pfnDliNotifyHook**が **__pfnDliNotifyHook2**
+
+- **__pfnDliFailureHook**が **__pfnDliFailureHook2**
+
+- **__FUnloadDelayLoadedDLL**が **__FUnloadDelayLoadedDLL2**
+
 > [!NOTE]
->  既定のヘルパー関数を使用している場合は、これらの変更は影響しません。 リンカーの起動方法の変更はありません。  
-  
-## <a name="multiple-versions-of-visual-c"></a>複数のバージョンの Visual C  
- コンピューターに複数のバージョンの Visual C があれば、リンカーは、delayimp.lib と一致することを確認します。 不一致がある場合、リンカー エラーのいずれかのレポートが表示されます`___delayLoadHelper2@8`または`___delayLoadHelper@8`未解決の外部シンボルとして。 前者の意味を古い delayimp.lib 新しいリンカーし、後者に新しい delayimp.lib を古いリンカーのことを意味します。  
-  
- 未解決のリンカー エラーが発生した場合は、実行[dumpbin/linkermember](../../build/reference/linkermember.md): を表示するヘルパー関数が代わりに定義されているヘルパー関数を含むと想定している delayimp.lib に 1 です。 ヘルパー関数は、オブジェクト ファイルで定義することも可能性があります。実行[dumpbin/symbols](../../build/reference/symbols.md)を探します.`delayLoadHelper(2)`です。  
-  
- わかっている場合、Visual C 6.0 リンカーがあります。  
-  
--   Dumpbin 遅延読み込みヘルパーの .lib ファイルや .obj ファイルを定義するかどうかを決定する上で実行 **_ _delayloadhelper2**です。 それ以外の場合は、リンクは失敗します。  
-  
--   定義 **_ _delayloadhelper**遅延読み込みヘルパーの .lib ファイルまたは .obj ファイル。  
-  
-## <a name="user-defined-helper-function"></a>ユーザー定義のヘルパー関数  
- 独自のヘルパー関数を定義し、現在のバージョンの Visual C を使用している場合は、次の操作を行います。  
-  
--   ヘルパー関数の名前を変更 **_ _delayloadhelper2**です。  
-  
--   相対アドレス (Rva) が両方の 32 ビットおよび 64 ビット プログラムで想定どおりに動作するには、遅延記述子 (delayimp.h で ImgDelayDescr) でポインターを絶対アドレス (VAs) から変更されている、ために、これらをポインターに変換する必要があります。 新しい関数が導入されています: PFromRva、delayhlp.cpp で見つかりました。 それぞれの記述子フィールドのこの関数を使用すると、それらをいずれかの 32 ビットまたは 64 ビット ポインターに変換します。 既定の遅延読み込みヘルパー関数引き続き例として使用する適切なテンプレートです。  
-  
-## <a name="load-all-imports-for-a-delay-loaded-dll"></a>遅延読み込みした DLL のすべてのインポートを読み込む  
- リンカーは、遅延読み込みをするように指定した DLL からすべてのインポートを読み込むことができます。 参照してください[読み込みインポートはすべて、「](../../build/reference/loading-all-imports-for-a-delay-loaded-dll.md)詳細についてはします。  
-  
-## <a name="see-also"></a>関連項目  
- [ヘルパー関数について](understanding-the-helper-function.md)
+>  既定のヘルパー関数を使用している場合は、これらの変更は影響を与えません。 リンカーを呼び出す方法に関する変更はありません。
+
+## <a name="multiple-versions-of-visual-c"></a>複数のバージョンの Visual C
+
+コンピューターに複数のバージョンの Visual C をした場合、リンカーは、delayimp.lib と一致することを確認します。 いずれかを報告リンカー エラーが発生した不一致がある場合は`___delayLoadHelper2@8`または`___delayLoadHelper@8`未解決の外部シンボルとして。 前者を古い delayimp.lib では、新しいリンカーを意味し、後者の場合、古いリンカーを新しい delayimp.lib を意味します。
+
+未解決のリンカー エラーが発生する場合は、実行[dumpbin/linkermember](../../build/reference/linkermember.md): 1 にするヘルパー関数が代わりに定義されているヘルパー関数を含める必要のある delayimp.lib にします。 ヘルパー関数は、オブジェクト ファイルで定義することも可能性があります。実行[dumpbin/symbols](../../build/reference/symbols.md)を探して`delayLoadHelper(2)`します。
+
+わかっている場合、Visual C 6.0 リンカーが、あります。
+
+- 遅延読み込みヘルパーの .lib ファイルや .obj ファイルを定義するかどうかを判断する上での dumpbin の実行 **_ _delayloadhelper2**します。 それ以外の場合は、リンクは失敗します。
+
+- 定義 **_ _delayloadhelper**遅延読み込みヘルパーの .lib または .obj ファイル。
+
+## <a name="user-defined-helper-function"></a>ユーザー定義のヘルパー関数
+
+独自のヘルパー関数を定義し、現在のバージョンの Visual C を使用している場合は、次の操作を行います。
+
+- ヘルパー関数の名前を変更 **_ _delayloadhelper2**します。
+
+- 遅延記述子 (delayimp.h で ImgDelayDescr) でポインターは、絶対アドレス (VAs) から相対アドレス (Rva) 32 ビットおよび 64 ビットの両方のプログラムに正常に動作に変更されましたが、ために、これらをポインターに変換する必要があります。 新しい関数が導入されています: PFromRva、delayhlp.cpp で見つかりました。 それぞれの記述子フィールドのこの関数を使用すると、それらをいずれかの 32 ビットまたは 64 ビット ポインターに変換します。 既定の遅延読み込みヘルパー関数は、例として使用する適切なテンプレートです。
+
+## <a name="load-all-imports-for-a-delay-loaded-dll"></a>遅延読み込み DLL のすべてのインポートを読み込む
+
+リンカーは、遅延読み込みをするように指定した DLL からのすべてのインポートを読み込むことができます。 参照してください[すべてのインポートを「読み込み](../../build/reference/loading-all-imports-for-a-delay-loaded-dll.md)詳細についてはします。
+
+## <a name="see-also"></a>関連項目
+
+[ヘルパー関数について](understanding-the-helper-function.md)

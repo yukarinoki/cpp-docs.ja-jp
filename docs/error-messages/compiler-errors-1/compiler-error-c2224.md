@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2224 |Microsoft ドキュメント
+title: コンパイラ エラー C2224 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0830018d514f5a58bdc1f2989ae0f3106483dcce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4420e0e2f89c50bbc7d0748779efcc0eccf117d1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169531"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098161"
 ---
 # <a name="compiler-error-c2224"></a>コンパイラ エラー C2224
-'.identifier' の左側が構造体/共用体型をいる必要があります。  
-  
- ピリオド (.) の左側のオペランドはクラス、構造体、または共用体ではありません。  
-  
- このエラーは、未定義の変数は、左のオペランドで発生することができます (したがって入力`int`)。
+
+'.identifier' の左側が構造体、共用体型をいる必要があります。
+
+ピリオド (.) の左側のオペランドがクラス、構造体または共用体。
+
+このエラーは、未定義の変数には、左側のオペランドによって発生することができます (したがって入力`int`)。

@@ -42,12 +42,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 864bba5b88c7e52b55bd86a61edaaac2d22b0346
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cdd7b68ac9e3bf55f64b9a68f7b8075eab640faa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402310"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056821"
 ---
 # <a name="futime-futime32-futime64"></a>_futime、_futime32、_futime64
 
@@ -80,13 +80,13 @@ int _futime64(
 
 ## <a name="return-value"></a>戻り値
 
-処理が正常に終了した場合は 0 を返します。 エラーが発生した場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているとおり、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、関数は-1 を返しますと**errno**に設定されている**EBADF**、無効なファイル記述子、ことを示すまたは**EINVAL**無効なことを示すパラメーター。
+処理が正常に終了した場合は 0 を返します。 エラーが発生した場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているとおり、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、関数は-1 を返しますと**errno**に設定されている**EBADF**、無効なファイル記述子を示すまたは**EINVAL**無効なことを示すパラメーター。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Futime**ルーチンに関連付けられている、開いているファイルで、変更日時、アクセスを設定する*fd*です。 **_futime**と同じ[_utime](utime-utime32-utime64-wutime-wutime32-wutime64.md)の引数は、開いているファイルのファイル記述子ではなく、ファイルまたはファイルへのパスの名前を除いて、します。 **_Utimbuf**構造体には、フィールドに新しい変更日とアクセス時刻が含まれています。 両方のフィールドに、有効な値が含まれている必要があります。 **_utimbuf32**と **_utimbuf64**と同じ **_utimbuf**それぞれ 32 ビットと 64 ビット時刻型の使用の場合を除きます。 **_futime**と **_utimbuf** 64 ビット時刻型を使用し、 **_futime**動作と同じ **_futime64**です。 従来の動作を強制する必要がある場合は、定義 **_USE_32BIT_TIME_T**です。 これにより、その **_futime**と同じ働きをする **_futime32**を発生させて、 **_utimbuf** に相当する、32ビット時刻型を使用する構造体 **__utimbuf32**です。
+**_Futime**ルーチンに関連付けられている開いているファイルの変更日とアクセス時間を設定する*fd*します。 **_futime**ヲェヒェケェ ・ [_utime](utime-utime32-utime64-wutime-wutime32-wutime64.md)の引数は、開いているファイルのファイル記述子ではなく、ファイルまたはファイルへのパスの名前を点が異なります。 **_Utimbuf**構造体には新しい変更日とアクセス時刻のフィールドが含まれています。 両方のフィールドに、有効な値が含まれている必要があります。 **_utimbuf32**と **_utimbuf64**と同じ **_utimbuf**それぞれを除くの 32 ビットおよび 64 ビットの時刻型を使用します。 **_futime**と **_utimbuf** 64 ビット時刻型を使用し、 **_futime**動作と同じ **_futime64**。 以前の動作を強制する必要がある場合は、定義 **_USE_32BIT_TIME_T**します。 これにより **_futime**動作と同じでなければ **_futime32**により、 **_utimbuf** と同じですので、32ビット時刻型を使用する構造体 **__utimbuf32**します。
 
-**_futime64**が使用される、 **_ _utimbuf64**構造体、読み取りおよび変更できますファイルの作成日 (utc) です 3000 年 12 月 31 日 23:59:59 秒まで一方への呼び出し **_futime32** 、ファイルの日付が失敗する。23時 59分: 59 2038 年 1 月 18 日 (utc) よりも後です。 これらの関数の日付範囲の下限は、1970 年 1 月 1 日の午前 0 時です。
+**_futime64**、使用、 **_ _utimbuf64**構造体を読み取り、変更は UTC 3000 年 12 月 31 日 23時 59分: 59 秒までの日付のファイルへの呼び出し **_futime32**場合は、ファイルの日付が失敗しました。2038 年 1 月 18 日 23時 59分: 59 までよりも後。 これらの関数の日付範囲の下限は、1970 年 1 月 1 日の午前 0 時です。
 
 ## <a name="requirements"></a>要件
 
@@ -143,20 +143,20 @@ Arbitrary file contents.
 ### <a name="sample-output"></a>出力例
 
 ```Output
- Volume in drive Z has no label.
- Volume Serial Number is 5C68-57C1
+Volume in drive Z has no label.
+Volume Serial Number is 5C68-57C1
 
- Directory of Z:\crt
+Directory of Z:\crt
 
- 03/25/2004  10:40 AM                24 crt_futime.c_input
+03/25/2004  10:40 AM                24 crt_futime.c_input
                1 File(s)             24 bytes
                0 Dir(s)  24,268,476,416 bytes free
- Volume in drive Z has no label.
- Volume Serial Number is 5C68-57C1
+Volume in drive Z has no label.
+Volume Serial Number is 5C68-57C1
 
- Directory of Z:\crt
+Directory of Z:\crt
 
- 03/25/2004  10:41 AM                24 crt_futime.c_input
+03/25/2004  10:41 AM                24 crt_futime.c_input
                1 File(s)             24 bytes
                0 Dir(s)  24,268,476,416 bytes free
 File time modified

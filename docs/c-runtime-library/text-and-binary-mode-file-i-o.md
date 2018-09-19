@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4be1a3619fcd441dbcca53b0a1c369e30f9fb678
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 133f62347998ad8238c3136c3de03b08ba41346d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411485"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116257"
 ---
 # <a name="text-and-binary-mode-file-io"></a>テキスト モードとバイナリ モードのファイル入出力
 
@@ -42,9 +42,9 @@ ms.locfileid: "32411485"
 
 - プログラム内でグローバル変数 [_fmode](../c-runtime-library/fmode.md) を設定することで、既定の変換モードを直接変更します。 関数 **_set_fmode** でこの変数の値を設定しますが、直接設定することもできます。
 
-[_open](../c-runtime-library/reference/open-wopen.md)、[fopen](../c-runtime-library/reference/fopen-wfopen.md)、[fopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)、[freopen](../c-runtime-library/reference/freopen-wfreopen.md)、[freopen_s](../c-runtime-library/reference/freopen-s-wfreopen-s.md)、[_fsopen](../c-runtime-library/reference/fsopen-wfsopen.md)、または[_sopen_s](../c-runtime-library/reference/sopen-s-wsopen-s.md) などのファイルを開く関数を呼び出すときに、関数 [_set_fmode](../c-runtime-library/reference/set-fmode.md) に適切な引数を指定することで、**_fmode** の現在の既定の設定を上書きすることができます。 **stdin**、**stdout**、**stderr** ストリームは常に既定でテキスト モードで開きます。これらのファイルのいずれかを開くときに、この既定の設定を上書きすることもできます。 ファイルを開いた後、ファイル記述子を使用して変換モードを変更するには、[_setmode](../c-runtime-library/reference/setmode.md) を使用します。
+[_open](../c-runtime-library/reference/open-wopen.md)、[fopen](../c-runtime-library/reference/fopen-wfopen.md)、[fopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)、[freopen](../c-runtime-library/reference/freopen-wfreopen.md)、[freopen_s](../c-runtime-library/reference/freopen-s-wfreopen-s.md)、[_fsopen](../c-runtime-library/reference/fsopen-wfsopen.md)、または[_sopen_s](../c-runtime-library/reference/sopen-s-wsopen-s.md) などのファイルを開く関数を呼び出すときに、関数 [_set_fmode](../c-runtime-library/reference/set-fmode.md) に適切な引数を指定することで、**_fmode** の現在の既定の設定をオーバーライドすることができます。 **stdin**、**stdout**、**stderr** ストリームは常に既定でテキスト モードで開きます。これらのファイルのいずれかを開くときに、この既定の設定をオーバーライドすることもできます。 ファイルを開いた後、ファイル記述子を使用して変換モードを変更するには、[_setmode](../c-runtime-library/reference/setmode.md) を使用します。
 
 ## <a name="see-also"></a>参照
 
 [入出力](../c-runtime-library/input-and-output.md)<br/>
- [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>

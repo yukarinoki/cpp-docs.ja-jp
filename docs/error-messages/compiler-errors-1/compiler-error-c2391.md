@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2391 |Microsoft ドキュメント
+title: コンパイラ エラー C2391 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a16ed19f5cac9d6c23a3f709e40fc290223e93c7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1201651ffc52dae7b8f184895f8005750ee4697e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33224766"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102373"
 ---
 # <a name="compiler-error-c2391"></a>コンパイラ エラー C2391
-'identifier': 'friend' を型定義中に使用することはできません  
-  
- `friend`宣言には、完全なクラス宣言が含まれています。 A`friend`宣言を指定できますが、メンバー関数、または、詳細な型指定子を完全なクラス宣言ではありません。  
-  
- 次の例では C2326 が生成されます。  
-  
-```  
-// C2391.cpp  
-// compile with: /c  
-class D {   
-   void func( int );   
-};  
-  
-class A {  
-   friend class B { int i; };   // C2391  
-  
-   // OK  
-   friend class C;  
-   friend void D::func(int);  
-};  
+
+'identifier': 'friend' は型定義中に使用できません
+
+`friend`宣言には、完全なクラス宣言が含まれています。 A`friend`メンバー関数、または、詳細な型指定子が完全なクラス宣言ではない宣言を指定できます。
+
+次の例では C2326 が生成されます。
+
+```
+// C2391.cpp
+// compile with: /c
+class D {
+   void func( int );
+};
+
+class A {
+   friend class B { int i; };   // C2391
+
+   // OK
+   friend class C;
+   friend void D::func(int);
+};
 ```

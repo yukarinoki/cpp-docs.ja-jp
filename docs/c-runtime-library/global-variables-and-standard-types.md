@@ -19,16 +19,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15c0781f286d054d9a4baeedf9460fa460bf39c5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 59dfba20e2bf55bb314cd97d860a741a6d830957
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388995"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089737"
 ---
 # <a name="global-variables-and-standard-types"></a>グローバル変数および基本データ型
-Microsoft ランタイム ライブラリには、ライブラリ ルーチンで使用される[グローバル変数](../c-runtime-library/global-variables.md)、[制御フラグ](../c-runtime-library/control-flags.md)、[基本データ型](../c-runtime-library/standard-types.md)の定義が含まれています。 プログラムで宣言するか適切なヘッダー ファイルをインクルードして、これらの変数、フラグ、型にアクセスしてください。  
-  
-## <a name="see-also"></a>参照  
- [C ランタイム ライブラリ リファレンス](../c-runtime-library/c-run-time-library-reference.md)   
- [グローバル定数](../c-runtime-library/global-constants.md)
+
+Microsoft ランタイム ライブラリには、ライブラリ ルーチンで使用される[グローバル変数](../c-runtime-library/global-variables.md)、[制御フラグ](../c-runtime-library/control-flags.md)、[基本データ型](../c-runtime-library/standard-types.md)の定義が含まれています。 プログラムで宣言するか適切なヘッダー ファイルをインクルードして、これらの変数、フラグ、型にアクセスしてください。
+
+## <a name="see-also"></a>参照
+
+[C ランタイム ライブラリ リファレンス](../c-runtime-library/c-run-time-library-reference.md)<br/>
+[グローバル定数](../c-runtime-library/global-constants.md)

@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9932f8814855213f133323f2102e0cacf1e69c8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a55623c28ca7114f43f208e5c660b9df38d1242b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196712"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701834"
 ---
 # <a name="cbutton-class"></a>CButton クラス
 Windows のボタン コントロールの機能が用意されています。  
@@ -394,8 +394,8 @@ BOOL GetNote(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[out]*lpszNote*|呼び出し元が割り当てと解放を担当する、バッファーへのポインター。 バッファーに現在のコマンド リンク コントロールに関連付けられているメモのテキストが含まれています、戻り値が TRUE の場合それ以外の場合、バッファーは変更されません。|  
-|[入力、出力]*cchNote*|符号なし整数型の変数へのポインター。<br /><br /> 変数にはこのメソッドが呼び出されるで指定したバッファーのサイズが含まれています、 *lpszNote*パラメーター。<br /><br /> ときにこのメソッドから戻り値が TRUE、変数の場合に、現在のコマンド リンク コントロールに関連付けられている注釈のサイズが含まれています。 戻り値が FALSE の場合、変数には、メモの格納に必要なバッファー サイズが含まれています。|  
+|*lpszNote*|[out]呼び出し元が割り当てと解放を担当する、バッファーへのポインター。 バッファーに現在のコマンド リンク コントロールに関連付けられているメモのテキストが含まれています、戻り値が TRUE の場合それ以外の場合、バッファーは変更されません。|  
+|*cchNote*|[入力、出力]符号なし整数型の変数へのポインター。<br /><br /> 変数にはこのメソッドが呼び出されるで指定したバッファーのサイズが含まれています、 *lpszNote*パラメーター。<br /><br /> ときにこのメソッドから戻り値が TRUE、変数の場合に、現在のコマンド リンク コントロールに関連付けられている注釈のサイズが含まれています。 戻り値が FALSE の場合、変数には、メモの格納に必要なバッファー サイズが含まれています。|  
   
 ### <a name="return-value"></a>戻り値  
  最初のオーバー ロードで、 [CString](../../atl-mfc-shared/using-cstring.md)を現在のコマンド リンク コントロールに関連付けられたメモのテキストを含むオブジェクト。  
@@ -467,7 +467,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[out]*pInfo*|ポインターを[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo)現在の分割ボタン コントロールに関する情報を受け取る構造体。 呼び出し元が、構造体を割り当てる責任を負います。|  
+|*pInfo*|[out]ポインターを[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo)現在の分割ボタン コントロールに関する情報を受け取る構造体。 呼び出し元が、構造体を割り当てる責任を負います。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -488,7 +488,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[out]*pSize*|ポインターを[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)四角形の説明を受け取る。|  
+|*pSize*|[out]ポインターを[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)四角形の説明を受け取る。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -687,7 +687,7 @@ BOOL SetDropDownState(BOOL fDropDown);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*fDropDown*|BST_DROPDOWNPUSHED の状態を設定する場合は TRUEそれ以外の場合、FALSE です。|  
+|*fDropDown*|[in]BST_DROPDOWNPUSHED の状態を設定する場合は TRUEそれ以外の場合、FALSE です。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -718,7 +718,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*fElevationRequired*|設定する場合は True`elevation required`状態、それ以外は FALSE。|  
+|*fElevationRequired*|[in]設定する場合は True`elevation required`状態、それ以外は FALSE。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -790,7 +790,7 @@ BOOL SetNote(LPCTSTR lpszNote);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*lpszNote*|コマンド リンク コントロールのメモのテキストとして設定されている Unicode 文字列へのポインター。|  
+|*lpszNote*|[in]コマンド リンク コントロールのメモのテキストとして設定されている Unicode 文字列へのポインター。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -821,7 +821,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*chGlyph*|分割ボタンのドロップダウン矢印として使用するグリフを指定する文字。|  
+|*chGlyph*|[in]分割ボタンのドロップダウン矢印として使用するグリフを指定する文字。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -844,7 +844,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*pSplitImageList*|ポインターを[CImageList](../../mfc/reference/cimagelist-class.md)を現在の分割ボタン コントロールに割り当てるオブジェクト。|  
+|*pSplitImageList*|[in]ポインターを[CImageList](../../mfc/reference/cimagelist-class.md)を現在の分割ボタン コントロールに割り当てるオブジェクト。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -865,7 +865,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*pInfo*|ポインターを[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo)現在の分割ボタン コントロールを定義する構造体。|  
+|*pInfo*|[in]ポインターを[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo)現在の分割ボタン コントロールを定義する構造体。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -896,7 +896,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*pSize*|ポインターを[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)外接する四角形を記述する構造体。|  
+|*pSize*|[in]ポインターを[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)外接する四角形を記述する構造体。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -929,7 +929,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*uSplitStyle*|分割ボタンのスタイルのビットごとの組み合わせ。 詳細については、次を参照してください。、`uSplitStyle`のメンバー、 [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo)構造体。|  
+|*uSplitStyle*|[in]分割ボタンのスタイルのビットごとの組み合わせ。 詳細については、次を参照してください。、`uSplitStyle`のメンバー、 [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo)構造体。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a17b690111edc220f6310963e5f606e2a9c869c9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7444cfe152d964318ea9786f4e4f7718e11d71cb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756042"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069808"
 ---
 # <a name="idataobjectimpl-class"></a>IDataObjectImpl クラス
 
@@ -47,13 +47,13 @@ ms.locfileid: "43756042"
 ## <a name="syntax"></a>構文
 
 ```
-template<class T>  
+template<class T>
 class IDataObjectImpl
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 派生したクラス、`IDataObjectImpl`します。
 
 ## <a name="members"></a>メンバー

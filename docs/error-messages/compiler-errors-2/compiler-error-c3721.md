@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3721 |Microsoft ドキュメント
+title: コンパイラ エラー C3721 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0bd4942dba3c49ecc06b015d6ed14b297d09ac2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df6c2ff97e44ab679e59b3377e80e78398f12211
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275198"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039558"
 ---
 # <a name="compiler-error-c3721"></a>コンパイラ エラー C3721
-'signature': イベントの署名は互換性がありません  
-  
- イベントの宣言が正しくありません。 詳細については、次を参照してください。 [_ _event](../../cpp/event.md)です。  
-  
- C3721 は古い形式のコンパイラ オプションを使用して到達のみ **/clr:oldSyntax**です。  
+
+'signature': イベントの署名は互換性がありません
+
+イベントの宣言が正しくありません。 詳細については、次を参照してください。 [_ _event](../../cpp/event.md)します。
+
+C3721 は古い形式のコンパイラ オプションを使用して到達のみ **/clr:oldSyntax**します。

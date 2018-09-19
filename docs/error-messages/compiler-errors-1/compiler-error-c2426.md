@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2426 |Microsoft ドキュメント
+title: コンパイラ エラー C2426 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48c1cdf36693863c43cbb3d7c709bdbefa07d232
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c634ac505684a5f0bf30a831668e27078650d70
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33223583"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078635"
 ---
 # <a name="compiler-error-c2426"></a>コンパイラ エラー C2426
-'token': 'context' で無効な演算子  
-  
- トークンは、このコンテキストでは演算子として使用できません。 インデックス操作など、入れ子にできません。
+
+'token': 'context' で無効な演算子
+
+トークンは、このコンテキストでは演算子として使用できません。 インデックス演算子では、たとえば、入れ子にできません。

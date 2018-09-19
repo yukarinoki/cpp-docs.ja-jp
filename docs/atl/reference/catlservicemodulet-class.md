@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fff071ad298d379dd8d063d5f71287da9a567b49
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 74d36c7b13be3653a0c17f763e37447d5541c5a3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755564"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086461"
 ---
 # <a name="catlservicemodulet-class"></a>CAtlServiceModuleT クラス
 
@@ -62,16 +62,16 @@ ms.locfileid: "43755564"
 ## <a name="syntax"></a>構文
 
 ```
-template <class T, UINT nServiceNameID>  
+template <class T, UINT nServiceNameID>
 class ATL_NO_VTABLE CAtlServiceModuleT : public CAtlExeModuleT<T>
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 クラスから派生した`CAtlServiceModuleT`します。
 
-*nServiceNameID*  
+*nServiceNameID*<br/>
 サービスのリソース識別子。
 
 ## <a name="members"></a>メンバー
@@ -163,7 +163,7 @@ void Handler(DWORD dwOpcode) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*dwOpcode*  
+*dwOpcode*<br/>
 ハンドラーの操作を定義するスイッチ。 詳細については、「解説」を参照してください。
 
 ### <a name="remarks"></a>Remarks
@@ -246,10 +246,10 @@ void __cdecl LogEvent(LPCTSTR pszFormat, ...) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pszFormat*  
+*pszFormat*<br/>
 イベント ログに書き込む文字列。
 
-...  
+*...*<br/>
 イベント ログに書き込まれる省略可能な余分な文字列。
 
 ### <a name="remarks"></a>Remarks
@@ -366,7 +366,7 @@ void OnUnknownRequest(DWORD /* dwOpcode*/) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*dwOpcode*  
+*dwOpcode*<br/>
 予約済み。
 
 ##  <a name="parsecommandline"></a>  CAtlServiceModuleT::ParseCommandLine
@@ -379,10 +379,10 @@ bool ParseCommandLine(LPCTSTR lpCmdLine, HRESULT* pnRetCode) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*lpCmdLine*  
+*lpCmdLine*<br/>
 コマンド ライン。
 
-*pnRetCode*  
+*pnRetCode*<br/>
 (これが、行われた) 場合は、登録に対応する HRESULT。
 
 ### <a name="return-value"></a>戻り値
@@ -403,7 +403,7 @@ HRESULT PreMessageLoop(int nShowCmd) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nShowCmd*  
+*nShowCmd*<br/>
 このパラメーターに渡される[CAtlExeModuleT::PreMessageLoop](../../atl/reference/catlexemodulet-class.md#premessageloop)します。
 
 ### <a name="return-value"></a>戻り値
@@ -424,7 +424,7 @@ inline HRESULT RegisterAppId(bool bService = false) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*bService*  
+*bService*<br/>
 サービスとして登録する場合は true である必要があります。
 
 ### <a name="return-value"></a>戻り値
@@ -441,7 +441,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nShowCmd*  
+*nShowCmd*<br/>
 ウィンドウの表示方法を指定します。 このパラメーターで説明されている値のいずれかを指定できます、 [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)セクション。 既定値は、SW_HIDE です。
 
 ### <a name="return-value"></a>戻り値
@@ -462,10 +462,10 @@ void ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*dwArgc*  
+*dwArgc*<br/>
 Argc 引数。
 
-*lpszArgv*  
+*lpszArgv*<br/>
 Argv 引数。
 
 ### <a name="remarks"></a>Remarks
@@ -484,7 +484,7 @@ void SetServiceStatus(DWORD dwState) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*dwState*  
+*dwState*<br/>
 新しいステータス。 参照してください[SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus)使用可能な値。
 
 ### <a name="remarks"></a>Remarks
@@ -501,7 +501,7 @@ HRESULT Start(int nShowCmd) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nShowCmd*  
+*nShowCmd*<br/>
 ウィンドウの表示方法を指定します。 このパラメーターで説明されている値のいずれかを指定できます、 [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)セクション。
 
 ### <a name="return-value"></a>戻り値
@@ -562,7 +562,7 @@ int WinMain(int nShowCmd) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nShowCmd*  
+*nShowCmd*<br/>
 ウィンドウの表示方法を指定します。 このパラメーターで説明されている値のいずれかを指定できます、 [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)セクション。
 
 ### <a name="return-value"></a>戻り値
@@ -575,5 +575,5 @@ int WinMain(int nShowCmd) throw();
 
 ## <a name="see-also"></a>関連項目
 
-[CAtlExeModuleT クラス](../../atl/reference/catlexemodulet-class.md)   
+[CAtlExeModuleT クラス](../../atl/reference/catlexemodulet-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

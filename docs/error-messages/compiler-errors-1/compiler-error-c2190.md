@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2190 |Microsoft ドキュメント
+title: コンパイラ エラー C2190 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8a40aa3ae2169233874ae806d65a63d1644283e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7fdca31d191700057a255d99c6d943f4b4e6a981
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169869"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092844"
 ---
 # <a name="compiler-error-c2190"></a>コンパイラ エラー C2190
-2 番目を超える最初のパラメーター リスト  
-  
- C の関数は、パラメーター一覧を短くしてもう一度で宣言されました。 C では、オーバー ロードされた関数はサポートされません。  
-  
- 次の例では、C2190 が生成されます。  
-  
-```  
-// C2190.c  
-// compile with: /Za /c  
-void func( int, float );  
-void func( int  );   // C2190, different parameter list  
-void func2( int  );   // OK  
+
+2 つ目を超える最初のパラメーター リスト
+
+C の関数は、パラメーター一覧を短くしてもう一度で宣言されました。 C では、オーバー ロードされた関数はサポートされません。
+
+次の例では、C2190 が生成されます。
+
+```
+// C2190.c
+// compile with: /Za /c
+void func( int, float );
+void func( int  );   // C2190, different parameter list
+void func2( int  );   // OK
 ```

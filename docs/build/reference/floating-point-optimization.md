@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 082cd3a7721f1bc72899130159b724b292e5e217
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6208e425ce4a2e1b5738932b8acaf6b11b7db24b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595049"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706681"
 ---
 # <a name="microsoft-visual-c-floating-point-optimization"></a>Microsoft Visual C 浮動小数点の最適化
 
@@ -757,7 +757,6 @@ float sum = f1 + f2;
 このような追加の丸めを低い精度浮動小数点ユニット、SSE2 などを使用して中間の計算の一部を実行する可能性があります。 /Fp:fast 丸め処理の精度は、そのためプラットフォームによって異なります。1 つのプロセッサ用にコンパイルするコードは、別のプロセッサに適して必ずしもに機能しない可能性があります。 速度の利点がありますが、精度の問題を上回るかどうかを判断するユーザーをそのままです。
 
 /Fp:fast 最適化が特に問題と、特定の関数の場合は、浮動小数点モード ローカルに切り替えられる fp: 正確なを使用して、`float_control`コンパイラのプラグマ。
-
 
 ### <a name="algebraic-transformations-under-fpfast"></a>/Fp:fast 代数変換
 

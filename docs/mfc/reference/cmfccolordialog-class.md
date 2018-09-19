@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a1d5c2d7bb2da2ba293ac29a59948f80c1bed59
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 3cf85ec6de81ca18f32b8cd6bea015341f78287c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680611"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715365"
 ---
 # <a name="cmfccolordialog-class"></a>CMFCColorDialog クラス
 `CMFCColorDialog`クラスは、色の選択 ダイアログ ボックスを表します。  
@@ -125,17 +125,17 @@ CMFCColorDialog(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*clrInit*  
- 既定色を選択します。 値が指定されていない場合は、既定では RGB(0,0,0) (黒です)。  
+*clrInit*<br/>
+[in]既定色を選択します。 値が指定されていない場合は、既定では RGB(0,0,0) (黒です)。  
   
- [in]*dwFlags*  
- (予約されています。)  
+*dwFlags*<br/>
+[in]予約されています。
   
- [in]*pParentWnd*  
- ウィンドウ、ダイアログ ボックスの親またはオーナー ウィンドウへのポインター。  
+*pParentWnd*<br/>
+[in]ウィンドウ、ダイアログ ボックスの親またはオーナー ウィンドウへのポインター。  
   
- [in]*hPal*  
- 色パレットへのハンドル。  
+*hPal*<br/>
+[in]色パレットへのハンドル。  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -182,8 +182,8 @@ void SetCurrentColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*rgb*  
- RGB カラー値  
+*rgb*<br/>
+[in]RGB カラー値  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -195,8 +195,8 @@ void SetNewColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*rgb*  
- A [COLORREF](/windows/desktop/gdi/colorref) RGB 色を指定します。  
+*rgb*<br/>
+[in]A [COLORREF](/windows/desktop/gdi/colorref) RGB 色を指定します。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -211,14 +211,14 @@ void SetPageOne(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*R*  
- RGB 値の赤の要素を指定します。  
+*R*<br/>
+[in]RGB 値の赤の要素を指定します。  
   
- [in]*G*  
- RGB 値の緑の成分を指定します。  
+*G*<br/>
+[in]RGB 値の緑の成分を指定します。  
   
- [in]*B*  
- RGB 値の青のコンポーネントを指定します。  
+*B*<br/>
+[in]RGB 値の青のコンポーネントを指定します。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -233,14 +233,14 @@ void SetPageTwo(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*R*  
- RGB 値の赤の要素を指定します  
+*R*<br/>
+[in]RGB 値の赤の要素を指定します  
   
- [in]*G*  
- RGB 値の緑の成分を指定します  
+*G*<br/>
+[in]RGB 値の緑の成分を指定します  
   
- [in]*B*  
- RGB 値の青のコンポーネントを指定します  
+*B*<br/>
+[in]RGB 値の青のコンポーネントを指定します  
   
 ### <a name="remarks"></a>Remarks  
   

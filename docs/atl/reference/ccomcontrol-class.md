@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bc4004be27a057c96d9c10e7e7f261d8a5ddebe
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bb2d345e0bb8be8f5150d48237df9845acf451dd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761353"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036177"
 ---
 # <a name="ccomcontrol-class"></a>CComControl クラス
 
@@ -46,17 +46,17 @@ ms.locfileid: "43761353"
 ## <a name="syntax"></a>構文
 
 ```
-template <class T, class WinBase = CWindowImpl<T>>  
+template <class T, class WinBase = CWindowImpl<T>>
 class ATL_NO_VTABLE CComControl : public CComControlBase,
     public WinBase;
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 コントロールを実装するクラスです。
 
-*WinBase*  
+*WinBase*<br/>
 ウィンドウ関数を実装する基本クラス。 既定値は[CWindowImpl](../../atl/reference/cwindowimpl-class.md)します。
 
 ## <a name="members"></a>メンバー
@@ -119,10 +119,10 @@ virtual HRESULT ControlQueryInterface(const IID& iid, void** ppv);
 
 ### <a name="parameters"></a>パラメーター
 
-*iid*  
+*iid*<br/>
 [in]要求されているインターフェイスの GUID です。
 
-*ppv*  
+*ppv*<br/>
 [out]によって識別されるインターフェイス ポインターへのポインター *iid*インターフェイスが見つからない場合は null です。
 
 ### <a name="remarks"></a>Remarks
@@ -143,10 +143,10 @@ virtual HWND CreateControlWindow(HWND hWndParent, RECT& rcPos);
 
 ### <a name="parameters"></a>パラメーター
 
-*hWndParent*  
+*hWndParent*<br/>
 [in]親またはオーナー ウィンドウへのハンドルします。 有効なウィンドウ ハンドルを指定する必要があります。 コントロールのウィンドウは、親ウィンドウの領域に限定されます。
 
-*rcPos*  
+*rcPos*<br/>
 [in]初期サイズと作成するウィンドウの位置。
 
 ### <a name="remarks"></a>Remarks
@@ -167,7 +167,7 @@ HRESULT FireOnChanged(DISPID dispID);
 
 ### <a name="parameters"></a>パラメーター
 
-*dispID*  
+*dispID*<br/>
 [in]変更されたプロパティの識別子。
 
 ### <a name="return-value"></a>戻り値
@@ -194,7 +194,7 @@ HRESULT FireOnRequestEdit(DISPID dispID);
 
 ### <a name="parameters"></a>パラメーター
 
-*dispID*  
+*dispID*<br/>
 [in]変更するプロパティの識別子。
 
 ### <a name="return-value"></a>戻り値
@@ -203,7 +203,7 @@ HRESULT FireOnRequestEdit(DISPID dispID);
 
 ### <a name="remarks"></a>Remarks
 
-場合は、コントロール クラスから派生[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)、このメソッドを呼び出す[CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit)すべてに通知するには接続`IPropertyNotifySink`インターフェイスを指定されました。コントロールのプロパティがこれから変更します。 コントロール クラスがから派生していない場合`IPropertyNotifySink`、このメソッドは、S_OK を返します。  
+場合は、コントロール クラスから派生[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)、このメソッドを呼び出す[CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit)すべてに通知するには接続`IPropertyNotifySink`インターフェイスを指定されました。コントロールのプロパティがこれから変更します。 コントロール クラスがから派生していない場合`IPropertyNotifySink`、このメソッドは、S_OK を返します。
 
 このメソッドは、安全に呼び出す場合でも、コントロールは、接続ポイントをサポートしません。
 
@@ -224,13 +224,13 @@ int MessageBox(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszText*  
+*lpszText*<br/>
 メッセージ ボックスに表示されるテキスト。
 
-*lpszCaption*  
+*lpszCaption*<br/>
 ダイアログ ボックスのタイトル。 場合は NULL (既定)、「エラー」が使用されるタイトル。
 
-*%n タイプ*  
+*%n タイプ*<br/>
 内容と、ダイアログ ボックスの動作を指定します。 参照してください、[メッセージ ボックス](/windows/desktop/api/winuser/nf-winuser-messagebox)使用可能なさまざまなメッセージ ボックスの一覧については、Windows SDK ドキュメント内のエントリ。 既定では、単純な**OK**ボタンをクリックします。
 
 ### <a name="return-value"></a>戻り値
@@ -243,7 +243,7 @@ int MessageBox(
 
 ## <a name="see-also"></a>関連項目
 
-[CWindowImpl クラス](../../atl/reference/cwindowimpl-class.md)   
-[クラスの概要](../../atl/atl-class-overview.md)   
-[CComControlBase クラス](../../atl/reference/ccomcontrolbase-class.md)   
+[CWindowImpl クラス](../../atl/reference/cwindowimpl-class.md)<br/>
+[クラスの概要](../../atl/atl-class-overview.md)<br/>
+[CComControlBase クラス](../../atl/reference/ccomcontrolbase-class.md)<br/>
 [CComCompositeControl クラス](../../atl/reference/ccomcompositecontrol-class.md)

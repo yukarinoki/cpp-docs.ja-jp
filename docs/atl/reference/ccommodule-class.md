@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb135fc68e11a5af86fdccde949b8e1761160625
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: faf3080c6363ef0227b71e550ff658b1790d37b9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753280"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090699"
 ---
 # <a name="ccommodule-class"></a>CComModule クラス
 
@@ -144,13 +144,13 @@ HRESULT GetClassObject(
 
 ### <a name="parameters"></a>パラメーター
 
-*rclsid*  
+*rclsid*<br/>
 [in]作成するオブジェクトの CLSID。
 
-*riid*  
+*riid*<br/>
 [in]要求されたインターフェイスの IID。
 
-*ppv*  
+*ppv*<br/>
 [out]によって識別されるインターフェイス ポインターへのポインター *riid*します。 オブジェクトは、このインターフェイスをサポートしていない場合*ppv* NULL に設定されます。
 
 ### <a name="return-value"></a>戻り値
@@ -224,13 +224,13 @@ HRESULT Init(
 
 ### <a name="parameters"></a>パラメーター
 
-*p*  
+*p*<br/>
 [in]オブジェクト マップ エントリの配列へのポインター。
 
-*h*  
+*h*<br/>
 [in]渡される、HINSTANCE`DLLMain`または`WinMain`します。
 
-*plibid*  
+*plibid*<br/>
 [in]プロジェクトに関連付けられているタイプ ライブラリの LIBID へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -350,19 +350,19 @@ ATL_DEPRECATED HRESULT RegisterClassHelper(
 
 ### <a name="parameters"></a>パラメーター
 
-*clsid*  
+*clsid*<br/>
 [in]登録するオブジェクトの CLSID。
 
-*lpszProgID*  
+*lpszProgID*<br/>
 [in]オブジェクトに関連付けられている ProgID です。
 
-*lpszVerIndProgID*  
+*lpszVerIndProgID*<br/>
 [in]オブジェクトに関連付けられているバージョン依存 ProgID です。
 
-*nDescID*  
+*nDescID*<br/>
 [in]オブジェクトの説明の文字列リソースの識別子。
 
-*dwFlags*  
+*dwFlags*<br/>
 [in]レジストリで入力するスレッド処理モデルを指定します。 指定できる値は、THREADFLAGS_APARTMENT、THREADFLAGS_BOTH、または AUTPRXFLAG は。
 
 ### <a name="return-value"></a>戻り値
@@ -385,10 +385,10 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*dwClsContext*  
+*dwClsContext*<br/>
 [in]クラスのオブジェクトが実行コンテキストを指定します。 指定できる値は、CLSCTX_INPROC_SERVER や CLSCTX_INPROC_HANDLER、CLSCTX_LOCAL_SERVER は。 これらの値については、次を参照してください。 [CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716) Windows SDK に含まれています。
 
-*dwFlags*  
+*dwFlags*<br/>
 [in]クラス オブジェクトへの接続の種類を決定します。 指定できる値は、REGCLS_SINGLEUSE、REGCLS_MULTIPLEUSE、または REGCLS_MULTI_SEPARATE は。 これらの値については、次を参照してください。 [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) Windows SDK に含まれています。
 
 ### <a name="return-value"></a>戻り値
@@ -411,10 +411,10 @@ HRESULT RegisterServer(
 
 ### <a name="parameters"></a>パラメーター
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 [in]タイプ ライブラリを登録するかどうかを示します。 既定値は FALSE です。
 
-*pclsid の値*  
+*pclsid の値*<br/>
 [in]登録するオブジェクトの CLSID を指します。 NULL (既定値) の場合は、オブジェクト マップ内のすべてのオブジェクトを登録するかどうか。
 
 ### <a name="return-value"></a>戻り値
@@ -442,7 +442,7 @@ HRESULT RegisterTypeLib(LPCTSTR lpszIndex) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszIndex*  
+*lpszIndex*<br/>
 [in]文字列の形式で`"\\N"`ここで、`N`はタイプ ライブラリのリソースの整数インデックスです。
 
 ### <a name="return-value"></a>戻り値
@@ -496,13 +496,13 @@ ATL_DEPRECATED HRESULT UnregisterClassHelper(
 
 ### <a name="parameters"></a>パラメーター
 
-*clsid*  
+*clsid*<br/>
 [in]登録を解除するオブジェクトの CLSID。
 
-*lpszProgID*  
+*lpszProgID*<br/>
 [in]オブジェクトに関連付けられている ProgID です。
 
-*lpszVerIndProgID*  
+*lpszVerIndProgID*<br/>
 [in]オブジェクトに関連付けられているバージョン依存 ProgID です。
 
 ### <a name="return-value"></a>戻り値
@@ -526,10 +526,10 @@ inline HRESULT UnregisterServer(BOOL bUnRegTypeLib, const CLSID* pCLSID = NULL) 
 
 ### <a name="parameters"></a>パラメーター
 
-*bUnRegTypeLib*  
+*bUnRegTypeLib*<br/>
 TRUE の場合、タイプ ライブラリ登録も解除されます。
 
-*pclsid の値*  
+*pclsid の値*<br/>
 登録解除するオブジェクトの CLSID を指します。 場合は NULL (既定値) の場合は、オブジェクト マップ内のすべてのオブジェクトが登録されます。
 
 ### <a name="return-value"></a>戻り値
@@ -568,25 +568,25 @@ ATL_DEPRECATED HRESULT UpdateRegistryClass(
 
 ### <a name="parameters"></a>パラメーター
 
-*clsid*  
+*clsid*<br/>
 登録または登録解除するオブジェクトの CLSID。
 
-*lpszProgID*  
+*lpszProgID*<br/>
 オブジェクトに関連付けられている ProgID です。
 
-*lpszVerIndProgID*  
+*lpszVerIndProgID*<br/>
 オブジェクトに関連付けられているバージョン依存 ProgID です。
 
-*nDescID*  
+*nDescID*<br/>
 オブジェクトの説明の文字列リソースの識別子です。
 
-*szDesc*  
+*szDesc*<br/>
 オブジェクトの説明を含む文字列。
 
-*dwFlags*  
+*dwFlags*<br/>
 レジストリで入力するスレッド処理モデルを指定します。 指定できる値は、THREADFLAGS_APARTMENT、THREADFLAGS_BOTH、または AUTPRXFLAG は。
 
-*bRegister*  
+*bRegister*<br/>
 オブジェクトを登録するかどうかを示します。
 
 ### <a name="return-value"></a>戻り値
@@ -621,16 +621,16 @@ virtual HRESULT UpdateRegistryFromResourceD(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszRes*  
+*lpszRes*<br/>
 [in]リソースの名前。
 
-*nResID*  
+*nResID*<br/>
 [in]リソース id です。
 
-*bRegister*  
+*bRegister*<br/>
 [in]オブジェクトを登録するかどうかを示します。
 
-*この配列*  
+*この配列*<br/>
 [in]スクリプトの置き換え可能パラメーターに関連付けられている値を格納する置換マップへのポインター。 ATL では、自動的に`%MODULE%`します。 追加の置き換え可能パラメーターを使用するには、詳細については、「解説」を参照してください。 それ以外の場合、NULL 既定値を使用します。
 
 ### <a name="return-value"></a>戻り値
@@ -671,16 +671,16 @@ virtual HRESULT UpdateRegistryFromResourceS(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszRes*  
+*lpszRes*<br/>
 [in]リソースの名前。
 
-*nResID*  
+*nResID*<br/>
 [in]リソース id です。
 
-*bRegister*  
+*bRegister*<br/>
 [in]リソース スクリプトを登録する必要があるかどうかを示します。
 
-*この配列*  
+*この配列*<br/>
 [in]スクリプトの置き換え可能パラメーターに関連付けられている値を格納する置換マップへのポインター。 ATL では、自動的に`%MODULE%`します。 追加の置き換え可能パラメーターを使用するには、詳細については、「解説」を参照してください。 それ以外の場合、NULL 既定値を使用します。
 
 ### <a name="return-value"></a>戻り値

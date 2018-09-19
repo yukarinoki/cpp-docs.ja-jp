@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3e0ac7cf3a5448a2963aa92c2e275be796c895d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c977ecc1094af37c5e2c2e3ed8f27a6f2bdf1c93
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758340"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033876"
 ---
 # <a name="iprovideclassinfo2impl-class"></a>IProvideClassInfo2Impl クラス
 
@@ -41,28 +41,28 @@ template <const CLSID* pcoclsid,
     const IID* psrcid,
     const GUID* plibid = &CAtlModule::m_libid,
     WORD wMajor = 1,
-    WORD wMinor = 0, class tihclass = CComTypeInfoHolder>  
+    WORD wMinor = 0, class tihclass = CComTypeInfoHolder>
 class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*pcoclsid*  
+*pcoclsid*<br/>
 コクラスの識別子へのポインター。
 
-*psrcid*  
+*psrcid*<br/>
 コクラスの既定のディスパッチ インターフェイスの送信の識別子へのポインター。
 
-*plibid*  
+*plibid*<br/>
 インターフェイスに関する情報を格納するタイプ ライブラリの LIBID へのポインター。 既定では、サーバー レベルのタイプ ライブラリが渡されます。
 
-*wMajor*  
+*wMajor*<br/>
 タイプ ライブラリのメジャー バージョンです。 既定値は 1 です。
 
-*wMinor*  
+*wMinor*<br/>
 タイプ ライブラリのマイナー バージョンです。 既定値は 0 です。
 
-*tihclass*  
+*tihclass*<br/>
 コクラスの種類の情報を管理するために使用するクラスです。 既定値は `CComTypeInfoHolder` です。
 
 ## <a name="members"></a>メンバー

@@ -188,12 +188,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2854199796f5d75cc4b24016def3c63327a5d511
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: db4e6a01fbf7384cfbc2e1ef2b3c5ed48991998d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692043"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095450"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx クラス
 Windows のシングル ドキュメント インターフェイス (SDI: Single Document Interface) のオーバーラップ フレーム ウィンドウまたはポップアップ フレーム ウィンドウの機能を実装し、ウィンドウを管理するメンバーを提供します。 拡張、 [CFrameWnd](../../mfc/reference/cframewnd-class.md)クラス。  
@@ -337,11 +337,11 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pControlBar*  
- 登録するコントロール バー ペインです。  
+*pControlBar*<br/>
+[in]登録するコントロール バー ペインです。  
   
- [in]*bTail*  
- リストの末尾にコントロール バー ペインを追加する場合は TRUE。FALSE それ以外の場合。  
+*bTail*<br/>
+[in]リストの末尾にコントロール バー ペインを追加する場合は TRUE。FALSE それ以外の場合。  
   
 ### <a name="return-value"></a>戻り値  
  コントロール バーが正常に登録されている場合は TRUE。FALSE それ以外の場合。  
@@ -368,8 +368,8 @@ virtual void DelayUpdateFrameMenu(HMENU hMenuAlt);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*hMenuAlt*  
- 別のメニューへのハンドルします。  
+*hMenuAlt*<br/>
+[in]別のメニューへのハンドルします。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -384,14 +384,14 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pBar*  
- ドッキング コントロール バーへのポインター。  
+*pBar*<br/>
+[in]ドッキング コントロール バーへのポインター。  
   
- [in]*辺*  
- ドッキングするフレーム ウィンドウの側の ID。  
+*辺*<br/>
+[in]ドッキングするフレーム ウィンドウの側の ID。  
   
- [in]*lpRect*  
- ウィンドウの画面の位置とサイズを指定する定数 Rect 構造体へのポインター。  
+*lpRect*<br/>
+[in]ウィンドウの画面の位置とサイズを指定する定数 Rect 構造体へのポインター。  
   
 ### <a name="remarks"></a>Remarks  
  *辺*パラメーターには、次の値の 1 つには。  
@@ -414,11 +414,11 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pBar*  
- ドッキング ウィンドウ オブジェクトへのポインター。  
+*pBar*<br/>
+[in]ドッキング ウィンドウ オブジェクトへのポインター。  
   
- [in]*pLeftOf*  
- 指定されたウィンドウをドッキングするの左側のウィンドウへのポインター *pBar*します。  
+*pLeftOf*<br/>
+[in]指定されたウィンドウをドッキングするの左側のウィンドウへのポインター *pBar*します。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合*pBar*が正常にドッキングされています。 FALSE それ以外の場合。  
@@ -434,8 +434,8 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*dwDockStyle*  
- ペインをドッキングするメイン フレーム ウィンドウの端を指定します。  
+*dwDockStyle*<br/>
+[in]ペインをドッキングするメイン フレーム ウィンドウの端を指定します。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合、バー ウィンドウがで指定されているフレーム ウィンドウの側にドッキングされて正常に*dwDockStyle*FALSE、それ以外の場合。  
@@ -459,8 +459,8 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*dwDockStyle*  
- ウィンドウのバーをドッキングするメイン フレーム ウィンドウの側を指定します。  
+*dwDockStyle*<br/>
+[in]ウィンドウのバーをドッキングするメイン フレーム ウィンドウの側を指定します。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合、バー ペインを正常に指定した辺にドッキングします。 FALSE それ以外の場合。  
@@ -484,8 +484,8 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnableMenu*  
- フルのメイン メニューを表示する場合は True 画面モードでは、FALSE それ以外の場合。  
+*bEnableMenu*<br/>
+[in]フルのメイン メニューを表示する場合は True 画面モードでは、FALSE それ以外の場合。  
   
 ##  <a name="enablefullscreenmode"></a>  CFrameWndEx::EnableFullScreenMode  
  フレーム ウィンドウの全画面表示モードを有効にします。  
@@ -495,8 +495,8 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiFullScreenCmd*  
- 有効にし、全画面表示モードを無効にするコマンドの ID。  
+*uiFullScreenCmd*<br/>
+[in]有効にし、全画面表示モードを無効にするコマンドの ID。  
   
 ### <a name="remarks"></a>Remarks  
  全画面表示モードですべてのドッキング コントロール バー、ツールバーおよびメニューが非表示になりを全画面表示を占有するアクティブなビューのサイズを変更します。  
@@ -513,8 +513,8 @@ void EnableLoadDockState(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- ドッキング状態の読み込みを無効にする、FALSE、ドッキング状態の読み込みを有効にする場合は TRUE。  
+*bEnable*<br/>
+[in]ドッキング状態の読み込みを無効にする、FALSE、ドッキング状態の読み込みを有効にする場合は TRUE。  
   
 ##  <a name="enablepanemenu"></a>  CFrameWndEx::EnablePaneMenu  
  有効または、ウィンドウのメニューの自動処理を無効にします。  
@@ -530,23 +530,23 @@ void EnablePaneMenu(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- ポップアップ メニュー バー コントロールの自動処理を有効にする場合は TRUEポップアップ メニュー バー コントロールの自動処理を無効にする場合は FALSE。  
+*bEnable*<br/>
+[in]ポップアップ メニュー バー コントロールの自動処理を有効にする場合は TRUEポップアップ メニュー バー コントロールの自動処理を無効にする場合は FALSE。  
   
- [in]*uiCustomizeCmd*  
- コマンド ID、**カスタマイズ**メニュー項目。  
+*uiCustomizeCmd*<br/>
+[in]コマンド ID、**カスタマイズ**メニュー項目。  
   
- [in]*strCustomizeLabel*  
- 表示されるラベル、**カスタマイズ**メニュー項目  
+*strCustomizeLabel*<br/>
+[in]表示されるラベル、**カスタマイズ**メニュー項目  
   
- [in]*uiViewToolbarsMenuEntryID*  
- コントロール バーで、ポップアップ メニューを開き、ツールバーのメニュー項目の ID。  
+*uiViewToolbarsMenuEntryID*<br/>
+[in]コントロール バーで、ポップアップ メニューを開き、ツールバーのメニュー項目の ID。  
   
- [in]*bContextMenuShowsToolbarsOnly*  
- TRUE の場合、コントロール バーのショートカット メニューには、ツールバーのみの一覧が表示されます。 FALSE の場合、メニューには、ツールバーとドッキング バーの一覧が表示されます。  
+*bContextMenuShowsToolbarsOnly*<br/>
+[in]TRUE の場合、コントロール バーのショートカット メニューには、ツールバーのみの一覧が表示されます。 FALSE の場合、メニューには、ツールバーとドッキング バーの一覧が表示されます。  
   
- [in]*bViewMenuShowsToolbarsOnly*  
- TRUE の場合、コントロール バーのメニューにのみ、ツールバーの一覧が表示されます。 FALSE の場合、メニューには、ツールバーとドッキング バーの一覧が表示されます。  
+*bViewMenuShowsToolbarsOnly*<br/>
+[in]TRUE の場合、コントロール バーのメニューにのみ、ツールバーの一覧が表示されます。 FALSE の場合、メニューには、ツールバーとドッキング バーの一覧が表示されます。  
   
 ##  <a name="getactivepopup"></a>  CFrameWndEx::GetActivePopup  
  現在表示されているポップアップ メニューへのポインターを返します。  
@@ -599,8 +599,8 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nID*  
- コントロールの id。  
+*nID*<br/>
+[in]コントロールの id。  
   
 ### <a name="return-value"></a>戻り値  
  指定した ID を持つウィンドウへのポインター このようなウィンドウが存在しない場合は NULL です。  
@@ -637,11 +637,11 @@ virtual BOOL GetToolbarButtonToolTipText(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pButton*  
- ツール バー ボタンへのポインター。  
+*pButton*<br/>
+[in]ツール バー ボタンへのポインター。  
   
- [in]*strTTText*  
- ボタンに表示されるツールヒント テキスト。  
+*strTTText*<br/>
+[in]ボタンに表示されるツールヒント テキスト。  
   
 ### <a name="return-value"></a>戻り値  
  ツールヒントが表示されている場合は TRUE。 FALSE それ以外の場合。  
@@ -709,14 +709,14 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ポイント*  
- ポイントの位置。  
+*ポイント*<br/>
+[in]ポイントの位置。  
   
- [out]*dwBarAlignment*  
- 場所、ポイントを配置します。 使用可能な値は、「解説」表を参照してください。  
+*dwBarAlignment*<br/>
+[out]場所、ポイントを配置します。 使用可能な値は、「解説」表を参照してください。  
   
- [out]*bOuterEdge*  
- ポイントがフレームの境界線の近くにある場合は TRUE。ポイントがクライアント領域にある場合は FALSE です。  
+*bOuterEdge*<br/>
+[out]ポイントがフレームの境界線の近くにある場合は TRUE。ポイントがクライアント領域にある場合は FALSE です。  
   
 ### <a name="return-value"></a>戻り値  
  配置ゾーンで、ポイントがある場合は TRUE。それ以外の場合、FALSE です。  
@@ -760,17 +760,17 @@ virtual BOOL LoadFrame(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*可能*  
- フレームのすべてのリソースを読み込むために使用するリソース ID。  
+*可能*<br/>
+[in]フレームのすべてのリソースを読み込むために使用するリソース ID。  
   
- [in]*dwDefaultStyle*  
- 既定のフレーム ウィンドウ スタイル。  
+*dwDefaultStyle*<br/>
+[in]既定のフレーム ウィンドウ スタイル。  
   
- [in]*pParentWnd*  
- フレームの親ウィンドウへのポインター。  
+*pParentWnd*<br/>
+[in]フレームの親ウィンドウへのポインター。  
   
- [in]*pContext*  
- ポインターを[CCreateContext 構造体](../../mfc/reference/ccreatecontext-structure.md)アプリケーションの作成時にフレームワークによって使用されるクラスです。  
+*pContext*<br/>
+[in]ポインターを[CCreateContext 構造体](../../mfc/reference/ccreatecontext-structure.md)アプリケーションの作成時にフレームワークによって使用されるクラスです。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -787,11 +787,11 @@ virtual BOOL NegotiateBorderSpace(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nBorderCmd*  
- 境界線の調整コマンド。 使用可能な値は、「解説」を参照してください。  
+*nBorderCmd*<br/>
+[in]境界線の調整コマンド。 使用可能な値は、「解説」を参照してください。  
   
- [入力、出力]*lpRectBorder*  
- 輪郭の大きさ。  
+*lpRectBorder*<br/>
+[入力、出力]輪郭の大きさ。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合は、レイアウトを再計算する必要があります。それ以外の場合、FALSE です。  
@@ -819,14 +819,14 @@ afx_msg void OnActivate(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*状態*  
- フレームがアクティブまたは非アクティブかどうか。 使用可能な値は、「解説」表を参照してください。  
+*状態*<br/>
+[in]フレームがアクティブまたは非アクティブかどうか。 使用可能な値は、「解説」表を参照してください。  
   
- [in]*pWndOther*  
- 現在のユーザー入力を切り替え、別のウィンドウへのポインター。  
+*pWndOther*<br/>
+[in]現在のユーザー入力を切り替え、別のウィンドウへのポインター。  
   
- [in]*bMinimized*  
- フレームの最小化された状態。 TRUE の場合、フレームが最小化します。それ以外の場合、FALSE です。  
+*bMinimized*<br/>
+[in]フレームの最小化された状態。 TRUE の場合、フレームが最小化します。それ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
  次の表に、可能な値、*状態*パラメーター。  
@@ -850,11 +850,11 @@ afx_msg void OnActivateApp(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*描画*  
- アプリケーションがオンの場合は TRUE。アプリケーションが選択されていない場合は FALSE。  
+*描画*<br/>
+[in]アプリケーションがオンの場合は TRUE。アプリケーションが選択されていない場合は FALSE。  
   
- [in]*dwThreadID*  
- このパラメーターは使用されません。  
+*dwThreadID*<br/>
+[in]このパラメーターは使用されません。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -868,11 +868,11 @@ afx_msg LRESULT OnChangeVisualManager(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*wParam*  
- このパラメーターは使用されません。  
+*wParam*<br/>
+[in]このパラメーターは使用されません。  
   
- [in]*lParam*  
- このパラメーターは使用されません。  
+*lParam*<br/>
+[in]このパラメーターは使用されません。  
   
 ### <a name="return-value"></a>戻り値  
  常に 0 を返します。  
@@ -941,17 +941,17 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nID*  
- コマンド ID。  
+*nID*<br/>
+[in]コマンド id。  
   
- [in]*nCode*  
- コマンド メッセージのカテゴリ。  
+*nCode*<br/>
+[in]コマンド メッセージのカテゴリ。  
   
- [入力、出力]*pExtra*  
- コマンド オブジェクトへのポインター。  
+*pExtra*<br/>
+[入力、出力]コマンド オブジェクトへのポインター。  
   
- [入力、出力]*pHandlerInfo*  
- コマンド ハンドラーの構造体へのポインター。  
+*pHandlerInfo*<br/>
+[入力、出力]コマンド ハンドラーの構造体へのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  コマンドのメッセージが処理された場合は TRUE。それ以外の場合、FALSE です。  
@@ -975,8 +975,8 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpCreateStruct*  
- ポインター、 [CREATESTRUCT 構造体](../../mfc/reference/createstruct-structure.md)新しいフレームに対して。  
+*lpCreateStruct*<br/>
+[in]ポインター、 [CREATESTRUCT 構造体](../../mfc/reference/createstruct-structure.md)新しいフレームに対して。  
   
 ### <a name="return-value"></a>戻り値  
  フレームの作成を続行するには 0フレームを破棄する-1 を返します。  
@@ -1004,14 +1004,14 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pMenuButton*  
- 表示されるイメージがメニュー ボタンへのポインター。  
+*pMenuButton*<br/>
+[in]表示されるイメージがメニュー ボタンへのポインター。  
   
- [in]*rectImage*  
- ポインター、`Rect`画面位置とイメージのサイズを指定します。  
+*rectImage*<br/>
+[in]ポインター、`Rect`画面位置とイメージのサイズを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  フレームワーク、イメージを正常にレンダリングする場合は TRUE。FALSE それ以外の場合。  
@@ -1030,14 +1030,14 @@ virtual void OnDrawMenuLogo(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pMenu*  
- メニュー項目へのポインター。  
+*pMenu*<br/>
+[in]メニュー項目へのポインター。  
   
- [in]*rectLogo*  
- 定数への参照を`CRect`メニュー ロゴのサイズと画面上の位置を指定する構造体。  
+*rectLogo*<br/>
+[in]定数への参照を`CRect`メニュー ロゴのサイズと画面上の位置を指定する構造体。  
   
 ### <a name="remarks"></a>Remarks  
  によって所有されている、メニュー バーに属しているポップアップ メニューにロゴを表示する場合は、この関数をオーバーライド、`CFrameWndEx`派生オブジェクト。  
@@ -1052,11 +1052,11 @@ afx_msg LRESULT OnDWMCompositionChanged(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*wp*  
- このパラメーターは使用されません。  
+*wp*<br/>
+[in]このパラメーターは使用されません。  
   
- [in]*lp*  
- このパラメーターは使用されません。  
+*lp*<br/>
+[in]このパラメーターは使用されません。  
   
 ### <a name="return-value"></a>戻り値  
  常に 0 を返します。  
@@ -1073,11 +1073,11 @@ LRESULT OnExitSizeMove(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*wp*  
- このパラメーターは使用されません。  
+*wp*<br/>
+[in]このパラメーターは使用されません。  
   
- [in]*lp*  
- このパラメーターは使用されません。  
+*lp*<br/>
+[in]このパラメーターは使用されません。  
   
 ### <a name="return-value"></a>戻り値  
  常に 0 を返します。  
@@ -1092,8 +1092,8 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO FAR* lpMMI);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpMMI*  
- ポインターを[MINMAXINFO](https://msdn.microsoft.com/library/windows/desktop/ms632605)構造体。  
+*lpMMI*<br/>
+[in]ポインターを[MINMAXINFO](https://msdn.microsoft.com/library/windows/desktop/ms632605)構造体。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1107,11 +1107,11 @@ afx_msg LRESULT OnIdleUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*wParam*  
- このパラメーターは使用されません。  
+*wParam*<br/>
+[in]このパラメーターは使用されません。  
   
- [in]*lParam*  
- このパラメーターは使用されません。  
+*lParam*<br/>
+[in]このパラメーターは使用されません。  
   
 ### <a name="return-value"></a>戻り値  
  常に 0 を返します。  
@@ -1128,11 +1128,11 @@ afx_msg void OnLButtonDown(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nFlags*  
- ユーザーが修飾子キーを押したかどうかを示します。 使用可能な値は、パラメーターを参照してください。 *wParam*で[WM_LBUTTONDOWN 通知](/windows/desktop/inputdev/wm-lbuttondown)します。  
+*nFlags*<br/>
+[in]ユーザーが修飾子キーを押したかどうかを示します。 使用可能な値は、パラメーターを参照してください。 *wParam*で[WM_LBUTTONDOWN 通知](/windows/desktop/inputdev/wm-lbuttondown)します。  
   
- [in]*ポイント*  
- X およびポインターの y 座標、ウィンドウの左上隅を基準に指定します。  
+*ポイント*<br/>
+[in]X およびポインターの y 座標、ウィンドウの左上隅を基準に指定します。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1146,11 +1146,11 @@ afx_msg void OnLButtonUp(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nFlags*  
- ユーザーが修飾子キーを押したかどうかを示します。 使用可能な値は、パラメーターを参照してください。 *wParam*で[WM_LBUTTONUP 通知](/windows/desktop/inputdev/wm-lbuttonup)します。  
+*nFlags*<br/>
+[in]ユーザーが修飾子キーを押したかどうかを示します。 使用可能な値は、パラメーターを参照してください。 *wParam*で[WM_LBUTTONUP 通知](/windows/desktop/inputdev/wm-lbuttonup)します。  
   
- [in]*ポイント*  
- X およびポインターの y 座標、ウィンドウの左上隅を基準に指定します。  
+*ポイント*<br/>
+[in]X およびポインターの y 座標、ウィンドウの左上隅を基準に指定します。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1164,11 +1164,11 @@ virtual BOOL OnMenuButtonToolHitTest(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pButton*  
- ツール バー ボタンへのポインター。  
+*pButton*<br/>
+[in]ツール バー ボタンへのポインター。  
   
- [out]*pTI*  
- ツールの情報の構造体へのポインター。  
+*PTI*<br/>
+[out]ツールの情報の構造体へのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  アプリケーションを設定する場合は TRUE、 *pTI*パラメーター。 FALSE それ以外の場合。  
@@ -1187,28 +1187,23 @@ afx_msg LRESULT OnMenuChar(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nChar*  
- 押されたキーの文字コードです。  
+*NChar*<br/>
+[in]押されたキーの文字コードです。  
   
- [in]*nFlags*  
- ならばフラグが含まれる場合、表示されるメニューはサブメニュー;表示されるメニューがコントロール メニューならばフラグが含まれています。  
+*nFlags*<br/>
+[in]ならばフラグが含まれる場合、表示されるメニューはサブメニュー;表示されるメニューがコントロール メニューならばフラグが含まれています。  
   
- [in]*pMenu*  
- メニューへのポインター。  
+*pMenu*<br/>
+[in]メニューへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  上位ワードは、次の値のいずれかである必要があります。  
-  
- `0`  
- フレームワークには、キーストロークを無視する必要があります。  
-  
- `1`  
- フレームワークは、メニューを閉じる必要があります。  
-  
- `2`  
- フレームワークには、メニューに表示される項目のいずれかを選択する必要があります。 下位ワードには、選択するコマンドの ID が含まれています。  
-  
-### <a name="remarks"></a>Remarks  
+
+|||
+|-|-|
+ `0` | フレームワークには、キーストロークを無視する必要があります。  
+ `1`  | フレームワークは、メニューを閉じる必要があります。  
+ `2`  | フレームワークには、メニューに表示される項目のいずれかを選択する必要があります。 下位ワードには、選択するコマンドの ID が含まれています。  
   
 ##  <a name="onmousemove"></a>  CFrameWndEx::OnMouseMove  
  フレームワークは、ポインターを移動すると、このメソッドを呼び出します。  
@@ -1220,11 +1215,11 @@ afx_msg void OnMouseMove(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nFlags*  
- ユーザーが修飾子キーを押したかどうかを示します。 使用可能な値は、パラメーターを参照してください。 *wParam*で[WM_MOUSEMOVE 通知](/windows/desktop/inputdev/wm-mousemove)します。  
+*nFlags*<br/>
+[in]ユーザーが修飾子キーを押したかどうかを示します。 使用可能な値は、パラメーターを参照してください。 *wParam*で[WM_MOUSEMOVE 通知](/windows/desktop/inputdev/wm-mousemove)します。  
   
- [in]*ポイント*  
- X と y を指定します ウィンドウの左上隅に対して相対的ポインターの座標。  
+*ポイント*<br/>
+[in]X と y を指定しますウィンドウの左上隅に対して相対的ポインターの座標。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1236,8 +1231,8 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pFrame*  
- ポインター、 [CPaneFrameWnd クラス](../../mfc/reference/cpaneframewnd-class.md)ペイン ウィンドウ。  
+*pFrame*<br/>
+[in]ポインター、 [CPaneFrameWnd クラス](../../mfc/reference/cpaneframewnd-class.md)ペイン ウィンドウ。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合、ウィンドウがドッキングされていません。ペイン ウィンドウがドッキングされている場合は FALSE。  
@@ -1252,8 +1247,8 @@ afx_msg BOOL OnNcActivate(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*描画*  
- アクティブなフレームを描画する場合は True非アクティブなフレームを描画する場合は FALSE。  
+*描画*<br/>
+[in]アクティブなフレームを描画する場合は True非アクティブなフレームを描画する場合は FALSE。  
   
 ### <a name="return-value"></a>戻り値  
  既定の処理を続行する 0 以外の場合非クライアント領域が非アクティブ化するを防ぐために 0 を返します。  
@@ -1270,11 +1265,11 @@ afx_msg void OnNcCalcSize(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bCalcValidRects*  
- TRUE の場合、アプリケーションは、有効なクライアント領域を指定する必要があります。それ以外の場合、FALSE です。  
+*bCalcValidRects*<br/>
+[in]TRUE の場合、アプリケーションは、有効なクライアント領域を指定する必要があります。それ以外の場合、FALSE です。  
   
- [in]*lpncsp*  
- ポインターを`NCCALCSIZE_PARAMS`フレーム ディメンションの変更を含む構造体。  
+*lpncsp*<br/>
+[in]ポインターを`NCCALCSIZE_PARAMS`フレーム ディメンションの変更を含む構造体。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1286,8 +1281,8 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ポイント*  
- 画面座標でポインターの位置。  
+*ポイント*<br/>
+[in]画面座標でポインターの位置。  
   
 ### <a name="return-value"></a>戻り値  
  ポインターはヒット列挙値です。 使用可能な値の一覧については、次を参照してください。 [WM_NCHITTEST 通知](/windows/desktop/inputdev/wm-nchittest)します。  
@@ -1304,11 +1299,11 @@ afx_msg void OnNcMouseMove(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nHitTest*  
- ポインターはヒット列挙値です。 使用可能な値の一覧については、次を参照してください。 [WM_NCHITTEST 通知](/windows/desktop/inputdev/wm-nchittest)します。  
+*nHitTest*<br/>
+[in]ポインターはヒット列挙値です。 使用可能な値の一覧については、次を参照してください。 [WM_NCHITTEST 通知](/windows/desktop/inputdev/wm-nchittest)します。  
   
- [in]*ポイント*  
- 画面座標でポインターの位置。  
+*ポイント*<br/>
+[in]画面座標でポインターの位置。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1329,8 +1324,8 @@ afx_msg BOOL OnPaneCheck(UINT nID);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nID*  
- ウィンドウのコントロール ID。  
+*nID*<br/>
+[in]ウィンドウのコントロール ID。  
   
 ### <a name="return-value"></a>戻り値  
  コマンドが処理された場合は TRUE。コマンドの処理を続行する場合は FALSE。  
@@ -1347,11 +1342,11 @@ afx_msg LRESULT OnPostPreviewFrame(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*wParam*  
- このパラメーターは使用されません。  
+*wParam*<br/>
+[in]このパラメーターは使用されません。  
   
- [in]*lParam*  
- フレームが印刷プレビュー モードの場合は TRUE印刷プレビュー モードがオフの場合は FALSE です。  
+*lParam*<br/>
+[in]フレームが印刷プレビュー モードの場合は TRUE印刷プレビュー モードがオフの場合は FALSE です。  
   
 ### <a name="return-value"></a>戻り値  
  常に 0 を返します。  
@@ -1368,11 +1363,11 @@ afx_msg LRESULT OnPowerBroadcast(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*wp*  
- 電源管理イベントです。 使用可能な値の一覧については、次を参照してください。 [WM_POWERBROADCAST メッセージ](/windows/desktop/Power/wm-powerbroadcast)します。  
+*wp*<br/>
+[in]電源管理イベントです。 使用可能な値の一覧については、次を参照してください。 [WM_POWERBROADCAST メッセージ](/windows/desktop/Power/wm-powerbroadcast)します。  
   
- [in]*lp*  
- このパラメーターは使用されません。  
+*lp*<br/>
+[in]このパラメーターは使用されません。  
   
 ### <a name="return-value"></a>戻り値  
  既定のウィンドウ プロシージャを呼び出すことが考えられます。  
@@ -1391,14 +1386,14 @@ BOOL OnSetMenu(HMENU hmenu);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*wp*  
- 新しいフレーム ウィンドウのメニューへのハンドルします。  
+*wp*<br/>
+[in]新しいフレーム ウィンドウのメニューへのハンドルします。  
   
- [in]*lp*  
- 新しいウィンドウ メニューへのハンドルします。  
+*lp*<br/>
+[in]新しいウィンドウメニューへのハンドルします。  
   
- [in]*hmenu*  
- 新しいフレーム ウィンドウのメニューへのハンドルします。  
+*hmenu*<br/>
+[in]新しいフレーム ウィンドウのメニューへのハンドルします。  
   
 ### <a name="return-value"></a>戻り値  
  LRESULT は、呼び出し元の既定のウィンドウ プロシージャから結果を示します。  
@@ -1417,11 +1412,11 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bPreview*  
- 印刷プレビューを有効にする場合は TRUE印刷プレビューを無効にする場合は FALSE。  
+*bPreview*<br/>
+[in]印刷プレビューを有効にする場合は TRUE印刷プレビューを無効にする場合は FALSE。  
   
- [in]*pState*  
- ポインターを`CPrintPreviewState`フレームの状態の構造体。  
+*pState*<br/>
+[in]ポインターを`CPrintPreviewState`フレームの状態の構造体。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1435,11 +1430,11 @@ afx_msg LRESULT OnSetText(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*wParam*  
- このパラメーターは使用されません。  
+*wParam*<br/>
+[in]このパラメーターは使用されません。  
   
- [in]*lParam*  
- ウィンドウのテキストへのポインター。  
+*lParam*<br/>
+[in]ウィンドウのテキストへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  呼び出しから値を返す[DefWindowProc](/windows/desktop/api/winuser/nf-winuser-defwindowproca)します。  
@@ -1456,11 +1451,11 @@ virtual BOOL OnShowCustomizePane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pMenuPane*  
- ペインをカスタマイズするクイックへのポインター。  
+*pMenuPane*<br/>
+[in]ペインをカスタマイズするクイックへのポインター。  
   
- [in]*uiToolbarID*  
- カスタマイズするツールバーのコントロール ID。  
+*uiToolbarID*<br/>
+[in]カスタマイズするツールバーのコントロール ID。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドは、常に TRUE を返します。  
@@ -1476,8 +1471,8 @@ virtual BOOL OnShowPanes(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bShow*  
- TRUE の場合、アプリケーションがペインの表示FALSE それ以外の場合。  
+*bShow*<br/>
+[in]TRUE の場合、アプリケーションがペインの表示FALSE それ以外の場合。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドは、常に FALSE を返します。  
@@ -1497,8 +1492,8 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenu);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pMenu*  
- ポップアップ メニューへのポインター。  
+*pMenu*<br/>
+[in]ポップアップ メニューへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  ポップアップ メニューを表示する場合は TRUE。それ以外の場合は FALSE です。  
@@ -1517,14 +1512,14 @@ afx_msg void OnSize(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*%n タイプ*  
- サイズ変更の種類。 使用可能な値は、パラメーターを参照してください。 *wParam*で[WM_SIZE 通知](/windows/desktop/winmsg/wm-size)します。  
+*%n タイプ*<br/>
+[in]サイズ変更の種類。 使用可能な値は、パラメーターを参照してください。 *wParam*で[WM_SIZE 通知](/windows/desktop/winmsg/wm-size)します。  
   
- [in]*cx*  
- ピクセル フレームの新しい幅。  
+*cx*<br/>
+[in]ピクセル フレームの新しい幅。  
   
- [in]*cy*  
- ピクセル フレームの新しい高さ。  
+*cy*<br/>
+[in]ピクセル フレームの新しい高さ。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1538,11 +1533,11 @@ afx_msg void OnSizing(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*fwSide*  
- 移動されるフレームの端。 パラメーターを*wParam*で[WM_SIZING 通知](/windows/desktop/winmsg/wm-sizing)します。  
+*fwSide*<br/>
+[in]移動されるフレームの端。 パラメーターを*wParam*で[WM_SIZING 通知](/windows/desktop/winmsg/wm-sizing)します。  
   
- [入力、出力]*pRect*  
- ポインターを[CRect](../../atl-mfc-shared/reference/crect-class.md)または[RECT](../../mfc/reference/rect-structure1.md)フレームの座標を含む構造体。  
+*pRect*<br/>
+[入力、出力]ポインターを[CRect](../../atl-mfc-shared/reference/crect-class.md)または[RECT](../../mfc/reference/rect-structure1.md)フレームの座標を含む構造体。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1565,11 +1560,11 @@ virtual BOOL OnTearOffMenu(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pMenuPopup*  
- ポップアップ メニューへのポインター。  
+*pMenuPopup*<br/>
+[in]ポップアップ メニューへのポインター。  
   
- [in]*pBar*  
- ティアオフ バーへのポインター。  
+*pBar*<br/>
+[in]ティアオフ バーへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  ティアオフ バーで、ポップアップ メニューが有効な場合は TRUE。それ以外の場合は FALSE です。  
@@ -1589,11 +1584,11 @@ afx_msg LRESULT OnToolbarContextMenu(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*wp*  
- このパラメーターは使用されません。  
+*wp*<br/>
+[in]このパラメーターは使用されません。  
   
- [in]*lp*  
- このパラメーターは使用されません。  
+*lp*<br/>
+[in]このパラメーターは使用されません。  
   
 ### <a name="return-value"></a>戻り値  
  常に 1 を返します。  
@@ -1610,11 +1605,11 @@ afx_msg LRESULT OnToolbarCreateNew(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*wp*  
- このパラメーターは使用されません。  
+*wp*<br/>
+[in]このパラメーターは使用されません。  
   
- [in]*lp*  
- ツールバーのタイトル バーのテキストへのポインター。  
+*lp*<br/>
+[in]ツールバーのタイトル バーのテキストへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  新しいツールバーへのポインターまたは、ツールバーが作成されていない場合は NULL です。  
@@ -1626,16 +1621,17 @@ afx_msg LRESULT OnToolbarCreateNew(
   
 ```  
 afx_msg LRESULT OnToolbarDelete(
-    WPARAM, 
+    WPARAM /* unused */, 
     LPARAM lp);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力]  
- このパラメーターは使用されません。  
+
+*未使用*<br/>
+[in]このパラメーターは使用されません。  
   
- [in]*lp*  
- ツールバーへのポインター。  
+*lp*<br/>
+[in]ツールバーへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  ツールバーが削除された場合は TRUE。それ以外の場合、FALSE です。  
@@ -1650,8 +1646,8 @@ virtual void OnUpdateFrameMenu(HMENU hMenuAlt);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*hMenuAlt*  
- 別のメニューへのハンドルします。  
+*hMenuAlt*<br/>
+[in]別のメニューへのハンドルします。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1663,8 +1659,8 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bAddToTitle*  
- フレーム ウィンドウのタイトル バーにアクティブなドキュメントのタイトルを追加する場合は TRUEそれ以外の場合は FALSE です。  
+*bAddToTitle*<br/>
+[in]フレーム ウィンドウのタイトル バーにアクティブなドキュメントのタイトルを追加する場合は TRUEそれ以外の場合は FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1676,8 +1672,8 @@ afx_msg void OnUpdatePaneMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*対応付けられました。*  
- ウィンドウのユーザー インターフェイス オブジェクトへのポインター。  
+*対応付けられました。*<br/>
+[in]ウィンドウのユーザー インターフェイス オブジェクトへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1689,8 +1685,8 @@ afx_msg void OnWindowPosChanged(WINDOWPOS FAR* lpwndpos);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpwndpos*  
- ポインターを[WINDOWPOS](../../mfc/reference/windowpos-structure1.md)新しいサイズと位置を含む構造体。  
+*lpwndpos*<br/>
+[in]ポインターを[WINDOWPOS](../../mfc/reference/windowpos-structure1.md)新しいサイズと位置を含む構造体。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1712,20 +1708,20 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ポイント*  
- 確認する点の画面座標。  
+*ポイント*<br/>
+[in]確認する点の画面座標。  
   
- [in]*nSensitivity*  
- ポイントを検索するときに、この量でそれぞれのコントロール バーの外接する四角形を展開します。  
+*nSensitivity*<br/>
+[in]ポイントを検索するときに、この量でそれぞれのコントロール バーの外接する四角形を展開します。  
   
- [in]*bExactBar*  
- 無視する場合は TRUE、 *nSensitivity*パラメーター場合は FALSE。  
+*bExactBar*<br/>
+[in]無視する場合は TRUE、 *nSensitivity*パラメーター場合は FALSE。  
   
- [in]*pRTCBarType*  
- NULL 以外の場合、メソッドは、指定した型のコントロール バーのみを検索します。  
+*pRTCBarType*<br/>
+[in]NULL 以外の場合、メソッドは、指定した型のコントロール バーのみを検索します。  
   
- [out]*場合*  
- 成功した場合、このパラメーターには、指定したポイントに最も近いコントロール バーの側が含まれています。 それ以外の場合、このパラメーターは初期化されていません。  
+*場合*<br/>
+[out]成功した場合、このパラメーターには、指定したポイントに最も近いコントロール バーの側が含まれています。 それ以外の場合、このパラメーターは初期化されていません。  
   
 ### <a name="return-value"></a>戻り値  
  含むコントロール バーへのポインター、*ポイント*;コントロールが見つからない場合は NULL です。  
@@ -1743,8 +1739,8 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pMsg*  
- ポインターを[MSG](../../mfc/reference/msg-structure1.md)処理するメッセージを含む構造体。  
+*pMsg*<br/>
+[in]ポインターを[MSG](../../mfc/reference/msg-structure1.md)処理するメッセージを含む構造体。  
   
 ### <a name="return-value"></a>戻り値  
  非ゼロの場合は、メッセージが処理されたおよびディスパッチできないする必要があります。メッセージが処理されませんでした、ディスパッチする必要がある場合は 0 を返します。  
@@ -1759,8 +1755,8 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bNotify*  
- OLE クライアント アイテム、レイアウトの変更について通知するかどうかを指定します。  
+*bNotify*<br/>
+[in]OLE クライアント アイテム、レイアウトの変更について通知するかどうかを指定します。  
   
 ### <a name="remarks"></a>Remarks  
  フレーム ウィンドウのサイズが変更されたとき、またはコントロール バーを表示または非表示は、このメソッドが呼び出されます。  
@@ -1778,20 +1774,20 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pControlBar*  
- 削除するコントロール バー ペインへのポインター。  
+*pControlBar*<br/>
+[in]削除するコントロール バー ペインへのポインター。  
   
- [in]*bDestroy*  
- それを削除した後、コントロール バーを破棄する場合は TRUEFALSE それ以外の場合。  
+*bDestroy*<br/>
+[in]それを削除した後、コントロール バーを破棄する場合は TRUEFALSE それ以外の場合。  
   
- [in]*bAdjustLayout*  
- ドッキングのレイアウトを調整する場合は TRUEFALSE それ以外の場合。  
+*bAdjustLayout*<br/>
+[in]ドッキングのレイアウトを調整する場合は TRUEFALSE それ以外の場合。  
   
- [in]*bAutoHide*  
- コントロール バーが自動的に隠すモードでは、TRUE を返します。FALSE それ以外の場合。  
+*bAutoHide*<br/>
+[in]コントロール バーが自動的に隠すモードでは、TRUE を返します。FALSE それ以外の場合。  
   
- [in]*pBarReplacement*  
- 削除されたウィンドウを置換するウィンドウへのポインター。  
+*pBarReplacement*<br/>
+[in]削除されたウィンドウを置換するウィンドウへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
  コントロール バーをフレーム ウィンドウのドッキング レイアウトから削除するのにには、このメソッドを使用します。  
@@ -1817,8 +1813,8 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*我が物*  
- 印刷プレビューのフレーム ウィンドウへのポインター。  
+*我が物*<br/>
+[in]印刷プレビューのフレーム ウィンドウへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1833,14 +1829,14 @@ void SetupToolbarMenu(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*メニュー*  
- A`CMenu`オブジェクトを変更します。  
+*メニュー*<br/>
+[in]A`CMenu`オブジェクトを変更します。  
   
- [in]*uiViewUserToolbarCmdFirst*  
- 最初のユーザー定義のコマンドです。  
+*uiViewUserToolbarCmdFirst*<br/>
+[in]最初のユーザー定義のコマンドです。  
   
- [in]*uiViewUserToolbarCmdLast*  
- 最後のユーザー定義のコマンド。  
+*uiViewUserToolbarCmdLast*<br/>
+[in]最後のユーザー定義のコマンド。  
   
 ### <a name="remarks"></a>Remarks  
  フレームワークでは、ユーザー定義のコマンドを一覧に格納します。 使用*uiViewUserToolbarCmdFirst*と*uiViewUserToolbarCmdList*を挿入するコマンドのインデックスを指定します。  
@@ -1864,17 +1860,17 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pBar*  
- コントロール バーを表示または非表示へのポインター。  
+*pBar*<br/>
+[in]コントロール バーを表示または非表示へのポインター。  
   
- [in]*bShow*  
- TRUE の場合、アプリケーションには、コントロール バーが表示されます。 それ以外の場合、アプリケーションでは、コントロール バーを非表示になります。  
+*bShow*<br/>
+[in]TRUE の場合、アプリケーションには、コントロール バーが表示されます。 それ以外の場合、アプリケーションでは、コントロール バーを非表示になります。  
   
- [in]*bDelay*  
- TRUE の場合は、framework 呼び出しまでのドッキング レイアウトの調整を遅らせる[CFrameWndEx::AdjustDockingLayout](#adjustdockinglayout)します。 すぐにドッキング レイアウトを再計算、それ以外の場合。  
+*bDelay*<br/>
+[in]TRUE の場合は、framework 呼び出しまでのドッキング レイアウトの調整を遅らせる[CFrameWndEx::AdjustDockingLayout](#adjustdockinglayout)します。 すぐにドッキング レイアウトを再計算、それ以外の場合。  
   
- [in]*bActivate*  
- TRUE の場合、コントロール バーをアクティブのにします。 それ以外の場合、非アクティブな状態でコントロール バーを表示します。  
+*bActivate*<br/>
+[in]TRUE の場合、コントロール バーをアクティブのにします。 それ以外の場合、非アクティブな状態でコントロール バーを表示します。  
   
 ##  <a name="updatecaption"></a>  CFrameWndEx::UpdateCaption  
  ウィンドウ フレームのキャプションを更新するためにフレームワークによって呼び出されます。  

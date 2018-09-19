@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7f52e0e62a831a77a7a00dc50aeecac45cd0fe9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2424ce23c0a376156bbb78869a2e33e501958e73
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960555"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719135"
 ---
 # <a name="strstreambuf-class"></a>strstreambuf クラス
 
@@ -87,7 +87,7 @@ class strstreambuf : public streambuf
 |[str](#str)|[freeze](#freeze) を呼び出し、被制御シーケンスの先頭へのポインターを返します。|
 |[underflow](#underflow)|入力ストリームから現在の要素を抽出するプロテクト仮想関数。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<strstream>
 
@@ -103,8 +103,8 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Freezeit*  
- A **bool**ストリームを停止するかどうかを示します。
+*_Freezeit*<br/>
+A **bool**ストリームを停止するかどうかを示します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -191,8 +191,8 @@ virtual int overflow(int _Meta = EOF);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Meta*  
- バッファーに挿入する文字または `EOF`。
+*_Meta*<br/>
+バッファーに挿入する文字または `EOF`。
 
 ### <a name="return-value"></a>戻り値
 
@@ -216,8 +216,8 @@ virtual int pbackfail(int _Meta = EOF);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Meta*  
- バッファーに挿入する文字または `EOF`。
+*_Meta*<br/>
+バッファーに挿入する文字または `EOF`。
 
 ### <a name="return-value"></a>戻り値
 
@@ -280,14 +280,14 @@ virtual streampos seekoff(streamoff _Off,
 
 ### <a name="parameters"></a>パラメーター
 
-*_Off*  
- に対して相対的にシークする位置 *_Way*します。
+*_Off*<br/>
+に対して相対的にシークする位置 *_Way*します。
 
-*_Way*  
- オフセット演算の開始位置。 有効値については、「[seekdir](../standard-library/ios-base-class.md#seekdir)」を参照してください。
+*_Way*<br/>
+オフセット演算の開始位置。 有効値については、「[seekdir](../standard-library/ios-base-class.md#seekdir)」を参照してください。
 
-*_Which*  
- ポインター位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
+*_Which*<br/>
+ポインター位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -319,11 +319,11 @@ virtual streampos seekpos(streampos _Sp, ios_base::openmode _Which = ios_base::i
 
 ### <a name="parameters"></a>パラメーター
 
-*_Sp*  
- シークする位置。
+*_Sp*<br/>
+シークする位置。
 
-*_Which*  
- ポインター位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
+*_Which*<br/>
+ポインター位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -389,20 +389,20 @@ strstreambuf(const unsigned char* _Getptr,
 
 ### <a name="parameters"></a>パラメーター
 
-*_Allocfunc*  
- バッファー メモリの割り当てに使用される関数。
+*_Allocfunc*<br/>
+バッファー メモリの割り当てに使用される関数。
 
-*count*  
- 指し示されるバッファーの長さを決定 *_Getptr*します。 場合 *_Getptr*引数ではない (最初のコンス トラクター フォーム)、割り当ての提案がバッファーのサイズします。
+*count*<br/>
+指し示されるバッファーの長さを決定 *_Getptr*します。 場合 *_Getptr*引数ではない (最初のコンス トラクター フォーム)、割り当ての提案がバッファーのサイズします。
 
-*_Freefunc*  
- バッファー メモリを解放するために使用する関数。
+*_Freefunc*<br/>
+バッファー メモリを解放するために使用する関数。
 
-*_Getptr*  
- 入力に使用するバッファー。
+*_Getptr*<br/>
+入力に使用するバッファー。
 
-*_Putptr*  
- 出力に使用するバッファー。
+*_Putptr*<br/>
+出力に使用するバッファー。
 
 ### <a name="remarks"></a>Remarks
 

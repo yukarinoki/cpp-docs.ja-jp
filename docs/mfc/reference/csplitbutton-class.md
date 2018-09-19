@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38a624aacc302812865a785c537eb906a0489379
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 42f7eb1864c2839ecce88785dfaef8ab62d0b423
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207642"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705277"
 ---
 # <a name="csplitbutton-class"></a>CSplitButton クラス
 `CSplitButton`クラスは、分割ボタン コントロールを表します。 分割ボタン コントロールは、ユーザーがボタンのメイン領域をクリックすると既定の動作を実行し、ユーザーがボタンのドロップダウン矢印をクリックするとドロップダウン メニューを表示します。  
@@ -101,10 +101,10 @@ virtual BOOL Create(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*dwStyle*|コントロールに適用されるスタイルのビットごとの組み合わせ (OR)。 詳細については、次を参照してください。[ボタンのスタイル](../../mfc/reference/styles-used-by-mfc.md#button-styles)します。|  
-|[in]*rect*|参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)コントロールのサイズと位置を含む構造体。|  
-|[in]*pParentWnd*|Null 以外のポインターを[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトは、コントロールの親ウィンドウです。|  
-|[in]*nID*|コントロールの ID。|  
+|*dwStyle*|[in]コントロールに適用されるスタイルのビットごとの組み合わせ (OR)。 詳細については、次を参照してください。[ボタンのスタイル](../../mfc/reference/styles-used-by-mfc.md#button-styles)します。|  
+|*rect*|[in]参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)コントロールのサイズと位置を含む構造体。|  
+|*pParentWnd*|[in]Null 以外のポインターを[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトは、コントロールの親ウィンドウです。|  
+|*nID*|[in]コントロールの ID。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -126,9 +126,9 @@ CSplitButton(CMenu* pMenu)
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*nMenuId*|メニュー バーのリソース ID。|  
-|[in]*nSubMenuId*|サブメニューのリソース ID。|  
-|[in]*pMenu*|ポインターを[CMenu](../../mfc/reference/cmenu-class.md)サブメニューを指定するオブジェクト。 `CSplitButton`オブジェクトの削除、`CMenu`オブジェクトとその関連付けられている HMENU ときに、`CSplitButton`オブジェクトがスコープ外になります。|  
+|*nMenuId*|[in]メニュー バーのリソース ID。|  
+|*nSubMenuId*|[in]サブメニューのリソース ID。|  
+|*pMenu*|[in]ポインターを[CMenu](../../mfc/reference/cmenu-class.md)サブメニューを指定するオブジェクト。 `CSplitButton`オブジェクトの削除、`CMenu`オブジェクトとその関連付けられている HMENU ときに、`CSplitButton`オブジェクトがスコープ外になります。|  
   
 ### <a name="remarks"></a>Remarks  
  使用して、 [CSplitButton::Create](#create)分割ボタン コントロールを作成し、アタッチ先メソッドを`CSplitButton`オブジェクト。  
@@ -146,8 +146,8 @@ afx_msg void OnDropDown(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*pNMHDR*|ポインター、 [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr)に関する情報を格納する構造体、 [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown)通知します。|  
-|[out]*pResult*|(使用されません。 値は返されません)。値を返す、 [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown)通知します。|  
+|*pNMHDR*|[in]ポインター、 [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr)に関する情報を格納する構造体、 [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown)通知します。|  
+|*pResult*|[out](使用されません。 値は返されません)。値を返す、 [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown)通知します。|  
   
 ### <a name="remarks"></a>Remarks  
  BCN_DROPDOWN 通知が送信され、ユーザーは、分割ボタン コントロールにドロップダウン矢印をクリックすると、メッセージを`OnDropDown`メソッド ハンドル。 ただし、`CSplitButton`オブジェクトは、分割ボタン コントロールを含むコントロールに BCN_DROPDOWN 通知を転送しません。 その結果、格納しているコントロールは、通知への応答でカスタム アクションをサポートできません。  
@@ -178,9 +178,9 @@ void SetDropDownMenu(CMenu* pMenu);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*nMenuId*|メニュー バーのリソース ID。|  
-|[in]*nSubMenuId*|サブメニューのリソース ID。|  
-|[in]*pMenu*|ポインターを[CMenu](../../mfc/reference/cmenu-class.md)サブメニューを指定するオブジェクト。 `CSplitButton`オブジェクトの削除、`CMenu`オブジェクトとその関連付けられている HMENU ときに、`CSplitButton`オブジェクトがスコープ外になります。|  
+|*nMenuId*|[in]メニュー バーのリソース ID。|  
+|*nSubMenuId*|[in]サブメニューのリソース ID。|  
+|*pMenu*|[in]ポインターを[CMenu](../../mfc/reference/cmenu-class.md)サブメニューを指定するオブジェクト。 `CSplitButton`オブジェクトの削除、`CMenu`オブジェクトとその関連付けられている HMENU ときに、`CSplitButton`オブジェクトがスコープ外になります。|  
   
 ### <a name="remarks"></a>Remarks  
  *NMenuId*パラメーターは、メニュー バー、メニュー バー項目の水平方向のリストを識別します。 *NSubMenuId*パラメーターは、各メニュー バー項目に関連付けられたメニュー項目のドロップダウン リストである、サブメニューを識別する 0 から始まるインデックス番号。 たとえば、「編集」および"Help"のメニューを"File"に、メニュー バー項目を含むが一般的なアプリケーション [ファイル] メニュー バーの項目がメニュー項目を含むサブメニュー「開くには、」「閉じる」および"Exit"。 分割ボタン コントロールのドロップダウン矢印をクリックすると、コントロールはメニュー バーではなく、指定のサブメニューを表示します。  

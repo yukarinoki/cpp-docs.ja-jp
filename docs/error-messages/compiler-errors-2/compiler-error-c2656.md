@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2656 |Microsoft ドキュメント
+title: コンパイラ エラー C2656 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6e4dbae6232f50b9241f5542928311e8944501e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd4b0e4ee89bc2cd2c31e476bdc4ee19bfb8a3aa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229125"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043769"
 ---
 # <a name="compiler-error-c2656"></a>コンパイラ エラー C2656
-'function': ビット フィールドとして許可されていない関数  
-  
- ビット フィールドのメンバーとして宣言された関数。  
-  
- このエラーは、コンス トラクター初期化子リストで構文エラーが発生することができます。
+
+'function': ビット フィールドとして許可されていない関数
+
+関数は、ビット フィールドのメンバーとして宣言されます。
+
+このエラーは、コンス トラクターの初期化子リストで構文エラーが発生することができます。

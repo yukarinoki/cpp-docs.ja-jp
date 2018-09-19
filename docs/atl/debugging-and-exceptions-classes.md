@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ee17d8c944fa41bcca9b255c12cc4c2b0c3f565
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3750b26643bc2ceb33e49723d1586ba5350fe4db
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753816"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055209"
 ---
 # <a name="debugging-and-exceptions-classes"></a>デバッグおよび例外クラス
 
@@ -31,7 +31,7 @@ ms.locfileid: "43753816"
 
 ## <a name="see-also"></a>関連項目
 
-[クラスの概要](../atl/atl-class-overview.md)   
-[デバッグとエラー報告に関するグローバル関数](../atl/reference/debugging-and-error-reporting-global-functions.md)   
+[クラスの概要](../atl/atl-class-overview.md)<br/>
+[デバッグとエラー報告に関するグローバル関数](../atl/reference/debugging-and-error-reporting-global-functions.md)<br/>
 [デバッグとエラー報告に関するマクロ](../atl/reference/debugging-and-error-reporting-macros.md)
 

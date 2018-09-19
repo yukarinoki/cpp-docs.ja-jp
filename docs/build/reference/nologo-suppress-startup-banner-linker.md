@@ -1,5 +1,5 @@
 ---
-title: -NOLOGO (著作権情報を抑制する) (リンカー) |Microsoft ドキュメント
+title: -NOLOGO (著作権情報の非表示) (リンカー) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,33 +23,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a76e99496114c0ebdc60f81724e67dd88a482055
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 405cfd08b681d8b48343bae5055f5be9cf23dadb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374194"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707578"
 ---
 # <a name="nologo-suppress-startup-banner-linker"></a>/NOLOGO (著作権情報の非表示) (リンカー)
-```  
-/NOLOGO  
-```  
-  
-## <a name="remarks"></a>コメント  
- /NOLOGO オプションでは、著作権メッセージとバージョン番号が表示されなくなります。  
-  
- このオプションでは、コマンド ファイルのエコーも行われません。 詳細については、「 [LINK コマンド ファイル](../../build/reference/link-command-files.md)です。  
-  
- 既定では、この情報は、出力ウィンドウをリンカーに送信します。 コマンド ラインでは、標準出力に送信され、ファイルにリダイレクトできます。  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには  
-  
-1.  このオプションは、コマンドラインからのみ使用する必要があります。  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには  
-  
-1.  このリンカー オプションをプログラムで変更できません。  
-  
-## <a name="see-also"></a>関連項目  
- [リンカー オプションの設定](../../build/reference/setting-linker-options.md)   
- [リンカー オプション](../../build/reference/linker-options.md)
+
+```
+/NOLOGO
+```
+
+## <a name="remarks"></a>Remarks
+
+/NOLOGO オプションでは、著作権のメッセージとバージョン番号が表示されなくなります。
+
+このオプションはまた、コマンド ファイルのエコーを抑制します。 詳細については、次を参照してください。 [LINK コマンド ファイル](../../build/reference/link-command-files.md)します。
+
+既定では、この情報は、出力ウィンドウに、リンカーによって送信されます。 コマンドラインでは、標準出力に送信され、ファイルにリダイレクトできます。
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
+
+1. このオプションは、コマンドラインからのみ使用する必要があります。
+
+### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
+
+1. このリンカー オプションをプログラムで変更することはできません。
+
+## <a name="see-also"></a>関連項目
+
+[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
+[リンカー オプション](../../build/reference/linker-options.md)

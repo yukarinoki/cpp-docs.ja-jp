@@ -1,5 +1,5 @@
 ---
-title: NMAKE の致命的なエラー U1055 |Microsoft ドキュメント
+title: NMAKE の致命的なエラー U1055 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f99681ff7219c46820da4c909a6f4eddccdabf6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50103f7445096e553a510da6272dd4be1886b710
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320883"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017938"
 ---
 # <a name="nmake-fatal-error-u1055"></a>NMAKE の致命的なエラー U1055
-環境の領域不足  
-  
- オペレーティング システムは、環境変数の領域不足になりました。  
-  
- 環境の領域を増やすか、以下の環境変数を設定します。
+
+環境の領域不足
+
+オペレーティング システムは、環境変数用の領域不足になりました。
+
+環境のスペースを増やすか、以下の環境変数を設定します。

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad90ac69fa41a6bec70373b84044344592d2d86e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7d468e6e2770eca3bc01fca95fb585d1753210a3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753939"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039024"
 ---
 # <a name="adding-a-new-interface-in-an-atl-project"></a>ATL プロジェクトで新しいインターフェイスの追加
 
@@ -52,10 +52,10 @@ ms.locfileid: "43753939"
 
 ## <a name="see-also"></a>関連項目
 
-[ATL プロジェクト ウィザード](../../atl/reference/atl-project-wizard.md)   
-[Visual C++ プロジェクトの種類](../../ide/visual-cpp-project-types.md)   
-[アプリケーション ウィザードを使用したデスクトップ プロジェクトの作成](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
-[ATL および C ランタイム コードによるプログラミング](../../atl/programming-with-atl-and-c-run-time-code.md)   
-[ATL COM オブジェクトの基礎](../../atl/fundamentals-of-atl-com-objects.md)   
+[ATL プロジェクト ウィザード](../../atl/reference/atl-project-wizard.md)<br/>
+[Visual C++ プロジェクトの種類](../../ide/visual-cpp-project-types.md)<br/>
+[アプリケーション ウィザードを使用したデスクトップ プロジェクトの作成](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[ATL および C ランタイム コードによるプログラミング](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
+[ATL COM オブジェクトの基礎](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [ATL プロジェクトの既定の構成](../../atl/reference/default-atl-project-configurations.md)
 

@@ -1,5 +1,5 @@
 ---
-title: ごとで |Microsoft ドキュメント
+title: ごとで |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6ab5f7309da1a037f7066d44815cafc934b162cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a55425c891999142fe32ae08125cce22728daffa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111944"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040695"
 ---
 # <a name="for-each-in"></a>for each、in
 配列またはコレクションを反復処理します。 この非標準のキーワードは、C++/CLI プロジェクトと C++ ネイティブ プロジェクトの両方で使用できます。 ただし、これを使用することはお勧めしません。 標準的な使用を検討して[ステートメント (C++) の範囲に基づく](../cpp/range-based-for-statement-cpp.md)代わりにします。  
@@ -43,17 +43,17 @@ ms.locfileid: "33111944"
   
  **パラメーター**  
   
- `type`  
- `identifier` の型。  
+*type*<br/>
+`identifier` の型。  
   
- `identifier`  
- コレクション要素を表す繰り返し変数。  ときに`identifier`は、[参照演算子の追跡](../windows/tracking-reference-operator-cpp-component-extensions.md)要素を変更することができます。  
+*identifier*<br/>
+コレクション要素を表す繰り返し変数。  ときに`identifier`は、[参照演算子の追跡](../windows/tracking-reference-operator-cpp-component-extensions.md)要素を変更することができます。  
   
- `expression`  
- 配列式またはコレクション。 コレクション要素は、コンパイラが `identifier` 型に変換できるようにする必要があります。  
+*式*<br/>
+配列式またはコレクション。 コレクション要素は、コンパイラが `identifier` 型に変換できるようにする必要があります。  
   
- `statements`  
- 実行する 1 つ以上のステートメントを指定します。  
+*ステートメント*<br/>
+実行する 1 つ以上のステートメントを指定します。  
   
  **解説**  
   
@@ -61,7 +61,7 @@ ms.locfileid: "33111944"
   
  *ステートメント*配列またはコレクションの各要素に対して実行されます。 コレクション内の全要素に対する繰り返しが完了すると、制御は、`for each` ブロックに続くステートメントに移動します。  
   
- `for each` および`in`は[状況依存のキーワード](../windows/context-sensitive-keywords-cpp-component-extensions.md)です。  
+ `for each` `in`は[状況依存のキーワード](../windows/context-sensitive-keywords-cpp-component-extensions.md)します。  
   
  詳細情報  
   
@@ -118,12 +118,12 @@ Testing
 ## <a name="common-language-runtime"></a>共通言語ランタイム 
  **解説**  
   
- CLR の構文は同じ、**すべてのランタイム**構文を次のようを除きます。  
+ CLR の構文は同じ、**すべてのランタイム**構文では、次の手順を除きます。  
   
  *式*  
- マネージ配列式またはコレクション。 コレクション要素は、コンパイラがからに変換できるようにする必要があります<xref:System.Object>を*識別子*型です。  
+ マネージド配列式またはコレクション。 コンパイラはからに変換できるように、コレクションの要素がある必要があります<xref:System.Object>を*識別子*型。  
   
- *式*を実装する型に評価される<xref:System.Collections.IEnumerable>、 <xref:System.Collections.Generic.IEnumerable%601>、または、定義された型、`GetEnumerator`を実装するメソッドの型を返すか<xref:System.Collections.IEnumerator>すべてで定義されているメソッドの宣言または`IEnumerator`.  
+ *式*を実装する型に評価される<xref:System.Collections.IEnumerable>、 <xref:System.Collections.Generic.IEnumerable%601>、または型を定義する、`GetEnumerator`実装するメソッドの型を返すか<xref:System.Collections.IEnumerator>すべてで定義されているメソッドの宣言または`IEnumerator`.  
   
 ### <a name="requirements"></a>要件  
  コンパイラ オプション: **/clr**  

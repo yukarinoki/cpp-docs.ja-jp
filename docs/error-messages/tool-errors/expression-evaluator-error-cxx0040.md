@@ -1,5 +1,5 @@
 ---
-title: 式エバリュエーター エラー CXX0040 |Microsoft ドキュメント
+title: 式エバリュエーター エラー CXX0040 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb71bad9fd6f6e1de1bd10b204e720bfee036abc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ff0f0d446094ad7a0f9a96ed73c2c6c5e5af209
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295432"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117557"
 ---
 # <a name="expression-evaluator-error-cxx0040"></a>式エバリュエーター エラー CXX0040
-関数には、暗黙的な変換が必要です。  
-  
- C の式エバリュエーターは、コンス トラクター呼び出しを使用する暗黙的な変換をサポートしていません。  
-  
- このエラーは、can0040 と同じものと同じです。
+
+関数には、暗黙的な変換が必要です。
+
+C の式エバリュエーターでは、コンス トラクターの呼び出しに関連する暗黙的な変換はできません。
+
+このエラーは、can0040 と同じものと同じです。

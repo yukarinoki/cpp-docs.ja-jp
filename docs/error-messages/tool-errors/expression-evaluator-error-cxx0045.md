@@ -1,5 +1,5 @@
 ---
-title: 式エバリュエーター エラー CXX0045 |Microsoft ドキュメント
+title: 式エバリュエーター エラー CXX0045 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ac52b16c2c8551282b79ef6a7fda40e24acc6bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4d9913bc77dfc3fbc95bd03fd32c954c4d304d27
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299735"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023203"
 ---
 # <a name="expression-evaluator-error-cxx0045"></a>式エバリュエーター エラー CXX0045
-関数ではありません。  
-  
- 引数リストは、関数の名前ではないプログラム内のシンボルに指定されました。  
-  
-## <a name="example"></a>例  
-  
-```  
-queue( alpha, beta )  
-```  
-  
- ときに`queue`関数ではありません。  
-  
- このエラーは、can0045 と同じものと同じです。
+
+関数ではありません。
+
+関数の名前のないプログラム内のシンボルの引数リストが指定されました。
+
+## <a name="example"></a>例
+
+```
+queue( alpha, beta )
+```
+
+ときに`queue`関数ではありません。
+
+このエラーは、can0045 と同じものと同じです。

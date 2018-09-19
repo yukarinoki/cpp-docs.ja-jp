@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4594e24ddf88292d311679b64371ac981642bc5d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ee6c74693987c35f37caf210e604835061cbefd6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222722"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715339"
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf クラス
 
@@ -71,10 +71,10 @@ class basic_filebuf : public basic_streambuf<Elem, Tr>
 ### <a name="parameters"></a>パラメーター
 
 *Elem*<br/>
- ファイル バッファーの基本要素。
+ファイル バッファーの基本要素。
 
 *Tr*<br/>
- ファイル バッファーの基本要素の特徴 (通常は `char_traits`< `Elem`>)。
+ファイル バッファーの基本要素の特徴 (通常は `char_traits`< `Elem`>)。
 
 ## <a name="remarks"></a>Remarks
 
@@ -413,13 +413,13 @@ basic_filebuf<Elem, Tr> *open(
 ### <a name="parameters"></a>パラメーター
 
 *_Filename*<br/>
- 開くファイルの名前。
+開くファイルの名前。
 
 *モード (_m)*<br/>
- [ios_base::openmode](../standard-library/ios-base-class.md#openmode) の列挙値のうちの 1 つ。
+[ios_base::openmode](../standard-library/ios-base-class.md#openmode) の列挙値のうちの 1 つ。
 
 *_Prot*<br/>
- 保護のと同じ既定のファイル、 *shflag*パラメーター [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)します。
+保護のと同じ既定のファイル、 *shflag*パラメーター [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -462,7 +462,7 @@ basic_filebuf& operator=(basic_filebuf&& right);
 ### <a name="parameters"></a>パラメーター
 
 *right*<br/>
- [basic_filebuf](../standard-library/basic-filebuf-class.md) オブジェクトへの右辺値参照。
+[basic_filebuf](../standard-library/basic-filebuf-class.md) オブジェクトへの右辺値参照。
 
 ### <a name="return-value"></a>戻り値
 
@@ -483,7 +483,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 ### <a name="parameters"></a>パラメーター
 
 *_Meta*<br/>
- バッファーに挿入する文字または`traits_type::eof`します。
+バッファーに挿入する文字または`traits_type::eof`します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -510,7 +510,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 ### <a name="parameters"></a>パラメーター
 
 *_Meta*<br/>
- バッファーに挿入する文字または `traits_type::eof`。
+バッファーに挿入する文字または `traits_type::eof`。
 
 ### <a name="return-value"></a>戻り値
 
@@ -547,13 +547,13 @@ virtual pos_type seekoff(off_type _Off,
 ### <a name="parameters"></a>パラメーター
 
 *_Off*<br/>
- に対して相対的にシークする位置 *_Way*します。
+に対して相対的にシークする位置 *_Way*します。
 
 *_Way*<br/>
- オフセット演算の開始位置。 有効値については、「[seekdir](../standard-library/ios-base-class.md#seekdir)」を参照してください。
+オフセット演算の開始位置。 有効値については、「[seekdir](../standard-library/ios-base-class.md#seekdir)」を参照してください。
 
 *_Which*<br/>
- ポインター位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
+ポインター位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -578,10 +578,10 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 ### <a name="parameters"></a>パラメーター
 
 *_Sp*<br/>
- シークする位置。
+シークする位置。
 
 *_Which*<br/>
- ポインター位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
+ポインター位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -608,10 +608,10 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 ### <a name="parameters"></a>パラメーター
 
 *_Buffer*<br/>
- バッファーへのポインター。
+バッファーへのポインター。
 
 *count*<br/>
- バッファーのサイズ。
+バッファーのサイズ。
 
 ### <a name="return-value"></a>戻り値
 
@@ -632,7 +632,7 @@ void swap(basic_filebuf& right);
 ### <a name="parameters"></a>パラメーター
 
 *right*<br/>
- 別の `basic_filebuf` への `lvalue` 参照。
+別の `basic_filebuf` への `lvalue` 参照。
 
 ## <a name="sync"></a>  basic_filebuf::sync
 

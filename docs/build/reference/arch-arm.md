@@ -1,5 +1,5 @@
 ---
-title: -arch (ARM) |Microsoft ドキュメント
+title: -arch (ARM) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,49 +12,53 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a411d0c7d07fb7392baaaa4fb8a8377fcb36598
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 17f0f0735981c0a851bcab62ca1ad39c97af3965
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369865"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700681"
 ---
 # <a name="arch-arm"></a>/arch (ARM)
-ARM でのコード生成のアーキテクチャを指定します。 関連項目[/arch (x86)](../../build/reference/arch-x86.md)と[/arch (x64)](../../build/reference/arch-x64.md)です。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-/arch:[ARMv7VE|VFPv4]  
-```  
-  
-## <a name="arguments"></a>引数  
- **/arch:ARMv7VE**  
- ARMv7VE 仮想化拡張命令の使用を有効にします。  
-  
- **/arch:VFPv4**  
- ARM VFPv4 命令の使用を有効にします。 このオプションを指定しない場合は、VFPv3 が既定値です。  
-  
-## <a name="remarks"></a>コメント  
- `_M_ARM_FP`マクロ (ARM のみ) を示します。 存在する場合、 **/arch**コンパイラ オプションを使用します。 詳細については、「 [Predefined Macros](../../preprocessor/predefined-macros.md)」を参照してください。  
-  
- 使用すると[/clr](../../build/reference/clr-common-language-runtime-compilation.md)をコンパイルする **/arch**マネージ関数のコード生成に影響を与えません。 **/arch**だけでネイティブ関数の生成のコードに影響します。  
-  
-### <a name="to-set-the-archarmv7ve-or-archvfpv4-compiler-option-in-visual-studio"></a>Visual Studio で、/arch:ARMv7VE または/arch:VFPv4 コンパイラ オプションを設定するには  
-  
-1.  開く、**プロパティ ページ**プロジェクトのダイアログ ボックス。 詳細については、次を参照してください。[のプロジェクト プロパティの操作](../../ide/working-with-project-properties.md)です。  
-  
-2.  選択、 **C/C++** フォルダーです。  
-  
-3.  選択、**コマンドライン**プロパティ ページ。  
-  
-4.  **追加オプション**ボックスで、追加`/arch:ARMv7VE`または`/arch:VFPv4`です。  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには  
-  
--   「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableEnhancedInstructionSet%2A>」を参照してください。  
-  
-## <a name="see-also"></a>関連項目  
- [/arch (最小限の CPU アーキテクチャ)](../../build/reference/arch-minimum-cpu-architecture.md)   
- [コンパイラ オプション](../../build/reference/compiler-options.md)   
- [コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+
+ARM でのコード生成のアーキテクチャを指定します。 参照してください[/arch (x86)](../../build/reference/arch-x86.md)と[/arch (x64)](../../build/reference/arch-x64.md)します。
+
+## <a name="syntax"></a>構文
+
+```
+/arch:[ARMv7VE|VFPv4]
+```
+
+## <a name="arguments"></a>引数
+
+**/arch:ARMv7VE**<br/>
+ARMv7VE 仮想化拡張命令の使用を有効にします。
+
+**/arch:VFPv4**<br/>
+ARM VFPv4 命令の使用を有効にします。 このオプションを指定しない場合は、VFPv3 が既定値です。
+
+## <a name="remarks"></a>Remarks
+
+`_M_ARM_FP` (ARM のみ) 用のマクロを示します。 存在する場合、 **/arch**コンパイラ オプションを使用します。 詳細については、「 [Predefined Macros](../../preprocessor/predefined-macros.md)」を参照してください。
+
+使用すると[/clr](../../build/reference/clr-common-language-runtime-compilation.md)をコンパイルする **/arch**マネージ関数のコード生成に影響を与えません。 **/arch**だけでネイティブ関数の生成のコードに影響します。
+
+### <a name="to-set-the-archarmv7ve-or-archvfpv4-compiler-option-in-visual-studio"></a>Visual Studio で、/arch:ARMv7VE または/arch:VFPv4 コンパイラ オプションを設定するには
+
+1. 開く、**プロパティ ページ**プロジェクトのダイアログ ボックス。 詳細については、「[プロジェクト プロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+
+1. 選択、 **C/C++** フォルダー。
+
+1. 選択、**コマンドライン**プロパティ ページ。
+
+1. **追加オプション**ボックスで、追加`/arch:ARMv7VE`または`/arch:VFPv4`します。
+
+### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
+
+- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableEnhancedInstructionSet%2A>
+
+## <a name="see-also"></a>関連項目
+
+[/arch (最小限の CPU アーキテクチャ)](../../build/reference/arch-minimum-cpu-architecture.md)
+[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
+[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)

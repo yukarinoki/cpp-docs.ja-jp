@@ -15,15 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6834e37c9f6624e231861fa28063cdbc7bec8508
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: da3f7882a24d31f1a8560cdc9c038081324bf675
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208625"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715612"
 ---
 # <a name="wildcards-and-nmake"></a>ワイルドカードと NMAKE
-NMAKE ファイル名のワイルドカードの展開 (\*としますか?) 依存関係の行にします。 コマンドで指定したワイルドカードがコマンドに渡されるNMAKE によって展開されません。  
-  
-## <a name="see-also"></a>関連項目  
- [メイクファイルの内容](../build/contents-of-a-makefile.md)
+
+NMAKE ファイル名のワイルドカードの展開 (\*としますか?) 依存関係の行にします。 コマンドで指定したワイルドカードがコマンドに渡されるNMAKE によって展開されません。
+
+## <a name="see-also"></a>関連項目
+
+[メイクファイルの内容](../build/contents-of-a-makefile.md)

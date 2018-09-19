@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 522a2fc1f2092c90a9938efee8cf594e2813c5ad
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0b88c9a57b359c6cef7dc8587a4695b5590e69d5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540896"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721878"
 ---
 # <a name="interlockedxor-intrinsic-functions"></a>_InterlockedXor の組み込み関数
 **Microsoft 固有の仕様**  
@@ -158,11 +158,11 @@ __int64 _InterlockedXor64_rel(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力、出力] `Value`  
- 最初のオペランドへのポインター。結果によって置き換えられます。  
+*値*<br/>
+[入力、出力]最初のオペランドの結果によって置き換えられるへのポインター。  
   
- [入力] `Mask`  
- 2 番目のオペランド。  
+*マスク*<br/>
+[in]2 番目のオペランド。  
   
 ## <a name="return-value"></a>戻り値  
  最初のオペランドの元の値。  

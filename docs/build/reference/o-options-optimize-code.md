@@ -1,5 +1,5 @@
 ---
-title: -O オプション (コードの最適化) |Microsoft ドキュメント
+title: -O オプション (コードの最適化) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 09/25/2017
 ms.technology:
@@ -19,42 +19,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83ddebec9db7a02db40ef31c89c7ff48a66cf665
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5c77fd91d63ec79fca87e11a4a02eca157eddf84
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376801"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717536"
 ---
 # <a name="o-options-optimize-code"></a>/O オプション (コードの最適化)
 
-**/O**さまざまなオプションを制御するための最適化が最高速度または最小サイズのコードを作成します。
+**/O**さまざまなオプションを制御する際に役立つ最適化が最高速度またはサイズの最小のコードを作成します。
 
 - [/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md)最小サイズのコードを生成するための最適化の組み合わせを設定します。
 
-- [/O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md)最高速度でコードを最適化する最適化の組み合わせを設定します。
+- [/O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md)最高速度でコードを最適化の最適化の組み合わせを設定します。
 
 - [/Ob](../../build/reference/ob-inline-function-expansion.md)関数のインライン展開を制御します。
 
-- [/Od](../../build/reference/od-disable-debug.md)を高速化するコンパイルおよびデバッグを簡略化の最適化を無効にします。
+- [/Od](../../build/reference/od-disable-debug.md)をコンパイルが高速化し、デバッグを簡略化の最適化を無効にします。
 
-- [/Og](../../build/reference/og-global-optimizations.md)グローバルな最適化を有効にします。
+- [/Og](../../build/reference/og-global-optimizations.md)グローバルの最適化を有効します。
 
-- [/Oi](../../build/reference/oi-generate-intrinsic-functions.md)適切な関数の呼び出しのための組み込み関数を生成します。
+- [/Oi](../../build/reference/oi-generate-intrinsic-functions.md)適切な関数呼び出し用の組み込み関数が生成されます。
 
-- [/Os](../../build/reference/os-ot-favor-small-code-favor-fast-code.md)コンパイラが最適化の方法をサイズの最適化を最優先に指示します。
+- [/Os](../../build/reference/os-ot-favor-small-code-favor-fast-code.md)サイズの最適化の優先順位の速度に関する最適化をコンパイラに指示します。
 
-- [/Ot](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) (既定の設定) のサイズの最適化で速度の最適化を優先するようにコンパイラに指示します。
+- [/Ot](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) (既定の設定) の速度の最適化の優先順位のサイズの最適化をコンパイラに指示します。
 
-- [/Ox](../../build/reference/ox-full-optimization.md)速度に重点を置いて、最適化のいくつかを選択する組み合わせオプションです。 厳密なサブセットでは、 **/O2**最適化します。
+- [/Ox](../../build/reference/ox-full-optimization.md)速度を重視した最適化のいくつかを選択する組み合わせのオプションです。 厳密なサブセットが、 **/O2**最適化します。
 
-- [/Oy](../../build/reference/oy-frame-pointer-omission.md)方が手軽な関数の呼び出しの呼び出し履歴にフレーム ポインターの作成を抑制します。
+- [/Oy](../../build/reference/oy-frame-pointer-omission.md)関数呼び出しが速くの呼び出し履歴にフレーム ポインターが作成されなくなります。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-複数を組み合わせることができます **/O**オプションを 1 つのオプションのステートメントにします。 たとえば、 **/Odi**と同じ **/Od/Oi**です。 特定のオプションは相互に排他的で一緒に使用する場合、コンパイラ エラーが発生します。 個々 の **/O**詳細については、オプションです。
+複数を組み合わせることができます **/O**オプションを 1 つのオプションのステートメントにします。 たとえば、 **/Odi**と同じ **/Od/Oi**します。 特定のオプションは相互に排他的で一緒に使用する場合、コンパイラ エラーが発生します。 個々 の **/O**詳細については、オプションです。
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)   
+[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
 [コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)

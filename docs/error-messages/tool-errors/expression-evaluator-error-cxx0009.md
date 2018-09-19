@@ -1,5 +1,5 @@
 ---
-title: 式エバリュエーター エラー CXX0009 |Microsoft ドキュメント
+title: 式エバリュエーター エラー CXX0009 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d579c22ee72992b16cd39a2cedb82e1219972c5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95c2706f4b1eb758eea24cc16ea16f4b561155c2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295445"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109796"
 ---
 # <a name="expression-evaluator-error-cxx0009"></a>式エバリュエーター エラー CXX0009
-見つからない ' 文字定数の後  
-  
- 文字定数の末尾に単一引用符がありませんでした。 文字定数を単一引用符で囲み、式を再入力します。  
-  
- このエラーは、can0009 と同じものと同じです。
+
+不足している ' 文字定数の後
+
+文字定数の末尾に単一引用符がありませんでした。 文字定数を単一引用符で囲み、式を再入力します。
+
+このエラーは、can0009 と同じものと同じです。

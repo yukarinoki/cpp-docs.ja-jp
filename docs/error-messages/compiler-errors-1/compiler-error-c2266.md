@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2266 |Microsoft ドキュメント
+title: コンパイラ エラー C2266 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cada178ed73ff9388b5f86d5d20220b375971e3c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c6f28741d5ae090a497ce3ebc3a56f68fc87e1b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168005"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067365"
 ---
 # <a name="compiler-error-c2266"></a>コンパイラ エラー C2266
-'identifier' : 非定数の境界がある配列への参照は無効です  
-  
- 非定数の境界がある配列への参照が宣言されています。 配列には定数の境界を指定する必要があります。
+
+'identifier' : 非定数の境界がある配列への参照は無効です
+
+非定数の境界がある配列への参照が宣言されています。 配列には定数の境界を指定する必要があります。

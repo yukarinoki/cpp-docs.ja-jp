@@ -1,5 +1,5 @@
 ---
-title: copyprivate |Microsoft ドキュメント
+title: copyprivate |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96b1516970afb8729dc4e35c2226eb6ff00f5c2e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1f698114fc1f2285cdcdb91ec1e8317ad1585a6b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692939"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071134"
 ---
 # <a name="copyprivate"></a>copyprivate
 すべてのスレッド間で 1 つまたは複数の変数を共有する必要がありますを指定します。  
@@ -32,16 +32,15 @@ ms.locfileid: "33692939"
 copyprivate(var)  
 ```  
   
-## <a name="remarks"></a>コメント  
- 指定項目  
+### <a name="parameters"></a>パラメーター
   
- `var`  
- 共有する 1 つまたは複数の変数。 複数の変数が指定されている場合は、変数名をコンマで区切ります。  
+*var*<br/>
+共有する 1 つまたは複数の変数。 1 つ以上の変数が指定されている場合は、変数名をコンマで区切ります。  
   
-## <a name="remarks"></a>コメント  
- `copyprivate` 適用されます、[単一](../../../parallel/openmp/reference/single.md)ディレクティブです。  
+## <a name="remarks"></a>Remarks  
+ `copyprivate` 適用されます、[単一](../../../parallel/openmp/reference/single.md)ディレクティブ。  
   
- 詳細については、次を参照してください。 [2.7.2.8 copyprivate](../../../parallel/openmp/2-7-2-8-copyprivate.md)です。  
+ 詳細については、次を参照してください。 [2.7.2.8 copyprivate](../../../parallel/openmp/2-7-2-8-copyprivate.md)します。  
   
 ## <a name="example"></a>例  
   

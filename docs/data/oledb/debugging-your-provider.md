@@ -1,5 +1,5 @@
 ---
-title: プロバイダーのデバッグ |Microsoft ドキュメント
+title: プロバイダーのデバッグ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,31 +18,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c6258ddd3fd4317c608cb20486c364918fb5c73a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5552b9c3d3d697b322b8c1d71eaf0e71630fac38
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106395"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040203"
 ---
 # <a name="debugging-your-provider"></a>プロバイダーのデバッグ
-ストアには、プロバイダーをデバッグする 2 つの方法があります。  
+
+プロバイダーをデバッグする 2 つの方法はあります。  
   
--   プロセスでは、プロバイダーが作成された、ためには、通常、OLE DB コンシューマー テンプレートとプロバイダーをステップを使用して一部のコンシューマー コードを作成できます。  
+- プロセスでは、プロバイダーが作成される、ために、通常、OLE DB コンシューマー テンプレートと、プロバイダーにステップ インを使用して一部のコンシューマー コードを作成できます。  
   
--   Visual C に付属している ITEST ユーティリティを使用することができます。  
+- Visual C に付属する ITEST ユーティリティを使用することができます。  
   
 ### <a name="to-use-the-itest-utility"></a>ITEST ユーティリティを使用するには  
   
-1.  プロバイダー プロジェクトを開きます。  
+1. プロバイダーのプロジェクトを開きます。  
   
-2.  **プロジェクト** メニューのをクリックして**設定**です。  
+1. **プロジェクト** メニューのをクリックして**設定**します。  
   
-3.  **プロパティ ページ**ダイアログ ボックスで、をクリックして、**デバッグ**タブです。  
+1. **プロパティ ページ**ダイアログ ボックスで、をクリックして、**デバッグ**タブ。  
   
-4.  **デバッグ セッションの実行可能ファイル**ボックスで、ITEST アプリケーションを選択します。  
+1. **デバッグ セッションの実行可能ファイル**ボックスで、ITEST アプリケーションを選択します。  
   
-5.  ブレークポイントを設定し、通常どおりにデバッグします。  
+1. ブレークポイントを設定し、通常どおりにデバッグします。  
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB プロバイダー テンプレートの操作](../../data/oledb/working-with-ole-db-provider-templates.md)
+
+[OLE DB プロバイダー テンプレートの操作](../../data/oledb/working-with-ole-db-provider-templates.md)

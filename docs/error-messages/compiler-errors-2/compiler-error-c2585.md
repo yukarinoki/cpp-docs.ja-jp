@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2585 |Microsoft ドキュメント
+title: コンパイラ エラー C2585 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ab812a4b6621acb28a4df636056598047f5c21e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ec7b1e9c1e5e7894740cc80f9c030fa1ee26ec0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230162"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028845"
 ---
 # <a name="compiler-error-c2585"></a>コンパイラ エラー C2585
-'type' に明示的な変換があいまいです。  
-  
- 型変換は、複数の結果を生成できます。  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>次のような原因をチェックして問題を解決するには  
-  
-1.  多重継承に基づく、クラスまたは構造体の型から変換します。 変換関数または演算子がスコープ解決演算子を使用する必要があります、型では、同じ基本クラスが 2 回以上継承している場合 (`::`) の変換で使用する継承されたクラスを指定します。  
-  
-2.  同じ変換を行う変換演算子と、コンス トラクターを定義しました。
+
+'type' に明示的な変換があいまいです。
+
+型変換では、1 つ以上の結果を生成できます。
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>次のような原因をチェックして問題を解決するには
+
+1. 多重継承に基づく、クラスまたは構造体の型から変換します。 変換関数または演算子がスコープ解決演算子を使用する必要があります型は複数回、同じ基本クラスを継承している場合 (`::`) の変換に使用する継承されたクラスを指定します。
+
+1. 同じ変換を行う変換演算子およびコンス トラクターを定義されています。

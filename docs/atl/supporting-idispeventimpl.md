@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b6e62f90cfca34e92d76294e7deb5e79e8dbd12
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7d7bfd2690cf8f1ed692e6e21bf05b56e2280ce0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756010"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055664"
 ---
 # <a name="supporting-idispeventimpl"></a>IDispEventImpl のサポート
 
@@ -70,13 +70,12 @@ ms.locfileid: "43756010"
 
 ATL には、いくつかのマクロ[BEGIN_SINK_MAP](reference/composite-control-macros.md#begin_sink_map)、 [END_SINK_MAP](reference/composite-control-macros.md#end_sink_map)、および[SINK_ENTRY_EX](reference/composite-control-macros.md#sink_entry_ex)、このマッピングを容易にします。 標準の形式は次のとおりです。
 
-`BEGIN_SINK_MAP(comClass)`
-
-`SINK_ENTRY_EX(id, iid, dispid, func)`
-
-`. . . //additional external event entries`
-
-`END_SINK_MAP()`
+```cpp
+BEGIN_SINK_MAP(comClass)
+  SINK_ENTRY_EX(id, iid, dispid, func)
+  . . . //additional external event entries
+END_SINK_MAP()
+```
 
 次の例では、2 つのイベント ハンドラーでイベント シンク マップで宣言します。
 

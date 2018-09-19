@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2254 |Microsoft ドキュメント
+title: コンパイラ エラー C2254 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 773b6d8b8f0dafe560da8549139442efb31ba429
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6030f85ef1b8742b07f1be92101d740732207fa5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170084"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067091"
 ---
 # <a name="compiler-error-c2254"></a>コンパイラ エラー C2254
-'function': 純粋関数または抽象オーバーライド指定子のフレンド関数では使用できません  
-  
- A`friend`関数が純粋に指定された`virtual`です。  
-  
- 次の例では、C2254 が生成されます。  
-  
-```  
-// C2254.cpp  
-// compile with: /c  
-class A {  
-public:  
-   friend void func1() = 0;   // C2254, func1 is friend  
-   void virtual func2() = 0;   // OK, pure virtual  
-   friend void func3();   // OK, friend not virtual nor pure  
-};  
-  
-void func1() {};  
-void func3() {};  
+
+'function': 純粋指定子または抽象オーバーライド指定子のフレンド関数では使用できません
+
+A`friend`関数が純粋に指定された`virtual`します。
+
+次の例では、C2254 が生成されます。
+
+```
+// C2254.cpp
+// compile with: /c
+class A {
+public:
+   friend void func1() = 0;   // C2254, func1 is friend
+   void virtual func2() = 0;   // OK, pure virtual
+   friend void func3();   // OK, friend not virtual nor pure
+};
+
+void func1() {};
+void func3() {};
 ```

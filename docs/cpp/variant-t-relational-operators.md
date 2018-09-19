@@ -25,45 +25,50 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32f9a45fcfaaff02cfb7cf765857957f20c41ba1
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 95cb1ac663607f26c4f168c2e98910f5b41963c0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463042"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040162"
 ---
 # <a name="variantt-relational-operators"></a>_variant_t 関係演算子
-**Microsoft 固有の仕様**  
-  
- 2 つの `_variant_t` オブジェクトを比較して、等しいかどうかを確認します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-bool operator==(  
-   const VARIANT& varSrc) const;  
-bool operator==(  
-   const VARIANT* pSrc) const;  
-bool operator!=(  
-   const VARIANT& varSrc) const;  
-bool operator!=(  
-   const VARIANT* pSrc) const;  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
- *varSrc*  
- A`VARIANT`と比較される、`_variant_t`オブジェクト。  
-  
- *pSrc*  
- ポインター、`VARIANT`と比較される、`_variant_t`オブジェクト。  
-  
-## <a name="return-value"></a>戻り値  
- 返します**true**比較が保持している場合**false**かどうか。  
-  
-## <a name="remarks"></a>Remarks  
- 比較、`_variant_t`オブジェクトを`VARIANT`等しいかどうかをテストします。  
-  
- **Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- [_variant_t クラス](../cpp/variant-t-class.md)
+
+**Microsoft 固有の仕様**
+
+2 つの `_variant_t` オブジェクトを比較して、等しいかどうかを確認します。
+
+## <a name="syntax"></a>構文
+
+```
+bool operator==(
+   const VARIANT& varSrc) const;
+bool operator==(
+   const VARIANT* pSrc) const;
+bool operator!=(
+   const VARIANT& varSrc) const;
+bool operator!=(
+   const VARIANT* pSrc) const;
+```
+
+#### <a name="parameters"></a>パラメーター
+
+*varSrc*<br/>
+A`VARIANT`と比較される、`_variant_t`オブジェクト。
+
+*pSrc*<br/>
+ポインター、`VARIANT`と比較される、`_variant_t`オブジェクト。
+
+## <a name="return-value"></a>戻り値
+
+返します**true**比較が保持している場合**false**かどうか。
+
+## <a name="remarks"></a>Remarks
+
+比較、`_variant_t`オブジェクトを`VARIANT`等しいかどうかをテストします。
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
+[_variant_t クラス](../cpp/variant-t-class.md)

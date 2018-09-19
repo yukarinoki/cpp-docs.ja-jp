@@ -248,12 +248,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbd12c98014e2adfe9617f0bdaac891f33ebc600
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 866cdc59157aa39a3c6ecbece225d1789cfec789
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693927"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712578"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 タブ付きウィンドウの基本的な機能を実装します。  
@@ -436,11 +436,11 @@ void AddIcon(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*hIcon*  
- 追加するアイコンへのハンドル。  
+*hIcon*<br/>
+[in]追加するアイコンへのハンドル。  
   
- [in]*アイコン*  
- 保護のアイコンの 0 から始まるインデックス`CImageList m_Images`メンバー。  
+*アイコン*<br/>
+[in]保護のアイコンの 0 から始まるインデックス`CImageList m_Images`メンバー。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -463,20 +463,20 @@ virtual void AddTab(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pTabWnd*  
- このメソッドが新しいタブとして表すウィンドウへのポインター。  
+*pTabWnd*<br/>
+[in]このメソッドが新しいタブとして表すウィンドウへのポインター。  
   
- [in]*lpszTabLabel*  
- 新しいタブのラベルを含む文字列。  
+*lpszTabLabel*<br/>
+[in]新しいタブのラベルを含む文字列。  
   
- [in]*uiImageId*  
- イメージ リストのイメージ ID。 タブ コントロールは、新しいタブのアイコンとしてこのイメージを使用します。  
+*uiImageId*<br/>
+[in]イメージ リストのイメージ ID。 タブ コントロールは、新しいタブのアイコンとしてこのイメージを使用します。  
   
- [in]*uiResTabLabel*  
- ラベルのリソース ID。  
+*uiResTabLabel*<br/>
+[in]ラベルのリソース ID。  
   
- [in]*bDetachable*  
- 新しいタブが切り離し可能かどうかを決定するブール型パラメーター。  
+*bDetachable*<br/>
+[in]新しいタブが切り離し可能かどうかを決定するブール型パラメーター。  
   
 ### <a name="remarks"></a>Remarks  
  場合*pTabWnd*から派生していないオブジェクトを指す、 [CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)場合*bDetachable*が true の場合、フレームワークのラッパーを自動的に作成する、*pTabWnd*オブジェクト。 このラッパーにより、 *pTabWnd*切り離し可能なオブジェクト。 既定では、ラッパーのインスタンス、 [CDockablePaneAdapter クラス](../../mfc/reference/cdockablepaneadapter-class.md)します。 既定のラッパーで提供される機能が許容されない場合は、使用、 [cmfcbasetabctrl::setdockingbarwrapperrtc](#setdockingbarwrapperrtc)さまざまなラッパーを指定します。  
@@ -546,14 +546,14 @@ virtual CWnd* CreateWrapper(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWndToWrap*  
- ラップされるフレーム ウィンドウへのポインター。  
+*pWndToWrap*<br/>
+[in]ラップされるフレーム ウィンドウへのポインター。  
   
- [in]*lpszTabLabel*  
- ウィンドウのラベルを含む文字列。  
+*lpszTabLabel*<br/>
+[in]ウィンドウのラベルを含む文字列。  
   
- [in]*bDetachable*  
- ウィンドウが切り離し可能かどうかを示すブール値パラメーター。  
+*bDetachable*<br/>
+[in]ウィンドウが切り離し可能かどうかを示すブール値パラメーター。  
   
 ### <a name="return-value"></a>戻り値  
  派生したラッパーへのポインター、`CDockablePane`場合クラス`CreateWrapper`のラッパー クラスを正常に作成*pWndToWrap*します。 メソッドが失敗した場合、その返します*pWndToWrap*します。  
@@ -576,14 +576,14 @@ virtual BOOL DetachTab(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*dockMethod*  
- によって提供される列挙型、 [CBasePane クラス](../../mfc/reference/cbasepane-class.md)します。 このデータ型には、タブのデタッチに使用されたメソッドを指定します。  
+*dockMethod*<br/>
+[in]によって提供される列挙型、 [CBasePane クラス](../../mfc/reference/cbasepane-class.md)します。 このデータ型には、タブのデタッチに使用されたメソッドを指定します。  
   
- [in]*nTabNum*  
- デタッチするタブの 0 から始まるインデックス。  
+*nTabNum*<br/>
+[in]デタッチするタブの 0 から始まるインデックス。  
   
- [in]*bHide*  
- フレームワークで、[デタッチ] タブを非表示にするかどうかを示すブール値パラメーター。  
+*bHide*<br/>
+[in]フレームワークで、[デタッチ] タブを非表示にするかどうかを示すブール値パラメーター。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -611,8 +611,8 @@ void EnableAutoColor(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- フレームワークが自動の色を使用するかどうかを決定するブール型パラメーター。  
+*bEnable*<br/>
+[in]フレームワークが自動の色を使用するかどうかを決定するブール型パラメーター。  
   
 ### <a name="remarks"></a>Remarks  
  タブ コントロールでは、いくつかの定義済みの色の配列があります。 フレームワークは、自動の色を使用すると、一連のタブの各タブは、この配列から次の色を割り当てられます。  
@@ -627,8 +627,8 @@ BOOL EnableCustomToolTips(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- カスタム ヒントを使用するかどうかを決定するブール値。  
+*bEnable*<br/>
+[in]カスタム ヒントを使用するかどうかを決定するブール値。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は TRUE、それ以外の場合は FALSE。  
@@ -644,8 +644,8 @@ virtual void EnableInPlaceEdit(BOOL bEnable) = 0;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- タブ ラベルの直接編集を有効にするかどうかを指定するブール型パラメーター。  
+*bEnable*<br/>
+[in]タブ ラベルの直接編集を有効にするかどうかを指定するブール型パラメーター。  
   
 ### <a name="remarks"></a>Remarks  
  既定では、タブのラベルを直接編集はタブ コントロールを無効になります。  
@@ -664,11 +664,11 @@ virtual BOOL EnableTabDetach(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iTab*  
- タブの 0 から始まるインデックス。  
+*iTab*<br/>
+[in]タブの 0 から始まるインデックス。  
   
- [in]*bEnable*  
- タブをデタッチできるようにするかどうかを示すブール値。  
+*bEnable*<br/>
+[in]タブをデタッチできるようにするかどうかを示すブール値。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は TRUE、それ以外の場合は FALSE。  
@@ -681,8 +681,8 @@ void EnableTabSwap(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- タブ位置の交換を有効にするかどうかを示すブール値。  
+*bEnable*<br/>
+[in]タブ位置の交換を有効にするかどうかを示すブール値。  
   
 ### <a name="remarks"></a>Remarks  
  タブ位置の交換を有効にすると、ユーザーはタブは、ドラッグし、タブ コントロール内の相対位置を変更することができます。  
@@ -695,8 +695,8 @@ virtual BOOL EnsureVisible(int iTab);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iTab*  
- タブの 0 から始まるインデックス。  
+*iTab*<br/>
+[in]タブの 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -723,8 +723,8 @@ virtual CWnd* FindTargetWnd(const CPoint& pt) = 0;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pt*  
- クライアント領域を使用して定義されているポイントの座標を[CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)オブジェクト。  
+*pt*<br/>
+[in]クライアント領域を使用して定義されているポイントの座標を[CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  ポインターを[CWnd](../../mfc/reference/cwnd-class.md)成功。 それ以外の場合に NULL の場合は、オブジェクト。  
@@ -830,11 +830,11 @@ virtual CWnd* GetFirstVisibleTab(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*iTabNum*  
- 整数への参照。 このメソッドは、このパラメーターに、最初に表示されるタブの 0 から始まるインデックスを書き込みます。  
+*iTabNum*<br/>
+[out]整数への参照。 このメソッドは、このパラメーターに、最初に表示されるタブの 0 から始まるインデックスを書き込みます。  
   
- [in]*iStartFrom*  
- 最初のタブを確認するの 0 から始まるインデックス。  
+*iStartFrom*<br/>
+[in]最初のタブを確認するの 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は、最初の表示されているタブへのポインターそれ以外の場合は NULL です。  
@@ -935,11 +935,11 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*rectTabAreaTop*  
- `CRect` オブジェクトへの参照。 `GetTabArea` このオブジェクトを使用して、上部のタブ領域の位置とサイズを格納します。  
+*rectTabAreaTop*<br/>
+[in]参照を`CRect`オブジェクト。 `GetTabArea` このオブジェクトを使用して、上部のタブ領域の位置とサイズを格納します。  
   
- [in]*rectTabAreaBottom*  
- `CRect` オブジェクトへの参照。 `GetTabArea` このオブジェクトを使用して、下のタブ領域の位置とサイズを格納します。  
+*rectTabAreaBottom*<br/>
+[in]参照を`CRect`オブジェクト。 `GetTabArea` このオブジェクトを使用して、下のタブ領域の位置とサイズを格納します。  
   
 ### <a name="remarks"></a>Remarks  
  後`GetTabArea`から制御が戻る、`CRect`タブ領域のタブ コントロールのクライアント座標の位置とサイズのパラメーターが含まれています。 上部または下部にあるタブ コントロールのタブ領域がない場合`rectTabAreaTop`または`rectTabAreaBottom`は空です。  
@@ -954,8 +954,8 @@ virtual COLORREF GetTabBkColor(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iTab*  
- タブの 0 から始まるインデックス。  
+*iTab*<br/>
+[in]タブの 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  A [COLORREF](/windows/desktop/gdi/colorref)場合は-1 と指定したタブの背景色を示す値。 *iTab*が範囲外です。  
@@ -981,8 +981,8 @@ virtual int GetTabByID(int id) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*id*  
- タブの id。  
+*ID*<br/>
+[in]タブの id。  
   
 ### <a name="return-value"></a>戻り値  
  見つかった場合は、タブの 0 から始まるインデックスタブ ID が見つからない場合は-1。  
@@ -1009,8 +1009,8 @@ virtual int GetTabFromHwnd(HWND hwnd) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*hwnd*  
- ウィンドウのハンドル。  
+*hwnd*<br/>
+[in]ウィンドウのハンドル。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は、タブの 0 から始まるインデックスタブが含まれていない場合は-1 *hwnd*します。  
@@ -1023,8 +1023,8 @@ virtual int GetTabFromPoint(CPoint& pt) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pt*  
- タブ コントロールのクライアント座標にポイントします。  
+*pt*<br/>
+[in]タブ コントロールのクライアント座標にポイントします。  
   
 ### <a name="return-value"></a>戻り値  
  含むタブのインデックス*pt*; タブが含まれていない場合は-1 *pt*します。  
@@ -1051,8 +1051,8 @@ virtual HICON GetTabHicon(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iTab*  
- タブの 0 から始まるインデックス。  
+*iTab*<br/>
+[in]タブの 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は、タブ ラベルに関連付けられた HICONHICON がない場合、またはメソッドが失敗した場合は NULL です。  
@@ -1065,8 +1065,8 @@ virtual UINT GetTabIcon(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iTab*  
- タブの 0 から始まるインデックス。  
+*iTab*<br/>
+[in]タブの 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は、指定したタブのアイコン IDインデックスが有効でない場合は-1。  
@@ -1082,8 +1082,8 @@ int GetTabID(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iTab*  
- タブの 0 から始まるインデックス。  
+*iTab*<br/>
+[in]タブの 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  タブの場合は-1 ID *iTab*が範囲外です。  
@@ -1098,11 +1098,11 @@ virtual BOOL GetTabLabel(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iTab*  
- タブの 0 から始まるインデックス。  
+*iTab*<br/>
+[in]タブの 0 から始まるインデックス。  
   
- [out]*strLabel*  
- `CString` オブジェクトへの参照。 このメソッドは、このパラメーターで、タブのラベルを格納します。  
+*strLabel*<br/>
+[out]参照を`CString`オブジェクト。 このメソッドは、このパラメーターで、タブのラベルを格納します。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は TRUE。FALSE それ以外の場合。  
@@ -1122,11 +1122,11 @@ virtual BOOL GetTabRect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iTab*  
- タブの 0 から始まるインデックス。  
+*iTab*<br/>
+[in]タブの 0 から始まるインデックス。  
   
- [out]*rect*  
- `CRect` オブジェクトへの参照。 このメソッドは、このパラメーターで、タブの位置とサイズを格納します。  
+*rect*<br/>
+[out]参照を`CRect`オブジェクト。 このメソッドは、このパラメーターで、タブの位置とサイズを格納します。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は TRUE。タブ インデックスが有効でない場合は FALSE。  
@@ -1172,8 +1172,8 @@ virtual COLORREF GetTabTextColor(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iTab*  
- タブの 0 から始まるインデックス。  
+*iTab*<br/>
+[in]タブの 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  A [COLORREF](/windows/desktop/gdi/colorref)パラメーターを指定したタブのテキストの色を示す場合は-1。 *iTab*が範囲外です。  
@@ -1186,8 +1186,8 @@ virtual CWnd* GetTabWnd(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iTab*  
- タブの 0 から始まるインデックス。  
+*iTab*<br/>
+[in]タブの 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  ポインター、 [CWnd](../../mfc/reference/cwnd-class.md)タブ上に存在するオブジェクトを*iTab*を指定します。 場合は NULL *iTab*が無効です。  
@@ -1205,8 +1205,8 @@ virtual CWnd* GetTabWndNoWrapper(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iTab*  
- タブの 0 から始まるインデックス。  
+*iTab*<br/>
+[in]タブの 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  ポインター、 [CWnd](../../mfc/reference/cwnd-class.md) ; 指定したタブ上に存在するオブジェクト場合は NULL *iTab*が無効です。  
@@ -1258,8 +1258,8 @@ virtual void HideSingleTab(BOOL bHide = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bHide*  
- 1 つのタブを非表示を有効にするかどうかを指定するブール値。  
+*bHide*<br/>
+[in]1 つのタブを非表示を有効にするかどうかを指定するブール値。  
   
 ### <a name="remarks"></a>Remarks  
  1 つのタブを非表示にする、アプリケーションが構成されると、フレームワークでタブ コントロールに 2 番目のタブが追加されたときに、タブが自動的に表示されます。  
@@ -1285,23 +1285,23 @@ virtual void InsertTab(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pNewWnd*  
- このメソッドは新しいタブとして追加するウィンドウへのポインター。  
+*pNewWnd*<br/>
+[in]このメソッドは新しいタブとして追加するウィンドウへのポインター。  
   
- [in]*lpszTabLabel*  
- 新しいタブのラベルを含む文字列。  
+*lpszTabLabel*<br/>
+[in]新しいタブのラベルを含む文字列。  
   
- [in]*nInsertAt*  
- 新しいタブの 0 から始まるインデックス。  
+*nInsertAt*<br/>
+[in]新しいタブの 0 から始まるインデックス。  
   
- [in]*uiImageId*  
- イメージ リストのイメージ ID。 タブ コントロールは、新しいタブのアイコンとしてこのイメージを使用します。  
+*uiImageId*<br/>
+[in]イメージ リストのイメージ ID。 タブ コントロールは、新しいタブのアイコンとしてこのイメージを使用します。  
   
- [in]*bDetachable*  
- 新しいタブが切り離し可能かどうかを決定するブール型パラメーター。  
+*bDetachable*<br/>
+[in]新しいタブが切り離し可能かどうかを決定するブール型パラメーター。  
   
- [in]*uiResTabLabel*  
- ラベルのリソース ID。  
+*uiResTabLabel*<br/>
+[in]ラベルのリソース ID。  
   
 ### <a name="remarks"></a>Remarks  
  オブジェクトが示される場合*pNewWnd*から派生していない、 [CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)場合に、 *bDetachable*パラメーターが TRUE、フレームワークの特別なラッパーを作成します新しいタブ。既定では、ラッパーのインスタンス、 [CDockablePaneAdapter クラス](../../mfc/reference/cdockablepaneadapter-class.md)します。 使用して、 [cmfcbasetabctrl::setdockingbarwrapperrtc](#setdockingbarwrapperrtc)さまざまなラッパー クラスを作成するメソッド。 任意のカスタム ラッパー クラスから派生する必要がある`CDockablePaneAdapter`します。  
@@ -1435,8 +1435,8 @@ BOOL IsIconAdded(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*hIcon*  
- [in]*アイコン*  
+*hIcon*<br/>
+[in][in]*アイコン*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -1500,8 +1500,8 @@ virtual BOOL IsPtInTabArea(CPoint point) const = 0;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ポイント*  
- テストする点です。  
+*ポイント*<br/>
+[in]テストする点です。  
   
 ### <a name="return-value"></a>戻り値  
  タブ領域内のポイントがある場合は 0 以外それ以外の場合は 0 です。  
@@ -1539,8 +1539,8 @@ virtual BOOL IsTabDetachable(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iTab*  
- チェックするタブの 0 から始まるインデックス。  
+*iTab*<br/>
+[in]チェックするタブの 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合、タブが切り離し可能です。FALSE それ以外の場合。  
@@ -1556,8 +1556,8 @@ virtual BOOL IsTabIconOnly(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iTab*  
- タブの 0 から始まるインデックス。  
+*iTab*<br/>
+[in]タブの 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  タブ ラベル アイコンのみがある場合は TRUE。FALSE それ以外の場合。  
@@ -1586,8 +1586,8 @@ virtual BOOL IsTabVisible(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iTab*  
- チェックするタブの 0 から始まるインデックス。  
+*iTab*<br/>
+[in]チェックするタブの 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  指定したタブが表示される場合、0 以外の場合それ以外の場合 0 を返します。  
@@ -1633,8 +1633,8 @@ virtual void MoveTab(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*%n ソース*  
- [in]*nDest*  
+*%n ソース*<br/>
+[in][in]*nDest*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1660,8 +1660,8 @@ virtual BOOL OnDrop(
   
 ### <a name="parameters"></a>パラメーター  
  [in]*COleDataObject**  
- [in]*DROPEFFECT*  
- [in]*CPoint*  
+*DROPEFFECT*<br/>
+[in][in]*CPoint*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -1679,8 +1679,8 @@ virtual DROPEFFECT OnDragOver(
   
 ### <a name="parameters"></a>パラメーター  
  [in]*COleDataObject**  
- [in]*DWORD*  
- [in]*CPoint*  
+*DWORD*<br/>
+[in][in]*CPoint*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -1707,8 +1707,8 @@ virtual DROPEFFECT OnDragEnter(
   
 ### <a name="parameters"></a>パラメーター  
  [in]*COleDataObject**  
- [in]*DWORD*  
- [in]*CPoint*  
+*DWORD*<br/>
+[in][in]*CPoint*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -1722,8 +1722,8 @@ virtual BOOL OnRenameTab(int, CString&);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*int*  
- [in]*CString (& a)*  
+*int*<br/>
+[in][in]*CString (& a)*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -1773,11 +1773,11 @@ virtual BOOL RemoveTab(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iTab*  
- タブの 0 から始まるインデックス。  
+*iTab*<br/>
+[in]タブの 0 から始まるインデックス。  
   
- [in]*bRecalcLayout*  
- タブのレイアウトを再計算するかどうかを指定するブール型パラメーター。  
+*bRecalcLayout*<br/>
+[in]タブのレイアウトを再計算するかどうかを指定するブール型パラメーター。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合、メソッドが正常にタブを削除しますそれ以外の場合は FALSE です。  
@@ -1823,8 +1823,8 @@ virtual BOOL SetActiveTab(int iTab) = 0;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iTab*  
- タブの 0 から始まるインデックス`SetActiveTab`このインデックスを持つタブをアクティブになります。  
+*iTab*<br/>
+[in]タブの 0 から始まるインデックス`SetActiveTab`このインデックスを持つタブをアクティブになります。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は TRUE、それ以外の場合は FALSE。  
@@ -1840,8 +1840,8 @@ virtual void SetActiveTabColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*clr*  
- 新しい背景色を指定します。  
+*clr*<br/>
+[in]新しい背景色を指定します。  
   
 ### <a name="remarks"></a>Remarks  
  フレームワークからのアクティブなタブの既定の背景色を取得する、 [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)メソッド。  
@@ -1854,8 +1854,8 @@ virtual void SetActiveTabTextColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*clr*  
- A [COLORREF](/windows/desktop/gdi/colorref)を新しいテキストの色を指定します。  
+*clr*<br/>
+[in]A [COLORREF](/windows/desktop/gdi/colorref)を新しいテキストの色を指定します。  
   
 ### <a name="remarks"></a>Remarks  
  既定では、フレームワークがからテキストの色を取得[GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)します。 この既定の色を上書きを使用して、`SetActiveTabTextColor`メソッド。  
@@ -1868,8 +1868,8 @@ void SetAutoColors(const CArray<COLORREF,COLORREF>& arColors);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*arColors*  
- RGB 色の配列。  
+*arColors*<br/>
+[in]RGB 色の配列。  
   
 ### <a name="remarks"></a>Remarks  
  カスタムの色の配列を指定すると、色の既定値の配列は無視されます。 場合、パラメーター *arColors*は空の場合、フレームワークは色の既定値の配列に戻ります。  
@@ -1884,8 +1884,8 @@ void SetDockingBarWrapperRTC(CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pRTC*  
- 新しいラッパー クラスのランタイム クラス情報。  
+*pRTC*<br/>
+[in]新しいラッパー クラスのランタイム クラス情報。  
   
 ### <a name="remarks"></a>Remarks  
  メソッドを使用して、タブ コントロールにタブを追加する[::addtab](#addtab)と[cmfcbasetabctrl::inserttab](#inserttab)します。 タブを追加するときにそのタブ上の各コントロールがドッキング可能な場合があります。 すべてのオブジェクトから派生していない`CDockablePane`ラップする必要があります。 `AddTab` `InsertTab`これらのオブジェクトのラッパーを作成します。 既定のラッパー クラスは、 [CDockablePaneAdapter クラス](../../mfc/reference/cdockablepaneadapter-class.md)します。 メソッド`SetDockingBarWrapperRTC`ラッパー クラスとして使用されるクラスを変更することができます。 提供するラッパー クラスを派生する必要があります`CDockablePaneAdapter`します。  
@@ -1900,11 +1900,11 @@ void SetDrawNoPrefix(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bNoPrefix*  
- 先頭の文字を処理する場合は TRUE。それ以外の場合は FALSE です。  
+*bNoPrefix*<br/>
+[in]先頭の文字を処理する場合は TRUE。それ以外の場合は FALSE です。  
   
- [in]*bRedraw*  
- タブ付きウィンドウを再描画する場合は TRUE。それ以外の場合は FALSE です。  
+*bRedraw*<br/>
+[in]タブ付きウィンドウを再描画する場合は TRUE。それ以外の場合は FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
  プレフィックス文字がアンパサンドが付いているニーモニック文字 (&)。  
@@ -1922,17 +1922,17 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiID*  
- ビットマップのリソース id です。 `SetImageList` このリソースからイメージ リストを読み込みます。  
+*uiID*<br/>
+[in]ビットマップのリソース id です。 `SetImageList` このリソースからイメージ リストを読み込みます。  
   
- [in]*cx*  
- 各イメージのピクセルの幅。  
+*cx*<br/>
+[in]各イメージのピクセルの幅。  
   
- [in]*clrTransp*  
- A [COLORREF](/windows/desktop/gdi/colorref)イメージの透明色を示すパラメーターです。  
+*clrTransp*<br/>
+[in]A [COLORREF](/windows/desktop/gdi/colorref)イメージの透明色を示すパラメーターです。  
   
- [in]*hImageList*  
- 事前に読み込まれたイメージの一覧へのハンドル。  
+*hImageList*<br/>
+[in]事前に読み込まれたイメージの一覧へのハンドル。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合、0 以外の場合それ以外の場合は 0 です。  
@@ -1966,11 +1966,11 @@ virtual BOOL SetTabBkColor(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iTab*  
- タブの 0 から始まるインデックス。  
+*iTab*<br/>
+[in]タブの 0 から始まるインデックス。  
   
- [in]*色*  
- 設定する色。  
+*色*<br/>
+[in]設定する色。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は TRUE。FALSE それ以外の場合。  
@@ -1985,11 +1985,11 @@ virtual void SetTabBorderSize(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nTabBorderSize*  
- 新しい境界線のサイズ (ピクセル単位)。  
+*nTabBorderSize*<br/>
+[in]新しい境界線のサイズ (ピクセル単位)。  
   
- [in]*bRepaint*  
- フレームワークがコントロールを再描画するかどうかを示すブール値パラメーター。  
+*bRepaint*<br/>
+[in]フレームワークがコントロールを再描画するかどうかを示すブール値パラメーター。  
   
 ##  <a name="settabhicon"></a>  CMFCBaseTabCtrl::SetTabHicon  
  タブ ラベルのアイコンを設定します。  
@@ -2001,11 +2001,11 @@ virtual BOOL SetTabHicon(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iTab*  
- タブの 0 から始まるインデックス。このメソッドは、このタブのアイコンを変更します。  
+*iTab*<br/>
+[in]タブの 0 から始まるインデックス。このメソッドは、このタブのアイコンを変更します。  
   
- [in]*hIcon*  
- アイコンにへのハンドル。  
+*hIcon*<br/>
+[in]アイコンへのハンドル。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は TRUE、それ以外の場合は FALSE。  
@@ -2020,11 +2020,11 @@ virtual BOOL SetTabIcon(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iTab*  
- 更新するタブの 0 から始まるインデックス。  
+*iTab*<br/>
+[in]更新するタブの 0 から始まるインデックス。  
   
- [in]*uiIcon*  
- 新しいアイコンのアイコンの ID。 この ID は、内部参照[CImageList](../../mfc/reference/cimagelist-class.md)オブジェクト。  
+*uiIcon*<br/>
+[in]新しいアイコンのアイコンの ID。 この ID は、内部参照[CImageList](../../mfc/reference/cimagelist-class.md)オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は TRUE、それ以外の場合は FALSE。  
@@ -2040,14 +2040,14 @@ virtual BOOL SetTabIconOnly(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iTab*  
- 変更するタブの 0 から始まるインデックス。  
+*iTab*<br/>
+[in]変更するタブの 0 から始まるインデックス。  
   
- [in]*bIconOnly*  
- アイコンのみを表示するかどうかを決定するブール型パラメーター。  
+*bIconOnly*<br/>
+[in]アイコンのみを表示するかどうかを決定するブール型パラメーター。  
   
- [in]*bShowTooltipAlways*  
- フレームワークにアイコンのみを表示するタブのラベルのツールヒントが表示されるかどうかを指定するブール型パラメーター。  
+*bShowTooltipAlways*<br/>
+[in]フレームワークにアイコンのみを表示するタブのラベルのツールヒントが表示されるかどうかを指定するブール型パラメーター。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は TRUE、それ以外の場合は FALSE。  
@@ -2065,11 +2065,11 @@ virtual BOOL SetTabLabel(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iTab*  
- 更新するタブの 0 から始まるインデックス。  
+*iTab*<br/>
+[in]更新するタブの 0 から始まるインデックス。  
   
- [in]*strLabel*  
- タブ ラベルの新しいテキストを含む文字列への参照。  
+*strLabel*<br/>
+[in]タブ ラベルの新しいテキストを含む文字列への参照。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、0 以外の場合それ以外の場合は 0 です。  
@@ -2091,8 +2091,8 @@ BOOL SetTabsOrder(const CArray<int,int>& arOrder);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*arOrder*  
- 新しいタブ オーダーを定義する 0 から始まるインデックスの配列。  
+*arOrder*<br/>
+[in]新しいタブ オーダーを定義する 0 から始まるインデックスの配列。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は TRUE。それ以外の場合は失敗します。  
@@ -2110,11 +2110,11 @@ virtual BOOL SetTabTextColor(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iTab*  
- タブの 0 から始まるインデックス。  
+*iTab*<br/>
+[in]タブの 0 から始まるインデックス。  
   
- [in]*色*  
- A [COLORREF](/windows/desktop/gdi/colorref)新しいテキストの色を示すパラメーターです。  
+*色*<br/>
+[in]A [COLORREF](/windows/desktop/gdi/colorref)新しいテキストの色を示すパラメーターです。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、0 以外の場合それ以外の場合は 0 です。  
@@ -2131,17 +2131,17 @@ virtual BOOL ShowTab(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iTab*  
- タブのインデックスを`ShowTab`が表示または非表示にします。  
+*iTab*<br/>
+[in]タブのインデックスを`ShowTab`が表示または非表示にします。  
   
- [in]*bShow*  
- タブを表示するかどうかを示すブール値パラメーター。  
+*bShow*<br/>
+[in]タブを表示するかどうかを示すブール値パラメーター。  
   
- [in]*bRecalcLayout*  
- ウィンドウ レイアウトをすぐに再計算するかどうかを示すブール値パラメーター。  
+*bRecalcLayout*<br/>
+[in]ウィンドウ レイアウトをすぐに再計算するかどうかを示すブール値パラメーター。  
   
- [in]*bActivate*  
- 指定されたタブを選択するかどうかを示すブール値パラメーター *iTab*します。  
+*bActivate*<br/>
+[in]指定されたタブを選択するかどうかを示すブール値パラメーター *iTab*します。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -2173,8 +2173,8 @@ virtual void SwapTabs(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nFisrtTabID*  
- [in]*nSecondTabID*  
+*nFisrtTabID*<br/>
+[in][in]*nSecondTabID*  
   
 ### <a name="remarks"></a>Remarks  
   

@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3762 |Microsoft ドキュメント
+title: コンパイラ エラー C3762 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40134353b713c855199ae0b062e263d31c37522
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4c9f5dc1c270f59dafa9e1076e3641cd1cd2c75
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267229"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103348"
 ---
 # <a name="compiler-error-c3762"></a>コンパイラ エラー C3762
-属性 'attribute' を処理できません。  
-  
- ユーザー定義の属性から継承する`System.Security.Permissions.SecurityAttribute`セキュリティ属性の定義に使用されています。 このような属性では使用できません、同じアセンブリが定義されています。
+
+属性 'attribute' を処理できません。
+
+ユーザー定義の属性から継承する`System.Security.Permissions.SecurityAttribute`セキュリティ属性を定義に使用されています。 このような属性は、定義されている、同じアセンブリで使用できません。

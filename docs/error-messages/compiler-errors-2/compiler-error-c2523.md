@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2523 |Microsoft ドキュメント
+title: コンパイラ エラー C2523 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4546e576ced8d57a35c4c4861f29824a8d91d910
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77f440bf282d6159af3a96bfeb1aa7db8941e87b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228343"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022800"
 ---
 # <a name="compiler-error-c2523"></a>コンパイラ エラー C2523
-' クラス:: ~ identifier': デストラクターまたはファイナライザーのタグが一致しません  
-  
- デストラクターの名前は、前にティルダ クラス名をする必要があります (`~`)。 コンス トラクターとデストラクターは、クラスと同じ名前を持つ唯一のメンバーです。  
-  
- 次の例では、C2523 が生成されます。  
-  
-```  
-// C2523.cpp  
-// compile with: /c  
-class A {  
-   ~B();    // C2523  
-   ~A();   // OK  
-};  
+
+' クラス:: ~ identifier': デストラクターまたはファイナライザーのタグが一致しません
+
+デストラクターの名前は、クラス名の前にチルダである必要があります (`~`)。 コンス トラクターとデストラクターは、クラスと同じ名前を持つメンバーのみです。
+
+次の例では、C2523 が生成されます。
+
+```
+// C2523.cpp
+// compile with: /c
+class A {
+   ~B();    // C2523
+   ~A();   // OK
+};
 ```

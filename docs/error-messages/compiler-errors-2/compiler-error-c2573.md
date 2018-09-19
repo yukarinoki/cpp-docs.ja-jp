@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2573 |Microsoft ドキュメント
+title: コンパイラ エラー C2573 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03c874cbf2f8a8594c032506ed4e47c501cb9827
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 51353430b7f2e44bd272a471dfc92a37961aa7fc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232288"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083705"
 ---
 # <a name="compiler-error-c2573"></a>コンパイラ エラー C2573
-'class' : この型のオブジェクトへのポインターを削除することはできません。クラスに 'operator delete' の非置換オーバーロードがありません。  
-  
- クラスに非置換 delete 演算子がありません。
+
+'class' : この型のオブジェクトへのポインターを削除することはできません。クラスに 'operator delete' の非置換オーバーロードがありません。
+
+クラスに非置換 delete 演算子がありません。

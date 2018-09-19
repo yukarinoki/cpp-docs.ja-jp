@@ -1,5 +1,5 @@
 ---
-title: NMAKE の警告 U4011 |Microsoft ドキュメント
+title: NMAKE の警告 U4011 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af9c0f90c507eebe212a9c3cbfb2f2d21cded43d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a1038ee86f76789451565ab6799795c851c95a95
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320796"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118337"
 ---
 # <a name="nmake-warning-u4011"></a>NMAKE の警告 U4011
-'target': 依存ファイルの一部が使用できます。ターゲットはビルドされません。  
-  
- 指定されたターゲットの依存関係が存在しませんまたはのいずれかが最新でないと、依存ファイルを更新するためのコマンドには、0 以外の終了コードが返されました。 /K オプション、nmake (nmake の) セッションが終了した場合は、終了コード 1 を発行して、ビルドの関連付けられていない部分の処理を続行します。  
-  
- この警告は、前に警告する[U4010](../../error-messages/tool-errors/nmake-warning-u4010.md)に作成または更新に失敗した依存します。
+
+'target': 依存ファイルの一部が使用できます。ターゲットはビルドされません。
+
+指定されたターゲットの依存が存在していなかったか、最新でし、の依存を更新するためのコマンドには 0 以外の終了コードが返されます。 /K オプションでは、NMAKE (nmake の) セッションが終了すると、終了コード 1 を発行して、ビルドの関連付けられていない部分の処理を続行するように指示します。
+
+この警告は、前に警告[U4010](../../error-messages/tool-errors/nmake-warning-u4010.md)に作成または更新に失敗した依存します。

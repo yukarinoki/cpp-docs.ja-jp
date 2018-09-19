@@ -66,12 +66,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b991d4d0546ea20e26f2896bc78032e2fb1c6136
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 26ae6034e9a54a6cf198b39c81d688f10616d1d0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42544482"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707864"
 ---
 # <a name="interlockedand-intrinsic-functions"></a>_InterlockedAnd の組み込み関数
 **Microsoft 固有の仕様**  
@@ -180,11 +180,11 @@ __int64 _InterlockedAnd64_rel(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力、出力] `value`  
- 最初のオペランドへのポインター。結果によって置き換えられます。  
+*値*<br/>
+[入力、出力]最初のオペランドの結果によって置き換えられるへのポインター。  
   
- [入力] `mask`  
- 2 番目のオペランド。  
+*マスク*<br/>
+[in]2 番目のオペランド。  
   
 ## <a name="return-value"></a>戻り値  
  最初のオペランドの元の値。  

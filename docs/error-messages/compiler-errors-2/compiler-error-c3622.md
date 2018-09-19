@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3622 |Microsoft ドキュメント
+title: コンパイラ エラー C3622 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d8c7ab18bfba899c2df41becb457ed2e7725f81
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 13ba39a2baf9da2039bbc97fe459f8840effacea
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260093"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062411"
 ---
 # <a name="compiler-error-c3622"></a>コンパイラ エラー C3622
-'class': 宣言されたクラスを 'keyword' をインスタンス化することはできません  
-  
-としてマークされたクラスのインスタンスを作成しようとしました[抽象](../../windows/abstract-cpp-component-extensions.md)です。 としてマークされているクラス`abstract`基底クラスを指定できますが、インスタンス化することはできません。  
-  
-## <a name="example"></a>例  
-次の例では、C3622 を生成します。  
-  
-```  
-// C3622.cpp  
-// compile with: /clr  
-ref class a abstract {};  
-  
-int main() {  
-   a aa;   // C3622  
-}  
-```  
+
+'class': 'keyword' をインスタンス化できないように宣言されたクラス
+
+としてマークされたクラスをインスタンス化しようとした[抽象](../../windows/abstract-cpp-component-extensions.md)します。 としてマークされているクラス`abstract`、基本クラスであることができますが、インスタンス化できません。
+
+## <a name="example"></a>例
+
+次の例では、C3622 が生成されます。
+
+```
+// C3622.cpp
+// compile with: /clr
+ref class a abstract {};
+
+int main() {
+   a aa;   // C3622
+}
+```

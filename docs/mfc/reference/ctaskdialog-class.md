@@ -126,12 +126,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a1c3e55f6045b0096ef614e1d3b4b054db60265
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 51970f99a05b587bcdbccc5d24ad21b036d87f74
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202396"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710815"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 
@@ -274,17 +274,17 @@ void AddCommandControl(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nCommandControlID*  
-コマンド コントロールの識別番号。
+*nCommandControlID*<br/>
+[in]コマンド コントロールの識別番号。
 
-[in]*strCaption*  
-文字列を`CTaskDialog`ユーザーに表示します。 この文字列を使用して、コマンドの目的を説明します。
+*strCaption*<br/>
+[in]文字列を`CTaskDialog`ユーザーに表示します。 この文字列を使用して、コマンドの目的を説明します。
 
-[in]*bEnabled*  
-新しいボタンを有効または無効になっているかどうかを示すブール値パラメーター。
+*bEnabled*<br/>
+[in]新しいボタンを有効または無効になっているかどうかを示すブール値パラメーター。
 
-[in]*bRequiresElevation*  
-コマンドが昇格を必要とするかどうかを示すブール値パラメーター。
+*bRequiresElevation*<br/>
+[in]コマンドが昇格を必要とするかどうかを示すブール値パラメーター。
 
 ### <a name="remarks"></a>Remarks
 
@@ -309,14 +309,14 @@ void CTaskDialog::AddRadioButton(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nRadioButtonID*  
-オプション ボタンの id 番号。
+*nRadioButtonID*<br/>
+[in]オプション ボタンの id 番号。
 
-[in]*strCaption*  
-文字列を`CTaskDialog`ラジオ ボタンの横に表示されます。
+*strCaption*<br/>
+[in]文字列を`CTaskDialog`ラジオ ボタンの横に表示されます。
 
-[in]*bEnabled*  
-ラジオ ボタンが有効になっているかどうかを示すブール値パラメーター。
+*bEnabled*<br/>
+[in]ラジオ ボタンが有効になっているかどうかを示すブール値パラメーター。
 
 ### <a name="remarks"></a>Remarks
 
@@ -339,8 +339,8 @@ void ClickCommandControl(int nCommandControlID) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nCommandControlID*  
-をクリックするコントロールのコマンド ID。
+*nCommandControlID*<br/>
+[in]をクリックするコントロールのコマンド ID。
 
 ### <a name="remarks"></a>Remarks
 
@@ -357,8 +357,8 @@ void ClickRadioButton(int nRadioButtonID) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nRadioButtonID*  
-クリックするラジオ ボタンの ID。
+*nRadioButtonID*<br/>
+[in]クリックするラジオ ボタンの ID。
 
 ### <a name="remarks"></a>Remarks
 
@@ -391,29 +391,29 @@ CTaskDialog(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*strContent*  
-コンテンツを使用する文字列、`CTaskDialog`します。
+*strContent*<br/>
+[in]コンテンツを使用する文字列、`CTaskDialog`します。
 
-[in]*strMainInstruction*  
-メイン インストラクション、`CTaskDialog`します。
+*strMainInstruction*<br/>
+[in]メイン インストラクション、`CTaskDialog`します。
 
-[in]*されません*  
-タイトル、`CTaskDialog`します。
+*されません*<br/>
+[in]タイトル、`CTaskDialog`します。
 
-[in]*nCommonButtons*  
-追加する一般的なボタンのマスク、`CTaskDialog`します。
+*nCommonButtons*<br/>
+[in]追加する一般的なボタンのマスク、`CTaskDialog`します。
 
-[in]*nTaskDialogOptions*  
-使用するオプションのセット、`CTaskDialog`します。
+*nTaskDialogOptions*<br/>
+[in]使用するオプションのセット、`CTaskDialog`します。
 
-[in]*strFooter*  
-フッターとして使用する文字列。
+*strFooter*<br/>
+[in]フッターとして使用する文字列。
 
-[in]*nIDCommandControlsFirst*  
-最初のコマンドの文字列 ID。
+*nIDCommandControlsFirst*<br/>
+[in]最初のコマンドの文字列 ID。
 
-[in]*nIDCommandControlsLast*  
-最後のコマンドの文字列 ID。
+*nIDCommandControlsLast*<br/>
+[in]最後のコマンドの文字列 ID。
 
 ### <a name="remarks"></a>Remarks
 
@@ -437,8 +437,8 @@ INT_PTR DoModal (HWND hParent = ::GetActiveWindow());
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*hParent*  
-親ウィンドウ、`CTaskDialog`します。
+*hParent*<br/>
+[in]親ウィンドウ、`CTaskDialog`します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -482,8 +482,8 @@ int GetCommonButtonFlag(int nButtonId) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nButtonId*  
-標準の Windows ボタンの値。
+*nButtonId*<br/>
+[in]標準の Windows ボタンの値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -499,8 +499,8 @@ int GetCommonButtonId(int nFlag);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*指します*  
-一般的なボタンの種類に関連付けられている、`CTaskDialog`クラス。
+*指します*<br/>
+[in]一般的なボタンの種類に関連付けられている、`CTaskDialog`クラス。
 
 ### <a name="return-value"></a>戻り値
 
@@ -592,8 +592,8 @@ BOOL IsCommandControlEnabled(int nCommandControlID) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nCommandControlID*  
-テストするコマンド ボタン コントロールまたはボタンの ID。
+*nCommandControlID*<br/>
+[in]テストするコマンド ボタン コントロールまたはボタンの ID。
 
 ### <a name="return-value"></a>戻り値
 
@@ -619,8 +619,8 @@ BOOL IsRadioButtonEnabled(int nRadioButtonID) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nRadioButtonID*  
-テストするラジオ ボタンの ID。
+*nRadioButtonID*<br/>
+[in]テストするラジオ ボタンの ID。
 
 ### <a name="return-value"></a>戻り値
 
@@ -666,11 +666,11 @@ void LoadCommandControls(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nIDCommandControlsFirst*  
-最初のコマンドの文字列 ID。
+*nIDCommandControlsFirst*<br/>
+[in]最初のコマンドの文字列 ID。
 
-[in]*nIDCommandControlsLast*  
-最後のコマンドの文字列 ID。
+*nIDCommandControlsLast*<br/>
+[in]最後のコマンドの文字列 ID。
 
 ### <a name="remarks"></a>Remarks
 
@@ -694,11 +694,11 @@ void LoadRadioButtons(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nIDRadioButtonsFirst*  
-最初のラジオ ボタンの文字列 ID。
+*nIDRadioButtonsFirst*<br/>
+[in]最初のラジオ ボタンの文字列 ID。
 
-[in]*nIDRadioButtonsLast*  
-最後のラジオ ボタンの文字列 ID。
+*nIDRadioButtonsLast*<br/>
+[in]最後のラジオ ボタンの文字列 ID。
 
 ### <a name="remarks"></a>Remarks
 
@@ -721,8 +721,8 @@ void NavigateTo(CTaskDialog& oTaskDialog) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*oTaskDialog*  
-`CTaskDialog`フォーカスを受け取る。
+*oTaskDialog*<br/>
+[in]`CTaskDialog`フォーカスを受け取る。
 
 ### <a name="remarks"></a>Remarks
 
@@ -738,8 +738,8 @@ virtual HRESULT OnCommandControlClick(int nCommandControlID);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nCommandControlID*  
-ユーザーが選択したコマンド ボタン コントロールの ID。
+*nCommandControlID*<br/>
+[in]ユーザーが選択したコマンド ボタン コントロールの ID。
 
 ### <a name="return-value"></a>戻り値
 
@@ -791,8 +791,8 @@ virtual HRESULT OnExpandButtonClicked(BOOL bExpanded);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bExpanded*  
-0 以外の値を示します、余分な情報が表示されます。0 では、追加の情報が非表示を示します。
+*bExpanded*<br/>
+[in]0 以外の値を示します、余分な情報が表示されます。0 では、追加の情報が非表示を示します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -828,8 +828,8 @@ virtual HRESULT OnHyperlinkClick(const CString& strHref);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*strHref*  
-ハイパーリンクを表す文字列。
+*strHref*<br/>
+[in]ハイパーリンクを表す文字列。
 
 ### <a name="return-value"></a>戻り値
 
@@ -883,8 +883,8 @@ virtual HRESULT OnRadioButtonClick(int nRadioButtonID);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nRadioButtonID*  
-ユーザーがクリックしたラジオ ボタン コントロールの ID。
+*nRadioButtonID*<br/>
+[in]ユーザーがクリックしたラジオ ボタン コントロールの ID。
 
 ### <a name="return-value"></a>戻り値
 
@@ -904,8 +904,8 @@ virtual HRESULT OnTimer(long lTime);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*lTime*  
-以降のミリ秒単位の時間、`CTaskDialog`が作成されたか、タイマーをリセットします。
+*lTime*<br/>
+[in]以降のミリ秒単位の時間、`CTaskDialog`が作成されたか、タイマーをリセットします。
 
 ### <a name="return-value"></a>戻り値
 
@@ -925,8 +925,8 @@ virtual HRESULT OnVerificationCheckboxClick(BOOL bChecked);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bChecked*  
-TRUE は、確認のチェック ボックスが選択されていることを示しますFALSE でないことを示します。
+*bChecked*<br/>
+[in]TRUE は、確認のチェック ボックスが選択されていることを示しますFALSE でないことを示します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -973,14 +973,14 @@ void SetCommandControlOptions(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nCommandControlID*  
-更新するコマンド コントロールの ID。
+*nCommandControlID*<br/>
+[in]更新するコマンド コントロールの ID。
 
-[in]*bEnabled*  
-指定したコマンドのボタン コントロールを有効または無効になっているかどうかを示すブール値パラメーター。
+*bEnabled*<br/>
+[in]指定したコマンドのボタン コントロールを有効または無効になっているかどうかを示すブール値パラメーター。
 
-[in]*bRequiresElevation*  
-指定されたコマンド ボタン コントロールに昇格が必要なかどうかを示すブール値パラメーター。
+*bRequiresElevation*<br/>
+[in]指定されたコマンド ボタン コントロールに昇格が必要なかどうかを示すブール値パラメーター。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1002,11 +1002,11 @@ void SetCommonButtonOptions(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nDisabledButtonMask*  
-無効にする一般的なボタンのマスク。
+*nDisabledButtonMask*<br/>
+[in]無効にする一般的なボタンのマスク。
 
-[in]*扱わ*  
-昇格が必要な一般的なボタンのマスク。
+*扱わ*<br/>
+[in]昇格が必要な一般的なボタンのマスク。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1033,14 +1033,14 @@ void SetCommonButtons(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nButtonMask*  
-追加するボタンのマスク、`CTaskDialog`します。
+*nButtonMask*<br/>
+[in]追加するボタンのマスク、`CTaskDialog`します。
 
-[in]*nDisabledButtonMask*  
-無効にするボタンのマスク。
+*nDisabledButtonMask*<br/>
+[in]無効にするボタンのマスク。
 
-[in]*扱わ*  
-昇格が必要なボタンのマスク。
+*扱わ*<br/>
+[in]昇格が必要なボタンのマスク。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1066,8 +1066,8 @@ void SetContent(const CString& strContent);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*strContent*  
-ユーザーに表示する文字列。
+*strContent*<br/>
+[in]ユーザーに表示する文字列。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1087,8 +1087,8 @@ void SetDefaultCommandControl(int nCommandControlID);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nCommandControlID*  
-既定値にコマンド ボタン コントロールの ID。
+*nCommandControlID*<br/>
+[in]既定値にコマンド ボタン コントロールの ID。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1110,8 +1110,8 @@ void SetDefaultRadioButton(int nRadioButtonID);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nRadioButtonID*  
-既定では、するラジオ ボタンの ID。
+*nRadioButtonID*<br/>
+[in]既定では、するラジオ ボタンの ID。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1133,8 +1133,8 @@ void SetDialogWidth(int nWidth = 0);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nWidth*  
-ダイアログ ボックスで、ピクセル単位の幅。
+*nWidth*<br/>
+[in]ダイアログ ボックスで、ピクセル単位の幅。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1159,14 +1159,14 @@ void SetExpansionArea(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*strExpandedInformation*  
-文字列を`CTaskDialog`展開ボタンをクリックすると、ダイアログ ボックスの本文が表示されます。
+*strExpandedInformation*<br/>
+[in]文字列を`CTaskDialog`展開ボタンをクリックすると、ダイアログ ボックスの本文が表示されます。
 
-[in]*strCollapsedLabel*  
-文字列を`CTaskDialog`展開された領域が折りたたまれているときに拡張ボタンの横に表示されます。
+*strCollapsedLabel*<br/>
+[in]文字列を`CTaskDialog`展開された領域が折りたたまれているときに拡張ボタンの横に表示されます。
 
-[in]*strExpandedLabel*  
-文字列を`CTaskDialog`展開された領域が表示されたら、拡張ボタンの横に表示されます。
+*strExpandedLabel*<br/>
+[in]文字列を`CTaskDialog`展開された領域が表示されたら、拡張ボタンの横に表示されます。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1189,11 +1189,11 @@ void SetFooterIcon(LPCWSTR lpszFooterIcon);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*hFooterIcon*  
-新しいアイコン、`CTaskDialog`します。
+*hFooterIcon*<br/>
+[in]新しいアイコン、`CTaskDialog`します。
 
-[in]*lpszFooterIcon*  
-新しいアイコン、`CTaskDialog`します。
+*lpszFooterIcon*<br/>
+[in]新しいアイコン、`CTaskDialog`します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1217,8 +1217,8 @@ void SetFooterText(const CString& strFooterText);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*strFooterText*  
-フッターの新しいテキスト。
+*strFooterText*<br/>
+[in]フッターの新しいテキスト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1239,11 +1239,11 @@ void SetMainIcon(LPCWSTR lpszMainIcon);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*hMainIcon*  
-新しいアイコン。
+*hMainIcon*<br/>
+[in]新しいアイコン。
 
-[in]*lpszMainIcon*  
-新しいアイコン。
+*lpszMainIcon*<br/>
+[in]新しいアイコン。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1265,8 +1265,8 @@ void SetMainInstruction(const CString& strInstructions);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*strInstructions*  
-新しいメイン命令。
+*strInstructions*<br/>
+[in]新しいメイン命令。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1286,8 +1286,8 @@ void SetOptions(int nOptionFlag);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nOptionFlag*  
-使用するフラグのセット、`CTaskDialog`します。
+*nOptionFlag*<br/>
+[in]使用するフラグのセット、`CTaskDialog`します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1330,11 +1330,11 @@ void SetProgressBarMarquee(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bEnabled*  
-マーキー バーを有効にする場合は TRUEマーキーのバーを無効にしてから削除する場合は FALSE、`CTaskDialog`します。
+*bEnabled*<br/>
+[in]マーキー バーを有効にする場合は TRUEマーキーのバーを無効にしてから削除する場合は FALSE、`CTaskDialog`します。
 
-[in]*nMarqueeSpeed*  
-マーキー バー速度を示す整数。
+*nMarqueeSpeed*<br/>
+[in]マーキー バー速度を示す整数。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1358,8 +1358,8 @@ void SetProgressBarPosition(int nProgressPos);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nProgressPos*  
-進行状況バーの位置。
+*nProgressPos*<br/>
+[in]進行状況バーの位置。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1381,11 +1381,11 @@ void SetProgressBarRange(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nRangeMin*  
-進行状況バーの下限値です。
+*nRangeMin*<br/>
+[in]進行状況バーの下限値です。
 
-[in]*nRangeMax*  
-進行状況バーの上限値です。
+*nRangeMax*<br/>
+[in]進行状況バーの上限値です。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1409,8 +1409,8 @@ void SetProgressBarState(int nState = PBST_NORMAL);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*状態*  
-進行状況バーの状態。 使用可能な値は、「解説」を参照してください。
+*状態*<br/>
+[in]進行状況バーの状態。 使用可能な値は、「解説」を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1442,11 +1442,11 @@ void SetRadioButtonOptions(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nRadioButtonID*  
-ラジオ ボタン コントロールの ID。
+*nRadioButtonID*<br/>
+[in]ラジオ ボタン コントロールの ID。
 
-[in]*bEnabled*  
-オプション ボタンを有効にする場合は TRUEラジオ ボタンを無効にする場合は FALSE。
+*bEnabled*<br/>
+[in]オプション ボタンを有効にする場合は TRUEラジオ ボタンを無効にする場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1466,8 +1466,8 @@ void SetVerificationCheckbox(BOOL bChecked);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bChecked*  
-True を確認のチェック ボックス選択したときに、`CTaskDialog`が表示されます。チェック ボックスを確認する場合は FALSE を選択解除されているときに、`CTaskDialog`が表示されます。
+*bChecked*<br/>
+[in]True を確認のチェック ボックス選択したときに、`CTaskDialog`が表示されます。チェック ボックスを確認する場合は FALSE を選択解除されているときに、`CTaskDialog`が表示されます。
 
 ### <a name="example"></a>例
 
@@ -1483,8 +1483,8 @@ void SetVerificationCheckboxText(CString& strVerificationText);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*strVerificationText*  
-このメソッドは、確認のチェック ボックスの横に表示されるテキスト。
+*strVerificationText*<br/>
+[in]このメソッドは、確認のチェック ボックスの横に表示されるテキスト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1504,8 +1504,8 @@ void SetWindowTitle(CString& strWindowTitle);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*strWindowTitle*  
-新しいタイトル、`CTaskDialog`します。
+*strWindowTitle*<br/>
+[in]新しいタイトル、`CTaskDialog`します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1531,29 +1531,29 @@ static INT_PTR ShowDialog(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*strContent*  
-コンテンツを使用する文字列、`CTaskDialog`します。
+*strContent*<br/>
+[in]コンテンツを使用する文字列、`CTaskDialog`します。
 
-[in]*strMainInstruction*  
-メイン インストラクション、`CTaskDialog`します。
+*strMainInstruction*<br/>
+[in]メイン インストラクション、`CTaskDialog`します。
 
-[in]*されません*  
-タイトル、`CTaskDialog`します。
+*されません*<br/>
+[in]タイトル、`CTaskDialog`します。
 
-[in]*nIDCommandControlsFirst*  
-最初のコマンドの文字列 ID。
+*nIDCommandControlsFirst*<br/>
+[in]最初のコマンドの文字列 ID。
 
-[in]*nIDCommandControlsLast*  
-最後のコマンドの文字列 ID。
+*nIDCommandControlsLast*<br/>
+[in]最後のコマンドの文字列 ID。
 
-[in]*nCommonButtons*  
-追加するボタンのマスク、`CTaskDialog`します。
+*nCommonButtons*<br/>
+[in]追加するボタンのマスク、`CTaskDialog`します。
 
-[in]*nTaskDialogOptions*  
-使用するオプションのセット、`CTaskDialog`します。
+*nTaskDialogOptions*<br/>
+[in]使用するオプションのセット、`CTaskDialog`します。
 
-[in]*strFooter*  
-フッターとして使用する文字列。
+*strFooter*<br/>
+[in]フッターとして使用する文字列。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1589,20 +1589,20 @@ HRESULT TaskDialogCallback(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*hwnd*  
-ハンドル、`m_hWnd`用の構造、`CTaskDialog`します。
+*hwnd*<br/>
+[in]ハンドル、`m_hWnd`用の構造、`CTaskDialog`します。
 
-[in]*uNotification*  
-生成されたメッセージを示す通知コード。
+*uNotification*<br/>
+[in]生成されたメッセージを示す通知コード。
 
-[in]*wParam*  
-メッセージの詳細についてはします。
+*wParam*<br/>
+[in]メッセージの詳細についてはします。
 
-[in]*lParam*  
-メッセージの詳細についてはします。
+*lParam*<br/>
+[in]メッセージの詳細についてはします。
 
-[in]*dwRefData*  
-ポインター、`CTaskDialog`コールバック メッセージを適用するオブジェクト。
+*dwRefData*<br/>
+[in]ポインター、`CTaskDialog`コールバック メッセージを適用するオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 

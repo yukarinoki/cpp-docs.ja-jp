@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3633 |Microsoft ドキュメント
+title: コンパイラ エラー C3633 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 341123f51a065cc8dcd43425f65b21edaf00abbd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aaa4712fb571d56166204655aff95153ac328ce6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267024"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078271"
 ---
 # <a name="compiler-error-c3633"></a>コンパイラ エラー C3633
-'member' をマネージ 'type' のメンバーとして定義できません。  
-  
-CLR 参照クラスのデータ メンバーは、POD C++ 以外の型のすることはできません。  POD ネイティブ型は CLR 型にインスタンス化することのみできます。  たとえば、POD 型では、コピー コンス トラクターまたは代入演算子を含めることはできません。  
-  
-## <a name="example"></a>例  
-次の例では、C3633 を生成します。  
-  
-```  
-// C3633.cpp  
-// compile with: /clr /c  
-#pragma warning( disable : 4368 )  
-  
-class A1 {  
-public:  
-   A1() { II = 0; }  
-   int II;  
-};  
-  
-ref class B {  
-public:  
-   A1 a1;   // C3633  
-   A1 * a2;   // OK  
-   B() : a2( new A1 ) {}  
-    ~B() { delete a2; }  
-};  
-```  
+
+管理対象の 'type' のメンバーとして 'member' を定義することはできません。
+
+CLR 参照クラスのデータ メンバーは、pod 型以外の C++ 型のすることはできません。  CLR 型でポッドのネイティブな型をインスタンス化することができますのみ。  たとえば、POD 型では、コピー コンス トラクターまたは代入演算子を含めることはできません。
+
+## <a name="example"></a>例
+
+次の例では、C3633 が生成されます。
+
+```
+// C3633.cpp
+// compile with: /clr /c
+#pragma warning( disable : 4368 )
+
+class A1 {
+public:
+   A1() { II = 0; }
+   int II;
+};
+
+ref class B {
+public:
+   A1 a1;   // C3633
+   A1 * a2;   // OK
+   B() : a2( new A1 ) {}
+    ~B() { delete a2; }
+};
+```

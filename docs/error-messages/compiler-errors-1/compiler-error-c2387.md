@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2387 |Microsoft ドキュメント
+title: コンパイラ エラー C2387 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,48 +16,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e490e2c0016649054c557026a5fa691162c40c07
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a73f2964c7f87ba795ba680947664a0f37b9c303
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225598"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089620"
 ---
 # <a name="compiler-error-c2387"></a>コンパイラ エラー C2387
-'type': あいまいな基底クラス  
-  
- コンパイラ解決できませんでした明確に関数呼び出しに 1 つ以上の基底クラス関数が存在するためです。  
-  
- このエラーを解決するから削除する基本クラスのいずれかの継承、か、関数呼び出しを明示的に修飾します。  
-  
- 次の例では、C2387 が生成されます。  
-  
-```  
-// C2387.cpp  
-namespace N1 {  
-   struct B {  
-      virtual void f() {  
-      }  
-   };  
-}  
-  
-namespace N2 {  
-   struct B {  
-      virtual void f() {  
-      }  
-   };  
-}  
-  
-struct D : N1::B, N2::B {  
-   virtual void f() {  
-      B::f();   // C2387  
-      // try the following line instead  
-      // N1::B::f();  
-   }  
-};  
-  
-int main() {  
-   D aD;  
-   aD.f();  
-}  
+
+'type': あいまいな基底クラス
+
+コンパイラ明確を解決できませんでした関数呼び出し、関数が 1 つ以上の基底クラスに存在するためです。
+
+このエラーを解決するには、継承から基底クラスのいずれかを削除するか、関数呼び出しを明示的に修飾します。
+
+次の例では、C2387 が生成されます。
+
+```
+// C2387.cpp
+namespace N1 {
+   struct B {
+      virtual void f() {
+      }
+   };
+}
+
+namespace N2 {
+   struct B {
+      virtual void f() {
+      }
+   };
+}
+
+struct D : N1::B, N2::B {
+   virtual void f() {
+      B::f();   // C2387
+      // try the following line instead
+      // N1::B::f();
+   }
+};
+
+int main() {
+   D aD;
+   aD.f();
+}
 ```

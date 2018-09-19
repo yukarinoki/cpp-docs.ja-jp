@@ -1,5 +1,5 @@
 ---
-title: リソース コンパイラ エラー RC2113 |Microsoft ドキュメント
+title: リソース コンパイラ エラー RC2113 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 152621a248c2a47a453034f1b171fe1746000fd1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2eb23ae8e9274368abd2c754d94a19050ae3805c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318728"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46015871"
 ---
 # <a name="resource-compiler-error-rc2113"></a>リソース コンパイラ エラー RC2113
-END ダイアログ ボックスが必要です。  
-  
- **終了**キーワードは、の最後に行う必要があります、**ダイアログ**ステートメントです。 前のステートメントから、引用符がないことを確認してください。
+
+END ダイアログ ボックスが必要です。
+
+**エンド**キーワードにする必要がありますの最後に発生する、**ダイアログ**ステートメント。 前のステートメントから、引用符がないことを確認します。

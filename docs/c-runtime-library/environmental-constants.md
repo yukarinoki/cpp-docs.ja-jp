@@ -15,26 +15,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7a6189a114091046936ac088ab5b2d4e5b07208
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cb8f56aa6ea0a6847d7822e8a376d061b47e2328
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388511"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090034"
 ---
 # <a name="environmental-constants"></a>環境定数
-## <a name="syntax"></a>構文  
-  
-```  
-#include <stdlib.h>  
-```  
-  
-## <a name="remarks"></a>コメント  
- この定数は、環境文字列の長さを定義します。  
-  
-|定数|説明|  
-|--------------|-------------|  
-|`_MAX_ENV`|環境文字列の最大サイズ。|  
-  
-## <a name="see-also"></a>参照  
- [グローバル定数](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>構文
+
+```
+#include <stdlib.h>
+```
+
+## <a name="remarks"></a>コメント
+
+この定数は、環境文字列の長さを定義します。
+
+|定数|説明|
+|--------------|-------------|
+|`_MAX_ENV`|環境文字列の最大サイズ。|
+
+## <a name="see-also"></a>参照
+
+[グローバル定数](../c-runtime-library/global-constants.md)

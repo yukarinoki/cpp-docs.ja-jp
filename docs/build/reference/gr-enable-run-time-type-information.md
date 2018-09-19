@@ -1,5 +1,5 @@
 ---
-title: -GR (実行時の型情報の有効化) |Microsoft ドキュメント
+title: -GR (ランタイム型情報の有効化) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,43 +22,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79e91f11fa6397d2ba8279998726249182c541d4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 24ef844c716d64e609440d41bf55db20308c02f1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374983"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712245"
 ---
 # <a name="gr-enable-run-time-type-information"></a>/GR (ランタイム型情報の有効化)
-実行時にオブジェクトの種類をチェックするコードを追加します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-/GR[-]  
-```  
-  
-## <a name="remarks"></a>コメント  
- ときに **/GR**コンパイラは、定義では、`_CPPRTTI`プリプロセッサ マクロです。 既定では、 **/GR**にします。 **/GR-** 実行時型情報が無効になります。  
-  
- 使用して **/GR**コンパイラがコード内のオブジェクトの種類を静的に解決できない場合。 通常必要があります、 **/GR**オプションをコードで使用される[dynamic_cast 演算子](../../cpp/dynamic-cast-operator.md)または[typeid](../../cpp/typeid-operator.md)です。 ただし、 **/GR** .rdata セクションでは、のイメージのサイズを大ききます。 コードを使用しない場合**dynamic_cast**または**typeid**、 **/GR-** 小さいイメージを生成する可能性があります。  
-  
- 実行時型チェックの詳細については、次を参照してください。[実行時型情報](../../cpp/run-time-type-information.md)で、 *C++ 言語リファレンス*です。  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
-  
-1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[のプロジェクト プロパティの操作](../../ide/working-with-project-properties.md)です。  
-  
-2.  **[C/C++]** フォルダーをクリックします。  
-  
-3.  クリックして、**言語**プロパティ ページ。  
-  
-4.  変更、**を有効にするランタイム型情報**プロパティです。  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには  
-  
--   「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.RuntimeTypeInfo%2A>」を参照してください。  
-  
-## <a name="see-also"></a>関連項目  
- [コンパイラ オプション](../../build/reference/compiler-options.md)   
- [コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+
+実行時にオブジェクトの種類をチェックするコードを追加します。
+
+## <a name="syntax"></a>構文
+
+```
+/GR[-]
+```
+
+## <a name="remarks"></a>Remarks
+
+ときに **/GR**に、コンパイラは、定義、`_CPPRTTI`プリプロセッサ マクロ。 既定では、 **/GR**にします。 **/GR-** 実行時の型情報を無効にします。
+
+使用 **/GR**コンパイラがコード内のオブジェクトの種類を静的に解決できない場合。 通常は必要があります、 **/GR**コードで使用されるオプション[dynamic_cast Operator](../../cpp/dynamic-cast-operator.md)または[typeid](../../cpp/typeid-operator.md)します。 ただし、 **/GR** .rdata セクションでは、のイメージのサイズを大ききます。 コードを使用しない場合**dynamic_cast**または**typeid**、 **/GR-** 小さいイメージを生成する可能性があります。
+
+実行時の型チェックの詳細については、次を参照してください。[実行時型情報](../../cpp/run-time-type-information.md)で、 *C++ 言語リファレンス*します。
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+
+1. **[C/C++]** フォルダーをクリックします。
+
+1. をクリックして、**言語**プロパティ ページ。
+
+1. 変更、**実行時型情報を有効にする**プロパティ。
+
+### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
+
+- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.RuntimeTypeInfo%2A>
+
+## <a name="see-also"></a>関連項目
+
+[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
+[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)

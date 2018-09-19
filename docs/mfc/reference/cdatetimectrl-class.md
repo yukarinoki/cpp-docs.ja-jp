@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdf2134b334c259a6543af279ee058b659cf21d6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9eb3b70851cb5e51ef2ddc0e99347c81fe632b6d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210188"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726662"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl クラス
 日時指定コントロールの機能がカプセル化されています。  
@@ -192,7 +192,7 @@ BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[out]*pDateTimePickerInfo*|ポインターを[DATETIMEPICKERINFO](/windows/desktop/api/commctrl/ns-commctrl-tagdatetimepickerinfo)を現在の日付と時刻の選択コントロールの説明を受け取る構造体。<br /><br /> 呼び出し元がこの構造体を割り当てる責任を負います。 ただし、このメソッドを初期化します、 *cbSize*構造体のメンバー。|  
+|*pDateTimePickerInfo*|[out]ポインターを[DATETIMEPICKERINFO](/windows/desktop/api/commctrl/ns-commctrl-tagdatetimepickerinfo)を現在の日付と時刻の選択コントロールの説明を受け取る構造体。<br /><br /> 呼び出し元がこの構造体を割り当てる責任を負います。 ただし、このメソッドを初期化します、 *cbSize*構造体のメンバー。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -347,7 +347,7 @@ BOOL GetIdealSize(LPSIZE psize) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[out]*psize*|ポインターを[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)コントロールの適切なサイズを含む構造体。|  
+|*psize*|[out]ポインターを[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)コントロールの適切なサイズを含む構造体。|  
   
 ### <a name="return-value"></a>戻り値  
  戻り値は、常に TRUE です。  
@@ -458,7 +458,7 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*dwStyle*|予定表コントロールのスタイルは、1 か月カレンダー コントロールのスタイルのビットごとの組み合わせ (OR) は、新しい 1 か月です。 詳細については、次を参照してください。[月間予定表コントロールのスタイル](/windows/desktop/Controls/month-calendar-control-styles)します。|  
+|*dwStyle*|[in]予定表コントロールのスタイルは、1 か月カレンダー コントロールのスタイルのビットごとの組み合わせ (OR) は、新しい 1 か月です。 詳細については、次を参照してください。[月間予定表コントロールのスタイル](/windows/desktop/Controls/month-calendar-control-styles)します。|  
   
 ### <a name="return-value"></a>戻り値  
  ドロップダウン リストの月間予定表コントロールの以前のスタイル。  

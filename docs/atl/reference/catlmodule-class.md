@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7d7b8ee240b94fe6a9b05d5c06c960ab8857ed6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 88c8ee576af3c50317b86b7016ac198fefdcbaa9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753137"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093442"
 ---
 # <a name="catlmodule-class"></a>CAtlModule クラス
 
@@ -106,7 +106,7 @@ virtual HRESULT AddCommonRGSReplacements(IRegistrarBase* /* pRegistrar*/) throw(
 
 ### <a name="parameters"></a>パラメーター
 
-*pRegistrar*  
+*pRegistrar*<br/>
 予約済み。
 
 ### <a name="return-value"></a>戻り値
@@ -129,10 +129,10 @@ HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pFunc*  
+*pFunc*<br/>
 追加する関数へのポインター。
 
-*dw*  
+*dw*<br/>
 ユーザー定義のデータは、関数に渡されます。
 
 ### <a name="return-value"></a>戻り値
@@ -173,7 +173,7 @@ virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*ppGIT*  
+*ppGIT*<br/>
 グローバル インターフェイス テーブルへのポインターを受け取る変数へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -270,16 +270,16 @@ HRESULT WINAPI UpdateRegistryFromResourceD(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszRes*  
+*lpszRes*<br/>
 リソースの名前。
 
-*nResID*  
+*nResID*<br/>
 リソース id です。
 
-*bRegister*  
+*bRegister*<br/>
 TRUE の場合は、オブジェクトを登録する必要があります。FALSE それ以外の場合。
 
-*この配列*  
+*この配列*<br/>
 スクリプトの置き換え可能パラメーターに関連付けられている値を格納する置換マップへのポインター。 ATL は、% モジュールを自動的に使用します。 追加の置き換え可能パラメーターを使用する、次を参照してください。 [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)します。 それ以外の場合、NULL 既定値を使用します。
 
 ### <a name="return-value"></a>戻り値
@@ -307,13 +307,13 @@ inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszRes*  
+*lpszRes*<br/>
 リソースの名前。
 
-*bRegister*  
+*bRegister*<br/>
 オブジェクトを登録するかどうかを示します。
 
-*この配列*  
+*この配列*<br/>
 スクリプトの置き換え可能パラメーターに関連付けられている値を格納する置換マップへのポインター。 ATL は、% モジュールを自動的に使用します。 追加の置き換え可能パラメーターを使用する、次を参照してください。 [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)します。 それ以外の場合、NULL 既定値を使用します。
 
 ### <a name="return-value"></a>戻り値
@@ -342,16 +342,16 @@ HRESULT WINAPI UpdateRegistryFromResourceS(
 
 ### <a name="parameters"></a>パラメーター
 
-*nResID*  
+*nResID*<br/>
 リソース id です。
 
-*lpszRes*  
+*lpszRes*<br/>
 リソースの名前。
 
-*bRegister*  
+*bRegister*<br/>
 リソース スクリプトを登録する必要があるかどうかを示します。
 
-*この配列*  
+*この配列*<br/>
 スクリプトの置き換え可能パラメーターに関連付けられている値を格納する置換マップへのポインター。 ATL は、% モジュールを自動的に使用します。 追加の置き換え可能パラメーターを使用する、次を参照してください。 [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)します。 それ以外の場合、NULL 既定値を使用します。
 
 ### <a name="return-value"></a>戻り値
@@ -364,7 +364,7 @@ HRESULT WINAPI UpdateRegistryFromResourceS(
 
 ## <a name="see-also"></a>関連項目
 
-[_ATL_MODULE](atl-typedefs.md#_atl_module)   
-[クラスの概要](../../atl/atl-class-overview.md)   
-[モジュール クラス](../../atl/atl-module-classes.md)   
+[_ATL_MODULE](atl-typedefs.md#_atl_module)<br/>
+[クラスの概要](../../atl/atl-class-overview.md)<br/>
+[モジュール クラス](../../atl/atl-module-classes.md)<br/>
 [レジストリ コンポーネント (レジストラー)](../../atl/atl-registry-component-registrar.md)  

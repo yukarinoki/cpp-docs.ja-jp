@@ -1,5 +1,5 @@
 ---
-title: プライベート (OpenMP) |Microsoft ドキュメント
+title: プライベート (OpenMP) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4af88f450ce6c77a6b0753917516719331199dfd
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7bd5b85e563f8160dd4490b650caf4f146a09410
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692679"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071238"
 ---
 # <a name="private-openmp"></a>private (OpenMP)
 各スレッドは、変数の独自のインスタンスである必要がありますを指定します。  
@@ -32,13 +32,12 @@ ms.locfileid: "33692679"
 private(var)  
 ```  
   
-## <a name="remarks"></a>コメント  
- 指定項目  
+### <a name="parameters"></a>パラメーター
   
- `var`  
- 各スレッドでインスタンスを持つ変数です。  
+*var*<br/>
+各スレッドでインスタンスを持つ変数です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **プライベート**は、次のディレクティブに適用されます。  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
@@ -49,11 +48,11 @@ private(var)
   
 -   [single](../../../parallel/openmp/reference/single.md)  
   
- 詳細については、次を参照してください。 [2.7.2.1 プライベート](../../../parallel/openmp/2-7-2-1-private.md)です。  
+ 詳細については、次を参照してください。 [2.7.2.1 プライベート](../../../parallel/openmp/2-7-2-1-private.md)します。  
   
 ## <a name="example"></a>例  
   
-```  
+```C  
 // openmp_private.c  
 // compile with: /openmp  
 #include <windows.h>  

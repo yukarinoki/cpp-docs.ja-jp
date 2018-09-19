@@ -1,5 +1,5 @@
 ---
-title: 構築時の問題のリリースを修正して |Microsoft ドキュメント
+title: ビルドに関する問題の修正リリース |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,27 +18,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 708bb8f561d2611c2ee778aa4a0c6cbd1cc3dad2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9b304fa6bcc9b0b248719ea44b28e9dae5c76a6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372153"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726532"
 ---
 # <a name="fixing-release-build-problems"></a>リリース ビルドの問題の解決
-コードは、リリース ビルドへのデバッグ ビルドからの切り替え後、コンパイル エラーを生成する場合は、一部の領域を確認してください。  
-  
- デバッグ ビルド中に受信しなかった最適化 (リリース) のビルド中には、コンパイラの警告があります。  
-  
--   [ASSERT ステートメントを調べる](../../build/reference/using-verify-instead-of-assert.md)  
-  
--   [メモリ上書きのチェックにデバッグ ビルドを使用します。](../../build/reference/using-the-debug-build-to-check-for-memory-overwrite.md)  
-  
--   [リリース ビルドのデバッグ情報の生成を有効にします。](../../build/reference/how-to-debug-a-release-build.md)  
-  
--   [メモリ上書きのチェック](../../build/reference/checking-for-memory-overwrites.md)  
-  
-## <a name="see-also"></a>関連項目  
- [リリース ビルド](../../build/reference/release-builds.md)   
- [リリース ビルドを作成するときに一般的な問題](../../build/reference/common-problems-when-creating-a-release-build.md)   
- [コードの最適化](../../build/reference/optimizing-your-code.md)
+
+コードは、デバッグ ビルドをリリース ビルドからの切り替え後のコンパイル エラーを生成する場合は、一部の領域を確認する必要があります。
+
+コンパイラの警告を発生すると、デバッグ ビルド中に受信しなかった最適化 (リリース) のビルド中にあります。
+
+- [ASSERT ステートメントを確認します。](../../build/reference/using-verify-instead-of-assert.md)
+
+- [メモリ上書きのチェックにデバッグ ビルドを使用します。](../../build/reference/using-the-debug-build-to-check-for-memory-overwrite.md)
+
+- [リリース ビルドのデバッグ情報の生成を有効にします。](../../build/reference/how-to-debug-a-release-build.md)
+
+- [メモリ上書きのチェック](../../build/reference/checking-for-memory-overwrites.md)
+
+## <a name="see-also"></a>関連項目
+
+[リリース ビルド](../../build/reference/release-builds.md)<br/>
+[リリース ビルド作成時によくある問題](../../build/reference/common-problems-when-creating-a-release-build.md)<br/>
+[コードの最適化](../../build/reference/optimizing-your-code.md)

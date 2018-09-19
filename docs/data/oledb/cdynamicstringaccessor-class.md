@@ -23,14 +23,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d74138247bdfd427dd26d1a3d98b9a82dae39e60
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 0af37ee6f76e5a9e3b6423023fbe2691392395de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337688"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044120"
 ---
 # <a name="cdynamicstringaccessor-class"></a>CDynamicStringAccessor クラス
+
 データベース スキーマ (データベースの基になる構造) の知識があるない場合にデータ ソースにアクセスすることができます。  
   
 ## <a name="syntax"></a>構文  
@@ -41,7 +42,8 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 ```  
 
 ## <a name="requirements"></a>要件  
- **ヘッダー**: atldbcli.h 
+
+**ヘッダー**: atldbcli.h 
 
 ## <a name="members"></a>メンバー  
   
@@ -53,17 +55,19 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 |[SetString](#setstring)|文字列として指定された列のデータを設定します。|  
   
 ## <a name="remarks"></a>Remarks  
- 中に[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) 、プロバイダーによって報告されたネイティブ形式でデータを要求`CDynamicStringAccessor`要求プロバイダーが文字列データとしてデータ ストアからすべてのデータをフェッチします。 これは、表示またはデータ ストアの内容を印刷するなど、データ ストア内の値の計算を必要としない単純なタスクに特に便利です。  
+
+中に[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) 、プロバイダーによって報告されたネイティブ形式でデータを要求`CDynamicStringAccessor`要求プロバイダーが文字列データとしてデータ ストアからすべてのデータをフェッチします。 これは、表示またはデータ ストアの内容を印刷するなど、データ ストア内の値の計算を必要としない単純なタスクに特に便利です。  
   
- データ ストア内の列のデータのネイティブな型は問題になりません。プロバイダーがデータ変換をサポートできる限りの文字列形式のデータが供給されます。 プロバイダーが、ネイティブ データ型から (これは一般的ではない) 文字列への変換をサポートしていない場合、要求側の呼び出しは DB_S_ERRORSOCCURED、成功の値を返しに対応する列のステータスには、変換の問題によって示されますDBSTATUS_E_CANTCONVERTVALUE します。  
+データ ストア内の列のデータのネイティブな型は問題になりません。プロバイダーがデータ変換をサポートできる限りの文字列形式のデータが供給されます。 プロバイダーが、ネイティブ データ型から (これは一般的ではない) 文字列への変換をサポートしていない場合、要求側の呼び出しは DB_S_ERRORSOCCURED、成功の値を返しに対応する列のステータスには、変換の問題によって示されますDBSTATUS_E_CANTCONVERTVALUE します。  
   
- 使用`CDynamicStringAccessor`列情報を取得するメソッド。 実行時に動的にアクセサーを作成するのにには、この列の情報を使用します。  
+使用`CDynamicStringAccessor`列情報を取得するメソッド。 実行時に動的にアクセサーを作成するのにには、この列の情報を使用します。  
   
- 列の情報は、このクラスによって作成および管理のバッファーに格納されます。 使用してバッファーからデータを取得[GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)を使用して、バッファーに格納または[SetString](../../data/oledb/cdynamicstringaccessor-setstring.md)します。  
+列の情報は、このクラスによって作成および管理のバッファーに格納されます。 使用してバッファーからデータを取得[GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)を使用して、バッファーに格納または[SetString](../../data/oledb/cdynamicstringaccessor-setstring.md)します。  
   
- 動的アクセサー クラスの使用例とについては、次を参照してください。[動的アクセサーの使用](../../data/oledb/using-dynamic-accessors.md)します。  
+動的アクセサー クラスの使用例とについては、次を参照してください。[動的アクセサーの使用](../../data/oledb/using-dynamic-accessors.md)します。  
 
 ## <a name="getstring"></a> Cdynamicstringaccessor::getstring
+
 指定された列のデータを文字列として取得します。  
   
 ### <a name="syntax"></a>構文  
@@ -77,19 +81,23 @@ BaseType* GetString(const WCHAR* pColumnName) const throw();
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *nColumn*  
- [in]列の番号。 列番号 1 から始まります。 値 0 は、存在する場合、ブックマーク列を参照します。  
+
+*nColumn*<br/>
+[in]列の番号。 列番号 1 から始まります。 値 0 は、存在する場合、ブックマーク列を参照します。  
   
- *pColumnName*  
- [in]列名を含む文字列へのポインター。  
+*pColumnName*<br/>
+[in]列名を含む文字列へのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- 文字列値へのポインターは、指定された列から取得されます。 型の値は、`BaseType`は**CHAR**または**WCHAR** _UNICODE が定義されているかどうかどうかによって異なります。 指定された列が見つからない場合は、NULL を返します。  
+
+文字列値へのポインターは、指定された列から取得されます。 型の値は、`BaseType`は**CHAR**または**WCHAR** _UNICODE が定義されているかどうかどうかによって異なります。 指定された列が見つからない場合は、NULL を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 2 番目のオーバーライド フォームは、ANSI 文字列として列名を取得します。 3 番目のオーバーライド フォームは、Unicode 文字列として列名を取得します。  
+
+2 番目のオーバーライド フォームは、ANSI 文字列として列名を取得します。 3 番目のオーバーライド フォームは、Unicode 文字列として列名を取得します。  
  
 ## <a name="setstring"></a> Cdynamicstringaccessor::setstring
+
 文字列として指定された列のデータを設定します。  
   
 ### <a name="syntax"></a>構文  
@@ -106,30 +114,34 @@ HRESULT SetString(const WCHAR* pColumnName,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *nColumn*  
- [in]列の番号。 列番号 1 から始まります。 0 の特殊な値は、存在する場合、ブックマーク列を参照します。  
+
+*nColumn*<br/>
+[in]列の番号。 列番号 1 から始まります。 0 の特殊な値は、存在する場合、ブックマーク列を参照します。  
   
- *pColumnName*  
- [in]列名を含む文字列へのポインター。  
+*pColumnName*<br/>
+[in]列名を含む文字列へのポインター。  
   
- *data*  
- [in]指定された列に書き込まれる文字列のデータへのポインター。  
+*data*<br/>
+[in]指定された列に書き込まれる文字列のデータへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- 指定された列を設定する文字列値へのポインター。 型の値は、`BaseType`は**CHAR**または**WCHAR** _UNICODE が定義されているかどうかどうかによって異なります。  
+
+指定された列を設定する文字列値へのポインター。 型の値は、`BaseType`は**CHAR**または**WCHAR** _UNICODE が定義されているかどうかどうかによって異なります。  
   
 ### <a name="remarks"></a>Remarks  
- オーバーライド フォームは、ANSI 文字列として列名、2 番目と 3 番目のオーバーライド フォームは Unicode 文字列として列名。  
+
+オーバーライド フォームは、ANSI 文字列として列名、2 番目と 3 番目のオーバーライド フォームは Unicode 文字列として列名。  
   
- 場合、ランタイム アサーション エラーが生成されます _SECURE_ATL の 0 以外の値を持つが定義されている場合、入力*データ*文字列が参照されるデータ列の最大許容長を超えています。 それ以外の場合、許容される最大長よりも長い場合に、入力文字列が切り捨てられます。  
+場合、ランタイム アサーション エラーが生成されます _SECURE_ATL の 0 以外の値を持つが定義されている場合、入力*データ*文字列が参照されるデータ列の最大許容長を超えています。 それ以外の場合、許容される最大長よりも長い場合に、入力文字列が切り捨てられます。  
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [CAccessor クラス](../../data/oledb/caccessor-class.md)   
- [CDynamicParameterAccessor クラス](../../data/oledb/cdynamicparameteraccessor-class.md)   
- [CManualAccessor クラス](../../data/oledb/cmanualaccessor-class.md)   
- [CDynamicAccessor クラス](../../data/oledb/cdynamicaccessor-class.md)   
- [CDynamicStringAccessorA クラス](../../data/oledb/cdynamicstringaccessora-class.md)   
- [CDynamicStringAccessorW クラス](../../data/oledb/cdynamicstringaccessorw-class.md)   
- [CXMLAccessor クラス](../../data/oledb/cxmlaccessor-class.md)
+
+[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[CAccessor クラス](../../data/oledb/caccessor-class.md)<br/>
+[CDynamicParameterAccessor クラス](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
+[CManualAccessor クラス](../../data/oledb/cmanualaccessor-class.md)<br/>
+[CDynamicAccessor クラス](../../data/oledb/cdynamicaccessor-class.md)<br/>
+[CDynamicStringAccessorA クラス](../../data/oledb/cdynamicstringaccessora-class.md)<br/>
+[CDynamicStringAccessorW クラス](../../data/oledb/cdynamicstringaccessorw-class.md)<br/>
+[CXMLAccessor クラス](../../data/oledb/cxmlaccessor-class.md)

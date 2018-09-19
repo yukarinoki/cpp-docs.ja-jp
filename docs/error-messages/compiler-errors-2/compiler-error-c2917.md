@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2917 |Microsoft ドキュメント
+title: コンパイラ エラー C2917 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecc5f8634505dc8b63cb4cbdbbb9aa31973e7475
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6d2747b001cc81da4edde21f201cd34392c2dcba
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254551"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020892"
 ---
 # <a name="compiler-error-c2917"></a>コンパイラ エラー C2917
-'name' : 無効なテンプレートのパラメーターです。  
-  
- テンプレートのパラメーター リストに、テンプレートのパラメーターでない識別子が含まれています。  
-  
-## <a name="example"></a>例  
- 次の例では C2917 が生成されます。  
-  
-```  
-// C2917.cpp  
-// compile with: /c  
-template<class T> class Vector {  
-   void sort();  
-};  
-  
-template<class T*> void Vector<T>::sort() {}   // C2917  
-// try the following line instead  
-// template<class T> void Vector<T>::sort() {}  
+
+'name' : 無効なテンプレートのパラメーターです。
+
+テンプレートのパラメーター リストに、テンプレートのパラメーターでない識別子が含まれています。
+
+## <a name="example"></a>例
+
+次の例では C2917 が生成されます。
+
+```
+// C2917.cpp
+// compile with: /c
+template<class T> class Vector {
+   void sort();
+};
+
+template<class T*> void Vector<T>::sort() {}   // C2917
+// try the following line instead
+// template<class T> void Vector<T>::sort() {}
 ```

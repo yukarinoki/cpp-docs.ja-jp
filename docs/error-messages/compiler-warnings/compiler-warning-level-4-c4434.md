@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 4) C4434 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 4) C4434 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c639fa1cc89266fd9cc2935d88132ceae225a85e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec0d9e4cfbed2d2871e35631df918f17a342f653
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293414"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025764"
 ---
 # <a name="compiler-warning-level-4-c4434"></a>コンパイラの警告 (レベル 4) C4434
-クラス コンストラクターはプライベート アクセシビリティを含んでいなければなりません。プライベート アクセスに変更します  
-  
- C4434 は、コンパイラが静的コンストラクターのアクセシビリティを変更したことを示します。 静的コンストラクターは共通言語ランタイムからのみ呼び出されるものであるため、専用のアクセシビリティが必要です。 詳細については、次を参照してください。[静的コンス トラクター](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Static_constructors)です。  
-  
-## <a name="example"></a>例  
- 次の例では、C4434 を生成します。  
-  
-```  
-// C4434.cpp  
-// compile with: /W4 /c /clr  
-public ref struct R {  
-   static R(){}   // C4434  
-};  
+
+クラス コンストラクターはプライベート アクセシビリティを含んでいなければなりません。プライベート アクセスに変更します
+
+C4434 は、コンパイラが静的コンストラクターのアクセシビリティを変更したことを示します。 静的コンストラクターは共通言語ランタイムからのみ呼び出されるものであるため、専用のアクセシビリティが必要です。 詳細については、次を参照してください。[静的コンス トラクター](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Static_constructors)します。
+
+## <a name="example"></a>例
+
+次の例では、C4434 が生成されます。
+
+```
+// C4434.cpp
+// compile with: /W4 /c /clr
+public ref struct R {
+   static R(){}   // C4434
+};
 ```

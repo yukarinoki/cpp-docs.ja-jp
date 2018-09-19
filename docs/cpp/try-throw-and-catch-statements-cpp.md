@@ -29,78 +29,81 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc5480b461a06d84647b7f139b2bd0ccce550dcd
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 8454df8f8f66264e1e877a1e1504f4266944fa7a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462145"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118896"
 ---
 # <a name="try-throw-and-catch-statements-c"></a>try、throw、および catch ステートメント (C++)
-C++ の例外処理を実装するには、使用する**お試しください**、**スロー**、および**キャッチ**式。  
-  
- まず、使用して、**お試しください**例外をスローする 1 つまたは複数のステートメントを囲むブロックします。  
-  
- A**スロー**ことを通知する例外条件 — 多くの場合、エラー-で発生しました、**お試しください**ブロック。 オペランドとして任意の型のオブジェクトを使用することができます、**スロー**式。 通常、このオブジェクトを使用してエラーに関する情報を通知します。 ほとんどの場合で使用すること勧め、 [std::exception](../standard-library/exception-class.md)クラスまたは標準ライブラリで定義されている派生クラスのいずれか。 これらのいずれのクラスも適さない場合は、`std::exception` から派生させた独自の例外クラスを使用することをお勧めします。  
-  
- スローされる可能性がある例外を処理するには、1 つまたは複数を実装**キャッチ**ブロックの直後、**お試しください**ブロックします。 各**キャッチ**ブロックが処理できる例外の種類を指定します。  
-  
- この例では、**お試しください**ブロックとそのハンドラー。 `GetNetworkResource()` では、ネットワーク接続を介してデータを取得するとします。また、2 つの型の例外として `std::exception` から派生させたユーザー定義のクラスを使用するとします。 通知が、例外をキャッチする**const**で参照、**キャッチ**ステートメント。 例外は値でスローし、const 参照でキャッチすることをお勧めします。  
-  
-## <a name="example"></a>例  
-  
-```cpp 
-MyData md;  
-try {  
-   // Code that could throw an exception  
-   md = GetNetworkResource();  
-}  
-catch (const networkIOException& e) {  
-   // Code that executes when an exception of type  
-   // networkIOException is thrown in the try block  
-   // ...  
-   // Log error message in the exception object  
-   cerr << e.what();  
-}  
-catch (const myDataFormatException& e) {  
-   // Code that handles another exception type  
-   // ...  
-   cerr << e.what();  
-}  
-  
-// The following syntax shows a throw expression  
-MyData GetNetworkResource()  
-{  
-   // ...  
-   if (IOSuccess == false)  
-      throw networkIOException("Unable to connect");  
-   // ...  
-   if (readError)  
-      throw myDataFormatException("Format error");   
-   // ...  
-}  
-```  
-  
-## <a name="remarks"></a>Remarks  
- 後のコード、**お試しください**句は、コードの保護されたセクションです。 **スロー**式*をスローします*-は、発生させる-例外。 コード ブロックの後、**キャッチ**句は、例外ハンドラー。 これは、ハンドラーを*キャッチ*場合にスローされる例外の種類、**スロー**と**キャッチ**式は、互換性のあります。 型の一致を制御する規則の一覧については**キャッチ**ブロックを参照してください[方法 Catch ブロックの評価](../cpp/how-catch-blocks-are-evaluated-cpp.md)します。 場合、**キャッチ**ステートメントを型の代わりに省略記号 (...) を指定します、**キャッチ**ブロックは、すべての種類の例外を処理します。 コンパイルするとき、 [/EHa](../build/reference/eh-exception-handling-model.md)オプション、C 構造化例外とメモリの保護、0 による除算、および浮動小数点の違反など、システムによって生成された、またはアプリケーションによって生成される非同期例外が含まれます. **キャッチ**ブロックの一致する種類を検索するプログラムの順序で処理は、省略記号ボタン ハンドラーが関連付けられている最後のハンドラーにする必要があります、**お試しください**ブロックします。 `catch(...)` は慎重に使用してください。プログラムの実行が継続されるには、キャッチした特定の例外を処理する方法を catch ブロックに記述する必要があります。 `catch(...)` ブロックは通常、プログラムの実行を停止する前に、エラーを記録して特別なクリーンアップを実行するために使用します。  
-  
- A**スロー**オペランドを持たない式は、現在処理中の例外を再スローします。 この方法は例外を再スローするときにお勧めします。元の例外のポリモーフィックな型情報が保持されるためです。 このような式でのみ使用する必要があります、**キャッチ**ハンドラーまたはから呼び出される関数を**キャッチ**ハンドラー。 再スローされた例外オブジェクトはコピーではなく元の例外オブジェクトです。  
-  
-```cpp 
-try {  
-   throw CSomeOtherException();  
-}  
-catch(...) {  
-   // Catch all exceptions - dangerous!!!  
-   // Respond (perhaps only partially) to the exception, then  
-   // re-throw to pass the exception to some other handler  
-   // ...  
-   throw;  
-}  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [C++ 例外処理](../cpp/cpp-exception-handling.md)   
- [キーワード](../cpp/keywords-cpp.md)   
- [未処理の C++ 例外](../cpp/unhandled-cpp-exceptions.md)   
- [__uncaught_exception](../c-runtime-library/reference/uncaught-exception.md)
+
+C++ の例外処理を実装するには、使用する**お試しください**、**スロー**、および**キャッチ**式。
+
+まず、使用して、**お試しください**例外をスローする 1 つまたは複数のステートメントを囲むブロックします。
+
+A**スロー**ことを通知する例外条件 — 多くの場合、エラー-で発生しました、**お試しください**ブロック。 オペランドとして任意の型のオブジェクトを使用することができます、**スロー**式。 通常、このオブジェクトを使用してエラーに関する情報を通知します。 ほとんどの場合で使用すること勧め、 [std::exception](../standard-library/exception-class.md)クラスまたは標準ライブラリで定義されている派生クラスのいずれか。 これらのいずれのクラスも適さない場合は、`std::exception` から派生させた独自の例外クラスを使用することをお勧めします。
+
+スローされる可能性がある例外を処理するには、1 つまたは複数を実装**キャッチ**ブロックの直後、**お試しください**ブロックします。 各**キャッチ**ブロックが処理できる例外の種類を指定します。
+
+この例では、**お試しください**ブロックとそのハンドラー。 `GetNetworkResource()` では、ネットワーク接続を介してデータを取得するとします。また、2 つの型の例外として `std::exception` から派生させたユーザー定義のクラスを使用するとします。 通知が、例外をキャッチする**const**で参照、**キャッチ**ステートメント。 例外は値でスローし、const 参照でキャッチすることをお勧めします。
+
+## <a name="example"></a>例
+
+```cpp
+MyData md;
+try {
+   // Code that could throw an exception
+   md = GetNetworkResource();
+}
+catch (const networkIOException& e) {
+   // Code that executes when an exception of type
+   // networkIOException is thrown in the try block
+   // ...
+   // Log error message in the exception object
+   cerr << e.what();
+}
+catch (const myDataFormatException& e) {
+   // Code that handles another exception type
+   // ...
+   cerr << e.what();
+}
+
+// The following syntax shows a throw expression
+MyData GetNetworkResource()
+{
+   // ...
+   if (IOSuccess == false)
+      throw networkIOException("Unable to connect");
+   // ...
+   if (readError)
+      throw myDataFormatException("Format error");
+   // ...
+}
+```
+
+## <a name="remarks"></a>Remarks
+
+後のコード、**お試しください**句は、コードの保護されたセクションです。 **スロー**式*をスローします*-は、発生させる-例外。 コード ブロックの後、**キャッチ**句は、例外ハンドラー。 これは、ハンドラーを*キャッチ*場合にスローされる例外の種類、**スロー**と**キャッチ**式は、互換性のあります。 型の一致を制御する規則の一覧については**キャッチ**ブロックを参照してください[方法 Catch ブロックの評価](../cpp/how-catch-blocks-are-evaluated-cpp.md)します。 場合、**キャッチ**ステートメントを型の代わりに省略記号 (...) を指定します、**キャッチ**ブロックは、すべての種類の例外を処理します。 コンパイルするとき、 [/EHa](../build/reference/eh-exception-handling-model.md)オプション、C 構造化例外とメモリの保護、0 による除算、および浮動小数点の違反など、システムによって生成された、またはアプリケーションによって生成される非同期例外が含まれます. **キャッチ**ブロックの一致する種類を検索するプログラムの順序で処理は、省略記号ボタン ハンドラーが関連付けられている最後のハンドラーにする必要があります、**お試しください**ブロックします。 `catch(...)` は慎重に使用してください。プログラムの実行が継続されるには、キャッチした特定の例外を処理する方法を catch ブロックに記述する必要があります。 `catch(...)` ブロックは通常、プログラムの実行を停止する前に、エラーを記録して特別なクリーンアップを実行するために使用します。
+
+A**スロー**オペランドを持たない式は、現在処理中の例外を再スローします。 この方法は例外を再スローするときにお勧めします。元の例外のポリモーフィックな型情報が保持されるためです。 このような式でのみ使用する必要があります、**キャッチ**ハンドラーまたはから呼び出される関数を**キャッチ**ハンドラー。 再スローされた例外オブジェクトはコピーではなく元の例外オブジェクトです。
+
+```cpp
+try {
+   throw CSomeOtherException();
+}
+catch(...) {
+   // Catch all exceptions - dangerous!!!
+   // Respond (perhaps only partially) to the exception, then
+   // re-throw to pass the exception to some other handler
+   // ...
+   throw;
+}
+```
+
+## <a name="see-also"></a>関連項目
+
+[C++ 例外処理](../cpp/cpp-exception-handling.md)<br/>
+[キーワード](../cpp/keywords-cpp.md)<br/>
+[未処理の C++ 例外](../cpp/unhandled-cpp-exceptions.md)<br/>
+[__uncaught_exception](../c-runtime-library/reference/uncaught-exception.md)

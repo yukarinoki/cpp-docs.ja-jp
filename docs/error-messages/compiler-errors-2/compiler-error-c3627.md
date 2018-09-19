@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3627 |Microsoft ドキュメント
+title: コンパイラ エラー C3627 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7b32ac9234690c1203bdbd3097c1f6ac830e886
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f799007fffae3f8841b91de71001b5daf48b96f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265066"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111668"
 ---
 # <a name="compiler-error-c3627"></a>コンパイラ エラー C3627
-値の型以外をボックス化することができます。  
-  
-値クラスのみをボックス化することができます。  
+
+値型のみがボックス化することができます。
+
+値クラスのみがボックス化することができます。

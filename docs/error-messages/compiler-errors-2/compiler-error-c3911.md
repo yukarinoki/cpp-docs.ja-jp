@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3911 |Microsoft ドキュメント
+title: コンパイラ エラー C3911 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfff502e5dc4a9628f11fbcd46129646ed720ea6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 98b2b1b4712d71c5baa7179ce3c348ace3761bb2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274012"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037386"
 ---
 # <a name="compiler-error-c3911"></a>コンパイラ エラー C3911
-'event_accessor_method': 関数は、型 'signature' を含んでいなければなりません  
-  
- イベントのアクセサー メソッドが正しく宣言されませんでした。  
-  
- 詳細については、次を参照してください。[イベント](../../windows/event-cpp-component-extensions.md)です。  
-  
- 次の例では、C3911 が生成されます。  
-  
-```  
-// C3911.cpp  
-// compile with: /clr  
-using namespace System;  
-delegate void H(String^, int);  
-  
-ref class X {  
-   event H^ E1 {  
-      void add() {}   // C3911  
-      // try the following line instead  
-      // void add(H ^ h) {}  
-  
-      void remove(){}  
-      // try the following line instead  
-      // void remove(H ^ h) {}  
-  
-      void raise(){}  
-      // try the following line instead  
-      // void raise(String ^ s, int i) {}  
-   };  
-};  
+
+'event_accessor_method': 関数は、型 'signature' をいる必要があります
+
+イベントのアクセサー メソッドが適切に宣言されていません。
+
+詳細については、次を参照してください。[イベント](../../windows/event-cpp-component-extensions.md)します。
+
+次の例では、C3911 が生成されます。
+
+```
+// C3911.cpp
+// compile with: /clr
+using namespace System;
+delegate void H(String^, int);
+
+ref class X {
+   event H^ E1 {
+      void add() {}   // C3911
+      // try the following line instead
+      // void add(H ^ h) {}
+
+      void remove(){}
+      // try the following line instead
+      // void remove(H ^ h) {}
+
+      void raise(){}
+      // try the following line instead
+      // void raise(String ^ s, int i) {}
+   };
+};
 ```

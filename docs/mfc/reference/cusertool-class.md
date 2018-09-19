@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90972e39bbad812f820452816ff3df982174539f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 577e4b4e7bf54742035c8b4333d345ca894501ac
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202977"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708995"
 ---
 # <a name="cusertool-class"></a>CUserTool クラス
 ユーザー ツールは、外部アプリケーションを実行するメニュー項目です。 **ツール**のタブ、**カスタマイズ** ダイアログ ボックス ( [CMFCToolBarsCustomizeDialog クラス](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) により、ユーザー ツールのユーザーを追加し、名前、コマンド、引数を指定し、各ユーザー ツールの初期ディレクトリ。  
@@ -79,7 +79,7 @@ class CUserTool : public CObject
   
 ### <a name="data-members"></a>データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CUserTool::m_strArguments](#m_strarguments)|ユーザー ツールのコマンドライン引数。|  
 |[CUserTool::m_strInitialDirectory](#m_strinitialdirectory)|ユーザー ツールの初期ディレクトリ。|  
@@ -122,11 +122,11 @@ void DrawToolIcon(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rectImage*  
- アイコンを表示する領域の座標を指定します。  
+*rectImage*<br/>
+[in]アイコンを表示する領域の座標を指定します。  
   
 ##  <a name="getcommand"></a>  CUserTool::GetCommand  
  ユーザー ツールに関連付けられているコマンドのテキストを含む文字列を返します。  
@@ -223,8 +223,8 @@ void SetCommand(LPCTSTR lpszCmd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszCmd*  
- ユーザー ツールに関連する新しいアプリケーションを指定します。  
+*lpszCmd*<br/>
+[in]ユーザー ツールに関連する新しいアプリケーションを指定します。  
   
 ### <a name="remarks"></a>Remarks  
  ユーザー ツールを実行する新しいアプリケーションを設定するには、このメソッドを呼び出します。 このメソッドは、古いアイコンを破棄し、特定のアプリケーションから、新しいアイコンを読み込みます。 場合は、アプリケーションからそのアイコンを読み込むことができません、呼び出すことによって、ユーザー ツールの既定のアイコンを読み込む[CUserTool::LoadDefaultIcon](#loaddefaulticon)します。  

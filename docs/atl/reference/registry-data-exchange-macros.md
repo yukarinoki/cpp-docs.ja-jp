@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1864fb953c53cba562856fed24a44b6157a03603
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a8a4ac19f9ead379b66d93a7be031bb53bc50fe5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764216"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109345"
 ---
 # <a name="registry-data-exchange-macros"></a>レジストリ データ エクス チェンジに関するマクロ
 
@@ -89,19 +89,19 @@ RDX_BINARY(
 
 ### <a name="parameters"></a>パラメーター
 
-*Rootkey*  
+*Rootkey*<br/>
 レジストリ キーのルート。
 
-*サブキー*  
+*サブキー*<br/>
 レジストリのサブキー。
 
-*valuename*  
+*valuename*<br/>
 レジストリ キー。
 
-*メンバー*  
+*メンバー*<br/>
 指定されたレジストリ エントリに関連付けるメンバー変数です。
 
-*member_size*  
+*member_size*<br/>
 メンバー変数のバイト単位のサイズ。
 
 ### <a name="remarks"></a>Remarks
@@ -123,19 +123,19 @@ RDX_CSTRING_TEXT(
 
 ### <a name="parameters"></a>パラメーター
 
-*Rootkey*  
+*Rootkey*<br/>
 レジストリ キーのルート。
 
-*サブキー*  
+*サブキー*<br/>
 レジストリのサブキー。
 
-*valuename*  
+*valuename*<br/>
 レジストリ キー。
 
-*メンバー*  
+*メンバー*<br/>
 指定されたレジストリ エントリに関連付けるメンバー変数です。
 
-*member_size*  
+*member_size*<br/>
 メンバー変数のバイト単位のサイズ。
 
 ### <a name="remarks"></a>Remarks
@@ -157,19 +157,19 @@ RDX_DWORD(
 
 ### <a name="parameters"></a>パラメーター
 
-*Rootkey*  
+*Rootkey*<br/>
 レジストリ キーのルート。
 
-*サブキー*  
+*サブキー*<br/>
 レジストリのサブキー。
 
-*valuename*  
+*valuename*<br/>
 レジストリ キー。
 
-*メンバー*  
+*メンバー*<br/>
 指定されたレジストリ エントリに関連付けるメンバー変数です。
 
-*member_size*  
+*member_size*<br/>
 メンバー変数のバイト単位のサイズ。
 
 ### <a name="remarks"></a>Remarks
@@ -191,19 +191,19 @@ RDX_TEXT(
 
 ### <a name="parameters"></a>パラメーター
 
-*Rootkey*  
+*Rootkey*<br/>
 レジストリ キーのルート。
 
-*サブキー*  
+*サブキー*<br/>
 レジストリのサブキー。
 
-*valuename*  
+*valuename*<br/>
 レジストリ キー。
 
-*メンバー*  
+*メンバー*<br/>
 指定されたレジストリ エントリに関連付けるメンバー変数です。
 
-*member_size*  
+*member_size*<br/>
 メンバー変数のバイト単位のサイズ。
 
 ### <a name="remarks"></a>Remarks
@@ -212,6 +212,6 @@ RDX_TEXT(
 
 ## <a name="see-also"></a>関連項目
 
-[マクロ](../../atl/reference/atl-macros.md)   
+[[マクロ]](../../atl/reference/atl-macros.md)<br/>
 [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)
 

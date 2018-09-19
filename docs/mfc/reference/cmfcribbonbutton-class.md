@@ -124,12 +124,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff14a4d8e013adc401b13daa68ffcb9a739706d8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 2649e7e4cbaa1ba7fe6f2fcc18a5c5e933fc1032
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42544474"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712966"
 ---
 # <a name="cmfcribbonbutton-class"></a>CMFCRibbonButton クラス
 `CMFCRibbonButton` クラスは、パネル、クイック アクセス ツール バー、ポップアップ メニューなど、リボン バー要素に配置できるボタンを実装します。  
@@ -261,11 +261,11 @@ void AddSubItem(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pSubItem*  
- 追加する新しい要素へのポインターを指定します。  
+*pSubItem*<br/>
+[in]追加する新しい要素へのポインターを指定します。  
   
- [in]*nIndex*  
- ボタンのメニュー項目の配列に要素を追加する位置のインデックスを指定しますメニュー項目の配列の末尾に要素を追加するのには-1。  
+*nIndex*<br/>
+[in]ボタンのメニュー項目の配列に要素を追加する位置のインデックスを指定しますメニュー項目の配列の末尾に要素を追加するのには-1。  
   
 ##  <a name="canbestretched"></a>  CMFCRibbonButton::CanBeStretched  
 
@@ -318,20 +318,20 @@ CMFCRibbonButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nID*  
- ボタンのコマンド ID を指定します。  
+*nID*<br/>
+[in]ボタンのコマンド ID を指定します。  
   
- [in]*lpszText*  
- ボタンのテキスト ラベルを指定します。  
+*lpszText*<br/>
+[in]ボタンのテキスト ラベルを指定します。  
   
- [in]*nSmallImageIndex*  
- 親カテゴリのイメージ リストで、ボタンの小さなイメージの 0 から始まるインデックスを指定します。  
+*nSmallImageIndex*<br/>
+[in]親カテゴリのイメージ リストで、ボタンの小さなイメージの 0 から始まるインデックスを指定します。  
   
- [in]*nLargeImageIndex*  
- 親カテゴリのイメージ リストで、ボタンの大きいイメージの 0 から始まるインデックスを指定します。  
+*nLargeImageIndex*<br/>
+[in]親カテゴリのイメージ リストで、ボタンの大きいイメージの 0 から始まるインデックスを指定します。  
   
- [in]*hIcon*  
- アプリケーションがボタンのイメージとして使用するアイコンを識別するハンドルを指定します。  
+*hIcon*<br/>
+[in]アプリケーションがボタンのイメージとして使用するアイコンを識別するハンドルを指定します。  
   
 ### <a name="example"></a>例  
  次の例は、構築する方法を示します、`CMFCRibbonButton`オブジェクト。  
@@ -348,8 +348,8 @@ CSize DrawBottomText(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*bCalcOnly*  
+*pDC*<br/>
+[in][in]*bCalcOnly*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -366,8 +366,8 @@ virtual void DrawImage(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*型*  
+*pDC*<br/>
+[in][in]*型*  
  [in]*rectImage*  
   
 ### <a name="remarks"></a>Remarks  
@@ -385,10 +385,10 @@ virtual int DrawRibbonText(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*strText*  
- [in]*rectText*  
- [in]*uiDTFlags*  
+*pDC*<br/>
+[in][in]*strText*  
+*rectText*<br/>
+[in][in]*uiDTFlags*  
  [in]*clrText*  
   
 ### <a name="return-value"></a>戻り値  
@@ -403,8 +403,8 @@ int FindSubItemIndexByID(UINT uiID) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiID*  
- ポップアップ メニュー項目のコマンド ID を指定します。  
+*uiID*<br/>
+[in]ポップアップ メニュー項目のコマンド ID を指定します。  
   
 ### <a name="return-value"></a>戻り値  
  関連付けられているサブ項目の 0 から始まるインデックス、 *uiID*します。 このようなサブ項目がない場合は-1。  
@@ -456,8 +456,8 @@ int GetImageIndex(BOOL bLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bLargeImage*  
- TRUE の場合、大きなサイズのイメージを格納するイメージの一覧で、イメージのインデックスを返しますそれ以外の場合、小さいイメージを格納するイメージの一覧で、イメージのインデックスを返します。  
+*bLargeImage*<br/>
+[in]TRUE の場合、大きなサイズのイメージを格納するイメージの一覧で、イメージのインデックスを返しますそれ以外の場合、小さいイメージを格納するイメージの一覧で、イメージのインデックスを返します。  
   
 ### <a name="return-value"></a>戻り値  
  関連付けられているイメージ リスト内のボタンのイメージのインデックス。  
@@ -763,8 +763,8 @@ virtual void OnClick(CPoint point);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ポイント*  
- マウス クリックの位置を指定します。  
+*ポイント*<br/>
+[in]マウス クリックの位置を指定します。  
   
 ### <a name="remarks"></a>Remarks  
  このイベントを処理する場合は、派生クラスでこのメソッドをオーバーライドします。  
@@ -822,8 +822,8 @@ BOOL RemoveSubItem(int nIndex);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nIndex*  
- 削除するメニュー項目の 0 から始まるインデックスを指定します。  
+*nIndex*<br/>
+[in]削除するメニュー項目の 0 から始まるインデックスを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  指定した項目が正常に削除された場合は TRUE。それ以外の場合は FALSE の場合*nIndex*が負の値またはポップアップ メニューにメニュー項目の数を超えています。  
@@ -857,8 +857,8 @@ void SetAlwaysLargeImage(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bSet*  
- TRUE の場合、ボタンには、大きいイメージが表示されます。 それ以外の場合、ボタンには、小さいイメージが表示されます。  
+*bSet*<br/>
+[in]TRUE の場合、ボタンには、大きいイメージが表示されます。 それ以外の場合、ボタンには、小さいイメージが表示されます。  
   
 ##  <a name="setdefaultcommand"></a>  CMFCRibbonButton::SetDefaultCommand  
  リボン ボタンの既定のコマンドを有効にします。  
@@ -868,8 +868,8 @@ void SetDefaultCommand(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bSet*  
- TRUE の場合、ボタンは既定のコマンドを実行できます。 FALSE の場合、ボタンは既定のコマンドを実行できません。  
+*bSet*<br/>
+[in]TRUE の場合、ボタンは既定のコマンドを実行できます。 FALSE の場合、ボタンは既定のコマンドを実行できません。  
   
 ### <a name="remarks"></a>Remarks  
  *bSet*はボタンがメニューには、ときにのみ関連します。 場合*bSet* TRUE にも、ボタンは既定のコマンドを実行できる、のみ、ユーザーがボタンの右端にある矢印をクリックすると、割り当てられたポップアップ メニューが表示されます。 それ以外の場合、ボタンは既定のコマンドを実行できませんし、ユーザーがクリックしたボタンの領域に関係なく、ポップアップ メニューが表示されます。  
@@ -896,11 +896,11 @@ void SetImageIndex(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nIndex*  
- イメージのインデックスを指定します。  
+*nIndex*<br/>
+[in]イメージのインデックスを指定します。  
   
- [in]*bLargeImage*  
- TRUE の場合、指定したインデックスは、大きいイメージの一覧を参照します。 それ以外の場合、インデックスは、小さいイメージのリストを参照します。  
+*bLargeImage*<br/>
+[in]TRUE の場合、指定したインデックスは、大きいイメージの一覧を参照します。 それ以外の場合、インデックスは、小さいイメージのリストを参照します。  
   
 ##  <a name="setmenu"></a>  CMFCRibbonButton::SetMenu  
  リボン ボタンにポップアップ メニューを割り当てます。  
@@ -953,8 +953,8 @@ void SetRightAlignMenu(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bSet*  
- TRUE の場合は、メニューは右揃えです。 それ以外の場合、メニューは、左揃え  
+*bSet*<br/>
+[in]TRUE の場合は、メニューは右揃えです。 それ以外の場合、メニューは、左揃え  
   
 ##  <a name="settext"></a>  CMFCRibbonButton::SetText  
 

@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3219 |Microsoft ドキュメント
+title: コンパイラ エラー C3219 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16341412ae5028753b2a542b45da4ea2b549c29e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f60a17d257505752f9d2c791365f537fa02ffc2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248646"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022590"
 ---
 # <a name="compiler-error-c3219"></a>コンパイラ エラー C3219
-'param': ジェネリック パラメーターを、インターフェイスでない複数の 'class' によって制限することはできません  
-  
- 2 つ以上のマネージ クラスでジェネリック パラメーターを制限することはできません。  
-  
- 次の例では、C3219 が生成されます。  
-  
-```  
-// C3219.cpp  
-// compile with: /clr  
-ref class A {};  
-ref class B {};  
-  
-generic <class T>  
-where T : A, B  
-ref class E {};   // C3219  
-```  
-  
- 次の例では、考えられる解決策を示しています。  
-  
-```  
-// C3219b.cpp  
-// compile with: /clr /c  
-ref class A {};  
-  
-interface struct C {};  
-  
-generic <class T>  
-where T : A  
-ref class E {};  
+
+'param': ジェネリック パラメーターを、インターフェイスでない複数の 'class' によって制限することはできません
+
+2 つ以上のマネージド クラスでジェネリック パラメーターを制限することはできません。
+
+次の例では、C3219 が生成されます。
+
+```
+// C3219.cpp
+// compile with: /clr
+ref class A {};
+ref class B {};
+
+generic <class T>
+where T : A, B
+ref class E {};   // C3219
+```
+
+次の例では、考えられる解決策を示しています。
+
+```
+// C3219b.cpp
+// compile with: /clr /c
+ref class A {};
+
+interface struct C {};
+
+generic <class T>
+where T : A
+ref class E {};
 ```

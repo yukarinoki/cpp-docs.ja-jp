@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ba0d46f567232c36eb3dcd7845792bdbe8b6eac
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b321891bc5b9392fffc72ec0c9661a39a5631e5a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955736"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717835"
 ---
 # <a name="strstream-class"></a>strstream クラス
 
@@ -61,7 +61,7 @@ class strstream : public iostream
 |[rdbuf](#rdbuf)|ストリームの関連付けられた `strstreambuf` オブジェクトへのポインターを返します。|
 |[str](#str)|[freeze](../standard-library/strstreambuf-class.md#freeze) を呼び出し、被制御シーケンスの先頭へのポインターを返します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<strstream>
 
@@ -77,8 +77,8 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Freezeit*  
- A **bool**ストリームを停止するかどうかを示します。
+*_Freezeit*<br/>
+A **bool**ストリームを停止するかどうかを示します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -162,14 +162,14 @@ strstream(char* ptr,
 
 ### <a name="parameters"></a>パラメーター
 
-*count*  
- バッファーのサイズ。
+*count*<br/>
+バッファーのサイズ。
 
-*モード (_m)*  
- バッファーの入出力モード。 詳細については、[ios_base::openmode](../standard-library/ios-base-class.md#openmode) をご覧ください。
+*モード (_m)*<br/>
+バッファーの入出力モード。 詳細については、[ios_base::openmode](../standard-library/ios-base-class.md#openmode) をご覧ください。
 
-*ptr*  
- バッファー。
+*ptr*<br/>
+バッファー。
 
 ### <a name="remarks"></a>Remarks
 

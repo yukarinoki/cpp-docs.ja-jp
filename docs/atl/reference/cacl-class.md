@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f5e71fbf1a24a38b0a18e70ce7d0fa044ad4ec5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: db7903dccfd851bb4bf76f1990424f887686d344
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767879"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070107"
 ---
 # <a name="cacl-class"></a>CAcl クラス
 
@@ -161,7 +161,7 @@ CAcl(const CAcl& rhs) throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*rhs*  
+*rhs*<br/>
 既存の `CAcl` オブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -206,16 +206,16 @@ void GetAclEntries(
 
 ### <a name="parameters"></a>パラメーター
 
-*pSids*  
+*pSids*<br/>
 配列へのポインター [CSid](../../atl/reference/csid-class.md)オブジェクト。
 
-*pAccessMasks*  
+*pAccessMasks*<br/>
 アクセス マスク。
 
-*pAceTypes*  
+*pAceTypes*<br/>
 アクセス制御エントリ (ACE) の型。
 
-*pAceFlags*  
+*pAceFlags*<br/>
 ACE フラグを設定します。
 
 ### <a name="remarks"></a>Remarks
@@ -243,25 +243,25 @@ void GetAclEntry(
 
 ### <a name="parameters"></a>パラメーター
 
-*nIndex*  
+*nIndex*<br/>
 取得する ACL エントリのインデックスです。
 
-*pSid*  
+*pSid*<br/>
 [CSid](../../atl/reference/csid-class.md) ACL エントリを適用するオブジェクトします。
 
-*pMask*  
+*pMask*<br/>
 アクセス許可または拒否するアクセス許可を指定するマスク。
 
-*p 入力してください。*  
+*p 入力してください。*<br/>
 ACE の種類。
 
-*pFlags*  
+*pFlags*<br/>
 ACE フラグを設定します。
 
-*pObjectType*  
+*pObjectType*<br/>
 オブジェクトの型。 ACE がオブジェクトの ACE ではない場合、ACE のオブジェクトの種類が指定されていない場合または GUID_ に設定されます。
 
-*pInheritedObjectType*  
+*pInheritedObjectType*<br/>
 継承されたオブジェクトの種類。 ACE がオブジェクトの ACE ではない場合、ACE の継承されたオブジェクトの種類が指定されていない場合または GUID_ に設定されます。
 
 ### <a name="remarks"></a>Remarks
@@ -322,7 +322,7 @@ True の場合、`CAcl`オブジェクトが null の場合、FALSE それ以外
 
 キャストを`CAcl`オブジェクトを`ACL`(アクセス制御リスト) の構造体。
 
-```  
+```
 operator const ACL *() const throw(...);
 ```
 
@@ -340,7 +340,7 @@ CAcl& operator= (const CAcl& rhs) throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*rhs*  
+*rhs*<br/>
 `CAcl`を既存のオブジェクトを割り当てる。
 
 ### <a name="return-value"></a>戻り値
@@ -357,7 +357,7 @@ void RemoveAce(UINT nIndex) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nIndex*  
+*nIndex*<br/>
 削除する ACE のエントリのインデックスです。
 
 ### <a name="remarks"></a>Remarks
@@ -374,7 +374,7 @@ bool RemoveAces(const CSid& rSid) throw(...)
 
 ### <a name="parameters"></a>パラメーター
 
-*rSid*  
+*rSid*<br/>
 `CSid` オブジェクトへの参照。
 
 ##  <a name="setempty"></a>  CAcl::SetEmpty
@@ -403,5 +403,5 @@ void SetNull() throw();
 
 ## <a name="see-also"></a>関連項目
 
-[クラスの概要](../../atl/atl-class-overview.md)   
+[クラスの概要](../../atl/atl-class-overview.md)<br/>
 [セキュリティに関するグローバル関数](../../atl/reference/security-global-functions.md)

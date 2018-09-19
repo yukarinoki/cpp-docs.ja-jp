@@ -1,5 +1,5 @@
 ---
-title: 関数を使った DLL からエクスポート |Microsoft ドキュメント
+title: 関数を使った DLL からエクスポートする |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,74 +20,76 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6ab1d11c117c75633ce4ab836965449c4cc6ca1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0415bf6d2019e192f60aa7796fd120f0fa8a7a67
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368549"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710477"
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>__declspec(dllexport) を使った DLL からのエクスポート
-導入された Microsoft **_ _export**コンパイラは、エクスポート名を自動的に生成し、.lib ファイルに配置するために Visual C の 16 ビットのコンパイラのバージョンにします。 この .lib ファイルは、DLL とリンクするスタティック ライブラリと同じように使用できます。  
-  
- 新しいバージョンのコンパイラでからエクスポートできるデータ、関数、クラス、またはクラス メンバー関数を使用して、DLL、**方式**キーワード。 **方式**.def ファイルを使用する必要はありませんので、オブジェクト ファイルにエクスポート ディレクティブを追加します。  
-  
- この機能は、C++ 関数の装飾名をエクスポートする場合に特に便利です。 名前の装飾には標準仕様がないので、エクスポート関数の名前は、コンパイラのバージョン間で変わる場合があります。 使用する場合**方式**DLL と従属する .exe ファイルを再コンパイルは、名前付け規約の変更に必要なアカウントのみにします。  
-  
- 序数、NONAME、PRIVATE など、多くのエクスポート ディレクティブは、.def ファイル内にしか作成されないので、これらの属性を .def ファイルを使用せずに指定することはできません。 ただしを使用して**方式**に加えて使用して、.def ファイルはエラーが発生しないビルドします。  
-  
- 関数をエクスポートする、**方式**キーワードはキーワードが指定されている場合、呼び出し規約キーワードの左側に表示する必要があります。 例えば:  
-  
-```  
-__declspec(dllexport) void __cdecl Function1(void);  
-```  
-  
- クラス内のすべてのパブリック データ メンバーおよびメンバー関数をエクスポートするには、次のように、クラス名の左にキーワードを記述します。  
-  
-```  
-class __declspec(dllexport) CExampleExport : public CObject  
-{ ... class definition ... };  
-```  
-  
+
+導入された Microsoft **_ _export** 16 ビットのコンパイラ バージョンの Visual C コンパイラは、エクスポート名を自動的に生成し、.lib ファイルに配置します。 この .lib ファイルは、DLL とリンクするスタティック ライブラリと同じように使用できます。
+
+新しいバージョンのコンパイラからエクスポートできますデータ、関数、クラス、またはクラス メンバー関数を使用して、DLL、**方式**キーワード。 **方式**.def ファイルを使用する必要はありませんので、オブジェクト ファイルにエクスポート ディレクティブを追加します。
+
+この機能は、C++ 関数の装飾名をエクスポートする場合に特に便利です。 名前の装飾には標準仕様がないので、エクスポート関数の名前は、コンパイラのバージョン間で変わる場合があります。 使用する場合**方式**アカウントにのみ、名前付け規約の変更のために必要なは、DLL と従属する .exe ファイルを再コンパイルします。
+
+序数、NONAME、PRIVATE など、多くのエクスポート ディレクティブは、.def ファイル内にしか作成されないので、これらの属性を .def ファイルを使用せずに指定することはできません。 ただしを使用して**方式**に加えて、.def ファイルはしないビルド エラーが発生します。
+
+関数をエクスポートする、**方式**キーワードはキーワードが指定されている場合、呼び出し規約キーワードの左側に表示する必要があります。 例えば:
+
+```
+__declspec(dllexport) void __cdecl Function1(void);
+```
+
+クラス内のすべてのパブリック データ メンバーおよびメンバー関数をエクスポートするには、次のように、クラス名の左にキーワードを記述します。
+
+```
+class __declspec(dllexport) CExampleExport : public CObject
+{ ... class definition ... };
+```
+
 > [!NOTE]
->  `__declspec(dllexport)` は、`__clrcall` 呼び出し規約を伴う関数には適用できません。  
-  
- 通常関数のプロトタイプやクラスをエクスポートして、追加を含むヘッダー ファイルを作成する DLL を作成するときに**方式**ヘッダー ファイル内の宣言にします。 コードを読みやすくするためのマクロを定義**方式**しをエクスポートする各シンボルでマクロを使用します。  
-  
-```  
-#define DllExport   __declspec( dllexport )   
-```  
-  
- **方式**ストア関数の DLL のエクスポート テーブル内の名前。 テーブルのサイズを最適化する場合は、「[関数ではなく序数値名によって、DLL のエクスポート](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)です。  
-  
+>  `__declspec(dllexport)` は、`__clrcall` 呼び出し規約を伴う関数には適用できません。
+
+通常、関数のプロトタイプやエクスポートし、追加するクラスを含むヘッダー ファイルを作成する DLL を作成するときに**方式**ヘッダー ファイル内の宣言にします。 コードを読みやすくするためのマクロを定義**方式**をエクスポートする各シンボルでマクロを使用。
+
+```
+#define DllExport   __declspec( dllexport )
+```
+
+**方式**ストア機能の DLL のエクスポート テーブル内の名前。 テーブルのサイズを最適化する場合を参照してください。[関数ではなく序数値の名前を DLL からエクスポート](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)します。
+
 > [!NOTE]
->  移植と DLL ソース コードを Win16 から Win32 に、置換の各インスタンス **_ _export**で**方式**です。  
-  
- 参考として、Win32 の Winbase.h ヘッダー ファイルを検索してください。 例が含まれている **_declspec (dllimport)** 使用します。  
-  
-## <a name="what-do-you-want-to-do"></a>実行する操作  
-  
--   [.Def ファイルを使った DLL からエクスポートします。](../build/exporting-from-a-dll-using-def-files.md)  
-  
--   [AFX_EXT_CLASS を使ったエクスポート/インポート](../build/exporting-and-importing-using-afx-ext-class.md)  
-  
--   [C 言語の実行可能ファイルで使用するための C++ 関数をエクスポートします。](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
-  
--   [C または C++ 言語の実行可能ファイルで使用するための C 関数をエクスポートします。](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)  
-  
--   [エクスポート方式を使い分け](../build/determining-which-exporting-method-to-use.md)  
-  
--   [_Declspec (dllimport) を使用してアプリケーションをインポートします。](../build/importing-into-an-application-using-declspec-dllimport.md)  
-  
--   [DLL を初期化します。](../build/run-time-library-behavior.md#initializing-a-dll)  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください  
-  
--   [_ _Declspec キーワード](../cpp/declspec.md)  
-  
--   [インポートして、インライン関数をエクスポートします。](../build/importing-and-exporting-inline-functions.md)  
-  
--   [相互インポート](../build/mutual-imports.md)  
-  
-## <a name="see-also"></a>関連項目  
- [DLL からのエクスポート](../build/exporting-from-a-dll.md)
+>  Win16 から Win32 への DLL ソース コードを移植するときの各インスタンスを置き換える **_ _export**で**方式**します。
+
+参考として、Win32 の Winbase.h ヘッダー ファイルを検索してください。 例が含まれている **_declspec**使用量。
+
+## <a name="what-do-you-want-to-do"></a>実行する操作
+
+- [.Def ファイルを使った DLL からエクスポートします。](../build/exporting-from-a-dll-using-def-files.md)
+
+- [AFX_EXT_CLASS を使ったエクスポート/インポート](../build/exporting-and-importing-using-afx-ext-class.md)
+
+- [C 言語の実行可能ファイルで使用するための C++ 関数をエクスポートします。](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+
+- [C または C++ 言語の実行可能ファイルで使用するための C 関数をエクスポートします。](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+
+- [エクスポート方式の使用](../build/determining-which-exporting-method-to-use.md)
+
+- [使用してアプリケーションをインポートします。](../build/importing-into-an-application-using-declspec-dllimport.md)
+
+- [DLL を初期化します。](../build/run-time-library-behavior.md#initializing-a-dll)
+
+## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
+
+- [_ _Declspec キーワード](../cpp/declspec.md)
+
+- [インポートとエクスポートのインライン関数](../build/importing-and-exporting-inline-functions.md)
+
+- [相互インポート](../build/mutual-imports.md)
+
+## <a name="see-also"></a>関連項目
+
+[DLL からのエクスポート](../build/exporting-from-a-dll.md)

@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2995 |Microsoft ドキュメント
+title: コンパイラ エラー C2995 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5afd073e8877e2e28d5163d9c2e5ae72b9b7d4e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b63028629dd23d3bae20da0b1470cf3239c00306
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242011"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109378"
 ---
 # <a name="compiler-error-c2995"></a>コンパイラ エラー C2995
-'function': 関数テンプレートは既に定義されています  
-  
- テンプレート クラスの各メンバー関数の定義は 1 つのみであることを確認します。  
-  
- 次の例では C2995 が生成されます。  
-  
-```  
-// C2995.cpp  
-// compile with: /c  
-template <class T>  
-void Test(T x){}  
-  
-template <class T> void Test(T x){}   // C2995  
-template <class T> void Test2(T x){}   // OK  
+
+'function': 関数テンプレートは既に定義されています
+
+テンプレート クラスの各メンバー関数の定義は 1 つのみであることを確認します。
+
+次の例では C2995 が生成されます。
+
+```
+// C2995.cpp
+// compile with: /c
+template <class T>
+void Test(T x){}
+
+template <class T> void Test(T x){}   // C2995
+template <class T> void Test2(T x){}   // OK
 ```

@@ -30,60 +30,64 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13707791b78de2c000535d60ed3f298046e4576c
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: c323780308d71158bf717898a05f3454fabf0c3d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451287"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030244"
 ---
 # <a name="getmainargs-wgetmainargs"></a>__getmainargs、__wgetmainargs
-コマンドライン解析を呼び出し、渡されたポインターを通して引数を `main()` にコピーし直します。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-int __getmainargs(  
-    int * _Argc,   
-   char *** _Argv,   
-   char *** _Env,   
-   int _DoWildCard,  
-_startupinfo * _StartInfo);  
-  
- int __wgetmainargs (  
-   int *_Argc,  
-   wchar_t ***_Argv,  
-   wchar_t ***_Env,  
-   int _DoWildCard,  
-   _startupinfo * _StartInfo)  
-  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
- `_Argc`  
- これに続いて `argv` で渡される引数の数を格納した整数。 `argc` パラメーターは、必ず 1 以上になります。  
-  
- `_Argv`  
- プログラムのユーザーが入力したコマンド ライン引数を表す、null で終了する文字列配列。 規則により、`argv[0]` はプログラムが起動されるコマンドになります。argv[1] が最初のコマンド ライン引数で、以降、必ず **NULL** となる argv[argc] までの間、順に引数が続きます。 最初のコマンド ライン引数は、必ず `argv[1]` となり、最後のコマンド ライン引数は、`argv[argc - 1]` になります。  
-  
- `_Env`  
- ユーザーの環境で設定された変数を表す文字列の配列です。 この配列は **NULL** エントリで終了します。  
-  
- `_DoWildCard`  
- 整数。1 に設定されている場合はコマンドライン引数にあるワイルドカードを展開し、0 に設定されているの場合は何もしません。  
-  
- `_StartInfo`  
- CRT DLL に渡される他の情報です。  
-  
-## <a name="return-value"></a>戻り値  
- 成功した場合は 0、失敗した場合は負の値です。  
-  
-## <a name="remarks"></a>コメント  
- `__getmainargs` は非ワイド文字プラットフォーム、`__wgetmainargs` はワイド文字 (Unicode) プラットフォームで使用します。  
-  
-## <a name="requirements"></a>必要条件  
-  
-|ルーチンによって返される値|必須ヘッダー|  
-|-------------|---------------------|  
-|__getmainargs|internal.h|  
+
+コマンドライン解析を呼び出し、渡されたポインターを通して引数を `main()` にコピーし直します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+int __getmainargs(
+    int * _Argc,
+   char *** _Argv,
+   char *** _Env,
+   int _DoWildCard,
+_startupinfo * _StartInfo);
+
+int __wgetmainargs (
+   int *_Argc,
+   wchar_t ***_Argv,
+   wchar_t ***_Env,
+   int _DoWildCard,
+   _startupinfo * _StartInfo)
+
+```
+
+#### <a name="parameters"></a>パラメーター
+
+`_Argc`<br/>
+これに続いて `argv` で渡される引数の数を格納した整数。 `argc` パラメーターは、必ず 1 以上になります。
+
+`_Argv`<br/>
+プログラムのユーザーが入力したコマンド ライン引数を表す、null で終了する文字列配列。 規則により、`argv[0]` はプログラムが起動されるコマンドになります。argv[1] が最初のコマンド ライン引数で、以降、必ず **NULL** となる argv[argc] までの間、順に引数が続きます。 最初のコマンド ライン引数は、必ず `argv[1]` となり、最後のコマンド ライン引数は、`argv[argc - 1]` になります。
+
+`_Env`<br/>
+ユーザーの環境で設定された変数を表す文字列の配列です。 この配列は **NULL** エントリで終了します。
+
+`_DoWildCard`<br/>
+整数。1 に設定されている場合はコマンドライン引数にあるワイルドカードを展開し、0 に設定されているの場合は何もしません。
+
+`_StartInfo`<br/>
+CRT DLL に渡される他の情報です。
+
+## <a name="return-value"></a>戻り値
+
+成功した場合は 0、失敗した場合は負の値です。
+
+## <a name="remarks"></a>コメント
+
+`__getmainargs` は非ワイド文字プラットフォーム、`__wgetmainargs` はワイド文字 (Unicode) プラットフォームで使用します。
+
+## <a name="requirements"></a>必要条件
+
+|ルーチンによって返される値|必須ヘッダー|
+|-------------|---------------------|
+|__getmainargs|internal.h|
 |__wgetmainargs|internal.h|

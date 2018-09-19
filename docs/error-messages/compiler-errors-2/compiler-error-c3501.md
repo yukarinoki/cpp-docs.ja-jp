@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3501 |Microsoft ドキュメント
+title: コンパイラ エラー C3501 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a74c3f06165765f971a8999dfe80412dd99dc719
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bdf614c8b04dc9695d870aa8254cff8a2b75ca26
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253427"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086279"
 ---
 # <a name="compiler-error-c3501"></a>コンパイラ エラー C3501
-ProgID 'progid' の登録された typelib はありません。  
-  
- クラス ID を指定された progid が関連付けられているタイプ ライブラリ。 したがって、することはできませんに渡すことを progid、`#import`ステートメントです。
+
+ProgID 'progid' の登録された typelib はありません。
+
+クラス ID を指定された progid が、関連付けられているタイプ ライブラリ。 したがって、渡すことはできませんこの progid を`#import`ステートメント。

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0aa5b4028863ff31084e8d01892a86b990de51fb
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 15c166f51e8d512dd0c5ef8d98bf1e6cf991664f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540448"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714208"
 ---
 # <a name="shiftright128"></a>__shiftright128
 **Microsoft 固有の仕様**  
@@ -39,14 +39,14 @@ unsigned __int64 __shiftright128(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力] `LowPart`  
- シフトする 128 ビット数の下位 64 ビット。  
+*下位*<br/>
+[in]シフトする 128 ビット数の下位 64 ビット。  
   
- [入力] `HighPart`  
- シフトする 128 ビット数の上位 64 ビット。  
+*上位*<br/>
+[in]シフトする 128 ビット数の上位 64 ビット。  
   
- [入力] `Shift`  
- シフトするビット数。  
+*Shift*<br/>
+[in]シフトするビット数。  
   
 ## <a name="return-value"></a>戻り値  
  結果の下位 64 ビット。  

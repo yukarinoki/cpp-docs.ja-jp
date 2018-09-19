@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9f9554f0ba8daf5a96f0fa2daa32e0e20469bf7
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 7b3487b29122b4a5109a6c0de51cd0e459380aa4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335406"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117375"
 ---
 # <a name="cmapwordtoob-class"></a>CMapWordToOb クラス
 16 ビット ワードをキーとした `CObject` ポインターのマップをサポートします。  
@@ -63,9 +63,7 @@ class CMapWordToOb : public CObject
 ## <a name="members"></a>メンバー  
  メンバー関数は、`CMapWordToOb`クラスのメンバー関数のような[CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)します。 メンバー関数については `CMapStringToOb` クラスの説明を参照してください。 任意の場所を確認、`CString`または**const**へのポインター **char**関数パラメーターまたは戻り値は、WORD に置き換えてください。  
   
- `BOOL CMapStringToOb::Lookup( const char* <key>,`  
-  
- `CObject*& <rValue> ) const;`  
+ `BOOL CMapStringToOb::Lookup( const char* <key>,` CObject* & <rValue> ) const;'  
   
  たとえば、次のように変換します。  
   
@@ -115,7 +113,7 @@ class CMapWordToOb : public CObject
   
  `CMapWordToOb`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxcoll.h  
   
 ## <a name="see-also"></a>関連項目  

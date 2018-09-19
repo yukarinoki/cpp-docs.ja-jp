@@ -1,5 +1,5 @@
 ---
-title: リソース コンパイラの致命的なエラー RC1002 |Microsoft ドキュメント
+title: リソース コンパイラの致命的なエラー RC1002 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 886b44d0a51df10295428daa69c8ea358660fd25
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d54f49b7cce988c5902a01142efe061ba03e424
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321666"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114528"
 ---
 # <a name="resource-compiler-fatal-error-rc1002"></a>リソース コンパイラの致命的なエラー RC1002
-ヒープ スペースがありません。  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>以下の可能性がある解決策を使って修正するには  
-  
-1.  Windows のスワップ ファイルの領域を増やします。 詳細については、スワップ ファイルの容量を増やすと、Windows のヘルプ内の仮想メモリを参照してください。  
-  
-2.  小さなファイルに現在のファイルに分割し、個別にコンパイルします。  
-  
-3.  その他のプログラムまたはシステムで実行されているドライバーを削除します。
+
+ヒープ スペースがありません。
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>以下の可能性がある解決策を使って修正するには
+
+1. Windows のスワップ ファイルの領域を増やします。 スワップ ファイルの領域を増やす方法の詳細については、Windows のヘルプ内の仮想メモリを参照してください。
+
+1. 小さなファイルに、現在のファイルに分割し、個別にコンパイルします。
+
+1. その他のプログラムまたはシステムで実行されているドライバーを削除します。

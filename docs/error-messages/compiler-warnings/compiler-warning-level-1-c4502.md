@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4502 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4502 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb812e462ffac15626a0504a81f4a32f7231617f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a88ed68f48960afb7dd0a13e91f44f63d00313be
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33278579"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037724"
 ---
 # <a name="compiler-warning-level-1-c4502"></a>コンパイラの警告 (レベル 1) C4502
-'リンケージ指定' は 'extern' キーワードを使用する必要があり。、他のすべての指定子の前にする必要があります。  
-  
- なし、リンケージが指定されました、`extern`キーワード。 リンケージは、extern 以外の型には無効です。  
-  
- コンパイラと見なされます、`extern`キーワード。
+
+'リンケージ指定子' が 'extern' キーワードを使用する必要があり。、その他のすべての指定子の前にする必要があります。
+
+せず、リンケージが指定されて、`extern`キーワード。 リンケージが extern 以外の種類に関連するではありません。
+
+コンパイラと見なされます、`extern`キーワード。

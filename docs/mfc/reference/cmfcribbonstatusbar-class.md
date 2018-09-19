@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 378ecc3c02a78bc99fa999090119e75a45dc27a7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3123206c90bd5dd901e25ff3fe26e48ba8809452
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538732"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710509"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>CMFCRibbonStatusBar クラス
 `CMFCRibbonStatusBar`クラスは、リボン要素を表示できるステータス バー コントロールを実装します。  
@@ -149,8 +149,8 @@ void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pElement*  
- 動的な要素へのポインター。  
+*pElement*<br/>
+[in]動的な要素へのポインター。  
   
 ### <a name="remarks"></a>Remarks  
  正規表現の要素とは異なり、動的な要素はカスタマイズできず、ステータス バーの [カスタマイズ] メニューは表示されません。  
@@ -166,14 +166,14 @@ void AddElement(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pElement*  
- 追加された要素へのポインター。  
+*pElement*<br/>
+[in]追加された要素へのポインター。  
   
- [in]*lpszLabel*  
- 要素のテキスト ラベル。  
+*lpszLabel*<br/>
+[in]要素のテキスト ラベル。  
   
- [in]*bIsVisible*  
- 非表示として、要素を追加する場合に表示、として要素を FALSE 追加する場合は TRUE。  
+*bIsVisible*<br/>
+[in]非表示として、要素を追加する場合に表示、として要素を FALSE 追加する場合は TRUE。  
   
 ##  <a name="addextendedelement"></a>  CMFCRibbonStatusBar::AddExtendedElement  
  リボン ステータス バーの拡張領域には、リボン要素を追加します。  
@@ -186,14 +186,14 @@ void AddExtendedElement(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pElement*  
- 追加された要素へのポインター。  
+*pElement*<br/>
+[in]追加された要素へのポインター。  
   
- [in]*lpszLabel*  
- 要素のテキスト ラベル。  
+*lpszLabel*<br/>
+[in]要素のテキスト ラベル。  
   
- [in]*bIsVisible*  
- 非表示として、要素を追加する場合に表示、として要素を FALSE 追加する場合は TRUE。  
+*bIsVisible*<br/>
+[in]非表示として、要素を追加する場合に表示、として要素を FALSE 追加する場合は TRUE。  
   
 ### <a name="remarks"></a>Remarks  
  拡張領域は、ステータス バー コントロールの右側にあります。  
@@ -219,14 +219,14 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pParentWnd*  
- 親ウィンドウへのポインター。  
+*pParentWnd*<br/>
+[in]親ウィンドウへのポインター。  
   
- [in]*dwStyle*  
- コントロールのスタイルの論理 OR の組み合わせ。  
+*dwStyle*<br/>
+[in]コントロールのスタイルの論理 OR の組み合わせ。  
   
- [in]*nID*  
- ステータス バーのコントロール ID。  
+*nID*<br/>
+[in]ステータス バーのコントロール ID。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合、ステータス バーが正常に作成、FALSE それ以外の場合。  
@@ -266,8 +266,8 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiCmdID*  
- [in]*BOOL*  
+*uiCmdID*<br/>
+[in][in]*BOOL*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -281,8 +281,8 @@ CMFCRibbonBaseElement* FindElement(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiID*  
- 要素の ID。  
+*uiID*<br/>
+[in]要素の ID。  
   
 ### <a name="return-value"></a>戻り値  
  指定したコマンド ID を持つ要素へのポインター このような要素が存在しない場合は NULL です。  
@@ -305,8 +305,8 @@ CMFCRibbonBaseElement* GetElement(int nIndex);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nIndex*  
- ステータス バー コントロールのメイン領域に配置されている要素の 0 から始まるインデックスを指定します。  
+*nIndex*<br/>
+[in]ステータス バー コントロールのメイン領域に配置されている要素の 0 から始まるインデックスを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  指定したインデックス位置にある要素へのポインター。 インデックスが負の値またはステータス バー内の要素の数を超える場合は NULL です。  
@@ -331,8 +331,8 @@ CMFCRibbonBaseElement* GetExElement(int nIndex);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nIndex*  
- ステータス バー コントロールの拡張領域内にある要素の 0 から始まるインデックスを指定します。  
+*nIndex*<br/>
+[in]ステータス バー コントロールの拡張領域に配置されている要素の 0 から始まるインデックスを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  リボン ステータス バーの拡張領域内の指定されたインデックスにある要素へのポインター。 場合は NULL *nIndex*が負の値またはリボン ステータス バーの拡張領域内の要素の数を超えています。  
@@ -413,14 +413,14 @@ virtual void OnDrawInformation(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*strInfo*  
- 情報の文字列。  
+*strInfo*<br/>
+[in]情報の文字列。  
   
- [in]*rectInfo*  
- 外接する四角形。  
+*rectInfo*<br/>
+[in]外接する四角形。  
   
 ### <a name="remarks"></a>Remarks  
  ステータス バー情報の文字列の外観をカスタマイズする場合は、派生クラスでこのメソッドをオーバーライドします。 使用して、 [CMFCRibbonStatusBar::SetInformation](#setinformation)情報モードで、ステータス バーを配置するメソッド。 このモードで、ステータス バーはすべてのペインを非表示にしで指定された情報文字列を表示します*strInfo*します。  
@@ -449,8 +449,8 @@ BOOL RemoveElement(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiID*  
- ステータス バーから削除する要素の ID。  
+*uiID*<br/>
+[in]ステータス バーから削除する要素の ID。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合、指定した要素*uiID*が削除されます。 FALSE それ以外の場合。  
@@ -463,8 +463,8 @@ void SetInformation(LPCTSTR lpszInfo);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszInfo*  
- 情報の文字列。  
+*lpszInfo*<br/>
+[in]情報の文字列。  
   
 ### <a name="remarks"></a>Remarks  
  情報のモードで、ステータス バーを配置するのにには、このメソッドを使用します。 このモードで、ステータス バーはすべてのペインを非表示にしで指定された情報文字列を表示します*lpszInfo*します。  

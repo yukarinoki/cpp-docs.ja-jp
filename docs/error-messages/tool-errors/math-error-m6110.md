@@ -1,5 +1,5 @@
 ---
-title: 数値演算エラー M6110 |Microsoft ドキュメント
+title: 数値演算エラー M6110 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f97918c38f896dd5fccd3abeae86a3104cf80694
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 333a6d9741d4ccaa5764e84fabd71f58788c1b6d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316057"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46015797"
 ---
 # <a name="math-error-m6110"></a>数値演算エラー M6110
-スタック オーバーフロー  
-  
- 浮動小数点式には、浮動小数点スタック オーバーフローが発生しました。  
-  
- スタック オーバーフロー浮動小数点の例外は、8087/287/387 コプロセッサでサポートされる通常 8 つのレベルに加え、7 つのレベルの上限に達するまでトラップします。  
-  
- プログラムは、終了コード 138 で終了します。
+
+スタック オーバーフロー
+
+浮動小数点式には、浮動小数点スタック オーバーフローが発生します。
+
+浮動小数点例外のスタック オーバーフローは、8087/287/387 コプロセッサでサポートされる、通常、8 つのレベルだけでなく、7 つのレベルの上限に達するまでにトラップされます。
+
+終了コード 138 でプログラムを終了します。

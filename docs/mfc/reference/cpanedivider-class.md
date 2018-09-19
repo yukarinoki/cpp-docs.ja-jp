@@ -94,12 +94,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d19ede21d90353f9741a5a1250eddf049de71aa6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6e4b62bdf31a88c0b8ea11198949de474b2a4eb2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42545807"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701546"
 ---
 # <a name="cpanedivider-class"></a>CPaneDivider クラス
 詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。  
@@ -168,7 +168,7 @@ class CPaneDivider : public CBasePane
   
 ### <a name="data-members"></a>データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CPaneDivider::m_nDefaultWidth](#m_ndefaultwidth)|アプリケーションのすべてのペインの区分線のピクセル単位で既定の幅を指定します。|  
 |[CPaneDivider::m_pSliderRTC](#m_psliderrtc)|ランタイム クラス情報へのポインターを保持する`CPaneDivider`の派生オブジェクト。|  
@@ -247,10 +247,10 @@ virtual BOOL AddPaneContainer(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*barContainerManager*  
- [in]*bOuterEdge*  
- [in]*pTargetBar*  
- [in]*場合*  
+*barContainerManager*<br/>
+[in][in]*bOuterEdge*  
+*pTargetBar*<br/>
+[in][in]*場合*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -283,10 +283,10 @@ virtual void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWndToDock*  
- [in]*ptMouse*  
- [in]*rectResult*  
- [in]*bDrawTab*  
+*pWndToDock*<br/>
+[in][in]*ptMouse*  
+*rectResult*<br/>
+[in][in]*bDrawTab*  
  [in]*ppTargetBar*  
   
 ### <a name="remarks"></a>Remarks  
@@ -301,8 +301,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bStretch*  
- [in]*bHorz*  
+*bStretch*<br/>
+[in][in]*bHorz*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -332,8 +332,8 @@ CPaneDivider(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bDefaultSlider*  
- [in]*pParent*  
+*bDefaultSlider*<br/>
+[in][in]*pParent*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -353,12 +353,12 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*dwStyleEx*  
- [in]*dwStyle*  
- [in]*rect*  
- [in]*pParentWnd*  
- [in]*nID*  
- [in]*pContext*  
+*dwStyleEx*<br/>
+[in][in]*dwStyle*  
+*rect*<br/>
+[in][in]*pParentWnd*  
+*nID*<br/>
+[in][in]*pContext*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -396,8 +396,8 @@ CPaneContainer* FindPaneContainer(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pBar*  
- [in]*bLeftBar*  
+*pBar*<br/>
+[in][in]*bLeftBar*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -447,8 +447,8 @@ void GetPaneDividers(CObList& lstSliders);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*lstSliders*  
- ウィンドウのコンテナー内に存在するペインの区分線の一覧が含まれています。  
+*lstSliders*<br/>
+[out]ウィンドウのコンテナー内に存在するペインの区分線の一覧が含まれています。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、既定ペイン区分線のみを呼び出す必要があります。 既定のウィンドウの区分線は、ウィンドウ全体のコンテナーのサイズを変更する区分線です。  
@@ -472,8 +472,8 @@ void GetPanes(CObList& lstBars);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*lstBars*  
- ウィンドウのコンテナーに格納されているペインの一覧が含まれています。  
+*lstBars*<br/>
+[out]ウィンドウのコンテナーに格納されているペインの一覧が含まれています。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、既定ペイン区分線のみを呼び出す必要があります。 既定のウィンドウの区分線は、ウィンドウ全体のコンテナーのサイズを変更する区分線です。  
@@ -510,8 +510,8 @@ void Init(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bDefaultSlider*  
- [in]*pParent*  
+*bDefaultSlider*<br/>
+[in][in]*pParent*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -527,10 +527,10 @@ virtual BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pBarToInsert*  
- [in]*pTargetBar*  
- [in]*場合*  
- [in]*lpRect*  
+*pBarToInsert*<br/>
+[in][in]*pTargetBar*  
+*場合*<br/>
+[in][in]*lpRect*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -586,8 +586,8 @@ virtual void Move(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ptOffset*  
- [in]*bAdjustLayout*  
+*ptOffset*<br/>
+[in][in]*bAdjustLayout*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -632,8 +632,8 @@ virtual void OnShowPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pBar*  
- [in]*bShow*  
+*pBar*<br/>
+[in][in]*bShow*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -668,8 +668,8 @@ virtual BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pBarToReplace*  
- [in]*pBarToReplaceWith*  
+*pBarToReplace*<br/>
+[in][in]*pBarToReplaceWith*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -685,8 +685,8 @@ virtual void RepositionPanes(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*rectNew*  
- [in]*hdwp*  
+*rectNew*<br/>
+[in][in]*hdwp*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -736,8 +736,8 @@ void StoreRecentTabRelatedInfo(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDockingBar*  
- [in]*pTabbedBar*  
+*pDockingBar*<br/>
+[in][in]*pTabbedBar*  
   
 ### <a name="remarks"></a>Remarks  
   

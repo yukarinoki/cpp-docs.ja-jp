@@ -1,5 +1,5 @@
 ---
-title: :ptr クラス |Microsoft ドキュメント
+title: com::ptr クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 27adaa2d91bac38c587ee7e4ec9c805c102d4883
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3cd5b4115d50f9e2db9b1e3dc8a03818e2c8252f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33108287"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066728"
 ---
 # <a name="comptr-class"></a>com::ptr Class
-CLR クラスのメンバーとして使用できる COM オブジェクトのラッパーです。  ラッパーは、またそのデストラクターが呼び出されたときに、オブジェクトを所有しているすべての参照を解放し、COM オブジェクトの有効期間の管理を自動化します。 に似て[CComPtr クラス](../atl/reference/ccomptr-class.md)です。  
+CLR クラスのメンバーとして使用できる COM オブジェクトのラッパーです。  また、ラッパーには、そのデストラクターが呼び出されたときに、オブジェクトを所有しているすべての参照を解放し、COM オブジェクトの有効期間管理が自動化されます。 類似しています[CComPtr クラス](../atl/reference/ccomptr-class.md)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,18 +38,18 @@ ref class ptr;
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `_interface_type`  
- COM インターフェイスです。  
+*_interface_type*<br/>
+COM インターフェイスです。  
   
-## <a name="remarks"></a>コメント  
- A `com::ptr` COM のさまざまなタスクを簡略化、有効期間の管理を自動化する、ローカル関数の変数として使用もできます。  
+## <a name="remarks"></a>Remarks  
+ A `com::ptr` COM のさまざまなタスクを簡略化および有効期間管理を自動化するもローカル関数の変数としては使用できます。  
   
- A`com::ptr`関数のパラメーターとして直接使用することはできません。 を使用して、[参照演算子の追跡](../windows/tracking-reference-operator-cpp-component-extensions.md)または[オブジェクト演算子 (^) へのハンドル](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)代わりにします。  
+ A`com::ptr`関数のパラメーターとして直接使用することはできません。 使用して、[参照演算子の追跡](../windows/tracking-reference-operator-cpp-component-extensions.md)または[オブジェクト演算子 (^) へのハンドル](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)代わりにします。  
   
  A`com::ptr`関数から直接返されることはできません。 代わりに、ハンドルを使用します。  
   
 ## <a name="example"></a>例  
- この例を使用して CLR クラスを実装して、`com::ptr`をそのプライベート メンバーをラップする`IXMLDOMDocument`オブジェクト。  クラスの結果のパブリック メソッドを呼び出し、格納されているへの呼び出しで`IXMLDOMDocument`オブジェクト。  サンプルは、XML ドキュメントのインスタンスを作成するには、いくつかの単純な XML が格納および簡単に、コンソールに XML を出力する解析済みドキュメント ツリーのノードの走査します。  
+ この例の実装を使用する CLR クラス、`com::ptr`のプライベート メンバーをラップする`IXMLDOMDocument`オブジェクト。  クラスの結果のパブリック メソッドを呼び出し、格納されている呼び出しで`IXMLDOMDocument`オブジェクト。  サンプルは、XML ドキュメントのインスタンスを作成し、簡単な XML が格納、簡単に、コンソールに XML を出力する解析済みドキュメント ツリー内のノードの走査。  
   
 ```  
 // comptr.cpp  
@@ -169,5 +169,5 @@ int main() {
  **Namespace** msclr::com  
   
 ## <a name="see-also"></a>関連項目  
- [C++ のサポート ライブラリ](../dotnet/cpp-support-library.md)   
+ [C++ サポート ライブラリ](../dotnet/cpp-support-library.md)   
  [ptr のメンバー](../dotnet/ptr-members.md)

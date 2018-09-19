@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13f411f9f50b1a498dba718b41245f8fbb7c6e79
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a6bed16f338c5ee3333529613189fe03ad7e3ec3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851588"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709554"
 ---
 # <a name="cmfclinkctrl-class"></a>CMFCLinkCtrl クラス
 `CMFCLinkCtrl`クラス ボタンをハイパーリンクとして表示し、ボタンがクリックされたときに、リンクのターゲットを呼び出します。  
@@ -78,7 +78,7 @@ class CMFCLinkCtrl : public CMFCButton
   
  [CMFCLinkCtrl](../../mfc/reference/cmfclinkctrl-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxlinkctrl.h  
   
 ##  <a name="ondrawfocusrect"></a>  CMFCLinkCtrl::OnDrawFocusRect  
@@ -91,11 +91,11 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rectClient*  
- リンク コントロールの外接する四角形にします。  
+*rectClient*<br/>
+[in]リンク コントロールの外接する四角形にします。  
   
 ### <a name="remarks"></a>Remarks  
  ボタンのフォーカスされた四角形を描画するために、独自のコードを使用する場合に、このメソッドをオーバーライドします。  
@@ -108,8 +108,8 @@ void SetURL(LPCTSTR lpszURL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszURL*  
- 表示するボタンのテキスト。  
+*lpszURL*<br/>
+[in]表示するボタンのテキスト。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -121,8 +121,8 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszPrefix*  
- URL のプロトコルのプレフィックス。  
+*lpszPrefix*<br/>
+[in]URL のプロトコルのプレフィックス。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドを使用すると、URL プレフィックスを設定できます。 プレフィックスは、ボタンの表面上は表示されませんが、これを使用するには、URL のターゲットを参照します。  
@@ -137,11 +137,11 @@ virtual CSize SizeToContent(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bVCenter*  
- ボタンのテキストと、リンク コントロールの上下の間に垂直方向にビットマップを中央揃えする場合は TRUEそれ以外の場合、FALSE です。 既定値は FALSE です。  
+*bVCenter*<br/>
+[in]ボタンのテキストと、リンク コントロールの上下の間に垂直方向にビットマップを中央揃えする場合は TRUEそれ以外の場合、FALSE です。 既定値は FALSE です。  
   
- [in]*bHCenter*  
- ボタンのテキストと、リンク コントロールの左側および右側との間の水平方向にビットマップを中央揃えする場合は TRUEそれ以外の場合、FALSE です。 既定値は FALSE です。  
+*bHCenter*<br/>
+[in]ボタンのテキストと、リンク コントロールの左側および右側との間の水平方向にビットマップを中央揃えする場合は TRUEそれ以外の場合、FALSE です。 既定値は FALSE です。  
   
 ### <a name="return-value"></a>戻り値  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md)リンク コントロールの新しいサイズを格納しているオブジェクト。  

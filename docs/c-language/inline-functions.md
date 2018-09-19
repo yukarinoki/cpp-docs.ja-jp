@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be5afa2dc4980f9393deb498c7a5decdc56aece5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 127438da4929e58e07e10701dd64869b084fe4c5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387373"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078583"
 ---
 # <a name="inline-functions"></a>インライン関数
 
@@ -45,7 +45,7 @@ ms.locfileid: "32387373"
 
 `__inline` を使用する関数を、インライン アセンブラー コードと混同しないでください。 詳細については、「[インライン アセンブラー](../c-language/inline-assembler-c.md)」を参照してください。
 
-**END Microsoft 固有の仕様**  
+**END Microsoft 固有の仕様**
 
 ## <a name="see-also"></a>参照
 

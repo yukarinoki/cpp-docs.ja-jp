@@ -1,5 +1,5 @@
 ---
-title: BSCMAKE エラー BK1517 |Microsoft ドキュメント
+title: BSCMAKE エラー BK1517 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6f5619a7c2a6ccf671845b27bbedf93d8eb2d69
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 941773fbcf65a3b1c1a6041a1e7a067cfc286823
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298552"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097056"
 ---
 # <a name="bscmake-error-bk1517"></a>BSCMAKE エラー BK1517
-/Yc および/Yu の両方でコンパイルされた sbrfile のソース ファイル  
-  
- .Sbr ファイルは、それ自体を参照します。 /Yc でコンパイルした後、再コンパイル/Yu 使用された可能性があります。 /Yc にソース ファイルのコンパイラ オプションをリセットし、選択**リビルド**新しい .sbr ファイルを生成します。 /Yu を持つソース ファイルを再コンパイルされません。
+
+/Yc および/Yu の両方でコンパイルされた sbrfile のソース ファイル
+
+.Sbr ファイルは、それ自体を参照します。 /Yc でコンパイルした後、再コンパイル/Yu 使用された可能性があります。 /Yc にソース ファイルのコンパイラ オプションをリセットし、選択**リビルド**新しい .sbr ファイルを生成します。 /Yu とソース ファイルを再コンパイルしません。

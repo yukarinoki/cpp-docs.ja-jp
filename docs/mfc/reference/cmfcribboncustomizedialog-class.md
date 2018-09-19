@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonCustomizeDialog クラス |Microsoft ドキュメント
+title: CMFCRibbonCustomizeDialog クラス |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e693a0e6a2353693f676ed0d63d7087d3e57455
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: d342ec75fd45224dcd36ba3fc17aa1a6f8c12e33
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040900"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720656"
 ---
 # <a name="cmfcribboncustomizedialog-class"></a>CMFCRibbonCustomizeDialog クラス
 リボンが表示されます**カスタマイズ**ページ。  
@@ -47,14 +47,14 @@ class CMFCRibbonCustomizeDialog : public CMFCPropertySheet
   
 |名前|説明|  
 |----------|-----------------|  
-|`CMFCRibbonCustomizeDialog::GetThisClass`|ポインターを取得するために、フレームワークで使用される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|  
+|`CMFCRibbonCustomizeDialog::GetThisClass`|ポインターを取得する、framework によって使用される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|  
   
 ## <a name="remarks"></a>Remarks  
- AFX_WM_ON_RIBBON_CUSTOMIZE メッセージを処理しない場合、またはメッセージ ハンドラーから 0 を返した場合、MFC を自動的にこのクラスをインスタンス化します。  
+ MFC では、AFX_WM_ON_RIBBON_CUSTOMIZE メッセージを処理しない場合、またはメッセージ ハンドラーから 0 を返す場合は自動的にこのクラスがインスタンス化します。  
   
- アプリケーションで、リボンを表示するこのクラスを使用するかどうかは**カスタマイズ** ダイアログ ボックスでのみインスタンス化し、呼び出し、`DoModal`メソッドです。  
+ アプリケーションで、リボンを表示するこのクラスを使用するかどうか**カスタマイズ** ダイアログ ボックスでのみインスタンス化し、呼び出し、`DoModal`メソッド。  
   
- このクラスから派生ため[CMFCPropertySheet クラス](../../mfc/reference/cmfcpropertysheet-class.md)を使用してカスタム ページを追加することができます、 `CMFCPropertySheet` API です。  
+ このクラスはから派生しているため[CMFCPropertySheet クラス](../../mfc/reference/cmfcpropertysheet-class.md)を使用してカスタム ページを追加することができます、 `CMFCPropertySheet` API。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -69,7 +69,7 @@ class CMFCRibbonCustomizeDialog : public CMFCPropertySheet
   
  [CMFCRibbonCustomizeDialog](../../mfc/reference/cmfcribboncustomizedialog-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxribboncustomizedialog.h  
   
 ##  <a name="cmfcribboncustomizedialog"></a>  CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog  
@@ -82,19 +82,19 @@ CMFCRibbonCustomizeDialog(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWndParent*  
- 親ウィンドウ (通常はメイン フレーム) へのポインター。  
+*pWndParent*<br/>
+[in]親ウィンドウ (通常はメイン フレーム) へのポインター。  
   
- [in]*pRibbon*  
- ポインター、`CMFCRibbonBar`カスタマイズができます。  
+*pRibbon*<br/>
+[in]ポインター、`CMFCRibbonBar`カスタマイズです。  
   
 ### <a name="example"></a>例  
- 次の例で作成する方法、`CMFCRibbonCustomizeDialog`オブジェクト。  
+ 次の例は、構築する方法を示します、`CMFCRibbonCustomizeDialog`オブジェクト。  
   
  [!code-cpp[NVC_MFC_RibbonApp#18](../../mfc/reference/codesnippet/cpp/cmfcribboncustomizedialog-class_1.cpp)]  
   
 ### <a name="remarks"></a>Remarks  
- コンス トラクターをインスタンス化、 [CMFCRibbonCustomizePropertyPage クラス](../../mfc/reference/cmfcribboncustomizepropertypage-class.md)オブジェクトおよびプロパティ シート ページのコレクションに追加します。  
+ コンス トラクターをインスタンス化、 [CMFCRibbonCustomizePropertyPage クラス](../../mfc/reference/cmfcribboncustomizepropertypage-class.md)オブジェクトし、プロパティ シートのページのコレクションに追加します。  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

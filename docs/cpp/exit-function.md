@@ -16,24 +16,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce4272ecfee4b3d02d8bf79f7816200a392c9735
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 71bff42495c4b6b7bf4016f0f08e7127c2b278ac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404829"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075177"
 ---
 # <a name="exit-function"></a>exit 関数
-**終了**標準インクルード ファイルで宣言された関数\<stdlib.h >、C++ プログラムを終了します。  
-  
- 引数として指定された値**終了**プログラムのリターン コードまたは終了コードとしてオペレーティング システムに返されます。 慣例により、ゼロのリターン コードは、プログラムが正常に完了したことを意味します。  
-  
+
+**終了**標準インクルード ファイルで宣言された関数\<stdlib.h >、C++ プログラムを終了します。
+
+引数として指定された値**終了**プログラムのリターン コードまたは終了コードとしてオペレーティング システムに返されます。 慣例により、ゼロのリターン コードは、プログラムが正常に完了したことを意味します。
+
 > [!NOTE]
->  EXIT_FAILURE と EXIT_SUCCESS で定義されている定数を使用することができます\<stdlib.h > プログラムの成功または失敗を示すために、します。  
-  
- 発行、**返す**ステートメントから、`main`関数の呼び出しと同じですが、**終了**関数の引数として戻り値。  
-  
- 詳細については、次を参照してください。[終了](../c-runtime-library/reference/exit-exit-exit.md)で、*ランタイム ライブラリ リファレンス*します。  
-  
-## <a name="see-also"></a>関連項目  
- [プログラムの終了](../cpp/program-termination.md)
+>  EXIT_FAILURE と EXIT_SUCCESS で定義されている定数を使用することができます\<stdlib.h > プログラムの成功または失敗を示すために、します。
+
+発行、**返す**ステートメントから、`main`関数の呼び出しと同じですが、**終了**関数の引数として戻り値。
+
+詳細については、次を参照してください。[終了](../c-runtime-library/reference/exit-exit-exit.md)で、*ランタイム ライブラリ リファレンス*します。
+
+## <a name="see-also"></a>関連項目
+
+[プログラムの終了](../cpp/program-termination.md)

@@ -1,5 +1,5 @@
 ---
-title: omp_unset_nest_lock |Microsoft ドキュメント
+title: omp_unset_nest_lock |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8434fb3e4cb07b11f2142f78ee4b243e6945dfd9
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ddc3605bfef5c96a8882872aafbe1a15dda3e4cf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691665"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115971"
 ---
 # <a name="ompunsetnestlock"></a>omp_unset_nest_lock
 入れ子にできるロックを解放します。  
@@ -34,14 +34,13 @@ void omp_unset_nest_lock(
 );  
 ```  
   
-## <a name="remarks"></a>コメント  
- 指定項目  
+### <a name="parameters"></a>パラメーター
   
- `lock`  
- 型の変数[omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md)で初期化された[omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)スレッドによって所有されている、および関数で実行します。  
+*lock*<br/>
+型の変数[omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md)で初期化された[omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)スレッドによって所有されている、および関数で実行します。  
   
-## <a name="remarks"></a>コメント  
- 詳細については、次を参照してください。 [3.2.4 omp_unset_lock 関数と omp_unset_nest_lock 関数](../../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md)です。  
+## <a name="remarks"></a>Remarks  
+ 詳細については、次を参照してください。 [3.2.4 omp_unset_lock 関数と omp_unset_nest_lock 関数](../../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md)します。  
   
 ## <a name="example"></a>例  
  参照してください[omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)の使用例については`omp_unset_nest_lock`します。  

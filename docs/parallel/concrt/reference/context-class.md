@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c21ce766ed809a93ccf617ab1f76c438ac5be829
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: a4a62f6e569e123b9612e922e2d7c70787371afc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539895"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136180"
 ---
 # <a name="context-class"></a>Context クラス
 実行コンテキストの抽象化を表します。  
@@ -210,8 +210,8 @@ void operator delete(void* _PObject);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_PObject`  
- 削除するオブジェクトへのポインター。  
+*_PObject*<br/>
+削除するオブジェクトへのポインター。  
   
 ##  <a name="oversubscribe"></a> オーバーサブスク ライブします。 
 
@@ -222,8 +222,8 @@ static void __cdecl Oversubscribe(bool _BeginOversubscription);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_BeginOversubscription`  
- 場合`true`を示す値、オーバー サブスクリプションの期間中、追加の仮想プロセッサを追加する必要があります。 場合`false`を示す値、オーバー サブスクリプションが終了する必要があります、以前に追加の仮想プロセッサを削除する必要があります。  
+*_BeginOversubscription*<br/>
+場合`true`を示す値、オーバー サブスクリプションの期間中、追加の仮想プロセッサを追加する必要があります。 場合`false`を示す値、オーバー サブスクリプションが終了する必要があります、以前に追加の仮想プロセッサを削除する必要があります。  
   
 ##  <a name="schedulegroupid"></a> ScheduleGroupId 
 

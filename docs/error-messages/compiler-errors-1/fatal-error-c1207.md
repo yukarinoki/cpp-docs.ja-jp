@@ -1,5 +1,5 @@
 ---
-title: 致命的なエラー C1207 |Microsoft ドキュメント
+title: 致命的なエラー C1207 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b28db2573ac58ee46b9ac5466d341a4a1690fc3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8042782477b402f2e09d1d67c8fd5c126647285
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227396"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072629"
 ---
 # <a name="fatal-error-c1207"></a>致命的なエラー C1207
-マネージ テンプレートは、インストールされているランタイムのバージョンではサポートされていません  
-  
- C1207 は、コンパイラが現在のリリースであり、共通言語ランタイムが以前のリリースの場合に発生します。  
-  
- コンパイラの一部の機能は、ランタイムの以前のバージョンでは動作しない場合があります。  
-  
- C1207 を解決するには、コンパイラで使用するバージョンの共通言語ランタイムをインストールしてください。
+
+マネージド テンプレートは、インストールされているランタイムのバージョンではサポートされていません
+
+C1207 は、コンパイラが現在のリリースであり、共通言語ランタイムが以前のリリースの場合に発生します。
+
+コンパイラの一部の機能は、ランタイムの以前のバージョンでは動作しない場合があります。
+
+C1207 を解決するには、コンパイラで使用するバージョンの共通言語ランタイムをインストールしてください。

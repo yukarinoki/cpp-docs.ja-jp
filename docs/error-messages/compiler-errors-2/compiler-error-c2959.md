@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2959 |Microsoft ドキュメント
+title: コンパイラ エラー C2959 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce13a340812bce7cd6e5a0e4f8b2601b530fd3a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f225dccc917e34fba690064d66cf1cda36219877
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243794"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078973"
 ---
 # <a name="compiler-error-c2959"></a>コンパイラ エラー C2959
-テンプレートのメンバーは、ジェネリック クラスまたは関数ではない可能性があります。  
-  
- 詳細については、次を参照してください。 [Windows ランタイムおよびマネージ テンプレート](../../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md)と[ジェネリック](../../windows/generics-cpp-component-extensions.md)です。  
-  
-## <a name="example"></a>例  
- 次の例では、C2959 を生成します。  
-  
-```  
-// C2959.cpp  
-// compile with: /clr /c  
-template <class T> ref struct S {  
-   generic <class U> ref struct GR1;   // C2959  
-};  
+
+テンプレートのメンバーはジェネリック クラスまたは関数ではない可能性があります。
+
+詳細については、次を参照してください。 [Windows ランタイムおよびマネージ テンプレート](../../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md)と[ジェネリック](../../windows/generics-cpp-component-extensions.md)します。
+
+## <a name="example"></a>例
+
+次の例では、C2959 が生成されます。
+
+```
+// C2959.cpp
+// compile with: /clr /c
+template <class T> ref struct S {
+   generic <class U> ref struct GR1;   // C2959
+};
 ```

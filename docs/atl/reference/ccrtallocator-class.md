@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f89df62f35e37e1ab74fc177167cbd82f92f7d9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bfd7d5a040da4d27838e8045b6c4c64950e515dc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752886"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054845"
 ---
 # <a name="ccrtallocator-class"></a>CCRTAllocator クラス
 
@@ -65,7 +65,7 @@ static __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nBytes*  
+*nBytes*<br/>
 割り当てるバイト数。
 
 ### <a name="return-value"></a>戻り値
@@ -86,7 +86,7 @@ static void Free(void* p) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*p*  
+*p*<br/>
 割り当てられたメモリへのポインター。
 
 ### <a name="remarks"></a>Remarks
@@ -103,10 +103,10 @@ static __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*p*  
+*p*<br/>
 割り当てられたメモリへのポインター。
 
-*nBytes*  
+*nBytes*<br/>
 再割り当てするバイト数。
 
 ### <a name="return-value"></a>戻り値
@@ -119,6 +119,6 @@ static __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ## <a name="see-also"></a>関連項目
 
-[CHeapPtr クラス](../../atl/reference/cheapptr-class.md)   
-[CComAllocator クラス](../../atl/reference/ccomallocator-class.md)   
+[CHeapPtr クラス](../../atl/reference/cheapptr-class.md)<br/>
+[CComAllocator クラス](../../atl/reference/ccomallocator-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

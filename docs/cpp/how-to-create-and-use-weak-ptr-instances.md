@@ -12,83 +12,86 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 673bceb5042a91361ece00360c4d9c5b140e4d00
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 7fe982762c6e6c44b8f1923d27779bcfd6140225
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402700"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087710"
 ---
 # <a name="how-to-create-and-use-weakptr-instances"></a>方法: weak_ptr インスタンスを作成して使用する
-オブジェクトには、参照カウントをインクリメントせずに `shared_ptr` の基になるオブジェクトにアクセスする方法を格納する必要が生じることがあります。 通常、この状況は `shared_ptr` インスタンス間に循環参照がある場合に発生します。  
 
- 最適なデザインとして、可能な場合は必ずポインターの共有所有権を避けてください。 ただし、`shared_ptr` インスタンスの共有所有権が必要な場合、それらのインスタンス間の循環参照が発生しないようにします。 循環参照を回避できない場合や、何らかの場合で循環参照が必要とされる場合でも、`weak_ptr` を使用して 1 人以上の所有者に別の `shared_ptr` への弱い参照を与えてください。 `weak_ptr` を使用すると、関連するインスタンスの既存のセットに結合される `shared_ptr` を作成できますが、基になるメモリ リソースがまだ有効な場合のみです。 `weak_ptr` 自体は、参照カウントに参加しないため、参照カウントが 0 になるのを防止することはできません。 ただし、`weak_ptr` を使用して、初期化に使用された `shared_ptr` の新しいコピーの取得を試みることはできます。 メモリが既に削除された場合、`bad_weak_ptr`例外がスローされます。 メモリがまだ有効である場合は、新しい共有ポインターが参照カウントをインクリメントし、`shared_ptr` の変数がスコープ内に入っている限りメモリが有効であることを保証します。  
+オブジェクトには、参照カウントをインクリメントせずに `shared_ptr` の基になるオブジェクトにアクセスする方法を格納する必要が生じることがあります。 通常、この状況は `shared_ptr` インスタンス間に循環参照がある場合に発生します。
 
-## <a name="example"></a>例  
- 次のコード例は、`weak_ptr` を使用して循環依存関係を持つオブジェクトの削除を確証するケースを示しています。 例を調べる際は、代替ソリューションについて検討した後のみ作成されたと見なしてください。 `Controller` オブジェクトは、コンピューター プロセスのいくつかの側面を表しており、独立して動作します。 各コントローラーは、他のコントローラーのステータスのクエリをいつでも実行できる必要があるため、この目的でそれぞれのコントローラーにプライベート `vector<weak_ptr<Controller>>` が含まれています。 各ベクターには循環参照が含まれているため、`weak_ptr` の代わりに `shared_ptr` インスタンスが使用されます。  
+最適なデザインとして、可能な場合は必ずポインターの共有所有権を避けてください。 ただし、`shared_ptr` インスタンスの共有所有権が必要な場合、それらのインスタンス間の循環参照が発生しないようにします。 循環参照を回避できない場合や、何らかの場合で循環参照が必要とされる場合でも、`weak_ptr` を使用して 1 人以上の所有者に別の `shared_ptr` への弱い参照を与えてください。 `weak_ptr` を使用すると、関連するインスタンスの既存のセットに結合される `shared_ptr` を作成できますが、基になるメモリ リソースがまだ有効な場合のみです。 `weak_ptr` 自体は、参照カウントに参加しないため、参照カウントが 0 になるのを防止することはできません。 ただし、`weak_ptr` を使用して、初期化に使用された `shared_ptr` の新しいコピーの取得を試みることはできます。 メモリが既に削除された場合、`bad_weak_ptr`例外がスローされます。 メモリがまだ有効である場合は、新しい共有ポインターが参照カウントをインクリメントし、`shared_ptr` の変数がスコープ内に入っている限りメモリが有効であることを保証します。
 
- [!code-cpp[stl_smart_pointers#222](../cpp/codesnippet/CPP/how-to-create-and-use-weak-ptr-instances_1.cpp)]  
+## <a name="example"></a>例
 
-```Output  
-Creating Controller0  
-Creating Controller1  
-Creating Controller2  
-Creating Controller3  
-Creating Controller4  
-push_back to v[0]: 1  
-push_back to v[0]: 2  
-push_back to v[0]: 3  
-push_back to v[0]: 4  
-push_back to v[1]: 0  
-push_back to v[1]: 2  
-push_back to v[1]: 3  
-push_back to v[1]: 4  
-push_back to v[2]: 0  
-push_back to v[2]: 1  
-push_back to v[2]: 3  
-push_back to v[2]: 4  
-push_back to v[3]: 0  
-push_back to v[3]: 1  
-push_back to v[3]: 2  
-push_back to v[3]: 4  
-push_back to v[4]: 0  
-push_back to v[4]: 1  
-push_back to v[4]: 2  
+次のコード例は、`weak_ptr` を使用して循環依存関係を持つオブジェクトの削除を確証するケースを示しています。 例を調べる際は、代替ソリューションについて検討した後のみ作成されたと見なしてください。 `Controller` オブジェクトは、コンピューター プロセスのいくつかの側面を表しており、独立して動作します。 各コントローラーは、他のコントローラーのステータスのクエリをいつでも実行できる必要があるため、この目的でそれぞれのコントローラーにプライベート `vector<weak_ptr<Controller>>` が含まれています。 各ベクターには循環参照が含まれているため、`weak_ptr` の代わりに `shared_ptr` インスタンスが使用されます。
+
+[!code-cpp[stl_smart_pointers#222](../cpp/codesnippet/CPP/how-to-create-and-use-weak-ptr-instances_1.cpp)]
+
+```Output
+Creating Controller0
+Creating Controller1
+Creating Controller2
+Creating Controller3
+Creating Controller4
+push_back to v[0]: 1
+push_back to v[0]: 2
+push_back to v[0]: 3
+push_back to v[0]: 4
+push_back to v[1]: 0
+push_back to v[1]: 2
+push_back to v[1]: 3
+push_back to v[1]: 4
+push_back to v[2]: 0
+push_back to v[2]: 1
+push_back to v[2]: 3
+push_back to v[2]: 4
+push_back to v[3]: 0
+push_back to v[3]: 1
+push_back to v[3]: 2
+push_back to v[3]: 4
+push_back to v[4]: 0
+push_back to v[4]: 1
+push_back to v[4]: 2
 push_back to v[4]: 3
-use_count = 1  
-Status of 1 = On  
-Status of 2 = On  
-Status of 3 = On  
-Status of 4 = On  
-use_count = 1  
-Status of 0 = On  
-Status of 2 = On  
-Status of 3 = On  
-Status of 4 = On  
-use_count = 1  
-Status of 0 = On  
-Status of 1 = On  
-Status of 3 = On  
-Status of 4 = On  
-use_count = 1  
-Status of 0 = O  
-nStatus of 1 = On  
-Status of 2 = On  
-Status of 4 = On  
-use_count = 1  
-Status of 0 = On  
-Status of 1 = On  
-Status of 2 = On  
-Status of 3 = On  
-Destroying Controller0  
-Destroying Controller1  
-Destroying Controller2  
-Destroying Controller3  
-Destroying Controller4  
-Press any key  
-```  
+use_count = 1
+Status of 1 = On
+Status of 2 = On
+Status of 3 = On
+Status of 4 = On
+use_count = 1
+Status of 0 = On
+Status of 2 = On
+Status of 3 = On
+Status of 4 = On
+use_count = 1
+Status of 0 = On
+Status of 1 = On
+Status of 3 = On
+Status of 4 = On
+use_count = 1
+Status of 0 = O
+nStatus of 1 = On
+Status of 2 = On
+Status of 4 = On
+use_count = 1
+Status of 0 = On
+Status of 1 = On
+Status of 2 = On
+Status of 3 = On
+Destroying Controller0
+Destroying Controller1
+Destroying Controller2
+Destroying Controller3
+Destroying Controller4
+Press any key
+```
 
- テストとして、ベクター `others` を `vector<shared_ptr<Controller>>` に変更した後、出力で、`TestRun` が返されたときにデストラクターが呼び出されないことを確認してください。  
+テストとして、ベクター `others` を `vector<shared_ptr<Controller>>` に変更した後、出力で、`TestRun` が返されたときにデストラクターが呼び出されないことを確認してください。
 
-## <a name="see-also"></a>関連項目  
- [スマート ポインター](../cpp/smart-pointers-modern-cpp.md)
+## <a name="see-also"></a>関連項目
+
+[スマート ポインター](../cpp/smart-pointers-modern-cpp.md)

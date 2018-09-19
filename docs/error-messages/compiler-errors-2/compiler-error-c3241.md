@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3241 |Microsoft ドキュメント
+title: コンパイラ エラー C3241 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1a3849dd404c82811eee9176fe87861cfd4a435
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f78346c91d7f103d1392081a90d982f3d99b493
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250311"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020236"
 ---
 # <a name="compiler-error-c3241"></a>コンパイラ エラー C3241
-'method': このメソッドが 'interface' によって導入されていません  
-  
- 関数を明示的にオーバーライドすると場合、関数のシグネチャはオーバーライドする関数の宣言を正確に一致する必要があります。  
-  
- 次の例では、C3241 が生成されます。  
-  
-```  
-// C3241.cpp  
-#pragma warning(disable:4199)  
-  
-__interface IX12A {  
-   void mf();  
-};  
-  
-__interface IX12B {  
-   void mf(int);  
-};  
-  
-class CX12 : public IX12A, public IX12B { // C3241  
-   void IX12A::mf(int);  
-};  
+
+'method': このメソッドは、'interface' によって導入されていなかった
+
+関数を明示的にオーバーライドする場合は関数のシグネチャがオーバーライドする関数の宣言を一致する必要があります。
+
+次の例では、C3241 が生成されます。
+
+```
+// C3241.cpp
+#pragma warning(disable:4199)
+
+__interface IX12A {
+   void mf();
+};
+
+__interface IX12B {
+   void mf(int);
+};
+
+class CX12 : public IX12A, public IX12B { // C3241
+   void IX12A::mf(int);
+};
 ```

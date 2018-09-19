@@ -23,20 +23,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6c89e2550c01db695aa513a98d6d1cc8f116ca0
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 3500c2bd8a0245f0ecf5db1337502f05699a6509
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42572648"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040337"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>左 shift キーおよび右シフト演算子 (&gt; &gt;と&lt; &lt;)
 
-ビット処理シフト演算子は、右シフト演算子 (>>) のビットを移動する*シフト式*に右と左シフト演算子 (<<) のビットを移動する*をシフト式*左にします。 <sup>1</sup>
+ビット処理シフト演算子は、右シフト演算子 (**&gt;&gt;**) のビットを移動する*シフト式*に右と左シフト演算子 (**&lt; &lt;**)、移動のビット*シフト式*左にします。 <sup>1</sup>
 
 ## <a name="syntax"></a>構文
 
-> *シフト式* `<<` *加法式*  
+> *シフト式* `<<` *加法式*
 > *シフト式* `>>` *加法式*
 
 ## <a name="remarks"></a>Remarks
@@ -178,7 +178,7 @@ int main() {
 
     short neg5 = neg1 >> 5; // -1
     bitset<16> bn5(neg5);
-    cout << bn5 << endl;  // 0b11111111'11111111  
+    cout << bn5 << endl;  // 0b11111111'11111111
 }
 ```
 
@@ -240,5 +240,5 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[二項演算子を含む式](../cpp/expressions-with-binary-operators.md)  
-[C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)  
+[二項演算子を含む式](../cpp/expressions-with-binary-operators.md)<br/>
+[C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

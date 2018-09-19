@@ -1,5 +1,5 @@
 ---
-title: -IGNOREIDL (Don&#39;t プロセス属性を MIDL に挿入) |Microsoft ドキュメント
+title: -IGNOREIDL (Don&#39;t プロセスの属性を MIDL に挿入) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,39 +19,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14d32be32f019e55f8bad9cc01199d8dc6ae6301
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7014440c3479016c89b774f9a80cc03fc4b5d4c3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373453"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708228"
 ---
-# <a name="ignoreidl-don39t-process-attributes-into-midl"></a>/IGNOREIDL (Don&#39;t プロセス属性を MIDL に挿入)
-```  
-/IGNOREIDL  
-```  
-  
-## <a name="remarks"></a>コメント  
- /IGNOREIDL オプションを指定する[IDL 属性](../../windows/idl-attributes.md)ソース内のコード処理は必要ない .idl ファイルにします。  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには  
-  
-1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「 [Visual C プロジェクト プロパティの設定](../../ide/working-with-project-properties.md)です。  
-  
-2.  クリックして、**リンカー**フォルダーです。  
-  
-3.  クリックして、**埋め込み IDL**プロパティ ページ。  
-  
-4.  変更、**埋め込み IDL の無視**プロパティです。  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには  
-  
--   「<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreEmbeddedIDL%2A>」を参照してください。  
-  
-## <a name="see-also"></a>関連項目  
- [リンカー オプションの設定](../../build/reference/setting-linker-options.md)   
- [リンカー オプション](../../build/reference/linker-options.md)   
- [/IDLOUT (MIDL の出力ファイルの名前を付ける)](../../build/reference/idlout-name-midl-output-files.md)   
- [/TLBOUT (名前です。TLB ファイル)](../../build/reference/tlbout-name-dot-tlb-file.md)   
- [/MIDL (MIDL コマンド ライン オプションの指定)](../../build/reference/midl-specify-midl-command-line-options.md)   
- [属性付きプログラムの作成](../../windows/building-an-attributed-program.md)
+# <a name="ignoreidl-don39t-process-attributes-into-midl"></a>/IGNOREIDL (Don&#39;t プロセスの属性を MIDL に挿入)
+
+```
+/IGNOREIDL
+```
+
+## <a name="remarks"></a>Remarks
+
+/IGNOREIDL オプションを指定する[IDL 属性](../../windows/idl-attributes.md)ソース コードを .idl ファイルに処理するされません。
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
+
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
+
+1. をクリックして、**リンカー**フォルダー。
+
+1. をクリックして、**埋め込み IDL**プロパティ ページ。
+
+1. 変更、**埋め込み IDL の無視**プロパティ。
+
+### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
+
+- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreEmbeddedIDL%2A>
+
+## <a name="see-also"></a>関連項目
+
+[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
+[リンカー オプション](../../build/reference/linker-options.md)<br/>
+[/IDLOUT (MIDL 出力ファイルの名前を付ける)](../../build/reference/idlout-name-midl-output-files.md)
+[/TLBOUT (名前です。TLB ファイル)](../../build/reference/tlbout-name-dot-tlb-file.md)
+[/MIDL (MIDL コマンド ライン オプションの指定)](../../build/reference/midl-specify-midl-command-line-options.md)
+[属性付きプログラムの作成](../../windows/building-an-attributed-program.md)

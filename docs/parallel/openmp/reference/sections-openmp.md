@@ -1,5 +1,5 @@
 ---
-title: セクション (OpenMP) |Microsoft ドキュメント
+title: セクション (OpenMP) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60bc94685a7e6128e22cc3545ae8702abe6d472e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d3b369cfbd68edd32b644c9a4ec0520329507b6e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692078"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708033"
 ---
 # <a name="sections-openmp"></a>sections (OpenMP)
 すべてのスレッド間で分配するコード セクションを識別します。  
@@ -39,14 +39,13 @@ ms.locfileid: "33692078"
 }  
 ```  
   
-## <a name="remarks"></a>コメント  
- 指定項目  
-  
- `clause` (省略可能)  
- 0 個以上の句。 サポートされている句の一覧については、「解説」セクションを参照してください**セクション**です。  
-  
-## <a name="remarks"></a>コメント  
- **セクション**ディレクティブは、0 個以上を含めることができます**セクション**ディレクティブです。  
+## <a name="arguments"></a>引数
+
+*句*<br/>
+(省略可能)0 個以上の句。 サポートされている句の一覧については、「解説」を参照してください。**セクション**します。
+
+## <a name="remarks"></a>Remarks  
+ **セクション**ディレクティブは、0 個以上含めることができます**セクション**ディレクティブ。  
   
  **セクション**ディレクティブは、次の OpenMP 句をサポートしています。  
   
@@ -60,9 +59,9 @@ ms.locfileid: "33692078"
   
 -   [reduction](../../../parallel/openmp/reference/reduction.md)  
   
- 場合**並列**も指定すると、`clause`できます句によって受け入れられる、**並列**または**のセクションでは**、ディレクティブを除く`nowait`です。  
+ 場合**並列**が指定されても、`clause`句受け入れ可能で、**並列**または**セクション**ディレクティブを除く`nowait`。  
   
- 詳細については、次を参照してください。 [2.4.2 sections のコンストラクト](../../../parallel/openmp/2-4-2-sections-construct.md)です。  
+ 詳細については、次を参照してください。 [2.4.2 sections のコンストラクト](../../../parallel/openmp/2-4-2-sections-construct.md)します。  
   
 ## <a name="example"></a>例  
   

@@ -1,5 +1,5 @@
 ---
-title: 式エバリュエーター エラー CXX0015 |Microsoft ドキュメント
+title: 式エバリュエーター エラー CXX0015 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 945dbda4759fa2989acb0411d1a3216a5e9a036c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1aa37a2cc7208063ce4cfa786de196842ab42b45
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297610"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050817"
 ---
 # <a name="expression-evaluator-error-cxx0015"></a>式エバリュエーター エラー CXX0015
-式が複雑すぎます (スタック オーバーフロー)  
-  
- 入力された式は、複雑すぎるか、C の式エバリュエーターを使用可能なストレージの量に対してレベルが深すぎます入れ子になったでした。  
-  
- オーバーフローは、通常、多数の保留中の計算により発生します。  
-  
- その他の部分式を計算するを待たずにするのではなくが検出すると、式の各コンポーネントを評価できるように、式のレイアウトを変更します。  
-  
- 式を複数のコマンドに分割します。  
-  
- このエラーは、can0015 と同じものと同じです。
+
+式が複雑すぎます (スタック オーバーフロー)
+
+入力された式は複雑すぎるか、C の式エバリュエーターを使用可能なストレージ量レベルが深すぎます入れ子になったでした。
+
+通常、オーバーフローは、保留中の多数の計算のために発生します。
+
+他の部分式を計算するを待機する必要がなくが見つかると、式の各コンポーネントを評価できるように、式のレイアウトを変更します。
+
+複数のコマンド、式に分割します。
+
+このエラーは、can0015 と同じものと同じです。

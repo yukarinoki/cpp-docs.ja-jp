@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d90a3f4b2cbacb3071dcd552fd88f6cb11bb5d43
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 08200320e30816ac45e6c91a14dc41508430cfae
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131843"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069119"
 ---
 # <a name="constructors-c"></a>コンストラクター (C++)
 
@@ -88,7 +88,7 @@ int main()
     {}
 ```
 
-識別子は、クラス メンバーを指す必要があります。引数の値で初期化されます。 引数ができるコンス トラクターのパラメーター、関数呼び出しのいずれかまたは[std::initializer_list\<T >](../standard-library/initializer-list-class.md)します。 
+識別子は、クラス メンバーを指す必要があります。引数の値で初期化されます。 引数ができるコンス トラクターのパラメーター、関数呼び出しのいずれかまたは[std::initializer_list\<T >](../standard-library/initializer-list-class.md)します。
 
 **const**参照型のメンバーおよびメンバーは、メンバー初期化子リストで初期化する必要があります。
 
@@ -96,7 +96,7 @@ int main()
 
 ## <a name="default_constructors"></a> 既定のコンス トラクター
 
- *既定のコンス トラクター*通常ないパラメーターが既定値を持つパラメーターがあることができます。
+*既定のコンス トラクター*通常ないパラメーターが既定値を持つパラメーターがあることができます。
 
 ```cpp
 class Box {
@@ -216,6 +216,7 @@ A*コピー コンス トラクター*同じ型のオブジェクトからメン
 エラーを生成するオブジェクトをコピーしようとしています。 *C2280: 削除された関数を参照しようとして*。
 
 ## <a name="move_constructors"></a> 移動コンス トラクター
+
 A*移動コンス トラクター*は、元のデータをコピーすることがなく既存のオブジェクトのデータの所有権を新しい変数に移動する特殊なメンバー関数です。 最初のパラメーターとして右辺値参照を受け取るし、その他のパラメーターの既定値があります。 ラージ オブジェクトを渡すときに、移動コンス トラクターは、プログラムの効率を大幅に増加ことができます。 移動コンス トラクターは、最初のパラメーターとして右辺値参照を受け取ります。 その他のパラメーターは、既定値である必要があります。
 
 ```cpp

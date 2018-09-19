@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2704 |Microsoft ドキュメント
+title: コンパイラ エラー C2704 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b15eee85b41661c40d3dd40035050a23177aa63
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cc8914e8ad349f9dcd75c5f0c08ee0d55570e89d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231827"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114931"
 ---
 # <a name="compiler-error-c2704"></a>コンパイラ エラー C2704
-'identifier' : varargs 中に __va_start intrinsic を許しました。  
-  
- `__va_start` 組み込みは、関数の宣言で固定数の引数と一緒に使用されます。
+
+'identifier' : varargs 中に __va_start intrinsic を許しました。
+
+`__va_start` 組み込みは、関数の宣言で固定数の引数と一緒に使用されます。

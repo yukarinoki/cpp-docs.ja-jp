@@ -1,5 +1,5 @@
 ---
-title: IUMSScheduler 構造体 |Microsoft ドキュメント
+title: IUMSScheduler 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 489978a97d42439e5560a75e429c38be10c18c29
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 46ed7dac35dce4b5df51cd4c218a1a70a84d21df
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688532"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079064"
 ---
 # <a name="iumsscheduler-structure"></a>IUMSScheduler 構造体
 同時実行ランタイムのリソース マネージャーによってユーザー モード スケジュール可能 (UMS) スレッドが渡される必要がある作業スケジューラの抽象化のインターフェイスです。 リソース マネージャーでは、このインターフェイスを使用して UMS スレッド スケジューラと通信します。 `IUMSScheduler` インターフェイスは `IScheduler` のインターフェイスから継承されます。  
@@ -40,14 +40,14 @@ struct IUMSScheduler : public IScheduler;
   
 |名前|説明|  
 |----------|-----------------|  
-|[IUMSScheduler::SetCompletionList](#setcompletionlist)|割り当てます、 `IUMSCompletionList` UMS スレッド スケジューラへのインターフェイスです。|  
+|[IUMSScheduler::SetCompletionList](#setcompletionlist)|割り当てます、 `IUMSCompletionList` UMS スレッド スケジューラのインターフェイス。|  
   
-## <a name="remarks"></a>コメント  
- リソース マネージャーとの通信を行うカスタム スケジューラを実装して、通常の Win32 スレッドではなく、スケジューラに渡す UMS スレッドは場合の実装を提供する必要があります、`IUMSScheduler`インターフェイスです。 さらに、スケジューラ ポリシー キーのポリシーの値を設定する必要があります`SchedulerKind`する`UmsThreadDefault`です。 ポリシーが UMS スレッドを指定する場合、`IScheduler`インターフェイスへのパラメーターとして渡される、 [iresourcemanager::registerscheduler](iresourcemanager-structure.md#registerscheduler)メソッドである必要があります、`IUMSScheduler`インターフェイスです。  
+## <a name="remarks"></a>Remarks  
+ Resource Manager での通信を行うカスタム スケジューラを実装して、通常の Win32 スレッドではなく、スケジューラに渡す UMS スレッドは場合の実装を提供する必要があります、`IUMSScheduler`インターフェイス。 さらに、スケジューラ ポリシー キーのポリシー値を設定する必要があります`SchedulerKind`する`UmsThreadDefault`します。 ポリシーは、UMS スレッドを指定する場合、`IScheduler`インターフェイスへのパラメーターとして渡される、 [iresourcemanager::registerscheduler](iresourcemanager-structure.md#registerscheduler)メソッドである必要があります、`IUMSScheduler`インターフェイス。  
   
- リソース マネージャーでは、UMS 機能を持つオペレーティング システムでのみ、UMS スレッドです。 64 ビット オペレーティング システムが Windows 7 以降のバージョンでは、UMS スレッドをサポートします。 スケジューラを使用してポリシーを作成する場合、`SchedulerKind`キー値に設定されて`UmsThreadDefault`基になるプラットフォームでは、UMS の値をサポートしていない、`SchedulerKind`そのポリシーのキーは、値に変更されます`ThreadScheduler`です。 必ず確認してこのポリシーの値 UMS スレッドが表示されることを想定します。  
+ Resource Manager では、UMS スレッドを UMS 機能になっているオペレーティング システムでのみできます。 Windows 7 以降のバージョンと 64 ビット オペレーティング システムでは、UMS スレッドをサポートします。 スケジューラ ポリシーを作成する場合、`SchedulerKind`キー値に設定`UmsThreadDefault`UMS の値を基になるプラットフォームがサポートしていませんし、`SchedulerKind`そのポリシーのキーは、値に変更されます`ThreadScheduler`します。 常にお読みくださいバックアップ ポリシーの値はこの UMS スレッドが表示されることを想定します。  
   
- `IUMSScheduler`インターフェイスは、双方向チャネル スケジューラおよびリソース マネージャー間の通信の一方の端。 もう一方の end がによって表される、`IResourceManager`と`ISchedulerProxy`リソース マネージャーによって実装されるインターフェイス。  
+ `IUMSScheduler`インターフェイスは、スケジューラとリソース マネージャー間の通信の双方向チャネルの片端となります。 もう一方の end がによって表される、`IResourceManager`と`ISchedulerProxy`インターフェイスで、リソース マネージャーでは実装されています。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [IScheduler](ischeduler-structure.md)  
@@ -60,18 +60,18 @@ struct IUMSScheduler : public IScheduler;
  **名前空間:** concurrency  
   
 ##  <a name="setcompletionlist"></a>  Iumsscheduler::setcompletionlist メソッド  
- 割り当てます、 `IUMSCompletionList` UMS スレッド スケジューラへのインターフェイスです。  
+ 割り当てます、 `IUMSCompletionList` UMS スレッド スケジューラのインターフェイス。  
   
 ```
 virtual void SetCompletionList(_Inout_ IUMSCompletionList* pCompletionList) = 0;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pCompletionList`  
- スケジューラの完了リスト インターフェイスです。 スケジューラあたり 1 つのリストがあります。  
+*pCompletionList*<br/>
+スケジューラの完了リスト インターフェイスです。 スケジューラごとの 1 つのリストがあります。  
   
-### <a name="remarks"></a>コメント  
- リソース マネージャーでは、スケジューラがリソースの最初の割り当てを要求された後に UMS スレッドが必要であるスケジューラでは、このメソッドを呼び出します。 スケジューラが使用できる、 `IUMSCompletionList` UMS スレッド プロキシがブロックされない場合を決定するインターフェイスです。 UMS スケジューラに割り当てられている仮想プロセッサ ルートで実行されているスレッド プロキシからこのインターフェイスにアクセスすることはのみです。  
+### <a name="remarks"></a>Remarks  
+ Resource Manager では、スケジューラがリソースの最初の割り当てを要求した後、UMS スレッドが必要であるスケジューラでは、このメソッドを呼び出します。 スケジューラを使用できる、 `IUMSCompletionList` UMS スレッド プロキシがブロック解除が決定するインターフェイス。 UMS スケジューラに割り当てられている仮想プロセッサ ルートで実行されているスレッド プロキシからこのインターフェイスにアクセスすることはのみです。  
   
 ## <a name="see-also"></a>関連項目  
  [同時実行 Namespace](concurrency-namespace.md)   

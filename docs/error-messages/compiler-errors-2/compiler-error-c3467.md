@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3467 |Microsoft ドキュメント
+title: コンパイラ エラー C3467 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ea834ff01f228b9b30f8acdafb665dbba743517
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4482aea590b255300a08b5072444b6fabfc5a2eb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256223"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026440"
 ---
 # <a name="compiler-error-c3467"></a>コンパイラ エラー C3467
-'type': この型は既に転送されました  
-  
- 同じ型の事前宣言が複数検出されました。 宣言は、型ごとに 1 回しかできません。  
-  
- 詳細については、次を参照してください。 [Type Forwarding (C + + CLI)](../../windows/type-forwarding-cpp-cli.md)です。  
-  
-## <a name="example"></a>例  
- コンポーネントを作成する例を次に示します。  
-  
-```  
-// C3467.cpp  
-// compile with: /LD /clr  
-public ref class R {};  
-```  
-  
-## <a name="example"></a>例  
- 次の例では C3467 が生成されます。  
-  
-```  
-// C3467_b.cpp  
-// compile with: /clr /c  
-#using "C3467.dll"  
-[ assembly:TypeForwardedTo(R::typeid) ];  
-[ assembly:TypeForwardedTo(R::typeid) ];   // C3467  
+
+'type': この型は既に転送されました
+
+同じ型の事前宣言が複数検出されました。 宣言は、型ごとに 1 回しかできません。
+
+詳細については、次を参照してください。 [Type Forwarding (C +/cli CLI)](../../windows/type-forwarding-cpp-cli.md)します。
+
+## <a name="example"></a>例
+
+コンポーネントを作成する例を次に示します。
+
+```
+// C3467.cpp
+// compile with: /LD /clr
+public ref class R {};
+```
+
+## <a name="example"></a>例
+
+次の例では C3467 が生成されます。
+
+```
+// C3467_b.cpp
+// compile with: /clr /c
+#using "C3467.dll"
+[ assembly:TypeForwardedTo(R::typeid) ];
+[ assembly:TypeForwardedTo(R::typeid) ];   // C3467
 ```

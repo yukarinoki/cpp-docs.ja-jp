@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 4) C4208 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 4) C4208 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b61f8b0a6a0ac61982bee79abb81f083d40a48f1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ee87ad1d43b20c4d0a72b877b05b1ba4c084a1a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292364"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064623"
 ---
 # <a name="compiler-warning-level-4-c4208"></a>コンパイラの警告 (レベル 4) C4208
-使用される標準の拡張機能: delete [exp] - exp を評価が無視されます  
-  
- Microsoft 拡張機能 (/Ze) と角かっこ内の値を使用して配列を削除することができます、 [delete 演算子](../../cpp/delete-operator-cpp.md)です。 値は無視されます。  
-  
-```  
-// C4208.cpp  
-// compile with: /W4  
-int main()  
-{  
-   int * MyArray = new int[18];  
-   delete [18] MyArray;      // C4208  
-   MyArray = new int[18];  
-   delete [] MyArray;        // ok  
-}  
-```  
-  
- このような値は ANSI 互換では使用できません ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。
+
+使用される標準の拡張機能: delete [exp] - exp を評価が無視されます
+
+Microsoft 拡張機能 (/Ze)、かっこ内の値を使用して、配列を削除することができます、 [delete 演算子](../../cpp/delete-operator-cpp.md)します。 値は無視されます。
+
+```
+// C4208.cpp
+// compile with: /W4
+int main()
+{
+   int * MyArray = new int[18];
+   delete [18] MyArray;      // C4208
+   MyArray = new int[18];
+   delete [] MyArray;        // ok
+}
+```
+
+このような値は、ANSI 互換の無効な ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。

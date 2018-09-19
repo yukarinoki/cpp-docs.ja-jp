@@ -1,5 +1,5 @@
 ---
-title: CRecentDockSiteInfo クラス |Microsoft ドキュメント
+title: CRecentDockSiteInfo クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,15 +40,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01fec88a49852ba46c8feb68f18842d2a1de437f
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 42fd0c5df1731ded5e48bda74cb280b282e6b0cb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079001"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702612"
 ---
 # <a name="crecentdocksiteinfo-class"></a>CRecentDockSiteInfo クラス
-`CRecentDockSiteInfo`クラスは、最新の状態情報を格納するヘルパー クラス、 [CPane クラス](../../mfc/reference/cpane-class.md)です。  
+`CRecentDockSiteInfo`クラスは、最近の状態情報を格納するヘルパー クラス、 [CPane クラス](../../mfc/reference/cpane-class.md)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -85,14 +85,14 @@ class CRecentDockSiteInfo : public CObject
 ## <a name="remarks"></a>Remarks  
  `CRecentDockSiteInfo` クラスは、データ管理クラスです。 ドッキング状態とフローティング状態の間で切り替わる `CPane` の最後の状態を追跡します。 ユーザーがフローティング状態のドッキング可能ペインをダブルクリックすると、ペインはドッキング状態になります。 ドッキング状態のペインをダブルクリックすると、ペインは前の位置、サイズ、および状態に戻ります。 同様に、ペインを再びドッキング状態にすると、前のドッキング位置が復元されます。 このデータ クラスは、この機能を実現します。 このクラスのメンバーはドッキング状態のペインの状態情報を格納するため、アプリケーションで直接変更しないでください。  
   
- `CRecentDockSiteInfo` オブジェクトは、ペインが作成されるたびに作成されます。 各`CPane`オブジェクト変数が存在するメンバー、 [:m_recentdockinfo](../../mfc/reference/cpane-class.md#m_recentdockinfo)、この情報を格納します。  
+ `CRecentDockSiteInfo` オブジェクトは、ペインが作成されるたびに作成されます。 各`CPane`オブジェクトには、メンバー変数[:m_recentdockinfo](../../mfc/reference/cpane-class.md#m_recentdockinfo)、この情報を格納します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CRecentDockSiteInfo](../../mfc/reference/crecentdocksiteinfo-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxrecentDockSiteInfo.h  
   
 ##  <a name="cleanup"></a>  CRecentDockSiteInfo::CleanUp  
@@ -244,8 +244,8 @@ void SaveListOfRecentPanes(CList<HWND,
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*CList < HWND*  
- [in]*lstOrg*  
+*CList < HWND*<br/>
+[in][in]*lstOrg*  
  [in]*bForSlider*  
   
 ### <a name="remarks"></a>Remarks  
@@ -260,8 +260,8 @@ virtual void SetInfo(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bForSlider*  
- [in]*srcInfo*  
+*bForSlider*<br/>
+[in][in]*srcInfo*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -275,8 +275,8 @@ virtual void StoreDockInfo(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pRecentContainer*  
- [in]*pTabbedBar*  
+*pRecentContainer*<br/>
+[in][in]*pTabbedBar*  
   
 ### <a name="remarks"></a>Remarks  
   

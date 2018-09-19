@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3932195fe115038b9e065b4121636fdbdb82e78
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 924af1a31cccea117ee8cd2cf909c2947c6dc3b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385713"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064166"
 ---
 # <a name="unrepresented-character-constants"></a>Unrepresented Character Constants (表現されない文字定数)
-**ANSI 3.1.3.4** 基本実行文字セットやワイド文字定数の拡張文字セットで表現されない文字またはエスケープ シーケンスを含む整数型文字定数の値  
-  
- すべての文字定数またはエスケープ シーケンスは、拡張文字セットで表現できます。  
-  
-## <a name="see-also"></a>参照  
- [文字](../c-language/characters.md)
+
+**ANSI 3.1.3.4** 基本実行文字セットやワイド文字定数の拡張文字セットで表現されない文字またはエスケープ シーケンスを含む整数型文字定数の値
+
+すべての文字定数またはエスケープ シーケンスは、拡張文字セットで表現できます。
+
+## <a name="see-also"></a>参照
+
+[文字](../c-language/characters.md)

@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2818 |Microsoft ドキュメント
+title: コンパイラ エラー C2818 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10d7f419d528fcd2445b82e29d92442002624909
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f692f52477c988c277f60a689dac5ce83a90acb2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236054"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112045"
 ---
 # <a name="compiler-error-c2818"></a>コンパイラ エラー C2818
-アプリケーションは、'operator ->' をオーバー ロードされた 'type' を型全体に再帰的には  
-  
- クラス メンバー アクセス演算子の再定義を含む再帰的な`return`ステートメントです。 再定義する、`->`再帰では演算子、関数をオーバーライドして、再帰ルーチン オペレーターからと呼ばれる別の関数に移動する必要があります。
+
+アプリケーションは、'operator ->' をオーバー ロードされた 'type' を再帰的な型には
+
+クラスのメンバー アクセス演算子の再定義には、再帰が含まれています。`return`ステートメント。 再定義する、`->`再帰では演算子は、関数をオーバーライドして再帰ルーチン オペレーターからと呼ばれる別の関数に移動する必要があります。

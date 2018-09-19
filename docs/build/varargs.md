@@ -1,5 +1,5 @@
 ---
-title: Varargs |Microsoft ドキュメント
+title: Varargs |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e7b71cd426bc89570f9d394f3e38dc7a002f6e8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8305eaddf87a2e67b797bedff1944dbcbbbdbd41
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380509"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713649"
 ---
 # <a name="varargs"></a>vararg
-パラメーターが varargs (たとえば、省略記号引数) を使用して指定された場合、基本的には、通常のパラメーターを渡すでは以降の 5 番目の引数に書き込むときに含めが適用されます。 再度、アドレスを与えるダンプ引数に、呼び出し先の責任です。 浮動小数点値の場合にのみ、整数と浮動小数点レジスタの両方値が含まれます、float 場合に、呼び出し先は、整数レジスタに値が必要です。  
-  
-## <a name="see-also"></a>関連項目  
- [呼び出し規則](../build/calling-convention.md)
+
+Varargs (たとえば、省略記号引数) を使用してパラメーターが指定された場合、基本的には、標準パラメーターの引き渡しでは以降の 5 番目の引数の書き込みなどが適用されます。 もう一度を受け取られるアドレスを持つ引数をダンプする、呼び出し先の責任です。 浮動小数点値の場合にのみ、整数と浮動小数点レジスタの両方が含まれている浮動小数点値場合は、呼び出し先は、整数レジスタに値が必要です。
+
+## <a name="see-also"></a>関連項目
+
+[呼び出し規則](../build/calling-convention.md)

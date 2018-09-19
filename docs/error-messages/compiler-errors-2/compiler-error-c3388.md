@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3388 |Microsoft ドキュメント
+title: コンパイラ エラー C3388 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 481096aa870d7e66df032f4d297c652417a7b487
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4447d2d72c2a0a56df9f3a64549f201f86ddf129
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256136"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073474"
 ---
 # <a name="compiler-error-c3388"></a>コンパイラ エラー C3388
-'type': 制約として使用できません。解析を続行するために 'ref class' を使用します  
-  
- ジェネリック型で制約が指定されましたが、正しく指定されませんでした。 参照してください[ジェネリック型パラメーターの制約 (C + + CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md)詳細についてはします。  
-  
-## <a name="example"></a>例  
- 次の例では C3388 が生成されます。  
-  
-```  
-// C3388.cpp  
-// compile with: /clr /c  
-interface class AA {};  
-  
-generic <class T>  
-where T : interface class   // C3388  
-ref class C {};  
-  
-// OK  
-generic <class T>  
-where T : AA  
-ref class D {};  
+
+'type': 制約として使用できません。解析を続行するために 'ref class' を使用します
+
+ジェネリック型で制約が指定されましたが、正しく指定されませんでした。 参照してください[ジェネリック型パラメーターの制約 (C +/cli CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md)詳細についてはします。
+
+## <a name="example"></a>例
+
+次の例では C3388 が生成されます。
+
+```
+// C3388.cpp
+// compile with: /clr /c
+interface class AA {};
+
+generic <class T>
+where T : interface class   // C3388
+ref class C {};
+
+// OK
+generic <class T>
+where T : AA
+ref class D {};
 ```

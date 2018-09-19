@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 849e7ced8889cb46195946cca68243c37e1299a2
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f2a6ab9e03a44f48acca9b949193ceec85eb3ef6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760124"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063113"
 ---
 # <a name="cheapptrbase-class"></a>CHeapPtrBase クラス
 
@@ -40,16 +40,16 @@ ms.locfileid: "43760124"
 ## <a name="syntax"></a>構文
 
 ```
-template <class T, class Allocator = CCRTAllocator>  
+template <class T, class Allocator = CCRTAllocator>
 class CHeapPtrBase
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 ヒープに格納されるオブジェクトの種類。
 
-*アロケーター*  
+*アロケーター*<br/>
 メモリの割り当ては、使用するクラス。 既定では、CRT ルーチンは割り当てし、メモリの解放に使用されます。
 
 ## <a name="members"></a>メンバー
@@ -102,7 +102,7 @@ bool AllocateBytes(size_t nBytes) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nBytes*  
+*nBytes*<br/>
 割り当てるメモリのバイト数。
 
 ### <a name="return-value"></a>戻り値
@@ -123,7 +123,7 @@ void Attach(T* pData) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pData*  
+*pData*<br/>
 `CHeapPtrBase` This ポインターの所有権を持つオブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -216,7 +216,7 @@ T* operator->() const throw();
 
 キャスト演算子です。
 
-```  
+```
 operator T*() const throw();
 ```
 
@@ -234,7 +234,7 @@ bool ReallocateBytes(size_t nBytes) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nBytes*  
+*nBytes*<br/>
 新しいバイトで、割り当てるメモリ量。
 
 ### <a name="return-value"></a>戻り値
@@ -243,6 +243,6 @@ True を返します、メモリが正常に割り当てられたそれ以外の
 
 ## <a name="see-also"></a>関連項目
 
-[CHeapPtr クラス](../../atl/reference/cheapptr-class.md)   
-[CComHeapPtr クラス](../../atl/reference/ccomheapptr-class.md)   
+[CHeapPtr クラス](../../atl/reference/cheapptr-class.md)<br/>
+[CComHeapPtr クラス](../../atl/reference/ccomheapptr-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

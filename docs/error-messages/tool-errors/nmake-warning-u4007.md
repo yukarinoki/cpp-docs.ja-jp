@@ -1,5 +1,5 @@
 ---
-title: NMAKE の警告 U4007 |Microsoft ドキュメント
+title: NMAKE の警告 U4007 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54c28bf0918e61f3819865f65458ce78e5cdc4eb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 40c186e222edbb3b141fd13d8a5964e4a696edd8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320588"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087514"
 ---
 # <a name="nmake-warning-u4007"></a>NMAKE の警告 U4007
-ファイル名 'filename' が長すぎます。8.3 に切り詰めました。  
-  
- 指定されたファイルの基本名が 8 文字より長く、または、拡張機能には、次の 3 つ以上の文字が含まれています。 (Nmake の) には、8 文字ベースと 3 文字の拡張子に名前が切り捨てられます。  
-  
- 長いファイル名は、ファイル システムでサポートされている場合は、名前を二重引用符で囲みます (**"**)。
+
+ファイル名 'filename' が長すぎます。8.3 に切り詰めました。
+
+指定されたファイルの基本名が 8 個を超える文字は、または拡張機能に次の 3 つ以上の文字。 NMAKE では、8 文字ベースと 3 文字の拡張機能に名前が切り捨てられます。
+
+長いファイル名は、ファイル システムでサポートされている場合、名前は、二重引用符で囲みます (**"**)。

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e837e15f934e53f7b1d06a94efb4a320f2e8407
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 48303c6115ac1d2314e3038556b8f98330a6182e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757895"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062671"
 ---
 # <a name="cwintraitsor-class"></a>CWinTraitsOR クラス
 
@@ -45,10 +45,10 @@ class CWinTraitsOR
 
 #### <a name="parameters"></a>パラメーター
 
-*t_dwStyle*  
+*t_dwStyle*<br/>
 既定のウィンドウ スタイル。
 
-*t_dwExStyle*  
+*t_dwExStyle*<br/>
 既定の拡張ウィンドウ スタイル。
 
 ## <a name="members"></a>メンバー
@@ -82,7 +82,7 @@ static DWORD GetWndStyle(DWORD dwStyle);
 
 ### <a name="parameters"></a>パラメーター
 
-*dwStyle*  
+*dwStyle*<br/>
 スタイルのウィンドウの作成に使用します。
 
 ### <a name="return-value"></a>戻り値
@@ -99,7 +99,7 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
 
 ### <a name="parameters"></a>パラメーター
 
-*dwExStyle*  
+*dwExStyle*<br/>
 拡張スタイルのウィンドウの作成に使用します。
 
 ### <a name="return-value"></a>戻り値
@@ -108,6 +108,6 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
 
 ## <a name="see-also"></a>関連項目
 
-[クラスの概要](../../atl/atl-class-overview.md)   
+[クラスの概要](../../atl/atl-class-overview.md)<br/>
 [ウィンドウの特徴を理解する](../../atl/understanding-window-traits.md)
 

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a53dd239d2c6cdba77f977cc94642828c5e91b7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 79facf2498769c0f4385f6dbc84133c3773fe0e7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216475"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705706"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>CMFCRibbonFontComboBox クラス
 フォントの一覧を含むコンボ ボックスを実装します。 このコンボ ボックスをリボン パネルに配置できます。  
@@ -106,14 +106,14 @@ void BuildFonts(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nFontType*  
- 追加するフォントのフォントの種類を指定します。  
+*nFontType*<br/>
+[in]追加するフォントのフォントの種類を指定します。  
   
- [in]*nCharSet*  
- 追加するフォントの文字セットを指定します。  
+*nCharSet*<br/>
+[in]追加するフォントの文字セットを指定します。  
   
- [in]*nPitchAndFamily*  
- ピッチおよび追加するフォントのファミリを指定します。  
+*nPitchAndFamily*<br/>
+[in]ピッチおよび追加するフォントのファミリを指定します。  
   
 ##  <a name="cmfcribbonfontcombobox"></a>  CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
  構築し、初期化、 [CMFCRibbonFontComboBox](../../mfc/reference/cmfcribbonfontcombobox-class.md)オブジェクト。  
@@ -128,20 +128,20 @@ CMFCRibbonFontComboBox(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nID*  
- ユーザーがコンボ ボックスから項目を選択したときに実行されるコマンドのコマンド ID。  
+*nID*<br/>
+[in]ユーザーがコンボ ボックスから項目を選択したときに実行されるコマンドのコマンド ID。  
   
- [in]*nFontType*  
- コンボ ボックスに表示するフォントの種類を指定します。 有効なオプションは、DEVICE_FONTTYPE、RASTER_FONTTYPE、TRUETYPE_FONTTYPE、またはそのビットごとの任意の組み合わせです。  
+*nFontType*<br/>
+[in]コンボ ボックスに表示するフォントの種類を指定します。 有効なオプションは、DEVICE_FONTTYPE、RASTER_FONTTYPE、TRUETYPE_FONTTYPE、またはそのビットごとの任意の組み合わせです。  
   
- [in]*nCharSet*  
- 指定された文字セットに属するものをコンボ ボックス内のフォントをフィルター処理.  
+*nCharSet*<br/>
+[in]指定された文字セットに属するものをコンボ ボックス内のフォントをフィルター処理.  
   
- [in]*nPitchAndFamily*  
- ピッチとファミリのコンボ ボックスに表示されるフォントを指定します。  
+*nPitchAndFamily*<br/>
+[in]ピッチとファミリのコンボ ボックスに表示されるフォントを指定します。  
   
- [in]*nWidth*  
- コンボ ボックスのピクセル単位の幅を指定します。  
+*nWidth*<br/>
+[in]コンボ ボックスのピクセル単位の幅を指定します。  
   
 ### <a name="remarks"></a>Remarks  
  可能な限りの詳細については*nFontType*パラメーターの値を参照してください[EnumFontFamProc](https://msdn.microsoft.com/library/windows/desktop/dd162621) Windows SDK のドキュメント。  

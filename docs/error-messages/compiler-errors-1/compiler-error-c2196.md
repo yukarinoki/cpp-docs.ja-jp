@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2196 |Microsoft ドキュメント
+title: コンパイラ エラー C2196 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 378e8dccb5f5f0735cb941b3c0b3a791ba3c06a3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea1de27a27b76e208c5559ebdc5677d12efb5d30
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167880"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035248"
 ---
 # <a name="compiler-error-c2196"></a>コンパイラ エラー C2196
-case の値 'value' は既に使用されています。  
-  
- switch ステートメントで、同じ case 値を複数回使用します。  
-  
- 次の例では C2196 が生成されます。  
-  
-```  
-// C2196.cpp  
-int main() {  
-   int i = 0;  
-   switch( i ) {  
-   case 0:  
-      break;  
-   case 0:   // C2196  
-   // try the following line instead  
-   // case 1:  
-      break;  
-   }  
-}  
+
+case の値 'value' は既に使用されています。
+
+switch ステートメントで、同じ case 値を複数回使用します。
+
+次の例では C2196 が生成されます。
+
+```
+// C2196.cpp
+int main() {
+   int i = 0;
+   switch( i ) {
+   case 0:
+      break;
+   case 0:   // C2196
+   // try the following line instead
+   // case 1:
+      break;
+   }
+}
 ```

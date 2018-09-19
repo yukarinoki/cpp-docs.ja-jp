@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe0d8b5b0679e8770bda715d3d0da0eaa3b5cce3
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: a7a91920906d5693eafbbf79a4bdd00814c79108
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43682857"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703717"
 ---
 # <a name="cpaneframewnd-class"></a>CPaneFrameWnd クラス
 詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。  
@@ -271,8 +271,8 @@ virtual void AddPane(CBasePane* pWnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*我が物*  
- 追加するウィンドウ。  
+*我が物*<br/>
+[in]追加するウィンドウ。  
   
 ##  <a name="addremovepanefromgloballist"></a>  CPaneFrameWnd::AddRemovePaneFromGlobalList  
  グローバル リストに対してペインを追加または削除します。  
@@ -284,11 +284,11 @@ static BOOL __stdcall AddRemovePaneFromGlobalList(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*我が物*  
- 追加または削除するウィンドウ。  
+*我が物*<br/>
+[in]追加または削除するウィンドウ。  
   
- [in]*bAdd*  
- 0 以外の場合は、ウィンドウを追加します。 0 の場合は、ウィンドウを削除します。  
+*bAdd*<br/>
+[in]0 以外の場合は、ウィンドウを追加します。 0 の場合は、ウィンドウを削除します。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合、0 以外の場合それ以外の場合 0 を返します。  
@@ -317,8 +317,8 @@ virtual void CalcBorderSize(CRect& rectBorderSize) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*rectBorderSize*  
- ミニフレーム ウィンドウの枠線のピクセル単位でサイズを格納します。  
+*rectBorderSize*<br/>
+[out]ミニフレーム ウィンドウの枠線のピクセル単位でサイズを格納します。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、ミニフレーム ウィンドウの境界線のサイズを計算するためにフレームワークによって呼び出されます。 ミニフレーム ウィンドウのツールバーにあるかどうか、返されるサイズによって異なります[CDockablePane](../../mfc/reference/cdockablepane-class.md)します。  
@@ -336,20 +336,20 @@ virtual void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWndToDock*  
- ドッキングするウィンドウへのポインター。  
+*pWndToDock*<br/>
+[in]ドッキングするウィンドウへのポインター。  
   
- [in]*ptMouse*  
- マウスの位置。  
+*ptMouse*<br/>
+[in]マウスの位置。  
   
- [out]*rectResult*  
- 計算される四角形。  
+*rectResult*<br/>
+[out]計算される四角形。  
   
- [out]*bDrawTab*  
- TRUE の場合は、タブを描画します。FALSE の場合は、タブを描画できません。  
+*bDrawTab*<br/>
+[out]TRUE の場合は、タブを描画します。FALSE の場合は、タブを描画できません。  
   
- [out]*ppTargetBar*  
- [ターゲット] ウィンドウへのポインター。  
+*ppTargetBar*<br/>
+[out][ターゲット] ウィンドウへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、ウィンドウがユーザーによって指定されたポイントに、ウィンドウをドラッグした場合に使用される四角形を計算*ptMouse*し、そこにドッキングします。  
@@ -372,8 +372,8 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDockingBar*  
- ウィンドウ。  
+*pDockingBar*<br/>
+[in]ウィンドウ。  
   
 ### <a name="return-value"></a>戻り値  
  ミニ フレームにドッキングできる場合は 0 以外*pDockingBar*。 それ以外の場合に 0 です。  
@@ -407,14 +407,14 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*したとき*  
- ミニフレーム ウィンドウに表示されるテキストを指定します。  
+*したとき*<br/>
+[in]ミニフレーム ウィンドウに表示されるテキストを指定します。  
   
- [in]*dwStyle*  
- ウィンドウ スタイルを指定します。 詳細については、次を参照してください。[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。  
+*dwStyle*<br/>
+[in]ウィンドウ スタイルを指定します。 詳細については、次を参照してください。[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。  
   
- [in]*rect*  
- ミニフレーム ウィンドウの位置と初期サイズを指定します。  
+*rect*<br/>
+[in]ミニフレーム ウィンドウの位置と初期サイズを指定します。  
   
  [in][out]*pParentWnd*  
  ミニフレーム ウィンドウの親フレームを指定します。 この値は、NULL は指定できません。  
@@ -442,17 +442,17 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*dwStyleEx*  
- 拡張ウィンドウ スタイルを指定します。 詳細については、次を参照してください[拡張ウィンドウ スタイル。](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)  
+*dwStyleEx*<br/>
+[in]拡張ウィンドウ スタイルを指定します。 詳細については、次を参照してください[拡張ウィンドウ スタイル。](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)  
   
- [in]*したとき*  
- ミニフレーム ウィンドウに表示されるテキストを指定します。  
+*したとき*<br/>
+[in]ミニフレーム ウィンドウに表示されるテキストを指定します。  
   
- [in]*dwStyle*  
- ウィンドウ スタイルを指定します。 詳細については、次を参照してください。[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。  
+*dwStyle*<br/>
+[in]ウィンドウ スタイルを指定します。 詳細については、次を参照してください。[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。  
   
- [in]*rect*  
- ミニフレーム ウィンドウの位置と初期サイズを指定します。  
+*rect*<br/>
+[in]ミニフレーム ウィンドウの位置と初期サイズを指定します。  
   
  [in][out]*pParentWnd*  
  ミニフレーム ウィンドウの親フレームを指定します。 この値は、NULL は指定できません。  
@@ -474,8 +474,8 @@ virtual CDockablePane* DockPane(BOOL& bWasDocked);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*bWasDocked*  
- ウィンドウが既にドッキングされている場合は TRUE。それ以外の場合は FALSE です。  
+*bWasDocked*<br/>
+[out]ウィンドウが既にドッキングされている場合は TRUE。それ以外の場合は FALSE です。  
   
 ### <a name="return-value"></a>戻り値  
  操作が成功した場合、`CDockablePane`にドッキングされた状態は NULL それ以外の場合、ウィンドウをしたことです。  
@@ -488,8 +488,8 @@ static CBasePane* FindFloatingPaneByID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nID*  
- 検索する、ウィンドウのコントロール ID を表します。  
+*nID*<br/>
+[in]検索する、ウィンドウのコントロール ID を表します。  
   
 ### <a name="return-value"></a>戻り値  
  指定したコントロール id; ウィンドウウィンドウに指定したコントロール ID があるない場合、それ以外の場合、NULL します。  
@@ -506,17 +506,17 @@ static CPaneFrameWnd* __stdcall FrameFromPoint(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pt*  
- 画面座標にポイントします。  
+*pt*<br/>
+[in]画面座標にポイントします。  
   
- [in]*nSensitivity*  
- このサイズに、ミニフレーム ウィンドウの検索領域を増やします。 ミニフレーム ウィンドウは、指定したポイントが拡大された領域内にある場合に、検索条件を満たします。  
+*nSensitivity*<br/>
+[in]このサイズに、ミニフレーム ウィンドウの検索領域を増やします。 ミニフレーム ウィンドウは、指定したポイントが拡大された領域内にある場合に、検索条件を満たします。  
   
- [in]*pFrameToExclude*  
- 検索から除外ミニフレーム ウィンドウを指定します。  
+*pFrameToExclude*<br/>
+[in]検索から除外ミニフレーム ウィンドウを指定します。  
   
- [in]*bFloatMultiOnly*  
- TRUE の場合のみ CBRS_FLOAT_MULTI スタイルのミニフレーム ウィンドウを検索します。 FALSE の場合は、すべてのミニフレーム ウィンドウを検索します。  
+*bFloatMultiOnly*<br/>
+[in]TRUE の場合のみ CBRS_FLOAT_MULTI スタイルのミニフレーム ウィンドウを検索します。 FALSE の場合は、すべてのミニフレーム ウィンドウを検索します。  
   
 ### <a name="return-value"></a>戻り値  
  含むミニフレーム ウィンドウへのポインター *pt*null それ以外の場合。  
@@ -542,8 +542,8 @@ virtual void GetCaptionRect(CRect& rectCaption) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*rectCaption*  
- ミニフレーム ウィンドウのキャプションの画面座標の位置とサイズが含まれています。  
+*rectCaption*<br/>
+[out]ミニフレーム ウィンドウのキャプションの画面座標の位置とサイズが含まれています。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、ミニフレーム ウィンドウのキャプションの外接する四角形を計算するためにフレームワークによって呼び出されます。  
@@ -688,11 +688,11 @@ virtual LRESULT HitTest(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ポイント*  
- テストする点です。  
+*ポイント*<br/>
+[in]テストする点です。  
   
- [in]*bDetectCaption*  
- TRUE の場合は、キャプションに対するポイントを確認します。 FALSE の場合は、キャプションを無視します。  
+*bDetectCaption*<br/>
+[in]TRUE の場合は、キャプションに対するポイントを確認します。 FALSE の場合は、キャプションを無視します。  
   
 ### <a name="return-value"></a>戻り値  
  次のいずれかの値です。  
@@ -780,11 +780,11 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszProfileName*  
- プロファイル名。  
+*lpszProfileName*<br/>
+[in]プロファイルの名前。  
   
- [in]*uiID*  
- ペインの ID  
+*uiID*<br/>
+[in]ペインの ID  
   
 ### <a name="return-value"></a>戻り値  
  ペインの状態が正常に読み込まれている場合は TRUE。それ以外の場合は FALSE です。  
@@ -836,8 +836,8 @@ virtual void OnDrawBorder(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- 境界線を描画するために使用するデバイス コンテキスト。  
+*pDC*<br/>
+[in]境界線を描画するために使用するデバイス コンテキスト。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、ミニフレーム ウィンドウの境界線を描画するためにフレームワークによって呼び出されます。  
@@ -859,11 +859,11 @@ virtual void OnMovePane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pBar*  
- (無視) ウィンドウへのポインター。  
+*pBar*<br/>
+[in](無視) ウィンドウへのポインター。  
   
- [in]*ptOffset*  
- ウィンドウを移動するためのオフセット。  
+*ptOffset*<br/>
+[in]ウィンドウを移動するためのオフセット。  
   
 ##  <a name="onpanerecalclayout"></a>  CPaneFrameWnd::OnPaneRecalcLayout  
  ミニフレーム ウィンドウ内のペインのレイアウトを調整します。  
@@ -894,11 +894,11 @@ virtual void OnShowPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pBar*  
- ウィンドウを表示または非表示になります。  
+*pBar*<br/>
+[in]ウィンドウを表示または非表示になります。  
   
- [in]*bShow*  
- TRUE の場合、ウィンドウは表示されています。ウィンドウが非表示の場合は FALSE です。  
+*bShow*<br/>
+[in]TRUE の場合、ウィンドウは表示されています。ウィンドウが非表示の場合は FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
  ミニフレーム ウィンドウのペインの表示または非表示のときに、フレームワークによって呼び出されます。 既定の実装では、何も行われません。  
@@ -926,14 +926,14 @@ virtual CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ポイント*  
- ポイント画面座標で、ユーザーがクリックしました。  
+*ポイント*<br/>
+[in]ポイント画面座標で、ユーザーがクリックしました。  
   
- [in]*nSensitivity*  
- このパラメーターは使用されません。  
+*nSensitivity*<br/>
+[in]このパラメーターは使用されません。  
   
- [in]*bCheckVisibility*  
- 表示されているペインのみが返されること; を指定する場合は TRUEそれ以外の場合、FALSE です。  
+*bCheckVisibility*<br/>
+[in]表示されているペインのみが返されること; を指定する場合は TRUEそれ以外の場合、FALSE です。  
   
 ### <a name="return-value"></a>戻り値  
  ユーザーがクリックしたペインまたはウィンドウがその場所に存在しない場合は NULL です。  
@@ -969,14 +969,14 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*我が物*  
- 削除するウィンドウへのポインター。  
+*我が物*<br/>
+[in]削除するウィンドウへのポインター。  
   
- [in]*bDestroy*  
- ミニフレーム ウィンドウの動作を指定します。 場合*bDestroy*が true の場合、このメソッドはすぐに、ミニフレーム ウィンドウを破棄します。 FALSE の場合、このメソッドは、特定の遅延後に、ミニフレーム ウィンドウを破棄します。  
+*bDestroy*<br/>
+[in]ミニフレーム ウィンドウの動作を指定します。 場合*bDestroy*が true の場合、このメソッドはすぐに、ミニフレーム ウィンドウを破棄します。 FALSE の場合、このメソッドは、特定の遅延後に、ミニフレーム ウィンドウを破棄します。  
   
- [in]*bNoDelayedDestroy*  
- TRUE の場合、遅延の破棄は無効です。 FALSE の場合、遅延の破棄が有効にします。  
+*bNoDelayedDestroy*<br/>
+[in]TRUE の場合、遅延の破棄は無効です。 FALSE の場合、遅延の破棄が有効にします。  
   
 ### <a name="remarks"></a>Remarks  
  フレームワークは、すぐに、または特定の遅延の後、ミニフレーム ウィンドウを破棄できます。 ミニフレーム ウィンドウの破棄を遅延する場合に FALSE を渡す、 *bNoDelayedDestroy*パラメーター。 遅延の破棄は、フレームワークが AFX_WM_CHECKEMPTYMINIFRAME メッセージを処理するときに発生します。  
@@ -991,11 +991,11 @@ virtual void ReplacePane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pBarOrg*  
- 元のウィンドウへのポインター。  
+*pBarOrg*<br/>
+[in]元のウィンドウへのポインター。  
   
- [in]*pBarReplaceWith*  
- 元のウィンドウを置換するウィンドウへのポインター。  
+*pBarReplaceWith*<br/>
+[in]元のウィンドウを置換するウィンドウへのポインター。  
   
 ##  <a name="savestate"></a>  CPaneFrameWnd::SaveState  
  レジストリにペインの状態を保存します。  
@@ -1007,11 +1007,11 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszProfileName*  
- プロファイル名。  
+*lpszProfileName*<br/>
+[in]プロファイルの名前。  
   
- [in]*uiID*  
- ペインの ID  
+*uiID*<br/>
+[in]ペインの ID  
   
 ### <a name="return-value"></a>戻り値  
  ペインの状態が正常に保存されている場合は TRUE。それ以外の場合は FALSE です。  
@@ -1024,8 +1024,8 @@ virtual void SetCaptionButtons(DWORD dwButtons);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*dwButtons*  
- 次の値のビットごとの OR の組み合わせです。  
+*dwButtons*<br/>
+[in]次の値のビットごとの OR の組み合わせです。  
   
 - AFX_CAPTION_BTN_CLOSE  
   
@@ -1067,8 +1067,8 @@ void SetDockingTimer(UINT nTimeOut);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*タイムアウト*  
- タイムアウト値 (ミリ秒単位)。  
+*タイムアウト*<br/>
+[in]タイムアウト値 (ミリ秒単位)。  
   
 ##  <a name="setdockstate"></a>  CPaneFrameWnd::SetDockState  
  ドッキング状態を設定します。  
@@ -1078,8 +1078,8 @@ virtual void SetDockState(CDockingManager* pDockManager);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDockManager*  
- ドッキングのマネージャーへのポインター。  
+*pDockManager*<br/>
+[in]ドッキングのマネージャーへのポインター。  
   
 ##  <a name="sethotpoint"></a>  CPaneFrameWnd::SetHotPoint  
 
@@ -1104,8 +1104,8 @@ virtual BOOL SetPreDockState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*preDockState*  
- 次の値を使用できます。  
+*preDockState*<br/>
+[in]使用可能な値:  
   
 - PDS_NOTHING、  
   
@@ -1113,11 +1113,11 @@ virtual BOOL SetPreDockState(
   
 - PDS_DOCK_TO_TAB  
   
- [in]*pBarToDock*  
- ドッキング ウィンドウへのポインター。  
+*pBarToDock*<br/>
+[in]ドッキング ウィンドウへのポインター。  
   
- [in]*dockMethod*  
- ドッキング メソッド。 (このパラメーターが無視されます)  
+*dockMethod*<br/>
+[in]ドッキング メソッド。 (このパラメーターが無視されます)  
   
 ### <a name="return-value"></a>戻り値  
  ミニフレーム ウィンドウがドッキング解除する場合は TRUE。ドッキングされている場合は FALSE。  
@@ -1140,8 +1140,8 @@ BOOL StartTearOff(CMFCPopu* pMenu);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pMenu*  
- メニューへのポインター。  
+*pMenu*<br/>
+[in]メニューへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -1168,8 +1168,8 @@ virtual void StoreRecentTabRelatedInfo(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDockingBar*  
- [in]*pTabbedBar*  
+*pDockingBar*<br/>
+[in][in]*pTabbedBar*  
   
 ### <a name="remarks"></a>Remarks  
   

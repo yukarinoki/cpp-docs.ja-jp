@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 482d140407a22d1ea63db07101f76f028877bdc1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f0b2c7f89e7ad7d0142cb6830c4d4c3361b014c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206789"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075842"
 ---
 # <a name="linker-tools-error-lnk1123"></a>リンカ ツール エラー LNK1123
 
@@ -47,6 +47,6 @@ ms.locfileid: "43206789"
 
 ## <a name="see-also"></a>関連項目
 
-[.obj ファイル (リンカー入力)](../../build/reference/dot-obj-files-as-linker-input.md)  
-[EDITBIN リファレンス](../../build/reference/editbin-reference.md)  
-[DUMPBIN リファレンス](../../build/reference/dumpbin-reference.md)  
+[.obj ファイル (リンカー入力)](../../build/reference/dot-obj-files-as-linker-input.md)<br/>
+[EDITBIN リファレンス](../../build/reference/editbin-reference.md)<br/>
+[DUMPBIN リファレンス](../../build/reference/dumpbin-reference.md)

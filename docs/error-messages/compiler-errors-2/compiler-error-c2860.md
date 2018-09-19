@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2860 |Microsoft ドキュメント
+title: コンパイラ エラー C2860 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ced30a3d737cc8fbd8599489600674da423dbfc8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 51a73a9997dda717f2c4977d75d99da72d58ae7b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245226"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091154"
 ---
 # <a name="compiler-error-c2860"></a>コンパイラ エラー C2860
-'void' '(void)' を除く、引数の型にすることはできません  
-  
- 型`void`他の引数を指定して、引数の型として使用できません。  
-  
- 次の例では、C2860 が生成されます。  
-  
-```  
-// C2860.cpp  
-// compile with: /c  
-void profunc1(void, int i);   // C2860  
-void func10(void);   // OK  
+
+'void' '(void)' を除く、引数の型にすることはできません
+
+型`void`引数の型とその他の引数として使用できません。
+
+次の例では、C2860 が生成されます。
+
+```
+// C2860.cpp
+// compile with: /c
+void profunc1(void, int i);   // C2860
+void func10(void);   // OK
 ```

@@ -1,5 +1,5 @@
 ---
-title: アクセサーの使用 |Microsoft ドキュメント
+title: アクセサーの使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 066e963cfe551173088f6d78efaf2057f29d05fa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 30ebb0e28bd25cf92a2d1c918d3cc5bc921df9f6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104998"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099763"
 ---
 # <a name="using-accessors"></a>アクセサーの使用
-次のトピックでは、データに最適なアクセサーの種類を判断する方法を説明するアプリケーションと、さまざまな種類の使用可能なアクセサーの使用方法。  
+
+次のトピックは、データの最適なアクセサーの種類を判断する方法を説明します。 アプリケーションと、さまざまな種類の使用可能なアクセサーを使用する方法。  
   
--   [使用するアクセサーの決定](../../data/oledb/determining-which-type-of-accessor-to-use.md)  
+- [使用するアクセサーの決定](../../data/oledb/determining-which-type-of-accessor-to-use.md)  
   
--   [行セットでの複数アクセサーの使用](../../data/oledb/using-multiple-accessors-on-a-rowset.md)  
+- [行セットでの複数アクセサーの使用](../../data/oledb/using-multiple-accessors-on-a-rowset.md)  
   
--   [動的アクセサーの使用](../../data/oledb/using-dynamic-accessors.md)  
+- [動的アクセサーの使用](../../data/oledb/using-dynamic-accessors.md)  
   
--   [手動アクセサーの使用](../../data/oledb/using-manual-accessors.md)  
+- [手動アクセサーの使用](../../data/oledb/using-manual-accessors.md)  
   
--   [XML データへのアクセス](../../data/oledb/accessing-xml-data.md)  
+- [XML データへのアクセス](../../data/oledb/accessing-xml-data.md)  
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB コンシューマー テンプレートの操作](../../data/oledb/working-with-ole-db-consumer-templates.md)
+
+[OLE DB コンシューマー テンプレートの操作](../../data/oledb/working-with-ole-db-consumer-templates.md)

@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 3) C4637 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 3) C4637 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 192cec5940cb813ab5057cf179b7f67feb1d0f78
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 094182dd0e438a89ce3652130b411ab1ca1a0bd1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291740"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111785"
 ---
 # <a name="compiler-warning-level-3-c4637"></a>コンパイラの警告 (レベル 3) C4637
-XML ドキュメント コメント ターゲット:\<含める > タグは破棄されます。  理由  
-  
- 構文、 [\<含める >](../../ide/include-visual-cpp.md)タグが正しくありません。  
-  
- 次の例では C4637 警告が生成されます。  
-  
-```  
-// C4637.cpp  
-// compile with: /clr /doc /LD /W3  
-using namespace System;  
-  
-/// Text for class MyClass.  
-public ref class MyClass {   
-public:  
-   /// <include file="c:\davedata\jtest\xml_include.doc"/>  
-   // Try the following line instead:  
-   // /// <include file='xml_include.doc' path='MyDocs/MyMembers/*' />  
-   void MyMethod() {  
-   }  
-};   // C4637  
+
+XML ドキュメント コメント ターゲット:\<含める > タグは破棄されます。  理由
+
+構文、 [\<含める >](../../ide/include-visual-cpp.md)タグが正しくありません。
+
+次の例では C4637 警告が生成されます。
+
+```
+// C4637.cpp
+// compile with: /clr /doc /LD /W3
+using namespace System;
+
+/// Text for class MyClass.
+public ref class MyClass {
+public:
+   /// <include file="c:\davedata\jtest\xml_include.doc"/>
+   // Try the following line instead:
+   // /// <include file='xml_include.doc' path='MyDocs/MyMembers/*' />
+   void MyMethod() {
+   }
+};   // C4637
 ```

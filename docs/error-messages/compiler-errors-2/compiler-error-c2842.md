@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2842 |Microsoft ドキュメント
+title: コンパイラ エラー C2842 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe0a95edfa484eb8606b914424e52483c4c1c52d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 20967ab4cd047f62a5cf692c91fec90148b4f470
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245297"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118818"
 ---
 # <a name="compiler-error-c2842"></a>コンパイラ エラー C2842
-'class' : マネージ型または WinRT 型はそれ自体の 'operator new' または 'operator delete' を定義できません  
-  
- 独自に定義することができます * * 演算子の new または**演算子 delete**ネイティブ ヒープにメモリの割り当てを管理します。 ただし、これらの演算子はマネージ ヒープでのみ割り当てられるため、参照クラスでは定義できません。  
 
-  
- 詳細については、次を参照してください。[ユーザー定義の演算子 (C + + CLI)](../../dotnet/user-defined-operators-cpp-cli.md)です。  
-  
-## <a name="example"></a>例  
- 次の例では C2842 が生成されます。  
-  
-```  
-// C2842.cpp  
-// compile with: /clr /c  
-ref class G {  
-   void* operator new( size_t nSize );   // C2842  
-};  
-```  
+'class' : マネージド型または WinRT 型はそれ自体の 'operator new' または 'operator delete' を定義できません
+
+独自に定義することができます * * new 演算子または**delete 演算子**ネイティブ ヒープにメモリの割り当てを管理します。 ただし、これらの演算子はマネージド ヒープでのみ割り当てられるため、参照クラスでは定義できません。
+
+
+詳細については、次を参照してください。[ユーザー定義演算子 (C +/cli CLI)](../../dotnet/user-defined-operators-cpp-cli.md)します。
+
+## <a name="example"></a>例
+
+次の例では C2842 が生成されます。
+
+```
+// C2842.cpp
+// compile with: /clr /c
+ref class G {
+   void* operator new( size_t nSize );   // C2842
+};
+```

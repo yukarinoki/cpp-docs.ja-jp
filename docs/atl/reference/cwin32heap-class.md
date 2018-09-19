@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c8081b5a85b09f513152861cb09758b61df8d9b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d3b10648a3251a705085e31559a98b6ee4957c72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763254"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088476"
 ---
 # <a name="cwin32heap-class"></a>CWin32Heap クラス
 
@@ -101,7 +101,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nBytes*  
+*nBytes*<br/>
 新しいメモリ ブロック内の要求されたバイト数。
 
 ### <a name="return-value"></a>戻り値
@@ -124,10 +124,10 @@ void Attach(HANDLE hHeap, bool bTakeOwnership) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*hHeap*  
+*hHeap*<br/>
 既存のヒープ ハンドル。
 
-*bTakeOwnership*  
+*bTakeOwnership*<br/>
 フラグのどうかを示す、`CWin32Heap`オブジェクトが、ヒープのリソースに対する所有権を取得します。
 
 ### <a name="remarks"></a>Remarks
@@ -149,16 +149,16 @@ CWin32Heap(
 
 ### <a name="parameters"></a>パラメーター
 
-*hHeap*  
+*hHeap*<br/>
 既存のヒープ オブジェクト。
 
-*dwFlags*  
+*dwFlags*<br/>
 ヒープの作成に使用されるフラグ。
 
-*nInitialSize*  
+*nInitialSize*<br/>
 ヒープの初期サイズ。
 
-*nMaxSize*  
+*nMaxSize*<br/>
 ヒープの最大サイズ。
 
 ### <a name="remarks"></a>Remarks
@@ -213,7 +213,7 @@ virtual void Free(void* p) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*p*  
+*p*<br/>
 解放するメモリ ブロックへのポインター。 NULL は有効な値を何も行われません。
 
 ##  <a name="getsize"></a>  CWin32Heap::GetSize
@@ -226,7 +226,7 @@ virtual size_t GetSize(void* p) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*p*  
+*p*<br/>
 サイズを取得するメモリ ブロックへのポインター。 これは、によって返されるポインター [cwin32heap::allocate](#allocate)または[cwin32heap::reallocate](#reallocate)します。
 
 ### <a name="return-value"></a>戻り値
@@ -263,10 +263,10 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*p*  
+*p*<br/>
 再割り当てするメモリ ブロックへのポインター。
 
-*nBytes*  
+*nBytes*<br/>
 割り当てられるブロックの新しいサイズ (バイト単位)。 ブロックは大きくすることも小さくすることもできます。
 
 ### <a name="return-value"></a>戻り値
@@ -279,9 +279,9 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ## <a name="see-also"></a>関連項目
 
-[クラスの概要](../../atl/atl-class-overview.md)   
-[IAtlMemMgr クラス](../../atl/reference/iatlmemmgr-class.md)   
-[CLocalHeap クラス](../../atl/reference/clocalheap-class.md)   
-[CGlobalHeap クラス](../../atl/reference/cglobalheap-class.md)   
-[CCRTHeap クラス](../../atl/reference/ccrtheap-class.md)   
+[クラスの概要](../../atl/atl-class-overview.md)<br/>
+[IAtlMemMgr クラス](../../atl/reference/iatlmemmgr-class.md)<br/>
+[CLocalHeap クラス](../../atl/reference/clocalheap-class.md)<br/>
+[CGlobalHeap クラス](../../atl/reference/cglobalheap-class.md)<br/>
+[CCRTHeap クラス](../../atl/reference/ccrtheap-class.md)<br/>
 [CComHeap クラス](../../atl/reference/ccomheap-class.md)

@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2566 |Microsoft ドキュメント
+title: コンパイラ エラー C2566 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd7685a7633aa06424f1999fbf539dbfd8b62703
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 868098b6f939fe95166b7228566e19f710f19ee5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199707"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094911"
 ---
 # <a name="compiler-error-c2566"></a>コンパイラ エラー C2566
-条件式のオーバー ロードされた関数  
-  
- 条件式で、オーバー ロードされた関数を評価できません。
+
+条件式のオーバー ロードされた関数
+
+条件式のオーバー ロード関数を評価できません。

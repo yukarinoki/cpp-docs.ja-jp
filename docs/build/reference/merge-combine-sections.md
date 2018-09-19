@@ -1,5 +1,5 @@
 ---
-title: マージ (セクションの結合) |Microsoft ドキュメント
+title: -MERGE (セクション) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,39 +22,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ece36de793b17b8cc064ec3837ea481a1ce870a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 01768ffcfd647d3e05c0b96647d544e3d68e77d0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373476"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722671"
 ---
 # <a name="merge-combine-sections"></a>/MERGE (セクションのマージ)
-```  
-/MERGE:from=to  
-```  
-  
-## <a name="remarks"></a>コメント  
- /MERGE オプションは、最初のセクションを組み合わせて (*から*) と 2 番目のセクション (*に*)、セクションの名前*に*です。 たとえば、`/merge:.rdata=.text` のようにします。  
-  
- 2 番目のセクションが存在しない場合の名前を変更、セクションのリンク*から*として*に*です。  
-  
- /MERGE オプションは、Vxd を作成し、コンパイラによって生成されたセクション名をオーバーライドするために役立ちます。  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには  
-  
-1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「 [Visual C プロジェクト プロパティの設定](../../ide/working-with-project-properties.md)です。  
-  
-2.  クリックして、**リンカー**フォルダーです。  
-  
-3.  クリックして、**詳細**プロパティ ページ。  
-  
-4.  変更、**のセクションではマージ**プロパティです。  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには  
-  
-1.  「<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MergeSections%2A>」を参照してください。  
-  
-## <a name="see-also"></a>関連項目  
- [リンカー オプションの設定](../../build/reference/setting-linker-options.md)   
- [リンカー オプション](../../build/reference/linker-options.md)
+
+```
+/MERGE:from=to
+```
+
+## <a name="remarks"></a>Remarks
+
+/MERGE オプションは、最初のセクションを結合 (*から*) と 2 番目のセクション (*に*)、セクションの名前を*に*します。 たとえば、`/merge:.rdata=.text` のようにします。
+
+リンクのセクションの名前を変更、2 番目のセクションが存在しない場合*から*として*に*します。
+
+/MERGE オプションは、Vxd を作成して、コンパイラによって生成されたセクション名をオーバーライドする場合に便利です。
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
+
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
+
+1. をクリックして、**リンカー**フォルダー。
+
+1. をクリックして、**詳細**プロパティ ページ。
+
+1. 変更、**のセクションではマージ**プロパティ。
+
+### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
+
+1. 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MergeSections%2A>
+
+## <a name="see-also"></a>関連項目
+
+[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
+[リンカー オプション](../../build/reference/linker-options.md)

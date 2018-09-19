@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f2bf81c2e69290feb9f9afd054286c10e42d0be
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c3a9088ced647dd0e6694181cd7ab7857047c720
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338754"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713283"
 ---
 # <a name="ccontextmenumanager-class"></a>CContextMenuManager クラス
 `CContextMenuManager`オブジェクト管理ショートカット メニュー、コンテキスト メニューとも呼ばれます。  
@@ -97,7 +97,7 @@ class CContextMenuManager : public CObject
   
  `CContextMenuManager`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxcontextmenumanager.h  
   
 ##  <a name="addmenu"></a>  CContextMenuManager::AddMenu  
@@ -115,14 +115,14 @@ BOOL AddMenu(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiMenuNameResId*  
- 新しいメニューの名前を含む文字列のリソース ID。  
+*uiMenuNameResId*<br/>
+[in]新しいメニューの名前を含む文字列のリソース ID。  
   
- [in]*uiMenuResId*  
- メニューの リソース id です。  
+*uiMenuResId*<br/>
+[in]メニューのリソース id です。  
   
- [in]*lpszName*  
- 新しいメニューの名前を含む文字列。  
+*lpszName*<br/>
+[in]新しいメニューの名前を含む文字列。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合、0 以外の場合メソッドが失敗した場合は 0。  
@@ -148,8 +148,8 @@ HMENU GetMenuById(UINT nMenuResId) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nMenuResId*  
- メニューのリソース ID。  
+*nMenuResId*<br/>
+[in]メニューのリソース ID。  
   
 ### <a name="return-value"></a>戻り値  
  関連付けられているメニューへのハンドルまたは`NULL`メニューが見つからない場合。  
@@ -164,11 +164,11 @@ HMENU GetMenuByName(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszName*  
- 取得するメニューの名前を含む文字列。  
+*lpszName*<br/>
+[in]取得するメニューの名前を含む文字列。  
   
- [out]*puiOrigResID*  
- UINT へのポインター。 このパラメーターには、指定されたメニューのリソース ID が含まれる場合が見つかりました。  
+*puiOrigResID*<br/>
+[out]UINT へのポインター。 このパラメーターには、指定されたメニューのリソース ID が含まれる場合が見つかりました。  
   
 ### <a name="return-value"></a>戻り値  
  指定した名前に一致するメニューへのハンドルを*lpszName*します。 というメニューがない場合は NULL *lpszName*します。  
@@ -184,8 +184,8 @@ void GetMenuNames(CStringList& listOfNames) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*listOfNames*  
- 参照を[CStringList](../../mfc/reference/cstringlist-class.md)パラメーター。 このメソッドは、このパラメーターにメニュー名のリストを書き込みます。  
+*listOfNames*<br/>
+[out]参照を[CStringList](../../mfc/reference/cstringlist-class.md)パラメーター。 このメソッドは、このパラメーターにメニュー名のリストを書き込みます。  
   
 ##  <a name="loadstate"></a>  CContextMenuManager::LoadState  
  関連付けられている情報を読み込み、 [CContextMenuManager クラス](../../mfc/reference/ccontextmenumanager-class.md)Windows レジストリから。  
@@ -195,8 +195,8 @@ virtual BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszProfileName*  
- レジストリ キーの相対パスを含む文字列。  
+*lpszProfileName*<br/>
+[in]レジストリ キーの相対パスを含む文字列。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合、0 以外の場合それ以外の場合 0 を返します。  
@@ -227,8 +227,8 @@ virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszProfileName*  
- レジストリ キーの相対パスを含む文字列。  
+*lpszProfileName*<br/>
+[in]レジストリ キーの相対パスを含む文字列。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合、0 以外の場合それ以外の場合 0 を返します。  
@@ -246,8 +246,8 @@ void SetDontCloseActiveMenu (BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bSet*  
- アクティブなポップアップ メニューを閉じるかどうかを制御するブール型パラメーター。 TRUE の値は、アクティブなポップアップ メニューが閉じられていないことを示します。 FALSE は、アクティブなポップアップ メニューが閉じられたことを示します。  
+*bSet*<br/>
+[in]アクティブなポップアップ メニューを閉じるかどうかを制御するブール型パラメーター。 TRUE の値は、アクティブなポップアップ メニューが閉じられていないことを示します。 FALSE は、アクティブなポップアップ メニューが閉じられたことを示します。  
   
 ### <a name="remarks"></a>Remarks  
  既定で、`CContextMenuManager`アクティブなポップアップ メニューを閉じます。  
@@ -276,29 +276,29 @@ virtual CMFCPopupMenu* ShowPopupMenu(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiMenuResId*  
- このメソッドが表示されるメニューのリソース ID。  
+*uiMenuResId*<br/>
+[in]このメソッドが表示されるメニューのリソース ID。  
   
- [in]*x*  
- 水平方向のショートカット メニューのクライアント座標でのオフセットします。  
+*x*<br/>
+[in]水平方向のショートカット メニューのクライアント座標でのオフセットします。  
   
- [in]*y*  
- ショートカット メニューのクライアント座標の垂直方向のオフセット  
+*y*<br/>
+[in]ショートカット メニューのクライアント座標の垂直方向のオフセット  
   
- [in]*pWndOwner*  
- ショートカット メニューの親ウィンドウへのポインター。  
+*pWndOwner*<br/>
+[in]ショートカット メニューの親ウィンドウへのポインター。  
   
- [in]*bOwnMessage*  
- メッセージのルーティング方法を示すブール値パラメーター。 場合*bOwnMessage* FALSE、標準の MFC は、ルーティングが使用されます。 それ以外の場合、 *pWndOwner*メッセージを受信します。  
+*bOwnMessage*<br/>
+[in]メッセージのルーティング方法を示すブール値パラメーター。 場合*bOwnMessage* FALSE、標準の MFC は、ルーティングが使用されます。 それ以外の場合、 *pWndOwner*メッセージを受信します。  
   
- [in]*hmenuPopup*  
- このメソッドが表示されるメニューのハンドル。  
+*hmenuPopup*<br/>
+[in]このメソッドが表示されるメニューのハンドル。  
   
- [in]*bAutoDestroy*  
- メニューが自動的に破棄されるかどうかを示すブール値パラメーター。  
+*bAutoDestroy*<br/>
+[in]メニューが自動的に破棄されるかどうかを示すブール値パラメーター。  
   
- [in]*bRightAlign*  
- メニュー項目を配置する方法を示すブール値パラメーター。 場合*bRightAlign*が true の場合、メニューが右から左への読み取り順序の右側に配置します。  
+*bRightAlign*<br/>
+[in]メニュー項目を配置する方法を示すブール値パラメーター。 場合*bRightAlign*が true の場合、メニューが右から左への読み取り順序の右側に配置します。  
   
 ### <a name="return-value"></a>戻り値  
  最初のメソッドのオーバー ロードは、メソッドが正常にメニューを表示する場合は 0 以外を返しますそれ以外の場合 0 を返します。 2 番目のメソッドのオーバー ロードへのポインターを返します[CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)ショートカット メニューを表示は正しくそれ以外の場合は NULL です。  
@@ -321,20 +321,20 @@ virtual UINT TrackPopupMenu(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*hmenuPopup*  
- このメソッドは、表示されるショートカット メニューのハンドル。  
+*hmenuPopup*<br/>
+[in]このメソッドは、表示されるショートカット メニューのハンドル。  
   
- [in]*x*  
- 水平方向のショートカット メニューのクライアント座標でのオフセットします。  
+*x*<br/>
+[in]水平方向のショートカット メニューのクライアント座標でのオフセットします。  
   
- [in]*y*  
- 縦方向のショートカット メニューのクライアント座標のオフセットします。  
+*y*<br/>
+[in]縦方向のショートカット メニューのクライアント座標のオフセットします。  
   
- [in]*pWndOwner*  
- ショートカット メニューの親ウィンドウへのポインター。  
+*pWndOwner*<br/>
+[in]ショートカット メニューの親ウィンドウへのポインター。  
   
- [in]*bRightAlign*  
- メニュー項目を配置する方法を示すブール値パラメーター。 場合*bRightAlign*が true の場合、メニューが右から左への読み取り順序の右側に配置します。 場合*bRightAlign* false で、メニューが左から右の読み取り順序の左側に配置します。  
+*bRightAlign*<br/>
+[in]メニュー項目を配置する方法を示すブール値パラメーター。 場合*bRightAlign*が true の場合、メニューが右から左への読み取り順序の右側に配置します。 場合*bRightAlign* false で、メニューが左から右の読み取り順序の左側に配置します。  
   
 ### <a name="return-value"></a>戻り値  
  ユーザーが選択したコマンドのメニュー コマンド IDユーザーがメニュー コマンドを選択することがなく、ショートカット メニューを閉じる場合は 0。  

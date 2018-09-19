@@ -16,15 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e76adb397c9131bbaa7c2c40124de31348c56a31
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c074ddd193765029a2925e1a98c4ab1787f9a82a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382826"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082678"
 ---
 # <a name="execution-character-set"></a>実行文字セット
-このコンテンツは、多くの場合、"実行文字セット" と呼ばれます。 実行文字セットは、C プログラムを作成する場合に使用するソース文字セットと必ずしも同じではありません。 実行文字セットは、ソース文字セットのすべての文字、null 文字、改行文字、バックスペース、水平タブ、垂直タブ、キャリッジ リターン、エスケープ シーケンスを含みます。 ソース文字セットと実行文字セットは、他の実装では異なることがあります。  
-  
-## <a name="see-also"></a>参照  
- [C 文字定数](../c-language/c-character-constants.md)
+
+このコンテンツは、多くの場合、"実行文字セット" と呼ばれます。 実行文字セットは、C プログラムを作成する場合に使用するソース文字セットと必ずしも同じではありません。 実行文字セットは、ソース文字セットのすべての文字、null 文字、改行文字、バックスペース、水平タブ、垂直タブ、キャリッジ リターン、エスケープ シーケンスを含みます。 ソース文字セットと実行文字セットは、他の実装では異なることがあります。
+
+## <a name="see-also"></a>参照
+
+[C 文字定数](../c-language/c-character-constants.md)

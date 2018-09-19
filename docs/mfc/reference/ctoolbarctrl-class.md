@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0801fab2ef5cec0da42cb40e28cd5124141c1007
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 93752aa124bc144e42a337f757c9d9cdc9a226ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686086"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047929"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl クラス
 Windows ツール バー コモン コントロールの機能が用意されています。  
@@ -410,65 +410,66 @@ BOOL AddButtons(
 ### <a name="remarks"></a>Remarks  
  *LpButtons*ポインターの配列を指します`TBBUTTON`構造体。 各`TBBUTTON`構造体は、ボタンのスタイル、イメージや文字列、コマンドの ID、状態、およびユーザー定義データの追加 ボタンを関連付けます。  
   
- `typedef struct _TBBUTTON {`  
-  
- `int iBitmap;// zero-based index of button image`  
-  
- `int idCommand;  // command to be sent when button pressed`  
-  
- `BYTE fsState;   // button state--see below`  
-  
- `BYTE fsStyle;   // button style--see below`  
-  
- `DWORD dwData;   // application-defined value`  
-  
- `int iString;// zero-based index of button label string`  
-  
- `} TBBUTTON;`  
+```cpp
+typedef struct _TBBUTTON {
+    int iBitmap;    // zero-based index of button image
+    int idCommand;  // command to be sent when button pressed
+    BYTE fsState;   // button state--see below
+    BYTE fsStyle;   // button style--see below
+    DWORD dwData;   // application-defined value
+    int iString;    // zero-based index of button label string
+} TBBUTTON;
+```
   
  メンバーは次のとおりです。  
   
- `iBitmap`  
- このボタンのイメージがない場合は-1、ボタンのイメージの 0 から始まるインデックス。  
+- `iBitmap`  
+
+   このボタンのイメージがない場合は-1、ボタンのイメージの 0 から始まるインデックス。  
   
- `idCommand`  
- ボタンに関連付けられているコマンドの識別子です。 この識別子は、ボタンを選択すると、WM_COMMAND メッセージで送信されます。 場合、`fsStyle`メンバー TBSTYLE_SEP 値には、このメンバーは 0 である必要があります。  
+-  `idCommand`  
+
+   ボタンに関連付けられているコマンドの識別子です。 この識別子は、ボタンを選択すると、WM_COMMAND メッセージで送信されます。 場合、`fsStyle`メンバー TBSTYLE_SEP 値には、このメンバーは 0 である必要があります。  
   
- `fsState`  
- ボタンの状態フラグ。 次の値の組み合わせを指定できます。  
+-  `fsState`  
+
+   ボタンの状態フラグ。 次の値の組み合わせを指定できます。  
   
-- TBSTATE_CHECKED ボタンは、スタイルのスタイルを備えが押されました。  
+   - TBSTATE_CHECKED ボタンは、スタイルのスタイルを備えが押されました。  
   
-- ボタン、ボタンは、ユーザーの入力を受け入れます。 この状態がないボタンは、ユーザー入力が受け付けられません、淡色表示にします。  
+   - ボタン、ボタンは、ユーザーの入力を受け入れます。 この状態がないボタンは、ユーザー入力が受け付けられません、淡色表示にします。  
   
-- TBSTATE_HIDDEN ボタンが表示されていないと、ユーザー入力を受け取ることはできません。  
+   - TBSTATE_HIDDEN ボタンが表示されていないと、ユーザー入力を受け取ることはできません。  
   
-- TBSTATE_INDETERMINATE ボタンは淡色表示にします。  
+   - TBSTATE_INDETERMINATE ボタンは淡色表示にします。  
   
-- ボタンが押された TBSTATE_PRESSED します。  
+   - ボタンが押された TBSTATE_PRESSED します。  
   
-- TBSTATE_WRAP A 改行では、ボタンに従います。 ボタンは、ボタンの状態も必要です。  
+   - TBSTATE_WRAP A 改行では、ボタンに従います。 ボタンは、ボタンの状態も必要です。  
   
- `fsStyle`  
- ボタンのスタイル。 次の値の組み合わせを指定できます。  
+- `fsStyle`  
+
+   ボタンのスタイル。 次の値の組み合わせを指定できます。  
   
-- TBSTYLE_BUTTON は、標準的なプッシュ ボタンを作成します。  
+   - TBSTYLE_BUTTON は、標準的なプッシュ ボタンを作成します。  
   
-- ユーザーを毎回押された状態および押されていない状態の状態間を切り替えるボタンは TBSTYLE_CHECK を作成、それをクリックします。 押された状態にあるときに、別の背景色がボタンには、します。  
+   - ユーザーを毎回押された状態および押されていない状態の状態間を切り替えるボタンは TBSTYLE_CHECK を作成、それをクリックします。 押された状態にあるときに、別の背景色がボタンには、します。  
   
-- グループ内の別のボタンが押されるまで保持されるチェック ボタンが押された TBSTYLE_CHECKGROUP を作成します。  
+   - グループ内の別のボタンが押されるまで保持されるチェック ボタンが押された TBSTYLE_CHECKGROUP を作成します。  
   
-- グループ内の別のボタンが押されるまで保持されるボタンが押された TBSTYLE_GROUP を作成します。  
+   - グループ内の別のボタンが押されるまで保持されるボタンが押された TBSTYLE_GROUP を作成します。  
   
-- TBSTYLE_SEP は、ボタンのグループ間で小規模のギャップを提供する、区切り記号を作成します。 このスタイルがボタンでは、ユーザー入力を受信しません。  
+   - TBSTYLE_SEP は、ボタンのグループ間で小規模のギャップを提供する、区切り記号を作成します。 このスタイルがボタンでは、ユーザー入力を受信しません。  
   
- `dwData`  
- ユーザー定義データ。  
+- `dwData`  
+
+   ユーザー定義データ。  
   
- `iString`  
- ボタンのラベル、このボタンの文字列がない場合は-1 を使用する文字列の 0 から始まるインデックス。  
+- `iString`  
+
+   ボタンのラベル、このボタンの文字列がない場合は-1 を使用する文字列の 0 から始まるインデックス。  
   
- イメージや文字列の指定したインデックスを持つ必要があります以前に追加されたツール バー コントロールの一覧を使用して[表示](#addbitmap)、 [AddString](#addstring)、や[AddStrings](#addstrings)します。  
+イメージや文字列の指定したインデックスを持つ必要があります以前に追加されたツール バー コントロールの一覧を使用して[表示](#addbitmap)、 [AddString](#addstring)、や[AddStrings](#addstrings)します。  
   
 ##  <a name="addstring"></a>  CToolBarCtrl::AddString  
  リソース ID を文字列のツールバーの内部リストとして渡される、新しい文字列を追加します。  
@@ -532,8 +533,8 @@ BOOL ChangeBitmap(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*idButton*|新しいビットマップを受信するボタンのコマンド id。|  
-|[in]*iBitmap*|現在のツール バー コントロールのイメージ リスト内のイメージの 0 から始まるインデックス。|  
+|*idButton*|[in]新しいビットマップを受信するボタンのコマンド id。|  
+|*iBitmap*|[in]現在のツール バー コントロールのイメージ リスト内のイメージの 0 から始まるインデックス。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -841,7 +842,7 @@ CString GetButtonText(int idButton) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*idButton*|表示テキストを取得するボタンの識別子。|  
+|*idButton*|[in]表示テキストを取得するボタンの識別子。|  
   
 ### <a name="return-value"></a>戻り値  
  A [CString](../../atl-mfc-shared/using-cstring.md)指定したボタンの表示テキストを格納しています。  
@@ -860,7 +861,7 @@ BOOL GetColorScheme(COLORSCHEME* lpColorScheme) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[out]*lpColorScheme*|ポインターを[COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme)色スキームの情報を受け取る構造体。 このメソッドが戻るとき、強調表示色と影の色、ツール バー コントロールの構造について説明します。|  
+|*lpColorScheme*|[out]ポインターを[COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme)色スキームの情報を受け取る構造体。 このメソッドが戻るとき、強調表示色と影の色、ツール バー コントロールの構造について説明します。|  
   
 ### <a name="return-value"></a>戻り値  
 このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -1053,8 +1054,8 @@ BOOL GetPadding(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[out]*pnHorzPadding*|整数 (ピクセル単位)、ツール バー コントロールの水平方向の埋め込みを受け取るです。|  
-|[out]*pnVertPadding*|整数 (ピクセル単位)、ツール バー コントロールの垂直方向の埋め込みを受け取るです。|  
+|*pnHorzPadding*|[out]整数 (ピクセル単位)、ツール バー コントロールの水平方向の埋め込みを受け取るです。|  
+|*pnVertPadding*|[out]整数 (ピクセル単位)、ツール バー コントロールの垂直方向の埋め込みを受け取るです。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -1349,8 +1350,8 @@ BOOL IsButtonHighlighted(int nID) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nID*  
- ツール バー ボタンのコマンド ID。  
+*nID*<br/>
+[in]ツール バー ボタンのコマンド ID。  
   
 ### <a name="return-value"></a>戻り値  
  正の整数、ボタンが強調表示されている場合、ボタンが強調表示されていない場合は 0 または-1 の場合にエラーが発生します。  
@@ -1363,8 +1364,8 @@ BOOL IsButtonIndeterminate(int nID) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nID*  
- ツールバーのボタンのコマンド id。  
+*nID*<br/>
+[in]ツールバーのボタンのコマンド id。  
   
 ### <a name="return-value"></a>戻り値  
  正の整数ボタンが不確定か-1 にエラーが発生する場合は、ボタンが不確定である場合 0 します。  
@@ -1491,11 +1492,11 @@ BOOL PressButton(int nID, BOOL bPress = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nID*  
- コマンド ボタンを押すか、リリースの id。  
+*nID*<br/>
+[in]コマンド ボタンを押すか、リリースの id。  
   
- [in]*bPress*  
- 指定したボタンを押す場合は TRUE。指定したボタンを解放する場合は FALSE。 既定値は TRUE です。  
+*bPress*<br/>
+[in]指定したボタンを押す場合は TRUE。指定したボタンを解放する場合は FALSE。 既定値は TRUE です。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -1516,7 +1517,7 @@ BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*pReplaceBitmap*|ポインターを[TBREPLACEBITMAP](/windows/desktop/api/commctrl/ns-commctrl-tbreplacebitmap)ビットマップを交換して、新しいビットマップを記述する構造体。|  
+|*pReplaceBitmap*|[in]ポインターを[TBREPLACEBITMAP](/windows/desktop/api/commctrl/ns-commctrl-tbreplacebitmap)ビットマップを交換して、新しいビットマップを記述する構造体。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -1593,8 +1594,8 @@ BOOL SetAnchorHighlight(BOOL fAnchor = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*fAnchor*  
- アンカーの強調表示を有効になっているまたは無効になっているかどうかを指定します。 この値が 0 以外の場合、アンカーの強調表示を有効になります。 この値が 0 の場合は、アンカーの強調表示が無効になります  
+*fAnchor*<br/>
+[in]アンカーの強調表示を有効になっているまたは無効になっているかどうかを指定します。 この値が 0 以外の場合、アンカーの強調表示を有効になります。 この値が 0 の場合は、アンカーの強調表示が無効になります  
   
 ### <a name="return-value"></a>戻り値  
  以前のアンカー設定します。 強調表示が有効になっている場合、この値は 0 以外の場合は。 強調表示が有効になっていない場合は、この値は 0 です。  
@@ -1729,7 +1730,7 @@ void SetColorScheme(const COLORSCHEME* lpColorScheme);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*lpColorScheme*|ポインターを[COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme)強調表示色とコントロールは、ツールバーの影の色を記述する構造体。|  
+|*lpColorScheme*|[in]ポインターを[COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme)強調表示色とコントロールは、ツールバーの影の色を記述する構造体。|  
   
 ### <a name="remarks"></a>Remarks  
  Windows Vista のビジュアル テーマが設定されている場合は、このメソッドを指定しても効果はありません。  
@@ -1952,8 +1953,8 @@ DWORD SetPadding(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*nHorzPadding*|ピクセル単位で、ツール バー コントロールの水平方向の余白を指定します。|  
-|[in]*nVertPadding*|ピクセル単位で、ツール バー コントロールの垂直方向の余白を指定します。|  
+|*nHorzPadding*|[in]ピクセル単位で、ツール バー コントロールの水平方向の余白を指定します。|  
+|*nVertPadding*|[in]ピクセル単位で、ツール バー コントロールの垂直方向の余白を指定します。|  
   
 ### <a name="return-value"></a>戻り値  
  下位ワードには、前の水平方向の余白の値が含まれています。 上位ワードには、前の垂直方向の余白の値が含まれています。 DWORD。 パディング値は、ピクセル単位で測定されます。  
@@ -1979,8 +1980,8 @@ CImagelist* SetPressedImageList(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*iImageID*|イメージ リストの 0 から始まるインデックス。 1 つだけのイメージ リストを使用する場合は、このパラメーターを 0 に設定します。|  
-|[in]*pImageList*|ポインターを[CImageList](../../mfc/reference/cimagelist-class.md)新しいイメージ リストを格納しています。|  
+|*iImageID*|[in]イメージ リストの 0 から始まるインデックス。 1 つだけのイメージ リストを使用する場合は、このパラメーターを 0 に設定します。|  
+|*pImageList*|[in]ポインターを[CImageList](../../mfc/reference/cimagelist-class.md)新しいイメージ リストを格納しています。|  
   
 ### <a name="return-value"></a>戻り値  
  ポインターを[CImageList](../../mfc/reference/cimagelist-class.md)このようなイメージの一覧が設定されていない場合、現在のコントロール、または NULL の前のイメージ リストを格納します。  

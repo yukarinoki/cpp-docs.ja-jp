@@ -1,5 +1,5 @@
 ---
-title: -揮発性 (volatile キーワードの解釈) |Microsoft ドキュメント
+title: -揮発性 (volatile キーワードの解釈) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccd36c5edaaab8577e5f278b25b51ce69e0633f1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4204d602d1390bf30080a800174426513faf0467
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378198"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723635"
 ---
 # <a name="volatile-volatile-keyword-interpretation"></a>/volatile (volatile キーワードの解釈を)
 
@@ -36,34 +36,34 @@ ms.locfileid: "32378198"
 
 ## <a name="syntax"></a>構文
 
-> **/volatile:**{**iso**|**ms**}  
+> **/volatile:**{**iso**|**ms**}
 
 ## <a name="arguments"></a>引数
 
-**/volatile:iso**  
+**/volatile:iso**<br/>
 ISO 標準の C++ 言語で定義されている、厳密な `volatile` のセマンティックスを選択します。 volatile アクセスでは取得と開放のセマンティックスは保証されていません。 コンパイラが ARM をターゲットとする場合は、これは `volatile` の既定の解釈です。
 
-**/volatile:ms**  
+**/volatile:ms**<br/>
 Microsoft 拡張 `volatile` セマンティクスを選択すると、ISO 標準 C++ 言語を超えることを保証するメモリ オーダリングが追加されます。 volatile アクセスでは取得と開放のセマンティックスは保証されます。 ただし、このオプションにより、コンパイラはハードウェアのメモリ バリアを強制的に生成します。これによって ARM および他のメモリ オーダリングの弱いアーキテクチャでは、著しいオーバーヘッドが追加される場合があります。 コンパイラが ARM 以外のプラットフォームをターゲットとする場合は、これは `volatile` の既定の解釈です。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-使用することを強くお勧め **/volatile:iso**および明示的な同期プリミティブとコンパイラ組み込み関数はスレッド間で共有されるメモリを扱うときにします。 詳細については、次を参照してください。[揮発性](../../cpp/volatile-cpp.md)です。
+使用することを強くお勧め **/volatile:iso**明示的な同期プリミティブやスレッド間で共有されているメモリを扱うときのコンパイラ組み込みと共にします。 詳細については、次を参照してください。[揮発性](../../cpp/volatile-cpp.md)します。
 
-既存のコードを移植プロジェクトの途中でこのオプションを変更するか、することが警告を有効にする[C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)セマンティクスの違いによって影響を受けるコードの場所を識別します。
+既存のコードを移植したり、プロジェクトの途中でこのオプションを変更した場合は、警告を有効にする時間が立つ可能性[C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)セマンティクスの違いによって影響を受けるコードの場所を識別します。
 
 `#pragma` には、このオプションを制御するための相当するものはありません。
 
 ### <a name="to-set-the-volatile-compiler-option-in-visual-studio"></a>/volatile コンパイラ オプションを Visual Studio で設定するには
 
-1. 開く、**プロパティ ページ**プロジェクトのダイアログ ボックス。 詳細については、次を参照してください。[のプロジェクト プロパティの操作](../../ide/working-with-project-properties.md)です。
+1. 開く、**プロパティ ページ**プロジェクトのダイアログ ボックス。 詳細については、「[プロジェクト プロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 
 1. 選択、**構成プロパティ** > **C/C++** > **コマンドライン**プロパティ ページ。
 
-1. **追加オプション**ボックスで、追加 **/volatile:iso**または **/volatile:ms**を選択し**OK**または**適用**して変更を保存します。
+1. **追加オプション**ボックスで、追加 **/volatile:iso**または **/volatile:ms**選び、 **OK**または**適用** 、変更を保存します。
 
 ## <a name="see-also"></a>関連項目
 
-[volatile](../../cpp/volatile-cpp.md)  
-[コンパイラ オプション](../../build/reference/compiler-options.md)  
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)  
+[volatile](../../cpp/volatile-cpp.md)<br/>
+[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
+[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)

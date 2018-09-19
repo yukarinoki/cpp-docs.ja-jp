@@ -24,22 +24,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e847cff10c7e17185f76b5e790beda3745732312
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 855562b8b6eb5e577914fc6305668ee7305c86e1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406690"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110680"
 ---
 # <a name="customizing-c-command-line-processing"></a>C++ コマンド ライン処理のカスタマイズ
-## <a name="microsoft-specific"></a>Microsoft 固有の仕様  
- プログラムがコマンド ラインの引数を受け取らない場合は、コマンド ライン処理を実行するライブラリ ルーチンの使用を制約することで、領域を節約できます。 このルーチンを呼び出す`_setargv`しで説明されているが[ワイルドカードの展開](../cpp/wildcard-expansion.md)します。 使用を抑制するには、含んでいるファイルで何も実行しないルーチンを定義、`main`関数、および名前を付けます`_setargv`します。 呼び出し`_setargv`の定義によって満たされる`_setargv`ライブラリのバージョンは読み込まれません。  
-  
- 同様に、使用して環境テーブルにアクセスしない場合、`envp`引数の代わりに使用する独自の空ルーチンを提供できます`_setenvp`、環境処理ルーチン。 同様、`_setargv`関数、`_setenvp`として宣言する必要があります**extern"C"** します。  
-  
- プログラムは、呼び出しを行うことがあります、`spawn`または`exec`C ランタイム ライブラリ ルーチンのファミリです。 この場合、このルーチンは親プロセスから子プロセスに環境を渡すために使用されるため、環境処理ルーチンを抑制しないでください。  
-  
-**Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- [main: プログラムの起動](../cpp/main-program-startup.md)
+
+## <a name="microsoft-specific"></a>Microsoft 固有の仕様
+
+プログラムがコマンド ラインの引数を受け取らない場合は、コマンド ライン処理を実行するライブラリ ルーチンの使用を制約することで、領域を節約できます。 このルーチンを呼び出す`_setargv`しで説明されているが[ワイルドカードの展開](../cpp/wildcard-expansion.md)します。 使用を抑制するには、含んでいるファイルで何も実行しないルーチンを定義、`main`関数、および名前を付けます`_setargv`します。 呼び出し`_setargv`の定義によって満たされる`_setargv`ライブラリのバージョンは読み込まれません。
+
+同様に、使用して環境テーブルにアクセスしない場合、`envp`引数の代わりに使用する独自の空ルーチンを提供できます`_setenvp`、環境処理ルーチン。 同様、`_setargv`関数、`_setenvp`として宣言する必要があります**extern"C"** します。
+
+プログラムは、呼び出しを行うことがあります、`spawn`または`exec`C ランタイム ライブラリ ルーチンのファミリです。 この場合、このルーチンは親プロセスから子プロセスに環境を渡すために使用されるため、環境処理ルーチンを抑制しないでください。
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
+[main: プログラムの起動](../cpp/main-program-startup.md)

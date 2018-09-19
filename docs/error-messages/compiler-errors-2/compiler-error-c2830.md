@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2830 |Microsoft ドキュメント
+title: コンパイラ エラー C2830 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31c5fef787328b4e3d34bb49078fc53354598264
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d54028b50852fec4d525afa9a79f93edb4ae09ac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244098"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033031"
 ---
 # <a name="compiler-error-c2830"></a>コンパイラ エラー C2830
-'operator new' を標準の仮引数は、既定値を持つことができます。  
-  
-標準の仮パラメーター [new 演算子](../../standard-library/new-operators.md#op_new)既定値を持つことはできません。 ユーザー定義の仮パラメーターだけでは、既定値を指定できます。
+
+'operator new' を標準の仮引数は、既定値を持つことができます。
+
+標準の仮パラメーター[演算子 new](../../standard-library/new-operators.md#op_new)既定値を持つことはできません。 ユーザー定義の仮パラメーターのみでは、既定値を指定できます。

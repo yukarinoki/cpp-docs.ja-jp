@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a555cc26e8857899690852743fa177a706afa0f2
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 94d56a6defbc47a133e3f583daab188921622d84
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677746"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711809"
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl クラス
 Windows コモン ステータス バー コントロール の機能が用意されています。  
@@ -261,7 +261,7 @@ HICON GetIcon(int iPart) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*iPart*|取得するアイコンを含む一部の 0 から始まるインデックス。 このパラメーターが-1 の場合、ステータス バーは簡易モードのステータス バーと見なされます。|  
+|*iPart*|[in]取得するアイコンを含む一部の 0 から始まるインデックス。 このパラメーターが-1 の場合、ステータス バーは簡易モードのステータス バーと見なされます。|  
   
 ### <a name="return-value"></a>戻り値  
  アイコンへのハンドル場合メソッドが成功しました。それ以外の場合は NULL です。  
@@ -521,8 +521,8 @@ BOOL SetSimple(BOOL bSimple = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bSimple*  
- 表示型のフラグ。 コントロールが単純なテキストを表示するこのパラメーターが TRUE の場合FALSE の場合は、複数の部分が表示されます。  
+*bSimple*<br/>
+[in]表示型のフラグ。 コントロールが単純なテキストを表示するこのパラメーターが TRUE の場合FALSE の場合は、複数の部分が表示されます。  
   
 ### <a name="return-value"></a>戻り値  
  常に 0 を返します。  

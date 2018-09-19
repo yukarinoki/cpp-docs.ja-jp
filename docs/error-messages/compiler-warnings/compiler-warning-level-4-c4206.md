@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 4) C4206 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 4) C4206 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6db7069f9d1ad242f0c79f8c6f490f4632162e6d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 746fbc4c8752afcd9d02b9985373d669c3aacc5f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293895"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048657"
 ---
 # <a name="compiler-warning-level-4-c4206"></a>コンパイラの警告 (レベル 4) C4206
-**使用される標準の拡張機能: 翻訳単位が空です。**  
-  
- 前処理した後、ファイルが空でした。  
-  
- この拡張機能によっては、他のコンパイラに移植できないコードができなくなります。 ANSI 互換の下にエラーが生成されます ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) C ソース コードにのみ適用されます。
+
+**使用される標準の拡張機能: 翻訳単位が空です**
+
+前処理した後、ファイルが空でした。
+
+この拡張機能にコードを他のコンパイラに移植されるを防ぐことができます。 ANSI 互換の下にエラーが生成されます ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) C ソース コードにのみ適用されます。

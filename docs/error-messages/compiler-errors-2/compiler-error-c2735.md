@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2735 |Microsoft ドキュメント
+title: コンパイラ エラー C2735 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ab970aa4e46ed0206f311e100f7ee777907aff8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 732b75c8988f879af230e0513a751b8cd9c4ae67
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232670"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093125"
 ---
 # <a name="compiler-error-c2735"></a>コンパイラ エラー C2735
-'keyword' キーワードは、仮パラメーターの型指定子では使用できません。  
-  
- このコンテキストで、キーワードが正しくありません。  
-  
- 次の例では、C2735 が生成されます。  
-  
-```  
-// C2735.cpp  
-void f(inline int){}   // C2735  
+
+'keyword' キーワードは仮パラメーターの型指定子で許可されていません
+
+キーワードは、このコンテキストでは無効です。
+
+次の例では、C2735 が生成されます。
+
+```
+// C2735.cpp
+void f(inline int){}   // C2735
 ```

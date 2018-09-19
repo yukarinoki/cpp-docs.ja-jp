@@ -16,23 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e68b1b16873989f59a8322246e2547b56e360d8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3be68ca3632d11231f446de262a8251c2b3409c2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408121"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032512"
 ---
 # <a name="tznamemax"></a>TZNAME_MAX
-タイム ゾーン名の変数に許容される文字列の最大長です。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-#include <limits.h>  
-```  
-  
-## <a name="see-also"></a>参照  
- [環境定数](../c-runtime-library/environmental-constants.md)   
- [グローバル定数](../c-runtime-library/global-constants.md)   
- [_get_tzname](../c-runtime-library/reference/get-tzname.md)
+
+タイム ゾーン名の変数に許容される文字列の最大長です。
+
+## <a name="syntax"></a>構文
+
+```
+#include <limits.h>
+```
+
+## <a name="see-also"></a>参照
+
+[環境定数](../c-runtime-library/environmental-constants.md)<br/>
+[グローバル定数](../c-runtime-library/global-constants.md)<br/>
+[_get_tzname](../c-runtime-library/reference/get-tzname.md)

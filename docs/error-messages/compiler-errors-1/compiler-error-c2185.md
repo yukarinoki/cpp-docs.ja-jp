@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2185 |Microsoft ドキュメント
+title: コンパイラ エラー C2185 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 078860f39ff75c9475678a95adabfdc8ba1a91c7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 29d7fd5a94122de9950ea6bcec3888a70b743c74
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172146"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063945"
 ---
 # <a name="compiler-error-c2185"></a>コンパイラ エラー C2185
-'identifier': 無効です based の割り当て。  
-  
- レジスタ変数または自動 (ローカル) 変数が宣言されている`__based`です。 グローバル変数のみを宣言する`__based`です。
+
+'identifier': 無効です based の割り当て。
+
+レジスタ変数または自動 (ローカル) 変数が宣言される`__based`します。 グローバル変数のみを宣言する`__based`します。

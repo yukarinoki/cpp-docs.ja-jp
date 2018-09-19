@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2048 |Microsoft ドキュメント
+title: コンパイラ エラー C2048 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,46 +16,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33d99b54300d3676039b2f2bda24b9bab302027e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dca0cf7e95f2a876760415d5c628287fab47227c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166092"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055833"
 ---
 # <a name="compiler-error-c2048"></a>コンパイラ エラー C2048
-switch 文の中に 2 つ以上の 'default' があります。  
-  
- `switch` ステートメントに複数の `default` ラベルが含まれています。 このエラーを解決するには、 `default` ラベルを 1 つ削除します。  
-  
- 次の例では C2048 が生成されます。  
-  
-```  
-// C2048.cpp  
-int main() {  
-   int a = 1;  
-   switch (a) {  
-      case 1:  
-         a = 0;  
-      default:  
-         a = 2;  
-      default:   // C2048  
-         a = 3;  
-   }  
-}  
-```  
-  
- 考えられる解決方法:  
-  
-```  
-// C2048b.cpp  
-int main() {  
-   int a = 1;  
-   switch (a) {  
-      case 1:  
-         a = 0;  
-      default:  
-         a = 2;  
-   }  
-}  
+
+switch 文の中に 2 つ以上の 'default' があります。
+
+`switch` ステートメントに複数の `default` ラベルが含まれています。 このエラーを解決するには、 `default` ラベルを 1 つ削除します。
+
+次の例では C2048 が生成されます。
+
+```
+// C2048.cpp
+int main() {
+   int a = 1;
+   switch (a) {
+      case 1:
+         a = 0;
+      default:
+         a = 2;
+      default:   // C2048
+         a = 3;
+   }
+}
+```
+
+考えられる解決方法:
+
+```
+// C2048b.cpp
+int main() {
+   int a = 1;
+   switch (a) {
+      case 1:
+         a = 0;
+      default:
+         a = 2;
+   }
+}
 ```

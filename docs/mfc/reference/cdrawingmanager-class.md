@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52ded6eb4b6b757934bcdb62c280c6d57e1b171e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 72e37cd8ba46e3ad9e59fa0d585d6a118b7a0038
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196061"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708631"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager クラス
 `CDrawingManager`クラスは、複雑な描画アルゴリズムを実装します。  
@@ -139,8 +139,8 @@ CDrawingManager(CDC& dc);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*dc*  
- デバイス コンテキストへの参照。 `CDrawingManager`描画のため、このコンテキストを使用します。  
+*dc*<br/>
+[in]デバイス コンテキストへの参照。 `CDrawingManager`描画のため、このコンテキストを使用します。  
   
 ##  <a name="createbitmap_32"></a>  CDrawingManager::CreateBitmap_32  
  32 ビット版のデバイスに依存しないビットマップ (DIB) に直接書き込むことのできるアプリケーションを作成します。  
@@ -160,8 +160,8 @@ static HBITMAP __stdcall CreateBitmap_32(
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*サイズ*|A [CSize](../../atl-mfc-shared/reference/csize-class.md)ビットマップのサイズを示すパラメーターです。|  
-|[out]*pBits*|DIB の場所を受信するデータ ポインターへのポインターのビット値。|  
+|*size*|[in]A [CSize](../../atl-mfc-shared/reference/csize-class.md)ビットマップのサイズを示すパラメーターです。|  
+|*pBits*|[out]DIB の場所を受信するデータ ポインターへのポインターのビット値。|  
 |*ビットマップ*|元のビットマップを識別するハンドル|  
 |*clrTransparent*|元のビットマップの透明色を指定する RGB 値。|  
   
@@ -183,17 +183,17 @@ void DrawAlpha(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDstDC*  
- コピー先のデバイス コンテキストへのポインター。  
+*pDstDC*<br/>
+[in]コピー先のデバイス コンテキストへのポインター。  
   
- [in]*rectDst*  
- 先の四角形。  
+*rectDst*<br/>
+[in]先の四角形。  
   
- [in]*pSrcDC*  
- ソースのデバイス コンテキストへのポインター。  
+*pSrcDC*<br/>
+[in]ソースのデバイス コンテキストへのポインター。  
   
- [in]*rectSrc*  
- 元の四角形。  
+*rectSrc*<br/>
+[in]元の四角形。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、アルファ ブレンドを実行の 2 つのビットマップ。 アルファ ブレンドの詳細については、次を参照してください。 [AlphaBlend](/windows/desktop/api/wingdi/nf-wingdi-alphablend) Windows SDK に含まれています。  
@@ -209,14 +209,14 @@ void DrawEllipse(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*rect*  
- 楕円の外接する四角形。  
+*rect*<br/>
+[in]楕円の外接する四角形。  
   
- [in]*clrFill*  
- このメソッドは、楕円の塗りつぶしに使用する色です。  
+*clrFill*<br/>
+[in]このメソッドは、楕円の塗りつぶしに使用する色です。  
   
- [in]*clrLine*  
- このメソッドでは、楕円の境界としての色。  
+*clrLine*<br/>
+[in]このメソッドでは、楕円の境界としての色。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、どちらかの色が-1 に設定されている場合は、楕円を描画せず返します。 外接する四角形のいずれかのディメンションが 0 の場合は、楕円を描画せずも返されます。  
@@ -236,26 +236,26 @@ BOOL DrawGradientRing(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*rect*  
- A [CRect](../../atl-mfc-shared/reference/crect-class.md)グラデーションのリングの境界を指定するパラメーターです。  
+*rect*<br/>
+[in]A [CRect](../../atl-mfc-shared/reference/crect-class.md)グラデーションのリングの境界を指定するパラメーターです。  
   
- [in]*colorStart*  
- グラデーションの最初の色。  
+*colorStart*<br/>
+[in]グラデーションの最初の色。  
   
- [in]*colorFinish*  
- グラデーションの最後の色。  
+*colorFinish*<br/>
+[in]グラデーションの最後の色。  
   
- [in]*colorBorder*  
- 罫線の色。  
+*colorBorder*<br/>
+[in]罫線の色。  
   
- [in]*nAngle*  
- グラデーションの描画の初期の角度を指定するパラメーター。 この値は、0 ~ 360 にする必要があります。  
+*nAngle*<br/>
+[in]グラデーションの描画の初期の角度を指定するパラメーター。 この値は、0 ~ 360 にする必要があります。  
   
- [in]*nWidth*  
- リングの境界線の幅。  
+*nWidth*<br/>
+[in]リングの境界線の幅。  
   
- [in]*clrFace*  
- リングの内部の色。  
+*clrFace*<br/>
+[in]リングの内部の色。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -287,11 +287,11 @@ void DrawLineA(
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*x1*|行の開始位置の x 座標。|  
-|[in]*y1*|行の開始位置の y 座標。|  
-|[in]*x2*|直線の終了位置の x 座標。|  
-|[in]*y2*|直線の終了位置の y 座標。|  
-|[in]*clrLine*|線の色。|  
+|*x1*|[in]行の開始位置の x 座標。|  
+|*y1*|[in]行の開始位置の y 座標。|  
+|*x2*|[in]直線の終了位置の x 座標。|  
+|*y2*|[in]直線の終了位置の y 座標。|  
+|*clrLine*|[in]線の色。|  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは失敗*clrLine* -1。  
@@ -307,14 +307,14 @@ void DrawRect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*rect*  
- 四角形の境界。  
+*rect*<br/>
+[in]四角形の境界。  
   
- [in]*clrFill*  
- このメソッドを使用すると、四角形の塗りつぶしの色。  
+*clrFill*<br/>
+[in]このメソッドを使用すると、四角形の塗りつぶしの色。  
   
- [in]*clrLine*  
- このメソッドを使用して、四角形の境界線の色。  
+*clrLine*<br/>
+[in]このメソッドを使用して、四角形の境界線の色。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、どちらかの色が-1 に設定されている場合は、四角形を描画せず返します。 また、四角形のいずれかのサイズは 0 を返します。  
@@ -335,29 +335,29 @@ BOOL DrawShadow(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*rect*  
- アプリケーション内の四角形領域。 描画のマネージャーは、この領域の下に影を描画します。  
+*rect*<br/>
+[in]アプリケーション内の四角形領域。 描画のマネージャーは、この領域の下に影を描画します。  
   
- [in]*nDepth*  
- 幅と影の高さ。  
+*nDepth*<br/>
+[in]幅と影の高さ。  
   
- [in]*iMinBrightness*  
- 影の最小の明度をします。  
+*iMinBrightness*<br/>
+[in]影の最小の明度をします。  
   
- [in]*iMaxBrightness*  
- 影の最大の明るさです。  
+*iMaxBrightness*<br/>
+[in]影の最大の明るさです。  
   
- [in]*pBmpSaveBottom*  
- 影の下の部分のイメージを含むビットマップへのポインター。  
+*pBmpSaveBottom*<br/>
+[in]影の下の部分のイメージを含むビットマップへのポインター。  
   
- [in]*pBmpSaveRight*  
- 四角形の右側に描画されているシャドウのイメージを含むビットマップへのポインター。  
+*pBmpSaveRight*<br/>
+[in]四角形の右側に描画されているシャドウのイメージを含むビットマップへのポインター。  
   
- [in]*clrBase*  
- 影の色。  
+*clrBase*<br/>
+[in]影の色。  
   
- [in]*bRightShadow*  
- 影を描画する方法を示すブール値パラメーター。 場合*bRightShadow*は`TRUE`、`DrawShadow`右側にある四角形の影を描画します。  
+*bRightShadow*<br/>
+[in]影を描画する方法を示すブール値パラメーター。 場合*bRightShadow*は`TRUE`、`DrawShadow`右側にある四角形の影を描画します。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -389,26 +389,26 @@ void Fill4ColorsGradient(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*rect*  
- 塗りつぶす四角形。  
+*rect*<br/>
+[in]塗りつぶす四角形。  
   
- [in]*colorStart1*  
- 最初の色のグラデーションの初期の色。  
+*colorStart1*<br/>
+[in]最初の色のグラデーションの初期の色。  
   
- [in]*colorFinish1*  
- 最初の色グラデーションの終了色。  
+*colorFinish1*<br/>
+[in]最初の色グラデーションの終了色。  
   
- [in]*colorStart2*  
- 2 番目の色のグラデーションの初期の色。  
+*colorStart2*<br/>
+[in]2 番目の色のグラデーションの初期の色。  
   
- [in]*colorFinish2*  
- 2 番目の色グラデーションの終了色。  
+*colorFinish2*<br/>
+[in]2 番目の色グラデーションの終了色。  
   
- [in]*bHorz*  
- 示すブール値パラメーターかどうか`Fill4ColorsGradient`水平または垂直のグラデーションの色します。 TRUE は、水平方向のグラデーションを示します。  
+*bHorz*<br/>
+[in]示すブール値パラメーターかどうか`Fill4ColorsGradient`水平または垂直のグラデーションの色します。 TRUE は、水平方向のグラデーションを示します。  
   
- [in]*nPercentage*  
- 0 ~ 100 の整数。 この値は、最初の色のグラデーションで塗りつぶす四角形の割合を示します。  
+*nPercentage*<br/>
+[in]0 ~ 100 の整数。 この値は、最初の色のグラデーションで塗りつぶす四角形の割合を示します。  
   
 ### <a name="remarks"></a>Remarks  
  四角形が 2 つの色グラデーションにいっぱいになると、互いの上に配置されているかの値に応じて、[次へ] は*bHorz*します。 メソッドを使用して各色のグラデーションが個別に計算が[CDrawingManager::FillGradient](#fillgradient)します。  
@@ -429,23 +429,23 @@ void FillGradient(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*rect*  
- 塗りつぶす四角形領域。  
+*rect*<br/>
+[in]塗りつぶす四角形領域。  
   
- [in]*colorStart*  
- グラデーションの最初の色。  
+*colorStart*<br/>
+[in]グラデーションの最初の色。  
   
- [in]*colorFinish*  
- グラデーションの終了色。  
+*colorFinish*<br/>
+[in]グラデーションの終了色。  
   
- [in]*bHorz*  
- ブール型パラメーターを指定するかどうか`FillGradient`水平または垂直のグラデーションを描画する必要があります。  
+*bHorz*<br/>
+[in]ブール型パラメーターを指定するかどうか`FillGradient`水平または垂直のグラデーションを描画する必要があります。  
   
- [in]*nStartFlatPercentage*  
- 四角形の割合を`FillGradient`塗りつぶします*colorStart*グラデーションを開始する前にします。  
+*nStartFlatPercentage*<br/>
+[in]四角形の割合を`FillGradient`塗りつぶします*colorStart*グラデーションを開始する前にします。  
   
- [in]*nEndFlatPercentage*  
- 四角形の割合を`FillGradient`塗りつぶします*colorFinish*グラデーションの終了後にします。  
+*nEndFlatPercentage*<br/>
+[in]四角形の割合を`FillGradient`塗りつぶします*colorFinish*グラデーションの終了後にします。  
   
 ### <a name="example"></a>例  
  次の例では、使用する方法、`FillGradient`のメソッド、`CDrawingManager`クラス。 このコード スニペットの一部、 [MS Office 2007 のデモ サンプル](../../visual-cpp-samples.md)します。  
@@ -464,17 +464,17 @@ void FillGradient2 (
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*rect*  
- 塗りつぶす四角形領域。  
+*rect*<br/>
+[in]塗りつぶす四角形領域。  
   
- [in]*colorStart*  
- グラデーションの最初の色。  
+*colorStart*<br/>
+[in]グラデーションの最初の色。  
   
- [in]*colorFinish*  
- グラデーションの最後の色。  
+*colorFinish*<br/>
+[in]グラデーションの最後の色。  
   
- [in]*nAngle*  
- 0 ~ 360 の間の整数。 このパラメーターは、色のグラデーションの方向を指定します。  
+*nAngle*<br/>
+[in]0 ~ 360 の間の整数。 このパラメーターは、色のグラデーションの方向を指定します。  
   
 ### <a name="remarks"></a>Remarks  
  使用*nAngle*色のグラデーションの方向を指定します。 色のグラデーションの方向を指定するときに指定することも、色のグラデーションの開始位置。 値 0 を*nAngle*四角形の上端からグラデーションの開始を示します。 として*nAngle*増加すると、グラデーションが角度に基づいて反時計回りの方向に移動の開始位置。  
@@ -496,17 +496,17 @@ BOOL GrayRect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*rect*  
- 塗りつぶす四角形領域。  
+*rect*<br/>
+[in]塗りつぶす四角形領域。  
   
- [in]*nPercentage*  
- 灰色の四角形で目的の割合。  
+*nPercentage*<br/>
+[in]灰色の四角形で目的の割合。  
   
- [in]*clrTransparent*  
- 透明色。  
+*clrTransparent*<br/>
+[in]透明色。  
   
- [in]*clrDisabled*  
- 場合、彩度のこのメソッドを使用する色*nPercentage*が-1 に設定します。  
+*clrDisabled*<br/>
+[in]場合、彩度のこのメソッドを使用する色*nPercentage*が-1 に設定します。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE。それ以外の場合は FALSE です。  
@@ -529,20 +529,20 @@ BOOL HighlightRect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*rect*  
- 四角形の領域を強調表示します。  
+*rect*<br/>
+[in]四角形の領域を強調表示します。  
   
- [in]*nPercentage*  
- 透明度、強調表示する必要がありますかを示す割合。  
+*nPercentage*<br/>
+[in]透明度、強調表示する必要がありますかを示す割合。  
   
- [in]*clrTransparent*  
- 透明色。  
+*clrTransparent*<br/>
+[in]透明色。  
   
- [in]*nTolerance*  
- 色の許容範囲を示す 0 から 255 までの整数。  
+*nTolerance*<br/>
+[in]色の許容範囲を示す 0 から 255 までの整数。  
   
- [in]*clrBlend*  
- ブレンドの基本の色です。  
+*clrBlend*<br/>
+[in]ブレンドの基本の色です。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE。それ以外の場合は FALSE です。  
@@ -563,14 +563,14 @@ static COLORREF __stdcall HLStoRGB_ONE(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*H*  
- 色の色合いを表す 0 ~ 1 の数値。  
+*H*<br/>
+[in]色の色合いを表す 0 ~ 1 の数値。  
   
- [in]*L*  
- 0 ~ 1 の間の数値では、色の明るさを示します。  
+*L*<br/>
+[in]0 ~ 1 の間の数値では、色の明るさを示します。  
   
- [in]*S*  
- 0 ~ 1 の間の数値では、色の彩度を示します。  
+*S*<br/>
+[in]0 ~ 1 の間の数値では、色の彩度を示します。  
   
 ### <a name="return-value"></a>戻り値  
  指定された HLS 色の RGB 表現。  
@@ -591,14 +591,14 @@ static COLORREF __stdcall HLStoRGB_TWO(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*H*  
- 色の色合いを表す 0 ~ 360 の数値。  
+*H*<br/>
+[in]色の色合いを表す 0 ~ 360 の数値。  
   
- [in]*L*  
- 0 ~ 1 の間の数値では、色の明るさを示します。  
+*L*<br/>
+[in]0 ~ 1 の間の数値では、色の明るさを示します。  
   
- [in]*S*  
- 0 ~ 1 の間の数値では、色の彩度を示します。  
+*S*<br/>
+[in]0 ~ 1 の間の数値では、色の彩度を示します。  
   
 ### <a name="return-value"></a>戻り値  
  指定された HLS 色の RGB 表現。  
@@ -623,9 +623,9 @@ static COLORREF __stdcall HSVtoRGB(
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*H*|0 ~ 360 の数値では、色の色合いを示します。|  
-|[in]*S*|0 ~ 1 の間の数値では、色の彩度を示します。|  
-|[in]*V*|0 ~ 1 の間の数値では、色の値を示します。|  
+|*H*|[in]0 ~ 360 の数値では、色の色合いを示します。|  
+|*S*|[in]0 ~ 1 の間の数値では、色の彩度を示します。|  
+|*V*|[in]0 ~ 1 の間の数値では、色の値を示します。|  
   
 ### <a name="return-value"></a>戻り値  
  提供される HSV 色の RGB 表現。  
@@ -650,23 +650,23 @@ static BYTE __stdcall HueToRGB(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*m1*  
- 「解説」を参照してください。  
+*m1*<br/>
+[in]「解説」を参照してください。  
   
- [in]*m2*  
- 「解説」を参照してください。  
+*m2*<br/>
+[in]「解説」を参照してください。  
   
- [in]*h*  
- 「解説」を参照してください。  
+*h*<br/>
+[in]「解説」を参照してください。  
   
- [in]*rm1*  
- 「解説」を参照してください。  
+*rm1*<br/>
+[in]「解説」を参照してください。  
   
- [in]*rm2*  
- 「解説」を参照してください。  
+*rm2*<br/>
+[in]「解説」を参照してください。  
   
- [in]*rh*  
- 「解説」を参照してください。  
+*rh*<br/>
+[in]「解説」を参照してください。  
   
 ### <a name="return-value"></a>戻り値  
  指定された色合いの個別赤、緑、または青コンポーネント。  
@@ -692,11 +692,11 @@ void MirrorRect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*rect*  
- 反転対象の領域に外接する四角形。  
+*rect*<br/>
+[in]反転対象の領域に外接する四角形。  
   
- [in]*bHorz*  
- 四角形を水平方向または垂直方向に反転するかどうかを示すブール値パラメーター。  
+*bHorz*<br/>
+[in]四角形を水平方向または垂直方向に反転するかどうかを示すブール値パラメーター。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドはによって所有されているデバイス コンテキストの任意の領域を反転させることができます、`CDrawingManager`クラス。 場合*bHorz*が TRUE に設定すると、このメソッドの領域を左右に反転します。 それ以外の場合、領域が垂直方向に反転します。  
@@ -722,23 +722,23 @@ static COLORREF __stdcall PixelAlpha(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*srcPixel*  
- ピクセルの初期の色。  
+*srcPixel*<br/>
+[in]ピクセルの初期の色。  
   
- [in]*%*  
- 透明度の割合を表す 0 ~ 100 の数値。 100 の値は、初期の色が完全に透明であることを示します。  
+*%*<br/>
+[in]透明度の割合を表す 0 ~ 100 の数値。 100 の値は、初期の色が完全に透明であることを示します。  
   
- [in]*percentR*  
- 赤の要素の透明度の割合を表す 0 ~ 100 の数値。  
+*percentR*<br/>
+[in]赤の要素の透明度の割合を表す 0 ~ 100 の数値。  
   
- [in]*percentG*  
- 緑の要素の透明度の割合を表す 0 ~ 100 の範囲数です。  
+*percentG*<br/>
+[in]緑の要素の透明度の割合を表す 0 ~ 100 の範囲数です。  
   
- [in]*percentB*  
- 青のコンポーネントの透明度の割合を表す 0 ~ 100 の数値。  
+*percentB*<br/>
+[in]青のコンポーネントの透明度の割合を表す 0 ~ 100 の数値。  
   
- [in]*dstPixel*  
- ピクセルの基本の色。  
+*dstPixel*<br/>
+[in]ピクセルの基本の色。  
   
 ### <a name="return-value"></a>戻り値  
  半透明のピクセルの最終的な色。  
@@ -760,17 +760,17 @@ static HBITMAP __stdcall PrepareShadowMask (
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nDepth*  
- 幅と影の高さ。  
+*nDepth*<br/>
+[in]幅と影の高さ。  
   
- [in]*clrBase*  
- 影の色。  
+*clrBase*<br/>
+[in]影の色。  
   
- [in]*iMinBrightness*  
- 影の最小の明度をします。  
+*iMinBrightness*<br/>
+[in]影の最小の明度をします。  
   
- [in]*iMaxBrightness*  
- 影の最大の明るさです。  
+*iMaxBrightness*<br/>
+[in]影の最大の明るさです。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は、作成されたビットマップを識別するハンドルそれ以外の場合は NULL です。  
@@ -794,10 +794,10 @@ static void __stdcall RGBtoHSL(
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*rgb*|RGB 値の色。|  
-|[out]*H*|メソッドが、色の色合いを格納する double 型へのポインター。|  
-|[out]*S*|メソッドが、色の彩度を格納する double 型へのポインター。|  
-|[out]*L*|メソッドが、色の輝度を格納する double 型へのポインター。|  
+|*rgb*|[in]RGB 値の色。|  
+|*H*|[out]メソッドが、色の色合いを格納する double 型へのポインター。|  
+|*S*|[out]メソッドが、色の彩度を格納する double 型へのポインター。|  
+|*L*|[out]メソッドが、色の輝度を格納する double 型へのポインター。|  
   
 ### <a name="remarks"></a>Remarks  
  色は、HSV (色合い、鮮やかさ、および値)、HSL (色相、彩度、および明るさ) または RGB (赤、緑、および青) として表現できます。 色の異なる表現の詳細については、次を参照してください。[色](http://go.microsoft.com/fwlink/p/?linkid=119126)します。  
@@ -816,17 +816,17 @@ static void __stdcall RGBtoHSV(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*rgb*  
- RGB 表現に変換する色です。  
+*rgb*<br/>
+[in]RGB 表現に変換する色です。  
   
- [out]*H*  
- このメソッドが最終的な色の色合いを格納する double 型へのポインター。  
+*H*<br/>
+[out]このメソッドが最終的な色の色合いを格納する double 型へのポインター。  
   
- [out]*S*  
- このメソッドが最終的な色の彩度を格納する double 型へのポインター。  
+*S*<br/>
+[out]このメソッドが最終的な色の彩度を格納する double 型へのポインター。  
   
- [out]*V*  
- このメソッドが、色の結果として得られる値を格納する double 型へのポインター。  
+*V*<br/>
+[out]このメソッドが、色の結果として得られる値を格納する double 型へのポインター。  
   
 ### <a name="remarks"></a>Remarks  
  色は、HSV (色合い、鮮やかさ、および値)、HSL (色相、彩度、および明るさ) または RGB (赤、緑、および青) として表現できます。 色の異なる表現の詳細については、次を参照してください。[色](http://go.microsoft.com/fwlink/p/?linkid=119126)します。  
@@ -849,29 +849,29 @@ static void __stdcall SetAlphaPixel(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pBits*  
- ビットマップのビット値へのポインター。  
+*pBits*<br/>
+[in]ビットマップのビット値へのポインター。  
   
- [in]*rect*  
- アプリケーション内の四角形領域。 描画のマネージャーは、下にあると、この領域の右側に影を描画します。  
+*rect*<br/>
+[in]アプリケーション内の四角形領域。 描画のマネージャーは、下にあると、この領域の右側に影を描画します。  
   
- [in]*x*  
- 色にピクセルの水平座標。  
+*x*<br/>
+[in]色にピクセルの水平座標。  
   
- [in]*y*  
- 色にピクセルの垂直座標。  
+*y*<br/>
+[in]色にピクセルの垂直座標。  
   
- [in]*%*  
- 透明度の割合。  
+*%*<br/>
+[in]透明度の割合。  
   
- [in]*iShadowSize*  
- 幅と影の高さ。  
+*iShadowSize*<br/>
+[in]幅と影の高さ。  
   
- [in]*clrBase*  
- 影の色。  
+*clrBase*<br/>
+[in]影の色。  
   
- [in]*bIsRight*  
- どのピクセルに色を示すブール値パラメーター。 詳細については、次の「解説」を参照してください。  
+*bIsRight*<br/>
+[in]どのピクセルに色を示すブール値パラメーター。 詳細については、次の「解説」を参照してください。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、ヘルパー メソッドによって使用される、 [CDrawingManager::DrawShadow](#drawshadow)メソッド。 影を描画する場合を呼び出すことをお勧めします。`CDrawingManager::DrawShadow`代わりにします。  
@@ -896,12 +896,12 @@ static void __stdcall SetPixel(
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*pBits*|ビットマップのビット値へのポインター。|  
-|[in]*cx*|ビットマップの幅の合計。|  
-|[in]*cy*|ビットマップの高さの合計。|  
-|[in]*x*|変更するビットマップのピクセルの x 座標。|  
-|[in]*y*|変更するビットマップのピクセルの y 座標。|  
-|[in]*色*|指定された座標で識別されるピクセルの新しい色。|  
+|*pBits*|[in]ビットマップのビット値へのポインター。|  
+|*cx*|[in]ビットマップの幅の合計。|  
+|*cy*|[in]ビットマップの高さの合計。|  
+|*x*|[in]変更するビットマップのピクセルの x 座標。|  
+|*y*|[in]変更するビットマップのピクセルの y 座標。|  
+|*色*|[in]指定された座標で識別されるピクセルの新しい色。|  
   
 ##  <a name="smartmixcolors"></a>  CDrawingManager::SmartMixColors  
  加重比率に基づいて 2 つの色を組み合わせ。  
@@ -920,11 +920,11 @@ static COLORREF __stdcall SmartMixColors(
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*color1*|最初の色を混在させる。|  
-|[in]*color2*|2 番目の色を混在させる。|  
-|[in]*dblLumRatio*|新しい色の明るさの比率。 `SmartMixColors` 最終的な色を決定する前に、この比率で混合の色の明るさを乗算します。|  
-|[in]*k1*|最初の色の加重比率です。|  
-|[in]*k2*|2 番目の色の加重比率です。|  
+|*color1*|[in]最初の色を混在させる。|  
+|*color2*|[in]2 番目の色を混在させる。|  
+|*dblLumRatio*|[in]新しい色の明るさの比率。 `SmartMixColors` 最終的な色を決定する前に、この比率で混合の色の明るさを乗算します。|  
+|*k1*|[in]最初の色の加重比率です。|  
+|*k2*|[in]2 番目の色の加重比率です。|  
   
 ### <a name="return-value"></a>戻り値  
  指定された色の加重の組み合わせを表す色。  

@@ -1,5 +1,5 @@
 ---
-title: リンカ ツール エラー LNK1188 |Microsoft ドキュメント
+title: リンカ ツール エラー LNK1188 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e31943ae253a332576fba73102db410b103a0096
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36b31590d94d809c16ed64d16071db0919f60238
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302621"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098941"
 ---
 # <a name="linker-tools-error-lnk1188"></a>リンカ ツール エラー LNK1188
-BADFIXUPSECTION:: 無効な fixup ターゲット 'symbol';考えられる長さのセクションは 0  
-  
- VxD リンク中に再配置のターゲットは、セクションがありませんでした。 Link386 (以前のバージョン)、(MASM GROUP ディレクティブによって生成された) OMF グループ レコードが 0 長セクションには、長さが 0 以外の別のセクションを結合に使用されている可能性があります。 COFF 形式は、長さゼロのセクションでは、GROUP ディレクティブをサポートしていません。 リンクでは、この種類の OMF オブジェクトが COFF に自動的に変換、このエラーが発生する可能性があります。
+
+BADFIXUPSECTION:: 無効な fixup ターゲット 'symbol';可能なセクションの長さは 0
+
+VxD リンク中に再配置のターゲットは、セクションがありませんでした。 Link386 (以前のバージョン)、0 長セクションには、0 以外の長さがもう 1 つのセクションを結合に (グループの MASM ディレクティブによって生成される)、OMF グループ レコードが使用されている可能性があります。 COFF 形式は、長さ 0 のセクションでは、グループ ディレクティブをサポートしていません。 リンクは、COFF に自動的にこの種類の OMF オブジェクトを変換、このエラーが発生する可能性があります。

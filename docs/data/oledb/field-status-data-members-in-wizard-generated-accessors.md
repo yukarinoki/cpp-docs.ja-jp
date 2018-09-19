@@ -16,19 +16,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2538e2b14277b24c583ae2392dd9249c93d4854b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e289e2f40326142894894dad1bfe34c801889bb3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690266"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066857"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>ウィザードで生成されたアクセサーのフィールド ステータスのデータ メンバー
+
 ATL OLE DB コンシューマー ウィザードを使用してコンシューマーを作成するときに、ウィザードは、列マップで指定したフィールドごとにユーザー レコード クラスのデータ メンバーを生成します。 各データ メンバーが型の`DWORD`該当するフィールドに対応する状態値が含まれています。  
   
- たとえば、データ メンバー *m_OwnerID*、ウィザードは、フィールドの状態の追加のデータ メンバーを生成 (*dwOwnerIDStatus*)、フィールド長のもう 1 つ (*dwOwnerIDLength*). COLUMN_ENTRY_LENGTH_STATUS エントリを含む列のマップも生成されます。  
+たとえば、データ メンバー *m_OwnerID*、ウィザードは、フィールドの状態の追加のデータ メンバーを生成 (*dwOwnerIDStatus*)、フィールド長のもう 1 つ (*dwOwnerIDLength*). COLUMN_ENTRY_LENGTH_STATUS エントリを含む列のマップも生成されます。  
   
- これは、次のコードに示します。  
+これは、次のコードに示します。  
   
 ```cpp  
 [db_source("insert connection string")]  
@@ -81,20 +82,21 @@ END_COLUMN_MAP()
 > [!NOTE]
 >  ユーザー レコード クラスを変更するか、独自のコンシューマーを作成する場合、データ変数は、ステータス変数と長さ変数よりも前に記述する必要があります。  
   
- 状態値は、デバッグ目的で使用できます。 ATL OLE DB コンシューマー ウィザードで生成されたコードでは、コンパイル エラー DB_S_ERRORSOCCURRED または DB_E_ERRORSOCCURRED などを生成する場合、フィールド ステータス データ メンバーの現在の値最初に確認する必要があります。 0 以外の値が指定されている問題のある列に対応しています。  
+状態値は、デバッグ目的で使用できます。 ATL OLE DB コンシューマー ウィザードで生成されたコードでは、コンパイル エラー DB_S_ERRORSOCCURRED または DB_E_ERRORSOCCURRED などを生成する場合、フィールド ステータス データ メンバーの現在の値最初に確認する必要があります。 0 以外の値が指定されている問題のある列に対応しています。  
   
- 特定のフィールドに NULL 値を設定するのに状態の値を使用することもできます。 これにより、フィールドの値を 0 ではなく、NULL として区別する場合に役立ちます。 NULL が有効な値、または特殊な値かどうかを判断し、アプリケーションが処理する方法を決定する責任です。 OLE DB は、ジェネリック、NULL 値を指定する適切な手段として、DBSTATUS_S_ISNULL を定義します。 コンシューマーは、データを読み取るし、値が null、status フィールドは、DBSTATUS_S_ISNULL に設定されます。 コンシューマーは、NULL 値を設定する場合、コンシューマーは、プロバイダーを呼び出す前に DBSTATUS_S_ISNULL にステータス値を設定します。  
+特定のフィールドに NULL 値を設定するのに状態の値を使用することもできます。 これにより、フィールドの値を 0 ではなく、NULL として区別する場合に役立ちます。 NULL が有効な値、または特殊な値かどうかを判断し、アプリケーションが処理する方法を決定する責任です。 OLE DB は、ジェネリック、NULL 値を指定する適切な手段として、DBSTATUS_S_ISNULL を定義します。 コンシューマーは、データを読み取るし、値が null、status フィールドは、DBSTATUS_S_ISNULL に設定されます。 コンシューマーは、NULL 値を設定する場合、コンシューマーは、プロバイダーを呼び出す前に DBSTATUS_S_ISNULL にステータス値を設定します。  
   
- 次に、Oledb.h を開き、検索`DBSTATUSENUM`します。 に対して 0 以外の状態を表す数値を照合することができますし、`DBSTATUSENUM`列挙値。 列挙型の名前で何が問題を通知するのに十分でない場合は、"Status"、「データの値をバインドする」のセクションのトピックを参照してください、 [OLE DB プログラマ ガイド](/previous-versions/windows/desktop/ms713643\(v=vs.85\))します。 このトピックには、作業またはデータを設定するときに使用される状態値のテーブルが含まれています。 長さの値については、同じセクションでは、"Length"トピックを参照してください。  
+次に、Oledb.h を開き、検索`DBSTATUSENUM`します。 に対して 0 以外の状態を表す数値を照合することができますし、`DBSTATUSENUM`列挙値。 列挙型の名前で何が問題を通知するのに十分でない場合は、"Status"、「データの値をバインドする」のセクションのトピックを参照してください、 [OLE DB プログラマ ガイド](/previous-versions/windows/desktop/ms713643\(v=vs.85\))します。 このトピックには、作業またはデータを設定するときに使用される状態値のテーブルが含まれています。 長さの値については、同じセクションでは、"Length"トピックを参照してください。  
   
 ## <a name="retrieving-the-length-or-status-of-a-column"></a>長さまたは列のステータスを取得します。  
- 可変長列の長さ、または (たとえば、DBSTATUS_S_ISNULL の確認) を列のステータスを取得できます。  
+
+可変長列の長さ、または (たとえば、DBSTATUS_S_ISNULL の確認) を列のステータスを取得できます。  
   
--   長さを取得するには、COLUMN_ENTRY_LENGTH マクロを使用します。  
+- 長さを取得するには、COLUMN_ENTRY_LENGTH マクロを使用します。  
   
--   状態を取得するには、COLUMN_ENTRY_STATUS マクロを使用します。  
+- 状態を取得するには、COLUMN_ENTRY_STATUS マクロを使用します。  
   
--   両方を取得するには、次に示す COLUMN_ENTRY_LENGTH_STATUS を使用します。  
+- 両方を取得するには、次に示す COLUMN_ENTRY_LENGTH_STATUS を使用します。  
   
 ```cpp  
 class CProducts  
@@ -123,7 +125,8 @@ while (product.MoveNext() == S_OK)
 }  
 ```  
   
- 使用すると`CDynamicAccessor`長さと状態を自動的に連結します。 長さと状態の値を取得する、`GetLength`と`GetStatus`メンバー関数。  
+使用すると`CDynamicAccessor`長さと状態を自動的に連結します。 長さと状態の値を取得する、`GetLength`と`GetStatus`メンバー関数。  
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB コンシューマー テンプレートの操作](../../data/oledb/working-with-ole-db-consumer-templates.md)
+
+[OLE DB コンシューマー テンプレートの操作](../../data/oledb/working-with-ole-db-consumer-templates.md)

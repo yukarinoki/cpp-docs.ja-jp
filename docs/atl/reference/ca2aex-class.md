@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b0b63f4054459b7d8b3c8aae45cf583f635cd95
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 49e364e2676242ad75f185792faa545bbb90ef1e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751894"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071212"
 ---
 # <a name="ca2aex-class"></a>CA2AEX クラス
 
@@ -43,7 +43,7 @@ class CA2AEX
 
 #### <a name="parameters"></a>パラメーター
 
-*t_nBufferLength*  
+*t_nBufferLength*<br/>
 変換プロセスで使用されるバッファーのサイズ。 既定の長さは 128 バイトです。
 
 ## <a name="members"></a>メンバー
@@ -109,10 +109,10 @@ CA2AEX(LPCSTR psz) throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*2 つ*  
+*2 つ*<br/>
 変換するテキスト文字列。
 
-*nCodePage*  
+*nCodePage*<br/>
 このクラスで使用されていません。
 
 ### <a name="remarks"></a>Remarks
@@ -161,9 +161,9 @@ operator LPSTR() const throw();
 
 ## <a name="see-also"></a>関連項目
 
-[CA2CAEX クラス](../../atl/reference/ca2caex-class.md)   
-[CA2WEX クラス](../../atl/reference/ca2wex-class.md)   
-[CW2AEX クラス](../../atl/reference/cw2aex-class.md)   
-[CW2CWEX クラス](../../atl/reference/cw2cwex-class.md)   
-[CW2WEX クラス](../../atl/reference/cw2wex-class.md)   
+[CA2CAEX クラス](../../atl/reference/ca2caex-class.md)<br/>
+[CA2WEX クラス](../../atl/reference/ca2wex-class.md)<br/>
+[CW2AEX クラス](../../atl/reference/cw2aex-class.md)<br/>
+[CW2CWEX クラス](../../atl/reference/cw2cwex-class.md)<br/>
+[CW2WEX クラス](../../atl/reference/cw2wex-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c736fbb5180edb26eda6a557a4e8e45a3ffc881
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9bc1e7e3d3996eedd0fe464832c1ee91986e302f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202027"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052661"
 ---
 # <a name="fatal-error-c1093"></a>致命的なエラー C1093
 
-> API の呼び出し '*関数名*'失敗'*呼び出しの場所*':'*ランタイムからテキスト*'  
-  
-.NET 関数の呼び出しが失敗しました。 *ランタイムからテキスト*文字列、COM ランタイムでは提供されない可能性があります。  
-  
+> API の呼び出し '*関数名*'失敗'*呼び出しの場所*':'*ランタイムからテキスト*'
+
+.NET 関数の呼び出しが失敗しました。 *ランタイムからテキスト*文字列、COM ランタイムでは提供されない可能性があります。
+
 システム エラー メッセージの詳細については、winerror.h システム ファイルを参照してくださいと[FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage)します。

@@ -17,66 +17,70 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77748cd69a3424bb4b2e209a0a447d39eae25147
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: f2d35f8d5f263125cd6a5e0a5e34105c3424f87b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466905"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070295"
 ---
 # <a name="deprecated-c"></a>非推奨 (C++)
+
 このトピックでは、Microsoft 固有について declspec 宣言を非推奨とされます。 C++ 14 について`[[deprecated]]`属性、および Microsoft 固有の declspec またはプラグマとその属性を使用するタイミングに関するガイダンスを参照してください。 [C++ の標準属性](attributes.md)します。
 
-例外については、下、**非推奨とされます**宣言と同じ機能を提供する、[非推奨とされます](../preprocessor/deprecated-c-cpp.md)プラグマ。  
-  
--   **非推奨とされます**宣言により、非推奨として特定の形式の関数のオーバー ロードを指定する一方、プラグマ形式はすべてのオーバー ロードされた関数名に適用されます。  
-  
--   **非推奨とされます**宣言では、コンパイル時に表示されるメッセージを指定することができます。 このメッセージのテキストをマクロから取り込むことができます。  
-  
--   マクロは非推奨とされたとしてマークされているのみ、**非推奨とされます**プラグマ。  
-  
- コンパイラが非推奨の識別子または標準の使用を検出するかどうかは[ `[[deprecated]]` ](attributes.md)属性、 [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)警告がスローされます。  
-  
-## <a name="example"></a>例  
- 次の例では、関数を非推奨としてマークする方法、および非推奨の関数が使用されている場合、コンパイル時に表示されるメッセージを指定する方法を示します。  
-  
-```cpp 
-// deprecated.cpp  
-// compile with: /W3  
-#define MY_TEXT "function is deprecated"  
-void func1(void) {}  
-__declspec(deprecated) void func1(int) {}  
-__declspec(deprecated("** this is a deprecated function **")) void func2(int) {}  
-__declspec(deprecated(MY_TEXT)) void func3(int) {}  
-  
-int main() {  
-   func1();  
-   func1(1);   // C4996  
-   func2(1);   // C4996  
-   func3(1);   // C4996  
-}  
-```  
-  
-## <a name="example"></a>例  
- 次の例では、クラスを非推奨としてマークする方法、および非推奨のクラスが使用されている場合、コンパイル時に表示されるメッセージを指定する方法を示します。  
-  
-```cpp 
-// deprecate_class.cpp  
-// compile with: /W3  
-struct __declspec(deprecated) X {  
-   void f(){}  
-};  
-  
-struct __declspec(deprecated("** X2 is deprecated **")) X2 {  
-   void f(){}  
-};  
-  
-int main() {  
-   X x;   // C4996  
-   X2 x2;   // C4996  
-}  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [__declspec](../cpp/declspec.md)   
- [キーワード](../cpp/keywords-cpp.md)
+例外については、下、**非推奨とされます**宣言と同じ機能を提供する、[非推奨とされます](../preprocessor/deprecated-c-cpp.md)プラグマ。
+
+- **非推奨とされます**宣言により、非推奨として特定の形式の関数のオーバー ロードを指定する一方、プラグマ形式はすべてのオーバー ロードされた関数名に適用されます。
+
+- **非推奨とされます**宣言では、コンパイル時に表示されるメッセージを指定することができます。 このメッセージのテキストをマクロから取り込むことができます。
+
+- マクロは非推奨とされたとしてマークされているのみ、**非推奨とされます**プラグマ。
+
+コンパイラが非推奨の識別子または標準の使用を検出するかどうかは[ `[[deprecated]]` ](attributes.md)属性、 [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)警告がスローされます。
+
+## <a name="example"></a>例
+
+次の例では、関数を非推奨としてマークする方法、および非推奨の関数が使用されている場合、コンパイル時に表示されるメッセージを指定する方法を示します。
+
+```cpp
+// deprecated.cpp
+// compile with: /W3
+#define MY_TEXT "function is deprecated"
+void func1(void) {}
+__declspec(deprecated) void func1(int) {}
+__declspec(deprecated("** this is a deprecated function **")) void func2(int) {}
+__declspec(deprecated(MY_TEXT)) void func3(int) {}
+
+int main() {
+   func1();
+   func1(1);   // C4996
+   func2(1);   // C4996
+   func3(1);   // C4996
+}
+```
+
+## <a name="example"></a>例
+
+次の例では、クラスを非推奨としてマークする方法、および非推奨のクラスが使用されている場合、コンパイル時に表示されるメッセージを指定する方法を示します。
+
+```cpp
+// deprecate_class.cpp
+// compile with: /W3
+struct __declspec(deprecated) X {
+   void f(){}
+};
+
+struct __declspec(deprecated("** X2 is deprecated **")) X2 {
+   void f(){}
+};
+
+int main() {
+   X x;   // C4996
+   X2 x2;   // C4996
+}
+```
+
+## <a name="see-also"></a>関連項目
+
+[__declspec](../cpp/declspec.md)<br/>
+[キーワード](../cpp/keywords-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3118 |Microsoft ドキュメント
+title: コンパイラ エラー C3118 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ecc3dc79cd52631f3dba5c204cabc02e7932bc1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 320d92bd97e3b5f9bb696959ee25ca33cba3544a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244457"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063425"
 ---
 # <a name="compiler-error-c3118"></a>コンパイラ エラー C3118
-'interface': インターフェイスは仮想継承をサポートしていません  
-  
- 仮想インターフェイスから継承しようとするとします。 たとえば、オブジェクトに適用された  
-  
-```  
-// C3118.cpp  
-__interface I1 {  
-};  
-  
-__interface I2 : virtual I1 {   // C3118  
-};  
-```  
-  
- このエラーを生成します。
+
+'interface': インターフェイスは仮想継承をサポートしていません
+
+仮想インターフェイスから継承しようとしました。 たとえば、オブジェクトに適用された
+
+```
+// C3118.cpp
+__interface I1 {
+};
+
+__interface I2 : virtual I1 {   // C3118
+};
+```
+
+このエラーを生成します。

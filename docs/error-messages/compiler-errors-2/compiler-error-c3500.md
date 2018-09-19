@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3500 |Microsoft ドキュメント
+title: コンパイラ エラー C3500 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87d0bf7b7d7b773d89c9b5b6b1dd8e3b0eee4c86
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 996f13939f4c317424a8c577e2b3dc0ec8178c7d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248584"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069626"
 ---
 # <a name="compiler-error-c3500"></a>コンパイラ エラー C3500
-無効な ProgID 'progid'  
-  
- 無効な progid がで指定された、`#import`ステートメントです。 Windows レジストリをチェックすることを指定する有効なことを確認 progid です。
+
+無効な ProgID 'progid'
+
+無効な progid で指定した、`#import`ステートメント。 Windows レジストリに、有効な指定していることを確認します。 progid。

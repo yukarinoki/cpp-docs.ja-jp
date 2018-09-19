@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b379cdff5f2f0b0e5bf00a6e67b9320cd5150f47
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6cdc20d536ab4043a24263aebeb0576c379b2f1d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756165"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091336"
 ---
 # <a name="cglobalheap-class"></a>CGlobalHeap クラス
 
@@ -83,7 +83,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nBytes*  
+*nBytes*<br/>
 新しいメモリ ブロック内の要求されたバイト数。
 
 ### <a name="return-value"></a>戻り値
@@ -106,7 +106,7 @@ virtual void Free(void* p) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*p*  
+*p*<br/>
 このメモリ マネージャーによって以前に割り当てられたメモリへのポインター。 NULL は有効な値を何も行われません。
 
 ### <a name="remarks"></a>Remarks
@@ -123,7 +123,7 @@ virtual size_t GetSize(void* p) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*p*  
+*p*<br/>
 このメモリ マネージャーによって以前に割り当てられたメモリへのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -144,10 +144,10 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*p*  
+*p*<br/>
 このメモリ マネージャーによって以前に割り当てられたメモリへのポインター。
 
-*nBytes*  
+*nBytes*<br/>
 新しいメモリ ブロック内の要求されたバイト数。
 
 ### <a name="return-value"></a>戻り値
@@ -162,9 +162,9 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ## <a name="see-also"></a>関連項目
 
-[クラスの概要](../../atl/atl-class-overview.md)   
-[CComHeap クラス](../../atl/reference/ccomheap-class.md)   
-[CWin32Heap クラス](../../atl/reference/cwin32heap-class.md)   
-[CLocalHeap クラス](../../atl/reference/clocalheap-class.md)   
-[CCRTHeap クラス](../../atl/reference/ccrtheap-class.md)   
+[クラスの概要](../../atl/atl-class-overview.md)<br/>
+[CComHeap クラス](../../atl/reference/ccomheap-class.md)<br/>
+[CWin32Heap クラス](../../atl/reference/cwin32heap-class.md)<br/>
+[CLocalHeap クラス](../../atl/reference/clocalheap-class.md)<br/>
+[CCRTHeap クラス](../../atl/reference/ccrtheap-class.md)<br/>
 [IAtlMemMgr クラス](../../atl/reference/iatlmemmgr-class.md)

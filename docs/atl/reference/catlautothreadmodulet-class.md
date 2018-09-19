@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebf3ba07ac5608a47f4e2bbbe853cb37c033e5f7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 46198390ce25cb655b94c0ca4769321fc3e9362d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757616"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099708"
 ---
 # <a name="catlautothreadmodulet-class"></a>CAtlAutoThreadModuleT クラス
 
@@ -35,21 +35,21 @@ ms.locfileid: "43757616"
 ## <a name="syntax"></a>構文
 
 ```
-template <class T, 
+template <class T,
          class ThreadAllocator = CComSimpleThreadAllocator,
-         DWORD dwWait = INFINITE>  
+         DWORD dwWait = INFINITE>
 class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 COM サーバーを実装するクラスです。
 
-*テンプレートパラ*  
+*テンプレートパラ*<br/>
 スレッドの選択を管理するクラスです。 既定値は[CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md)します。
 
-*内部*  
+*内部*<br/>
 ミリ秒単位で、タイムアウト間隔を指定します。 既定値は、INFINITE で、決してメソッドのタイムアウト間隔が経過するとします。
 
 ## <a name="members"></a>メンバー
@@ -95,7 +95,7 @@ EXE モジュール内に作成するスレッドの数。
 
 ## <a name="see-also"></a>関連項目
 
-[IAtlAutoThreadModule クラス](../../atl/reference/iatlautothreadmodule-class.md)   
-[クラスの概要](../../atl/atl-class-overview.md)   
-[IAtlAutoThreadModule クラス](../../atl/reference/iatlautothreadmodule-class.md)   
+[IAtlAutoThreadModule クラス](../../atl/reference/iatlautothreadmodule-class.md)<br/>
+[クラスの概要](../../atl/atl-class-overview.md)<br/>
+[IAtlAutoThreadModule クラス](../../atl/reference/iatlautothreadmodule-class.md)<br/>
 [モジュール クラス](../../atl/atl-module-classes.md)

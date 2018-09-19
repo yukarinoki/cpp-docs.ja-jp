@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50a174f4ee85b84451673b56139b9968c796464f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a2d911d200b88191442c7ea04bdb61281cbc6d2d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761837"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086240"
 ---
 # <a name="introduction-to-com-and-atl"></a>COM と ATL の概要
 
@@ -29,20 +29,20 @@ ms.locfileid: "43761837"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[COM の概要](../atl/introduction-to-com.md)  
+[COM の概要](../atl/introduction-to-com.md)<br/>
 コンポーネント オブジェクト モデル (COM) の概要を示しますインターフェイスなど、基本的な概念`IUnknown`、参照カウント、 `QueryInterface`、マーシャ リング、および集計します。
 
-[ATL の概要](../atl/introduction-to-atl.md)  
+[ATL の概要](../atl/introduction-to-atl.md)<br/>
 について説明します、簡単に、Active Template Library (ATL) は、テンプレートのライブラリ、および ATL バージョン番号の設計されました。 ATL と MFC の選択に関する推奨事項が含まれています。
 
 ## <a name="related-sections"></a>関連項目
 
-[コンポーネント オブジェクト モデル](/windows/desktop/com/the-component-object-model)  
+[コンポーネント オブジェクト モデル](/windows/desktop/com/the-component-object-model)<br/>
 Com の Windows SDK マテリアル
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Active Template Library を使用してプログラミングする方法に関する概念説明のトピックへのリンクを提供します。
 
-[ATL のクラスの概要](../atl/atl-class-overview.md)  
+[ATL のクラスの概要](../atl/atl-class-overview.md)<br/>
 参照情報と ATL クラスへのリンクを提供します。
 

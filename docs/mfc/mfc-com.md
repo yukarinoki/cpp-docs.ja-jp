@@ -1,7 +1,7 @@
 ---
 title: MFC COM |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e8c3af361e1ffb5928132727fa124f03a99e81e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 026e8b39d751a352830b37ae0b5692882e2daa3f
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205650"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534834"
 ---
 # <a name="mfc-com"></a>MFC COM
 Active Template Library (ATL) のほとんどは設計されています。 COM をサポートする MFC のサブセットがに設計された COM プログラミングします。 このセクションのトピックには、COM の MFC のサポートがについて説明します  
@@ -34,8 +34,6 @@ Active Template Library (ATL) のほとんどは設計されています。 COM 
  Active テクノロジ (など、ActiveX コントロール、Active ドキュメント コンテインメント、OLE、およびなど) が使用する言語に関係なく、ネットワーク環境で互いと対話するのにソフトウェア コンポーネントを有効にするのにコンポーネント オブジェクト モデル (COM) を使用します。作成されます。 Active テクノロジは、デスクトップまたはインターネット上で実行されるアプリケーションの作成に使用できます。 詳細については、次を参照してください。 [COM の概要](../atl/introduction-to-com.md)または[、コンポーネント オブジェクト モデル](/windows/desktop/com/the-component-object-model)します。  
   
  アクティブな技術には、次を含む、クライアントとサーバーの両方のテクノロジがあります。  
-  
--   [Active ドキュメント コンテインメント](../mfc/active-document-containment.md)、MFC バージョン 4.2 ではサポートでき、後で、ユーザーを表示する[active ドキュメント](../mfc/active-documents.md)(Microsoft Excel または Word ファイル) などのドキュメントのネイティブ インターフェイス全体をアクティブ化アプリケーションの全体のクライアント領域で、 [active ドキュメント コンテナー](../mfc/active-document-containers.md) Microsoft Internet Explorer と Microsoft Office バインダーなど。 によって提供されるドキュメントはときに、コンテナーが、クライアントとして動作[active ドキュメント サーバー](../mfc/active-document-servers.md)します。 インターネット アプリケーションでアクティブなドキュメントの使用に関する詳細については、次を参照してください。: [、インターネット上の Active ドキュメント](../mfc/active-documents-on-the-internet.md)します。  
   
 -   ActiveX コントロールは、Web サイトなどのコンテナーで使用できる対話型のオブジェクトです。 ActiveX コントロールの詳細についてを参照してください。  
   

@@ -1,5 +1,5 @@
 ---
-title: 式エバリュエーター エラー CXX0007 |Microsoft ドキュメント
+title: 式エバリュエーター エラー CXX0007 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab244578d7a44b1fd952ee441cd8cc51f1ca1fa1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a331f5e696ffa368e17599df76577b9e3354435
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301487"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024867"
 ---
 # <a name="expression-evaluator-error-cxx0007"></a>式エバリュエーター エラー CXX0007
-右かっこがありません。  
-  
- 式では、対になっていないかっこが見つかりました。 バランスの取れたかっこ付きの式を再入力します。  
-  
- このエラーは、can0007 と同じものと同じです。
+
+右かっこの欠落
+
+式では、対になっていないかっこが見つかりました。 バランスの取れたかっこを使用して式を再入力します。
+
+このエラーは、can0007 と同じものと同じです。

@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0eb34b0ce7b087a457b751604ffd86e61085bf5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c89f577168593dcb22570af63801fc05654eb4b3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753075"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100698"
 ---
 # <a name="csnapinpropertypageimpl-class"></a>CSnapInPropertyPageImpl クラス
 
@@ -125,7 +125,7 @@ CSnapInPropertyPageImpl(LPCTSTR lpszTitle = NULL);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszTitle*  
+*lpszTitle*<br/>
 [in]プロパティ ページのタイトル。
 
 ### <a name="remarks"></a>Remarks
@@ -326,10 +326,10 @@ LRESULT QuerySiblings(WPARAM wParam, LPARAM lParam);
 
 ### <a name="parameters"></a>パラメーター
 
-*wParam*  
+*wParam*<br/>
 [in]メッセージに依存する追加情報を指定します。
 
-*lParam*  
+*lParam*<br/>
 [in]メッセージに依存する追加情報を指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -350,7 +350,7 @@ void SetModified(BOOL bChanged = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-*bChanged*  
+*bChanged*<br/>
 [in]前回適用された後、プロパティ ページの設定が変更されていることを指定する場合は TRUEプロパティ ページの設定が適用されているか、無視するかを示す場合は FALSE。
 
 ### <a name="remarks"></a>Remarks

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e63ee47c98e898fe5cba1a24078029f6afe10b15
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: f019a0c2c62b991b2799f1a5d6d89402054c0260
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539316"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723386"
 ---
 # <a name="stosd"></a>__stosd
 **Microsoft 固有の仕様**  
@@ -41,14 +41,14 @@ void __stosd(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [出力] `Dest`  
- 操作の転送先。  
+*追加先*<br/>
+[out]操作の転送先。  
   
- [入力] `Data`  
- 格納するデータ。  
+*データ*<br/>
+[in]格納するデータ。  
   
- [入力] `Count`  
- 書き込むダブルワードのブロックの長さ。  
+*カウント*<br/>
+[in]書き込むダブルワードのブロックの長さ。  
   
 ## <a name="requirements"></a>要件  
   

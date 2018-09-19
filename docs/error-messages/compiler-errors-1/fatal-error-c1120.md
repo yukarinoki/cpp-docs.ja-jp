@@ -1,5 +1,5 @@
 ---
-title: 致命的なエラー C1120 |Microsoft ドキュメント
+title: 致命的なエラー C1120 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 292d1b4ea2334e1f052e7334890ceb728390fbc5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b68d805ce400e4beb735ddec66006f75cdba23a1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197248"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032940"
 ---
 # <a name="fatal-error-c1120"></a>致命的なエラー C1120
-'function' の失敗の GetProcAddress の呼び出しに  
-  
- このエラーは、Visual C を再インストールする必要があることを示します。
+
+'function' が失敗しました GetProcAddress の呼び出しに
+
+このエラーは、Visual C を再インストールする必要があることを示します。

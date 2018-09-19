@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2743 |Microsoft ドキュメント
+title: コンパイラ エラー C2743 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a762a7c816f713f9371ff50524ccb582753535b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4217a1e7a8475362c654ac34b6a345846341ec35
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235611"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056491"
 ---
 # <a name="compiler-error-c2743"></a>コンパイラ エラー C2743
-'type': _ _clrcall デストラクターまたはコピー コンス トラクターを持つネイティブ型をキャッチできません  
-  
- コンパイルされたモジュール **/clr**のネイティブ型と型のデストラクターまたはコピー コンス トラクターで使用されている例外をキャッチしようとしています。`__clrcall`呼び出し規約です。  
-  
- コンパイルしたときに **/clr**、例外処理には、メンバー関数は、ネイティブ型にするが必要ですが[_ _cdecl](../../cpp/cdecl.md)および not [_ _clrcall](../../cpp/clrcall.md)です。 使用してメンバー関数を持つネイティブ型`__clrcall`でコンパイルされたモジュールの呼び出し規約をキャッチできない **/clr**です。  
-  
- 詳細については、「[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)」を参照してください。  
-  
-## <a name="example"></a>例  
- 次の例では、C2743 を生成します。  
-  
-```  
-// C2743.cpp  
-// compile with: /clr  
-public struct S {  
-   __clrcall ~S() {}  
-};  
-  
-public struct T {  
-   ~T() {}  
-};  
-  
-int main() {  
-   try {}  
-   catch(S) {}   // C2743  
-   // try the following line instead  
-   // catch(T) {}  
-  
-   try {}  
-   catch(S*) {}   // OK  
-}  
+
+'type': _ _clrcall デストラクターまたはコピー コンス トラクターでネイティブをキャッチすることはできません
+
+コンパイルされたモジュール **/clr**ネイティブ型と型のデストラクターまたはコピー コンス トラクターの使用の例外をキャッチしようとしています。`__clrcall`呼び出し規約。
+
+コンパイルされたときに **/clr**、例外処理をネイティブ型でメンバー関数を想定[_ _cdecl](../../cpp/cdecl.md)および not [_ _clrcall](../../cpp/clrcall.md)します。 ネイティブ型を使用してメンバー関数で`__clrcall`でコンパイルされたモジュールの呼び出し規約をキャッチできない **/clr**します。
+
+詳細については、「[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)」を参照してください。
+
+## <a name="example"></a>例
+
+次の例では、C2743 が生成されます。
+
+```
+// C2743.cpp
+// compile with: /clr
+public struct S {
+   __clrcall ~S() {}
+};
+
+public struct T {
+   ~T() {}
+};
+
+int main() {
+   try {}
+   catch(S) {}   // C2743
+   // try the following line instead
+   // catch(T) {}
+
+   try {}
+   catch(S*) {}   // OK
+}
 ```

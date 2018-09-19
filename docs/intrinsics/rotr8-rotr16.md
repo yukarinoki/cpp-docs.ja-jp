@@ -1,5 +1,5 @@
 ---
-title: _rotr8、_rotr16 |Microsoft Docs
+title: _rotr8、_rotr16 |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a667f857621c01900165f6e93de7f7bddc837915
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 936113d2b59bf089179c6f0c016c8a91c5edc74d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538522"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715820"
 ---
 # <a name="rotr8-rotr16"></a>_rotr8、_rotr16
 **Microsoft 固有の仕様**  
@@ -44,11 +44,11 @@ unsigned short _rotr16(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力] `value`  
- 回転する値。  
+*値*<br/>
+[in]回転する値。  
   
- [入力] `shift`  
- 回転するビット数。  
+*shift*<br/>
+[in]回転するビット数。  
   
 ## <a name="return-value"></a>戻り値  
  回転後の値。  

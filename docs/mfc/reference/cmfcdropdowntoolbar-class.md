@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b227f9d2fdd43b576f89b74f43e4cdce8476bf9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 23ca73629208e0ac80f7c516f8249e83ae0d41a6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692384"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719239"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolBar クラス
 ユーザーがトップレベルのツール バー ボタンを押し続けたときに表示されるツール バーです。  
@@ -133,23 +133,23 @@ virtual BOOL LoadBitmap(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiResID*  
- ツール バーのホット イメージを参照するビットマップのリソース ID。  
+*uiResID*<br/>
+[in]ツールバーのホット イメージを参照するビットマップのリソース ID。  
   
- [in]*uiColdResID*  
- ツール バーのコールド イメージを参照するビットマップのリソース ID。  
+*uiColdResID*<br/>
+[in]ツールバーのコールド イメージを参照するビットマップのリソース ID。  
   
- [in]*uiMenuResID*  
- ツール バーの通常のメニュー イメージを参照するビットマップのリソース ID。  
+*uiMenuResID*<br/>
+[in]通常のメニュー画像を参照するビットマップのリソース ID。  
   
- [in]*ブロック*  
- ツールバーをロックする場合は TRUEそれ以外の場合は FALSE です。  
+*ブロックされています。*<br/>
+[in]ツールバーをロックする場合は TRUEそれ以外の場合は FALSE です。  
   
- [in]*uiDisabledResID*  
- ツール バーの無効イメージを参照するビットマップのリソース ID。  
+*uiDisabledResID*<br/>
+[in]ツールバーの無効イメージを参照するビットマップのリソース ID。  
   
- [in]*uiMenuDisabledResID*  
- メニューの無効イメージを参照するビットマップのリソース ID です。  
+*uiMenuDisabledResID*<br/>
+[in]メニューの無効イメージを参照するビットマップのリソース ID。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は 0 以外。それ以外の場合は 0。  
@@ -174,12 +174,12 @@ virtual BOOL LoadToolBar(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiResID*  
- [in]*uiColdResID*  
- [in]*uiMenuResID*  
- [in]*BOOL*  
- [in]*uiDisabledResID*  
- [in]*uiMenuDisabledResID*  
+*uiResID*<br/>
+[in][in]*uiColdResID*  
+*uiMenuResID*<br/>
+[in][in]*BOOL*  
+*uiDisabledResID*<br/>
+[in][in]*uiMenuDisabledResID*  
  [in]*uiHotResID*  
   
 ### <a name="return-value"></a>戻り値  
@@ -196,8 +196,8 @@ afx_msg void OnLButtonUp(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nFlags*  
- [in]*ポイント*  
+*nFlags*<br/>
+[in][in]*ポイント*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -211,8 +211,8 @@ afx_msg void OnMouseMove(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nFlags*  
- [in]*ポイント*  
+*nFlags*<br/>
+[in][in]*ポイント*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -240,8 +240,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pTarget*  
- [in]*持たず*  
+*pTarget*<br/>
+[in][in]*持たず*  
   
 ### <a name="remarks"></a>Remarks  
   

@@ -1,5 +1,5 @@
 ---
-title: cancellation_token_source クラス |Microsoft ドキュメント
+title: cancellation_token_source クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 122a60496a92b3844f4e439e40650c429035dc33
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d5bda0dd4b756ba9228fac8cc5b0de70b6d71f7a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689676"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053649"
 ---
 # <a name="cancellationtokensource-class"></a>cancellation_token_source クラス
 `cancellation_token_source` クラスは、取り消し可能な操作を取り消す機能を表します。  
@@ -97,7 +97,8 @@ cancellation_token_source(cancellation_token_source&& _Src);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Src`  
+*_Src*<br/>
+オブジェクトをコピーまたは移動します。  
   
 ##  <a name="create_linked_source"></a> create_linked_source 
 
@@ -112,15 +113,17 @@ static cancellation_token_source create_linked_source(_Iter _Begin, _Iter _End);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Iter`  
- `_Src`  
- 取り消された場合は、返されるトークン ソースの取り消しの原因となるトークン。 このパラメーターに含まれるソースとは関係なく、返されるトークン ソースも取り消されることに注意してください。  
+*_Iter*<br/>
+反復子の型。
+
+*_Src*<br/>
+取り消された場合は、返されるトークン ソースの取り消しの原因となるトークン。 このパラメーターに含まれるソースとは関係なく、返されるトークン ソースも取り消されることに注意してください。  
   
- `_Begin`  
- C++ 標準ライブラリする反復子トークンの範囲の先頭に対応する取り消しをリッスンします。  
+*開始 (_b)*<br/>
+C++ 標準ライブラリ反復子に対応するトークンの範囲の先頭の取り消しをリッスンします。  
   
- `_End`  
- C++ 標準ライブラリ反復子のトークンの範囲の終了に対応するのキャンセルをリッスンするようにします。  
+*(_E)*<br/>
+C++ 標準ライブラリする反復子のトークンの範囲の終了に対応する取り消しをリッスンします。  
   
 ### <a name="return-value"></a>戻り値  
  `cancellation_token_source` パラメーターによって指定されたトークンが取り消されたときに取り消される `_Src`。  
@@ -143,7 +146,8 @@ bool operator!= (const cancellation_token_source& _Src) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Src`  
+*_Src*<br/>
+オペランド。
   
 ### <a name="return-value"></a>戻り値  
   
@@ -156,8 +160,9 @@ cancellation_token_source& operator= (cancellation_token_source&& _Src);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Src`  
-  
+*_Src*<br/>
+オペランド。
+
 ### <a name="return-value"></a>戻り値  
   
 ##  <a name="operator_eq_eq"></a> 演算子 = = 
@@ -167,7 +172,8 @@ bool operator== (const cancellation_token_source& _Src) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Src`  
+*_Src*<br/>
+オペランド。
   
 ### <a name="return-value"></a>戻り値  
   

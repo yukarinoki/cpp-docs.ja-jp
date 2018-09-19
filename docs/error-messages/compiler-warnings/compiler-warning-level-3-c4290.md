@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 3) C4290 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 3) C4290 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f03d35e1a3756979d8936647255e2b65afef56d9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a6f09d8f3396381f34a0fbe3c7150b5948cee01
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289894"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46015973"
 ---
 # <a name="compiler-warning-level-3-c4290"></a>コンパイラの警告 (レベル 3) C4290
-C++ の例外の指定に、関数を示すは無視されます。  
-  
- 関数は、Visual C を受け付けますが、実装していませんが、例外指定を使用して宣言されます。 コードでは、例外は、コンパイル時に無視される仕様が再コンパイルする必要があります、リンクを再利用後で例外の指定をサポートするバージョン。  
-  
- 詳細については、次を参照してください。[例外の仕様 (スロー)](../../cpp/exception-specifications-throw-cpp.md)です。  
-  
- 使用してこの警告を回避することができます、[警告](../../preprocessor/warning.md)プラグマ。  
-  
-```  
-#pragma warning( disable : 4290 )  
-```  
-  
- 次のコード サンプルには、C4290 が生成されます。  
-  
-```  
-// C4290.cpp  
-// compile with: /EHs /W3 /c  
-void f1(void) throw(int) {}   // C4290  
-  
-// OK  
-void f2(void) throw() {}  
-void f3(void) throw(...) {}  
+
+関数の指定以外 C++ 例外の指定は無視されます。
+
+関数は、Visual C を受け入れますが、実装していない例外指定を使用して宣言されます。 コードでは、例外は、コンパイル時に無視される仕様は、再コンパイルする必要があります、リンクを再利用後で例外の仕様をサポートしているバージョン。
+
+詳細については、次を参照してください。[例外の仕様 (スロー)](../../cpp/exception-specifications-throw-cpp.md)します。
+
+使用してこの警告を回避することができます、[警告](../../preprocessor/warning.md)プラグマ。
+
+```
+#pragma warning( disable : 4290 )
+```
+
+次のコード サンプルでは、C4290 が生成されます。
+
+```
+// C4290.cpp
+// compile with: /EHs /W3 /c
+void f1(void) throw(int) {}   // C4290
+
+// OK
+void f2(void) throw() {}
+void f3(void) throw(...) {}
 ```

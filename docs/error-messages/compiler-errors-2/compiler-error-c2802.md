@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2802 |Microsoft ドキュメント
+title: コンパイラ エラー C2802 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe069b93c8dc6bb098927925e93f10cec2dbc4c3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95b4f64aad9cb14151ca6128bedebcd15ece17ed
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236658"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061256"
 ---
 # <a name="compiler-error-c2802"></a>コンパイラ エラー C2802
-静的メンバー 'operator 演算子' は仮パラメーターがありません。  
-  
- によって演算子が宣言されている、`static`メンバー関数は、少なくとも 1 つのパラメーターが必要です。  
-  
- 次の例では、C2802 が生成されます。  
-  
-```  
-// C2802.cpp  
-// compile with: /clr /c  
-ref class A {  
-   static operator+ ();   // C2802  
-   static operator+ (A^, A^);   // OK  
-};  
+
+静的メンバー 'operator 演算子' に仮パラメーターがありません。
+
+演算子の宣言によって、`static`メンバー関数は、少なくとも 1 つのパラメーターをいる必要があります。
+
+次の例では、C2802 が生成されます。
+
+```
+// C2802.cpp
+// compile with: /clr /c
+ref class A {
+   static operator+ ();   // C2802
+   static operator+ (A^, A^);   // OK
+};
 ```

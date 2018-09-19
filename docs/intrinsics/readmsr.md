@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3be04079de11642b2641260fdfe997d3fcb48d6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 26fb2637c5a92a430d72e496cabeb8f5749ccaa1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540446"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711802"
 ---
 # <a name="readmsr"></a>__readmsr
 **Microsoft 固有の仕様**  
@@ -39,8 +39,8 @@ __int64 __readmsr(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力] `register`  
- 読み取りモデル専用レジスタ。  
+*register*<br/>
+[in]読み取りモデル専用レジスタ。  
   
 ## <a name="return-value"></a>戻り値  
  指定されたレジスタの値。  

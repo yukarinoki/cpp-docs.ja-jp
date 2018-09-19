@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdf9ad03df6a342d47919eb576227422f687d15b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8f11c698b0f89e0584b673a112da10e82250cf5c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755632"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035774"
 ---
 # <a name="notifyhandler"></a>NotifyHandler
 
@@ -29,22 +29,22 @@ ms.locfileid: "43755632"
 
 ## <a name="syntax"></a>構文
 
-```  
+```cpp
 LRESULT NotifyHandler(
-    int idCtrl,  
-    LPNMHDR pnmh,  
+    int idCtrl,
+    LPNMHDR pnmh,
     BOOL& bHandled);
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*idCtrl*  
+*idCtrl*<br/>
 メッセージを送信するコントロールの識別子です。
 
-*pnmh*  
+*pnmh*<br/>
 アドレス、 [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr)通知コードおよび追加情報を格納する構造体。 このパラメーターを持つより大きな構造体をポイントするいくつかの通知メッセージの`NMHDR`その最初のメンバーとして構造体。
 
-*bHandled*  
+*bHandled*<br/>
 メッセージ マップ セット*bHandled*する前に TRUE を*NotifyHandler*が呼び出されます。 場合*NotifyHandler* 、メッセージを完全に処理しない設定があります*bHandled*に**FALSE**を示すメッセージがさらに処理を必要があります。
 
 ## <a name="return-value"></a>戻り値
@@ -57,6 +57,6 @@ LRESULT NotifyHandler(
 
 ## <a name="see-also"></a>関連項目
 
-[ウィンドウの実装](../atl/implementing-a-window.md)   
-[メッセージ マップ](../atl/message-maps-atl.md)   
+[ウィンドウの実装](../atl/implementing-a-window.md)<br/>
+[メッセージ マップ](../atl/message-maps-atl.md)<br/>
 [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)

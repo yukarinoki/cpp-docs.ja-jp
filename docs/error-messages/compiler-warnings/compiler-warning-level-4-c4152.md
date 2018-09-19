@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 4) C4152 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 4) C4152 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: faa258b7dbd965f0aaa76d4b60bb5c043df1187f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cab4d812c91239f277dbacede6db43f669908b0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291165"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099630"
 ---
 # <a name="compiler-warning-level-4-c4152"></a>コンパイラの警告 (レベル 4) C4152
-非標準の拡張機能、式における関数/データ間のポインター変換  
-  
- 関数ポインターがデータ ポインターとの間で変換されています。 この変換は、Microsoft 拡張機能 (/Ze) では許可されますが、ANSI C では許可されません。
+
+非標準の拡張機能、式における関数/データ間のポインター変換
+
+関数ポインターがデータ ポインターとの間で変換されています。 この変換は、Microsoft 拡張機能 (/Ze) では許可されますが、ANSI C では許可されません。

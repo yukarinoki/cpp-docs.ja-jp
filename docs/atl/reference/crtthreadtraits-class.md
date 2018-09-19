@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cbd0031e9291edc39b2b437acb014c6f0424fa4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f58b5936ab9f73ce2fe351d078e61bddfda54d6c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753891"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097823"
 ---
 # <a name="crtthreadtraits-class"></a>CRTThreadTraits クラス
 
@@ -80,22 +80,22 @@ static HANDLE CreateThread(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpsa*  
+*lpsa*<br/>
 新しいスレッドのセキュリティ属性。
 
-*dwStackSize*  
+*dwStackSize*<br/>
 新しいスレッドのスタック サイズ。
 
-*pfnThreadProc*  
+*pfnThreadProc*<br/>
 新しいスレッドのスレッド プロシージャです。
 
-*pvParam*  
+*pvParam*<br/>
 スレッド プロシージャに渡されるパラメーター。
 
-*は、*  
+*は、*<br/>
 作成フラグ (0 または CREATE_SUSPENDED) を設定します。
 
-*pdwThreadId*  
+*pdwThreadId*<br/>
 [out]成功した場合、新しく作成されたスレッドのスレッド ID を受け取る DWORD 変数のアドレス。
 
 ### <a name="return-value"></a>戻り値

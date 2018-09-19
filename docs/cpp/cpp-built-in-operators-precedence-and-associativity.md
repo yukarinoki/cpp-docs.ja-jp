@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 504a6afb9815074efe0bda2b679d5ac6a720b220
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 5b40e5ab6cac64edbfdb5ab93c6864d0eacb9e63
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401894"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073108"
 ---
 # <a name="c-built-in-operators-precedence-and-associativity"></a>C++ の組み込み演算子、優先順位と結合規則
 
@@ -115,4 +115,5 @@ C++ 言語には、C のすべての演算子が含まれており、いくつ�
 |[コンマ](../cpp/comma-operator.md)|[、](../cpp/comma-operator.md)|
 
 ## <a name="see-also"></a>関連項目
- [演算子のオーバーロード](operator-overloading.md)
+
+[演算子のオーバーロード](operator-overloading.md)

@@ -16,27 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25ca58d9818782b51e6c07bb6bb758948adab3ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d2257ff9be5988ed6a08dd5d152c83910c6edc88
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387960"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214720"
 ---
 # <a name="multidimensional-arrays-c"></a>多次元配列 (C)
 添字式には、次のように複数の添字がある場合があります。  
   
 ```  
-  
-expression1  
-[  
-expression2  
-] [  
-expression3  
-]...  
+expression1 [ expression2 ] [ expression3 ] ...  
 ```  
   
- 添字式は、左から右へ関連付けられます。 左端の添字式、*expression1 ***[*** expression2***]** が最初に評価されます。 *expression1* と *expression2* を加算した結果として得られるアドレスからポインター式が形成され、次にこのポインター式に *expression3* が加算されて新しいポインター式が形成されます。このようにして、最後の添字式が加算されるまで処理が行われます。 間接演算子 (**\***) は、最終的なポインター値が配列型のアドレスを指していない限り、最後の添字式が評価された後に適用されます (下の例を参照)。  
+ 添字式は、左から右へ関連付けられます。 左端の添字式、*expression1* **[** *expression2* **]** が最初に評価されます。 *expression1* と *expression2* を加算した結果として得られるアドレスからポインター式が形成され、次にこのポインター式に *expression3* が加算されて新しいポインター式が形成されます。このようにして、最後の添字式が加算されるまで処理が行われます。 間接演算子 (<strong>\*</strong>) は、最終的なポインター値が配列型のアドレスを指していない限り、最後の添字式が評価された後に適用されます (下の例を参照)。  
   
  複数の添字を持つ式は、"多次元配列" の要素を参照します。 多次元配列は、要素が配列である配列です。 たとえば、3 次元配列の最初の要素は 2 次元配列です。  
   

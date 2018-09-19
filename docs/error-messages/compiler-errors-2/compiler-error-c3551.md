@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3551 |Microsoft ドキュメント
+title: コンパイラ エラー C3551 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f9f69adcf071415d3c1760294bdaaaec7b71f8e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b45a6f66ab7cf2a5ebb7ae6b2a2f78e664092604
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257863"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035735"
 ---
 # <a name="compiler-error-c3551"></a>コンパイラ エラー C3551
-"遅延指定の戻り値の型が必要です"  
-  
- 関数の戻り値の型のプレース ホルダーとして `auto` キーワードを使用する場合は、遅延指定の戻り値の型を指定する必要があります。 次の例では、関数 `myFunction` の遅延指定の戻り値の型は、型 `int`の 4 つの要素の配列へのポインターです。  
-  
-```  
-auto myFunction()->int(*)[4];   
-```  
-  
-## <a name="see-also"></a>関連項目  
- [auto](../../cpp/auto-cpp.md)
+
+"遅延指定の戻り値の型が必要です"
+
+関数の戻り値の型のプレース ホルダーとして `auto` キーワードを使用する場合は、遅延指定の戻り値の型を指定する必要があります。 次の例では、関数 `myFunction` の遅延指定の戻り値の型は、型 `int`の 4 つの要素の配列へのポインターです。
+
+```
+auto myFunction()->int(*)[4];
+```
+
+## <a name="see-also"></a>関連項目
+
+[auto](../../cpp/auto-cpp.md)

@@ -10,7 +10,7 @@ dev_langs:
 helpviewer_keywords:
 - what's new [C++], keywords
 - what's new [C++], language features
-- Visual C++, keywords
+- C++, keywords
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7a8bb269f1d572fed2d7fc85ee33f07d22a98aae
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 160ae864218304fbc94324ecfd9d6229729ca379
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220583"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318344"
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>ランタイム プラットフォームのコンポーネントの拡張機能
 
@@ -52,9 +52,9 @@ C +/cli CLI は ISO/ANSI C 規格を拡張し、定義下で、Ecma C +/cli CLI 
 |**値クラス**<br /><br /> **値構造体**|いいえ|値クラスを宣言します。|[クラスと構造体](../windows/classes-and-structs-cpp-component-extensions.md)|
 |**インターフェイス クラス**<br /><br /> **インターフェイス構造体**|いいえ|インターフェイスを宣言します。|[インターフェイス クラス](../windows/interface-class-cpp-component-extensions.md)|
 |**列挙型クラス**<br /><br /> **列挙型の構造体**|いいえ|列挙型を宣言します。|[列挙型クラス](../windows/enum-class-cpp-component-extensions.md)|
-|**プロパティ**|[はい]|プロパティを宣言します。|[プロパティ](../windows/property-cpp-component-extensions.md)|
-|**delegate**|[はい]|デリゲートを宣言します。|[delegate (C++ コンポーネント拡張)](../windows/delegate-cpp-component-extensions.md)|
-|**event**|[はい]|イベントを宣言します。|[event](../windows/event-cpp-component-extensions.md)|
+|**プロパティ**|はい|プロパティを宣言します。|[プロパティ](../windows/property-cpp-component-extensions.md)|
+|**delegate**|はい|デリゲートを宣言します。|[delegate (C++ コンポーネント拡張)](../windows/delegate-cpp-component-extensions.md)|
+|**event**|はい|イベントを宣言します。|[event](../windows/event-cpp-component-extensions.md)|
 
 ## <a name="override-specifiers"></a>オーバーライド指定子
 
@@ -62,10 +62,10 @@ C +/cli CLI は ISO/ANSI C 規格を拡張し、定義下で、Ecma C +/cli CLI 
 
 |キーワード|状況依存|目的|参照|
 |-------------|-----------------------|-------------|---------------|
-|**abstract**|[はい]|関数またはクラスが抽象型であることを示します。|[abstract](../windows/abstract-cpp-component-extensions.md)|
+|**abstract**|はい|関数またはクラスが抽象型であることを示します。|[abstract](../windows/abstract-cpp-component-extensions.md)|
 |**new**|いいえ|関数が基底クラスのバージョンのオーバーライドでないことを示します。|[new (新規スロット vtable の)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)|
 |**override**|[はい]|メソッドが基底クラスのバージョンのオーバーライドでなければならないことを示します。|[override](../windows/override-cpp-component-extensions.md)|
-|**sealed**|[はい]|クラスを基底クラスとして使用しないことを示します。|[sealed](../windows/sealed-cpp-component-extensions.md)|
+|**sealed**|はい|クラスを基底クラスとして使用しないことを示します。|[sealed](../windows/sealed-cpp-component-extensions.md)|
 
 ## <a name="keywords-for-generics"></a>ジェネリックのキーワード
 
@@ -74,7 +74,7 @@ C +/cli CLI は ISO/ANSI C 規格を拡張し、定義下で、Ecma C +/cli CLI 
 |キーワード|状況依存|目的|
 |-------------|-----------------------|-------------|
 |**汎用**|いいえ|ジェネリック型を宣言します。|
-|**where**|[はい]|ジェネリック型パラメーターに適用される制約を指定します。|
+|**where**|はい|ジェネリック型パラメーターに適用される制約を指定します。|
 
 ## <a name="miscellaneous-keywords"></a>その他のキーワード
 
@@ -82,12 +82,12 @@ C++ 拡張に追加されたその他のキーワードを次に示します。
 
 |キーワード|状況依存|目的|参照|
 |-------------|-----------------------|-------------|---------------|
-|**finally**|[はい]|例外処理の既定の動作を示します。|[例外処理](../windows/exception-handling-cpp-component-extensions.md)|
+|**finally**|はい|例外処理の既定の動作を示します。|[例外処理](../windows/exception-handling-cpp-component-extensions.md)|
 |**for each、in**|いいえ|コレクションの要素を列挙します。|[for each、in](../dotnet/for-each-in.md)|
 |**gcnew**|いいえ|ガベージ コレクション ヒープに型を割り当てます。 代わりに使用**新しい**と**削除**します。|[ref new、gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|
-|**新しい ref**|[はい]|Windows ランタイム型を割り当てます。 代わりに使用**新しい**と**削除**します。|[ref new、gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|
-|**initonly**|[はい]|宣言または静的コンストラクターでしかメンバーを初期化できないことを示します。|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|
-|**リテラル**|[はい]|リテラル変数を作成します。|[リテラル](../windows/literal-cpp-component-extensions.md)|
+|**新しい ref**|はい|Windows ランタイム型を割り当てます。 代わりに使用**新しい**と**削除**します。|[ref new、gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|
+|**initonly**|はい|宣言または静的コンストラクターでしかメンバーを初期化できないことを示します。|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|
+|**リテラル**|はい|リテラル変数を作成します。|[リテラル](../windows/literal-cpp-component-extensions.md)|
 |**nullptr**|いいえ|ハンドルまたはポインターでオブジェクトを参照しないことを示します。|[nullptr](../windows/nullptr-cpp-component-extensions.md)|
 
 ## <a name="template-constructs"></a>テンプレートの構成要素

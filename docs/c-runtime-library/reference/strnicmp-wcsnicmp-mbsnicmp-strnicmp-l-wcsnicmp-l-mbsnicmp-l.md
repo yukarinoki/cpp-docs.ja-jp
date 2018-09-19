@@ -76,14 +76,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba97d3bcd356a044245e7613470bead1cc42eb25
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9a06bbfb66030a8f037ce83323486d10107bf505
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417130"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020317"
 ---
 # <a name="strnicmp-wcsnicmp-mbsnicmp-strnicmpl-wcsnicmpl-mbsnicmpl"></a>_strnicmp、_wcsnicmp、_mbsnicmp、_strnicmp_l、_wcsnicmp_l、_mbsnicmp_l
+
 大文字小文字に関係なく、2 つの文字列の指定された数の文字を比較します。
 
 > [!IMPORTANT]
@@ -145,20 +146,20 @@ Null で終わる比較対象の文字列。
 |戻り値|説明|
 |------------------|-----------------|
 |< 0|*string1*部分文字列より小さい*string2*部分文字列。|
-|0|*string1*と同じでは部分文字列が*string2*部分文字列。|
+|0|*string1*部分文字列が同じ*string2*部分文字列。|
 |> 0|*string1*部分文字列がより大きい*string2*部分文字列。|
 
-これらの関数が返すパラメーター検証エラーが発生した、**すると**で定義されている\<string.h > と\<mbstring.h >。
+これらの関数が返すパラメーターの検証エラー、**すると**、定義されている\<string.h > と\<mbstring.h >。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Strnicmp**関数序数に基づく比較、多くても 1 つ目*カウント*の文字*string1*と*string2*です。 比較は、各文字を小文字に変換することで、大文字小文字に関係なく行われます。 **_strnicmp**は大文字と小文字のバージョンの**strncmp**です。 比較する前にいずれかの文字列で終端の null 文字に到達した場合の終了*カウント*文字を比較します。 文字列が等しい場合、終端の null 文字に達する前にいずれかの文字列で*カウント*文字数の比較は、短い文字列が小さくなります。
+**_Strnicmp**関数序数比較、多くても最初*カウント*の文字*string1*と*string2*します。 比較は、各文字を小文字に変換することで、大文字小文字に関係なく行われます。 **_strnicmp**の大文字バージョン**strncmp**します。 比較が終了する前にいずれかの文字列で終端の null 文字に到達した場合*カウント*文字が比較されます。 文字列が等しい場合は、終端の null 文字に達した場合、一方の文字列の前に*カウント*文字の比較は、短い文字列が小さくなります。
 
-ASCII 表の 91 から 96 の文字 ('['、'\\'、']'、'^'、'_'、および '\`') は、アルファベット文字より小さいものとして評価されます。 この順序はのものと同じ**stricmp**です。
+ASCII 表の 91 から 96 の文字 ('['、'\\'、']'、'^'、'_'、および '\`') は、アルファベット文字より小さいものとして評価されます。 同じでは、この順序**stricmp**します。
 
-**_wcsnicmp**と **_mbsnicmp**のワイド文字とマルチバイト文字バージョンは、 **_strnicmp**です。 引数 **_wcsnicmp**ワイド文字は、文字列以外の **_mbsnicmp**マルチバイト文字列です。 **_mbsnicmp**現在のマルチバイト コード ページに基づいてマルチバイト文字シーケンスを認識し、返します**すると**エラーが発生します。 詳細については、「[コード ページ](../../c-runtime-library/code-pages.md)」をご覧ください。 それ以外では、これらの関数の動作は同じです。 これらの関数は、ロケール設定によって影響を受ける — が付かないバージョン、 **_l**サフィックスを使用して、ロケールに依存する動作に現在のロケール以外の付いているバージョン、 **_l**サフィックス代わりに使用して、*ロケール*で渡されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_wcsnicmp**と **_mbsnicmp**のワイド文字とマルチバイト文字バージョン **_strnicmp**します。 引数 **_wcsnicmp**はワイド文字列 **_mbsnicmp**はマルチバイト文字の文字列。 **_mbsnicmp**現在のマルチバイト コード ページに従ってマルチバイト文字シーケンスを認識し、返します**すると**エラーが発生します。 詳細については、「[コード ページ](../../c-runtime-library/code-pages.md)」をご覧ください。 それ以外では、これらの関数の動作は同じです。 これらの関数は、ロケール設定によって影響を受ける: バージョンがない、 **_l**サフィックス現在のロケール、ロケールに依存する動作に使用する; が付いているバージョン、 **_l**サフィックス代わりに使用して、*ロケール*で渡されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-これらのすべての関数では、パラメーターの検証が行われます。 いずれか*string1*または*string2* null ポインターで説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうかは、引き続き実行が許可された、**すると**設定と**errno**に**EINVAL**です。
+これらのすべての関数では、パラメーターの検証が行われます。 いずれか*string1*または*string2* null ポインターの場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうかは、引き続き実行が許可された、**すると**設定と**errno**に**EINVAL**します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -170,10 +171,10 @@ ASCII 表の 91 から 96 の文字 ('['、'\\'、']'、'^'、'_'、および '\
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**_strnicmp**、 **_strnicmp_l**|<string.h>|
-|**_wcsnicmp**、 **_wcsnicmp_l**|<string.h> または <wchar.h>|
+|**_strnicmp**、 **_strnicmp_l**|\<string.h>|
+|**_wcsnicmp**、 **_wcsnicmp_l**|\<string.h> または \<wchar.h>|
 |**_mbsnicmp**、 **_mbsnicmp_l**|\<mbstring.h>|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。

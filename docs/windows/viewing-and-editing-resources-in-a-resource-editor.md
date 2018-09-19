@@ -1,5 +1,5 @@
 ---
-title: 表示と編集リソース エディターでのリソース |Microsoft Docs
+title: 表示と編集リソース エディター (C++) でのリソース |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,28 +10,25 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- resources [Visual Studio], viewing
-- rc files, viewing resources
-- Resource View pane
+- resources [C++], viewing
 - layouts, previewing resource
-- code, viewing resources
-- resource editors, viewing resources
-- .rc files, viewing resources
-- resources [Visual Studio], editing
+- resource editors [C++], viewing resources
+- .rc files [C++], viewing resources
+- resources [C++], editing
 ms.assetid: ba8bdc07-3f60-43c7-aa5c-d5dd11f0966e
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 742bdd9d869d6a913315229bb6b5c896584a5269
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4fd8ed4e1257c8f780f1b1ac733aa8dd2261685c
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593205"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316693"
 ---
-# <a name="viewing-and-editing-resources-in-a-resource-editor"></a>リソース エディターでのリソースの表示と編集
+# <a name="viewing-and-editing-resources-in-a-resource-editor-c"></a>表示して、リソース エディター (C++) でのリソースの編集
 
 各リソースの種類が、**リソース**そのリソースの種類に固有のエディター。 再配置してサイズ変更、コントロールと機能を追加するか、またはそれ以外の場合、関連付けられているエディターを使用してリソースの側面を変更できます。 内のリソースを編集することもできます。[テキスト形式](../windows/how-to-open-a-resource-script-file-in-text-format.md)と[バイナリ形式](../windows/opening-a-resource-for-binary-editing.md)します。
 
@@ -72,8 +69,7 @@ Win32 リソースにアクセスすることができます、[リソース ビ
 
 ## <a name="resources-in-managed-projects"></a>マネージ プロジェクト内のリソース
 
-マネージ プロジェクトでは、リソース スクリプト ファイルは使用しないのでからリソースを開く必要があります**ソリューション エクスプ ローラー**します。 
-  [イメージ エディター](../windows/image-editor-for-icons.md) と [バイナリ エディター](binary-editor.md) を使用して、マネージド プロジェクトのリソース ファイルを操作できます。 編集の対象となるマネージド リソースは、リンク リソースである必要があります。 Visual Studio のリソース エディターでは、埋め込みリソースの編集はサポートしていません。
+マネージ プロジェクトでは、リソース スクリプト ファイルは使用しないのでからリソースを開く必要があります**ソリューション エクスプ ローラー**します。 [イメージ エディター](../windows/image-editor-for-icons.md) と [バイナリ エディター](binary-editor.md) を使用して、マネージド プロジェクトのリソース ファイルを操作できます。 編集の対象となるマネージド リソースは、リンク リソースである必要があります。 Visual Studio のリソース エディターでは、埋め込みリソースの編集はサポートしていません。
 
 マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
 

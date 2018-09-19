@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2439 |Microsoft ドキュメント
+title: コンパイラ エラー C2439 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33bfe8ebf00850a54020b2a3f21159daf28b7224
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 419bf7be45a1383135d0231cd059837e1fe62729
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225690"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058413"
 ---
 # <a name="compiler-error-c2439"></a>コンパイラ エラー C2439
-'identifier': メンバーを初期化できませんでした  
-  
- クラス、構造体、または共用体のメンバーを初期化することはできません。  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>次のような原因をチェックして問題を解決するには  
-  
-1.  間接基底クラスまたは構造体を初期化しようとしています。  
-  
-2.  クラスまたは構造体の継承されたメンバーを初期化しようとしています。 継承されたメンバーは、クラスまたは構造体のコンス トラクターによって初期化する必要があります。
+
+'identifier': メンバーを初期化できませんでした
+
+クラス、構造体または共用体メンバーを初期化することはできません。
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>次のような原因をチェックして問題を解決するには
+
+1. 間接基底クラスまたは構造体を初期化しようとしています。
+
+1. クラスまたは構造体の継承されたメンバーを初期化しようとしています。 継承されたメンバーは、クラスまたは構造体のコンス トラクターで初期化する必要があります。

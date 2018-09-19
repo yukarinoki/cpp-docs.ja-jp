@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2696 |Microsoft ドキュメント
+title: コンパイラ エラー C2696 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65ccdd6d2c8c34c360811b80d5a93abe76f5ef8e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e6e76b0c11d329c734b0609c540aca4315c7ed9f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235040"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108743"
 ---
 # <a name="compiler-error-c2696"></a>コンパイラ エラー C2696
-マネージ型 'type' の一時オブジェクトを作成することはできません。  
-  
-参照`const`アンマネージ プログラム コンパイラ コンス トラクターを呼び出すし、スタック上に一時オブジェクトを作成することが原因です。 ただし、マネージ クラスは、スタックに作成されません。  
-  
-C2696 は古い形式のコンパイラ オプションを使用して到達のみ **/clr:oldSyntax**です。  
+
+管理対象の型 'type' の一時オブジェクトを作成することはできません。
+
+参照`const`アンマネージ プログラムが、コンパイラはコンス トラクターを呼び出すし、スタック上に一時オブジェクトを作成します。 ただし、マネージ クラスはスタックで作成できません。
+
+C2696 は古い形式のコンパイラ オプションを使用して到達のみ **/clr:oldSyntax**します。

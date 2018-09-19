@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42ae4ddf3c3b17023f3a6968e3498c178813d039
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: dc7b0ca9388de82d49927a7fe76694212b94246b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765346"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053714"
 ---
 # <a name="service-map-macros"></a>サービス マップに関するマクロ
 
@@ -49,7 +49,7 @@ BEGIN_SERVICE_MAP(theClass)
 
 ### <a name="parameters"></a>パラメーター
 
-*クラス*  
+*クラス*<br/>
 [in]サービス マップを含むクラスを指定します。
 
 ### <a name="remarks"></a>Remarks
@@ -86,7 +86,7 @@ SERVICE_ENTRY( SID )
 
 ### <a name="parameters"></a>パラメーター
 
-*SID*  
+*SID*<br/>
 サービス id です。
 
 ### <a name="example"></a>例
@@ -103,7 +103,7 @@ SERVICE_ENTRY_CHAIN( punk )
 
 ### <a name="parameters"></a>パラメーター
 
-*punk*  
+*punk*<br/>
 ポインター、 **IUnknown**チェーンにするインターフェイス。
 
 ### <a name="example"></a>例
@@ -123,14 +123,14 @@ STDMETHOD(QueryService)(
 
 ### <a name="parameters"></a>パラメーター
 
-[IN]*guidService*  
-サービス id (SID) へのポインター。
+*guidService*<br/>
+[in]サービス id (SID) へのポインター。
 
-[IN]*riid*  
-呼び出し元がアクセスできるインターフェイスの識別子です。
+*riid*<br/>
+[in]呼び出し元がアクセスできるインターフェイスの識別子です。
 
-[OUT]*ppvObj*  
-要求されたインターフェイスへの間接ポインター。
+*ppvObj*<br/>
+[out]要求されたインターフェイスへの間接ポインター。
 
 ### <a name="return-value"></a>戻り値
 

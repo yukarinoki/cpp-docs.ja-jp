@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 263667b96c052025550f4d366cd236d256e7f7a8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b9ba9f6c2de8260ea846b51e2192ecfb967c5502
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539301"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719980"
 ---
 # <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar クラス
 `CMFCAutoHideBar` クラスは、自動非表示機能を実装している、特殊なツール バー クラスです。  
@@ -94,7 +94,7 @@ class CMFCAutoHideBar : public CPane
   
 ### <a name="data-members"></a>データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CMFCAutoHideBar::m_nShowAHWndDelay](#m_nshowahwnddelay)|経由でユーザーがマウス カーソルを配置するときに、現時点までの時間、 [CMFCAutoHideButton クラス](../../mfc/reference/cmfcautohidebutton-class.md)から、フレームワークが関連付けられているウィンドウを示しています。|  
   
@@ -136,11 +136,11 @@ CMFCAutoHideButton* AddAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pAutoHideWnd*  
- 隠すウィンドウ。  
+*pAutoHideWnd*<br/>
+[in]非表示にウィンドウです。  
   
- [in]*場合*  
- アプリケーション ウィンドウを使用して [自動的に隠す] ボタンの配置を指定する値。  
+*場合*<br/>
+[in]アプリケーション ウィンドウを自動的に隠すボタンの配置を指定する値。  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -176,8 +176,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bStretch*  
- [in]*bHorz*  
+*bStretch*<br/>
+[in][in]*bHorz*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -207,12 +207,12 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszClassName*  
- [in]*dwStyle*  
- [in]*rect*  
- [in]*pParentWnd*  
- [in]*nID*  
- [in]*dwControlBarStyle*  
+*lpszClassName*<br/>
+[in][in]*dwStyle*  
+*rect*<br/>
+[in][in]*pParentWnd*  
+*nID*<br/>
+[in][in]*dwControlBarStyle*  
  [in]*pContext*  
   
 ### <a name="return-value"></a>戻り値  
@@ -342,11 +342,11 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*されて*  
- この値は、基本実装では使用されません。 派生実装では、サイズを変更するウィンドウの長さを指定するためにこの値を使用します。  
+*されて*<br/>
+[in]値では、基本の実装では使用されません。 派生実装では、サイズを変更するウィンドウの長さを指定するためにこの値を使用します。  
   
- [in]*bVert*  
- この値は、基本実装では使用されません。 派生実装で、自動的に隠すバーが水平方向に折りたたまれたケースのハンドルを自動的に隠すバーが垂直方向に折りたたまれている場所の場合と FALSE の場合は true を使用します。  
+*bVert*<br/>
+[in]値では、基本の実装では使用されません。 派生実装で、自動的に隠すバーが水平方向に折りたたまれたケースのハンドルを自動的に隠すバーが垂直方向に折りたたまれている場所の場合と FALSE の場合は true を使用します。  
   
 ### <a name="return-value"></a>戻り値  
  サイズを変更するウィンドウの結果のサイズ。  

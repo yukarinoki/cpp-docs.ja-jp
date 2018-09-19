@@ -1,5 +1,5 @@
 ---
-title: 式エバリュエーター エラー CXX0062 |Microsoft ドキュメント
+title: 式エバリュエーター エラー CXX0062 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b812a269b5acc383cbdd185e06ecb92f1c63d2a4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 509d33be45f26f7dbf2de85969b90e253e0d5228
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295650"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019155"
 ---
 # <a name="expression-evaluator-error-cxx0062"></a>式エバリュエーター エラー CXX0062
-コンス トラクターの呼び出しはサポートされていません  
-  
- 式には、コンス トラクターへの呼び出しが行われます。 式は、明示的なコンス トラクター呼び出しを行うか、コンス トラクターへの呼び出しを必要とされる変換を行うことはできません。  
-  
- このエラーは、can0062 と同じものと同じです。
+
+コンス トラクターの呼び出しがサポートされていません
+
+式には、コンス トラクターの呼び出しが行われます。 式は、明示的なコンス トラクター呼び出しを行うか、コンス トラクターの呼び出しを必要とされる変換を行うことはできません。
+
+このエラーは、can0062 と同じものと同じです。

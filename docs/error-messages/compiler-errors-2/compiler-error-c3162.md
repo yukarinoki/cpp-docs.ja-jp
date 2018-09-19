@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3162 |Microsoft ドキュメント
+title: コンパイラ エラー C3162 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b1527e56bbd834f2ebea9c51f82bb55c05da52d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 529dfa41064e9d22b796b9d079a67b213b816fb2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253801"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030938"
 ---
 # <a name="compiler-error-c3162"></a>コンパイラ エラー C3162
-'type': デストラクターを含む参照型は静的データ メンバー 'member' の型として使用することはできません  
-  
- 共通言語ランタイムは、クラスには、静的メンバー関数も含まれている場合は、ユーザー定義のデストラクターを実行するタイミングを知ることはできません。  
-  
- オブジェクトが明示的に削除しない限り、デストラクターは実行されません。  
-  
- 詳細については、次のトピックを参照してください。  
-  
--   [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)  
-  
--   [Visual C++ の 64 ビットへの移行に関する一般的な問題](../../build/common-visual-cpp-64-bit-migration-issues.md)  
-  
-## <a name="example"></a>例  
- 次の例では、C3162 を生成します。  
-  
-```  
-// C3162.cpp  
-// compile with: /clr /c  
-ref struct A {  
-   ~A() { System::Console::WriteLine("in destructor"); }  
-   static A i;   // C3162  
-   static A^ a = gcnew A;   // OK  
-};  
-  
-int main() {  
-   A ^ a = gcnew A;  
-   delete a;  
-}  
+
+'type': デストラクターを含む参照型は、静的データ メンバー 'member' の型として使用できません
+
+共通言語ランタイムは、クラスには、静的メンバー関数も含まれている場合は、ユーザー定義のデストラクターを実行するタイミングを知ることはできません。
+
+オブジェクトが明示的に削除しない限り、デストラクターは実行されません。
+
+詳細については、次のトピックを参照してください。
+
+- [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)
+
+- [Visual C++ の 64 ビットへの移行に関する一般的な問題](../../build/common-visual-cpp-64-bit-migration-issues.md)
+
+## <a name="example"></a>例
+
+次の例では、C3162 が生成されます。
+
+```
+// C3162.cpp
+// compile with: /clr /c
+ref struct A {
+   ~A() { System::Console::WriteLine("in destructor"); }
+   static A i;   // C3162
+   static A^ a = gcnew A;   // OK
+};
+
+int main() {
+   A ^ a = gcnew A;
+   delete a;
+}
 ```

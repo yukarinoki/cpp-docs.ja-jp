@@ -1,5 +1,5 @@
 ---
-title: リンカ ツール エラー LNK1245 |Microsoft ドキュメント
+title: リンカ ツール エラー LNK1245 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47a1c2e5f7bf66946dcc5816d7a20fd485b59b45
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef7bace5cec937399d7a2ed440e21b9b751f4141
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299241"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041793"
 ---
 # <a name="linker-tools-error-lnk1245"></a>リンカ ツール エラー LNK1245
-無効なサブシステム 'サブシステム' が指定されています。/SUBSYSTEM は、WINDOWS、WINDOWSCE、またはコンソールをする必要があります。  
-  
- [/clr](../../build/reference/clr-common-language-runtime-compilation.md)オブジェクトをコンパイルに使用された、次の条件のいずれかが true とします。  
-  
--   カスタムのエントリ ポイントが定義されている ([/ENTRY](../../build/reference/entry-entry-point-symbol.md))、そのようなリンカーは、サブシステムを推論できませんでした。  
-  
--   渡された値、 [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)リンカー オプションは/clr オブジェクトに対して無効です。  
-  
- どちらの場合は、解像度は、/SUBSYSTEM リンカー オプションを有効な値を指定します。
+
+無効なサブシステム 'サブシステム' が指定されます。/WINDOWS、WINDOWSCE、またはコンソール サブシステムがある必要があります。
+
+[/clr](../../build/reference/clr-common-language-runtime-compilation.md)オブジェクトをコンパイルするために使用された、次の条件のいずれかの条件が true だったとします。
+
+- カスタム エントリ ポイントが定義されている ([/ENTRY](../../build/reference/entry-entry-point-symbol.md)) ようなリンカーのサブシステムを推測できませんでした。
+
+- 値が渡された、 [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) /clr オブジェクトに対して有効でないリンカー オプション。
+
+どちらの場合は、解像度は、/SUBSYSTEM リンカー オプションに有効な値を指定します。

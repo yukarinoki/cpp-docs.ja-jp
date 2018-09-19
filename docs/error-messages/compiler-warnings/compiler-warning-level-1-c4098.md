@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4098 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4098 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 889c9aa926a8400d977de00ef5c288316ae84782
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 84b3cdcdbb487774a92361d3a003ba83895d475e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276387"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118311"
 ---
 # <a name="compiler-warning-level-1-c4098"></a>コンパイラの警告 (レベル 1) C4098
-'function': void 関数の値を返す  
-  
- 戻り値の型で宣言された関数[void](../../cpp/void-cpp.md)が、`return`値を返すステートメントです。 コンパイラは型の値を返します`int`です。
+
+'function': 値を返す void 関数
+
+戻り値の型で宣言された関数[void](../../cpp/void-cpp.md)が、`return`値を返すステートメント。 コンパイラは、関数型の値を返します`int`します。

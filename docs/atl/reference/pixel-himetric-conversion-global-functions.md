@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 086310efe565e060645320db30526b03d57a68af
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b5ab980813eec09fe0eef35f54280444d8c08b80
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752411"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105389"
 ---
 # <a name="pixelhimetric-conversion-global-functions"></a>ピクセル/HIMETRIC 変換に関するグローバル関数
 
@@ -46,10 +46,10 @@ extern void AtlHiMetricToPixel(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpSizeInHiMetric*  
+*lpSizeInHiMetric*<br/>
 [in]HIMETRIC 単位内のオブジェクトのサイズへのポインター。
 
-*lpSizeInPix*  
+*lpSizeInPix*<br/>
 [out]オブジェクトのサイズ (ピクセル単位) が返されるへのポインター。
 
 ### <a name="example"></a>例
@@ -72,10 +72,10 @@ extern void AtlPixelToHiMetric(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpSizeInPix*  
+*lpSizeInPix*<br/>
 [in]オブジェクトのサイズ (ピクセル単位) へのポインター。
 
-*lpSizeInHiMetric*  
+*lpSizeInHiMetric*<br/>
 [out]HIMETRIC 単位オブジェクトのサイズが返されるへのポインター。
 
 ### <a name="example"></a>例

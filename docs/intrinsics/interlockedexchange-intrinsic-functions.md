@@ -54,12 +54,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6af43074e78ffb66299b9eeda97dd18f073d77fd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a7a450d683bfa2c358e26a4109a2e8a75c04e233
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599400"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716223"
 ---
 # <a name="interlockedexchange-intrinsic-functions"></a>_InterlockedExchange の組み込み関数
 **Microsoft 固有の仕様**  
@@ -152,11 +152,11 @@ __int64 _InterlockedExchange64_rel(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力、出力] `Target`  
- 交換する値へのポインター。 この関数は、この変数を `Value` に設定し、変数の前の値を返します。  
+*Target*<br/>
+[入力、出力]交換する値へのポインター。 この関数は、この変数を `Value` に設定し、変数の前の値を返します。  
   
- [入力] `Value`  
- `Target` が指す値と交換する値。  
+*値*<br/>
+[in]によって示される値と交換される値`Target`します。  
   
 ## <a name="return-value"></a>戻り値  
  `Target` が指す初期値を返します。  

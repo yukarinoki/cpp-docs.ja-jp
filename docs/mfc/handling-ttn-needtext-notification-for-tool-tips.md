@@ -18,20 +18,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65278571fabf24011960ad577461347f1dfebf73
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ddfe6660854ae4cbdba2398aa4102fd612d17ddc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200519"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114580"
 ---
 # <a name="handling-ttnneedtext-notification-for-tool-tips"></a>ツール ヒント用 TTN_NEEDTEXT 通知の処理
 一部として[ツール ヒントを有効にする](../mfc/enabling-tool-tips.md)、処理する、 **TTN_NEEDTEXT**オーナー ウィンドウのメッセージ マップに次のエントリを追加することによってメッセージ。  
   
  [!code-cpp[NVC_MFCControlLadenDialog#40](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_1.cpp)]  
   
- `memberFxn`  
- このボタンのテキストが必要なときに呼び出されるメンバー関数。  
+*memberFxn*<br/>
+このボタンのテキストが必要なときに呼び出されるメンバー関数。  
   
  ツール ヒントの ID は常に 0 です。  
   
@@ -41,14 +41,14 @@ ms.locfileid: "43200519"
   
  斜体のパラメーターは。  
   
- `id`  
- 通知を送信したコントロールの識別子。 使用しません。 コントロールの id から取得されますが、 **NMHDR**構造体。  
+*ID*<br/>
+通知を送信したコントロールの識別子。 使用しません。 コントロールの id から取得されますが、 **NMHDR**構造体。  
   
- `pNMHDR`  
- ポインター、 [NMTTDISPINFO](/windows/desktop/api/commctrl/ns-commctrl-tagnmttdispinfoa)構造体。 この構造体についても説明でさらに[体](../mfc/tooltiptext-structure.md)します。  
+*pNMHDR*<br/>
+ポインター、 [NMTTDISPINFO](/windows/desktop/api/commctrl/ns-commctrl-tagnmttdispinfoa)構造体。 この構造体についても説明でさらに[体](../mfc/tooltiptext-structure.md)します。  
   
- `pResult`  
- 結果コードへのポインターを返す前に設定できます。 **TTN_NEEDTEXT**ハンドラーを無視することができます、 *pResult*パラメーター。  
+*pResult*<br/>
+結果コードへのポインターを返す前に設定できます。 **TTN_NEEDTEXT**ハンドラーを無視することができます、 *pResult*パラメーター。  
   
  フォーム ビューの通知ハンドラーの例。  
   

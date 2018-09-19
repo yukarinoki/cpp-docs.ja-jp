@@ -96,12 +96,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d3af5911cac27a0ac2bb65e9ee0cdb7b714b41d
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4552fa0462332cacaa8abfd8c42b0de4871dc8d4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540096"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720305"
 ---
 # <a name="cdocksite-class"></a>CDockSite Class
 詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。  
@@ -189,8 +189,8 @@ CDockingPanesRow* AddRow(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pos*  
- [in]*パラメーター nHeight*  
+*pos*<br/>
+[in][in]*パラメーター nHeight*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -225,8 +225,8 @@ void AlignDockSite(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*rectToAlignBy*  
- [in]*rectResult*  
+*rectToAlignBy*<br/>
+[in][in]*rectResult*  
  [in]*bMoveImmediately*  
   
 ### <a name="remarks"></a>Remarks  
@@ -241,8 +241,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bStretch*  
- [in]*bHorz*  
+*bStretch*<br/>
+[in][in]*bHorz*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -276,12 +276,12 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*dwStyleEx*  
- [in]*dwStyle*  
- [in]*rect*  
- [in]*pParentWnd*  
- [in]*dwControlBarStyle*  
- [in]*pContext*  
+*dwStyleEx*<br/>
+[in][in]*dwStyle*  
+*rect*<br/>
+[in][in]*pParentWnd*  
+*dwControlBarStyle*<br/>
+[in][in]*pContext*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -298,8 +298,8 @@ virtual CDockingPanesRow* CreateRow(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pParentDockBar*  
- [in]*nOffset*  
+*pParentDockBar*<br/>
+[in][in]*nOffset*  
  [in]*nRowHeight*  
   
 ### <a name="return-value"></a>戻り値  
@@ -317,8 +317,8 @@ virtual void DockPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*我が物*  
- [in]*dockMethod*  
+*我が物*<br/>
+[in][in]*dockMethod*  
  [in]*lpRect*  
   
 ### <a name="remarks"></a>Remarks  
@@ -363,8 +363,8 @@ CPane* FindPaneByID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nID*  
- 検索する、ウィンドウのコマンド ID。  
+*nID*<br/>
+[in]検索する、ウィンドウのコマンド ID。  
   
 ### <a name="return-value"></a>戻り値  
  指定したコマンド ID、または、ウィンドウが見つからない場合は NULL で、ウィンドウへのポインター。  
@@ -472,8 +472,8 @@ BOOL IsRectWithinDockSite(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*rect*  
- [in]*ptDelta*  
+*rect*<br/>
+[in][in]*ptDelta*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -501,8 +501,8 @@ virtual BOOL MovePane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*我が物*  
- [in]*nFlags*  
+*我が物*<br/>
+[in][in]*nFlags*  
  [in]*ptOffset*  
   
 ### <a name="return-value"></a>戻り値  
@@ -531,8 +531,8 @@ virtual void OnRemoveRow(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pos*  
- [in]*bByShow*  
+*pos*<br/>
+[in][in]*bByShow*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -546,8 +546,8 @@ virtual int OnResizeRow(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pRowToResize*  
- [in]*nOffset*  
+*pRowToResize*<br/>
+[in][in]*nOffset*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -565,10 +565,10 @@ virtual void OnSizeParent(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*rectAvailable*  
- [in]*nSide*  
- [in]*bExpand*  
- [in]*nOffset*  
+*rectAvailable*<br/>
+[in][in]*nSide*  
+*bExpand*<br/>
+[in][in]*nOffset*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -583,8 +583,8 @@ virtual BOOL OnSetWindowPos(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWndInsertAfter*  
- [in]*rectWnd*  
+*pWndInsertAfter*<br/>
+[in][in]*rectWnd*  
  [in]*nFlags*  
   
 ### <a name="return-value"></a>戻り値  
@@ -601,8 +601,8 @@ virtual void OnShowRow(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pos*  
- [in]*bShow*  
+*pos*<br/>
+[in][in]*bShow*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -614,8 +614,8 @@ virtual CPane* PaneFromPoint(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pt*  
- 取得するウィンドウの画面座標にポイントします。  
+*pt*<br/>
+[in]取得するウィンドウの画面座標にポイントします。  
   
 ### <a name="return-value"></a>戻り値  
  指定したポイントに存在するウィンドウがない場合は、指定した点または NULL にあるウィンドウへのポインター。  
@@ -632,8 +632,8 @@ static int __stdcall RectSideFromPoint(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*rect*  
- [in]*ポイント*  
+*rect*<br/>
+[in][in]*ポイント*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -649,8 +649,8 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*我が物*  
- [in]*dockMethod*  
+*我が物*<br/>
+[in][in]*dockMethod*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -676,8 +676,8 @@ BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pOldBar*  
- [in]*pNewBar*  
+*pOldBar*<br/>
+[in][in]*pNewBar*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -705,8 +705,8 @@ void ResizeDockSite(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nNewWidth*  
- [in]*nNewHeight*  
+*nNewWidth*<br/>
+[in][in]*nNewHeight*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -721,8 +721,8 @@ int ResizeRow(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pRow*  
- [in]*nNewSize*  
+*pRow*<br/>
+[in][in]*nNewSize*  
  [in]*bAdjustLayout*  
   
 ### <a name="return-value"></a>戻り値  
@@ -744,14 +744,14 @@ virtual BOOL ShowPane(
  [in][out]*pBar*  
  表示/非表示するウィンドウへのポインター。  
   
- [in]*bShow*  
- ウィンドウを表示することを指定する場合は TRUEウィンドウを非表示にすることを指定する場合は FALSE。  
+*bShow*<br/>
+[in]ウィンドウを表示することを指定する場合は TRUEウィンドウを非表示にすることを指定する場合は FALSE。  
   
- [in]*bDelay*  
- ウィンドウが表示されます。 後に、ウィンドウのレイアウトがまで延期されることを指定する場合は TRUEそれ以外の場合、FALSE です。  
+*bDelay*<br/>
+[in]ウィンドウが表示されます。 後に、ウィンドウのレイアウトがまで延期されることを指定する場合は TRUEそれ以外の場合、FALSE です。  
   
- [in]*bActivate*  
- このパラメーターは使用されません。  
+*bActivate*<br/>
+[in]このパラメーターは使用されません。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合は、ウィンドウが表示または非表示に正常にします。 指定したウィンドウがこのドッキング サイトに属していない場合は FALSE です。  
@@ -770,8 +770,8 @@ void ShowRow(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pRow*  
- [in]*bShow*  
+*pRow*<br/>
+[in][in]*bShow*  
  [in]*bAdjustLayout*  
   
 ### <a name="remarks"></a>Remarks  
@@ -786,8 +786,8 @@ void SwapRows(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pFirstRow*  
- [in]*pSecondRow*  
+*pFirstRow*<br/>
+[in][in]*pSecondRow*  
   
 ### <a name="remarks"></a>Remarks  
   

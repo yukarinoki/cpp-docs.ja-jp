@@ -1,5 +1,5 @@
 ---
-title: -Gw (グローバル データの最適化) |Microsoft ドキュメント
+title: -Gw (グローバル データの最適化) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,45 +17,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 173b9499477ee02cbb1f052d3d85445a9ffb7732
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: edb0dc94ce7c2193717be4cdb402fdea14c99b71
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376440"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712544"
 ---
 # <a name="gw-optimize-global-data"></a>/Gw (グローバル データの最適化)
-グローバル データを最適化のために COMDAT セクションにパッケージ化します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-/Gw[-]  
-```  
-  
-## <a name="remarks"></a>コメント  
- **/Gw**オプションでは、パッケージのグローバル データにコンパイラを個々 の COMDAT セクションでします。 既定では、 **/Gw**がオフでを明示的に有効にする必要があります。 これを明示的に無効にするを使用して **/Gw-** です。 ときに両方 **/Gw**と[/GL](../../build/reference/gl-whole-program-optimization.md)は有効な場合、リンカー全体プログラム最適化を使用して参照されないグローバル データを除外するために、またはマージする複数のオブジェクト ファイル間で COMDAT セクションが比較同一読み取り専用のグローバル データ。 その結果、生成されるバイナリ実行可能ファイルのサイズが大幅に小さくなることがあります。  
-  
- コンパイルとは別にリンクすると、使用できます、 [/opt:ref による](../../build/reference/opt-optimizations.md)でのオブジェクト ファイルに参照されないグローバル データがコンパイルされた実行可能ファイルから除外するリンカー オプション、 **/Gw**オプション。  
-  
- 使用することも、 [/OPT:ICF](../../build/reference/opt-optimizations.md)と[/LTCG](../../build/reference/ltcg-link-time-code-generation.md)で複数のオブジェクト ファイルと同じ読み取り専用でグローバル データがコンパイルされた実行可能ファイルにマージするには、まとめてリンカー オプション、 **/Gw**オプション。  
-  
- 詳細については、次を参照してください。 [/Gw コンパイラ スイッチの概要](http://blogs.msdn.com/b/vcblog/archive/2013/09/11/introducing-gw-compiler-switch.aspx)Visual c チーム ブログでします。  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
-  
-1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[のプロジェクト プロパティの操作](../../ide/working-with-project-properties.md)です。  
-  
-2.  選択、 **C/C++** フォルダーです。  
-  
-3.  選択、**コマンドライン**プロパティ ページ。  
-  
-4.  変更、**追加オプション**含めるプロパティを **/Gw**を選択し**OK**です。  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには  
-  
--   「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>」を参照してください。  
-  
-## <a name="see-also"></a>関連項目  
- [コンパイラ オプション](../../build/reference/compiler-options.md)   
- [コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+
+グローバル データを最適化のために COMDAT セクションにパッケージ化します。
+
+## <a name="syntax"></a>構文
+
+```
+/Gw[-]
+```
+
+## <a name="remarks"></a>Remarks
+
+**/Gw**オプションは、個々 の COMDAT セクションで、パッケージのグローバル データ コンパイラ。 既定では、 **/Gw**がオフと明示的に有効にする必要があります。 これを明示的に無効にするを使用して **/Gw-** します。 ときに両方 **/Gw**と[/GL](../../build/reference/gl-whole-program-optimization.md)が有効にすると、リンカーを使用してプログラム全体の最適化またはマージする参照されないグローバル データを除外するために複数のオブジェクト ファイルの COMDAT セクションを比較するには同一読み取り専用のグローバル データ。 その結果、生成されるバイナリ実行可能ファイルのサイズが大幅に小さくなることがあります。
+
+コンパイルしてリンクを別々 に使用できます、 [/OPT:REF](../../build/reference/opt-optimizations.md)でコンパイルされたオブジェクト ファイルで参照されないグローバル データの実行可能ファイルから除外するリンカー オプション、 **/Gw**オプション。
+
+使用することも、 [/OPT:ICF](../../build/reference/opt-optimizations.md)と[/LTCG](../../build/reference/ltcg-link-time-code-generation.md)で複数のオブジェクト ファイルと同じ読み取り専用グローバル データがコンパイルされた実行可能ファイルにマージするリンカー オプション、 **/Gw**オプション。
+
+詳細については、次を参照してください。 [Introducing/Gw コンパイラ スイッチ](http://blogs.msdn.com/b/vcblog/archive/2013/09/11/introducing-gw-compiler-switch.aspx)Visual c チーム ブログにします。
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+
+1. 選択、 **C/C++** フォルダー。
+
+1. 選択、**コマンドライン**プロパティ ページ。
+
+1. 変更、**追加オプション**含めるプロパティを **/Gw**選び、 **OK**します。
+
+### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
+
+- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>
+
+## <a name="see-also"></a>関連項目
+
+[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
+[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)

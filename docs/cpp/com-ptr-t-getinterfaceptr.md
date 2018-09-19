@@ -16,29 +16,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e699b0c4fd789905b7c8f479464beecbc9de5a3
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 9da973b6003ca564ff8dc79552be5d12e8d14e24
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404851"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081053"
 ---
 # <a name="comptrtgetinterfaceptr"></a>_com_ptr_t::GetInterfacePtr
-**Microsoft 固有の仕様**  
-  
- カプセル化されたインターフェイス ポインターを返します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-Interface* GetInterfacePtr( ) const throw( );   
-Interface*& GetInterfacePtr() throw();  
-```  
-  
-## <a name="remarks"></a>Remarks  
- NULL にすることがありますが、カプセル化されたインターフェイス ポインターを返します。  
-  
- **Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- [_com_ptr_t クラス](../cpp/com-ptr-t-class.md)
+
+**Microsoft 固有の仕様**
+
+カプセル化されたインターフェイス ポインターを返します。
+
+## <a name="syntax"></a>構文
+
+```
+Interface* GetInterfacePtr( ) const throw( ); 
+Interface*& GetInterfacePtr() throw();
+```
+
+## <a name="remarks"></a>Remarks
+
+NULL にすることがありますが、カプセル化されたインターフェイス ポインターを返します。
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
+[_com_ptr_t クラス](../cpp/com-ptr-t-class.md)

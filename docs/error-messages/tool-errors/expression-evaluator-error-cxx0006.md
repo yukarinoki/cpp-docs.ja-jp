@@ -1,5 +1,5 @@
 ---
-title: 式エバリュエーター エラー CXX0006 |Microsoft ドキュメント
+title: 式エバリュエーター エラー CXX0006 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 636708042b2291e4edd295baa0da1ffb57dde4ee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c44f950955db71e2f81873513a9052e345799d4c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300242"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070263"
 ---
 # <a name="expression-evaluator-error-cxx0006"></a>式エバリュエーター エラー CXX0006
-左かっこがありません。  
-  
- 式では、対になっていないかっこが見つかりました。 バランスの取れたかっこ付きの式を再入力します。  
-  
- このエラーは、can0006 と同じものと同じです。
+
+左かっこの欠落
+
+式では、対になっていないかっこが見つかりました。 バランスの取れたかっこを使用して式を再入力します。
+
+このエラーは、can0006 と同じものと同じです。

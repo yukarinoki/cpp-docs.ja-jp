@@ -21,52 +21,54 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c00f9d40fedd084afa2da6e2e7bfaf0ee831b3a9
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: f737e262d39b99c2c33b7c91bc3d1e234a9f47db
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401881"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018627"
 ---
 # <a name="overloading-unary-operators"></a>単項演算子のオーバーロード
-オーバーロードできる単項演算子は次のとおりです。  
-  
-1.  `!` ([論理 NOT](../cpp/logical-negation-operator-exclpt.md))  
-  
-2.  `&` ([アドレスの](../cpp/address-of-operator-amp.md))  
-  
-3.  `~` ([1 の補数](../cpp/one-s-complement-operator-tilde.md))  
-  
-4.  `*` ([ポインター逆参照](../cpp/indirection-operator-star.md))  
-  
-5.  `+` ([単項プラス](../cpp/additive-operators-plus-and.md))  
-  
-6.  `-` ([単項マイナス符号](../cpp/additive-operators-plus-and.md))  
-  
-7.  `++` ([インクリメント](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md))  
-  
-8.  `--` ([デクリメント](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md))  
-  
-9. 変換演算子  
-  
- 後置インクリメントとデクリメント演算子 (`++`と`--`) で個別に扱われます[インクリメントおよびデクリメント](../cpp/increment-and-decrement-operator-overloading-cpp.md)します。  
-  
- 変換演算子も、別のトピックで説明します。参照してください[ユーザー定義型の変換](../cpp/user-defined-type-conversions-cpp.md)します。  
-  
- 次の規則は他のすべての単項演算子に適用されます。 単項演算子関数を非静的メンバーとして宣言するには、次の形式で宣言する必要があります。  
-  
- `ret-type operator` `op` `()`  
-  
- `ret-type` は戻り値の型であり、`op` は前の表に示している演算子の 1 つです。  
-  
- 単項演算子関数をグローバル関数として宣言するには、次の形式で宣言する必要があります。  
-  
- `ret-type operator` `op` (`arg` )  
-  
- `ret-type` と `op` はメンバー演算子関数での説明と同様です。`arg` は操作対象のクラス型の引数です。  
-  
+
+オーバーロードできる単項演算子は次のとおりです。
+
+1. `!` ([論理 NOT](../cpp/logical-negation-operator-exclpt.md))
+
+1. `&` ([アドレスの](../cpp/address-of-operator-amp.md))
+
+1. `~` ([1 の補数](../cpp/one-s-complement-operator-tilde.md))
+
+1. `*` ([ポインター逆参照](../cpp/indirection-operator-star.md))
+
+1. `+` ([単項プラス](../cpp/additive-operators-plus-and.md))
+
+1. `-` ([単項マイナス符号](../cpp/additive-operators-plus-and.md))
+
+1. `++` ([インクリメント](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md))
+
+1. `--` ([デクリメント](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md))
+
+9. 変換演算子
+
+後置インクリメントとデクリメント演算子 (`++`と`--`) で個別に扱われます[インクリメントおよびデクリメント](../cpp/increment-and-decrement-operator-overloading-cpp.md)します。
+
+変換演算子も、別のトピックで説明します。参照してください[ユーザー定義型の変換](../cpp/user-defined-type-conversions-cpp.md)します。
+
+次の規則は他のすべての単項演算子に適用されます。 単項演算子関数を非静的メンバーとして宣言するには、次の形式で宣言する必要があります。
+
+> *ret 型***演算子** *op* **)**
+
+場所*ret 型*は戻り値の型と*op*が演算子の 1 つは、上記の表に表示されています。
+
+単項演算子関数をグローバル関数として宣言するには、次の形式で宣言する必要があります。
+
+> *ret 型***演算子** *op* **(** *arg* **)**
+
+場所*ret 型*と*op*メンバー演算子関数について説明したとおり、 *arg*は操作対象のクラス型の引数です。
+
 > [!NOTE]
->  単項演算子の戻り値の型に制限はありません。 たとえば、論理 NOT (`!`) が整数値を返すのは正しい使い方ですが、強制ではありません。  
-  
-## <a name="see-also"></a>関連項目  
- [演算子のオーバーロード](../cpp/operator-overloading.md)
+>  単項演算子の戻り値の型に制限はありません。 たとえば、論理 NOT (`!`) が整数値を返すのは正しい使い方ですが、強制ではありません。
+
+## <a name="see-also"></a>関連項目
+
+[演算子のオーバーロード](../cpp/operator-overloading.md)

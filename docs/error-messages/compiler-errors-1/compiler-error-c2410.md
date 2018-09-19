@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2410 |Microsoft ドキュメント
+title: コンパイラ エラー C2410 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9c2a2df0941130c4f2416806a05ce0378373eb4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba4c2b57bcae062ccf811e33cf1deaea45f83737
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226448"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052453"
 ---
 # <a name="compiler-error-c2410"></a>コンパイラ エラー C2410
-'identifier': 'context' であいまいなメンバー名  
-  
- 識別子は、1 つ以上の構造体または共用体には、このコンテキストのメンバーです。  
-  
- エラーが発生したオペランドを構造体または共用体の指定子を使用します。 構造体または共用体の指定子は型の識別子`struct`または`union`(、`typedef`名または構造体または共用体が参照されていると同じ型の変数)。 指定子は、オペランドを使用する最初のメンバー選択演算子 (.) の左オペランドである必要があります。
+
+'identifier': 'context' であいまいなメンバー名
+
+識別子は、1 つ以上の構造体またはこのコンテキストで共用体のメンバーです。
+
+エラーの原因となったオペランドでは、構造体または共用体の指定子を使用します。 構造体または共用体の指定子は、型の識別子`struct`または`union`(、`typedef`名または構造体または共用体が参照されていると同じ型の変数)。 指定子は、オペランドを使用する最初のメンバー選択演算子 (.) の左のオペランドである必要があります。

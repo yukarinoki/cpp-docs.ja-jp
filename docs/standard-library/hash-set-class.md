@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f40fbed217bde0cfe0e917100a18bbdea91f0a8f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 142b88cf58369f09be4e06ed47fef94b845dfe71
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200347"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726025"
 ---
 # <a name="hashset-class"></a>hash_set クラス
 
@@ -122,13 +122,13 @@ class hash_set
 ### <a name="parameters"></a>パラメーター
 
 *Key*<br/>
- hash_set に格納される要素のデータ型。
+hash_set に格納される要素のデータ型。
 
 *Traits*<br/>
- 2 つの関数オブジェクトを含む型、クラスのいずれかの比較は、相対的な順序と符号なしの要素の単項述語のマッピングのキー値であるハッシュ関数を決定する並べ替えキーとして 2 つの要素の値を比較することは二項述語型の整数`size_t`します。 この引数は省略可能であり、既定値は `hash_compare<Key, less<Key> >` です。
+2 つの関数オブジェクトを含む型、クラスのいずれかの比較は、相対的な順序と符号なしの要素の単項述語のマッピングのキー値であるハッシュ関数を決定する並べ替えキーとして 2 つの要素の値を比較することは二項述語型の整数`size_t`します。 この引数は省略可能であり、既定値は `hash_compare<Key, less<Key> >` です。
 
 *アロケーター*<br/>
- メモリの hash_set の割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値は `allocator<Key>` です。
+メモリの hash_set の割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値は `allocator<Key>` です。
 
 ## <a name="remarks"></a>Remarks
 
@@ -563,7 +563,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
- 照合される hash_set の要素のキー。
+照合される hash_set の要素のキー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1030,7 +1030,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
- 検索対象の hash_set 内の要素の並べ替えキーと比較される引数キー。
+検索対象の hash_set 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1117,16 +1117,16 @@ size_type erase(const key_type& key);
 ### <a name="parameters"></a>パラメーター
 
 *_Where*<br/>
- hash_set から削除する要素の位置。
+hash_set から削除する要素の位置。
 
 *first*<br/>
- hash_set から削除する最初の要素の位置。
+hash_set から削除する最初の要素の位置。
 
 *last*<br/>
- hash_set から削除する最後の要素の次の位置。
+hash_set から削除する最後の要素の次の位置。
 
 *key*<br/>
- hash_set から削除する要素のキー。
+hash_set から削除する要素のキー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1235,7 +1235,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
- 検索対象の hash_set 内の要素の並べ替えキーによって照合される引数キー。
+検索対象の hash_set 内の要素の並べ替えキーによって照合される引数キー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1661,7 +1661,7 @@ iterator lower_bound(const Key& key);
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
- 検索対象の hash_set 内の要素の並べ替えキーと比較される引数キー。
+検索対象の hash_set 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2151,7 +2151,7 @@ void swap(hash_set& right);
 ### <a name="parameters"></a>パラメーター
 
 *right*<br/>
- ターゲットの hash_set と交換する要素を提供する引数の hash_set。
+ターゲットの hash_set と交換する要素を提供する引数の hash_set。
 
 ### <a name="remarks"></a>Remarks
 
@@ -2227,7 +2227,7 @@ iterator upper_bound(const Key& key);
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
- 検索対象の hash_set 内の要素の並べ替えキーと比較される引数キー。
+検索対象の hash_set 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
 

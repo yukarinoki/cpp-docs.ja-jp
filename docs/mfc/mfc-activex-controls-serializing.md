@@ -1,7 +1,7 @@
 ---
-title: 'MFC ActiveX コントロール: シリアル化 |Microsoft ドキュメント'
+title: 'MFC ActiveX コントロール: シリアル化 |Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -25,76 +25,79 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9db6ff6c0cdda01875e4968e4d92ca087ad2b57
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 6fb70b11fc1a926914fe661607f18259a0608c85
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930062"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535068"
 ---
 # <a name="mfc-activex-controls-serializing"></a>MFC ActiveX コントロール : シリアル化
-この記事では、ActiveX コントロールをシリアル化する方法について説明します。 シリアル化は、読み取りまたは書き込みをディスク ファイルなどの永続的なストレージ メディアへのプロセスです。 Microsoft Foundation Class (MFC) ライブラリでは、クラスでシリアル化のサポートが組み込まれて`CObject`です。 `COleControl` プロパティの交換機構を使用して ActiveX コントロールにこのサポートを拡張します。  
+この記事では、ActiveX コントロールをシリアル化する方法について説明します。 シリアル化は、ディスク ファイルなどの永続的なストレージ メディアに対するから読み取りまたは書き込みのプロセスです。 Microsoft Foundation Class (MFC) ライブラリでは、クラスでシリアル化の組み込みサポート`CObject`します。 `COleControl` プロパティの交換機構を使用して ActiveX コントロールには、このサポートを拡張します。
+
+>[!IMPORTANT]
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の上書きの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。  
   
- ActiveX コントロールのシリアル化がオーバーライドすることによって実装される[使って](../mfc/reference/colecontrol-class.md#dopropexchange)です。 この関数は、読み込み中と呼ばれ、メンバー変数、またはメンバー変数が変更通知を使用して実装するすべてのプロパティを格納する、コントロール オブジェクトの保存します。  
+ ActiveX コントロールのシリアル化をオーバーライドすることで実装[使って](../mfc/reference/colecontrol-class.md#dopropexchange)します。 、この関数は、読み込み中に呼び出され、メンバー変数またはメンバー変数の変更通知を使用して実装するすべてのプロパティを格納する、コントロール オブジェクトの保存します。  
   
  次のトピックでは、ActiveX コントロールのシリアル化に関連する主な問題を説明します。  
   
--   実装する`DoPropExchange`コントロール オブジェクトをシリアル化する関数  
+-   実装する`DoPropExchange`コントロール オブジェクトをシリアル化関数  
   
 -   [シリアル化プロセスをカスタマイズします。](#_core_customizing_the_default_behavior_of_dopropexchange)  
   
--   [バージョン サポートの実装](#_core_implementing_version_support)  
+-   [バージョンのサポートを実装します。](#_core_implementing_version_support)  
   
 ##  <a name="_core_implementing_the_dopropexchange_function"></a> DoPropExchange 関数を実装します。  
- コントロール プロジェクトを生成する ActiveX コントロール ウィザードを使用するといくつかの既定のハンドラー関数がの既定の実装を含む、コントロール クラスを自動的に追加[使って](../mfc/reference/colecontrol-class.md#dopropexchange)です。 次の例では、ActiveX コントロール ウィザードで作成されたクラスに追加するコードを示します。  
+ コントロール プロジェクトを生成する ActiveX コントロール ウィザードを使用するといくつかの既定のハンドラー関数がの既定の実装を含む、コントロール クラスに自動的に追加[使って](../mfc/reference/colecontrol-class.md#dopropexchange)します。 次の例では、ActiveX コントロール ウィザードで作成されたクラスに追加するコードを示します。  
   
  [!code-cpp[NVC_MFC_AxUI#43](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_1.cpp)]  
   
- 永続的なプロパティを作成する場合は、変更`DoPropExchange`プロパティ exchange 関数への呼び出しを追加しています。 次の例では、CircleShape プロパティが、既定の値を持つ、カスタム ブール CircleShape プロパティのシリアル化**TRUE**:  
+ プロパティで持続されるようにする場合は、変更`DoPropExchange`プロパティ exchange 関数への呼び出しを追加します。 次の例では、CircleShape プロパティが、既定の値を持つ、カスタム ブール CircleShape プロパティのシリアル化**TRUE**:  
   
  [!code-cpp[NVC_MFC_AxSer#1](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_2.cpp)]  
 [!code-cpp[NVC_MFC_AxSer#2](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_3.cpp)]  
   
- コントロールのプロパティをシリアル化に使用できる有効なプロパティ exchange 関数を次の表に示します。  
+ 次の表では、コントロールのプロパティをシリアル化に使用できる有効なプロパティ exchange 関数を示します。  
   
 |プロパティの exchange 関数|目的|  
 |---------------------------------|-------------|  
-|**PX_Blob に関するページ)**|型のバイナリ ラージ オブジェクト (BLOB) データのプロパティをシリアル化します。|  
-|**PX_Bool に関するページ)**|ブール型のプロパティをシリアル化します。|  
-|**PX_Color に関するページ)**|カラー型のプロパティをシリアル化します。|  
-|**PX_Currency に関するページ)**|型をシリアル化**CY** (通貨) プロパティです。|  
-|**PX_Double に関するページ)**|型をシリアル化**二重**プロパティです。|  
-|**PX_Font に関するページ)**|フォントの種類のプロパティをシリアル化します。|  
-|**PX_Float に関するページ)**|型をシリアル化**float**プロパティです。|  
-|**PX_IUnknown に関するページ)**|型のプロパティをシリアル化`LPUNKNOWN`です。|  
-|**PX_Long に関するページ)**|型をシリアル化**長い**プロパティです。|  
-|**PX_Picture に関するページ)**|Picture プロパティの型をシリアル化します。|  
-|**PX_Short に関するページ)**|型をシリアル化**短い**プロパティです。|  
-|**PXstring に関するページ)**|型をシリアル化`CString`プロパティです。|  
-|**PX_ULong に関するページ)**|型をシリアル化**ULONG**プロパティです。|  
-|**PX_UShort に関するページ)**|型をシリアル化**USHORT**プロパティです。|  
+|**PX_Blob)**|型のバイナリ ラージ オブジェクト (BLOB) データのプロパティをシリアル化します。|  
+|**PX_Bool)**|ブール型のプロパティをシリアル化します。|  
+|**PX_Color)**|カラーの型のプロパティをシリアル化します。|  
+|**PX_Currency)**|型をシリアル化**CY** (通貨) プロパティ。|  
+|**PX_Double)**|型をシリアル化**二重**プロパティ。|  
+|**PX_Font)**|フォントの type プロパティをシリアル化します。|  
+|**PX_Float)**|型をシリアル化**float**プロパティ。|  
+|**PX_IUnknown)**|型のプロパティをシリアル化`LPUNKNOWN`します。|  
+|**PX_Long)**|型をシリアル化**長い**プロパティ。|  
+|**PX_Picture)**|Picture プロパティの型をシリアル化します。|  
+|**PX_Short)**|型をシリアル化**短い**プロパティ。|  
+|**PXstring)**|型をシリアル化`CString`プロパティ。|  
+|**PX_ULong)**|型をシリアル化**ULONG**プロパティ。|  
+|**PX_UShort)**|型をシリアル化**USHORT**プロパティ。|  
   
- これらのプロパティ exchange 関数の詳細については、次を参照してください。[永続化の OLE コントロール](../mfc/reference/persistence-of-ole-controls.md)で、 *『 MFC リファレンス*です。  
+ これらのプロパティ exchange 関数の詳細については、次を参照してください。[永続化の OLE コントロール](../mfc/reference/persistence-of-ole-controls.md)で、 *MFC リファレンス*します。  
   
 ##  <a name="_core_customizing_the_default_behavior_of_dopropexchange"></a> DoPropExchange の既定の動作をカスタマイズします。  
- 既定の実装`DoPropertyExchange`基底クラスへの呼び出しは、(前のトピックを参照) として`COleControl`です。 これは、によって自動的にサポートされているプロパティのセットをシリアル化`COleControl`コントロールのカスタム プロパティのみをシリアル化するよりも多くのストレージ領域を使用します。 重要な検討するプロパティのみをシリアル化する、オブジェクトをこの呼び出しを削除できます。 保存または明示的に追加しない限り、コントロール オブジェクトを読み込むときに、コントロールが実装ストック プロパティの状態をシリアル化はできません**px _** に呼び出します。  
+ 既定の実装`DoPropertyExchange`基底クラスへの呼び出しは、(前のトピックを参照) として`COleControl`します。 これで自動的にサポートされるプロパティのセットをシリアル化`COleControl`コントロールのカスタム プロパティのみをシリアル化するよりも多くのストレージ領域が使用されます。 重要な検討するプロパティのみをシリアル化するオブジェクトをこの呼び出しを削除できます。 保存または明示的に追加しない限り、コントロール オブジェクトを読み込むとき、コントロールが実装されているストック プロパティの状態はシリアルされない**px _** に呼び出します。  
   
-##  <a name="_core_implementing_version_support"></a> バージョン サポートの実装  
- バージョンのサポートには、改訂された ActiveX コントロールが新しいの永続的なプロパティを追加し、検出し、状態を読み込み、永続的なコントロールの以前のバージョンで作成することできますができるようにします。 コントロールのバージョンを使用できるようにする、持続データの一部として、呼び出す[COleControl::ExchangeVersion](../mfc/reference/colecontrol-class.md#exchangeversion) 、コントロールの`DoPropExchange`関数。 ActiveX コントロールは、ActiveX コントロール ウィザードを使用して作成された場合、この呼び出しは自動的に挿入します。 バージョンのサポートが必要ない場合は、そのを削除することができます。 コントロールのサイズのコストが非常に小さな (4 バイト) のバージョンのサポートを提供する柔軟性を高めです。  
+##  <a name="_core_implementing_version_support"></a> バージョンのサポートを実装します。  
+ バージョン サポートでは、新しい永続的なプロパティを追加しを検出し、コントロールの以前のバージョンで作成された永続的な状態の読み込みができる変更後の ActiveX コントロールができます。 コントロールのバージョンを使用できるようにする、持続データの一部として、呼び出す[COleControl::ExchangeVersion](../mfc/reference/colecontrol-class.md#exchangeversion) 、コントロールの`DoPropExchange`関数。 ActiveX コントロールは、ActiveX コントロール ウィザードを使用して作成された場合、この呼び出しが自動的に挿入されます。 バージョンのサポートが必要でない場合に削除することができます。 ただし、コントロールのサイズでコストは非常に小さい (4 バイト) のバージョンのサポートを提供する柔軟性を高めします。  
   
- コントロールが ActiveX コントロール ウィザードを使用して作成されていない場合への呼び出しを追加します。`COleControl::ExchangeVersion`の先頭に次の行を挿入することで、`DoPropExchange`関数 (呼び出しの前に`COleControl::DoPropExchange`)。  
+ コントロールが ActiveX コントロール ウィザードで作成されていない場合は、呼び出しを追加`COleControl::ExchangeVersion`の先頭に次の行を挿入することで、`DoPropExchange`関数 (呼び出しの前に`COleControl::DoPropExchange`)。  
   
  [!code-cpp[NVC_MFC_AxSer#1](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_2.cpp)]  
 [!code-cpp[NVC_MFC_AxSer#3](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_4.cpp)]  
   
- いずれかを使用することができます**DWORD**バージョン番号として。 ActiveX コントロール ウィザードによって生成されたプロジェクトを使用して`_wVerMinor`と`_wVerMajor`既定値として。 これらは、プロジェクトの ActiveX コントロール クラスの実装ファイルで定義されたグローバル定数です。 内の残りの部分で、`DoPropExchange`関数が呼び出すことができます[CPropExchange::GetVersion](../mfc/reference/cpropexchange-class.md#getversion)を保存または取得するバージョンを取得するには、いつでもできます。  
+ いずれかを使用することができます**DWORD**としてバージョン番号。 ActiveX コントロール ウィザードによって生成されたプロジェクトを使用して、`_wVerMinor`と`_wVerMajor`既定値として。 これらは、プロジェクトの ActiveX コントロール クラスの実装ファイルで定義されるグローバル定数です。 内の残りの部分で、`DoPropExchange`関数を呼び出すことができます[CPropExchange::GetVersion](../mfc/reference/cpropexchange-class.md#getversion)いつでも保存または取得するバージョンを取得します。  
   
- 次の例では、このサンプルのコントロールのバージョン 1 は、"ReleaseDate"プロパティのみをいます。 バージョン 2 は、"OriginalDate"プロパティを追加します。 コントロールが、古いバージョンから永続的な状態を読み込むように指示された場合は、既定値に新しいプロパティのメンバー変数を初期化します。  
+ このサンプルのコントロールのバージョン 1 では次の例では、"ReleaseDate"プロパティのみがあります。 バージョン 2 では、"OriginalDate"プロパティを追加します。 コントロールの指示に従って、以前のバージョンからの永続的な状態の読み込みには、これと既定値に新しいプロパティのメンバー変数を初期化します。  
   
  [!code-cpp[NVC_MFC_AxSer#4](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_5.cpp)]  
 [!code-cpp[NVC_MFC_AxSer#3](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_4.cpp)]  
   
- 既定では、コントロール「に変換します」古いデータを最新の形式。 たとえば、バージョン 2 のコントロールは、バージョン 1 によって保存されたデータを読み込み場合は、出力するようにバージョン 2 の形式を再度保存するとします。 コントロール、形式最後に読み取られたデータを保存する場合は、渡す**FALSE**を呼び出すときに、3 番目のパラメーターとして`ExchangeVersion`です。 この 3 番目のパラメーターが省略可能で、 **TRUE**既定です。  
+ 既定では、コントロールを「変換」古いデータを最新の形式にします。 たとえば、バージョン 2 のコントロールがバージョン 1 で保存されたデータを読み込む場合をもう一度保存すると、バージョン 2 の形式を書き込むことが。 コントロールで形式最後に読み取られたデータを保存する場合は、渡す**FALSE**を呼び出すときに、3 番目のパラメーターとして`ExchangeVersion`します。 この 3 番目のパラメーターは省略可能で、 **TRUE**既定。  
   
 ## <a name="see-also"></a>関連項目  
  [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)

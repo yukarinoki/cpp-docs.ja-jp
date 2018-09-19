@@ -24,14 +24,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b9dc35df928d53d7d5ca5d833db8e87c96e1c7f4
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c66200acab5fc1be509136fc45895fdf08e40fdb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571628"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072083"
 ---
 # <a name="crestrictions-class"></a>CRestrictions クラス
+
 ジェネリック クラスには、スキーマ行セットの制限を指定することができます。  
   
 ## <a name="syntax"></a>構文
@@ -43,17 +44,19 @@ class CRestrictions :
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- *T*  
- アクセサーに使用されるクラス。  
+
+*T*<br/>
+アクセサーに使用されるクラス。  
   
- *nRestrictions*  
- スキーマ行セットの制限列の数。  
+*nRestrictions*<br/>
+スキーマ行セットの制限列の数。  
   
- *pguid*  
- スキーマの GUID へのポインター。  
+*pguid*<br/>
+スキーマの GUID へのポインター。  
 
 ## <a name="requirements"></a>要件  
- **ヘッダー:** atldbsch.h 
+
+**ヘッダー:** atldbsch.h 
   
 ## <a name="members"></a>メンバー  
   
@@ -64,6 +67,7 @@ class CRestrictions :
 |[開く](#open)|ユーザーが指定した制限に従って、結果セットを返します。|   
 
 ## <a name="open"></a> Crestrictions::open
+
 ユーザーが指定した制限に従って、結果セットを返します。  
   
 ### <a name="syntax"></a>構文  
@@ -81,24 +85,28 @@ HRESULT Open(const CSession& session,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *セッション*  
- [in]データ ソースに接続するため、既存のセッション オブジェクトを指定します。  
+
+*セッション*<br/>
+[in]データ ソースに接続するため、既存のセッション オブジェクトを指定します。  
   
- *lpszParam*  
- [in]スキーマ行セットに対して制限を指定します。  
+*lpszParam*<br/>
+[in]スキーマ行セットに対して制限を指定します。  
   
- *bBind*  
- [in]列マップを自動的にバインドするかどうかを指定します。 既定値は**true**、これにより、列マップが自動的に連結されます。 設定*bBind*に**false**手動でバインドできるように、列マップの自動に連結します。 (手動バインドは、OLAP ユーザーにとって特に重要ですが) です。  
+*bBind*<br/>
+[in]列マップを自動的にバインドするかどうかを指定します。 既定値は**true**、これにより、列マップが自動的に連結されます。 設定*bBind*に**false**手動でバインドできるように、列マップの自動に連結します。 (手動バインドは、OLAP ユーザーにとって特に重要ですが) です。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の HRESULT 値の 1 つ。  
+
+標準の HRESULT 値の 1 つ。  
   
 ### <a name="remarks"></a>Remarks  
- スキーマ行セットでは、7 個の制限の最大数を指定できます。  
+
+スキーマ行セットでは、7 個の制限の最大数を指定できます。  
   
- 参照してください[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\))定義されている制限については、各スキーマ行セットにします。  
+参照してください[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\))定義されている制限については、各スキーマ行セットにします。  
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)    
- [スキーマ行セット クラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)
+
+[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[スキーマ行セット クラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

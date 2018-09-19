@@ -1,5 +1,5 @@
 ---
-title: 式エバリュエーター エラー CXX0065 |Microsoft ドキュメント
+title: 式エバリュエーター エラー CXX0065 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78c25c9c6bde27219f10e4047dc7a6ab416f55d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c100b1edbd36f4384e8deb1abf5b36465e8da479
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297538"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024165"
 ---
 # <a name="expression-evaluator-error-cxx0065"></a>式エバリュエーター エラー CXX0065
-変数には、スタック フレームが必要です。  
-  
- 式には、現在のスコープ内に存在するが、まだ作成されていない変数が含まれています。  
-  
- このエラーは、関数がされていない関数では、スタック フレームのセットアップのプロローグにステップ インするとき、または関数の終了コードにステップ インした場合に発生することができます。  
-  
- 式を評価する前に設定されているスタック フレームまでプロローグ コードをステップ実行します。  
-  
- このエラーは、can0065 と同じものと同じです。
+
+変数には、スタック フレームが必要です。
+
+式には、現在のスコープ内に存在しますが、まだ作成されていない変数が含まれています。
+
+このエラーは、関数がまだを設定するには関数のスタック フレームのプロローグにステップ インする場合、または関数の終了コードにステップ インする場合に発生することができます。
+
+式を評価する前に設定されているスタック フレームまでプロローグ コードをステップ実行します。
+
+このエラーは、can0065 と同じものと同じです。

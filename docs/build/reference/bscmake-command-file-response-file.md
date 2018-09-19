@@ -19,39 +19,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a14e0ba315820eec0dd2fe17823f2c5c656fd87
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 69fb144bed21b00fc07107f3fa8d5e64c1afb10d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895111"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716563"
 ---
 # <a name="bscmake-command-file-response-file"></a>BSCMAKE コマンド ファイル (応答ファイル)
 
 コマンド ファイルでは、コマンドラインの入力の一部またはすべてを行うことができます。 次の構文を使用してコマンド ファイルを指定します。
 
-```  
+```
 BSCMAKE @filename
-```  
+```
 
 1 つのコマンド ファイルが許可されます。 パスを指定する*filename*します。 前に*filename*で、アット マーク (**\@**)。 BSCMAKE では、拡張機能は想定しません。 追加を指定できます*sbrfiles*後のコマンド ラインで*filename*します。 コマンド ファイルは、コマンドラインで指定する場合と同じ順序では、BSCMAKE への入力を含むテキスト ファイルです。 コマンドライン引数を 1 つまたは複数のスペース、タブ、または改行文字で区切ります。
 
 次のコマンドは、BSCMAKE コマンド ファイルを使用して呼び出します。
 
-```  
+```
 BSCMAKE @prog1.txt
-```  
+```
 
 コマンド ファイルのサンプルを次に示します。
 
-```  
+```
 /n /v /o main.bsc /El
-/S (  
+/S (
 toolbox.h
 verdate.h c:\src\inc\screen.h
 )
 file1.sbr file2.sbr file3.sbr file4.sbr
-```  
+```
 
 ## <a name="see-also"></a>関連項目
 

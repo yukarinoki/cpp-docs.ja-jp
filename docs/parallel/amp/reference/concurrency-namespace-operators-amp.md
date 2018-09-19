@@ -1,5 +1,5 @@
 ---
-title: Concurrency 名前空間演算子 (AMP) |Microsoft ドキュメント
+title: Concurrency 名前空間演算子 (AMP) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d3bb77599fc81fa29f2c8155a6fd491ed2d639c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d6e8d2a198105e9cd63581dd8ed8445b681da2e0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686709"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026934"
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Concurrency 名前空間演算子 (AMP)
 ||||  
@@ -38,14 +38,14 @@ bool operator== (
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Rank`  
- タプルの引数のランク。  
+*_Rank*<br/>
+タプルの引数のランク。  
   
- `_Lhs`  
- 比較するタプルの 1 つ。  
+*_Lhs*<br/>
+比較するタプルの 1 つ。  
   
- `_Rhs`  
- 比較するタプルの 1 つ。  
+*_Rhs*<br/>
+比較するタプルの 1 つ。  
   
 ### <a name="return-value"></a>戻り値  
  タプルが等しい場合は `true`。それ以外の場合は `false`。  
@@ -64,14 +64,14 @@ bool operator!= (
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Rank`  
- タプルの引数のランク。  
+*_Rank*<br/>
+タプルの引数のランク。  
   
- `_Lhs`  
- 比較するタプルの 1 つ。  
+*_Lhs*<br/>
+比較するタプルの 1 つ。  
   
- `_Rhs`  
- 比較するタプルの 1 つ。  
+*_Rhs*<br/>
+比較するタプルの 1 つ。  
   
 ### <a name="return-value"></a>戻り値  
  タプルが等しくない場合は `true`、それ以外の場合は `false`。  
@@ -109,14 +109,14 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Rank`  
- タプルの引数のランク。  
+*_Rank*<br/>
+タプルの引数のランク。  
   
- `_Lhs`  
- 追加する引数の 1 つ。  
+*_Lhs*<br/>
+追加する引数の 1 つ。  
   
- `_Rhs`  
- 追加する引数の 1 つ。  
+*_Rhs*<br/>
+追加する引数の 1 つ。  
   
 ### <a name="return-value"></a>戻り値  
  指定された引数の要素ごとの合計。  
@@ -154,14 +154,14 @@ _Tuple_type<_Rank>   operator-(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Rank`  
- タプルの引数のランク。  
+*_Rank*<br/>
+タプルの引数のランク。  
   
- `_Lhs`  
- 減算元の引数。  
+*_Lhs*<br/>
+減算元の引数。  
   
- `_Rhs`  
- 減算する引数。  
+*_Rhs*<br/>
+減算する引数。  
   
 ### <a name="return-value"></a>戻り値  
  指定された引数の要素ごとの差。  
@@ -190,14 +190,14 @@ _Tuple_type<_Rank>   operator*(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Rank`  
- タプルの引数のランク。  
+*_Rank*<br/>
+タプルの引数のランク。  
   
- `_Lhs`  
- 乗算するタプルのいずれか。  
+*_Lhs*<br/>
+乗算するタプルのいずれか。  
   
- `_Rhs`  
- 乗算するタプルのいずれか。  
+*_Rhs*<br/>
+乗算するタプルのいずれか。  
   
 ### <a name="return-value"></a>戻り値  
  指定された引数の要素ごとの積。  
@@ -226,14 +226,14 @@ _Tuple_type<_Rank>   operator/(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Rank`  
- タプルの引数のランク。  
+*_Rank*<br/>
+タプルの引数のランク。  
   
- `_Lhs`  
- 除算されるタプル。  
+*_Lhs*<br/>
+除算されるタプル。  
   
- `_Rhs`  
- 除算するタプル。  
+*_Rhs*<br/>
+除算するタプル。  
   
 ### <a name="return-value"></a>戻り値  
  指定された引数のコンポーネントごとの商。  
@@ -262,14 +262,14 @@ _Tuple_type<_Rank>   operator%(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Rank`  
- タプルの引数のランク。  
+*_Rank*<br/>
+タプルの引数のランク。  
   
- `_Lhs`  
- 剰余が計算される元のタプル。  
+*_Lhs*<br/>
+剰余が計算される元のタプル。  
   
- `_Rhs`  
- それによって剰余が計算されるタプル。  
+*_Rhs*<br/>
+それによって剰余が計算されるタプル。  
   
 ### <a name="return-value"></a>戻り値  
  2 番目の指定された引数による 1 番目の指定された引数の剰余という結果。  

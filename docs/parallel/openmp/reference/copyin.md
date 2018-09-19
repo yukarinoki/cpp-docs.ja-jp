@@ -1,5 +1,5 @@
 ---
-title: copyin |Microsoft ドキュメント
+title: copyin |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32137534a43eeb0b038eae547f9bc19283412159
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 27afaee16a87ddf428570f7854212eed34634d38
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688246"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059330"
 ---
 # <a name="copyin"></a>copyin
 スレッドのマスター スレッドの値にアクセスできるように、 [threadprivate](../../../parallel/openmp/reference/threadprivate.md)変数。  
@@ -32,13 +32,12 @@ ms.locfileid: "33688246"
 copyin(var)  
 ```  
   
-## <a name="remarks"></a>コメント  
- 指定項目  
+## <a name="parameters"></a>パラメーター
   
- `var`  
- `threadprivate` Parallel コンストラクトの前に存在する場合に、マスター スレッド内の変数の値で初期化される変数です。  
+*var*<br/>
+`threadprivate` Parallel コンストラクトの前に存在する場合に、マスターのスレッド内の変数の値で初期化する変数。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `copyin` 次のディレクティブに適用されます。  
   
 -   [parallel](../../../parallel/openmp/reference/parallel.md)  
@@ -47,7 +46,7 @@ copyin(var)
   
 -   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
   
- 詳細については、次を参照してください。 [2.7.2.7 copyin](../../../parallel/openmp/2-7-2-7-copyin.md)です。  
+ 詳細については、次を参照してください。 [2.7.2.7 copyin](../../../parallel/openmp/2-7-2-7-copyin.md)します。  
   
 ## <a name="example"></a>例  
  参照してください[threadprivate](../../../parallel/openmp/reference/threadprivate.md)の使用例については`copyin`します。  

@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2551 |Microsoft ドキュメント
+title: コンパイラ エラー C2551 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f873390e9e8c700c6e2089f9eeb52647cc74e98c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9f5570c0cd7e8bcaf464c840f0fc71dbcfd44556
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199733"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108639"
 ---
 # <a name="compiler-error-c2551"></a>コンパイラ エラーC2551
-'void *' 型には明示的なキャストが必要です  
-  
- `void` ポインターが暗黙的な変換によって非 void ポインターに割り当てられています。 明示的なキャストを使用する必要があります。
+
+'void *' 型には明示的なキャストが必要です
+
+`void` ポインターが暗黙的な変換によって非 void ポインターに割り当てられています。 明示的なキャストを使用する必要があります。

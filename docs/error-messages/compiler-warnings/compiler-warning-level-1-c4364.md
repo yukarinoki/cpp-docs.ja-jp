@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4364 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4364 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb3bfb8075d618a6d2ea9b733b01d8b456fdc0e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e37c7f37e1b51296bd5c3ae2cbdb85a93326f027
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283762"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087254"
 ---
 # <a name="compiler-warning-level-1-c4364"></a>コンパイラの警告 (レベル 1) C4364
-\#アセンブリ 'file' location(line_number); as_friend 属性なしで以前に確認されたの使用as_friend は適用されません。  
-  
- A`#using`ディレクティブが指定したメタデータ ファイルは、繰り返されましたが、`as_friend`修飾子が最初に見つかった位置で使用されていない以外の場合は、コンパイラは、2 つ目を無視`as_friend`です。  
-  
- 詳細については、次を参照してください。[フレンド アセンブリ (C++)](../../dotnet/friend-assemblies-cpp.md)です。  
-  
-## <a name="example"></a>例  
- コンポーネントを作成する例を次に示します。  
-  
-```  
-// C4364.cpp  
-// compile with: /clr /LD  
-ref class A {};  
-```  
-  
-## <a name="example"></a>例  
- 次の例では、C4364 を生成します。  
-  
-```  
-// C4364_b.cpp  
-// compile with: /clr /W1 /c  
-#using " C4364.dll"  
-#using " C4364.dll" as_friend   // C4364  
+
+\#アセンブリ 'file' location(line_number) as_friend 属性なしで以前に確認されたを使用してください。as_friend は適用されません。
+
+A`#using`ディレクティブが指定したメタデータ ファイルは、繰り返されましたが、`as_friend`修飾子は、最初に見つかったでは使用されませんでした。 コンパイラは、2 つ目を無視`as_friend`します。
+
+詳細については、次を参照してください。[フレンド アセンブリ (C++)](../../dotnet/friend-assemblies-cpp.md)します。
+
+## <a name="example"></a>例
+
+コンポーネントを作成する例を次に示します。
+
+```
+// C4364.cpp
+// compile with: /clr /LD
+ref class A {};
+```
+
+## <a name="example"></a>例
+
+次の例では、C4364 が生成されます。
+
+```
+// C4364_b.cpp
+// compile with: /clr /W1 /c
+#using " C4364.dll"
+#using " C4364.dll" as_friend   // C4364
 ```

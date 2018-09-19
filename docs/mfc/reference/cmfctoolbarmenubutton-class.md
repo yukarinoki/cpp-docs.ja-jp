@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b582c8b785adb13acce86497d898c183b3128b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d5baebfa1d706bf18b9fc36d706ebe474b6b042d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765932"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721722"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>CMFCToolBarMenuButton クラス
 ポップアップ メニューを含むツール バー ボタンです。  
@@ -220,23 +220,23 @@ CMFCToolBarMenuButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*src*  
- 既存の`CMFCToolBarMenuButton`オブジェクトにコピーされるこの`CMFCToolBarMenuButton`オブジェクト。  
+*src*<br/>
+[in]既存の`CMFCToolBarMenuButton`オブジェクトにコピーされるこの`CMFCToolBarMenuButton`オブジェクト。  
   
- [in]*uiID*  
- ユーザーがボタンをクリックしたときに実行するコマンドの IDまたは (UINT)-1 のコマンドを直接実行メニュー ボタンを選択します。  
+*uiID*<br/>
+[in]ユーザーがボタンをクリックしたときに実行するコマンドの IDまたは (UINT)-1 のコマンドを直接実行メニュー ボタンを選択します。  
   
- [in]*hMenu*  
- メニューへのハンドルまたは、ボタンにメニューがない場合は NULL です。  
+*hMenu*<br/>
+[in]メニューへのハンドルまたは、ボタンにメニューがない場合は NULL です。  
   
- [in]*画像を*  
- ボタンのイメージのインデックスこのボタンは、アイコンがないかで指定されたコマンドのアイコンが使用されますがある場合は-1 *uiID*します。 インデックスが同じ`CMFCToolBarImages`アプリケーション内のオブジェクト。  
+*画像を*<br/>
+[in]ボタンのイメージのインデックスこのボタンは、アイコンがないかで指定されたコマンドのアイコンが使用されますがある場合は-1 *uiID*します。 インデックスが同じ`CMFCToolBarImages`アプリケーション内のオブジェクト。  
   
- [in]*lpszText*  
- ツールバーのメニュー ボタンのテキスト。  
+*lpszText*<br/>
+[in]ツールバーのメニュー ボタンのテキスト。  
   
- [in]*bUserButton*  
- ボタンをユーザー定義のイメージを表示する場合は TRUE。ボタンで指定されたコマンドに関連付けられている定義済みのイメージを表示する場合は FALSE *uiID*します。  
+*bUserButton*<br/>
+[in]ボタンをユーザー定義のイメージを表示する場合は TRUE。ボタンで指定されたコマンドに関連付けられている定義済みのイメージを表示する場合は FALSE *uiID*します。  
   
 ### <a name="remarks"></a>Remarks  
  場合*uiID*は有効ではコマンド ID ボタンは、ユーザーがクリックしたときにそのコマンドを実行します。 場合*hMenu*  メニューの有効なハンドルでは、ボタン、メニューが表示されたら、ツールバーまたはサブメニューに表示されるときにドロップダウン メニューを提供します。 両方*uiID*と*hMenu*が有効で、ボタンが分割ボタンと、ユーザーがクリックしたときに、コマンドを実行する部分とドロップダウン メニューを下向きの矢印の付いた部分とユーザークリックするとします。 ただし場合、 *hMenu*が有効で、ユーザーは、ボタンがメニューに挿入したときにコマンドを実行するボタンをクリックしてできません。  
@@ -280,8 +280,8 @@ virtual void CreateFromMenu(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*hMenu*  
- メニューへのハンドル。  
+*hMenu*<br/>
+[in]メニューへのハンドル。  
   
 ### <a name="remarks"></a>Remarks  
  ツールバーのメニュー ボタンには、ドロップダウン リストのサブメニューを表示できます。  
@@ -327,14 +327,14 @@ void DrawDocumentIcon(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rectImage*  
- イメージに外接する四角形の座標。  
+*rectImage*<br/>
+[in]イメージに外接する四角形の座標。  
   
- [in]*hIcon*  
- アイコンへのハンドル。  
+*hIcon*<br/>
+[in]アイコンへのハンドル。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、ドキュメント アイコンを受け取りで指定された領域の中央に表示 メニューのボタンを描画*rectImage*します。  
@@ -424,8 +424,8 @@ void GetImageRect(CRect& rectImage);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*rectImage*  
- 参照を`CRect`をイメージに外接する四角形の座標を受け取るオブジェクト。  
+*rectImage*<br/>
+[out]参照を`CRect`をイメージに外接する四角形の座標を受け取るオブジェクト。  
   
 ##  <a name="getpaletterows"></a>  CMFCToolBarMenuButton::GetPaletteRows  
  メニューがパレット モードの場合は、ドロップダウン メニューで行の数を返します。  
@@ -560,8 +560,8 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*sizeDefault*  
+*pDC*<br/>
+[in][in]*sizeDefault*  
  [in]*bHorz*  
   
 ### <a name="return-value"></a>戻り値  
@@ -599,8 +599,8 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*我が物*  
- [in]*bDelay*  
+*我が物*<br/>
+[in][in]*bDelay*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -651,14 +651,14 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*rect*  
- [in]*pImages*  
- [in]*bHorz*  
- [in]*bCustomizeMode*  
- [in]*bHighlight*  
- [in]*bDrawBorder*  
- [in]*bGrayDisabledButtons*  
+*pDC*<br/>
+[in][in]*rect*  
+*pImages*<br/>
+[in][in]*bHorz*  
+*bCustomizeMode*<br/>
+[in][in]*bHighlight*  
+*bDrawBorder*<br/>
+[in][in]*bGrayDisabledButtons*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -673,8 +673,8 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*rect*  
+*pDC*<br/>
+[in][in]*rect*  
  [in]*bSelected*  
   
 ### <a name="return-value"></a>戻り値  
@@ -689,8 +689,8 @@ virtual BOOL OpenPopupMenu(CWnd* pWnd=NULL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*我が物*  
- ドロップダウン メニューからコマンドを受信するウィンドウを指定します。 ツールバーのメニューがある親ウィンドウ場合のみ NULL になります。  
+*我が物*<br/>
+[in]ドロップダウン メニューからコマンドを受信するウィンドウを指定します。 ツールバーのメニューがある親ウィンドウ場合のみ NULL になります。  
   
 ### <a name="return-value"></a>戻り値  
  場合、TRUE を[CMFCPopupMenu クラス](../../mfc/reference/cmfcpopupmenu-class.md)オブジェクトが作成され、それ以外の場合、正常に FALSE に開かれます。  
@@ -759,8 +759,8 @@ void SetMenuOnly(BOOL bMenuOnly);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bMenuOnly*  
- 有効なコマンド ID とサブメニューの場合の両方 false の場合、有効なコマンドの ID とサブメニューがあるときに、分割ボタンとしては、このボタンを表示するときに、メニュー ボタンとしては、このボタンを表示する場合は TRUE。  
+*bMenuOnly*<br/>
+[in]有効なコマンド ID とサブメニューの場合の両方 false の場合、有効なコマンドの ID とサブメニューがあるときに、分割ボタンとしては、このボタンを表示するときに、メニュー ボタンとしては、このボタンを表示する場合は TRUE。  
   
 ### <a name="remarks"></a>Remarks  
  通常、ツールバーのメニュー ボタンに、サブメニューで開くとコマンド ID の両方がある場合は、下向きの矢印ボタン メイン ボタンと添付をある分割ボタンのように、メニューが表示されます。 このメソッドを呼び出す場合と*bMenuOnly*が true の場合、ボタンが代わりに、ボタンの下向きの矢印を 1 つのメニュー ボタンのように表示されます。 フレームワークのいずれかのモードでボタンの矢印のない部分がコマンドを実行する、ユーザーがクリックして、ユーザーは、どちらのモードにある矢印をクリックすると、サブメニューが開きます。  
@@ -775,11 +775,11 @@ void SetMenuPaletteMode(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bMenuPaletteMode*  
- ドロップダウン メニューがパレット モードかどうかを指定します。  
+*bMenuPaletteMode*<br/>
+[in]ドロップダウン メニューがパレット モードかどうかを指定します。  
   
- [in]*nPaletteRows*  
- パレット内の行の数。  
+*nPaletteRows*<br/>
+[in]パレット内の行の数。  
   
 ### <a name="remarks"></a>Remarks  
  パレット モードでは、すべてのメニュー項目が複数列のパレットとして表示されます。 使用して行の数を指定する*nPaletteRows*します。  
@@ -816,8 +816,8 @@ virtual void SetTearOff(UINT uiBarID);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiBarID*  
- 新しいティアオフ指定バー ID  
+*uiBarID*<br/>
+[in]新しいティアオフ指定バー ID  
   
 ### <a name="remarks"></a>Remarks  
  ユーザーがメニュー バーからメニュー ボタンをドラッグしたときに作成されるティアオフ バーの ID を指定するには、このメソッドを呼び出します。 場合、 *uiBarID*パラメーターが 0 のユーザーがメニュー ボタン ティアオフことはできません場合、。  

@@ -113,14 +113,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e741055950449ea07c719cf6cd4c33a34d6f43b3
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3406614b99e2057c9469fe69d02a9fcbe4eae23b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42575509"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116764"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset クラス
+
 フェッチして、単一の呼び出しで複数の行ハンドルを取得することによって、データの一括で動作する行を操作できます。  
   
 ## <a name="syntax"></a>構文
@@ -131,11 +132,13 @@ class CBulkRowset : public CRowset<TAccessor>
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- *TAccessor*  
- アクセサー クラス。  
+
+*TAccessor*<br/>
+アクセサー クラス。  
 
 ## <a name="requirements"></a>要件  
- **ヘッダー:** atldbcli.h  
+
+**ヘッダー:** atldbcli.h  
   
 ## <a name="members"></a>メンバー  
   
@@ -155,11 +158,13 @@ class CBulkRowset : public CRowset<TAccessor>
 |[SetRows](#setrows)|1 回の呼び出しによって取得する行ハンドルの数を設定します。|  
   
 ## <a name="example"></a>例  
- 次の例での使用、`CBulkRowset`クラス。  
+
+次の例での使用、`CBulkRowset`クラス。  
   
- [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]  
+[!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]  
 
 ## <a name="addrefrows"></a> Cbulkrowset::addrefrows
+
 呼び出し[IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) bulk 行セットから取得した現在のすべての行の参照カウントをインクリメントします。  
   
 ### <a name="syntax"></a>構文  
@@ -169,9 +174,11 @@ HRESULT AddRefRows() throw();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 標準の HRESULT です。 
+
+標準の HRESULT です。 
   
 ## <a name="cbulkrowset"></a> Cbulkrowset::cbulkrowset
+
 新たに作成`CBulkRowset`オブジェクトし、既定行の数を 10 に設定します。  
   
 ### <a name="syntax"></a>構文  
@@ -181,6 +188,7 @@ CBulkRowset();
 ```  
 
 ## <a name="movefirst"></a> Cbulkrowset::movefirst
+
 データの最初の行を取得します。  
   
 ### <a name="syntax"></a>構文  
@@ -190,9 +198,11 @@ HRESULT MoveFirst() throw();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 標準の HRESULT です。
+
+標準の HRESULT です。
 
 ## <a name="movelast"></a> Cbulkrowset::movelast
+
 最後の行に移動します。  
   
 ### <a name="syntax"></a>構文  
@@ -202,9 +212,11 @@ HRESULT MoveLast() throw();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 標準の HRESULT です。  
+
+標準の HRESULT です。  
 
 ## <a name="movenext"></a> Cbulkrowset::movenext
+
 次のデータ行を取得します。  
   
 ### <a name="syntax"></a>構文  
@@ -214,9 +226,11 @@ HRESULT MoveNext() throw();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 標準の HRESULT です。 行セットの末尾に達している場合は、DB_S_ENDOFROWSET を返します。 
+
+標準の HRESULT です。 行セットの末尾に達している場合は、DB_S_ENDOFROWSET を返します。 
 
 ## <a name="moveprev"></a> Cbulkrowset::moveprev
+
 前の行に移動します。  
   
 ### <a name="syntax"></a>構文  
@@ -226,9 +240,11 @@ HRESULT MovePrev() throw();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 標準の HRESULT です。  
+
+標準の HRESULT です。  
 
 ## <a name="movetobookmark"></a> Cbulkrowset::movetobookmark
+
 ブックマークまたは、指定したオフセットの行でマークされた行をフェッチ (*した*)、そのブックマークから。  
   
 ### <a name="syntax"></a>構文  
@@ -239,16 +255,19 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *ブックマーク*  
- [in]データをフェッチする位置を示すブックマーク。  
+
+*ブックマーク*<br/>
+[in]データをフェッチする位置を示すブックマーク。  
   
- *した*  
- [in]対象の行にブックマークからの行の数。 場合*した*0 の場合は、フェッチされる最初の行は、ブックマークが設定された行。 場合*した*は 1 です。 最初の行がフェッチされた行の直後、行は、します。 場合*した*-1 で、フェッチされる最初の行は、ブックマークが設定された行の前に行。  
+*した*<br/>
+[in]対象の行にブックマークからの行の数。 場合*した*0 の場合は、フェッチされる最初の行は、ブックマークが設定された行。 場合*した*は 1 です。 最初の行がフェッチされた行の直後、行は、します。 場合*した*-1 で、フェッチされる最初の行は、ブックマークが設定された行の前に行。  
   
 ### <a name="return-value"></a>戻り値  
- 参照してください[irowset::getdata](/previous-versions/windows/desktop/ms716988\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。 
+
+参照してください[irowset::getdata](/previous-versions/windows/desktop/ms716988\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。 
 
 ## <a name="movetoratio"></a> Cbulkrowset::movetoratio
+
 行セット内の小数部の位置から始まる行がフェッチされます。  
   
 ### <a name="syntax"></a>構文  
@@ -259,23 +278,27 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *nNumerator*  
- [in]分子からデータをフェッチする小数部の位置を決定するために使用します。  
+
+*nNumerator*<br/>
+[in]分子からデータをフェッチする小数部の位置を決定するために使用します。  
   
- *nDenominator*  
- [in]元のデータをフェッチする小数部の位置を決定するために使用する分母。  
+*nDenominator*<br/>
+[in]元のデータをフェッチする小数部の位置を決定するために使用する分母。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の HRESULT です。  
+
+標準の HRESULT です。  
   
 ### <a name="remarks"></a>Remarks  
- `MoveToRatio` 次の数式に従ってほぼ行がフェッチされます。  
+
+`MoveToRatio` 次の数式に従ってほぼ行がフェッチされます。  
   
- `(nNumerator *  RowsetSize ) / nDenominator`  
+`(nNumerator *  RowsetSize ) / nDenominator`  
   
- 場所`RowsetSize`行数で指定された行セットのサイズです。 この式の精度は、特定のプロバイダーによって異なります。 詳細については、次を参照してください。 [irowsetscroll::getrowsatratio](/previous-versions/windows/desktop/ms709602\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。   
+場所`RowsetSize`行数で指定された行セットのサイズです。 この式の精度は、特定のプロバイダーによって異なります。 詳細については、次を参照してください。 [irowsetscroll::getrowsatratio](/previous-versions/windows/desktop/ms709602\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。   
 
 ## <a name="releaserows"></a> Cbulkrowset::releaserows
+
 呼び出し[::releaserows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) bulk 行セットから取得した現在のすべての行の参照カウントをデクリメントします。  
   
 ### <a name="syntax"></a>構文  
@@ -285,9 +308,11 @@ HRESULT ReleaseRows() throw();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 標準の HRESULT です。  
+
+標準の HRESULT です。  
 
 ## <a name="setrows"></a> Cbulkrowset::setrows
+
 各呼び出しによって取得する行ハンドルの数を設定します。  
   
 ### <a name="syntax"></a>構文  
@@ -297,12 +322,15 @@ void SetRows(DBROWCOUNT nRows) throw();
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *nRows*  
- [in]行セット (行の数) の新しいサイズ。  
+
+*nRows*<br/>
+[in]行セット (行の数) の新しいサイズ。  
   
 ### <a name="remarks"></a>Remarks  
- この関数を呼び出す場合は、行セットが開かれる前にあります。
+
+この関数を呼び出す場合は、行セットが開かれる前にあります。
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)

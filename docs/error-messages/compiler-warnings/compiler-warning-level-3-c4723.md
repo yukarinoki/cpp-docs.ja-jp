@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 3) C4723 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 3) C4723 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c5f91bbdc60ab1901c4afe4d5bea9f3258692ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ca6715e26705632dc3187cb6db7deed8636cd82
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296615"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033148"
 ---
 # <a name="compiler-warning-level-3-c4723"></a>コンパイラの警告 (レベル 3) C4723
-0 による除算の潜在的です  
-  
- コンパイル時に 0 に評価され、不定の結果、除算操作で 2 番目のオペランド。  
-  
- 使用する場合にのみ、この警告が発行される[/Og](../../build/reference/og-global-optimizations.md)または/Og のことを意味する最適化オプション。  
-  
- コンパイラには、0、オペランドを生成可能性があります。
+
+0 による除算の潜在的です
+
+コンパイル時に、0 に評価され、未定義の結果、除算操作で 2 番目のオペランド。
+
+使用する場合にのみ、この警告が発行される[/Og](../../build/reference/og-global-optimizations.md)または/Og を意味する最適化オプション。
+
+コンパイラには、0、オペランドを生成可能性があります。

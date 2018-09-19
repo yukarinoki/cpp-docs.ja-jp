@@ -1,5 +1,5 @@
 ---
-title: リンカ ツール エラー LNK1223 |Microsoft ドキュメント
+title: リンカ ツール エラー LNK1223 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e50d29af6ac563fadd3a52e5b1d3d15201289083
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8639919c74559829367108b36d62594e2a83a91a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298653"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067991"
 ---
 # <a name="linker-tools-error-lnk1223"></a>リンカ ツール エラー LNK1223
-ファイルが無効かまたは壊れています: ファイルに無効な .pdata のコントリビューションが含まれています。  
-  
- pdata を使用する RISC プラットフォームにおいては、コンパイラによって出力された .pdata セクションのエントリが並べ替えられていない場合に、このエラーが発生します。  
-  
- この問題を解決するには、なしでコンパイルしてください[/GL (プログラム全体の最適化)](../../error-messages/tool-errors/linker-tools-error-lnk1223.md)有効にします。 また、このエラーは、関数本体が空である場合にも発生することがあります。
+
+ファイルが無効かまたは壊れています: ファイルに無効な .pdata のコントリビューションが含まれています。
+
+pdata を使用する RISC プラットフォームにおいては、コンパイラによって出力された .pdata セクションのエントリが並べ替えられていない場合に、このエラーが発生します。
+
+この問題を解決するには、なしでコンパイルしてください[/GL (Whole Program Optimization)](../../error-messages/tool-errors/linker-tools-error-lnk1223.md)を有効にします。 また、このエラーは、関数本体が空である場合にも発生することがあります。

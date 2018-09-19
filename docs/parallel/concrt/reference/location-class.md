@@ -1,5 +1,5 @@
 ---
-title: location クラス |Microsoft ドキュメント
+title: location クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdfb555375df4b9f791db25fa2dee47222f79063
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: a7d441aff74faede9ecbc41f03fe52cd05528e06
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688025"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104765"
 ---
 # <a name="location-class"></a>location クラス
 ハードウェアの物理位置の抽象化です。  
@@ -49,16 +49,16 @@ class location;
   
 |名前|説明|  
 |----------|-----------------|  
-|[current](#current)|返します、`location`呼び出し元のスレッドを実行する最も固有の場所を表すオブジェクト。|  
+|[current](#current)|返します、`location`呼び出し元のスレッドが実行中の最も特定の場所を表すオブジェクト。|  
 |[from_numa_node](#from_numa_node)|返します、`location`を指定した NUMA ノードを表すオブジェクト。|  
   
 ### <a name="public-operators"></a>パブリック演算子  
   
 |名前|説明|  
 |----------|-----------------|  
-|[operator!=](#operator_neq)|2 つあるかどうかを決定`location`オブジェクトが別の場所を表します。|  
-|[operator=](#operator_eq)|別の内容を割り当てます`location`オブジェクトをこのオブジェクトにします。|  
-|[operator==](#operator_eq_eq)|2 つあるかどうかを決定`location`オブジェクトが同じ場所を表します。|  
+|[operator!=](#operator_neq)|2 つかどうかを判断します`location`オブジェクトが別の場所を表します。|  
+|[operator=](#operator_eq)|別の内容を割り当てます`location`オブジェクトをこのオブジェクト。|  
+|[operator==](#operator_eq_eq)|2 つかどうかを判断します`location`オブジェクトが同じ場所を表します。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `location`  
@@ -78,7 +78,7 @@ class location;
   
 ##  <a name="current"></a> 現在の 
 
- 返します、`location`呼び出し元のスレッドを実行する最も固有の場所を表すオブジェクト。  
+ 返します、`location`呼び出し元のスレッドが実行中の最も特定の場所を表すオブジェクト。  
   
 ```
 static location __cdecl current();
@@ -96,11 +96,11 @@ static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_NumaNodeNumber`  
- 場所を構築するために NUMA ノードの数。  
+*_NumaNodeNumber*<br/>
+場所を構築する NUMA ノードの数。  
   
 ### <a name="return-value"></a>戻り値  
- 指定された NUMA ノードを表す場所、`_NumaNodeNumber`パラメーター。  
+ によって指定された NUMA ノードを表す場所、`_NumaNodeNumber`パラメーター。  
   
 ##  <a name="ctor"></a> 場所 
 
@@ -120,56 +120,63 @@ location(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Src`  
- `_LocationType`  
- `_Id`  
- `_BindingId`  
- `_PBinding`  
-  
-### <a name="remarks"></a>コメント  
- 構築された既定の場所は、全体としてシステムを表します。  
+*_Src*<br/>
+
+*_LocationType*<br/>
+
+*Id (_i)*<br/>
+
+*_BindingId*<br/>
+
+*_PBinding*<br/>
+(省略可能)バインドのポインター。
+
+### <a name="remarks"></a>Remarks  
+ 既定で構築される場所は、全体として、システムを表します。  
   
 ##  <a name="operator_neq"></a> operator!= 
 
- 2 つあるかどうかを決定`location`オブジェクトが別の場所を表します。  
+ 2 つかどうかを判断します`location`オブジェクトが別の場所を表します。  
   
 ```
 bool operator!= (const location& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Rhs`  
+*_Rhs*<br/>
+オペランド`location`します。
   
 ### <a name="return-value"></a>戻り値  
  `true` 2 つの場所が異なる場合、`false`それ以外の場合。  
   
 ##  <a name="operator_eq"></a> 演算子 = 
 
- 別の内容を割り当てます`location`オブジェクトをこのオブジェクトにします。  
+ 別の内容を割り当てます`location`オブジェクトをこのオブジェクト。  
   
 ```
 location& operator= (const location& _Rhs);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Rhs`  
- ソース `location` オブジェクト。  
+*_Rhs*<br/>
+ソース `location` オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
   
 ##  <a name="operator_eq_eq"></a> 演算子 = = 
 
- 2 つあるかどうかを決定`location`オブジェクトが同じ場所を表します。  
+ 2 つかどうかを判断します`location`オブジェクトが同じ場所を表します。  
   
 ```
 bool operator== (const location& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Rhs`  
+*_Rhs*<br/>
+オペランド`location`します。
   
 ### <a name="return-value"></a>戻り値  
- `true` 2 つの場所が一致する場合と`false`それ以外の場合。  
+ `true` 2 つの場所が同じですが場合と`false`それ以外の場合。  
   
 ## <a name="see-also"></a>関連項目  
  [concurrency 名前空間](concurrency-namespace.md)

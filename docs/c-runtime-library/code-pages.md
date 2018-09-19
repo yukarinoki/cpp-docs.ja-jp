@@ -22,20 +22,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 203467eea055927ac7eb8d5ccf8a90242c62d33a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2a81b358a89f3ed16747d27bc6401c01ad194680
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388618"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113722"
 ---
 # <a name="code-pages"></a>コード ページ
 
 "*コード ページ*" は文字セットです。数字、句読点、その他のグリフを入れることができます。 言語やロケールが異なると、コード ページも異なる場合があります。 たとえば、ANSI コード ページ 1252 は英語やほとんどのヨーロッパ言語で使われていますが、日本語の漢字には OEM コード ページ 932 が使われています。
 
- コード ページはテーブルで表すことができます。文字を 1 バイト値やマルチバイト値にマッピングします。 多くのコード ページは、範囲 0x00 - 0x7F の文字に関して、ASCII 文字セットを共有しています。
+コード ページはテーブルで表すことができます。文字を 1 バイト値やマルチバイト値にマッピングします。 多くのコード ページは、範囲 0x00 - 0x7F の文字に関して、ASCII 文字セットを共有しています。
 
- Microsoft ランタイム ライブラリでは、次の種類のコード ページが使用されています。
+Microsoft ランタイム ライブラリでは、次の種類のコード ページが使用されています。
 
 - システム既定の ANSI コード ページ。 既定では、ランタイム システムはマルチバイト コード ページをシステムの既定の ANSI コード ページに自動的に設定します。既定のページはオペレーティング システムから取得されます。 呼び出し:
 
@@ -54,4 +54,4 @@ ms.locfileid: "32388618"
 ## <a name="see-also"></a>参照
 
 [国際化](../c-runtime-library/internationalization.md)<br/>
- [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>

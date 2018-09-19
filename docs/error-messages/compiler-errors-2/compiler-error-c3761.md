@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3761 |Microsoft ドキュメント
+title: コンパイラ エラー C3761 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,47 +16,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 327c1526b59f84064c9ba0e444341d8795fb98a7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d543634bf91411fcaa6acaa0b53c8b4820c6c021
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268867"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018406"
 ---
 # <a name="compiler-error-c3761"></a>コンパイラ エラー C3761
-'function': 'retval' は関数の最後の引数でのみ使用できます  
-  
- [Retval](../../windows/retval.md)属性が一覧の最後の引数が関数の引数で使用されました。  
-  
- 次の例では、C3761 が生成されます。  
-  
-```  
-// C3761.cpp  
-#define _ATL_ATTRIBUTES 1  
-#include <atlbase.h>  
-#include <atlcom.h>  
-  
-[ module(name=test) ];  
-  
-[dispinterface]  
-__interface I  
-{  
-   [id(1)] HRESULT func([out, retval] int* i, [in] int j);  
-   // try the following line instead  
-   // [id(1)] HRESULT func([in] int i, [out, retval] int* j);  
-};  
-  
-[coclass]  
-struct C : I {   // C3761  
-   HRESULT func(int* i, int j)  
-   // try the following line instead  
-   // HRESULT func(int j, int* i)  
-   {  
-      return S_OK;  
-   }  
-};  
-  
-int main()  
-{  
-}  
+
+'function': 'retval' は関数の最後の引数でのみ記述できます
+
+[Retval](../../windows/retval.md)属性がリストの最後の引数が関数の引数で使用されていました。
+
+次の例では、C3761 が生成されます。
+
+```
+// C3761.cpp
+#define _ATL_ATTRIBUTES 1
+#include <atlbase.h>
+#include <atlcom.h>
+
+[ module(name=test) ];
+
+[dispinterface]
+__interface I
+{
+   [id(1)] HRESULT func([out, retval] int* i, [in] int j);
+   // try the following line instead
+   // [id(1)] HRESULT func([in] int i, [out, retval] int* j);
+};
+
+[coclass]
+struct C : I {   // C3761
+   HRESULT func(int* i, int j)
+   // try the following line instead
+   // HRESULT func(int j, int* i)
+   {
+      return S_OK;
+   }
+};
+
+int main()
+{
+}
 ```

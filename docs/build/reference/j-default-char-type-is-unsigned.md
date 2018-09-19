@@ -1,5 +1,5 @@
 ---
-title: -J (既定の char 型の unsigned) |Microsoft ドキュメント
+title: -J (既定の char 型の unsigned) |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,45 +23,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a93172296b0e2e6d54dc428ffc62812ad979b160
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 400985751d9ceebf7cc2c5f632cb33c5ba847bfe
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374467"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714286"
 ---
 # <a name="j-default-char-type-is-unsigned"></a>/J (既定の char 型の unsigned への変更)
-既定値が変更`char`から入力`signed char`に`unsigned char`、および`char`型は、ゼロ拡張に上位変換することは、`int`型です。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-/J  
-```  
-  
-## <a name="remarks"></a>コメント  
- 場合、`char`として値が明示的に宣言`signed`、 **/J**オプションには影響しません、および値を符号拡張に上位変換するには、`int`型です。  
-  
- **/J**オプションを定義`_CHAR_UNSIGNED`で使用される`#ifndef`既定値の範囲を定義する LIMITS.h ファイルで`char`型です。  
-  
- ANSI C および C++ での特定の実装が必要ありません、`char`型です。 このオプションは、最終的に英語以外の言語に変換する文字データを扱うときに便利です。  
-  
+
+既定値が変更`char`から入力`signed char`に`unsigned char`、および`char`型ゼロ拡張は、上位変換するときに、`int`型。
+
+## <a name="syntax"></a>構文
+
+```
+/J
+```
+
+## <a name="remarks"></a>Remarks
+
+場合、`char`として値を明示的に宣言`signed`、 **/J**オプションには影響しません、および値が符号拡張され、上位変換するときに、`int`型。
+
+**/J**オプション定義`_CHAR_UNSIGNED`で使用される`#ifndef`で既定値の範囲を定義しており、LIMITS.h ファイル`char`型。
+
+ANSI C および C++ での特定の実装が必要ありません、`char`型。 このオプションは、文字データ、最終的に英語以外の言語に翻訳されますを使用している場合に便利です。
+
 > [!NOTE]
->  ATL と MFC でこのコンパイラ オプションを使用する場合、エラーを生成する可能性があります。 定義することでこのエラーを無効にすることが`_ATL_ALLOW_CHAR_UNSIGNED`、この回避策がサポートされておらず、常には動作しない可能性があります。  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
-  
-1.  **ソリューション エクスプローラー**で、プロジェクトのショートカット メニューを開き、 **[プロパティ]** をクリックします。  
-  
-2.  プロジェクトで**プロパティ ページ**ダイアログ ボックスの下の左ペインで**構成プロパティ**、展開**C/C++** し、**コマンドライン**.  
-  
-3.  **追加オプション** ウィンドウで、指定、 **/J**コンパイラ オプション。  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには  
-  
--   「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DefaultCharIsUnsigned%2A>」を参照してください。  
-  
-## <a name="see-also"></a>関連項目  
- [コンパイラ オプション](../../build/reference/compiler-options.md)   
- [コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)   
- [プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)
+>  ATL と MFC でこのコンパイラ オプションを使用する場合は、エラーを生成する可能性があります。 定義することによってこのエラーを無効にすることが`_ATL_ALLOW_CHAR_UNSIGNED`、この回避策はサポートされていないとが常に機能しません。
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+
+1. **ソリューション エクスプローラー**で、プロジェクトのショートカット メニューを開き、 **[プロパティ]** をクリックします。
+
+1. プロジェクトで**プロパティ ページ**] ダイアログ ボックスで、下の左ペインで**構成プロパティ**、展開**C/C++** し、[**コマンドライン**.
+
+1. **追加オプション**ウィンドウで、指定、 **/J**コンパイラ オプション。
+
+### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
+
+- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DefaultCharIsUnsigned%2A>
+
+## <a name="see-also"></a>関連項目
+
+[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
+[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)<br/>
+[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)

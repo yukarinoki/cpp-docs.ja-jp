@@ -1,5 +1,5 @@
 ---
-title: リソース コンパイラ エラー RC2017 |Microsoft ドキュメント
+title: リソース コンパイラ エラー RC2017 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a73acafab54c5448eaa9fbf0887a9e124311a654
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e00759ae0d987a04d60fd5f32ca0a7d18f3832c4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317012"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053844"
 ---
 # <a name="resource-compiler-error-rc2017"></a>リソース コンパイラ エラー RC2017
-無効なエスケープ シーケンス  
-  
- いずれかのない、必要なエスケープ シーケンスが表示されます。  
-  
- エスケープ シーケンス — 円記号 ( **\\** ) 数字または文字を続けて — 文字または文字列でのみ発生する可能性があります定数。
+
+無効なエスケープ シーケンス
+
+エスケープ シーケンスを 1 つは必要ありませんでしたが表示されます。
+
+エスケープ シーケンス — 円記号 ( **\\** ) 数字または文字の後に、文字または文字列でのみ発生する可能性があります定数。

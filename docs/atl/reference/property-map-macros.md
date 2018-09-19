@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf82c48cb5b1f9bd93a9c30afe8c698699c8199b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 594b02d777d87decfc218064678dbecdf8ecf0c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758093"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106352"
 ---
 # <a name="property-map-macros"></a>プロパティ マップに関するマクロ
 
@@ -55,7 +55,7 @@ BEGIN_PROP_MAP(theClass)
 
 ### <a name="parameters"></a>パラメーター
 
-*クラス*  
+*クラス*<br/>
 [in]プロパティ マップを含むクラスを指定します。
 
 ### <a name="remarks"></a>Remarks
@@ -80,13 +80,13 @@ PROP_DATA_ENTRY( szDesc, member, vt)
 
 ### <a name="parameters"></a>パラメーター
 
-*szDesc*  
+*szDesc*<br/>
 [in]プロパティの説明。
 
-*メンバー*  
+*メンバー*<br/>
 [in]エクステント; を含むデータ メンバーたとえば、`m_sizeExtent`します。
 
-*vt*  
+*vt*<br/>
 [in]プロパティのバリアント型を指定します。
 
 ### <a name="remarks"></a>Remarks
@@ -113,16 +113,16 @@ PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
 
 ### <a name="parameters"></a>パラメーター
 
-*szDesc*  
+*szDesc*<br/>
 [in]プロパティの説明。
 
-*dispid*  
+*dispid*<br/>
 [in]プロパティの DISPID。
 
-*clsid*  
+*clsid*<br/>
 [in]関連付けられているプロパティ ページの CLSID。 関連付けられたプロパティ ページがないプロパティの特別な値 CLSID_ を使用します。
 
-*vt*  
+*vt*<br/>
 [in]プロパティの型。
 
 ### <a name="remarks"></a>Remarks
@@ -145,19 +145,19 @@ PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
 
 ### <a name="parameters"></a>パラメーター
 
-*szDesc*  
+*szDesc*<br/>
 [in]プロパティの説明。
 
-*dispid*  
+*dispid*<br/>
 [in]プロパティの DISPID。
 
-*clsid*  
+*clsid*<br/>
 [in]関連付けられているプロパティ ページの CLSID。 関連付けられたプロパティ ページがないプロパティの特別な値 CLSID_ を使用します。
 
-*iidDispatch*  
+*iidDispatch*<br/>
 [in]プロパティを定義するデュアル インターフェイスの IID。
 
-*vt*  
+*vt*<br/>
 [in]プロパティの型。
 
 ### <a name="remarks"></a>Remarks
@@ -182,7 +182,7 @@ PROP_PAGE(clsid)
 
 ### <a name="parameters"></a>パラメーター
 
-*clsid*  
+*clsid*<br/>
 [in]プロパティ ページの CLSID。
 
 ### <a name="remarks"></a>Remarks

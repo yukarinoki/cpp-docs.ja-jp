@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19a49bf18721f605abe0c6e496d3532012c9c92c
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 6e23358e17558c436d82a3226f84c35a59bf63a1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340399"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43694024"
 ---
 # <a name="redistributing-the-mfc-library"></a>MFC ライブラリの再配布
 アプリケーションを MFC ライブラリに動的にリンクする場合は、一致する MFC DLL を再配布する必要があります。 たとえば、ご使用の MFC アプリが、Visual Studio 2015 に付属するバージョンの MFC を使用してビルドされている場合、アプリがナロー文字または Unicode サポートのためにコンパイルされているかに応じて、mfc140.dll または mfc140u.dl を再配布する必要があります。  
@@ -36,7 +36,7 @@ ms.locfileid: "33340399"
   
  アプリケーションで WebBrowser コントロールを実装した MFC クラス ([CHtmlView クラス](../mfc/reference/chtmlview-class.md)や [CHtmlEditView クラス](../mfc/reference/chtmleditview-class.md)など) を使用する場合は、ターゲット コンピューターのコモン コントロール ファイルが最新になるように、Microsoft Internet Explorer の最新バージョンをインストールすることもお勧めします。 (少なくとも、Internet Explorer 4.0 以降が必要です)。Internet Explorer コンポーネントの最小インストールの方法については、マイクロソフト サポート オンラインの 「Article 185375: How To Create a Single EXE Install of Internet Explorer (記事 185375: Internet Explorer のインストール ファイルである単一の exe ファイルの作成方法)」を参照してください。  
   
- アプリケーションで MFC データベース クラス ([CRecordset クラス](../mfc/reference/crecordset-class.md)や [CRecordView クラス](../mfc/reference/crecordview-class.md)など) を使用する場合は、必要な ODBC および ODBC ドライバーを再配布する必要があります。 詳細については、「[データベース サポート ファイルの再配布](../ide/redistributing-database-support-files.md)」を参照してください。  
+ アプリケーションで MFC データベース クラス ([CRecordset クラス](../mfc/reference/crecordset-class.md)や [CRecordView クラス](../mfc/reference/crecordview-class.md)など) を使用する場合は、必要な ODBC および ODBC ドライバーを再配布する必要があります。  
   
  MFC アプリケーションが Windows フォーム コントロールを使用している場合は、アプリケーションと共に mfcmifc80.dll を再配布する必要があります。 この DLL は厳密な名前で署名された .NET アセンブリです。アプリケーションと共にそのアプリケーションのローカル フォルダーに再配布できます。また、[Gacutil.exe (グローバル アセンブリ キャッシュ ツール)](/dotnet/framework/tools/gacutil-exe-gac-tool) を使用し、グローバル アセンブリ キャッシュ (GAC) に配置して再配布することもできます。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "33340399"
   
  再頒布可能 .msm ファイルには、ローカライズに使用される DLL が含まれます。 サポートされているそれぞれの言語に対して、1 つの DLL があります。 これらの DLL は、インストール プロセスによって、ターゲット コンピューターの %windir%\system32\ フォルダーにインストールされます。  
   
- MFC アプリケーションのローカライズ方法の詳細については、「[テクニカル ノート 57: MFC コンポーネントのローカライズ](../mfc/tn057-localization-of-mfc-components.md)」を参照してください。また、Microsoft サポート Web サイトの「[文書番号 208983: [HOWTO] MFC LOC DLL を使用する方法](http://go.microsoft.com/fwlink/p/?linkid=198025)」も参照してください。  
+ MFC アプリケーションのローカライズ方法の詳細については、「[テクニカル ノート 57: MFC コンポーネントのローカライズ](../mfc/tn057-localization-of-mfc-components.md)」を参照してください。
   
  MFC のローカライズ用 DLL を再配布するには、MFC DLL をアプリケーションのローカル フォルダーに配置します。 Visual C++ ライブラリを再配布する方法の詳細については、「[Visual C++ ファイルの再配布](../ide/redistributing-visual-cpp-files.md)」を参照してください。  
   

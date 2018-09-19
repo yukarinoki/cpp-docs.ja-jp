@@ -1,5 +1,5 @@
 ---
-title: 式エバリュエーター エラー CXX0046 |Microsoft ドキュメント
+title: 式エバリュエーター エラー CXX0046 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3f8092f5233d1a0e1501c3c0ea16164b96c137e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 28cffba8a424d5a8cf2160dd6a5f8718259a54b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296657"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022488"
 ---
 # <a name="expression-evaluator-error-cxx0046"></a>式エバリュエーター エラー CXX0046
-メンバー関数に必要な引数リスト  
-  
- 式は、メンバー関数と呼ばれますが、実パラメーターが指定されませんでした。  
-  
- このエラーは、can0046 と同じものと同じです。
+
+メンバー関数に必要な引数リスト
+
+式では、メンバー関数が呼び出されますが、実パラメーターが指定されませんでした。
+
+このエラーは、can0046 と同じものと同じです。

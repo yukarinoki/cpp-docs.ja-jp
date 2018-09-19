@@ -1,5 +1,5 @@
 ---
-title: malloc アライメント |Microsoft ドキュメント
+title: malloc アライメント |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,19 +12,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d503d0dd891c651a405cb79bb5ce50996f46cff6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aa6e2748691eeb8a11834bcf8e6962252be7ab3f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368666"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712063"
 ---
 # <a name="malloc-alignment"></a>malloc アライメント
-[malloc](../c-runtime-library/reference/malloc.md)割り当てられているメモリの量に合わせてでした基本的なアラインメントとを持つ任意のオブジェクトを格納するのに適切に配置されるメモリを返すことが保証されます。 A*基本的なアラインメント*が小さいアラインメント指定せずに実装によってサポートされている最大の配置を配置します。 (Visual C++ の基本的なアラインメントは、`double` つまり 8 バイトに対して必要なアラインメントです。 64 ビット プラットフォームを対象としたコードでは 16 バイトです)。たとえば、4 バイト割り当ての場合、4 バイト以下のオブジェクトをサポートする境界上にアラインメントされます。  
-  
- Visual C の許可を持つ型*拡張アラインメント*とも呼ばれるは*オーバーアラインメント*型。 Sse 命令の種類など、 [_ _m128](../cpp/m128.md)と`__m256`、しを使用して宣言されている型`__declspec(align( n ))`場所`n`8 より大きい値は、配置を拡張しました。 オブジェクトで拡張アラインメントが必要な場合、そのオブジェクトに適した境界上でのメモリのアラインメントは、`malloc` によって保証されません。 オーバーア ラインされている型のメモリを割り当てを使用して[_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md)および関連する関数。  
-  
-## <a name="see-also"></a>関連項目  
- [スタックの使用](../build/stack-usage.md)   
- [配置](../cpp/align-cpp.md)   
- [__declspec](../cpp/declspec.md)
+
+[malloc](../c-runtime-library/reference/malloc.md)メモリが割り当てられるメモリ量に合わせて基本的なアラインメントとを持つ任意のオブジェクトを格納するは、アラインメントを返すことが保証されます。 A*基本的なアラインメント*小さいアラインメントを指定せずに実装によってサポートされている最大の配置を配置します。 (Visual C++ の基本的なアラインメントは、`double` つまり 8 バイトに対して必要なアラインメントです。 64 ビット プラットフォームを対象としたコードでは 16 バイトです)。たとえば、4 バイト割り当ての場合、4 バイト以下のオブジェクトをサポートする境界上にアラインメントされます。
+
+Visual C の許可を持つ型*拡張アラインメント*とも呼ばれるは*オーバーア ラインされた*型。 たとえば、SSE 型[_ _m128](../cpp/m128.md)と`__m256`を使用して宣言されている型と`__declspec(align( n ))`場所`n`8 より大きい値は、配置を拡張します。 オブジェクトで拡張アラインメントが必要な場合、そのオブジェクトに適した境界上でのメモリのアラインメントは、`malloc` によって保証されません。 オーバーア ラインされている型のメモリを割り当てるには、使用[_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md)および関連する関数。
+
+## <a name="see-also"></a>関連項目
+
+[スタックの使用](../build/stack-usage.md)<br/>
+[align](../cpp/align-cpp.md)<br/>
+[__declspec](../cpp/declspec.md)

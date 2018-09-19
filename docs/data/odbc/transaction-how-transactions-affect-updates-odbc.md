@@ -19,23 +19,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e540b68b820234ee6d30295b40c7e0f4cb7c806d
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 21e6511a66129cb172ff10fedfa563bc4d663d19
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338591"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078518"
 ---
 # <a name="transaction-how-transactions-affect-updates-odbc"></a>トランザクション: トランザクションが更新処理に与える影響 (ODBC)
+
 更新、[データソース](../../data/odbc/data-source-odbc.md)をエディット バッファー (トランザクションの外部で使用される同じメソッド) を使用してトランザクションの中に管理されます。 レコード セットのフィールド データ メンバーは、まとめて、レコード セットを中に一時的にバックアップの現在のレコードを含むをエディット バッファーとして機能する`AddNew`または`Edit`します。 中に、`Delete`操作、現在のレコードはトランザクション内でバックアップされません。 エディット バッファーと更新プログラムが現在のレコードを格納する方法の詳細については、次を参照してください。[レコード セット: レコード更新のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)します。  
   
 > [!NOTE]
 >  バルク行フェッチを実装した場合を呼び出すことはできません`AddNew`、 `Edit`、または`Delete`します。 代わりに、データ ソースへの更新を実行する独自の関数を記述する必要があります。 バルク行フェッチの詳細については、次を参照してください。[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。  
   
- トランザクション中に`AddNew`、 `Edit`、および`Delete`操作をコミットまたはロールバックすることができます。 効果`CommitTrans`と`Rollback`現在のレコードをエディット バッファーに復元されない場合があります。 理解しておく必要が現在のレコードが正しく復元されていることを確認する方法、`CommitTrans`と`Rollback`のメンバー関数`CDatabase`の更新関数と連携して`CRecordset`します。  
+トランザクション中に`AddNew`、 `Edit`、および`Delete`操作をコミットまたはロールバックすることができます。 効果`CommitTrans`と`Rollback`現在のレコードをエディット バッファーに復元されない場合があります。 理解しておく必要が現在のレコードが正しく復元されていることを確認する方法、`CommitTrans`と`Rollback`のメンバー関数`CDatabase`の更新関数と連携して`CRecordset`します。  
   
 ##  <a name="_core_how_committrans_affects_updates"></a> CommitTrans が更新プログラムに与える影響  
- 次の表の説明の効果`CommitTrans`トランザクションにします。  
+
+次の表の説明の効果`CommitTrans`トランザクションにします。  
   
 ### <a name="how-committrans-affects-updates"></a>CommitTrans が更新プログラムに与える影響  
   
@@ -48,7 +50,8 @@ ms.locfileid: "39338591"
 |`Delete` そうしたら `CommitTrans`|レコードのデータ ソースから削除します。|  
   
 ##  <a name="_core_how_rollback_affects_updates"></a> ロールバックがトランザクションに与える影響  
- 次の表の説明の効果`Rollback`トランザクションにします。  
+
+次の表の説明の効果`Rollback`トランザクションにします。  
   
 ### <a name="how-rollback-affects-transactions"></a>ロールバックがトランザクションに与える影響  
   
@@ -61,8 +64,9 @@ ms.locfileid: "39338591"
 |`Delete` そうしたら `Rollback`|現在のレコードの内容は削除されます。|呼び出す`Requery`データ ソースから現在のレコードの内容を復元します。|データ ソースからデータの削除が取り消されます。|  
   
 ## <a name="see-also"></a>関連項目  
- [トランザクション (ODBC)](../../data/odbc/transaction-odbc.md)   
- [トランザクション (ODBC)](../../data/odbc/transaction-odbc.md)   
- [トランザクション: レコード セット (ODBC) からのトランザクションの実行](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)   
- [CDatabase クラス](../../mfc/reference/cdatabase-class.md)   
- [CRecordset クラス](../../mfc/reference/crecordset-class.md)
+
+[トランザクション (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
+[トランザクション (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
+[トランザクション: レコードセットからのトランザクション実行 (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)<br/>
+[CDatabase クラス](../../mfc/reference/cdatabase-class.md)<br/>
+[CRecordset クラス](../../mfc/reference/crecordset-class.md)

@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::operator&lt; (valarray)
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
-ms.openlocfilehash: 0c297ddf24c1ed357a0756c5e0e5631e7b3d1c02
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 83958ee300143463a1da9b10d2edb6eb1707ec4f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964835"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703561"
 ---
 # <a name="ltvalarraygt-operators"></a>&lt;valarray&gt; 演算子
 
@@ -78,11 +78,11 @@ operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- 要素が等しくないことをテストする 2 つの valarray のうち 1 つ目の valarray。
+*left*<br/>
+要素が等しくないことをテストする 2 つの valarray のうち 1 つ目の valarray。
 
-*right*  
- 要素が等しくないことをテストする 2 つの valarray のうち 2 つ目の valarray。
+*right*<br/>
+要素が等しくないことをテストする 2 つの valarray のうち 2 つ目の valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -139,12 +139,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The element-by-element result of the not equal comparison test is the
  valarray: ( 0 0 1 0 1 0 1 0 1 0 ).
-*\
+*/
 ```
 
 ## <a name="op_mod"></a>  operator%
@@ -173,11 +173,11 @@ operator%(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- 被除数の役割を果たし、別の値または valarray で除算する値または valarray。
+*left*<br/>
+被除数の役割を果たし、別の値または valarray で除算する値または valarray。
 
-*right*  
- 除数の役割を果たし、別の値または valarray を除算する値または valarray。
+*right*<br/>
+除数の役割を果たし、別の値または valarray を除算する値または valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -222,12 +222,12 @@ int main( )
          cout << vaREM [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 53 -67 53 -67 53 -67 ).
 The initial Right valarray is: ( 1 4 7 10 13 16 ).
 The remainders from the element-by-element division is the
  valarray: ( 0 -3 4 -7 1 -3 ).
-*\
+*/
 ```
 
 ## <a name="op_amp"></a>  operator&amp;
@@ -256,11 +256,11 @@ operator&(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- それぞれの要素をビットごとに `AND` で結合する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素とビットごとに結合する要素型の指定値。
+*left*<br/>
+それぞれの要素をビットごとに `AND` で結合する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素とビットごとに結合する要素型の指定値。
 
-*right*  
- それぞれの要素をビットごとに `AND` で結合する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素とビットごとに結合する要素型の指定値。
+*right*<br/>
+それぞれの要素をビットごとに `AND` で結合する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素とビットごとに結合する要素型の指定値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -311,12 +311,12 @@ int main( )
          cout << vaBWA [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is:  ( 0 2 0 4 0 6 0 8 0 10 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The element-by-element result of the bitwise operator & is the
  valarray: ( 0 0 0 0 0 4 0 0 0 8 ).
-*\
+*/
 ```
 
 ## <a name="op_amp_amp"></a>  演算子&amp;&amp;
@@ -345,11 +345,11 @@ operator&&(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- それぞれの要素を論理 `AND` で結合する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と結合する要素型の指定値。
+*left*<br/>
+それぞれの要素を論理 `AND` で結合する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と結合する要素型の指定値。
 
-*right*  
- それぞれの要素を論理 `AND` で結合する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と結合する要素型の指定値。
+*right*<br/>
+それぞれの要素を論理 `AND` で結合する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と結合する要素型の指定値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -398,12 +398,12 @@ int main( )
          cout << vaLAA [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is:  ( 0 0 0 2 0 4 0 6 0 8 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The element-by-element result of the logical AND operator&& is the
  valarray: ( 0 0 0 1 0 1 0 1 0 1 ).
-*\
+*/
 ```
 
 ## <a name="op_gt"></a>  operator&gt;
@@ -432,11 +432,11 @@ operator>(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- それぞれの要素を比較する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と比較する指定値。
+*left*<br/>
+それぞれの要素を比較する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と比較する指定値。
 
-*right*  
- それぞれの要素を比較する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と比較する指定値。
+*right*<br/>
+それぞれの要素を比較する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と比較する指定値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -489,12 +489,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( -1 0 1 2 3 4 5 6 7 8 ).
 The element-by-element result of the greater than comparison test is the
  valarray: ( 1 1 0 1 0 1 0 1 0 1 ).
-*\
+*/
 ```
 
 ## <a name="op_gt_eq"></a>  operator&gt;=
@@ -523,11 +523,11 @@ operator>=(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- それぞれの要素を比較する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と比較する指定値。
+*left*<br/>
+それぞれの要素を比較する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と比較する指定値。
 
-*right*  
- それぞれの要素を比較する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と比較する指定値。
+*right*<br/>
+それぞれの要素を比較する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と比較する指定値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -580,12 +580,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( -1 0 1 2 3 4 5 6 7 8 ).
 The element-by-element result of the greater than or equal test is the
  valarray: ( 1 1 0 1 0 1 0 1 0 1 ).
-*\
+*/
 ```
 
 ## <a name="op_gt_gt"></a>  演算子&gt;&gt;
@@ -614,11 +614,11 @@ operator>>(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- シフトする値、またはシフトする値を要素とする valarray。
+*left*<br/>
+シフトする値、またはシフトする値を要素とする valarray。
 
-*right*  
- 右シフトの量を示す値か、要素ごとの右シフトの量を示す要素から成る valarray。
+*right*<br/>
+右シフトの量を示す値か、要素ごとの右シフトの量を示す要素から成る valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -667,12 +667,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 64 -64 64 -64 64 -64 64 -64 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the right shift is the
  valarray: ( 64 -32 16 -8 4 -2 1 -1 ).
-*\
+*/
 ```
 
 ## <a name="op_lt"></a>  operator&lt;
@@ -701,11 +701,11 @@ operator<(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- それぞれの要素を比較する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と比較する指定値。
+*left*<br/>
+それぞれの要素を比較する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と比較する指定値。
 
-*right*  
- それぞれの要素を比較する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と比較する指定値。
+*right*<br/>
+それぞれの要素を比較する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と比較する指定値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -758,12 +758,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The element-by-element result of the less-than comparson test is the
  valarray: ( 0 0 1 0 1 0 1 0 1 0 ).
-*\
+*/
 ```
 
 ## <a name="op_lt_eq"></a>  演算子&lt;=
@@ -792,11 +792,11 @@ operator<=(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- それぞれの要素を比較する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と比較する指定値。
+*left*<br/>
+それぞれの要素を比較する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と比較する指定値。
 
-*right*  
- それぞれの要素を比較する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と比較する指定値。
+*right*<br/>
+それぞれの要素を比較する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と比較する指定値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -849,12 +849,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( -1 0 1 2 3 4 5 6 7 8 ).
 The element-by-element result of the less than or equal test is the
  valarray: ( 0 0 1 0 1 0 1 0 1 0 ).
-*\
+*/
 ```
 
 ## <a name="op_lt_lt"></a>  演算子&lt;&lt;
@@ -883,11 +883,11 @@ operator<<(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- シフトする値、またはシフトする値を要素とする valarray。
+*left*<br/>
+シフトする値、またはシフトする値を要素とする valarray。
 
-*right*  
- 左シフトの量を示す値か、要素ごとの左シフトの量を示す要素から成る valarray。
+*right*<br/>
+左シフトの量を示す値か、要素ごとの左シフトの量を示す要素から成る valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -936,12 +936,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 1 -1 1 -1 1 -1 1 -1 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the left shift is the
  valarray: ( 1 -2 4 -8 16 -32 64 -128 ).
-*\
+*/
 ```
 
 ## <a name="op_star"></a>  operator*
@@ -970,11 +970,11 @@ operator*(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- それぞれの要素を乗算する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と乗算する指定値。
+*left*<br/>
+それぞれの要素を乗算する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と乗算する指定値。
 
-*right*  
- それぞれの要素を乗算する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と乗算する指定値。
+*right*<br/>
+それぞれの要素を乗算する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と乗算する指定値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1019,12 +1019,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 2 -1 2 -1 2 -1 2 -1 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the multiplication is the
  valarray: ( 0 -1 4 -3 8 -5 12 -7 ).
-*\
+*/
 ```
 
 ## <a name="op_add"></a>  operator+
@@ -1053,11 +1053,11 @@ operator+(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- それぞれの要素を加算する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と加算する指定値。
+*left*<br/>
+それぞれの要素を加算する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と加算する指定値。
 
-*right*  
- それぞれの要素を加算する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と加算する指定値。
+*right*<br/>
+それぞれの要素を加算する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と加算する指定値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1102,12 +1102,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 2 -1 2 -1 2 -1 2 -1 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the sum is the
  valarray: ( 2 0 4 2 6 4 8 6 ).
-*\
+*/
 ```
 
 ## <a name="operator-"></a>  operator-
@@ -1136,11 +1136,11 @@ operator-(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- 被減数の役割を果たし、これから他の値または valarray を減算して差を求める値または valarray。
+*left*<br/>
+被減数の役割を果たし、これから他の値または valarray を減算して差を求める値または valarray。
 
-*right*  
- 減数の役割を果たし、他の値または valarray から減算して差を求める値または valarray。
+*right*<br/>
+減数の役割を果たし、他の値または valarray から減算して差を求める値または valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1191,12 +1191,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 10 0 10 0 10 0 10 0 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the difference is the
  valarray: ( 10 -1 8 -3 6 -5 4 -7 ).
-*\
+*/
 ```
 
 ## <a name="op_div"></a>  operator/
@@ -1225,11 +1225,11 @@ operator/(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- 被除数の役割を果たし、別の値または valarray で除算して商を求める値または valarray。
+*left*<br/>
+被除数の役割を果たし、別の値または valarray で除算して商を求める値または valarray。
 
-*right*  
- 除数の役割を果たし、別の値または valarray を除算して商を求める値または valarray。
+*right*<br/>
+除数の役割を果たし、別の値または valarray を除算して商を求める値または valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1280,12 +1280,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 100 -100 100 -100 100 -100 ).
 The initial Right valarray is: ( 0 2 4 6 8 10 ).
 The element-by-element result of the quotient is the
  valarray: ( inf -50 25 -16.6667 12.5 -10 ).
-*\
+*/
 ```
 
 ## <a name="op_eq_eq"></a>  operator==
@@ -1314,11 +1314,11 @@ operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- 要素が等しいことをテストする 2 つの valarray のうち 1 つ目の valarray。
+*left*<br/>
+要素が等しいことをテストする 2 つの valarray のうち 1 つ目の valarray。
 
-*right*  
- 要素が等しいことをテストする 2 つの valarray のうち 2 つ目の valarray。
+*right*<br/>
+要素が等しいことをテストする 2 つの valarray のうち 2 つ目の valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1371,12 +1371,12 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The element-by-element result of the equality comparison test is the
  valarray: ( 1 1 0 1 0 1 0 1 0 1 ).
-*\
+*/
 ```
 
 ## <a name="op_xor"></a>  operator^
@@ -1405,11 +1405,11 @@ operator^(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- それぞれの要素をビットごとに **XOR** で結合する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素とビットごとに結合する要素型の指定値。
+*left*<br/>
+それぞれの要素をビットごとに **XOR** で結合する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素とビットごとに結合する要素型の指定値。
 
-*right*  
- それぞれの要素をビットごとに **XOR** で結合する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素とビットごとに結合する要素型の指定値。
+*right*<br/>
+それぞれの要素をビットごとに **XOR** で結合する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素とビットごとに結合する要素型の指定値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1464,12 +1464,12 @@ int main( )
          cout << vaLAA [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is:  ( 1 0 1 0 1 0 1 0 1 0 ).
 The initial Right valarray is: ( 0 0 1 3 3 4 6 6 7 9 ).
 The element-by-element result of the bitwise XOR operator^ is the
  valarray: ( 1 0 0 3 2 4 7 6 6 9 ).
-*\
+*/
 ```
 
 ## <a name="op_or"></a>  operator&#124;
@@ -1498,11 +1498,11 @@ operator|(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- それぞれの要素をビットごとに `OR` で結合する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素とビットごとに結合する要素型の指定値。
+*left*<br/>
+それぞれの要素をビットごとに `OR` で結合する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素とビットごとに結合する要素型の指定値。
 
-*right*  
- それぞれの要素をビットごとに `OR` で結合する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素とビットごとに結合する要素型の指定値。
+*right*<br/>
+それぞれの要素をビットごとに `OR` で結合する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素とビットごとに結合する要素型の指定値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1557,12 +1557,12 @@ int main( )
          cout << vaLAA [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is:  ( 1 0 1 0 1 0 1 0 1 0 ).
 The initial Right valarray is: ( 0 0 1 3 3 4 6 6 7 9 ).
 The element-by-element result of the bitwise OR operator| is the
  valarray: ( 1 0 1 3 3 4 7 6 7 9 ).
-*\
+*/
 ```
 
 ## <a name="op_lor"></a>  operator&#124;&#124;
@@ -1591,11 +1591,11 @@ operator||(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*  
- それぞれの要素を論理 `OR` で結合する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と結合する要素型の指定値。
+*left*<br/>
+それぞれの要素を論理 `OR` で結合する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と結合する要素型の指定値。
 
-*right*  
- それぞれの要素を論理 `OR` で結合する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と結合する要素型の指定値。
+*right*<br/>
+それぞれの要素を論理 `OR` で結合する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と結合する要素型の指定値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1648,12 +1648,12 @@ int main( )
          cout << vaLOR [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial Left valarray is:  ( 0 0 0 2 0 4 0 6 0 8 ).
 The initial Right valarray is: ( 0 0 0 3 0 0 6 0 0 9 ).
 The element-by-element result of the logical OR operator|| is the
  valarray: ( 0 0 0 1 0 1 1 1 0 1 ).
-*\
+*/
 ```
 
 ## <a name="see-also"></a>関連項目

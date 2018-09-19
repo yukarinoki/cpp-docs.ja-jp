@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 3) C4645 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 3) C4645 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 718afb6b8336e36e0c0244cbdccd8af16ac4167f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b597678e726d6b10240c442ed7e48698a993e2fa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292910"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046538"
 ---
 # <a name="compiler-warning-level-3-c4645"></a>コンパイラの警告 (レベル 3) C4645
-__declspec(noreturn) で宣言された関数に return ステートメントがあります。  
-  
- A[返す](../../cpp/return-statement-in-program-termination-cpp.md)でマークされている関数に含まれて、 [noreturn](../../cpp/noreturn.md) `__declspec`修飾子です。 `return` ステートメントは無視されました。  
-  
- 次の例では C4645 が生成されます。  
-  
-```  
-// C4645.cpp  
-// compile with:  /W3  
-void __declspec(noreturn) func() {  
-   return;   // C4645, delete this line to resolve  
-}  
-  
-int main() {  
-}  
+
+__declspec(noreturn) で宣言された関数に return ステートメントがあります。
+
+A[返す](../../cpp/return-statement-in-program-termination-cpp.md)でマークされている関数に含まれて、 [noreturn](../../cpp/noreturn.md) `__declspec`修飾子。 `return` ステートメントは無視されました。
+
+次の例では C4645 が生成されます。
+
+```
+// C4645.cpp
+// compile with:  /W3
+void __declspec(noreturn) func() {
+   return;   // C4645, delete this line to resolve
+}
+
+int main() {
+}
 ```

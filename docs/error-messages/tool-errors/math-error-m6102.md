@@ -1,5 +1,5 @@
 ---
-title: 数値演算エラー M6102 |Microsoft ドキュメント
+title: 数値演算エラー M6102 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dc1d1064e6ed18870d60e3a421ceec0c54ca855
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ae8ee21b8cb8f2a5bffe471019e65d32c8872af3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316762"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037503"
 ---
 # <a name="math-error-m6102"></a>数値演算エラー M6102
-denormal  
-  
- 操作が無効であるある非常に小さい浮動小数点数を生成の有効桁数が失われる。 非正規化浮動小数点例外は通常はマスクされ、それらをトラップして操作の対象にします。  
-  
- プログラムは、終了コード 130 で終了します。
+
+非正規化します。
+
+操作が無効である非常に小さい浮動小数点数を生成する有効桁の損失。 非正規化浮動小数点例外は通常はマスクされ、それらをトラップして操作します。
+
+プログラムは、130 の終了コードで終了します。

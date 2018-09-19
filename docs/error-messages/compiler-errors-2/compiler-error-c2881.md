@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2881 |Microsoft ドキュメント
+title: コンパイラ エラー C2881 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68be8efee689caab28c420d745bdfb59fb25f641
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a7f74a4336af3b8ce8bfe0fa87f7f1a84746ff11
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246103"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052492"
 ---
 # <a name="compiler-error-c2881"></a>コンパイラ エラー C2881
-'namespace1': 'namespace2' に対するエイリアスとして既に使用されて  
-  
- 2 つの名前空間の別名として同じ名前を使うことはできません。  
-  
- 次の例では、C2881 が生成されます。  
-  
-```  
-// C2881.cpp  
-// compile with: /c  
-namespace A {  
-   int k;  
-}  
-  
-namespace B {  
-   int i;  
-}  
-  
-namespace C = A;  
-namespace C = B;   // C2881 C is already an alias for A  
+
+'namespace1': 'namespace2' のエイリアスとして既に使用されます
+
+同じ名前は、2 つの名前空間のエイリアスとして使用できません。
+
+次の例では、C2881 が生成されます。
+
+```
+// C2881.cpp
+// compile with: /c
+namespace A {
+   int k;
+}
+
+namespace B {
+   int i;
+}
+
+namespace C = A;
+namespace C = B;   // C2881 C is already an alias for A
 ```

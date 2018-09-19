@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4141 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4141 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6580557a5713bc7f7faf5e0e086081dcc156d5af
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e7155aeeb352f626d56f1c04cf05b03584fdc639
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271974"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075853"
 ---
 # <a name="compiler-warning-level-1-c4141"></a>コンパイラの警告 (レベル 1) C4141
-'modifier': 2 度以上使用されています  
-  
-## <a name="example"></a>例  
-  
-```  
-// C4141.cpp  
-// compile with: /W1 /LD  
-inline inline void func ();   // C4141  
+
+'modifier': 2 度以上使用されています
+
+## <a name="example"></a>例
+
+```
+// C4141.cpp
+// compile with: /W1 /LD
+inline inline void func ();   // C4141
 ```

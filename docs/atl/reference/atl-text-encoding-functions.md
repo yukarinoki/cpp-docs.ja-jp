@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5043b421d4ca63b22cde0f413e68b3a666a483b3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b77c814b3ce2f372ae34e3c0293951ec23cdf6a6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757472"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090751"
 ---
 # <a name="atl-text-encoding-functions"></a>ATL テキスト エンコード関数
 
@@ -44,7 +44,7 @@ ms.locfileid: "43757472"
 
 |||
 |-|-|
-|[AtlGetHexValue](#atlgethexvalue)|16 進数の数値を取得します。|   
+|[AtlGetHexValue](#atlgethexvalue)|16 進数の数値を取得します。|
 |[AtlGetVersion](#atlgetversion)|使用している、ATL ライブラリのバージョンを取得するには、この関数を呼び出します。  |
 |[AtlHexDecode](#atlhexdecode)|以前の呼び出しで 16 進テキストとしてエンコードされたデータの文字列をデコード[AtlHexEncode](#atlhexencode)します。|
 |[AtlHexDecodeGetRequiredLength](#atlhexdecodegetrequiredlength)|指定した長さの 16 進エンコードされた文字列からデコードされたデータを格納できるバッファーのサイズを、バイト単位で取得します。|
@@ -70,19 +70,19 @@ ms.locfileid: "43757472"
 
 ## <a name="requirements"></a>要件
 
-**ヘッダー:** atlenc.h の関数  
+**ヘッダー:** atlenc.h の関数
 
 ## <a name="atlgethexvalue"></a> AtlGetHexValue
 
 16 進数の数値を取得します。
 
 ```
-inline char AtlGetHexValue(char chIn) throw();  
+inline char AtlGetHexValue(char chIn) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*chIn*  
+*chIn*<br/>
 16 進数の文字 '0' ~ '9'、'A'-'F' または 'a'-'f'。
 
 ### <a name="return-value"></a>戻り値
@@ -93,13 +93,13 @@ inline char AtlGetHexValue(char chIn) throw();
 
 使用している、ATL ライブラリのバージョンを取得するには、この関数を呼び出します。
 
-```  
-ATLAPI_(DWORD) AtlGetVersion(void* pReserved);  
+```
+ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*保持*  
+*保持*<br/>
 予約済みのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -114,32 +114,32 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 
 ### <a name="requirements"></a>要件
 
-**ヘッダー:** atlbase.h  
+**ヘッダー:** atlbase.h
 
 ## <a name="atlhexdecode"></a> AtlHexDecode
 
 以前の呼び出しで 16 進テキストとしてエンコードされたデータの文字列をデコード[AtlHexEncode](#atlhexencode)します。
 
-```    
-inline BOOL AtlHexDecode(  
-   LPCSTR pSrcData,  
-   int nSrcLen,  
-   LPBYTE pbDest,  
-   int* pnDestLen) throw();  
+```
+inline BOOL AtlHexDecode(
+   LPCSTR pSrcData,
+   int nSrcLen,
+   LPBYTE pbDest,
+   int* pnDestLen) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*pSrcData*  
+*pSrcData*<br/>
 デコードするデータを含む文字列。
 
-*nSrcLen*  
+*nSrcLen*<br/>
 文字の長さ*pSrcData*します。
 
-*pbDest*  
+*pbDest*<br/>
 デコードされたデータを受信する呼び出し元が割り当てたバッファー。
 
-*pnDestLen*  
+*pnDestLen*<br/>
 バイト単位の長さを格納する変数を指すポインター *pbDest*します。 関数が成功すると、変数は、バッファーに書き込まれたバイト数を受け取ります。 関数が失敗した場合、変数は、バッファーのバイトで、必要な長さを受け取ります。
 
 ### <a name="return-value"></a>戻り値
@@ -150,13 +150,13 @@ inline BOOL AtlHexDecode(
 
 指定した長さの 16 進エンコードされた文字列からデコードされたデータを格納できるバッファーのサイズを、バイト単位で取得します。
 
-```  
-inline int AtlHexDecodeGetRequiredLength(int nSrcLen) throw();  
+```
+inline int AtlHexDecodeGetRequiredLength(int nSrcLen) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*nSrcLen*  
+*nSrcLen*<br/>
 エンコードされた文字列内の文字の数。
 
 ### <a name="return-value"></a>戻り値
@@ -167,26 +167,26 @@ inline int AtlHexDecodeGetRequiredLength(int nSrcLen) throw();
 
 一部のデータを 16 進テキストの文字列としてエンコードします。
 
-```  
-inline BOOL AtlHexEncode(  
-   const BYTE * pbSrcData,  
-   int nSrcLen,  
-   LPSTR szDest,  
-int * pnDestLen) throw();  
+```
+inline BOOL AtlHexEncode(
+   const BYTE * pbSrcData,
+   int nSrcLen,
+   LPSTR szDest,
+int * pnDestLen) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*pbSrcData*  
+*pbSrcData*<br/>
 エンコードするデータを保持するバッファー。
 
-*nSrcLen*  
+*nSrcLen*<br/>
 エンコードするデータの長さを (バイト単位)。
 
-*ときに szDest*  
+*ときに szDest*<br/>
 エンコードされたデータを受信する呼び出し元が割り当てたバッファー。
 
-*pnDestLen*  
+*pnDestLen*<br/>
 文字の長さを格納する変数へのポインター*ときに szDest*します。 関数が成功すると、変数は、バッファーに書き込まれた文字数を受け取ります。 関数が失敗した場合、変数は、バッファーの文字で、必要な長さを受け取ります。
 
 ### <a name="return-value"></a>戻り値
@@ -201,13 +201,13 @@ int * pnDestLen) throw();
 
 指定したサイズのデータからエンコードされた文字列を格納できるバッファーのサイズを、文字数で取得します。
 
-```  
-inline int AtlHexEncodeGetRequiredLength(int nSrcLen) throw();  
+```
+inline int AtlHexEncodeGetRequiredLength(int nSrcLen) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*nSrcLen*  
+*nSrcLen*<br/>
 エンコードするデータのバイト数。
 
 ### <a name="return-value"></a>戻り値
@@ -218,13 +218,13 @@ inline int AtlHexEncodeGetRequiredLength(int nSrcLen) throw();
 
 16 進数の数値を取得します。
 
-```  
-inline short AtlHexValue(char chIn) throw();  
+```
+inline short AtlHexValue(char chIn) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*chIn*  
+*chIn*<br/>
 16 進数の文字 '0' ~ '9'、'A'-'F' または 'a'-'f'。
 
 ### <a name="return-value"></a>戻り値
@@ -235,26 +235,26 @@ inline short AtlHexValue(char chIn) throw();
 
 Unicode 文字列を UTF-8 に変換します。
 
-```  
-ATL_NOINLINE inline int AtlUnicodeToUTF8(  
-   LPCWSTR wszSrc,  
-   int nSrc,  
-   LPSTR szDest,  
-   int nDest) throw();  
+```
+ATL_NOINLINE inline int AtlUnicodeToUTF8(
+   LPCWSTR wszSrc,
+   int nSrc,
+   LPSTR szDest,
+   int nDest) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*wszSrc*  
+*wszSrc*<br/>
 変換対象の Unicode 文字列
 
-*nSrc*  
+*nSrc*<br/>
 Unicode 文字列の文字の長さ。
 
-*ときに szDest*  
+*ときに szDest*<br/>
 変換後の文字列を受信する呼び出し元が割り当てたバッファー。
 
-*nDest*  
+*nDest*<br/>
 バッファーの長さを (バイト単位)。
 
 ### <a name="return-value"></a>戻り値
@@ -269,30 +269,30 @@ Unicode 文字列の文字の長さ。
 
 "B" エンコーディングを使用して一部のデータを変換します。
 
-```  
-inline BOOL BEncode(  
-   BYTE* pbSrcData,  
-   int nSrcLen,  
-   LPSTR szDest,  
-   int* pnDestLen,  
-   LPCSTR pszCharSet) throw();  
+```
+inline BOOL BEncode(
+   BYTE* pbSrcData,
+   int nSrcLen,
+   LPSTR szDest,
+   int* pnDestLen,
+   LPCSTR pszCharSet) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*pbSrcData*  
+*pbSrcData*<br/>
 エンコードするデータを保持するバッファー。
 
-*nSrcLen*  
+*nSrcLen*<br/>
 エンコードするデータの長さを (バイト単位)。
 
-*ときに szDest*  
+*ときに szDest*<br/>
 エンコードされたデータを受信する呼び出し元が割り当てたバッファー。
 
-*pnDestLen*  
+*pnDestLen*<br/>
 文字の長さを格納する変数へのポインター*ときに szDest*します。 関数が成功すると、変数は、バッファーに書き込まれた文字数を受け取ります。 関数が失敗した場合、変数は、バッファーの文字で、必要な長さを受け取ります。
 
-*pszCharSet*  
+*pszCharSet*<br/>
 文字変換を使用する設定。
 
 ### <a name="return-value"></a>戻り値
@@ -307,16 +307,16 @@ inline BOOL BEncode(
 
 指定したサイズのデータからエンコードされた文字列を格納できるバッファーのサイズを、文字数で取得します。
 
-```  
-inline int BEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();  
+```
+inline int BEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*nSrcLen*  
+*nSrcLen*<br/>
 エンコードするデータのバイト数。
 
-*nCharsetLen*  
+*nCharsetLen*<br/>
 変換に使用する文字セットの文字の数。
 
 ### <a name="return-value"></a>戻り値
@@ -331,31 +331,31 @@ inline int BEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 
 XML での使用には安全でない文字を安全な文字に変換します。
 
-```  
-inline int EscapeXML(  
-   const wchar_t * szIn,  
-   int nSrcLen,  
-   wchar_t * szEsc,  
-   int nDestLen,  
-   DWORD dwFlags = ATL_ESC_FLAG_NONE) throw();  
+```
+inline int EscapeXML(
+   const wchar_t * szIn,
+   int nSrcLen,
+   wchar_t * szEsc,
+   int nDestLen,
+   DWORD dwFlags = ATL_ESC_FLAG_NONE) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*szIn*  
+*szIn*<br/>
 変換対象の文字列。
 
-*nSrclen*  
+*nSrclen*<br/>
 変換する文字列の文字の長さ。
 
-*szEsc*  
+*szEsc*<br/>
 変換後の文字列を受信する呼び出し元が割り当てたバッファー。
 
-*nDestLen*  
+*nDestLen*<br/>
 呼び出し元が割り当てたバッファーの文字の数。
 
-*dwFlags*  
-変換の実行方法を記述する ATL_ESC フラグ。 
+*dwFlags*<br/>
+変換の実行方法を記述する ATL_ESC フラグ。
 
 - ATL_ESC_FLAG_NONE の既定の動作です。 引用符に、アポストロフィは変換されません。
 - 引用符で囲む ATL_ESC_FLAG_ATTR マークおよびアポストロフィに変換されます`&quot;`と`&apos;`それぞれします。
@@ -380,16 +380,16 @@ inline int EscapeXML(
 
 文字列に含まれる拡張文字の数を取得します。
 
-```  
-inline int GetExtendedChars(LPCSTR szSrc, int nSrcLen) throw();  
+```
+inline int GetExtendedChars(LPCSTR szSrc, int nSrcLen) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*szSrc*  
+*szSrc*<br/>
 分析する文字列。
 
-*nSrcLen*  
+*nSrcLen*<br/>
 文字列の文字の長さ。
 
 ### <a name="return-value"></a>戻り値
@@ -400,13 +400,13 @@ inline int GetExtendedChars(LPCSTR szSrc, int nSrcLen) throw();
 
 指定された文字が拡張文字 (文字コードが 31 以下または 127 以上で、タブ、ラインフィード、キャリッジ リターン以外の文字) かどうかを判断します。
 
-```  
-inline int IsExtendedChar(char ch) throw();  
+```
+inline int IsExtendedChar(char ch) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*ch*  
+*ch*<br/>
 テストする文字
 
 ### <a name="return-value"></a>戻り値
@@ -417,34 +417,34 @@ inline int IsExtendedChar(char ch) throw();
 
 "Q" エンコーディングを使用して一部のデータを変換します。
 
-```  
-inline BOOL QEncode(  
-   BYTE* pbSrcData,  
-   int nSrcLen,  
-   LPSTR szDest,  
-   int* pnDestLen,  
-   LPCSTR pszCharSet,  
-   int* pnNumEncoded = NULL) throw();  
+```
+inline BOOL QEncode(
+   BYTE* pbSrcData,
+   int nSrcLen,
+   LPSTR szDest,
+   int* pnDestLen,
+   LPCSTR pszCharSet,
+   int* pnNumEncoded = NULL) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*pbSrcData*  
+*pbSrcData*<br/>
 エンコードするデータを保持するバッファー。
 
-*nSrcLen*  
+*nSrcLen*<br/>
 エンコードするデータの長さを (バイト単位)。
 
-*ときに szDest*  
+*ときに szDest*<br/>
 エンコードされたデータを受信する呼び出し元が割り当てたバッファー。
 
-*pnDestLen*  
+*pnDestLen*<br/>
 文字の長さを格納する変数へのポインター*ときに szDest*します。 関数が成功すると、変数は、バッファーに書き込まれた文字数を受け取ります。 関数が失敗した場合、変数は、バッファーの文字で、必要な長さを受け取ります。
 
-*pszCharSet*  
+*pszCharSet*<br/>
 文字変換を使用する設定。
 
-*pnNumEncoded*  
+*pnNumEncoded*<br/>
 変換する必要があった安全でない文字の数を格納する変数へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -459,16 +459,16 @@ inline BOOL QEncode(
 
 指定したサイズのデータからエンコードされた文字列を格納できるバッファーのサイズを、文字数で取得します。
 
-```  
-inline int QEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();  
+```
+inline int QEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*nSrcLen*  
+*nSrcLen*<br/>
 エンコードするデータのバイト数。
 
-*nCharsetLen*  
+*nCharsetLen*<br/>
 変換に使用する文字セットの文字の数。
 
 ### <a name="return-value"></a>戻り値
@@ -483,31 +483,31 @@ inline int QEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 
 以前の呼び出しによってなど quoted-printable 形式でエンコードされているデータの文字列をデコード[QPEncode](#qpencode)します。
 
-```  
-inline BOOL QPDecode(  
-   BYTE* pbSrcData,  
-   int nSrcLen,  
-   LPSTR szDest,  
-   int* pnDestLen,  
-   DWORD dwFlags = 0) throw();  
+```
+inline BOOL QPDecode(
+   BYTE* pbSrcData,
+   int nSrcLen,
+   LPSTR szDest,
+   int* pnDestLen,
+   DWORD dwFlags = 0) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pbSrcData*  
-デコードするデータを保持するバッファー。
+*pbSrcData*<br/>
+[in]デコードするデータを保持するバッファー。
 
-[in]*nSrcLen*  
-バイト長*pbSrcData*します。
+*nSrcLen*<br/>
+[in]バイト長*pbSrcData*します。
 
-[out]*ときに szDest*  
-デコードされたデータを受信する呼び出し元が割り当てたバッファー。
+*ときに szDest*<br/>
+[out]デコードされたデータを受信する呼び出し元が割り当てたバッファー。
 
-[out]*pnDestLen*  
-バイト単位の長さを格納する変数を指すポインター*ときに szDest*します。 関数が成功すると、変数は、バッファーに書き込まれたバイト数を受け取ります。 関数が失敗した場合、変数は、バッファーのバイトで、必要な長さを受け取ります。
+*pnDestLen*<br/>
+[out]バイト単位の長さを格納する変数を指すポインター*ときに szDest*します。 関数が成功すると、変数は、バッファーに書き込まれたバイト数を受け取ります。 関数が失敗した場合、変数は、バッファーのバイトで、必要な長さを受け取ります。
 
-[in]*dwFlags*  
-変換の実行方法を記述する ATLSMTP_QPENCODE フラグ。
+*dwFlags*<br/>
+[in]変換の実行方法を記述する ATLSMTP_QPENCODE フラグ。
 
 ### <a name="return-value"></a>戻り値
 
@@ -521,13 +521,13 @@ inline BOOL QPDecode(
 
 quoted-printable にエンコードされた指定長の文字列からデコードされたデータを格納できるバッファーのサイズを、バイト単位で取得します。
 
-```  
-inline int QPDecodeGetRequiredLength(int nSrcLen) throw();  
+```
+inline int QPDecodeGetRequiredLength(int nSrcLen) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*nSrcLen*  
+*nSrcLen*<br/>
 エンコードされた文字列内の文字の数。
 
 ### <a name="return-value"></a>戻り値
@@ -542,32 +542,34 @@ inline int QPDecodeGetRequiredLength(int nSrcLen) throw();
 
 一部のデータを quoted-printable 形式にエンコードします。
 
-```  
-inline BOOL QPEncode(  
-   BYTE* pbSrcData,  
-   int nSrcLen,  
-   LPSTR szDest,  
-   int* pnDestLen,  
-   DWORD dwFlags = 0) throw ();  
+```
+inline BOOL QPEncode(
+   BYTE* pbSrcData,
+   int nSrcLen,
+   LPSTR szDest,
+   int* pnDestLen,
+   DWORD dwFlags = 0) throw ();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*pbSrcData*  
+*pbSrcData*<br/>
 エンコードするデータを保持するバッファー。
 
-*nSrcLen*  
+*nSrcLen*<br/>
 エンコードするデータの長さを (バイト単位)。
 
-*ときに szDest*  
+*ときに szDest*<br/>
 エンコードされたデータを受信する呼び出し元が割り当てたバッファー。
 
-*pnDestLen*  
+*pnDestLen*<br/>
 文字の長さを格納する変数へのポインター*ときに szDest*します。 関数が成功すると、変数は、バッファーに書き込まれた文字数を受け取ります。 関数が失敗した場合、変数は、バッファーの文字で、必要な長さを受け取ります。
 
-*dwFlags*  
-変換の実行方法を記述する ATLSMTP_QPENCODE フラグ。 
+*dwFlags*<br/>
+変換の実行方法を記述する ATLSMTP_QPENCODE フラグ。
+
 - ATLSMTP_QPENCODE_DOT 場合、行の先頭にピリオドが表示されます、これは、出力に追加だけでなくエンコードします。
+
 - ATLSMTP_QPENCODE_TRAILING_SOFT 追加`=\r\n`エンコードされた文字列にします。
 
 引用符で囲まれた印刷可能なエンコード スキームについては、「 [RFC 2045](http://www.ietf.org/rfc/rfc2045.txt)します。
@@ -584,13 +586,13 @@ inline BOOL QPEncode(
 
 指定したサイズのデータからエンコードされた文字列を格納できるバッファーのサイズを、文字数で取得します。
 
-```  
-inline int QPEncodeGetRequiredLength(int nSrcLen) throw ();  
+```
+inline int QPEncodeGetRequiredLength(int nSrcLen) throw ();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*nSrcLen*  
+*nSrcLen*<br/>
 エンコードするデータのバイト数。
 
 ### <a name="return-value"></a>戻り値
@@ -605,26 +607,26 @@ inline int QPEncodeGetRequiredLength(int nSrcLen) throw ();
 
 呼び出しなど、以前の呼び出しによって uuencode されているデータの文字列をデコード[UUEncode](#uuencode)します。
 
-```  
-inline BOOL UUDecode(  
-   BYTE* pbSrcData,  
-   int nSrcLen,  
-   BYTE* pbDest,  
-   int* pnDestLen) throw ();  
+```
+inline BOOL UUDecode(
+   BYTE* pbSrcData,
+   int nSrcLen,
+   BYTE* pbDest,
+   int* pnDestLen) throw ();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*pbSrcData*  
+*pbSrcData*<br/>
 デコードするデータを含む文字列。
 
-*nSrcLen*  
+*nSrcLen*<br/>
 バイト長*pbSrcData*します。
 
-*pbDest*  
+*pbDest*<br/>
 デコードされたデータを受信する呼び出し元が割り当てたバッファー。
 
-*pnDestLen*  
+*pnDestLen*<br/>
 バイト単位の長さを格納する変数を指すポインター *pbDest*します。 関数が成功すると、変数は、バッファーに書き込まれたバイト数を受け取ります。 関数が失敗した場合、変数は、バッファーのバイトで、必要な長さを受け取ります。
 
 ### <a name="return-value"></a>戻り値
@@ -639,13 +641,13 @@ inline BOOL UUDecode(
 
 指定した長さの uuencode された文字列からデコードされたデータを格納できるバッファーのサイズを、バイト単位で取得します。
 
-```  
-inline int UUDecodeGetRequiredLength(int nSrcLen) throw ();  
+```
+inline int UUDecodeGetRequiredLength(int nSrcLen) throw ();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*nSrcLen*  
+*nSrcLen*<br/>
 エンコードされた文字列内の文字の数。
 
 ### <a name="return-value"></a>戻り値
@@ -660,37 +662,40 @@ inline int UUDecodeGetRequiredLength(int nSrcLen) throw ();
 
 データを uuencode します。
 
-```  
-inline BOOL UUEncode(  
-   const BYTE* pbSrcData,  
-   int nSrcLen,  
-   LPSTR szDest,  
-   int* pnDestLen,  
-   LPCTSTR lpszFile = _T("file"),  
-   DWORD dwFlags = 0) throw ();  
+```
+inline BOOL UUEncode(
+   const BYTE* pbSrcData,
+   int nSrcLen,
+   LPSTR szDest,
+   int* pnDestLen,
+   LPCTSTR lpszFile = _T("file"),
+   DWORD dwFlags = 0) throw ();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*pbSrcData*  
+*pbSrcData*<br/>
 エンコードするデータを保持するバッファー。
 
-*nSrcLen*  
+*nSrcLen*<br/>
 エンコードするデータの長さを (バイト単位)。
 
-*ときに szDest*  
+*ときに szDest*<br/>
 エンコードされたデータを受信する呼び出し元が割り当てたバッファー。
 
-*pnDestLen*  
+*pnDestLen*<br/>
 文字の長さを格納する変数へのポインター*ときに szDest*します。 関数が成功すると、変数は、バッファーに書き込まれた文字数を受け取ります。 関数が失敗した場合、変数は、バッファーの文字で、必要な長さを受け取ります。
 
-*プリケーション*  
+*プリケーション*<br/>
 ATLSMTP_UUENCODE_HEADER がで指定した場合、ヘッダーに追加するファイル*dwFlags*します。
 
-*dwFlags*  
-この関数の動作を制御するフラグ。 
+*dwFlags*<br/>
+この関数の動作を制御するフラグ。
+
 - ATLSMTP_UUENCODE_HEADE ヘッダーがエンコードされます。
+
 - ATLSMTP_UUENCODE_END 末尾がエンコードされます。
+
 - ATLSMTP_UUENCODE_DOT データの埋め込みが行われます。
 
 ### <a name="return-value"></a>戻り値
@@ -705,13 +710,13 @@ ATLSMTP_UUENCODE_HEADER がで指定した場合、ヘッダーに追加する�
 
 指定したサイズのデータからエンコードされた文字列を格納できるバッファーのサイズを、文字数で取得します。
 
-```  
-inline int UUEncodeGetRequiredLength(int nSrcLen) throw ();  
+```
+inline int UUEncodeGetRequiredLength(int nSrcLen) throw ();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*nSrcLen*  
+*nSrcLen*<br/>
 エンコードするデータのバイト数。
 
 ### <a name="return-value"></a>戻り値
@@ -724,5 +729,5 @@ inline int UUEncodeGetRequiredLength(int nSrcLen) throw ();
 
 ### <a name="see-also"></a>関連項目
 
-[概念](../../atl/active-template-library-atl-concepts.md)   
-[ATL COM デスクトップ コンポーネント](../../atl/atl-com-desktop-components.md)   
+[概念](../../atl/active-template-library-atl-concepts.md)<br/>
+[ATL COM デスクトップ コンポーネント](../../atl/atl-com-desktop-components.md)

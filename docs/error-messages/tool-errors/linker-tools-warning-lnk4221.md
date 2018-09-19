@@ -1,5 +1,5 @@
 ---
-title: リンカー ツールの警告 LNK4221 |Microsoft ドキュメント
+title: リンカー ツールの警告 LNK4221 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8906c4308b8586d5b1312739921f58063e820deb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 921f3a563b465332408c112deca61faa01e26cac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301009"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032914"
 ---
 # <a name="linker-tools-warning-lnk4221"></a>リンカー ツールの警告 LNK4221
-このライブラリを使用するリンク操作では使用されませんに、このオブジェクト ファイルで、以前に定義されていないパブリック シンボルが定義されていません  
-  
- 次の 2 つのコード スニペットを検討してください。  
-  
-```  
-// a.cpp  
-#include <atlbase.h>  
-```  
-  
-```  
-// b.cpp  
-#include <atlbase.h>  
-int function()  
-{  
-   return 0;  
-}  
-  
-```  
-  
- ファイルをコンパイルして、2 つのオブジェクト ファイルを作成、実行**cl/c a.cpp b.cpp**コマンド プロンプトでします。 実行して、オブジェクト ファイルをリンクする場合は **/out:test.lib a.obj b.obj を/lib リンク**、LNK4221 警告が表示されます。 実行して、オブジェクトをリンクする場合は **/out:test.lib b.obj a.obj を/lib リンク**警告を受け取ることはありません。  
-  
- 2 番目のシナリオで警告が発行されない、リンカーは後入れ先出し (LIFO) の方法で動作するためです。 最初のシナリオでは、b.obj a.obj の前に処理され、a.obj に追加する新しいシンボルがありません。 A.obj を最初に処理するようにリンカーを指示するには、警告を回避できます。  
-  
- このエラーの一般的な原因は次の 2 つのソース ファイル オプションを指定する場合に[/Yc (プリコンパイル済みヘッダー ファイルの作成)](../../build/reference/yc-create-precompiled-header-file.md)で指定された同じヘッダー ファイルの名前を持つ、**プリコンパイル済みヘッダーの**フィールドです。 この問題の一般的な原因を取り扱います stdafx.h ので、既定では、stdafx.cpp stdafx.h を含む新しいシンボルを追加しません。 別のソース ファイルには、stdafx.h とが含まれている場合 **/Yc** stdafx.obj する前に、関連付けられている .obj ファイルが処理されると、リンカー LNK4221 がスローされます。  
-  
- 1 つの方法にことを確認してプリコンパイル済みヘッダーごとには、この問題を解決するのには、1 つだけソース ファイルがでこれを含む **/Yc**です。 その他のすべてのソース ファイルには、プリコンパイル済みヘッダーを使用する必要があります。 この設定を変更する方法の詳細については、次を参照してください。 [/Yu (プリコンパイル済みヘッダー ファイルの使用)](../../build/reference/yu-use-precompiled-header-file.md)です。
+
+このオブジェクト ファイルが、以前に定義されていないパブリック シンボルを定義していないため、このライブラリを使用するすべてのリンク操作では使用されません。
+
+次の 2 つのコード スニペットを検討してください。
+
+```
+// a.cpp
+#include <atlbase.h>
+```
+
+```
+// b.cpp
+#include <atlbase.h>
+int function()
+{
+   return 0;
+}
+
+```
+
+ファイルをコンパイルして、2 つのオブジェクト ファイルを作成、実行**cl/c a.cpp b.cpp**コマンド プロンプトでします。 実行して、オブジェクト ファイルをリンクする場合 **/out:test.lib a.obj b.obj を/lib リンク**、LNK4221 警告が表示されます。 実行して、オブジェクトをリンクする場合**リンク/lib、/out:test.lib b.obj a.obj**警告は受け取りません。
+
+2 番目のシナリオで警告が発行されないため、リンカーは後入れ先出し (LIFO) の方法で動作します。 最初のシナリオでは、b.obj a.obj の前に処理され、a.obj に追加する新しいシンボルがありません。 A.obj を最初に処理するようにリンカーに指示して、警告を回避できます。
+
+このエラーの一般的な原因は 2 つのソース ファイル オプションを指定すると[/Yc (プリコンパイル済みヘッダー ファイルの作成)](../../build/reference/yc-create-precompiled-header-file.md)で指定された同じヘッダー ファイルの名前を持つ、**プリコンパイル済みヘッダーの**フィールド。 この問題の一般的な原因は、ため、既定では、stdafx.cpp が stdafx.h が含まれていて、新しいシンボルを追加できません、stdafx.h を処理します。 別のソース ファイルには、stdafx.h でが含まれている場合 **/Yc**と stdafx.obj する前に、関連付けられている .obj ファイルが処理されると、リンカー LNK4221 がスローされます。
+
+あるでそれを含む 1 つだけのソース ファイルは、ことを確認するプリコンパイル済みヘッダーごとにこの問題は、解決するのには一方向、 **/Yc**します。 その他のすべてのソース ファイルには、プリコンパイル済みヘッダーを使用する必要があります。 この設定を変更する方法の詳細については、次を参照してください。 [/Yu (プリコンパイル済みヘッダー ファイルの使用)](../../build/reference/yu-use-precompiled-header-file.md)します。

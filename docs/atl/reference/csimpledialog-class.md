@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a476daeb680048c7bbb21565014487f6b937c78
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f58efa7b7ba5c0452f2418a2dbbc27c94eedaca6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754892"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087956"
 ---
 # <a name="csimpledialog-class"></a>CSimpleDialog クラス
 
@@ -35,7 +35,7 @@ ms.locfileid: "43754892"
 ## <a name="syntax"></a>構文
 
 ```
-template <WORD t_wDlgTemplateID, BOOL t_bCenter = TRUE>  
+template <WORD t_wDlgTemplateID, BOOL t_bCenter = TRUE>
 class CSimpleDialog : public CDialogImplBase
 ```
 
@@ -45,7 +45,7 @@ class CSimpleDialog : public CDialogImplBase
 
 ダイアログ テンプレート リソースのリソース ID。
 
-*t_bCenter*  
+*t_bCenter*<br/>
 ダイアログ オブジェクトは、オーナー ウィンドウの 中央揃えにする場合は TRUE。それ以外の場合は FALSE です。
 
 ## <a name="members"></a>メンバー
@@ -84,7 +84,7 @@ INT_PTR DoModal(HWND hWndParent = ::GetActiveWindow());
 
 ### <a name="parameters"></a>パラメーター
 
-*hWndParent*  
+*hWndParent*<br/>
 ダイアログ ボックスの親へのハンドル。 値が指定されていない場合は、親が現在アクティブなウィンドウに設定されます。
 
 ### <a name="return-value"></a>戻り値

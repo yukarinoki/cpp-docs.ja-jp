@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2114 |Microsoft ドキュメント
+title: コンパイラ エラー C2114 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d781a63eeee0a39b923c7f31896e23d1dcc440cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 973a71096e3dee549140e7e1f070049a26dfc573
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165345"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047058"
 ---
 # <a name="compiler-error-c2114"></a>コンパイラ エラー C2114
-'operator' : 左オペランドがポインターなので、右オペランドは整数値でなければなりません  
-  
- `operator` の左オペランド がポインターなので、右オペランドは整数値でなければなりません。
+
+'operator' : 左オペランドがポインターなので、右オペランドは整数値でなければなりません
+
+`operator` の左オペランド がポインターなので、右オペランドは整数値でなければなりません。

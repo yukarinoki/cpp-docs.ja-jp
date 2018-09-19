@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3672 |Microsoft ドキュメント
+title: コンパイラ エラー C3672 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aaea09d89c192a1820c2a384144ce758fde90476
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0002b6fdf25374ec0d977c5fa4f450e41d29335f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263948"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090647"
 ---
 # <a name="compiler-error-c3672"></a>コンパイラ エラー C3672
-擬似デストラクター式は、関数呼び出しの一部としてのみ使用できます。  
-  
- デストラクターが正しく呼び出されませんでした。  詳細については、次を参照してください。[デストラクター](../../cpp/destructors-cpp.md)です。  
-  
-## <a name="example"></a>例  
- 次の例では、C3672 を生成します。  
-  
-```  
-// C3672.cpp  
-template<typename T>  
-void f(T* pT) {  
-   &pT->T::~T;   // C3672  
-   pT->T::~T();   // OK  
-};  
-  
-int main() {  
-   int i;  
-   f(&i);  
-}  
+
+擬似デストラクター式は、関数呼び出しの一部としてのみ使用できます。
+
+デストラクターが正しく呼び出されませんでした。  詳細については、次を参照してください。[デストラクター](../../cpp/destructors-cpp.md)します。
+
+## <a name="example"></a>例
+
+次の例では、C3672 が生成されます。
+
+```
+// C3672.cpp
+template<typename T>
+void f(T* pT) {
+   &pT->T::~T;   // C3672
+   pT->T::~T();   // OK
+};
+
+int main() {
+   int i;
+   f(&i);
+}
 ```

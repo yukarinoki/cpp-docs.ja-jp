@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84f62346d12c978a466de14357352f78345e99f1
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: bc03777a490613cb3da111e4a3b678311f09f678
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43691109"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706538"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>CMFCOutlookBarPane クラス
 詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。  
@@ -184,32 +184,32 @@ BOOL AddButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiImage*  
- ビットマップのリソース識別子を指定します。  
+*uiImage*<br/>
+[in]ビットマップのリソース識別子を指定します。  
   
- [in]*lpszLabel*  
- ボタンのテキストを指定します。  
+*lpszLabel*<br/>
+[in]ボタンのテキストを指定します。  
   
- [in]*iIdCommand*  
- ボタン コントロールの ID を指定します  
+*iIdCommand*<br/>
+[in]ボタン コントロールの ID を指定します  
   
- [in]*iInsertAt*  
- Outlook バーのページ、ボタンを挿入する位置の 0 から始まるインデックスを指定します。  
+*iInsertAt*<br/>
+[in]Outlook バーのページ、ボタンを挿入する位置の 0 から始まるインデックスを指定します。  
   
- [in]*uiLabel*  
- 文字列リソース id。  
+*uiLabel*<br/>
+[in]文字列リソース id。  
   
- [in]*szBmpFileName*  
- 読み込むディスク イメージ ファイルの名前を指定します。  
+*szBmpFileName*<br/>
+[in]読み込むディスク イメージ ファイルの名前を指定します。  
   
- [in]*szLabel*  
- ボタンのテキストを指定します。  
+*szLabel*<br/>
+[in]ボタンのテキストを指定します。  
   
- [in]*hBmp*  
- ボタンのビットマップへのハンドル。  
+*hBmp*<br/>
+[in]ボタンのビットマップへのハンドル。  
   
- [in]*hIcon*  
- ボタンのアイコンへのハンドル。  
+*hIcon*<br/>
+[in]ボタンのアイコンへのハンドル。  
   
 ### <a name="return-value"></a>戻り値  
  ボタンが正常に追加された場合は TRUE。それ以外の場合は FALSE です。  
@@ -254,17 +254,17 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pParentWnd*  
- Outlook バー ペインのコントロールの親ウィンドウを指定します。 NULL は指定できません。  
+*pParentWnd*<br/>
+[in]Outlook バー ペインのコントロールの親ウィンドウを指定します。 NULL は指定できません。  
   
- [in]*dwStyle*  
- ウィンドウ スタイル。  ウィンドウ スタイルの一覧は、次を参照してください。[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。  
+*dwStyle*<br/>
+[in]ウィンドウ スタイル。  ウィンドウ スタイルの一覧は、次を参照してください。[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。  
   
- [in]*uiID*  
- コントロールの id。 有効にするのには一意である必要がありますのコントロールの状態を保存しています。  
+*uiID*<br/>
+[in]コントロールの id。 有効にするのには一意である必要がありますのコントロールの状態を保存しています。  
   
- [in]*dwControlBarStyle*  
- Outlook バーからデタッチされるときに、Outlook バー ペイン コントロールの動作を定義する特殊なスタイルを指定します。  
+*dwControlBarStyle*<br/>
+[in]Outlook バーからデタッチされるときに、Outlook バー ペイン コントロールの動作を定義する特殊なスタイルを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE。それ以外の場合は FALSE です。  
@@ -284,11 +284,11 @@ virtual BOOL EnableContextMenuItems(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pButton*  
- ユーザーがクリックしたツール バー ボタンへのポインター。  
+*pButton*<br/>
+[in]ユーザーがクリックしたツール バー ボタンへのポインター。  
   
- [in]*pPopup*  
- ショートカット メニューへのポインター。  
+*pPopup*<br/>
+[in]ショートカット メニューへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  ショートカット メニューを表示するかどうかは TRUE を返しますそれ以外の場合は FALSE です。  
@@ -309,8 +309,8 @@ void EnablePageScrollMode(BOOL bPageScroll=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bPageScroll*  
- TRUE の場合は、ページのスクロール モードを有効にします。 FALSE の場合は、ページのスクロール モードを無効にします。  
+*bPageScroll*<br/>
+[in]TRUE の場合は、ページのスクロール モードを有効にします。 FALSE の場合は、ページのスクロール モードを無効にします。  
   
 ##  <a name="getregularcolor"></a>  CMFCOutlookBarPane::GetRegularColor  
  正規表現を返します (つまり、選択されていない) Outlook バー ペインのテキストの色。  
@@ -365,8 +365,8 @@ BOOL RemoveButton(UINT iIdCommand);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iIdCommand*  
- 削除するボタンのコマンド ID を指定します。  
+*iIdCommand*<br/>
+[in]削除するボタンのコマンド ID を指定します。  
   
 ### <a name="return-value"></a>戻り値  
  ボタンが正常に削除された場合は TRUE。指定したコマンド ID が有効でない場合は FALSE。  
@@ -379,8 +379,8 @@ void SetBackColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*色*  
- 新しい背景色を指定します。  
+*色*<br/>
+[in]新しい背景色を指定します。  
   
 ### <a name="remarks"></a>Remarks  
  Outlook バーの現在の背景色を設定するには、この関数を呼び出します。 背景色は、背景画像がない場合にのみ使用されます。  
@@ -393,8 +393,8 @@ void SetBackImage(UINT uiImageID);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiImageID*  
- イメージのリソース ID を指定します  
+*uiImageID*<br/>
+[in]イメージのリソース ID を指定します  
   
 ### <a name="remarks"></a>Remarks  
  Outlook を設定するには、このメソッドを呼び出すバーの背景イメージ。 背景イメージの一覧を管理して埋め込まれた[CMFCToolBarImages クラス](../../mfc/reference/cmfctoolbarimages-class.md)オブジェクト。  
@@ -426,11 +426,11 @@ void SetTextColor(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*clrRegText*  
- 選択されていないテキストの新しい色を指定します。  
+*clrRegText*<br/>
+[in]選択されていないテキストの新しい色を指定します。  
   
- [in]*clrSelText*  
- 新しい選択したテキストの色を指定します。  
+*clrSelText*<br/>
+[in]新しい選択したテキストの色を指定します。  
   
 ##  <a name="settransparentcolor"></a>  CMFCOutlookBarPane::SetTransparentColor  
  Outlook バー ペインの透明色を設定します。  

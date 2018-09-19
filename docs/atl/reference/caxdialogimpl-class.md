@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 965aa7256fadd00d2ef435b6df64467460322991
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a22b04bd0a362824e20621eaa7f66cafd0e55cf5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753059"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024504"
 ---
 # <a name="caxdialogimpl-class"></a>CAxDialogImpl クラス
 
@@ -44,16 +44,16 @@ ms.locfileid: "43753059"
 ## <a name="syntax"></a>構文
 
 ```
-template <class T, class TBase = CWindow>  
+template <class T, class TBase = CWindow>
 class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 派生したクラス、`CAxDialogImpl`します。
 
-*TBase*  
+*TBase*<br/>
 基本ウィンドウ クラス`CDialogImplBaseT`します。
 
 ## <a name="members"></a>メンバー
@@ -121,7 +121,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 
 ### <a name="parameters"></a>パラメーター
 
-*bAdvise*  
+*bAdvise*<br/>
 シンクのすべてのエントリをアドバイズする場合は true に設定します。false の場合、すべてのシンクのエントリは、アドバイズを中止すること。
 
 ### <a name="return-value"></a>戻り値
@@ -139,13 +139,13 @@ HWND Create(HWND hWndParent, RECT&, LPARAM dwInitParam = NULL);
 
 ### <a name="parameters"></a>パラメーター
 
-*hWndParent*  
+*hWndParent*<br/>
 [in]オーナー ウィンドウのハンドル。
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in]ダイアログ ボックスに渡す値を指定します、 *lParam* WM_INITDIALOG メッセージのパラメーター。
 
-*RECT (&AMP; A)*  
+*RECT (&AMP; A)*<br/>
 このパラメーターは使用されません。 このパラメーターが渡された`CComControl`します。
 
 ### <a name="return-value"></a>戻り値
@@ -180,16 +180,16 @@ BOOL DestroyWindow();
 
 ```
 INT_PTR DoModal(
-    HWND hWndParent = ::GetActiveWindow(), 
+    HWND hWndParent = ::GetActiveWindow(),
     LPARAM dwInitParam = NULL);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*hWndParent*  
+*hWndParent*<br/>
 [in]オーナー ウィンドウのハンドル。 既定値はの戻り値、 [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) Win32 関数。
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in]ダイアログ ボックスに渡す値を指定します、 *lParam* WM_INITDIALOG メッセージのパラメーター。
 
 ### <a name="return-value"></a>戻り値
@@ -212,7 +212,7 @@ BOOL EndDialog(int nRetCode);
 
 ### <a name="parameters"></a>パラメーター
 
-*終了*  
+*終了*<br/>
 [in]によって返される値[DoModal](#domodal)します。
 
 ### <a name="return-value"></a>戻り値
@@ -264,7 +264,7 @@ BOOL IsDialogMessage(LPMSG pMsg);
 
 ### <a name="parameters"></a>パラメーター
 
-*pMsg*  
+*pMsg*<br/>
 ポインターを[MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958)確認するメッセージを含む構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -285,5 +285,5 @@ bool m_bModal;
 
 ## <a name="see-also"></a>関連項目
 
-[CDialogImpl クラス](../../atl/reference/cdialogimpl-class.md)   
+[CDialogImpl クラス](../../atl/reference/cdialogimpl-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

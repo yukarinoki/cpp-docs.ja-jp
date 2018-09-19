@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f5027fa4b84d84bf07766c7ac4e75f140706f0c
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 0741cd65924a2c968153333aa1a557c31f429d45
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103711"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039778"
 ---
 # <a name="atl-operators"></a>ATL 演算子
 
@@ -42,16 +42,16 @@ ms.locfileid: "44103711"
 
 比較`CSid`オブジェクトまたは`SID`(セキュリティ識別子) 構造体が等しいかどうか。
 
-```   
+```
 bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*lhs*  
+*lhs*<br/>
 最初の`CSid`オブジェクトまたは`SID`比較する構造体。
 
-*rhs*  
+*rhs*<br/>
 2 番目の`CSid`オブジェクトまたは`SID`比較する構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -62,16 +62,16 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
 
 比較`CSid`オブジェクトまたは`SID`(セキュリティ識別子) 構造体が等しくないです。
 
-```   
+```
 bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*lhs*  
+*lhs*<br/>
 最初の`CSid`オブジェクトまたは`SID`比較する構造体。
 
-*rhs*  
+*rhs*<br/>
 2 番目の`CSid`オブジェクトまたは`SID`比較する構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -82,16 +82,16 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
 
 かどうか、`CSid`オブジェクトまたは`SID`演算子の左側にある構造体がより小さい`CSid`オブジェクトまたは`SID`(C++ 標準ライブラリの互換性) の右側にある構造体。
 
-```   
+```
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*lhs*  
+*lhs*<br/>
 最初の`CSid`オブジェクトまたは`SID`比較する構造体。
 
-*rhs*  
+*rhs*<br/>
 2 番目の`CSid`オブジェクトまたは`SID`比較する構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -106,16 +106,16 @@ True の場合のアドレス、 *lhs*オブジェクトがのアドレスより
 
 かどうか、`CSid`オブジェクトまたは`SID`演算子の左側にある構造体がより大きい、`CSid`オブジェクトまたは`SID`(C++ 標準ライブラリの互換性) の右側にある構造体。
 
-```   
+```
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*lhs*  
+*lhs*<br/>
 最初の`CSid`オブジェクトまたは`SID`比較する構造体。
 
-*rhs*  
+*rhs*<br/>
 2 番目の`CSid`オブジェクトまたは`SID`比較する構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -130,16 +130,16 @@ True の場合のアドレス、 *lhs*のアドレスより大きい、 *rhs*FAL
 
 かどうか、`CSid`オブジェクトまたは`SID`演算子の左側にある構造体は、以下に、`CSid`オブジェクトまたは`SID`(C++ 標準ライブラリの互換性) の右側にある構造体。
 
-```   
+```
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*lhs*  
+*lhs*<br/>
 最初の`CSid`オブジェクトまたは`SID`比較する構造体。
 
-*rhs*  
+*rhs*<br/>
 2 番目の`CSid`オブジェクトまたは`SID`比較する構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -154,16 +154,16 @@ True の場合のアドレス、 *lhs*が未満のアドレス、 *rhs*FALSE、�
 
 かどうか、`CSid`オブジェクトまたは`SID`演算子の左側にある構造がより大きいか等しい、`CSid`オブジェクトまたは`SID`(C++ 標準ライブラリの互換性) の右側にある構造体。
 
-```   
+```
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*lhs*  
+*lhs*<br/>
 最初の`CSid`オブジェクトまたは`SID`比較する構造体。
 
-*rhs*  
+*rhs*<br/>
 2 番目の`CSid`オブジェクトまたは`SID`比較する構造体。
 
 ### <a name="return-value"></a>戻り値

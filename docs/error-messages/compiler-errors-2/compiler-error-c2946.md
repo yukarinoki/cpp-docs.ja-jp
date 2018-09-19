@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2946 |Microsoft ドキュメント
+title: コンパイラ エラー C2946 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9485f424306d66514c9e919f13ff5988f8b0d1f2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 91af822dd21adf9125162ed997e71ed548c863ac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247072"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027688"
 ---
 # <a name="compiler-error-c2946"></a>コンパイラ エラー C2946
-明示的なインスタンス生成。'class' はテンプレート クラスの特殊化ではありません  
-  
- 非テンプレート クラスは明示的にインスタンス化できません。  
-  
-## <a name="example"></a>例  
- 次の例では C2946 が生成されます。  
-  
-```  
-// C2946.cpp  
-class C {};  
-template C;  // C2946  
-int main() {}  
+
+明示的なインスタンス生成。'class' はテンプレート クラスの特殊化ではありません
+
+非テンプレート クラスは明示的にインスタンス化できません。
+
+## <a name="example"></a>例
+
+次の例では C2946 が生成されます。
+
+```
+// C2946.cpp
+class C {};
+template C;  // C2946
+int main() {}
 ```

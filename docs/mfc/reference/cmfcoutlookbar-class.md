@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b9de076f4682bd3649f62940a0dd492eb801e28
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9ed3a07b7994d2c7adc7a5d708d31abe9c49437f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850184"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717107"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar クラス
 Microsoft Outlook 2000 または Outlook 2003 の **ナビゲーション ウィンドウ** と同じ外観を持つタブ付きペインです。 `CMFCOutlookBar`オブジェクトが含まれています、 [CMFCOutlookBarTabCtrl クラス](../../mfc/reference/cmfcoutlookbartabctrl-class.md)オブジェクトと一連のタブ。 タブは、 [CMFCOutlookBarPane クラス](../../mfc/reference/cmfcoutlookbarpane-class.md)オブジェクトまたは`CWnd`の派生オブジェクト。 ユーザーに対しては、Outlook バーは一連のボタンおよび表示領域として表示されます。 ユーザーがボタンをクリックすると、対応するコントロールまたはボタン ペインが表示されます。  
@@ -186,7 +186,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
   
  [CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxoutlookbar.h  
   
 ##  <a name="allowdestroyemptytabbedpane"></a>  CMFCOutlookBar::AllowDestroyEmptyTabbedPane  
@@ -210,8 +210,8 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pBar*  
- このペインにドッキングされる別のウィンドウへのポインター。  
+*pBar*<br/>
+[in]このペインにドッキングされる別のウィンドウへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  Outlook バー ペイン; に別のペインをドッキングできる場合は TRUE。それ以外の場合は FALSE です。  
@@ -253,26 +253,26 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszCaption*  
- ウィンドウのキャプションを指定します。  
+*lpszCaption*<br/>
+[in]ウィンドウのキャプションを指定します。  
   
- [in]*pParentWnd*  
- 親ウィンドウへのポインターを指定します。 NULL は指定できません。  
+*pParentWnd*<br/>
+[in]親ウィンドウへのポインターを指定します。 NULL は指定できません。  
   
- [in]*rect*  
- Outlook バーのサイズと位置 (ピクセル単位) を指定します。  
+*rect*<br/>
+[in]Outlook バーのサイズと位置 (ピクセル単位) を指定します。  
   
- [in]*nID*  
- コントロールの ID を指定します その他のコントロール、アプリケーションで使用される Id とは異なる名前にする必要があります。  
+*nID*<br/>
+[in]コントロールの ID を指定します その他のコントロール、アプリケーションで使用される Id とは異なる名前にする必要があります。  
   
- [in]*dwStyle*  
- 目的のコントロール バーのスタイルを指定します。 使用可能な値は、次を参照してください。[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。  
+*dwStyle*<br/>
+[in]目的のコントロール バーのスタイルを指定します。 使用可能な値は、次を参照してください。[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。  
   
- [in]*dwControlBarStyle*  
- 特殊なライブラリで定義されたスタイルを指定します。  
+*dwControlBarStyle*<br/>
+[in]特殊なライブラリで定義されたスタイルを指定します。  
   
- [in]*pContext*  
- コンテキストを作成します。  
+*pContext*<br/>
+[in]コンテキストを作成します。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合、0 以外の場合それ以外の場合 0 を返します。  
@@ -300,17 +300,17 @@ CMFCOutlookBarPane* CreateCustomPage(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszPageName*  
- ページのラベル。  
+*lpszPageName*<br/>
+[in]ページのラベル。  
   
- [in]*bActivatePage*  
- TRUE の場合、ページは作成時にアクティブになります。  
+*bActivatePage*<br/>
+[in]TRUE の場合、ページは作成時にアクティブになります。  
   
- [in]*dwEnabledDocking*  
- ページがデタッチされると、有効なドッキング辺を指定する cbrs_align _ フラグの組み合わせ。  
+*dwEnabledDocking*<br/>
+[in]ページがデタッチされると、有効なドッキング辺を指定する cbrs_align _ フラグの組み合わせ。  
   
- [in]*bEnableTextLabels*  
- TRUE の場合、ページ上に存在するボタンのテキスト ラベルは有効です。  
+*bEnableTextLabels*<br/>
+[in]TRUE の場合、ページ上に存在するボタンのテキスト ラベルは有効です。  
   
 ### <a name="return-value"></a>戻り値  
  新しく作成されたページで、または作成が失敗した場合は NULL へのポインター。  
@@ -350,17 +350,17 @@ virtual BOOL FloatTab(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pBar*  
- Float 型に、ウィンドウへのポインター。  
+*pBar*<br/>
+[in]Float 型に、ウィンドウへのポインター。  
   
- [in]*nTabID*  
- Float 型に、タブの 0 から始まるインデックス。  
+*nTabID*<br/>
+[in]Float 型に、タブの 0 から始まるインデックス。  
   
- [in]*dockMethod*  
- 使用して、ペインをフローティングするメソッドを指定します。  詳細については、次を参照してください。 [cbasetabbedpane::floattab](../../mfc/reference/cbasetabbedpane-class.md#floattab)します。  
+*dockMethod*<br/>
+[in]使用して、ペインをフローティングするメソッドを指定します。  詳細については、次を参照してください。 [cbasetabbedpane::floattab](../../mfc/reference/cbasetabbedpane-class.md#floattab)します。  
   
- [in]*bHide*  
- フローティングする前に、ウィンドウを非表示にする場合は TRUEそれ以外の場合、FALSE です。 このメソッドの基底クラスのバージョンとは異なりこのパラメーターに既定値はありません。  
+*bHide*<br/>
+[in]フローティングする前に、ウィンドウを非表示にする場合は TRUEそれ以外の場合、FALSE です。 このメソッドの基底クラスのバージョンとは異なりこのパラメーターに既定値はありません。  
   
 ### <a name="return-value"></a>戻り値  
  ウィンドウをフローティング状態の場合は TRUE。それ以外の場合、FALSE です。  
@@ -391,11 +391,11 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*rectTabAreaTop*  
- 関数が返す場合は、上部のタブ領域の (クライアント座標) での位置とサイズを格納します。  
+*rectTabAreaTop*<br/>
+[out]関数が返す場合は、上部のタブ領域の (クライアント座標) での位置とサイズを格納します。  
   
- [out]*rectTabAreaBottom*  
- 関数が返す場合は、下のタブ領域の (クライアント座標) での位置とサイズを格納します。  
+*rectTabAreaBottom*<br/>
+[out]関数が返す場合は、下のタブ領域の (クライアント座標) での位置とサイズを格納します。  
   
 ### <a name="remarks"></a>Remarks  
  フレームワークは、[ターゲット] ウィンドウをドッキングの種類を決定するには、このメソッドを呼び出します。 フレームワークは、ユーザーが [ターゲット] ウィンドウのタブ領域にドッキングするウィンドウをドラッグすることを判断した場合、[ターゲット] ウィンドウの新しいタブとして最初のウィンドウを追加しようとします。 それ以外の場合、[ターゲット] ウィンドウの適切な側にある最初のペインをドッキングしようとします。 フレームワークは、追加のドッキング ウィンドウに対応するスライダーを新しいコンテナーを作成します。  
@@ -425,8 +425,8 @@ virtual void OnAfterAnimation(int nPage);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*n ページ レイアウト*  
- アクティブになっているタブ ページの 0 から始まるインデックス。  
+*n ページ レイアウト*<br/>
+[in]アクティブになっているタブ ページの 0 から始まるインデックス。  
   
 ### <a name="remarks"></a>Remarks  
  アクティブなタブの設定の視覚効果は、アニメーションを有効にするかどうかによって異なります。 詳細については、次を参照してください。 [CMFCOutlookBarTabCtrl::EnableAnimation](../../mfc/reference/cmfcoutlookbartabctrl-class.md#enableanimation)します。  
@@ -439,8 +439,8 @@ virtual BOOL OnBeforeAnimation(int nPage);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*n ページ レイアウト*  
- アクティブ設定しようとしているタブ ページの 0 から始まるインデックス。  
+*n ページ レイアウト*<br/>
+[in]アクティブ設定しようとしているタブ ページの 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合、新しいアクティブなタブの設定でアニメーションを使用する必要がありますまたはアニメーションを無効にする場合は FALSE を返します。  
@@ -455,8 +455,8 @@ virtual void OnScroll(BOOL bDown);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bDown*  
- Outlook バーは、下へスクロールまたは FALSE の場合、これは、スクロールする場合は TRUE。  
+*bDown*<br/>
+[in]Outlook バーは、下へスクロールまたは FALSE の場合、これは、スクロールする場合は TRUE。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -470,11 +470,11 @@ BOOL RemoveCustomPage(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiPage*  
- 親の Outlook のウィンドウで、ページの 0 から始まるインデックス。  
+*uiPage*<br/>
+[in]親の Outlook のウィンドウで、ページの 0 から始まるインデックス。  
   
- [in]*pTargetWnd*  
- Outlook の親ウィンドウへのポインター。  
+*pTargetWnd*<br/>
+[in]Outlook の親ウィンドウへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  カスタムのページが正常に削除された場合、0 以外の場合それ以外の場合 0 を返します。  
@@ -496,11 +496,11 @@ void SetButtonsFont(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pFont*  
- 新しいフォントを指定します。  
+*pFont*<br/>
+[in]新しいフォントを指定します。  
   
- [in]*bRedraw*  
- TRUE の場合は、Outlook バーが再描画されます。  
+*bRedraw*<br/>
+[in]TRUE の場合は、Outlook バーが再描画されます。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドを使用すると、outlook のタブ ページのボタンに表示されるテキストのフォントを設定できます。  
@@ -513,8 +513,8 @@ void SetMode2003(BOOL bMode2003=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bMode2003*  
- TRUE の場合は、Office 2003 のモードを有効にします。  
+*bMode2003*<br/>
+[in]TRUE の場合は、Office 2003 のモードを有効にします。  
   
 ### <a name="remarks"></a>Remarks  
  有効にするか、Office 2003 のモードを無効にするには、この関数を使用します。 このモードでは、Outlook バーは、追加のツールバーのカスタマイズ ボタンを持ちます。 Outlook バーの動作は、Microsoft Office 2003 Outlook のバーの動作に準拠しています。  

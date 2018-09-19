@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3100 |Microsoft ドキュメント
+title: コンパイラ エラー C3100 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d28412fed7b31a81a0ef49d9e29c917f4c617e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f37d21015724bbb66aaa2abf52f0ee2fab7b50a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254298"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045355"
 ---
 # <a name="compiler-error-c3100"></a>コンパイラ エラー C3100
-'target': 不明な属性の修飾子  
-  
- 無効な属性ターゲットが指定されました。  
-  
- 詳細については、「 [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md)」を参照してください。  
-  
-## <a name="example"></a>例  
- 次の例では、C3100 を生成します。  
-  
-```  
-// C3100.cpp  
-// compile with: /clr /c  
-using namespace System;  
-[AttributeUsage(AttributeTargets::All)]  
-public ref class Attr : public Attribute {  
-public:  
-   Attr(int t) : m_t(t) {}  
-   int m_t;  
-};  
-  
-[invalid_target:Attr(10)];   // C3100  
-[assembly:Attr(10)];   // OK  
+
+'target': 不明な属性の修飾子
+
+無効な属性の対象が指定されました。
+
+詳細については、「 [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md)」を参照してください。
+
+## <a name="example"></a>例
+
+次の例では、C3100 が生成されます。
+
+```
+// C3100.cpp
+// compile with: /clr /c
+using namespace System;
+[AttributeUsage(AttributeTargets::All)]
+public ref class Attr : public Attribute {
+public:
+   Attr(int t) : m_t(t) {}
+   int m_t;
+};
+
+[invalid_target:Attr(10)];   // C3100
+[assembly:Attr(10)];   // OK
 ```

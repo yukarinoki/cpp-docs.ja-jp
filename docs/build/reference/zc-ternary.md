@@ -1,5 +1,5 @@
 ---
-title: /Zc:ternary (演算子の条件付き規則の実施) |Microsoft ドキュメント
+title: /Zc:ternary (条件演算子ルールの適用) |Microsoft Docs
 ms.date: 3/06/2018
 ms.technology:
 - cpp-tools
@@ -14,30 +14,30 @@ helpviewer_keywords:
 - -Zc:ternary
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 613381795fb962e1f10ec01598748b617b7543aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a8cd0a4034b07d170bc9ca531d60cce508681a2a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380824"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717824"
 ---
-# <a name="zcternary-enforce-conditional-operator-rules"></a>/Zc:ternary (演算子の条件付き規則の適用)
+# <a name="zcternary-enforce-conditional-operator-rules"></a>/Zc:ternary (条件演算子ルールの適用)
 
-型の C++ 標準の規則の実施段階および条件演算子の式で 2 番目と 3 番目のオペランドが const または volatile (cv) で認定を有効にします。
+型の C++ 標準の規則の適用と条件演算子の式で 2 番目と 3 番目のオペランドが const または volatile で (cv) 認定を有効にします。
 
 ## <a name="syntax"></a>構文
 
 > **/Zc:ternary**[**-**]
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-Visual Studio 15.3 のバージョンでは C++ の標準的な条件 (三項) 演算子のコンパイラ サポート (**?:**) 動作します。 C++ 標準では、いずれかのオペランドは、cv 修飾子と同じ型のまたは 1 つだけのオペランドが同じ型と、他の cv 修飾子に明確に変換できるかに throw 式を指定する 1 つまたは両方のオペランドが必要です。 Visual Studio version 15.5 より前に、のバージョンでは、コンパイラは、標準であいまいと見なされる変換を許可します。 ときに、 **/Zc:ternary**オプションを指定すると、コンパイラは、標準に準拠しているし、は一致する型と、2 番目と 3 番目のオペランドの cv 認定の規則を満たしていないコードを拒否します。
+Visual Studio バージョン 15.3 では C++ 標準の条件付き (または三項) 演算子に対するコンパイラ サポート (**?:**) 動作します。 C++ 標準では、cv 修飾子と同じ型のまたは同じの型と、ほかの cv 認定に明確に変換可能であるオペランドを 1 つだけや throw 式を指定する 1 つまたは両方のオペランドにする、いずれかのオペランドが必要です。 Visual Studio バージョン 15.5 より前に、のバージョンでは、コンパイラは、標準であいまいと見なされる変換を許可します。 ときに、 **/Zc:ternary**オプションを指定すると、コンパイラは、標準に準拠しているし、は一致する型と 2 番目と 3 番目のオペランドの cv で修飾の規則に従っていないコードを拒否します。
 
-**/Zc:ternary**オプションは既定でオフになっています。 使用して **/Zc:ternary**準拠の動作を有効にまたは **/Zc:ternary-** 以前非準拠コンパイラの動作を明示的に指定します。 [寛容/-](permissive-standards-conformance.md)オプションは、このオプションを暗黙的にできますを使用してオーバーライドできます **/Zc:ternary-** です。
+**/Zc:ternary**オプションは既定でオフです。 使用 **/Zc:ternary**準拠の動作を有効にまたは **/Zc:ternary-** 以前非準拠コンパイラの動作を明示的に指定します。 [/Permissive -](permissive-standards-conformance.md)オプションでは、このオプションは、暗黙的に有効化を使用してオーバーライドできますが、 **/Zc:ternary-** します。
 
 ### <a name="examples"></a>使用例
 
-このサンプルでは、型と型への変換から両方の非明示的な初期化を提供するクラスがあいまいな変換につながる可能性が方法を示します。 このコードは、既定では、コンパイラによって受け入れられますが、場合に拒否 **/Zc:ternary**または**寛容/-** を指定します。
+このサンプルでは、どの型の型への変換と両方明示的でない初期化を提供するクラスが、あいまいな変換につながります。 を示します。 このコードは既定では、コンパイラによって受け入れられますが、場合に拒否 **/Zc:ternary**または **/permissive -** を指定します。
 
 ```cpp
 // zcternary1.cpp
@@ -61,9 +61,9 @@ int main()
 }
 ```
 
-優先の共通の型に明示的なキャストを作成または変換を明示的にすることにより、コンパイラ、一致の検索の種類への参加からの変換の 1 つの方向を回避するためには必要な修正されます。
+必要な修正の方法では、ことを推奨される共通の型に明示的なキャストまたは明示的な変換を行う 1 つの方向への参加型の一致をコンパイラ検索からの変換を防ぐためです。
 
-この一般的なパターンの重要な例外は、オペランドの型は、null で終わる文字列型の 1 つをなどが`const char*`、`const char16_t*`のようにします。 これは、配列の型およびに decay、ポインター型でも再現できます。 動作時に実際の 2 番目または 3 番目のオペランドですか?: は、対応する型の文字列リテラルが使用される標準の言語に依存します。 C++ 17 には、c++ 14 からこの場合のセマンティクスが変更されました。 下にある次の例のコードが受け入れられる結果として、 **/std:c + + 14** (コンパイラの既定値) では場合に拒否 **/std:c + + 17**を指定します。
+この一般的なパターンには、次の重要な例外がオペランドの型がなど、null で終わる文字列型のいずれかが`const char*`、`const char16_t*`など。 配列の型およびに decay、ポインター型でこれを再現できます。 動作とする実際の 2 番目または 3 番目のオペランドですか?: は、対応する型の文字列リテラルが使用される標準の言語に依存します。 C++ 17 には、c++ 14 からこの場合のセマンティクスが変更されました。 結果として、次の例ではコードが正しい **/std:c + + + 14** (コンパイラの既定値) では場合に拒否 **/std:c + + + 17**が指定されてです。
 
 ```cpp
 // zcternary2.cpp
@@ -85,7 +85,7 @@ int main()
 
 このコードを修正するのには、明示的をキャスト、オペランドの 1 つ。
 
-**/Zc:ternary**、ここで、引数の 1 つはコンパイラ拒否の条件演算子は void 型および他の throw 式ではありません。 これらの一般的な用途は、アサートに似たマクロには。
+**/Zc:ternary**のいずれかの引数がコンパイラ拒否の条件演算子は void 型し、もう一方が throw 式ではありません。 これらの一般的な用途は、アサートに似たマクロには。
 
 ```cpp
 // zcternary3.cpp
@@ -102,7 +102,7 @@ int main()
 }
 ```
 
-一般的なソリューションでは、void でない引数を void() 単に置き換えます。
+典型的なソリューションでは、単に非 void 引数を void() に置き換えます。
 
 このサンプルは、両方のエラーを生成するコードを示しています **/Zc:ternary**と **/Zc:ternary-**:。
 
@@ -126,7 +126,7 @@ error C2446: ':': no conversion from 'foo::<lambda_f6cd18702c42f6cd636bfee362b37
 note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
 ```
 
-**/Zc:ternary**失敗の理由が明確になりますアーキテクチャでは実装定義の呼び出し規約のいくつかのいずれかを各ラムダの生成に使用できる場所、コンパイラを示しませんそれらの間の基本設定。可能なラムダのシグネチャを明確に区別可能性があります。 新しい出力は、次のようになります。
+**/Zc:ternary**失敗の理由が明確になりますアーキテクチャのいくつか実装で定義された呼び出し元の規則を各ラムダの生成に使用できる場所で、コンパイラを示しませんそれらの間での基本設定。可能なラムダのシグネチャを区別する可能性があります。 新しい出力は、次のようになります。
 
 ```Output
 error C2593: 'operator ?' is ambiguous
@@ -137,7 +137,7 @@ note: or       'built-in C++ operator?(bool (__vectorcall *)(int,int), bool (__v
 note: while trying to match the argument list '(foo::<lambda_717fca3fc65510deea10bc47e2b06be4>, foo::<lambda_f6cd18702c42f6cd636bfee362b37033>)'
 ```
 
-導入に関連する問題の一般的な原因 **/Zc:ternary**このスイッチの下の変更結果型の一部としてのテンプレート メタプログラミングで条件演算子の使用に由来します。 次の例では、2 つのケースで **/Zc:ternary**非メタ プログラミング コンテキストの条件付きの式の結果型を変更します。
+導入に関連する問題の一般的な原因 **/Zc:ternary**このスイッチでの変更結果型の一部としてテンプレート メタプログラミング、条件演算子の使用に由来します。 次の例では、2 つのケースで **/Zc:ternary**非メタ プログラミング コンテキストでの条件付きの式の結果型を変更します。
 
 ```cpp
 // zcternary5.cpp
@@ -152,18 +152,18 @@ int main(int argc, char**) {
 }
 ```
 
-このような場合の一般的な解像度を適用する、`std::remove_reference`結果での特徴である従来の動作を維持するために必要な場所を入力します。
+このような場合の一般的な解決方法は、適用する、`std::remove_reference`結果での特徴であるが、以前の動作を維持するために必要な場所を入力します。
 
 Visual C++ の準拠に関する問題について詳しくは、「 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)」をご覧ください。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[のプロジェクト プロパティの操作](../../ide/working-with-project-properties.md)です。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 
 1. 選択、**構成プロパティ** > **C/C++** > **コマンドライン**プロパティ ページ。
 
-1. 変更、**追加オプション**含めるプロパティを **/Zc:ternary**または **/Zc:ternary-** を選択し**OK**です。
+1. 変更、**追加オプション**含めるプロパティを **/Zc:ternary**または **/Zc:ternary-** 選び、 **OK**します。
 
 ## <a name="see-also"></a>関連項目
 
-[/Zc (準拠)](../../build/reference/zc-conformance.md)  
+[/Zc (準拠)](../../build/reference/zc-conformance.md)

@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3530 |Microsoft ドキュメント
+title: コンパイラ エラー C3530 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6514d655ab813ae21ecb440415f87bce63f3591
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5866e2ea44b84f3afeb0cef8423abc28f8e056ab
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253519"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094794"
 ---
 # <a name="compiler-error-c3530"></a>コンパイラ エラー C3530
-'auto' は、その他の型指定子と組み合わせることはできません。  
-  
- 型指定子を使用、`auto`キーワード。  
-  
-### <a name="to-correct-this-error"></a>このエラーを解決するには  
-  
-1.  使用する変数宣言で型指定子を使用しない、`auto`キーワード。  
-  
-## <a name="example"></a>例  
- 次の例では C3530 のため変数`x`が両方で宣言されて、`auto`キーワードと型`int`、例をコンパイルしたため、 **/Zc:auto**です。  
-  
-```  
-// C3530.cpp  
-// Compile with /Zc:auto  
-int main()  
-{  
-   auto int x;   // C3530  
-   return 0;  
-}  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [auto キーワード](../../cpp/auto-keyword.md)
+
+'auto' は、他の型指定子と組み合わせることはできません。
+
+型指定子を併用、`auto`キーワード。
+
+### <a name="to-correct-this-error"></a>このエラーを解決するには
+
+1. 使用する変数宣言で型指定子を使用しないでください、`auto`キーワード。
+
+## <a name="example"></a>例
+
+次の例では C3530 のため変数`x`が両方で宣言されて、`auto`キーワードと型`int`、例をコンパイルしたので **/Zc:auto**します。
+
+```
+// C3530.cpp
+// Compile with /Zc:auto
+int main()
+{
+   auto int x;   // C3530
+   return 0;
+}
+```
+
+## <a name="see-also"></a>関連項目
+
+[auto キーワード](../../cpp/auto-keyword.md)

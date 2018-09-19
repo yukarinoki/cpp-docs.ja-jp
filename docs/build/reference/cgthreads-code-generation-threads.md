@@ -1,5 +1,5 @@
 ---
-title: -cgthreads (コード生成スレッド) |Microsoft ドキュメント
+title: -cgthreads (コード生成スレッド) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,45 +19,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32c88fe00958a0fc767d8a316bfe4edab7b4fb0e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb6849a4b30e903d05b5ac3d37fce558074110a5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372442"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719629"
 ---
 # <a name="cgthreads-code-generation-threads"></a>/cgthreads (コード生成スレッド)
-最適化とコード生成に使用するための cl.exe スレッドの数を設定します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-/cgthreads[1-8]  
-```  
-  
-## <a name="arguments"></a>引数  
- number  
- cl.exe が使用できるスレッドの最大数で、1 から 8 の範囲。  
-  
-## <a name="remarks"></a>コメント  
- **/Cgthreads**スレッド cl.exe の最大数が並列で使用の最適化とコード生成のフェーズのコンパイルのオプションを指定します。 あることはできませんの間にスペース **/cgthreads**と`number`引数。 既定では、cl.exe は 4 つのスレッドを使用してとして **/cgthreads4**が指定されています。 より多くのプロセッサ コアが使用できる場合、より大きい `number` 値はビルド時間を改善できます。 このオプションと結合されている場合に特に便利[/GL (プログラム全体の最適化)](../../build/reference/gl-whole-program-optimization.md)です。  
-  
- ビルドでは複数のレベルの並列化を指定できます。 Msbuild.exe スイッチ **/maxcpucount**並列で実行できる MSBuild プロセスの数を指定します。 [/MP (複数のプロセスでビルド)](../../build/reference/mp-build-with-multiple-processes.md)コンパイラ フラグが同時に、ソース ファイルをコンパイルする cl.exe プロセスの数を指定します。 **/Cgthreads**オプションは、それぞれの cl.exe プロセスが使用するスレッドの数を指定します。 プロセッサは、プロセッサ コアの数しかスレッドを同時に実行できないため、これらすべてのオプションに、より大きな値を同時に設定するのは効果的ではなく、逆効果になる場合もあります。 並列でプロジェクトをビルドする方法の詳細については、次を参照してください。[並列の複数のプロジェクトをビルドする](/visualstudio/msbuild/building-multiple-projects-in-parallel-with-msbuild)です。  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
-  
-1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[のプロジェクト プロパティの操作](../../ide/working-with-project-properties.md)です。  
-  
-2.  選択、**構成プロパティ**、 **C/C++** フォルダーです。  
-  
-3.  選択、**コマンドライン**プロパティ ページ。  
-  
-4.  変更、**追加オプション**含めるプロパティを **/cgthreads**`N`ここで、 `N` 1 から 8 の値を選択し、 **OK**です。  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには  
-  
--   「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>」を参照してください。  
-  
-## <a name="see-also"></a>関連項目  
- [コンパイラ オプション](../../build/reference/compiler-options.md)   
- [コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+
+最適化とコード生成に使用するための cl.exe スレッドの数を設定します。
+
+## <a name="syntax"></a>構文
+
+```
+/cgthreads[1-8]
+```
+
+## <a name="arguments"></a>引数
+
+*数*<br/>
+cl.exe が使用できるスレッドの最大数で、1 から 8 の範囲。
+
+## <a name="remarks"></a>Remarks
+
+**/Cgthreads**オプションは、cl.exe のスレッドの最大数を使用して並列での最適化およびコード コンパイルの生成のフェーズを指定します。 できませんの間にスペースに注意してください。 **/cgthreads**と`number`引数。 既定では、cl.exe は 4 つのスレッドを使用する場合と **/cgthreads4**指定されました。 より多くのプロセッサ コアが使用できる場合、より大きい `number` 値はビルド時間を改善できます。 このオプションと結合されている場合に特に役立ちます[/GL (Whole Program Optimization)](../../build/reference/gl-whole-program-optimization.md)します。
+
+ビルドでは複数のレベルの並列化を指定できます。 Msbuild.exe スイッチ **/maxcpucount**並列に実行できる MSBuild プロセスの数を指定します。 [/MP (複数のプロセスを使用したビルド)](../../build/reference/mp-build-with-multiple-processes.md)コンパイラ フラグを同時にソース ファイルをコンパイルする cl.exe プロセスの数を指定します。 **/Cgthreads**オプションは、それぞれの cl.exe プロセスで使用されるスレッドの数を指定します。 プロセッサは、プロセッサ コアの数しかスレッドを同時に実行できないため、これらすべてのオプションに、より大きな値を同時に設定するのは効果的ではなく、逆効果になる場合もあります。 プロジェクトの並行ビルドする方法の詳細については、次を参照してください。[複数プロジェクトの並行ビルド](/visualstudio/msbuild/building-multiple-projects-in-parallel-with-msbuild)します。
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+
+1. 選択、**構成プロパティ**、 **C/C++** フォルダー。
+
+1. 選択、**コマンドライン**プロパティ ページ。
+
+1. 変更、**追加オプション**含めるプロパティを **/cgthreads**`N`ここで、`N`は 1 から 8 の値を選び**OK**。
+
+### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
+
+- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>
+
+## <a name="see-also"></a>関連項目
+
+[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
+[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)

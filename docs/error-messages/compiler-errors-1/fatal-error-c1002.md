@@ -1,5 +1,5 @@
 ---
-title: 致命的なエラー C1002 |Microsoft ドキュメント
+title: 致命的なエラー C1002 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c63a8d399b3e8c781694d89825e7898fd1db4639
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 82f08255484b11f9f5d87fb67ac8ac7b401d4f6e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225052"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044146"
 ---
 # <a name="fatal-error-c1002"></a>致命的なエラー C1002
-パス 2 の実行中に、ヒープ領域を使い果たしました。  
-  
- コンパイラはおそらくシンボルまたは複雑な式が多すぎるとプログラムにより、2 番目のパスの中に動的メモリの領域不足になりました。  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>以下の可能性がある解決策を使って修正するには  
-  
-1.  ソース ファイルをいくつかの小さなファイルに分割します。  
-  
-2.  式を小さな部分に分割します。  
-  
-3.  その他のプログラムまたはメモリを消費するドライバーを削除します。
+
+パス 2 の実行中に、ヒープ領域を使い果たしました。
+
+コンパイラは、可能性がありますが多すぎるのシンボルまたは複雑な式を使用してプログラムの 2 つ目のパスの中に動的メモリ領域が不足しています。
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>以下の可能性がある解決策を使って修正するには
+
+1. ソース ファイルを複数の小さいファイルに分割します。
+
+1. 式を小さな部分に分割します。
+
+1. その他のプログラムまたはメモリを消費するドライバーを削除します。

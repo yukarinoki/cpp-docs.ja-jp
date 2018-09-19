@@ -1,5 +1,5 @@
 ---
-title: リンカー ツールの警告 LNK4002 |Microsoft ドキュメント
+title: リンカー ツールの警告 LNK4002 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78bf20b152f70350b88d7cae5db71ce6df855f5b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3774dd53ba9d6dde24909df1ade33bfb7e13b840
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300073"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107645"
 ---
 # <a name="linker-tools-warning-lnk4002"></a>リンカー ツールの警告 LNK4002
-オブジェクトで定義されているシンボル  
-  
- 非装飾形式で修飾された形式で表示される、記号が指定された`object`が、装飾されたシンボルに一意の一致が見つかりませんでした。 この警告は、常に続く警告[LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md)後ろに致命的なエラーが続く[LNK1152](../../error-messages/tool-errors/linker-tools-error-lnk1152.md)です。
+
+オブジェクトで定義されているシンボル
+
+非装飾形式で修飾された形式で表示される、記号が指定された`object`が、装飾されたシンボルに一致する一意のものが見つかりませんでした。 この警告は警告で前に必ず[LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md)に致命的なエラーと[LNK1152](../../error-messages/tool-errors/linker-tools-error-lnk1152.md)します。

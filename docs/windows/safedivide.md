@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bd7d581a632158154822f7ce51ac3dc5042b2a48
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e673d01aa5657d9ada9ae1ee84ad3d56483e2fc5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589298"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723347"
 ---
 # <a name="safedivide"></a>SafeDivide
 
@@ -41,14 +41,14 @@ inline bool SafeDivide (
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*t*  
-除数。 これは T 型である必要があります。
+*t*<br/>
+[in]除数。 これは T 型である必要があります。
 
-[in]*u*  
-被除数。 これは、型 U のある必要があります。
+*u*<br/>
+[in]被除数。 これは、型 U のある必要があります。
 
-[out]*結果*  
-パラメーターで**SafeDivide**結果を格納します。
+*結果*<br/>
+[out]パラメーターで**SafeDivide**結果を格納します。
 
 ## <a name="return-value"></a>戻り値
 

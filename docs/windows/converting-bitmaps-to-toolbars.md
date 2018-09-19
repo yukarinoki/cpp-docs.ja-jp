@@ -1,5 +1,5 @@
 ---
-title: ビットマップ ツールバーからへの変換 |Microsoft Docs
+title: ビットマップからツールバー (C++) への変換 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,7 +9,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - bitmaps [C++], converting to toolbars
-- Toolbar editor, converting bitmaps
+- Toolbar editor [C++], converting bitmaps
 - toolbars [C++], converting bitmaps
 ms.assetid: 971c181b-40f5-44be-843d-677a7c235667
 author: mikeblome
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5524b1d5ecb3fa4de38f46706f26d2a318fe5ef
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ed77f1df88bb3f3572c3ea819ffac5cb9a1f45b1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602401"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317229"
 ---
-# <a name="converting-bitmaps-to-toolbars"></a>ビットマップからツール バーへの変換
+# <a name="converting-bitmaps-to-toolbars-c"></a>ビットマップからツールバー (C++) への変換
 
-新しいツールバーを作成するには、ビットマップを変換します。 グラフィック ビットマップからツールバーのボタンのイメージに変換します。 通常はビットマップでは、ボタンごとに 1 つのイメージの 1 つのビットマップ ボタン イメージがいくつか含まれています。 イメージのサイズにすることができます。既定では、イメージの高さ、幅 16 ピクセルです。 ボタンのイメージのサイズを指定することができます、[新規ツール バー リソース ダイアログ ボックス](../windows/new-toolbar-resource-dialog-box.md)を選択すると**ツール バー エディター**から、**イメージ**イメージ エディターでのメニュー。
+C++ プロジェクトで新しいツールバーを作成するには、ビットマップを変換します。 グラフィック ビットマップからツールバーのボタンのイメージに変換します。 通常はビットマップでは、ボタンごとに 1 つのイメージの 1 つのビットマップ ボタン イメージがいくつか含まれています。 イメージのサイズにすることができます。既定では、イメージの高さ、幅 16 ピクセルです。 ボタンのイメージのサイズを指定することができます、[新規ツール バー リソース ダイアログ ボックス](../windows/new-toolbar-resource-dialog-box.md)を選択すると**ツール バー エディター**から、**イメージ**イメージ エディターでのメニュー。
 
 ### <a name="to-convert-bitmaps-to-a-toolbar"></a>ビットマップからツールバーに変換するには
 

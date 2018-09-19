@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1 およびレベル 4) C4949 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1 およびレベル 4) C4949 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3dbf80f85db7334d4bcb46402851cac601d258f2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f806912188ada3a4f97f0b1500e811d1271f40fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279647"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077309"
 ---
 # <a name="compiler-warning-level-1-and-level-4-c4949"></a>コンパイラの警告 (レベル 1 およびレベル 4) C4949
-マネージおよびアンマネージのプラグマはコンパイルしたときにのみ意味のある '/clr [: オプション]'  
-  
- コンパイラは無視、[マネージ](../../preprocessor/managed-unmanaged.md)と、ソース コードがコンパイルされていない場合は、プラグマをアンマネージ[/clr](../../build/reference/clr-common-language-runtime-compilation.md)です。 これは、情報提供の警告です。  
-  
- 次の例では、C4949 が生成されます。  
-  
-```  
-// C4949.cpp  
-// compile with: /LD /W1  
-#pragma managed   // C4949  
-```  
-  
- ときに **#pragma をアンマネージ**なしで使われた **/clr**C4949 はレベル 4 の警告です。  
-  
- 次の例では、C4949 が生成されます。  
-  
-```  
-// C4949b.cpp  
-// compile with: /LD /W4  
-#pragma unmanaged   // C4949  
+
+マネージドおよびアンマネージドのプラグマはコンパイルした場合にのみ意味のある '/clr [: オプション]'
+
+コンパイラは無視、[マネージ](../../preprocessor/managed-unmanaged.md)でソース コードがコンパイルされていない場合は、プラグマを管理対象外と[/clr](../../build/reference/clr-common-language-runtime-compilation.md)します。 これは、情報提供の警告です。
+
+次の例では、C4949 が生成されます。
+
+```
+// C4949.cpp
+// compile with: /LD /W1
+#pragma managed   // C4949
+```
+
+ときに**アンマネージド #pragma**なし **/clr**C4949 はレベル 4 の警告。
+
+次の例では、C4949 が生成されます。
+
+```
+// C4949b.cpp
+// compile with: /LD /W4
+#pragma unmanaged   // C4949
 ```

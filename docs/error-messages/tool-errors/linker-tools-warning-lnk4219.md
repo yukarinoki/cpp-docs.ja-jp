@@ -1,5 +1,5 @@
 ---
-title: リンカー ツールの警告 LNK4219 |Microsoft ドキュメント
+title: リンカー ツールの警告 LNK4219 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59cb7376957b7985b7ae2335ea472171d490ff42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: daf097cd8715a7c523e6e8a2ea46714481ca7d2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301136"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105212"
 ---
 # <a name="linker-tools-warning-lnk4219"></a>リンカー ツールの警告 LNK4219
-fixup 名前 fixup オーバーフロー。 ターゲット 'ターゲット symbol name' が範囲を超えて外  
-  
- リンカーは、ここで、アドレスまたはオフセットができなかったターゲット シンボルが命令の位置から離れすぎているために、指定された命令に収まるように状況ではサンクを挿入します。  
-  
- イメージの順序を変更することがあります (を使用して、 [/order](../../build/reference/order-put-functions-in-order.md)オプションなど) を余分なレベルの間接参照を回避します。
+
+フィックス アップ名前 fixup オーバーフロー。 ターゲット 'ターゲット symbol name' がサンクを挿入する範囲外です。
+
+リンカーでは、場所、アドレスまたはオフセットできなかったターゲット シンボルが命令の位置から離れすぎているために、指定された命令に収まるように状況にサンクが挿入されます。
+
+イメージの順序を変更することがあります (を使用して、 [/order](../../build/reference/order-put-functions-in-order.md)オプション、たとえば) 余分なレベルの間接参照を回避するためにします。

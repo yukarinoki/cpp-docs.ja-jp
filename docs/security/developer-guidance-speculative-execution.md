@@ -14,16 +14,16 @@ helpviewer_keywords:
 - Spectre
 - CVE-2017-5753
 - Speculative Execution
-author: mamillmsft
+author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 378c6fe9a86cc44d80252f69367cf8c70234f469
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0800812e39d4d5240b87b24961585610814cd367
+ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613247"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44384957"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>予測実行のサイド チャネルの C++ の開発者ガイド
 
@@ -31,7 +31,7 @@ ms.locfileid: "42613247"
 
 この記事のガイダンスは、上の脆弱性によって表されるクラスに関連します。
 
-1. CVE-2017-5753 に対する、Spectre variant 1 とも呼ばれます。 このハードウェアの脆弱性のクラスに関連する側のチャネルの条件分岐 misprediction 結果として発生する予測の実行によって発生することができます。 (バージョン 15.5.5 以降)、Visual Studio 2017 の Visual C コンパイラにはサポートが含まれています、`/Qspectre`限られた可能性がある脆弱性のあるコーディング パターンのコンパイル時の軽減策を提供するスイッチに関連する CVE 2017-5753 に対する。 ドキュメント、 [/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre)フラグの効果と使用状況の詳細を提供します。 
+1. CVE-2017-5753 に対する、Spectre variant 1 とも呼ばれます。 このハードウェアの脆弱性のクラスに関連する側のチャネルの条件分岐 misprediction 結果として発生する予測の実行によって発生することができます。 (バージョン 15.5.5 以降)、Visual Studio 2017 の Visual C コンパイラにはサポートが含まれています、`/Qspectre`限られた可能性がある脆弱性のあるコーディング パターンのコンパイル時の軽減策を提供するスイッチに関連する CVE 2017-5753 に対する。 `/Qspectre`を通じて Visual Studio 2015 Update 3 で使用可能なスイッチも[KB 4338871](https://support.microsoft.com/help/4338871)します。 ドキュメント、 [/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre)フラグの効果と使用状況の詳細を提供します。 
 
 2. CVE-2018-3639 とも呼ばれます[投機的なストア バイパス (SSB)](https://aka.ms/sescsrdssb)します。 このハードウェアの脆弱性のクラスに関連する側のチャネルの結果としてメモリ アクセスの misprediction 依存ストアより負荷の予測の実行によって発生することができます。
 

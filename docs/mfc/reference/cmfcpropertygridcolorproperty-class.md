@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 164e54ccbd9365e7e4fb2c1989f84891e5813c2f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 7b1023ff59af0f64d5205447e6e7b17ead1f5186
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849174"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705836"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>CMFCPropertyGridColorProperty クラス
 `CMFCPropertyGridColorProperty` クラスは、色の選択用のダイアログ ボックスを開くプロパティ リスト コントロール項目をサポートします。  
@@ -87,7 +87,7 @@ class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
   
  [CMFCPropertyGridColorProperty](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxpropertygridctrl.h  
   
 ##  <a name="cmfcpropertygridcolorproperty"></a>  CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty  
@@ -103,20 +103,20 @@ CMFCPropertyGridColorProperty(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*strName*  
- プロパティの名前。  
+*strName*<br/>
+[in]プロパティの名前。  
   
- [in]*色*  
- プロパティの色の値。  
+*色*<br/>
+[in]プロパティの色の値。  
   
- [in]*pPalette*  
- 色のパレットへのポインター。 既定値は、NULL です。  
+*pPalette*<br/>
+[in]色のパレットへのポインター。 既定値は、NULL です。  
   
- [in]*lpszDescr*  
- プロパティの説明。 既定値は、NULL です。  
+*lpszDescr*<br/>
+[in]プロパティの説明。 既定値は、NULL です。  
   
- [in]*指定*  
- 整数プロパティに関連付けられているその他のデータへのポインターなどのアプリケーションに固有のデータ。 既定値は 0 です。  
+*指定*<br/>
+[in]整数プロパティに関連付けられているその他のデータへのポインターなどのアプリケーションに固有のデータ。 既定値は 0 です。  
   
 ##  <a name="enableautomaticbutton"></a>  CMFCPropertyGridColorProperty::EnableAutomaticButton  
  により、*自動*色の選択 ダイアログ ボックスのボタンをクリックします。 (標準の自動ボタンのラベルは**自動**)。  
@@ -129,14 +129,14 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszLabel*  
- 自動ボタンのラベル テキスト。  
+*lpszLabel*<br/>
+[in]自動ボタンのラベル テキスト。  
   
- [in]*colorAutomatic*  
- 自動 (既定値) の色の RGB カラー値。  
+*colorAutomatic*<br/>
+[in]自動 (既定値) の色の RGB カラー値。  
   
- [in]*bEnable*  
- 自動ボタンを有効にする場合は TRUEそれ以外の場合、FALSE です。 既定値は TRUE です。  
+*bEnable*<br/>
+[in]自動ボタンを有効にする場合は TRUEそれ以外の場合、FALSE です。 既定値は TRUE です。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -151,14 +151,14 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszLabel*  
- その他のボタンのラベル テキスト。  
+*lpszLabel*<br/>
+[in]その他のボタンのラベル テキスト。  
   
- [in]*bAltColorDlg*  
- 表示する場合は True、 `CMFCColorDialog` ; ダイアログ ボックス標準の色の選択 ダイアログ ボックスを表示する場合は FALSE。 既定値は TRUE です。  
+*bAltColorDlg*<br/>
+[in]表示する場合は True、 `CMFCColorDialog` ; ダイアログ ボックス標準の色の選択 ダイアログ ボックスを表示する場合は FALSE。 既定値は TRUE です。  
   
- [in]*bEnable*  
- その他のボタンを表示する場合は TRUEそれ以外の場合、FALSE です。  既定値は TRUE です。  
+*bEnable*<br/>
+[in]その他のボタンを表示する場合は TRUEそれ以外の場合、FALSE です。  既定値は TRUE です。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -182,8 +182,8 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*色*  
- RGB 色の値。  
+*色*<br/>
+[in]RGB 色の値。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -195,8 +195,8 @@ void SetColumnsNumber(int nColumnsNumber);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nColumnsNumber*  
- 推奨される色のプロパティ グリッドで列数。  
+*nColumnsNumber*<br/>
+[in]推奨される色のプロパティ グリッドで列数。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドの値を設定、`m_nColumnsNumber`データ メンバーを保護します。  
@@ -209,8 +209,8 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*varValue*  
- 値。  
+*varValue*<br/>
+[in]値。  
   
 ### <a name="remarks"></a>Remarks  
  使用して、 [cmfcpropertygridproperty::resetoriginalvalue](../../mfc/reference/cmfcpropertygridproperty-class.md#resetoriginalvalue)編集済みのプロパティの元の値をリセットするメソッド。  

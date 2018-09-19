@@ -15,17 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c363fa74a3fac97399eee72c4b3d396a2f375d06
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cca68ad9865ab6382114c3ebe64d5921539f7ce0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380590"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106884"
 ---
 # <a name="ansi-conformance"></a>ANSI 規格適合性
-Microsoft C は、ANSI C 規格の 9899:1990 エディションで定められている C 言語の規格に準拠します。  
-  
- ANSI C 規格に対する Microsoft の拡張機能については、このブックのテキストと構文、およびオンライン参照で説明します。 拡張機能が ANSI C 規格の一部ではないため、それらの使用によってシステム間のプログラムの移植性が制限される場合があります。 既定では、Microsoft 拡張機能は有効になっています。 拡張機能を無効にするには、/Za コンパイラ オプションを指定します。 /Za では、すべての非 ANSI コードがエラーまたは警告を生成します。  
-  
-## <a name="see-also"></a>参照  
- [『C 言語リファレンス』の構成](../c-language/organization-of-the-c-language-reference.md)
+
+Microsoft C は、ANSI C 規格の 9899:1990 エディションで定められている C 言語の規格に準拠します。
+
+ANSI C 規格に対する Microsoft の拡張機能については、このブックのテキストと構文、およびオンライン参照で説明します。 拡張機能が ANSI C 規格の一部ではないため、それらの使用によってシステム間のプログラムの移植性が制限される場合があります。 既定では、Microsoft 拡張機能は有効になっています。 拡張機能を無効にするには、/Za コンパイラ オプションを指定します。 /Za では、すべての非 ANSI コードがエラーまたは警告を生成します。
+
+## <a name="see-also"></a>参照
+
+[『C 言語リファレンス』の構成](../c-language/organization-of-the-c-language-reference.md)

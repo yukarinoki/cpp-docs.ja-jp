@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd3e6809a8204b9a2380e896e4e458512e79fa2b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5603327e7bdc32d9b760fc25160543c682e6f4f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766663"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054507"
 ---
 # <a name="csimplearray-class"></a>CSimpleArray クラス
 
@@ -40,16 +40,16 @@ ms.locfileid: "43766663"
 ## <a name="syntax"></a>構文
 
 ```
-template <class T, class TEqual = CSimpleArrayEqualHelper<T>>  
+template <class T, class TEqual = CSimpleArrayEqualHelper<T>>
 class CSimpleArray
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 配列に格納するデータの型。
 
-*TEqual*  
+*TEqual*<br/>
 型の要素に対して等値テストを定義する、特徴オブジェクト*T*します。
 
 ## <a name="members"></a>メンバー
@@ -107,7 +107,7 @@ BOOL Add(const T& t);
 
 ### <a name="parameters"></a>パラメーター
 
-*t*  
+*t*<br/>
 配列に追加する要素。
 
 ### <a name="return-value"></a>戻り値
@@ -123,13 +123,13 @@ BOOL Add(const T& t);
 配列オブジェクトのコンス トラクターです。
 
 ```
-CSimpleArray(const CSimpleArray<T, TEqual>& src);  
+CSimpleArray(const CSimpleArray<T, TEqual>& src);
 CSimpleArray();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*src*  
+*src*<br/>
 既存の `CSimpleArray` オブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -158,7 +158,7 @@ int Find(const T& t) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*t*  
+*t*<br/>
 検索対象の要素。
 
 ### <a name="return-value"></a>戻り値
@@ -203,7 +203,7 @@ T& operator[](int nindex);
 
 ### <a name="parameters"></a>パラメーター
 
-*nIndex*  
+*nIndex*<br/>
 要素のインデックス。
 
 ### <a name="return-value"></a>戻り値
@@ -226,7 +226,7 @@ CSimpleArray<T, TEqual>
 
 ### <a name="parameters"></a>パラメーター
 
-*src*  
+*src*<br/>
 コピー先の配列。
 
 ### <a name="return-value"></a>戻り値
@@ -251,7 +251,7 @@ BOOL Remove(const T& t);
 
 ### <a name="parameters"></a>パラメーター
 
-*t*  
+*t*<br/>
 配列から削除する要素。
 
 ### <a name="return-value"></a>戻り値
@@ -284,7 +284,7 @@ BOOL RemoveAtint nIndex);
 
 ### <a name="parameters"></a>パラメーター
 
-*nIndex*  
+*nIndex*<br/>
 削除する要素を指すインデックスを作成します。
 
 ### <a name="return-value"></a>戻り値
@@ -307,10 +307,10 @@ BOOL SetAtIndex(
 
 ### <a name="parameters"></a>パラメーター
 
-*nIndex*  
+*nIndex*<br/>
 変更する要素のインデックス。
 
-*t*  
+*t*<br/>
 指定された要素に代入する値。
 
 ### <a name="return-value"></a>戻り値

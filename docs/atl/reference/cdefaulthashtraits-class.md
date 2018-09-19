@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2143b84a8a8906643b9fc8befd49ffd244aa9625
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 34aa546561e13c2728c633db3f96861a1d3ec987
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764993"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075684"
 ---
 # <a name="cdefaulthashtraits-class"></a>CDefaultHashTraits クラス
 
@@ -32,13 +32,13 @@ ms.locfileid: "43764993"
 ## <a name="syntax"></a>構文
 
 ```
-template<typename T>  
+template<typename T>
 class CDefaultHashTraits
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 コレクションに格納されるデータの型。
 
 ## <a name="members"></a>メンバー
@@ -69,7 +69,7 @@ static ULONG Hash(const T& element) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*要素*  
+*要素*<br/>
 要素。
 
 ### <a name="return-value"></a>戻り値

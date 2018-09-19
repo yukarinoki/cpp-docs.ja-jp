@@ -1,5 +1,5 @@
 ---
-title: _ _addfsbyte、_ _addfsword、_ _addfsdword |Microsoft ドキュメント
+title: _ _addfsbyte、_ _addfsword、_ _addfsdword |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,17 +23,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4c2b4a9e185f709ff829a3b88ea9cb67741fa1c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 08a9948bb986ae57e42e37253b3b54737cf4d3f9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330247"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714221"
 ---
 # <a name="addfsbyte-addfsword-addfsdword"></a>__addfsbyte、__addfsword、__addfsdword
 **Microsoft 固有の仕様**  
   
- 先頭の相対オフセットによって指定されたメモリ位置に値を追加、`FS`セグメント。  
+ 先頭の相対オフセットで指定されたメモリ位置に値を追加、`FS`セグメント。  
   
 ## <a name="syntax"></a>構文  
   
@@ -53,11 +53,11 @@ void __addfsdword(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力] `Offset`  
- 先頭からのオフセット`FS`です。  
+*オフセット*<br/>
+[in]先頭からのオフセット`FS`します。  
   
- [入力] `Data`  
- メモリ位置に追加する値。  
+*データ*<br/>
+[in]メモリ位置に追加する値。  
   
 ## <a name="requirements"></a>要件  
   
@@ -67,7 +67,7 @@ void __addfsdword(
 |`__addfsword`|x86|  
 |`__addfsdword`|x86|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  これらのルーチンは組み込みとしてのみ使用できます。  
   
 **Microsoft 固有の仕様はここまで**  

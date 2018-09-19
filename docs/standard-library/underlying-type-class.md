@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b3f796d5039900b591c219c840d1aef94d23e8f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6e9c1ab3ceb4965450f89de3b483915d693b5100
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957582"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711647"
 ---
 # <a name="underlyingtype-class"></a>underlying_type クラス
 
@@ -37,14 +37,14 @@ struct underlying_type;
 
 ### <a name="parameters"></a>パラメーター
 
-*T*  
- 変更する型。
+*T*<br/>
+変更する型。
 
 ## <a name="remarks"></a>Remarks
 
 `type`テンプレート クラスのメンバー typedef 名の基になる整数型*T*、 *T*列挙型は、それ以外の場合はメンバー typedef `type`。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<type_traits>
 

@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2449 |Microsoft ドキュメント
+title: コンパイラ エラー C2449 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a2ea92f79125e4e3b96f35229a487a5ab787e1d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3e92638eaca1fe951d6b67da7563930214198926
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33224233"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018770"
 ---
 # <a name="compiler-error-c2449"></a>コンパイラ エラー C2449
-見つかった ' {' ファイル スコープ (関数のヘッダーがありません)。  
-  
- 始め中かっこは、ファイル スコープで発生します。  
-  
- このエラーは、関数のヘッダーと、関数定義の中かっこの間のセミコロンで発生することができます。  
-  
- 次の例では、C2499 が生成されます。  
-  
-```  
-// C2449.c  
-// compile with: /c  
-void __stdcall func(void) {}   // OK  
-void __stdcall func(void);  // extra semicolon on this line  
-{                         // C2449 detected here  
+
+検出された '{0}' ファイルのスコープ (関数のヘッダーがありません)。
+
+かっこは、ファイル スコープで発生します。
+
+このエラーは、関数のヘッダーと、関数定義の中かっこの間のセミコロンで発生することができます。
+
+次の例では、C2499 が生成されます。
+
+```
+// C2449.c
+// compile with: /c
+void __stdcall func(void) {}   // OK
+void __stdcall func(void);  // extra semicolon on this line
+{                         // C2449 detected here
 ```

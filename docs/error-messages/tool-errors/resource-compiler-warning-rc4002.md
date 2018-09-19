@@ -1,5 +1,5 @@
 ---
-title: リソース コンパイラの警告 RC4002 |Microsoft ドキュメント
+title: リソース コンパイラの警告 RC4002 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04c932b5f120f540f34cd0d6bdfef51be99bfbb4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 400d748f0ce9cafa4d11690f1d6c9fbfa4af90e7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322771"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058992"
 ---
 # <a name="resource-compiler-warning-rc4002"></a>リソース コンパイラの警告 RC4002
-マクロ 'identifier' に指定された実引数の数が多すぎます  
-  
- 指定した id に指定された実際のパラメーターの数が、識別子のマクロ定義内で指定された仮引数の数を超えています。  
-  
- 実際の追加のパラメーター収集いても、マクロの展開時に無視されます。
+
+マクロ 'identifier' に指定された実引数の数が多すぎます
+
+指定された識別子で指定された実際のパラメーターの数が、識別子のマクロ定義内で指定された仮パラメーターの数を超えています。
+
+実際の追加のパラメーターは、収集されたが、マクロの展開時に無視されます。

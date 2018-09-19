@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d67f4fb4fdb6a46d00ef8cdf21559cf6043932e2
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 1339b291c92879beb7606b0dabe77904ad9f462e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336521"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713597"
 ---
 # <a name="cfileexception-class"></a>CFileException クラス
 ファイルに関連した例外状態を表します。  
@@ -88,7 +88,7 @@ class CFileException : public CException
   
  `CFileException`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afx.h  
   
 ##  <a name="cfileexception"></a>  CFileException::CFileException  
@@ -148,14 +148,14 @@ virtual BOOL GetErrorMessage(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力、出力]*lpszError*  
- エラー メッセージを受信するバッファーへのポインター。  
+*lpszError*<br/>
+[入力、出力]エラー メッセージを受信するバッファーへのポインター。  
   
- [in]*nMaxError*  
- 指定したバッファーが保持できる文字の最大数。 これには、終端の null 文字が含まれます。  
+*nMaxError*<br/>
+[in]指定したバッファーが保持できる文字の最大数。 これには、終端の null 文字が含まれます。  
   
- [入力、出力]*pnHelpContext*  
- ヘルプ コンテキスト ID を受信する符号なし整数へのポインター 場合`NULL`ID は返されません。  
+*pnHelpContext*<br/>
+[入力、出力]ヘルプ コンテキスト ID を受信する符号なし整数へのポインター 場合`NULL`ID は返されません。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE。それ以外の場合は FALSE です。  

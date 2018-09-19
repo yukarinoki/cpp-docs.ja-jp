@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1217fe9c7bbb43b578a7f7236c69531f04464a44
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6109ad46fb171d4bfe3386a4746b21768510ce0d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755922"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042444"
 ---
 # <a name="catltransactionmanager-class"></a>CAtlTransactionManager クラス
 
@@ -124,10 +124,10 @@ CAtlTransactionManager(BOOL bFallback = TRUE, BOOL bAutoCreateTransaction = TRUE
 
 ### <a name="parameters"></a>パラメーター
 
-*bFallback*  
+*bFallback*<br/>
 TRUE は、フォールバックのサポートを示します。 トランザクション処理された関数が失敗した場合、クラスは自動的に「非トランザクション」関数を呼び出します。 FALSE は、「予備」の呼び出しがないことを示します。
 
-*bAutoCreateTransaction*  
+*bAutoCreateTransaction*<br/>
 TRUE は、コンス トラクターでトランザクション ハンドラーが自動的に作成されたことを示します。 FALSE ではないことを示します。
 
 ### <a name="remarks"></a>Remarks
@@ -197,25 +197,25 @@ inline HANDLE CreateFile(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpFileName*  
+*lpFileName*<br/>
 作成または開くオブジェクトの名前。
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 読み取り、書き込み、またはどちらも、両方 (ゼロ) としてまとめることができるオブジェクトへのアクセス。 最もよく使用される値は、GENERIC_READ、GENERIC_WRITE、またはその両方: GENERIC_READ &#124; GENERIC_WRITE します。
 
-*dwShareMode*  
+*dwShareMode*<br/>
 読み取り、書き込み、両方が、削除、または、これらのすべてのオブジェクトの共有モード: FILE_SHARE_DELETE、FILE_SHARE_READ、FILE_SHARE_WRITE は 0。
 
-*lpSecurityAttributes*  
+*lpSecurityAttributes*<br/>
 オプションのセキュリティ記述子を含み、また、返されたハンドルを子プロセスに継承できるかどうかを判断します SECURITY_ATTRIBUTES 構造体へのポインター。 パラメーターは、NULL にすることができます。
 
-*dwCreationDisposition*  
+*dwCreationDisposition*<br/>
 ファイルが存在し、存在しないを実行するアクション。 このパラメーターは、組み合わせることはできません、次の値のいずれかを指定する必要があります: CREATE_ALWAYS、CREATE_NEW、OPEN_ALWAYS、OPEN_EXISTING の場合、または TRUNCATE_EXISTING します。
 
-*dwFlagsAndAttributes*  
+*dwFlagsAndAttributes*<br/>
 ファイルの属性とフラグ。 このパラメーターは、使用可能なファイル属性 (FILE_ATTRIBUTE_ *) の任意の組み合わせを含めることができます。 その他のすべてのファイル属性は、FILE_ATTRIBUTE_NORMAL をオーバーライドします。 このパラメーターは、フラグの組み合わせを含めることも (file_flag _\*) バッファリング動作の制御、アクセス モード、およびその他の特殊なフラグ。 これらを組み合わせて、任意 FILE_ATTRIBUTE_ で\*値。
 
-*hTemplateFile*  
+*hTemplateFile*<br/>
 GENERIC_READ アクセス権を持つテンプレート ファイルに有効なハンドル。 テンプレート ファイルは、ファイルの属性と作成されるファイルの拡張属性を提供します。 このパラメーターは、NULL を指定できます。
 
 ### <a name="return-value"></a>戻り値
@@ -236,7 +236,7 @@ inline BOOL DeleteFile(LPCTSTR lpFileName);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpFileName*  
+*lpFileName*<br/>
 削除するファイルの名前。
 
 ### <a name="remarks"></a>Remarks
@@ -255,10 +255,10 @@ inline HANDLE FindFirstFile(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpFileName*  
+*lpFileName*<br/>
 ディレクトリまたはパス、およびファイル名を検索します。 このパラメーターは、アスタリスク (*) や疑問符 () などのワイルドカード文字を含めることができます。
 
-*pNextInfo*  
+*pNextInfo*<br/>
 見つかったファイルまたはサブディレクトリに関する情報を受け取る WIN32_FIND_DATA 構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -279,7 +279,7 @@ inline DWORD GetFileAttributes(LPCTSTR lpFileName);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpFileName*  
+*lpFileName*<br/>
 ファイルまたはディレクトリの名前。
 
 ### <a name="remarks"></a>Remarks
@@ -299,13 +299,13 @@ inline BOOL GetFileAttributesEx(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpFileName*  
+*lpFileName*<br/>
 ファイルまたはディレクトリの名前。
 
-*fInfoLevelId*  
+*fInfoLevelId*<br/>
 取得する属性の情報のレベル。
 
-*lpFileInformation*  
+*lpFileInformation*<br/>
 属性の情報を受け取るバッファーへのポインター。 このバッファーに格納されている属性情報の種類の値によって決まります*fInfoLevelId*します。 場合、 *fInfoLevelId*パラメーターが GetFileExInfoStandard し、このパラメーター WIN32_FILE_ATTRIBUTE_DATA 構造体を指します。
 
 ### <a name="remarks"></a>Remarks
@@ -370,10 +370,10 @@ inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpOldFileName*  
+*lpOldFileName*<br/>
 既存のファイルまたはローカル コンピューター上のディレクトリの現在の名前。
 
-*lpNewFileName*  
+*lpNewFileName*<br/>
 ファイルまたはディレクトリの新しい名前。 この名前がまだ存在しない必要があります。 別のファイル システムまたはドライブに新しいファイルがあります。 新しいディレクトリは、同じドライブ上にある必要があります。
 
 ### <a name="remarks"></a>Remarks
@@ -399,31 +399,31 @@ inline LSTATUS RegCreateKeyEx(
 
 ### <a name="parameters"></a>パラメーター
 
-*hKey*  
+*hKey*<br/>
 開いているレジストリ キーへのハンドル。
 
-*いったん*  
+*いったん*<br/>
 この関数を開くか作成するサブキーの名前。
 
-*dwReserved*  
+*dwReserved*<br/>
 このパラメーターは予約されており、0 にする必要があります。
 
-*lpClass*  
+*lpClass*<br/>
 このキーのユーザー定義のクラス。 このパラメーターは無視できます。 このパラメーターは、NULL を指定できます。
 
-*dwOptions*  
+*dwOptions*<br/>
 このパラメーターは、次の値のいずれかを指定できます: REG_OPTION_BACKUP_RESTORE、REG_OPTION_NON_VOLATILE、または REG_OPTION_VOLATILE します。
 
-*samDesired*  
+*samDesired*<br/>
 キーのアクセス権を指定するマスク。
 
-*lpSecurityAttributes*  
+*lpSecurityAttributes*<br/>
 子プロセスが、返されたハンドルを継承できるかどうかを決定する SECURITY_ATTRIBUTES 構造体へのポインター。 場合*lpSecurityAttributes*が null の場合、ハンドルを継承することはできません。
 
-*phkResult*  
+*phkResult*<br/>
 開くか、作成したキーを識別するハンドルを受け取る変数へのポインター。 キーが定義済みのレジストリ キーの 1 つでない場合は、呼び出し、`RegCloseKey`ハンドルの使用が完了した後に機能します。
 
-*lpdwDisposition*  
+*lpdwDisposition*<br/>
 廃棄値は次のいずれかを受け取る変数へのポインター: ポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -472,19 +472,19 @@ inline LSTATUS RegOpenKeyEx(
 
 ### <a name="parameters"></a>パラメーター
 
-*hKey*  
+*hKey*<br/>
 開いているレジストリ キーへのハンドル。
 
-*いったん*  
+*いったん*<br/>
 開かれているレジストリ サブキーの名前。
 
-*ulOptions*  
+*ulOptions*<br/>
 このパラメーターは予約されており、0 にする必要があります。
 
-*samDesired*  
+*samDesired*<br/>
 キーのアクセス権を指定するマスク。
 
-*phkResult*  
+*phkResult*<br/>
 開くか、作成したキーを識別するハンドルを受け取る変数へのポインター。 キーが定義済みのレジストリ キーの 1 つでない場合は、呼び出し、`RegCloseKey`ハンドルの使用が完了した後に機能します。
 
 ### <a name="return-value"></a>戻り値
@@ -521,10 +521,10 @@ inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpFileName*  
+*lpFileName*<br/>
 ファイルまたはディレクトリの名前。
 
-*dwAttributes*  
+*dwAttributes*<br/>
 ファイルに設定するファイル属性。 詳細については、次を参照してください。 [SetFileAttributesTransacted](/windows/desktop/api/winbase/nf-winbase-setfileattributestransacteda)します。
 
 ### <a name="remarks"></a>Remarks

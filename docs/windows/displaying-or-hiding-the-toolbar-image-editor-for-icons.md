@@ -1,5 +1,5 @@
 ---
-title: ツールバー (アイコン用イメージ エディター) を非表示の表示と表示 |Microsoft Docs
+title: ツールバー (アイコン用イメージ エディターを C++) を非表示の表示と表示 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: df6adfb026c9bfeab715e617dae64a25e993e868
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 360884c27e834f31badce0b02119203ee7877e4e
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602613"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318929"
 ---
-# <a name="displaying-or-hiding-the-toolbar-image-editor-for-icons"></a>ツール バーの表示と非表示 (アイコン用イメージ エディター)
+# <a name="displaying-or-hiding-the-toolbar-c-image-editor-for-icons"></a>ツールバー (アイコン用イメージ エディターを C++) を非表示の表示と表示
 
 描画ツールの多くはから利用できるため、[キーボード](../windows/accelerator-keys-image-editor-for-icons.md)、非表示にする便利な場合があります、**イメージ エディター**ツールバー。
 

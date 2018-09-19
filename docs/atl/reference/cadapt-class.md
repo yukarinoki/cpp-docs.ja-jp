@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 503ce18d5ffa966f6c216468b487851207313937
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9292c354b630ca5aea8bda7c88f5beab6691ba08
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105355"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052843"
 ---
 # <a name="cadapt-class"></a>CAdapt クラス
 
@@ -36,13 +36,13 @@ ms.locfileid: "44105355"
 ## <a name="syntax"></a>構文
 
 ```
-template <class T>  
+template <class T>
 class CAdapt
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 適合された型。
 
 ## <a name="members"></a>メンバー
@@ -97,10 +97,10 @@ CAdapt(CAdapt<T>&& rSrCA) noexcept; // (Visual Studio 2017)
 
 ### <a name="parameters"></a>パラメーター
 
-*rSrc*  
+*rSrc*<br/>
 新しく構築されたアダプター オブジェクトにコピーされるが適用される型の変数を指定します。
 
-*rSrCA*  
+*rSrCA*<br/>
 アダプター オブジェクトが含まれているデータをコピー (または移動)、新しく構築されたアダプタ オブジェクトにします。
 
 ##  <a name="m_t"></a>  CAdapt::m_T
@@ -119,7 +119,7 @@ T m_T;
 
 返します、 **const**への参照、 [m_T](#m_t)メンバー型のオブジェクトの場合と同様に処理されるアダプター オブジェクト*T*します。
 
-```  
+```
 operator const T&() const;
 ```
 
@@ -131,7 +131,7 @@ A **const**への参照`m_T`します。
 
 参照を返します、 [m_T](#m_t)アダプター オブジェクトを型のオブジェクトの場合と同様に扱うメンバー *T*します。
 
-```  
+```
 operator T&();
 ```
 
@@ -149,7 +149,7 @@ bool operator<(const T& rSrc) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*rSrc*  
+*rSrc*<br/>
 比較するオブジェクトへの参照。
 
 ### <a name="return-value"></a>戻り値
@@ -168,10 +168,10 @@ CAdapt& operator= (CAdapt<T>&& rSrCA) noexcept; // (Visual Studio 2017)
 
 ### <a name="parameters"></a>パラメーター
 
-*rSrc*  
+*rSrc*<br/>
 コピーする適合された型のオブジェクトへの参照。
 
-*rSrCA*  
+*rSrCA*<br/>
 移動するオブジェクトへの参照。
 
 ### <a name="return-value"></a>戻り値
@@ -188,7 +188,7 @@ bool operator== (const T& rSrc) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*rSrc*  
+*rSrc*<br/>
 比較するオブジェクトへの参照。
 
 ### <a name="return-value"></a>戻り値

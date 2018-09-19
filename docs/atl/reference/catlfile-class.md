@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3d6ff72f9f5011d7c4e0f0b65cca9a82227b70d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4ec124d1010a5870d47b9f1504655a7822505fe6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753254"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040493"
 ---
 # <a name="catlfile-class"></a>CAtlFile クラス
 
@@ -107,13 +107,13 @@ explicit CAtlFile(HANDLE hFile) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*file*  
+*file*<br/>
 ファイル オブジェクト。
 
-*hFile*  
+*hFile*<br/>
 ファイル ハンドル。
 
-*pTM*  
+*pTM*<br/>
 CAtlTransactionManager オブジェクトへのポインター。
 
 ### <a name="remarks"></a>Remarks
@@ -137,25 +137,25 @@ HRESULT Create(
 
 ### <a name="parameters"></a>パラメーター
 
-*szFilename*  
+*szFilename*<br/>
 ファイル名。
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 必要なアクセス。 参照してください*dwDesiredAccess*で[CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) Windows SDK に含まれています。
 
-*dwShareMode*  
+*dwShareMode*<br/>
 共有モード。 参照してください*dwShareMode*で`CreateFile`します。
 
-*dwCreationDisposition*  
+*dwCreationDisposition*<br/>
 作成処理します。 参照してください*dwCreationDisposition*で`CreateFile`します。
 
-*dwFlagsAndAttributes*  
+*dwFlagsAndAttributes*<br/>
 フラグと属性。 参照してください*dwFlagsAndAttributes*で`CreateFile`します。
 
-*lpsa*  
+*lpsa*<br/>
 セキュリティ属性。 参照してください*lpSecurityAttributes*で`CreateFile`します。
 
-*hTemplateFile*  
+*hTemplateFile*<br/>
 テンプレート ファイル。 参照してください*hTemplateFile*で`CreateFile`します。
 
 ### <a name="return-value"></a>戻り値
@@ -195,13 +195,13 @@ HRESULT GetOverlappedResult(
 
 ### <a name="parameters"></a>パラメーター
 
-*pOverlapped*  
+*pOverlapped*<br/>
 オーバー ラップ構造体。 参照してください*lpOverlapped*で[GetOverlappedResult](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) Windows SDK に含まれています。
 
-*dwBytesTransferred*  
+*dwBytesTransferred*<br/>
 バイトが転送されます。 参照してください*lpNumberOfBytesTransferred*で`GetOverlappedResult`します。
 
-*して*  
+*して*<br/>
 待機オプション。 参照してください*して*で`GetOverlappedResult`します。
 
 ### <a name="return-value"></a>戻り値
@@ -222,7 +222,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nPos*  
+*nPos*<br/>
 位置 (バイト単位)。
 
 ### <a name="return-value"></a>戻り値
@@ -243,7 +243,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nLen*  
+*nLen*<br/>
 ファイル内のバイト数。
 
 ### <a name="return-value"></a>戻り値
@@ -264,10 +264,10 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nPos*  
+*nPos*<br/>
 ロックの開始位置、ファイル内の位置。
 
-*nCount*  
+*nCount*<br/>
 ロックするバイト範囲の長さ。
 
 ### <a name="return-value"></a>戻り値
@@ -316,19 +316,19 @@ HRESULT Read(
 
 ### <a name="parameters"></a>パラメーター
 
-*pBuffer*  
+*pBuffer*<br/>
 ファイルから読み取られるデータを受け取るバッファーへのポインター。
 
-*nBufSize*  
+*nBufSize*<br/>
 バイト単位のバッファー サイズ。
 
-*nBytesRead*  
+*nBytesRead*<br/>
 読み取られたバイト数。
 
-*pOverlapped*  
+*pOverlapped*<br/>
 オーバー ラップ構造体。 参照してください*lpOverlapped*で[ReadFile](/windows/desktop/api/fileapi/nf-fileapi-readfile) Windows SDK に含まれています。
 
-*pfnCompletionRoutine*  
+*pfnCompletionRoutine*<br/>
 メモリを割り当てます。 参照してください*lpCompletionRoutine*で[ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex) Windows SDK に含まれています。
 
 ### <a name="return-value"></a>戻り値
@@ -351,10 +351,10 @@ HRESULT Seek(
 
 ### <a name="parameters"></a>パラメーター
 
-*nOffset*  
+*nOffset*<br/>
 指定された開始点からのオフセット*dwFrom*します。
 
-*dwFrom*  
+*dwFrom*<br/>
 (FILE_BEGIN、FILE_CURRENT、または FILE_END) の開始点。
 
 ### <a name="return-value"></a>戻り値
@@ -375,7 +375,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nNewLen*  
+*nNewLen*<br/>
 ファイルのバイトの新しい長さ。
 
 ### <a name="return-value"></a>戻り値
@@ -396,10 +396,10 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nPos*  
+*nPos*<br/>
 ロックの解除の開始位置、ファイル内の位置。
 
-*nCount*  
+*nCount*<br/>
 ロックするバイト範囲の長さ。
 
 ### <a name="return-value"></a>戻り値
@@ -434,19 +434,19 @@ HRESULT Write(
 
 ### <a name="parameters"></a>パラメーター
 
-*pBuffer*  
+*pBuffer*<br/>
 ファイルに書き込まれるデータを保持するバッファー。
 
-*nBufSize*  
+*nBufSize*<br/>
 バッファーから転送されるバイト数。
 
-*pOverlapped*  
+*pOverlapped*<br/>
 オーバー ラップ構造体。 参照してください*lpOverlapped*で[WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile) Windows SDK に含まれています。
 
-*pfnCompletionRoutine*  
+*pfnCompletionRoutine*<br/>
 メモリを割り当てます。 参照してください*lpCompletionRoutine*で[WriteFileEx](/windows/desktop/api/fileapi/nf-fileapi-writefileex) Windows SDK に含まれています。
 
-*pnBytesWritten*  
+*pnBytesWritten*<br/>
 書き込みバイト数。
 
 ### <a name="return-value"></a>戻り値
@@ -459,6 +459,6 @@ HRESULT Write(
 
 ## <a name="see-also"></a>関連項目
 
-[マーキーのサンプル](../../visual-cpp-samples.md)   
-[クラスの概要](../../atl/atl-class-overview.md)   
+[マーキーのサンプル](../../visual-cpp-samples.md)<br/>
+[クラスの概要](../../atl/atl-class-overview.md)<br/>
 [CHandle クラス](../../atl/reference/chandle-class.md)

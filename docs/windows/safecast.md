@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 27c049b57d51f173e2a388e48f24d9b9674ae46b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2872f1639a11d537dd79b878a166a3afb5fd8667
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606098"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719171"
 ---
 # <a name="safecast"></a>SafeCast
 
@@ -40,11 +40,11 @@ inline bool SafeCast (
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*から*  
-変換するソースの数。 これは、型でなければなりません`T`します。
+*From*<br/>
+[in]変換するソースの数。 これは、型でなければなりません`T`します。
 
-[out]*に*  
-新しい数値型への参照。 これは、型でなければなりません`U`します。
+*目的*<br/>
+[out]新しい数値型への参照。 これは、型でなければなりません`U`します。
 
 ## <a name="return-value"></a>戻り値
 

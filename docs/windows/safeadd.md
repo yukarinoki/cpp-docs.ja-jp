@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e84b76f8079656da3ed19aa2c690bf240854015
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ada0997a03cefbec4bcc4faa26ad4eaf8c176ff2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594357"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704888"
 ---
 # <a name="safeadd"></a>SafeAdd
 
@@ -41,14 +41,14 @@ inline bool SafeAdd (
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*t*  
-追加する最初の数値。 これは T 型である必要があります。
+*t*<br/>
+[in]追加する最初の数値。 これは T 型である必要があります。
 
-[in]*u*  
-追加する 2 番目の数値。 これは、型 U のある必要があります。
+*u*<br/>
+[in]追加する 2 番目の数値。 これは、型 U のある必要があります。
 
-[out]*結果*  
-パラメーターで**SafeAdd**結果を格納します。
+*結果*<br/>
+[out]パラメーターで**SafeAdd**結果を格納します。
 
 ## <a name="return-value"></a>戻り値
 

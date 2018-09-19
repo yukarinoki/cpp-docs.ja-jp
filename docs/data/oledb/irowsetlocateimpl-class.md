@@ -43,14 +43,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4c43e02b5d847a908910ec0df4bfc56c5464fd66
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6a8e41561057250f4936e8e72a14f0324cfcdac1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571862"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065319"
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl クラス
+
 OLE DB 実装[IRowsetLocate](/previous-versions/windows/desktop/ms721190\(v=vs.85\))インターフェイスで、行セットから任意の行がフェッチされます。  
   
 ## <a name="syntax"></a>構文
@@ -72,29 +73,31 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- *T*  
- 派生したクラス`IRowsetLocateImpl`します。  
+
+*T*<br/>
+派生したクラス`IRowsetLocateImpl`します。  
   
- *RowsetInterface*  
- 派生したクラス`IRowsetImpl`します。  
+*RowsetInterface*<br/>
+派生したクラス`IRowsetImpl`します。  
   
- *RowClass*  
- 記憶域ユニット、`HROW`します。  
+*RowClass*<br/>
+記憶域ユニット、`HROW`します。  
   
- *MapClass*  
- プロバイダーによって保持されているすべての行ハンドルのストレージ ユニット。  
+*MapClass*<br/>
+プロバイダーによって保持されているすべての行ハンドルのストレージ ユニット。  
   
- *BookmarkKeyType*  
- 長整数型や文字列など、ブックマークの型。 通常のブックマークには少なくとも 2 つのバイトの長さが必要です。 (1 バイトの長さは、OLE DB 用に予約された[標準ブックマーク](/previous-versions/windows/desktop/ms712954\(v=vs.85\))`DBBMK_FIRST`、 `DBBMK_LAST`、および`DBBMK_INVALID`)。  
+*BookmarkKeyType*<br/>
+長整数型や文字列など、ブックマークの型。 通常のブックマークには少なくとも 2 つのバイトの長さが必要です。 (1 バイトの長さは、OLE DB 用に予約された[標準ブックマーク](/previous-versions/windows/desktop/ms712954\(v=vs.85\))`DBBMK_FIRST`、 `DBBMK_LAST`、および`DBBMK_INVALID`)。  
   
- *BookmarkType*  
- データへのブックマーク間のリレーションシップを維持するためのマッピング メカニズム。  
+*BookmarkType*<br/>
+データへのブックマーク間のリレーションシップを維持するためのマッピング メカニズム。  
   
- *BookmarkMapClass*  
- ブックマークによって保持されているすべての行ハンドルのストレージ ユニット。  
+*BookmarkMapClass*<br/>
+ブックマークによって保持されているすべての行ハンドルのストレージ ユニット。  
 
 ## <a name="requirements"></a>要件  
- **ヘッダー**: atldb.h  
+
+**ヘッダー**: atldb.h  
   
 ## <a name="members"></a>メンバー  
   
@@ -114,15 +117,17 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 |[m_rgBookmarks](#rgbookmarks)|ブックマークの配列。|  
   
 ## <a name="remarks"></a>Remarks  
- `IRowsetLocateImpl` OLE DB テンプレートの実装、 [IRowsetLocate](/previous-versions/windows/desktop/ms721190\(v=vs.85\))インターフェイス。 `IRowsetLocate` 行セットからの任意の行のフェッチに使用されます。 このインターフェイスを実装していない行セットは、`sequential`行セット。 ときに`IRowsetLocate`が存在する、行セット列 0 が行のブックマーク; の同じ行に位置を変更するために使用するブックマークの値を取得はこのコラムを読みます。  
+
+`IRowsetLocateImpl` OLE DB テンプレートの実装、 [IRowsetLocate](/previous-versions/windows/desktop/ms721190\(v=vs.85\))インターフェイス。 `IRowsetLocate` 行セットからの任意の行のフェッチに使用されます。 このインターフェイスを実装していない行セットは、`sequential`行セット。 ときに`IRowsetLocate`が存在する、行セット列 0 が行のブックマーク; の同じ行に位置を変更するために使用するブックマークの値を取得はこのコラムを読みます。  
   
- `IRowsetLocateImpl` プロバイダーのブックマーク サポートを実装するために使用されます。 ブックマークは、プレース ホルダー (行セットでのインデックス)、行にすばやく戻るコンシューマーを有効にするデータを高速アクセスを許可します。 プロバイダーは、どのようなブックマークは一意を決定します。 行を識別します。 使用して`IRowsetLocateImpl`メソッド、ブックマークを比較する、行のフェッチがでオフセット、ブックマークによる行のフェッチおよびブックマークのハッシュ値を返します。  
+`IRowsetLocateImpl` プロバイダーのブックマーク サポートを実装するために使用されます。 ブックマークは、プレース ホルダー (行セットでのインデックス)、行にすばやく戻るコンシューマーを有効にするデータを高速アクセスを許可します。 プロバイダーは、どのようなブックマークは一意を決定します。 行を識別します。 使用して`IRowsetLocateImpl`メソッド、ブックマークを比較する、行のフェッチがでオフセット、ブックマークによる行のフェッチおよびブックマークのハッシュ値を返します。  
   
- で行セットの OLE DB のブックマークをサポートするには、このクラスから継承する行セットを確認します。  
+で行セットの OLE DB のブックマークをサポートするには、このクラスから継承する行セットを確認します。  
   
- ブックマークのサポートを実装する方法の詳細については、次を参照してください[プロバイダーのサポートのブックマーク](../../data/oledb/provider-support-for-bookmarks.md)で、 *Visual C++ プログラマ ガイド*と[ブックマーク](/previous-versions/windows/desktop/ms709728\(v=vs.85\))、で *。OLE DB プログラマーズ リファレンス*プラットフォーム SDK にします。  
+ブックマークのサポートを実装する方法の詳細については、次を参照してください[プロバイダーのサポートのブックマーク](../../data/oledb/provider-support-for-bookmarks.md)で、 *Visual C++ プログラマ ガイド*と[ブックマーク](/previous-versions/windows/desktop/ms709728\(v=vs.85\))、で *。OLE DB プログラマーズ リファレンス*プラットフォーム SDK にします。  
 
 ## <a name="compare"></a> Irowsetlocateimpl::compare
+
 2 つのブックマークを比較します。  
   
 ### <a name="syntax"></a>構文  
@@ -137,22 +142,25 @@ STDMETHOD (Compare )(HCHAPTER /* hReserved */,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+
+参照してください[IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ### <a name="remarks"></a>Remarks  
- いずれかのブックマークは、標準 OLE DB 定義[標準ブックマーク](/previous-versions/windows/desktop/ms712954\(v=vs.85\))(`DBBMK_FIRST`、 `DBBMK_LAST`、または`DBBMK_INVALID`)。 戻り値`pComparison`2 つのブックマークの間のリレーションシップを示します。  
+
+いずれかのブックマークは、標準 OLE DB 定義[標準ブックマーク](/previous-versions/windows/desktop/ms712954\(v=vs.85\))(`DBBMK_FIRST`、 `DBBMK_LAST`、または`DBBMK_INVALID`)。 戻り値`pComparison`2 つのブックマークの間のリレーションシップを示します。  
   
--   DBCOMPARE_LT (`cbBookmark1`前`cbBookmark2`)。  
+- DBCOMPARE_LT (`cbBookmark1`前`cbBookmark2`)。  
   
--   DBCOMPARE_EQ (`cbBookmark1`と等しい`cbBookmark2`)。  
+- DBCOMPARE_EQ (`cbBookmark1`と等しい`cbBookmark2`)。  
   
--   DBCOMPARE_GT (`cbBookmark1`後`cbBookmark2`)。  
+- DBCOMPARE_GT (`cbBookmark1`後`cbBookmark2`)。  
   
--   DBCOMPARE_NE (ブックマークは等しいと順序が付いていません)。  
+- DBCOMPARE_NE (ブックマークは等しいと順序が付いていません)。  
   
--   DBCOMPARE_NOTCOMPARABLE (ブックマークは比較できません。) 
+- DBCOMPARE_NOTCOMPARABLE (ブックマークは比較できません。) 
 
 ## <a name="getrowsat"></a> Irowsetlocateimpl::getrowsat
+
 ブックマークからのオフセットで指定した行で始まる行をフェッチします。  
   
 ### <a name="syntax"></a>構文  
@@ -169,14 +177,17 @@ STDMETHOD (GetRowsAt )(HWATCHREGION /* hReserved1 */,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[irowsetlocate::getrowsat](/previous-versions/windows/desktop/ms723031\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+
+参照してください[irowsetlocate::getrowsat](/previous-versions/windows/desktop/ms723031\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ### <a name="remarks"></a>Remarks  
- 使用する代わりに、カーソル位置からフェッチ、[に](/previous-versions/windows/desktop/ms723031\(v=vs.85\))します。  
+
+使用する代わりに、カーソル位置からフェッチ、[に](/previous-versions/windows/desktop/ms723031\(v=vs.85\))します。  
   
- `IRowsetLocateImpl::GetRowsAt` カーソルの位置は変更されません。 
+`IRowsetLocateImpl::GetRowsAt` カーソルの位置は変更されません。 
 
 ## <a name="getrowsbybookmark"></a> Irowsetlocateimpl::getrowsbybookmark
+
 指定されたブックマークに一致する 1 つまたは複数の行がフェッチされます。  
   
 ### <a name="syntax"></a>構文  
@@ -191,15 +202,18 @@ STDMETHOD (GetRowsByBookmark )(HCHAPTER /* hReserved */,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *hReserved*  
- [in]対応する*hChapter*パラメーターを[:getrowsbybookmark](/previous-versions/windows/desktop/ms725420\(v=vs.85\))します。  
+
+*hReserved*<br/>
+[in]対応する*hChapter*パラメーターを[:getrowsbybookmark](/previous-versions/windows/desktop/ms725420\(v=vs.85\))します。  
   
- その他のパラメーターでは、次を参照してください。 [:getrowsbybookmark](/previous-versions/windows/desktop/ms725420\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+その他のパラメーターでは、次を参照してください。 [:getrowsbybookmark](/previous-versions/windows/desktop/ms725420\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ### <a name="remarks"></a>Remarks  
- ブックマークは、定義した値または OLE DB[標準ブックマーク](/previous-versions/windows/desktop/ms712954\(v=vs.85\))(`DBBMK_FIRST`または`DBBMK_LAST`)。 カーソルの位置は変更されません。  
+
+ブックマークは、定義した値または OLE DB[標準ブックマーク](/previous-versions/windows/desktop/ms712954\(v=vs.85\))(`DBBMK_FIRST`または`DBBMK_LAST`)。 カーソルの位置は変更されません。  
 
 ## <a name="hash"></a> Irowsetlocateimpl::hash
+
 ハッシュの指定されたブックマークの値を返します。  
   
 ### <a name="syntax"></a>構文  
@@ -214,12 +228,14 @@ STDMETHOD (Hash )(HCHAPTER /* hReserved */,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *hReserved*  
- [in]対応する*hChapter*パラメーターを[IRowsetLocate::Hash](/previous-versions/windows/desktop/ms709697\(v=vs.85\))します。  
+
+*hReserved*<br/>
+[in]対応する*hChapter*パラメーターを[IRowsetLocate::Hash](/previous-versions/windows/desktop/ms709697\(v=vs.85\))します。  
   
- その他のパラメーターでは、次を参照してください。 [IRowsetLocate::Hash](/previous-versions/windows/desktop/ms709697\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+その他のパラメーターでは、次を参照してください。 [IRowsetLocate::Hash](/previous-versions/windows/desktop/ms709697\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
 
 ## <a name="rgbookmarks"></a> Irowsetlocateimpl::m_rgbookmarks
+
 ブックマークの配列。  
   
 ### <a name="syntax"></a>構文  
@@ -229,8 +245,9 @@ CAtlArray<DBROWCOUNT> m_rgBookmarks;
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)   
- [IRowsetLocate:IRowset](/previous-versions/windows/desktop/ms721190\(v=vs.85\))   
- [プロバイダーのブックマーク サポート](../../data/oledb/provider-support-for-bookmarks.md)   
- [ブックマーク](/previous-versions/windows/desktop/ms709728\(v=vs.85\))
+
+[OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
+[IRowsetLocate:IRowset](/previous-versions/windows/desktop/ms721190\(v=vs.85\))   
+[プロバイダーのブックマーク サポート](../../data/oledb/provider-support-for-bookmarks.md)<br/>
+[ブックマーク](/previous-versions/windows/desktop/ms709728\(v=vs.85\))

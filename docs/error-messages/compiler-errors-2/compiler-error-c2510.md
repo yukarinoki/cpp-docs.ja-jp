@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2510 |Microsoft ドキュメント
+title: コンパイラ エラー C2510 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 555d6d30f78c82e4c37e9fd5a047f62018b3d3d7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f2a672b8329bc3167452ec5e3d1d76f19161bf6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226310"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055963"
 ---
 # <a name="compiler-error-c2510"></a>コンパイラ エラー C2510
-'identifier' : '::' の左側は、クラス、構造体、共用体のいずれかでなければなりません  
-  
- スコープ解決演算子 (`::`) の左側には、クラス、構造体、または共用体の名前のいずれかが必要です。
+
+'identifier' : '::' の左側は、クラス、構造体、共用体のいずれかでなければなりません
+
+スコープ解決演算子 (`::`) の左側には、クラス、構造体、または共用体の名前のいずれかが必要です。

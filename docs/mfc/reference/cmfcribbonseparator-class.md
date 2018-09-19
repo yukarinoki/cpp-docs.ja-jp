@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12f4b9019a79b6ff57da6905b6ad9329788b4ec9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: e9112a6790175709a2575319c6f71a55d1303a83
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849767"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705316"
 ---
 # <a name="cmfcribbonseparator-class"></a>CMFCRibbonSeparator クラス
 リボンの区切り記号を実装します。  
@@ -100,7 +100,7 @@ pMainPanel->Add(new CMFCRibbonSeparator(TRUE));
   
  [CMFCRibbonSeparator](../../mfc/reference/cmfcribbonseparator-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxbaseribbonelement.h  
   
 ##  <a name="addtolistbox"></a>  CMFCRibbonSeparator::AddToListBox  
@@ -113,11 +113,11 @@ virtual int AddToListBox(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWndListBox*  
- ポインター、**コマンド**リスト区切り記号が追加されます。  
+*pWndListBox*<br/>
+[in]ポインター、**コマンド**リスト区切り記号が追加されます。  
   
- [in]*パラメーター bDeep*  
- 無視されます。  
+*パラメーター bDeep*<br/>
+[in]無視されます。  
   
 ### <a name="return-value"></a>戻り値  
  0 から始まるインデックスで指定されたリスト ボックス内の文字列に*pWndListBox*します。  
@@ -130,8 +130,8 @@ CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bIsHoriz*  
- TRUE の場合、区切り記号は水平方向です。FALSE の場合、区切り記号は垂直方向です。  
+*bIsHoriz*<br/>
+[in]TRUE の場合、区切り記号は水平方向です。FALSE の場合、区切り記号は垂直方向です。  
   
 ### <a name="remarks"></a>Remarks  
  水平方向の区切り記号は、アプリケーションのメニューで使用されます。 ツールバーの縦の区切り記号が使用されます。  
@@ -149,8 +149,8 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*Src*  
- コピー元ソース リボン要素。  
+*src*<br/>
+[in]コピー元ソース リボン要素。  
   
 ##  <a name="getregularsize"></a>  CMFCRibbonSeparator::GetRegularSize  
  区切り記号のサイズを返します。  
@@ -160,8 +160,8 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイスのコンテンツへのポインター。  
+*pDC*<br/>
+[in]デバイスのコンテンツへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  指定されたデバイス コンテキストで区切り記号のサイズ。  
@@ -197,8 +197,8 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
 ##  <a name="ondrawonlist"></a>  CMFCRibbonSeparator::OnDrawOnList  
  区切り文字を描画するためにシステムによって呼び出されます、**コマンド**一覧。  
@@ -218,12 +218,12 @@ virtual void OnDrawOnList(
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*pDC*|デバイス コンテキストへのポインター。|  
-|[in]*strText*|一覧に表示されるテキスト。|  
-|[in]*nTextOffset*|テキストおよび外接する四角形の左側にある間の間隔。|  
-|[in]*rect*|外接する四角形を指定します。|  
-|[in]*bIsSelected*|無視されます。|  
-|[in]*bHighlighted*|無視されます。|  
+|*pDC*|[in]デバイス コンテキストへのポインター。|  
+|*strText*|[in]一覧に表示されるテキスト。|  
+|*nTextOffset*|[in]テキストおよび外接する四角形の左側にある間の間隔。|  
+|*rect*|[in]外接する四角形を指定します。|  
+|*bIsSelected*|[in]無視されます。|  
+|*bHighlighted*|[in]無視されます。|  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

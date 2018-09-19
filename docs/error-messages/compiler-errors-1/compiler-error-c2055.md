@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2055 |Microsoft ドキュメント
+title: コンパイラ エラー C2055 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f16d9c3948c0211da69142f1b9c7c1a6a32d8c37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d6c63d79325417fbd9b1f451fb4a51f13957b4df
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169333"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019343"
 ---
 # <a name="compiler-error-c2055"></a>コンパイラ エラー C2055
-型リストではなく、仮パラメーター リストが必要です。  
-  
- 関数の定義には、仮パラメーター リストの代わりにパラメーターの型リストが含まれています。 ANSI C には、void または、省略記号でない限り、名前を指定する仮パラメーターが必要です (`...`)。  
-  
- 次の例では、C2055 が生成されます。  
-  
-```  
-// C2055.c  
-// compile with: /c  
-void func(int, char) {}  // C2055  
-void func (int i, char c) {}   // OK  
+
+型リストではなく、仮パラメーター リストが必要です。
+
+関数定義には、仮パラメーター リストではなく、パラメーターの型リストが含まれています。 ANSI C には、void または省略記号でない限り、名前を指定する正式なパラメーターが必要です。 (`...`)。
+
+次の例では、C2055 が生成されます。
+
+```
+// C2055.c
+// compile with: /c
+void func(int, char) {}  // C2055
+void func (int i, char c) {}   // OK
 ```

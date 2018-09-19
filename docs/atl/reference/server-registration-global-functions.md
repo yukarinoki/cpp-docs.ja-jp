@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d30778524f692e19ffad205dc693dd5afd294c25
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6fb3febbbaffc7c3a0de945fc9d30b544fd22188
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757989"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023307"
 ---
 # <a name="server-registration-global-functions"></a>サーバー登録に関するグローバル関数
 
@@ -57,13 +57,13 @@ ATLINLINE ATLAPI AtlComModuleRegisterServer(
 
 ### <a name="parameters"></a>パラメーター
 
-*pComModule*  
+*pComModule*<br/>
 COM モジュールへのポインター。
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 TRUE の場合、タイプ ライブラリを登録します。
 
-*pclsid の値*  
+*pclsid の値*<br/>
 登録するオブジェクトの CLSID を指します。 NULL の場合、オブジェクトのマップ内のすべてのオブジェクトが登録されます。
 
 ### <a name="return-value"></a>戻り値
@@ -89,13 +89,13 @@ ATLINLINE ATLAPI AtlComModuleUnregisterServer(
 
 ### <a name="parameters"></a>パラメーター
 
-*pComModule*  
+*pComModule*<br/>
 COM モジュールへのポインター。
 
-*bUnRegTypeLib*  
+*bUnRegTypeLib*<br/>
 TRUE の場合、タイプ ライブラリを登録します。
 
-*pclsid の値*  
+*pclsid の値*<br/>
 登録解除するオブジェクトの CLSID を指します。 NULL の場合は、オブジェクト マップ内のすべてのオブジェクトは登録できません。
 
 ### <a name="return-value"></a>戻り値
@@ -121,13 +121,13 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 
 ### <a name="parameters"></a>パラメーター
 
-*pComModule*  
+*pComModule*<br/>
 COM モジュールへのポインター。
 
-*dwClsContext*  
+*dwClsContext*<br/>
 クラスのオブジェクトが実行コンテキストを指定します。 指定できる値は、CLSCTX_INPROC_SERVER や CLSCTX_INPROC_HANDLER、CLSCTX_LOCAL_SERVER は。 参照してください[CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716)の詳細。
 
-*dwFlags*  
+*dwFlags*<br/>
 クラス オブジェクトへの接続の種類を決定します。 指定できる値は、REGCLS_SINGLEUSE、REGCLS_MULTIPLEUSE、または REGCLS_MULTI_SEPARATE は。 参照してください[REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls)の詳細。
 
 ### <a name="return-value"></a>戻り値
@@ -148,7 +148,7 @@ ATLINLINE ATLAPI AtlComModuleRevokeClassObjects(_ATL_COM_MODULE* pComModule);
 
 ### <a name="parameters"></a>パラメーター
 
-*pComModule*  
+*pComModule*<br/>
 COM モジュールへのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -173,16 +173,16 @@ ATLINLINE ATLAPI AtlComModuleGetClassObject(
 
 ### <a name="parameters"></a>パラメーター
 
-*pComModule*  
+*pComModule*<br/>
 COM モジュールへのポインター。
 
-*rclsid*  
+*rclsid*<br/>
 作成するオブジェクトの CLSID。
 
-*riid*  
+*riid*<br/>
 要求されたインターフェイスの IID。
 
-*ppv*  
+*ppv*<br/>
 によって識別されるインターフェイス ポインターへのポインター *riid*します。 オブジェクトは、このインターフェイスをサポートしていない場合*ppv* NULL に設定されます。
 
 ### <a name="return-value"></a>戻り値

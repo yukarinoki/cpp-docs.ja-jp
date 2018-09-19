@@ -1,5 +1,5 @@
 ---
-title: アプリケーションへのインポート |Microsoft ドキュメント
+title: アプリケーションへのインポート |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88f41d20191474da3713f061747d5985fd447116
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e88d34ce685e22e561683cc33db25997650ed7fd
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368058"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718388"
 ---
 # <a name="importing-into-an-application"></a>アプリケーションへのインポート
-関数は、2 つのメソッドを使用してアプリケーションにインポートできます。  
-  
--   キーワードを使用して **_declspec**メイン アプリケーションの関数定義で  
-  
--   モジュール定義 (.def) ファイルと共に使用して **_declspec (dllimport)**  
-  
-## <a name="what-do-you-want-to-do"></a>実行する操作  
-  
--   [_Declspec (dllimport) を使用してアプリケーションへのインポート](../build/importing-into-an-application-using-declspec-dllimport.md)  
-  
--   [_Declspec (dllimport) を使用して関数呼び出しをインポートします。](../build/importing-function-calls-using-declspec-dllimport.md)  
-  
--   [データを使用して _declspec (dllimport) をインポートします。](../build/importing-data-using-declspec-dllimport.md)  
-  
--   [DEF ファイルを使用してインポートします。](../build/importing-using-def-files.md)  
-  
-## <a name="see-also"></a>関連項目  
- [インポートとエクスポート](../build/importing-and-exporting.md)
+
+関数は、2 つのメソッドを使用してアプリケーションにインポートできます。
+
+- キーワードを使用して **_declspec**メイン アプリケーションの関数定義で
+
+- モジュール定義 (.def) ファイルと共に使用して **_declspec**
+
+## <a name="what-do-you-want-to-do"></a>実行する操作
+
+- [使用してアプリケーションへのインポート](../build/importing-into-an-application-using-declspec-dllimport.md)
+
+- [使用して関数呼び出しをインポートします。](../build/importing-function-calls-using-declspec-dllimport.md)
+
+- [データを使用して _declspec をインポートします。](../build/importing-data-using-declspec-dllimport.md)
+
+- [DEF ファイルを使用したインポートします。](../build/importing-using-def-files.md)
+
+## <a name="see-also"></a>関連項目
+
+[インポートとエクスポート](../build/importing-and-exporting.md)

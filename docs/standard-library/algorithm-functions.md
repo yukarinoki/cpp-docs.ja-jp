@@ -208,12 +208,12 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e8ec44fcdd336786707bf809ce676d866df132e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7c2e2e6e4ce39d74142891c5e539b8cc4d028753
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44101678"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726844"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 関数
 
@@ -2520,11 +2520,11 @@ bool is_heap(
 
 ### <a name="remarks"></a>Remarks
 
-最初のテンプレート関数は、 [is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)`(` `first ,` `last ) ==` `last` を返します。
+最初のテンプレート関数を返します[is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)`(first , last) == last`します。
 
 2 番目のテンプレート関数は、以下を返します。
 
-`is_heap_until` `(`  `first` `,`  `last` `,`  `comp` `) ==`  `last`.
+`is_heap_until(first, last, comp) == last`。
 
 ## <a name="is_heap_until"></a>  is_heap_until
 
@@ -3854,7 +3854,7 @@ constexpr const Type& min(
     const Type& right,
     BinaryPredicate comp);
 template<class Type>
-constexpr Type min( 
+constexpr Type min(
     initializer_list<Type> );
 template<class Type, class Pr>
 constexpr Type min(

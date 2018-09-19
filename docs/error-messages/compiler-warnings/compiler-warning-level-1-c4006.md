@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4006 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4006 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b6cb37e383f4bfb9dd7f070344141b49ddf4f54
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 35987244498b95dfee6f285f100237c3d3a361ea
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276475"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037047"
 ---
 # <a name="compiler-warning-level-1-c4006"></a>コンパイラの警告 (レベル 1) C4006
-\#undef 識別子  
-  
- `#undef` ディレクティブは未定義にする識別子を指定しませんでした。 ディレクティブは無視されます。 この警告を解決するには、必ず識別子を指定します。 次の例では C4006 が生成されます。  
-  
-```  
-// C4006.cpp  
-// compile with: /W1  
-#undef   // C4006  
-  
-// try..  
-// #undef TEST  
-  
-int main() {  
-}  
+
+\#undef 識別子
+
+`#undef` ディレクティブは未定義にする識別子を指定しませんでした。 ディレクティブは無視されます。 この警告を解決するには、必ず識別子を指定します。 次の例では C4006 が生成されます。
+
+```
+// C4006.cpp
+// compile with: /W1
+#undef   // C4006
+
+// try..
+// #undef TEST
+
+int main() {
+}
 ```

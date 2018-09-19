@@ -1,7 +1,7 @@
 ---
-title: コンパイラの警告 (レベル 4) C4127 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 4) C4127 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/13/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,32 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c98b2eb42cfc66c27faf74c3d6e46e981851a0a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 561173e2b451a0b736d97042667a2fb14b3a7eb7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293648"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094898"
 ---
 # <a name="compiler-warning-level-4-c4127"></a>コンパイラの警告 (レベル 4) C4127
-条件式が定数です。  
-  
- `if` ステートメントまたは `while` ループの制御式が定数に評価されます。 ための一般的な慣用用法、ある 1 などの単純な定数または`true`式内の操作の結果でない限り、警告はトリガーされません。 場合の制御式、`while`中央でループを終了したため、ループが定数の場合を考慮してください、`while`のループ、`for`ループします。 初期化、終了テストを省略でき、ループのインクリメント、`for`によってと同じように、無限ループがループ`while(1)`の本体からループを終了して、`for`ステートメントです。  
-  
- 次の例は C4127 が生成され、使用する方法を示しています。 2 つの方法を示しています、for ループが、警告を回避します。  
-  
-```  
-// C4127.cpp  
-// compile with: /W4  
-#include <stdio.h>  
-int main() {  
-   if (1 == 1) {}   // C4127  
-   while (42) { break; }   // C4127  
-  
-   // OK  
-   for ( ; ; ) {  
-      printf("test\n");  
-      break;  
-   }  
-}  
+
+> 条件式が定数です。
+
+## <a name="remarks"></a>Remarks
+
+`if` ステートメントまたは `while` ループの制御式が定数に評価されます。 以降では、Visual Studio 2015 update 3 では、単純な定数 1 などの一般的な慣用用法のためまたは`true`式内の操作の結果でない限り、警告をトリガーしません。
+
+場合の制御式を`while`中央のループが終了したため、ループが定数の場合を考慮してください、`while`ループでは、`for`ループします。 初期化、終了テストを省略でき、ループのインクリメント、`for`ループと同じように、無限にループ`while(1)`の本文からループを終了して、`for`ステートメント。
+
+## <a name="example"></a>例
+
+次のサンプルは C4127 が生成され、使用する方法を示しています。 2 つの方法、for ループ、警告を回避します。
+
+```cpp
+// C4127.cpp
+// compile with: /W4
+#include <stdio.h>
+int main() {
+   if (true) {}           // OK in VS2015 update 3 and later
+   if (1 == 1) {}         // C4127
+   while (42) { break; }  // C4127
+
+   // OK
+   for ( ; ; ) {
+      printf("test\n");
+      break;
+   }
+}
 ```

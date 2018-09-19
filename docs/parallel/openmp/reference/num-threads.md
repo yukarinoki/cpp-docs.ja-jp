@@ -1,5 +1,5 @@
 ---
-title: num_threads |Microsoft ドキュメント
+title: num_threads |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7dd57950d083c4f89ee2aa5962ad1e07a55a9a8
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d3485d534cf279863b241abcd26195cdde7fea19
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691887"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016287"
 ---
 # <a name="numthreads"></a>num_threads
-スレッドのチームのスレッドの数を設定します。  
+スレッドのチームでは、スレッドの数を設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -32,13 +32,12 @@ ms.locfileid: "33691887"
 num_threads(num)  
 ```  
   
-## <a name="remarks"></a>コメント  
- 指定項目  
+### <a name="parameters"></a>パラメーター
   
- `num`  
- スレッドの数  
+*num*<br/>
+スレッドの数  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `num_threads`句と同じ機能には、 [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)関数。  
   
  `num_threads` 次のディレクティブに適用されます。  
@@ -49,7 +48,7 @@ num_threads(num)
   
 -   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
   
- 詳細については、次を参照してください。 [2.3 parallel コンストラクト](../../../parallel/openmp/2-3-parallel-construct.md)です。  
+ 詳細については、次を参照してください。 [2.3 parallel コンストラクト](../../../parallel/openmp/2-3-parallel-construct.md)します。  
   
 ## <a name="example"></a>例  
  参照してください[並列](../../../parallel/openmp/reference/parallel.md)の使用例については`num_threads`句。  

@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc7d2b959bd8ad3ed89ae270e1f7d93406526695
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a48e4112dc513923b3a933457a874409121fb1e7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218387"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087722"
 ---
 # <a name="popen-wpopen"></a>_popen、_wpopen
 
@@ -61,12 +61,12 @@ ms.locfileid: "43218387"
 
 ```C
 FILE *_popen(
-const char *command,
-const char *mode
+    const char *command,
+    const char *mode
 );
 FILE *_wpopen(
-const wchar_t *command,
-const wchar_t *mode
+    const wchar_t *command,
+    const wchar_t *mode
 );
 ```
 
@@ -88,13 +88,12 @@ const wchar_t *mode
 
 **_Popen**関数は、パイプを作成し、指定した文字列でコマンド プロセッサの開始されたコピーを非同期に実行*コマンド*します。 *mode* 文字列では、次のように、要求するアクセスの種類を指定します。
 
-**"r"** 呼び出しプロセスは、返されたストリームを使用して開始されたコマンドの標準出力を読み取ることができます。
-
-**"w"** 呼び出しプロセスは、返されたストリームを使用して開始されたコマンドの標準入力に書き込むことができます。
-
-**"b"** バイナリ モードで開きます。
-
-**"t"** テキスト モードで開きます。
+|アクセス モード|説明|
+|-|-|
+|**"r"**|呼び出しプロセスは、返されたストリームを使用して、開始されたコマンドの標準出力を読み取ることができます。|
+|**"w"**|呼び出しプロセスは、返されたストリームを使用して、開始されたコマンドの標準入力に書き込むことができます。|
+|**"b"**|バイナリ モードで開きます。|
+|**"t"**|テキスト モードで開きます。|
 
 > [!NOTE]
 > Windows のプログラムで使用されている場合、 **_popen**関数は、プログラムが無期限に応答を停止する原因となる無効なファイル ポインターを返します。 **_popen**コンソール アプリケーションで正常に動作します。 入力と出力をリダイレクトする Windows アプリケーションを作成するを参照してください。[リダイレクトされた入出力を持つ子プロセスを作成する](/windows/desktop/ProcThread/creating-a-child-process-with-redirected-input-and-output)Windows SDK に含まれています。
@@ -169,12 +168,12 @@ int main( void )
 この出力は、現在のディレクトリに .c ファイル名拡張子を持つファイルが 1 個だけあると仮定しています。
 
 ```Output
- Volume in drive C is CDRIVE
- Volume Serial Number is 0E17-1702
+Volume in drive C is CDRIVE
+Volume Serial Number is 0E17-1702
 
 Directory of D:\proj\console\test1
 
- 07/17/98  07:26p                   780 popen.c
+07/17/98  07:26p                   780 popen.c
                1 File(s)            780 bytes
                              86,597,632 bytes free
 

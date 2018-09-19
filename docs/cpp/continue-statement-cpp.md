@@ -16,58 +16,61 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0ab1e052b3e6d843813c33e5444fc3c08796d00
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 88281d90ce15ced12079b3c66a74bb2f23c11034
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402092"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099718"
 ---
 # <a name="continue-statement-c"></a>continue ステートメント (C++)
-外側にある最小の制御式を強制的にコントロールの転送[は](../cpp/do-while-statement-cpp.md)、[の](../cpp/for-statement-cpp.md)、または[中](../cpp/while-statement-cpp.md)ループします。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-continue;  
-```  
-  
-## <a name="remarks"></a>Remarks  
- 現在のイテレーションの残りのステートメントは実行されません。 ループの次のイテレーションは、次のように決定されます。  
-  
--   **は**または**中**、ループの制御式を再評価によって次の反復処理が開始されます、**は**または**中に**ステートメント。  
-  
--   **の**ループ (構文を使用して`for`(`init-expr`;`cond-expr`;`loop-expr`))、`loop-expr`句が実行されます。 次に、`cond-expr` 句が再評価され、その結果に応じて、ループが終了するか、別のイテレーションが発生します。  
-  
- 次の例は、**続行**コードのセクションをバイパスし、ループの次のイテレーションを開始するステートメントを使用できます。  
-  
-## <a name="example"></a>例  
-  
-```cpp 
-// continue_statement.cpp  
-#include <stdio.h>  
-int main()  
-{  
-    int i = 0;  
-    do  
-    {  
-        i++;  
-        printf_s("before the continue\n");  
-        continue;  
-        printf("after the continue, should never print\n");  
-     } while (i < 3);  
-  
-     printf_s("after the do loop\n");  
-}  
-```  
-  
-```Output  
-before the continue  
-before the continue  
-before the continue  
-after the do loop  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [ジャンプ ステートメント](../cpp/jump-statements-cpp.md)   
- [キーワード](../cpp/keywords-cpp.md)
+
+外側にある最小の制御式を強制的にコントロールの転送[は](../cpp/do-while-statement-cpp.md)、[の](../cpp/for-statement-cpp.md)、または[中](../cpp/while-statement-cpp.md)ループします。
+
+## <a name="syntax"></a>構文
+
+```
+continue;
+```
+
+## <a name="remarks"></a>Remarks
+
+現在のイテレーションの残りのステートメントは実行されません。 ループの次のイテレーションは、次のように決定されます。
+
+- **は**または**中**、ループの制御式を再評価によって次の反復処理が開始されます、**は**または**中に**ステートメント。
+
+- **の**ループ (構文を使用して`for`(`init-expr`;`cond-expr`;`loop-expr`))、`loop-expr`句が実行されます。 次に、`cond-expr` 句が再評価され、その結果に応じて、ループが終了するか、別のイテレーションが発生します。
+
+次の例は、**続行**コードのセクションをバイパスし、ループの次のイテレーションを開始するステートメントを使用できます。
+
+## <a name="example"></a>例
+
+```cpp
+// continue_statement.cpp
+#include <stdio.h>
+int main()
+{
+    int i = 0;
+    do
+    {
+        i++;
+        printf_s("before the continue\n");
+        continue;
+        printf("after the continue, should never print\n");
+     } while (i < 3);
+
+     printf_s("after the do loop\n");
+}
+```
+
+```Output
+before the continue
+before the continue
+before the continue
+after the do loop
+```
+
+## <a name="see-also"></a>関連項目
+
+[ジャンプ ステートメント](../cpp/jump-statements-cpp.md)<br/>
+[キーワード](../cpp/keywords-cpp.md)

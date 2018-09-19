@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 4) C4295 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 4) C4295 |Microsoft Docs
 ms.custom: ''
 ms.date: 1/09/2018
 ms.technology:
@@ -16,24 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 815a669bc359121b13b1d636009cad81dc332304
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36c6ac4d8c3e2899b744d1c456ae3079ec031698
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296303"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053584"
 ---
 # <a name="compiler-warning-level-4-c4295"></a>コンパイラの警告 (レベル 4) C4295
-  
-> '*配列*': 配列が小さすぎるため、終端の null 文字を含める  
-  
-配列の初期化が、配列の最後の文字は、null ではありません。文字列として配列にアクセスすると、予期しない結果が生じる場合があります。  
-  
-## <a name="example"></a>例  
-  
-次の例では、C4295 を生成します。 この問題を解決する可能性がありますを宣言する配列のサイズを保持するより大きなから、初期化文字列または終端の null は、これは、配列のインテントのクリアを配列初期化子リストを使用してでした`char`null で終わる文字列ではありません。  
-  
-```C  
+
+> '*配列*': 配列が小さすぎる、終端の null 文字を含める
+
+配列が初期化されましたが、配列の最後の文字が null ではありません。文字列として配列にアクセスすると、予期しない結果が生じる場合があります。
+
+## <a name="example"></a>例
+
+次の例では、C4295 が生成されます。 この問題を解決する可能性がありますを宣言する、配列のサイズを保持するより大きなから、初期化子の文字列または終端の null は、配列初期化子リストを使用しての配列である、インテントをオフにする可能性があります`char`null で終わる文字列ではありません。
+
+```C
 // C4295.c
 // compile with: /W4
 

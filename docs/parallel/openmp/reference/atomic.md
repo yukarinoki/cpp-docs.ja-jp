@@ -1,5 +1,5 @@
 ---
-title: アトミック |Microsoft ドキュメント
+title: アトミック |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf6287ff3c44d508a3e4293340e652edb201282f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: e7e9e9ecad2f6ea53e2f922799340eee47dd4a7e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694408"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037490"
 ---
 # <a name="atomic"></a>アトミック
 指定するアトミックに更新されるメモリの場所。  
@@ -34,13 +34,13 @@ ms.locfileid: "33694408"
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `expression`  
- 複数書き込みから保護するメモリ位置の値を含むステートメント。 有効な式のフォームの詳細については、OpenMP 仕様を参照してください。  
+*式*<br/>
+複数の書き込みから保護するメモリ位置の値を含むステートメント。 有効な式のフォームの詳細については、OpenMP 仕様を参照してください。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `atomic`ディレクティブに OpenMP 句がサポートされていません。  
   
- 詳細については、次を参照してください。 [2.6.4 atomic 構築](../../../parallel/openmp/2-6-4-atomic-construct.md)です。  
+ 詳細については、次を参照してください。 [2.6.4 atomic 構築](../../../parallel/openmp/2-6-4-atomic-construct.md)します。  
   
 ## <a name="example"></a>例  
   

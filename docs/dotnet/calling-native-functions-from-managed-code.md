@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3ef47e3aeb8cfb18dd1eb6497c593d8cec26081b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 002093a6a9044c65e5780035ad6c19db35d6b648
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678451"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116751"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>マネージド コードからのネイティブ関数の呼び出し
 共通言語ランタイムにはプラットフォーム呼び出しサービス (PInvoke: Platform Invocation Services) が用意されており、マネージド コードでネイティブなダイナミック リンク ライブラリ (DLL : Dynamic Link Library) の C スタイルの関数を呼び出すことができます。 COM とランタイムの相互運用と、"It Just Works (そのままで動く)" つまり IJW 機構のどちらにも、同じデータ マーシャリングが使用されています。  
@@ -105,7 +105,7 @@ int main() {
   
  次の例では、Visual C++ プログラムと Win32 API に属する MessageBox 関数との相互運用を示します。  
   
-```  
+```cpp  
 // platform_invocation_services_4.cpp  
 // compile with: /clr /c  
 using namespace System;  
@@ -132,16 +132,17 @@ int main() {
   
  Visual C++ アプリケーションで PInvoke を使用する場合、次のようなコードになります。  
   
- `[DllImport("mylib")]`  
-  
- `extern "C" String * MakeSpecial([MarshalAs(UnmanagedType::LPStr)] String ^);`  
+```cpp
+[DllImport("mylib")]
+extern "C" String * MakeSpecial([MarshalAs(UnmanagedType::LPStr)] String ^);
+```
   
  ここで問題なのは、MakeSpecial によって返されるアンマネージ文字列のメモリを削除できないことです。 PInvoke によって呼び出された他の関数は、ユーザーによるメモリ解放の必要のない内部バッファーへのポインターを返します。 このケースでは、IJW 機能の方が適しているのは明らかです。  
   
 ## <a name="limitations-of-pinvoke"></a>PInvoke の制限  
  パラメーターとして使用したものと同じ正確なポインターをネイティブ関数から返すことはできません。 PInvoke によってそれにマーシャリングされたポインターをネイティブ関数が返す場合、メモリが破損したり例外が発生したりすることがあります。  
   
-```  
+```cpp  
 __declspec(dllexport)  
 char* fstringA(char* param) {  
    return param;  

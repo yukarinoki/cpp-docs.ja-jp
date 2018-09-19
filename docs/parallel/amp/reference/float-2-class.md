@@ -1,5 +1,5 @@
 ---
-title: float_2 クラス |Microsoft ドキュメント
+title: float_2 クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82197c785c8b27e2d4f2607cd677141b219c90ca
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ff3c05f1a96dd4717371d48b60cca6a549a94a7d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686647"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019954"
 ---
 # <a name="float2-class"></a>float_2 クラス
 2 個の浮動小数点数の short ベクターを表します。  
@@ -176,17 +176,17 @@ explicit inline float_2(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_V0`  
- 0 の要素を初期化する値。  
+*_V0*<br/>
+0 の要素を初期化する値。  
   
- `_V1`  
- 1 の要素を初期化する値。  
+*_V1*<br/>
+1 要素を初期化する値。  
   
- `_V`  
- 初期化の値です。  
+*(_V).*<br/>
+初期化の値。  
   
- `_Other`  
- 初期化するために使用するオブジェクト。  
+*_Other*<br/>
+初期化するために使用するオブジェクト。  
   
 ##  <a name="float_2__size"></a> サイズ 
 

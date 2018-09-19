@@ -1,5 +1,5 @@
 ---
-title: 致命的なエラー C1054 |Microsoft ドキュメント
+title: 致命的なエラー C1054 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9daac4944c57dbf08fe0ebcbc95993a97838585
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 439019b1f510127ae54e77d445d59e86be09a49b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198899"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101970"
 ---
 # <a name="fatal-error-c1054"></a>致命的なエラー C1054
-コンパイラの制限: 初期化子の入れ子が深すぎます。  
-  
- コードは、(初期化されている型の組み合わせに応じて、10 ~ 15 レベル) の初期化子の入れ子の上限を超えています。  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>以下の可能性がある解決策を使って修正するには  
-  
-1.  入れ子の削減に初期化されているデータ型を簡略化します。  
-  
-2.  宣言の後に別のステートメントで変数を初期化します。
+
+コンパイラの制限: 初期化子の入れ子レベルが深すぎます
+
+コードは、初期化子 (初期化されている型の組み合わせによっては 10 ~ 15 レベル) では、入れ子の上限を超えています。
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>以下の可能性がある解決策を使って修正するには
+
+1. 入れ子の削減に初期化されているデータ型を簡略化します。
+
+1. 宣言の後に別のステートメントで変数を初期化します。

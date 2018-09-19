@@ -16,31 +16,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 848709fa6cbbbfb4166750f86540de2433a73023
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 90208866ee08d6990d8f1b5322a38fbd2d63a651
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404029"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091791"
 ---
 # <a name="comerrordescription"></a>_com_error::Description
-**Microsoft 固有の仕様**  
-  
- `IErrorInfo::GetDescription` 関数を呼び出します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-_bstr_t Description( ) const;  
-```  
-  
-## <a name="return-value"></a>戻り値  
- 結果を返します`IErrorInfo::GetDescription`の`IErrorInfo`内オブジェクトに記録された、`_com_error`オブジェクト。 結果の `BSTR` は `_bstr_t` オブジェクトにカプセル化されます。 ない場合は`IErrorInfo`が記録されると、空を返します`_bstr_t`します。  
-  
-## <a name="remarks"></a>Remarks  
- 呼び出し、`IErrorInfo::GetDescription`関数を取得します`IErrorInfo`内に記録された、`_com_error`オブジェクト。 呼び出すときの失敗、`IErrorInfo::GetDescription`メソッドは無視されます。  
-  
- **Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- [_com_error クラス](../cpp/com-error-class.md)
+
+**Microsoft 固有の仕様**
+
+`IErrorInfo::GetDescription` 関数を呼び出します。
+
+## <a name="syntax"></a>構文
+
+```
+_bstr_t Description( ) const;
+```
+
+## <a name="return-value"></a>戻り値
+
+結果を返します`IErrorInfo::GetDescription`の`IErrorInfo`内オブジェクトに記録された、`_com_error`オブジェクト。 結果の `BSTR` は `_bstr_t` オブジェクトにカプセル化されます。 ない場合は`IErrorInfo`が記録されると、空を返します`_bstr_t`します。
+
+## <a name="remarks"></a>Remarks
+
+呼び出し、`IErrorInfo::GetDescription`関数を取得します`IErrorInfo`内に記録された、`_com_error`オブジェクト。 呼び出すときの失敗、`IErrorInfo::GetDescription`メソッドは無視されます。
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
+[_com_error クラス](../cpp/com-error-class.md)

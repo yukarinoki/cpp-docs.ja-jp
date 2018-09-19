@@ -1,5 +1,5 @@
 ---
-title: テキスト ツール フォント ダイアログ ボックス (アイコン用イメージ エディター) |Microsoft Docs
+title: テキスト ツール フォント ダイアログ ボックス (C++) (アイコン用イメージ エディター) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -8,7 +8,7 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- Text Tool Font dialog box
+- Text Tool Font dialog box [C++]
 - fonts, changing on an image
 - text, on images
 ms.assetid: c398e2e7-0263-43c1-9ab4-768a280c2407
@@ -17,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 78c65c5830bf75f1dd2bf4165d3d5271cb8a2e48
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b83acbc8b4ca6beb3288ed9e02667410b239c6e7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603247"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722047"
 ---
-# <a name="text-tool-font-dialog-box-image-editor-for-icons"></a>[テキスト ツール フォント] ダイアログ ボックス (アイコン用イメージ エディター)
+# <a name="text-tool-font-dialog-box-c-image-editor-for-icons"></a>テキスト ツール フォント ダイアログ ボックス (C++) (アイコン用イメージ エディター)
 
 使用する場合は、フォントの設定を指定します、[テキスト ツール ダイアログ ボックス](../windows/text-tool-dialog-box-image-editor-for-icons.md)の[イメージ エディター](../windows/image-editor-for-icons.md)します。
 
@@ -34,20 +34,25 @@ ms.locfileid: "42603247"
 
 このダイアログ ボックスにアクセスするには、クリックして、**フォント**ボタン、**テキスト ツール** ダイアログ ボックス。
 
-**フォント**  
-使用可能なフォントが表示されます。
+- **フォント**
 
-**フォント スタイル**  
-指定したフォントの使用可能なスタイルの一覧を表示します。
+   使用可能なフォントが表示されます。
 
-**Size**  
-指定したフォントの使用可能なポイントのサイズを一覧表示します。
+- **フォント スタイル**
 
-**サンプル**  
-指定したフォントの設定でテキストの表示方法のサンプルが表示されます。
+   指定したフォントの使用可能なスタイルの一覧を表示します。
 
-**スクリプト**  
-指定したフォント用の利用可能な言語のスクリプトを一覧表示します。 別の言語のスクリプトを選択すると、文字セットの多言語のドキュメントを作成するために使用可能な言語になります。
+- **Size**
+
+   指定したフォントの使用可能なポイントのサイズを一覧表示します。
+
+- **サンプル**
+
+   指定したフォントの設定でテキストの表示方法のサンプルが表示されます。
+
+- **スクリプト**
+
+   指定したフォント用の利用可能な言語のスクリプトを一覧表示します。 別の言語のスクリプトを選択すると、文字セットの多言語のドキュメントを作成するために使用可能な言語になります。
 
 ## <a name="requirements"></a>要件
 

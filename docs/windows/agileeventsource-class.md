@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 40259a559389e274b6aaaa67bb215249c96a97ba
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8efebf67d87decef1fb6e53f2efa42acc9ac487c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611033"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068521"
 ---
 # <a name="agileeventsource-class"></a>AgileEventSource クラス
 
@@ -38,10 +38,10 @@ class AgileEventSource
 
 ## <a name="parameters"></a>パラメーター
 
-*TDelegateInterface*  
+*TDelegateInterface*<br/>
 イベント ハンドラーを表すデリゲートのインターフェイスです。
 
-*TEventSourceOptions*  
+*TEventSourceOptions*<br/>
 [InvokeModeOptions](invokemodeoptions-structure.md) invokeMode フィールドに設定されている構造`InvokeMode::StopOnFirstError`または`InvokeMode::FireAll`します。
 
 ## <a name="remarks"></a>Remarks
@@ -51,6 +51,7 @@ Windows ランタイム コンポーネントの大半は、アジャイル コ�
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `EventSource`
+
 `AgileEventSource`
 
 ## <a name="requirements"></a>要件

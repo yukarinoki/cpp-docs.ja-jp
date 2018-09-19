@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3888 |Microsoft ドキュメント
+title: コンパイラ エラー C3888 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c11c897f35a6c395c4bc6ee6a64be51fa810911b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b9292f54fee467a5f8d01202b6ed7ca991b52d43
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270665"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096460"
 ---
 # <a name="compiler-error-c3888"></a>コンパイラ エラー C3888
-'name': このリテラル データ メンバーと関連付けられた const 式は C++/CLI でサポートされていません  
-  
- *literal* キーワードを使用して宣言された [name](../../windows/literal-cpp-component-extensions.md) データ メンバーが、コンパイラがサポートしていない値で初期化されています。 コンパイラは、定数の整数型、列挙型、または文字列型のみをサポートしています。 **C3888** エラーの考えられる原因は、データ メンバーがバイト配列で初期化されていることです。  
-  
-### <a name="to-correct-this-error"></a>このエラーを解決するには  
-  
-1.  宣言されたリテラル データ メンバーがサポートされている型であることを確認します。  
-  
-## <a name="see-also"></a>関連項目  
- [name](../../windows/literal-cpp-component-extensions.md)
+
+'name': このリテラル データ メンバーと関連付けられた const 式は C++/CLI でサポートされていません
+
+*literal* キーワードを使用して宣言された [name](../../windows/literal-cpp-component-extensions.md) データ メンバーが、コンパイラがサポートしていない値で初期化されています。 コンパイラは、定数の整数型、列挙型、または文字列型のみをサポートしています。 **C3888** エラーの考えられる原因は、データ メンバーがバイト配列で初期化されていることです。
+
+### <a name="to-correct-this-error"></a>このエラーを解決するには
+
+1. 宣言されたリテラル データ メンバーがサポートされている型であることを確認します。
+
+## <a name="see-also"></a>関連項目
+
+[name](../../windows/literal-cpp-component-extensions.md)

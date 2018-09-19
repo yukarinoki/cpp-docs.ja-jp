@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30a0080dd576add0433421bb465d89b2967b9acd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c8d32094dd8ee55cdd76fc21f51a2f809b1b341d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753124"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034929"
 ---
 # <a name="catltemporaryfile-class"></a>CAtlTemporaryFile クラス
 
@@ -136,7 +136,7 @@ HRESULT Close(LPCTSTR szNewName = NULL) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*szNewName*  
+*szNewName*<br/>
 一時ファイルの内容を格納する新しいファイルの名前。 この引数が NULL の場合は、一時ファイルの内容が削除されます。
 
 ### <a name="return-value"></a>戻り値
@@ -157,10 +157,10 @@ HRESULT Create(LPCTSTR pszDir = NULL, DWORD dwDesiredAccess = GENERIC_WRITE) thr
 
 ### <a name="parameters"></a>パラメーター
 
-*pszDir*  
+*pszDir*<br/>
 一時ファイルのパス。 この場合、null の場合、 [GetTempPath](/windows/desktop/api/fileapi/nf-fileapi-gettemppatha)パスを割り当てるには呼び出されます。
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 必要なアクセス。 参照してください*dwDesiredAccess*で[CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) Windows SDK に含まれています。
 
 ### <a name="return-value"></a>戻り値
@@ -201,7 +201,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nPos*  
+*nPos*<br/>
 位置 (バイト単位)。
 
 ### <a name="return-value"></a>戻り値
@@ -222,7 +222,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nLen*  
+*nLen*<br/>
 ファイル内のバイト数。
 
 ### <a name="return-value"></a>戻り値
@@ -271,10 +271,10 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nPos*  
+*nPos*<br/>
 ロックの開始位置、ファイル内の位置。
 
-*nCount*  
+*nCount*<br/>
 ロックするバイト範囲の長さ。
 
 ### <a name="return-value"></a>戻り値
@@ -289,7 +289,7 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 一時ファイルを識別するハンドルを返します。
 
-```  
+```
 operator HANDLE() throw();
 ```
 
@@ -306,13 +306,13 @@ HRESULT Read(
 
 ### <a name="parameters"></a>パラメーター
 
-*pBuffer*  
+*pBuffer*<br/>
 ファイルから読み取られるデータを受け取るバッファーへのポインター。
 
-*nBufSize*  
+*nBufSize*<br/>
 バイト単位のバッファー サイズ。
 
-*nBytesRead*  
+*nBytesRead*<br/>
 読み取られたバイト数。
 
 ### <a name="return-value"></a>戻り値
@@ -337,10 +337,10 @@ HRESULT Seek(LONGLONG nOffset, DWORD dwFrom = FILE_CURRENT) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nOffset*  
+*nOffset*<br/>
 指定された開始点からのバイト単位のオフセット*dwFrom します。*
 
-*dwFrom*  
+*dwFrom*<br/>
 (FILE_BEGIN、FILE_CURRENT、または FILE_END) の開始点。
 
 ### <a name="return-value"></a>戻り値
@@ -365,7 +365,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nNewLen*  
+*nNewLen*<br/>
 ファイルのバイトの新しい長さ。
 
 ### <a name="return-value"></a>戻り値
@@ -402,10 +402,10 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nPos*  
+*nPos*<br/>
 ロックの解除の開始位置、ファイル内の位置。
 
-*nCount*  
+*nCount*<br/>
 ロックするバイト範囲の長さ。
 
 ### <a name="return-value"></a>戻り値
@@ -421,7 +421,7 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ファイル ポインターによって示される位置から一時ファイルにデータを書き込むには、このメソッドを呼び出します。
 
 ```
-HRESULT Write(  
+HRESULT Write(
     LPCVOID pBuffer,
     DWORD nBufSize,
     DWORD* pnBytesWritten = NULL) throw();
@@ -429,13 +429,13 @@ HRESULT Write(
 
 ### <a name="parameters"></a>パラメーター
 
-*pBuffer*  
+*pBuffer*<br/>
 ファイルに書き込まれるデータを保持するバッファー。
 
-*nBufSize*  
+*nBufSize*<br/>
 バッファーから転送されるバイト数。
 
-*pnBytesWritten*  
+*pnBytesWritten*<br/>
 書き込むバイト数。
 
 ### <a name="return-value"></a>戻り値
@@ -452,5 +452,5 @@ HRESULT Write(
 
 ## <a name="see-also"></a>関連項目
 
-[クラスの概要](../../atl/atl-class-overview.md)   
+[クラスの概要](../../atl/atl-class-overview.md)<br/>
 [CAtlFile クラス](../../atl/reference/catlfile-class.md)

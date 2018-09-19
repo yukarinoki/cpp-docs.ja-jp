@@ -1,5 +1,5 @@
 ---
-title: 推論による依存ファイルとルール |Microsoft ドキュメント
+title: 推論による依存ファイルと規則 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aae09fd756e0eb4eab3031beb5b4cba8c4d35a40
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c13ae7784ff40b39642ce26fd062a1aab80f2d4c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368045"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707552"
 ---
 # <a name="inferred-dependents-and-rules"></a>推論による依存ファイルと推論規則
-NMAKE では、適切な推論規則が存在する場合、ターゲット用の推論による依存ファイルが前提とします。 場合、ルールが適用されます。  
-  
--   *toext*ターゲットの拡張子と一致します。  
-  
--   *fromext*現在または指定されたディレクトリに存在する、ファイルの拡張子を持つターゲットの基本名と一致します。  
-  
--   *fromext*に[です。サフィックス](../build/dot-directives.md)以外の他の*fromext*照合ルールでは、高い**です。サフィックス**優先度。  
-  
--   明示的な依存が高くない**です。サフィックス**優先度。  
-  
- 推論による依存ファイルには、予期しない副作用が生じる可能性があります。 ターゲットの記述ブロックのコマンドが含まれている場合 (nmake の) は、ルールで、コマンドではなく、それらのコマンドを実行します。  
-  
-## <a name="see-also"></a>関連項目  
- [推論規則](../build/inference-rules.md)
+
+NMAKE では、該当する推論規則が存在する場合のターゲットの推論による依存ファイルを想定しています。 場合、ルールが適用されます。
+
+- *toext*ターゲットの拡張子に一致します。
+
+- *fromext*一致のターゲットの基本名とを持つファイルの拡張子が現在または指定したディレクトリに存在します。
+
+- *fromext*に[します。サフィックス](../build/dot-directives.md); の他の*fromext*照合ルールではより高度な**します。サフィックス**優先順位。
+
+- 高度な明示的な依存ファイルを持たない**します。サフィックス**優先順位。
+
+推論による依存ファイルには、予期しない副作用が生じる可能性があります。 ターゲットの説明のブロックにコマンドが含まれている場合 (nmake の) は、ルールで、コマンドではなく、これらのコマンドを実行します。
+
+## <a name="see-also"></a>関連項目
+
+[推論規則](../build/inference-rules.md)

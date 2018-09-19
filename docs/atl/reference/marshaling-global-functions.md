@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b27def7f37bda8d4ed5fe5e37a8b5907b542a6ba
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c8426a0113ca245f6c9390a5c95f350398938731
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759471"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106234"
 ---
 # <a name="marshaling-global-functions"></a>マーシャ リングに関するグローバル関数
 
@@ -50,7 +50,7 @@ HRESULT AtlFreeMarshalStream(IStream* pStream);
 
 ### <a name="parameters"></a>パラメーター
 
-*pStream*  
+*pStream*<br/>
 [in]ポインター、`IStream`インターフェイスのマーシャ リングするために使用するストリーム。
 
 ### <a name="example"></a>例
@@ -70,13 +70,13 @@ HRESULT AtlMarshalPtrInProc(
 
 ### <a name="parameters"></a>パラメーター
 
-*pUnk*  
+*pUnk*<br/>
 [in]マーシャ リングするインターフェイスへのポインター。
 
-*iid*  
+*iid*<br/>
 [in]マーシャ リングされるインターフェイスの GUID です。
 
-*ppStream*  
+*ppStream*<br/>
 [out]ポインター、`IStream`マーシャ リングするため、新しいストリーム オブジェクトのインターフェイス。
 
 ### <a name="return-value"></a>戻り値
@@ -108,13 +108,13 @@ HRESULT AtlUnmarshalPtr(
 
 ### <a name="parameters"></a>パラメーター
 
-*pStream*  
+*pStream*<br/>
 [in]マーシャ リング解除されているストリームへのポインター。
 
-*iid*  
+*iid*<br/>
 [in]マーシャ リング解除されているインターフェイスの GUID です。
 
-*ppUnk*  
+*ppUnk*<br/>
 [out]マーシャ リング解除されたインターフェイスへのポインター。
 
 ### <a name="return-value"></a>戻り値

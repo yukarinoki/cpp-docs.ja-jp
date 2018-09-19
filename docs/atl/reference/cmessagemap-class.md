@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be04510f7967b431b7e7c4a3b11aef6f51afe8d8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3f09347fdfaaf20e465e5be05ce446dfec449526
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763228"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024399"
 ---
 # <a name="cmessagemap-class"></a>CMessageMap クラス
 
@@ -80,22 +80,22 @@ virtual BOOL ProcessWindowMessage(
 
 ### <a name="parameters"></a>パラメーター
 
-*hWnd*  
+*hWnd*<br/>
 [in]メッセージを受信するウィンドウ ハンドル。
 
-*uMsg*  
+*uMsg*<br/>
 [in]ウィンドウに送信されるメッセージ。
 
-*wParam*  
+*wParam*<br/>
 [in]追加のメッセージに固有の情報。
 
-*lParam*  
+*lParam*<br/>
 [in]追加のメッセージに固有の情報。
 
-*lResult*  
+*lResult*<br/>
 [out]メッセージの処理の結果。
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in]メッセージを処理するメッセージ マップの識別子。 宣言された既定のメッセージ マップ[送るに](message-map-macros-atl.md#begin_msg_map)、0 によって識別されます。 宣言された、代替メッセージ マップ[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)、によって識別される`msgMapID`します。
 
 ### <a name="return-value"></a>戻り値
@@ -108,7 +108,7 @@ TRUE の場合は、メッセージが完全に処理されます。それ以外
 
 ## <a name="see-also"></a>関連項目
 
-[CDynamicChain クラス](../../atl/reference/cdynamicchain-class.md)   
-[送るに](message-map-macros-atl.md#begin_msg_map)   
-[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
+[CDynamicChain クラス](../../atl/reference/cdynamicchain-class.md)<br/>
+[送るに](message-map-macros-atl.md#begin_msg_map)<br/>
+[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

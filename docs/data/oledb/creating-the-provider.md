@@ -1,5 +1,5 @@
 ---
-title: プロバイダーの作成 |Microsoft ドキュメント
+title: プロバイダーの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,33 +15,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b08d2a2f68d174ae7c92d1d6bc0fa2bbb764fdca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3149e59a239401c7c847da9371619821824a5d37
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33097186"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032095"
 ---
 # <a name="creating-the-provider"></a>プロバイダーの作成
-#### <a name="to-create-an-ole-db-provider-with-the-atl-ole-db-provider-wizard"></a>ATL OLE DB プロバイダー ウィザードを使用して、OLE DB プロバイダーを作成するには  
+
+#### <a name="to-create-an-ole-db-provider-with-the-atl-ole-db-provider-wizard"></a>ATL OLE DB プロバイダー ウィザードで、OLE DB プロバイダーを作成するには  
   
-1.  プロジェクトで右クリックします。  
+1. プロジェクトで右クリックします。  
   
-2.  ショートカット メニューをクリックして**追加**、クリックして**クラスの追加**です。  
+1. ショートカット メニューで、**追加**、 をクリックし、**クラスの追加**します。  
   
-3.  **クラスの追加**ダイアログ ボックスで、 **ATL OLE DB プロバイダー**アイコンをクリックして**開く**です。  
+1. **クラスの追加**ダイアログ ボックスで、 **ATL OLE DB Provider**  アイコンをクリック**オープン**します。  
   
-4.  ATL OLE DB プロバイダー ウィザードで、入力で、プロバイダーの短い名前、**短い名前**ボックス。 次のトピックでは、短い名前"MyProvider"を使用するが、別の名前を使用することができます。 他の名前のボックスは、入力した名前に基づいて設定します。  
+1. ATL OLE DB プロバイダー ウィザードで、入力で、プロバイダーの短い名前、**短い名前**ボックス。 次のトピックを使用して、短い名前"MyProvider"が、別の名前を使用することができます。 他の名前ボックスは、入力した名前に基づいて設定します。  
   
-5.  必要な場合は、また、他の名前を編集します。 だけでなく、オブジェクト名とファイル名には、次の操作を行うことができます。  
+1. 必要な場合は、また、他の名前を編集します。 オブジェクトとファイル名だけでなく、次のように編集できます。  
   
     -   **コクラス**: COM を使用して、プロバイダーを作成する名前。  
   
-    -   **ProgID**: GUID の代わりに使用できるテキスト文字列であるプログラムの識別子。  
+    -   **ProgID**: プログラムの id は、GUID の代わりに使用できるテキスト文字列です。  
   
-    -   **バージョン**: ProgID およびコクラスでバージョンに依存するプログラムで ID を生成するために使用  
+    -   **バージョン**: コクラスと ProgID とバージョンに依存するプログラム ID を生成するために使用  
   
-6.  **[完了]** をクリックします。  
+1. **[完了]** をクリックします。  
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB プロバイダーの作成](../../data/oledb/creating-an-ole-db-provider.md)
+
+[OLE DB プロバイダーの作成](../../data/oledb/creating-an-ole-db-provider.md)

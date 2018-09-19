@@ -1,5 +1,5 @@
 ---
-title: 式エバリュエーター エラー CXX0011 |Microsoft ドキュメント
+title: 式エバリュエーター エラー CXX0011 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9840b805960f3ebb571dd9cb6a35895364099d3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d6a9409728f5dbcbb003ecb8d2d9e4f98bc57ede
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294873"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026843"
 ---
 # <a name="expression-evaluator-error-cxx0011"></a>式エバリュエーター エラー CXX0011
-右角かっこがありません。  
-  
- 式には、不均衡の角かっこが含まれています。 左右の角かっこで式を再入力します。  
-  
- このエラーは、can0011 と同じものと同じです。
+
+右角かっこがありません。
+
+式には、負荷が不均衡の角かっこが含まれています。 左右の角かっこを使用して式を再入力します。
+
+このエラーは、can0011 と同じものと同じです。

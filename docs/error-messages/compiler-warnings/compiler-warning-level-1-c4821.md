@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4821 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4821 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25b9aec771c6183149adee95c0860113e075c670
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 859a83aedc6f5c6f5bcbc3ad948939dc5cb763b1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281766"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086779"
 ---
-# <a name="compiler-warning-level-1-c4821"></a>コンパイラの警告 (レベル 1) C4821  
-  
-> シグネチャ (BOM) を持つファイルを保存してください Unicode エンコードの種類を特定することができません。  
-  
-コンパイラは、ファイルのエンコードの種類を特定できませんでした。 この警告を解決するには、バイト順マーカーを使用して、ファイルを保存します。 参照してください[エンコーディングによるファイルの管理](/sql/ssms/solution/manage-files-with-encoding)詳細についてはします。  
+# <a name="compiler-warning-level-1-c4821"></a>コンパイラの警告 (レベル 1) C4821
+
+> Unicode エンコードの種類を特定するには、シグネチャ (BOM) を持つファイルを保存してくださいできません。
+
+コンパイラは、ファイルのエンコードの種類を決定できませんでした。 この警告を解決するには、バイト順マーカーで、ファイルを保存します。 参照してください[エンコーディングによるファイルの管理](/sql/ssms/solution/manage-files-with-encoding)詳細についてはします。

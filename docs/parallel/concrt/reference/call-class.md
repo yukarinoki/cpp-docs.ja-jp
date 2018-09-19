@@ -1,5 +1,5 @@
 ---
-title: クラスを呼び出します |。Microsoft ドキュメント
+title: クラスを呼び出します |。Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47f72948621e9311f05af74f75d80cd35c1deddc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 585a490ec64152a1268b7707971ea94e69bf9fbf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689702"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109718"
 ---
 # <a name="call-class"></a>call クラス
 `call` メッセージング ブロックは、複数のソースを持つ、順序付けられた `target_block` であり、メッセージを受け取ったときに指定された関数を呼び出します。  
@@ -41,11 +41,11 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `T`  
- メッセージのペイロードの型は、このブロックに伝達されます。  
+*T*<br/>
+メッセージのペイロードの型は、このブロックに伝達されます。  
   
- `_FunctorType`  
- このブロックが受け入れることができる関数のシグネチャ。  
+*_FunctorType*<br/>
+このブロックが受け入れることができる関数のシグネチャ。  
   
 ## <a name="members"></a>メンバー  
   
@@ -53,21 +53,21 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
 |名前|説明|  
 |----------|-----------------|  
-|[call](#ctor)|オーバーロードされます。 構築、`call`メッセージング ブロックです。|  
-|[~ call デストラクター](#dtor)|破棄、`call`メッセージング ブロックです。|  
+|[call](#ctor)|オーバーロードされます。 構築、`call`メッセージング ブロックします。|  
+|[~ call デストラクター](#dtor)|破棄、`call`メッセージング ブロックします。|  
   
 ### <a name="protected-methods"></a>プロテクト メソッド  
   
 |名前|説明|  
 |----------|-----------------|  
-|[process_input_messages](#process_input_messages)|入力メッセージの関数を呼び出すを実行します。|  
-|[process_message](#process_message)|これによって承認されたメッセージを処理`call`メッセージング ブロックです。|  
-|[propagate_message](#propagate_message)|メッセージを非同期的に渡す、`ISource`ブロックをこの`call`メッセージング ブロックです。 によって呼び出された、`propagate`メソッドは、ソース ブロックによって呼び出されるとします。|  
-|[send_message](#send_message)|メッセージを同期的に渡す、`ISource`ブロックをこの`call`メッセージング ブロックです。 によって呼び出された、`send`メソッドは、ソース ブロックによって呼び出されるとします。|  
-|[supports_anonymous_source](#supports_anonymous_source)|上書き、`supports_anonymous_source`を示すこのブロックがリンクされていないソースによって提供されたメッセージを受け入れることができます。 (上書き[itarget::supports_anonymous_source](itarget-class.md#supports_anonymous_source))。|  
+|[process_input_messages](#process_input_messages)|入力メッセージ呼び出し関数を実行します。|  
+|[process_message](#process_message)|これによって承認されたメッセージを処理`call`メッセージング ブロックします。|  
+|[propagate_message](#propagate_message)|メッセージを非同期的に渡す、`ISource`このブロック`call`メッセージング ブロックします。 によって呼び出されます、`propagate`メソッドは、ソース ブロックによって呼び出されます。|  
+|[send_message](#send_message)|メッセージを同期的に渡す、`ISource`このブロック`call`メッセージング ブロックします。 によって呼び出されます、`send`メソッドは、ソース ブロックによって呼び出されます。|  
+|[supports_anonymous_source](#supports_anonymous_source)|上書き、`supports_anonymous_source`メソッドをこのブロックがリンクされていないソースによって提供されたメッセージを受け入れることを示します。 (上書き[itarget::supports_anonymous_source](itarget-class.md#supports_anonymous_source))。|  
   
-## <a name="remarks"></a>コメント  
- 詳細については、次を参照してください。[非同期メッセージ ブロック](../../../parallel/concrt/asynchronous-message-blocks.md)です。  
+## <a name="remarks"></a>Remarks  
+ 詳細については、次を参照してください。[非同期メッセージ ブロック](../../../parallel/concrt/asynchronous-message-blocks.md)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [ITarget](itarget-class.md)  
@@ -83,7 +83,7 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
 ##  <a name="ctor"></a> 呼び出し 
 
- 構築、`call`メッセージング ブロックです。  
+ 構築、`call`メッセージング ブロックします。  
   
 ```
 call(
@@ -113,28 +113,28 @@ call(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Func`  
- 許容されるメッセージごとに呼び出される関数。  
+*_Func*<br/>
+許容されるメッセージごとに呼び出される関数。  
   
- `_Filter`  
- 提供されたメッセージを受け付けるかどうかを判断するフィルター関数。  
+*フィルター (_f)*<br/>
+提供されたメッセージを受け入れられる必要があるかどうかを決定するフィルター関数。  
   
- `_PScheduler`  
- その内部で `Scheduler` メッセージング ブロックの反映タスクがスケジュールされる `call` オブジェクト。  
+*_PScheduler*<br/>
+その内部で `Scheduler` メッセージング ブロックの反映タスクがスケジュールされる `call` オブジェクト。  
   
- `_PScheduleGroup`  
- その内部で `ScheduleGroup` メッセージング ブロックの反映タスクがスケジュールされる `call` オブジェクト。 使用される `Scheduler` オブジェクトは、スケジュール グループによって暗黙的に指定されます。  
+*_PScheduleGroup*<br/>
+その内部で `ScheduleGroup` メッセージング ブロックの反映タスクがスケジュールされる `call` オブジェクト。 使用される `Scheduler` オブジェクトは、スケジュール グループによって暗黙的に指定されます。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `_PScheduler` または `_PScheduleGroup` パラメーターを指定しない場合、ランタイムは既定のスケジューラを使用しています。  
   
- 型`_Call_method`シグネチャを持つファンクターは、`void (T const &)`これは、これによって呼び出されます。`call`メッセージング ブロックでメッセージを処理します。  
+ 型`_Call_method`シグネチャを持つ、ファンクターは、`void (T const &)`これによって呼び出される`call`メッセージング ブロックはメッセージを処理します。  
   
- 型`filter_method`シグネチャを持つファンクターは、`bool (T const &)`これは、これによって呼び出されます。`call`メッセージング ブロックを、提供されたメッセージを受け入れる必要がありますかどうかを判断します。  
+ 型`filter_method`シグネチャを持つ、ファンクターは、`bool (T const &)`これによって呼び出される`call`メッセージング ブロックを提供されたメッセージを受け入れる必要があるかどうかを判断します。  
   
 ##  <a name="dtor"></a> ~ を呼び出す 
 
- 破棄、`call`メッセージング ブロックです。  
+ 破棄、`call`メッセージング ブロックします。  
   
 ```
 ~call();
@@ -142,30 +142,31 @@ call(
   
 ##  <a name="process_input_messages"></a> process_input_messages 
 
- 入力メッセージの関数を呼び出すを実行します。  
+ 入力メッセージ呼び出し関数を実行します。  
   
 ```
 virtual void process_input_messages(_Inout_ message<T>* _PMessage);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_PMessage`  
+*_PMessage*<br/>
+処理されるメッセージへのポインター。  
   
 ##  <a name="process_message"></a> process_message 
 
- これによって承認されたメッセージを処理`call`メッセージング ブロックです。  
+ これによって承認されたメッセージを処理`call`メッセージング ブロックします。  
   
 ```
 virtual void process_message(_Inout_ message<T>* _PMessage);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_PMessage`  
- 処理されるメッセージへのポインター。  
+*_PMessage*<br/>
+処理されるメッセージへのポインター。  
   
 ##  <a name="propagate_message"></a> propagate_message 
 
- メッセージを非同期的に渡す、`ISource`ブロックをこの`call`メッセージング ブロックです。 によって呼び出された、`propagate`メソッドは、ソース ブロックによって呼び出されるとします。  
+ メッセージを非同期的に渡す、`ISource`このブロック`call`メッセージング ブロックします。 によって呼び出されます、`propagate`メソッドは、ソース ブロックによって呼び出されます。  
   
 ```
 virtual message_status propagate_message(
@@ -174,18 +175,18 @@ virtual message_status propagate_message(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_PMessage`  
- `message` オブジェクトを指すポインター。  
+*_PMessage*<br/>
+`message` オブジェクトを指すポインター。  
   
- `_PSource`  
- メッセージを提供する、ソース ブロックへのポインター。  
+*_PSource*<br/>
+メッセージを提供するソース ブロックへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- A [message_status](concurrency-namespace-enums.md)のメッセージを行うには、対象の決定を示す値。  
+ A [message_status](concurrency-namespace-enums.md)メッセージとは、ターゲットの決定を示す値。  
   
 ##  <a name="send_message"></a> send_message 
 
- メッセージを同期的に渡す、`ISource`ブロックをこの`call`メッセージング ブロックです。 によって呼び出された、`send`メソッドは、ソース ブロックによって呼び出されるとします。  
+ メッセージを同期的に渡す、`ISource`このブロック`call`メッセージング ブロックします。 によって呼び出されます、`send`メソッドは、ソース ブロックによって呼び出されます。  
   
 ```
 virtual message_status send_message(
@@ -194,25 +195,25 @@ virtual message_status send_message(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_PMessage`  
- `message` オブジェクトを指すポインター。  
+*_PMessage*<br/>
+`message` オブジェクトを指すポインター。  
   
- `_PSource`  
- メッセージを提供する、ソース ブロックへのポインター。  
+*_PSource*<br/>
+メッセージを提供するソース ブロックへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- A [message_status](concurrency-namespace-enums.md)のメッセージを行うには、対象の決定を示す値。  
+ A [message_status](concurrency-namespace-enums.md)メッセージとは、ターゲットの決定を示す値。  
   
 ##  <a name="supports_anonymous_source"></a> supports_anonymous_source 
 
- 上書き、`supports_anonymous_source`を示すこのブロックがリンクされていないソースによって提供されたメッセージを受け入れることができます。  
+ 上書き、`supports_anonymous_source`メソッドをこのブロックがリンクされていないソースによって提供されたメッセージを受け入れることを示します。  
   
 ```
 virtual bool supports_anonymous_source();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `true` ブロックは延期いないために、メッセージを提供します。  
+ `true` ブロックは延期しないため、メッセージを提供します。  
   
 ## <a name="see-also"></a>関連項目  
  [同時実行 Namespace](concurrency-namespace.md)   

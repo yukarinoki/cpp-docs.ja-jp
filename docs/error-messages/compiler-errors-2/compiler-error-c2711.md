@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2711 |Microsoft ドキュメント
+title: コンパイラ エラー C2711 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb2e5c904d7f6d865b94ea4fb4ba65be4c974f8b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c5a2e757c525d272055077cb95516abf42c06dbc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234276"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088437"
 ---
 # <a name="compiler-error-c2711"></a>コンパイラ エラー C2711
-'function': この関数にすることはできませんマネージとしてコンパイルする場合は、#pragma unmanaged を使用する検討してください  
-  
- 一部の命令すると、コンパイラが、外側の関数の MSIL を生成できなくなります。  
-  
- 次の例では、C2711 が生成されます。  
-  
-```  
-// C2711.cpp  
-// compile with: /clr  
-// processor: x86  
-using namespace System;  
-value struct V {  
-   static const t = 10;  
-};  
-  
-void bar() {  
-   V::t;  
-   __asm int 3   // C2711 inline asm can't be compiled managed  
-}  
+
+'function': この関数にすることはできませんマネージとしてコンパイル #pragma アンマネージドを使用を検討してください
+
+一部の命令すると、コンパイラが、外側の関数の MSIL を生成できなくなります。
+
+次の例では、C2711 が生成されます。
+
+```
+// C2711.cpp
+// compile with: /clr
+// processor: x86
+using namespace System;
+value struct V {
+   static const t = 10;
+};
+
+void bar() {
+   V::t;
+   __asm int 3   // C2711 inline asm can't be compiled managed
+}
 ```

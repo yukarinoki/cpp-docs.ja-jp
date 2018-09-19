@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfb0c3c0544a9c58801f98567825e7e97e48b13c
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: a956212df2579298f1f947bf2388dec1532dff10
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43687988"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721735"
 ---
 # <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine クラス
 
@@ -46,17 +46,17 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>パラメーター
 
-*UIntType*  
- 結果を表す符号なし整数型。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*UIntType*<br/>
+結果を表す符号なし整数型。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
-*W*  
- **ワード サイズ**。 状態シーケンスの各ワードのサイズ (ビット数)。 **前提条件**: `0 < W ≤ numeric_limits<UIntType>::digits`
+*W*<br/>
+**ワード サイズ**。 状態シーケンスの各ワードのサイズ (ビット数)。 **前提条件**: `0 < W ≤ numeric_limits<UIntType>::digits`
 
-*S*  
- **短いラグ**。 整数値の数。 **前提条件**: `0 < S < R`
+*S*<br/>
+**短いラグ**。 整数値の数。 **前提条件**: `0 < S < R`
 
-*R*  
- **長いラグ**。 生成される数列の中の繰り返しを決定します。
+*R*<br/>
+**長いラグ**。 生成される数列の中の繰り返しを決定します。
 
 ## <a name="members"></a>メンバー
 

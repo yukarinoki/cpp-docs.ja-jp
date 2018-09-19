@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2770 |Microsoft ドキュメント
+title: コンパイラ エラー C2770 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c54ae3c559d0a523bc25831fa71e37531295489
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b206f7667855e61bfb3fe5e53cdd82444597162
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233581"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027012"
 ---
 # <a name="compiler-error-c2770"></a>コンパイラ エラー C2770
-'template' の無効な明示的な template_or_generic 個の引数  
-  
- 許可されていない関数の型に明示的なテンプレートまたは汎用引数を持つ関数テンプレート候補が発生しました。  
-  
- 次の例では、C2770 が生成されます。  
-  
-```  
-// C2770.cpp  
-#include <stdio.h>  
-template <class T>  
-int f(typename T::B*);   // expects type with member B  
-  
-struct Err {};  
-  
-int main() {  
-   f<int>(0);   // C2770 int has no B  
-   // try the following line instead  
-   f<OK>(0);  
-}  
+
+'template' の無効な明示的な template_or_generic 個の引数
+
+許可されていない関数の型に明示的なテンプレートまたはジェネリック引数関数テンプレートの候補が発生しました。
+
+次の例では、C2770 が生成されます。
+
+```
+// C2770.cpp
+#include <stdio.h>
+template <class T>
+int f(typename T::B*);   // expects type with member B
+
+struct Err {};
+
+int main() {
+   f<int>(0);   // C2770 int has no B
+   // try the following line instead
+   f<OK>(0);
+}
 ```

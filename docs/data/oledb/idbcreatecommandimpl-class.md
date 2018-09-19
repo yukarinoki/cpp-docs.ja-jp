@@ -23,14 +23,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8b67fc55a8af2bed554254732832cbd6486d2420
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c6d8a07ded3da02c21c4ee8c528474efc6e52b6c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42575507"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021565"
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl クラス
+
 実装を提供、 [IDBCreateCommand](/previous-versions/windows/desktop/ms711625\(v=vs.85\))インターフェイス。  
   
 ## <a name="syntax"></a>構文
@@ -42,14 +43,16 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- *T*  
- セッション オブジェクトから派生した`IDBCreateCommandImpl`します。  
+
+*T*<br/>
+セッション オブジェクトから派生した`IDBCreateCommandImpl`します。  
   
- *CommandClass*  
- コマンド クラス。  
+*CommandClass*<br/>
+コマンド クラス。  
 
 ## <a name="requirements"></a>要件  
- **ヘッダー:** atldb.h  
+
+**ヘッダー:** atldb.h  
   
 ## <a name="members"></a>メンバー  
   
@@ -60,9 +63,11 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 |[CreateCommand](#createcommand)|新しいコマンドを作成します。|  
   
 ## <a name="remarks"></a>Remarks  
- 新しいコマンドを取得するセッション オブジェクトの省略可能なインターフェイスです。  
+
+新しいコマンドを取得するセッション オブジェクトの省略可能なインターフェイスです。  
 
 ## <a name="createcommand"></a> Idbcreatecommandimpl::createcommand
+
 新しいコマンドを作成し、要求されたインターフェイスを返します。  
   
 ### <a name="syntax"></a>構文  
@@ -74,14 +79,16 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[idbcreatecommand::createcommand](/previous-versions/windows/desktop/ms709772\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+
+参照してください[idbcreatecommand::createcommand](/previous-versions/windows/desktop/ms709772\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
   
- いくつかのパラメーターに対応*OLE DB プログラマーズ リファレンス*で説明されている別の名前のパラメーター `IDBCreateCommand::CreateCommand`:  
+いくつかのパラメーターに対応*OLE DB プログラマーズ リファレンス*で説明されている別の名前のパラメーター `IDBCreateCommand::CreateCommand`:  
   
 |OLE DB テンプレート パラメーター|*OLE DB プログラマーズ リファレンス*パラメーター|  
 |--------------------------------|------------------------------------------------|  
 |*ppvCommand*|*ppCommand*|  
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

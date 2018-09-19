@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be0b81d1baddfd8d89112f7f7b9d63624a6aa3b6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ae9a83ff8cc8e4909e23e7751e0c82da690a0c21
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757768"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093819"
 ---
 # <a name="crbmultimap-class"></a>CRBMultiMap クラス
 
@@ -40,22 +40,22 @@ ms.locfileid: "43757768"
 template<typename K,
          typename V, 
          class KTraits = CElementTraits<K>, 
-         class VTraits = CElementTraits<V>>  
+         class VTraits = CElementTraits<V>>
 class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*K*  
+*K*<br/>
 キーの要素の型。
 
-*V*  
+*V*<br/>
 要素の値の型。
 
-*KTraits*  
+*KTraits*<br/>
 コピーまたは主要な要素を移動するために使用するコードです。 参照してください[CElementTraits クラス](../../atl/reference/celementtraits-class.md)の詳細。
 
-*VTraits*  
+*VTraits*<br/>
 コピーまたは値の要素を移動するために使用するコードです。
 
 ## <a name="members"></a>メンバー
@@ -111,7 +111,7 @@ explicit CRBMultiMap(size_t nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nBlockSize*  
+*nBlockSize*<br/>
 ブロック サイズ。
 
 ### <a name="remarks"></a>Remarks
@@ -148,7 +148,7 @@ POSITION FindFirstWithKey(KINARGTYPE key) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*key*  
+*key*<br/>
 検索する要素を識別するキーを指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -180,10 +180,10 @@ V& GetNextValueWithKey(
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*  
+*pos*<br/>
 呼び出しで取得した位置の値[CRBMultiMap::FindFirstWithKey](#findfirstwithkey)または[CRBMultiMap::GetNextWithKey](#getnextwithkey)、または以前の呼び出し`GetNextValueWithKey`します。
 
-*key*  
+*key*<br/>
 検索する要素を識別するキーを指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -215,10 +215,10 @@ CPair* GetNextWithKey(
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*  
+*pos*<br/>
 呼び出しで取得した位置の値[CRBMultiMap::FindFirstWithKey](#findfirstwithkey)または[CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey)、または以前の呼び出し`GetNextWithKey`します。
 
-*key*  
+*key*<br/>
 検索する要素を識別するキーを指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -241,10 +241,10 @@ POSITION Insert(KINARGTYPE key, VINARGTYPE value) throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*key*  
+*key*<br/>
 追加するキー値、`CRBMultiMap`オブジェクト。
 
-*値*  
+*値*<br/>
 追加する値、`CRBMultiMap`オブジェクトに関連付けられている*キー*します。
 
 ### <a name="return-value"></a>戻り値
@@ -269,7 +269,7 @@ size_t RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*key*  
+*key*<br/>
 削除する要素を識別するキーを指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -288,7 +288,7 @@ size_t RemoveKey(KINARGTYPE key) throw();
 
 ## <a name="see-also"></a>関連項目
 
-[CRBTree クラス](../../atl/reference/crbtree-class.md)   
-[CAtlMap クラス](../../atl/reference/catlmap-class.md)   
-[CRBMap クラス](../../atl/reference/crbmap-class.md)   
+[CRBTree クラス](../../atl/reference/crbtree-class.md)<br/>
+[CAtlMap クラス](../../atl/reference/catlmap-class.md)<br/>
+[CRBMap クラス](../../atl/reference/crbmap-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

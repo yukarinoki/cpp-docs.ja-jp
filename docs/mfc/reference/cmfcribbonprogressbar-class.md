@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82c72a928c3f747251f4c02305cc61b83cfcedcb
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 286c95b775b95d44ad8fd9dc216b161aed717796
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541605"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711985"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>CMFCRibbonProgressBar クラス
 時間のかかる操作の進行状況を視覚的に示すコントロールを実装します。  
@@ -106,14 +106,14 @@ CMFCRibbonProgressBar(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nID*  
- リボンの進行状況バーのコマンド ID を指定します。  
+*nID*<br/>
+[in]リボンの進行状況バーのコマンド ID を指定します。  
   
- [in]*nWidth*  
- リボンの進行状況バーのピクセル単位の幅を指定します。  
+*nWidth*<br/>
+[in]リボンの進行状況バーのピクセル単位の幅を指定します。  
   
- [in]*パラメーター nHeight*  
- リボンの進行状況バーのピクセル、高さを指定します。  
+*パラメーター nHeight*<br/>
+[in]リボンの進行状況バーのピクセル、高さを指定します。  
   
 ##  <a name="getpos"></a>  CMFCRibbonProgressBar::GetPos  
  進行状況バーの現在位置を返します。  
@@ -197,8 +197,8 @@ void SetInfiniteMode(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bSet*  
- 進行状況バーが、無限モードを指定する場合は TRUEそれ以外の場合、FALSE です。  
+*bSet*<br/>
+[in]進行状況バーが、無限モードを指定する場合は TRUEそれ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
  通常は、進行状況バーが無限のモードである場合は、それをユーザーに通知操作が進行中であるが、完了時間が不明であります。 したがって、進行状況バー繰り返し塗りつぶさ最小値から最大値にします。  
@@ -213,11 +213,11 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nPos*  
- 進行状況バーを設定する位置を指定します。  
+*nPos*<br/>
+[in]進行状況バーを設定する位置を指定します。  
   
- [in]*bRedraw*  
- 進行状況バーが再描画が必要かどうかを指定します。  
+*bRedraw*<br/>
+[in]進行状況バーが再描画が必要かどうかを指定します。  
   
 ### <a name="remarks"></a>Remarks  
  指定された範囲内で、範囲が設定されている必要があります、 [CMFCRibbonProgressBar::SetRange](#setrange)メソッド。  
@@ -232,11 +232,11 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nMin*  
- 範囲の最小値を指定します。  
+*nMin*<br/>
+[in]範囲の最小値を指定します。  
   
- [in]*nMax*  
- 範囲の最大値を指定します。  
+*nMax*<br/>
+[in]範囲の最大値を指定します。  
   
 ### <a name="remarks"></a>Remarks  
  最小値と最大値を設定して、進行状況バーの範囲を定義するのにには、このメソッドを使用します。  

@@ -25,14 +25,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e176cc20dc3f6f13eb868133b99c0ce7e86d25c4
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ed4eefe8c05e2b5b027ba1d7c1fec022c9e44409
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572874"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104947"
 ---
 # <a name="iconverttypeimpl-class"></a>IConvertTypeImpl クラス
+
 実装を提供、 [IConvertType](/previous-versions/windows/desktop/ms715926\(v=vs.85\))インターフェイス。  
   
 ## <a name="syntax"></a>構文
@@ -44,11 +45,13 @@ class ATL_NO_VTABLE IConvertTypeImpl
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- *T*  
- 派生したクラス、`IConvertTypeImpl`します。  
+
+*T*<br/>
+派生したクラス、`IConvertTypeImpl`します。  
 
 ## <a name="requirements"></a>要件  
- **ヘッダー:** atldb.h  
+
+**ヘッダー:** atldb.h  
   
 ## <a name="members"></a>メンバー  
   
@@ -59,9 +62,11 @@ class ATL_NO_VTABLE IConvertTypeImpl
 |[CanConvert](#canconvert)|コマンドまたは行セットでは、型変換の可用性に関する情報を示します。|  
   
 ## <a name="remarks"></a>Remarks  
- このインターフェイスは、コマンド、行セット、およびインデックスの行セットでは必須です。 `IConvertTypeImpl` OLE DB によって指定されている変換オブジェクトに委任することで、インターフェイスを実装します。  
+
+このインターフェイスは、コマンド、行セット、およびインデックスの行セットでは必須です。 `IConvertTypeImpl` OLE DB によって指定されている変換オブジェクトに委任することで、インターフェイスを実装します。  
 
 ## <a name="canconvert"></a> Iconverttypeimpl::canconvert
+
 コマンドまたは行セットでは、型変換の可用性に関する情報を示します。  
   
 ### <a name="syntax"></a>構文  
@@ -73,11 +78,14 @@ STDMETHOD(CanConvert)(DBTYPE wFromType,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[IConvertType::CanConvert](/previous-versions/windows/desktop/ms711224\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+
+参照してください[IConvertType::CanConvert](/previous-versions/windows/desktop/ms711224\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ### <a name="remarks"></a>Remarks  
- OLE DB データ変換を使用して`MSADC.DLL`します。  
+
+OLE DB データ変換を使用して`MSADC.DLL`します。  
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

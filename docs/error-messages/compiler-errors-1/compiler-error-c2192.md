@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2192 |Microsoft ドキュメント
+title: コンパイラ エラー C2192 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a97b0885dd626c992ab55703038838aa743e30d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d6cea2b4ce805c8f7d966ee9d2b3c27f8a901c8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168699"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023515"
 ---
 # <a name="compiler-error-c2192"></a>コンパイラ エラー C2192
-パラメーター 'number' の宣言が異なる  
-  
- C の関数は、異なるパラメーター リストで 2 番目の時間を宣言されました。 C では、オーバー ロードされた関数はサポートされません。  
-  
- 次の例では、C2192 が生成されます。  
-  
-```  
-// C2192.c  
-// compile with: /Za /c  
-void func( float, int );  
-void func( int, float );   // C2192, different parameter list  
-void func2( int, float );   // OK  
+
+パラメーター 'number' の宣言と異なります。
+
+C の関数は、異なるパラメーター リストで、2 回目で宣言されました。 C では、オーバー ロードされた関数はサポートされません。
+
+次の例に C2192 が生成されます。
+
+```
+// C2192.c
+// compile with: /Za /c
+void func( float, int );
+void func( int, float );   // C2192, different parameter list
+void func2( int, float );   // OK
 ```

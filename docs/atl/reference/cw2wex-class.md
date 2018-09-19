@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d888478be18063b00e1e5e8eabead510349584cf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9f230e66689578f1b7ea95326d9bc73efc8746c0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752539"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093056"
 ---
 # <a name="cw2wex-class"></a>CW2WEX クラス
 
@@ -37,13 +37,13 @@ ms.locfileid: "43752539"
 ## <a name="syntax"></a>構文
 
 ```
-template <int t_nBufferLength = 128>  
+template <int t_nBufferLength = 128>
 class CW2WEX
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*t_nBufferLength*  
+*t_nBufferLength*<br/>
 変換プロセスで使用されるバッファーのサイズ。 既定の長さは 128 バイトです。
 
 ## <a name="members"></a>メンバー
@@ -109,10 +109,10 @@ CW2WEX( LPCWSTR  psz) throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*2 つ*  
+*2 つ*<br/>
 変換するテキスト文字列。
 
-*nCodePage*  
+*nCodePage*<br/>
 コード ページです。 このクラスでは使用されません。
 
 ### <a name="remarks"></a>Remarks
@@ -151,7 +151,7 @@ wchar_t m_szBuffer[t_nBufferLength];
 
 キャスト演算子です。
 
-```  
+```
 operator LPWSTR() const throw();
 ```
 
@@ -161,9 +161,9 @@ LPWSTR を入力すると、テキスト文字列を返します。
 
 ## <a name="see-also"></a>関連項目
 
-[CA2AEX クラス](../../atl/reference/ca2aex-class.md)   
-[CA2CAEX クラス](../../atl/reference/ca2caex-class.md)   
-[CA2WEX クラス](../../atl/reference/ca2wex-class.md)   
-[CW2AEX クラス](../../atl/reference/cw2aex-class.md)   
-[CW2CWEX クラス](../../atl/reference/cw2cwex-class.md)   
+[CA2AEX クラス](../../atl/reference/ca2aex-class.md)<br/>
+[CA2CAEX クラス](../../atl/reference/ca2caex-class.md)<br/>
+[CA2WEX クラス](../../atl/reference/ca2wex-class.md)<br/>
+[CW2AEX クラス](../../atl/reference/cw2aex-class.md)<br/>
+[CW2CWEX クラス](../../atl/reference/cw2cwex-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

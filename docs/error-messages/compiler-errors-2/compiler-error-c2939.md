@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2939 |Microsoft ドキュメント
+title: コンパイラ エラー C2939 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,42 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85b4cc897c5d24b841e7ad5c8428cd10d9a36961
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b7d397eff2cfe561ace6f29b00601941779ef2b2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245758"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053155"
 ---
 # <a name="compiler-error-c2939"></a>コンパイラ エラー C2939
-'class': type-class-id が、ローカル データ変数として再定義されています  
-  
- ジェネリック クラスまたはテンプレート クラスをローカル データ変数として使用することはできません。  
-  
- このエラーは、中かっこが正しく一致していない場合に発生することがあります。  
-  
- 次の例では C2939 が生成されます。  
-  
-```  
-// C2939.cpp  
-template<class T>  
-struct TC { };   
-int main() {  
-   int TC<int>;   // C2939  
-   int TC;   // OK  
-}  
-```  
-  
- C2939 は、ジェネリックを使用する場合にも発生することがあります。  
-  
-```  
-// C2939b.cpp  
-// compile with: /clr  
-generic<class T>  
-ref struct GC { };  
-  
-int main() {  
-   int GC<int>;   // C2939  
-   int GC;   // OK  
-}  
+
+'class': type-class-id が、ローカル データ変数として再定義されています
+
+ジェネリック クラスまたはテンプレート クラスをローカル データ変数として使用することはできません。
+
+このエラーは、中かっこが正しく一致していない場合に発生することがあります。
+
+次の例では C2939 が生成されます。
+
+```
+// C2939.cpp
+template<class T>
+struct TC { };
+int main() {
+   int TC<int>;   // C2939
+   int TC;   // OK
+}
+```
+
+C2939 は、ジェネリックを使用する場合にも発生することがあります。
+
+```
+// C2939b.cpp
+// compile with: /clr
+generic<class T>
+ref struct GC { };
+
+int main() {
+   int GC<int>;   // C2939
+   int GC;   // OK
+}
 ```

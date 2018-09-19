@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 433d4ba23cbf4ed7e2819a3752cd2155b7c20371
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 12935c6a735d72bb1eb25627c78d69f362073a90
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42544461"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724376"
 ---
 # <a name="interlockedbittestandreset-intrinsic-functions"></a>_interlockedbittestandreset の組み込み関数
 **Microsoft 固有の仕様**  
@@ -82,11 +82,11 @@ unsigned char _interlockedbittestandreset64_HLERelease(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力] `a`  
- 検査するメモリへのポインター。  
+*a*<br/>
+[in]検査するメモリへのポインター。  
   
- [入力] `b`  
- テストするビット位置。  
+*b*<br/>
+[in]テストするビット位置。  
   
 ## <a name="return-value"></a>戻り値  
  `b` で指定された位置にあるビットの元の値。  

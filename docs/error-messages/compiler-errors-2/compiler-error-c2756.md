@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2756 |Microsoft ドキュメント
+title: コンパイラ エラー C2756 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3eb61cd111166867be0439709a8b73dd4056099
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 252f212f9034151bc5e77d1d2d6e64e1ee388faa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231778"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061215"
 ---
 # <a name="compiler-error-c2756"></a>コンパイラ エラー C2756
-'template type': 既定のテンプレート引数は部分的特殊化では使用できません  
-  
- 部分的特殊化用のテンプレートに既定の引数を含めることはできません。  
-  
- 次の例では、C2756 を生成し、その修正方法を示しています。  
-  
-```  
-// C2756.cpp  
-template <class T>  
-struct S {};  
-  
-template <class T=int>  
-// try the following line instead  
-// template <class T>  
-struct S<T*> {};   // C2756  
+
+'template type': 既定のテンプレート引数は部分的特殊化では使用できません
+
+部分的特殊化用のテンプレートに既定の引数を含めることはできません。
+
+次の例では、C2756 を生成し、その修正方法を示しています。
+
+```
+// C2756.cpp
+template <class T>
+struct S {};
+
+template <class T=int>
+// try the following line instead
+// template <class T>
+struct S<T*> {};   // C2756
 ```

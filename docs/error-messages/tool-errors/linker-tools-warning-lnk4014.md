@@ -1,5 +1,5 @@
 ---
-title: リンカー ツールの警告 LNK4014 |Microsoft ドキュメント
+title: リンカー ツールの警告 LNK4014 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fb86efbdc70342861a87a233ab687f7564cb48b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df0a3b6f30733413a0f27c0b8daa07394bb04b07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300060"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023112"
 ---
 # <a name="linker-tools-warning-lnk4014"></a>リンカー ツールの警告 LNK4014
-メンバー オブジェクト"objectname"を見つけることができません。  
-  
- LIB が見つかりませんでした。`objectname`ライブラリです。  
-  
- **/Remove**と**抽出/** オプションを削除するか、ファイルにコピーがメンバー オブジェクトの完全名を必要とします。 完全な名前には、元のオブジェクト ファイルのパスが含まれています。 ライブラリ内のメンバー オブジェクトの完全名を使用して DUMPBIN [/ARCHIVEMEMBERS](../../build/reference/archivemembers.md)または LIB [/list](../../build/reference/managing-a-library.md)です。
+
+メンバー オブジェクト"objectname"が見つかりません
+
+LIB が見つかりませんでした。`objectname`ライブラリ。
+
+**/Remove**と **/extract**オプションが削除するか、ファイルにコピーするのにはメンバー オブジェクトの完全名が必要です。 完全な名前には、元のオブジェクト ファイルのパスが含まれます。 ライブラリ内のメンバー オブジェクトの完全名を表示するには、DUMPBIN を使用して、 [/ARCHIVEMEMBERS](../../build/reference/archivemembers.md)または LIB [/list](../../build/reference/managing-a-library.md)します。

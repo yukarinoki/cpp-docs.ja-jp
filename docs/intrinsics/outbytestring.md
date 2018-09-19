@@ -1,5 +1,5 @@
 ---
-title: _ _outbytestring |Microsoft Docs
+title: _ _outbytestring |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55dc6492faea101df40c2901ced24321822f36e8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 54a816bd4df165b3df9de723560192ac9072b29c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541110"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718836"
 ---
 # <a name="outbytestring"></a>__outbytestring
 **Microsoft 固有の仕様**  
@@ -41,14 +41,14 @@ void __outbytestring(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力] `Port`  
- データを送信するポート。  
+*ポート*<br/>
+[in]データを送信するポート。  
   
- [入力] `Buffer`  
- 指定したポートを送信するデータ。  
+*Buffer*<br/>
+[in]指定したポートを送信するデータ。  
   
- [入力] `Count`  
- 送信するデータのバイト数。  
+*カウント*<br/>
+[in]送信するデータのバイト数。  
   
 ## <a name="requirements"></a>要件  
   

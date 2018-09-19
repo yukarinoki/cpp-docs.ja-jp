@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc74f89708132b0895c8980538b852c15087b5e6
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 4e987910cf27135858d4fe272bc02da7c90f622f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43682328"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710152"
 ---
 # <a name="cpanedialog-class"></a>CPaneDialog クラス
 `CPaneDialog`クラスは、モードレスでドッキング可能なダイアログ ボックスをサポートしています。  
@@ -122,32 +122,32 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*したとき*  
- ドッキングのダイアログ ボックスの名前。  
+*したとき*<br/>
+[in]ドッキングのダイアログ ボックスの名前。  
   
- [in]*pParentWnd*  
- 親ウィンドウへのポインター。  
+*pParentWnd*<br/>
+[in]親ウィンドウへのポインター。  
   
- [in]*bHasGripper*  
- キャプション (グリップ); とドッキングのダイアログ ボックスを作成する場合は TRUEそれ以外の場合、FALSE です。  
+*bHasGripper*<br/>
+[in]キャプション (グリップ); とドッキングのダイアログ ボックスを作成する場合は TRUEそれ以外の場合、FALSE です。  
   
- [in]*lpszTemplateName*  
- リソース ダイアログ テンプレートの名前。  
+*lpszTemplateName*<br/>
+[in]リソース ダイアログ テンプレートの名前。  
   
- [in]*nStyle*  
- Windows スタイルです。  
+*nStyle*<br/>
+[in]Windows スタイルです。  
   
- [in]*nID*  
- コントロールの id。  
+*nID*<br/>
+[in]コントロールの id。  
   
- [in]*nIDTemplate*  
- ダイアログ テンプレートのリソース ID。  
+*nIDTemplate*<br/>
+[in]ダイアログ テンプレートのリソース ID。  
   
- [in]*dwTabbedStyle*  
- ユーザーがこのコントロールのウィンドウのキャプションに別のコントロール ペインをドラッグすると生成されるタブ付きウィンドウのスタイル。 既定値は、AFX_CBRS_REGULAR_TABS です。 詳細については、の「解説」を参照してください、 [cbasepane::createex](../../mfc/reference/cbasepane-class.md#createex)メソッド。  
+*dwTabbedStyle*<br/>
+[in]ユーザーがこのコントロールのウィンドウのキャプションに別のコントロール ペインをドラッグすると生成されるタブ付きウィンドウのスタイル。 既定値は、AFX_CBRS_REGULAR_TABS です。 詳細については、の「解説」を参照してください、 [cbasepane::createex](../../mfc/reference/cbasepane-class.md#createex)メソッド。  
   
- [in]*dwControlBarStyle*  
- 追加のスタイル属性。 既定値は、AFX_DEFAULT_DOCKING_PANE_STYLE です。 詳細については、の「解説」を参照してください、 [cbasepane::createex](../../mfc/reference/cbasepane-class.md#createex)メソッド。  
+*dwControlBarStyle*<br/>
+[in]追加のスタイル属性。 既定値は、AFX_DEFAULT_DOCKING_PANE_STYLE です。 詳細については、の「解説」を参照してください、 [cbasepane::createex](../../mfc/reference/cbasepane-class.md#createex)メソッド。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -170,11 +170,11 @@ afx_msg LRESULT HandleInitDialog(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*wParam*  
- 既定のキーボード フォーカスを受け取るコントロールへのハンドルします。  
+*wParam*<br/>
+[in]既定のキーボード フォーカスを受け取るコントロールへのハンドルします。  
   
- [in]*lParam*  
- 追加の初期化データを指定します。  
+*lParam*<br/>
+[in]追加の初期化データを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。 さらに、TRUE がで指定されたコントロールにキーボード フォーカスを設定、 *wParam*パラメーターです。FALSE は、既定のキーボード フォーカスを設定できないようにします。  
@@ -190,8 +190,8 @@ virtual BOOL SetOccDialogInfo(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pOccDialogInfo*  
- ダイアログ ボックスのオブジェクトを作成するために使用されるダイアログ ボックス テンプレートへのポインター。 このパラメーターの値が渡された後、 [COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols)メソッド。  
+*pOccDialogInfo*<br/>
+[in]ダイアログ ボックスのオブジェクトを作成するために使用されるダイアログ ボックス テンプレートへのポインター。 このパラメーターの値が渡された後、 [COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols)メソッド。  
   
 ### <a name="return-value"></a>戻り値  
  常に TRUE です。  

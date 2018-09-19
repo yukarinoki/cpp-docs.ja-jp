@@ -1,5 +1,5 @@
 ---
-title: 式エバリュエーター エラー CXX0051 |Microsoft ドキュメント
+title: 式エバリュエーター エラー CXX0051 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a922738aa9ba3672e1f8f7c801f02d13a90a99c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3b89fb8de6bd9331a85d79ec8d8e21ba746c5c88
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301796"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065050"
 ---
 # <a name="expression-evaluator-error-cxx0051"></a>式エバリュエーター エラー CXX0051
-複数のオーバー ロードされたシンボルがブレークポイントで指定されました。  
-  
- 式エバリュエーターでは、ブレークポイントとして使用するオーバー ロードされた 2 つ以上の記号のうち特定できませんでした。  
-  
- このエラーは、can0051 と同じものと同じです。
+
+ブレークポイントで指定された 1 つ以上のオーバー ロードされたシンボル
+
+式エバリュエーターでは、ブレークポイントとして使用する 1 つ以上のオーバー ロードされた記号のうち特定できませんでした。
+
+このエラーは、can0051 と同じものと同じです。

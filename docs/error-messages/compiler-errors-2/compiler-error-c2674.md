@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2674 |Microsoft ドキュメント
+title: コンパイラ エラー C2674 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77559679e4bb4f5a4d1f6f49223b21033c22e5c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d1e8a3533d1f2ac7a309f89e52a03b3ff8a62dec
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232344"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037737"
 ---
 # <a name="compiler-error-c2674"></a>コンパイラ エラー C2674
-ジェネリック宣言はこのコンテキストで許可されていません  
-  
- ジェネリック型の宣言が正しくありません。 詳細については、「[ジェネリック](../../windows/generics-cpp-component-extensions.md)」を参照してください。  
-  
-## <a name="example"></a>例  
- 次の例では、C2674 を生成します。  
-  
-```  
-// C2674.cpp  
-// compile with: /clr /c  
-void F(generic <class T> ref class R1);   // C2674  
-generic <class T> ref class R2 {};   // OK  
+
+このコンテキストでは、ジェネリック宣言は許可されません。
+
+ジェネリック型の宣言が正しくありません。 詳細については、「[ジェネリック](../../windows/generics-cpp-component-extensions.md)」を参照してください。
+
+## <a name="example"></a>例
+
+次の例では、C2674 が生成されます。
+
+```
+// C2674.cpp
+// compile with: /clr /c
+void F(generic <class T> ref class R1);   // C2674
+generic <class T> ref class R2 {};   // OK
 ```

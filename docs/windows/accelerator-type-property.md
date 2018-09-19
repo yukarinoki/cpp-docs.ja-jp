@@ -1,5 +1,5 @@
 ---
-title: アクセラレータの種類のプロパティ |Microsoft Docs
+title: アクセラレータの種類のプロパティ (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59fae6d0809e32883d5d56e43e64525e23643d91
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d38d5a78eb37a028f29da430a762604b2e50d632
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602327"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315692"
 ---
-# <a name="accelerator-type-property"></a>アクセラレータの [タイプ] プロパティ
+# <a name="accelerator-type-property-c"></a>アクセラレータの種類のプロパティ (C++)
 
 アクセラレータ**型**プロパティは、アクセラレータ ID に関連付けられているショートカット キーの組み合わせが仮想キーの組み合わせまたは ASCII/ANSI キーの値がかどうかを決定します。
 

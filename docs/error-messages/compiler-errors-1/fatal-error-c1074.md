@@ -1,5 +1,5 @@
 ---
-title: 致命的なエラー C1074 |Microsoft ドキュメント
+title: 致命的なエラー C1074 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f6cd71605d08f28def87fa203bdbd5178a5dad9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 14c1d2119598bcf48083f8b394a6bd0739bc3c40
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198652"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064946"
 ---
 # <a name="fatal-error-c1074"></a>致命的なエラー C1074
-'IDB' は PDB ファイルには無効な拡張子です: filename  
-  
- コンパイラでは、プログラム データベースに .pdb 拡張子が必要です。
+
+'IDB' は PDB ファイルには無効な拡張子です: filename
+
+コンパイラでは、プログラム データベースに .pdb 拡張子が必要です。

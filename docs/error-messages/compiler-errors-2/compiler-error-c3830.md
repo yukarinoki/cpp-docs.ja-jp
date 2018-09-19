@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3830 |Microsoft ドキュメント
+title: コンパイラ エラー C3830 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 039b819b65f0c0e9a7d9fb7fa490659dd9763e37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 20b50d394b0701281cf382c6c0226b0b0b3c8180
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267255"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016846"
 ---
 # <a name="compiler-error-c3830"></a>コンパイラ エラー C3830
-'type1': 'type2' に値型はインターフェイス クラスからのみ継承できますから継承できません。  
-  
- 値の型は、基本クラスを継承できません。  詳細については、次を参照してください。[クラスと構造体](../../windows/classes-and-structs-cpp-component-extensions.md)です。  
-  
-## <a name="example"></a>例  
- 次の例では、C3830 が生成されます。  
-  
-```  
-// C3830a.cpp  
-// compile with: /clr /c  
-public value struct MyStruct4 {  
-   int i;  
-};  
-  
-public value class MyClass : public MyStruct4 {};   // C3830  
-  
-// OK  
-public interface struct MyInterface4 {  
-   void i();  
-};  
-  
-public value class MyClass2 : public MyInterface4 {  
-public:  
-   virtual void i(){}  
-};  
-```  
+
+'type1': 'type2'、値の型はインターフェイス クラスからのみ継承できますから継承できません。
+
+値型では、基本クラスを継承できません。  詳細については、次を参照してください。[クラスと構造体](../../windows/classes-and-structs-cpp-component-extensions.md)します。
+
+## <a name="example"></a>例
+
+次の例では、C3830 が生成されます。
+
+```
+// C3830a.cpp
+// compile with: /clr /c
+public value struct MyStruct4 {
+   int i;
+};
+
+public value class MyClass : public MyStruct4 {};   // C3830
+
+// OK
+public interface struct MyInterface4 {
+   void i();
+};
+
+public value class MyClass2 : public MyInterface4 {
+public:
+   virtual void i(){}
+};
+```

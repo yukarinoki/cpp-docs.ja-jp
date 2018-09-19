@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4799d0b9c36ade8b1e203ca106605db75752b02f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f5a4d4c359fb4a90bfd25801f7c73f5bc4d7d501
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752816"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019472"
 ---
 # <a name="commandhandler"></a>CommandHandler
 
@@ -29,7 +29,7 @@ ms.locfileid: "43752816"
 
 ## <a name="syntax"></a>構文
 
-```  
+```cpp
 LRESULT CommandHandler(
     WORD wNotifyCode,  
     WORD wID,  
@@ -39,16 +39,16 @@ LRESULT CommandHandler(
 
 #### <a name="parameters"></a>パラメーター
 
-*wNotifyCode*  
+*wNotifyCode*<br/>
 通知コード。
 
-*wID*  
+*wID*<br/>
 メニュー項目、コントロール、またはアクセラレータの識別子。
 
-*hWndCtl*  
+*hWndCtl*<br/>
 ウィンドウ コントロールへのハンドル。
 
-*bHandled*  
+*bHandled*<br/>
 メッセージ マップ セット*bHandled*する前に TRUE を`CommandHandler`が呼び出されます。 場合`CommandHandler`、メッセージを完全に処理しない設定があります*bHandled*を FALSE に、メッセージは、さらに処理が必要かを示します。
 
 ## <a name="return-value"></a>戻り値
@@ -61,7 +61,7 @@ LRESULT CommandHandler(
 
 ## <a name="see-also"></a>関連項目
 
-[ウィンドウの実装](../atl/implementing-a-window.md)   
-[メッセージ マップ](../atl/message-maps-atl.md)   
+[ウィンドウの実装](../atl/implementing-a-window.md)<br/>
+[メッセージ マップ](../atl/message-maps-atl.md)<br/>
 [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)
 

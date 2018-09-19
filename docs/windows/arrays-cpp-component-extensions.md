@@ -13,7 +13,6 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - array keyword [C++]
-- declaring arrays, about declaring arrays
 - arrays [C++], multidimensional
 - multidimensional arrays
 - arrays [C++]
@@ -23,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0241e2b8259e3e5ff5a314b4f01b6f911c64d813
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dbfcedd2bc17e21b94de46c63edd95bf58f576a7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612176"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714454"
 ---
 # <a name="arrays-c-component-extensions"></a>配列 (C++ コンポーネント拡張)
 
@@ -63,12 +62,14 @@ ms.locfileid: "42612176"
     {initialization-list [,...]}
 ```
 
-*修飾子*[省略可能] の 1 つ以上のこれらのストレージ クラス指定子:[変更可能な](../cpp/mutable-data-members-cpp.md)、[揮発性](../cpp/volatile-cpp.md)、 [const](../cpp/const-cpp.md)、 [extern](../cpp/using-extern-to-specify-linkage.md)、[静的](../cpp/static-members-cpp.md)します。
+*修飾子*<br/>
+(省略可能)1 つ以上のこれらのストレージ クラス指定子:[変更可能な](../cpp/mutable-data-members-cpp.md)、[揮発性](../cpp/volatile-cpp.md)、 [const](../cpp/const-cpp.md)、 [extern](../cpp/using-extern-to-specify-linkage.md)、[静的](../cpp/static-members-cpp.md).
 
 *配列型*  
 配列変数の型。 有効な種類は Windows ランタイム クラスと基本型、ref クラスと構造体、値クラスと構造体、およびネイティブ ポインター (`type*`)。
 
-*ランク*[省略可能] 配列の次元数。 1 にする必要があります。
+*rank*<br/>
+(省略可能)配列の次元の数。 1 にする必要があります。
 
 *identifier*  
 配列変数の名前。
@@ -76,7 +77,8 @@ ms.locfileid: "42612176"
 *初期化の種類*  
 配列を初期化する値の型。 通常、*配列型*と*初期化型*は同じ型。 ただし、型が異なる可能性への変換がある場合*初期化型*に*配列型*— たとえば場合、*初期化型*から派生*配列型*します。
 
-*初期化リスト*中の値のコンマ区切りのリストはその初期化の配列の要素を角かっこ [オプション]。 たとえば場合、*ランクのサイズ-一覧*された`(3)`、3 つの要素の 1 次元配列を宣言しています*初期化リスト*可能性があります`{1,2,3}`。
+*初期化リスト*<br/>
+(省略可能)配列の要素の初期化は中かっこ内の値のコンマ区切りの一覧。 たとえば場合、*ランクのサイズ-一覧*された`(3)`、3 つの要素の 1 次元配列を宣言しています*初期化リスト*可能性があります`{1,2,3}`。
 
 ### <a name="remarks"></a>Remarks
 
@@ -116,12 +118,14 @@ int main() {
     {initialization-list [,...]}
 ```
 
-*修飾子*[省略可能] の 1 つ以上のこれらのストレージ クラス指定子:[変更可能な](../cpp/mutable-data-members-cpp.md)、[揮発性](../cpp/volatile-cpp.md)、 [const](../cpp/const-cpp.md)、 [extern](../cpp/using-extern-to-specify-linkage.md)、[静的](../cpp/static-members-cpp.md)します。
+*修飾子*<br/>
+(省略可能)1 つ以上のこれらのストレージ クラス指定子:[変更可能な](../cpp/mutable-data-members-cpp.md)、[揮発性](../cpp/volatile-cpp.md)、 [const](../cpp/const-cpp.md)、 [extern](../cpp/using-extern-to-specify-linkage.md)、[静的](../cpp/static-members-cpp.md).
 
 *配列型*  
 配列変数の型。 有効な種類は Windows ランタイム クラスと基本型、ref クラスと構造体、値クラスと構造体は、ネイティブ ポインター (`type*`)、およびネイティブ POD (plain old データ) の型。
 
-*ランク*[省略可能] 配列の次元数。 既定値は 1 になります。最大値は、32 です。 配列の各次元では配列自体です。
+*rank*<br/>
+(省略可能)配列の次元の数。 既定値は 1 になります。最大値は、32 です。 配列の各次元では配列自体です。
 
 *identifier*  
 配列変数の名前。
@@ -132,7 +136,8 @@ int main() {
 *ランクのサイズの一覧*  
 配列の各次元のサイズのコンマ区切りの一覧。 また場合、*初期化リスト*パラメーターを指定すると、コンパイラは、各次元のサイズを推測できると*ランクのサイズの一覧*を省略できます。
 
-*初期化リスト*中の値のコンマ区切りのリストはその初期化の配列の要素を角かっこ [オプション]。 コンマ区切りのリストが入れ子になったまたは*初期化リスト*多次元配列内の要素を初期化する項目。
+*初期化リスト*<br/>
+(省略可能)配列の要素の初期化は中かっこ内の値のコンマ区切りの一覧。 コンマ区切りのリストが入れ子になったまたは*初期化リスト*多次元配列内の要素を初期化する項目。
 
 たとえば場合、*ランクのサイズ-一覧*された`(3)`、3 つの要素の 1 次元配列を宣言しています*初期化リスト*可能性があります`{1,2,3}`。 場合*ランクのサイズ-一覧*された`(3,2,4)`、最初の次元、2 番目の場合、2 つの要素および第 3 回目、4 つの要素の 3 つの要素の 3 次元の配列を宣言する*初期化リスト*可能性があります`{{1,2,3},{0,0},{-5,10,-21,99}}`)。
 

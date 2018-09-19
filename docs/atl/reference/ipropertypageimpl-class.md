@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28af5343f761f89678768133c9114e3cf23be8e5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2b07609b792b7080e2c4c432ed435381007ba286
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755987"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075229"
 ---
 # <a name="ipropertypageimpl-class"></a>IPropertyPageImpl クラス
 
@@ -58,13 +58,13 @@ ms.locfileid: "43755987"
 ## <a name="syntax"></a>構文
 
 ```
-template<class T>  
+template<class T>
 class IPropertyPageImpl
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 派生したクラス、`IPropertyPageImpl`します。
 
 ## <a name="members"></a>メンバー
@@ -311,7 +311,7 @@ void SetDirty(BOOL bDirty);
 
 ### <a name="parameters"></a>パラメーター
 
-*bDirty*  
+*bDirty*<br/>
 [in]TRUE の場合、プロパティ ページの状態は変更済みとしてマークされます。 それ以外の場合、マークされているように変更されません。
 
 ### <a name="remarks"></a>Remarks
@@ -368,7 +368,7 @@ HRESULT TranslateAccelerator(MSG* pMsg);
 
 ## <a name="see-also"></a>関連項目
 
-[IPropertyPage2Impl クラス](../../atl/reference/ipropertypage2impl-class.md)   
-[IPerPropertyBrowsingImpl クラス](../../atl/reference/iperpropertybrowsingimpl-class.md)   
-[ISpecifyPropertyPagesImpl クラス](../../atl/reference/ispecifypropertypagesimpl-class.md)   
+[IPropertyPage2Impl クラス](../../atl/reference/ipropertypage2impl-class.md)<br/>
+[IPerPropertyBrowsingImpl クラス](../../atl/reference/iperpropertybrowsingimpl-class.md)<br/>
+[ISpecifyPropertyPagesImpl クラス](../../atl/reference/ispecifypropertypagesimpl-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

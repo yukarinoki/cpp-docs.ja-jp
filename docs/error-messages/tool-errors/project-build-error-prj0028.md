@@ -1,5 +1,5 @@
 ---
-title: プロジェクト ビルド エラー PRJ0028 |Microsoft ドキュメント
+title: プロジェクト ビルド エラー PRJ0028 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42c6e55cdce7294d7d2bc2e2a5634f362a539363
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f90e7f6629ae50f734ac127d05c6c70d002133a3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317727"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062619"
 ---
 # <a name="project-build-error-prj0028"></a>プロジェクト ビルド エラー PRJ0028
-一時ファイル 'file' には、ユーザーの ANSI コード ページに変換できない Unicode の内容が含まれています。  
-  
- 値が指定されました、 [/MIDL (MIDL コマンド ライン オプションの指定)](../../build/reference/midl-specify-midl-command-line-options.md)リンカーがシステム コード ページで解決できませんでした。  
-  
- MIDL コマンド (入力のコード ページ) を指定するときに使用されるコード ページは、システムのコード ページと同じである必要があります。
+
+一時ファイル 'file' には、ユーザーの ANSI コード ページに変換できない Unicode の内容が含まれています。
+
+値が指定されました、 [/MIDL (MIDL コマンド ライン オプションの指定)](../../build/reference/midl-specify-midl-command-line-options.md)リンカー オプションをシステム コード ページで解決できませんでした。
+
+MIDL コマンド (入力のコード ページ) を指定する場合に使用するコード ページは、システム コード ページと同じである必要があります。

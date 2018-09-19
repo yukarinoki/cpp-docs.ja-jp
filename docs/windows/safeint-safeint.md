@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2ddb7092b1a5556485848d122e21ac54b6efe182
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: de318ab79638f63fae98856987340ad62534f695
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606956"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721346"
 ---
 # <a name="safeintsafeint"></a>SafeInt::SafeInt
 
@@ -56,14 +56,14 @@ SafeInt (
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*しました*  
-新しい値**SafeInt**オブジェクト。 これには、コンス トラクターによって、型 T または U のパラメーターがあります。
+*i*<br/>
+[in]新しい値**SafeInt**オブジェクト。 これには、コンス トラクターによって、型 T または U のパラメーターがあります。
 
-[in]*b*  
-新しいブール値**SafeInt**オブジェクト。
+*b*<br/>
+[in]新しいブール値**SafeInt**オブジェクト。
 
-[in]*u*  
-A **SafeInt**型 U の新しい**SafeInt**オブジェクトと同じ値になります*u*T 型になりますが、
+*u*<br/>
+[in]A **SafeInt**型 U の新しい**SafeInt**オブジェクトと同じ値になります*u*T 型になりますが、
 
 U に格納されたデータの種類、 **SafeInt**します。 ブール値、文字、または整数のいずれかの型を指定できます。 整数型の場合は、符号付きまたは符号なし 8 と 64 ビットの間であるとします。
 

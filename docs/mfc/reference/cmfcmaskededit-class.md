@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b903946a2e907b67d70e5008bff602670f1751e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 2739b9306647b1929a0ad51aca8e0b66a65e9d2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849472"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018263"
 ---
 # <a name="cmfcmaskededit-class"></a>CMFCMaskedEdit クラス
 `CMFCMaskedEdit`クラスは、ユーザーの入力をマスクを検証し、テンプレートに従って検証結果を表示するマスク エディット コントロールをサポートしています。  
@@ -111,7 +111,7 @@ class CMFCMaskedEdit : public CEdit
   
  [CMFCMaskedEdit](../../mfc/reference/cmfcmaskededit-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxmaskededit.h  
   
 ##  <a name="disablemask"></a>  CMFCMaskedEdit::DisableMask  
@@ -132,8 +132,8 @@ void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- 指定する場合は TRUE、 [CMFCMaskedEdit::GetWindowText](#getwindowtext)メソッドの取得のみ; 文字をマスクします。メソッドがテキスト全体を取得することを指定する場合は FALSE。 既定値は TRUE です。  
+*bEnable*<br/>
+[in]指定する場合は TRUE、 [CMFCMaskedEdit::GetWindowText](#getwindowtext)メソッドの取得のみ; 文字をマスクします。メソッドがテキスト全体を取得することを指定する場合は FALSE。 既定値は TRUE です。  
   
 ### <a name="remarks"></a>Remarks  
  マスク文字の取得を有効にするのにには、このメソッドを使用します。 (425) 555-0187 など、電話番号に対応するマスク エディット コントロールを作成します。 呼び出す場合、`GetWindowText`メソッドでは、「4255550187」返します。 マスクの文字の取得を無効にした場合、`GetWindowText`メソッド「(425) 555-0187」などのエディット コントロールに表示されるテキストを返します。  
@@ -150,17 +150,17 @@ void EnableMask(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszMask*  
- ユーザー入力のそれぞれの位置に表示できる文字の種類を指定するマスク文字列。 長さ、 *lpszInputTemplate*と*lpszMask*パラメーター文字列は同じである必要があります。 マスク文字の詳細については、「解説」を参照してください。  
+*lpszMask*<br/>
+[in]ユーザー入力のそれぞれの位置に表示できる文字の種類を指定するマスク文字列。 長さ、 *lpszInputTemplate*と*lpszMask*パラメーター文字列は同じである必要があります。 マスク文字の詳細については、「解説」を参照してください。  
   
- [in]*lpszInputTemplate*  
- ユーザー入力の各位置でリテラル文字を指定するマスク テンプレート文字列を表示できます。 文字のプレース ホルダーとしてアンダー スコア文字 ('_') を使用します。 長さ、 *lpszInputTemplate*と*lpszMask*パラメーター文字列は同じである必要があります。  
+*lpszInputTemplate*<br/>
+[in]ユーザー入力の各位置でリテラル文字を指定するマスク テンプレート文字列を表示できます。 文字のプレース ホルダーとしてアンダー スコア文字 ('_') を使用します。 長さ、 *lpszInputTemplate*と*lpszMask*パラメーター文字列は同じである必要があります。  
   
- [in]*chMaskInputTemplate*  
- 既定の文字で、フレームワーク、ユーザーの入力に無効な各文字の代わりに使用します。 このパラメーターの既定値は、アンダー スコア (_) です。  
+*chMaskInputTemplate*<br/>
+[in]既定の文字で、フレームワーク、ユーザーの入力に無効な各文字の代わりに使用します。 このパラメーターの既定値は、アンダー スコア (_) です。  
   
- [in]*lpszValid*  
- 有効な文字のセットを含む文字列。 NULL では、すべての文字が有効であることを示します。 このパラメーターの既定値は、NULL です。  
+*lpszValid*<br/>
+[in]有効な文字のセットを含む文字列。 NULL では、すべての文字が有効であることを示します。 このパラメーターの既定値は、NULL です。  
   
 ### <a name="remarks"></a>Remarks  
  マスク エディット コントロールのマスクを作成するのにには、このメソッドを使用します。 派生クラスを`CMFCMaskedEdit`クラスし、オーバーライド、 [CMFCMaskedEdit::IsMaskedChar](#ismaskedchar)カスタム マスク処理に独自のコードを使用する方法。  
@@ -186,8 +186,8 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- グループのみを選択する場合は TRUEテキスト全体を選択する場合は FALSE。 既定値は TRUE です。  
+*bEnable*<br/>
+[in]グループのみを選択する場合は TRUEテキスト全体を選択する場合は FALSE。 既定値は TRUE です。  
   
 ### <a name="remarks"></a>Remarks  
  マスク エディット コントロールにユーザー グループまたはテキスト全体を選択できるかどうかを指定するのにには、この関数を使用します。  
@@ -196,18 +196,17 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
   
  たとえば、電話番号の検証を次のマスク エディット コントロールを使用する可能性があります。  
   
- `m_wndMaskEdit.EnableMask(`  
-  
- `_T(" ddd  ddd dddd"),// Mask string`  
-  
- `_T("(___) ___-____"),// Template string`  
-  
- `_T(' '));// Default char`  
-  
- `m_wndMaskEdit.SetValidChars(NULL); // All characters are valid.`  
-  
- `m_wndMaskEdit.SetWindowText(_T("(425) 555-0187")); // Prompt`  
-  
+```cpp
+m_wndMaskEdit.EnableMask(
+    _T(" ddd  ddd dddd"),  // Mask string
+    _T("(___) ___-____"),  // Template string
+    _T(' '));              // Default char
+
+m_wndMaskEdit.SetValidChars(NULL); // All characters are valid.
+
+m_wndMaskEdit.SetWindowText(_T("(425) 555-0187")); // Prompt
+```
+
  グループでの選択が有効になっている場合、ユーザーはのみ「425」、「555」または「0187」文字列のグループを取得できます。 グループの選択が無効になっている場合、ユーザーが電話番号のテキスト全体を取得できます。"(425) 555-0187"。  
   
 ##  <a name="enablesetmaskedcharsonly"></a>  CMFCMaskedEdit::EnableSetMaskedCharsOnly  
@@ -218,8 +217,8 @@ void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- ユーザーだけで文字をマスクに対する入力を検証する場合は TRUEマスク全体の検証に使用する場合は FALSE。 既定値は TRUE です。  
+*bEnable*<br/>
+[in]ユーザーだけで文字をマスクに対する入力を検証する場合は TRUEマスク全体の検証に使用する場合は FALSE。 既定値は TRUE です。  
   
 ##  <a name="getwindowtext"></a>  CMFCMaskedEdit::GetWindowText  
  マスク エディット コントロールからテキストを検証するを取得します。  
@@ -233,14 +232,14 @@ void GetWindowText(CString& rstrString) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*lpszStringBuf*  
- エディット コントロールからテキストを受け取るバッファーへのポインター。  
+*lpszStringBuf*<br/>
+[out]エディット コントロールからテキストを受け取るバッファーへのポインター。  
   
- [in]*nMaxCount*  
- 受信する文字の最大数。  
+*nMaxCount*<br/>
+[in]受信する文字の最大数。  
   
- [out]*rstrString*  
- エディット コントロールからテキストを受け取る文字列オブジェクトへの参照。  
+*rstrString*<br/>
+[out]エディット コントロールからテキストを受け取る文字列オブジェクトへの参照。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドのオーバー ロードが先頭にコピーされる文字列のバイト数を返します、 *lpszStringBuf*パラメーター バッファー; マスク エディット コントロールにテキストがあるない場合は 0。  
@@ -260,11 +259,11 @@ virtual BOOL IsMaskedChar(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*chChar*  
- 検証する文字。  
+*chChar*<br/>
+[in]検証する文字。  
   
- [in]*chMaskChar*  
- マスク文字列から対応する文字。  
+*chMaskChar*<br/>
+[in]マスク文字列から対応する文字。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合、 *chChar*パラメーターで許可されている文字の型が、 *chMaskChar*パラメーター場合は FALSE。  
@@ -280,15 +279,24 @@ void SetValidChars(LPCTSTR lpszValid=NULL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszValid*  
- 有効な入力文字のセットを含む文字列。 NULL では、すべての文字が有効であることを意味します。 このパラメーターの既定値は、NULL です。  
+*lpszValid*<br/>
+[in]有効な入力文字のセットを含む文字列。 NULL では、すべての文字が有効であることを意味します。 このパラメーターの既定値は、NULL です。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドを使用すると、有効な文字の一覧を定義します。 この一覧に入力文字がない場合マスク エディット コントロールがないにそのまま使用されます。  
   
  次のコード例では、16 進数のみを受け入れます。  
   
- `//Mask: 0xFFFFm_wndMaskEdit.EnableMask( _T(" AAAA"),                // The mask string. _T("0x____"),               // The literal template string. _T('_'));                   // The default character that replaces the backspace character.// Valid string charactersm_wndMaskEdit.SetValidChars(_T("1234567890ABCDEFabcdef"));m_wndMaskEdit.SetWindowText(_T("0x01AF"));`  
+```cpp
+//Mask: 0xFFFF
+m_wndMaskEdit.EnableMask( 
+    _T(" AAAA"),                // The mask string.
+    _T("0x____"),               // The literal template string.
+    _T('_'));                   // The default character that 
+                                // replaces the backspace character.
+// Valid string characters
+m_wndMaskEdit.SetValidChars(_T("1234567890ABCDEFabcdef"));m_wndMaskEdit.SetWindowText(_T("0x01AF"));
+```
   
 ##  <a name="setwindowtext"></a>  CMFCMaskedEdit::SetWindowText  
  マスク エディット コントロールで、プロンプトが表示されます。  
@@ -298,8 +306,8 @@ void SetWindowText(LPCTSTR lpszString);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszString*  
- プロンプトとして使用される null で終わる文字列へのポインター。  
+*lpszString*<br/>
+[in]プロンプトとして使用される null で終わる文字列へのポインター。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、コントロールのテキストを設定します。  

@@ -12,36 +12,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d192234a2b3cd3d72bef15e11678ebc41ccede0
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 623824c608832e07d342b6093968f822251e2342
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462889"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075658"
 ---
 # <a name="definitions-and-declarations-c"></a>定義と宣言 (C++)
-**Microsoft 固有の仕様**DLL インターフェイスでは、システムの一部のプログラムによってエクスポートされる既知のすべての項目 (関数とデータ) つまり、すべての項目として宣言されている指す**dllimport**または**dllexport**. DLL インターフェイスに含まれるすべての宣言は、いずれかを指定する必要があります、 **dllimport**または**dllexport**属性。 ただし、定義をのみ指定する必要があります、 **dllexport**属性。 たとえば、次の関数定義はコンパイラ エラーになります。
+
+**Microsoft 固有の仕様**
+
+DLL インターフェイスを指すは、システムの一部のプログラムによってエクスポートされる既知のすべての項目 (関数とデータ)つまり、すべての項目として宣言されている**dllimport**または**dllexport**します。 DLL インターフェイスに含まれるすべての宣言は、いずれかを指定する必要があります、 **dllimport**または**dllexport**属性。 ただし、定義をのみ指定する必要があります、 **dllexport**属性。 たとえば、次の関数定義はコンパイラ エラーになります。
 
 ```
 __declspec( dllimport ) int func() {   // Error; dllimport
                                        // prohibited on definition.
-   return 1;  
+   return 1;
 }
 ```
 
- 次のコードでも、エラーが生成します。
+次のコードでも、エラーが生成します。
 
 ```
 __declspec( dllimport ) int i = 10;  // Error; this is a definition.
 ```
 
- ただし、次に示す構文は、正しい構文です。
+ただし、次に示す構文は、正しい構文です。
 
 ```
 __declspec( dllexport ) int i = 10;  // Okay--export definition
 ```
 
- 使用**dllexport** 、定義を意味、 **dllimport**は宣言を意味します。 使用する必要があります、 **extern**キーワード**dllexport** ; 宣言を強制する定義が含まれる場合は、します。 そのため、次の例は正しいコードになります。
+使用**dllexport** 、定義を意味、 **dllimport**は宣言を意味します。 使用する必要があります、 **extern**キーワード**dllexport** ; 宣言を強制する定義が含まれる場合は、します。 そのため、次の例は正しいコードになります。
 
 ```
 #define DllImport   __declspec( dllimport )
@@ -51,7 +54,7 @@ extern DllExport int k; // These are both correct and imply a
 DllImport int j;        // declaration.
 ```
 
- 次の例に、上記の例をさらに明確に示します。
+次の例に、上記の例をさらに明確に示します。
 
 ```
 static __declspec( dllimport ) int l; // Error; not declared extern.
@@ -75,4 +78,5 @@ void func() {
 **Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
- [dllexport、dllimport](../cpp/dllexport-dllimport.md)
+
+[dllexport、dllimport](../cpp/dllexport-dllimport.md)

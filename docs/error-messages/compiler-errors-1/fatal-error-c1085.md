@@ -1,5 +1,5 @@
 ---
-title: 致命的なエラー C1085 |Microsoft ドキュメント
+title: 致命的なエラー C1085 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9affdfab4650402d210cea94457075d2e129e308
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ab28c633ac7579e39f89d94d1c50e20cc156004a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226406"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043730"
 ---
 # <a name="fatal-error-c1085"></a>致命的なエラー C1085
-Filetype ファイルを書き込むことはできません 'file': メッセージ。  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>次のような原因をチェックして問題を解決するには  
-  
-1.  ドライブは、読み取り専用です。  
-  
-2.  ドライブがいっぱいです。  
-  
-3.  共有違反です。  
-  
-4.  "ファイル番号が正しくありません" というメッセージが表示される場合は、ファイルがバックグラウンドでのコンパイル中にフォアグラウンドで閉じられている可能性があります。
+
+Filetype ファイルを書き込むことはできません 'file': メッセージ。
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>次のような原因をチェックして問題を解決するには
+
+1. ドライブとは、読み取り専用です。
+
+1. ドライブがいっぱいです。
+
+1. 共有違反です。
+
+1. "ファイル番号が正しくありません" というメッセージが表示される場合は、ファイルがバックグラウンドでのコンパイル中にフォアグラウンドで閉じられている可能性があります。

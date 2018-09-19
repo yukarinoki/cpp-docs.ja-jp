@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3626 |Microsoft ドキュメント
+title: コンパイラ エラー C3626 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ede2ec42b3afc581126d2591cba072817dcc8748
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba6fb7c03c7c957999ca75e3946e4f78d290b78a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266169"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094703"
 ---
 # <a name="compiler-error-c3626"></a>コンパイラ エラー C3626
-'keyword': '_ _event' キーワードは、COM インターフェイス、メンバー関数およびデリゲートへのポインターであるデータ メンバーでのみ使用できます  
-  
- キーワードが正しく使用されていません。  
-  
- 次の例では、C3626 が生成されます。  
-  
-```  
-// C3626.cpp  
-// compile with: /c  
-struct A {  
-   __event int i;   // C3626  
-// try the following line instead  
-// __event int i();  
-};  
+
+'keyword': '_ _event' キーワードは、COM インターフェイス、メンバー関数、およびデリゲートへのポインターであるデータ メンバーにのみ使用できます
+
+キーワードが正しく使用されていません。
+
+次の例では、C3626 が生成されます。
+
+```
+// C3626.cpp
+// compile with: /c
+struct A {
+   __event int i;   // C3626
+// try the following line instead
+// __event int i();
+};
 ```

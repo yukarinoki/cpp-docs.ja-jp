@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17f4ce858949aafe1a448fc51b8ecd5591270184
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e0ffdb791355aa40a33d80104af540b856cdf601
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764843"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019485"
 ---
 # <a name="crbmap-class"></a>CRBMap クラス
 
@@ -38,22 +38,22 @@ ms.locfileid: "43764843"
 template <typename K,
           typename V, 
           class KTraits = CElementTraits<K>, 
-          class VTraits = CElementTraits<V>> 
+          class VTraits = CElementTraits<V>>
 class CRBMap : public CRBTree<K, V, KTraits, VTraits>
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*K*  
+*K*<br/>
 キーの要素の型。
 
-*V*  
+*V*<br/>
 要素の値の型。
 
-*KTraits*  
+*KTraits*<br/>
 コピーまたは主要な要素を移動するために使用するコードです。 参照してください[CElementTraits クラス](../../atl/reference/celementtraits-class.md)の詳細。
 
-*VTraits*  
+*VTraits*<br/>
 コピーまたは値の要素を移動するために使用するコードです。
 
 ## <a name="members"></a>メンバー
@@ -107,7 +107,7 @@ explicit CRBMap(size_t nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nBlockSize*  
+*nBlockSize*<br/>
 ブロック サイズ。
 
 ### <a name="remarks"></a>Remarks
@@ -146,10 +146,10 @@ CPair* Lookup(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*key*  
+*key*<br/>
 検索する要素を識別するキーを指定します。
 
-*値*  
+*値*<br/>
 検索する値を受け取る変数。
 
 ### <a name="return-value"></a>戻り値
@@ -174,7 +174,7 @@ bool RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*key*  
+*key*<br/>
 削除する要素のペアに対応するキー。
 
 ### <a name="return-value"></a>戻り値
@@ -201,10 +201,10 @@ POSITION SetAt(
 
 ### <a name="parameters"></a>パラメーター
 
-*key*  
+*key*<br/>
 追加するキー値、`CRBMap`オブジェクト。
 
-*値*  
+*値*<br/>
 追加する値、`CRBMap`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -223,7 +223,7 @@ POSITION SetAt(
 
 ## <a name="see-also"></a>関連項目
 
-[CRBTree クラス](../../atl/reference/crbtree-class.md)   
-[CAtlMap クラス](../../atl/reference/catlmap-class.md)   
-[CRBMultiMap クラス](../../atl/reference/crbmultimap-class.md)   
+[CRBTree クラス](../../atl/reference/crbtree-class.md)<br/>
+[CAtlMap クラス](../../atl/reference/catlmap-class.md)<br/>
+[CRBMultiMap クラス](../../atl/reference/crbmultimap-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

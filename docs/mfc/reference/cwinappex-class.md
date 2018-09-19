@@ -128,12 +128,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0e5fe8c9f9eb5f4d09bac28c4ffed3eda95454c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 5528e8eb8c7eeb54e221ca6c6167246a6491d7b2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540108"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720071"
 ---
 # <a name="cwinappex-class"></a>CWinAppEx クラス
 `CWinAppEx` アプリケーション状態の処理、レジストリに状態を保存、レジストリから状態を読み込みます、アプリケーション マネージャーの初期化および同じアプリケーション マネージャーへのリンクを提供します。  
@@ -219,7 +219,7 @@ class CWinAppEx : public CWinApp
   
 ### <a name="data-members"></a>データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CWinAppEx::m_bForceImageReset](#m_bforceimagereset)|ツールバーを含むフレーム ウィンドウが読み込まれるときに、フレームワークがすべてのツール バー イメージをリセットするかどうかを指定します。|  
   
@@ -254,8 +254,8 @@ virtual BOOL CleanState(LPCTSTR lpszSectionName=NULL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszSectionName*  
- レジストリ キーのパスを含む文字列。  
+*lpszSectionName*<br/>
+[in]レジストリ キーのパスを含む文字列。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合、0 以外の場合それ以外の場合 0 を返します。  
@@ -271,8 +271,8 @@ CWinAppEx(BOOL bResourceSmartUpdate = FALSE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bResourceSmartUpdate*  
- ワークスペースのオブジェクトが検出され、リソースの更新を処理するかどうかを指定するブール型パラメーター。  
+*bResourceSmartUpdate*<br/>
+[in]ワークスペースのオブジェクトが検出され、リソースの更新を処理するかどうかを指定するブール型パラメーター。  
   
 ### <a name="remarks"></a>Remarks  
  `CWinAppEx`クラスの初期化メソッドが、機能の保存と読み込みをレジストリにアプリケーションの情報を提供します、およびアプリケーションのグローバル設定を制御します。 グローバル管理者を使用することもできます、 [CKeyboardManager クラス](../../mfc/reference/ckeyboardmanager-class.md)と[CUserToolsManager クラス](../../mfc/reference/cusertoolsmanager-class.md)します。 各アプリケーション インスタンス 1 つだけでは、`CWinAppEx`クラス。  
@@ -285,8 +285,8 @@ void EnableLoadWindowPlacement(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- アプリケーションがレジストリから、メイン フレーム ウィンドウの場所と初期サイズをロードするかどうかを指定します。  
+*bEnable*<br/>
+[in]アプリケーションがレジストリから、メイン フレーム ウィンドウの場所と初期サイズをロードするかどうかを指定します。  
   
 ### <a name="remarks"></a>Remarks  
  既定では、メイン フレームの位置とサイズが、他のアプリケーション設定とレジストリから読み込まれます。 中に発生したこの[CWinAppEx::LoadState](#loadstate)します。 レジストリからウィンドウの初期配置をロードしない場合に、このメソッドを呼び出す*bEnable*を FALSE に設定します。  
@@ -302,14 +302,14 @@ BOOL EnableTearOffMenus(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszRegEntry*  
- レジストリ キーのパスを含む文字列。 アプリケーションでは、このレジストリ キーを使用して、ティアオフ メニューの情報を格納します。  
+*lpszRegEntry*<br/>
+[in]レジストリ キーのパスを含む文字列。 アプリケーションでは、このレジストリ キーを使用して、ティアオフ メニューの情報を格納します。  
   
- [in]*uiCmdFirst*  
- 最初にティアオフ メニュー id。  
+*uiCmdFirst*<br/>
+[in]最初にティアオフ メニュー id。  
   
- [in]*uiCmdLast*  
- 最後にティアオフ メニュー id。  
+*uiCmdLast*<br/>
+[in]最後にティアオフ メニュー id。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合、`CMenuTearOffManager`が作成され、初期化に成功しました。FALSE エラーが発生した場合や、`CMenuTearOffManager`既に存在します。  
@@ -331,23 +331,23 @@ BOOL EnableUserTools(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiCmdToolsDummy*  
- ユーザーの [ツール] メニューのコマンド ID プレース ホルダーとして、フレームワークを使用して符号なし整数。  
+*uiCmdToolsDummy*<br/>
+[in]ユーザーの [ツール] メニューのコマンド ID プレース ホルダーとして、フレームワークを使用して符号なし整数。  
   
- [in]*uiCmdFirst*  
- 最初のユーザー ツールのコマンドのコマンド ID。  
+*uiCmdFirst*<br/>
+[in]最初のユーザー ツールのコマンドのコマンド ID。  
   
- [in]*uiCmdLast*  
- 最後のユーザー ツールのコマンドのコマンド ID。  
+*uiCmdLast*<br/>
+[in]最後のユーザー ツールのコマンドのコマンド ID。  
   
- [in]*pToolRTC*  
- クラスを`CUserToolsManager`オブジェクトを使用して新しいユーザー ツールを作成します。  
+*pToolRTC*<br/>
+[in]クラスを`CUserToolsManager`オブジェクトを使用して新しいユーザー ツールを作成します。  
   
- [in]*uArgMenuID*  
- 引数のメニューの id。  
+*uArgMenuID*<br/>
+[in]引数のメニューの id。  
   
- [in]*uInitDirMenuID*  
- 初期のツール ディレクトリのメニューの ID。  
+*uInitDirMenuID*<br/>
+[in]初期のツール ディレクトリのメニューの ID。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドを作成し、初期化する場合は TRUE、`CUserToolsManager`オブジェクト。FALSE、メソッドが失敗した場合、または場合、`CUserToolsManager`オブジェクトは既に存在します。  
@@ -381,14 +381,14 @@ BOOL GetBinary(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszEntry*  
- レジストリ キーの名前を含む文字列。  
+*lpszEntry*<br/>
+[in]レジストリ キーの名前を含む文字列。  
   
- [out]*ppData*  
- メソッドがバイナリ データを格納するバッファーへのポインター。  
+*ppData*<br/>
+[out]メソッドがバイナリ データを格納するバッファーへのポインター。  
   
- [out]*ペタバイト*  
- メソッドを使用して、読み取ったバイト数を記述する符号なし整数へのポインター。  
+*ペタバイト*<br/>
+[out]メソッドを使用して、読み取ったバイト数を記述する符号なし整数へのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は TRUE。FALSE それ以外の場合。  
@@ -452,11 +452,11 @@ int GetInt(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszEntry*  
- レジストリ エントリの名前を含む文字列。  
+*lpszEntry*<br/>
+[in]レジストリ エントリの名前を含む文字列。  
   
- [in]*見つからなかった*  
- 指定されたレジストリ エントリが存在しないかどうかはメソッドによって返される既定値。  
+*見つからなかった*<br/>
+[in]指定されたレジストリ エントリが存在しないかどうかはメソッドによって返される既定値。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は、レジストリ データそれ以外の場合*見つからなかった*します。  
@@ -502,11 +502,11 @@ BOOL GetObject(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszEntry*  
- レジストリ エントリの相対パスを含む文字列。  
+*lpszEntry*<br/>
+[in]レジストリ エントリの相対パスを含む文字列。  
   
- [out]*obj*  
- 参照、`CObject`します。 メソッドは、レジストリ データを格納するのに、この参照を使用します。  
+*obj*<br/>
+[out]参照、`CObject`します。 メソッドは、レジストリ データを格納するのに、この参照を使用します。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合、0 以外の場合それ以外の場合 0 を返します。  
@@ -537,8 +537,8 @@ CString GetRegSectionPath(LPCTSTR szSectionAdd = _T(""));
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*szSectionAdd*  
- レジストリ キーの相対パスを含む文字列。  
+*szSectionAdd*<br/>
+[in]レジストリ キーの相対パスを含む文字列。  
   
 ### <a name="return-value"></a>戻り値  
  A`CString`レジストリ キーの絶対パスを格納しています。  
@@ -558,17 +558,17 @@ BOOL GetSectionBinary(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszSubSection*  
- レジストリ キーの相対パスを含む文字列。  
+*lpszSubSection*<br/>
+[in]レジストリ キーの相対パスを含む文字列。  
   
- [in]*lpszEntry*  
- 読み取る値を含む文字列。  
+*lpszEntry*<br/>
+[in]読み取る値を含む文字列。  
   
- [out]*ppData*  
- メソッドがデータを格納するバッファーへのポインター。  
+*ppData*<br/>
+[out]メソッドがデータを格納するバッファーへのポインター。  
   
- [out]*ペタバイト*  
- 符号なし整数へのポインター。 サイズを書き込む*ppData*このパラメーターにします。  
+*ペタバイト*<br/>
+[out]符号なし整数へのポインター。 サイズを書き込む*ppData*このパラメーターにします。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は TRUE、それ以外の場合は FALSE。  
@@ -589,14 +589,14 @@ int GetSectionInt(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszSubSection*  
- レジストリ キーの相対パスを含む文字列。  
+*lpszSubSection*<br/>
+[in]レジストリ キーの相対パスを含む文字列。  
   
- [in]*lpszEntry*  
- 読み取る値を含む文字列。  
+*lpszEntry*<br/>
+[in]読み取る値を含む文字列。  
   
- [in]*見つからなかった*  
- 指定した値が存在しないかどうかに返す既定値。  
+*見つからなかった*<br/>
+[in]指定した値が存在しないかどうかに返す既定値。  
   
 ### <a name="return-value"></a>戻り値  
  指定したレジストリの値で格納されている整数データ*見つからなかった*データが存在しない場合。  
@@ -617,14 +617,14 @@ BOOL GetSectionObject(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszSubSection*  
- レジストリ キーの相対パスを含む文字列。  
+*lpszSubSection*<br/>
+[in]レジストリ キーの相対パスを含む文字列。  
   
- [in]*lpszEntry*  
- 読み取る値を含む文字列。  
+*lpszEntry*<br/>
+[in]読み取る値を含む文字列。  
   
- [out]*obj*  
- 参照、`CObject`します。 メソッドがこれを使用して`CObject`レジストリ データを格納します。  
+*obj*<br/>
+[out]参照、`CObject`します。 メソッドがこれを使用して`CObject`レジストリ データを格納します。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -645,14 +645,14 @@ CString GetSectionString(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszSubSection*  
- レジストリ キーの相対パスを含む文字列。  
+*lpszSubSection*<br/>
+[in]レジストリ キーの相対パスを含む文字列。  
   
- [in]*lpszEntry*  
- 読み取る値を含む文字列。  
+*lpszEntry*<br/>
+[in]読み取る値を含む文字列。  
   
- [in]*から*  
- 指定した値が存在しないかどうかに返す既定値。  
+*から*<br/>
+[in]指定した値が存在しないかどうかに返す既定値。  
   
 ### <a name="return-value"></a>戻り値  
  データが存在する場合は、指定されたレジストリ値に格納されている文字列データそれ以外の場合*から*します。  
@@ -685,11 +685,11 @@ CString GetString(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszEntry*  
- レジストリ キーの名前を含む文字列  
+*lpszEntry*<br/>
+[in]レジストリ キーの名前を含む文字列  
   
- [in]*lpzDefault*  
- 指定されたレジストリ エントリが存在しないかどうかはメソッドによって返される既定値。  
+*lpzDefault*<br/>
+[in]指定されたレジストリ エントリが存在しないかどうかはメソッドによって返される既定値。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は、レジストリに格納された文字列データ*から*それ以外の場合。  
@@ -819,8 +819,8 @@ BOOL IsStateExists(LPCTSTR lpszSectionName);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszSectionName*  
- レジストリ キーのパスを含む文字列。  
+*lpszSectionName*<br/>
+[in]レジストリ キーのパスを含む文字列。  
   
 ### <a name="return-value"></a>戻り値  
  キーがレジストリにある場合、0 以外の場合それ以外の場合 0 を返します。  
@@ -862,14 +862,14 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pFrame*  
- フレーム ウィンドウ オブジェクトへのポインター。 メソッドでは、このフレーム ウィンドウに、レジストリ内の状態情報が適用されます。  
+*pFrame*<br/>
+[in]フレーム ウィンドウ オブジェクトへのポインター。 メソッドでは、このフレーム ウィンドウに、レジストリ内の状態情報が適用されます。  
   
- [in]*lpszSectionName*  
- レジストリ キーの相対パスを含む文字列。  
+*lpszSectionName*<br/>
+[in]レジストリ キーの相対パスを含む文字列。  
   
- [in]*pFrameImpl*  
- ポインターを`CFrameImpl`オブジェクト。 メソッドでは、このフレーム ウィンドウに、レジストリ内の状態情報が適用されます。  
+*pFrameImpl*<br/>
+[in]ポインターを`CFrameImpl`オブジェクト。 メソッドでは、このフレーム ウィンドウに、レジストリ内の状態情報が適用されます。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、0 以外の場合それ以外の場合は 0 です。  
@@ -892,14 +892,14 @@ virtual BOOL LoadWindowPlacement(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*rectNormalPosition*  
- 復元された位置にあるときに、メイン フレーム ウィンドウの座標を格納する四角形。  
+*rectNormalPosition*<br/>
+[out]復元された位置にあるときに、メイン フレーム ウィンドウの座標を格納する四角形。  
   
- [out]*nFlags*  
- 最小化されたウィンドウと最小化されたウィンドウと、復元されたウィンドウの間のオペレーティング システムのスイッチの位置を制御するフラグ。  
+*nFlags*<br/>
+[out]最小化されたウィンドウと最小化されたウィンドウと、復元されたウィンドウの間のオペレーティング システムのスイッチの位置を制御するフラグ。  
   
- [out]*nShowCmd*  
- ウィンドウの表示状態を指定する整数。 使用可能な値の詳細については、次を参照してください。[また](../../mfc/reference/cwnd-class.md#showwindow)します。  
+*nShowCmd*<br/>
+[out]ウィンドウの表示状態を指定する整数。 使用可能な値の詳細については、次を参照してください。[また](../../mfc/reference/cwnd-class.md#showwindow)します。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、0 以外の場合それ以外の場合は 0 です。  
@@ -929,11 +929,11 @@ virtual void OnAppContextHelp(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWndControl*  
- ユーザーがコンテキスト ヘルプを呼び出したウィンドウ オブジェクトへのポインター。  
+*pWndControl*<br/>
+[in]ユーザーがコンテキスト ヘルプを呼び出したウィンドウ オブジェクトへのポインター。  
   
- [in]*dwHelpIDArray*  
- 予約済みの値。  
+*dwHelpIDArray*<br/>
+[in]予約済みの値。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、将来使用するため予約されています。 既定の実装は何し、フレームワークがないというは現在。  
@@ -946,8 +946,8 @@ virtual void OnClosingMainFrame(CFrameImpl* pFrameImpl);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pFrameImpl*  
- ポインターを`CFrameImpl`オブジェクト。  
+*pFrameImpl*<br/>
+[in]ポインターを`CFrameImpl`オブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドの既定の実装の状態を保存する*pFrameImpl*します。  
@@ -962,11 +962,11 @@ virtual BOOL OnViewDoubleClick(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*我が物*  
- 派生したオブジェクトへのポインター、 [CView クラス](../../mfc/reference/cview-class.md)します。  
+*我が物*<br/>
+[in]派生したオブジェクトへのポインター、 [CView クラス](../../mfc/reference/cview-class.md)します。  
   
- [in]*iViewId*  
- ビューの id。  
+*iViewId*<br/>
+[in]ビューの id。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合、フレームワークは、コマンドを検索します。それ以外の場合は FALSE です。  
@@ -1016,8 +1016,8 @@ virtual BOOL ReloadWindowPlacement(CFrameWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pFrame*  
- フレーム ウィンドウへのポインター。  
+*pFrame*<br/>
+[in]フレーム ウィンドウへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合、0 以外の場合失敗した場合または負荷に読み込むデータがない場合は 0。  
@@ -1060,14 +1060,14 @@ BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszSectionName*  
- レジストリ キーの相対パスを含む文字列。  
+*lpszSectionName*<br/>
+[in]レジストリ キーの相対パスを含む文字列。  
   
- [in]*pFrameImpl*  
- ポインターを`CFrameImpl`オブジェクト。 このフレームは、Windows レジストリに保存されます。  
+*pFrameImpl*<br/>
+[in]ポインターを`CFrameImpl`オブジェクト。 このフレームは、Windows レジストリに保存されます。  
   
- [in]*pFrame*  
- フレーム ウィンドウ オブジェクトへのポインター。 このフレームは、Windows レジストリに保存されます。  
+*pFrame*<br/>
+[in]フレーム ウィンドウ オブジェクトへのポインター。 このフレームは、Windows レジストリに保存されます。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は TRUE。FALSE それ以外の場合。  
@@ -1085,8 +1085,8 @@ LPCTSTR SetRegistryBase(LPCTSTR lpszSectionName = NULL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszSectionName*  
- レジストリ キーのパスを含む文字列。  
+*lpszSectionName*<br/>
+[in]レジストリ キーのパスを含む文字列。  
   
 ### <a name="return-value"></a>戻り値  
  既定のレジストリの場所のパスを含む文字列。  
@@ -1105,14 +1105,14 @@ virtual BOOL ShowPopupMenu(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiMenuResId*  
- メニュー リソースの id。  
+*uiMenuResId*<br/>
+[in]メニュー リソースの id。  
   
- [in]*ポイント*  
- A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)画面座標で、メニューの位置を指定します。  
+*ポイント*<br/>
+[in]A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)画面座標で、メニューの位置を指定します。  
   
- [in]*我が物*  
- ポップアップ メニューを所有しているウィンドウへのポインター。  
+*我が物*<br/>
+[in]ポップアップ メニューを所有しているウィンドウへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  ポップアップ メニューが正常に表示されている場合、0 以外の場合それ以外の場合は 0 です。  
@@ -1133,14 +1133,14 @@ virtual BOOL StoreWindowPlacement(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nFlags*  
- 最小化されたウィンドウと最小化されたウィンドウと、復元されたウィンドウの間のオペレーティング システムのスイッチの位置を制御するフラグ。  
+*nFlags*<br/>
+[in]最小化されたウィンドウと最小化されたウィンドウと、復元されたウィンドウの間のオペレーティング システムのスイッチの位置を制御するフラグ。  
   
- [in]*nShowCmd*  
- ウィンドウの表示状態を指定する整数。 使用可能な値の詳細については、次を参照してください。[また](../../mfc/reference/cwnd-class.md#showwindow)します。  
+*nShowCmd*<br/>
+[in]ウィンドウの表示状態を指定する整数。 使用可能な値の詳細については、次を参照してください。[また](../../mfc/reference/cwnd-class.md#showwindow)します。  
   
- [in]*rectNormalPosition*  
- 復元された状態にあるときに、メイン フレーム ウィンドウの座標を格納する四角形。  
+*rectNormalPosition*<br/>
+[in]復元された状態にあるときに、メイン フレーム ウィンドウの座標を格納する四角形。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、0 以外の場合それ以外の場合は 0 です。  
@@ -1161,14 +1161,14 @@ BOOL WriteBinary(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszEntry*  
- レジストリ キーの名前を含む文字列。  
+*lpszEntry*<br/>
+[in]レジストリ キーの名前を含む文字列。  
   
- [in]*pData*  
- 格納するデータ。  
+*pData*<br/>
+[in]格納するデータ。  
   
- [in]*nBytes*  
- サイズ*pData* (バイト単位)。  
+*nBytes*<br/>
+[in]サイズ*pData* (バイト単位)。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合は FALSE です。  
@@ -1188,11 +1188,11 @@ BOOL WriteInt(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszEntry*  
- レジストリ キーの名前を含む文字列。  
+*lpszEntry*<br/>
+[in]レジストリ キーの名前を含む文字列。  
   
- [in]*値*  
- 格納するデータ。  
+*値*<br/>
+[in]格納するデータ。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合は FALSE です。  
@@ -1212,11 +1212,11 @@ BOOL WriteObject(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszEntry*  
- 設定する値を含む文字列。  
+*lpszEntry*<br/>
+[in]設定する値を含む文字列。  
   
- [in]*obj*  
- 参照を`CObject`メソッドを格納するデータ。  
+*obj*<br/>
+[in]参照を`CObject`メソッドを格納するデータ。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合は FALSE です。  
@@ -1236,17 +1236,17 @@ BOOL WriteSectionBinary(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszSubSection*  
- レジストリ キーの名前を含む文字列  
+*lpszSubSection*<br/>
+[in]レジストリ キーの名前を含む文字列  
   
- [in]*lpszEntry*  
- 設定する値を含む文字列。  
+*lpszEntry*<br/>
+[in]設定する値を含む文字列。  
   
- [in]*pData*  
- レジストリに書き込むデータ。  
+*pData*<br/>
+[in]レジストリに書き込むデータ。  
   
- [in]*nBytes*  
- サイズ*pData* (バイト単位)。  
+*nBytes*<br/>
+[in]サイズ*pData* (バイト単位)。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合は FALSE です。  
@@ -1267,14 +1267,14 @@ BOOL WriteSectionInt(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszSubSection*  
- レジストリ キーの相対パスを含む文字列。  
+*lpszSubSection*<br/>
+[in]レジストリ キーの相対パスを含む文字列。  
   
- [in]*lpszEntry*  
- 設定する値を含む文字列。  
+*lpszEntry*<br/>
+[in]設定する値を含む文字列。  
   
- [in]*値*  
- レジストリに書き込むデータ。  
+*値*<br/>
+[in]レジストリに書き込むデータ。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合は FALSE です。  
@@ -1295,14 +1295,14 @@ BOOL WriteSectionObject(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszSubSection*  
- レジストリ キーの名前を含む文字列。  
+*lpszSubSection*<br/>
+[in]レジストリ キーの名前を含む文字列。  
   
- [in]*lpszEntry*  
- 設定する値の名前を含む文字列。  
+*lpszEntry*<br/>
+[in]設定する値の名前を含む文字列。  
   
- [in]*obj*  
- 格納するデータ。  
+*obj*<br/>
+[in]格納するデータ。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合は FALSE です。  
@@ -1323,14 +1323,14 @@ BOOL WriteSectionString(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszSubSection*  
- レジストリ キーの名前を含む文字列。  
+*lpszSubSection*<br/>
+[in]レジストリ キーの名前を含む文字列。  
   
- [in]*lpszEntry*  
- 設定する値を含む文字列。  
+*lpszEntry*<br/>
+[in]設定する値を含む文字列。  
   
- [in]*lpszValue*  
- レジストリに書き込む文字列データ。  
+*lpszValue*<br/>
+[in]レジストリに書き込む文字列データ。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合は FALSE です。  
@@ -1350,11 +1350,11 @@ BOOL WriteString(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszEntry*  
- レジストリ キーの名前を含む文字列。  
+*lpszEntry*<br/>
+[in]レジストリ キーの名前を含む文字列。  
   
- [in]*lpszValue*  
- 格納するデータ。  
+*lpszValue*<br/>
+[in]格納するデータ。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合は FALSE です。  

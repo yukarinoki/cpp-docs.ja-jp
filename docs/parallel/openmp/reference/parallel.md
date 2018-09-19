@@ -1,5 +1,5 @@
 ---
-title: 並列 |Microsoft ドキュメント
+title: 並列 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e0436dbbc75690d38b5930a491b7058ee095341
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1c8b1466eae343b6c644b6ecfbd919c3241259bf
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692286"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705966"
 ---
 # <a name="parallel"></a>parallel
-同時に複数のスレッドで実行されるコードである並列領域を定義します。  
+複数のスレッドを並列で実行されるコードは、並列領域を定義します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,13 +35,12 @@ ms.locfileid: "33692286"
 }  
 ```  
   
-## <a name="remarks"></a>コメント  
- 指定項目  
+## <a name="arguments"></a>引数
+
+*句*<br/>
+(省略可能)0 個以上の句。  サポートされている句の一覧については、「解説」を参照してください。**並列**します。  
   
- `clause` (省略可能)  
- 0 個以上の句。  サポートされている句の一覧については、「解説」セクションを参照してください**並列**です。  
-  
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **並列**ディレクティブは、次の OpenMP 句をサポートしています。  
   
 -   [copyin](../../../parallel/openmp/reference/copyin.md)  
@@ -60,12 +59,12 @@ ms.locfileid: "33692286"
   
 -   [shared](../../../parallel/openmp/reference/shared-openmp.md)  
   
- **並列**でも使用できます、[セクション](../../../parallel/openmp/reference/sections-openmp.md)と[の](../../../parallel/openmp/reference/for-openmp.md)ディレクティブです。  
+ **並列**でもでき、[セクション](../../../parallel/openmp/reference/sections-openmp.md)と[の](../../../parallel/openmp/reference/for-openmp.md)ディレクティブ。  
   
- 詳細については、次を参照してください。 [2.3 parallel コンストラクト](../../../parallel/openmp/2-3-parallel-construct.md)です。  
+ 詳細については、次を参照してください。 [2.3 parallel コンストラクト](../../../parallel/openmp/2-3-parallel-construct.md)します。  
   
 ## <a name="example"></a>例  
- 次の例では、スレッドの数を設定し、並行領域を定義する方法を示します。 既定では、スレッドの数は、コンピューター上の論理プロセッサの数と同じです。 たとえば、ハイパースレッディングが有効になっている 1 つの物理プロセッサを搭載したマシンがある場合は、2 つの論理プロセッサと 2 つのスレッドがあります。  
+ 次の例では、スレッドの数を設定し、並列領域を定義する方法を示します。 既定では、スレッドの数は、マシン上の論理プロセッサの数と同じです。 たとえば、ハイパースレッディングが有効になっている 1 つの物理プロセッサを搭載したコンピューターがある場合は、2 つの論理プロセッサと 2 つのスレッドがあります。  
   
 ```  
 // omp_parallel.cpp  
@@ -90,7 +89,7 @@ Hello from thread 3
 ```  
   
 ## <a name="comment"></a>コメント  
- 出力の順序は、別のコンピューターで異なることに注意してください。  
+ 出力の順序は、別々 のコンピューターで異なることに注意してください。  
   
 ## <a name="see-also"></a>関連項目  
  [ディレクティブ](../../../parallel/openmp/reference/openmp-directives.md)

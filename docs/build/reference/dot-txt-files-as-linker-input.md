@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd865772b3629939306d835728e5033da763eaa9
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 73d6966844ae8dc6c41350aad57ad310310b3a32
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895267"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715002"
 ---
 # <a name="txt-files-as-linker-input"></a>リンカー入力としての .txt ファイル
 
@@ -29,5 +29,5 @@ ms.locfileid: "43895267"
 
 ## <a name="see-also"></a>関連項目
 
-[LINK の入力ファイル](../../build/reference/link-input-files.md)   
+[LINK の入力ファイル](../../build/reference/link-input-files.md)<br/>
 [リンカー オプション](../../build/reference/linker-options.md)

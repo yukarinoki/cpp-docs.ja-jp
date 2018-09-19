@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac06722b675af5e8ac8d4136cc2938ac772befc9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9c519d4f6d903453ce9fea6965a8f954243bab97
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848584"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703834"
 ---
 # <a name="cmfcribbonlabel-class"></a>CMFCRibbonLabel クラス
 リボンのクリックできないテキスト ラベルを実装します。  
@@ -67,7 +67,7 @@ class CMFCRibbonLabel : public CMFCRibbonButton
   
  [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxRibbonLabel.h  
   
 ##  <a name="cmfcribbonlabel"></a>  CMFCRibbonLabel::CMFCRibbonLabel  
@@ -80,11 +80,11 @@ CMFCRibbonLabel(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszText*  
- ラベルに表示されるテキスト。  
+*lpszText*<br/>
+[in]ラベルに表示されるテキスト。  
   
- [in]*bIsMultiLine*  
- ラベルが、複数行のラベルであることを指定する場合は TRUEそれ以外の場合、FALSE です。  
+*bIsMultiLine*<br/>
+[in]ラベルが、複数行のラベルであることを指定する場合は TRUEそれ以外の場合、FALSE です。  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
  現在のリボンのラベル要素のアクセシビリティ データを決定します。  
@@ -96,11 +96,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pParent*  
- 現在のリボンのラベルの親ウィンドウを表します。  
+*pParent*<br/>
+[in]現在のリボンのラベルの親ウィンドウを表します。  
   
- [out]*データ*  
- 型のオブジェクト`CAccessibilityData`リボンのラベルを現在のユーザー補助データに設定されます。  
+*data*<br/>
+[out]型のオブジェクト`CAccessibilityData`リボンのラベルを現在のユーザー補助データに設定されます。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合、*データ*パラメーターが正常にリボンのラベルを現在のユーザー補助データと共に設定されている場合は FALSE。  

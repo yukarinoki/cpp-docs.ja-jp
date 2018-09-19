@@ -33,14 +33,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e190f81c0097e707830f7ac09c801929ea3e85e9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6283f29455cc3d835babdd83414e9dc98127eacd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572753"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029729"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl クラス
+
 実装を提供、 [ICommandText](/previous-versions/windows/desktop/ms714914\(v=vs.85\))インターフェイス。  
   
 ## <a name="syntax"></a>構文
@@ -52,11 +53,13 @@ class ATL_NO_VTABLE ICommandTextImpl
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- *T*  
- コマンド クラスから派生した`ICommandTextImpl`します。 
+
+*T*<br/>
+コマンド クラスから派生した`ICommandTextImpl`します。 
 
 ## <a name="requirements"></a>要件  
- **ヘッダー:** altdb.h  
+
+**ヘッダー:** altdb.h  
   
 ## <a name="members"></a>メンバー  
   
@@ -74,9 +77,11 @@ class ATL_NO_VTABLE ICommandTextImpl
 |[m_strCommandText](#strcommandtext)|コマンド テキストを格納します。|  
   
 ## <a name="remarks"></a>Remarks  
- コマンドの必須インターフェイス。  
+
+コマンドの必須インターフェイス。  
  
 ## <a name="getcommandtext"></a> Icommandtextimpl::getcommandtext
+
 テキスト コマンドの最後の呼び出しでセットを返します[SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)します。  
   
 ### <a name="syntax"></a>構文  
@@ -87,9 +92,11 @@ STDMETHOD(GetCommandText)(GUID * pguidDialect,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。 *既定で*パラメーターは既定では無視されます。  
+
+参照してください[ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。 *既定で*パラメーターは既定では無視されます。  
 
 ## <a name="setcommandtext"></a> Icommandtextimpl::setcommandtext
+
 既存のコマンド テキストを置き換えて、コマンド テキストを設定します。  
   
 ### <a name="syntax"></a>構文  
@@ -100,9 +107,11 @@ STDMETHOD(SetCommandText)(REFGUID rguidDialect,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[icommandtext::setcommandtext](/previous-versions/windows/desktop/ms709757\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。 
+
+参照してください[icommandtext::setcommandtext](/previous-versions/windows/desktop/ms709757\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。 
 
 ## <a name="strcommandtext"></a> Icommandtextimpl::m_strcommandtext
+
 コマンド テキストの文字列を格納します。  
   
 ### <a name="syntax"></a>構文  
@@ -112,5 +121,6 @@ CComBSTR m_strCommandText;
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

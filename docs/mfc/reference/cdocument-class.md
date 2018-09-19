@@ -130,12 +130,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6822957abfa98dab737494bb2924c3ecf84090e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 16f812fc941284122ce2a869786ae73447bff83a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337503"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722632"
 ---
 # <a name="cdocument-class"></a>CDocument クラス
 ユーザーが定義するドキュメント クラスの基本機能が用意されています。  
@@ -259,7 +259,7 @@ class CDocument : public CCmdTarget
   
  `CDocument`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="addview"></a>  CDocument::AddView  
@@ -659,8 +659,8 @@ virtual void OnDocumentEvent(DocumentEvent deEvent);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*deEvent*  
- イベントの種類を示す列挙型。  
+*deEvent*<br/>
+[in]イベントの種類を示す列挙型。  
   
 ### <a name="remarks"></a>Remarks  
  複数のクラスがドキュメント イベントの影響を与える可能性があります。 以外のクラスに影響を与えるドキュメント イベントを処理するため、このメソッドは、 [CDocument クラス](../../mfc/reference/cdocument-class.md)します。 現在、ドキュメントのイベントに応答する必要がありますを唯一のクラスは、 [CDataRecoveryHandler クラス](../../mfc/reference/cdatarecoveryhandler-class.md)します。 `CDocument`クラスが他の上書き可能な方法で効果を処理する、`CDocument`します。  

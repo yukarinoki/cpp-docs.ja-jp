@@ -1,5 +1,5 @@
 ---
-title: インライン ファイルを指定する |Microsoft ドキュメント
+title: インライン ファイルの指定 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c0d85436aef5ed48c0a8787f8bce330bf6d3e96
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 73983094f10088920100b4fbbb8d870aee13f05e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380106"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720565"
 ---
 # <a name="specifying-an-inline-file"></a>インライン ファイルの指定
-2 つの山かっこを指定 (<<) コマンドで、 *filename*が表示されます。 山かっこでは、マクロの展開をすることはできません。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-<<[filename]  
-```  
-  
-## <a name="remarks"></a>コメント  
- コマンドを実行すると、山かっこが置き換え*filename*、指定した場合または (nmake の) によって生成された一意の名前。 指定した場合*filename*スペースまたはタブせず山かっこを従う必要があります。パスが許可されます。 拡張子がが必須かまたはと見なされません。 場合*filename*を指定すると、現在のファイルを作成または指定したディレクトリは、既存のすべてを上書きする名前のファイル以外の場合はそれ以外の場合、TMP ディレクトリに作成されます (または、現在のディレクトリ場合、TMP 環境変数定義されていません)。 場合は、以前*filename*は、再利用 (nmake の) は、前のファイルを置き換えます。  
-  
-## <a name="see-also"></a>関連項目  
- [メイクファイルのインライン ファイル](../build/inline-files-in-a-makefile.md)
+
+2 つの山かっこを指定 (<<) コマンドで、 *filename*が表示されます。 山かっこでは、マクロの展開をすることはできません。
+
+## <a name="syntax"></a>構文
+
+```
+<<[filename]
+```
+
+## <a name="remarks"></a>Remarks
+
+山かっこは置き換えられますコマンドが実行される*filename*、指定されている場合や (nmake の) によって生成された一意の名前。 指定した場合*filename*スペースまたはタブを使用せず、山かっこに従う必要があります。パスが許可されます。 拡張子のが必須かまたはと見なされません。 場合*filename*指定すると、現在のファイルを作成または指定されたディレクトリは、その名前でファイルの既存のすべての上書きは TMP ディレクトリに作成された場合は、(現在のディレクトリ、または場合 TMP 環境変数定義されていません)。 場合は、以前*filename*は NMAKE 再利用すると、前のファイルを置き換えます。
+
+## <a name="see-also"></a>関連項目
+
+[メイクファイルのインライン ファイル](../build/inline-files-in-a-makefile.md)

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c83e644d8544b7919c0f61199197574d03b13ff8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1fcaffc3eba3711accdfa13d311f5284e564b703
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763069"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020434"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL OLE DB コンシューマー ウィザード
 
@@ -106,23 +106,23 @@ ms.locfileid: "43763069"
 
    データ ソースを選択すると、このボックスには、テーブルまたは選択したストアド プロシージャに基づく既定のクラス名が設定されます (を参照してください**データ ソースの選択**以下)。 クラス名を編集することができます。
 
-- **.h ファイル**  
+- **.h ファイル**
 
    データ ソースを選択すると、このボックスには、テーブルまたは選択したストアド プロシージャに基づく既定のヘッダー クラス名が設定されます (を参照してください**データ ソースの選択**以下)。 ヘッダー ファイルの名前を編集したり、既存のヘッダー ファイルを選択することができます。
 
-- **属性付き**  
+- **属性付き**
 
    このオプションは、ウィザードが属性またはテンプレート宣言を使用してコンシューマー クラスを作成するかどうかを指定します。 このオプションを選択すると、ウィザードは、テンプレートの宣言 (これは、既定のオプションです) ではなく属性を使用します。 このオプションをオフにすると、ウィザードは、属性ではなくテンプレート宣言を使用します。
 
    - コンシューマーを選択した場合**型**の**テーブル**、ウィザードを使用して、`db_source`と`db_table`クラス宣言では、テーブルとテーブルのアクセサーを作成する属性を使用して`db_column`に列マップを作成します。 たとえば、このマップが作成されます。
 
         ```cpp
-        // Inject table class and table accessor class declarations  
-        [db_source("<initialization_string>"), db_table("dbo.Orders")]  
-        ... 
-        // Column map  
-        [ db_column(1, status=m_dwOrderIDStatus, length=m_dwOrderIDLength) ] LONG m_OrderID;  
-        [ db_column(2, status=m_dwCustomerIDStatus, length=m_dwCustomerIDLength) ] TCHAR m_CustomerID[6];  
+        // Inject table class and table accessor class declarations
+        [db_source("<initialization_string>"), db_table("dbo.Orders")]
+        ...
+        // Column map
+        [ db_column(1, status=m_dwOrderIDStatus, length=m_dwOrderIDLength) ] LONG m_OrderID;
+        [ db_column(2, status=m_dwCustomerIDStatus, length=m_dwCustomerIDLength) ] TCHAR m_CustomerID[6];
         ...
         ```
 
@@ -133,20 +133,20 @@ ms.locfileid: "43763069"
             class COrdersAccessor; // Table class
             class COrders : public CTable<CAccessor<COrdersAccessor>>;
         // ...
-        // Column map  
+        // Column map
             BEGIN_COLUMN_MAP(COrderDetailsAccessor)
                 COLUMN_ENTRY_LENGTH_STATUS(1, m_OrderID, m_dwOrderIDLength, m_dwOrderIDStatus)
                 COLUMN_ENTRY_LENGTH_STATUS(2, m_CustomerID, m_dwCustomerIDLength, m_dwCustomerIDStatus)
-                // ...  
+                // ...
             END_COLUMN_MAP()
         ```
 
    - コンシューマーを選択した場合**型**の**コマンド**、ウィザードを使用して、`db_source`と`db_command`属性、および使用`db_column`列マップを作成します。 たとえば、このマップが作成されます。
 
         ```cpp
-        [db_source("<initialization_string>"), db_command("SQL_command")]  
-        ... 
-        // Column map using db_column is the same as for consumer type of 'table'  
+        [db_source("<initialization_string>"), db_command("SQL_command")]
+        ...
+        // Column map using db_column is the same as for consumer type of 'table'
         ```
 
       コマンドとコマンドのアクセサーを使用する代わりに、コマンド クラスの .h ファイル内の宣言をたとえばクラスします。
@@ -193,6 +193,6 @@ ms.locfileid: "43763069"
 
 ## <a name="see-also"></a>関連項目
 
-[ATL OLE DB コンシューマー](../../atl/reference/adding-an-atl-ole-db-consumer.md)  
-[コード ウィザードを使用した機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)  
+[ATL OLE DB コンシューマー](../../atl/reference/adding-an-atl-ole-db-consumer.md)<br/>
+[コード ウィザードを使用した機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [接続文字列およびデータ リンク (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))

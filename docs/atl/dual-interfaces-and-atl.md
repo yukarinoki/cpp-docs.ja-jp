@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebe6ac2e3d19d16e2147411df436a976526ea2ff
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f59e43bbc1d5f11d1582bad577cc0d8eb971d121
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765136"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108587"
 ---
 # <a name="dual-interfaces-and-atl"></a>デュアル インターフェイスと ATL
 
@@ -29,21 +29,21 @@ ms.locfileid: "43765136"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[デュアル インターフェイスの実装](../atl/implementing-a-dual-interface.md)  
+[デュアル インターフェイスの実装](../atl/implementing-a-dual-interface.md)<br/>
 クラスとデュアル インターフェイスの実装に関連するウィザードについて説明します。
 
-[複数のデュアル インターフェイス](../atl/multiple-dual-interfaces.md)  
+[複数のデュアル インターフェイス](../atl/multiple-dual-interfaces.md)<br/>
 単一のオブジェクトに対して複数のデュアル インターフェイスを公開する方法について説明します。
 
-[Nonextensible 属性](../atl/nonextensible-attribute.md)  
+[Nonextensible 属性](../atl/nonextensible-attribute.md)<br/>
 使用するかについて説明します、 **nonextensible**インターフェイス定義に対する属性。
 
-[デュアル インターフェイスとイベント](../atl/dual-interfaces-and-events.md)  
+[デュアル インターフェイスとイベント](../atl/dual-interfaces-and-events.md)<br/>
 イベント インターフェイスをデュアル インターフェイスを行わないの設計上の理由について説明します。
 
 ## <a name="related-sections"></a>関連項目
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Active Template Library を使用してプログラミングする方法に関する概念説明のトピックへのリンクを提供します。
 
 ## <a name="see-also"></a>関連項目

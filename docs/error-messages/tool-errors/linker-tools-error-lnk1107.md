@@ -1,5 +1,5 @@
 ---
-title: リンカ ツール エラー LNK1107 |Microsoft ドキュメント
+title: リンカ ツール エラー LNK1107 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fee2105cb0c12287cd2b47636f0e47011854a608
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 73a1643d10ea9adc6ac6979eb2de023593ba8d01
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298351"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060708"
 ---
 # <a name="linker-tools-error-lnk1107"></a>リンカ ツール エラー LNK1107
-ファイルが無効か破損しています: の場所で読み取ることができません  
-  
- このツールは、ファイルを読み取れませんでした。 ファイルを再作成します。  
-  
- モジュールを渡すしようとする場合にも LNK1107 (で作成された拡張子は .dll または .netmodule [/clr:noAssembly](../../build/reference/clr-common-language-runtime-compilation.md)または[/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)) リンカー; するには、.obj ファイルを代わりに渡します。  
-  
- 次の例: コンパイルする場合  
-  
-```  
-// LNK1107.cpp  
-// compile with: /clr /LD  
-public ref class MyClass {  
-public:  
-   void Test(){}  
-};  
-```  
-  
- 指定し、 **LNK1107.dll をリンク**コマンド ラインで LNK1107 が表示されます。  エラーを解決するには、指定**リンク LNK1107.obj**代わりにします。
+
+無効または壊れたファイル: の場所で読み取ることができません
+
+このツールは、ファイルを読み取れませんでした。 ファイルを再作成します。
+
+モジュールに渡すしようとした場合にも LNK1107 (.dll または .netmodule の拡張機能で作成された[/clr:noAssembly](../../build/reference/clr-common-language-runtime-compilation.md)または[/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)) リンカー;、.obj ファイルを代わりに渡します。
+
+次の例: コンパイルする場合
+
+```
+// LNK1107.cpp
+// compile with: /clr /LD
+public ref class MyClass {
+public:
+   void Test(){}
+};
+```
+
+指定**リンク LNK1107.dll**コマンドラインで LNK1107 が表示されます。  エラーを解決するには、次のように指定します。**リンク LNK1107.obj**代わりにします。

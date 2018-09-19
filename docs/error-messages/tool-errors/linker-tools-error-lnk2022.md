@@ -1,5 +1,5 @@
 ---
-title: リンカ ツール エラー LNK2022 |Microsoft ドキュメント
+title: リンカ ツール エラー LNK2022 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,49 +16,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7769bc28dc777ef8d7b82b91b9695356db05a682
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0b28e9f31c9ce4a7659891698feff48b16450944
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300889"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118350"
 ---
-# <a name="linker-tools-error-lnk2022"></a>リンカ ツール エラー LNK2022  
-  
-> メタデータ操作に失敗しました (*HRESULT*): *error_message*  
-  
-リンカーでは、メタデータのマージ中にエラーが検出されました。 正常にリンクするメタデータのエラーを解決する必要があります。  
-  
-実行するにはこの問題を診断する方法**ildasm-トークン**にある種類を検索するオブジェクト ファイルで、トークンが一覧表示`error_message`、し、相違点を探します。  メタデータ、LayoutType の属性が異なる場合でもと同じ名前の 2 つのさまざまな種類が正しくありません。  
-  
-LNK2022 (構造体) などの型が、同じ名前ではなく、競合する定義は、複数のコンパイル単位に存在する場合とでコンパイルするときにいずれかの理由[/clr](../../build/reference/clr-common-language-runtime-compilation.md)です。  この場合、型が、すべてのコンパイル単位内の同一の定義を持つことを確認します。  型名が表示されて`error_message`です。  
-  
-LNK2022 の他の考えられる原因は、リンカーは、コンパイラに指定された数より、別の場所でメタデータ ファイルを見つけたとき (で[#using](../../preprocessor/hash-using-directive-cpp.md) )。 メタデータ ファイル (.dll または .netmodule) がリンカーに渡されるときに、同じ場所に、コンパイラに渡されたときに確認してください。  
-  
-ATL アプリケーション、マクロの使用を構築するときに`_ATL_MIXED`少なくとも 1 つで使用されている場合は、すべてのコンパイル単位が必要です。  
-  
-## <a name="example"></a>例  
-  
-次の例では、空の型を定義します。  
-  
-```cpp  
-// LNK2022_a.cpp  
-// compile with: /clr /c  
-public ref class Test {};  
-```  
-  
-## <a name="example"></a>例  
-  
-このサンプルでは、名前が同じで異なる定義の型を含む 2 つのソース コード ファイルをリンクすることはできないことを示します。  
-  
-次の例では、LNK2022 が生成されます。  
-  
-```cpp  
-// LNK2022_b.cpp  
-// compile with: LNK2022_a.cpp /clr /LD   
-// LNK2022 expected  
-public ref class Test {  
-   void func() {}  
-   int var;  
-};  
+# <a name="linker-tools-error-lnk2022"></a>リンカ ツール エラー LNK2022
+
+> メタデータ操作に失敗しました (*HRESULT*): *error_message*
+
+リンカーでは、メタデータのマージ中にエラーが検出されました。 正常にリンクするメタデータのエラーを解決する必要があります。
+
+この問題を診断する方法の 1 つは、実行することです。 **ildasm-トークン**トークンに記載のある種類を検索するオブジェクト ファイル`error_message`、しの相違点を探します。  メタデータ、LayoutType の属性が異なる場合でも同じ名前の 2 つのさまざまな種類が有効でありません。
+
+LNK2022 (構造体) などの型が、同じ名前が競合する定義は、複数のコンパイル単位に存在する場合と指定してコンパイルしたときに理由の 1 つ[/clr](../../build/reference/clr-common-language-runtime-compilation.md)します。  この場合、型が、すべてのコンパイル単位で同一の定義を持つことを確認します。  型名が表示されて`error_message`します。
+
+LNK2022 のもう 1 つの考えられる原因は、リンカーがコンパイラに指定された以外に、別の場所にメタデータ ファイルを検出したとき (で[#using](../../preprocessor/hash-using-directive-cpp.md) )。 コンパイラに渡された時と、リンカーに渡されるときに、同じ場所にメタデータ ファイル (.dll または .netmodule) は、ことを確認します。
+
+マクロの使用、ATL アプリケーションのビルド時に`_ATL_MIXED`で少なくとも 1 つ使用されている場合は、すべてのコンパイル単位が必要です。
+
+## <a name="example"></a>例
+
+次の例では、空の型を定義します。
+
+```cpp
+// LNK2022_a.cpp
+// compile with: /clr /c
+public ref class Test {};
+```
+
+## <a name="example"></a>例
+
+このサンプルでは、名前が同じで別の定義の型が含まれる 2 つのソース コード ファイルをリンクすることはできませんを示します。
+
+次の例では、LNK2022 が生成されます。
+
+```cpp
+// LNK2022_b.cpp
+// compile with: LNK2022_a.cpp /clr /LD
+// LNK2022 expected
+public ref class Test {
+   void func() {}
+   int var;
+};
 ```

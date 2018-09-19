@@ -1,5 +1,5 @@
 ---
-title: _ _incfsbyte、_ _incfsword、_ _incfsdword |Microsoft ドキュメント
+title: _ _incfsbyte、_ _incfsword、_ _incfsdword |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2813fd6d06d69ee346e234b73c96b8b2e782b95b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a80dc66f9626c87cef78a79b1c46a62afd0957d3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330984"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719356"
 ---
 # <a name="incfsbyte-incfsword-incfsdword"></a>__incfsbyte、__incfsword、__incfsdword
 **Microsoft 固有の仕様**  
@@ -50,8 +50,8 @@ void __incfsdword(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力] `Offset`  
- 先頭からのオフセット`FS`です。  
+*オフセット*<br/>
+[in]先頭からのオフセット`FS`します。  
   
 ## <a name="requirements"></a>要件  
   
@@ -61,8 +61,8 @@ void __incfsdword(
 |`__incfsword`|x86|  
 |`__incfsdword`|x86|  
   
-## <a name="remarks"></a>コメント  
- これらの組み込みはカーネル モードで使用可能なのみと、ルーチンは、組み込みとしてのみです。  
+## <a name="remarks"></a>Remarks  
+ これらの組み込みはカーネル モードで使用可能なのみとルーチンは組み込みとしてのみです。  
   
 **Microsoft 固有の仕様はここまで**  
   

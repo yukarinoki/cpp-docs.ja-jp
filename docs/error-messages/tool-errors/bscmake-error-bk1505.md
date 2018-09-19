@@ -1,5 +1,5 @@
 ---
-title: BSCMAKE エラー BK1505 |Microsoft ドキュメント
+title: BSCMAKE エラー BK1505 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d74f5781a3387ee1df57bcf7989cb9e526b8616
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 749dca190ca09ad86b3313e1678eeea65ab434ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295406"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034942"
 ---
 # <a name="bscmake-error-bk1505"></a>BSCMAKE エラー BK1505
-ファイル 'filename' から読み取れません [: 理由]  
-  
- BSCMAKE は、ファイルから読み取ることができません。  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>次のような原因をチェックして問題を解決するには  
-  
-1.  ファイルが破損してください。  
-  
-2.  ファイルがディスク領域や、.sbr ファイルの作成中に中断される不足しているコンパイラに切り捨てられています。
+
+ファイル 'filename' から読み取ることができません [: 理由]
+
+BSCMAKE は、ファイルから読み取ることができません。
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>次のような原因をチェックして問題を解決するには
+
+1. ファイルが破損します。
+
+1. ファイルが切り捨てられて、コンパイラがディスク領域または .sbr ファイルを作成するときに中断される不足してください。

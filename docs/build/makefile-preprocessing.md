@@ -1,5 +1,5 @@
 ---
-title: メイクファイルのプリプロセス |Microsoft ドキュメント
+title: メイクファイルのプリプロセス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,20 +15,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4b304276f20f66e02808f3894e5b948dd994cbb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 11bd2b74a17e5fd7b2507a531fda6da0a31e53c8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368227"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722881"
 ---
 # <a name="makefile-preprocessing"></a>メイクファイルのプリプロセス
-プリプロセス ディレクティブと式を使用して、(nmake の) セッションを制御できます。 Tools.ini またはメイクファイルで、事前処理命令を配置できます。 ディレクティブを使用して、条件付きで処理、メイクファイル、エラー メッセージを表示、他のメイクファイルを含める、未定義マクロ、および特定のオプションをオンまたはオフにします。  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください  
- [メイクファイルのプリプロセス ディレクティブ](../build/makefile-preprocessing-directives.md)  
-  
- [メイクファイル プリプロセスの式](../build/expressions-in-makefile-preprocessing.md)  
-  
-## <a name="see-also"></a>関連項目  
- [NMAKE リファレンス](../build/nmake-reference.md)
+
+NMAKE セッション プリプロセス ディレクティブと式を使用して制御できます。 Tools.ini またはメイクファイルで、命令を配置できます。 ディレクティブを使用して、条件付きで、メイクファイルの処理、エラー メッセージを表示、他のメイクファイルを含める、未定義マクロ、して特定のオプションをオンまたはオフにできます。
+
+## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
+
+[メイクファイルのプリプロセス ディレクティブ](../build/makefile-preprocessing-directives.md)
+
+[メイクファイル プリプロセスの式](../build/expressions-in-makefile-preprocessing.md)
+
+## <a name="see-also"></a>関連項目
+
+[NMAKE リファレンス](../build/nmake-reference.md)

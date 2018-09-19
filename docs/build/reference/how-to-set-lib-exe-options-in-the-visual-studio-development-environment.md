@@ -1,5 +1,5 @@
 ---
-title: '方法: LIB を設定します。Visual Studio 開発環境で EXE オプション |Microsoft ドキュメント'
+title: '方法: LIB を設定します。Visual Studio 開発環境で実行可能ファイルのオプション |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,23 +14,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38b04fb40c62efdf5a8dd0ae3e3d8b6b4529b017
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d8319ac7a40af4b43248c402306040c15f04a225
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372361"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707220"
 ---
 # <a name="how-to-set-libexe-options-in-the-visual-studio-development-environment"></a>方法 : Visual Studio の開発環境で LIB.EXE オプションを設定する
-### <a name="to-set-libexe-options-in-the-visual-studio-development-environment"></a>LIB を設定します。Visual Studio 開発環境で EXE オプション  
-  
-1.  プロジェクトのアクセス[プロパティ ページ](../../ide/working-with-project-properties.md) ダイアログ ボックス。  
-  
-2.  スタティック ライブラリ プロジェクトをアクティブにして、選択、**ライブラリアン**ノード。  
-  
-3.  [全般] または [名前を入力/出力] プロパティ ページを選択します。  
-  
-4.  必要に応じてプロパティを変更します。  
-  
-## <a name="see-also"></a>関連項目  
- [LIB リファレンス](../../build/reference/lib-reference.md)
+
+### <a name="to-set-libexe-options-in-the-visual-studio-development-environment"></a>LIB を設定します。Visual Studio 開発環境で実行可能ファイルのオプション
+
+1. プロジェクトのアクセス[プロパティ ページ](../../ide/working-with-project-properties.md) ダイアログ ボックス。
+
+1. スタティック ライブラリ プロジェクトをアクティブにして、選択、**ライブラリアン**ノード。
+
+1. 全般、または入力/出力 プロパティ ページを選択します。
+
+1. 必要に応じてプロパティを変更します。
+
+## <a name="see-also"></a>関連項目
+
+[LIB リファレンス](../../build/reference/lib-reference.md)

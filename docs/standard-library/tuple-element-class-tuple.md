@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ae46a78484a2ee2737f3d949e525ce89d8401cd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4fb89f479320287ff238517cc649f199e0081ffa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959070"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716192"
 ---
 # <a name="tupleelement-class"></a>tuple_element クラス
 
@@ -66,22 +66,22 @@ template <class T1, class T2>
 
 ### <a name="parameters"></a>パラメーター
 
-*Index*  
+*Index*<br/>
 指定した要素のインデックス。
 
-*Tuple*  
+*Tuple*<br/>
 タプルの型。
 
-*Elem*  
+*Elem*<br/>
 配列要素の型。
 
-*Size*  
+*Size*<br/>
 配列のサイズ。
 
-*T1*  
+*T1*<br/>
 ペアの最初の要素の型。
 
-*T2*  
+*T2*<br/>
 ペアの 2 番目の要素の型。
 
 ## <a name="remarks"></a>Remarks
@@ -182,9 +182,15 @@ int main() {
  0 1.333
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<タプル >**ヘッダー:** \<array > (配列の特殊化) 用**ヘッダー:** \<ユーティリティ > (ペアの特殊化) の**Namespace:** std
+**ヘッダー:** \<tuple>
+
+**ヘッダー:** \<array> (配列の特殊化用)
+
+**ヘッダー:** \<ユーティリティ > (ペアの特殊化)
+
+**名前空間:** std
 
 ## <a name="see-also"></a>関連項目
 

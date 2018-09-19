@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5a24a98e7780a98726df29452a9878c8abf3d81
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 596fe8bb4a656eb5ebdc7bef855b5e6db8ab6196
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756445"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090799"
 ---
 # <a name="catllist-class"></a>CAtlList クラス
 
@@ -61,16 +61,16 @@ ms.locfileid: "43756445"
 ## <a name="syntax"></a>構文
 
 ```
-template<typename E, class ETraits = CElementTraits<E>>  
+template<typename E, class ETraits = CElementTraits<E>>
 class CAtlList
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*E*  
+*E*<br/>
 要素型。
 
-*ETraits*  
+*ETraits*<br/>
 コピーまたは要素を移動するために使用するコードです。 参照してください[CElementTraits クラス](../../atl/reference/celementtraits-class.md)の詳細。
 
 ## <a name="members"></a>メンバー
@@ -144,7 +144,7 @@ POSITION AddHead(INARGTYPE element);
 
 ### <a name="parameters"></a>パラメーター
 
-*要素*  
+*要素*<br/>
 新しい要素。
 
 ### <a name="return-value"></a>戻り値
@@ -169,7 +169,7 @@ void AddHeadList(const CAtlList<E, ETraits>* plNew);
 
 ### <a name="parameters"></a>パラメーター
 
-*plNew*  
+*plNew*<br/>
 追加するリスト。
 
 ### <a name="remarks"></a>Remarks
@@ -191,7 +191,7 @@ POSITION AddTail(INARGTYPE element);
 
 ### <a name="parameters"></a>パラメーター
 
-*要素*  
+*要素*<br/>
 追加する要素。
 
 ### <a name="return-value"></a>戻り値
@@ -216,7 +216,7 @@ void AddTailList(const CAtlList<E, ETraits>* plNew);
 
 ### <a name="parameters"></a>パラメーター
 
-*plNew*  
+*plNew*<br/>
 追加するリスト。
 
 ### <a name="remarks"></a>Remarks
@@ -253,7 +253,7 @@ CAtlList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nBlockSize*  
+*nBlockSize*<br/>
 ブロック サイズ。
 
 ### <a name="remarks"></a>Remarks
@@ -288,10 +288,10 @@ POSITION Find(INARGTYPE element, POSITION posStartAfter = NULL) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*要素*  
+*要素*<br/>
 一覧で検索する要素。
 
-*posStartAfter*  
+*posStartAfter*<br/>
 検索の開始位置。 値が指定されていない場合は、head 要素で、検索が始まります。
 
 ### <a name="return-value"></a>戻り値
@@ -316,7 +316,7 @@ POSITION FindIndex(size_t iElement) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*iElement*  
+*iElement*<br/>
 必要なリストの要素の 0 から始まるインデックス。
 
 ### <a name="return-value"></a>戻り値
@@ -344,7 +344,7 @@ const E& GetAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*  
+*pos*<br/>
 特定の要素を指定する位置の値。
 
 ### <a name="return-value"></a>戻り値
@@ -435,7 +435,7 @@ const E& GetNext(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*  
+*pos*<br/>
 位置の値、以前の呼び出しによって返される`GetNext`、 [CAtlList::GetHeadPosition](#getheadposition)、またはその他の`CAtlList`メソッド。
 
 ### <a name="return-value"></a>戻り値
@@ -463,7 +463,7 @@ const E& GetPrev(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*  
+*pos*<br/>
 位置の値、以前の呼び出しによって返される`GetPrev`、 [CAtlList::GetTailPosition](#gettailposition)、またはその他の`CAtlList`メソッド。
 
 ### <a name="return-value"></a>戻り値
@@ -543,10 +543,10 @@ POSITION InsertAfter(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*  
+*pos*<br/>
 その後、新しい要素を挿入する位置の値。
 
-*要素*  
+*要素*<br/>
 挿入する要素。
 
 ### <a name="return-value"></a>戻り値
@@ -571,10 +571,10 @@ POSITION InsertBefore(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*  
+*pos*<br/>
 新しい要素は、この位置の値の前に、の一覧に挿入されます。
 
-*要素*  
+*要素*<br/>
 挿入する要素。
 
 ### <a name="return-value"></a>戻り値
@@ -615,7 +615,7 @@ void MoveToHead(POSITION pos) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*  
+*pos*<br/>
 移動先の要素の位置の値。
 
 ### <a name="remarks"></a>Remarks
@@ -636,7 +636,7 @@ void MoveToTail(POSITION pos) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*  
+*pos*<br/>
 移動先の要素の位置の値。
 
 ### <a name="remarks"></a>Remarks
@@ -673,7 +673,7 @@ void RemoveAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*  
+*pos*<br/>
 削除する要素の位置の値。
 
 ### <a name="remarks"></a>Remarks
@@ -768,10 +768,10 @@ void SetAt(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*  
+*pos*<br/>
 変更する要素に対応する位置の値。
 
-*要素*  
+*要素*<br/>
 新しい要素の値。
 
 ### <a name="remarks"></a>Remarks
@@ -792,10 +792,10 @@ void SwapElements(POSITION pos1, POSITION pos2) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*/pos 1*  
+*/pos 1*<br/>
 最初の位置の値。
 
-*pos2*  
+*pos2*<br/>
 2 番目の位置の値。
 
 ### <a name="remarks"></a>Remarks
@@ -808,5 +808,5 @@ void SwapElements(POSITION pos1, POSITION pos2) throw();
 
 ## <a name="see-also"></a>関連項目
 
-[CList クラス](../../mfc/reference/clist-class.md)   
+[CList クラス](../../mfc/reference/clist-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

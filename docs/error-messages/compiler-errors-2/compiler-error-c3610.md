@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3610 |Microsoft ドキュメント
+title: コンパイラ エラー C3610 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f58d66e9d3dacfa2c0b38eb84fe51e0813a892d3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b46b3669978ff3735d5a16015ca0a01e65f07ae9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252433"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037854"
 ---
 # <a name="compiler-error-c3610"></a>コンパイラ エラー C3610
-'valuetype': 値型必要があります 'boxed' にメソッド 'method' を呼び出すことができます  
-  
- 既定では、値の型はマネージ ヒープにします。 など、.NET ランタイム クラスからメソッドを呼び出すことができます前に`Object`値の型をマネージ ヒープに移動する必要があります。  
-  
- C3610 は古い形式のコンパイラ オプションを使用して到達のみ **/clr:oldSyntax**です。  
+
+'valuetype': 値型する必要がありますが 'boxed' にメソッド 'method' を呼び出すことができます
+
+既定では、値型では、マネージ ヒープです。 など、.NET ランタイム クラスからメソッドを呼び出すことができますに`Object`値の型をマネージ ヒープに移動する必要があります。
+
+C3610 は古い形式のコンパイラ オプションを使用して到達のみ **/clr:oldSyntax**します。

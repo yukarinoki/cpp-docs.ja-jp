@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c940ec56b0f522e90410b786d595f4cbf929ed89
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1236cbdaca396aa6d52d4e30095d9a0df5379142
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688546"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712037"
 ---
 # <a name="cwinapp-class"></a>CWinApp クラス
 
@@ -437,8 +437,8 @@ virtual DWORD ApplicationRecoveryCallback(LPVOID lpvParam);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*lpvParam*  
-将来使用するために予約されています。
+*lpvParam*<br/>
+[in]将来使用するために予約されています。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1745,11 +1745,11 @@ virtual CDocument* OpenDocumentFile(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*場合*  
-開かれるファイルの名前。
+*場合*<br/>
+[in]開かれるファイルの名前。
 
-[in]*baddtomru です*  
-TRUE は、ドキュメントが最新のファイルのいずれかを示しますFALSE は、ドキュメントがない最新のファイルのいずれかを示します。
+*baddtomru です。*<br/>
+[in]TRUE は、ドキュメントが最新のファイルのいずれかを示しますFALSE は、ドキュメントがない最新のファイルのいずれかを示します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1936,8 +1936,8 @@ void RegisterShellFileTypes(BOOL bCompat = FALSE);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bCompat*  
-TRUE は、シェル コマンドの印刷と印刷する、またはプリンター オブジェクトにファイルをドラッグして、シェルから直接ファイルを印刷するユーザーの登録エントリを追加します。 DefaultIcon キーも追加します。 このパラメーターは FALSE を既定では、旧バージョンとの互換性のためです。
+*bCompat*<br/>
+[in]TRUE は、シェル コマンドの印刷と印刷する、またはプリンター オブジェクトにファイルをドラッグして、シェルから直接ファイルを印刷するユーザーの登録エントリを追加します。 DefaultIcon キーも追加します。 このパラメーターは FALSE を既定では、旧バージョンとの互換性のためです。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1973,14 +1973,14 @@ virtual HRESULT RegisterWithRestartManager(
 |||
 |-|-|
 |パラメーター|説明|
-|[in]*bRegisterRecoveryCallback*|TRUE は、アプリケーションのこのインスタンスが回復のコールバック関数では; を使用することを示しますFALSE は、しないことを示します。 フレームワークは、アプリケーションが予期せず終了したときに、回復のコールバック関数を呼び出します。 詳細については、次を参照してください。 [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)します。|
-|[in]*strRestartIdentifier*|再起動マネージャーのインスタンスを識別する一意の文字列。 再起動マネージャー識別子は、アプリケーションの各インスタンスに対して一意です。|
-|[in]*pwzCommandLineArgs*|コマンドラインから余分な引数を含む文字列。|
-|[in]*dwRestartFlags*|再起動マネージャーのオプションのフラグ。 詳細については、「解説」を参照してください。|
-|[in]*pRecoveryCallback*|回復のコールバック関数。 この関数は、入力として LPVOID パラメーターを受け取るし、DWORD を返す必要があります。 既定の復旧のコールバック関数は、`CWinApp::ApplicationRecoveryCallback`します。|
-|[in]*lpvParam*|回復のコールバック関数の入力パラメーター。 詳細については、次を参照してください。 [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)します。|
-|[in]*dwPingInterval*|再起動マネージャーが回復のコールバック関数が返すを待機する時間の長さ。 このパラメーターは、ミリ秒単位です。|
-|[in]*dwCallbackFlags*|フラグは、回復のコールバック関数に渡されます。 将来使用するために予約されています。|
+|*bRegisterRecoveryCallback*|[in]TRUE は、アプリケーションのこのインスタンスが回復のコールバック関数では; を使用することを示しますFALSE は、しないことを示します。 フレームワークは、アプリケーションが予期せず終了したときに、回復のコールバック関数を呼び出します。 詳細については、次を参照してください。 [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)します。|
+|*strRestartIdentifier*|[in]再起動マネージャーのインスタンスを識別する一意の文字列。 再起動マネージャー識別子は、アプリケーションの各インスタンスに対して一意です。|
+|*pwzCommandLineArgs*|[in]コマンドラインから余分な引数を含む文字列。|
+|*dwRestartFlags*|[in]再起動マネージャーのオプションのフラグ。 詳細については、「解説」を参照してください。|
+|*pRecoveryCallback*|[in]回復のコールバック関数。 この関数は、入力として LPVOID パラメーターを受け取るし、DWORD を返す必要があります。 既定の復旧のコールバック関数は、`CWinApp::ApplicationRecoveryCallback`します。|
+|*lpvParam*|[in]回復のコールバック関数の入力パラメーター。 詳細については、次を参照してください。 [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)します。|
+|*dwPingInterval*|[in]再起動マネージャーが回復のコールバック関数が返すを待機する時間の長さ。 このパラメーターは、ミリ秒単位です。|
+|*dwCallbackFlags*|[in]フラグは、回復のコールバック関数に渡されます。 将来使用するために予約されています。|
 
 ### <a name="return-value"></a>戻り値
 

@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3459 |Microsoft ドキュメント
+title: コンパイラ エラー C3459 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,48 +16,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eec65ba8acf231a15c6cab15449cc306cdfad4fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: abde90828cac4f45685b7a21b50705474aedde72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255346"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026791"
 ---
 # <a name="compiler-error-c3459"></a>コンパイラ エラー C3459
-'attribute': 属性は、クラス インデクサー (既定のインデックス付きのプロパティ) のみに使用できます  
-  
-クラス インデクサー プロパティに適用されるように設計された属性が正しく使用されていません。  
-  
-詳細については、次を参照してください。[する方法: プロパティを使用して C + + CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md)です。  
-  
-## <a name="example"></a>例  
-次の例では C3459 が生成されます。  
-  
-```  
-// C3459.cpp  
-// compile with: /clr /c  
-public ref class MyString {  
-public:  
-   [System::Runtime::CompilerServices::IndexerName("Chars")]   // C3459  
-   property int Prop;  
-};  
-  
-// OK  
-public ref class MyString2 {  
-   array<int>^ MyArr;  
-public:  
-   MyString2() {  
-      MyArr = gcnew array<int>(5);  
-   }  
-  
-   [System::Runtime::CompilerServices::IndexerName("Chars")]   // OK  
-   property int default[int] {  
-      int get(int index) {  
-         return MyArr[index];  
-      }  
-      void set(int index, int value) {  
-         MyArr[index] = value;  
-      }  
-   }  
-};  
+
+'attribute': 属性は、クラス インデクサー (既定のインデックス付きのプロパティ) のみに使用できます
+
+クラス インデクサー プロパティに適用されるように設計された属性が正しく使用されていません。
+
+詳細については、次を参照してください。[方法: プロパティを使用して c++/cli CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md)します。
+
+## <a name="example"></a>例
+
+次の例では C3459 が生成されます。
+
+```
+// C3459.cpp
+// compile with: /clr /c
+public ref class MyString {
+public:
+   [System::Runtime::CompilerServices::IndexerName("Chars")]   // C3459
+   property int Prop;
+};
+
+// OK
+public ref class MyString2 {
+   array<int>^ MyArr;
+public:
+   MyString2() {
+      MyArr = gcnew array<int>(5);
+   }
+
+   [System::Runtime::CompilerServices::IndexerName("Chars")]   // OK
+   property int default[int] {
+      int get(int index) {
+         return MyArr[index];
+      }
+      void set(int index, int value) {
+         MyArr[index] = value;
+      }
+   }
+};
 ```

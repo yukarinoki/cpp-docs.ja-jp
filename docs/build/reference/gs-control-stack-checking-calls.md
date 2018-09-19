@@ -22,27 +22,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0c6a5af31eaba30af92201a2e2563b67aceed6e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 38b97354408d87d862955c0883c72d3e1459aa61
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104109"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719278"
 ---
 # <a name="gs-control-stack-checking-calls"></a>/Gs (スタック チェック呼び出しの制御)
+
 スタック プローブを制御します。
 
 ## <a name="syntax"></a>構文
 
-```  
+```
 /Gs[size]
-```  
+```
 
 ## <a name="arguments"></a>引数
+
 *size*<br/>
 (オプション) スタック プローブが開始される前にローカル変数が占有することのできるバイト数。 場合、 **/Gs**オプションを指定することがなく、`size`引数が指定した場合と同じ **/Gs0**、
 
 ## <a name="remarks"></a>Remarks
+
 スタック プローブとは、コンパイラがすべての関数呼び出しに挿入するコードのシーケンスのことです。 スタック プローブを開始すると、関数のローカル変数を保存するのに必要なスペースの量に応じてメモリに作用します。
 
 関数でローカル変数用に `size` バイトを超えるスタック領域が必要な場合、スタック プローブが開始されます。 既定で、関数に 1 ページを超えるスタック領域が必要な場合、コンパイラはスタック プローブを開始するコードを生成します。 これはのコンパイラ オプションに相当 **/Gs4096**の x86、x64、および ARM プラットフォームです。 この値により、アプリケーションと Windows メモリ マネージャーは、実行時に動的にプログラム スタックにコミットされるメモリの量を増やすことができます。
@@ -58,18 +61,19 @@ ms.locfileid: "44104109"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 
-2.  選択、 **C/C++** フォルダー。
+1. 選択、 **C/C++** フォルダー。
 
-3.  選択、**コマンドライン**プロパティ ページ。
+1. 選択、**コマンドライン**プロパティ ページ。
 
-4.  **[追加のオプション]** ボックスにコンパイラ オプションを入力します。
+1. **[追加のオプション]** ボックスにコンパイラ オプションを入力します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
--   以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>
+- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>
 
 ## <a name="see-also"></a>関連項目
-[コンパイラ オプション](../../build/reference/compiler-options.md)   
+
+[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
 [コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)

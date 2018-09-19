@@ -16,28 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bf56e87b8b7949048b1e6006d3aa32f00af1462
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: b66f4944d9ccdfb36587817c5f856c127513784e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404260"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087709"
 ---
 # <a name="comptrtaddref"></a>_com_ptr_t::AddRef
-**Microsoft 固有の仕様**  
-  
- 呼び出し、`AddRef`のメンバー関数`IUnknown`カプセル化されたインターフェイス ポインター。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-void AddRef( );  
-```  
-  
-## <a name="remarks"></a>Remarks  
- 呼び出し`IUnknown::AddRef`、カプセル化されたインターフェイス ポインターで発生させる、`E_POINTER`ポインターが NULL の場合のエラー。  
-  
- **Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- [_com_ptr_t クラス](../cpp/com-ptr-t-class.md)
+
+**Microsoft 固有の仕様**
+
+呼び出し、`AddRef`のメンバー関数`IUnknown`カプセル化されたインターフェイス ポインター。
+
+## <a name="syntax"></a>構文
+
+```
+void AddRef( );
+```
+
+## <a name="remarks"></a>Remarks
+
+呼び出し`IUnknown::AddRef`、カプセル化されたインターフェイス ポインターで発生させる、`E_POINTER`ポインターが NULL の場合のエラー。
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
+[_com_ptr_t クラス](../cpp/com-ptr-t-class.md)

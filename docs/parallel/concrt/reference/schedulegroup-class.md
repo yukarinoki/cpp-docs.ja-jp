@@ -1,5 +1,5 @@
 ---
-title: ScheduleGroup クラス |Microsoft ドキュメント
+title: ScheduleGroup クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf679abbeb1134332d98ef0bd2ba8f2b845d30a4
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5df2ad30fca410a71bc6333e34948bc938ca38d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688688"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039993"
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup クラス
 スケジュール グループの抽象化を表します。 スケジュール グループは、(別のグループに移動する前に同じグループ内の別のタスクを実行することで) 一時的に、または (同じ NUMA ノードまたは物理ソケットの同じグループ内の複数の項目を実行することにより) 空間的に、短い間隔でスケジュールするとメリットがある関連作業のセットを編成します。  
@@ -71,11 +71,11 @@ virtual unsigned int Id() const = 0;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- グループが属するスケジューラ内で一意では、スケジュール グループの識別子です。  
+ スケジュール グループ、グループが属するスケジューラ内で一意の識別子です。  
   
 ##  <a name="operator_delete"></a> delete 演算子 
 
- A`ScheduleGroup`オブジェクトが破棄される内部的には、ランタイムによってすべての外部参照がリリースされたときにします。 明示的に削除できません。  
+ A`ScheduleGroup`オブジェクトが破棄される内部的には、ランタイムによってすべての外部参照がリリースされたとき。 明示的に削除できません。  
   
 ```
 void operator delete(
@@ -89,8 +89,8 @@ void operator delete(
 ```    
   
 ### <a name="parameters"></a>パラメーター  
- `_PObject`  
- 削除するオブジェクトへのポインター。  
+*_PObject*<br/>
+削除するオブジェクトへのポインター。  
   
 ##  <a name="reference"></a> 参照 
 
@@ -101,10 +101,10 @@ virtual unsigned int Reference() = 0;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 新たにインクリメントされた参照カウントします。  
+ 新たにインクリメントされた参照の数。  
   
-### <a name="remarks"></a>コメント  
- これは、スケジュール グループの構成の有効期間を管理に通常使用されます。 スケジュール グループの参照カウントがゼロになる、スケジュール グループは、ランタイムによって削除されます。 いずれかを使用して作成されたスケジュール グループ、 [currentscheduler::createschedulegroup](currentscheduler-class.md#createschedulegroup)メソッド、または[scheduler::createschedulegroup](scheduler-class.md#createschedulegroup)メソッドを 1 つの参照カウント開始します。  
+### <a name="remarks"></a>Remarks  
+ これは、コンポジションのスケジュール グループの有効期間を管理に通常使用します。 スケジュール グループの参照カウントがゼロになる、スケジュール グループは、ランタイムによって削除されます。 いずれかを使用して作成されたスケジュール グループ、 [currentscheduler::createschedulegroup](currentscheduler-class.md#createschedulegroup)メソッド、または[scheduler::createschedulegroup](scheduler-class.md#createschedulegroup)メソッドが 1 つの参照カウント開始します。  
   
 ##  <a name="release"></a> リリース 
 
@@ -115,12 +115,12 @@ virtual unsigned int Release() = 0;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 新たにデクリメントされた参照カウントします。  
+ 新たにデクリメントされた参照の数。  
   
-### <a name="remarks"></a>コメント  
- これは、スケジュール グループの構成の有効期間を管理に通常使用されます。 スケジュール グループの参照カウントがゼロになる、スケジュール グループは、ランタイムによって削除されます。 呼び出した後、`Release`メソッド作成を削除する、特定回数の参照カウントと、その他の参照を使用して配置、`Reference`メソッド、さらに、スケジュール グループを使用することはできません。 これにより、未定義の動作が発生します。  
+### <a name="remarks"></a>Remarks  
+ これは、コンポジションのスケジュール グループの有効期間を管理に通常使用します。 スケジュール グループの参照カウントがゼロになる、スケジュール グループは、ランタイムによって削除されます。 呼び出した後、`Release`メソッド作成を削除する特定回数の参照カウントと、その他の参照を使用して配置、`Reference`メソッド、さらに、スケジュール グループを利用することはできません。 これにより、未定義の動作が発生します。  
   
- スケジュール グループは、特定のスケジューラ インスタンスに関連付けられます。 スケジュール グループにすべての参照に確実に解放スケジューラへのすべての参照がリリースされると、おそれがあるため、後者で破棄されているスケジューラを確認する必要があります。 未定義の動作のそれ以外の場合の結果を行っています。  
+ スケジュール グループは、特定のスケジューラ インスタンスに関連付けられます。 スケジュール グループへのすべての参照が解放されるスケジューラにすべての参照が解放され、前に後者の場合、スケジューラが破棄されていることになる可能性がありますのでことを確認する必要があります。 それ以外の場合の結果で未定義の動作を実行します。  
   
 ##  <a name="dtor"></a> ~ ScheduleGroup 
 
@@ -139,13 +139,13 @@ virtual void ScheduleTask(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Proc`  
- 軽量タスクの本体を実行するために実行する関数へのポインター。  
+*_Proc*<br/>
+軽量タスクの本体を実行するために実行する関数へのポインター。  
   
- `_Data`  
- タスクの本体にパラメーターとして渡されるデータへの void ポインターです。  
+*(_D)*<br/>
+タスクの本体にパラメーターとして渡されるデータへの void ポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出す、`ScheduleTask`メソッドが、ランタイムによって、タスクの実行後に適切なタイミングで削除されるスケジュール グループに暗黙的に参照カウントを配置します。  
   
 ## <a name="see-also"></a>関連項目  

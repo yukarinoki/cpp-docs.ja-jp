@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bb24b1d00c7c70b545213a64e685f238d6b5157
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f69172986a2f9bd3ca7c0b2373bb815a2f52186b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757963"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029014"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc クラス
 
@@ -93,16 +93,16 @@ bool ConvertToAutoInherit(
 
 ### <a name="parameters"></a>パラメーター
 
-*pParent*  
+*pParent*<br/>
 ポインターを[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)オブジェクトの親コンテナーを参照するオブジェクト。 親コンテナーがない場合は、このパラメーターは NULL です。
 
-*ObjectType*  
+*ObjectType*<br/>
 ポインター、`GUID`現在のオブジェクトに関連付けられているオブジェクトの種類を識別する構造体。 設定*ObjectType*オブジェクトは、GUID を持っていない場合は NULL にします。
 
-*bIsDirectoryObject*  
+*bIsDirectoryObject*<br/>
 新しいオブジェクトが他のオブジェクトを含めるかどうかを指定します。 値が true は、新しいオブジェクトがコンテナーであることを示します。 False の値は、新しいオブジェクトがコンテナーではないことを示します。
 
-*GenericMapping*  
+*GenericMapping*<br/>
 ポインターを[GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping)オブジェクトの特定の権限を各ジェネリック右からマッピングを指定する構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -161,28 +161,28 @@ bool Create(
 
 ### <a name="parameters"></a>パラメーター
 
-*pParent*  
+*pParent*<br/>
 ポインターを[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)新しいオブジェクトを作成する親ディレクトリを参照するオブジェクト。 親ディレクトリが存在しない場合は NULL に設定します。
 
-*pCreator*  
+*pCreator*<br/>
 オブジェクトの作成者によって提供されるセキュリティ記述子へのポインター。 オブジェクトの作成者が明示的に新しいオブジェクトのセキュリティ情報を渡さない場合は、このパラメーターを NULL に設定します。
 
-*bIsDirectoryObject*  
+*bIsDirectoryObject*<br/>
 新しいオブジェクトが他のオブジェクトを含めるかどうかを指定します。 値が true は、新しいオブジェクトがコンテナーであることを示します。 False の値は、新しいオブジェクトがコンテナーではないことを示します。
 
-*トークン*  
+*トークン*<br/>
 参照、 [CAccessToken](../../atl/reference/caccesstoken-class.md)オブジェクトが作成されている対象のクライアント プロセスのオブジェクト。
 
-*GenericMapping*  
+*GenericMapping*<br/>
 ポインターを[GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping)オブジェクトの特定の権限を各ジェネリック右からマッピングを指定する構造体。
 
-*ObjectType*  
+*ObjectType*<br/>
 ポインター、`GUID`現在のオブジェクトに関連付けられているオブジェクトの種類を識別する構造体。 設定*ObjectType*オブジェクトは、GUID を持っていない場合は NULL にします。
 
-*bIsContainerObject*  
+*bIsContainerObject*<br/>
 新しいオブジェクトが他のオブジェクトを含めるかどうかを指定します。 値が true は、新しいオブジェクトがコンテナーであることを示します。 False の値は、新しいオブジェクトがコンテナーではないことを示します。
 
-*AutoInheritFlags*  
+*AutoInheritFlags*<br/>
 アクセス制御エントリ (Ace) の継承方法を制御するビット フラグのセット*pParent*します。 参照してください[CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581)の詳細。
 
 ### <a name="return-value"></a>戻り値
@@ -210,10 +210,10 @@ bool Get(
 
 ### <a name="parameters"></a>パラメーター
 
-*si*  
+*si*<br/>
 取得するセキュリティ記述子の部分を指定するビット フラグのセット。 この値の組み合わせを指定できます、 [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information)ビット フラグです。
 
-*pResult*  
+*pResult*<br/>
 ポインターを[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)を指定したセキュリティ記述子から要求された情報のコピーを受け取るオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -234,7 +234,7 @@ CPrivateObjectSecurityDesc& operator= (const CPrivateObjectSecurityDesc& rhs) th
 
 ### <a name="parameters"></a>パラメーター
 
-*rhs*  
+*rhs*<br/>
 `CPrivateObjectSecurityDesc`を現在のオブジェクトに割り当てるオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -262,19 +262,19 @@ bool Set(
 
 ### <a name="parameters"></a>パラメーター
 
-*si*  
+*si*<br/>
 設定するセキュリティ記述子の部分を指定するビット フラグのセット。 この値の組み合わせを指定できます、 [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information)ビット フラグです。
 
-*変更*  
+*変更*<br/>
 ポインターを[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)オブジェクト。 このセキュリティ記述子の部分が示される、 *si*パラメーターは、オブジェクトのセキュリティ記述子に適用されます。
 
-*GenericMapping*  
+*GenericMapping*<br/>
 ポインターを[GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping)オブジェクトの特定の権限を各ジェネリック右からマッピングを指定する構造体。
 
-*トークン*  
+*トークン*<br/>
 参照、 [CAccessToken](../../atl/reference/caccesstoken-class.md)オブジェクトが作成されている対象のクライアント プロセスのオブジェクト。
 
-*AutoInheritFlags*  
+*AutoInheritFlags*<br/>
 アクセス制御エントリ (Ace) の継承方法を制御するビット フラグのセット*pParent*します。 参照してください[CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581)の詳細。
 
 ### <a name="return-value"></a>戻り値
@@ -287,7 +287,7 @@ bool Set(
 
 ## <a name="see-also"></a>関連項目
 
-[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)   
-[クラスの概要](../../atl/atl-class-overview.md)   
-[セキュリティに関するグローバル関数](../../atl/reference/security-global-functions.md)   
+[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
+[クラスの概要](../../atl/atl-class-overview.md)<br/>
+[セキュリティに関するグローバル関数](../../atl/reference/security-global-functions.md)<br/>
 [CSecurityDesc クラス](../../atl/reference/csecuritydesc-class.md)

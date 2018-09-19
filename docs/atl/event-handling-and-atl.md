@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f5d78ea68606513b2fe8491137e29fb45afb36e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d3069762810aebae516d6d02ce69da215a2847c1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761499"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038938"
 ---
 # <a name="event-handling-and-atl"></a>イベント処理と ATL
 
@@ -29,24 +29,24 @@ ms.locfileid: "43761499"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[イベント処理の原則](../atl/event-handling-principles.md)  
+[イベント処理の原則](../atl/event-handling-principles.md)<br/>
 すべてのイベント処理の一般的な手順をについて説明します。
 
-[イベント処理インターフェイスの実装](../atl/implementing-the-event-handling-interface.md)  
+[イベント処理インターフェイスの実装](../atl/implementing-the-event-handling-interface.md)<br/>
 イベント インターフェイスを実装するのに使用するクラスをについて説明します。
 
-[IDispEventImpl の使用](../atl/using-idispeventimpl.md)  
+[IDispEventImpl の使用](../atl/using-idispeventimpl.md)<br/>
 使用するための手順を示します`IDispEventImpl`し、コード サンプルを示しています。
 
-[IDispEventSimpleImpl の使用](../atl/using-idispeventsimpleimpl.md)  
+[IDispEventSimpleImpl の使用](../atl/using-idispeventsimpleimpl.md)<br/>
 使用するための手順を示します`IDispEventSimpleImpl`し、コード サンプルを示しています。
 
-[ATL イベント処理の概要](../atl/atl-event-handling-summary.md)  
+[ATL イベント処理の概要](../atl/atl-event-handling-summary.md)<br/>
 要約すると、テーブル、イベント インターフェイスを実装して、通知および ATL を使用してイベント ソースをアドバイズの主な方法を使用します。
 
 ## <a name="related-sections"></a>関連項目
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Active Template Library を使用してプログラミングする方法に関する概念説明のトピックへのリンクを提供します。
 
 ## <a name="see-also"></a>関連項目

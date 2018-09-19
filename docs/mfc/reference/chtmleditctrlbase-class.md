@@ -230,12 +230,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d28eaff98d2af12d24fab91797182c99d33d317d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e2d2bdddd950197406672c59a6577d33985d3a54
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207963"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031510"
 ---
 # <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase クラス
 HTML 編集コンポーネントを表します。  
@@ -361,8 +361,8 @@ template <class T> class CHtmlEditCtrlBase
 |[CHtmlEditCtrlBase::UnorderList](#unorderlist)|順序付きリストと通常の形式のブロックの現在の選択を切り替えます。|  
   
 #### <a name="parameters"></a>パラメーター  
- `T`  
- 派生クラスの名前。  
+*T*<br/>
+派生クラスの名前。  
   
 ## <a name="remarks"></a>Remarks  
  `CHtmlEditCtrlBase` メンバー関数は WebBrowser の HTML の編集コマンドなど、[太字](#bold)します。 (代わりに、呼び出すことができます[ExecCommand](#execcommand) IDM_BOLD コマンドを実行します)。  

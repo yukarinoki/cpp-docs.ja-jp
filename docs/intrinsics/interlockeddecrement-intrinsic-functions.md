@@ -54,12 +54,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a30a09b9feae0d5c7e0d24967c133f076286f2fc
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 2bf3f35b4de412125fcaf1c801a044c1b72e3233
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42540728"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716262"
 ---
 # <a name="interlockeddecrement-intrinsic-functions"></a>_InterlockedDecrement の組み込み関数
 **Microsoft 固有の仕様**  
@@ -108,8 +108,8 @@ __int64 _InterlockedDecrement64_nf(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力、出力] `lpAddend`  
- デクリメントする変数へのポインター。  
+*lpAddend*<br/>
+[入力、出力]デクリメントする変数へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
  戻り値は、デクリメントして生成された値です。  

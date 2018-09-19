@@ -82,12 +82,12 @@ helpviewer_keywords:
 - std::uninitialized_fill_n [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 762cc70c40c2d6e201b42c0c10ed83c981c97ec7
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: b740613666c7e4e1b5cc2c1b14c5cbf04b0fe6ef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44101665"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702872"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt; 関数
 
@@ -310,7 +310,8 @@ struct default_delete {
 *ptr*<br/>
 削除するオブジェクトへのポインター。
 
-その他の要素を削除する配列内の型。
+*その他*<br/>
+削除対象の配列内の要素の型。
 
 ### <a name="remarks"></a>Remarks
 

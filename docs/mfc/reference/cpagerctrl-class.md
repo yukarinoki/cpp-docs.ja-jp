@@ -58,12 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7fd978390a2b991da2bddedbab1c05497709d67
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 17136bbc1d914732871d256053acff20d78ab8b1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688144"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724250"
 ---
 # <a name="cpagerctrl-class"></a>CPagerCtrl クラス
 `CPagerCtrl` クラスは、Windows のページャー コントロールをラップします。ページャー コントロールには、外側のウィンドウに収まらない内側のウィンドウをスクロールによって表示する機能があります。  
@@ -151,10 +151,10 @@ virtual BOOL Create(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*dwStyle*|ビットごとの組み合わせ (OR)[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)と[ページャー コントロールのスタイル](/windows/desktop/Controls/pager-control-styles)をコントロールに適用できます。|  
-|[in]*rect*|参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)クライアント座標で、コントロールのサイズと位置を含む構造体。|  
-|[in]*pParentWnd*|ポインターを[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトは、コントロールの親ウィンドウです。 このパラメーターは、NULL にすることはできません。|  
-|[in]*nID*|コントロールの ID。|  
+|*dwStyle*|[in]ビットごとの組み合わせ (OR)[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)と[ページャー コントロールのスタイル](/windows/desktop/Controls/pager-control-styles)をコントロールに適用できます。|  
+|*rect*|[in]参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)クライアント座標で、コントロールのサイズと位置を含む構造体。|  
+|*pParentWnd*|[in]ポインターを[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトは、コントロールの親ウィンドウです。 このパラメーターは、NULL にすることはできません。|  
+|*nID*|[in]コントロールの ID。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -183,11 +183,11 @@ virtual BOOL CreateEx(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*dwExStyle*|コントロールに適用する拡張スタイルのビットごとの組み合わせ。 詳細については、次を参照してください。、 *dwExStyle*のパラメーター、 [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)関数。|  
-|[in]*dwStyle*|ビットごとの組み合わせ (OR)[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)と[ページャー コントロールのスタイル](/windows/desktop/Controls/pager-control-styles)をコントロールに適用できます。|  
-|[in]*rect*|参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)クライアント座標で、コントロールのサイズと位置を含む構造体。|  
-|[in]*pParentWnd*|ポインターを[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトは、コントロールの親ウィンドウです。 このパラメーターは、NULL にすることはできません。|  
-|[in]*nID*|コントロールの ID。|  
+|*dwExStyle*|[in]コントロールに適用する拡張スタイルのビットごとの組み合わせ。 詳細については、次を参照してください。、 *dwExStyle*のパラメーター、 [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)関数。|  
+|*dwStyle*|[in]ビットごとの組み合わせ (OR)[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)と[ページャー コントロールのスタイル](/windows/desktop/Controls/pager-control-styles)をコントロールに適用できます。|  
+|*rect*|[in]参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)クライアント座標で、コントロールのサイズと位置を含む構造体。|  
+|*pParentWnd*|[in]ポインターを[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトは、コントロールの親ウィンドウです。 このパラメーターは、NULL にすることはできません。|  
+|*nID*|[in]コントロールの ID。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -206,7 +206,7 @@ void ForwardMouse(BOOL bForward);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*bForward*|True の場合、マウス メッセージを転送しないマウス メッセージを転送または FALSE。|  
+|*bForward*|[in]True の場合、マウス メッセージを転送しないマウス メッセージを転送または FALSE。|  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、送信、 [PGM_FORWARDMOUSE](/windows/desktop/Controls/pgm-forwardmouse)メッセージは、Windows SDK で説明します。  
@@ -273,7 +273,7 @@ DWORD GetButtonState(int iButton) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*名前*|ボタンの状態を取得することを示します。 ページャー コントロールのスタイルが PGS_HORZ の場合は、右側のボタンの左ボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 ページャー コントロールのスタイルが PGS_VERT の場合は、下のボタンの上部にボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 詳細については、次を参照してください。[ページャー コントロールのスタイル](/windows/desktop/Controls/pager-control-styles)します。|  
+|*iButton*|[in]ボタンの状態を取得することを示します。 ページャー コントロールのスタイルが PGS_HORZ の場合は、右側のボタンの左ボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 ページャー コントロールのスタイルが PGS_VERT の場合は、下のボタンの上部にボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 詳細については、次を参照してください。[ページャー コントロールのスタイル](/windows/desktop/Controls/pager-control-styles)します。|  
   
 ### <a name="return-value"></a>戻り値  
  指定されたボタンの状態、*名前*パラメーター。 状態は PGF_INVISIBLE、PGF_NORMAL、PGF_GRAYED、PGF_DEPRESSED、または PGF_HOT です。 詳細については、の戻り値のセクションを参照してください、 [PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate)メッセージ。  
@@ -325,7 +325,7 @@ BOOL IsButtonDepressed(int iButton) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*名前*|ボタンの状態を取得することを示します。 ページャー コントロールのスタイルが PGS_HORZ の場合は、右側のボタンの左ボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 ページャー コントロールのスタイルが PGS_VERT の場合は、下のボタンの上部にボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 詳細については、次を参照してください。[ページャー コントロールのスタイル](/windows/desktop/Controls/pager-control-styles)します。|  
+|*iButton*|[in]ボタンの状態を取得することを示します。 ページャー コントロールのスタイルが PGS_HORZ の場合は、右側のボタンの左ボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 ページャー コントロールのスタイルが PGS_VERT の場合は、下のボタンの上部にボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 詳細については、次を参照してください。[ページャー コントロールのスタイル](/windows/desktop/Controls/pager-control-styles)します。|  
   
 ### <a name="return-value"></a>戻り値  
  指定されたボタンが押された状態の場合は TRUE。それ以外の場合、FALSE です。  
@@ -344,7 +344,7 @@ BOOL IsButtonGrayed(int iButton) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*名前*|ボタンの状態を取得することを示します。 ページャー コントロールのスタイルが PGS_HORZ の場合は、右側のボタンの左ボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 ページャー コントロールのスタイルが PGS_VERT の場合は、下のボタンの上部にボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 詳細については、次を参照してください。[ページャー コントロールのスタイル](/windows/desktop/Controls/pager-control-styles)します。|  
+|*iButton*|[in]ボタンの状態を取得することを示します。 ページャー コントロールのスタイルが PGS_HORZ の場合は、右側のボタンの左ボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 ページャー コントロールのスタイルが PGS_VERT の場合は、下のボタンの上部にボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 詳細については、次を参照してください。[ページャー コントロールのスタイル](/windows/desktop/Controls/pager-control-styles)します。|  
   
 ### <a name="return-value"></a>戻り値  
  指定したボタンが淡色表示の状態の場合は TRUE。それ以外の場合、FALSE です。  
@@ -363,7 +363,7 @@ BOOL IsButtonHot(int iButton) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*名前*|ボタンの状態を取得することを示します。 ページャー コントロールのスタイルが PGS_HORZ の場合は、右側のボタンの左ボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 ページャー コントロールのスタイルが PGS_VERT の場合は、下のボタンの上部にボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 詳細については、次を参照してください。[ページャー コントロールのスタイル](/windows/desktop/Controls/pager-control-styles)します。|  
+|*iButton*|[in]ボタンの状態を取得することを示します。 ページャー コントロールのスタイルが PGS_HORZ の場合は、右側のボタンの左ボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 ページャー コントロールのスタイルが PGS_VERT の場合は、下のボタンの上部にボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 詳細については、次を参照してください。[ページャー コントロールのスタイル](/windows/desktop/Controls/pager-control-styles)します。|  
   
 ### <a name="return-value"></a>戻り値  
  指定したボタンがホットな状態の場合は TRUE。それ以外の場合、FALSE です。  
@@ -382,7 +382,7 @@ BOOL IsButtonInvisible(int iButton) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*名前*|ボタンの状態を取得することを示します。 ページャー コントロールのスタイルが PGS_HORZ の場合は、右側のボタンの左ボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 ページャー コントロールのスタイルが PGS_VERT の場合は、下のボタンの上部にボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 詳細については、次を参照してください。[ページャー コントロールのスタイル](/windows/desktop/Controls/pager-control-styles)します。|  
+|*iButton*|[in]ボタンの状態を取得することを示します。 ページャー コントロールのスタイルが PGS_HORZ の場合は、右側のボタンの左ボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 ページャー コントロールのスタイルが PGS_VERT の場合は、下のボタンの上部にボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 詳細については、次を参照してください。[ページャー コントロールのスタイル](/windows/desktop/Controls/pager-control-styles)します。|  
   
 ### <a name="return-value"></a>戻り値  
  指定したボタンが非表示の状態の場合は TRUE。それ以外の場合、FALSE です。  
@@ -408,7 +408,7 @@ BOOL IsButtonNormal(int iButton) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*名前*|ボタンの状態を取得することを示します。 ページャー コントロールのスタイルが PGS_HORZ の場合は、右側のボタンの左ボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 ページャー コントロールのスタイルが PGS_VERT の場合は、下のボタンの上部にボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 詳細については、次を参照してください。[ページャー コントロールのスタイル](/windows/desktop/Controls/pager-control-styles)します。|  
+|*iButton*|[in]ボタンの状態を取得することを示します。 ページャー コントロールのスタイルが PGS_HORZ の場合は、右側のボタンの左ボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 ページャー コントロールのスタイルが PGS_VERT の場合は、下のボタンの上部にボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 詳細については、次を参照してください。[ページャー コントロールのスタイル](/windows/desktop/Controls/pager-control-styles)します。|  
   
 ### <a name="return-value"></a>戻り値  
  指定したボタンが通常の状態の場合は TRUE。それ以外の場合、FALSE です。  
@@ -447,7 +447,7 @@ COLORREF SetBkColor(COLORREF clrBk);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*clrBk*|A [COLORREF](/windows/desktop/gdi/colorref)ページャー コントロールの新しい背景色を表す値です。|  
+|*clrBk*|[in]A [COLORREF](/windows/desktop/gdi/colorref)ページャー コントロールの新しい背景色を表す値です。|  
   
 ### <a name="return-value"></a>戻り値  
  A [COLORREF](/windows/desktop/gdi/colorref)ページャー コントロールの前の背景色を表す値です。  
@@ -471,7 +471,7 @@ int SetBorder(int iBorder);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*iBorder*|新しい境界線のサイズは、ピクセル単位で測定されます。 場合、 *iBorder*パラメーターが負の値、境界線のサイズが 0 に設定されます。|  
+|*iBorder*|[in]新しい境界線のサイズは、ピクセル単位で測定されます。 場合、 *iBorder*パラメーターが負の値、境界線のサイズが 0 に設定されます。|  
   
 ### <a name="return-value"></a>戻り値  
  前の境界線のサイズは、ピクセル単位で測定されます。  
@@ -495,7 +495,7 @@ int SetButtonSize(int iButtonSize);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*iButtonSize*|新しいボタンのサイズは、ピクセル単位で測定されます。|  
+|*iButtonSize*|[in]新しいボタンのサイズは、ピクセル単位で測定されます。|  
   
 ### <a name="return-value"></a>戻り値  
  以前のボタンのサイズは、ピクセル単位で測定されます。  
@@ -521,7 +521,7 @@ void SetChild(HWND hwndChild);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*hwndChild*|含まれるウィンドウへのハンドルします。|  
+|*hwndChild*|[in]含まれるウィンドウへのハンドルします。|  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、送信、 [PGM_SETCHILD](/windows/desktop/Controls/pgm-setchild)メッセージは、Windows SDK で説明します。  
@@ -544,7 +544,7 @@ void SetScrollPos(int iPos);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*iPos*|新しいスクロール位置はピクセル単位で測定されます。|  
+|*iPos*|[in]新しいスクロール位置はピクセル単位で測定されます。|  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、送信、 [PGM_SETPOS](/windows/desktop/Controls/pgm-setpos)メッセージは、Windows SDK で説明します。  

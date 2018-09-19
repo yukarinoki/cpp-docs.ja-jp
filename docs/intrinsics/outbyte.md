@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70aa643d7d8f81cca0ff74a3016badd6551c11a0
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: cff8c2e8abfff713b4044ce58104c58b0a96da12
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539330"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719271"
 ---
 # <a name="outbyte"></a>__outbyte
 **Microsoft 固有の仕様**  
@@ -39,11 +39,11 @@ void __outbyte(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力] `Port`  
- データを送信するポート。  
+*ポート*<br/>
+[in]データを送信するポート。  
   
- [入力] `Data`  
- 指定したポートを送信するバイト。  
+*データ*<br/>
+[in]指定したポートを送信するバイト。  
   
 ## <a name="requirements"></a>要件  
   

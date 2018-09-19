@@ -1,5 +1,5 @@
 ---
-title: NMAKE の致命的なエラー U1087 |Microsoft ドキュメント
+title: NMAKE の致命的なエラー U1087 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f07309c64066b0a17aab110035c700c229c439df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f0e094c720222990ee90af7de900d8cf6ba4051
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319723"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036801"
 ---
 # <a name="nmake-fatal-error-u1087"></a>NMAKE の致命的なエラー U1087
-できません: と:: 同じターゲットの依存関係  
-  
- 両方を 1 つのコロンでターゲットを指定することはできません (**:**) とダブル コロン (`::`) 依存関係。  
-  
- 複数の記述ブロックのターゲットを指定するには、使用`::`各依存関係行にします。
+
+できません: と:: 同じターゲットの依存
+
+両方を 1 つのコロンでターゲットを指定することはできません (**:**) とダブル コロン (`::`) 依存関係。
+
+複数の記述ブロックのターゲットを指定するには使用`::`依存関係の行ごとにします。

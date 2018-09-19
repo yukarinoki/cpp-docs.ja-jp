@@ -15,14 +15,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa63175e086fcb22552d0b7fd027b380d9766739
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 05a5204234eb127da676e3b4a12ef875baecdad0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388089"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705784"
 ---
-# <a name="build-and-run-a-c-console-app-project"></a>ビルドおよび実行する C++ コンソール アプリケーション プロジェクト
+# <a name="build-and-run-a-c-console-app-project"></a>ビルドおよび C++ コンソール アプリ プロジェクトの実行
 
 C++ コンソール アプリケーション プロジェクトを作成しコードを入力すれば、Visual Studio 内でビルドおよび実行できます。そして、コマンドラインからスタンドアロンのアプリとしても実行できます。
 
@@ -34,7 +34,7 @@ C++ コンソール アプリケーション プロジェクトを作成しコ�
 
 もし Visual Studio が次のような外観なら、アプリをビルドして実行する準備はできています。
 
-   ![新しいプロジェクトをビルドする準備ができて](../build/media/vscpp-ready-to-build.png "新しいプロジェクトをビルドする準備完了")
+   ![新しいプロジェクトをビルドする準備ができて](../build/media/vscpp-ready-to-build.png "新しいプロジェクトを構築する準備")
 
 ## <a name="build-and-run-your-code-in-visual-studio"></a>Visual Studio でのビルドおよびコードの実行
 
@@ -44,13 +44,13 @@ C++ コンソール アプリケーション プロジェクトを作成しコ�
 
 1. コードを実行するには、メニュー バー上にある **デバッグ** を選び、それから **デバッグなしで開始** を選んでください。
 
-   ![プロジェクトの開始、](../build/media/vscpp-start-without-debugging.gif "プロジェクトの開始")
+   ![プロジェクトを開始する](../build/media/vscpp-start-without-debugging.gif "プロジェクトを開始します")
 
     Visual Studio 内でコンソール ウィンドウが開かれ、アプリが実行されます。 コードが実行された後に、「続行するには何かキーを押してください. . .」 . ." と表示されますので、出力の表示を見れる機会があります。
 
 おめでとうございます! 初めての「Hello, world!」 コンソール アプリが Visual Studio で作成されました。 任意のキーを押せば、コンソール ウィンドウが閉じられ、Visual Studio に戻ります。
 
-[問題が発生しました。](#build-and-run-your-code-in-visual-studio-issues)
+[問題が発生しました](#build-and-run-your-code-in-visual-studio-issues)
 
 ## <a name="run-your-code-in-a-command-window"></a>コマンド ウィンドウで、コードを実行します。
 
@@ -60,15 +60,15 @@ C++ コンソール アプリケーション プロジェクトを作成しコ�
 
 1. **[ファイル エクスプ ローラー]** ウィンドウで [デバッグ] フォルダーを開きます。 これには、アプリ、HelloWorld.exe、および他のいくつかのデバッグ ファイルが含まれています。 HelloWorld.exe を選択し、Shift キーを押しながら右クリックしてコンテキスト メニューを開きます。 **[パスとしてコピー]** を選択し、アプリへのパスをクリップボードにコピーします。
 
-1. コマンド プロンプト ウィンドウを開くには、Windows の R キーを押して、**実行**ダイアログ。 入力*cmd.exe*で、**開く** ボックスを選択し、 **ok**コマンド プロンプト ウィンドウを実行します。
+1. コマンド プロンプト ウィンドウを開くには、Windows-R キーを押して、**実行**ダイアログ。 入力*cmd.exe*で、**オープン** ボックスに、選択し、 **ok**コマンド プロンプト ウィンドウを実行します。
 
-1. コマンド プロンプト ウィンドウで右クリックし、コマンド プロンプトに、アプリへのパスを貼り付けます。 Enter キーを押して、アプリを実行します。
+1. コマンド プロンプト ウィンドウで右クリックし、コマンド プロンプトに、アプリへのパスを貼り付けます。 アプリを実行するには、enter キーを押します。
 
-   ![コマンド プロンプトで、アプリを実行](../build/media/vscpp-run-in-cmd.gif "コマンド プロンプトで、アプリを実行")
+   ![コマンド プロンプトで、アプリを実行](../build/media/vscpp-run-in-cmd.gif "コマンド プロンプトで、アプリの実行")
 
-以上で、ビルドを Visual Studio で、コンソール アプリケーションを実行しました。
+これで、ビルドし、Visual Studio でコンソール アプリを実行しました。
 
-[問題が発生しました。](#run-your-code-in-a-command-window-issues)
+[問題が発生しました](#run-your-code-in-a-command-window-issues)
 
 ## <a name="next-steps"></a>次の手順
 
@@ -78,7 +78,7 @@ C++ コンソール アプリケーション プロジェクトを作成しコ�
 
 最初の C++ プロジェクトの作成での一般的な問題の発生時のソリューションは、ここを参照してください。
 
-### <a name="build-and-run-your-code-in-visual-studio-issues"></a>ビルドおよび Visual Studio の問題、コードを実行します。
+### <a name="build-and-run-your-code-in-visual-studio-issues"></a>ビルドし、Visual Studio の問題でコードを実行
 
 ソース コード エディターで赤い波線が下に表示される場合、ビルドにエラーまたは警告があります。 コードが、スペル、句読点、および大文字小文字の例と一致することを確認してください。
 
@@ -86,12 +86,11 @@ C++ コンソール アプリケーション プロジェクトを作成しコ�
 
 ### <a name="run-your-code-in-a-command-window-issues"></a>コマンド ウィンドウで、コードを実行の問題
 
-アプリを実行するコマンドラインで、ソリューションのデバッグ フォルダーに移動することもできます。 アプリへのパスを指定せず、他のディレクトリからアプリを実行することはできません。 ただし、アプリを別のディレクトリにコピーし、そこから実行します。
+アプリを実行するコマンドラインでソリューションのデバッグ フォルダーに移動することもできます。 アプリへのパスを指定せず、その他のディレクトリからアプリを実行することはできません。 ただし、アプリを別のディレクトリにコピーでき、そこから実行できます。
 
-表示されない場合**パスとしてコピー**ショートカット メニューで、メニューを閉じるし、Shift キーを押しながら、もう一度開きます。 これは、便宜上だけです。 フォルダーに、ファイル エクスプ ローラーの検索バーからパスをコピーして貼り付けます、**実行**ダイアログ ボックスで、最後に実行可能ファイルの名前を入力します。 ほんの少しだけ多くの入力しますが、同じ結果があります。
+表示されない場合**パスとしてコピー**ショートカット メニューで、メニューを閉じるし、Shift キーを押しながら、もう一度開きます。 これは、利便性。 ファイル エクスプ ローラーの検索バーから、フォルダーにパスをコピーしてに貼り付けることができます、**実行**ダイアログ ボックスで、最後に、実行可能ファイルの名前を入力します。 ほんの少し詳細入力ですが、同じ結果があります。
 
 [戻る。](#run-your-code-in-a-command-window)
-
 
 <iframe src="" height="0" width="0" frameborder="0" name="frameTarget" />
 ||||||| merged common ancestors

@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2133 |Microsoft ドキュメント
+title: コンパイラ エラー C2133 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 878f6fa4a36e7de28bfc084f7f716d50b52c363a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 169b24787f1b180c7ba70c5d779e341e60ea2150
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171914"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025192"
 ---
 # <a name="compiler-error-c2133"></a>コンパイラ エラー C2133
-'identifier': 不明なサイズ  
-  
- 可変長配列は、クラス、構造体、共用体、または列挙体のメンバーとして宣言されています。 /Za (ANSI C) オプションでは、メンバーの可変長配列は許可されません。  
-  
- 次の例では、C2133 が生成されます。  
-  
-```  
-// C2133.cpp  
-// compile with: /Za  
-struct X {  
-   int a[0];   // C2133 unsized array  
-};  
-```  
-  
- 考えられる解決方法:  
-  
-```  
-// C2133b.cpp  
-// compile with: /c  
-struct X {  
-   int a[0];   // no /Za  
-};  
+
+'identifier': サイズが不明です
+
+可変長配列は、クラス、構造体、共用体、または列挙体のメンバーとして宣言されます。 /Za (ANSI C) オプションでは、メンバーを可変長配列は許可されません。
+
+次の例では、C2133 が生成されます。
+
+```
+// C2133.cpp
+// compile with: /Za
+struct X {
+   int a[0];   // C2133 unsized array
+};
+```
+
+考えられる解決方法:
+
+```
+// C2133b.cpp
+// compile with: /c
+struct X {
+   int a[0];   // no /Za
+};
 ```

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 545f38058871d81196150e127c1814b304b6ab56
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1c0261964f2e9c33f8a594a83e1b19c1db7be614
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767856"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069236"
 ---
 # <a name="iworkerthreadclient-interface"></a>IWorkerThreadClient インターフェイス
 
@@ -66,7 +66,7 @@ HRESULT CloseHandle(HANDLE  hHandle);
 
 ### <a name="parameters"></a>パラメーター
 
-*hHandle*  
+*hHandle*<br/>
 終了するハンドル。
 
 ### <a name="return-value"></a>戻り値
@@ -93,10 +93,10 @@ HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
 
 ### <a name="parameters"></a>パラメーター
 
-*について*  
+*について*<br/>
 ユーザー パラメーター。
 
-*hObject*  
+*hObject*<br/>
 このハンドルがシグナル状態になります。
 
 ### <a name="return-value"></a>戻り値
@@ -115,5 +115,5 @@ HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
 
 ## <a name="see-also"></a>関連項目
 
-[クラス](../../atl/reference/atl-classes.md)   
+[クラス](../../atl/reference/atl-classes.md)<br/>
 [CWorkerThread クラス](../../atl/reference/cworkerthread-class.md)

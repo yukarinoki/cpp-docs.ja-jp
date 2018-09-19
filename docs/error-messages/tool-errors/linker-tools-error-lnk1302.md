@@ -1,5 +1,5 @@
 ---
-title: リンカ ツール エラー LNK1302 |Microsoft ドキュメント
+title: リンカ ツール エラー LNK1302 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6aa84a411f91303c84acb44e2e6c0ab3d975e19f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3dc85b37d58e12602c02c2207c1f38bda9344e59
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299420"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045511"
 ---
 # <a name="linker-tools-error-lnk1302"></a>リンカ ツール エラー LNK1302
-安全な .netmodule; のリンクのみをサポートします。ファイル .netmodule にリンクすることができません。  
-  
- .Netmodule (でコンパイルされた **/LN**) が、ユーザーで MSIL のリンクを起動するために、リンカーに渡されました。  C++ モジュールと MSIL にコンパイルする場合のリンクに対して有効では、 **/clr:safe**です。  
-  
- このエラーを修正するコンパイル時に **/clr:safe** MSIL リンクすると、有効にするにまたはパス、 **/clr**または **/clr: 純粋な**モジュールの代わりにリンカーを .obj ファイル。  
-  
- 詳細については、次のトピックを参照してください。  
-  
--   [/LN (MSIL モジュールの作成)](../../build/reference/ln-create-msil-module.md)  
-  
--   [.netmodule ファイル (リンカー入力)](../../build/reference/netmodule-files-as-linker-input.md)
+
+安全な .netmodule は; をリンクのみをサポートします.netmodule のファイルをリンクできません。
+
+.Netmodule (でコンパイルされた **/LN**) を呼び出す MSIL リンク ユーザーの試行時に、リンカーに渡されました。  C++ モジュールは、MSIL にコンパイルする場合のリンクの有効な **/clr:safe**します。
+
+このエラーを修正するとコンパイル **/clr:safe** MSIL がリンクを有効にまたはパス、 **/clr**または **/clr: 純粋な**モジュールではなく、リンカーを .obj ファイル。
+
+詳細については、次のトピックを参照してください。
+
+- [/LN (MSIL モジュールの作成)](../../build/reference/ln-create-msil-module.md)
+
+- [.netmodule ファイル (リンカー入力)](../../build/reference/netmodule-files-as-linker-input.md)

@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2811 |Microsoft ドキュメント
+title: コンパイラ エラー C2811 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef9c608f19be28dbbeeca89c5f6672149e0ac4f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e7e3b2d7bb76989b2028846efee6b18d10e1b0ad
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236080"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059616"
 ---
 # <a name="compiler-error-c2811"></a>コンパイラ エラー C2811
-'type1': ref 'type2' から継承できませんクラスは、ref クラスまたはインターフェイス クラスからのみ継承できます。  
-  
- マネージ クラスの基底クラスとしてアンマネージ クラスを使用しようとするとします。  
-  
- 次の例では、C2811 が生成されます。  
-  
-```  
-// C2811.cpp  
-// compile with: /clr /c  
-struct S{};  
-ref struct T {};  
-ref class C : public S {};   // C2811  
-ref class D : public T {};   // OK  
+
+'type1': ref 'type2' から継承できませんクラスは、ref クラスまたはインターフェイス クラスからのみ継承できます。
+
+マネージ クラスの基底クラスとしてアンマネージ クラスを使用しようとしました。
+
+次の例では、C2811 が生成されます。
+
+```
+// C2811.cpp
+// compile with: /clr /c
+struct S{};
+ref struct T {};
+ref class C : public S {};   // C2811
+ref class D : public T {};   // OK
 ```

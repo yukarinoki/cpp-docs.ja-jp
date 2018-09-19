@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2487 |Microsoft ドキュメント
+title: コンパイラ エラー C2487 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26d2f74f1d189cf2be71d812dd8da01bb6fe8bdb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36b2b0a71ef29edc7bbd7fec7b359c4a5a10df1c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225464"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018914"
 ---
 # <a name="compiler-error-c2487"></a>コンパイラ エラー C2487
-'identifier': dll インターフェイス クラスのメンバーを dll インターフェイスと共に宣言することはできません  
-  
- 全体のクラス、または非 DLL インターフェイス クラスを DLL インターフェイスの特定のメンバーを宣言することができます。 DLL インターフェイスとクラスを宣言し、DLL インターフェイスと共にそのクラスのメンバーを宣言できません。
+
+'identifier': dll インターフェイス クラスのメンバーを dll インターフェイスと共に宣言することはできません
+
+クラス全体、または DLL のインターフェイスを持つ、非 DLL インターフェイス クラスの特定のメンバーを宣言することができます。 DLL インターフェイスと共にクラスを宣言および DLL インターフェイスと共にそのクラスのメンバーを宣言できません。

@@ -1,5 +1,5 @@
 ---
-title: OLE DB コンシューマーの作成 |Microsoft ドキュメント
+title: OLE DB コンシューマーの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,21 +15,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4e68aacb013cb7f91d0225094cfd941eae5e2c30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4ef6d5d54bb3d6ed55ec2837a2300d8a1dcb03e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33096692"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034090"
 ---
 # <a name="creating-an-ole-db-consumer"></a>OLE DB コンシューマーの作成
-推奨される方法は、ウィザードを使用していて、ATL OLE DB コンシューマー ウィザードでの有無コンシューマーを OLE DB テンプレートを作成することができます。 コンシューマーは、ATL をサポートする任意のアプリケーションで動作できます。  
+
+推奨される方法には、ウィザードを使用して、ATL OLE DB コンシューマー ウィザードでの有無に、コンシューマーを OLE DB テンプレートを作成することができます。 コンシューマーが ATL をサポートする任意のアプリケーションで運用します。  
   
- ここでは、次のトピックについて説明します。  
+ここでは、次のトピックについて説明します。  
   
--   [ウィザードを使用した OLE DB コンシューマーの作成](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)  
+- [ウィザードを使用した OLE DB コンシューマーの作成](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)  
   
--   [ウィザードを使用せず、OLE DB コンシューマーを作成します。](../../data/oledb/creating-a-consumer-without-using-a-wizard.md)  
+- [ウィザードを使用しない OLE DB コンシューマーの作成](../../data/oledb/creating-a-consumer-without-using-a-wizard.md)  
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)
+
+[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)

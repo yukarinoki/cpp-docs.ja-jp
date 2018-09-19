@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 4) C4366 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 4) C4366 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12410a567cb55d6dea74b8e5e595009e56b1071f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb24c65605857124edf608bec88f1399d9df607d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293703"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047045"
 ---
 # <a name="compiler-warning-level-4-c4366"></a>コンパイラの警告 (レベル 4) C4366
-単項 'operator' 演算子の結果は固定でない可能性があります。  
-  
- 場合構造体のメンバーがこれまでできません固定梱包のため、コンパイラは警告ときに固定されたポインター、メンバーのアドレスが割り当てられています。 既定では、すべてのポインターを配置します。  
-  
- C4366 を解決するには、構造体のアラインメントを変更するかでマウス ポインターを宣言、 [_ _unaligned](../../cpp/unaligned.md)キーワード。  
-  
- 詳細については、_ _unaligned を参照してください。 および[パック](../../preprocessor/pack.md)です。  
-  
-## <a name="example"></a>例  
- 次の例では、C4366 を生成します。  
-  
-```  
-// C4366.cpp  
-// compile with: /W4 /c  
-// processor: IPF x64  
-#pragma pack(1)  
-struct X {  
-   short s1;  
-   int s2;  
-};  
-  
-int main() {  
-   X x;  
-   short * ps1 = &x.s1;   // OK  
-   int * ps2 = &x.s2;   // C4366  
-}  
+
+単項 'operator' 演算子の結果を配置できない可能性があります。
+
+構造体のメンバーまでできません固定パッキングのため、コンパイラは警告ときにアラインされたポインター、メンバーのアドレスが割り当てられています。 既定では、すべてのポインターを配置します。
+
+C4366 を解決するには、構造体のアラインメントを変更またはのいずれかにポインターを宣言、 [_ _unaligned](../../cpp/unaligned.md)キーワード。
+
+詳細についてを参照してください _ _unaligned と[パック](../../preprocessor/pack.md)します。
+
+## <a name="example"></a>例
+
+次の例では、C4366 が生成されます。
+
+```
+// C4366.cpp
+// compile with: /W4 /c
+// processor: IPF x64
+#pragma pack(1)
+struct X {
+   short s1;
+   int s2;
+};
+
+int main() {
+   X x;
+   short * ps1 = &x.s1;   // OK
+   int * ps2 = &x.s2;   // C4366
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: swap 関数 (auto_handle) |Microsoft ドキュメント
+title: swap 関数 (auto_handle) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c616a391db07a9c6116c96c1b0242714a0ad958b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 66416bf19a154a5ea1f4a52728f97bbfbd3477f8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33163960"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103237"
 ---
 # <a name="swap-function-autohandle"></a>swap 関数 (auto_handle)
 1 つの間でオブジェクトを交換`auto_handle`別とします。  
@@ -39,11 +39,11 @@ void swap(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `_left`  
- `auto_handle`。  
+*_ 左*<br/>
+`auto_handle`。  
   
- `_right`  
- 別`auto_handle`です。  
+*(_r)*<br/>
+もう 1 つ`auto_handle`します。  
   
 ## <a name="example"></a>例  
   

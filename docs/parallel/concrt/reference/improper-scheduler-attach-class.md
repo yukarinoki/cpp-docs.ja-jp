@@ -1,5 +1,5 @@
 ---
-title: improper_scheduler_attach クラス |Microsoft ドキュメント
+title: improper_scheduler_attach クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c5e3ede7a9aeba58c84b39f346222adde17f682
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 46f676bbe61784adab40f90e329b87aa1c1aae52
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685620"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026753"
 ---
 # <a name="improperschedulerattach-class"></a>improper_scheduler_attach クラス
 このクラスは、現在のコンテキストに既にアタッチされている `Attach` オブジェクトで `Scheduler` メソッドが呼び出された場合にスローされる例外を表します。  
@@ -63,8 +63,8 @@ improper_scheduler_attach() throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Message`  
- エラーの説明メッセージ。  
+*メッセージ (_m)*<br/>
+エラーの説明メッセージ。  
   
 ## <a name="see-also"></a>関連項目  
  [同時実行 Namespace](concurrency-namespace.md)   

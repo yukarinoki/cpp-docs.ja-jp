@@ -1,5 +1,5 @@
 ---
-title: 名前ではなく序数で DLL から関数をエクスポートする |Microsoft ドキュメント
+title: 名前ではなく序数で DLL から関数をエクスポートする |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,24 +19,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b05f3e429406b3c24c7a21ce9ee8e10fe19c14b8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2d894df971dd0c50556a420eafa2909474ee6912
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367694"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714260"
 ---
 # <a name="exporting-functions-from-a-dll-by-ordinal-rather-than-by-name"></a>名前ではなく序数値による DLL 関数のエクスポート
-DLL から関数をエクスポートする最も簡単な方法では、名前によるエクスポートです。 これは、使用するときに起こる**方式**、例を示します。 代わりに序数で関数をエクスポートすることができます。 この手法を使用する必要がありますの代わりに .def ファイルを使用して**方式**です。 関数の序数値を指定するには、.def ファイル内の関数名をその序数を追加します。 序数値の指定方法の詳細については、次を参照してください。 [.def ファイルを使った DLL からエクスポートする](../build/exporting-from-a-dll-using-def-files.md)です。  
-  
+
+DLL から関数をエクスポートする最も簡単な方法では、それらの名前でエクスポートします。 これは、使用するときに起こる**方式**など。 代わりに序数で関数をエクスポートすることができます。 この手法では、代わりに .def ファイルを使用する必要があります**方式**します。 関数の序数値を指定するには、.def ファイル内の関数名をその序数を追加します。 序数を指定する方法の詳細については、次を参照してください。 [.def ファイルを使った DLL からエクスポート](../build/exporting-from-a-dll-using-def-files.md)します。
+
 > [!TIP]
->  DLL のファイルのサイズを最適化する場合は、使用、 **NONAME**エクスポートされた各関数の属性です。 **NONAME**属性、序数に格納されている場合、DLL のエクスポート関数名ではなくテーブル。 多くの関数をエクスポートする場合は、大幅なコスト削減にできます。  
-  
-## <a name="what-do-you-want-to-do"></a>実行する操作  
-  
--   [序数でエクスポートできるように、.def ファイルを使用します。](../build/exporting-from-a-dll-using-def-files.md)  
-  
--   [関数を使用します。](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
-  
-## <a name="see-also"></a>関連項目  
- [DLL からのエクスポート](../build/exporting-from-a-dll.md)
+>  DLL のファイルのサイズを最適化する場合を使用して、 **NONAME**エクスポートされた各関数の属性。 **NONAME**属性、序数に格納されている場合、DLL のエクスポート関数名ではなくテーブル。 多くの関数をエクスポートする場合は、この大幅なコストを削減できます。
+
+## <a name="what-do-you-want-to-do"></a>実行する操作
+
+- [序数でエクスポートできるので、.def ファイルを使用します。](../build/exporting-from-a-dll-using-def-files.md)
+
+- [関数を使用します。](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+
+## <a name="see-also"></a>関連項目
+
+[DLL からのエクスポート](../build/exporting-from-a-dll.md)

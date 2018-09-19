@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98fb1c50b6bdd46cc6cf0efe7739e8ada60f3274
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9acbb55f09df3912ff61a54557cb013e86c48834
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762636"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036632"
 ---
 # <a name="ctokenprivileges-class"></a>CTokenPrivileges クラス
 
@@ -98,19 +98,19 @@ Windows でのアクセス制御モデルの概要については、次を参照
 1 つまたは複数の権限を追加、`CTokenPrivileges`アクセス トークンのオブジェクト。
 
 ```
-bool Add(LPCTSTR pszPrivilege, bool bEnable) throw(...);  
+bool Add(LPCTSTR pszPrivilege, bool bEnable) throw(...);
 void Add(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*pszPrivilege*  
+*pszPrivilege*<br/>
 WINNT で定義されている、権限の名前を指定する null で終わる文字列へのポインター。H ヘッダー ファイルです。
 
-*bEnable*  
+*bEnable*<br/>
 True の場合、特権が有効にします。 False の場合、特権は無効です。
 
-*rPrivileges*  
+*rPrivileges*<br/>
 参照を[TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)構造体。 特権と属性がこの構造体からコピーされに追加、`CTokenPrivileges`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -123,16 +123,16 @@ True の場合、特権が有効にします。 False の場合、特権は無�
 
 ```
 CTokenPrivileges() throw();
-CTokenPrivileges(const CTokenPrivileges& rhs) throw(... );  
+CTokenPrivileges(const CTokenPrivileges& rhs) throw(... );
 CTokenPrivileges(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*rhs*  
+*rhs*<br/>
 `CTokenPrivileges`新しいオブジェクトに割り当てるオブジェクト。
 
-*rPrivileges*  
+*rPrivileges*<br/>
 [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)構造に割り当てる新しい`CTokenPrivileges`オブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -161,7 +161,7 @@ bool Delete(LPCTSTR pszPrivilege) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pszPrivilege*  
+*pszPrivilege*<br/>
 WINNT で定義されている、権限の名前を指定する null で終わる文字列へのポインター。H ヘッダー ファイルです。 定数 SE_SECURITY_NAME、またはその対応する文字列、"SeSecurityPrivilege"たとえば、このパラメーターを指定可能性があります。
 
 ### <a name="return-value"></a>戻り値
@@ -194,7 +194,7 @@ void GetDisplayNames(CNames* pDisplayNames) const throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*pDisplayNames*  
+*pDisplayNames*<br/>
 `CString` オブジェクトの配列へのポインター。 `CNames` typedef として定義されます:`CTokenPrivileges::CAtlArray<CString>`します。
 
 ### <a name="remarks"></a>Remarks
@@ -239,10 +239,10 @@ void GetLuidsAndAttributes(
 
 ### <a name="parameters"></a>パラメーター
 
-*pPrivileges*  
+*pPrivileges*<br/>
 配列を指すポインター [LUID](/windows/desktop/api/winnt/ns-winnt-_luid)オブジェクト。 `CLUIDArray` typedef 定義として`CAtlArray<LUID> CLUIDArray`します。
 
-*pAttributes*  
+*pAttributes*<br/>
 DWORD オブジェクトの配列へのポインター。 このパラメーターが省略するか、NULL の場合は、属性は取得されません。 `CAttributes` typedef 定義として`CAtlArray <DWORD> CAttributes`します。
 
 ### <a name="remarks"></a>Remarks
@@ -261,10 +261,10 @@ void GetNamesAndAttributes(
 
 ### <a name="parameters"></a>パラメーター
 
-*pNames*  
+*pNames*<br/>
 配列を指すポインター`CString`オブジェクト。 `CNames` typedef 定義として`CAtlArray <CString> CNames`します。
 
-*pAttributes*  
+*pAttributes*<br/>
 DWORD オブジェクトの配列へのポインター。 このパラメーターが省略するか、NULL の場合は、属性は取得されません。 `CAttributes` typedef 定義として`CAtlArray <DWORD> CAttributes`します。
 
 ### <a name="remarks"></a>Remarks
@@ -297,10 +297,10 @@ bool LookupPrivilege(
 
 ### <a name="parameters"></a>パラメーター
 
-*pszPrivilege*  
+*pszPrivilege*<br/>
 WINNT で定義されている、権限の名前を指定する null で終わる文字列へのポインター。H ヘッダー ファイルです。 定数 SE_SECURITY_NAME、またはその対応する文字列、"SeSecurityPrivilege"たとえば、このパラメーターを指定可能性があります。
 
-*pdwAttributes*  
+*pdwAttributes*<br/>
 属性が格納される変数へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -312,16 +312,16 @@ WINNT で定義されている、権限の名前を指定する null で終わ�
 代入演算子。
 
 ```
-CTokenPrivileges& operator= (const TOKEN_PRIVILEGES& rPrivileges) throw(...);  
+CTokenPrivileges& operator= (const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*rPrivileges*  
+*rPrivileges*<br/>
 [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)構造に割り当てる、`CTokenPrivileges`オブジェクト。
 
-*rhs*  
+*rhs*<br/>
 `CTokenPrivileges`オブジェクトに割り当てるオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -332,7 +332,7 @@ CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
 
 値へのポインターにキャスト、`TOKEN_PRIVILEGES`構造体。
 
-```  
+```
 operator const TOKEN_PRIVILEGES *() const throw(...);
 ```
 
@@ -342,9 +342,9 @@ operator const TOKEN_PRIVILEGES *() const throw(...);
 
 ## <a name="see-also"></a>関連項目
 
-[セキュリティのサンプル](../../visual-cpp-samples.md)   
-[TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)   
-[LUID](/windows/desktop/api/winnt/ns-winnt-_luid)   
-[LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes)   
-[クラスの概要](../../atl/atl-class-overview.md)   
+[セキュリティのサンプル](../../visual-cpp-samples.md)<br/>
+[TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)<br/>
+[LUID](/windows/desktop/api/winnt/ns-winnt-_luid)<br/>
+[LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes)<br/>
+[クラスの概要](../../atl/atl-class-overview.md)<br/>
 [セキュリティに関するグローバル関数](../../atl/reference/security-global-functions.md)

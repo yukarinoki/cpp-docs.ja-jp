@@ -17,21 +17,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0ba2e8452defef14816993a2c1851de58bf624f
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a22b97e730a40e8ebe71ea766919f946ac4dcb84
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407284"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064364"
 ---
 # <a name="program-termination"></a>プログラムの終了
-C++ では、次のようなプログラムの終了方法があります。  
-  
--   呼び出す、[終了](../cpp/exit-function.md)関数。  
-  
--   呼び出す、[中止](../cpp/abort-function.md)関数。  
-  
--   実行、[返す](../cpp/return-statement-in-program-termination-cpp.md)ステートメントから`main`します。  
-  
-## <a name="see-also"></a>関連項目  
- [main: プログラムの起動](../cpp/main-program-startup.md)
+
+C++ では、次のようなプログラムの終了方法があります。
+
+- 呼び出す、[終了](../cpp/exit-function.md)関数。
+
+- 呼び出す、[中止](../cpp/abort-function.md)関数。
+
+- 実行、[返す](../cpp/return-statement-in-program-termination-cpp.md)ステートメントから`main`します。
+
+## <a name="see-also"></a>関連項目
+
+[main: プログラムの起動](../cpp/main-program-startup.md)

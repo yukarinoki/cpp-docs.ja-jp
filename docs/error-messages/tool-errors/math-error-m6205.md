@@ -1,5 +1,5 @@
 ---
-title: 数値演算エラー M6205 |Microsoft ドキュメント
+title: 数値演算エラー M6205 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e8d7fbd042d8ce8210ec4fe275b0d83314f5d12
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 55549300a5ea603e4462d5b81679f935319838ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322069"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099755"
 ---
 # <a name="math-error-m6205"></a>数値演算エラー M6205
-'function': _TLOSS エラー  
-  
- 全体の有効桁数 (精度) 機能の損失が発生しました。  
-  
- このエラーは cos、sin のオペランドとして非常に大きい数値を付けることで発生した可能性がまたはオペランドが 0 ~ 2 の数値に限定する必要がありますので tan * pi します。
+
+'function': _TLOSS エラー
+
+有効桁 (精度) の合計の損失が発生しました。
+
+このエラーは、cos、sin のオペランドとして非常に大きい数を指定することにより発生した可能性がまたはオペランドが 0 ~ 2 の数値に限定する必要がありますので、tan * pi します。

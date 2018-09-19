@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3736 |Microsoft ドキュメント
+title: コンパイラ エラー C3736 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e4268e8f01d01147351cb1e9810c05eae0ef215
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f0a98d1e34a7dbf9e951649d88cd5a96d9f12a8a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274692"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069028"
 ---
 # <a name="compiler-error-c3736"></a>コンパイラ エラー C3736
-'event': メソッドにする必要がありますか、またマネージ イベントの場合、データ メンバー  
-  
- ネイティブ モードと COM イベントには、メソッドがある場合があります。 .NET イベントもデータ メンバーであることができます。  
-  
- 次の例では、C3736 が生成されます。  
-  
-```  
-// C3736.cpp  
-struct A {  
-   __event int e();  
-};  
-  
-struct B {  
-   int f;   // C3736  
-   // The following line resolves the error.  
-   // int f();  
-   B(A* a) {  
-      __hook(&A::e, a, &B::f);  
-   }  
-};  
-  
-int main() {  
-}  
+
+'event': メソッドであるか、またマネージド イベントの場合、データ メンバー
+
+ネイティブ モードと COM イベントには、メソッドがある場合があります。 .NET イベントでは、データ メンバーはこともできます。
+
+次の例では、C3736 が生成されます。
+
+```
+// C3736.cpp
+struct A {
+   __event int e();
+};
+
+struct B {
+   int f;   // C3736
+   // The following line resolves the error.
+   // int f();
+   B(A* a) {
+      __hook(&A::e, a, &B::f);
+   }
+};
+
+int main() {
+}
 ```

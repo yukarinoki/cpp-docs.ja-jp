@@ -1,7 +1,7 @@
 ---
 title: directory_entry クラス | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_entry::operator&gt;=
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdb2962d2d1dc4e39d2528c89267a9cf8871937a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 46a031b727f5c592925aaa4d343fc1299f6d4cdf
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105784"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701520"
 ---
 # <a name="directoryentry-class"></a>directory_entry クラス
 
@@ -115,13 +115,13 @@ void assign(const std::experimental::filesystem::path& pval,
 ### <a name="parameters"></a>パラメーター
 
 *pval*<br/>
-格納されているファイル名のパス。  
+格納されているファイル名のパス。
 
 *stat_arg*<br/>
-格納されているファイル名の状態。  
+格納されているファイル名の状態。
 
 *symstat_arg と置き換えます。*<br/>
-格納されているファイル名のシンボリック リンクの状態。  
+格納されているファイル名のシンボリック リンクの状態。
 
 ## <a name="directory_entry"></a> directory_entry
 
@@ -139,13 +139,13 @@ explicit directory_entry(const std::experimental::filesystem::path& pval,
 ### <a name="parameters"></a>パラメーター
 
 *pval*<br/>
-格納されているファイル名のパス。  
+格納されているファイル名のパス。
 
 *stat_arg*<br/>
-格納されているファイル名の状態。  
+格納されているファイル名の状態。
 
 *symstat_arg と置き換えます。*<br/>
-格納されているファイル名のシンボリック リンクの状態。  
+格納されているファイル名のシンボリック リンクの状態。
 
 ## <a name="op_neq"></a> operator!=
 
@@ -158,7 +158,7 @@ bool operator!=(const directory_entry& right) const noexcept;
 ### <a name="parameters"></a>パラメーター
 
 *right*<br/>
-[Directory_entry](../standard-library/directory-entry-class.md)と比較される、`directory_entry`します。  
+[Directory_entry](../standard-library/directory-entry-class.md)と比較される、`directory_entry`します。
 
 ## <a name="op_as"></a> 演算子 =
 
@@ -172,7 +172,7 @@ directory_entry& operator=(directory_entry&&) noexcept = default;
 ### <a name="parameters"></a>パラメーター
 
 *right*<br/>
-[Directory_entry](../standard-library/directory-entry-class.md)にコピーされる、`directory_entry`します。  
+[Directory_entry](../standard-library/directory-entry-class.md)にコピーされる、`directory_entry`します。
 
 ## <a name="op_eq"></a> 演算子 = =
 
@@ -185,7 +185,7 @@ bool operator==(const directory_entry& right) const noexcept;
 ### <a name="parameters"></a>パラメーター
 
 *right*<br/>
-[Directory_entry](../standard-library/directory-entry-class.md)と比較される、`directory_entry`します。  
+[Directory_entry](../standard-library/directory-entry-class.md)と比較される、`directory_entry`します。
 
 ## <a name="op_lt"></a> 演算子&lt;
 
@@ -198,7 +198,7 @@ bool operator<(const directory_entry& right) const noexcept;
 ### <a name="parameters"></a>パラメーター
 
 *right*<br/>
-[Directory_entry](../standard-library/directory-entry-class.md)と比較される、`directory_entry`します。  
+[Directory_entry](../standard-library/directory-entry-class.md)と比較される、`directory_entry`します。
 
 ## <a name="op_lteq"></a> 演算子&lt;=
 
@@ -211,7 +211,7 @@ bool operator&lt;=(const directory_entry& right) const noexcept;
 ### <a name="parameters"></a>パラメーター
 
 *right*<br/>
-[Directory_entry](../standard-library/directory-entry-class.md)と比較される、`directory_entry`します。  
+[Directory_entry](../standard-library/directory-entry-class.md)と比較される、`directory_entry`します。
 
 ## <a name="op_gt"></a> 演算子&gt;
 
@@ -224,7 +224,7 @@ bool operator&gt;(const directory_entry& right) const noexcept;
 ### <a name="parameters"></a>パラメーター
 
 *right*<br/>
-[Directory_entry](../standard-library/directory-entry-class.md)と比較される、`directory_entry`します。  
+[Directory_entry](../standard-library/directory-entry-class.md)と比較される、`directory_entry`します。
 
 ## <a name="op_gteq"></a> 演算子&gt;=
 
@@ -237,7 +237,7 @@ bool operator&gt;=(const directory_entry& right) const noexcept;
 ### <a name="parameters"></a>パラメーター
 
 *right*<br/>
-[Directory_entry](../standard-library/directory-entry-class.md)と比較される、`directory_entry`します。  
+[Directory_entry](../standard-library/directory-entry-class.md)と比較される、`directory_entry`します。
 
 ## <a name="path_type"></a> operator const path_type &
 
@@ -269,13 +269,13 @@ void replace_filename(
 ### <a name="parameters"></a>パラメーター
 
 *pval*<br/>
-格納されているファイル名のパス。  
+格納されているファイル名のパス。
 
 *stat_arg*<br/>
-格納されているファイル名の状態。  
+格納されているファイル名の状態。
 
 *symstat_arg と置き換えます。*<br/>
-格納されているファイル名のシンボリック リンクの状態。  
+格納されているファイル名のシンボリック リンクの状態。
 
 ## <a name="status"></a> 状態
 
@@ -293,7 +293,7 @@ file_status status(error_code& ec) const noexcept;
 ### <a name="parameters"></a>パラメーター
 
 *ec*<br/>
-状態エラー コード。  
+状態エラー コード。
 
 ## <a name="symlink_status"></a> symlink_status
 
@@ -307,9 +307,9 @@ file_status symlink_status(error_code& ec) const noexcept;
 ### <a name="parameters"></a>パラメーター
 
 *ec*<br/>
-状態エラー コード。  
+状態エラー コード。
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)  
-[\<filesystem&gt;](../standard-library/filesystem.md)  
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
+[\<filesystem&gt;](../standard-library/filesystem.md)<br/>

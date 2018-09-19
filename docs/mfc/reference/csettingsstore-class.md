@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1731c32506ec0e9c4c392ff9429e28e5b71b3c7c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c1cd37ee2ad7fe09e2838d5e3cecb3488594d2c9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221133"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706629"
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 Windows API 関数をラップし、レジストリへのアクセスに使用するオブジェクト指向インターフェイスを提供します。  
@@ -102,8 +102,8 @@ virtual BOOL CreateKey(LPCTSTR pszPath);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pszPath*  
- 作成または開かれたキーの名前を指定します。  
+*pszPath*<br/>
+[in]作成または開かれたキーの名前を指定します。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0それ以外の場合、0 以外の値。  
@@ -121,11 +121,11 @@ CSettingsStore(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bAdmin*  
- ブール型パラメーターを指定するかどうか、`CSettingsStore`管理者モードで動作しているオブジェクト。  
+*bAdmin*<br/>
+[in]ブール型パラメーターを指定するかどうか、`CSettingsStore`管理者モードで動作しているオブジェクト。  
   
- [in]*bReadOnly*  
- ブール型パラメーターを指定するかどうか、`CSettingsStore`読み取り専用モードでオブジェクトを作成します。  
+*bReadOnly*<br/>
+[in]ブール型パラメーターを指定するかどうか、`CSettingsStore`読み取り専用モードでオブジェクトを作成します。  
   
 ### <a name="remarks"></a>Remarks  
  場合*bAdmin*を TRUE に設定されている、`m_hKey`にメンバー変数が設定されている**HKEY_LOCAL_MACHINE**します。 設定した場合*bAdmin*を FALSE に`m_hKey`に設定されている**HKEY_CURRENT_USER**します。  
@@ -144,11 +144,11 @@ virtual BOOL DeleteKey(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pszPath*  
- 削除するキーの名前。  
+*pszPath*<br/>
+[in]削除するキーの名前。  
   
- [in]*bAdmin*  
- 削除するキーの場所を指定するスイッチです。  
+*bAdmin*<br/>
+[in]削除するキーの場所を指定するスイッチです。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -166,8 +166,8 @@ virtual BOOL DeleteValue(LPCTSTR pszValue);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*終端*  
- 削除する値のフィールドを指定します。  
+*終端*<br/>
+[in]削除する値のフィールドを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -180,8 +180,8 @@ virtual BOOL Open(LPCTSTR pszPath);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pszPath*  
- レジストリ キーの名前。  
+*pszPath*<br/>
+[in]レジストリ キーの名前。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -265,53 +265,53 @@ virtual BOOL Read(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pszKey*  
- レジストリから読み取る値の名前を含む null で終わる文字列へのポインター。  
+*pszKey*<br/>
+[in]レジストリから読み取る値の名前を含む null で終わる文字列へのポインター。  
   
- [out]*iVal*  
- レジストリ キーから読み取る値を受け取る整数変数への参照。  
+*iVal*<br/>
+[out]レジストリ キーから読み取る値を受け取る整数変数への参照。  
   
- [out]*dwVal*  
- レジストリ キーから読み取る値を受け取る 32 ビットのダブルワード変数への参照。  
+*dwVal*<br/>
+[out]レジストリ キーから読み取る値を受け取る 32 ビットのダブルワード変数への参照。  
   
- [out]*sVal*  
- レジストリ キーから読み取る値を受け取る文字列変数への参照。  
+*sVal*<br/>
+[out]レジストリ キーから読み取る値を受け取る文字列変数への参照。  
   
- [out]*scStringList*  
- レジストリ キーから読み取る値を受け取る文字列リストの変数への参照。  
+*scStringList*<br/>
+[out]レジストリ キーから読み取る値を受け取る文字列リストの変数への参照。  
   
- [out]*scArray*  
- レジストリ キーから読み取る値を受け取る文字列の配列変数への参照。  
+*scArray*<br/>
+[out]レジストリ キーから読み取る値を受け取る文字列の配列変数への参照。  
   
- [out]*dwcArray*  
- レジストリ キーから読み取る値を受け取る 32 ビットのダブルワードの配列変数への参照。  
+*dwcArray*<br/>
+[out]レジストリ キーから読み取る値を受け取る 32 ビットのダブルワードの配列変数への参照。  
   
- [out]*wcArray*  
- レジストリ キーから読み取る値を受信する 16 ビット ワードの配列変数への参照。  
+*wcArray*<br/>
+[out]レジストリ キーから読み取る値を受信する 16 ビット ワードの配列変数への参照。  
   
- [out]*bcArray*  
- レジストリ キーから読み取る値を受信するバイト配列の変数への参照。  
+*bcArray*<br/>
+[out]レジストリ キーから読み取る値を受信するバイト配列の変数への参照。  
   
- [out]*lpPoint*  
- ポインターへの参照を`POINT`レジストリ キーの値を受け取る構造体を読み取る。  
+*lpPoint*<br/>
+[out]ポインターへの参照を`POINT`レジストリ キーの値を受け取る構造体を読み取る。  
   
- [out]*rect*  
- 参照を[CRect](../../atl-mfc-shared/reference/crect-class.md)レジストリ キーから値を受け取る変数の読み取り。  
+*rect*<br/>
+[out]参照を[CRect](../../atl-mfc-shared/reference/crect-class.md)レジストリ キーから値を受け取る変数の読み取り。  
   
- [out]*ppData*  
- 値を受け取るデータへのポインターへのポインターは、レジストリ キーから読み取る。  
+*ppData*<br/>
+[out]値を受け取るデータへのポインターへのポインターは、レジストリ キーから読み取る。  
   
- [out]*ペタバイト*  
- 符号なし整数型の変数へのポインター。 この変数には、バッファーのサイズを*ppData*を指します。  
+*ペタバイト*<br/>
+[out]符号なし整数型の変数へのポインター。 この変数には、バッファーのサイズを*ppData*を指します。  
   
- [out]*一覧*  
- 参照を[CObList](../../mfc/reference/coblist-class.md)レジストリ キーから値を受け取る変数の読み取り。  
+*list*<br/>
+[out]参照を[CObList](../../mfc/reference/coblist-class.md)レジストリ キーから値を受け取る変数の読み取り。  
   
- [out]*obj*  
- 参照を[CObject](../../mfc/reference/cobject-class.md)レジストリ キーから値を受け取る変数の読み取り。  
+*obj*<br/>
+[out]参照を[CObject](../../mfc/reference/cobject-class.md)レジストリ キーから値を受け取る変数の読み取り。  
   
- [out]*pObj*  
- ポインターへの参照を`CObject`レジストリ キーから値を受け取る変数の読み取り。  
+*pObj*<br/>
+[out]ポインターへの参照を`CObject`レジストリ キーから値を受け取る変数の読み取り。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -395,53 +395,53 @@ virtual BOOL Write(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pszKey*  
- 設定する値の名前を含む文字列へのポインター。  
+*pszKey*<br/>
+[in]設定する値の名前を含む文字列へのポインター。  
   
- [in]*iVal*  
- 格納するデータを含む整数変数への参照。  
+*iVal*<br/>
+[in]格納するデータを含む整数変数への参照。  
   
- [in]*dwVal*  
- 格納するデータを含む 32 ビットのダブルワード変数への参照。  
+*dwVal*<br/>
+[in]格納するデータを含む 32 ビットのダブルワード変数への参照。  
   
- [in]*pszVal*  
- 格納するデータを含む null で終わる文字列変数へのポインター。  
+*pszVal*<br/>
+[in]格納するデータを含む null で終わる文字列変数へのポインター。  
   
- [in]*scStringList*  
- 参照を[CStringList](../../mfc/reference/cstringlist-class.md)を格納するデータを含む変数。  
+*scStringList*<br/>
+[in]参照を[CStringList](../../mfc/reference/cstringlist-class.md)を格納するデータを含む変数。  
   
- [in]*bcArray*  
- 格納するデータを含むバイト配列の変数への参照。  
+*bcArray*<br/>
+[in]格納するデータを含むバイト配列の変数への参照。  
   
- [in]*scArray*  
- 格納するデータを含む文字列配列変数への参照。  
+*scArray*<br/>
+[in]格納するデータを含む文字列配列変数への参照。  
   
- [in]*dwcArray*  
- 32 ビットのダブルワードの配列変数を格納するデータを含むへの参照。  
+*dwcArray*<br/>
+[in]32 ビットのダブルワードの配列変数を格納するデータを含むへの参照。  
   
- [in]*wcArray*  
- 格納するデータを含む 16 ビット ワード配列変数への参照。  
+*wcArray*<br/>
+[in]格納するデータを含む 16 ビット ワード配列変数への参照。  
   
- [in]*rect*  
- 参照を[CRect](../../atl-mfc-shared/reference/crect-class.md)を格納するデータを含む変数。  
+*rect*<br/>
+[in]参照を[CRect](../../atl-mfc-shared/reference/crect-class.md)を格納するデータを含む変数。  
   
- [in]*lpPoint*  
- ポインターへの参照を`POINT`を格納するデータを含む変数。  
+*lpPoint*<br/>
+[in]ポインターへの参照を`POINT`を格納するデータを含む変数。  
   
- [in]*pData*  
- 格納するデータを格納しているバッファーへのポインター。  
+*pData*<br/>
+[in]格納するデータを格納しているバッファーへのポインター。  
   
- [in]*nBytes*  
- サイズを指定しているデータのバイト単位、 *pData*パラメーター ポイント。  
+*nBytes*<br/>
+[in]サイズを指定しているデータのバイト単位、 *pData*パラメーター ポイント。  
   
- [in]*一覧*  
- 参照を[CObList](../../mfc/reference/coblist-class.md)を格納するデータを含む変数。  
+*list*<br/>
+[in]参照を[CObList](../../mfc/reference/coblist-class.md)を格納するデータを含む変数。  
   
- [in]*obj*  
- 参照を[CObject](../../mfc/reference/cobject-class.md)を格納するデータを含む変数。  
+*obj*<br/>
+[in]参照を[CObject](../../mfc/reference/cobject-class.md)を格納するデータを含む変数。  
   
- [in]*pObj*  
- ポインターへのポインターを`CObject`を格納するデータを含む変数。  
+*pObj*<br/>
+[in]ポインターへのポインターを`CObject`を格納するデータを含む変数。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は TRUE、それ以外の場合は FALSE。  

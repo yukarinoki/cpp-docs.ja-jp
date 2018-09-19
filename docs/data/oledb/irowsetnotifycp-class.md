@@ -35,14 +35,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a74d2c06f5de9956056c9d8e82d35b64c65cb16f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 15e00f27c5ad5d5312928bda8f73304a8417a6bc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679582"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071823"
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP クラス
+
 プロバイダーは、サイト接続ポイントのインターフェイスを実装する[IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\))します。  
   
 ## <a name="syntax"></a>構文
@@ -58,20 +59,22 @@ class IRowsetNotifyCP :
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- *T*  
- 派生したクラス`IRowsetNotifyCP`します。  
+
+*T*<br/>
+派生したクラス`IRowsetNotifyCP`します。  
   
- *ReentrantEventSync*  
- 再入をサポートする mutex クラス (既定値は`CComSharedMutex`)。 ミュー テックスは、リソースへの 1 つのスレッド相互に排他的アクセスを許可する同期オブジェクトです。  
+*ReentrantEventSync*<br/>
+再入をサポートする mutex クラス (既定値は`CComSharedMutex`)。 ミュー テックスは、リソースへの 1 つのスレッド相互に排他的アクセスを許可する同期オブジェクトです。  
   
- *piid*  
- インターフェイス ID のポインター (`IID*`) の`IRowsetNotify`接続ポイントのインターフェイス。 既定値は `&__uuidof(IRowsetNotify)` です。  
+*piid*<br/>
+インターフェイス ID のポインター (`IID*`) の`IRowsetNotify`接続ポイントのインターフェイス。 既定値は `&__uuidof(IRowsetNotify)` です。  
   
- *DynamicUnkArray*  
- 型の配列[CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)、これは、動的に割り当てられた配列の`IUnknown`シンク インターフェイスのクライアントへのポインター。 
+*DynamicUnkArray*<br/>
+型の配列[CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)、これは、動的に割り当てられた配列の`IUnknown`シンク インターフェイスのクライアントへのポインター。 
 
 ## <a name="requirements"></a>要件  
- **ヘッダー:** atldb.h   
+
+**ヘッダー:** atldb.h   
   
 ## <a name="members"></a>メンバー  
   
@@ -84,13 +87,15 @@ class IRowsetNotifyCP :
 |[Fire_OnRowsetChange](#onrowsetchange)|行セット全体に影響する変更をコンシューマーに通知します。|  
   
 ## <a name="remarks"></a>Remarks  
- `IRowsetNotifyCP` 実装は、接続ポイント上のリスナーに通知する関数をブロードキャスト`IID_IRowsetNotify`の行セットの内容の変更。  
+
+`IRowsetNotifyCP` 実装は、接続ポイント上のリスナーに通知する関数をブロードキャスト`IID_IRowsetNotify`の行セットの内容の変更。  
   
- 実装し、登録する必要がありますので注意`IRowsetNotify`(別名「シンク」) を使用して、コンシューマーで[IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md)コンシューマーが通知を処理できるようにします。 参照してください[通知の受信](../../data/oledb/receiving-notifications.md)コンシューマーのコネクション ポイントのインターフェイスを実装する方法。  
+実装し、登録する必要がありますので注意`IRowsetNotify`(別名「シンク」) を使用して、コンシューマーで[IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md)コンシューマーが通知を処理できるようにします。 参照してください[通知の受信](../../data/oledb/receiving-notifications.md)コンシューマーのコネクション ポイントのインターフェイスを実装する方法。  
   
- 通知の実装の詳細については、「通知のサポート」を参照してください[更新可能なプロバイダーを作成する](../../data/oledb/creating-an-updatable-provider.md)します。  
+通知の実装の詳細については、「通知のサポート」を参照してください[更新可能なプロバイダーを作成する](../../data/oledb/creating-an-updatable-provider.md)します。  
 
 ## <a name="onfieldchange"></a> Irowsetnotifycp::fire_onfieldchange
+
 ブロードキャスト、 [OnFieldChange](/previous-versions/windows/desktop/ms715961\(v=vs.85\))列の値に対する変更をコンシューマーに通知するイベントです。  
   
 ### <a name="syntax"></a>構文  
@@ -106,9 +111,11 @@ HRESULT Fire_OnFieldChange(IRowset* pRowset,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[は、](/previous-versions/windows/desktop/ms715961\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。 
+
+参照してください[は、](/previous-versions/windows/desktop/ms715961\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。 
 
 ## <a name="onrowchange"></a> Irowsetnotifycp::fire_onrowchange
+
 ブロードキャスト、 [OnRowChange](/previous-versions/windows/desktop/ms722694\(v=vs.85\))イベント接続ポイント上のすべてのリスナーを`IID_IRowsetNotify`行に影響する変更のコンシューマーに通知します。  
   
 ### <a name="syntax"></a>構文  
@@ -123,9 +130,11 @@ HRESULT Fire_OnRowChange(IRowset* pRowset,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[は、](/previous-versions/windows/desktop/ms722694\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+
+参照してください[は、](/previous-versions/windows/desktop/ms722694\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
 
 ## <a name="onrowsetchange"></a> Irowsetnotifycp::fire_onrowsetchange
+
 ブロードキャスト、 [OnRowsetChange](/previous-versions/windows/desktop/ms722669\(v=vs.85\))イベント接続ポイント上のすべてのリスナーを`IID_IRowsetNotify`行セット全体に影響する変更のコンシューマーに通知します。  
   
 ### <a name="syntax"></a>構文  
@@ -138,13 +147,15 @@ HRESULT Fire_OnRowsetChange(IRowset* pRowset,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[は、](/previous-versions/windows/desktop/ms722669\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。
+
+参照してください[は、](/previous-versions/windows/desktop/ms722669\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)   
- [通知 (COM)](/windows/desktop/com/notifications)   
- [BEGIN_CONNECTION_POINT_MAP](../../atl/reference/connection-point-macros.md#begin_connection_point_map)   
- [END_CONNECTION_POINT_MAP](../../atl/reference/connection-point-macros.md#end_connection_point_map)   
- [CONNECTION_POINT_ENTRY](../../atl/reference/connection-point-macros.md#connection_point_entry)   
- [更新可能なプロバイダーの作成](../../data/oledb/creating-an-updatable-provider.md)
+
+[OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
+[通知 (COM)](/windows/desktop/com/notifications)<br/>
+[BEGIN_CONNECTION_POINT_MAP](../../atl/reference/connection-point-macros.md#begin_connection_point_map)<br/>
+[END_CONNECTION_POINT_MAP](../../atl/reference/connection-point-macros.md#end_connection_point_map)<br/>
+[CONNECTION_POINT_ENTRY](../../atl/reference/connection-point-macros.md#connection_point_entry)<br/>
+[更新可能なプロバイダーの作成](../../data/oledb/creating-an-updatable-provider.md)

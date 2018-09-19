@@ -1,5 +1,5 @@
 ---
-title: /FUNCTIONPADMIN (ホットパッチ可能なイメージの作成) |Microsoft ドキュメント
+title: /FUNCTIONPADMIN (ホットパッチ可能なイメージの作成) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2018
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0a5ecfcc336e198de0adcc2393f740072d70cae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7a82611c453a96e9247e414d6adb777c07320482
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376755"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703990"
 ---
 # <a name="functionpadmin-create-hotpatchable-image"></a>/FUNCTIONPADMIN (ホットパッチ可能なイメージの作成)
 
@@ -30,30 +30,30 @@ ms.locfileid: "32376755"
 
 ## <a name="syntax"></a>構文
 
-> **/FUNCTIONPADMIN**[**:**_space_]  
+> **/FUNCTIONPADMIN**[**:**_space_]
 
 ### <a name="arguments"></a>引数
 
 *space*<br/>
-(バイト単位) の各関数の先頭に追加するパディングの量。 X86 で既定値は 5 バイトのパディングと x64 の既定値は 6 バイトです。 他のターゲットに値を指定する必要があります。
+(バイト単位) の各関数の先頭に追加するパディングの量。 X86 上でこの既定値は 5 バイトの埋め込みと x64 の既定値は 6 バイト。 他のターゲットに値を指定する必要があります。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-ホットパッチ可能なイメージを生成するために、リンカーの順番は、.obj ファイル必要がありますしてコンパイルされている[/hotpatch (ホットパッチ可能なイメージの作成)](../../build/reference/hotpatch-create-hotpatchable-image.md)です。
+ホットパッチ可能なイメージを生成するために、リンカーのためには、.obj ファイルする必要がありますでコンパイルされている[/hotpatch (ホットパッチ可能なイメージの作成)](../../build/reference/hotpatch-create-hotpatchable-image.md)します。
 
-コンパイルして単一の cl.exe、呼び出しでイメージを関連付ける **/hotpatch**意味 **/functionpadmin**です。
+コンパイルして、cl.exe の 1 つの呼び出しを使用してイメージをリンクするときに **/hotpatch**意味 **/functionpadmin**します。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「 [Visual C プロジェクト プロパティの設定](../../ide/working-with-project-properties.md)です。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **リンカー** > **コマンドライン**プロパティ ページ。
 
-1. 入力、 **/FUNCTIONPADMIN**オプション**追加オプション**です。 選択**OK**して変更を保存します。
+1. 入力、 **/FUNCTIONPADMIN**オプション**追加オプション**します。 **OK** を選択して変更を保存してください。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 
-- 「<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>」を参照してください。
+- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,5 +1,5 @@
 ---
-title: ドキュメントとビューの操作 |Microsoft ドキュメント
+title: ドキュメントとビューの操作 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,21 +18,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 71750507d6b3c6cf14a721971d809347f8adfd3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fdaf290cde69f6d269b4bf055c70171800aa1489
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092947"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053974"
 ---
 # <a name="working-with-documents-and-views"></a>ドキュメントとビューの使用
-Microsoft Foundation Classes (MFC) ライブラリは、その機能の多くのドキュメント/ビュー アーキテクチャに依存します。 通常、ドキュメントは、データを格納し、ビュー、フレーム ウィンドウのクライアント領域内に表示してユーザーと対話データ。 ビューは、ドキュメントを取得し、データの更新と通信します。 フレームワークの有無には、データベース クラスを使用することができます。  
+
+Microsoft Foundation Classes (MFC) ライブラリは、その機能の多くのドキュメント/ビュー アーキテクチャに依存します。 通常、ドキュメントは、データを格納し、ビュー フレーム ウィンドウのクライアント領域内に表示して、データとユーザーの対話を管理します。 ビューは、ドキュメントを取得し、データの更新と通信します。 フレームワークなしでも、データベース クラスを使用することができます。  
   
- データベース クラスをフレームワークに使用する方法の詳細については、次を参照してください。 [MFC: ドキュメントとビューを用いたデータベース クラス](../../data/mfc-using-database-classes-with-documents-and-views.md)です。  
+データベース クラスをフレームワークに使用する方法の詳細については、次を参照してください。 [MFC: ドキュメントとビューを用いたデータベース クラス](../../data/mfc-using-database-classes-with-documents-and-views.md)します。  
   
- 既定では、MFC アプリケーション ウィザードはデータベースのサポートなしで、スケルトン アプリケーションを作成します。 ただし、最小限のデータベースのサポートやより詳細なフォーム ベースのサポートを含めるオプションを選択できます。 アプリケーション ウィザードのオプションの詳細については、次を参照してください。[データベースのサポート、MFC アプリケーション ウィザード](../../mfc/reference/database-support-mfc-application-wizard.md)です。  
+既定では、MFC アプリケーション ウィザードは、データベースはサポートされていない、スケルトン アプリケーションを作成します。 ただし、最小限のデータベースのサポートまたはフォーム ベースのより完全なサポートを追加するオプションを選択できます。 アプリケーション ウィザードのオプションの詳細については、次を参照してください。[データベースのサポート、MFC アプリケーション ウィザード](../../mfc/reference/database-support-mfc-application-wizard.md)します。  
   
- 完全ドキュメント/ビュー アーキテクチャを使用せず、またデータベース クラスを使用することができます。 詳細については、次を参照してください。 [MFC: 用いないデータベース クラスとビュー](../../data/mfc-using-database-classes-without-documents-and-views.md)です。  
+完全なドキュメント/ビュー アーキテクチャを使用せず、データベース クラスを使用することもできます。 詳細については、次を参照してください。 [MFC: 用いないデータベース クラスとビュー](../../data/mfc-using-database-classes-without-documents-and-views.md)します。  
   
 ## <a name="see-also"></a>関連項目  
- [ODBC と MFC](../../data/odbc/odbc-and-mfc.md)
+
+[ODBC と MFC](../../data/odbc/odbc-and-mfc.md)

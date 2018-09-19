@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4fc2eb252c81e903174d99d4a55b2f3c1eed321
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4b0226e38b34268217b4f21a1f5262cd1f1afbec
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205288"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702092"
 ---
 # <a name="ccombobox-class"></a>CComboBox クラス
 Windows のコンボ ボックスの機能が用意されています。  
@@ -612,8 +612,8 @@ BOOL GetCueBanner(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[out]*lpszText*|キュー バナー テキストを受け取るバッファーへのポインター。|  
-|[in]*cchText*|バッファーのサイズを*lpszText*パラメーターを指します。|  
+|*lpszText*|[out]キュー バナー テキストを受け取るバッファーへのポインター。|  
+|*cchText*|[in]バッファーのサイズを*lpszText*パラメーターを指します。|  
   
 ### <a name="return-value"></a>戻り値  
  最初のオーバー ロードで、 [CString](../../atl-mfc-shared/using-cstring.md)オブジェクトが存在する場合は、キュー バナー テキストを格納するそれ以外の場合、`CString`長さ 0 のオブジェクト。  
@@ -1048,7 +1048,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*lpszText*|ヒントのテキストを含む null で終わるバッファーへのポインター。|  
+|*lpszText*|[in]ヒントのテキストを含む null で終わるバッファーへのポインター。|  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -1291,7 +1291,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*iMinVisible*|表示される項目の最小数を指定します。|  
+|*iMinVisible*|[in]表示される項目の最小数を指定します。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  

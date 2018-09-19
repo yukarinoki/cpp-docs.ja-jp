@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3859 |Microsoft ドキュメント
+title: コンパイラ エラー C3859 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2f8c51f25c09881e10e980276fc2035a6a70aed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ac06a09a6ad66384fd2b5423e3df046771f7653
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272306"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053390"
 ---
 # <a name="compiler-error-c3859"></a>コンパイラ エラー C3859
-PCH の仮想メモリの範囲が超えています。'-Zmvalue' 以上のコマンド ライン オプションで再コンパイルしてください。  
-  
- プリコンパイル済みヘッダーが、コンパイラが挿入しようとしているデータの量に対して小さすぎます。 使用して、 **/Zm**コンパイラ フラグをプリコンパイル済みヘッダー ファイル用のより大きい値を指定します。 詳細については、次を参照してください。 [/Zm (指定プリコンパイル済みヘッダーのメモリ割り当て制限)](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md)です。
+
+PCH の仮想メモリの範囲が超えています。'-Zmvalue' 以上のコマンド ライン オプションで再コンパイルしてください。
+
+プリコンパイル済みヘッダーが、コンパイラが挿入しようとしているデータの量に対して小さすぎます。 使用して、 **/Zm**コンパイラ フラグをプリコンパイル済みヘッダー ファイルのより大きな値を指定します。 詳細については、次を参照してください。 [/Zm (指定プリコンパイル済みヘッダーのメモリ割り当て制限)](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md)します。

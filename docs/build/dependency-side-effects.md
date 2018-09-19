@@ -1,5 +1,5 @@
 ---
-title: 依存関係の副作用 |Microsoft ドキュメント
+title: 依存関係の副作用 |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,48 +15,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7537e077a43318a487163d014b49d52cef66ce19
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9a70df679434b187bc2eee4eb4aad5881db0da1c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367525"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716537"
 ---
 # <a name="dependency-side-effects"></a>依存関係の副作用
-ターゲットが、異なる場所に 2 つの依存関係の線にコロン (:) で指定されている場合、および行の 1 つだけの後にコマンドが表示されない場合は、隣接するまたは結合まるで (nmake の) の依存関係は解釈します。 コマンドがありませんが、代わりにでは、依存関係の説明を 1 つのブロックに属するし、コマンドを実行するその他の依存関係と共に指定する依存関係の推論規則は呼び出されません。 たとえば、これは、ルールの設定。  
-  
-```Output  
-bounce.exe : jump.obj  
-   echo Building bounce.exe...  
-  
-bounce.exe : up.obj  
-```  
-  
- この評価されます。  
-  
-```Output  
-bounce.exe : jump.obj up.obj  
-   echo Building bounce.exe...  
-```  
-  
- 場合、二重のコロンこの効果は発生しません (`::`) を使用します。 たとえば、これは、ルールの設定。  
-  
-```Output  
-bounce.exe :: jump.obj  
-   echo Building bounce.exe...  
-  
-bounce.exe :: up.obj  
-```  
-  
- この評価されます。  
-  
-```Output  
-bounce.exe : jump.obj  
-   echo Building bounce.exe...  
-  
-bounce.exe : up.obj  
-# invokes an inference rule  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [ターゲット](../build/targets.md)
+
+ターゲットが、異なる場所に 2 つの依存関係の行では、コロン (:) を指定し、行の 1 つだけの後にコマンドが表示される場合は、隣接する、または、まるで (nmake の) の依存関係は解釈します。 コマンドがありませんが、代わりにで依存関係はブロックの 1 つの説明に属しているし、他の依存関係に指定されたコマンドを実行する依存関係の推論規則は呼び出しません。 たとえば、これは、ルールの設定。
+
+```Output
+bounce.exe : jump.obj
+   echo Building bounce.exe...
+
+bounce.exe : up.obj
+```
+
+この評価されます。
+
+```Output
+bounce.exe : jump.obj up.obj
+   echo Building bounce.exe...
+```
+
+2 つのコロンの場合この効果は発生しません (`::`) が使用されます。 たとえば、これは、ルールの設定。
+
+```Output
+bounce.exe :: jump.obj
+   echo Building bounce.exe...
+
+bounce.exe :: up.obj
+```
+
+この評価されます。
+
+```Output
+bounce.exe : jump.obj
+   echo Building bounce.exe...
+
+bounce.exe : up.obj
+# invokes an inference rule
+```
+
+## <a name="see-also"></a>関連項目
+
+[ターゲット](../build/targets.md)

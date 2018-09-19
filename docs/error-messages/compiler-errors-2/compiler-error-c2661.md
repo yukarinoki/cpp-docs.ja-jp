@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2661 |Microsoft ドキュメント
+title: コンパイラ エラー C2661 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcab577ae9cfd84c757ceb194d4a59ee63057993
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8443e21db273aa7def879bd82ab823afb8a508a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231032"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074397"
 ---
 # <a name="compiler-error-c2661"></a>コンパイラ エラー C2661
-'function': オーバー ロードされた関数には、番号パラメーターはありません。  
-  
- 以下の原因が考えられます。  
-  
-1.  関数呼び出しで実パラメーターが間違っています。  
-  
-2.  関数の宣言がありません。  
-  
- 次の例では、C2661 が生成されます。  
-  
-```  
-// C2661.cpp  
-void func( int ){}  
-void func( int, int ){}  
-int main() {  
-   func( );   // C2661 func( void ) was not declared  
-   func( 1 );   // OK func( int ) was declared  
-}  
+
+'function': オーバー ロードされた関数には、番号のパラメーターはありません。
+
+以下の原因が考えられます。
+
+1. 関数呼び出しで実パラメーターが間違っています。
+
+1. 関数の宣言がありません。
+
+次の例では、C2661 が生成されます。
+
+```
+// C2661.cpp
+void func( int ){}
+void func( int, int ){}
+int main() {
+   func( );   // C2661 func( void ) was not declared
+   func( 1 );   // OK func( int ) was declared
+}
 ```

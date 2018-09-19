@@ -1,7 +1,7 @@
 ---
-title: Win32 インターネット クラス |Microsoft ドキュメント
+title: Win32 インターネット クラス |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -19,18 +19,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1fa996ad36970faa97c9c6d248060a8121680a6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b1e93c2c3ea9efeb8be6ec5d79b9f2ef7729b9e9
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383225"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534938"
 ---
 # <a name="win32-internet-classes"></a>Win32 インターネット クラス
-MFC は、インターネット プログラミングが容易には、Win32 のインターネット (WinInet) と ActiveX テクノロジをラップします。  
+MFC は、インターネット プログラミングを簡単には、Win32 のインターネット (WinInet) と ActiveX テクノロジをラップします。
+
+>[!IMPORTANT]
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の上書きの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
+  
   
  [CInternetSession](../mfc/reference/cinternetsession-class.md)  
- 作成 1 つのインターネット セッションまたは複数の同時インターネット セッションを初期化、および、必要に応じて、プロキシ サーバーへの接続を説明します。  
+ 作成しインターネット セッションを 1 つまたは複数の同時インターネット セッションを初期化し、必要に応じて、プロキシ サーバーへの接続をについて説明します。  
   
  [CInternetConnection](../mfc/reference/cinternetconnection-class.md)  
  インターネット サーバーへの接続を管理します。  
@@ -42,7 +46,7 @@ MFC は、インターネット プログラミングが容易には、Win32 の
  HTTP サーバーへの接続を管理します。  
   
  [CHttpFile](../mfc/reference/chttpfile-class.md)  
- 検索し、HTTP サーバー上のファイルを読み取る機能を提供します。  
+ 検索し、HTTP サーバー上のファイルを読み込む機能を提供します。  
   
  [CGopherFile](../mfc/reference/cgopherfile-class.md)  
  gopher サーバー上のファイルを検索し、読み込む機能が用意されています。  
@@ -50,7 +54,7 @@ MFC は、インターネット プログラミングが容易には、Win32 の
  [CFtpConnection](../mfc/reference/cftpconnection-class.md)  
  FTP サーバーへの接続を管理します。  
   
- [関数](../mfc/reference/cgopherconnection-class.md)  
+ [CGopherConnection](../mfc/reference/cgopherconnection-class.md)  
  Gopher サーバーへの接続を管理します。  
   
  [CFileFind](../mfc/reference/cfilefind-class.md)  
@@ -62,7 +66,7 @@ MFC は、インターネット プログラミングが容易には、Win32 の
  [CGopherFileFind](../mfc/reference/cgopherfilefind-class.md)  
  gopher サーバーのインターネット ファイル検索を支援します。  
   
- [関数](../mfc/reference/cgopherlocator-class.md)  
+ [CGopherLocator](../mfc/reference/cgopherlocator-class.md)  
  gopher ロケーターを gopher サーバーから取得し、ロケーター種別を判断し、`CGopherFileFind` 用に準備します。  
   
  [CInternetException](../mfc/reference/cinternetexception-class.md)  

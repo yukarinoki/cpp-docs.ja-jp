@@ -1,5 +1,5 @@
 ---
-title: カスタマイズ通知の処理 |Microsoft ドキュメント
+title: カスタマイズ通知の処理 |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -57,17 +57,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b95af9c0562c4b3210cbcdd7b9ce6216a5d49fb
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 9c9931ae6bb83cb6801ac1bcc89359d9d7f468f2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930018"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706044"
 ---
 # <a name="handling-customization-notifications"></a>カスタマイズ通知の処理
 Windows ツール バー コモン コントロールには、システム定義のカスタマイズ ダイアログ ボックスなどのカスタマイズ機能が組み込まれています。この機能を使用して、ユーザーはツール バー ボタンを挿入、削除、または再配置できます。 アプリケーションは、カスタマイズ機能が使用できるかどうかを判断し、ユーザーがツール バーをどの程度までカスタマイズできるかを制御します。  
   
- ことができますこれらのカスタマイズ機能を使用できるように、ユーザー、ツールバーを付けることで、**ツール**スタイル。 カスタマイズ機能を使用すると、ユーザーはボタンを新しい位置にドラッグしたり、ボタンをツール バーの外にドラッグして削除したりできます。 さらに、ユーザーはツール バーをダブルクリックして **[ツール バーのカスタマイズ]** ダイアログ ボックスを表示し、このダイアログ ボックスから、ツール バー ボタンを追加、削除、再配置できます。 アプリケーションでは、 [Customize](../mfc/reference/ctoolbarctrl-class.md#customize) メンバー関数を使用することでこのダイアログ ボックスを表示できます。  
+ 利用できるこれらのカスタマイズ機能をユーザーに、ツールバーを指定して、**ツール**スタイル。 カスタマイズ機能を使用すると、ユーザーはボタンを新しい位置にドラッグしたり、ボタンをツール バーの外にドラッグして削除したりできます。 さらに、ユーザーはツール バーをダブルクリックして **[ツール バーのカスタマイズ]** ダイアログ ボックスを表示し、このダイアログ ボックスから、ツール バー ボタンを追加、削除、再配置できます。 アプリケーションでは、 [Customize](../mfc/reference/ctoolbarctrl-class.md#customize) メンバー関数を使用することでこのダイアログ ボックスを表示できます。  
   
  ツール バー コントロールは、カスタマイズ処理の各手順で通知メッセージを親ウィンドウに送信します。 ユーザーが Shift キーを押しながらボタンのドラッグを開始すると、ツール バーは自動的にドラッグ操作を処理します。 ツール バーは **TBN_QUERYDELETE** 通知メッセージを親ウィンドウに送信し、ボタンを削除できるかどうかを判断します。 親ウィンドウが **FALSE**を返すと、ドラッグ操作は終了します。 それ以外の場合、ツール バーはマウス入力をキャプチャし、ユーザーがマウス ボタンを離すのを待機します。  
   
@@ -85,117 +85,145 @@ Windows ツール バー コモン コントロールには、システム定義
   
  これらのメッセージはすべて **WM_NOTIFY** メッセージです。メッセージをオーナー ウィンドウで処理するには、オーナー ウィンドウのメッセージ マップに次のような形式でメッセージ マップのエントリを追加します。  
   
- `ON_NOTIFY( wNotifyCode, idControl, memberFxn )`  
+```cpp
+ON_NOTIFY( wNotifyCode, idControl, memberFxn )
+```
+
+- **wNotifyCode**
+
+   通知メッセージの識別子コード。 **TBN_BEGINADJUST**など。
+
+- **idControl**
+
+   通知を送信するコントロールの識別子。
+
+- **memberFxn**
+
+   この通知を受信したときに呼び出されるメンバー関数。  
   
- `wNotifyCode`  
- 通知メッセージの識別子コード。 **TBN_BEGINADJUST**など。  
+メンバー関数は次のプロトタイプで宣言されます。  
   
- `idControl`  
- 通知を送信するコントロールの識別子。  
-  
- `memberFxn`  
- この通知を受信したときに呼び出されるメンバー関数。  
-  
- メンバー関数は次のプロトタイプで宣言されます。  
-  
- `afx_msg void memberFxn( NMHDR * pNotifyStruct, LRESULT * result );`  
-  
+```cpp
+afx_msg void memberFxn( NMHDR * pNotifyStruct, LRESULT * result );
+```
+
  通知メッセージ ハンドラーが値を返す場合は、その値を **result** が指す *LRESULT*に格納する必要があります。  
   
  各メッセージに対して、 `pNotifyStruct` は **NMHDR** 構造体か **TBNOTIFY** 構造体のいずれかを指します。 これらの構造体は次のとおりです。  
   
  **NMHDR** 構造体には次のメンバーが含まれます。  
   
- `typedef struct tagNMHDR {`  
+```cpp
+typedef struct tagNMHDR {
+    HWND hwndFrom;  // handle of control sending message
+    UINT idFrom;// identifier of control sending message
+    UINT code;  // notification code; see below
+} NMHDR;
+```
+
+- **hwndFrom**
+
+   通知を送信するコントロールのウィンドウ ハンドル。 このハンドルを `CWnd` ポインターに変換するには、 [CWnd::FromHandle](../mfc/reference/cwnd-class.md#fromhandle)を使用します。  
   
- `HWND hwndFrom;  // handle of control sending message`  
+- **idFrom**
+
+   通知を送信するコントロールの識別子。  
   
- `UINT idFrom;// identifier of control sending message`  
+- **code**
+
+   通知コード。 このメンバーは、 **TBN_BEGINADJUST** や **TTN_NEEDTEXT**などのコントロールの種類に固有の値になるか、以下に示す通知に共通の値のいずれかになります。  
   
- `UINT code;  // notification code; see below`  
+   - **NM_CLICK** ユーザーがコントロール内でマウスの左ボタンをクリックしました。  
   
- `} NMHDR;`  
+   - **NM_DBLCLK** ユーザーがコントロール内でマウスの左ボタンをダブルクリックしました。  
   
- **hwndFrom**  
- 通知を送信するコントロールのウィンドウ ハンドル。 このハンドルを `CWnd` ポインターに変換するには、 [CWnd::FromHandle](../mfc/reference/cwnd-class.md#fromhandle)を使用します。  
+   - **NM_KILLFOCUS** コントロールは入力フォーカスを失いました。  
   
- **idFrom**  
- 通知を送信するコントロールの識別子。  
+   - **NM_OUTOFMEMORY** メモリ不足のために、コントロールは操作を完了できませんでした。  
   
- **code**  
- 通知コード。 このメンバーは、 **TBN_BEGINADJUST** や **TTN_NEEDTEXT**などのコントロールの種類に固有の値になるか、以下に示す通知に共通の値のいずれかになります。  
+   - **NM_RCLICK** ユーザーがコントロール内でマウスの右ボタンをクリックしました。  
   
--   **NM_CLICK** ユーザーがコントロール内でマウスの左ボタンをクリックしました。  
+   - **NM_RDBLCLK** ユーザーがコントロール内でマウスの右ボタンをダブルクリックしました。  
   
--   **NM_DBLCLK** ユーザーがコントロール内でマウスの左ボタンをダブルクリックしました。  
+   - **NM_RETURN** コントロールに入力フォーカスがあり、ユーザーが Enter キーを押しました。  
   
--   **NM_KILLFOCUS** コントロールは入力フォーカスを失いました。  
+   - **NM_SETFOCUS** コントロールは入力フォーカスを受け取りました。  
   
--   **NM_OUTOFMEMORY** メモリ不足のために、コントロールは操作を完了できませんでした。  
+**TBNOTIFY** 構造体には次のメンバーが含まれます。  
   
--   **NM_RCLICK** ユーザーがコントロール内でマウスの右ボタンをクリックしました。  
+```cpp
+typedef struct {
+    NMHDR hdr; // information common to all WM_NOTIFY messages
+    int iItem; // index of button associated with notification
+    TBBUTTON tbButton; // info about button associated withnotification
+    int cchText;   // count of characters in button text
+    LPSTR lpszText;// address of button text
+} TBNOTIFY, FAR* LPTBNOTIFY;
+```
   
--   **NM_RDBLCLK** ユーザーがコントロール内でマウスの右ボタンをダブルクリックしました。  
+- **hdr**
+
+   すべての **WM_NOTIFY** メッセージに共通の情報。  
   
--   **NM_RETURN** コントロールに入力フォーカスがあり、ユーザーが Enter キーを押しました。  
+- **iItem**
+
+   通知に関連付けられたボタンのインデックス。  
   
--   **NM_SETFOCUS** コントロールは入力フォーカスを受け取りました。  
+- **tbButton**
+
+   **TBBUTTON**通知に関連付けられているツール バー ボタンに関する情報を含む構造体。  
   
- **TBNOTIFY** 構造体には次のメンバーが含まれます。  
+- **cchText**
+
+   ボタンのテキスト文字の数。  
   
- `typedef struct {`  
+- **lpszText**
+
+   ボタンのテキストへのポインター。  
   
- `NMHDR hdr; // information common to all WM_NOTIFY messages`  
+ツール バーが送信する通知は、次のとおりです。  
   
- `int iItem; // index of button associated with notification`  
+- **TBN_BEGINADJUST**
+
+   ユーザーがツール バー コントロールのカスタマイズを開始するときに送信します。 ポインターは、通知についての情報を格納する **NMHDR** 構造体を指します。 ハンドラーが特定の値を返す必要はありません。  
   
- `TBBUTTON tbButton; // info about button associated withnotification`  
+- **TBN_BEGINDRAG**
+
+   ユーザーがツール バー コントロールに、ボタンのドラッグを開始するときに送信します。 ポインターは **TBNOTIFY** 構造体を指します。 **iItem** メンバーには、ドラッグされているボタンの 0 から始まるインデックスが含まれます。 ハンドラーが特定の値を返す必要はありません。  
   
- `int cchText;   // count of characters in button text`  
+- **TBN_CUSTHELP**
+
+   ユーザーがツールバーのカスタマイズ ダイアログ ボックスで ヘルプ ボタンを選択したときに送信されます。 戻り値はありません。 ポインターは、この通知メッセージについての情報を格納する **NMHDR** 構造体を指します。 ハンドラーが特定の値を返す必要はありません。  
   
- `LPSTR lpszText;// address of button text`  
+- **TBN_ENDADJUST**
+
+   ユーザーがツール バー コントロールのカスタマイズと送信されます。 ポインターは、この通知メッセージについての情報を格納する **NMHDR** 構造体を指します。 ハンドラーが特定の値を返す必要はありません。  
   
- `} TBNOTIFY, FAR* LPTBNOTIFY;`  
+- **TBN_ENDDRAG**
+
+   ユーザーがツール バー コントロールに、ボタンのドラッグを停止するときに送信します。 ポインターは **TBNOTIFY** 構造体を指します。 **iItem** メンバーには、ドラッグされているボタンの 0 から始まるインデックスが含まれます。 ハンドラーが特定の値を返す必要はありません。  
   
-## <a name="remarks"></a>Remarks  
- **hdr**  
- すべての **WM_NOTIFY** メッセージに共通の情報。  
+- **TBN_GETBUTTONINFO**
+
+   ユーザーがツール バー コントロールをカスタマイズするときに送信されます。 ツール バーは、この通知メッセージを使用して [ツール バーのカスタマイズ] ダイアログ ボックスで必要になる情報を取得します。 ポインターは **TBNOTIFY** 構造体を指します。 **iItem** メンバーは、ボタンの 0 から始まるインデックスを指定します。 **pszText** メンバーと **cchText** メンバーは、現在のボタンのテキストのアドレスと長さ (文字数) で指定します。 アプリケーションでは、ボタンに関する情報をこの構造体に格納する必要があります。 ボタンの情報が構造体にコピーされた場合は **TRUE** を返し、それ以外の場合は **FALSE** を返します。  
   
- **iItem**  
- 通知に関連付けられたボタンのインデックス。  
+- **TBN_QUERYDELETE**
+
+   ユーザーがツール バー コントロールからボタンを削除するかどうかを判断するツールバーをカスタマイズ中に送信されます。 ポインターは **TBNOTIFY** 構造体を指します。 **iItem** メンバーには、削除するボタンの 0 から始まるインデックスが含まれます。 ボタンの削除を許可する場合は **TRUE** を返し、ボタンの削除を禁止する場合は **FALSE** を返します。  
   
- **tbButton**  
- **TBBUTTON**ツール バー ボタンに関する情報を格納する構造体は、通知に関連付けられています。  
+- **TBN_QUERYINSERT**
+
+   ユーザーが、指定したボタンの左側にボタンを挿入するかどうかを判断するツール バー コントロールをカスタマイズするときに送信されます。 ポインターは **TBNOTIFY** 構造体を指します。 **iItem** メンバーには、挿入するボタンの 0 から始まるインデックスが含まれます。 指定したボタンの前にボタンの挿入を許可する場合は **TRUE** を返し、ボタンの挿入を禁止する場合は **FALSE** を返します。  
   
- **cchText**  
- ボタンのテキスト文字の数。  
+- **TBN_RESET**
+
+   ユーザーがツールバーのカスタマイズ ダイアログ ボックスのコンテンツをリセットしたときに送信されます。 ポインターは、この通知メッセージについての情報を格納する **NMHDR** 構造体を指します。 ハンドラーが特定の値を返す必要はありません。  
   
- **lpszText**  
- ボタンのテキストへのポインター。  
-  
- ツール バーが送信する通知は、次のとおりです。  
-  
--   **TBN_BEGINADJUST** ユーザーがツール バー コントロールのカスタマイズを開始すると送信されます。 ポインターは、通知についての情報を格納する **NMHDR** 構造体を指します。 ハンドラーが特定の値を返す必要はありません。  
-  
--   **TBN_BEGINDRAG** ユーザーがツール バー コントロールにあるボタンのドラッグを開始すると送信されます。 ポインターは **TBNOTIFY** 構造体を指します。 **iItem** メンバーには、ドラッグされているボタンの 0 から始まるインデックスが含まれます。 ハンドラーが特定の値を返す必要はありません。  
-  
--   **TBN_CUSTHELP** ユーザーが [ツール バーのカスタマイズ] ダイアログ ボックスの [ヘルプ] ボタンを選ぶと送信されます。 戻り値はありません。 ポインターは、この通知メッセージについての情報を格納する **NMHDR** 構造体を指します。 ハンドラーが特定の値を返す必要はありません。  
-  
--   **TBN_ENDADJUST** ユーザーがツール バー コントロールのカスタマイズを終了すると送信されます。 ポインターは、この通知メッセージについての情報を格納する **NMHDR** 構造体を指します。 ハンドラーが特定の値を返す必要はありません。  
-  
--   **TBN_ENDDRAG** ユーザーがツール バー コントロールにあるボタンのドラッグを終了すると送信されます。 ポインターは **TBNOTIFY** 構造体を指します。 **iItem** メンバーには、ドラッグされているボタンの 0 から始まるインデックスが含まれます。 ハンドラーが特定の値を返す必要はありません。  
-  
--   **TBN_GETBUTTONINFO** ユーザーがツール バー コントロールをカスタマイズしているときに送信されます。 ツール バーは、この通知メッセージを使用して [ツール バーのカスタマイズ] ダイアログ ボックスで必要になる情報を取得します。 ポインターは **TBNOTIFY** 構造体を指します。 **iItem** メンバーは、ボタンの 0 から始まるインデックスを指定します。 **pszText** メンバーと **cchText** メンバーは、現在のボタンのテキストのアドレスと長さ (文字数) で指定します。 アプリケーションでは、ボタンに関する情報をこの構造体に格納する必要があります。 ボタンの情報が構造体にコピーされた場合は **TRUE** を返し、それ以外の場合は **FALSE** を返します。  
-  
--   **TBN_QUERYDELETE** ユーザーがツール バー コントロールをカスタマイズしているときに、ツール バー コントロールからボタンを削除できるかどうかを判断するために送信されます。 ポインターは **TBNOTIFY** 構造体を指します。 **iItem** メンバーには、削除するボタンの 0 から始まるインデックスが含まれます。 ボタンの削除を許可する場合は **TRUE** を返し、ボタンの削除を禁止する場合は **FALSE** を返します。  
-  
--   **TBN_QUERYINSERT** ユーザーがツール バー コントロールをカスタマイズしているときに、指定したボタンの左側にボタンを挿入できるかどうかを判断するために送信されます。 ポインターは **TBNOTIFY** 構造体を指します。 **iItem** メンバーには、挿入するボタンの 0 から始まるインデックスが含まれます。 指定したボタンの前にボタンの挿入を許可する場合は **TRUE** を返し、ボタンの挿入を禁止する場合は **FALSE** を返します。  
-  
--   **TBN_RESET** ユーザーが [ツール バーのカスタマイズ] ダイアログ ボックスの内容をリセットすると送信されます。 ポインターは、この通知メッセージについての情報を格納する **NMHDR** 構造体を指します。 ハンドラーが特定の値を返す必要はありません。  
-  
--   **TBN_TOOLBARCHANGE** ユーザーがツール バー コントロールをカスタマイズした後に送信されます。 ポインターは、この通知メッセージについての情報を格納する **NMHDR** 構造体を指します。 ハンドラーが特定の値を返す必要はありません。  
+- **TBN_TOOLBARCHANGE**
+
+   ユーザーがツール バー コントロールをカスタマイズした後に送信されます。 ポインターは、この通知メッセージについての情報を格納する **NMHDR** 構造体を指します。 ハンドラーが特定の値を返す必要はありません。  
   
 ## <a name="see-also"></a>関連項目  
- [CToolBarCtrl の使い方](../mfc/using-ctoolbarctrl.md)   
+ [Ctoolbarctrl の使い方](../mfc/using-ctoolbarctrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 

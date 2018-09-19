@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonCustomizePropertyPage クラス |Microsoft ドキュメント
+title: CMFCRibbonCustomizePropertyPage クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 542c34fc02eca1f090072f49b9688d3edd4d78e6
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 7bb2f799dedd11ed1c8e0e909e7a5b1dcbb7adc5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040676"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707508"
 ---
 # <a name="cmfcribboncustomizepropertypage-class"></a>CMFCRibbonCustomizePropertyPage クラス
 カスタム ページを実装して、**カスタマイズ**リボン ベースのアプリケーション ダイアログ ボックス。  
@@ -55,14 +55,14 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
 |名前|説明|  
 |[CMFCRibbonCustomizePropertyPage::AddCustomCategory](#addcustomcategory)|カスタム カテゴリを追加、**コマンド**コンボ ボックス。|  
 |`CMFCRibbonCustomizePropertyPage::CreateObject`|このクラス型の動的インスタンスを作成するために、フレームワークで使用されます。|  
-|`CMFCRibbonCustomizePropertyPage::GetThisClass`|ポインターを取得するために、フレームワークで使用される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|  
-|[CMFCRibbonCustomizePropertyPage::OnOK](#onok)|ユーザーがクリックすると、システムによって呼び出されます**OK**上、**カスタマイズ** ダイアログ ボックス。|  
+|`CMFCRibbonCustomizePropertyPage::GetThisClass`|ポインターを取得する、framework によって使用される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|  
+|[CMFCRibbonCustomizePropertyPage::OnOK](#onok)|ユーザーがクリックしたときに、システムによって呼び出されます**OK**上、**カスタマイズ** ダイアログ ボックス。|  
   
 ## <a name="remarks"></a>Remarks  
  カスタム コマンドを追加する場合、**カスタマイズ**ダイアログ ボックスで、AFX_WM_ON_RIBBON_CUSTOMIZE メッセージを処理する必要があります。 メッセージ ハンドラーでインスタンス化、`CMFCRibbonCustomizePropertyPage`スタック上のオブジェクト。 カスタムのコマンドの一覧を作成し、呼び出す`AddCustomCategory`に新しいページを追加する、**カスタマイズ** ダイアログ ボックス。  
   
 ## <a name="example"></a>例  
- 次の例で作成する方法、`CMFCRibbonCustomizePropertyPage`オブジェクトと、カスタム カテゴリを追加します。  
+ 次の例は、構築する方法を示します、`CMFCRibbonCustomizePropertyPage`オブジェクトとカスタム カテゴリを追加します。  
   
  [!code-cpp[NVC_MFC_RibbonApp#22](../../mfc/reference/codesnippet/cpp/cmfcribboncustomizepropertypage-class_1.cpp)]  
   
@@ -81,7 +81,7 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
   
  [CMFCRibbonCustomizePropertyPage](../../mfc/reference/cmfcribboncustomizepropertypage-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxribboncustomizedialog.h  
   
 ##  <a name="addcustomcategory"></a>  CMFCRibbonCustomizePropertyPage::AddCustomCategory  
@@ -98,11 +98,11 @@ void AddCustomCategory(
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*lpszName*|カスタムのカテゴリの名前を指定します。|  
-|[in]*lstIDS*|カスタムのカテゴリに表示されるリボン コマンド Id が含まれています。|  
+|*lpszName*|[in]カスタムのカテゴリ名を指定します。|  
+|*lstIDS*|[in]カスタムのカテゴリに表示されるリボン コマンド Id が含まれています。|  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、という名前のカテゴリを追加*lpszName*を**コマンド**コンボ ボックス。 コマンドがで指定されたユーザーは、カテゴリを選択するときに*lstIDS*コマンドの一覧に表示されます。  
+ このメソッドは、という名前のカテゴリを追加します。 *lpszName*を、**コマンド**コンボ ボックス。 コマンドがで指定されたユーザーは、カテゴリを選択するときに*lstIDS*コマンド一覧に表示されます。  
   
 ##  <a name="cmfcribboncustomizepropertypage"></a>  CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
  `CMFCRibbonCustomizePropertyPage` オブジェクトを構築します。  
@@ -112,18 +112,18 @@ CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pRibbonBar*  
- 対象のリボン コントロールへのポインターをカスタマイズするオプションです。  
+*pRibbonBar*<br/>
+[in]対象のリボン コントロールへのポインターをカスタマイズするオプション。  
   
 ##  <a name="onok"></a>  CMFCRibbonCustomizePropertyPage::OnOK  
- ユーザーがクリックしたときに、システムによって Calleld **ok**上、**カスタマイズ** ダイアログ ボックス。  
+ ユーザーがクリックしたときに、システムによって Calleld **OK**で、**カスタマイズ** ダイアログ ボックス。  
   
 ```  
 virtual void OnOK();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 既定の実装で選択したオプションの適用、**カスタマイズ**クイック アクセス ツールバーに ダイアログ ボックス。  
+ 既定の実装で選択したオプションの適用、**カスタマイズ**クイック アクセス ツールバーにダイアログ ボックス。  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

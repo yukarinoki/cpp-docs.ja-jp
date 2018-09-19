@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5746fb3a4e704d866ce6e929de832d783e7afc8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 60d8d81e772a6da66254d6e777c0cafa4fc8a296
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757043"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069275"
 ---
 # <a name="atl-and-the-free-threaded-marshaler"></a>ATL とフリー スレッド マーシャラー
 
@@ -37,9 +37,9 @@ ATL シンプル オブジェクト ウィザードの [属性] ページでは�
 
 ## <a name="see-also"></a>関連項目
 
-[概念](../atl/active-template-library-atl-concepts.md)   
-[CoCreateFreeThreadedMarshaler](/windows/desktop/api/combaseapi/nf-combaseapi-cocreatefreethreadedmarshaler)   
-[IMarshal](/windows/desktop/api/objidlbase/nn-objidlbase-imarshal)   
-[グローバル インターフェイス テーブルを使用する場合](/windows/desktop/com/when-to-use-the-global-interface-table)   
+[概念](../atl/active-template-library-atl-concepts.md)<br/>
+[CoCreateFreeThreadedMarshaler](/windows/desktop/api/combaseapi/nf-combaseapi-cocreatefreethreadedmarshaler)<br/>
+[IMarshal](/windows/desktop/api/objidlbase/nn-objidlbase-imarshal)<br/>
+[グローバル インターフェイス テーブルを使用する場合](/windows/desktop/com/when-to-use-the-global-interface-table)<br/>
 [プロセス サーバーのスレッド処理の問題](/windows/desktop/com/in-process-server-threading-issues)
 

@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba2c1b96a1ce4db7c16695c51d946ecb98827271
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9a9cc4a142a0aefc4937df493fa87552464b4294
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752789"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043418"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>集計とクラス ファクトリに関するマクロ
 
@@ -67,7 +67,7 @@ DECLARE_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>パラメーター
 
-*x*  
+*x*<br/>
 [in]集約可能として定義するクラスの名前。
 
 ### <a name="remarks"></a>Remarks
@@ -131,7 +131,7 @@ DECLARE_CLASSFACTORY_EX( cf )
 
 ### <a name="parameters"></a>パラメーター
 
-*cf*  
+*cf*<br/>
 [in]クラス ファクトリ オブジェクトを実装するクラスの名前。
 
 ### <a name="remarks"></a>Remarks
@@ -154,7 +154,7 @@ DECLARE_CLASSFACTORY2( lic )
 
 ### <a name="parameters"></a>パラメーター
 
-*使用許諾契約書*  
+*使用許諾契約書*<br/>
 [in]実装するクラス`VerifyLicenseKey`、 `GetLicenseKey`、および`IsLicenseValid`します。
 
 ### <a name="remarks"></a>Remarks
@@ -178,7 +178,7 @@ class  CComClassFactory2 : public IClassFactory2,
 
 ### <a name="parameters"></a>パラメーター
 
-*ライセンス*  
+*ライセンス*<br/>
 次の静的関数を実装するクラス。
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`
@@ -249,7 +249,7 @@ DECLARE_CLASSFACTORY_SINGLETON( obj )
 
 ### <a name="parameters"></a>パラメーター
 
-*obj*  
+*obj*<br/>
 [in]クラスのオブジェクトの名前。
 
 ### <a name="remarks"></a>Remarks
@@ -274,7 +274,7 @@ class CComClassFactorySingleton : public CComClassFactory
 
 ### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 クラス。
 
 `CComClassFactorySingleton` 派生した[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)を使用して[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) 1 つのオブジェクトを構築します。 呼び出しごとに、`CreateInstance`メソッドは単にインターフェイス ポインターをこのオブジェクトを照会します。
@@ -307,7 +307,7 @@ DECLARE_NOT_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>パラメーター
 
-*x*  
+*x*<br/>
 [in]集計可能でないとして定義するクラスのオブジェクトの名前。
 
 ### <a name="remarks"></a>Remarks
@@ -330,7 +330,7 @@ DECLARE_ONLY_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>パラメーター
 
-*x*  
+*x*<br/>
 [in]集計をのみとして定義するクラスのオブジェクトの名前。
 
 ### <a name="remarks"></a>Remarks
@@ -353,7 +353,7 @@ DECLARE_POLY_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>パラメーター
 
-*x*  
+*x*<br/>
 [in]集計または集計可能でないとして定義するクラスのオブジェクトの名前。
 
 ### <a name="remarks"></a>Remarks
@@ -382,7 +382,7 @@ DECLARE_VIEW_STATUS( statusFlags )
 
 ### <a name="parameters"></a>パラメーター
 
-*statusFlags*  
+*statusFlags*<br/>
 [in]な VIEWSTATUS フラグ。 参照してください[な VIEWSTATUS](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus)フラグの一覧についてはします。
 
 ### <a name="example"></a>例

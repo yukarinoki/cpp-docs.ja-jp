@@ -1,5 +1,5 @@
 ---
-title: リンカー ツールの警告 LNK4099 |Microsoft ドキュメント
+title: リンカー ツールの警告 LNK4099 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22764705b35b2e882c5a03e819c9812d084dc118
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50bdceaba2e72312febec4819b96df334b5398c2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300814"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026011"
 ---
 # <a name="linker-tools-warning-lnk4099"></a>リンカー ツールの警告 LNK4099
-Pdb ファイル 'filename' が見つかりませんでした 'オブジェクト/ライブラリ' または 'path';オブジェクトをリンク デバッグ情報がありません。  
-  
- リンカーは、.pdb ファイルが見つかりませんでした。 格納されているディレクトリにコピー`object/library`です。  
-  
- オブジェクト ファイルに関連付けられている .pdb ファイルの名前が見つかりません。  
-  
-1.  オブジェクト ファイルをライブラリから抽出[lib](../../build/reference/lib-reference.md) **抽出/:**`objectname`**.obj** `xyz` **.lib**です。  
-  
-2.  .Pdb ファイルへのパスを確認して**dumpbin/section:.debug$ T/rawdata** `objectname` **.obj**です。  
-  
- コンパイルすることも[/Z7](../../build/reference/z7-zi-zi-debug-information-format.md)pdb を使用する、または削除する必要はありませんので、 [/debug](../../build/reference/debug-generate-debug-info.md)リンカー オプションは、リンク オブジェクトの .pdb ファイルがあるない場合。
+
+Pdb ファイル 'filename' の 'オブジェクト/ライブラリ' または 'path'; に見つかりませんデバッグ情報オブジェクトをリンク
+
+リンカーは、.pdb ファイルが見つかりませんでした。 格納されているディレクトリにコピー`object/library`します。
+
+オブジェクト ファイルに関連付けられた .pdb ファイルの名前を検索するには。
+
+1. オブジェクト ファイルをライブラリから抽出[lib](../../build/reference/lib-reference.md) **/extract:**`objectname`**.obj** `xyz` **.lib**します。
+
+1. .Pdb ファイルへのパスを確認してください。 **dumpbin/section:.debug$ T/rawdata** `objectname` **.obj**します。
+
+コンパイルすることも[/Z7](../../build/reference/z7-zi-zi-debug-information-format.md)pdb ファイルは、使用、または削除する必要があるため、 [/debug](../../build/reference/debug-generate-debug-info.md)リンカー オプションは、リンク オブジェクトの .pdb ファイルがあるない場合。

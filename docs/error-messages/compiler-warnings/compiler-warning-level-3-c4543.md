@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 3) C4543 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 3) C4543 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8434f6ce0a1f57e144bd4f58d2f19c4f3639fb66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2f0c076da0beb765a84485968dd57f72abb9824
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301893"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075465"
 ---
 # <a name="compiler-warning-level-3-c4543"></a>コンパイラの警告 (レベル 3) C4543
-属性 'no_injected_text' で抑制された挿入テキスト  
-  
- [No_injected_text](../../windows/no-injected-text.md)属性は、ソース コードに表示されていた、コンパイラはできなくなります属性コードを挿入します。  
-  
- この警告では、通知する属性は、コードを挿入できません。
+
+属性 'no_injected_text ' で省略された挿入テキスト
+
+[No_injected_text](../../windows/no-injected-text.md)属性は、ソース コードで登場したつまり、コンパイラにより、属性からコードを挿入します。
+
+この警告では、通知する属性はコードを挿入できません。

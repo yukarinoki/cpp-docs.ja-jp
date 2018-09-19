@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ff44c6352224b65d712161a62d34b34ee858ad6
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 98ef24f5a714b1df5cb9be0875cdfd5adcb3fe62
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102747"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704875"
 ---
 # <a name="timeget-class"></a>time_get クラス
 
@@ -69,10 +69,10 @@ class time_get : public time_base;
 
 ### <a name="parameters"></a>パラメーター
 
-*CharType*  
+*CharType*<br/>
 文字をエンコードするためにプログラム内で使用される型。
 
-*InputIterator*  
+*InputIterator*<br/>
 時刻値の読み取り元の反復子。
 
 ## <a name="remarks"></a>Remarks
@@ -320,19 +320,19 @@ virtual iter_type do_get_date(iter_type first,
 
 ### <a name="parameters"></a>パラメーター
 
-*first*  
+*first*<br/>
 変換されるシーケンスの開始位置を示す入力反復子。
 
-*last*  
+*last*<br/>
 変換されるシーケンスの終了位置を示す入力反復子。
 
-*iosbase*  
+*iosbase*<br/>
 書式設定フラグ。これが設定されている場合、通貨記号は省略可能です。それ以外の場合は必須です。
 
-*state*  
+*state*<br/>
 操作が成功したかどうかに基づき、ストリームの状態に適したビットマスク要素を設定します。
 
-*ptm*  
+*ptm*<br/>
 日付の情報を格納する場所へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -371,19 +371,19 @@ virtual iter_type do_get_monthname(iter_type first,
 
 ### <a name="parameters"></a>パラメーター
 
-*first*  
+*first*<br/>
 変換されるシーケンスの開始位置を示す入力反復子。
 
-*last*  
+*last*<br/>
 変換されるシーケンスの終了位置を示す入力反復子。
 
-*iosbase*  
+*iosbase*<br/>
 使用されません。
 
-*state*  
+*state*<br/>
 操作が成功したかどうかに基づき、ストリームの状態に適したビットマスク要素を設定する出力パラメーター。
 
-*ptm*  
+*ptm*<br/>
 月の情報を格納する場所へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -414,19 +414,19 @@ virtual iter_type do_get_time(iter_type first,
 
 ### <a name="parameters"></a>パラメーター
 
-*first*  
+*first*<br/>
 変換されるシーケンスの開始位置を示す入力反復子。
 
-*last*  
+*last*<br/>
 変換されるシーケンスの終了位置を示す入力反復子。
 
-*iosbase*  
+*iosbase*<br/>
 使用されません。
 
-*state*  
+*state*<br/>
 操作が成功したかどうかに基づき、ストリームの状態に適したビットマスク要素を設定します。
 
-*ptm*  
+*ptm*<br/>
 日付の情報を格納する場所へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -465,19 +465,19 @@ virtual iter_type do_get_weekday(iter_type first,
 
 ### <a name="parameters"></a>パラメーター
 
-*first*  
+*first*<br/>
 変換されるシーケンスの開始位置を示す入力反復子。
 
-*last*  
+*last*<br/>
 変換されるシーケンスの終了位置を示す入力反復子。
 
-*iosbase*  
+*iosbase*<br/>
 書式設定フラグ。これが設定されている場合、通貨記号は省略可能です。それ以外の場合は必須です。
 
-*state*  
+*state*<br/>
 操作が成功したかどうかに基づき、ストリームの状態に適したビットマスク要素を設定します。
 
-*ptm*  
+*ptm*<br/>
 曜日の情報を格納する場所へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -508,19 +508,19 @@ virtual iter_type do_get_year(iter_type first,
 
 ### <a name="parameters"></a>パラメーター
 
-*first*  
+*first*<br/>
 変換されるシーケンスの開始位置を示す入力反復子。
 
-*last*  
+*last*<br/>
 変換されるシーケンスの終了位置を示す入力反復子。
 
-*iosbase*  
+*iosbase*<br/>
 書式設定フラグ。これが設定されている場合、通貨記号は省略可能です。それ以外の場合は必須です。
 
-*state*  
+*state*<br/>
 操作が成功したかどうかに基づき、ストリームの状態に適したビットマスク要素を設定します。
 
-*ptm*  
+*ptm*<br/>
 年の情報を格納する場所へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -563,31 +563,31 @@ iter_type get(
 
 ### <a name="parameters"></a>パラメーター
 
-*first*  
+*first*<br/>
 変換するシーケンスの開始位置を示す入力反復子。
 
-*last*  
+*last*<br/>
 変換するシーケンスの終了位置を示す入力反復子。
 
-*iosbase*  
+*iosbase*<br/>
 ストリーム。
 
-*state*  
+*state*<br/>
 適切なビットマスク要素を設定して、ストリームの状態がエラーであることを示します。
 
-*ptm*  
+*ptm*<br/>
 時間を格納する時間構造体へのポインター。
 
-*fmt*  
+*fmt*<br/>
 変換指定子の文字。
 
-*mod*  
+*mod*<br/>
 省略可能な修飾子文字。
 
-*fmt_first*  
+*fmt_first*<br/>
 形式のディレクティブの開始位置を指します。
 
-*fmt_last*  
+*fmt_last*<br/>
 形式のディレクティブの終了位置を指します。
 
 ### <a name="return-value"></a>戻り値
@@ -620,19 +620,19 @@ iter_type get_date(iter_type first,
 
 ### <a name="parameters"></a>パラメーター
 
-*first*  
+*first*<br/>
 変換されるシーケンスの開始位置を示す入力反復子。
 
-*last*  
+*last*<br/>
 変換されるシーケンスの終了位置を示す入力反復子。
 
-*iosbase*  
+*iosbase*<br/>
 書式設定フラグ。これが設定されている場合、通貨記号は省略可能です。それ以外の場合は必須です。
 
-*state*  
+*state*<br/>
 操作が成功したかどうかに基づき、ストリームの状態に適したビットマスク要素を設定します。
 
-*ptm*  
+*ptm*<br/>
 日付の情報を格納する場所へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -714,19 +714,19 @@ iter_type get_monthname(iter_type first,
 
 ### <a name="parameters"></a>パラメーター
 
-*first*  
+*first*<br/>
 変換されるシーケンスの開始位置を示す入力反復子。
 
-*last*  
+*last*<br/>
 変換されるシーケンスの終了位置を示す入力反復子。
 
-*iosbase*  
+*iosbase*<br/>
 使用されません。
 
-*state*  
+*state*<br/>
 操作が成功したかどうかに基づき、ストリームの状態に適したビットマスク要素を設定する出力パラメーター。
 
-*ptm*  
+*ptm*<br/>
 月の情報を格納する場所へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -806,19 +806,19 @@ iter_type get_time(iter_type first,
 
 ### <a name="parameters"></a>パラメーター
 
-*first*  
+*first*<br/>
 変換されるシーケンスの開始位置を示す入力反復子。
 
-*last*  
+*last*<br/>
 変換されるシーケンスの終了位置を示す入力反復子。
 
-*iosbase*  
+*iosbase*<br/>
 使用されません。
 
-*state*  
+*state*<br/>
 操作が成功したかどうかに基づき、ストリームの状態に適したビットマスク要素を設定します。
 
-*ptm*  
+*ptm*<br/>
 日付の情報を格納する場所へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -887,19 +887,19 @@ iter_type get_weekday(iter_type first,
 
 ### <a name="parameters"></a>パラメーター
 
-*first*  
+*first*<br/>
 変換されるシーケンスの開始位置を示す入力反復子。
 
-*last*  
+*last*<br/>
 変換されるシーケンスの終了位置を示す入力反復子。
 
-*iosbase*  
+*iosbase*<br/>
 書式設定フラグ。これが設定されている場合、通貨記号は省略可能です。それ以外の場合は必須です。
 
-*state*  
+*state*<br/>
 操作が成功したかどうかに基づき、ストリームの状態に適したビットマスク要素を設定します。
 
-*ptm*  
+*ptm*<br/>
 曜日の情報を格納する場所へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -964,19 +964,19 @@ iter_type get_year(iter_type first,
 
 ### <a name="parameters"></a>パラメーター
 
-*first*  
+*first*<br/>
 変換されるシーケンスの開始位置を示す入力反復子。
 
-*last*  
+*last*<br/>
 変換されるシーケンスの終了位置を示す入力反復子。
 
-*iosbase*  
+*iosbase*<br/>
 書式設定フラグ。これが設定されている場合、通貨記号は省略可能です。それ以外の場合は必須です。
 
-*state*  
+*state*<br/>
 操作が成功したかどうかに基づき、ストリームの状態に適したビットマスク要素を設定します。
 
-*ptm*  
+*ptm*<br/>
 年の情報を格納する場所へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -1050,7 +1050,7 @@ explicit time_get(size_t refs = 0);
 
 ### <a name="parameters"></a>パラメーター
 
-*refs*  
+*refs*<br/>
 オブジェクトのメモリ管理の種類を指定するために使用する整数値。
 
 ### <a name="remarks"></a>Remarks

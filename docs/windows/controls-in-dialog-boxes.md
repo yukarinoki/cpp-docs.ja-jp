@@ -1,5 +1,5 @@
 ---
-title: ダイアログ ボックスのコントロール |Microsoft Docs
+title: ダイアログ ボックス (C++) のコントロール |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,7 +9,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - controls [C++], dialog boxes
-- dialog box controls, about dialog box controls
+- dialog box controls [C++], about dialog box controls
 - dialog box controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
 author: mikeblome
@@ -17,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70e3bcfb644893f1dc8b41b9c11a3aee5c92103d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d8128859f2b136fb945376eeea8afa0d1ef8e6e1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591959"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317109"
 ---
-# <a name="controls-in-dialog-boxes"></a>ダイアログ ボックスのコントロール
+# <a name="controls-in-dialog-box-ces"></a>Es を制御 ダイアログ ボックス (C++)
 
 コントロールを使用して、ダイアログ ボックスを追加することができます、[ダイアログ エディターのタブ](../windows/dialog-editor-tab-toolbox.md)で、[ツールボックス ウィンドウ](/visualstudio/ide/reference/toolbox)、ダイアログ ボックスにドラッグしてコントロールを選択できます。 既定では、[ツールボックス] ウィンドウは、自動非表示に設定されます。 ダイアログ エディターが開いたとき、ソリューションの左余白のタブとして表示されます。 ただし、ピン留めできます、**ツールボックス**ウィンドウ位置をクリックして、**自動的に隠す**ウィンドウの右上隅のボタンをクリックします。 このウィンドウの動作を制御する方法の詳細については、次を参照してください。[ウィンドウ管理](/visualstudio/ide/customizing-window-layouts-in-visual-studio)します。
 

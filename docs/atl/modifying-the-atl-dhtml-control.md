@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a0652ca867ba49243ca5c87caa1dec98da929cf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8a08563396a77dec5f72ea35e10dd8a349095077
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764551"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314236"
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>ATL DHTML コントロールの変更
 
@@ -51,7 +51,7 @@ ATL コントロール ウィザードは、ビルドして、コントロール
 
    使用することができます、 **IWebBrowser2**メソッド ATL の .h ファイルでそのインターフェイスへのポインターを提供するためです。
 
-次に、作成したメソッドを呼び出す HTML リソースを変更します。 これらのメソッドを呼び出すための 3 つのボタンを追加します。  
+次に、作成したメソッドを呼び出す HTML リソースを変更します。 これらのメソッドを呼び出すための 3 つのボタンを追加します。
 
 #### <a name="to-modify-the-html-resource"></a>HTML リソースを変更するには
 
@@ -72,9 +72,9 @@ ATL コントロール ウィザードは、ビルドして、コントロール
 3. 呼び出しを追加、`HelloHTML`メソッドを作成します。 例えば:
 
     ```html
-    <br>  
-    <br>  
-    <BUTTON onclick='window.external.HelloHTML();'>HelloHTML</BUTTON>  
+    <br>
+    <br>
+    <BUTTON onclick='window.external.HelloHTML();'>HelloHTML</BUTTON>
     ```
 
    このメソッドでは、ラベルのボタンを作成します。 **HelloHTML**、表示するユーザーがクリックできる、`HelloHTML`メッセージ ボックス。

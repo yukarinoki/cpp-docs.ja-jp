@@ -1,5 +1,5 @@
 ---
-title: スキーマ行セット |Microsoft ドキュメント
+title: スキーマ行セットの |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4368f52bebf9bb171fd4b0956dfccf9794f91356
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69b4522fe2bbb49a19dc703f36b6e98d31d1a8fb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104283"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021240"
 ---
 # <a name="schema-rowsets"></a>スキーマ行セット
-スキーマ (メタデータ) は、データベースの構造や、プロバイダー、行セット、テーブルの列に関する情報などの組織に関する情報、または実際のデータベースの内容は、その他の情報。 OLE DB では、スキーマ行セットを使用して、行セットを開かずにこのような情報を取得することができます。  
+
+スキーマ (メタデータ) は、データベースの構造や、プロバイダー、行セット、テーブルの列に関する情報などの組織に関する情報、またはその他の情報を実際のデータベースの内容。 OLE DB スキーマ行セットを使用して、行セットを開くことがなくこのような情報を取得することができます。  
   
- スキーマ行セットを使用する方法については、次を参照してください。[のスキーマ行セットのメタデータの取得](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)です。  
+スキーマ行セットを使用する方法については、次を参照してください。[スキーマ行セットのメタデータの取得](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)します。  
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)
+
+[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)

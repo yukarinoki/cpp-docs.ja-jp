@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93a1c08e8e50e8ef1236b253d471c2332c4e6e03
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1479ced25a741e27a195b529b6bf8825b47ce41e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763771"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099604"
 ---
 # <a name="ipersiststorageimpl-class"></a>IPersistStorageImpl クラス
 
@@ -42,13 +42,13 @@ ms.locfileid: "43763771"
 ## <a name="syntax"></a>構文
 
 ```
-template <class T>  
+template <class T>
 class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 派生したクラス、`IPersistStorageImpl`します。
 
 ## <a name="members"></a>メンバー
@@ -185,7 +185,7 @@ S_OK を返します。
 
 ## <a name="see-also"></a>関連項目
 
-[記憶域とストリーム](/windows/desktop/Stg/storages-and-streams)   
-[IPersistStreamInitImpl クラス](../../atl/reference/ipersiststreaminitimpl-class.md)   
-[IPersistPropertyBagImpl クラス](../../atl/reference/ipersistpropertybagimpl-class.md)   
+[記憶域とストリーム](/windows/desktop/Stg/storages-and-streams)<br/>
+[IPersistStreamInitImpl クラス](../../atl/reference/ipersiststreaminitimpl-class.md)<br/>
+[IPersistPropertyBagImpl クラス](../../atl/reference/ipersistpropertybagimpl-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

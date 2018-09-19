@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4276 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4276 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afedab27c2fb93075aa33053c12ec6973824f144
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 40a6c85b460e9718a8816598afb016e9c7a493b9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277307"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116023"
 ---
 # <a name="compiler-warning-level-1-c4276"></a>コンパイラの警告 (レベル 1) C4276
-'function': プロトタイプがありません。パラメーターがないと仮定します。  
-  
- 持つ関数のアドレスを取得するときに、 [_ _stdcall](../../cpp/stdcall.md)呼び出し規約を付ける必要があります、プロトタイプ、コンパイラは関数の装飾名を作成できるようにします。 *関数*装飾名を作成するときに、コンパイラのプロトタイプがない、関数がパラメーターを持たないと仮定します。
+
+'function': プロトタイプがありません。パラメーターがないと仮定します。
+
+持つ関数のアドレスを取得するときに、 [_ _stdcall](../../cpp/stdcall.md)呼び出し規約を付ける必要があります、プロトタイプ、コンパイラは関数の装飾名を作成できるようにします。 *関数*装飾名を作成するときに、コンパイラのプロトタイプがありません、この関数はパラメーターを持たない前提としています。

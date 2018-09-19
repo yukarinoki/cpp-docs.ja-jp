@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 3) C4101 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 3) C4101 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,49 +16,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 973b966e4b589cb35ffc92da9031779b14d448e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1549a327329d438cb30bd6908e07419eb1b6bc1a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291116"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060838"
 ---
 # <a name="compiler-warning-level-3-c4101"></a>コンパイラの警告 (レベル 3) C4101
-'identifier': 参照されていないローカル変数  
-  
- ローカル変数は使用されません。 この警告は、明らかな場合に発生します。  
-  
-```  
-// C4101a.cpp  
-// compile with: /W3  
-int main() {  
-int i;   // C4101  
-}  
-```  
-  
- ただし、この警告がまた発生を呼び出すときに、**静的**メンバー関数は、クラスのインスタンスを経由します。  
-  
-```  
-// C4101b.cpp  
-// compile with:  /W3  
-struct S {  
-   static int func()  
-   {  
-      return 1;  
-   }  
-};  
-  
-int main() {  
-   S si;   // C4101, si is never used  
-   int y = si.func();  
-   return y;  
-}  
-```  
-  
- コンパイラはこのような状況で、に関する情報を使用して`si`にアクセスする、**静的**関数がクラスのインスタンスを呼び出すには必要ありません、**静的**関数です。 そのため、警告します。 この警告を解決するのには、次のことができます。  
-  
--   インスタンス、コンパイラが使用して、コンス トラクターを追加`si`への呼び出しで`func`です。  
-  
--   削除、**静的**キーワードの定義から`func`です。  
-  
--   呼び出す、**静的**明示的に関数:`int y = S::func();`です。
+
+'identifier': 参照されていないローカル変数
+
+ローカル変数は使用されません。 この警告は、明確な状況で発生します。
+
+```
+// C4101a.cpp
+// compile with: /W3
+int main() {
+int i;   // C4101
+}
+```
+
+呼び出すときに、この警告が発生も、**静的**メンバー関数は、クラスのインスタンスを使用します。
+
+```
+// C4101b.cpp
+// compile with:  /W3
+struct S {
+   static int func()
+   {
+      return 1;
+   }
+};
+
+int main() {
+   S si;   // C4101, si is never used
+   int y = si.func();
+   return y;
+}
+```
+
+コンパイラはこのような状況で、に関する情報を使用して`si`にアクセスする、**静的**関数がクラスのインスタンスを呼び出すには必要ありません、**静的**関数です。 そのため、警告。 この警告を解決するのには、次のことができます。
+
+- インスタンス、コンパイラが使用して、コンス トラクターを追加`si`への呼び出しで`func`します。
+
+- 削除、**静的**キーワードの定義から`func`します。
+
+- 呼び出す、**静的**関数を明示的に:`int y = S::func();`します。

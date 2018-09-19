@@ -44,14 +44,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 73be0ee1987aa60d91976c1a4bbb73ebf66e5c1c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9619ffdf9fd24bd73548fb3992084eb0a5d437a7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572568"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114476"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet クラス
+
 継承、`DBPROPIDSET`構造体し、キー フィールドを初期化するコンス トラクターを追加するだけでなく[AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md)メソッドにアクセスします。  
   
 ## <a name="syntax"></a>構文
@@ -61,7 +62,8 @@ class CDBPropIDSet : public tagDBPROPIDSET
 ```  
 
 ## <a name="requirements"></a>要件  
- **ヘッダー:** atldbcli.h
+
+**ヘッダー:** atldbcli.h
   
 ## <a name="members"></a>メンバー  
   
@@ -80,9 +82,11 @@ class CDBPropIDSet : public tagDBPROPIDSET
 |[演算子 =](#op_equal)|割り当て ID の 1 つのプロパティの内容は別に設定します。|  
   
 ## <a name="remarks"></a>Remarks  
- OLE DB コンシューマー使用`DBPROPIDSET`をコンシューマーがプロパティの情報を取得するプロパティ Id の配列を渡すための構造体。 1 つで指定されたプロパティ[コンス トラクターは](/previous-versions/windows/desktop/ms717981\(v=vs.85\))構造体が 1 つのプロパティ セットに属しています。  
+
+OLE DB コンシューマー使用`DBPROPIDSET`をコンシューマーがプロパティの情報を取得するプロパティ Id の配列を渡すための構造体。 1 つで指定されたプロパティ[コンス トラクターは](/previous-versions/windows/desktop/ms717981\(v=vs.85\))構造体が 1 つのプロパティ セットに属しています。  
 
 ## <a name="addpropertyid"></a> Cdbpropidset::addpropertyid
+
 プロパティ ID の設定には、プロパティ ID を追加します。  
   
 ### <a name="syntax"></a>構文  
@@ -92,10 +96,12 @@ bool AddPropertyID(DBPROPID propid) throw();
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *propid*  
- [in]プロパティ ID に追加するプロパティ ID を設定します。  
+
+*propid*<br/>
+[in]プロパティ ID に追加するプロパティ ID を設定します。  
 
 ## <a name="cdbpropidset"></a> Cdbpropidset::cdbpropidset
+
 コンストラクターです。 初期化します、 `rgProperties`、 `cProperties`、および (必要に応じて)`guidPropertySet`のフィールド、[コンス トラクターは](/previous-versions/windows/desktop/ms717981\(v=vs.85\))構造体。  
   
 ### <a name="syntax"></a>構文  
@@ -109,13 +115,15 @@ CDBPropIDSet();
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *guid*  
- [in]初期化するために使用される GUID、`guidPropertySet`フィールド。  
+
+*guid*<br/>
+[in]初期化するために使用される GUID、`guidPropertySet`フィールド。  
   
- *propidset*  
- [in]もう 1 つ`CDBPropIDSet`オブジェクトのコピー構築します。  
+*propidset*<br/>
+[in]もう 1 つ`CDBPropIDSet`オブジェクトのコピー構築します。  
 
 ## <a name="setguid"></a> Cdbpropidset::setguid
+
 [GUID] フィールドを設定、`DBPROPIDSET`構造体。  
   
 ### <a name="syntax"></a>構文  
@@ -125,13 +133,16 @@ void SetGUID(const GUID& guid) throw();
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *guid*  
- [in]GUID を設定するため、`guidPropertySet`のフィールド、[コンス トラクターは](/previous-versions/windows/desktop/ms717981\(v=vs.85\))構造体。  
+
+*guid*<br/>
+[in]GUID を設定するため、`guidPropertySet`のフィールド、[コンス トラクターは](/previous-versions/windows/desktop/ms717981\(v=vs.85\))構造体。  
   
 ### <a name="remarks"></a>Remarks  
- このフィールドを設定することができます、[コンス トラクター](../../data/oledb/cdbpropidset-cdbpropidset.md)もします。 このクラスの既定のコンス トラクターを使用する場合は、この関数を呼び出します。  
+
+このフィールドを設定することができます、[コンス トラクター](../../data/oledb/cdbpropidset-cdbpropidset.md)もします。 このクラスの既定のコンス トラクターを使用する場合は、この関数を呼び出します。  
 
 ## <a name="op_equal"></a> Cdbpropidset::operator =
+
 1 つのプロパティ ID のセットを別の ID プロパティ セットの内容を割り当てます。  
   
 ### <a name="syntax"></a>構文  
@@ -141,5 +152,6 @@ CDBPropIDSet& operator =(CDBPropIDSet& propset) throw();
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)

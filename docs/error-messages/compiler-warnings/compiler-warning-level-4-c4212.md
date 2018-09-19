@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 4) C4212 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 4) C4212 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb70cf045a1cc563e4eb009ed00ffe82be812b0b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 107581742f1a60cfc015a9a1b8ccea8b2f89c7a3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292004"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074761"
 ---
 # <a name="compiler-warning-level-4-c4212"></a>コンパイラの警告 (レベル 4) C4212
-使用される標準の拡張機能: 関数の宣言で省略記号ボタンを使用します。  
-  
- 関数プロトタイプには、可変個の引数。 関数定義されていません。  
-  
- 次の例では、C4212 が生成されます。  
-  
-```  
-// C4212.c  
-// compile with: /W4 /Ze /c  
-void f(int , ...);  
-void f(int i, int j) {}  
+
+標準の拡張機能を使用: 関数宣言は、省略記号を使用
+
+関数プロトタイプには可変個の引数。 関数定義されていません。
+
+次の例では、C4212 が生成されます。
+
+```
+// C4212.c
+// compile with: /W4 /Ze /c
+void f(int , ...);
+void f(int i, int j) {}
 ```

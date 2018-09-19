@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2062 |Microsoft ドキュメント
+title: コンパイラ エラー C2062 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d11151a8e842796e4a5a8d45956782421daa1c70
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bbda0894b25e09681207d6447bb40727d490fc02
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168660"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072252"
 ---
 # <a name="compiler-error-c2062"></a>コンパイラ エラー C2062
-型 'type' の予期しません。  
-  
- コンパイラでは、型名が想定されていませんでした。  
-  
- 次の例では、c2062 エラーが生成されます。  
-  
-```  
-// C2062.cpp  
-// compile with: /c  
-struct A {  : int l; };   // C2062  
-struct B { private: int l; };   // OK  
-```  
-  
- C2062 エラーも発生する可能性が方法、コンパイラによってコンス トラクターのパラメーター リストで定義されていない型の処理です。 コンパイラには、未定義の型 (スペルの正しくないですか?) が発生すると、コンス トラクターは、式を指定し、c2062 が前提とします。 解決するには、のみを使用するには、コンス トラクターのパラメーター リスト内の型を定義します。
+
+型 'type' の予期しません。
+
+コンパイラは、型名を予期していません。
+
+次の例では、C2062 が生成されます。
+
+```
+// C2062.cpp
+// compile with: /c
+struct A {  : int l; };   // C2062
+struct B { private: int l; };   // OK
+```
+
+C2062 発生することもまた、コンパイラの方法は、コンス トラクターのパラメーター リストで定義されていない型の処理。 コンパイラには、未定義の型 (スペル ミスですか?) が発生すると、コンス トラクターは、式を指定し、c2062 と仮定します。 を解決するには、コンス トラクターのパラメーター リストで定義された型をのみ使用します。

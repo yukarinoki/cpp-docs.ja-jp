@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 463f005388a066776d7db8b1701850e08888de76
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 335f81a204ec91361c51f7573e58b61fad91f97b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895098"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061709"
 ---
 # <a name="vectorcall"></a>__vectorcall
 
@@ -46,7 +46,7 @@ typedef struct {
    __m256 y;
    __m256 z;
 } hva3;    // 3 element HVA type on __m256
-```  
+```
 
 関数を使用して明示的に宣言、 **_ _vectorcall**個別にヘッダー ファイル内のキーワードがエラーなしでリンクするためのコードをコンパイルします。 関数を使用するようにプロトタイプ宣言する必要があります **_ _vectorcall**と使用できない、`vararg`可変長引数リスト。
 
@@ -60,25 +60,25 @@ ARM マシンで **_ _vectorcall**が受け入れられるし、コンパイラ�
 struct MyClass {
    void __vectorcall mymethod();
 };
-```  
+```
 
 ここで、
 
 ```cpp
 void MyClass::mymethod() { return; }
-```  
+```
 
 は次の記述と同じです。
 
 ```cpp
 void __vectorcall MyClass::mymethod() { return; }
-```  
+```
 
 **_ _Vectorcall**呼び出し規約を指定するくださいとへのポインターを **_ _vectorcall**関数が作成されます。 次の例では、作成、 **typedef**へのポインターの **_ _vectorcall**関数を受け取る 4 つ**二重**引数を返す、 **__m256**値。
 
 ```cpp
 typedef __m256 (__vectorcall * vcfnptr)(double, double, double, double);
-```  
+```
 
 ## <a name="vectorcall-convention-on-x64"></a>x64 での __vectorcall 規約
 
@@ -167,7 +167,7 @@ hva4 __vectorcall example6(hva2 a, hva4 b, __m256 c, hva2 d) {
    return b;
 }
 
-int __cdecl main( void )  
+int __cdecl main( void )
 {
    hva4 h4;
    hva2 h2;
@@ -188,7 +188,7 @@ int __cdecl main( void )
    i = example5(1, h2, 3, h4, 5);
    h4 = example6(h2, h4, c, h2);
 }
-```  
+```
 
 ## <a name="vectorcall-convention-on-x86"></a>x86 での __vectorcall 規約
 
@@ -273,7 +273,7 @@ hva4 __vectorcall example6(hva2 a, hva4 b, __m256 c, hva2 d) {
    return b;
 }
 
-int __cdecl main( void )  
+int __cdecl main( void )
 {
    hva4 h4;
    hva2 h2;
@@ -294,11 +294,11 @@ int __cdecl main( void )
    i = example5(1, h2, 3, h4, 5);
    h4 = example6(h2, h4, c, h2);
 }
-```  
+```
 
 **END Microsoft 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 
-[引数を渡すと、名前付け規則](../cpp/argument-passing-and-naming-conventions.md)   
+[引数の渡し規則と名前付け規則](../cpp/argument-passing-and-naming-conventions.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)

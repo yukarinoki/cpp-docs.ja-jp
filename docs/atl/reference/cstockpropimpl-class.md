@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2021f98389177e7c3172fd142172c6bc85f6724
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8de0378e34212649f7e1149bd038587f547e4eb2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767739"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032030"
 ---
 # <a name="cstockpropimpl-class"></a>CStockPropImpl クラス
 
@@ -95,7 +95,7 @@ template <class T, class InterfaceName,
     const IID* piid = &_ATL_IIDOF(InterfaceName),
     const GUID* plibid = &CComModule::m_libid,
     WORD wMajor = 1,
-    WORD wMinor = 0, class tihclass = CcomTypeInfoHolder>  
+    WORD wMinor = 0, class tihclass = CcomTypeInfoHolder>
 class ATL_NO_VTABLE CStockPropImpl : public IDispatchImpl<InterfaceName, piid,
 plibid,
     wMajor,
@@ -105,25 +105,25 @@ wMinor,
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 コントロールを実装するクラスから派生する`CStockPropImpl`します。
 
-*InterfaceName*  
+*InterfaceName*<br/>
 ストック プロパティを公開するデュアル インターフェイスです。
 
-*piid*  
+*piid*<br/>
 ポインターの IID を`InterfaceName`します。
 
-*plibid*  
+*plibid*<br/>
 定義を含むタイプ ライブラリの LIBID へのポインター`InterfaceName`します。
 
-*wMajor*  
+*wMajor*<br/>
 タイプ ライブラリのメジャー バージョンです。 既定値は 1 です。
 
-*wMinor*  
+*wMinor*<br/>
 タイプ ライブラリのマイナー バージョンです。 既定値は 0 です。
 
-*tihclass*  
+*tihclass*<br/>
 型情報を管理するために使用するクラス*T*します。既定値は `CComTypeInfoHolder` です。
 
 ## <a name="members"></a>メンバー
@@ -228,7 +228,7 @@ HRESULT STDMETHODCALLTYPE get_Appearance(SHORT pnAppearance);
 
 ### <a name="parameters"></a>パラメーター
 
-*pnAppearance*  
+*pnAppearance*<br/>
 コントロールの描画スタイルを受け取る変数。
 
 ### <a name="return-value"></a>戻り値
@@ -245,7 +245,7 @@ HRESULT STDMETHODCALLTYPE get_Autosize(VARIANT_BOOL* pbAutoSize);
 
 ### <a name="parameters"></a>パラメーター
 
-*pbAutoSize*  
+*pbAutoSize*<br/>
 フラグの状態を受け取る変数。 TRUE は、コントロールが他の任意のサイズを変更できないことを示します。
 
 ### <a name="return-value"></a>戻り値
@@ -262,7 +262,7 @@ HRESULT STDMETHODCALLTYPE get_BackColor(OLE_COLOR* pclrBackColor);
 
 ### <a name="parameters"></a>パラメーター
 
-*pclrBackColor*  
+*pclrBackColor*<br/>
 コントロールの背景色を受け取る変数。
 
 ### <a name="return-value"></a>戻り値
@@ -279,7 +279,7 @@ HRESULT STDMETHODCALLTYPE get_BackStyle(LONG* pnBackStyle);
 
 ### <a name="parameters"></a>パラメーター
 
-*pnBackStyle*  
+*pnBackStyle*<br/>
 コントロールの背景のスタイルを受け取る変数。
 
 ### <a name="return-value"></a>戻り値
@@ -296,7 +296,7 @@ HRESULT STDMETHODCALLTYPE get_BorderColor(OLE_COLOR* pclrBorderColor);
 
 ### <a name="parameters"></a>パラメーター
 
-*pclrBorderColor*  
+*pclrBorderColor*<br/>
 コントロールの境界線の色を受け取る変数。
 
 ### <a name="return-value"></a>戻り値
@@ -313,7 +313,7 @@ HRESULT STDMETHODCALLTYPE get_BorderStyle(LONG* pnBorderStyle);
 
 ### <a name="parameters"></a>パラメーター
 
-*pnBorderStyle*  
+*pnBorderStyle*<br/>
 コントロールの境界線のスタイルを受け取る変数。
 
 ### <a name="return-value"></a>戻り値
@@ -330,7 +330,7 @@ HRESULT STDMETHODCALLTYPE get_BorderVisible(VARIANT_BOOL* pbBorderVisible);
 
 ### <a name="parameters"></a>パラメーター
 
-*pbBorderVisible*  
+*pbBorderVisible*<br/>
 フラグの状態を受け取る変数。 TRUE は、コントロールの境界線が表示されていることを示します。
 
 ### <a name="return-value"></a>戻り値
@@ -347,7 +347,7 @@ HRESULT STDMETHODCALLTYPE get_BorderWidth(LONG* pnBorderWidth);
 
 ### <a name="parameters"></a>パラメーター
 
-*pnBorderWidth*  
+*pnBorderWidth*<br/>
 コントロールの境界線の幅を受け取る変数。
 
 ### <a name="return-value"></a>戻り値
@@ -364,7 +364,7 @@ HRESULT STDMETHODCALLTYPE get_Caption(BSTR* pbstrCaption);
 
 ### <a name="parameters"></a>パラメーター
 
-*pbstrCaption*  
+*pbstrCaption*<br/>
 コントロールに表示されるテキスト。
 
 ### <a name="return-value"></a>戻り値
@@ -381,7 +381,7 @@ HRESULT STDMETHODCALLTYPE get_DrawMode(LONG* pnDrawMode);
 
 ### <a name="parameters"></a>パラメーター
 
-*pnDrawMode*  
+*pnDrawMode*<br/>
 コントロールの描画モードを受け取る変数。
 
 ### <a name="return-value"></a>戻り値
@@ -398,7 +398,7 @@ HRESULT STDMETHODCALLTYPE get_DrawStyle(LONG* pnDrawStyle);
 
 ### <a name="parameters"></a>パラメーター
 
-*pnDrawStyle*  
+*pnDrawStyle*<br/>
 コントロールの描画スタイルを受け取る変数。
 
 ### <a name="return-value"></a>戻り値
@@ -415,7 +415,7 @@ HRESULT STDMETHODCALLTYPE get_DrawWidth(LONG* pnDrawWidth);
 
 ### <a name="parameters"></a>パラメーター
 
-*pnDrawWidth*  
+*pnDrawWidth*<br/>
 ピクセル単位で、コントロールの幅の値を受け取る変数。
 
 ### <a name="return-value"></a>戻り値
@@ -432,7 +432,7 @@ HRESULT STDMETHODCALLTYPE get_Enabled(VARIANT_BOOL* pbEnabled);
 
 ### <a name="parameters"></a>パラメーター
 
-*pbEnabled*  
+*pbEnabled*<br/>
 フラグの状態を受け取る変数。 TRUE は、コントロールが有効になっていることを示します。
 
 ### <a name="return-value"></a>戻り値
@@ -449,7 +449,7 @@ HRESULT STDMETHODCALLTYPE get_FillColor(OLE_COLOR* pclrFillColor);
 
 ### <a name="parameters"></a>パラメーター
 
-*pclrFillColor*  
+*pclrFillColor*<br/>
 コントロールの塗りつぶしの色を受け取る変数。
 
 ### <a name="return-value"></a>戻り値
@@ -466,7 +466,7 @@ HRESULT STDMETHODCALLTYPE get_FillStyle(LONG* pnFillStyle);
 
 ### <a name="parameters"></a>パラメーター
 
-*pnFillStyle*  
+*pnFillStyle*<br/>
 コントロールの塗りつぶしのスタイルを受け取る変数。
 
 ### <a name="return-value"></a>戻り値
@@ -483,7 +483,7 @@ HRESULT STDMETHODCALLTYPE get_Font(IFontDisp** ppFont);
 
 ### <a name="parameters"></a>パラメーター
 
-*ppFont*  
+*ppFont*<br/>
 コントロールのフォント プロパティへのポインターを受け取る変数。
 
 ### <a name="return-value"></a>戻り値
@@ -500,7 +500,7 @@ HRESULT STDMETHODCALLTYPE get_ForeColor(OLE_COLOR* pclrForeColor);
 
 ### <a name="parameters"></a>パラメーター
 
-*pclrForeColor*  
+*pclrForeColor*<br/>
 コントロールの前景色を受け取る変数。
 
 ### <a name="return-value"></a>戻り値
@@ -517,7 +517,7 @@ HRESULT STDMETHODCALLTYPE get_HWND(LONG_PTR* phWnd);
 
 ### <a name="parameters"></a>パラメーター
 
-*phWnd*  
+*phWnd*<br/>
 コントロールに関連付けられているウィンドウ ハンドル。
 
 ### <a name="return-value"></a>戻り値
@@ -534,7 +534,7 @@ HRESULT STDMETHODCALLTYPE get_MouseIcon(IPictureDisp** ppPicture);
 
 ### <a name="parameters"></a>パラメーター
 
-*ppPicture*  
+*ppPicture*<br/>
 グラフィックの画像のプロパティへのポインターを受け取る変数。
 
 ### <a name="return-value"></a>戻り値
@@ -551,7 +551,7 @@ HRESULT STDMETHODCALLTYPE get_MousePointer(LONG* pnMousePointer);
 
 ### <a name="parameters"></a>パラメーター
 
-*pnMousePointer*  
+*pnMousePointer*<br/>
 マウス ポインターの型を受け取る変数。
 
 ### <a name="return-value"></a>戻り値
@@ -568,7 +568,7 @@ HRESULT STDMETHODCALLTYPE get_Picture(IPictureDisp** ppPicture);
 
 ### <a name="parameters"></a>パラメーター
 
-*ppPicture*  
+*ppPicture*<br/>
 画像のプロパティへのポインターを受け取る変数。 参照してください[IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762)の詳細。
 
 ### <a name="return-value"></a>戻り値
@@ -585,7 +585,7 @@ HRESULT STDMETHODCALLTYPE get_ReadyState(LONG* pnReadyState);
 
 ### <a name="parameters"></a>パラメーター
 
-*pnReadyState*  
+*pnReadyState*<br/>
 コントロールの準備完了状態を受け取る変数。
 
 ### <a name="return-value"></a>戻り値
@@ -602,7 +602,7 @@ HRESULT STDMETHODCALLTYPE get_TabStop(VARIANT_BOOL* pbTabStop);
 
 ### <a name="parameters"></a>パラメーター
 
-*pbTabStop*  
+*pbTabStop*<br/>
 フラグの状態を受け取る変数。 TRUE は、コントロールにタブ ストップがあることを示します。
 
 ### <a name="return-value"></a>戻り値
@@ -619,7 +619,7 @@ HRESULT STDMETHODCALLTYPE get_Text(BSTR* pbstrText);
 
 ### <a name="parameters"></a>パラメーター
 
-*pbstrText*  
+*pbstrText*<br/>
 コントロールに表示されるテキスト。
 
 ### <a name="return-value"></a>戻り値
@@ -636,7 +636,7 @@ HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL* pbValid);
 
 ### <a name="parameters"></a>パラメーター
 
-*pbValid*  
+*pbValid*<br/>
 フラグの状態を受け取る変数。 TRUE は、コントロールが有効であることを示します。
 
 ### <a name="return-value"></a>戻り値
@@ -653,7 +653,7 @@ HRESULT STDMETHODCALLTYPE get_Window(LONG_PTR* phWnd);
 
 ### <a name="parameters"></a>パラメーター
 
-*phWnd*  
+*phWnd*<br/>
 コントロールに関連付けられているウィンドウ ハンドル。
 
 ### <a name="return-value"></a>戻り値
@@ -670,7 +670,7 @@ HRESULT STDMETHODCALLTYPE put_Appearance(SHORT nAppearance);
 
 ### <a name="parameters"></a>パラメーター
 
-*nAppearance*  
+*nAppearance*<br/>
 コントロールによって使用される新しい描画スタイル。
 
 ### <a name="return-value"></a>戻り値
@@ -687,7 +687,7 @@ HRESULT STDMETHODCALLTYPE put_AutoSize(VARIANT_BOOL bAutoSize,);
 
 ### <a name="parameters"></a>パラメーター
 
-*bAutoSize*  
+*bAutoSize*<br/>
 TRUE の場合、コントロールが他の任意のサイズにすることはできません。
 
 ### <a name="return-value"></a>戻り値
@@ -704,7 +704,7 @@ HRESULT STDMETHODCALLTYPE put_BackColor(OLE_COLOR clrBackColor);
 
 ### <a name="parameters"></a>パラメーター
 
-*clrBackColor*  
+*clrBackColor*<br/>
 新しいコントロールの背景の色。
 
 ### <a name="return-value"></a>戻り値
@@ -721,7 +721,7 @@ HRESULT STDMETHODCALLTYPE put_BackStyle(LONG nBackStyle);
 
 ### <a name="parameters"></a>パラメーター
 
-*nBackStyle*  
+*nBackStyle*<br/>
 新しいコントロールの背景のスタイル。
 
 ### <a name="return-value"></a>戻り値
@@ -738,7 +738,7 @@ HRESULT STDMETHODCALLTYPE put_BorderColor(OLE_COLOR clrBorderColor);
 
 ### <a name="parameters"></a>パラメーター
 
-*clrBorderColor*  
+*clrBorderColor*<br/>
 新しい境界線の色。 OLE_COLOR のデータ型は内部的には、32 ビット長整数として表されます。
 
 ### <a name="return-value"></a>戻り値
@@ -755,7 +755,7 @@ HRESULT STDMETHODCALLTYPE put_BorderStyle(LONG nBorderStyle);
 
 ### <a name="parameters"></a>パラメーター
 
-*nBorderStyle*  
+*nBorderStyle*<br/>
 新しい境界のスタイル。
 
 ### <a name="return-value"></a>戻り値
@@ -772,7 +772,7 @@ HRESULT STDMETHODCALLTYPE put_BorderVisible(VARIANT_BOOL bBorderVisible);
 
 ### <a name="parameters"></a>パラメーター
 
-*bBorderVisible*  
+*bBorderVisible*<br/>
 境界線が表示される場合は TRUE。
 
 ### <a name="return-value"></a>戻り値
@@ -789,7 +789,7 @@ HRESULT STDMETHODCALLTYPE put_BorderWidth(LONG nBorderWidth);
 
 ### <a name="parameters"></a>パラメーター
 
-*nBorderWidth*  
+*nBorderWidth*<br/>
 新しいコントロールの境界線の幅。
 
 ### <a name="return-value"></a>戻り値
@@ -806,7 +806,7 @@ HRESULT STDMETHODCALLTYPE put_Caption(BSTR bstrCaption);
 
 ### <a name="parameters"></a>パラメーター
 
-*bstrCaption*  
+*bstrCaption*<br/>
 コントロールに表示されるテキスト。
 
 ### <a name="return-value"></a>戻り値
@@ -823,7 +823,7 @@ HRESULT STDMETHODCALLTYPE put_DrawMode(LONG nDrawMode);
 
 ### <a name="parameters"></a>パラメーター
 
-*nDrawMode*  
+*nDrawMode*<br/>
 コントロールの新しい描画モード。
 
 ### <a name="return-value"></a>戻り値
@@ -840,7 +840,7 @@ HRESULT STDMETHODCALLTYPE put_DrawStyle(LONG pnDrawStyle);
 
 ### <a name="parameters"></a>パラメーター
 
-*nDrawStyle*  
+*nDrawStyle*<br/>
 コントロールの新しい描画スタイル。
 
 ### <a name="return-value"></a>戻り値
@@ -857,7 +857,7 @@ HRESULT STDMETHODCALLTYPE put_DrawWidth(LONG nDrawWidth);
 
 ### <a name="parameters"></a>パラメーター
 
-*nDrawWidth*  
+*nDrawWidth*<br/>
 コントロールによって使用される新しい幅での描画メソッドを使用します。
 
 ### <a name="return-value"></a>戻り値
@@ -874,7 +874,7 @@ HRESULT STDMETHODCALLTYPE put_Enabled(VARIANT_BOOL bEnabled);
 
 ### <a name="parameters"></a>パラメーター
 
-*bEnabled*  
+*bEnabled*<br/>
 コントロールが有効になっている場合は TRUE。
 
 ### <a name="return-value"></a>戻り値
@@ -891,7 +891,7 @@ HRESULT STDMETHODCALLTYPE put_FillColor(OLE_COLOR clrFillColor);
 
 ### <a name="parameters"></a>パラメーター
 
-*clrFillColor*  
+*clrFillColor*<br/>
 コントロールの新しい塗りつぶしの色。
 
 ### <a name="return-value"></a>戻り値
@@ -908,7 +908,7 @@ HRESULT STDMETHODCALLTYPE put_FillStyle(LONG nFillStyle);
 
 ### <a name="parameters"></a>パラメーター
 
-*nFillStyle*  
+*nFillStyle*<br/>
 コントロールの新しい塗りつぶしのスタイル。
 
 ### <a name="return-value"></a>戻り値
@@ -925,7 +925,7 @@ HRESULT STDMETHODCALLTYPE put_Font(IFontDisp* pFont);
 
 ### <a name="parameters"></a>パラメーター
 
-*pFont*  
+*pFont*<br/>
 コントロールのフォント プロパティへのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -942,7 +942,7 @@ HRESULT STDMETHODCALLTYPE put_ForeColor(OLE_COLOR clrForeColor);
 
 ### <a name="parameters"></a>パラメーター
 
-*clrForeColor*  
+*clrForeColor*<br/>
 コントロールの新しい前景色。
 
 ### <a name="return-value"></a>戻り値
@@ -959,7 +959,7 @@ HRESULT STDMETHODCALLTYPE put_HWND(LONG_PTR /* hWnd */);
 
 ### <a name="parameters"></a>パラメーター
 
-*/\* hWnd \*/*  
+*/&ast; hWnd &ast;/*<br/>
 予約済み。
 
 ### <a name="return-value"></a>戻り値
@@ -980,7 +980,7 @@ HRESULT STDMETHODCALLTYPE put_MouseIcon(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>パラメーター
 
-*pPicture*  
+*pPicture*<br/>
 グラフィックの画像のプロパティへのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -997,7 +997,7 @@ HRESULT STDMETHODCALLTYPE put_MousePointer(LONG nMousePointer);
 
 ### <a name="parameters"></a>パラメーター
 
-*nMousePointer*  
+*nMousePointer*<br/>
 マウス ポインターの型。
 
 ### <a name="return-value"></a>戻り値
@@ -1014,7 +1014,7 @@ HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>パラメーター
 
-*pPicture*  
+*pPicture*<br/>
 画像のプロパティへのポインター。 参照してください[IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762)の詳細。
 
 ### <a name="return-value"></a>戻り値
@@ -1031,7 +1031,7 @@ HRESULT STDMETHODCALLTYPE put_ReadyState(LONG nReadyState);
 
 ### <a name="parameters"></a>パラメーター
 
-*nReadyState*  
+*nReadyState*<br/>
 コントロールの準備完了状態。
 
 ### <a name="return-value"></a>戻り値
@@ -1048,7 +1048,7 @@ HRESULT STDMETHODCALLTYPE put_TabStop(VARIANT_BOOL bTabStop);
 
 ### <a name="parameters"></a>パラメーター
 
-*bTabStop*  
+*bTabStop*<br/>
 コントロールがタブ ストップがある場合は TRUE。
 
 ### <a name="return-value"></a>戻り値
@@ -1065,7 +1065,7 @@ HRESULT STDMETHODCALLTYPE put_Text(BSTR bstrText);
 
 ### <a name="parameters"></a>パラメーター
 
-*bstrText*  
+*bstrText*<br/>
 コントロールに表示されるテキスト。
 
 ### <a name="return-value"></a>戻り値
@@ -1082,7 +1082,7 @@ HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL bValid);
 
 ### <a name="parameters"></a>パラメーター
 
-*bValid*  
+*bValid*<br/>
 コントロールが有効な場合は TRUE。
 
 ### <a name="return-value"></a>戻り値
@@ -1099,7 +1099,7 @@ HRESULT STDMETHODCALLTYPE put_Window(LONG_PTR hWnd);
 
 ### <a name="parameters"></a>パラメーター
 
-*hWnd*  
+*hWnd*<br/>
 ウィンドウ ハンドル。
 
 ### <a name="return-value"></a>戻り値
@@ -1120,7 +1120,7 @@ HRESULT STDMETHODCALLTYPE putref_Font(IFontDisp* pFont);
 
 ### <a name="parameters"></a>パラメーター
 
-*pFont*  
+*pFont*<br/>
 コントロールのフォント プロパティへのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -1141,7 +1141,7 @@ HRESULT STDMETHODCALLTYPE putref_MouseIcon(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>パラメーター
 
-*pPicture*  
+*pPicture*<br/>
 グラフィックの画像のプロパティへのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -1162,7 +1162,7 @@ HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>パラメーター
 
-*pPicture*  
+*pPicture*<br/>
 画像のプロパティへのポインター。 参照してください[IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762)の詳細。
 
 ### <a name="return-value"></a>戻り値
@@ -1175,5 +1175,5 @@ HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
 
 ## <a name="see-also"></a>関連項目
 
-[クラスの概要](../../atl/atl-class-overview.md)   
+[クラスの概要](../../atl/atl-class-overview.md)<br/>
 [IDispatchImpl クラス](../../atl/reference/idispatchimpl-class.md)

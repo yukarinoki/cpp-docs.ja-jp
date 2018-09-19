@@ -1,5 +1,5 @@
 ---
-title: プロジェクト ビルド エラー PRJ0015 |Microsoft ドキュメント
+title: プロジェクト ビルド エラー PRJ0015 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c2376ddd22490bf9ce61a8db9b857ce02551b15
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d70c8b4fe35519479056e25455914ac80fc00cb3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316450"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111616"
 ---
 # <a name="project-build-error-prj0015"></a>プロジェクト ビルド エラー PRJ0015
-NULL デバイスは、システム内にありません。 ビルドの起動、できます。  
-  
- このエラーは、システム リソースの不足によって発生することができます。 一部のアプリケーションを閉じるか、再起動します。  
-  
- これも可能性があります、コンピューター上の NULL デバイスに十分な特権がないです。
+
+NULL デバイスは、システム内にありません。 ビルドの起動、できます。
+
+このエラーは、システム リソースの不足によって発生することができます。 一部のアプリケーションを閉じるか、再起動します。
+
+コンピューター上の NULL デバイスに十分な特権がいない場合にも発生することができます。

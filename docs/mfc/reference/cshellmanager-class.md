@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35f186822e00f74552e3bf8d52950f3c4bbe5b45
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 48312e4840436b1e0cc7c3e176d86f1783ff1746
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207393"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714669"
 ---
 # <a name="cshellmanager-class"></a>CShellManager クラス
 ID リストへのポインター (PIDL) を操作するためのさまざまなメソッドを実装します。  
@@ -104,23 +104,23 @@ BOOL BrowseForFolder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*strOutFolder*  
- 選択したフォルダーのパスを格納するメソッドによって使用される文字列。  
+*strOutFolder*<br/>
+[out]選択したフォルダーのパスを格納するメソッドによって使用される文字列。  
   
- [in]*pWndParent*  
- 親ウィンドウへのポインター。  
+*pWndParent*<br/>
+[in]親ウィンドウへのポインター。  
   
- [in]*lplszInitialFolder*  
- ダイアログ ボックスが表示されるときに、既定で選択されているフォルダーを含む文字列。  
+*lplszInitialFolder*<br/>
+[in]ダイアログ ボックスが表示されるときに、既定で選択されているフォルダーを含む文字列。  
   
- [in]*lpszTitle*  
- ダイアログ ボックスのタイトル。  
+*lpszTitle*<br/>
+[in]ダイアログ ボックスのタイトル。  
   
- [in]*ulFlags*  
- ダイアログ ボックスのオプションを指定するフラグ。 参照してください[BROWSEINFO](/windows/desktop/api/shlobj_core/ns-shlobj_core-_browseinfoa)詳細説明します。  
+*ulFlags*<br/>
+[in]ダイアログ ボックスのオプションを指定するフラグ。 参照してください[BROWSEINFO](/windows/desktop/api/shlobj_core/ns-shlobj_core-_browseinfoa)詳細説明します。  
   
- [out]*piFolderImage*  
- メソッドが選択したフォルダーのイメージのインデックスを書き込む整数値へのポインター。  
+*piFolderImage*<br/>
+[out]メソッドが選択したフォルダーのイメージのインデックスを書き込む整数値へのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  ユーザーがダイアログ ボックスからフォルダーを選択した場合、0 以外の場合それ以外の場合 0 を返します。  
@@ -143,11 +143,11 @@ LPITEMIDLIST ConcatenateItem(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pidl1*  
- 最初の項目。  
+*pidl1*<br/>
+[in]最初の項目。  
   
- [in]*pidl2*  
- 2 番目の項目。  
+*pidl2*<br/>
+[in]2 番目の項目。  
   
 ### <a name="return-value"></a>戻り値  
  それ以外の場合、関数が成功した場合は、新しい項目リストへのポインターが NULL です。  
@@ -163,8 +163,8 @@ LPITEMIDLIST CopyItem(LPCITEMIDLIST pidlSource);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pidlSource*  
- 元の項目のリスト。  
+*pidlSource*<br/>
+[in]元の項目のリスト。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は、新しく作成された項目リストへのポインターそれ以外の場合は NULL です。  
@@ -180,8 +180,8 @@ LPITEMIDLIST CreateItem(UINT cbSize);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*cbSize*  
- 項目リストのサイズ。  
+*cbSize*<br/>
+[in]項目リストのサイズ。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は、作成された項目リストへのポインターそれ以外の場合は NULL です。  
@@ -204,8 +204,8 @@ void FreeItem(LPITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pidl*  
- 削除する項目のリスト。  
+*pidl*<br/>
+[in]削除する項目のリスト。  
   
 ##  <a name="getitemcount"></a>  CShellManager::GetItemCount  
  項目のリストで項目の数を返します。  
@@ -215,8 +215,8 @@ UINT GetItemCount(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pidl*  
- 項目のリストへのポインター。  
+*pidl*<br/>
+[in]項目のリストへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  項目リスト内の項目の数。  
@@ -229,8 +229,8 @@ UINT GetItemSize(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pidl*  
- 項目のリストへのポインター。  
+*pidl*<br/>
+[in]項目のリストへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  項目リストのサイズ。  
@@ -243,8 +243,8 @@ LPITEMIDLIST GetNextItem(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pidl*  
- 反復処理する項目の一覧。  
+*pidl*<br/>
+[in]反復処理する項目の一覧。  
   
 ### <a name="return-value"></a>戻り値  
  一覧の次の項目へのポインター。  
@@ -262,11 +262,11 @@ int GetParentItem(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpidl*  
- 親を取得する PIDL します。  
+*lpidl*<br/>
+[in]親を取得する PIDL します。  
   
- [out]*lpidlParent*  
- PIDL メソッドが結果を格納する場所への参照。  
+*lpidlParent*<br/>
+[out]PIDL メソッドが結果を格納する場所への参照。  
   
 ### <a name="return-value"></a>戻り値  
  PIDL 親のレベルです。  
@@ -284,11 +284,11 @@ HRESULT ItemFromPath(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszPath*  
- 項目のパスを指定する文字列。  
+*lpszPath*<br/>
+[in]項目のパスを指定する文字列。  
   
- [out]*pidl*  
- PIDL への参照。 メソッドは、その戻り値へのポインターを格納するのにこの PIDL を使用します。  
+*pidl*<br/>
+[out]PIDL への参照。 メソッドは、その戻り値へのポインターを格納するのにこの PIDL を使用します。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は NOERROR を返します。エラーの OLE 定義されている値。  

@@ -42,12 +42,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b81ace9c9fe5cf21d93f7e7dd4a8b5f2f2c5d726
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 73abd8ef0ca29ee9e7f2312cc44a8178fc464261
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451551"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064634"
 ---
 # <a name="chdir-wchdir"></a>_chdir、_wchdir
 
@@ -71,19 +71,19 @@ int _wchdir(
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数は、成功した場合、値 0 を返します。 戻り値-1 はエラーを示します。 指定されたパスが見つからない場合、 **errno**に設定されている**ENOENT**です。 場合*dirname*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL**関数は-1 を返します。
+これらの関数は、成功した場合、値 0 を返します。 戻り値-1 はエラーを示します。 指定されたパスが見つからない場合、 **errno**に設定されている**ENOENT**します。 場合*dirname*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL**関数は-1 を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Chdir**関数では、現在の作業ディレクトリを変更して指定したディレクトリに*dirname*です。 *Dirname*パラメーターは、既存のディレクトリを参照する必要があります。 この関数は、任意のドライブの現在の作業ディレクトリを変更できます。 新しいドライブ文字が指定された場合*dirname*既定のドライブ文字が同様に変更します。 たとえば、A が既定のドライブ文字で、\BIN が現在の作業ディレクトリの場合、次の呼び出しにより、ドライブ C の現在の作業ディレクトリが変更され、C が新しい既定のドライブとして設定されます。
+**_Chdir**関数で指定されたディレクトリを現在の作業ディレクトリを変更する*dirname*します。 *Dirname*パラメーターは、既存のディレクトリを参照する必要があります。 この関数は、任意のドライブの現在の作業ディレクトリを変更できます。 新しいドライブ文字が指定された場合*dirname*既定のドライブ文字が同様に変更します。 たとえば、A が既定のドライブ文字で、\BIN が現在の作業ディレクトリの場合、次の呼び出しにより、ドライブ C の現在の作業ディレクトリが変更され、C が新しい既定のドライブとして設定されます。
 
 ```C
 _chdir("c:\temp");
 ```
 
-省略可能な円記号を使用する場合 (**&#92;**) では、パスは、2 つの円記号を配置する必要があります (**&#92;&#92;**) C を 1 つの円記号を表すリテラル文字列で (**&#92;**).
+オプションの円記号の文字を使用する場合 (**&#92;**) パスには、2 つの円記号を配置する必要があります (**&#92;&#92;**) で C を 1 つの円記号を表すリテラル文字列 (**&#92;**).
 
-**_wchdir**のワイド文字バージョンは、 **_chdir**; *dirname*に渡す引数 **_wchdir**ワイド文字列です。 **_wchdir**と **_chdir**それ以外の場合の動作は同じです。
+**_wchdir**のワイド文字バージョンです **_chdir**、 *dirname*引数 **_wchdir**はワイド文字列です。 **_wchdir**と **_chdir**動作は同じです。
 
 ### <a name="generic-text-routine-mapping"></a>汎用テキスト ルーチンのマップ
 
@@ -93,7 +93,7 @@ _chdir("c:\temp");
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_chdir**|\<direct.h>|\<errno.h>|
 |**_wchdir**|\<direct.h> または \<wchar.h>|\<errno.h>|
@@ -137,10 +137,10 @@ int main( int argc, char *argv[] )
 ```
 
 ```Output
- Volume in drive C has no label.
- Volume Serial Number is 2018-08A1
+Volume in drive C has no label.
+Volume Serial Number is 2018-08A1
 
- Directory of c:\windows
+Directory of c:\windows
 
 08/29/2002  04:00 AM         1,004,032 explorer.exe
 12/17/2002  04:43 PM            10,752 hh.exe

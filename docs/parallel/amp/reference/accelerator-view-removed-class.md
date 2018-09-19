@@ -1,5 +1,5 @@
 ---
-title: accelerator_view_removed クラス |Microsoft ドキュメント
+title: accelerator_view_removed クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0426dd44cfcb8f655f3981802dfe23adcd436a0d
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: f1c8963fee0fa7718c6ea8fe67904613b2dca8ad
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688155"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020259"
 ---
 # <a name="acceleratorviewremoved-class"></a>accelerator_view_removed クラス
 基になる DirectX の呼び出しが Windows のタイムアウトの検出と回復機構が原因で失敗した場合にスローされる例外。  
@@ -63,7 +63,7 @@ class accelerator_view_removed : public runtime_exception;
 
 ## <a name="ctor"></a> accelerator_view_removed 
 
-新しいインスタンスを初期化、 [accelerator_view_removed](accelerator-view-removed-class.md)クラスです。  
+新しいインスタンスを初期化、 [accelerator_view_removed](accelerator-view-removed-class.md)クラス。  
   
 ### <a name="syntax"></a>構文  
   
@@ -77,11 +77,11 @@ explicit accelerator_view_removed(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Message`  
- エラーの説明。  
+*メッセージ (_m)*<br/>
+エラーの説明。  
   
- `_View_removed_reason`  
- 削除の原因を示す HRESULT エラー コード、`accelerator_view`オブジェクト。  
+*_View_removed_reason*<br/>
+削除の原因を示す HRESULT エラー コード、`accelerator_view`オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  Accelerator_view_removed クラスの新しいインスタンス。  

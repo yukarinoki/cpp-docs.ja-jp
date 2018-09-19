@@ -1,5 +1,5 @@
 ---
-title: _ _lzcnt16、_ _lzcnt、_ _lzcnt64 |Microsoft ドキュメント
+title: _ _lzcnt16、_ _lzcnt、_ _lzcnt64 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,17 +24,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86e04182cf673674e1f1ba8c073b624760bc4809
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2c24dcd92628b9f03596c9d10c38b5d63806dc6c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332794"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720006"
 ---
 # <a name="lzcnt16-lzcnt-lzcnt64"></a>__lzcnt16、__lzcnt、__lzcnt64
+
 **Microsoft 固有の仕様**  
   
- 16 ビット、32 ビットまたは 64 ビットの整数で 0 が先頭の数がカウントします。  
+16 ビット、32 ビットまたは 64 ビット整数で 0 リードの数がカウントされます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -51,11 +52,11 @@ unsigned __int64 __lzcnt64(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力] `value`  
- 16、32 ビット、または先行ゼロをスキャンする 64 ビット符号なし整数。  
+*値*<br/>
+[in]16 ビット、32 ビット、または先行ゼロをスキャンする 64 ビット符号なし整数。  
   
 ## <a name="return-value"></a>戻り値  
- 先行ゼロのビットの数、`value`パラメーター。 場合`value`0 の場合は、戻り値が入力オペランド (16、32、または 64) のサイズ。 場合、最もの上位ビット`value`は 1 つは、戻り値は 0 です。  
+ 先頭のゼロのビット数、`value`パラメーター。 場合`value`が 0 の場合、戻り値は、入力のオペランド (16、32、または 64) のサイズ。 場合、最もの上位ビット`value`は 1 つは、戻り値は 0。  
   
 ## <a name="requirements"></a>要件  
   
@@ -67,12 +68,12 @@ unsigned __int64 __lzcnt64(
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
- これらの組み込みの各を生成、`lzcnt`命令します。  値のサイズを`lzcnt`命令は、その引数のサイズと同じを返します。  32 ビット モードではありません。 64 ビットの汎用レジスタ、したがっていいえ 64 ビット`lzcnt`です。  
+## <a name="remarks"></a>Remarks  
+ これらの組み込みの生成、`lzcnt`命令。  値のサイズを`lzcnt`命令は、引数のサイズと同じを返します。  32 ビット モードではありません 64 ビット汎用レジスタ、したがっていいえ 64 ビット`lzcnt`します。  
   
- ハードウェア サポートの決定を`lzcnt`命令呼び出し、`__cpuid`で組み込み`InfoType=0x80000001`のビット 5 をチェックし、`CPUInfo[2] (ECX)`です。 このビットはある命令がサポートされている場合は 1 と 0 それ以外の場合。 かどうかはコードを実行するを使用するこの組み込みをサポートしていないハードウェア、`lzcnt`命令、結果は予測できません。  
+ ハードウェアのサポートを決定する、`lzcnt`命令の呼び出し、`__cpuid`で組み込み`InfoType=0x80000001`のビット 5 をチェックし、`CPUInfo[2] (ECX)`します。 このビットは、それ以外の場合、命令がサポートされている場合は 1、0 になります。 `lzcnt`命令が搭載されていないハードウェア上でこの組み込み関数を呼び出した場合、その結果は保証されません。  
   
- サポートしていない Intel プロセッサで、`lzcnt`として命令が実行される命令のバイト エンコーディング`bsr`(スキャン リバース ビット)。 コードの移植性に問題がある場合は、使用を検討してください、`_BitScanReverse`組み込み代わりにします。 詳細については、次を参照してください。 [_BitScanReverse、_BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md)です。  
+ Intel プロセッサをサポートしないで、`lzcnt`として命令が実行される命令のバイト エンコーディング`bsr`(ビット スキャン逆)。 コードの移植性を重視する場合は、使用を検討してください、`_BitScanReverse`組み込み代わりにします。 詳細については、次を参照してください。 [_BitScanReverse、_BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md)します。  
   
 ## <a name="example"></a>例  
   
@@ -112,8 +113,9 @@ __lzcnt(0xffff) = 16
 __lzcnt(0xffffffff) = 0  
 ```  
   
-**Microsoft 固有の仕様はここまで**  
- このコンテンツの一部は、高度なマイクロ デバイス, Inc. によって Copyright 2007All rights reserved. 高度なマイクロ デバイス, Inc. のアクセス許可を持つ再現  
+**Microsoft 固有の仕様はここまで**
+
+このコンテンツの一部は高度なマイクロ デバイス, inc. Copyright 2007 です。All rights reserved. 高度なマイクロ デバイス, Inc. からのアクセス許可を持つ再現  
   
 ## <a name="see-also"></a>関連項目  
  [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

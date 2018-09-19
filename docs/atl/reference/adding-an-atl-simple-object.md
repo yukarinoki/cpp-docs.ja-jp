@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3746e911b4931759baef4d0f4e4f9de77ea834b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d1347fcebc6a3793cbe63ae356f7f9d2e03742cd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765597"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109770"
 ---
 # <a name="adding-an-atl-simple-object"></a>ATL シンプル オブジェクトを追加します。
 
@@ -45,10 +45,10 @@ ATL (Active Template Library) オブジェクトをプロジェクトに追加�
 
 ## <a name="see-also"></a>関連項目
 
-[クラスの追加](../../ide/adding-a-class-visual-cpp.md)   
-[ATL プロジェクトで新しいインターフェイスの追加](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)   
-[オブジェクトへの接続ポイントの追加](../../atl/adding-connection-points-to-an-object.md)   
-[メソッドの追加](../../ide/adding-a-method-visual-cpp.md)   
-[MFC クラス](../../mfc/reference/adding-an-mfc-class.md)   
+[クラスの追加](../../ide/adding-a-class-visual-cpp.md)<br/>
+[ATL プロジェクトでの新しいインターフェイスの追加](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)<br/>
+[オブジェクトへの接続ポイントの追加](../../atl/adding-connection-points-to-an-object.md)<br/>
+[メソッドの追加](../../ide/adding-a-method-visual-cpp.md)<br/>
+[MFC クラス](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [一般 C++ クラスの追加](../../ide/adding-a-generic-cpp-class.md)
 

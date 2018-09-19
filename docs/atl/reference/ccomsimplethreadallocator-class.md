@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2c8c7b2e6132bb39c8e548f6057ded0b0ca6c1e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1538d5148eeb1eb95c51150a43ef5dd7b107cae3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752474"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033551"
 ---
 # <a name="ccomsimplethreadallocator-class"></a>CComSimpleThreadAllocator クラス
 
@@ -64,10 +64,10 @@ int GetThread(CComApartment* /* pApt */, int nThreads);
 
 ### <a name="parameters"></a>パラメーター
 
-*pApt*  
+*pApt*<br/>
 ATL の既定の実装では使用されません。
 
-*nThreads*  
+*nThreads*<br/>
 EXE モジュール内のスレッドの最大数。
 
 ### <a name="return-value"></a>戻り値
@@ -82,5 +82,5 @@ EXE モジュール内のスレッドの最大数。
 
 ## <a name="see-also"></a>関連項目
 
-[CComApartment クラス](../../atl/reference/ccomapartment-class.md)   
+[CComApartment クラス](../../atl/reference/ccomapartment-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

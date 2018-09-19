@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61050f8fc1924f6d2a143893af5bd1918df94394
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: d6a685633b6e23a21d46ad3256188fea3ee16ccc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895189"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700780"
 ---
 # <a name="stosb"></a>__stosb
 
@@ -43,14 +43,14 @@ void __stosb(
 
 #### <a name="parameters"></a>パラメーター
 
-[出力] `Dest`  
-操作の転送先。
+*追加先*<br/>
+[out]操作の転送先。
 
-[入力] `Data`  
-格納するデータ。
+*データ*<br/>
+[in]格納するデータ。
 
-[入力] `Count`  
-書き込むバイトのブロックの長さ。
+*カウント*<br/>
+[in]書き込むバイトのブロックの長さ。
 
 ## <a name="requirements"></a>要件
 

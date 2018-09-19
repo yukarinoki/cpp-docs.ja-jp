@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2815 |Microsoft ドキュメント
+title: コンパイラ エラー C2815 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43eadfe636250c0acab9bcb2cd09323292f26a43
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 192c991cfee9fb1925601719ea61c47c5227c753
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240819"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057660"
 ---
 # <a name="compiler-error-c2815"></a>コンパイラ エラー C2815
-'operator delete': 仮引数の最初のパラメーターである必要があります ' void *'、'param' が使用されましたが、  
-  
- ユーザー定義[演算子 delete](../../standard-library/new-operators.md#op_delete)関数は、型の最初の仮パラメーターを受け取る必要があります`void *`です。  
-  
- 次の例では、C2815 が生成されます。  
-  
-```  
-// C2815.cpp  
-// compile with: /c  
-class CMyClass {  
-public:  
-   void mf1(int *a);  
-   void operator delete(CMyClass *);   // C2815  
-   void operator delete(void *);   
-};  
+
+'operator delete': 最初の仮パラメーターがある必要があります ' void *'、'param' の使用
+
+ユーザー定義[delete 演算子](../../standard-library/new-operators.md#op_delete)関数は、型の最初の仮パラメーターを受け取る必要があります`void *`します。
+
+次の例では、C2815 が生成されます。
+
+```
+// C2815.cpp
+// compile with: /c
+class CMyClass {
+public:
+   void mf1(int *a);
+   void operator delete(CMyClass *);   // C2815
+   void operator delete(void *);
+};
 ```

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec4fa860387068dd345c19467583922ebaeb49ab
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ef1469c40de8aae06460f1874905c53e91a47ca1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763674"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079337"
 ---
 # <a name="catlpreviewctrlimpl-class"></a>CAtlPreviewCtrlImpl クラス
 
@@ -144,10 +144,10 @@ virtual BOOL Create(HWND hWndParent, const RECT* prc);
 
 ### <a name="parameters"></a>パラメーター
 
-*hWndParent*  
+*hWndParent*<br/>
 リッチ プレビュー用に、シェルによって提供されるホスト ウィンドウへのハンドル。
 
-*中華人民共和国*  
+*中華人民共和国*<br/>
 初期サイズとウィンドウの位置を指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -176,7 +176,7 @@ virtual void DoPaint(HDC hdc);
 
 ### <a name="parameters"></a>パラメーター
 
-*hdc*  
+*hdc*<br/>
 描画のデバイス コンテキストへのハンドル。
 
 ### <a name="remarks"></a>Remarks
@@ -235,16 +235,16 @@ LRESULT OnPaint(
 
 ### <a name="parameters"></a>パラメーター
 
-*nMsg*  
+*nMsg*<br/>
 WM_PAINT に設定します。
 
-*wParam*  
+*wParam*<br/>
 このパラメーターは使用されません。
 
-*lParam*  
+*lParam*<br/>
 このパラメーターは使用されません。
 
-*bHandled*  
+*bHandled*<br/>
 この関数から制御が戻るときに、TRUE を格納します。
 
 ### <a name="return-value"></a>戻り値
@@ -273,7 +273,7 @@ virtual void SetHost(HWND hWndParent);
 
 ### <a name="parameters"></a>パラメーター
 
-*hWndParent*  
+*hWndParent*<br/>
 新しい親ウィンドウへのハンドル。
 
 ### <a name="remarks"></a>Remarks
@@ -291,13 +291,13 @@ virtual void SetPreviewVisuals(
 
 ### <a name="parameters"></a>パラメーター
 
-*clrBack*  
+*clrBack*<br/>
 プレビュー ウィンドウの背景色です。
 
-*clrText*  
+*clrText*<br/>
 プレビュー ウィンドウのテキストの色。
 
-*plf*  
+*plf*<br/>
 プレビュー ウィンドウにテキストを表示するために使用するフォントです。
 
 ### <a name="remarks"></a>Remarks
@@ -312,10 +312,10 @@ virtual void SetRect(const RECT* prc, BOOL bRedraw);
 
 ### <a name="parameters"></a>パラメーター
 
-*中華人民共和国*  
+*中華人民共和国*<br/>
 新しいサイズと、プレビュー コントロールの位置を指定します。
 
-*bRedraw*  
+*bRedraw*<br/>
 コントロールが再描画が必要かどうかを指定します。
 
 ### <a name="remarks"></a>Remarks

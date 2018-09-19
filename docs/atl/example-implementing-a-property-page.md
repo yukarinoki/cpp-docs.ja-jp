@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bddb536fe50c9f9f7d1eb76d3dfa90c1c3488b8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 36d3289767d8c8e2eaa2f25889aaff073cf73fce
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759331"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046252"
 ---
 # <a name="example-implementing-a-property-page"></a>例: プロパティ ページの実装
 
@@ -153,25 +153,25 @@ ms.locfileid: "43759331"
 プロジェクトを作成したら、プロパティ ページと、ヘルパー オブジェクトを作成して、Visual Studio 開発環境で実行する単純なマクロを使用してテストできます。 このマクロは、ヘルパーを作成オブジェクトを呼び出してその`ShowPage`メソッドの ProgID を使用して、 **DocProperties**プロパティ ページ、 `IUnknown` Visual Studio エディターで現在アクティブなドキュメントのポインター。 このマクロに必要なコードは、以下に示します。
 
 ```vb
-Imports EnvDTE  
-Imports System.Diagnostics  
+Imports EnvDTE
+Imports System.Diagnostics
 
-Public Module AtlPages  
+Public Module AtlPages
 
-Public Sub Test()  
-    Dim Helper  
-    Helper = CreateObject("ATLPages7.Helper.1")  
+Public Sub Test()
+    Dim Helper
+    Helper = CreateObject("ATLPages7.Helper.1")
 
-    On Error Resume Next  
-    Helper.ShowPage( ActiveDocument.Name, "ATLPages7Lib.DocumentProperties.1", DTE.ActiveDocument )  
+    On Error Resume Next
+    Helper.ShowPage( ActiveDocument.Name, "ATLPages7Lib.DocumentProperties.1", DTE.ActiveDocument )
 End Sub
 
-End Module  
+End Module
 ```
 
 このマクロを実行すると、ファイル名と現在アクティブなテキスト ドキュメントの読み取り専用の状態を示すプロパティ ページが表示されます。 ドキュメントの読み取り専用の状態は、開発環境でドキュメントに書き込む機能のみが反映されます。ディスク上のファイルの読み取り専用の属性には影響しません。
 
 ## <a name="see-also"></a>関連項目
 
-[プロパティ ページ](../atl/atl-com-property-pages.md)   
+[プロパティ ページ](../atl/atl-com-property-pages.md)<br/>
 [例](../visual-cpp-samples.md)

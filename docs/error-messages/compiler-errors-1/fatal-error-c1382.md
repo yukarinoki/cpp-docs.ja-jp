@@ -1,5 +1,5 @@
 ---
-title: 致命的なエラー C1382 |Microsoft ドキュメント
+title: 致命的なエラー C1382 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07c6af1209faface96585224cbd08b4e35101478
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a5a6ce312c5ef886ef25e8de46e6d3376eded2e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229256"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030655"
 ---
 # <a name="fatal-error-c1382"></a>致命的なエラー C1382
-PCH ファイル 'file' が、'obj' が生成されてから再構築されました。 このオブジェクトをリビルドしてください。  
-  
- 使用する場合[/LTCG](../../build/reference/ltcg-link-time-code-generation.md)、それを指している CIL .obj よりも新しい .pch ファイルが検出されました。 CIL .obj ファイル内の情報は期限切れです。 オブジェクトを再構築します。  
-  
- コンパイルする場合にも C1382 **/Yc**に渡すことも複数のソース コード ファイル、コンパイラが、します。  解決するを使用しないで **/Yc**コンパイラに複数のソース コード ファイルを渡すときにします。  詳細については、次を参照してください。 [/Yc (プリコンパイル済みヘッダー ファイルの作成)](../../build/reference/yc-create-precompiled-header-file.md)です。
+
+PCH ファイル 'file' が、'obj' が生成されてから再構築されました。 このオブジェクトをリビルドしてください。
+
+使用する場合[/LTCG](../../build/reference/ltcg-link-time-code-generation.md)、それを指して CIL .obj ファイルより新しい .pch ファイルが検出されました。 CIL .obj ファイル内の情報が古くなっています。 オブジェクトを再構築します。
+
+使用してコンパイルする場合にも C1382 **/Yc**に渡すことも複数のソース コード ファイル、コンパイラが。  を解決するを使用しないで **/Yc**複数のソース コード ファイルをコンパイラに渡すときにします。  詳細については、次を参照してください。 [/Yc (プリコンパイル済みヘッダー ファイルの作成)](../../build/reference/yc-create-precompiled-header-file.md)します。

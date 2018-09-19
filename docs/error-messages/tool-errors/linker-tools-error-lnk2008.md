@@ -1,5 +1,5 @@
 ---
-title: リンカ ツール エラー LNK2008 |Microsoft ドキュメント
+title: リンカ ツール エラー LNK2008 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4ee6a8a4c4cc6d33f47d5335daa9fccd4e5fd99
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 18eda06e7f133ada4de1b7ec28ac21be205a71f7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299566"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086812"
 ---
 # <a name="linker-tools-error-lnk2008"></a>リンカ ツール エラー LNK2008
-Fixup ターゲットは、アラインされた 'symbol_name' ではありません。  
-  
- リンクは、配置が正しくがないをオブジェクト ファイルに fixup ターゲットを検出します。  
-  
- このエラーは、カスタムのセクション配置によって発生することができます (たとえば、#pragma[パック](../../preprocessor/pack.md))、[整列](../../cpp/align-cpp.md)修飾子は、またはセクション配置を変更するアセンブリ言語のコードを使用しています。  
-  
- コードは使用しない場合、上記のいずれか、コンパイラこれによる可能性があります。
+
+Fixup ターゲットは、アラインされた 'symbol_name' ではありません。
+
+リンクでは、配置が正しくがないオブジェクト ファイルの fixup ターゲットが見つかりません。
+
+このエラーは、カスタム セクション配置によって発生することができます (たとえば、#pragma[パック](../../preprocessor/pack.md))、 [align](../../cpp/align-cpp.md)修飾子は、またはセクション配置を変更するアセンブリ言語コードを使用しています。
+
+コードが、上記のいずれにも使わない場合はこれ、コンパイラによって発生する可能性があります。

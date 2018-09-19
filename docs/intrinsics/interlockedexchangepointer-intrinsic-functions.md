@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfeb1453cffac6cfe338f42da8b8efe60e18c9f8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: fa2aa8fb79a0590c437699bcf887f2a7e1c1bb21
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538754"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705017"
 ---
 # <a name="interlockedexchangepointer-intrinsic-functions"></a>_InterlockedExchangePointer の組み込み関数
 **Microsoft 固有の仕様**  
@@ -72,11 +72,11 @@ void * _InterlockedExchangePointer_HLERelease(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [入力、出力] `Target`  
- 交換する値へのポインターへのポインター。 この関数は `Value` に値を設定し、その前の値を返します。  
+*Target*<br/>
+[入力、出力]交換する値へのポインターへのポインター。 この関数は `Value` に値を設定し、その前の値を返します。  
   
- [入力] `Value`  
- `Target` が指す値と交換する値。  
+*値*<br/>
+[in]によって示される値と交換される値`Target`します。  
   
 ## <a name="return-value"></a>戻り値  
  この関数は、`Target` が指す初期値を返します。  

@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2569 |Microsoft ドキュメント
+title: コンパイラ エラー C2569 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4869f13d972cea80bd590633b3aae2ea0c96f392
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9309576439a772427c6adcb6f94826a8f9230058
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230343"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078856"
 ---
 # <a name="compiler-error-c2569"></a>コンパイラ エラー C2569
-'EnumOrUnion': 列挙および共用体は基底クラスとして使用できません  
-  
- 指定された共用体または列挙型を派生させる必要があります、クラスまたは構造体を union または列挙型を変更します。  
-  
- 次の例では、C2569 が生成されます。  
-  
-```  
-// C2569.cpp  
-// compile with: /c  
-union ubase {};  
-class cHasPubUBase : public ubase {};   // C2569  
-// OK  
-struct sbase {};  
-class cHasPubUBase : public sbase {};  
+
+'EnumOrUnion': 列挙および共用体は基底クラスとして使用できません
+
+指定された共用体、または列挙型を派生させる必要があります、クラスまたは構造体を union または列挙型を変更します。
+
+次の例では、C2569 が生成されます。
+
+```
+// C2569.cpp
+// compile with: /c
+union ubase {};
+class cHasPubUBase : public ubase {};   // C2569
+// OK
+struct sbase {};
+class cHasPubUBase : public sbase {};
 ```

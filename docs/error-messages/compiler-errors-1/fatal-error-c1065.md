@@ -1,5 +1,5 @@
 ---
-title: 致命的なエラー C1065 |Microsoft ドキュメント
+title: 致命的なエラー C1065 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e211af9390f9102fcd7b2514aed900140cd531e6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 865e353af85b392c1da696166f77a1e28acd8475
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33224276"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022956"
 ---
 # <a name="fatal-error-c1065"></a>致命的なエラー C1065
-コンパイラの制限: タグが足りません  
-  
- ソース ファイルには、複数の 65,523 のクラス、構造体、共用体、名前空間、または列挙型が含まれています。  
-  
- ファイルを小さなファイルに分割します。
+
+コンパイラの制限: タグが足りません
+
+ソース ファイルには、複数の 65,523 のクラス、構造体、共用体、名前空間、または列挙型が含まれています。
+
+ファイルをより小さなファイルに分割します。

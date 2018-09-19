@@ -53,14 +53,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e399cb38fee83fee23f88732bb2186c4b501c152
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 49b52bd65439165ef8dd83917a0d75926caba518
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412629"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023667"
 ---
 # <a name="tolower-tolower-towlower-tolowerl-towlowerl"></a>tolower、_tolower、towlower、_tolower_l、_towlower_l
+
 文字を小文字に変換します。
 
 ## <a name="syntax"></a>構文
@@ -95,13 +96,13 @@ int _towlower_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらの各ルーチンは変換のコピー *c*小文字変換が可能であれば、して結果を返す場合にします。 エラーを示す戻り値は予約されていません。
+これらの各ルーチンのコピーを変換*c*を小文字の場合は、変換が可能であり、結果を返します。 エラーを示す戻り値は予約されていません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-これらの各ルーチンは、変換が可能で適切な場合に、指定した大文字を適宜小文字に変換します。 大文字/小文字変換**towlower**ロケールに固有です。 現在のロケールに関連する文字の大文字/小文字のみが変換されます。 せず、関数、 **_l**サフィックスを使用して、現在設定されているロケール。 これらの関数を持つバージョン、 **_l**サフィックスは、ロケールをパラメーターとして受け取るし、現在設定されているの代わりに使用するロケール。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+これらの各ルーチンは、変換が可能で適切な場合に、指定した大文字を適宜小文字に変換します。 大文字/小文字変換**towlower**ロケールに固有です。 現在のロケールに関連する文字の大文字/小文字のみが変換されます。 せず、関数、 **_l**サフィックスを使用して、現在設定されているロケール。 これらの関数がのバージョン、 **_l**サフィックス ロケールをパラメーターとして受け取って現在設定されているのではなく使用するロケール。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-順序で **_tolower**を期待どおりの結果を出す[_ _isascii](isascii-isascii-iswascii.md)と[isupper](isupper-isupper-l-iswupper-iswupper-l.md)必要がありますどちらも 0 以外を返します。
+順序で **_tolower**予想どおりの結果を[_ _isascii](isascii-isascii-iswascii.md)と[isupper](isupper-isupper-l-iswupper-iswupper-l.md)がどちらも返す 0 以外の値。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -111,11 +112,11 @@ int _towlower_l(
 |**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_l**|
 
 > [!NOTE]
-> **_tolower_l**と **_towlower_l**ないロケール依存性があり、直接呼び出すことはできません。 内部で使用して提供される **_totlower_l**です。
+> **_tolower_l**と **_towlower_l**ロケールの依存関係はありません。 して直接呼び出すためのものではありません。 による内部使用に提供されます **_totlower_l**します。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**tolower**|\<ctype.h>|
 |**_tolower**|\<ctype.h>|

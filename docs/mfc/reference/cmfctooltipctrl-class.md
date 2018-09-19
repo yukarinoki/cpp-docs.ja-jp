@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4d0f45498015006141591f7132ef38af52751f9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9f395ae726725507bf27f5033b20a4ece2a226a6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540469"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715664"
 ---
 # <a name="cmfctooltipctrl-class"></a>CMFCToolTipCtrl クラス
 [CToolTipCtrl Class](../../mfc/reference/ctooltipctrl-class.md)に基づいた拡張ツールヒントの実装です。 `CMFCToolTipCtrl` クラスに基づいたツールヒントは、アイコン、ラベル、および説明を表示できます。 グラデーション塗りつぶし、カスタム テキストと境界線の色、太字、角を丸く表示、またはバルーン形式を使用して、外観をカスタマイズできます。  
@@ -204,14 +204,14 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rect*  
- ツールヒントの外接する四角形。  
+*rect*<br/>
+[in]ツールヒントの外接する四角形。  
   
- [in]*clrLine*  
- 境界線の色。  
+*clrLine*<br/>
+[in]境界線の色。  
   
 ### <a name="remarks"></a>Remarks  
  ツールヒントの境界線の外観をカスタマイズする派生クラスでこのメソッドをオーバーライドします。  
@@ -227,8 +227,8 @@ virtual CSize OnDrawDescription(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*rect*  
+*pDC*<br/>
+[in][in]*rect*  
  [in]*bCalcOnly*  
   
 ### <a name="return-value"></a>戻り値  
@@ -245,11 +245,11 @@ virtual BOOL OnDrawIcon(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rectImage*  
- アイコンの座標。  
+*rectImage*<br/>
+[in]アイコンの座標。  
   
 ### <a name="return-value"></a>戻り値  
  アイコンが描画された場合は TRUE。 それ以外の場合は FALSE です。  
@@ -268,14 +268,14 @@ virtual CSize OnDrawLabel(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rect*  
- ラベルの領域の外接する四角形。  
+*rect*<br/>
+[in]ラベルの領域の外接する四角形。  
   
- [in]*bCalcOnly*  
- TRUE の場合、ラベルは描画されません。  
+*bCalcOnly*<br/>
+[in]TRUE の場合、ラベルは描画されません。  
   
 ### <a name="return-value"></a>戻り値  
  ピクセル単位で、ラベルのサイズ。  
@@ -295,17 +295,17 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*x1*  
- 区切り記号の左の端の水平座標。  
+*x1*<br/>
+[in]区切り記号の左の端の水平座標。  
   
- [in]*x2*  
- 区切り記号の右端の位置の水平座標。  
+*x2*<br/>
+[in]区切り記号の右端の位置の水平座標。  
   
- [in]*Y*  
- 区切り記号の垂直座標。  
+*Y*<br/>
+[in]区切り記号の垂直座標。  
   
 ### <a name="remarks"></a>Remarks  
  既定の実装の点から線を描画します (x1, y) をポイント (x2, y)。  
@@ -324,17 +324,17 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rect*  
- 塗りつぶす領域を外接する四角形を指定します。  
+*rect*<br/>
+[in]塗りつぶす領域を外接する四角形を指定します。  
   
- [in]*clrText*  
- ツールヒントの前景色。  
+*clrText*<br/>
+[in]ツールヒントの前景色。  
   
- [in]*clrLine*  
- 枠線とラベルと説明の間の区切り線の色です。  
+*clrLine*<br/>
+[in]枠線とラベルと説明の間の区切り線の色です。  
   
 ### <a name="remarks"></a>Remarks  
  既定の実装で指定された四角形を塗りつぶします*rect*色または最新の呼び出しで指定されたパターンで[CMFCToolTipCtrl::SetParams](#setparams)します。  
@@ -349,8 +349,8 @@ virtual void SetDescription(const CString strDesrciption);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*strDesrciption*  
- 説明テキストです。  
+*strDesrciption*<br/>
+[in]説明テキストです。  
   
 ### <a name="remarks"></a>Remarks  
  説明のテキスト区切り文字の下のツールヒントが表示されます。  
@@ -365,8 +365,8 @@ void SetFixedWidth(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nWidthRegular*  
- [in]*nWidthLargeImage*  
+*nWidthRegular*<br/>
+[in][in]*nWidthLargeImage*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -402,8 +402,8 @@ void SetParams(CMFCToolTipInfo* pParams);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pParams*  
- ポインターを[CMFCToolTipInfo クラス](../../mfc/reference/cmfctooltipinfo-class.md)表示パラメーターを格納するオブジェクト。  
+*pParams*<br/>
+[in]ポインターを[CMFCToolTipInfo クラス](../../mfc/reference/cmfctooltipinfo-class.md)表示パラメーターを格納するオブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
  ツールヒントが表示されます、カラーを使用して描画し、視覚スタイルを*pParams*を指定します。 値*pParams*プロテクト メンバーに格納されて`m_Params`、オーバーライドする派生クラスでアクセスできる[CMFCToolTipCtrl::OnDrawBorder](#ondrawborder)、 [CMFCToolTipCtrl:: OnDrawIcon](#ondrawicon)、 [CMFCToolTipCtrl::OnDrawLabel](#ondrawlabel)、 [CMFCToolTipCtrl::OnDrawSeparator](#ondrawseparator)、または[CMFCToolTipCtrl::OnFillBackground](#onfillbackground)指定の外観を維持するためにします。  

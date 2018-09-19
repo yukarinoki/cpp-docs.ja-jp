@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3026 |Microsoft ドキュメント
+title: コンパイラ エラー C3026 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dede783f99015d464d31f2bc46cd548dd9a7b9b4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 67d7d4b05f8a04a9d30c32f8e61360e70f852ed0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243709"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070744"
 ---
 # <a name="compiler-error-c3026"></a>コンパイラ エラー C3026
-'clause': 定数式は正の数でなければなりません  
-  
- 句に整数値が渡されましたが、値が正の数値ではありませんでした。 値は正の数値である必要があります。  
-  
-## <a name="example"></a>例  
- 次の例では C3026 が生成されます。  
-  
-```  
-// C3026.cpp  
-// compile with: /openmp /link vcomps.lib  
-#include <stdio.h>  
-#include "omp.h"  
-  
-int main()  
-{  
-    int i;  
-    const int i1 = 0;  
-  
-    #pragma omp parallel for num_threads(i1)   // C3026  
-    for (i = 1; i <= 2; ++i)  
-        printf_s("Hello World - thread %d - iteration %d\n",  
-                 omp_get_thread_num(), i);  
-  
-    #pragma omp parallel for num_threads(i1 + 1)   // OK  
-    for (i = 1; i <= 2; ++i)  
-        printf_s("Hello World - thread %d - iteration %d\n",  
-                 omp_get_thread_num(), i);  
-}  
+
+'clause': 定数式は正の数でなければなりません
+
+句に整数値が渡されましたが、値が正の数値ではありませんでした。 値は正の数値である必要があります。
+
+## <a name="example"></a>例
+
+次の例では C3026 が生成されます。
+
+```
+// C3026.cpp
+// compile with: /openmp /link vcomps.lib
+#include <stdio.h>
+#include "omp.h"
+
+int main()
+{
+    int i;
+    const int i1 = 0;
+
+    #pragma omp parallel for num_threads(i1)   // C3026
+    for (i = 1; i <= 2; ++i)
+        printf_s("Hello World - thread %d - iteration %d\n",
+                 omp_get_thread_num(), i);
+
+    #pragma omp parallel for num_threads(i1 + 1)   // OK
+    for (i = 1; i <= 2; ++i)
+        printf_s("Hello World - thread %d - iteration %d\n",
+                 omp_get_thread_num(), i);
+}
 ```

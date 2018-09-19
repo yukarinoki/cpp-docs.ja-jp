@@ -18,24 +18,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea6f08a141d48183d96dba6cb02fcf31909af0ae
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 3d8e19724183963329b959286a996b4f21d18b4c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686254"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709184"
 ---
 # <a name="appcontainer"></a>/APPCONTAINER
-アプリケーション コンテナーで実行する必要がある実行可能ファイル、たとえば、Microsoft Store またはユニバーサル Windows アプリ。  
-  
-```  
-  
-/APPCONTAINER[:NO]  
-```  
-  
-## <a name="remarks"></a>Remarks  
- **/APPCONTAINER** のオプション セットがある実行可能ファイルは、Windows 8 で導入されたプロセス分離環境であるアプリケーション コンテナーでのみ実行できます。 Microsoft Store およびユニバーサル Windows アプリの場合、このオプションを設定する必要があります。  
-  
-## <a name="see-also"></a>関連項目  
- [EDITBIN オプション](../../build/reference/editbin-options.md)   
- [ユニバーサル Windows アプリとは何ですか。](/windows/uwp/get-started/universal-application-platform-guide)
+
+アプリケーション コンテナーで実行する必要がある実行可能ファイル、たとえば、Microsoft Store またはユニバーサル Windows アプリ。
+
+```
+
+/APPCONTAINER[:NO]
+```
+
+## <a name="remarks"></a>Remarks
+
+**/APPCONTAINER** のオプション セットがある実行可能ファイルは、Windows 8 で導入されたプロセス分離環境であるアプリケーション コンテナーでのみ実行できます。 Microsoft Store およびユニバーサル Windows アプリの場合、このオプションを設定する必要があります。
+
+## <a name="see-also"></a>関連項目
+
+[EDITBIN オプション](../../build/reference/editbin-options.md)<br/>
+[ユニバーサル Windows アプリとは何ですか。](/windows/uwp/get-started/universal-application-platform-guide)

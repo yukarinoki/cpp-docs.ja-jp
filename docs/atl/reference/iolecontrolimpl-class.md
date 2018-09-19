@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c27d327fbac5e92ddb2fee50c30d57a46658e889
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 28404c4f8dddeafb624b873448d4dc7aaa5dc0d8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754606"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076815"
 ---
 # <a name="iolecontrolimpl-class"></a>IOleControlImpl クラス
 
@@ -44,7 +44,7 @@ class IOleControlImpl
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 派生したクラス、`IOleControlImpl`します。
 
 ## <a name="members"></a>メンバー
@@ -138,6 +138,6 @@ E_NOTIMPL を返します。
 
 ## <a name="see-also"></a>関連項目
 
-[IOleObjectImpl クラス](../../atl/reference/ioleobjectimpl-class.md)   
-[ActiveX コントロールのインターフェイス](/windows/desktop/com/activex-controls-interfaces)   
+[IOleObjectImpl クラス](../../atl/reference/ioleobjectimpl-class.md)<br/>
+[ActiveX コントロールのインターフェイス](/windows/desktop/com/activex-controls-interfaces)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

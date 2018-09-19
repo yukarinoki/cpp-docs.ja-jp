@@ -1,5 +1,5 @@
 ---
-title: 致命的なエラー C1021 |Microsoft ドキュメント
+title: 致命的なエラー C1021 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06ec8f9aeca3b88b1c14c8dddfc625aae0b185d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fcb464a676b47baa4589c17269819d3a84d058fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198808"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029913"
 ---
 # <a name="fatal-error-c1021"></a>致命的なエラー C1021
-プリプロセッサ コマンド 'string' が無効です  
-  
- `string` は無効な [プリプロセッサ ディレクティブ](../../preprocessor/preprocessor-directives.md)です。 エラーを解決するには、 `string`に有効なプリプロセッサ名を使用します。  
-  
- 次の例では C1021 が生成されます。  
-  
-```  
-// C1021.cpp  
-#BadPreProcName    // C1021 delete line  
+
+プリプロセッサ コマンド 'string' が無効です
+
+`string` は無効な [プリプロセッサ ディレクティブ](../../preprocessor/preprocessor-directives.md)です。 エラーを解決するには、 `string`に有効なプリプロセッサ名を使用します。
+
+次の例では C1021 が生成されます。
+
+```
+// C1021.cpp
+#BadPreProcName    // C1021 delete line
 ```

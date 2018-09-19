@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2356 |Microsoft ドキュメント
+title: コンパイラ エラー C2356 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9dfb13f388c6c40c6c1853ab8e87b2e39edbc1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8dfad1703b36e1cd995207d35b99b323c883f828
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195205"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065414"
 ---
 # <a name="compiler-error-c2356"></a>コンパイラ エラー C2356
-初期化セグメントは翻訳単位の間で変更する必要があります。  
-  
- 以下の原因が考えられます。  
-  
--   `#pragma init_seg` セグメントの初期化コードに続く  
-  
--   `#pragma init_seg` 別の前に `#pragma init_seg`  
-  
- を解決するのには、モジュールの先頭にセグメントの初期化コードを移動します。 複数の領域を初期化する必要がある場合、は、それらを個別のモジュールを移動します。  
-  
- 次の例では、C2356 が生成されます。  
-  
-```  
-// C2356.cpp  
-#pragma warning(disable : 4075)  
-  
-int __cdecl myexit(void (__cdecl *)());  
-int __cdecl myexit2(void (__cdecl *)());  
-  
-#pragma init_seg(".mine$m",myexit)  
-#pragma init_seg(".mine$m",myexit2)   // C2356  
+
+初期化セグメントは翻訳単位の間で変更する必要があります。
+
+以下の原因が考えられます。
+
+- `#pragma init_seg` セグメントの初期化コードに続く
+
+- `#pragma init_seg` 別の前に `#pragma init_seg`
+
+を解決するには、モジュールの先頭にセグメントの初期化コードを移動します。 複数の領域を初期化する場合は、それらを個別のモジュールを移動します。
+
+次の例では、C2356 が生成されます。
+
+```
+// C2356.cpp
+#pragma warning(disable : 4075)
+
+int __cdecl myexit(void (__cdecl *)());
+int __cdecl myexit2(void (__cdecl *)());
+
+#pragma init_seg(".mine$m",myexit)
+#pragma init_seg(".mine$m",myexit2)   // C2356
 ```
