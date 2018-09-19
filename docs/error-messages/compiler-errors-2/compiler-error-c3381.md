@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3381 |Microsoft ドキュメント
+title: コンパイラ エラー C3381 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a27961694bc5fad4080d8aceaf2f1cb65404319c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7bd6c1d641f7476d3c372939b948931a306e0f80
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251099"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080715"
 ---
 # <a name="compiler-error-c3381"></a>コンパイラ エラー C3381
-'アセンブリ' : アセンブリ アクセス指定子は、/clr オプションと共にコンパイルされたコードでのみ使用できます  
-  
- ネイティブ型をアセンブリ外部から参照できることができますが、指定できるは、ネイティブな型のアセンブリのアクセス権のみ、 **/clr**コンパイルします。  
-  
- 詳細については、次を参照してください。[可視性を入力](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility)と[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)です。  
-  
-## <a name="example"></a>例  
- 次の例では、C3381 を生成します。  
-  
-```  
-// C3381.cpp  
-// compile with: /c  
-public class A {};   // C3381  
+
+'アセンブリ' : アセンブリ アクセス指定子は、/clr オプションと共にコンパイルされたコードでのみ使用できます
+
+ネイティブ型をアセンブリ外部から参照できることができますでのネイティブ型のアセンブリへのアクセスのみを指定できます、 **/clr**コンパイルします。
+
+詳細については、次を参照してください。[可視性を入力](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility)と[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)します。
+
+## <a name="example"></a>例
+
+次の例では、C3381 が生成されます。
+
+```
+// C3381.cpp
+// compile with: /c
+public class A {};   // C3381
 ```

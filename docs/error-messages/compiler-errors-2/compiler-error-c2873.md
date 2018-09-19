@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2873 |Microsoft ドキュメント
+title: コンパイラ エラー C2873 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a04d650729bdda949754c5070a6c307d390929
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bf0cc5663d81d6c1e7ad6a9f1a5f7ca167f12909
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244379"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049905"
 ---
 # <a name="compiler-error-c2873"></a>コンパイラ エラー C2873
-'symbol': シンボルは、using 宣言で使用することはできません  
-  
- A`using`ディレクティブが存在しない、[名前空間](../../cpp/namespaces-cpp.md)キーワード。 これは、場合はコード コンパイラ、[宣言を使用して](../../cpp/using-declaration.md)ではなく、[ディレクティブを使用して](../../cpp/namespaces-cpp.md#using_directives)です。
+
+'symbol': シンボルは、using 宣言で使用することはできません
+
+A`using`ディレクティブがない、[名前空間](../../cpp/namespaces-cpp.md)キーワード。 これは、場合、コンパイラはコードを[宣言を使用して](../../cpp/using-declaration.md)なく[ディレクティブを使用して](../../cpp/namespaces-cpp.md#using_directives)します。

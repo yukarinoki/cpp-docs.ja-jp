@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2264 |Microsoft ドキュメント
+title: コンパイラ エラー C2264 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8942c5537e7129c5ecd8b8ac6956fdd6c9e1efaa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e5b6f2cdf7a0c9708a34acd3e73241e942b2194b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168946"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045875"
 ---
 # <a name="compiler-error-c2264"></a>コンパイラ エラー C2264
-'function': 関数の定義または宣言エラー関数が呼び出されません  
-  
- 不適切な定義または宣言のため、関数を呼び出すことができません。  
-  
- 次の例では、C2264 が生成されます。  
-  
-```  
-// C2264.cpp  
-struct C {  
-   // Delete the following line to resolve.  
-   operator int(int = 0){}   // incorrect declaration  
-};  
-  
-struct D {  
-   operator int(){return 0;}   // OK  
-};  
-  
-int main() {  
-   int i;  
-  
-   C c;  
-   i = c;   // C2264  
-  
-   D d;  
-   i = d;   // OK  
-}  
+
+'function': 関数の定義または宣言以外のエラー関数が呼び出されません
+
+定義が無効または宣言なのため、関数を呼び出すことはできません。
+
+次の例では、C2264 が生成されます。
+
+```
+// C2264.cpp
+struct C {
+   // Delete the following line to resolve.
+   operator int(int = 0){}   // incorrect declaration
+};
+
+struct D {
+   operator int(){return 0;}   // OK
+};
+
+int main() {
+   int i;
+
+   C c;
+   i = c;   // C2264
+
+   D d;
+   i = d;   // OK
+}
 ```

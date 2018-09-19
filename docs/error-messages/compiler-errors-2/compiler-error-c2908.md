@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2908 |Microsoft ドキュメント
+title: コンパイラ エラー C2908 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d84f7fbda450b0830125a30898480ea94455332
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 913a01a21c75933688c55bbb79c3621124601745
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241371"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053116"
 ---
 # <a name="compiler-error-c2908"></a>コンパイラ エラー C2908
-明示的な特殊化です。'template' は既にインスタンス化されました  
-  
- プライマリ テンプレートの特殊化は、明示的な特殊化する前に発生します。  
-  
- 次の例では、C2908 が生成されます。  
-  
-```  
-// C2908.cpp  
-// compile with: /c  
-template<class T> class X {};  
-  
-void f() {  
-X<int> x;   //specialization and instantiation  
-            //of X<int>  
-}  
-  
-template<> class X<int> {}  // C2908, explicit specialization  
+
+明示的な特殊化です。'template' は既にインスタンス化されています
+
+プライマリ テンプレートの特殊化は、明示的な特殊化する前に発生します。
+
+次の例では、C2908 が生成されます。
+
+```
+// C2908.cpp
+// compile with: /c
+template<class T> class X {};
+
+void f() {
+X<int> x;   //specialization and instantiation
+            //of X<int>
+}
+
+template<> class X<int> {}  // C2908, explicit specialization
 ```

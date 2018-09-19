@@ -1,5 +1,5 @@
 ---
-title: 致命的なエラー C1037 |Microsoft ドキュメント
+title: 致命的なエラー C1037 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12c6720219a638d15b1b7bf684531dfe4d752d49
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8091eb7316531c6bdda9bf714ec7a195b5406182
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198093"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047682"
 ---
 # <a name="fatal-error-c1037"></a>致命的なエラー C1037
-オブジェクト ファイル filename を開くことができません  
-  
- [/Fo](../../build/reference/fo-object-file-name.md) で指定されたオブジェクト ファイルを開くことができません。  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>次のような原因をチェックして問題を解決するには  
-  
-1.  ファイル名が無効です。  
-  
-2.  ファイルを開くためのメモリが不足しています。  
-  
-3.  別のプロセスでファイルを使用しています。  
-  
-4.  同じ名前の読み取り専用ファイルが存在します。  
-  
+
+オブジェクト ファイル filename を開くことができません
+
+[/Fo](../../build/reference/fo-object-file-name.md) で指定されたオブジェクト ファイルを開くことができません。
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>次のような原因をチェックして問題を解決するには
+
+1. ファイル名が無効です。
+
+1. ファイルを開くためのメモリが不足しています。
+
+1. 別のプロセスでファイルを使用しています。
+
+1. 同じ名前の読み取り専用ファイルが存在します。
+

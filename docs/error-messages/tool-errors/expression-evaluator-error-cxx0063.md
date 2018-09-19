@@ -1,5 +1,5 @@
 ---
-title: 式エバリュエーター エラー CXX0063 |Microsoft ドキュメント
+title: 式エバリュエーター エラー CXX0063 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 962fd27cc174097ff4d6c72cf91ade89e74f1ce4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 835a396fdbf7f97e1dccde66581af463c8254cb5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296602"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039076"
 ---
 # <a name="expression-evaluator-error-cxx0063"></a>式エバリュエーター エラー CXX0063
-オーバー ロードされた演算子 -> はサポートされています。  
-  
- この式は、オーバー ロードされたクラス メンバー アクセス演算子を使用 (**->**)。  
-  
- このエラーは、can0063 と同じものと同じです。
+
+オーバー ロードされた演算子 -> はサポートされています
+
+式は、オーバー ロードされたクラス メンバー アクセス演算子を使用 (**->**)。
+
+このエラーは、can0063 と同じものと同じです。

@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2827 |Microsoft ドキュメント
+title: コンパイラ エラー C2827 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c96f9c3d43a289deb73fdb4414c344b7748da97
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 139a012f9ed4dd3b6d81d92be3c441df4f899aac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238590"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052216"
 ---
 # <a name="compiler-error-c2827"></a>コンパイラ エラー C2827
-単項形式にグローバルに 'operator 演算子' をオーバーライドすることはできません。  
-  
- 演算子は、オブジェクトの外側で単項形式を持つことはできません。  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>以下の可能性がある解決策を使って修正するには  
-  
-1.  オブジェクトにローカルのオーバー ロードされた演算子を加えます。  
-  
-2.  適切な単項演算子をオーバー ロードを選択します。
+
+'operator 演算子' は、単項形式でグローバルに上書きすることはできません。
+
+演算子は、オブジェクトの外部で単項形式を持つことはできません。
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>以下の可能性がある解決策を使って修正するには
+
+1. オブジェクトにオーバー ロードされた演算子をローカルに行います。
+
+1. 適切な単項演算子をオーバー ロードを選択します。

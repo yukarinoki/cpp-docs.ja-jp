@@ -242,12 +242,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db46ca389272674da215801c0da83f38e7a3ef2b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a0200f15ab7a5c97699165a34d52ec6ce1f239e5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703886"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136336"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement クラス
 `CMFCRibbonBaseElement`クラスは基底クラスに追加できるすべての要素に対して、[リボン バー](../../mfc/reference/cmfcribbonbar-class.md)します。 リボン要素とは、リボン ボタン、リボン チェック ボックス、リボン コンボ ボックスなどです。  
@@ -568,12 +568,11 @@ virtual void DrawImage(
  既定では、このメソッドは何もしません。 リボン要素のイメージを描画する派生クラスでこのメソッドをオーバーライドします。  
   
  次の表に指定できる値の一覧、*型*パラメーター。  
-  
- `RibbonImageLarge`  
- 大きなサイズは 32 x 32 ピクセルのイメージ サイズ。  
-  
- `RibbonImageSmall`  
- 小さな 16 x 16 ピクセルのイメージ サイズ。  
+
+|||
+|-|-|
+| `RibbonImageLarge`  | 大きなサイズは 32 x 32 ピクセルのイメージ サイズ。  |
+| `RibbonImageSmall`  | 小さな 16 x 16 ピクセルのイメージ サイズ。  |
   
 ##  <a name="find"></a>  CMFCRibbonBaseElement::Find  
  現在のオブジェクトを指している場合は、指定したポインターを返します。  

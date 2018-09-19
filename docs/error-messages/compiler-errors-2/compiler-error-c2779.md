@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2779 |Microsoft ドキュメント
+title: コンパイラ エラー C2779 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce1f16bd0e756895b0da98fd43d0d6b2fdee6e8f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 43067c780accfea1d55f9fd9c9dbce69fe41a43a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233929"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046785"
 ---
 # <a name="compiler-error-c2779"></a>コンパイラ エラー C2779
-'declaration': プロパティ メソッドは非静的データ メンバーに関連付けだけことができます。  
-  
- `property`静的データ メンバーに拡張属性が正しく適用されています。  
-  
- 次の例では、C2779 が生成されます。  
-  
-```  
-// C2779.cpp  
-struct A {  
-   static __declspec(property(put=PutProp))  
-   // try the following line instead  
-   __declspec(property(put=PutProp))  
-      int prop;   // C2779  
-   int PutProp(void);  
-};  
+
+'declaration': プロパティ メソッドは非静的データ メンバーに関連付けられたのみ。
+
+`property`静的データ メンバーに拡張属性が正しく適用されています。
+
+次の例では、C2779 が生成されます。
+
+```
+// C2779.cpp
+struct A {
+   static __declspec(property(put=PutProp))
+   // try the following line instead
+   __declspec(property(put=PutProp))
+      int prop;   // C2779
+   int PutProp(void);
+};
 ```

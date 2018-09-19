@@ -17,35 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fffc1ceef1f67dadde61190ccb12ce1cd5b7ba9b
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: cbf1c696a66024ec1d3b3022b1e3a03445e9b6fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42571706"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043301"
 ---
 # <a name="creating-an-updatable-provider"></a>更新可能なプロバイダーの作成
 
 更新可能なプロバイダーまたはプロバイダーを更新できる visual C をサポートしています (書き込む) データ ストア。 このトピックでは、OLE DB テンプレートを使用して、更新可能なプロバイダーを作成する方法について説明します。  
   
- このトピックでは、実行可能なプロバイダーを起動することを前提としています。 更新可能なプロバイダーを作成する 2 つの手順があります。 プロバイダーが、データ ストアに変更を加える方法をまず決定する必要があります。具体的には、変更するかどうかをすぐに実行する、更新コマンドが実行されるまで延期されます。 セクション"[プロバイダーを更新可能にする](#vchowmakingprovidersupdatable)"の変更と、プロバイダー コードで行う必要がある設定について説明します。  
+このトピックでは、実行可能なプロバイダーを起動することを前提としています。 更新可能なプロバイダーを作成する 2 つの手順があります。 プロバイダーが、データ ストアに変更を加える方法をまず決定する必要があります。具体的には、変更するかどうかをすぐに実行する、更新コマンドが実行されるまで延期されます。 セクション"[プロバイダーを更新可能にする](#vchowmakingprovidersupdatable)"の変更と、プロバイダー コードで行う必要がある設定について説明します。  
   
- 次に、ご利用のプロバイダーには、コンシューマーの要求をサポートするためのすべての機能が含まれています。 確認する必要があります。 コンシューマーは、データ ストアを更新する場合、プロバイダーをデータ ストアにデータを保存するコードが含まれる必要があります。 たとえば、C ランタイム ライブラリまたは MFC を使用、データ ソースには、このような操作を実行するのに可能性があります。 セクション"[データ ソースへの書き込み](#vchowwritingtothedatasource)"データ ソースへの書き込み、NULL、既定値の処理、および列のフラグを設定する方法について説明します。  
+次に、ご利用のプロバイダーには、コンシューマーの要求をサポートするためのすべての機能が含まれています。 確認する必要があります。 コンシューマーは、データ ストアを更新する場合、プロバイダーをデータ ストアにデータを保存するコードが含まれる必要があります。 たとえば、C ランタイム ライブラリまたは MFC を使用、データ ソースには、このような操作を実行するのに可能性があります。 セクション"[データ ソースへの書き込み](#vchowwritingtothedatasource)"データ ソースへの書き込み、NULL、既定値の処理、および列のフラグを設定する方法について説明します。  
   
 > [!NOTE]
 >  [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)更新可能なプロバイダーの例を示します。 UpdatePV インストールされている MyProv として更新をサポートしています。  
   
 ##  <a name="vchowmakingprovidersupdatable"></a> 更新可能なプロバイダーを作成  
 
- 更新可能なプロバイダーを行うには、データ ストアと、プロバイダーのこれらの操作を実行する方法で実行するプロバイダーを作成操作を理解することです。 具体的には、大きな問題は、データ ストアに更新プログラムが即座に実行または遅延がかどうか (バッチ)、update コマンドが発行されるまでです。  
+更新可能なプロバイダーを行うには、データ ストアと、プロバイダーのこれらの操作を実行する方法で実行するプロバイダーを作成操作を理解することです。 具体的には、大きな問題は、データ ストアに更新プログラムが即座に実行または遅延がかどうか (バッチ)、update コマンドが発行されるまでです。  
   
- 継承するかどうかを決定する必要がありますまず`IRowsetChangeImpl`または`IRowsetUpdateImpl`行セット クラス。 3 つのメソッドの機能の影響を実装するために選択次のうち、に応じて: `SetData`、 `InsertRows`、および`DeleteRows`します。  
+継承するかどうかを決定する必要がありますまず`IRowsetChangeImpl`または`IRowsetUpdateImpl`行セット クラス。 3 つのメソッドの機能の影響を実装するために選択次のうち、に応じて: `SetData`、 `InsertRows`、および`DeleteRows`します。  
   
 - 継承する場合[IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md)、すぐにこれら 3 つのメソッドを呼び出すデータ ストアを変更します。  
   
 - 継承する場合[IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md)を呼び出すまで、メソッドは、データ ストアへの変更を遅延`Update`、 `GetOriginalData`、または`Undo`します。 更新プログラムには、いくつかの変更が含まれている場合は、バッチ モード (変更のバッチ処理で大量のメモリ オーバーヘッドを追加できることに注意してください) で実行されます。  
   
- なお`IRowsetUpdateImpl`から派生した`IRowsetChangeImpl`します。 したがって、`IRowsetUpdateImpl`機能とバッチ機能を変更できます。  
+なお`IRowsetUpdateImpl`から派生した`IRowsetChangeImpl`します。 したがって、`IRowsetUpdateImpl`機能とバッチ機能を変更できます。  
   
 #### <a name="to-support-updatability-in-your-provider"></a>プロバイダーで更新をサポートするには  
   
@@ -72,21 +72,21 @@ ms.locfileid: "42571706"
     > [!NOTE]
     >  削除する必要があります、`IRowsetChangeImpl`継承チェーンからの行。 ディレクティブの前に説明したこの例外が 1 つのコードを含める必要があります`IRowsetChangeImpl`します。  
   
-2.  次の COM マップに追加 (`BEGIN_COM_MAP ... END_COM_MAP`)。  
+1. 次の COM マップに追加 (`BEGIN_COM_MAP ... END_COM_MAP`)。  
   
     |実装する場合|COM マップに追加します。|  
     |----------------------|--------------------|  
     |`IRowsetChangeImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)`|  
     |`IRowsetUpdateImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)COM_INTERFACE_ENTRY(IRowsetUpdate)`|  
   
-3.  コマンドで、次のプロパティ セット マップに追加 (`BEGIN_PROPSET_MAP ... END_PROPSET_MAP`)。  
+1. コマンドで、次のプロパティ セット マップに追加 (`BEGIN_PROPSET_MAP ... END_PROPSET_MAP`)。  
   
     |実装する場合|プロパティ セットのマップに追加します。|  
     |----------------------|-----------------------------|  
     |`IRowsetChangeImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)`|  
     |`IRowsetUpdateImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)`|  
   
-4.  プロパティ セット マップにも含めますすべて、次の設定の下に表示されます。  
+1. プロパティ セット マップにも含めますすべて、次の設定の下に表示されます。  
   
     ```cpp  
     PROPERTY_INFO_ENTRY_VALUE(UPDATABILITY, DBPROPVAL_UP_CHANGE |   
@@ -145,7 +145,8 @@ ms.locfileid: "42571706"
         >  通知をサポートする場合は、その他のプロパティも; をもがあります。参照してください`IRowsetNotifyCP`このリスト。  
   
 ##  <a name="vchowwritingtothedatasource"></a> データ ソースへの書き込み  
- データ ソースからの読み取り、呼び出し、`Execute`関数。 データ ソースへの書き込みを呼び出して、`FlushData`関数。 (一般的な意味では、テーブルまたはインデックスをディスクに加えた変更を保存するための手段をフラッシュします)。  
+
+データ ソースからの読み取り、呼び出し、`Execute`関数。 データ ソースへの書き込みを呼び出して、`FlushData`関数。 (一般的な意味では、テーブルまたはインデックスをディスクに加えた変更を保存するための手段をフラッシュします)。  
 
 ```cpp
 
@@ -158,6 +159,7 @@ FlushData(HROW, HACCESSOR);
 `FlushData`メソッドは、最初に格納された形式でデータを書き込みます。 この関数を上書きしない場合、プロバイダーが正常に機能が、変更は、データ ストアにはフラッシュされません。
 
 ### <a name="when-to-flush"></a>フラッシュします。
+
 データは、データ ストアに書き込まれる必要があるたびに、プロバイダー テンプレートは FlushData を呼び出すこれは、通常 (が常にではありません) が発生した、次の関数呼び出しの結果として。
 
 - `IRowsetChange::DeleteRows`
@@ -312,6 +314,7 @@ HRESULT FlushData(HROW, HACCESSOR)
 UpdatePV サンプル; でコードを見るプロバイダーが NULL のデータを処理する方法を示しています。 UpdatePV では、プロバイダーは、文字列"NULL"を記述することで、データ ストアに NULL データを格納します。 データ ストアから NULL データを読み取り、ときにその文字列を認識し、NULL 文字列を作成する、バッファーを空にします。 オーバーライドも`IRowsetImpl::GetDBStatus`でそのデータ値が空の場合、DBSTATUS_S_ISNULL を返します。
 
 ### <a name="marking-nullable-columns"></a>Null 許容列をマークします。
+
 また、スキーマ行セットを実装する場合 (を参照してください`IDBSchemaRowsetImpl`)、列が null 許容である (通常は、プロバイダーで CxxxSchemaColSchemaRowset によってマーク) DBSCHEMA_COLUMNS 行セットで指定する必要があります、実装します。
 
 すべての null 許容列を含むのバージョンの DBCOLUMNFLAGS_ISNULLABLE 値指定する必要があります、`GetColumnInfo`します。
@@ -441,4 +444,5 @@ m_rgRowData.Add(trData[0]);
 このコードを指定します、特に、列が 0 の場合、書き込み可能であるの既定値をサポートしていると、すべてのデータ列を同じ長さであること。 可変長列のデータを表示する場合は、このフラグを設定するができません。
 
 ## <a name="see-also"></a>関連項目
+
 [OLE DB プロバイダーの作成](creating-an-ole-db-provider.md)

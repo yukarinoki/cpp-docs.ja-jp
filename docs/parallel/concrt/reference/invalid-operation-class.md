@@ -1,5 +1,5 @@
 ---
-title: invalid_operation クラス |Microsoft ドキュメント
+title: invalid_operation クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa6d1152bb1f9a9c5671d1f7f0cdf0e426c02575
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c189649447b318a651957c82b8cfab8cd11fb60a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696098"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054832"
 ---
 # <a name="invalidoperation-class"></a>invalid_operation クラス
 このクラスは、同時実行ランタイムによってスローされる他の例外の種類によって正確に記述されない無効な操作を実行しようとした場合にスローされる例外を表します。  
@@ -42,7 +42,7 @@ class invalid_operation : public std::exception;
 |----------|-----------------|  
 |[invalid_operation](#ctor)|オーバーロードされます。 `invalid_operation` オブジェクトを構築します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  通常、この例外がスローされる条件については、それぞれのメソッドにドキュメント化されています。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
@@ -66,8 +66,8 @@ invalid_operation() throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Message`  
- エラーの説明メッセージ。  
+*メッセージ (_m)*<br/>
+エラーの説明メッセージ。  
   
 ## <a name="see-also"></a>関連項目  
  [concurrency 名前空間](concurrency-namespace.md)

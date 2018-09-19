@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4550 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4550 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d08529006e54427e4327ce96666e551046c07e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 926a2bcca82fb76e4fb13450531a9ceb0089c979
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276686"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052979"
 ---
 # <a name="compiler-warning-level-1-c4550"></a>コンパイラの警告 (レベル 1) C4550
-式には、引数リストのない関数  
-  
- 関数への逆参照されるポインターには、引数リストがありません。  
-  
-## <a name="example"></a>例  
-  
-```  
-// C4550.cpp  
-// compile with: /W1  
-bool f()  
-{  
-   return true;  
-}  
-  
-typedef bool (*pf_t)();  
-  
-int main()  
-{  
-   pf_t pf = f;  
-   if (*pf) {}  // C4550  
-   return 0;  
-}  
+
+式には、引数リストのない関数
+
+関数への逆参照されたポインターには、引数リストがありません。
+
+## <a name="example"></a>例
+
+```
+// C4550.cpp
+// compile with: /W1
+bool f()
+{
+   return true;
+}
+
+typedef bool (*pf_t)();
+
+int main()
+{
+   pf_t pf = f;
+   if (*pf) {}  // C4550
+   return 0;
+}
 ```

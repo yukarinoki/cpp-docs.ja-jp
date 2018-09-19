@@ -1,5 +1,5 @@
 ---
-title: プロジェクト ビルド エラー PRJ0040 |Microsoft ドキュメント
+title: プロジェクト ビルド エラー PRJ0040 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b1e3ed5f3bcf736f372227c2c14fcf52dd7cd10
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8e6aacb4db469f688d07916e1b50a1b8238bf65c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326460"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047136"
 ---
 # <a name="project-build-error-prj0040"></a>プロジェクト ビルド エラー PRJ0040
-ビルドで内部エラー。 続行できません。 プロジェクトを再度読み込んで、再試行してください。  
-  
- プロジェクト システムは、プロジェクトを処理できませんでした。  
-  
- プロジェクトの再読み込みを再試行してください。
+
+ビルド時に内部エラーです。 続行できません。 プロジェクトを再読み込み、もう一度やり直してください。
+
+プロジェクト システムは、プロジェクトを処理できませんでした。
+
+プロジェクトの再読み込みを再試行してください。

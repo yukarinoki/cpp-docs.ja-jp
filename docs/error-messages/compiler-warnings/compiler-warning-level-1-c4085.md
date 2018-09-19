@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4085 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4085 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9b8f1cfdb1cb8cc699b71a08afc417d2d1bd87f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff99599ad2c5d43fa8539a6525ba2fb4b4cdfa31
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271829"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046772"
 ---
 # <a name="compiler-warning-level-1-c4085"></a>コンパイラの警告 (レベル 1) C4085
-プラグマに、'on' か 'off' のパラメーターが必要です。  
-  
- プラグマには、 **on** または **off** パラメーターが必要です。 このプラグマは無視されます。  
-  
- 次の例では C4085 が生成されます。  
-  
-```  
-// C4085.cpp  
-// compile with: /W1 /LD  
-#pragma optimize( "t", maybe )  // C4085  
+
+プラグマに、'on' か 'off' のパラメーターが必要です。
+
+プラグマには、 **on** または **off** パラメーターが必要です。 このプラグマは無視されます。
+
+次の例では C4085 が生成されます。
+
+```
+// C4085.cpp
+// compile with: /W1 /LD
+#pragma optimize( "t", maybe )  // C4085
 ```

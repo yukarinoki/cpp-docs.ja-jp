@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4293 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4293 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ad588b69db1a0b46efa708b472bfc2218d17c0c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a29a42d5e06ededbcc4f16224b3e4332d56dbe03
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277128"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050206"
 ---
 # <a name="compiler-warning-level-1-c4293"></a>コンパイラの警告 (レベル 1) C4293
-'operator': シフト数が負の値または大きすぎて、未定義の動作  
-  
- シフト数が負の値または大きすぎる場合、結果のイメージの動作は定義されません。  
-  
-## <a name="example"></a>例  
- 次の例では、C4293 が生成されます。  
-  
-```  
-// C4293.cpp  
-// compile with: /c /W1  
-unsigned __int64 combine (unsigned lo, unsigned hi) {  
-  
-   return (hi << 32) | lo;   // C4293  
-  
-   // try the following line instead  
-   // return ( (unsigned __int64)hi << 32) | lo;  
-}  
+
+'operator': シフト数が負の値または大きすぎて、未定義の動作
+
+シフト数が負の値または大きすぎる場合、結果のイメージの動作が定義されていません。
+
+## <a name="example"></a>例
+
+次の例では、C4293 が生成されます。
+
+```
+// C4293.cpp
+// compile with: /c /W1
+unsigned __int64 combine (unsigned lo, unsigned hi) {
+
+   return (hi << 32) | lo;   // C4293
+
+   // try the following line instead
+   // return ( (unsigned __int64)hi << 32) | lo;
+}
 ```

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef417232d62c664b4943a2198ae351a5c443b089
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8fc187cea874d16522955dcd46c2ceac34d29098
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763748"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136167"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>デバッグとエラー報告のマクロ
 
@@ -97,7 +97,7 @@ ATLASSERT(booleanExpression);
 
 ### <a name="parameters"></a>パラメーター
 
-*ブール式*  
+*ブール式*<br/>
 0 以外の値または 0 に評価される式 (ポインターを含む)。
 
 ### <a name="remarks"></a>Remarks
@@ -119,10 +119,10 @@ ATLENSURE_THROW(booleanExpression, hr);
 
 ### <a name="parameters"></a>パラメーター
 
-*ブール式*  
+*ブール式*<br/>
 テストするブール式を指定します。
 
-*hr*  
+*hr*<br/>
 返されるエラー コードを指定します。
 
 ### <a name="remarks"></a>Remarks
@@ -155,7 +155,7 @@ ATLTRACENOTIMPL(funcname);
 
 ### <a name="parameters"></a>パラメーター
 
-*funcname*  
+*funcname*<br/>
 [in]実装されていない関数の名前を含む文字列。
 
 ### <a name="remarks"></a>Remarks
@@ -185,16 +185,16 @@ ATLTRACE(
 
 ### <a name="parameters"></a>パラメーター
 
-*exp*  
+*exp*<br/>
 [in]文字列と、Visual C に送信する変数の出力ウィンドウまたはこれらのメッセージをトラップするアプリケーション。
 
-*category*  
+*category*<br/>
 [in]イベントまたはレポートをメソッドの型。 カテゴリの一覧については、「解説」を参照してください。
 
-*レベル*  
+*レベル*<br/>
 [in]レポートへのトレースのレベル。 詳細については、「解説」を参照してください。
 
-*lpszFormat*  
+*lpszFormat*<br/>
 [in]ダンプ デバイスに送信する書式設定された文字列。
 
 ### <a name="remarks"></a>Remarks
@@ -216,16 +216,16 @@ ATLTRACE2(
 
 ### <a name="parameters"></a>パラメーター
 
-*exp*  
+*exp*<br/>
 [in]Visual C の出力ウィンドウ、またはこれらのメッセージをトラップする任意のアプリケーションに送信する文字列。
 
-*category*  
+*category*<br/>
 [in]イベントまたはレポートをメソッドの型。 カテゴリの一覧については、「解説」を参照してください。
 
-*レベル*  
+*レベル*<br/>
 [in]レポートへのトレースのレベル。 詳細については、「解説」を参照してください。
 
-*lpszFormat*  
+*lpszFormat*<br/>
 [in]`printf`-を使用して文字列を作成すると、ダンプ デバイスに送信する書式指定文字列のスタイルを設定します。
 
 ### <a name="remarks"></a>Remarks
@@ -295,5 +295,5 @@ ATLTRACE ATLTRACE2 動作と同じ場合、ATLTRACE は旧バージョンとの�
 
 ## <a name="see-also"></a>関連項目
 
-[マクロ](../../atl/reference/atl-macros.md)   
+[[マクロ]](../../atl/reference/atl-macros.md)<br/>
 [デバッグとエラー報告に関するグローバル関数](../../atl/reference/debugging-and-error-reporting-global-functions.md)

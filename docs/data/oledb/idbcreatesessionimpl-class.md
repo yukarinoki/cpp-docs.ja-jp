@@ -23,14 +23,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d934e9ae5494b934acb0779665ba4471dfc4c2b7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7f148176b8d5d0c85f3e899cfd117bbb381794b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572697"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047396"
 ---
 # <a name="idbcreatesessionimpl-class"></a>IDBCreateSessionImpl クラス
+
 実装を提供、 [IDBCreateSession](/previous-versions/windows/desktop/ms724076\(v=vs.85\))インターフェイス。  
   
 ## <a name="syntax"></a>構文
@@ -42,14 +43,16 @@ class ATL_NO_VTABLE IDBCreateSessionImpl
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- *T*  
- 派生クラス。  
+
+*T*<br/>
+派生クラス。  
   
- *SessionClass*  
- セッション オブジェクト。  
+*SessionClass*<br/>
+セッション オブジェクト。  
 
 ## <a name="requirements"></a>要件  
- **ヘッダー:** atldb.h 
+
+**ヘッダー:** atldb.h 
   
 ## <a name="members"></a>メンバー  
   
@@ -60,9 +63,11 @@ class ATL_NO_VTABLE IDBCreateSessionImpl
 |[CreateSession](#createsession)|データ ソース オブジェクトから新しいセッションを作成し、新しく作成されたセッションで要求されたインターフェイスを返します。|  
   
 ## <a name="remarks"></a>Remarks  
- データ ソース オブジェクトの必須インターフェイス。  
+
+データ ソース オブジェクトの必須インターフェイス。  
 
 ## <a name="createsession"></a> Idbcreatesessionimpl::createsession
+
 データ ソース オブジェクトから新しいセッションを作成し、新しく作成されたセッションで要求されたインターフェイスを返します。  
   
 ### <a name="syntax"></a>構文  
@@ -74,8 +79,10 @@ STDMETHOD(CreateSession)(IUnknown * pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[idbcreatesession::createsession](/previous-versions/windows/desktop/ms714942\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。   
+
+参照してください[idbcreatesession::createsession](/previous-versions/windows/desktop/ms714942\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。   
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

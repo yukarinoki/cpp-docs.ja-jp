@@ -1,5 +1,5 @@
 ---
-title: swap 関数 (auto_gcroot) |Microsoft ドキュメント
+title: swap 関数 (auto_gcroot) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 308f909e2a863f2d08feb6ff688cddf61b0347b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1c653130079870c885e5bb758a0ae2d953cca5b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165153"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052180"
 ---
 # <a name="swap-function-autogcroot"></a>swap 関数 (auto_gcroot)
 1 つの間でオブジェクトを交換`auto_gcroot`別とします。  
@@ -39,11 +39,11 @@ void swap(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `_left`  
- `auto_gcroot`。  
+*_ 左*<br/>
+`auto_gcroot`。  
   
- `_right`  
- 別`auto_gcroot`です。  
+*(_r)*<br/>
+もう 1 つ`auto_gcroot`します。  
   
 ## <a name="example"></a>例  
   

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4198e08a4c126a180006a088d4fc1509643824f6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 141940ef5d5c7d23ea3cf049e64e9f4c6974fce0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764931"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076659"
 ---
 # <a name="ccomobjectglobal-class"></a>CComObjectGlobal クラス
 
@@ -42,7 +42,7 @@ class CComObjectGlobal : public Base
 
 #### <a name="parameters"></a>パラメーター
 
-*ベース*  
+*ベース*<br/>
 派生したクラス、 [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)または[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)オブジェクトでサポートするその他のインターフェイスからも、します。
 
 ## <a name="members"></a>メンバー
@@ -142,10 +142,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>パラメーター
 
-*iid*  
+*iid*<br/>
 [in]要求されているインターフェイスの GUID です。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]インターフェイスが見つからない場合は、iid、または NULL で識別されるインターフェイス ポインターへのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -174,7 +174,7 @@ STDMETHOD_(ULONG, Release)();
 
 ## <a name="see-also"></a>関連項目
 
-[CComObjectStack クラス](../../atl/reference/ccomobjectstack-class.md)   
-[CComAggObject クラス](../../atl/reference/ccomaggobject-class.md)   
-[CComObject クラス](../../atl/reference/ccomobject-class.md)   
+[CComObjectStack クラス](../../atl/reference/ccomobjectstack-class.md)<br/>
+[CComAggObject クラス](../../atl/reference/ccomaggobject-class.md)<br/>
+[CComObject クラス](../../atl/reference/ccomobject-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

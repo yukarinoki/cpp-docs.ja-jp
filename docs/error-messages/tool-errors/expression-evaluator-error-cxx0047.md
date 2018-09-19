@@ -1,5 +1,5 @@
 ---
-title: 式エバリュエーター エラー CXX0047 |Microsoft ドキュメント
+title: 式エバリュエーター エラー CXX0047 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31597324c81675c268787915c4cb5ad2cfcb7db2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 42e40abb4b14bc821c043b79cf7ff7786c0dcc14
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296810"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040870"
 ---
 # <a name="expression-evaluator-error-cxx0047"></a>式エバリュエーター エラー CXX0047
-引数リストが関数と一致しません  
-  
- 式には、プログラムで定義されている同じ名前を持つ任意の関数の仮パラメーター リストと一致しない実際のパラメーター リストを持つ関数が呼び出されます。  
-  
- 正確なパラメーター照合またはオブジェクトの構築を必要としない一致がある場合にのみ、オーバー ロードされた関数を呼び出すことができます。  
-  
- このエラーは、can0047 と同じものと同じです。
+
+引数リストが関数と一致しません
+
+式には、プログラムで定義されている同じ名前を持つ任意の関数の仮パラメーター リストと一致しない実際のパラメーター リストを持つ関数が呼び出されます。
+
+正確なパラメーターに一致するか、オブジェクトの構築を必要としない一致がある場合にのみ、オーバー ロードされた関数を呼び出すことができます。
+
+このエラーは、can0047 と同じものと同じです。

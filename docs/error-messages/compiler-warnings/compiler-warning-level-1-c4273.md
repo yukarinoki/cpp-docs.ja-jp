@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4273 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4273 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f37a9a2337c9f6a96091f9972b0308965c2bdc3c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3fb8be688fa90a015996c1ba056ef368fbc1c588
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276595"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042092"
 ---
 # <a name="compiler-warning-level-1-c4273"></a>コンパイラの警告 (レベル 1) C4273
-'function': DLL リンクの一貫性がありません  
-  
- 使用方法が異なる 2 つの定義ファイルで[dllimport](../../cpp/dllexport-dllimport.md)です。  
-  
-## <a name="example"></a>例  
- 次の例では、C4273 を生成します。  
-  
-```  
-// C4273.cpp  
-// compile with: /W1 /c  
-char __declspec(dllimport) c;  
-char c;   // C4273, delete this line or the line above to resolve  
-```  
-  
-## <a name="example"></a>例  
- 次の例では、C4273 を生成します。  
-  
-```  
-// C4273_b.cpp  
-// compile with: /W1 /clr /c  
-#include <stdio.h>  
-extern "C" int printf_s(const char *, ...);   // C4273  
+
+'function': DLL リンクの一貫性がありません
+
+使用方法が異なる 2 つの定義ファイルで[dllimport](../../cpp/dllexport-dllimport.md)します。
+
+## <a name="example"></a>例
+
+次の例では、C4273 が生成されます。
+
+```
+// C4273.cpp
+// compile with: /W1 /c
+char __declspec(dllimport) c;
+char c;   // C4273, delete this line or the line above to resolve
+```
+
+## <a name="example"></a>例
+
+次の例では、C4273 が生成されます。
+
+```
+// C4273_b.cpp
+// compile with: /W1 /clr /c
+#include <stdio.h>
+extern "C" int printf_s(const char *, ...);   // C4273
 ```

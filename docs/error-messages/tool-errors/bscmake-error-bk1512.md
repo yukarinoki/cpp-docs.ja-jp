@@ -1,5 +1,5 @@
 ---
-title: BSCMAKE エラー BK1512 |Microsoft ドキュメント
+title: BSCMAKE エラー BK1512 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b161375d9f8396854cc491e038e39d096d30d246
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ce429c0c4cf0300b3818a9be9d28fd03e95f5eb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33306466"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039856"
 ---
 # <a name="bscmake-error-bk1512"></a>BSCMAKE エラー BK1512
-ファイル名: 容量を超えました  
-  
- BSCMAKE は、定義、参照、モジュール、またはその他の情報の数が上限を超えているために、ブラウザー情報ファイルをビルドできません。  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>以下の可能性がある解決策を使って修正するには  
-  
-1.  /Em、/Es、または/Ei を使用して一部の情報を除外します。  
-  
-2.  /Iu オプションを省略します。
+
+ファイル名: 容量を超えました。
+
+定義、参照、モジュール、またはその他の情報の数が上限を超えているために、BSCMAKE では、ブラウザー情報ファイルをビルドできません。
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>以下の可能性がある解決策を使って修正するには
+
+1. /Em、/Es、/Ei を使用していくつかの情報を除外します。
+
+1. /Iu オプションを省略します。

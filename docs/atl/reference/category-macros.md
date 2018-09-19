@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8f07a559c6353bb66a210bf450c15376720cdac
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cc13285549543eeab07bed6372f8f7d529f90a32
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753036"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078700"
 ---
 # <a name="category-macros"></a>カテゴリに関するマクロ
 
@@ -67,7 +67,7 @@ BEGIN_CATEGORY_MAP(theClass)
 
 ### <a name="parameters"></a>パラメーター
 
-*クラス*  
+*クラス*<br/>
 [in]カテゴリのマップを含むクラスの名前。
 
 ### <a name="remarks"></a>Remarks
@@ -109,7 +109,7 @@ IMPLEMENTED_CATEGORY(catID)
 
 ### <a name="parameters"></a>パラメーター
 
-*catID*  
+*catID*<br/>
 [in]CATID 定数または実装されているカテゴリのグローバル一意識別子 (GUID) を保持する変数。 アドレス*catID*取得され、マップに追加されます。 ストック カテゴリの選択は、以下の表を参照してください。
 
 ### <a name="remarks"></a>Remarks
@@ -146,7 +146,7 @@ REQUIRED_CATEGORY( catID )
 
 ### <a name="parameters"></a>パラメーター
 
-*catID*  
+*catID*<br/>
 [in]CATID 定数または必要なカテゴリのグローバル一意識別子 (GUID) を保持する変数。 アドレス*catID*取得され、マップに追加されます。 ストック カテゴリの選択は、以下の表を参照してください。
 
 ### <a name="remarks"></a>Remarks

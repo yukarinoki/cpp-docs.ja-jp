@@ -18,16 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1dfc9c50503fcd277f34e8f5dfc4a630d888eebf
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 4cc44672fe30af8b6521b617228fb70b88e61f83
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318279"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040942"
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>例外の仕様 (スロー、noexcept) (C++)
 
-例外の仕様は、関数で伝えることができる例外の種類についてのプログラマの意図を示す C++ 言語機能です。 関数は可能性がありますかを使用して、例外によって終了可能性がありますを指定できます、*例外仕様*します。 コンパイラは、関数の呼び出しを最適化するためにこの情報を使用することができ、予期しない例外の場合、プログラムを終了する関数をエスケープします。 
+例外の仕様は、関数で伝えることができる例外の種類についてのプログラマの意図を示す C++ 言語機能です。 関数は可能性がありますかを使用して、例外によって終了可能性がありますを指定できます、*例外仕様*します。 コンパイラは、関数の呼び出しを最適化するためにこの情報を使用することができ、予期しない例外の場合、プログラムを終了する関数をエスケープします。
 
 C++ 17 の前に、例外の指定の 2 種類がありました。 *Noexcept 仕様*c++ 11 で新しく追加されました。 これは、関数をエスケープできる潜在的な例外のセットが空かどうかを指定します。 *動的例外指定*、または`throw(optional_type_list)`仕様が c++ 11 で非推奨し、以外の c++ 17 では削除`throw()`のエイリアスである`noexcept(true)`します。 この例外の指定は、関数からスローできる例外に関する概要情報を提供するよう設計されましたが、実際に問題がある検出されました。 ある程度役に立つことが 1 つの動的例外指定が、無条件`throw()`仕様。 たとえば、関数宣言します。
 
@@ -138,5 +138,6 @@ in handler
 ```
 
 ## <a name="see-also"></a>関連項目
- [try、throw、catch ステートメント (C++)](../cpp/try-throw-and-catch-statements-cpp.md)  
- [C++ 例外処理](../cpp/cpp-exception-handling.md)
+
+[try、throw、catch ステートメント (C++)](../cpp/try-throw-and-catch-statements-cpp.md)<br/>
+[C++ 例外処理](../cpp/cpp-exception-handling.md)

@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2534 |Microsoft ドキュメント
+title: コンパイラ エラー C2534 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bae52374e09852ffb68c5807353155d9928924eb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2febeeeb3b6c0e394070339f2310a22c1326ab5c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228247"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049034"
 ---
 # <a name="compiler-error-c2534"></a>コンパイラ エラー C2534
-'identifier': コンス トラクターは値を返すことはできません  
-  
- コンス トラクターの戻り値または戻り値の型であることはできません (であっても、`void`型を返す)。  
-  
- このエラーは、削除することによって解決される可能性があります、`return`コンス トラクターの定義からのステートメント。  
-  
- 次の例では、C2534 が生成されます。  
-  
-```  
-// C2534.cpp  
-class A {  
-public:  
-   int i;  
-   A() { return i; }   // C2534  
-};  
+
+'identifier': コンス トラクターは、値を返すことはできません
+
+コンス トラクターの戻り値または戻り値の型があることはできません (であっても、`void`型を返す)。
+
+このエラーは、削除することによって解決される可能性があります、`return`コンス トラクターの定義からのステートメント。
+
+次の例では、C2534 が生成されます。
+
+```
+// C2534.cpp
+class A {
+public:
+   int i;
+   A() { return i; }   // C2534
+};
 ```

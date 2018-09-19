@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3375 |Microsoft ドキュメント
+title: コンパイラ エラー C3375 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11805b7ef714c65ff9816828aeea10baa2217ff6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f63d7eb7ef4633f01b65337c9546af260ca50fb4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256471"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044068"
 ---
 # <a name="compiler-error-c3375"></a>コンパイラ エラー C3375
-'function': あいまいなデリゲート関数です  
-  
- デリゲートのインスタンス化が静的メンバー関数向けであるか、またはインスタンス関数へのバインドされていないデリゲートとして存在した可能性があるため、コンパイラはこのエラーを発行しました。  
-  
- 詳細については、次を参照してください。 [delegate (C++ コンポーネント拡張)](../../windows/delegate-cpp-component-extensions.md)です。  
-  
-## <a name="example"></a>例  
- 次の例では警告 C3375 が生成されます。  
-  
-```  
-// C3375.cpp  
-// compile with: /clr  
-ref struct R {  
-   static void f(R^) {}  
-   void f() {}  
-};  
-  
-delegate void Del(R^);  
-  
-int main() {  
-   Del ^ a = gcnew Del(&R::f);   // C3375  
-}  
+
+'function': あいまいなデリゲート関数です
+
+デリゲートのインスタンス化が静的メンバー関数向けであるか、またはインスタンス関数へのバインドされていないデリゲートとして存在した可能性があるため、コンパイラはこのエラーを発行しました。
+
+詳細については、次を参照してください。[デリゲート (C++ コンポーネント拡張)](../../windows/delegate-cpp-component-extensions.md)します。
+
+## <a name="example"></a>例
+
+次の例では警告 C3375 が生成されます。
+
+```
+// C3375.cpp
+// compile with: /clr
+ref struct R {
+   static void f(R^) {}
+   void f() {}
+};
+
+delegate void Del(R^);
+
+int main() {
+   Del ^ a = gcnew Del(&R::f);   // C3375
+}
 ```

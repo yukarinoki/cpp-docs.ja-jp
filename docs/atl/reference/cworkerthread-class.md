@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92a6bb4cbd80cf0fa36b65d81a327b822493e264
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e2c3e0eb625c492cb9f0e9a1234d33149ac201a1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752698"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040233"
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread クラス
 
@@ -42,13 +42,13 @@ ms.locfileid: "43752698"
 ## <a name="syntax"></a>構文
 
 ```
-template <class ThreadTraits = DefaultThreadTraits>  
+template <class ThreadTraits = DefaultThreadTraits>
 class CWorkerThread
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*ThreadTraits*  
+*ThreadTraits*<br/>
 など、スレッド作成関数を提供するクラス[CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md)または[Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md)します。
 
 ## <a name="members"></a>メンバー
@@ -115,13 +115,13 @@ HRESULT AddHandle(
 
 ### <a name="parameters"></a>パラメーター
 
-*hObject*  
+*hObject*<br/>
 待機可能オブジェクトへのハンドル。
 
-*pClient*  
+*pClient*<br/>
 ポインター、 [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)ハンドルがシグナル通知されたときに呼び出されるオブジェクトのインターフェイス。
 
-*について*  
+*について*<br/>
 渡されるパラメーター [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)ハンドルがシグナル通知されたとき。
 
 ### <a name="return-value"></a>戻り値
@@ -146,16 +146,16 @@ HRESULT AddTimer(
 
 ### <a name="parameters"></a>パラメーター
 
-*dwInterval*  
+*dwInterval*<br/>
 タイマーの間隔をミリ秒単位で指定します。
 
-*pClient*  
+*pClient*<br/>
 ポインター、 [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)ハンドルがシグナル通知されたときに呼び出されるオブジェクトのインターフェイス。
 
-*について*  
+*について*<br/>
 渡されるパラメーター [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)ハンドルがシグナル通知されたとき。
 
-*phTimer*  
+*phTimer*<br/>
 [out]成功した場合、新しく作成した、タイマーを識別するハンドルを受け取るハンドル変数のアドレス。
 
 ### <a name="return-value"></a>戻り値
@@ -224,7 +224,7 @@ HRESULT Initialize(CWorkerThread<ThreadTraits>* pThread) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pThread*  
+*pThread*<br/>
 既存のワーカー スレッド。
 
 ### <a name="return-value"></a>戻り値
@@ -249,7 +249,7 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*hObject*  
+*hObject*<br/>
 削除するハンドル。
 
 ### <a name="return-value"></a>戻り値
@@ -270,7 +270,7 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*内部*  
+*内部*<br/>
 ワーカー スレッドをシャット ダウンするを待機するミリ秒単位の時間。 ATL_WORKER_THREAD_WAIT の既定値は 10 秒です。 Atlutil.h する前に、必要に応じて、このシンボルは、独自の値を定義できます。
 
 ### <a name="return-value"></a>戻り値
@@ -285,7 +285,7 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
 
 ## <a name="see-also"></a>関連項目
 
-[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   
-[クラス](../../atl/reference/atl-classes.md)   
-[マルチ スレッド: ワーカー スレッドを作成します。](../../parallel/multithreading-creating-worker-threads.md)   
+[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>
+[クラス](../../atl/reference/atl-classes.md)<br/>
+[マルチスレッド: ワーカー スレッドの生成](../../parallel/multithreading-creating-worker-threads.md)<br/>
 [IWorkerThreadClient インターフェイス](../../atl/reference/iworkerthreadclient-interface.md)

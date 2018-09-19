@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d3463b9eaad5134f68fbe533e50431ef3a91cf5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1c33c3524d0fb6b39208e2cb7be57805a3ff043f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761200"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046759"
 ---
 # <a name="cautoptrlist-class"></a>CAutoPtrList クラス
 
@@ -35,14 +35,14 @@ ms.locfileid: "43761200"
 ## <a name="syntax"></a>構文
 
 ```
-template<typename E>  
-class CAutoPtrList : 
+template<typename E>
+class CAutoPtrList :
    public CAtlList<ATL::CAutoPtr<E>, CAutoPtrElementTraits<E>>
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*E*  
+*E*<br/>
 ポインター型。
 
 ## <a name="members"></a>メンバー
@@ -79,7 +79,7 @@ CAutoPtrList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nBlockSize*  
+*nBlockSize*<br/>
 既定値は 10 でのブロック サイズ。
 
 ### <a name="remarks"></a>Remarks
@@ -88,6 +88,6 @@ CAutoPtrList(UINT nBlockSize = 10) throw();
 
 ## <a name="see-also"></a>関連項目
 
-[CAtlList クラス](../../atl/reference/catllist-class.md)   
-[CAutoPtrElementTraits クラス](../../atl/reference/cautoptrelementtraits-class.md)   
+[CAtlList クラス](../../atl/reference/catllist-class.md)<br/>
+[CAutoPtrElementTraits クラス](../../atl/reference/cautoptrelementtraits-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

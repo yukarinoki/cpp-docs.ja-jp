@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2718 |Microsoft ドキュメント
+title: コンパイラ エラー C2718 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12ffe631f354c7aef87497e7b21e3a9cd3261c3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: facbee46968cf76e6709bceff4432ba289aed3cd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236326"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045771"
 ---
 # <a name="compiler-error-c2718"></a>コンパイラ エラー C2718
-'parameter': 実際の引数はアラインは配置されません  
-  
- [整列](../../cpp/align-cpp.md)`__declspec`修飾子は関数のパラメーターでは許可されません。  
-  
- 次の例では、C2718 が生成されます。  
-  
-```  
-// C2718.cpp  
-typedef struct __declspec(align(32)) AlignedStruct  {   
-   int i;   
-} AlignedStruct;  
-  
-void f2(int i, ...);  
-  
-void f4() {  
-   AlignedStruct as;  
-  
-   f2(0, as);   // C2718, actual parameter is aligned  
-}  
+
+'parameter': 実引数はアラインは配置されません
+
+[Align](../../cpp/align-cpp.md) `__declspec`修飾子は関数のパラメーターでは許可されていません。
+
+次の例では、C2718 が生成されます。
+
+```
+// C2718.cpp
+typedef struct __declspec(align(32)) AlignedStruct  {
+   int i;
+} AlignedStruct;
+
+void f2(int i, ...);
+
+void f4() {
+   AlignedStruct as;
+
+   f2(0, as);   // C2718, actual parameter is aligned
+}
 ```

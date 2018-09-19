@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2947 |Microsoft ドキュメント
+title: コンパイラ エラー C2947 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1af4e6a5a27c13d69351eaf0cddfafe11ba5f22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 508c2ae29b0290332cc7c2b49aac0a1ecb10528f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243432"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054520"
 ---
 # <a name="compiler-error-c2947"></a>コンパイラ エラー C2947
-指定してください ' >' を構造を終了するには、'構文' が見つかりました  
-  
- ジェネリックまたはテンプレートの引数リストが正しく終了がいないことがあります。  
-  
- C2947 は、構文エラーによっても生成できます。  
-  
- 次の例では、C2947 が生成されます。  
-  
-```  
-// C2947.cpp  
-// compile with: /c  
-template <typename T>=   // C2947  
-// try the following line instead  
-// template <typename T>  
-struct A {};  
+
+指定してください ' >' をコンストラクトを終了するには、'構文' が見つかりません
+
+ジェネリックまたはテンプレートの引数リストが正しく終了がない可能性があります。
+
+構文エラー C2947 を生成こともできます。
+
+次の例では、C2947 が生成されます。
+
+```
+// C2947.cpp
+// compile with: /c
+template <typename T>=   // C2947
+// try the following line instead
+// template <typename T>
+struct A {};
 ```

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c707eeb5a7899dd3ef7c8c2aa46098a70ab9c06d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 94d69debb4bde61fc76917c70d95bcc6314c7208
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753088"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044536"
 ---
 # <a name="atl-classes-and-structs"></a>ATL クラスと構造体
 
@@ -231,9 +231,9 @@ Active Template Library (ATL) では、次のクラスと構造体が含まれ�
 
 ## <a name="see-also"></a>関連項目
 
-[ATL COM デスクトップ コンポーネント](../../atl/atl-com-desktop-components.md)   
-[関数](../../atl/reference/atl-functions.md)   
-[グローバル変数](../../atl/reference/atl-global-variables.md)   
-[Typedefs](../../atl/reference/atl-typedefs.md)   
+[ATL COM デスクトップ コンポーネント](../../atl/atl-com-desktop-components.md)<br/>
+[関数](../../atl/reference/atl-functions.md)<br/>
+[グローバル変数](../../atl/reference/atl-global-variables.md)<br/>
+[Typedefs](../../atl/reference/atl-typedefs.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)
 

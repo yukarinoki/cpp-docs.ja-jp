@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2419 |Microsoft ドキュメント
+title: コンパイラ エラー C2419 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a456a4844c596a7cacad6ca85af8923d23d480f7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6fa3e6c562fe526df506a0f3aaf6944850f303b8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33223735"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041338"
 ---
 # <a name="compiler-error-c2419"></a>コンパイラ エラー C2419
-'context' 内で使われた MOD 演算子 '/' の 2 番目の引数が 0 です。  
-  
- `MOD` 演算子の右側のパラメーターが、このコンテキストでは 0 になります。
+
+'context' 内で使われた MOD 演算子 '/' の 2 番目の引数が 0 です。
+
+`MOD` 演算子の右側のパラメーターが、このコンテキストでは 0 になります。

@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 2) C4653 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 2) C4653 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c312b7530fa11bb734dc99a872b36e926890f658
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 376da24d4619eacc3e6b3defe8fdfc582800a898
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290997"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045979"
 ---
 # <a name="compiler-warning-level-2-c4653"></a>コンパイラの警告 (レベル 2) C4653
-コンパイラ オプション 'option' はプリコンパイル済みヘッダーです。現在のコマンド ライン オプションが無視されます。  
-  
- プリコンパイル済みヘッダーの使用で指定されたオプション ([/Yu](../../build/reference/yu-use-precompiled-header-file.md)) オプションがプリコンパイル済みヘッダーの作成時に指定されたオプションと矛盾しています。 このコンパイルでは、プリコンパイル済みヘッダーの作成時に指定されたオプションを使用します。  
-  
- ときに、さまざまなオプションの値、パックの構造体に、この警告が発生することが ([/Zp](../../build/reference/zp-struct-member-alignment.md)) プリコンパイル済みヘッダーのコンパイル時に指定されました。
+
+コンパイラ オプション 'option' プリコンパイル済みヘッダーです。現在のコマンド ライン オプションは無視されます。
+
+プリコンパイル済みヘッダーの使用で指定されたオプション ([/Yu](../../build/reference/yu-use-precompiled-header-file.md)) オプションがプリコンパイル済みヘッダーの作成時に指定されたオプションに一致していません。 このコンパイルでは、プリコンパイル済みヘッダーの作成時に指定されたオプションを使用します。
+
+パックの構造体のオプションに異なる値のときに、この警告が発生する可能性が ([/Zp](../../build/reference/zp-struct-member-alignment.md)) プリコンパイル済みヘッダーのコンパイル時に指定されました。

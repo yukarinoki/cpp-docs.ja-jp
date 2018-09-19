@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2203 |Microsoft ドキュメント
+title: コンパイラ エラー C2203 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0cbf64e673c84a60c37bce3ffd51bc7016eb7a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6db497a7967e0cefc16ecb6e5a71874f86179b29
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169934"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053766"
 ---
 # <a name="compiler-error-c2203"></a>コンパイラ エラー C2203
-削除演算子は配列の境界を指定できません  
-  
- **/Za** (ANSI) のオプション、`delete`演算子は、配列全体ですがない部分または配列の特定のメンバーを削除できます。  
-  
- 次の例では、C2203 が生成されます。  
-  
-```  
-// C2203.cpp  
-// compile with: /Za  
-int main() {  
-   int *ar = new int[10];  
-   delete [4] ar;   // C2203  
-   // try the following line instead  
-   // delete [] ar;  
-}  
+
+削除演算子は配列の境界を指定できません
+
+**/Za** (ANSI) のオプション、`delete`演算子には、配列全体ですがない部分または配列の特定のメンバーを削除できます。
+
+次の例では、C2203 が生成されます。
+
+```
+// C2203.cpp
+// compile with: /Za
+int main() {
+   int *ar = new int[10];
+   delete [4] ar;   // C2203
+   // try the following line instead
+   // delete [] ar;
+}
 ```

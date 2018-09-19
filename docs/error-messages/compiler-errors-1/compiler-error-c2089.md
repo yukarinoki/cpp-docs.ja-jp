@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2089 |Microsoft ドキュメント
+title: コンパイラ エラー C2089 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84f76c5b5ae8212e463a7022680ffca5dd4ca498
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb64f1f0c2a8c5af2a8b8625cd1a05c530066185
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33163662"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046154"
 ---
 # <a name="compiler-error-c2089"></a>コンパイラ エラー C2089
-'identifier': 'のクラス キー' が大きすぎます  
-  
- 指定された構造体または共用体は、4 GB の制限を超えています。
+
+'identifier': 'クラスにキー' が大きすぎます
+
+指定された構造体または共用体は、4 GB の制限を超えています。

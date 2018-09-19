@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64b6266ac31e2d6dec6eabc847b67b080b250837
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 533458b35e4589e04d95a4618a04a90aa1994c35
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751424"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039336"
 ---
 # <a name="cinterfacearray-class"></a>CInterfaceArray クラス
 
@@ -32,7 +32,7 @@ ms.locfileid: "43751424"
 ## <a name="syntax"></a>構文
 
 ```
-template <class I, const IID* piid=& __uuidof(I)>  
+template <class I, const IID* piid=& __uuidof(I)>
 class CInterfaceArray : 
    public CAtlArray<ATL::CComQIPtr<I, piid>,
                     CComQIPtrElementTraits<I, piid>>
@@ -40,10 +40,10 @@ class CInterfaceArray :
 
 #### <a name="parameters"></a>パラメーター
 
-*I*  
+*I*<br/>
 COM インターフェイスを格納するポインターの種類を指定します。
 
-*piid*  
+*piid*<br/>
 ポインターの IID を*は*します。
 
 ## <a name="members"></a>メンバー
@@ -84,7 +84,7 @@ CInterfaceArray() throw();
 
 ## <a name="see-also"></a>関連項目
 
-[CAtlArray クラス](../../atl/reference/catlarray-class.md)   
-[CComQIPtr クラス](../../atl/reference/ccomqiptr-class.md)   
-[CComQIPtrElementTraits クラス](../../atl/reference/ccomqiptrelementtraits-class.md)   
+[CAtlArray クラス](../../atl/reference/catlarray-class.md)<br/>
+[CComQIPtr クラス](../../atl/reference/ccomqiptr-class.md)<br/>
+[CComQIPtrElementTraits クラス](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

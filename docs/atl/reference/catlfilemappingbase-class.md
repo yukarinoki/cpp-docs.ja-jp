@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e272c9674270c1c600fee697dd77d050d6adb4e0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 79cace12447eccb9ac7dc560b6add45bd0dc81c5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759830"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045082"
 ---
 # <a name="catlfilemappingbase-class"></a>CAtlFileMappingBase クラス
 
@@ -89,13 +89,13 @@ class CAtlFileMappingBase
 コンストラクターです。
 
 ```
-CAtlFileMappingBase(CAtlFileMappingBase& orig);  
+CAtlFileMappingBase(CAtlFileMappingBase& orig);
 CAtlFileMappingBase() throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*orig*  
+*orig*<br/>
 新しいオブジェクトを作成するコピー元のファイル マッピング オブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -128,7 +128,7 @@ HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*orig*  
+*orig*<br/>
 コピーする元のファイル マッピング オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -190,19 +190,19 @@ HRESULT MapFile(
 
 ### <a name="parameters"></a>パラメーター
 
-*hFile*  
+*hFile*<br/>
 マッピング オブジェクトを作成するためのファイルへのハンドルします。 *hFile*有効である必要があるあり、INVALID_HANDLE_VALUE に設定することはできません。
 
-*nMappingSize*  
+*nMappingSize*<br/>
 マップのサイズ。 識別されるファイルの現在のサイズにファイル マッピング オブジェクトの最大サイズは 0 の場合、 *hFile します。*
 
-*nOffset*  
+*nOffset*<br/>
 ファイル オフセット マッピングの開始位置。 オフセットの値は、システムのメモリ割り当ての粒度の倍数である必要があります。
 
-*dwMappingProtection*  
+*dwMappingProtection*<br/>
 ファイルがマップされている場合、ファイルのビューに必要な保護。 参照してください*flProtect*で[CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) Windows SDK に含まれています。
 
-*dwViewDesiredAccess*  
+*dwViewDesiredAccess*<br/>
 ファイルのビューと、ファイルによってマップされるページの保護へのアクセスの種類を指定します。 参照してください*dwDesiredAccess*で[mapviewoffileex に](https://msdn.microsoft.com/library/windows/desktop/aa366763)Windows SDK に含まれています。
 
 ### <a name="return-value"></a>戻り値
@@ -233,22 +233,22 @@ HRESULT MapSharedMem(
 
 ### <a name="parameters"></a>パラメーター
 
-*nMappingSize*  
+*nMappingSize*<br/>
 マップのサイズ。 識別されるファイル マッピング オブジェクトの現在のサイズにファイル マッピング オブジェクトの最大サイズは 0 の場合、 *szName*します。
 
-*szName*  
+*szName*<br/>
 マッピング オブジェクトの名前。
 
-*pbAlreadyExisted*  
+*pbAlreadyExisted*<br/>
 設定されている場合は TRUE、マッピング オブジェクト既に BOOL 値へのポインターが存在します。
 
-*lpsa*  
+*lpsa*<br/>
 ポインターを`SECURITY_ATTRIBUTES`を子プロセスが、返されたハンドルを継承できるかどうかを決定する構造体。 参照してください*lpAttributes*で[CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) Windows SDK に含まれています。
 
-*dwMappingProtection*  
+*dwMappingProtection*<br/>
 ファイルがマップされている場合は、ファイルの表示に必要な保護。 参照してください*flProtect*で`CreateFileMapping`Windows SDK に含まれています。
 
-*dwViewDesiredAccess*  
+*dwViewDesiredAccess*<br/>
 ファイルのビューと、ファイルによってマップされるページの保護へのアクセスの種類を指定します。 参照してください*dwDesiredAccess*で[mapviewoffileex に](https://msdn.microsoft.com/library/windows/desktop/aa366763)Windows SDK に含まれています。
 
 ### <a name="return-value"></a>戻り値
@@ -273,16 +273,16 @@ HRESULT OpenMapping(
 
 ### <a name="parameters"></a>パラメーター
 
-*szName*  
+*szName*<br/>
 マッピング オブジェクトの名前。 この名前のファイル マッピング オブジェクトを開いているハンドルがあるし、マップ オブジェクトのセキュリティ記述子と競合しない場合、 *dwViewDesiredAccess*パラメーター ファイルを開く操作が成功するとします。
 
-*nMappingSize*  
+*nMappingSize*<br/>
 マップのサイズ。 識別されるファイル マッピング オブジェクトの現在のサイズにファイル マッピング オブジェクトの最大サイズは 0 の場合、 *szName*します。
 
-*nOffset*  
+*nOffset*<br/>
 ファイル オフセット マッピングの開始位置。 オフセットの値は、システムのメモリ割り当ての粒度の倍数である必要があります。
 
-*dwViewDesiredAccess*  
+*dwViewDesiredAccess*<br/>
 ファイルのビューと、ファイルによってマップされるページの保護へのアクセスの種類を指定します。 参照してください*dwDesiredAccess*で[mapviewoffileex に](https://msdn.microsoft.com/library/windows/desktop/aa366763)Windows SDK に含まれています。
 
 ### <a name="return-value"></a>戻り値
@@ -303,7 +303,7 @@ CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 
 ### <a name="parameters"></a>パラメーター
 
-*orig*  
+*orig*<br/>
 現在のファイル マッピング オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -328,5 +328,5 @@ HRESULT Unmap() throw();
 
 ## <a name="see-also"></a>関連項目
 
-[CAtlFileMapping クラス](../../atl/reference/catlfilemapping-class.md)   
+[CAtlFileMapping クラス](../../atl/reference/catlfilemapping-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: 致命的なエラー C1313 |Microsoft ドキュメント
+title: 致命的なエラー C1313 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97e390fe35acd469cabba254f429a042e8c6feaa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0d32dc8cd42d9e038e8cf71bb0a323e2727b2a3c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198743"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048189"
 ---
 # <a name="fatal-error-c1313"></a>致命的なエラー C1313
-コンパイラの制限: 型のブロック可能性がありますいない入れ子にするレベル数よりも深く  
-  
- 例外処理 (または構造化例外処理) ブロックの入れ子が深すぎます。  コードを簡略化します。
+
+コンパイラの制限: 型のブロックがない深く入れ子にするレベル数よりも
+
+例外処理 (または構造化例外処理) ブロックの入れ子が深すぎます。  コードを簡略化します。

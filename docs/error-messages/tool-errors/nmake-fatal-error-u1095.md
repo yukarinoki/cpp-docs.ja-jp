@@ -1,5 +1,5 @@
 ---
-title: NMAKE の致命的なエラー U1095 |Microsoft ドキュメント
+title: NMAKE の致命的なエラー U1095 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13c819d18149e61bca71f6a4cb10ea851a2d485d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 964ec1d029e56a5d9d78659ad919c71a4e44506d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317246"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039882"
 ---
 # <a name="nmake-fatal-error-u1095"></a>NMAKE の致命的なエラー U1095
-展開されたコマンドライン 'commandline' が長すぎます  
-  
- マクロの展開後は、特定のコマンド ラインは、オペレーティング システム用のコマンドラインの長さの制限を超えました。  
-  
- MS-DOS は、コマンドラインで最大 128 文字を許可します。  
-  
- コマンドは、プログラム ファイルからコマンドラインの入力を受け入れることができるは、コマンドを変更し、ディスク上のファイルまたはインライン ファイルのいずれかからの入力を指定します。 たとえば、リンクおよび LIB は、応答ファイルからの入力を受け入れます。
+
+展開されたコマンドライン 'commandline' が長すぎます
+
+マクロの展開後は、指定したコマンドラインは、オペレーティング システムのコマンドラインの長さの制限を超えました。
+
+MS-DOS は、コマンド ラインで、最大 128 文字を許可します。
+
+コマンドがファイルからコマンドライン入力を受け入れることができるプログラムの場合、コマンドを変更し、ディスク上のファイルまたはインライン ファイルのいずれかからの入力を指定します。 たとえば、リンク、および lib の各応答ファイルからの入力を受け入れます。

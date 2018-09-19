@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2897 |Microsoft ドキュメント
+title: コンパイラ エラー C2897 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c3de4c0d3e6a93a783dfb660bc26f07be6fcacf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d05663b913a3e310c091b62a81483f28bbf2c09
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245885"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049831"
 ---
 # <a name="compiler-error-c2897"></a>コンパイラ エラー C2897
-デコンス トラクター/ファイナライザーは関数テンプレートをすることはできません。  
-  
- デストラクターまたはファイナライザーはオーバー ロードできません、ため、デストラクターを定義する一連のデストラクター) テンプレートとして宣言しようとすることはできません。  
-  
- 次の例では、C2897 が生成されます。  
-  
-## <a name="example"></a>例  
- 次の例では、C2897 を生成します。  
-  
-```  
-// C2897.cpp  
-// compile with: /c  
-class X {  
-public:  
-   template<typename T> ~X() {}   // C2897  
-};  
-```  
-  
-## <a name="example"></a>例  
- 次の例では、C2897 を生成します。  
-  
-```  
-// C2897_b.cpp  
-// compile with: /c /clr  
-ref struct R2 {  
-protected:  
-   template<typename T> !R2(){}   // C2897 error  
-};  
+
+デストラクターとファイナライザーは、関数テンプレートをすることはできません。
+
+デストラクターまたはファイナライザー オーバー ロードできません、ため、テンプレートを定義する一連のデストラクター) として、デストラクターを宣言することは許可されていません。
+
+次の例では、C2897 が生成されます。
+
+## <a name="example"></a>例
+
+次の例では、C2897 が生成されます。
+
+```
+// C2897.cpp
+// compile with: /c
+class X {
+public:
+   template<typename T> ~X() {}   // C2897
+};
+```
+
+## <a name="example"></a>例
+
+次の例では、C2897 が生成されます。
+
+```
+// C2897_b.cpp
+// compile with: /c /clr
+ref struct R2 {
+protected:
+   template<typename T> !R2(){}   // C2897 error
+};
 ```

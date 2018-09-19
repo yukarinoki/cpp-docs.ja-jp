@@ -1,5 +1,5 @@
 ---
-title: 数値演算エラー M6107 |Microsoft ドキュメント
+title: 数値演算エラー M6107 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d16df0d314aa5039d0fc495c1b934e647a40c62
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d954e06bfe0ca6b6d94347c6f847242ec549cf80
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330789"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041390"
 ---
 # <a name="math-error-m6107"></a>数値演算エラー M6107
-unemulated  
-  
- コプロセッサの命令が無効か、エミュレーターでサポートされていないことを実行しようとしました。  
-  
- プログラムは、終了コード 135 で終了します。
+
+unemulated
+
+正しくないか、エミュレーターでサポートされていないコプロセッサ命令を実行しようとしました。
+
+終了コード 135 でプログラムを終了します。

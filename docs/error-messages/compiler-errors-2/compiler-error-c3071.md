@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3071 |Microsoft ドキュメント
+title: コンパイラ エラー C3071 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 163cb170953c444789e39b906ff4d408739f7514
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5f004de3ed133ea77d543014ae1adcdc4e1eddef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247678"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077803"
 ---
 # <a name="compiler-error-c3071"></a>コンパイラ エラー C3071
-演算子 'operator' は、ref クラスまたは値型のインスタンスにのみ適用できます  
-  
- CLR 演算子は、ネイティブ型で使用できません。 この演算子は、ref クラスや ref 構造体 (値型) で使用できますが、System::Int32 のようなネイティブ型の int やエイリアスなどのネイティブ型では使用できません。 これらの型は、ネイティブ変数を参照する方法で C++ コードからボックス化することはできません。したがって、この演算子は使用できません。  
-  
- 詳細については、次を参照してください。[参照演算子の追跡](../../windows/tracking-reference-operator-cpp-component-extensions.md)です。  
-  
-## <a name="example"></a>例  
- 次の例では C3071 が生成されます。  
-  
-```  
-// C3071.cpp  
-// compile with: /clr  
-class N {};  
-ref struct R {};  
-  
-int main() {  
-   N n;  
-   %n;   // C3071  
-  
-   R r;  
-   R ^ r2 = %r;   // OK  
-}  
+
+演算子 'operator' は、ref クラスまたは値型のインスタンスにのみ適用できます
+
+CLR 演算子は、ネイティブ型で使用できません。 この演算子は、ref クラスや ref 構造体 (値型) で使用できますが、System::Int32 のようなネイティブ型の int やエイリアスなどのネイティブ型では使用できません。 これらの型は、ネイティブ変数を参照する方法で C++ コードからボックス化することはできません。したがって、この演算子は使用できません。
+
+詳細については、次を参照してください。[参照演算子の追跡](../../windows/tracking-reference-operator-cpp-component-extensions.md)します。
+
+## <a name="example"></a>例
+
+次の例では C3071 が生成されます。
+
+```
+// C3071.cpp
+// compile with: /clr
+class N {};
+ref struct R {};
+
+int main() {
+   N n;
+   %n;   // C3071
+
+   R r;
+   R ^ r2 = %r;   // OK
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3180 |Microsoft ドキュメント
+title: コンパイラ エラー C3180 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e08b46dda1d9d350ca955ecd0f05cac4f484cea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7e200a75164c0d7fdb0c6804d084630cc6e6007e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254856"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048371"
 ---
 # <a name="compiler-error-c3180"></a>コンパイラ エラー C3180
-'type name': 名前は 'limit' 文字のメタデータの限度を超えています  
-  
- コンパイラでは、メタデータ内のマネージ型の名前が切り捨てられます。 切り捨てを行った後、この型はで使用できなくなります、`#using`ディレクティブ (または、別の言語のと同じ)。  
-  
- 型名の制限には、すべての名前空間の修飾子が含まれています。
+
+'type name': 名前がメタデータ制限の 'limit' 文字を超えています
+
+コンパイラでは、メタデータ内のマネージ型の名前が切り捨てられます。 切り捨てによりは、型を使用できない、`#using`ディレクティブ (または別の言語と同等)。
+
+型名の制限には、任意の名前空間の修飾が含まれています。

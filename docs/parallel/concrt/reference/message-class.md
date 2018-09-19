@@ -1,5 +1,5 @@
 ---
-title: message クラス |Microsoft ドキュメント
+title: message クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14fe0fa284a56c45404d8b568acf3b0d360fa27a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b0828d1d8698cb696b257e6730e4aea3961dd159
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687944"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042230"
 ---
 # <a name="message-class"></a>message クラス
 メッセージング ブロック間で渡されるデータ ペイロードが格納される、基本的なメッセージ エンベロープ。  
@@ -40,8 +40,8 @@ class message : public ::Concurrency::details::_Runtime_object;
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `T`  
- メッセージ内のペイロードのデータ型。  
+*T*<br/>
+メッセージ内のペイロードのデータ型。  
   
 ## <a name="members"></a>メンバー  
   
@@ -49,7 +49,7 @@ class message : public ::Concurrency::details::_Runtime_object;
   
 |名前|説明|  
 |----------|-----------------|  
-|`type`|型の別名`T`です。|  
+|`type`|型の別名の`T`します。|  
   
 ### <a name="public-constructors"></a>パブリック コンストラクター  
   
@@ -62,9 +62,9 @@ class message : public ::Concurrency::details::_Runtime_object;
   
 |名前|説明|  
 |----------|-----------------|  
-|[add_ref](#add_ref)|参照カウントに追加、`message`オブジェクト。 参照カウントのメッセージの有効期間を決定する必要があるメッセージ ブロックのために使用します。|  
+|[add_ref](#add_ref)|参照カウントに追加、`message`オブジェクト。 参照カウントのメッセージの有効期間を決定する必要があるメッセージ ブロックに使用されます。|  
 |[msg_id](#msg_id)|ID を返します、`message`オブジェクト。|  
-|[remove_ref](#remove_ref)|参照カウントから減算し、`message`オブジェクト。 参照カウントのメッセージの有効期間を決定する必要があるメッセージ ブロックのために使用します。|  
+|[remove_ref](#remove_ref)|参照カウントから減算し、`message`オブジェクト。 参照カウントのメッセージの有効期間を決定する必要があるメッセージ ブロックに使用されます。|  
   
 ### <a name="public-data-members"></a>パブリック データ メンバー  
   
@@ -72,8 +72,8 @@ class message : public ::Concurrency::details::_Runtime_object;
 |----------|-----------------|  
 |[ペイロード](#payload)|ペイロード、`message`オブジェクト。|  
   
-## <a name="remarks"></a>コメント  
- 詳細については、次を参照してください。[非同期メッセージ ブロック](../../../parallel/concrt/asynchronous-message-blocks.md)です。  
+## <a name="remarks"></a>Remarks  
+ 詳細については、次を参照してください。[非同期メッセージ ブロック](../../../parallel/concrt/asynchronous-message-blocks.md)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `message`  
@@ -85,7 +85,7 @@ class message : public ::Concurrency::details::_Runtime_object;
   
 ##  <a name="add_ref"></a> add_ref 
 
- 参照カウントに追加、`message`オブジェクト。 参照カウントのメッセージの有効期間を決定する必要があるメッセージ ブロックのために使用します。  
+ 参照カウントに追加、`message`オブジェクト。 参照カウントのメッセージの有効期間を決定する必要があるメッセージ ブロックに使用されます。  
   
 ```
 long add_ref();
@@ -114,17 +114,17 @@ message(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_P`  
- このメッセージのペイロード。  
+*_P*<br/>
+このメッセージのペイロード。  
   
- `_Id`  
- このメッセージの一意の ID。  
+*Id (_i)*<br/>
+このメッセージの一意の ID。  
   
- `_Msg`  
- 参照またはへのポインター、`message`オブジェクト。  
+*_Msg*<br/>
+ポインターまたは参照を`message`オブジェクト。  
   
-### <a name="remarks"></a>コメント  
- ポインターを受け取るコンス トラクター、`message`オブジェクト引数のスローされて、 [invalid_argument](../../../standard-library/invalid-argument-class.md)例外場合、パラメーター`_Msg`は`NULL`します。  
+### <a name="remarks"></a>Remarks  
+ ポインターを受け取るコンス トラクター、`message`オブジェクト引数のスロー、 [invalid_argument](../../../standard-library/invalid-argument-class.md)例外場合パラメーター`_Msg`は`NULL`。  
   
 ##  <a name="dtor"></a> ~ メッセージ 
 
@@ -155,7 +155,7 @@ T const payload;
   
 ##  <a name="remove_ref"></a> remove_ref 
 
- 参照カウントから減算し、`message`オブジェクト。 参照カウントのメッセージの有効期間を決定する必要があるメッセージ ブロックのために使用します。  
+ 参照カウントから減算し、`message`オブジェクト。 参照カウントのメッセージの有効期間を決定する必要があるメッセージ ブロックに使用されます。  
   
 ```
 long remove_ref();

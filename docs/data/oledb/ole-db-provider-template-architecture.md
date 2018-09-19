@@ -17,37 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ebebb7f69239b62cf276e955fd6e54ef0cf37ea4
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 71e693c09d59643a272a0b2736a5a229ef444aa9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684291"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078895"
 ---
 # <a name="ole-db-provider-template-architecture"></a>OLE DB プロバイダー テンプレートのアーキテクチャ
+
 ## <a name="data-sources-and-sessions"></a>データ ソースとセッション  
- OLE DB プロバイダーのアーキテクチャには、データ ソース オブジェクトと 1 つまたは複数のセッションが含まれています。 データ ソース オブジェクトは、すべてのプロバイダーのインスタンスを作成する必要があります最初のオブジェクトです。 コンシューマー アプリケーション、データを必要とは併置プロバイダーを起動するデータ ソース オブジェクトを作成します。 データ ソース オブジェクトは、セッション オブジェクトを作成します (を使用して、`IDBCreateSession`インターフェイス)、データ ソース オブジェクトに接続し、コンシューマーから。 ODBC プログラマは、データ ソース オブジェクトと同じ働きを考えることができます、`HENV`と同等のセッション オブジェクト、`HDBC`します。  
+
+OLE DB プロバイダーのアーキテクチャには、データ ソース オブジェクトと 1 つまたは複数のセッションが含まれています。 データ ソース オブジェクトは、すべてのプロバイダーのインスタンスを作成する必要があります最初のオブジェクトです。 コンシューマー アプリケーション、データを必要とは併置プロバイダーを起動するデータ ソース オブジェクトを作成します。 データ ソース オブジェクトは、セッション オブジェクトを作成します (を使用して、`IDBCreateSession`インターフェイス)、データ ソース オブジェクトに接続し、コンシューマーから。 ODBC プログラマは、データ ソース オブジェクトと同じ働きを考えることができます、`HENV`と同等のセッション オブジェクト、`HDBC`します。  
   
- ![プロバイダー アーキテクチャ](../../data/oledb/media/vc4twb1.gif "vc4twb1")  
+![プロバイダー アーキテクチャ](../../data/oledb/media/vc4twb1.gif "vc4twb1")  
   
- OLE DB プロバイダー ウィザードで作成されたソース ファイルとは、OLE DB テンプレートは、データ ソース オブジェクトを実装します。 セッションとは、OLE DB に対応するオブジェクト`TSession`します。  
+OLE DB プロバイダー ウィザードで作成されたソース ファイルとは、OLE DB テンプレートは、データ ソース オブジェクトを実装します。 セッションとは、OLE DB に対応するオブジェクト`TSession`します。  
   
 ## <a name="mandatory-and-optional-interfaces"></a>必須および省略可能なインターフェイス  
- OLE DB プロバイダー テンプレートを提供する、必要なすべてのインターフェイスの実装をあらかじめパッケージ化されました。 必須および省略可能なインターフェイスは、OLE DB のいくつかの種類のオブジェクトによって定義されます。  
+
+OLE DB プロバイダー テンプレートを提供する、必要なすべてのインターフェイスの実装をあらかじめパッケージ化されました。 必須および省略可能なインターフェイスは、OLE DB のいくつかの種類のオブジェクトによって定義されます。  
   
--   [データ ソース](../../data/oledb/data-source-object-interfaces.md)  
+- [データ ソース](../../data/oledb/data-source-object-interfaces.md)  
   
--   [セッション](../../data/oledb/session-object-interfaces.md)  
+- [セッション](../../data/oledb/session-object-interfaces.md)  
   
--   [行セット](../../data/oledb/rowset-object-interfaces.md)  
+- [行セット](../../data/oledb/rowset-object-interfaces.md)  
   
--   [コマンド](../../data/oledb/command-object-interfaces.md)  
+- [コマンド](../../data/oledb/command-object-interfaces.md)  
   
--   [トランザクション](../../data/oledb/transaction-object-interfaces.md)  
+- [トランザクション](../../data/oledb/transaction-object-interfaces.md)  
   
- OLE DB プロバイダー テンプレートは、行と記憶域オブジェクトを実装しないことに注意してください。  
+OLE DB プロバイダー テンプレートは、行と記憶域オブジェクトを実装しないことに注意してください。  
   
- 次の表は、上記のオブジェクトの必須および省略可能なインターフェイスに従い、 [OLE DB 2.6 SDK ドキュメント](/previous-versions/windows/desktop/ms722784\(v=vs.85\))します。  
+次の表は、上記のオブジェクトの必須および省略可能なインターフェイスに従い、 [OLE DB 2.6 SDK ドキュメント](/previous-versions/windows/desktop/ms722784\(v=vs.85\))します。  
   
 |コンポーネント|Interface|コメント|  
 |---------------|---------------|-------------|  
@@ -57,12 +60,13 @@ ms.locfileid: "43684291"
 |[コマンド](../../data/oledb/command-object-interfaces.md)([CCommand](ccommand-class.md))|[mandatory] `IAccessor`<br /><br /> [mandatory] `IColumnsInfo`<br /><br /> [mandatory] `ICommand`<br /><br /> [mandatory] `ICommandProperties`<br /><br /> [mandatory] `ICommandText`<br /><br /> [mandatory] `IConvertType`<br /><br /> [省略可能] `IColumnsRowset`<br /><br /> [省略可能] `ICommandPersist`<br /><br /> [省略可能] `ICommandPrepare`<br /><br /> [省略可能] `ICommandWithParameters`<br /><br /> [省略可能] `ISupportErrorInfo`<br /><br /> [省略可能] `ICommandStream`|コマンド オブジェクトは、クエリなどのデータの操作を処理します。 パラメーター化または非パラメーター化ステートメントを処理できます。<br /><br /> コマンド オブジェクトで、パラメーターと出力列のバインドを処理するためも担当します。 バインディングは、行セット内の列を取得する方法に関する情報を含む構造です。 序数、データ型、長さ、および状態などの情報が含まれています。|  
 |[トランザクション](../../data/oledb/transaction-object-interfaces.md)(省略可能)|[mandatory] `IConnectionPointContainer`<br /><br /> [mandatory] `ITransaction`<br /><br /> [省略可能] `ISupportErrorInfo`|トランザクション オブジェクトは、データ ソース上の作業のアトミック単位を定義し、それらの作業単位が相互に関連付ける方法を決定します。 このオブジェクトは、直接 OLE DB プロバイダー テンプレートではサポートされません (独自のオブジェクトを作成する、)。|  
   
- 詳細については、次のトピックを参照してください。  
+詳細については、次のトピックを参照してください。  
   
--   [プロパティ マップ](../../data/oledb/property-maps.md)  
+- [プロパティ マップ](../../data/oledb/property-maps.md)  
   
--   [ユーザー レコード](../../data/oledb/user-record.md)  
+- [ユーザー レコード](../../data/oledb/user-record.md)  
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB インターフェイス](/previous-versions/windows/desktop/ms709709\(v=vs.85\))
+
+[OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB インターフェイス](/previous-versions/windows/desktop/ms709709\(v=vs.85\))

@@ -1,5 +1,5 @@
 ---
-title: RECT Structure1 |Microsoft ドキュメント
+title: RECT Structure1 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b61c794b8fa383eeea62459a5a83948ef2efe10
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2e71459a1c22b9295c5c88ce29da9e494660fa26
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372594"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046304"
 ---
 # <a name="rect-structure1"></a>RECT Structure1
 `RECT` 構造体は、四角形の左上隅および右下隅の座標を定義します。  
@@ -40,17 +40,17 @@ typedef struct tagRECT {
 ```  
   
 ## <a name="members"></a>メンバー  
- `left`  
- 四角形の左上隅の X 座標を指定します。  
+`left`<br/>
+四角形の左上隅の X 座標を指定します。  
   
- `top`  
- 四角形の左上隅の Y 座標を指定します。  
+`top`<br/>
+四角形の左上隅の Y 座標を指定します。  
   
- `right`  
- 四角形の右下隅の X 座標を指定します。  
+`right`<br/>
+四角形の右下隅の X 座標を指定します。  
   
- `bottom`  
- 四角形の右下隅の Y 座標を指定します。  
+`bottom`<br/>
+四角形の右下隅の Y 座標を指定します。  
   
 ## <a name="example"></a>例  
  [!code-cpp[NVC_MFC_Utilities#38](../../mfc/codesnippet/cpp/rect-structure1_1.cpp)]  

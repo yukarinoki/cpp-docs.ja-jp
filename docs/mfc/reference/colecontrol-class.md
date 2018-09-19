@@ -344,12 +344,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e9e12409320bd82e25f94c02cba83b946252fff
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d3c5f68d35c4cf77073de3f8d2e6090f62a6dae2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196440"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050100"
 ---
 # <a name="colecontrol-class"></a>COleControl クラス
 OLE コントロールを開発するための強力な基底クラスです。
@@ -1692,17 +1692,14 @@ enum ControlFlags {
 
 既定では、`GetControlFlags`返します`fastBeginPaint | clipPaintDC`します。
 
-`fastBeginPaint` かどうか設定すると、関数を使用して begin ペイントに合わせた OLE コントロールの代わりに、 [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) API (既定で設定)。
-
-`clipPaintDC` 設定されていない場合への呼び出しを無効にします`IntersectClipRect`によって行われた`COleControl`が処理速度を多少向上とします。 ウィンドウなしのアクティベーションを使用している場合、フラグの効力はありません。
-
-`pointerInactive` 場合設定を有効にすると、コントロールがアクティブな間は、マウスとの対話を提供します`COleControl`の実装、`IPointerInactive`インターフェイスで、既定で無効にします。
-
-`noFlickerActivate` 場合設定、余分な描画操作とちらつきがなくなります。 コントロールを非アクティブとアクティブ状態で同じ描画自体に使用します。 ウィンドウなしのアクティベーションを使用している場合、フラグの効力はありません。
-
-`windowlessActivate` 場合設定、コントロール ウィンドウなしのアクティベーションを使用することを示します。
-
-`canOptimizeDraw` 場合設定、コンテナーがサポートされている場合、コントロールが最適化された描画を実行することを示します。
+|||
+|-|-|
+|`fastBeginPaint`|かどうか設定すると、関数を使用して begin ペイントに合わせた OLE コントロールの代わりに、 [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) API (既定で設定)。|
+|`clipPaintDC`|設定されていない場合への呼び出しを無効にします`IntersectClipRect`によって行われた`COleControl`が処理速度を多少向上とします。 ウィンドウなしのアクティベーションを使用している場合、フラグの効力はありません。|
+|`pointerInactive`|場合設定を有効にすると、コントロールがアクティブな間は、マウスとの対話を提供します`COleControl`の実装、`IPointerInactive`インターフェイスで、既定で無効にします。|
+|`noFlickerActivate`|場合設定、余分な描画操作とちらつきがなくなります。 コントロールを非アクティブとアクティブ状態で同じ描画自体に使用します。 ウィンドウなしのアクティベーションを使用している場合、フラグの効力はありません。|
+|`windowlessActivate`|場合設定、コントロール ウィンドウなしのアクティベーションを使用することを示します。|
+|`canOptimizeDraw`|場合設定、コンテナーがサポートされている場合、コントロールが最適化された描画を実行することを示します。|
 
 詳細については`GetControlFlags`OLE コントロールの他の最適化を参照してくださいと[ActiveX コントロール: 最適化](../../mfc/mfc-activex-controls-optimization.md)します。
 

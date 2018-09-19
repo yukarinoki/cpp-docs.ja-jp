@@ -24,14 +24,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 34eb8cb8a6b839f8a4dcd8d699c7fcb4851d57f6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c94152a9322b64acafe91e1fb0eb34ab82aa2902
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572979"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081300"
 ---
 # <a name="ctable-class"></a>CTable クラス
+
 (パラメーターなしのいずれかの) 単純な行セットに直接アクセスするための手段を提供します。  
   
 ## <a name="syntax"></a>構文
@@ -44,14 +45,16 @@ class CTable :
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- *TAccessor*  
- アクセサー クラス。  
+
+*TAccessor*<br/>
+アクセサー クラス。  
   
- *TRowset*  
- 行セット クラスです。  
+*TRowset*<br/>
+行セット クラスです。  
 
 ## <a name="requirements"></a>要件  
- **ヘッダー:** atldbcli.h  
+
+**ヘッダー:** atldbcli.h  
   
 ## <a name="members"></a>メンバー  
   
@@ -62,9 +65,11 @@ class CTable :
 |[開く](#open)|テーブルを開きます。|  
   
 ## <a name="remarks"></a>Remarks  
- 参照してください[CCommand](../../data/oledb/ccommand-class.md)については、行セットにアクセスするためのコマンドを実行する方法。  
+
+参照してください[CCommand](../../data/oledb/ccommand-class.md)については、行セットにアクセスするためのコマンドを実行する方法。  
 
 ## <a name="open"></a> Ctable::open
+
 テーブルを開きます。  
   
 ### <a name="syntax"></a>構文  
@@ -87,30 +92,34 @@ HRESULT Open(const CSession& session,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *セッション*  
- [in]テーブルが開いているセッションです。  
+
+*セッション*<br/>
+[in]テーブルが開いているセッションです。  
   
- *wszTableName*  
- [in]開くには、テーブルの名前は、Unicode 文字列として渡されます。  
+*wszTableName*<br/>
+[in]開くには、テーブルの名前は、Unicode 文字列として渡されます。  
   
- *szTableName*  
- [in]開くには、テーブルの名前は、ANSI 文字列として渡されます。  
+*szTableName*<br/>
+[in]開くには、テーブルの名前は、ANSI 文字列として渡されます。  
   
- *dbid*  
- [in]`DBID`のテーブルを開きます。  
+*dbid*<br/>
+[in]`DBID`のテーブルを開きます。  
   
- *pPropSet*  
- [in]配列へのポインター [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))プロパティおよび設定する値を含む構造体。 参照してください[プロパティ セットとプロパティ グループ](/previous-versions/windows/desktop/ms713696\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*Windows SDK にします。 既定値は NULL には、プロパティは指定しません。  
+*pPropSet*<br/>
+[in]配列へのポインター [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))プロパティおよび設定する値を含む構造体。 参照してください[プロパティ セットとプロパティ グループ](/previous-versions/windows/desktop/ms713696\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*Windows SDK にします。 既定値は NULL には、プロパティは指定しません。  
   
- *ulPropSets*  
- [in]数[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))構造体が渡された、 *pPropSet*引数。  
+*ulPropSets*<br/>
+[in]数[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))構造体が渡された、 *pPropSet*引数。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の HRESULT です。  
+
+標準の HRESULT です。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [iopenrowset::openrowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+
+詳細については、次を参照してください。 [iopenrowset::openrowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)   
+
+[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)   

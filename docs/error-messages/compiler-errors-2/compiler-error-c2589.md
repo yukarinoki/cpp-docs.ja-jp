@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2589 |Microsoft ドキュメント
+title: コンパイラ エラー C2589 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c15589358979f554a9c17114f7d78b05dd83c472
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2db5dde898a3e5918eed62b2b32231b5d7ed014f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230754"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046057"
 ---
 # <a name="compiler-error-c2589"></a>コンパイラ エラー C2589
-'identifier': の右側に無効なトークン ':: '  
-  
- クラス、構造体、または共用体の名前が、スコープ解決演算子 (ダブル コロンを含む) の左側に表示された場合、右側のトークンは、クラス、構造体、または共用体のメンバーにする必要があります。 それ以外の場合、任意のグローバル識別子は、右側に表示できます。  
-  
- スコープ解決演算子をオーバー ロードできません。  
-  
- 次の例では、C2589 が生成されます。  
-  
-```  
-// C2589.cpp  
-void Test(){}  
-class A {};  
-void operator :: ();   // C2589  
-  
-int main() {  
-   ::Test();  
-}  
+
+'identifier': 無効なトークンの右側にある ':: '
+
+クラス、構造体または共用体の名前が、スコープ解決演算子 (2 つのコロン) の左側に表示された場合、右側のトークンは、クラス、構造体または共用体のメンバーにある必要があります。 それ以外の場合、任意のグローバル識別子が右側に表示できます。
+
+スコープ解決演算子をオーバー ロードできません。
+
+次の例では、C2589 が生成されます。
+
+```
+// C2589.cpp
+void Test(){}
+class A {};
+void operator :: ();   // C2589
+
+int main() {
+   ::Test();
+}
 ```

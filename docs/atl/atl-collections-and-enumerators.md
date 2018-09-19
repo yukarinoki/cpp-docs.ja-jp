@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e70e744ca4eb9cfa4b84ac0cca58be2452a8e25
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4da59a76ccc4d51e82fd43805daa73d513fcde17
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756952"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044276"
 ---
 # <a name="atl-collections-and-enumerators"></a>ATL のコレクションと列挙子
 
@@ -36,21 +36,21 @@ A `collection` (生データまたはその他のオブジェクト) のデー�
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[ATL のコレクションと列挙子クラス](../atl/atl-collection-and-enumerator-classes.md)  
+[ATL のコレクションと列挙子クラス](../atl/atl-collection-and-enumerator-classes.md)<br/>
 簡単な説明し、コレクションと列挙子を実装するのに役立つ ATL クラスへのリンクを提供します。
 
-[コレクションと列挙子インターフェイスのデザインの原則](../atl/design-principles-for-collection-and-enumerator-interfaces.md)  
+[コレクションと列挙子インターフェイスのデザインの原則](../atl/design-principles-for-collection-and-enumerator-interfaces.md)<br/>
 インターフェイスの種類ごとの背後にあるさまざまな設計原則をについて説明します。
 
-[C++ 標準ライブラリに基づくコレクションの実装](../atl/implementing-an-stl-based-collection.md)  
+[C++ 標準ライブラリに基づくコレクションの実装](../atl/implementing-an-stl-based-collection.md)<br/>
 C++ 標準ライブラリに基づくコレクションの実装を説明する詳細な例です。
 
 ## <a name="related-sections"></a>関連項目
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Active Template Library を使用してプログラミングする方法に関する概念説明のトピックへのリンクを提供します。
 
-[ATLCollections サンプル](../visual-cpp-samples.md)  
+[ATLCollections サンプル](../visual-cpp-samples.md)<br/>
 使用方法を示すサンプル`ICollectionOnSTLImpl`と`CComEnumOnSTL`、およびカスタム コピー ポリシー クラスの実装。
 
 ## <a name="see-also"></a>関連項目

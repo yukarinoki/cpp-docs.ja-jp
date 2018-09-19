@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf9fbd4967bbd3091d734f9b70aed9350d63a25e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 89b1dbfe9dcf00582f5f8736a4706a18439b51c6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753195"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042547"
 ---
 # <a name="ccomvariant-class"></a>CComVariant クラス
 
@@ -43,9 +43,8 @@ ms.locfileid: "43753195"
 
 ## <a name="syntax"></a>構文
 
-```  
-cpp
-class CComVariant : public tagVARIANT  
+```cpp
+class CComVariant : public tagVARIANT
 ```
 
 ## <a name="members"></a>メンバー
@@ -108,7 +107,7 @@ HRESULT Attach(VARIANT* pSrc);
 
 ### <a name="parameters"></a>パラメーター
 
-*pSrc*  
+*pSrc*<br/>
 [in]指す、[バリアント](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)オブジェクトに接続します。
 
 ### <a name="return-value"></a>戻り値
@@ -151,39 +150,39 @@ CComVariant(const CComBSTR& bstrSrc);
 
 ### <a name="parameters"></a>パラメーター
 
-*varSrc*  
+*varSrc*<br/>
 [in]`CComVariant`または初期化に使用されるバリアント、`CComVariant`オブジェクト。 コピー元のバリアントの内容は、変換せず、変換先にコピーされます。
 
-*lpszSrc*  
+*lpszSrc*<br/>
 [in]初期化に使用される文字の文字列、`CComVariant`オブジェクト。 LPCOLESTR バージョンのコンス トラクターまたは LPCSTR バージョンに、ANSI 文字列には、ワイド (Unicode) 文字 0 で終わる文字列を渡すことができます。 いずれの場合も、文字列は Unicode を使用して割り当て BSTR に変換`SysAllocString`します。 種類、`CComVariant`オブジェクトは VT_BSTR になります。
 
-*bSrc*  
+*bSrc*<br/>
 [in]**Bool**初期化に使用される、`CComVariant`オブジェクト。 **Bool**引数が保存される前に、VARIANT_BOOL に変換されます。 種類、 `CComVariant` VT_BOOL がオブジェクトになります。
 
-*nSrc*  
+*nSrc*<br/>
 [in]**Int**、**バイト**、**短い**、**長い**、LONGLONG、ULONGLONG、 **unsigned short**、 **unsigned long**、または**符号なし int**初期化に使用される、`CComVariant`オブジェクト。 種類、`CComVariant`オブジェクトは VT_I4、VT_UI1、VT_I2、VT_I4、VT_I8、VT_UI8、VT_UI2、VT_UI4、VT_UI4、またはそれぞれなります。
 
-*vtSrc*  
+*vtSrc*<br/>
 [in]バリアントの型。 最初のパラメーターの場合は**int**、有効な型は VT_I4 と VT_INT します。 最初のパラメーターの場合は**長い**、有効な型は VT_I4 と VT_ERROR します。 最初のパラメーターの場合は**二重**、有効な種類は VT_R8、および VT_DATE します。 最初のパラメーターの場合は**符号なし int**、有効な種類は VT_UI4 と VT_UINT します。
 
-*fltSrc*  
+*fltSrc*<br/>
 [in]**Float**初期化に使用される、`CComVariant`オブジェクト。 種類、 `CComVariant` VT_R4 がオブジェクトになります。
 
-*dblSrc*  
+*dblSrc*<br/>
 [in]**二重**初期化に使用される、`CComVariant`オブジェクト。 種類、 `CComVariant` VT_R8 がオブジェクトになります。
 
-*cySrc*  
+*cySrc*<br/>
 [in]`CY`初期化に使用される、`CComVariant`オブジェクト。 種類、 `CComVariant` VT_CY がオブジェクトになります。
 
-*pSrc*  
+*pSrc*<br/>
 [in]`IDispatch`または`IUnknown`ポインターの初期化に使用される、`CComVariant`オブジェクト。 `AddRef` インターフェイス ポインターで呼び出されます。 種類、`CComVariant`オブジェクトが VT_DISPATCH またはで VT_UNKNOWN、それぞれします。
 
 または、初期化するために使用される SAFERRAY ポインター、`CComVariant`オブジェクト。 SAFEARRAY のコピーが格納されている、`CComVariant`オブジェクト。 種類、`CComVariant`オブジェクトの SAFEARRAY、VT_ARRAY 元の型の組み合わせになります。
 
-*cSrc*  
+*cSrc*<br/>
 [in]**Char**初期化に使用される、`CComVariant`オブジェクト。 種類、 `CComVariant` VT_I1 がオブジェクトになります。
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in]初期化するために使用される、BSTR、`CComVariant`オブジェクト。 種類、`CComVariant`オブジェクトは VT_BSTR になります。
 
 ### <a name="remarks"></a>Remarks
@@ -212,10 +211,10 @@ HRESULT ChangeType(VARTYPE vtNew, const VARIANT* pSrc = NULL);
 
 ### <a name="parameters"></a>パラメーター
 
-*vtNew*  
+*vtNew*<br/>
 [in]新しい型、`CComVariant`オブジェクト。
 
-*pSrc*  
+*pSrc*<br/>
 [in]値を持つは、新しい型に変換するバリアントへのポインター。 既定値は null の場合、つまり、`CComVariant`オブジェクトはインプレース変換されます。
 
 ### <a name="return-value"></a>戻り値
@@ -252,7 +251,7 @@ HRESULT Copy(const VARIANT* pSrc);
 
 ### <a name="parameters"></a>パラメーター
 
-*pSrc*  
+*pSrc*<br/>
 [in]ポインター、[バリアント](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)をコピーします。
 
 ### <a name="return-value"></a>戻り値
@@ -269,7 +268,7 @@ HRESULT CopyTo(BSTR* pstrDest);
 
 ### <a name="parameters"></a>パラメーター
 
-*pstrDest*  
+*pstrDest*<br/>
 内容のコピーを受信する BSTR を指す、`CComVariant`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -290,7 +289,7 @@ HRESULT Detach(VARIANT* pDest);
 
 ### <a name="parameters"></a>パラメーター
 
-*pDest*  
+*pDest*<br/>
 [out]オブジェクトの基になるバリアント値を返します。
 
 ### <a name="return-value"></a>戻り値
@@ -352,36 +351,36 @@ CComVariant& operator=(char cSrc) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*varSrc*  
+*varSrc*<br/>
 [in]`CComVariant`または[バリアント](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)に割り当てられる、`CComVariant`オブジェクト。 コピー元のバリアントの内容は、変換せず、変換先にコピーされます。
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in]割り当てられる BSTR、`CComVariant`オブジェクト。 種類、`CComVariant`オブジェクトは VT_BSTR になります。
 
-*lpszSrc*  
+*lpszSrc*<br/>
 [in]文字の文字列に割り当てられる、`CComVariant`オブジェクト。 演算子または LPCSTR バージョンに、ANSI 文字列の LPCOLESTR バージョンには、ワイド (Unicode) 文字 0 で終わる文字列を渡すことができます。 どちらの場合、文字列は Unicode を使用して割り当て BSTR に変換`SysAllocString`します。 種類、`CComVariant`オブジェクトは VT_BSTR になります。
 
-*bSrc*  
+*bSrc*<br/>
 [in]**Bool**に割り当てられる、`CComVariant`オブジェクト。 **Bool**引数が保存される前に、VARIANT_BOOL に変換されます。 種類、 `CComVariant` VT_BOOL がオブジェクトになります。
 
-*nSrc*  
+*nSrc*<br/>
 [in]**Int**、BYTE、**短い**、**長い**、LONGLONG、ULONGLONG、 **unsigned short**、 **unsigned long**、または**符号なし int**に割り当てられる、`CComVariant`オブジェクト。 種類、`CComVariant`オブジェクトは VT_I4、VT_UI1、VT_I2、VT_I4、VT_I8、VT_UI8、VT_UI2、VT_UI4、VT_UI4、またはそれぞれなります。
 
-*fltSrc*  
+*fltSrc*<br/>
 [in]**Float**に割り当てられる、`CComVariant`オブジェクト。 種類、 `CComVariant` VT_R4 がオブジェクトになります。
 
-*dblSrc*  
+*dblSrc*<br/>
 [in]**二重**に割り当てられる、`CComVariant`オブジェクト。 種類、 `CComVariant` VT_R8 がオブジェクトになります。
 
-*cySrc*  
+*cySrc*<br/>
 [in]`CY`に割り当てられる、`CComVariant`オブジェクト。 種類、 `CComVariant` VT_CY がオブジェクトになります。
 
-*pSrc*  
+*pSrc*<br/>
 [in]`IDispatch`または`IUnknown`ポインターに割り当てられる、`CComVariant`オブジェクト。 `AddRef` インターフェイス ポインターで呼び出されます。 種類、`CComVariant`オブジェクトが VT_DISPATCH またはで VT_UNKNOWN、それぞれします。
 
 または、SAFEARRAY へのポインターに割り当てられる、`CComVariant`オブジェクト。 SAFEARRAY のコピーが格納されている、`CComVariant`オブジェクト。 種類、`CComVariant`オブジェクトの SAFEARRAY、VT_ARRAY 元の型の組み合わせになります。
 
-*cSrc*  
+*cSrc*<br/>
 [in]割り当てられる char、`CComVariant`オブジェクト。 種類、 `CComVariant` VT_I1 がオブジェクトになります。
 
 ##  <a name="operator_eq_eq"></a>  CComVariant::operator = =
@@ -446,7 +445,7 @@ HRESULT ReadFromStream(IStream* pStream);
 
 ### <a name="parameters"></a>パラメーター
 
-*pStream*  
+*pStream*<br/>
 [in]ポインター、 [IStream](/windows/desktop/api/objidl/nn-objidl-istream)インターフェイスで、データを含むストリーム。
 
 ### <a name="return-value"></a>戻り値
@@ -468,10 +467,10 @@ void SetByRef(T* pT) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 、たとえば、BSTR、バリアントの型**int**、または**char**します。
 
-*pT*  
+*pT*<br/>
 ポインターの初期化に使用される、`CComVariant`オブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -490,7 +489,7 @@ HRESULT WriteToStream(IStream* pStream);
 
 ### <a name="parameters"></a>パラメーター
 
-*pStream*  
+*pStream*<br/>
 [in]ポインター、 [IStream](/windows/desktop/api/objidl/nn-objidl-istream)ストリーム上のインターフェイス。
 
 ### <a name="return-value"></a>戻り値

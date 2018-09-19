@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2736 |Microsoft ドキュメント
+title: コンパイラ エラー C2736 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e3a7ad6d4259a5df0d85fd1f208df6d322430ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bda520c403de38481c5b84904aac5e733a90237c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230678"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049944"
 ---
 # <a name="compiler-error-c2736"></a>コンパイラ エラー C2736
-キャストでは 'keyword' キーワードは使用できません。  
-  
- キャストでキーワードが正しくありません。  
-  
- 次の例では、C2736 が生成されます。  
-  
-```  
-// C2736.cpp  
-int main() {  
-   return (virtual) 0;   // C2736  
-   // try the following line instead  
-   // return 0;  
-}  
+
+'keyword' キーワードはキャストでは許可されていません
+
+キーワードは、キャストでは無効です。
+
+次の例では、C2736 が生成されます。
+
+```
+// C2736.cpp
+int main() {
+   return (virtual) 0;   // C2736
+   // try the following line instead
+   // return 0;
+}
 ```

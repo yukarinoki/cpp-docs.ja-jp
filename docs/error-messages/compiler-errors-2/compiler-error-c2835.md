@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2835 |Microsoft ドキュメント
+title: コンパイラ エラー C2835 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16d9cad69d42f25af04f7ba0df7fa88f2eeb6aee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97da0796b6b7f40462f4d0594e640ee98aa6aa49
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244850"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044172"
 ---
 # <a name="compiler-error-c2835"></a>コンパイラ エラー C2835
-ユーザー定義変換 'type' が仮パラメーターを受け取らない  
-  
- ユーザー定義型の変換には、仮パラメーターを受け取ることはできません。  
-  
- 次の例では、C2835 が生成されます。  
-  
-```  
-// C2835.cpp  
-class A {  
-public:  
-   char v_char;  
-  
-   A() {   
-      v_char = 'A';   
-   };  
-   operator char(char a) {   // C2835  
-   // try the following line instead  
-   // operator char() {     
-      return v_char + 1;   
-   };  
-};  
-  
-int main() {  
-   A a;  
-}  
+
+ユーザー定義変換 'type' が仮パラメーターを受け取らない
+
+ユーザー定義型の変換には、正式なパラメーターを受け取ることはできません。
+
+次の例では、C2835 が生成されます。
+
+```
+// C2835.cpp
+class A {
+public:
+   char v_char;
+
+   A() {
+      v_char = 'A';
+   };
+   operator char(char a) {   // C2835
+   // try the following line instead
+   // operator char() {
+      return v_char + 1;
+   };
+};
+
+int main() {
+   A a;
+}
 ```

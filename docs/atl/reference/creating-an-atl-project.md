@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b937212f49bd09f6498ebcda934e1aa362d959e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ea8d1dcb0d5d3a59eb5f2899baffed18e7d1663f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755539"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054754"
 ---
 # <a name="creating-an-atl-project"></a>ATL プロジェクトの作成
 
@@ -47,6 +47,6 @@ ATL プロジェクトを作成する最も簡単な方法は、の Win32 プロ
 
 ## <a name="see-also"></a>関連項目
 
-[コード ウィザードを使用した機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+[コード ウィザードを使用した機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [プロパティ ページ](../../ide/property-pages-visual-cpp.md)   
 

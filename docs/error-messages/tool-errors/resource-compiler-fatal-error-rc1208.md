@@ -1,5 +1,5 @@
 ---
-title: リソース コンパイラの致命的なエラー RC1208 |Microsoft ドキュメント
+title: リソース コンパイラの致命的なエラー RC1208 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4e4c1c6c922983635bacfb997ba991f57dbc52b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4a5c1f21052cab8b9441865c835e7e3cc26ade5f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318299"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039739"
 ---
 # <a name="resource-compiler-fatal-error-rc1208"></a>リソース コンパイラの致命的なエラー RC1208
-入力ファイルにあります。RES 拡張機能  
-  
- します。RES 拡張機能は、リソース コンパイラの出力に使用されます。 します。RC の拡張機能は、リソース コンパイラのスクリプトを使用してください。
+
+入力ファイルがあります。RES の拡張機能
+
+します。RES の拡張機能は、リソース コンパイラの出力に使用されます。 します。RC の拡張機能は、リソース コンパイラのスクリプトを使用する必要があります。

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1670ff7ed53d05b1dfc09e6953650892b0335f61
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 654b801c61d00f179d6d7ef88763b323d6503873
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761470"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050581"
 ---
 # <a name="csimplemapequalhelper-class"></a>CSimpleMapEqualHelper クラス
 
@@ -33,16 +33,16 @@ ms.locfileid: "43761470"
 ## <a name="syntax"></a>構文
 
 ```
-template <class TKey, class TVal>  
+template <class TKey, class TVal>
 class CSimpleMapEqualHelper
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*TKey*  
+*TKey*<br/>
 重要な要素です。
 
-*TVal*  
+*TVal*<br/>
 値の要素。
 
 ## <a name="members"></a>メンバー
@@ -72,10 +72,10 @@ static bool IsEqualKey(const TKey& k1, const TKey& k2);
 
 ### <a name="parameters"></a>パラメーター
 
-*k1*  
+*k1*<br/>
 最初のキー。
 
-*k2*  
+*k2*<br/>
 2 番目のキー。
 
 ### <a name="return-value"></a>戻り値
@@ -92,10 +92,10 @@ static bool IsEqualValue(const TVal& v1, const TVal& v2);
 
 ### <a name="parameters"></a>パラメーター
 
-*v1*  
+*v1*<br/>
 最初の値。
 
-*v2*  
+*v2*<br/>
 2 番目の値。
 
 ### <a name="return-value"></a>戻り値
@@ -104,5 +104,5 @@ static bool IsEqualValue(const TVal& v1, const TVal& v2);
 
 ## <a name="see-also"></a>関連項目
 
-[CSimpleMapEqualHelperFalse クラス](../../atl/reference/csimplemapequalhelperfalse-class.md)   
+[CSimpleMapEqualHelperFalse クラス](../../atl/reference/csimplemapequalhelperfalse-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

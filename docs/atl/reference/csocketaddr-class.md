@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0eba14e7b8a251fdc1287fc413e2c4ebcd7ae77
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2c39ca72136db7c11e925f28cc3413a5f7b77002
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766179"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040857"
 ---
 # <a name="csocketaddr-class"></a>CSocketAddr クラス
 
@@ -106,25 +106,25 @@ int FindAddr(
 
 ### <a name="parameters"></a>パラメーター
 
-*szHost*  
+*szHost*<br/>
 ホスト名または IP アドレスのドット形式。
 
-*szPortOrServiceName*  
+*szPortOrServiceName*<br/>
 ポート番号またはホスト上のサービスの名前。
 
-*nPortNo*  
+*nPortNo*<br/>
 ポート番号。
 
-*flags*  
+*flags*<br/>
 0 または AI_PASSIVE、AI_CANONNAME または AI_NUMERICHOST の組み合わせ。
 
-*addr_family*  
+*addr_family*<br/>
 アドレス ファミリ (PF_INET) など。
 
-*sock_type*  
+*sock_type*<br/>
 ソケットの種類 (SOCK_STREAM) などです。
 
-*ai_proto*  
+*ai_proto*<br/>
 (移植または IPPROTO_IPV6) などのプロトコルです。
 
 ### <a name="return-value"></a>戻り値
@@ -149,16 +149,16 @@ int FindINET4Addr(
 
 ### <a name="parameters"></a>パラメーター
 
-*szHost*  
+*szHost*<br/>
 ホスト名または IP アドレスのドット形式。
 
-*nPortNo*  
+*nPortNo*<br/>
 ポート番号。
 
-*flags*  
+*flags*<br/>
 0 または AI_PASSIVE、AI_CANONNAME または AI_NUMERICHOST の組み合わせ。
 
-*sock_type*  
+*sock_type*<br/>
 ソケットの種類 (SOCK_STREAM) などです。
 
 ### <a name="return-value"></a>戻り値
@@ -183,16 +183,16 @@ int FindINET6Addr(
 
 ### <a name="parameters"></a>パラメーター
 
-*szHost*  
+*szHost*<br/>
 ホスト名または IP アドレスのドット形式。
 
-*nPortNo*  
+*nPortNo*<br/>
 ポート番号。
 
-*flags*  
+*flags*<br/>
 0 または AI_PASSIVE、AI_CANONNAME または AI_NUMERICHOST の組み合わせ。
 
-*sock_type*  
+*sock_type*<br/>
 ソケットの種類 (SOCK_STREAM) などです。
 
 ### <a name="return-value"></a>戻り値
@@ -213,7 +213,7 @@ addrinfo* const GetAddrInfoint nIndex = 0) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*nIndex*  
+*nIndex*<br/>
 特定の要素への参照、 [addrinfo](https://msdn.microsoft.com/library/windows/desktop/ms737530)一覧。
 
 ### <a name="return-value"></a>戻り値

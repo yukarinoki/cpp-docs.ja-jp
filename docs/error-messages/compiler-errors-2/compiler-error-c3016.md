@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3016 |Microsoft ドキュメント
+title: コンパイラ エラー C3016 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 905cc529029fb8495f85b1ec695c49e4ba3999f1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d77686f669dcd767a1d79c0ac60360f1bb2aa81b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241818"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047552"
 ---
 # <a name="compiler-error-c3016"></a>コンパイラ エラー C3016
-'var': OpenMP 'for' ステートメントのインデックス変数は、符号付きの整数型を含んでいなければなりません  
-  
- OpenMP `for` ステートメントのインデックス変数は、符号付きの整数型である必要があります。  
-  
- 次の例では C3016 が生成されます。  
-  
-```  
-// C3016.cpp  
-// compile with: /openmp  
-int main()  
-{  
-   #pragma omp parallel  
-   {  
-      unsigned int i = 0;  
-      // Try the following line instead:  
-      // int i = 0;  
-  
-      #pragma omp for  
-      for (i = 0; i <= 10; ++i)   // C3016  
-      {  
-      }  
-   }  
-}  
+
+'var': OpenMP 'for' ステートメントのインデックス変数は、符号付きの整数型を含んでいなければなりません
+
+OpenMP `for` ステートメントのインデックス変数は、符号付きの整数型である必要があります。
+
+次の例では C3016 が生成されます。
+
+```
+// C3016.cpp
+// compile with: /openmp
+int main()
+{
+   #pragma omp parallel
+   {
+      unsigned int i = 0;
+      // Try the following line instead:
+      // int i = 0;
+
+      #pragma omp for
+      for (i = 0; i <= 10; ++i)   // C3016
+      {
+      }
+   }
+}
 ```

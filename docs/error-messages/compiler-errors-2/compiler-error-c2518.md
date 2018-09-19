@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2518 |Microsoft ドキュメント
+title: コンパイラ エラー C2518 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1e44a99ad49945e441e1560f296dc66568ae3f3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 202d93e4ff466ddb1509c3d30ad3a326c07d0861
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228074"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051153"
 ---
 # <a name="compiler-error-c2518"></a>コンパイラ エラー C2518
-キーワード 'keyword' の基底クラス リストに無効です無視されます。  
-  
- キーワード`class`と`struct`が、基底クラス リストに表示されません。  
-  
- 次の例では、C2518 が生成されます。  
-  
-```  
-// C2518.cpp  
-// compile with: /c  
-class B {};  
-class C : public class B {};   // C2518  
-class D: public B {};   // OK  
+
+キーワード 'keyword' の基底クラス リスト; が無効です。無視されます。
+
+キーワード`class`と`struct`が基底クラス リストに表示されません。
+
+次の例では、C2518 が生成されます。
+
+```
+// C2518.cpp
+// compile with: /c
+class B {};
+class C : public class B {};   // C2518
+class D: public B {};   // OK
 ```

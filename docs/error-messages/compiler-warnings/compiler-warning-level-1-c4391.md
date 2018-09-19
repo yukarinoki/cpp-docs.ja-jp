@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4391 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4391 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0152d6e04d40e3e0389cf51ba7bdf71de4cd4791
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d0b3873beb635afe81cee3030a78d2b1223197a7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277869"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047090"
 ---
 # <a name="compiler-warning-level-1-c4391"></a>コンパイラの警告 (レベル 1) C4391
-'signature': 組み込み関数の不適切な戻り値の型は、'type' が必要です  
-  
- コンパイラ組み込み関数の関数宣言では、正しくない戻り値の型がありました。 結果のイメージは正しく動作しない可能性があります。  
-  
- この警告を解決するか、宣言を修正してまたは宣言を削除し、単に #include 適切なヘッダー ファイルです。  
-  
- 次の例では、C4391 が生成されます。  
-  
-```  
-// C4391.cpp  
-// compile with: /W1  
-// processor: x86  
-// uncomment the following line and delete the line that  
-// generated the warning to resolve  
-// #include "xmmintrin.h"  
-  
-#ifdef  __cplusplus  
-extern "C" {  
-#endif  
-  
-extern void _mm_load_ss(float *p);   // C4391  
-  
-#ifdef  __cplusplus  
-}  
-#endif  
-  
-int main()  
-{  
-}  
+
+'signature': 組み込み関数に対して正しくない戻り値の型は、'type' が必要です
+
+コンパイラ組み込み関数の宣言には、正しくない戻り値の型が必要があります。 結果のイメージは正しく動作しない可能性があります。
+
+この警告を解決するか、宣言を修正してまたは宣言を削除して単に #include 適切なヘッダー ファイル。
+
+次の例では、C4391 が生成されます。
+
+```
+// C4391.cpp
+// compile with: /W1
+// processor: x86
+// uncomment the following line and delete the line that
+// generated the warning to resolve
+// #include "xmmintrin.h"
+
+#ifdef  __cplusplus
+extern "C" {
+#endif
+
+extern void _mm_load_ss(float *p);   // C4391
+
+#ifdef  __cplusplus
+}
+#endif
+
+int main()
+{
+}
 ```

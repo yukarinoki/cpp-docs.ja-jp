@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4508 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4508 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53f152c2f3573e5f3bd7b8e9be0603ed6d3f11bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e5abc1d81c3e94c02a63f73c84f3f5e5c7e9b0b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283197"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038946"
 ---
 # <a name="compiler-warning-level-1-c4508"></a>コンパイラの警告 (レベル 1) C4508
-'function': 関数が値を返す必要があります'void' 戻り値の型と見なされます  
-  
- 関数には、指定された戻り値の型がありません。 この場合、C4430 も発生し、コンパイラが (既定値は int) C4430 によって報告された修正を実装します。  
-  
- この警告を解決するには、関数の戻り値の型を明示的に宣言します。  
-  
- 次の例では、C4508 が生成されます。  
-  
-```  
-// C4508.cpp  
-// compile with: /W1 /c  
-#pragma warning (disable : 4430)  
-func() {}   // C4508  
-void func2() {}   // OK  
+
+'function': 関数は、値を返す必要があります'void' の戻り値型と見なされます
+
+関数には、指定された戻り値の型がありません。 この場合は、C4430 も発生し、コンパイラは、C4430 (既定値は int) によって報告された修正を実装します。
+
+この警告を解決するには、関数の戻り値の型を明示的に宣言します。
+
+次の例では、C4508 が生成されます。
+
+```
+// C4508.cpp
+// compile with: /W1 /c
+#pragma warning (disable : 4430)
+func() {}   // C4508
+void func2() {}   // OK
 ```

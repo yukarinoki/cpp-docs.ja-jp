@@ -1,5 +1,5 @@
 ---
-title: リソース コンパイラ エラー RC1000 through RC4413 |Microsoft ドキュメント
+title: リソース コンパイラ エラー RC1000 RC4413 から |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,13 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31d40925f42f6082439bedadec8416f780e57016
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 14264cfa506595ba8ecde1d5e7747cd43b6e6543
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339905"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045420"
 ---
 # <a name="resource-compiler-errors-rc1000-through-rc4413"></a>リソース コンパイラ エラーs RC1000 through RC4413
-ここでは、ビルド ツールによって生成されるエラーについて説明します。 特定のエラー メッセージに関するヘルプを表示するエラー番号は、出力ウィンドウの上にマウス ポインターをクリックして f1 キーを押すかでエラー番号を入力、**探します**ボックス インデックスにします。
+
+ここでは、ビルド ツールによって生成されるエラーについて説明します。 特定のエラー メッセージに関するヘルプを表示するエラー番号、出力ウィンドウを上にマウス ポインターをクリックして、F1 キーを押すかのエラー番号を入力、**探して**キーワードします。

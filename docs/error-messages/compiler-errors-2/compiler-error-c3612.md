@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3612 |Microsoft ドキュメント
+title: コンパイラ エラー C3612 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e07c899dbacdc58e9048ffa21d6be1b6abc02632
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 16d960095942af34aa516341862c9a2bcf72bbba
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252846"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053688"
 ---
 # <a name="compiler-error-c3612"></a>コンパイラ エラー C3612
-'type': シールされたクラスを抽象にすることはできません  
-  
-使用して定義されている型`value`は既定では、封印されていると、クラスが抽象クラス ベースのすべてのメソッドを実装しない限り、します。 シールされた抽象クラスは基底クラスにもできます。 また、インスタンス化できます。  
-  
-詳細については、次を参照してください。[クラスと構造体](../../windows/classes-and-structs-cpp-component-extensions.md)です。  
-  
-## <a name="example"></a>例  
-次の例では、C3612 が生成されます。  
-  
-```  
-// C3612.cpp  
-// compile with: /clr /c  
-value struct V: public System::ICloneable {};   // C3612  
-  
-// OK  
-value struct V2: public System::ICloneable {  
-   Object^ Clone();  
-};  
+
+'type': シール クラスを抽象にすることはできません
+
+使用して定義されている型`value`は既定では、シール クラスは、その基本のすべてのメソッドを実装しない限り、抽象とします。 シールされた抽象クラスは基底クラスにもできます。 また、インスタンス化できます。
+
+詳細については、次を参照してください。[クラスと構造体](../../windows/classes-and-structs-cpp-component-extensions.md)します。
+
+## <a name="example"></a>例
+
+次の例では、C3612 が生成されます。
+
+```
+// C3612.cpp
+// compile with: /clr /c
+value struct V: public System::ICloneable {};   // C3612
+
+// OK
+value struct V2: public System::ICloneable {
+   Object^ Clone();
+};
 ```

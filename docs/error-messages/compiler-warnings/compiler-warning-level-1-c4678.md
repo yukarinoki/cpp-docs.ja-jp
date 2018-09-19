@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4678 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4678 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73871d69198752e12a629d441982c2da47146517
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 81eb7df618f97300c2654cc0f4f7a58d18215b26
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33284239"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076100"
 ---
 # <a name="compiler-warning-level-1-c4678"></a>コンパイラの警告 (レベル 1) C4678
-基底クラス 'base_type' のアクセス可能性が 'derived_type' よりも小さいです。  
-  
-パブリック型は、プライベート型から派生します。 参照されたアセンブリでパブリック型がインスタンス化される場合は、プライベート基本型のメンバーにアクセスできません。  
-  
-C4678 が古い形式のコンパイラ オプションを使用して到達のみ **/clr:oldSyntax**です。 使用する場合は、エラー **/clr**、少ないアクセス可能な基本クラスを使用しているその派生クラス。  
+
+基底クラス 'base_type' のアクセス可能性が 'derived_type' よりも小さいです。
+
+パブリック型は、プライベート型から派生します。 参照されたアセンブリでパブリック型がインスタンス化される場合は、プライベート基本型のメンバーにアクセスできません。
+
+C4678 が古い形式のコンパイラ オプションを使用して到達のみ **/clr:oldSyntax**します。 使用する場合はエラー **/clr**、低いアクセス可能な基本クラスをその派生クラス。

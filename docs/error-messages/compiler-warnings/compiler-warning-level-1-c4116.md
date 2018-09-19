@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4116 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4116 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f17a61dd39c458091216bc2bde89c84ec2307956
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5f91892bd28733761c187705b8f576007862027b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276206"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080702"
 ---
 # <a name="compiler-warning-level-1-c4116"></a>コンパイラの警告 (レベル 1) C4116
-かっこ内の名前のない種類の定義  
-  
- 構造体、共用体、または名前のない列挙型は、かっこで囲んだ式で定義されます。 型定義は無意味です。  
-  
- C の関数呼び出しでは、定義はグローバル スコープを持ちます。 C++ の関数呼び出しでは、定義は、呼び出される関数と同じスコープをいます。
+
+かっこで囲まれた名前のない型の定義
+
+構造体、共用体、または名前のない列挙型は、かっこで囲まれた式で定義されます。 型定義は、無意味です。
+
+C の関数呼び出しでは、定義はグローバル スコープを持ちます。 C++ の関数呼び出しでは、定義は呼び出される関数と同じスコープを持ちます。
