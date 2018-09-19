@@ -1,5 +1,5 @@
 ---
-title: 致命的なエラー C1353 |Microsoft ドキュメント
+title: 致命的なエラー C1353 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fb2d51d9b6c228d0f0fe245cd9788a329a6e11c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f414e98315a0fc43f3f4d4d21b93c1d0cd714aaf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198847"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108379"
 ---
 # <a name="fatal-error-c1353"></a>致命的なエラー C1353
-メタデータ操作に失敗しました: ランタイムがインストールされていない、またはバージョンが一致していません  
-  
- CLR または Visual Studio を再インストールします。
+
+メタデータ操作に失敗しました: ランタイムがインストールされていない、またはバージョンが一致していません
+
+CLR または Visual Studio を再インストールします。

@@ -1,5 +1,5 @@
 ---
-title: 'レコード セット: テーブル (ODBC) クラスの宣言 |Microsoft ドキュメント'
+title: 'レコード セット: テーブル (ODBC) クラスの宣言 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 460b09d32b46bb9f15a95bcb976afa63519b8263
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea4a816053a548ac8e3292d0416fe68da2dc4296
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089946"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107667"
 ---
 # <a name="recordset-declaring-a-class-for-a-table-odbc"></a>レコードセット: テーブルにアクセスするレコードセット クラスの宣言 (ODBC)
+
 このトピックの内容は、MFC ODBC クラスに該当します。  
   
- 最も一般的なレコード セット クラスでは、1 つのテーブルを開きます。 1 つのテーブルのレコード セット クラスを宣言するを使用して、 [MFC ODBC コンシューマー ウィザード](../../mfc/reference/adding-an-mfc-odbc-consumer.md)から**クラスの追加**対応するレコード セット フィールド データ メンバーの名前を付けて表示列を選択します。  
+最も一般的なレコード セット クラスでは、1 つのテーブルを開きます。 1 つのテーブルのレコード セット クラスを宣言するには、使用、 [MFC ODBC コンシューマー ウィザード](../../mfc/reference/adding-an-mfc-odbc-consumer.md)から**クラスの追加**対応するレコード セット フィールド データ メンバーの名前を付け、各列を選択します。  
   
- レコード セットの他の用途は次のとおりです。  
+レコード セットの他の用途は次のとおりです。  
   
--   2 つ以上のテーブルを結合します。  
+- 2 つ以上のテーブルを結合します。  
   
--   定義済みクエリの結果を含むです。  
+- 定義済みのクエリの結果を格納しています。  
   
 ## <a name="see-also"></a>関連項目  
- [レコード セット (ODBC)](../../data/odbc/recordset-odbc.md)   
- [レコード セット: を作成するレコード セットと破棄 (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)   
- [レコード セット: 定義済みクエリ (ODBC) クラスの宣言](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)   
- [レコードセット: 結合 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
+
+[レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
+[レコードセット: レコードセットの生成と破棄 (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)<br/>
+[レコードセット: 定義済みクエリを利用したクラスの宣言 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
+[レコードセット: 結合 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

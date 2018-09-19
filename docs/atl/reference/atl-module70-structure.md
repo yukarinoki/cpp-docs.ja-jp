@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7afe6867f359b334654f58aad39ad7f143dd428
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f84b90613bcf542a9ace44505565951819fcaa91
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764892"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108444"
 ---
 # <a name="atlmodule70-structure"></a>_ATL_MODULE70 構造体
 
@@ -43,16 +43,16 @@ struct _ATL_MODULE70 {
 
 ## <a name="members"></a>メンバー
 
-`cbSize`  
+`cbSize`<br/>
 バージョン管理に使用される、構造のサイズ。
 
-`m_nLockCnt`  
+`m_nLockCnt`<br/>
 どのくらいの期間、モジュールをアライブに維持を決定する、参照がカウントされます。
 
-`m_pTermFuncs`  
+`m_pTermFuncs`<br/>
 ATL をシャット ダウン時に呼び出される登録されている関数をトラックします。
 
-`m_csStaticDataInitAndTypeInfo`  
+`m_csStaticDataInitAndTypeInfo`<br/>
 マルチ スレッドの状況での内部データへのアクセスを調整するために使用します。
 
 ## <a name="remarks"></a>Remarks

@@ -1,5 +1,5 @@
 ---
-title: リソース コンパイラの致命的なエラー RC1021 |Microsoft ドキュメント
+title: リソース コンパイラの致命的なエラー RC1021 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27cc4096f84abc47c53b5c08eeacf5ebc92186da
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d67b52282483e0767331b198fdf990660c64e85a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320158"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108517"
 ---
 # <a name="resource-compiler-fatal-error-rc1021"></a>リソース コンパイラの致命的なエラー RC1021
-プリプロセッサ コマンド 'string' が無効です  
-  
- 次の番号記号文字 (**#**) な有効なプリプロセッサ ディレクティブではありません。  
-  
- シャープ記号は、識別子の最初の文字として使用できません。
+
+プリプロセッサ コマンド 'string' が無効です
+
+次の番号記号文字 (**#**) な有効なプリプロセッサ ディレクティブではありません。
+
+シャープ記号は、識別子の最初の文字として使用できません。

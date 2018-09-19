@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f42d90fa2fb04c75f6c45db8d099d4a1a9a74c2a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d408ab5d0575984fb597cec28f01484d9b878ebf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763104"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108392"
 ---
 # <a name="csacl-class"></a>CSacl クラス
 
@@ -110,25 +110,25 @@ bool AddAuditAce(
 
 ### <a name="parameters"></a>パラメーター
 
-*rSid*  
+*rSid*<br/>
 [CSid](../../atl/reference/csid-class.md)オブジェクト。
 
-*AccessMask*  
+*AccessMask*<br/>
 監査するアクセス権のマスクを指定します、指定された`CSid`オブジェクト。
 
-*bSuccess*  
+*bSuccess*<br/>
 許可されるアクセス試行を監査するかどうかを指定します。 このフラグは、; 監査を有効にする場合は true を設定します。それ以外の場合、false に設定します。
 
-*bFailure*  
+*bFailure*<br/>
 拒否されたアクセス試行を監査するかどうかを指定します。 このフラグは、; 監査を有効にする場合は true を設定します。それ以外の場合、false に設定します。
 
-*AceFlags*  
+*AceFlags*<br/>
 ACE の継承を制御するビット フラグのセット。
 
-*pObjectType*  
+*pObjectType*<br/>
 オブジェクトの型。
 
-*pInheritedObjectType*  
+*pInheritedObjectType*<br/>
 継承されたオブジェクトの種類。
 
 ### <a name="return-value"></a>戻り値
@@ -152,7 +152,7 @@ CSacl(const ACL& rhs) throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*rhs*  
+*rhs*<br/>
 既存の`ACL`(アクセス制御リスト) の構造体。
 
 ### <a name="remarks"></a>Remarks
@@ -193,7 +193,7 @@ CSacl& operator=(const ACL& rhs) throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*rhs*  
+*rhs*<br/>
 `ACL`を既存のオブジェクトを割り当てる (アクセス制御リスト)。
 
 ### <a name="return-value"></a>戻り値
@@ -210,7 +210,7 @@ void RemoveAce(UINT nIndex) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nIndex*  
+*nIndex*<br/>
 削除する ACE のエントリのインデックスです。
 
 ### <a name="remarks"></a>Remarks
@@ -231,8 +231,8 @@ void RemoveAllAces() throw();
 
 ## <a name="see-also"></a>関連項目
 
-[CAcl クラス](../../atl/reference/cacl-class.md)   
-[Acl](/windows/desktop/SecAuthZ/access-control-lists)   
-[Ace](/windows/desktop/SecAuthZ/access-control-entries)   
-[クラスの概要](../../atl/atl-class-overview.md)   
+[CAcl クラス](../../atl/reference/cacl-class.md)<br/>
+[Acl](/windows/desktop/SecAuthZ/access-control-lists)<br/>
+[Ace](/windows/desktop/SecAuthZ/access-control-entries)<br/>
+[クラスの概要](../../atl/atl-class-overview.md)<br/>
 [セキュリティに関するグローバル関数](../../atl/reference/security-global-functions.md)

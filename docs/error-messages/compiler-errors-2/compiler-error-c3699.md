@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3699 |Microsoft ドキュメント
+title: コンパイラ エラー C3699 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,51 +16,55 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddbf6ac43b2a3d987faa86fab6d9862068fc0fe0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 64e5a5bb98f9e8a6950bbb279c026f167a2ee92e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265030"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107715"
 ---
 # <a name="compiler-error-c3699"></a>コンパイラ エラー C3699
-'operator': 型 'type' でこの間接指定を使用することはできません  
-  
- 許可されていない間接指定を使用しようとしましたが`type`です。  
-  
-## <a name="example"></a>例  
- 次の例では、C3699 を生成します。  
-  
-```  
-// C3699.cpp  
-// compile with: /clr /c  
-using namespace System;  
-int main() {  
-   String * s;   // C3699  
-   // try the following line instead  
-   // String ^ s2;  
-}  
-```  
-  
-## <a name="example"></a>例  
- Trivial プロパティには、参照型を持つことはできません。 詳細については、「 [property](../../windows/property-cpp-component-extensions.md) 」を参照してください。 次の例では、C3699 を生成します。  
-  
-```  
-// C3699_b.cpp  
-// compile with: /clr /c  
-ref struct C {  
-   property System::String % x;   // C3699  
-   property System::String ^ y;   // OK  
-};  
-```  
-  
-## <a name="example"></a>例  
- 「ポインターへのポインター」構文の該当するショートカットは、追跡参照にハンドルです。 次の例では、C3699 を生成します。  
-  
-```  
-// C3699_c.cpp  
-// compile with: /clr /c  
-using namespace System;  
-void Test(String ^^ i);   // C3699  
-void Test2(String ^% i);  
+
+'operator': 型 'type' でこの間接参照を使用することはできません
+
+許可されていない間接指定を使用しようとした`type`します。
+
+## <a name="example"></a>例
+
+次の例では、C3699 が生成されます。
+
+```
+// C3699.cpp
+// compile with: /clr /c
+using namespace System;
+int main() {
+   String * s;   // C3699
+   // try the following line instead
+   // String ^ s2;
+}
+```
+
+## <a name="example"></a>例
+
+Trivial プロパティには、参照型を含めることはできません。 詳細については、「 [property](../../windows/property-cpp-component-extensions.md) 」を参照してください。 次の例では、C3699 が生成されます。
+
+```
+// C3699_b.cpp
+// compile with: /clr /c
+ref struct C {
+   property System::String % x;   // C3699
+   property System::String ^ y;   // OK
+};
+```
+
+## <a name="example"></a>例
+
+同等の「ポインターへのポインター」構文は、追跡参照を識別するハンドルです。 次の例では、C3699 が生成されます。
+
+```
+// C3699_c.cpp
+// compile with: /clr /c
+using namespace System;
+void Test(String ^^ i);   // C3699
+void Test2(String ^% i);
 ```

@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3728 |Microsoft ドキュメント
+title: コンパイラ エラー C3728 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bae204db616db9e7d7e04cfd62d53374b0793aa9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e412824bd2afdadfc21d71b73f38eb8ba5ace82d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273225"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108418"
 ---
 # <a name="compiler-error-c3728"></a>コンパイラ エラー C3728
-'event': イベントに raise メソッドがありません  
-  
- C# の場合、定義されたクラスの外部から発生するイベントが許可されていないに付属していたなど、言語でメタデータが作成された、 [#using](../../preprocessor/hash-using-directive-cpp.md)ディレクティブ、およびしようとする CLR プログラミングを使用した Visual C プログラムイベントを発生させます。  
-  
- C# などの言語で開発したプログラムではイベントを発生させるには、イベントを含むクラスにも、イベントを発生させるパブリック メソッドを定義する必要があります。
+
+'event': イベントに raise メソッドがありません
+
+C# で定義されていたクラスの外部から発生するイベントが許可されないに付属していたようにメタデータが、言語で作成、 [#using](../../preprocessor/hash-using-directive-cpp.md)ディレクティブ、およびしようとする CLR プログラミングを使用して、Visual C プログラムイベントが発生します。
+
+C# などの言語で開発されたプログラムでイベントを発生させるには、イベントを含むクラスにも、イベントを発生させるパブリック メソッドを定義する必要があります。
