@@ -1,5 +1,5 @@
 ---
-title: 'レコード セット: 結合 (ODBC) を実行する |Microsoft ドキュメント'
+title: 'レコード セット: 結合 (ODBC) を実行する |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,31 +21,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0be740a57f5c455b971dd23575401c666bf0723c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e033a300a023b3460fb27ced7cd4bae99ebd0b92
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33093312"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097903"
 ---
 # <a name="recordset-performing-a-join-odbc"></a>レコードセット: 結合 (ODBC)
+
 このトピックの内容は、MFC ODBC クラスに該当します。  
   
 ## <a name="what-a-join-is"></a>どのような結合とは  
- 一般的なデータ アクセス タスクで、結合操作では、1 つのレコード セット オブジェクトを使用して 1 つ以上のテーブルからデータを操作することができます。 2 つ以上のテーブルを結合するには、各テーブルから列を含めることができますが、アプリケーションに 1 つのテーブルとして表示されるレコード セットが生成されます。 結合が、すべてのテーブルが、SQL のすべての列を使用することもあります**選択**結合句を使用して、各テーブルの列の一部のみです。 データベース クラスでは、読み取り専用の結合が更新不可の結合をサポートします。  
+
+結合操作、データ アクセスの一般的なタスクを使用して 1 つのレコード セット オブジェクトを使用して 1 つ以上のテーブルからデータを操作できます。 2 つ以上のテーブルを結合すると、各テーブルから列を含めることができますが、アプリケーションに 1 つのテーブルとして表示されるレコード セットが生成されます。 結合が、すべてのテーブルが、SQL のすべての列を使用することもあります**選択**結合句では、各テーブルの列の一部のみを使用します。 データベース クラスでは、読み取り専用の結合が、更新不可の結合をサポートします。  
   
- 結合テーブルから列を含むレコードを選択するには、次の項目が必要です。  
+結合テーブルから列を含むレコードを選択するには、次のものが必要です。  
   
--   結合されるすべてのテーブルの名前を含むテーブルの一覧です。  
+- 結合されるすべてのテーブルの名前を含むテーブルの一覧。  
   
--   すべての参加している列の名前を含む列のリストです。 名前が同じ名前が異なるテーブルから列はテーブル名によって修飾されます。  
+- 参加しているすべての列の名前を含む列のリストです。 列の名前が同じ名前が異なるテーブルからは、テーブル名で修飾されます。  
   
--   フィルター (SQL**場所**句)、テーブルが参加している列を指定します。 このフィルターは"Table1.KeyCol テーブル 2. 基準列を ="、実際には、結合を行うことができます。  
+- フィルター (SQL**場所**句)、テーブルが参加している列を指定します。 このフィルターは"Table1.KeyCol テーブル 2. 基準列を ="、実際には、結合を行うことができます。  
   
- 同じ方法で 3 つ以上のテーブルを結合するには複数の列のペア、SQL キーワードを使用して結合の各ペアが等しいか調査して**AND**です。  
+同じ方法で 2 つ以上のテーブルを結合するには列の複数のペア、SQL キーワード、参加させる各ペアが等しいか調査して**AND**します。  
   
 ## <a name="see-also"></a>関連項目  
- [レコード セット (ODBC)](../../data/odbc/recordset-odbc.md)   
- [レコード セット: 定義済みクエリ (ODBC) クラスの宣言](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)   
- [レコード セット: テーブル (ODBC) クラスの宣言](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)   
- [レコードセット: クエリの再実行 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+
+[レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
+[レコードセット: 定義済みクエリを利用したクラスの宣言 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
+[レコードセット: テーブルにアクセスするレコードセット クラスの宣言 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
+[レコードセット: クエリの再実行 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)

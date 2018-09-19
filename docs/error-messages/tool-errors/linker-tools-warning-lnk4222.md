@@ -1,5 +1,5 @@
 ---
-title: リンカー ツールの警告 LNK4222 |Microsoft ドキュメント
+title: リンカー ツールの警告 LNK4222 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,46 +16,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 359af4c4d3b1079b2d56f108bff0ee1488ea71f9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: abc4f85fbc361b37d9325f9d395a1c34e1eeed2e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302150"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106933"
 ---
 # <a name="linker-tools-warning-lnk4222"></a>リンカー ツールの警告 LNK4222
-エクスポートされたシンボル 'symbol' に序数を割り当てないでください。  
-  
- 次の記号を序数でエクスポートされない必要があります。  
-  
--   `DllCanUnloadNow`  
-  
--   `DllGetClassObject`  
-  
--   `DllGetClassFactoryFromClassString`  
-  
--   `DllInstall`  
-  
--   `DllRegisterServer`  
-  
--   `DllRegisterServerEx`  
-  
--   `DllUnregisterServer`  
-  
- これらの関数は、名前で常にあるを使用して`GetProcAddress`です。 これに関する注意事項について、リンカーはイメージが大きくなる可能性があるために、エクスポートの種類。 これは、序数でのエクスポートの範囲は比較的少数のエクスポートを含む大規模な場合に発生する可能性があります。 たとえば、オブジェクトに適用された  
-  
-```  
-EXPORTS  
-   DllGetClassObject   @1  
-   MyOtherAPI      @100  
-```  
-  
- (2 ~ 99) は単なる空白はそのうちの 98 エクスポート アドレス テーブルで 100 のスロットを必要となります。 反対に  
-  
-```  
-EXPORTS  
-   DllGetClassObject  
-   MyOtherAPI      @100  
-```  
-  
- 2 つのスロットを必要となります。 (でもエクスポートできることに注意してください、 [/export](../../build/reference/export-exports-a-function.md)リンカー オプションです)。
+
+エクスポートされたシンボル 'symbol' に序数を割り当てないでください。
+
+次の記号は、序数でエクスポートする必要がありません。
+
+- `DllCanUnloadNow`
+
+- `DllGetClassObject`
+
+- `DllGetClassFactoryFromClassString`
+
+- `DllInstall`
+
+- `DllRegisterServer`
+
+- `DllRegisterServerEx`
+
+- `DllUnregisterServer`
+
+これらの関数は常に名前であるを使用して`GetProcAddress`します。 リンカーはこれについて警告エクスポートの種類と拡大画像が生じる可能性があるためです。 これは、序数でのエクスポートの範囲が比較的少ないエクスポートを含む大規模な場合に発生する可能性があります。 たとえば、オブジェクトに適用された
+
+```
+EXPORTS
+   DllGetClassObject   @1
+   MyOtherAPI      @100
+```
+
+100 のうち 98 にエクスポート アドレス テーブル (2 ~ 99) は単なる空白スロットを必要となります。 一方
+
+```
+EXPORTS
+   DllGetClassObject
+   MyOtherAPI      @100
+```
+
+2 つのスロットを必要となります。 (にもエクスポートできることに注意してください、 [/export](../../build/reference/export-exports-a-function.md)リンカー オプション)。

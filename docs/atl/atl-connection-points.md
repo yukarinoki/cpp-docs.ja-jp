@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f7c9360af2b5e2220daacabcd9ac04e108871dc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fe2cf03debbfd88f19ccc77d3922a9a5c50a50d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764229"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091271"
 ---
 # <a name="atl-connection-points"></a>ATL コネクション ポイント
 
@@ -33,18 +33,18 @@ ms.locfileid: "43764229"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[ATL コネクション ポイント クラス](../atl/atl-connection-point-classes.md)  
+[ATL コネクション ポイント クラス](../atl/atl-connection-point-classes.md)<br/>
 接続ポイントをサポートする ATL クラスを簡単に説明します。
 
-[オブジェクトへの接続ポイントの追加](../atl/adding-connection-points-to-an-object.md)  
+[オブジェクトへの接続ポイントの追加](../atl/adding-connection-points-to-an-object.md)<br/>
 オブジェクトに接続ポイントを追加するためのステップについて説明します。
 
-[ATL コネクション ポイントの例](../atl/atl-connection-point-example.md)  
+[ATL コネクション ポイントの例](../atl/atl-connection-point-example.md)<br/>
 接続ポイントの宣言の例を示します。
 
 ## <a name="related-sections"></a>関連項目
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Active Template Library を使用してプログラミングする方法に関する概念説明のトピックへのリンクを提供します。
 
 ## <a name="see-also"></a>関連項目

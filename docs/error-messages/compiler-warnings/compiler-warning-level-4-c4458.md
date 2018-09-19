@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 4) C4458 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 4) C4458 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 815433004756e4726ee4e562cbd0e424a35d377a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 873aa94db899ae6620e2bbb1f24277c6e7c841c4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292972"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094547"
 ---
 # <a name="compiler-warning-level-4-c4458"></a>コンパイラの警告 (レベル 4) C4458
-  
-> 宣言 '*識別子*'、クラス メンバーが非表示にします
-  
-宣言*識別子*ローカル スコープで、まったく同じ名前の宣言を非表示に*識別子*クラス スコープでします。 この警告を参照するを認識できます。*識別子*このスコープで解決するには、クラス メンバー バージョンではなく、ユーザーの意図ができない可能性がありますが、ローカルに宣言されたバージョンにします。 この問題を修正するのには、クラス メンバーの名前と競合しないローカル変数名を付けるお勧めします。  
-    
+
+> 宣言 '*識別子*' クラスのメンバーを非表示にします
+
+宣言*識別子*ローカル スコープで、同じ名前の宣言を非表示に*識別子*クラス スコープでします。 この警告を参照するかを把握できます。*識別子*このスコープでの解決をローカルに宣言されたバージョンに、クラス メンバー バージョンではなく、可能性のあるユーザーの意図ができない可能性があります。 この問題を解決するには、クラス メンバーの名前と競合しないローカル変数名の提供をお勧めします。
+
 ## <a name="example"></a>例
-  
-次の例では、ため C4458 が生成されますパラメーター`x`し、ローカル変数`y`で`member_fn`クラスにデータ メンバーと同じ名前があります。 この問題を解決するには、パラメーターおよびローカル変数の別の名前を使用します。  
-  
-```cpp  
+
+次の例では、ため、C4458 が生成されますパラメーター`x`し、ローカル変数`y`で`member_fn`クラスにデータ メンバーと同じ名前があります。 この問題を解決するには、異なる名前をパラメーターとローカル変数を使用します。
+
+```cpp
 // C4458_hide.cpp
 // compile with: cl /W4 /c C4458_hide.cpp
 
@@ -42,10 +42,10 @@ struct S {
     float y;
     void member_fn(long x) {   // C4458
         double y;  // C4458
-        y = x;  
+        y = x;
         // To fix this issue, change the parameter name x
-        // and local name y to something that does not 
+        // and local name y to something that does not
         // conflict with the data member names.
     }
 } s;
-```  
+```

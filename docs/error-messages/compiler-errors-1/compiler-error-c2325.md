@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2325 |Microsoft ドキュメント
+title: コンパイラ エラー C2325 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 095959dd432de52c2a0d32cbd7198ea434223407
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ae66d00c6831d102cb3f6fd47d024745480674fc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195101"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107812"
 ---
 # <a name="compiler-error-c2325"></a>コンパイラ エラー C2325
-'type': 'name' の右側に予期しない型  
-  
- 不適切な型のデストラクター、呼び出しが行われました。  
-  
- 次の例では、C2325 が生成されます。  
-  
-```  
-// C2325.cpp  
-// compile with: /c  
-class A {};  
-typedef A* pA_t;  
-void f() {  
-    A** ppa = new A *;  
-    ppa->~A*;   // C2325  
-  
-   pA_t *ppa2 = new pA_t;  
-   ppa2->~pA_t();   // OK  
-}  
+
+'type': 'name' の右側に予期しない型
+
+型が正しくないデストラクター呼び出し。
+
+次の例では、C2325 が生成されます。
+
+```
+// C2325.cpp
+// compile with: /c
+class A {};
+typedef A* pA_t;
+void f() {
+    A** ppa = new A *;
+    ppa->~A*;   // C2325
+
+   pA_t *ppa2 = new pA_t;
+   ppa2->~pA_t();   // OK
+}
 ```

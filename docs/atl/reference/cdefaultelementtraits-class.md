@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de61165ecac24e9c892dd5e95b1bb4e042a34fa1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 44822df983021846e9b4168343252affd971accd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763784"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097277"
 ---
 # <a name="cdefaultelementtraits-class"></a>CDefaultElementTraits クラス
 
@@ -31,7 +31,7 @@ ms.locfileid: "43763784"
 ## <a name="syntax"></a>構文
 
 ```
-template <typename T>  
+template <typename T>
 class CDefaultElementTraits : public CElementTraitsBase<T>,
     public CDefaultHashTraits<T>,
     public CDefaultCompareTraits<T>
@@ -39,7 +39,7 @@ class CDefaultElementTraits : public CElementTraitsBase<T>,
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 コレクションに格納されるデータの型。
 
 ## <a name="remarks"></a>Remarks

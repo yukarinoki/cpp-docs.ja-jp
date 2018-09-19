@@ -22,82 +22,85 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a7ab2eb5f33db2a62e745756971ee29f84c25c8
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: ffea0fdf40f7ef794563849f97b0b68631b9734e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408827"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099786"
 ---
 # <a name="alignof-operator"></a>__alignof 演算子
-C++ 11 で、 **alignof**演算子を指定した型のバイト単位で、配置を返します。 移植性を最大にするため、Microsoft 固有の __alignof 演算子ではなく、alignof 演算子を使用してください。  
-  
- **Microsoft 固有の仕様**  
-  
- 型の値を返します`size_t`型のアラインメント要件であります。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
+
+C++ 11 で、 **alignof**演算子を指定した型のバイト単位で、配置を返します。 移植性を最大にするため、Microsoft 固有の __alignof 演算子ではなく、alignof 演算子を使用してください。
+
+**Microsoft 固有の仕様**
+
+型の値を返します`size_t`型のアラインメント要件であります。
+
+## <a name="syntax"></a>構文
+
+```cpp
   __alignof( type )
-```  
-  
-## <a name="remarks"></a>Remarks  
- 例えば:  
-  
-|正規表現|[値]|  
-|----------------|-----------|  
-|**__alignof( char )**|1|  
-|**__alignof( short )**|2|  
-|**__alignof( int )**|4|  
-|**__alignof( \__int64 )**|8|  
-|**__alignof( float )**|4|  
-|**__alignof( double )**|8|  
-|**__alignof( char\* )**|4|  
-  
- **_ _Alignof**値は、の値として同じ`sizeof`の基本型。 ただし、次の例を検討します。  
-  
-```cpp 
-typedef struct { int a; double b; } S;  
-// __alignof(S) == 8  
-```  
-  
- ここで、 **_ _alignof**値は、構造内の最大の要素のアラインメント要件。  
-  
- 同様に、  
-  
-```cpp 
-typedef __declspec(align(32)) struct { int a; } S;  
-```  
-  
- `__alignof(S)` と `32` が等価です。  
-  
- 用途の 1 つ **_ _alignof**独自のメモリ割り当てルーチンのいずれかのパラメーターとしてになります。 たとえば、次の定義済みの構造体 `S` を指定して、`aligned_malloc` という名前のメモリ割り当てルーチンを呼び出し、特定の配置境界にメモリを割り当てることができます。  
-  
-```cpp 
-typedef __declspec(align(32)) struct { int a; double b; } S;  
-int n = 50; // array size  
-S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));  
-```  
-  
- 配置の変更の詳細については、次を参照してください。  
-  
--   [pack](../preprocessor/pack.md)  
-  
--   [align](../cpp/align-cpp.md)  
-  
--   [__unaligned](../cpp/unaligned.md)  
-  
--   [/Zp (構造体メンバーの配置)](../build/reference/zp-struct-member-alignment.md)  
-  
--   [構造体の配置例](../build/examples-of-structure-alignment.md)(x64 固有)  
-  
- x86 と x64 用のコード内の配置の違いの詳細については、  
-  
--   [x86 コンパイラとの競合](../build/conflicts-with-the-x86-compiler.md)  
-  
-**Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- [単項演算子を含む式](../cpp/expressions-with-unary-operators.md)   
- [キーワード](../cpp/keywords-cpp.md)
+```
+
+## <a name="remarks"></a>Remarks
+
+例えば:
+
+|正規表現|[値]|
+|----------------|-----------|
+|**__alignof( char )**|1|
+|**__alignof( short )**|2|
+|**__alignof( int )**|4|
+|**__alignof( \__int64 )**|8|
+|**__alignof( float )**|4|
+|**__alignof( double )**|8|
+|**__alignof( char\* )**|4|
+
+**_ _Alignof**値は、の値として同じ`sizeof`の基本型。 ただし、次の例を検討します。
+
+```cpp
+typedef struct { int a; double b; } S;
+// __alignof(S) == 8
+```
+
+ここで、 **_ _alignof**値は、構造内の最大の要素のアラインメント要件。
+
+同様に、
+
+```cpp
+typedef __declspec(align(32)) struct { int a; } S;
+```
+
+`__alignof(S)` と `32` が等価です。
+
+用途の 1 つ **_ _alignof**独自のメモリ割り当てルーチンのいずれかのパラメーターとしてになります。 たとえば、次の定義済みの構造体 `S` を指定して、`aligned_malloc` という名前のメモリ割り当てルーチンを呼び出し、特定の配置境界にメモリを割り当てることができます。
+
+```cpp
+typedef __declspec(align(32)) struct { int a; double b; } S;
+int n = 50; // array size
+S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
+```
+
+配置の変更の詳細については、次を参照してください。
+
+- [pack](../preprocessor/pack.md)
+
+- [align](../cpp/align-cpp.md)
+
+- [__unaligned](../cpp/unaligned.md)
+
+- [/Zp (構造体メンバーの配置)](../build/reference/zp-struct-member-alignment.md)
+
+- [構造体の配置例](../build/examples-of-structure-alignment.md)(x64 固有)
+
+x86 と x64 用のコード内の配置の違いの詳細については、
+
+- [x86 コンパイラとの競合](../build/conflicts-with-the-x86-compiler.md)
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
+[単項演算子を含む式](../cpp/expressions-with-unary-operators.md)<br/>
+[キーワード](../cpp/keywords-cpp.md)

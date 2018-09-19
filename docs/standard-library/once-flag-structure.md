@@ -1,7 +1,7 @@
 ---
 title: once_flag 構造体 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/17/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4275b99ada0dbfe1c974446d21862f7fa73aab38
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 67cfbe06461598fbd04e124629399baa63fdd5d9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964497"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104336"
 ---
 # <a name="onceflag-structure"></a>once_flag 構造体
 
@@ -27,7 +27,7 @@ ms.locfileid: "38964497"
 
 ## <a name="syntax"></a>構文
 
-struct once_flag { constexpr once_flag() noexcept; once_flag(const once_flag&); once_flag& operator=(const once_flag&); };
+構造体 once_flag {constexpr once_flag() noexcept;};
 
 ## <a name="remarks"></a>Remarks
 
@@ -35,7 +35,7 @@ struct once_flag { constexpr once_flag() noexcept; once_flag(const once_flag&); 
 
 `once_flag` 型のオブジェクトは、作成することはできますがコピーはできません。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<mutex >
 

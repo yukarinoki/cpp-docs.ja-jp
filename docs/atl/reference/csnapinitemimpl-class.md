@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c56f8fe711980e038281baca7618bff08f0d3d9b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 042fe1a446137546654c8f0cfd5ee9be8072dcee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764944"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091830"
 ---
 # <a name="csnapinitemimpl-class"></a>CSnapInItemImpl クラス
 
@@ -54,16 +54,16 @@ ms.locfileid: "43764944"
 ## <a name="syntax"></a>構文
 
 ```
-template <class T, BOOL bIsExtension = FALSE>  
+template <class T, BOOL bIsExtension = FALSE>
 class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 派生したクラス、`CSnapInItemImpl`します。
 
-*bIsExtension*  
+*bIsExtension*<br/>
 オブジェクトがスナップイン拡張機能である場合は TRUE。それ以外の場合は FALSE です。
 
 ## <a name="members"></a>メンバー
@@ -127,10 +127,10 @@ AddMenuItems(
 
 ### <a name="parameters"></a>パラメーター
 
-*piCallback*  
+*piCallback*<br/>
 [in]ポインター、`IContextMenuCallback`コンテキスト メニューに項目を追加することができます。
 
-*pInsertionAllowed*  
+*pInsertionAllowed*<br/>
 [入力、出力]識別する Microsoft 管理コンソール MMC 定義メニュー項目の挿入ポイントことができます。 次のフラグの組み合わせを指定できます。
 
 - コンテキスト メニューの上部にある CCM_INSERTIONALLOWED_TOP 項目を挿入することができます。
@@ -141,7 +141,7 @@ AddMenuItems(
 
 - ツールバーの表示 メニューまたはサブメニューの表示、結果ウィンドウのコンテキスト メニューの CCM_INSERTIONALLOWED_VIEW 項目を挿入することができます。
 
-*type*  
+*type*<br/>
 [in]オブジェクトの種類を指定します。 次の値のいずれかのことができます。
 
 - スコープ ウィンドウのコンテキストの CCT_SCOPE データ オブジェクト。
@@ -162,10 +162,10 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 
 ### <a name="parameters"></a>パラメーター
 
-*lCommandID*  
+*lCommandID*<br/>
 [in]メニュー項目のコマンド識別子を指定します。
 
-*type*  
+*type*<br/>
 [in]オブジェクトの種類を指定します。 次の値のいずれかのことができます。
 
 - スコープ ウィンドウのコンテキストの CCT_SCOPE データ オブジェクト。
@@ -190,16 +190,16 @@ CreatePropertyPages(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpProvider*  
+*lpProvider*<br/>
 [in]ポインター、`IPropertySheetCallback`インターフェイス。
 
-*handle*  
+*handle*<br/>
 [in]適切なデータ クラスを MMCN_PROPERTY_CHANGE 通知メッセージをルーティングするためのハンドルを指定します。
 
-*pUnk*  
+*pUnk*<br/>
 [in]ポインター、`IExtendPropertySheet`ノードに関するコンテキスト情報を格納しているオブジェクトのインターフェイス。
 
-*type*  
+*type*<br/>
 [in]オブジェクトの種類を指定します。 次の値のいずれかのことができます。
 
 - スコープ ウィンドウのコンテキストの CCT_SCOPE データ オブジェクト。
@@ -228,10 +228,10 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
 
 ### <a name="parameters"></a>パラメーター
 
-*cf*  
+*cf*<br/>
 [in]クリップボードの形式 (テキスト、リッチ テキスト、または OLE 項目を含むリッチ テキスト)。
 
-*pStream*  
+*pStream*<br/>
 [in]オブジェクトのデータを格納しているストリームへのポインター。
 
 ### <a name="remarks"></a>Remarks
@@ -250,10 +250,10 @@ GetResultViewType(
 
 ### <a name="parameters"></a>パラメーター
 
-*取得可能です。*  
+*取得可能です。*<br/>
 [out]返されるビューの種類のアドレスへのポインター。
 
-*pViewOptions*  
+*pViewOptions*<br/>
 [out]所有している、スナップインで指定されたオプションを使用して、コンソールを提供する MMC_VIEW_OPTIONS 列挙型へのポインター。 この値には、次のいずれかを指定できます。
 
 - MMC_VIEW_OPTIONS_NOLISTVIEWS = 0x00000001 で標準のリスト ビューの選択肢を表示しないようにコンソールに指示、**ビュー**メニュー。 結果ビュー ペインでのみ、独自のカスタム ビューを表示するスナップインを使用できます。 これは、この時点で定義されている唯一のオプション フラグです。
@@ -270,7 +270,7 @@ GetScopePaneInfo (SCOPEDATAITEM* pScopeDataItem);
 
 ### <a name="parameters"></a>パラメーター
 
-*pScopeDataItem*  
+*pScopeDataItem*<br/>
 [out]ポインター、`SCOPEDATAITEM`の構造、`CSnapInItemImpl`オブジェクト。
 
 ##  <a name="getresultpaneinfo"></a>  CSnapInItemImpl::GetResultPaneInfo
@@ -283,7 +283,7 @@ GetResultPaneInfo (RESULTDATAITEM* pResultDataItem);
 
 ### <a name="parameters"></a>パラメーター
 
-*pResultDataItem*  
+*pResultDataItem*<br/>
 [out]ポインター、`RESULTDATAITEM`の構造、`CSnapInItemImpl`オブジェクト。
 
 ##  <a name="m_bstrdisplayname"></a>  CSnapInItemImpl::m_bstrDisplayName
@@ -326,7 +326,7 @@ STDMETHOD(Notify)(
 
 ### <a name="parameters"></a>パラメーター
 
-*event*  
+*event*<br/>
 [in]ユーザーが実行する操作を識別します。 次の通知が考えられます。
 
 - MMCN_ACTIVATE 送信ウィンドウがされているときにアクティブ化され、非アクティブ化します。
@@ -357,19 +357,19 @@ STDMETHOD(Notify)(
 
 - MMCN_VIEW_CHANGE には、スナップインですべてのビューを更新、変更が発生した場合とが送信されます。
 
-*arg*  
+*arg*<br/>
 [in]通知の種類によって異なります。
 
-*param*  
+*param*<br/>
 [in]通知の種類によって異なります。
 
-*pComponentData*  
+*pComponentData*<br/>
 [out]実装するオブジェクトへのポインター`IComponentData`します。 通知が転送しない場合、このパラメーターが NULL`IComponentData::Notify`します。
 
-*pComponent*  
+*pComponent*<br/>
 [out]実装するオブジェクトへのポインター`IComponent`します。 通知が転送しない場合、このパラメーターが NULL`IComponent::Notify`します。
 
-*type*  
+*type*<br/>
 [in]オブジェクトの種類を指定します。 次の値のいずれかのことができます。
 
 - スコープ ウィンドウのコンテキストの CCT_SCOPE データ オブジェクト。
@@ -400,10 +400,10 @@ void SetMenuInsertionFlags(
 
 ### <a name="parameters"></a>パラメーター
 
-*bBeforeInsertion*  
+*bBeforeInsertion*<br/>
 [in]コンテキスト メニューに項目を追加する前に、関数を呼び出す必要がある場合は 0 以外それ以外の場合 0 を返します。
 
-*pInsertionAllowed*  
+*pInsertionAllowed*<br/>
 [入力、出力]識別する Microsoft 管理コンソール MMC 定義メニュー項目の挿入ポイントことができます。 次のフラグの組み合わせを指定できます。
 
 - コンテキスト メニューの上部にある CCM_INSERTIONALLOWED_TOP 項目を挿入することができます。
@@ -433,10 +433,10 @@ void SetToolbarButtonInfo(
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*  
+*ID*<br/>
 [in]設定するツール バー ボタンの ID。
 
-*fsState*  
+*fsState*<br/>
 [in]ボタンの状態フラグ。 次の 1 つ以上を指定できます。
 
 - TBSTATE_CHECKED ボタンは、スタイルのスタイルを備えが押されました。
@@ -451,7 +451,7 @@ void SetToolbarButtonInfo(
 
 - TBSTATE_WRAP A 改行では、ボタンに従います。 ボタンも、ボタンがあります。
 
-*fsType*  
+*fsType*<br/>
 [in]ボタンの状態フラグ。 次の 1 つ以上を指定できます。
 
 - TBSTYLE_BUTTON は、標準的なプッシュ ボタンを作成します。
@@ -477,13 +477,13 @@ void UpdateMenuState(
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*  
+*ID*<br/>
 [in]設定するメニュー項目の ID。
 
-*pBuf*  
+*pBuf*<br/>
 [in]更新するメニュー項目の文字列へのポインター。
 
-*flags*  
+*flags*<br/>
 [in]新しい状態フラグを指定します。 次のフラグの組み合わせを指定できます。
 
 - ならばでは、これは、コンテキスト メニューのサブメニューであることを指定します。 このサブメニューを使用するメニュー項目、挿入ポイント、およびさらに、サブメニューを追加することがあります、`lCommandID`としてその`IInsertionPointID`します。
@@ -524,10 +524,10 @@ BOOL UpdateToolbarButton(UINT id, BYTE fsState);
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*  
+*ID*<br/>
 更新するツール バー ボタンのボタンの ID を指定します。
 
-*fsState*  
+*fsState*<br/>
 ツール バー ボタンの状態を指定します。 この状態を設定する場合は、TRUE を返します。 次のフラグの組み合わせを指定できます。
 
 - 有効、ボタンは、ユーザー入力を受け入れます。 この状態がないボタンは、ユーザー入力が受け付けられません、淡色表示にします。

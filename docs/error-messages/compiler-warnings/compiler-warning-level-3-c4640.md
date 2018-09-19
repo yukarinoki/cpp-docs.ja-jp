@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 3) C4640 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 3) C4640 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34c55334b49ac325d23f73e9ceaaa8613ca9c45d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 945e6c792a3200bfa115dfffaba216ed43266cde
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290440"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097511"
 ---
 # <a name="compiler-warning-level-3-c4640"></a>コンパイラの警告 (レベル 3) C4640
-'instance': ローカル スタティック オブジェクトの構築がスレッド セーフではありません  
-  
- オブジェクトの静的インスタンスは、スレッド セーフではありません。  
-  
- 既定では、この警告はオフに設定されています。 詳細については、「 [既定で無効になっているコンパイラ警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 」を参照してください。  
-  
- 次の例では、C4640 が生成されます。  
-  
-```  
-// C4640.cpp  
-// compile with: /W3  
-#pragma warning(default:4640)  
-  
-class X {  
-public:  
-   X() {  
-   }  
-};  
-  
-void f() {  
-   static X aX;   // C4640  
-}  
-  
-int main() {  
-   f();  
-}  
+
+'instance': ローカル スタティック オブジェクトの構築がスレッド セーフではありません
+
+オブジェクトの静的インスタンスは、スレッド セーフではありません。
+
+既定では、この警告はオフに設定されています。 詳細については、「 [既定で無効になっているコンパイラ警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 」を参照してください。
+
+次の例では、(c4640) が生成されます。
+
+```
+// C4640.cpp
+// compile with: /W3
+#pragma warning(default:4640)
+
+class X {
+public:
+   X() {
+   }
+};
+
+void f() {
+   static X aX;   // C4640
+}
+
+int main() {
+   f();
+}
 ```

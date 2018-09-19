@@ -1,5 +1,5 @@
 ---
-title: auto_gcroot::swap |Microsoft ドキュメント
+title: auto_gcroot::swap |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 78ab5f8385f404a6db2c9919c39c17d1442b49a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 785480c10aff65d02280a9338e79e76cd430a57b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104920"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098083"
 ---
 # <a name="autogcrootswap"></a>auto_gcroot::swap
-他のオブジェクトを交換`auto_gcroot`です。  
+別のオブジェクトを交換`auto_gcroot`します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,8 +39,8 @@ void swap(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `_right`  
- `auto_gcroot`交換先のオブジェクトします。  
+*(_r)*<br/>
+`auto_gcroot`交換先のオブジェクトします。  
   
 ## <a name="example"></a>例  
   
@@ -75,5 +75,5 @@ s1 = 'string two', s2 = 'string one'
  **Namespace** msclr  
   
 ## <a name="see-also"></a>関連項目  
- [auto_gcroot メンバー](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot のメンバー](../dotnet/auto-gcroot-members.md)   
  [swap 関数 (auto_gcroot)](../dotnet/swap-function-auto-gcroot.md)

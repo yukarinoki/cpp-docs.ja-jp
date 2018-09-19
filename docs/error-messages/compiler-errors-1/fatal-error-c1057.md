@@ -1,5 +1,5 @@
 ---
-title: 致命的なエラー C1057 |Microsoft ドキュメント
+title: 致命的なエラー C1057 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe3e00b79757d87b54efd8be2492b473a54c73d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6b2fde010917e9e22c523b86ad816929e8526b6b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33224653"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092683"
 ---
 # <a name="fatal-error-c1057"></a>致命的なエラー C1057
-マクロ展開中に予期せぬ EOF を検出しました。  
-  
- コンパイラでは、おそらくマクロ呼び出しに右かっこがないため、マクロ呼び出しの引数を収集中にソース ファイルの末尾に達しました。
+
+マクロ展開中に予期せぬ EOF を検出しました。
+
+コンパイラでは、マクロの呼び出しにかっこが不足している可能性があります、マクロ呼び出しの引数を収集中にソース ファイルの末尾に達しました。

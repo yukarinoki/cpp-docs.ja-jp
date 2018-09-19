@@ -1,5 +1,5 @@
 ---
-title: 致命的なエラー C1001 |Microsoft ドキュメント
+title: 致命的なエラー C1001 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f605dd7e4892c4a8b57e544ed857257be72f020d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6363694dbd7f1a7ebfcd58cad030dfecf7f38397
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199029"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098200"
 ---
 # <a name="fatal-error-c1001"></a>致命的なエラー C1001
 
-> 内部コンパイラ ERROR(compiler file *file*, line *number*)  
-  
-解析中に特定の式と最適化オプション、または問題の組み合わせにより多くの場合、構成用の正しいコードを生成することはできません。 示されているコンパイラ ファイルに utc または C2 パス セグメントがある場合は、これはほとんど最適化エラーです。 ファイルが cxxfe または c1xx のパス セグメントや msc1.cpp をはおそらくパーサー エラーです。 という名前のファイルは、cl.exe は、存在がない場合その他の情報です。  
+> 内部コンパイラ ERROR(compiler file *file*, line *number*)
 
-多くの場合、1 つまたは複数の最適化オプションを削除することによって最適化の問題を修正できます。 どちらのオプションに問題を特定するには、エラー メッセージがなくなるまで時および再コンパイルに 1 つのオプションを削除します。 最もよく担当のオプションは[/Og (グローバルの最適化)](../../build/reference/og-global-optimizations.md)と[/Oi (組み込み関数の生成)](../../build/reference/oi-generate-intrinsic-functions.md)です。 担当な最適化オプションを確認した後は無効にできます関数を使用してエラーが発生、[最適化](../../preprocessor/optimize.md)プラグマ、モジュールの残りのオプションを使用し、続けます。 最適化オプションの詳細については、次を参照してください。[最適化の推奨事項](../../build/reference/optimization-best-practices.md)です。
+コンパイラは、解析中に特定の式と最適化オプション、または問題の組み合わせにより多くの場合、構成用の正しいコードを生成できません。 コンパイラ ファイルが一覧表示に utc または C2 パス セグメントがある場合は、おそらく最適化エラー。 ファイルが cxxfe または c1xx のパス セグメントまたは msc1.cpp が場合、は、おそらくパーサー エラーです。 Cl.exe の場合は、という名前のファイルはありませんその他の情報です。
 
-最適化がエラーの原因でない場合は、エラーが報告された行または数行のコードをその前後の再書き換えを再試行してください。 コードのように、コンパイラが参照する前処理した後、使用することができます、 [/P (プリプロセス出力ファイルへの)](../../build/reference/p-preprocess-to-a-file.md)オプション。
+多くの場合、1 つまたは複数の最適化オプションを削除することによって最適化の問題を修正できます。 どのオプションがあるエラーを確認するには、エラー メッセージは表示されなくなるまで時および再コンパイル オプションを 1 つを削除します。 オプションの責任に最もよく[/Og (グローバルの最適化)](../../build/reference/og-global-optimizations.md)と[/Oi (組み込み関数の生成)](../../build/reference/oi-generate-intrinsic-functions.md)します。 なる最適化オプションを決めたら、関数を使用してエラーが発生した無効ことができます、[最適化](../../preprocessor/optimize.md)プラグマ、続行、モジュールの残りのオプションを使用するとします。 最適化オプションの詳細については、次を参照してください。[最適化のベスト プラクティス](../../build/reference/optimization-best-practices.md)します。
 
-内部コンパイラ エラーを Microsoft に報告する方法と、エラーの原因を特定する方法の詳細については、次を参照してください。 [Visual c ツールセットで問題を報告する方法](../../how-to-report-a-problem-with-the-visual-cpp-toolset.md)です。
+最適化が、エラーの場合は、エラーが報告された行または数行のコードをその前後の書き直しをお試しください。 方法は、コンパイラは前処理した後は、コードを表示、使用することができます、 [/P (ファイルへのプリプロセス)](../../build/reference/p-preprocess-to-a-file.md)オプション。
+
+エラーの原因を特定する方法と、内部コンパイラ エラーを Microsoft に報告する方法の詳細については、次を参照してください。 [Visual c ツールセットで問題を報告する方法](../../how-to-report-a-problem-with-the-visual-cpp-toolset.md)します。

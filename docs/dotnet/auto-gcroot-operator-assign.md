@@ -1,5 +1,5 @@
 ---
-title: auto_gcroot::operator = |Microsoft ドキュメント
+title: auto_gcroot::operator = |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b4bc0f671ea0c156b05eabe092bc3cc85b5cd9fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 91503568b093dfb7052cd6d6e99fc63f1c780a73
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111303"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102743"
 ---
 # <a name="autogcrootoperator"></a>auto_gcroot::operator=
 代入演算子。  
@@ -46,15 +46,15 @@ auto_gcroot<_element_type> & operator=(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `_right`  
- オブジェクトまたは`auto_gcroot`現在に割り当てられる`auto_gcroot`です。  
+*(_r)*<br/>
+オブジェクトまたは`auto_gcroot`現在に割り当てられる`auto_gcroot`します。  
   
 ## <a name="return-value"></a>戻り値  
- 現在`auto_gcroot`、所有しているようになりました`_right`です。  
+ 現在`auto_gcroot`、所有しているようになりました`_right`します。  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp  
 // msl_auto_gcroot_operator_equals.cpp  
 // compile with: /clr  
 #include <msclr\auto_gcroot.h>  
@@ -124,5 +124,5 @@ in ClassA destructor: third
  **Namespace** msclr  
   
 ## <a name="see-also"></a>関連項目  
- [auto_gcroot メンバー](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot のメンバー](../dotnet/auto-gcroot-members.md)   
  [auto_gcroot::attach](../dotnet/auto-gcroot-attach.md)

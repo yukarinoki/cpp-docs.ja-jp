@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bfd913b95b84d8425649476649f9bffa6163141
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: 561173e2b451a0b736d97042667a2fb14b3a7eb7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601523"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094898"
 ---
 # <a name="compiler-warning-level-4-c4127"></a>コンパイラの警告 (レベル 4) C4127
 
@@ -38,10 +38,10 @@ ms.locfileid: "45601523"
 次のサンプルは C4127 が生成され、使用する方法を示しています。 2 つの方法、for ループ、警告を回避します。
 
 ```cpp
-// C4127.cpp  
-// compile with: /W4  
-#include <stdio.h>  
-int main() {  
+// C4127.cpp
+// compile with: /W4
+#include <stdio.h>
+int main() {
    if (true) {}           // OK in VS2015 update 3 and later
    if (1 == 1) {}         // C4127
    while (42) { break; }  // C4127

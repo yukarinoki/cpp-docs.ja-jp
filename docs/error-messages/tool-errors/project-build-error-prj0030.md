@@ -1,5 +1,5 @@
 ---
-title: プロジェクト ビルド エラー PRJ0030 |Microsoft ドキュメント
+title: プロジェクト ビルド エラー PRJ0030 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bf1c9137f8c4ed0d80955eef38b07ea86204a5c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 964fedd40f577a8b337c4ad0c20ba80d33ed2a23
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317659"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099923"
 ---
 # <a name="project-build-error-prj0030"></a>プロジェクト ビルド エラー PRJ0030
-マクロ拡張エラーです。 $ (マクロ) を超えました再帰 32 レベルを評価します。  
-  
- マクロでは再帰では、このエラーが発生します。 たとえば、設定した場合、**中間ディレクトリ**プロパティ (を参照してください[[全般] プロパティ ページ (プロジェクト)](../../ide/general-property-page-project.md)) に $(IntDir)、再帰が発生します。  
-  
- このエラーを解決するのには定義しませんマクロまたはマクロを定義するメッセージが表示されるプロパティ。
+
+マクロ拡張エラーです。 $ (マクロ) を超えました再帰 32 レベルを評価します。
+
+このエラーは、マクロ内の再帰によって発生します。 たとえば、設定した場合、**中間ディレクトリ**プロパティ (を参照してください[[全般] プロパティ ページ (プロジェクト)](../../ide/general-property-page-project.md)) に $(IntDir)、再帰が。
+
+このエラーを解決するのには、マクロまたはマクロの定義に使用するプロパティ定義されません。

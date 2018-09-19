@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2063 |Microsoft ドキュメント
+title: コンパイラ エラー C2063 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dee835df0c30501c0b9a31fd542e51c498ae28d3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3705192ba73faba88c63de5f4361449248e712e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33163739"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100410"
 ---
 # <a name="compiler-error-c2063"></a>コンパイラ エラー C2063
-'identifier': 関数ではありません。  
-  
- 識別子が関数として使用されていますが、関数として宣言されていません。  
-  
- 次の例では C2063 エラーが生成されます。  
-  
-```  
-// C2063.c  
-int main() {  
-   int i, j;  
-   j = i();    // C2063, i is not a function  
-}  
-```  
-  
- 考えられる解決方法:  
-  
-```  
-// C2063b.c  
-int i() { return 0;}  
-int main() {  
-   int j;  
-   j = i();  
-}  
+
+'identifier': 関数ではありません。
+
+識別子が関数として使用されていますが、関数として宣言されていません。
+
+次の例では C2063 エラーが生成されます。
+
+```
+// C2063.c
+int main() {
+   int i, j;
+   j = i();    // C2063, i is not a function
+}
+```
+
+考えられる解決方法:
+
+```
+// C2063b.c
+int i() { return 0;}
+int main() {
+   int j;
+   j = i();
+}
 ```

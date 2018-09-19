@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2526 |Microsoft ドキュメント
+title: コンパイラ エラー C2526 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 735222893b69763b2934a93abbb965852d2f6d1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 152baa8b4fcd3f28e38b94c69b04a87f45040ccc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198236"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094976"
 ---
 # <a name="compiler-error-c2526"></a>コンパイラ エラー C2526
-'identifier1': C リンケージ関数でも、C++ クラスを 'identifier2' 返すことはできません  
-  
- C リンケージで定義された関数は、ユーザー定義型を返すことはできません。
+
+'identifier1': C リンケージ関数でも、C++ クラスを 'identifier2' 返すことはできません
+
+C リンケージで定義されている関数は、ユーザー定義型を返すことはできません。

@@ -30,44 +30,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d63a09dec74fc1b7b41f8029dcff285b62b017f1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3465b75d39d62c2118c53533f46627a68a1f286d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203228"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101671"
 ---
 # <a name="comptrt-extractors"></a>_com_ptr_t 抽出
-**Microsoft 固有の仕様**  
-  
- カプセル化された COM インターフェイス ポインターを抽出します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-operator Interface*( ) const throw( );   
-operator Interface&( ) const;   
-Interface& operator*( ) const;   
-Interface* operator->( ) const;   
-Interface** operator&( ) throw( );   
-operator bool( ) const throw( );  
-```  
-  
-## <a name="remarks"></a>Remarks  
-  
--   **演算子インターフェイス**<strong>\*</strong>場合 NULL にはカプセル化されたインターフェイス ポインターを返します。  
-  
--   **演算子インターフェイス &** をカプセル化されたインターフェイス ポインター、参照を取得し、ポインターが NULL の場合はエラーを発行します。  
-  
--   **演算子**<strong>\*</strong>逆参照される場合に、実際のカプセル化されたインターフェイスと同様に機能するスマート ポインター オブジェクトを使用します。  
-  
--   **演算子 ->** 逆参照される場合に、実際のカプセル化されたインターフェイスと同様に機能するスマート ポインター オブジェクトを使用します。  
-  
--   **演算子 &** null の場合に置き換えて、任意のカプセル化されたインターフェイス ポインターを解放し、カプセル化されたポインターのアドレスを返します。 これにより、スマート ポインターによってアドレスが関数に渡される、*アウト*パラメーターが使用されるインターフェイス ポインターを返します。  
-  
--   **operator bool**条件式で使用するスマート ポインター オブジェクトを使用します。 この演算子は、ポインターが NULL でない場合に TRUE を返します。  
-  
- **Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- [_com_ptr_t クラス](../cpp/com-ptr-t-class.md)
+
+**Microsoft 固有の仕様**
+
+カプセル化された COM インターフェイス ポインターを抽出します。
+
+## <a name="syntax"></a>構文
+
+```
+operator Interface*( ) const throw( ); 
+operator Interface&( ) const; 
+Interface& operator*( ) const; 
+Interface* operator->( ) const; 
+Interface** operator&( ) throw( ); 
+operator bool( ) const throw( );
+```
+
+## <a name="remarks"></a>Remarks
+
+- **演算子インターフェイス**<strong>\*</strong>場合 NULL にはカプセル化されたインターフェイス ポインターを返します。
+
+- **演算子インターフェイス &** をカプセル化されたインターフェイス ポインター、参照を取得し、ポインターが NULL の場合はエラーを発行します。
+
+- **演算子**<strong>\*</strong>逆参照される場合に、実際のカプセル化されたインターフェイスと同様に機能するスマート ポインター オブジェクトを使用します。
+
+- **演算子 ->** 逆参照される場合に、実際のカプセル化されたインターフェイスと同様に機能するスマート ポインター オブジェクトを使用します。
+
+- **演算子 &** null の場合に置き換えて、任意のカプセル化されたインターフェイス ポインターを解放し、カプセル化されたポインターのアドレスを返します。 これにより、スマート ポインターによってアドレスが関数に渡される、*アウト*パラメーターが使用されるインターフェイス ポインターを返します。
+
+- **operator bool**条件式で使用するスマート ポインター オブジェクトを使用します。 この演算子は、ポインターが NULL でない場合に TRUE を返します。
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
+[_com_ptr_t クラス](../cpp/com-ptr-t-class.md)

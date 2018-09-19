@@ -140,12 +140,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e23b4d3521e4068d8f7cee8aa6041d57375ec1b2
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a74edb512f545f9da8d222535f84f6bac34d094f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851477"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096237"
 ---
 # <a name="crecordset-class"></a>CRecordset クラス
 データ ソースから選択された 1 組のレコードセットを表現します。  
@@ -264,7 +264,7 @@ class CRecordset : public CObject
   
  `CRecordset`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdb.h  
   
 ##  <a name="addnew"></a>  CRecordset::AddNew  
@@ -874,15 +874,13 @@ void GetStatus(CRecordsetStatus& rStatus) const;
   
  `CRecordsetStatus`構造体は、次の形式。  
   
- `struct CRecordsetStatus`  
-  
- `{`  
-  
- `long m_lCurrentRecord;`  
-  
- `BOOL m_bRecordCountFinal;`  
-  
- `};`  
+```cpp
+struct CRecordsetStatus
+{
+    long m_lCurrentRecord;
+    BOOL m_bRecordCountFinal;
+};
+```
   
  2 つのメンバー`CRecordsetStatus`は次の意味があります。  
   

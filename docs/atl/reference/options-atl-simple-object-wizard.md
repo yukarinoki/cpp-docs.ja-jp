@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 548b75a3cee974538450534e25a091c56ae35014
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d337d31150b6da1a1556589d63fd60d63842efce
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707422"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098785"
 ---
 # <a name="options-atl-simple-object-wizard"></a>オプション、ATL シンプル オブジェクト ウィザード
 
@@ -75,7 +75,7 @@ ATL プロジェクトや ATL COM クラスの詳細については、次を参�
 
 ## <a name="see-also"></a>関連項目
 
-[ATL シンプル オブジェクト ウィザード](../../atl/reference/atl-simple-object-wizard.md)   
-[ATL シンプル オブジェクト](../../atl/reference/adding-an-atl-simple-object.md)   
+[ATL シンプル オブジェクト ウィザード](../../atl/reference/atl-simple-object-wizard.md)<br/>
+[ATL シンプル オブジェクト](../../atl/reference/adding-an-atl-simple-object.md)<br/>
 [プロセス サーバーのスレッド処理の問題](/windows/desktop/com/in-process-server-threading-issues)
 

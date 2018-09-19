@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2821 |Microsoft ドキュメント
+title: コンパイラ エラー C2821 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8c134d84ef27110cde83d54cbb8e46aa6a39efa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 52525062a07c7c55dd323109be87667d9e0847d6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236560"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098226"
 ---
 # <a name="compiler-error-c2821"></a>コンパイラ エラー C2821
-'operator new' への最初の仮パラメーターは 'unsigned int' である必要があります。  
-  
-最初の正式なパラメーター、 [new 演算子](../../standard-library/new-operators.md#op_new)unsigned にする必要があります`int`です。  
-  
-## <a name="example"></a>例  
- 次の例では、C2821 が生成されます。  
-  
-```cpp  
-// C2821.cpp  
-// compile with: /c  
-void * operator new( /* unsigned int,*/ void * );   // C2821  
-void * operator new( unsigned int, void * );  
+
+最初の仮パラメーター 'operator new' は 'unsigned int' である必要があります。
+
+最初の仮パラメーター、[演算子 new](../../standard-library/new-operators.md#op_new) unsigned にする必要があります`int`します。
+
+## <a name="example"></a>例
+
+次の例では、C2821 が生成されます。
+
+```cpp
+// C2821.cpp
+// compile with: /c
+void * operator new( /* unsigned int,*/ void * );   // C2821
+void * operator new( unsigned int, void * );
 ```

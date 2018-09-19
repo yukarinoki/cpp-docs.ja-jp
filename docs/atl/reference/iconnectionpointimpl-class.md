@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2b3e7a0589c0da4d41cab419fa68039e4f0b62c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4b8d3155dd63afa6deb84349c11b0b086d039c4c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763355"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091323"
 ---
 # <a name="iconnectionpointimpl-class"></a>IConnectionPointImpl クラス
 
@@ -38,19 +38,19 @@ ms.locfileid: "43763355"
 ## <a name="syntax"></a>構文
 
 ```
-template<class T, const IID* piid, class CDV = CComDynamicUnkArray>  
+template<class T, const IID* piid, class CDV = CComDynamicUnkArray>
 class ATL_NO_VTABLE IConnectionPointImpl : public _ICPLocator<piid>
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 派生したクラス、`IConnectionPointImpl`します。
 
-*piid*  
+*piid*<br/>
 コネクション ポイント オブジェクトによって表されるインターフェイスの IID へのポインター。
 
-*CDV*  
+*CDV*<br/>
 接続を管理するクラスです。 既定値は[CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)接続を制限しないことができます。 使用することも[CComUnkArray](../../atl/reference/ccomunkarray-class.md)、固定接続数を指定します。
 
 ## <a name="members"></a>メンバー
@@ -167,5 +167,5 @@ STDMETHOD(Unadvise)(DWORD dwCookie);
 
 ## <a name="see-also"></a>関連項目
 
-[IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint)   
+[IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

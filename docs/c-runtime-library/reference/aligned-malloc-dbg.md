@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f8786af730567155ca865440e612bb983e2bea8
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 076ccfcf164eb17e2a855f175c8714cd63a91817
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402979"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093053"
 ---
 # <a name="alignedmallocdbg"></a>_aligned_malloc_dbg
 
@@ -56,16 +56,16 @@ void * _aligned_malloc_dbg(
 
 ### <a name="parameters"></a>パラメーター
 
-*size*  
+*size*<br/>
 要求されたメモリ割り当てのサイズ。
 
-*alignment*  
+*alignment*<br/>
 アラインメント値。2 の整数乗である必要があります。
 
-*ファイル名*  
+*ファイル名*<br/>
 割り当て操作を要求したソース ファイル名へのポインターまたは NULL。
 
-*行番号*  
+*行番号*<br/>
 割り当て操作が要求されたソース ファイル内の行番号または NULL。
 
 ## <a name="return-value"></a>戻り値
@@ -96,4 +96,4 @@ void * _aligned_malloc_dbg(
 
 ## <a name="see-also"></a>関連項目
 
-[デバッグ ルーチン](../../c-runtime-library/debug-routines.md)  
+[デバッグ ルーチン](../../c-runtime-library/debug-routines.md)

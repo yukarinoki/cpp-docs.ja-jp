@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bebc10481c446edfa29d09663ac3139ecc5391b
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: dee005091c95bbac5fca64851f631b443bd33cca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42540285"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106773"
 ---
 # <a name="accelerator-class"></a>accelerator クラス
 アクセラレータは、データ並列計算用に最適化されたハードウェアの機能です。 アクセラレータは、PCIe バス (GPU など) にアタッチされているデバイスである場合や主要 CPU の拡張命令セットである場合があります。  
@@ -164,11 +164,11 @@ accelerator(const accelerator& _Other);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Device_path`  
- 物理デバイスのパスです。  
+*_Device_path*<br/>
+物理デバイスのパスです。  
   
- `_Other`  
- コピーするアクセラレータです。  
+*_Other*<br/>
+コピーするアクセラレータです。  
   
 ##  <a name="cpu_accelerator"></a> cpu_accelerator 
 
@@ -187,8 +187,8 @@ accelerator_view create_view(queuing_mode qmode = queuing_mode_automatic);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `qmode`  
- キュー モード。  
+*qmode*<br/>
+キュー モード。  
   
 ### <a name="return-value"></a>戻り値  
  新しい`accelerator_view`指定のキュー モードを使用して、このアクセラレータでのオブジェクト。  
@@ -470,8 +470,8 @@ bool operator!= (const accelerator& _Other) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Other`  
- `accelerator`これと比較するオブジェクト。  
+*_Other*<br/>
+`accelerator`これと比較するオブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  `false` 場合、2 つ`accelerator`オブジェクトが等しい、それ以外の`true`します。  
@@ -485,8 +485,8 @@ accelerator& operator= (const accelerator& _Other);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Other`  
- コピー元の `accelerator` オブジェクト。  
+*_Other*<br/>
+コピー元の `accelerator` オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  この `accelerator` オブジェクトへの参照。  
@@ -502,8 +502,8 @@ bool operator== (const accelerator& _Other) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Other`  
- `accelerator`これと比較するオブジェクト。  
+*_Other*<br/>
+`accelerator`これと比較するオブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  `true` 場合、その他の`accelerator`オブジェクトはこれと同じ`accelerator`オブジェクト。 それ以外の場合、`false`します。  
@@ -517,8 +517,8 @@ static inline bool set_default(std::wstring _Path);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Path`  
- アクセラレータへのパス。  
+*パス (_p)*<br/>
+アクセラレータへのパス。  
   
 ### <a name="return-value"></a>戻り値  
  既定のアクセラレータの設定で呼び出しが成功した場合、`true`。 それ以外の場合は `false`。  
@@ -532,8 +532,8 @@ bool set_default_cpu_access_type(access_type _Default_cpu_access_type);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Default_cpu_access_type`  
- このアクセラレータの array/array_view メモリ割り当てに使用される既定の CPU access_type。  
+*_Default_cpu_access_type*<br/>
+このアクセラレータの array/array_view メモリ割り当てに使用される既定の CPU access_type。  
   
 ### <a name="return-value"></a>戻り値  
  アクセラレータの既定の CPU access_type が正常に設定されたかどうかを示すブール値。  
@@ -597,8 +597,8 @@ accelerator_view(const accelerator_view& _Other);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Other`  
- コピーする `accelerator_view` オブジェクト。  
+*_Other*<br/>
+コピーする `accelerator_view` オブジェクト。  
   
 ##  <a name="create_marker"></a> create_marker 
 
@@ -714,8 +714,8 @@ bool operator!= (const accelerator_view& _Other) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Other`  
- `accelerator_view`これと比較するオブジェクト。  
+*_Other*<br/>
+`accelerator_view`これと比較するオブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  2 つのオブジェクトが同一である場合は `false`。それ以外の場合は `true`。  
@@ -729,8 +729,8 @@ accelerator_view& operator= (const accelerator_view& _Other);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Other`  
- コピー元の `accelerator_view` オブジェクト。  
+*_Other*<br/>
+コピー元の `accelerator_view` オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  変更されたへの参照を`accelerator_view`オブジェクト。  
@@ -746,8 +746,8 @@ bool operator== (const accelerator_view& _Other) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Other`  
- `accelerator_view`これと比較するオブジェクト。  
+*_Other*<br/>
+`accelerator_view`これと比較するオブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  2 つのオブジェクトが同一である場合は `true`。それ以外の場合は `false`。  

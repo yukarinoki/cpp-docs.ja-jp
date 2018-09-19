@@ -1,5 +1,5 @@
 ---
-title: ptr::ptr |Microsoft ドキュメント
+title: ptr::ptr |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0cd8b4a4a1140a1a34e0148756cdb23b2f8069cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f4df3e8059a56b137b2a4750177af1269cb6a5c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33161474"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107027"
 ---
 # <a name="ptrptr"></a>ptr::ptr
-構築、`com::ptr`を COM オブジェクトをラップします。  
+構築、 `com::ptr` COM オブジェクトをラップします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,18 +40,18 @@ ptr(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `P`  
- COM インターフェイス ポインター。  
+*P*<br/>
+COM インターフェイス ポインター。  
   
-## <a name="remarks"></a>コメント  
- 引数を受け取らないコンス トラクターが代入`nullptr`を基になるオブジェクトのハンドル。 後続の呼び出し、`com::ptr`内部オブジェクトを検証し、オブジェクトが実際に作成またはアタッチされるまで、サイレント モードで失敗します。  
+## <a name="remarks"></a>Remarks  
+ 引数のないコンス トラクターを代入`nullptr`を基になるオブジェクトのハンドル。 後続の呼び出し、`com::ptr`内部オブジェクトを検証し、オブジェクトが実際に作成またはアタッチされるまで、サイレント モードで失敗します。  
   
- 引数が 1 つのコンス トラクターは、COM オブジェクトへの参照を追加しますが、呼び出し元の参照を解放しないため、呼び出し元を呼び出す必要があります`Release`本当に制御を放棄する COM オブジェクトにします。 ときに、`com::ptr`のデストラクターが呼び出される COM オブジェクトへの参照を自動的に解放します。  
+ 引数が 1 つのコンス トラクターは、COM オブジェクトへの参照を追加しますが、呼び出し元が呼び出す必要がありますので、呼び出し元の参照を解放しない`Release`で完全に制御を断念する COM オブジェクトでします。 ときに、`com::ptr`のデストラクターが呼び出される COM オブジェクトへの参照が自動的に解放します。  
   
- 渡す`NULL`このコンス トラクターには、引数なしのバージョンの呼び出しと同じです。  
+ 渡す`NULL`このコンス トラクターには、引数のないバージョンの呼び出しと同じです。  
   
 ## <a name="example"></a>例  
- この例を使用して CLR クラスを実装して、`com::ptr`をそのプライベート メンバーをラップする`IXMLDOMDocument`オブジェクト。 コンス トラクターの両方のバージョンの使用方法を示します。  
+ この例の実装を使用する CLR クラス、`com::ptr`のプライベート メンバーをラップする`IXMLDOMDocument`オブジェクト。 コンス トラクターの両方のバージョンの使用方法を示します。  
   
 ```  
 // comptr_ptr.cpp  
@@ -118,6 +118,6 @@ int main() {
  **Namespace** msclr::com  
   
 ## <a name="see-also"></a>関連項目  
- [ptr メンバー](../dotnet/ptr-members.md)   
+ [ptr のメンバー](../dotnet/ptr-members.md)   
  [ptr::CreateInstance](../dotnet/ptr-createinstance.md)   
  [ptr::~ptr](../dotnet/ptr-tilde-ptr.md)

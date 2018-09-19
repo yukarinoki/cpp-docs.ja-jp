@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8642bf2bb6b2db06ecb33fa6ec1cc44d5e68317c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 672da1c98ebc51a7440e29234950be2adb5e1c0e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766231"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093069"
 ---
 # <a name="csecurityattributes-class"></a>CSecurityAttributes クラス
 
@@ -80,10 +80,10 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
 
 ### <a name="parameters"></a>パラメーター
 
-*rSecurityDescriptor*  
+*rSecurityDescriptor*<br/>
 セキュリティ記述子への参照。
 
-*bInheritsHandle*  
+*bInheritsHandle*<br/>
 新しいプロセスの作成時に、返されたハンドルを継承するかどうかを指定します。 このメンバーが true の場合、新しいプロセスは、返されたハンドルを継承します。
 
 ##  <a name="set"></a>  Csecurityattributes::set
@@ -96,10 +96,10 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
 
 ### <a name="parameters"></a>パラメーター
 
-*rSecurityDescriptor*  
+*rSecurityDescriptor*<br/>
 セキュリティ記述子への参照。
 
-*bInheritHandle*  
+*bInheritHandle*<br/>
 新しいプロセスの作成時に、返されたハンドルを継承するかどうかを指定します。 このメンバーが true の場合、新しいプロセスは、返されたハンドルを継承します。
 
 ### <a name="remarks"></a>Remarks
@@ -108,8 +108,8 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
 
 ## <a name="see-also"></a>関連項目
 
-[セキュリティのサンプル](../../visual-cpp-samples.md)   
-[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)   
-[セキュリティ記述子](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)   
-[クラスの概要](../../atl/atl-class-overview.md)   
+[セキュリティのサンプル](../../visual-cpp-samples.md)<br/>
+[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)<br/>
+[セキュリティ記述子](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
+[クラスの概要](../../atl/atl-class-overview.md)<br/>
 [セキュリティに関するグローバル関数](../../atl/reference/security-global-functions.md)

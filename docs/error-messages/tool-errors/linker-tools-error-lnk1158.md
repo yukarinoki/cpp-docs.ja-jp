@@ -1,5 +1,5 @@
 ---
-title: リンカ ツール エラー LNK1158 |Microsoft ドキュメント
+title: リンカ ツール エラー LNK1158 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71cee2a31d1a7b05104031fbf41e8e3addb82d7d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ce319aa4529c74cad00342b09aa0ed98bb49ce7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300187"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094170"
 ---
 # <a name="linker-tools-error-lnk1158"></a>リンカ ツール エラー LNK1158
-'filename' を実行することはできません。  
-  
- 指定された実行可能ファイルによって呼び出されます[リンク](../../build/reference/linker-command-line-syntax.md)がリンクを含むディレクトリではなくでも、PATH 環境変数で指定したディレクトリにします。  
-  
- :PGOPTIMIZE パラメーターを使用しようとする場合にこのエラーが表示されますなど、 [/LTCG](../../build/reference/ltcg-link-time-code-generation.md)コンピューターで 32 ビット オペレーティング システムのリンカー オプション。
+
+'filename' を実行することはできません。
+
+指定された実行可能ファイルによって呼び出される[リンク](../../build/reference/linker-command-line-syntax.md)がリンクを含むディレクトリではなくでも、PATH 環境変数で指定したディレクトリ。
+
+:PGOPTIMIZE パラメーターを使用しようとする場合にこのエラーが発生されますなど、 [/LTCG](../../build/reference/ltcg-link-time-code-generation.md) 32 ビットのオペレーティング システムのコンピューター上のリンカー オプション。

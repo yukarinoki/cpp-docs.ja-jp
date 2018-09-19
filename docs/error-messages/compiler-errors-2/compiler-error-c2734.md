@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2734 |Microsoft ドキュメント
+title: コンパイラ エラー C2734 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fdc5dda82fe7410afc6e8580f3bedd8ddc289ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc3322d97761f1a463426c71bde58de3591ded4a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237360"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100709"
 ---
 # <a name="compiler-error-c2734"></a>コンパイラ エラー C2734
-'identifier': const オブジェクトは、extern いない場合、初期化する必要があります  
-  
- 識別子が宣言されている`const`初期化されていませんが、または`extern`です。  
-  
- 次の例では、C2734 が生成されます。  
-  
-```  
-// C2734.cpp  
-const int j;   // C2734  
-extern const int i;   // OK, declared as extern  
+
+'identifier': const オブジェクトは、extern しない場合、初期化する必要があります
+
+識別子が宣言されて`const`初期化されていませんが、または`extern`します。
+
+次の例では、C2734 が生成されます。
+
+```
+// C2734.cpp
+const int j;   // C2734
+extern const int i;   // OK, declared as extern
 ```

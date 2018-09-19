@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5938785d7d9fdccae73048392b74cc5bb34f6680
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a4821ba572d2719ebba6c693cc39b96971002512
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753556"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106325"
 ---
 # <a name="ccomenumonstl-class"></a>CComEnumOnSTL クラス
 
@@ -32,7 +32,7 @@ ms.locfileid: "43753556"
 
 ```
 template <class Base,
-    const IID* piid, class T, class Copy, class CollType, class ThreadModel = CComObjectThreadModel>  
+    const IID* piid, class T, class Copy, class CollType, class ThreadModel = CComObjectThreadModel>
 class ATL_NO_VTABLE CComEnumOnSTL : public IEnumOnSTLImpl<Base, piid,
 T,
     Copy,
@@ -42,19 +42,19 @@ CollType>,
 
 #### <a name="parameters"></a>パラメーター
 
-*ベース*  
+*ベース*<br/>
 COM の列挙子。 参照してください[IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring)例についてはします。
 
-*piid*  
+*piid*<br/>
 列挙子インターフェイスのインターフェイス ID へのポインター。
 
-*T*  
+*T*<br/>
 列挙子インターフェイスによって公開される項目の種類。
 
-*コピー*  
+*コピー*<br/>
 A[コピー ポリシー](../../atl/atl-copy-policy-classes.md)クラス。
 
-*CollType*  
+*CollType*<br/>
 C++ 標準ライブラリ コンテナー クラス。
 
 ## <a name="remarks"></a>Remarks
@@ -111,9 +111,9 @@ C++ 標準ライブラリ コンテナー クラス。
 
 ## <a name="see-also"></a>関連項目
 
-[IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)   
-[ATLCollections サンプル: ICollectionOnSTLImpl、CComEnumOnSTL、およびカスタム コピー ポリシー クラス](../../visual-cpp-samples.md)   
-[クラスの概要](../../atl/atl-class-overview.md)   
-[CComObjectRootEx クラス](../../atl/reference/ccomobjectrootex-class.md)   
-[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)   
+[IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)<br/>
+[ATLCollections サンプル: ICollectionOnSTLImpl、CComEnumOnSTL、およびカスタム コピー ポリシー クラス](../../visual-cpp-samples.md)<br/>
+[クラスの概要](../../atl/atl-class-overview.md)<br/>
+[CComObjectRootEx クラス](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)<br/>
 [IEnumOnSTLImpl クラス](../../atl/reference/ienumonstlimpl-class.md)

@@ -1,5 +1,5 @@
 ---
-title: call_in_appdomain 関数 |Microsoft ドキュメント
+title: call_in_appdomain 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a8689254120416e5b2bf5de617fc3f3ef466abb1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 707ee9476ce26de9325337f6f2130e41d19faa3a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111287"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105246"
 ---
 # <a name="callinappdomain-function"></a>call_in_appdomain 関数
-指定されたアプリケーション ドメインで関数を実行します。  
+指定したアプリケーション ドメインでは、関数を実行します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,22 +49,22 @@ RetType call_in_appdomain(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `appdomainId`  
- 関数を呼び出すアプリケーション ドメイン。  
+*appdomainId*<br/>
+関数を呼び出すアプリケーション ドメイン。  
   
- `voidFunc`  
- ポインター、 `void` N パラメータを取る関数 (0 < = N < = 15)。  
+*voidFunc*<br/>
+ポインターを`void`N パラメーターを受け取る関数 (0 < = N < = 15)。  
   
- `nonvoidFunc`  
- 以外へのポインター`void` N パラメータを取る関数 (0 < = N < = 15)。  
+*nonvoidFunc*<br/>
+以外へのポインター`void` N パラメーターを受け取る関数 (0 < = N < = 15)。  
   
- `arg1...argN`  
- 渡される 15 個のパラメーターに 0`voidFunc`または`nonvoidFunc`他の appdomain にします。  
+*arg1... argN*<br/>
+0 ~ 15 個のパラメーターに渡される`voidFunc`または`nonvoidFunc`他の appdomain にします。  
   
 ## <a name="return-value"></a>戻り値  
- 実行結果`voidFunc`または`nonvoidFunc`指定されたアプリケーション ドメインでします。  
+ 実行結果`voidFunc`または`nonvoidFunc`で指定されたアプリケーション ドメイン。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  関数の引数に渡されます`call_in_appdomain`CLR 型をすることはできません。  
   
 ## <a name="example"></a>例  

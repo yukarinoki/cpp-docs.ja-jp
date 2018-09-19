@@ -1,5 +1,5 @@
 ---
-title: auto_gcroot::auto_gcroot |Microsoft ドキュメント
+title: auto_gcroot::auto_gcroot |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: df9650c5a013d6308869de002919c33a08b2ae04
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc168596c43c4ea8f26da5157656822b862bdc1e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33105830"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100442"
 ---
 # <a name="autogcrootautogcroot"></a>auto_gcroot::auto_gcroot
-`auto_gcroot`コンス トラクターです。  
+`auto_gcroot`コンス トラクター。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,14 +46,14 @@ auto_gcroot(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `_ptr`  
- 所有するオブジェクト。  
+*_ptr*<br/>
+所有するオブジェクト。  
   
- `_right`  
- 既存の `auto_gcroot`。  
+*(_r)*<br/>
+既存の `auto_gcroot`。  
   
-## <a name="remarks"></a>コメント  
- 構築するときに、 `auto_gcroot` 、既存の`auto_gcroot`、既存の`auto_gcroot`を新しいオブジェクトの所有権を転送する前にそのオブジェクトを解放`auto_gcroot`です。  
+## <a name="remarks"></a>Remarks  
+ 構築するときに、`auto_gcroot`既存の`auto_gcroot`、既存の`auto_gcroot`を新しいオブジェクトの所有権を譲渡する前に、そのオブジェクトを解放`auto_gcroot`します。  
   
 ## <a name="example"></a>例  
   
@@ -148,7 +148,7 @@ done
  **Namespace** msclr  
   
 ## <a name="see-also"></a>関連項目  
- [auto_gcroot メンバー](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot のメンバー](../dotnet/auto-gcroot-members.md)   
  [auto_gcroot::attach](../dotnet/auto-gcroot-attach.md)   
  [auto_gcroot::operator =](../dotnet/auto-gcroot-operator-assign.md)   
  [auto_gcroot::~auto_gcroot](../dotnet/auto-gcroot-tilde-auto-gcroot.md)

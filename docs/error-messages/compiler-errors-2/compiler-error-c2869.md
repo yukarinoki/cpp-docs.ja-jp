@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2869 |Microsoft ドキュメント
+title: コンパイラ エラー C2869 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9aa6092347b224abf02e0d6fac394146094e576
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4a899826ab299665a7a44deaa89416affe5d41f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246253"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101515"
 ---
 # <a name="compiler-error-c2869"></a>コンパイラ エラー C2869
-'name': 名前空間として既に定義されています  
-  
- 名前空間として既に使用される名前を再利用することはできません。  
-  
- 次の例では、C2869 が生成されます。  
-  
-```  
-// C2869.cpp  
-// compile with: /c  
-namespace A { int i; };  
-  
-class A {};   // C2869, A is already used  
+
+'name': 名前空間として既に定義されています
+
+既に名前空間として使用される名前を再利用することはできません。
+
+次の例では、C2869 が生成されます。
+
+```
+// C2869.cpp
+// compile with: /c
+namespace A { int i; };
+
+class A {};   // C2869, A is already used
 ```

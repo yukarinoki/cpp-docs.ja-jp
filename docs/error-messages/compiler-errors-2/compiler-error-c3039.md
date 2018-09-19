@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3039 |Microsoft ドキュメント
+title: コンパイラ エラー C3039 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2bdcfa36d270dc842eec0508969c650e7b30bee4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1b225103cf45331688a65d4528cadb39e730c75c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243725"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098096"
 ---
 # <a name="compiler-error-c3039"></a>コンパイラ エラー C3039
-'var' : OpenMP 'for' ステートメントのインデックス変数を減少変数にすることはできません  
-  
- インデックス変数は暗黙的にプライベートであるため、囲む [parallel](../../parallel/openmp/reference/reduction.md) ディレクティブ内の [reduction](../../parallel/openmp/reference/parallel.md) 句で、変数を使用することはできません。  
-  
-## <a name="example"></a>例  
- 次の例では C3039 が生成されます。  
-  
-```  
-// C3039.cpp  
-// compile with: /openmp /c  
-int g_i;  
-  
-int main() {  
-   int i;  
-  
-   #pragma omp parallel reduction(+: i)  
-   {  
-      #pragma omp for  
-      for (i = 0; i < 10; ++i)   // C3039  
-         g_i += i;  
-   }  
-}  
+
+'var' : OpenMP 'for' ステートメントのインデックス変数を減少変数にすることはできません
+
+インデックス変数は暗黙的にプライベートであるため、囲む [parallel](../../parallel/openmp/reference/reduction.md) ディレクティブ内の [reduction](../../parallel/openmp/reference/parallel.md) 句で、変数を使用することはできません。
+
+## <a name="example"></a>例
+
+次の例では C3039 が生成されます。
+
+```
+// C3039.cpp
+// compile with: /openmp /c
+int g_i;
+
+int main() {
+   int i;
+
+   #pragma omp parallel reduction(+: i)
+   {
+      #pragma omp for
+      for (i = 0; i < 10; ++i)   // C3039
+         g_i += i;
+   }
+}
 ```

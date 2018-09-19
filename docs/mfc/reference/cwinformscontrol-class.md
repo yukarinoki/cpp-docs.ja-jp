@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 797903c3f558cff9a0ff5addb689e31ae2adbed7
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 5c39d289ae2cf7580eba5a36257b7f5ea8ed061d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026375"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105402"
 ---
 # <a name="cwinformscontrol-class"></a>CWinFormsControl クラス
 Windows フォーム コントロールのホスティング用の基本機能を提供します。  
@@ -42,8 +42,8 @@ class CWinFormsControl : public CWnd
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `TManagedControl`  
- MFC アプリケーションに表示される .NET Framework Windows フォーム コントロール。  
+*TManagedControl*<br/>
+MFC アプリケーションに表示される .NET Framework Windows フォーム コントロール。  
   
 ## <a name="members"></a>メンバー  
   
@@ -78,7 +78,7 @@ class CWinFormsControl : public CWnd
 > [!NOTE]
 >  MFC Windows フォームの統合は、(AFXDLL が定義されている) MFC と動的にリンクするプロジェクトでのみ動作します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwinforms.h  
   
 ##  <a name="createmanagedcontrol"></a>  CWinFormsControl::CreateManagedControl  

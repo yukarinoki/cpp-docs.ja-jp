@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2532 |Microsoft ドキュメント
+title: コンパイラ エラー C2532 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78138de907b77d0a770cd606d805f60091ce0fc6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68a621b093eaf0e706249161dd2b1b4a3fd282be
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198457"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107014"
 ---
 # <a name="compiler-error-c2532"></a>コンパイラ エラー C2532
-'identifier': 参照の修飾子が正しくありません  
-  
- 参照が変更されました。 参照は、別のオブジェクトを参照してくださいを変更することはできません。 代わりにポインターを使用します。
+
+'identifier': 参照の修飾子が正しくありません
+
+参照が変更されました。 別のオブジェクトを参照する参照を変更できません。 代わりにポインターを使用します。

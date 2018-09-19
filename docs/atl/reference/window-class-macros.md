@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 985289041f1461ef9486a55fedd9816c1ebb3f35
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5650707f9c08c144d2f5832744117dfdd06acc08
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752564"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106910"
 ---
 # <a name="window-class-macros"></a>ウィンドウ クラスに関するマクロ
 
@@ -29,8 +29,8 @@ ms.locfileid: "43752564"
 
 |||
 |-|-|
-|[DECLARE_WND_CLASS](#declare_wnd_class)|新しいウィンドウ クラスの名前を指定することができます。| 
-|[DECLARE_WND_CLASS2](#declare_wnd_class2)|(Visual Studio 2017)新しいウィンドウ クラスと外側のクラスの新しいクラスが使用するウィンドウ プロシージャの名前を指定することができます。| 
+|[DECLARE_WND_CLASS](#declare_wnd_class)|新しいウィンドウ クラスの名前を指定することができます。|
+|[DECLARE_WND_CLASS2](#declare_wnd_class2)|(Visual Studio 2017)新しいウィンドウ クラスと外側のクラスの新しいクラスが使用するウィンドウ プロシージャの名前を指定することができます。|
 |[DECLARE_WND_SUPERCLASS](#declare_wnd_superclass)|新しいウィンドウ クラスの基になる既存のウィンドウ クラスの名前を指定することができます。|
 |[場合は](#declare_wnd_class_ex)|クラスのパラメーターを指定することができます。|  
 
@@ -48,7 +48,7 @@ DECLARE_WND_CLASS( WndClassName )
 
 ### <a name="parameters"></a>パラメーター
 
-*WndClassName*  
+*WndClassName*<br/>
 [in]新しいウィンドウ クラスの名前。 NULL の場合、ATL はウィンドウのクラス名を生成します。
 
 ### <a name="remarks"></a>Remarks
@@ -83,10 +83,10 @@ DECLARE_WND_CLASS2( WndClassName, EnclosingClass )
 
 ### <a name="parameters"></a>パラメーター
 
-*WndClassName*  
+*WndClassName*<br/>
 [in]新しいウィンドウ クラスの名前。 NULL の場合、ATL はウィンドウのクラス名を生成します。 
 
-*EnclosingClass*  
+*EnclosingClass*<br/>
 [in]新しいウィンドウ クラスの外側のウィンドウ クラスの名前。 Nll は指定できません。
 
 ### <a name="remarks"></a>Remarks
@@ -104,10 +104,10 @@ DECLARE_WND_SUPERCLASS( WndClassName, OrigWndClassName )
 
 ### <a name="parameters"></a>パラメーター
 
-*WndClassName*  
+*WndClassName*<br/>
 [in]ウィンドウの名前のクラスはそのスーパークラス*OrigWndClassName*します。 NULL の場合、ATL はウィンドウのクラス名を生成します。
 
-*OrigWndClassName*  
+*OrigWndClassName*<br/>
 [in]既存のウィンドウ クラスの名前。
 
 ### <a name="remarks"></a>Remarks
@@ -134,13 +134,13 @@ DECLARE_WND_CLASS_EX( WndClassName, style, bkgnd )
 
 ### <a name="parameters"></a>パラメーター
 
-*WndClassName*  
+*WndClassName*<br/>
 [in]新しいウィンドウ クラスの名前。 NULL の場合、ATL はウィンドウのクラス名を生成します。
 
-*style*  
+*style*<br/>
 [in]ウィンドウのスタイル。
 
-*背景*  
+*背景*<br/>
 [in]ウィンドウの背景色。
 
 ### <a name="remarks"></a>Remarks

@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2506 |Microsoft ドキュメント
+title: コンパイラ エラー C2506 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5369a6a5bf904f7a7492037fbad4df44de92e66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4967c410dfdce781a4191c9ac848883228ba4d3a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228519"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093416"
 ---
 # <a name="compiler-error-c2506"></a>コンパイラ エラー C2506
-'member': '__declspec(modifier)' はこのシンボルに適用することはできません  
-  
- マネージ クラスの静的メンバーの場合は、プロセスごとまたは appdomain ごとを宣言できません。  
-  
- 詳細については、「 [appdomain](../../cpp/appdomain.md) 」を参照してください。  
-  
-## <a name="example"></a>例  
- 次の例では、C2506 を生成します。  
-  
-```  
-// C2506.cpp  
-// compile with: /clr /c  
-ref struct R {  
-   __declspec(process) static int n;   // C2506  
-   int o;   // OK  
-};  
+
+'member': '__declspec(modifier)' はこのシンボルに適用することはできません
+
+プロセスごとまたは appdomain ごとには、マネージ クラスの静的メンバーの宣言できません。
+
+詳細については、「 [appdomain](../../cpp/appdomain.md) 」を参照してください。
+
+## <a name="example"></a>例
+
+次の例では、C2506 が生成されます。
+
+```
+// C2506.cpp
+// compile with: /clr /c
+ref struct R {
+   __declspec(process) static int n;   // C2506
+   int o;   // OK
+};
 ```

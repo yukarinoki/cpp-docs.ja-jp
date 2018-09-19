@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2492 |Microsoft ドキュメント
+title: コンパイラ エラー C2492 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68b3d769c5b86be172a0a27828fb1dc3905959d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2fcb9058bf1aac584e8b7728616f821bda4b33f6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197365"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096276"
 ---
 # <a name="compiler-error-c2492"></a>コンパイラ エラー C2492
-'*変数*': スレッド ストレージ存続期間を使用してデータには、dll インターフェイスはありません。    
-  
- 変数が宣言された、[スレッド](../../cpp/thread.md)属性し、DLL とインターフェイスします。 アドレス、`thread`変数が不明、実行時までため、DLL のインポートまたはエクスポートにリンクすることはできません。  
-  
- 次の例では、C2492 が生成されます。  
-  
-```  
-// C2492.cpp  
-// compile with: /c  
-class C {  
-public:  
-   char   ch;  
-};  
-  
-__declspec(dllexport) __declspec(thread) C c_1;   // C2492  
-__declspec(thread) C c_1;   // OK  
+
+'*変数*': スレッド ストレージ存続期間を使用してデータを dll インターフェイスいない可能性があります
+
+変数が宣言された、[スレッド](../../cpp/thread.md)属性し、DLL のインターフェイスします。 アドレス、`thread`変数が不明、実行時まで、DLL のインポートまたはエクスポートにリンクできないようにします。
+
+次の例では、C2492 が生成されます。
+
+```
+// C2492.cpp
+// compile with: /c
+class C {
+public:
+   char   ch;
+};
+
+__declspec(dllexport) __declspec(thread) C c_1;   // C2492
+__declspec(thread) C c_1;   // OK
 ```

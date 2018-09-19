@@ -19,22 +19,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8f7939d42aa246c9b7d5924979357fb6301e726
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 4b57e2c4e6631683afdabec983f155941b8cd2da
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466586"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107469"
 ---
-# <a name="storage-classes-c"></a>ストレージ クラス (C++)  
-  
-A*ストレージ クラス*C++ のコンテキストでの変数宣言は、オブジェクトの有効期間、リンケージ、およびメモリの場所を制御する型指定子。 特定のオブジェクトはストレージ クラスを 1 つのみ持つことができます。 それ以外の場合を使用して指定されていない場合、ブロック内で定義されている変数は自動ストレージを持ちます、 **extern**、**静的**、または`thread_local`指定子。 自動オブジェクトおよび変数にはリンケージがないため、ブロックの外側のコードには不可視です。  
-  
-**ノート**  
-  
-1.  [変更可能な](../cpp/mutable-data-members-cpp.md)キーワードが、ストレージ クラス指定子として見なされます。 ただし、クラス定義のメンバー一覧でのみ使用できます。  
-  
-2.  **Visual C 2010 以降:** 、**自動**キーワードは C++ ストレージ クラス指定子では不要になったと**登録**キーワードは非推奨とされます。 **Visual Studio 2017 バージョン 15.7 以降:** (で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)):**登録**キーワードは C++ 言語から削除されます。
+# <a name="storage-classes-c"></a>ストレージ クラス (C++)
+
+A*ストレージ クラス*C++ のコンテキストでの変数宣言は、オブジェクトの有効期間、リンケージ、およびメモリの場所を制御する型指定子。 特定のオブジェクトはストレージ クラスを 1 つのみ持つことができます。 それ以外の場合を使用して指定されていない場合、ブロック内で定義されている変数は自動ストレージを持ちます、 **extern**、**静的**、または`thread_local`指定子。 自動オブジェクトおよび変数にはリンケージがないため、ブロックの外側のコードには不可視です。
+
+**ノート**
+
+1. [変更可能な](../cpp/mutable-data-members-cpp.md)キーワードが、ストレージ クラス指定子として見なされます。 ただし、クラス定義のメンバー一覧でのみ使用できます。
+
+1. **Visual C 2010 以降:** 、**自動**キーワードは C++ ストレージ クラス指定子では不要になったと**登録**キーワードは非推奨とされます。 **Visual Studio 2017 バージョン 15.7 以降:** (で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)):**登録**キーワードは C++ 言語から削除されます。
 
 
 ```cpp
@@ -148,14 +148,14 @@ using namespace std;
 struct C {
    void Test(int value) {
       static int var = 0;
-      if (var == value) 
+      if (var == value)
          cout << "var == value" << endl;
       else
          cout << "var != value" << endl;
 
       var = value;
    }
-}; 
+};
 
 int main() {
    C c1;
@@ -185,9 +185,9 @@ C++11 以降では、静的ローカル変数の初期化はスレッド セー�
 ```cpp
 // external.cpp
 // DefinedElsewhere is defined in another translation unit
-extern int DefinedElsewhere;   
+extern int DefinedElsewhere;
 int main() {
-   int DefinedHere; 
+   int DefinedHere;
    {
       // refers to DefinedHere in the enclosing scope
       extern int DefinedHere;
@@ -205,7 +205,7 @@ thread_local float f = 42.0; // Global namespace. Not implicitly static.
 struct S // cannot be applied to type definition
 {
     thread_local int i; // Illegal. The member must be static.
-    thread_local static char buf[10]; // OK 
+    thread_local static char buf[10]; // OK
 };
 
 void DoSomething()
@@ -224,7 +224,7 @@ void DoSomething()
 
 -  適用できる`thread_local`のみにデータの宣言と定義されます。`thread_local`関数宣言または定義では使用できません。
 
--  `thread_local` は、静的ストレージ存続期間のあるデータ項目にのみ指定できます。 これには、グローバルなデータ オブジェクトが含まれます (どちらも**静的**と**extern**)、ローカルな静的オブジェクト、およびクラスの静的データ メンバー。 任意のローカル変数が宣言されている`thread_local`は他のストレージ クラスが提供されていない場合は、暗黙的に静的つまり、ブロック スコープで`thread_local`と等価`thread_local static`します。 
+-  `thread_local` は、静的ストレージ存続期間のあるデータ項目にのみ指定できます。 これには、グローバルなデータ オブジェクトが含まれます (どちらも**静的**と**extern**)、ローカルな静的オブジェクト、およびクラスの静的データ メンバー。 任意のローカル変数が宣言されている`thread_local`は他のストレージ クラスが提供されていない場合は、暗黙的に静的つまり、ブロック スコープで`thread_local`と等価`thread_local static`します。
 
 -  宣言と定義が同じファイルと別々のファイルのどちらで発生する場合でも、スレッド ローカル オブジェクトの宣言と定義には `thread_local` を使用する必要があります。
 
@@ -232,7 +232,7 @@ Windows で`thread_local`は機能的に等価[_declspec](../cpp/thread.md)す�
 
 ##  <a name="register"></a>  register
 
-**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)):**登録**キーワードがサポートされているストレージ クラスではなくなりました。 キーワードは、将来使用するための標準でまだ予約されています。 
+**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)):**登録**キーワードがサポートされているストレージ クラスではなくなりました。 キーワードは、将来使用するための標準でまだ予約されています。
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
@@ -322,4 +322,5 @@ Destroying: Static I3
 - 最後に、`I3` などの静的ローカル変数は、プログラム実行中は値が保持されますが、プログラムが終了すると破棄されます。
 
 ## <a name="see-also"></a>関連項目
- [宣言と定義](../cpp/declarations-and-definitions-cpp.md)
+
+[宣言と定義](../cpp/declarations-and-definitions-cpp.md)

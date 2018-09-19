@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9753599f08d1e8ee238097027c501a0b56e40300
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9a5541613bddd1e6a4fbac3a5555e54ce30fb94c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757395"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091700"
 ---
 # <a name="cthreadpool-class"></a>CThreadPool クラス
 
@@ -44,16 +44,16 @@ ms.locfileid: "43757395"
 ## <a name="syntax"></a>構文
 
 ```
-template <class Worker, class ThreadTraits = DefaultThreadTraits>  
+template <class Worker, class ThreadTraits = DefaultThreadTraits>
 class CThreadPool : public IThreadPoolConfig
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*ワーカー*  
+*ワーカー*<br/>
 準拠するクラス、[ワーカーのアーキタイプ](../../atl/reference/worker-archetype.md)スレッド プールのアイテムがキューに作業を処理するために使用するコードを提供します。
 
-*ThreadTraits*  
+*ThreadTraits*<br/>
 プール内のスレッドを作成するために使用する関数を提供するクラス。
 
 ## <a name="members"></a>メンバー
@@ -180,7 +180,7 @@ HRESULT STDMETHODCALLTYPE GetSize(int* pnNumThreads) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pnNumThreads*  
+*pnNumThreads*<br/>
 [out]成功した場合、プールのスレッドの数を受け取る変数のアドレス。
 
 ### <a name="return-value"></a>戻り値
@@ -197,7 +197,7 @@ HRESULT STDMETHODCALLTYPE GetTimeout(DWORD* pdwMaxWait) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pdwMaxWait*  
+*pdwMaxWait*<br/>
 [out]成功した場合、スレッド プール スレッドをシャット ダウンを待機するミリ秒単位で時間の最大値を受け取る変数のアドレス。
 
 ### <a name="return-value"></a>戻り値
@@ -222,20 +222,20 @@ HRESULT Initialize(
 
 ### <a name="parameters"></a>パラメーター
 
-*pvWorkerParam*  
+*pvWorkerParam*<br/>
 ワーカー スレッドのオブジェクトに渡されるワーカー パラメーター `Initialize`、 `Execute`、および`Terminate`メソッド。
 
-*nNumThreads*  
+*nNumThreads*<br/>
 要求されたプール内のスレッド数。
 
 場合*nNumThreads*が負の場合、その絶対値で乗算されますスレッドの合計数を取得するマシンでプロセッサの数。
 
 場合*nNumThreads*ゼロ、ATLS_DEFAULT_THREADSPERPROC はスレッドの合計数を取得するマシンのプロセッサ数が乗算されます。  既定では 1 プロセッサあたり 2 つのスレッドです。 Atlutil.h する前に、必要に応じて、このシンボルには、独自の正の整数値を定義できます。
 
-*dwStackSize*  
+*dwStackSize*<br/>
 プール内の各スレッドのスタック サイズ。
 
-*hCompletion*  
+*hCompletion*<br/>
 完了ポートに関連付けるオブジェクトのハンドル。
 
 ### <a name="return-value"></a>戻り値
@@ -264,7 +264,7 @@ BOOL QueueRequest(Worker::RequestType request) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*要求*  
+*要求*<br/>
 キューに入れられる要求です。
 
 ### <a name="return-value"></a>戻り値
@@ -301,7 +301,7 @@ HRESULT STDMETHODCALLTYPE SetSizeint nNumThreads) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nNumThreads*  
+*nNumThreads*<br/>
 要求されたプール内のスレッド数。
 
 場合*nNumThreads*が負の場合、その絶対値で乗算されますスレッドの合計数を取得するマシンでプロセッサの数。
@@ -326,7 +326,7 @@ HRESULT STDMETHODCALLTYPE SetTimeout(DWORD dwMaxWait) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*dwMaxWait*  
+*dwMaxWait*<br/>
 スレッド プール スレッドをシャット ダウンを待機するミリ秒単位で要求された最大時間。
 
 ### <a name="return-value"></a>戻り値
@@ -349,7 +349,7 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*dwMaxWait*  
+*dwMaxWait*<br/>
 スレッド プール スレッドをシャット ダウンを待機するミリ秒単位で要求された最大時間。 このメソッドは設定されたタイムアウトを使用して、0 または値が指定されている場合[CThreadPool::SetTimeout](#settimeout)します。
 
 ### <a name="remarks"></a>Remarks
@@ -358,6 +358,6 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
 
 ## <a name="see-also"></a>関連項目
 
-[IThreadPoolConfig インターフェイス](../../atl/reference/ithreadpoolconfig-interface.md)   
-[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   
+[IThreadPoolConfig インターフェイス](../../atl/reference/ithreadpoolconfig-interface.md)<br/>
+[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>
 [クラス](../../atl/reference/atl-classes.md)

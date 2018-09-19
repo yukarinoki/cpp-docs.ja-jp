@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37df260d16c04210fb7e66c0ec9a747a3dad7da4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 11c391e6ad467c835cd8c65ec872db74b85404a2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760163"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097615"
 ---
 # <a name="ccomcoclass-class"></a>CComCoClass クラス
 
@@ -36,16 +36,16 @@ ms.locfileid: "43760163"
 ## <a name="syntax"></a>構文
 
 ```
-template <class T, const CLSID* pclsid = &CLSID_NULL>  
+template <class T, const CLSID* pclsid = &CLSID_NULL>
 class CComCoClass
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 派生したクラス、`CComCoClass`します。
 
-*pclsid*  
+*pclsid*<br/>
 オブジェクトの CLSID へのポインター。
 
 ## <a name="members"></a>メンバー
@@ -91,13 +91,13 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
 
 ### <a name="parameters"></a>パラメーター
 
-*Q*  
+*Q*<br/>
 COM インターフェイス経由で返される*pp*します。
 
-*punkOuter*  
+*punkOuter*<br/>
 [in]不明な外部または集計の unknown を制御します。
 
-*pp*  
+*pp*<br/>
 [out]作成が成功した場合は、要求されたインターフェイス ポインターを受け取るポインター変数のアドレス。
 
 ### <a name="return-value"></a>戻り値
@@ -166,24 +166,25 @@ static HRESULT Error(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszDesc*  
-[in]エラーを説明する文字列。 Unicode バージョン`Error`ことを指定します*lpszDesc*の入力 LPCOLESTR; ANSI バージョンは、LPCSTR の種類を指定します。  
-*iid*  
+*lpszDesc*<br/>
+[in]エラーを説明する文字列。 Unicode バージョン`Error`ことを指定します*lpszDesc*の入力 LPCOLESTR; ANSI バージョンは、LPCSTR の種類を指定します。
+
+*iid*<br/>
 [in]エラーがオペレーティング システムによって定義されている場合は、エラーまたは GUID_ (既定値) を定義するインターフェイスの IID。
 
-*hRes*  
+*hRes*<br/>
 [in]呼び出し元に必要な HRESULT が返されます。 既定値は 0 です。 詳細については*hRes*、「解説」を参照してください。
 
-*nID*  
+*nID*<br/>
 [in]エラー説明文字列が格納されているリソースの識別子です。 この値は 0x0200 と 0 xffff の範囲である必要があります。 デバッグ ビルドで、 **ASSERT**なります*nID*有効な文字列のインデックスを作成しません。 リリース ビルドでエラーを説明する文字列を「不明なエラー」に設定されます。
 
-*dwHelpID*  
+*dwHelpID*<br/>
 [in]エラーのヘルプ コンテキスト識別子。
 
-*lpszHelpFile*  
+*lpszHelpFile*<br/>
 [in]パスとエラーを説明するヘルプ ファイルの名前。
 
-*hInst*  
+*hInst*<br/>
 [in]リソースへのハンドル。 このパラメーターは、既定では、`_AtlModule::GetResourceInstance`ここで、`_AtlModule`のグローバル インスタンス[CAtlModule](../../atl/reference/catlmodule-class.md)します。
 
 ### <a name="return-value"></a>戻り値

@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4286 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4286 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2dab6c5c28809108e178ec7792a68a570ece14ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c1a796ee1956de0795f677afec90dd2a65bb3d1d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277115"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099526"
 ---
 # <a name="compiler-warning-level-1-c4286"></a>コンパイラの警告 (レベル 1) C4286
-'type1': 行番号の基本クラス ('type2') によってキャッチされました  
-  
- 指定された例外の種類は、以前のハンドラーによって処理されます。 2 番目の catch の型は、最初の型から派生します。 基本クラスの例外は、派生クラスで例外をキャッチします。  
-  
-## <a name="example"></a>例  
-  
-```  
-//C4286.cpp  
-// compile with: /W1  
-#include <eh.h>  
-class C {};  
-class D : public  C {};  
-int main()  
-{  
-    try  
-    {  
-        throw "ooops!";  
-    }  
-    catch( C ) {}  
-    catch( D ) {}  // warning C4286, D is derived from C  
-}  
+
+'type1': 行番号の基本クラス ('type2') によってキャッチされました
+
+指定した例外の種類は、以前のハンドラーによって処理されます。 2 番目の catch の型は、最初の型から派生します。 基底クラスの例外は、派生クラスの例外をキャッチします。
+
+## <a name="example"></a>例
+
+```
+//C4286.cpp
+// compile with: /W1
+#include <eh.h>
+class C {};
+class D : public  C {};
+int main()
+{
+    try
+    {
+        throw "ooops!";
+    }
+    catch( C ) {}
+    catch( D ) {}  // warning C4286, D is derived from C
+}
 ```
