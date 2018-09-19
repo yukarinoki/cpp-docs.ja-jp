@@ -188,12 +188,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62bb1ca2cc4ba07e3f3262f6babee3ed4c52caa2
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
-ms.translationtype: HT
+ms.openlocfilehash: db4e6a01fbf7384cfbc2e1ef2b3c5ed48991998d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45708215"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095450"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx クラス
 Windows のシングル ドキュメント インターフェイス (SDI: Single Document Interface) のオーバーラップ フレーム ウィンドウまたはポップアップ フレーム ウィンドウの機能を実装し、ウィンドウを管理するメンバーを提供します。 拡張、 [CFrameWnd](../../mfc/reference/cframewnd-class.md)クラス。  
@@ -1198,17 +1198,12 @@ afx_msg LRESULT OnMenuChar(
   
 ### <a name="return-value"></a>戻り値  
  上位ワードは、次の値のいずれかである必要があります。  
-  
- `0`  
- フレームワークには、キーストロークを無視する必要があります。  
-  
- `1`  
- フレームワークは、メニューを閉じる必要があります。  
-  
- `2`  
- フレームワークには、メニューに表示される項目のいずれかを選択する必要があります。 下位ワードには、選択するコマンドの ID が含まれています。  
-  
-### <a name="remarks"></a>Remarks  
+
+|||
+|-|-|
+ `0` | フレームワークには、キーストロークを無視する必要があります。  
+ `1`  | フレームワークは、メニューを閉じる必要があります。  
+ `2`  | フレームワークには、メニューに表示される項目のいずれかを選択する必要があります。 下位ワードには、選択するコマンドの ID が含まれています。  
   
 ##  <a name="onmousemove"></a>  CFrameWndEx::OnMouseMove  
  フレームワークは、ポインターを移動すると、このメソッドを呼び出します。  
