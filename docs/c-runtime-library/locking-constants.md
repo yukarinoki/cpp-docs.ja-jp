@@ -29,42 +29,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 588c286cbad5e0097394a38eed34c09fc04af3ea
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: abf776ab72d692be6d573803353f35946df145ec
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389970"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031940"
 ---
 # <a name="locking-constants"></a>_locking 定数
-## <a name="syntax"></a>構文  
-  
-```  
-  
-#include <sys/locking.h>  
-  
-```  
-  
-## <a name="remarks"></a>コメント  
- `_locking` 関数の呼び出しにおける *mode* 引数によって、実行されるロック操作が指定されます。  
-  
- *mode* 引数は、次のマニフェスト定数のいずれかである必要があります。  
-  
- `_LK_LOCK`  
- 指定したバイトをロックします。 バイトをロックできない場合は、関数によって 1 秒後に再試行されます。 10 回試行した後、バイトをロックできなかった場合、関数はエラーを返します。  
-  
- `_LK_RLCK`  
- `_LK_LOCK` と同じ。  
-  
- `_LK_NBLCK`  
- 指定したバイトをロックします。 バイトをロックできない場合、関数はエラーを返します。  
-  
- `_LK_NBRLCK`  
- `_LK_NBLCK` と同じ。  
-  
- `_LK_UNLCK`  
- 指定したバイトをロック解除します。 (バイトはすでにロックされている必要があります)。  
-  
-## <a name="see-also"></a>参照  
- [_locking](../c-runtime-library/reference/locking.md)   
- [グローバル定数](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>構文
+
+```
+#include <sys/locking.h>
+```
+
+## <a name="remarks"></a>コメント
+
+`_locking` 関数の呼び出しにおける *mode* 引数によって、実行されるロック操作が指定されます。
+
+*mode* 引数は、次のマニフェスト定数のいずれかである必要があります。
+
+|||
+|-|-|
+| `_LK_LOCK`  | 指定したバイトをロックします。 バイトをロックできない場合は、関数によって 1 秒後に再試行されます。 10 回試行した後、バイトをロックできなかった場合、関数はエラーを返します。  |
+| `_LK_RLCK`  | `_LK_LOCK` と同じ。  |
+|`_LK_NBLCK`  | 指定したバイトをロックします。 バイトをロックできない場合、関数はエラーを返します。  |
+| `_LK_NBRLCK`  | `_LK_NBLCK` と同じ。  |
+| `_LK_UNLCK`  | 指定したバイトをロック解除します。 (バイトはすでにロックされている必要があります)。  |
+
+## <a name="see-also"></a>参照
+
+[_locking](../c-runtime-library/reference/locking.md)<br/>
+[グローバル定数](../c-runtime-library/global-constants.md)

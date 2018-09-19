@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acfff85313e452a5d96e73fb547c66c6fa196d16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b1d91cf62d6d8665e9578984897a6c599c024c6c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381786"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059825"
 ---
 # <a name="converting-multibyte-characters"></a>Converting Multibyte Characters (マルチバイト文字の変換)
-**ANSI 3.1.3.4** マルチバイト文字を、ワイド文字定数の対応するワイド文字 (コード) に変換するときに使用する現在のロケール  
-  
- 現在のロケールは、既定で "C" ロケールになります。 このロケールは [#pragma setlocale](../preprocessor/setlocale.md) で変更できます。  
-  
-## <a name="see-also"></a>参照  
- [文字](../c-language/characters.md)
+
+**ANSI 3.1.3.4** マルチバイト文字を、ワイド文字定数の対応するワイド文字 (コード) に変換するときに使用する現在のロケール
+
+現在のロケールは、既定で "C" ロケールになります。 このロケールは [#pragma setlocale](../preprocessor/setlocale.md) で変更できます。
+
+## <a name="see-also"></a>参照
+
+[文字](../c-language/characters.md)
