@@ -17,17 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 699b21eff62c0014ec1b0da51a620bdab2f32281
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cd01cd17dd7c3b0fce2d79b8141c19e651bc5309
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382849"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084485"
 ---
 # <a name="initialization"></a>初期化
-"初期化子" は、宣言された変数に代入される値または値のシーケンスです。 変数宣言の宣言子に初期化子を適用して、変数を初期値に設定できます。 初期化子の値を変数に割り当てます。  
-  
- ここからのセクションでは、[スカラー](../c-language/initializing-scalar-types.md)型、[集約](../c-language/initializing-aggregate-types.md)型、[文字列](../c-language/initializing-strings.md)型の変数を初期化する方法について説明します。 "スカラー型" には、すべての数値型とポインターが含まれます。 "集約型" には配列、構造体、および共用体が含まれています。  
-  
-## <a name="see-also"></a>参照  
- [宣言と型](../c-language/declarations-and-types.md)
+
+"初期化子" は、宣言された変数に代入される値または値のシーケンスです。 変数宣言の宣言子に初期化子を適用して、変数を初期値に設定できます。 初期化子の値を変数に割り当てます。
+
+ここからのセクションでは、[スカラー](../c-language/initializing-scalar-types.md)型、[集約](../c-language/initializing-aggregate-types.md)型、[文字列](../c-language/initializing-strings.md)型の変数を初期化する方法について説明します。 "スカラー型" には、すべての数値型とポインターが含まれます。 "集約型" には配列、構造体、および共用体が含まれています。
+
+## <a name="see-also"></a>参照
+
+[宣言と型](../c-language/declarations-and-types.md)

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0894ecf767d24f6e5ec5ea385b5aeca6daae41a8
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: aacbb7709daf6952f00276663e20131e967a554d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131754"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022359"
 ---
 # <a name="functions-c"></a>関数 (C++)
 
@@ -135,7 +135,7 @@ int sum(int a, int b)
 
 次の図では、関数定義の一部を示しています。 網かけされた部分は関数本体です。
 
- ![関数定義部分](../cpp/media/vc38ru1.gif "vc38RU1")関数定義部分
+![関数定義部分](../cpp/media/vc38ru1.gif "vc38RU1")関数定義部分
 
 ## <a name="function-definitions"></a>関数定義
 
@@ -205,7 +205,7 @@ void DoSomething(std::string& input){...}
 void DoSomething(const std::string& input){...}
 ```
 
- **C++ 11:** 右辺値参照または左辺値参照によって渡される引数を明示的に処理するには、ユニバーサルの参照を示すために、パラメーターで二重アンパサンドを使用します。
+**C++ 11:** 右辺値参照または左辺値参照によって渡される引数を明示的に処理するには、ユニバーサルの参照を示すために、パラメーターで二重アンパサンドを使用します。
 
 ```cpp
 void DoSomething(const std::string&& input){...}
@@ -315,22 +315,22 @@ template<typename F, typename Tuple = tuple<T...>,
     ```cpp
     #include <string>
     #include <iostream>
-    
+
     using namespace std;
-    
+
     struct S
     {
         string name;
         int num;
     };
-    
+
     S g()
     {
         string t{ "hello" };
         int u{ 42 };
         return { t, u };
     }
-    
+
     int main()
     {
         S s = g();
@@ -338,16 +338,16 @@ template<typename F, typename Tuple = tuple<T...>,
         return 0;
     }
     ```
-    
+
 1. Std::tuple または std::pair のオブジェクトを返します。
 
     ```cpp
     #include <tuple>
     #include <string>
     #include <iostream>
-    
+
     using namespace std;
-        
+
     tuple<int, string, double> f()
     {
         int i{ 108 };
@@ -355,20 +355,20 @@ template<typename F, typename Tuple = tuple<T...>,
         double d{ .01 };
         return { i,s,d };
     }
-    
+
     int main()
     {
         auto t = f();
         cout << get<0>(t) << " " << get<1>(t) << " " << get<2>(t) << endl;
-     
+
         // --or--
-    
+
         int myval;
         string myname;
         double mydecimal;
         tie(myval, myname, mydecimal) = f();
         cout << myval << " " << myname << " " << mydecimal << endl;
-    
+
         return 0;
     }
     ```
@@ -379,9 +379,9 @@ template<typename F, typename Tuple = tuple<T...>,
     #include <tuple>
     #include <string>
     #include <iostream>
-    
+
     using namespace std;
-    
+
     tuple<int, string, double> f()
     {
         int i{ 108 };
@@ -394,25 +394,25 @@ template<typename F, typename Tuple = tuple<T...>,
         string name;
         int num;
     };
-    
+
     S g()
     {
         string t{ "hello" };
         int u{ 42 };
         return { t, u };
     }
-    
+
     int main()
     {
         auto[x, y, z] = f(); // init from tuple
         cout << x << " " << y << " " << z << endl;
-    
+
         auto[a, b] = g(); // init from POD struct
         cout << a << " " << b << endl;
         return 0;
     }
     ```
-    
+
 1. 戻り値自体だけでなく、「値を返すできます」関数を変更したり、呼び出し元が提供するオブジェクトの値を初期化するために、参照渡しを使用するパラメーターの任意の数を定義することで。 詳細については、次を参照してください。[参照型関数の引数](reference-type-function-arguments.md)します。
 
 ## <a name="function-pointers"></a>関数ポインター
@@ -435,9 +435,10 @@ int (*myFunction(char* s))(int);
 この宣言は、上記の typedef を使用した宣言と同等です。
 
 ## <a name="see-also"></a>関連項目
- [関数のオーバーロード](../cpp/function-overloading.md)  
- [可変個の引数リストを取る関数](../cpp/functions-with-variable-argument-lists-cpp.md)  
- [明示的に既定された関数および削除された関数](../cpp/explicitly-defaulted-and-deleted-functions.md)  
- [関数の引数依存名の参照 (Koenig 参照)](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)  
- [既定の引数](../cpp/default-arguments.md)  
- [インライン関数](../cpp/inline-functions-cpp.md)
+
+[関数のオーバーロード](../cpp/function-overloading.md)<br/>
+[可変個の引数リストを取る関数](../cpp/functions-with-variable-argument-lists-cpp.md)<br/>
+[明示的に既定された関数および削除された関数](../cpp/explicitly-defaulted-and-deleted-functions.md)<br/>
+[関数の引数依存名の参照 (Koenig 参照)](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)<br/>
+[既定の引数](../cpp/default-arguments.md)<br/>
+[インライン関数](../cpp/inline-functions-cpp.md)
