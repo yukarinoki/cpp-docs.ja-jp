@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b0d2972c7d6b1f7211d5f43fa0248a8b2980f10
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: a54f8e21c253c46c6a6a086fd10d193a18b7e59e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540698"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718264"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 Microsoft Outlook の **ナビゲーション ウィンドウ** と同じ外観を持つタブ コントロールです。  
@@ -148,20 +148,20 @@ void AddControl(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWndCtrl*  
- 追加するコントロールへのポインター。  
+*pWndCtrl*<br/>
+[in]追加するコントロールへのポインター。  
   
- [in]*lpszName*  
- タブの名前を指定します。  
+*lpszName*<br/>
+[in]タブの名前を指定します。  
   
- [in]*bDetachable*  
- TRUE の場合、ページが作成されます、取り外し可能です。  
+*bDetachable*<br/>
+[in]TRUE の場合、ページが作成されます、取り外し可能です。  
   
- [in]*nImageID*  
- 新しいタブに表示されるイメージの内部のイメージ リストのイメージのインデックス。  
+*nImageID*<br/>
+[in]新しいタブに表示されるイメージの内部のイメージ リストのイメージのインデックス。  
   
- [in]*dwControlBarStyle*  
- ラップされたドッキング ペインの AFX_ cbrs _ * スタイルを指定します。  
+*dwControlBarStyle*<br/>
+[in]ラップされたドッキング ペインの AFX_ cbrs _ * スタイルを指定します。  
   
 ### <a name="remarks"></a>Remarks  
  Outlook バーの新しいページにコントロールを追加するのにには、この関数を使用します。  
@@ -212,14 +212,14 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*rect*  
- 初期サイズと位置をピクセル単位で指定します。  
+*rect*<br/>
+[in]初期サイズと位置をピクセル単位で指定します。  
   
- [in]*pParentWnd*  
- 親ウィンドウへのポインター。 NULL は指定できません。  
+*pParentWnd*<br/>
+[in]親ウィンドウへのポインター。 NULL は指定できません。  
   
- [in]*nID*  
- コントロールの id。  
+*nID*<br/>
+[in]コントロールの id。  
   
 ### <a name="return-value"></a>戻り値  
  コントロールが正常に作成されている場合、0 以外の場合それ以外の場合 0 を返します。  
@@ -235,8 +235,8 @@ static void EnableAnimation(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- アニメーションを有効または無効になっているかどうかを指定します。  
+*bEnable*<br/>
+[in]アニメーションを有効または無効になっているかどうかを指定します。  
   
 ### <a name="remarks"></a>Remarks  
  アニメーションを無効にするには、この関数を呼び出します。 タブ ページを開くと、ページのキャプションはアニメーションが有効になっている場合にアップまたはスケール ダウンをスライドします。 アニメーションが無効になっている場合は、ページがすぐにアクティブなになります。  
@@ -268,14 +268,14 @@ void EnableScrollButtons(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- スクロール ボタンを表示するかどうかを判断します。  
+*bEnable*<br/>
+[in]スクロール ボタンを表示するかどうかを判断します。  
   
- [in]*bIsUp*  
- 上部のスクロール バーが表示されるかどうかを判断します。  
+*bIsUp*<br/>
+[in]上部のスクロール バーが表示されるかどうかを判断します。  
   
- [in]*bIsDown*  
- 下部のスクロール バーが表示されるかどうかを判断します。  
+*bIsDown*<br/>
+[in]下部のスクロール バーが表示されるかどうかを判断します。  
   
 ### <a name="remarks"></a>Remarks  
  スクロール ボタンの表示を有効にします。 スクロール ボタンを復元するアクティブなタブが変更されたときに、このメソッドは、フレームワークによって呼び出されます。  
@@ -367,8 +367,8 @@ virtual BOOL SetActiveTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iTab*  
- 開く タブの 0 から始まるインデックス。  
+*iTab*<br/>
+[in]開くタブの 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  指定したタブが正常に開かれた場合は 0 以外それ以外の場合 0 を返します。  
@@ -384,8 +384,8 @@ void SetBorderSize(int nBorderSize);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nBorderSize*  
- 新しい境界線のサイズをピクセル単位で指定します。  
+*nBorderSize*<br/>
+[in]新しい境界線のサイズをピクセル単位で指定します。  
   
 ### <a name="remarks"></a>Remarks  
  新しい境界線のサイズを設定し、outlook のウィンドウ レイアウトを再計算します。  
@@ -400,11 +400,11 @@ void SetPageButtonTextAlign(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiAlign*  
- テキストの配置を指定します。  
+*uiAlign*<br/>
+[in]テキストの配置を指定します。  
   
- [in]*bRedraw*  
- TRUE の場合は、outlook のウィンドウが再描画されます。  
+*bRedraw*<br/>
+[in]TRUE の場合は、outlook のウィンドウが再描画されます。  
   
 ### <a name="remarks"></a>Remarks  
  この関数を使用すると、ページのボタンのテキストの配置を変更できます。  
@@ -430,14 +430,14 @@ BOOL SetToolbarImageList(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiID*  
- 読み込むイメージのリソース ID を指定します。  
+*uiID*<br/>
+[in]読み込むイメージのリソース ID を指定します。  
   
- [in]*cx*  
- イメージの幅 (ピクセル単位)、イメージ リストを指定します。  
+*cx*<br/>
+[in]イメージの幅 (ピクセル単位)、イメージ リストを指定します。  
   
- [in]*clrTransp*  
- 透明色を指定する RGB 値。  
+*clrTransp*<br/>
+[in]透明色を指定する RGB 値。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、TRUE を返しますそれ以外の場合、FALSE を返します。  

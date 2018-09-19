@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb6cc740577dfcb5921332c24e3cec2d2d6cb100
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 18a260e0ea0283489d074e937011722cec2d570b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210851"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702573"
 ---
 # <a name="cmfctoolbarbutton-class"></a>CMFCToolBarButton クラス
 ツールバーのボタン機能を提供します。  
@@ -269,7 +269,7 @@ class CMFCToolBarButton : public CObject
   
 ### <a name="data-members"></a>データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CMFCToolBarButton::m_bImage](#m_bimage)|イメージが、ボタンに表示されるかどうかを指定します。|  
 |[CMFCToolBarButton::m_bText](#m_btext)|ボタンにテキスト ラベルを表示するかどうかを指定します。|  
@@ -315,8 +315,8 @@ virtual BOOL CanBeDropped(CMFCToolBar* pToolbar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pToolbar*  
- 使用されません。  
+*pToolbar*<br/>
+[in]使用されていません。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドは、TRUE を返します。  
@@ -371,20 +371,20 @@ CMFCToolBarButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiID*  
- ボタンのコマンド ID。  
+*uiID*<br/>
+[in]ボタンのコマンド ID。  
   
- [in]*画像を*  
- イメージのコレクション内のボタンのイメージのインデックス。  
+*画像を*<br/>
+[in]イメージのコレクション内のボタンのイメージのインデックス。  
   
- [in]*lpszText*  
- ボタンのテキスト ラベル。 NULL にすることができます。  
+*lpszText*<br/>
+[in]ボタンのテキスト ラベル。 NULL にすることができます。  
   
- [in]*bUserButton*  
- ボタンがユーザー定義かどうかを判断するブール値。 このパラメーターが TRUE の場合は、ボタンがユーザー定義します。 それ以外の場合、ボタンのイメージは、リソースから読み込まれます。  
+*bUserButton*<br/>
+[in]ボタンがユーザー定義かどうかを判断するブール値。 このパラメーターが TRUE の場合は、ボタンがユーザー定義します。 それ以外の場合、ボタンのイメージは、リソースから読み込まれます。  
   
- [in]*ブロック*  
- ボタンをカスタマイズできるかどうかを決定するブール値。 このパラメーターが TRUE の場合、ボタンをカスタマイズできません。 それ以外の場合、ボタンをカスタマイズできます。  
+*ブロックされています。*<br/>
+[in]ボタンをカスタマイズできるかどうかを決定するブール値。 このパラメーターが TRUE の場合、ボタンをカスタマイズできません。 それ以外の場合、ボタンをカスタマイズできます。  
   
 ##  <a name="comparewith"></a>  CMFCToolBarButton::CompareWith  
  このインスタンスと指定された`CMFCToolBarButton`オブジェクト。  
@@ -394,8 +394,8 @@ virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*他*  
- このインスタンスと比較するオブジェクトへの参照。  
+*other*<br/>
+[in]このインスタンスと比較するオブジェクトへの参照。  
   
 ### <a name="return-value"></a>戻り値  
  指定されたオブジェクトがこのインスタンスの値に等しい場合は 0 以外それ以外の場合、0 を返します。  
@@ -411,8 +411,8 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*src*  
- コピー元のソース ボタンへの参照。  
+*src*<br/>
+[in]コピー元のソースボタンへの参照。  
   
 ### <a name="remarks"></a>Remarks  
  このツール バー ボタンに別のツール バー ボタンをコピーするには、このメソッドを呼び出します。  
@@ -425,8 +425,8 @@ static CMFCToolBarButton* __stdcall CreateFromOleData(COleDataObject* pDataObjec
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDataObject*  
- ソース OLE データ オブジェクト。  
+*pDataObject*<br/>
+[in]ソース OLE データ オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  作成された `CMFCToolBarButton` オブジェクト。  
@@ -442,8 +442,8 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- このパラメーターには true、有効にする入力、または入力を無効にする場合は FALSE に設定します。  
+*bEnable*<br/>
+[in]このパラメーターには true、有効にする入力、または入力を無効にする場合は FALSE に設定します。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、`EnableWindow`を有効にする、または入力を無効にします。 詳細については、次を参照してください。 [EnableWindow](https://msdn.microsoft.com/library/windows/desktop/ms646291) Windows SDK に含まれています。  
@@ -456,8 +456,8 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*menuButton*  
- ターゲットのメニュー ボタンへの参照。  
+*メニュー ボタン*<br/>
+[in]ターゲットのメニュー ボタンへの参照。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドは、TRUE を返します。  
@@ -742,8 +742,8 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*hwnd*  
- ウィンドウ ハンドル。  
+*hwnd*<br/>
+[in]ウィンドウ ハンドル。  
   
 ### <a name="return-value"></a>戻り値  
  ボタンが、指定したウィンドウ ハンドルの所有者である場合、0 以外の場合それ以外の場合 0 を返します。  
@@ -891,8 +891,8 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iNotifyCode*  
- コマンドに関連付けられている通知メッセージ。  
+*iNotifyCode*<br/>
+[in]コマンドに関連付けられている通知メッセージ。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドは、FALSE を返します。  
@@ -935,8 +935,8 @@ virtual BOOL OnBeforeDrop(CMFCToolBar* pTarget);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pTarget*  
- ドラッグ アンド ドロップ操作のターゲット。  
+*pTarget*<br/>
+[in]ドラッグ アンド ドロップ操作のターゲット。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合は、指定されたターゲットのツールバーにボタンをドロップできます。それ以外の場合は FALSE です。  
@@ -957,14 +957,14 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- ボタンを表示するデバイス コンテキスト。  
+*pDC*<br/>
+[in]ボタンを表示するデバイス コンテキスト。  
   
- [in]*sizeDefault*  
- ボタンの既定のサイズ。  
+*sizeDefault*<br/>
+[in]ボタンの既定のサイズ。  
   
- [in]*bHorz*  
- 親ツールバーのドッキング状態。 このパラメーターは、ツールバーが垂直方向にドッキングされている場合は、ツールバーが水平方向にドッキングされているかがフローティングする場合は TRUE または FALSE です。  
+*bHorz*<br/>
+[in]親ツールバーのドッキング状態。 このパラメーターは、ツールバーが垂直方向にドッキングされている場合は、ツールバーが水平方向にドッキングされているかがフローティングする場合は TRUE または FALSE です。  
   
 ### <a name="return-value"></a>戻り値  
  A `SIZE` (ピクセル単位)、ボタンの大きさを格納する構造体。  
@@ -994,8 +994,8 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWndParent*  
- 新しい親ウィンドウです。  
+*pWndParent*<br/>
+[in]新しい親ウィンドウです。  
   
 ### <a name="remarks"></a>Remarks  
  ユーザーがドラッグすると、1 つのツールバーから別のツールバーにボタンがツールバーになど、挿入されます。  
@@ -1012,11 +1012,11 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*我が物*  
- ツール バー ボタンの親ウィンドウ。  
+*我が物*<br/>
+[in]ツール バー ボタンの親ウィンドウ。  
   
- [in]*bDelay*  
- TRUE の場合、メッセージは、遅延時間で処理する必要があります。  
+*bDelay*<br/>
+[in]TRUE の場合、メッセージは、遅延時間で処理する必要があります。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドは、FALSE を返します。  
@@ -1049,8 +1049,8 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*我が物*  
- ツール バー ボタンの親ウィンドウ。  
+*我が物*<br/>
+[in]ツール バー ボタンの親ウィンドウ。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドは、FALSE を返します。  
@@ -1070,11 +1070,11 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- ボタンを表示するデバイス コンテキスト。  
+*pDC*<br/>
+[in]ボタンを表示するデバイス コンテキスト。  
   
- [in]*のため*  
- 特定の色の通知。  
+*ため*<br/>
+[in]特定の色の通知。  
   
 ### <a name="return-value"></a>戻り値  
  フレームワークを使用して、ボタンの背景を描画するブラシ オブジェクトへのハンドル。  
@@ -1094,8 +1094,8 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pMenu*  
- カスタマイズするメニュー。  
+*pMenu*<br/>
+[in]カスタマイズするメニュー。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドは、FALSE を返します。  
@@ -1111,8 +1111,8 @@ virtual void OnDblClk(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*我が物*  
- -   ボタンの親ウィンドウ。  
+*我が物*<br/>
+[in] -、ボタンの親ウィンドウ。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドを呼び出して、`CMFCToolBar::OnLButtonDblClk`メソッドが親ツールバーを処理するとき、[した](/windows/desktop/inputdev/wm-lbuttondblclk)メッセージ。  
@@ -1135,29 +1135,29 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- ボタンを表示するデバイス コンテキスト。  
+*pDC*<br/>
+[in]ボタンを表示するデバイス コンテキスト。  
   
- [in]*rect*  
- ボタンの外接する四角形。  
+*rect*<br/>
+[in]ボタンの外接する四角形。  
   
- [in]*pImages*  
- ボタンに関連付けられているツール バー イメージのコレクション。  
+*pImages*<br/>
+[in]ボタンに関連付けられているツール バー イメージのコレクション。  
   
- [in]*bHorz*  
- 親ツールバーのドッキング状態。 ボタンが垂直方向にドッキングされているとき、ボタンを水平方向および FALSE はドッキング時に、このパラメーターは TRUE です。  
+*bHorz*<br/>
+[in]親ツールバーのドッキング状態。 ボタンが垂直方向にドッキングされているとき、ボタンを水平方向および FALSE はドッキング時に、このパラメーターは TRUE です。  
   
- [in]*bCustomizeMode*  
- ツールバーのカスタマイズ モードであるかどうかを指定します。 ツールバーは、ツールバーはカスタマイズ モードでないときにカスタマイズ モードと FALSE であるとき、このパラメーターは TRUE です。  
+*bCustomizeMode*<br/>
+[in]ツールバーのカスタマイズ モードであるかどうかを指定します。 ツールバーは、ツールバーはカスタマイズ モードでないときにカスタマイズ モードと FALSE であるとき、このパラメーターは TRUE です。  
   
- [in]*bHighlight*  
- ボタンが強調表示されているかどうかを指定します。 このパラメーターは、ボタンが強調表示されていない場合は、ボタンが強調表示されている場合に TRUE と FALSE です。  
+*bHighlight*<br/>
+[in]ボタンが強調表示されているかどうかを指定します。 このパラメーターは、ボタンが強調表示されていない場合は、ボタンが強調表示されている場合に TRUE と FALSE です。  
   
- [in]*bDrawBorder*  
- ボタンの境界線を表示する必要があるかどうかを指定します。 このパラメーターは、TRUE は、ボタンから、ボタンが境界線が表示されない場合に、境界線を FALSE を表示する必要があります。  
+*bDrawBorder*<br/>
+[in]ボタンの境界線を表示する必要があるかどうかを指定します。 このパラメーターは、TRUE は、ボタンから、ボタンが境界線が表示されない場合に、境界線を FALSE を表示する必要があります。  
   
- [in]*bGrayDisabledButtons*  
- 無効なボタンの影を付けるか、無効なイメージのコレクションを使用するかどうかを指定します。 このメソッドは、無効なイメージのコレクションを使用する必要がありますと、無効になっているボタンを網掛けと FALSE をする場合、このパラメーターは TRUE です。  
+*bGrayDisabledButtons*<br/>
+[in]無効なボタンの影を付けるか、無効なイメージのコレクションを使用するかどうかを指定します。 このメソッドは、無効なイメージのコレクションを使用する必要がありますと、無効になっているボタンを網掛けと FALSE をする場合、このパラメーターは TRUE です。  
   
 ### <a name="remarks"></a>Remarks  
  ツールバーのボタンの描画をカスタマイズするには、このメソッドをオーバーライドします。  
@@ -1173,14 +1173,14 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- ボタンを表示するデバイス コンテキスト。  
+*pDC*<br/>
+[in]ボタンを表示するデバイス コンテキスト。  
   
- [in]*rect*  
- ボタンの外接する四角形。  
+*rect*<br/>
+[in]ボタンの外接する四角形。  
   
- [in]*bSelected*  
- ボタンが選択されているかどうかを指定します。 このパラメーターが TRUE の場合、ボタンが選択されます。 このパラメーターが FALSE の場合、ボタンが選択されていません。  
+*bSelected*<br/>
+[in]ボタンが選択されているかどうかを指定します。 このパラメーターが TRUE の場合、ボタンが選択されます。 このパラメーターが FALSE の場合、ボタンが選択されていません。  
   
 ### <a name="return-value"></a>戻り値  
  指定したデバイス コンテキストにあるボタンのピクセル単位の幅。  
@@ -1200,8 +1200,8 @@ virtual BOOL OnGetCustomToolTipText(CString& strToolTip);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*strToolTip*  
- A`CString`カスタム ツールヒント テキストを受け取るオブジェクト。  
+*strToolTip*<br/>
+[out]A`CString`カスタム ツールヒント テキストを受け取るオブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドは、FALSE を返します。  
@@ -1239,8 +1239,8 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bShow*  
- ボタンが表示されているかどうかを指定します。 このパラメーターが TRUE の場合、ボタンが表示されます。 それ以外の場合、ボタンは表示されません。  
+*bShow*<br/>
+[in]ボタンが表示されているかどうかを指定します。 このパラメーターが TRUE の場合、ボタンが表示されます。 それ以外の場合、ボタンは表示されません。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドの既定の実装では、何も行われません。 ボタンの可視性を更新するには、このメソッドをオーバーライドします。  
@@ -1253,8 +1253,8 @@ virtual void OnSize(int iSize);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iSize*  
- ボタンの新しい幅。  
+*iSize*<br/>
+[in]ボタンの新しい幅。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドの既定の実装では、何も行われません。 親ツールバーの位置、サイズが変更されたときに、ボタンのサイズを変更するには、このメソッドをオーバーライドします。  
@@ -1269,11 +1269,11 @@ virtual BOOL OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*我が物*  
- ボタンの親ウィンドウ。 NULL にすることができます。  
+*我が物*<br/>
+[in]ボタンの親ウィンドウ。 NULL にすることができます。  
   
- [in]*pTI*  
- A`TOOLINFO`ツール ヒント コントロールでのツールに関する情報を含む構造体。  
+*PTI*<br/>
+[in]A`TOOLINFO`ツール ヒント コントロールでのツールに関する情報を含む構造体。  
   
 ### <a name="return-value"></a>戻り値  
  結果`OnMenuButtonToolHitTest`ボタンは、親フレーム ウィンドウへのポインターを取得できる場合は、それ以外の場合は FALSE。  
@@ -1299,17 +1299,17 @@ virtual BOOL OnUpdateToolTip(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWndParent*  
- 親ウィンドウ。  
+*pWndParent*<br/>
+[in]親ウィンドウ。  
   
- [in]*iButtonIndex*  
- 親のボタン コレクション内のボタンの 0 から始まるインデックス。  
+*iButtonIndex*<br/>
+[in]親のボタン コレクション内のボタンの 0 から始まるインデックス。  
   
- [in]*wndToolTip*  
- ツールヒント テキストを表示するコントロール。  
+*wndToolTip*<br/>
+[in]ツールヒント テキストを表示するコントロール。  
   
- [out]*str*  
- A`CString`更新されたツールヒント テキストを受け取るオブジェクト。  
+*str*<br/>
+[out]A`CString`更新されたツールヒント テキストを受け取るオブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドは、FALSE を返します。  
@@ -1325,8 +1325,8 @@ virtual BOOL PrepareDrag(COleDataSource& srcItem);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*srcItem*  
- A`COleDataSource`ドラッグ アンド ドロップ操作に関する状態情報を格納するオブジェクトです。  
+*srcItem*<br/>
+[in]A`COleDataSource`ドラッグ アンド ドロップ操作に関する状態情報を格納するオブジェクトです。  
   
 ### <a name="return-value"></a>戻り値  
  操作が成功した場合は TRUE。それ以外の場合は FALSE です。  
@@ -1380,8 +1380,8 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ar*  
- `CArchive`元またはシリアル化するオブジェクト。  
+*ar*<br/>
+[in]`CArchive`元またはシリアル化するオブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、クリップボードまたはドラッグ アンド ドロップ操作などのデータ転送プロセスをサポートします。 読み取るか、または、提供された ID、テキスト ラベル、およびイメージの ID などのボタンのプロパティに書き込みます`CArchive`オブジェクト。  
@@ -1398,11 +1398,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pParent*  
- ツール バー ボタンの親ウィンドウ。  
+*pParent*<br/>
+[in]ツール バー ボタンの親ウィンドウ。  
   
- [in]*データ*  
- A`CAccessibilityData`ツール バー ボタンのアクセシビリティ データが格納されているオブジェクト。  
+*data*<br/>
+[in]A`CAccessibilityData`ツール バー ボタンのアクセシビリティ データが格納されているオブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドは、TRUE を返します。  
@@ -1418,8 +1418,8 @@ static void __stdcall SetClipboardFormatName(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszName*  
- グローバルのクリップボード形式の新しい名前。 Nll は指定できません。  
+*lpszName*<br/>
+[in]グローバルのクリップボード形式の新しい名前。 Nll は指定できません。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、複数のアプリケーションの間でのドラッグ アンド ドロップ操作を可能にします。 各アプリケーションは、同じのクリップボード形式の名前を指定する必要があります。  
@@ -1434,8 +1434,8 @@ virtual void SetImage(int iImage);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*画像を*  
- ツール バー イメージのコレクション内のイメージのインデックス。  
+*画像を*<br/>
+[in]ツール バー イメージのコレクション内のイメージのインデックス。  
   
 ### <a name="remarks"></a>Remarks  
  ツール バー ボタンが、区切り記号の場合*画像を*区切り記号のボタンの新しい幅を参照します。  
@@ -1450,8 +1450,8 @@ static void SetProtectedCommands(const CList<UINT,UINT>& lstCmds);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lstCmds*  
- 保護されているコマンドの一覧。  
+*lstCmds*<br/>
+[in]保護されているコマンドの一覧。  
   
 ### <a name="remarks"></a>Remarks  
  カスタマイズ モードでは、フレームワークには、保護されているツール バー ボタンのコマンドが無効にします。 ユーザーは、ドラッグ アンド ドロップを実行し、無効になっているツールバーのボタンの操作を編集ことはできません。  
@@ -1476,8 +1476,8 @@ void SetRect(const CRect rect);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*rect*  
- ボタンの新しい外接する四角形。  
+*rect*<br/>
+[in]ボタンの新しい外接する四角形。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、 [CMFCToolBarButton::OnMove](#onmove)後に、新しい外接する四角形を設定します。  
@@ -1490,8 +1490,8 @@ virtual void SetStyle(UINT nStyle);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nStyle*  
- 新しいボタンのスタイル。  
+*nStyle*<br/>
+[in]新しいボタンのスタイル。  
   
 ### <a name="remarks"></a>Remarks  
  既定の実装の設定、 [CMFCToolBarButton::m_nStyle](#m_nstyle)データ メンバーを*nStyle*します。 スタイルの変更を処理する追加の処理を実行する場合は、このメソッドをオーバーライドします。 参照してください[ツール バー コントロールのスタイル](toolbar-control-styles.md)有効なスタイルのフラグの一覧についてはします。  
@@ -1504,8 +1504,8 @@ void SetVisible(BOOL bShow=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bShow*  
- ボタンを非表示かどうかを示すブール値。 このパラメーターが TRUE の場合、ボタンが表示されます。 パラメーターが FALSE の場合は、ボタンは表示されません。  
+*bShow*<br/>
+[in]ボタンを非表示かどうかを示すブール値。 このパラメーターが TRUE の場合、ボタンが表示されます。 パラメーターが FALSE の場合は、ボタンは表示されません。  
   
 ### <a name="remarks"></a>Remarks  
  特定のツール バー ボタンを表示または非表示には、この関数を使用します。 呼び出す、 [CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate)後に、このメソッドを呼び出します。  
@@ -1518,8 +1518,8 @@ void Show(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bShow*  
- ボタンを非表示かどうかを示すブール値。 このパラメーターが TRUE の場合、ボタンが表示されます。 パラメーターが FALSE の場合は、ボタンは表示されません。  
+*bShow*<br/>
+[in]ボタンを非表示かどうかを示すブール値。 このパラメーターが TRUE の場合、ボタンが表示されます。 パラメーターが FALSE の場合は、ボタンは表示されません。  
   
 ### <a name="remarks"></a>Remarks  
  フレームワークは、その親ツールバーのサイズが変更されたときに、ツール バー ボタンの可視性を更新するには、このメソッドを呼び出します。 フレームワークでは、このメソッドを呼び出します*bShow*ボタンが不要になった、ツールバーの境界内に収まる場合に FALSE に設定します。 フレームワークでは、このメソッドを呼び出します*bShow*後、ボタンをもう一度サイズ変更、ツールバーの境界内に収まる場合に TRUE に設定します。  
