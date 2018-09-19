@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2191 |Microsoft ドキュメント
+title: コンパイラ エラー C2191 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa4b590b494355450909032c78822553004beddc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6e739c5c9fc77c4c9658afb2f5f6d9568c6f43bb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169437"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088359"
 ---
 # <a name="compiler-error-c2191"></a>コンパイラ エラー C2191
-最初よりも長い 2 番目のパラメーター リスト  
-  
- C の関数は、長いパラメーター リストで 2 番目の時間を宣言されました。 C では、オーバー ロードされた関数はサポートされません。  
-  
-## <a name="example"></a>例  
- 次の例では、C2191 が生成されます。  
-  
-```  
-// C2191.c  
-// compile with: /Za /c  
-void func( int );  
-void func( int, float );   // C2191 different parameter list  
-void func2( int, float );   // OK  
+
+最初よりも長い 2 番目のパラメーター リスト
+
+C 関数は、2 回目に長いパラメーター リストで宣言されました。 C では、オーバー ロードされた関数はサポートされません。
+
+## <a name="example"></a>例
+
+次の例では、C2191 が生成されます。
+
+```
+// C2191.c
+// compile with: /Za /c
+void func( int );
+void func( int, float );   // C2191 different parameter list
+void func2( int, float );   // OK
 ```

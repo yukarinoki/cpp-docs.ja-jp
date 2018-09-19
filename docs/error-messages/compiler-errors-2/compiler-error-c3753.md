@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3753 |Microsoft ドキュメント
+title: コンパイラ エラー C3753 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0d9cb2db2729e5ccb1787e2505fdf0aed1f7a12
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 90462bf9487a60ddcd1add092492e390f7ea71a1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271961"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086687"
 ---
 # <a name="compiler-error-c3753"></a>コンパイラ エラー C3753
-ジェネリック プロパティは使用できません。  
-  
- ジェネリック パラメーター リストは、マネージ クラス、構造体、または関数でのみ使用できます。  
-  
- 詳細については、次を参照してください。[ジェネリック](../../windows/generics-cpp-component-extensions.md)と[プロパティ](../../windows/property-cpp-component-extensions.md)です。  
-  
-## <a name="example"></a>例  
- 次の例では、C3753 を生成します。  
-  
-```  
-// C3753.cpp  
-// compile with: /clr /c  
-ref struct A {  
-   generic <typename T>  
-   property int i;   // C3753 error  
-};  
+
+汎用プロパティは許可されていません
+
+ジェネリック パラメーター リストは、マネージ クラス、構造体、または関数でのみ表示できます。
+
+詳細については、次を参照してください。[ジェネリック](../../windows/generics-cpp-component-extensions.md)と[プロパティ](../../windows/property-cpp-component-extensions.md)します。
+
+## <a name="example"></a>例
+
+次の例では、C3753 が生成されます。
+
+```
+// C3753.cpp
+// compile with: /clr /c
+ref struct A {
+   generic <typename T>
+   property int i;   // C3753 error
+};
 ```

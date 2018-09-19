@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0600d675d37e2fed1d318645daaedcce5f80ed89
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e7a6f4f014d609e8b650951d459c23b07fd4a006
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752372"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085447"
 ---
 # <a name="ccomobject-class"></a>CComObject クラス
 
@@ -36,13 +36,13 @@ ms.locfileid: "43752372"
 ## <a name="syntax"></a>構文
 
 ```
-template<class Base>  
+template<class Base>
 class CComObject : public Base
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*ベース*  
+*ベース*<br/>
 派生したクラス、 [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)または[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)オブジェクトでサポートするその他のすべてのインターフェイスからも、します。
 
 ## <a name="members"></a>メンバー
@@ -101,7 +101,7 @@ CComObject(void* = NULL);
 
 ### <a name="parameters"></a>パラメーター
 
-<em>void\*</em>  
+<em>void\*</em><br/>
 [in]この名前のないパラメーターは使用されません。 他の対称性が存在する`CComXXXObjectXXX`コンス トラクター。
 
 ### <a name="remarks"></a>Remarks
@@ -132,7 +132,7 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
 
 ### <a name="parameters"></a>パラメーター
 
-*pp*  
+*pp*<br/>
 [out]ポインターを**CComObject <** `Base` **>** ポインター。 場合`CreateInstance`が成功すると、 *pp* NULL に設定されます。
 
 ### <a name="return-value"></a>戻り値
@@ -157,19 +157,19 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
 
 ```
 STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
-template <class Q>  
+template <class Q>
 HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*iid*  
+*iid*<br/>
 [in]要求されているインターフェイスの識別子。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]によって識別されるインターフェイス ポインターへのポインター *iid*します。 オブジェクトは、このインターフェイスをサポートしていない場合*ppvObject* NULL に設定されます。
 
-*pp*  
+*pp*<br/>
 [out]型によって識別されるインターフェイス ポインターへのポインター`Q`します。 オブジェクトは、このインターフェイスをサポートしていない場合*pp* NULL に設定されます。
 
 ### <a name="return-value"></a>戻り値
@@ -190,8 +190,8 @@ STDMETHOD_(ULONG, Release)();
 
 ## <a name="see-also"></a>関連項目
 
-[CComAggObject クラス](../../atl/reference/ccomaggobject-class.md)   
-[CComPolyObject クラス](../../atl/reference/ccompolyobject-class.md)   
-[DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)   
-[DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)   
+[CComAggObject クラス](../../atl/reference/ccomaggobject-class.md)<br/>
+[CComPolyObject クラス](../../atl/reference/ccompolyobject-class.md)<br/>
+[DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)<br/>
+[DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

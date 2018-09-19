@@ -39,12 +39,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07cd5fdc2aa47e5e7486f48c0106b7b24ff16d9f
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: 3bc016367495be8cc10c09605e8018811bde5ca9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535044"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118909"
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass クラス
 
@@ -69,7 +69,8 @@ template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 
 ## <a name="members"></a>メンバー
 
-`RuntimeClassInitialize` 場合、オブジェクトを初期化する関数、`MakeAndInitialize`テンプレート関数は、オブジェクトを構築するために使用します。 初期化に失敗した場合、オブジェクトが正常に初期化すると場合は、S_OK または COM エラー コードを返します。 戻り値として COM エラー コードが伝達される`MakeAndInitialize`します。 なお、`RuntimeClassInitialize`場合、メソッドは呼び出されません、`Make`テンプレート関数は、オブジェクトを構築するために使用します。
+`RuntimeClassInitialize`<br/>
+場合、オブジェクトを初期化する関数、`MakeAndInitialize`テンプレート関数は、オブジェクトを構築するために使用します。 初期化に失敗した場合、オブジェクトが正常に初期化すると場合は、S_OK または COM エラー コードを返します。 戻り値として COM エラー コードが伝達される`MakeAndInitialize`します。 なお、`RuntimeClassInitialize`場合、メソッドは呼び出されません、`Make`テンプレート関数は、オブジェクトを構築するために使用します。
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 

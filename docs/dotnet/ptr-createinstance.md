@@ -1,5 +1,5 @@
 ---
-title: ptr::CreateInstance |Microsoft ドキュメント
+title: ptr::CreateInstance |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: dd4ba56b92150046b986f2b101f6a004c114bf28
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8f03a4f0cfb2b231e9a453009155308f7bf407db
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33161705"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112214"
 ---
 # <a name="ptrcreateinstance"></a>ptr::CreateInstance
-内の COM オブジェクトのインスタンスを作成、`com::ptr`です。  
+内の COM オブジェクトのインスタンスを作成、`com::ptr`します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -72,28 +72,28 @@ void CreateInstance(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `progid`  
- `ProgID` 文字列。  
+*progid*<br/>
+`ProgID` 文字列。  
   
- `pouter`  
- 集約オブジェクトの IUnknown インターフェイス (controlling IUnknown) へのポインター。 場合`pouter`が指定されていない`NULL`を使用します。  
+*pouter*<br/>
+集約オブジェクトの IUnknown インターフェイス (controlling IUnknown) へのポインター。 場合`pouter`が指定されていない`NULL`使用されます。  
   
- `cls_context`  
- 新しく作成されたオブジェクトを管理するコードを実行するコンテキスト。 値がから取得されます、`CLSCTX`列挙します。 場合`cls_context`が指定されていない値 CLSCTX_ALL が使用されます。  
+*cls_context*<br/>
+新しく作成されたオブジェクトを管理するコードを実行するコンテキスト。 値がから取得されます、`CLSCTX`列挙体。 場合`cls_context`が指定されていない値 CLSCTX_ALL が使用されます。  
   
- `rclsid`  
- `CLSID` データとオブジェクトの作成に使用されるコードに関連付けられています。  
+*rclsid*<br/>
+`CLSID` 関連付けられたデータとオブジェクトの作成に使用されるコード。  
   
 ## <a name="exceptions"></a>例外  
- 場合、 `com::ptr` COM オブジェクトへの参照が既に所有して`CreateInstance`スロー<xref:System.InvalidOperationException>です。  
+ 場合、 `com::ptr` 、COM オブジェクトへの参照を既に所有している`CreateInstance`スロー<xref:System.InvalidOperationException>します。  
   
- この関数が呼び出す`CoCreateInstance`を使用して<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>エラーに変換する`HRESULT`適切な例外にします。  
+ この関数を呼び出す`CoCreateInstance`を使用して<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>エラーに変換する`HRESULT`適切な例外にします。  
   
-## <a name="remarks"></a>コメント  
- `CreateInstance` 使用して`CoCreateInstance`ProgID または CLSID のいずれかを識別する、指定したオブジェクトの新しいインスタンスを作成します。 `com::ptr`新しく作成されたオブジェクトを参照し、自動的に破棄後に所有しているすべての参照を解放します。  
+## <a name="remarks"></a>Remarks  
+ `CreateInstance` 使用して`CoCreateInstance`ProgID または CLSID のいずれかを識別する、指定したオブジェクトの新しいインスタンスを作成します。 `com::ptr`新しく作成されたオブジェクトを参照し、破棄時に所有しているすべての参照を自動的に解放されます。  
   
 ## <a name="example"></a>例  
- この例を使用して CLR クラスを実装して、`com::ptr`をそのプライベート メンバーをラップする`IXMLDOMDocument`オブジェクト。 クラスのコンス トラクターの 2 つの異なる形式を使用して`CreateInstance`ProgID または CLSID に加えて、CLSCTX からドキュメント オブジェクトを作成します。  
+ この例の実装を使用する CLR クラス、`com::ptr`のプライベート メンバーをラップする`IXMLDOMDocument`オブジェクト。 クラスのコンス トラクターの 2 つの異なる形式を使用して、 `CreateInstance` ProgID または CLSID plus、CLSCTX からドキュメント オブジェクトを作成します。  
   
 ```  
 // comptr_createinstance.cpp  

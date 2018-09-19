@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4ac334221f22dcd80434c1be2f59998709aae5e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: dcf5cbf6522d90b6338b817eebac434c81bf7c9a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204881"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080689"
 ---
 # <a name="crgn-class"></a>CRgn クラス
 Windows のグラフィック デバイス インターフェイス (GDI) の領域をカプセル化したものです。  
@@ -326,13 +326,12 @@ BOOL CreatePolygonRgn(
  *lpPoints*  
  配列を指す`POINT`構造体や配列の`CPoint`オブジェクト。 各構造体には、x 座標と y 座標、多角形の頂点を 1 つの値を指定します。 `POINT`構造体は、次の形式。  
   
- `typedef struct tagPOINT {`  
-  
- `int x;`  
-  
- `int y;`  
-  
- `} POINT;`  
+```cpp
+typedef struct tagPOINT {
+    int x;
+    int y;
+} POINT;
+```
   
  *nCount*  
  数を指定`POINT`構造体または`CPoint`が配列内のオブジェクトが指す*lpPoints*します。  
@@ -372,13 +371,12 @@ BOOL CreatePolyPolygonRgn(
  *lpPoints*  
  配列を指す`POINT`構造体や配列の`CPoint`多角形の頂点を定義するオブジェクト。 システムが閉じないに自動的にあるために、各多角形を明示的に閉じる必要があります。 多角形は連続して指定します。 `POINT`構造体は、次の形式。  
   
- `typedef struct tagPOINT {`  
-  
- `int x;`  
-  
- `int y;`  
-  
- `} POINT;`  
+```cpp
+typedef struct tagPOINT {
+    int x;
+    int y;
+} POINT;
+```
   
  *lpPolyCounts*  
  整数の配列を指します。 最初の整数の最初の多角形の頂点の数を指定します、 *lpPoints* 、2 番目の整数の配列で 2 つ目の多角形の頂点の数を指定します。  
@@ -453,17 +451,14 @@ BOOL CreateRectRgnIndirect(LPCRECT lpRect);
  *lpRect*  
  指す、`RECT`構造または`CRect`領域の左上隅および右下コーナーの論理座標を格納しているオブジェクト。 `RECT`構造体は、次の形式。  
   
- `typedef struct tagRECT {`  
-  
- `int left;`  
-  
- `int top;`  
-  
- `int right;`  
-  
- `int bottom;`  
-  
- `} RECT;`  
+```cpp
+typedef struct tagRECT {
+    int left;
+    int top;
+    int right;
+    int bottom;
+} RECT;
+```
   
 ### <a name="return-value"></a>戻り値  
  操作が成功した場合、0 以外の場合それ以外の場合 0 を返します。  
@@ -715,17 +710,14 @@ BOOL RectInRegion(LPCRECT lpRect) const;
  *lpRect*  
  指す、`RECT`構造または`CRect`オブジェクト。 `RECT`構造体は、次の形式。  
   
- `typedef struct tagRECT {`  
-  
- `int left;`  
-  
- `int top;`  
-  
- `int right;`  
-  
- `int bottom;`  
-  
- `} RECT;`  
+```cpp
+typedef struct tagRECT {
+    int left;
+    int top;
+    int right;
+    int bottom;
+} RECT;
+```
   
 ### <a name="return-value"></a>戻り値  
  指定した四角形の任意の部分は、領域の境界内にある場合、0 以外。それ以外の場合 0 を返します。  

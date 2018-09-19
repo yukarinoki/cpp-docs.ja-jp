@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2989 |Microsoft ドキュメント
+title: コンパイラ エラー C2989 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,44 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7831f9255485ede8db9d853ca5fe89dc9a4c2a65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df67a24fa9bae63bbaf1bba344aa7f684ec91123
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245849"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081911"
 ---
 # <a name="compiler-error-c2989"></a>コンパイラ エラー C2989
-'class': クラス型が非クラスの種類として既に宣言されています  
-  
- ジェネリック クラスまたはテンプレートには、非テンプレートまたは非ジェネリック クラスが再定義します。 競合のヘッダー ファイルを確認してください。  
-  
- クラス テンプレートの部分的な特殊化を使用している場合は、サポート技術情報記事 Q240866 を参照してください。  
-  
- 次の例では、C2989 が生成されます。  
-  
-```  
-// C2989.cpp  
-// compile with: /c  
-class C{};  
-  
-template <class T>  
-class C{};  // C2989  
-class C2{};  
-```  
-  
- C2989 は、ジェネリックを使用するときにも発生することができます。  
-  
-```  
-// C2989b.cpp  
-// compile with: /clr /c  
-ref class GC1;  
-  
-generic <typename T> ref class GC1;   // C2989  
-template <typename T> ref class GC2;  
-  
-generic <typename T> ref class GC2;   // C2989  
-generic <typename T> ref class GCb;  
-template <typename T> ref class GC2;  
-generic <typename T> ref class GCc;  
+
+'class': クラス型は既に非クラス型として宣言されています
+
+ジェネリック クラスまたはテンプレートには、非テンプレートまたは非ジェネリック クラスが再定義します。 ヘッダー ファイルの競合を確認します。
+
+クラス テンプレートの部分的な特殊化を使用している場合は、サポート技術情報記事 Q240866 を参照してください。
+
+次の例では、C2989 が生成されます。
+
+```
+// C2989.cpp
+// compile with: /c
+class C{};
+
+template <class T>
+class C{};  // C2989
+class C2{};
+```
+
+C2989 は、ジェネリックを使用しているときにも発生します。
+
+```
+// C2989b.cpp
+// compile with: /clr /c
+ref class GC1;
+
+generic <typename T> ref class GC1;   // C2989
+template <typename T> ref class GC2;
+
+generic <typename T> ref class GC2;   // C2989
+generic <typename T> ref class GCb;
+template <typename T> ref class GC2;
+generic <typename T> ref class GCc;
 ```

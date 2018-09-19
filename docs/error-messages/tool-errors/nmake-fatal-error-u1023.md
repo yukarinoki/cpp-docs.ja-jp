@@ -1,5 +1,5 @@
 ---
-title: NMAKE の致命的なエラー U1023 |Microsoft ドキュメント
+title: NMAKE の致命的なエラー U1023 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8c5fda3474e4c1b8bab6dfdfcdcfef6f70f9f33
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 11b747339292616e555f52c2f8c85edeeb622072
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324728"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118961"
 ---
 # <a name="nmake-fatal-error-u1023"></a>NMAKE の致命的なエラー U1023
-式に構文エラー  
-  
- 式が正しくありません。  
-  
- 使用可能な演算子と演算子の優先順位を確認してください。
+
+式に構文エラー
+
+式が無効です。
+
+使用可能な演算子と演算子の優先順位を確認します。

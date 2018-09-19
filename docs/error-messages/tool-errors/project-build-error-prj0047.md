@@ -1,5 +1,5 @@
 ---
-title: プロジェクト ビルド エラー PRJ0047 |Microsoft ドキュメント
+title: プロジェクト ビルド エラー PRJ0047 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df87dd3da4ce77f5ce0e88d992e34c3dbc68c66a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 72e7e8f80d4db4c005dc57085ccfadcffee640aa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326047"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088664"
 ---
 # <a name="project-build-error-prj0047"></a>プロジェクト ビルド エラー PRJ0047
-中断されたプロセスを再開できませんでした。  ビルドが失敗しました。  
-  
- 開発環境でエラーが発生しました。  
-  
- このエラーを解決するには、閉じてプロジェクトの再読み込みします。 必要に応じて、終了して、Visual Studio を再起動します。
+
+中断されたプロセスを再開できませんでした。  ビルドに失敗しました。
+
+開発環境でエラーが発生しました。
+
+このエラーを解決するのには、閉じてから、プロジェクトの再読み込み。 必要に応じて、終了し、Visual Studio を再起動します。

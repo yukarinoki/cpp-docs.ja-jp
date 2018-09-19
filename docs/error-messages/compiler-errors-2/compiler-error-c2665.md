@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2665 |Microsoft ドキュメント
+title: コンパイラ エラー C2665 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18cc99d6ea0a45e7c096a13cfe57dc841ca351bf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b442e1de0481ef3d00742ed201575526332decff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235781"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109146"
 ---
 # <a name="compiler-error-c2665"></a>コンパイラ エラー C2665
-'function': number1 オーバー ロードのいずれも型 'type' からパラメーター number2 を変換することができます  
-  
- オーバー ロードされた関数のパラメーターは、必要な型に変換できません。  考えられる解決策:  
-  
--   変換演算子を指定します。  
-  
--   明示的な変換を使用します。  
-  
-## <a name="example"></a>例  
- 次の例では、C2665 を生成します。  
-  
-```  
-// C2665.cpp  
-void func(short, char*){}  
-void func(char*, char*){}  
-  
-int main() {  
-   func(0, 1);   // C2665  
-   func((short)0, (char*)1);   // OK  
-}  
+
+'function': パラメーターの数値 2 を型 'type' から変換 number1 オーバー ロードはないことができます
+
+オーバー ロードされた関数のパラメーターは、必要な型に変換できません。  考えられる解決策:
+
+- 変換演算子を指定します。
+
+- 明示的な変換を使用します。
+
+## <a name="example"></a>例
+
+次の例では、C2665 が生成されます。
+
+```
+// C2665.cpp
+void func(short, char*){}
+void func(char*, char*){}
+
+int main() {
+   func(0, 1);   // C2665
+   func((short)0, (char*)1);   // OK
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2470 |Microsoft ドキュメント
+title: コンパイラ エラー C2470 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcd0a8d0d860bb4c3514d31099626cc578339149
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8f494f550393bf1fb1a1a17b522b73945a7581e6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196715"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089152"
 ---
 # <a name="compiler-error-c2470"></a>コンパイラ エラー C2470
-'function': 関数の定義のようになりますが、パラメーター リストは存在しません外見上の本体をスキップしています  
-  
- 関数の定義には、引数リストがありません。  
-  
- 次の例では、C2470 が生成されます。  
-  
-```  
-// C2470.cpp  
-int MyFunc {};  // C2470  
-void MyFunc2() {};  //OK  
-  
-int main(){  
-   MyFunc();  
-   MyFunc2();  
-}  
+
+'function': 関数の定義のようになりますが、パラメーター リストはありません外見上の本体をスキップしています
+
+関数定義には、その引数リストがありません。
+
+次の例では、C2470 が生成されます。
+
+```
+// C2470.cpp
+int MyFunc {};  // C2470
+void MyFunc2() {};  //OK
+
+int main(){
+   MyFunc();
+   MyFunc2();
+}
 ```

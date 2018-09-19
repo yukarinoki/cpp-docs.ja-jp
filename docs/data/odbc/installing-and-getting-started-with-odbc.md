@@ -1,5 +1,5 @@
 ---
-title: インストールして、ODBC の概要 |Microsoft ドキュメント
+title: インストールして、ODBC の概要 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a3cf6731b8fb047bd7f9b3b0d44facd7602006d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d832365a7b17dc5e35a4f01ed3fa031c10e9a6ec
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088064"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113789"
 ---
 # <a name="installing-and-getting-started-with-odbc"></a>ODBC のインストールと起動
-次のトピックでは、開いているデータベースの接続 (ODBC) での作業を開始する必要のあるコンポーネントをインストールできます。  
+
+次のトピックでは、開いているデータベースの接続 (ODBC) での作業を開始する必要があるコンポーネントをインストールできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [Visual C に添付されている ODBC ドライバーをインストールします。](../../data/odbc/odbc-administrator.md)  
+- [Visual C に添付されている ODBC ドライバーをインストールします。](../../data/odbc/odbc-administrator.md)  
   
--   [お客様の ODBC コンポーネントを再配布します。](../../data/odbc/odbc-basics.md)  
+- [お客様の ODBC コンポーネントを再配布します。](../../data/odbc/odbc-basics.md)  
   
 ## <a name="see-also"></a>関連項目  
- [ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)
+
+[ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)

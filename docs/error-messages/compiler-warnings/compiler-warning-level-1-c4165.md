@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4165 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4165 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39487999f2aa74a5600d84d71917712e03b2d626
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c532ddee7a2066190c2f926ba7b1240c0418f6c4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277567"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084927"
 ---
 # <a name="compiler-warning-level-1-c4165"></a>コンパイラの警告 (レベル 1) C4165
-'HRESULT' は 'bool'; に変換します。これは、目的ですか。  
-  
-HRESULT を使用する場合、[場合](../../cpp/if-else-statement-cpp.md)ステートメントでは、HRESULT に変換される、 [bool](../../cpp/bool-cpp.md) HRESULT として変数を明示的にテストする場合を除き、します。 既定では、この警告はオフに設定されています。  
-  
-## <a name="example"></a>例  
-次の例には、C4165 が生成されます。  
-  
-```cpp  
-// C4165.cpp  
-// compile with: /W1  
-#include <windows.h>  
-#pragma warning(1:4165)  
-  
-extern HRESULT hr;  
-int main() {  
-   if (hr) {  
-   // try either of the following ...  
-   // if (FAILED(hr)) { // C4165 expected  
-   // if (hr != S_OK) {  
-   }  
-}  
+
+'HRESULT' は 'bool'; に変換されます。本当にこれが望ましいこと?
+
+HRESULT を使用する場合、[場合](../../cpp/if-else-statement-cpp.md)ステートメントでは、HRESULT に変換されますが、 [bool](../../cpp/bool-cpp.md) HRESULT として変数を明示的にテストする場合を除き、します。 既定では、この警告はオフに設定されています。
+
+## <a name="example"></a>例
+
+次のサンプルの生成 C4165
+
+```cpp
+// C4165.cpp
+// compile with: /W1
+#include <windows.h>
+#pragma warning(1:4165)
+
+extern HRESULT hr;
+int main() {
+   if (hr) {
+   // try either of the following ...
+   // if (FAILED(hr)) { // C4165 expected
+   // if (hr != S_OK) {
+   }
+}
 ```

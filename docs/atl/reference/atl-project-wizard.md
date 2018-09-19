@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 139a20eb3db99ce87b2de51aa1ef7602f7b5a36a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d7ac74d1b310f4db7bfc4a558db5b89df5d8df5a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758577"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109848"
 ---
 # <a name="atl-project-wizard"></a>ATL プロジェクト ウィザード
 
@@ -58,10 +58,10 @@ Active Template Library (ATL) は、簡単に小さくて高速な COM オブジ
 
 ## <a name="see-also"></a>関連項目
 
-[Visual C++ プロジェクトの作成および管理](../../ide/creating-and-managing-visual-cpp-projects.md)   
-[Visual C++ プロジェクトの種類](../../ide/visual-cpp-project-types.md)   
-[アプリケーション ウィザードを使用したデスクトップ プロジェクトの作成](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
-[ATL COM オブジェクトの基礎](../../atl/fundamentals-of-atl-com-objects.md)   
-[ATL および C ランタイム コードによるプログラミング](../../atl/programming-with-atl-and-c-run-time-code.md)   
+[Visual C++ プロジェクトの作成と管理](../../ide/creating-and-managing-visual-cpp-projects.md)<br/>
+[Visual C++ プロジェクトの種類](../../ide/visual-cpp-project-types.md)<br/>
+[アプリケーション ウィザードを使用したデスクトップ プロジェクトの作成](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[ATL COM オブジェクトの基礎](../../atl/fundamentals-of-atl-com-objects.md)<br/>
+[ATL および C ランタイム コードによるプログラミング](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [チュートリアル](../../atl/active-template-library-atl-tutorial.md)
 

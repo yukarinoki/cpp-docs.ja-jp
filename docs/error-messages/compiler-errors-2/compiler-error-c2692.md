@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2692 |Microsoft ドキュメント
+title: コンパイラ エラー C2692 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a02110750a748b5c520df7d202a87957f227a802
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 03a9006889c5853e77b5603484ea9d18f2474241
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230997"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088372"
 ---
 # <a name="compiler-error-c2692"></a>コンパイラ エラー C2692
-'function_name': 完全なプロトタイプ関数が C コンパイラで必要な '/clr' オプション  
-  
- マネージ コードを .NET 用にコンパイルするときに、C コンパイラには、ANSI 関数宣言が必要です。 さらに、関数がパラメーターをとらない場合必要があります明示的に宣言する必要が`void`パラメーターの型として。
+
+'function_name': 完全なプロトタイプ関数が C コンパイラで必要な '/clr' オプション
+
+マネージ コードを .NET のコンパイル時に、C コンパイラには、ANSI 関数の宣言が必要です。 さらに、関数がパラメーターを受け取らない場合は、する必要がありますを明示的に宣言`void`パラメーターの種類。

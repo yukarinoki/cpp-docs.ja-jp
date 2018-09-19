@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1 および 4) C4112 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1 および 4) C4112 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43718511af0d85f0c9026fe70b4749c4e3d4b1e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9015a7ee7a0b71d3c6aafd3e3b32d4ea1b07f108
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299280"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110550"
 ---
 # <a name="compiler-warning-levels-1-and-4-c4112"></a>コンパイラの警告 (レベル 1 および 4) C4112
-\#行 1 と番号の間の整数が必要です。  
-  
- 許可された範囲を超えた整数パラメーターが [#line](../../preprocessor/hash-line-directive-c-cpp.md) ディレクティブに指定されています。  
-  
- 指定したパラメーターが 1 より小さい場合、行カウンターは 1 にリセットされます。 指定したパラメーターが、コンパイラで定義された制限値である *number*より大きい場合、行カウンターは変更されません。 これは、ANSI 互換オプション ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) ではレベル 1 の警告であり、Microsoft 拡張機能オプション ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)) ではレベル 4 の警告です。  
-  
- 次の例では C4112 が生成されます。  
-  
-```  
-// C4112.cpp  
-// compile with: /W4  
-#line 0   // C4112, value must be between 1 and number  
-  
-int main() {  
-}  
+
+\#行が 1 から数までの整数が必要です。
+
+許可された範囲を超えた整数パラメーターが [#line](../../preprocessor/hash-line-directive-c-cpp.md) ディレクティブに指定されています。
+
+指定したパラメーターが 1 より小さい場合、行カウンターは 1 にリセットされます。 指定したパラメーターが、コンパイラで定義された制限値である *number*より大きい場合、行カウンターは変更されません。 これは、ANSI 互換オプション ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) ではレベル 1 の警告であり、Microsoft 拡張機能オプション ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)) ではレベル 4 の警告です。
+
+次の例では C4112 が生成されます。
+
+```
+// C4112.cpp
+// compile with: /W4
+#line 0   // C4112, value must be between 1 and number
+
+int main() {
+}
 ```

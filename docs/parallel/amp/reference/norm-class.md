@@ -1,5 +1,5 @@
 ---
-title: norm クラス |Microsoft ドキュメント
+title: norm クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f23ea5d40ecca7ee47d7eae659bfd3da286d8831
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 71e9baa101eb87ac10171722fa76fc462a154ad2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705394"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087482"
 ---
 # <a name="norm-class"></a>norm クラス
-Norm 数を表します。 各要素は、浮動小数点の数値の範囲内で [-1.0f、1.0 f]。  
+Norm 数を表します。 各要素は、浮動小数点の数値の範囲内で [-1.0 f、1.0 f]。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,10 +46,10 @@ class norm;
 |----------|-----------------|  
 |norm::operator-||  
 |norm::operator--||  
-|norm::operator float|変換演算子です。 Norm 数、浮動小数点に変換する値をポイントします。|  
+|norm::operator float|変換演算子。 Norm 数値に変換、浮動小数点値。|  
 |norm::operator*=||  
 |norm::operator/=||  
-|+ + norm::operator||  
+|norm::operator +||  
 |norm::operator+=||  
 |norm::operator=||  
 |norm::operator-=||  
@@ -103,11 +103,11 @@ norm(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_V`  
- 初期化するために使用する値。  
+*(_V).*<br/>
+初期化するために使用される値。  
   
- `_Other`  
- 初期化するために使用するオブジェクト。  
+*_Other*<br/>
+初期化するために使用するオブジェクト。  
   
 ## <a name="see-also"></a>関連項目  
  [Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)

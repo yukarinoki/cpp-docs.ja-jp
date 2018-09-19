@@ -1,5 +1,5 @@
 ---
-title: NMAKE の致命的なエラー U1099 |Microsoft ドキュメント
+title: NMAKE の致命的なエラー U1099 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7be09691de4212d07b1452ffe33725a3978fc053
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3ef75a1435d8c922087fcdd21d1941961bc82cd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322105"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113384"
 ---
 # <a name="nmake-fatal-error-u1099"></a>NMAKE の致命的なエラー U1099
-スタック オーバーフロー  
-  
- 処理中のメイクファイルが複雑すぎるため、現在のスタック割り当て (nmake の)。 NMAKE は、0x3000 (12 K) の割り当てがあります。  
-  
- NMAKE のスタック割り当てを増やすを実行、 [editbin/stack](../../build/reference/stack.md)ユーティリティの大きなスタック オプションを使用します。  
-  
- **editbin/STACK:reserve (nmake の)。EXE**  
-  
- ここで*予約*数値を現在のスタック割り当て (nmake の) を超えています。
+
+スタック オーバーフロー
+
+処理中のメイクファイルが複雑すぎるため、現在のスタック割り当て (nmake の)。 NMAKE は、0x3000 (12 K) の割り当てが。
+
+NMAKE のスタック割り当てを増やすには、実行、 [editbin/stack](../../build/reference/stack.md)ユーティリティをより大きなスタック オプション。
+
+**editbin/STACK:reserve (nmake の)。実行可能ファイル**
+
+場所*予約*数値を (nmake の) 現在のスタック割り当てを超えています。

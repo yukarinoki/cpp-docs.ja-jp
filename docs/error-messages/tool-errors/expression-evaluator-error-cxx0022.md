@@ -1,5 +1,5 @@
 ---
-title: 式エバリュエーター エラー CXX0022 |Microsoft ドキュメント
+title: 式エバリュエーター エラー CXX0022 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822e07c9173d9010bb8ab63b6ca4837b9c52e066
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1bf067a1024b8ac344c1490bc9ec25b0b7d57540
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297655"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082353"
 ---
 # <a name="expression-evaluator-error-cxx0022"></a>式エバリュエーター エラー CXX0022
-_main の前に関数呼び出し  
-  
- C の式エバリュエーターは、デバッガーが関数を入力する前に関数を評価できません **_main**です。 までプログラムが正しく初期化されていない **_main**が呼び出されています。  
-  
- このエラーは、can0022 と同じものと同じです。
+
+(_m) 前に、の関数呼び出し
+
+C の式エバリュエーターは、デバッガーが関数を入力する前に関数を評価できません **_main**します。 まで、プログラムが正しく初期化されていない **_main**が呼び出されました。
+
+このエラーは、can0022 と同じものと同じです。

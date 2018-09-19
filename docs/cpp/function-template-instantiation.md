@@ -16,35 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e773fd8e2c38311a1c36aff4c97199cbebb503e8
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: fb94a54c4f99b79e3be742c5b1448151cff140c4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406482"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116790"
 ---
 # <a name="function-template-instantiation"></a>関数テンプレートのインスタンス化
-関数テンプレートが各型に対して最初に呼び出されるときに、コンパイラはインスタンス化を作成します。 各インスタンス化は、型に特殊化したテンプレート関数の 1 つのバージョンです。 このインスタンス化は、関数がこの型に対して使用されるたびに呼び出されます。 複数の同一のインスタンス化が存在する場合、それらが存在するのが別々のモジュール内であっても、実行可能ファイルには、1 つのインスタンス化のコピーのみが含まれます。  
-  
- 関数テンプレートでは、引数とパラメーターの任意のペアについて、そのパラメーターがテンプレート引数に依存しない場合、関数の引数の変換が許可されます。  
-  
- 関数テンプレートは、特定の型を引数として使用してテンプレートを宣言することで、明示的にインスタンス化できます。 たとえば、次のようなコードを記述できます。  
-  
+
+関数テンプレートが各型に対して最初に呼び出されるときに、コンパイラはインスタンス化を作成します。 各インスタンス化は、型に特殊化したテンプレート関数の 1 つのバージョンです。 このインスタンス化は、関数がこの型に対して使用されるたびに呼び出されます。 複数の同一のインスタンス化が存在する場合、それらが存在するのが別々のモジュール内であっても、実行可能ファイルには、1 つのインスタンス化のコピーのみが含まれます。
+
+関数テンプレートでは、引数とパラメーターの任意のペアについて、そのパラメーターがテンプレート引数に依存しない場合、関数の引数の変換が許可されます。
+
+関数テンプレートは、特定の型を引数として使用してテンプレートを宣言することで、明示的にインスタンス化できます。 たとえば、次のようなコードを記述できます。
+
 ```cpp
-// function_template_instantiation.cpp  
-template<class T> void f(T) { }  
-  
-// Instantiate f with the explicitly specified template.  
-// argument 'int'  
-//  
-template void f<int> (int);  
-  
-// Instantiate f with the deduced template argument 'char'.  
-template void f(char);  
-int main()  
-{  
-}  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [関数テンプレート](../cpp/function-templates.md)
+// function_template_instantiation.cpp
+template<class T> void f(T) { }
+
+// Instantiate f with the explicitly specified template.
+// argument 'int'
+//
+template void f<int> (int);
+
+// Instantiate f with the deduced template argument 'char'.
+template void f(char);
+int main()
+{
+}
+```
+
+## <a name="see-also"></a>関連項目
+
+[関数テンプレート](../cpp/function-templates.md)

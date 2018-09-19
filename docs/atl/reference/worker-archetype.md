@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13f34f7ceca5cf958e981f8390044863a07b4317
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 80bd9984afa3ce1fc6cda4e0b48cfa59e7e84b56
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767166"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118454"
 ---
 # <a name="worker-archetype"></a>ワーカーのアーキタイプ
 
@@ -68,7 +68,7 @@ ms.locfileid: "43767166"
 
 作業項目の処理と呼ばれます。
 
-```  
+```
 void Execute(
     RequestType request,  
     void* pvWorkerParam,  
@@ -77,25 +77,25 @@ void Execute(
 
 #### <a name="parameters"></a>パラメーター
 
-*要求*  
+*要求*<br/>
 処理する作業項目。 同じ型の作業項目は、`RequestType`します。
 
-*pvWorkerParam*  
+*pvWorkerParam*<br/>
 Worker クラスで認識されるカスタム パラメーターです。 渡されるも`WorkerArchetype::Initialize`と`Terminate`します。
 
-*pOverlapped*  
+*pOverlapped*<br/>
 ポインター、 [OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-_overlapped)構造体のどの作業項目のキューに入ったキューを作成するために使用します。
 
 ## <a name="initialize"></a> WorkerArchetype::Initialize
 
-すべての要求が渡される前に、ワーカーのオブジェクトを初期化するために呼び出されます`WorkerArchetype::Execute`します。  
+すべての要求が渡される前に、ワーカーのオブジェクトを初期化するために呼び出されます`WorkerArchetype::Execute`します。
 ```
 BOOL Initialize(void* pvParam) throw();
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*pvParam*  
+*pvParam*<br/>
 Worker クラスで認識されるカスタム パラメーターです。 渡されるも`WorkerArchetype::Terminate`と`WorkerArchetype::Execute`します。
 
 ### <a name="return-value"></a>戻り値
@@ -106,8 +106,8 @@ Worker クラスで認識されるカスタム パラメーターです。 渡�
 
 Worker クラスで処理できる作業項目の種類の typedef。
 
-```  
-typedef MyRequestType RequestType;    
+```
+typedef MyRequestType RequestType;
 ```
 
 ### <a name="remarks"></a>Remarks
@@ -118,17 +118,17 @@ typedef MyRequestType RequestType;
 
 ワーカーのオブジェクトの初期化解除に渡されたすべての要求後に呼び出された`WorkerArchetype::Execute`)。
 
-``` 
+```
 void Terminate(void* pvParam) throw();
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*pvParam*  
+*pvParam*<br/>
 Worker クラスで認識されるカスタム パラメーターです。 渡されるも`WorkerArchetype::Initialize`と`WorkerArchetype::Execute`します。
 
 ## <a name="see-also"></a>関連項目
 
-[概念](../../atl/active-template-library-atl-concepts.md)   
+[概念](../../atl/active-template-library-atl-concepts.md)<br/>
 [ATL COM デスクトップ コンポーネント](../../atl/atl-com-desktop-components.md)
 

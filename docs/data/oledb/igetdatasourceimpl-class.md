@@ -25,14 +25,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aee6122e8dbcf85f882e5b78475a2c332b855721
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9ecc830937e36e213177205549ee4dd4e989e0ed
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573086"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118701"
 ---
 # <a name="igetdatasourceimpl-class"></a>IGetDataSourceImpl クラス
+
 実装を提供、 [IGetDataSource](/previous-versions/windows/desktop/ms709721\(v=vs.85\))オブジェクト。  
   
 ## <a name="syntax"></a>構文
@@ -43,11 +44,13 @@ class ATL_NO_VTABLE IGetDataSourceImpl : public IGetDataSource
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- *T*  
- 派生したクラス、`IGetDataSourceImpl`します。  
+
+*T*<br/>
+派生したクラス、`IGetDataSourceImpl`します。  
 
 ## <a name="requirements"></a>要件  
- **ヘッダー:** atldb.h  
+
+**ヘッダー:** atldb.h  
   
 ## <a name="members"></a>メンバー  
   
@@ -58,9 +61,11 @@ class ATL_NO_VTABLE IGetDataSourceImpl : public IGetDataSource
 |[GetDataSource](#getdatasource)|セッションを作成したデータ ソース オブジェクトのインターフェイス ポインターを返します。|  
   
 ## <a name="remarks"></a>Remarks  
- これは、データ ソース オブジェクトへのインターフェイス ポインターを取得するためのセッションで、必須のインターフェイスです。  
+
+これは、データ ソース オブジェクトへのインターフェイス ポインターを取得するためのセッションで、必須のインターフェイスです。  
 
 ## <a name="getdatasource"></a> Igetdatasourceimpl::getdatasource
+
 セッションを作成したデータ ソース オブジェクトのインターフェイス ポインターを返します。  
   
 ### <a name="syntax"></a>構文  
@@ -71,11 +76,14 @@ STDMETHOD(GetDataSource)(REFIID riid,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[IGetDataSource::GetDataSource](/previous-versions/windows/desktop/ms725443\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+
+参照してください[IGetDataSource::GetDataSource](/previous-versions/windows/desktop/ms725443\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ### <a name="remarks"></a>Remarks  
- データ ソース オブジェクトのプロパティにアクセスする必要がある場合に役立ちます。  
+
+データ ソース オブジェクトのプロパティにアクセスする必要がある場合に役立ちます。  
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

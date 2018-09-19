@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 3) C4646 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 3) C4646 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36ff770877333042319b2a91dc5006e2ceb4118f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ad9a96aaf15294a1404de54f276eb5309a09357
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291217"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086786"
 ---
 # <a name="compiler-warning-level-3-c4646"></a>コンパイラの警告 (レベル 3) C4646
-__declspec(noreturn) で宣言された関数に、non-void 戻り値の型があります。  
-  
- [noreturn](../../cpp/noreturn.md) `__declspec` 修飾子でマークされた関数は [void](../../cpp/void-cpp.md) 型が必要です。  
-  
- 次の例では C4646 が生成されます。  
-  
-```  
-// C4646.cpp  
-// compile with: /W3 /WX  
-int __declspec(noreturn) TestFunction()  
-{   // C4646  make return type void  
-}  
+
+__declspec(noreturn) で宣言された関数に、non-void 戻り値の型があります。
+
+[noreturn](../../cpp/noreturn.md) `__declspec` 修飾子でマークされた関数は [void](../../cpp/void-cpp.md) 型が必要です。
+
+次の例では C4646 が生成されます。
+
+```
+// C4646.cpp
+// compile with: /W3 /WX
+int __declspec(noreturn) TestFunction()
+{   // C4646  make return type void
+}
 ```

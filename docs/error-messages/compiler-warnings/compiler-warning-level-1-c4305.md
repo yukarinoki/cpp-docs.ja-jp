@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4305 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4305 |Microsoft Docs
 ms.custom: ''
 ms.date: 1/17/2018
 ms.technology:
@@ -15,20 +15,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7694c511f57b6907227d62f969b61218f836cb14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 88ae0fb38b7e6af14525906e90486a68ce22ee56
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277824"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086825"
 ---
 # <a name="compiler-warning-level-1-c4305"></a>コンパイラの警告 (レベル 1) C4305
 
-> '*コンテキスト*': から切り捨て'*type1*'to'*type2*'  
+> '*コンテキスト*': から切り捨て'*type1*'to'*type2*'
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-情報の損失より小さい型に初期化またはコンス トラクターの引数として値を変換すると、この警告が発行されます。
+情報の損失より小さい型に初期化またはコンス トラクターの引数としてに値が変換されるとき、この警告が発行されます。
 
 ## <a name="example"></a>例
 
@@ -51,4 +51,4 @@ int main()
 }
 ```
 
-この問題を解決するには、適切な型の値を使用して初期化するか、正しい型に明示的なキャストを使用します。 たとえば、使用、 **float**リテラルの代わりに 2.71828f など、**二重**(浮動小数点リテラルの既定の種類) 初期化するために、 **float**変数、またはに渡す、受け取るコンス トラクター、 **float**引数。
+この問題を解決するには、適切な型の値を使用して初期化するか、適切な型に明示的なキャストを使用します。 などを使用して、 **float**リテラルの代わりに 2.71828f など、**二重**(浮動小数点リテラルの既定の種類) 初期化するために、 **float**変数、またはに渡す、受け取るコンス トラクター、 **float**引数。

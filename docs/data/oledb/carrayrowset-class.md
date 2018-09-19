@@ -54,14 +54,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b7975c91631df24ab12858677a770c38dc0f6411
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e13f262b90ff46955d6ba63fb83a941d712b017a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338913"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087878"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset クラス
+
 配列の構文を使用して行セットの要素をアクセスします。  
   
 ## <a name="syntax"></a>構文
@@ -74,11 +75,13 @@ class CArrayRowset :
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- *TAccessor*  
- 行セットで使用するアクセサー クラスの型。  
+
+*TAccessor*<br/>
+行セットで使用するアクセサー クラスの型。  
 
 ## <a name="requirements"></a>要件  
- **ヘッダー:** atldbcli.h  
+
+**ヘッダー:** atldbcli.h  
   
 ## <a name="members"></a>メンバー  
   
@@ -102,6 +105,7 @@ class CArrayRowset :
 |[CArrayRowset::m_nRowsRead](#nrowsread)|既に読み取られた行の数。|  
   
 ## <a name="carrayrowset"></a> Carrayrowset::carrayrowset
+
 新しい `CArrayRowset` オブジェクトを作成します。  
   
 ### <a name="syntax"></a>構文  
@@ -111,10 +115,12 @@ CArrayRowset(int nMax = 100000);
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *nMax*  
- [in]行セットの行の最大数。 
+
+*nMax*<br/>
+[in]行セットの行の最大数。 
 
 ## <a name="snapshot"></a> Carrayrowset::snapshot
+
 メモリ、イメージまたはそのスナップショットを作成するのには、行セット全体を読み取ります。  
   
 ### <a name="syntax"></a>構文  
@@ -124,6 +130,7 @@ HRESULT Snapshot() throw();
 ```  
 
 ## <a name="operator"></a> Carrayrowset:
+
 行セット内の行にアクセスするためには、配列に似た構文を提供します。  
   
 ### <a name="syntax"></a>構文  
@@ -133,19 +140,23 @@ TAccessor & operator[](int nrow);
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *TAccessor*  
- 行セットに格納されているアクセサーの種類を指定するテンプレート パラメーター。  
+
+*TAccessor*<br/>
+行セットに格納されているアクセサーの種類を指定するテンプレート パラメーター。  
   
- *nRow*  
- [in] (配列) にアクセスする、行の数です。  
+*nRow*<br/>
+[in] (配列) にアクセスする、行の数です。  
   
 ### <a name="return-value"></a>戻り値  
- 要求された行の内容。  
+
+要求された行の内容。  
   
 ### <a name="remarks"></a>Remarks  
- 場合*nRow*行セットの行の数を超える、例外がスローされます。  
+
+場合*nRow*行セットの行の数を超える、例外がスローされます。  
 
 ## <a name="nrowsread"></a> Carrayrowset::m_nrowsread
+
 既に読み取られた行セット内の行の数が含まれています。  
   
 ### <a name="syntax"></a>構文  
@@ -155,6 +166,7 @@ ULONG m_nRowsRead;
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [CRowset クラス](../../data/oledb/crowset-class.md)
+
+[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[CRowset クラス](../../data/oledb/crowset-class.md)

@@ -59,12 +59,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60541891832a3d466f7396086ac0918108991582
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d95a8f6b28b638b65191bc04ad094cc128f7b247
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753163"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080312"
 ---
 # <a name="cpatht-class"></a>CPathT クラス
 
@@ -82,7 +82,7 @@ class CPathT
 
 #### <a name="parameters"></a>パラメーター
 
-*文字列型*  
+*文字列型*<br/>
 ATL と MFC の文字列クラスのパスを使用する (を参照してください[CStringT](../../atl-mfc-shared/reference/cstringt-class.md))。
 
 ## <a name="members"></a>メンバー
@@ -194,7 +194,7 @@ BOOL AddExtension(PCXSTR pszExtension);
 
 ### <a name="parameters"></a>パラメーター
 
-*pszExtension*  
+*pszExtension*<br/>
 追加するファイル拡張子。
 
 ### <a name="return-value"></a>戻り値
@@ -215,7 +215,7 @@ BOOL Append(PCXSTR pszMore);
 
 ### <a name="parameters"></a>パラメーター
 
-*pszMore*  
+*pszMore*<br/>
 追加する文字列。
 
 ### <a name="return-value"></a>戻り値
@@ -236,7 +236,7 @@ void BuildRoot(int iDrive);
 
 ### <a name="parameters"></a>パラメーター
 
-*ドライブ*  
+*ドライブ*<br/>
 ドライブの数 (0 a: には、1 が b:、という具合)。
 
 ### <a name="remarks"></a>Remarks
@@ -265,10 +265,10 @@ void Combine(PCXSTR pszDir, PCXSTR  pszFile);
 
 ### <a name="parameters"></a>パラメーター
 
-*pszDir*  
+*pszDir*<br/>
 ディレクトリのパス。
 
-*pszFile*  
+*pszFile*<br/>
 ファイル パス。
 
 ### <a name="remarks"></a>Remarks
@@ -285,7 +285,7 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
 
 ### <a name="parameters"></a>パラメーター
 
-*pszOther*  
+*pszOther*<br/>
 現在のものと比較するパス。
 
 ### <a name="return-value"></a>戻り値
@@ -306,10 +306,10 @@ BOOL CompactPath(HDC hDC, UINT nWidth);
 
 ### <a name="parameters"></a>パラメーター
 
-*hDC*  
+*hDC*<br/>
 フォント メトリックを使用するデバイス コンテキスト。
 
-*nWidth*  
+*nWidth*<br/>
 幅 (ピクセル単位) に収まるように、文字列を強制されます。
 
 ### <a name="return-value"></a>戻り値
@@ -330,10 +330,10 @@ BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
 
 ### <a name="parameters"></a>パラメーター
 
-*nMaxChars*  
+*nMaxChars*<br/>
 終端の NULL 文字を含む、新しい文字列に含まれる文字の最大数。
 
-*dwFlags*  
+*dwFlags*<br/>
 予約済み。
 
 ### <a name="return-value"></a>戻り値
@@ -356,10 +356,10 @@ CPathT() throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pszPath*  
+*pszPath*<br/>
 パス文字列へのポインター。
 
-*path*  
+*path*<br/>
 パス文字列。
 
 ##  <a name="fileexists"></a>  CPathT::FileExists
@@ -480,7 +480,7 @@ BOOL IsPrefix(PCXSTR pszPrefix) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pszPrefix*  
+*pszPrefix*<br/>
 検索対象のプレフィックス。 プレフィックスは、これらの型のいずれかの:"c:\\\\「,」です","..","..\\\\".
 
 ### <a name="return-value"></a>戻り値
@@ -533,7 +533,7 @@ BOOL IsSameRoot(PCXSTR pszOther) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pszOther*  
+*pszOther*<br/>
 その他のパス。
 
 ### <a name="return-value"></a>戻り値
@@ -630,7 +630,7 @@ BOOL MatchSpec(PCXSTR pszSpec) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pszSpec*  
+*pszSpec*<br/>
 検索対象のファイルの種類に null で終わる文字列へのポインター。 たとえば、現在のパスにあるファイルは、DOC ファイル、かどうかをテストする*pszSpec*に設定する必要があります"* .doc"。
 
 ### <a name="return-value"></a>戻り値
@@ -651,7 +651,7 @@ CPathT<StringType>& operator+=(PCXSTR pszMore);
 
 ### <a name="parameters"></a>パラメーター
 
-*pszMore*  
+*pszMore*<br/>
 追加する文字列。
 
 ### <a name="return-value"></a>戻り値
@@ -744,16 +744,16 @@ BOOL RelativePathTo(
 
 ### <a name="parameters"></a>パラメーター
 
-*pszFrom*  
+*pszFrom*<br/>
 相対パスの開始。
 
-*dwAttrFrom*  
+*dwAttrFrom*<br/>
 ファイル属性の*pszFrom*します。 この値には、FILE_ATTRIBUTE_DIRECTORY が含まれている場合*pszFrom*がディレクトリであることが想定されます。 それ以外*pszFrom*ファイルであると見なされます。
 
-*pszTo*  
+*pszTo*<br/>
 相対パスの終点。
 
-*dwAttrTo*  
+*dwAttrTo*<br/>
 ファイル属性の*pszTo*します。 この値には、FILE_ATTRIBUTE_DIRECTORY が含まれている場合*pszTo*がディレクトリであることが想定されます。 それ以外*pszTo*ファイルであると見なされます。
 
 ### <a name="return-value"></a>戻り値
@@ -838,7 +838,7 @@ BOOL RenameExtension(PCXSTR pszExtension);
 
 ### <a name="parameters"></a>パラメーター
 
-*pszExtension*  
+*pszExtension*<br/>
 前に、新しいファイル名拡張子を"."の文字。
 
 ### <a name="return-value"></a>戻り値
@@ -919,5 +919,5 @@ typedef StringType::XCHAR XCHAR;
 
 ## <a name="see-also"></a>関連項目
 
-[クラス](../../atl/reference/atl-classes.md)   
+[クラス](../../atl/reference/atl-classes.md)<br/>
 [CStringT クラス](../../atl-mfc-shared/reference/cstringt-class.md)

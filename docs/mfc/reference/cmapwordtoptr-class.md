@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08ea48b13b92959652f67c39c05a6ced30e77b2c
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 7dd5a76e08d85e75f7e48e63927ef7b07e85fb40
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337994"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089256"
 ---
 # <a name="cmapwordtoptr-class"></a>CMapWordToPtr クラス
 16 ビット ワードをキーとした void ポインターのマップをサポートします。  
@@ -63,9 +63,7 @@ class CMapWordToPtr : public CObject
 ## <a name="members"></a>メンバー  
  メンバー関数は、`CMapWordToPtr`クラスのメンバー関数のような[CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)します。 メンバー関数については `CMapStringToOb` クラスの説明を参照してください。 任意の場所が表示、`CObject`関数パラメーターまたは戻り値としてのポインターへのポインターを置き換える**void**します。 任意の場所を確認、`CString`または**const**へのポインター **char**関数パラメーターまたは戻り値は、WORD に置き換えてください。  
   
- `BOOL CMapStringToOb::Lookup( const char* <key>,`  
-  
- `CObject*& <rValue> ) const;`  
+ `BOOL CMapStringToOb::Lookup( const char* <key>, CObject*& <rValue> ) const;`  
   
  たとえば、次のように変換します。  
   
@@ -115,7 +113,7 @@ class CMapWordToPtr : public CObject
   
  `CMapWordToPtr`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxcoll.h  
   
 ## <a name="see-also"></a>関連項目  

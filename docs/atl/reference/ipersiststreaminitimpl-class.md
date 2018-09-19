@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b31e8c712ef7c395570912224f75036e6249b431
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 85e772b9222f2066259042e551fa393758559ab2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761970"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115880"
 ---
 # <a name="ipersiststreaminitimpl-class"></a>IPersistStreamInitImpl クラス
 
@@ -42,14 +42,14 @@ ms.locfileid: "43761970"
 ## <a name="syntax"></a>構文
 
 ```
-template<class T>  
+template<class T>
 class ATL_NO_VTABLE IPersistStreamInitImpl 
    : public IPersistStreamInit
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 派生したクラス、`IPersistStreamInitImpl`します。
 
 ## <a name="members"></a>メンバー
@@ -163,5 +163,5 @@ ATL では、オブジェクトのプロパティ マップを使用して、こ
 
 ## <a name="see-also"></a>関連項目
 
-[記憶域とストリーム](/windows/desktop/Stg/storages-and-streams)   
+[記憶域とストリーム](/windows/desktop/Stg/storages-and-streams)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

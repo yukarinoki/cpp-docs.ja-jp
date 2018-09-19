@@ -1,5 +1,5 @@
 ---
-title: リンカ ツール エラー LNK1277 |Microsoft ドキュメント
+title: リンカ ツール エラー LNK1277 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec8f00793fcda748c60d9d8ea775611e3d025cd9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 542c48bd23b3f84ab301404987c77d964f51823e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298731"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082532"
 ---
 # <a name="linker-tools-error-lnk1277"></a>リンカ ツール エラー LNK1277
-オブジェクトのレコードが pgd (ファイル名) に見つかりませんでした。  
-  
- 使用する場合[/LTCG:PGOPTIMZE](../../build/reference/ltcg-link-time-code-generation.md)、入力 .lib、def、または .obj ファイルの 1 つのパスが/LTCG:PGINSTRUMENT 中に検出されたパスと異なっています。 これは、/LTCG:PGINSTRUMENT 後に、LIB 環境変数での変更説明可能性があります。 入力ファイルへの完全パスは、.pgd ファイルに格納されます。  
-  
- /LTCG:PGOPTIMIZE では、入力、/LTCG:PGINSTRUMENT フェーズに同一であることが必要です。  
-  
- この警告を解決するには、次のいずれかの操作を行います。  
-  
--   /LTCG:PGINSTRUMENT を実行し、すべてのテストの実行を再実行/LTCG:PGOPTIMIZE を実行します。  
-  
--   /LTCG:PGINSTRUMENT を実行したときに、LIB 環境変数を変更します。  
-  
- 回避する LNK1277/LTCG:PGUPDATE を使用して、これは推奨されません。
+
+オブジェクトのレコードが pgd (ファイル名) に見つかりませんでした。
+
+使用する場合[/LTCG:PGOPTIMZE](../../build/reference/ltcg-link-time-code-generation.md)、入力の .lib、def、または .obj ファイルのいずれかのパスは/LTCG:PGINSTRUMENT 中に検出されたパスから異なっていました。 これは、/LTCG:PGINSTRUMENT 後に、LIB 環境変数での変更説明可能性があります。 入力ファイルへの完全パスは、.pgd ファイルに格納されます。
+
+/LTCG:PGOPTIMIZE では、入力が/LTCG:PGINSTRUMENT フェーズと一致させることが必要です。
+
+この警告を解決するには、次のいずれかの操作を行います。
+
+- /LTCG:PGINSTRUMENT を実行し、すべてのテストの実行を再実行/LTCG:PGOPTIMIZE を実行します。
+
+- /LTCG:PGINSTRUMENT を実行したときに、LIB 環境変数を変更します。
+
+LNK1277 周囲/LTCG:PGUPDATE を使用して操作することは推奨されません。

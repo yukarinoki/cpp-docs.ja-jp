@@ -18,14 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0f18f5a524cbfbfa7f17dfd3964c68329bc8a042
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 6f3badc08da7bd11e65c244c42c91ad37a584ca5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338507"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087267"
 ---
 # <a name="cmyproviderwindowsfile"></a>CMyProviderWindowsFile
+
 ウィザードは、1 つの行のデータを格納するクラスを作成します。この場合、呼び出された`CMyProviderWindowsFile`します。 次のコードは`CMyProviderWindowsFile`ウィザードによって生成されたを使用してディレクトリ内のすべてのファイルを一覧表示され、`WIN32_FIND_DATA`構造体。 `CMyProviderWindowsFile` 継承、`WIN32_FIND_DATA`構造体。  
   
 ```cpp
@@ -46,9 +47,9 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- `CMyProviderWindowsFile` 呼び出されます、[ユーザー レコード クラス](../../data/oledb/user-record.md)プロバイダーの行セットの列を記述するマップも含まれています。 プロバイダーの列マップには、PROVIDER_COLUMN_ENTRY マクロを使用して行セット内の各フィールドの 1 つのエントリが含まれています。 マクロは、列の名前、序数に基づく、および構造体のエントリにオフセットを指定します。 上記のコードでプロバイダーの列のエントリにはオフセットが含まれて、`WIN32_FIND_DATA`構造体。 コンシューマーを呼び出すと`IRowset::GetData`、1 つの連続したバッファーでデータを転送します。 マップでは、ポインター演算を実行するよりも、データ メンバーを指定できます。  
+`CMyProviderWindowsFile` 呼び出されます、[ユーザー レコード クラス](../../data/oledb/user-record.md)プロバイダーの行セットの列を記述するマップも含まれています。 プロバイダーの列マップには、PROVIDER_COLUMN_ENTRY マクロを使用して行セット内の各フィールドの 1 つのエントリが含まれています。 マクロは、列の名前、序数に基づく、および構造体のエントリにオフセットを指定します。 上記のコードでプロバイダーの列のエントリにはオフセットが含まれて、`WIN32_FIND_DATA`構造体。 コンシューマーを呼び出すと`IRowset::GetData`、1 つの連続したバッファーでデータを転送します。 マップでは、ポインター演算を実行するよりも、データ メンバーを指定できます。  
   
- `CMyProviderRowset`クラスも含まれています、`Execute`メソッド。 `Execute` 実際には、ネイティブなソースからのデータを読み取ります何ができます。 次のコードは、ウィザードで生成された`Execute`メソッド。 関数が使用する Win32`FindFirstFile`と`FindNextFile`、ディレクトリ内のファイルに関する情報を取得しのインスタンスに配置するための Api、`CMyProviderWindowsFile`クラス。  
+`CMyProviderRowset`クラスも含まれています、`Execute`メソッド。 `Execute` 実際には、ネイティブなソースからのデータを読み取ります何ができます。 次のコードは、ウィザードで生成された`Execute`メソッド。 関数が使用する Win32`FindFirstFile`と`FindNextFile`、ディレクトリ内のファイルに関する情報を取得しのインスタンスに配置するための Api、`CMyProviderWindowsFile`クラス。  
   
 ```cpp
 /////////////////////////////////////////////////////////////////////  
@@ -81,9 +82,10 @@ HRESULT Execute(DBPARAMS * pParams, LONG* pcRowsAffected)
 }  
 ```  
   
- 検索するディレクトリをによって表される`m_strCommandText`; によって表されるテキストが含まれます、`ICommandText`コマンド オブジェクトのインターフェイス。 ディレクトリが指定されていない場合は、現在のディレクトリが使用されます。  
+検索するディレクトリをによって表される`m_strCommandText`; によって表されるテキストが含まれます、`ICommandText`コマンド オブジェクトのインターフェイス。 ディレクトリが指定されていない場合は、現在のディレクトリが使用されます。  
   
- メソッドは、ファイルが (1 行に対応) ごとに 1 つのエントリを作成しに格納、`m_rgRowData`データ メンバー。 `CRowsetImpl`クラスを定義、`m_rgRowData`データ メンバー。 この配列内のデータは、テーブル全体を表し、テンプレート全体で使用されます。  
+メソッドは、ファイルが (1 行に対応) ごとに 1 つのエントリを作成しに格納、`m_rgRowData`データ メンバー。 `CRowsetImpl`クラスを定義、`m_rgRowData`データ メンバー。 この配列内のデータは、テーブル全体を表し、テンプレート全体で使用されます。  
   
 ## <a name="see-also"></a>関連項目  
- [プロバイダー ウィザードで生成されたファイル](../../data/oledb/provider-wizard-generated-files.md)
+
+[プロバイダー ウィザードで生成されたファイル](../../data/oledb/provider-wizard-generated-files.md)

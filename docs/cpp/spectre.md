@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a51d47764ea4515fcbc2cb3b7aa37fd341cd130e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 3d919a810ed93e40218476369ef9981da59b89bb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463230"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114619"
 ---
 # <a name="spectre"></a>spectre
 
@@ -33,7 +33,7 @@ Spectre variant 1 の予測実行バリア手順関数を挿入しないよう�
 
 ## <a name="syntax"></a>構文
 
-> **__declspec( spectre(nomitigation) )**  
+> **__declspec( spectre(nomitigation) )**
 
 ## <a name="remarks"></a>Remarks
 
@@ -66,6 +66,7 @@ int main() {
 **Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
- [__declspec](../cpp/declspec.md)  
- [キーワード](../cpp/keywords-cpp.md)  
- [/Qspectre](../build/reference/qspectre.md)  
+
+[__declspec](../cpp/declspec.md)<br/>
+[キーワード](../cpp/keywords-cpp.md)<br/>
+[/Qspectre](../build/reference/qspectre.md)

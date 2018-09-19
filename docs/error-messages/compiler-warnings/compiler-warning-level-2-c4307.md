@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 2) C4307 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 2) C4307 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52914fc5825bda5647308c006b853538f3d6225e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ed18c213b35e79aaae98efa5932ac404a8d84bff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292033"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079194"
 ---
 # <a name="compiler-warning-level-2-c4307"></a>コンパイラの警告 (レベル 2) C4307
-'operator': 整数定数がオーバーフローしました  
-  
- 演算子は、それに割り当てられた領域がオーバーフローしたため整数の定数に評価される式で使用されます。 定数のより大きい型を使用する必要があります。 A **int を署名**よりも小さい値を保持する、`unsigned int`ため、 **int を署名**1 ビットを使用して、記号を表します。  
-  
- 次の例では、C4307 が生成されます。  
-  
-```  
-// C4307.cpp  
-// compile with: /W2  
-int i = 2000000000 + 2000000000;   // C4307  
-int j = (unsigned)2000000000 + 2000000000;   // OK  
-  
-int main()  
-{  
-}  
+
+'operator': 定数整数のオーバーフロー
+
+演算子は、それに割り当てられた領域をオーバーフローする整数の定数に評価される式で使用されます。 定数のより大きい型を使用する必要があります。 A **int を署名**よりも小さい値を保持、`unsigned int`ため、 **int を署名**1 ビットを使用して、記号を表します。
+
+次の例では、C4307 が生成されます。
+
+```
+// C4307.cpp
+// compile with: /W2
+int i = 2000000000 + 2000000000;   // C4307
+int j = (unsigned)2000000000 + 2000000000;   // OK
+
+int main()
+{
+}
 ```

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8af52c0e90f346e99564c839333f85ca396f9fd5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6dbc0e10f2747b9a9a2ad3ff345a580d4797ea72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763179"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079311"
 ---
 # <a name="ccomqiptrelementtraits-class"></a>CComQIPtrElementTraits クラス
 
@@ -32,17 +32,17 @@ ms.locfileid: "43763179"
 ## <a name="syntax"></a>構文
 
 ```
-template<typename I, const IID* piid=& __uuidof(I)>  
+template<typename I, const IID* piid=& __uuidof(I)>
 class CComQIPtrElementTraits : 
    public CDefaultElementTraits<ATL::CComQIPtr<I, piid>>
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*I*  
+*I*<br/>
 COM インターフェイスを格納するポインターの種類を指定します。
 
-*piid*  
+*piid*<br/>
 ポインターの IID を*は*します。
 
 ## <a name="members"></a>メンバー
@@ -85,5 +85,5 @@ typedef I* INARGTYPE;
 
 ## <a name="see-also"></a>関連項目
 
-[CDefaultElementTraits クラス](../../atl/reference/cdefaultelementtraits-class.md)   
+[CDefaultElementTraits クラス](../../atl/reference/cdefaultelementtraits-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

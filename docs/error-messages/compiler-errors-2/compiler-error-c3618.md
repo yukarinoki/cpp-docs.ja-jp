@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3618 |Microsoft ドキュメント
+title: コンパイラ エラー C3618 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78fb928c9e86105c97f1feb37ae8765c5e68b153
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 28371c211238aaabdadcb6c2b21284beb672dbe9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257258"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111642"
 ---
 # <a name="compiler-error-c3618"></a>コンパイラ エラー C3618
-'function': DllImport マークされたメソッドを定義することはできません  
-  
- マークされたメソッド<xref:System.Runtime.InteropServices.DllImportAttribute>が定義されている、指定しました。DLL です。  
-  
-## <a name="example"></a>例  
- 次の例では、c3618 エラーを生成します。  
-  
-```  
-// C3618.cpp  
-// compile with: /clr /c  
-using namespace System;  
-using namespace System::Runtime::InteropServices;  
-  
-[ DllImport("user32.dll", EntryPoint="MessageBox", CharSet=CharSet::Ansi) ]  // CHANGED   
-void Func();   
-  
-void Func() {}   // C3618, remove this function definition to resolve  
+
+'function': DllImport マークされたメソッドを定義することはできません
+
+マークされたメソッド<xref:System.Runtime.InteropServices.DllImportAttribute>が定義されている、指定しました。DLL です。
+
+## <a name="example"></a>例
+
+次の例では、C3618 が生成されます。
+
+```
+// C3618.cpp
+// compile with: /clr /c
+using namespace System;
+using namespace System::Runtime::InteropServices;
+
+[ DllImport("user32.dll", EntryPoint="MessageBox", CharSet=CharSet::Ansi) ]  // CHANGED
+void Func();
+
+void Func() {}   // C3618, remove this function definition to resolve
 ```

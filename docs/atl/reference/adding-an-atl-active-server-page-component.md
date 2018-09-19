@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cf97db30cae44d02a690782f1246e06d6c2b9a8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a326b72ac5594d7ef5f0b9ad26f9bdf4e8472bd4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766722"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112994"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>ATL Active Server Page コンポーネントを追加します。
 
@@ -46,10 +46,10 @@ Active Server Pages コンポーネントは、次の高度な Web 開発機能�
 
 ## <a name="see-also"></a>関連項目
 
-[クラスの追加](../../ide/adding-a-class-visual-cpp.md)   
-[ATL プロジェクトで新しいインターフェイスの追加](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)   
-[オブジェクトへの接続ポイントの追加](../../atl/adding-connection-points-to-an-object.md)   
-[メソッドの追加](../../ide/adding-a-method-visual-cpp.md)   
-[MFC クラス](../../mfc/reference/adding-an-mfc-class.md)   
+[クラスの追加](../../ide/adding-a-class-visual-cpp.md)<br/>
+[ATL プロジェクトでの新しいインターフェイスの追加](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)<br/>
+[オブジェクトへの接続ポイントの追加](../../atl/adding-connection-points-to-an-object.md)<br/>
+[メソッドの追加](../../ide/adding-a-method-visual-cpp.md)<br/>
+[MFC クラス](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [一般 C++ クラスの追加](../../ide/adding-a-generic-cpp-class.md)
 

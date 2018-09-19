@@ -1,5 +1,5 @@
 ---
-title: リソース コンパイラの致命的なエラー RC1203 |Microsoft ドキュメント
+title: リソース コンパイラの致命的なエラー RC1203 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f5267011eea32929b85e6ca60fb26ea34b2c371
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 638af9b85aecdd4eaba712cee68bf4ec96f3ab56
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321507"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081456"
 ---
 # <a name="resource-compiler-fatal-error-rc1203"></a>リソース コンパイラの致命的なエラー RC1203
-指定された無効な 16 進数の既定言語の ID。  
-  
- 既定の言語の指定 (/l) オプションが無効な 16 進数の言語 ID の後に 参照してください[言語および国/地域識別文字列](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)で、*ランタイム ライブラリ リファレンス*有効な言語 Id の一覧についてはします。
+
+指定された無効な 16 進数の既定の言語の ID。
+
+既定の言語の指定 (/l) オプションが無効な 16 進数の言語 ID の後に 参照してください[言語と国/地域識別文字列](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)で、*ランタイム ライブラリ リファレンス*有効な言語 Id の一覧についてはします。

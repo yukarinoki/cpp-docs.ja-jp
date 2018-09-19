@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b6aa360229857e3c12322cb6579aa0dbbba53d9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d414df9d5e5f7d930497d42b5ec73d92a65ac3cc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753241"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116712"
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>C++ 標準ライブラリに基づくコレクションを実装します。
 
@@ -111,7 +111,7 @@ ATL には、`ICollectionOnSTLImpl`迅速に、オブジェクトのコレクシ
 
 ## <a name="see-also"></a>関連項目
 
-[コレクションと列挙子](../atl/atl-collections-and-enumerators.md)   
-[ATLCollections サンプル](../visual-cpp-samples.md)   
+[コレクションと列挙子](../atl/atl-collections-and-enumerators.md)<br/>
+[ATLCollections サンプル](../visual-cpp-samples.md)<br/>
 [ATL コピー ポリシー クラス](../atl/atl-copy-policy-classes.md)
 

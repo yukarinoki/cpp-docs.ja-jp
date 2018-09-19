@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d771b24db830a03101b7a0041b02aeaeaf3b3b3d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 591465ed9c16485498174a710d2d37ff68425058
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756078"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116868"
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc クラス
 
@@ -129,13 +129,13 @@ Windows でのアクセス制御モデルの概要については、次を参照
 
 ```
 CSecurityDesc() throw();
-CSecurityDesc(const CSecurityDesc& rhs) throw(... );  
+CSecurityDesc(const CSecurityDesc& rhs) throw(... );
 CSecurityDesc(const SECURITY_DESCRIPTOR& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*rhs*  
+*rhs*<br/>
 `CSecurityDesc`オブジェクトまたは`SECURITY_DESCRIPTOR`構造に割り当てる新しい`CSecurityDesc`オブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -164,7 +164,7 @@ bool FromString(LPCTSTR pstr) throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*pstr*  
+*pstr*<br/>
 含む null で終わる文字列へのポインター、[文字列形式のセキュリティ記述子](/windows/desktop/SecAuthZ/security-descriptor-string-format)に変換します。
 
 ### <a name="return-value"></a>戻り値
@@ -187,7 +187,7 @@ bool GetControl(SECURITY_DESCRIPTOR_CONTROL* psdc) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*psdc*  
+*psdc*<br/>
 ポインター、`SECURITY_DESCRIPTOR_CONTROL`セキュリティ記述子の制御情報を受け取る構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -211,13 +211,13 @@ bool GetDacl(
 
 ### <a name="parameters"></a>パラメーター
 
-*pDacl*  
+*pDacl*<br/>
 ポインター、`CDacl`セキュリティ記述子の DACL のコピーを格納する構造体。 随意 ACL が存在する場合、メソッドは設定*pDacl*セキュリティ記述子の随意 ACL のアドレスにします。 随意 ACL が存在しない場合、値は格納されません。
 
-*pbPresent*  
+*pbPresent*<br/>
 指定したセキュリティ記述子の随意 ACL のプレゼンスを示す値を指すポインター。 このパラメーターを設定する場合は、セキュリティ記述子には、随意 ACL が含まれている、true に設定します。 セキュリティ記述子に随意 ACL が含まれていない場合は、このパラメーターが false に設定されます。
 
-*pbDefaulted*  
+*pbDefaulted*<br/>
 SE_DACL_DEFAULTED フラグの値にフラグへのポインターの設定、`SECURITY_DESCRIPTOR_CONTROL`のセキュリティ記述子の随意 ACL が存在する場合に構造体します。 随意 ACL が既定の機構によって取得されたこのフラグが true の場合false の場合、随意 ACL がユーザーによって明示的に指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -236,10 +236,10 @@ bool GetGroup(
 
 ### <a name="parameters"></a>パラメーター
 
-*pSid*  
+*pSid*<br/>
 ポインターを[CSid](../../atl/reference/csid-class.md) (セキュリティ識別子)、CDacl に格納されているグループのコピーを受信します。
 
-*pbDefaulted*  
+*pbDefaulted*<br/>
 フラグをポインターであることを示しますフラグの値に設定、`SECURITY_DESCRIPTOR_CONTROL`メソッドが戻るときに構造体します。
 
 ### <a name="return-value"></a>戻り値
@@ -258,10 +258,10 @@ bool GetOwner(
 
 ### <a name="parameters"></a>パラメーター
 
-*pSid*  
+*pSid*<br/>
 ポインターを[CSid](../../atl/reference/csid-class.md) (セキュリティ識別子)、CDacl に格納されているグループのコピーを受信します。
 
-*pbDefaulted*  
+*pbDefaulted*<br/>
 SE_OWNER_DEFAULTED フラグの値にフラグへのポインターの設定、`SECURITY_DESCRIPTOR_CONTROL`メソッドが戻るときに構造体します。
 
 ### <a name="return-value"></a>戻り値
@@ -293,13 +293,13 @@ bool GetSacl(
 
 ### <a name="parameters"></a>パラメーター
 
-*psacl の値として*  
+*psacl の値として*<br/>
 ポインター、`CSacl`セキュリティ記述子の SACL のコピーを格納する構造体。 システムの ACL が存在する場合、メソッドを設定*psacl の値として*セキュリティ記述子のシステム ACL のアドレスにします。 システムの ACL が存在しない場合、値は格納されません。
 
-*pbPresent*  
+*pbPresent*<br/>
 指定したセキュリティ記述子にシステム ACL の存在を示すフラグ、メソッドへのポインターを設定します。 セキュリティ記述子にシステム ACL が含まれている場合は、このパラメーターが設定を true にします。 セキュリティ記述子にシステム ACL が含まれていない場合は、このパラメーターが false に設定されます。
 
-*pbDefaulted*  
+*pbDefaulted*<br/>
 SE_SACL_DEFAULTED フラグの値にフラグへのポインターの設定、`SECURITY_DESCRIPTOR_CONTROL`のセキュリティ記述子のシステムの ACL が存在する場合に構造体します。
 
 ### <a name="return-value"></a>戻り値
@@ -529,13 +529,13 @@ bool MakeSelfRelative() throw(...);
 代入演算子。
 
 ```
-CSecurityDesc& operator= (const SECURITY_DESCRIPTOR& rhs) throw(...);  
+CSecurityDesc& operator= (const SECURITY_DESCRIPTOR& rhs) throw(...);
 CSecurityDesc& operator= (const CSecurityDesc& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*rhs*  
+*rhs*<br/>
 `SECURITY_DESCRIPTOR`構造または`CSecurityDesc`オブジェクトに割り当てる、`CSecurityDesc`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -546,7 +546,7 @@ CSecurityDesc& operator= (const CSecurityDesc& rhs) throw(...);
 
 値へのポインターにキャスト、`SECURITY_DESCRIPTOR`構造体。
 
-```  
+```
 operator const SECURITY_DESCRIPTOR *() const throw();
 ```
 
@@ -562,10 +562,10 @@ bool SetControl(
 
 ### <a name="parameters"></a>パラメーター
 
-*ControlBitsOfInterest*  
+*ControlBitsOfInterest*<br/>
 設定する制御ビットを示す SECURITY_DESCRIPTOR_CONTROL マスク。 設定できるフラグの一覧は、次を参照してください。 [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx)します。
 
-*ControlBitsToSet*  
+*ControlBitsToSet*<br/>
 によって指定される制御ビットの新しい値を示す SECURITY_DESCRIPTOR_CONTROL マスク、 *ControlBitsOfInterest*マスク。 このパラメーターの一覧表示フラグの組み合わせを指定できます、 *ControlBitsOfInterest*パラメーター。
 
 ### <a name="return-value"></a>戻り値
@@ -592,13 +592,13 @@ inline void SetDacl(
 
 ### <a name="parameters"></a>パラメーター
 
-*Dacl*  
+*Dacl*<br/>
 参照を`CDacl`のセキュリティ記述子の DACL を指定するオブジェクト。 このパラメーターには、NULL は指定できません。 NULL DACL のセキュリティ記述子を設定すると、メソッドの最初のフォームを使用する必要があります*bPresent*を false に設定します。
 
-*bPresent*  
+*bPresent*<br/>
 セキュリティ記述子の DACL の存在を示すフラグを指定します。 このパラメーターが true の場合、メソッド SE_DACL_PRESENT フラグを設定、`SECURITY_DESCRIPTOR_CONTROL`構造体の値を使用して、 *Dacl*と*bDefaulted*パラメーター。 メソッドが、SE_DACL_PRESENT フラグをクリアが false の場合と*bDefaulted*は無視されます。
 
-*bDefaulted*  
+*bDefaulted*<br/>
 DACL のソースを示すフラグを指定します。 このフラグが true の場合、DACL が既定の機構によって取得されました。 False の場合のユーザーによって DACL を明示的に指定されています。 メソッドの SE_DACL_DEFAULTED フラグでこの値を格納する、`SECURITY_DESCRIPTOR_CONTROL`構造体。 このパラメーターが指定されていない場合、SE_DACL_DEFAULTED フラグがクリアされます。
 
 ### <a name="return-value"></a>戻り値
@@ -619,10 +619,10 @@ bool SetGroup(const CSid& Sid, bool bDefaulted = false) throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*sid*  
+*sid*<br/>
 参照を[CSid](../../atl/reference/csid-class.md)セキュリティ記述子の新しいプライマリ グループのオブジェクト。 このパラメーターには、NULL は指定できません。 DACL または SACL がなくなると、セキュリティ記述子を設定できますが、グループと所有者は、これらもありますが NULL の SID (される特別な意味を持つ組み込みの SID)。
 
-*bDefaulted*  
+*bDefaulted*<br/>
 プライマリ グループの情報が既定のメカニズムから派生したかどうかを示します。 この値は true、既定の情報、およびメソッドであることを示しますフラグとしてこの値を格納する場合、`SECURITY_DESCRIPTOR_CONTROL`構造体。 このパラメーターが 0 の場合、SE_GROUP_DEFAULTED フラグがクリアされます。
 
 ### <a name="return-value"></a>戻り値
@@ -639,10 +639,10 @@ bool SetOwner(const CSid& Sid, bool bDefaulted = false) throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*sid*  
+*sid*<br/>
 [CSid](../../atl/reference/csid-class.md)セキュリティ記述子の新しいプライマリ所有者のオブジェクト。 このパラメーターには、NULL は指定できません。
 
-*bDefaulted*  
+*bDefaulted*<br/>
 所有者情報が既定の機構から派生したかどうかを示します。 この値が true の場合は、既定の情報です。 メソッドで SE_OWNER_DEFAULTED フラグとしてこの値を格納する、`SECURITY_DESCRIPTOR_CONTROL`構造体。 このパラメーターが 0 の場合、SE_OWNER_DEFAULTED フラグがクリアされます。
 
 ### <a name="return-value"></a>戻り値
@@ -659,10 +659,10 @@ bool SetSacl(const CSacl& Sacl, bool bDefaulted = false) throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*Sacl*  
+*Sacl*<br/>
 ポインター、`CSacl`のセキュリティ記述子の SACL を指定するオブジェクト。 このパラメーターは NULL をすることはできません、CSacl オブジェクトである必要があります。 Dacl とは異なり違いはありません NULL と、空の SACL のオブジェクトの SACL は監査のみの情報のアクセス権を指定していないようです。
 
-*bDefaulted*  
+*bDefaulted*<br/>
 SACL のソースを示すフラグを指定します。 このフラグが true の場合、SACL が既定の機構によって取得されました。 False の場合、ユーザーによって SACL を明示的に指定されています。 メソッドの SE_SACL_DEFAULTED フラグでこの値を格納する、`SECURITY_DESCRIPTOR_CONTROL`構造体。 このパラメーターが指定されていない場合、SE_SACL_DEFAULTED フラグがクリアされます。
 
 ### <a name="return-value"></a>戻り値
@@ -682,10 +682,10 @@ bool ToString(
 
 ### <a name="parameters"></a>パラメーター
 
-*pstr*  
+*pstr*<br/>
 受信する null で終わる文字列へのポインター、[文字列形式のセキュリティ記述子](/windows/desktop/SecAuthZ/security-descriptor-string-format)します。
 
-*si*  
+*si*<br/>
 出力文字列に含めるセキュリティ記述子のコンポーネントを示す SECURITY_INFORMATION ビット フラグの組み合わせを指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -713,7 +713,7 @@ DACL が NULL で、入力のセキュリティ記述子で SE_DACL_PRESENT の�
 
 ## <a name="see-also"></a>関連項目
 
-[セキュリティのサンプル](../../visual-cpp-samples.md)   
-[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)   
-[クラスの概要](../../atl/atl-class-overview.md)   
+[セキュリティのサンプル](../../visual-cpp-samples.md)<br/>
+[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
+[クラスの概要](../../atl/atl-class-overview.md)<br/>
 [セキュリティに関するグローバル関数](../../atl/reference/security-global-functions.md)

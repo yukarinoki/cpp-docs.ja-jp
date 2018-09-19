@@ -44,14 +44,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1b94898cbe4a041ac1bb9a5d01c55380ee496106
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c6d62b8d4b033d1b90c753d5de1752f0cb737f0d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572006"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114658"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet クラス
+
 継承、`DBPROPSET`構造体し、キー フィールドを初期化するコンス トラクターを追加するだけでなく`AddProperty`メソッドにアクセスします。  
   
 ## <a name="syntax"></a>構文
@@ -61,7 +62,8 @@ class CDBPropSet : public tagDBPROPSET
 ```  
 
 ## <a name="requirements"></a>要件  
- **ヘッダー:** atldbcli.h  
+
+**ヘッダー:** atldbcli.h  
 
 ## <a name="members"></a>メンバー  
   
@@ -80,9 +82,11 @@ class CDBPropSet : public tagDBPROPSET
 |[演算子 =](#op_equal)|1 つのプロパティ セットを他の内容を割り当てます。|  
   
 ## <a name="remarks"></a>Remarks  
- OLE DB プロバイダーとコンシューマー使用`DBPROPSET`構造体の配列を渡す`DBPROP`構造体。 各`DBPROP`構造体は、設定可能な 1 つのプロパティを表します。  
+
+OLE DB プロバイダーとコンシューマー使用`DBPROPSET`構造体の配列を渡す`DBPROP`構造体。 各`DBPROP`構造体は、設定可能な 1 つのプロパティを表します。  
 
 ## <a name="addproperty"></a> Cdbpropset::addproperty
+
 プロパティ セットには、プロパティを追加します。  
   
 ### <a name="syntax"></a>構文  
@@ -103,34 +107,37 @@ bool AddProperty(DWORD dwPropertyID,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *dwPropertyID*  
- [in]追加するプロパティの ID。 初期化に使用される、`dwPropertyID`の`DBPROP`構造、プロパティ セットに追加します。  
+
+*dwPropertyID*<br/>
+[in]追加するプロパティの ID。 初期化に使用される、`dwPropertyID`の`DBPROP`構造、プロパティ セットに追加します。  
   
- *var*  
- [in]プロパティ値を初期化するために使用されるバリアント、`DBPROP`構造、プロパティ セットに追加します。  
+*var*<br/>
+[in]プロパティ値を初期化するために使用されるバリアント、`DBPROP`構造、プロパティ セットに追加します。  
   
- *szValue*  
- [in]プロパティ値を初期化するために使用する文字列、`DBPROP`構造、プロパティ セットに追加します。  
+*szValue*<br/>
+[in]プロパティ値を初期化するために使用する文字列、`DBPROP`構造、プロパティ セットに追加します。  
   
- *bValue*  
- [in]A`BYTE`またはのプロパティ値を初期化するために使用するブール値、`DBPROP`構造、プロパティ セットに追加します。  
+*bValue*<br/>
+[in]A`BYTE`またはのプロパティ値を初期化するために使用するブール値、`DBPROP`構造、プロパティ セットに追加します。  
   
- *値*  
- [in]プロパティ値を初期化するために使用する整数値、`DBPROP`構造、プロパティ セットに追加します。  
+*値*<br/>
+[in]プロパティ値を初期化するために使用する整数値、`DBPROP`構造、プロパティ セットに追加します。  
   
- *fltValue*  
- [in]プロパティ値を初期化するために使用する浮動小数点値、`DBPROP`構造、プロパティ セットに追加します。  
+*fltValue*<br/>
+[in]プロパティ値を初期化するために使用する浮動小数点値、`DBPROP`構造、プロパティ セットに追加します。  
   
- *dblValue*  
- [in]倍精度浮動小数点値のプロパティ値を初期化するために使用される、`DBPROP`構造、プロパティ セットに追加します。  
+*dblValue*<br/>
+[in]倍精度浮動小数点値のプロパティ値を初期化するために使用される、`DBPROP`構造、プロパティ セットに追加します。  
   
- *cyValue*  
- [in]CY 通貨値のプロパティ値を初期化するために使用される、`DBPROP`構造、プロパティ セットに追加します。  
+*cyValue*<br/>
+[in]CY 通貨値のプロパティ値を初期化するために使用される、`DBPROP`構造、プロパティ セットに追加します。  
   
 ### <a name="return-value"></a>戻り値  
- **true**場合は、プロパティが正常に追加します。 それ以外の場合、 **false**します。 
+
+**true**場合は、プロパティが正常に追加します。 それ以外の場合、 **false**します。 
 
 ## <a name="cdbpropset"></a> Cdbpropset::cdbpropset
+
 コンストラクターです。 初期化します、 `rgProperties`、 `cProperties`、および`guidPropertySet`のフィールド、 [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))構造体。  
   
 ### <a name="syntax"></a>構文  
@@ -144,13 +151,15 @@ CDBPropSet();
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *guid*  
- [in]初期化するために使用される GUID、`guidPropertySet`フィールド。  
+
+*guid*<br/>
+[in]初期化するために使用される GUID、`guidPropertySet`フィールド。  
   
- *propset*  
- [in]もう 1 つ`CDBPropSet`オブジェクトのコピー構築します。  
+*propset*<br/>
+[in]もう 1 つ`CDBPropSet`オブジェクトのコピー構築します。  
 
 ## <a name="setguid"></a> Cdbpropset::setguid
+
 セット、`guidPropertySet`フィールドに、`DBPROPSET`構造体。  
   
 ### <a name="syntax"></a>構文  
@@ -160,13 +169,16 @@ void SetGUID(const GUID& guid) throw();
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *guid*  
- [in]GUID を設定するため、`guidPropertySet`のフィールド、 [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))構造体。  
+
+*guid*<br/>
+[in]GUID を設定するため、`guidPropertySet`のフィールド、 [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))構造体。  
   
 ### <a name="remarks"></a>Remarks  
- このフィールドを設定することができます、[コンス トラクター](../../data/oledb/cdbpropset-cdbpropset.md)もします。  
+
+このフィールドを設定することができます、[コンス トラクター](../../data/oledb/cdbpropset-cdbpropset.md)もします。  
 
 ## <a name="op_equal"></a> Cdbpropset::operator =
+
 もう 1 つのプロパティ セットに設定する 1 つのプロパティの内容を割り当てます。  
   
 ### <a name="syntax"></a>構文  
@@ -176,8 +188,9 @@ CDBPropSet& operator =(CDBPropSet& propset) throw();
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [CDBPropIDSet クラス](../../data/oledb/cdbpropidset-class.md)   
- [DBPROPSET 構造体](/previous-versions/windows/desktop/ms714367\(v=vs.85\))   
- [DBPROP 構造体](/previous-versions/windows/desktop/ms717970\(v=vs.85\))
+
+[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[CDBPropIDSet クラス](../../data/oledb/cdbpropidset-class.md)<br/>
+[DBPROPSET 構造体](/previous-versions/windows/desktop/ms714367\(v=vs.85\))   
+[DBPROP 構造体](/previous-versions/windows/desktop/ms717970\(v=vs.85\))

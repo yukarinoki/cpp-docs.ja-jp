@@ -1,5 +1,5 @@
 ---
-title: 式エバリュエーター エラー CXX0012 |Microsoft ドキュメント
+title: 式エバリュエーター エラー CXX0012 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7043eaf6654670935301c1f49ba88aed5745a96
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 024811c13fb27cb2da88bdddc9965d8a124e341a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297031"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135907"
 ---
 # <a name="expression-evaluator-error-cxx0012"></a>式エバリュエーター エラー CXX0012
-左中かっこがありません。  
-  
- 式には、不均衡中かっこが含まれています。 左右の中かっこで式を再入力します。  
-  
- このエラーは、can0012 と同じものと同じです。
+
+左中かっこがありません。
+
+式には、負荷が不均衡の中かっこが含まれています。 バランスの取れたかっこを使用して式を再入力します。
+
+このエラーは、can0012 と同じものと同じです。

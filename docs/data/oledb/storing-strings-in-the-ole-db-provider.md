@@ -1,5 +1,5 @@
 ---
-title: OLE DB プロバイダーで文字列を格納する |Microsoft ドキュメント
+title: OLE DB Provider で文字列を格納する |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a5ba289e7e53ba1bcaca550ba84c2d871d215306
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 84ee07f236ac7ec79149b1cb36f358598f9c6c12
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106987"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112695"
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>OLE DB プロバイダーへの文字列の格納
-ATL OLE DB プロバイダー ウィザードと呼ばれる既定のユーザー レコードの作成 myproviderrs.h、`CWindowsFile`です。 変更するか、2 つの文字列を処理する`CWindowsFile`または次のコードに示すように、ユーザー レコードを追加します。  
+
+ATL OLE DB プロバイダー ウィザードと呼ばれる既定のユーザー レコードの作成 myproviderrs.h、`CWindowsFile`します。 2 つの文字列を処理するために変更するか`CWindowsFile`または次のコードに示すように、ユーザー レコードを追加します。  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -50,11 +51,12 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- データ メンバー`szCommand`と`szText`で 2 つの文字列を表す`szCommand2`と`szText2`必要な場合は、追加の列を提供します。 データ メンバー`dwBookmark`この単純な読み取り専用プロバイダーは必要ありませんが、後で追加するため、`IRowsetLocate`インターフェイス; を参照してください[、単純な読み取り専用プロバイダーの向上](../../data/oledb/enhancing-the-simple-read-only-provider.md)です。 `==`インスタンスを比較演算子 (この演算子の実装は省略可能)。  
+データ メンバー`szCommand`と`szText`で 2 つの文字列を表す`szCommand2`と`szText2`必要な場合、追加の列を提供します。 データ メンバー`dwBookmark`この単純な読み取り専用プロバイダーは必要ありませんが、後で追加に使用されます、`IRowsetLocate`インターフェイスは、参照してください[、単純な読み取り専用プロバイダーの強化](../../data/oledb/enhancing-the-simple-read-only-provider.md)します。 `==`演算子とインスタンスを比較します (この演算子の実装は省略可能)。  
   
- これは、プロバイダーはコンパイルして実行する準備ができます。 プロバイダーをテストするには、照合機能を持つコンシューマー必要があります。 [単純なコンシューマーを実装する](../../data/oledb/implementing-a-simple-consumer.md)このようなテスト コンシューマーを作成する方法を示します。 プロバイダーをテスト コンシューマーを実行します。 クリックすると、テストのコンシューマーが、プロバイダーから適切な文字列を取得することを確認、**実行**ボタンをクリックして、**テスト コンシューマー**  ダイアログ ボックス。  
+これが完了したら、プロバイダーをコンパイルして実行する準備があります。 プロバイダーをテストするには、照合機能を持つコンシューマーが必要です。 [単純なコンシューマーを実装する](../../data/oledb/implementing-a-simple-consumer.md)テストのコンシューマーを作成する方法を示しています。 プロバイダーとコンシューマー テストを実行します。 クリックすると、テストのコンシューマーがプロバイダーから適切な文字列を取得することを確認、**実行**ボタン、**テスト コンシューマー**  ダイアログ ボックス。  
   
- プロバイダーを正常にテストするときに、追加のインターフェイスを実装することでその機能を強化することができます。 例が示すように[単純な読み取り専用プロバイダーの向上](../../data/oledb/enhancing-the-simple-read-only-provider.md)です。  
+ご利用のプロバイダーのテストが成功する場合は、追加のインターフェイスを実装することでその機能を強化するために可能性があります。 例に示した[単純な読み取り専用プロバイダーの強化](../../data/oledb/enhancing-the-simple-read-only-provider.md)します。  
   
 ## <a name="see-also"></a>関連項目  
- [単純な読み取り専用プロバイダーの実装](../../data/oledb/implementing-the-simple-read-only-provider.md)
+
+[単純な読み取り専用プロバイダーの実装](../../data/oledb/implementing-the-simple-read-only-provider.md)

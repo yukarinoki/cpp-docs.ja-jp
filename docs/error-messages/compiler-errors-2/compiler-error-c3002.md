@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3002 |Microsoft ドキュメント
+title: コンパイラ エラー C3002 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e69b2eede8e186347f7c3812901ef3c1dcc01495
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cc346c349ba57906e1645b7e3535ae6b11bd36d7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243275"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086305"
 ---
 # <a name="compiler-error-c3002"></a>コンパイラ エラー C3002
-'name1 name2' : 複数の OpenMP ディレクティブ名が存在します  
-  
- 複数のディレクティブ名を指定することはできません。  
-  
- 次の例では C3002 が生成されます。  
-  
-```  
-// C3002.c  
-// compile with: /openmp  
-int main()  
-{  
-   #pragma omp parallel single   // C3002  
-}  
+
+'name1 name2' : 複数の OpenMP ディレクティブ名が存在します
+
+複数のディレクティブ名を指定することはできません。
+
+次の例では C3002 が生成されます。
+
+```
+// C3002.c
+// compile with: /openmp
+int main()
+{
+   #pragma omp parallel single   // C3002
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: リンカ ツール エラー LNK1164 |Microsoft ドキュメント
+title: リンカ ツール エラー LNK1164 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f85ad1c223c9d4b22e3763f1d24a6c2631f6342d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b07dcf360a58b07b84abe655641b758d6137d0e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297421"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087437"
 ---
 # <a name="linker-tools-error-lnk1164"></a>リンカ ツール エラー LNK1164
-セクションのセクションの配置 (number)/align の指定値より大きい  
-  
- オブジェクト ファイルで指定されたセクションの配置のサイズを超えると指定された値、 [配置/](../../build/reference/align-section-alignment.md)オプション。 **配置/** 値が 2 の累乗にする必要がありますと等しいか、またはオブジェクト ファイルで指定されたセクションの配置を超えます。  
-  
- 小さいセクションの配置または増加のいずれかの再コンパイル、 **配置/** 値。
+
+セクション セクション アラインメント (number)/align の指定値より大きい
+
+オブジェクト ファイル内の特定のセクションの配置のサイズがで指定された値を超える、 [/align](../../build/reference/align-section-alignment.md)オプション。 **/Align**値は 2 の累乗である必要がありますと等しいか、またはオブジェクト ファイルのセクションの配置を超えます。
+
+小さいセクションの配置または増加のいずれかの再コンパイル、 **/align**値。

@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 2) C4099 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 2) C4099 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afecb3fb2420d27bedf16c81894f224a1119a67b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d7ffee02e8e5414a0e06cc4ba0da77a50c75f53
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33309469"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110173"
 ---
 # <a name="compiler-warning-level-2-c4099"></a>コンパイラの警告 (レベル 2) C4099
-'identifier': 'objecttype1' 使われて '%objecttype2' を使用して 1 つ目の種類名  
-  
- クラスと構造体として宣言されたオブジェクトが定義されているまたは構造体としてをクラスとして宣言されたオブジェクトを定義します。 コンパイラは、定義で指定された型を使用します。  
-  
-## <a name="example"></a>例  
- 次の例では、C4099 を生成します。  
-  
-```  
-// C4099.cpp  
-// compile with: /W2 /c  
-struct A;  
-class A {};   // C4099, use different identifer or use same object type  
+
+'identifier': 型名が 'objecttype1' '%objecttype2' を使用して認識を使用して最初の表示
+
+クラスと構造体として宣言されたオブジェクトが定義されているか、クラスとして宣言されたオブジェクトが構造体として定義されています。 コンパイラは、定義で指定された型を使用します。
+
+## <a name="example"></a>例
+
+次の例では、C4099 が生成されます。
+
+```
+// C4099.cpp
+// compile with: /W2 /c
+struct A;
+class A {};   // C4099, use different identifer or use same object type
 ```

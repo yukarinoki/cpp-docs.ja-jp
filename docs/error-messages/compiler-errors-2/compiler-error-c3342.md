@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3342 |Microsoft ドキュメント
+title: コンパイラ エラー C3342 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74798ff2892b7d049df7a45ffa4b1fa2dd9f649d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 03226ff4f7a5280827201a595b09a4779c88bb41
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253945"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082106"
 ---
 # <a name="compiler-error-c3342"></a>コンパイラ エラー C3342
-'attribute': あいまいな属性です  
-  
- コンパイラが 1 つの属性の定義を複数検出しました。  
-  
- 属性が複数回定義されています。  
-  
- 詳細については、「 [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md)」を参照してください。  
-  
-## <a name="example"></a>例  
- 次の例では C3342 が生成されます。  
-  
-```  
-// C3342.cpp  
-// compile with: /clr /c  
-using namespace System;  
-using namespace System::Reflection;  
-  
-[AttributeUsage(AttributeTargets::All)]  
-public ref class XAttribute : public  Attribute {};  
-  
-[AttributeUsage(AttributeTargets::All)]  
-public ref class X : public Attribute {};  
-  
-[X]   // C3342 could refer to X or XAttribute  
-// try the following line instead  
-// [XAttribute]  
-public ref class Class4 {};  
+
+'attribute': あいまいな属性です
+
+コンパイラが 1 つの属性の定義を複数検出しました。
+
+属性が複数回定義されています。
+
+詳細については、「 [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md)」を参照してください。
+
+## <a name="example"></a>例
+
+次の例では C3342 が生成されます。
+
+```
+// C3342.cpp
+// compile with: /clr /c
+using namespace System;
+using namespace System::Reflection;
+
+[AttributeUsage(AttributeTargets::All)]
+public ref class XAttribute : public  Attribute {};
+
+[AttributeUsage(AttributeTargets::All)]
+public ref class X : public Attribute {};
+
+[X]   // C3342 could refer to X or XAttribute
+// try the following line instead
+// [XAttribute]
+public ref class Class4 {};
 ```

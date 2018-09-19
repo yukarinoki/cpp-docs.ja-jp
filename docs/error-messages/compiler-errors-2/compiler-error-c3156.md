@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3156 |Microsoft ドキュメント
+title: コンパイラ エラー C3156 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9557043bac056435dd53b210359e7bb72b29b6d7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cfb52ad730df486ee804bcf958505512fadc0150
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248230"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116705"
 ---
 # <a name="compiler-error-c3156"></a>コンパイラ エラー C3156
-'class' : マネージ型または WinRT 型のローカル定義を持つことができません  
-  
- 関数に、マネージ型または WinRT 型のクラス、構造体、インターフェイスの定義 (宣言) を含めることはできません。  
-  
-## <a name="example"></a>例  
- 次の例では C3156 が生成されます。  
-  
-```  
-// C3156.cpp  
-// compile with: /clr /c  
-void f() {  
-   ref class X {};   // C3156  
-   ref class Y;   // C3156  
-}  
-```  
+
+'class' : マネージド型または WinRT 型のローカル定義を持つことができません
+
+関数に、マネージド型または WinRT 型のクラス、構造体、インターフェイスの定義 (宣言) を含めることはできません。
+
+## <a name="example"></a>例
+
+次の例では C3156 が生成されます。
+
+```
+// C3156.cpp
+// compile with: /clr /c
+void f() {
+   ref class X {};   // C3156
+   ref class Y;   // C3156
+}
+```

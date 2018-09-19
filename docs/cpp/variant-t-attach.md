@@ -19,32 +19,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 567a3387e79244443b784549d6223a14f78103ce
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e680f4f42881ea89510048f43d657d1579686527
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464685"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109263"
 ---
 # <a name="varianttattach"></a>_variant_t::Attach
-**Microsoft 固有の仕様**  
-  
- アタッチを`VARIANT`オブジェクトを **_variant_t**オブジェクト。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-void Attach(VARIANT& varSrc);  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
- *varSrc*  
- A`VARIANT`オブジェクトにアタッチされる **_variant_t**オブジェクト。  
-  
-## <a name="remarks"></a>Remarks  
- 所有権を取得、`VARIANT`によってカプセル化しています。 このメンバー関数は、既存のカプセル化を解放`VARIANT`をコピーし、指定された`VARIANT`、設定とその`VARTYPE`VT_EMPTY を確認するにそのリソースのみ解放できますが、 **_variant_t**デストラクターです。  
-  
- **Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- [_variant_t クラス](../cpp/variant-t-class.md)
+
+**Microsoft 固有の仕様**
+
+アタッチを`VARIANT`オブジェクトを **_variant_t**オブジェクト。
+
+## <a name="syntax"></a>構文
+
+```
+void Attach(VARIANT& varSrc);
+```
+
+#### <a name="parameters"></a>パラメーター
+
+*varSrc*<br/>
+A`VARIANT`オブジェクトにアタッチされる **_variant_t**オブジェクト。
+
+## <a name="remarks"></a>Remarks
+
+所有権を取得、`VARIANT`によってカプセル化しています。 このメンバー関数は、既存のカプセル化を解放`VARIANT`をコピーし、指定された`VARIANT`、設定とその`VARTYPE`VT_EMPTY を確認するにそのリソースのみ解放できますが、 **_variant_t**デストラクターです。
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
+[_variant_t クラス](../cpp/variant-t-class.md)

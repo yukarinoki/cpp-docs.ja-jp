@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2765 |Microsoft ドキュメント
+title: コンパイラ エラー C2765 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 926cc1657db67530f866a2b2e00e4b23f4ccd0bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 708a4c326e87cf580208e26ef5ffe540afd52f95
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234585"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085135"
 ---
 # <a name="compiler-error-c2765"></a>コンパイラ エラー C2765
-'function': 関数テンプレートの明示的な特殊化は、既定引数を持つことはできません  
-  
- 既定の引数は関数テンプレートの明示的な特殊化では許可されません。 詳細については、次を参照してください。[関数テンプレートの明示的な特殊化](../../cpp/explicit-specialization-of-function-templates.md)です。  
-  
- 次の例では、C2765 が生成されます。  
-  
-```  
-// C2765.cpp  
-template<class T> void f(T t) {};  
-  
-template<> void f<char>(char c = 'a') {}   // C2765  
-// try the following line instead  
-// template<> void f<char>(char c) {}  
+
+'function': 関数テンプレートの明示的な特殊化は、既定の引数を持つことはできません
+
+既定の引数は関数テンプレートの明示的な特殊化では許可されません。 詳細については、次を参照してください。[関数テンプレートの明示的な特殊化](../../cpp/explicit-specialization-of-function-templates.md)します。
+
+次の例では、C2765 が生成されます。
+
+```
+// C2765.cpp
+template<class T> void f(T t) {};
+
+template<> void f<char>(char c = 'a') {}   // C2765
+// try the following line instead
+// template<> void f<char>(char c) {}
 ```

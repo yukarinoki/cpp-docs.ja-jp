@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 3) C4641 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 3) C4641 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea8413971353e7ffbe6579412d0eed9c735b91b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f44e94868f6a7b379fb1a2f75bbd28ce011b54c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291438"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112110"
 ---
 # <a name="compiler-warning-level-3-c4641"></a>コンパイラの警告 (レベル 3) C4641
-XML ドキュメント コメントはあいまいな相互参照  
-  
- コンパイラは、明確に参照を解決できませんでした。 この警告を解決するのには、参照があいまいでないために必要なパラメーター情報を指定します。  
-  
- 詳細については、「 [XML Documentation](../../ide/xml-documentation-visual-cpp.md)」を参照してください。  
-  
-## <a name="example"></a>例  
- 次の例では、C4641 を生成します。  
-  
-```  
-// C4641.cpp  
-// compile with: /W3 /doc /clr /c  
-  
-/// <see cref="f" />   // C4641  
-// try the following line instead  
-// /// <see cref="f(int)" />  
-public ref class GR {  
-public:  
-   void f( int ) {}  
-   void f( char ) {}  
-};  
+
+XML ドキュメント コメントは、あいまいな相互参照
+
+コンパイラは、明確に参照を解決できませんでした。 この警告を解決するには、参照を明確に必要なパラメーター情報を指定します。
+
+詳細については、「 [XML Documentation](../../ide/xml-documentation-visual-cpp.md)」を参照してください。
+
+## <a name="example"></a>例
+
+次の例では、C4641 が生成されます。
+
+```
+// C4641.cpp
+// compile with: /W3 /doc /clr /c
+
+/// <see cref="f" />   // C4641
+// try the following line instead
+// /// <see cref="f(int)" />
+public ref class GR {
+public:
+   void f( int ) {}
+   void f( char ) {}
+};
 ```

@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3226 |Microsoft ドキュメント
+title: コンパイラ エラー C3226 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eb5fca95c876b1020a630f0ebe69e56a1dfa362
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b3d0b070d5f32b75bdd3c56a3754857a574638b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250430"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083250"
 ---
 # <a name="compiler-error-c3226"></a>コンパイラ エラー C3226
-テンプレート宣言は、ジェネリック宣言の内部では使用できません  
-  
- ジェネリック クラス内部のジェネリック宣言を使用します。  
-  
- 次の例では C3226 が生成されます。  
-  
-```  
-// C3226.cpp  
-// compile with: /clr  
-generic <class T>  
-ref class C {  
-   template <class T1>   // C3226  
-   ref struct S1 {};  
-};  
-```  
-  
- 次の例では、考えられる解決策を示しています。  
-  
-```  
-// C3226b.cpp  
-// compile with: /clr /c  
-generic <class T>  
-ref class C {  
-   generic <class T1>  
-   ref struct S1 {};  
-};  
+
+テンプレート宣言は、ジェネリック宣言の内部では使用できません
+
+ジェネリック クラス内部のジェネリック宣言を使用します。
+
+次の例では C3226 が生成されます。
+
+```
+// C3226.cpp
+// compile with: /clr
+generic <class T>
+ref class C {
+   template <class T1>   // C3226
+   ref struct S1 {};
+};
+```
+
+次の例では、考えられる解決策を示しています。
+
+```
+// C3226b.cpp
+// compile with: /clr /c
+generic <class T>
+ref class C {
+   generic <class T1>
+   ref struct S1 {};
+};
 ```

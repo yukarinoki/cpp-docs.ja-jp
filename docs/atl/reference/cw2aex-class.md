@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cd88555ee28b7bdddef51371ba2774047464678
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 0e10650235298e7a5b2931e59c39cb21a5374d0b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759484"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087592"
 ---
 # <a name="cw2aex-class"></a>CW2AEX クラス
 
@@ -37,13 +37,13 @@ ms.locfileid: "43759484"
 ## <a name="syntax"></a>構文
 
 ```
-template<int t_nBufferLength = 128>  
+template<int t_nBufferLength = 128>
 class CW2AEX
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*t_nBufferLength*  
+*t_nBufferLength*<br/>
 変換プロセスで使用されるバッファーのサイズ。 既定の長さは 128 バイトです。
 
 ## <a name="members"></a>メンバー
@@ -107,16 +107,16 @@ class CW2AEX
 コンストラクターです。
 
 ```
-CW2AEX(LPCWSTR psz, UINT nCodePage) throw(...);  
+CW2AEX(LPCWSTR psz, UINT nCodePage) throw(...);
 CW2AEX(LPCWSTR psz) throw(...);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*2 つ*  
+*2 つ*<br/>
 変換するテキスト文字列。
 
-*nCodePage*  
+*nCodePage*<br/>
 コード ページ変換を実行するために使用します。 Windows SDK 関数のコード ページ パラメーターの説明を参照してください。 [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)の詳細。
 
 ### <a name="remarks"></a>Remarks
@@ -155,7 +155,7 @@ char m_szBuffer[t_nBufferLength];
 
 変換演算子。
 
-```  
+```
 operator LPSTR() const throw();
 ```
 
@@ -165,9 +165,9 @@ operator LPSTR() const throw();
 
 ## <a name="see-also"></a>関連項目
 
-[CA2AEX クラス](../../atl/reference/ca2aex-class.md)   
-[CA2CAEX クラス](../../atl/reference/ca2caex-class.md)   
-[CA2WEX クラス](../../atl/reference/ca2wex-class.md)   
-[CW2CWEX クラス](../../atl/reference/cw2cwex-class.md)   
-[CW2WEX クラス](../../atl/reference/cw2wex-class.md)   
+[CA2AEX クラス](../../atl/reference/ca2aex-class.md)<br/>
+[CA2CAEX クラス](../../atl/reference/ca2caex-class.md)<br/>
+[CA2WEX クラス](../../atl/reference/ca2wex-class.md)<br/>
+[CW2CWEX クラス](../../atl/reference/cw2cwex-class.md)<br/>
+[CW2WEX クラス](../../atl/reference/cw2wex-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4c5d7ad570d9745e10107f0df09faccd9eb42e3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c000175c031868136aad44e59644d0fa122d213e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761554"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084511"
 ---
 # <a name="atlwinmodule70-structure"></a>_ATL_WIN_MODULE70 構造体
 
@@ -43,16 +43,16 @@ struct _ATL_WIN_MODULE70 {
 
 ## <a name="members"></a>メンバー
 
-`cbSize`  
+`cbSize`<br/>
 バージョン管理に使用される、構造のサイズ。
 
-`m_csWindowCreate`  
+`m_csWindowCreate`<br/>
 ウィンドウの登録コードへのアクセスをシリアル化するために使用します。 ATL で内部的に使用
 
-`m_pCreateWndList`  
+`m_pCreateWndList`<br/>
 Windows をそれらのオブジェクトにバインドするために使用します。 ATL で内部的に使用
 
-`m_rgWindowClassAtoms`  
+`m_rgWindowClassAtoms`<br/>
 終了時に正しく登録それらができるように、ウィンドウ クラスの登録を追跡するために使用します。 ATL で内部的に使用
 
 ## <a name="remarks"></a>Remarks

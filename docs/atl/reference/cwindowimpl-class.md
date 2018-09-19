@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3582f3fff0ee683889e1b0403554c59835293889
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 39a0938f6faadc05b2fdb3d716417a56512768b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756107"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084559"
 ---
 # <a name="cwindowimpl-class"></a>CWindowImpl クラス
 
@@ -45,19 +45,19 @@ ms.locfileid: "43756107"
 ## <a name="syntax"></a>構文
 
 ```
-template <class T, class TBase = CWindow, class TWinTraits = CControlWinTraits>  
+template <class T, class TBase = CWindow, class TWinTraits = CControlWinTraits>
 class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 `CWindowImpl` から派生した新しいクラス。
 
-*TBase*  
+*TBase*<br/>
 クラスの基底クラス。 基本クラスは、既定では、 [CWindow](../../atl/reference/cwindow-class.md)します。
 
-*TWinTraits*  
+*TWinTraits*<br/>
 A[特性クラス](../../atl/understanding-window-traits.md)ウィンドウのスタイルを定義します。 既定値は `CControlWinTraits` です。
 
 ## <a name="members"></a>メンバー
@@ -153,25 +153,25 @@ HWND Create(
 
 ### <a name="parameters"></a>パラメーター
 
-*hWndParent*  
+*hWndParent*<br/>
 [in]親またはオーナー ウィンドウのハンドル。
 
-*rect*  
+*rect*<br/>
 [in]A [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)ウィンドウの位置を指定する構造体。 `RECT`ポインターまたは参照によって渡すことができます。
 
-*szWindowName*  
+*szWindowName*<br/>
 [in]ウィンドウの名前を指定します。 既定値は、NULL です。
 
-*dwStyle*  
+*dwStyle*<br/>
 [in]ウィンドウのスタイル。 この値は、ウィンドウの特性クラスによって提供されるスタイルと組み合わされます。 既定値は、スタイルに対するフル コントロールをクラスに、特徴を示します。 使用可能な値の一覧は、次を参照してください。 [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows SDK に含まれています。
 
-*dwExStyle*  
+*dwExStyle*<br/>
 [in]拡張ウィンドウ スタイル。 この値は、ウィンドウの特性クラスによって提供されるスタイルと組み合わされます。 既定値は、スタイルに対するフル コントロールをクラスに、特徴を示します。 使用可能な値の一覧は、次を参照してください。 [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK に含まれています。
 
-*MenuOrID*  
+*MenuOrID*<br/>
 [in]子ウィンドウの場合、ウィンドウの識別子。 最上位レベルのウィンドウでは、メニューはウィンドウのハンドルします。 既定値は**0 u**します。
 
-*lpCreateParam*  
+*lpCreateParam*<br/>
 [in]ウィンドウの作成データへのポインター。 詳細については、最後のパラメーターの説明を参照してください。 [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)します。
 
 ### <a name="return-value"></a>戻り値
@@ -205,13 +205,13 @@ LRESULT DefWindowProc();
 
 ### <a name="parameters"></a>パラメーター
 
-*uMsg*  
+*uMsg*<br/>
 [in]ウィンドウに送信されるメッセージ。
 
-*wParam*  
+*wParam*<br/>
 [in]追加のメッセージに固有の情報。
 
-*lParam*  
+*lParam*<br/>
 [in]追加のメッセージに固有の情報。
 
 ### <a name="return-value"></a>戻り値
@@ -300,7 +300,7 @@ virtual void OnFinalMessage(HWND hWnd);
 
 ### <a name="parameters"></a>パラメーター
 
-*hWnd*  
+*hWnd*<br/>
 [in]破棄されているウィンドウへのハンドル。
 
 ### <a name="remarks"></a>Remarks
@@ -317,7 +317,7 @@ BOOL SubclassWindow(HWND hWnd);
 
 ### <a name="parameters"></a>パラメーター
 
-*hWnd*  
+*hWnd*<br/>
 [in]サブクラス化されているウィンドウのハンドル。
 
 ### <a name="return-value"></a>戻り値
@@ -357,16 +357,16 @@ static LRESULT CALLBACK WindowProc(
 
 ### <a name="parameters"></a>パラメーター
 
-*hWnd*  
+*hWnd*<br/>
 [in]ウィンドウのハンドル。
 
-*uMsg*  
+*uMsg*<br/>
 [in]ウィンドウに送信されるメッセージ。
 
-*wParam*  
+*wParam*<br/>
 [in]追加のメッセージに固有の情報。
 
-*lParam*  
+*lParam*<br/>
 [in]追加のメッセージに固有の情報。
 
 ### <a name="return-value"></a>戻り値
@@ -387,6 +387,6 @@ static LRESULT CALLBACK WindowProc(
 
 ## <a name="see-also"></a>関連項目
 
-[送るに](message-map-macros-atl.md#begin_msg_map)   
-[CComControl クラス](../../atl/reference/ccomcontrol-class.md)   
+[送るに](message-map-macros-atl.md#begin_msg_map)<br/>
+[CComControl クラス](../../atl/reference/ccomcontrol-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

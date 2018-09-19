@@ -1,5 +1,5 @@
 ---
-title: リンカ ツール エラー LNK2027 |Microsoft ドキュメント
+title: リンカ ツール エラー LNK2027 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 156310a0d21651b9fd2ee6002ace419db4996681
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 022e363af575e29e3085dcaec21257fa7e4ab5f1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301373"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116848"
 ---
 # <a name="linker-tools-error-lnk2027"></a>リンカ ツール エラー LNK2027
-未解決のモジュール参照 ' module'  
-  
- リンカーに渡されたファイルで指定されているモジュールに依存している **/ASSEMBLYMODULE**もリンカーに直接渡されません。  
-  
- Lnk2027 エラーを解決するには、次のいずれかの操作を行います。  
-  
--   渡さないでくださいリンカーをモジュールの依存関係を持つファイルです。  
-  
--   モジュールを指定 **/ASSEMBLYMODULE**です。  
-  
--   モジュールが安全な .netmodule の場合は、モジュールをリンカーに直接渡します。  
-  
- 詳細については、次を参照してください。 [/ASSEMBLYMODULE (MSIL モジュールをアセンブリに追加)](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)と[リンカー入力としての .netmodule ファイル](../../build/reference/netmodule-files-as-linker-input.md)です。
+
+未解決のモジュール参照 ' module'
+
+リンカーに渡されたファイルで指定されているモジュールに依存関係を持つ **/ASSEMBLYMODULE**もリンカーに直接渡されません。
+
+LNK2027 を解決するには、次のいずれかの操作を行います。
+
+- 処理されないリンカーにモジュールの依存関係を含むファイル。
+
+- 使用して、モジュールの指定 **/ASSEMBLYMODULE**します。
+
+- モジュールが安全な .netmodule の場合は、リンカーに直接モジュールを渡します。
+
+詳細については、次を参照してください。 [/ASSEMBLYMODULE (MSIL モジュールのアセンブリへの追加)](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)と[リンカー入力としての .netmodule ファイル](../../build/reference/netmodule-files-as-linker-input.md)します。

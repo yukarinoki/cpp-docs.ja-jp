@@ -1,5 +1,5 @@
 ---
-title: tiled_extent クラス |Microsoft ドキュメント
+title: tiled_extent クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59ac4e878ee67e03498d4d29efe7c91d34c1b4c7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3d0a0606e531b4343bf8b5569daa5034c827dcb3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688584"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114554"
 ---
 # <a name="tiledextent-class"></a>tiled_extent クラス
 `tiled_extent` オブジェクトは 3 つの次元のいずれかの `extent` オブジェクトであり、範囲空間を 1、2、または 3 次元のタイルに再分割します。  
@@ -56,14 +56,14 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Dim0`  
- 最上位の次元の長さ。  
+*_Dim0*<br/>
+最上位の次元の長さ。  
   
- `_Dim1`  
- 最上位の次の次元の長さ。  
+*_Dim1*<br/>
+最上位の次の次元の長さ。  
   
- `_Dim2`  
- 最下位の次元の長さ。  
+*_Dim2*<br/>
+最下位の次元の長さ。  
   
 ## <a name="members"></a>メンバー  
   
@@ -130,14 +130,14 @@ tiled_extent(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Other`  
- コピーする `extent` オブジェクトまたは `tiled_extent` オブジェクト。  
+*_Other*<br/>
+コピーする `extent` オブジェクトまたは `tiled_extent` オブジェクト。  
   
 
   
 
 ## <a name="get_tile_extent"> </a>  get_tile_extent   
-返します、`extent`オブジェクトの値をキャプチャする、`tiled_extent`テンプレート引数`_Dim0`、 `_Dim1`、および`_Dim2`です。  
+返します、`extent`オブジェクトの値をキャプチャする、`tiled_extent`テンプレート引数`_Dim0`、 `_Dim1`、および`_Dim2`します。  
   
 ### <a name="syntax"></a>構文  
   
@@ -183,8 +183,8 @@ tiled_extent&  operator= (
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Other`  
- コピー元の `tiled_index` オブジェクト。  
+*_Other*<br/>
+コピー元の `tiled_index` オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  この `tiled_index` インスタンスへの参照。  
@@ -215,7 +215,7 @@ static const int tile_dim1 = _Dim1;
 static const int tile_dim2 = _Dim2;  
 ```  
 ## <a name="tile_extent"> </a>  tile_extent   
-  取得、`extent`オブジェクトの値をキャプチャする、`tiled_extent`テンプレート引数`_Dim0`、 `_Dim1`、および`_Dim2`です。  
+  取得、`extent`オブジェクトの値をキャプチャする、`tiled_extent`テンプレート引数`_Dim0`、 `_Dim1`、および`_Dim2`します。  
   
 ### <a name="syntax"></a>構文  
   

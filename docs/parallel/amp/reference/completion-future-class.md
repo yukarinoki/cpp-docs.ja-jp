@@ -1,5 +1,5 @@
 ---
-title: completion_future クラス |Microsoft ドキュメント
+title: completion_future クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b6aa7e9c160a7bedc6eed58a63c07ae7bb65913
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 835c3a0473ffc68a2b1e32780fc2eb376f0ceee6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689039"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118143"
 ---
 # <a name="completionfuture-class"></a>completion_future クラス
 C ++. AMP の非同期操作に対応するフューチャを表します。  
@@ -93,8 +93,8 @@ completion_future(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Other`  
- `completion_future`オブジェクトをコピーまたは移動します。  
+*_Other*<br/>
+`completion_future`オブジェクトをコピーまたは移動します。  
   
 ### <a name="overloads-list"></a>オーバーロードの一覧  
   
@@ -102,11 +102,11 @@ completion_future(
 |----------|-----------------|  
 |`completion_future();`|新しいインスタンスを初期化、`completion_future`クラス|  
 |`completion_future(const completion_future& _Other);`|新しいインスタンスを初期化、`completion_future`クラス コンス トラクターをコピーしています。|  
-|`completion_future(completion_future&& _Other);`|新しいインスタンスを初期化、`completion_future`コンス トラクターを移動することによってクラスです。|  
+|`completion_future(completion_future&& _Other);`|新しいインスタンスを初期化、`completion_future`クラスのコンス トラクターを移動することで。|  
   
 ## <a name="get"></a> 取得 
 
-関連する非同期操作が完了するまで待機します。 非同期操作中にいずれかが発生した場合は、ストアドの例外をスローします。  
+関連する非同期操作が完了するまで待機します。 非同期操作中にいずれかが発生した場合は、格納されている例外をスローします。  
   
 ### <a name="syntax"></a>構文  
   
@@ -114,7 +114,7 @@ completion_future(
 void get() const;  
 ```  
   
-## <a name="operator_shared_future"></a> std::shared_future 演算子<void> 
+## <a name="operator_shared_future"></a> 演算子 std::shared_future<void> 
 
 `completion_future` オブジェクトを `std::shared_future` オブジェクトに暗黙的に変換します。  
   
@@ -139,8 +139,8 @@ completion_future&  operator= (completion_future&& _Other );
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Other`  
- コピー先のオブジェクト。  
+*_Other*<br/>
+コピーするオブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  この `completion_future` オブジェクトへの参照。  
@@ -149,8 +149,8 @@ completion_future&  operator= (completion_future&& _Other );
   
 |名前|説明|  
 |----------|-----------------|  
-|`completion_future& operator=(const completion_future& _Other);`|指定した内容をコピー`completion_future`オブジェクトのディープ コピーを使用してこの 1 つにします。|  
-|`completion_future& operator=(completion_future&& _Other);`|指定した内容をコピー`completion_future`オブジェクトを移動代入を使用して、この 1 つにします。|  
+|`completion_future& operator=(const completion_future& _Other);`|指定した内容をコピー`completion_future`にディープ コピーを使用してこの 1 つのオブジェクト。|  
+|`completion_future& operator=(completion_future&& _Other);`|指定した内容をコピー`completion_future`オブジェクトを移動代入を使用するようにします。|  
   
 ## <a name="then"></a> そうしたら 
 
@@ -164,11 +164,11 @@ void then(const _Functor & _Func ) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Functor`  
- コールバック ファンクタ。  
+*_Functor*<br/>
+コールバック ファンクタ。  
   
- `_Func`  
- コールバック関数オブジェクト。  
+*_Func*<br/>
+コールバック関数オブジェクト。  
   
 ## <a name="to_task"></a> to_task 
 
@@ -185,7 +185,7 @@ concurrency::task<void> to_task() const;
   
 ## <a name="valid"></a> 有効です 
 
-オブジェクトが、非同期操作に関連付けられているかどうかを示すブール値を取得します。  
+オブジェクトが非同期の操作に関連付けられているかどうかを示すブール値を取得します。  
   
 ### <a name="syntax"></a>構文  
   
@@ -194,7 +194,7 @@ bool valid() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `true` オブジェクトが非同期操作; に関連付けられている場合それ以外の場合、`false`です。  
+ `true` オブジェクトが非同期操作では; に関連付けられた場合それ以外の場合、`false`します。  
   
 ## <a name="wait"></a> 待機 
 
@@ -222,14 +222,14 @@ std::future_status::future_status wait_for(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Rep`  
- タイマー刻みの数を表す演算型。  
+*_Rep*<br/>
+タイマー刻みの数を表す演算型。  
   
- `_Period`  
- タイマー刻みごとに経過する秒数を表す std::ratio。  
+*_Period*<br/>
+タイマー刻みごとに経過する秒数を表す std::ratio。  
   
- `_Rel_time`  
- 操作が完了するまでの最大待機時間。  
+*_Rel_time*<br/>
+操作が完了するまでの最大待機時間。  
   
 ### <a name="return-value"></a>戻り値  
  戻り値:  
@@ -256,14 +256,14 @@ std::future_status::future_status wait_until(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Clock`  
- このタイム ポイントが測定されたクロック。  
+*_Clock*<br/>
+このタイム ポイントが測定されたクロック。  
   
- `_Duration`  
- `_Clock` のエポックの開始からの期間、その後で関数がタイムアウトします。  
+*_Duration*<br/>
+`_Clock` のエポックの開始からの期間、その後で関数がタイムアウトします。  
   
- `_Abs_time`  
- その後で関数がタイムアウトする時点。  
+*_Abs_time*<br/>
+その後で関数がタイムアウトする時点。  
   
 ### <a name="return-value"></a>戻り値  
  戻り値:  

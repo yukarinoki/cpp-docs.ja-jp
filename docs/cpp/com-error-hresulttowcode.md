@@ -16,39 +16,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0ddac28c4f39cdf11abbdf38c3af5d00c22413a
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: c39b638451aa8ea89191e323eae5f2c140563990
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401907"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082067"
 ---
 # <a name="comerrorhresulttowcode"></a>_com_error::HRESULTToWCode
-**Microsoft 固有の仕様**  
-  
- 16 ビットに 32 ビットの HRESULT をマップ`wCode`します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-static WORD HRESULTToWCode(  
-   HRESULT hr   
-) throw( );  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
- *hr*  
- 16 ビットにマップする 32 ビット HRESULT`wCode`します。  
-  
-## <a name="return-value"></a>戻り値  
- 16 ビット`wCode`32 ビット HRESULT からマップされます。  
-  
-## <a name="remarks"></a>Remarks  
- 参照してください[_com_error::wcode](../cpp/com-error-wcode.md)詳細についてはします。  
-  
- **Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- [_com_error::wcode](../cpp/com-error-wcode.md)   
- [_com_error::WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)   
- [_com_error クラス](../cpp/com-error-class.md)
+
+**Microsoft 固有の仕様**
+
+16 ビットに 32 ビットの HRESULT をマップ`wCode`します。
+
+## <a name="syntax"></a>構文
+
+```
+static WORD HRESULTToWCode(
+   HRESULT hr
+) throw( );
+```
+
+#### <a name="parameters"></a>パラメーター
+
+*hr*<br/>
+16 ビットにマップする 32 ビット HRESULT`wCode`します。
+
+## <a name="return-value"></a>戻り値
+
+16 ビット`wCode`32 ビット HRESULT からマップされます。
+
+## <a name="remarks"></a>Remarks
+
+参照してください[_com_error::wcode](../cpp/com-error-wcode.md)詳細についてはします。
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
+[_com_error::WCode](../cpp/com-error-wcode.md)<br/>
+[_com_error::WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)<br/>
+[_com_error クラス](../cpp/com-error-class.md)

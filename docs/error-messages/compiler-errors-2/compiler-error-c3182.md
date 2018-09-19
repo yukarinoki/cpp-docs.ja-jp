@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3182 |Microsoft ドキュメント
+title: コンパイラ エラー C3182 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 503ad6d17b197392967681bfdf4e921aa21dc3e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 722f95b41f9f5ec467af25ccf927631590f90e45
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254623"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110220"
 ---
 # <a name="compiler-error-c3182"></a>コンパイラ エラー C3182
-'class': マネージまたは WinRTtype 内でメンバーを使用して宣言または access 宣言はできません  
-  
- A[を使用して](../../cpp/using-declaration.md)マネージ クラスのすべてのフォーム内で正しくない宣言です。  
-  
- 次の例では C3182 が生成され、その修正方法が示されています。  
-  
-```  
-// C3182a.cpp  
-// compile with: /clr /c  
-ref struct B {  
-   void mf(int) {  
-   }  
-};  
-  
-ref struct D : B {  
-   using B::mf;   // C3182, delete to resolve  
-   void mf(char) {  
-   }  
-};  
-```  
+
+'class': メンバーを使用して宣言または access 宣言は、マネージ型または WinRTtype 内で有効ですが
+
+A[を使用して](../../cpp/using-declaration.md)宣言がマネージ クラスのすべてのフォーム内で無効です。
+
+次の例では C3182 が生成され、その修正方法が示されています。
+
+```
+// C3182a.cpp
+// compile with: /clr /c
+ref struct B {
+   void mf(int) {
+   }
+};
+
+ref struct D : B {
+   using B::mf;   // C3182, delete to resolve
+   void mf(char) {
+   }
+};
+```

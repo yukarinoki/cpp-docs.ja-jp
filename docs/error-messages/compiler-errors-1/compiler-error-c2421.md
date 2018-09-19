@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2421 |Microsoft ドキュメント
+title: コンパイラ エラー C2421 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f52545e38207eda1ea941e100a23876e326c2a6e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d35b3249be3805d2f4898c4a8007aaa5f849ca4f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195176"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135947"
 ---
 # <a name="compiler-error-c2421"></a>コンパイラ エラー C2421
-PTR 演算子 'context' でのレジスタと共に使用します。  
-  
- `PTR`で演算子は使用できません、`register`オペランド。
+
+PTR 演算子は 'context' での登録で使用
+
+`PTR`演算子では使用できません、`register`オペランド。

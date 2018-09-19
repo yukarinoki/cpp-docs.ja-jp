@@ -1,5 +1,5 @@
 ---
-title: リンカー ツールの警告 LNK4216 |Microsoft ドキュメント
+title: リンカー ツールの警告 LNK4216 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3face9db98fcf2fc727d2bf8713a014f28ca5ec4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b55ede76c41f4832854d1c4b4c4c4fc2793a5e71
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299469"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118870"
 ---
 # <a name="linker-tools-warning-lnk4216"></a>リンカー ツールの警告 LNK4216
-エクスポートされたエントリ ポイントのエントリ  
-  
- エントリ ポイントは、DLL からエクスポートされました。 DLL のエントリ ポイントは、エクスポートする必要はありません。
+
+エクスポートされたエントリ ポイント
+
+エントリ ポイントは、DLL からエクスポートされました。 DLL のエントリ ポイントは、エクスポートする必要はありません。
