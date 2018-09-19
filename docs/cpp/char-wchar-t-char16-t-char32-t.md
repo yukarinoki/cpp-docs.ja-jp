@@ -1,4 +1,4 @@
----
+﻿---
 title: char、wchar_t、char16_t、char32_t |Microsoft Docs
 ms.custom: ''
 ms.date: 02/14/2018
