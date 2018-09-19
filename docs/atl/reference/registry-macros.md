@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0cf941171ef992c677c619a1c6a45ab9868526a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 17040448771e4ca3c0f999e72a9c08f0e1fa28aa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767957"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058498"
 ---
 # <a name="registry-macros"></a>レジストリに関するマクロ
 
@@ -71,7 +71,7 @@ DECLARE_LIBID( libid )
 
 ### <a name="parameters"></a>パラメーター
 
-*libid*  
+*libid*<br/>
 タイプ ライブラリの GUID です。
 
 ### <a name="remarks"></a>Remarks
@@ -105,19 +105,19 @@ DECLARE_REGISTRY(
 
 ### <a name="parameters"></a>パラメーター
 
-*class*  
+*class*<br/>
 [in]旧バージョンとの互換性のために含まれています。
 
-*pid*  
+*pid*<br/>
 [in]バージョン固有のプログラム識別子である LPCTSTR します。
 
-*vpid*  
+*vpid*<br/>
 [in]バージョンに依存しないプログラム識別子である LPCTSTR します。
 
-*nid*  
+*nid*<br/>
 [in]プログラムの説明として使用するレジストリ内のリソース文字列のインデックスである UINT します。
 
-*flags*  
+*flags*<br/>
 [in]レジストリで、プログラムのスレッド処理モデルを含む DWORD。 次の値のいずれかを指定する必要があります: THREADFLAGS_APARTMENT、THREADFLAGS_BOTH、または AUTPRXFLAG します。
 
 ### <a name="remarks"></a>Remarks
@@ -138,10 +138,10 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
 
 ### <a name="parameters"></a>パラメーター
 
-*resid*  
+*resid*<br/>
 に関する情報を含む .rgs ファイルのリソース id、 *appid*します。
 
-*appid*  
+*appid*<br/>
 GUID。
 
 ### <a name="remarks"></a>Remarks
@@ -162,7 +162,7 @@ DECLARE_REGISTRY_RESOURCE( x )
 
 ### <a name="parameters"></a>パラメーター
 
-*x*  
+*x*<br/>
 [in]リソースの識別子の文字列を指定します。
 
 ### <a name="remarks"></a>Remarks
@@ -187,7 +187,7 @@ DECLARE_REGISTRY_RESOURCEID( x )
 
 ### <a name="parameters"></a>パラメーター
 
-*x*  
+*x*<br/>
 [in]ウィザードで生成された、リソースの識別子。
 
 ### <a name="remarks"></a>Remarks

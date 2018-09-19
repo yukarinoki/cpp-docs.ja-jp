@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4708f180a1a1f5e936a6b30650a6432d48878d53
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 148bb42b7dc6b650bb85860b0bcce3b70c61318e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726753"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099911"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 "ツールヒント コントロール" の機能をカプセル化しています。このコンロトールは、アプリケーションでツールの目的を説明する 1 行のテキストを表示する小さなポップアップ ウィンドウです。  
@@ -573,24 +573,25 @@ BOOL HitTest(
   
  `TTHITTESTINFO`構造は次のように定義されます。  
   
- `typedef struct _TT_HITTESTINFO { // tthti`  
+```cpp
+typedef struct _TT_HITTESTINFO { // tthti
+    HWND hwnd;   // handle of tool or window with tool
+    POINT pt;    // client coordinates of point to test
+    TOOLINFO ti; // receives information about the tool
+} TTHITTESTINFO, FAR * LPHITTESTINFO;
+```
   
- `HWND hwnd;   // handle of tool or window with tool`  
+- `hwnd`  
+
+   ツールのハンドルを指定します。  
   
- `POINT pt;    // client coordinates of point to test`  
+- `pt`  
+
+   ポイントは、ツールの外接する四角形の場合は、点の座標を指定します。  
   
- `TOOLINFO ti; // receives information about the tool`  
-  
- `} TTHITTESTINFO, FAR * LPHITTESTINFO;`  
-  
- `hwnd`  
- ツールのハンドルを指定します。  
-  
- `pt`  
- ポイントは、ツールの外接する四角形の場合は、点の座標を指定します。  
-  
- `ti`  
- このツールに関する情報。 詳細については、`TOOLINFO`構造体は、「 [CToolTipCtrl::GetToolInfo](#gettoolinfo)します。  
+- `ti`  
+
+   このツールに関する情報。 詳細については、`TOOLINFO`構造体は、「 [CToolTipCtrl::GetToolInfo](#gettoolinfo)します。  
   
 ##  <a name="pop"></a>  CToolTipCtrl::Pop  
  ビューから表示されるツール ヒント ウィンドウを削除します。  

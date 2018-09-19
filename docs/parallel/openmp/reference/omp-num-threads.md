@@ -1,5 +1,5 @@
 ---
-title: OMP_NUM_THREADS |Microsoft ドキュメント
+title: OMP_NUM_THREADS |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e25369f18f542198638e324110ba14d10b8ddc69
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 39f45b9c81d5339b2b6afe4c77fdc9bac6b5d731
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691769"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091167"
 ---
 # <a name="ompnumthreads"></a>OMP_NUM_THREADS
-オーバーライドされない限り、並行領域内のスレッドの最大数を設定[omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)または[num_threads](../../../parallel/openmp/reference/num-threads.md)です。  
+によってオーバーライドされない限り、並列の領域でスレッドの最大数を設定[omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)または[num_threads](../../../parallel/openmp/reference/num-threads.md)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -32,27 +32,26 @@ ms.locfileid: "33691769"
 set OMP_NUM_THREADS[=num]  
 ```  
   
-## <a name="remarks"></a>コメント  
- 指定項目  
+### <a name="parameters"></a>パラメーター
   
- `num`  
- Visual C の実装では 64 まで、並列領域で目的のスレッドの最大数。  
+*num*<br/>
+Visual C の実装では 64 まで、並列領域で必要なスレッドの最大数。  
   
-## <a name="remarks"></a>コメント  
- **OMP_NUM_THREADS**で環境変数をオーバーライドすることができます、 [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)関数または[num_threads](../../../parallel/openmp/reference/num-threads.md)です。  
+## <a name="remarks"></a>Remarks  
+ **OMP_NUM_THREADS**で環境変数をオーバーライドできます、 [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)関数または[num_threads](../../../parallel/openmp/reference/num-threads.md)します。  
   
- 既定値の`num`Visual C の OpenMP 標準の実装は、ハイパー スレッドの Cpu を含む、仮想プロセッサの数。  
+ 既定値`num`Visual C の OpenMP 標準の実装は、ハイパー スレッド Cpu などの仮想プロセッサの数。  
   
- 詳細については、次を参照してください。 [4.2 OMP_NUM_THREADS](../../../parallel/openmp/4-2-omp-num-threads.md)です。  
+ 詳細については、次を参照してください。 [4.2 OMP_NUM_THREADS](../../../parallel/openmp/4-2-omp-num-threads.md)します。  
   
 ## <a name="example"></a>例  
- 次のコマンド セット、 **OMP_NUM_THREADS** 16 に環境変数。  
+ 次のコマンド セット、 **OMP_NUM_THREADS**環境変数を 16。  
   
 ```  
 set OMP_NUM_THREADS=16  
 ```  
   
- 次のコマンドの現在の設定を表示する、 **OMP_NUM_THREADS**環境変数。  
+ 次のコマンドの現在の設定の表示、 **OMP_NUM_THREADS**環境変数。  
   
 ```  
 set OMP_NUM_THREADS  

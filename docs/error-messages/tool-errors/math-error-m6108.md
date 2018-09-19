@@ -1,5 +1,5 @@
 ---
-title: 数値演算エラー M6108 |Microsoft ドキュメント
+title: 数値演算エラー M6108 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dfeca48aa04ebfbc097649e5c25253166c50dad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e1624a89b472733b4adb5563c8ba52e0b03dcaa2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325852"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048618"
 ---
 # <a name="math-error-m6108"></a>数値演算エラー M6108
-平方根算出  
-  
- 平方根演算のオペランドが負の値。  
-  
- プログラムは、終了コード 136 で終了します。  
-  
+
+平方根
+
+平方根演算のオペランドが負の値。
+
+終了コード 136 でプログラムを終了します。
+
 > [!NOTE]
->  `sqrt` C ランタイム ライブラリおよび FORTRAN 組み込み関数で関数**SQRT**このエラーは生成されません。 C`sqrt`関数は、操作を実行する前に、引数をチェックし、オペランドが負の場合は、エラー値を返します。 FORTRAN **SQRT**関数には、ドメイン エラーが生成されます。 [M6201](../../error-messages/tool-errors/math-error-m6201.md)このエラーの代わりにします。
+>  `sqrt` C ランタイム ライブラリと FORTRAN の組み込み関数の関数**SQRT**このエラーは生成されません。 C`sqrt`関数は、操作を実行する前に、引数をチェックし、オペランドが負の場合は、エラー値を返します。 FORTRAN **SQRT**関数には、ドメイン エラーが生成されます。 [M6201](../../error-messages/tool-errors/math-error-m6201.md)このエラーの代わりにします。

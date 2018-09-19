@@ -1,5 +1,5 @@
 ---
-title: NMAKE の致命的なエラー U1083 |Microsoft ドキュメント
+title: NMAKE の致命的なエラー U1083 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd7ba60c712181abf0c519fdd072de566157a186
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e2d162551f0f1eea68fb008ba8b7d1c6d304b6a4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321562"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116648"
 ---
 # <a name="nmake-fatal-error-u1083"></a>NMAKE の致命的なエラー U1083
-ターゲット マクロ 'target' が展開されません。  
-  
- 指定されたターゲットは、マクロが定義されていないか、null 値を持つの呼び出しです。 (Nmake の) は、null の対象を処理できません。
+
+ターゲット マクロ 'target' が展開されません。
+
+指定されたターゲットは、マクロが定義されていないか、null 値を持つですの呼び出しです。 NMAKE が null の対象を処理できません。

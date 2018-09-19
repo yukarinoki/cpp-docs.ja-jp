@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3210 |Microsoft ドキュメント
+title: コンパイラ エラー C3210 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24146139fce7a1e42e112f913ab35ca425a9d5d7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 804586a866f6a4d2c3cf206af14e0e2f907ed1b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256520"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037113"
 ---
 # <a name="compiler-error-c3210"></a>コンパイラ エラー C3210
-'type': アクセス宣言は、基底クラスのメンバーにのみ適用できます  
-  
- A[宣言を使用して](../../cpp/using-declaration.md)正しく指定されませんでした。  
-  
-## <a name="example"></a>例  
- 次の例では、C3210 を生成します。  
-  
-```  
-// C3210.cpp  
-// compile with: /c  
-struct A {  
-protected:  
-   int i;  
-};  
-  
-struct B {  
-   using A::i;   // C3210  
-};  
-  
-struct C : public A {  
-   using A::i;   // OK  
-};  
+
+'type': アクセス宣言は、基底クラスのメンバーにのみ適用できます
+
+A[宣言を使用して](../../cpp/using-declaration.md)正しく指定されていません。
+
+## <a name="example"></a>例
+
+次の例では、C3210 が生成されます。
+
+```
+// C3210.cpp
+// compile with: /c
+struct A {
+protected:
+   int i;
+};
+
+struct B {
+   using A::i;   // C3210
+};
+
+struct C : public A {
+   using A::i;   // OK
+};
 ```

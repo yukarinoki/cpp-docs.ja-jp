@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9d3db2a3d7f673c8e81b1077bcb45e9b8241d37
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c9185a71cc77cadb1ad7cdf577654730819147d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751862"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113137"
 ---
 # <a name="com-map-global-functions"></a>COM マップに関するグローバル関数
 
@@ -51,16 +51,16 @@ HRESULT AtlInternalQueryInterface(
 
 ### <a name="parameters"></a>パラメーター
 
-*pThis*  
+*pThis*<br/>
 [in]COM に公開されるインターフェイスのマップを格納しているオブジェクトへのポインター`QueryInterface`します。
 
-*pEntries*  
+*pEntries*<br/>
 [in]配列の`_ATL_INTMAP_ENTRY`使用可能なインターフェイスのマップにアクセスする構造体。
 
-*iid*  
+*iid*<br/>
 [in]要求されているインターフェイスの GUID です。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]指定されたインターフェイス ポインターへのポインター *iid*インターフェイスが見つからない場合は null です。
 
 ### <a name="return-value"></a>戻り値
@@ -85,10 +85,10 @@ BOOL InlineIsEqualUnknown(REFGUID rguid1);
 
 ### <a name="parameters"></a>パラメーター
 
-*rguid1*  
+*rguid1*<br/>
 [in]比較する GUID`IID_IUnknown`します。
 
 ## <a name="see-also"></a>関連項目
 
-[関数](../../atl/reference/atl-functions.md)   
+[関数](../../atl/reference/atl-functions.md)<br/>
 [COM マップに関するマクロ](../../atl/reference/com-map-macros.md)

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f94a698d9e23d0481daf940fc55fa99616104aa
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7f7707b3babc84075d84e57a2b610f06225e79e6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763459"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109815"
 ---
 # <a name="modifying-the-atl-project"></a>ATL プロジェクトを変更します。
 
@@ -33,6 +33,6 @@ ActiveX コントロールからのイベントを処理するために、次を
 
 ## <a name="see-also"></a>関連項目
 
-[複合コントロールの基本](../atl/atl-composite-control-fundamentals.md)   
+[複合コントロールの基本](../atl/atl-composite-control-fundamentals.md)<br/>
 [方法: リソース スクリプト ファイルを作成する](../windows/how-to-create-a-resource-script-file.md)
 

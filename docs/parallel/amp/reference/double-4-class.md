@@ -1,5 +1,5 @@
 ---
-title: double_4 クラス |Microsoft ドキュメント
+title: double_4 クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -278,12 +278,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d5c776784f78f79fb6d90bde96b199631d08d22
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 92f0a8ed6842986e7f64279ab0c6b23a80dab293
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694262"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028442"
 ---
 # <a name="double4-class"></a>double_4 クラス
 4 個の倍精度浮動小数点数の short ベクターを表します。  
@@ -662,23 +662,23 @@ explicit inline double_4(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_V0`  
- 0 の要素を初期化する値。  
+*_V0*<br/>
+0 の要素を初期化する値。  
   
- `_V1`  
- 1 の要素を初期化する値。  
+*_V1*<br/>
+1 要素を初期化する値。  
   
- `_V2`  
- 2 要素を初期化する値。  
+*_V2*<br/>
+2 要素を初期化する値。  
   
- `_V3`  
- 3 の要素を初期化する値。  
+*_V3*<br/>
+3 要素を初期化する値。  
   
- `_V`  
- 初期化の値です。  
+*(_V).*<br/>
+初期化の値。  
   
- `_Other`  
- 初期化するために使用するオブジェクト。  
+*_Other*<br/>
+初期化するために使用するオブジェクト。  
   
 ##  <a name="double_4__size"></a> サイズ 
 

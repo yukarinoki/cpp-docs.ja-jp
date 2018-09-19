@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2317 |Microsoft ドキュメント
+title: コンパイラ エラー C2317 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,42 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82ff1155db69833cad45d9e5df4ccdf016e661e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: adf536fa1fd8976e3e3251514b3b7486eb57456c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196141"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085369"
 ---
 # <a name="compiler-error-c2317"></a>コンパイラ エラー C2317
-'number' 行目で始まっている 'try' ブロックには catch ハンドラーがありません  
-  
- `try` ブロックには少なくとも 1 つの catch ハンドラーが必要です。  
-  
- 次の例では C2317 が生成されます。  
-  
-```  
-// C2317.cpp  
-// compile with: /EHsc  
-#include <eh.h>  
-int main() {  
-   try {  
-      throw "throw an exception";  
-   }  
-   // C2317, no catch handler  
-}  
-```  
-  
- 考えられる解決方法:  
-  
-```  
-// C2317b.cpp  
-// compile with: /EHsc  
-#include <eh.h>  
-int main() {  
-   try {  
-      throw "throw an exception";  
-   }  
-   catch(char*) {}  
-}  
+
+'number' 行目で始まっている 'try' ブロックには catch ハンドラーがありません
+
+`try` ブロックには少なくとも 1 つの catch ハンドラーが必要です。
+
+次の例では C2317 が生成されます。
+
+```
+// C2317.cpp
+// compile with: /EHsc
+#include <eh.h>
+int main() {
+   try {
+      throw "throw an exception";
+   }
+   // C2317, no catch handler
+}
+```
+
+考えられる解決方法:
+
+```
+// C2317b.cpp
+// compile with: /EHsc
+#include <eh.h>
+int main() {
+   try {
+      throw "throw an exception";
+   }
+   catch(char*) {}
+}
 ```

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f468117cc4d3fad8f3eb1d94abc948c9a4a032b4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3a88ecf9c5fcffa07066c3ab988fde1f36adf8d4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766829"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057484"
 ---
 # <a name="catlmodulet-class"></a>CAtlModuleT クラス
 
@@ -38,13 +38,13 @@ ms.locfileid: "43766829"
 ## <a name="syntax"></a>構文
 
 ```
-template <class T>  
+template <class T>
 class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 クラスから派生した`CAtlModuleT`します。
 
 ## <a name="members"></a>メンバー
@@ -74,7 +74,7 @@ class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
-[_ATL_MODULE](atl-typedefs.md#_atl_module)  
+[_ATL_MODULE](atl-typedefs.md#_atl_module)
 
 [CAtlModule](../../atl/reference/catlmodule-class.md)
 
@@ -132,10 +132,10 @@ HRESULT RegisterServer(
 
 ### <a name="parameters"></a>パラメーター
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 TRUE の場合、タイプ ライブラリを登録します。 既定値は FALSE です。
 
-*pclsid の値*  
+*pclsid の値*<br/>
 登録するオブジェクトの CLSID を指します。 NULL (既定値) の場合は、オブジェクト マップ内のすべてのオブジェクトを登録するかどうか。
 
 ### <a name="return-value"></a>戻り値
@@ -166,10 +166,10 @@ HRESULT UnregisterServer(
 
 ### <a name="parameters"></a>パラメーター
 
-*bUnRegTypeLib*  
+*bUnRegTypeLib*<br/>
 タイプ ライブラリが登録解除するにもある場合は TRUE。
 
-*pclsid の値*  
+*pclsid の値*<br/>
 登録解除するオブジェクトの CLSID を指します。 場合は NULL (既定値) の場合は、オブジェクト マップ内のすべてのオブジェクトが登録されます。
 
 ### <a name="return-value"></a>戻り値
@@ -186,7 +186,7 @@ static HRESULT WINAPI UpdateRegistryAppId(BOOL /* bRegister*/) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*bRegister*  
+*bRegister*<br/>
 予約済み。
 
 ### <a name="return-value"></a>戻り値
@@ -195,6 +195,6 @@ static HRESULT WINAPI UpdateRegistryAppId(BOOL /* bRegister*/) throw();
 
 ## <a name="see-also"></a>関連項目
 
-[CAtlModule クラス](../../atl/reference/catlmodule-class.md)   
-[クラスの概要](../../atl/atl-class-overview.md)   
+[CAtlModule クラス](../../atl/reference/catlmodule-class.md)<br/>
+[クラスの概要](../../atl/atl-class-overview.md)<br/>
 [モジュール クラス](../../atl/atl-module-classes.md)

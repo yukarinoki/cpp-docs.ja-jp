@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2129 |Microsoft ドキュメント
+title: コンパイラ エラー C2129 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d151c774672b1788ca893a9812deb3e41100dc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e86515a7d7c8954271578291c4ebcb1a52fc9863
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171719"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054286"
 ---
 # <a name="compiler-error-c2129"></a>コンパイラ エラー C2129
-静的関数 'function' が宣言されていますが、定義されていません  
-  
- 前方参照される、`static`定義されていない関数です。  
-  
- A`static`ファイル スコープ内で関数を定義する必要があります。 宣言する必要があります、関数が別のファイルで定義されている場合`extern`です。
+
+静的関数 'function' が宣言されていますが、定義されていません
+
+前方参照される、`static`定義されていない関数です。
+
+A`static`ファイルのスコープ内で関数を定義する必要があります。 宣言する必要があります、関数は、別のファイルで定義されているが場合、`extern`します。

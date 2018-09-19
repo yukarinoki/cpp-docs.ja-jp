@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3280 |Microsoft ドキュメント
+title: コンパイラ エラー C3280 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b47d9f552b84db462734d3ae7dd83fd1257d2044
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ed102abc0f46b896b70cb4681db4b0924b6c5822
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249230"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085117"
 ---
 # <a name="compiler-error-c3280"></a>コンパイラ エラー C3280
-'class': マネージ クラスのメンバー関数をアンマネージ関数としてコンパイルできません  
-  
- マネージ クラスのメンバー関数は、アンマネージ関数としてコンパイルできません。  
-  
- 次の例では C3280 が生成されます。  
-  
-```  
-// C3280_2.cpp  
-// compile with: /clr  
-ref struct A {  
-   void func();  
-};  
-  
-#pragma managed(push,off)  
-  
-void A::func()   // C3280  
-{  
-}  
-  
-#pragma managed(pop)  
-```  
+
+'class': マネージド クラスのメンバー関数をアンマネージド 関数としてコンパイルできません
+
+マネージド クラスのメンバー関数は、アンマネージド 関数としてコンパイルできません。
+
+次の例では C3280 が生成されます。
+
+```
+// C3280_2.cpp
+// compile with: /clr
+ref struct A {
+   void func();
+};
+
+#pragma managed(push,off)
+
+void A::func()   // C3280
+{
+}
+
+#pragma managed(pop)
+```

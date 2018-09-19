@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91de6c09128acd3ef1a008437ae418b96b45ef66
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 54e4ab00a0d0df90601d06d9e2ffa100d82d4c03
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762893"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037360"
 ---
 # <a name="composite-control-global-functions"></a>複合コントロールに関するグローバル関数
 
@@ -77,19 +77,19 @@ ATLAPI_(int) AtlAxDialogBox(
 
 ### <a name="parameters"></a>パラメーター
 
-*hInstance*  
+*hInstance*<br/>
 [in]実行可能ファイルには、ダイアログ ボックスのテンプレートが含まれています。 モジュールのインスタンスを識別します。
 
-*lpTemplateName*  
+*lpTemplateName*<br/>
 [in]ダイアログ ボックスのテンプレートを識別します。 このパラメーターは、いずれかのダイアログ ボックスのテンプレートの名前を指定する null で終わる文字列へのポインターまたはダイアログ ボックスのテンプレートのリソース識別子を指定する整数値は。 パラメーターは、リソース識別子を指定する場合の上位ワードはゼロである必要があり、その下位ワードは、識別子を含める必要があります。 使用することができます、[されるときは](https://msdn.microsoft.com/library/windows/desktop/ms648029)マクロをこの値を作成します。
 
-*hWndParent*  
+*hWndParent*<br/>
 [in]ダイアログ ボックスを所有するウィンドウを識別します。
 
-*lpDialogProc*  
+*lpDialogProc*<br/>
 [in]ダイアログ ボックス プロシージャへのポインター。 ダイアログ ボックス プロシージャの詳細については、次を参照してください。 [DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469)します。
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in]ダイアログ ボックスに渡す値を指定します、 *lParam* WM_INITDIALOG メッセージのパラメーター。
 
 ### <a name="return-value"></a>戻り値
@@ -100,9 +100,9 @@ ATLAPI_(int) AtlAxDialogBox(
 
 使用する`AtlAxDialogBox`ActiveX コントロールを含むダイアログ テンプレートで指定として有効な CLSID、APPID、または URL 文字列、*テキスト*のフィールド、**コントロール**ダイアログ リソースの セクションと共に"AtlAxWin80"として、*クラス名*同じセクションの下のフィールド。 以下はどのような有効な**コントロール**セクションのようになります。
 
-```  
+```
 CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,  
-    "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100  
+    "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
 リソース スクリプトの編集の詳細については、次を参照してください。[方法: テキスト形式でリソース スクリプト ファイルを開く](../../windows/how-to-open-a-resource-script-file-in-text-format.md)します。 コントロールのリソース定義ステートメントの詳細については、次を参照してください。[共通管理パラメーター](/windows/desktop/menurc/common-control-parameters) Windows SDK で *: SDK Tools*します。
@@ -124,19 +124,19 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 
 ### <a name="parameters"></a>パラメーター
 
-*hInstance*  
+*hInstance*<br/>
 [in]実行可能ファイルには、ダイアログ ボックスのテンプレートが含まれています。 モジュールのインスタンスを識別します。
 
-*lpTemplateName*  
+*lpTemplateName*<br/>
 [in]ダイアログ ボックスのテンプレートを識別します。 このパラメーターは、いずれかのダイアログ ボックスのテンプレートの名前を指定する null で終わる文字列へのポインターまたはダイアログ ボックスのテンプレートのリソース識別子を指定する整数値は。 パラメーターは、リソース識別子を指定する場合の上位ワードはゼロである必要があり、その下位ワードは、識別子を含める必要があります。 使用することができます、[されるときは](https://msdn.microsoft.com/library/windows/desktop/ms648029)マクロをこの値を作成します。
 
-*hWndParent*  
+*hWndParent*<br/>
 [in]ダイアログ ボックスを所有するウィンドウを識別します。
 
-*lpDialogProc*  
+*lpDialogProc*<br/>
 [in]ダイアログ ボックス プロシージャへのポインター。 ダイアログ ボックス プロシージャの詳細については、次を参照してください。 [DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469)します。
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in]ダイアログ ボックスに渡す値を指定します、 *lParam* WM_INITDIALOG メッセージのパラメーター。
 
 ### <a name="return-value"></a>戻り値
@@ -163,7 +163,7 @@ ATLAPI AtlAxCreateControl(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszName*  
+*lpszName*<br/>
 コントロールに渡される文字列へのポインター。 次の方法のいずれかで書式設定する必要があります。
 
 - "MSCAL などを ProgID。Calendar.7"
@@ -179,13 +179,13 @@ ATLAPI AtlAxCreateControl(
    > [!NOTE]
    > "MSHTML:"、MSHTML ストリームとして指定されているように、HTML フラグメントを付ける必要があります。
 
-*hWnd*  
+*hWnd*<br/>
 [in]コントロールが接続されているウィンドウへのハンドルします。
 
-*pStream*  
+*pStream*<br/>
 [in]コントロールのプロパティを初期化するために使用されるストリームへのポインター。 NULL にすることができます。
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out]受信するポインターのアドレス、`IUnknown`のコンテナー。 NULL にすることができます。
 
 ### <a name="return-value"></a>戻り値
@@ -215,7 +215,7 @@ ATLAPI AtlAxCreateControlEx(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszName*  
+*lpszName*<br/>
 コントロールに渡される文字列へのポインター。 次の方法のいずれかで書式設定する必要があります。
 
 - "MSCAL などを ProgID。Calendar.7"
@@ -231,22 +231,22 @@ ATLAPI AtlAxCreateControlEx(
    > [!NOTE]
    > "MSHTML:"、MSHTML ストリームとして指定されているように、HTML フラグメントを付ける必要があります。
 
-*hWnd*  
+*hWnd*<br/>
 [in]コントロールが接続されているウィンドウへのハンドルします。
 
-*pStream*  
+*pStream*<br/>
 [in]コントロールのプロパティを初期化するために使用されるストリームへのポインター。 NULL にすることができます。
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out]受信するポインターのアドレス、`IUnknown`のコンテナー。 NULL にすることができます。
 
-*ppUnkControl*  
+*ppUnkControl*<br/>
 [out]受け取るポインターのアドレス、`IUnknown`のコントロールを作成します。 NULL にすることができます。
 
-*れて*  
+*れて*<br/>
 送信のインターフェイスに含まれるオブジェクトのインターフェイスの識別子です。
 
-*punkSink*  
+*punkSink*<br/>
 ポインター、`IUnknown`で指定された接続ポイントに接続されているシンク オブジェクトのインターフェイス*れて*に含まれるオブジェクトに含まれるオブジェクトが正常に作成されます。
 
 ### <a name="return-value"></a>戻り値
@@ -274,7 +274,7 @@ ATLAPI AtlAxCreateControlLic(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszName*  
+*lpszName*<br/>
 コントロールに渡される文字列へのポインター。 次の方法のいずれかで書式設定する必要があります。
 
 - "MSCAL などを ProgID。Calendar.7"
@@ -290,16 +290,16 @@ ATLAPI AtlAxCreateControlLic(
    > [!NOTE]
    > "MSHTML:"、MSHTML ストリームとして指定されているように、HTML フラグメントを付ける必要があります。
 
-*hWnd*  
+*hWnd*<br/>
 コントロールが接続されているウィンドウへのハンドルします。
 
-*pStream*  
+*pStream*<br/>
 コントロールのプロパティを初期化するために使用されるストリームへのポインター。 NULL にすることができます。
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 受信するポインターのアドレス、`IUnknown`のコンテナー。 NULL にすることができます。
 
-*bstrLic*  
+*bstrLic*<br/>
 コントロールのライセンスを含む BSTR。
 
 ### <a name="return-value"></a>戻り値
@@ -328,7 +328,7 @@ ATLAPI AtlAxCreateControlLicEx(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszName*  
+*lpszName*<br/>
 コントロールに渡される文字列へのポインター。 次の方法のいずれかで書式設定する必要があります。
 
 - "MSCAL などを ProgID。Calendar.7"
@@ -344,25 +344,25 @@ ATLAPI AtlAxCreateControlLicEx(
    > [!NOTE]
    > "MSHTML:"、MSHTML ストリームとして指定されているように、HTML フラグメントを付ける必要があります。
 
-*hWnd*  
+*hWnd*<br/>
 コントロールが接続されているウィンドウへのハンドルします。
 
-*pStream*  
+*pStream*<br/>
 コントロールのプロパティを初期化するために使用されるストリームへのポインター。 NULL にすることができます。
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 受信するポインターのアドレス、`IUnknown`のコンテナー。 NULL にすることができます。
 
-*ppUnkControl*  
+*ppUnkControl*<br/>
 [out]受け取るポインターのアドレス、`IUnknown`のコントロールを作成します。 NULL にすることができます。
 
-*れて*  
+*れて*<br/>
 送信のインターフェイスに含まれるオブジェクトのインターフェイスの識別子です。
 
-*punkSink*  
+*punkSink*<br/>
 ポインター、`IUnknown`で指定された接続ポイントに接続されているシンク オブジェクトのインターフェイス*れて*に含まれるオブジェクトに含まれるオブジェクトが正常に作成されます。
 
-*bstrLic*  
+*bstrLic*<br/>
 コントロールのライセンスを含む BSTR。
 
 ### <a name="return-value"></a>戻り値
@@ -390,13 +390,13 @@ ATLAPI AtlAxAttachControl(
 
 ### <a name="parameters"></a>パラメーター
 
-*pControl*  
+*pControl*<br/>
 [in]ポインター、`IUnknown`のコントロール。
 
-*hWnd*  
+*hWnd*<br/>
 [in]コントロールをホストするウィンドウへのハンドルします。
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out]ポインターへのポインター、`IUnknown`のコンテナー オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -420,10 +420,10 @@ ATLAPI AtlAxGetHost(HWND h, IUnknown** pp);
 
 ### <a name="parameters"></a>パラメーター
 
-*h*  
+*h*<br/>
 [in]コントロールをホストしているウィンドウへのハンドル。
 
-*pp*  
+*pp*<br/>
 [out]`IUnknown`のコントロールのコンテナー。
 
 ### <a name="return-value"></a>戻り値
@@ -440,10 +440,10 @@ ATLAPI AtlAxGetControl(HWND h, IUnknown** pp);
 
 ### <a name="parameters"></a>パラメーター
 
-*h*  
+*h*<br/>
 [in]コントロールをホストしているウィンドウへのハンドル。
 
-*pp*  
+*pp*<br/>
 [out]`IUnknown`のホストされているコントロール。
 
 ### <a name="return-value"></a>戻り値
@@ -460,10 +460,10 @@ HRESULT AtlSetChildSite(IUnknown* punkChild, IUnknown* punkParent);
 
 ### <a name="parameters"></a>パラメーター
 
-*punkChild*  
+*punkChild*<br/>
 [in]ポインター、`IUnknown`子のインターフェイス。
 
-*punkParent*  
+*punkParent*<br/>
 [in]ポインター、`IUnknown`親のインターフェイス。
 
 ### <a name="return-value"></a>戻り値
@@ -519,19 +519,19 @@ ATLAPI AtlGetObjectSourceInterface(
 
 ### <a name="parameters"></a>パラメーター
 
-*punkObj*  
+*punkObj*<br/>
 [in]情報が返される対象のオブジェクトへのポインター。
 
-*plibid*  
+*plibid*<br/>
 [out]ソース インターフェイスの定義を含むタイプ ライブラリの LIBID へのポインター。
 
-*piid*  
+*piid*<br/>
 [out]オブジェクトの既定のソース インターフェイスのインターフェイス ID へのポインター。
 
-*pdwMajor*  
+*pdwMajor*<br/>
 [out]ソース インターフェイスの定義を含むタイプ ライブラリのメジャー バージョン番号へのポインター。
 
-*pdwMinor*  
+*pdwMinor*<br/>
 [out]ソース インターフェイスの定義を含むタイプ ライブラリのマイナー バージョン番号へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -553,5 +553,5 @@ ATLAPI AtlGetObjectSourceInterface(
 
 ## <a name="see-also"></a>関連項目
 
-[関数](../../atl/reference/atl-functions.md)   
+[関数](../../atl/reference/atl-functions.md)<br/>
 [複合コントロールに関するマクロ](../../atl/reference/composite-control-macros.md)

@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2179 |Microsoft ドキュメント
+title: コンパイラ エラー C2179 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c12d7235cc146f080d74ffb09361dd691f7e1ba9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1b56437dfe5b9be75ae93dea46890d408ea2dc66
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170334"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111634"
 ---
 # <a name="compiler-error-c2179"></a>コンパイラ エラー C2179
-'type': 属性引数は、型パラメーターを使用できません  
-  
- ジェネリック型パラメーターは、実行時に解決します。 ただし、属性パラメーターは、コンパイル時に解決する必要があります。 そのため、属性の引数としてジェネリック型パラメーターを使うことはできません。  
-  
-## <a name="example"></a>例  
- 次の例では、C2179 を生成します。  
-  
-```  
-// C2179.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-public ref struct Attr : Attribute {  
-   Attr(Type ^ a) {  
-      x = a;  
-   }  
-  
-   Type ^ x;  
-};  
-  
-ref struct G {};  
-  
-generic<typename T>   
-public ref class Z {   
-public:  
-   Type ^ d;  
-   [Attr(T::typeid)]   // C2179  
-   // try the following line instead  
-   // [Attr(G::typeid)]  
-   T t;  
-};  
+
+'type': 属性引数は、型パラメーターを使用できません
+
+ジェネリック型パラメーターは、実行時に解決されます。 ただし、属性のパラメーターは、コンパイル時に解決する必要があります。 そのため、属性の引数としてジェネリック型パラメーターを使用することはできません。
+
+## <a name="example"></a>例
+
+次の例では、C2179 が生成されます。
+
+```
+// C2179.cpp
+// compile with: /clr
+using namespace System;
+
+public ref struct Attr : Attribute {
+   Attr(Type ^ a) {
+      x = a;
+   }
+
+   Type ^ x;
+};
+
+ref struct G {};
+
+generic<typename T>
+public ref class Z {
+public:
+   Type ^ d;
+   [Attr(T::typeid)]   // C2179
+   // try the following line instead
+   // [Attr(G::typeid)]
+   T t;
+};
 ```

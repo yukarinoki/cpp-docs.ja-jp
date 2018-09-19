@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2169 |Microsoft ドキュメント
+title: コンパイラ エラー C2169 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bd0666f264d204c75fd74edbdffce17ecf2529a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e352d32193e6de287c845a451407927c29123fc2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166320"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030600"
 ---
 # <a name="compiler-error-c2169"></a>コンパイラ エラー C2169
-'function': 組み込み関数を定義することはできません  
-  
- 既に宣言されている関数の関数の定義が表示される`intrinsic`です。
+
+'function': 組み込み関数を定義することはできません
+
+既に宣言された関数の関数の定義が表示されます。`intrinsic`します。

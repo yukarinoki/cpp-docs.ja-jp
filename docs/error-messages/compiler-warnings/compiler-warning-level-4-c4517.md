@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 4) C4517 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 4) C4517 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bcfca18512d7a5af18bf978fc4f6549799bbdc7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f71fca2804a6869fbb58073eb0c11a3ac1f18153
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297694"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098895"
 ---
 # <a name="compiler-warning-level-4-c4517"></a>コンパイラの警告 (レベル 4) C4517
-access 宣言は非推奨です。メンバー using 宣言がより優れた代替手段を提供します。  
-  
- ANSI C 委員会がアクセス宣言 (せずに、派生クラスのメンバーのアクセスを変更して、[を使用して](../../cpp/using-declaration.md)キーワード) 旧式であります。 アクセス宣言は、C++ の将来のバージョンでサポートされていません可能性があります。
+
+access 宣言は非推奨とされます。メンバー using 宣言が代替を提供します。
+
+ANSI C++ 委員会には、アクセスの宣言が宣言されている (せずに、派生クラスのメンバーのアクセスを変更して、[を使用して](../../cpp/using-declaration.md)キーワード) に期限切れであります。 Access 宣言は、C++ の将来のバージョンでサポートされていません可能性があります。

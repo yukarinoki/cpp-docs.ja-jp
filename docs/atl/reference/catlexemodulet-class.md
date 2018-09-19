@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa212a6a58d1de417035f002b2caf3e206dabf1c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b9b19888f6eae3efe7baf4429ec1174432f99a10
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757586"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118558"
 ---
 # <a name="catlexemodulet-class"></a>CAtlExeModuleT クラス
 
@@ -46,13 +46,13 @@ ms.locfileid: "43757586"
 ## <a name="syntax"></a>構文
 
 ```
-template <class T>  
+template <class T>
 class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 クラスから派生した`CAtlExeModuleT`します。
 
 ## <a name="members"></a>メンバー
@@ -100,7 +100,7 @@ ATL でモジュールの詳細については、次を参照してください�
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
-[_ATL_MODULE](atl-typedefs.md#_atl_module)  
+[_ATL_MODULE](atl-typedefs.md#_atl_module)
 
 [CAtlModule](../../atl/reference/catlmodule-class.md)
 
@@ -200,10 +200,10 @@ bool ParseCommandLine(LPCTSTR lpCmdLine, HRESULT* pnRetCode) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*lpCmdLine*  
+*lpCmdLine*<br/>
 コマンドラインは、アプリケーションに渡されます。
 
-*pnRetCode*  
+*pnRetCode*<br/>
 (これが、行われた) 場合は、登録に対応する HRESULT。
 
 ### <a name="return-value"></a>戻り値
@@ -240,7 +240,7 @@ HRESULT PreMessageLoop(int nShowCmd) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nShowCmd*  
+*nShowCmd*<br/>
 渡された値、 *nShowCmd* WinMain のパラメーター。
 
 ### <a name="return-value"></a>戻り値
@@ -261,10 +261,10 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*dwClsContext*  
+*dwClsContext*<br/>
 クラスのオブジェクトが実行コンテキストを指定します。 指定できる値は、CLSCTX_INPROC_SERVER や CLSCTX_INPROC_HANDLER、CLSCTX_LOCAL_SERVER は。
 
-*dwFlags*  
+*dwFlags*<br/>
 クラス オブジェクトへの接続の種類を決定します。 指定できる値は、REGCLS_SINGLEUSE、REGCLS_MULTIPLEUSE、または REGCLS_MULTI_SEPARATE は。
 
 ### <a name="return-value"></a>戻り値
@@ -293,7 +293,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nShowCmd*  
+*nShowCmd*<br/>
 ウィンドウの表示方法を指定します。 このパラメーターで説明されている値のいずれかを指定できます、 [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)セクション。 既定値は SW_HIDE です。
 
 ### <a name="return-value"></a>戻り値
@@ -350,7 +350,7 @@ int WinMain(int nShowCmd) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nShowCmd*  
+*nShowCmd*<br/>
 ウィンドウの表示方法を指定します。 このパラメーターで説明されている値のいずれかを指定できます、 [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)セクション。
 
 ### <a name="return-value"></a>戻り値
@@ -363,7 +363,7 @@ int WinMain(int nShowCmd) throw();
 
 ## <a name="see-also"></a>関連項目
 
-[ATLDuck サンプル](../../visual-cpp-samples.md)   
-[CAtlModuleT クラス](../../atl/reference/catlmodulet-class.md)   
-[CAtlDllModuleT クラス](../../atl/reference/catldllmodulet-class.md)   
+[ATLDuck サンプル](../../visual-cpp-samples.md)<br/>
+[CAtlModuleT クラス](../../atl/reference/catlmodulet-class.md)<br/>
+[CAtlDllModuleT クラス](../../atl/reference/catldllmodulet-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

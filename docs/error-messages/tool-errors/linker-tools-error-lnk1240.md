@@ -1,5 +1,5 @@
 ---
-title: リンカ ツール エラー LNK1240 |Microsoft ドキュメント
+title: リンカ ツール エラー LNK1240 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5f21d12e9d3b2673e5dfcf65dc726e9d3cc6a36
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f0aa394d11726597bd720bfd2d206f41ab9e077e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295065"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111889"
 ---
 # <a name="linker-tools-error-lnk1240"></a>リンカ ツール エラー LNK1240
-IDL コンテントのコンパイルに失敗しました  
-  
- リンカー MIDL で埋め込み IDL のコンパイルを生成するが、問題が発生しました。 MIDL によって指定されたエラーを確認します。
+
+IDL コンテントのコンパイルに失敗しました
+
+リンカーが埋め込み IDL のコンパイルに MIDL を生成しますが、問題が発生しました。 MIDL によって指定されたエラーを確認します。

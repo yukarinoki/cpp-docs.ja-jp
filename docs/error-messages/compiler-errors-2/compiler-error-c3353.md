@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3353 |Microsoft ドキュメント
+title: コンパイラ エラー C3353 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47c9d1dd8c21e56613b9da00fc2bf4f7fbeafcca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 63316a5a74c3981ec0f68d949eba654f8d6bbfef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253906"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110199"
 ---
 # <a name="compiler-error-c3353"></a>コンパイラ エラー C3353
-'delegate': デリゲートはマネージ型または WinRT 型のグローバル関数またはメンバー関数からのみ作成できます  
-  
- 宣言されたデリゲートを[委任](../../windows/delegate-cpp-component-extensions.md)キーワードでは、グローバル スコープでのみ宣言できます。  
-  
- 次の例では C3353 が生成されます。  
-  
-```  
-// C3353.cpp  
-// compile with: /clr  
-delegate int f;   // C3353  
+
+'delegate': デリゲートはマネージド型または WinRT 型のグローバル関数またはメンバー関数からのみ作成できます
+
+使用して、デリゲート宣言、[委任](../../windows/delegate-cpp-component-extensions.md)キーワードは、グローバル スコープでのみ宣言できます。
+
+次の例では C3353 が生成されます。
+
+```
+// C3353.cpp
+// compile with: /clr
+delegate int f;   // C3353
 ```

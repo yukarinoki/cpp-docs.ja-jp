@@ -16,15 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54780b11e07819ca78eba89d9af5a8ba018cc9e4
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 7f7b3c12c5889265ebb06e199c7f1e1e3cb440b4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401809"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034072"
 ---
 # <a name="additional-termination-considerations"></a>終了に関するその他の考慮事項
-使用して、C++ プログラムを終了する`exit`、**返す**、または`abort`します。 `atexit` 関数を使用して終了処理を追加できます。 次の各セクションでは、これらについて説明します。  
-  
-## <a name="see-also"></a>関連項目  
- [起動と終了](../cpp/startup-and-termination-cpp.md)
+
+使用して、C++ プログラムを終了する`exit`、**返す**、または`abort`します。 `atexit` 関数を使用して終了処理を追加できます。 次の各セクションでは、これらについて説明します。
+
+## <a name="see-also"></a>関連項目
+
+[起動と終了](../cpp/startup-and-termination-cpp.md)

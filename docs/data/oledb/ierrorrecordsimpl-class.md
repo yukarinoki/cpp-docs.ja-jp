@@ -76,14 +76,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 149508ee799ab2802dd2a106b503376851ac31cd
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 13e00d3d5ac7cb6cf6e4078ee24a7c3b02a2778e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572411"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043392"
 ---
 # <a name="ierrorrecordsimpl-class"></a>IErrorRecordsImpl クラス
+
 OLE DB 実装[IErrorRecords](/previous-versions/windows/desktop/ms718112\(v=vs.85\))インターフェイスにレコードを追加して、データ メンバーからレコードを取得する ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) 型の**CAtlArray <** `RecordClass`**>**.  
   
 ## <a name="syntax"></a>構文
@@ -94,14 +95,16 @@ class IErrorRecordsImpl : public IErrorRecords
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- *T*  
- 派生したクラス`IErrorRecordsImpl`します。  
+
+*T*<br/>
+派生したクラス`IErrorRecordsImpl`します。  
   
- *RecordClass*  
- OLE DB エラー オブジェクトを表すクラス。  
+*RecordClass*<br/>
+OLE DB エラー オブジェクトを表すクラス。  
 
 ## <a name="requirements"></a>要件  
- **ヘッダー:** atldb.h  
+
+**ヘッダー:** atldb.h  
   
 ## <a name="members"></a>メンバー  
   
@@ -133,6 +136,7 @@ class IErrorRecordsImpl : public IErrorRecords
 |[m_rgErrors](#rgerrors)|エラー レコードの配列。|  
 
 ## <a name="geterrordescriptionstring"></a> Ierrorrecordsimpl::geterrordescriptionstring
+
 エラー レコードからエラーを説明する文字列を取得します。  
   
 ### <a name="syntax"></a>構文  
@@ -142,13 +146,16 @@ LPOLESTR GetErrorDescriptionString(ERRORINFO& rCurError);
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *rCurError*  
- `ERRORINFO`でレコードを`IErrorInfo`インターフェイス。  
+
+*rCurError*<br/>
+`ERRORINFO`でレコードを`IErrorInfo`インターフェイス。  
   
 ### <a name="return-value"></a>戻り値  
- エラーを説明する文字列へのポインター。  
+
+エラーを説明する文字列へのポインター。  
   
 ## <a name="geterrorguid"></a> Ierrorrecordsimpl::geterrorguid
+
 エラー レコードからエラー GUID を取得します。  
   
 ### <a name="syntax"></a>構文  
@@ -158,13 +165,16 @@ REFGUID GetErrorGUID(ERRORINFO& rCurError);
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *rCurError*  
- `ERRORINFO`でレコードを`IErrorInfo`インターフェイス。  
+
+*rCurError*<br/>
+`ERRORINFO`でレコードを`IErrorInfo`インターフェイス。  
   
 ### <a name="return-value"></a>戻り値  
- エラーの GUID への参照。  
+
+エラーの GUID への参照。  
 
 ## <a name="geterrorhelpcontext"></a> Ierrorrecordsimpl::geterrorhelpcontext
+
 エラー レコードからのヘルプ コンテキスト ID を取得します。  
   
 ### <a name="syntax"></a>構文  
@@ -174,13 +184,16 @@ DWORD GetErrorHelpContext(ERRORINFO& rCurError);
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *rCurError*  
- `ERRORINFO`でレコードを`IErrorInfo`インターフェイス。  
+
+*rCurError*<br/>
+`ERRORINFO`でレコードを`IErrorInfo`インターフェイス。  
   
 ### <a name="return-value"></a>戻り値  
- エラーのヘルプ コンテキスト ID。  
+
+エラーのヘルプ コンテキスト ID。  
 
 ## <a name="geterrorhelpfile"></a> Ierrorrecordsimpl::geterrorhelpfile
+
 エラー レコードからヘルプ ファイルのパス名を取得します。  
   
 ### <a name="syntax"></a>構文  
@@ -190,13 +203,16 @@ LPOLESTR GetErrorHelpFile(ERRORINFO& rCurError);
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *rCurError*  
- `ERRORINFO`でレコードを`IErrorInfo`インターフェイス。  
+
+*rCurError*<br/>
+`ERRORINFO`でレコードを`IErrorInfo`インターフェイス。  
   
 ### <a name="return-value"></a>戻り値  
- エラーのヘルプ ファイルのパス名を含む文字列へのポインター。
+
+エラーのヘルプ ファイルのパス名を含む文字列へのポインター。
 
 ## <a name="geterrorsource"></a> Ierrorrecordsimpl::geterrorsource
+
 エラー レコードから、エラーの原因となったソース コードを取得します。  
   
 ### <a name="syntax"></a>構文  
@@ -206,13 +222,16 @@ LPOLESTR GetErrorSource(ERRORINFO& rCurError);
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *rCurError*  
- `ERRORINFO`でレコードを`IErrorInfo`インターフェイス。  
+
+*rCurError*<br/>
+`ERRORINFO`でレコードを`IErrorInfo`インターフェイス。  
   
 ### <a name="return-value"></a>戻り値  
- エラーのソース コードを含む文字列へのポインター。 
+
+エラーのソース コードを含む文字列へのポインター。 
 
 ## <a name="adderrorrecord"></a> Ierrorrecordsimpl::adderrorrecord
+
 OLE DB エラー オブジェクトには、レコードを追加します。  
   
 ### <a name="syntax"></a>構文  
@@ -226,9 +245,11 @@ STDMETHOD(AddErrorRecord )(ERRORINFO *pErrorInfo,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[IErrorRecords::AddErrorRecord](/previous-versions/windows/desktop/ms725362\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+
+参照してください[IErrorRecords::AddErrorRecord](/previous-versions/windows/desktop/ms725362\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
 
 ## <a name="getbasicerrorinfo"></a> Ierrorrecordsimpl::getbasicerrorinfo
+
 リターン コードとプロバイダー固有のエラー数など、エラーに関する基本情報を返します。  
   
 ### <a name="syntax"></a>構文  
@@ -239,9 +260,11 @@ STDMETHOD(GetBasicErrorInfo )(ULONG ulRecordNum,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。 
+
+参照してください[IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。 
 
 ## <a name="getcustomerrorobject"></a> Ierrorrecordsimpl::getcustomerrorobject
+
 カスタム エラー オブジェクトのインターフェイスへのポインターを返します。  
   
 ### <a name="syntax"></a>構文  
@@ -253,9 +276,11 @@ STDMETHOD(GetCustomErrorObject )(ULONG ulRecordNum,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+
+参照してください[IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
 
 ## <a name="geterrorinfo"></a> Ierrorrecordsimpl::geterrorinfo
+
 返します、 [IErrorInfo](/previous-versions/windows/desktop/ms718112\(v=vs.85\))指定されたレコードのインターフェイス ポインター。  
   
 ### <a name="syntax"></a>構文  
@@ -267,9 +292,11 @@ STDMETHOD(GetErrorInfo )(ULONG ulRecordNum,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。
+
+参照してください[IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ## <a name="geterrorparameters"></a> Ierrorrecordsimpl::geterrorparameters
+
 エラー パラメーターを返します。  
   
 ### <a name="syntax"></a>構文  
@@ -280,9 +307,11 @@ STDMETHOD(GetErrorParameters )(ULONG ulRecordNum,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+
+参照してください[IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
 
 ## <a name="getrecordcount"></a> Ierrorrecordsimpl::getrecordcount
+
 OLE DB レコード オブジェクト内のレコードの数を返します。  
   
 ### <a name="syntax"></a>構文  
@@ -292,9 +321,11 @@ STDMETHOD(GetRecordCount )(ULONG *pcRecords);
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[IErrorRecords::GetRecordCount](/previous-versions/windows/desktop/ms722724\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+
+参照してください[IErrorRecords::GetRecordCount](/previous-versions/windows/desktop/ms722724\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
 
 ## <a name="rgerrors"></a> Ierrorrecordsimpl::m_rgerrors
+
 エラー レコードの配列。  
   
 ### <a name="syntax"></a>構文  
@@ -304,5 +335,6 @@ CAtlArray< RecordClass > m_rgErrors;
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

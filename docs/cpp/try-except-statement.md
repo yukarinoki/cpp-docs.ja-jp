@@ -35,29 +35,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2780697c1a50e15e170f2096a2841e2c50d844a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 107b759345e221ad8100f11d97b79c5bd9fd2b65
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724686"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031445"
 ---
 # <a name="try-except-statement"></a>try-except ステートメント
 
 **Microsoft 固有の仕様**
 
-**を再試行してください-を除く**ステートメントは C に対する Microsoft 拡張機能であり、構造化例外処理の C++ 言語をサポートします。  
+**を再試行してください-を除く**ステートメントは C に対する Microsoft 拡張機能であり、構造化例外処理の C++ 言語をサポートします。
 
-## <a name="syntax"></a>構文  
-  
-> **__try**   
-> {  
->    保護されたコード  
-> }  
-> **_ _except** (*式*)  
-> {  
->    例外ハンドラーのコード  
-> }  
+## <a name="syntax"></a>構文
+
+> **_ _try** {/コードの保護/} **_ _except** (*式*) {//例外ハンドラーのコード}
 
 ## <a name="remarks"></a>Remarks
 
@@ -74,7 +67,7 @@ ms.locfileid: "45724686"
 
 1. 保護されたセクションが実行されます。
 
-2. 実行は、ステートメントの後で続行、保護されたセクションの実行中に例外が発生しない場合、 **_ _except**句。  
+2. 実行は、ステートメントの後で続行、保護されたセクションの実行中に例外が発生しない場合、 **_ _except**句。
 
 3. 保護されたセクションの実行中に例外が発生したか、保護されたセクションを呼び出す任意のルーチンで、 **_ _except** *式*(と呼ばれる、*フィルター*式)評価し、値が例外の処理方法を決定します。 次の 3 つの値があります。
 
@@ -88,10 +81,10 @@ ms.locfileid: "45724686"
 
 各アプリケーションが独自の例外ハンドラーを持つ場合があります。
 
-移動することはできません、 **_ _try**ステートメントを 1 つからのジャンプは無効です。 実行中のプロセスが終了した場合、例外ハンドラーは呼び出されませんが、**を再試行してください-を除く**ステートメント。  
-  
-詳細については、サポート技術情報「HOW TO: Trap Stack Overflow in a Visual C++ Application (Q315937)」を参照してください。  
-  
+移動することはできません、 **_ _try**ステートメントを 1 つからのジャンプは無効です。 実行中のプロセスが終了した場合、例外ハンドラーは呼び出されませんが、**を再試行してください-を除く**ステートメント。
+
+詳細については、サポート技術情報「HOW TO: Trap Stack Overflow in a Visual C++ Application (Q315937)」を参照してください。
+
 ## <a name="the-leave-keyword"></a>__leave キーワード
 
 **_ _Leave**キーワードの保護されたセクション内でのみ有効ですが、**を再試行してください-を除く**ステートメントとその効果は、保護されたセクションの末尾に移動します。 実行は、例外ハンドラーの後の最初のステートメントから続行されます。
@@ -106,12 +99,12 @@ A **goto**ステートメントは、保護されたセクションからも進�
 
 組み込み関数`GetExceptionInformation`例外に関する追加情報を含む構造体へのポインターを返します。 このポインターを使用して、ハードウェア例外のときに存在していたコンピューターの状態にアクセスできます。 構造は、次のとおりです。
 
-```cpp  
+```cpp
 typedef struct _EXCEPTION_POINTERS {
     PEXCEPTION_RECORD ExceptionRecord;
     PCONTEXT ContextRecord;
-} EXCEPTION_POINTERS, *PEXCEPTION_POINTERS; 
-```  
+} EXCEPTION_POINTERS, *PEXCEPTION_POINTERS;
+```
 
 ポインター型`PEXCEPTION_RECORD`と`PCONTEXT`インクルード ファイルで定義されて\<winnt.h >、および`_EXCEPTION_RECORD`と`_CONTEXT`インクルード ファイルで定義されて\<excpt.h >
 
@@ -123,10 +116,10 @@ excpt.h では、これらの組み込みの代替名を定義します。
 
 `GetExceptionCode` 等価します。 `_exception_code`
 
- `GetExceptionInformation` 等価します。 `_exception_info`
+`GetExceptionInformation` 等価します。 `_exception_info`
 
- `AbnormalTermination` 等価します。 `_abnormal_termination`
-  
+`AbnormalTermination` 等価します。 `_abnormal_termination`
+
 ## <a name="example"></a>例
 
 ```cpp
@@ -176,24 +169,25 @@ int main()
     puts("world");
 }
 ```
-  
-## <a name="output"></a>出力  
-  
-```Output 
-hello  
-in try  
-in try  
-in filter.  
-caught AV as expected.  
-in finally. termination:  
-        abnormal  
-in except  
-world  
-```  
 
-**Microsoft 固有の仕様はここまで**  
+## <a name="output"></a>出力
+
+```Output
+hello
+in try
+in try
+in filter.
+caught AV as expected.
+in finally. termination:
+        abnormal
+in except
+world
+```
+
+**Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
- [例外ハンドラーの記述](../cpp/writing-an-exception-handler.md)   
- [構造化例外処理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)   
- [キーワード](../cpp/keywords-cpp.md)
+
+[例外ハンドラーの記述](../cpp/writing-an-exception-handler.md)<br/>
+[構造化例外処理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
+[キーワード](../cpp/keywords-cpp.md)

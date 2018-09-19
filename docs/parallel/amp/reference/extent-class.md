@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8399eed2c047c10a0a78b1cd944dba7b2d1da97e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 59600343a06a2c3c0d4f5b55efadaa09c43452d9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102106"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067702"
 ---
 # <a name="extent-class-c-amp"></a>extent クラス (C++ AMP)
 ベクターを表します*N*の境界を指定する整数値、 *N*-が原点 0 次元の空間。 ベクターの値は最上位から最下位へ順に並べ替えられます。
@@ -40,7 +40,7 @@ class extent;
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_Rank`  
+*_Rank*<br/>
 `extent` オブジェクトのランク。
 
 ## <a name="requirements"></a>要件
@@ -102,7 +102,7 @@ bool contains(const index<rank>& _Index) const restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_Index`  
+*_Index*<br/>
 テストする `index` 値。
 
 ### <a name="return-value"></a>戻り値
@@ -124,22 +124,22 @@ explicit extent(const int _Array[_Rank])restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_Array`  
+*_Array*<br/>
 新しい `_Rank` オブジェクトを作成するために使用される `extent` 整数の配列。
 
-`_I`  
+*_I*<br/>
 範囲の長さ。
 
-`_I0`  
+*_I0*<br/>
 最上位の次元の長さ。
 
-`_I1`  
+*_I1*<br/>
 最上位の次の次元の長さ。
 
-`_I2`  
+*_I2*<br/>
 最下位の次元の長さ。
 
-`_Other`  
+*_Other*<br/>
 新しい `extent` オブジェクトが基づく `extent` オブジェクト。
 
 ## <a name="remarks"></a>Remarks
@@ -158,7 +158,7 @@ extent<_Rank>& operator%=(int _Rhs) restrict(cpu, direct3d);
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_Rhs`  
+*_Rhs*<br/>
 5/3 の余りをする数値。
 
 ### <a name="return-value"></a>戻り値
@@ -175,7 +175,7 @@ extent<_Rank>& operator*=(int _Rhs) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_Rhs`  
+*_Rhs*<br/>
 乗算対象の数です。
 
 ### <a name="return-value"></a>戻り値
@@ -192,7 +192,7 @@ extent<_Rank> operator+(const index<_Rank>& _Rhs) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_Rhs`  
+*_Rhs*<br/>
 追加する要素を含む `index` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -225,7 +225,7 @@ extent<_Rank>& operator+=(int _Rhs) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_Rhs`  
+*_Rhs*<br/>
 追加する数、インデックス、または範囲。
 
 ### <a name="return-value"></a>戻り値
@@ -242,7 +242,7 @@ extent<_Rank> operator-(const index<_Rank>& _Rhs) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_Rhs`  
+*_Rhs*<br/>
 減算する要素を含む `index` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -273,7 +273,7 @@ extent<_Rank>& operator/=(int _Rhs) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_Rhs`  
+*_Rhs*<br/>
 除数。
 
 ### <a name="return-value"></a>戻り値
@@ -292,7 +292,7 @@ extent<_Rank>& operator-=(int _Rhs) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_Rhs`  
+*_Rhs*<br/>
 減算する数。
 
 ### <a name="return-value"></a>戻り値
@@ -309,7 +309,7 @@ extent<_Rank>& operator=(const extent<_Rank>& _Other) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_Other`  
+*_Other*<br/>
 コピー元の `extent` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -326,7 +326,7 @@ int& operator[](unsigned int _Index) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_Index`  
+*_Index*<br/>
 0 からランク - 1 までの整数。
 
 ### <a name="return-value"></a>戻り値

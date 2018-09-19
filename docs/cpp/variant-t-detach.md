@@ -19,31 +19,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42fc4bd5186ade5efaa9c4fa8e9f567f37509039
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 4ab1e4f83025dcc3e4bc65274746e0617cf31b5b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42571427"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065024"
 ---
 # <a name="varianttdetach"></a>_variant_t::Detach
-**Microsoft 固有の仕様**  
-  
- カプセル化されたデタッチ`VARIANT`オブジェクトからこの`_variant_t`オブジェクト。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-VARIANT Detach( );  
-```  
-  
-## <a name="return-value"></a>戻り値  
- カプセル化された`VARIANT`します。  
-  
-## <a name="remarks"></a>Remarks  
- 抽出し、カプセル化された返します`VARIANT`、これをクリア`_variant_t`オブジェクトを破棄します。 このメンバー関数を削除、`VARIANT`カプセル化し、セットから、`VARTYPE`この`_variant_t`VT_EMPTY するオブジェクト。 返されたを解放するかどうかは`VARIANT`呼び出すことによって、 [VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear)関数。  
-  
- **Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- [_variant_t クラス](../cpp/variant-t-class.md)
+
+**Microsoft 固有の仕様**
+
+カプセル化されたデタッチ`VARIANT`オブジェクトからこの`_variant_t`オブジェクト。
+
+## <a name="syntax"></a>構文
+
+```
+VARIANT Detach( );
+```
+
+## <a name="return-value"></a>戻り値
+
+カプセル化された`VARIANT`します。
+
+## <a name="remarks"></a>Remarks
+
+抽出し、カプセル化された返します`VARIANT`、これをクリア`_variant_t`オブジェクトを破棄します。 このメンバー関数を削除、`VARIANT`カプセル化し、セットから、`VARTYPE`この`_variant_t`VT_EMPTY するオブジェクト。 返されたを解放するかどうかは`VARIANT`呼び出すことによって、 [VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear)関数。
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
+[_variant_t クラス](../cpp/variant-t-class.md)

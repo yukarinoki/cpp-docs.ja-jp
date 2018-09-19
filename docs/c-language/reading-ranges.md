@@ -12,23 +12,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8ebad4bfda77238ad8c861410e2af5453df73af
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 76530dfdac917dfbde50bc3fb1b17a3c31178729
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383645"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030243"
 ---
 # <a name="reading-ranges"></a>範囲の読み取り
-**ANSI 4.9.6.2** `fscanf` 関数の % [ 変換でのスキャン リストの最初または最後の文字ではないダッシュ (-) 文字の解釈  
-  
- 次の行  
-  
-```  
-fscanf( fileptr, "%[A-Z]", strptr);  
-```  
-  
- `strptr` が指す文字列に A から Z の範囲の任意の文字数を読み取ります。  
-  
-## <a name="see-also"></a>参照  
- [ライブラリ関数](../c-language/library-functions.md)
+
+**ANSI 4.9.6.2** `fscanf` 関数の % [ 変換でのスキャン リストの最初または最後の文字ではないダッシュ (-) 文字の解釈
+
+次の行
+
+```
+fscanf( fileptr, "%[A-Z]", strptr);
+```
+
+`strptr` が指す文字列に A から Z の範囲の任意の文字数を読み取ります。
+
+## <a name="see-also"></a>参照
+
+[ライブラリ関数](../c-language/library-functions.md)

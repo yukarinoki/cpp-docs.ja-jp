@@ -20,22 +20,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 638d4fbe6fd4dfce1fb3eeb246ef85c5b60fada0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3f3bf660b2e1c8301e9c6c8ba1bd1e11fa3956de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392511"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082223"
 ---
 # <a name="locale"></a>ロケール
 
 *ロケール*とは、プログラムをカスタマイズするために使用できる国または地域と言語を表します。 ロケールに依存するカテゴリとしては、日付や通貨の値の表示形式などがあります。 詳細については、「[ロケールのカテゴリ](../c-runtime-library/locale-categories.md)」を参照してください。
 
- 現在のプログラムまたはスレッドのロケール情報の一部またはすべてを変更または照会するには、[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 関数を **_l** のサフィックスなしで使用します。 **_l** サフィックス付きの関数を指定すると、特定の関数の実行中にのみ渡されたロケール パラメーターをロケール情報として使用します。 **_l** サフィックス付きの関数を使用する場合のロケールを作成するには、[_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) を使用します。 このロケールを解放するには、[_free_locale](../c-runtime-library/reference/free-locale.md) を使用します。 現在のロケールを取得するには、[_get_current_locale](../c-runtime-library/reference/get-current-locale.md) を使用します。
+現在のプログラムまたはスレッドのロケール情報の一部またはすべてを変更または照会するには、[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 関数を **_l** のサフィックスなしで使用します。 **_l** サフィックス付きの関数を指定すると、特定の関数の実行中にのみ渡されたロケール パラメーターをロケール情報として使用します。 **_l** サフィックス付きの関数を使用する場合のロケールを作成するには、[_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) を使用します。 このロケールを解放するには、[_free_locale](../c-runtime-library/reference/free-locale.md) を使用します。 現在のロケールを取得するには、[_get_current_locale](../c-runtime-library/reference/get-current-locale.md) を使用します。
 
- 各スレッドで独自のロケールを設定するか、プログラム内のすべてのスレッドで同じロケールを共有するかどうかを制御するには、[_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) を使用します。 詳細については、「[ロケールとコード ページ](../text/locales-and-code-pages.md)」を参照してください。
+各スレッドで独自のロケールを設定するか、プログラム内のすべてのスレッドで同じロケールを共有するかどうかを制御するには、[_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) を使用します。 詳細については、「[ロケールとコード ページ](../text/locales-and-code-pages.md)」を参照してください。
 
- 次の表に示す関数のセキュリティを強化したバージョンは、**_s** ("secure") というサフィックスによって表されます。 詳細については、「 [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md)」を参照してください。
+次の表に示す関数のセキュリティを強化したバージョンは、**_s** ("secure") というサフィックスによって表されます。 詳細については、「 [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md)」を参照してください。
 
 ## <a name="locale-dependent-routines"></a>ロケールに依存するルーチン
 
@@ -82,4 +82,4 @@ ms.locfileid: "32392511"
 ## <a name="see-also"></a>参照
 
 [国際化](../c-runtime-library/internationalization.md)<br/>
- [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>

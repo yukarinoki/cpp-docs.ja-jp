@@ -1,5 +1,5 @@
 ---
-title: リンカー ツールの警告 LNK4200 |Microsoft ドキュメント
+title: リンカー ツールの警告 LNK4200 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72e0db3352bc124ab586b43fab278baf517b5a04
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3d23d10440f4eba5082dff41544725fd6b77dbe3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298747"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111759"
 ---
 # <a name="linker-tools-warning-lnk4200"></a>リンカー ツールの警告 LNK4200
-オブジェクト ファイルで破損している行番号の情報無視されます。  
-  
- オブジェクト ファイル内の行番号情報が壊れています。 再ビルドします。
+
+オブジェクト ファイルの破損している行番号情報無視されます。
+
+オブジェクト ファイル内の行番号情報が壊れています。 再ビルドします。

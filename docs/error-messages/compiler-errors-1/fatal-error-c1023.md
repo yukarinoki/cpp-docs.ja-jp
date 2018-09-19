@@ -1,5 +1,5 @@
 ---
-title: 致命的なエラー C1023 |Microsoft ドキュメント
+title: 致命的なエラー C1023 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd9d6b2f0a84d43b14b1187fa4ca5698114983e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58a78a735b553a0a607f2b3433598117efac9191
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198298"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115243"
 ---
 # <a name="fatal-error-c1023"></a>致命的なエラー C1023
-'file' : pch で予期しないエラーが発生しました。pch をリビルドしてください  
-  
- C1023 は、複数の問題のいずれかが原因で発生した可能性があります。これを解決するには、プリコンパイル済みヘッダー ファイルを再構築します。  
-  
- C1023 は、プリコンパイル済みヘッダー ファイルを構築したコンピューター以外のコンピューターでこのファイルを使用しようとしている場合に発生する可能性があります。
+
+'file' : pch で予期しないエラーが発生しました。pch をリビルドしてください
+
+C1023 は、複数の問題のいずれかが原因で発生した可能性があります。これを解決するには、プリコンパイル済みヘッダー ファイルを再構築します。
+
+C1023 は、プリコンパイル済みヘッダー ファイルを構築したコンピューター以外のコンピューターでこのファイルを使用しようとしている場合に発生する可能性があります。

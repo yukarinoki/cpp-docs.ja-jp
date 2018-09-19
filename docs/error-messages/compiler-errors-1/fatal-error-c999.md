@@ -1,5 +1,5 @@
 ---
-title: 致命的なエラー C999 |Microsoft ドキュメント
+title: 致命的なエラー C999 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80ecf2851051090a416e2657ccc93f00e840834e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 74c71bef10da2220d7ffc013a9043dd6c9b8a29e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227099"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118935"
 ---
 # <a name="fatal-error-c999"></a>致命的なエラー C999
-不明なメッセージ、Visual C ヘルプ メニューのサポート情報コマンドを選択してください詳細については、テクニカル サポート ヘルプ ファイルを開く  
-  
- 通常、このエラーは、異なるバージョンのコンパイラのファイルが混在しているか、コンパイラのインストールが破損していることを示します。 使用して、**プログラムと機能**修復または製品を再インストールするには、コントロール パネルのアプレットします。
+
+Visual C ヘルプ メニューに、サポート情報コマンドを選択して不明なメッセージくださいまたは、詳細については、サポート情報ヘルプ ファイルを開く
+
+通常、このエラーは、異なるバージョンのコンパイラのファイルが混在しているか、コンパイラのインストールが破損していることを示します。 使用して、**プログラムと機能**修復または製品を再インストールするには、コントロール パネルのアプレットです。

@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2632 |Microsoft ドキュメント
+title: コンパイラ エラー C2632 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3bc07c404a1f4d667045fdfea24009e7d20ad69
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7bf03c35c60bebb52c94ed04cca2349f35c06fbc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232634"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093651"
 ---
 # <a name="compiler-error-c2632"></a>コンパイラ エラー C2632
-'type1' が 'type2' 続くことはできません。  
-  
- このエラーは、次の 2 つの型指定子の間にコードがない場合に発生することができます。  
-  
- 次の例では、C2632 が生成されます。  
-  
-```  
-// C2632.cpp  
-int float i;   // C2632  
-```  
-  
- このエラーは、Visual Studio .NET 2003 で行ったコンパイラ準拠作業の結果として生成できます。 `bool` 適切な型ではようになりました。 以前のバージョンで`bool`が、typedef と同じ名前の識別子を作成できます。  
-  
- 次の例では、C2632 が生成されます。  
-  
-```  
-// C2632_2.cpp  
-// compile with: /LD  
-void f(int bool);   // C2632  
-```  
-  
- このエラーを解決するには、コードは、Visual Studio .NET 2003 と Visual Studio .NET のバージョンの Visual C では無効にできるようにするには、識別子を変更します。
+
+'type1' の 'type2' の後に無効です。
+
+このエラーは、2 つの型指定子の間でコードがない場合に発生することができます。
+
+次の例では、C2632 が生成されます。
+
+```
+// C2632.cpp
+int float i;   // C2632
+```
+
+このエラーは、Visual Studio .NET 2003 で行ったコンパイラ準拠作業の結果として生成こともできます。 `bool` 適切な型になります。 以前のバージョンで`bool`typedef、その名前の識別子を作成できます。
+
+次の例では、C2632 が生成されます。
+
+```
+// C2632_2.cpp
+// compile with: /LD
+void f(int bool);   // C2632
+```
+
+このエラーを解決するには、コードが Visual Studio .NET 2003 と Visual Studio .NET の両方のバージョンの Visual C では有効であるように、識別子の名前を変更します。

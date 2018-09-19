@@ -59,12 +59,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b82aa22c3cc1c217ba4dfd332c43f6663c94638e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fe5f3234738a16b4c072b667982d36032e30f7dd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761876"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107118"
 ---
 # <a name="ioleobjectimpl-class"></a>IOleObjectImpl クラス
 
@@ -76,13 +76,13 @@ ms.locfileid: "43761876"
 ## <a name="syntax"></a>構文
 
 ```
-template<class T>  
+template<class T>
 class ATL_NO_VTABLE IOleObjectImpl : public IOleObject
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 派生したクラス、`IOleObjectImpl`します。
 
 ## <a name="members"></a>メンバー
@@ -219,10 +219,10 @@ HRESULT DoVerbDiscardUndo(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>パラメーター
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in]四角形のコンテナーへのポインターでは、コントロールに描画する必要があります。
 
-*hwndParent*  
+*hwndParent*<br/>
 [in]コントロールを含むウィンドウのハンドル。
 
 ### <a name="return-value"></a>戻り値
@@ -239,10 +239,10 @@ HRESULT DoVerbHide(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>パラメーター
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in]四角形のコンテナーへのポインターでは、コントロールに描画する必要があります。
 
-*hwndParent*  
+*hwndParent*<br/>
 [in]コントロールを含むウィンドウのハンドル。 ATL の実装では使用されません。
 
 ### <a name="return-value"></a>戻り値
@@ -259,10 +259,10 @@ HRESULT DoVerbInPlaceActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>パラメーター
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in]四角形のコンテナーへのポインターでは、コントロールに描画する必要があります。
 
-*hwndParent*  
+*hwndParent*<br/>
 [in]コントロールを含むウィンドウのハンドル。 ATL の実装では使用されません。
 
 ### <a name="return-value"></a>戻り値
@@ -283,10 +283,10 @@ HRESULT DoVerbOpen(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>パラメーター
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in]四角形のコンテナーへのポインターでは、コントロールに描画する必要があります。
 
-*hwndParent*  
+*hwndParent*<br/>
 [in]コントロールを含むウィンドウのハンドル。
 
 ### <a name="return-value"></a>戻り値
@@ -303,10 +303,10 @@ HRESULT DoVerbPrimary(LPCRECT prcPosRect, HWND hwndParent);
 
 ### <a name="parameters"></a>パラメーター
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in]四角形のコンテナーへのポインターでは、コントロールに描画する必要があります。
 
-*hwndParent*  
+*hwndParent*<br/>
 [in]コントロールを含むウィンドウのハンドル。
 
 ### <a name="return-value"></a>戻り値
@@ -327,10 +327,10 @@ HRESULT DoVerbShow(LPCRECT prcPosRect, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>パラメーター
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in]四角形のコンテナーへのポインターでは、コントロールに描画する必要があります。
 
-*hwndParent*  
+*hwndParent*<br/>
 [in]コントロールを含むウィンドウのハンドル。 ATL の実装では使用されません。
 
 ### <a name="return-value"></a>戻り値
@@ -347,10 +347,10 @@ HRESULT DoVerbUIActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>パラメーター
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in]四角形のコンテナーへのポインターでは、コントロールに描画する必要があります。
 
-*hwndParent*  
+*hwndParent*<br/>
 [in]コントロールを含むウィンドウのハンドル。 ATL の実装では使用されません。
 
 ### <a name="return-value"></a>戻り値
@@ -833,6 +833,6 @@ S_OK を返します。
 
 ## <a name="see-also"></a>関連項目
 
-[CComControl クラス](../../atl/reference/ccomcontrol-class.md)   
-[ActiveX コントロールのインターフェイス](/windows/desktop/com/activex-controls-interfaces)   
+[CComControl クラス](../../atl/reference/ccomcontrol-class.md)<br/>
+[ActiveX コントロールのインターフェイス](/windows/desktop/com/activex-controls-interfaces)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

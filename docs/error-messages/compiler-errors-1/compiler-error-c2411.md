@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2411 |Microsoft ドキュメント
+title: コンパイラ エラー C2411 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 228fa8bd08c6761fbdeb018ff3ec1e027eb475dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 20198235e04fbcc95bafbcfe119462e754587a3f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196468"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036840"
 ---
 # <a name="compiler-error-c2411"></a>コンパイラ エラー C2411
-'identifier': 'context' で無効な構造体/共用体メンバー  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>次のような原因をチェックして問題を解決するには  
-  
-1.  識別子が表示されている構造体または共用体には、このコンテキストのメンバーではないです。  
-  
-2.  識別子は、構造体または共用体のメンバー選択 (.) 演算子で指定のメンバーではないです。
+
+'identifier': 'context' で無効な構造体/共用体メンバー
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>次のような原因をチェックして問題を解決するには
+
+1. 表示される構造体またはこのコンテキストで共用体のメンバーでない識別子。
+
+1. 構造体または共用体のメンバー選択 (.) 演算子で指定のメンバーでない識別子。

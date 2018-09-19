@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77f86356dada81afb64f0c0efa8f5f5154caa8e4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ca2f1e907864e096acfb385d8c340ab40fb82346
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766062"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059226"
 ---
 # <a name="cstringt-class"></a>CStringT クラス
 
@@ -1611,11 +1611,11 @@ CRT とは異なりなどの関数をトークン化[strtok_s、_strtok_s_l、wc
 
 この例の出力は次のとおりです。
 
-`Resulting Token: First`
-
-`Resulting Token: Second`
-
-`Resulting Token: Third`
+```Output
+Resulting Token: First
+Resulting Token: Second
+Resulting Token: Third
+```
 
 ##  <a name="trim"></a>  CStringT::Trim
 
@@ -1657,9 +1657,10 @@ CStringT& Trim();
 
 この例の出力は次のとおりです。
 
-`Before: "******Soccer is best, but liquor is quicker!!!!!"`
-
-`After : "Soccer is best, but liquor is quicker"`
+```Output
+Before: "******Soccer is best, but liquor is quicker!!!!!"
+After : "Soccer is best, but liquor is quicker"
+```
 
 ##  <a name="trimleft"></a>  CStringT::TrimLeft
 

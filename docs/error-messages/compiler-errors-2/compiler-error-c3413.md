@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3413 |Microsoft ドキュメント
+title: コンパイラ エラー C3413 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afe7d444a755d053dcd73d02cb964510c7ce3324
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3ee8a8fd96b6fe5ed675f5e82a196d0ddb2cb3f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252974"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053285"
 ---
 # <a name="compiler-error-c3413"></a>コンパイラ エラー C3413
-'name': 明示的インスタンス化が無効です  
-  
- 不正な形式の明示的なインスタンス化が検出されました。  
-  
- 次の例では C3413 が生成されます。  
-  
-```  
-// C3413.cpp  
-template  
-class MyClass {};   // C3413  
-```  
-  
- 考えられる解決方法:  
-  
-```  
-// C3413b.cpp  
-// compile with: /c  
-template <class T>  
-class MyClass {};  
-  
-template <>  
-class MyClass<int> {};  
+
+'name': 明示的インスタンス化が無効です
+
+不正な形式の明示的なインスタンス化が検出されました。
+
+次の例では C3413 が生成されます。
+
+```
+// C3413.cpp
+template
+class MyClass {};   // C3413
+```
+
+考えられる解決方法:
+
+```
+// C3413b.cpp
+// compile with: /c
+template <class T>
+class MyClass {};
+
+template <>
+class MyClass<int> {};
 ```

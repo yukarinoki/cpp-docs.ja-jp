@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2138 |Microsoft ドキュメント
+title: コンパイラ エラー C2138 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e066c3de938b85431ea837c91b0ae51ad0cd4e5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ba28cd6d2772a0d7027f591b35c07c42941d440
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166534"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107470"
 ---
 # <a name="compiler-error-c2138"></a>コンパイラ エラー C2138
-任意のメンバーを持たない列挙型を定義するには、無効です。  
-  
- 列挙体は、少なくとも 1 つのメンバーが必要と/Za (Microsoft 拡張機能を無効にする) が選択されています。
+
+すべてのメンバーを持たない列挙型を定義するには、無効です。
+
+列挙体は、少なくとも 1 つのメンバーが必要と/Za (Microsoft の拡張機能を無効にする) が選択されています。

@@ -48,14 +48,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 73e0b7646da57af679e7b3cbec3b0bb72d4ea8b8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0fd40d4cac87302a6a636693e0da4480720a2cf3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572405"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098122"
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl クラス
+
 実装を提供、 [IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\))インターフェイス。  
   
 ## <a name="syntax"></a>構文
@@ -68,17 +69,19 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- *T*  
- 行セットまたはコマンドのオブジェクト クラス。  
+
+*T*<br/>
+行セットまたはコマンドのオブジェクト クラス。  
   
- *BindType*  
- バインド情報のストレージ ユニット。 既定値は、`ATLBINDINGS`構造 (atldb.h を参照してください)。  
+*BindType*<br/>
+バインド情報のストレージ ユニット。 既定値は、`ATLBINDINGS`構造 (atldb.h を参照してください)。  
   
- *BindingVector*  
- 列情報のストレージ ユニット。 既定値は[CAtlMap](../../atl/reference/catlmap-class.md) 、重要な要素は HACCESSOR 値を値要素へのポインター、`BindType`構造体。  
+*BindingVector*<br/>
+列情報のストレージ ユニット。 既定値は[CAtlMap](../../atl/reference/catlmap-class.md) 、重要な要素は HACCESSOR 値を値要素へのポインター、`BindType`構造体。  
   
 ## <a name="requirements"></a>要件  
- **ヘッダー:** atldb.h  
+
+**ヘッダー:** atldb.h  
 
 ## <a name="members"></a>メンバー  
   
@@ -98,9 +101,11 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 |[ReleaseAccessor](#releaseaccessor)|アクセサーを解放します。|  
   
 ## <a name="remarks"></a>Remarks  
- これは、機能は、行セットおよびコマンドに必須です。 OLE DB、HACCESSOR を実装するプロバイダーを必要とタグの配列をある[DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))構造体。 によって提供される HACCESSORs`IAccessorImpl`のアドレス、`BindType`構造体。 既定では、`BindType`として定義されている場合は、`ATLBINDINGS`で`IAccessorImpl`のテンプレートの定義。 `BindType` 使用されるメカニズムを提供します。`IAccessorImpl`内の要素の数を追跡するためにその`DBBINDING`参照カウントおよびアクセサーのフラグと配列。  
+
+これは、機能は、行セットおよびコマンドに必須です。 OLE DB、HACCESSOR を実装するプロバイダーを必要とタグの配列をある[DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))構造体。 によって提供される HACCESSORs`IAccessorImpl`のアドレス、`BindType`構造体。 既定では、`BindType`として定義されている場合は、`ATLBINDINGS`で`IAccessorImpl`のテンプレートの定義。 `BindType` 使用されるメカニズムを提供します。`IAccessorImpl`内の要素の数を追跡するためにその`DBBINDING`参照カウントおよびアクセサーのフラグと配列。  
 
 ## <a name="iaccessorimpl"></a> Iaccessorimpl::iaccessorimpl
+
 コンストラクターです。  
   
 ### <a name="syntax"></a>構文  
@@ -110,6 +115,7 @@ IAccessorImpl();
 ```  
 
 ## <a name="addrefaccessor"></a> Iaccessorimpl::addrefaccessor
+
 既存のアクセサーには、参照カウントを追加します。  
   
 ### <a name="syntax"></a>構文  
@@ -120,9 +126,11 @@ STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。
+
+参照してください[IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ## <a name="createaccessor"></a> Iaccessorimpl::createaccessor
+
 バインドのセットからアクセサーを作成します。  
   
 ### <a name="syntax"></a>構文  
@@ -137,9 +145,11 @@ STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[iaccessor::createaccessor](/previous-versions/windows/desktop/ms720969\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+
+参照してください[iaccessor::createaccessor](/previous-versions/windows/desktop/ms720969\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
 
 ## <a name="getbindings"></a> Iaccessorimpl::getbindings
+
 アクセサーのコンシューマーからの列の基本的なバインディングを返します。  
   
 ### <a name="syntax"></a>構文  
@@ -152,9 +162,11 @@ STDMETHOD(GetBindings)(HACCESSOR hAccessor,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。 
+
+参照してください[IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。 
 
 ## <a name="releaseaccessor"></a> Iaccessorimpl::releaseaccessor
+
 アクセサーを解放します。  
   
 ### <a name="syntax"></a>構文  
@@ -165,8 +177,10 @@ STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[iaccessor::releaseaccessor](/previous-versions/windows/desktop/ms719717\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。
+
+参照してください[iaccessor::releaseaccessor](/previous-versions/windows/desktop/ms719717\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

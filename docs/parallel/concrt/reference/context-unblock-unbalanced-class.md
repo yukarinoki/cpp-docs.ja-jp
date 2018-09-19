@@ -1,5 +1,5 @@
 ---
-title: context_unblock_unbalanced クラス |Microsoft ドキュメント
+title: context_unblock_unbalanced クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c964701f9a26c655bbb9529a112f036c7c9f0bf5
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 54911e3e9c696cd2a390dc2f5b42e3917b08014f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685750"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037477"
 ---
 # <a name="contextunblockunbalanced-class"></a>context_unblock_unbalanced クラス
 このクラスは、`Block` オブジェクトの `Unblock` メソッドと `Context` メソッドの呼び出しが正しく対になっていない場合にスローされる例外を表します。  
@@ -42,8 +42,8 @@ class context_unblock_unbalanced : public std::exception;
 |----------|-----------------|  
 |[context_unblock_unbalanced](#ctor)|オーバーロードされます。 `context_unblock_unbalanced` オブジェクトを構築します。|  
   
-## <a name="remarks"></a>コメント  
- 呼び出し、`Block`と`Unblock`のメソッド、`Context`オブジェクトのペアを正しく常にする必要があります。 同時実行ランタイムでは、任意の順序で発生する操作を許可します。 呼び出しなど、`Block`への呼び出しを続けて`Unblock`、またはその逆です。 呼び出す 2 つのインスタンスの場合は、この例外がスローされます、`Unblock`メソッドで発生した行で、`Context`ブロックされていないオブジェクトです。  
+## <a name="remarks"></a>Remarks  
+ 呼び出し、`Block`と`Unblock`のメソッドを`Context`オブジェクトのペアを正しく常にする必要があります。 同時実行ランタイムは、操作を任意の順序で実行できます。 呼び出しなど`Block`への呼び出しを続けて`Unblock`、またはその逆です。 たとえば、2 つの呼び出しの場合、この例外がスローされます、`Unblock`メソッドで発生した行で、`Context`ブロックされていないオブジェクト。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `exception`  
@@ -67,8 +67,8 @@ context_unblock_unbalanced() throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Message`  
- エラーの説明メッセージ。  
+*メッセージ (_m)*<br/>
+エラーの説明メッセージ。  
   
 ## <a name="see-also"></a>関連項目  
  [concurrency 名前空間](concurrency-namespace.md)

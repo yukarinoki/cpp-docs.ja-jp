@@ -1,5 +1,5 @@
 ---
-title: lock::acquire |Microsoft ドキュメント
+title: lock::acquire |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 54b74721e39489ce8fab5eb93f626f78493479b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8c0b89b635ec0f0487027d5a90e43c57c39cde34
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33138970"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042014"
 ---
 # <a name="lockacquire"></a>lock::acquire
-必要に応じて、指定された時間、またはすべてではなく、forever、ロックの取得を待機しているオブジェクトのロックを取得します。  
+必要に応じて一定の時間、またはすべてではなく、永久にロックの取得を待機しているオブジェクトのロックを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,19 +44,19 @@ void acquire(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `_timeout`  
- タイムアウト値 (ミリ秒単位) として、<xref:System.TimeSpan>です。  
+*タイムアウト _t*<br/>
+タイムアウト値 (ミリ秒単位) またはとして、<xref:System.TimeSpan>します。  
   
 ## <a name="exceptions"></a>例外  
- スロー<xref:System.ApplicationException>ロックの取得がタイムアウトする前に発生しない場合。  
+ スロー<xref:System.ApplicationException>ロック取得がタイムアウトする前に発生しない場合。  
   
-## <a name="remarks"></a>コメント  
- 既定のタイムアウトは、タイムアウト値が指定されていない場合<xref:System.Threading.Timeout.Infinite>です。  
+## <a name="remarks"></a>Remarks  
+ タイムアウト値が指定されていない場合、既定タイムアウトは<xref:System.Threading.Timeout.Infinite>します。  
   
- 場合は、ロックは既に取得されて、この関数は何も行いません。  
+ 場合は、ロックは既に取得されて、何もされません。  
   
 ## <a name="example"></a>例  
- この例では、複数のスレッド間でクラスの 1 つのインスタンスで使用します。  クラスは、その内部データへのアクセスがスレッドごとに一貫していることを確認するのに自体に対するロックを使用します。  メイン アプリケーション スレッドは、ワーカー スレッドがまだ存在していて、そのタスクを完了したすべてのワーカー スレッドまで終了を待機を定期的に確認するクラスの同じインスタンスでロックを使用します。  
+ この例では、複数のスレッド クラスの 1 つのインスタンスを使用します。  クラスでは、その内部データへのアクセスがスレッドごとに一貫性のあることを確認するのに自体に対するロックを使用します。  メイン アプリケーション スレッドは、すべてのワーカー スレッドがまだ存在していて、そのタスクが完了するまでのすべてのワーカー スレッドの終了を待機を定期的に確認するクラスの同じインスタンスでロックを使用します。  
   
 ```  
 // msl_lock_acquire.cpp  

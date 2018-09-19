@@ -1,5 +1,5 @@
 ---
-title: コマンドラインの警告 D9028 |Microsoft ドキュメント
+title: コマンドラインの警告 D9028 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 244f3c4a5cf5b34e75ad9d94a167648abdba38a7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef739da3bc106a654e11c4a13bae7be59d35fc90
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301542"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044133"
 ---
 # <a name="command-line-warning-d9028"></a>コマンド ラインの警告 D9028
-簡易リビルド時、通常のビルドに戻す  
-  
- プロジェクトの .idb ファイルが壊れています。 ファイルを削除して再構築します。  
-  
- リビルドと .idb ファイルの詳細については、次を参照してください。、 [/Gm コンパイラ オプション](../../build/reference/gm-enable-minimal-rebuild.md)です。
+
+簡易リビルド時、通常のビルドに戻しています
+
+プロジェクトの .idb ファイルが壊れています。 ファイルを削除して再構築します。
+
+リビルドと .idb ファイルの詳細については、次を参照してください。、 [/Gm コンパイラ オプション](../../build/reference/gm-enable-minimal-rebuild.md)します。

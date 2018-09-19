@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdad177231c02d2e6f6fad171ae1811ecb9ccc6c
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 65ae8eef828a8abd4bf726c99850089c0f30b71b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407183"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032569"
 ---
 # <a name="process"></a>process
 
@@ -37,5 +37,6 @@ ms.locfileid: "39407183"
 参照してください[アプリケーション ドメインと Visual C](../dotnet/application-domains-and-visual-cpp.md)詳細についてはします。
 
 ## <a name="see-also"></a>関連項目
- [__declspec](../cpp/declspec.md)  
- [キーワード](../cpp/keywords-cpp.md)
+
+[__declspec](../cpp/declspec.md)<br/>
+[キーワード](../cpp/keywords-cpp.md)

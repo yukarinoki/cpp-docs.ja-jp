@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2713 |Microsoft ドキュメント
+title: コンパイラ エラー C2713 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3eab5ee25df49355e82cede0f03d633f13ac20bf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a40c248226cd8f863bb099d16272dfa149f1dc2c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235719"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102715"
 ---
 # <a name="compiler-error-c2713"></a>コンパイラ エラー C2713
-1 つだけの形式の関数ごとに許可する例外処理  
-  
- 構造化例外処理を使用することはできません (`__try`/`__except`) および C++ 例外処理 (`try`/`catch`) を同じ関数。
+
+1 つだけの形式の関数ごとに許可する例外処理
+
+構造化例外処理を使用することはできません (`__try`/`__except`) と C++ 例外処理 (`try`/`catch`) は同じ関数にします。

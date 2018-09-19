@@ -1,5 +1,5 @@
 ---
-title: 致命的なエラー C1902 |Microsoft ドキュメント
+title: 致命的なエラー C1902 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b23507b6531f9ee4e5ce5efd5b60a1977206635c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e5a443b5f80eabe9691cf8ff5220bb9b66da51e4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228200"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052570"
 ---
 # <a name="fatal-error-c1902"></a>致命的なエラー C1902
-プログラム データベース マネージャーが一致しません。インストールを確認してください。  
-  
-プログラム データベース ファイル (.pdb) が新しいバージョンの mspdb を使用して作成された*XXX*.dll、コンパイラは、システムで見つかったものです。 このエラーは、通常 mspdbsrv.exe または mspdbcore.dll が見つからないか、mspdb とは異なるバージョンがあることに示す*XXX*.dll です。 (、 *XXX* 、mspdb 内のプレース ホルダー*XXX*製品リリースされるたびに .dll ファイル名の変更。 例については、Visual Studio 2015 では、ファイル名は mspdb140.dll です。)  
-  
-Mspdbsrv.exe、mspdbcore.dll、および mspdb の一致するバージョンを確認してください*XXX*.dll は、システムにインストールします。 バージョンが一致しませんが、ターゲット プラットフォームのコンパイラおよびリンクのツールが含まれているディレクトリにコピーされていないことを確認します。 たとえば、可能性がありますがファイルをコピーした、設定を指定せず、コマンド プロンプトから、コンパイラやリンク ツールを起動できるように、**パス**環境変数に応じて。
+
+プログラム データベース マネージャーが一致しません。インストールを確認してください。
+
+プログラム データベース ファイル (.pdb) は、新しいバージョンの mspdb を使用して作成された*XXX*.dll、システムで、コンパイラが検出されたものです。 このエラーは mspdbsrv.exe または mspdbcore.dll が見つからないか、mspdb は異なるバージョンがあることには、通常を示します*XXX*.dll です。 (、 *XXX* 、mspdb 内のプレース ホルダー*XXX*製品リリースごとに .dll ファイル名の変更。 たとえば、Visual Studio 2015 で、ファイル名は mspdb140.dll。)
+
+Mspdbsrv.exe、mspdbcore.dll、mspdb の一致するバージョンを確認します。*XXX*.dll は、システムにインストールされます。 バージョンが一致しないが、ターゲット プラットフォームのコンパイラとリンク ツールを含むディレクトリにコピーされていないことを確認します。 たとえば、する可能性がありますファイルをコピー、設定がない場合、コマンド プロンプトから、コンパイラまたはリンク ツールを起動できるように、**パス**環境変数それに応じて。

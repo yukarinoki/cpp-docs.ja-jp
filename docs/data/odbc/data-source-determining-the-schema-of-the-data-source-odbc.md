@@ -1,5 +1,5 @@
 ---
-title: 'データ ソース: データ ソース (ODBC) のスキーマの判定 |Microsoft ドキュメント'
+title: 'データ ソース: データ ソース (ODBC) のスキーマを判定する |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6da4067766eddab40bac75ee73d825dc5886dd0f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d9db21b7531f71ba40be64018b71c4e2e3e555e2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088278"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064972"
 ---
 # <a name="data-source-determining-the-schema-of-the-data-source-odbc"></a>データ ソース : データ ソースのスキーマの判定 (ODBC)
+
 このトピックの内容は、MFC ODBC クラスに該当します。  
   
- データ メンバーを設定する、`CRecordset`オブジェクト、接続先データ ソースのスキーマを特定する必要があります。 データ ソースのスキーマを決定するには、データ ソース内のテーブルの一覧、各テーブルの列、各列のデータ型のリストとインデックスの有無を取得するが含まれます。  
+データ メンバーを設定する、`CRecordset`オブジェクトの場合、接続しているデータ ソースのスキーマを把握する必要があります。 データ ソースのスキーマを決定するには、データ ソース内のテーブルの一覧、各テーブルの列で、各列のデータ型の一覧と、インデックスの有無を取得する必要があります。  
   
 ## <a name="see-also"></a>関連項目  
- [データ ソース (ODBC)](../../data/odbc/data-source-odbc.md)   
- [データ ソース: 接続 (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)
+
+[データ ソース (ODBC)](../../data/odbc/data-source-odbc.md)<br/>
+[データ ソース: 接続 (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)

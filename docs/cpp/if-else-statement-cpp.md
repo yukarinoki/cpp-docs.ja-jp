@@ -19,45 +19,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4aea3a0125e2712203eb668197d42bd850aef5e
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: e55788e280eb60f176a286cf9d1693e93447a077
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131892"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031460"
 ---
 # <a name="if-else-statement-c"></a>if-else ステートメント (C++)
+
 条件分岐を制御します。 内のステートメント、 *if ブロック*が実行された場合にのみ、 *if 式*0 以外の値 (または TRUE) に評価されます。 場合の値*式*0 以外の場合、 *statement1*とブロック内の他のステートメントが実行され、存在する場合、他のブロックはスキップされます。 場合の値*式*0 の場合は、if ブロックはスキップされ、他のブロックが存在する場合が実行されます。 0 以外に評価される式は、
 - true
 - null 以外のポインター
-- 0 以外の算術値、または 
-- 算術演算子、ブール値またはポインターに明確な変換を定義するクラス型を入力します。 (変換については、次を参照してください[標準変換](../cpp/standard-conversions.md)。)。   
-  
-## <a name="syntax"></a>構文  
-  
-```  
-if ( expression )  
+- 0 以外の算術値、または
+- 算術演算子、ブール値またはポインターに明確な変換を定義するクラス型を入力します。 (変換については、次を参照してください[標準変換](../cpp/standard-conversions.md)。)。
+
+## <a name="syntax"></a>構文
+
+```
+if ( expression )
 {
    statement1;
-   ...  
+   ...
 }
 else  // optional
 {
    statement2;
    ...
-} 
+}
 
 // Visual Studio 2017 version 15.3 and later:
-if ( initialization; expression )  
+if ( initialization; expression )
 {
    statement1;
-   ...  
+   ...
 }
 else  // optional
 {
    statement2;
    ...
-}  
+}
 
 // Visual Studio 2017 version 15.3 and later:
 if constexpr (expression)
@@ -69,13 +70,13 @@ else  // optional
 {
    statement2;
    ...
-} 
-```  
+}
+```
 
-## <a name="example"></a>例  
+## <a name="example"></a>例
 
-```cpp  
-// if_else_statement.cpp  
+```cpp
+// if_else_statement.cpp
 #include <iostream>
 
 using namespace std;
@@ -103,10 +104,10 @@ int main()
   // no else statement
     if (x == 10)
     {
-        x = 0; 
+        x = 0;
     }
     
-  
+
     C* c;
   init(c);
     if (c)
@@ -118,13 +119,14 @@ int main()
         cout << "c is null!\n";
     }
 }
-```  
+```
 ## <a name="if_with_init"></a> 場合、初期化子と共にステートメント
 
-**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)):**場合**ステートメントは、式を宣言し、名前付きの変数の初期化を含めることもできます。 変数が if ブロックのスコープ内だけに必要なときは、この形式の if ステートメントを使用します。 
+**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)):**場合**ステートメントは、式を宣言し、名前付きの変数の初期化を含めることもできます。 変数が if ブロックのスコープ内だけに必要なときは、この形式の if ステートメントを使用します。
 
 ```cpp
-## Example  
+## Example
+
 #include <iostream>
 #include <mutex>
 #include <map>
@@ -166,12 +168,13 @@ int main()
 }
 ```
 
- すべてのフォーム、**場合**ステートメントでは、*式*構造体以外の値であるが評価され、すべての副作用を含めています。 制御が渡される、**場合**プログラムに次のステートメントにしない限りのいずれか、*ステートメント*が含まれて、 [break](../cpp/break-statement-cpp.md)、 [を続行](../cpp/continue-statement-cpp.md)、または[goto](../cpp/goto-statement-cpp.md)します。  
-  
- **他**の句、`if...else`ステートメントは、最も近いの関連付け前**場合**ステートメントがない、対応するのと同じスコープ内で**他**ステートメント。   
+すべてのフォーム、**場合**ステートメントでは、*式*構造体以外の値であるが評価され、すべての副作用を含めています。 制御が渡される、**場合**プログラムに次のステートメントにしない限りのいずれか、*ステートメント*が含まれて、 [break](../cpp/break-statement-cpp.md)、 [を続行](../cpp/continue-statement-cpp.md)、または[goto](../cpp/goto-statement-cpp.md)します。
+
+**他**の句、`if...else`ステートメントは、最も近いの関連付け前**場合**ステートメントがない、対応するのと同じスコープ内で**他**ステートメント。
 
 ## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr"> 場合 constexpr ステートメント
-**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 関数テンプレートで使用することができます、**場合 constexpr**ことがなくコンパイル時の分岐決定を行うステートメント複数の関数オーバー ロードを使用することです。 たとえば、1 つの関数を記述する、そのハンドル パラメーターのアンパック (ゼロのパラメーター オーバー ロードは必要ありません)。 
+
+**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 関数テンプレートで使用することができます、**場合 constexpr**ことがなくコンパイル時の分岐決定を行うステートメント複数の関数オーバー ロードを使用することです。 たとえば、1 つの関数を記述する、そのハンドル パラメーターのアンパック (ゼロのパラメーター オーバー ロードは必要ありません)。
 
 ```cpp
 template <class T, class... Rest>
@@ -181,9 +184,9 @@ void f(T&& t, Rest&&... r)
    do_something(t);
 
    // handle r conditionally
-   if constexpr (sizeof...(r)) 
+   if constexpr (sizeof...(r))
    {
-      f(r...); 
+      f(r...);
    }
    else
    {
@@ -192,7 +195,8 @@ void f(T&& t, Rest&&... r)
 }
 ```
 
-## <a name="see-also"></a>関連項目  
- [選択ステートメント](../cpp/selection-statements-cpp.md)   
- [キーワード](../cpp/keywords-cpp.md)   
- [switch ステートメント (C++)](../cpp/switch-statement-cpp.md)
+## <a name="see-also"></a>関連項目
+
+[選択ステートメント](../cpp/selection-statements-cpp.md)<br/>
+[キーワード](../cpp/keywords-cpp.md)<br/>
+[switch ステートメント (C++)](../cpp/switch-statement-cpp.md)

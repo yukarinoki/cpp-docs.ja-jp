@@ -1,5 +1,5 @@
 ---
-title: リンカ ツール エラー LNK1196 |Microsoft ドキュメント
+title: リンカ ツール エラー LNK1196 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68ef867a966df027ff918db209ec6e46a5ca9d9b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 18ebfff81eed0268501c268cc6704914ebf054ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296823"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084745"
 ---
 # <a name="linker-tools-error-lnk1196"></a>リンカ ツール エラー LNK1196
-オブジェクトのインポートが無効か壊れています: バージョンが不明です  
-  
- インポート ライブラリが破損しています。 ライブラリをリビルドします。
+
+オブジェクトのインポートが無効であるか破損していますバージョンが不明です。
+
+インポート ライブラリが壊れています。 ライブラリをリビルドします。

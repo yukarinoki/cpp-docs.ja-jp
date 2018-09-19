@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: daa4a34915547b726494ea9f461b7eba24c617dd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8d60a7f40fc90d5586d7a8a7d41cab81a4d97c85
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755724"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054481"
 ---
 # <a name="cautovectorptr-class"></a>CAutoVectorPtr クラス
 
@@ -40,13 +40,13 @@ ms.locfileid: "43755724"
 ## <a name="syntax"></a>構文
 
 ```
-template<typename T>  
+template<typename T>
 class CAutoVectorPtr
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-`T`  
+*T*<br/>
 ポインター型。
 
 ## <a name="members"></a>メンバー
@@ -82,7 +82,7 @@ class CAutoVectorPtr
 
 ## <a name="remarks"></a>Remarks
 
-このクラスは、作成およびスマート ポインターが含まれ、自動的にスコープ外になったときにリソースを解放して、メモリ リークを防ぐに役立つを管理するためのメソッドを提供します。 `CAutoVectorPtr` ような`CAutoPtr`、されていることが唯一の違い`CAutoVectorPtr`を使用して[新しいベクター&#91; &#93; ](../../standard-library/new-operators.md#op_new_arr)と[ベクター delete&#91; &#93; ](../../standard-library/new-operators.md#op_delete_arr)の割り当てし、メモリを解放するにはC++ ではなく**新しい**と**削除**演算子。 参照してください[CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md)場合のコレクション クラス`CAutoVectorPtr`が必要です。  
+このクラスは、作成およびスマート ポインターが含まれ、自動的にスコープ外になったときにリソースを解放して、メモリ リークを防ぐに役立つを管理するためのメソッドを提供します。 `CAutoVectorPtr` ような`CAutoPtr`、されていることが唯一の違い`CAutoVectorPtr`を使用して[新しいベクター&#91; &#93; ](../../standard-library/new-operators.md#op_new_arr)と[ベクター delete&#91; &#93; ](../../standard-library/new-operators.md#op_delete_arr)の割り当てし、メモリを解放するにはC++ ではなく**新しい**と**削除**演算子。 参照してください[CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md)場合のコレクション クラス`CAutoVectorPtr`が必要です。
 
 参照してください[CAutoPtr](../../atl/reference/cautoptr-class.md)スマート ポインター クラスを使用する例についてはします。
 
@@ -100,7 +100,7 @@ bool Allocate(size_t nElements) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nElements*  
+*nElements*<br/>
 配列の要素数。
 
 ### <a name="return-value"></a>戻り値
@@ -121,7 +121,7 @@ void Attach(T* p) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*p*  
+*p*<br/>
 `CAutoVectorPtr` This ポインターの所有権を持つオブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -142,7 +142,7 @@ CAutoVectorPtr(CAutoVectorPtr<T>& p) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*p*  
+*p*<br/>
 既存のポインター。
 
 ### <a name="remarks"></a>Remarks
@@ -211,7 +211,7 @@ CAutoVectorPtr<T>& operator= (CAutoVectorPtr<T>& p) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*p*  
+*p*<br/>
 ポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -226,7 +226,7 @@ CAutoVectorPtr<T>& operator= (CAutoVectorPtr<T>& p) throw();
 
 キャスト演算子です。
 
-```  
+```
 operator T*() const throw();
 ```
 
@@ -236,5 +236,5 @@ operator T*() const throw();
 
 ## <a name="see-also"></a>関連項目
 
-[CAutoPtr クラス](../../atl/reference/cautoptr-class.md)   
+[CAutoPtr クラス](../../atl/reference/cautoptr-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

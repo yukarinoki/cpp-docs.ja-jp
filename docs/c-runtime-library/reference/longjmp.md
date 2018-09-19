@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 857fae2e9c38dfe2c5cd468c6d1b50c6fdd2f317
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 196f95ae134458f2eaf00ab037c3a560d1317515
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572896"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109697"
 ---
 # <a name="longjmp"></a>longjmp
 
@@ -53,10 +53,10 @@ void longjmp(
 
 ### <a name="parameters"></a>パラメーター
 
-*env*  
+*env*<br/>
 環境が格納されている変数。
 
-*値*  
+*値*<br/>
 `setjmp` 呼び出しに返される値。
 
 ## <a name="remarks"></a>Remarks
@@ -83,7 +83,7 @@ Windows、Microsoft C コードで**longjmp**例外処理コードと同じス�
 
 **Microsoft 固有の仕様はここまで**
 
-> [!NOTE]  
+> [!NOTE]
 > 移植可能な C++ コードではできないと仮定`setjmp`と`longjmp`C++ オブジェクト セマンティクスをサポートします。 具体的を`setjmp` / `longjmp`ペアは、置き換える場合、動作は未定義の呼び出し、`setjmp`と`longjmp`によって**キャッチ**と**スロー**を呼び出します自動オブジェクトの重要なデストラクターには。 C++ プログラムは、C++ 例外処理機構を使用することをお勧めします。
 
 詳細については、「[setjmp/longjmp の使用](../../cpp/using-setjmp-longjmp.md)」を参照してください。
@@ -102,5 +102,5 @@ Windows、Microsoft C コードで**longjmp**例外処理コードと同じス�
 
 ## <a name="see-also"></a>関連項目
 
-[プロセス制御と環境制御](../../c-runtime-library/process-and-environment-control.md)  
-[setjmp](setjmp.md)  
+[プロセス制御と環境制御](../../c-runtime-library/process-and-environment-control.md)<br/>
+[setjmp](setjmp.md)

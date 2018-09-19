@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3040 |Microsoft ドキュメント
+title: コンパイラ エラー C3040 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f895626ac04afc776c279f5e2bf7a857ffbd432
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 419178a7ff71817c418aa791ae1f6cce116cd986
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246235"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057693"
 ---
 # <a name="compiler-error-c3040"></a>コンパイラ エラー C3040
-'var': 'reduction' 句の変数の型は、減少演算子 'operator' と互換性がありません  
-  
- [reduction](../../parallel/openmp/reference/reduction.md) 句内の変数は、減少演算子では使用できません。  
-  
- 次の例では C3040 が生成されます。  
-  
-```  
-// C3040.cpp  
-// compile with: /openmp /c  
-#include "omp.h"  
-double d;  
-  
-int main() {  
-   #pragma omp parallel reduction(&:d)   // C3040  
-      ;  
-  
-   #pragma omp parallel reduction(-:d)  // OK  
-      ;  
-}  
+
+'var': 'reduction' 句の変数の型は、減少演算子 'operator' と互換性がありません
+
+[reduction](../../parallel/openmp/reference/reduction.md) 句内の変数は、減少演算子では使用できません。
+
+次の例では C3040 が生成されます。
+
+```
+// C3040.cpp
+// compile with: /openmp /c
+#include "omp.h"
+double d;
+
+int main() {
+   #pragma omp parallel reduction(&:d)   // C3040
+      ;
+
+   #pragma omp parallel reduction(-:d)  // OK
+      ;
+}
 ```

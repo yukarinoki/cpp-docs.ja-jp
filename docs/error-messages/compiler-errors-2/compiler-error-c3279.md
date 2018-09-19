@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3279 |Microsoft ドキュメント
+title: コンパイラ エラー C3279 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a86f3dd637f84901559c4be8443a81425347237
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 89c537da9bcf91e7774353cc1516a4c44e28649c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256823"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056769"
 ---
 # <a name="compiler-error-c3279"></a>コンパイラ エラー C3279
-cli 名前空間で宣言されたクラス テンプレートの明示的なインスタンス生成と同様に、部分的または明示的な特殊化は許可されていません  
-  
- `cli` 名前空間は、Microsoft によって定義され、擬似テンプレートが含まれています。 Visual C++ コンパイラでは、この名前空間におけるユーザー定義、部分的、および明示的な特殊化は許可されず、クラス テンプレートの明示的なインスタンス化も許可されません。  
-  
- 次の例では C3279 が生成されます。  
-  
-```  
-// C3279.cpp  
-// compile with: /clr  
-namespace cli {  
-   template <> ref class array<int> {};   // C3279  
-   template <typename T> ref class array<T, 2> {};   // C3279  
-}  
+
+cli 名前空間で宣言されたクラス テンプレートの明示的なインスタンス生成と同様に、部分的または明示的な特殊化は許可されていません
+
+`cli` 名前空間は、Microsoft によって定義され、擬似テンプレートが含まれています。 Visual C++ コンパイラでは、この名前空間におけるユーザー定義、部分的、および明示的な特殊化は許可されず、クラス テンプレートの明示的なインスタンス化も許可されません。
+
+次の例では C3279 が生成されます。
+
+```
+// C3279.cpp
+// compile with: /clr
+namespace cli {
+   template <> ref class array<int> {};   // C3279
+   template <typename T> ref class array<T, 2> {};   // C3279
+}
 ```

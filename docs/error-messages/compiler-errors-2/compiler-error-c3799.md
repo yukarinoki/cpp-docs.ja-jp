@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3799 |Microsoft ドキュメント
+title: コンパイラ エラー C3799 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5e13e1e92b3f821ffbed62b06bd601baac7aad9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1022a2a1f5c5bb6279fc4af0acedbf28d7723aa6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267304"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105337"
 ---
 # <a name="compiler-error-c3799"></a>コンパイラ エラー C3799
-インデックス付きプロパティは空のパラメーター リストを持つことはできません。  
-  
-インデックス付きプロパティの宣言が正しくありません。 詳細については、次を参照してください。[する方法: プロパティを使用して C + + CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md)です。  
-  
-## <a name="example"></a>例  
-次の例では、C3799 を生成し、その修正方法を示しています。  
-  
-```cpp  
-// C3799.cpp  
-// compile with: /clr /c  
-ref struct C {  
-   property int default[] {   // C3799  
-   // try the following line instead  
-   // property int default[int] {  
-      int get(int index) { return 0; }  
-      void set(int index, int value) {}  
-   }  
-};  
+
+インデックス付きプロパティが空のパラメーター リストを含めることはできません。
+
+インデックス付きプロパティの宣言が正しくありません。 詳細については、次を参照してください。[方法: プロパティを使用して c++/cli CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md)します。
+
+## <a name="example"></a>例
+
+次の例では、C3799 を生成し、その修正方法を示しています。
+
+```cpp
+// C3799.cpp
+// compile with: /clr /c
+ref struct C {
+   property int default[] {   // C3799
+   // try the following line instead
+   // property int default[int] {
+      int get(int index) { return 0; }
+      void set(int index, int value) {}
+   }
+};
 ```

@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4651 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4651 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0015102a44b71f342b125532d20849590157ee0c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b516ef86372901d00dd20d94ed10d5e361bbab8d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283368"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099471"
 ---
 # <a name="compiler-warning-level-1-c4651"></a>コンパイラの警告 (レベル 1) C4651
-'定義' プリコンパイル済みヘッダーに定義されていますが、現在のコンパイルではありません。  
-  
- このコンパイルされていない場合、プリコンパイル済みヘッダーが生成されたが、定義が指定されました。  
-  
- プリコンパイル済みのヘッダー内ではなく、コードの残りの部分定義が有効になります。  
-  
- プリコンパイル済みヘッダーがで指定してビルドされていた場合、コンパイラで/Yu コンパイルが指定していない場合にこの警告が生成されます。  /Yu コマンドラインに指定してを追加するには、この警告が解決されます。
+
+'定義' プリコンパイル済みヘッダーに定義されていますが、現在のコンパイルではありません。
+
+プリコンパイル済みヘッダーが生成されたときに、このコンパイルではなく、定義が指定されました。
+
+プリコンパイル済みのヘッダー内で、コードの残りの部分ではなく、定義が有効になります。
+
+プリコンパイル済みヘッダーがで指定してビルドされている場合、コンパイラで/Yu コンパイルは指定していない場合にこの警告が生成されます。  /Yu コマンドラインに指定してを追加するには、この警告が解決されます。

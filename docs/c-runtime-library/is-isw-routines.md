@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98f7edcf115a6fadc741c7f1bcde8f240c93abcc
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: db047c2b16eb67f086bc26976783e829189d4266
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895124"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095106"
 ---
 # <a name="is-isw-routines"></a>is、isw 系ルーチン
 
@@ -61,75 +61,75 @@ ms.locfileid: "43895124"
 
 "C" ロケールでは、**is** ルーチンのテスト条件は次のようになります。
 
-`isalnum`  
+`isalnum`<br/>
 英数字 (A - Z、a - z、または 0 - 9)。
 
-`isalpha`  
+`isalpha`<br/>
 英字 (A - Z または a - z)。
 
-`__isascii`  
+`__isascii`<br/>
 ASCII 文字 (0x00 - 0x7F)。
 
-`isblank`  
+`isblank`<br/>
 水平タブまたは空白文字 (0x09 または 0x20)。
 
-`iscntrl`  
+`iscntrl`<br/>
 制御文字 (0x00 - 0x1F または 0x7F)。
 
-`__iscsym`  
+`__iscsym`<br/>
 文字、アンダースコア、または数字。
 
-`__iscsymf`  
+`__iscsymf`<br/>
 文字またはアンダースコア。
 
-`isdigit`  
+`isdigit`<br/>
 10 進数 (0 - 9)。
 
-`isgraph`  
+`isgraph`<br/>
 空白 ( ) を除く印刷できる文字。
 
-`islower`  
+`islower`<br/>
 小文字 (a - z)。
 
-`isprint`  
+`isprint`<br/>
 空白を含む印刷できる文字 (0x20 - 0x7E)。
 
-`ispunct`  
+`ispunct`<br/>
 区切り記号。
 
-`isspace`  
+`isspace`<br/>
 空白文字 (0x09 - 0x0D または 0x20)。
 
-`isupper`  
+`isupper`<br/>
 大文字 (A - Z)。
 
-`isxdigit`  
+`isxdigit`<br/>
 16 進数字 (A - F、a - f、または 0 - 9)。
 
 **isw** ルーチンでは、指定条件に基づくテストの結果は、ロケールに依存しません。 **isw** 関数のテスト条件は次のとおりです。
 
-`iswalnum`  
+`iswalnum`<br/>
 `iswalpha` または `iswdigit`。
 
-`iswalpha`  
+`iswalpha`<br/>
 `iswcntrl`、`iswdigit`、`iswpunct`、または `iswspace` がいずれも 0 になる実装定義セットに含まれる任意のワイド文字。 `iswalpha` は、`iswupper` または `iswlower` が 0 以外の値になるワイド文字に対してのみ、0 以外の値を返します。
 
-`iswascii`  
+`iswascii`<br/>
 ASCII 文字のワイド文字表現 (0x0000 - 0x007F)。
 
-`iswblank`  
+`iswblank`<br/>
 標準の空白文字に対応するワイド文字、または `iswalnum` が false になるワイド文字の実装定義セットに含まれるワイド文字。 標準の空白文字は空白 (L' ') と水平タブ (L'\t') です。
 
-`iswcntrl`  
+`iswcntrl`<br/>
 制御ワイド文字。
 
-`__iswcsym`  
+`__iswcsym`<br/>
 `isalnum` が true である任意のワイド文字または '_' 文字。
 
-`__iswcsymf`  
+`__iswcsymf`<br/>
 `iswalpha` が true である任意のワイド文字または '_' 文字。
 
-`iswctype`  
+`iswctype`<br/>
 文字には、`desc` 引数で指定されたプロパティがあります。 `desc` の `iswctype` 引数の有効な値には、次の表に示すようにそれぞれ同等のワイド文字分類ルーチンがあります。
 
 ### <a name="equivalence-of-iswctypec-desc-to-other-isw-testing-routines"></a>iswctype(c, desc) と同等のその他の isw テスト ルーチン
@@ -150,28 +150,28 @@ ASCII 文字のワイド文字表現 (0x0000 - 0x007F)。
 |**_UPPER**|**iswupper(** `c` **)**|
 |**_HEX**|**iswxdigit(** `c` **)**|
 
-`iswdigit`  
+`iswdigit`<br/>
 10 進数字に対応するワイド文字。
 
-`iswgraph`  
+`iswgraph`<br/>
 空白ワイド文字 (L' ') を除く印刷できるワイド文字。
 
-`iswlower`  
+`iswlower`<br/>
 小文字、または `iswcntrl`、`iswdigit`、`iswpunct`、`iswspace` がいずれも 0 になるワイド文字の実装定義セットに含まれる文字。 `iswlower` は、小文字に対応するワイド文字に対してのみ、0 以外の値を返します。
 
-`iswprint`  
+`iswprint`<br/>
 空白ワイド文字 (L' ') を含む印刷できるワイド文字。
 
-`iswpunct`  
+`iswpunct`<br/>
 空白ワイド文字 (L' ') および `iswalnum` が 0 以外になるワイド文字を除く、印刷できるワイド文字。
 
-`iswspace`  
+`iswspace`<br/>
 標準の空白文字に対応するワイド文字、または `iswalnum` が false になるワイド文字の実装定義セットに含まれるワイド文字。 標準の空白文字は、空白 (L' ')、フォーム フィード (L'\f')、改行 (L'\n')、復帰 (L'\r')、水平タブ (L'\t')、および垂直タブ (L'\v') です。
 
-`iswupper`  
+`iswupper`<br/>
 大文字のワイド文字、または `iswcntrl`、`iswdigit`、`iswpunct`、または `iswspace` がいずれも 0 になるワイド文字の実装定義セットに含まれるワイド文字。 `iswupper` は、大文字に対応するワイド文字に対してのみ、0 以外の値を返します。
 
-`iswxdigit`  
+`iswxdigit`<br/>
 16 進数字に対応するワイド文字。
 
 ## <a name="example"></a>例
@@ -181,16 +181,16 @@ ASCII 文字のワイド文字表現 (0x0000 - 0x007F)。
 /* This program tests all characters between 0x0
 * and 0x7F, then displays each character with abbreviations
 * for the character-type codes that apply.
-*/  
+*/
 
 #include <stdio.h>
 #include <ctype.h>
 
-int main( void )  
-{  
+int main( void )
+{
    int ch;
-   for( ch = 0; ch <= 0x7F; ch++ )  
-   {  
+   for( ch = 0; ch <= 0x7F; ch++ )
+   {
       printf( "%.2x  ", ch );
       printf( " %c", isprint( ch )  ? ch   : ' ' );
       printf( "%4s", isalnum( ch )  ? "AN" : "" );
@@ -208,9 +208,9 @@ int main( void )
       printf( "%3s", isupper( ch )  ? "U"  : "" );
       printf( "%3s", isxdigit( ch ) ? "X"  : "" );
       printf( ".\n" );
-   }  
-}  
-```  
+   }
+}
+```
 
 ## <a name="output"></a>出力
 
@@ -347,8 +347,8 @@ int main( void )
 
 ## <a name="see-also"></a>参照
 
-[文字分類](../c-runtime-library/character-classification.md)   
-[ロケール](../c-runtime-library/locale.md)   
-[setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
-[マルチバイト文字のシーケンスの解釈](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
+[文字分類](../c-runtime-library/character-classification.md)<br/>
+[ロケール](../c-runtime-library/locale.md)<br/>
+[setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
+[マルチバイト文字のシーケンスの解釈](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [to 系関数](../c-runtime-library/to-functions.md)

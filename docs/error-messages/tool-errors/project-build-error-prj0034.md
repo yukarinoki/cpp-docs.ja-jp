@@ -1,5 +1,5 @@
 ---
-title: プロジェクト ビルド エラー PRJ0034 |Microsoft ドキュメント
+title: プロジェクト ビルド エラー PRJ0034 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a65ca2c53ba2801f861471c66f7e1f2ec8766345
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b271875173bf0e55d94989d60a1c8f7aaf408b2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319079"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065583"
 ---
 # <a name="project-build-error-prj0034"></a>プロジェクト ビルド エラー PRJ0034
-プロジェクト レベルのカスタムの ' Additional Dependencies プロパティは、手順が含まれている 'macro' 評価を出す 'macro_expansion' を作成します。  
-  
- プロジェクトでカスタム ビルド ステップには、おそらくマクロ評価の問題により、追加の依存関係のエラーが含まれています。 このエラー意味する場合も、パスの形式が文字またはファイル パスに無効な文字の組み合わせを含むです。  
-  
- このエラーを解決するには、マクロを修正するか、パスの指定を修正します。 パスには、プロジェクト ディレクトリからの絶対パスを指定します。
+
+プロジェクト レベルのカスタムの追加の依存関係 ' プロパティはビルドに含まれる手順 'macro' と 'macro_expansion' を評価します。
+
+プロジェクトでカスタム ビルド ステップには、おそらくマクロ評価の問題により、追加の依存関係のエラーが含まれています。 このエラーにあるパス形式が正しくない、文字またはファイル パスでは無効な文字の組み合わせを含むもします。
+
+このエラーを解決するのには、マクロを修正するか、パスの指定を修正します。 パスには、プロジェクト ディレクトリからの絶対パスを指定します。

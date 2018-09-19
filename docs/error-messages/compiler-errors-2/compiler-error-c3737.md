@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3737 |Microsoft ドキュメント
+title: コンパイラ エラー C3737 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29d31597e9581d03f97c2b07856ce81c5de50bd3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 99ab9394f2c475079ee226dd294cca346ec68e32
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33264611"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039258"
 ---
 # <a name="compiler-error-c3737"></a>コンパイラ エラー C3737
-'delegate': デリゲートには、明示的な呼び出し規約はありません。  
-  
- 指定することはできません、[呼び出し規約](../../cpp/calling-conventions.md)の`delegate`です。  
-  
-## <a name="example"></a>例  
-次の例では、C3737 が生成されます。  
-  
-```  
-// C3737a.cpp  
-// compile with: /clr  
-delegate void __stdcall MyFunc();   // C3737  
-// Try the following line instead.  
-// delegate void MyFunc();  
-  
-int main() {  
-}  
-```  
+
+'delegate': デリゲートは、明示的な呼び出し規則がありません
+
+指定することはできません、[呼び出し規約](../../cpp/calling-conventions.md)の`delegate`します。
+
+## <a name="example"></a>例
+
+次の例では、C3737 が生成されます。
+
+```
+// C3737a.cpp
+// compile with: /clr
+delegate void __stdcall MyFunc();   // C3737
+// Try the following line instead.
+// delegate void MyFunc();
+
+int main() {
+}
+```

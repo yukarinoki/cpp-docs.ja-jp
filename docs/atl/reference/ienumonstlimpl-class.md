@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f2e448d5fa73c64e9abb66ef70e513bc9fa0728
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 0abc7e3b87ef23e6350b54c3f64b50fbcfdd5b07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759247"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031146"
 ---
 # <a name="ienumonstlimpl-class"></a>IEnumOnSTLImpl クラス
 
@@ -40,25 +40,25 @@ ms.locfileid: "43759247"
 
 ```
 template <class Base,
-    const IID* piid, class T, class Copy, class CollType>  
+    const IID* piid, class T, class Copy, class CollType>
 class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*ベース*  
+*ベース*<br/>
 COM の列挙子。 参照してください[IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring)例についてはします。
 
-*piid*  
+*piid*<br/>
 列挙子インターフェイスのインターフェイス ID へのポインター。
 
-*T*  
+*T*<br/>
 列挙子インターフェイスによって公開される項目の種類。
 
-*コピー*  
+*コピー*<br/>
 A[コピー ポリシー クラス](../../atl/atl-copy-policy-classes.md)します。
 
-*CollType*  
+*CollType*<br/>
 C++ 標準ライブラリ コンテナー クラス。
 
 ## <a name="members"></a>メンバー
@@ -114,10 +114,10 @@ HRESULT Init(
 
 ### <a name="parameters"></a>パラメーター
 
-*pUnkForRelease*  
+*pUnkForRelease*<br/>
 [in]`IUnknown`保持する必要がアライブ列挙子の有効期間中にオブジェクトのポインター。 このようなオブジェクトが存在しない場合は、NULL を渡します。
 
-*collection*  
+*collection*<br/>
 列挙するアイテムを保持する C++ 標準ライブラリ コンテナーへの参照。
 
 ### <a name="return-value"></a>戻り値
@@ -140,7 +140,7 @@ STDMETHOD(Clone)(Base** ppEnum);
 
 ### <a name="parameters"></a>パラメーター
 
-*ppEnum*  
+*ppEnum*<br/>
 [out]新しく作成されたオブジェクトの列挙子インターフェイスは、現在の列挙子から複製します。
 
 ### <a name="return-value"></a>戻り値
@@ -192,13 +192,13 @@ STDMETHOD(Next)(
 
 ### <a name="parameters"></a>パラメーター
 
-*celt*  
+*celt*<br/>
 [in]要求された要素の数。
 
-*rgelt*  
+*rgelt*<br/>
 [out]要素を使用して格納する配列。
 
-*内*  
+*内*<br/>
 [out]実際に返される要素の数*rgelt*します。 これより小さい*celt*場合よりも少ない*celt*要素がリストに残ります。
 
 ### <a name="return-value"></a>戻り値
@@ -227,7 +227,7 @@ STDMETHOD(Skip)(ULONG celt);
 
 ### <a name="parameters"></a>パラメーター
 
-*celt*  
+*celt*<br/>
 [in]スキップする要素の数。
 
 ### <a name="return-value"></a>戻り値

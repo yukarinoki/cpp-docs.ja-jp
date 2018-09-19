@@ -1,5 +1,5 @@
 ---
-title: リンカ ツール エラー LNK2011 |Microsoft ドキュメント
+title: リンカ ツール エラー LNK2011 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f60dce4cb260c670f5ee82aa88b9f106f3f14e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 18562a21886508ff0766641f95ac2e15b76fd424
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300755"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095392"
 ---
 # <a name="linker-tools-error-lnk2011"></a>リンカ ツール エラー LNK2011
-プリコンパイル済みのオブジェクトがリンクされていません。イメージは動作しない可能性があります。  
-  
- プリコンパイル済みヘッダーを使用する場合は、すべてのプリコンパイル済みヘッダーで作成されたオブジェクト ファイルはでリンクされているリンクが必要です。 使用する他のソース ファイルで使用するためのプリコンパイル済みヘッダーを生成するソース ファイルがあれば、オブジェクト ファイルも含める必要があります。  
-  
- 使用するためのプリコンパイル済みヘッダー ファイルを作成するその他のソース STUB.cpp という名前のファイルをコンパイルする場合 stub.obj も一緒にリンクする必要がありますなど、このエラーが表示されます。 次のコマンドラインはいずれかの線を使用して、COMMON.pch PROG1.cpp と PROG2.cpp 2 および 3 の行で使用されている、プリコンパイル済みヘッダーを作成します。 STUB.cpp だけを含んだファイル`#include`行 (同じ`#include`PROG1.cpp、PROG2.cpp 行) と、プリコンパイル済みヘッダーの生成にのみ使用されます。 最後の行で、LNK2011 を回避する stub.obj も一緒にリンクされます必要があります。  
-  
-```  
-cl /c /Yccommon.h stub.cpp  
-cl /c /Yucommon.h prog1.cpp  
-cl /c /Yucommon.h prog2.cpp  
-link /out:prog.exe stub.obj prog1.obj prog2.obj  
+
+プリコンパイル済みのオブジェクトがリンクされていません。イメージは動作しない可能性があります。
+
+プリコンパイル済みヘッダーを使用する場合は、すべてのオブジェクト ファイルがプリコンパイル済みヘッダーを作成する必要がありますでリンクするようにリンクが必要です。 他のソース ファイルを使用するためのプリコンパイル済みヘッダーを生成するために使用するソース ファイルがあれば、オブジェクト ファイルも含める必要があります。
+
+たとえば、他のソース ファイルを使用するためのプリコンパイル済みヘッダーを作成する STUB.cpp という名前のファイルをコンパイルする場合 stub.obj も一緒にリンクする必要があります。 またはこのエラーが表示されます。 次のコマンド行では、1 つの行は、COMMON.pch PROG1.cpp と PROG2.cpp 2 と 3 行で使用される、プリコンパイル済みヘッダーを作成に使用されます。 STUB.cpp のみを含むファイル`#include`行 (同じ`#include`PROG1.cpp PROG2.cpp と見なされた行) と、プリコンパイル済みヘッダーの生成にのみ使用されます。 最後の行で LNK2011 を回避するために stub.obj も一緒にリンクする必要があります。
+
+```
+cl /c /Yccommon.h stub.cpp
+cl /c /Yucommon.h prog1.cpp
+cl /c /Yucommon.h prog2.cpp
+link /out:prog.exe stub.obj prog1.obj prog2.obj
 ```

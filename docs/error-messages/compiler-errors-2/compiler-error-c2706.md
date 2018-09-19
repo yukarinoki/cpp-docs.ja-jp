@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2706 |Microsoft ドキュメント
+title: コンパイラ エラー C2706 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92f64ddab93fb6815e3ff7a98ac39a842042bfeb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 560edb9953d4f7c751f4ab4102fd544fb09bb86d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232647"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066012"
 ---
 # <a name="compiler-error-c2706"></a>コンパイラ エラー C2706
-適合させることがなく _ _except が正しくありません\__try (ない '}' で\__try ブロックしますか?)  
-  
- コンパイラの右中かっこが見つかりませんでした、`__try`ブロックします。  
-  
- 次の例では、C2706 が生成されます。  
-  
-```  
-// C2706.cpp  
-int main() {  
-   __try {  
-      void f();  
-   // C2706  } missing here  
-   __except(GetExceptionCode() == 0x0) {  
-   }  
-}  
+
+一致することがなく _ _except が正しくありません\__try (不足している '}' で\__try ブロックでしょうか)。
+
+コンパイラでは、右中かっこは検出されませんでした、`__try`ブロックします。
+
+次の例では、C2706 が生成されます。
+
+```
+// C2706.cpp
+int main() {
+   __try {
+      void f();
+   // C2706  } missing here
+   __except(GetExceptionCode() == 0x0) {
+   }
+}
 ```

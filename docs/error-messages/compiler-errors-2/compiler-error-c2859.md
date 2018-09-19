@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2859 |Microsoft ドキュメント
+title: コンパイラ エラー C2859 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9fa80b858494ab2a89e82a40f2c295d05cb1294
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9d143624ae7312cfefc724471681d697394a1566
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245197"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037043"
 ---
 # <a name="compiler-error-c2859"></a>コンパイラ エラー C2859
-ファイル名は、このプリコンパイル済みヘッダーの作成時に使用された型ファイルではありません、プリコンパイル済みヘッダーを再作成します。  
-  
- プリコンパイル済みヘッダー ファイルとプロジェクト データベースを一貫性のある情報を確認してくださいを一緒に作成する必要があります。 プリコンパイル済みヘッダーを再作成するプロジェクトをリビルドします。  
-  
- プリコンパイル済みヘッダーの詳細については、次を参照してください。 [/Y (プリコンパイル済みヘッダー)](../../build/reference/y-precompiled-headers.md)です。
+
+ファイル名はこのプリコンパイル済みヘッダーが作成されたときに使用された型ファイルではありません、プリコンパイル済みヘッダーを再作成します。
+
+プロジェクト データベースとプリコンパイル済みヘッダー ファイルは、一貫性のある情報を確実にまとめて作成する必要があります。 プリコンパイル済みヘッダーを再作成するプロジェクトを再構築します。
+
+プリコンパイル済みヘッダーについては、次を参照してください。 [/Y (プリコンパイル済みヘッダー)](../../build/reference/y-precompiled-headers.md)します。

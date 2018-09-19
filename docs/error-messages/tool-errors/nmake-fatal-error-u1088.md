@@ -1,5 +1,5 @@
 ---
-title: NMAKE の致命的なエラー U1088 |Microsoft ドキュメント
+title: NMAKE の致命的なエラー U1088 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3934e39cd87bd41432e90af1b7053815e5e44ad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 72f09dec61cec9870627682e9413d98e0d623188
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318013"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109757"
 ---
 # <a name="nmake-fatal-error-u1088"></a>NMAKE の致命的なエラー U1088
-無効な区切り記号 ':: ' の推論規則  
-  
- 推論規則の後にする必要があります、1 つのコロン (**:**)。
+
+無効な区切り記号 ':: ' の推論規則
+
+推論規則の後にする必要があります、1 つのコロン (**:**)。

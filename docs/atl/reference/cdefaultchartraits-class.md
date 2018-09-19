@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 080a7b9f5da71535f8b141555ec1890a521fe715
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 69b6a7b94e993641452154ede11d65929424df5e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761983"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095756"
 ---
 # <a name="cdefaultchartraits-class"></a>CDefaultCharTraits クラス
 
@@ -33,13 +33,13 @@ ms.locfileid: "43761983"
 ## <a name="syntax"></a>構文
 
 ```
-template <typename T>  
+template <typename T>
 class CDefaultCharTraits
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 コレクションに格納されるデータの型。
 
 ## <a name="members"></a>メンバー
@@ -64,13 +64,13 @@ class CDefaultCharTraits
 文字を小文字に変換するには、この関数を呼び出します。
 
 ```
-static wchar_t CharToLower(wchar_t x);  
+static wchar_t CharToLower(wchar_t x);
 static char CharToLower(char x);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*x*  
+*x*<br/>
 小文字に変換する文字。
 
 ### <a name="example"></a>例
@@ -82,13 +82,13 @@ static char CharToLower(char x);
 文字を大文字に変換するには、この関数を呼び出します。
 
 ```
-static wchar_t CharToUpper(wchar_t x);  
+static wchar_t CharToUpper(wchar_t x);
 static char CharToUpper(char x);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*x*  
+*x*<br/>
 大文字に変換する文字。
 
 ## <a name="see-also"></a>関連項目

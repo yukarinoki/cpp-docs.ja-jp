@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4129 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4129 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc095a32e5cb0d5a0bf240282e11c3fa3382ffe5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6e02f38044180c45e221099d2874b7f8ff48d62f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276644"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098447"
 ---
 # <a name="compiler-warning-level-1-c4129"></a>コンパイラの警告 (レベル 1) C4129
-'character': 認識できない文字エスケープ シーケンス  
-  
- `character`次の円記号 (\\) の文字または文字列定数は認識されません、有効なエスケープ シーケンスとして。 バック スラッシュは無視され、印刷されません。 バック スラッシュの後ろの文字が出力されます。  
-  
- 1 つの円記号を印刷するには、二重の円記号を指定 (\\\\)。  
-  
- C++ 標準で 2.13.2 セクションでは、エスケープ シーケンスをについて説明します。  
-  
- 次の例では、C4129 が生成されます。  
-  
-```  
-// C4129.cpp  
-// compile with: /W1  
-int main() {  
-   char array1[] = "\/709";   // C4129  
-   char array2[] = "\n709";   // OK  
-}  
+
+'character': 文字のエスケープ シーケンスを認識できません
+
+`character`次の円記号 (\\) 文字または文字列の定数はない有効なエスケープ シーケンスとして認識します。 バック スラッシュは無視され、印刷されません。 円記号の後の文字が出力されます。
+
+1 つの円記号を印刷するには、二重の円記号を指定 (\\\\)。
+
+C++ 標準で 2.13.2 のセクションでは、エスケープ シーケンスについて説明します。
+
+次の例では、C4129 が生成されます。
+
+```
+// C4129.cpp
+// compile with: /W1
+int main() {
+   char array1[] = "\/709";   // C4129
+   char array2[] = "\n709";   // OK
+}
 ```

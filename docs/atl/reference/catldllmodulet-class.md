@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ec36cddae835d46c5db6245f85e4294aa52225e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 170f46424e8eb4db4c38c91f01a89b53d5cbce0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766575"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107830"
 ---
 # <a name="catldllmodulet-class"></a>CAtlDllModuleT クラス
 
@@ -38,13 +38,13 @@ ms.locfileid: "43766575"
 ## <a name="syntax"></a>構文
 
 ```
-template <class T>  
+template <class T>
 class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 クラスから派生した`CAtlDllModuleT`します。
 
 ## <a name="members"></a>メンバー
@@ -128,13 +128,13 @@ HRESULT DllGetClassObject(
 
 ### <a name="parameters"></a>パラメーター
 
-*rclsid*  
+*rclsid*<br/>
 作成するオブジェクトの CLSID。
 
-*riid*  
+*riid*<br/>
 要求されたインターフェイスの IID。
 
-*ppv*  
+*ppv*<br/>
 によって識別されるインターフェイス ポインターへのポインター *riid*します。 オブジェクトは、このインターフェイスをサポートしていない場合*ppv* NULL に設定されます。
 
 ### <a name="return-value"></a>戻り値
@@ -151,10 +151,10 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID /* lpReserved*/) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*dwReason*  
+*dwReason*<br/>
 場合は、DLL_PROCESS_ATTACH、DLL_THREAD_ATTACH および DLL_THREAD_DETACH 通知の呼び出しに設定が無効です。
 
-*lpReserved*  
+*lpReserved*<br/>
 予約済み。
 
 ### <a name="return-value"></a>戻り値
@@ -175,7 +175,7 @@ HRESULT DllRegisterServer(BOOL bRegTypeLib = TRUE) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 TRUE の場合、タイプ ライブラリを登録します。 既定値は TRUE です。
 
 ### <a name="return-value"></a>戻り値
@@ -192,7 +192,7 @@ HRESULT DllUnregisterServer(BOOL bUnRegTypeLib = TRUE) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*bUnRegTypeLib*  
+*bUnRegTypeLib*<br/>
 タイプ ライブラリは、レジストリから削除する場合は TRUE。 既定値は TRUE です。
 
 ### <a name="return-value"></a>戻り値
@@ -212,13 +212,13 @@ HRESULT GetClassObject(
 
 ### <a name="parameters"></a>パラメーター
 
-*rclsid*  
+*rclsid*<br/>
 作成するオブジェクトの CLSID。
 
-*riid*  
+*riid*<br/>
 要求されたインターフェイスの IID。
 
-*ppv*  
+*ppv*<br/>
 によって識別されるインターフェイス ポインターへのポインター *riid*します。 オブジェクトは、このインターフェイスをサポートしていない場合*ppv* NULL に設定されます。
 
 ### <a name="return-value"></a>戻り値
@@ -231,7 +231,7 @@ HRESULT GetClassObject(
 
 ## <a name="see-also"></a>関連項目
 
-[CAtlModuleT クラス](../../atl/reference/catlmodulet-class.md)   
-[CAtlExeModuleT クラス](../../atl/reference/catlexemodulet-class.md)   
-[クラスの概要](../../atl/atl-class-overview.md)   
+[CAtlModuleT クラス](../../atl/reference/catlmodulet-class.md)<br/>
+[CAtlExeModuleT クラス](../../atl/reference/catlexemodulet-class.md)<br/>
+[クラスの概要](../../atl/atl-class-overview.md)<br/>
 [モジュール クラス](../../atl/atl-module-classes.md)

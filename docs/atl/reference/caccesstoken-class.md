@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e680bf4c84087db90c794c772f58691a5b2932d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c3157db05d183ab9ada2ad53443ca5b20bcfbcba
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754640"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136323"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken クラス
 
@@ -160,7 +160,7 @@ void Attach(HANDLE hToken) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*hToken*  
+*hToken*<br/>
 アクセス トークンへのハンドル。
 
 ### <a name="remarks"></a>Remarks
@@ -191,10 +191,10 @@ bool CheckTokenMembership(
 
 ### <a name="parameters"></a>パラメーター
 
-*rSid*  
+*rSid*<br/>
 参照を[CSid クラス](../../atl/reference/csid-class.md)オブジェクト。
 
-*pbIsMember*  
+*pbIsMember*<br/>
 チェックの結果を受け取る変数へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -222,10 +222,10 @@ bool CreateImpersonationToken(
 
 ### <a name="parameters"></a>パラメーター
 
-*pImp*  
+*pImp*<br/>
 新しいポインター`CAccessToken`オブジェクト。
 
-*sil*  
+*sil*<br/>
 指定します、 [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level)新しいトークンの偽装レベルを提供する型を列挙します。
 
 ### <a name="return-value"></a>戻り値
@@ -249,13 +249,13 @@ bool CreatePrimaryToken(
 
 ### <a name="parameters"></a>パラメーター
 
-*pPri*  
+*pPri*<br/>
 新しいポインター`CAccessToken`オブジェクト。
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 新しいトークンの要求されたアクセス権を指定します。 MAXIMUM_ALLOWED、既定では、呼び出し元が有効なすべてのアクセス権を要求します。 参照してください[アクセス権やアクセス マスク](/windows/desktop/SecAuthZ/access-rights-and-access-masks)詳細にアクセス権限。
 
-*pTokenAttributes*  
+*pTokenAttributes*<br/>
 ポインターを[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)構造体を新しいトークンのセキュリティ記述子を指定し、子プロセスが、トークンを継承できるかどうかを決定します。 場合*pTokenAttributes* null、トークンは、既定のセキュリティ記述子を取得およびハンドルは継承できません。
 
 ### <a name="return-value"></a>戻り値
@@ -286,34 +286,34 @@ bool CreateProcessAsUser(
 
 ### <a name="parameters"></a>パラメーター
 
-*pApplicationName*  
+*pApplicationName*<br/>
 実行するモジュールを指定する null で終わる文字列へのポインター。 このパラメーターを NULL にすることがありますはできません。
 
-*pCommandLine*  
+*pCommandLine*<br/>
 実行するコマンドラインを指定する null で終わる文字列へのポインター。
 
-*pProcessInformation*  
+*pProcessInformation*<br/>
 ポインターを[ハンドル](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_process_information)を新しいプロセスの識別情報を受け取る構造体。
 
-*pStartupInfo*  
+*pStartupInfo*<br/>
 ポインターを[STARTUPINFO](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_startupinfoa)を新しいプロセスのメイン ウィンドウの表示方法を指定します。
 
-*は、*  
+*は、*<br/>
 優先順位クラスとプロセスの作成を制御する追加のフラグを指定します。 Win32 関数を参照してください。 [CreateProcessAsUser](https://msdn.microsoft.com/library/windows/desktop/ms682429)フラグの一覧についてはします。
 
-*bLoadProfile*  
+*bLoadProfile*<br/>
 ユーザーのプロファイルが読み込まれる TRUE の場合、 [LoadUserProfile](/windows/desktop/api/userenv/nf-userenv-loaduserprofilea)します。
 
-*pProcessAttributes*  
+*pProcessAttributes*<br/>
 ポインターを[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)構造体を新しいプロセスのセキュリティ記述子を指定し、返されたハンドルを子プロセスが継承するかどうかを決定します。 場合*pProcessAttributes* null、プロセスは、既定のセキュリティ記述子を取得およびハンドルは継承できません。
 
-*pThreadAttributes*  
+*pThreadAttributes*<br/>
 ポインターを[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)構造体を新しいスレッドのセキュリティ記述子を指定し、返されたハンドルを子プロセスが継承するかどうかを決定します。 場合*pThreadAttributes* null、スレッドは、既定のセキュリティ記述子を取得およびハンドルは継承できません。
 
-*bInherit*  
+*bInherit*<br/>
 新しいプロセスが呼び出し元のプロセスからハンドルを継承するかどうかを示します。 TRUE の場合、呼び出し元のプロセスで継承可能な各開いているハンドルは、新しいプロセスによって継承されます。 継承されたハンドルは、元のハンドルと同じ値とアクセス権限を持っています。
 
-*pCurrentDirectory*  
+*pCurrentDirectory*<br/>
 現在のドライブと、新しいプロセス用のディレクトリを指定する null で終わる文字列へのポインター。 文字列は、ドライブ文字を含む完全なパスである必要があります。 このパラメーターが NULL の場合、新しいプロセスは、呼び出し元プロセスとして同じの現在のドライブとディレクトリがあります。
 
 ### <a name="return-value"></a>戻り値
@@ -340,16 +340,16 @@ bool CreateRestrictedToken(
 
 ### <a name="parameters"></a>パラメーター
 
-*pRestrictedToken*  
+*pRestrictedToken*<br/>
 新しい制限`CAccessToken`オブジェクト。
 
-*SidsToDisable*  
+*SidsToDisable*<br/>
 A`CTokenGroups`拒否専用 Sid を指定するオブジェクト。
 
-*SidsToRestrict*  
+*SidsToRestrict*<br/>
 A`CTokenGroups`制限する Sid を指定するオブジェクト。
 
-*PrivilegesToDelete*  
+*PrivilegesToDelete*<br/>
 A`CTokenPrivileges`制限付きトークンで削除する権限を指定するオブジェクト。 既定値は、空のオブジェクトを作成します。
 
 ### <a name="return-value"></a>戻り値
@@ -391,10 +391,10 @@ bool DisablePrivilege(
 
 ### <a name="parameters"></a>パラメーター
 
-*pszPrivilege*  
+*pszPrivilege*<br/>
 無効にするための権限を含む文字列へのポインター、`CAccessToken`オブジェクト。
 
-*pPreviousState*  
+*pPreviousState*<br/>
 ポインター、`CTokenPrivileges`特権の以前の状態を格納するオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -413,10 +413,10 @@ bool DisablePrivileges(
 
 ### <a name="parameters"></a>パラメーター
 
-*rPrivileges*  
+*rPrivileges*<br/>
 無効にする権限を含む文字列の配列へのポインター、`CAccessToken`オブジェクト。
 
-*pPreviousState*  
+*pPreviousState*<br/>
 ポインター、`CTokenPrivileges`特権の以前の状態を格納するオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -435,10 +435,10 @@ bool EnablePrivilege(
 
 ### <a name="parameters"></a>パラメーター
 
-*pszPrivilege*  
+*pszPrivilege*<br/>
 有効にするための権限を含む文字列へのポインター、`CAccessToken`オブジェクト。
 
-*pPreviousState*  
+*pPreviousState*<br/>
 ポインター、`CTokenPrivileges`特権の以前の状態を格納するオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -457,10 +457,10 @@ bool EnablePrivileges(
 
 ### <a name="parameters"></a>パラメーター
 
-*rPrivileges*  
+*rPrivileges*<br/>
 有効にする権限を含む文字列の配列へのポインター、`CAccessToken`オブジェクト。
 
-*pPreviousState*  
+*pPreviousState*<br/>
 ポインター、`CTokenPrivileges`特権の以前の状態を格納するオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -477,7 +477,7 @@ bool GetDefaultDacl(CDacl* pDacl) const throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*pDacl*  
+*pDacl*<br/>
 ポインター、 [CDacl クラス](../../atl/reference/cdacl-class.md)オブジェクトを受信する、`CAccessToken`オブジェクトの既定の DACL。
 
 ### <a name="return-value"></a>戻り値
@@ -494,7 +494,7 @@ bool GetEffectiveToken(DWORD dwDesiredAccess) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 アクセス トークンへの要求されたアクセス タイプを指定するアクセス マスクを指定します。 これらの要求されたアクセス タイプをトークンの DACL と比較することで、どのアクセスを許可するか、または拒否するかを判断します。
 
 ### <a name="return-value"></a>戻り値
@@ -511,7 +511,7 @@ bool GetGroups(CTokenGroups* pGroups) const throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*pGroups*  
+*pGroups*<br/>
 ポインター、 [CTokenGroups クラス](../../atl/reference/ctokengroups-class.md)グループ情報を受信するオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -541,7 +541,7 @@ bool GetImpersonationLevel(
 
 ### <a name="parameters"></a>パラメーター
 
-*pImpersonationLevel*  
+*pImpersonationLevel*<br/>
 ポインターを[SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level)偽装レベルの情報を受信する列挙型。
 
 ### <a name="return-value"></a>戻り値
@@ -558,7 +558,7 @@ bool GetLogonSessionId(LUID* pluid) const throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*pluid*  
+*pluid*<br/>
 ポインターを[LUID](/windows/desktop/api/winnt/ns-winnt-_luid)ログオン セッションの id これが表示されます。
 
 ### <a name="return-value"></a>戻り値
@@ -579,7 +579,7 @@ bool GetLogonSid(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*pSid*  
+*pSid*<br/>
 ポインターを[CSid クラス](../../atl/reference/csid-class.md)オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -600,7 +600,7 @@ bool GetOwner(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*pSid*  
+*pSid*<br/>
 ポインターを[CSid クラス](../../atl/reference/csid-class.md)オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -621,7 +621,7 @@ bool GetPrimaryGroup(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*pSid*  
+*pSid*<br/>
 ポインターを[CSid クラス](../../atl/reference/csid-class.md)オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -642,7 +642,7 @@ bool GetPrivileges(CTokenPrivileges* pPrivileges) const throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*pPrivileges*  
+*pPrivileges*<br/>
 ポインターを[CTokenPrivileges クラス](../../atl/reference/ctokenprivileges-class.md)特権を受け取るオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -659,10 +659,10 @@ bool GetProcessToken(DWORD dwDesiredAccess, HANDLE hProcess = NULL) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 アクセス トークンへの要求されたアクセス タイプを指定するアクセス マスクを指定します。 これらの要求されたアクセス タイプをトークンの DACL と比較することで、どのアクセスを許可するか、または拒否するかを判断します。
 
-*hProcess*  
+*hProcess*<br/>
 アクセス トークンが開いているプロセスへのハンドル。 既定値は NULL を使用する場合は、現在のプロセスが使用されます。
 
 ### <a name="return-value"></a>戻り値
@@ -695,7 +695,7 @@ bool GetSource(TOKEN_SOURCE* pSource) const throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*pSource*  
+*pSource*<br/>
 ポインターを[TOKEN_SOURCE](/windows/desktop/api/winnt/ns-winnt-_token_source)構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -712,7 +712,7 @@ bool GetStatistics(TOKEN_STATISTICS* pStatistics) const throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*pStatistics*  
+*pStatistics*<br/>
 ポインターを[TOKEN_STATISTICS](/windows/desktop/api/winnt/ns-winnt-_token_statistics)構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -729,7 +729,7 @@ bool GetTerminalServicesSessionId(DWORD* pdwSessionId) const throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*pdwSessionId*  
+*pdwSessionId*<br/>
 ターミナル サービス セッションの id。
 
 ### <a name="return-value"></a>戻り値
@@ -749,13 +749,13 @@ bool GetThreadToken(
 
 ### <a name="parameters"></a>パラメーター
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 アクセス トークンへの要求されたアクセス タイプを指定するアクセス マスクを指定します。 これらの要求されたアクセス タイプをトークンの DACL と比較することで、どのアクセスを許可するか、または拒否するかを判断します。
 
-*hThread*  
+*hThread*<br/>
 アクセス トークンを開いたスレッドへのハンドルします。
 
-*bOpenAsSelf*  
+*bOpenAsSelf*<br/>
 アクセス チェックが、スレッドの呼び出し元のセキュリティ コンテキストに対して行われるかどうかを示す、`GetThreadToken`メソッドまたは呼び出し元のスレッドのプロセスのセキュリティ コンテキスト。
 
 このパラメーターが FALSE の場合は、呼び出し元のスレッドのセキュリティ コンテキストを使用してアクセス チェックが実行されます。 スレッドは、クライアントを偽装する場合のクライアント プロセスをこのセキュリティ コンテキストにできます。 このパラメーターが TRUE の場合、呼び出し元のスレッドのプロセスのセキュリティ コンテキストを使用してアクセス チェックを実行します。
@@ -774,7 +774,7 @@ bool GetTokenId(LUID* pluid) const throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*pluid*  
+*pluid*<br/>
 ポインターを[LUID](/windows/desktop/api/winnt/ns-winnt-_luid)トークンの ID が表示されます
 
 ### <a name="return-value"></a>戻り値
@@ -791,7 +791,7 @@ bool GetType(TOKEN_TYPE* pType) const throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*p 入力してください。*  
+*p 入力してください。*<br/>
 アドレス、 [TOKEN_TYPE](/windows/desktop/api/winnt/ne-winnt-_token_type)成功した場合、トークンの種類を受け取る変数。
 
 ### <a name="return-value"></a>戻り値
@@ -812,7 +812,7 @@ bool GetUser(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*pSid*  
+*pSid*<br/>
 ポインターを[CSid クラス](../../atl/reference/csid-class.md)オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -841,7 +841,7 @@ bool Impersonate(HANDLE hThread = NULL) const throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*hThread*  
+*hThread*<br/>
 スレッドの偽装トークンを割り当てるへのハンドルします。 TOKEN_IMPERSONATE アクセス権を持つこのハンドルが開かれているがある必要があります。 場合*hThread*が null の場合、このメソッドにより、スレッドの偽装トークンを使用して停止します。
 
 ### <a name="return-value"></a>戻り値
@@ -914,19 +914,19 @@ bool LogonUser(
 
 ### <a name="parameters"></a>パラメーター
 
-*pszUserName*  
+*pszUserName*<br/>
 ユーザー名を指定する null で終わる文字列へのポインター。 これにログオンするユーザー アカウントの名前です。
 
-*pszDomain*  
+*pszDomain*<br/>
 ドメインまたはのアカウント データベースを含むサーバーの名前を指定する null で終わる文字列へのポインター、 *pszUserName*アカウント。
 
-*pszPassword*  
+*pszPassword*<br/>
 指定されたユーザー アカウントのクリア テキスト パスワードを指定する null で終わる文字列へのポインター *pszUserName*します。
 
-*dwLogonType*  
+*dwLogonType*<br/>
 実行するログオン操作の種類を指定します。 参照してください[LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera)の詳細。
 
-*dwLogonProvider*  
+*dwLogonProvider*<br/>
 ログオンのプロバイダーを指定します。 参照してください[LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera)の詳細。
 
 ### <a name="return-value"></a>戻り値
@@ -950,13 +950,13 @@ bool OpenCOMClientToken(
 
 ### <a name="parameters"></a>パラメーター
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 アクセス トークンへの要求されたアクセス タイプを指定するアクセス マスクを指定します。 これらの要求されたアクセス タイプをトークンの DACL と比較することで、どのアクセスを許可するか、または拒否するかを判断します。
 
-*bImpersonate*  
+*bImpersonate*<br/>
 TRUE の場合、この呼び出しが正常に完了した場合、現在のスレッドは呼び出し元の COM クライアントを偽装します。 FALSE の場合は、アクセス トークンが開きますが、この呼び出しが完了すると、スレッドは、権限借用トークンを持ちません。
 
-*bOpenAsSelf*  
+*bOpenAsSelf*<br/>
 アクセス チェックが、スレッドの呼び出し元のセキュリティ コンテキストに対して行われるかどうかを示す、 [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)メソッドまたは呼び出し元のスレッドのプロセスのセキュリティ コンテキスト。
 
 このパラメーターが FALSE の場合は、呼び出し元のスレッドのセキュリティ コンテキストを使用してアクセス チェックが実行されます。 スレッドは、クライアントを偽装する場合のクライアント プロセスをこのセキュリティ コンテキストにできます。 このパラメーターが TRUE の場合、呼び出し元のスレッドのプロセスのセキュリティ コンテキストを使用してアクセス チェックを実行します。
@@ -983,16 +983,16 @@ bool OpenNamedPipeClientToken(
 
 ### <a name="parameters"></a>パラメーター
 
-*hPipe*  
+*hPipe*<br/>
 名前付きパイプへのハンドルします。
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 アクセス トークンへの要求されたアクセス タイプを指定するアクセス マスクを指定します。 これらの要求されたアクセス タイプをトークンの DACL と比較することで、どのアクセスを許可するか、または拒否するかを判断します。
 
-*bImpersonate*  
+*bImpersonate*<br/>
 TRUE の場合、この呼び出しが正常に完了した場合、現在のスレッドは呼び出し元のパイプ クライアントを偽装します。 FALSE の場合は、アクセス トークンが開きますが、この呼び出しが完了すると、スレッドは、権限借用トークンを持ちません。
 
-*bOpenAsSelf*  
+*bOpenAsSelf*<br/>
 アクセス チェックが、スレッドの呼び出し元のセキュリティ コンテキストに対して行われるかどうかを示す、 [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)メソッドまたは呼び出し元のスレッドのプロセスのセキュリティ コンテキスト。
 
 このパラメーターが FALSE の場合は、呼び出し元のスレッドのセキュリティ コンテキストを使用してアクセス チェックが実行されます。 スレッドは、クライアントを偽装する場合のクライアント プロセスをこのセキュリティ コンテキストにできます。 このパラメーターが TRUE の場合、呼び出し元のスレッドのプロセスのセキュリティ コンテキストを使用してアクセス チェックを実行します。
@@ -1019,16 +1019,16 @@ bool OpenRPCClientToken(
 
 ### <a name="parameters"></a>パラメーター
 
-*BindingHandle*  
+*BindingHandle*<br/>
 クライアントへのバインドを表す、サーバーにバインド ハンドル。
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 アクセス トークンへの要求されたアクセス タイプを指定するアクセス マスクを指定します。 これらの要求されたアクセス タイプをトークンの DACL と比較することで、どのアクセスを許可するか、または拒否するかを判断します。
 
-*bImpersonate*  
+*bImpersonate*<br/>
 TRUE の場合、この呼び出しが正常に完了した場合、現在のスレッドは呼び出し元の RPC クライアントを偽装します。 FALSE の場合は、アクセス トークンが開きますが、この呼び出しが完了すると、スレッドは、権限借用トークンを持ちません。
 
-*bOpenAsSelf*  
+*bOpenAsSelf*<br/>
 アクセス チェックが、スレッドの呼び出し元のセキュリティ コンテキストに対して行われるかどうかを示す、 [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)メソッドまたは呼び出し元のスレッドのプロセスのセキュリティ コンテキスト。
 
 このパラメーターが FALSE の場合は、呼び出し元のスレッドのセキュリティ コンテキストを使用してアクセス チェックが実行されます。 スレッドは、クライアントを偽装する場合のクライアント プロセスをこのセキュリティ コンテキストにできます。 このパラメーターが TRUE の場合、呼び出し元のスレッドのプロセスのセキュリティ コンテキストを使用してアクセス チェックを実行します。
@@ -1055,18 +1055,18 @@ bool OpenThreadToken(
 
 ### <a name="parameters"></a>パラメーター
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 アクセス トークンへの要求されたアクセス タイプを指定するアクセス マスクを指定します。 これらの要求されたアクセス タイプをトークンの DACL と比較することで、どのアクセスを許可するか、または拒否するかを判断します。
 
-*bImpersonate*  
+*bImpersonate*<br/>
 TRUE の場合、メソッドの完了後、スレッドは、要求された権限借用レベルで左は。 FALSE の場合、スレッドは元の偽装レベルに戻ります。
 
-*bOpenAsSelf*  
+*bOpenAsSelf*<br/>
 アクセス チェックが、スレッドの呼び出し元のセキュリティ コンテキストに対して行われるかどうかを示す、 [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)メソッドまたは呼び出し元のスレッドのプロセスのセキュリティ コンテキスト。
 
 このパラメーターが FALSE の場合は、呼び出し元のスレッドのセキュリティ コンテキストを使用してアクセス チェックが実行されます。 スレッドは、クライアントを偽装する場合のクライアント プロセスをこのセキュリティ コンテキストにできます。 このパラメーターが TRUE の場合、呼び出し元のスレッドのプロセスのセキュリティ コンテキストを使用してアクセス チェックを実行します。
 
-*sil*  
+*sil*<br/>
 指定します、 [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level)トークンの偽装レベルを提供する型を列挙します。
 
 ### <a name="return-value"></a>戻り値
@@ -1091,10 +1091,10 @@ bool PrivilegeCheck(
 
 ### <a name="parameters"></a>パラメーター
 
-*RequiredPrivileges*  
+*RequiredPrivileges*<br/>
 ポインターを[PRIVILEGE_SET](/windows/desktop/api/winnt/ns-winnt-_privilege_set)構造体。
 
-*pbResult*  
+*pbResult*<br/>
 メソッドが設定を指定した権限の一部またはすべてがで有効かどうかを示す値へのポインター、`CAccessToken`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -1115,7 +1115,7 @@ bool Revert(HANDLE hThread = NULL) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*hThread*  
+*hThread*<br/>
 スレッドの偽装を元に戻すへのハンドルします。 場合*hThread*が null の場合、現在のスレッドが使用されます。
 
 ### <a name="return-value"></a>戻り値
@@ -1136,7 +1136,7 @@ bool SetDefaultDacl(const CDacl& rDacl) throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*rDacl*  
+*rDacl*<br/>
 新しい既定[CDacl クラス](../../atl/reference/cdacl-class.md)情報。
 
 ### <a name="return-value"></a>戻り値
@@ -1157,7 +1157,7 @@ bool SetOwner(const CSid& rSid) throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*rSid*  
+*rSid*<br/>
 [CSid クラス](../../atl/reference/csid-class.md)所有者情報を含むオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -1178,7 +1178,7 @@ bool SetPrimaryGroup(const CSid& rSid) throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*rSid*  
+*rSid*<br/>
 [CSid クラス](../../atl/reference/csid-class.md)プライマリ グループ情報を含むオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -1191,6 +1191,6 @@ bool SetPrimaryGroup(const CSid& rSid) throw(...);
 
 ## <a name="see-also"></a>関連項目
 
-[ATLSecurity サンプル](../../visual-cpp-samples.md)   
-[アクセス トークン](/windows/desktop/SecAuthZ/access-tokens)   
+[ATLSecurity サンプル](../../visual-cpp-samples.md)<br/>
+[アクセス トークン](/windows/desktop/SecAuthZ/access-tokens)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

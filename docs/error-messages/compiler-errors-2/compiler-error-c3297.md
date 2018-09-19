@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3297 |Microsoft ドキュメント
+title: コンパイラ エラー C3297 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5afdf54e7a335dda86a4046a01b31875a0c91575
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7aa23cebc7ad7019c375c351f723b7ad1573ab86
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249367"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069836"
 ---
 # <a name="compiler-error-c3297"></a>コンパイラ エラー C3297
-'constraint_2':  'constraint_1' に値の制約があるために、'constraint_1' は制約として使用できません  
-  
- 値クラスがシールされています。 制約が値クラスの場合は、別の制約はそこから派生できません。  
-  
- 詳細については、次を参照してください。[ジェネリック型パラメーターの制約 (C + + CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md)です。  
-  
-## <a name="example"></a>例  
- 次の例では C3297 が生成されます。  
-  
-```  
-// C3297.cpp  
-// compile with: /clr /c  
-generic<class T, class U>  
-where T : value class  
-where U : T   // C3297  
-public ref struct R {};  
+
+'constraint_2':  'constraint_1' に値の制約があるために、'constraint_1' は制約として使用できません
+
+値クラスがシールされています。 制約が値クラスの場合は、別の制約はそこから派生できません。
+
+詳細については、次を参照してください。[ジェネリック型パラメーターの制約 (C +/cli CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md)します。
+
+## <a name="example"></a>例
+
+次の例では C3297 が生成されます。
+
+```
+// C3297.cpp
+// compile with: /clr /c
+generic<class T, class U>
+where T : value class
+where U : T   // C3297
+public ref struct R {};
 ```

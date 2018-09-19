@@ -23,68 +23,70 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d202e48bbcd09c3f4071af21e942cb1353f7a6b
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: fba58883db0f5936a8f3dedc1e0c4a19fb0aafa9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466242"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086201"
 ---
 # <a name="static-members-c"></a>静的メンバー (C++)
+
 クラスには、静的なメンバー データとメンバー関数を含めることができます。 データ メンバーとして宣言されている場合**静的**データのコピーを 1 つだけでは、クラスのすべてのオブジェクトが保持されます。
-  
- 静的データ メンバーは、特定のクラス型のオブジェクトの一部ではありません。 その結果、静的データ メンバーの宣言は定義とは見なされません。 データ メンバーはクラス スコープで宣言されますが、定義はファイル スコープで行われます。 これらの静的メンバーは外部リンケージを持ちます。 次に例を示します。  
-  
-```cpp  
-// static_data_members.cpp  
-class BufferedOutput  
-{  
-public:  
-   // Return number of bytes written by any object of this class.  
-   short BytesWritten()  
-   {  
-      return bytecount;  
-   }  
-  
-   // Reset the counter.  
-   static void ResetCount()  
-   {  
-      bytecount = 0;  
-   }  
-  
-   // Static member declaration.  
-   static long bytecount;  
-};  
-  
-// Define bytecount in file scope.  
-long BufferedOutput::bytecount;  
-  
-int main()  
-{  
-}  
-```  
-  
- 上記のコードで、メンバー `bytecount` は、クラス `BufferedOutput` で宣言されていますが、クラス宣言の外側で定義する必要があります。  
-  
- 静的データ メンバーは、クラス型のオブジェクトを参照せずに参照できます。 `BufferedOutput` オブジェクトを使用して書き込まれたバイト数は、次のように取得できます。  
-  
-```cpp  
-long nBytes = BufferedOutput::bytecount;  
-```  
-  
- 静的メンバーを存在させるために、クラス型のオブジェクトが存在する必要はありません。 静的メンバーは、メンバー選択を使用してアクセスすることもできます (**します。** **->**) 演算子。 例えば:  
-  
-```cpp  
-BufferedOutput Console;  
-  
-long nBytes = Console.bytecount;  
-```  
-  
- 前のケースでは、オブジェクト (`Console`) への参照は評価されません。返される値は、静的オブジェクト `bytecount` の値です。  
-  
- 静的データ メンバーはクラス メンバーのアクセス規則に従うため、静的データ メンバーへのプライベート アクセスはクラス メンバー関数およびフレンドだけに許可されます。 これらの規則が記載されて[メンバー アクセス コントロール](../cpp/member-access-control-cpp.md)します。 例外は、静的データ メンバーが、そのアクセス制限にかかわらず、ファイルのスコープ内で定義されなければならないということです。 データ メンバーを明示的に初期化する場合は、初期化子を定義で指定する必要があります。  
-  
- 静的メンバーの型は、クラス名で修飾されていません。 型ではそのため、`BufferedOutput::bytecount`は**長い**します。  
-  
-## <a name="see-also"></a>関連項目  
- [クラスと構造体](../cpp/classes-and-structs-cpp.md)
+
+静的データ メンバーは、特定のクラス型のオブジェクトの一部ではありません。 その結果、静的データ メンバーの宣言は定義とは見なされません。 データ メンバーはクラス スコープで宣言されますが、定義はファイル スコープで行われます。 これらの静的メンバーは外部リンケージを持ちます。 次に例を示します。
+
+```cpp
+// static_data_members.cpp
+class BufferedOutput
+{
+public:
+   // Return number of bytes written by any object of this class.
+   short BytesWritten()
+   {
+      return bytecount;
+   }
+
+   // Reset the counter.
+   static void ResetCount()
+   {
+      bytecount = 0;
+   }
+
+   // Static member declaration.
+   static long bytecount;
+};
+
+// Define bytecount in file scope.
+long BufferedOutput::bytecount;
+
+int main()
+{
+}
+```
+
+上記のコードで、メンバー `bytecount` は、クラス `BufferedOutput` で宣言されていますが、クラス宣言の外側で定義する必要があります。
+
+静的データ メンバーは、クラス型のオブジェクトを参照せずに参照できます。 `BufferedOutput` オブジェクトを使用して書き込まれたバイト数は、次のように取得できます。
+
+```cpp
+long nBytes = BufferedOutput::bytecount;
+```
+
+静的メンバーを存在させるために、クラス型のオブジェクトが存在する必要はありません。 静的メンバーは、メンバー選択を使用してアクセスすることもできます (**します。** **->**) 演算子。 例えば:
+
+```cpp
+BufferedOutput Console;
+
+long nBytes = Console.bytecount;
+```
+
+前のケースでは、オブジェクト (`Console`) への参照は評価されません。返される値は、静的オブジェクト `bytecount` の値です。
+
+静的データ メンバーはクラス メンバーのアクセス規則に従うため、静的データ メンバーへのプライベート アクセスはクラス メンバー関数およびフレンドだけに許可されます。 これらの規則が記載されて[メンバー アクセス コントロール](../cpp/member-access-control-cpp.md)します。 例外は、静的データ メンバーが、そのアクセス制限にかかわらず、ファイルのスコープ内で定義されなければならないということです。 データ メンバーを明示的に初期化する場合は、初期化子を定義で指定する必要があります。
+
+静的メンバーの型は、クラス名で修飾されていません。 型ではそのため、`BufferedOutput::bytecount`は**長い**します。
+
+## <a name="see-also"></a>関連項目
+
+[クラスと構造体](../cpp/classes-and-structs-cpp.md)

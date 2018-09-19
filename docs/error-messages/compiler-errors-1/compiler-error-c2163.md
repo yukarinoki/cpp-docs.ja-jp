@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2163 |Microsoft ドキュメント
+title: コンパイラ エラー C2163 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14cbb110cf226a0a36a121ac9aa1901782357b04
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 974488a2f587c2fde02dd74baf64a98a7590e9b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168088"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066568"
 ---
 # <a name="compiler-error-c2163"></a>コンパイラ エラー C2163
-'function': 組み込み関数として使用できません。  
-  
- `intrinsic`または`function`プラグマは、組み込みの形式では使用できない関数を一覧表示します。 たとえば、/clr プログラミングを使用するプログラムをコンパイルするときに特定の組み込み関数は使用できません。
+
+'function': 組み込み関数として使用できません。
+
+`intrinsic`または`function`プラグマには、組み込み形式では使用できない関数が一覧表示されます。 たとえば、/clr プログラミングを使用するプログラムをコンパイルするときに特定の組み込み関数は使用できません。

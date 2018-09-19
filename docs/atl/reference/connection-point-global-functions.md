@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f68c22ff88ac92357dabfef8076c160271a76378
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 12976bcf796466f959807f7ac2fb52257889454b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756491"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025543"
 ---
 # <a name="connection-point-global-functions"></a>コネクション ポイントに関するグローバル関数
 
@@ -59,16 +59,16 @@ HRESULT    AtlAdvise(
 
 ### <a name="parameters"></a>パラメーター
 
-*pUnkCP*  
+*pUnkCP*<br/>
 [in]ポインター、`IUnknown`オブジェクトのクライアントが使用して接続します。
 
-*pUnk*  
+*pUnk*<br/>
 [in]クライアントへのポインター`IUnknown`します。
 
-*iid*  
+*iid*<br/>
 [in]接続ポイントの GUID です。 通常、これは、接続ポイントによって管理するアウトゴーイング インターフェイスと同じです。
 
-*pdw*  
+*pdw*<br/>
 [out]接続を一意に識別するクッキーへのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -99,13 +99,13 @@ HRESULT    AtlUnadvise(
 
 ### <a name="parameters"></a>パラメーター
 
-*pUnkCP*  
+*pUnkCP*<br/>
 [in]ポインター、`IUnknown`オブジェクトで、クライアントが接続されているのです。
 
-*iid*  
+*iid*<br/>
 [in]接続ポイントの GUID です。 通常、これは、接続ポイントによって管理するアウトゴーイング インターフェイスと同じです。
 
-*dw*  
+*dw*<br/>
 [in]接続を一意に識別するクッキー。
 
 ### <a name="return-value"></a>戻り値
@@ -129,10 +129,10 @@ HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
 
 ### <a name="parameters"></a>パラメーター
 
-*pT*  
+*pT*<br/>
 [in]シンクのマップを格納するオブジェクトへのポインター。
 
-*bAdvise*  
+*bAdvise*<br/>
 [in]TRUE の場合、シンクのすべてのエントリがあることをお勧めします。すべてのシンクのエントリがアドバイズを中止する場合は FALSE です。
 
 ### <a name="return-value"></a>戻り値
@@ -145,5 +145,5 @@ HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
 
 ## <a name="see-also"></a>関連項目
 
-[関数](../../atl/reference/atl-functions.md)   
+[関数](../../atl/reference/atl-functions.md)<br/>
 [接続ポイントに関するマクロ](../../atl/reference/connection-point-macros.md)

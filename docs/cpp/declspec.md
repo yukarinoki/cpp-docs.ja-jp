@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b434ca991ef05bb90c3cbdc659cf8adc3381aa0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b159bcdae6e7f576ed92275ec5f79d25132b53e5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752913"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111322"
 ---
 # <a name="declspec"></a>__declspec
 
@@ -34,7 +34,7 @@ ms.locfileid: "43752913"
 &nbsp;&nbsp;&nbsp;&nbsp;**_ _declspec (***拡張修飾子宣言 seq***)** 
 
 *extended-decl-modifier-seq*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*拡張宣言修飾子*<sub>選択</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*拡張宣言修飾子**拡張修飾子宣言 seq*
 
 *extended-decl-modifier*:<br/>
@@ -58,7 +58,7 @@ ms.locfileid: "43752913"
 &nbsp;&nbsp;&nbsp;&nbsp;**safebuffers**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**selectany**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**spectre(nomitigation)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**スレッド**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**thread**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**uuid("** *ComObjectGUID* **")**
 
 空白は、宣言修飾子のシーケンスを区切ります。 その例は以降のセクションで示します。
@@ -105,5 +105,6 @@ __declspec( thread ) int tls_i = 1;
 **Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
- [キーワード](../cpp/keywords-cpp.md)  
- [C 拡張ストレージ クラス属性](../c-language/c-extended-storage-class-attributes.md)  
+
+[キーワード](../cpp/keywords-cpp.md)<br/>
+[C 拡張ストレージ クラス属性](../c-language/c-extended-storage-class-attributes.md)

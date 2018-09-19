@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 099bd36908ef12d2cd4c6b4603dc047d7ed6e74f
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: aefb11f8028aa2af9822bc6433e85d06d0609a9d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107608"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039167"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Concurrency::direct3d 名前空間関数 (AMP)
 ||||
@@ -60,7 +60,7 @@ inline int abs(int _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_X`  
+*_X*<br/>
 整数値
 
 ### <a name="return-value"></a>戻り値
@@ -83,13 +83,13 @@ inline int clamp(
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_X`  
+*_X*<br/>
 固定される値。
 
-`_Min`  
+*_Min*<br/>
 固定される範囲の下限。
 
-`_Max`  
+*(_M)*<br/>
 固定される範囲の上限。
 
 ### <a name="return-value"></a>戻り値
@@ -103,7 +103,7 @@ inline unsigned int countbits(unsigned int _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_X`  
+*_X*<br/>
 符号なし整数値
 
 ### <a name="return-value"></a>戻り値
@@ -126,16 +126,16 @@ accelerator_view create_accelerator_view(
 ```  
 
 #### <a name="parameters"></a>パラメーター
-`_Accelerator`  
+*_Accelerator*<br/>
 新しい accelerator_view が作成されるアクセラレータ。
 
-`_D3D_device`  
+*_D3D_device*<br/>
 Direct3D デバイス インターフェイスへのポインター。
 
-`_Disable_timeout`  
+*_Disable_timeout*<br/>
 新しく作成された accelerator_view に対してタイムアウトを無効にする必要があるかどうかを指定するブール値パラメーター。 これは、Direct3D デバイス作成のための D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT フラグに対応し、オペレーティング システムが Windows のタイムアウトの検出と回復機構ごとにデバイスをリセットせずに、実行するために 2 秒より長くかかる負荷を許可するかどうかを示すために使用されます。 このフラグの使用は、accelerator_view で時間のかかるタスクを実行する必要がある場合にお勧めします。
 
-`_Qmode`  
+*_Qmode*<br/>
 [Queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode)新しく作成された accelerator_view に使用します。 このパラメーターには `queuing_mode_automatic` の既定値があります。
 
 ## <a name="return-value"></a>戻り値
@@ -157,7 +157,7 @@ void __cdecl d3d_access_lock(accelerator_view& _Av);
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_Av`  
+*_Av*<br/>
 ロックする accelerator_view。
 
 ##  <a name="d3d_access_try_lock"></a>  d3d_access_try_lock
@@ -168,7 +168,7 @@ bool __cdecl d3d_access_try_lock(accelerator_view& _Av);
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_Av`  
+*_Av*<br/>
 ロックする accelerator_view。
 
 ### <a name="return-value"></a>戻り値
@@ -182,7 +182,7 @@ void __cdecl d3d_access_unlock(accelerator_view& _Av);
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_Av`  
+*_Av*<br/>
 ロックが解放される accelerator_view。
 
 ##  <a name="firstbithigh"></a>  firstbithigh
@@ -193,7 +193,7 @@ inline int firstbithigh(int _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_X`  
+*_X*<br/>
 整数値
 
 ### <a name="return-value"></a>戻り値
@@ -207,7 +207,7 @@ inline int firstbitlow(int _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_X`  
+*_X*<br/>
 整数値
 
 ### <a name="return-value"></a>戻り値
@@ -226,13 +226,13 @@ IUnknown *get_buffer(
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`value_type`  
+*value_type*<br/>
 配列内の要素の型。
 
-`_Rank`  
+*_Rank*<br/>
 配列のランク。
 
-`_Array`  
+*_Array*<br/>
 基になる Direct3D バッファー インターフェイスが返される Direct3D accelerator_view の配列。
 
 ### <a name="return-value"></a>戻り値
@@ -263,10 +263,10 @@ inline int imax(
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_X`  
+*_X*<br/>
 整数値
 
-`_Y`  
+*_Y*<br/>
 整数値
 
 ### <a name="return-value"></a>戻り値
@@ -282,10 +282,10 @@ inline int imin(
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_X`  
+*_X*<br/>
 整数値
 
-`_Y`  
+*_Y*<br/>
 整数値
 
 ### <a name="return-value"></a>戻り値
@@ -299,7 +299,7 @@ bool __cdecl is_timeout_disabled(const accelerator_view& _Accelerator_view);
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_Accelerator_view`  
+*_Accelerator_view*<br/>
 タイムアウト無効の設定を照会する対象の accelerator_view。
 
 ### <a name="return-value"></a>戻り値
@@ -334,13 +334,13 @@ inline unsigned int mad(
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_X`  
+*_X*<br/>
 1 番目の指定された引数。
 
-`_Y`  
+*_Y*<br/>
 2 番目の指定された引数。
 
-`_Z`  
+*_Z*<br/>
 3 番目の指定された引数。
 
 ### <a name="return-value"></a>戻り値
@@ -361,19 +361,19 @@ array<value_type, _Rank> make_array(
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`value_type`  
+*value_type*<br/>
 作成される配列の要素型。
 
-`_Rank`  
+*_Rank*<br/>
 作成される配列のランク。
 
-`_Extent`  
+*_Extent*<br/>
 配列の集合の図形を記述する範囲。
 
-`_Rv`  
+*_Rv*<br/>
 配列が作成される D3D アクセラレータ ビュー。
 
-`_D3D_buffer`  
+*_D3D_buffer*<br/>
 配列を作成する基になる D3D バッファーの IUnknown インターフェイス ポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -387,7 +387,7 @@ inline float noise(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_X`  
+*_X*<br/>
 パーリン ノイズを生成する浮動小数点値
 
 ### <a name="return-value"></a>戻り値
@@ -401,7 +401,7 @@ inline float radians(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_X`  
+*_X*<br/>
 浮動小数点値
 
 ### <a name="return-value"></a>戻り値
@@ -418,7 +418,7 @@ inline double rcp(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_X`  
+*_X*<br/>
 逆数を計算する値。
 
 ### <a name="return-value"></a>戻り値
@@ -432,7 +432,7 @@ inline unsigned int reversebits(unsigned int _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_X`  
+*_X*<br/>
 符号なし整数値
 
 ### <a name="return-value"></a>戻り値
@@ -446,7 +446,7 @@ inline float saturate(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_X`  
+*_X*<br/>
 浮動小数点値
 
 ### <a name="return-value"></a>戻り値
@@ -460,7 +460,7 @@ inline int sign(int _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_X`  
+*_X*<br/>
 整数値
 
 ### <a name="return-value"></a>戻り値
@@ -477,13 +477,13 @@ inline float smoothstep(
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_Min`  
+*_Min*<br/>
 浮動小数点値
 
-`_Max`  
+*(_M)*<br/>
 浮動小数点値
 
-`_X`  
+*_X*<br/>
 浮動小数点値
 
 ### <a name="return-value"></a>戻り値
@@ -499,10 +499,10 @@ inline float step(
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_Y`  
+*_Y*<br/>
 浮動小数点値
 
-`_X`  
+*_X*<br/>
 浮動小数点値
 
 ### <a name="return-value"></a>戻り値
@@ -518,10 +518,10 @@ inline unsigned int umax(
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_X`  
+*_X*<br/>
 整数値
 
-`_Y`  
+*_Y*<br/>
 整数値
 
 ### <a name="return-value"></a>戻り値
@@ -537,10 +537,10 @@ inline unsigned int umin(
 ```  
 
 ### <a name="parameters"></a>パラメーター
-`_X`  
+*_X*<br/>
 整数値
 
-`_Y`  
+*_Y*<br/>
 整数値
 
 ### <a name="return-value"></a>戻り値

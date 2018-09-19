@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3106 |Microsoft ドキュメント
+title: コンパイラ エラー C3106 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 059eaf684995dab6bdcbd1a65bbdb75f70b1551b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4371b8d63a57ef791dad9f1e593c8009d5361852
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248148"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052609"
 ---
 # <a name="compiler-error-c3106"></a>コンパイラ エラー C3106
-'attribute': 名前なし引数が名前付き引数に付ける必要があります  
-  
- 名前付き引数の前に属性には、名前なし引数を渡す必要があります。  
-  
- 詳細については、「 [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md)」を参照してください。  
-  
-## <a name="example"></a>例  
- 次の例では、C3106 を生成します。  
-  
-```  
-// C3106.cpp  
-// compile with: /c  
-[module(name="MyLib", dll)];   // C3106  
-[module(dll, name="MyLib")];   // OK  
+
+'attribute': 名前なし引数には、名前付き引数が前に記述する必要があります
+
+名前付き引数の前に、属性には、名前のない引数を渡す必要があります。
+
+詳細については、「 [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md)」を参照してください。
+
+## <a name="example"></a>例
+
+次の例では、C3106 が生成されます。
+
+```
+// C3106.cpp
+// compile with: /c
+[module(name="MyLib", dll)];   // C3106
+[module(dll, name="MyLib")];   // OK
 ```

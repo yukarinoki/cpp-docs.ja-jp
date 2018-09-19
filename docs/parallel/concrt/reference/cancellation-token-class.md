@@ -1,5 +1,5 @@
 ---
-title: cancellation_token クラス |Microsoft ドキュメント
+title: cancellation_token クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d8741763295e96f3d0c221b687c8ef62fbfc55c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 125d08def4a1fb801cb1b6c911d8c8c9c154c296
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695942"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037974"
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token クラス
 `cancellation_token` クラスは、ある操作の取り消しが要求されたかどうかを判断する機能を表します。 特定のトークンを `task_group`、`structured_task_group`、または `task` に関連付けると、暗黙的な取り消しを指定できます。 関連付けられた `cancellation_token_source` が取り消されたときに、取り消すためにポーリングしたり、コールバックを登録したりすることもできます。  
@@ -89,7 +89,8 @@ cancellation_token(cancellation_token&& _Src);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Src`  
+*_Src*<br/>
+コピーまたは移動する cancellation_token します。
   
 ##  <a name="deregister_callback"></a> deregister_callback 
 
@@ -100,8 +101,8 @@ void deregister_callback(const cancellation_token_registration& _Registration) c
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Registration`  
- 登録解除されるコールバックに対応する `cancellation_token_registration` オブジェクト。 このトークンは、`register` メソッドの呼び出しによって既に返されている必要があります。  
+*_Registration*<br/>
+登録解除されるコールバックに対応する `cancellation_token_registration` オブジェクト。 このトークンは、`register` メソッドの呼び出しによって既に返されている必要があります。  
   
 ##  <a name="is_cancelable"></a> is_cancelable 
 
@@ -143,8 +144,9 @@ bool operator!= (const cancellation_token& _Src) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Src`  
-  
+*_Src*<br/>
+比較対象の `cancellation_token`。
+
 ### <a name="return-value"></a>戻り値  
   
 ##  <a name="operator_eq"></a> 演算子 = 
@@ -156,7 +158,8 @@ cancellation_token& operator= (cancellation_token&& _Src);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Src`  
+*_Src*<br/>
+`cancellation_token`を割り当てます。
   
 ### <a name="return-value"></a>戻り値  
   
@@ -167,7 +170,8 @@ bool operator== (const cancellation_token& _Src) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Src`  
+*_Src*<br/>
+比較対象の `cancellation_token`。
   
 ### <a name="return-value"></a>戻り値  
   
@@ -181,14 +185,14 @@ template<typename _Function>
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Function`  
- この `cancellation_token` が取り消されるときにコールバックされる関数オブジェクトの型。  
+*_Function*<br/>
+この `cancellation_token` が取り消されるときにコールバックされる関数オブジェクトの型。  
   
- `_Func`  
- この `cancellation_token` が取り消されるときにコールバックされる関数オブジェクト。  
+*_Func*<br/>
+この `cancellation_token` が取り消されるときにコールバックされる関数オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
- `cancellation_token_registration` メソッドで利用できる `deregister` オブジェクト。その利用目的は、以前に登録されたコールバックの登録を解除し、コールバックが行われないようにすることです。 メソッドがスローされます、 [invalid_operation](invalid-operation-class.md)例外で呼び出される場合、`cancellation_token`を使用して作成されたオブジェクト、 [cancellation_token::none](#none)メソッドです。  
+ `cancellation_token_registration` メソッドで利用できる `deregister` オブジェクト。その利用目的は、以前に登録されたコールバックの登録を解除し、コールバックが行われないようにすることです。 メソッドがスローされます、 [invalid_operation](invalid-operation-class.md)で呼び出される場合は例外を`cancellation_token`を使用して作成されたオブジェクト、 [cancellation_token::none](#none)メソッド。  
   
 ## <a name="see-also"></a>関連項目  
  [concurrency 名前空間](concurrency-namespace.md)

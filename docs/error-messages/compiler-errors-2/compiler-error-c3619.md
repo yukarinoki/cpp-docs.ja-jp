@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3619 |Microsoft ドキュメント
+title: コンパイラ エラー C3619 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a75fed82a989691bc63911b87b9264ed95512dce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ae68bd0fef3f43bfbc430ea2d41cead339424c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249562"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086711"
 ---
 # <a name="compiler-error-c3619"></a>コンパイラ エラー C3619
-マネージ型または WinRT 型でテンプレートは宣言できません  
-  
-クラス テンプレートは、マネージ クラスや WinRT クラスまたはインターフェイスでは使用できません。  
-  
-C3619 が古い形式のコンパイラ オプションを使用して到達のみ **/clr:oldSyntax**です。  
+
+マネージド型または WinRT 型でテンプレートは宣言できません
+
+クラス テンプレートは、マネージド クラスや WinRT クラスまたはインターフェイスでは使用できません。
+
+C3619 が古い形式のコンパイラ オプションを使用して到達のみ **/clr:oldSyntax**します。

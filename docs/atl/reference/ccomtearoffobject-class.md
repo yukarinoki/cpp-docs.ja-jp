@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3814dacff2861bf78800adb8a019b696ce2756b7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ecbf2b415b93526fe856e21411431eb1f20b4c42
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752763"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089581"
 ---
 # <a name="ccomtearoffobject-class"></a>CComTearOffObject クラス
 
@@ -45,7 +45,7 @@ class CComTearOffObject : public Base
 
 #### <a name="parameters"></a>パラメーター
 
-*ベース*  
+*ベース*<br/>
 ティアオフ クラスから派生した`CComTearOffObjectBase`ティアオフ オブジェクトをサポートする場合、インターフェイスです。
 
 ATL は、2 つのフェーズでそのティアオフ インターフェイスを実装する —、`CComTearOffObjectBase`メソッドは、参照カウントを処理および`QueryInterface`、中に`CComTearOffObject`実装[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)。
@@ -123,7 +123,7 @@ CComTearOffObject(void* pv);
 
 ### <a name="parameters"></a>パラメーター
 
-*現在価値*  
+*現在価値*<br/>
 [in]ポインターへのポインターに変換される、`CComObject<Owner>`オブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -164,7 +164,7 @@ CComObject<Owner>* m_pOwner;
 
 ### <a name="parameters"></a>パラメーター
 
-*所有者*  
+*所有者*<br/>
 [in]ティアオフが実装されているクラスです。
 
 ### <a name="remarks"></a>Remarks
@@ -181,10 +181,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>パラメーター
 
-*iid*  
+*iid*<br/>
 [in]要求されているインターフェイスの IID。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]によって識別されるインターフェイス ポインターへのポインター *iid*インターフェイスが見つからない場合は null です。
 
 ### <a name="return-value"></a>戻り値
@@ -209,5 +209,5 @@ STDMETHOD_ULONG Release();
 
 ## <a name="see-also"></a>関連項目
 
-[CComCachedTearOffObject クラス](../../atl/reference/ccomcachedtearoffobject-class.md)   
+[CComCachedTearOffObject クラス](../../atl/reference/ccomcachedtearoffobject-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

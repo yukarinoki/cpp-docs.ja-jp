@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4662 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4662 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60739959a6c26e0a1674b287ebf0a4605966e09b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b1f1744e0bcefd8b17c39677d7f8266403d8f8ff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283427"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109370"
 ---
 # <a name="compiler-warning-level-1-c4662"></a>コンパイラの警告 (レベル 1) C4662
-明示的なインスタンス化。テンプレート クラス 'identifier1' に 'identifier2' を特定する定義がありません  
-  
- 指定したテンプレート クラスを宣言しましたが、定義していません。  
-  
-## <a name="example"></a>例  
-  
-```  
-// C4662.cpp  
-// compile with: /W1 /LD  
-template<class T, int i> class MyClass; // no definition  
-template MyClass< int, 1>;              // C4662  
+
+明示的なインスタンス化。テンプレート クラス 'identifier1' に 'identifier2' を特定する定義がありません
+
+指定したテンプレート クラスを宣言しましたが、定義していません。
+
+## <a name="example"></a>例
+
+```
+// C4662.cpp
+// compile with: /W1 /LD
+template<class T, int i> class MyClass; // no definition
+template MyClass< int, 1>;              // C4662
 ```

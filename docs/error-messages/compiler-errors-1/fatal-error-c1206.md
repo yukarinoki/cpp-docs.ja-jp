@@ -1,5 +1,5 @@
 ---
-title: 致命的なエラー C1206 |Microsoft ドキュメント
+title: 致命的なエラー C1206 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27b690cf055d059d5088edba407c93b4a8ae85fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 79aa3f33f076b6576363b0bdda63e55c5d9f13fd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227383"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046460"
 ---
 # <a name="fatal-error-c1206"></a>致命的なエラー C1206
-AppDomain ごとのデータは、インストールされているランタイムのバージョンではサポートされていません  
-  
- アプリケーション単位のドメイン データなどの一部の機能は、その機能をサポートする共通言語ランタイムによってのみサポートされます。  
-  
- C1206 は、ランタイムの最新バージョンがコンピューターにインストールされていないことを示します。 コンパイラで使用するバージョンの共通言語ランタイムをインストールしてください。  
-  
- 詳細については、「 [appdomain](../../cpp/appdomain.md) 」を参照してください。
+
+AppDomain ごとのデータは、インストールされているランタイムのバージョンではサポートされていません
+
+アプリケーション単位のドメイン データなどの一部の機能は、その機能をサポートする共通言語ランタイムによってのみサポートされます。
+
+C1206 は、ランタイムの最新バージョンがコンピューターにインストールされていないことを示します。 コンパイラで使用するバージョンの共通言語ランタイムをインストールしてください。
+
+詳細については、「 [appdomain](../../cpp/appdomain.md) 」を参照してください。

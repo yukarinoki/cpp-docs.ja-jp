@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32f71ea2536c4cb9b2c9c42f5625a64c986497bb
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0cfe0c64a0029282cfe157e525886279d8d60cb9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678511"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101684"
 ---
 # <a name="concurrentunorderedmultiset-class"></a>concurrent_unordered_multiset クラス
 `concurrent_unordered_multiset`クラスは、同時実行セーフなコンテナー K. 型の要素の可変長シーケンスを制御します。により、同時実行セーフな方法で、シーケンスが表される要素へのアクセス、反復子アクセス、および反復子走査の各操作を追加します。  
@@ -51,17 +51,17 @@ template <typename K,
 ```   
   
 #### <a name="parameters"></a>パラメーター  
- `K`  
- キーの型。  
+*K*<br/>
+キーの型。  
   
- `_Hasher`  
- ハッシュ関数のオブジェクト型。 この引数は省略可能であり、既定値は `std::hash<K>` です。  
+*_Hasher*<br/>
+ハッシュ関数のオブジェクト型。 この引数は省略可能であり、既定値は `std::hash<K>` です。  
   
- `key_equality`  
- 等価比較関数のオブジェクト型。 この引数は省略可能であり、既定値は `std::equal_to<K>` です。  
+*key_equality*<br/>
+等価比較関数のオブジェクト型。 この引数は省略可能であり、既定値は `std::equal_to<K>` です。  
   
- `_Allocator_type`  
- 同時実行ベクターのメモリの割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値は `std::allocator<K>` です。  
+*_Allocator_type*<br/>
+同時実行ベクターのメモリの割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値は `std::allocator<K>` です。  
   
 ## <a name="members"></a>メンバー  
   
@@ -199,25 +199,25 @@ concurrent_unordered_multiset(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Iterator`  
- 入力反復子の型。  
+*_Iterator*<br/>
+入力反復子の型。  
   
- `_Number_of_buckets`  
- この順序なしのマルチセットのバケットの初期数。  
+*_Number_of_buckets*<br/>
+この順序なしのマルチセットのバケットの初期数。  
   
- `_Hasher`  
- この順序なしのマルチセットのハッシュ関数。  
+*_Hasher*<br/>
+この順序なしのマルチセットのハッシュ関数。  
   
- `key_equality`  
- この順序なしのマルチセットの等値比較関数。  
+*key_equality*<br/>
+この順序なしのマルチセットの等値比較関数。  
   
- `_Allocator`  
- この順序なしのマルチセットのアロケーター。  
+*_Allocator*<br/>
+この順序なしのマルチセットのアロケーター。  
   
- `first`  
- `last`  
- `_Uset`  
- ソース`concurrent_unordered_multiset`から要素を移動するオブジェクト。  
+*first*<br/>
+*last*<br/>
+*_Uset*<br/>
+ソース`concurrent_unordered_multiset`から要素を移動するオブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
  すべてのコンス トラクターは、アロケーター オブジェクトを格納`_Allocator`と順序なしのマルチセットを初期化します。  
@@ -241,8 +241,8 @@ size_type count(const key_type& KVal) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `KVal`  
- 検索対象のキー。  
+*KVal*<br/>
+検索対象のキー。  
   
 ### <a name="return-value"></a>戻り値  
  コンテナーにキーが表示される回数の合計を回数します。  
@@ -289,8 +289,8 @@ std::pair<const_iterator,
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `KVal`  
- 検索するキー値。  
+*KVal*<br/>
+検索するキー値。  
   
 ### <a name="return-value"></a>戻り値  
  A[ペア](../../../standard-library/pair-structure.md)最初の要素は、反復子を先頭に、2 番目の要素が、範囲の末尾に反復子です。  
@@ -309,8 +309,8 @@ const_iterator find(const key_type& KVal) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `KVal`  
- 検索するキー値。  
+*KVal*<br/>
+検索するキー値。  
   
 ### <a name="return-value"></a>戻り値  
  指定したキーに一致する最初の要素の位置を指す反復子または反復子`end()`そのような要素が存在しない場合。  
@@ -366,23 +366,23 @@ typename std::enable_if<!std::is_same<const_iterator,
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Iterator`  
- 反復子の型を挿入するために使用します。  
+*_Iterator*<br/>
+反復子の型を挿入するために使用します。  
   
- `V`  
- 挿入された値の型。  
+*V*<br/>
+挿入された値の型。  
   
- `value`  
- 挿入する値。  
+*値*<br/>
+挿入する値。  
   
- `_Where`  
- 挿入ポイントを検索する開始位置。  
+*_Where*<br/>
+挿入ポイントを検索する開始位置。  
   
- `first`  
- 挿入する範囲の先頭。  
+*first*<br/>
+挿入する範囲の先頭。  
   
- `last`  
- 挿入する範囲の終了。  
+*last*<br/>
+挿入する範囲の終了。  
   
 ### <a name="return-value"></a>戻り値  
  挿入位置を指す反復子。  
@@ -459,8 +459,8 @@ concurrent_unordered_multiset& operator= (concurrent_unordered_multiset&& _Uset)
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Uset`  
- ソース `concurrent_unordered_multiset` オブジェクト。  
+*_Uset*<br/>
+ソース `concurrent_unordered_multiset` オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  この `concurrent_unordered_multiset` オブジェクトへの参照。  
@@ -477,8 +477,8 @@ void rehash(size_type _Buckets);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Buckets`  
- 必要なバケット数。  
+*_Buckets*<br/>
+必要なバケット数。  
   
 ### <a name="remarks"></a>Remarks  
  メンバー関数は、バケット数を `_Buckets` 以上に変更し、必要に応じて、ハッシュ テーブルをリビルドします。 バケット数は 2 の累乗である必要があります。 場合いない 2 の累乗で、2 の累乗に切り上げられますされます。  
@@ -508,8 +508,8 @@ void swap(concurrent_unordered_multiset& _Uset);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Uset`  
- `concurrent_unordered_multiset`交換するオブジェクト。  
+*_Uset*<br/>
+`concurrent_unordered_multiset`交換するオブジェクト。  
   
 ##  <a name="unsafe_begin"></a> unsafe_begin 
 
@@ -522,8 +522,8 @@ const_local_iterator unsafe_begin(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Bucket`  
- バケットのインデックス。  
+*_ バケット*<br/>
+バケットのインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  バケットの先頭を指す反復子。  
@@ -537,8 +537,8 @@ size_type unsafe_bucket(const key_type& KVal) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `KVal`  
- 検索対象の要素のキー。  
+*KVal*<br/>
+検索対象の要素のキー。  
   
 ### <a name="return-value"></a>戻り値  
  このコンテナー内のキーのバケットのインデックス。  
@@ -563,8 +563,8 @@ size_type unsafe_bucket_size(size_type _Bucket);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Bucket`  
- 検索するバケット。  
+*_ バケット*<br/>
+検索するバケット。  
   
 ### <a name="return-value"></a>戻り値  
  このコンテナー内のバケットの現在数。  
@@ -578,8 +578,8 @@ const_local_iterator unsafe_cbegin(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Bucket`  
- バケットのインデックス。  
+*_ バケット*<br/>
+バケットのインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  バケットの先頭を指す反復子。  
@@ -593,8 +593,8 @@ const_local_iterator unsafe_cend(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Bucket`  
- バケットのインデックス。  
+*_ バケット*<br/>
+バケットのインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  バケットの先頭を指す反復子。  
@@ -610,8 +610,8 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Bucket`  
- バケットのインデックス。  
+*_ バケット*<br/>
+バケットのインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  バケットの末尾を指す反復子。  
@@ -633,13 +633,13 @@ size_type unsafe_erase(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Where`  
- 消去する反復子の位置。  
+*_Where*<br/>
+消去する反復子の位置。  
   
- `first`  
- `last`  
- `KVal`  
- 消去するキー値。  
+*first*<br/>
+*last*<br/>
+*KVal*<br/>
+消去するキー値。  
   
 ### <a name="return-value"></a>戻り値  
  最初の 2 つのメンバー関数は、削除された要素の後に残る最初の要素を指定する反復子を返しますまたは[エンド](#end)() そのような要素が存在しない場合。 3 つ目のメンバー関数は削除する要素の数を返します。  

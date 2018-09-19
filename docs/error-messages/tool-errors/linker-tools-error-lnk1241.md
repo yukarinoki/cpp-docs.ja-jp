@@ -1,5 +1,5 @@
 ---
-title: リンカ ツール エラー LNK1241 |Microsoft ドキュメント
+title: リンカ ツール エラー LNK1241 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b02b1d9d06706c70478d958dd3c2af8dbc9c2c03
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e4c11a97dd99515ff7623b77ff31de5fb8577b5d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299176"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040623"
 ---
 # <a name="linker-tools-error-lnk1241"></a>リンカ ツール エラー LNK1241
-リソース ファイル 'リソース ファイル' が既に指定されています  
-  
- 実行する場合、このエラーは生成**cvtres**コマンドラインから手動で、そのかどうか、結果として得られる .obj ファイルをリンカーにさらに他の .res ファイルにします。  
-  
- 複数の .res ファイルを指定するには、それらを渡す .res ファイルとしてリンカーなどの一部をいない内から作成された .obj ファイルによって**cvtres**です。
+
+リソース ファイル 'リソース ファイル' が既に指定されています
+
+実行する場合、このエラーは生成**cvtres**コマンドラインから手動で更新し、結果として得られる .obj を渡すかどうか、ファイルをリンカーにさらに他の .res ファイルにします。
+
+複数 .res ファイルを指定するには、それらを渡すすべて .res ファイルとしてリンカーをしない内から作成された .obj ファイルによって**cvtres**します。

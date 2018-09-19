@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1941f08d13fb8aef9b5b281ce4b2bc1c61bf98fe
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 70ba26e5893b21393a3466ae7cf1c6cea43b81ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766588"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070159"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase クラス
 
@@ -41,13 +41,13 @@ ms.locfileid: "43766588"
 ## <a name="syntax"></a>構文
 
 ```
-template <class T>  
+template <class T>
 class CComPtrBase
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 スマート ポインターによって参照されるオブジェクトの種類。
 
 ## <a name="members"></a>メンバー
@@ -111,13 +111,13 @@ HRESULT Advise(
 
 ### <a name="parameters"></a>パラメーター
 
-*pUnk*  
+*pUnk*<br/>
 クライアントへのポインター`IUnknown`します。
 
-*iid*  
+*iid*<br/>
 接続ポイントの GUID です。 通常、これは、接続ポイントによって管理するアウトゴーイング インターフェイスと同じです。
 
-*pdw*  
+*pdw*<br/>
 接続を一意に識別するクッキーへのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -138,7 +138,7 @@ void Attach(T* p2) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*p2*  
+*p2*<br/>
 `CComPtrBase` This ポインターの所有権を持つオブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -175,16 +175,16 @@ HRESULT CoCreateInstance(
 
 ### <a name="parameters"></a>パラメーター
 
-*szProgID*  
+*szProgID*<br/>
 ProgID、CLSID を回復するために使用へのポインター。
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 NULL の場合は、集計の一部として、オブジェクトが作成されていないことを示します。 かどうか、NULL 以外の場合は、集約オブジェクトへのポインター`IUnknown`インターフェイス (制御`IUnknown`)。
 
-*dwClsContext*  
+*dwClsContext*<br/>
 新しく作成されたオブジェクトを管理するコードを実行するコンテキスト。
 
-*rclsid*  
+*rclsid*<br/>
 CLSID は、データとオブジェクトの作成に使用されるコードに関連付けられています。
 
 ### <a name="return-value"></a>戻り値
@@ -207,7 +207,7 @@ HRESULT CopyTo(T** ppT) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*ppT*  
+*ppT*<br/>
 受け取る変数のアドレス、`CComPtrBase`ポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -246,7 +246,7 @@ bool IsEqualObject(IUnknown* pOther) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pOther*  
+*pOther*<br/>
 比較対象の `IUnknown *`。
 
 ### <a name="return-value"></a>戻り値
@@ -301,7 +301,7 @@ bool operator== (T* pT) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pT*  
+*pT*<br/>
 オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -334,7 +334,7 @@ bool operator<(T* pT) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pT*  
+*pT*<br/>
 オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -345,7 +345,7 @@ bool operator<(T* pT) const throw();
 
 キャスト演算子です。
 
-```  
+```
 operator T*() const throw();
 ```
 
@@ -376,10 +376,10 @@ template <class Q> HRESULT QueryInterface(Q
 
 ### <a name="parameters"></a>パラメーター
 
-*Q*  
+*Q*<br/>
 オブジェクトの種類のインターフェイス ポインターが必要です。
 
-*pp*  
+*pp*<br/>
 要求されたインターフェイス ポインターを受け取る出力変数のアドレス。
 
 ### <a name="return-value"></a>戻り値
@@ -414,7 +414,7 @@ HRESULT SetSite(IUnknown* punkParent) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*punkParent*  
+*punkParent*<br/>
 ポインター、`IUnknown`親のインターフェイス。
 
 ### <a name="return-value"></a>戻り値

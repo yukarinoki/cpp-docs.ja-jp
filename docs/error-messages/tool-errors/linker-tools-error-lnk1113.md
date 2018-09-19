@@ -1,5 +1,5 @@
 ---
-title: リンカ ツール エラー LNK1113 |Microsoft ドキュメント
+title: リンカ ツール エラー LNK1113 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22baf1819ddc7d6fce195ad67c23d7b42ef6b1f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 87dae5e17efb7ebeb9d9ac79c51edcfd8f19f620
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296004"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083900"
 ---
 # <a name="linker-tools-error-lnk1113"></a>リンカ ツール エラー LNK1113
-無効なマシン型  
-  
- オブジェクトのヘッダーで指定されたコンピューターの種類が正しくありません。  
-  
- このエラーは、ファイルが壊れている場合に発生することができます。 オブジェクトを再構築します。
+
+無効なマシン型の型
+
+オブジェクトのヘッダーで指定されたコンピューターの種類が無効です。
+
+このエラーは、ファイルが壊れている場合に発生することができます。 オブジェクトを再構築します。

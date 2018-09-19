@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7a5b30ca507387b1529c9e9726e48735c844fac
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3455e88c5a9852c902702544a0f915e8d20dc64e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764830"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043236"
 ---
 # <a name="ccomheapptr-class"></a>CComHeapPtr クラス
 
@@ -32,13 +32,13 @@ ms.locfileid: "43764830"
 ## <a name="syntax"></a>構文
 
 ```
-template<typename T>  
+template<typename T>
 class CComHeapPtr : public CHeapPtr<T, CComAllocator>
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 ヒープに格納されるオブジェクトの種類。
 
 ## <a name="members"></a>メンバー
@@ -76,7 +76,7 @@ explicit CComHeapPtr(T* pData) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pData*  
+*pData*<br/>
 既存の `CComHeapPtr` オブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -85,7 +85,7 @@ explicit CComHeapPtr(T* pData) throw();
 
 ## <a name="see-also"></a>関連項目
 
-[CHeapPtr クラス](../../atl/reference/cheapptr-class.md)   
-[CHeapPtrBase クラス](../../atl/reference/cheapptrbase-class.md)   
-[CComAllocator クラス](../../atl/reference/ccomallocator-class.md)   
+[CHeapPtr クラス](../../atl/reference/cheapptr-class.md)<br/>
+[CHeapPtrBase クラス](../../atl/reference/cheapptrbase-class.md)<br/>
+[CComAllocator クラス](../../atl/reference/ccomallocator-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

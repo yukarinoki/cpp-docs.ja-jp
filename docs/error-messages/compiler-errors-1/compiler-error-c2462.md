@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2462 |Microsoft ドキュメント
+title: コンパイラ エラー C2462 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4ce82ed15bdb8844f69abc260446c1af2fd4a0f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 65df7f4fe7f3822f2723a1709751e3b9b0f23ade
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198561"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082855"
 ---
 # <a name="compiler-error-c2462"></a>コンパイラ エラー C2462
-'identifier': ' new' 演算子で型を定義することはできません  
-  
- オペランド フィールドの種類を定義することはできません、`new`演算子。 別のステートメントで、種類の定義を配置します。  
-  
- 次の例では、C2462 が生成されます。  
-  
-```  
-// C2462.cpp  
-int main() {  
-   new struct S { int i; };   // C2462  
-}  
+
+'identifier': ' new' 式で型を定義することはできません
+
+オペランド フィールドの型を定義することはできません、`new`演算子。 別のステートメントでは、型定義を配置します。
+
+次の例では、C2462 が生成されます。
+
+```
+// C2462.cpp
+int main() {
+   new struct S { int i; };   // C2462
+}
 ```

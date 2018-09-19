@@ -17,28 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69d7a9fc75e23a03e4db232bc798c89f89083e62
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9d78b23f81b72d04e9299616b0273bc97bb7a4e0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383632"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078154"
 ---
 # <a name="expanding-wildcard-arguments"></a>ワイルドカード引数の展開
-**Microsoft 固有の仕様**  
-  
- C プログラムを実行する際、コマンド ラインのファイル名引数とパス引数の指定に、2 つのワイルドカード (疑問符 (?) およびアスタリスク (*)) のいずれかを使用できます。  
-  
- 既定では、ワイルドカードはコマンドラインの引数では展開されません。 setargv.obj または wsetargv.obj ファイルとリンクしてワイルドカードを展開し、標準の引数ベクターの `argv` 読み込みルーチンをワイルドカードを展開するバージョンと置き換えることができます。 プログラムが `main` 関数を使用している場合は、setargv.obj とリンクします。プログラムが `wmain` 関数を使用している場合は、wsetargv.obj とリンクします。これら両方の動作は同等です。  
-  
- setargv.obj または wsetargv.obj とリンクするには、 **/link** オプションを使用します。 例:  
-  
- **cl example.c /link setargv.obj**  
-  
- ワイルドカードはオペレーティング システム コマンドと同じように展開されます (ワイルドカードの使用経験がない場合は、オペレーティング システムのユーザー ガイドを参照)。  
-  
- **Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>参照  
- [リンク オプション](../c-runtime-library/link-options.md)   
- [main 関数とプログラム実行](../c-language/main-function-and-program-execution.md)
+
+**Microsoft 固有の仕様**
+
+C プログラムを実行する際、コマンド ラインのファイル名引数とパス引数の指定に、2 つのワイルドカード (疑問符 (?) およびアスタリスク (*)) のいずれかを使用できます。
+
+既定では、ワイルドカードはコマンドラインの引数では展開されません。 setargv.obj または wsetargv.obj ファイルとリンクしてワイルドカードを展開し、標準の引数ベクターの `argv` 読み込みルーチンをワイルドカードを展開するバージョンと置き換えることができます。 プログラムが `main` 関数を使用している場合は、setargv.obj とリンクします。プログラムが `wmain` 関数を使用している場合は、wsetargv.obj とリンクします。これら両方の動作は同等です。
+
+setargv.obj または wsetargv.obj とリンクするには、 **/link** オプションを使用します。 例:
+
+**cl example.c /link setargv.obj**
+
+ワイルドカードはオペレーティング システム コマンドと同じように展開されます (ワイルドカードの使用経験がない場合は、オペレーティング システムのユーザー ガイドを参照)。
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>参照
+
+[リンク オプション](../c-runtime-library/link-options.md)<br/>
+[main 関数とプログラム実行](../c-language/main-function-and-program-execution.md)

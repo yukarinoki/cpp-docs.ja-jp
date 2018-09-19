@@ -1,5 +1,5 @@
 ---
-title: 致命的なエラー C1046 |Microsoft ドキュメント
+title: 致命的なエラー C1046 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02c609d5f846fa6f339eac98b725919560df068f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 449b181167ef493c149e9e34cb2f1a681148411d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198483"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035471"
 ---
 # <a name="fatal-error-c1046"></a>致命的なエラー C1046
-コンパイラの制限: 構造体のネストが深すぎます  
-  
- 構造体、共用体、またはクラスは、15 レベルの入れ子の制限を超えました。 入れ子のレベルを削減するように定義を書き直してください。 構造体、共用体、またはクラスを使用して、2 つ以上の部分に分割`typedef`を 1 つ以上の入れ子になった構造体を定義します。
+
+コンパイラの制限: 構造体の入れ子レベルが深すぎます
+
+構造体、共用体、またはクラスは、15 レベルの入れ子の制限を超えました。 入れ子のレベルを下げるために、定義を書き直してください。 構造体、共用体、またはクラスに 2 つ以上の部分を使用して分割`typedef`を 1 つまたは複数の入れ子になった構造体を定義します。

@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2912 |Microsoft ドキュメント
+title: コンパイラ エラー C2912 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b165e868f4a2055d692d768c7e5c0164dd34002
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1eb3a1aef43033c57f50cadda79bae3035aea978
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241224"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091921"
 ---
 # <a name="compiler-error-c2912"></a>コンパイラ エラー C2912
-明示的な特殊化 'declaration' は関数テンプレートの特殊化ではありません  
-  
- template 宣言がない関数は特殊化できません。  
-  
- 次の例では C2912 が生成されます。  
-  
-```  
-// C2912.cpp  
-// compile with: /c  
-void f(char);  
-template<> void f(char);   // C2912  
-template<class T> void f(T);   // OK  
-```  
-  
- このエラーは、Visual Studio .NET 2003 で行ったコンパイラ準拠作業の結果として生成されることもあります。すべての明示的な特殊化で、そのパラメーターとしてプライマリ テンプレートのパラメーターと一致するパラメーターを選択する必要があります。  
-  
-```  
-// C2912b.cpp  
-class CF {  
-public:  
-   template <class A> CF(const A& a) {}   // primary template  
-  
-   // attempted explicit specialization  
-   template <> CF(const char* p) {}   // C2912  
-  
-   // try the following line instead  
-   // template <> CF(const char& p) {}  
-};  
+
+明示的な特殊化 'declaration' は関数テンプレートの特殊化ではありません
+
+template 宣言がない関数は特殊化できません。
+
+次の例では C2912 が生成されます。
+
+```
+// C2912.cpp
+// compile with: /c
+void f(char);
+template<> void f(char);   // C2912
+template<class T> void f(T);   // OK
+```
+
+このエラーは、Visual Studio .NET 2003 で行ったコンパイラ準拠作業の結果として生成されることもあります。すべての明示的な特殊化で、そのパラメーターとしてプライマリ テンプレートのパラメーターと一致するパラメーターを選択する必要があります。
+
+```
+// C2912b.cpp
+class CF {
+public:
+   template <class A> CF(const A& a) {}   // primary template
+
+   // attempted explicit specialization
+   template <> CF(const char* p) {}   // C2912
+
+   // try the following line instead
+   // template <> CF(const char& p) {}
+};
 ```

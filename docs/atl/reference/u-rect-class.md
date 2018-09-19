@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1041141e9f31e59ab7a1884e976828972c0abd91
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f96bf02a00459324b14dd26709b24088a03aec86
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767325"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109297"
 ---
 # <a name="urect-class"></a>_U_RECT クラス
 
@@ -74,16 +74,16 @@ LPRECT m_lpRect;
 参照の引数のアドレスが、クラスの 1 つのデータのメンバーに格納されている[ある m_lpRect](#_u_rect__m_lprect)します。
 
 ```
-_U_RECT(RECT& rc);  
+_U_RECT(RECT& rc);
 _U_RECT(LPRECT lpRect);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*rc*  
+*rc*<br/>
 A`RECT`参照。
 
-*lpRect*  
+*lpRect*<br/>
 A`RECT`ポインター。
 
 ### <a name="remarks"></a>Remarks

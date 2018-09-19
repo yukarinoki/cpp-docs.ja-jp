@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 125b15062fc46850ad9b0d2512f9f7cc2e2095e1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 065529796ead2a37b9a417f5e1a2352deb429aba
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204213"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711244"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu クラス
 Windows のポップアップ メニュー機能を実装し、ティアオフ メニューやツールヒントなどの機能を追加することでそれを拡張します。
@@ -315,8 +315,8 @@ static BOOL __stdcall ActivatePopupMenu(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pTopFrame*  
- [in]*pPopupMenu*  
+*pTopFrame*<br/>
+[in][in]*pPopupMenu*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -330,8 +330,8 @@ static void AlwaysShowEmptyToolsEntry(BOOL bShow = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bShow*  
- ポップアップ メニューが空のエントリを表示できる場合は TRUE。FALSE それ以外の場合。  
+*bShow*<br/>
+[in]ポップアップ メニューが空のエントリを表示できる場合は TRUE。FALSE それ以外の場合。  
   
 ##  <a name="areallcommandsshown"></a>  CMFCPopupMenu::AreAllCommandsShown  
 
@@ -352,8 +352,8 @@ MENUAREA_TYPE CheckArea(const CPoint& ptScreen) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ptScreen*  
- 画面座標にポイントします。  
+*ptScreen*<br/>
+[in]画面座標にポイントします。  
   
 ### <a name="return-value"></a>戻り値  
  ポップアップ メニューの基準としたが、ポイントを示す MENUAREA_TYPE パラメーター。  
@@ -395,11 +395,11 @@ CMFCPopupMenu(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pCustPage*  
- カスタマイズ ページへのポインター。  
+*pCustPage*<br/>
+[in]カスタマイズ ページへのポインター。  
   
- [in]*lpszTitle*  
- メニューのキャプションを含む文字列。  
+*lpszTitle*<br/>
+[in]メニューのキャプションを含む文字列。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドがリソースを割り当てて、`CMFCPopupMenu`します。 ポップアップ メニュー項目を作成するには[CMFCPopupMenu::Create](#create)します。  
@@ -418,23 +418,23 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWndParent*  
- 親ウィンドウ、`CMFCPopupMenu`します。  
+*pWndParent*<br/>
+[in]親ウィンドウ、`CMFCPopupMenu`します。  
   
- [in]*x*  
- ポップアップ メニューの位置の水平画面座標  
+*x*<br/>
+[in]ポップアップ メニューの位置の水平画面座標  
   
- [in]*y*  
- ポップアップ メニューの位置の垂直画面座標。  
+*y*<br/>
+[in]ポップアップ メニューの位置の垂直画面座標。  
   
- [in]*hMenu*  
- メニュー リソースへのハンドル。  
+*hMenu*<br/>
+[in]メニュー リソースへのハンドル。  
   
- [in]*ブロック*  
- メニューは、カスタマイズ可能なかどうかを示すブール値パラメーター。 FALSE は、ポップアップ メニューがカスタマイズ可能なことを示します。  
+*ブロックされています。*<br/>
+[in]メニューは、カスタマイズ可能なかどうかを示すブール値パラメーター。 FALSE は、ポップアップ メニューがカスタマイズ可能なことを示します。  
   
- [in]*bOwnMessage*  
- メニューのメッセージのルーティング方法を示すブール値パラメーター。 詳細については、「解説」を参照してください。  
+*bOwnMessage*<br/>
+[in]メニューのメッセージのルーティング方法を示すブール値パラメーター。 詳細については、「解説」を参照してください。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE。それ以外の場合は FALSE です。  
@@ -458,8 +458,8 @@ virtual CPane* CreateTearOffBar(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWndMain*  
- [in]*uiID*  
+*pWndMain*<br/>
+[in][in]*uiID*  
  [in]*lpszName*  
   
 ### <a name="return-value"></a>戻り値  
@@ -487,11 +487,11 @@ void EnableMenuLogo(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iLogoSize*  
- (ピクセル単位)、ロゴのサイズ。  
+*iLogoSize*<br/>
+[in](ピクセル単位)、ロゴのサイズ。  
   
- [in]*nLogoLocation*  
- ロゴの位置を示す列挙型。  
+*nLogoLocation*<br/>
+[in]ロゴの位置を示す列挙型。  
   
 ### <a name="remarks"></a>Remarks  
  ロゴを表示するには、メソッドを実装[CFrameWndEx::OnDrawMenuLogo](../../mfc/reference/cframewndex-class.md#ondrawmenulogo)メイン フレーム ウィンドウにします。  
@@ -506,8 +506,8 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- 有効にするサウンド、FALSE それ以外の場合は TRUE です。  
+*bEnable*<br/>
+[in]有効にするサウンド、FALSE それ以外の場合は TRUE です。  
   
 ### <a name="remarks"></a>Remarks  
  サウンドを有効にした場合、フレームワーク、 [PlaySound](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iusernotification-playsound)メソッド ユーザーは、ポップアップ メニューを開くか、メニュー コマンドを選択したときにします。 既定では、この機能が有効にします。  
@@ -596,8 +596,8 @@ static CMFCPopupMenu::ANIMATION_TYPE GetAnimationType(BOOL bNoSystem = FALSE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bNoSystem*  
- このメソッドがグローバルな値をチェックするかどうかを示すブール値パラメーター。 このメソッドのこのインスタンスのアニメーションのスタイルを取得する場合は FALSE、 [CMFCPopupMenu クラス](../../mfc/reference/cmfcpopupmenu-class.md)します。  
+*bNoSystem*<br/>
+[in]このメソッドがグローバルな値をチェックするかどうかを示すブール値パラメーター。 このメソッドのこのインスタンスのアニメーションのスタイルを取得する場合は FALSE、 [CMFCPopupMenu クラス](../../mfc/reference/cmfcpopupmenu-class.md)します。  
   
 ### <a name="return-value"></a>戻り値  
  アニメーションの種類を記述する列挙値。  
@@ -682,8 +682,8 @@ CMFCToolBarMenuButton* GetMenuItem(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iIndex*  
- メニュー項目の 0 から始まるインデックス。  
+*iIndex*<br/>
+[in]メニュー項目の 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  メニュー項目へのポインター。 インデックスが有効でない場合は NULL です。  
@@ -849,11 +849,11 @@ int InsertItem(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ボタン*  
- 追加するメニュー項目への参照。  
+*ボタン*<br/>
+[in]追加するメニュー項目への参照。  
   
- [in]*iInsertAt*  
- 新しい項目の 0 から始まるインデックス。 場合*iInsertAt* -1 の場合は、項目のメニューの末尾に追加されます。  
+*iInsertAt*<br/>
+[in]新しい項目の 0 から始まるインデックス。 場合*iInsertAt* -1 の場合は、項目のメニューの末尾に追加されます。  
   
 ### <a name="return-value"></a>戻り値  
  項目が挿入された位置の 0 から始まるインデックス。 メソッドが失敗した場合は-1。  
@@ -869,8 +869,8 @@ int InsertSeparator(int iInsertAt = -1);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iInsertAt*  
- このメソッドで、区切り記号を挿入する位置の 0 から始まるインデックス。  
+*iInsertAt*<br/>
+[in]このメソッドで、区切り記号を挿入する位置の 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  区切り記号が挿入された位置の 0 から始まるインデックス。 このメソッドが失敗した場合は-1。  
@@ -1073,10 +1073,10 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nID*  
- [in]*nCode*  
- [in]*pExtra*  
- [in]*pHandlerInfo*  
+*nID*<br/>
+[in][in]*nCode*  
+*pExtra*<br/>
+[in][in]*pHandlerInfo*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -1137,8 +1137,8 @@ BOOL RemoveItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iIndex*  
- 削除する項目の 0 から始まるインデックス。  
+*iIndex*<br/>
+[in]削除する項目の 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE。それ以外の場合は FALSE です。  
@@ -1163,8 +1163,8 @@ static void SetAnimationSpeed(UINT nElapse);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nElapse*  
- 新しいアニメーションの速度 (ミリ秒単位)。  
+*nElapse*<br/>
+[in]新しいアニメーションの速度 (ミリ秒単位)。  
   
 ### <a name="remarks"></a>Remarks  
  アニメーションの速度はグローバル値であり、アプリケーション内のすべてのポップアップ メニューに影響します。 この値は、[完了] をポップアップ メニューのアニメーションがかかる時間を指定します。  
@@ -1179,8 +1179,8 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*型*  
- アニメーションの種類を指定する列挙型。  
+*type*<br/>
+[in]アニメーションの種類を指定する列挙型。  
   
 ### <a name="remarks"></a>Remarks  
  参照してください[CMFCPopupMenu::GetAnimationType](#getanimationtype)の有効な値の一覧については*型*します。  
@@ -1205,8 +1205,8 @@ void SetDefaultItem(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiCmd*  
- 新しい既定のコマンドのメニュー コマンド ID。  
+*uiCmd*<br/>
+[in]新しい既定のコマンドのメニュー コマンド ID。  
   
 ### <a name="remarks"></a>Remarks  
  ポップアップ メニューの既定のコマンドは、ポップアップ メニューが表示されたら、選択されているコマンドです。  
@@ -1219,8 +1219,8 @@ static void SetForceMenuFocus(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bValue*  
- メニュー バー、ポップアップ メニューが表示される場合に入力フォーカスを強制するためにフレームワークが必要な場合は TRUE。 ポップアップ メニューにフォーカスを保持する場合は FALSE です。  
+*bValue*<br/>
+[in]メニュー バー、ポップアップ メニューが表示される場合に入力フォーカスを強制するためにフレームワークが必要な場合は TRUE。 ポップアップ メニューにフォーカスを保持する場合は FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、アプリケーション内のすべてのポップアップ メニューのグローバル フラグを設定します。 既定では、この機能は有効になっていません。  
@@ -1233,8 +1233,8 @@ static void SetForceShadow(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bValue*  
- それ以外の場合 FALSE メニューの影を描画するためにフレームワークが必要な場合は TRUE。  
+*bValue*<br/>
+[in]それ以外の場合 FALSE メニューの影を描画するためにフレームワークが必要な場合は TRUE。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドを呼び出すときに、アプリケーションのグローバル フラグを設定します。 このフラグは、アプリケーションのすべてのポップアップ メニューに影響します。  
@@ -1247,8 +1247,8 @@ void SetMaxWidth(int iMaxWidth);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iMaxWidth*  
- ピクセル単位で、ポップアップ メニューの最大幅。  
+*iMaxWidth*<br/>
+[in]ピクセル単位で、ポップアップ メニューの最大幅。  
   
 ### <a name="remarks"></a>Remarks  
  メニュー コマンドに関連付けられたテキストは、最大の幅に収まらないは切り捨てられに適合しない一部の 3 つのドットが置き換えられます。  
@@ -1306,8 +1306,8 @@ void SetRightAlign(BOOL bRightAlign = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bRightAlign*  
- メニューの配置を示すブール値。 右揃えは TRUE、FALSE が左揃えを示します。  
+*bRightAlign*<br/>
+[in]メニューの配置を示すブール値。 右揃えは TRUE、FALSE が左揃えを示します。  
   
 ### <a name="remarks"></a>Remarks  
  既定では、すべてのポップアップ メニューは、左揃えです。  
@@ -1320,8 +1320,8 @@ static void SetSendMenuSelectMsg(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bSet*  
- TRUE の場合は、ポップアップ メニューを通知の親フレームには、FALSE それ以外の場合。  
+*bSet*<br/>
+[in]TRUE の場合は、ポップアップ メニューを通知の親フレームには、FALSE それ以外の場合。  
   
 ### <a name="remarks"></a>Remarks  
  これは、グローバル アプリケーション内のすべてのポップアップ メニューのオプションです。 有効になっている場合、親フレームにコマンドを選択すると、ポップアップ メニューにオン メッセージが送信されます。  
@@ -1353,8 +1353,8 @@ static void UpdateAllShadows(LPRECT lprectScreen = NULL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lprectScreen*  
- 画面座標で更新するには、リージョンを示す四角形。  
+*lprectScreen*<br/>
+[in]画面座標で更新するには、リージョンを示す四角形。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、アニメーション化されたコントロールまたは動的コンテンツが含まれるその他の windows ポップアップ メニューが表示される場合に便利です。  
@@ -1367,8 +1367,8 @@ void UpdateShadow(LPRECT lprectScreen = NULL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lprectScreen*  
- 四角形を画面座標で更新する領域の境界を指定します。  
+*lprectScreen*<br/>
+[in]四角形を画面座標で更新する領域の境界を指定します。  
   
 ### <a name="remarks"></a>Remarks  
  影を含むポップアップ メニューにアニメーション化されたイメージが重なっている場合は、このメソッドを呼び出します。  

@@ -1,5 +1,5 @@
 ---
-title: double_2 クラス |Microsoft ドキュメント
+title: double_2 クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d049ef7207871382fa343dd3e2034a7e7abef0ac
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d607fd0d63eb1e4fc968b4f83ce71d19eda4cfd0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685646"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059291"
 ---
 # <a name="double2-class"></a>double_2 クラス
 2 個の倍精度浮動小数点数の short ベクターを表します。  
@@ -176,17 +176,17 @@ explicit inline double_2(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_V0`  
- 0 の要素を初期化する値。  
+*_V0*<br/>
+0 の要素を初期化する値。  
   
- `_V1`  
- 1 の要素を初期化する値。  
+*_V1*<br/>
+1 要素を初期化する値。  
   
- `_V`  
- 初期化の値です。  
+*(_V).*<br/>
+初期化の値。  
   
- `_Other`  
- 初期化するために使用するオブジェクト。  
+*_Other*<br/>
+初期化するために使用するオブジェクト。  
   
 ##  <a name="double_2__size"></a> サイズ 
 

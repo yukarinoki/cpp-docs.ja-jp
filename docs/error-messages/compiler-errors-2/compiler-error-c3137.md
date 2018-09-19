@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3137 |Microsoft ドキュメント
+title: コンパイラ エラー C3137 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e93659f8a40d4806189bdcb772b9be89b112b2ee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3c78ebb4f0c33424c823008c3afd8fb692a7086
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255723"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093676"
 ---
 # <a name="compiler-error-c3137"></a>コンパイラ エラー C3137
-'property': プロパティは初期化できません  
-  
- たとえば、プロパティは、コンス トラクターの初期化リストでは初期化できません。  
-  
- 次の例では、C3137 が生成されます。  
-  
-```  
-// C3137.cpp  
-// compile with: /clr /c  
-ref class CMyClass {  
-public:  
-   property int Size {  
-      int get() {  
-         return 0;  
-      }  
-      void set( int i ) {}  
-   }  
-  
-   CMyClass() : Size( 1 ) {   // C3137  
-      // to resolve this C3137, remove the initializer from the  
-      // ctor declaration and perform the assignment as follows  
-      // Size = 1;  
-   }  
-};  
-```  
+
+'property': プロパティを初期化できません
+
+たとえば、プロパティは、コンス トラクターの初期化リストでは初期化できません。
+
+次の例では、C3137 が生成されます。
+
+```
+// C3137.cpp
+// compile with: /clr /c
+ref class CMyClass {
+public:
+   property int Size {
+      int get() {
+         return 0;
+      }
+      void set( int i ) {}
+   }
+
+   CMyClass() : Size( 1 ) {   // C3137
+      // to resolve this C3137, remove the initializer from the
+      // ctor declaration and perform the assignment as follows
+      // Size = 1;
+   }
+};
+```

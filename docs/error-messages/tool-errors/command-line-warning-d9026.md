@@ -1,5 +1,5 @@
 ---
-title: コマンドラインの警告 D9026 |Microsoft ドキュメント
+title: コマンドラインの警告 D9026 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e2d99573ee46c51178cc2fe995fa0f526b800f9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 07be633e56dad6c8f0b304a3c88c1b9919221d4a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299839"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079155"
 ---
 # <a name="command-line-warning-d9026"></a>コマンド ラインの警告 D9026
-オプションはコマンドライン全体に適用します。  
-  
- オプションは、ファイル名の指定後、コマンドで指定されました。 オプションは、前に、ファイルに適用されました。  
-  
- たとえば、コマンドで  
-  
-```  
-CL verdi.c /G5 puccini.c  
-```  
-  
- /G4 デフォルトではありません、/G5 オプションを使用して、VERDI.c というファイルがコンパイルされます。  
-  
- この動作は VERDI.c で結果として得られる、ファイル名の前に指定されたオプションを使用してコンパイル/G4 と異なりコンパイル/G5 を使用してのみに適用されるいくつか以前のバージョンの場合と異なります。
+
+オプションはコマンドライン全体に適用されます。
+
+オプションは、ファイル名を指定したら、コマンドで指定されました。 オプションは、前にそのファイルに適用されました。
+
+たとえば、コマンドで
+
+```
+CL verdi.c /G5 puccini.c
+```
+
+VERDI.c ファイルは、/G4 の既定値ではない、/G5 オプションを使用してコンパイルされます。
+
+この動作は VERDI.c 結果として、ファイル名の前に指定されたオプションを使用してコンパイル/G4 と異なり/G5 を使用してをコンパイルするだけに適用されるいくつか以前のバージョンと異なる。

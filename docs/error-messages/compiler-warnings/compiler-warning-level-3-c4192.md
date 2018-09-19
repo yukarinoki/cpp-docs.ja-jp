@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 3) C4192 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 3) C4192 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bae9b7af95de94b8f667cb09710af21044f8b80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 671a8c83dcadcaa89372e53b6c3d677c5810b4a5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291415"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114411"
 ---
 # <a name="compiler-warning-level-3-c4192"></a>コンパイラの警告 (レベル 3) C4192
-タイプ ライブラリ 'library' のインポート中に 'name' を自動的に除外  
-  
- A`#import`ライブラリには、項目が含まれています*名前*、つまりも Win32 システム ヘッダーで定義します。 などの制限によりタイプ ライブラリの名**IUnknown** GUID は、多くの場合で定義されているタイプ ライブラリでは、システム ヘッダーの定義を複製します。 `#import` これらの項目を検出し、.tlh ファイルと .tli ヘッダー ファイルに組み込むことを拒否します。  
-  
- この動作をオーバーライドするには使用`#import`属性[no_auto_exclude](../../preprocessor/no-auto-exclude.md)と[include()](../../preprocessor/include-parens.md)です。
+
+タイプ ライブラリ 'library' のインポート中に 'name' を自動的に除外
+
+A`#import`ライブラリにはアイテムが含まれています*名前*、つまり、Win32 システム ヘッダーでも定義されています。 などのタイプ ライブラリの制限により名**IUnknown** GUID は多くの場合で定義されているタイプ ライブラリでは、システム ヘッダーの定義を複製します。 `#import` これらの項目を検出し、.tlh と .tli ヘッダー ファイルに組み込むことを拒否します。
+
+この動作をオーバーライドするには使用`#import`属性[no_auto_exclude](../../preprocessor/no-auto-exclude.md)と[include()](../../preprocessor/include-parens.md)します。

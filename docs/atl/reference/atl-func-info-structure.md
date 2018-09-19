@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 392e9dc2997dc7f4f0f36b1d7d38cd8ecdc691bb
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ac285921500107b85c30eba4d2f1940c93721d0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759533"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113059"
 ---
 # <a name="atlfuncinfo-structure"></a>_ATL_FUNC_INFO 構造体
 
@@ -43,16 +43,16 @@ struct _ATL_FUNC_INFO {
 
 ## <a name="members"></a>メンバー
 
-`cc`  
+`cc`<br/>
 呼び出し規則 この構造体を使用する場合、 [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)クラスでは、このメンバーは CC_STDCALL である必要があります。 `CC_CDECL` Windows CE でサポートされている唯一のオプションは、`CALLCONV`のフィールド、`_ATL_FUNC_INFO`構造体。 その他の値はサポートされていませんので、動作が定義されていません。
 
-`vtReturn`  
+`vtReturn`<br/>
 関数のバリアント型は、値を返します。
 
-`nParams`  
+`nParams`<br/>
 関数のパラメーターの数。
 
-`pVarTypes`  
+`pVarTypes`<br/>
 関数のパラメーターのバリアント型の配列。
 
 ## <a name="remarks"></a>Remarks
@@ -75,7 +75,7 @@ IDL で定義されたディスパッチ インターフェイス メソッド�
 
 ## <a name="see-also"></a>関連項目
 
-[クラスと構造体](../../atl/reference/atl-classes.md)  
-[IDispEventSimpleImpl クラス](../../atl/reference/idispeventsimpleimpl-class.md)   
+[クラスと構造体](../../atl/reference/atl-classes.md)<br/>
+[IDispEventSimpleImpl クラス](../../atl/reference/idispeventsimpleimpl-class.md)<br/>
 [SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)
 

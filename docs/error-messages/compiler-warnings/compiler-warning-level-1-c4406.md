@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4406 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4406 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64cded5192c62687006b37363c4bad6e3e001a19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 26ccf67d5e80134254268d00f46181a8b5c9d9bd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272202"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084914"
 ---
 # <a name="compiler-warning-level-1-c4406"></a>コンパイラの警告 (レベル 1) C4406
-ディレクティブは無視のオペランド  
-  
- ディレクティブは、オペランドを受け取りませんが、オペランドが指定されました。  
-  
- 指定したオペランドは無視されます。
+
+オペランドのディレクティブが無視されます。
+
+ディレクティブは、オペランドを取りませんが、オペランドが指定されました。
+
+指定したオペランドは無視されます。

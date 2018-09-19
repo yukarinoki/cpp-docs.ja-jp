@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3507 |Microsoft ドキュメント
+title: コンパイラ エラー C3507 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 008267fddbd1d83574081d7b257e6627b32a1f58
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8375f96c0a35e01a2a93866157c0156cf22a4993
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252918"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105157"
 ---
 # <a name="compiler-error-c3507"></a>コンパイラ エラー C3507
-ProgID は、超える 39 文字 'id';除いて、区切り記号も '.';また、数字で始まる  
-  
- [Progid](../../windows/progid.md)属性がかかることができる値に対する制限がします。  
-  
- 次の例では、C3507 が生成されます。  
-  
-```  
-// C3507.cpp  
-[module(name="x")];  
-[  
-coclass,  
-progid("0123456789012345678901234567890123456789"),  
-uuid("00000000-0000-0000-0000-000000000001") // C3507 expected  
-]  
-struct CMyStruct {  
-};  
-int main() {  
-}  
+
+ProgID は、39 個の文字 'id'; を持つことができます。すべての句読点を含めるも '.';先頭を数字も
+
+[Progid](../../windows/progid.md)属性にはかかるされる値に制限があります。
+
+次の例では、C3507 が生成されます。
+
+```
+// C3507.cpp
+[module(name="x")];
+[
+coclass,
+progid("0123456789012345678901234567890123456789"),
+uuid("00000000-0000-0000-0000-000000000001") // C3507 expected
+]
+struct CMyStruct {
+};
+int main() {
+}
 ```

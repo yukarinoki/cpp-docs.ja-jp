@@ -1,5 +1,5 @@
 ---
-title: source_link_manager クラス |Microsoft ドキュメント
+title: source_link_manager クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8e17626fc870242c97a9ad66a77e5e3b77b1ed1
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ff869fb93d5dae39a924c3d4133f5a6bc6fb824f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691288"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059798"
 ---
 # <a name="sourcelinkmanager-class"></a>source_link_manager クラス
 `source_link_manager` オブジェクトは、`ISource` ブロックへのメッセージング ブロック ネットワーク リンクを管理します。  
@@ -45,8 +45,8 @@ class source_link_manager;
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `_LinkRegistry`  
- ネットワーク リンク レジストリです。  
+*_LinkRegistry*<br/>
+ネットワーク リンクのレジストリ。  
   
 ## <a name="members"></a>メンバー  
   
@@ -54,10 +54,10 @@ class source_link_manager;
   
 |名前|説明|  
 |----------|-----------------|  
-|`const_pointer`|ポインターを提供する型、`const`内の要素、`source_link_manager`オブジェクト。|  
-|`const_reference`|参照を提供する型、`const`に要素が格納されている、`source_link_manager`読み取りや、const の操作を実行するオブジェクト。|  
-|`iterator`|反復子を提供する型の読み取りまたはの任意の要素を変更できる、`source_link_manager`オブジェクト。|  
-|`type`|によって管理されているリンク レジストリの型、`source_link_manager`オブジェクト。|  
+|`const_pointer`|ポインターを提供する型、`const`内の要素を`source_link_manager`オブジェクト。|  
+|`const_reference`|参照を提供する型、`const`に要素が格納されている、`source_link_manager`の読み取りと const の操作を実行するオブジェクト。|  
+|`iterator`|反復子を提供する型の読み取りまたはの任意の要素の変更ができる、`source_link_manager`オブジェクト。|  
+|`type`|によって管理されているリンクのレジストリの種類、`source_link_manager`オブジェクト。|  
   
 ### <a name="public-constructors"></a>パブリック コンストラクター  
   
@@ -71,17 +71,17 @@ class source_link_manager;
 |名前|説明|  
 |----------|-----------------|  
 |[add](#add)|ソースへのリンクを追加、`source_link_manager`オブジェクト。|  
-|[begin](#begin)|最初の要素を指す反復子を返します、`source_link_manager`オブジェクト。|  
+|[begin](#begin)|最初の要素に反復子を返します、`source_link_manager`オブジェクト。|  
 |[contains](#contains)|検索、`network_link_registry`この`source_link_manager`の指定されたブロックのオブジェクト。|  
 |[count](#count)|リンクされたブロックの数をカウント、`source_link_manager`オブジェクト。|  
-|[reference](#reference)|参照を取得し、`source_link_manager`オブジェクト。|  
-|[register_target_block](#register_target_block)|これを保持しているターゲット ブロックを登録`source_link_manager`オブジェクト。|  
+|[reference](#reference)|参照を取得、`source_link_manager`オブジェクト。|  
+|[register_target_block](#register_target_block)|これを保持するターゲット ブロックを登録します`source_link_manager`オブジェクト。|  
 |[release](#release)|参照を解放、`source_link_manager`オブジェクト。|  
 |[remove](#remove)|リンクを削除、`source_link_manager`オブジェクト。|  
-|[set_bound](#set_bound)|これを追加できる送信元のリンクの最大数を設定`source_link_manager`オブジェクト。|  
+|[set_bound](#set_bound)|これに追加できる送信元のリンクの最大数を設定`source_link_manager`オブジェクト。|  
   
-## <a name="remarks"></a>コメント  
- 現時点では、ソース ブロックは、参照カウントです。 これは、上、`network_link_registry`リンクへの同時アクセスを許可し、コールバックをとおしてへのリンクを参照する機能を提供するオブジェクト。 メッセージ ブロック ( `target_block`s または`propagator_block`s)、ソースのリンクをこのクラスを使用する必要があります。  
+## <a name="remarks"></a>Remarks  
+ 現時点では、ソース ブロックは、カウントされた参照です。 これで、ラッパーを`network_link_registry`オブジェクトをリンクへの同時アクセスを許可し、コールバックをとおしてリンクを参照する機能を提供します。 メッセージ ブロック ( `target_block`s または`propagator_block`s)、送信元のリンクをこのクラスを使用する必要があります。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `source_link_manager`  
@@ -91,7 +91,7 @@ class source_link_manager;
   
  **名前空間:** concurrency  
   
-##  <a name="add"></a> 追加 
+##  <a name="add"></a> 追加します。 
 
  ソースへのリンクを追加、`source_link_manager`オブジェクト。  
   
@@ -100,22 +100,22 @@ void add(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Link`  
- 追加されるブロックへのポインター。  
+*リンク (_l)*<br/>
+追加するブロックへのポインター。  
   
 ##  <a name="begin"></a> 開始 
 
- 最初の要素を指す反復子を返します、`source_link_manager`オブジェクト。  
+ 最初の要素に反復子を返します、`source_link_manager`オブジェクト。  
   
 ```
 iterator begin();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 最初の要素を指定する反復子、`source_link_manager`オブジェクト。  
+ 最初の要素を示す反復子、`source_link_manager`オブジェクト。  
   
-### <a name="remarks"></a>コメント  
- によって、反復子の最終の状態が示される、`NULL`リンクします。  
+### <a name="remarks"></a>Remarks  
+ によって、反復子の最終の状態が示される、`NULL`リンク。  
   
 ##  <a name="contains"></a> 含まれています 
 
@@ -126,11 +126,11 @@ bool contains(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Link`  
- 内で検索するのには、ブロックへのポインター、`source_link_manager`オブジェクト。  
+*リンク (_l)*<br/>
+内で検索するのには、ブロックへのポインター、`source_link_manager`オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
- `true` 指定されたブロックが見つかった場合は`false`それ以外の場合。  
+ `true` 指定されたブロックが見つかった場合`false`それ以外の場合。  
   
 ##  <a name="count"></a> カウント 
 
@@ -141,11 +141,11 @@ size_t count();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- リンクされたブロック数、`source_link_manager`オブジェクト。  
+ リンクされたブロックの数、`source_link_manager`オブジェクト。  
   
 ##  <a name="reference"></a> 参照 
 
- 参照を取得し、`source_link_manager`オブジェクト。  
+ 参照を取得、`source_link_manager`オブジェクト。  
   
 ```
 void reference();
@@ -153,15 +153,15 @@ void reference();
   
 ##  <a name="register_target_block"></a> register_target_block 
 
- これを保持しているターゲット ブロックを登録`source_link_manager`オブジェクト。  
+ これを保持するターゲット ブロックを登録します`source_link_manager`オブジェクト。  
   
 ```
 void register_target_block(_Inout_ ITarget<typename _Block::source_type>* _PTarget);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_PTarget`  
- これを保持しているターゲット ブロック`source_link_manager`オブジェクト。  
+*_PTarget*<br/>
+これを保持しているターゲット ブロック`source_link_manager`オブジェクト。  
   
 ##  <a name="release"></a> リリース 
 
@@ -180,23 +180,23 @@ bool remove(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Link`  
- 削除する場合はブロックへのポインターが見つかりました。  
+*リンク (_l)*<br/>
+削除する場合、ブロックへのポインターが見つかりました。  
   
 ### <a name="return-value"></a>戻り値  
- `true` リンクが検出され、削除、`false`それ以外の場合。  
+ `true` 場合は、リンクが見つかり、削除、`false`それ以外の場合。  
   
 ##  <a name="set_bound"></a> set_bound 
 
- これを追加できる送信元のリンクの最大数を設定`source_link_manager`オブジェクト。  
+ これに追加できる送信元のリンクの最大数を設定`source_link_manager`オブジェクト。  
   
 ```
 void set_bound(size_t _MaxLinks);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_MaxLinks`  
- リンクの最大数。  
+*_MaxLinks*<br/>
+リンクの最大数。  
   
 ##  <a name="ctor"></a> source_link_manager 
 

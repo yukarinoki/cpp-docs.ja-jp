@@ -1,5 +1,5 @@
 ---
-title: リンカー ツールの警告 LNK4104 |Microsoft ドキュメント
+title: リンカー ツールの警告 LNK4104 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,46 +16,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9ea3e074cc0db9591cd0ffe9329ff7f1936563f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6304f3ea928c89f4756a4594270ebb7914324f85
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300954"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057263"
 ---
 # <a name="linker-tools-warning-lnk4104"></a>リンカー ツールの警告 LNK4104
-シンボル 'symbol' のエクスポートがプライベートにする必要があります。  
-  
- `symbol`次のいずれかになります。  
-  
--   `DllCanUnloadNow`  
-  
--   `DllGetClassObject`  
-  
--   `DllGetClassFactoryFromClassString`  
-  
--   `DllGetDocumentation`  
-  
--   `DllInitialize`  
-  
--   `DllInstall`  
-  
--   `DllRegisterServer`  
-  
--   `DllRegisterServerEx`  
-  
--   `DllRegisterServerExW`  
-  
--   `DllUnload`  
-  
--   `DllUnregisterServer`  
-  
--   `RasCustomDeleteEntryNotify`  
-  
--   `RasCustomDial`  
-  
--   `RasCustomDialDlg`  
-  
--   `RasCustomEntryDlg`  
-  
- この警告では、dll インポート ライブラリを構築するときに出力し、上記の関数のいずれかのモジュール定義ファイルでプライベートとしてを指定せずにエクスポートします。 一般に、これらの関数は、OLE でのみ使用するエクスポートされます。 リンクされているライブラリを正しくプログラムがそれらへの呼び出しを行うときに、インポート ライブラリ内に配置することは異常な動作につながります。 PRIVATE キーワードの詳細については、次を参照してください。[エクスポート](../../build/reference/exports.md)です。
+
+シンボル 'symbol' のエクスポートがプライベートにする必要があります。
+
+`symbol`次のいずれかを指定できます。
+
+- `DllCanUnloadNow`
+
+- `DllGetClassObject`
+
+- `DllGetClassFactoryFromClassString`
+
+- `DllGetDocumentation`
+
+- `DllInitialize`
+
+- `DllInstall`
+
+- `DllRegisterServer`
+
+- `DllRegisterServerEx`
+
+- `DllRegisterServerExW`
+
+- `DllUnload`
+
+- `DllUnregisterServer`
+
+- `RasCustomDeleteEntryNotify`
+
+- `RasCustomDial`
+
+- `RasCustomDialDlg`
+
+- `RasCustomEntryDlg`
+
+この警告は、dll インポート ライブラリを構築するときに生成され、モジュール定義ファイル内のプライベートとして指定せずに、上記の関数のいずれかをエクスポートします。 一般に、これらの関数は、OLE でのみ使用するためエクスポートされます。 リンクされているライブラリを正しくプログラムがそれらへの呼び出しを行うと、インポート ライブラリに配置するは異常な動作につながります。 PRIVATE キーワードの詳細については、次を参照してください。[エクスポート](../../build/reference/exports.md)します。

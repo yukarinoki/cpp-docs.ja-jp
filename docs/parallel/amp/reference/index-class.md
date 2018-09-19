@@ -1,5 +1,5 @@
 ---
-title: index クラス |Microsoft ドキュメント
+title: index クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 594ee94bbbfc19bc6fcceb9ae7f0760d9ec877dc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: da6dae3aa76e593a3a98ff25b4d327faf284459e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695338"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097134"
 ---
 # <a name="index-class"></a>index クラス
-定義、 *N*-次元インデックス pographics cpp amp.md です。  
+定義、 *N*-次元インデックス pographics cpp amp.md します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,8 +36,8 @@ class index;
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `_Rank`  
- ランク (次元数)。  
+*_Rank*<br/>
+ランク (次元数)。  
   
 ## <a name="members"></a>メンバー  
   
@@ -71,8 +71,8 @@ class index;
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `index`  
   
-## <a name="remarks"></a>コメント  
- `index`構造体の座標ベクターを表します*N*で一意の位置を示す整数、 *N*-次元空間です。 ベクターの値は最上位から最下位へ順に並べ替えられます。 使用して、コンポーネントの値を取得する[演算子 =](#operator_eq)です。  
+## <a name="remarks"></a>Remarks  
+ `index`構造体の座標ベクターを表します*N*内の一意の位置を示す整数を*N*-次元空間。 ベクターの値は最上位から最下位へ順に並べ替えられます。 使用してコンポーネントの値を取得できます[演算子 =](#operator_eq)します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** amp.h  
@@ -123,7 +123,7 @@ _I1
 _I2  
 最下位の次元の長さ。  
 _Other  
-新しいインデックス オブジェクトの基になるインデックス オブジェクトです。  
+新しいインデックス オブジェクトの基になるインデックス オブジェクト。  
 
 ## <a name="operator--"></a>  operator--
 デクリメント インデックス オブジェクトの各要素。  
@@ -135,10 +135,10 @@ index operator--(
 ) restrict(amp,cpu);
 ```  
 ### <a name="return-values"></a>戻り値
-前置演算子のインデックス オブジェクト (* この)。 後置演算子は、新しいインデックス オブジェクトです。
+前置演算子のインデックスのオブジェクト (* この)。 サフィックス演算子の場合、新しいインデックス オブジェクトです。
 
 ## <a name="operator_mod_eq"></a>  operator(mod)=   
-その要素が指定された数で除算された場合は、インデックス オブジェクトの各要素の剰余 (余り) を計算します。
+その要素が、指定した数で除算したときに、インデックスのオブジェクト内の各要素の剰余 (余り) を計算します。
 
 ```  
 index<_Rank>& operator%=(
@@ -146,11 +146,11 @@ index<_Rank>& operator%=(
 ) restrict(cpu, amp);
 ```  
 ### <a name="parameters"></a>パラメーター
-_Rhs 5/3 をで除算する数値。
+_Rhs 5/3 を除算する数値。
 オブジェクトをインデックス値を返します。
 
 ## <a name="operator_star_eq"></a>  operator*=   
-指定したインデックス オブジェクト内の各要素を乗算します。
+指定した数値でインデックス オブジェクト内の各要素を乗算します。
 ```
 index<_Rank>& operator*=(
    int _Rhs
@@ -161,7 +161,7 @@ index<_Rank>& operator*=(
 _Rhs 乗算する数値。
 
 ## <a name="operator_div_eq"></a>  operator/= 
-Index オブジェクト内の各要素を指定された数で除算します。
+Index オブジェクト内の各要素を指定した数で除算します。
 
 ```
 index<_Rank>& operator/=(
@@ -190,7 +190,7 @@ _Index 0 からランク-1 までの整数。
 ### <a name="return-value"></a>戻り値
 指定したインデックス位置にある要素。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 次の例では、インデックスのコンポーネント値を表示します。
 ```  
 // Prints 1 2 3.
@@ -201,7 +201,7 @@ std::cout << idx[2] << "\n";
 ```
 
 ## <a name="operator_add_add"></a>  + + 演算子   
-インデックス オブジェクトの各要素をインクリメントします。
+Index オブジェクトの各要素をインクリメントします。
 ```  
 index<_Rank>& operator++() restrict(amp,cpu);
 
@@ -210,10 +210,10 @@ index<_Rank> operator++(
 ) restrict(amp,cpu);
 ```  
 ### <a name="return-value"></a>戻り値
-前置演算子のインデックス オブジェクト (* この)。 後置演算子は、新しいインデックス オブジェクトです。
+前置演算子のインデックスのオブジェクト (* この)。 サフィックス演算子の場合、新しいインデックス オブジェクトです。
 
 ## <a name="operator_add_eq"></a>  operator+=   
-インデックス オブジェクトの各要素に指定された数を追加します。
+Index オブジェクトの各要素には、指定した数を追加します。
 ```  
 index<_Rank>& operator+=(
    const index<_Rank>& _Rhs
@@ -224,13 +224,13 @@ index<_Rank>& operator+=(
 ) restrict(amp,cpu);
 ``` 
 ### <a name="parameters"></a>パラメーター
-_Rhs 加算する数。
+_Rhs に加算します。
 
 ### <a name="return-value"></a>戻り値
-インデックス オブジェクトです。
+インデックス オブジェクト。
 
 ## <a name="operator_eq"></a>  operator=   
-この 1 つに、指定したインデックス オブジェクトの内容をコピーします。
+これには、指定したインデックス オブジェクトの内容をコピーします。
 ```  
 index<_Rank>& operator=(
    const index<_Rank>& _Other
@@ -240,10 +240,10 @@ index<_Rank>& operator=(
 _Other からコピーするインデックス オブジェクトです。
 
 ### <a name="return-value"></a>戻り値
-このインデックス オブジェクトへの参照。
+このインデックスのオブジェクトへの参照。
 
 ## <a name="operator_-_eq"></a>  operator-=
-インデックス オブジェクトの各要素から指定した数値を減算します。
+Index オブジェクトの各要素から指定した数値を減算します。
 ```  
 index<_Rank>& operator-=(
    const index<_Rank>& _Rhs
@@ -254,13 +254,13 @@ index<_Rank>& operator-=(
 ) restrict(amp,cpu);
 ```  
 ### <a name="parameters"></a>パラメーター
-_Rhs 減算する数。
+_Rhs 減算する数値。
 
 ### <a name="return-value"></a>戻り値
-インデックス オブジェクトです。   
+インデックス オブジェクト。   
 
 ## <a name="rank"></a>  ランク  
-  インデックス オブジェクトのランクを取得します。
+  Index オブジェクトのランクを取得します。
 ```
 static const int rank = _Rank;
 ``` 

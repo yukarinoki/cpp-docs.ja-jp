@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2351 |Microsoft ドキュメント
+title: コンパイラ エラー C2351 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1660e5dfc4f17f7617c82eb3e633f345e2774495
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c92f955beaafa92a8259df4878301158d03c18ff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222382"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034773"
 ---
 # <a name="compiler-error-c2351"></a>コンパイラ エラー C2351
-古い C++ コンス トラクター初期化構文です。  
-  
- コンス トラクターを新しいスタイルの初期化一覧は、唯一の基本クラスである場合でも、各直接基底クラスを明示的に名前する必要があります。  
-  
- 次の例では、C2351 が生成されます。  
-  
-```  
-// C2351.cpp  
-// compile with: /c  
-class B {  
-public:   
-   B() : () {}   // C2351  
-   B() {}   // OK  
-};  
+
+古い C++ コンス トラクター初期化構文です。
+
+新しいスタイルの初期化リスト コンス トラクターには、唯一の基本クラスである場合でも、各直接基底クラスを明示的に名前する必要があります。
+
+次の例では、C2351 が生成されます。
+
+```
+// C2351.cpp
+// compile with: /c
+class B {
+public:
+   B() : () {}   // C2351
+   B() {}   // OK
+};
 ```

@@ -1,5 +1,5 @@
 ---
-title: texture_view クラス |Microsoft ドキュメント
+title: texture_view クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3db02d9cafb87c0f173546687ad01390e09b9f68
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 03684d287072e6c27fa06343ff498bbc62d4449a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696267"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027077"
 ---
 # <a name="textureview-class"></a>texture_view クラス
 テクスチャへの読み取りアクセスおよび書き込みアクセスを提供します。 `texture_view` は、既定の 32 ビット bpse である `int`、`unsigned int`、または `float` の値型のテクスチャを読み取るためにのみ使用できます。 他のテクスチャ形式を読み取るには、`texture_view<const value_type, _Rank>` を使用します。  
@@ -50,11 +50,11 @@ class texture_view<const value_type, _Rank>
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `value_type`  
- テクスチャ集合体の要素型です。  
+*value_type*<br/>
+テクスチャ集合体の要素型です。  
   
- `_Rank`  
- `texture_view` のランクです。  
+*_Rank*<br/>
+`texture_view` のランクです。  
   
 ## <a name="members"></a>メンバー  
   
@@ -156,28 +156,28 @@ texture_view(// [7] copy constructor
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Src`  
- [1、2] コンストラクター  
+*_Src*<br/>
+[1、2] コンストラクター  
  書き込み可能な `texture` が作成される `texture_view`。  
   
  [3, 4]コンス トラクター  
  書き込み可能でない `texture` が作成される `texture_view`。  
   
- `_Other`  
- [5] コピー コンストラクター  
+*_Other*<br/>
+[5] コピー コンストラクター  
  ソースの書き込みが可能な `texture_view`。  
   
  [6, 7]コピー コンス トラクター  
  ソースの書き込みが可能でない `texture_view`。  
   
- `_Mipmap_level`  
- この書き込み可能な `texture` がバインドするソース `texture_view` の特定の MIPMAP レベル。 既定値は 0 で、トップ レベル (最も詳細な) MIPMAP レベルを表します。  
+*_Mipmap_level*<br/>
+この書き込み可能な `texture` がバインドするソース `texture_view` の特定の MIPMAP レベル。 既定値は 0 で、トップ レベル (最も詳細な) MIPMAP レベルを表します。  
   
- `_Most_detailed_mip`  
- 指定された `texture_view` オブジェクトに関連する、ビューのトップ レベルの (最も詳細な) MIPMAP レベル。  
+*_Most_detailed_mip*<br/>
+指定された `texture_view` オブジェクトに関連する、ビューのトップ レベルの (最も詳細な) MIPMAP レベル。  
   
- `_Mip_levels`  
- `texture_view` を使用してアクセスできる MIPMAP レベルの数。  
+*_Mip_levels*<br/>
+`texture_view` を使用してアクセスできる MIPMAP レベルの数。  
   
 ##  <a name="gather_red"></a> gather_red 
 
@@ -197,14 +197,14 @@ const gather_return_type gather_red(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Address_mode`  
- `texture_view` をサンプリングするために使用するアドレス モード。 アドレス モードはすべての次元に対して同じです。  
+*_Address_mode*<br/>
+`texture_view` をサンプリングするために使用するアドレス モード。 アドレス モードはすべての次元に対して同じです。  
   
- `_Sampler`  
- `texture_view` をサンプリングするために使用するサンプラー構成。  
+*_Sampler*<br/>
+`texture_view` をサンプリングするために使用するサンプラー構成。  
   
- `_Coord`  
- サンプルが取得される座標です。 サンプルのテクセルを補間するには、小数の座標値が使用されます。  
+*_Coord*<br/>
+サンプルが取得される座標です。 サンプルのテクセルを補間するには、小数の座標値が使用されます。  
   
 ### <a name="return-value"></a>戻り値  
  4 つのサンプリングされたテクセル値の赤 (x) 要素を含むランク 4 の短いベクター。  
@@ -227,14 +227,14 @@ const gather_return_type gather_green(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Address_mode`  
- `texture_view` をサンプリングするために使用するアドレス モード。 アドレス モードはすべての次元に対して同じです。  
+*_Address_mode*<br/>
+`texture_view` をサンプリングするために使用するアドレス モード。 アドレス モードはすべての次元に対して同じです。  
   
- `_Sampler`  
- `texture_view` をサンプリングするために使用するサンプラー構成。  
+*_Sampler*<br/>
+`texture_view` をサンプリングするために使用するサンプラー構成。  
   
- `_Coord`  
- サンプルが取得される座標です。 サンプルのテクセルを補間するには、小数の座標値が使用されます。  
+*_Coord*<br/>
+サンプルが取得される座標です。 サンプルのテクセルを補間するには、小数の座標値が使用されます。  
   
 ### <a name="return-value"></a>戻り値  
  4 つのサンプリングされたテクセル値の緑 (y) 要素を含むランク 4 の短いベクター。  
@@ -257,14 +257,14 @@ const gather_return_type gather_blue(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Address_mode`  
- `texture_view` をサンプリングするために使用するアドレス モード。 アドレス モードはすべての次元に対して同じです。  
+*_Address_mode*<br/>
+`texture_view` をサンプリングするために使用するアドレス モード。 アドレス モードはすべての次元に対して同じです。  
   
- `_Sampler`  
- `texture_view` をサンプリングするために使用するサンプラー構成。  
+*_Sampler*<br/>
+`texture_view` をサンプリングするために使用するサンプラー構成。  
   
- `_Coord`  
- サンプルが取得される座標です。 サンプルのテクセルを補間するには、小数の座標値が使用されます。  
+*_Coord*<br/>
+サンプルが取得される座標です。 サンプルのテクセルを補間するには、小数の座標値が使用されます。  
   
 ### <a name="return-value"></a>戻り値  
  4 つのサンプリングされたテクセル値の赤 (x) 要素を含むランク 4 の短いベクター。  
@@ -287,14 +287,14 @@ const gather_return_type gather_alpha(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Address_mode`  
- `texture_view` をサンプリングするために使用するアドレス モード。 アドレス モードはすべての次元に対して同じです。  
+*_Address_mode*<br/>
+`texture_view` をサンプリングするために使用するアドレス モード。 アドレス モードはすべての次元に対して同じです。  
   
- `_Sampler`  
- `texture_view` をサンプリングするために使用するサンプラー構成。  
+*_Sampler*<br/>
+`texture_view` をサンプリングするために使用するサンプラー構成。  
   
- `_Coord`  
- サンプルが取得される座標です。 サンプルのテクセルを補間するには、小数の座標値が使用されます。  
+*_Coord*<br/>
+サンプルが取得される座標です。 サンプルのテクセルを補間するには、小数の座標値が使用されます。  
   
 ### <a name="return-value"></a>戻り値  
  4 つのサンプリングされたテクセル値のアルファ (w) 要素を含むランク 4 の短いベクター。  
@@ -314,11 +314,11 @@ value_type get(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Index`  
- 場合によっては多次元配列である、取得する要素のインデックス。  
+*_Index*<br/>
+場合によっては多次元配列である、取得する要素のインデックス。  
   
- `_Mip_level`  
- 値を取得する必要のある MIPMAP レベル。 既定値 0 は最も詳細な MIPMAP レベルを表します。  
+*_Mip_level*<br/>
+値を取得する必要のある MIPMAP レベル。 既定値 0 は最も詳細な MIPMAP レベルを表します。  
   
 ### <a name="return-value"></a>戻り値  
  要素の値。  
@@ -341,8 +341,8 @@ texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Other`  
- [1、2] コピー コンストラクター  
+*_Other*<br/>
+[1、2] コピー コンストラクター  
  書き込み可能な `texture_view` オブジェクト。  
   
  [3] コピー コンス トラクター  
@@ -369,11 +369,11 @@ value_type operator[] (int _I0) const restrict(amp);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Index`  
- 場合によっては多次元の、インデックス。  
+*_Index*<br/>
+場合によっては多次元の、インデックス。  
   
- `_I0`  
- 1 次元インデックス。  
+*_I0*<br/>
+1 次元インデックス。  
   
 ### <a name="return-value"></a>戻り値  
  `_Index` でインデックス付けされている要素の値。  
@@ -421,17 +421,17 @@ value_type operator() (
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Index`  
- 場合によっては多次元の、インデックス。  
+*_Index*<br/>
+場合によっては多次元の、インデックス。  
   
- `_I0`  
- インデックスの最上位のコンポーネント。  
+*_I0*<br/>
+インデックスの最上位のコンポーネント。  
   
- `_I1`  
- インデックスの最上位の次のコンポーネント。  
+*_I1*<br/>
+インデックスの最上位の次のコンポーネント。  
   
- `_I2`  
- インデックスの最下位のコンポーネント。  
+*_I2*<br/>
+インデックスの最下位のコンポーネント。  
   
 ### <a name="return-value"></a>戻り値  
  `_Index` でインデックス付けされている要素の値。  
@@ -457,20 +457,20 @@ value_type sample(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Filter_mode`  
- texture_view をサンプリングするために使用するフィルター モード。 フィルター モードは最小化、最大化、および MIPMAP フィルターで同じです。  
+*_Filter_mode*<br/>
+texture_view をサンプリングするために使用するフィルター モード。 フィルター モードは最小化、最大化、および MIPMAP フィルターで同じです。  
   
- `_Address_mode`  
- texture_view をサンプリングするために使用するアドレス モード。 アドレス モードはすべての次元に対して同じです。  
+*_Address_mode*<br/>
+texture_view をサンプリングするために使用するアドレス モード。 アドレス モードはすべての次元に対して同じです。  
   
- `_Sampler`  
- texture_view をサンプリングするために使用するサンプラー構成。  
+*_Sampler*<br/>
+texture_view をサンプリングするために使用するサンプラー構成。  
   
- `_Coord`  
- サンプルが取得される座標です。 テクセル値の補間には小数の座標値が使用されます。  
+*_Coord*<br/>
+サンプルが取得される座標です。 テクセル値の補間には小数の座標値が使用されます。  
   
- `_Level_of_detail`  
- 値は、サンプリング元の MIPMAP レベルを指定します。 2 つの MIPMAP レベル間の補間には、小数の値が使用されます。 詳細の既定のレベルは 0 で、これは最も詳細な MIPMAP レベルを表します。  
+*_Level_of_detail*<br/>
+値は、サンプリング元の MIPMAP レベルを指定します。 2 つの MIPMAP レベル間の補間には、小数の値が使用されます。 詳細の既定のレベルは 0 で、これは最も詳細な MIPMAP レベルを表します。  
   
 ### <a name="return-value"></a>戻り値  
  補間されたサンプル値。  
@@ -486,11 +486,11 @@ void set(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Index`  
- 場合によっては多次元配列である、設定する要素のインデックス。  
+*_Index*<br/>
+場合によっては多次元配列である、設定する要素のインデックス。  
   
- `value`  
- 要素を設定する値。  
+*値*<br/>
+要素を設定する値。  
   
 ##  <a name="value_type"></a> value_type 
 

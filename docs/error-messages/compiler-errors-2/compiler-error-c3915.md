@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3915 |Microsoft ドキュメント
+title: コンパイラ エラー C3915 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,76 +16,79 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0220df8fbd1af06dfcc5f5cb018c39698e0fae5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e34ad9c292f79bb29684d0984fb7e504dfafa23
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271605"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051673"
 ---
 # <a name="compiler-error-c3915"></a>コンパイラ エラー C3915
-'type' には、既定のインデックス付きプロパティ (クラス インデクサー) がありません。  
-  
- 型には、既定、インデックス付きプロパティがありません。  
-  
- 詳細については、「 [property](../../windows/property-cpp-component-extensions.md)」を参照してください。  
-  
-## <a name="example"></a>例  
- 次の例では、C3915 を生成します。  
-  
-```  
-// C3915.cpp  
-// compile with: /clr  
-ref class X {  
-public:  
-// uncomment property to resolve this C3915  
-//   property int default[]  
-//   {  
-//      int get(int i)  
-//      {  
-//         return 863;  
-//      }  
-//   }  
-};  
-  
-int main() {  
-   X^ x = new X;  
-   System::Console::WriteLine(x[1]);   // C3915  
-}  
-```  
-  
-## <a name="example"></a>例  
- C3915 で定義されている同じコンパイル単位で既定のインデクサーを使用しようとする場合にも発生することができます<xref:System.Reflection.DefaultMemberAttribute>です。  
-  
- 次の例では、C3915 を生成します。  
-  
-```  
-// C3915_b.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-[Reflection::DefaultMember("XXX")]  
-ref struct A {  
-   property Double XXX[Double] {  
-      Double get(Double data) {  
-         return data*data;  
-      }  
-   }  
-};  
-  
-ref struct B {  
-   property Double default[Double] {  
-      Double get(Double data) {  
-         return data*data;  
-      }  
-   }  
-};  
-  
-int main() {  
-   A ^ mya = gcnew A();  
-   Console::WriteLine("{0}", mya[3]);   // C3915  
-  
-   B ^ myb = gcnew B();  
-   Console::WriteLine("{0}", myb[3]);   // OK  
-}  
+
+'type' には、既定のインデックス付きプロパティ (クラス インデクサー) がありません。
+
+型には、既定、インデックス付きプロパティがありません。
+
+詳細については、「 [property](../../windows/property-cpp-component-extensions.md)」を参照してください。
+
+## <a name="example"></a>例
+
+次の例では、C3915 が生成されます。
+
+```
+// C3915.cpp
+// compile with: /clr
+ref class X {
+public:
+// uncomment property to resolve this C3915
+//   property int default[]
+//   {
+//      int get(int i)
+//      {
+//         return 863;
+//      }
+//   }
+};
+
+int main() {
+   X^ x = new X;
+   System::Console::WriteLine(x[1]);   // C3915
+}
+```
+
+## <a name="example"></a>例
+
+定義されている同じコンパイル単位で既定のインデクサーを使用しようとした場合にも C3915<xref:System.Reflection.DefaultMemberAttribute>します。
+
+次の例では、C3915 が生成されます。
+
+```
+// C3915_b.cpp
+// compile with: /clr
+using namespace System;
+
+[Reflection::DefaultMember("XXX")]
+ref struct A {
+   property Double XXX[Double] {
+      Double get(Double data) {
+         return data*data;
+      }
+   }
+};
+
+ref struct B {
+   property Double default[Double] {
+      Double get(Double data) {
+         return data*data;
+      }
+   }
+};
+
+int main() {
+   A ^ mya = gcnew A();
+   Console::WriteLine("{0}", mya[3]);   // C3915
+
+   B ^ myb = gcnew B();
+   Console::WriteLine("{0}", myb[3]);   // OK
+}
 ```

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5614006ed60d088a2749ab13417de23054e64ee
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bba9e3cce5424fdba86c05c0fd94cb3a0d08a5bb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761398"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030925"
 ---
 # <a name="ccomptr-class"></a>CComPtr クラス
 
@@ -32,13 +32,13 @@ COM インターフェイス ポインターを管理するためのスマート
 ## <a name="syntax"></a>構文
 
 ```
-template<class T>  
+template<class T>
 class CComPtr
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 COM インターフェイスを格納するポインターの種類を指定します。
 
 ## <a name="members"></a>メンバー
@@ -89,10 +89,10 @@ CComPtr (const CComPtr<T>& lp) throw ();
 
 ### <a name="parameters"></a>パラメーター
 
-*lp*  
+*lp*<br/>
 インターフェイス ポインターを初期化するために使用されます。
 
-*T*  
+*T*<br/>
 COM インターフェイスです。
 
 ##  <a name="operator_eq"></a>  CComPtr::operator =
@@ -114,6 +114,6 @@ T* operator= (const CComPtr<T>& lp) throw ();
 
 ## <a name="see-also"></a>関連項目
 
-[CComPtr::CComPtr](#ccomptr)   
-[CComQIPtr::CComQIPtr](../../atl/reference/ccomqiptr-class.md#ccomqiptr)   
+[CComPtr::CComPtr](#ccomptr)<br/>
+[CComQIPtr::CComQIPtr](../../atl/reference/ccomqiptr-class.md#ccomqiptr)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

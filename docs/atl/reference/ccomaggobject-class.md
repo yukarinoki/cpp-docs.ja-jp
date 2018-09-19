@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76a85b840aba9d52600b3cf730eada0e8095eb98
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8ffe21526dd106ad067c68da49d6b07bb9e50cf8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756325"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039830"
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject クラス
 
@@ -41,14 +41,14 @@ ms.locfileid: "43756325"
 ## <a name="syntax"></a>構文
 
 ```
-template<class contained>  
-class CComAggObject : public IUnknown, 
+template<class contained>
+class CComAggObject : public IUnknown,
    public CComObjectRootEx<contained::_ThreadModel::ThreadModelNoCS>
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*含まれています。*  
+*含まれています。*<br/>
 派生したクラス、 [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)または[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)オブジェクトでサポートするその他のすべてのインターフェイスからも、します。
 
 ## <a name="members"></a>メンバー
@@ -119,7 +119,7 @@ CComAggObject(void* pv);
 
 ### <a name="parameters"></a>パラメーター
 
-*現在価値*  
+*現在価値*<br/>
 [in]不明な外部です。
 
 ### <a name="remarks"></a>Remarks
@@ -152,7 +152,7 @@ static HRESULT WINAPI CreateInstance(
 
 ### <a name="parameters"></a>パラメーター
 
-*pp*  
+*pp*<br/>
 [out]ポインターを**CComAggObject\<**<em>に含まれている</em>**>** ポインター。 場合`CreateInstance`が成功すると、 *pp* NULL に設定されます。
 
 ### <a name="return-value"></a>戻り値
@@ -195,7 +195,7 @@ CComContainedObject<contained> m_contained;
 
 ### <a name="parameters"></a>パラメーター
 
-*含まれています。*  
+*含まれています。*<br/>
 [in]派生したクラス、 [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)または[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)オブジェクトでサポートするその他のすべてのインターフェイスからも、します。
 
 ### <a name="remarks"></a>Remarks
@@ -214,13 +214,13 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 
 ### <a name="parameters"></a>パラメーター
 
-*iid*  
+*iid*<br/>
 [in]要求されているインターフェイスの識別子。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]によって識別されるインターフェイス ポインターへのポインター *iid*します。 オブジェクトは、このインターフェイスをサポートしていない場合*ppvObject* NULL に設定されます。
 
-*pp*  
+*pp*<br/>
 [out]型によって識別されるインターフェイス ポインターへのポインター`Q`します。 オブジェクトは、このインターフェイスをサポートしていない場合*pp* NULL に設定されます。
 
 ### <a name="return-value"></a>戻り値
@@ -245,9 +245,9 @@ STDMETHOD_(ULONG, Release)();
 
 ## <a name="see-also"></a>関連項目
 
-[CComObject クラス](../../atl/reference/ccomobject-class.md)   
-[CComPolyObject クラス](../../atl/reference/ccompolyobject-class.md)   
-[DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)   
-[集約](aggregation-and-class-factory-macros.md#declare_only_aggregatable)   
-[DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)   
+[CComObject クラス](../../atl/reference/ccomobject-class.md)<br/>
+[CComPolyObject クラス](../../atl/reference/ccompolyobject-class.md)<br/>
+[DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)<br/>
+[集約](aggregation-and-class-factory-macros.md#declare_only_aggregatable)<br/>
+[DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

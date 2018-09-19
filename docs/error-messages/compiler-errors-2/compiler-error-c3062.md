@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3062 |Microsoft ドキュメント
+title: コンパイラ エラー C3062 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da507511cb5f091d5d9432bbfeb36951e3f43c6f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95f2e58cada0b1b825fb0f065b461db6350de9fc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250567"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067169"
 ---
 # <a name="compiler-error-c3062"></a>コンパイラ エラー C3062
-'enum': 基になる型が 'type' であるために、列挙子から値が必要です  
-  
- 列挙体の基になる型を指定できます。 ただし、一部の種類では、列挙子ごとに値を割り当てることが必要です。  
-  
- 列挙型の詳細については、次を参照してください。[列挙型クラス](../../windows/enum-class-cpp-component-extensions.md)です。  
-  
- 次の例では、C3062 が生成されます。  
-  
-```  
-// C3062.cpp  
-// compile with: /clr  
-  
-enum class MyEnum : bool { a };   // C3062  
-enum class MyEnum2 : bool { a = true};   // OK  
+
+'enum': 基になる型は 'type' であるために、列挙子から値が必要です
+
+列挙体は、基になる型を指定することができます。 ただし、一部の種類には、列挙子ごとに値を代入する必要があります。
+
+列挙型の詳細については、次を参照してください。[列挙型クラス](../../windows/enum-class-cpp-component-extensions.md)します。
+
+次の例では、C3062 が生成されます。
+
+```
+// C3062.cpp
+// compile with: /clr
+
+enum class MyEnum : bool { a };   // C3062
+enum class MyEnum2 : bool { a = true};   // OK
 ```

@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3054 |Microsoft ドキュメント
+title: コンパイラ エラー C3054 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,42 +16,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9880373d0d401c15754a2aaf6759fe2c6c68574
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 13a25b731c602d4b684b1cfcea65aba651ddbac0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256599"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029404"
 ---
 # <a name="compiler-error-c3054"></a>コンパイラ エラー C3054
-'#pragma omp parallel' は、ジェネリック クラスまたはジェネリック関数では現在サポートされていません  
-  
- 詳細については、次を参照してください。[ジェネリック](../../windows/generics-cpp-component-extensions.md)と[OpenMP](../../parallel/openmp/openmp-in-visual-cpp.md)です。  
-  
-## <a name="example"></a>例  
- 次の例では C3054 が生成されます。  
-  
-```  
-// C3054.cpp  
-// compile with: /openmp /clr /c  
-#include <omp.h>  
-  
-ref struct MyBaseClass {  
-   // Delete the following 7 lines to resolve.  
-   generic <class ItemType>  
-   void Test(ItemType i) {   // C3054  
-      #pragma omp parallel num_threads(4)  
-      {  
-         int i = omp_get_thread_num();  
-      }  
-   }  
-  
-   // OK  
-   void Test2() {  
-      #pragma omp parallel num_threads(4)  
-      {  
-         int i = omp_get_thread_num();  
-      }  
-   }  
-};  
+
+'#pragma omp parallel' は、ジェネリック クラスまたはジェネリック関数では現在サポートされていません
+
+詳細については、次を参照してください。[ジェネリック](../../windows/generics-cpp-component-extensions.md)と[OpenMP](../../parallel/openmp/openmp-in-visual-cpp.md)します。
+
+## <a name="example"></a>例
+
+次の例では C3054 が生成されます。
+
+```
+// C3054.cpp
+// compile with: /openmp /clr /c
+#include <omp.h>
+
+ref struct MyBaseClass {
+   // Delete the following 7 lines to resolve.
+   generic <class ItemType>
+   void Test(ItemType i) {   // C3054
+      #pragma omp parallel num_threads(4)
+      {
+         int i = omp_get_thread_num();
+      }
+   }
+
+   // OK
+   void Test2() {
+      #pragma omp parallel num_threads(4)
+      {
+         int i = omp_get_thread_num();
+      }
+   }
+};
 ```

@@ -1,5 +1,5 @@
 ---
-title: lock::try_acquire |Microsoft ドキュメント
+title: lock::try_acquire |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 25b5ec1ab7bb5c429538f312ee3b598d3d1d83ec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ce9e13e56728216c4a4b16246d4e99117199878c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33137511"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115958"
 ---
 # <a name="locktryacquire"></a>lock::try_acquire
-指定された時間まで待機し、返すオブジェクトのロックを取得、`bool`例外をスローする代わりに取得の成功を報告します。  
+一定の時間を待機していると、返すオブジェクトのロックを取得、`bool`例外をスローする代わりに取得の成功を報告します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,17 +43,17 @@ bool try_acquire(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `_timeout`  
- タイムアウト値 (ミリ秒単位) として、<xref:System.TimeSpan>です。  
+*タイムアウト _t*<br/>
+タイムアウト値 (ミリ秒単位) またはとして、<xref:System.TimeSpan>します。  
   
 ## <a name="return-value"></a>戻り値  
  `true` ロックが取得された場合`false`それ以外の場合。  
   
-## <a name="remarks"></a>コメント  
- 場合は、ロックは既に取得されて、この関数は何も行いません。  
+## <a name="remarks"></a>Remarks  
+ 場合は、ロックは既に取得されて、何もされません。  
   
 ## <a name="example"></a>例  
- この例では、複数のスレッド間でクラスの 1 つのインスタンスで使用します。  クラスは、その内部データへのアクセスがスレッドごとに一貫していることを確認するのに自体に対するロックを使用します。  メイン アプリケーション スレッドは、ワーカー スレッドがまだ存在していて、そのタスクを完了したすべてのワーカー スレッドまで終了を待機を定期的に確認するクラスの同じインスタンスでロックを使用します。  
+ この例では、複数のスレッド クラスの 1 つのインスタンスを使用します。  クラスでは、その内部データへのアクセスがスレッドごとに一貫性のあることを確認するのに自体に対するロックを使用します。  メイン アプリケーション スレッドは、すべてのワーカー スレッドがまだ存在していて、そのタスクが完了するまでのすべてのワーカー スレッドの終了を待機を定期的に確認するクラスの同じインスタンスでロックを使用します。  
   
 ```  
 // msl_lock_try_acquire.cpp  

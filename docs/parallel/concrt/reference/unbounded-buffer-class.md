@@ -1,5 +1,5 @@
 ---
-title: unbounded_buffer クラス |Microsoft ドキュメント
+title: unbounded_buffer クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de5b268ca3f962461ecc7e64159efeeb56414ebe
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 615043cd12825fd7bfd23442c3913b6d82b0094e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693609"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027553"
 ---
 `unbounded_buffer` メッセージング ブロックは、メッセージを無制限に格納することができる、複数のターゲットと複数のソースを持つ順序付けられた `propagator_block` です。  
   
@@ -48,8 +48,8 @@ class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<   
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `_Type`  
- メッセージのペイロードの型が格納され、バッファーによって反映されます。  
+*種類 (_t)*<br/>
+メッセージのペイロードの型が格納され、バッファーによって反映されます。  
   
 ## <a name="members"></a>メンバー  
   
@@ -57,33 +57,33 @@ class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<   
   
 |名前|説明|  
 |----------|-----------------|  
-|[unbounded_buffer](#ctor)|オーバーロードされます。 構築、`unbounded_buffer`メッセージング ブロックです。|  
-|[~ unbounded_buffer デストラクター](#dtor)|破棄、`unbounded_buffer`メッセージング ブロックです。|  
+|[unbounded_buffer](#ctor)|オーバーロードされます。 構築、`unbounded_buffer`メッセージング ブロックします。|  
+|[~ unbounded_buffer デストラクター](#dtor)|破棄、`unbounded_buffer`メッセージング ブロックします。|  
   
 ### <a name="public-methods"></a>パブリック メソッド  
   
 |名前|説明|  
 |----------|-----------------|  
-|[dequeue](#dequeue)|項目を削除、`unbounded_buffer`メッセージング ブロックです。|  
-|[enqueue](#enqueue)|項目を追加、`unbounded_buffer`メッセージング ブロックです。|  
+|[dequeue](#dequeue)|項目を削除、`unbounded_buffer`メッセージング ブロックします。|  
+|[enqueue](#enqueue)|項目を追加、`unbounded_buffer`メッセージング ブロックします。|  
   
 ### <a name="protected-methods"></a>プロテクト メソッド  
   
 |名前|説明|  
 |----------|-----------------|  
-|[accept_message](#accept_message)|これによって提供されたメッセージを受け入れる`unbounded_buffer`メッセージング ブロックで、呼び出し元に所有権を転送します。|  
-|[consume_message](#consume_message)|によって以前に提供メッセージを使用して、`unbounded_buffer`ブロックのメッセージングおよび呼び出し元に所有権を転送する、ターゲットによって予約されています。|  
-|[link_target_notification](#link_target_notification)|新しいターゲットがこれにリンクされていることを通知するコールバック`unbounded_buffer`メッセージング ブロックです。|  
-|[process_input_messages](#process_input_messages)|場所、 `message` `_PMessage`この`unbounded_buffer`メッセージング ブロックと、すべてのリンクのターゲットにそれを提供しようとします。|  
-|[propagate_message](#propagate_message)|メッセージを非同期的に渡す、`ISource`ブロックをこの`unbounded_buffer`メッセージング ブロックです。 によって呼び出された、`propagate`メソッドは、ソース ブロックによって呼び出されるとします。|  
-|[propagate_output_messages](#propagate_output_messages)|場所、 `message` `_PMessage`この`unbounded_buffer`メッセージング ブロックと、すべてのリンクのターゲットにそれを提供しようとします。 (上書き[source_block::propagate_output_messages](source-block-class.md#propagate_output_messages))。|  
-|[release_message](#release_message)|以前のメッセージの予約を解放します。 (上書き[source_block::release_message](source-block-class.md#release_message))。|  
-|[reserve_message](#reserve_message)|これによって以前に提供メッセージを予約`unbounded_buffer`メッセージング ブロックです。 (上書き[source_block::reserve_message](source-block-class.md#reserve_message))。|  
-|[resume_propagation](#resume_propagation)|伝達は、予約が解放された後に再開します。 (上書き[source_block::resume_propagation](source-block-class.md#resume_propagation))。|  
-|[send_message](#send_message)|メッセージを同期的に渡す、`ISource`ブロックをこの`unbounded_buffer`メッセージング ブロックです。 によって呼び出された、`send`メソッドは、ソース ブロックによって呼び出されるとします。|  
-|[supports_anonymous_source](#supports_anonymous_source)|上書き、`supports_anonymous_source`を示すこのブロックがリンクされていないソースによって提供されたメッセージを受け入れることができます。 (上書き[itarget::supports_anonymous_source](itarget-class.md#supports_anonymous_source))。|  
+|[accept_message](#accept_message)|これによって提供されたメッセージを受け入れる`unbounded_buffer`メッセージング ブロック、呼び出し元に所有権を転送します。|  
+|[consume_message](#consume_message)|によって以前に提供されたメッセージを使用して、`unbounded_buffer`メッセージング ブロックと、呼び出し元に所有権を譲渡する、ターゲットによって予約されています。|  
+|[link_target_notification](#link_target_notification)|この新しいターゲットがリンクされていることを通知するコールバック`unbounded_buffer`メッセージング ブロックします。|  
+|[process_input_messages](#process_input_messages)|場所、 `message` `_PMessage`この`unbounded_buffer`メッセージング ブロックと、すべてのリンクのターゲットに提供しようとします。|  
+|[propagate_message](#propagate_message)|メッセージを非同期的に渡す、`ISource`このブロック`unbounded_buffer`メッセージング ブロックします。 によって呼び出されます、`propagate`メソッドは、ソース ブロックによって呼び出されます。|  
+|[propagate_output_messages](#propagate_output_messages)|場所、 `message` `_PMessage`この`unbounded_buffer`メッセージング ブロックと、すべてのリンクのターゲットに提供しようとします。 (上書き[source_block::propagate_output_messages](source-block-class.md#propagate_output_messages))。|  
+|[release_message](#release_message)|前のメッセージの予約を解放します。 (上書き[source_block::release_message](source-block-class.md#release_message))。|  
+|[reserve_message](#reserve_message)|これによって以前に提供されたメッセージを予約`unbounded_buffer`メッセージング ブロックします。 (上書き[source_block::reserve_message](source-block-class.md#reserve_message))。|  
+|[resume_propagation](#resume_propagation)|予約が解放された後は、伝達を再開します。 (上書き[source_block::resume_propagation](source-block-class.md#resume_propagation))。|  
+|[send_message](#send_message)|メッセージを同期的に渡す、`ISource`このブロック`unbounded_buffer`メッセージング ブロックします。 によって呼び出されます、`send`メソッドは、ソース ブロックによって呼び出されます。|  
+|[supports_anonymous_source](#supports_anonymous_source)|上書き、`supports_anonymous_source`メソッドをこのブロックがリンクされていないソースによって提供されたメッセージを受け入れることを示します。 (上書き[itarget::supports_anonymous_source](itarget-class.md#supports_anonymous_source))。|  
 
- 詳細については、次を参照してください。[非同期メッセージ ブロック](../asynchronous-message-blocks.md)です。  
+ 詳細については、次を参照してください。[非同期メッセージ ブロック](../asynchronous-message-blocks.md)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [ISource](isource-class.md)  
@@ -103,7 +103,7 @@ class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<   
   
 ##  <a name="accept_message"></a> accept_message 
 
- これによって提供されたメッセージを受け入れる`unbounded_buffer`メッセージング ブロックで、呼び出し元に所有権を転送します。  
+ これによって提供されたメッセージを受け入れる`unbounded_buffer`メッセージング ブロック、呼び出し元に所有権を転送します。  
   
 ```  
 virtual message<_Type> * accept_message(  
@@ -112,15 +112,15 @@ virtual message<_Type> * accept_message(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_MsgId`  
- `runtime_object_identity` 、提供されているの`message`オブジェクト。  
+*_MsgId*<br/>
+`runtime_object_identity` 、提供されたの`message`オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
- ポインター、`message`呼び出し元がの所有権をオブジェクトします。  
+ ポインター、`message`呼び出し元は、の所有権を今すぐにオブジェクトします。  
   
 ##  <a name="consume_message"></a> consume_message 
 
- によって以前に提供メッセージを使用して、`unbounded_buffer`ブロックのメッセージングおよび呼び出し元に所有権を転送する、ターゲットによって予約されています。  
+ によって以前に提供されたメッセージを使用して、`unbounded_buffer`メッセージング ブロックと、呼び出し元に所有権を譲渡する、ターゲットによって予約されています。  
   
 ```  
 virtual message<_Type> * consume_message(  
@@ -129,29 +129,29 @@ virtual message<_Type> * consume_message(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_MsgId`  
- `runtime_object_identity`の`message`使用されているオブジェクトします。  
+*_MsgId*<br/>
+`runtime_object_identity`の`message`使用しているオブジェクトします。  
   
 ### <a name="return-value"></a>戻り値  
- ポインター、`message`呼び出し元がの所有権をオブジェクトします。  
+ ポインター、`message`呼び出し元は、の所有権を今すぐにオブジェクトします。  
   
-### <a name="remarks"></a>コメント  
- ような`accept`への呼び出し前に常に、`reserve`です。  
+### <a name="remarks"></a>Remarks  
+ ような`accept`への呼び出しでは、前に必ずが`reserve`します。  
   
-##  <a name="dequeue"></a> キューから削除します。 
+##  <a name="dequeue"></a> デキュー 
 
- 項目を削除、`unbounded_buffer`メッセージング ブロックです。  
+ 項目を削除、`unbounded_buffer`メッセージング ブロックします。  
   
 ```  
 _Type dequeue();  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 削除されたメッセージのペイロード、`unbounded_buffer`です。  
+ 削除されたメッセージのペイロード、`unbounded_buffer`します。  
   
 ##  <a name="enqueue"></a> エンキュー 
 
- 項目を追加、`unbounded_buffer`メッセージング ブロックです。  
+ 項目を追加、`unbounded_buffer`メッセージング ブロックします。  
   
 ```  
 bool enqueue(  
@@ -160,15 +160,15 @@ bool enqueue(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Item`  
- 追加する項目。  
+*(_I)*<br/>
+追加する項目。  
   
 ### <a name="return-value"></a>戻り値  
  `true` 項目が受け入れられた場合`false`それ以外の場合。  
   
 ##  <a name="link_target_notification"></a> link_target_notification 
 
- 新しいターゲットがこれにリンクされていることを通知するコールバック`unbounded_buffer`メッセージング ブロックです。  
+ この新しいターゲットがリンクされていることを通知するコールバック`unbounded_buffer`メッセージング ブロックします。  
   
 ```  
 virtual void link_target_notification(  
@@ -177,12 +177,12 @@ virtual void link_target_notification(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_PTarget`  
- 新しくリンクされたターゲットへのポインター。  
+*_PTarget*<br/>
+新たにリンクされたターゲットへのポインター。  
   
 ##  <a name="propagate_message"></a> propagate_message 
 
- メッセージを非同期的に渡す、`ISource`ブロックをこの`unbounded_buffer`メッセージング ブロックです。 によって呼び出された、`propagate`メソッドは、ソース ブロックによって呼び出されるとします。  
+ メッセージを非同期的に渡す、`ISource`このブロック`unbounded_buffer`メッセージング ブロックします。 によって呼び出されます、`propagate`メソッドは、ソース ブロックによって呼び出されます。  
   
 ```  
 virtual message_status propagate_message(  
@@ -192,29 +192,29 @@ virtual message_status propagate_message(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_PMessage`  
- `message` オブジェクトを指すポインター。  
+*_PMessage*<br/>
+`message` オブジェクトを指すポインター。  
   
- `_PSource`  
- メッセージを提供する、ソース ブロックへのポインター。  
+*_PSource*<br/>
+メッセージを提供するソース ブロックへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- A [message_status](concurrency-namespace-enums.md#message_status)のメッセージを行うには、対象の決定を示す値。  
+ A [message_status](concurrency-namespace-enums.md#message_status)メッセージとは、ターゲットの決定を示す値。  
   
 ##  <a name="propagate_output_messages"></a> propagate_output_messages 
 
- 場所、 `message` `_PMessage`この`unbounded_buffer`メッセージング ブロックと、すべてのリンクのターゲットにそれを提供しようとします。  
+ 場所、 `message` `_PMessage`この`unbounded_buffer`メッセージング ブロックと、すべてのリンクのターゲットに提供しようとします。  
   
 ```  
 virtual void propagate_output_messages();  
 ```  
   
-### <a name="remarks"></a>コメント  
- 別のメッセージが既に事前にこの 1 つのかどうか、 `unbounded_buffer`、リンクされたターゲットに伝達は、前のメッセージを受け入れるか、消費されるまでは発生しません。 最初にターゲットを正常にリンクする`accept`または`consume`メッセージ所有権し、他のターゲットことができますし、メッセージが表示されません。  
+### <a name="remarks"></a>Remarks  
+ 別のメッセージが既に事前内にあるこのかどうか、 `unbounded_buffer`、リンクされたターゲットへの伝達は、前のメッセージを受け入れるか、使用するまでは行われません。 最初にターゲットの正常にリンクされた`accept`または`consume`、所有権のあるメッセージとその他のターゲットできますし、メッセージが表示ない、です。  
   
 ##  <a name="process_input_messages"></a> process_input_messages 
 
- 場所、 `message` `_PMessage`この`unbounded_buffer`メッセージング ブロックと、すべてのリンクのターゲットにそれを提供しようとします。  
+ 場所、 `message` `_PMessage`この`unbounded_buffer`メッセージング ブロックと、すべてのリンクのターゲットに提供しようとします。  
   
 ```  
 virtual void process_input_messages(  
@@ -223,11 +223,12 @@ virtual void process_input_messages(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_PMessage`  
+*_PMessage*<br/>
+処理されるメッセージへのポインター。  
   
 ##  <a name="release_message"></a> release_message 
 
- 以前のメッセージの予約を解放します。  
+ 前のメッセージの予約を解放します。  
   
 ```  
 virtual void release_message(  
@@ -236,12 +237,12 @@ virtual void release_message(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_MsgId`  
- `runtime_object_identity`の`message`リリースされているオブジェクトします。  
+*_MsgId*<br/>
+`runtime_object_identity`の`message`リリースされているオブジェクトします。  
   
 ##  <a name="reserve_message"></a> reserve_message 
 
- これによって以前に提供メッセージを予約`unbounded_buffer`メッセージング ブロックです。  
+ これによって以前に提供されたメッセージを予約`unbounded_buffer`メッセージング ブロックします。  
   
 ```  
 virtual bool reserve_message(  
@@ -250,18 +251,18 @@ virtual bool reserve_message(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_MsgId`  
- `runtime_object_identity`の`message`オブジェクトの中に予約されています。  
+*_MsgId*<br/>
+`runtime_object_identity`の`message`予約されているオブジェクトします。  
   
 ### <a name="return-value"></a>戻り値  
  `true` 場合は、メッセージが正常に予約された、`false`それ以外の場合。  
   
-### <a name="remarks"></a>コメント  
- 後に`reserve`と呼ばれる場合は、返された場合`true`か、`consume`または`release`かかるか、メッセージの所有権を解放を呼び出す必要があります。  
+### <a name="remarks"></a>Remarks  
+ 後`reserve`と呼ばれる場合は、返された場合`true`, か、`consume`または`release`かかるまたはメッセージの所有権を解放のいずれかを呼び出す必要があります。  
   
 ##  <a name="resume_propagation"></a> resume_propagation 
 
- 伝達は、予約が解放された後に再開します。  
+ 予約が解放された後は、伝達を再開します。  
   
 ```  
 virtual void resume_propagation();  
@@ -269,7 +270,7 @@ virtual void resume_propagation();
   
 ##  <a name="send_message"></a> send_message 
 
- メッセージを同期的に渡す、`ISource`ブロックをこの`unbounded_buffer`メッセージング ブロックです。 によって呼び出された、`send`メソッドは、ソース ブロックによって呼び出されるとします。  
+ メッセージを同期的に渡す、`ISource`このブロック`unbounded_buffer`メッセージング ブロックします。 によって呼び出されます、`send`メソッドは、ソース ブロックによって呼び出されます。  
   
 ```  
 virtual message_status send_message(  
@@ -279,29 +280,29 @@ virtual message_status send_message(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_PMessage`  
- `message` オブジェクトを指すポインター。  
+*_PMessage*<br/>
+`message` オブジェクトを指すポインター。  
   
- `_PSource`  
- メッセージを提供する、ソース ブロックへのポインター。  
+*_PSource*<br/>
+メッセージを提供するソース ブロックへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- A [message_status](concurrency-namespace-enums.md#message_status)のメッセージを行うには、対象の決定を示す値。  
+ A [message_status](concurrency-namespace-enums.md#message_status)メッセージとは、ターゲットの決定を示す値。  
   
 ##  <a name="supports_anonymous_source"></a> supports_anonymous_source 
 
- 上書き、`supports_anonymous_source`を示すこのブロックがリンクされていないソースによって提供されたメッセージを受け入れることができます。  
+ 上書き、`supports_anonymous_source`メソッドをこのブロックがリンクされていないソースによって提供されたメッセージを受け入れることを示します。  
   
 ```  
 virtual bool supports_anonymous_source();  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `true` ブロックは延期いないために、メッセージを提供します。  
+ `true` ブロックは延期しないため、メッセージを提供します。  
   
 ##  <a name="ctor"></a> unbounded_buffer 
 
- 構築、`unbounded_buffer`メッセージング ブロックです。  
+ 構築、`unbounded_buffer`メッセージング ブロックします。  
   
 ```  
 unbounded_buffer();  
@@ -330,23 +331,23 @@ unbounded_buffer(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Filter`  
- 提供されたメッセージを受け付けるかどうかを判断するフィルター関数。  
+*フィルター (_f)*<br/>
+提供されたメッセージを受け入れられる必要があるかどうかを決定するフィルター関数。  
   
- `_PScheduler`  
- その内部で `Scheduler` メッセージング ブロックの反映タスクがスケジュールされる `unbounded_buffer` オブジェクト。  
+*_PScheduler*<br/>
+その内部で `Scheduler` メッセージング ブロックの反映タスクがスケジュールされる `unbounded_buffer` オブジェクト。  
   
- `_PScheduleGroup`  
- その内部で `ScheduleGroup` メッセージング ブロックの反映タスクがスケジュールされる `unbounded_buffer` オブジェクト。 使用される `Scheduler` オブジェクトは、スケジュール グループによって暗黙的に指定されます。  
+*_PScheduleGroup*<br/>
+その内部で `ScheduleGroup` メッセージング ブロックの反映タスクがスケジュールされる `unbounded_buffer` オブジェクト。 使用される `Scheduler` オブジェクトは、スケジュール グループによって暗黙的に指定されます。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `_PScheduler` または `_PScheduleGroup` パラメーターを指定しない場合、ランタイムは既定のスケジューラを使用しています。  
   
- 型`filter_method`シグネチャを持つファンクターは、`bool (_Type const &)`これは、これによって呼び出されます。`unbounded_buffer`メッセージング ブロックを、提供されたメッセージを受け入れる必要がありますかどうかを判断します。  
+ 型`filter_method`シグネチャを持つ、ファンクターは、`bool (_Type const &)`これによって呼び出される`unbounded_buffer`メッセージング ブロックを提供されたメッセージを受け入れる必要があるかどうかを判断します。  
   
 ##  <a name="dtor"></a> ~ unbounded_buffer 
 
- 破棄、`unbounded_buffer`メッセージング ブロックです。  
+ 破棄、`unbounded_buffer`メッセージング ブロックします。  
   
 ```  
 ~unbounded_buffer();  

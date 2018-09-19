@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94dffb5f52d84027cd59762478bd7d6b5f6738d6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2037d64aba025b9acf8279a3da9073611d11ce8e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751775"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107911"
 ---
 # <a name="conditional-expression-operator"></a>条件式演算子
+
 C 言語では、三項演算子として条件式演算子 (**? :**) を使用します。
 
 ## <a name="syntax"></a>構文
@@ -34,23 +35,23 @@ C 言語では、三項演算子として条件式演算子 (**? :**) を使用�
 
 *logical-OR-expression* には、整数型、浮動小数点型、またはポインター型を指定する必要があります。 この式は、0 に等しいかどうかが評価されます。 シーケンス ポイントは *logical-OR-expression* に従います。 オペランドは次のように評価されます。
 
--   *logical-OR-expression* が 0 でない場合、*expression* が評価されます。 この式の評価結果は、非終端の *expression* として与えられます  (つまり、*logical-OR-expression* が true の場合のみ *expression* が評価されます)。
+- *logical-OR-expression* が 0 でない場合、*expression* が評価されます。 この式の評価結果は、非終端の *expression* として与えられます  (つまり、*logical-OR-expression* が true の場合のみ *expression* が評価されます)。
 
--   *logical-OR-expression* が 0 の場合、*conditional-expression* が評価されます。 この式の結果は *conditional-expression* の値です  (つまり、*logical-OR-expression* が false の場合のみ *conditional-expression* が評価されます)。
+- *logical-OR-expression* が 0 の場合、*conditional-expression* が評価されます。 この式の結果は *conditional-expression* の値です  (つまり、*logical-OR-expression* が false の場合のみ *conditional-expression* が評価されます)。
 
 *expression* または *conditional-expression* のいずれかが評価されます。両方は評価されません。
 
 条件演算の結果の型は、次のように、*expression* または *conditional-expression* オペランドの型に依存します。
 
--   *expression* または *conditional-expression* が整数型または浮動小数点型の場合 (それぞれ型が異なる可能性があります)、この演算子は通常の算術変換を実行します。 結果の型は、変換後のオペランドの型です。
+- *expression* または *conditional-expression* が整数型または浮動小数点型の場合 (それぞれ型が異なる可能性があります)、この演算子は通常の算術変換を実行します。 結果の型は、変換後のオペランドの型です。
 
--   *expression* と *conditional-expression* が両方とも同じ構造体型、共用体型、またはポインター型の場合、演算結果はそれと同じ構造体型、共用体型、またはポインター型になります。
+- *expression* と *conditional-expression* が両方とも同じ構造体型、共用体型、またはポインター型の場合、演算結果はそれと同じ構造体型、共用体型、またはポインター型になります。
 
--   両方のオペランドが `void` 型の場合、結果は `void` 型になります。
+- 両方のオペランドが `void` 型の場合、結果は `void` 型になります。
 
--   一方のオペランドが任意の型のオブジェクトへのポインターであり、もう一方のオペランドが `void` へのポインターである場合、そのオブジェクトへのポインターが `void` へのポインターに変換され、結果は `void` へのポインターになります。
+- 一方のオペランドが任意の型のオブジェクトへのポインターであり、もう一方のオペランドが `void` へのポインターである場合、そのオブジェクトへのポインターが `void` へのポインターに変換され、結果は `void` へのポインターになります。
 
--   *expression* または *conditional-expression* のいずれかがポインターであり、もう一方のオペランドが値 0 の定数式である場合、結果はポインター型になります。
+- *expression* または *conditional-expression* のいずれかがポインターであり、もう一方のオペランドが値 0 の定数式である場合、結果はポインター型になります。
 
 ポインターの型を比較する際、ポインターが指している型の型修飾子 (**const** または `volatile`) は重要ではありません。ただし、結果の型は、条件式を構成する両方の要素の型修飾子を継承します。
 

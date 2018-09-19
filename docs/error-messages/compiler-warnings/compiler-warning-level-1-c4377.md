@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4377 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4377 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef049f85cd17bfeaba243b84da9fca93ae4036b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 613ebe183b61c6b9894ed3b726f90061e2b24ef6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274782"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047175"
 ---
 # <a name="compiler-warning-level-1-c4377"></a>コンパイラの警告 (レベル 1) C4377
-ネイティブ型は、既定でプライベート--d1privatenativetypes は使用できません  
-  
- 以前のリリースではアセンブリのネイティブ型がパブリックで、既定値、および内部のドキュメントに未記載のコンパイラ オプション (**/d1PrivateNativeTypes**) がプライベートにするために使用します。  
-  
- ネイティブに、すべての型と CLR、プライベート アセンブリでは、既定では、今すぐように **/d1PrivateNativeTypes**は不要です。  
-  
-## <a name="example"></a>例  
- 次の例では、C4377 を生成します。  
-  
-```  
-// C4377.cpp  
-// compile with: /clr /d1PrivateNativeTypes /W1  
-// C4377 warning expected  
-int main() {}  
+
+ネイティブ型は既定ではプライベート-d1PrivateNativeTypes が非推奨とされます
+
+以前のリリースではアセンブリのネイティブ型がパブリックでは、既定値、および内部のドキュメントに未記載のコンパイラ オプション (**/d1PrivateNativeTypes**) それらをプライベートにするために使用されました。
+
+すべての型をネイティブと、CLR アセンブリでは、既定でプライベートになったため、 **/d1PrivateNativeTypes**が不要になった。
+
+## <a name="example"></a>例
+
+次の例では、C4377 が生成されます。
+
+```
+// C4377.cpp
+// compile with: /clr /d1PrivateNativeTypes /W1
+// C4377 warning expected
+int main() {}
 ```

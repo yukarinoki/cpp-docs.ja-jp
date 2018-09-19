@@ -1,5 +1,5 @@
 ---
-title: 致命的なエラー C1126 |Microsoft ドキュメント
+title: 致命的なエラー C1126 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a3ff02d69679074186e593d5e1c16bdf56d1052
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f014aafc60a36bfbb4edad50e7e3ceede6e3c8b2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225915"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062476"
 ---
 # <a name="fatal-error-c1126"></a>致命的なエラー C1126
-'identifier': 自動メモリ割り当てサイズを超えています  
-  
- 関数 (swappable 関数の追加の 20 バイトなど、コンパイラで使用される領域の制限時間を加えた) のローカル変数に割り当てられた領域を超えています。  
-  
- このエラーを解決するには使用`malloc`または`new`大量のデータを割り当てることです。
+
+'identifier': 自動メモリ割り当てサイズを超えています
+
+関数 (とスワップ可能な関数の追加の 20 バイトなど、コンパイラによって使用される領域量が制限されています) のローカル変数に割り当てられた領域を超えています。
+
+このエラーを修正するには使用`malloc`または`new`大量のデータを割り当てることです。

@@ -1,5 +1,5 @@
 ---
-title: NMAKE の警告 U4006 |Microsoft ドキュメント
+title: NMAKE の警告 U4006 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1dbb5032e49c0522fed1127a68cc27fe9135f777
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5526ba4578895f401ddc2fb177539bc025ca364f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327828"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063256"
 ---
 # <a name="nmake-warning-u4006"></a>NMAKE の警告 U4006
-特殊マクロが定義されていません: 'macroname'  
-  
- 指定された特殊マクロ名が定義されていませんし、nothing に展開します。
+
+特殊なマクロが定義されていません: 'macroname'
+
+指定された特殊なマクロの名前が定義されていませんし、nothing に展開します。

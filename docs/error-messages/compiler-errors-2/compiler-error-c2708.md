@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2708 |Microsoft ドキュメント
+title: コンパイラ エラー C2708 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d30b2e5c1856a604ae314316cd71d6acc00a7c74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0accd68881cccad5e34530a6c157a4e8179b283
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234761"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111096"
 ---
 # <a name="compiler-error-c2708"></a>コンパイラ エラー C2708
-'identifier': 実引数の長さ (バイト単位) は、前の呼び出しまたは参照によって異なります。  
-  
- A [_ _stdcall](../../cpp/stdcall.md)関数のプロトタイプで前にする必要があります。 それ以外の場合、コンパイラが関数にプロトタイプとして最初の呼び出しを解釈し、コンパイラと一致しない呼び出しが発生すると、このエラーが発生します。  
-  
- 修正は、このエラーは、関数プロトタイプを追加します。
+
+'identifier': 実パラメーターの長さ (バイト単位) は、前の呼び出しまたは参照によって異なります。
+
+A [_ _stdcall](../../cpp/stdcall.md)関数プロトタイプの前が必要です。 それ以外の場合、コンパイラは、最初のプロトタイプとして関数呼び出しを解釈し、コンパイラと一致しない呼び出しを検出すると、このエラーが発生します。
+
+修正するのには、このエラーは、関数プロトタイプを追加します。

@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2599 |Microsoft ドキュメント
+title: コンパイラ エラー C2599 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce7741e878b8743346bf9a088d973d65c4d7c290
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 515e380ea87b8ea648a00644ce8bca6428903f18
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232940"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044484"
 ---
 # <a name="compiler-error-c2599"></a>コンパイラ エラー C2599
-'enum': 列挙型の事前宣言が許可されていません  
-  
- コンパイラがマネージ列挙型の事前宣言をサポートしていません。  
-  
- 列挙型の事前宣言がで許可されていません[/Za](../../build/reference/za-ze-disable-language-extensions.md)です。  
-  
- 次の例では、c2599 エラーが生成されます。  
-  
-```  
-// C2599.cpp  
-// compile with: /clr /c  
-enum class Status;   // C2599  
-  
-enum class Status2 { stop2, hold2, go2};   
-  
-ref struct MyStruct {  
-   // Delete the following line to resolve.  
-   Status m_status;  
-  
-   Status2 m_status2;   // OK  
-};  
-  
-enum class Status { stop, hold, go };  
+
+'enum': 列挙型の事前宣言することはできません
+
+コンパイラは、マネージ列挙型の事前宣言をサポートしていません。
+
+列挙型の事前宣言することはできません[/Za](../../build/reference/za-ze-disable-language-extensions.md)します。
+
+次の例では、c2599 エラーが生成されます。
+
+```
+// C2599.cpp
+// compile with: /clr /c
+enum class Status;   // C2599
+
+enum class Status2 { stop2, hold2, go2};
+
+ref struct MyStruct {
+   // Delete the following line to resolve.
+   Status m_status;
+
+   Status2 m_status2;   // OK
+};
+
+enum class Status { stop, hold, go };
 ```

@@ -1,5 +1,5 @@
 ---
-title: リソース コンパイラの致命的なエラー RC1004 |Microsoft ドキュメント
+title: リソース コンパイラの致命的なエラー RC1004 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaa3846d0cf65b3dbca31e04999b955b1d58a4b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c86822ea9dcdbb16c437e10cf81bc1c8107da0b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327539"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113592"
 ---
 # <a name="resource-compiler-fatal-error-rc1004"></a>リソース コンパイラの致命的なエラー RC1004
-予期しないファイルの終わりが見つかりました  
-  
- このエラーは、ラインフィードされていない場合に発生することができ、復帰改行文字のテキスト ファイルの最後の行にします。
+
+予期しないファイルの終わりが見つかりました
+
+このエラーは、改行がないために発生することができ、復帰改行文字のテキスト ファイルの最後の行にします。

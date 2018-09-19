@@ -1,5 +1,5 @@
 ---
-title: 致命的なエラー C1109 |Microsoft ドキュメント
+title: 致命的なエラー C1109 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b68513b497b97c78d31264a565dadc9b1fe95a98
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6b8e7c80ca3a184135da3784e7744ae1528517a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227875"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070692"
 ---
 # <a name="fatal-error-c1109"></a>致命的なエラー C1109
-DLL ファイル 'dll' に 'entry point' が見つかりません  
-  
- コンパイラによって要求された [遅延読み込み DLL](../../build/reference/linker-support-for-delay-loaded-dlls.md) のエントリ ポイントが見つかりませんでした。
+
+DLL ファイル 'dll' に 'entry point' が見つかりません
+
+コンパイラによって要求された [遅延読み込み DLL](../../build/reference/linker-support-for-delay-loaded-dlls.md) のエントリ ポイントが見つかりませんでした。

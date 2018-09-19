@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68e6b4730be3679e4309a298d40657dcecde94b6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9eb111b3fa1376be8a43bfc9a04c7865164bff76
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755711"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084576"
 ---
 # <a name="idispeventsimpleimpl-class"></a>IDispEventSimpleImpl クラス
 
@@ -42,19 +42,19 @@ ms.locfileid: "43755711"
 ## <a name="syntax"></a>構文
 
 ```
-template <UINT nID, class T, const IID* pdiid>  
+template <UINT nID, class T, const IID* pdiid>
 class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*nID*  
+*nID*<br/>
 ソース オブジェクトの一意の識別子。 ときに`IDispEventSimpleImpl`基底クラスは、複合コントロールの場合は、このパラメーターの適切な包含コントロールのリソース ID を使用します。 それ以外の場合は、任意の正の整数を使用します。
 
-*T*  
+*T*<br/>
 ユーザーのクラスから派生した`IDispEventSimpleImpl`します。
 
-*pdiid*  
+*pdiid*<br/>
 このクラスによって実装されるイベントのディスパッチ インターフェイスの IID へのポインター。
 
 ## <a name="members"></a>メンバー
@@ -119,7 +119,7 @@ HRESULT Advise(IUnknown* pUnk);
 
 ### <a name="parameters"></a>パラメーター
 
-*pUnk*  
+*pUnk*<br/>
 [in]ポインター、`IUnknown`イベント ソース オブジェクトのインターフェイス。
 
 ### <a name="return-value"></a>戻り値
@@ -145,10 +145,10 @@ HRESULT DispEventAdvise(IUnknown* pUnk  const IID* piid);
 
 ### <a name="parameters"></a>パラメーター
 
-*pUnk*  
+*pUnk*<br/>
 [in]ポインター、`IUnknown`イベント ソース オブジェクトのインターフェイス。
 
-*piid*  
+*piid*<br/>
 イベント ソース オブジェクトの IID へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -174,10 +174,10 @@ HRESULT DispEventUnadvise(IUnknown* pUnk  const IID* piid);
 
 ### <a name="parameters"></a>パラメーター
 
-*pUnk*  
+*pUnk*<br/>
 [in]ポインター、`IUnknown`イベント ソース オブジェクトのインターフェイス。
 
-*piid*  
+*piid*<br/>
 イベント ソース オブジェクトの IID へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -267,7 +267,7 @@ HRESULT Unadvise(IUnknown* pUnk);
 
 ### <a name="parameters"></a>パラメーター
 
-*pUnk*  
+*pUnk*<br/>
 [in]ポインター、`IUnknown`イベント ソース オブジェクトのインターフェイス。
 
 ### <a name="return-value"></a>戻り値
@@ -287,8 +287,8 @@ S_OK または任意の失敗 HRESULT 値。
 
 ## <a name="see-also"></a>関連項目
 
-[_ATL_FUNC_INFO 構造体](../../atl/reference/atl-func-info-structure.md)   
-[IDispatchImpl クラス](../../atl/reference/idispatchimpl-class.md)   
-[IDispEventImpl クラス](../../atl/reference/idispeventimpl-class.md)   
-[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)   
+[_ATL_FUNC_INFO 構造体](../../atl/reference/atl-func-info-structure.md)<br/>
+[IDispatchImpl クラス](../../atl/reference/idispatchimpl-class.md)<br/>
+[IDispEventImpl クラス](../../atl/reference/idispeventimpl-class.md)<br/>
+[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

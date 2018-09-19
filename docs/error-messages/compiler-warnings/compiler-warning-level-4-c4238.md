@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 4) C4238 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 4) C4238 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06dbec01da8d1b47cb7b93c90a22ae5266e9b4c8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f4d5f358d08f81e6b8097140ad47d54f4b3b3fed
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292439"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057029"
 ---
 # <a name="compiler-warning-level-4-c4238"></a>コンパイラの警告 (レベル 4) C4238
-使用される標準の拡張機能: 左辺値として使用されるクラスの右辺値  
-  
- Visual C、Microsoft 拡張機能の以前のバージョンとの互換性 (**/Ze**) を右辺値のコンテキストでその暗黙的または明示的には、アドレス、クラス型を使用できるようにします。 場合によっては、次の例などの危険な指定できます。  
-  
-## <a name="example"></a>例  
-  
-```  
-// C4238.cpp  
-// compile with: /W4 /c  
-struct C {  
-   C() {}  
-};  
-  
-C * pC = &C();   // C4238  
-```  
-  
- この使用法、ANSI 互換のエラーが発生 ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。
+
+使用される標準の拡張機能: 左辺値として使用されるクラスの右辺値
+
+Microsoft の拡張機能、Visual C の以前のバージョンとの互換性 (**/Ze**) のコンテキストで、右辺値を暗黙的または明示的には、アドレスは、クラス型を使用することです。 場合によっては、次の例などの危険な指定できます。
+
+## <a name="example"></a>例
+
+```
+// C4238.cpp
+// compile with: /W4 /c
+struct C {
+   C() {}
+};
+
+C * pC = &C();   // C4238
+```
+
+この使用法、ANSI 互換のエラーが発生 ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。

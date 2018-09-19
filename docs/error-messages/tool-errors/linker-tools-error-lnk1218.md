@@ -1,5 +1,5 @@
 ---
-title: リンカ ツール エラー LNK1218 |Microsoft ドキュメント
+title: リンカ ツール エラー LNK1218 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0a0596a648c44be928e6bbbae89734911550c27
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8808a52724aa3dc1bdfd33fec5945ba40680ca3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298890"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095326"
 ---
 # <a name="linker-tools-error-lnk1218"></a>リンカ ツール エラー LNK1218
-警告をエラーとして扱う出力ファイルは生成されません。  
-  
- リンクすると **/WX**リンカー警告はエラーとして扱われます、出力ファイルは作成されません。  
-  
- 参照してください[/WX (リンカー警告のエラーとして)](../../build/reference/wx-treat-linker-warnings-as-errors.md)詳細についてはします。
+
+警告をエラーとして扱う生成された出力ファイルはいません。
+
+リンクする **/WX**リンカー警告はエラーとして扱われますが、出力ファイルは作成されません。
+
+参照してください[/WX (リンカー警告として扱うエラー)](../../build/reference/wx-treat-linker-warnings-as-errors.md)詳細についてはします。

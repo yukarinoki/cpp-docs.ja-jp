@@ -1,5 +1,5 @@
 ---
-title: _ _stosq |Microsoft ドキュメント
+title: _ _stosq |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6afd5349595f849e8b7418fa1efb628c200b4b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 03c38c5328500394871bee937cbc05395eb44cd5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332027"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715508"
 ---
 # <a name="stosq"></a>__stosq
 **Microsoft 固有の仕様**  
   
- ストア文字列命令が生成されます (`rep stosq`)。  
+ ストアの文字列の命令が生成されます (`rep stosq`)。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,14 +41,14 @@ void __stosb(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [出力] `Dest`  
- 操作の出力先。  
+*追加先*<br/>
+[out]操作の転送先。  
   
- [入力] `Data`  
- 格納するデータ。  
+*データ*<br/>
+[in]格納するデータ。  
   
- [入力] `Count`  
- 書き込む quadwords のブロックの長さ。  
+*カウント*<br/>
+[in](クワドワード)。 書き込むのブロックの長さ。  
   
 ## <a name="requirements"></a>要件  
   
@@ -58,8 +58,8 @@ void __stosb(
   
  **ヘッダー ファイル** \<intrin.h >  
   
-## <a name="remarks"></a>コメント  
- 結果、quadword される`Data`のブロックに書き込まれる`Count`で quadwords、`Dest`文字列。  
+## <a name="remarks"></a>Remarks  
+ 結果は、quadword`Data`のブロックに書き込まれる`Count`で (クワドワード)。、`Dest`文字列。  
   
  このルーチンは、組み込みとしてのみ使用できます。  
   

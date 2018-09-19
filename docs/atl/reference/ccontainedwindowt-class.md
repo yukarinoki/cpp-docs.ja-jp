@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc9ac9fc7e638655b7b6b812d347ac26b8cf6967
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1c64db5a041845bbd068bab1a72ad461740170b8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755802"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040480"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT クラス
 
@@ -49,16 +49,16 @@ ms.locfileid: "43755802"
 ## <a name="syntax"></a>構文
 
 ```
-template <class TBase = CWindow, class TWinTraits = CControlWinTraits>  
+template <class TBase = CWindow, class TWinTraits = CControlWinTraits>
 class CContainedWindowT : public TBase
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*TBase*  
+*TBase*<br/>
 新しいクラスの基本クラス。 既定の基本クラスは`CWindow`します。
 
-*TWinTraits*  
+*TWinTraits*<br/>
 ウィンドウのスタイルを定義する特性クラス。 既定値は `CControlWinTraits` です。
 
 > [!NOTE]
@@ -148,13 +148,13 @@ CContainedWindowT(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszClassName*  
+*lpszClassName*<br/>
 [in]コンテナー内のウィンドウの基になる既存のウィンドウ クラスの名前。
 
-*pObject*  
+*pObject*<br/>
 [in]メッセージ マップを宣言する親オブジェクトへのポインター。 このオブジェクトのクラスがから派生する必要があります[CMessageMap](../../atl/reference/cmessagemap-class.md)します。
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in]含まれているウィンドウのメッセージを処理するメッセージ マップを識別します。 既定値 0 は、指定で宣言された既定のメッセージ マップ[送るに](message-map-macros-atl.md#begin_msg_map)します。 宣言された代替メッセージ マップを使用して[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)、渡す`msgMapID`します。
 
 ### <a name="remarks"></a>Remarks
@@ -211,34 +211,34 @@ HWND Create(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszClassName*  
+*lpszClassName*<br/>
 [in]コンテナー内のウィンドウの基になる既存のウィンドウ クラスの名前。
 
-*pObject*  
+*pObject*<br/>
 [in]メッセージ マップを宣言する親オブジェクトへのポインター。 このオブジェクトのクラスがから派生する必要があります[CMessageMap](../../atl/reference/cmessagemap-class.md)します。
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in]含まれているウィンドウのメッセージを処理するメッセージ マップを識別します。 既定値 0 は、指定で宣言された既定のメッセージ マップ[送るに](message-map-macros-atl.md#begin_msg_map)します。 宣言された代替メッセージ マップを使用して[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)、渡す`msgMapID`します。
 
-*hWndParent*  
+*hWndParent*<br/>
 [in]親またはオーナー ウィンドウのハンドル。
 
-*rect*  
+*rect*<br/>
 [in]A [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)ウィンドウの位置を指定する構造体。 `RECT`ポインターまたは参照によって渡すことができます。
 
-*szWindowName*  
+*szWindowName*<br/>
 [in]ウィンドウの名前を指定します。 既定値は、NULL です。
 
-*dwStyle*  
+*dwStyle*<br/>
 [in]ウィンドウのスタイル。 既定値は WS_CHILD &#124; WS_VISIBLE します。 使用可能な値の一覧は、次を参照してください。 [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows SDK に含まれています。
 
-*dwExStyle*  
+*dwExStyle*<br/>
 [in]拡張ウィンドウ スタイル。 既定値は 0、つまり拡張スタイルはありません。 使用可能な値の一覧は、次を参照してください。 [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK に含まれています。
 
-*MenuOrID*  
+*MenuOrID*<br/>
 [in]子ウィンドウの場合、ウィンドウの識別子。 最上位レベルのウィンドウでは、メニューはウィンドウのハンドルします。 既定値は**0 u**します。
 
-*lpCreateParam*  
+*lpCreateParam*<br/>
 [in]ウィンドウの作成データへのポインター。 詳細については、最後のパラメーターの説明を参照してください。 [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)します。
 
 ### <a name="return-value"></a>戻り値
@@ -269,13 +269,13 @@ LRESULT DefWindowProc(
 
 ### <a name="parameters"></a>パラメーター
 
-*uMsg*  
+*uMsg*<br/>
 [in]ウィンドウに送信されるメッセージ。
 
-*wParam*  
+*wParam*<br/>
 [in]追加のメッセージに固有の情報。
 
-*lParam*  
+*lParam*<br/>
 [in]追加のメッセージに固有の情報。
 
 ### <a name="return-value"></a>戻り値
@@ -382,7 +382,7 @@ BOOL SubclassWindow(HWND hWnd);
 
 ### <a name="parameters"></a>パラメーター
 
-*hWnd*  
+*hWnd*<br/>
 [in]サブクラス化されているウィンドウのハンドル。
 
 ### <a name="return-value"></a>戻り値
@@ -406,7 +406,7 @@ void SwitchMessageMap(DWORD dwMsgMapID);
 
 ### <a name="parameters"></a>パラメーター
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in]メッセージ マップの識別子。 宣言された既定のメッセージ マップを使用する[送るに](message-map-macros-atl.md#begin_msg_map)0 を渡します。 宣言された代替メッセージ マップを使用して[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)、渡す`msgMapID`します。
 
 ### <a name="remarks"></a>Remarks
@@ -425,7 +425,7 @@ HWND UnsubclassWindow(BOOL bForce = FALSE);
 
 ### <a name="parameters"></a>パラメーター
 
-*bForce*  
+*bForce*<br/>
 [in]復元する元のウィンドウ プロシージャを強制する場合は true に設定場合でもこれのウィンドウ プロシージャ`CContainedWindowT`オブジェクトは現在アクティブではありません。 場合*bForce*この FALSE とウィンドウ プロシージャに設定されている`CContainedWindowT`オブジェクトが現在アクティブなは、元のウィンドウ プロシージャは復元されません。
 
 ### <a name="return-value"></a>戻り値
@@ -450,16 +450,16 @@ static LRESULT CALLBACK WindowProc(
 
 ### <a name="parameters"></a>パラメーター
 
-*hWnd*  
+*hWnd*<br/>
 [in]ウィンドウのハンドル。
 
-*uMsg*  
+*uMsg*<br/>
 [in]ウィンドウに送信されるメッセージ。
 
-*wParam*  
+*wParam*<br/>
 [in]追加のメッセージに固有の情報。
 
-*lParam*  
+*lParam*<br/>
 [in]追加のメッセージに固有の情報。
 
 ### <a name="return-value"></a>戻り値
@@ -472,9 +472,9 @@ static LRESULT CALLBACK WindowProc(
 
 ## <a name="see-also"></a>関連項目
 
-[CWindow クラス](../../atl/reference/cwindow-class.md)   
-[CWindowImpl クラス](../../atl/reference/cwindowimpl-class.md)   
-[CMessageMap クラス](../../atl/reference/cmessagemap-class.md)   
-[送るに](message-map-macros-atl.md#begin_msg_map)   
-[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
+[CWindow クラス](../../atl/reference/cwindow-class.md)<br/>
+[CWindowImpl クラス](../../atl/reference/cwindowimpl-class.md)<br/>
+[CMessageMap クラス](../../atl/reference/cmessagemap-class.md)<br/>
+[送るに](message-map-macros-atl.md#begin_msg_map)<br/>
+[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

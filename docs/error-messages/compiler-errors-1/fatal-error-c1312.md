@@ -1,5 +1,5 @@
 ---
-title: 致命的なエラー C1312 |Microsoft ドキュメント
+title: 致命的なエラー C1312 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 867904067add0b18981b5b8c71d7c6d8db3434ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7a392cbdbd601d2ea9ebc3d3ca9be37ed6029185
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198470"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028598"
 ---
 # <a name="fatal-error-c1312"></a>致命的なエラー C1312
-関数内に条件分岐が多すぎます。 ソース コードを簡略化するか、リファクターを使用してください。  
-  
- コードが複雑すぎるため、コンパイラが処理中にスタック メモリ不足を起こします。  コードを簡略化します。
+
+関数内に条件分岐が多すぎます。 ソース コードを簡略化するか、リファクターを使用してください。
+
+コードが複雑すぎるため、コンパイラが処理中にスタック メモリ不足を起こします。  コードを簡略化します。

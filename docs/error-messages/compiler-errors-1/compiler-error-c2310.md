@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2310 |Microsoft ドキュメント
+title: コンパイラ エラー C2310 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: baac68409820683182ff3ee592e00772141625cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2eed6dfc8d12b7bec9bb3437a3213b3feeda480e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168959"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099591"
 ---
 # <a name="compiler-error-c2310"></a>コンパイラ エラー C2310
-catch ハンドラーは 1 つの型を指定する必要があります。  
-  
- Catch ハンドラーは、型がないか、複数の種類を指定します。  
-  
- 次の例では、C2310 が生成されます。  
-  
-```  
-// C2310.cpp  
-// compile with: /EHsc  
-#include <eh.h>  
-int main() {  
-   try {  
-      throw "Out of memory!";  
-   }  
-   catch( int ,int) {}   // C2310 two types  
-   // try the following line instead  
-   // catch( int)  {}  
-}  
+
+catch ハンドラーは、1 つの型を指定する必要があります。
+
+Catch ハンドラーは、型を持たないまたは複数の種類を指定します。
+
+次の例では、C2310 が生成されます。
+
+```
+// C2310.cpp
+// compile with: /EHsc
+#include <eh.h>
+int main() {
+   try {
+      throw "Out of memory!";
+   }
+   catch( int ,int) {}   // C2310 two types
+   // try the following line instead
+   // catch( int)  {}
+}
 ```

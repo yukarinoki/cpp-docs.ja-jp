@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2109 |Microsoft ドキュメント
+title: コンパイラ エラー C2109 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2cb488bca97fa88c58a82b6404ff2845ef65b5d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 551c391c67e54c00a26fe6c11fb062adcb9c2f30
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166014"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100793"
 ---
 # <a name="compiler-error-c2109"></a>コンパイラ エラー C2109
-添字配列またはポインター型が必要です  
-  
- 配列でない変数に、添字が使用されました。  
-  
- 次の例では、C2109 が生成されます。  
-  
-```  
-// C2109.cpp  
-int main() {  
-   int a, b[10] = {0};  
-   a[0] = 1;   // C2109  
-   b[0] = 1;   // OK  
-}  
+
+添字配列またはポインター型が必要です
+
+添字は配列でない変数で使用されました。
+
+次の例では、C2109 が生成されます。
+
+```
+// C2109.cpp
+int main() {
+   int a, b[10] = {0};
+   a[0] = 1;   // C2109
+   b[0] = 1;   // OK
+}
 ```

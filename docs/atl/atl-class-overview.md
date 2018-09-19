@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e64ecd708f5ff159b61a6b7601c74dbf2b6abda6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: de241532763267f5d20d051121e501934da972cf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758668"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055157"
 ---
 # <a name="atl-class-overview"></a>ATL クラスの概要
 
@@ -52,10 +52,10 @@ ATL プロジェクトで使用できる追加のクラスでは、次を参照�
 
 ## <a name="see-also"></a>関連項目
 
-[クラスと構造体](../atl/reference/atl-classes.md)   
-[ATL COM デスクトップ コンポーネント](../atl/atl-com-desktop-components.md)  
-[関数](../atl/reference/atl-functions.md)   
-[グローバル変数](../atl/reference/atl-global-variables.md)   
-[マクロ](../atl/reference/atl-macros.md)   
+[クラスと構造体](../atl/reference/atl-classes.md)<br/>
+[ATL COM デスクトップ コンポーネント](../atl/atl-com-desktop-components.md)<br/>
+[関数](../atl/reference/atl-functions.md)<br/>
+[グローバル変数](../atl/reference/atl-global-variables.md)<br/>
+[[マクロ]](../atl/reference/atl-macros.md)<br/>
 [Typedefs](../atl/reference/atl-typedefs.md)
 

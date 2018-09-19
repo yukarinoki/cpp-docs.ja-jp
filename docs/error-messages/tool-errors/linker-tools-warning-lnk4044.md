@@ -1,5 +1,5 @@
 ---
-title: リンカー ツールの警告 LNK4044 |Microsoft ドキュメント
+title: リンカー ツールの警告 LNK4044 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b921f07638751b9e0702517b125b0f9de828f81b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3341c5b883e3476467cf4e214f632f84d805e70
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299443"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098902"
 ---
 # <a name="linker-tools-warning-lnk4044"></a>リンカー ツールの警告 LNK4044
-認識されないオプション 'option' です。無視されます。  
-  
- 指定されたオプションは、このツールの有効なオプションではありません。 このツールには、オプションが無視されます。  
-  
- 有効なオプションの一覧を表示するには、引数やオプションなしで、ツールを実行します。
+
+認識されないオプション 'option';無視されます。
+
+指定したオプションは、このツールの有効なオプションではありません。 このツールには、オプションが無視されます。
+
+有効なオプションの一覧を表示するには、引数やオプションは不要、ツールを実行します。

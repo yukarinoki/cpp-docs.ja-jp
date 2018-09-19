@@ -1,5 +1,5 @@
 ---
-title: auto_gcroot::reset |Microsoft ドキュメント
+title: auto_gcroot::reset |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d2ff59b6fc9c4f893f87fbb59b0531c5ba8917fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f461958a09212f5beb562b5b8e92fa6f39711ec5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106376"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082275"
 ---
 # <a name="autogcrootreset"></a>auto_gcroot::reset
-現在所有されているオブジェクトを破棄し、必要に応じて、新しいオブジェクトを所有しているを実行します。  
+現在所有されているオブジェクトを破棄し、必要に応じて新しいオブジェクトを所有しているを実行します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,8 +39,8 @@ void reset(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `_new_ptr`  
- (省略可能)新しいオブジェクト。  
+*_new_ptr*<br/>
+(省略可能)新しいオブジェクト。  
   
 ## <a name="example"></a>例  
   
@@ -98,6 +98,6 @@ done
  **Namespace** msclr  
   
 ## <a name="see-also"></a>関連項目  
- [auto_gcroot メンバー](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot のメンバー](../dotnet/auto-gcroot-members.md)   
  [auto_gcroot::release](../dotnet/auto-gcroot-release.md)   
  [auto_gcroot::attach](../dotnet/auto-gcroot-attach.md)

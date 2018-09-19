@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2155 |Microsoft ドキュメント
+title: コンパイラ エラー C2155 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02d3194dcaad982e5e9d4ce758352f7221a389dc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f8622de0beb968a4db9d133e698137bca3e04f14
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168426"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083198"
 ---
 # <a name="compiler-error-c2155"></a>コンパイラ エラー C2155
-'?': 無効な左オペランドの算術演算またはポインター型  
-  
- 式の左側で`?`0 と比較することはできません。 ゼロに比較できる演算またはポインター式を使用する必要があります。
+
+'?': 無効な左オペランドの算術演算またはポインター型
+
+式の左側にある`?`0 と比較することはできません。 0 に比較できる演算またはポインター式を使用する必要があります。

@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3271 |Microsoft ドキュメント
+title: コンパイラ エラー C3271 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dc8389c934169bac2a990127be7a273a2db18ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d30a203f37e09b84a62863c26b2e0c59c270369a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251691"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091856"
 ---
 # <a name="compiler-error-c3271"></a>コンパイラ エラー C3271
-'member': FieldOffset 属性に対する値 'value' が無効です  
-  
- **FieldOffset** 属性に対して負の数値が渡されました。  
-  
- 次の例では C3271 が生成されます。  
-  
-```  
-// C3271.cpp  
-// compile with: /clr /c  
-using namespace System;  
-using namespace System::Runtime::InteropServices;  
-  
-[StructLayout(LayoutKind::Explicit)]  
-value class MyStruct1 {  
-   public: [FieldOffset(0)] int a;  
-   public: [FieldOffset(-1)] long b;   // C3271  
-};  
-```  
+
+'member': FieldOffset 属性に対する値 'value' が無効です
+
+**FieldOffset** 属性に対して負の数値が渡されました。
+
+次の例では C3271 が生成されます。
+
+```
+// C3271.cpp
+// compile with: /clr /c
+using namespace System;
+using namespace System::Runtime::InteropServices;
+
+[StructLayout(LayoutKind::Explicit)]
+value class MyStruct1 {
+   public: [FieldOffset(0)] int a;
+   public: [FieldOffset(-1)] long b;   // C3271
+};
+```

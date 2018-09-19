@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0eda5fc385f094bd7a18bff521250453ebb66c84
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 39b376d6e65a5002487cbf51186fdab9ccb3fc46
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757937"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110147"
 ---
 # <a name="caxwindow-class"></a>CAxWindow クラス
 
@@ -94,10 +94,10 @@ HRESULT AttachControl(
 
 ### <a name="parameters"></a>パラメーター
 
-*pControl*  
+*pControl*<br/>
 [in]ポインター、`IUnknown`のコントロール。
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out]ポインター、`IUnknown`ホストの (、`AxWin`オブジェクト)。
 
 ### <a name="return-value"></a>戻り値
@@ -118,7 +118,7 @@ CAxWindow(HWND hWnd = NULL);
 
 ### <a name="parameters"></a>パラメーター
 
-*hWnd*  
+*hWnd*<br/>
 既存のウィンドウ オブジェクトへのハンドル。
 
 ##  <a name="createcontrol"></a>  については
@@ -139,7 +139,7 @@ HRESULT CreateControl(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszName*  
+*lpszName*<br/>
 コントロールを作成する文字列へのポインター。 次の方法のいずれかで書式設定する必要があります。
 
 - "MSCAL などを ProgID。Calendar.7"
@@ -155,13 +155,13 @@ HRESULT CreateControl(
    > [!NOTE]
    > "MSHTML:"、MSHTML ストリームとして指定されているように、HTML フラグメントを付ける必要があります。 ProgID と CLSID は、Windows Mobile プラットフォームでサポートされます。 Windows CE の組み込みのプラットフォーム、CE IE サポート対応の Windows Mobile 以外、ProgID を含むすべての型 CLSID、URL、参照にアクティブなドキュメント、および HTML のフラグメント。
 
-*pStream*  
+*pStream*<br/>
 [in]コントロールのプロパティを初期化するために使用されるストリームへのポインター。 NULL にすることができます。
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out]受信するポインターのアドレス、`IUnknown`のコンテナー。 NULL にすることができます。
 
-*され*  
+*され*<br/>
 HTML リソースのリソース ID。 WebBrowser コントロールが作成され、指定されたリソースで読み込まれます。
 
 ### <a name="return-value"></a>戻り値
@@ -206,7 +206,7 @@ HRESULT CreateControlEx(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszName*  
+*lpszName*<br/>
 コントロールを作成する文字列へのポインター。 次の方法のいずれかで書式設定する必要があります。
 
 - "MSCAL などを ProgID。Calendar.7"
@@ -222,22 +222,22 @@ HRESULT CreateControlEx(
    > [!NOTE]
    > "MSHTML:"、MSHTML ストリームとして指定されているように、HTML フラグメントを付ける必要があります。 ProgID と CLSID は、Windows Mobile プラットフォームでサポートされます。 Windows CE の組み込みのプラットフォーム、CE IE サポート対応の Windows Mobile 以外、ProgID を含むすべての型 CLSID、URL、参照にアクティブなドキュメント、および HTML のフラグメント。
 
-*pStream*  
+*pStream*<br/>
 [in]コントロールのプロパティを初期化するために使用されるストリームへのポインター。 NULL にすることができます。
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out]受信するポインターのアドレス、`IUnknown`のコンテナー。 NULL にすることができます。
 
-*ppUnkControl*  
+*ppUnkControl*<br/>
 [out]受信するポインターのアドレス、`IUnknown`のコントロール。 NULL にすることができます。
 
-*れて*  
+*れて*<br/>
 [in]送信のインターフェイスに含まれるオブジェクトのインターフェイスの識別子です。 Iid_ をすることができます。
 
-*punkSink*  
+*punkSink*<br/>
 [in]ポインター、`IUnknown`で指定された、含まれるオブジェクトの接続ポイントに接続されているシンク オブジェクトのインターフェイス*れて*します。
 
-*され*  
+*され*<br/>
 [in]HTML リソースのリソース ID。 WebBrowser コントロールが作成され、指定されたリソースで読み込まれます。
 
 ### <a name="return-value"></a>戻り値
@@ -276,7 +276,7 @@ CAxWindow<TBase>& operator=(HWND hWnd);
 
 ### <a name="parameters"></a>パラメーター
 
-*hWnd*  
+*hWnd*<br/>
 既存のウィンドウ ハンドル。
 
 ### <a name="return-value"></a>戻り値
@@ -295,13 +295,13 @@ HRESULT QueryControl(Q** ppUnk);
 
 ### <a name="parameters"></a>パラメーター
 
-*iid*  
+*iid*<br/>
 [in]コントロールのインターフェイスの IID を指定します。
 
-*ppUnk*  
+*ppUnk*<br/>
 [out]コントロールのインターフェイスへのポインター。 このメソッドのテンプレート バージョンで必要はありません参照 id 関連の UUID で型指定されたインターフェイスが渡される限りです。
 
-*Q*  
+*Q*<br/>
 [in]インターフェイスのクエリが対象です。
 
 ### <a name="return-value"></a>戻り値
@@ -320,13 +320,13 @@ HRESULT QueryHost(Q** ppUnk);
 
 ### <a name="parameters"></a>パラメーター
 
-*iid*  
+*iid*<br/>
 [in]コントロールのインターフェイスの IID を指定します。
 
-*ppUnk*  
+*ppUnk*<br/>
 [out]ホスト上のインターフェイスへのポインター。 このメソッドのテンプレート バージョンで必要はありません参照 id 関連の UUID で型指定されたインターフェイスが渡される限りです。
 
-*Q*  
+*Q*<br/>
 [in]インターフェイスのクエリが対象です。
 
 ### <a name="return-value"></a>戻り値
@@ -347,7 +347,7 @@ HRESULT SetExternalDispatch(IDispatch* pDisp);
 
 ### <a name="parameters"></a>パラメーター
 
-*pDisp*  
+*pDisp*<br/>
 [in]ポインター、`IDispatch`インターフェイス。
 
 ### <a name="return-value"></a>戻り値
@@ -364,7 +364,7 @@ HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
 
 ### <a name="parameters"></a>パラメーター
 
-*pUIHandler*  
+*pUIHandler*<br/>
 [in]ポインター、`IDocHostUIHandlerDispatch`インターフェイス。
 
 ### <a name="return-value"></a>戻り値
@@ -377,9 +377,9 @@ HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
 
 ## <a name="see-also"></a>関連項目
 
-[ATLCON サンプル](../../visual-cpp-samples.md)   
-[CWindow クラス](../../atl/reference/cwindow-class.md)   
-[複合コントロールの基本](../../atl/atl-composite-control-fundamentals.md)   
-[クラスの概要](../../atl/atl-class-overview.md)   
+[ATLCON サンプル](../../visual-cpp-samples.md)<br/>
+[CWindow クラス](../../atl/reference/cwindow-class.md)<br/>
+[複合コントロールの基本](../../atl/atl-composite-control-fundamentals.md)<br/>
+[クラスの概要](../../atl/atl-class-overview.md)<br/>
 [コントロール コンテインメント:](../../atl/atl-control-containment-faq.md)
 

@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2468cd05efdf732fbf955b8532a61d24fa6c0ff4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eaa4972a12729a5697db3574fcf89b0fb2b252ff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409125"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068456"
 ---
 # <a name="run-time-error-checking"></a>ランタイム エラー チェック
 
 C のランタイム ライブラリには、ランタイム エラー チェック (RTC) をサポートする関数が含まれています。 ランタイム エラー チェックにより、特定の種類のランタイム エラーが報告されるようにプログラムを作成することができます。 エラーの報告方法と、報告するエラーの種類を指定できます。 詳細については、「[How to: Use Native Run-Time Checks (方法: ネイティブ ランタイム チェックを使用する)](/visualstudio/debugger/how-to-use-native-run-time-checks)」をご覧ください。
 
- プログラムによるランタイム エラー チェックの方法をカスタマイズするには、次の関数を使用します。
+プログラムによるランタイム エラー チェックの方法をカスタマイズするには、次の関数を使用します。
 
 ## <a name="run-time-error-checking-functions"></a>ランタイム エラー チェックの関数
 
@@ -42,6 +42,6 @@ C のランタイム ライブラリには、ランタイム エラー チェッ
 ## <a name="see-also"></a>参照
 
 [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>
- [/RTC (ランタイム エラー チェック)](../build/reference/rtc-run-time-error-checks.md)<br/>
- [runtime_checks](../preprocessor/runtime-checks.md)<br/>
- [デバッグ ルーチン](../c-runtime-library/debug-routines.md)<br/>
+[/RTC (ランタイム エラー チェック)](../build/reference/rtc-run-time-error-checks.md)<br/>
+[runtime_checks](../preprocessor/runtime-checks.md)<br/>
+[デバッグ ルーチン](../c-runtime-library/debug-routines.md)<br/>

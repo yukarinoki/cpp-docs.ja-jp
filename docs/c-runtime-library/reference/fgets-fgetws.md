@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c155150a364c2cbbd230c56678e6e7dcb4e4fde
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: ab57eecfec91e277f3409ba7b9b33d99a4b52e4b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027168"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067566"
 ---
 # <a name="fgets-fgetws"></a>fgets、fgetws
 
@@ -96,7 +96,7 @@ wchar_t *fgetws(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_fgetts**|**fgets**|**fgets**|**fgetws**|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |関数|必須ヘッダー|
 |--------------|---------------------|
@@ -109,7 +109,7 @@ wchar_t *fgetws(
 
 ```C
 // crt_fgets.c
-// This program uses fgets to display 
+// This program uses fgets to display
 // the first line from a file.
 
 #include <stdio.h>

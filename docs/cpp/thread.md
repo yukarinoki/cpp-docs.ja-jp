@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 148e42a79ef7c20b7b35c3ec570212574782c1f6
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 80ea212f8c888680edf50e269c89e62988a0ee36
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462093"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104388"
 ---
 # <a name="thread"></a>スレッド
 
@@ -34,7 +34,7 @@ ms.locfileid: "39462093"
 
 ## <a name="syntax"></a>構文
 
-> **__declspec( thread )** *declarator*  
+> **__declspec( thread )** *declarator*
 
 ## <a name="remarks"></a>Remarks
 
@@ -96,6 +96,7 @@ __declspec( thread ) int tls_i = 1;
 **Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
- [__declspec](../cpp/declspec.md)  
- [キーワード](../cpp/keywords-cpp.md)  
- [スレッド ローカル ストレージ (TLS: Thread Local Storage)](../parallel/thread-local-storage-tls.md)  
+
+[__declspec](../cpp/declspec.md)<br/>
+[キーワード](../cpp/keywords-cpp.md)<br/>
+[スレッド ローカル ストレージ (TLS: Thread Local Storage)](../parallel/thread-local-storage-tls.md)

@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3894 |Microsoft ドキュメント
+title: コンパイラ エラー C3894 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,48 +16,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc94b207f3e9df607a7599bc960f2423f7acd029
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 373da78257ee0f5ce7307ab521cccb0297933240
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268592"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080091"
 ---
 # <a name="compiler-error-c3894"></a>コンパイラ エラー C3894
-'var': initonly スタティック データ メンバーの左辺値の使用はクラス 'class' のクラス コンス トラクターでのみ許可  
-  
- 静的[initonly](../../dotnet/initonly-cpp-cli.md)データ メンバーは、または静的コンス トラクターの宣言の位置で左辺値としてのみ使用できます。  
-  
- インスタンス (静的ではない) initonly データ メンバーは、宣言、またはインスタンス (静的ではない) コンス トラクターでは、その時点で左辺値としてのみ使用できます。  
-  
- 次の例では、C3894 が生成されます。  
-  
-```  
-// C3894.cpp  
-// compile with: /clr  
-ref struct Y1 {  
-   initonly static int data_var = 0;  
-  
-public:  
-   // class constructor  
-   static Y1() {  
-      data_var = 99;   // OK  
-      System::Console::WriteLine("in static constructor");  
-   }  
-  
-   // not the class constructor  
-   Y1(int i) {  
-      data_var = i;   // C3894  
-   }  
-  
-   static void Test() {}  
-  
-};  
-  
-int main() {  
-   Y1::data_var = 88;   // C3894  
-   int i = Y1::data_var;  
-   Y1 ^ MyY1 = gcnew Y1(99);  
-   Y1::Test();  
-}  
+
+'var': initonly スタティック データ メンバーの左辺値の使用は、クラス 'class' のクラス コンス トラクターでのみ使用できます。
+
+静的[initonly](../../dotnet/initonly-cpp-cli.md)データ メンバーは、または静的コンス トラクターの宣言の位置で左辺値としてのみ使用できます。
+
+インスタンス (静的ではない) initonly データ メンバーは、インスタンス (静的ではない) コンス トラクターまたは宣言の位置で左辺値としてのみ使用できます。
+
+次の例では、C3894 が生成されます。
+
+```
+// C3894.cpp
+// compile with: /clr
+ref struct Y1 {
+   initonly static int data_var = 0;
+
+public:
+   // class constructor
+   static Y1() {
+      data_var = 99;   // OK
+      System::Console::WriteLine("in static constructor");
+   }
+
+   // not the class constructor
+   Y1(int i) {
+      data_var = i;   // C3894
+   }
+
+   static void Test() {}
+
+};
+
+int main() {
+   Y1::data_var = 88;   // C3894
+   int i = Y1::data_var;
+   Y1 ^ MyY1 = gcnew Y1(99);
+   Y1::Test();
+}
 ```

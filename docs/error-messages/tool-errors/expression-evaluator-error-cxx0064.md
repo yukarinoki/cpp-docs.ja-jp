@@ -1,5 +1,5 @@
 ---
-title: 式エバリュエーター エラー CXX0064 |Microsoft ドキュメント
+title: 式エバリュエーター エラー CXX0064 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7964eac628fa89695d1757cff8b7b329fd7fe713
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b16133484af5a2225f79c5d293a2c8edd948bdb2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302137"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025894"
 ---
 # <a name="expression-evaluator-error-cxx0064"></a>式エバリュエーター エラー CXX0064
-バインドされた仮想メンバー関数にブレークポイントを設定することはできません。  
-  
- ブレークポイントがなどのオブジェクトへのポインターを介して仮想メンバー関数に設定されました。  
-  
-```  
-pClass->vfunc( int );  
-```  
-  
- など、クラスを入力して、仮想関数のブレークポイントを設定できます。  
-  
-```  
-Class::vfunc( int );  
-```  
-  
- このエラーは、can0064 と同じものと同じです。
+
+バインドされている仮想メンバー関数にブレークポイントを設定することはできません。
+
+ブレークポイントがなどのオブジェクトへのポインターを介して仮想メンバー関数に設定されました。
+
+```
+pClass->vfunc( int );
+```
+
+など、クラスを入力して、仮想関数にブレークポイントを設定できます。
+
+```
+Class::vfunc( int );
+```
+
+このエラーは、can0064 と同じものと同じです。

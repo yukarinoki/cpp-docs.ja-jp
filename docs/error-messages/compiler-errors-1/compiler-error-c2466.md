@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2466 |Microsoft ドキュメント
+title: コンパイラ エラー C2466 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e55e5c130b0a0454577a7155b704a18933b86198
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d43ee9d09fba77db022177a06c6ebe95c65ff79
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33224309"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037841"
 ---
 # <a name="compiler-error-c2466"></a>コンパイラ エラー C2466
-サイズが 0 の配列を割り当てることができません。  
-  
- 配列が割り当てられているか、サイズが 0 で宣言されています。 配列のサイズの定数式は、0 より大きい整数である必要があります。 添字が 0 の配列宣言はクラス、構造体、または共用体メンバーに対してのみ、Microsoft 拡張機能でのみ有効です。 ([/Ze](../../build/reference/za-ze-disable-language-extensions.md))。  
-  
- 次の例では、C2466 が生成されます。  
-  
-```  
-// C2466.cpp  
-// compile with: /c  
-int i[0];   // C2466  
-int j[1];   // OK  
-char *p;  
+
+サイズが 0 の配列を割り当てることができません。
+
+配列が割り当てられているか、サイズがゼロで宣言されています。 配列のサイズの定数式は、0 より大きい整数である必要があります。 0 個の下付き文字の配列宣言はクラス、構造体または共用体のメンバーに対してのみ、Microsoft の拡張機能でのみ ([/Ze](../../build/reference/za-ze-disable-language-extensions.md))。
+
+次の例では、C2466 が生成されます。
+
+```
+// C2466.cpp
+// compile with: /c
+int i[0];   // C2466
+int j[1];   // OK
+char *p;
 ```

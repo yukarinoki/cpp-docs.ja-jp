@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2893644dc4dbec2d1ebc25be42ba4b30fbd19cb1
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: e96b9d70e48b63eafb8cb3c6f4938f962114fd39
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42538449"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059486"
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler クラス
 呼び出し元コンテキストに関連付けられている現在のスケジューラの抽象化を表します。  
@@ -80,8 +80,8 @@ static void __cdecl Create(const SchedulerPolicy& _Policy);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Policy`  
- スケジューラ ポリシーを新しく作成されたスケジューラの動作について説明します。  
+*ポリシー (_p)*<br/>
+スケジューラ ポリシーを新しく作成されたスケジューラの動作について説明します。  
   
 ### <a name="remarks"></a>Remarks  
  呼び出し元のコンテキストにスケジューラの添付ファイルは、スケジューラで暗黙的に参照カウントを配置します。  
@@ -103,8 +103,8 @@ static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Placement`  
- 実行中に、スケジュール グループ内のタスクをバイアスは場所への参照。  
+*(_P)*<br/>
+実行中に、スケジュール グループ内のタスクをバイアスは場所への参照。  
   
 ### <a name="return-value"></a>戻り値  
  新しく作成したスケジュール グループへのポインター。 これは、`ScheduleGroup`オブジェクトが配置される最初の参照数。  
@@ -198,8 +198,8 @@ static bool __cdecl IsAvailableLocation(const location& _Placement);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Placement`  
- 現在のスケジューラのクエリを実行する場所への参照。  
+*(_P)*<br/>
+現在のスケジューラのクエリを実行する場所への参照。  
   
 ### <a name="return-value"></a>戻り値  
  場所がで指定するかどうかを示す値、`_Placement`引数は、現在のスケジューラを使用できます。  
@@ -218,8 +218,8 @@ static void __cdecl RegisterShutdownEvent(HANDLE _ShutdownEvent);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_ShutdownEvent`  
- 現在のコンテキストに関連付けられたスケジューラがシャット ダウンし、それ自体を破棄するときに、ランタイムによって通知される Windows イベント オブジェクトへのハンドル。  
+*_ShutdownEvent*<br/>
+現在のコンテキストに関連付けられたスケジューラがシャット ダウンし、それ自体を破棄するときに、ランタイムによって通知される Windows イベント オブジェクトへのハンドル。  
   
 ### <a name="remarks"></a>Remarks  
  呼び出し元のコンテキストにアタッチされているスケジューラがない場合は、このメソッドを呼び出すことになります、 [scheduler_not_attached](scheduler-not-attached-class.md)例外がスローされます。  
@@ -240,14 +240,14 @@ static void __cdecl ScheduleTask(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Proc`  
- 軽量タスクの本体を実行するために実行する関数へのポインター。  
+*_Proc*<br/>
+軽量タスクの本体を実行するために実行する関数へのポインター。  
   
- `_Data`  
- タスクの本体にパラメーターとして渡されるデータへの void ポインター。  
+*(_D)*<br/>
+タスクの本体にパラメーターとして渡されるデータへの void ポインター。  
   
- `_Placement`  
- 実行中に、軽量タスクをバイアスは場所への参照。  
+*(_P)*<br/>
+実行中に、軽量タスクをバイアスは場所への参照。  
   
 ### <a name="remarks"></a>Remarks  
  呼び出し元のコンテキストにスケジューラが現在関連付けられていない場合、このメソッドを呼び出すと、プロセスの既定のスケジューラが作成されるか、または呼び出し元コンテキストにアタッチされます。  

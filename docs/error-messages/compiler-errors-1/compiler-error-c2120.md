@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2120 |Microsoft ドキュメント
+title: コンパイラ エラー C2120 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f977f3a0ffda275a0819f01f8c99f12236babd5c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4f4247d8e752e71b86829ea61756f2f04d26762
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165719"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105997"
 ---
 # <a name="compiler-error-c2120"></a>コンパイラ エラー C2120
-すべての型で 'void' が正しくありません。  
-  
- `void`別の型を含む宣言で型を使用します。  
-  
- 次の例では、C2120 が生成されます。  
-  
-```  
-// C2120.cpp  
-int main() {  
-   void int i;   // C2120  
-   int j;   // OK  
-}  
+
+すべての種類 'void' が無効です。
+
+`void`別の型を含む宣言で型を使用します。
+
+次の例では、C2120 が生成されます。
+
+```
+// C2120.cpp
+int main() {
+   void int i;   // C2120
+   int j;   // OK
+}
 ```

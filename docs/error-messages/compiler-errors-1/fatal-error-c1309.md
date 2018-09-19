@@ -1,5 +1,5 @@
 ---
-title: 致命的なエラー C1309 |Microsoft ドキュメント
+title: 致命的なエラー C1309 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91b6ab39e8a2907b03d1fe8bf6ed6094f6c14238
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6bf033bd134c039cf2f626842e9958abde23d811
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227083"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108556"
 ---
 # <a name="fatal-error-c1309"></a>致命的なエラー C1309
-C2 のバージョンが一致しません。DLL および PGODB\<バージョン > です。DLL  
-  
- 構築し、使用方法を使用しているツールセット[ガイド付き最適化の](../../build/reference/profile-guided-optimizations.md)一致しないコンポーネントが含まれています。  手動でこのエラーを解決できない場合は、Visual C++ を再インストールします。
+
+C2 の一致しないバージョン。DLL および PGODB\<バージョン >。DLL
+
+構築し、使用方法を使用しているツールセット[ガイド付き最適化の](../../build/reference/profile-guided-optimizations.md)一致しないコンポーネントが含まれています。  手動でこのエラーを解決できない場合は、Visual C++ を再インストールします。

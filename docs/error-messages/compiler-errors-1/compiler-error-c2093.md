@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2093 |Microsoft ドキュメント
+title: コンパイラ エラー C2093 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11419a7df335bd87077759228be1256c92d09caa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 952391b1fbe0820175566cecd74156b9a55ef4b8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170714"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055846"
 ---
 # <a name="compiler-error-c2093"></a>コンパイラ エラー C2093
-'variable1': 自動変数 'variable2' のアドレスを使用して初期化することはできません  
-  
- コンパイルするときに[/Za](../../build/reference/za-ze-disable-language-extensions.md)プログラムは初期化子として自動変数のアドレスを使用しようとしています。  
-  
- 次の例では、C2093 が生成されます。  
-  
-```  
-// C2093.c  
-// compile with: /Za /c  
-void func() {  
-   int li;   // an implicit auto variable  
-   int * s[]= { &li };   // C2093 address is not a constant  
-  
-   // OK  
-   static int li2;  
-   int * s2[]= { &li2 };  
-}  
+
+'variable1': '変数 2' の自動変数のアドレスを使用して初期化することはできません
+
+コンパイルするときに[/Za](../../build/reference/za-ze-disable-language-extensions.md)プログラムは初期化子として、自動変数のアドレスを使用しようとしています。
+
+次の例では、C2093 が生成されます。
+
+```
+// C2093.c
+// compile with: /Za /c
+void func() {
+   int li;   // an implicit auto variable
+   int * s[]= { &li };   // C2093 address is not a constant
+
+   // OK
+   static int li2;
+   int * s2[]= { &li2 };
+}
 ```

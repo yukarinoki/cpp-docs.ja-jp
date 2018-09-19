@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de3dffbbacd69d19b2a3fc5ba1fac360712db19e
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: f34bd3f1594a49737f4298316b5eb3fe08b866a3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895254"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038556"
 ---
 # <a name="string-and-character-literals--c"></a>文字列リテラルと文字リテラル (C++)
 
@@ -41,8 +41,8 @@ C++ はさまざまな文字列と文字型をサポートし、これらの型�
 #include <string>
 using namespace std::string_literals; // enables s-suffix for std::string literals
 
-int main()  
-{  
+int main()
+{
     // Character literals
     auto c0 =   'A'; // char
     auto c1 = u8'A'; // char
@@ -51,16 +51,16 @@ int main()
     auto c4 =  U'A'; // char32_t
 
     // String literals
-    auto s0 =   "hello"; // const char*  
+    auto s0 =   "hello"; // const char*
     auto s1 = u8"hello"; // const char*, encoded as UTF-8
-    auto s2 =  L"hello"; // const wchar_t*  
+    auto s2 =  L"hello"; // const wchar_t*
     auto s3 =  u"hello"; // const char16_t*, encoded as UTF-16
     auto s4 =  U"hello"; // const char32_t*, encoded as UTF-32
 
     // Raw string literals containing unescaped \ and "
-    auto R0 =   R"("Hello \ world")"; // const char*  
+    auto R0 =   R"("Hello \ world")"; // const char*
     auto R1 = u8R"("Hello \ world")"; // const char*, encoded as UTF-8
-    auto R2 =  LR"("Hello \ world")"; // const wchar_t*  
+    auto R2 =  LR"("Hello \ world")"; // const wchar_t*
     auto R3 =  uR"("Hello \ world")"; // const char16_t*, encoded as UTF-16
     auto R4 =  UR"("Hello \ world")"; // const char32_t*, encoded as UTF-32
 
@@ -72,13 +72,13 @@ int main()
     auto S4 =  U"hello"s; // std::u32string
 
     // Combining raw string literals with standard s-suffix
-    auto S5 =   R"("Hello \ world")"s; // std::string from a raw const char*  
+    auto S5 =   R"("Hello \ world")"s; // std::string from a raw const char*
     auto S6 = u8R"("Hello \ world")"s; // std::string from a raw const char*, encoded as UTF-8
-    auto S7 =  LR"("Hello \ world")"s; // std::wstring from a raw const wchar_t*  
+    auto S7 =  LR"("Hello \ world")"s; // std::wstring from a raw const wchar_t*
     auto S8 =  uR"("Hello \ world")"s; // std::u16string from a raw const char16_t*, encoded as UTF-16
     auto S9 =  UR"("Hello \ world")"s; // std::u32string from a raw const char32_t*, encoded as UTF-32
-}  
-```  
+}
+```
 
 文字列リテラルは、プレフィックスを省略することも、 `u8`、 `L`、 `u`、または  `U` プレフィックスを使用することもできます。これらは、それぞれ、ナロー文字 (単一バイトまたは複数バイト)、UTF-8、ワイド文字 (UCS-2 または UTF-16)、UTF-16、UTF-32 エンコーディングを表します。 未加工文字列リテラルは、上記のエンコーディングの未加工バージョンとして `R`、 `u8R`、 `LR`、 `uR` 、 `UR` プレフィックスを使用できます。  一時的なまたは静的な std::string の値を作成するには、文字列リテラルまたは未加工文字列リテラルを `s` サフィックスと一緒に使用できます。 詳しくは、後述する「文字列リテラル」をご覧ください。 詳細については、基本ソース文字セット、ユニバーサル文字名、および拡張コードページからの文字を使用して、ソース コードを参照してください[文字セット](../cpp/character-sets.md)します。
 
@@ -86,15 +86,15 @@ int main()
 
 *文字リテラル* は、定数文字で構成されます。 これは単一引用符で囲んだ文字によって表されます。 文字リテラルの 5 つの種類があります。
 
--   型の通常の文字リテラル**char**など `'a'`  
+- 型の通常の文字リテラル**char**など `'a'`
 
--   型の utf-8 文字リテラル**char**など `u8'a'`  
+- 型の utf-8 文字リテラル**char**など `u8'a'`
 
--   `wchar_t`型のワイド文字リテラル。たとえば `L'a'`  
+- `wchar_t`型のワイド文字リテラル。たとえば `L'a'`
 
--   型の utf-16 文字リテラル`char16_t`など `u'a'`  
+- 型の utf-16 文字リテラル`char16_t`など `u'a'`
 
--   型の utf-32 文字リテラル`char32_t`など `U'a'`  
+- 型の utf-32 文字リテラル`char32_t`など `U'a'`
 
 文字リテラルに使用する文字、予約文字の円記号を除く、任意の文字があります ('\\')、単一引用符 (')、または改行します。 予約文字は、エスケープ シーケンスを使用して指定することができます。 型が文字を保持するのに十分な大きさであれば、文字はユニバーサル文字名を使用して指定することができます。
 
@@ -132,7 +132,7 @@ int main()
 #include <iostream>
 using namespace std;
 
-int main() {  
+int main() {
     char newline = '\n';
     char tab = '\t';
     char backspace = '\b';
@@ -145,24 +145,24 @@ int main() {
     cout << "Backspace character: " << backspace << "ending" << endl; // Backspace character : ending
     cout << "Backslash character: " << backslash << "ending" << endl; // Backslash character : \ending
     cout << "Null character: " << nullChar << "ending" << endl; //Null character:  ending
-}  
-```  
+}
+```
 
-**Microsoft 固有の仕様**  
+**Microsoft 固有の仕様**
 
 (プレフィックスのないもの) から通常の文字をリテラル値を作成するには、コンパイラは、文字または 32 ビット整数で指定した 8 ビット値に単一引用符の間の文字のシーケンスに変換します。 リテラル内の複数の文字に対応するバイトが、必要に応じて、上位から下位に入力されます。 作成する、 **char**値をコンパイラは下位バイトを取得します。 作成する、 **wchar_t**または`char16_t`値、コンパイラは下位ワードを取得します。 割り当てられたバイトまたはワードを上回るビットが設定された場合、コンパイラは結果が切り捨てられることを警告します。
 
 ```cpp
 char c0    = 'abcd';    // C4305, C4309, truncates to 'd'
 wchar_t w0 = 'abcd';    // C4305, C4309, truncates to '\x6364'
-```  
+```
 
 8 進数のエスケープ シーケンスは、円記号を前置した最大 3 桁の 8 進数のシーケンスです。 見かけ上 4 桁以上を含む 8 進数のエスケープ シーケンスの動作は、3 桁の 8 進数シーケンスの後ろに文字としての桁が続くものとして扱われます。これは、想定外の結果につながる可能性があります。 例えば:
 
 ```cpp
 char c1 = '\100';   // '@'
 char c2 = '\1000';  // C4305, C4309, truncates to '0'
-```  
+```
 
 見かけ上 8 進数以外の文字を含むエスケープ シーケンスは、最後の 8 進数文字までは 8 進数シーケンスとして評価され、その後に残りの文字が続くものと見なされます。 例えば:
 
@@ -170,14 +170,14 @@ char c2 = '\1000';  // C4305, C4309, truncates to '0'
 char c3 = '\009';   // '9'
 char c4 = '\089';   // C4305, C4309, truncates to '9'
 char c5 = '\qrs';   // C4129, C4305, C4309, truncates to 's'
-```  
+```
 
 16 進数のエスケープ シーケンスは、円記号と `x`を前置した 16 進数のシーケンスです。 16 進数の数字を含まないエスケープ シーケンスでは、"16 進型リテラルには、少なくとも 1 桁の 16 進数が必要です" という C2153 コンパイラ エラーが発生します。 先行 0 は無視されます。 見かけ上 16 進数文字と 16 進数以外の文字を含むエスケープ シーケンスは、最後の 16 進数文字までは 16 進数のエスケープ シーケンスとして評価され、その後に 16 進数以外の文字が続くものと見なされます。   通常または u8 プレフィックス付き文字リテラル、最上位の 16 進数の値は 0 xff までです。 L プレフィックス付きまたは u プレフィックス付きワイド文字リテラルでは、最大の 16 進値は 0xFFFF です。 U プレフィックス付きワイド文字リテラルでは、最大の 16 進値は 0xFFFFFFFF です。
 
 ```cpp
 char c6 = '\x0050'; // 'P'
 char c7 = '\x0pqr'; // C4305, C4309, truncates to 'r'
-```  
+```
 
 `L` プレフィックス付きワイド文字リテラルに複数の文字が含まれている場合は、最初の文字から値が取得されます。 通常と同じ文字リテラルの動作とは異なり、それに続く文字が無視されます。
 
@@ -189,9 +189,9 @@ wchar_t w4 = L'\089';   // C4066 L'\0', 89 ignored
 wchar_t w5 = L'\qrs';   // C4129, C4066 L'q' escape, rs ignored
 wchar_t w6 = L'\x0050'; // L'P'
 wchar_t w7 = L'\x0pqr'; // C4066 L'\0', pqr ignored
-```  
+```
 
-**Microsoft 固有の仕様はここまで**  
+**Microsoft 固有の仕様はここまで**
 
 円記号 (\\) 行の末尾には、行連結文字です。 円記号が文字リテラルとして表示されるようにするには、円記号を 2 つ並べて (`\\`) 入力する必要があります。 行連結文字について詳しくは、「 [Phases of Translation](../preprocessor/phases-of-translation.md)」をご覧ください。
 
@@ -205,7 +205,7 @@ char u2 = '\101';       // octal, 'A'
 char u3 = '\x41';       // hexadecimal, 'A'
 char u4 = '\u0041';     // \u UCN 'A'
 char u5 = '\U00000041'; // \U UCN 'A'
-```  
+```
 
 #### <a name="surrogate-pairs"></a>サロゲート ペア
 
@@ -226,7 +226,7 @@ const char *narrow = "abcd";
 
 // represents the string: yes\no
 const char *escaped = "yes\\no";
-```  
+```
 
 #### <a name="utf-8-encoded-strings"></a>UTF-8 でエンコードされた文字列
 
@@ -235,7 +235,7 @@ Utf-8 でエンコードされた文字列が型の u8 プレフィックス付�
 ```cpp
 const char* str1 = u8"Hello World";
 const char* str2 = u8"\U0001F607 is O:-)";
-```  
+```
 
 ### <a name="wide-string-literals"></a>ワイド文字列リテラル
 
@@ -244,16 +244,16 @@ const char* str2 = u8"\U0001F607 is O:-)";
 ```cpp
 const wchar_t* wide = L"zyxw";
 const wchar_t* newline = L"hello\ngoodbye";
-```  
+```
 
-#### <a name="char16t-and-char32t-c11"></a>char16_t および char32_t (C++11)  
+#### <a name="char16t-and-char32t-c11"></a>char16_t および char32_t (C++11)
 
 C++11 では、移植可能な `char16_t` (16 ビット Unicode) および `char32_t` (32 ビット Unicode) 文字型が導入されています。
 
 ```cpp
-auto s3 = u"hello"; // const char16_t*  
-auto s4 = U"hello"; // const char32_t*  
-```  
+auto s3 = u"hello"; // const char16_t*
+auto s4 = U"hello"; // const char32_t*
+```
 
 ### <a name="raw-string-literals-c11"></a>未加工の文字列リテラル (C++11)
 
@@ -273,13 +273,13 @@ const char32_t* raw_utf32 = UR"(An unescaped \ character)";
 ```cpp
 // meant to represent the string: )"
 const char* bad_parens = R"()")";  // error C2059
-```  
+```
 
 しかし、区切り文字を使用することで、エラーは解決します。
 
 ```cpp
 const char* good_parens = R"xyz()")xyz";
-```  
+```
 
 次のソースでは、改行 (エスケープ文字ではない) を含む未加工リテラルを作成できます。
 
@@ -288,7 +288,7 @@ const char* good_parens = R"xyz()")xyz";
 //goodbye
 const wchar_t* newline = LR"(hello
 goodbye)";
-```  
+```
 
 ### <a name="stdstring-literals-c14"></a>std::string リテラル (C++14)
 
@@ -302,13 +302,13 @@ string str2{ u8"Hello World" };
 wstring str3{ L"hello"s };
 u16string str4{ u"hello"s };
 u32string str5{ U"hello"s };
-```  
+```
 
 s サフィックスは、未加工の文字列リテラルにも使用できます。
 
 ```cpp
 u32string str6{ UR"(She said "hello.")"s };
-```  
+```
 
 std::string リテラルは、名前空間で定義されている`std::literals::string_literals`で、\<文字列 > ヘッダー ファイル。 `std::literals::string_literals`、および `std::literals` はいずれも [インライン名前空間](../cpp/namespaces-cpp.md)として宣言されているため、 `std::literals::string_literals` は名前空間 `std`に直接属しているかのように処理されます。
 
@@ -319,7 +319,7 @@ ANSI char の\*文字列とその他の 1 バイト エンコーディング (�
 ```cpp
 const wchar_t* str = L"Hello!";
 const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);
-```  
+```
 
 注意して`strlen()`と`wcslen()`サイズが文字列型の要素のサイズと等しく、終端の null 文字のサイズが含まれていません 1 バイト文字を\*wchar_t に 2 つのバイトの文字列\*または char16_t\*。文字列、および char32_t は 4 バイト\*文字列。
 
@@ -336,14 +336,14 @@ const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);
 ```cpp
 wchar_t* str = L"hello";
 str[2] = L'a'; // run-time error: access violation
-```  
+```
 
 リテラル文字列を変換を non_const 文字ポインターを設定するときにエラーを生成するコンパイラが発生することができます、 [/Zc:strictStrings (文字列リテラルの型変換の無効化)](../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md)コンパイラ オプション。 標準に準拠した移植可能なコードの場合にこれをお勧めします。 また、使用することをお勧め、**自動**正しい (const) 型に解決されるため、文字列をリテラル初期化ポインターを宣言するキーワード。 たとえば、このコード例ではコンパイル時に文字列リテラルへの書き込みの試みがキャッチされます。
 
 ```cpp
 auto str = L"hello";
 str[2] = L'a'; // C3892: you cannot assign to a variable that is const.
-```  
+```
 
 場合によっては、実行可能ファイルの領域を節約するために、同じ文字列リテラルをプールできます。 文字列リテラルのプールでは、各参照が文字列リテラルの各インスタンスを指すのではなく、コンパイラにより、特定の文字列リテラルへのすべての参照がメモリ内の同じ場所を指します。 文字列プールを有効にするには、 [/GF](../build/reference/gf-eliminate-duplicate-strings.md) コンパイラ オプションを使用します。
 
@@ -355,33 +355,33 @@ str[2] = L'a'; // C3892: you cannot assign to a variable that is const.
 
 ```cpp
 char str[] = "12" "34";
-```  
+```
 
 次の宣言と同じです。
 
 ```cpp
 char atr[] = "1234";
-```  
+```
 
 次の宣言も同じです。
 
 ```cpp
 char atr[] =  "12\
 34";
-```  
+```
 
 埋め込みの 16 進数エスケープ コードを使用して文字列リテラルを指定すると、予期しない結果が生じることがあります。 次の例では、ASCII 文字 5 の後に文字列 f、i、v、および e を含む文字列リテラルを作成しようとしています。
 
 ```cpp
 "\x05five"
-```  
+```
 
 実際の結果は、16 進数値 5F (アンダースコアの ASCII コード) に文字列 i、v、および e が続きます。 次のいずれかの方法で正しい結果を得られます。
 
 ```cpp
 "\005five"     // Use octal literal.
 "\x05" "five"  // Use string splicing.
-```  
+```
 
 std::string リテラルは std::string 型であるため、 [basic_string](../standard-library/basic-string-class.md) 型に定義された + 演算子と連結できます。 隣接する文字列リテラルと同じ方法で連結することもできます。 いずれの場合も、次のように文字列のエンコードとサフィックスは一致していなければなりません。
 
@@ -390,7 +390,7 @@ auto x1 = "hello" " " " world"; // OK
 auto x2 = U"hello" " " L"world"; // C2308: disagree on prefix
 auto x3 = u8"hello" " "s u8"world"s; // OK, agree on prefixes and suffixes
 auto x4 = u8"hello" " "s u8"world"z; // C3688, disagree on suffixes
-```  
+```
 
 ### <a name="string-literals-with-universal-character-names"></a>ユニバーサル文字名を持つ文字列リテラル
 
@@ -400,21 +400,21 @@ auto x4 = u8"hello" " "s u8"world"z; // C3688, disagree on suffixes
 // ASCII smiling face
 const char*     s1 = ":-)";
 
-// UTF-16 (on Windows) encoded WINKING FACE (U+1F609)  
+// UTF-16 (on Windows) encoded WINKING FACE (U+1F609)
 const wchar_t*  s2 = L"😉 = \U0001F609 is ;-)";
 
-// UTF-8  encoded SMILING FACE WITH HALO (U+1F607)  
+// UTF-8  encoded SMILING FACE WITH HALO (U+1F607)
 const char*     s3 = u8"😇 = \U0001F607 is O:-)";
 
-// UTF-16 encoded SMILING FACE WITH OPEN MOUTH (U+1F603)  
+// UTF-16 encoded SMILING FACE WITH OPEN MOUTH (U+1F603)
 const char16_t* s4 = u"😃 = \U0001F603 is :-D";
 
-// UTF-32 encoded SMILING FACE WITH SUNGLASSES (U+1F60E)  
+// UTF-32 encoded SMILING FACE WITH SUNGLASSES (U+1F60E)
 const char32_t* s5 = U"😎 = \U0001F60E is B-)";
-```  
+```
 
 ## <a name="see-also"></a>関連項目
 
-[文字セット](../cpp/character-sets.md)   
-[数値、ブール値、およびポインターのリテラル](../cpp/numeric-boolean-and-pointer-literals-cpp.md)   
+[文字セット](../cpp/character-sets.md)<br/>
+[数値、ブール値、およびポインターのリテラル](../cpp/numeric-boolean-and-pointer-literals-cpp.md)<br/>
 [ユーザー定義リテラル](../cpp/user-defined-literals-cpp.md)

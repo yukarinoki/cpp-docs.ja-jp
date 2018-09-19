@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d4437d06a7308505c2338f37deea1126fcb0605
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e4c35ab13d5cf2448135b1e07405a1e31a5eec86
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752912"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116673"
 ---
 # <a name="ccomqiptr-class"></a>CComQIPtr クラス
 
@@ -32,16 +32,16 @@ COM インターフェイス ポインターを管理するためのスマート
 ## <a name="syntax"></a>構文
 
 ```
-template<class T, const IID* piid= &__uuidof(T)>  
+template<class T, const IID* piid= &__uuidof(T)>
 class CComQIPtr: public CComPtr<T>
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 COM インターフェイスを格納するポインターの種類を指定します。
 
-*piid*  
+*piid*<br/>
 ポインターの IID を*T*します。
 
 ## <a name="members"></a>メンバー
@@ -87,13 +87,13 @@ CComQIPtr(const CComQIPtr<T, piid>& lp) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*lp*  
+*lp*<br/>
 インターフェイス ポインターを初期化するために使用されます。
 
-*T*  
+*T*<br/>
 COM インターフェイスです。
 
-*piid*  
+*piid*<br/>
 ポインターの IID を*T*します。
 
 ##  <a name="operator_eq"></a>  CComQIPtr::operator =
@@ -108,13 +108,13 @@ T* operator= (IUnknown* lp) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*lp*  
+*lp*<br/>
 インターフェイス ポインターを初期化するために使用されます。
 
-*T*  
+*T*<br/>
 COM インターフェイスです。
 
-*piid*  
+*piid*<br/>
 ポインターの IID を*T*します。
 
 ### <a name="return-value"></a>戻り値
@@ -123,8 +123,8 @@ COM インターフェイスです。
 
 ## <a name="see-also"></a>関連項目
 
-[CComPtr::CComPtr](../../atl/reference/ccomptr-class.md#ccomptr)   
-[CComQIPtr::CComQIPtr](#ccomqiptr)   
-[CComPtrBase クラス](../../atl/reference/ccomptrbase-class.md)   
-[クラスの概要](../../atl/atl-class-overview.md)   
+[CComPtr::CComPtr](../../atl/reference/ccomptr-class.md#ccomptr)<br/>
+[CComQIPtr::CComQIPtr](#ccomqiptr)<br/>
+[CComPtrBase クラス](../../atl/reference/ccomptrbase-class.md)<br/>
+[クラスの概要](../../atl/atl-class-overview.md)<br/>
 [CComQIPtrElementTraits クラス](../../atl/reference/ccomqiptrelementtraits-class.md)

@@ -16,21 +16,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7be7709baadff35c10cec861b4a0bca94c8cbe5f
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 681aa3ef5a1434ab191854f23a9e7bc908b65728
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337171"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082418"
 ---
 # <a name="implementing-a-simple-consumer"></a>単純なコンシューマーの実装
+
 次のトピックでは、単純なコンシューマーを作成するには、MFC アプリケーション ウィザードと ATL OLE DB コンシューマー ウィザードによって作成されたファイルを編集する方法を説明します。 この例では、次の部分があります。  
   
--   「コンシューマーによるデータの取得」をデータベース テーブルからすべてのデータを 1 行ずつを読み取るコンシューマーでコードを実装する方法を示しています。  
+- 「コンシューマーによるデータの取得」をデータベース テーブルからすべてのデータを 1 行ずつを読み取るコンシューマーでコードを実装する方法を示しています。  
   
--   "ブックマーク サポート コンシューマーへの追加"コンシューマーにブックマークのサポートを追加する方法を示します。  
+- "ブックマーク サポート コンシューマーへの追加"コンシューマーにブックマークのサポートを追加する方法を示します。  
   
--   「コンシューマーに XML のサポートを追加」は、XML データとして取得した行セットのデータを出力するコンシューマー コードを変更する方法を示します。  
+- 「コンシューマーに XML のサポートを追加」は、XML データとして取得した行セットのデータを出力するコンシューマー コードを変更する方法を示します。  
   
 > [!NOTE]
 >  このセクションで説明されているコンシューマー アプリケーションを使用すると、MyProv とプロバイダーのサンプルのプロバイダーをテストします。  
@@ -45,7 +46,7 @@ ms.locfileid: "39337171"
   
 #### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>OLE DB コンシューマーを使用するコンソール アプリケーションを変更するには  
   
-1.  MyCons.cpp では、次のように、太字のテキストを挿入することで、メインのコードを変更します。  
+1. MyCons.cpp では、次のように、太字のテキストを挿入することで、メインのコードを変更します。  
   
     ```cpp  
     // MyCons.cpp : Defines the entry point for the console application.  
@@ -73,30 +74,31 @@ ms.locfileid: "39337171"
     ```  
   
 ## <a name="adding-bookmark-support-to-the-consumer"></a>コンシューマーへのブックマーク サポートの追加  
- ブックマークは、テーブル内の行を一意に識別する列です。 キーの列が通常とは限りません。これは、プロバイダー固有です。 このセクションでは、ブックマークのサポートを追加する方法を示します。 これを行うには、ユーザー レコード クラスで次の操作が必要です。  
+
+ブックマークは、テーブル内の行を一意に識別する列です。 キーの列が通常とは限りません。これは、プロバイダー固有です。 このセクションでは、ブックマークのサポートを追加する方法を示します。 これを行うには、ユーザー レコード クラスで次の操作が必要です。  
   
--   ブックマークをインスタンス化します。 これらの型のオブジェクトは、 [CBookmark](../../data/oledb/cbookmark-class.md)します。  
+- ブックマークをインスタンス化します。 これらの型のオブジェクトは、 [CBookmark](../../data/oledb/cbookmark-class.md)します。  
   
--   ブックマーク列を設定して、プロバイダーから要求、`DBPROP_IRowsetLocate`プロパティ。  
+- ブックマーク列を設定して、プロバイダーから要求、`DBPROP_IRowsetLocate`プロパティ。  
   
--   列マップを使用して、ブックマークのエントリを追加、 [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md)マクロ。  
+- 列マップを使用して、ブックマークのエントリを追加、 [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md)マクロ。  
   
- 前の手順では、ブックマークのサポートと作業に使用して、ブックマーク オブジェクトを指定します。 このコード例では、次のようにブックマークを示します。  
+前の手順では、ブックマークのサポートと作業に使用して、ブックマーク オブジェクトを指定します。 このコード例では、次のようにブックマークを示します。  
   
--   書き込み用にファイルを開きます。  
+- 書き込み用にファイルを開きます。  
   
--   ファイルの行ごとに、行セットのデータを出力します。  
+- ファイルの行ごとに、行セットのデータを出力します。  
   
--   行セットのカーソルを呼び出すことで、ブックマークに移動[MoveToBookmark](../../data/oledb/crowset-movetobookmark.md)します。  
+- 行セットのカーソルを呼び出すことで、ブックマークに移動[MoveToBookmark](../../data/oledb/crowset-movetobookmark.md)します。  
   
--   ファイルの末尾に追加すること、ブックマークが設定された行を出力します。  
+- ファイルの末尾に追加すること、ブックマークが設定された行を出力します。  
   
 > [!NOTE]
 >  このコンシューマー アプリケーションを使用してプロバイダー サンプルのプロバイダー アプリケーションをテストする場合は、このセクションで説明されているブックマーク サポートままにします。  
   
 #### <a name="to-instantiate-the-bookmark"></a>ブックマークをインスタンス化するには  
   
-1.  アクセサーは、型のオブジェクトを含める必要があります[CBookmark](../../data/oledb/cbookmark-class.md)します。 *NSize*パラメーター (通常、32 ビット プラットフォームの 4) および 64 ビット プラットフォームでの 8 バイトで、ブックマークのバッファーのサイズを指定します。 ユーザー レコード クラスの列のデータ メンバーには、次の宣言を追加します。  
+1. アクセサーは、型のオブジェクトを含める必要があります[CBookmark](../../data/oledb/cbookmark-class.md)します。 *NSize*パラメーター (通常、32 ビット プラットフォームの 4) および 64 ビット プラットフォームでの 8 バイトで、ブックマークのバッファーのサイズを指定します。 ユーザー レコード クラスの列のデータ メンバーには、次の宣言を追加します。  
   
     ```cpp  
     //////////////////////////////////////////////////////////////////////  
@@ -111,7 +113,7 @@ ms.locfileid: "39337171"
   
 #### <a name="to-request-a-bookmark-column-from-the-provider"></a>プロバイダーからブックマーク列を要求するには  
   
-1.  次のコードを追加、`GetRowsetProperties`ユーザー レコード クラスのメソッド。  
+1. 次のコードを追加、`GetRowsetProperties`ユーザー レコード クラスのメソッド。  
   
     ```cpp  
     // Set the DBPROP_IRowsetLocate property.  
@@ -125,7 +127,7 @@ ms.locfileid: "39337171"
   
 #### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>列マップにブックマーク エントリを追加するには  
   
-1.  ユーザー レコード クラス内の列マップには、次のエントリを追加します。  
+1. ユーザー レコード クラス内の列マップには、次のエントリを追加します。  
   
     ```cpp  
     // Set a bookmark entry in the column map.  
@@ -139,7 +141,7 @@ ms.locfileid: "39337171"
   
 #### <a name="to-use-a-bookmark-in-your-main-code"></a>メイン コード内のブックマークを使用するには  
   
-1.  以前に作成したコンソール アプリケーションから MyCons.cpp ファイルでは、次のようにメインのコードを変更します。 ブックマークを使用するメインのコードは、独自のブックマーク オブジェクトをインスタンス化する必要があります (`myBookmark`)。 これは、アクセサーで 1 つから別のブックマーク (`m_bookmark`)。  
+1. 以前に作成したコンソール アプリケーションから MyCons.cpp ファイルでは、次のようにメインのコードを変更します。 ブックマークを使用するメインのコードは、独自のブックマーク オブジェクトをインスタンス化する必要があります (`myBookmark`)。 これは、アクセサーで 1 つから別のブックマーク (`m_bookmark`)。  
   
     ```cpp  
     ///////////////////////////////////////////////////////////////////////  
@@ -208,14 +210,15 @@ ms.locfileid: "39337171"
     }  
     ```  
   
- ブックマークの詳細については、次を参照してください。[ブックマークを使って](../../data/oledb/using-bookmarks.md)します。 ブックマークの例を示しますも[行セットの更新](../../data/oledb/updating-rowsets.md)します。  
+ブックマークの詳細については、次を参照してください。[ブックマークを使って](../../data/oledb/using-bookmarks.md)します。 ブックマークの例を示しますも[行セットの更新](../../data/oledb/updating-rowsets.md)します。  
   
 ## <a name="adding-xml-support-to-the-consumer"></a>コンシューマーに XML のサポートを追加します。  
- 説明したよう[XML データへのアクセス](../../data/oledb/accessing-xml-data.md)は、データ ソースから XML データを取得する 2 つの方法があります: を使用して[CStreamRowset](../../data/oledb/cstreamrowset-class.md)またはを使用して[CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)します。 この例では`CStreamRowset`、方が効率的ですが、このサンプル アプリケーションを実行するコンピューターで実行されている SQL Server 2000 が必要ですが。  
+
+説明したよう[XML データへのアクセス](../../data/oledb/accessing-xml-data.md)は、データ ソースから XML データを取得する 2 つの方法があります: を使用して[CStreamRowset](../../data/oledb/cstreamrowset-class.md)またはを使用して[CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)します。 この例では`CStreamRowset`、方が効率的ですが、このサンプル アプリケーションを実行するコンピューターで実行されている SQL Server 2000 が必要ですが。  
   
 #### <a name="to-modify-the-command-class-to-inherit-from-cstreamrowset"></a>CStreamRowset から継承するようにコマンド クラスを変更するには  
   
-1.  以前に作成したコンシューマー アプリケーションでは、変更、`CCommand`を指定する宣言`CStreamRowset`次のように、行セットとしてクラスします。  
+1. 以前に作成したコンシューマー アプリケーションでは、変更、`CCommand`を指定する宣言`CStreamRowset`次のように、行セットとしてクラスします。  
   
     ```cpp  
     class CProducts : public CCommand<CAccessor<CProductsAccessor>, CStreamRowset >  
@@ -223,7 +226,7 @@ ms.locfileid: "39337171"
   
 #### <a name="to-modify-the-main-code-to-retrieve-and-output-the-xml-data"></a>取得して、XML データを出力するメインのコードを変更するには  
   
-1.  以前に作成したコンソール アプリケーションから MyCons.cpp ファイルでは、次のようにメインのコードを変更します。  
+1. 以前に作成したコンソール アプリケーションから MyCons.cpp ファイルでは、次のようにメインのコードを変更します。  
   
     ```cpp  
     ///////////////////////////////////////////////////////////////////////  
@@ -279,4 +282,5 @@ ms.locfileid: "39337171"
     ```  
   
 ## <a name="see-also"></a>関連項目  
- [ウィザードを使用した OLE DB コンシューマーの作成](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+
+[ウィザードを使用した OLE DB コンシューマーの作成](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

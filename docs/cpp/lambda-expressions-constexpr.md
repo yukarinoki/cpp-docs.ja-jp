@@ -14,38 +14,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b4636333861cc853130a777956ca4b88114f3c6
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 1c6a48067ebc145c907a81212a9acca55c3f4665
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131400"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066597"
 ---
 # <a name="constexpr-lambda-expressions-in-c"></a>C++ では constexpr ラムダ式
-**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + + 17](../build/reference/std-specify-language-standard-version.md)): としてラムダ式を宣言することがあります**constexpr**か指定する定数式で使用時にそれぞれの初期化キャプチャまたは導入されるデータ メンバーは、定数式内で許可されます。  
+
+**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + + 17](../build/reference/std-specify-language-standard-version.md)): としてラムダ式を宣言することがあります**constexpr**か指定する定数式で使用時にそれぞれの初期化キャプチャまたは導入されるデータ メンバーは、定数式内で許可されます。
 
 ```cpp
     int y = 32;
-    auto answer = [y]() constexpr 
+    auto answer = [y]() constexpr
     {
         int x = 10;
-        return y + x; 
+        return y + x;
     };
 
-    constexpr int Increment(int n) 
+    constexpr int Increment(int n)
     {
         return [n] { return n + 1; }();
     }
-``` 
+```
 ラムダは暗黙的に**constexpr**その結果の要件を満たしている場合、 **constexpr**関数。
 ```cpp
-    auto answer = [](int n) 
+    auto answer = [](int n)
     {
-        return 32 + n; 
+        return 32 + n;
     };
 
     constexpr int response = answer(10);
-``` 
+```
 ラムダが暗黙的または明示的に場合**constexpr**、および関数ポインターに変換する、結果として得られる関数も**constexpr**:
 
 ```cpp
@@ -56,9 +57,10 @@ ms.locfileid: "43131400"
 
     constexpr int(*inc)(int) = Increment;
 ```
-  
-## <a name="see-also"></a>関連項目  
- [C++ 言語リファレンス](../cpp/cpp-language-reference.md)   
- [C++ 標準ライブラリ内の関数オブジェクト](../standard-library/function-objects-in-the-stl.md)   
- [関数呼び出し](../cpp/function-call-cpp.md)   
- [for_each](../standard-library/algorithm-functions.md#for_each)
+
+## <a name="see-also"></a>関連項目
+
+[C++ 言語リファレンス](../cpp/cpp-language-reference.md)<br/>
+[C++ 標準ライブラリの関数オブジェクト](../standard-library/function-objects-in-the-stl.md)<br/>
+[関数呼び出し](../cpp/function-call-cpp.md)<br/>
+[for_each](../standard-library/algorithm-functions.md#for_each)

@@ -27,34 +27,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c414ddee654897c88438ec879f9b481073888f4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 36c8dd0467dc50c9eba9db954f28711aa8525cd2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389295"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034291"
 ---
 # <a name="pctypefunc"></a>__pctype_func
-文字分類情報の配列へのポインターを取得します。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-const unsigned short *__pctype_func(  
-   )  
-```  
-  
-## <a name="return-value"></a>戻り値  
- 文字分類に関する情報の配列へのポインター。  
-  
-## <a name="remarks"></a>コメント  
- 文字分類テーブルに含まれる情報は内部専用であり、`char` 型の文字を分類する各種関数で使用されます。 詳細については、「[_pctype、_pwctype、_wctype、_mbctype、_mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md)」の「`Remarks`」セクションをご覧ください。  
-  
-## <a name="requirements"></a>必要条件  
-  
-|ルーチンによって返される値|必須ヘッダー|  
-|-------------|---------------------|  
-|__pctype_func|ctype.h|  
-  
-## <a name="see-also"></a>参照  
- [_pctype、_pwctype、_wctype、_mbctype、_mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md)
+
+文字分類情報の配列へのポインターを取得します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+const unsigned short *__pctype_func(
+   )
+```
+
+## <a name="return-value"></a>戻り値
+
+文字分類に関する情報の配列へのポインター。
+
+## <a name="remarks"></a>コメント
+
+文字分類テーブルに含まれる情報は内部専用であり、`char` 型の文字を分類する各種関数で使用されます。 詳細については、「[_pctype、_pwctype、_wctype、_mbctype、_mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md)」の「`Remarks`」セクションをご覧ください。
+
+## <a name="requirements"></a>必要条件
+
+|ルーチンによって返される値|必須ヘッダー|
+|-------------|---------------------|
+|__pctype_func|ctype.h|
+
+## <a name="see-also"></a>参照
+
+[_pctype、_pwctype、_wctype、_mbctype、_mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md)

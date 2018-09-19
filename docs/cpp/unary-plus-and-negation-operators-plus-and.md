@@ -21,34 +21,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06e7f6bd089866619d82798bb220580e8a11b04b
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 0ef8cc91f90f92d17ec759c874c7dfd34b4706e9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460894"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032875"
 ---
 # <a name="unary-plus-and-negation-operators--and--"></a>単項加算演算子と否定演算子: + および -
-## <a name="syntax"></a>構文  
-  
-```  
-+ cast-expression  
-- cast-expression  
-```  
-  
-## <a name="-operator"></a>+ 演算子  
- 単項プラス演算子の結果 (**+**) は、オペランドの値です。 単項プラス演算子のオペランドは数値型である必要があります。  
-  
- 整数の上位変換が整数オペランドに対して実行されます。 結果の型は、オペランドの上位変換先の型です。 したがって、式`+ch`ここで、`ch`の種類は**char**、結果の種類、 **int**; 値は変更されません。 参照してください[標準変換](standard-conversions.md)昇格を行う方法の詳細についてはします。  
-  
-## <a name="--operator"></a>- 演算子  
- 単項否定演算子 (**-**) オペランドの負数を生成します。 単項否定演算子のオペランドには数値型を指定する必要があります。  
-  
- 整数の上位変換は、整数オペランドに対して実行され、結果の型は、そのオペランドが昇格される型になります。 参照してください[標準変換](standard-conversions.md)昇格を実行する方法の詳細についてはします。  
-  
-## <a name="microsoft-specific"></a>Microsoft 固有の仕様  
- 符号なし数値の単項否定演算は、2^n からオペランドの値を減算することによって実行されます。この n は、指定した符号なし型のオブジェクトのビット数です。
-  
-## <a name="see-also"></a>関連項目  
- [単項演算子を含む式](../cpp/expressions-with-unary-operators.md)   
- [C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+
+## <a name="syntax"></a>構文
+
+```
++ cast-expression
+- cast-expression
+```
+
+## <a name="-operator"></a>+ 演算子
+
+単項プラス演算子の結果 (**+**) は、オペランドの値です。 単項プラス演算子のオペランドは数値型である必要があります。
+
+整数の上位変換が整数オペランドに対して実行されます。 結果の型は、オペランドの上位変換先の型です。 したがって、式`+ch`ここで、`ch`の種類は**char**、結果の種類、 **int**; 値は変更されません。 参照してください[標準変換](standard-conversions.md)昇格を行う方法の詳細についてはします。
+
+## <a name="--operator"></a>- 演算子
+
+単項否定演算子 (**-**) オペランドの負数を生成します。 単項否定演算子のオペランドには数値型を指定する必要があります。
+
+整数の上位変換は、整数オペランドに対して実行され、結果の型は、そのオペランドが昇格される型になります。 参照してください[標準変換](standard-conversions.md)昇格を実行する方法の詳細についてはします。
+
+## <a name="microsoft-specific"></a>Microsoft 固有の仕様
+
+符号なし数値の単項否定演算は、2^n からオペランドの値を減算することによって実行されます。この n は、指定した符号なし型のオブジェクトのビット数です。
+
+## <a name="see-also"></a>関連項目
+
+[単項演算子を含む式](../cpp/expressions-with-unary-operators.md)<br/>
+[C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

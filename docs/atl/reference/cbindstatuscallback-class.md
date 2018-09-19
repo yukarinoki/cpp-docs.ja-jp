@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58d18a6b5eae55373be9ddc71a4d856547bf420c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3a816d10a0cb9665938e77ae8c649464b7b6768c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758431"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108483"
 ---
 # <a name="cbindstatuscallback-class"></a>CBindStatusCallback クラス
 
@@ -57,17 +57,17 @@ ms.locfileid: "43758431"
 
 ```
 template <class T,
-    int nBindFlags = BINDF_ASYNCHRONOUS | BINDF_ASYNCSTORAGE | BINDF_GETNEWESTVERSION | BINDF_NOWRITECACHE>  
+    int nBindFlags = BINDF_ASYNCHRONOUS | BINDF_ASYNCSTORAGE | BINDF_GETNEWESTVERSION | BINDF_NOWRITECACHE>
 class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx <T ::_ThreadModel::ThreadModelNoCS>,
     public IBindStatusCallbackImpl<T>
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 データを受信すると呼び出される関数を含むクラスです。
 
-*nBindFlags*  
+*nBindFlags*<br/>
 によって返されるバインド フラグを指定[GetBindInfo](#getbindinfo)します。 既定の実装を非同期にするバインドを設定するには、データ オブジェクトの最新バージョンを取得およびディスク キャッシュを取得したデータを保存しません。
 
 ## <a name="members"></a>メンバー
@@ -162,7 +162,7 @@ CBindStatusCallback();
 作成、`CBindStatusCallback`オブジェクトと呼び出し`StartAsyncDownload`指定した URL からデータを非同期的にダウンロードを開始します。
 
 ```
-static HRESULT Download(  
+static HRESULT Download(
     T* pT,
     ATL_PDATAAVAILABLE pFunc,
     BSTR bstrURL,
@@ -172,21 +172,21 @@ static HRESULT Download(
 
 ### <a name="parameters"></a>パラメーター
 
-*pT*  
+*pT*<br/>
 [in]非同期データ転送を要求しているオブジェクトへのポインター。 `CBindStatusCallback`オブジェクトは、このオブジェクトのクラスでテンプレート化されます。
 
-*pFunc*  
+*pFunc*<br/>
 [in]読み取られるデータを受信する関数へのポインター。 関数型のオブジェクトのクラスのメンバーである`T`します。 参照してください[このポインターは](#startasyncdownload)構文と例。
 
-*bstrURL*  
+*bstrURL*<br/>
 [in]データの取得元の URL。 有効な URL またはファイル名を指定できます。 Nll は指定できません。 例えば:
 
 `CComBSTR mybstr =_T("http://somesite/data.htm")`
 
-*pUnkContainer*  
+*pUnkContainer*<br/>
 [in]`IUnknown`のコンテナー。 既定では NULL です。
 
-*bRelative*  
+*bRelative*<br/>
 [in]URL が相対または絶対かどうかを示すフラグです。 つまり、URL が既定で FALSE は絶対です。
 
 ### <a name="return-value"></a>戻り値
@@ -209,7 +209,7 @@ STDMETHOD(GetBindInfo)(
 
 ### <a name="parameters"></a>パラメーター
 
-*pgrfBSCF*  
+*pgrfBSCF*<br/>
 [out]バインド操作を行う方法を示す BINDF 列挙値へのポインター。 既定では、次の列挙値を設定します。
 
 BINDF_ASYNCHRONOUS 非同期ダウンロードします。
@@ -220,7 +220,7 @@ BINDF_GETNEWESTVERSION バインド操作では、データの最新バージョ
 
 ディスク キャッシュ内のデータを取得する BINDF_NOWRITECACHE バインド操作を格納しないでください。
 
-*pbindinfo*  
+*pbindinfo*<br/>
 [入力、出力]ポインター、`BINDINFO`構造オブジェクトで発生するバインドを希望する方法の詳細を提供します。
 
 ### <a name="return-value"></a>戻り値
@@ -241,7 +241,7 @@ STDMETHOD(GetPriority)(LONG* pnPriority);
 
 ### <a name="parameters"></a>パラメーター
 
-*pnPriority*  
+*pnPriority*<br/>
 [out]アドレス、**長い**成功した場合、優先順位を受け取る変数。
 
 ### <a name="return-value"></a>戻り値
@@ -284,12 +284,12 @@ ATL_PDATAAVAILABLE m_pFunc;
 
 によって示される関数`m_pFunc`オブジェクトのクラスのメンバーであるし、は、次の構文。
 
-```  
-void Function_Name(  
-   CBindStatusCallback<T>* pbsc,  
-   BYTE* pBytes,  
-   DWORD dwSize  
-   );  
+```
+void Function_Name(
+   CBindStatusCallback<T>* pbsc,
+   BYTE* pBytes,
+   DWORD dwSize
+   );
 ```
 
 ##  <a name="m_pt"></a>  CBindStatusCallback::m_pT
@@ -357,7 +357,7 @@ CComPtr<IStream> m_spStream;
 システムが提供する非同期モニカー呼び出し`OnDataAvailable`を使用可能になったオブジェクトにデータを提供します。
 
 ```
-STDMETHOD(  
+STDMETHOD(
     OnDataAvailable)(DWORD grfBSCF,
     DWORD dwSize,
     FORMATETC* /* pformatetc */,
@@ -366,16 +366,16 @@ STDMETHOD(
 
 ### <a name="parameters"></a>パラメーター
 
-*grfBSCF*  
+*grfBSCF*<br/>
 [in]BSCF 列挙値。 次のいずれかまたは: BSCF_FIRSTDATANOTIFICATION、BSCF_INTERMEDIARYDATANOTIFICATION、または知らせるします。
 
-*ない dwSize*  
+*ない dwSize*<br/>
 [in]バインディングの当初から使用可能なデータのバイト単位で累積時間。 データの量に関連がないこと、または特定の量が利用できないことを示す、0 にすることができます。
 
-*pformatetc*  
+*pformatetc*<br/>
 [in]ポインター、 [FORMATETC](/windows/desktop/com/the-formatetc-structure)使用可能なデータの形式を格納する構造体。 形式がない場合は、CF_NULL を指定できます。
 
-*pstgmed*  
+*pstgmed*<br/>
 [in]ポインター、 [STGMEDIUM](/windows/desktop/com/the-stgmedium-structure)今すぐに利用可能な実際のデータを保持する構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -396,7 +396,7 @@ STDMETHOD(OnLowResource)(DWORD /* dwReserved */);
 
 ### <a name="parameters"></a>パラメーター
 
-*dwReserved*  
+*dwReserved*<br/>
 予約済み。
 
 ### <a name="return-value"></a>戻り値
@@ -413,10 +413,10 @@ STDMETHOD(OnObjectAvailable)(REFID /* riid */, IUnknown* /* punk */);
 
 ### <a name="parameters"></a>パラメーター
 
-*riid*  
+*riid*<br/>
 要求されたインターフェイスのインターフェイスの識別子です。 使用されません。
 
-*punk*  
+*punk*<br/>
 IUnknown インターフェイスのアドレス。 使用されません。
 
 ### <a name="return-value"></a>戻り値
@@ -437,16 +437,16 @@ STDMETHOD(OnProgress)(
 
 ### <a name="parameters"></a>パラメーター
 
-*ulProgress*  
+*ulProgress*<br/>
 符号なし long 整数。 使用されません。
 
-*ulProgressMax*  
+*ulProgressMax*<br/>
 符号なし long 整数未使用。
 
-*ulStatusCode*  
+*ulStatusCode*<br/>
 符号なし long 整数。 使用されません。
 
-*szStatusText*  
+*szStatusText*<br/>
 文字列値のアドレス。 使用されません。
 
 ### <a name="return-value"></a>戻り値
@@ -463,10 +463,10 @@ STDMETHOD(OnStartBinding)(DWORD /* dwReserved */, IBinding* pBinding);
 
 ### <a name="parameters"></a>パラメーター
 
-*dwReserved*  
+*dwReserved*<br/>
 将来使用するために予約されています。
 
-*pBinding*  
+*pBinding*<br/>
 [in]現在のアドレスは、操作をバインドします。 これは、NULL を使用できません。 クライアントは、バインディング オブジェクトへの参照を保持するには、このポインターに AddRef を呼び出す必要があります。
 
 ##  <a name="onstopbinding"></a>  CBindStatusCallback::OnStopBinding
@@ -479,11 +479,11 @@ STDMETHOD(OnStopBinding)(HRESULT hresult, LPCWSTR /* szError */);
 
 ### <a name="parameters"></a>パラメーター
 
-*hresult*  
+*hresult*<br/>
 バインド操作から返されるステータス コード。
 
-szStatusText  
-文字列値の未使用のアドレス。
+*szError*<br/>
+文字列値のアドレス。 使用されません。
 
 ### <a name="remarks"></a>Remarks
 
@@ -494,7 +494,7 @@ szStatusText
 指定した URL からデータを非同期的にダウンロードを開始します。
 
 ```
-HRESULT StartAsyncDownload(  
+HRESULT StartAsyncDownload(
     T* pT,
     ATL_PDATAAVAILABLE pFunc,
     BSTR bstrURL,
@@ -504,21 +504,21 @@ HRESULT StartAsyncDownload(
 
 ### <a name="parameters"></a>パラメーター
 
-*pT*  
+*pT*<br/>
 [in]非同期データ転送を要求しているオブジェクトへのポインター。 `CBindStatusCallback`オブジェクトは、このオブジェクトのクラスでテンプレート化されます。
 
-*pFunc*  
+*pFunc*<br/>
 [in]読み取られるデータを受信する関数へのポインター。 関数型のオブジェクトのクラスのメンバーである`T`します。 参照してください**解説**構文と例。
 
-*bstrURL*  
+*bstrURL*<br/>
 [in]データの取得元の URL。 有効な URL またはファイル名を指定できます。 Nll は指定できません。 例えば:
 
 `CComBSTR mybstr =_T("http://somesite/data.htm")`
 
-*pUnkContainer*  
+*pUnkContainer*<br/>
 [in]`IUnknown`のコンテナー。 既定では NULL です。
 
-*bRelative*  
+*bRelative*<br/>
 [in]URL が相対または絶対かどうかを示すフラグです。 つまり、URL が既定で FALSE は絶対です。
 
 ### <a name="return-value"></a>戻り値

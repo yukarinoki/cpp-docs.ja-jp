@@ -1,5 +1,5 @@
 ---
-title: auto_handle::reset |Microsoft ドキュメント
+title: auto_handle::reset |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0e63d93134d48b1f429b097562805c967911e608
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7596829cc89dcfa335b38d24a57666a430507e27
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103705"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111720"
 ---
 # <a name="autohandlereset"></a>auto_handle::reset
-現在所有されているオブジェクトを破棄し、必要に応じて、新しいオブジェクトを所有しているを実行します。  
+現在所有されているオブジェクトを破棄し、必要に応じて新しいオブジェクトを所有しているを実行します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,8 +40,8 @@ void reset();
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `_new_ptr`  
- (省略可能)新しいオブジェクト。  
+*_new_ptr*<br/>
+(省略可能)新しいオブジェクト。  
   
 ## <a name="example"></a>例  
   
@@ -99,5 +99,5 @@ done
  **Namespace** msclr  
   
 ## <a name="see-also"></a>関連項目  
- [auto_handle メンバー](../dotnet/auto-handle-members.md)   
+ [auto_handle のメンバー](../dotnet/auto-handle-members.md)   
  [auto_handle::release](../dotnet/auto-handle-release.md)

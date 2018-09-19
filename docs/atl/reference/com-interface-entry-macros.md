@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 914619c2790a904530f6efe2324549402d9b6785
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fa3f3356cf3fdddeeb4245986549fa1bd2e12ae7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758158"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085226"
 ---
 # <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY マクロ  
 
@@ -72,7 +72,8 @@ COM_INTERFACE_ENTRY( x )
 ```
 ### <a name="parameters"></a>パラメーター
 
-[in] インターフェイスの名前の x クラスのオブジェクトから派生直接します。
+*x*<br/>
+[in]クラスのオブジェクトが直接から派生したインターフェイスの名前。
 
 ### <a name="remarks"></a>Remarks
 
@@ -101,10 +102,10 @@ COM_INTERFACE_ENTRY2(x, x2)
 
 ### <a name="parameters"></a>パラメーター
 
-*x*  
+*x*<br/>
 [in]オブジェクトから公開するインターフェイスの名前。
 
-*x2*  
+*x2*<br/>
 [in]継承元のブランチの名前*x*公開されます。
 
 ### <a name="remarks"></a>Remarks
@@ -125,10 +126,10 @@ COM_INTERFACE_ENTRY_IID(iid, x)
 
 ### <a name="parameters"></a>パラメーター
 
-*iid*  
+*iid*<br/>
 [in]公開されるインターフェイスの GUID です。
 
-*x*  
+*x*<br/>
 [in]Vtable で識別されるインターフェイスとして公開されるクラスの名前*iid*します。
 
 ### <a name="example"></a>例
@@ -145,13 +146,13 @@ COM_INTERFACE_ENTRY2_IID(iid, x, x2)
 
 ### <a name="parameters"></a>パラメーター
 
-*iid*  
+*iid*<br/>
 [in]インターフェイスを指定する GUID です。
 
-*x*  
+*x*<br/>
 [in]クラスのオブジェクトが直接から派生したインターフェイスの名前。
 
-*x2*  
+*x2*<br/>
 [in]クラスのオブジェクトが直接から派生する 2 番目のインターフェイスの名前。
 
 ##  <a name="com_interface_entry_aggregate"></a>  定義
@@ -164,10 +165,10 @@ COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)
 
 ### <a name="parameters"></a>パラメーター
 
-*iid*  
+*iid*<br/>
 [in]クエリを実行するインターフェイスの GUID です。
 
-*punk*  
+*punk*<br/>
 [in]名前、`IUnknown`ポインター。
 
 ### <a name="remarks"></a>Remarks
@@ -188,7 +189,7 @@ COM_INTERFACE_ENTRY_AGGREGATE_BLIND(punk)
 
 ### <a name="parameters"></a>パラメーター
 
-*punk*  
+*punk*<br/>
 [in]名前、`IUnknown`ポインター。
 
 ### <a name="remarks"></a>Remarks
@@ -209,13 +210,13 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid)
 
 ### <a name="parameters"></a>パラメーター
 
-*iid*  
+*iid*<br/>
 [in]クエリを実行するインターフェイスの GUID です。
 
-*punk*  
+*punk*<br/>
 [in]名前、`IUnknown`ポインター。 COM マップを含むクラスのメンバーである必要があります。
 
-*clsid*  
+*clsid*<br/>
 [in]場合に作成される集計の識別子*punk*は NULL です。
 
 ### <a name="remarks"></a>Remarks
@@ -234,10 +235,10 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
 
 ### <a name="parameters"></a>パラメーター
 
-*punk*  
+*punk*<br/>
 [in]名前、`IUnknown`ポインター。 COM マップを含むクラスのメンバーである必要があります。
 
-*clsid*  
+*clsid*<br/>
 [in]場合に作成される集計の識別子*punk*は NULL です。
 
 ### <a name="remarks"></a>Remarks
@@ -258,7 +259,7 @@ COM_INTERFACE_ENTRY_BREAK(x)
 
 ### <a name="parameters"></a>パラメーター
 
-*x*  
+*x*<br/>
 [in]インターフェイスの識別子を作成するために使用するテキスト。
 
 ### <a name="remarks"></a>Remarks
@@ -275,13 +276,13 @@ COM_INTERFACE_ENTRY_CACHED_TEAR_OFF(iid, x, punk)
 
 ### <a name="parameters"></a>パラメーター
 
-*iid*  
+*iid*<br/>
 [in]ティアオフ インターフェイスの GUID です。
 
-*x*  
+*x*<br/>
 [in]インターフェイスを実装するクラスの名前。
 
-*punk*  
+*punk*<br/>
 [in]名前、`IUnknown`ポインター。 COM マップを含むクラスのメンバーである必要があります。 クラス オブジェクトのコンス トラクターに NULL に初期化する必要があります。
 
 ### <a name="remarks"></a>Remarks
@@ -302,10 +303,10 @@ COM_INTERFACE_ENTRY_TEAR_OFF(iid, x)
 
 ### <a name="parameters"></a>パラメーター
 
-*iid*  
+*iid*<br/>
 [in]ティアオフ インターフェイスの GUID です。
 
-*x*  
+*x*<br/>
 [in]インターフェイスを実装するクラスの名前。
 
 ### <a name="remarks"></a>Remarks
@@ -326,7 +327,7 @@ COM_INTERFACE_ENTRY_CHAIN(classname)
 
 ### <a name="parameters"></a>パラメーター
 
-*classname*  
+*classname*<br/>
 [in]現在のオブジェクトの基本クラス。
 
 ### <a name="remarks"></a>Remarks
@@ -349,13 +350,13 @@ COM_INTERFACE_ENTRY_FUNC(iid, dw, func)
 
 ### <a name="parameters"></a>パラメーター
 
-*iid*  
+*iid*<br/>
 [in]公開されるインターフェイスの GUID です。
 
-*dw*  
+*dw*<br/>
 [in]パラメーターに渡す、 *func*します。
 
-*func*  
+*func*<br/>
 [in]関数ポインターを返す*iid*します。
 
 ### <a name="remarks"></a>Remarks
@@ -376,10 +377,10 @@ COM_INTERFACE_ENTRY_FUNC_BLIND(dw, func)
 
 ### <a name="parameters"></a>パラメーター
 
-*dw*  
+*dw*<br/>
 [in]パラメーターに渡す、 *func*します。
 
-*func*  
+*func*<br/>
 [in]COM マップ内のこのエントリが処理されるときに呼び出される関数。
 
 ### <a name="remarks"></a>Remarks
@@ -396,7 +397,7 @@ COM_INTERFACE_ENTRY_NOINTERFACE(x)
 
 ### <a name="parameters"></a>パラメーター
 
-*x*  
+*x*<br/>
 [in]インターフェイスの識別子を作成するために使用するテキスト。
 
 ### <a name="remarks"></a>Remarks

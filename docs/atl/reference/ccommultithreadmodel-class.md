@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33eac78dc871dd2a9869452bc829150c3356fd0a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6861f19e6b785ac72edec54577b92dea0c307bff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754944"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100605"
 ---
 # <a name="ccommultithreadmodel-class"></a>CComMultiThreadModel クラス
 
@@ -99,7 +99,7 @@ typedef CComAutoCriticalSection AutoCriticalSection;
 
 次のコードは裏付け[CComObjectRootEx](ccomobjectrootex-class.md)、および例示します`AutoCriticalSection`スレッド環境で使用されています。
 
-```cpp  
+```cpp
 template<class ThreadModel>
 class CMyAutoCritClass
 {
@@ -175,7 +175,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw ();
 
 ### <a name="parameters"></a>パラメーター
 
-*p*  
+*p*<br/>
 [in]デクリメントする変数へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -196,7 +196,7 @@ static ULONG WINAPI Increment(LPLONG p) throw ();
 
 ### <a name="parameters"></a>パラメーター
 
-*p*  
+*p*<br/>
 [in]インクリメントされる変数へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -233,7 +233,7 @@ typedef CComMultiThreadModelNoCS ThreadModelNoCS;
 
 ## <a name="see-also"></a>関連項目
 
-[CComSingleThreadModel クラス](ccomsinglethreadmodel-class.md)   
-[CComAutoCriticalSection クラス](ccomautocriticalsection-class.md)   
-[CComCriticalSection クラス](ccomcriticalsection-class.md)   
+[CComSingleThreadModel クラス](ccomsinglethreadmodel-class.md)<br/>
+[CComAutoCriticalSection クラス](ccomautocriticalsection-class.md)<br/>
+[CComCriticalSection クラス](ccomcriticalsection-class.md)<br/>
 [クラスの概要](../atl-class-overview.md)

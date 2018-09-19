@@ -1,5 +1,5 @@
 ---
-title: NMAKE の致命的なエラー U1001 |Microsoft ドキュメント
+title: NMAKE の致命的なエラー U1001 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68699a235f461a0f5550802cc009d345ecdba7c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e4e465af5b4fa22c5f0ba5a9e01ebde0a7ee89e9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316011"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068144"
 ---
 # <a name="nmake-fatal-error-u1001"></a>NMAKE の致命的なエラー U1001
-構文エラー: 無効な文字 'character' マクロ  
-  
- 指定された文字は、マクロに表示されますが、英字、数字、またはアンダー スコアではありません。  
-  
- このエラーは、マクロの展開で不足している、コロンで発生することができます。  
-  
-```  
-syntax error : illegal character '=' in macro  
+
+構文エラー: 無効な文字 'character' でマクロ
+
+特定の文字は、マクロが表示されますが、文字、数字、またはアンダー スコアではありません。
+
+このエラーは、マクロの展開で不足している、コロンで発生することができます。
+
+```
+syntax error : illegal character '=' in macro
 ```

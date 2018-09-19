@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 4) C4204 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 4) C4204 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a803c81ea0f2fd6ce4b5a8f26eb626e89a32a9b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61194e28081c42a71847eca3f97e4d1f46771d16
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293219"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037542"
 ---
 # <a name="compiler-warning-level-4-c4204"></a>コンパイラの警告 (レベル 4) C4204
-使用される標準の拡張機能: 非定数の初期化子の集約  
-  
- Microsoft 拡張機能 (/Ze)、定数ではない値を持つ集約型 (配列、構造体、共用体、およびクラス) を初期化することができます。  
-  
-## <a name="example"></a>例  
-  
-```  
-// C4204.c  
-// compile with: /W4  
-int func1()  
-{  
-   return 0;  
-}  
-struct S1  
-{  
-   int i;  
-};  
-  
-int main()  
-{  
-   struct S1 s1 = { func1() };   // C4204  
-   return s1.i;  
-}  
-```  
-  
- このような初期化は ANSI 互換では有効ではありません ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。
+
+標準の拡張機能を使用: 非定数の初期化子の集約
+
+Microsoft 拡張機能 (/Ze)、定数ではない値を持つ集約型 (配列、構造体、共用体、およびクラス) を初期化できます。
+
+## <a name="example"></a>例
+
+```
+// C4204.c
+// compile with: /W4
+int func1()
+{
+   return 0;
+}
+struct S1
+{
+   int i;
+};
+
+int main()
+{
+   struct S1 s1 = { func1() };   // C4204
+   return s1.i;
+}
+```
+
+このような初期化が有効で ANSI 互換でない ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。

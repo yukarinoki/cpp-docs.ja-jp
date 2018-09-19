@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2060 |Microsoft ドキュメント
+title: コンパイラ エラー C2060 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd6e23bd3f67bb6e2b100b8afa483b2be8fc68fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5584bf596a507a3055cc9196acd233da8139523b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171338"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101580"
 ---
 # <a name="compiler-error-c2060"></a>コンパイラ エラー C2060
-構文エラー: ファイルの終わりが見つかりました  
-  
- 少なくとも 1 つ以上のトークンが必要です。
+
+構文エラー: ファイルの終わりが見つかりました
+
+少なくとも 1 つ以上のトークンが必要です。

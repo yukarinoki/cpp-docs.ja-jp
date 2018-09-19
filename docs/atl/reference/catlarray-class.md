@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f09bafd0bbda8a64b7a60fe6cacf996106385787
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c08387d5c1a2a9b9b757bab7a8112783a3810065
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753013"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097797"
 ---
 # <a name="catlarray-class"></a>CAtlArray クラス
 
@@ -55,10 +55,10 @@ class CAtlArray
 
 #### <a name="parameters"></a>パラメーター
 
-*E*  
+*E*<br/>
 配列に格納されるデータの型。
 
-*ETraits*  
+*ETraits*<br/>
 コピーまたは要素を移動するために使用するコードです。
 
 ## <a name="members"></a>メンバー
@@ -124,7 +124,7 @@ size_t Add();
 
 ### <a name="parameters"></a>パラメーター
 
-*要素*  
+*要素*<br/>
 配列に追加する要素。
 
 ### <a name="return-value"></a>戻り値
@@ -149,7 +149,7 @@ size_t Append(const CAtlArray<E, ETraits>& aSrc);
 
 ### <a name="parameters"></a>パラメーター
 
-*aSrc*  
+*aSrc*<br/>
 追加先の配列。
 
 ### <a name="return-value"></a>戻り値
@@ -222,7 +222,7 @@ void Copy(const CAtlArray<E, ETraits>& aSrc);
 
 ### <a name="parameters"></a>パラメーター
 
-*aSrc*  
+*aSrc*<br/>
 配列にコピーする要素のソース。
 
 ### <a name="remarks"></a>Remarks
@@ -265,7 +265,7 @@ E& GetAt(size_t iElement) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*iElement*  
+*iElement*<br/>
 返される配列要素のインデックス値。
 
 ### <a name="return-value"></a>戻り値
@@ -335,10 +335,10 @@ void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 
 ### <a name="parameters"></a>パラメーター
 
-*iStart*  
+*iStart*<br/>
 配列が挿入されるインデックス。
 
-*paNew*  
+*paNew*<br/>
 挿入先の配列。
 
 ### <a name="remarks"></a>Remarks
@@ -364,13 +364,13 @@ void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 
 ### <a name="parameters"></a>パラメーター
 
-*iElement*  
+*iElement*<br/>
 要素または要素が挿入されるインデックス。
 
-*要素*  
+*要素*<br/>
 要素または挿入する要素の値。
 
-*nCount*  
+*nCount*<br/>
 追加する要素の数。
 
 ### <a name="remarks"></a>Remarks
@@ -414,7 +414,7 @@ const E& operator[](size_t ielement) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*iElement*  
+*iElement*<br/>
 返される配列要素のインデックス値。
 
 ### <a name="return-value"></a>戻り値
@@ -463,10 +463,10 @@ void RemoveAt(size_t iElement, size_t nCount = 1);
 
 ### <a name="parameters"></a>パラメーター
 
-*iElement*  
+*iElement*<br/>
 削除する最初の要素のインデックス。
 
-*nCount*  
+*nCount*<br/>
 削除する要素の数を指定します。
 
 ### <a name="remarks"></a>Remarks
@@ -489,10 +489,10 @@ void SetAt(size_t iElement, INARGTYPE element);
 
 ### <a name="parameters"></a>パラメーター
 
-*iElement*  
+*iElement*<br/>
 設定する配列要素を指すインデックス。
 
-*要素*  
+*要素*<br/>
 指定した要素の新しい値。
 
 ### <a name="remarks"></a>Remarks
@@ -513,10 +513,10 @@ bool SetCount(size_t nNewSize, int nGrowBy = - 1);
 
 ### <a name="parameters"></a>パラメーター
 
-*nNewSize*  
+*nNewSize*<br/>
 配列の必要なサイズ。
 
-*nGrowBy*  
+*nGrowBy*<br/>
 値を決定するために使用するバッファー。 値-1 の場合、使用する計算を内部的の値。
 
 ### <a name="return-value"></a>戻り値
@@ -543,10 +543,10 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
 
 ### <a name="parameters"></a>パラメーター
 
-*iElement*  
+*iElement*<br/>
 設定する配列要素を指すインデックス。
 
-*要素*  
+*要素*<br/>
 指定した要素の新しい値。
 
 ### <a name="remarks"></a>Remarks
@@ -559,9 +559,9 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
 
 ## <a name="see-also"></a>関連項目
 
-[MMXSwarm サンプル](../../visual-cpp-samples.md)   
-[DynamicConsumer サンプル](../../visual-cpp-samples.md)   
-[UpdatePV サンプル](../../visual-cpp-samples.md)   
-[マーキーのサンプル](../../visual-cpp-samples.md)   
-[CArray クラス](../../mfc/reference/carray-class.md)   
+[MMXSwarm サンプル](../../visual-cpp-samples.md)<br/>
+[DynamicConsumer サンプル](../../visual-cpp-samples.md)<br/>
+[UpdatePV サンプル](../../visual-cpp-samples.md)<br/>
+[マーキーのサンプル](../../visual-cpp-samples.md)<br/>
+[CArray クラス](../../mfc/reference/carray-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

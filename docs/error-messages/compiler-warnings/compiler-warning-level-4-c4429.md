@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 4) C4429 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 4) C4429 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00d4812fb1eefdd4364376288f063a6bf8b5dddf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 19e10806ffa601caa4212b5e5f98b823ec8941d0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293716"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049229"
 ---
 # <a name="compiler-warning-level-4-c4429"></a>コンパイラの警告 (レベル 4) C4429
-考えられる不完全か、形式の正しくないユニバーサル文字名  
-  
- 正しくない形式のユニバーサル文字名である可能性がありますを文字シーケンスが検出されました。 ユニバーサル文字名は`\u`後に 4 桁の 16 進数または`\U`8 桁の 16 進数字が続きます。  
-  
- 次の例では、C4429 が生成されます。  
-  
-```  
-// C4429.cpp  
-// compile with: /W4 /WX  
-int \ug0e4 = 0;   // C4429  
-// Try the following line instead:  
-// int \u00e4 = 0;   // OK, a well-formed universal character name.  
+
+考えられる不完全または形式の正しくないユニバーサル文字名
+
+正しくない形式のユニバーサル文字名を使用できる文字シーケンスが検出されました。 ユニバーサル文字名は`\u`4 つの 16 進数字が続くまたは`\U`8 つの 16 進数字が続きます。
+
+次の例では、C4429 が生成されます。
+
+```
+// C4429.cpp
+// compile with: /W4 /WX
+int \ug0e4 = 0;   // C4429
+// Try the following line instead:
+// int \u00e4 = 0;   // OK, a well-formed universal character name.
 ```

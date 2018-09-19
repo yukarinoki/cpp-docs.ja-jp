@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87109793625435945c45b2643ccd674946acff49
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1d14a839cded7d22236912ba52a733a9ce15f7aa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752646"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103244"
 ---
 # <a name="ctokengroups-class"></a>CTokenGroups クラス
 
@@ -92,19 +92,19 @@ Windows でのアクセス制御モデルの概要については、次を参照
 追加、`CSid`または既存の`TOKEN_GROUPS`構造体を`CTokenGroups`オブジェクト。
 
 ```
-void Add(const CSid& rSid, DWORD dwAttributes) throw(... );  
+void Add(const CSid& rSid, DWORD dwAttributes) throw(... );
 void Add(const TOKEN_GROUPS& rTokenGroups) throw(...);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*rSid*  
+*rSid*<br/>
 A [CSid](../../atl/reference/csid-class.md)オブジェクト。
 
-*dwAttributes*  
+*dwAttributes*<br/>
 関連付ける属性、`CSid`オブジェクト。
 
-*rTokenGroups*  
+*rTokenGroups*<br/>
 A [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups)構造体。
 
 ### <a name="remarks"></a>Remarks
@@ -117,13 +117,13 @@ A [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups)構造体。
 
 ```
 CTokenGroups() throw();
-CTokenGroups(const CTokenGroups& rhs) throw(... );  
+CTokenGroups(const CTokenGroups& rhs) throw(... );
 CTokenGroups(const TOKEN_GROUPS& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*rhs*  
+*rhs*<br/>
 `CTokenGroups`オブジェクトまたは[TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups)構築に使用する構造体、`CTokenGroups`オブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -152,7 +152,7 @@ bool Delete(const CSid& rSid) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*rSid*  
+*rSid*<br/>
 [CSid](../../atl/reference/csid-class.md)をセキュリティ識別子 (SID) と属性が削除されるオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -215,10 +215,10 @@ void GetSidsAndAttributes(
 
 ### <a name="parameters"></a>パラメーター
 
-*pSids*  
+*pSids*<br/>
 配列を指すポインター [CSid](../../atl/reference/csid-class.md)オブジェクト。
 
-*pAttributes*  
+*pAttributes*<br/>
 Dword の配列へのポインター。 このパラメーターが省略するか、NULL の場合は、属性は取得されません。
 
 ### <a name="remarks"></a>Remarks
@@ -237,10 +237,10 @@ bool LookupSid(
 
 ### <a name="parameters"></a>パラメーター
 
-*rSid*  
+*rSid*<br/>
 [CSid](../../atl/reference/csid-class.md)オブジェクト。
 
-*pdwAttributes*  
+*pdwAttributes*<br/>
 そのまま使用する DWORD へのポインター、`CSid`オブジェクトの属性。 省略するか NULL の場合、属性は取得されません。
 
 ### <a name="return-value"></a>戻り値
@@ -256,13 +256,13 @@ bool LookupSid(
 代入演算子。
 
 ```
-CTokenGroups& operator= (const TOKEN_GROUPS& rhs) throw(...);  
+CTokenGroups& operator= (const TOKEN_GROUPS& rhs) throw(...);
 CTokenGroups& operator= (const CTokenGroups& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*rhs*  
+*rhs*<br/>
 `CTokenGroups`オブジェクトまたは[TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups)構造に割り当てる、`CTokenGroups`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -273,7 +273,7 @@ CTokenGroups& operator= (const CTokenGroups& rhs) throw(...);
 
 値へのポインターにキャスト、`TOKEN_GROUPS`構造体。
 
-```  
+```
 operator const TOKEN_GROUPS *() const throw(...);
 ```
 
@@ -283,7 +283,7 @@ operator const TOKEN_GROUPS *() const throw(...);
 
 ## <a name="see-also"></a>関連項目
 
-[セキュリティのサンプル](../../visual-cpp-samples.md)   
-[CSid クラス](../../atl/reference/csid-class.md)   
-[クラスの概要](../../atl/atl-class-overview.md)   
+[セキュリティのサンプル](../../visual-cpp-samples.md)<br/>
+[CSid クラス](../../atl/reference/csid-class.md)<br/>
+[クラスの概要](../../atl/atl-class-overview.md)<br/>
 [セキュリティに関するグローバル関数](../../atl/reference/security-global-functions.md)

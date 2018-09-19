@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2175 |Microsoft ドキュメント
+title: コンパイラ エラー C2175 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 390f94a8e269946db9b9bb68afd890cf9b38ee7c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e61105e32b1aa9c88b395b155ece8b85565a7635
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170305"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117069"
 ---
 # <a name="compiler-error-c2175"></a>コンパイラ エラー C2175
-'ロケール': 無効なロケール  
-  
- 指定されたロケールが正しくありません。 参照してください[言語および国/地域識別文字列](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)で、*ランタイム ライブラリ リファレンス*のロケールをサポートします。
+
+'ロケール': 無効なロケール
+
+指定されたロケールが無効です。 参照してください[言語と国/地域識別文字列](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)で、*ランタイム ライブラリ リファレンス*のロケールをサポートします。

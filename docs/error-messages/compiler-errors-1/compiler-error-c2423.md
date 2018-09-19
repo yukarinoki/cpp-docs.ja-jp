@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2423 |Microsoft ドキュメント
+title: コンパイラ エラー C2423 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c96408323c7afd9e15fee521c9d20005dfc6da21
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e7a974a83935dbbcc9cd78bcc9280c9f0fbc2a4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195855"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029313"
 ---
 # <a name="compiler-error-c2423"></a>コンパイラ エラー C2423
-'number': 無効な小数点以下桁数  
-  
- インライン アセンブラー コードでは、レジスタのスケーリングに 1、2、4、または 8 以外の数値を使用します。  
-  
- 次の例では、C2423 が生成されます。  
-  
-```  
-// C2423.cpp  
-// processor: x86  
-int main() {  
-   _asm {  
-      lea EAX, [EAX*3]   // C2423  
-      lea EAX, [EAX+EAX*2]   // OK  
-   }  
-}  
+
+'number': スケーリングが正しくありません
+
+インライン アセンブラー コードでは、1、2、4、または 8 以外の数値を使用して、レジスタのスケーリングします。
+
+次の例では、C2423 が生成されます。
+
+```
+// C2423.cpp
+// processor: x86
+int main() {
+   _asm {
+      lea EAX, [EAX*3]   // C2423
+      lea EAX, [EAX+EAX*2]   // OK
+   }
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: texture クラス |Microsoft ドキュメント
+title: texture クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,15 +27,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b16e449f3def7b4b86932e9806fa78d422466978
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 369ca34eb75b33208365d34756312e23e85afd92
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692783"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029638"
 ---
 # <a name="texture-class"></a>texture クラス
-テクスチャは範囲ドメイン内の `accelerator_view` についてのデータ集合体です。 これは、範囲ドメインの各要素に対して 1 つずつの変数のコレクションです。 各変数は C++ のプリミティブ型に対応する値を保持 ( `unsigned int`、 `int`、 `float`、 `double`)、スカラー型 ( `norm`、または`unorm`)、または短いベクター型です。  
+テクスチャは範囲ドメイン内の `accelerator_view` についてのデータ集合体です。 これは、範囲ドメインの各要素に対して 1 つずつの変数のコレクションです。 各変数は C++ のプリミティブ型に対応する値を保持 ( `unsigned int`、 `int`、 `float`、 `double`)、スカラー型 ( `norm`、または`unorm`)、または short ベクター型。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,11 +45,11 @@ class texture;
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `value_type`  
- テクスチャの要素の型。  
+*value_type*<br/>
+テクスチャの要素の型。  
   
- `_Rank`  
- テクスチャのランク。  
+*_Rank*<br/>
+テクスチャのランク。  
   
 ## <a name="members"></a>メンバー  
   
@@ -71,7 +71,7 @@ class texture;
   
 |名前|説明|  
 |----------|-----------------|  
-|[copy_to](#copy_to)|コピー、`texture`詳細コピーの手順を実行して、変換先にオブジェクト。|  
+|[copy_to](#copy_to)|コピー、`texture`ディープ コピーを実行して、先のオブジェクト。|  
 |[data](#data)|このテクスチャの生データに CPU のポインターを返します。|  
 |[get](#get)|指定したインデックス位置に要素の値を返します。|  
 |[get_associated_accelerator_view](#get_associated_accelerator_view)|返します、 [accelerator_view](accelerator-view-class.md)にコピーするには、このテクスチャの優先ターゲットであります。|  
@@ -85,7 +85,7 @@ class texture;
 |----------|-----------------|  
 |[operator()](#operator_call)|パラメーターによって指定された要素の値を返します。|  
 |[operator[]](#operator_at)|指定したインデックス位置にある要素を返します。|  
-|[operator=](#operator_eq)|指定したコピー[テクスチャ](texture-class.md)オブジェクトをこのオブジェクトにします。|  
+|[operator=](#operator_eq)|指定したコピー[テクスチャ](texture-class.md)オブジェクトをこのオブジェクト。|  
   
 ### <a name="public-constants"></a>パブリック定数  
   
@@ -129,7 +129,7 @@ __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelera
   
 ##  <a name="copy_to"></a> copy_to 
 
- コピー、`texture`詳細コピーの手順を実行して、変換先にオブジェクト。  
+ コピー、`texture`ディープ コピーを実行して、先のオブジェクト。  
   
 ```  
 void copy_to(texture& _Dest) const; 
@@ -137,14 +137,14 @@ void copy_to(writeonly_texture_view<value_type, _Rank>& _Dest) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Dest`  
- コピー先のオブジェクト。  
+*_Dest*<br/>
+コピー先のオブジェクト。  
   
- `_Rank`  
- テクスチャのランク。  
+*_Rank*<br/>
+テクスチャのランク。  
   
- `value_type`  
- テクスチャの要素の型。  
+*value_type*<br/>
+テクスチャの要素の型。  
   
 ##  <a name="data"></a> データ 
 
@@ -177,8 +177,8 @@ const value_type get(const index<_Rank>& _Index) const restrict(amp);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Index`  
- 要素のインデックス。  
+*_Index*<br/>
+要素のインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  指定されたインデックス位置にある要素の値。  
@@ -241,20 +241,20 @@ const value_type operator() (
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Index`  
- インデックス。  
+*_Index*<br/>
+インデックス。  
   
- `_I0`  
- インデックスの最上位のコンポーネント。  
+*_I0*<br/>
+インデックスの最上位のコンポーネント。  
   
- `_I1`  
- インデックスの最上位の次のコンポーネント。  
+*_I1*<br/>
+インデックスの最上位の次のコンポーネント。  
   
- `_I2`  
- インデックスの最下位のコンポーネント。  
+*_I2*<br/>
+インデックスの最下位のコンポーネント。  
   
- `_Rank`  
- インデックスのランク。  
+*_Rank*<br/>
+インデックスのランク。  
   
 ### <a name="return-value"></a>戻り値  
  パラメーターで指定された要素の値。  
@@ -271,18 +271,18 @@ const value_type operator[] (int _I0) const restrict(amp);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Index`  
- インデックス。  
+*_Index*<br/>
+インデックス。  
   
- `_I0`  
- インデックス。  
+*_I0*<br/>
+インデックス。  
   
 ### <a name="return-value"></a>戻り値  
  指定したインデックス位置にある要素。  
   
 ##  <a name="operator_eq"></a> 演算子 = 
 
- 指定したコピー[テクスチャ](texture-class.md)オブジェクトをこのオブジェクトにします。  
+ 指定したコピー[テクスチャ](texture-class.md)オブジェクトをこのオブジェクト。  
   
 ```  
 texture& operator= (
@@ -294,8 +294,8 @@ texture& operator= (
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Other`  
- コピー元の `texture` オブジェクト。  
+*_Other*<br/>
+コピー元の `texture` オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  この `texture` オブジェクトへの参照。  
@@ -327,14 +327,14 @@ void set(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Index`  
- 要素のインデックス。  
+*_Index*<br/>
+要素のインデックス。  
   
- `_Rank`  
- インデックスのランク。  
+*_Rank*<br/>
+インデックスのランク。  
   
- `value`  
- 要素の新しい値。  
+*値*<br/>
+要素の新しい値。  
   
 ##  <a name="ctor"></a> テクスチャ 
 
@@ -561,59 +561,59 @@ texture(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Acc_view`  
- [Accelerator_view](accelerator-view-class.md)テクスチャの場所を指定します。  
+*_Acc_view*<br/>
+[Accelerator_view](accelerator-view-class.md)テクスチャの場所を指定します。  
   
- `_Av`  
- [Accelerator_view](accelerator-view-class.md)テクスチャの場所を指定します。  
+*_Av*<br/>
+[Accelerator_view](accelerator-view-class.md)テクスチャの場所を指定します。  
   
- `_Associated_av`  
- コピー先としてまたはこのテクスチャからの優先ターゲットを指定する accelerator_view。  
+*_Associated_av*<br/>
+コピー先としてまたはこのテクスチャからの優先ターゲットを指定する accelerator_view。  
   
- `_Bits_per_scalar_element`  
- テクスチャの基になるスカラー型のスカラー要素ごとのビット数。 一般に、サポートされている値は 8、16、32、および 64 です。 0 を指定すると、ビット数は基になる scalar_type と同じです。 64 は、倍精度ベースのテクスチャに対してのみ有効です。  
+*_Bits_per_scalar_element*<br/>
+テクスチャの基になるスカラー型のスカラー要素ごとのビット数。 一般に、サポートされている値は 8、16、32、および 64 です。 0 を指定すると、ビット数は基になる scalar_type と同じです。 64 は、倍精度ベースのテクスチャに対してのみ有効です。  
   
- `_Ext`  
- テクスチャの各次元の範囲。  
+*展開*<br/>
+テクスチャの各次元の範囲。  
   
- `_E0`  
- テクスチャの最上位のコンポーネント。  
+*_E0*<br/>
+テクスチャの最上位のコンポーネント。  
   
- `_E1`  
- テクスチャの最上位の次のコンポーネント。  
+*_E1*<br/>
+テクスチャの最上位の次のコンポーネント。  
   
- `_E2`  
- テクスチャの範囲の最下位のコンポーネント。  
+*_E2*<br/>
+テクスチャの範囲の最下位のコンポーネント。  
   
- `_Input_iterator`  
- 入力列挙子の型。  
+*_Input_iterator*<br/>
+入力列挙子の型。  
   
- `_Mipmap_levels`  
- 基になるテクスチャの MIPMAP レベルの数。 0 を指定すると、テクスチャには指定された範囲で可能な最小サイズにした MIPMAP レベルのすべての範囲が含まれます。  
+*_Mipmap_levels*<br/>
+基になるテクスチャの MIPMAP レベルの数。 0 を指定すると、テクスチャには指定された範囲で可能な最小サイズにした MIPMAP レベルのすべての範囲が含まれます。  
   
- `_Rank`  
- 範囲のランク。  
+*_Rank*<br/>
+範囲のランク。  
   
- `_Source`  
- ホスト バッファーへのポインター。  
+*_Source*<br/>
+ホスト バッファーへのポインター。  
   
- `_Src`  
- コピーするテクスチャ。  
+*_Src*<br/>
+コピーするテクスチャ。  
   
- `_Src_byte_size`  
- ソース バッファーのバイト数。  
+*_Src_byte_size*<br/>
+ソース バッファーのバイト数。  
   
- `_Src_first`  
- ソース コンテナーへの先頭の反復子。  
+*_Src_first*<br/>
+ソース コンテナーへの先頭の反復子。  
   
- `_Src_last`  
- ソース コンテナーへの終了の反復子。  
+*_Src_last*<br/>
+ソース コンテナーへの終了の反復子。  
   
- `_Other`  
- その他のデータ ソース。  
+*_Other*<br/>
+その他のデータ ソース。  
   
- `_Rank`  
- セクションのランク。  
+*_Rank*<br/>
+セクションのランク。  
   
 ## <a name="see-also"></a>関連項目  
  [Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)

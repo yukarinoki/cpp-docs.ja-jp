@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3665 |Microsoft ドキュメント
+title: コンパイラ エラー C3665 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e55be277f5016be2440987864e67dfc54f4cd094
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 16d7f64bebfda41a958edf9759359bc38352c086
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263909"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025257"
 ---
 # <a name="compiler-error-c3665"></a>コンパイラ エラー C3665
-'デコンストラクター' : オーバーライド指定子 'キーワード' は 'デコンストラクター/ファイナライザー' では使用できません  
-  
- デストラクターまたはファイナライザーでは使用できないキーワードが使用されています。  
-  
- たとえば、new スロットは、デストラクターまたはファイナライザーでは要求できません。  詳細については、次を参照してください。[明示的なオーバーライド](../../windows/explicit-overrides-cpp-component-extensions.md)と[デストラクターおよびファイナライザー](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)です。  
-  
- 次の例では、C3665 が生成されます。  
-  
-```  
-// C3665.cpp  
-// compile with: /clr  
-public ref struct R {  
-   virtual ~R() { }  
-   virtual void a() { }  
-};  
-  
-public ref struct S : R {  
-   virtual ~S() new {}   // C3665  
-   virtual void a() new {}   // OK  
-};  
+
+'デコンストラクター' : オーバーライド指定子 'キーワード' は 'デコンストラクター/ファイナライザー' では使用できません
+
+デストラクターまたはファイナライザーでは使用できないキーワードが使用されています。
+
+たとえば、new スロットは、デストラクターまたはファイナライザーでは要求できません。  詳細については、次を参照してください。[明示的なオーバーライド](../../windows/explicit-overrides-cpp-component-extensions.md)と[デストラクターおよびファイナライザー](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)します。
+
+次の例では、C3665 が生成されます。
+
+```
+// C3665.cpp
+// compile with: /clr
+public ref struct R {
+   virtual ~R() { }
+   virtual void a() { }
+};
+
+public ref struct S : R {
+   virtual ~S() new {}   // C3665
+   virtual void a() new {}   // OK
+};
 ```

@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4677 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4677 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3511ad3100bf695cec5df97703b39e5926c71c11
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6a3f57ba0e3d4c15c83711a86bb8482fa8b0596
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281695"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049388"
 ---
 # <a name="compiler-warning-level-1-c4677"></a>コンパイラの警告 (レベル 1) C4677
-'function': 公開されたメンバーのシグネチャには、アセンブリ プライベート型 'private_type' が含まれています。  
-  
- アセンブリの外側のパブリック アクセシビリティを持つ型では、アセンブリの外側のプライベート アクセス権を持つ型を使用します。 パブリック アセンブリの型を参照するコンポーネントは、型のメンバーまたはアセンブリ プライベート型を参照するメンバーを使用できません。  
-  
-## <a name="example"></a>例  
- 次の例では、C4677 を生成します。  
-  
-```  
-// C4677.cpp  
-// compile with: /clr /c /W1  
-delegate void TestDel();  
-public delegate void TestDel2();  
-  
-public ref class MyClass {  
-public:  
-   static event TestDel^ MyClass_Event;   // C4677  
-   static event TestDel2^ MyClass_Event2;   // OK  
-};  
+
+'function': 公開されたメンバーのシグネチャにはアセンブリ プライベート型 'private_type' が含まれています
+
+アセンブリの外部パブリック アクセシビリティを持つ型では、アセンブリの外部の秘密アクセス権を持つ型を使用します。 パブリック アセンブリの型を参照するコンポーネントはアセンブリ プライベート型を参照するメンバーまたは型のメンバーを使用できません。
+
+## <a name="example"></a>例
+
+次の例では、C4677 が生成されます。
+
+```
+// C4677.cpp
+// compile with: /clr /c /W1
+delegate void TestDel();
+public delegate void TestDel2();
+
+public ref class MyClass {
+public:
+   static event TestDel^ MyClass_Event;   // C4677
+   static event TestDel2^ MyClass_Event2;   // OK
+};
 ```

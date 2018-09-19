@@ -8,12 +8,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c573f3e170929df1b988bf3e74535dd12b83a2f8
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: f2a6ef80edc5f6bbeaf43bbc5851336b67d8cf36
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131800"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118831"
 ---
 # <a name="attributes-in-c"></a>C++ での属性
 
@@ -45,7 +45,7 @@ void Foo(int);
 
 - `[[carries_dependency]]` 関数がスレッドの同期に対して順序付けデータの依存関係を伝達を指定します。 属性は、渡された引数が関数本体に依存関係を実行するかを指定する、1 つまたは複数のパラメーターに適用できます。 属性は、関数、戻り値が、関数からの依存関係を実行して、自体に適用できます。 コンパイラより効率的なコードを生成するのに、この情報を使用できます。
 
-- `[[deprecated]]` **Visual Studio 2015 以降:** 関数を使用するありませんを指定し、将来のバージョンのライブラリ インターフェイスは存在可能性があります。 コンパイラは、これを使用すると、クライアント コードが、関数を呼び出すしようとしたときに、情報メッセージを生成できます。 クラス、typedef 名、変数、非静的データ メンバー、関数、名前空間、列挙体、列挙子、またはテンプレートの特殊化の宣言に適用できます。  
+- `[[deprecated]]` **Visual Studio 2015 以降:** 関数を使用するありませんを指定し、将来のバージョンのライブラリ インターフェイスは存在可能性があります。 コンパイラは、これを使用すると、クライアント コードが、関数を呼び出すしようとしたときに、情報メッセージを生成できます。 クラス、typedef 名、変数、非静的データ メンバー、関数、名前空間、列挙体、列挙子、またはテンプレートの特殊化の宣言に適用できます。
 
 - `[[fallthrough]]` **Visual Studio 2017 以降:** (で使用可能な[/std:c + + + 17](../build/reference/std-specify-language-standard-version.md))、`[[fallthrough]]`のコンテキストで属性を使用できる[スイッチ](switch-statement-cpp.md)コンパイラ (または読むすべてのユーザーへのヒントとしてステートメントコード)、fallthrough 動作が想定されています。 Visual C コンパイラ現在は、警告、fallthrough 動作ため、この属性には、コンパイラの動作の効果はありません。
 

@@ -1,5 +1,5 @@
 ---
-title: 致命的なエラー C1196 |Microsoft ドキュメント
+title: 致命的なエラー C1196 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51316b1e25c13a7e501d1d0f2fbde88f6b2ce613
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53c10a2b3849bfa45f5111b07c95d7355fcbdbfd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199016"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102529"
 ---
 # <a name="fatal-error-c1196"></a>致命的なエラー C1196
-'identifier': 型ライブラリ 'typelib' で見つかった識別子は、有効な C++ 識別子ではありません  
-  
- 型ライブラリのいずれかの識別子が有効な C++ 識別子ではありません。 タイプ ライブラリは、 [#import](../../preprocessor/hash-import-directive-cpp.md)と共に使用することはできません。
+
+'identifier': 型ライブラリ 'typelib' で見つかった識別子は、有効な C++ 識別子ではありません
+
+型ライブラリのいずれかの識別子が有効な C++ 識別子ではありません。 タイプ ライブラリは、 [#import](../../preprocessor/hash-import-directive-cpp.md)と共に使用することはできません。

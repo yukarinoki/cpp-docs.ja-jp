@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17661f7497711449397ae2f64c9d6eff52d5f403
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 18666cc619796bc7ee0216eb9cdf020bd8d8a6f7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766926"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035748"
 ---
 # <a name="ccomcontrolbase-class"></a>CComControlBase クラス
 
@@ -238,7 +238,7 @@ CComControlBase(HWND& h);
 
 ### <a name="parameters"></a>パラメーター
 
-*h*  
+*h*<br/>
 コントロールに関連付けられているウィンドウのハンドル。
 
 ### <a name="remarks"></a>Remarks
@@ -268,10 +268,10 @@ virtual HRESULT ControlQueryInterface(const IID& iid,
 
 ### <a name="parameters"></a>パラメーター
 
-*iid*  
+*iid*<br/>
 要求されているインターフェイスの GUID です。
 
-*ppv*  
+*ppv*<br/>
 によって識別されるインターフェイス ポインターへのポインター *iid*インターフェイスが見つからない場合は null です。
 
 ### <a name="remarks"></a>Remarks
@@ -292,7 +292,7 @@ BOOL DoesVerbActivate(LONG iVerb);
 
 ### <a name="parameters"></a>パラメーター
 
-*iVerb*  
+*iVerb*<br/>
 によって実行されるアクションを示す値`DoVerb`します。
 
 ### <a name="return-value"></a>戻り値
@@ -313,7 +313,7 @@ BOOL DoesVerbUIActivate(LONG iVerb);
 
 ### <a name="parameters"></a>パラメーター
 
-*iVerb*  
+*iVerb*<br/>
 によって実行されるアクションを示す値`DoVerb`します。
 
 ### <a name="return-value"></a>戻り値
@@ -330,10 +330,10 @@ HRESULT DoVerbProperties(LPCRECT /* prcPosRect */, HWND hwndParent);
 
 ### <a name="parameters"></a>パラメーター
 
-*prcPosRec*  
+*prcPosRec*<br/>
 予約済み。
 
-*hwndParent*  
+*hwndParent*<br/>
 コントロールを含むウィンドウのハンドル。
 
 ### <a name="return-value"></a>戻り値
@@ -376,7 +376,7 @@ HRESULT GetAmbientAppearance(short& nAppearance);
 
 ### <a name="parameters"></a>パラメーター
 
-*nAppearance*  
+*nAppearance*<br/>
 プロパティを示すです。
 
 ### <a name="return-value"></a>戻り値
@@ -397,7 +397,7 @@ HRESULT GetAmbientAutoClip(BOOL& bAutoClip);
 
 ### <a name="parameters"></a>パラメーター
 
-*bAutoClip*  
+*bAutoClip*<br/>
 DISPID_AMBIENT_AUTOCLIP プロパティ。
 
 ### <a name="return-value"></a>戻り値
@@ -414,7 +414,7 @@ HRESULT GetAmbientBackColor(OLE_COLOR& BackColor);
 
 ### <a name="parameters"></a>パラメーター
 
-*背景色*  
+*背景色*<br/>
 DISPID_AMBIENT_BACKCOLOR プロパティ。
 
 ### <a name="return-value"></a>戻り値
@@ -431,7 +431,7 @@ HRESULT GetAmbientCharSet(BSTR& bstrCharSet);
 
 ### <a name="parameters"></a>パラメーター
 
-*bstrCharSet*  
+*bstrCharSet*<br/>
 DISPID_AMBIENT_CHARSET プロパティ。
 
 ### <a name="return-value"></a>戻り値
@@ -448,7 +448,7 @@ HRESULT GetAmbientCodePage(ULONG& ulCodePage);
 
 ### <a name="parameters"></a>パラメーター
 
-*ulCodePage*  
+*ulCodePage*<br/>
 プロパティことにあります。
 
 ### <a name="return-value"></a>戻り値
@@ -465,7 +465,7 @@ HRESULT GetAmbientDisplayAsDefault(BOOL& bDisplayAsDefault);
 
 ### <a name="parameters"></a>パラメーター
 
-*bDisplayAsDefault*  
+*bDisplayAsDefault*<br/>
 DISPID_AMBIENT_DISPLAYASDEFAULT プロパティ。
 
 ### <a name="return-value"></a>戻り値
@@ -482,7 +482,7 @@ HRESULT GetAmbientDisplayName(BSTR& bstrDisplayName);
 
 ### <a name="parameters"></a>パラメーター
 
-*bstrDisplayName*  
+*bstrDisplayName*<br/>
 DISPID_AMBIENT_DISPLAYNAME プロパティ。
 
 ### <a name="return-value"></a>戻り値
@@ -499,7 +499,7 @@ HRESULT GetAmbientFont(IFont** ppFont);
 
 ### <a name="parameters"></a>パラメーター
 
-*ppFont*  
+*ppFont*<br/>
 コンテナーのアンビエント[IFont](/windows/desktop/api/ocidl/nn-ocidl-ifont)インターフェイス。
 
 ### <a name="return-value"></a>戻り値
@@ -520,7 +520,7 @@ HRESULT GetAmbientFontDisp(IFontDisp** ppFont);
 
 ### <a name="parameters"></a>パラメーター
 
-*ppFont*  
+*ppFont*<br/>
 コンテナーのアンビエント[IFontDisp](https://msdn.microsoft.com/library/windows/desktop/ms692695)ディスパッチ インターフェイス。
 
 ### <a name="return-value"></a>戻り値
@@ -541,7 +541,7 @@ HRESULT GetAmbientForeColor(OLE_COLOR& ForeColor);
 
 ### <a name="parameters"></a>パラメーター
 
-*前景色*  
+*前景色*<br/>
 DISPID_AMBIENT_FORECOLOR プロパティ。
 
 ### <a name="return-value"></a>戻り値
@@ -558,7 +558,7 @@ HRESULT GetAmbientLocaleID(LCID& lcid);
 
 ### <a name="parameters"></a>パラメーター
 
-*lcid*  
+*lcid*<br/>
 DISPID_AMBIENT_LOCALEID プロパティ。
 
 ### <a name="return-value"></a>戻り値
@@ -579,7 +579,7 @@ HRESULT GetAmbientMessageReflect(BOOL& bMessageReflect);
 
 ### <a name="parameters"></a>パラメーター
 
-*bMessageReflect*  
+*bMessageReflect*<br/>
 DISPID_AMBIENT_MESSAGEREFLECT プロパティ。
 
 ### <a name="return-value"></a>戻り値
@@ -596,7 +596,7 @@ HRESULT GetAmbientPalette(HPALETTE& hPalette);
 
 ### <a name="parameters"></a>パラメーター
 
-*hPalette*  
+*hPalette*<br/>
 DISPID_AMBIENT_PALETTE プロパティ。
 
 ### <a name="return-value"></a>戻り値
@@ -613,10 +613,10 @@ HRESULT GetAmbientProperty(DISPID dispid, VARIANT& var);
 
 ### <a name="parameters"></a>パラメーター
 
-*dispid*  
+*dispid*<br/>
 取得するコンテナーのプロパティの識別子。
 
-*var*  
+*var*<br/>
 プロパティを受信する変数。
 
 ### <a name="return-value"></a>戻り値
@@ -637,7 +637,7 @@ HRESULT GetAmbientRightToLeft(BOOL& bRightToLeft);
 
 ### <a name="parameters"></a>パラメーター
 
-*bRightToLeft*  
+*bRightToLeft*<br/>
 DISPID_AMBIENT_RIGHTTOLEFT プロパティ。 FALSE の場合はコンテンツが右から左に表示されている場合は TRUE に設定して、右側に左が表示されます。
 
 ### <a name="return-value"></a>戻り値
@@ -654,7 +654,7 @@ HRESULT GetAmbientScaleUnits(BSTR& bstrScaleUnits);
 
 ### <a name="parameters"></a>パラメーター
 
-*bstrScaleUnits*  
+*bstrScaleUnits*<br/>
 DISPID_AMBIENT_SCALEUNITS プロパティ。
 
 ### <a name="return-value"></a>戻り値
@@ -671,7 +671,7 @@ HRESULT GetAmbientShowGrabHandles(BOOL& bShowGrabHandles);
 
 ### <a name="parameters"></a>パラメーター
 
-*bShowGrabHandles*  
+*bShowGrabHandles*<br/>
 DISPID_AMBIENT_SHOWGRABHANDLES プロパティ。
 
 ### <a name="return-value"></a>戻り値
@@ -688,7 +688,7 @@ HRESULT GetAmbientShowHatching(BOOL& bShowHatching);
 
 ### <a name="parameters"></a>パラメーター
 
-*bShowHatching*  
+*bShowHatching*<br/>
 DISPID_AMBIENT_SHOWHATCHING プロパティ。
 
 ### <a name="return-value"></a>戻り値
@@ -705,7 +705,7 @@ HRESULT GetAmbientSupportsMnemonics(BOOL& bSupportsMnemonics);
 
 ### <a name="parameters"></a>パラメーター
 
-*bSupportsMnemonics*  
+*bSupportsMnemonics*<br/>
 DISPID_AMBIENT_SUPPORTSMNEMONICS プロパティ。
 
 ### <a name="return-value"></a>戻り値
@@ -722,7 +722,7 @@ HRESULT GetAmbientTextAlign(short& nTextAlign);
 
 ### <a name="parameters"></a>パラメーター
 
-*nTextAlign*  
+*nTextAlign*<br/>
 DISPID_AMBIENT_TEXTALIGN プロパティ。
 
 ### <a name="return-value"></a>戻り値
@@ -739,7 +739,7 @@ HRESULT GetAmbientTopToBottom(BOOL& bTopToBottom);
 
 ### <a name="parameters"></a>パラメーター
 
-*bTopToBottom*  
+*bTopToBottom*<br/>
 DISPID_AMBIENT_TOPTOBOTTOM プロパティ。 テキストが表示されている場合に TRUE に設定上から順に、FALSE の場合は表示される下部にあるページのトップへ。
 
 ### <a name="return-value"></a>戻り値
@@ -756,7 +756,7 @@ HRESULT GetAmbientUIDead(BOOL& bUIDead);
 
 ### <a name="parameters"></a>パラメーター
 
-*bUIDead*  
+*bUIDead*<br/>
 DISPID_AMBIENT_UIDEAD プロパティ。
 
 ### <a name="return-value"></a>戻り値
@@ -777,7 +777,7 @@ HRESULT GetAmbientUserMode(BOOL& bUserMode);
 
 ### <a name="parameters"></a>パラメーター
 
-*bUserMode*  
+*bUserMode*<br/>
 DISPID_AMBIENT_USERMODE プロパティ。
 
 ### <a name="return-value"></a>戻り値
@@ -810,7 +810,7 @@ void GetZoomInfo(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>パラメーター
 
-*di*  
+*di*<br/>
 倍率の分子と分母を格納する構造体。 詳細については、次を参照してください。 [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md)します。
 
 ### <a name="remarks"></a>Remarks
@@ -827,10 +827,10 @@ HRESULT InPlaceActivate(LONG iVerb, const RECT* prcPosRect = NULL);
 
 ### <a name="parameters"></a>パラメーター
 
-*iVerb*  
+*iVerb*<br/>
 によって実行されるアクションを示す値[IOleObjectImpl::DoVerb](../../atl/reference/ioleobjectimpl-class.md#doverb)します。
 
-*prcPosRect*  
+*prcPosRect*<br/>
 インプレース コントロールの位置を指すポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -853,10 +853,10 @@ HRESULT InternalGetSite(REFIID riid, void** ppUnkSite);
 
 ### <a name="parameters"></a>パラメーター
 
-*riid*  
+*riid*<br/>
 返されるインターフェイス ポインターの IID *ppUnkSite*します。
 
-*ppUnkSite*  
+*ppUnkSite*<br/>
 要求されたインターフェイス ポインターを受け取るポインター変数のアドレス*riid*します。
 
 ### <a name="return-value"></a>戻り値
@@ -1259,7 +1259,7 @@ virtual HRESULT OnDraw(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>パラメーター
 
-*di*  
+*di*<br/>
 参照、 [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md)描画特性、コントロールの境界などの描画情報を含む構造体かどうかに描画を最適化するかどうかとします。
 
 ### <a name="return-value"></a>戻り値
@@ -1286,7 +1286,7 @@ virtual HRESULT OnDrawAdvanced(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>パラメーター
 
-*di*  
+*di*<br/>
 参照、 [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md)描画特性、コントロールの境界などの描画情報を含む構造体かどうかに描画を最適化するかどうかとします。
 
 ### <a name="return-value"></a>戻り値
@@ -1312,16 +1312,16 @@ LRESULT OnKillFocus(UINT /* nMsg */,
 
 ### <a name="parameters"></a>パラメーター
 
-*nMsg*  
+*nMsg*<br/>
 予約済み。
 
-*wParam*  
+*wParam*<br/>
 予約済み。
 
-*lParam*  
+*lParam*<br/>
 予約済み。
 
-*bHandled*  
+*bHandled*<br/>
 ウィンドウのメッセージが正常に処理されたかどうかを示すフラグ。 既定では FALSE です。
 
 ### <a name="return-value"></a>戻り値
@@ -1341,16 +1341,16 @@ LRESULT OnMouseActivate(UINT /* nMsg */,
 
 ### <a name="parameters"></a>パラメーター
 
-*nMsg*  
+*nMsg*<br/>
 予約済み。
 
-*wParam*  
+*wParam*<br/>
 予約済み。
 
-*lParam*  
+*lParam*<br/>
 予約済み。
 
-*bHandled*  
+*bHandled*<br/>
 ウィンドウのメッセージが正常に処理されたかどうかを示すフラグ。 既定では FALSE です。
 
 ### <a name="return-value"></a>戻り値
@@ -1370,16 +1370,16 @@ LRESULT OnPaint(UINT /* nMsg */,
 
 ### <a name="parameters"></a>パラメーター
 
-*nMsg*  
+*nMsg*<br/>
 予約済み。
 
-*wParam*  
+*wParam*<br/>
 既存の HDC にします。
 
-*lParam*  
+*lParam*<br/>
 予約済み。
 
-*lResult*  
+*lResult*<br/>
 予約済み。
 
 ### <a name="return-value"></a>戻り値
@@ -1403,16 +1403,16 @@ LRESULT OnSetFocus(UINT /* nMsg */,
 
 ### <a name="parameters"></a>パラメーター
 
-*nMsg*  
+*nMsg*<br/>
 予約済み。
 
-*wParam*  
+*wParam*<br/>
 予約済み。
 
-*lParam*  
+*lParam*<br/>
 予約済み。
 
-*bHandled*  
+*bHandled*<br/>
 ウィンドウのメッセージが正常に処理されたかどうかを示すフラグ。 既定では FALSE です。
 
 ### <a name="return-value"></a>戻り値
@@ -1434,10 +1434,10 @@ BOOL PreTranslateAccelerator(LPMSG /* pMsg */,
 
 ### <a name="parameters"></a>パラメーター
 
-*pMsg*  
+*pMsg*<br/>
 予約済み。
 
-*hRet*  
+*hRet*<br/>
 予約済み。
 
 ### <a name="return-value"></a>戻り値
@@ -1470,7 +1470,7 @@ HRESULT SendOnDataChange(DWORD advf = 0);
 
 ### <a name="parameters"></a>パラメーター
 
-*advf*  
+*advf*<br/>
 フラグを指定することをお勧めする方法への呼び出し[IAdviseSink::OnDataChange](/windows/desktop/api/objidl/nf-objidl-iadvisesink-ondatachange)されます。 値は、 [ADVF](/windows/desktop/api/objidl/ne-objidl-tagadvf)列挙体。
 
 ### <a name="return-value"></a>戻り値
@@ -1487,7 +1487,7 @@ HRESULT SendOnRename(IMoniker* pmk);
 
 ### <a name="parameters"></a>パラメーター
 
-*pmk*  
+*pmk*<br/>
 コントロールの新しいモニカーへのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -1524,10 +1524,10 @@ HRESULT SendOnViewChange(DWORD dwAspect, LONG lindex = -1);
 
 ### <a name="parameters"></a>パラメーター
 
-*dwAspect*  
+*dwAspect*<br/>
 特性またはコントロールのビュー。
 
-*lindex*  
+*lindex*<br/>
 ビューの変更の部分。 -1 だけが無効です。
 
 ### <a name="return-value"></a>戻り値
@@ -1548,7 +1548,7 @@ BOOL SetControlFocus(BOOL bGrab);
 
 ### <a name="parameters"></a>パラメーター
 
-*bGrab*  
+*bGrab*<br/>
 TRUE の場合は、呼び出し元のコントロールにキーボード フォーカスを設定します。 FALSE の場合は、キーボード フォーカスをフォーカスが呼び出し元のコントロールから削除します。
 
 ### <a name="return-value"></a>戻り値
@@ -1569,7 +1569,7 @@ void SetDirty(BOOL bDirty);
 
 ### <a name="parameters"></a>パラメーター
 
-*bDirty*  
+*bDirty*<br/>
 データ メンバーの値[CComControlBase::m_bRequiresSave](#m_brequiressave)します。
 
 ### <a name="remarks"></a>Remarks
@@ -1578,5 +1578,5 @@ void SetDirty(BOOL bDirty);
 
 ## <a name="see-also"></a>関連項目
 
-[CComControl クラス](../../atl/reference/ccomcontrol-class.md)   
+[CComControl クラス](../../atl/reference/ccomcontrol-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

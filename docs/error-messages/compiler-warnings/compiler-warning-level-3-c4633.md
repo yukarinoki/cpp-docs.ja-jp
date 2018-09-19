@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 3) C4633 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 3) C4633 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e77580f0aed27b824805e61c64901bf47604fc7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 54a180bcd135f4614fa6cc67cf7647acdfa1c445
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292715"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085746"
 ---
 # <a name="compiler-warning-level-3-c4633"></a>コンパイラの警告 (レベル 3) C4633
-XML ドキュメント コメント ターゲット: エラー: 理由  
-  
- 渡された名前、 [ \<param >](../../ide/param-visual-cpp.md)タグは、コンパイラによって検出されませんでした。  
-  
- 次の例では、C4633 が生成されます。  
-  
-```  
-// C4633.cpp  
-// compile with: /clr /doc /LD /W3  
-  
-/// Text for class MyClass.  
-public ref class MyClass {  
-   // C4633 remove line for Int3  
-   /// <param name="Int1">Used to indicate status.</param>  
-   /// <param name="Int3">Used to indicate status.</param>  
-   void MyMethod(int Int1) {  
-      Int1 = 0;  
-      Int1++;  
-   }  
-};  
+
+XML ドキュメント コメント ターゲット: エラー: 理由
+
+渡される、名前、 [ \<param >](../../ide/param-visual-cpp.md)コンパイラによってタグが見つかりません。
+
+次の例では、C4633 が生成されます。
+
+```
+// C4633.cpp
+// compile with: /clr /doc /LD /W3
+
+/// Text for class MyClass.
+public ref class MyClass {
+   // C4633 remove line for Int3
+   /// <param name="Int1">Used to indicate status.</param>
+   /// <param name="Int3">Used to indicate status.</param>
+   void MyMethod(int Int1) {
+      Int1 = 0;
+      Int1++;
+   }
+};
 ```

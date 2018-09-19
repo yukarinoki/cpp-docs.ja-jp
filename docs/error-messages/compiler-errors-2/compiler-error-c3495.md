@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3495 |Microsoft ドキュメント
+title: コンパイラ エラー C3495 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7accbc422256abbd75d518acce72c522fbb67c14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dda1e2f2699969ad0bc446d9f79a0004e043998d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253663"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067390"
 ---
 # <a name="compiler-error-c3495"></a>コンパイラ エラー C3495
-'var': ラムダ キャプチャには自動ストレージ存続期間が指定されている必要があります  
-  
- `static` または `extern`とマークされている変数など、自動ストレージ存続期間がない変数をキャプチャすることはできません。  
-  
-### <a name="to-correct-this-error"></a>このエラーを解決するには  
-  
--   `static` または `extern` 変数をラムダ式のキャプチャ リストに渡さないでください。  
-  
-## <a name="example"></a>例  
- 次の例では、 `static` 変数 `n` がラムダ式のキャプチャ リストにあるため、C3495 が生成されます。  
-  
-```  
-// C3495.cpp  
-  
-int main()  
-{  
-   static int n = 66;  
-   [&n]() { return n; }(); // C3495  
-}  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [ラムダ式](../../cpp/lambda-expressions-in-cpp.md)   
+
+'var': ラムダ キャプチャには自動ストレージ存続期間が指定されている必要があります
+
+`static` または `extern`とマークされている変数など、自動ストレージ存続期間がない変数をキャプチャすることはできません。
+
+### <a name="to-correct-this-error"></a>このエラーを解決するには
+
+- `static` または `extern` 変数をラムダ式のキャプチャ リストに渡さないでください。
+
+## <a name="example"></a>例
+
+次の例では、 `static` 変数 `n` がラムダ式のキャプチャ リストにあるため、C3495 が生成されます。
+
+```
+// C3495.cpp
+
+int main()
+{
+   static int n = 66;
+   [&n]() { return n; }(); // C3495
+}
+```
+
+## <a name="see-also"></a>関連項目
+
+[ラムダ式](../../cpp/lambda-expressions-in-cpp.md)
 
 

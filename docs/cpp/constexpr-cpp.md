@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe13dbe61b0a50226f82ae8fb09ab46c922309d1
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1b9479957fdfb4d6b92ec531941808940765a9e5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406937"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116725"
 ---
 # <a name="constexpr-c"></a>constexpr (C++)
 
@@ -40,16 +40,16 @@ constexpr ctor (params);
 
 ## <a name="parameters"></a>パラメーター
 
- *params*  
+*params*<br/>
 リテラル型である必要がありますし、それ自体をする必要があります、1 つまたは複数のパラメーターには、定数式があります。
 
 ## <a name="return-value"></a>戻り値
 
- Constexpr 変数または関数が返す必要があります、[リテラル型](trivial-standard-layout-and-pod-types.md#literal_types)します。
+Constexpr 変数または関数が返す必要があります、[リテラル型](trivial-standard-layout-and-pod-types.md#literal_types)します。
 
 ## <a name="constexpr-variables"></a>constexpr 変数
 
- const 変数と constexpr 変数の主な違いとして、const 変数の初期化は実行時まで遅延できるのに対し、constexpr 変数はコンパイル時に初期化する必要があります。  すべての constexpr 変数は、const です。
+const 変数と constexpr 変数の主な違いとして、const 変数の初期化は実行時まで遅延できるのに対し、constexpr 変数はコンパイル時に初期化する必要があります。  すべての constexpr 変数は、const です。
 
 - 変数を宣言することができます**constexpr**、リテラルの型と初期化されます。 コンス トラクターによって初期化が実行される場合、コンス トラクターとして宣言する必要があります**constexpr**します。
 
@@ -91,7 +91,7 @@ Constexpr 関数に次の規則が適用されます。
 次の規則に適用されます**constexpr** Visual Studio 2017 以降の機能。
 
 - いる可能性がある**場合**と**スイッチ**ステートメント、およびすべてのループ ステートメントを含む**の**、範囲に基づく、**中**、および**は-中**します。
- 
+
 - ローカル変数の宣言を含めることができますが、変数の初期化する必要があります、リテラルの型である必要があります、および静的あるいはスレッド ローカルにすることはできません。 ローカルに宣言された変数は const を指定する必要はありませんし、変更可能性があります。
 
 - Constexpr の非静的メンバー関数は、暗黙的に const を指定する必要はありません。
@@ -115,7 +115,7 @@ constexpr float exp(float x, int n)
 
 ## <a name="example"></a>例
 
- 次の例は**constexpr**変数、関数、およびユーザー定義の型。 なお、main() の最後のステートメントで、 **constexpr**値がコンパイル時に既知である必要はないために、メンバー関数 GetValue() は実行時の呼び出し。
+次の例は**constexpr**変数、関数、およびユーザー定義の型。 なお、main() の最後のステートメントで、 **constexpr**値がコンパイル時に既知である必要はないために、メンバー関数 GetValue() は実行時の呼び出し。
 
 ```cpp
 #include <iostream>
@@ -189,5 +189,6 @@ int main()
 Visual Studio 2015
 
 ## <a name="see-also"></a>関連項目
- [宣言と定義](../cpp/declarations-and-definitions-cpp.md)  
- [const](../cpp/const-cpp.md)
+
+[宣言と定義](../cpp/declarations-and-definitions-cpp.md)<br/>
+[const](../cpp/const-cpp.md)

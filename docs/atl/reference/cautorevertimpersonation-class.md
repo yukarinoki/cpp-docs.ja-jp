@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99f0615dc37070311428ec12894bcaeea8febe8d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 45a14f8c742393c60a026f7c58217407715ef282
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760618"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052752"
 ---
 # <a name="cautorevertimpersonation-class"></a>CAutoRevertImpersonation クラス
 
@@ -77,7 +77,7 @@ void Attach(const CAccessToken* pAT) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*PAT*  
+*PAT*<br/>
 アドレス、 [CAccessToken](../../atl/reference/caccesstoken-class.md)オブジェクトを自動的に元に戻す
 
 ### <a name="remarks"></a>Remarks
@@ -94,7 +94,7 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*PAT*  
+*PAT*<br/>
 アドレス、 [CAccessToken](../../atl/reference/caccesstoken-class.md)オブジェクトを自動的に元に戻されます。
 
 ### <a name="remarks"></a>Remarks
@@ -147,6 +147,6 @@ const CAccessToken* GetAccessToken() throw();
 
 ## <a name="see-also"></a>関連項目
 
-[ATLSecurity サンプル](../../visual-cpp-samples.md)   
-[アクセス トークン](/windows/desktop/SecAuthZ/access-tokens)   
+[ATLSecurity サンプル](../../visual-cpp-samples.md)<br/>
+[アクセス トークン](/windows/desktop/SecAuthZ/access-tokens)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

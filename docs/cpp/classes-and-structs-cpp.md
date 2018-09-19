@@ -18,57 +18,59 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffd822aa59af9c703d00f8fc195fe4eeb91ce833
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: fbe9991807d1572504bbaa0f4e903e46cac1766a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405471"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058641"
 ---
 # <a name="classes-and-structs-c"></a>クラスと構造体 (C++)
-このセクションでは、C++ のクラスおよび構造体について説明します。 C++ においてこれらの 2 つのコンストラクトは、構造体では既定のアクセシビリティが "public" であるのに対してクラスでは "private" である点を除けば同じです。  
-  
- クラスと構造体は、独自の型を定義するためのコンストラクトです。 クラスと構造体は、どちらもデータ メンバーとメンバー関数を含めることができ、これらを使用して型の状態や動作を説明できます。  
-  
- ここでは、次のトピックについて説明します。  
-  
--   [class](../cpp/class-cpp.md)  
-  
--   [struct](../cpp/struct-cpp.md)  
-  
--   [クラス メンバーの概要](../cpp/class-member-overview.md)  
-  
--   [メンバー アクセス コントロール](../cpp/member-access-control-cpp.md)  
-  
--   [継承](../cpp/inheritance-cpp.md)  
-  
--   [静的メンバー](../cpp/static-members-cpp.md)  
-  
--   [ユーザー定義型の変換](../cpp/user-defined-type-conversions-cpp.md)  
-  
--   [変更可能なデータ メンバー (変更可能な指定子)](../cpp/mutable-data-members-cpp.md)  
-  
--   [入れ子にされたクラス宣言](../cpp/nested-class-declarations.md)  
-  
--   [匿名クラス型](../cpp/anonymous-class-types.md)  
-  
--   [メンバーへのポインター](../cpp/pointers-to-members.md)  
-  
--   [this ポインター](../cpp/this-pointer.md)  
-  
--   [C++ ビット フィールド](../cpp/cpp-bit-fields.md)  
-  
- 3 つのクラス型は、構造体、クラス、および共用体です。 使用して宣言されている、[構造体](../cpp/struct-cpp.md)、[クラス](../cpp/class-cpp.md)、および[共用体](../cpp/unions.md)キーワード。 次の表は、3 つのクラス型の違いを示しています。  
-  
- 共用体の詳細については、次を参照してください。[共用体](../cpp/unions.md)します。 マネージ クラスと構造体については、次を参照してください。[クラスと構造体](../windows/classes-and-structs-cpp-component-extensions.md)します。  
-  
-### <a name="access-control-and-constraints-of-structures-classes-and-unions"></a>構造体、クラス、および共用体のアクセス制御と制約  
-  
-|構造体|クラス|Unions|  
-|----------------|-------------|------------|  
-|クラス キーは**構造体**|クラス キーは**クラス**|クラス キーは**共用体**|  
-|既定のアクセスは public|既定のアクセスは private|既定のアクセスは public|  
-|使用制約なし|使用制約なし|同時に複数のメンバーを使用することはできない|  
-  
-## <a name="see-also"></a>関連項目  
- [C++ 言語リファレンス](../cpp/cpp-language-reference.md)
+
+このセクションでは、C++ のクラスおよび構造体について説明します。 C++ においてこれらの 2 つのコンストラクトは、構造体では既定のアクセシビリティが "public" であるのに対してクラスでは "private" である点を除けば同じです。
+
+クラスと構造体は、独自の型を定義するためのコンストラクトです。 クラスと構造体は、どちらもデータ メンバーとメンバー関数を含めることができ、これらを使用して型の状態や動作を説明できます。
+
+ここでは、次のトピックについて説明します。
+
+- [class](../cpp/class-cpp.md)
+
+- [struct](../cpp/struct-cpp.md)
+
+- [クラス メンバーの概要](../cpp/class-member-overview.md)
+
+- [メンバー アクセス コントロール](../cpp/member-access-control-cpp.md)
+
+- [継承](../cpp/inheritance-cpp.md)
+
+- [静的メンバー](../cpp/static-members-cpp.md)
+
+- [ユーザー定義型の変換](../cpp/user-defined-type-conversions-cpp.md)
+
+- [変更可能なデータ メンバー (変更可能な指定子)](../cpp/mutable-data-members-cpp.md)
+
+- [入れ子にされたクラス宣言](../cpp/nested-class-declarations.md)
+
+- [匿名クラス型](../cpp/anonymous-class-types.md)
+
+- [メンバーへのポインター](../cpp/pointers-to-members.md)
+
+- [this ポインター](../cpp/this-pointer.md)
+
+- [C++ ビット フィールド](../cpp/cpp-bit-fields.md)
+
+3 つのクラス型は、構造体、クラス、および共用体です。 使用して宣言されている、[構造体](../cpp/struct-cpp.md)、[クラス](../cpp/class-cpp.md)、および[共用体](../cpp/unions.md)キーワード。 次の表は、3 つのクラス型の違いを示しています。
+
+共用体の詳細については、次を参照してください。[共用体](../cpp/unions.md)します。 マネージ クラスと構造体については、次を参照してください。[クラスと構造体](../windows/classes-and-structs-cpp-component-extensions.md)します。
+
+### <a name="access-control-and-constraints-of-structures-classes-and-unions"></a>構造体、クラス、および共用体のアクセス制御と制約
+
+|構造体|クラス|Unions|
+|----------------|-------------|------------|
+|クラス キーは**構造体**|クラス キーは**クラス**|クラス キーは**共用体**|
+|既定のアクセスは public|既定のアクセスは private|既定のアクセスは public|
+|使用制約なし|使用制約なし|同時に複数のメンバーを使用することはできない|
+
+## <a name="see-also"></a>関連項目
+
+[C++ 言語リファレンス](../cpp/cpp-language-reference.md)

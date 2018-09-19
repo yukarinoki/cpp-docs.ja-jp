@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eae4b7cc2211462b097efbefca580b796d573c59
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: ff6be1e24371692c53621cf6583677cc97d631b4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408947"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059199"
 ---
 # <a name="operator-overloading"></a>演算子のオーバー ロード
 
@@ -117,7 +117,7 @@ ms.locfileid: "39408947"
 
 ### <a name="nonredefinable-operators"></a>再定義不可演算子
 
-|演算子|name|
+|演算子|名前|
 |-|-|
 |**.**|メンバー選択|
 |**.&#42;**|メンバーへのポインター選択|
@@ -187,5 +187,6 @@ int main() {
 - [メンバー アクセス](../cpp/member-access.md)
 
 ## <a name="see-also"></a>関連項目
- [C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)  
- [キーワード](../cpp/keywords-cpp.md)
+
+[C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[キーワード](../cpp/keywords-cpp.md)

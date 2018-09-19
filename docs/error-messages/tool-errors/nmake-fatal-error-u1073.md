@@ -1,5 +1,5 @@
 ---
-title: NMAKE の致命的なエラー U1073 |Microsoft ドキュメント
+title: NMAKE の致命的なエラー U1073 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dde9ca2f4a15edf6599dcc31b39d9411645f2a6f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c309ed94cd1c984406e0d21f0139e35c6e41d7d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316307"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053942"
 ---
 # <a name="nmake-fatal-error-u1073"></a>NMAKE の致命的なエラー U1073
-'targetname' を作成する方法が分かりません  
-  
- 指定した対象が存在しないと、実行するコマンドまたは推論規則を適用はありません。  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>以下の可能性がある解決策を使って修正するには  
-  
-1.  ターゲットの名前のスペルを確認します。  
-  
-2.  場合*targetname* 、疑似ターゲットは、別の記述ブロック対象として指定します。  
-  
-3.  場合*targetname*マクロの呼び出しは、null 文字列を展開しないことを確認します。
+
+'targetname' を作成する方法がわからない
+
+指定されたターゲットが存在しないと、実行するコマンドまたは推論規則を適用はありません。
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>以下の可能性がある解決策を使って修正するには
+
+1. ターゲット名のスペルを確認します。
+
+1. 場合*targetname* 、疑似ターゲットは、別の記述ブロックのターゲットとして指定します。
+
+1. 場合*targetname*マクロの呼び出しは、null 文字列に展開されないことを確認します。

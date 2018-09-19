@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 3) C4390 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 3) C4390 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d052a1fa6124aa1518cddec00566e14668fe111d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83131119e360bcf8193c2d6c8ca5a3cd09341516
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290089"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054195"
 ---
 # <a name="compiler-warning-level-3-c4390"></a>コンパイラの警告 (レベル 3) C4390
-';': 空の被制御文が見つかりました。これを目的としたですか。  
-  
- 含まれていない命令コントロール ステートメントの後にセミコロンが見つかりました。  
-  
- 使用する必要がありますマクロにより C4390 を取得する場合、[警告](../../preprocessor/warning.md)プラグマ マクロを含むモジュールで C4390 を無効にします。  
-  
- 次の例では、C4390 が生成されます。  
-  
-```  
-// C4390.cpp  
-// compile with: /W3  
-int main() {  
-   int i = 0;  
-   if (i);   // C4390  
-      i++;  
-}  
+
+';'。 空の被制御文が見つかりました。目的ですか。
+
+手順が含まれていない制御ステートメントの後にセミコロンが見つかりました。
+
+マクロにより C4390 を取得する場合は使用、[警告](../../preprocessor/warning.md)プラグマ マクロを含むモジュールで C4390 を無効にします。
+
+次の例では、C4390 が生成されます。
+
+```
+// C4390.cpp
+// compile with: /W3
+int main() {
+   int i = 0;
+   if (i);   // C4390
+      i++;
+}
 ```

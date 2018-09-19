@@ -16,21 +16,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e8dbfecf52e974330360714763da3bd4c81117ad
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 720a72406bec5672757c1b2c5713586b7fc7f1ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679725"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086968"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>使用するアクセサーの種類の決定
+
 コンパイル時または実行時に、行セットでのデータ型を指定できます。  
   
- コンパイル時にデータ型を決定する必要がある場合は、静的アクセサーを使用して (よう`CAccessor`)。 手動または ATL OLE DB コンシューマー ウィザードを使用して、データ型を指定できます。  
+コンパイル時にデータ型を決定する必要がある場合は、静的アクセサーを使用して (よう`CAccessor`)。 手動または ATL OLE DB コンシューマー ウィザードを使用して、データ型を指定できます。  
   
- 実行時にデータ型を決定する必要がある場合は、動的なを使用して (`CDynamicAccessor`またはその子) または手動のアクセサー (`CManualAccessor`)。 このような場合を呼び出すことができます`GetColumnInfo`元の型を判断することができます、列のバインド情報を返す行セットにします。  
+実行時にデータ型を決定する必要がある場合は、動的なを使用して (`CDynamicAccessor`またはその子) または手動のアクセサー (`CManualAccessor`)。 このような場合を呼び出すことができます`GetColumnInfo`元の型を判断することができます、列のバインド情報を返す行セットにします。  
   
- 次の表では、コンシューマー テンプレートで指定されたアクセサーの種類を示します。 各アクセサーには長所と短所。 自分の状況に応じてアクセサーの種類はニーズに合う必要があります。  
+次の表では、コンシューマー テンプレートで指定されたアクセサーの種類を示します。 各アクセサーには長所と短所。 自分の状況に応じてアクセサーの種類はニーズに合う必要があります。  
   
 |アクセサー クラス|バインド|パラメーター|コメント|  
 |--------------------|-------------|---------------|-------------|  
@@ -42,4 +43,5 @@ ms.locfileid: "43679725"
 |`CXMLAccessor`|自動。|いいえ。|文字列データとしてデータ ストアからデータを取得し、データの XML タグを付けるように書式設定します。|  
   
 ## <a name="see-also"></a>関連項目  
- [アクセサーの使用](../../data/oledb/using-accessors.md)
+
+[アクセサーの使用](../../data/oledb/using-accessors.md)

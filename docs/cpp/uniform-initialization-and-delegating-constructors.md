@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f985d206a342611dfccb4f05347b0ecc9e9521b0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 80beb5e840e182396f519b6b827dd8d727252d61
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314658"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116244"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>均一な初期化とコンストラクターのデリゲート
+
 最新の C++ で使用できます*かっこ初期化を*等号せず、任意の種類。 また、同様の作業を実行するコンストラクターが複数あるときに、デリゲート コンストラクターを使用してコードを簡単にすることもできます。
 
 ## <a name="brace-initialization"></a>かっこ初期化
+
 任意のクラス、構造体、または共用体にかっこ初期化を使用できます。 型に既定のコンストラクターがあり、暗黙的または明示的に宣言されている場合、(空のかっこで) 既定のかっこ初期化を使用できます。 たとえば、次のクラスは、既定のかっこ初期化と既定以外のかっこ初期化を使用して初期化できます。
 
 ```cpp
@@ -99,6 +101,7 @@ return { 4.5 };
 ```
 
 ## <a name="initializerlist-constructors"></a>initializer_list Constructors
+
 [Initializer_list クラス](../standard-library/initializer-list-class.md)コンス トラクターと他のコンテキストで使用できる指定された型のオブジェクトの一覧を表します。 かっこ初期化を使用して、initializer_list を構築できます。
 
 ```cpp
@@ -127,6 +130,7 @@ regex rgx{'x', 'y', 'z'};
 ```
 
 ## <a name="delegating-constructors"></a>デリゲート コンストラクター
+
 多くのクラスに、パラメーターの検証など、同じような処理を実行するコンストラクターが複数含まれます。
 
 ```cpp

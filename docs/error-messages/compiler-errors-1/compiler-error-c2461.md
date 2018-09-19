@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2461 |Microsoft ドキュメント
+title: コンパイラ エラー C2461 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47aee3122dad3e875cf58d5a41bcadda297e1463
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 39d58b315fdd7e3c4e1899041cebf8400813ed40
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197638"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029300"
 ---
 # <a name="compiler-error-c2461"></a>コンパイラ エラー C2461
-  
-> '*クラス*': コンス トラクター構文の正式なパラメーターがありません  
-  
- クラスのコンス トラクターは、仮パラメーターを指定しません。 コンス トラクターの宣言には、仮パラメーター リストを指定する必要があります。 一覧を空にすることができます。  
-  
-この問題を解決するには、宣言の後のかっこのペアを追加*クラス*:: **クラス*です。  
-  
-## <a name="example"></a>例  
-  
-次の例では、c2461 エラーを修正する方法を示します。  
-  
-```cpp  
-// C2461.cpp  
-// compile with: /c  
-class C {  
-   C::C;     // C2461  
-   C::C();   // OK  
-};  
+
+> '*クラス*': コンス トラクター構文の正式なパラメーターがありません
+
+クラスのコンス トラクターは、仮パラメーターを指定しません。 コンス トラクターの宣言には、仮パラメーター リストを指定する必要があります。 一覧を空にすることができます。
+
+この問題を解決するには、宣言の後に 1 組のかっこを追加*クラス*:: **クラス*します。
+
+## <a name="example"></a>例
+
+次の例では、C2461 を修正する方法を示します。
+
+```cpp
+// C2461.cpp
+// compile with: /c
+class C {
+   C::C;     // C2461
+   C::C();   // OK
+};
 ```

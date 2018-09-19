@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cf8c27d118984422ec3a78f442a3f11f13e1c75
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bee312cd5e7a88dd0798778d5f8385df265d78a1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766033"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099775"
 ---
 # <a name="iaxwinhostwindow-interface"></a>IAxWinHostWindow インターフェイス
 
@@ -79,10 +79,10 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 
 ### <a name="parameters"></a>パラメーター
 
-*pUnkControl*  
+*pUnkControl*<br/>
 [in]ポインター、`IUnknown`ホスト オブジェクトにアタッチされるコントロールのインターフェイス。
 
-*hWnd*  
+*hWnd*<br/>
 [in]ホストするために使用するウィンドウへのハンドル。
 
 ### <a name="return-value"></a>戻り値
@@ -102,13 +102,13 @@ STDMETHOD(CreateControl)(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpTricsData*  
+*lpTricsData*<br/>
 [in]作成するコントロールを識別する文字列。 (中かっこを含める必要があります) の CLSID、ProgID、URL、または生の HTML にすることができます (付いて**MSHTML:**)。
 
-*hWnd*  
+*hWnd*<br/>
 [in]ホストするために使用するウィンドウへのハンドル。
 
-*pStream*  
+*pStream*<br/>
 [in]コントロールの初期化データを含むストリームのインターフェイス ポインター。 NULL にすることができます。
 
 ### <a name="return-value"></a>戻り値
@@ -139,22 +139,22 @@ STDMETHOD(CreateControlEx)(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpTricsData*  
+*lpTricsData*<br/>
 [in]作成するコントロールを識別する文字列。 (中かっこを含める必要があります) の CLSID、ProgID、URL、または生の HTML にすることができます (付いて**MSHTML:**)。
 
-*hWnd*  
+*hWnd*<br/>
 [in]ホストするために使用するウィンドウへのハンドル。
 
-*pStream*  
+*pStream*<br/>
 [in]コントロールの初期化データを含むストリームのインターフェイス ポインター。 NULL にすることができます。
 
-*ppUnk*  
+*ppUnk*<br/>
 [out]受信するポインターのアドレス、`IUnknown`作成されたコントロールのインターフェイス。 NULL にすることができます。
 
-*riidAdvise*  
+*riidAdvise*<br/>
 [in]送信のインターフェイスに含まれるオブジェクトのインターフェイスの識別子です。 Iid_ をすることができます。
 
-*punkAdvise*  
+*punkAdvise*<br/>
 [in]ポインター、`IUnknown`で指定された、含まれるオブジェクトの接続ポイントに接続されているシンク オブジェクトのインターフェイス`iidSink`します。
 
 ### <a name="return-value"></a>戻り値
@@ -179,10 +179,10 @@ STDMETHOD(QueryControl)(
 
 ### <a name="parameters"></a>パラメーター
 
-*riid*  
+*riid*<br/>
 [in]要求されているコントロールのインターフェイスの ID。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]作成されたコントロールの指定したインターフェイスを受信するポインターのアドレス。
 
 ### <a name="return-value"></a>戻り値
@@ -199,7 +199,7 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 
 ### <a name="parameters"></a>パラメーター
 
-*pDisp*  
+*pDisp*<br/>
 [in]ポインター、`IDispatch`インターフェイス。
 
 ### <a name="return-value"></a>戻り値
@@ -216,7 +216,7 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 
 ### <a name="parameters"></a>パラメーター
 
-*pDisp*  
+*pDisp*<br/>
 [in]ポインター、`IDocHostUIHandlerDispatch`インターフェイス。
 
 ### <a name="return-value"></a>戻り値
@@ -229,7 +229,7 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 
 ## <a name="see-also"></a>関連項目
 
-[IAxWinAmbientDispatch インターフェイス](../../atl/reference/iaxwinambientdispatch-interface.md)   
-[CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)   
+[IAxWinAmbientDispatch インターフェイス](../../atl/reference/iaxwinambientdispatch-interface.md)<br/>
+[CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)<br/>
 [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)
 

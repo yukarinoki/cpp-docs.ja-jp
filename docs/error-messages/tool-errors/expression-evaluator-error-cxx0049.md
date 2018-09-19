@@ -1,5 +1,5 @@
 ---
-title: 式エバリュエーター エラー CXX0049 |Microsoft ドキュメント
+title: 式エバリュエーター エラー CXX0049 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d40a823ebcac377198254555181d9821320a848
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea9193363ca5d2fa03ad585816ee618e3c194a16
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295582"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097077"
 ---
 # <a name="expression-evaluator-error-cxx0049"></a>式エバリュエーター エラー CXX0049
-古い omf です - プログラムを再リンクしてください。  
-  
- プログラムでは、古い OMF (オブジェクト モジュール形式) を使用します。  
-  
- リンカーの現在のバージョンを使用してプログラムを再リンクします。  
-  
- このエラーは、can0049 と同じものと同じです。
+
+古い omf です - プログラムを再リンクしてください。
+
+プログラムでは、古い OMF (オブジェクト モジュール形式) を使用します。
+
+リンカーの現在のバージョンを使用してプログラムを再リンクします。
+
+このエラーは、can0049 と同じものと同じです。

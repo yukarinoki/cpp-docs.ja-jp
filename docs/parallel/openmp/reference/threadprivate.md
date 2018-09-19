@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0502528a2db47b8db41437fd7017aece1dc67cde
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9454b33348fa4e4bc2efaa609001201ea215a8c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217746"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081989"
 ---
 # <a name="threadprivate"></a>threadprivate
 変数は、スレッドに対してプライベートであることを指定します。  
@@ -32,11 +32,10 @@ ms.locfileid: "43217746"
 #pragma omp threadprivate(var)  
 ```  
   
-## <a name="remarks"></a>Remarks  
- 指定項目  
+### <a name="parameters"></a>パラメーター
   
- `var`  
- スレッドに非公開にする変数のコンマ区切りの一覧。 `var` グローバルまたは名前空間スコープの変数または静的ローカル変数のいずれかである必要があります。  
+*var*<br/>
+スレッドに非公開にする変数のコンマ区切りの一覧。 `var` グローバルまたは名前空間スコープの変数または静的ローカル変数のいずれかである必要があります。  
   
 ## <a name="remarks"></a>Remarks  
  `threadprivate`ディレクティブに OpenMP 句がサポートされていません。  

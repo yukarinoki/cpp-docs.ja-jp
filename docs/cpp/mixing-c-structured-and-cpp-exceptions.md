@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 580fb4c96db70b612135ac48e30bd9c0d45c4d1c
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 1edd35ac9f32a28a19c4ea54b7e9fba2820d6095
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572488"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031627"
 ---
 # <a name="mixing-c-structured-and-c-exceptions"></a>C (構造化) と C++ 例外の混合
 
@@ -47,10 +47,10 @@ ms.locfileid: "42572488"
 
   使用方法の詳細を参照してください`setjmp`と`longjmp`C++ プログラムでします。
 
-- [C++ で構造化例外を処理します。](../cpp/exception-handling-differences.md)
+- [C++ での構造化例外の処理](../cpp/exception-handling-differences.md)
 
   C++ を使用して、例外処理構造化する方法の例を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 例外処理](../cpp/cpp-exception-handling.md)  
+[C++ 例外処理](../cpp/cpp-exception-handling.md)

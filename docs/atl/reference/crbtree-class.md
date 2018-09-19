@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18c8221b7e379d739dda3ebfa9cbc205d9f88af6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: de307c1b4f3d910615061915a240bf7b2c61b337
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759546"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090361"
 ---
 # <a name="crbtree-class"></a>CRBTree クラス
 
@@ -54,22 +54,22 @@ ms.locfileid: "43759546"
 template <typename K,
           typename V, 
           class KTraits = CElementTraits<K>, 
-          class VTraits = CElementTraits<V>> 
+          class VTraits = CElementTraits<V>>
 class CRBTree
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*K*  
+*K*<br/>
 キーの要素の型。
 
-*V*  
+*V*<br/>
 要素の値の型。
 
-*KTraits*  
+*KTraits*<br/>
 コピーまたは主要な要素を移動するために使用するコードです。 参照してください[CElementTraits クラス](../../atl/reference/celementtraits-class.md)の詳細。
 
-*VTraits*  
+*VTraits*<br/>
 コピーまたは値の要素を移動するために使用するコードです。
 
 ## <a name="members"></a>メンバー
@@ -169,7 +169,7 @@ POSITION FindFirstKeyAfter(KINARGTYPE key) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*key*  
+*key*<br/>
 キーの値。
 
 ### <a name="return-value"></a>戻り値
@@ -192,13 +192,13 @@ void GetAt(POSITION pos, KOUTARGTYPE key, VOUTARGTYPE value) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*  
+*pos*<br/>
 位置を表す値。
 
-*key*  
+*key*<br/>
 キーを受け取る変数です。
 
-*値*  
+*値*<br/>
 値を受け取る変数です。
 
 ### <a name="return-value"></a>戻り値
@@ -249,7 +249,7 @@ const K& GetKeyAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*  
+*pos*<br/>
 位置を表す値。
 
 ### <a name="return-value"></a>戻り値
@@ -271,7 +271,7 @@ CPair* GetNext(POSITION& pos) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*  
+*pos*<br/>
 などのメソッドの前回の呼び出しによって返される位置カウンター [CRBTree::GetHeadPosition](#getheadposition)または[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)します。
 
 ### <a name="return-value"></a>戻り値
@@ -295,13 +295,13 @@ void GetNextAssoc(
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*  
+*pos*<br/>
 などのメソッドの前回の呼び出しによって返される位置カウンター [CRBTree::GetHeadPosition](#getheadposition)または[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)します。
 
-*key*  
+*key*<br/>
 ツリーのキーの種類を指定するテンプレート パラメーター。
 
-*値*  
+*値*<br/>
 ツリーの値の型を指定するテンプレート パラメーター。
 
 ### <a name="remarks"></a>Remarks
@@ -318,7 +318,7 @@ const K& GetNextKey(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*  
+*pos*<br/>
 などのメソッドの前回の呼び出しによって返される位置カウンター [CRBTree::GetHeadPosition](#getheadposition)または[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)します。
 
 ### <a name="return-value"></a>戻り値
@@ -340,7 +340,7 @@ V& GetNextValue(POSITION& pos) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*  
+*pos*<br/>
 などのメソッドの前回の呼び出しによって返される位置カウンター [CRBTree::GetHeadPosition](#getheadposition)または[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)します。
 
 ### <a name="return-value"></a>戻り値
@@ -362,7 +362,7 @@ CPair* GetPrev(POSITION& pos) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*  
+*pos*<br/>
 などのメソッドの前回の呼び出しによって返される位置カウンター [CRBTree::GetHeadPosition](#getheadposition)または[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)します。
 
 ### <a name="return-value"></a>戻り値
@@ -400,7 +400,7 @@ V& GetValueAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*  
+*pos*<br/>
 などのメソッドの前回の呼び出しによって返される位置カウンター [CRBTree::GetHeadPosition](#getheadposition)または[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)します。
 
 ### <a name="return-value"></a>戻り値
@@ -457,7 +457,7 @@ void RemoveAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*  
+*pos*<br/>
 などのメソッドの前回の呼び出しによって返される位置カウンター [CRBTree::GetHeadPosition](#getheadposition)または[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)します。
 
 ### <a name="remarks"></a>Remarks
@@ -474,10 +474,10 @@ void SetValueAt(POSITION pos, VINARGTYPE value);
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*  
+*pos*<br/>
 などのメソッドの前回の呼び出しによって返される位置カウンター [CRBTree::GetHeadPosition](#getheadposition)または[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)します。
 
-*値*  
+*値*<br/>
 追加する値、`CRBTree`オブジェクト。
 
 ### <a name="remarks"></a>Remarks

@@ -1,5 +1,5 @@
 ---
-title: プロジェクト ビルド エラー PRJ0046 |Microsoft ドキュメント
+title: プロジェクト ビルド エラー PRJ0046 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c3571570fb00b25a42412ac8305623271ff0364
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00c6c02e6644391f0e4848b43f3a9f47364b41ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339879"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111590"
 ---
 # <a name="project-build-error-prj0046"></a>プロジェクト ビルド エラー PRJ0046
-指定された 1 つが空であるために、コマンドラインを起動できませんでした。  
-  
- メイクファイルの構成の空のコマンドラインが指定されましたコマンドラインが必要です。
+
+指定された 1 つが空であるために、コマンドラインを起動できませんでした。
+
+メイクファイルの構成に空のコマンドラインが指定されましたコマンドラインが必要です。

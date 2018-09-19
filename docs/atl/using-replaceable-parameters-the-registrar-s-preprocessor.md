@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 828c3881771aa37181822859cc54894e8771c2cb
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eddeb6467dfb3bf578c0287161de989e8ba12483
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767595"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097472"
 ---
 # <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>置き換え可能パラメーターを使用して (レジストラー&#39;s プリプロセッサ)
 
@@ -36,8 +36,8 @@ ms.locfileid: "43767595"
 
 プリプロセッサの別の使用では、実行時データとスクリプトのデータを連結します。 たとえば、エントリが必要な文字列を持つモジュールへの完全パスを含む"`, 1`"最後に追加します。 まず、次の拡張を定義します。
 
-```  
-'MySampleKey' = s '%MODULE%, 1'  
+```
+'MySampleKey' = s '%MODULE%, 1'
 ```
 
 次に、前に呼び出すメソッドの一覧を処理するスクリプトのいずれかの[スクリプトの呼び出し](../atl/invoking-scripts.md)マップの代わりに追加。
@@ -53,8 +53,8 @@ ms.locfileid: "43767595"
 >  実行時に置換値を置換するに、スクリプト内の呼び出しを削除、[に](../atl/reference/registry-macros.md#declare_registry_resource)または[代入](../atl/reference/registry-macros.md#declare_registry_resourceid)マクロ。 代わりに、独自に置き換えます`UpdateRegistry`メソッドを呼び出す[として](../atl/reference/catlmodule-class.md#updateregistryfromresourced)または[方法については](../atl/reference/catlmodule-class.md#updateregistryfromresources)_ATL_REGMAP_ の配列を渡すエントリの構造体。 _ATL_REGMAP_ENTRY の配列には、{NULL、NULL} に設定されている少なくとも 1 つのエントリが必要し、このエントリが最後のエントリには常にします。 それ以外の場合、アクセス違反エラーになる時に生成される`UpdateRegistryFromResource`が呼び出されます。
 
 > [!NOTE]
->  ATL が自動的に実行時に作成されたパス名を囲む引用符を追加実行可能ファイルを出力するプロジェクトを作成するときに、 **% モジュール**レジストラー スクリプトのパラメーター。 パス名に引用符を含めるしたくない場合は、新しい使用 **%module_raw**パラメーター代わりにします。  
->   
+>  ATL が自動的に実行時に作成されたパス名を囲む引用符を追加実行可能ファイルを出力するプロジェクトを作成するときに、 **% モジュール**レジストラー スクリプトのパラメーター。 パス名に引用符を含めるしたくない場合は、新しい使用 **%module_raw**パラメーター代わりにします。
+>
 >  DLL を出力するプロジェクトを作成するときに場合は、ATL が引用符をパス名は追加することはしません **% モジュール**または **%module_raw**使用されます。
 
 ## <a name="see-also"></a>関連項目

@@ -15,58 +15,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5975e47585f3b5a995d8eb839c21d419756edd42
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a0d960a766c14b1e05dab461087669c0d44627d9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388787"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090083"
 ---
 # <a name="string-literal-concatenation"></a>文字列リテラルの連結
-複数の行にわたる文字列リテラルを作成するときには、2 つの文字列を連結できます。 これには、円記号を入力してから Enter キーを押します。 円記号を入力すると、コンパイラは後続の改行文字を無視します。 たとえば、次の文字列リテラル  
-  
-```  
-"Long strings can be bro\  
-ken into two or more pieces."  
-```  
-  
- は、次の文字列と同じです。  
-  
-```  
-"Long strings can be broken into two or more pieces."  
-```  
-  
- 文字列の連結は、円記号に続けて改行文字を使用することでどこでも使用でき、これによって 1 行より長い文字列を入力できます。  
-  
- 文字列リテラル内で改行を強制するには、文字列内の改行位置で、改行エスケープ シーケンス (**\n**) を次のように入力します。  
-  
-```  
-"Enter a number between 1 and 100\nOr press Return"  
-```  
-  
- 文字列は、ソース コード内の任意の列から開始でき、長い文字列は次の行の任意の列で続行できるため、ソース コードが読みやすくなるように文字列を配置できます。 どのようにした場合も、出力時の画面上の表現は影響を受けません。 例:  
-  
-```  
-printf_s ( "This is the first half of the string, "  
-           "this is the second half ") ;  
-```  
-  
- 文字列の各部分が二重引用符で囲まれている限り、それらの部分は連結され、1 つの文字列として出力されます。 この連結は、[翻訳の各フェーズ](../preprocessor/phases-of-translation.md)により指定されたコンパイル中のイベントのシーケンスに従って発生します。  
-  
-```  
-"This is the first half of the string, this is the second half"  
-```  
-  
- 空白のみで区切られた 2 つの文字列リテラルとして初期化された文字列ポインターは、1 つの文字列として格納されます (ポインターについては、「[ポインター宣言](../c-language/pointer-declarations.md)」で説明します)。 次の例のように適切に参照すると、結果は前の例と同じになります。  
-  
-```  
-char *string = "This is the first half of the string, "  
-               "this is the second half";  
-  
-printf_s( "%s" , string ) ;  
-```  
-  
- 隣接する文字列リテラルまたは隣接するワイド文字列リテラルの任意のシーケンスで指定されたマルチバイト文字シーケンスは、変換フェーズ 6 で連結され、単一のマルチバイト文字シーケンスになります。 したがって、実行時に文字列リテラルの変更を許可するようにプログラムをデザインしないでください。 ANSI C 規格では、文字列の変更結果は未定義であると規定されています。  
-  
-## <a name="see-also"></a>参照  
- [C 文字列リテラル](../c-language/c-string-literals.md)
+
+複数の行にわたる文字列リテラルを作成するときには、2 つの文字列を連結できます。 これには、円記号を入力してから Enter キーを押します。 円記号を入力すると、コンパイラは後続の改行文字を無視します。 たとえば、次の文字列リテラル
+
+```
+"Long strings can be bro\
+ken into two or more pieces."
+```
+
+は、次の文字列と同じです。
+
+```
+"Long strings can be broken into two or more pieces."
+```
+
+文字列の連結は、円記号に続けて改行文字を使用することでどこでも使用でき、これによって 1 行より長い文字列を入力できます。
+
+文字列リテラル内で改行を強制するには、文字列内の改行位置で、改行エスケープ シーケンス (**\n**) を次のように入力します。
+
+```
+"Enter a number between 1 and 100\nOr press Return"
+```
+
+文字列は、ソース コード内の任意の列から開始でき、長い文字列は次の行の任意の列で続行できるため、ソース コードが読みやすくなるように文字列を配置できます。 どのようにした場合も、出力時の画面上の表現は影響を受けません。 例:
+
+```
+printf_s ( "This is the first half of the string, "
+           "this is the second half ") ;
+```
+
+文字列の各部分が二重引用符で囲まれている限り、それらの部分は連結され、1 つの文字列として出力されます。 この連結は、[翻訳の各フェーズ](../preprocessor/phases-of-translation.md)により指定されたコンパイル中のイベントのシーケンスに従って発生します。
+
+```
+"This is the first half of the string, this is the second half"
+```
+
+空白のみで区切られた 2 つの文字列リテラルとして初期化された文字列ポインターは、1 つの文字列として格納されます (ポインターについては、「[ポインター宣言](../c-language/pointer-declarations.md)」で説明します)。 次の例のように適切に参照すると、結果は前の例と同じになります。
+
+```
+char *string = "This is the first half of the string, "
+               "this is the second half";
+
+printf_s( "%s" , string ) ;
+```
+
+隣接する文字列リテラルまたは隣接するワイド文字列リテラルの任意のシーケンスで指定されたマルチバイト文字シーケンスは、変換フェーズ 6 で連結され、単一のマルチバイト文字シーケンスになります。 したがって、実行時に文字列リテラルの変更を許可するようにプログラムをデザインしないでください。 ANSI C 規格では、文字列の変更結果は未定義であると規定されています。
+
+## <a name="see-also"></a>参照
+
+[C 文字列リテラル](../c-language/c-string-literals.md)

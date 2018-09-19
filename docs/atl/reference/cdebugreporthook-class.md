@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00a7bfd149bb83dc31327e3ea235479532213e03
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fb0bf24657a47cbe1cf1129f0202d120fb1d017e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760833"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039065"
 ---
 # <a name="cdebugreporthook-class"></a>CDebugReportHook クラス
 
@@ -84,13 +84,13 @@ CDebugReportHook(
 
 ### <a name="parameters"></a>パラメーター
 
-*szMachineName*  
+*szMachineName*<br/>
 デバッグ出力を送信するマシンの名前。 ローカル コンピューターに既定値です。
 
-*szPipeName*  
+*szPipeName*<br/>
 デバッグ出力の送信先となる名前付きパイプの名前。
 
-*dwTimeout*  
+*dwTimeout*<br/>
 このクラスで使用可能になる名前付きパイプが待機するミリ秒単位の時間。
 
 ##  <a name="dtor"></a>  CDebugReportHook:: ~ CDebugReportHook
@@ -114,13 +114,13 @@ static int __cdecl CDebugReportHookProc(
 
 ### <a name="parameters"></a>パラメーター
 
-*reportType*  
+*reportType*<br/>
 (前述、_CRT_ERROR、または _CRT_ASSERT) レポートの種類。
 
-*message*  
+*message*<br/>
 メッセージ文字列。
 
-*戻り値*  
+*戻り値*<br/>
 によって返される値[_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)します。
 
 ### <a name="return-value"></a>戻り値
@@ -169,10 +169,10 @@ BOOL SetPipeName(
 
 ### <a name="parameters"></a>パラメーター
 
-*szMachineName*  
+*szMachineName*<br/>
 デバッグ出力を送信するマシンの名前。
 
-*szPipeName*  
+*szPipeName*<br/>
 デバッグ出力の送信先となる名前付きパイプの名前。
 
 ### <a name="return-value"></a>戻り値
@@ -189,7 +189,7 @@ void SetTimeout(DWORD dwTimeout);
 
 ### <a name="parameters"></a>パラメーター
 
-*dwTimeout*  
+*dwTimeout*<br/>
 このクラスで使用可能になる名前付きパイプが待機するミリ秒単位の時間。
 
 ## <a name="see-also"></a>関連項目

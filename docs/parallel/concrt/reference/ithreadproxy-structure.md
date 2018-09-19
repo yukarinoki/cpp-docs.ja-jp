@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220a02fca7a8de67d1f35743fa9f56e8499c88e0
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: d3be0a32de4e0e5b57471722ffa2cf8fcea5fd6c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690047"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027857"
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy 構造体
 実行スレッドの抽象化です。 作成するスケジューラの `SchedulerType` ポリシー キーに応じて、リソース マネージャーは、通常の Win32 スレッドまたはユーザー モード スケジュール可能 (UMS: User-Mode Schedulable) スレッドによってサポートされるスレッド プロキシを許可します。 UMS スレッドは、Windows 7 以上のバージョンの 64 ビット オペレーティング システムでサポートされます。  
@@ -77,8 +77,8 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `switchState`  
- 切り替えを実行しているスレッド プロキシの状態を示します。 `SwitchingProxyState` 型のパラメーター。  
+*switchState*<br/>
+切り替えを実行しているスレッド プロキシの状態を示します。 `SwitchingProxyState` 型のパラメーター。  
   
 ### <a name="remarks"></a>Remarks  
  なんらかの理由で、実行している仮想プロセッサ ルートからコンテキストの関連付けを解除する必要がある場合には、`SwitchOut` を使用します。 パラメーター `switchState` に渡す値によって、または仮想プロセッサ ルート上で実行されるかどうかによって、呼び出しはすぐに制御を返すか、またはコンテキストに関連付けられたスレッド プロキシをブロックします。 パラメーターを `SwitchOut` に設定して `Idle` を呼び出すと、エラーになります。 そうことになります、 [invalid_argument](../../../standard-library/invalid-argument-class.md)例外。  
@@ -103,11 +103,11 @@ virtual void SwitchTo(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pContext`  
- 協調的に切り替える実行コンテキスト。  
+*pContext*<br/>
+協調的に切り替える実行コンテキスト。  
   
- `switchState`  
- 切り替えを実行しているスレッド プロキシの状態を示します。 `SwitchingProxyState` 型のパラメーター。  
+*switchState*<br/>
+切り替えを実行しているスレッド プロキシの状態を示します。 `SwitchingProxyState` 型のパラメーター。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドから、別の 1 つの実行コンテキストからスイッチを使用して、 [iexecutioncontext::dispatch](iexecutioncontext-structure.md#dispatch)メソッドの最初の実行コンテキスト。 メソッドは、実行コンテキストを関連付けます`pContext`いずれかで関連付けられていない場合は、スレッド プロキシを使用します。 現在のスレッド プロキシの所有権に指定した値によって決定されます、`switchState`引数。  

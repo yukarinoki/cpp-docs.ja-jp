@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02453ae14ab6e8cd4a75a9f2d8725ce69e2b7f02
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: f0ab7906961936239ac564137d0760e6d64de9de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895293"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068222"
 ---
 # <a name="curl-class"></a>CUrl クラス
 
@@ -154,7 +154,7 @@ inline BOOL Canonicalize(DWORD dwFlags = 0) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*dwFlags*  
+*dwFlags*<br/>
 正規化を制御するフラグ。 フラグが指定されていない場合 (*dwFlags* = 0)、メソッドは、すべての安全でない文字およびメタ シーケンスに変換します。 (など\\。、\..、と\\...) をエスケープするシーケンス。 *dwFlags*値は次のいずれかを指定できます。
 
 - ATL_URL_BROWSER_MODE: はエンコードまたは「#」の後に文字をデコードまたは""、末尾の空白文字の後に削除されません""です。 この値が指定されていない場合は、URL 全体はエンコードされ、後続の空白が削除されます。
@@ -195,10 +195,10 @@ BOOL CrackUrl(LPCTSTR lpszUrl, DWORD dwFlags = 0) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszUrl*  
+*lpszUrl*<br/>
 URL。
 
-*dwFlags*  
+*dwFlags*<br/>
 内のすべてのエスケープ文字を変換するには、ATL_URL_DECODE または ATL_URL_ESCAPE 指定*lpszUrl*に解析後に実際の値。 (Visual C 2005 では、以前 ATL_URL_DECODE 変換すべてのエスケープ文字を解析する前にします。)
 
 ### <a name="return-value"></a>戻り値
@@ -218,13 +218,13 @@ inline BOOL CreateUrl(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszUrl*  
+*lpszUrl*<br/>
 完全な URL 文字列を保持する文字列バッファー。
 
-*pdwMaxLength*  
+*pdwMaxLength*<br/>
 最大長、 *lpszUrl*文字列バッファー。
 
-*dwFlags*  
+*dwFlags*<br/>
 内のすべてのエスケープ文字に変換する ATL_URL_ESCAPE 指定*lpszUrl*に実際の値。
 
 ### <a name="return-value"></a>戻り値
@@ -256,7 +256,7 @@ CUrl(const CUrl& urlThat) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*いる Url*  
+*いる Url*<br/>
 `CUrl`オブジェクトにコピーする URL を作成します。
 
 ##  <a name="dtor"></a>  CUrl:: ~ CUrl
@@ -457,7 +457,7 @@ CUrl& operator= (const CUrl& urlThat) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*いる Url*  
+*いる Url*<br/>
 `CUrl`現在のオブジェクトにコピーするオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -474,7 +474,7 @@ inline BOOL SetExtraInfo(LPCTSTR lpszInfo) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszInfo*  
+*lpszInfo*<br/>
 URL に含める追加の情報を含む文字列。
 
 ### <a name="return-value"></a>戻り値
@@ -491,7 +491,7 @@ inline BOOL SetHostName(LPCTSTR lpszHost) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszHost*  
+*lpszHost*<br/>
 ホスト名。
 
 ### <a name="return-value"></a>戻り値
@@ -508,7 +508,7 @@ inline BOOL SetPassword(LPCTSTR lpszPass) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszPass*  
+*lpszPass*<br/>
 パスワード。
 
 ### <a name="return-value"></a>戻り値
@@ -525,7 +525,7 @@ inline BOOL SetPortNumber(ATL_URL_PORT nPrt) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nPrt*  
+*nPrt*<br/>
 ポート番号。
 
 ### <a name="return-value"></a>戻り値
@@ -542,7 +542,7 @@ inline BOOL SetScheme(ATL_URL_SCHEME nScheme) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nScheme*  
+*nScheme*<br/>
 1 つ、 [ATL_URL_SCHEME](atl-url-scheme-enum.md)スキームの値。
 
 ### <a name="return-value"></a>戻り値
@@ -563,7 +563,7 @@ inline BOOL SetSchemeName(LPCTSTR lpszSchm) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszSchm*  
+*lpszSchm*<br/>
 URL のスキーム名。
 
 ### <a name="return-value"></a>戻り値
@@ -584,7 +584,7 @@ inline BOOL SetUrlPath(LPCTSTR lpszPath) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszPath*  
+*lpszPath*<br/>
 URL パス。
 
 ### <a name="return-value"></a>戻り値
@@ -601,7 +601,7 @@ inline BOOL SetUserName(LPCTSTR lpszUser) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszUser*  
+*lpszUser*<br/>
 ユーザー名。
 
 ### <a name="return-value"></a>戻り値

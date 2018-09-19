@@ -1,5 +1,5 @@
 ---
-title: リンカ ツール エラー LNK2033 |Microsoft ドキュメント
+title: リンカ ツール エラー LNK2033 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d03e8d2e0502d6e3664bff05c75fffb4f4ebd5da
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6c547b4d35e2e7fe057cdd67f0dad47f58d000c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301971"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039994"
 ---
 # <a name="linker-tools-error-lnk2033"></a>リンカ ツール エラー LNK2033
-'type' の未解決の typeref トークン (トークン)  
-  
- MSIL のメタデータに型の定義がありません。  
-  
- LNK2033 はでコンパイルするときに発生する可能性が **/clr:safe**が MSIL モジュールの MSIL モジュールの種類が参照されている場所にある種類の事前宣言のみが存在するとします。  
-  
- 型の下で定義する必要があります **/clr:safe**です。  
-  
- 詳細については、「[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)」を参照してください。  
-  
-## <a name="example"></a>例  
- 次の例では、LNK2033 が生成されます。  
-  
-```  
-// LNK2033.cpp  
-// compile with: /clr:safe  
-// LNK2033 expected  
-ref class A;  
-ref class B {};  
-  
-int main() {  
-   A ^ aa = nullptr;  
-   B ^ bb = nullptr;   // OK  
-};  
+
+'type' の未解決の typeref トークン (トークン)
+
+型の MSIL のメタデータで定義がありません。
+
+LNK2033 はでコンパイルするときに発生する可能性が **/clr:safe** MSIL モジュールの型が参照されている場所、MSIL モジュールの型の事前宣言のみがあるとします。
+
+型は、下で定義する必要がある **/clr:safe**します。
+
+詳細については、「[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)」を参照してください。
+
+## <a name="example"></a>例
+
+次の例では、LNK2033 が生成されます。
+
+```
+// LNK2033.cpp
+// compile with: /clr:safe
+// LNK2033 expected
+ref class A;
+ref class B {};
+
+int main() {
+   A ^ aa = nullptr;
+   B ^ bb = nullptr;   // OK
+};
 ```

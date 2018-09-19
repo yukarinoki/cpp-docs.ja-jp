@@ -1,5 +1,5 @@
 ---
-title: omp_init_nest_lock |Microsoft ドキュメント
+title: omp_init_nest_lock |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca97885a64df3897bda59dd7f04b2306f31536aa
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 11c3e0fc08f8c2e0f4df9ac20df6260f64618ee3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692952"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029547"
 ---
 # <a name="ompinitnestlock"></a>omp_init_nest_lock
 ロックを初期化します。  
@@ -34,16 +34,15 @@ void omp_init_nest_lock(
 );  
 ```  
   
-## <a name="remarks"></a>コメント  
- 指定項目  
+### <a name="parameters"></a>パラメーター 
   
- `lock`  
- 型の変数[omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md)です。  
+*lock*<br/>
+型の変数[omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md)します。  
   
-## <a name="remarks"></a>コメント  
- 初期の入れ子のカウントは 0 です。  
+## <a name="remarks"></a>Remarks  
+ 入れ子の最初の数には 0 です。  
   
- 詳細については、次を参照してください。 [3.2.1 omp_init_lock 関数と omp_init_nest_lock 関数](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md)です。  
+ 詳細については、次を参照してください。 [3.2.1 omp_init_lock 関数と omp_init_nest_lock 関数](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md)します。  
   
 ## <a name="example"></a>例  
   

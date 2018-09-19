@@ -1,5 +1,5 @@
 ---
-title: リソース コンパイラの警告 RW4003 |Microsoft ドキュメント
+title: リソース コンパイラの警告 RW4003 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d584811e056995e19cac0ec68cb58f25ccc921e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f800fc37d41102044c0b8b88921d8bad216d5984
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322001"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101125"
 ---
 # <a name="resource-compiler-warning-rw4003"></a>リソース コンパイラの警告 RW4003
-VIRTKEY が指定されずに Shift キーまたは Ctrl キーが使用されています  
-  
- アクセラレータ テーブル リソースでは、shift キーまたはコントロールに VIRTKEY 必要です。 Shift キーと Ctrl キーは VIRTKEY 型のアクセラレータの中でフラグ ビットとして示されるため、VIRTKEY から独立して存在することはできません。
+
+VIRTKEY が指定されずに Shift キーまたは Ctrl キーが使用されています
+
+アクセラレータ テーブル リソースの場合は、shift キーまたはコントロール VIRTKEY が必要です。 Shift キーと Ctrl キーは VIRTKEY 型のアクセラレータの中でフラグ ビットとして示されるため、VIRTKEY から独立して存在することはできません。

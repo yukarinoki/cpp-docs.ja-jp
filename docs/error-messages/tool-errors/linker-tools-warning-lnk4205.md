@@ -1,5 +1,5 @@
 ---
-title: リンカー ツールの警告 LNK4205 |Microsoft ドキュメント
+title: リンカー ツールの警告 LNK4205 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1764f04f7733cfb6b9a9a033b8667e53fbbfcc8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e76cef24436fc5ce3468a1c94be2d1a49733525a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300717"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105532"
 ---
 # <a name="linker-tools-warning-lnk4205"></a>リンカー ツールの警告 LNK4205
-'filename' に参照するモジュールの現在のデバッグ情報がありません。オブジェクトをリンク デバッグ情報がありません。  
-  
- .Pdb ファイルには、古い情報がされています。 リンカーはデバッグ情報なしオブジェクトをリンクし続けます。 オブジェクト ファイルを使用して、再コンパイルすることができます、 [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)オプション。
+
+'filename' で参照するモジュールの現在のデバッグ情報がありません。デバッグ情報オブジェクトをリンク
+
+.Pdb ファイルには、古い情報があります。 リンカーでは、引き続きデバッグ情報なしオブジェクトをリンクします。 オブジェクト ファイルを使用して、再コンパイルすることも、 [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)オプション。

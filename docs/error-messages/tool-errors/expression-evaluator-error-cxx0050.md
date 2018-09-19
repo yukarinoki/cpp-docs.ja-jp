@@ -1,5 +1,5 @@
 ---
-title: 式エバリュエーター エラー CXX0050 |Microsoft ドキュメント
+title: 式エバリュエーター エラー CXX0050 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32d5510c0db76cc688c850538d9bd5f75c653151
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34b5bde82eff004628073f1ec6d8b372bd02afc0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296095"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095438"
 ---
 # <a name="expression-evaluator-error-cxx0050"></a>式エバリュエーター エラー CXX0050
-左側にある:: クラス/構造体/共用体にする必要があります  
-  
- スコープ解決演算子の左側にある記号 (`::`) クラス、構造体、または共用体でした。  
-  
- このエラーは、can0050 と同じものと同じです。
+
+左側にある:: クラス/構造体/共用体である必要があります
+
+スコープ解決演算子の左側にある記号 (`::`) クラス、構造体または共用体でした。
+
+このエラーは、can0050 と同じものと同じです。

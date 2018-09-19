@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54677e573f36fca65cc46dc5207e8812e4fa4fa6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d2045a6c14a37d270d895a5eeb4fa455711e7354
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752931"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097680"
 ---
 # <a name="ccombstr-class"></a>CComBSTR クラス
 
@@ -141,16 +141,16 @@ HRESULT Append(LPCOLESTR lpsz, int nLen) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in]A`CComBSTR`オブジェクトを追加します。
 
-*ch*  
+*ch*<br/>
 [in]追加する文字。
 
-*lpsz*  
+*lpsz*<br/>
 [in]追加する文字の 0 で終わる文字列。 LPCOLESTR オーバー ロードまたは LPCSTR バージョンを使用して ANSI 文字列を使用して Unicode 文字列を渡すことができます。
 
-*nLen*  
+*nLen*<br/>
 [in]文字数*lpsz*を追加します。
 
 ### <a name="return-value"></a>戻り値
@@ -175,7 +175,7 @@ HRESULT AppendBSTR(BSTR p) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*p*  
+*p*<br/>
 [in]追加する BSTR。
 
 ### <a name="return-value"></a>戻り値
@@ -200,10 +200,10 @@ HRESULT AppendBytes(const char* lpsz, int nLen) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*lpsz*  
+*lpsz*<br/>
 [in]追加するバイトの配列へのポインター。
 
-*p*  
+*p*<br/>
 [in]追加するバイト数。
 
 ### <a name="return-value"></a>戻り値
@@ -224,7 +224,7 @@ HRESULT ArrayToBSTR(const SAFEARRAY* pSrc) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pSrc*  
+*pSrc*<br/>
 [in]文字列を作成するために使用する要素を含むの safearray。
 
 ### <a name="return-value"></a>戻り値
@@ -241,7 +241,7 @@ HRESULT AssignBSTR(const BSTR bstrSrc) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in]現在に割り当てる BSTR`CComBSTR`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -258,7 +258,7 @@ void Attach(BSTR src) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*src*  
+*src*<br/>
 [in]オブジェクトにアタッチする BSTR。
 
 ### <a name="remarks"></a>Remarks
@@ -282,7 +282,7 @@ HRESULT BSTRToArray(LPSAFEARRAY* ppArray) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*ppArray*  
+*ppArray*<br/>
 [out]関数の結果を保持するために使用する safearray へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -315,31 +315,31 @@ unsigned int ByteLength() const throw();
 
 ```
 CComBSTR() throw();
-CComBSTR(const CComBSTR& src);  
-CComBSTR(REFGUID  guid);  
-CComBSTR(int nSize);  
-CComBSTR(int nSize, LPCOLESTR sz);  
-CComBSTR(int nSize, LPCSTR sz);  
-CComBSTR(LPCOLESTR pSrc);  
-CComBSTR(LPCSTR pSrc);  
+CComBSTR(const CComBSTR& src);
+CComBSTR(REFGUID  guid);
+CComBSTR(int nSize);
+CComBSTR(int nSize, LPCOLESTR sz);
+CComBSTR(int nSize, LPCSTR sz);
+CComBSTR(LPCOLESTR pSrc);
+CComBSTR(LPCSTR pSrc);
 CComBSTR(CComBSTR&& src) throw(); // (Visual Studio 2017)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*nSize*  
+*nSize*<br/>
 [in]コピーする文字数*sz*または文字数の初期サイズ、`CComBSTR`します。
 
-*sz*  
+*sz*<br/>
 [入力] コピーする文字列。 Unicode バージョンを LPCOLESTR; を指定しますANSI バージョンには、LPCSTR を指定します。
 
-*pSrc*  
+*pSrc*<br/>
 [入力] コピーする文字列。 Unicode バージョンを LPCOLESTR; を指定しますANSI バージョンには、LPCSTR を指定します。
 
-*src*  
+*src*<br/>
 [入力] `CComBSTR` オブジェクト。
 
-*guid*  
+*guid*<br/>
 [in]参照を`GUID`構造体。
 
 ### <a name="remarks"></a>Remarks
@@ -396,10 +396,10 @@ HRESULT CopyTo(VARIANT* pvarDest) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pbstr*  
+*pbstr*<br/>
 [out]このメソッドによって割り当てられた文字列が返される BSTR のアドレス。
 
-*呼び出した*  
+*呼び出した*<br/>
 [out]このメソッドによって割り当てられた文字列が返されるバリアントのアドレス。
 
 ### <a name="return-value"></a>戻り値
@@ -499,7 +499,7 @@ BSTR m_str;
 
 キャストを`CComBSTR`bstr オブジェクト。
 
-```  
+```
 operator BSTR() const throw();
 ```
 
@@ -544,13 +544,13 @@ bool operator!= (int nNull) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [入力] `CComBSTR` オブジェクト。
 
-*pszSrc*  
+*pszSrc*<br/>
 [in]0 で終わる文字列。
 
-*nNull*  
+*nNull*<br/>
 [in]NULL にする必要があります。
 
 ### <a name="return-value"></a>戻り値
@@ -586,16 +586,16 @@ BSTR* operator&() throw();
 文字列を追加、`CComBSTR`オブジェクト。
 
 ```
-CComBSTR& operator+= (const CComBSTR& bstrSrc);  
+CComBSTR& operator+= (const CComBSTR& bstrSrc);
 CComBSTR& operator+= (const LPCOLESTR pszSrc);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in]A`CComBSTR`オブジェクトを追加します。
 
-*pszSrc*  
+*pszSrc*<br/>
 [in]追加する、0 で終わる文字列。
 
 ### <a name="remarks"></a>Remarks
@@ -629,8 +629,8 @@ bool operator<(LPCSTR pszSrc) const throw();
 セット、 [m_str](#m_str)メンバーのコピーを*pSrc*またはのメンバーは、BSTR のコピーに*src*します。移動代入演算子を移動`src`コピーせずします。
 
 ```
-CComBSTR& operator= (const CComBSTR& src);  
-CComBSTR& operator= (LPCOLESTR pSrc);  
+CComBSTR& operator= (const CComBSTR& src);
+CComBSTR& operator= (LPCOLESTR pSrc);
 CComBSTR& operator= (LPCSTR pSrc);
 CComBSTR& operator= (CComBSTR&& src) throw(); // (Visual Studio 2017)
 ```
@@ -656,13 +656,13 @@ bool operator== (int nNull) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [入力] `CComBSTR` オブジェクト。
 
-*pszSrc*  
+*pszSrc*<br/>
 [in]0 で終わる文字列。
 
-*nNull*  
+*nNull*<br/>
 [in]NULL にする必要があります。
 
 ### <a name="return-value"></a>戻り値
@@ -699,7 +699,7 @@ HRESULT ReadFromStream(IStream* pStream) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pStream*  
+*pStream*<br/>
 [in]ポインター、 [IStream](/windows/desktop/api/objidl/nn-objidl-istream)インターフェイスで、データを含むストリーム。
 
 ### <a name="return-value"></a>戻り値
@@ -756,7 +756,7 @@ HRESULT WriteToStream(IStream* pStream) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pStream*  
+*pStream*<br/>
 [in]ポインター、 [IStream](/windows/desktop/api/objidl/nn-objidl-istream)ストリーム上のインターフェイス。
 
 ### <a name="return-value"></a>戻り値
@@ -773,5 +773,5 @@ HRESULT WriteToStream(IStream* pStream) throw();
 
 ## <a name="see-also"></a>関連項目
 
-[クラスの概要](../../atl/atl-class-overview.md)   
+[クラスの概要](../../atl/atl-class-overview.md)<br/>
 [ATL と MFC 文字列変換マクロ](string-conversion-macros.md)

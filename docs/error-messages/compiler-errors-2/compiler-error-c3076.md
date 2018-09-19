@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3076 |Microsoft ドキュメント
+title: コンパイラ エラー C3076 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 465dd45c4ddfc41e3ba7a059619028711d6f73e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f2d507e13c6dde451e6693774f708333a9301f8b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247580"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064062"
 ---
 # <a name="compiler-error-c3076"></a>コンパイラ エラー C3076
-'instance': 参照型、'type' のインスタンスをネイティブ型に埋め込むことはできません  
-  
- ネイティブ型には、CLR 型のインスタンスを含めることはできません。  
-  
- 詳細については、次を参照してください。[参照型の C++ スタック セマンティクス](../../dotnet/cpp-stack-semantics-for-reference-types.md)です。  
-  
-## <a name="example"></a>例  
- 次の例では、C3076 を生成します。  
-  
-```  
-// C3076.cpp  
-// compile with: /clr /c  
-ref struct U {};  
-  
-struct V {  
-   U y;   // C3076  
-};  
-  
-ref struct W {  
-   U y;   // OK  
-};  
+
+'instance': 参照型 'type' のインスタンスをネイティブ型に埋め込むことはできません
+
+ネイティブ型には、CLR 型のインスタンスを含めることはできません。
+
+詳細については、次を参照してください。[参照型の C++ スタック セマンティクス](../../dotnet/cpp-stack-semantics-for-reference-types.md)します。
+
+## <a name="example"></a>例
+
+次の例では、C3076 が生成されます。
+
+```
+// C3076.cpp
+// compile with: /clr /c
+ref struct U {};
+
+struct V {
+   U y;   // C3076
+};
+
+ref struct W {
+   U y;   // OK
+};
 ```

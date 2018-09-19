@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86c8e7c6fb2d1e441ab0c85f60779bbefd221d52
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ac2e56e4b13f739f61df5b37ab70689784a39882
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761067"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077543"
 ---
 # <a name="device-context-global-functions"></a>デバイス コンテキストに関するグローバル関数
 
@@ -39,10 +39,10 @@ HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);
 
 ### <a name="parameters"></a>パラメーター
 
-*hdc*  
+*hdc*<br/>
 [in]デバイス コンテキスト、または NULL の既存のハンドル。
 
-*ptd*  
+*ptd*<br/>
 [in]ポインター、`DVTARGETDEVICE`対象デバイスに関する情報を含む構造体。
 
 ### <a name="return-value"></a>戻り値

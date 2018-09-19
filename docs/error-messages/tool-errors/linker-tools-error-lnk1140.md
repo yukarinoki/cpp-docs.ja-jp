@@ -1,5 +1,5 @@
 ---
-title: リンカ ツール エラー LNK1140 |Microsoft ドキュメント
+title: リンカ ツール エラー LNK1140 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc0d59589a1882aca4ef2deb419e1e4f1081e52b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9f850360bc749a41e548cebae9f58f9fc7d3d420
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302738"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044705"
 ---
 # <a name="linker-tools-error-lnk1140"></a>リンカ ツール エラー LNK1140
-プログラム データベース モジュールが多すぎます/PDB とのリンク: なし  
-  
- プロジェクトには、4096 以上のモジュールが含まれています。  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>以下の可能性がある解決策を使って修正するには  
-  
-1.  使用して再リンク[/PDB: NONE](../../build/reference/pdb-use-program-database.md)です。  
-  
-2.  デバッグ情報なしには、一部のモジュールをコンパイルします。  
-  
-3.  モジュールの数を減らします。
+
+プログラム データベース モジュールが多すぎます/pdb:none を指定してリンク: なし
+
+プロジェクトには、4096 を超えるモジュールが含まれています。
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>以下の可能性がある解決策を使って修正するには
+
+1. 使用して再リンク[/PDB: NONE](../../build/reference/pdb-use-program-database.md)します。
+
+1. デバッグ情報なしには、一部のモジュールをコンパイルします。
+
+1. モジュールの数を減らします。

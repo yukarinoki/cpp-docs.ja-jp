@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2042 |Microsoft ドキュメント
+title: コンパイラ エラー C2042 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5b0442371b210f40d58a10b6bf1107979ea88db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cbc1d0d5ec0781ebf203a2cebcd99a58996c6547
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33164025"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080000"
 ---
 # <a name="compiler-error-c2042"></a>コンパイラ エラー C2042
-'signed' と 'unsigned' が 1 つの宣言内で同時に使われています。  
-  
- キーワード `signed` と `unsigned` は、1 つの宣言で使用します。  
-  
- 次の例では C2042 エラーが生成されます。  
-  
-```  
-// C2042.cpp  
-unsigned signed int i;   // C2042  
-```  
-  
- 考えられる解決方法:  
-  
-```  
-// C2042b.cpp  
-// compile with: /c  
-unsigned int i;  
-signed int ii;  
+
+'signed' と 'unsigned' が 1 つの宣言内で同時に使われています。
+
+キーワード `signed` と `unsigned` は、1 つの宣言で使用します。
+
+次の例では C2042 エラーが生成されます。
+
+```
+// C2042.cpp
+unsigned signed int i;   // C2042
+```
+
+考えられる解決方法:
+
+```
+// C2042b.cpp
+// compile with: /c
+unsigned int i;
+signed int ii;
 ```

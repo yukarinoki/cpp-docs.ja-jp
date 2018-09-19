@@ -1,5 +1,5 @@
 ---
-title: scoped_d3d_access_lock クラス |Microsoft ドキュメント
+title: scoped_d3d_access_lock クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0053fa89139ac806a3d8ae0572cd053dd6bec72c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: cbddd9181f48477de285e65b966aea354a55fa74
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688142"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059597"
 ---
 # <a name="scopedd3daccesslock-class"></a>scoped_d3d_access_lock クラス
 accelerator_view オブジェクトに対する D3D アクセス ロックの RAII ラッパーです。  
@@ -74,21 +74,21 @@ scoped_d3d_access_lock(// [3] move constructor
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Av`  
- 導入するロックの `accelerator_view`。  
+*_Av*<br/>
+導入するロックの `accelerator_view`。  
   
- `_T`  
- `adopt_d3d_access_lock_t` オブジェクト。  
+*_T*<br/>
+`adopt_d3d_access_lock_t` オブジェクト。  
   
- `_Other`  
- 既存のロックの移動元の `scoped_d3d_access_lock` オブジェクト。  
+*_Other*<br/>
+既存のロックの移動元の `scoped_d3d_access_lock` オブジェクト。  
   
 ## <a name="construction"></a>構築  
  [1] コンストラクター  
- D3D アクセスのロックを取得し、指定された[accelerator_view](accelerator-view-class.md)オブジェクト。 ロックが取得されるまでの構築ブロック。  
+ D3D アクセス ロックを取得、指定された[accelerator_view](accelerator-view-class.md)オブジェクト。 ロックが取得されるまでの構築ブロック。  
   
  [2] のコンス トラクター  
- D3D アクセスのロックを導入、指定された[accelerator_view](accelerator-view-class.md)オブジェクト。  
+ 採用から D3D アクセスのロックを指定された[accelerator_view](accelerator-view-class.md)オブジェクト。  
   
  [3] 移動コンストラクター  
  別の `scoped_d3d_access_lock` オブジェクトから既存の D3D アクセスのロックを受け取ります。 構造体はブロックを行いません。  
@@ -110,8 +110,8 @@ scoped_d3d_access_lock& operator= (scoped_d3d_access_lock&& _Other);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Other`  
- D3D アクセスのロックの移動元である accelerator_view。  
+*_Other*<br/>
+D3D アクセスのロックの移動元である accelerator_view。  
   
 ### <a name="return-value"></a>戻り値  
  この `scoped_accelerator_view_lock` への参照。  

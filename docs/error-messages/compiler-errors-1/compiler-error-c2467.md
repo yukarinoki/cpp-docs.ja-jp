@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2467 |Microsoft ドキュメント
+title: コンパイラ エラー C2467 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ed9b1b50c63852ed830c2072d7cd8fce668a671
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8bab320bfdba9fcbd408771b7859a22fc85fa06e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225644"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048776"
 ---
 # <a name="compiler-error-c2467"></a>コンパイラ エラー C2467
-匿名 'ユーザー定義型' の無効な宣言  
-  
- 入れ子にされたユーザー定義型が宣言されました。 これは、ANSI 互換性オプションを使用して C ソース コードをコンパイルするときのエラー ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) 有効にします。  
-  
- 次の例では、C2467 が生成されます。  
-  
-```  
-//C2467.c  
-// compile with: /Za   
-int main() {  
-   struct X {  
-      union { int i; };   // C2467, nested declaration  
-   };  
-}  
+
+匿名 'ユーザー定義型' の無効な宣言
+
+入れ子にされたユーザー定義の型が宣言されました。 これは、ANSI 互換オプションを使用する C ソース コードをコンパイルするときのエラー ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) を有効にします。
+
+次の例では、C2467 が生成されます。
+
+```
+//C2467.c
+// compile with: /Za
+int main() {
+   struct X {
+      union { int i; };   // C2467, nested declaration
+   };
+}
 ```

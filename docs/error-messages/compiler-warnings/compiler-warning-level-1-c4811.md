@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4811 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4811 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5644a8d372b96c72394760a362376606964c93c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e19d428d592b9bb99c6cc396cb1771f9047fbf1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279663"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059512"
 ---
 # <a name="compiler-warning-level-1-c4811"></a>コンパイラの警告 (レベル 1) C4811
-プラグマ conform(forScope, show) の値 == value  
-  
- この警告は、 **conform** プラグマの [show](../../preprocessor/conform.md) オプションを使用すると発行されます。 *value* は現在の conform 値です。
+
+プラグマ conform(forScope, show) の値 == value
+
+この警告は、 **conform** プラグマの [show](../../preprocessor/conform.md) オプションを使用すると発行されます。 *value* は現在の conform 値です。

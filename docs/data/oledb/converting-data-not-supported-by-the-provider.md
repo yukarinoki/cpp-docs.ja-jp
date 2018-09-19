@@ -1,5 +1,5 @@
 ---
-title: プロバイダーでサポートされていないデータを変換する |Microsoft ドキュメント
+title: プロバイダーでサポートされていないデータを変換する |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d0be19345ff6c425cfbc020f2096ca82680586d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fa9fed1f7c779efc7104ec8138d618b85aeb2a33
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33095467"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081742"
 ---
 # <a name="converting-data-not-supported-by-the-provider"></a>プロバイダーでサポートされないデータの変換
-コンシューマーはプロバイダーによってサポートされていないデータ型を要求するとき、OLE DB プロバイダー テンプレートのコードに`IRowsetImpl::GetData`データ型に変換する Msdadc.dll を呼び出します。  
+
+コンシューマーがプロバイダーによってサポートされていないデータ型を要求すると、OLE DB プロバイダー テンプレートのコードを`IRowsetImpl::GetData`データ型に変換する Msdadc.dll を呼び出します。  
   
- ようなインターフェイスを実装する場合`IRowsetChange`データ変換を必要とする、変換を行う Msdaenum.dll を呼び出すことができます。 使用して`GetData`で例として、Atldb.h で定義されています。  
+ようなインターフェイスを実装する場合`IRowsetChange`データ変換が必要ですが、変換を行う Msdaenum.dll を呼び出すことができます。 使用`GetData`、例として、Atldb.h で定義されています。  
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB プロバイダー テンプレートの操作](../../data/oledb/working-with-ole-db-provider-templates.md)
+
+[OLE DB プロバイダー テンプレートの操作](../../data/oledb/working-with-ole-db-provider-templates.md)

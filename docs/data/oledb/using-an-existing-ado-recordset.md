@@ -17,17 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: be948293947d4f007d151e4a89e0ff87fc897bbd
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d3a0b2d2da67e4db55dbf3a3f5b23c0c88797dd7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338939"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065349"
 ---
 # <a name="using-an-existing-ado-recordset"></a>既存の ADO レコードセットの使用
+
 OLE DB コンシューマー テンプレートとアクティブなデータ オブジェクト (ADO) を混在させるには、ADO を使用して、レコード セット (OLE DB コンシューマー テンプレート内の行セットに対応する) を開きます。 レコード セットがある場合、OLE DB 行セットに接続するのには、次を行います。  
   
-1.  呼び出す`QueryInterface`の`IRowset`と`IAccessor`ポインター。  
+1. 呼び出す`QueryInterface`の`IRowset`と`IAccessor`ポインター。  
   
     ```cpp  
     IRowset* lpRowset = NULL;  
@@ -39,7 +40,7 @@ OLE DB コンシューマー テンプレートとアクティブなデータ �
     > [!NOTE]
     >  *lpUnk*を指す、 `IUnknown` ADO レコード セットのオブジェクト。  
   
-2.  適切な OLE DB コンシューマー テンプレート クラスにアクセサーと行セットをアタッチします。  
+1. 適切な OLE DB コンシューマー テンプレート クラスにアクセサーと行セットをアタッチします。  
   
     ```cpp  
     CRowset rs;  
@@ -51,4 +52,5 @@ OLE DB コンシューマー テンプレートとアクティブなデータ �
     ```  
   
 ## <a name="see-also"></a>関連項目  
- [アクセサーの使用](../../data/oledb/using-accessors.md)
+
+[アクセサーの使用](../../data/oledb/using-accessors.md)

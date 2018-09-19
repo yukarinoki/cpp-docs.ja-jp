@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3909 |Microsoft ドキュメント
+title: コンパイラ エラー C3909 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53e89dd422b1289d926ab04a0f17ae4d6185d19d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7bb3526f537a2eceb006f6af9e9b0faba44bf9cf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270818"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058706"
 ---
 # <a name="compiler-error-c3909"></a>コンパイラ エラー C3909
-aWinRT またはマネージ イベント宣言は WinRT またはマネージ型で行う必要があります。  
-  
- Windows ランタイム イベントまたはマネージ イベントがネイティブ型内で宣言されました。 このエラーを修正するには、Windows ランタイム型またはマネージ型内でイベントを宣言します。  
-  
- 詳細については、次を参照してください。[イベント](../../windows/event-cpp-component-extensions.md)です。  
-  
- 次の例では、C3909 を生成し、その修正方法を示しています。  
-  
-```  
-// C3909.cpp  
-// compile with: /clr /c  
-delegate void H();  
-class X {  
-   event H^ E;   // C3909 - use ref class X instead  
-};  
-  
-ref class Y {  
-   static event H^ E {  
-      void add(H^) {}  
-      void remove( H^ h ) {}  
-      void raise( ) {}  
-   }  
-};  
+
+aWinRT またはマネージ イベント宣言は WinRT またはマネージ型で発生する必要があります。
+
+Windows ランタイム イベントまたはマネージド イベントがネイティブ型内で宣言されました。 このエラーを修正するには、Windows ランタイム型またはマネージド型内でイベントを宣言します。
+
+詳細については、次を参照してください。[イベント](../../windows/event-cpp-component-extensions.md)します。
+
+次の例では、C3909 を生成し、その修正方法を示しています。
+
+```
+// C3909.cpp
+// compile with: /clr /c
+delegate void H();
+class X {
+   event H^ E;   // C3909 - use ref class X instead
+};
+
+ref class Y {
+   static event H^ E {
+      void add(H^) {}
+      void remove( H^ h ) {}
+      void raise( ) {}
+   }
+};
 ```

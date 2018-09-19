@@ -1,5 +1,5 @@
 ---
-title: ODBC データベース接続の使用 |Microsoft ドキュメント
+title: ODBC データベース接続の使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,21 +20,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 02c77f028cdd3e792aa03967f6716b3ce7ce27b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5ad69bda1a49d6ebf2878d8b6a7b5d50840e9d8d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33094144"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084823"
 ---
 # <a name="work-with-odbc-database-connections"></a>ODBC データベース接続の使用
+
 次のトピックでは、ODBC データ ソースに接続する方法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [ODBC データベース接続を管理します。](../../data/odbc/data-source-managing-connections-odbc.md)  
+- [ODBC データベース接続を管理します。](../../data/odbc/data-source-managing-connections-odbc.md)  
   
--   [ODBC データ ソースをプログラムで構成します。](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)  
+- [ODBC データ ソースをプログラムで構成します。](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)  
   
 ## <a name="see-also"></a>関連項目  
- [ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)
+
+[ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)

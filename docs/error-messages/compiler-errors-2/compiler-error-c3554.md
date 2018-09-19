@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3554 |Microsoft ドキュメント
+title: コンパイラ エラー C3554 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fb374e028097157ae72b621593a899af9fe2f91
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b1760607a335d4dd56ec711eef76f5a68550d64
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255454"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089503"
 ---
 # <a name="compiler-error-c3554"></a>コンパイラ エラー C3554
-'decltype' を他の型指定子と組み合わせることはできません  
-  
- 型指定子を使用して `decltype()` キーワードを修飾することはできません。 たとえば、次のコード フラグメントではエラー C3554 が生成されます。  
-  
-```  
-int x;  
-unsigned decltype(x); // C3554  
+
+'decltype' を他の型指定子と組み合わせることはできません
+
+型指定子を使用して `decltype()` キーワードを修飾することはできません。 たとえば、次のコード フラグメントではエラー C3554 が生成されます。
+
+```
+int x;
+unsigned decltype(x); // C3554
 ```

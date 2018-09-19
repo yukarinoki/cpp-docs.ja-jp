@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4166 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4166 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61bc7ab78fc0fc2816f42db4b6e162838ad74f6e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c6112c684dc4896393b35309a0a3af7eedd455d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276618"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051998"
 ---
 # <a name="compiler-warning-level-1-c4166"></a>コンパイラの警告 (レベル 1) C4166
-**コンストラクターとデストラクターの呼び出し規約が無効です。**  
-  
- コンストラクターとデストラクターは、明示的に **__clrcall**を指定する場合を除き、プラットフォームの既定以外の呼び出し規則を持つことはできません。
+
+**コンストラクターとデストラクターの呼び出し規約が無効です。**
+
+コンストラクターとデストラクターは、明示的に **__clrcall**を指定する場合を除き、プラットフォームの既定以外の呼び出し規則を持つことはできません。

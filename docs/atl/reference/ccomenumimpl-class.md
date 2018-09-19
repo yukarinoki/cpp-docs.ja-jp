@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aab6e168970ff740f68d1338a05d51c691fd116d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2cf80d51cdf45b6298255a252124ace9568953b1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759988"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082524"
 ---
 # <a name="ccomenumimpl-class"></a>CComEnumImpl クラス
 
@@ -43,22 +43,22 @@ ms.locfileid: "43759988"
 
 ```
 template <class Base,
-    const IID* piid, class T, class Copy>  
+    const IID* piid, class T, class Copy>
 class ATL_NO_VTABLE CComEnumImpl : public Base
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*ベース*  
+*ベース*<br/>
 COM の列挙子インターフェイス。 参照してください[IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring)例についてはします。
 
-*piid*  
+*piid*<br/>
 列挙子インターフェイスのインターフェイス ID へのポインター。
 
-*T*  
+*T*<br/>
 列挙子インターフェイスによって公開される項目の種類。
 
-*コピー*  
+*コピー*<br/>
 同種[コピー ポリシー クラス](../../atl/atl-copy-policy-classes.md)します。
 
 ## <a name="members"></a>メンバー
@@ -143,16 +143,16 @@ HRESULT Init(
 
 ### <a name="parameters"></a>パラメーター
 
-*begin*  
+*begin*<br/>
 列挙するアイテムを含む配列の最初の要素へのポインター。
 
-*end*  
+*end*<br/>
 列挙するアイテムを含む配列の最後の要素の次の位置へのポインター。
 
-*pUnk*  
+*pUnk*<br/>
 [in]`IUnknown`保持する必要がアライブ列挙子の有効期間中にオブジェクトのポインター。 このようなオブジェクトが存在しない場合は、NULL を渡します。
 
-*flags*  
+*flags*<br/>
 列挙子が配列の所有権を取得する必要があるかどうか、またはそのコピーを作成かどうかを指定するフラグ。 使用可能な値は次のとおりです。
 
 ### <a name="return-value"></a>戻り値
@@ -167,13 +167,13 @@ HRESULT Init(
 
 *フラグ*パラメーターでは、列挙子が渡された配列の要素を処理する方法を指定することができます。 *フラグ*から値のいずれかを実行、`CComEnumFlags`次に示す列挙体。
 
-```  
-enum CComEnumFlags  
-   {  
-   AtlFlagNoCopy = 0,  
-   AtlFlagTakeOwnership = 2, // BitOwn  
-   AtlFlagCopy = 3           // BitOwn | BitCopy  
-   };  
+```
+enum CComEnumFlags
+   {
+   AtlFlagNoCopy = 0,
+   AtlFlagTakeOwnership = 2, // BitOwn
+   AtlFlagCopy = 3           // BitOwn | BitCopy
+   };
 ```
 
 `AtlFlagNoCopy` 配列の有効期間が、列挙子によって制御されていないことを意味します。 静的またはで識別されるオブジェクトに、配列がここでは、する*pUnk*不要になったときに、配列を解放する必要になります。
@@ -195,7 +195,7 @@ STDMETHOD(Clone)(Base** ppEnum);
 
 ### <a name="parameters"></a>パラメーター
 
-*ppEnum*  
+*ppEnum*<br/>
 [out]新しく作成されたオブジェクトの列挙子インターフェイスは、現在の列挙子から複製します。
 
 ### <a name="return-value"></a>戻り値
@@ -256,13 +256,13 @@ STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
 
 ### <a name="parameters"></a>パラメーター
 
-*celt*  
+*celt*<br/>
 [in]要求された要素の数。
 
-*rgelt*  
+*rgelt*<br/>
 [out]要素を格納する配列。
 
-*内*  
+*内*<br/>
 [out]実際に返される要素の数*rgelt*します。 これより小さい*celt*場合よりも少ない*celt*要素がリストに残っています。
 
 ### <a name="return-value"></a>戻り値
@@ -291,7 +291,7 @@ STDMETHOD(Skip)(ULONG celt);
 
 ### <a name="parameters"></a>パラメーター
 
-*celt*  
+*celt*<br/>
 [in]スキップする要素の数。
 
 ### <a name="return-value"></a>戻り値
@@ -304,6 +304,6 @@ STDMETHOD(Skip)(ULONG celt);
 
 ## <a name="see-also"></a>関連項目
 
-[IEnumOnSTLImpl クラス](../../atl/reference/ienumonstlimpl-class.md)   
-[CComEnum クラス](../../atl/reference/ccomenum-class.md)   
+[IEnumOnSTLImpl クラス](../../atl/reference/ienumonstlimpl-class.md)<br/>
+[CComEnum クラス](../../atl/reference/ccomenum-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

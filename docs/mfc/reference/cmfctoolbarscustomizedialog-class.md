@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9132df889f057696a08afe9a1ca6ad2277c46f10
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d796908504d746baee7863a6c6735bca3572d02b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211053"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702818"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog クラス
 モードレス タブ ダイアログ ボックス ( [CPropertySheet クラス](../../mfc/reference/cpropertysheet-class.md)) ユーザーがツールバー、メニューのキーボード ショートカット、ユーザー定義のツール、およびアプリケーションでの visual スタイルをカスタマイズできるようにします。 通常、このダイアログ ボックスを表示するには、 **[ツール]** メニューの **[ユーザー設定]** をクリックします。  
@@ -137,17 +137,17 @@ void AddButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiCategoryId*  
- ボタンを挿入するカテゴリの ID を指定します。  
+*uiCategoryId*<br/>
+[in]ボタンを挿入するカテゴリの ID を指定します。  
   
- [in]*ボタン*  
- 挿入するボタンを指定します。  
+*ボタン*<br/>
+[in]挿入するボタンを指定します。  
   
- [in]*iInsertBefore*  
- ボタンの挿入前にあるツール バー ボタンの 0 から始まるインデックスを指定します。  
+*iInsertBefore*<br/>
+[in]ボタンの挿入前にあるツール バー ボタンの 0 から始まるインデックスを指定します。  
   
- [in]*lpszCategory*  
- ボタンを挿入するカテゴリ文字列を指定します。  
+*lpszCategory*<br/>
+[in]ボタンを挿入するカテゴリ文字列を指定します。  
   
 ### <a name="remarks"></a>Remarks  
  `AddButton`メソッド (ID_FILE_MRU_FILE1) などの標準コマンド Id を持つボタンは無視されます、コマンドは許可されていません (を参照してください[CMFCToolBar::IsCommandPermitted](../../mfc/reference/cmfctoolbar-class.md#iscommandpermitted)) ボタンをダミーとします。  
@@ -171,8 +171,8 @@ BOOL AddMenu(UINT uiMenuResId);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiMenuResId*  
- 読み込むメニューのリソース ID を指定します。  
+*uiMenuResId*<br/>
+[in]読み込むメニューのリソース ID を指定します。  
   
 ### <a name="return-value"></a>戻り値  
  メニューが正常に追加された場合は TRUE。それ以外の場合は FALSE です。  
@@ -192,17 +192,17 @@ void AddMenuCommands(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pMenu*  
- 追加する CMenu オブジェクトへのポインター。  
+*pMenu*<br/>
+[in]追加する CMenu オブジェクトへのポインター。  
   
- [in]*bPopup*  
- コマンドの一覧に、ポップアップ メニュー項目を挿入するかどうかを指定します。  
+*bPopup*<br/>
+[in]コマンドの一覧に、ポップアップ メニュー項目を挿入するかどうかを指定します。  
   
- [in]*lpszCategory*  
- メニューを挿入するカテゴリの名前。  
+*lpszCategory*<br/>
+[in]メニューを挿入するカテゴリの名前。  
   
- [in]*lpszMenuPath*  
- コマンドが表示されるときに、名前に追加するプレフィックス、**すべてのカテゴリ**一覧。  
+*lpszMenuPath*<br/>
+[in]コマンドが表示されるときに、名前に追加するプレフィックス、**すべてのカテゴリ**一覧。  
   
 ### <a name="remarks"></a>Remarks  
  `AddMenuCommands`メソッドのすべてのメニュー項目をループ*pMenu*します。 サブメニューを含まないメニュー項目ごとに、このメソッドを作成、 [CMFCToolBarButton クラス](../../mfc/reference/cmfctoolbarbutton-class.md)オブジェクトと呼び出し、 [CMFCToolBarsCustomizeDialog::AddButton](#addbutton)ツールバーとメニュー項目を追加する方法コマンドの一覧にボタンを**コマンド**ページ。 このプロセスでは、区切り記号は無視されます。  
@@ -223,14 +223,14 @@ BOOL AddToolBar(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiCategoryId*  
- ツールバーを追加するカテゴリのリソース ID を指定します。  
+*uiCategoryId*<br/>
+[in]ツールバーを追加するカテゴリのリソース ID を指定します。  
   
- [in]*uiToolbarResId*  
- そのコマンドがコマンドの一覧に挿入されたツールバーのリソース ID を指定します。  
+*uiToolbarResId*<br/>
+[in]そのコマンドがコマンドの一覧に挿入されたツールバーのリソース ID を指定します。  
   
- [in]*lpszCategory*  
- ツールバーを追加するカテゴリの名前を指定します。  
+*lpszCategory*<br/>
+[in]ツールバーを追加するカテゴリの名前を指定します。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE。それ以外の場合は FALSE です。  
@@ -251,8 +251,8 @@ virtual BOOL CheckToolsValidity(const CObList& lstTools);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lstTools*  
- 確認するユーザー定義のツールの一覧。  
+*lstTools*<br/>
+[in]確認するユーザー定義のツールの一覧。  
   
 ### <a name="return-value"></a>戻り値  
  ユーザー定義のツールの一覧が有効なかどうかは TRUE を返しますそれ以外の場合は FALSE です。 既定の実装を常に TRUE を返します。  
@@ -274,14 +274,14 @@ CMFCToolBarsCustomizeDialog(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWndParentFrame*  
- 親フレームへのポインター。 このパラメーターには、NULL は指定できません。  
+*pWndParentFrame*<br/>
+[in]親フレームへのポインター。 このパラメーターには、NULL は指定できません。  
   
- [in]*bAutoSetFromMenus*  
- すべてのメニューからメニュー コマンドをコマンドの一覧に追加するかどうかを指定するブール値、**コマンド**ページ。 このパラメーターが TRUE の場合は、メニュー コマンドが追加されます。 それ以外の場合、メニュー コマンドは追加されません。  
+*bAutoSetFromMenus*<br/>
+[in]すべてのメニューからメニュー コマンドをコマンドの一覧に追加するかどうかを指定するブール値、**コマンド**ページ。 このパラメーターが TRUE の場合は、メニュー コマンドが追加されます。 それ以外の場合、メニュー コマンドは追加されません。  
   
- [in]*uiFlags*  
- ダイアログ ボックスの動作に影響するフラグの組み合わせ。 このパラメーターには、次の値の 1 つ以上を指定できます。  
+*uiFlags*<br/>
+[in]ダイアログ ボックスの動作に影響するフラグの組み合わせ。 このパラメーターには、次の値の 1 つ以上を指定できます。  
   
 - AFX_CUSTOMIZE_MENU_SHADOWS  
   
@@ -299,8 +299,8 @@ CMFCToolBarsCustomizeDialog(
   
 - AFX_CUSTOMIZE_NO_LARGE_ICONS  
   
- [in]*plistCustomPages*  
- 一覧へのポインター`CRuntimeClass`追加のカスタム ページを指定するオブジェクト。  
+*plistCustomPages*<br/>
+[in]一覧へのポインター`CRuntimeClass`追加のカスタム ページを指定するオブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
  *PlistCustomPages*パラメーターの一覧を指す`CRuntimeClass`追加のカスタム ページを指定するオブジェクト。 コンス トラクターの ダイアログ ボックスを使用してより多くのページを追加する、 [CRuntimeClass::CreateObject](../../mfc/reference/cruntimeclass-structure.md#createobject)メソッド。 CustomPages のサンプルをより多くのページを追加する例を参照してください、**カスタマイズ** ダイアログ ボックス。  
@@ -333,8 +333,8 @@ void EnableUserDefinedToolbars(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- ユーザー定義のツールバーを有効にする場合は TRUEツールバーを無効にする場合は FALSE。  
+*bEnable*<br/>
+[in]ユーザー定義のツールバーを有効にする場合は TRUEツールバーを無効にする場合は FALSE。  
   
 ### <a name="remarks"></a>Remarks  
  場合*bEnable* true で、**新規**、**の名前を変更**と**削除**でボタンが表示されます、**ツールバー**ページです。  
@@ -349,8 +349,8 @@ virtual void FillAllCommandsList(CListBox& wndListOfCommands) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [出力] `wndListOfCommands`  
- 参照、`CListBox`を設定するオブジェクト。  
+*wndListOfCommands*<br/>
+[out]参照、`CListBox`を設定するオブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
  **すべてコマンド**カテゴリには、すべてのカテゴリのコマンドが含まれています。 [CMFCToolBarsCustomizeDialog::AddButton](#addbutton)メソッドに指定されたボタンに関連付けられているコマンドの追加、**のすべてのコマンド**のカテゴリ。  
@@ -369,11 +369,11 @@ void FillCategoriesComboBox(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*wndCategory*  
- 参照、`CComboBox`を設定するオブジェクト。  
+*wndCategory*<br/>
+[out]参照、`CComboBox`を設定するオブジェクト。  
   
- [in]*bAddEmpty*  
- コマンドがないコンボ ボックスにカテゴリを追加するかどうかを示すブール値。 このパラメーターがある場合は TRUE、空のカテゴリは、コンボ ボックスに追加されます。 それ以外の場合、空のカテゴリは追加されません。  
+*bAddEmpty*<br/>
+[in]コマンドがないコンボ ボックスにカテゴリを追加するかどうかを示すブール値。 このパラメーターがある場合は TRUE、空のカテゴリは、コンボ ボックスに追加されます。 それ以外の場合、空のカテゴリは追加されません。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは似ています、 [CMFCToolBarsCustomizeDialog::FillCategoriesListBox](#fillcategorieslistbox)メソッドでこのメソッドが機能する点を除いて、`CComboBox`オブジェクト。  
@@ -394,11 +394,11 @@ void FillCategoriesListBox(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*wndCategory*  
- 参照、`CListBox`を設定するオブジェクト。  
+*wndCategory*<br/>
+[out]参照、`CListBox`を設定するオブジェクト。  
   
- [in]*bAddEmpty*  
- コマンドがないリスト ボックスにカテゴリを追加するかどうかを示すブール値。 このパラメーターがある場合は TRUE、空のカテゴリは、リスト ボックスに追加されます。 それ以外の場合、空のカテゴリは追加されません。  
+*bAddEmpty*<br/>
+[in]コマンドがないリスト ボックスにカテゴリを追加するかどうかを示すブール値。 このパラメーターがある場合は TRUE、空のカテゴリは、リスト ボックスに追加されます。 それ以外の場合、空のカテゴリは追加されません。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは似ています、 [CMFCToolBarsCustomizeDialog::FillCategoriesComboBox](#fillcategoriescombobox)メソッドでこのメソッドが機能する点を除いて、`CListBox`オブジェクト。  
@@ -417,8 +417,8 @@ LPCTSTR GetCommandName(UINT uiCmd) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiCmd*  
- 取得するコマンドの ID。  
+*uiCmd*<br/>
+[in]取得するコマンドの ID。  
   
 ### <a name="return-value"></a>戻り値  
  コマンドが存在しない場合に、指定したコマンド ID、または NULL に関連付けられている名前です。  
@@ -433,11 +433,11 @@ int GetCountInCategory(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszItemName*  
- 一致するようにテキスト ラベル。  
+*lpszItemName*<br/>
+[in]一致するようにテキスト ラベル。  
   
- [in]*lstCommands*  
- 含むリストへの参照を`CMFCToolBarButton`オブジェクト。  
+*lstCommands*<br/>
+[in]含むリストへの参照を`CMFCToolBarButton`オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  指定した項目の数の一覧をテキスト ラベル equals *lpszItemName*します。  
@@ -492,8 +492,8 @@ virtual void OnAfterChangeTool(CUserTool* pSelTool);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力、出力]*pSelTool*  
- 変更されているユーザー ツールのオブジェクトへのポインター。  
+*pSelTool*<br/>
+[入力、出力]変更されているユーザー ツールのオブジェクトへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
  ユーザー定義のツールのプロパティを変更するとき、このメソッドは、フレームワークによって呼び出されます。 既定の実装では、何も行われません。 このメソッドから派生したクラスでオーバーライド`CMFCToolBarsCustomizeDialog`ユーザー ツールの変更が発生した後、処理を実行します。  
@@ -506,8 +506,8 @@ virtual BOOL OnAssignKey(ACCEL* pAccel);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力、出力]*pAccel*  
- として表される候補キーの割り当てへのポインター、[アクセル](/windows/desktop/api/winuser/ns-winuser-tagaccel)構造体。  
+*pAccel*<br/>
+[入力、出力]として表される候補キーの割り当てへのポインター、[アクセル](/windows/desktop/api/winuser/ns-winuser-tagaccel)構造体。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合は、キーを割り当てることができない場合に、キーが割り当てられている、または FALSE を指定できます。 既定の実装を常に TRUE を返します。  
@@ -523,8 +523,8 @@ virtual void OnBeforeChangeTool(CUserTool* pSelTool);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力、出力]*pSelTool*  
- 置き換えられますユーザー ツールのオブジェクトへのポインター。  
+*pSelTool*<br/>
+[入力、出力]置き換えられますユーザー ツールのオブジェクトへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
  ユーザー定義のツールのプロパティを変更する場合、このメソッドは、フレームワークによって呼び出されます。 既定の実装では、何も行われません。 上書き、`OnBeforeChangeTool`から派生したクラスのメソッドで`CMFCToolBarsCustomizeDialog`リソースを解放するなど、ユーザー ツールの変更が発生する前に、処理を実行する場合を*pSelTool*を使用します。  
@@ -540,14 +540,14 @@ virtual BOOL OnEditToolbarMenuImage(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWndParent*  
- 親ウィンドウへのポインター。  
+*pWndParent*<br/>
+[in]親ウィンドウへのポインター。  
   
- [in]*ビットマップ*  
- 編集するビットマップ オブジェクトへの参照。  
+*ビットマップ*<br/>
+[in]編集するビットマップ オブジェクトへの参照。  
   
- [in]*nBitsPerPixel*  
- ビットマップのビット/ピクセルの色の解像度。  
+*nBitsPerPixel*<br/>
+[in]ビットマップのビット/ピクセルの色の解像度。  
   
 ### <a name="return-value"></a>戻り値  
  変更がコミットされている場合は TRUE。それ以外の場合は FALSE です。 既定の実装がダイアログ ボックスを表示し、ユーザーがクリックした場合は TRUE を返します**OK**、または、ユーザーがクリックした場合は FALSE**キャンセル**または**閉じる**ボタン。  
@@ -604,14 +604,14 @@ int RemoveButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiCategoryId*  
- ボタンを削除するカテゴリの ID を指定します。  
+*uiCategoryId*<br/>
+[in]ボタンを削除するカテゴリの ID を指定します。  
   
- [in]*uiCmdId*  
- ボタンのコマンド ID を指定します。  
+*uiCmdId*<br/>
+[in]ボタンのコマンド ID を指定します。  
   
- [in]*lpszCategory*  
- ボタンを削除するカテゴリの名前を指定します。  
+*lpszCategory*<br/>
+[in]ボタンを削除するカテゴリの名前を指定します。  
   
 ### <a name="return-value"></a>戻り値  
  削除ボタン、または指定したコマンド ID が指定したカテゴリで見つからなかった場合は-1 の 0 から始まるインデックス。 場合*uiCategoryId* -1 で、戻り値は 0。  
@@ -629,11 +629,11 @@ BOOL RenameCategory(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszCategoryOld*  
- 変更するカテゴリ名。  
+*lpszCategoryOld*<br/>
+[in]変更するカテゴリ名。  
   
- [in]*lpszCategoryNew*  
- 新しいカテゴリの名前。  
+*lpszCategoryNew*<br/>
+[in]新しいカテゴリの名前。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE。それ以外の場合は FALSE です。  
@@ -651,11 +651,11 @@ void ReplaceButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiCmd*  
- 置き換えられる ボタンのコマンドを指定します。  
+*uiCmd*<br/>
+[in]置き換えられるボタンのコマンドを指定します。  
   
- [in]*ボタン*  
- A **const**古い ボタンの代わりをツール バー ボタン オブジェクトへの参照。  
+*ボタン*<br/>
+[in]A **const**古い ボタンの代わりをツール バー ボタン オブジェクトへの参照。  
   
 ### <a name="remarks"></a>Remarks  
  ときに[CMFCToolBarsCustomizeDialog::AddMenu](#addmenu)、 [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands)、または[CMFCToolBarsCustomizeDialog::AddToolBar](#addtoolbar)を追加します。コマンドを**コマンド**] ページの [コマンドの形式である、 [CMFCToolBarButton クラス](../../mfc/reference/cmfctoolbarbutton-class.md)オブジェクト (または[CMFCToolBarMenuButton クラス](../../mfc/reference/cmfctoolbarmenubutton-class.md)メニュー オブジェクトによって追加されたサブメニューを含む項目`AddMenuCommands`)。 フレームワークでは、これら 3 つのコマンドを自動的に追加するメソッドも呼び出します。 代わりに派生型で表されるコマンドを実行する場合に、呼び出す`ReplaceButton`を派生型のボタンを渡します。  
@@ -673,8 +673,8 @@ BOOL SetUserCategory(LPCTSTR lpszCategory);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszCategory*  
- カテゴリの名前。  
+*lpszCategory*<br/>
+[in]カテゴリの名前。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE。それ以外の場合は FALSE です。  

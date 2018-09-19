@@ -1,5 +1,5 @@
 ---
-title: リンカー ツールの警告 LNK4096 |Microsoft ドキュメント
+title: リンカー ツールの警告 LNK4096 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca6dedf18989341df82cacfde14f358c778d141e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 264bbff052be7b37af1525392ffe0289fddef6d4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300606"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104090"
 ---
 # <a name="linker-tools-warning-lnk4096"></a>リンカー ツールの警告 LNK4096
-/基本値の"number"は Windows 95 および Windows 98; 無効イメージは動作しない可能性があります。  
-  
- 指定したベース アドレスが正しくありません。 Windows 95 および Windows 98 の実行可能ファイル 0x400000 より大きいベース アドレスが必要です。 ベース アドレスの詳細については、次を参照してください。、 [/base](../../build/reference/base-base-address.md)リンカー オプション。
+
+/基本値"number"は Windows 95 および Windows 98; 無効です。イメージは動作しない可能性があります。
+
+指定したベース アドレスが無効です。 Windows 95 および Windows 98 の実行可能ファイル 0x400000 より大きいベース アドレスが必要です。 ベース アドレスの詳細については、次を参照してください。、 [/base](../../build/reference/base-base-address.md)リンカー オプション。

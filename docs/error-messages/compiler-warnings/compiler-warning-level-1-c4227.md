@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4227 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4227 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f3c0cced0e27d3f981c30251d4b9e1d78169559
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fda3a31b228f16b27f4bdefd3131a0ddcb90f5b5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273590"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060858"
 ---
 # <a name="compiler-warning-level-1-c4227"></a>コンパイラの警告 (レベル 1) C4227
-旧形式の使用: 参照の修飾子は無視されます  
-  
- ような修飾子を使って`const`または`volatile`C++ 参照では、旧式の手段です。  
-  
-## <a name="example"></a>例  
-  
-```  
-// C4227.cpp  
-// compile with: /W1 /c  
-int j = 0;  
-int &const i = j;   // C4227  
+
+旧形式に使用されています参照の修飾子は無視されます。
+
+などの修飾子を使用して`const`または`volatile`C++ 参照では、旧式の手段です。
+
+## <a name="example"></a>例
+
+```
+// C4227.cpp
+// compile with: /W1 /c
+int j = 0;
+int &const i = j;   // C4227
 ```

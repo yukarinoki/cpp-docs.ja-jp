@@ -163,12 +163,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72b27036ffe84ff915bfcda0205469ef79e00255
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 46e3926f31ec7d12da539d868cacb37e18134e96
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757089"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109691"
 ---
 # <a name="cwindow-class"></a>CWindow クラス
 
@@ -410,7 +410,7 @@ void Attach(HWND hWndNew) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*hWndNew*  
+*hWndNew*<br/>
 [in]ウィンドウのハンドル。
 
 ### <a name="example"></a>例
@@ -459,7 +459,7 @@ BOOL CenterWindow(HWND hWndCenter = NULL) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*hWndCenter*  
+*hWndCenter*<br/>
 [in]対象となると、中央のウィンドウのハンドル。 このパラメーターが NULL (既定値) の場合、メソッドは設定*hWndCenter*を子ウィンドウの場合、ウィンドウの親ウィンドウにします。 それ以外の場合、そのセット*hWndCenter*ウィンドウのオーナー ウィンドウにします。
 
 ### <a name="return-value"></a>戻り値
@@ -566,28 +566,28 @@ HWND Create(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpstrWndClass*  
+*lpstrWndClass*<br/>
 [in]ウィンドウのクラスへのポインター。
 
-*hWndParent*  
+*hWndParent*<br/>
 [in]親またはオーナー ウィンドウのハンドル。
 
-*rect*  
+*rect*<br/>
 [in]型の変数[_U_RECT](../../atl/reference/u-rect-class.md)ウィンドウの位置を指定します。 既定値は、NULL です。 このパラメーターが null の場合の値の場合`CWindow::rcDefault`使用されます。
 
-*szWindowName*  
+*szWindowName*<br/>
 [in]ウィンドウの名前を指定します。 既定値は、NULL です。
 
-*dwStyle*  
+*dwStyle*<br/>
 [in]ウィンドウのスタイル。 既定値が 0 を指定はスタイルれないことを意味します。 使用可能な値の一覧は、次を参照してください。 [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows SDK に含まれています。
 
-*dwExStyle*  
+*dwExStyle*<br/>
 [in]拡張ウィンドウ スタイル。 既定値が 0 を指定は、拡張スタイルれないことを意味します。 使用可能な値の一覧は、次を参照してください。 [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK に含まれています。
 
-*MenuOrID*  
+*MenuOrID*<br/>
 [in]型の変数[_U_MENUorID](../../atl/reference/u-menuorid-class.md)メニューまたはウィンドウの識別子を識別するハンドルを指定します。 既定値は、0 u です。
 
-*lpCreateParam*  
+*lpCreateParam*<br/>
 含まれているウィンドウの作成データへのポインターを[CREATESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632603)構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -652,7 +652,7 @@ CWindow(HWND hWnd = NULL) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*hWnd*  
+*hWnd*<br/>
 [in]ウィンドウのハンドル。
 
 ### <a name="remarks"></a>Remarks
@@ -911,7 +911,7 @@ HWND GetDescendantWindow(int nID) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nID*  
+*nID*<br/>
 [in]取得する子孫ウィンドウの識別子。
 
 ### <a name="return-value"></a>戻り値
@@ -935,13 +935,13 @@ HRESULT GetDlgControl(
 
 ### <a name="parameters"></a>パラメーター
 
-*nID*  
+*nID*<br/>
 [in]取得するコントロールのリソース ID。
 
-*iid*  
+*iid*<br/>
 [in]コントロールから取得するには、インターフェイスの ID。
 
-*ppCtrl*  
+*ppCtrl*<br/>
 [out]インターフェイスへのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -977,13 +977,13 @@ HRESULT GetDlgHost(
 
 ### <a name="parameters"></a>パラメーター
 
-*nID*  
+*nID*<br/>
 [in]取得するコントロールのリソース ID。
 
-*iid*  
+*iid*<br/>
 [in]コントロールから取得するには、インターフェイスの ID。
 
-*ppHost*  
+*ppHost*<br/>
 [out]インターフェイスへのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -1098,7 +1098,7 @@ HICON GetIcon(BOOL bBigIcon = TRUE) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bBigIcon*  
+*bBigIcon*<br/>
 [in]TRUE の場合 (既定値)、メソッドでは、大きいアイコンを返します。 それ以外の場合、小さいアイコンを返します。
 
 ### <a name="return-value"></a>戻り値
@@ -1448,16 +1448,16 @@ int GetWindowText(CSimpleString& strText) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszStringBuf*  
+*lpszStringBuf*<br/>
 ウィンドウのテキストの書き込み先のバッファー。
 
-*nMaxCount*  
+*nMaxCount*<br/>
 バッファーのサイズ (文字単位)。書き込むことができる最大文字数でもあります。
 
-*bstrText*  
+*bstrText*<br/>
 ウィンドウのテキストを格納するための BSTR。
 
-*strText*  
+*strText*<br/>
 ウィンドウのテキストを保存する `CString`。
 
 ### <a name="return-value"></a>戻り値
@@ -1761,7 +1761,7 @@ BOOL LockWindowUpdate(BOOL bLock = TRUE) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*ブロック*  
+*ブロック*<br/>
 [in]場合は TRUE (既定値)、ウィンドウがロックされます。 それ以外の場合、これはロック解除されます。
 
 ### <a name="return-value"></a>戻り値
@@ -1833,13 +1833,13 @@ BOOL ModifyStyle(
 
 ### <a name="parameters"></a>パラメーター
 
-*dwRemove*  
+*dwRemove*<br/>
 [in]スタイルの変更中に削除するウィンドウ スタイルを指定します。
 
-*dwAdd*  
+*dwAdd*<br/>
 [in]スタイルの変更中に追加するウィンドウ スタイルを指定します。
 
-*nFlags*  
+*nFlags*<br/>
 [in]ウィンドウの位置決めフラグ。 使用可能な値の一覧は、次を参照してください。、 [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) Windows SDK 内の関数。
 
 ### <a name="return-value"></a>戻り値
@@ -1879,13 +1879,13 @@ BOOL ModifyStyleEx(
 
 ### <a name="parameters"></a>パラメーター
 
-*dwRemove*  
+*dwRemove*<br/>
 [in]スタイルの変更中に削除する拡張スタイルを指定します。
 
-*dwAdd*  
+*dwAdd*<br/>
 [in]スタイルの変更中に追加する拡張スタイルを指定します。
 
-*nFlags*  
+*nFlags*<br/>
 [in]ウィンドウの位置決めフラグ。 使用可能な値の一覧は、次を参照してください。、 [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) Windows SDK 内の関数。
 
 ### <a name="return-value"></a>戻り値
@@ -1963,7 +1963,7 @@ BOOL OpenClipboard() throw();
 
 変換を`CWindow`を HWND にオブジェクト。
 
-```  
+```
 operator HWND() const throw();
 ```
 
@@ -2018,10 +2018,10 @@ void Print(HDC hDC, DWORD dwFlags) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*hDC*  
+*hDC*<br/>
 [in]デバイス コンテキストへのハンドル。
 
-*dwFlags*  
+*dwFlags*<br/>
 [in]描画のオプションを指定します。 次のフラグの 1 つ以上を組み合わせることができます。
 
 - 表示されている場合にのみ、PRF_CHECKVISIBLE は、ウィンドウを描画します。
@@ -2046,10 +2046,10 @@ void PrintClient(HDC hDC, DWORD dwFlags) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*hDC*  
+*hDC*<br/>
 [in]デバイス コンテキストへのハンドル。
 
-*dwFlags*  
+*dwFlags*<br/>
 [in]描画のオプションを指定します。 次のフラグの 1 つ以上を組み合わせることができます。
 
 - 表示されている場合にのみ、PRF_CHECKVISIBLE は、ウィンドウを描画します。
@@ -2122,13 +2122,13 @@ BOOL ResizeClient(
 
 ### <a name="parameters"></a>パラメーター
 
-*nWidth*  
+*nWidth*<br/>
 ピクセル単位で、ウィンドウの新しい幅。
 
-*パラメーター nHeight*  
+*パラメーター nHeight*<br/>
 ピクセル単位で、ウィンドウの新しい高さ。
 
-*bRedraw*  
+*bRedraw*<br/>
 変更を再描画するかどうかを示すフラグ。 既定値は、FALSE、ウィンドウに変更が再描画しないを示すです。
 
 ##  <a name="screentoclient"></a>  CWindow::ScreenToClient
@@ -2236,16 +2236,16 @@ void SendMessageToDescendants(
 
 ### <a name="parameters"></a>パラメーター
 
-*message*  
+*message*<br/>
 [in]送信されるメッセージ。
 
-*wParam*  
+*wParam*<br/>
 [in]追加のメッセージに固有の情報。
 
-*lParam*  
+*lParam*<br/>
 [in]追加のメッセージに固有の情報。
 
-*パラメーター bDeep*  
+*パラメーター bDeep*<br/>
 [in]TRUE の場合 (既定値) の場合は、メッセージは、すべての子孫ウィンドウに送信されますそれ以外の場合、直接の子ウィンドウのみに送信されます。
 
 ### <a name="remarks"></a>Remarks
@@ -2319,7 +2319,7 @@ int SetDlgCtrlID(int nID) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nID*  
+*nID*<br/>
 [in]ウィンドウの識別子に設定する新しい値。
 
 ### <a name="return-value"></a>戻り値
@@ -2379,10 +2379,10 @@ void SetFont(HFONT hFont, BOOL bRedraw = TRUE) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*hFont*  
+*hFont*<br/>
 [in]新しいフォントへのハンドル。
 
-*bRedraw*  
+*bRedraw*<br/>
 [in]場合は TRUE (既定値)、ウィンドウが再描画します。 それ以外の場合は。
 
 ##  <a name="sethotkey"></a>  CWindow::SetHotKey
@@ -2395,10 +2395,10 @@ int SetHotKey(WORD wVirtualKeyCode, WORD wModifiers) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*wVirtualKeyCode*  
+*wVirtualKeyCode*<br/>
 [in]ホット キーの仮想キー コード。 標準の仮想キー コードの一覧は、Winuser.h を参照してください。
 
-*と*  
+*と*<br/>
 [in]ホット キーの修飾子。 使用可能な値の一覧は、Windows SDK の WM_SETHOTKEY を参照してください。
 
 ### <a name="return-value"></a>戻り値
@@ -2415,10 +2415,10 @@ HICON SetIcon(HICON hIcon, BOOL bBigIcon = TRUE) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*hIcon*  
+*hIcon*<br/>
 [in]新しいアイコンのハンドルです。
 
-*bBigIcon*  
+*bBigIcon*<br/>
 [in]場合は TRUE (既定値)、メソッドは、大きいアイコンを設定します。 それ以外の場合、小さいアイコンを設定します。
 
 ### <a name="return-value"></a>戻り値
@@ -2467,7 +2467,7 @@ void SetRedraw(BOOL bRedraw = TRUE) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*bRedraw*  
+*bRedraw*<br/>
 [in]再描画フラグの状態を指定します。 場合は TRUE (既定値)、再描画フラグが設定されています。FALSE の場合、フラグがクリアされます。
 
 ### <a name="remarks"></a>Remarks

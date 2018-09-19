@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45e4b8fe74355d99258677fd4746ad2461f508d3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 05fcef5ee1141de8261bc4ecc813cd573fb8f901
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757804"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099506"
 ---
 # <a name="ccomclassfactory2-class"></a>CComClassFactory2 クラス
 
@@ -36,7 +36,7 @@ ms.locfileid: "43757804"
 ## <a name="syntax"></a>構文
 
 ```
-template <class license>  
+template <class license>
 class CComClassFactory2 : public IClassFactory2,
     public CComObjectRootEx<CComGlobalsThreadModel>,
     public license
@@ -44,7 +44,7 @@ class CComClassFactory2 : public IClassFactory2,
 
 #### <a name="parameters"></a>パラメーター
 
-*ライセンス*  
+*ライセンス*<br/>
 次の静的関数を実装するクラス。
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`
@@ -105,13 +105,13 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 
 ### <a name="parameters"></a>パラメーター
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 [in]かどうか、オブジェクトがの作成、集計の一部として、 *pUnkOuter*不明な外部にある必要があります。 それ以外の場合、 *pUnkOuter* NULL にする必要があります。
 
-*riid*  
+*riid*<br/>
 [in]要求されたインターフェイスの IID。 場合*pUnkOuter* NULL 以外の場合は、 *riid*あります`IID_IUnknown`します。
 
-*ppvObj*  
+*ppvObj*<br/>
 [out]によって識別されるインターフェイス ポインターへのポインター *riid*します。 オブジェクトは、このインターフェイスをサポートしていない場合*ppvObj* NULL に設定されます。
 
 ### <a name="return-value"></a>戻り値
@@ -138,19 +138,19 @@ STDMETHOD(CreateInstanceLic)(
 
 ### <a name="parameters"></a>パラメーター
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 [in]かどうか、オブジェクトがの作成、集計の一部として、 *pUnkOuter*不明な外部にある必要があります。 それ以外の場合、 *pUnkOuter* NULL にする必要があります。
 
-*pUnkReserved*  
+*pUnkReserved*<br/>
 [in]使用されません。 NULL にする必要があります。
 
-*riid*  
+*riid*<br/>
 [in]要求されたインターフェイスの IID。 場合*pUnkOuter* NULL 以外の場合は、 *riid*あります`IID_IUnknown`します。
 
-*bstrKey*  
+*bstrKey*<br/>
 [in]ランタイム ライセンス キーが以前の呼び出しから取得した`RequestLicKey`します。 オブジェクトを作成するには、このキーが必要です。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]指定されたインターフェイス ポインターへのポインター *riid*します。 オブジェクトは、このインターフェイスをサポートしていない場合*ppvObject* NULL に設定されます。
 
 ### <a name="return-value"></a>戻り値
@@ -171,7 +171,7 @@ STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
 
 ### <a name="parameters"></a>パラメーター
 
-*pLicInfo*  
+*pLicInfo*<br/>
 [out]ポインター、`LICINFO`構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -192,7 +192,7 @@ STDMETHOD(LockServer)(BOOL fLock);
 
 ### <a name="parameters"></a>パラメーター
 
-*群れ*  
+*群れ*<br/>
 [in]TRUE の場合、ロック数がインクリメントされます。それ以外の場合、ロック数は減少します。
 
 ### <a name="return-value"></a>戻り値
@@ -215,10 +215,10 @@ STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
 
 ### <a name="parameters"></a>パラメーター
 
-*dwReserved*  
+*dwReserved*<br/>
 [in]使用されません。 ゼロを指定してください。
 
-*pbstrKey*  
+*pbstrKey*<br/>
 [out]ライセンス キーへのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -233,8 +233,8 @@ STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
 
 ## <a name="see-also"></a>関連項目
 
-[CComClassFactoryAutoThread クラス](../../atl/reference/ccomclassfactoryautothread-class.md)   
-[CComClassFactorySingleton クラス](../../atl/reference/ccomclassfactorysingleton-class.md)   
-[CComObjectRootEx クラス](../../atl/reference/ccomobjectrootex-class.md)   
-[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
+[CComClassFactoryAutoThread クラス](../../atl/reference/ccomclassfactoryautothread-class.md)<br/>
+[CComClassFactorySingleton クラス](../../atl/reference/ccomclassfactorysingleton-class.md)<br/>
+[CComObjectRootEx クラス](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

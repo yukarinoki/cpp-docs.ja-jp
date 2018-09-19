@@ -1,5 +1,5 @@
 ---
-title: プロバイダー ウィザードで生成されたファイル |Microsoft ドキュメント
+title: プロバイダー ウィザードで生成されたファイル |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,23 +15,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ac23f06bf1ae697ecd627d493aa5902219488138
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 26e20e0417e2253158930a8d3d055171fe767001
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106009"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108405"
 ---
 # <a name="provider-wizard-generated-files"></a>プロバイダー ウィザードで生成されたファイル
-ATL OLE DB プロバイダー ウィザードでは、次のファイルを生成します。 次のトピックでは、短い名前"MyProvider"を使用するが、正確なファイル名は、プロバイダーを作成するときに対して行った選択によって異なります。  
+
+ATL OLE DB プロバイダー ウィザードでは、次のファイルを生成します。 次のトピックを使用して、短い名前"MyProvider"が、正確なファイル名は、プロバイダーを作成するときに対して行った選択によって異なります。  
   
 |ファイル名|説明|  
 |---------------|-----------------|  
-|MyProviderRS.cpp|コマンドのヘルパーを含む`Execute`メソッドとプロバイダー 列のマップ。|  
-|MyProviderDS.h|データ ソース オブジェクトを実装します。 このヘッダー ファイルには、データ ソースのプロパティのプロパティ マップが含まれています。|  
-|MyProviderRS.h|コマンドや行セット オブジェクトを実装します。 このヘッダー ファイルには、行セットとコマンドのプロパティのプロパティ マップが含まれています。|  
-|MyProviderSess.h|セッション オブジェクトを実装します。 このヘッダー ファイルには、セッションのプロパティのプロパティ マップが含まれています。|  
-|MyProvider.rgs|OLE DB プロバイダー ウィザードによって生成された登録済みのオブジェクトが含まれています。|  
+|MyProviderRS.cpp|コマンドのヘルパーを含む`Execute`メソッドとプロバイダーの列のマップ。|  
+|MyProviderDS.h|データ ソース オブジェクトを実装します。 このヘッダー ファイルには、データ ソースのプロパティのプロパティのマップが含まれています。|  
+|MyProviderRS.h|コマンドや行セット オブジェクトを実装します。 このヘッダー ファイルには、行セットとコマンドのプロパティのプロパティのマップが含まれています。|  
+|MyProviderSess.h|セッション オブジェクトを実装します。 このヘッダー ファイルには、セッションのプロパティのプロパティのマップが含まれています。|  
+|MyProvider.rgs|OLE DB プロバイダー ウィザードで生成された登録済みのオブジェクトが含まれています。|  
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB プロバイダーの作成](../../data/oledb/creating-an-ole-db-provider.md)
+
+[OLE DB プロバイダーの作成](../../data/oledb/creating-an-ole-db-provider.md)

@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3852 |Microsoft ドキュメント
+title: コンパイラ エラー C3852 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,48 +16,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 439e6518c1e1f94918671f2e710ccf1a86621f16
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 63bbc18adbe9efb4236763efad9d943809db0547
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272267"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039600"
 ---
 # <a name="compiler-error-c3852"></a>コンパイラ エラー C3852
-'member' は型 'type' を持つ: 集約の初期化では、このメンバーは初期化できませんでした。  
-  
- 集約の初期化で、既定の初期化を受け取ることができないデータ メンバーに集約の初期化の一部として、既定の初期化を代入しようとしました。  
-  
- 次の例では、C3852 を生成します。  
-  
-```  
-// C3852.cpp  
-struct S  
-{  
-   short s;  
-};  
-  
-struct S1  
-{  
-   int i;  
-   const S s;  
-};  
-  
-struct S2  
-{  
-   int i;  
-   char & rc;  
-};  
-  
-int main()  
-{  
-   S1 s1 = { 1 };   // C3852 const member   
-   // try the following line instead  
-   // S1 s1 = { 1, 2 };  
-  
-   S2 s2 = { 2 };   // C3852 reference member  
-   // try the following line instead  
-   // char c = 'a';  
-   S2 s2 = { 2, c };  
-}  
+
+'member' は型 'type' を持つ: 集約の初期化では、このメンバーは初期化できませんでした
+
+集約の初期化の一部として、既定の初期化を集約の初期化で、既定の初期化を受け取ることができないデータ メンバーに割り当てるが試行されました。
+
+次の例では、C3852 を生成します。
+
+```
+// C3852.cpp
+struct S
+{
+   short s;
+};
+
+struct S1
+{
+   int i;
+   const S s;
+};
+
+struct S2
+{
+   int i;
+   char & rc;
+};
+
+int main()
+{
+   S1 s1 = { 1 };   // C3852 const member
+   // try the following line instead
+   // S1 s1 = { 1, 2 };
+
+   S2 s2 = { 2 };   // C3852 reference member
+   // try the following line instead
+   // char c = 'a';
+   S2 s2 = { 2, c };
+}
 ```

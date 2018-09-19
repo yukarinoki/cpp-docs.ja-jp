@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1061b105b7fd1e344223da3850275910c164774b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3b85d157cd6124bb0ef6e6167a415c018e14b046
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761853"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040441"
 ---
 # <a name="object-map-macros"></a>オブジェクト マップに関するマクロ
 
@@ -47,7 +47,7 @@ DECLARE_OBJECT_DESCRIPTION( x )
 
 ### <a name="parameters"></a>パラメーター
 
-*x*  
+*x*<br/>
 [in]クラス オブジェクトの説明です。
 
 ### <a name="remarks"></a>Remarks
@@ -74,10 +74,10 @@ OBJECT_ENTRY_AUTO( clsid, class )
 
 ### <a name="parameters"></a>パラメーター
 
-*clsid*  
+*clsid*<br/>
 [in]という名前の C++ クラスで実装されている COM クラスの CLSID*クラス*します。
 
-*class*  
+*class*<br/>
 [in]によって表される COM クラスを実装する C++ クラスの名前*clsid*します。
 
 ### <a name="remarks"></a>Remarks
@@ -106,10 +106,10 @@ OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO( clsid, class )
 
 ### <a name="parameters"></a>パラメーター
 
-*clsid*  
+*clsid*<br/>
 [in]という名前の C++ クラスで実装されている COM クラスの CLSID*クラス*します。
 
-*class*  
+*class*<br/>
 [in]によって表される COM クラスを実装する C++ クラスの名前*clsid*します。
 
 ### <a name="remarks"></a>Remarks

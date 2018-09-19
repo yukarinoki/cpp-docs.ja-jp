@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2695 |Microsoft ドキュメント
+title: コンパイラ エラー C2695 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67dc97688dddde37323f25b96bd8bbc596660e2f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a618c02fcf3a8927d8090b1ad51ed16d9ac28542
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231218"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056054"
 ---
 # <a name="compiler-error-c2695"></a>コンパイラ エラー C2695
-'function1': 仮想関数をオーバーライドする唯一の相違点から 'function2' 呼び出し規約  
-  
- 派生クラスで関数のシグネチャは、基本クラスで関数をオーバーライドし、呼び出し規則を変更できません。  
-  
- 次の例では、C2695 が生成されます。  
-  
-```  
-// C2695.cpp  
-class C {  
-   virtual void __fastcall func();  
-};  
-  
-class D : public C {  
-   virtual void __clrcall func();   // C2695  
-};  
+
+'function1': 'function2' 呼び出し規約のみが異なる仮想関数のオーバーライド
+
+派生クラスでの関数のシグネチャは、基本クラスの関数をオーバーライドし、呼び出し規則を変更ことはできません。
+
+次の例では、C2695 が生成されます。
+
+```
+// C2695.cpp
+class C {
+   virtual void __fastcall func();
+};
+
+class D : public C {
+   virtual void __clrcall func();   // C2695
+};
 ```

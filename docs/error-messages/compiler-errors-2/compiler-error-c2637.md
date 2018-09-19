@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2637 |Microsoft ドキュメント
+title: コンパイラ エラー C2637 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4cc17927f3d0c161192ece8509599b48e4a5d16
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6242183e1510565ece7d75085657764b1ddc4081
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231549"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101478"
 ---
 # <a name="compiler-error-c2637"></a>コンパイラ エラー C2637
-'identifier': データ メンバーへのポインターを変更することはできません  
-  
- データ メンバーへのポインターは、呼び出し規約にはできません。 を解決するのには、呼び出し規則を削除するか、メンバー関数へのポインターを宣言します。  
-  
- 次の例では、C2637 が生成されます。  
-  
-```  
-// C2637.cpp  
-// compile with: /c  
-struct S {};  
-int __stdcall S::*pms1;   // C2637  
-  
-// OK  
-int S::*pms2;  
-int (__stdcall S::*pms3)(...);  
+
+'identifier': データ メンバーへのポインターを変更することはできません
+
+データ メンバーへのポインターは、呼び出し規約を持つことはできません。 を解決するには、呼び出し規則を削除するかのメンバー関数へのポインターを宣言します。
+
+次の例では、C2637 が生成されます。
+
+```
+// C2637.cpp
+// compile with: /c
+struct S {};
+int __stdcall S::*pms1;   // C2637
+
+// OK
+int S::*pms2;
+int (__stdcall S::*pms3)(...);
 ```

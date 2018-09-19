@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4900 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4900 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e58076b070860b31706b4b55a13b881df51db33
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0c27df56ab38224020e9be88787dfaa038ba8f0e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33304750"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103110"
 ---
 # <a name="compiler-warning-level-1-c4900"></a>コンパイラの警告 (レベル 1) C4900
-'tool1' バージョン 'version1' と 'tool2' バージョン 'version2' の間の中間言語が一致しません  
-  
- *tool1* と *tool2* で使用される中間言語は一致しませんでした。 各ツールの最新バージョンがインストールされていることを確認してください。
+
+'tool1' バージョン 'version1' と 'tool2' バージョン 'version2' の間の中間言語が一致しません
+
+*tool1* と *tool2* で使用される中間言語は一致しませんでした。 各ツールの最新バージョンがインストールされていることを確認してください。

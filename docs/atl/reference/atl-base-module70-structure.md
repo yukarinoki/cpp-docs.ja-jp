@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb7218d7fc8886cffdcce13f09a682fdc635f84f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a8ee35df4b6ee792cd91f1b294259544e8944509
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759929"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089048"
 ---
 # <a name="atlbasemodule70-structure"></a>_ATL_BASE_MODULE70 構造体
 
@@ -47,28 +47,28 @@ struct _ATL_BASE_MODULE70 {
 
 ## <a name="members"></a>メンバー
 
-`cbSize`  
+`cbSize`<br/>
 バージョン管理に使用される、構造のサイズ。
 
-`m_hInst`  
+`m_hInst`<br/>
 `hInstance` (Exe または dll) は、このモジュールにします。
 
-`m_hInstResource`  
+`m_hInstResource`<br/>
 既定のインスタンスのリソース ハンドル。
 
-`m_bNT5orWin98`  
+`m_bNT5orWin98`<br/>
 オペレーティング システムのバージョン情報。 ATL で内部的に使用
 
-`dwAtlBuildVer`  
+`dwAtlBuildVer`<br/>
 ATL のバージョンが格納されます。 現在は 0x0700 です。
 
-`pguidVer`  
+`pguidVer`<br/>
 ATL の内部の GUID です。
 
-`m_csResource`  
+`m_csResource`<br/>
 アクセスを同期するため、`m_rgResourceInstance`配列。 ATL で内部的に使用
 
-`m_rgResourceInstance`  
+`m_rgResourceInstance`<br/>
 ATL が対応であるすべてのリソース インスタンス内のリソースの検索に使用する配列。 ATL で内部的に使用
 
 ## <a name="remarks"></a>Remarks

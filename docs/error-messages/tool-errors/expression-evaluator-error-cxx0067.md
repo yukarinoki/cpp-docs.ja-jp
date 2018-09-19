@@ -1,5 +1,5 @@
 ---
-title: 式エバリュエーター エラー CXX0067 |Microsoft ドキュメント
+title: 式エバリュエーター エラー CXX0067 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c257c83330c8ece085d49b1680cc554c6843613e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a49b2ba4372cc8ffe10ef27bd4a79dc31d237aa8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301386"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105025"
 ---
 # <a name="expression-evaluator-error-cxx0067"></a>式エバリュエーター エラー CXX0067
-関数の評価はサポートされていません  
-  
- 式には、関数呼び出しが含まれています。 式エバリュエーターは、関数呼び出しをサポートしていません。  
-  
- このエラーは、can0067 と同じものと同じです。
+
+関数の評価はサポートされていません
+
+式には、関数呼び出しが含まれています。 式エバリュエーターは、関数呼び出しをサポートしていません。
+
+このエラーは、can0067 と同じものと同じです。

@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3846 |Microsoft ドキュメント
+title: コンパイラ エラー C3846 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97d5650d1743ba379ce065d4051bfed807a1df71
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7f8b44661534dca1beb39c0407f882d41f1f503c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268027"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055131"
 ---
 # <a name="compiler-error-c3846"></a>コンパイラ エラー C3846
-'symbol': 'assembly2' からシンボルをインポートできません: 'symbol' が既に別のアセンブリ 'assembly1' からインポートされると  
-  
- 以前に参照されたアセンブリからインポートされたために、参照されたアセンブリからシンボルをインポートできませんでした。  
-  
+
+'symbol': 'assembly2' からシンボルをインポートできません: 'symbol' は、別のアセンブリ 'assembly1' から既にインポートされていますが、
+
+以前に参照されたアセンブリからインポートされたために、参照されたアセンブリからシンボルをインポートできませんでした。
+
 ## <a name="example"></a>例
-次の例では、C3846 が生成されます。  
-  
-```  
-// C3846a.cpp  
-// compile with: /LD /clr  
-public ref struct G  
-{  
-};  
-```  
-  
- これをコンパイルします。  
-  
-```  
-// C3846b.cpp  
-// compile with: /clr  
-#using "c3846a.dll"  
-#using "c3846a.obj"   // C3846  
-  
-int main()  
-{  
-}  
-```  
+
+次の例では、C3846 が生成されます。
+
+```
+// C3846a.cpp
+// compile with: /LD /clr
+public ref struct G
+{
+};
+```
+
+これをコンパイルします。
+
+```
+// C3846b.cpp
+// compile with: /clr
+#using "c3846a.dll"
+#using "c3846a.obj"   // C3846
+
+int main()
+{
+}
+```

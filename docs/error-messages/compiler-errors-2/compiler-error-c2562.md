@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2562 |Microsoft ドキュメント
+title: コンパイラ エラー C2562 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab3fd1a5eae008785a688bcbade674425fc8b2ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69151b71de84c678c09ecafe099344a08d28a8a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231609"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114229"
 ---
 # <a name="compiler-error-c2562"></a>コンパイラ エラー C2562
-'identifier': 'void' 関数の値を返す  
-  
- 関数として宣言されて`void`値が返されます。  
-  
- このエラーは、不正な関数プロトタイプで発生することができます。  
-  
- 関数の宣言で戻り値の型を指定する場合、このエラーを解決する可能性があります。  
-  
- 次の例では、C2562 が生成されます。  
-  
-```  
-// C2562.cpp  
-// compile with: /c  
-void testfunc() {  
-   int i;  
-   return i;   // C2562 delete the return to resolve  
-}  
+
+'identifier': 'void' 関数の値を返す
+
+関数として`void`が値を返します。
+
+このエラーは、間違った関数プロトタイプで発生することができます。
+
+このエラーは、関数の宣言で戻り値の型を指定する場合に解決される可能性があります。
+
+次の例では、C2562 が生成されます。
+
+```
+// C2562.cpp
+// compile with: /c
+void testfunc() {
+   int i;
+   return i;   // C2562 delete the return to resolve
+}
 ```

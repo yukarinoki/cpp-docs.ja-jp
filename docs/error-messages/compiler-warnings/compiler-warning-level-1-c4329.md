@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 1) C4329 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4329 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7eca757f361acaa0aeaf90332d33400f5a0ba6d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f4d250bbd21e55a64009522e5f277493730f7d1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33278006"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084901"
 ---
 # <a name="compiler-warning-level-1-c4329"></a>コンパイラの警告 (レベル 1) C4329
-__declspec(align()) は enum で無視されます。  
-  
- 使用、[整列](../../cpp/align-cpp.md)のキーワード、 [_ _declspec](../../cpp/declspec.md)で修飾子は使用できません、`enum`です。 次の例では、C4329 が生成されます。  
-  
-```  
-// C4329.cpp  
-// compile with: /W1 /LD  
-enum __declspec(align(256)) TestEnum {   // C4329  
-   TESTVAL1,  
-   TESTVAL2,  
-   TESTVAL3  
-};  
-__declspec(align(256)) enum TestEnum1;  
+
+__declspec(align()) は列挙型で無視されます。
+
+使用、 [align](../../cpp/align-cpp.md)のキーワード、 [_ _declspec](../../cpp/declspec.md)の修飾子は許可されていません、`enum`します。 次の例では、C4329 が生成されます。
+
+```
+// C4329.cpp
+// compile with: /W1 /LD
+enum __declspec(align(256)) TestEnum {   // C4329
+   TESTVAL1,
+   TESTVAL2,
+   TESTVAL3
+};
+__declspec(align(256)) enum TestEnum1;
 ```

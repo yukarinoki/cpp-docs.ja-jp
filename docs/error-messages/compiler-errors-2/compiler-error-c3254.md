@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3254 |Microsoft ドキュメント
+title: コンパイラ エラー C3254 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e58976b1562e6cca9aa343401b5d2c3f856de1a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e9e42071c55ef3c7a4fc950b1b25656cf68d4024
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255609"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081183"
 ---
 # <a name="compiler-error-c3254"></a>コンパイラ エラー C3254
-'明示的なオーバーライド': クラスは、明示的なオーバーライド 'override' が含まれていますが、関数の宣言を格納しているインターフェイスから派生していません  
-  
- ときに、[を明示的にオーバーライド](../../cpp/explicit-overrides-cpp.md)メソッド オーバーライドを含むクラス必要があります、直接または間接的に派生、オーバーライドする関数を含む型からです。  
-  
- 次の例では、C3254 が生成されます。  
-  
-```  
-// C3254.cpp  
-__interface I  
-{  
-   void f();  
-};  
-  
-__interface I1 : I  
-{  
-};  
-  
-struct A /* : I1 */  
-{  
-   void I1::f()  
-   {   // C3254, uncomment : I1 to resolve this C3254  
-   }  
-};  
-  
-int main()  
-{  
-}  
+
+'明示的なオーバーライド': クラスは、明示的なオーバーライド 'override' が含まれていますが、関数宣言を含むインターフェイスから派生していません
+
+ときにする[を明示的にオーバーライド](../../cpp/explicit-overrides-cpp.md)メソッド、クラス、オーバーライドを含む必要があります、直接または間接的に派生、オーバーライドする関数を含む型から。
+
+次の例では、C3254 が生成されます。
+
+```
+// C3254.cpp
+__interface I
+{
+   void f();
+};
+
+__interface I1 : I
+{
+};
+
+struct A /* : I1 */
+{
+   void I1::f()
+   {   // C3254, uncomment : I1 to resolve this C3254
+   }
+};
+
+int main()
+{
+}
 ```

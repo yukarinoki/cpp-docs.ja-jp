@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c1e04bd31ca1942e5e5fa054cb4991233e2f61c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b772a548054cd9d829356436afe53748c215c193
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762188"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078921"
 ---
 # <a name="iatlmemmgr-class"></a>IAtlMemMgr クラス
 
@@ -76,7 +76,7 @@ void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nBytes*  
+*nBytes*<br/>
 新しいメモリ ブロック内の要求されたバイト数。
 
 ### <a name="return-value"></a>戻り値
@@ -101,7 +101,7 @@ void Free(void* p) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*p*  
+*p*<br/>
 このメモリ マネージャーによって以前に割り当てられたメモリへのポインター。
 
 ### <a name="remarks"></a>Remarks
@@ -122,7 +122,7 @@ size_t GetSize(void* p) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*p*  
+*p*<br/>
 このメモリ マネージャーによって以前に割り当てられたメモリへのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -143,10 +143,10 @@ void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*p*  
+*p*<br/>
 このメモリ マネージャーによって以前に割り当てられたメモリへのポインター。
 
-*nBytes*  
+*nBytes*<br/>
 新しいメモリ ブロック内の要求されたバイト数。
 
 ### <a name="return-value"></a>戻り値
@@ -173,7 +173,7 @@ STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
 
 ### <a name="parameters"></a>パラメーター
 
-*pbAllowContextMenu*  
+*pbAllowContextMenu*<br/>
 [out]このプロパティの現在の値を受け取る変数のアドレス。
 
 ### <a name="return-value"></a>戻り値
@@ -194,7 +194,7 @@ STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
 
 ### <a name="parameters"></a>パラメーター
 
-*pbAllowShowUI*  
+*pbAllowShowUI*<br/>
 [out]このプロパティの現在の値を受け取る変数のアドレス。
 
 ### <a name="return-value"></a>戻り値
@@ -215,7 +215,7 @@ STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
 
 ### <a name="parameters"></a>パラメーター
 
-*pbAllowWindowless*  
+*pbAllowWindowless*<br/>
 [out]このプロパティの現在の値を受け取る変数のアドレス。
 
 ### <a name="return-value"></a>戻り値
@@ -236,7 +236,7 @@ STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
 
 ### <a name="parameters"></a>パラメーター
 
-*pclrBackground*  
+*pclrBackground*<br/>
 [out]このプロパティの現在の値を受け取る変数のアドレス。
 
 ### <a name="return-value"></a>戻り値
@@ -257,7 +257,7 @@ STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
 
 ### <a name="parameters"></a>パラメーター
 
-*pbDisplayAsDefault*  
+*pbDisplayAsDefault*<br/>
 [out]このプロパティの現在の値を受け取る変数のアドレス。
 
 ### <a name="return-value"></a>戻り値
@@ -278,7 +278,7 @@ STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
 
 ### <a name="parameters"></a>パラメーター
 
-*pdwDocHostDoubleClickFlags*  
+*pdwDocHostDoubleClickFlags*<br/>
 [out]このプロパティの現在の値を受け取る変数のアドレス。
 
 ### <a name="return-value"></a>戻り値
@@ -299,7 +299,7 @@ STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
 
 ### <a name="parameters"></a>パラメーター
 
-*pdwDocHostFlags*  
+*pdwDocHostFlags*<br/>
 [out]このプロパティの現在の値を受け取る変数のアドレス。
 
 ### <a name="return-value"></a>戻り値
@@ -320,7 +320,7 @@ STDMETHOD(get_Font)(IFontDisp** pFont);
 
 ### <a name="parameters"></a>パラメーター
 
-*pFont*  
+*pFont*<br/>
 [out]アドレス、`IFontDisp`インターフェイス ポインターがこのプロパティの現在の値を受信するために使用します。
 
 ### <a name="return-value"></a>戻り値
@@ -341,7 +341,7 @@ STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
 
 ### <a name="parameters"></a>パラメーター
 
-*pclrForeground*  
+*pclrForeground*<br/>
 [out]このプロパティの現在の値を受け取る変数のアドレス。
 
 ### <a name="return-value"></a>戻り値
@@ -362,7 +362,7 @@ STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
 
 ### <a name="parameters"></a>パラメーター
 
-*plcidLocaleID*  
+*plcidLocaleID*<br/>
 [out]このプロパティの現在の値を受け取る変数のアドレス。
 
 ### <a name="return-value"></a>戻り値
@@ -385,7 +385,7 @@ STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
 
 ### <a name="parameters"></a>パラメーター
 
-*pbMessageReflect*  
+*pbMessageReflect*<br/>
 [out]このプロパティの現在の値を受け取る変数のアドレス。
 
 ### <a name="return-value"></a>戻り値
@@ -406,7 +406,7 @@ STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
 
 ### <a name="parameters"></a>パラメーター
 
-*pbstrOptionKeyPath*  
+*pbstrOptionKeyPath*<br/>
 [out]このプロパティの現在の値を受け取る変数のアドレス。
 
 ### <a name="return-value"></a>戻り値
@@ -423,7 +423,7 @@ STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
 
 ### <a name="parameters"></a>パラメーター
 
-*pbShowGrabHandles*  
+*pbShowGrabHandles*<br/>
 [out]このプロパティの現在の値を受け取る変数のアドレス。
 
 ### <a name="return-value"></a>戻り値
@@ -444,7 +444,7 @@ STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
 
 ### <a name="parameters"></a>パラメーター
 
-*pbShowHatching*  
+*pbShowHatching*<br/>
 [out]このプロパティの現在の値を受け取る変数のアドレス。
 
 ### <a name="return-value"></a>戻り値
@@ -465,7 +465,7 @@ STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
 
 ### <a name="parameters"></a>パラメーター
 
-*pbUserMode*  
+*pbUserMode*<br/>
 [out]このプロパティの現在の値を受け取る変数のアドレス。
 
 ### <a name="return-value"></a>戻り値
@@ -486,7 +486,7 @@ STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
 
 ### <a name="parameters"></a>パラメーター
 
-*bAllowContextMenu*  
+*bAllowContextMenu*<br/>
 [in]このプロパティの新しい値。
 
 ### <a name="return-value"></a>戻り値
@@ -507,7 +507,7 @@ STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
 
 ### <a name="parameters"></a>パラメーター
 
-*bAllowShowUI*  
+*bAllowShowUI*<br/>
 [in]このプロパティの新しい値。
 
 ### <a name="return-value"></a>戻り値
@@ -528,7 +528,7 @@ STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
 
 ### <a name="parameters"></a>パラメーター
 
-*bAllowWindowless*  
+*bAllowWindowless*<br/>
 [in]このプロパティの新しい値。
 
 ### <a name="return-value"></a>戻り値
@@ -549,7 +549,7 @@ STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
 
 ### <a name="parameters"></a>パラメーター
 
-*clrBackground*  
+*clrBackground*<br/>
 [in]このプロパティの新しい値。
 
 ### <a name="return-value"></a>戻り値
@@ -570,7 +570,7 @@ STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
 
 ### <a name="parameters"></a>パラメーター
 
-*bDisplayAsDefault*  
+*bDisplayAsDefault*<br/>
 [in]このプロパティの新しい値。
 
 ### <a name="return-value"></a>戻り値
@@ -591,7 +591,7 @@ STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
 
 ### <a name="parameters"></a>パラメーター
 
-*dwDocHostDoubleClickFlags*  
+*dwDocHostDoubleClickFlags*<br/>
 [in]このプロパティの新しい値。
 
 ### <a name="return-value"></a>戻り値
@@ -612,7 +612,7 @@ STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
 
 ### <a name="parameters"></a>パラメーター
 
-*dwDocHostFlags*  
+*dwDocHostFlags*<br/>
 [in]このプロパティの新しい値。
 
 ### <a name="return-value"></a>戻り値
@@ -633,7 +633,7 @@ STDMETHOD(put_Font)(IFontDisp* pFont);
 
 ### <a name="parameters"></a>パラメーター
 
-*pFont*  
+*pFont*<br/>
 [in]このプロパティの新しい値。
 
 ### <a name="return-value"></a>戻り値
@@ -654,7 +654,7 @@ STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
 
 ### <a name="parameters"></a>パラメーター
 
-*clrForeground*  
+*clrForeground*<br/>
 [in]このプロパティの新しい値。
 
 ### <a name="return-value"></a>戻り値
@@ -675,7 +675,7 @@ STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
 
 ### <a name="parameters"></a>パラメーター
 
-*lcidLocaleID*  
+*lcidLocaleID*<br/>
 [in]このプロパティの新しい値。
 
 ### <a name="return-value"></a>戻り値
@@ -696,7 +696,7 @@ STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
 
 ### <a name="parameters"></a>パラメーター
 
-*bMessageReflect*  
+*bMessageReflect*<br/>
 [in]このプロパティの新しい値。
 
 ### <a name="return-value"></a>戻り値
@@ -717,7 +717,7 @@ STDMETHOD(put_OptionKeyPath)(BSTR bstrOptionKeyPath);
 
 ### <a name="parameters"></a>パラメーター
 
-*bstrOptionKeyPath*  
+*bstrOptionKeyPath*<br/>
 [in]このプロパティの新しい値。
 
 ### <a name="return-value"></a>戻り値
@@ -734,7 +734,7 @@ STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
 
 ### <a name="parameters"></a>パラメーター
 
-*bUserMode*  
+*bUserMode*<br/>
 [in]このプロパティの新しい値。
 
 ### <a name="return-value"></a>戻り値
@@ -755,7 +755,7 @@ virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
 
 ### <a name="parameters"></a>パラメーター
 
-*pDispatch*  
+*pDispatch*<br/>
 新しいインターフェイスへのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -776,10 +776,10 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 
 ### <a name="parameters"></a>パラメーター
 
-*pUnkControl*  
+*pUnkControl*<br/>
 [in]ポインター、`IUnknown`ホスト オブジェクトにアタッチされるコントロールのインターフェイス。
 
-*hWnd*  
+*hWnd*<br/>
 [in]ホストするために使用するウィンドウへのハンドル。
 
 ### <a name="return-value"></a>戻り値
@@ -799,13 +799,13 @@ STDMETHOD(CreateControl)(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpTricsData*  
+*lpTricsData*<br/>
 [in]作成するコントロールを識別する文字列。 (中かっこを含める必要があります) の CLSID、ProgID、URL、または生の HTML にすることができます (付いて**MSHTML:**)。
 
-*hWnd*  
+*hWnd*<br/>
 [in]ホストするために使用するウィンドウへのハンドル。
 
-*pStream*  
+*pStream*<br/>
 [in]コントロールの初期化データを含むストリームのインターフェイス ポインター。 NULL にすることができます。
 
 ### <a name="return-value"></a>戻り値
@@ -836,22 +836,22 @@ STDMETHOD(CreateControlEx)(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpTricsData*  
+*lpTricsData*<br/>
 [in]作成するコントロールを識別する文字列。 (中かっこを含める必要があります) の CLSID、ProgID、URL、または生の HTML にすることができます (付いて**MSHTML:**)。
 
-*hWnd*  
+*hWnd*<br/>
 [in]ホストするために使用するウィンドウへのハンドル。
 
-*pStream*  
+*pStream*<br/>
 [in]コントロールの初期化データを含むストリームのインターフェイス ポインター。 NULL にすることができます。
 
-*ppUnk*  
+*ppUnk*<br/>
 [out]受信するポインターのアドレス、`IUnknown`作成されたコントロールのインターフェイス。 NULL にすることができます。
 
-*riidAdvise*  
+*riidAdvise*<br/>
 [in]送信のインターフェイスに含まれるオブジェクトのインターフェイスの識別子です。 Iid_ をすることができます。
 
-*punkAdvise*  
+*punkAdvise*<br/>
 [in]ポインター、`IUnknown`で指定された、含まれるオブジェクトの接続ポイントに接続されているシンク オブジェクトのインターフェイス`iidSink`します。
 
 ### <a name="return-value"></a>戻り値
@@ -874,10 +874,10 @@ STDMETHOD(QueryControl)(REFIID riid, void** ppvObject);
 
 ### <a name="parameters"></a>パラメーター
 
-*riid*  
+*riid*<br/>
 [in]要求されているコントロールのインターフェイスの ID。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]作成されたコントロールの指定したインターフェイスを受信するポインターのアドレス。
 
 ### <a name="return-value"></a>戻り値
@@ -894,7 +894,7 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 
 ### <a name="parameters"></a>パラメーター
 
-*pDisp*  
+*pDisp*<br/>
 [in]ポインター、`IDispatch`インターフェイス。
 
 ### <a name="return-value"></a>戻り値
@@ -911,7 +911,7 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 
 ### <a name="parameters"></a>パラメーター
 
-*pDisp*  
+*pDisp*<br/>
 [in]ポインター、`IDocHostUIHandlerDispatch`インターフェイス。
 
 ### <a name="return-value"></a>戻り値
@@ -936,7 +936,7 @@ STDMETHOD(CreateControlLic)(
 
 ### <a name="parameters"></a>パラメーター
 
-*bstrLic*  
+*bstrLic*<br/>
 [in]コントロールのライセンス キーを含む BSTR です。
 
 ### <a name="remarks"></a>Remarks
@@ -966,7 +966,7 @@ STDMETHOD(CreateControlLicEx)(
 
 ### <a name="parameters"></a>パラメーター
 
-*bstrLic*  
+*bstrLic*<br/>
 [in]コントロールのライセンス キーを含む BSTR です。
 
 ### <a name="remarks"></a>Remarks

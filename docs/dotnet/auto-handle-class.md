@@ -1,5 +1,5 @@
 ---
-title: auto_handle クラス |Microsoft ドキュメント
+title: auto_handle クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bd6675f725e2a987a85cc73d6eec92f2b496df09
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0bddacec4e416173fc60ceb1c2c6ee71b3a198e7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103279"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029716"
 ---
 # <a name="autohandle-class"></a>auto_handle クラス
 マネージ型に仮想のハンドルを埋め込むために使用できる自動リソース管理。  
@@ -36,8 +36,8 @@ ref class auto_handle;
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `_element_type`  
- 埋め込まれるマネージ型です。  
+*_element_type*<br/>
+埋め込みのマネージ型。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー ファイル** \<msclr\auto_handle.h >  
@@ -46,5 +46,5 @@ ref class auto_handle;
   
 ## <a name="see-also"></a>関連項目  
  [auto_handle](../dotnet/auto-handle.md)   
- [auto_handle メンバー](../dotnet/auto-handle-members.md)   
+ [auto_handle のメンバー](../dotnet/auto-handle-members.md)   
  [auto_gcroot クラス](../dotnet/auto-gcroot-class.md)

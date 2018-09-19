@@ -1,5 +1,5 @@
 ---
-title: 式エバリュエーター エラー CXX0069 |Microsoft ドキュメント
+title: 式エバリュエーター エラー CXX0069 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14cf468ebd2d8d40f306a2fa80a0331d7667d0d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a3efb6432f536ecb929c8ff8670d31030b569b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299667"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112734"
 ---
 # <a name="expression-evaluator-error-cxx0069"></a>式エバリュエーター エラー CXX0069
-変数には、スタック フレームが必要です。  
-  
- スタック フレームが発生しないために、式エバリュエーターは、変数を評価できません。 インライン関数の一部として宣言された変数が考えられます。
+
+変数には、スタック フレームが必要です。
+
+スタック フレームが発生しないために、式エバリュエーターは、変数を評価できません。 これは、インライン関数の一部として宣言された変数によって発生する可能性があります。

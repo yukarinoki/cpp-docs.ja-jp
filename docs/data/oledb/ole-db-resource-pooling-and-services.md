@@ -20,23 +20,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c2a04d0b990906f9f124edc9dbda71d65127e4ed
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 3cf18d1b06c6a738659bf30bf58fc10c48aa0ce5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338562"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091037"
 ---
 # <a name="ole-db-resource-pooling-and-services"></a>OLE DB リソース プールとサービス
+
 OLE DB のプール、または任意の OLE DB サービスでの作業、プロバイダーは、すべてのオブジェクトの集計をサポートする必要があります。 これは、任意の OLE DB 1.5 または以降のプロバイダーの要件です。 サービスを利用するために重要です。 集約をサポートしないプロバイダーをプールすることはできませんし、その他のサービスは提供されません。  
   
- プール、プロバイダーは、フリー スレッド モデルをサポートする必要があります。 リソース プールの決定に従って、プロバイダーのスレッド モデル、`DBPROP_THREADMODEL`プロパティ。  
+プール、プロバイダーは、フリー スレッド モデルをサポートする必要があります。 リソース プールの決定に従って、プロバイダーのスレッド モデル、`DBPROP_THREADMODEL`プロパティ。  
   
- プロバイダーにデータ ソースは、初期化された状態が変わる可能性があるグローバル接続状態がある場合は、サポートすることが、新しい`DBPROP_RESETDATASOURCE`プロパティ。 このプロパティは、接続が再利用され、プロバイダーに、次に使用する前に状態をクリーンアップする機会を与える前に呼び出されます。 返せる場合は、プロバイダー接続に関連付けられているいくつかの状態をクリーンアップできない、`DBPROPSTATUS_NOTSETTABLE`のプロパティと、接続が再利用できません。  
+プロバイダーにデータ ソースは、初期化された状態が変わる可能性があるグローバル接続状態がある場合は、サポートすることが、新しい`DBPROP_RESETDATASOURCE`プロパティ。 このプロパティは、接続が再利用され、プロバイダーに、次に使用する前に状態をクリーンアップする機会を与える前に呼び出されます。 返せる場合は、プロバイダー接続に関連付けられているいくつかの状態をクリーンアップできない、`DBPROPSTATUS_NOTSETTABLE`のプロパティと、接続が再利用できません。  
   
- プロバイダーをリモート データベースに接続し、接続が失われる可能性がありますをサポートする必要があるかどうかを検出できる、`DBPROP_CONNECTIONSTATUS`プロパティ。 このプロパティは、OLE DB サービスの配信不能の接続を検出し、プールに返されませんかどうかを確認する機能を示します。  
+プロバイダーをリモート データベースに接続し、接続が失われる可能性がありますをサポートする必要があるかどうかを検出できる、`DBPROP_CONNECTIONSTATUS`プロパティ。 このプロパティは、OLE DB サービスの配信不能の接続を検出し、プールに返されませんかどうかを確認する機能を示します。  
   
- 最後に、自動トランザクション参加一般的には機能しませんプールが発生したものと同じレベルで実装されていない場合。 この参加リストを公開することで無効にする自体自動トランザクション参加をサポートするプロバイダーがサポートする必要があります、`DBPROP_INIT_OLEDBSERVICES`プロパティと場合、参加を無効にする、`DBPROPVAL_OS_TXNENLISTMENT`の選択を解除します。  
+最後に、自動トランザクション参加一般的には機能しませんプールが発生したものと同じレベルで実装されていない場合。 この参加リストを公開することで無効にする自体自動トランザクション参加をサポートするプロバイダーがサポートする必要があります、`DBPROP_INIT_OLEDBSERVICES`プロパティと場合、参加を無効にする、`DBPROPVAL_OS_TXNENLISTMENT`の選択を解除します。  
   
 ## <a name="see-also"></a>関連項目  
- [高度なプロバイダー手法](../../data/oledb/advanced-provider-techniques.md)
+
+[高度なプロバイダー手法](../../data/oledb/advanced-provider-techniques.md)

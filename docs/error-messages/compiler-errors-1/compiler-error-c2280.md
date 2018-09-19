@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2280 |Microsoft ドキュメント
+title: コンパイラ エラー C2280 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/25/2017
 ms.technology:
@@ -16,24 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b55e07a7109c090126dfdec61bbc18bdaf5ef710
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b401ba3755113a71dd401efa8da1fe46adfe6a45
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33177646"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108674"
 ---
-# <a name="compiler-error-c2280"></a>コンパイラ エラー c2280 を発行  
-  
-'*宣言*': 削除された関数を参照しようとしています。  
-  
-コンパイラを参照しようとしました、`deleted`関数。 このエラーとして明示的に設定されているメンバー関数への呼び出しによって発生する`= deleted`のソース コードでします。 このエラーは、構造体または自動的に宣言され、としてマークされているクラスの暗黙的な特殊なメンバー関数の呼び出しによっても発生する`deleted`コンパイラによってです。 詳細については、コンパイラが自動的に生成するときの`default`または`deleted`特殊なメンバー関数を参照してください[特殊なメンバー関数](../../cpp/special-member-functions.md)です。  
-  
-## <a name="example-explicitly-deleted-functions"></a>明示的に削除された関数の例。  
+# <a name="compiler-error-c2280"></a>コンパイラ エラー C2280
 
-呼び出しを明示的に`deleted`関数は、このエラーを発生します。 明示的に`deleted`メンバー関数を意味するクラスまたは構造体は意図的にこの問題を解決するため、使用を防ぐために設計されたことを回避するコードを変更する必要があります。  
-  
-```cpp  
+'*宣言*': 削除された関数を参照しようとしています。
+
+コンパイラを参照しようとしました、`deleted`関数。 として明示的にマークされている、メンバー関数への呼び出しによってこのエラーは発生する`= deleted`ソース コードにします。 このエラーは、構造体またはクラスが自動的に宣言され、マークの暗黙的な特殊なメンバー関数の呼び出しによっても発生する`deleted`コンパイラによって。 コンパイラが自動的に生成するときの詳細については`default`または`deleted`特殊なメンバー関数を参照してください[特殊なメンバー関数](../../cpp/special-member-functions.md)します。
+
+## <a name="example-explicitly-deleted-functions"></a>例: 関数を明示的に削除します。
+
+呼び出しを明示的に`deleted`関数にこのエラーが発生します。 明示的に`deleted`メンバー関数を意味するクラスまたは構造体は意図的にこの問題を解決するため、使用を防ぐために設計されています、これを回避するためにコードを変更する必要があります。
+
+```cpp
 // C2280_explicit.cpp
 // compile with: cl /c /W4 C2280_explicit.cpp
 struct A {
@@ -50,13 +50,13 @@ struct B {
 void f() {
     B b;    // calls implicit B::B(void)
 }
-```  
-  
-## <a name="example-uninitialized-data-members"></a>例: 初期化されていないデータ メンバー  
-  
-初期化されていない参照型のデータ メンバーまたは`const`データ メンバーには、暗黙的に宣言するコンパイラ、`deleted`既定のコンス トラクターです。 この問題を解決するには、宣言されている場合、データ メンバーを初期化します。  
-  
-```cpp  
+```
+
+## <a name="example-uninitialized-data-members"></a>例: 初期化されていないデータ メンバー
+
+初期化されていない参照型のデータ メンバーまたは`const`データ メンバーが暗黙的に宣言するコンパイラを`deleted`既定のコンス トラクター。 この問題を解決するには、宣言されている場合、データ メンバーを初期化します。
+
+```cpp
 // C2280_uninit.cpp
 // compile with: cl /c C2280_uninit.cpp
 struct A {
@@ -66,19 +66,19 @@ struct A {
     // To fix, initialize the value in the declaration:
     // const int i = 42;
 } a;    // C2280
-```  
-  
-## <a name="example-reference-and-const-data-members"></a>例: 参照、const データ メンバー  
-  
-A`const`宣言をコンパイラが参照型のデータ メンバーや、`deleted`コピー代入演算子。 初期化されると、これらのメンバーを代入できません、するための単純なコピーまたは移動は機能できません。 この問題を解決するには、エラーが発生する割り当て操作を削除するようなロジックを変更することをお勧めします。  
-  
-```cpp  
+```
+
+## <a name="example-reference-and-const-data-members"></a>例: 参照、const データ メンバー
+
+A`const`を宣言するコンパイラが参照型のデータ メンバーや、`deleted`コピー代入演算子。 初期化されると、単純なコピーまたは移動が動作することはできませんのでこれらのメンバーは、代入できません。 この問題を解決するには、エラーが発生する割り当て操作を削除するユーザー ロジックを変更するをお勧めします。
+
+```cpp
 // C2280_ref.cpp
 // compile with: cl /c C2280_ref.cpp
 extern int k;
 struct A {
     A();
-    int& ri = k; // a const or reference data member causes 
+    int& ri = k; // a const or reference data member causes
     // implicit copy assignment operator to be deleted.
 };
 
@@ -87,92 +87,91 @@ void f() {
     // To fix, consider removing this assignment.
     a2 = a1;    // C2280
 }
-```  
-  
-## <a name="example-movable-deletes-implicit-copy"></a>例: 移動が暗黙的なコピーを削除します。  
-  
-コンパイラが暗黙的にコピー コンス トラクターを宣言し、定義としてクラスが移動コンス トラクターまたはムーブ代入演算子を宣言していますが、コピー コンス トラクターを明示的に宣言されない場合、`deleted`です。 同様に、クラスが移動コンス トラクターまたはムーブ代入演算子を宣言していますが、コピー代入演算子を明示的に宣言されない場合、コンパイラに暗黙的に宣言コピー代入演算子と定義として`deleted`です。 この問題を解決するには、これらのメンバーを明示的に宣言する必要があります。  
- 
-関連してエラー C2280 が表示される、 `unique_ptr`、ほとんどの場合は、コピー コンス トラクターを呼び出すしようとしているため、`deleted`関数。 仕様では、`unique_ptr`コピーすることはできません。 所有権を転送する代わりに、移動コンス トラクターを使用します。  
+```
 
-```cpp  
+## <a name="example-movable-deletes-implicit-copy"></a>例: 移動可能な削除の暗黙のコピー
+
+コンパイラが暗黙的にコピー コンス トラクターを宣言し、としてそれを定義クラス宣言の移動コンス トラクターまたは移動代入演算子、コピー コンス トラクターを明示的に宣言しない場合は、`deleted`します。 同様に、クラス宣言の移動コンス トラクターまたは移動代入演算子、コピー代入演算子を明示的に宣言しない場合は、コンパイラに暗黙的に宣言コピー代入演算子と定義として`deleted`します。 この問題を解決するには、これらのメンバーを明示的に宣言する必要があります。
+
+エラー c2280 を発行に関連して表示、`unique_ptr`がほぼ確実には、コピー コンス トラクターを呼び出すしようとしているため、`deleted`関数。 仕様では、`unique_ptr`コピーすることはできません。 移動コンス トラクターを使用すると、代わりに所有権を転送できます。
+
+```cpp
 // C2280_move.cpp
 // compile with: cl /c C2280_move.cpp
-class base  
-{  
-public:  
-    base();  
-    ~base(); 
-    base(base&&); 
+class base
+{
+public:
+    base();
+    ~base();
+    base(base&&);
     // Move constructor causes copy constructor to be
-    // implicitly declared as deleted. To fix this 
+    // implicitly declared as deleted. To fix this
     // issue, you can explicitly declare a copy constructor:
     // base(base&);
     // If you want the compiler default version, do this:
     // base(base&) = default;
-};  
+};
 
-void copy(base *p)  
-{  
+void copy(base *p)
+{
     base b{*p};  // C2280
-}  
-```  
+}
+```
 
-## <a name="example-variant-and-volatile-members"></a>例: バリアントと volatile メンバー  
-  
-Visual Studio 2015 Update 2 の前に、コンパイラのバージョンと生成された、非準拠の既定のコンス トラクターおよび匿名共用体のデストラクターがいました。 として暗黙的に宣言された今すぐこれら`deleted`です。 これらのバージョンにも暗黙的に定義の非準拠が許可されている`default`コピーし、移動コンス トラクターと`default`コピーし、移動代入演算子では、クラスと構造体を持つ`volatile`メンバー変数。 コンパイラは、今すぐ非自明なコンス トラクターと代入演算子を検討しを生成しない`default`実装します。 コピーと移動コンス トラクターと共用体またはクラスのコピーと移動の代入演算子が暗黙的に定義としてこのようなクラスが共用体、または、クラスの内部で匿名共用体のメンバーである、`deleted`です。 この問題を解決するには、必要な特殊なメンバー関数を明示的に宣言する必要があります。  
-  
-```cpp  
+## <a name="example-variant-and-volatile-members"></a>例: のバリアントと揮発性のメンバー
+
+バージョンの Visual Studio 2015 Update 2 の前に、コンパイラは、非準拠と生成された既定のコンス トラクターとデストラクターの無名共用体でした。 として暗黙的に宣言されたようになりましたこれら`deleted`します。 これらのバージョンには、暗黙の定義の非準拠も許可されている`default`コピーし、移動コンス トラクターと`default`コピーし、移動代入演算子では、クラスと構造体を持つ`volatile`メンバー変数。 コンパイラは、ここでが自明でないコンス トラクターと代入演算子を検討しが生成されない`default`実装します。 コピーと移動コンス トラクターと共用体またはクラスのコピーと移動の代入演算子が暗黙的に定義としてこのようなクラスが共用体、またはクラスの内部で匿名共用体のメンバーである場合は、`deleted`します。 この問題を解決するには、必要な特殊なメンバー関数を明示的に宣言する必要があります。
+
+```cpp
 // C2280_variant.cpp
 // compile with: cl /c C2280_variant.cpp
-struct A {  
+struct A {
     A() = default;
     A(const A&);
-};  
+};
 
-struct B {  
-    union {  
-        A a;  
-        int i;  
+struct B {
+    union {
+        A a;
+        int i;
     };
-    // To fix this issue, declare the required 
+    // To fix this issue, declare the required
     // special member functions:
-    // B(); 
+    // B();
     // B(const B& b);
-};  
+};
 
 int main() {
-    B b1;  
-    B b2(b1);  // C2280  
+    B b1;
+    B b2(b1);  // C2280
 }
-```  
-  
-## <a name="example-indirect-base-members-deleted"></a>例: 間接の基本メンバーを削除  
-  
-バージョンの Visual Studio 2015 Update 2 の前にコンパイラが非準拠と特殊なメンバーの関数を呼び出します間接的に派生した派生クラスを許可`private virtual`基本クラスです。 このような呼び出しが行われたときに、コンパイラはようになりましたコンパイラ エラー C2280 を発行します。  
-  
-この例ではクラス`top`間接的に派生した仮想プライベートから`base`です。 メンバーは、この準拠のコードで`base`にアクセスできない`top`以外の場合は、型のオブジェクト`top`既定が構築または、破棄することはできません。 古いコンパイラの動作に依存したコードでこの問題を解決するを使用する中間のクラスを変更`protected virtual`派生、または変更、`top`直接派生を使用するクラス。  
+```
 
-```cpp  
+## <a name="example-indirect-base-members-deleted"></a>例: 間接の基本メンバーを削除
+
+Visual Studio 2015 Update 2 の前に、コンパイラのバージョンが非準拠と特殊なメンバーの関数を呼び出す間接的に派生した派生クラスの許可`private virtual`基本クラス。 コンパイラは、このような呼び出しが行われたときに今すぐコンパイラ エラー C2280 を発行します。
+
+この例では、クラス`top`仮想プライベートから直接派生した`base`します。 メンバーは、この準拠のコードで`base`にアクセスできない`top`; 型のオブジェクトを`top`既定が構築されたか、破棄することはできません。 以前のコンパイラの動作に依存するコードでこの問題を解決するを使用する中間クラスを変更`protected virtual`派生、または変更、`top`クラスを直接の派生を使用します。
+
+```cpp
 // C2280_indirect.cpp
 // compile with: cl /c C2280_indirect.cpp
-class base  
-{  
-protected:  
-    base();  
-    ~base();  
-};  
+class base
+{
+protected:
+    base();
+    ~base();
+};
 
-class middle : private virtual base {}; 
+class middle : private virtual base {};
 // Possible fix: Replace line above with:
 // class middle : protected virtual base {};
 class top : public virtual middle {};    // C4594, C4624
 // Another possible fix: use direct derivation:
-// class top : public virtual middle, private virtual base {};   
+// class top : public virtual middle, private virtual base {};
 
-void destroy(top *p)  
-{  
-    delete p;  // C2280  
-}  
-```  
-  
+void destroy(top *p)
+{
+    delete p;  // C2280
+}
+```

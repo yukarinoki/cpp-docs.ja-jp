@@ -1,5 +1,5 @@
 ---
-title: コンパイラの警告 (レベル 3) C4310 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 3) C4310 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd3ab8ba6eb9175ad3f567408faa1f78c09a6f6a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 410db9aa1dee4c0a75b3e1df9d1b019cef736e34
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33303070"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039453"
 ---
 # <a name="compiler-warning-level-3-c4310"></a>コンパイラの警告 (レベル 3) C4310
-キャストには、定数値が切り捨てられました。  
-  
- 定数値は、小さい型にキャストされます。 コンパイラでは、データが切り捨てられます、キャストを実行します。 次の例では、C4310 が生成されます。  
-  
-```  
-// C4310.cpp  
-// compile with: /W4  
-int main() {  
-   long int a;  
-   a = (char) 128;   // C4310, use value 0-127 to resolve  
-}  
+
+キャストには、定数値が切り捨てられました。
+
+定数値は、小さい型にキャストされます。 コンパイラは、データが切り捨てられます、キャストを実行します。 次の例では、C4310 が生成されます。
+
+```
+// C4310.cpp
+// compile with: /W4
+int main() {
+   long int a;
+   a = (char) 128;   // C4310, use value 0-127 to resolve
+}
 ```

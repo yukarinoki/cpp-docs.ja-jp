@@ -1,5 +1,5 @@
 ---
-title: リンカ ツール エラー LNK2026 |Microsoft ドキュメント
+title: リンカ ツール エラー LNK2026 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8b4a296379ab6e4ac8ad3b70668508303e2779d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b76c5533e79c75d06594d42464ca32104eb065ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299579"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046226"
 ---
 # <a name="linker-tools-error-lnk2026"></a>リンカ ツール エラー LNK2026
-SAFESEH イメージに対して安全でないモジュール  
-  
- [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)が指定されましたが、モジュールに安全な例外処理機能と互換性がありません。 このモジュールを使用する場合 **/SAFESEH**モジュールを再コンパイルする必要があります。
+
+SAFESEH イメージの安全でないモジュール
+
+[/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)が指定されましたが、モジュールは、安全な例外処理機能と互換性がありません。 このモジュールを使用したい場合 **/SAFESEH**モジュールを再コンパイルする必要があります。

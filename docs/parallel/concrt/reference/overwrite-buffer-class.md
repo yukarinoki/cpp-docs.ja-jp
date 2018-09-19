@@ -1,5 +1,5 @@
 ---
-title: overwrite_buffer クラス |Microsoft ドキュメント
+title: overwrite_buffer クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dccde651898bf5ff0986dc2e577a1d2ee5765e3f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 05afb5f0cd9db22be48da3999105a0874ee5c037
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694197"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080819"
 ---
 # <a name="overwritebuffer-class"></a>overwrite_buffer クラス
 `overwrite_buffer` メッセージング ブロックは、一度に 1 つのメッセージを格納することができる、複数のターゲットと複数のソースを持つ順序付けられた `propagator_block` です。 新しいメッセージが与えられると、それまで格納されていたメッセージは上書きされます。  
@@ -48,8 +48,8 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `T`  
- メッセージのペイロードの型が格納され、バッファーによって反映されます。  
+*T*<br/>
+メッセージのペイロードの型が格納され、バッファーによって反映されます。  
   
 ## <a name="members"></a>メンバー  
   
@@ -57,35 +57,35 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
   
 |名前|説明|  
 |----------|-----------------|  
-|[overwrite_buffer](#ctor)|オーバーロードされます。 構築、`overwrite_buffer`メッセージング ブロックです。|  
-|[~ overwrite_buffer デストラクター](#dtor)|破棄、`overwrite_buffer`メッセージング ブロックです。|  
+|[overwrite_buffer](#ctor)|オーバーロードされます。 構築、`overwrite_buffer`メッセージング ブロックします。|  
+|[~ overwrite_buffer デストラクター](#dtor)|破棄、`overwrite_buffer`メッセージング ブロックします。|  
   
 ### <a name="public-methods"></a>パブリック メソッド  
   
 |名前|説明|  
 |----------|-----------------|  
 |[has_value](#has_value)|チェックするかどうかこの`overwrite_buffer`メッセージング ブロックはまだ値。|  
-|[value](#value)|格納されているメッセージの現在のペイロードへの参照を取得、`overwrite_buffer`メッセージング ブロックです。|  
+|[value](#value)|格納されているメッセージの現在のペイロードへの参照を取得、`overwrite_buffer`メッセージング ブロックします。|  
   
 ### <a name="protected-methods"></a>プロテクト メソッド  
   
 |名前|説明|  
 |----------|-----------------|  
-|[accept_message](#accept_message)|これによって提供されたメッセージを受け入れる`overwrite_buffer`メッセージング ブロックで、呼び出し元に、メッセージのコピーを取得します。|  
-|[consume_message](#consume_message)|によって以前に提供メッセージを使用して、`overwrite_buffer`ブロックのメッセージングおよび呼び出し元に、メッセージのコピーを返す、ターゲットによって予約されています。|  
-|[link_target_notification](#link_target_notification)|新しいターゲットがこれにリンクされていることを通知するコールバック`overwrite_buffer`メッセージング ブロックです。|  
-|[propagate_message](#propagate_message)|メッセージを非同期的に渡す、`ISource`ブロックをこの`overwrite_buffer`メッセージング ブロックです。 によって呼び出された、`propagate`メソッドは、ソース ブロックによって呼び出されるとします。|  
-|[propagate_to_any_targets](#propagate_to_any_targets)|場所、`message _PMessage`この`overwrite_buffer`ブロックのメッセージングおよびすべてのリンクのターゲットに提供します。|  
-|[release_message](#release_message)|以前のメッセージの予約を解放します。 (上書き[source_block::release_message](source-block-class.md#release_message))。|  
-|[reserve_message](#reserve_message)|これによって以前に提供メッセージを予約`overwrite_buffer`メッセージング ブロックです。 (上書き[source_block::reserve_message](source-block-class.md#reserve_message))。|  
-|[resume_propagation](#resume_propagation)|伝達は、予約が解放された後に再開します。 (上書き[source_block::resume_propagation](source-block-class.md#resume_propagation))。|  
-|[send_message](#send_message)|メッセージを同期的に渡す、`ISource`ブロックをこの`overwrite_buffer`メッセージング ブロックです。 によって呼び出された、`send`メソッドは、ソース ブロックによって呼び出されるとします。|  
-|[supports_anonymous_source](#supports_anonymous_source)|上書き、`supports_anonymous_source`を示すこのブロックがリンクされていないソースによって提供されたメッセージを受け入れることができます。 (上書き[itarget::supports_anonymous_source](itarget-class.md#supports_anonymous_source))。|  
+|[accept_message](#accept_message)|これによって提供されたメッセージを受け入れる`overwrite_buffer`メッセージング ブロック、呼び出し元に、メッセージのコピーを返します。|  
+|[consume_message](#consume_message)|によって以前に提供されたメッセージを使用して、`overwrite_buffer`メッセージング ブロックとメッセージのコピーを返す、呼び出し元に、ターゲットによって予約されています。|  
+|[link_target_notification](#link_target_notification)|この新しいターゲットがリンクされていることを通知するコールバック`overwrite_buffer`メッセージング ブロックします。|  
+|[propagate_message](#propagate_message)|メッセージを非同期的に渡す、`ISource`このブロック`overwrite_buffer`メッセージング ブロックします。 によって呼び出されます、`propagate`メソッドは、ソース ブロックによって呼び出されます。|  
+|[propagate_to_any_targets](#propagate_to_any_targets)|場所、`message _PMessage`この`overwrite_buffer`メッセージング ブロックと、すべてのリンクのターゲットに提供しています。|  
+|[release_message](#release_message)|前のメッセージの予約を解放します。 (上書き[source_block::release_message](source-block-class.md#release_message))。|  
+|[reserve_message](#reserve_message)|これによって以前に提供されたメッセージを予約`overwrite_buffer`メッセージング ブロックします。 (上書き[source_block::reserve_message](source-block-class.md#reserve_message))。|  
+|[resume_propagation](#resume_propagation)|予約が解放された後は、伝達を再開します。 (上書き[source_block::resume_propagation](source-block-class.md#resume_propagation))。|  
+|[send_message](#send_message)|メッセージを同期的に渡す、`ISource`このブロック`overwrite_buffer`メッセージング ブロックします。 によって呼び出されます、`send`メソッドは、ソース ブロックによって呼び出されます。|  
+|[supports_anonymous_source](#supports_anonymous_source)|上書き、`supports_anonymous_source`メソッドをこのブロックがリンクされていないソースによって提供されたメッセージを受け入れることを示します。 (上書き[itarget::supports_anonymous_source](itarget-class.md#supports_anonymous_source))。|  
   
-## <a name="remarks"></a>コメント  
- `overwrite_buffer`メッセージング ブロックは、各ターゲットを格納されているメッセージのコピーを伝達します。  
+## <a name="remarks"></a>Remarks  
+ `overwrite_buffer`メッセージング ブロックが各ターゲットが格納されているメッセージのコピーを伝達します。  
   
- 詳細については、次を参照してください。[非同期メッセージ ブロック](../../../parallel/concrt/asynchronous-message-blocks.md)です。  
+ 詳細については、次を参照してください。[非同期メッセージ ブロック](../../../parallel/concrt/asynchronous-message-blocks.md)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [ISource](isource-class.md)  
@@ -105,39 +105,39 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
   
 ##  <a name="accept_message"></a> accept_message 
 
- これによって提供されたメッセージを受け入れる`overwrite_buffer`メッセージング ブロックで、呼び出し元に、メッセージのコピーを取得します。  
+ これによって提供されたメッセージを受け入れる`overwrite_buffer`メッセージング ブロック、呼び出し元に、メッセージのコピーを返します。  
   
 ```
 virtual message<T>* accept_message(runtime_object_identity _MsgId);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_MsgId`  
- `runtime_object_identity` 、提供されているの`message`オブジェクト。  
+*_MsgId*<br/>
+`runtime_object_identity` 、提供されたの`message`オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
- ポインター、`message`呼び出し元がの所有権をオブジェクトします。  
+ ポインター、`message`呼び出し元は、の所有権を今すぐにオブジェクトします。  
   
-### <a name="remarks"></a>コメント  
- `overwrite_buffer`現在保持しているメッセージの所有権を譲渡するのではなく、メッセージング ブロックをターゲットにメッセージのコピーを返します。  
+### <a name="remarks"></a>Remarks  
+ `overwrite_buffer`現在保持されているメッセージの所有権を譲渡するのではなく、メッセージング、そのターゲットにメッセージのコピーがブロックを返します。  
   
 ##  <a name="consume_message"></a> consume_message 
 
- によって以前に提供メッセージを使用して、`overwrite_buffer`ブロックのメッセージングおよび呼び出し元に、メッセージのコピーを返す、ターゲットによって予約されています。  
+ によって以前に提供されたメッセージを使用して、`overwrite_buffer`メッセージング ブロックとメッセージのコピーを返す、呼び出し元に、ターゲットによって予約されています。  
   
 ```
 virtual message<T>* consume_message(runtime_object_identity _MsgId);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_MsgId`  
- `runtime_object_identity`の`message`使用されているオブジェクトします。  
+*_MsgId*<br/>
+`runtime_object_identity`の`message`使用しているオブジェクトします。  
   
 ### <a name="return-value"></a>戻り値  
- ポインター、`message`呼び出し元がの所有権をオブジェクトします。  
+ ポインター、`message`呼び出し元は、の所有権を今すぐにオブジェクトします。  
   
-### <a name="remarks"></a>コメント  
- ような`accept`への呼び出し前に常に、`reserve`です。  
+### <a name="remarks"></a>Remarks  
+ ような`accept`への呼び出しでは、前に必ずが`reserve`します。  
   
 ##  <a name="has_value"></a> has_value 
 
@@ -148,23 +148,23 @@ bool has_value() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `true` ブロックは、値を受け取っている場合`false`それ以外の場合。  
+ `true` ブロックは、値を受け取った場合`false`それ以外の場合。  
   
 ##  <a name="link_target_notification"></a> link_target_notification 
 
- 新しいターゲットがこれにリンクされていることを通知するコールバック`overwrite_buffer`メッセージング ブロックです。  
+ この新しいターゲットがリンクされていることを通知するコールバック`overwrite_buffer`メッセージング ブロックします。  
   
 ```
 virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_PTarget`  
- 新しくリンクされたターゲットへのポインター。  
+*_PTarget*<br/>
+新たにリンクされたターゲットへのポインター。  
   
 ##  <a name="dtor"></a> ~overwrite_buffer 
 
- 破棄、`overwrite_buffer`メッセージング ブロックです。  
+ 破棄、`overwrite_buffer`メッセージング ブロックします。  
   
 ```
 ~overwrite_buffer();
@@ -172,7 +172,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
   
 ##  <a name="ctor"></a> overwrite_buffer 
 
- 構築、`overwrite_buffer`メッセージング ブロックです。  
+ 構築、`overwrite_buffer`メッセージング ブロックします。  
   
 ```
 overwrite_buffer();
@@ -196,23 +196,23 @@ overwrite_buffer(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_Filter`  
- 提供されたメッセージを受け付けるかどうかを判断するフィルター関数。  
+*フィルター (_f)*<br/>
+提供されたメッセージを受け入れられる必要があるかどうかを決定するフィルター関数。  
   
- `_PScheduler`  
- その内部で `Scheduler` メッセージング ブロックの反映タスクがスケジュールされる `overwrite_buffer` オブジェクト。  
+*_PScheduler*<br/>
+その内部で `Scheduler` メッセージング ブロックの反映タスクがスケジュールされる `overwrite_buffer` オブジェクト。  
   
- `_PScheduleGroup`  
- その内部で `ScheduleGroup` メッセージング ブロックの反映タスクがスケジュールされる `overwrite_buffer` オブジェクト。 使用される `Scheduler` オブジェクトは、スケジュール グループによって暗黙的に指定されます。  
+*_PScheduleGroup*<br/>
+その内部で `ScheduleGroup` メッセージング ブロックの反映タスクがスケジュールされる `overwrite_buffer` オブジェクト。 使用される `Scheduler` オブジェクトは、スケジュール グループによって暗黙的に指定されます。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `_PScheduler` または `_PScheduleGroup` パラメーターを指定しない場合、ランタイムは既定のスケジューラを使用しています。  
   
- 型`filter_method`シグネチャを持つファンクターは、`bool (T const &)`これは、これによって呼び出されます。`overwrite_buffer`メッセージング ブロックを、提供されたメッセージを受け入れる必要がありますかどうかを判断します。  
+ 型`filter_method`シグネチャを持つ、ファンクターは、`bool (T const &)`これによって呼び出される`overwrite_buffer`メッセージング ブロックを提供されたメッセージを受け入れる必要があるかどうかを判断します。  
   
 ##  <a name="propagate_message"></a> propagate_message 
 
- メッセージを非同期的に渡す、`ISource`ブロックをこの`overwrite_buffer`メッセージング ブロックです。 によって呼び出された、`propagate`メソッドは、ソース ブロックによって呼び出されるとします。  
+ メッセージを非同期的に渡す、`ISource`このブロック`overwrite_buffer`メッセージング ブロックします。 によって呼び出されます、`propagate`メソッドは、ソース ブロックによって呼び出されます。  
   
 ```
 virtual message_status propagate_message(
@@ -221,33 +221,33 @@ virtual message_status propagate_message(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_PMessage`  
- `message` オブジェクトを指すポインター。  
+*_PMessage*<br/>
+`message` オブジェクトを指すポインター。  
   
- `_PSource`  
- メッセージを提供する、ソース ブロックへのポインター。  
+*_PSource*<br/>
+メッセージを提供するソース ブロックへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- A [message_status](concurrency-namespace-enums.md)のメッセージを行うには、対象の決定を示す値。  
+ A [message_status](concurrency-namespace-enums.md)メッセージとは、ターゲットの決定を示す値。  
   
 ##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets 
 
- 場所、`message _PMessage`この`overwrite_buffer`ブロックのメッセージングおよびすべてのリンクのターゲットに提供します。  
+ 場所、`message _PMessage`この`overwrite_buffer`メッセージング ブロックと、すべてのリンクのターゲットに提供しています。  
   
 ```
 virtual void propagate_to_any_targets(_Inout_ message<T>* _PMessage);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_PMessage`  
- ポインター、`message`オブジェクトこの`overwrite_buffer`の所有権を取得しました。  
+*_PMessage*<br/>
+ポインターを`message`オブジェクトこの`overwrite_buffer`がの所有権を取得します。  
   
-### <a name="remarks"></a>コメント  
- このメソッドは現在のメッセージを上書き、`overwrite_buffer`新しく受け入れたメッセージと共に`_PMessage`です。  
+### <a name="remarks"></a>Remarks  
+ このメソッドは、現在のメッセージを上書き、`overwrite_buffer`新しく受け入れたメッセージ`_PMessage`します。  
   
 ##  <a name="send_message"></a> send_message 
 
- メッセージを同期的に渡す、`ISource`ブロックをこの`overwrite_buffer`メッセージング ブロックです。 によって呼び出された、`send`メソッドは、ソース ブロックによって呼び出されるとします。  
+ メッセージを同期的に渡す、`ISource`このブロック`overwrite_buffer`メッセージング ブロックします。 によって呼び出されます、`send`メソッドは、ソース ブロックによって呼び出されます。  
   
 ```
 virtual message_status send_message(
@@ -256,59 +256,59 @@ virtual message_status send_message(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_PMessage`  
- `message` オブジェクトを指すポインター。  
+*_PMessage*<br/>
+`message` オブジェクトを指すポインター。  
   
- `_PSource`  
- メッセージを提供する、ソース ブロックへのポインター。  
+*_PSource*<br/>
+メッセージを提供するソース ブロックへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- A [message_status](concurrency-namespace-enums.md)のメッセージを行うには、対象の決定を示す値。  
+ A [message_status](concurrency-namespace-enums.md)メッセージとは、ターゲットの決定を示す値。  
   
 ##  <a name="supports_anonymous_source"></a> supports_anonymous_source 
 
- 上書き、`supports_anonymous_source`を示すこのブロックがリンクされていないソースによって提供されたメッセージを受け入れることができます。  
+ 上書き、`supports_anonymous_source`メソッドをこのブロックがリンクされていないソースによって提供されたメッセージを受け入れることを示します。  
   
 ```
 virtual bool supports_anonymous_source();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `true` ブロックは延期いないために、メッセージを提供します。  
+ `true` ブロックは延期しないため、メッセージを提供します。  
   
 ##  <a name="release_message"></a> release_message 
 
- 以前のメッセージの予約を解放します。  
+ 前のメッセージの予約を解放します。  
   
 ```
 virtual void release_message(runtime_object_identity _MsgId);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_MsgId`  
- `runtime_object_identity`の`message`リリースされているオブジェクトします。  
+*_MsgId*<br/>
+`runtime_object_identity`の`message`リリースされているオブジェクトします。  
   
 ##  <a name="reserve_message"></a> reserve_message 
 
- これによって以前に提供メッセージを予約`overwrite_buffer`メッセージング ブロックです。  
+ これによって以前に提供されたメッセージを予約`overwrite_buffer`メッセージング ブロックします。  
   
 ```
 virtual bool reserve_message(runtime_object_identity _MsgId);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_MsgId`  
- `runtime_object_identity`の`message`オブジェクトの中に予約されています。  
+*_MsgId*<br/>
+`runtime_object_identity`の`message`予約されているオブジェクトします。  
   
 ### <a name="return-value"></a>戻り値  
  `true` 場合は、メッセージが正常に予約された、`false`それ以外の場合。  
   
-### <a name="remarks"></a>コメント  
- 後に`reserve`と呼ばれる場合は、返された場合`true`か、`consume`または`release`かかるか、メッセージの所有権を解放を呼び出す必要があります。  
+### <a name="remarks"></a>Remarks  
+ 後`reserve`と呼ばれる場合は、返された場合`true`, か、`consume`または`release`かかるまたはメッセージの所有権を解放のいずれかを呼び出す必要があります。  
   
 ##  <a name="resume_propagation"></a> resume_propagation 
 
- 伝達は、予約が解放された後に再開します。  
+ 予約が解放された後は、伝達を再開します。  
   
 ```
 virtual void resume_propagation();
@@ -316,7 +316,7 @@ virtual void resume_propagation();
   
 ##  <a name="value"></a> 値 
 
- 格納されているメッセージの現在のペイロードへの参照を取得、`overwrite_buffer`メッセージング ブロックです。  
+ 格納されているメッセージの現在のペイロードへの参照を取得、`overwrite_buffer`メッセージング ブロックします。  
   
 ```
 T value();
@@ -325,8 +325,8 @@ T value();
 ### <a name="return-value"></a>戻り値  
  現在格納されているメッセージのペイロード。  
   
-### <a name="remarks"></a>コメント  
- 格納された値、`overwrite_buffer`このメソッドが戻る後すぐに変更する可能性があります。 このメソッドは、メッセージが現在格納されていない場合、メッセージが到着するまでに待機、`overwrite_buffer`です。  
+### <a name="remarks"></a>Remarks  
+ 格納された値、`overwrite_buffer`このメソッドを返した直後後に変更できます。 このメソッドは、メッセージが現在格納されていない場合、メッセージが到着するまでに待機、`overwrite_buffer`します。  
   
 ## <a name="see-also"></a>関連項目  
  [同時実行 Namespace](concurrency-namespace.md)   

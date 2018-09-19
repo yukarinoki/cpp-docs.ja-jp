@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3891 |Microsoft ドキュメント
+title: コンパイラ エラー C3891 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 021f19d50d0b83c9526956684737ad23fea9fb01
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c85e5fa5ed5e6f202750fef05ffc96e9a0c86bc1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272709"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051699"
 ---
 # <a name="compiler-error-c3891"></a>コンパイラ エラー C3891
-'var': リテラル データ メンバーは、左辺値として使用できません  
-  
- A[リテラル](../../windows/literal-cpp-component-extensions.md)変数は const、および宣言で初期化された後、その値を変更することはできません。  
-  
- 次の例では、C3891 が生成されます。  
-  
-```  
-// C3891.cpp  
-// compile with: /clr  
-ref struct Y1 {  
-   literal int staticConst = 9;  
-};  
-  
-int main() {  
-   Y1::staticConst = 0;   // C3891  
-}  
+
+'var': リテラル データ メンバーは左辺値として使用できません
+
+A[リテラル](../../windows/literal-cpp-component-extensions.md)は const です。 変数と宣言で初期化された後、その値を変更できません。
+
+次の例では、C3891 が生成されます。
+
+```
+// C3891.cpp
+// compile with: /clr
+ref struct Y1 {
+   literal int staticConst = 9;
+};
+
+int main() {
+   Y1::staticConst = 0;   // C3891
+}
 ```

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aaf699f2130c94729b8db9cc21dd17b9699d66c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7b090875b9656fec52e50cb68caf9c2c047d055b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606459"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114255"
 ---
 # <a name="extern-c"></a>extern (C++)
 
@@ -88,9 +88,9 @@ extern constexpr __declspec(selectany) int x = 10;
 
 ## <a name="extern-c-and-extern-c-function-declarations"></a>extern"C"、extern"C++"関数の宣言
 
- C++ では、文字列を使用すると**extern**により、別の言語のリンケージ規則が使用されていることを指定します。 C の関数とデータには、C リンケージを持つと以前に宣言されている場合にのみ、アクセスできます。 ただし、別にコンパイルされた翻訳単位で定義する必要があります。
+C++ では、文字列を使用すると**extern**により、別の言語のリンケージ規則が使用されていることを指定します。 C の関数とデータには、C リンケージを持つと以前に宣言されている場合にのみ、アクセスできます。 ただし、別にコンパイルされた翻訳単位で定義する必要があります。
 
- Microsoft C は、文字列をサポートしている **"C"** と **"C++"** で、*文字列リテラル*フィールド。 標準のすべてのインクルード ファイルの使用、 **extern** C++ プログラムで使用されるランタイム ライブラリ関数を許可する"C"構文。
+Microsoft C は、文字列をサポートしている **"C"** と **"C++"** で、*文字列リテラル*フィールド。 標準のすべてのインクルード ファイルの使用、 **extern** C++ プログラムで使用されるランタイム ライブラリ関数を許可する"C"構文。
 
 ## <a name="example"></a>例
 
@@ -114,7 +114,7 @@ extern "C" {
     char GetChar(void);
 }
 
-//  Define the two functions 
+//  Define the two functions
 //  ShowChar and GetChar with C linkage.
 extern "C" char ShowChar(char ch) {
     putchar(ch);
@@ -131,7 +131,7 @@ extern "C" char GetChar(void) {
 extern "C" int errno;
 ```
 
- 関数に複数のリンケージ指定子がある場合、それらは一致する必要があります。関数を C と C++ 両方のリンケージを持つ関数として宣言するとエラーになります。 また、プログラム内に、リンケージ指定子を含む関数宣言と含まない関数宣言がある場合、リンケージ指定子を含む宣言を最初に記述する必要があります。 既にリンケージ指定を持つ関数の冗長な宣言には、最初の宣言で指定したリンケージが与えられます。 例えば:
+関数に複数のリンケージ指定子がある場合、それらは一致する必要があります。関数を C と C++ 両方のリンケージを持つ関数として宣言するとエラーになります。 また、プログラム内に、リンケージ指定子を含む関数宣言と含まない関数宣言がある場合、リンケージ指定子を含む宣言を最初に記述する必要があります。 既にリンケージ指定を持つ関数の冗長な宣言には、最初の宣言で指定したリンケージが与えられます。 例えば:
 
 ```cpp
 extern "C" int CFunc1();
@@ -147,8 +147,9 @@ extern "C" int CFunc2(); // Error: not the first declaration of
 ```
 
 ## <a name="see-also"></a>関連項目
- [キーワード](../cpp/keywords-cpp.md)  
- [プログラムとリンケージ](program-and-linkage-cpp.md)  
- [extern C でのストレージ クラス指定子](../c-language/extern-storage-class-specifier.md)  
- [C 識別子の動作](../c-language/behavior-of-identifiers.md)  
- [C にあるリンケージ](../c-language/linkage.md)
+
+[キーワード](../cpp/keywords-cpp.md)<br/>
+[プログラムとリンケージ](program-and-linkage-cpp.md)<br/>
+[extern C でのストレージ クラス指定子](../c-language/extern-storage-class-specifier.md)<br/>
+[C 識別子の動作](../c-language/behavior-of-identifiers.md)<br/>
+[C にあるリンケージ](../c-language/linkage.md)

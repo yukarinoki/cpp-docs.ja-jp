@@ -25,14 +25,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4de30a1abdf111f171ad49a028a25cc2683cbef4
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 84050dcf4faed8bb99b871d3b797400c1ed5620e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571686"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086955"
 ---
 # <a name="iopenrowsetimpl-class"></a>IOpenRowsetImpl クラス
+
 実装を提供、`IOpenRowset`インターフェイス。  
   
 ## <a name="syntax"></a>構文
@@ -43,11 +44,13 @@ class IOpenRowsetImpl : public IOpenRowset
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- *SessionClass*  
- 派生したクラス、`IOpenRowsetImpl`します。  
+
+*SessionClass*<br/>
+派生したクラス、`IOpenRowsetImpl`します。  
 
 ## <a name="requirements"></a>要件  
- **ヘッダー:** atldb.h  
+
+**ヘッダー:** atldb.h  
   
 ## <a name="members"></a>メンバー  
   
@@ -59,9 +62,11 @@ class IOpenRowsetImpl : public IOpenRowset
 |[OpenRowset](#openrowset)|開き、1 つのベース テーブルまたはインデックスからすべての行が含まれる行セットを返します。 (ATLDB ではないです。H)|  
   
 ## <a name="remarks"></a>Remarks  
- [IOpenRowset](/previous-versions/windows/desktop/ms716946\(v=vs.85\))セッション オブジェクトの必須インターフェイスです。 これによりが表示され、1 つのベース テーブルまたはインデックスからすべての行が含まれる行セットを返します。  
+
+[IOpenRowset](/previous-versions/windows/desktop/ms716946\(v=vs.85\))セッション オブジェクトの必須インターフェイスです。 これによりが表示され、1 つのベース テーブルまたはインデックスからすべての行が含まれる行セットを返します。  
   
 ## <a name="createrowset"></a> Iopenrowsetimpl::createrowset
+
 行セット オブジェクトを作成します。 ユーザーが直接呼び出されません。 参照してください[iopenrowset::openrowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス。*  
   
 ### <a name="syntax"></a>構文  
@@ -79,15 +84,17 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *RowsetClass*  
- ユーザーの行セット クラスを表すテンプレート クラスのメンバー。 通常、ウィザードによって生成されます。  
+
+*RowsetClass*<br/>
+ユーザーの行セット クラスを表すテンプレート クラスのメンバー。 通常、ウィザードによって生成されます。  
   
- *pRowsetObj*  
- [out]行セット オブジェクトへのポインター。 通常、このパラメーターは使用されませんが COM オブジェクトに渡す前に、行セットに対してより多くの作業を実行する必要がある場合に使用できます。 有効期間*pRowsetObj*連結された*ppRowset*します。  
+*pRowsetObj*<br/>
+[out]行セット オブジェクトへのポインター。 通常、このパラメーターは使用されませんが COM オブジェクトに渡す前に、行セットに対してより多くの作業を実行する必要がある場合に使用できます。 有効期間*pRowsetObj*連結された*ppRowset*します。  
   
- その他のパラメーターでは、次を参照してください。 [iopenrowset::openrowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス。*  
+その他のパラメーターでは、次を参照してください。 [iopenrowset::openrowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス。*  
 
 ## <a name="openrowset"></a> Iopenrowsetimpl::openrowset
+
 開き、1 つのベース テーブルまたはインデックスからすべての行が含まれる行セットを返します。  
   
 ### <a name="syntax"></a>構文  
@@ -103,11 +110,14 @@ HRESULT OpenRowset(IUnknown* pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[iopenrowset::openrowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+
+参照してください[iopenrowset::openrowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ### <a name="remarks"></a>Remarks  
- ATLDB でこのメソッドが見つかりませんでした。H. プロバイダーを作成するときに、ATL オブジェクト ウィザードによって作成されます。  
+
+ATLDB でこのメソッドが見つかりませんでした。H. プロバイダーを作成するときに、ATL オブジェクト ウィザードによって作成されます。  
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

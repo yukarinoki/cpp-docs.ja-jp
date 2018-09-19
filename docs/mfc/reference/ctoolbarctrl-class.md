@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f97559dd962fefbb4e727c0e75d0102898c8f13
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 93752aa124bc144e42a337f757c9d9cdc9a226ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724075"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047929"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl クラス
 Windows ツール バー コモン コントロールの機能が用意されています。  
@@ -410,65 +410,66 @@ BOOL AddButtons(
 ### <a name="remarks"></a>Remarks  
  *LpButtons*ポインターの配列を指します`TBBUTTON`構造体。 各`TBBUTTON`構造体は、ボタンのスタイル、イメージや文字列、コマンドの ID、状態、およびユーザー定義データの追加 ボタンを関連付けます。  
   
- `typedef struct _TBBUTTON {`  
-  
- `int iBitmap;// zero-based index of button image`  
-  
- `int idCommand;  // command to be sent when button pressed`  
-  
- `BYTE fsState;   // button state--see below`  
-  
- `BYTE fsStyle;   // button style--see below`  
-  
- `DWORD dwData;   // application-defined value`  
-  
- `int iString;// zero-based index of button label string`  
-  
- `} TBBUTTON;`  
+```cpp
+typedef struct _TBBUTTON {
+    int iBitmap;    // zero-based index of button image
+    int idCommand;  // command to be sent when button pressed
+    BYTE fsState;   // button state--see below
+    BYTE fsStyle;   // button style--see below
+    DWORD dwData;   // application-defined value
+    int iString;    // zero-based index of button label string
+} TBBUTTON;
+```
   
  メンバーは次のとおりです。  
   
- `iBitmap`  
- このボタンのイメージがない場合は-1、ボタンのイメージの 0 から始まるインデックス。  
+- `iBitmap`  
+
+   このボタンのイメージがない場合は-1、ボタンのイメージの 0 から始まるインデックス。  
   
- `idCommand`  
- ボタンに関連付けられているコマンドの識別子です。 この識別子は、ボタンを選択すると、WM_COMMAND メッセージで送信されます。 場合、`fsStyle`メンバー TBSTYLE_SEP 値には、このメンバーは 0 である必要があります。  
+-  `idCommand`  
+
+   ボタンに関連付けられているコマンドの識別子です。 この識別子は、ボタンを選択すると、WM_COMMAND メッセージで送信されます。 場合、`fsStyle`メンバー TBSTYLE_SEP 値には、このメンバーは 0 である必要があります。  
   
- `fsState`  
- ボタンの状態フラグ。 次の値の組み合わせを指定できます。  
+-  `fsState`  
+
+   ボタンの状態フラグ。 次の値の組み合わせを指定できます。  
   
-- TBSTATE_CHECKED ボタンは、スタイルのスタイルを備えが押されました。  
+   - TBSTATE_CHECKED ボタンは、スタイルのスタイルを備えが押されました。  
   
-- ボタン、ボタンは、ユーザーの入力を受け入れます。 この状態がないボタンは、ユーザー入力が受け付けられません、淡色表示にします。  
+   - ボタン、ボタンは、ユーザーの入力を受け入れます。 この状態がないボタンは、ユーザー入力が受け付けられません、淡色表示にします。  
   
-- TBSTATE_HIDDEN ボタンが表示されていないと、ユーザー入力を受け取ることはできません。  
+   - TBSTATE_HIDDEN ボタンが表示されていないと、ユーザー入力を受け取ることはできません。  
   
-- TBSTATE_INDETERMINATE ボタンは淡色表示にします。  
+   - TBSTATE_INDETERMINATE ボタンは淡色表示にします。  
   
-- ボタンが押された TBSTATE_PRESSED します。  
+   - ボタンが押された TBSTATE_PRESSED します。  
   
-- TBSTATE_WRAP A 改行では、ボタンに従います。 ボタンは、ボタンの状態も必要です。  
+   - TBSTATE_WRAP A 改行では、ボタンに従います。 ボタンは、ボタンの状態も必要です。  
   
- `fsStyle`  
- ボタンのスタイル。 次の値の組み合わせを指定できます。  
+- `fsStyle`  
+
+   ボタンのスタイル。 次の値の組み合わせを指定できます。  
   
-- TBSTYLE_BUTTON は、標準的なプッシュ ボタンを作成します。  
+   - TBSTYLE_BUTTON は、標準的なプッシュ ボタンを作成します。  
   
-- ユーザーを毎回押された状態および押されていない状態の状態間を切り替えるボタンは TBSTYLE_CHECK を作成、それをクリックします。 押された状態にあるときに、別の背景色がボタンには、します。  
+   - ユーザーを毎回押された状態および押されていない状態の状態間を切り替えるボタンは TBSTYLE_CHECK を作成、それをクリックします。 押された状態にあるときに、別の背景色がボタンには、します。  
   
-- グループ内の別のボタンが押されるまで保持されるチェック ボタンが押された TBSTYLE_CHECKGROUP を作成します。  
+   - グループ内の別のボタンが押されるまで保持されるチェック ボタンが押された TBSTYLE_CHECKGROUP を作成します。  
   
-- グループ内の別のボタンが押されるまで保持されるボタンが押された TBSTYLE_GROUP を作成します。  
+   - グループ内の別のボタンが押されるまで保持されるボタンが押された TBSTYLE_GROUP を作成します。  
   
-- TBSTYLE_SEP は、ボタンのグループ間で小規模のギャップを提供する、区切り記号を作成します。 このスタイルがボタンでは、ユーザー入力を受信しません。  
+   - TBSTYLE_SEP は、ボタンのグループ間で小規模のギャップを提供する、区切り記号を作成します。 このスタイルがボタンでは、ユーザー入力を受信しません。  
   
- `dwData`  
- ユーザー定義データ。  
+- `dwData`  
+
+   ユーザー定義データ。  
   
- `iString`  
- ボタンのラベル、このボタンの文字列がない場合は-1 を使用する文字列の 0 から始まるインデックス。  
+- `iString`  
+
+   ボタンのラベル、このボタンの文字列がない場合は-1 を使用する文字列の 0 から始まるインデックス。  
   
- イメージや文字列の指定したインデックスを持つ必要があります以前に追加されたツール バー コントロールの一覧を使用して[表示](#addbitmap)、 [AddString](#addstring)、や[AddStrings](#addstrings)します。  
+イメージや文字列の指定したインデックスを持つ必要があります以前に追加されたツール バー コントロールの一覧を使用して[表示](#addbitmap)、 [AddString](#addstring)、や[AddStrings](#addstrings)します。  
   
 ##  <a name="addstring"></a>  CToolBarCtrl::AddString  
  リソース ID を文字列のツールバーの内部リストとして渡される、新しい文字列を追加します。  

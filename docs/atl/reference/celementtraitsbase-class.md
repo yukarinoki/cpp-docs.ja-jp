@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1943895b8db663239ed1bfb27b8e97fc3c416e5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1173633cd720ed6ee0e4aacdf75a8b305fdbfe4d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767907"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043366"
 ---
 # <a name="celementtraitsbase-class"></a>CElementTraitsBase クラス
 
@@ -35,13 +35,13 @@ ms.locfileid: "43767907"
 ## <a name="syntax"></a>構文
 
 ```
-template<typename T>  
+template<typename T>
 class CElementTraitsBase
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 コレクションに格納されるデータの型。
 
 ## <a name="members"></a>メンバー
@@ -83,13 +83,13 @@ static void CopyElements(
 
 ### <a name="parameters"></a>パラメーター
 
-*pDest*  
+*pDest*<br/>
 コピー元のデータを受信する最初の要素へのポインター。
 
-*pSrc*  
+*pSrc*<br/>
 コピーする最初の要素へのポインター。
 
-*nElements*  
+*nElements*<br/>
 コピーする要素の数。
 
 ### <a name="remarks"></a>Remarks
@@ -125,13 +125,13 @@ static void RelocateElements(
 
 ### <a name="parameters"></a>パラメーター
 
-*pDest*  
+*pDest*<br/>
 再配置されたデータを受信する最初の要素へのポインター。
 
-*pSrc*  
+*pSrc*<br/>
 配置する場合に、最初の要素へのポインター。
 
-*nElements*  
+*nElements*<br/>
 配置する場合に要素の数。
 
 ### <a name="remarks"></a>Remarks

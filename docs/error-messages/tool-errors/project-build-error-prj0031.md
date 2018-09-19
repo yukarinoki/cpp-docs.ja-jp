@@ -1,5 +1,5 @@
 ---
-title: プロジェクト ビルド エラー PRJ0031 |Microsoft ドキュメント
+title: プロジェクト ビルド エラー PRJ0031 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d5ebd25c239a05c4300b574ec0d47035904187d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ce97e8f540295f5a2968fce22312b8e0e34cfd2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318323"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076893"
 ---
 # <a name="project-build-error-prj0031"></a>プロジェクト ビルド エラー PRJ0031
-カスタム ビルドの 'Outputs' プロパティは、'macro_expansion' をファイル 'file' が含まれている 'macro' 評価を出すのステップします。  
-  
- ファイルのカスタム ビルド ステップには、おそらくマクロ評価の問題により、不正な出力が必要があります。 このエラー意味する場合も、パスの形式が文字またはファイル パスに無効な文字の組み合わせを含むです。  
-  
- このエラーを解決するには、マクロを修正するか、パスの指定を修正します。 パスには、プロジェクト ディレクトリからの絶対パスを指定します。
+
+カスタム ビルドの 'Outputs' プロパティは、'macro_expansion' をファイル 'file' に含まれている 'macro' 評価を出すのステップします。
+
+ファイルのカスタム ビルド ステップでは、おそらくマクロ評価の問題により、不正な出力がありました。 このエラーにあるパス形式が正しくない、文字またはファイル パスでは無効な文字の組み合わせを含むもします。
+
+このエラーを解決するのには、マクロを修正するか、パスの指定を修正します。 パスには、プロジェクト ディレクトリからの絶対パスを指定します。

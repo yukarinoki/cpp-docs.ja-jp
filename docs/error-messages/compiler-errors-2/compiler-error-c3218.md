@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3218 |Microsoft ドキュメント
+title: コンパイラ エラー C3218 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6938768211a78ca2a72c78ebb03a8972e0a86a74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1a21050e49a05980a4e4a644fa9f08bc42f23310
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248271"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030821"
 ---
 # <a name="compiler-error-c3218"></a>コンパイラ エラー C3218
-'type': 型制約としては使用できません  
-  
- 制約のある型の場合は、値型またはマネージ クラスまたはインターフェイスへの参照があります。  
-  
-## <a name="example"></a>例  
- 次の例では、C3218 を生成します。  
-  
-```  
-// C3218.cpp  
-// compile with: /clr /c  
-class A {};  
-ref class B {};  
-  
-// Delete the following 3 lines to resolve.  
-generic <class T>  
-where T : A   // C3218  
-ref class C {};  
-  
-// OK  
-generic <class T>  
-where  T : B  
-ref class D {};  
+
+'type': 型制約として許可されません。
+
+制約のある型の場合は、値型またはマネージ クラスまたはインターフェイスへの参照があります。
+
+## <a name="example"></a>例
+
+次の例では、C3218 が生成されます。
+
+```
+// C3218.cpp
+// compile with: /clr /c
+class A {};
+ref class B {};
+
+// Delete the following 3 lines to resolve.
+generic <class T>
+where T : A   // C3218
+ref class C {};
+
+// OK
+generic <class T>
+where  T : B
+ref class D {};
 ```

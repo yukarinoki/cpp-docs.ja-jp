@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3461 |Microsoft ドキュメント
+title: コンパイラ エラー C3461 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0b9349ed9450c6d74a9311d5b9265f57cc37b81
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8027831810a8f95b8d72ef70e392d9984b5c2f3a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255982"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077933"
 ---
 # <a name="compiler-error-c3461"></a>コンパイラ エラー C3461
-'type': マネージ型のみ転送できます  
-  
- 型の転送は、CLR 型でのみ実行できます。  参照してください[クラスと構造体](../../windows/classes-and-structs-cpp-component-extensions.md)詳細についてはします。  
-  
- 詳細については、次を参照してください。 [Type Forwarding (C + + CLI)](../../windows/type-forwarding-cpp-cli.md)です。  
-  
-## <a name="example"></a>例  
- コンポーネントを作成する例を次に示します。  
-  
-```  
-// C3461.cpp  
-// compile with: /clr /LD  
-public ref class R {};  
-```  
-  
-## <a name="example"></a>例  
- 次の例では C3461 が生成されます。  
-  
-```  
-// C3461b.cpp  
-// compile with: /clr /c  
-#using "C3461.dll"  
-class N {};  
-[assembly:TypeForwardedTo(N::typeid)];   // C3461  
-[assembly:TypeForwardedTo(R::typeid)];   // OK  
+
+'type': マネージド型のみ転送できます
+
+型の転送は、CLR 型でのみ実行できます。  参照してください[クラスと構造体](../../windows/classes-and-structs-cpp-component-extensions.md)詳細についてはします。
+
+詳細については、次を参照してください。 [Type Forwarding (C +/cli CLI)](../../windows/type-forwarding-cpp-cli.md)します。
+
+## <a name="example"></a>例
+
+コンポーネントを作成する例を次に示します。
+
+```
+// C3461.cpp
+// compile with: /clr /LD
+public ref class R {};
+```
+
+## <a name="example"></a>例
+
+次の例では C3461 が生成されます。
+
+```
+// C3461b.cpp
+// compile with: /clr /c
+#using "C3461.dll"
+class N {};
+[assembly:TypeForwardedTo(N::typeid)];   // C3461
+[assembly:TypeForwardedTo(R::typeid)];   // OK
 ```

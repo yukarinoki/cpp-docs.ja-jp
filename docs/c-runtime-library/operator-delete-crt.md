@@ -25,14 +25,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bafea205b79c940dd79da3bb27909348930ac4df
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1ecc88272aa31a30292d395b741fdced415eae95
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388416"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115438"
 ---
 # <a name="operator-delete-crt"></a>delete 演算子 (CRT)
 
-Visual Studio 2013 以降では、Universal C ランタイム (UCRT) で C++ 固有の演算子 new と演算子の delete 関数が使用できなくなりました。 現在は、C++ 標準ライブラリに組み込まれています。 詳細については、C++ 言語リファレンスの「[new および delete 演算子](../cpp/new-and-delete-operators.md)」と「[delete 演算子](../cpp/delete-operator-cpp.md)」の説明をご覧ください。 
+Visual Studio 2013 以降では、Universal C ランタイム (UCRT) で C++ 固有の演算子 new と演算子の delete 関数が使用できなくなりました。 現在は、C++ 標準ライブラリに組み込まれています。 詳細については、C++ 言語リファレンスの「[new および delete 演算子](../cpp/new-and-delete-operators.md)」と「[delete 演算子](../cpp/delete-operator-cpp.md)」の説明をご覧ください。
 

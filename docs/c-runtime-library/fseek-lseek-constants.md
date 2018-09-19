@@ -20,32 +20,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbcf0a1106610740a585b7e4f8b68e3fc9b6a8f7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3d48ead4532638461962a3bf88d2321cee775ab3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388449"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087659"
 ---
 # <a name="fseek-lseek-constants"></a>fseek 定数と _lseek 定数
-## <a name="syntax"></a>構文  
-  
-```  
-  
-#include <stdio.h>  
-  
-```  
-  
-## <a name="remarks"></a>コメント  
- *origin* 引数は初期位置を指定し、次のマニフェスト定数のいずれかになります。  
-  
-|定数|説明|  
-|--------------|-------------|  
-|`SEEK_END`|ファイルの終端|  
-|`SEEK_CUR`|ファイル ポインターの現在の位置|  
-|`SEEK_SET`|ファイルの先頭|  
-  
-## <a name="see-also"></a>参照  
- [fseek、_fseeki64](../c-runtime-library/reference/fseek-fseeki64.md)   
- [_lseek、_lseeki64](../c-runtime-library/reference/lseek-lseeki64.md)   
- [グローバル定数](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>構文
+
+```
+
+#include <stdio.h>
+
+```
+
+## <a name="remarks"></a>コメント
+
+*origin* 引数は初期位置を指定し、次のマニフェスト定数のいずれかになります。
+
+|定数|説明|
+|--------------|-------------|
+|`SEEK_END`|ファイルの終端|
+|`SEEK_CUR`|ファイル ポインターの現在の位置|
+|`SEEK_SET`|ファイルの先頭|
+
+## <a name="see-also"></a>参照
+
+[fseek、_fseeki64](../c-runtime-library/reference/fseek-fseeki64.md)<br/>
+[_lseek、_lseeki64](../c-runtime-library/reference/lseek-lseeki64.md)<br/>
+[グローバル定数](../c-runtime-library/global-constants.md)

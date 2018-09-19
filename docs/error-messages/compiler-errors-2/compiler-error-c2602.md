@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C2602 |Microsoft ドキュメント
+title: コンパイラ エラー C2602 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07fd581d8d95ae33ba2a38ea45a458f2085e0ef1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 22c4b2ec765259aa7797b49c003f1b2e2860226f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229304"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049528"
 ---
 # <a name="compiler-error-c2602"></a>コンパイラ エラー C2602
-':identifier' は 'class' の基底クラスのメンバーではありません。  
-  
- `Identifier` 任意の基本クラスから継承されたメンバーではないためにアクセスできません。  
-  
- 次の例では、C2602 が生成されます。  
-  
-```  
-// C2602.cpp  
-// compile with: /c  
-struct X {  
-   int x;  
-};  
-struct A {  
-   int a;  
-};  
-struct B : public A {  
-   X::x;   // C2602 B is not derived from X  
-   A::a;   // OK  
-};  
+
+':identifier' は 'class' の基底クラスのメンバーではありません。
+
+`Identifier` 任意の基本クラスから継承されたメンバーではないためにアクセスできません。
+
+次の例では、C2602 が生成されます。
+
+```
+// C2602.cpp
+// compile with: /c
+struct X {
+   int x;
+};
+struct A {
+   int a;
+};
+struct B : public A {
+   X::x;   // C2602 B is not derived from X
+   A::a;   // OK
+};
 ```

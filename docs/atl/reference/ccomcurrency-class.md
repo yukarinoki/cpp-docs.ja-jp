@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3c6db8a46e0b0e8d490019b18fc67dc7bf1e226
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b6eb8c7ed32e780ddaf31dfd6167f59fd55de9da
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763446"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116777"
 ---
 # <a name="ccomcurrency-class"></a>CComCurrency クラス
 
@@ -118,45 +118,45 @@ CComCurrency() throw();
 CComCurrency(const CComCurrency& curSrc) throw();
 CComCurrency(CURRENCY cySrc) throw();
 CComCurrency(DECIMAL dSrc);
-CComCurrency(ULONG ulSrc);  
-CComCurrency(USHORT usSrc);  
-CComCurrency(CHAR cSrc);  
-CComCurrency(DOUBLE dSrc);  
-CComCurrency(FLOAT fSrc);  
-CComCurrency(LONG lSrc);  
-CComCurrency(SHORT sSrc);  
-CComCurrency(BYTE bSrc);  
-CComCurrency(LONGLONG nInteger, SHORT nFraction);  
-explicit CComCurrency(LPDISPATCH pDispSrc);  
-explicit CComCurrency(const VARIANT& varSrc);  
-explicit CComCurrency(LPCWSTR szSrc);  
+CComCurrency(ULONG ulSrc);
+CComCurrency(USHORT usSrc);
+CComCurrency(CHAR cSrc);
+CComCurrency(DOUBLE dSrc);
+CComCurrency(FLOAT fSrc);
+CComCurrency(LONG lSrc);
+CComCurrency(SHORT sSrc);
+CComCurrency(BYTE bSrc);
+CComCurrency(LONGLONG nInteger, SHORT nFraction);
+explicit CComCurrency(LPDISPATCH pDispSrc);
+explicit CComCurrency(const VARIANT& varSrc);
+explicit CComCurrency(LPCWSTR szSrc);
 explicit CComCurrency(LPCSTR szSrc);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*curSrc*  
+*curSrc*<br/>
 既存の `CComCurrency` オブジェクト。
 
-*cySrc*  
+*cySrc*<br/>
 通貨型の変数を指定します。
 
-*bSrc*、*並*、 *fSrc*、 *lSrc*、 *sSrc*、 *ulSrc、usSrc*  
+*bSrc*、*並*、 *fSrc*、 *lSrc*、 *sSrc*、 *ulSrc、usSrc*<br/>
 メンバー変数に指定された初期値`m_currency`します。
 
-*cSrc*  
+*cSrc*<br/>
 メンバー変数に指定された初期値を含む文字`m_currency`します。
 
-*nInteger*、 *nFraction*  
+*nInteger*、 *nFraction*<br/>
 整数および通貨の初期値の小数部のコンポーネント。 参照してください、 [CComCurrency](../../atl/reference/ccomcurrency-class.md)の概要。
 
-*pDispSrc*  
+*pDispSrc*<br/>
 `IDispatch`ポインター。
 
-*varSrc*  
+*varSrc*<br/>
 バリアント型の変数を指定します。 現在のスレッドのロケールを使用して、変換を実行します。
 
-*szSrc*  
+*szSrc*<br/>
 初期値を含む Unicode または ANSI 文字列。 現在のスレッドのロケールを使用して、変換を実行します。
 
 ### <a name="remarks"></a>Remarks
@@ -238,7 +238,7 @@ CComCurrency operator-(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*cur*  
+*cur*<br/>
 `CComCurrency` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -259,7 +259,7 @@ bool operator!= (const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*cur*  
+*cur*<br/>
 比較される `CComCurrency` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -281,10 +281,10 @@ CComCurrency operator*(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*nOperand*  
+*nOperand*<br/>
 乗数。
 
-*cur*  
+*cur*<br/>
 `CComCurrency`乗数として使用されるオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -306,10 +306,10 @@ const CComCurrency& operator*= (const CComCurrency& cur);
 
 ### <a name="parameters"></a>パラメーター
 
-*nOperand*  
+*nOperand*<br/>
 乗数。
 
-*cur*  
+*cur*<br/>
 `CComCurrency`乗数として使用されるオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -330,7 +330,7 @@ CComCurrency operator/(long nOperand) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*nOperand*  
+*nOperand*<br/>
 除数。
 
 ### <a name="return-value"></a>戻り値
@@ -351,7 +351,7 @@ const CComCurrency& operator/= (long nOperand);
 
 ### <a name="parameters"></a>パラメーター
 
-*nOperand*  
+*nOperand*<br/>
 除数。
 
 ### <a name="return-value"></a>戻り値
@@ -372,7 +372,7 @@ CComCurrency operator+(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*cur*  
+*cur*<br/>
 `CComCurrency`元のオブジェクトに追加するオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -393,7 +393,7 @@ const CComCurrency& operator+= (const CComCurrency& cur);
 
 ### <a name="parameters"></a>パラメーター
 
-*cur*  
+*cur*<br/>
 `CComCurrency` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -414,7 +414,7 @@ bool operator<(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*cur*  
+*cur*<br/>
 `CComCurrency` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -435,7 +435,7 @@ bool operator<= (const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*cur*  
+*cur*<br/>
 `CComCurrency` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -466,13 +466,13 @@ const CComCurrency& operator= (DECIMAL dSrc);
 
 ### <a name="parameters"></a>パラメーター
 
-*curSrc*  
+*curSrc*<br/>
 `CComCurrency` オブジェクト。
 
-*cySrc*  
+*cySrc*<br/>
 通貨型の変数を指定します。
 
-*sSrc*、 *fSrc*、 *lSrc*、 *bSrc*、 *usSrc*、*並*、 *cSrc*、 *ulSrc*、*並*  
+*sSrc*、 *fSrc*、 *lSrc*、 *bSrc*、 *usSrc*、*並*、 *cSrc*、 *ulSrc*、*並*<br/>
 代入する数値の値、`CComCurrency`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -493,7 +493,7 @@ const CComCurrency& operator-= (const CComCurrency& cur);
 
 ### <a name="parameters"></a>パラメーター
 
-*cur*  
+*cur*<br/>
 `CComCurrency` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -514,7 +514,7 @@ bool operator== (const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*cur*  
+*cur*<br/>
 `CComCurrency`と比較するオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -535,7 +535,7 @@ bool operator>(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*cur*  
+*cur*<br/>
 `CComCurrency` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -556,7 +556,7 @@ bool operator>= (const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*cur*  
+*cur*<br/>
 `CComCurrency` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -571,7 +571,7 @@ bool operator>= (const CComCurrency& cur) const;
 
 これらの演算子を使用して、キャスト、`CComCurrency`を通貨データ型のオブジェクト。
 
-```  
+```
 operator CURRENCY&() throw();
 operator const CURRENCY&() const throw();
 ```
@@ -594,7 +594,7 @@ HRESULT Roundint nDecimals);
 
 ### <a name="parameters"></a>パラメーター
 
-*nDecimals*  
+*nDecimals*<br/>
 桁数を`m_currency`0 ~ 4 の範囲で、丸められます。
 
 ### <a name="return-value"></a>戻り値
@@ -615,7 +615,7 @@ HRESULT SetFraction(SHORT nFraction);
 
 ### <a name="parameters"></a>パラメーター
 
-*nFraction*  
+*nFraction*<br/>
 小数部に割り当てられる値、`m_currency`データ メンバー。 小数部の署名をする必要があります、整数コンポーネントと同じで、値は、符号を-9999 (CY_MIN_FRACTION) の範囲内で指定する必要があります。
 
 ### <a name="return-value"></a>戻り値
@@ -636,7 +636,7 @@ HRESULT SetInteger(LONGLONG nInteger);
 
 ### <a name="parameters"></a>パラメーター
 
-*nInteger*  
+*nInteger*<br/>
 整数部に割り当てられる値、`m_currency`データ メンバー。 整数部の符号は、既存の小数部の署名と一致する必要があります。
 
 *nInteger* CY_MAX_INTEGER 包括的に CY_MIN_INTEGER の範囲で指定する必要があります。 これらの値は、atlcur.h で定義されます。
@@ -651,6 +651,6 @@ HRESULT SetInteger(LONGLONG nInteger);
 
 ## <a name="see-also"></a>関連項目
 
-[COleCurrency クラス](../../mfc/reference/colecurrency-class.md)   
-[通貨](/windows/desktop/api/wtypes/ns-wtypes-tagcy)   
+[COleCurrency クラス](../../mfc/reference/colecurrency-class.md)<br/>
+[通貨](/windows/desktop/api/wtypes/ns-wtypes-tagcy)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

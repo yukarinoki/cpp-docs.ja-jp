@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac922526abec73d7219f64cb1004319e9547fef6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 815a276cb07a91da73acb68a32cceef4b2138325
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757882"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093845"
 ---
 # <a name="idispeventimpl-class"></a>IDispEventImpl クラス
 
@@ -45,31 +45,31 @@ template <UINT nID, class T,
     const GUID* plibid = &GUID_NULL,
     WORD wMajor = 0,
     WORD wMinor = 0, 
-    class tihclass = CcomTypeInfoHolder>  
+    class tihclass = CcomTypeInfoHolder>
 class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*nID*  
+*nID*<br/>
 ソース オブジェクトの一意の識別子。 ときに`IDispEventImpl`基底クラスは、複合コントロールの場合は、このパラメーターの適切な包含コントロールのリソース ID を使用します。 それ以外の場合は、任意の正の整数を使用します。
 
-*T*  
+*T*<br/>
 ユーザーのクラスから派生した`IDispEventImpl`します。
 
-*pdiid*  
+*pdiid*<br/>
 このクラスによって実装されるイベントのディスパッチ インターフェイスの IID へのポインター。 によって示されるタイプ ライブラリのこのインターフェイスを定義する必要があります*plibid*、 *wMajor*、および*wMinor*します。
 
-*plibid*  
+*plibid*<br/>
 ディスパッチ インターフェイスを定義するタイプ ライブラリへのポインターが指す*pdiid*します。 場合 **& GUID_**、イベント ソーシング オブジェクトからタイプ ライブラリが読み込まれます。
 
-*wMajor*  
+*wMajor*<br/>
 タイプ ライブラリのメジャー バージョンです。 既定値は 0 です。
 
-*wMinor*  
+*wMinor*<br/>
 タイプ ライブラリのマイナー バージョンです。 既定値は 0 です。
 
-*tihclass*  
+*tihclass*<br/>
 型情報を管理するために使用するクラス*T*します。既定値は、クラス型の`CComTypeInfoHolder`。 ただし、以外の型のクラスを提供することでこのテンプレート パラメーターをオーバーライドする`CComTypeInfoHolder`します。
 
 ## <a name="members"></a>メンバー
@@ -143,16 +143,16 @@ HRESULT GetFuncInfoFromId(
 
 ### <a name="parameters"></a>パラメーター
 
-*iid*  
+*iid*<br/>
 [in]関数の ID への参照。
 
-*dispidMember*  
+*dispidMember*<br/>
 [in]関数のディスパッチ ID。
 
-*lcid*  
+*lcid*<br/>
 [in]関数の ID のロケール コンテキスト
 
-*情報*  
+*情報*<br/>
 [in]関数の呼び出し方法を示す構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -213,10 +213,10 @@ VARTYPE GetUserDefinedType(
 
 ### <a name="parameters"></a>パラメーター
 
-*PTI*  
+*PTI*<br/>
 [in]ポインター、 [ITypeInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo)ユーザー定義型を含むインターフェイス。
 
-*hrt*  
+*hrt*<br/>
 [in]取得する型の説明へのハンドル。
 
 ### <a name="return-value"></a>戻り値
@@ -249,10 +249,10 @@ typedef tihclass _tihclass;
 
 ## <a name="see-also"></a>関連項目
 
-[_ATL_FUNC_INFO 構造体](../../atl/reference/atl-func-info-structure.md)   
-[IDispatchImpl クラス](../../atl/reference/idispatchimpl-class.md)   
-[IDispEventSimpleImpl クラス](../../atl/reference/idispeventsimpleimpl-class.md)   
-[SINK_ENTRY](composite-control-macros.md#sink_entry)   
-[SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex)   
-[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)   
+[_ATL_FUNC_INFO 構造体](../../atl/reference/atl-func-info-structure.md)<br/>
+[IDispatchImpl クラス](../../atl/reference/idispatchimpl-class.md)<br/>
+[IDispEventSimpleImpl クラス](../../atl/reference/idispeventsimpleimpl-class.md)<br/>
+[SINK_ENTRY](composite-control-macros.md#sink_entry)<br/>
+[SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex)<br/>
+[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

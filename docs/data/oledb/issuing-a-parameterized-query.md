@@ -15,14 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 02ce5cbfdc6c5305ab356fc32993b6bdd34f1fac
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 7fae3dafe056598dea5026d0639ce257af3cee87
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339537"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066779"
 ---
 # <a name="issuing-a-parameterized-query"></a>パラメーター クエリの実行
+
 次の例では、Microsoft Access データベース内のテーブルから (つまり、30 より大きい) 時効フィールドのレコードを取得する単純なパラメーター化されたクエリを発行します。 パラメーターをサポートするには、ユーザー レコードは、追加のマップする必要があります。 次のコードでは、ATL プロジェクトでは、`CCommand`クラスの代わりに、`CTable`前の例で使用されるクラス[単純な行セットの走査](../../data/oledb/traversing-a-simple-rowset.md)します。  
   
 ```cpp  
@@ -51,7 +52,7 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- ユーザー レコードでは、 `CArtists`、ようになります。  
+ユーザー レコードでは、 `CArtists`、ようになります。  
   
 ```cpp  
 class CArtists  
@@ -78,4 +79,5 @@ END_PARAM_MAP()
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB コンシューマー テンプレートの操作](../../data/oledb/working-with-ole-db-consumer-templates.md)
+
+[OLE DB コンシューマー テンプレートの操作](../../data/oledb/working-with-ole-db-consumer-templates.md)

@@ -28,33 +28,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e91c03f619be1d0f1d8ad23f3b8d60e1be30cfb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5f610b26c79201f3431b6263a002b59df7456cfe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388066"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082444"
 ---
 # <a name="pcommode"></a>__p__commode
-ファイルの入出力操作に対して既定の*ファイル コミット モード*を指定する `_commode` グローバル変数を指し示します。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-int * __p__commode(  
-   );  
-```  
-  
-## <a name="return-value"></a>戻り値  
- `_commode` グローバル変数へのポインター。  
-  
-## <a name="remarks"></a>コメント  
- `__p__commode` 関数は内部使用専用であり、ユーザー コードから呼び出すことはできません。  
-  
- ファイル コミット モードは重要なデータがディスクに書き込まれるタイミングを指定します。 詳細については、「[fflush](../c-runtime-library/reference/fflush.md)」をご覧ください。  
-  
-## <a name="requirements"></a>必要条件  
-  
-|ルーチンによって返される値|必須ヘッダー|  
-|-------------|---------------------|  
+
+ファイルの入出力操作に対して既定の*ファイル コミット モード*を指定する `_commode` グローバル変数を指し示します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+int * __p__commode(
+   );
+```
+
+## <a name="return-value"></a>戻り値
+
+`_commode` グローバル変数へのポインター。
+
+## <a name="remarks"></a>コメント
+
+`__p__commode` 関数は内部使用専用であり、ユーザー コードから呼び出すことはできません。
+
+ファイル コミット モードは重要なデータがディスクに書き込まれるタイミングを指定します。 詳細については、「[fflush](../c-runtime-library/reference/fflush.md)」をご覧ください。
+
+## <a name="requirements"></a>必要条件
+
+|ルーチンによって返される値|必須ヘッダー|
+|-------------|---------------------|
 |__p\__commode|internal.h|

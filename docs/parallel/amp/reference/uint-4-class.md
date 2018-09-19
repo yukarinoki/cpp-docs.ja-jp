@@ -1,5 +1,5 @@
 ---
-title: uint_4 クラス |Microsoft ドキュメント
+title: uint_4 クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -278,12 +278,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 490242014a907455a9511cd54f5e46a809318691
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fa93e1b7c406e1799946b56e29b9fa32a39b1996
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694395"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106299"
 ---
 # <a name="uint4-class"></a>uint_4 クラス
 4 個の符号なし整数の short ベクターを表します。  
@@ -649,23 +649,23 @@ explicit inline uint_4(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `_V0`  
- 0 の要素を初期化する値。  
+*_V0*<br/>
+0 の要素を初期化する値。  
   
- `_V1`  
- 1 の要素を初期化する値。  
+*_V1*<br/>
+1 要素を初期化する値。  
   
- `_V2`  
- 2 要素を初期化する値。  
+*_V2*<br/>
+2 要素を初期化する値。  
   
- `_V3`  
- 3 の要素を初期化する値。  
+*_V3*<br/>
+3 要素を初期化する値。  
   
- `_V`  
- 初期化の値です。  
+*(_V).*<br/>
+初期化の値。  
   
- `_Other`  
- 初期化するために使用するオブジェクト。  
+*_Other*<br/>
+初期化するために使用するオブジェクト。  
   
 ## <a name=""></a> サイズ 
 

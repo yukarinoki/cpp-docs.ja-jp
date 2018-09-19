@@ -13,17 +13,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0baf70ac7fd4d07958478d2eef455c7dc395e221
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: c43ce60d319c427877b77a043df7c30bd00edc9b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601827"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025881"
 ---
 # <a name="compiler-warning-level-4-c4840"></a>コンパイラの警告 (レベル 4) C4840
 
 > クラスの移植性のない使用*型*' 可変個引数関数に引数として
-  
+
 ## <a name="remarks"></a>Remarks
 
 クラスまたは可変個引数関数に渡される構造体は普通にコピー可能である必要があります。 このようなオブジェクトを渡すときには、コンパイラは単にビットごとのコピーを作成し、コンストラクターまたはデストラクターを呼び出しません。

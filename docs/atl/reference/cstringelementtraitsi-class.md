@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12b75398db6e078f28fab4525da55aaae8193663
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d34277bd3c9b47c5ba9367d19348e43ea263f43b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765295"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089906"
 ---
 # <a name="cstringelementtraitsi-class"></a>CStringElementTraitsI クラス
 
@@ -36,13 +36,13 @@ ms.locfileid: "43765295"
 ## <a name="syntax"></a>構文
 
 ```
-template <typename T, class CharTraits = CDefaultCharTraits<T ::XCHAR>>  
+template <typename T, class CharTraits = CDefaultCharTraits<T ::XCHAR>>
 class CStringElementTraitsI : public CElementTraitsBase<T>
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 コレクションに格納されるデータの型。
 
 ## <a name="members"></a>メンバー
@@ -88,10 +88,10 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*str1*  
+*str1*<br/>
 最初の要素を文字列します。
 
-*str2*  
+*str2*<br/>
 2 番目の文字列要素。
 
 ### <a name="return-value"></a>戻り値
@@ -112,10 +112,10 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*str1*  
+*str1*<br/>
 最初の要素を文字列します。
 
-*str2*  
+*str2*<br/>
 2 番目の文字列要素。
 
 ### <a name="return-value"></a>戻り値
@@ -136,7 +136,7 @@ static ULONG Hash(INARGTYPE str) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*str*  
+*str*<br/>
 文字列の要素。
 
 ### <a name="return-value"></a>戻り値
@@ -161,6 +161,6 @@ typedef T& OUTARGTYPE;
 
 ## <a name="see-also"></a>関連項目
 
-[CElementTraitsBase クラス](../../atl/reference/celementtraitsbase-class.md)   
-[クラスの概要](../../atl/atl-class-overview.md)   
+[CElementTraitsBase クラス](../../atl/reference/celementtraitsbase-class.md)<br/>
+[クラスの概要](../../atl/atl-class-overview.md)<br/>
 [CStringElementTraits クラス](../../atl/reference/cstringelementtraits-class.md)

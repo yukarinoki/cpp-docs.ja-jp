@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72c5ddc9d49488aa4609249cbbdc7842e188cc34
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fb6ee8cd591c4a5b5a4a3701c6974849f9e3238f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760878"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069394"
 ---
 # <a name="cwintraits-class"></a>CWinTraits クラス
 
@@ -45,10 +45,10 @@ template <DWORD t_dwStyle = 0, DWORD t_dwExStyle = 0>  class CWinTraits
 
 #### <a name="parameters"></a>パラメーター
 
-*t_dwStyle*  
+*t_dwStyle*<br/>
 既定の標準のウィンドウ スタイル。
 
-*t_dwExStyle*  
+*t_dwExStyle*<br/>
 既定の拡張ウィンドウ スタイル。
 
 ## <a name="members"></a>メンバー
@@ -68,14 +68,17 @@ template <DWORD t_dwStyle = 0, DWORD t_dwExStyle = 0>  class CWinTraits
 
 ATL では、このテンプレートをウィンドウ スタイルの一般的に使用される組み合わせの 3 つ定義済みの特殊化を提供します。
 
-`CControlWinTraits`  
-標準コントロール ウィンドウの設計されています。 次の標準的なスタイルを使用: WS_CHILD、WS_VISIBLE、WS_CLIPCHILDREN、および WS_CLIPSIBLINGS します。 拡張スタイルはありません。
+- `CControlWinTraits`  
 
-`CFrameWinTraits`  
-標準のフレーム ウィンドウの設計されています。 使用される標準のスタイルが含まれます: WS_OVERLAPPEDWINDOW、WS_CLIPCHILDREN、および WS_CLIPSIBLINGS します。 使用する拡張スタイルが含まれます: WS_EX_APPWINDOW と WS_EX_WINDOWEDGE します。
+   標準コントロール ウィンドウの設計されています。 次の標準的なスタイルを使用: WS_CHILD、WS_VISIBLE、WS_CLIPCHILDREN、および WS_CLIPSIBLINGS します。 拡張スタイルはありません。
 
-`CMDIChildWinTraits`  
-標準の MDI 子ウィンドウに設計されています。 使用される標準のスタイルが含まれます: WS_OVERLAPPEDWINDOW、WS_CHILD、WS_VISIBLE、WS_CLIPCHILDREN、および WS_CLIPSIBLINGS します。 使用する拡張スタイルが含まれます: WS_EX_MDICHILD します。
+- `CFrameWinTraits`  
+
+   標準のフレーム ウィンドウの設計されています。 使用される標準のスタイルが含まれます: WS_OVERLAPPEDWINDOW、WS_CLIPCHILDREN、および WS_CLIPSIBLINGS します。 使用する拡張スタイルが含まれます: WS_EX_APPWINDOW と WS_EX_WINDOWEDGE します。
+
+- `CMDIChildWinTraits`  
+
+   標準の MDI 子ウィンドウに設計されています。 使用される標準のスタイルが含まれます: WS_OVERLAPPEDWINDOW、WS_CHILD、WS_VISIBLE、WS_CLIPCHILDREN、および WS_CLIPSIBLINGS します。 使用する拡張スタイルが含まれます: WS_EX_MDICHILD します。
 
 インスタンスごとに設定するには、その他のスタイルを許容しつつ、ウィンドウ クラスのすべてのインスタンスを使用して、特定のスタイルが設定されていることを確認する場合[CWinTraitsOR](../../atl/reference/cwintraitsor-class.md)代わりにします。
 
@@ -93,7 +96,7 @@ static DWORD GetWndStyle(DWORD dwStyle);
 
 ### <a name="parameters"></a>パラメーター
 
-*dwStyle*  
+*dwStyle*<br/>
 標準的なスタイルのウィンドウの作成に使用します。 場合*dwStyle*が 0 の場合、テンプレートのスタイル値 (`t_dwStyle`) が返されます。 場合*dwStyle* 0 以外の場合、 *dwStyle*が返されます。
 
 ### <a name="return-value"></a>戻り値
@@ -110,7 +113,7 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
 
 ### <a name="parameters"></a>パラメーター
 
-*dwExStyle*  
+*dwExStyle*<br/>
 拡張スタイルのウィンドウの作成に使用します。 場合*dwExStyle*が 0 の場合、テンプレートのスタイル値 (`t_dwExStyle`) が返されます。 場合*dwExStyle* 0 以外の場合、 *dwExStyle*が返されます。
 
 ### <a name="return-value"></a>戻り値
@@ -119,5 +122,5 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
 
 ## <a name="see-also"></a>関連項目
 
-[クラスの概要](../../atl/atl-class-overview.md)   
+[クラスの概要](../../atl/atl-class-overview.md)<br/>
 [ウィンドウの特徴を理解する](../../atl/understanding-window-traits.md)

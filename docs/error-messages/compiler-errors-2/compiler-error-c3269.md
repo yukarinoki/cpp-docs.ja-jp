@@ -1,5 +1,5 @@
 ---
-title: コンパイラ エラー C3269 |Microsoft ドキュメント
+title: コンパイラ エラー C3269 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98e4e2a2df4271a3a0213b8abedc385f22c871aa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 84cb9acdd6444b934e7ec51691d87a6912880de2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249743"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061813"
 ---
 # <a name="compiler-error-c3269"></a>コンパイラ エラー C3269
-'function': マネージまたは WinRTtype のメンバー関数は、'…' で宣言することはできません  
-  
-マネージ クラスと WinRT クラスのメンバー関数では可変長のパラメーター リストを宣言できません。  
-  
-次の例では C3269 を生成し、その修正方法を示しています。  
-  
-```  
-// C3269_2.cpp  
-// compile with: /clr  
-  
-ref struct A  
-{  
-   void func(int i, ...)   // C3269  
-   // try the following line instead  
-   // void func(int i )  
-   {  
-   }  
-};  
-  
-int main()  
-{  
-}  
-```  
+
+'function': マネージまたは WinRTtype のメンバー関数は '...' と共に宣言できません
+
+マネージド クラスと WinRT クラスのメンバー関数では可変長のパラメーター リストを宣言できません。
+
+次の例では C3269 を生成し、その修正方法を示しています。
+
+```
+// C3269_2.cpp
+// compile with: /clr
+
+ref struct A
+{
+   void func(int i, ...)   // C3269
+   // try the following line instead
+   // void func(int i )
+   {
+   }
+};
+
+int main()
+{
+}
+```
