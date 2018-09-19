@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 551ae176504e3bbbca034ca91894ef793ea268fd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5f15fcefe1a18156e4cbe8180138d7b6c1d944e2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584343"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398587"
 ---
 # <a name="includelib-c"></a>includelib (C++)
 
@@ -38,7 +38,7 @@ ms.locfileid: "42584343"
 
 ### <a name="parameters"></a>パラメーター
 
-*name.idl*  
+*name.idl*<br/>
 生成された .idl ファイルの一部として含めるする .idl ファイルの名前。
 
 ## <a name="remarks"></a>Remarks
@@ -63,7 +63,7 @@ ms.locfileid: "42584343"
 |||
 |-|-|
 |**対象**|任意の場所|
-|**反復可能**|[はい]|
+|**反復可能**|はい|
 |**必要な属性**|なし|
 |**無効な属性**|なし|
 
@@ -71,9 +71,9 @@ ms.locfileid: "42584343"
 
 ## <a name="see-also"></a>関連項目
 
-[IDL 属性](../windows/idl-attributes.md)  
-[スタンドアロン属性](../windows/stand-alone-attributes.md)  
-[import](../windows/import.md)  
-[importidl](../windows/importidl.md)  
-[include](../windows/include-cpp.md)  
+[IDL 属性](../windows/idl-attributes.md)<br/>
+[スタンドアロン属性](../windows/stand-alone-attributes.md)<br/>
+[import](../windows/import.md)<br/>
+[importidl](../windows/importidl.md)<br/>
+[include](../windows/include-cpp.md)<br/>
 [importlib](../windows/importlib.md)  

@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dbfcedd2bc17e21b94de46c63edd95bf58f576a7
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 836017dcec969db85a0725a49193d7b8e8a88875
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714454"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402851"
 ---
 # <a name="arrays-c-component-extensions"></a>配列 (C++ コンポーネント拡張)
 
@@ -65,16 +65,16 @@ ms.locfileid: "45714454"
 *修飾子*<br/>
 (省略可能)1 つ以上のこれらのストレージ クラス指定子:[変更可能な](../cpp/mutable-data-members-cpp.md)、[揮発性](../cpp/volatile-cpp.md)、 [const](../cpp/const-cpp.md)、 [extern](../cpp/using-extern-to-specify-linkage.md)、[静的](../cpp/static-members-cpp.md).
 
-*配列型*  
+*配列型*<br/>
 配列変数の型。 有効な種類は Windows ランタイム クラスと基本型、ref クラスと構造体、値クラスと構造体、およびネイティブ ポインター (`type*`)。
 
 *rank*<br/>
 (省略可能)配列の次元の数。 1 にする必要があります。
 
-*identifier*  
+*identifier*<br/>
 配列変数の名前。
 
-*初期化の種類*  
+*初期化の種類*<br/>
 配列を初期化する値の型。 通常、*配列型*と*初期化型*は同じ型。 ただし、型が異なる可能性への変換がある場合*初期化型*に*配列型*— たとえば場合、*初期化型*から派生*配列型*します。
 
 *初期化リスト*<br/>
@@ -121,19 +121,19 @@ int main() {
 *修飾子*<br/>
 (省略可能)1 つ以上のこれらのストレージ クラス指定子:[変更可能な](../cpp/mutable-data-members-cpp.md)、[揮発性](../cpp/volatile-cpp.md)、 [const](../cpp/const-cpp.md)、 [extern](../cpp/using-extern-to-specify-linkage.md)、[静的](../cpp/static-members-cpp.md).
 
-*配列型*  
+*配列型*<br/>
 配列変数の型。 有効な種類は Windows ランタイム クラスと基本型、ref クラスと構造体、値クラスと構造体は、ネイティブ ポインター (`type*`)、およびネイティブ POD (plain old データ) の型。
 
 *rank*<br/>
 (省略可能)配列の次元の数。 既定値は 1 になります。最大値は、32 です。 配列の各次元では配列自体です。
 
-*identifier*  
+*identifier*<br/>
 配列変数の名前。
 
-*初期化の種類*  
+*初期化の種類*<br/>
 配列を初期化する値の型。 通常、*配列型*と*初期化型*は同じ型。 ただし、型が異なる可能性への変換がある場合*初期化型*に*配列型*— たとえば場合、*初期化型*から派生*配列型*します。
 
-*ランクのサイズの一覧*  
+*ランクのサイズの一覧*<br/>
 配列の各次元のサイズのコンマ区切りの一覧。 また場合、*初期化リスト*パラメーターを指定すると、コンパイラは、各次元のサイズを推測できると*ランクのサイズの一覧*を省略できます。
 
 *初期化リスト*<br/>
