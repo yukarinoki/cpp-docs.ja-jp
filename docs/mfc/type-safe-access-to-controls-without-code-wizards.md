@@ -1,5 +1,5 @@
 ---
-title: コード ウィザードを使用しないコントロールへのタイプ セーフ アクセス |Microsoft ドキュメント
+title: コード ウィザードを使用しないコントロールへのタイプ セーフ アクセス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,23 +15,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb861995c16411bb58e3051c5ffc78f75931ae8f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2685c946b9ee1c738ee83f9413b7fd955857febb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385766"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438341"
 ---
 # <a name="type-safe-access-to-controls-without-code-wizards"></a>コード ウィザードを使用しない、コントロールへのタイプ セーフ アクセス
-コントロールへのタイプ セーフなアクセスを作成するための最初の方法は、クラスの戻り値の型をキャストするインライン メンバー関数を使用して`CWnd`の`GetDlgItem`適切な C++ コントロール型に、この例のように、メンバー関数。  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#50](../mfc/codesnippet/cpp/type-safe-access-to-controls-without-code-wizards_1.cpp)]  
-  
- このメンバー関数を使用して、次のようなコードでタイプ セーフな方法でコントロールにアクセスできます。  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#51](../mfc/codesnippet/cpp/type-safe-access-to-controls-without-code-wizards_2.cpp)]  
-  
-## <a name="see-also"></a>関連項目  
- [ダイアログ ボックスのコントロールへのタイプ セーフ アクセス](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)   
- [コード ウィザードを使用した、コントロールへのタイプ セーフ アクセス](../mfc/type-safe-access-to-controls-with-code-wizards.md)
+
+タイプ セーフ アクセス コントロールを作成する最初のアプローチは、クラスの戻り値の型をキャストするインライン メンバー関数を使用して`CWnd`の`GetDlgItem`この例のように、適切な C++ コントロール型にメンバー関数。
+
+[!code-cpp[NVC_MFCControlLadenDialog#50](../mfc/codesnippet/cpp/type-safe-access-to-controls-without-code-wizards_1.cpp)]
+
+このメンバー関数は、コードを次のようなタイプ セーフな方法でコントロールにアクセスし使用できます。
+
+[!code-cpp[NVC_MFCControlLadenDialog#51](../mfc/codesnippet/cpp/type-safe-access-to-controls-without-code-wizards_2.cpp)]
+
+## <a name="see-also"></a>関連項目
+
+[ダイアログ ボックスのコントロールへのタイプ セーフ アクセス](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)<br/>
+[コード ウィザードを使用した、コントロールへのタイプ セーフ アクセス](../mfc/type-safe-access-to-controls-with-code-wizards.md)
 

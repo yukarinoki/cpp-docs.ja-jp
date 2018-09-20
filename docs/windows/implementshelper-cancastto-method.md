@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ab1f2c16f7329f455fbd1fea525b17c9cc433a36
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9487ba4e05a0094d852b0db0c9c39009c027dc9e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593156"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423742"
 ---
 # <a name="implementshelpercancastto-method"></a>ImplementsHelper::CanCastTo メソッド
 
@@ -44,13 +44,13 @@ HRESULT CanCastTo(
 
 ### <a name="parameters"></a>パラメーター
 
-*riid*  
+*riid*<br/>
 インターフェイス ID への参照
 
-*ppv*  
+*ppv*<br/>
 この操作が成功した場合、インターフェイスへのポインターが指定された*riid*または*iid*します。
 
-*iid*  
+*iid*<br/>
 インターフェイス ID への参照
 
 ## <a name="return-value"></a>戻り値
@@ -69,5 +69,5 @@ HRESULT CanCastTo(
 
 ## <a name="see-also"></a>関連項目
 
-[ImplementsHelper 構造体](../windows/implementshelper-structure.md)  
+[ImplementsHelper 構造体](../windows/implementshelper-structure.md)<br/>
 [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

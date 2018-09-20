@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a7f5879a3a76e9af795a5dfc808423b43515662a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 496b1ccac5b998ba08f4e2eccfe31ffd18f2c37d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609302"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431789"
 ---
 # <a name="moduleregisterwinrtobject-method"></a>Module::RegisterWinRTObject メソッド
 
@@ -39,16 +39,16 @@ HRESULT RegisterWinRTObject(const wchar_t* serverName,
 
 ### <a name="parameters"></a>パラメーター
 
-*サーバー名*  
+*サーバー名*<br/>
 この操作によって影響を受けるオブジェクトのサブセットを指定する名前。
 
-*activatableClassIds*  
+*activatableClassIds*<br/>
 登録のアクティブ化可能な Clsid の配列。
 
-*Cookie*  
+*Cookie*<br/>
 登録済みのクラス オブジェクトを識別する値。 この値は、登録を取り消すに後で使用されます。
 
-*count*  
+*count*<br/>
 登録するオブジェクトの数。
 
 ## <a name="return-value"></a>戻り値
@@ -62,4 +62,5 @@ HRESULT RegisterWinRTObject(const wchar_t* serverName,
 **名前空間:** Microsoft::WRL
 
 ## <a name="see-also"></a>関連項目
+
 [Module クラス](../windows/module-class.md)

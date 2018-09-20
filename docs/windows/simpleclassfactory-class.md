@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b20cbb906676705113bd1a84884cc5719b8272bf
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: 4a3e262567927b818072c1e05acd18aa64cbaa6c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691446"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446517"
 ---
 # <a name="simpleclassfactory-class"></a>SimpleClassFactory クラス
 
@@ -39,7 +39,7 @@ class SimpleClassFactory : public ClassFactory<>;
 
 ### <a name="parameters"></a>パラメーター
 
-*ベース*  
+*ベース*<br/>
 基本クラスです。
 
 ## <a name="remarks"></a>Remarks
@@ -102,15 +102,15 @@ STDMETHOD( CreateInstance )(
 
 #### <a name="parameters"></a>パラメーター
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 必要があります`nullptr`、それ以外の戻り値は CLASS_E_NOAGGREGATION します。
 
 SimpleClassFactory には、集計をサポートしていません。 集計がサポートされており、作成されるオブジェクト、集計の一部であった*pUnkOuter*制御へのポインターになります`IUnknown`集計のインターフェイス。
 
-*riid*  
+*riid*<br/>
 インターフェイスを作成するには、オブジェクトの ID。
 
-*ppvObject*  
+*ppvObject*<br/>
 ときにこの操作が完了したらで指定されたオブジェクトのインスタンスへのポインター、 *riid*パラメーター。
 
 ### <a name="return-value"></a>戻り値

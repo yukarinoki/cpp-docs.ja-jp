@@ -20,60 +20,64 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 059f56485dee9668105c7e44fdee6fb910844810
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: be6e791fb6e4249a05953b1a521dda72abc5db79
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46018029"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443996"
 ---
 # <a name="autohandleswap"></a>auto_handle::swap
-別のオブジェクトを交換`auto_handle`します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-void swap(  
-   auto_handle<_element_type> % _right  
-);  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
+
+別のオブジェクトを交換`auto_handle`します。
+
+## <a name="syntax"></a>構文
+
+```
+void swap(
+   auto_handle<_element_type> % _right
+);
+```
+
+#### <a name="parameters"></a>パラメーター
+
 *(_r)*<br/>
-`auto_handle`交換先のオブジェクトします。  
-  
-## <a name="example"></a>例  
-  
-```  
-// msl_auto_handle_swap.cpp  
-// compile with: /clr  
-#include <msclr\auto_handle.h>  
-  
-using namespace System;  
-using namespace msclr;  
-  
-int main() {  
-   auto_handle<String> s1 = "string one";  
-   auto_handle<String> s2 = "string two";  
-  
-   Console::WriteLine( "s1 = '{0}', s2 = '{1}'",  
-      s1->ToString(), s2->ToString() );  
-   s1.swap( s2 );  
-   Console::WriteLine( "s1 = '{0}', s2 = '{1}'",  
-      s1->ToString(), s2->ToString() );  
-}  
-```  
-  
-```Output  
-s1 = 'string one', s2 = 'string two'  
-s1 = 'string two', s2 = 'string one'  
-```  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー ファイル** \<msclr\auto_handle.h >  
-  
- **Namespace** msclr  
-  
-## <a name="see-also"></a>関連項目  
- [auto_handle のメンバー](../dotnet/auto-handle-members.md)   
- [swap 関数 (auto_handle)](../dotnet/swap-function-auto-handle.md)
+`auto_handle`交換先のオブジェクトします。
+
+## <a name="example"></a>例
+
+```
+// msl_auto_handle_swap.cpp
+// compile with: /clr
+#include <msclr\auto_handle.h>
+
+using namespace System;
+using namespace msclr;
+
+int main() {
+   auto_handle<String> s1 = "string one";
+   auto_handle<String> s2 = "string two";
+
+   Console::WriteLine( "s1 = '{0}', s2 = '{1}'",
+      s1->ToString(), s2->ToString() );
+   s1.swap( s2 );
+   Console::WriteLine( "s1 = '{0}', s2 = '{1}'",
+      s1->ToString(), s2->ToString() );
+}
+```
+
+```Output
+s1 = 'string one', s2 = 'string two'
+s1 = 'string two', s2 = 'string one'
+```
+
+## <a name="requirements"></a>要件
+
+**ヘッダー ファイル** \<msclr\auto_handle.h >
+
+**Namespace** msclr
+
+## <a name="see-also"></a>関連項目
+
+[auto_handle のメンバー](../dotnet/auto-handle-members.md)<br/>
+[swap 関数 (auto_handle)](../dotnet/swap-function-auto-handle.md)

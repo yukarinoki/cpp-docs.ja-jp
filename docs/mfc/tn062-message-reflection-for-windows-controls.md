@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce5d24321f007139401c46e07d19e006d4e1dcd3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 5cb576ba6ce532bce15b9dda2aa598649044c2d8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215454"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378015"
 ---
 # <a name="tn062-message-reflection-for-windows-controls"></a>テクニカル ノート 62: Windows コントロールへのメッセージ リフレクション (メッセージ返送)
 
@@ -174,5 +174,5 @@ ON_NOTIFY_REFLECT と ON_CONTROL_REFLECT マクロでは、特定のメッセー
 
 ## <a name="see-also"></a>関連項目
 
-[番号順テクニカル ノート](../mfc/technical-notes-by-number.md)  
-[カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)  
+[番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
+[カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)

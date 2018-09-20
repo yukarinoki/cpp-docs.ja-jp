@@ -24,108 +24,126 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 244853c3e0e8e16e3de59017b04fb17e64b8efac
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 7ec76a554068dbec050078a0e0558cecd583410c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338362"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429209"
 ---
 # <a name="icommandui-interface"></a>ICommandUI インターフェイス
-ユーザー インターフェイスのコマンドを管理します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-interface class ICommandUI  
-```  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="public-methods"></a>パブリック メソッド  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[icommandui__Check](#check)|このコマンドのユーザー インターフェイス項目を適切なチェックの状態に設定します。|  
-|[ICommandUI::ContinueRouting](#continuerouting)|ハンドラーのチェーンに現在のメッセージのルーティングを続行するコマンド ルーティング メカニズムに指示します。|  
-|[ICommandUI::Enabled](#enabled)|有効またはこのコマンドのユーザー インターフェイス項目を無効にします。|  
-|[ICommandUI::ID](#id)|によって表されるユーザー インターフェイス オブジェクトの ID を取得、`ICommandUI`オブジェクト。|  
-|[ICommandUI::Index](#index)|によって表されるユーザー インターフェイス オブジェクトのインデックスを取得、`ICommandUI`オブジェクト。|  
-|[ICommandUI::Radio](#radio)|このコマンドのユーザー インターフェイス項目を適切なチェックの状態に設定します。|  
-|[ICommandUI::Text](#text)|このコマンドのユーザー インターフェイスの項目のテキストを設定します。|  
-  
-## <a name="remarks"></a>Remarks  
- このインターフェイスは、ユーザー インターフェイスのコマンドを管理するメソッドとプロパティを提供します。 `ICommandUI` ような[CCmdUI クラス](../../mfc/reference/ccmdui-class.md)ことを除いて、`ICommandUI`の .NET コンポーネントと相互運用可能な MFC アプリケーションで使用します。  
-  
- `ICommandUI` ON_UPDATE_COMMAND_UI ハンドラー内で使用されて、[し、ICommandTarget](../../mfc/reference/icommandtarget-interface.md)-クラスを派生します。 有効になっている、各メニュー項目、メニューが表示されます (選択または数回のクリック)、アプリケーションのユーザーがアクティブ化または無効にします。 各メニュー コマンドのターゲットは、ON_UPDATE_COMMAND_UI ハンドラーを実装することでこの情報を提供します。 アプリケーション内のコマンドのユーザー インターフェイス オブジェクトごとに、[プロパティ] ウィンドウを使用して、メッセージ マップ エントリと各ハンドラーの関数プロトタイプを作成します。  
-  
- 方法の詳細については`ICommandUI`コマンド ルーティングのインターフェイスを使用してを参照してください[方法: Windows フォーム コントロールにコマンド ルーティングを追加](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)します。  
-  
- Windows フォームの使用に関する詳細については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)します。  
-  
- MFC でのユーザー インターフェイスのコマンドを管理する方法の詳細については、次を参照してください。 [CCmdUI クラス](../../mfc/reference/ccmdui-class.md)します。  
-  
-## <a name="check"></a> ICommandUI::Check  
+
+ユーザー インターフェイスのコマンドを管理します。
+
+## <a name="syntax"></a>構文
+
+```
+interface class ICommandUI
+```
+
+## <a name="members"></a>メンバー
+
+### <a name="public-methods"></a>パブリック メソッド
+
+|名前|説明|
+|----------|-----------------|
+|[icommandui__Check](#check)|このコマンドのユーザー インターフェイス項目を適切なチェックの状態に設定します。|
+|[ICommandUI::ContinueRouting](#continuerouting)|ハンドラーのチェーンに現在のメッセージのルーティングを続行するコマンド ルーティング メカニズムに指示します。|
+|[ICommandUI::Enabled](#enabled)|有効またはこのコマンドのユーザー インターフェイス項目を無効にします。|
+|[ICommandUI::ID](#id)|によって表されるユーザー インターフェイス オブジェクトの ID を取得、`ICommandUI`オブジェクト。|
+|[ICommandUI::Index](#index)|によって表されるユーザー インターフェイス オブジェクトのインデックスを取得、`ICommandUI`オブジェクト。|
+|[ICommandUI::Radio](#radio)|このコマンドのユーザー インターフェイス項目を適切なチェックの状態に設定します。|
+|[ICommandUI::Text](#text)|このコマンドのユーザー インターフェイスの項目のテキストを設定します。|
+
+## <a name="remarks"></a>Remarks
+
+このインターフェイスは、ユーザー インターフェイスのコマンドを管理するメソッドとプロパティを提供します。 `ICommandUI` ような[CCmdUI クラス](../../mfc/reference/ccmdui-class.md)ことを除いて、`ICommandUI`の .NET コンポーネントと相互運用可能な MFC アプリケーションで使用します。
+
+`ICommandUI` ON_UPDATE_COMMAND_UI ハンドラー内で使用されて、[し、ICommandTarget](../../mfc/reference/icommandtarget-interface.md)-クラスを派生します。 有効になっている、各メニュー項目、メニューが表示されます (選択または数回のクリック)、アプリケーションのユーザーがアクティブ化または無効にします。 各メニュー コマンドのターゲットは、ON_UPDATE_COMMAND_UI ハンドラーを実装することでこの情報を提供します。 アプリケーション内のコマンドのユーザー インターフェイス オブジェクトごとに、[プロパティ] ウィンドウを使用して、メッセージ マップ エントリと各ハンドラーの関数プロトタイプを作成します。
+
+方法の詳細については`ICommandUI`コマンド ルーティングのインターフェイスを使用してを参照してください[方法: Windows フォーム コントロールにコマンド ルーティングを追加](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)します。
+
+Windows フォームの使用に関する詳細については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)します。
+
+MFC でのユーザー インターフェイスのコマンドを管理する方法の詳細については、次を参照してください。 [CCmdUI クラス](../../mfc/reference/ccmdui-class.md)します。
+
+## <a name="check"></a> ICommandUI::Check
+
 このコマンドのユーザー インターフェイス項目を適切なチェックの状態に設定します。
 ```
 property UICheckState Check;
 ```
-## <a name="remarks"></a>Remarks  
-このプロパティは、このコマンドのユーザー インターフェイス項目を適切なチェックの状態に設定します。 チェックは、次の値に設定します。  
-- 0 をオフにします  
-- 1 つのチェック  
-- 不確定な設定 2  
+## <a name="remarks"></a>Remarks
 
-## <a name="continuerouting"></a> ICommandUI::ContinueRouting   
+このプロパティは、このコマンドのユーザー インターフェイス項目を適切なチェックの状態に設定します。 チェックは、次の値に設定します。
+- 0 をオフにします
+- 1 つのチェック
+- 不確定な設定 2
+
+## <a name="continuerouting"></a> ICommandUI::ContinueRouting
+
 ハンドラーのチェーンに現在のメッセージのルーティングを続行するコマンドのルーティング メカニズムに指示します。
 ```
 void ContinueRouting();
 ```
 ## <a name="remarks"></a>Remarks
+
 これは、高度なメンバー関数は FALSE を返す ON_COMMAND_EX ハンドラーと組み合わせて使用する必要があります。 詳細については、テクニカル ノート TN006 を参照してください: メッセージ マップです。
 
-## <a name="enabled"></a> ICommandUI::Enabled 
+## <a name="enabled"></a> ICommandUI::Enabled
+
 有効またはこのコマンドのユーザー インターフェイス項目を無効にします。
 ```
 property bool Enabled;
 ```
 ## <a name="remarks"></a>Remarks
+
 このプロパティは、有効または、このコマンドのユーザー インターフェイス項目を無効にします。 有効には、有効にする項目を無効にする場合は FALSE true に設定されます。
 
-## <a name="id"></a> ICommandUI::ID  
+## <a name="id"></a> ICommandUI::ID
+
 ICommandUI オブジェクトによって表されるユーザー インターフェイス オブジェクトの ID を取得します。
 ```
 property unsigned int ID;
 ```
 ## <a name="remarks"></a>Remarks
+
 このプロパティは、メニュー項目、ツール バー ボタン、または ICommandUI オブジェクトによって表されるその他のユーザー インターフェイス オブジェクトの ID (ハンドル) を取得します。
 
-## <a name="index"></a> ICommandUI::Index   
+## <a name="index"></a> ICommandUI::Index
+
 ICommandUI オブジェクトによって表されるユーザー インターフェイス オブジェクトのインデックスを取得します。
 ```
 property unsigned int Index;
 ```
 ## <a name="remarks"></a>Remarks
+
 このプロパティは、メニュー項目、ツール バー ボタン、または ICommandUI オブジェクトによって表されるその他のユーザー インターフェイス オブジェクトのインデックス (ハンドル) を取得します。
 
-## <a name="radio"></a> ICommandUI::Radio 
+## <a name="radio"></a> ICommandUI::Radio
+
 このコマンドのユーザー インターフェイス項目を適切なチェックの状態に設定します。
 ```
 property bool Radio;
 ```
 ## <a name="remarks"></a>Remarks
+
 このプロパティは、このコマンドのユーザー インターフェイス項目を適切なチェックの状態に設定します。 アイテムを有効にする場合は true にセット オプションそれ以外の場合は FALSE です。
 
-## <a name="text"></a> ICommandUI::Text 
+## <a name="text"></a> ICommandUI::Text
+
 このコマンドのユーザー インターフェイスの項目のテキストを設定します。
 ```
 property String^ Text;
 ```
 ## <a name="remarks"></a>Remarks
+
 このプロパティは、このコマンドのユーザー インターフェイスの項目のテキストを設定します。 テキストをテキスト文字列のハンドルに設定します。
 
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** afxwinforms.h (アセンブリ atlmfc\lib\mfcmifc80.dll で定義)  
-  
-## <a name="see-also"></a>関連項目  
- [CCmdUI クラス](../../mfc/reference/ccmdui-class.md)
+## <a name="requirements"></a>要件
+
+**ヘッダー:** afxwinforms.h (アセンブリ atlmfc\lib\mfcmifc80.dll で定義)
+
+## <a name="see-also"></a>関連項目
+
+[CCmdUI クラス](../../mfc/reference/ccmdui-class.md)

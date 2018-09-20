@@ -1,5 +1,5 @@
 ---
-title: 'A:  例 |Microsoft ドキュメント'
+title: 'A:  例 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,13 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c67c29bbded76f4ef44337e557b58b6bad828947
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3747b8a73c372ae3226b1f0c4f762da34dc40eab
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695419"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446245"
 ---
 # <a name="a-examples"></a>A:  使用例
-このドキュメントで定義された構成要素の例を次に示します。 ディレクティブに続くステートメントは、必要な場合にのみ複合、非複合ステートメントは、前に、ディレクティブに関してインデントことに注意してください。
+
+このドキュメントで定義された構成要素の例を次に示します。 ディレクティブに続くステートメントは、必要な場合にのみ複合と、それに先行するディレクティブに関して非複合ステートメントをインデントすることに注意してください。

@@ -1,5 +1,5 @@
 ---
-title: DELETEITEMSTRUCT 構造体 |Microsoft ドキュメント
+title: DELETEITEMSTRUCT 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,52 +16,57 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c844ad428143c82e8214eab74262b326bf2c9a4
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: fb5b9d710bef136893c66208480056f6bc6390d3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37123241"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429709"
 ---
 # <a name="deleteitemstruct-structure"></a>DELETEITEMSTRUCT 構造体
-`DELETEITEMSTRUCT`構造が削除されたオーナー描画リスト ボックスまたはコンボ ボックス項目について説明します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-typedef struct tagDELETEITEMSTRUCT { /* ditms */  
-    UINT CtlType;  
-    UINT CtlID;  
-    UINT itemID;  
-    HWND hwndItem;  
-    UINT itemData;  
-} DELETEITEMSTRUCT;  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
- *CtlType*  
- ODT_LISTBOX (オーナー描画リスト ボックス、) または ODT_COMBOBOX (オーナー描画コンボ ボックス、) を指定します。  
-  
- *CtlID*  
- リスト ボックスまたはコンボ ボックスの識別子を指定します。  
-  
- *itemID*  
- リスト ボックスまたはコンボ ボックスの削除された項目のインデックスを指定します。  
-  
- *hwndItem*  
- コントロールを識別します。  
-  
- *取得*  
- アイテムのアプリケーション定義のデータを指定します。 コントロールにこの値は、 *lParam*リスト ボックスまたはコンボ ボックスに、項目を追加、メッセージのパラメーターです。  
-  
-## <a name="remarks"></a>Remarks  
- リスト ボックスまたはコンボ ボックスから、またはリスト ボックスまたはコンボ ボックスが破棄されるときに項目が削除されると、Windows は、削除される各項目の所有者を WM_DELETEITEM メッセージを送信します。 *LParam*メッセージのパラメーターには、この構造体へのポインターが含まれています。  
-  
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** atldbcli.h  
-  
-## <a name="see-also"></a>関連項目  
- [構造体、スタイル、コールバック、およびメッセージ マップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem)
+
+`DELETEITEMSTRUCT`構造体が、削除されたオーナー描画リスト ボックスまたはコンボ ボックス項目について説明します。
+
+## <a name="syntax"></a>構文
+
+```
+typedef struct tagDELETEITEMSTRUCT { /* ditms */
+    UINT CtlType;
+    UINT CtlID;
+    UINT itemID;
+    HWND hwndItem;
+    UINT itemData;
+} DELETEITEMSTRUCT;
+```
+
+#### <a name="parameters"></a>パラメーター
+
+*CtlType*<br/>
+ODT_LISTBOX (オーナー描画リスト ボックス、) または ODT_COMBOBOX (オーナー描画コンボ ボックス、) を指定します。
+
+*CtlID*<br/>
+リスト ボックスまたはコンボ ボックスの識別子を指定します。
+
+*アイテム Id*<br/>
+リスト ボックスまたはコンボ ボックスの削除された項目のインデックスを指定します。
+
+*hwndItem*<br/>
+コントロールを識別します。
+
+*取得*<br/>
+項目のデータをアプリケーション定義を指定します。 この値は、コントロールで、 *lParam*項目をリスト ボックスまたはコンボ ボックスに追加するメッセージのパラメーター。
+
+## <a name="remarks"></a>Remarks
+
+リスト ボックスまたはコンボ ボックスから、またはリスト ボックスまたはコンボ ボックスが破棄されるときに項目が削除されると、Windows は、削除された各項目の所有者に WM_DELETEITEM メッセージを送信します。 *LParam*メッセージのパラメーターには、この構造体へのポインターが含まれています。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** atldbcli.h
+
+## <a name="see-also"></a>関連項目
+
+[構造体、スタイル、コールバック関数とメッセージ マップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
+[CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem)
 
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 00ef28954a686dac72c8b7f55b86c88313e74643
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 566b21c911ba99d19fb16b564d0748cfcfd1eb71
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719721"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435975"
 ---
 # <a name="rdx"></a>rdx
 
@@ -40,13 +40,13 @@ ms.locfileid: "45719721"
 
 ### <a name="parameters"></a>パラメーター
 
-*key*  
+*key*<br/>
 作成または開かれたキーの名前。
 
-*valuename*  
+*valuename*<br/>
 (省略可能)設定する値のフィールドを指定します。 キーにもこの名前の値のフィールドがまだ存在しない場合は、追加されます。
 
-*regtype です。*  
+*regtype です。*<br/>
 追加されるレジストリ キーの型。 次のいずれかを指定できます: `text`、 `dword`、 `binary`、または`CString`します。
 
 ## <a name="remarks"></a>Remarks
@@ -93,5 +93,5 @@ public:
 
 ## <a name="see-also"></a>関連項目
 
-[COM 属性](../windows/com-attributes.md)  
+[COM 属性](../windows/com-attributes.md)<br/>
 [registration_script](../windows/registration-script.md)  

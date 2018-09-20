@@ -1,5 +1,5 @@
 ---
-title: 現在のビューの管理 |Microsoft ドキュメント
+title: 現在のビューの管理 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,20 +21,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09d29f4bc0b62e5824209759d45e63c1d9e2daa6
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: ca9738f9b6083ef88c2f72e1608121f849f8e909
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928741"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425376"
 ---
 # <a name="managing-the-current-view"></a>現在のビューの管理
-フレーム ウィンドウの既定の実装の一部として、フレーム ウィンドウを現在アクティブなビューの追跡を保持します。 フレーム ウィンドウには、分割ウィンドウなど、複数のビューが含まれている場合、現在のビューは、使用中で最新のビューがします。 アクティブなビューは、Windows または現在の入力フォーカスのアクティブ ウィンドウの依存しません。  
-  
- 変更すると、アクティブなビュー、フレームワークは、呼び出すことによって、現在のビューをユーザーに通知の[OnActivateView](../mfc/reference/cview-class.md#onactivateview)メンバー関数。 表示されているかどうかを指定するアクティブ化または確認するには非アクティブ化`OnActivateView`の*bActivate*パラメーター。 既定では、`OnActivateView`アクティブ化を現在のビューにフォーカスを設定します。 オーバーライドできます`OnActivateView`ビューが非アクティブ化または再アクティブ化したときに、特別な処理を実行します。 たとえば、アクティブなビューを非アクティブな他のビューから区別するために特別な視覚的な手掛かりを提供することができます。  
-  
- フレーム ウィンドウは」の説明に従って、現在の (アクティブ) ビューをコマンドに転送[コマンド ルーティング](../mfc/command-routing.md)、標準のコマンド ルーティングの一部として。  
-  
-## <a name="see-also"></a>関連項目  
- [フレーム ウィンドウの使用](../mfc/using-frame-windows.md)
+
+フレーム ウィンドウの既定の実装の一部として、フレーム ウィンドウを現在アクティブなビューの追跡を保持します。 フレーム ウィンドウには、分割ウィンドウで、たとえば、複数のビューが含まれている場合、現在のビューは、使用中で最新のビューが。 アクティブなビューでは、Windows または現在の入力フォーカスのアクティブ ウィンドウ依存しません。
+
+変更すると、アクティブなビュー、フレームワークは、呼び出すことによって、現在のビューの[OnActivateView](../mfc/reference/cview-class.md#onactivateview)メンバー関数。 表示されているかどうかを確認するアクティブ化または非アクティブに調べることで`OnActivateView`の*bActivate*パラメーター。 既定では、`OnActivateView`のアクティブ化に関する現在のビューにフォーカスを設定します。 オーバーライドできます`OnActivateView`ビューが非アクティブ化または再アクティブ化したときに、特別な処理を実行します。 たとえば、非アクティブで、その他のビューから、アクティブなビューを区別するために特別な視覚的な手掛かりを提供します。
+
+フレーム ウィンドウは」の説明に従ってコマンドを現在の (アクティブ) のビューを転送[コマンド ルーティング](../mfc/command-routing.md)、標準のコマンド ルーティングの一部として。
+
+## <a name="see-also"></a>関連項目
+
+[フレーム ウィンドウの使用](../mfc/using-frame-windows.md)
 

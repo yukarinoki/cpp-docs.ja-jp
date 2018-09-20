@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 156191d09c88d8f19b3fe73108bcbca390b23f6e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ab2c857451e399e56e69d79240d4ace023a8b301
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760204"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424083"
 ---
 # <a name="basic-cstring-operations"></a>CString の基本操作
 
@@ -112,8 +112,8 @@ CString cs("meow");
 
 ## <a name="see-also"></a>関連項目
 
-[文字列 (ATL と MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
-[CStringT クラス](../atl-mfc-shared/reference/cstringt-class.md)   
-[テンプレートの特殊化](../cpp/template-specialization-cpp.md)   
+[文字列 (ATL と MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
+[CStringT クラス](../atl-mfc-shared/reference/cstringt-class.md)<br/>
+[クラス テンプレートの部分的特殊化](../cpp/template-specialization-cpp.md)<br/>
 [方法: さまざまな文字列型間で変換する](../text/how-to-convert-between-various-string-types.md)
 

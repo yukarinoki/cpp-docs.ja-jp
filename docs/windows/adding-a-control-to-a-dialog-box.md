@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e60c64777ea4b5726721a267bcdd700cd71b4214
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 9ad87e80d3301eaeda7a0599c3e484046092ed60
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317902"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446466"
 ---
 # <a name="adding-a-control-to-a-dialog-box-c"></a>コントロールの追加 ダイアログ ボックス (C++)
 
@@ -52,6 +52,6 @@ Win32
 
 ## <a name="see-also"></a>関連項目
 
-[ダイアログ ボックスのコントロール](../windows/controls-in-dialog-boxes.md)  
-[ダイアログ ボックス コントロールへのイベント ハンドラーの追加](../windows/adding-event-handlers-for-dialog-box-controls.md)  
+[ダイアログ ボックスのコントロール](../windows/controls-in-dialog-boxes.md)<br/>
+[ダイアログ ボックス コントロールへのイベント ハンドラーの追加](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
 [ダイアログ ボックス コントロールおよび変数の型](../ide/dialog-box-controls-and-variable-types.md)

@@ -1,5 +1,5 @@
 ---
-title: 'TN044: MFC の DBCS サポート |Microsoft ドキュメント'
+title: 'TN044: MFC の DBCS サポート |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 280c008bf6d0f82149b382da2ca6e3d20cb28846
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 524e5dd86560afd660ebb2352b1c92111ddd72d5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380306"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442007"
 ---
 # <a name="tn044-mfc-support-for-dbcs"></a>テクニカル ノート 44: MFC の DBCS サポート
-このテクニカル ノートでは、「2 バイト文字セット」または DBCS の MFC でのサポートについて説明します。 この情報だけでなくについては MFC の UNICODE をで使用できるようになりました、*クラス ライブラリ リファレンス*です。  
-  
-## <a name="see-also"></a>関連項目  
- [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   
- [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
+
+このテクニカル ノートでは、「2 バイト文字セット」、または DBCS の MFC のサポートについて説明します。 この情報だけでなく UNICODE をで使用できるようになりました MFC のについて、*クラス ライブラリ リファレンス*します。
+
+## <a name="see-also"></a>関連項目
+
+[番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
+[カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
 

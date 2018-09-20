@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 257ca11dcc44b22d6ddbb5043315d29a70377148
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ebebd8d0b6dc53ef5d83374c329ebe35d23f7fe8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313950"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443541"
 ---
 # <a name="how-to-specify-include-directories-for-resources-c"></a>方法: 指定 (C++) のリソースのインクルード ディレクトリ
 
@@ -40,8 +40,8 @@ Win32
 
 ## <a name="see-also"></a>関連項目
 
-[[リソース インクルード] ダイアログ ボックス](../windows/resource-includes-dialog-box.md)  
-[テクニカル ノート 35: Visual C++ における複数のリソース ファイルとヘッダー ファイルの使用](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)  
-[シンボル: リソース識別子](../windows/symbols-resource-identifiers.md)  
-[リソース ファイル](../windows/resource-files-visual-studio.md)  
+[[リソース インクルード] ダイアログ ボックス](../windows/resource-includes-dialog-box.md)<br/>
+[テクニカル ノート 35: Visual C++ における複数のリソース ファイルとヘッダー ファイルの使用](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)<br/>
+[シンボル: リソース識別子](../windows/symbols-resource-identifiers.md)<br/>
+[リソース ファイル](../windows/resource-files-visual-studio.md)<br/>
 [リソース エディター](../windows/resource-editors.md)

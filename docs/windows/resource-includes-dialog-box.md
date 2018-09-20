@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1263b5037d9e5ed3cf81eaa55f6e4accb8737e6b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 626327fec8efda873551e6d9ee502d7405eec5a7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705849"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46371980"
 ---
 # <a name="resource-includes-dialog-box-c"></a>[リソース インクルード] ダイアログ ボックス (C++)
 
@@ -58,7 +58,7 @@ Win32
 
 ## <a name="see-also"></a>関連項目
 
-[方法: リソースのインクルード ディレクトリを指定する](../windows/how-to-specify-include-directories-for-resources.md)  
-[シンボル: リソース識別子](../windows/symbols-resource-identifiers.md)  
-[リソース ファイル](../windows/resource-files-visual-studio.md)  
+[方法: リソースのインクルード ディレクトリを指定する](../windows/how-to-specify-include-directories-for-resources.md)<br/>
+[シンボル: リソース識別子](../windows/symbols-resource-identifiers.md)<br/>
+[リソース ファイル](../windows/resource-files-visual-studio.md)<br/>
 [リソース エディター](../windows/resource-editors.md)

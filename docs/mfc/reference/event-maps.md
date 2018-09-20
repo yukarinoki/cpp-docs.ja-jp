@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21b9efe8fc1ce5cb7ab90edd30b38253d44dabc0
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 2f937c2cdaa4bb7f31b39b8a28c657274830fc36
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106809"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446609"
 ---
 # <a name="event-maps"></a>イベント マップ
 
@@ -89,10 +89,10 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 
 ### <a name="parameters"></a>パラメーター
 
-*クラス*  
+*クラス*<br/>
 イベントを持つマップ コントロール クラスの名前を指定します。
 
-*baseClass*  
+*baseClass*<br/>
 基本クラスの名前を示す*クラス*します。
 
 ### <a name="remarks"></a>Remarks
@@ -127,13 +127,13 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 
 ### <a name="parameters"></a>パラメーター
 
-*pszName*  
+*pszName*<br/>
 イベントの名前です。
 
-*pfnFire*  
+*pfnFire*<br/>
 イベント発生関数の名前。
 
-*vtsParams*  
+*vtsParams*<br/>
 関数のパラメーター リストを指定する 1 つまたは複数の定数のスペースで区切られたリスト。
 
 ### <a name="remarks"></a>Remarks
@@ -197,16 +197,16 @@ EVENT_CUSTOM_ID(
 
 ### <a name="parameters"></a>パラメーター
 
-*pszName*  
+*pszName*<br/>
 イベントの名前です。
 
-*dispid*  
+*dispid*<br/>
 イベントを発生させるときに、コントロールによって使用されるディスパッチ ID。
 
-*pfnFire*  
+*pfnFire*<br/>
 イベント発生関数の名前。
 
-*vtsParams*  
+*vtsParams*<br/>
 パラメーターの変数の一覧は、イベントが発生したときに、コントロール コンテナーに渡されます。
 
 ### <a name="remarks"></a>Remarks
@@ -268,10 +268,10 @@ ON_STDOLEVERB(iVerb, memberFxn)
 
 ### <a name="parameters"></a>パラメーター
 
-*iVerb*  
+*iVerb*<br/>
 無効にされている動詞の標準の動詞のインデックス。
 
-*memberFxn*  
+*memberFxn*<br/>
 動詞が呼び出されたときに、フレームワークによって呼び出される関数。
 
 ### <a name="remarks"></a>Remarks

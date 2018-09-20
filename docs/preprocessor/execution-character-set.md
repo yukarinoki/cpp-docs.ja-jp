@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f6851813172c39cd3c8c5dfe19b4d12ba81d090
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: a387b051bbecedd1c6c4dba8fc3881a3c1f3a4b9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540267"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446817"
 ---
 # <a name="executioncharacterset"></a>execution_character_set
 文字列と文字リテラルに使用する実行文字セットを指定します。 U8 プレフィックスの付いたリテラルでは、このディレクティブは必要ありません。  
@@ -50,6 +50,6 @@ ms.locfileid: "42540267"
   
 ## <a name="see-also"></a>関連項目  
  
-[プラグマ ディレクティブと _ _pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
-[/execution-charset (実行文字セット)](../build/reference/execution-charset-set-execution-character-set.md)   
+[プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
+[/execution-charset (実行文字セット)](../build/reference/execution-charset-set-execution-character-set.md)<br/>
 [/utf-8 (ソースと実行可能ファイルの文字セットを UTF-8 に設定する)](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b50466fc2c357c1d57fca272ff343cd56f3689c5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7092153e49fdb40fc32fb1cbee5bc2376080ff4e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604267"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391879"
 ---
 # <a name="runtimeclassbasetasiid-method"></a>RuntimeClassBaseT::AsIID メソッド
 
@@ -41,16 +41,16 @@ __forceinline static HRESULT AsIID(
 
 ### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 パラメーターで指定されたインターフェイス ID を実装する型*riid*します。
 
-*実装*  
+*実装*<br/>
 テンプレート パラメーターで指定された型の変数*T*します。
 
-*riid*  
+*riid*<br/>
 取得するインターフェイス ID。
 
-*ppvObject*  
+*ppvObject*<br/>
 ポインター-に-、- へのポインター、インターフェイスがパラメーターで指定されたこの操作が成功した場合は、 *riid*します。
 
 ## <a name="return-value"></a>戻り値
@@ -69,5 +69,5 @@ __forceinline static HRESULT AsIID(
 
 ## <a name="see-also"></a>関連項目
 
-[RuntimeClassBaseT 構造体](../windows/runtimeclassbaset-structure.md)  
+[RuntimeClassBaseT 構造体](../windows/runtimeclassbaset-structure.md)<br/>
 [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

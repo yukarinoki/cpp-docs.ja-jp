@@ -1,5 +1,5 @@
 ---
-title: 'MFC ActiveX コントロール: メソッドからエラー コードのリターン |Microsoft ドキュメント'
+title: 'MFC ActiveX コントロール: メソッドからエラー コードのリターン |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,27 +20,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdcd18a80b430a0a8576effaaa46215dd5eb9600
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 9daaa86f6f57d28b56a7374ff64b0fcbca2a3d98
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36927920"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383598"
 ---
 # <a name="mfc-activex-controls-returning-error-codes-from-a-method"></a>MFC ActiveX コントロール : メソッドからのエラー コードのリターン
-この記事では、ActiveX コントロールのメソッドからエラー コードを取得する方法を説明します。  
-  
- メソッド内でエラーが発生したことを示すために使用する必要があります、 [COleControl::ThrowError](../mfc/reference/colecontrol-class.md#throwerror)メンバー関数は、パラメーターとして SCODE (状態コード) を取得します。 定義済み SCODE を使用したり、独自のいずれかを定義することができます。  
-  
+
+この記事では、ActiveX コントロールのメソッドからエラー コードを返す方法について説明します。
+
+メソッド内でエラーが発生したことを示す、使用する必要があります、 [COleControl::ThrowError](../mfc/reference/colecontrol-class.md#throwerror)メンバー関数は、パラメーターとして SCODE (状態コード) をとります。 定義済み SCODE を使用したり、独自のいずれかを定義することができます。
+
 > [!NOTE]
->  `ThrowError` このプロパティの Get または Set 内のエラーを返すための手段としてのみ使用するものでは関数またはオートメーション メソッドです。 これらは、スタックの適切な例外ハンドラーとなる時間が表示されます。  
-  
- ヘルパー関数が存在する最も一般的な SCODEs のように定義済みの[COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported)、 [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported)、および[COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).  
-  
- 定義済みの SCODEs とカスタム SCODEs の定義の手順の一覧を参照してください[、ActiveX コントロールでのエラーの処理](../mfc/mfc-activex-controls-advanced-topics.md)ActiveX コントロール: 高度なトピックです。  
-  
- 他の領域で、コードの例外を報告の詳細については、次を参照してください。 [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror)およびセクション[、ActiveX コントロールでのエラーの処理](../mfc/mfc-activex-controls-advanced-topics.md)、ActiveX コントロール: 高度なトピックです。  
-  
-## <a name="see-also"></a>関連項目  
- [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)
+>  `ThrowError` プロパティの Get または Set 内からのエラーを返すための手段としてのみ使用するものでは関数またはメソッドを自動化します。 これらは、唯一のスタックの適切な例外ハンドラーとなる時間を表示します。
+
+定義済み SCODEs などを最も一般的なのヘルパー関数が存在[COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported)、 [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported)、および[COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).
+
+一連の定義済みの SCODEs とカスタム SCODEs を定義する手順については、セクションを参照してください。 [、ActiveX コントロールでのエラーの処理](../mfc/mfc-activex-controls-advanced-topics.md)で ActiveX コントロール: 高度なトピックです。
+
+コードの他の領域で例外をレポートの詳細については、次を参照してください。 [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) 」、および[、ActiveX コントロールでのエラーの処理](../mfc/mfc-activex-controls-advanced-topics.md)で ActiveX コントロール: 高度なトピックです。
+
+## <a name="see-also"></a>関連項目
+
+[MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)
 

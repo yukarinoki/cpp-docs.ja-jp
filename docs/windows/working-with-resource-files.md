@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a39b4147bd997659f264b60fb1fc88956784bbaf
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: d72e37b8625480779620025dfd1e1eda1101b824
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318190"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430554"
 ---
 # <a name="working-with-resource-files"></a>リソース ファイルの操作
 
@@ -39,24 +39,24 @@ ms.locfileid: "44318190"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[リソース ファイル](../windows/resource-files-visual-studio.md)  
+[リソース ファイル](../windows/resource-files-visual-studio.md)<br/>
 リソース ファイルと、Windows デスクトップ アプリケーションでリソース ファイルがどのように使用されるかについて説明します。 また、リソース ファイルの使用方法について説明するトピックへのリンクも示します。
 
-[シンボル: リソース識別子](../windows/symbols-resource-identifiers.md)  
+[シンボル: リソース識別子](../windows/symbols-resource-identifiers.md)<br/>
 シンボルについて説明し、プロジェクトのシンボルを管理するための **[リソース シンボル]** ダイアログ ボックスの使用方法に関する情報を提供します。
 
-[リソース エディター](../windows/resource-editors.md)  
+[リソース エディター](../windows/resource-editors.md)<br/>
 Visual Studio で提供されるリソース エディターと各エディターで変更できるリソースの種類について説明し、各エディターの使用方法の詳細へのリンクを示します。
 
 ## <a name="related-sections"></a>関連項目
 
-[Visual C++](../visual-cpp-in-visual-studio.md)  
+[Visual C++](../visual-cpp-in-visual-studio.md)<br/>
 Visual C++ のドキュメントへのリンクを示します。
 
-[ご意見](/visualstudio/ide/talk-to-us)  
+[ご意見](/visualstudio/ide/talk-to-us)<br/>
 ドキュメント セットの使用方法、製品サポートへの連絡、アクセシビリティ機能の使用に関する情報へのリンクを示します。
 
 ## <a name="see-also"></a>関連項目
 
-[Windows デスクトップ アプリケーション](../windows/windows-desktop-applications-cpp.md)  
+[Windows デスクトップ アプリケーション](../windows/windows-desktop-applications-cpp.md)<br/>
 [メニューとその他のリソース](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

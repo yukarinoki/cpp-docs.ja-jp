@@ -16,30 +16,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7ecc948910dd618f343134b0e9e3133539d9e1f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 48cbc561a7b47318749f490a209513019c2dc62e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335481"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426251"
 ---
 # <a name="message-types-associated-with-user-interface-objects"></a>ユーザー インターフェイス オブジェクトに関連付けられたメッセージ
-次の表は、使用する次の操作を実行する、オブジェクトの種類とそれらに関連付けられているメッセージの種類を示します。  
-  
-### <a name="user-interface-objects-and-associated-messages"></a>ユーザー インターフェイス オブジェクトと関連付けられているメッセージ  
-  
-|オブジェクト ID|メッセージ|  
-|---------------|--------------|  
-|格納先ウィンドウを表すクラス名|適切な Windows メッセージ、 [CWnd](../../mfc/reference/cwnd-class.md)-クラスを派生: ダイアログ ボックス、ウィンドウ、子ウィンドウ、MDI 子ウィンドウ、または最上位のフレーム ウィンドウ。|  
-|メニューまたはアクセラレータの識別子|-コマンド メッセージ (プログラムの関数を実行します)。<br />-UPDATE_COMMAND_UI メッセージ (メニュー項目を動的に更新) します。|  
-|コントロールの識別子|選択したコントロールの種類の通知メッセージを制御します。|  
-  
-## <a name="see-also"></a>関連項目  
- [関数へのメッセージの割り当てください。](../../mfc/reference/mapping-messages-to-functions.md)   
- [コード ウィザードを使用した機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [クラスの追加](../../ide/adding-a-class-visual-cpp.md)   
- [メンバー関数の追加](../../ide/adding-a-member-function-visual-cpp.md)   
- [メンバー変数の追加](../../ide/adding-a-member-variable-visual-cpp.md)   
- [仮想関数のオーバーライド](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [MFC メッセージ ハンドラー](../../mfc/reference/adding-an-mfc-message-handler.md)   
- [クラス各部へのジャンプ](../../ide/navigating-the-class-structure-visual-cpp.md)
+
+次の表は、使用する次の操作を実行する、オブジェクトの種類とそれらに関連付けられているメッセージの種類を示します。
+
+### <a name="user-interface-objects-and-associated-messages"></a>ユーザー インターフェイス オブジェクトと関連付けられているメッセージ
+
+|オブジェクト ID|メッセージ|
+|---------------|--------------|
+|格納先ウィンドウを表すクラス名|適切な Windows メッセージ、 [CWnd](../../mfc/reference/cwnd-class.md)-クラスを派生: ダイアログ ボックス、ウィンドウ、子ウィンドウ、MDI 子ウィンドウ、または最上位のフレーム ウィンドウ。|
+|メニューまたはアクセラレータの識別子|-コマンド メッセージ (プログラムの関数を実行します)。<br />-UPDATE_COMMAND_UI メッセージ (メニュー項目を動的に更新) します。|
+|コントロールの識別子|選択したコントロールの種類の通知メッセージを制御します。|
+
+## <a name="see-also"></a>関連項目
+
+[マップ (関数にメッセージを)](../../mfc/reference/mapping-messages-to-functions.md)<br/>
+[コード ウィザードを使用した機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[クラスの追加](../../ide/adding-a-class-visual-cpp.md)<br/>
+[メンバー関数の追加](../../ide/adding-a-member-function-visual-cpp.md)<br/>
+[メンバー変数の追加](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[仮想関数のオーバーライド](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[MFC メッセージ ハンドラー](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
+[クラス各部へのジャンプ](../../ide/navigating-the-class-structure-visual-cpp.md)

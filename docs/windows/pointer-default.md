@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aac6e0456bf8a63712c498114d403c05af5ccddb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 54b02ab188ddd122bd3751f73a3edb33d87266f9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212209"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388213"
 ---
 # <a name="pointerdefault"></a>pointer_default
 
@@ -38,7 +38,7 @@ ms.locfileid: "43212209"
 
 ### <a name="parameters"></a>パラメーター
 
-*値*  
+*値*<br/>
 ポインター型を記述する値: **ptr**、 **ref**、または**一意**します。
 
 ## <a name="remarks"></a>Remarks
@@ -64,5 +64,5 @@ ms.locfileid: "43212209"
 
 ## <a name="see-also"></a>関連項目
 
-[IDL 属性](../windows/idl-attributes.md)  
+[IDL 属性](../windows/idl-attributes.md)<br/>
 [インターフェイス属性](../windows/interface-attributes.md)  
