@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da35e2c257fef72ea75e05768960098111727359
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 80b04600f1f464220b00749903f27826855f6000
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611626"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400264"
 ---
 # <a name="modulegenericreleasenotifier-class"></a>Module::GenericReleaseNotifier クラス
 
@@ -37,7 +37,7 @@ class GenericReleaseNotifier : public ReleaseNotifier;
 
 ### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 イベント ハンドラーの場所を含むデータ メンバーの型。
 
 ## <a name="members"></a>メンバー
@@ -56,7 +56,7 @@ class GenericReleaseNotifier : public ReleaseNotifier;
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
-|name|説明|
+|名前|説明|
 |----------|-----------------|
 |[Module::GenericReleaseNotifier::callback_ データ メンバー](../windows/module-genericreleasenotifier-callback-data-member.md)|ラムダ、ファンクター、または現在に関連付けられている関数へのポインター イベント ハンドラーを保持**module::genericreleasenotifier**オブジェクト。|
 
@@ -73,4 +73,5 @@ class GenericReleaseNotifier : public ReleaseNotifier;
 **名前空間:** Microsoft::WRL
 
 ## <a name="see-also"></a>関連項目
+
 [Module クラス](../windows/module-class.md)

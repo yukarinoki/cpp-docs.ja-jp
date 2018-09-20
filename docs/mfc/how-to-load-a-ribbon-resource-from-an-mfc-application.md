@@ -1,5 +1,5 @@
 ---
-title: '方法: MFC アプリケーションからリボン リソースを読み込む |Microsoft ドキュメント'
+title: '方法: MFC アプリケーションからリボン リソースを読み込む |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,38 +14,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b014e1725ae6c5043c051242a74e29338c3ef2d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1643989a96a9003847fb53de624bff12cd51cd88
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344192"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434294"
 ---
 # <a name="how-to-load-a-ribbon-resource-from-an-mfc-application"></a>方法: MFC アプリケーションからリボン リソースを読み込む
-アプリケーションでリボン リソースを使用するには、リボン リソースを読み込むアプリケーションを変更します。  
-  
-### <a name="to-load-a-ribbon-resource"></a>リボン リソースを読み込む  
-  
-1.  宣言、`Ribbon Control`内のオブジェクト、`CMainFrame`クラスです。  
-  
- ```  
-    CMFCRibbonBar m_wndRibbonBar;   
- ```  
-  
-2.  `CMainFrame::OnCreate`を作成し、リボン コントロールを初期化します。  
-  
- ```  
-    if (!m_wndRibbonBar.Create (this))  
- {  
-    return -1;  
- }  
- 
-    if (!m_wndRibbonBar.LoadFromResource(IDR_RIBBON))  
- {  
-    return -1;  
- }  
- ```  
-  
-## <a name="see-also"></a>関連項目  
- [リボン デザイナー (MFC)](../mfc/ribbon-designer-mfc.md)
+
+アプリケーションでリボン リソースを使用するには、リボン リソースを読み込むためのアプリケーションを変更します。
+
+### <a name="to-load-a-ribbon-resource"></a>リボン リソースを読み込めません
+
+1. 宣言、`Ribbon Control`オブジェクト、`CMainFrame`クラス。
+
+```
+    CMFCRibbonBar m_wndRibbonBar;
+```
+
+1. `CMainFrame::OnCreate`を作成し、リボン コントロールを初期化します。
+
+```
+    if (!m_wndRibbonBar.Create (this))
+{
+    return -1;
+}
+
+    if (!m_wndRibbonBar.LoadFromResource(IDR_RIBBON))
+{
+    return -1;
+}
+```
+
+## <a name="see-also"></a>関連項目
+
+[リボン デザイナー (MFC)](../mfc/ribbon-designer-mfc.md)
 

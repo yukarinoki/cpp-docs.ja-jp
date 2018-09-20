@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2ae36838a1375b541951122bb00b522cf320650d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a90a7c82706adead4379152b78d36e4dd4b91673
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599756"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416228"
 ---
 # <a name="module-class"></a>Module クラス
 
@@ -43,14 +43,14 @@ class Module<OutOfProc> : public Module<InProc>;
 
 ### <a name="parameters"></a>パラメーター
 
-*moduleType*  
+*moduleType*<br/>
 1 つ以上を組み合わせた[ModuleType](../windows/moduletype-enumeration.md)列挙値。
 
 ## <a name="members"></a>メンバー
 
 ### <a name="protected-classes"></a>保護されているクラス
 
-|name|説明|
+|名前|説明|
 |----------|-----------------|
 |[Module::GenericReleaseNotifier クラス](../windows/module-genericreleasenotifier-class.md)|現在のモジュールの最後のオブジェクトがリリースされたときに、イベント ハンドラーを呼び出します。 イベント ハンドラーは、ラムダをファンクター、または関数へのポインターによって指定されます。|
 |[Module::MethodReleaseNotifier クラス](../windows/module-methodreleasenotifier-class.md)|現在のモジュールの最後のオブジェクトがリリースされたときに、イベント ハンドラーを呼び出します。 イベント ハンドラーは、オブジェクトとそのメソッドへのポインター メンバーによって指定されます。|
@@ -95,7 +95,7 @@ class Module<OutOfProc> : public Module<InProc>;
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
-|name|説明|
+|名前|説明|
 |----------|-----------------|
 |[Module::objectCount_ データ メンバー](../windows/module-objectcount-data-member.md)|多くのクラスが作成されたの追跡、[ように](../windows/make-function.md)関数。|
 |[Module::releaseNotifier_ データ メンバー](../windows/module-releasenotifier-data-member.md)|ポインターを保持する`ReleaseNotifier`オブジェクト。|

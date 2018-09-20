@@ -1,5 +1,5 @@
 ---
-title: SDI と MDI |Microsoft ドキュメント
+title: SDI と MDI |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db63efe8d7e2622610bb56f5e6885b72b705093b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8189af7939bfca0fd206fa72892098e373444879
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385805"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401447"
 ---
 # <a name="sdi-and-mdi"></a>SDI と MDI
-MFC では、シングル ドキュメント インターフェイス (SDI) とマルチ ドキュメント インターフェイス (MDI) アプリケーションの両方を簡単に処理します。  
-  
- SDI アプリケーションは、一度に 1 つだけ開いているドキュメント フレーム ウィンドウを許可します。 MDI アプリケーションには、複数のドキュメントのフレーム ウィンドウをアプリケーションの同じインスタンスで開くことができるようにします。 MDI アプリケーションでは、個別のドキュメントに含まれる各ウィンドウ内、複数の MDI フレーム ウィンドウ自体は、子ウィンドウを開くがします。 一部のアプリケーションで、グラフ ウィンドウやスプレッドシート ウィンドウなどのさまざまな種類の子ウィンドウができます。 その場合は、さまざまな種類の MDI 子ウィンドウがアクティブ化すると、メニュー バーは変更できます。  
-  
+
+MFC では、シングル ドキュメント インターフェイス (SDI) とマルチ ドキュメント インターフェイス (MDI) アプリケーションの両方を簡単に処理します。
+
+SDI アプリケーションでは、一度に 1 つだけ開いているドキュメント フレーム ウィンドウを許可します。 MDI アプリケーションは、複数のドキュメントのフレーム ウィンドウが開いているアプリケーションの同じインスタンスを許可します。 MDI アプリケーションでは、個別のドキュメントを格納している各ウィンドウ内、複数の MDI フレーム ウィンドウ自体には、子ウィンドウを開くことができるがあります。 一部のアプリケーションで、グラフの windows および windows のスプレッドシートなどのさまざまな種類の子ウィンドウができます。 その場合は、メニュー バーでは、さまざまな種類の MDI 子ウィンドウがアクティブ化を変更できます。
+
 > [!NOTE]
->  Windows 95 以降では、アプリケーションは通常、SDI、オペレーティング システムは、「ドキュメント中心」ビューを採用しているためです。  
-  
- 詳細については、次を参照してください。[ドキュメント、ビュー、およびフレームワーク](../mfc/documents-views-and-the-framework.md)です。  
-  
-## <a name="see-also"></a>関連項目  
- [クラスを使用した Windows アプリケーションの作成](../mfc/using-the-classes-to-write-applications-for-windows.md)
+>  Windows 95 以降、アプリケーションは通常、SDI のため、オペレーティング システムは、「ドキュメント中心の」ビューを採用しています。
+
+詳細については、次を参照してください。[ドキュメント、ビュー、およびフレームワーク](../mfc/documents-views-and-the-framework.md)します。
+
+## <a name="see-also"></a>関連項目
+
+[クラスを使用した Windows アプリケーションの作成](../mfc/using-the-classes-to-write-applications-for-windows.md)

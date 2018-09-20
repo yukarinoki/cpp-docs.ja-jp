@@ -1,5 +1,5 @@
 ---
-title: プログラムの実行中のメニューの操作 |Microsoft ドキュメント
+title: プログラムの実行中のメニューの操作 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4979b75a7644ab747d1a32c14826a25678e276b6
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 93257b89645692885aba728f2dffa698152122db
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929761"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433713"
 ---
 # <a name="manipulating-menus-during-program-execution"></a>プログラム実行時のメニューの操作
-クラスを使用して`CMenu`メニューと、実行時にメニュー項目を操作します。 `CMenu` Windows HMENU ハンドルをカプセル化し、メニューを操作するためのメンバー関数を提供します。  
-  
- クラスの概要を参照してください[CMenu](../mfc/reference/cmenu-class.md)詳細についてはします。  
-  
-## <a name="see-also"></a>関連項目  
- [メニュー](../mfc/menus-mfc.md)
+
+クラスを使用して`CMenu`メニューと、実行時にメニュー項目を操作します。 `CMenu` Windows の HMENU ハンドルをカプセル化し、メニューを操作するためのメンバー関数を提供します。
+
+クラスの概要を参照してください。 [CMenu](../mfc/reference/cmenu-class.md)詳細についてはします。
+
+## <a name="see-also"></a>関連項目
+
+[メニュー](../mfc/menus-mfc.md)
 

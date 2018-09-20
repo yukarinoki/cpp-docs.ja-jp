@@ -16,46 +16,49 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04fcf796c7d08cc2733edbf23b66c591e07ec71a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a96b166f5fc2873736d01438d91fc971120abf2e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704978"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437041"
 ---
 # <a name="application-settings-mfc-dll-wizard"></a>[アプリケーションの設定] \(MFC DLL ウィザード)
-MFC DLL ウィザードのこのページを使用すると、設計し、新しい MFC DLL プロジェクトに基本的な機能を追加します。  
-  
-## <a name="dll-type"></a>[DLL の種類]  
- 作成する DLL の種類を選択します。  
-  
+
+MFC DLL ウィザードのこのページを使用すると、設計し、新しい MFC DLL プロジェクトに基本的な機能を追加します。
+
+## <a name="dll-type"></a>[DLL の種類]
+
+作成する DLL の種類を選択します。
+
 - **使用して、レギュラー MFC DLL が MFC DLL を共有**
 
-   MFC ライブラリが共有 DLL としてプログラムをリンクするには、このオプションを選択します。 このオプションを使用して、DLL と呼び出し元のアプリケーション間での MFC オブジェクトを共有できません。 プログラムでは、実行時に、MFC ライブラリへの呼び出しが。 このオプションは、MFC ライブラリを使用する複数の実行ファイルで構成される場合に、プログラムのディスクとメモリの量を削減します。 Win32、MFC の両方のプログラムは、DLL で関数を呼び出すことができます。 この種類のプロジェクトで MFC DLL を再配布する必要があります。  
-  
+   MFC ライブラリが共有 DLL としてプログラムをリンクするには、このオプションを選択します。 このオプションを使用して、DLL と呼び出し元のアプリケーション間での MFC オブジェクトを共有できません。 プログラムでは、実行時に、MFC ライブラリへの呼び出しが。 このオプションは、MFC ライブラリを使用する複数の実行ファイルで構成される場合に、プログラムのディスクとメモリの量を削減します。 Win32、MFC の両方のプログラムは、DLL で関数を呼び出すことができます。 この種類のプロジェクトで MFC DLL を再配布する必要があります。
+
 - **MFC でのレギュラー MFC DLL が静的にリンク**
 
-   MFC ライブラリをビルド時にプログラムを静的にリンクするには、このオプションを選択します。 Win32、MFC の両方のプログラムは、DLL で関数を呼び出すことができます。 このオプションでは、プログラムのサイズが増えますが、中に、この種類のプロジェクトで MFC DLL を再配布する必要はありません。 DLL と、呼び出し元アプリケーションの MFC オブジェクトを共有することはできません。  
-  
+   MFC ライブラリをビルド時にプログラムを静的にリンクするには、このオプションを選択します。 Win32、MFC の両方のプログラムは、DLL で関数を呼び出すことができます。 このオプションでは、プログラムのサイズが増えますが、中に、この種類のプロジェクトで MFC DLL を再配布する必要はありません。 DLL と、呼び出し元アプリケーションの MFC オブジェクトを共有することはできません。
+
 - **MFC 拡張 DLL**
 
-   場合は、プログラム実行時に、MFC ライブラリへの呼び出しを使用して、DLL と呼び出し元のアプリケーション間での MFC オブジェクトを共有する場合は、このオプションを選択します。 このオプションは、MFC ライブラリを使用する複数の実行可能ファイルで構成される場合に、プログラムのディスクとメモリの量を削減します。 MFC プログラムだけでは、DLL で関数を呼び出すことができます。 この種類のプロジェクトで MFC DLL を再配布する必要があります。  
-  
-## <a name="additional-features"></a>その他の機能  
+   場合は、プログラム実行時に、MFC ライブラリへの呼び出しを使用して、DLL と呼び出し元のアプリケーション間での MFC オブジェクトを共有する場合は、このオプションを選択します。 このオプションは、MFC ライブラリを使用する複数の実行可能ファイルで構成される場合に、プログラムのディスクとメモリの量を削減します。 MFC プログラムだけでは、DLL で関数を呼び出すことができます。 この種類のプロジェクトで MFC DLL を再配布する必要があります。
 
-MFC DLL は、オートメーションをサポートするかどうか、および Windows sockets をサポートするかどうかを選択します。  
-  
+## <a name="additional-features"></a>その他の機能
+
+MFC DLL は、オートメーションをサポートするかどうか、および Windows sockets をサポートするかどうかを選択します。
+
 - **オートメーション**
 
-   選択**Automation**別のプログラムで実装されているオブジェクトを操作するプログラム。 選択**Automation**も、プログラムを他のオートメーション クライアントに公開します。 参照してください[Automation](../../mfc/automation.md)詳細についてはします。  
-  
+   選択**Automation**別のプログラムで実装されているオブジェクトを操作するプログラム。 選択**Automation**も、プログラムを他のオートメーション クライアントに公開します。 参照してください[Automation](../../mfc/automation.md)詳細についてはします。
+
 - **Windows ソケット**
 
-   プログラムが Windows sockets をサポートしていることを指定するには、このオプションを選択します。 Windows ソケットを使用すると、TCP/IP ネットワーク経由で通信するプログラムを作成できます。  
-  
-   サポートが作成されるときに、Windows で、MFC DLL のソケット[:initinstance](../../mfc/reference/cwinapp-class.md#initinstance)のソケットの初期化をサポートし、MFC ヘッダー ファイル StdAfx.h AfxSock.h が含まれています。  
-  
-## <a name="see-also"></a>関連項目  
- [MFC DLL ウィザード](../../mfc/reference/mfc-dll-wizard.md)   
- [MFC DLL プロジェクトの作成](../../mfc/reference/creating-an-mfc-dll-project.md)
+   プログラムが Windows sockets をサポートしていることを指定するには、このオプションを選択します。 Windows ソケットを使用すると、TCP/IP ネットワーク経由で通信するプログラムを作成できます。
+
+   サポートが作成されるときに、Windows で、MFC DLL のソケット[:initinstance](../../mfc/reference/cwinapp-class.md#initinstance)のソケットの初期化をサポートし、MFC ヘッダー ファイル StdAfx.h AfxSock.h が含まれています。
+
+## <a name="see-also"></a>関連項目
+
+[MFC DLL ウィザード](../../mfc/reference/mfc-dll-wizard.md)<br/>
+[MFC DLL プロジェクトの作成](../../mfc/reference/creating-an-mfc-dll-project.md)
 

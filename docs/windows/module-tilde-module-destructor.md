@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b32c1dcf00879d53193025d3ea8ce4bb9d538d8e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7210e150056a7ce3a72a3a66f902c0c8ced767d3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598205"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441318"
 ---
 # <a name="modulemodule-destructor"></a>Module::~Module デストラクター
 
@@ -41,4 +41,5 @@ virtual ~Module();
 **名前空間:** Microsoft::WRL
 
 ## <a name="see-also"></a>関連項目
+
 [Module クラス](../windows/module-class.md)

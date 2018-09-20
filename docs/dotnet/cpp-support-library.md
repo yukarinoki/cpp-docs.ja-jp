@@ -1,5 +1,5 @@
 ---
-title: C++ のサポート ライブラリ |Microsoft ドキュメント
+title: C++ サポート ライブラリ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d76705bded43b3b8686a8fe32736fb17dc02cca2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f1bae6cf2369d5d0f9b8eefde19d332083f52648
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104270"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405945"
 ---
 # <a name="c-support-library"></a>C++ のサポート ライブラリ
-C++ サポート ライブラリは、C++ のマネージ プログラミングをサポートするクラスを提供します。  
-  
-## <a name="in-this-section"></a>このセクションの内容  
- [C++ におけるマーシャリングの概要](../dotnet/overview-of-marshaling-in-cpp.md)  
-  
- [リソース管理クラス](../dotnet/resource-management-classes.md)  
-  
- [同期 (lock クラス)](../dotnet/synchronization-lock-class.md)  
-  
- [特定のアプリケーション ドメイン内での関数の呼び出し](../dotnet/calling-functions-in-a-specific-application-domain.md)  
-  
- [com::ptr](../dotnet/com-ptr.md)
+
+C++ サポート ライブラリは、C++ のマネージ プログラミングをサポートするクラスを提供します。
+
+## <a name="in-this-section"></a>このセクションの内容
+
+[C++ におけるマーシャリングの概要](../dotnet/overview-of-marshaling-in-cpp.md)
+
+[リソース管理クラス](../dotnet/resource-management-classes.md)
+
+[同期 (lock クラス)](../dotnet/synchronization-lock-class.md)
+
+[特定のアプリケーション ドメイン内での関数の呼び出し](../dotnet/calling-functions-in-a-specific-application-domain.md)
+
+[com::ptr](../dotnet/com-ptr.md)

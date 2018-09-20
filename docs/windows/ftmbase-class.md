@@ -35,12 +35,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 687fd4f4bd77043bd0b74c7bcc39fb6a496b60be
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: e8a1dcd96ab42f48c91bbed2057475fa412c8925
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601458"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432805"
 ---
 # <a name="ftmbase-class"></a>FtmBase クラス
 
@@ -106,7 +106,7 @@ static HRESULT CreateGlobalInterfaceTable(
 
 ### <a name="parameters"></a>パラメーター
 
-*Git*  
+*Git*<br/>
 この操作が完了時は、グローバル インターフェイス テーブルへのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -129,7 +129,7 @@ STDMETHODIMP DisconnectObject(
 
 ### <a name="parameters"></a>パラメーター
 
-*dwReserved*  
+*dwReserved*<br/>
 今後使用するために予約されています。0 にする必要があります。
 
 ### <a name="return-value"></a>戻り値
@@ -161,26 +161,26 @@ STDMETHODIMP GetMarshalSizeMax(
 
 ### <a name="parameters"></a>パラメーター
 
-*riid*  
+*riid*<br/>
 マーシャ リングするインターフェイスの識別子への参照。
 
-*現在価値*  
+*現在価値*<br/>
 インターフェイス ポインターをマーシャ リングします。NULL にすることができます。
 
-*dwDestContext*  
+*dwDestContext*<br/>
 コピー先のコンテキストが指定されたインターフェイスのマーシャ リングできない位置。
 
 1 つまたは複数の MSHCTX 列挙値を指定します。
 
 現時点では、マーシャ リング解除発生する可能性が現在のプロセス (MSHCTX_INPROC) の別のアパートメントまたは現在のプロセス (MSHCTX_LOCAL) と同じコンピューター上の別のプロセスでします。
 
-*pvDestContext*  
+*pvDestContext*<br/>
 今後使用するために予約されていますNULL にする必要があります。
 
-*mshlflags*  
+*mshlflags*<br/>
 マーシャ リングするデータがクライアント プロセスに送信されるかどうかを示すフラグ: 一般的なケース、または複数のクライアントで取得できる、グローバル テーブルに書き込まれます。 1 つまたは複数の MSHLFLAGS 列挙値を指定します。
 
-*pSize*  
+*pSize*<br/>
 この操作が完了時は、マーシャ リングのストリームに書き込まれるデータの量に上限へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -204,23 +204,23 @@ STDMETHODIMP GetUnmarshalClass(
 
 ### <a name="parameters"></a>パラメーター
 
-*riid*  
+*riid*<br/>
 マーシャ リングするインターフェイスの識別子への参照。
 
-*現在価値*  
+*現在価値*<br/>
 マーシャ リングする; インターフェイスへのポインター呼び出し元では、必要なインターフェイスには、ポインターにいない場合、NULL を指定できます。
 
-*dwDestContext*  
+*dwDestContext*<br/>
 コピー先のコンテキストが指定されたインターフェイスのマーシャ リングできない位置。
 
 1 つまたは複数の MSHCTX 列挙値を指定します。
 
 マーシャ リング解除は、現在のプロセス (MSHCTX_INPROC) の別のアパートメントまたは現在のプロセス (MSHCTX_LOCAL) と同じコンピューター上の別のプロセスで発生します。
 
-*pvDestContext*  
+*pvDestContext*<br/>
 今後使用するために予約されていますNULL にする必要があります。
 
-*mshlflags*  
+*mshlflags*<br/>
 この操作が完了時は、クライアント プロセスで、プロキシの作成に使用する、CLSID へのポインター。
 
 *pCid*
@@ -246,26 +246,26 @@ STDMETHODIMP MarshalInterface(
 
 ### <a name="parameters"></a>パラメーター
 
-*pStm*  
+*pStm*<br/>
 マーシャ リング中に使用するストリームへのポインター。
 
-*riid*  
+*riid*<br/>
 マーシャ リングするインターフェイスの識別子への参照。 このインターフェイスから派生する必要があります、`IUnknown`インターフェイス。
 
-*現在価値*  
+*現在価値*<br/>
 マーシャ リング; へのインターフェイス ポインターへのポインター呼び出し元では、必要なインターフェイスには、ポインターにいない場合、NULL を指定できます。
 
-*dwDestContext*  
+*dwDestContext*<br/>
 コピー先のコンテキストが指定されたインターフェイスのマーシャ リングできない位置。
 
 1 つまたは複数の MSHCTX 列挙値を指定します。
 
 マーシャ リング解除は、現在のプロセス (MSHCTX_INPROC) の別のアパートメントまたは (MSHCTX_LOCAL) の現在のプロセスと同じコンピューター上の別のプロセスでが発生することができます。
 
-*pvDestContext*  
+*pvDestContext*<br/>
 今後使用するために予約されています。0 にする必要があります。
 
-*mshlflags*  
+*mshlflags*<br/>
 マーシャ リングするデータがクライアント プロセスに送信されるかどうかを指定します: 一般的なケース、または複数のクライアントで取得できる、グローバル テーブルに書き込まれます。
 
 ### <a name="return-value"></a>戻り値
@@ -298,7 +298,7 @@ STDMETHODIMP ReleaseMarshalData(
 
 ### <a name="parameters"></a>パラメーター
 
-*pStm*  
+*pStm*<br/>
 破棄するデータ パケットを格納するストリームへのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -319,13 +319,13 @@ STDMETHODIMP UnmarshalInterface(
 
 ### <a name="parameters"></a>パラメーター
 
-*pStm*  
+*pStm*<br/>
 インターフェイス ポインターのマーシャ リングする元となるストリームへのポインター。
 
-*riid*  
+*riid*<br/>
 マーシャ リングするインターフェイスの識別子への参照。
 
-*ppv*  
+*ppv*<br/>
 ときにこの操作が完了したらで要求されたインターフェイス ポインターを受け取るポインター変数のアドレス*riid*します。 この操作が成功した場合 **ppv*マーシャ リングするインターフェイスの要求されたインターフェイス ポインターが含まれています。
 
 ### <a name="return-value"></a>戻り値

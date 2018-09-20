@@ -1,5 +1,5 @@
 ---
-title: 'ActiveX コントロール コンテナー: ActiveX コントロールをメンバー変数に接続する |Microsoft ドキュメント'
+title: 'ActiveX コントロール コンテナー: ActiveX コントロールをメンバー変数に接続する |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,35 +19,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3aa243ab8c0fb49e20e5b7485acdcd8bb808831
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: ae0cefa518ce44913f5c316a096d221fa9bd41aa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930469"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433856"
 ---
 # <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>ActiveX コントロール コンテナー : ActiveX コントロールとメンバー変数の関連付け
-コントロール コンテナー アプリケーション内での ActiveX コントロールにアクセスする最も簡単な方法は、ActiveX コントロールにコントロールを含むダイアログ クラスのメンバー変数を関連付けるにです。  
-  
+
+コンテナーのアプリケーションをコントロール内での ActiveX コントロールにアクセスする最も簡単な方法では、ActiveX コントロールにコントロールを含むダイアログ クラスのメンバー変数を関連付けます。
+
 > [!NOTE]
->  これは、コンテナー クラス内から埋め込みコントロールにアクセスする唯一の方法ではありませんが、この記事の目的で十分です。  
-  
-### <a name="adding-a-member-variable-to-the-dialog-class"></a>ダイアログ クラスにメンバー変数の追加  
-  
-1.  クラス ビューから、ショートカット メニューを開くメイン ダイアログ クラスを右クリックします。 たとえば、`CContainerDlg` のようにします。  
-  
-2.  ショートカット メニューから **追加**し**変数の追加**です。  
-  
-3.  メンバー変数の追加ウィザード をクリックして**制御変数**です。  
-  
-4.  **コントロール ID**ボックスの一覧で、埋め込みの ActiveX コントロールのコントロール ID を選択します。 たとえば、`IDC_CIRCCTRL1` のようにします。  
-  
-5.  **変数名**ボックスで、名前を入力します。  
-  
-     たとえば、*で*です。  
-  
-6.  をクリックして**完了**選択内容を確定し、メンバー変数の追加ウィザードを終了します。  
-  
-## <a name="see-also"></a>関連項目  
- [ActiveX コントロール コンテナー](../mfc/activex-control-containers.md)
+>  これは、コンテナー クラス内から埋め込まれたコントロールにアクセスする唯一の方法ではありませんが、この記事の目的で十分です。
+
+### <a name="adding-a-member-variable-to-the-dialog-class"></a>ダイアログ クラスにメンバー変数の追加
+
+1. クラス ビューでは、ショートカット メニューを開き、メイン ダイアログ クラスを右クリックします。 たとえば、`CContainerDlg` のようにします。
+
+1. ショートカット メニューでは、次のようにクリックします。**追加**し**変数の追加**します。
+
+1. メンバー変数の追加ウィザードで次のようにクリックします。**コントロール変数**します。
+
+1. **コントロール ID**ボックスの一覧で、埋め込みの ActiveX コントロールのコントロール ID を選択します。 たとえば、`IDC_CIRCCTRL1` のようにします。
+
+1. **変数名**ボックスに、名前を入力します。
+
+     たとえば、*で*します。
+
+1. クリックして**完了**選択内容を確定し、メンバー変数の追加ウィザードを終了します。
+
+## <a name="see-also"></a>関連項目
+
+[ActiveX コントロール コンテナー](../mfc/activex-control-containers.md)
 

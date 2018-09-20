@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0898d8a787c6d2c14f341a31e202738d666cdf86
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 5a49cb4fa88b3a014d79969cc86fc03fa1136efa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678465"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405347"
 ---
 # <a name="changing-the-font-of-text-on-an-image-image-editor-for-icons"></a>イメージのテキストのフォントの変更 (アイコン用イメージ エディター)
 
@@ -56,5 +56,5 @@ ms.locfileid: "43678465"
 
 ## <a name="see-also"></a>関連項目
 
-[グラフィカル リソースの編集](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[グラフィカル リソースの編集](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [ツール バー](../windows/toolbar-image-editor-for-icons.md)

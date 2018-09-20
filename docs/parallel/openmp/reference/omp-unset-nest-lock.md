@@ -16,34 +16,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddc3605bfef5c96a8882872aafbe1a15dda3e4cf
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 03ea941e793f8c3a9f40e0495442deb71b2ffa93
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46115971"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402721"
 ---
 # <a name="ompunsetnestlock"></a>omp_unset_nest_lock
-入れ子にできるロックを解放します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-void omp_unset_nest_lock(   
-   omp_nest_lock_t *lock   
-);  
-```  
-  
+
+入れ子にできるロックを解放します。
+
+## <a name="syntax"></a>構文
+
+```
+void omp_unset_nest_lock( 
+   omp_nest_lock_t *lock 
+);
+```
+
 ### <a name="parameters"></a>パラメーター
-  
+
 *lock*<br/>
-型の変数[omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md)で初期化された[omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)スレッドによって所有されている、および関数で実行します。  
-  
-## <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。 [3.2.4 omp_unset_lock 関数と omp_unset_nest_lock 関数](../../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md)します。  
-  
-## <a name="example"></a>例  
- 参照してください[omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)の使用例については`omp_unset_nest_lock`します。  
-  
-## <a name="see-also"></a>関連項目  
- [関数](../../../parallel/openmp/reference/openmp-functions.md)
+型の変数[omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md)で初期化された[omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)スレッドによって所有されている、および関数で実行します。
+
+## <a name="remarks"></a>Remarks
+
+詳細については、次を参照してください。 [3.2.4 omp_unset_lock 関数と omp_unset_nest_lock 関数](../../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md)します。
+
+## <a name="example"></a>例
+
+参照してください[omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)の使用例については`omp_unset_nest_lock`します。
+
+## <a name="see-also"></a>関連項目
+
+[関数](../../../parallel/openmp/reference/openmp-functions.md)

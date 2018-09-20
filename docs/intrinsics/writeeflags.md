@@ -16,42 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c01e10a77278f0a02658778ec178f0a4226eb36
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 875945c4116f99a0a7e8ef53666f432987ba0deb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704861"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424544"
 ---
 # <a name="writeeflags"></a>__writeeflags
-指定した値をプログラムに書き込みますステータスと制御 (空文) を登録します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-void __writeeflags(unsigned Value);  
-void __writeeflags(unsigned __int64 Value);  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
-  
-|パラメーター|説明|  
-|---------------|-----------------|  
-|*値*|[in]立てるレジスタに書き込む値。 `Value`パラメーターは、32 ビット、32 ビット プラットフォームの時間の長いと 64 ビット、64 ビット プラットフォームの時間の長い。|  
-  
-## <a name="remarks"></a>Remarks  
- これらのルーチンは組み込みとしてのみ使用できます。  
-  
-## <a name="requirements"></a>要件  
-  
-|組み込み|アーキテクチャ|  
-|---------------|------------------|  
-|`__writeeflags`|x86、x64|  
-  
- **ヘッダー ファイル** \<intrin.h >  
-  
-**Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)   
- [__readeflags](../intrinsics/readeflags.md)
+
+指定した値をプログラムに書き込みますステータスと制御 (空文) を登録します。
+
+## <a name="syntax"></a>構文
+
+```
+void __writeeflags(unsigned Value);
+void __writeeflags(unsigned __int64 Value);
+```
+
+#### <a name="parameters"></a>パラメーター
+
+|パラメーター|説明|
+|---------------|-----------------|
+|*値*|[in]立てるレジスタに書き込む値。 `Value`パラメーターは、32 ビット、32 ビット プラットフォームの時間の長いと 64 ビット、64 ビット プラットフォームの時間の長い。|
+
+## <a name="remarks"></a>Remarks
+
+これらのルーチンは組み込みとしてのみ使用できます。
+
+## <a name="requirements"></a>要件
+
+|組み込み|アーキテクチャ|
+|---------------|------------------|
+|`__writeeflags`|x86、x64|
+
+**ヘッダー ファイル** \<intrin.h >
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[__readeflags](../intrinsics/readeflags.md)
