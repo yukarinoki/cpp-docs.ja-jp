@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cda24d58e26157b8730ae5d010e0874195151b79
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c7047161a059432b43d4ff1a92e9c4d10dc01d51
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756929"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387017"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>C スタイルの文字列に関連する CString の操作方法
 
@@ -111,6 +111,6 @@ C ランタイム文字列関数を使用する場合は、_core_using_cstring_a
 
 ## <a name="see-also"></a>関連項目
 
-[文字列 (ATL と MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
+[文字列 (ATL と MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 [CString 引数の渡し方](../atl-mfc-shared/cstring-argument-passing.md)
 

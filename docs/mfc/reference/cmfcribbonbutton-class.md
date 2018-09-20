@@ -124,850 +124,908 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2649e7e4cbaa1ba7fe6f2fcc18a5c5e933fc1032
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a57ca3224d54db7b303dac07dce2bdcd70ef7116
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712966"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374531"
 ---
 # <a name="cmfcribbonbutton-class"></a>CMFCRibbonButton クラス
-`CMFCRibbonButton` クラスは、パネル、クイック アクセス ツール バー、ポップアップ メニューなど、リボン バー要素に配置できるボタンを実装します。  
 
- 詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-class CMFCRibbonButton : public CMFCRibbonBaseElement  
-```  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="public-constructors"></a>パブリック コンストラクター  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[CMFCRibbonButton::CMFCRibbonButton](#cmfcribbonbutton)|リボン ボタン オブジェクトを構築します。|  
-  
-### <a name="public-methods"></a>パブリック メソッド  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[CMFCRibbonButton::AddSubItem](#addsubitem)|ボタンに関連付けられたポップアップ メニューにメニュー項目を追加します。|  
-|[CMFCRibbonButton::CanBeStretched](#canbestretched)|(上書き[cmfcribbonbaseelement::canbestretched](../../mfc/reference/cmfcribbonbaseelement-class.md#canbestretched))。|  
-|[CMFCRibbonButton::CleanUpSizes](#cleanupsizes)|(上書き[cmfcribbonbaseelement::cleanupsizes](../../mfc/reference/cmfcribbonbaseelement-class.md#cleanupsizes))。|  
-|[CMFCRibbonButton::ClosePopupMenu](#closepopupmenu)|(上書き[cmfcribbonbaseelement::closepopupmenu](../../mfc/reference/cmfcribbonbaseelement-class.md#closepopupmenu))。|  
-|[CMFCRibbonButton::DrawBottomText](#drawbottomtext)||  
-|[CMFCRibbonButton::DrawImage](#drawimage)|(上書き[cmfcribbonbaseelement::drawimage](../../mfc/reference/cmfcribbonbaseelement-class.md#drawimage))。|  
-|[CMFCRibbonButton::DrawRibbonText](#drawribbontext)||  
-|[CMFCRibbonButton::FindSubItemIndexByID](#findsubitemindexbyid)|指定したコマンド ID に関連付けられたポップアップ メニュー項目のインデックスを返します。|  
-|[CMFCRibbonButton::GetCommandRect](#getcommandrect)||  
-|[Cmfcribbonbutton::getcompactsize](#getcompactsize)|リボン要素のコンパクト サイズを返します。 (上書き[cmfcribbonbaseelement::getcompactsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getcompactsize))。|  
-|[CMFCRibbonButton::GetIcon](#geticon)||  
-|[CMFCRibbonButton::GetImageIndex](#getimageindex)|ボタンに関連付けられているイメージのインデックスを返します。|  
-|[CMFCRibbonButton::GetImageSize](#getimagesize)|リボン要素のイメージ サイズを返します。 (上書き[cmfcribbonbaseelement::getimagesize](../../mfc/reference/cmfcribbonbaseelement-class.md#getimagesize))。|  
-|[Cmfcribbonbutton::getintermediatesize](#getintermediatesize)|サイズが中間状態になっているリボン要素のサイズを返します。 (上書き[cmfcribbonbaseelement::getintermediatesize](../../mfc/reference/cmfcribbonbaseelement-class.md#getintermediatesize))。|  
-|[CMFCRibbonButton::GetMenu](#getmenu)|リボン ボタンに割り当てられている Windows メニューのハンドルを返します。|  
-|[CMFCRibbonButton::GetMenuRect](#getmenurect)||  
-|[Cmfcribbonbutton::getregularsize](#getregularsize)|リボン要素の標準サイズを返します。 (上書き[cmfcribbonbaseelement::getregularsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize))。|  
-|[CMFCRibbonButton::GetSubItems](#getsubitems)||  
-|[CMFCRibbonButton::GetTextRowHeight](#gettextrowheight)||  
-|[Cmfcribbonbutton::gettooltiptext](#gettooltiptext)|リボン要素のツールヒント テキストを返します。 (上書き[cmfcribbonbaseelement::gettooltiptext](../../mfc/reference/cmfcribbonbaseelement-class.md#gettooltiptext))。|  
-|[CMFCRibbonButton::HasCompactMode](#hascompactmode)|リボン要素に簡易モードがあるかどうかを指定します。 (上書き[cmfcribbonbaseelement::hascompactmode](../../mfc/reference/cmfcribbonbaseelement-class.md#hascompactmode))。|  
-|[CMFCRibbonButton::HasIntermediateMode](#hasintermediatemode)|リボン要素に中間モードがあるかどうかを指定します。 (上書き[cmfcribbonbaseelement::hasintermediatemode](../../mfc/reference/cmfcribbonbaseelement-class.md#hasintermediatemode))。|  
-|[CMFCRibbonButton::HasLargeMode](#haslargemode)|リボン要素に大モードがあるかどうかを指定します。 (上書き[cmfcribbonbaseelement::haslargemode](../../mfc/reference/cmfcribbonbaseelement-class.md#haslargemode))。|  
-|[CMFCRibbonButton::HasMenu](#hasmenu)|(上書き[cmfcribbonbaseelement::hasmenu](../../mfc/reference/cmfcribbonbaseelement-class.md#hasmenu))。|  
-|[CMFCRibbonButton::IsAlwaysDrawBorder](#isalwaysdrawborder)||  
-|[CMFCRibbonButton::IsAlwaysLargeImage](#isalwayslargeimage)|(上書き[cmfcribbonbaseelement::isalwayslargeimage](../../mfc/reference/cmfcribbonbaseelement-class.md#isalwayslargeimage))。|  
-|[CMFCRibbonButton::IsApplicationButton](#isapplicationbutton)||  
-|[CMFCRibbonButton::IsCommandAreaHighlighted](#iscommandareahighlighted)||  
-|[CMFCRibbonButton::IsDefaultCommand](#isdefaultcommand)|リボン ボタンの既定のコマンドが有効になっているかどうかを判断します。|  
-|[CMFCRibbonButton::IsDefaultPanelButton](#isdefaultpanelbutton)||  
-|[CMFCRibbonButton::IsDrawTooltipImage](#isdrawtooltipimage)||  
-|[CMFCRibbonButton::IsLargeImage](#islargeimage)||  
-|[CMFCRibbonButton::IsMenuAreaHighlighted](#ismenuareahighlighted)||  
-|[CMFCRibbonButton::IsMenuOnBottom](#ismenuonbottom)||  
-|[CMFCRibbonButton::IsPopupDefaultMenuLook](#ispopupdefaultmenulook)||  
-|[CMFCRibbonButton::IsRightAlignMenu](#isrightalignmenu)|メニューを右寄せで表示するかどうかを判断します。|  
-|[CMFCRibbonButton::IsSingleLineText](#issinglelinetext)||  
-|[CMFCRibbonButton::OnCalcTextSize](#oncalctextsize)|(上書き[cmfcribbonbaseelement::oncalctextsize](../../mfc/reference/cmfcribbonbaseelement-class.md#oncalctextsize))。|  
-|[CMFCRibbonButton::OnDrawBorder](#ondrawborder)||  
-|[Cmfcribbonbutton::ondraw](#ondraw)|リボン要素を描画するために、フレームワークによって呼び出されます。 (上書き[cmfcribbonbaseelement::ondraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw))。|  
-|[CMFCRibbonButton::OnFillBackground](#onfillbackground)||  
-|[CMFCRibbonButton::RemoveAllSubItems](#removeallsubitems)|ポップアップ メニューからメニュー項目をすべて削除します。|  
-|[CMFCRibbonButton::RemoveSubItem](#removesubitem)|ポップアップ メニューからメニュー項目を 1 つ削除します。|  
-|[Cmfcribbonbutton::setaccdata](#setaccdata)|(上書き[cmfcribbonbaseelement::setaccdata](../../mfc/reference/cmfcribbonbaseelement-class.md#setaccdata))。|  
-|[CMFCRibbonButton::SetAlwaysLargeImage](#setalwayslargeimage)|ユーザーがボタンを縮小したときに、ボタンに大きいイメージを表示するか小さいイメージを表示するかを指定します。|  
-|[CMFCRibbonButton::SetDefaultCommand](#setdefaultcommand)|リボン ボタンの既定のコマンドを有効にします。|  
-|[CMFCRibbonButton::SetDescription](#setdescription)|リボン要素の説明を設定します。 (上書き[cmfcribbonbaseelement::setdescription](../../mfc/reference/cmfcribbonbaseelement-class.md#setdescription))。|  
-|[CMFCRibbonButton::SetImageIndex](#setimageindex)|ボタンのイメージにインデックスを割り当てます。|  
-|[CMFCRibbonButton::SetMenu](#setmenu)|リボン ボタンにポップアップ メニューを割り当てます。|  
-|[CMFCRibbonButton::SetParentCategory](#setparentcategory)|(上書き[cmfcribbonbaseelement::setparentcategory](../../mfc/reference/cmfcribbonbaseelement-class.md#setparentcategory))。|  
-|[CMFCRibbonButton::SetRightAlignMenu](#setrightalignmenu)|ポップアップ メニューをボタンの右端に揃えて配置します。|  
-|[CMFCRibbonButton::SetText](#settext)|リボン要素のテキストを設定します。 (上書き[cmfcribbonbaseelement::settext](../../mfc/reference/cmfcribbonbaseelement-class.md#settext))。|  
-  
-### <a name="protected-methods"></a>プロテクト メソッド  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[CMFCRibbonButton::OnClick](#onclick)|ユーザーがボタンをクリックすると、フレームワークによって呼び出されます。|  
-  
-## <a name="example"></a>例  
- 次の例は、`CMFCRibbonButton` クラスのさまざまなメソッドの使用方法を説明しています。 この例では、`CMFCRibbonButton` クラスのオブジェクトの構築、リボン ボタンへのポップアップ メニューの割り当て、ボタンの説明の設定、ポップアップ メニューからのメニュー項目の削除、およびボタンの端へのポップアップ メニューの右揃えの方法を示します。  
-  
- [!code-cpp[NVC_MFC_RibbonApp#7](../../mfc/reference/codesnippet/cpp/cmfcribbonbutton-class_1.cpp)]  
-  
-## <a name="remarks"></a>Remarks  
- リボンのボタンを使用して、アプリケーションで、ボタン オブジェクトを作成し、適切なリボンに追加[パネル](../../mfc/reference/cmfcribbonpanel-class.md)します。  
-  
-```  
+`CMFCRibbonButton` クラスは、パネル、クイック アクセス ツール バー、ポップアップ メニューなど、リボン バー要素に配置できるボタンを実装します。
+
+詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。
+
+## <a name="syntax"></a>構文
+
+```
+class CMFCRibbonButton : public CMFCRibbonBaseElement
+```
+
+## <a name="members"></a>メンバー
+
+### <a name="public-constructors"></a>パブリック コンストラクター
+
+|名前|説明|
+|----------|-----------------|
+|[CMFCRibbonButton::CMFCRibbonButton](#cmfcribbonbutton)|リボン ボタン オブジェクトを構築します。|
+
+### <a name="public-methods"></a>パブリック メソッド
+
+|名前|説明|
+|----------|-----------------|
+|[CMFCRibbonButton::AddSubItem](#addsubitem)|ボタンに関連付けられたポップアップ メニューにメニュー項目を追加します。|
+|[CMFCRibbonButton::CanBeStretched](#canbestretched)|(上書き[cmfcribbonbaseelement::canbestretched](../../mfc/reference/cmfcribbonbaseelement-class.md#canbestretched))。|
+|[CMFCRibbonButton::CleanUpSizes](#cleanupsizes)|(上書き[cmfcribbonbaseelement::cleanupsizes](../../mfc/reference/cmfcribbonbaseelement-class.md#cleanupsizes))。|
+|[CMFCRibbonButton::ClosePopupMenu](#closepopupmenu)|(上書き[cmfcribbonbaseelement::closepopupmenu](../../mfc/reference/cmfcribbonbaseelement-class.md#closepopupmenu))。|
+|[CMFCRibbonButton::DrawBottomText](#drawbottomtext)||
+|[CMFCRibbonButton::DrawImage](#drawimage)|(上書き[cmfcribbonbaseelement::drawimage](../../mfc/reference/cmfcribbonbaseelement-class.md#drawimage))。|
+|[CMFCRibbonButton::DrawRibbonText](#drawribbontext)||
+|[CMFCRibbonButton::FindSubItemIndexByID](#findsubitemindexbyid)|指定したコマンド ID に関連付けられたポップアップ メニュー項目のインデックスを返します。|
+|[CMFCRibbonButton::GetCommandRect](#getcommandrect)||
+|[Cmfcribbonbutton::getcompactsize](#getcompactsize)|リボン要素のコンパクト サイズを返します。 (上書き[cmfcribbonbaseelement::getcompactsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getcompactsize))。|
+|[CMFCRibbonButton::GetIcon](#geticon)||
+|[CMFCRibbonButton::GetImageIndex](#getimageindex)|ボタンに関連付けられているイメージのインデックスを返します。|
+|[CMFCRibbonButton::GetImageSize](#getimagesize)|リボン要素のイメージ サイズを返します。 (上書き[cmfcribbonbaseelement::getimagesize](../../mfc/reference/cmfcribbonbaseelement-class.md#getimagesize))。|
+|[Cmfcribbonbutton::getintermediatesize](#getintermediatesize)|サイズが中間状態になっているリボン要素のサイズを返します。 (上書き[cmfcribbonbaseelement::getintermediatesize](../../mfc/reference/cmfcribbonbaseelement-class.md#getintermediatesize))。|
+|[CMFCRibbonButton::GetMenu](#getmenu)|リボン ボタンに割り当てられている Windows メニューのハンドルを返します。|
+|[CMFCRibbonButton::GetMenuRect](#getmenurect)||
+|[Cmfcribbonbutton::getregularsize](#getregularsize)|リボン要素の標準サイズを返します。 (上書き[cmfcribbonbaseelement::getregularsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize))。|
+|[CMFCRibbonButton::GetSubItems](#getsubitems)||
+|[CMFCRibbonButton::GetTextRowHeight](#gettextrowheight)||
+|[Cmfcribbonbutton::gettooltiptext](#gettooltiptext)|リボン要素のツールヒント テキストを返します。 (上書き[cmfcribbonbaseelement::gettooltiptext](../../mfc/reference/cmfcribbonbaseelement-class.md#gettooltiptext))。|
+|[CMFCRibbonButton::HasCompactMode](#hascompactmode)|リボン要素に簡易モードがあるかどうかを指定します。 (上書き[cmfcribbonbaseelement::hascompactmode](../../mfc/reference/cmfcribbonbaseelement-class.md#hascompactmode))。|
+|[CMFCRibbonButton::HasIntermediateMode](#hasintermediatemode)|リボン要素に中間モードがあるかどうかを指定します。 (上書き[cmfcribbonbaseelement::hasintermediatemode](../../mfc/reference/cmfcribbonbaseelement-class.md#hasintermediatemode))。|
+|[CMFCRibbonButton::HasLargeMode](#haslargemode)|リボン要素に大モードがあるかどうかを指定します。 (上書き[cmfcribbonbaseelement::haslargemode](../../mfc/reference/cmfcribbonbaseelement-class.md#haslargemode))。|
+|[CMFCRibbonButton::HasMenu](#hasmenu)|(上書き[cmfcribbonbaseelement::hasmenu](../../mfc/reference/cmfcribbonbaseelement-class.md#hasmenu))。|
+|[CMFCRibbonButton::IsAlwaysDrawBorder](#isalwaysdrawborder)||
+|[CMFCRibbonButton::IsAlwaysLargeImage](#isalwayslargeimage)|(上書き[cmfcribbonbaseelement::isalwayslargeimage](../../mfc/reference/cmfcribbonbaseelement-class.md#isalwayslargeimage))。|
+|[CMFCRibbonButton::IsApplicationButton](#isapplicationbutton)||
+|[CMFCRibbonButton::IsCommandAreaHighlighted](#iscommandareahighlighted)||
+|[CMFCRibbonButton::IsDefaultCommand](#isdefaultcommand)|リボン ボタンの既定のコマンドが有効になっているかどうかを判断します。|
+|[CMFCRibbonButton::IsDefaultPanelButton](#isdefaultpanelbutton)||
+|[CMFCRibbonButton::IsDrawTooltipImage](#isdrawtooltipimage)||
+|[CMFCRibbonButton::IsLargeImage](#islargeimage)||
+|[CMFCRibbonButton::IsMenuAreaHighlighted](#ismenuareahighlighted)||
+|[CMFCRibbonButton::IsMenuOnBottom](#ismenuonbottom)||
+|[CMFCRibbonButton::IsPopupDefaultMenuLook](#ispopupdefaultmenulook)||
+|[CMFCRibbonButton::IsRightAlignMenu](#isrightalignmenu)|メニューを右寄せで表示するかどうかを判断します。|
+|[CMFCRibbonButton::IsSingleLineText](#issinglelinetext)||
+|[CMFCRibbonButton::OnCalcTextSize](#oncalctextsize)|(上書き[cmfcribbonbaseelement::oncalctextsize](../../mfc/reference/cmfcribbonbaseelement-class.md#oncalctextsize))。|
+|[CMFCRibbonButton::OnDrawBorder](#ondrawborder)||
+|[Cmfcribbonbutton::ondraw](#ondraw)|リボン要素を描画するために、フレームワークによって呼び出されます。 (上書き[cmfcribbonbaseelement::ondraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw))。|
+|[CMFCRibbonButton::OnFillBackground](#onfillbackground)||
+|[CMFCRibbonButton::RemoveAllSubItems](#removeallsubitems)|ポップアップ メニューからメニュー項目をすべて削除します。|
+|[CMFCRibbonButton::RemoveSubItem](#removesubitem)|ポップアップ メニューからメニュー項目を 1 つ削除します。|
+|[Cmfcribbonbutton::setaccdata](#setaccdata)|(上書き[cmfcribbonbaseelement::setaccdata](../../mfc/reference/cmfcribbonbaseelement-class.md#setaccdata))。|
+|[CMFCRibbonButton::SetAlwaysLargeImage](#setalwayslargeimage)|ユーザーがボタンを縮小したときに、ボタンに大きいイメージを表示するか小さいイメージを表示するかを指定します。|
+|[CMFCRibbonButton::SetDefaultCommand](#setdefaultcommand)|リボン ボタンの既定のコマンドを有効にします。|
+|[CMFCRibbonButton::SetDescription](#setdescription)|リボン要素の説明を設定します。 (上書き[cmfcribbonbaseelement::setdescription](../../mfc/reference/cmfcribbonbaseelement-class.md#setdescription))。|
+|[CMFCRibbonButton::SetImageIndex](#setimageindex)|ボタンのイメージにインデックスを割り当てます。|
+|[CMFCRibbonButton::SetMenu](#setmenu)|リボン ボタンにポップアップ メニューを割り当てます。|
+|[CMFCRibbonButton::SetParentCategory](#setparentcategory)|(上書き[cmfcribbonbaseelement::setparentcategory](../../mfc/reference/cmfcribbonbaseelement-class.md#setparentcategory))。|
+|[CMFCRibbonButton::SetRightAlignMenu](#setrightalignmenu)|ポップアップ メニューをボタンの右端に揃えて配置します。|
+|[CMFCRibbonButton::SetText](#settext)|リボン要素のテキストを設定します。 (上書き[cmfcribbonbaseelement::settext](../../mfc/reference/cmfcribbonbaseelement-class.md#settext))。|
+
+### <a name="protected-methods"></a>プロテクト メソッド
+
+|名前|説明|
+|----------|-----------------|
+|[CMFCRibbonButton::OnClick](#onclick)|ユーザーがボタンをクリックすると、フレームワークによって呼び出されます。|
+
+## <a name="example"></a>例
+
+次の例は、`CMFCRibbonButton` クラスのさまざまなメソッドの使用方法を説明しています。 この例では、`CMFCRibbonButton` クラスのオブジェクトの構築、リボン ボタンへのポップアップ メニューの割り当て、ボタンの説明の設定、ポップアップ メニューからのメニュー項目の削除、およびボタンの端へのポップアップ メニューの右揃えの方法を示します。
+
+[!code-cpp[NVC_MFC_RibbonApp#7](../../mfc/reference/codesnippet/cpp/cmfcribbonbutton-class_1.cpp)]
+
+## <a name="remarks"></a>Remarks
+
+リボンのボタンを使用して、アプリケーションで、ボタン オブジェクトを作成し、適切なリボンに追加[パネル](../../mfc/reference/cmfcribbonpanel-class.md)します。
+
+```
 CMFCRibbonPanel* pPanel = pCategory->AddPanel (
-    _T("Clipboard"), // Panel name  
-    m_PanelIcons.ExtractIcon (0)); // Panel icon  
+    _T("Clipboard"), // Panel name
+    m_PanelIcons.ExtractIcon (0)); // Panel icon
 
-// Create the first button ("Paste"):  
-CMFCRibbonButton* pPasteButton = 
+// Create the first button ("Paste"):
+CMFCRibbonButton* pPasteButton =
     new CMFCRibbonButton (ID_EDIT_PASTE, _T("Paste"), -1, 0);
 
-// The third parameter (-1) disables small images for button.  
-// This button is always displayed with a large image  
-// Associate a pop-up menu with the "Paste" button:  
+// The third parameter (-1) disables small images for button.
+// This button is always displayed with a large image
+// Associate a pop-up menu with the "Paste" button:
 pPasteButton->SetMenu (IDR_CONTEXT_MENU);
 
-// Add buttons to the panel. These buttons have only small images.  
+// Add buttons to the panel. These buttons have only small images.
 pPanel->Add (new CMFCRibbonButton (ID_EDIT_CUT, _T("Cut"), 1));
 pPanel->Add (new CMFCRibbonButton (ID_EDIT_COPY, _T("Copy"), 2));
 pPanel->Add (new CMFCRibbonButton (ID_EDIT_PAINT, _T("Paint"), 9));
-```  
-  
-## <a name="inheritance-hierarchy"></a>継承階層  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
-  
- [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** afxribbonbutton.h  
-  
-##  <a name="addsubitem"></a>  CMFCRibbonButton::AddSubItem  
- ボタンに関連付けられたポップアップ メニューにメニュー項目を追加します。  
-  
-```  
+```
+
+## <a name="inheritance-hierarchy"></a>継承階層
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)
+
+[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** afxribbonbutton.h
+
+##  <a name="addsubitem"></a>  CMFCRibbonButton::AddSubItem
+
+ボタンに関連付けられたポップアップ メニューにメニュー項目を追加します。
+
+```
 void AddSubItem(
-    CMFCRibbonBaseElement* pSubItem,  
+    CMFCRibbonBaseElement* pSubItem,
     int nIndex=-1);
-```  
-  
-### <a name="parameters"></a>パラメーター  
+```
+
+### <a name="parameters"></a>パラメーター
+
 *pSubItem*<br/>
-[in]追加する新しい要素へのポインターを指定します。  
-  
+[in]追加する新しい要素へのポインターを指定します。
+
 *nIndex*<br/>
-[in]ボタンのメニュー項目の配列に要素を追加する位置のインデックスを指定しますメニュー項目の配列の末尾に要素を追加するのには-1。  
-  
-##  <a name="canbestretched"></a>  CMFCRibbonButton::CanBeStretched  
+[in]ボタンのメニュー項目の配列に要素を追加する位置のインデックスを指定しますメニュー項目の配列の末尾に要素を追加するのには-1。
 
-  
-```  
+##  <a name="canbestretched"></a>  CMFCRibbonButton::CanBeStretched
+
+
+```
 virtual BOOL CanBeStretched();
-```  
-  
-### <a name="return-value"></a>戻り値  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="cleanupsizes"></a>  CMFCRibbonButton::CleanUpSizes  
+```
 
-  
-```  
+### <a name="return-value"></a>戻り値
+
+### <a name="remarks"></a>Remarks
+
+##  <a name="cleanupsizes"></a>  CMFCRibbonButton::CleanUpSizes
+
+
+```
 virtual void CleanUpSizes();
-```  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="closepopupmenu"></a>  CMFCRibbonButton::ClosePopupMenu  
+```
 
-  
-```  
+### <a name="remarks"></a>Remarks
+
+##  <a name="closepopupmenu"></a>  CMFCRibbonButton::ClosePopupMenu
+
+
+```
 virtual void ClosePopupMenu();
-```  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="cmfcribbonbutton"></a>  CMFCRibbonButton::CMFCRibbonButton  
- リボン ボタン オブジェクトを構築します。  
-  
-```  
+```
+
+### <a name="remarks"></a>Remarks
+
+##  <a name="cmfcribbonbutton"></a>  CMFCRibbonButton::CMFCRibbonButton
+
+リボン ボタン オブジェクトを構築します。
+
+```
 CMFCRibbonButton(
-    UINT nID,  
-    LPCTSTR lpszText,  
-    int nSmallImageIndex=-1,  
-    int nLargeImageIndex=-1,  
+    UINT nID,
+    LPCTSTR lpszText,
+    int nSmallImageIndex=-1,
+    int nLargeImageIndex=-1,
     BOOL bAlwaysShowDescription=FALSE);
 
 CMFCRibbonButton(
-    UINT nID,  
-    LPCTSTR lpszText,  
-    HICON hIcon,  
-    BOOL bAlwaysShowDescription=FALSE,  
-    HICON hIconSmall=NULL,  
-    BOOL bAutoDestroyIcon=FALSE,  
+    UINT nID,
+    LPCTSTR lpszText,
+    HICON hIcon,
+    BOOL bAlwaysShowDescription=FALSE,
+    HICON hIconSmall=NULL,
+    BOOL bAutoDestroyIcon=FALSE,
     BOOL bAlphaBlendIcon=FALSE);
-```  
-  
-### <a name="parameters"></a>パラメーター  
+```
+
+### <a name="parameters"></a>パラメーター
+
 *nID*<br/>
-[in]ボタンのコマンド ID を指定します。  
-  
+[in]ボタンのコマンド ID を指定します。
+
 *lpszText*<br/>
-[in]ボタンのテキスト ラベルを指定します。  
-  
+[in]ボタンのテキスト ラベルを指定します。
+
 *nSmallImageIndex*<br/>
-[in]親カテゴリのイメージ リストで、ボタンの小さなイメージの 0 から始まるインデックスを指定します。  
-  
+[in]親カテゴリのイメージ リストで、ボタンの小さなイメージの 0 から始まるインデックスを指定します。
+
 *nLargeImageIndex*<br/>
-[in]親カテゴリのイメージ リストで、ボタンの大きいイメージの 0 から始まるインデックスを指定します。  
-  
+[in]親カテゴリのイメージ リストで、ボタンの大きいイメージの 0 から始まるインデックスを指定します。
+
 *hIcon*<br/>
-[in]アプリケーションがボタンのイメージとして使用するアイコンを識別するハンドルを指定します。  
-  
-### <a name="example"></a>例  
- 次の例は、構築する方法を示します、`CMFCRibbonButton`オブジェクト。  
-  
- [!code-cpp[NVC_MFC_RibbonApp#6](../../mfc/reference/codesnippet/cpp/cmfcribbonbutton-class_2.cpp)]  
-  
-##  <a name="drawbottomtext"></a>  CMFCRibbonButton::DrawBottomText  
+[in]アプリケーションがボタンのイメージとして使用するアイコンを識別するハンドルを指定します。
 
-  
-```  
+### <a name="example"></a>例
+
+次の例は、構築する方法を示します、`CMFCRibbonButton`オブジェクト。
+
+[!code-cpp[NVC_MFC_RibbonApp#6](../../mfc/reference/codesnippet/cpp/cmfcribbonbutton-class_2.cpp)]
+
+##  <a name="drawbottomtext"></a>  CMFCRibbonButton::DrawBottomText
+
+
+```
 CSize DrawBottomText(
-    CDC* pDC,  
+    CDC* pDC,
     BOOL bCalcOnly);
-```  
-  
-### <a name="parameters"></a>パラメーター  
-*pDC*<br/>
-[in][in]*bCalcOnly*  
-  
-### <a name="return-value"></a>戻り値  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="drawimage"></a>  CMFCRibbonButton::DrawImage  
+```
 
-  
-```  
+### <a name="parameters"></a>パラメーター
+
+*pDC*<br/>
+[in][in]*bCalcOnly*
+
+### <a name="return-value"></a>戻り値
+
+### <a name="remarks"></a>Remarks
+
+##  <a name="drawimage"></a>  CMFCRibbonButton::DrawImage
+
+
+```
 virtual void DrawImage(
-    CDC* pDC,  
-    RibbonImageType type,  
+    CDC* pDC,
+    RibbonImageType type,
     CRect rectImage);
-```  
-  
-### <a name="parameters"></a>パラメーター  
-*pDC*<br/>
-[in][in]*型*  
- [in]*rectImage*  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="drawribbontext"></a>  CMFCRibbonButton::DrawRibbonText  
+```
 
-  
-```  
+### <a name="parameters"></a>パラメーター
+
+*pDC*<br/>
+[in][in]*型*[in] *rectImage*
+
+### <a name="remarks"></a>Remarks
+
+##  <a name="drawribbontext"></a>  CMFCRibbonButton::DrawRibbonText
+
+
+```
 virtual int DrawRibbonText(
-    CDC* pDC,  
-    const CString& strText,  
-    CRect rectText,  
-    UINT uiDTFlags,  
+    CDC* pDC,
+    const CString& strText,
+    CRect rectText,
+    UINT uiDTFlags,
     COLORREF clrText = (COLORREF)-1);
-```  
-  
-### <a name="parameters"></a>パラメーター  
+```
+
+### <a name="parameters"></a>パラメーター
+
 *pDC*<br/>
-[in][in]*strText*  
+[in][in]*strText*
 *rectText*<br/>
-[in][in]*uiDTFlags*  
- [in]*clrText*  
-  
-### <a name="return-value"></a>戻り値  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="findsubitemindexbyid"></a>  CMFCRibbonButton::FindSubItemIndexByID  
- 指定したコマンド ID に関連付けられたポップアップ メニュー項目のインデックスを返します。  
-  
-```  
-int FindSubItemIndexByID(UINT uiID) const;  
-```  
-  
-### <a name="parameters"></a>パラメーター  
+[in][in]*uiDTFlags* [in] *clrText*
+
+### <a name="return-value"></a>戻り値
+
+### <a name="remarks"></a>Remarks
+
+##  <a name="findsubitemindexbyid"></a>  CMFCRibbonButton::FindSubItemIndexByID
+
+指定したコマンド ID に関連付けられたポップアップ メニュー項目のインデックスを返します。
+
+```
+int FindSubItemIndexByID(UINT uiID) const;
+```
+
+### <a name="parameters"></a>パラメーター
+
 *uiID*<br/>
-[in]ポップアップ メニュー項目のコマンド ID を指定します。  
-  
-### <a name="return-value"></a>戻り値  
- 関連付けられているサブ項目の 0 から始まるインデックス、 *uiID*します。 このようなサブ項目がない場合は-1。  
-  
-##  <a name="getcommandrect"></a>  CMFCRibbonButton::GetCommandRect  
+[in]ポップアップ メニュー項目のコマンド ID を指定します。
 
-  
-```  
-CRect GetCommandRect() const;  
-```  
-  
-### <a name="return-value"></a>戻り値  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="getcompactsize"></a>  Cmfcribbonbutton::getcompactsize  
+### <a name="return-value"></a>戻り値
 
-  
-```  
+関連付けられているサブ項目の 0 から始まるインデックス、 *uiID*します。 このようなサブ項目がない場合は-1。
+
+##  <a name="getcommandrect"></a>  CMFCRibbonButton::GetCommandRect
+
+
+```
+CRect GetCommandRect() const;
+```
+
+### <a name="return-value"></a>戻り値
+
+### <a name="remarks"></a>Remarks
+
+##  <a name="getcompactsize"></a>  Cmfcribbonbutton::getcompactsize
+
+
+```
 virtual CSize GetCompactSize(CDC* pDC);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
-  
-### <a name="return-value"></a>戻り値  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="geticon"></a>  CMFCRibbonButton::GetIcon  
+```
 
-  
-```  
-HICON GetIcon(BOOL bLargeIcon = TRUE) const;  
-```  
-  
-### <a name="parameters"></a>パラメーター  
- [in]*bLargeIcon*  
-  
-### <a name="return-value"></a>戻り値  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="getimageindex"></a>  CMFCRibbonButton::GetImageIndex  
- ボタンに関連付けられているイメージのインデックスを返します。  
-  
-```  
-int GetImageIndex(BOOL bLargeImage) const;  
-```  
-  
-### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター
+
+[in]*pDC*
+
+### <a name="return-value"></a>戻り値
+
+### <a name="remarks"></a>Remarks
+
+##  <a name="geticon"></a>  CMFCRibbonButton::GetIcon
+
+
+```
+HICON GetIcon(BOOL bLargeIcon = TRUE) const;
+```
+
+### <a name="parameters"></a>パラメーター
+
+[in]*bLargeIcon*
+
+### <a name="return-value"></a>戻り値
+
+### <a name="remarks"></a>Remarks
+
+##  <a name="getimageindex"></a>  CMFCRibbonButton::GetImageIndex
+
+ボタンに関連付けられているイメージのインデックスを返します。
+
+```
+int GetImageIndex(BOOL bLargeImage) const;
+```
+
+### <a name="parameters"></a>パラメーター
+
 *bLargeImage*<br/>
-[in]TRUE の場合、大きなサイズのイメージを格納するイメージの一覧で、イメージのインデックスを返しますそれ以外の場合、小さいイメージを格納するイメージの一覧で、イメージのインデックスを返します。  
-  
-### <a name="return-value"></a>戻り値  
- 関連付けられているイメージ リスト内のボタンのイメージのインデックス。  
-  
-##  <a name="getimagesize"></a>  CMFCRibbonButton::GetImageSize  
+[in]TRUE の場合、大きなサイズのイメージを格納するイメージの一覧で、イメージのインデックスを返しますそれ以外の場合、小さいイメージを格納するイメージの一覧で、イメージのインデックスを返します。
 
-  
-```  
-virtual CSize GetImageSize(RibbonImageType type) const;  
-```  
-  
-### <a name="parameters"></a>パラメーター  
- [in]*型*  
-  
-### <a name="return-value"></a>戻り値  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="getintermediatesize"></a>  Cmfcribbonbutton::getintermediatesize  
+### <a name="return-value"></a>戻り値
 
-  
-```  
+関連付けられているイメージ リスト内のボタンのイメージのインデックス。
+
+##  <a name="getimagesize"></a>  CMFCRibbonButton::GetImageSize
+
+
+```
+virtual CSize GetImageSize(RibbonImageType type) const;
+```
+
+### <a name="parameters"></a>パラメーター
+
+[in]*型*
+
+### <a name="return-value"></a>戻り値
+
+### <a name="remarks"></a>Remarks
+
+##  <a name="getintermediatesize"></a>  Cmfcribbonbutton::getintermediatesize
+
+
+```
 virtual CSize GetIntermediateSize(CDC* pDC);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
-  
-### <a name="return-value"></a>戻り値  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="getmenu"></a>  CMFCRibbonButton::GetMenu  
- リボン ボタンに割り当てられている Windows メニューのハンドルを返します。  
-  
-```  
-HMENU GetMenu() const;  
-```  
-  
-### <a name="return-value"></a>戻り値  
- ボタンに割り当てられている Windows メニューへのハンドル割り当てられているメニューがない場合は NULL です。  
-  
-##  <a name="getmenurect"></a>  CMFCRibbonButton::GetMenuRect  
+```
 
-  
-```  
-CRect GetMenuRect() const;  
-```  
-  
-### <a name="return-value"></a>戻り値  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="getregularsize"></a>  Cmfcribbonbutton::getregularsize  
+### <a name="parameters"></a>パラメーター
 
-  
-```  
+[in]*pDC*
+
+### <a name="return-value"></a>戻り値
+
+### <a name="remarks"></a>Remarks
+
+##  <a name="getmenu"></a>  CMFCRibbonButton::GetMenu
+
+リボン ボタンに割り当てられている Windows メニューのハンドルを返します。
+
+```
+HMENU GetMenu() const;
+```
+
+### <a name="return-value"></a>戻り値
+
+ボタンに割り当てられている Windows メニューへのハンドル割り当てられているメニューがない場合は NULL です。
+
+##  <a name="getmenurect"></a>  CMFCRibbonButton::GetMenuRect
+
+
+```
+CRect GetMenuRect() const;
+```
+
+### <a name="return-value"></a>戻り値
+
+### <a name="remarks"></a>Remarks
+
+##  <a name="getregularsize"></a>  Cmfcribbonbutton::getregularsize
+
+
+```
 virtual CSize GetRegularSize(CDC* pDC);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
-  
-### <a name="return-value"></a>戻り値  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="getsubitems"></a>  CMFCRibbonButton::GetSubItems  
+```
 
-  
-```  
-const CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& GetSubItems() const;  
-```  
-  
-### <a name="return-value"></a>戻り値  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="gettextrowheight"></a>  CMFCRibbonButton::GetTextRowHeight  
+### <a name="parameters"></a>パラメーター
 
-  
-```  
-int GetTextRowHeight() const;  
-```  
-  
-### <a name="return-value"></a>戻り値  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="gettooltiptext"></a>  Cmfcribbonbutton::gettooltiptext  
+[in]*pDC*
 
-  
-```  
-virtual CString GetToolTipText() const;  
-```  
-  
-### <a name="return-value"></a>戻り値  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="hascompactmode"></a>  CMFCRibbonButton::HasCompactMode  
+### <a name="return-value"></a>戻り値
 
-  
-```  
-virtual BOOL HasCompactMode() const;  
-```  
-  
-### <a name="return-value"></a>戻り値  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="hasintermediatemode"></a>  CMFCRibbonButton::HasIntermediateMode  
+### <a name="remarks"></a>Remarks
 
-  
-```  
-virtual BOOL HasIntermediateMode() const;  
-```  
-  
-### <a name="return-value"></a>戻り値  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="haslargemode"></a>  CMFCRibbonButton::HasLargeMode  
+##  <a name="getsubitems"></a>  CMFCRibbonButton::GetSubItems
 
-  
-```  
-virtual BOOL HasLargeMode() const;  
-```  
-  
-### <a name="return-value"></a>戻り値  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="hasmenu"></a>  CMFCRibbonButton::HasMenu  
 
-  
-```  
-virtual BOOL HasMenu() const;  
-```  
-  
-### <a name="return-value"></a>戻り値  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="isalwaysdrawborder"></a>  CMFCRibbonButton::IsAlwaysDrawBorder  
+```
+const CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& GetSubItems() const;
+```
 
-  
-```  
-virtual BOOL IsAlwaysDrawBorder() const;  
-```  
-  
-### <a name="return-value"></a>戻り値  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="isalwayslargeimage"></a>  CMFCRibbonButton::IsAlwaysLargeImage  
+### <a name="return-value"></a>戻り値
 
-  
-```  
-virtual BOOL IsAlwaysLargeImage() const;  
-```  
-  
-### <a name="return-value"></a>戻り値  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="isapplicationbutton"></a>  CMFCRibbonButton::IsApplicationButton  
+### <a name="remarks"></a>Remarks
 
-  
-```  
-virtual BOOL IsApplicationButton() const;  
-```  
-  
-### <a name="return-value"></a>戻り値  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="iscommandareahighlighted"></a>  CMFCRibbonButton::IsCommandAreaHighlighted  
+##  <a name="gettextrowheight"></a>  CMFCRibbonButton::GetTextRowHeight
 
-  
-```  
-virtual BOOL IsCommandAreaHighlighted() const;  
-```  
-  
-### <a name="return-value"></a>戻り値  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="isdefaultcommand"></a>  CMFCRibbonButton::IsDefaultCommand  
- リボン ボタンの既定のコマンドが有効になっているかどうかを指定します。  
-  
-```  
-BOOL IsDefaultCommand() const;  
-```  
-  
-### <a name="return-value"></a>戻り値  
- リボン ボタンの既定のコマンドを有効にした場合は TRUE。FALSE それ以外の場合。  
-  
-##  <a name="isdefaultpanelbutton"></a>  CMFCRibbonButton::IsDefaultPanelButton  
 
-  
-```  
-virtual BOOL IsDefaultPanelButton() const;  
-```  
-  
-### <a name="return-value"></a>戻り値  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="isdrawtooltipimage"></a>  CMFCRibbonButton::IsDrawTooltipImage  
+```
+int GetTextRowHeight() const;
+```
 
-  
-```  
-virtual BOOL IsDrawTooltipImage() const;  
-```  
-  
-### <a name="return-value"></a>戻り値  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="islargeimage"></a>  CMFCRibbonButton::IsLargeImage  
+### <a name="return-value"></a>戻り値
 
-  
-```  
-BOOL IsLargeImage() const;  
-```  
-  
-### <a name="return-value"></a>戻り値  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="ismenuareahighlighted"></a>  CMFCRibbonButton::IsMenuAreaHighlighted  
+### <a name="remarks"></a>Remarks
 
-  
-```  
-virtual BOOL IsMenuAreaHighlighted() const;  
-```  
-  
-### <a name="return-value"></a>戻り値  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="ismenuonbottom"></a>  CMFCRibbonButton::IsMenuOnBottom  
+##  <a name="gettooltiptext"></a>  Cmfcribbonbutton::gettooltiptext
 
-  
-```  
-BOOL IsMenuOnBottom() const;  
-```  
-  
-### <a name="return-value"></a>戻り値  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="ispopupdefaultmenulook"></a>  CMFCRibbonButton::IsPopupDefaultMenuLook  
 
-  
-```  
-virtual BOOL IsPopupDefaultMenuLook() const;  
-```  
-  
-### <a name="return-value"></a>戻り値  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="isrightalignmenu"></a>  CMFCRibbonButton::IsRightAlignMenu  
- メニューは右揃えするかどうかを指定します。  
-  
-```  
-BOOL IsRightAlignMenu() const;  
-```  
-  
-### <a name="return-value"></a>戻り値  
- メニューが右揃えの場合は TRUE。それ以外の場合は FALSE です。  
-  
-##  <a name="issinglelinetext"></a>  CMFCRibbonButton::IsSingleLineText  
+```
+virtual CString GetToolTipText() const;
+```
 
-  
-```  
-BOOL IsSingleLineText() const;  
-```  
-  
-### <a name="return-value"></a>戻り値  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="oncalctextsize"></a>  CMFCRibbonButton::OnCalcTextSize  
+### <a name="return-value"></a>戻り値
 
-  
-```  
+### <a name="remarks"></a>Remarks
+
+##  <a name="hascompactmode"></a>  CMFCRibbonButton::HasCompactMode
+
+
+```
+virtual BOOL HasCompactMode() const;
+```
+
+### <a name="return-value"></a>戻り値
+
+### <a name="remarks"></a>Remarks
+
+##  <a name="hasintermediatemode"></a>  CMFCRibbonButton::HasIntermediateMode
+
+
+```
+virtual BOOL HasIntermediateMode() const;
+```
+
+### <a name="return-value"></a>戻り値
+
+### <a name="remarks"></a>Remarks
+
+##  <a name="haslargemode"></a>  CMFCRibbonButton::HasLargeMode
+
+
+```
+virtual BOOL HasLargeMode() const;
+```
+
+### <a name="return-value"></a>戻り値
+
+### <a name="remarks"></a>Remarks
+
+##  <a name="hasmenu"></a>  CMFCRibbonButton::HasMenu
+
+
+```
+virtual BOOL HasMenu() const;
+```
+
+### <a name="return-value"></a>戻り値
+
+### <a name="remarks"></a>Remarks
+
+##  <a name="isalwaysdrawborder"></a>  CMFCRibbonButton::IsAlwaysDrawBorder
+
+
+```
+virtual BOOL IsAlwaysDrawBorder() const;
+```
+
+### <a name="return-value"></a>戻り値
+
+### <a name="remarks"></a>Remarks
+
+##  <a name="isalwayslargeimage"></a>  CMFCRibbonButton::IsAlwaysLargeImage
+
+
+```
+virtual BOOL IsAlwaysLargeImage() const;
+```
+
+### <a name="return-value"></a>戻り値
+
+### <a name="remarks"></a>Remarks
+
+##  <a name="isapplicationbutton"></a>  CMFCRibbonButton::IsApplicationButton
+
+
+```
+virtual BOOL IsApplicationButton() const;
+```
+
+### <a name="return-value"></a>戻り値
+
+### <a name="remarks"></a>Remarks
+
+##  <a name="iscommandareahighlighted"></a>  CMFCRibbonButton::IsCommandAreaHighlighted
+
+
+```
+virtual BOOL IsCommandAreaHighlighted() const;
+```
+
+### <a name="return-value"></a>戻り値
+
+### <a name="remarks"></a>Remarks
+
+##  <a name="isdefaultcommand"></a>  CMFCRibbonButton::IsDefaultCommand
+
+リボン ボタンの既定のコマンドが有効になっているかどうかを指定します。
+
+```
+BOOL IsDefaultCommand() const;
+```
+
+### <a name="return-value"></a>戻り値
+
+リボン ボタンの既定のコマンドを有効にした場合は TRUE。FALSE それ以外の場合。
+
+##  <a name="isdefaultpanelbutton"></a>  CMFCRibbonButton::IsDefaultPanelButton
+
+
+```
+virtual BOOL IsDefaultPanelButton() const;
+```
+
+### <a name="return-value"></a>戻り値
+
+### <a name="remarks"></a>Remarks
+
+##  <a name="isdrawtooltipimage"></a>  CMFCRibbonButton::IsDrawTooltipImage
+
+
+```
+virtual BOOL IsDrawTooltipImage() const;
+```
+
+### <a name="return-value"></a>戻り値
+
+### <a name="remarks"></a>Remarks
+
+##  <a name="islargeimage"></a>  CMFCRibbonButton::IsLargeImage
+
+
+```
+BOOL IsLargeImage() const;
+```
+
+### <a name="return-value"></a>戻り値
+
+### <a name="remarks"></a>Remarks
+
+##  <a name="ismenuareahighlighted"></a>  CMFCRibbonButton::IsMenuAreaHighlighted
+
+
+```
+virtual BOOL IsMenuAreaHighlighted() const;
+```
+
+### <a name="return-value"></a>戻り値
+
+### <a name="remarks"></a>Remarks
+
+##  <a name="ismenuonbottom"></a>  CMFCRibbonButton::IsMenuOnBottom
+
+
+```
+BOOL IsMenuOnBottom() const;
+```
+
+### <a name="return-value"></a>戻り値
+
+### <a name="remarks"></a>Remarks
+
+##  <a name="ispopupdefaultmenulook"></a>  CMFCRibbonButton::IsPopupDefaultMenuLook
+
+
+```
+virtual BOOL IsPopupDefaultMenuLook() const;
+```
+
+### <a name="return-value"></a>戻り値
+
+### <a name="remarks"></a>Remarks
+
+##  <a name="isrightalignmenu"></a>  CMFCRibbonButton::IsRightAlignMenu
+
+メニューは右揃えするかどうかを指定します。
+
+```
+BOOL IsRightAlignMenu() const;
+```
+
+### <a name="return-value"></a>戻り値
+
+メニューが右揃えの場合は TRUE。それ以外の場合は FALSE です。
+
+##  <a name="issinglelinetext"></a>  CMFCRibbonButton::IsSingleLineText
+
+
+```
+BOOL IsSingleLineText() const;
+```
+
+### <a name="return-value"></a>戻り値
+
+### <a name="remarks"></a>Remarks
+
+##  <a name="oncalctextsize"></a>  CMFCRibbonButton::OnCalcTextSize
+
+
+```
 virtual void OnCalcTextSize(CDC* pDC);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="onclick"></a>  CMFCRibbonButton::OnClick  
- ユーザーがボタンをクリックすると、フレームワークによって呼び出されます。  
-  
-```  
+```
+
+### <a name="parameters"></a>パラメーター
+
+[in]*pDC*
+
+### <a name="remarks"></a>Remarks
+
+##  <a name="onclick"></a>  CMFCRibbonButton::OnClick
+
+ユーザーがボタンをクリックすると、フレームワークによって呼び出されます。
+
+```
 virtual void OnClick(CPoint point);
-```  
-  
-### <a name="parameters"></a>パラメーター  
+```
+
+### <a name="parameters"></a>パラメーター
+
 *ポイント*<br/>
-[in]マウス クリックの位置を指定します。  
-  
-### <a name="remarks"></a>Remarks  
- このイベントを処理する場合は、派生クラスでこのメソッドをオーバーライドします。  
-  
-##  <a name="ondraw"></a>  Cmfcribbonbutton::ondraw  
+[in]マウス クリックの位置を指定します。
 
-  
-```  
+### <a name="remarks"></a>Remarks
+
+このイベントを処理する場合は、派生クラスでこのメソッドをオーバーライドします。
+
+##  <a name="ondraw"></a>  Cmfcribbonbutton::ondraw
+
+
+```
 virtual void OnDraw(CDC* pDC);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="ondrawborder"></a>  CMFCRibbonButton::OnDrawBorder  
+```
 
-  
-```  
+### <a name="parameters"></a>パラメーター
+
+[in]*pDC*
+
+### <a name="remarks"></a>Remarks
+
+##  <a name="ondrawborder"></a>  CMFCRibbonButton::OnDrawBorder
+
+
+```
 virtual void OnDrawBorder(CDC* pDC);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="onfillbackground"></a>  CMFCRibbonButton::OnFillBackground  
+```
 
-  
-```  
+### <a name="parameters"></a>パラメーター
+
+[in]*pDC*
+
+### <a name="remarks"></a>Remarks
+
+##  <a name="onfillbackground"></a>  CMFCRibbonButton::OnFillBackground
+
+
+```
 virtual COLORREF OnFillBackground(CDC* pDC);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
-  
-### <a name="return-value"></a>戻り値  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="removeallsubitems"></a>  CMFCRibbonButton::RemoveAllSubItems  
- ポップアップ メニューからメニュー項目をすべて削除します。  
-  
-```  
+```
+
+### <a name="parameters"></a>パラメーター
+
+[in]*pDC*
+
+### <a name="return-value"></a>戻り値
+
+### <a name="remarks"></a>Remarks
+
+##  <a name="removeallsubitems"></a>  CMFCRibbonButton::RemoveAllSubItems
+
+ポップアップ メニューからメニュー項目をすべて削除します。
+
+```
 void RemoveAllSubItems();
-```  
-  
-##  <a name="removesubitem"></a>  CMFCRibbonButton::RemoveSubItem  
- ポップアップ メニューからメニュー項目を 1 つ削除します。  
-  
-```  
+```
+
+##  <a name="removesubitem"></a>  CMFCRibbonButton::RemoveSubItem
+
+ポップアップ メニューからメニュー項目を 1 つ削除します。
+
+```
 BOOL RemoveSubItem(int nIndex);
-```  
-  
-### <a name="parameters"></a>パラメーター  
+```
+
+### <a name="parameters"></a>パラメーター
+
 *nIndex*<br/>
-[in]削除するメニュー項目の 0 から始まるインデックスを指定します。  
-  
-### <a name="return-value"></a>戻り値  
- 指定した項目が正常に削除された場合は TRUE。それ以外の場合は FALSE の場合*nIndex*が負の値またはポップアップ メニューにメニュー項目の数を超えています。  
-  
-##  <a name="setaccdata"></a>  Cmfcribbonbutton::setaccdata  
- リボン ボタンのアクセシビリティ データを設定します。  
-  
-```  
+[in]削除するメニュー項目の 0 から始まるインデックスを指定します。
+
+### <a name="return-value"></a>戻り値
+
+指定した項目が正常に削除された場合は TRUE。それ以外の場合は FALSE の場合*nIndex*が負の値またはポップアップ メニューにメニュー項目の数を超えています。
+
+##  <a name="setaccdata"></a>  Cmfcribbonbutton::setaccdata
+
+リボン ボタンのアクセシビリティ データを設定します。
+
+```
 virtual BOOL SetACCData(
-    CWnd* pParent,  
-    CAccessibilityData& data);  
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *pParent*  
- リボン要素の親ウィンドウ。  
-  
- *data*  
- リボン要素のアクセシビリティ データ。  
-  
-### <a name="return-value"></a>戻り値  
- 成功した場合、TRUE を返しますそれ以外の場合は FALSE です。  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="setalwayslargeimage"></a>  CMFCRibbonButton::SetAlwaysLargeImage  
- ユーザーがボタンを縮小したときに、ボタンに大きいイメージを表示するか小さいイメージを表示するかを指定します。  
-  
-```  
+    CWnd* pParent,
+    CAccessibilityData& data);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*pParent*<br/>
+リボン要素の親ウィンドウ。
+
+*data*<br/>
+リボン要素のアクセシビリティ データ。
+
+### <a name="return-value"></a>戻り値
+
+成功した場合、TRUE を返しますそれ以外の場合は FALSE です。
+
+### <a name="remarks"></a>Remarks
+
+##  <a name="setalwayslargeimage"></a>  CMFCRibbonButton::SetAlwaysLargeImage
+
+ユーザーがボタンを縮小したときに、ボタンに大きいイメージを表示するか小さいイメージを表示するかを指定します。
+
+```
 void SetAlwaysLargeImage(BOOL bSet=TRUE);
-```  
-  
-### <a name="parameters"></a>パラメーター  
+```
+
+### <a name="parameters"></a>パラメーター
+
 *bSet*<br/>
-[in]TRUE の場合、ボタンには、大きいイメージが表示されます。 それ以外の場合、ボタンには、小さいイメージが表示されます。  
-  
-##  <a name="setdefaultcommand"></a>  CMFCRibbonButton::SetDefaultCommand  
- リボン ボタンの既定のコマンドを有効にします。  
-  
-```  
+[in]TRUE の場合、ボタンには、大きいイメージが表示されます。 それ以外の場合、ボタンには、小さいイメージが表示されます。
+
+##  <a name="setdefaultcommand"></a>  CMFCRibbonButton::SetDefaultCommand
+
+リボン ボタンの既定のコマンドを有効にします。
+
+```
 void SetDefaultCommand(BOOL bSet=TRUE);
-```  
-  
-### <a name="parameters"></a>パラメーター  
-*bSet*<br/>
-[in]TRUE の場合、ボタンは既定のコマンドを実行できます。 FALSE の場合、ボタンは既定のコマンドを実行できません。  
-  
-### <a name="remarks"></a>Remarks  
- *bSet*はボタンがメニューには、ときにのみ関連します。 場合*bSet* TRUE にも、ボタンは既定のコマンドを実行できる、のみ、ユーザーがボタンの右端にある矢印をクリックすると、割り当てられたポップアップ メニューが表示されます。 それ以外の場合、ボタンは既定のコマンドを実行できませんし、ユーザーがクリックしたボタンの領域に関係なく、ポップアップ メニューが表示されます。  
-  
-##  <a name="setdescription"></a>  CMFCRibbonButton::SetDescription  
+```
 
-  
-```  
+### <a name="parameters"></a>パラメーター
+
+*bSet*<br/>
+[in]TRUE の場合、ボタンは既定のコマンドを実行できます。 FALSE の場合、ボタンは既定のコマンドを実行できません。
+
+### <a name="remarks"></a>Remarks
+
+*bSet*はボタンがメニューには、ときにのみ関連します。 場合*bSet* TRUE にも、ボタンは既定のコマンドを実行できる、のみ、ユーザーがボタンの右端にある矢印をクリックすると、割り当てられたポップアップ メニューが表示されます。 それ以外の場合、ボタンは既定のコマンドを実行できませんし、ユーザーがクリックしたボタンの領域に関係なく、ポップアップ メニューが表示されます。
+
+##  <a name="setdescription"></a>  CMFCRibbonButton::SetDescription
+
+
+```
 virtual void SetDescription(LPCTSTR lpszText);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- [in]*lpszText*  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="setimageindex"></a>  CMFCRibbonButton::SetImageIndex  
- ボタンのイメージにインデックスを割り当てます。  
-  
-```  
+```
+
+### <a name="parameters"></a>パラメーター
+
+[in]*lpszText*
+
+### <a name="remarks"></a>Remarks
+
+##  <a name="setimageindex"></a>  CMFCRibbonButton::SetImageIndex
+
+ボタンのイメージにインデックスを割り当てます。
+
+```
 void SetImageIndex(
-    int nIndex,  
+    int nIndex,
     BOOL bLargeImage);
-```  
-  
-### <a name="parameters"></a>パラメーター  
+```
+
+### <a name="parameters"></a>パラメーター
+
 *nIndex*<br/>
-[in]イメージのインデックスを指定します。  
-  
+[in]イメージのインデックスを指定します。
+
 *bLargeImage*<br/>
-[in]TRUE の場合、指定したインデックスは、大きいイメージの一覧を参照します。 それ以外の場合、インデックスは、小さいイメージのリストを参照します。  
-  
-##  <a name="setmenu"></a>  CMFCRibbonButton::SetMenu  
- リボン ボタンにポップアップ メニューを割り当てます。  
-  
-```  
+[in]TRUE の場合、指定したインデックスは、大きいイメージの一覧を参照します。 それ以外の場合、インデックスは、小さいイメージのリストを参照します。
+
+##  <a name="setmenu"></a>  CMFCRibbonButton::SetMenu
+
+リボン ボタンにポップアップ メニューを割り当てます。
+
+```
 void SetMenu(
-    HMENU hMenu,  
-    BOOL bIsDefaultCommand=FALSE,  
+    HMENU hMenu,
+    BOOL bIsDefaultCommand=FALSE,
     BOOL bRightAlign=FALSE);
 
 void SetMenu(
-    UINT uiMenuResID,  
-    BOOL bIsDefaultCommand=FALSE,  
+    UINT uiMenuResID,
+    BOOL bIsDefaultCommand=FALSE,
     BOOL bRightAlign=FALSE);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *hMenu*  
- Windows メニューへのハンドル。  
-  
- *bIsDefaultCommand*  
- TRUE の場合、ボタンが; 既定のコマンドを実行できます。それ以外の場合、ボタンには、ポップアップ メニューが表示されます。  
-  
- *bRightAlign*  
- TRUE の場合は、メニューは右揃えです。 それ以外の場合、メニューは、左揃えにします。  
-  
- *uiMenuResID*  
- メニュー リソースの id。  
-  
-### <a name="remarks"></a>Remarks  
- アプリケーションに割り当てると、メニュー ボタンに、その右側にある矢印ボタンを表示します。 場合*bIsDefaultCommand*が TRUE にのみ、ユーザーが矢印をクリックすると、メニューが表示されます。 ユーザーは、ボタンをクリックすると、既定のコマンドが実行されます。 場合*bIsDefaultCommand* false で、ボタンをクリックして、メニューが表示されます。  
-  
-##  <a name="setparentcategory"></a>  CMFCRibbonButton::SetParentCategory  
+```
 
-  
-```  
+### <a name="parameters"></a>パラメーター
+
+*hMenu*<br/>
+Windows メニューへのハンドル。
+
+*bIsDefaultCommand*<br/>
+TRUE の場合、ボタンが; 既定のコマンドを実行できます。それ以外の場合、ボタンには、ポップアップ メニューが表示されます。
+
+*bRightAlign*<br/>
+TRUE の場合は、メニューは右揃えです。 それ以外の場合、メニューは、左揃えにします。
+
+*uiMenuResID*<br/>
+メニュー リソースの id。
+
+### <a name="remarks"></a>Remarks
+
+アプリケーションに割り当てると、メニュー ボタンに、その右側にある矢印ボタンを表示します。 場合*bIsDefaultCommand*が TRUE にのみ、ユーザーが矢印をクリックすると、メニューが表示されます。 ユーザーは、ボタンをクリックすると、既定のコマンドが実行されます。 場合*bIsDefaultCommand* false で、ボタンをクリックして、メニューが表示されます。
+
+##  <a name="setparentcategory"></a>  CMFCRibbonButton::SetParentCategory
+
+
+```
 virtual void SetParentCategory(CMFCRibbonCategory* pParent);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- [in]*pParent*  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="setrightalignmenu"></a>  CMFCRibbonButton::SetRightAlignMenu  
- ポップアップ メニュー ボタンの端に揃えて配置します。  
-  
-```  
-void SetRightAlignMenu(BOOL bSet=TRUE);
-```  
-  
-### <a name="parameters"></a>パラメーター  
-*bSet*<br/>
-[in]TRUE の場合は、メニューは右揃えです。 それ以外の場合、メニューは、左揃え  
-  
-##  <a name="settext"></a>  CMFCRibbonButton::SetText  
+```
 
-  
-```  
+### <a name="parameters"></a>パラメーター
+
+[in]*pParent*
+
+### <a name="remarks"></a>Remarks
+
+##  <a name="setrightalignmenu"></a>  CMFCRibbonButton::SetRightAlignMenu
+
+ポップアップ メニュー ボタンの端に揃えて配置します。
+
+```
+void SetRightAlignMenu(BOOL bSet=TRUE);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*bSet*<br/>
+[in]TRUE の場合は、メニューは右揃えです。 それ以外の場合、メニューは、左揃え
+
+##  <a name="settext"></a>  CMFCRibbonButton::SetText
+
+
+```
 virtual void SetText(LPCTSTR lpszText);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- [in]*lpszText*  
-  
-### <a name="remarks"></a>Remarks  
-  
-## <a name="see-also"></a>関連項目  
- [階層図](../../mfc/hierarchy-chart.md)   
- [クラス](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="parameters"></a>パラメーター
+
+[in]*lpszText*
+
+### <a name="remarks"></a>Remarks
+
+## <a name="see-also"></a>関連項目
+
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[クラス](../../mfc/reference/mfc-classes.md)

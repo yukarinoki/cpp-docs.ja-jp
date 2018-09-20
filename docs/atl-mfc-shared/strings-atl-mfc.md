@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a918866710575ecc091fcce4564a7617d28a102d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f0751b218fe540a49c2cf0efde1dcf8976f2ebf6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752776"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387316"
 ---
 # <a name="strings-atlmfc"></a>文字列 (ATL と MFC)
 
@@ -44,18 +44,18 @@ ms.locfileid: "43752776"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[CStringT の使用](../atl-mfc-shared/using-cstringt.md)  
+[CStringT の使用](../atl-mfc-shared/using-cstringt.md)<br/>
 CStringT テンプレート クラスを使用したプログラミングについて説明します。
 
-[CString の使用](../atl-mfc-shared/using-cstring.md)  
+[CString の使用](../atl-mfc-shared/using-cstring.md)<br/>
 CString、CStringT の既定の実装を使用したプログラミングについて説明します。
 
 ## <a name="related-sections"></a>関連項目
 
-[CStringT の概要](../atl-mfc-shared/reference/cstringt-class.md)  
+[CStringT の概要](../atl-mfc-shared/reference/cstringt-class.md)<br/>
 共有に関する参照情報を提供します。`CStringT`クラス。
 
-[MFC の概念](../mfc/mfc-concepts.md)  
+[MFC の概念](../mfc/mfc-concepts.md)<br/>
 役立つ概念とタスク ベースのトピックを提供、MFC ライブラリを使用してプログラミングできます。
 
 ## <a name="see-also"></a>関連項目

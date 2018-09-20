@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 656739ad000612f130f5cdfb1a53a6de2d67c4c8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 81349135fa822627cb40bdcd2570276d8040e50e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761369"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385522"
 ---
 # <a name="cstring-exception-cleanup"></a>文字列: CString の例外の後処理
 
@@ -30,6 +30,6 @@ C++ 例外処理機構 MFC を今すぐ使用する、例外の後にクリー�
 
 ## <a name="see-also"></a>関連項目
 
-[文字列 (ATL と MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
+[文字列 (ATL と MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 [例外処理](../mfc/exception-handling-in-mfc.md)
 

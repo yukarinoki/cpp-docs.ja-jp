@@ -1,5 +1,5 @@
 ---
-title: ドキュメント/ビューのサンプル一覧 |Microsoft ドキュメント
+title: ドキュメント/ビューのサンプル一覧 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,38 +12,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54be40241244c5c219af6f8b329d0ddcc05b7e38
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 82204ad0d4150a36081fd53db1b59fcdad1cc7e5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343019"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378892"
 ---
 # <a name="documentview-sample-list"></a>ドキュメント/ビューのサンプル リスト
-興味深い方法で MFC のドキュメント/ビュー アーキテクチャを使用するかを示す次のサンプル プログラムを参照してください。  
-  
- *ドキュメント/ビューのバリエーション*  
-  
--   [MDI](../visual-cpp-samples.md)  
-  
--   [SCRIBBLE](../visual-cpp-samples.md)  
-  
--   [VIEWEX](../visual-cpp-samples.md)  
-  
- *ダイアログ ボックスのインターフェイスには、ドキュメント/ビューが置き換えられます*  
-  
--   [CMNCTRL1](../visual-cpp-samples.md)  
-  
--   [CMNCTRL2](../visual-cpp-samples.md)  
-  
- *COleDocument とその派生クラスを使用します。*  
-  
--   [コンテナー](../visual-cpp-samples.md)  
-  
--   [HIERSVR](../visual-cpp-samples.md)  
-  
--   [OCLIENT](../visual-cpp-samples.md)  
-  
-## <a name="see-also"></a>関連項目  
- [ドキュメント/ビュー アーキテクチャ](../mfc/document-view-architecture.md)
+
+おもしろい方法で MFC のドキュメント/ビュー アーキテクチャを使用するかを示す次のサンプル プログラムを参照してください。
+
+*ドキュメント/ビューのバリエーション*
+
+- [MDI](../visual-cpp-samples.md)
+
+- [SCRIBBLE](../visual-cpp-samples.md)
+
+- [VIEWEX](../visual-cpp-samples.md)
+
+*ダイアログ ボックスのインターフェイスには、ドキュメント/ビューが置き換えられます*
+
+- [CMNCTRL1](../visual-cpp-samples.md)
+
+- [CMNCTRL2](../visual-cpp-samples.md)
+
+*COleDocument とその派生クラスを使用します。*
+
+- [コンテナー](../visual-cpp-samples.md)
+
+- [HIERSVR](../visual-cpp-samples.md)
+
+- [OCLIENT](../visual-cpp-samples.md)
+
+## <a name="see-also"></a>関連項目
+
+[ドキュメント/ビュー アーキテクチャ](../mfc/document-view-architecture.md)
 

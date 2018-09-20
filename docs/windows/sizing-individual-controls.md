@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 929cf8eea66b928fe4889a98ca0a78fa7224bf17
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9932b14b3d3afaa0afdff90c08ce44bf1f8648dc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612509"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373478"
 ---
 # <a name="sizing-individual-controls"></a>各コントロールのサイズ変更
 
@@ -60,5 +60,5 @@ Win32
 
 ## <a name="see-also"></a>関連項目
 
-[ダイアログ ボックスのコントロール](../windows/controls-in-dialog-boxes.md)  
+[ダイアログ ボックスのコントロール](../windows/controls-in-dialog-boxes.md)<br/>
 [コントロール](../mfc/controls-mfc.md)

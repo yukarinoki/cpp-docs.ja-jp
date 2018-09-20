@@ -16,33 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53601afdd562f29ccd4bce9db76811e610940b7a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2dda3aab3c4a967c82a699058868edc8fc183984
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339372"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386380"
 ---
 # <a name="linger-structure"></a>LINGER 構造体
-`LINGER`構造がの SO_LINGER と SO_DONTLINGER のオプションを操作するために使用される`CAsyncSocket::GetSockOpt`します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-struct linger {  
-    u_short l_onoff;            // option on/off  
-    u_short l_linger;           // linger time  
-};  
-```  
-  
-## <a name="remarks"></a>Remarks  
- メンバー関数でブロックされている SO_DONTLINGER オプションを設定できません`Close`未送信のデータの送信を待機中にします。 SO_LINGER の設定と同じには、このオプションを設定`l_onoff`を 0 に設定します。  
-  
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** winsock2.h  
-  
-## <a name="see-also"></a>関連項目  
- [構造体、スタイル、コールバック、およびメッセージ マップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CAsyncSocket::GetSockOpt](../../mfc/reference/casyncsocket-class.md#getsockopt)   
- [CAsyncSocket::SetSockOpt](../../mfc/reference/casyncsocket-class.md#setsockopt)
+
+`LINGER`構造がの SO_LINGER と SO_DONTLINGER のオプションを操作するために使用される`CAsyncSocket::GetSockOpt`します。
+
+## <a name="syntax"></a>構文
+
+```
+struct linger {
+    u_short l_onoff;            // option on/off
+    u_short l_linger;           // linger time
+};
+```
+
+## <a name="remarks"></a>Remarks
+
+メンバー関数でブロックされている SO_DONTLINGER オプションを設定できません`Close`未送信のデータの送信を待機中にします。 SO_LINGER の設定と同じには、このオプションを設定`l_onoff`を 0 に設定します。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** winsock2.h
+
+## <a name="see-also"></a>関連項目
+
+[構造体、スタイル、コールバック関数とメッセージ マップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
+[CAsyncSocket::GetSockOpt](../../mfc/reference/casyncsocket-class.md#getsockopt)<br/>
+[CAsyncSocket::SetSockOpt](../../mfc/reference/casyncsocket-class.md#setsockopt)
 

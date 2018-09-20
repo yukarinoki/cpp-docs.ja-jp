@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 997b8bc01424b102551815f19ff9a487113e5f6b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e4aaef2cca5146291f7d3708a995a116768e0467
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601014"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382937"
 ---
 # <a name="registrationscript"></a>registration_script
 
@@ -38,7 +38,7 @@ ms.locfileid: "42601014"
 
 ### <a name="parameters"></a>パラメーター
 
-*スクリプト*  
+*スクリプト*<br/>
 カスタム登録スクリプト (.rgs) ファイルの完全パスです。 値**none**など`script = "none"`コクラスに登録要件がないことを示します。
 
 ## <a name="remarks"></a>Remarks
@@ -85,6 +85,6 @@ class CMyClass:public IFace {};
 
 ## <a name="see-also"></a>関連項目
 
-[COM 属性](../windows/com-attributes.md)  
-[クラス属性](../windows/class-attributes.md)  
+[COM 属性](../windows/com-attributes.md)<br/>
+[クラス属性](../windows/class-attributes.md)<br/>
 [rdx](../windows/rdx.md)  

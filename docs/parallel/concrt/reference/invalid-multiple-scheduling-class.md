@@ -18,59 +18,64 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cc4e3b2a23dd5c617b70a7a4b992323a0e963f4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 71898449447595db5df66ce619c423d62f2410be
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46067346"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384918"
 ---
 # <a name="invalidmultiplescheduling-class"></a>invalid_multiple_scheduling クラス
-このクラスは、`task_handle` オブジェクトまたは `run` オブジェクトの `task_group` メソッドを使用して `structured_task_group` オブジェクトが複数回スケジュールされた場合、間に `wait` メソッドまたは `run_and_wait` メソッドを呼び出さなかったときにスローされる例外を表します。  
-  
-## <a name="syntax"></a>構文  
-  
+
+このクラスは、`task_handle` オブジェクトまたは `run` オブジェクトの `task_group` メソッドを使用して `structured_task_group` オブジェクトが複数回スケジュールされた場合、間に `wait` メソッドまたは `run_and_wait` メソッドを呼び出さなかったときにスローされる例外を表します。
+
+## <a name="syntax"></a>構文
+
 ```
 class invalid_multiple_scheduling : public std::exception;
-```  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="public-constructors"></a>パブリック コンストラクター  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[invalid_multiple_scheduling](#ctor)|オーバーロードされます。 `invalid_multiple_scheduling` オブジェクトを構築します。|  
-  
-## <a name="inheritance-hierarchy"></a>継承階層  
- `exception`  
-  
- `invalid_multiple_scheduling`  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** concrt.h  
-  
- **名前空間:** concurrency  
-  
-##  <a name="ctor"></a> invalid_multiple_scheduling 
+```
 
- `invalid_multiple_scheduling` オブジェクトを構築します。  
-  
+## <a name="members"></a>メンバー
+
+### <a name="public-constructors"></a>パブリック コンストラクター
+
+|名前|説明|
+|----------|-----------------|
+|[invalid_multiple_scheduling](#ctor)|オーバーロードされます。 `invalid_multiple_scheduling` オブジェクトを構築します。|
+
+## <a name="inheritance-hierarchy"></a>継承階層
+
+`exception`
+
+`invalid_multiple_scheduling`
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** concrt.h
+
+**名前空間:** concurrency
+
+##  <a name="ctor"></a> invalid_multiple_scheduling
+
+`invalid_multiple_scheduling` オブジェクトを構築します。
+
 ```
 explicit _CRTIMP invalid_multiple_scheduling(_In_z_ const char* _Message) throw();
 
 invalid_multiple_scheduling() throw();
-```  
-  
-### <a name="parameters"></a>パラメーター  
+```
+
+### <a name="parameters"></a>パラメーター
+
 *メッセージ (_m)*<br/>
-エラーの説明メッセージ。  
-  
-## <a name="see-also"></a>関連項目  
- [同時実行 Namespace](concurrency-namespace.md)   
- [task_handle クラス](task-handle-class.md)   
- [task_group クラス](task-group-class.md)   
- [run](task-group-class.md)   
- [wait](task-group-class.md)   
- [run_and_wait](task-group-class.md)   
- [structured_task_group クラス](structured-task-group-class.md)
+エラーの説明メッセージ。
+
+## <a name="see-also"></a>関連項目
+
+[コンカレンシー名前空間](concurrency-namespace.md)<br/>
+[task_handle クラス](task-handle-class.md)<br/>
+[task_group クラス](task-group-class.md)<br/>
+[run](task-group-class.md)<br/>
+[wait](task-group-class.md)<br/>
+[run_and_wait](task-group-class.md)<br/>
+[structured_task_group クラス](structured-task-group-class.md)

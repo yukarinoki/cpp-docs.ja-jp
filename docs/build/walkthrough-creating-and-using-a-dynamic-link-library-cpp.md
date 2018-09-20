@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb47b64277aea568cf3cad8e2c4b6203e43f1b2f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 5175d89925ddc09fdcd552aa57d2967071e750f7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723256"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376968"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>チュートリアル: 作成し、使用して、独自のダイナミック リンク ライブラリ (C++)
 
@@ -411,5 +411,5 @@ DLL とクライアント アプリケーションを作成するので、実験
 
 [Visual C++ の DLL](../build/dlls-in-visual-cpp.md)<br/>
 [デスクトップ アプリケーションの配置](../ide/deploying-native-desktop-applications-visual-cpp.md)<br/>
-[チュートリアル: プログラム (C++) の配置](../ide/walkthrough-deploying-your-program-cpp.md)
-[Visual Basic アプリケーションから DLL 関数を呼び出す](../build/calling-dll-functions-from-visual-basic-applications.md)
+[チュートリアル: プログラムの配置 (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
+[DLL 関数の Visual Basic アプリケーションからの呼び出し方](../build/calling-dll-functions-from-visual-basic-applications.md)

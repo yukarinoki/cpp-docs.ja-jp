@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d8e029b1ffc4e17e55f2cb69405bb272b92e94e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6d8d4b0f740e69b57944cb35f2213ae0fd54b511
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221395"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386289"
 ---
 # <a name="tn071-mfc-iolecommandtarget-implementation"></a>テクニカル ノート 71: MFC IOleCommandTarget の実装
 
@@ -59,11 +59,11 @@ DECLARE_OLECMD_MAP ()
 BEGIN_OLECMD_MAP(theClass, baseClass)
 ```
 
-*クラス*  
- コマンド マップを含んでいるクラスの名前。
+*クラス*<br/>
+コマンド マップを含んでいるクラスの名前。
 
-*baseClass*  
- コマンド マップを含んでいるクラスの基底クラスの名前です。
+*baseClass*<br/>
+コマンド マップを含んでいるクラスの基底クラスの名前です。
 
 このマクロは、コマンドのマップの先頭をマークします。 コマンド マップを含んでいるクラスの実装ファイルでこのマクロを使用します。
 
@@ -77,14 +77,14 @@ END_OLECMD_MAP()
 ON_OLECMD(pguid, olecmdid, id)
 ```
 
-*pguid*  
- OLE コマンドのコマンド グループの GUID へのポインター。 このパラメーターは**NULL**の標準の OLE コマンド グループ。
+*pguid*<br/>
+OLE コマンドのコマンド グループの GUID へのポインター。 このパラメーターは**NULL**の標準の OLE コマンド グループ。
 
-*olecmdid*  
- 呼び出されるコマンドの OLE コマンド ID。
+*olecmdid*<br/>
+呼び出されるコマンドの OLE コマンド ID。
 
-*ID*  
- この OLE コマンドが呼び出されたときに、コマンドのマップを格納しているアプリケーションに送信される WM_COMMAND メッセージの ID。
+*ID*<br/>
+この OLE コマンドが呼び出されたときに、コマンドのマップを格納しているアプリケーションに送信される WM_COMMAND メッセージの ID。
 
 コマンド マップでエントリを処理する OLE コマンドを追加するのに ON_OLECMD マクロを使用します。 OLE コマンドが受信されると、これらは、指定 WM_COMMAND メッセージに変換され標準 MFC のコマンド ルーティングのアーキテクチャを使用して、アプリケーションのメッセージ マップを通じてルーティングされます。
 
@@ -158,5 +158,5 @@ void CContainerCntrItem::DoOleCmd()
 
 ## <a name="see-also"></a>関連項目
 
-[番号順テクニカル ノート](../mfc/technical-notes-by-number.md)  
-[カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)  
+[番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
+[カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)

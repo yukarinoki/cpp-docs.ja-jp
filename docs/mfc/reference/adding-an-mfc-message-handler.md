@@ -1,5 +1,5 @@
 ---
-title: MFC メッセージ ハンドラーを追加する |Microsoft ドキュメント
+title: MFC メッセージ ハンドラーの追加 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53566752a662db27e0da5cec3ce2316e26c8366b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9980a367c0272fe35e2135c1fb5a7df1c19a314
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353729"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377305"
 ---
 # <a name="adding-an-mfc-message-handler"></a>MFC メッセージ ハンドラーの追加
-実行できます[メッセージ ハンドラーを追加して、[プロパティ] ウィンドウを使用して](../../mfc/reference/mapping-messages-to-functions.md)(Windows メッセージを処理するメンバー関数)、メッセージ ハンドラーへのクラスおよびマップの Windows メッセージをします。 追加することも[ダイアログ ボックス コントロールのイベント ハンドラーを](../../windows/adding-event-handlers-for-dialog-box-controls.md)です。  
-  
- [プロパティ] ウィンドウを使用して、メッセージおよびイベント処理関数を定義する、自動的に更新できますメッセージ ディスパッチ テーブル (またはメッセージ マップ) とクラス ヘッダー ファイルです。  
-  
+
+できます[メッセージ ハンドラーを追加して、[プロパティ] ウィンドウを使用して](../../mfc/reference/mapping-messages-to-functions.md)(Windows メッセージを処理するメンバー関数)、メッセージ ハンドラーへのクラスおよびマップの Windows メッセージにします。 追加することも[ダイアログ ボックス コントロールのイベント ハンドラー](../../windows/adding-event-handlers-for-dialog-box-controls.md)します。
+
+[プロパティ] ウィンドウを使用して、メッセージとイベント処理関数を定義する、自動的に更新できますメッセージ ディスパッチ テーブル (またはメッセージ マップ) とクラス ヘッダー ファイル。
+
 > [!NOTE]
->  メッセージ ハンドラーを追加するには、プロパティ ウィンドウを使用して ATL クラスただし、いくつかの結果が異なる場合があります。 詳細については、ATL のトピックを参照してください。 [ATL メッセージ ハンドラーを追加する](../../atl/adding-an-atl-message-handler.md)です。  
-  
-## <a name="see-also"></a>関連項目  
- [コード ウィザードによる機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [クラスの追加](../../ide/adding-a-class-visual-cpp.md)   
- [メンバー関数の追加](../../ide/adding-a-member-function-visual-cpp.md)   
- [メンバー変数の追加](../../ide/adding-a-member-variable-visual-cpp.md)   
- [仮想関数のオーバーライド](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [クラス各部へ](../../ide/navigating-the-class-structure-visual-cpp.md)   
- [ダイアログ エディター](../../windows/dialog-editor.md)
+>  プロパティ ウィンドウを使用して、ATL クラスにメッセージ ハンドラーを追加することができます。ただし、いくつかの結果が異なる場合があります。 詳細については、ATL のトピックを参照してください。 [ATL メッセージ ハンドラーの追加](../../atl/adding-an-atl-message-handler.md)します。
+
+## <a name="see-also"></a>関連項目
+
+[コード ウィザードを使用した機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[クラスの追加](../../ide/adding-a-class-visual-cpp.md)<br/>
+[メンバー関数の追加](../../ide/adding-a-member-function-visual-cpp.md)<br/>
+[メンバー変数の追加](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[仮想関数のオーバーライド](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[クラス各部へのジャンプ](../../ide/navigating-the-class-structure-visual-cpp.md)<br/>
+[ダイアログ エディター](../../windows/dialog-editor.md)
 

@@ -1,5 +1,5 @@
 ---
-title: 印刷でのビューの役割 |Microsoft ドキュメント
+title: 印刷でのビューの役割 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,24 +19,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5735a718e353764ad8578548c965ae8a4dcd1843
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c78756ea84df66b77f71d8f8ad8d0b9dfa1a6c9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379256"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377527"
 ---
 # <a name="role-of-the-view-in-printing"></a>印刷でのビューの役割
-ビューは、関連付けられたドキュメントを印刷で 2 つの重要な役割も再生します。  
-  
- ビュー:  
-  
--   使用して同じ[OnDraw](../mfc/reference/cview-class.md#ondraw)画面上に描画、プリンターに描画するためのコード。  
-  
--   ドキュメントを印刷用のページに分割することを管理します。  
-  
- 印刷と印刷では、ビューの役割についての詳細については、次を参照してください。[印刷および印刷プレビュー](../mfc/printing-and-print-preview.md)です。  
-  
-## <a name="see-also"></a>関連項目  
- [ビューの使い方](../mfc/using-views.md)
+
+ビューにも、関連付けられているドキュメントの印刷での 2 つの重要な役割を果たします。
+
+ビュー:
+
+- 使用して同じ[OnDraw](../mfc/reference/cview-class.md#ondraw)画面上の描画、プリンターに描画するコードです。
+
+- ドキュメントを印刷用のページに分割することを管理します。
+
+印刷および印刷では、ビューの役割についての詳細については、次を参照してください。[印刷および印刷プレビュー](../mfc/printing-and-print-preview.md)します。
+
+## <a name="see-also"></a>関連項目
+
+[ビューの使い方](../mfc/using-views.md)
 
