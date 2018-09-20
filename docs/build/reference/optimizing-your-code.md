@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 180586f55ea57100286c3c598ac62eb83107d7c9
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b715f3cc6bc505d9698484ad7c47b8262f2bc728
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714377"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444412"
 ---
 # <a name="optimizing-your-code"></a>コードの最適化
 
@@ -33,11 +33,14 @@ ms.locfileid: "45714377"
 
 次のトピックでは、C と C++ 言語の最適化機能の一部について説明します。
 
-[最適化のプラグマおよびキーワード](../../build/reference/optimization-pragmas-and-keywords.md)一連のキーワードとプラグマのパフォーマンスを向上させるために、コードで使用できます。
+[最適化に影響するプラグマおよびキーワード](../../build/reference/optimization-pragmas-and-keywords.md)<br/>
+一連のキーワードとプラグマのパフォーマンスを向上させるために、コードで使用できます。
 
-[コンパイラの Options Listed by Category](../../build/reference/compiler-options-listed-by-category.md)一連の **/O**具体的には実行の速度やコードのサイズに影響を与えるコンパイラ オプション。
+[カテゴリ別のコンパイラ オプション](../../build/reference/compiler-options-listed-by-category.md)<br/>
+一連の **/O**コンパイラ オプションが具体的には実行の速度やコードのサイズに影響します。
 
-[右辺値参照宣言子: & &](../../cpp/rvalue-reference-declarator-amp-amp.md)右辺値参照の実装をサポートする*移動セマンティクス*します。 移動セマンティクスをテンプレート ライブラリでは、これらのテンプレートを使用するアプリケーションのパフォーマンスを実装するために使用が大幅に向上させることができます。 場合、
+[右辺値参照宣言子: &&](../../cpp/rvalue-reference-declarator-amp-amp.md)<br/>
+右辺値参照の実装をサポートする*移動セマンティクス*します。 移動セマンティクスをテンプレート ライブラリでは、これらのテンプレートを使用するアプリケーションのパフォーマンスを実装するために使用が大幅に向上させることができます。 場合、
 
 ### <a name="the-optimize-pragma"></a>Optimize プラグマ
 
@@ -59,9 +62,11 @@ ms.locfileid: "45714377"
 
 次のトピックでは、適切なプログラミング方法について説明します。
 
-[タイム クリティカル コードを改善するためのヒント](../../build/reference/tips-for-improving-time-critical-code.md)コーディング手法を効率化、パフォーマンスを向上できます。 このトピックでは、コーディング、コードの時間が重要な部分が満足することを確認するのに役立つ手法を提案します。
+[タイム クリティカルなコードを高速化するためのヒント](../../build/reference/tips-for-improving-time-critical-code.md)<br/>
+適切なコーディング テクニックと、パフォーマンスを向上できます。 このトピックでは、コーディング、コードの時間が重要な部分が満足することを確認するのに役立つ手法を提案します。
 
-[最適化のベスト プラクティス](../../build/reference/optimization-best-practices.md)アプリケーションを最適化する最善の方法に関する一般的なガイドラインを提供します。
+[最適化の推奨事項](../../build/reference/optimization-best-practices.md)<br/>
+アプリケーションを最適化する最善の方法に関する一般的なガイドラインを提供します。
 
 ## <a name="debugging-optimized-code"></a>最適化されたコードのデバッグ
 

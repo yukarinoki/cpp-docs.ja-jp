@@ -24,481 +24,476 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03684d287072e6c27fa06343ff498bbc62d4449a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e8a87c303d4527f89a7d7f59b69b3cc8572e0e7b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46027077"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387407"
 ---
 # <a name="textureview-class"></a>texture_view クラス
-テクスチャへの読み取りアクセスおよび書き込みアクセスを提供します。 `texture_view` は、既定の 32 ビット bpse である `int`、`unsigned int`、または `float` の値型のテクスチャを読み取るためにのみ使用できます。 他のテクスチャ形式を読み取るには、`texture_view<const value_type, _Rank>` を使用します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-template<typename value_type,int _Rank>  
-class texture_view;  
- 
-template<typename value_type, int _Rank>  
-class texture_view 
-   : public details::_Texture_base<value_type, _Rank>;  
- 
-template<typename value_type, int _Rank>  
-class texture_view<const value_type, _Rank> 
-   : public details::_Texture_base<value_type, _Rank>;  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
+
+テクスチャへの読み取りアクセスおよび書き込みアクセスを提供します。 `texture_view` は、既定の 32 ビット bpse である `int`、`unsigned int`、または `float` の値型のテクスチャを読み取るためにのみ使用できます。 他のテクスチャ形式を読み取るには、`texture_view<const value_type, _Rank>` を使用します。
+
+## <a name="syntax"></a>構文
+
+```
+template<typename value_type,int _Rank>
+class texture_view;
+
+template<typename value_type, int _Rank>
+class texture_view
+   : public details::_Texture_base<value_type, _Rank>;
+
+template<typename value_type, int _Rank>
+class texture_view<const value_type, _Rank>
+   : public details::_Texture_base<value_type, _Rank>;
+```
+
+#### <a name="parameters"></a>パラメーター
+
 *value_type*<br/>
-テクスチャ集合体の要素型です。  
-  
+テクスチャ集合体の要素型です。
+
 *_Rank*<br/>
-`texture_view` のランクです。  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="public-typedefs"></a>パブリック typedef  
-  
-|名前|説明|  
-|----------|-----------------|  
-|`value_type`|テクスチャ集合体の要素型です。|  
-|`coordinates_type`|`texture_view` のテクセルを指定するために使用する座標の型。つまり、値型が `short_vector` である関連するテクスチャと同じランクの `float` です。|  
-|`gather_return_type`|操作を収集するために使用される戻り値の型。つまり、サンプリングされた 4 つのテクセル値から収集された 4 つの同種の色要素を保持するランク 4 の `short_vector` です。|  
-  
-### <a name="public-constructors"></a>パブリック コンストラクター  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[texture_view コンス トラクター](#ctor)|オーバーロードされます。 `texture_view` インスタンスを構築します。|  
-|[~ texture_view デストラクター](#ctor)|`texture_view` インスタンスを破棄します。|  
-  
-### <a name="public-methods"></a>パブリック メソッド  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[gather_alpha](#gather_alpha)|オーバーロードされます。 指定されたサンプリング構成を使用して指定された座標でテクスチャをサンプリングし、4 つのサンプリングされたテクセルのアルファ (w) 要素を返します。|  
-|[gather_blue](#gather_blue)|オーバーロードされます。 指定されたサンプリング構成を使用して指定された座標でテクスチャをサンプリングし、4 つのサンプリングされたテクセルの青 (z) 要素を返します。|  
-|[gather_green](#gather_green)|オーバーロードされます。 指定されたサンプリング構成を使用して指定された座標でテクスチャをサンプリングし、4 つのサンプリングされたテクセルの緑 (y) 要素を返します。|  
-|[gather_red](#gather_red)|オーバーロードされます。 指定されたサンプリング構成を使用して指定された座標でテクスチャをサンプリングし、4 つのサンプリングされたテクセルの赤 (x) 要素を返します。|  
-|[get](#get)|オーバーロードされます。 インデックスで要素の値を取得します。|  
-|[sample](#sample)|オーバーロードされます。 指定されたサンプリング構成を使用して詳細な指定された座標およびレベルでテクスチャをサンプリングします。|  
-|[set](#set)|インデックスで要素の値を設定します。|  
-  
-### <a name="public-operators"></a>パブリック演算子  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[operator()](#operator_call)|オーバーロードされます。 インデックスで要素の値を取得します。|  
-|[operator[]](#operator_at)|オーバーロードされます。 インデックスで要素の値を取得します。|  
-|[operator=](#operator_eq)|オーバーロードされます。 代入演算子。|  
-  
-### <a name="public-data-members"></a>パブリック データ メンバー  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[value_type](#value_type)|`texture_view` の要素の値型です。|  
-  
-## <a name="inheritance-hierarchy"></a>継承階層  
- `_Texture_base`  
-  
- `texture_view`  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** amp_graphics.h  
-  
- **Namespace:** concurrency::graphics  
-  
-##  <a name="dtor"></a> ~texture_view 
+`texture_view` のランクです。
 
- `texture_view` インスタンスを破棄します。  
-  
-```  
+## <a name="members"></a>メンバー
+
+### <a name="public-typedefs"></a>パブリック typedef
+
+|名前|説明|
+|----------|-----------------|
+|`value_type`|テクスチャ集合体の要素型です。|
+|`coordinates_type`|`texture_view` のテクセルを指定するために使用する座標の型。つまり、値型が `short_vector` である関連するテクスチャと同じランクの `float` です。|
+|`gather_return_type`|操作を収集するために使用される戻り値の型。つまり、サンプリングされた 4 つのテクセル値から収集された 4 つの同種の色要素を保持するランク 4 の `short_vector` です。|
+
+### <a name="public-constructors"></a>パブリック コンストラクター
+
+|名前|説明|
+|----------|-----------------|
+|[texture_view コンス トラクター](#ctor)|オーバーロードされます。 `texture_view` インスタンスを構築します。|
+|[~ texture_view デストラクター](#ctor)|`texture_view` インスタンスを破棄します。|
+
+### <a name="public-methods"></a>パブリック メソッド
+
+|名前|説明|
+|----------|-----------------|
+|[gather_alpha](#gather_alpha)|オーバーロードされます。 指定されたサンプリング構成を使用して指定された座標でテクスチャをサンプリングし、4 つのサンプリングされたテクセルのアルファ (w) 要素を返します。|
+|[gather_blue](#gather_blue)|オーバーロードされます。 指定されたサンプリング構成を使用して指定された座標でテクスチャをサンプリングし、4 つのサンプリングされたテクセルの青 (z) 要素を返します。|
+|[gather_green](#gather_green)|オーバーロードされます。 指定されたサンプリング構成を使用して指定された座標でテクスチャをサンプリングし、4 つのサンプリングされたテクセルの緑 (y) 要素を返します。|
+|[gather_red](#gather_red)|オーバーロードされます。 指定されたサンプリング構成を使用して指定された座標でテクスチャをサンプリングし、4 つのサンプリングされたテクセルの赤 (x) 要素を返します。|
+|[get](#get)|オーバーロードされます。 インデックスで要素の値を取得します。|
+|[sample](#sample)|オーバーロードされます。 指定されたサンプリング構成を使用して詳細な指定された座標およびレベルでテクスチャをサンプリングします。|
+|[set](#set)|インデックスで要素の値を設定します。|
+
+### <a name="public-operators"></a>パブリック演算子
+
+|名前|説明|
+|----------|-----------------|
+|[operator()](#operator_call)|オーバーロードされます。 インデックスで要素の値を取得します。|
+|[operator[]](#operator_at)|オーバーロードされます。 インデックスで要素の値を取得します。|
+|[operator=](#operator_eq)|オーバーロードされます。 代入演算子。|
+
+### <a name="public-data-members"></a>パブリック データ メンバー
+
+|名前|説明|
+|----------|-----------------|
+|[value_type](#value_type)|`texture_view` の要素の値型です。|
+
+## <a name="inheritance-hierarchy"></a>継承階層
+
+`_Texture_base`
+
+`texture_view`
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** amp_graphics.h
+
+**Namespace:** concurrency::graphics
+
+##  <a name="dtor"></a> ~texture_view
+
+`texture_view` インスタンスを破棄します。
+
+```
 ~texture_view() restrict(amp, cpu);
-```  
-  
-##  <a name="ctor"></a> texture_view 
+```
 
- `texture_view` インスタンスを構築します。  
-  
-```  
-texture_view(// [1] constructor  
+##  <a name="ctor"></a> texture_view
+
+`texture_view` インスタンスを構築します。
+
+```
+texture_view(// [1] constructor
     texture<value_type, _Rank>& _Src) restrict(amp);
 
- 
-texture_view(// [2] constructor  
-    texture<value_type, _Rank>& _Src,  
+texture_view(// [2] constructor
+    texture<value_type, _Rank>& _Src,
     unsigned int _Mipmap_level = 0) restrict(cpu);
 
- 
-texture_view(// [3] constructor  
+texture_view(// [3] constructor
     const texture<value_type, _Rank>& _Src) restrict(amp);
 
- 
-texture_view(// [4] constructor  
-    const texture<value_type, _Rank>& _Src,  
-    unsigned int _Most_detailed_mip,  
+texture_view(// [4] constructor
+    const texture<value_type, _Rank>& _Src,
+    unsigned int _Most_detailed_mip,
     unsigned int _Mip_levels) restrict(cpu);
 
- 
-texture_view(// [5] copy constructor  
+texture_view(// [5] copy constructor
     const texture_view<value_type, _Rank>& _Other) restrict(amp, cpu);
 
- 
-texture_view(// [6] copy constructor  
+texture_view(// [6] copy constructor
     const texture_view<const value_type, _Rank>& _Other) restrict(amp, cpu);
 
- 
-texture_view(// [7] copy constructor  
-    const texture_view<const value_type, _Rank>& _Other,  
-    unsigned int _Most_detailed_mip,  
+texture_view(// [7] copy constructor
+    const texture_view<const value_type, _Rank>& _Other,
+    unsigned int _Most_detailed_mip,
     unsigned int _Mip_levels) restrict(cpu);
-```  
-  
-### <a name="parameters"></a>パラメーター  
+```
+
+### <a name="parameters"></a>パラメーター
+
 *_Src*<br/>
-[1、2] コンストラクター  
- 書き込み可能な `texture` が作成される `texture_view`。  
-  
- [3, 4]コンス トラクター  
- 書き込み可能でない `texture` が作成される `texture_view`。  
-  
+[1, 2]コンス トラクター、`texture`を書き込み可能な`texture_view`が作成されます。
+
+[3, 4]コンス トラクター、`texture`を書き込みで非`texture_view`が作成されます。
+
 *_Other*<br/>
-[5] コピー コンストラクター  
- ソースの書き込みが可能な `texture_view`。  
-  
- [6, 7]コピー コンス トラクター  
- ソースの書き込みが可能でない `texture_view`。  
-  
+[書き込み可能なソースの 5] コピー コンス トラクター`texture_view`します。
+
+[6, 7]コピー コンス トラクターの書き込みを可能なソース`texture_view`します。
+
 *_Mipmap_level*<br/>
-この書き込み可能な `texture` がバインドするソース `texture_view` の特定の MIPMAP レベル。 既定値は 0 で、トップ レベル (最も詳細な) MIPMAP レベルを表します。  
-  
+この書き込み可能な `texture` がバインドするソース `texture_view` の特定の MIPMAP レベル。 既定値は 0 で、トップ レベル (最も詳細な) MIPMAP レベルを表します。
+
 *_Most_detailed_mip*<br/>
-指定された `texture_view` オブジェクトに関連する、ビューのトップ レベルの (最も詳細な) MIPMAP レベル。  
-  
+指定された `texture_view` オブジェクトに関連する、ビューのトップ レベルの (最も詳細な) MIPMAP レベル。
+
 *_Mip_levels*<br/>
-`texture_view` を使用してアクセスできる MIPMAP レベルの数。  
-  
-##  <a name="gather_red"></a> gather_red 
+`texture_view` を使用してアクセスできる MIPMAP レベルの数。
 
- 指定されたサンプリング構成を使用して指定された座標でテクスチャをサンプリングし、4 つのサンプリングされたテクセルの赤 (x) 要素を返します。  
-  
-```  
+##  <a name="gather_red"></a> gather_red
+
+指定されたサンプリング構成を使用して指定された座標でテクスチャをサンプリングし、4 つのサンプリングされたテクセルの赤 (x) 要素を返します。
+
+```
 const gather_return_type gather_red(
-    const sampler& _Sampler,  
+    const sampler& _Sampler,
     const coordinates_type& _Coord) const restrict(amp);
 
- 
 template<
-    address_mode _Address_mode = address_clamp  
->  
+    address_mode _Address_mode = address_clamp
+>
 const gather_return_type gather_red(
     const coordinates_type& _Coord) const restrict(amp);
-```  
-  
-### <a name="parameters"></a>パラメーター  
-*_Address_mode*<br/>
-`texture_view` をサンプリングするために使用するアドレス モード。 アドレス モードはすべての次元に対して同じです。  
-  
-*_Sampler*<br/>
-`texture_view` をサンプリングするために使用するサンプラー構成。  
-  
-*_Coord*<br/>
-サンプルが取得される座標です。 サンプルのテクセルを補間するには、小数の座標値が使用されます。  
-  
-### <a name="return-value"></a>戻り値  
- 4 つのサンプリングされたテクセル値の赤 (x) 要素を含むランク 4 の短いベクター。  
-  
-##  <a name="gather_green"></a> gather_green 
+```
 
- 指定されたサンプリング構成を使用して指定された座標でテクスチャをサンプリングし、4 つのサンプリングされたテクセルの緑 (y) 要素を返します。  
-  
-```  
+### <a name="parameters"></a>パラメーター
+
+*_Address_mode*<br/>
+`texture_view` をサンプリングするために使用するアドレス モード。 アドレス モードはすべての次元に対して同じです。
+
+*_Sampler*<br/>
+`texture_view` をサンプリングするために使用するサンプラー構成。
+
+*_Coord*<br/>
+サンプルが取得される座標です。 サンプルのテクセルを補間するには、小数の座標値が使用されます。
+
+### <a name="return-value"></a>戻り値
+
+4 つのサンプリングされたテクセル値の赤 (x) 要素を含むランク 4 の短いベクター。
+
+##  <a name="gather_green"></a> gather_green
+
+指定されたサンプリング構成を使用して指定された座標でテクスチャをサンプリングし、4 つのサンプリングされたテクセルの緑 (y) 要素を返します。
+
+```
 const gather_return_type gather_green(
-    const sampler& _Sampler,  
+    const sampler& _Sampler,
     const coordinates_type& _Coord) const restrict(amp);
 
- 
 template<
-    address_mode _Address_mode = address_clamp  
->  
+    address_mode _Address_mode = address_clamp
+>
 const gather_return_type gather_green(
     const coordinates_type& _Coord) const restrict(amp);
-```  
-  
-### <a name="parameters"></a>パラメーター  
-*_Address_mode*<br/>
-`texture_view` をサンプリングするために使用するアドレス モード。 アドレス モードはすべての次元に対して同じです。  
-  
-*_Sampler*<br/>
-`texture_view` をサンプリングするために使用するサンプラー構成。  
-  
-*_Coord*<br/>
-サンプルが取得される座標です。 サンプルのテクセルを補間するには、小数の座標値が使用されます。  
-  
-### <a name="return-value"></a>戻り値  
- 4 つのサンプリングされたテクセル値の緑 (y) 要素を含むランク 4 の短いベクター。  
-  
-##  <a name="gather_blue"></a> gather_blue 
+```
 
- 指定されたサンプリング構成を使用して指定された座標でテクスチャをサンプリングし、4 つのサンプリングされたテクセルの青 (z) 要素を返します。  
-  
-```  
+### <a name="parameters"></a>パラメーター
+
+*_Address_mode*<br/>
+`texture_view` をサンプリングするために使用するアドレス モード。 アドレス モードはすべての次元に対して同じです。
+
+*_Sampler*<br/>
+`texture_view` をサンプリングするために使用するサンプラー構成。
+
+*_Coord*<br/>
+サンプルが取得される座標です。 サンプルのテクセルを補間するには、小数の座標値が使用されます。
+
+### <a name="return-value"></a>戻り値
+
+4 つのサンプリングされたテクセル値の緑 (y) 要素を含むランク 4 の短いベクター。
+
+##  <a name="gather_blue"></a> gather_blue
+
+指定されたサンプリング構成を使用して指定された座標でテクスチャをサンプリングし、4 つのサンプリングされたテクセルの青 (z) 要素を返します。
+
+```
 const gather_return_type gather_blue(
-    const sampler& _Sampler,  
+    const sampler& _Sampler,
     const coordinates_type& _Coord) const restrict(amp);
 
- 
 template<
-    address_mode _Address_mode = address_clamp  
->  
+    address_mode _Address_mode = address_clamp
+>
 const gather_return_type gather_blue(
     const coordinates_type& _Coord) const restrict(amp);
-```  
-  
-### <a name="parameters"></a>パラメーター  
-*_Address_mode*<br/>
-`texture_view` をサンプリングするために使用するアドレス モード。 アドレス モードはすべての次元に対して同じです。  
-  
-*_Sampler*<br/>
-`texture_view` をサンプリングするために使用するサンプラー構成。  
-  
-*_Coord*<br/>
-サンプルが取得される座標です。 サンプルのテクセルを補間するには、小数の座標値が使用されます。  
-  
-### <a name="return-value"></a>戻り値  
- 4 つのサンプリングされたテクセル値の赤 (x) 要素を含むランク 4 の短いベクター。  
-  
-##  <a name="gather_alpha"></a> gather_alpha 
+```
 
- 指定されたサンプリング構成を使用して指定された座標でテクスチャをサンプリングし、4 つのサンプリングされたテクセルのアルファ (w) 要素を返します。  
-  
-```  
+### <a name="parameters"></a>パラメーター
+
+*_Address_mode*<br/>
+`texture_view` をサンプリングするために使用するアドレス モード。 アドレス モードはすべての次元に対して同じです。
+
+*_Sampler*<br/>
+`texture_view` をサンプリングするために使用するサンプラー構成。
+
+*_Coord*<br/>
+サンプルが取得される座標です。 サンプルのテクセルを補間するには、小数の座標値が使用されます。
+
+### <a name="return-value"></a>戻り値
+
+4 つのサンプリングされたテクセル値の赤 (x) 要素を含むランク 4 の短いベクター。
+
+##  <a name="gather_alpha"></a> gather_alpha
+
+指定されたサンプリング構成を使用して指定された座標でテクスチャをサンプリングし、4 つのサンプリングされたテクセルのアルファ (w) 要素を返します。
+
+```
 const gather_return_type gather_alpha(
-    const sampler& _Sampler,  
+    const sampler& _Sampler,
     const coordinates_type& _Coord) const restrict(amp);
 
- 
 template<
-    address_mode _Address_mode = address_clamp  
->  
+    address_mode _Address_mode = address_clamp
+>
 const gather_return_type gather_alpha(
     const coordinates_type& _Coord) const restrict(amp);
-```  
-  
-### <a name="parameters"></a>パラメーター  
-*_Address_mode*<br/>
-`texture_view` をサンプリングするために使用するアドレス モード。 アドレス モードはすべての次元に対して同じです。  
-  
-*_Sampler*<br/>
-`texture_view` をサンプリングするために使用するサンプラー構成。  
-  
-*_Coord*<br/>
-サンプルが取得される座標です。 サンプルのテクセルを補間するには、小数の座標値が使用されます。  
-  
-### <a name="return-value"></a>戻り値  
- 4 つのサンプリングされたテクセル値のアルファ (w) 要素を含むランク 4 の短いベクター。  
-  
-##  <a name="get"></a> 取得 
+```
 
- 指定したインデックス位置にある要素の値を取得します。  
-  
-```  
+### <a name="parameters"></a>パラメーター
+
+*_Address_mode*<br/>
+`texture_view` をサンプリングするために使用するアドレス モード。 アドレス モードはすべての次元に対して同じです。
+
+*_Sampler*<br/>
+`texture_view` をサンプリングするために使用するサンプラー構成。
+
+*_Coord*<br/>
+サンプルが取得される座標です。 サンプルのテクセルを補間するには、小数の座標値が使用されます。
+
+### <a name="return-value"></a>戻り値
+
+4 つのサンプリングされたテクセル値のアルファ (w) 要素を含むランク 4 の短いベクター。
+
+##  <a name="get"></a> 取得
+
+指定したインデックス位置にある要素の値を取得します。
+
+```
 const value_type get(
     const index<_Rank>& _Index) const restrict(amp);
 
- 
 value_type get(
-    const index<_Rank>& _Index,  
+    const index<_Rank>& _Index,
     unsigned int _Mip_level = 0) const restrict(amp);
-```  
-  
-### <a name="parameters"></a>パラメーター  
-*_Index*<br/>
-場合によっては多次元配列である、取得する要素のインデックス。  
-  
-*_Mip_level*<br/>
-値を取得する必要のある MIPMAP レベル。 既定値 0 は最も詳細な MIPMAP レベルを表します。  
-  
-### <a name="return-value"></a>戻り値  
- 要素の値。  
-  
-##  <a name="operator_eq"></a> 演算子 = 
+```
 
- 指定された `texture_view` と同じテクスチャのビューをこの `texture_view` インスタンスに割り当てます。  
-  
-```  
-texture_view<value_type, _Rank>& operator= (// [1] copy constructor  
+### <a name="parameters"></a>パラメーター
+
+*_Index*<br/>
+場合によっては多次元配列である、取得する要素のインデックス。
+
+*_Mip_level*<br/>
+値を取得する必要のある MIPMAP レベル。 既定値 0 は最も詳細な MIPMAP レベルを表します。
+
+### <a name="return-value"></a>戻り値
+
+要素の値。
+
+##  <a name="operator_eq"></a> 演算子 =
+
+指定された `texture_view` と同じテクスチャのビューをこの `texture_view` インスタンスに割り当てます。
+
+```
+texture_view<value_type, _Rank>& operator= (// [1] copy constructor
     const texture_view<value_type, _Rank>& _Other) restrict(amp, cpu);
 
- 
-texture_view<const value_type, _Rank>& operator= (// [2] copy constructor  
+texture_view<const value_type, _Rank>& operator= (// [2] copy constructor
     const texture_view<value_type, _Rank>& _Other) restrict(cpu);
 
- 
-texture_view<const value_type, _Rank>& operator= (// [3] copy constructor  
+texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
     const texture_view<const value_type, _Rank>& _Other) restrict(amp, cpu);
-```  
-  
-### <a name="parameters"></a>パラメーター  
-*_Other*<br/>
-[1、2] コピー コンストラクター  
- 書き込み可能な `texture_view` オブジェクト。  
-  
- [3] コピー コンス トラクター  
- 書き込み可能でない `texture_view` オブジェクト。  
-  
-### <a name="return-value"></a>戻り値  
- この `texture_view` インスタンスへの参照。  
-  
-##  <a name="operator_at"></a> operator[] 
+```
 
- インデックスごとの要素の値を返します。  
-  
-```  
+### <a name="parameters"></a>パラメーター
+
+*_Other*<br/>
+[1, 2]書き込み可能なコピー コンス トラクター`texture_view`オブジェクト。
+
+[書き込み不可を 3] コピー コンス トラクター`texture_view`オブジェクト。
+
+### <a name="return-value"></a>戻り値
+
+この `texture_view` インスタンスへの参照。
+
+##  <a name="operator_at"></a> operator[]
+
+インデックスごとの要素の値を返します。
+
+```
 const value_type operator[] (const index<_Rank>& _Index) const restrict(amp);
 
- 
 const value_type operator[] (int _I0) const restrict(amp);
 
- 
 value_type operator[] (const index<_Rank>& _Index) const restrict(amp);
 
- 
 value_type operator[] (int _I0) const restrict(amp);
-```  
-  
-### <a name="parameters"></a>パラメーター  
-*_Index*<br/>
-場合によっては多次元の、インデックス。  
-  
-*_I0*<br/>
-1 次元インデックス。  
-  
-### <a name="return-value"></a>戻り値  
- `_Index` でインデックス付けされている要素の値。  
-  
-##  <a name="operator_call"></a> operator() 
+```
 
- インデックスごとの要素の値を返します。  
-  
-```  
+### <a name="parameters"></a>パラメーター
+
+*_Index*<br/>
+場合によっては多次元の、インデックス。
+
+*_I0*<br/>
+1 次元インデックス。
+
+### <a name="return-value"></a>戻り値
+
+`_Index` でインデックス付けされている要素の値。
+
+##  <a name="operator_call"></a> operator()
+
+インデックスごとの要素の値を返します。
+
+```
 const value_type operator() (
     const index<_Rank>& _Index) const restrict(amp);
 
- 
 const value_type operator() (
     int _I0) const restrict(amp);
 
- 
 const value_type operator() (
     int _I0,   int _I1) const restrict(amp);
 
- 
 const value_type operator() (
-    int _I0,  
-    int _I1,  
+    int _I0,
+    int _I1,
     int _I2) const restrict(amp);
 
- 
 value_type operator() (
     const index<_Rank>& _Index) const restrict(amp);
 
- 
 value_type operator() (
     int _I0) const restrict(amp);
 
- 
 value_type operator() (
-    int _I0,  
+    int _I0,
     int _I1) const restrict(amp);
 
- 
 value_type operator() (
-    int _I0,  
-    int _I1,  
+    int _I0,
+    int _I1,
     int _I2) const restrict(amp);
-```  
-  
-### <a name="parameters"></a>パラメーター  
+```
+
+### <a name="parameters"></a>パラメーター
+
 *_Index*<br/>
-場合によっては多次元の、インデックス。  
-  
+場合によっては多次元の、インデックス。
+
 *_I0*<br/>
-インデックスの最上位のコンポーネント。  
-  
+インデックスの最上位のコンポーネント。
+
 *_I1*<br/>
-インデックスの最上位の次のコンポーネント。  
-  
+インデックスの最上位の次のコンポーネント。
+
 *_I2*<br/>
-インデックスの最下位のコンポーネント。  
-  
-### <a name="return-value"></a>戻り値  
- `_Index` でインデックス付けされている要素の値。  
-  
-##  <a name="sample"></a> サンプル 
+インデックスの最下位のコンポーネント。
 
- 指定されたサンプリング構成を使用して詳細な指定された座標およびレベルでテクスチャをサンプリングします。  
-  
-```  
+### <a name="return-value"></a>戻り値
+
+`_Index` でインデックス付けされている要素の値。
+
+##  <a name="sample"></a> サンプル
+
+指定されたサンプリング構成を使用して詳細な指定された座標およびレベルでテクスチャをサンプリングします。
+
+```
 value_type sample(
-    const sampler& _Sampler,  
-    const coordinates_type& _Coord,  
+    const sampler& _Sampler,
+    const coordinates_type& _Coord,
     float _Level_of_detail = 0.0f) const restrict(amp);
 
- 
 template<
-    filter_mode _Filter_mode = filter_linear,  
-    address_mode _Address_mode = address_clamp  
->  
+    filter_mode _Filter_mode = filter_linear,
+    address_mode _Address_mode = address_clamp
+>
 value_type sample(
-    const coordinates_type& _Coord,  
+    const coordinates_type& _Coord,
     float _Level_of_detail = 0.0f) const restrict(amp);
-```  
-  
-### <a name="parameters"></a>パラメーター  
+```
+
+### <a name="parameters"></a>パラメーター
+
 *_Filter_mode*<br/>
-texture_view をサンプリングするために使用するフィルター モード。 フィルター モードは最小化、最大化、および MIPMAP フィルターで同じです。  
-  
+texture_view をサンプリングするために使用するフィルター モード。 フィルター モードは最小化、最大化、および MIPMAP フィルターで同じです。
+
 *_Address_mode*<br/>
-texture_view をサンプリングするために使用するアドレス モード。 アドレス モードはすべての次元に対して同じです。  
-  
+texture_view をサンプリングするために使用するアドレス モード。 アドレス モードはすべての次元に対して同じです。
+
 *_Sampler*<br/>
-texture_view をサンプリングするために使用するサンプラー構成。  
-  
+texture_view をサンプリングするために使用するサンプラー構成。
+
 *_Coord*<br/>
-サンプルが取得される座標です。 テクセル値の補間には小数の座標値が使用されます。  
-  
+サンプルが取得される座標です。 テクセル値の補間には小数の座標値が使用されます。
+
 *_Level_of_detail*<br/>
-値は、サンプリング元の MIPMAP レベルを指定します。 2 つの MIPMAP レベル間の補間には、小数の値が使用されます。 詳細の既定のレベルは 0 で、これは最も詳細な MIPMAP レベルを表します。  
-  
-### <a name="return-value"></a>戻り値  
- 補間されたサンプル値。  
-  
-##  <a name="set"></a> 設定 
+値は、サンプリング元の MIPMAP レベルを指定します。 2 つの MIPMAP レベル間の補間には、小数の値が使用されます。 詳細の既定のレベルは 0 で、これは最も詳細な MIPMAP レベルを表します。
 
- 指定したインデックス位置にある要素の値を指定した値に設定します。  
-  
-```  
+### <a name="return-value"></a>戻り値
+
+補間されたサンプル値。
+
+##  <a name="set"></a> 設定
+
+指定したインデックス位置にある要素の値を指定した値に設定します。
+
+```
 void set(
-    const index<_Rank>& _Index,  
+    const index<_Rank>& _Index,
     const value_type& value) const restrict(amp);
-```  
-  
-### <a name="parameters"></a>パラメーター  
-*_Index*<br/>
-場合によっては多次元配列である、設定する要素のインデックス。  
-  
-*値*<br/>
-要素を設定する値。  
-  
-##  <a name="value_type"></a> value_type 
+```
 
- texture_view の要素の値型です。  
-  
-```  
-typedef typename const value_type value_type;  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)
+### <a name="parameters"></a>パラメーター
+
+*_Index*<br/>
+場合によっては多次元配列である、設定する要素のインデックス。
+
+*値*<br/>
+要素を設定する値。
+
+##  <a name="value_type"></a> value_type
+
+texture_view の要素の値型です。
+
+```
+typedef typename const value_type value_type;
+```
+
+## <a name="see-also"></a>関連項目
+
+[Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)

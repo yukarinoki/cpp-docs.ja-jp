@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c36f898c005a989a7be78e436b560fe9a0536b57
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3154f2db3c95154c425b116e05ec1b47096e33ff
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715066"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383559"
 ---
 # <a name="source-charset-set-source-character-set"></a>/source-charset (ソース文字セット)
 
@@ -67,6 +67,6 @@ IANA で定義されている文字セットの名前。
 
 [コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
 [コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)<br/>
-[(実行文字セット)/execution-charset](../../build/reference/execution-charset-set-execution-character-set.md)
-[/utf-8 (ソースの設定と実行可能ファイルの文字セットを utf-8)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)
-[/validate-charset (互換性の検証文字)](../../build/reference/validate-charset-validate-for-compatible-characters.md)
+[/execution-charset (実行文字セット)](../../build/reference/execution-charset-set-execution-character-set.md)<br/>
+[/utf-8 (ソースと実行可能ファイルの文字セットを UTF-8 に設定する)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)<br/>
+[/validate-charset (互換性のある文字の検証)](../../build/reference/validate-charset-validate-for-compatible-characters.md)

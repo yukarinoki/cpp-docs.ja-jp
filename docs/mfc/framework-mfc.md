@@ -1,5 +1,5 @@
 ---
-title: フレームワーク (MFC) |Microsoft ドキュメント
+title: フレームワーク (MFC) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,39 +22,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd75d29ce907b089d698c066e5a6cb41fcae3281
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 87db7b28ec340a76c074a7b32c0e182030042eeb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344397"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381960"
 ---
 # <a name="framework-mfc"></a>フレームワーク (MFC)
-Microsoft Foundation Class (MFC) ライブラリのフレームワークを使用する作業は、いくつかの主要なクラスといくつかの Visual C ツールに主に基づいています。 一部のクラスでは、Win32 アプリケーション プログラミング インターフェイス (API) の大部分をカプセル化します。 その他のクラスには、ドキュメント、ビュー、および、アプリケーション自体などのアプリケーションの概念がカプセル化します。 まだ他のユーザーは、OLE の機能とデータ アクセス機能が ODBC と DAO カプセル化します。  
-  
- たとえば、ウィンドウの Win32 の概念は、MFC クラスによってカプセル化`CWnd`です。 つまり、C++ クラスと呼ばれる`CWnd`をカプセル化、または「ラップ」、 `HWND` Windows ウィンドウを表すハンドル。 同様に、クラス`CDialog`Win32 ダイアログ ボックスをカプセル化します。  
-  
- カプセル化されることを意味 C++ クラス`CWnd`、たとえば、型のメンバー変数を含む`HWND`、クラスのメンバー関数が受け取る Win32 関数への呼び出しをカプセル化して、`HWND`をパラメーターとして。 クラス メンバー関数は、通常、同じ名前を持つカプセル化の Win32 関数として。  
-  
-## <a name="in-this-section"></a>このセクションの内容  
- [SDI と MDI](../mfc/sdi-and-mdi.md)  
-  
- [ドキュメント、ビュー、フレームワーク](../mfc/documents-views-and-the-framework.md)  
-  
- [ウィザードおよびリソース エディター](../mfc/wizards-and-the-resource-editors.md)  
-  
-## <a name="in-related-sections"></a>関連項目  
- [フレームワークを使ったアプリケーションの作成](../mfc/building-on-the-framework.md)  
-  
- [フレームワークと記述したコードとの関係](../mfc/how-the-framework-calls-your-code.md)  
-  
- [CWinApp: アプリケーション クラス](../mfc/cwinapp-the-application-class.md)  
-  
- [ドキュメント テンプレートとドキュメント/ビューの作成手順](../mfc/document-templates-and-the-document-view-creation-process.md)  
-  
- [メッセージの処理とマップ](../mfc/message-handling-and-mapping.md)  
-  
- [Window オブジェクト](../mfc/window-objects.md)  
-  
-## <a name="see-also"></a>関連項目  
- [クラスを使用した Windows アプリケーションの作成](../mfc/using-the-classes-to-write-applications-for-windows.md)
+
+Microsoft Foundation Class (MFC) ライブラリ、フレームワークを使用する作業は、いくつかの主要なクラスといくつかの Visual C ツールの大部分に基づきます。 いくつかのクラスは、Win32 アプリケーション プログラミング インターフェイス (API) の大部分をカプセル化します。 その他のクラスは、ドキュメント、ビュー、およびアプリケーション自体などのアプリケーションの概念をカプセル化します。 まだ他のユーザー エラーは、OLE の機能とデータ アクセス機能が ODBC と DAO カプセル化します。
+
+ウィンドウの Win32 の概念が MFC クラスによってカプセル化など、`CWnd`します。 つまり、C++ のクラスと呼ばれる`CWnd`をカプセル化または「ラップ」、 `HWND` Windows ウィンドウを表すハンドルです。 同様に、クラス`CDialog`Win32 ダイアログ ボックスをカプセル化します。
+
+カプセル化することで、C++ クラス`CWnd`、たとえば、型のメンバー変数が含まれます`HWND`、クラスのメンバー関数は、Win32 関数への呼び出しをカプセル化し、`HWND`をパラメーターとして。 通常、クラスのメンバー関数には、カプセル化しており、Win32 関数と同じ名前があります。
+
+## <a name="in-this-section"></a>このセクションの内容
+
+[SDI と MDI](../mfc/sdi-and-mdi.md)
+
+[ドキュメント、ビュー、フレームワーク](../mfc/documents-views-and-the-framework.md)
+
+[ウィザードおよびリソース エディター](../mfc/wizards-and-the-resource-editors.md)
+
+## <a name="in-related-sections"></a>関連項目
+
+[フレームワークを使ったアプリケーションの作成](../mfc/building-on-the-framework.md)
+
+[フレームワークと記述したコードとの関係](../mfc/how-the-framework-calls-your-code.md)
+
+[CWinApp: アプリケーション クラス](../mfc/cwinapp-the-application-class.md)
+
+[ドキュメント テンプレートとドキュメント/ビューの作成手順](../mfc/document-templates-and-the-document-view-creation-process.md)
+
+[メッセージの処理とマップ](../mfc/message-handling-and-mapping.md)
+
+[Window オブジェクト](../mfc/window-objects.md)
+
+## <a name="see-also"></a>関連項目
+
+[クラスを使用した Windows アプリケーションの作成](../mfc/using-the-classes-to-write-applications-for-windows.md)

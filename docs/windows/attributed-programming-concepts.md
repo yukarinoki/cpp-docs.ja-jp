@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f91474ec4c435b6fb2a005b47c67210a54d0804
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: abe76a4153ecfb0e4db4ce9e92eb63f5b00067ff
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317265"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394648"
 ---
 # <a name="attributed-programming-concepts"></a>属性付きプログラミングの概念
 
@@ -32,27 +32,27 @@ Visual C には、さまざまな属性をプログラムで使用できるよ�
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[属性の目的](../windows/purpose-of-attributes.md)  
+[属性の目的](../windows/purpose-of-attributes.md)<br/>
 属性付きプログラミングの概要を示します。
 
-[属性の基本的なしくみ](../windows/basic-mechanics-of-attributes.md)  
+[属性の基本的なしくみ](../windows/basic-mechanics-of-attributes.md)<br/>
 プロジェクト内の属性の機能について説明します。
 
-[属性付きプログラムの作成](../windows/building-an-attributed-program.md)  
+[属性付きプログラムの作成](../windows/building-an-attributed-program.md)<br/>
 プロジェクトでの C++ コンパイラ オプションの使用方法についてを説明します。
 
-[属性のカテゴリ](../windows/attribute-categories.md)  
+[属性のカテゴリ](../windows/attribute-categories.md)<br/>
 Visual C で使用される属性のカテゴリへのリンクを提供します。
 
-[属性 Programmming に関する FAQ](../windows/attribute-programming-faq.md)  
+[属性 Programmming に関する FAQ](../windows/attribute-programming-faq.md)<br/>
 回答では、質問が属性付きプログラミングに関してよく寄せられます。
 
 ## <a name="related-sections"></a>関連項目
 
-[属性リファレンス](../windows/cpp-attributes-reference.md)  
+[属性リファレンス](../windows/cpp-attributes-reference.md)<br/>
 個々 の属性とその使用を説明するリファレンス トピックへのリンクを提供します。
 
-[挿入されたコードのデバッグ](/visualstudio/debugger/how-to-debug-injected-code)  
+[挿入されたコードのデバッグ](/visualstudio/debugger/how-to-debug-injected-code)<br/>
 属性付きプログラムのデバッグについて説明します。
 
 [_ _super](../cpp/super.md)と[_ _interface](../cpp/interface.md)  

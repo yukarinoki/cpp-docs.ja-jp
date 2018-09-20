@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 57d1a3adc160323726bcdd31808cf82bc8da2e7f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 19bb77128eee9cc8af514e60730c3a39115695cc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609255"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426543"
 ---
 # <a name="callback-function-windows-runtime-c-template-library"></a>コールバック関数 (Windows ランタイム C++ テンプレート ライブラリ)
 
@@ -201,49 +201,49 @@ ComPtr<TDelegateInterface> Callback(
 
 ### <a name="parameters"></a>パラメーター
 
-*TDelegateInterface*  
+*TDelegateInterface*<br/>
 イベントが発生したときに呼び出すデリゲートのインターフェイスを指定するテンプレート パラメーター。
 
-*TCallback*  
+*TCallback*<br/>
 オブジェクトとそのコールバック メンバー関数を表すオブジェクト型を指定するテンプレート パラメーター。
 
-*TCallbackObject*  
+*TCallbackObject*<br/>
 イベントが発生したときに呼び出されるメソッドをメンバー関数に持つオブジェクトを指定するテンプレート パラメーター。
 
-*TArg1*  
+*TArg1*<br/>
 最初のコールバック メソッドの引数の型を指定するテンプレート パラメーター。
 
-*TArg2*  
+*TArg2*<br/>
 2 番目のコールバック メソッドの引数の型を指定するテンプレート パラメーター。
 
-*TArg3*  
+*TArg3*<br/>
 3 番目のコールバック メソッドの引数の型を指定するテンプレート パラメーター。
 
-*TArg4*  
+*TArg4*<br/>
 4 番目のコールバック メソッドの引数の型を指定するテンプレート パラメーター。
 
-*TArg5*  
+*TArg5*<br/>
 5 番目のコールバック メソッドの引数の型を指定するテンプレート パラメーター。
 
-*TArg6*  
+*TArg6*<br/>
 6 番目のコールバック メソッドの引数の型を指定するテンプレート パラメーター。
 
-*TArg7*  
+*TArg7*<br/>
 7 番目のコールバック メソッドの引数の型を指定するテンプレート パラメーター。
 
-*TArg8*  
+*TArg8*<br/>
 8 番目のコールバック メソッドの引数の型を指定するテンプレート パラメーター。
 
-*TArg9*  
+*TArg9*<br/>
 9 番目のコールバック メソッドの引数の型を指定するテンプレート パラメーター。
 
-*コールバック*  
+*コールバック*<br/>
 コールバック オブジェクトおよびそのメンバー関数を表すオブジェクト。
 
-*object*  
+*object*<br/>
 イベントが発生したときにメンバー関数が呼び出されるオブジェクト。
 
-*method*  
+*method*<br/>
 イベントが発生したときに呼び出すメンバー関数。
 
 ## <a name="return-value"></a>戻り値

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ae4f50e6d2d614e444766babf8e55f5c9f83932
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a8b84bcaec7dbadfb7b735264df12f7e958dcd20
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609545"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444698"
 ---
 # <a name="modulecreate-method"></a>Module::Create メソッド
 
@@ -45,16 +45,16 @@ WRL_NOTHROW static Module& Create(
 
 ### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 モジュールの種類。
 
-*コールバック*  
+*コールバック*<br/>
 モジュールの最後のインスタンス オブジェクトを解放するときに呼び出されます。
 
-*object*  
+*object*<br/>
 *オブジェクト*と*メソッド*パラメーターの組み合わせで使用されます。 ポイント最後のインスタンス オブジェクト、モジュールの最後のインスタンスのオブジェクトがリリースされたときにします。
 
-*method*  
+*method*<br/>
 *オブジェクト*と*メソッド*パラメーターの組み合わせで使用されます。 モジュールの最後のインスタンスのオブジェクトがリリースされたときに、最後のインスタンス オブジェクトのメソッドを指します。
 
 ## <a name="return-value"></a>戻り値

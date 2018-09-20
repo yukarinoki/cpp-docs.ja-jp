@@ -1,5 +1,5 @@
 ---
-title: フレームワーク上に構築 |Microsoft ドキュメント
+title: フレームワークでの構築 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c10b9d0903901cfe564b161a250d58078d5a08c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ca0ebd9bf03df8725c14df8d2aca1f7858b7b65
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341555"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396182"
 ---
 # <a name="building-on-the-framework"></a>フレームワークを使ったアプリケーションの作成
-MFC フレームワークとアプリケーションの構成でロールは、アプリケーション固有のソース コードを指定して、どのようなメッセージと応答するコマンドを定義することで、コンポーネントを接続するにです。 クラス ライブラリで指定されているから、独自のアプリケーション固有のクラスを派生およびをオーバーライドし、基本クラスの動作を追加するには、C++ 言語と C++ の標準的な手法を使用します。  
-  
- 関連のトピックでは、次の表は、通常次の操作とフレームワークの役割と責任範囲の全般的な順序を説明します。  
-  
--   [フレームワークとアプリケーションを構築するためのシーケンス](../mfc/sequence-of-operations-for-building-mfc-applications.md)  
-  
--   [OLE アプリケーションの作成手順](../mfc/sequence-of-operations-for-creating-ole-applications.md)  
-  
--   [ActiveX コントロールの作成手順](../mfc/sequence-of-operations-for-creating-activex-controls.md)  
-  
--   [データベース アプリケーションの作成手順](../mfc/sequence-of-operations-for-creating-database-applications.md)  
-  
- ほとんどの場合、別のオプションの手順の一部が、MFC アプリケーションを作成するための手順のシーケンスとしてこれらのテーブルを追跡できます。 たとえば、ほとんどのアプリケーションは、使用できるいくつかの型からビュー クラスの 1 つの型を使用します。  
-  
-## <a name="see-also"></a>関連項目  
- [MFC の一般的なトピック](../mfc/general-mfc-topics.md)
+
+MFC フレームワークとアプリケーションの構成でのロールは、アプリケーション固有のソース コードを指定して、どのようなメッセージと応答するコマンドを定義することで、コンポーネントを接続するには。 C++ 言語および標準的な C++ 手法を使用して、クラス ライブラリで指定されているから、独自のアプリケーション固有のクラスを派生およびをオーバーライドし、基本クラスの動作を追加します。
+
+関連のトピックでは、次の表は、次の通常操作とフレームワークの役割とお客様の責任の一般的な手順を示します。
+
+- [フレームワークとアプリケーションを構築するためのシーケンス](../mfc/sequence-of-operations-for-building-mfc-applications.md)
+
+- [OLE アプリケーションの作成手順](../mfc/sequence-of-operations-for-creating-ole-applications.md)
+
+- [ActiveX コントロールの作成手順](../mfc/sequence-of-operations-for-creating-activex-controls.md)
+
+- [データベース アプリケーションの作成手順](../mfc/sequence-of-operations-for-creating-database-applications.md)
+
+ほとんどの場合、別のオプションは一部の手順は、MFC アプリケーションを作成するための手順のシーケンスとしてこれらのテーブルをフォローできます。 たとえば、ほとんどのアプリケーションは、使用できるいくつかの型からビュー クラスの 1 つの型を使用します。
+
+## <a name="see-also"></a>関連項目
+
+[MFC の一般的なトピック](../mfc/general-mfc-topics.md)
 

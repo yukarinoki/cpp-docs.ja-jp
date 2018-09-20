@@ -1,5 +1,5 @@
 ---
-title: CMFCImageEditorDialog クラス |Microsoft ドキュメント
+title: CMFCImageEditorDialog クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,95 +18,104 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af19a9dcb207afa482f54e26540a6b706d607ce0
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 0f360c8fc44fba07aee8287137468937d959c596
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040770"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428799"
 ---
 # <a name="cmfcimageeditordialog-class"></a>CMFCImageEditorDialog クラス
-`CMFCImageEditorDialog`クラスは、イメージ エディター ダイアログ ボックスをサポートしています。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-class CMFCImageEditorDialog : public CDialogEx  
-```  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="public-constructors"></a>パブリック コンストラクター  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[CMFCImageEditorDialog::CMFCImageEditorDialog](#cmfcimageeditordialog)|`CMFCImageEditorDialog` オブジェクトを構築します。|  
-  
-## <a name="remarks"></a>Remarks  
- `CMFCImageEditorDialog`クラスが含まれるダイアログ ボックスが表示されます。  
-  
--   使用するイメージ内の個々 のピクセルを変更する画像領域。  
-  
--   画像領域のピクセルを修正するためのツールを描画します。  
-  
--   描画ツールによって使用される色を指定する色パレット。  
-  
--   編集の影響を表示するプレビュー領域。  
-  
- 次の図は、イメージ エディター ダイアログ ボックスを示しています。  
-  
- ![[CMFCImageEditorDialog] ダイアログ ボックス](../../mfc/reference/media/imageedit.png "imageedit")  
-  
- 使用する方法の 1 つ、`CMFCImageEditorDialog`オブジェクトを渡すことが、`CBitmap`イメージを編集することです。 イメージの編集領域が制限されたサイズと論理ピクセルのサイズは、領域に合わせて調整するために大きなイメージを作成できません。 呼び出す、`DoModal`モーダル ダイアログ ボックスを起動する方法です。  
-  
-## <a name="inheritance-hierarchy"></a>継承階層  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
-  
- [CWnd](../../mfc/reference/cwnd-class.md)  
-  
- [CDialog](../../mfc/reference/cdialog-class.md)  
-  
- [CDialogEx](../../mfc/reference/cdialogex-class.md)  
-  
- [CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md)  
-  
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** afximageeditordialog.h  
-  
-##  <a name="cmfcimageeditordialog"></a>  CMFCImageEditorDialog::CMFCImageEditorDialog  
- `CMFCImageEditorDialog` オブジェクトを構築します。  
-  
-```  
+
+`CMFCImageEditorDialog`クラスは、イメージ エディター ダイアログ ボックスをサポートしています。
+
+## <a name="syntax"></a>構文
+
+```
+class CMFCImageEditorDialog : public CDialogEx
+```
+
+## <a name="members"></a>メンバー
+
+### <a name="public-constructors"></a>パブリック コンストラクター
+
+|名前|説明|
+|----------|-----------------|
+|[CMFCImageEditorDialog::CMFCImageEditorDialog](#cmfcimageeditordialog)|`CMFCImageEditorDialog` オブジェクトを構築します。|
+
+## <a name="remarks"></a>Remarks
+
+`CMFCImageEditorDialog`クラスが含まれるダイアログ ボックスを提供します。
+
+- ピクチャの領域を使用して個々 のピクセル イメージに変更します。
+
+- ピクチャの領域のピクセルを修正するためのツールを描画します。
+
+- 描画ツールによって使用される色を指定する色パレット。
+
+- 編集する効果を表示するプレビュー領域。
+
+次の図は、イメージ エディター ダイアログ ボックスを示しています。
+
+![[CMFCImageEditorDialog] ダイアログ ボックス](../../mfc/reference/media/imageedit.png "imageedit")
+
+使用する方法の 1 つ、`CMFCImageEditorDialog`オブジェクトを渡すことが、`CBitmap`編集する画像。 イメージの編集領域が制限されたサイズと論理ピクセルのサイズが領域に合わせて調整するため、大きいイメージを作成できません。 呼び出す、`DoModal`モーダル ダイアログ ボックスを起動する方法。
+
+## <a name="inheritance-hierarchy"></a>継承階層
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+
+[CWnd](../../mfc/reference/cwnd-class.md)
+
+[CDialog](../../mfc/reference/cdialog-class.md)
+
+[CDialogEx](../../mfc/reference/cdialogex-class.md)
+
+[CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md)
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** afximageeditordialog.h
+
+##  <a name="cmfcimageeditordialog"></a>  CMFCImageEditorDialog::CMFCImageEditorDialog
+
+`CMFCImageEditorDialog` オブジェクトを構築します。
+
+```
 CMFCImageEditorDialog(
-    CBitmap* pBitmap,  
-    CWnd* pParent=NULL,  
+    CBitmap* pBitmap,
+    CWnd* pParent=NULL,
     int nBitsPixel=-1);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *pBitmap*  
- イメージへのポインター。  
-  
- *pParent*  
- 現在のイメージ エディター ダイアログ ボックスの親ウィンドウへのポインター。  
-  
- *nBitsPixel*  
- 色深度とも呼びますが単一のピクセルの色を表すために使用されるビットの数。  場合、 *nBitsPixel*パラメーターが-1、色深度がで指定されたイメージから派生した、 *pBitmap*パラメーター。 既定値は -1 です。  
-  
-### <a name="return-value"></a>戻り値  
- イメージを変更するをイメージ ポインターを渡す、`CMFCImageEditorDialog`コンス トラクターです。 まず、`DoModal`をモーダル ダイアログ ボックスを開くメソッドです。 ときに、`DoModal`ビットマップには、新しいイメージが含まれています。 メソッドが返されます。  
-  
-### <a name="remarks"></a>Remarks  
-  
-### <a name="example"></a>例  
- 次の例でのオブジェクトを作成する方法、`CMFCImageEditorDialog`クラスです。 この例の一部である、[新しいコントロール サンプル](../../visual-cpp-samples.md)です。  
-  
- [!code-cpp[NVC_MFC_NewControls#8](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_1.cpp)]  
-[!code-cpp[NVC_MFC_NewControls#40](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_2.cpp)]  
-  
-## <a name="see-also"></a>関連項目  
- [階層図](../../mfc/hierarchy-chart.md)   
- [クラス](../../mfc/reference/mfc-classes.md)   
- [CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md)
+```
+
+### <a name="parameters"></a>パラメーター
+
+*pBitmap*<br/>
+イメージへのポインター。
+
+*pParent*<br/>
+現在のイメージ エディター ダイアログ ボックスの親ウィンドウへのポインター。
+
+*nBitsPixel*<br/>
+色深度とも呼ばれますが、1 つのピクセルの色を表すために使用されるビット数。  場合、 *nBitsPixel*パラメーターが-1、色の解像度がで指定されたイメージから派生した、 *pBitmap*パラメーター。 既定値は -1 です。
+
+### <a name="return-value"></a>戻り値
+
+イメージを変更するにイメージ ポインターを渡す、`CMFCImageEditorDialog`コンス トラクター。 呼び出して、`DoModal`メソッド モーダル ダイアログ ボックスを開きます。 ときに、`DoModal`メソッドが戻る、ビットマップには、新しいイメージが含まれています。
+
+### <a name="remarks"></a>Remarks
+
+### <a name="example"></a>例
+
+次の例のオブジェクトを構築する方法、`CMFCImageEditorDialog`クラス。 この例は、[新しいコントロール サンプル](../../visual-cpp-samples.md)します。
+
+[!code-cpp[NVC_MFC_NewControls#8](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_1.cpp)]
+[!code-cpp[NVC_MFC_NewControls#40](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_2.cpp)]
+
+## <a name="see-also"></a>関連項目
+
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[クラス](../../mfc/reference/mfc-classes.md)<br/>
+[CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md)

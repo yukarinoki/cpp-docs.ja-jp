@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7a4e033ac940d414cb3ece11dfd927b8c2658f7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5355b6e81354ef04b7cc4d2c3495289c9d1d029d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762562"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444206"
 ---
 # <a name="exporting-string-classes-using-cstringt"></a>CStringT による文字列クラスをエクスポートします。
 
@@ -65,6 +65,6 @@ AfxStr.h で置き換える前`CString`、 `CStringA`、および`CStringW`typed
 
 ## <a name="see-also"></a>関連項目
 
-[CStringT の使用](../atl-mfc-shared/using-cstringt.md)   
+[CStringT の使用](../atl-mfc-shared/using-cstringt.md)<br/>
 [CString の使用](../atl-mfc-shared/using-cstring.md)
 

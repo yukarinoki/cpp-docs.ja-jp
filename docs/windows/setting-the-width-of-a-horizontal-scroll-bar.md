@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 671da02bd1b836cd482c057c09ab31d27b42843f
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 74e9e24fdd3b46a8abe021b6c0ea3bbc2f860a2c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314663"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438874"
 ---
 # <a name="setting-the-width-of-a-horizontal-scroll-bar"></a>水平スクロール バーの幅の設定
 
@@ -46,5 +46,5 @@ MFC
 
 ## <a name="see-also"></a>関連項目
 
-[ダイアログ ボックスのコントロール](../windows/controls-in-dialog-boxes.md)  
+[ダイアログ ボックスのコントロール](../windows/controls-in-dialog-boxes.md)<br/>
 [コントロール](../mfc/controls-mfc.md)

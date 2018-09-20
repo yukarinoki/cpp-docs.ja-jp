@@ -16,41 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adece31c6123a21931436809d4405f258f4341b1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: f989c7bd6cc74a688e8694ed59899c59c50cb0d4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538290"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430658"
 ---
 # <a name="readcr0"></a>__readcr0
-**Microsoft 固有の仕様**  
-  
- CR0 レジスタを読み込み、その値を返します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-unsigned long __readcr0(void);  /* X86 */  
-unsigned __int64 __readcr0(void);  /* X64 */  
-  
-```  
-  
-## <a name="return-value"></a>戻り値  
- CR0 レジスタの値。  
-  
-## <a name="requirements"></a>要件  
-  
-|組み込み|アーキテクチャ|  
-|---------------|------------------|  
-|`__readcr0`|x86、x64|  
-  
- **ヘッダー ファイル** \<intrin.h >  
-  
-## <a name="remarks"></a>Remarks  
- この組み込みはカーネル モードのみで使用でき、そのルーチンは組み込みとしてのみ使用できます。  
-  
-**Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)
+
+**Microsoft 固有の仕様**
+
+CR0 レジスタを読み込み、その値を返します。
+
+## <a name="syntax"></a>構文
+
+```
+unsigned long __readcr0(void);  /* X86 */
+unsigned __int64 __readcr0(void);  /* X64 */
+
+```
+
+## <a name="return-value"></a>戻り値
+
+CR0 レジスタの値。
+
+## <a name="requirements"></a>要件
+
+|組み込み|アーキテクチャ|
+|---------------|------------------|
+|`__readcr0`|x86、x64|
+
+**ヘッダー ファイル** \<intrin.h >
+
+## <a name="remarks"></a>Remarks
+
+この組み込みはカーネル モードのみで使用でき、そのルーチンは組み込みとしてのみ使用できます。
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

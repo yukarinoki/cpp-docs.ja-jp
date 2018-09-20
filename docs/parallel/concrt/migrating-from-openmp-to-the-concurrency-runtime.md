@@ -1,5 +1,5 @@
 ---
-title: OpenMP から同時実行ランタイムへの移行 |Microsoft ドキュメント
+title: OpenMP から同時実行ランタイムへの移行 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,62 +15,66 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16e10287526e6b815ba56183a8e3d590102507aa
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: e6c6ca3da9e1f66e068980deebce938a5603a4cc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690489"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428181"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>OpenMP から同時実行ランタイムへの移行
-同時実行ランタイムでは、さまざまなプログラミング モデルを使用できます。 これらのモデルは、他のライブラリのモデルと重複する場合や、他のライブラリのモデルを補完する場合があります。 このドキュメントのセクション比較[OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)同時実行ランタイムにし、同時実行ランタイムを使用する既存の OpenMP コードを移行する方法について例を示します。  
-  
- OpenMP プログラミング モデルは、オープン標準により定義されており、Fortran および C/C++ プログラミング言語へのバインドが適切に定義されています。 OpenMP version 2.0 および 2.5 では、Visual C コンパイラでサポートされているは反復的な; は、並列アルゴリズムに最適つまり、並列反復処理をデータの配列を実行します。 OpenMP 3.0 では、反復的なタスクに加え、非反復的なタスクをサポートします。  
-  
- OpenMP は、並列化の度合いが事前に決定され、システムで使用可能なリソースと対応する場合に最も効果的です。 OpenMP モデルは、高パフォーマンス コンピューティングに特に適したが非常に大規模な計算問題は、1 台のコンピューターの処理リソースを分散します。 このシナリオでハードウェア環境が一般的に固定であり、開発者は、アルゴリズムを実行すると、すべてのコンピューティング リソースに対する排他アクセスを持ちますを予測できます。  
-  
- ただし、制約付きのコンピューティング環境以下できない可能性があります OpenMP のとよく一致します。 たとえば、(クイック ソート アルゴリズムやデータのツリーを検索) の再帰的な問題は OpenMP 2.0 および 2.5 を使用して実装することは困難です。 同時実行ランタイムを提供することによって、OpenMP の機能を補完、[非同期エージェント ライブラリ](../../parallel/concrt/asynchronous-agents-library.md)と[並列パターン ライブラリ](../../parallel/concrt/parallel-patterns-library-ppl.md)(PPL)。 非同期エージェント ライブラリは、タスクの粒度の粗い並列処理をサポートしています。PPL では、複数の粒度の細かい並列タスクをサポートします。 同時実行ランタイムでは、アプリケーションのロジックに集中できるように、操作を並列で実行に必要なインフラストラクチャを提供します。 ただし、同時実行ランタイムには、さまざまなプログラミング モデルができますが、そのによるスケジューリング オーバーヘッドはより大きくなります OpenMP などの他の同時実行ライブラリです。 そのため、同時実行ランタイムを使用する既存の OpenMP コードを変換するときに増分パフォーマンスをテストすることをお勧めします。  
-  
-## <a name="when-to-migrate-from-openmp-to-the-concurrency-runtime"></a>OpenMP から同時実行ランタイムに移行するときに  
- 次の場合に、同時実行ランタイムを使用する既存の OpenMP コードを移行すると便利な場合があります。  
-  
-|Cases|同時実行ランタイムの利点|  
-|-----------|-------------------------------------------|  
-|拡張可能な同時実行プログラミング フレームワークが必要です。|同時実行ランタイムの機能の多くは拡張できます。 既存の機能を組み合わせて新しい機能を作成することもできます。 OpenMP では、コンパイラ ディレクティブを使用して、ため、簡単に拡張できません。|  
-|アプリケーションを協調ブロッキングを享受できます。|タスクがブロックされていない使用可能なリソースが必要とするため、同時実行ランタイムは、最初のタスクがリソースを待機中に、この他のタスクを実行できます。|  
-|動的負荷分散から得られるとします。|同時実行ランタイムでは、ワークロードの変化に応じてコンピューティング リソースの割り当てが調整されるスケジューリング アルゴリズムを使用します。 OpenMP でスケジューラは、並行領域にコンピューティング リソースを割り当てます場合、それらのリソース割り当ては、計算全体で固定されます。|  
-|例外処理のサポートが必要です。|PPL では、両方の内部と外部並列領域またはループの例外をキャッチすることができます。 OpenMP では、並列領域またはループ内で例外を処理する必要があります。|  
-|取り消し機構が必要です。|Ppl では、個々 のタスクと作業の並列のツリーの両方をキャンセルするアプリケーションを使用します。 OpenMP には、アプリケーションの独自のキャンセル メカニズムを実装する必要があります。|  
-|開始元となるさまざまなコンテキストで終了する並列コードを必要とします。|同時実行ランタイムでは、タスクを 1 つのコンテキストでは、開始を待機し、別のコンテキストでそのタスクをキャンセルすることができます。 OpenMP では、すべての並列処理は、開始元のコンテキストで終了しなければなりません。|  
-|デバッグ サポートの強化を必要とします。|Visual Studio では、**並列スタック**と**並列タスク**windows マルチ スレッド アプリケーションのデバッグをより簡単にできます。<br /><br /> 同時実行ランタイムのデバッグをサポートの詳細については、次を参照してください[タスク ウィンドウを使用して](/visualstudio/debugger/using-the-tasks-window)、[並列スタック ウィンドウを使用して](/visualstudio/debugger/using-the-parallel-stacks-window)、および[チュートリアル: 並列のデバッグ。アプリケーション](/visualstudio/debugger/walkthrough-debugging-a-parallel-application)です。|  
-  
-## <a name="when-not-to-migrate-from-openmp-to-the-concurrency-runtime"></a>OpenMP から同時実行ランタイムへの移行をしない場合  
- 次の場合は、同時実行ランタイムを使用する既存の OpenMP コードを移行する適切ないる可能性がない場合について説明します。  
-  
-|Cases|説明|  
-|-----------|-----------------|  
-|アプリケーションで既にでは、お客様の要件を満たしています。|アプリケーションのパフォーマンスと現在のデバッグのサポートに満足したら、移行は適切なできない可能性があります。|  
-|並列ループの本体は、ほとんどの作業を実行します。|同時実行ランタイムのタスク スケジューラのオーバーヘッドがない問題に対処並列実行されるループの本体、特にループの本体が比較的小さい場合の利点です。|  
-|アプリケーションが c 言語で記述されました。|同時実行ランタイムでは、多くの C++ の機能を使用するために適さない場合がありますを完全に使用する C アプリケーションを有効にするコードを記述することはできません。|  
-  
-## <a name="related-topics"></a>関連トピック  
- [方法: OpenMP の parallel for ループを変換し、同時実行ランタイムを使用する](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)  
 
- OpenMP を使用する基本的なループを指定された[並列](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)と[の](../../parallel/openmp/reference/for-openmp.md)ディレクティブは、同時実行ランタイムを使用するように変換する方法を示します[concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for)アルゴリズムです。  
+コンカレンシー ランタイムでは、さまざまなプログラミング モデルを使用できます。 これらのモデルは、他のライブラリのモデルと重複する場合や、他のライブラリのモデルを補完する場合があります。 このドキュメントのセクション比較[OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)同時実行ランタイムにし、同時実行ランタイムを使用する既存の OpenMP コードを移行する方法について例を示します。
 
-  
- [方法: キャンセル処理を使用する OpenMP ループを変換し、同時実行ランタイムを使用する](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)  
- OpenMP を与え[並列](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[の](../../parallel/openmp/reference/for-openmp.md)ループを実行するすべての反復処理を必要としませんが、同時実行ランタイムの取り消し機構を使用するように変換する方法を示します。  
-  
- [方法: 例外処理を使用する OpenMP ループを変換し、同時実行ランタイムを使用する](../../parallel/concrt/convert-an-openmp-loop-that uses-exception-handling.md)  
- OpenMP を与え[並列](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[の](../../parallel/openmp/reference/for-openmp.md)例外処理を実行するループが、同時実行ランタイムの例外処理メカニズムを使用するように変換する方法を示します。  
-  
- [方法: 減少変数を使用する OpenMP ループを変換し、同時実行ランタイムを使用する](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)  
- OpenMP を与え[並列](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[の](../../parallel/openmp/reference/for-openmp.md)ループを使用する、[削減](../../parallel/openmp/reference/reduction.md)句は、同時実行ランタイムを使用するように変換する方法を示します。  
-  
-## <a name="see-also"></a>関連項目  
- [同時実行ランタイム](../../parallel/concrt/concurrency-runtime.md)   
- [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)   
- [並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)   
- [非同期エージェント ライブラリ](../../parallel/concrt/asynchronous-agents-library.md)
+OpenMP プログラミング モデルは、オープン標準により定義されており、Fortran および C/C++ プログラミング言語へのバインドが適切に定義されています。 OpenMP version 2.0 および 2.5 では、Visual C コンパイラでサポートされているは反復的な; の並列アルゴリズムに最適これは、データの配列を並列反復処理を実行します。 OpenMP 3.0 では、反復的なタスクに加え、非反復タスクをサポートします。
+
+OpenMP は、並列化の度合いが事前に決定され、システムで使用可能なリソースと対応する場合に最も効果的です。 OpenMP モデルは、高パフォーマンス コンピューティングに特に適したは非常に大きい計算の問題が 1 台のコンピューターの処理リソースを分散します。 このシナリオでは、ハードウェア環境が一般に、固定し、開発者は、アルゴリズムが実行されたときに、すべてのコンピューティング リソースへの排他アクセスに予測できます。
+
+ただし、コンピューティング環境の制約付き less 可能性がありますできません OpenMP に適しています。 たとえば、再帰の問題 (クイック ソート アルゴリズムやデータのツリーを検索) は OpenMP 2.0 および 2.5 を使用して実装することは困難です。 同時実行ランタイムでは、OpenMP の機能を補完することにより、 [Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)と[並列パターン ライブラリ](../../parallel/concrt/parallel-patterns-library-ppl.md)(PPL)。 Asynchronous Agents Library は、タスクの粒度の粗い並列処理をサポートしていますPPL には、多くの細かい並列タスクがサポートしています。 同時実行ランタイムでは、アプリケーションのロジックに専念できるように、並列操作を実行するために必要なインフラストラクチャを提供します。 ただし、同時実行ランタイムでは、さまざまなプログラミング モデルができますが、そのスケジューリング オーバーヘッドより大きくすること OpenMP などの他の同時実行ライブラリです。 そのため、同時実行ランタイムを使用する既存の OpenMP コードを変換するときに増分のパフォーマンスをテストすることをお勧めします。
+
+## <a name="when-to-migrate-from-openmp-to-the-concurrency-runtime"></a>OpenMP から同時実行ランタイムに移行するタイミング
+
+次の場合に、同時実行ランタイムを使用する既存の OpenMP コードを移行すると便利な場合があります。
+
+|Cases|同時実行ランタイムの利点|
+|-----------|-------------------------------------------|
+|拡張可能な同時実行プログラミング フレームワークが必要です。|コンカレンシー ランタイムの機能の多くは拡張できます。 既存の機能を組み合わせて新しい機能を作成することもできます。 OpenMP はコンパイラ ディレクティブに依存している、ため、簡単に拡張できません。|
+|アプリケーションは、協調ブロッキングをメリットとしています。|タスクがブロックはまだ使用可能なリソースを必要とするため、同時実行ランタイムは最初のタスクがリソースを待機中に、この他のタスクを実行できます。|
+|アプリケーションに対しては、動的負荷分散がメリットです。|同時実行ランタイムでは、ワークロードの変化に応じて、コンピューティング リソースの割り当てを調整するスケジューリング アルゴリズムを使用します。 OpenMP、スケジューラは、並列領域では、コンピューティング リソースを割り当てるときにそれらのリソース割り当てが、計算全体で固定されます。|
+|例外処理のサポートが必要です。|PPL では、両方の内部と外部並列領域またはループの例外をキャッチすることができます。 OpenMP では、並列領域またはループの内部で例外を処理する必要があります。|
+|取り消し機構が必要です。|PPL には、個々 のタスクと作業の並列のツリーの両方をキャンセルするアプリケーションができます。 OpenMP には、独自のキャンセル メカニズムを実装するためにアプリケーションが必要です。|
+|別の開始元のコンテキストに完了する並列コードを必要とします。|同時実行ランタイムでは、タスクを 1 つのコンテキストでは、開始を待機し、別のコンテキストでは、そのタスクをキャンセルすることができます。 OpenMP ですべての並列処理は、開始元のコンテキストで完了する必要があります。|
+|強化されたデバッグ サポートが必要です。|Visual Studio では、**並列スタック**と**並列タスク**windows マルチ スレッド アプリケーションをより簡単にデバッグできるようにします。<br /><br /> 同時実行ランタイムのデバッグをサポートする詳細については、次を参照してください[タスク ウィンドウを使用して](/visualstudio/debugger/using-the-tasks-window)、[並列スタック ウィンドウを使用して](/visualstudio/debugger/using-the-parallel-stacks-window)、および[チュートリアル: 並列デバッグ。アプリケーション](/visualstudio/debugger/walkthrough-debugging-a-parallel-application)します。|
+
+## <a name="when-not-to-migrate-from-openmp-to-the-concurrency-runtime"></a>OpenMP から同時実行ランタイムに移行すべきでない場合
+
+次の場合に、同時実行ランタイムを使用する既存の OpenMP コードの移行に適したできない場合がありますがについて説明します。
+
+|Cases|説明|
+|-----------|-----------------|
+|アプリケーションで既には、お客様の要件を満たしています。|アプリケーションのパフォーマンスと現在のデバッグ サポートに満足したら、移行適さない場合があります。|
+|並列ループの本体は、ほとんどの作業を実行します。|同時実行ランタイムのタスク スケジューラのオーバーヘッドは、ループ本体が比較的小さい場合に特にを並列にループ本体の実行の利点を克服いない可能性があります。|
+|アプリケーションが c 言語で記述されました。|同時実行ランタイムでは、多くの C++ 機能を使用するために適さない場合があります C アプリケーションを完全に使用できるようにするコードを記述することはできません。|
+
+## <a name="related-topics"></a>関連トピック
+
+[方法: OpenMP の parallel for ループを変換し、コンカレンシー ランタイムを使用する](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
+
+OpenMP を使用する基本的なループを指定された[並列](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)と[の](../../parallel/openmp/reference/for-openmp.md)ディレクティブでは、同時実行ランタイムを使用するように変換する方法を示します[concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for)アルゴリズム。
+
+[方法: キャンセル処理を使用する OpenMP ループを変換し、コンカレンシー ランタイムを使用する](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
+OpenMP を与え[並列](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[の](../../parallel/openmp/reference/for-openmp.md)ループを実行するすべての反復処理を必要としないが、同時実行ランタイムの取り消し機構を使用するように変換する方法を示します。
+
+[方法: 例外処理を使用する OpenMP ループを変換し、コンカレンシー ランタイムを使用する](../../parallel/concrt/convert-an-openmp-loop-that uses-exception-handling.md)<br/>
+OpenMP を与え[並列](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[の](../../parallel/openmp/reference/for-openmp.md)例外の処理を実行するループが、同時実行ランタイムの例外処理メカニズムを使用するように変換する方法を示します。
+
+[方法: 減少変数を使用する OpenMP ループを変換し、コンカレンシー ランタイムを使用する](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
+OpenMP を与え[並列](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[の](../../parallel/openmp/reference/for-openmp.md)ループを使用する、[削減](../../parallel/openmp/reference/reduction.md)句は、同時実行ランタイムを使用するように変換する方法を示します。
+
+## <a name="see-also"></a>関連項目
+
+[コンカレンシー ランタイム](../../parallel/concrt/concurrency-runtime.md)<br/>
+[OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)<br/>
+[並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
+[非同期エージェント ライブラリ](../../parallel/concrt/asynchronous-agents-library.md)
 

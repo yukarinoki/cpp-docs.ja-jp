@@ -1,5 +1,5 @@
 ---
-title: _ _noop |Microsoft ドキュメント
+title: _ _noop |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,39 +17,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14d7ab3f1a61dc0644bf5683376ac676fbfcd6b9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97820367f0960925dfcac1db339260cd3f52b8bc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322615"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430216"
 ---
 # <a name="noop"></a>__noop
-**Microsoft 固有の仕様**  
-  
- `__noop`組み込み関数を無視することを指定し、引数リストを解析できませんが、引数のコードを生成できません。 これは可変個の引数を受け取るグローバル デバッグ関数で使用するものです。  
-  
- コンパイラに変換、`__noop`組み込みコンパイル時に 0 にします。  
-  
-## <a name="example"></a>例  
- 次のコードが使用する方法を示します`__noop`です。  
-  
-```  
-// compiler_intrinsics__noop.cpp  
-// compile with or without /DDEBUG  
-#include <stdio.h>  
-  
-#if DEBUG  
-   #define PRINT   printf_s  
-#else  
-   #define PRINT   __noop  
-#endif  
-  
-int main() {  
-   PRINT("\nhello\n");  
-}  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [コンパイラ組み込み関数](../intrinsics/compiler-intrinsics.md)   
- [キーワード](../cpp/keywords-cpp.md)
+
+**Microsoft 固有の仕様**
+
+`__noop`組み込み関数を無視することを指定し、引数リストを解析できませんが、引数のコードを生成できません。 可変個の引数を取るグローバル デバッグ関数で使用するものでは。
+
+コンパイラに変換、`__noop`コンパイル時に 0 に固有です。
+
+## <a name="example"></a>例
+
+次のコードは、使用する方法を示しています。`__noop`します。
+
+```
+// compiler_intrinsics__noop.cpp
+// compile with or without /DDEBUG
+#include <stdio.h>
+
+#if DEBUG
+   #define PRINT   printf_s
+#else
+   #define PRINT   __noop
+#endif
+
+int main() {
+   PRINT("\nhello\n");
+}
+```
+
+## <a name="see-also"></a>関連項目
+
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[キーワード](../cpp/keywords-cpp.md)

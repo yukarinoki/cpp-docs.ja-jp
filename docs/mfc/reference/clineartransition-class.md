@@ -24,101 +24,113 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64b53cafc60e556ac142cdaf1f56608e5ab3de70
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0eb283b40c860df148cb9c193f7b00a05ecb78c6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211742"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395610"
 ---
 # <a name="clineartransition-class"></a>CLinearTransition クラス
-線形遷移をカプセル化します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-class CLinearTransition : public CBaseTransition;  
-```  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="public-constructors"></a>パブリック コンストラクター  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[CLinearTransition::CLinearTransition](#clineartransition)|線形遷移オブジェクトを構築し、期間と最終的な値で初期化します。|  
-  
-### <a name="public-methods"></a>パブリック メソッド  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[CLinearTransition::Create](#create)|カプセル化された移行 COM オブジェクトを作成する遷移ライブラリを呼び出します。 (上書き[CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create))。|  
-  
-### <a name="public-data-members"></a>パブリック データ メンバー  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[CLinearTransition::m_dblFinalValue](#m_dblfinalvalue)|移行の最後にアニメーション変数の値。|  
-|[CLinearTransition::m_duration](#m_duration)|移行の期間です。|  
-  
-## <a name="remarks"></a>Remarks  
- 、線形遷移中には、アニメーション変数の値はその初期値から指定した最終的な値に直線的に移行します。 すべての遷移が自動的にクリアされますが、お勧めするそれらに割り当てられている新しい演算子を使用します。 カプセル化された IUIAnimationTransition COM オブジェクトは、null を指定し、まで、CAnimationController::AnimateGroup によって作成されます。 影響を与えませんこの COM オブジェクトの作成後は、メンバー変数を変更します。  
-  
-## <a name="inheritance-hierarchy"></a>継承階層  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
-  
- [CLinearTransition](../../mfc/reference/clineartransition-class.md)  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** afxanimationcontroller.h  
-  
-##  <a name="clineartransition"></a>  CLinearTransition::CLinearTransition  
- 線形遷移オブジェクトを構築し、期間と最終的な値で初期化します。  
-  
-```  
+
+線形遷移をカプセル化します。
+
+## <a name="syntax"></a>構文
+
+```
+class CLinearTransition : public CBaseTransition;
+```
+
+## <a name="members"></a>メンバー
+
+### <a name="public-constructors"></a>パブリック コンストラクター
+
+|名前|説明|
+|----------|-----------------|
+|[CLinearTransition::CLinearTransition](#clineartransition)|線形遷移オブジェクトを構築し、期間と最終的な値で初期化します。|
+
+### <a name="public-methods"></a>パブリック メソッド
+
+|名前|説明|
+|----------|-----------------|
+|[CLinearTransition::Create](#create)|カプセル化された移行 COM オブジェクトを作成する遷移ライブラリを呼び出します。 (上書き[CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create))。|
+
+### <a name="public-data-members"></a>パブリック データ メンバー
+
+|名前|説明|
+|----------|-----------------|
+|[CLinearTransition::m_dblFinalValue](#m_dblfinalvalue)|移行の最後にアニメーション変数の値。|
+|[CLinearTransition::m_duration](#m_duration)|移行の期間です。|
+
+## <a name="remarks"></a>Remarks
+
+、線形遷移中には、アニメーション変数の値はその初期値から指定した最終的な値に直線的に移行します。 すべての遷移が自動的にクリアされますが、お勧めするそれらに割り当てられている新しい演算子を使用します。 カプセル化された IUIAnimationTransition COM オブジェクトは、null を指定し、まで、CAnimationController::AnimateGroup によって作成されます。 影響を与えませんこの COM オブジェクトの作成後は、メンバー変数を変更します。
+
+## <a name="inheritance-hierarchy"></a>継承階層
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
+
+[CLinearTransition](../../mfc/reference/clineartransition-class.md)
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** afxanimationcontroller.h
+
+##  <a name="clineartransition"></a>  CLinearTransition::CLinearTransition
+
+線形遷移オブジェクトを構築し、期間と最終的な値で初期化します。
+
+```
 CLinearTransition(
-    UI_ANIMATION_SECONDS duration,  
+    UI_ANIMATION_SECONDS duration,
     DOUBLE dblFinalValue);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *duration*  
- 移行の期間です。  
-  
- *dblFinalValue*  
- 移行の最後にアニメーション変数の値。  
-  
-##  <a name="create"></a>  CLinearTransition::Create  
- カプセル化された移行 COM オブジェクトを作成する遷移ライブラリを呼び出します。  
-  
-```  
+```
+
+### <a name="parameters"></a>パラメーター
+
+*duration*<br/>
+移行の期間です。
+
+*dblFinalValue*<br/>
+移行の最後にアニメーション変数の値。
+
+##  <a name="create"></a>  CLinearTransition::Create
+
+カプセル化された移行 COM オブジェクトを作成する遷移ライブラリを呼び出します。
+
+```
 virtual BOOL Create(
-    IUIAnimationTransitionLibrary* pLibrary,  
+    IUIAnimationTransitionLibrary* pLibrary,
     IUIAnimationTransitionFactory* \*not used*\);
-```  
-  
-### <a name="parameters"></a>パラメーター  
-*pLibrary*  
- ポインター、 [IUIAnimationTransitionLibrary インターフェイス](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)、標準的な遷移のライブラリを定義します。  
-  
-### <a name="return-value"></a>戻り値  
- 移行が正常に作成された場合は TRUE。それ以外の場合は FALSE です。  
-  
-##  <a name="m_dblfinalvalue"></a>  CLinearTransition::m_dblFinalValue  
- 移行の最後にアニメーション変数の値。  
-  
-```  
-DOUBLE m_dblFinalValue;  
-```  
-  
-##  <a name="m_duration"></a>  CLinearTransition::m_duration  
- 移行の期間です。  
-  
-```  
-UI_ANIMATION_SECONDS m_duration;  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [クラス](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="parameters"></a>パラメーター
+
+*pLibrary*<br/>
+ポインター、 [IUIAnimationTransitionLibrary インターフェイス](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)、標準的な遷移のライブラリを定義します。
+
+### <a name="return-value"></a>戻り値
+
+移行が正常に作成された場合は TRUE。それ以外の場合は FALSE です。
+
+##  <a name="m_dblfinalvalue"></a>  CLinearTransition::m_dblFinalValue
+
+移行の最後にアニメーション変数の値。
+
+```
+DOUBLE m_dblFinalValue;
+```
+
+##  <a name="m_duration"></a>  CLinearTransition::m_duration
+
+移行の期間です。
+
+```
+UI_ANIMATION_SECONDS m_duration;
+```
+
+## <a name="see-also"></a>関連項目
+
+[クラス](../../mfc/reference/mfc-classes.md)

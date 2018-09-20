@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59e748ef68d78f9cb77eb335f5c5cd44e058f0d4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 1e0873b366c84e89b23ddbaa6c64f6b484f921e0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601157"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446336"
 ---
 # <a name="weakreferenceresolve-method"></a>WeakReference::Resolve メソッド
 
@@ -39,10 +39,10 @@ STDMETHOD(Resolve)
 
 ### <a name="parameters"></a>パラメーター
 
-*riid*  
+*riid*<br/>
 インターフェイス ID。
 
-*ppvObject*  
+*ppvObject*<br/>
 この操作が完了するとは、強力な参照カウントが 0 以外の場合は、現在の強い参照のコピーします。
 
 ## <a name="return-value"></a>戻り値
@@ -65,5 +65,5 @@ STDMETHOD(Resolve)
 
 ## <a name="see-also"></a>関連項目
 
-[WeakReference Class1](../windows/weakreference-class1.md)  
+[WeakReference Class1](../windows/weakreference-class1.md)<br/>
 [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

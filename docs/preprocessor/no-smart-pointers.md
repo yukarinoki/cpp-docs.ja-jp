@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 345da5de492c33107effffb9c97b2fe60906e899
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: a01e6cf423aece9fba74c4b81fa247d57844e107
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540675"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439888"
 ---
 # <a name="nosmartpointers"></a>no_smart_pointers
 **C++ 固有の仕様**  
@@ -42,5 +42,5 @@ no_smart_pointers
   
 ## <a name="see-also"></a>関連項目  
  
-[#import の属性](../preprocessor/hash-import-attributes-cpp.md)   
+[#import の属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import ディレクティブ](../preprocessor/hash-import-directive-cpp.md)

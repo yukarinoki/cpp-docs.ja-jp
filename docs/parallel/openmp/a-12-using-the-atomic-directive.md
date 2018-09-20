@@ -1,5 +1,5 @@
 ---
-title: Atomic ディレクティブを使用して A.12 |Microsoft ドキュメント
+title: A.12 atomic ディレクティブの使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,26 +12,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 719d7a9843a0759b5a5bd558e07a2004f9ef1543
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 04daed582cfe87f6e4803b30919af3e07037de7f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691413"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378749"
 ---
 # <a name="a12---using-the-atomic-directive"></a>A.12 atomic ディレクティブの使用
-次の例は、競合状態を回避できます (の要素の同時更新*x*複数のスレッドで) を使用して、`atomic`ディレクティブ ([セクション 2.6.4](../../parallel/openmp/2-6-4-atomic-construct.md) 19 ページ上)。  
-  
-```  
-#pragma omp parallel for shared(x, y, index, n)  
-    for (i=0; i<n; i++)   
-    {  
-        #pragma omp atomic  
-            x[index[i]] += work1(i);  
-        y[i] += work2(i);  
-    }  
-```  
-  
- 使用する利点、`atomic`この例ではディレクティブは、並列で実行する x の 2 つの要素を更新できます。 場合、`critical`ディレクティブ ([セクション 2.6.2](../../parallel/openmp/2-6-2-critical-construct.md) 18 ページ) の要素をすべて更新して代わりに、使用された*x*逐次的に (ただし、いずれかではなく、順序を保証) 実行されます。  
-  
- なお、`atomic`ディレクティブは、C または C++ ステートメントの直後にのみ適用されます。  その結果、要素の*y*この例ではアトミックに更新されません。
+
+次の例では、競合状態を回避できます (同時に更新する要素の*x*複数のスレッドによって) を使用して、`atomic`ディレクティブ ([セクション 2.6.4](../../parallel/openmp/2-6-4-atomic-construct.md) [19] ページ)。
+
+```
+#pragma omp parallel for shared(x, y, index, n)
+    for (i=0; i<n; i++)
+    {
+        #pragma omp atomic
+            x[index[i]] += work1(i);
+        y[i] += work2(i);
+    }
+```
+
+使用する利点、`atomic`ディレクティブがこの例では、並列的に実行する x の 2 つの異なる要素の更新できます。 場合、`critical`ディレクティブ ([セクション 2.6.2](../../parallel/openmp/2-6-2-critical-construct.md) 18 ページ) の要素をすべてを更新し、代わりに、使用された*x*は逐次的に (ただし、順序は保証ではなく) 実行されます。
+
+なお、`atomic`ディレクティブが、C または C++ ステートメントの直後にのみ適用されます。  その結果、要素の*y*この例ではアトミックに更新されません。

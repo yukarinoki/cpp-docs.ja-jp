@@ -1,5 +1,5 @@
 ---
-title: lock クラス |Microsoft ドキュメント
+title: lock クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,32 +19,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a860f79b740e0f34eef33b7a96e0236835f1f6b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ef0887ca3eec7510717aab21ba4c6c7aba98d25
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33129698"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380296"
 ---
 # <a name="lock-class"></a>lock クラス
-このクラスは、複数のスレッドからオブジェクトへのアクセスを同期するロックの取得を自動化します。  構築時にロックを取得し、リリースを破棄時ロックします。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-ref class lock;  
-```  
-  
-## <a name="remarks"></a>コメント  
- `lock` CLR オブジェクトに対してのみ使用できますが、CLR コードでのみ使用できます。  
-  
- ロックのクラスは内部的には、<xref:System.Threading.Monitor>アクセスを同期するためにします。 同期の詳細については、このトピックを参照してください。  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー ファイル** \<msclr\lock.h >  
-  
- **Namespace** msclr  
-  
-## <a name="see-also"></a>関連項目  
- [lock](../dotnet/lock.md)   
- [lock のメンバー](../dotnet/lock-members.md)
+
+このクラスは、複数のスレッドからオブジェクトへのアクセスを同期するためのロックの取得を自動化します。  作成されるときにロックを取得し、リリースが破棄されるとロック。
+
+## <a name="syntax"></a>構文
+
+```
+ref class lock;
+```
+
+## <a name="remarks"></a>Remarks
+
+`lock` CLR オブジェクトに対してのみ使用できますが、CLR コードでのみ使用できます。
+
+ロックのクラスは内部的には、<xref:System.Threading.Monitor>アクセスを同期します。 同期の詳細については、このトピックを参照してください。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー ファイル** \<msclr\lock.h >
+
+**Namespace** msclr
+
+## <a name="see-also"></a>関連項目
+
+[lock](../dotnet/lock.md)<br/>
+[lock のメンバー](../dotnet/lock-members.md)

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 708db2b20cdbbe2e322075789f64433ff70612a2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4fdf0980b8994c313349fd30f05e667b9c0cd461
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46025517"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377099"
 ---
 # <a name="c-language-reference"></a>C++ 言語リファレンス
 
@@ -38,60 +38,85 @@ ms.locfileid: "46025517"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[構文規則](../cpp/lexical-conventions.md)C++ プログラムの基本的な構文の要素: トークン、コメント、演算子、キーワード、区切り記号、リテラル。 また、ファイルの変換、演算子の優先順位/結合規則。
+[構文規則](../cpp/lexical-conventions.md)<br/>
+C++ プログラムの基本的な構文の要素: トークン、コメント、演算子、キーワード、区切り記号、リテラル。 また、ファイルの変換、演算子の優先順位/結合規則。
 
-[基本的な概念](../cpp/basic-concepts-cpp.md)スコープ、リンケージ、プログラムの起動と終了、ストレージ クラス、および種類。
+[基本的な概念](../cpp/basic-concepts-cpp.md)<br/>
+スコープ、リンケージ、プログラムの起動と終了、ストレージ クラス、および型。
 
-[標準変換](../cpp/standard-conversions.md)組み込まれており、または「基本」型どうしの変換を入力します。 また、ポインター、参照、およびメンバーへのポインター型の間の算術変換および変換。
+[標準変換](../cpp/standard-conversions.md)<br/>
+組み込み型 (基本型) 間の型変換。 また、ポインター、参照、およびメンバーへのポインター型の間の算術変換および変換。
 
-[演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)C++ の演算子。
+[演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+C++ 言語の演算子。
 
-[式](../cpp/expressions-cpp.md)式のセマンティクスの式の型が演算子やキャスト、キャスト演算子、実行時の型情報のトピックを参照します。
+[式](../cpp/expressions-cpp.md)<br/>
+式の型とセマンティクス、演算子の参照トピック、キャスト演算子、実行時の型情報。
 
-[ラムダ式](../cpp/lambda-expressions-in-cpp.md)プログラミング手法を暗黙的に関数オブジェクト クラスを定義し、そのクラス型の関数オブジェクトを作成します。
+[ラムダ式](../cpp/lambda-expressions-in-cpp.md)<br/>
+暗黙的に関数オブジェクト クラスを定義し、そのクラス型の関数オブジェクトを生成するプログラミング手法。
 
-[ステートメント](../cpp/statements-cpp.md)式、null、複合、選択、イテレーション、ジャンプ、および宣言ステートメントです。
+[ステートメント](../cpp/statements-cpp.md)<br/>
+式、NULL、複合、選択、イテレーション、ジャンプ、および宣言ステートメント。
 
-[宣言と定義](declarations-and-definitions-cpp.md)ストレージ クラス指定子、関数定義、初期化、列挙型、**クラス**、**構造体**、および**共用体**宣言、および**typedef**宣言します。 また、**インライン**関数、 **const**キーワード、名前空間。
+[宣言と定義](declarations-and-definitions-cpp.md)<br/>
+ストレージ クラス指定子、関数定義、初期化、列挙型、**クラス**、**構造体**、および**共用体**宣言、および**typedef**宣言します。 また、**インライン**関数、 **const**キーワード、名前空間。
 
-[クラス、構造、および共用体](../cpp/classes-and-structs-cpp.md)クラス、構造、および共用体の概要。 また、メンバー関数、特殊なメンバー関数では、データ メンバー、ビット フィールド、**この**ポインター、入れ子になったクラスです。
+[クラス、構造、および共用体](../cpp/classes-and-structs-cpp.md)<br/>
+クラス、構造体、および共用体の概要。 また、メンバー関数、特殊なメンバー関数では、データ メンバー、ビット フィールド、**この**ポインター、入れ子になったクラスです。
 
-[派生クラス](../cpp/inheritance-cpp.md)単一および複数の継承、**仮想**関数、複数の基底クラス**抽象**クラス、スコープ規則。 また、 **_ _super**と **_ _interface**キーワード。
+[派生クラス](../cpp/inheritance-cpp.md)<br/>
+単一および複数の継承、**仮想**関数、複数の基底クラス**抽象**クラス、スコープ規則。 また、 **_ _super**と **_ _interface**キーワード。
 
-[メンバー アクセス コントロール](../cpp/member-access-control-cpp.md)クラス メンバーへのアクセス制御:**パブリック**、**プライベート**、および**保護**キーワード。 friend 関数および friend クラス。
+[メンバー アクセス コントロール](../cpp/member-access-control-cpp.md)<br/>
+クラス メンバーへのアクセス制御:**パブリック**、**プライベート**、および**保護**キーワード。 friend 関数および friend クラス。
 
-[オーバー ロード](operator-overloading.md)オーバー ロードされた演算子、演算子のオーバー ロードの規則。
+[オーバー ロード](operator-overloading.md)<br/>
+オーバー ロードされた演算子、演算子のオーバー ロードの規則。
 
-[例外処理](../cpp/exception-handling-in-visual-cpp.md)C++ 例外処理、構造化例外処理 (SEH)、例外処理ステートメントの記述で使用されるキーワード。
+[例外処理](../cpp/exception-handling-in-visual-cpp.md)<br/>
+例外処理ステートメントの記述に使用される C++ 例外処理、構造化例外処理 (SEH)、キーワード。
 
-[アサーションと User-Supplied メッセージ](../cpp/assertion-and-user-supplied-messages-cpp.md)
- `#error`ディレクティブ、 **static_assert** 、キーワード、`assert`マクロ。
+[アサーションとユーザー指定のメッセージ](../cpp/assertion-and-user-supplied-messages-cpp.md)<br/>
+`#error` ディレクティブ、 **static_assert** 、キーワード、`assert`マクロ。
 
-[テンプレート](../cpp/templates-cpp.md)テンプレートの仕様、関数テンプレート、クラス テンプレート、 **typename**キーワード、テンプレートとマクロ、テンプレートとスマート ポインター。
+[テンプレート](../cpp/templates-cpp.md)<br/>
+テンプレートの仕様、関数テンプレート、クラス テンプレート、 **typename**キーワード、テンプレートとマクロ、テンプレートとスマート ポインター。
 
-[イベント処理](../cpp/event-handling.md)イベントとイベント ハンドラーを宣言します。
+[イベント処理](../cpp/event-handling.md)<br/>
+イベントとイベント ハンドラーの宣言。
 
-[Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)Microsoft C 固有の修飾子。 メモリをアドレス指定、呼び出し規則、 **naked**関数、拡張ストレージ クラス属性 (**_ _declspec**)、 **_ _w64**します。
+[Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)<br/>
+Microsoft C++ 固有の修飾子。 メモリをアドレス指定、呼び出し規則、 **naked**関数、拡張ストレージ クラス属性 (**_ _declspec**)、 **_ _w64**します。
 
-[インライン アセンブラー](../assembler/inline/inline-assembler.md)アセンブリ言語および C++ で使用して **_ _asm**ブロックします。
+[インライン アセンブラー](../assembler/inline/inline-assembler.md)<br/>
+アセンブリ言語および C++ で使用して **_ _asm**ブロックします。
 
-[コンパイラ COM サポート](../cpp/compiler-com-support.md)Microsoft 固有のクラスと COM 型をサポートするために使用されるグローバル関数への参照。
+[コンパイラ COM サポート](../cpp/compiler-com-support.md)<br/>
+COM 型をサポートするために使用する Microsoft 固有のクラスとグローバル関数への参照。
 
-[Microsoft の拡張機能](../cpp/microsoft-extensions.md)C++ に対する Microsoft 拡張機能。
+[Microsoft 拡張機能](../cpp/microsoft-extensions.md)<br/>
+C++ の Microsoft 拡張機能。
 
-[非標準動作](../cpp/nonstandard-behavior.md)Visual C コンパイラの非標準動作に関する情報。
+[非標準動作](../cpp/nonstandard-behavior.md)<br/>
+Visual C++ コンパイラの非標準動作に関する情報。
 
-[C++ へようこそ](welcome-back-to-cpp-modern-cpp.md)最新の C++ プログラミングの概要については、安全な正確で効率的なプログラムの記述のベスト プラクティスです。
+[C++ へようこそ](welcome-back-to-cpp-modern-cpp.md)<br/>
+最新の C++ プログラミングの概要については、安全な正確で効率的なプログラムの記述のベスト プラクティスです。
 
 ## <a name="related-sections"></a>関連項目
 
-[コンポーネントの Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md) Visual C を使用して共通言語ランタイムに対応する資料を参照します。
+[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)<br/>
+共通言語ランタイムを対象とするための Visual C++ の使用に関するリファレンス資料。
 
-[C/C++ ビルドのリファレンス](../build/reference/c-cpp-building-reference.md)コンパイラ オプション、リンカー オプション、およびその他のツールを構築します。
+[C/C++ ビルドのリファレンス](../build/reference/c-cpp-building-reference.md)<br/>
+コンパイラ オプション、リンカー オプション、およびその他のビルド ツール。
 
-[C/C++ プリプロセッサ リファレンス](../preprocessor/c-cpp-preprocessor-reference.md)プラグマ、プリプロセッサ ディレクティブ、定義済みマクロ、およびプリプロセッサに関する資料を参照します。
+[C/C++ プリプロセッサ リファレンス](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
+プラグマ、プリプロセッサ ディレクティブ、定義済みマクロ、およびプリプロセッサに関するリファレンス資料。
 
-[Visual C ライブラリ](../standard-library/cpp-standard-library-reference.md)参照へのリンクの一覧は、さまざまな Visual C ライブラリのページを開始します。
+[Visual C++ ライブラリ](../standard-library/cpp-standard-library-reference.md)<br/>
+Visual C++ のさまざまなライブラリの参照のスタート ページへのリンクの一覧。
 
 ## <a name="see-also"></a>関連項目
 

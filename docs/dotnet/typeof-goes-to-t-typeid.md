@@ -1,5 +1,5 @@
 ---
-title: typeof が t::typeid へ移動 |Microsoft ドキュメント
+title: typeof が::typeid への移動 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0ae9f772a68735555748e6edbeb6196f1a73d2c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4433061fceef455685b6588c81c8c2e434253433
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33164519"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374678"
 ---
 # <a name="typeof-goes-to-ttypeid"></a>typeof から T::typeid への移行
-`typeof` C++ に置き換わる可能性されてのマネージ拡張で使用する演算子、 `typeid` Visual C でキーワード。  
-  
- マネージ拡張で、`__typeof()`演算子は、関連付けられている返します`Type*`オブジェクトのマネージ型の名前が渡されるときにします。 例えば:  
-  
-```  
-// Creates and initializes a new Array instance.  
-Array* myIntArray =   
-   Array::CreateInstance( __typeof(Int32), 5 );  
-```  
-  
- 新しい構文で`__typeof`が別の形式ので置き換えられた`typeid`を返す、`Type^`マネージ型が指定されている場合。  
-  
-```  
-// Creates and initializes a new Array instance.  
-Array^ myIntArray =   
-   Array::CreateInstance( Int32::typeid, 5 );  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [一般的な言語の変更 (C + + CLI)](../dotnet/general-language-changes-cpp-cli.md)   
- [typeid](../windows/typeid-cpp-component-extensions.md)
+
+`typeof` C++ が置き換わりましたされているは、マネージ拡張で使用される演算子、 `typeid` Visual C でキーワード。
+
+マネージ拡張で、`__typeof()`演算子は、関連付けられている返します`Type*`マネージ型の名前が渡されるオブジェクトします。 例えば:
+
+```
+// Creates and initializes a new Array instance.
+Array* myIntArray =
+   Array::CreateInstance( __typeof(Int32), 5 );
+```
+
+新しい構文で`__typeof`の別の形式から置き換え`typeid`を返す、`Type^`マネージ型が指定されている場合。
+
+```
+// Creates and initializes a new Array instance.
+Array^ myIntArray =
+   Array::CreateInstance( Int32::typeid, 5 );
+```
+
+## <a name="see-also"></a>関連項目
+
+[言語の変更の概要 (C++/CLI)](../dotnet/general-language-changes-cpp-cli.md)<br/>
+[typeid](../windows/typeid-cpp-component-extensions.md)

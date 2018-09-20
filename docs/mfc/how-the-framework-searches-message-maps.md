@@ -1,5 +1,5 @@
 ---
-title: フレームワークのメッセージ マップ検索方法 |Microsoft ドキュメント
+title: フレームワークのメッセージ マップ検索 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,22 +14,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fc80573b110c3eacc790082b837a87815283f55
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 02d111cfdd4db1d3ce586d65ebbef84fd488fba6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345782"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436170"
 ---
 # <a name="how-the-framework-searches-message-maps"></a>フレームワークのメッセージ マップ検索方法
-フレームワークが受信メッセージを一致するには、メッセージ マップの表を検索します。 処理し、対応するハンドラーを記述するクラスを希望する各メッセージのメッセージ マップ エントリを記述した後、フレームワークは、ハンドラーを自動的に呼び出します。 次のトピックでは、メッセージ マップの検索について説明します。  
-  
--   [メッセージ マップの参照先](../mfc/where-to-find-message-maps.md)  
-  
--   [派生メッセージ マップします。](../mfc/derived-message-maps.md)  
-  
--   [メッセージ、コマンド Id、またはコントロール Id の範囲を 1 つのハンドラーにマップします。](../mfc/handlers-for-message-map-ranges.md)  
-  
-## <a name="see-also"></a>関連項目  
- [メッセージの処理とマップ](../mfc/message-handling-and-mapping.md)
+
+フレームワークは、受信メッセージと一致するメッセージ マップ テーブルを検索します。 処理し、対応するハンドラーを記述するクラスを希望する各メッセージのメッセージ マップ エントリを記述すると、フレームワークが自動的にハンドラーを呼び出します。 次のトピックでは、メッセージ マップの検索について説明します。
+
+- [メッセージ マップの検索場所](../mfc/where-to-find-message-maps.md)
+
+- [派生メッセージ マップ](../mfc/derived-message-maps.md)
+
+- [1 つのハンドラーへのメッセージ、コマンドの Id、またはコントロール Id の範囲のマッピング](../mfc/handlers-for-message-map-ranges.md)
+
+## <a name="see-also"></a>関連項目
+
+[メッセージの処理とマップ](../mfc/message-handling-and-mapping.md)
 

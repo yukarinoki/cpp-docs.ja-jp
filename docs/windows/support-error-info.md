@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 68cfd7eb96cbf19f5675cec17a9270b9b37b2105
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 340b8827e10e4b539ee34e7dde998b18a34e2414
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599820"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384404"
 ---
 # <a name="supporterrorinfo"></a>support_error_info
 
@@ -38,7 +38,7 @@ ms.locfileid: "42599820"
 
 ### <a name="parameters"></a>パラメーター
 
-*error_interface*  
+*error_interface*<br/>
 実装するインターフェイスの識別子`IErrorInfo`します。
 
 ## <a name="remarks"></a>Remarks
@@ -78,7 +78,7 @@ class CMyClass
 |||
 |-|-|
 |**対象**|**クラス**|
-|**反復可能**|[はい]|
+|**反復可能**|はい|
 |**必要な属性**|なし|
 |**無効な属性**|なし|
 
@@ -86,5 +86,5 @@ class CMyClass
 
 ## <a name="see-also"></a>関連項目
 
-[COM 属性](../windows/com-attributes.md)  
+[COM 属性](../windows/com-attributes.md)<br/>
 [クラス属性](../windows/class-attributes.md)  

@@ -1,5 +1,5 @@
 ---
-title: 'サーバー: ユーザー インターフェイスの問題 |Microsoft ドキュメント'
+title: 'サーバー: ユーザー インターフェイスの問題 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18382d305c8128a70e17651de913f38303286885
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 539486ac1bce56fdc972943abcf8c7de72635f72
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379672"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445556"
 ---
 # <a name="servers-user-interface-issues"></a>サーバー : サーバーとユーザー インターフェイス
-サーバー アプリケーションでは、多数の機能をコンテナー アプリケーション OLE アイテムへのユーザー インターフェイスに追加する必要があります。 メニューとサーバー アプリケーションに追加する必要があるその他のリソースについては、次を参照してください。[メニューとリソース: サーバーの変更点](../mfc/menus-and-resources-server-additions.md)です。  
-  
-## <a name="see-also"></a>関連項目  
- [サーバー](../mfc/servers.md)   
- [メニューとリソース (OLE)](../mfc/menus-and-resources-ole.md)
+
+サーバー アプリケーションでは、多くの機能を OLE アイテムのコンテナー アプリケーションをユーザー インターフェイスに追加する必要があります。 メニューとサーバー アプリケーションに追加する必要があるその他のリソースについては、次を参照してください。[メニューとリソース: サーバーの変更点](../mfc/menus-and-resources-server-additions.md)します。
+
+## <a name="see-also"></a>関連項目
+
+[サーバー](../mfc/servers.md)<br/>
+[メニューとリソース (OLE)](../mfc/menus-and-resources-ole.md)
 

@@ -1,5 +1,5 @@
 ---
-title: '方法: for each を使用してジェネリック コレクションを反復 |Microsoft ドキュメント'
+title: '方法: for each を使用してジェネリック コレクションを反復 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,89 +15,92 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c8f46460e20301b68c101354cf9428588cd0970f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aab17b54f27887672386575a20808a0799a9d12d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33128028"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438211"
 ---
 # <a name="how-to-iterate-over-a-generic-collection-with-for-each"></a>方法: for each を使用してジェネリック コレクションを反復処理する
-[ジェネリック](../windows/generics-cpp-component-extensions.md)Visual C の機能では、ジェネリック コレクションを作成することができます。  
-  
-## <a name="example"></a>例  
- このサンプルを使用する方法を示します`for each`単純なジェネリック値型のコレクションを使用します。  
-  
-```  
-// for_each_generics.cpp  
-// compile with: /clr  
-using namespace System;  
-using namespace System::Collections::Generic;  
-  
-generic <class T>  
-public value struct MyArray : public IEnumerable<T> {     
-  
-   MyArray( array<T>^ d ) {  
-      data = d;  
-   }  
-  
-   ref struct enumerator : IEnumerator<T> {  
-      enumerator( MyArray^ myArr ) {  
-         colInst = myArr;  
-         currentIndex = -1;  
-      }  
-  
-      virtual bool MoveNext() = IEnumerator<T>::MoveNext {  
-         if ( currentIndex < colInst->data->Length - 1 ) {  
-            currentIndex++;  
-            return true;  
-         }  
-  
-         return false;  
-      }  
-  
-      virtual property T Current {  
-         T get() {  
-            return colInst->data[currentIndex];  
-         }  
-      };  
-  
-      property Object^ CurrentNonGeneric {  
-         virtual Object^ get() = System::Collections::IEnumerator::Current::get {  
-            return colInst->data[currentIndex];  
-         }  
-      };  
-  
-      virtual void Reset() {}  
-      ~enumerator() {}  
-  
-      MyArray^ colInst;  
-      int currentIndex;  
-   };  
-  
-   array<T>^ data;  
-  
-   virtual IEnumerator<T>^ GetEnumerator() {  
-      return gcnew enumerator(*this);  
-   }  
-   virtual System::Collections::IEnumerator^ GetEnumeratorNonGeneric() = System::Collections::IEnumerable::GetEnumerator {  
-      return gcnew enumerator(*this);  
-   }  
-};  
-  
-int main() {  
-   MyArray<int> col = MyArray<int>( gcnew array<int>{10, 20, 30 } );  
-  
-   for each ( Object^ c in col )  
-      Console::WriteLine((int)c);  
-}  
-```  
-  
-```Output  
-10  
-20  
-30  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [for each、in](../dotnet/for-each-in.md)
+
+[ジェネリック](../windows/generics-cpp-component-extensions.md)Visual C の機能では、ジェネリック コレクションを作成できます。
+
+## <a name="example"></a>例
+
+このサンプルは、使用する方法を示します`for each`単純なジェネリックな値型のコレクションを使用します。
+
+```
+// for_each_generics.cpp
+// compile with: /clr
+using namespace System;
+using namespace System::Collections::Generic;
+
+generic <class T>
+public value struct MyArray : public IEnumerable<T> {
+
+   MyArray( array<T>^ d ) {
+      data = d;
+   }
+
+   ref struct enumerator : IEnumerator<T> {
+      enumerator( MyArray^ myArr ) {
+         colInst = myArr;
+         currentIndex = -1;
+      }
+
+      virtual bool MoveNext() = IEnumerator<T>::MoveNext {
+         if ( currentIndex < colInst->data->Length - 1 ) {
+            currentIndex++;
+            return true;
+         }
+
+         return false;
+      }
+
+      virtual property T Current {
+         T get() {
+            return colInst->data[currentIndex];
+         }
+      };
+
+      property Object^ CurrentNonGeneric {
+         virtual Object^ get() = System::Collections::IEnumerator::Current::get {
+            return colInst->data[currentIndex];
+         }
+      };
+
+      virtual void Reset() {}
+      ~enumerator() {}
+
+      MyArray^ colInst;
+      int currentIndex;
+   };
+
+   array<T>^ data;
+
+   virtual IEnumerator<T>^ GetEnumerator() {
+      return gcnew enumerator(*this);
+   }
+   virtual System::Collections::IEnumerator^ GetEnumeratorNonGeneric() = System::Collections::IEnumerable::GetEnumerator {
+      return gcnew enumerator(*this);
+   }
+};
+
+int main() {
+   MyArray<int> col = MyArray<int>( gcnew array<int>{10, 20, 30 } );
+
+   for each ( Object^ c in col )
+      Console::WriteLine((int)c);
+}
+```
+
+```Output
+10
+20
+30
+```
+
+## <a name="see-also"></a>関連項目
+
+[for each、in](../dotnet/for-each-in.md)

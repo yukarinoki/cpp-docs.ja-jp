@@ -1,5 +1,5 @@
 ---
-title: アプリケーション フレームワーク |Microsoft ドキュメント
+title: アプリケーション フレームワーク |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c91706f5d222753a355897de943f78faf6104cb3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d04e8cef4500e738fb0948574786012b8a141daf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341672"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425939"
 ---
 # <a name="application-framework"></a>アプリケーション フレームワーク
-Microsoft Foundation Class (MFC) ライブラリのコアは、C++ の形式で Windows API の大部分をカプセル化します。 ライブラリのクラスは、ブラシ、ペン、コントロール、およびその他の標準の Windows 項目などの共通の GDI オブジェクト ウィンドウ、ダイアログ ボックス、デバイス コンテキストを表します。 これらのクラスを提供する便利なカプセル化された Windows の構造体の C++ メンバー関数のインターフェイスです。 これらのクラスの使用に関する詳細は、次を参照してください。[ウィンドウ オブジェクトについてのトピック](../mfc/window-objects.md)です。  
-  
- MFC ライブラリは、C++ でカプセル化、Windows API の上に構築されたその他のアプリケーション機能のレイヤーも提供します。 このレイヤーは、作業用アプリケーション フレームワークなど、Windows のツールバー、ステータス バー、印刷、印刷プレビューは、プログラムのほとんどの共通のユーザー インターフェイスを提供する、Windows が期待どおりのデータベースのサポート、および ActiveX のサポート。 [Windows のアプリケーションを作成するクラスを使用して](../mfc/using-the-classes-to-write-applications-for-windows.md)詳しくフレームワークについて説明します。  
-  
-## <a name="see-also"></a>関連項目  
- [一般的なクラス デザインの考え方](../mfc/general-class-design-philosophy.md)
+
+Microsoft Foundation Class (MFC) ライブラリの中核は、C++ フォームでの Windows API の大部分をカプセル化します。 ライブラリ クラスを表すウィンドウ、ダイアログ ボックス、デバイス コンテキスト、ブラシ、ペン、コントロール、およびその他の標準の Windows 項目などの一般的な GDI オブジェクトします。 これらのクラスを提供する便利なカプセル化された Windows の構造体に C++ メンバー関数のインターフェイス。 詳細については、これらのクラスを使用して、次を参照してください。[ウィンドウ オブジェクトについてのトピック](../mfc/window-objects.md)します。
+
+MFC ライブラリは、C++ でカプセル化、Windows API の上に構築された追加のアプリケーション機能のレイヤーも提供します。 このレイヤーは、作業用のアプリケーション フレームワークのほとんどの一般的なユーザー インターフェイスを提供する Windows は Windows を含むツールバー、ステータス バー、印刷、印刷プレビューは、プログラムの必要なデータベースのサポート、および ActiveX のサポート。 [Windows のアプリケーションを記述するクラスを使用して](../mfc/using-the-classes-to-write-applications-for-windows.md)詳しくフレームワークについて説明します。
+
+## <a name="see-also"></a>関連項目
+
+[一般的なクラス デザインの考え方](../mfc/general-class-design-philosophy.md)

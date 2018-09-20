@@ -1,5 +1,5 @@
 ---
-title: フレーム ウィンドウ クラス (アーキテクチャ) |Microsoft ドキュメント
+title: フレーム ウィンドウ クラス (アーキテクチャ) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7de72b77be9be90ca876cfef943500a0312d183
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 117554b2c34853aa166c12d80b4821d3721e5992
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344179"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394128"
 ---
 # <a name="frame-window-classes-architecture"></a>フレーム ウィンドウ クラス (アーキテクチャ)
-ドキュメント/ビュー アーキテクチャでは、フレーム ウィンドウは、ビュー ウィンドウを持つウィンドウです。 サポート コントロール バーが割り当てられています。  
-  
- マルチ ドキュメント インターフェイス (MDI) アプリケーションでは、メイン ウィンドウはから派生`CMDIFrameWnd`です。 直接ドキュメントのフレームが含まれる、`CMDIChildWnd`オブジェクト。 `CMDIChildWnd`オブジェクトでは、ドキュメントのビューに含めることです。  
-  
- 派生したメイン ウィンドウで、シングル ドキュメント インターフェイス (SDI) アプリケーションで、 `CFrameWnd`、現在のドキュメントのビューが含まれています。  
-  
- [CFrameWnd](../mfc/reference/cframewnd-class.md)  
- SDI アプリケーションのメイン フレーム ウィンドウの基本クラス。 またの基本クラスの他のすべてのフレーム ウィンドウ クラス。  
-  
- [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)  
- MDI アプリケーションのメイン フレーム ウィンドウの基本クラス。  
-  
- [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)  
- MDI アプリケーションのドキュメント フレーム ウィンドウの基底クラス。  
-  
- [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)  
- サーバー ドキュメントを一括で編集するときに、ビューのフレーム ウィンドウを提供します。  
-  
-## <a name="see-also"></a>関連項目  
- [クラスの概要](../mfc/class-library-overview.md)
+
+ドキュメント/ビュー アーキテクチャでは、フレーム ウィンドウは、ビュー ウィンドウを持つウィンドウです。 サポート コントロールに割り当てられているバー。
+
+マルチ ドキュメント インターフェイス (MDI) アプリケーションのメイン ウィンドウがから派生`CMDIFrameWnd`します。 直接はドキュメントのフレームは、含まれる、`CMDIChildWnd`オブジェクト。 `CMDIChildWnd`オブジェクト、さらに、ドキュメントのビューが含まれています。
+
+派生したメイン ウィンドウで、シングル ドキュメント インターフェイス (SDI) アプリケーションで`CFrameWnd`、現在のドキュメントのビューが含まれています。
+
+[CFrameWnd](../mfc/reference/cframewnd-class.md)<br/>
+SDI アプリケーションのメイン フレーム ウィンドウの基本クラス。 またの基本クラスの他のすべてのフレーム ウィンドウ クラス。
+
+[CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)<br/>
+MDI アプリケーションのメイン フレーム ウィンドウの基本クラス。
+
+[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)<br/>
+MDI アプリケーションのドキュメント フレーム ウィンドウの基本クラスです。
+
+[COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)<br/>
+インプレース サーバー ドキュメントを編集するときに、フレーム ウィンドウ ビューを提供します。
+
+## <a name="see-also"></a>関連項目
+
+[クラスの概要](../mfc/class-library-overview.md)
 

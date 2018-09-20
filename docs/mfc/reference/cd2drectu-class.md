@@ -20,101 +20,111 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e054c23d2137f5802c17731fac86dd64080389e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: dd6a9bdc5539b2e6d4faf35c47b208ec0d83ea92
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336475"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444180"
 ---
 # <a name="cd2drectu-class"></a>CD2DRectU クラス
-`D2D1_RECT_U`のラッパー。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-class CD2DRectU : public D2D1_RECT_U;  
-```  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="public-constructors"></a>パブリック コンストラクター  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[CD2DRectU::CD2DRectU](#cd2drectu)|オーバーロードされます。 構築、`CD2DRectU`オブジェクトから`D2D1_RECT_U`オブジェクト。|  
-  
-### <a name="public-methods"></a>パブリック メソッド  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[CD2DRectU::IsNull](#isnull)|返します、**ブール**式に有効なデータ (NULL) がないかどうかを示す値です。|  
-  
-### <a name="public-operators"></a>パブリック演算子  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[CD2DRectU::operator CRect](#operator_crect)|変換`CD2DRectU`に`CRect`オブジェクト。|  
-  
-## <a name="inheritance-hierarchy"></a>継承階層  
- `D2D1_RECT_U`  
-  
- `CD2DRectU`  
-  
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** afxrendertarget.h  
-  
-##  <a name="cd2drectu"></a>  CD2DRectU::CD2DRectU  
- CRect オブジェクトから CD2DRectU オブジェクトを構築します。  
-  
-```  
-CD2DRectU(const CRect& rect);  
-CD2DRectU(const D2D1_RECT_U& rect);  
+
+`D2D1_RECT_U`のラッパー。
+
+## <a name="syntax"></a>構文
+
+```
+class CD2DRectU : public D2D1_RECT_U;
+```
+
+## <a name="members"></a>メンバー
+
+### <a name="public-constructors"></a>パブリック コンストラクター
+
+|名前|説明|
+|----------|-----------------|
+|[CD2DRectU::CD2DRectU](#cd2drectu)|オーバーロードされます。 構築、`CD2DRectU`オブジェクトから`D2D1_RECT_U`オブジェクト。|
+
+### <a name="public-methods"></a>パブリック メソッド
+
+|名前|説明|
+|----------|-----------------|
+|[CD2DRectU::IsNull](#isnull)|返します、**ブール**式に有効なデータ (NULL) がないかどうかを示す値です。|
+
+### <a name="public-operators"></a>パブリック演算子
+
+|名前|説明|
+|----------|-----------------|
+|[CD2DRectU::operator CRect](#operator_crect)|変換`CD2DRectU`に`CRect`オブジェクト。|
+
+## <a name="inheritance-hierarchy"></a>継承階層
+
+`D2D1_RECT_U`
+
+`CD2DRectU`
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** afxrendertarget.h
+
+##  <a name="cd2drectu"></a>  CD2DRectU::CD2DRectU
+
+CRect オブジェクトから CD2DRectU オブジェクトを構築します。
+
+```
+CD2DRectU(const CRect& rect);
+CD2DRectU(const D2D1_RECT_U& rect);
   CD2DRectU(const D2D1_RECT_U* rect);
 
- 
+
 CD2DRectU(
-    UINT32 uLeft = 0,  
-    UINT32 uTop = 0,  
-    UINT32 uRight = 0,  
+    UINT32 uLeft = 0,
+    UINT32 uTop = 0,
+    UINT32 uRight = 0,
     UINT32 uBottom = 0);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *rect*  
- 元の四角形  
-  
- *uLeft*  
- ソースの左座標  
-  
- *uTop*  
- ソースの上座標  
-  
- *uRight*  
- 右側の座標のソース  
-  
- *uBottom*  
- ソースの下端の座標  
-  
-##  <a name="isnull"></a>  CD2DRectU::IsNull  
- 式に有効なデータ (Null) がないかどうかを示すブール値を返します。  
-  
-```  
-BOOL IsNull() const;  
-```  
-  
-### <a name="return-value"></a>戻り値  
- 四角形の上、左、下、および適切な値が 0 に等しい場合は TRUE。それ以外の場合は FALSE です。  
-  
-##  <a name="operator_crect"></a>  CD2DRectU::operator CRect  
- CD2DRectU CRect オブジェクトに変換します。  
-  
-```  
+```
+
+### <a name="parameters"></a>パラメーター
+
+*rect*<br/>
+元の四角形
+
+*uLeft*<br/>
+ソースの左座標
+
+*uTop*<br/>
+ソースの上座標
+
+*uRight*<br/>
+右側の座標のソース
+
+*uBottom*<br/>
+ソースの下端の座標
+
+##  <a name="isnull"></a>  CD2DRectU::IsNull
+
+式に有効なデータ (Null) がないかどうかを示すブール値を返します。
+
+```
+BOOL IsNull() const;
+```
+
+### <a name="return-value"></a>戻り値
+
+四角形の上、左、下、および適切な値が 0 に等しい場合は TRUE。それ以外の場合は FALSE です。
+
+##  <a name="operator_crect"></a>  CD2DRectU::operator CRect
+
+CD2DRectU CRect オブジェクトに変換します。
+
+```
 operator CRect();
-```   
-  
-### <a name="return-value"></a>戻り値  
- D2D の四角形の現在の値。  
-  
-## <a name="see-also"></a>関連項目  
- [クラス](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="return-value"></a>戻り値
+
+D2D の四角形の現在の値。
+
+## <a name="see-also"></a>関連項目
+
+[クラス](../../mfc/reference/mfc-classes.md)

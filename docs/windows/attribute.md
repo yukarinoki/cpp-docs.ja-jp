@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 54699888fc2988dd9b4ccec2a57b6d9df0d4e79e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 335b22b015bf244e39d67781eae21b3c43328256
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314774"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379789"
 ---
 # <a name="attribute"></a>属性
 
@@ -43,13 +43,13 @@ ms.locfileid: "44314774"
 
 ### <a name="parameters"></a>パラメーター
 
-*AllowOn*  
+*AllowOn*<br/>
 カスタム属性を適用できる言語要素を指定します。 既定値は`System::AttributeTargets::All`(を参照してください[値](https://msdn.microsoft.com/library/system.attributetargets.aspx))。
 
-*AllowMultiple*  
+*AllowMultiple*<br/>
 構成要素にカスタム属性を繰り返し適用できるかどうかを指定します。 既定値は FALSE です。
 
-*継承*  
+*継承*<br/>
 サブクラスに継承される属性を示します。 コンパイラは特別なサポートしていません。 この機能の属性コンシューマーのジョブが (`Reflection`など) にこの情報を処理します。 場合*継承された*が true の場合、この属性を継承します。 場合*AllowMultiple*が true の場合場合に、派生メンバーでは、属性が蓄積されます*AllowMultiple* false で、属性はオーバーライド (または置換) 継承します。 場合*継承された*false で、属性は継承されません。 既定値は TRUE です。
 
 ## <a name="remarks"></a>Remarks

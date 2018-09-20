@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f9b121b75e31fdd79313e36b9e1e19c1cf3200e
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: 12fd66c7ff5a6f6fee7588aa7bd51ae2053ba7e8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691537"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386978"
 ---
 # <a name="weakref-class"></a>WeakRef クラス
 
@@ -141,10 +141,10 @@ HRESULT As(
 
 ### <a name="parameters"></a>パラメーター
 
-*U*  
+*U*<br/>
 インターフェイス ID。
 
-*ptr*  
+*ptr*<br/>
 ときにこの操作が完了すると、パラメーターを表すオブジェクトを*U*します。
 
 ### <a name="return-value"></a>戻り値
@@ -176,10 +176,10 @@ HRESULT AsIID(
 
 ### <a name="parameters"></a>パラメーター
 
-*riid*  
+*riid*<br/>
 インターフェイス ID。
 
-*ptr*  
+*ptr*<br/>
 ときにこの操作が完了すると、パラメーターを表すオブジェクトを*riid*します。
 
 ### <a name="return-value"></a>戻り値
@@ -220,13 +220,13 @@ HRESULT CopyTo(
 
 ### <a name="parameters"></a>パラメーター
 
-*U*  
+*U*<br/>
 ポインター、`IInspectable`インターフェイス。 場合は、エラーが出力*U*から派生していない`IInspectable`します。
 
-*riid*  
+*riid*<br/>
 インターフェイス ID。 場合は、エラーが出力*riid*から派生していない`IWeakReference`します。
 
-*ptr*  
+*ptr*<br/>
 二重間接ポインター`IInspectable`または`IWeakReference`します。
 
 ### <a name="return-value"></a>戻り値
@@ -284,7 +284,7 @@ WeakRef(
 
 ### <a name="parameters"></a>パラメーター
 
-*ptr*  
+*ptr*<br/>
 ポインター、参照、または現在を初期化する既存のオブジェクトへの右辺値参照`WeakRef`オブジェクト。
 
 ### <a name="remarks"></a>Remarks

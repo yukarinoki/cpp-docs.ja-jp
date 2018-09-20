@@ -19,69 +19,76 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d4a1b76966216a6dc7b2e7249bddb1ac629376f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8dfb224fb0c0f641e4b7ef8809268fa4fad58890
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46016768"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438796"
 ---
 # <a name="progressreporter-class"></a>progress_reporter クラス
-progress reporter クラスは、特定の型の進行状況の通知をレポートできます。 各 progress_reporter オブジェクトが、特定の非同期アクションまたは操作にバインドされます。  
-  
-## <a name="syntax"></a>構文  
-  
+
+progress reporter クラスは、特定の型の進行状況の通知をレポートできます。 各 progress_reporter オブジェクトが、特定の非同期アクションまたは操作にバインドされます。
+
+## <a name="syntax"></a>構文
+
 ```
 template<typename _ProgressType>
 class progress_reporter;
-```  
-  
-#### <a name="parameters"></a>パラメーター  
+```
+
+#### <a name="parameters"></a>パラメーター
+
 *_ProgressType*<br/>
-progress_reporter クラスによって報告される進行状況の各通知のペイロードの種類。  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="public-constructors"></a>パブリック コンストラクター  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[progress_reporter](#ctor)||  
-  
-### <a name="public-methods"></a>パブリック メソッド  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[report](#report)|progress reporter クラスのバインド先となる非同期アクションまたは非同期操作に、進行状況レポートを送信します。|  
-  
-## <a name="remarks"></a>Remarks  
- この型は、Windows ランタイム アプリをできるだけです。  
-  
-## <a name="inheritance-hierarchy"></a>継承階層  
- `progress_reporter`  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** ppltasks.h  
-  
- **名前空間:** concurrency  
-  
-##  <a name="ctor"></a> progress_reporter 
+progress_reporter クラスによって報告される進行状況の各通知のペイロードの種類。
+
+## <a name="members"></a>メンバー
+
+### <a name="public-constructors"></a>パブリック コンストラクター
+
+|名前|説明|
+|----------|-----------------|
+|[progress_reporter](#ctor)||
+
+### <a name="public-methods"></a>パブリック メソッド
+
+|名前|説明|
+|----------|-----------------|
+|[report](#report)|progress reporter クラスのバインド先となる非同期アクションまたは非同期操作に、進行状況レポートを送信します。|
+
+## <a name="remarks"></a>Remarks
+
+この型は、Windows ランタイム アプリをできるだけです。
+
+## <a name="inheritance-hierarchy"></a>継承階層
+
+`progress_reporter`
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** ppltasks.h
+
+**名前空間:** concurrency
+
+##  <a name="ctor"></a> progress_reporter
 
 ```
 progress_reporter();
-```  
-  
-##  <a name="report"></a> レポート 
+```
 
- progress reporter クラスのバインド先となる非同期アクションまたは非同期操作に、進行状況レポートを送信します。  
-  
+##  <a name="report"></a> レポート
+
+progress reporter クラスのバインド先となる非同期アクションまたは非同期操作に、進行状況レポートを送信します。
+
 ```
 void report(const _ProgressType& val) const;
-```  
-  
-### <a name="parameters"></a>パラメーター  
+```
+
+### <a name="parameters"></a>パラメーター
+
 *val*<br/>
-進行状況を示す通知によって報告されるペイロード。  
-  
-## <a name="see-also"></a>関連項目  
- [concurrency 名前空間](concurrency-namespace.md)
+進行状況を示す通知によって報告されるペイロード。
+
+## <a name="see-also"></a>関連項目
+
+[コンカレンシー名前空間](concurrency-namespace.md)

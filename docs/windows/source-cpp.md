@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ccd5f5220a49ddb63554b4c3b96533a3066d4d4b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d3f4cacd380a86138095b0f8b3bf67f860d45cda
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214594"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390540"
 ---
 # <a name="source-c"></a>source (C++)
 
@@ -38,7 +38,7 @@ ms.locfileid: "43214594"
 
 ### <a name="parameters"></a>パラメーター
 
-*interfaces*  
+*interfaces*<br/>
 クラスに属性のソースを適用するときに指定する 1 つまたは複数のインターフェイス。 ソースは、プロパティやメソッドに適用されるときに、このパラメーターは使用されません。
 
 ## <a name="remarks"></a>Remarks
@@ -96,7 +96,7 @@ class NN : public b
 
 ## <a name="see-also"></a>関連項目
 
-[IDL 属性](../windows/idl-attributes.md)  
-[クラス属性](../windows/class-attributes.md)  
-[メソッド属性](../windows/method-attributes.md)  
+[IDL 属性](../windows/idl-attributes.md)<br/>
+[クラス属性](../windows/class-attributes.md)<br/>
+[メソッド属性](../windows/method-attributes.md)<br/>
 [coclass](../windows/coclass.md)  

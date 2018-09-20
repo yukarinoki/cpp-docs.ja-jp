@@ -14,54 +14,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00c40a158777622856942c4c436299470aba3e6f
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: 69bfb29bdcc03f0373b5c5ab4916108b0705fc83
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45534860"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434428"
 ---
 # <a name="containers-for-activex-controls"></a>ActiveX コントロールのコンテナー
+
 ActiveX コントロール コンテナーをサポートしている限り、他のアプリケーションでの Visual C で開発された ActiveX コントロールを使用することができます。 以降で、表示されているバージョンの Microsoft アプリケーションの多くは、ActiveX コントロール コンテナーをサポートします。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の上書きの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。  
-  
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の上書きの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
+
 > [!NOTE]
->  次の一覧は ActiveX コントロールをサポートするテストで最もよく使用されるセットを表すアプリケーションの完全な一覧です。  
-  
- ActiveX コントロール コンテナーをサポートするアプリケーションは次のとおりです。  
-  
--   Internet Explorer 3.x 以降  
-  
--   Visual Basic 4.x 以降  
-  
--   Visual C 4.x 以降  
-  
--   95 以降へのアクセス  
-  
--   Excel 97 以降  
-  
--   Word 97 以降  
-  
--   97 以降のアクセス  
-  
--   FrontPage 97 以降  
-  
--   PowerPoint 97 以降  
-  
--   Visual InterDev 97 以降  
-  
- 以下は、ActiveX コントロール コンテナーをサポートする Microsoft 以外のアプリケーションです。  
-  
--   PowerBuilder  
-  
--   Delphi  
-  
--   C++ ビルダー  
-  
--   Plug-in for Netscape Navigator NCompass  
-  
-## <a name="see-also"></a>関連項目  
- [ActiveX コントロール コンテナー](../mfc/activex-control-containers.md)
+>  次の一覧は ActiveX コントロールをサポートするテストで最もよく使用されるセットを表すアプリケーションの完全な一覧です。
+
+ActiveX コントロール コンテナーをサポートするアプリケーションは次のとおりです。
+
+- Internet Explorer 3.x 以降
+
+- Visual Basic 4.x 以降
+
+- Visual C 4.x 以降
+
+- 95 以降へのアクセス
+
+- Excel 97 以降
+
+- Word 97 以降
+
+- 97 以降のアクセス
+
+- FrontPage 97 以降
+
+- PowerPoint 97 以降
+
+- Visual InterDev 97 以降
+
+以下は、ActiveX コントロール コンテナーをサポートする Microsoft 以外のアプリケーションです。
+
+- PowerBuilder
+
+- Delphi
+
+- C++ ビルダー
+
+- Plug-in for Netscape Navigator NCompass
+
+## <a name="see-also"></a>関連項目
+
+[ActiveX コントロール コンテナー](../mfc/activex-control-containers.md)
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6da9451d6f009bad6163efec23bb6f920a56df49
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6622e92112d9f73e673e2fb44598a393843bf0fa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590531"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396340"
 ---
 # <a name="handlet-class"></a>HandleT クラス
 
@@ -39,7 +39,7 @@ class HandleT;
 
 ### <a name="parameters"></a>パラメーター
 
-*HandleTraits*  
+*HandleTraits*<br/>
 インスタンス、 [HandleTraits](../windows/handletraits-structure.md)ハンドルの一般的な特性を定義する構造体。
 
 ## <a name="members"></a>メンバー
@@ -81,7 +81,7 @@ class HandleT;
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
-|name|説明|
+|名前|説明|
 |----------|-----------------|
 |[HandleT::handle_ データ メンバー](../windows/handlet-handle-data-member.md)|表されるハンドルを含む、 **HandleT**オブジェクト。|
 

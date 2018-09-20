@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 341333b0c4f51c42004ad638a5a8f4fcb7d7e466
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 17f79830cf50d83058ee2f2665b94f86a53acd78
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596492"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428981"
 ---
 # <a name="eventtargetarrayend-method"></a>EventTargetArray::End メソッド
 
@@ -50,5 +50,5 @@ ComPtr<IUnknown>* End();
 
 ## <a name="see-also"></a>関連項目
 
-[EventTargetArray クラス](../windows/eventtargetarray-class.md)  
+[EventTargetArray クラス](../windows/eventtargetarray-class.md)<br/>
 [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

@@ -38,161 +38,158 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff3c05f1a96dd4717371d48b60cca6a549a94a7d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4a36cef1681722874350510f86e9cf767d7d019a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46019954"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390800"
 ---
 # <a name="float2-class"></a>float_2 クラス
-2 個の浮動小数点数の short ベクターを表します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-class float_2;  
-```  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="public-typedefs"></a>パブリック typedef  
-  
-|名前|説明|  
-|----------|-----------------|  
-|`value_type`||  
-  
-### <a name="public-constructors"></a>パブリック コンストラクター  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[float_2 コンス トラクター](#ctor)|オーバーロードされます。 既定のコンストラクター。すべての要素を 0 で初期化します。|  
-  
-### <a name="public-methods"></a>パブリック メソッド  
-  
-|名前|説明|  
-|----------|-----------------|  
-|float_2::get_x||  
-|float_2::get_xy||  
-|float_2::get_y||  
-|float_2::get_yx||  
-|float_2::ref_g||  
-|float_2::ref_r||  
-|float_2::ref_x||  
-|float_2::ref_y||  
-|float_2::set_x||  
-|float_2::set_xy||  
-|float_2::set_y||  
-|float_2::set_yx||  
-  
-### <a name="public-operators"></a>パブリック演算子  
-  
-|名前|説明|  
-|----------|-----------------|  
-|float_2::operator-||  
-|float_2::operator--||  
-|float_2::operator*=||  
-|float_2::operator/=||  
-|float_2::operator++||  
-|float_2::operator+=||  
-|float_2::operator=||  
-|float_2::operator-=||  
-  
-### <a name="public-constants"></a>パブリック定数  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[定数のサイズ](#float_2__size)||  
-  
-### <a name="public-data-members"></a>パブリック データ メンバー  
-  
-|名前|説明|  
-|----------|-----------------|  
-|float_2::g||  
-|float_2::gr||  
-|float_2::r||  
-|float_2::rg||  
-|float_2::x||  
-|float_2::xy||  
-|float_2::y||  
-|float_2::yx||  
-  
-## <a name="inheritance-hierarchy"></a>継承階層  
- `float_2`  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** amp_short_vectors.h  
-  
- **Namespace:** concurrency::graphics  
-  
-##  <a name="ctor"></a> float_2 
 
- 既定のコンストラクター。すべての要素を 0 で初期化します。  
-  
-```  
+2 個の浮動小数点数の short ベクターを表します。
+
+## <a name="syntax"></a>構文
+
+```
+class float_2;
+```
+
+## <a name="members"></a>メンバー
+
+### <a name="public-typedefs"></a>パブリック typedef
+
+|名前|説明|
+|----------|-----------------|
+|`value_type`||
+
+### <a name="public-constructors"></a>パブリック コンストラクター
+
+|名前|説明|
+|----------|-----------------|
+|[float_2 コンス トラクター](#ctor)|オーバーロードされます。 既定のコンストラクター。すべての要素を 0 で初期化します。|
+
+### <a name="public-methods"></a>パブリック メソッド
+
+|名前|説明|
+|----------|-----------------|
+|float_2::get_x||
+|float_2::get_xy||
+|float_2::get_y||
+|float_2::get_yx||
+|float_2::ref_g||
+|float_2::ref_r||
+|float_2::ref_x||
+|float_2::ref_y||
+|float_2::set_x||
+|float_2::set_xy||
+|float_2::set_y||
+|float_2::set_yx||
+
+### <a name="public-operators"></a>パブリック演算子
+
+|名前|説明|
+|----------|-----------------|
+|float_2::operator-||
+|float_2::operator--||
+|float_2::operator*=||
+|float_2::operator/=||
+|float_2::operator++||
+|float_2::operator+=||
+|float_2::operator=||
+|float_2::operator-=||
+
+### <a name="public-constants"></a>パブリック定数
+
+|名前|説明|
+|----------|-----------------|
+|[定数のサイズ](#float_2__size)||
+
+### <a name="public-data-members"></a>パブリック データ メンバー
+
+|名前|説明|
+|----------|-----------------|
+|float_2::g||
+|float_2::gr||
+|float_2::r||
+|float_2::rg||
+|float_2::x||
+|float_2::xy||
+|float_2::y||
+|float_2::yx||
+
+## <a name="inheritance-hierarchy"></a>継承階層
+
+`float_2`
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** amp_short_vectors.h
+
+**Namespace:** concurrency::graphics
+
+##  <a name="ctor"></a> float_2
+
+既定のコンストラクター。すべての要素を 0 で初期化します。
+
+```
 float_2() restrict(amp,
     cpu);
 
- 
 float_2(
-    float _V0,  
+    float _V0,
     float _V1) restrict(amp,
     cpu);
 
- 
 float_2(
     float _V) restrict(amp,
     cpu);
 
- 
 float_2(
     const float_2& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline float_2(
     const uint_2& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline float_2(
     const int_2& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline float_2(
     const unorm_2& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline float_2(
     const norm_2& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline float_2(
     const double_2& _Other) restrict(amp,
     cpu);
-```  
-  
-### <a name="parameters"></a>パラメーター  
-*_V0*<br/>
-0 の要素を初期化する値。  
-  
-*_V1*<br/>
-1 要素を初期化する値。  
-  
-*(_V).*<br/>
-初期化の値。  
-  
-*_Other*<br/>
-初期化するために使用するオブジェクト。  
-  
-##  <a name="float_2__size"></a> サイズ 
+```
 
-```  
-static const int size = 2;  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)
+### <a name="parameters"></a>パラメーター
+
+*_V0*<br/>
+0 の要素を初期化する値。
+
+*_V1*<br/>
+1 要素を初期化する値。
+
+*(_V).*<br/>
+初期化の値。
+
+*_Other*<br/>
+初期化するために使用するオブジェクト。
+
+##  <a name="float_2__size"></a> サイズ
+
+```
+static const int size = 2;
+```
+
+## <a name="see-also"></a>関連項目
+
+[Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)

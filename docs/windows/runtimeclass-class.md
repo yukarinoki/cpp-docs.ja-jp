@@ -39,12 +39,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3bc016367495be8cc10c09605e8018811bde5ca9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5dfe6622edcd8446b844b5d3d7c03d1fd5d0197c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118909"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379412"
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass クラス
 
@@ -61,10 +61,10 @@ template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 
 ### <a name="parameters"></a>パラメーター
 
-*classFlags*  
+*classFlags*<br/>
 省略可能なパラメーター。 1 つ以上を組み合わせた[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列挙値。 `__WRL_CONFIGURATION_LEGACY__` ClassFlags プロジェクト内のすべてのランタイム クラスの既定値を変更するマクロを定義することができます。 定義されている場合、RuntimeClass インスタンスは既定でアジャイルです。 定義されていないときに、RuntimeClass インスタンスは、既定でアジャイルです。 あいまいさを避けるために指定常に、`Microsoft::WRL::FtmBase`で`TInterfaces`または`RuntimeClassType::InhibitFtmBase`します。 InhibitFtmBase と FtmBase はどちらもオブジェクトを使用している場合は、アジャイルになります。
 
-*TInterfaces*  
+*TInterfaces*<br/>
 インターフェイスの一覧を超えるオブジェクトが実装されて`IUnknown`、`IInspectable`または他のインターフェイスによって制御される[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)します。 特にから派生するその他のクラス リストが`Microsoft::WRL::FtmBase`アジャイル オブジェクトを作成して実装するために、`IMarshal`します。
 
 ## <a name="members"></a>メンバー
@@ -152,10 +152,10 @@ STDMETHOD(
 
 ### <a name="parameters"></a>パラメーター
 
-*iidCount*  
+*iidCount*<br/>
 ときにこの操作が完了すると、配列内の要素の合計数*iid*します。
 
-*iid*  
+*iid*<br/>
 この操作が完了時は、インターフェイス Id の配列へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -174,7 +174,7 @@ STDMETHOD( GetRuntimeClassName )(
 
 ### <a name="parameters"></a>パラメーター
 
-*runtimeName*  
+*runtimeName*<br/>
 この操作の完了時、ランタイム クラス名。
 
 ### <a name="return-value"></a>戻り値
@@ -197,7 +197,7 @@ STDMETHOD(GetTrustLevel)(
 
 ### <a name="parameters"></a>パラメーター
 
-*trustLvl*  
+*trustLvl*<br/>
 ときにこの操作が完了すると、現在の信頼レベル`RuntimeClass`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -220,7 +220,7 @@ STDMETHOD(
 
 ### <a name="parameters"></a>パラメーター
 
-*weakReference*  
+*weakReference*<br/>
 この操作が完了時は、弱い参照オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -253,10 +253,10 @@ STDMETHOD(
 
 ### <a name="parameters"></a>パラメーター
 
-*riid*  
+*riid*<br/>
 インターフェイス ID。
 
-*ppvObject*  
+*ppvObject*<br/>
 この opereation 完了時で指定されたインターフェイスへのポインター、 *riid*パラメーター。
 
 ### <a name="return-value"></a>戻り値

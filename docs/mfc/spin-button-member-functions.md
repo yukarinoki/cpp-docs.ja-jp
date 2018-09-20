@@ -1,5 +1,5 @@
 ---
-title: スピン ボタンのメンバー関数 |Microsoft ドキュメント
+title: スピン ボタンのメンバー関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,27 +15,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 524863b816c62903cb610b57a6e3275bcdf6a3d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 88f00aedcf269996277c154f9dd051534a9c5e49
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381252"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431531"
 ---
 # <a name="spin-button-member-functions"></a>スピン ボタンのメンバー関数
-いくつかのメンバー関数は、スピン コントロールの使用可能な ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md))。 スピン ボタンの次の属性を変更するのにには、これらの関数を使用します。  
-  
--   **アクセラレータ**矢印ボタンを押したときに、位置が変化率を調整することができます。 アクセラレータを使用するを使用して、 [SetAccel](../mfc/reference/cspinbuttonctrl-class.md#setaccel)と[GetAccel](../mfc/reference/cspinbuttonctrl-class.md#getaccel)メンバー関数。  
-  
--   **基本**が連動ウィンドウのキャプションの位置を表示するために使用ベース (10 または 16) を変更することができます。 使用して、ベースを使用する、 [GetBase](../mfc/reference/cspinbuttonctrl-class.md#getbase)と[SetBase](../mfc/reference/cspinbuttonctrl-class.md#setbase)メンバー関数。  
-  
--   **ウィンドウを友人**が連動ウィンドウを動的に設定することができます。 使用してクエリを実行したり、どのコントロールが連動ウィンドウを変更したり、 [GetBuddy](../mfc/reference/cspinbuttonctrl-class.md#getbuddy)と[SetBuddy](../mfc/reference/cspinbuttonctrl-class.md#setbuddy)メンバー関数。  
-  
--   **位置**クエリし、位置を変更することができます。 位置を直接操作するには、使用、 [GetPos](../mfc/reference/cspinbuttonctrl-class.md#getpos)と[SetPos](../mfc/reference/cspinbuttonctrl-class.md#setpos)メンバー関数。 (たとえば、に備えて、友人がエディット コントロールである)、アップダウン コントロールのキャプションが変更されたため`GetPos`現在のキャプションを取得し、それに応じて位置を調整します。  
-  
--   **範囲**スピン ボタンの最大値と最小の位置を変更することができます。 既定では、最大値は 0 に設定し、最小値は 100 に設定します。 既定の最大値は、既定の最小値未満であるため、矢印ボタンの動作は逆です。 通常は設定を使用して、範囲、 [SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange)メンバー関数。 範囲を使用するクエリを実行する[GetRange](../mfc/reference/cspinbuttonctrl-class.md#getrange)です。  
-  
-## <a name="see-also"></a>関連項目  
- [CSpinButtonCtrl の使い方](../mfc/using-cspinbuttonctrl.md)   
- [コントロール](../mfc/controls-mfc.md)
+
+スピン コントロールで使用できるいくつかのメンバー関数は ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md))。 スピン ボタンの次の属性を変更するのにには、これらの関数を使用します。
+
+- **高速化**ユーザーが矢印ボタンを押したときに、位置が変化率を調整することができます。 高速化を使用するには、使用、 [SetAccel](../mfc/reference/cspinbuttonctrl-class.md#setaccel)と[GetAccel](../mfc/reference/cspinbuttonctrl-class.md#getaccel)メンバー関数。
+
+- **基本**連動ウィンドウのキャプションの位置の表示に使用される基本 (10 または 16) を変更することができます。 使用して、ベースを使用する、 [GetBase](../mfc/reference/cspinbuttonctrl-class.md#getbase)と[SetBase](../mfc/reference/cspinbuttonctrl-class.md#setbase)メンバー関数。
+
+- **ウィンドウを友人**連動ウィンドウを動的に設定することができます。 使用してクエリを実行したり、どのコントロールが連動ウィンドウを変更したり、 [GetBuddy](../mfc/reference/cspinbuttonctrl-class.md#getbuddy)と[SetBuddy](../mfc/reference/cspinbuttonctrl-class.md#setbuddy)メンバー関数。
+
+- **位置**クエリを実行し、位置を変更することができます。 位置を直接操作するには、使用、 [GetPos](../mfc/reference/cspinbuttonctrl-class.md#getpos)と[SetPos](../mfc/reference/cspinbuttonctrl-class.md#setpos)メンバー関数。 アップダウン コントロールのキャプション (たとえば、例では、友人がエディット コントロールである)、変更したため`GetPos`現在キャプションを取得し、適宜位置を調整します。
+
+- **範囲**スピン ボタンの最大値と最小の位置を変更することができます。 既定では、最大値は 0 に設定し、最小値が 100 に設定します。 既定の最大値は、既定の最小値未満であるため、矢印ボタンのアクションは逆です。 使用して範囲を設定は通常、 [SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange)メンバー関数。 クエリ範囲を使用する[GetRange](../mfc/reference/cspinbuttonctrl-class.md#getrange)します。
+
+## <a name="see-also"></a>関連項目
+
+[CSpinButtonCtrl の使い方](../mfc/using-cspinbuttonctrl.md)<br/>
+[コントロール](../mfc/controls-mfc.md)
 

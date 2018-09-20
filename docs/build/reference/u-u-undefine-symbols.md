@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34030a8ef91e5a25bdb1a13981925c5ddf1f05df
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a32106dd9802643a827f8a3e97298f389d31d3b4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721553"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430671"
 ---
 # <a name="u-u-undefine-symbols"></a>/U、/u (定義済みマクロ シンボルの未定義化)
 
@@ -83,7 +83,7 @@ ms.locfileid: "45721553"
 
 [コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
 [コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)<br/>
-[/J (既定の char 型の unsigned)](../../build/reference/j-default-char-type-is-unsigned.md)
-[/GR (ランタイム型情報の有効化)](../../build/reference/gr-enable-run-time-type-information.md)
-[/EH (例外処理モデル)](../../build/reference/eh-exception-handling-model.md) 
- [/MD、/MT、/LD (ランタイム ライブラリの使用)](../../build/reference/md-mt-ld-use-run-time-library.md)
+[/J (既定の char 型の unsigned への変更)](../../build/reference/j-default-char-type-is-unsigned.md)<br/>
+[/GR (ランタイム型情報の有効化)](../../build/reference/gr-enable-run-time-type-information.md)<br/>
+[/EH (例外処理モデル)](../../build/reference/eh-exception-handling-model.md)<br/>
+[/MD、/MT、/LD (ランタイム ライブラリの使用)](../../build/reference/md-mt-ld-use-run-time-library.md)

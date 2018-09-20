@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b09e36e793608167a4ce64a9124d7dafbaf9ec62
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 067b109757f14e1b76c292bbae5a2ea7d688eae2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539858"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393627"
 ---
 # <a name="rawnativetypes"></a>raw_native_types
 **C++ 固有の仕様**  
@@ -42,5 +42,5 @@ raw_native_types
   
 ## <a name="see-also"></a>関連項目  
  
-[#import の属性](../preprocessor/hash-import-attributes-cpp.md)   
+[#import の属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import ディレクティブ](../preprocessor/hash-import-directive-cpp.md)

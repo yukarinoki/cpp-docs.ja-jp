@@ -1,5 +1,5 @@
 ---
-title: ATL サポートの詳細については、ATL ウィザードで追加 |Microsoft ドキュメント
+title: ATL ウィザードで ATL サポートの詳細の追加 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ffe43c33e4b371f6d5dcf5dc7da327b11328af7
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: efa96037139e61e16b752b45617bb8a3c54be993
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121380"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442150"
 ---
 # <a name="details-of-atl-support-added-by-the-atl-wizard"></a>ATL ウィザードで追加した ATL サポートの詳細
-ときに、[既存の MFC の実行可能ファイルまたは DLL に ATL サポートを追加](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)、Visual C は、既存の MFC プロジェクトに次の変更 (この例では、プロジェクトと呼びます`MFCEXE`)。  
-  
--   2 つの新しいファイル (.idl ファイルと、サーバーを登録するために使用、.rgs ファイル) が追加されます。  
-  
--   アプリケーションのメイン ヘッダー ファイルと実装ファイル (Mfcexe.h および Mfcexe.cpp) で、新しいクラス (から派生した`CAtlMFCModule`) を追加します。 コードを追加、新しいクラスだけでなく`InitInstance`登録します。 コードにも追加、`ExitInstance`クラス オブジェクトを取り消すための関数。 ヘッダー ファイルに最後に、新しい 2 つのヘッダー ファイル (Initguid.h および Mfcexe_i.c) に含まれて、実装ファイルは、宣言と初期化用に新しい Guid、 `CAtlMFCModule`-クラスを派生します。  
-  
--   正しく、サーバーを登録するには、新しい .rgs ファイルのエントリが、プロジェクトのリソース ファイルに追加されます。  
-  
-## <a name="notes-for-dll-projects"></a>DLL プロジェクトに関するメモ  
- MFC DLL プロジェクトに ATL サポートを追加する場合は、いくつか相違点が表示されます。 コードに追加されます、`DLLRegisterServer`と`DLLUnregisterServer`を登録して、DLL の登録を解除するための関数。 コードにも追加[DllCanUnloadNow](../../atl/reference/catldllmodulet-class.md#dllcanunloadnow)と[DllGetClassObject](../../atl/reference/catldllmodulet-class.md#dllgetclassobject)です。  
-  
-## <a name="see-also"></a>関連項目  
- [MFC プロジェクトに ATL サポート](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)   
- [コード ウィザードを使用した機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [クラスの追加](../../ide/adding-a-class-visual-cpp.md)   
- [メンバー関数の追加](../../ide/adding-a-member-function-visual-cpp.md)   
- [メンバー変数の追加](../../ide/adding-a-member-variable-visual-cpp.md)   
- [仮想関数のオーバーライド](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [MFC メッセージ ハンドラー](../../mfc/reference/adding-an-mfc-message-handler.md)   
- [クラス各部へのジャンプ](../../ide/navigating-the-class-structure-visual-cpp.md)
+
+ときにする[既存の MFC の実行可能ファイルまたは DLL に ATL サポートを追加](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)、Visual C によって、既存の MFC プロジェクトに次の変更 (この例で、プロジェクトと呼ばれる`MFCEXE`)。
+
+- 2 つの新しいファイル (.idl ファイルと、サーバーの登録に使用される .rgs ファイル) が追加されます。
+
+- (Mfcexe.h および Mfcexe.cpp) アプリケーションのメイン ヘッダーと実装ファイル内の新しいクラス (から派生した`CAtlMFCModule`) が追加されます。 コードを追加、新しいクラスだけでなく`InitInstance`登録します。 コードにも追加、`ExitInstance`クラス オブジェクトを取り消すための関数。 ヘッダー ファイルに最後に、2 つの新しいヘッダー ファイル (Initguid.h と Mfcexe_i.c) ファイルに含まれる、実装、宣言と初期化の新しい Guid、 `CAtlMFCModule`-クラスを派生します。
+
+- サーバーを正しく登録するには、新しい .rgs ファイルのエントリは、プロジェクトのリソース ファイルに追加されます。
+
+## <a name="notes-for-dll-projects"></a>DLL プロジェクトのノート
+
+MFC DLL プロジェクトに ATL サポートを追加する場合は、いくつかの違いが表示されます。 コードに追加、`DLLRegisterServer`と`DLLUnregisterServer`関数を登録すると、DLL の登録を解除します。 コードにも追加[DllCanUnloadNow](../../atl/reference/catldllmodulet-class.md#dllcanunloadnow)と[DllGetClassObject](../../atl/reference/catldllmodulet-class.md#dllgetclassobject)します。
+
+## <a name="see-also"></a>関連項目
+
+[MFC プロジェクトでの ATL サポート](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)<br/>
+[コード ウィザードを使用した機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[クラスの追加](../../ide/adding-a-class-visual-cpp.md)<br/>
+[メンバー関数の追加](../../ide/adding-a-member-function-visual-cpp.md)<br/>
+[メンバー変数の追加](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[仮想関数のオーバーライド](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[MFC メッセージ ハンドラー](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
+[クラス各部へのジャンプ](../../ide/navigating-the-class-structure-visual-cpp.md)

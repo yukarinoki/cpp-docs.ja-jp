@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 360884c27e834f31badce0b02119203ee7877e4e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: d11fdea6e85bf542a00b497b311494ba6133e1d3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318929"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376591"
 ---
 # <a name="displaying-or-hiding-the-toolbar-c-image-editor-for-icons"></a>ツールバー (アイコン用イメージ エディターを C++) を非表示の表示と表示
 
@@ -43,6 +43,6 @@ ms.locfileid: "44318929"
 
 ## <a name="see-also"></a>関連項目
 
-[[色] ウィンドウ](../windows/colors-window-image-editor-for-icons.md)  
-[ツール バー](../windows/toolbar-image-editor-for-icons.md)  
+[[色] ウィンドウ](../windows/colors-window-image-editor-for-icons.md)<br/>
+[ツール バー](../windows/toolbar-image-editor-for-icons.md)<br/>
 [アイコン用イメージ エディター](../windows/image-editor-for-icons.md)

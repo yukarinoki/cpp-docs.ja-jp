@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 061b3be0e642bb8e7406f54a469723c70559d85a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ebc8632d273e650cf11e70177bbfbeb0e90e8601
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610162"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394856"
 ---
 # <a name="hstringmakereference-method"></a>HString::MakeReference メソッド
 
@@ -41,13 +41,13 @@ template<unsigned int sizeDest>
 
 ### <a name="parameters"></a>パラメーター
 
-*sizeDest*  
+*sizeDest*<br/>
 変換先のサイズを指定するテンプレート パラメーター`HStringReference`バッファー。
 
-*str*  
+*str*<br/>
 ワイド文字の文字列への参照。
 
-*len*  
+*len*<br/>
 最大長、 *str*この操作で使用するパラメーターのバッファー。 場合、 *len*パラメーターが指定されていない全体*str*パラメーターを使用します。
 
 ## <a name="return-value"></a>戻り値

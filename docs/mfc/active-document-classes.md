@@ -1,5 +1,5 @@
 ---
-title: Active ドキュメント クラス |Microsoft ドキュメント
+title: Active ドキュメント クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0805e77e674a68d5fd81c8628407bcd77e164e07
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0cd4cce7f2e31e084224848f348dd4e5f408de67
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325917"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385366"
 ---
 # <a name="active-document-classes"></a>アクティブ ドキュメント クラス
-Internet Explorer 5.5 などの Web ブラウザーの全体のクライアント ウィンドウで、またはアクティブ ドキュメントをサポートする Microsoft Office バインダーなど、アクティブなコンテナーで、アクティブなドキュメントを表示できます。  
-  
- [関数](../mfc/reference/cdocobjectserver-class.md)  
- Active ドキュメント インターフェイスのマップを初期化およびアクティブ ドキュメント オブジェクトをライセンス認証します。  
-  
- [CDocObjectServerItem](../mfc/reference/cdocobjectserveritem-class.md)  
- Active ドキュメント サーバー用には、OLE サーバー動詞を実装します。  
-  
- [関数](../mfc/reference/coledocobjectitem-class.md)  
- Active ドキュメント コンテインメントを実装します。  
-  
-## <a name="see-also"></a>関連項目  
- [クラスの概要](../mfc/class-library-overview.md)
+
+Internet Explorer 5.5 などの Web ブラウザーの全体のクライアント ウィンドウで、またはアクティブなドキュメントをサポートする Microsoft Office バインダーなど、アクティブなコンテナーでは、アクティブなドキュメントを表示できます。
+
+[CDocObjectServer](../mfc/reference/cdocobjectserver-class.md)<br/>
+アクティブなドキュメントのインターフェイスのマップしを初期化し、アクティブなドキュメント オブジェクトがアクティブになります。
+
+[CDocObjectServerItem](../mfc/reference/cdocobjectserveritem-class.md)<br/>
+Active ドキュメント サーバー専用の OLE サーバー動詞を実装します。
+
+[COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md)<br/>
+Active ドキュメント コンテインメントを実装します。
+
+## <a name="see-also"></a>関連項目
+
+[クラスの概要](../mfc/class-library-overview.md)
 

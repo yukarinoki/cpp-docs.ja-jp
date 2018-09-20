@@ -1,5 +1,5 @@
 ---
-title: Static Const Int リンケージの非リテラル |Microsoft ドキュメント
+title: Static Const Int リンケージのリテラル |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,56 +17,58 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: cc3f72080c08807026c6458979ac0ba561e298df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c51853274b061ba290ff90993f45ccdf3375349b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33164997"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431295"
 ---
 # <a name="static-const-int-linkage-is-no-longer-literal"></a>静的整数型定数リンケージの非リテラル化
-定数、クラスのメンバーの宣言は、Visual C を c++ マネージ拡張から変更されました。  
-  
- `static const`整数メンバーはサポートされても、そのリンケージ属性が変更されました。 以前のリンケージ属性は、リテラルの整数メンバーで今すぐ実行されます。 たとえば、次のマネージ拡張クラスがあるとします。  
-  
-```  
-public __gc class Constants {  
-public:  
-   static const int LOG_DEBUG = 4;  
-};  
-```  
-  
- これには、(リテラルの属性に注意してください) のフィールドに対して、次の基になる CIL 属性が生成されます。  
-  
-```  
-.field public static literal int32   
-modopt([Microsoft.VisualC]Microsoft.VisualC.IsConstModifier) STANDARD_CLIENT_PRX = int32(0x00000004)  
-```  
-  
- これは、新しい構文で引き続きコンパイル: 中  
-  
-```  
-public ref class Constants {  
-public:  
-   static const int LOG_DEBUG = 4;  
-};  
-```  
-  
- 不要になったリテラルの属性を出力し、したがってとは見なされません、定数、CLR ランタイムによって。  
-  
-```  
-.field public static int32 modopt([Microsoft.VisualC]Microsoft.VisualC.IsConstModifier) STANDARD_CLIENT_PRX = int32(0x00000004)  
-```  
-  
- 同じ間言語 literal 属性がある、するためには、宣言を変更する必要が新たにサポートする`literal`、次のように、データ メンバー  
-  
-```  
-public ref class Constants {  
-public:  
-   literal int LOG_DEBUG = 4;  
-};  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [クラスまたはインターフェイス内でメンバーの宣言 (C + + CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
- [リテラル](../windows/literal-cpp-component-extensions.md)
+
+クラスの定数のメンバーの宣言は、Visual c の C++ マネージ拡張から変更されました。
+
+`static const`整数のメンバーはまだサポートされて、そのリンケージ属性が変更されました。 前者のリンケージ属性は、リテラル整数のメンバーで今すぐ実行されます。 たとえば、次のマネージ拡張クラスを考えてみます。
+
+```
+public __gc class Constants {
+public:
+   static const int LOG_DEBUG = 4;
+};
+```
+
+これには、フィールド (リテラルの属性に注意してください) は CIL が基になる次の属性が生成されます。
+
+```
+.field public static literal int32
+modopt([Microsoft.VisualC]Microsoft.VisualC.IsConstModifier) STANDARD_CLIENT_PRX = int32(0x00000004)
+```
+
+中に、これは、新しい構文で引き続きコンパイルされます。
+
+```
+public ref class Constants {
+public:
+   static const int LOG_DEBUG = 4;
+};
+```
+
+リテラルの属性を出力し、したがって、ユーザーがいない表示定数として CLR ランタイム。
+
+```
+.field public static int32 modopt([Microsoft.VisualC]Microsoft.VisualC.IsConstModifier) STANDARD_CLIENT_PRX = int32(0x00000004)
+```
+
+同じ言語の間のリテラル属性を確保するために、宣言を変更する必要がありますに新しくサポートされた`literal`、次のように、データ メンバー
+
+```
+public ref class Constants {
+public:
+   literal int LOG_DEBUG = 4;
+};
+```
+
+## <a name="see-also"></a>関連項目
+
+[クラスまたはインターフェイス内でのメンバー宣言 (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)<br/>
+[リテラル](../windows/literal-cpp-component-extensions.md)
