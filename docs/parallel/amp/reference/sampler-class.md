@@ -1,5 +1,5 @@
 ---
-title: sampler クラス |Microsoft ドキュメント
+title: sampler クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7261a28f5dea4a8de4af3c169f9b67537e5f3088
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: ee5d50976b6d91bff6d84ec288560ff1348c73d9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121852"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424691"
 ---
 # <a name="sampler-class"></a>sampler クラス
 
@@ -73,7 +73,7 @@ class sampler;
 
 `sampler`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** amp_graphics.h
 
@@ -81,7 +81,7 @@ class sampler;
 
 ##  <a name="ctor"></a> サンプラー
 
-インスタンスを構築、 [sampler クラス](sampler-class.md)です。
+インスタンスを構築、 [sampler クラス](sampler-class.md)します。
 
 ```cpp
 sampler() restrict(cpu);    // [1] default constructor
@@ -89,14 +89,12 @@ sampler() restrict(cpu);    // [1] default constructor
 sampler(                    // [2] constructor
     filter_mode _Filter_mode) restrict(cpu);
 
-
 sampler(                    // [3] constructor
     address_mode _Address_mode,
     float_4 _Border_color = float_4(0.0f,
     0.0f,
     0.0f,
     0.0f)) restrict(cpu);
-
 
 sampler(                    // [4] constructor
     filter_mode _Filter_mode,
@@ -106,11 +104,9 @@ sampler(                    // [4] constructor
     0.0f,
     0.0f)) restrict(cpu);
 
-
 sampler(                    // [5] copy constructor
     const sampler& _Other) restrict(amp,
     cpu);
-
 
 sampler(                    // [6] move constructor
     sampler&& _Other) restrict(amp,
@@ -119,21 +115,19 @@ sampler(                    // [6] move constructor
 
 ### <a name="parameters"></a>パラメーター
 
-*_Filter_mode*  
- サンプリングで使用するフィルター モード。
+*_Filter_mode*<br/>
+サンプリングで使用するフィルター モード。
 
-*_Address_mode*  
- すべての次元のサンプリングで使用されるアドレッシング モード。
+*_Address_mode*<br/>
+すべての次元のサンプリングで使用されるアドレッシング モード。
 
-*_Border_color*  
- アドレス モードが address_border である場合に使用される境界線の色。 既定値は `float_4(0.0f, 0.0f, 0.0f, 0.0f)` です。
+*_Border_color*<br/>
+アドレス モードが address_border である場合に使用される境界線の色。 既定値は `float_4(0.0f, 0.0f, 0.0f, 0.0f)` です。
 
-*_Other*  
-[5] コピー コンストラクター  
-新しい `sampler` インスタンスにコピーする `sampler` オブジェクト。
+*_Other*<br/>
+[5] コピー コンス トラクター、`sampler`オブジェクトに、新しいコピーを`sampler`インスタンス。
 
-[6] 移動コンス トラクター  
-新しい `sampler` インスタンスに移動する `sampler` オブジェクト。
+[6] 移動コンス トラクター、`sampler`新しいに移動するオブジェクトを`sampler`インスタンス。
 
 ##  <a name="address_mode"></a> address_mode
 
@@ -203,18 +197,16 @@ Concurrency::graphics::filter_mode get_filter_mode() const restrict(amp, cpu);
 sampler& operator= (    // [1] copy assignment operator
     const sampler& _Other) restrict(amp, cpu);
 
-sampler& operator= (    // [2] move assignment operator 
+sampler& operator= (    // [2] move assignment operator
     sampler&& _Other) restrict(amp, cpu);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*_Other*  
-[1] 代入演算子をコピーします  
-この `sampler` にコピーする `sampler` オブジェクト。
+*_Other*<br/>
+[1] コピー代入演算子、`sampler`にこれをコピーするオブジェクト`sampler`します。
 
-[2] 代入演算子を移動します  
-この `sampler` に移動する `sampler` オブジェクト。
+[2] は、移動代入演算子、`sampler`に移動するオブジェクトを`sampler`します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -222,4 +214,4 @@ sampler& operator= (    // [2] move assignment operator
 
 ## <a name="see-also"></a>関連項目
 
-[Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)  
+[Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)

@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e4881dfdcb92e778501982482abc13cc91836b0
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 0850a30c0e0e85cd1d90ba5b2399a295a482a3ce
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42538436"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444672"
 ---
 # <a name="loop"></a>ループ
 ループのコードを自動並列化によって処理する方法を制御します。また、ループを自動ベクター化の対象から除外します。  
@@ -57,5 +57,5 @@ ms.locfileid: "42538436"
   
 ## <a name="see-also"></a>関連項目  
  
-[自動並行化と自動ベクター化](../parallel/auto-parallelization-and-auto-vectorization.md)   
+[自動並行化と自動ベクター化](../parallel/auto-parallelization-and-auto-vectorization.md)<br/>
 [プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

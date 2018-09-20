@@ -20,95 +20,100 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f3bf997006d98cfbd05a47140baf53ef7032876
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 5ebf248fa4a1f9534b4ec99ca1c0869312a930c9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719421"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384293"
 ---
 # <a name="emul-emulu"></a>__emul、__emulu
-**Microsoft 固有の仕様**  
-  
- Overflow 保持できるは 32 ビット整数の乗算を実行します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-__int64 __emul(  
-   int a,  
-   int b  
-);  
-unsigned __int64 __emulu(  
-   unsigned int a,  
-   unsigned int b  
-);  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
+
+**Microsoft 固有の仕様**
+
+Overflow 保持できるは 32 ビット整数の乗算を実行します。
+
+## <a name="syntax"></a>構文
+
+```
+__int64 __emul(
+   int a,
+   int b
+);
+unsigned __int64 __emulu(
+   unsigned int a,
+   unsigned int b
+);
+```
+
+#### <a name="parameters"></a>パラメーター
+
 *a*<br/>
-[in]乗算の最初の整数オペランド。  
-  
+[in]乗算の最初の整数オペランド。
+
 *b*<br/>
-[in]乗算の 2 番目の整数オペランド。  
-  
-## <a name="return-value"></a>戻り値  
- 乗算の結果。  
-  
-## <a name="requirements"></a>要件  
-  
-|組み込み|アーキテクチャ|  
-|---------------|------------------|  
-|`__emul`|x86、x64|  
-|`__emulu`|x86、x64|  
-  
- **ヘッダー ファイル** \<intrin.h >  
-  
-## <a name="remarks"></a>Remarks  
- `__emul` 2 つの 32 ビット符号付きの値を受け取り、64 ビット符号付き整数値として乗算の結果を返します。  
-  
- `__emulu` 2 つの 32 ビット符号なし整数値を受け取り、64 ビット符号なし整数値として乗算の結果を返します。  
-  
-## <a name="example"></a>例  
-  
-```  
-// emul.cpp  
-// compile with: /EHsc  
-// processor: x86, x64  
-#include <iostream>  
-#include <intrin.h>  
-using namespace std;  
-  
-#pragma intrinsic(__emul)  
-#pragma intrinsic(__emulu)  
-  
-int main()  
-{  
-   int a = -268435456;   
-   int b = 2;   
-  
-   __int64 result = __emul(a, b);  
-  
-   cout << a << " * " << b << " = " << result << endl;  
-  
-   unsigned int ua = 0xFFFFFFFF; // Dec value: 4294967295  
-   unsigned int ub = 0xF000000;  // Dec value: 251658240  
-  
-   unsigned __int64 uresult = __emulu(ua, ub);  
-  
-   cout << ua << " * " << ub << " = " << uresult << endl;  
-  
-}  
-```  
-  
-## <a name="output"></a>出力  
-  
-```  
--268435456 * 2 = -536870912  
-4294967295 * 251658240 = 1080863910317260800  
-```  
-  
-**Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)
+[in]乗算の 2 番目の整数オペランド。
+
+## <a name="return-value"></a>戻り値
+
+乗算の結果。
+
+## <a name="requirements"></a>要件
+
+|組み込み|アーキテクチャ|
+|---------------|------------------|
+|`__emul`|x86、x64|
+|`__emulu`|x86、x64|
+
+**ヘッダー ファイル** \<intrin.h >
+
+## <a name="remarks"></a>Remarks
+
+`__emul` 2 つの 32 ビット符号付きの値を受け取り、64 ビット符号付き整数値として乗算の結果を返します。
+
+`__emulu` 2 つの 32 ビット符号なし整数値を受け取り、64 ビット符号なし整数値として乗算の結果を返します。
+
+## <a name="example"></a>例
+
+```
+// emul.cpp
+// compile with: /EHsc
+// processor: x86, x64
+#include <iostream>
+#include <intrin.h>
+using namespace std;
+
+#pragma intrinsic(__emul)
+#pragma intrinsic(__emulu)
+
+int main()
+{
+   int a = -268435456;
+   int b = 2;
+
+   __int64 result = __emul(a, b);
+
+   cout << a << " * " << b << " = " << result << endl;
+
+   unsigned int ua = 0xFFFFFFFF; // Dec value: 4294967295
+   unsigned int ub = 0xF000000;  // Dec value: 251658240
+
+   unsigned __int64 uresult = __emulu(ua, ub);
+
+   cout << ua << " * " << ub << " = " << uresult << endl;
+
+}
+```
+
+## <a name="output"></a>出力
+
+```
+-268435456 * 2 = -536870912
+4294967295 * 251658240 = 1080863910317260800
+```
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

@@ -29,27 +29,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6f3f28bbc2a69a5ad5c4fe9910d8312b236c34f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: ef7c24fb321594c64afe45e1902676f43afd3e9b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686499"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412672"
 ---
 # <a name="tree-control-styles"></a>ツリー コントロールのスタイル
-ツリー コントロール ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) のスタイルは、ツリー コントロールの外観の側面を制御します。 ツリー コントロールを作成するときに、初期のスタイルを設定します。 取得しを使用してツリーのコントロールを作成した後、スタイルを変更することができます、 [GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga)と[SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) Windows 関数を指定する**GWL_STYLE**の*nIndex*パラメーター。 スタイルの完全な一覧を参照してください。[ツリー ビュー コントロールのウィンドウ スタイル](/windows/desktop/Controls/tree-view-control-window-styles)Windows SDK に含まれています。  
-  
- **線でつなぐ**スタイルは、対応する親項目に子項目をリンクしている線を描画でツリー コントロールの階層のグラフィック表現を強化します。 このスタイルは、階層のルートにある項目をリンクしていません。 これを行うには、結合する必要があります、**線でつなぐ**と**ルート項目**スタイル。  
-  
- ユーザーは、展開したり、親アイテムをダブルクリックして子項目の親項目の一覧を折りたたんだりできます。 ツリー コントロールを持つ、 **TVS_SINGLEEXPAND**スタイルと展開に、選択された項目と、縮小します。 シングル クリックで選択した項目にマウスを使用し、その項目が閉じられた場合は展開されます。 選択した項目が開いているときに、クリックした場合は折りたたまされます。  
-  
- ツリー コントロールを持つ、**切り替え**スタイルは、各親項目の左側にボタンを追加します。 ユーザーを展開または親項目をダブルクリックする代わりに子項目を折りたたむボタンをクリックできます。 **切り替え**ボタンは、階層のルートにある項目を追加しません。 これを行うには、結合する必要があります**線でつなぐ**、**ルート項目**、および**切り替え**します。  
-  
- **TVS_EDITLABELS**スタイルでは、ユーザーは、ツリー コントロール項目のラベルを編集します。 ラベルの編集に関する詳細については、次を参照してください。[ツリー コントロールのラベルの編集](../mfc/tree-control-label-editing.md)このトピックで後述します。  
-  
- **TVS_NOTOOLTIPS**スタイルは、ツリー ビュー コントロールの自動ツール ヒント機能を無効にします。 この機能は、全体のタイトルに現在表示されていない場合は、マウスのカーソルの下の項目のタイトルを含む、ツール ヒントを自動的に表示されます。  
-  
-## <a name="see-also"></a>関連項目  
- [CTreeCtrl の使い方](../mfc/using-ctreectrl.md)   
- [コントロール](../mfc/controls-mfc.md)
+
+ツリー コントロール ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) のスタイルは、ツリー コントロールの外観の側面を制御します。 ツリー コントロールを作成するときに、初期のスタイルを設定します。 取得しを使用してツリーのコントロールを作成した後、スタイルを変更することができます、 [GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga)と[SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) Windows 関数を指定する**GWL_STYLE**の*nIndex*パラメーター。 スタイルの完全な一覧を参照してください。[ツリー ビュー コントロールのウィンドウ スタイル](/windows/desktop/Controls/tree-view-control-window-styles)Windows SDK に含まれています。
+
+**線でつなぐ**スタイルは、対応する親項目に子項目をリンクしている線を描画でツリー コントロールの階層のグラフィック表現を強化します。 このスタイルは、階層のルートにある項目をリンクしていません。 これを行うには、結合する必要があります、**線でつなぐ**と**ルート項目**スタイル。
+
+ユーザーは、展開したり、親アイテムをダブルクリックして子項目の親項目の一覧を折りたたんだりできます。 ツリー コントロールを持つ、 **TVS_SINGLEEXPAND**スタイルと展開に、選択された項目と、縮小します。 シングル クリックで選択した項目にマウスを使用し、その項目が閉じられた場合は展開されます。 選択した項目が開いているときに、クリックした場合は折りたたまされます。
+
+ツリー コントロールを持つ、**切り替え**スタイルは、各親項目の左側にボタンを追加します。 ユーザーを展開または親項目をダブルクリックする代わりに子項目を折りたたむボタンをクリックできます。 **切り替え**ボタンは、階層のルートにある項目を追加しません。 これを行うには、結合する必要があります**線でつなぐ**、**ルート項目**、および**切り替え**します。
+
+**TVS_EDITLABELS**スタイルでは、ユーザーは、ツリー コントロール項目のラベルを編集します。 ラベルの編集に関する詳細については、次を参照してください。[ツリー コントロールのラベルの編集](../mfc/tree-control-label-editing.md)このトピックで後述します。
+
+**TVS_NOTOOLTIPS**スタイルは、ツリー ビュー コントロールの自動ツール ヒント機能を無効にします。 この機能は、全体のタイトルに現在表示されていない場合は、マウスのカーソルの下の項目のタイトルを含む、ツール ヒントを自動的に表示されます。
+
+## <a name="see-also"></a>関連項目
+
+[CTreeCtrl の使い方](../mfc/using-ctreectrl.md)<br/>
+[コントロール](../mfc/controls-mfc.md)
 

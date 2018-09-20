@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2cc6b296684c13c2cf9c538a226fb440a2e50349
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 121d3bf1fd7d59f36362a034216e0728b2fc25b0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599264"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448351"
 ---
 # <a name="generics--c-component-extensions"></a>ジェネリック (C++ コンポーネント拡張)
 
@@ -33,35 +33,35 @@ ms.locfileid: "42599264"
 
 ### <a name="supported-by-the-windows-runtime-and-the-common-language-runtime"></a>Windows ランタイムと共通言語ランタイムでサポートされます。
 
-[Visual C++ のジェネリックの概要](../windows/overview-of-generics-in-visual-cpp.md)  
+[Visual C++ のジェネリックの概要](../windows/overview-of-generics-in-visual-cpp.md)<br/>
 ジェネリックの概要については、言語の機能で、ジェネリックとジェネリック型パラメーターとして参照型と値の型の使用に関する情報を説明するのに使用される用語の定義の動機です。
 
-[ジェネリック インターフェイス (Visual C++)](../windows/generic-interfaces-visual-cpp.md)  
+[ジェネリック インターフェイス (Visual C++)](../windows/generic-interfaces-visual-cpp.md)<br/>
 定義とジェネリック インターフェイスの使用について説明します。
 
-[汎用デリゲート (Visual C++)](../windows/generic-delegates-visual-cpp.md)  
+[汎用デリゲート (Visual C++)](../windows/generic-delegates-visual-cpp.md)<br/>
 定義と汎用デリゲートの使用について説明します。
 
-[ジェネリック型パラメーターの制約 (C++/CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
+[ジェネリック型パラメーターの制約 (C++/CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)<br/>
 ジェネリック型制約を使用する方法の詳細についてはします。
 
-[ジェネリックの使用 (C++/CLI)](../windows/consuming-generics-cpp-cli.md)  
+[ジェネリックの使用 (C++/CLI)](../windows/consuming-generics-cpp-cli.md)<br/>
 Visual C での他の言語で作成された可能性がある、.NET アセンブリで定義されているジェネリックの使用方法の詳細についてはします。
 
-[ジェネリックとテンプレート (Visual C++)](../windows/generics-and-templates-visual-cpp.md)  
+[ジェネリックとテンプレート (Visual C++)](../windows/generics-and-templates-visual-cpp.md)<br/>
 ジェネリックとテンプレートを使用して、各およびそれらを有効に結合する方法を比較します。
 
 ### <a name="supported-by-the-common-language-runtime"></a>共通言語ランタイムでサポートされています。
 
-[ジェネリック関数 (C++/CLI)](../windows/generic-functions-cpp-cli.md)  
+[ジェネリック関数 (C++/CLI)](../windows/generic-functions-cpp-cli.md)<br/>
 ジェネリック関数とメソッド定義と使用について説明します。
 
-[ジェネリック クラス (C++/CLI)](../windows/generic-classes-cpp-cli.md)  
+[ジェネリック クラス (C++/CLI)](../windows/generic-classes-cpp-cli.md)<br/>
 定義とジェネリック クラスの使用について説明します。
 
 ## <a name="related-sections"></a>関連項目
 
-[方法: for each を使用してジェネリック コレクションを反復処理する](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)  
+[方法: for each を使用してジェネリック コレクションを反復処理する](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)<br/>
 使用して、[ごとで](../dotnet/for-each-in.md)キーワードをジェネリック コレクション。
 
 ## <a name="see-also"></a>関連項目

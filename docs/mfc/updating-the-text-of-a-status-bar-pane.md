@@ -1,5 +1,5 @@
 ---
-title: ステータス バー ペインのテキストの更新 |Microsoft ドキュメント
+title: ステータス バー ペインのテキストの更新 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,67 +21,69 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec085bcd519aa1694cb889a06ce9b1881e065514
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 8aa04fdee2b63f9d91d2bdd7dfd62100b3e32a2c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951487"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393322"
 ---
 # <a name="updating-the-text-of-a-status-bar-pane"></a>ステータス バー ペインのテキストの更新
-この記事では、MFC ステータス バー ペインに表示されるテキストを変更する方法について説明します。 ステータス バー — クラスの window オブジェクト[CStatusBar](../mfc/reference/cstatusbar-class.md) — 複数「ペインです」が含まれています。 各ペインは、情報を表示する使用できるステータス バーの四角形の領域です。 たとえば、多くのアプリケーションは、一番右のペインに表示、CAPSLOCK、NUMLOCK、およびその他のキーの状態を表示します。 アプリケーションも多くの場合、テキストを表示役に立つ、一番左のウィンドウ (0)、「メッセージ ウィンドウ」とも呼ばれます。 たとえば、既定の MFC ステータス バーは、現在選択されているメニュー項目またはツール バー ボタンを説明する文字列を表示するのにメッセージ ウィンドウを使用します。 図に[ステータス バー](../mfc/status-bar-implementation-in-mfc.md)アプリケーション ウィザードで作成した MFC アプリケーションから、ステータス バーが表示されます。  
-  
- 既定では、MFC 有効にしません、`CStatusBar`ウィンドウのウィンドウの作成時にします。 ペインがアクティブにする必要があるには、ステータス バーに各ペインの ON_UPDATE_COMMAND_UI マクロを使用し、ペインを更新します。 ウィンドウは WM_COMMAND メッセージを送信しないため (そうでないツール バー ボタンなど)、コードを手動で入力する必要があります。  
-  
- たとえば、1 つのペインが`ID_INDICATOR_PAGE`ドキュメントでは、現在のページ番号が含まれていることと、コマンド識別子として。 次の手順では、ステータス バーで新しいウィンドウを作成する方法について説明します。  
-  
-### <a name="to-make-a-new-pane"></a>新しいペインを作成するには  
-  
-1.  ペインのコマンド ID を定義します  
-  
-     **ビュー**  メニューのをクリックして**リソース ビュー**です。 プロジェクト リソースを右クリックし、をクリックして**リソース シンボル**です。 [リソース シンボル] ダイアログ ボックス`New`です。 コマンド ID の名前を入力します。 たとえば、`ID_INDICATOR_PAGE`です。 ID の値を指定するか、[リソース シンボル] ダイアログ ボックスで表示された値を受け入れます。 たとえば、`ID_INDICATOR_PAGE`既定値をそのまま使用します。 リソース シンボル ダイアログ ボックスを閉じます。  
-  
-2.  ウィンドウに表示する既定の文字列を定義します。  
-  
-     リソース ビューを開きをダブルクリックして**ストリング テーブル**アプリケーションのリソースの種類を一覧表示されたウィンドウでします。 **ストリング テーブル**エディターを開く を選択して**新しい文字列**から、**挿入**メニュー。 文字列のプロパティ ウィンドウで、ペインのコマンド ID を選択 (たとえば、 `ID_INDICATOR_PAGE`)「ページ」などの既定の文字列値を入力します。 文字列エディターを閉じます。 (必要なコンパイラ エラーを回避するための既定の文字列です。)  
-  
-3.  ウィンドウを追加、*インジケーター*配列。  
-  
-     ファイルします。CPP、検索、*インジケーター*配列。 この配列には、左から右の順に、ステータス バーのインジケーターのすべてのコマンド Id が一覧表示します。 次に示すように配列に適切な時点では、ペインのコマンド ID を入力してください`ID_INDICATOR_PAGE`:  
-  
-     [!code-cpp[NVC_MFCDocView#10](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_1.cpp)]  
-  
- 呼び出すには、ペインにテキストを表示することをお勧め、`SetText`クラスのメンバー関数`CCmdUI`ウィンドウの更新プログラム ハンドラー関数にします。 整数型の変数を設定するなど、 *m_nPage* 、現在のページ番号および使用を含む`SetText`ペインのテキストをその数値の文字列形式に設定します。  
-  
+
+この記事では、MFC ステータス バー ペインに表示されるテキストを変更する方法について説明します。 ステータス バー、クラスのウィンドウ オブジェクト[CStatusBar](../mfc/reference/cstatusbar-class.md) : いくつか「ウィンドウ」が含まれています 各ペインは、情報を表示するのに使用できるステータス バーの四角形の領域です。 たとえば、アプリケーションの多くは、右端のウィンドウで CAPS LOCK、NUM LOCK、およびその他のキーの状態を表示します。 アプリケーションも多くの場合、「メッセージ ウィンドウ」とも呼ばれます (ウィンドウ 0) の一番左のウィンドウでわかりやすいテキストを表示します。 たとえば、既定の MFC ステータス バーは、現在選択されているメニュー項目またはツール バー ボタンを説明する文字列を表示するのにメッセージ ウィンドウを使用します。 図に[ステータス バー](../mfc/status-bar-implementation-in-mfc.md)アプリケーション ウィザードで作成した MFC アプリケーションからのステータス バーが表示されます。
+
+既定では、MFC 有効にしません、`CStatusBar`ウィンドウのウィンドウの作成時にします。 ウィンドウをアクティブ化するには、ON_UPDATE_COMMAND_UI マクロを使用して、ステータス バーには、各ウィンドウのおよびペインを更新する必要があります。 ウィンドウは WM_COMMAND メッセージを送信しないためです (そうでないツール バー ボタンなど)、コードを手動で入力する必要があります。
+
+たとえば、1 つのペインが`ID_INDICATOR_PAGE`ドキュメントでは、現在のページ番号が含まれていると、コマンド識別子として。 次の手順では、ステータス バーで、新しいウィンドウを作成する方法について説明します。
+
+### <a name="to-make-a-new-pane"></a>新しいペインを作成するには
+
+1. 定義ウィンドウのコマンド id。
+
+     **ビュー**  メニューのをクリックして**リソース ビュー**します。 プロジェクト リソースを右クリックし、をクリックして**リソース シンボル**します。 [リソース シンボル] ダイアログ ボックスで、`New`します。 コマンド ID の名前を入力します。 たとえば、`ID_INDICATOR_PAGE`します。 では、ID の値を指定するか、[リソース シンボル] ダイアログ ボックスで提案された値を使用します。 たとえば、`ID_INDICATOR_PAGE`既定値をそのまま使用します。 リソース シンボル ダイアログ ボックスを閉じます。
+
+1. ウィンドウに表示する既定の文字列を定義します。
+
+     リソース ビューを開き、ダブルクリック**ストリング テーブル**アプリケーションのリソースの種類を一覧表示するウィンドウ。 **ストリング テーブル**エディターを開き、選択**新しい文字列**から、**挿入**メニュー。 文字列のプロパティ ウィンドウで、ウィンドウのコマンド ID を選択します (たとえば、 `ID_INDICATOR_PAGE`)「ページ」など、既定の文字列値を入力します。 文字列エディターを閉じます。 (既定の文字列が、コンパイラ エラーを回避するために必要)。
+
+1. ウィンドウを追加、*インジケーター*配列。
+
+     ファイルします。CPP、検索、*インジケーター*配列。 この配列は、左から右への順序で、ステータス バーのインジケーターのすべてのコマンド Id を一覧表示します。 配列の適切な時点に示すように、ウィンドウのコマンド ID を入力`ID_INDICATOR_PAGE`:
+
+     [!code-cpp[NVC_MFCDocView#10](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_1.cpp)]
+
+呼び出すことをウィンドウにテキストを表示する推奨される方法です、`SetText`クラスのメンバー関数`CCmdUI`でウィンドウの更新ハンドラー関数。 整数型の変数を設定するなど、 *m_nPage*使用と現在のページ数を格納している`SetText`ペインのテキストをその数値の文字列形式に設定します。
+
 > [!NOTE]
->  `SetText`アプローチをお勧めします。 呼び出すことによってより若干少なくレベルでは、このタスクを実行することは、`CStatusBar`メンバー関数は、`SetPaneText`です。 その場合でも、更新ハンドラーも必要があります。 ウィンドウのハンドラーがこのようなを使用せず MFC 自動的に無効にウィンドウで、その内容が消去されます。  
-  
- 次の手順では、更新ハンドラー関数を使用して、テキスト、ウィンドウに表示する方法を示します。  
-  
-#### <a name="to-make-a-pane-display-text"></a>テキストを表示 ウィンドウを作成するには  
-  
-1.  コマンドのコマンド更新ハンドラーを追加します。  
-  
-     次に示すように、ハンドラーのプロトタイプを手動で追加`ID_INDICATOR_PAGE`でします。H):  
-  
-     [!code-cpp[NVC_MFCDocView#11](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_2.h)]  
-  
-2.  適切な。CPP ファイルに追加し、ハンドラーの定義を次に示すように`ID_INDICATOR_PAGE`でします。CPP):  
-  
-     [!code-cpp[NVC_MFCDocView#12](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_3.cpp)]  
-  
-     このハンドラーの最後の 3 つの行は、テキストを表示するコードです。  
-  
-3.  マップでは、適切なメッセージ、ここで説明するように ON_UPDATE_COMMAND_UI マクロを追加`ID_INDICATOR_PAGE`でします。CPP):  
-  
-     [!code-cpp[NVC_MFCDocView#13](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_4.cpp)]  
-  
- 値を定義すると、 *m_nPage*メンバー変数 (クラスの`CMainFrame`)、この手法により、アプリケーションが他のインジケーターを更新する同じ方法でアイドル状態の処理中に、ウィンドウに表示するページ番号です。 場合*m_nPage*の変更、次のアイドル ループ時に表示が変更されます。  
-  
-### <a name="what-do-you-want-to-know-more-about"></a>詳しくは次のトピックをクリックしてください。  
-  
--   [ユーザー インターフェイス オブジェクト (プログラムの条件の変更として、ツールバーのボタンとメニュー項目を更新する方法) を更新します。](../mfc/how-to-update-user-interface-objects.md)  
-  
-## <a name="see-also"></a>関連項目  
- [ステータス バーの実装 (MFC の)](../mfc/status-bar-implementation-in-mfc.md)   
- [CStatusBar クラス](../mfc/reference/cstatusbar-class.md)
+>  `SetText`アプローチをお勧めします。 呼び出すことにより若干低いレベルでは、このタスクを実行することは、`CStatusBar`メンバー関数は`SetPaneText`します。 そうであっても、更新ハンドラーも必要があります。 せず、ウィンドウのハンドラーがこのような MFC 自動的に無効にウィンドウで、その内容を消去します。
+
+次の手順では、更新ハンドラー関数を使用して、ウィンドウでテキストを表示する方法を示します。
+
+#### <a name="to-make-a-pane-display-text"></a>テキストの表示ウィンドウ
+
+1. コマンドのコマンド更新ハンドラーを追加します。
+
+     次に示すように、ハンドラーのプロトタイプを手動で追加`ID_INDICATOR_PAGE`(でします。H):
+
+     [!code-cpp[NVC_MFCDocView#11](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_2.h)]
+
+1. 適切な。CPP ファイルに示すように、ハンドラーの定義を追加`ID_INDICATOR_PAGE`(でします。CPP):
+
+     [!code-cpp[NVC_MFCDocView#12](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_3.cpp)]
+
+     このハンドラーの最後の 3 つの行は、テキストを表示するコードです。
+
+1. 適切なメッセージ マップに示すように、ON_UPDATE_COMMAND_UI マクロを追加`ID_INDICATOR_PAGE`(でします。CPP):
+
+     [!code-cpp[NVC_MFCDocView#13](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_4.cpp)]
+
+値を定義すると、 *m_nPage*メンバー変数 (クラスの`CMainFrame`)、この手法により、アプリケーションが他のインジケーターを更新するのと同様に、アイドル状態の処理中に、ウィンドウに表示するページ番号。 場合*m_nPage*の変更、表示が次のアイドル ループの中に変更します。
+
+### <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+
+- [ユーザー インターフェイス オブジェクト (プログラムの条件の変更として、ツールバーのボタンとメニュー項目を更新する方法) を更新します。](../mfc/how-to-update-user-interface-objects.md)
+
+## <a name="see-also"></a>関連項目
+
+[MFC でのステータス バーの実装](../mfc/status-bar-implementation-in-mfc.md)<br/>
+[CStatusBar クラス](../mfc/reference/cstatusbar-class.md)

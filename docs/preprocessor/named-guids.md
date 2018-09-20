@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fe616785c63602b5de9702cd3e6c7d80f9872fc
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 7871b3f547e51bac983e1fe65cf815c8bb70e369
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539032"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423105"
 ---
 # <a name="namedguids"></a>named_guids
 **C++ 固有の仕様**  
@@ -40,5 +40,5 @@ named_guids
   
 ## <a name="see-also"></a>関連項目  
  
-[#import の属性](../preprocessor/hash-import-attributes-cpp.md)   
+[#import の属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import ディレクティブ](../preprocessor/hash-import-directive-cpp.md)

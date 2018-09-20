@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ffb84fd072f4ddd3dc76445c720debef5c364642
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 33f81412ef9580768269663aa23afe06ad4d62f7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590436"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374679"
 ---
 # <a name="comptras-method"></a>ComPtr::As メソッド
 
@@ -44,10 +44,10 @@ HRESULT As(
 
 ### <a name="parameters"></a>パラメーター
 
-*U*  
+*U*<br/>
 パラメーターで表されるインターフェイス*p*します。
 
-*p*  
+*p*<br/>
 A **ComPtr**パラメーターで指定されたインターフェイスを表すオブジェクトを*U*します。パラメーター *p*現在を指していない**ComPtr**オブジェクト。
 
 ## <a name="remarks"></a>Remarks

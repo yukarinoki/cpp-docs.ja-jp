@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a0c53832acdd7a785ccc36941cd317a9d0705173
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 69676651c77175b55f4363b525a3ca3acb9be46d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583627"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437457"
 ---
 # <a name="synclockwithstatust-class"></a>SyncLockWithStatusT クラス
 
@@ -39,7 +39,7 @@ class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
 
 ### <a name="parameters"></a>パラメーター
 
-*SyncTraits*  
+*SyncTraits*<br/>
 排他的に使用できる型またはリソースの所有権を共有します。
 
 ## <a name="remarks"></a>Remarks
@@ -71,7 +71,7 @@ class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
-|name|説明|
+|名前|説明|
 |----------|-----------------|
 |[SyncLockWithStatusT::status_ データ メンバー](../windows/synclockwithstatust-status-data-member.md)|基になる待機操作の結果を保持するオブジェクトのロック操作が現在に基づいて後**SyncLockWithStatusT**オブジェクト。|
 

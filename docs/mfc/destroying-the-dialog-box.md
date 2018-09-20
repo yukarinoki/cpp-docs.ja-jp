@@ -1,5 +1,5 @@
 ---
-title: ダイアログ ボックスの破棄 |Microsoft ドキュメント
+title: ダイアログ ボックスの破棄 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66a3ef9a72107ffb36a75834a6e197aba394c420
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 863b70f3bf4e9828d69024b838dce43abbba26be
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343929"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425913"
 ---
 # <a name="destroying-the-dialog-box"></a>ダイアログ ボックスの破棄
-モーダル ダイアログ ボックスは通常、スタック フレーム上に作成し、それを作成した関数が終了すると破棄します。 ダイアログ オブジェクトのデストラクターは、オブジェクトがスコープ外に出るときに呼び出されます。  
-  
- モードレス ダイアログ ボックスが通常作成され、親ビューまたはフレーム ウィンドウが所有する、アプリケーションのメイン フレーム ウィンドウまたはドキュメント フレーム ウィンドウです。 既定値[OnClose](../mfc/reference/cwnd-class.md#onclose)ハンドラーの呼び出し[DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow)、ダイアログ ボックス ウィンドウを破棄します。 オーバーライドする場合は、ダイアログ ボックスがスタンドアロン、またはその他の特殊な所有権セマンティクスなしポインターの使用であり、 [PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy) C++ ダイアログ オブジェクトを破棄します。 オーバーライドする必要がありますも[OnCancel](../mfc/reference/cdialog-class.md#oncancel)を呼び出すと`DestroyWindow`から内にします。 それ以外の場合は、必要でなくなったときに ダイアログ ボックスのオーナーが C++ オブジェクトを破棄する必要があります。  
-  
-## <a name="see-also"></a>関連項目  
- [ダイアログ ボックスの有効期間](../mfc/life-cycle-of-a-dialog-box.md)
+
+モーダル ダイアログ ボックスは通常、スタック フレーム上に作成し、それを作成した関数が終了するたびに破棄します。 オブジェクトがスコープ外になるダイアログ オブジェクトのデストラクターが呼び出されます。
+
+モードレス ダイアログ ボックスが通常作成され、親ビューまたはフレーム ウィンドウが所有する、アプリケーションのメイン フレーム ウィンドウまたはドキュメント フレーム ウィンドウ。 既定の[OnClose](../mfc/reference/cwnd-class.md#onclose)ハンドラー呼び出し[DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow)、ダイアログ ボックス ウィンドウを破棄します。 オーバーライドする場合、ダイアログ ボックスがスタンドアロンでないポインター、またはその他の特殊な所有権セマンティクスであり、 [PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy) C++ ダイアログ オブジェクトを破棄します。 オーバーライドする必要がありますも[OnCancel](../mfc/reference/cdialog-class.md#oncancel)を呼び出すと`DestroyWindow`からそこ。 それ以外の場合は、ダイアログ ボックスのオーナーが必要でなくなったときに C++ オブジェクトを破棄する必要があります。
+
+## <a name="see-also"></a>関連項目
+
+[ダイアログ ボックスの有効期間](../mfc/life-cycle-of-a-dialog-box.md)
 

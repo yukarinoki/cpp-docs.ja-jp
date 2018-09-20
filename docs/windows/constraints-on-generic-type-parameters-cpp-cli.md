@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7abdc8f2deee962dc6ee5bcfa9857efb6f0bd847
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e0c6e860fa5d7633bd334d0c0a35d25936104636
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593905"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427707"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>ジェネリック型パラメーターの制約 (C++/CLI)
 
@@ -39,10 +39,10 @@ where type-parameter: constraint list
 
 ### <a name="parameters"></a>パラメーター
 
-*型パラメーター*  
+*型パラメーター*<br/>
 制約が適用される、型パラメーターの 1 つ。
 
-*制約リスト*  
+*制約リスト*<br/>
 *制約リスト*制約の仕様のコンマ区切りの一覧を示します。 一覧には、型パラメーターによって実装されるインターフェイスを含めることができます。
 
 一覧には、クラスを含めることもできます。 基底クラスの制約を満たすために、型引数の制約と同じクラスまたはください制約から派生します。

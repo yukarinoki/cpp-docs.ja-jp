@@ -1,5 +1,5 @@
 ---
-title: チェック クラス |Microsoft ドキュメント
+title: CUserException クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,45 +21,50 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1701f6894ba3b44205526c59bad7ef635c1bbbd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71d2be1c00e518597a5d5121d7a53544bd29067f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369474"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419660"
 ---
-# <a name="cuserexception-class"></a>チェック クラス
-エンド ユーザーの操作を中止するためにスローします。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-class CUserException : public CSimpleException  
-```  
-  
-## <a name="remarks"></a>コメント  
- 使用して`CUserException`アプリケーション固有の例外のスローとキャッチ例外処理機構を使用する場合。 クラス名に「ユーザー」は、「アプリケーションのユーザーが例外を処理する必要がある」と解釈できます。  
-  
- A`CUserException`グローバル関数の呼び出し後にスローされる通常`AfxMessageBox`操作が失敗したユーザーに通知します。 例外ハンドラーを記述するときに、ユーザー通常に既に通知されました、エラーのために特別に例外を処理します。 フレームワークは、場合によっては、この例外をスローします。 スローする、`CUserException`自分で、ユーザーに通知して、グローバル関数を呼び出す`AfxThrowUserException`です。  
-  
- 次の例で操作が失敗するを含む関数をユーザーに通知し、スロー、、`CUserException`です。 呼び出し元の関数は、例外をキャッチし、専用の処理します。  
-  
- [!code-cpp[NVC_MFCExceptions#24](../../mfc/codesnippet/cpp/cuserexception-class_1.cpp)]  
-  
- 使用する方法についての`CUserException`、記事を参照して[例外処理 (MFC)](../../mfc/exception-handling-in-mfc.md)です。  
-  
-## <a name="inheritance-hierarchy"></a>継承階層  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CException](../../mfc/reference/cexception-class.md)  
-  
- [CSimpleException](../../mfc/reference/csimpleexception-class.md)  
-  
- `CUserException`  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** afxwin.h  
-  
-## <a name="see-also"></a>関連項目  
- [階層図](../../mfc/hierarchy-chart.md)   
- [CException クラス](../../mfc/reference/cexception-class.md)
+# <a name="cuserexception-class"></a>CUserException クラス
+
+エンド ユーザーの操作を中止するためにスローします。
+
+## <a name="syntax"></a>構文
+
+```
+class CUserException : public CSimpleException
+```
+
+## <a name="remarks"></a>Remarks
+
+使用して、`CUserException`アプリケーション固有の例外のスローとキャッチ例外メカニズムを使用する場合。 「ユーザーが例外を処理する必要がある」と、クラス名に"user"を解釈できます。
+
+A`CUserException`グローバル関数を呼び出した後、通常、スローされる`AfxMessageBox`操作に失敗したユーザーに通知します。 例外ハンドラーを記述するときに、ユーザーは、通常は既に報告されて、エラーのために特別に、例外を処理します。 フレームワークは、場合によっては、この例外をスローします。 スローする、`CUserException`をユーザーに警告をグローバル関数を呼び出して、自分で`AfxThrowUserException`します。
+
+次の例で、関数が失敗する操作を含む、ユーザーに警告をスローします、`CUserException`します。 呼び出し元の関数は、例外をキャッチし、専用の処理します。
+
+[!code-cpp[NVC_MFCExceptions#24](../../mfc/codesnippet/cpp/cuserexception-class_1.cpp)]
+
+使用しての詳細については`CUserException`、記事をご覧ください[例外処理 (MFC)](../../mfc/exception-handling-in-mfc.md)します。
+
+## <a name="inheritance-hierarchy"></a>継承階層
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CException](../../mfc/reference/cexception-class.md)
+
+[CSimpleException](../../mfc/reference/csimpleexception-class.md)
+
+`CUserException`
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** afxwin.h
+
+## <a name="see-also"></a>関連項目
+
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[CException クラス](../../mfc/reference/cexception-class.md)

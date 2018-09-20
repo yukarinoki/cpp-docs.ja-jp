@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bc10f86a8fa646a1072de8b7c5e30121d98750cf
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1eecedca8988c95466a3f257fbc77768b7c67b3b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219953"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392867"
 ---
 # <a name="helpstringdll"></a>typelib
 
@@ -38,7 +38,7 @@ ms.locfileid: "43219953"
 
 ### <a name="parameters"></a>パラメーター
 
-*string*  
+*string*<br/>
 使用してドキュメントの文字列の検索を実行する DLL です。
 
 ## <a name="remarks"></a>Remarks
@@ -75,7 +75,7 @@ __interface IMyI
 
 ## <a name="see-also"></a>関連項目
 
-[IDL 属性](../windows/idl-attributes.md)  
-[インターフェイス属性](../windows/interface-attributes.md)  
-[クラス属性](../windows/class-attributes.md)  
+[IDL 属性](../windows/idl-attributes.md)<br/>
+[インターフェイス属性](../windows/interface-attributes.md)<br/>
+[クラス属性](../windows/class-attributes.md)<br/>
 [メソッド属性](../windows/method-attributes.md)  

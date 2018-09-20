@@ -1,5 +1,5 @@
 ---
-title: affinity_partitioner クラス |Microsoft ドキュメント
+title: affinity_partitioner クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,54 +18,58 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2242346bda717117e2b43ba108d86fd2a77a3b58
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 9b1254b316a52bd3e61b3cafd81ba2e89ee88b62
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691132"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444646"
 ---
 # <a name="affinitypartitioner-class"></a>affinity_partitioner クラス
-`affinity_partitioner` クラスは `static_partitioner` クラスに似ていますが、ワーカー スレッドへのマッピングのサブ範囲の選択によってキャッシュの関係が向上します。 同じデータ セットに対してループ処理が再実行されるときにパフォーマンスを大幅に向上させることができ、データはキャッシュに収まります。 データの局所性のメリットを利用するには、特定のデータ セットに対して実行される並列ループの以降のイテレーションで、同じ `affinity_partitioner` オブジェクトを使用する必要があります。  
-  
-## <a name="syntax"></a>構文  
-  
+
+`affinity_partitioner` クラスは `static_partitioner` クラスに似ていますが、ワーカー スレッドへのマッピングのサブ範囲の選択によってキャッシュの関係が向上します。 同じデータ セットに対してループ処理が再実行されるときにパフォーマンスを大幅に向上させることができ、データはキャッシュに収まります。 データの局所性のメリットを利用するには、特定のデータ セットに対して実行される並列ループの以降のイテレーションで、同じ `affinity_partitioner` オブジェクトを使用する必要があります。
+
+## <a name="syntax"></a>構文
+
 ```
 class affinity_partitioner;
-```  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="public-constructors"></a>パブリック コンストラクター  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[affinity_partitioner](#ctor)|`affinity_partitioner` オブジェクトを構築します。|  
-|[~ affinity_partitioner デストラクター](#dtor)|破棄、`affinity_partitioner`オブジェクト。|  
-  
-## <a name="inheritance-hierarchy"></a>継承階層  
- `affinity_partitioner`  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** ppl.h  
-  
- **名前空間:** concurrency  
-  
-##  <a name="dtor"></a> ~ affinity_partitioner 
+```
 
- 破棄、`affinity_partitioner`オブジェクト。  
-  
+## <a name="members"></a>メンバー
+
+### <a name="public-constructors"></a>パブリック コンストラクター
+
+|名前|説明|
+|----------|-----------------|
+|[affinity_partitioner](#ctor)|`affinity_partitioner` オブジェクトを構築します。|
+|[~ affinity_partitioner デストラクター](#dtor)|破棄、`affinity_partitioner`オブジェクト。|
+
+## <a name="inheritance-hierarchy"></a>継承階層
+
+`affinity_partitioner`
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** ppl.h
+
+**名前空間:** concurrency
+
+##  <a name="dtor"></a> ~ affinity_partitioner
+
+破棄、`affinity_partitioner`オブジェクト。
+
 ```
 ~affinity_partitioner();
-```  
-  
-##  <a name="ctor"></a> affinity_partitioner 
+```
 
- `affinity_partitioner` オブジェクトを構築します。  
-  
+##  <a name="ctor"></a> affinity_partitioner
+
+`affinity_partitioner` オブジェクトを構築します。
+
 ```
 affinity_partitioner();
-```  
-  
-## <a name="see-also"></a>関連項目  
- [concurrency 名前空間](concurrency-namespace.md)
+```
+
+## <a name="see-also"></a>関連項目
+
+[コンカレンシー名前空間](concurrency-namespace.md)

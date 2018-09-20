@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c12357acf3369192248784fc6593c9b5b91b863
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 61105469abc25de38d0d9ae9a59755e08fd298b6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316784"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438640"
 ---
 # <a name="how-to-create-a-resource"></a>方法: リソースを作成する
 
@@ -68,6 +68,6 @@ Win32
 
 ## <a name="see-also"></a>関連項目
 
-[リソース ファイル](../windows/resource-files-visual-studio.md)  
-[リソース エディター](../windows/resource-editors.md)  
+[リソース ファイル](../windows/resource-files-visual-studio.md)<br/>
+[リソース エディター](../windows/resource-editors.md)<br/>
 [[リソースの追加] ダイアログ ボックス](../windows/add-resource-dialog-box.md)

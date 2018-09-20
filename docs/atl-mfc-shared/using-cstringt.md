@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca78687f79cdbf1d8bdb60c1a877c489498624ee
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5f11590a78cb691f4812e7b503350fb72a4bdc95
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766192"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390735"
 ---
 # <a name="using-cstringt"></a>CStringT の使用
 
@@ -27,10 +27,10 @@ ms.locfileid: "43766192"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[CStringT によるメモリ管理](../atl-mfc-shared/memory-management-with-cstringt.md)  
+[CStringT によるメモリ管理](../atl-mfc-shared/memory-management-with-cstringt.md)<br/>
 によるメモリ管理について説明します`CStringT`可変長の文字の文字列を操作するために使用するテンプレート クラス。
 
-[CStringT による文字列クラスのエクスポート](../atl-mfc-shared/exporting-string-classes-using-cstringt.md)  
+[CStringT による文字列クラスのエクスポート](../atl-mfc-shared/exporting-string-classes-using-cstringt.md)<br/>
 CStringT <> テンプレート クラスを使った DLL から、独自の文字列クラスをエクスポートする方法について説明します。
 
 ## <a name="reference"></a>参照

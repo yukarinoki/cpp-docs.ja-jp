@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5e37a3a934fbc66af62a30fd2fc2c23e1c659ef2
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 2d6b6ce066c84056997ec9b54c9d74e782064df4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692099"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408402"
 ---
 # <a name="string--c-component-extensions"></a>文字列 (C++ コンポーネント拡張)
 
@@ -277,6 +277,6 @@ System.String
 
 ## <a name="see-also"></a>関連項目
 
-[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)  
-[文字列リテラルと文字リテラル](../cpp/string-and-character-literals-cpp.md)  
+[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[文字列リテラルと文字リテラル](../cpp/string-and-character-literals-cpp.md)<br/>
 [/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)

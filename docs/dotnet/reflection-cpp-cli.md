@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0b5a352d10c1fd1f825cecbe3d6a1083f6efd425
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: af227712e3ac64d69836f5cf83b6629bdbffe834
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212170"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432727"
 ---
 # <a name="reflection-ccli"></a>リフレクション (C++/CLI)
 
@@ -78,7 +78,7 @@ full type name of 'sample string' is 'System.String'
 // compile with: /clr
 using namespace System;
 int main() {
-   Int32 i = 100; 
+   Int32 i = 100;
    Object ^ o = i;
    Console::WriteLine("type of i = '{0}'", o->GetType());
 }
@@ -106,7 +106,7 @@ enum class Options {   // not a native enum
 int main() {
    array<String^>^ names = Enum::GetNames(Options::typeid);
 
-   Console::WriteLine("there are {0} options in enum '{1}'", 
+   Console::WriteLine("there are {0} options in enum '{1}'",
                names->Length, Options::typeid);
 
    for (int i = 0 ; i < names->Length ; i++)
@@ -156,7 +156,7 @@ int main() {
 
 ```Output
 type information for 'String':
-assembly name: mscorlib, Version=1.0.5000.0, Culture=neutral, 
+assembly name: mscorlib, Version=1.0.5000.0, Culture=neutral,
 PublicKeyToken=b77a5c561934e089
 namespace: System
 base type: System.Object
@@ -177,7 +177,7 @@ public ref class TestClass {
 public:
    TestClass() {}
    void SimpleTestMember1() {}
-   String ^ SimpleMember2(String ^ s) { return s; } 
+   String ^ SimpleMember2(String ^ s) { return s; }
    int TestMember(int i) { return i; }
    property int Member {
       int get() { return m_i; }
@@ -227,10 +227,10 @@ int main() {
       // retrieve array of member descriptions
       array<MemberInfo^>^ member = typeArray[i]->GetMembers();
 
-      Console::WriteLine("  members of {0} ({1} members):", 
+      Console::WriteLine("  members of {0} ({1} members):",
       typeArray[i]->FullName, member->Length);
       for (int j = 0 ; j < member->Length ; j++) {
-         Console::Write("       ({0})", 
+         Console::Write("       ({0})",
          member[j]->MemberType.ToString() );
          Console::Write("{0}  ", member[j]);
          Console::WriteLine("");
@@ -244,165 +244,169 @@ int main() {
 ```
 
 ## <a name="implement"></a> 方法: リフレクションを使用してプラグイン コンポーネント アーキテクチャの実装
-次のコード例では、単純な「プラグイン」アーキテクチャを実装するためにリフレクションを使用を示します。 最初のリストは、アプリケーションと、2 番目のプラグインです。 アプリケーションは、コマンドライン引数として指定されたプラグイン DLL 内のフォーム ベースのクラスを使用して自身を設定する複数のドキュメント形式です。  
-  
- 使用して、指定されたアセンブリの読み込みを試行、<xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>メソッド。 成功すると、アセンブリ内で型が列挙を使用して、<xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=fullName>メソッド。 互換性を使用して各型をチェックしてから、<xref:System.Type.IsAssignableFrom%2A?displayProperty=fullName>メソッド。 この例で指定されたアセンブリ内で見つかったクラスをから派生する必要があります、<xref:System.Windows.Forms.Form>クラスをプラグインとして修飾します。  
-  
- 互換性のあるクラスがインスタンス化し、<xref:System.Activator.CreateInstance%2A?displayProperty=fullName>を受け入れ、メソッド、<xref:System.Type>を引数として、新しいインスタンスにポインターを返します。 それぞれの新しいインスタンスは、フォームにアタッチされ、表示されます。  
-  
- なお、<xref:System.Reflection.Assembly.Load%2A>メソッドは、ファイル拡張子を含むアセンブリ名を受け付けません。 アプリケーションでは、メインの関数は、次のコード例は、いずれの場合も動作するように指定された拡張子をトリムします。  
-  
-### <a name="example"></a>例  
- 次のコードをプラグインを受け付けるアプリケーションを定義します。アセンブリ名は、最初の引数として指定する必要があります。 このアセンブリは、少なくとも 1 つのパブリックを含める必要があります<xref:System.Windows.Forms.Form>派生型。  
-  
+
+次のコード例では、単純な「プラグイン」アーキテクチャを実装するためにリフレクションを使用を示します。 最初のリストは、アプリケーションと、2 番目のプラグインです。 アプリケーションは、コマンドライン引数として指定されたプラグイン DLL 内のフォーム ベースのクラスを使用して自身を設定する複数のドキュメント形式です。
+
+使用して、指定されたアセンブリの読み込みを試行、<xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>メソッド。 成功すると、アセンブリ内で型が列挙を使用して、<xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=fullName>メソッド。 互換性を使用して各型をチェックしてから、<xref:System.Type.IsAssignableFrom%2A?displayProperty=fullName>メソッド。 この例で指定されたアセンブリ内で見つかったクラスをから派生する必要があります、<xref:System.Windows.Forms.Form>クラスをプラグインとして修飾します。
+
+互換性のあるクラスがインスタンス化し、<xref:System.Activator.CreateInstance%2A?displayProperty=fullName>を受け入れ、メソッド、<xref:System.Type>を引数として、新しいインスタンスにポインターを返します。 それぞれの新しいインスタンスは、フォームにアタッチされ、表示されます。
+
+なお、<xref:System.Reflection.Assembly.Load%2A>メソッドは、ファイル拡張子を含むアセンブリ名を受け付けません。 アプリケーションでは、メインの関数は、次のコード例は、いずれの場合も動作するように指定された拡張子をトリムします。
+
+### <a name="example"></a>例
+
+次のコードをプラグインを受け付けるアプリケーションを定義します。アセンブリ名は、最初の引数として指定する必要があります。 このアセンブリは、少なくとも 1 つのパブリックを含める必要があります<xref:System.Windows.Forms.Form>派生型。
+
 ```cpp
-// plugin_application.cpp  
-// compile with: /clr /c  
-#using <system.dll>  
-#using <system.drawing.dll>  
-#using <system.windows.forms.dll>  
-  
-using namespace System;  
-using namespace System::Windows::Forms;  
-using namespace System::Reflection;  
-  
-ref class PluggableForm : public Form  {  
-public:  
-   PluggableForm() {}  
-   PluggableForm(Assembly^ plugAssembly) {  
-      Text = "plug-in example";  
-      Size = Drawing::Size(400, 400);  
-      IsMdiContainer = true;  
-  
-      array<Type^>^ types = plugAssembly->GetTypes( );  
-      Type^ formType = Form::typeid;  
-  
-      for (int i = 0 ; i < types->Length ; i++) {  
-         if (formType->IsAssignableFrom(types[i])) {  
-            // Create an instance given the type description.  
-            Form^ f = dynamic_cast<Form^> (Activator::CreateInstance(types[i]));  
-            if (f) {  
-               f->Text = types[i]->ToString();  
-               f->MdiParent = this;  
-               f->Show();  
-            }  
-         }  
-      }  
-   }  
-};  
-  
-int main() {  
-   Assembly^ a = Assembly::LoadFrom("plugin_application.exe");  
-   Application::Run(gcnew PluggableForm(a));  
-}  
-```  
-  
-### <a name="example"></a>例  
- 次のコードから派生した 3 つのクラスを定義する<xref:System.Windows.Forms.Form>します。 結果として得られるアセンブリ名の名前が前の一覧で、実行可能ファイルに渡されると、これら 3 つのクラスの各が検出され、コンパイル時に、ホスト アプリケーションに認識されているすべてがされていないことにもかかわらず、インスタンス化します。  
-  
-```cpp  
-// plugin_assembly.cpp  
-// compile with: /clr /LD  
-#using <system.dll>  
-#using <system.drawing.dll>  
-#using <system.windows.forms.dll>  
-  
-using namespace System;  
-using namespace System::Windows::Forms;  
-using namespace System::Reflection;  
-using namespace System::Drawing;  
-  
-public ref class BlueForm : public Form {  
-public:  
-   BlueForm() {  
-      BackColor = Color::Blue;  
-   }  
-};  
-  
-public ref class CircleForm : public Form {  
-protected:  
-   virtual void OnPaint(PaintEventArgs^ args) override {  
-      args->Graphics->FillEllipse(Brushes::Green, ClientRectangle);  
-   }  
-};  
-  
-public ref class StarburstForm : public Form {  
-public:  
-   StarburstForm(){  
-      BackColor = Color::Black;  
-   }  
-protected:  
-   virtual void OnPaint(PaintEventArgs^ args) override {  
-      Pen^ p = gcnew Pen(Color::Red, 2);  
-      Random^ r = gcnew Random( );  
-      Int32 w = ClientSize.Width;  
-      Int32 h = ClientSize.Height;  
-      for (int i=0; i<100; i++) {  
-         float x1 = w / 2;  
-         float y1 = h / 2;  
-         float x2 = r->Next(w);  
-         float y2 = r->Next(h);  
-         args->Graphics->DrawLine(p, x1, y1, x2, y2);  
-      }  
-   }  
-};  
-```  
+// plugin_application.cpp
+// compile with: /clr /c
+#using <system.dll>
+#using <system.drawing.dll>
+#using <system.windows.forms.dll>
+
+using namespace System;
+using namespace System::Windows::Forms;
+using namespace System::Reflection;
+
+ref class PluggableForm : public Form  {
+public:
+   PluggableForm() {}
+   PluggableForm(Assembly^ plugAssembly) {
+      Text = "plug-in example";
+      Size = Drawing::Size(400, 400);
+      IsMdiContainer = true;
+
+      array<Type^>^ types = plugAssembly->GetTypes( );
+      Type^ formType = Form::typeid;
+
+      for (int i = 0 ; i < types->Length ; i++) {
+         if (formType->IsAssignableFrom(types[i])) {
+            // Create an instance given the type description.
+            Form^ f = dynamic_cast<Form^> (Activator::CreateInstance(types[i]));
+            if (f) {
+               f->Text = types[i]->ToString();
+               f->MdiParent = this;
+               f->Show();
+            }
+         }
+      }
+   }
+};
+
+int main() {
+   Assembly^ a = Assembly::LoadFrom("plugin_application.exe");
+   Application::Run(gcnew PluggableForm(a));
+}
+```
+
+### <a name="example"></a>例
+
+次のコードから派生した 3 つのクラスを定義する<xref:System.Windows.Forms.Form>します。 結果として得られるアセンブリ名の名前が前の一覧で、実行可能ファイルに渡されると、これら 3 つのクラスの各が検出され、コンパイル時に、ホスト アプリケーションに認識されているすべてがされていないことにもかかわらず、インスタンス化します。
+
+```cpp
+// plugin_assembly.cpp
+// compile with: /clr /LD
+#using <system.dll>
+#using <system.drawing.dll>
+#using <system.windows.forms.dll>
+
+using namespace System;
+using namespace System::Windows::Forms;
+using namespace System::Reflection;
+using namespace System::Drawing;
+
+public ref class BlueForm : public Form {
+public:
+   BlueForm() {
+      BackColor = Color::Blue;
+   }
+};
+
+public ref class CircleForm : public Form {
+protected:
+   virtual void OnPaint(PaintEventArgs^ args) override {
+      args->Graphics->FillEllipse(Brushes::Green, ClientRectangle);
+   }
+};
+
+public ref class StarburstForm : public Form {
+public:
+   StarburstForm(){
+      BackColor = Color::Black;
+   }
+protected:
+   virtual void OnPaint(PaintEventArgs^ args) override {
+      Pen^ p = gcnew Pen(Color::Red, 2);
+      Random^ r = gcnew Random( );
+      Int32 w = ClientSize.Width;
+      Int32 h = ClientSize.Height;
+      for (int i=0; i<100; i++) {
+         float x1 = w / 2;
+         float y1 = h / 2;
+         float x2 = r->Next(w);
+         float y2 = r->Next(h);
+         args->Graphics->DrawLine(p, x1, y1, x2, y2);
+      }
+   }
+};
+```
 
 ## <a name="enumerate"></a> 方法: リフレクションを使用してアセンブリ内のデータ型を列挙
-次の例では、パブリック型とメンバーを使用しての列挙体<xref:System.Reflection>します。  
-  
- 次のコードは、ローカル ディレクトリまたは GAC にアセンブリの名前を指定、アセンブリを開くし、説明の取得を試行します。 成功した場合は、種類ごとに、そのパブリック メンバーが表示されます。  
-  
- なお<xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>ファイル拡張子が使用されていないことが必要です。 そのため、コマンドライン引数として"mscorlib.dll"を使用して、失敗しますだけ"mscorlib"を使用すると、.NET Framework 型の表示中。 アセンブリ名が指定されていない場合、コードが検出し、現在のアセンブリ内の型 (このコードから生成された EXE) を報告します。  
-  
-### <a name="example"></a>例  
-  
-```cpp  
-// self_reflection.cpp  
-// compile with: /clr  
-using namespace System;  
-using namespace System::Reflection;  
-using namespace System::Collections;  
-  
-public ref class ExampleType {  
-public:  
-   ExampleType() {}  
-   void Func() {}  
-};  
-  
-int main() {  
-   String^ delimStr = " ";  
-   array<Char>^ delimiter = delimStr->ToCharArray( );  
-   array<String^>^ args = Environment::CommandLine->Split( delimiter );  
-  
-// replace "self_reflection.exe" with an assembly from either the local  
-// directory or the GAC  
-   Assembly^ a = Assembly::LoadFrom("self_reflection.exe");  
-   Console::WriteLine(a);  
-  
-   int count = 0;  
-   array<Type^>^ types = a->GetTypes();  
-   IEnumerator^ typeIter = types->GetEnumerator();  
-  
-   while ( typeIter->MoveNext() ) {  
-      Type^ t = dynamic_cast<Type^>(typeIter->Current);  
-      Console::WriteLine("   {0}", t->ToString());  
-  
-      array<MemberInfo^>^ members = t->GetMembers();  
-      IEnumerator^ memberIter = members->GetEnumerator();  
-      while ( memberIter->MoveNext() ) {  
-         MemberInfo^ mi = dynamic_cast<MemberInfo^>(memberIter->Current);  
-         Console::Write("      {0}", mi->ToString( ) );  
-         if (mi->MemberType == MemberTypes::Constructor)  
-            Console::Write("   (constructor)");  
-  
-         Console::WriteLine();  
-      }  
-      count++;  
-   }  
-   Console::WriteLine("{0} types found", count);  
-}  
-```  
+
+次の例では、パブリック型とメンバーを使用しての列挙体<xref:System.Reflection>します。
+
+次のコードは、ローカル ディレクトリまたは GAC にアセンブリの名前を指定、アセンブリを開くし、説明の取得を試行します。 成功した場合は、種類ごとに、そのパブリック メンバーが表示されます。
+
+なお<xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>ファイル拡張子が使用されていないことが必要です。 そのため、コマンドライン引数として"mscorlib.dll"を使用して、失敗しますだけ"mscorlib"を使用すると、.NET Framework 型の表示中。 アセンブリ名が指定されていない場合、コードが検出し、現在のアセンブリ内の型 (このコードから生成された EXE) を報告します。
+
+### <a name="example"></a>例
+
+```cpp
+// self_reflection.cpp
+// compile with: /clr
+using namespace System;
+using namespace System::Reflection;
+using namespace System::Collections;
+
+public ref class ExampleType {
+public:
+   ExampleType() {}
+   void Func() {}
+};
+
+int main() {
+   String^ delimStr = " ";
+   array<Char>^ delimiter = delimStr->ToCharArray( );
+   array<String^>^ args = Environment::CommandLine->Split( delimiter );
+
+// replace "self_reflection.exe" with an assembly from either the local
+// directory or the GAC
+   Assembly^ a = Assembly::LoadFrom("self_reflection.exe");
+   Console::WriteLine(a);
+
+   int count = 0;
+   array<Type^>^ types = a->GetTypes();
+   IEnumerator^ typeIter = types->GetEnumerator();
+
+   while ( typeIter->MoveNext() ) {
+      Type^ t = dynamic_cast<Type^>(typeIter->Current);
+      Console::WriteLine("   {0}", t->ToString());
+
+      array<MemberInfo^>^ members = t->GetMembers();
+      IEnumerator^ memberIter = members->GetEnumerator();
+      while ( memberIter->MoveNext() ) {
+         MemberInfo^ mi = dynamic_cast<MemberInfo^>(memberIter->Current);
+         Console::Write("      {0}", mi->ToString( ) );
+         if (mi->MemberType == MemberTypes::Constructor)
+            Console::Write("   (constructor)");
+
+         Console::WriteLine();
+      }
+      count++;
+   }
+   Console::WriteLine("{0} types found", count);
+}
+```
 
 ## <a name="see-also"></a>関連項目
 

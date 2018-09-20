@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 90367a21d76fe7fe735d1174bc9b9d40900dec78
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 12d4fdd415ab37c9af0b0b34651e7cd2f00cf31b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600831"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405282"
 ---
 # <a name="creatormapfactorycreator-data-member"></a>CreatorMap::factoryCreator データ メンバー
 
@@ -35,21 +35,21 @@ HRESULT (*factoryCreator)(
    unsigned int* currentflags,
    const CreatorMap* entry,
    REFIID iidClassFactory,
- IUnknown** factory);
+IUnknown** factory);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*currentflags*  
+*currentflags*<br/>
 1 つ、 [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列挙子。
 
-*entry*  
+*entry*<br/>
 CreatorMap は。
 
-*iidClassFactory*  
+*iidClassFactory*<br/>
 クラス ファクトリのインターフェイス ID。
 
-*ファクトリ*  
+*ファクトリ*<br/>
 操作が完了時は、クラス ファクトリのアドレス。
 
 ## <a name="return-value"></a>戻り値
@@ -68,5 +68,5 @@ CreatorMap は。
 
 ## <a name="see-also"></a>関連項目
 
-[CreatorMap 構造体](../windows/creatormap-structure.md)  
+[CreatorMap 構造体](../windows/creatormap-structure.md)<br/>
 [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

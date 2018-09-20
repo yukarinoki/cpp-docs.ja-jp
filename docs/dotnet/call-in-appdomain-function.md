@@ -17,112 +17,117 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 707ee9476ce26de9325337f6f2130e41d19faa3a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e56b4dfe239d25cb039e35e09ddb895968723710
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46105246"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436252"
 ---
 # <a name="callinappdomain-function"></a>call_in_appdomain 関数
-指定したアプリケーション ドメインでは、関数を実行します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-template <typename ArgType1, ...typename ArgTypeN>  
-void call_in_appdomain(  
-   DWORD appdomainId,  
-   void (*voidFunc)(ArgType1, ...ArgTypeN) [ ,  
-   ArgType1 arg1,  
-   ...  
-   ArgTypeN argN ]  
-);  
-template <typename RetType, typename ArgType1, ...typename ArgTypeN>  
-RetType call_in_appdomain(  
-   DWORD appdomainId,  
-   RetType (*nonvoidFunc)(ArgType1, ...ArgTypeN) [ ,  
-   ArgType1 arg1,  
-   ...  
-   ArgTypeN argN ]  
-);  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
+
+指定したアプリケーション ドメインでは、関数を実行します。
+
+## <a name="syntax"></a>構文
+
+```
+template <typename ArgType1, ...typename ArgTypeN>
+void call_in_appdomain(
+   DWORD appdomainId,
+   void (*voidFunc)(ArgType1, ...ArgTypeN) [ ,
+   ArgType1 arg1,
+   ...
+   ArgTypeN argN ]
+);
+template <typename RetType, typename ArgType1, ...typename ArgTypeN>
+RetType call_in_appdomain(
+   DWORD appdomainId,
+   RetType (*nonvoidFunc)(ArgType1, ...ArgTypeN) [ ,
+   ArgType1 arg1,
+   ...
+   ArgTypeN argN ]
+);
+```
+
+#### <a name="parameters"></a>パラメーター
+
 *appdomainId*<br/>
-関数を呼び出すアプリケーション ドメイン。  
-  
+関数を呼び出すアプリケーション ドメイン。
+
 *voidFunc*<br/>
-ポインターを`void`N パラメーターを受け取る関数 (0 < = N < = 15)。  
-  
+ポインターを`void`N パラメーターを受け取る関数 (0 < = N < = 15)。
+
 *nonvoidFunc*<br/>
-以外へのポインター`void` N パラメーターを受け取る関数 (0 < = N < = 15)。  
-  
+以外へのポインター`void` N パラメーターを受け取る関数 (0 < = N < = 15)。
+
 *arg1... argN*<br/>
-0 ~ 15 個のパラメーターに渡される`voidFunc`または`nonvoidFunc`他の appdomain にします。  
-  
-## <a name="return-value"></a>戻り値  
- 実行結果`voidFunc`または`nonvoidFunc`で指定されたアプリケーション ドメイン。  
-  
-## <a name="remarks"></a>Remarks  
- 関数の引数に渡されます`call_in_appdomain`CLR 型をすることはできません。  
-  
-## <a name="example"></a>例  
-  
-```  
-// msl_call_in_appdomain.cpp  
-// compile with: /clr  
-  
-// Defines two functions: one takes a parameter and returns nothing,  
-// the other takes no parameters and returns an int.  Calls both  
-// functions in the default appdomain and in a newly-created  
-// application domain using call_in_appdomain.  
-  
-#include <msclr\appdomain.h>  
-  
-using namespace System;  
-using namespace msclr;  
-  
-void PrintCurrentDomainName( char* format )  
-{  
-   String^ s = gcnew String(format);  
-   Console::WriteLine( s, AppDomain::CurrentDomain->FriendlyName );  
-}  
-  
-int GetDomainId()  
-{  
-   return AppDomain::CurrentDomain->Id;  
-}  
-  
-int main()  
-{  
-   AppDomain^ appDomain1 = AppDomain::CreateDomain( "First Domain" );  
-  
-   call_in_appdomain( AppDomain::CurrentDomain->Id,  
-                   &PrintCurrentDomainName,  
-                   (char*)"default appdomain: {0}" );  
-   call_in_appdomain( appDomain1->Id,  
-                   &PrintCurrentDomainName,  
-                   (char*)"in appDomain1: {0}" );  
-  
-   int id;  
-   id = call_in_appdomain( AppDomain::CurrentDomain->Id, &GetDomainId );  
-   Console::WriteLine( "default appdomain id = {0}", id );  
-   id = call_in_appdomain( appDomain1->Id, &GetDomainId );  
-   Console::WriteLine( "appDomain1 id = {0}", id );  
-}  
-```  
-  
-## <a name="output"></a>出力  
-  
-```  
-default appdomain: msl_call_in_appdomain.exe  
-in appDomain1: First Domain  
-default appdomain id = 1  
-appDomain1 id = 2  
-```  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー ファイル** \<msclr\appdomain.h >  
-  
- **Namespace** msclr
+0 ~ 15 個のパラメーターに渡される`voidFunc`または`nonvoidFunc`他の appdomain にします。
+
+## <a name="return-value"></a>戻り値
+
+実行結果`voidFunc`または`nonvoidFunc`で指定されたアプリケーション ドメイン。
+
+## <a name="remarks"></a>Remarks
+
+関数の引数に渡されます`call_in_appdomain`CLR 型をすることはできません。
+
+## <a name="example"></a>例
+
+```
+// msl_call_in_appdomain.cpp
+// compile with: /clr
+
+// Defines two functions: one takes a parameter and returns nothing,
+// the other takes no parameters and returns an int.  Calls both
+// functions in the default appdomain and in a newly-created
+// application domain using call_in_appdomain.
+
+#include <msclr\appdomain.h>
+
+using namespace System;
+using namespace msclr;
+
+void PrintCurrentDomainName( char* format )
+{
+   String^ s = gcnew String(format);
+   Console::WriteLine( s, AppDomain::CurrentDomain->FriendlyName );
+}
+
+int GetDomainId()
+{
+   return AppDomain::CurrentDomain->Id;
+}
+
+int main()
+{
+   AppDomain^ appDomain1 = AppDomain::CreateDomain( "First Domain" );
+
+   call_in_appdomain( AppDomain::CurrentDomain->Id,
+                   &PrintCurrentDomainName,
+                   (char*)"default appdomain: {0}" );
+   call_in_appdomain( appDomain1->Id,
+                   &PrintCurrentDomainName,
+                   (char*)"in appDomain1: {0}" );
+
+   int id;
+   id = call_in_appdomain( AppDomain::CurrentDomain->Id, &GetDomainId );
+   Console::WriteLine( "default appdomain id = {0}", id );
+   id = call_in_appdomain( appDomain1->Id, &GetDomainId );
+   Console::WriteLine( "appDomain1 id = {0}", id );
+}
+```
+
+## <a name="output"></a>出力
+
+```
+default appdomain: msl_call_in_appdomain.exe
+in appDomain1: First Domain
+default appdomain id = 1
+appDomain1 id = 2
+```
+
+## <a name="requirements"></a>要件
+
+**ヘッダー ファイル** \<msclr\appdomain.h >
+
+**Namespace** msclr

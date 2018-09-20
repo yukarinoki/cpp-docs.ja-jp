@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 715ed5bf12c424c49e96012c5391dfe334e44db4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3e2975e200a65ccaf57dab3170bb1854ccb4e53b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705888"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387453"
 ---
 # <a name="custom-color-selector-dialog-box-c-image-editor-for-icons"></a>カスタム カラー セレクター ダイアログ ボックス (C++) (アイコン用イメージ エディター)
 
@@ -71,6 +71,6 @@ ms.locfileid: "45705888"
 
 ## <a name="see-also"></a>関連項目
 
-[[イメージ] メニュー](../windows/image-menu-image-editor-for-icons.md)  
-[カスタマイズまたは色の変更](../windows/customizing-or-changing-colors-image-editor-for-icons.md)  
+[[イメージ] メニュー](../windows/image-menu-image-editor-for-icons.md)<br/>
+[カスタマイズまたは色の変更](../windows/customizing-or-changing-colors-image-editor-for-icons.md)<br/>
 [[色] ウィンドウ](../windows/colors-window-image-editor-for-icons.md)

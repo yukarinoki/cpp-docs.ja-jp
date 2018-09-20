@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f0680ac7b926e3956efdadfa9342cfc5cd5f1239
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ca5e8cfc2a08b01d7917d540c61e04837169a457
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314613"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438601"
 ---
 # <a name="testing-a-dialog-box-c"></a>ダイアログ ボックス (C++) のテスト
 
@@ -55,6 +55,6 @@ Win32
 
 ## <a name="see-also"></a>関連項目
 
-[ダイアログ ボックスのコントロール](../windows/controls-in-dialog-boxes.md)  
-[ダイアログ エディター](../windows/dialog-editor.md)  
+[ダイアログ ボックスのコントロール](../windows/controls-in-dialog-boxes.md)<br/>
+[ダイアログ エディター](../windows/dialog-editor.md)<br/>
 [[ダイアログ エディター] ツール バーの表示と非表示](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)

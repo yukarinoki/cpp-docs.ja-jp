@@ -1,5 +1,5 @@
 ---
-title: CD2DGeometrySink クラス |Microsoft ドキュメント
+title: CD2DGeometrySink クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -48,264 +48,302 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8c96e83d15110cb85e23cd7a8643d615cf7c0d8
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: b97bccbf9615c90292976839f841e4b2ffe6af9d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952373"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383812"
 ---
 # <a name="cd2dgeometrysink-class"></a>CD2DGeometrySink クラス
-ID2D1GeometrySink のラッパーです。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-class CD2DGeometrySink;  
-```  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="public-constructors"></a>パブリック コンストラクター  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[CD2DGeometrySink::CD2DGeometrySink](#cd2dgeometrysink)|CD2DPathGeometry オブジェクトから CD2DGeometrySink オブジェクトを構築します。|  
-|[CD2DGeometrySink:: ~ CD2DGeometrySink](#_dtorcd2dgeometrysink)|デストラクターです。 D2D geometry シンク オブジェクトが破棄されるときに呼び出されます。|  
-  
-### <a name="public-methods"></a>パブリック メソッド  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[CD2DGeometrySink::AddArc](#addarc)|1 つの円弧をパス ジオメトリに追加します。|  
-|[CD2DGeometrySink::AddBezier](#addbezier)|現在の点と指定された終点の間に 3 次ベジエ曲線を作成します。|  
-|[CD2DGeometrySink::AddBeziers](#addbeziers)|3 次ベジエ曲線のシーケンスを作成し、geometry シンクにそれらを追加します。|  
-|[CD2DGeometrySink::AddLine](#addline)|現在のポイントと指定したエンドポイントの間の直線セグメントを作成し、geometry シンクに追加します。|  
-|[CD2DGeometrySink::AddLines](#addlines)|指定されたポイントを使用して線のシーケンスを作成し、geometry シンクにそれらを追加します。|  
-|[CD2DGeometrySink::AddQuadraticBezier](#addquadraticbezier)|現在の点と指定された終点の間に 2 次ベジエ曲線を作成します。|  
-|[CD2DGeometrySink::AddQuadraticBeziers](#addquadraticbeziers)|配列 1 回の呼び出しで 2 次ベジエ セグメントのシーケンスに追加します。|  
-|[CD2DGeometrySink::BeginFigure](#beginfigure)|指定した位置に新しい図形を開始します。|  
-|[CD2DGeometrySink::Close](#close)|Geometry シンクを閉じます|  
-|[CD2DGeometrySink::EndFigure](#endfigure)|現在の図を終了します。必要に応じて、ウィンドウが閉じます。|  
-|[CD2DGeometrySink::Get](#get)|返します ID2D1GeometrySink インターフェイス|  
-|[CD2DGeometrySink::IsValid](#isvalid)|Geometry シンクの有効性をチェックします。|  
-|[CD2DGeometrySink::SetFillMode](#setfillmode)|この geometry シンクによって記述された geometry の内部ポイントがあると外であるポイントを決定するために使用するメソッドを指定します。|  
-|[CD2DGeometrySink::SetSegmentFlags](#setsegmentflags)|Geometry シンクに追加された新しいセグメントに適用する線と結合オプションを指定します。|  
-  
-### <a name="public-operators"></a>パブリック演算子  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[CD2DGeometrySink::operator ID2D1GeometrySink *](#operator_id2d1geometrysink_star)|返します ID2D1GeometrySink インターフェイス|  
-  
-### <a name="protected-data-members"></a>プロテクト データ メンバー  
-  
-|name|説明|  
-|----------|-----------------|  
-|[CD2DGeometrySink::m_pSink](#m_psink)|ID2D1GeometrySink へのポインター。|  
-  
-## <a name="inheritance-hierarchy"></a>継承階層  
- `CD2DGeometrySink`  
-  
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** afxrendertarget.h  
-  
-##  <a name="_dtorcd2dgeometrysink"></a>  CD2DGeometrySink:: ~ CD2DGeometrySink  
- デストラクターです。 D2D geometry シンク オブジェクトが破棄されるときに呼び出されます。  
-  
-```  
+
+ID2D1GeometrySink のラッパーです。
+
+## <a name="syntax"></a>構文
+
+```
+class CD2DGeometrySink;
+```
+
+## <a name="members"></a>メンバー
+
+### <a name="public-constructors"></a>パブリック コンストラクター
+
+|名前|説明|
+|----------|-----------------|
+|[CD2DGeometrySink::CD2DGeometrySink](#cd2dgeometrysink)|CD2DPathGeometry オブジェクトから CD2DGeometrySink オブジェクトを構築します。|
+|[CD2DGeometrySink:: ~ CD2DGeometrySink](#_dtorcd2dgeometrysink)|デストラクターです。 D2D geometry シンク オブジェクトが破棄されるときに呼び出されます。|
+
+### <a name="public-methods"></a>パブリック メソッド
+
+|名前|説明|
+|----------|-----------------|
+|[CD2DGeometrySink::AddArc](#addarc)|パス ジオメトリに 1 つの円弧を追加します。|
+|[CD2DGeometrySink::AddBezier](#addbezier)|現在の点と指定された終点の間に 3 次ベジエ曲線を作成します。|
+|[CD2DGeometrySink::AddBeziers](#addbeziers)|3 次ベジエ曲線のシーケンスを作成し、geometry シンクに追加します。|
+|[CD2DGeometrySink::AddLine](#addline)|現在の点と指定された終点の間の直線セグメントを作成し、geometry シンクに追加します。|
+|[CD2DGeometrySink::AddLines](#addlines)|指定されたポイントを使用して行のシーケンスを作成し、geometry シンクに追加します。|
+|[CD2DGeometrySink::AddQuadraticBezier](#addquadraticbezier)|現在の点と指定された終点の間に 2 次ベジエ曲線を作成します。|
+|[CD2DGeometrySink::AddQuadraticBeziers](#addquadraticbeziers)|1 回の呼び出しでは配列として、2 次ベジエ セグメントのシーケンスを追加します。|
+|[CD2DGeometrySink::BeginFigure](#beginfigure)|指定したポイントに新しい図形を開始します。|
+|[CD2DGeometrySink::Close](#close)|ジオメトリのシンクを閉じます|
+|[CD2DGeometrySink::EndFigure](#endfigure)|現在の図形を終了します。必要に応じて、これを閉じます。|
+|[CD2DGeometrySink::Get](#get)|返します ID2D1GeometrySink インターフェイス|
+|[CD2DGeometrySink::IsValid](#isvalid)|ジオメトリのシンクの有効性を確認します。|
+|[CD2DGeometrySink::SetFillMode](#setfillmode)|この geometry シンクによって説明されている geometry 内のポイントは、の外側にあるポイントを判断するために使用するメソッドを指定します。|
+|[CD2DGeometrySink::SetSegmentFlags](#setsegmentflags)|ジオメトリのシンクに追加された新しいセグメントに適用する線と結合オプションを指定します。|
+
+### <a name="public-operators"></a>パブリック演算子
+
+|名前|説明|
+|----------|-----------------|
+|[CD2DGeometrySink::operator ID2D1GeometrySink *](#operator_id2d1geometrysink_star)|返します ID2D1GeometrySink インターフェイス|
+
+### <a name="protected-data-members"></a>プロテクト データ メンバー
+
+|名前|説明|
+|----------|-----------------|
+|[CD2DGeometrySink::m_pSink](#m_psink)|ID2D1GeometrySink へのポインター。|
+
+## <a name="inheritance-hierarchy"></a>継承階層
+
+`CD2DGeometrySink`
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** afxrendertarget.h
+
+##  <a name="_dtorcd2dgeometrysink"></a>  CD2DGeometrySink:: ~ CD2DGeometrySink
+
+デストラクターです。 D2D geometry シンク オブジェクトが破棄されるときに呼び出されます。
+
+```
 virtual ~CD2DGeometrySink();
-```  
-  
-##  <a name="addarc"></a>  CD2DGeometrySink::AddArc  
- 1 つの円弧をパス ジオメトリに追加します。  
-  
-```  
+```
+
+##  <a name="addarc"></a>  CD2DGeometrySink::AddArc
+
+パス ジオメトリに 1 つの円弧を追加します。
+
+```
 void AddArc(const D2D1_ARC_SEGMENT& arc);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *円弧*  
- 円弧のセグメントの図に追加するには  
-  
-##  <a name="addbezier"></a>  CD2DGeometrySink::AddBezier  
- 現在の点と指定された終点の間に 3 次ベジエ曲線を作成します。  
-  
-```  
+```
+
+### <a name="parameters"></a>パラメーター
+
+*円弧*<br/>
+円弧のセグメントの図に追加するには
+
+##  <a name="addbezier"></a>  CD2DGeometrySink::AddBezier
+
+現在の点と指定された終点の間に 3 次ベジエ曲線を作成します。
+
+```
 void AddBezier(const D2D1_BEZIER_SEGMENT& bezier);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *ベジエ*  
- 構造体の制御点と追加をベジエ曲線の終了点について説明します。  
-  
-##  <a name="addbeziers"></a>  CD2DGeometrySink::AddBeziers  
- 3 次ベジエ曲線のシーケンスを作成し、geometry シンクにそれらを追加します。  
-  
-```  
+```
+
+### <a name="parameters"></a>パラメーター
+
+*ベジエ*<br/>
+制御点と追加するベジエ曲線の終点を表す構造体。
+
+##  <a name="addbeziers"></a>  CD2DGeometrySink::AddBeziers
+
+3 次ベジエ曲線のシーケンスを作成し、geometry シンクに追加します。
+
+```
 void AddBeziers(
-    const CArray<D2D1_BEZIER_SEGMENT,  
+    const CArray<D2D1_BEZIER_SEGMENT,
     D2D1_BEZIER_SEGMENT>& beziers);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *ベジエ曲線*  
- 作成するベジエ曲線を記述するベジエ セグメントの配列。 配列内の最初のベジエ線分の終点のジオメトリ シンクの現在のポイント (描画の最後のセグメントまたは BeginFigure で指定された場所の終了ポイント) から、曲線が描画されます。 配列に追加のベジエ セグメントが含まれている場合、後続の各ベジエ セグメントは開始ポイントとして前のベジエ線分の終点を使用します。  
-  
-##  <a name="addline"></a>  CD2DGeometrySink::AddLine  
- 現在のポイントと指定したエンドポイントの間の直線セグメントを作成し、geometry シンクに追加します。  
-  
-```  
+```
+
+### <a name="parameters"></a>パラメーター
+
+*ベジエ曲線*<br/>
+作成するベジエ曲線を記述するベジエ セグメントの配列。 曲線は、geometry シンクの現在のポイント (最後のセグメントを描画または BeginFigure で指定された位置の終了ポイント) から、配列の最初のベジエ セグメントの終点に描画されます。 配列に追加のベジエ セグメントが含まれている場合、後続の各ベジエ セグメントはその開始点として前のベジエ セグメントの終点を使用します。
+
+##  <a name="addline"></a>  CD2DGeometrySink::AddLine
+
+現在の点と指定された終点の間の直線セグメントを作成し、geometry シンクに追加します。
+
+```
 void AddLine(CD2DPointF point);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *ポイント*  
- 描画する線の終点。  
-  
-##  <a name="addlines"></a>  CD2DGeometrySink::AddLines  
- 指定されたポイントを使用して線のシーケンスを作成し、geometry シンクにそれらを追加します。  
-  
-```  
+```
+
+### <a name="parameters"></a>パラメーター
+
+*ポイント*<br/>
+描画する線の終点。
+
+##  <a name="addlines"></a>  CD2DGeometrySink::AddLines
+
+指定されたポイントを使用して行のシーケンスを作成し、geometry シンクに追加します。
+
+```
 void AddLines(
-    const CArray<CD2DPointF,  
+    const CArray<CD2DPointF,
     CD2DPointF>& points);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *ポイント*  
- 描画する行を 1 つまたは複数の点の配列。 配列の最初のポイントのジオメトリ シンクの現在のポイント (描画の最後のセグメントまたは BeginFigure で指定された場所の終了ポイント) から線が描画されます。 配列に追加の点が含まれている場合、3 番目のポイントなどの 2 番目の点から、配列の 2 番目の点に行は最初の点から描画されます。 描画する線の終点のシーケンスの配列。  
-  
-##  <a name="addquadraticbezier"></a>  CD2DGeometrySink::AddQuadraticBezier  
- 現在の点と指定された終点の間に 2 次ベジエ曲線を作成します。  
-  
-```  
+```
+
+### <a name="parameters"></a>パラメーター
+
+*ポイント*<br/>
+描画するために行を 1 つまたは複数の点の配列。 行は、geometry シンクの現在のポイント (最後のセグメントを描画または BeginFigure で指定された位置の終了ポイント) から、配列の最初の点に描画されます。 配列に追加の点が含まれている場合と 3 番目のポイントでは、2 つ目の点から、配列の 2 番目の点に、行が最初の点から描画されます。 描画する線の終点のシーケンスの配列。
+
+##  <a name="addquadraticbezier"></a>  CD2DGeometrySink::AddQuadraticBezier
+
+現在の点と指定された終点の間に 2 次ベジエ曲線を作成します。
+
+```
 void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *ベジエ*  
- 構造体の制御点と追加の 2 次ベジエ曲線の終了点について説明します。  
-  
-##  <a name="addquadraticbeziers"></a>  CD2DGeometrySink::AddQuadraticBeziers  
- 配列 1 回の呼び出しで 2 次ベジエ セグメントのシーケンスに追加します。  
-  
-```  
+```
+
+### <a name="parameters"></a>パラメーター
+
+*ベジエ*<br/>
+制御点と追加の 2 次ベジエ曲線の終点を表す構造体。
+
+##  <a name="addquadraticbeziers"></a>  CD2DGeometrySink::AddQuadraticBeziers
+
+1 回の呼び出しでは配列として、2 次ベジエ セグメントのシーケンスを追加します。
+
+```
 void AddQuadraticBeziers(
-    const CArray<D2D1_QUADRATIC_BEZIER_SEGMENT,  
+    const CArray<D2D1_QUADRATIC_BEZIER_SEGMENT,
     D2D1_QUADRATIC_BEZIER_SEGMENT>& beziers);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *ベジエ曲線*  
- 一連の 2 次ベジエ セグメントの配列。  
-  
-##  <a name="beginfigure"></a>  CD2DGeometrySink::BeginFigure  
- 指定した位置に新しい図形を開始します。  
-  
-```  
+```
+
+### <a name="parameters"></a>パラメーター
+
+*ベジエ曲線*<br/>
+2 次ベジエ セグメントのシーケンスの配列。
+
+##  <a name="beginfigure"></a>  CD2DGeometrySink::BeginFigure
+
+指定したポイントに新しい図形を開始します。
+
+```
 void BeginFigure(
-    CD2DPointF startPoint,  
+    CD2DPointF startPoint,
     D2D1_FIGURE_BEGIN figureBegin);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *startPoint*  
- 新しい図を開始する位置。  
-  
- *figureBegin*  
- かどうか新しい図は、中空または塗りつぶされたにする必要があります。  
-  
-##  <a name="cd2dgeometrysink"></a>  CD2DGeometrySink::CD2DGeometrySink  
- CD2DPathGeometry オブジェクトから CD2DGeometrySink オブジェクトを構築します。  
-  
-```  
+```
+
+### <a name="parameters"></a>パラメーター
+
+*startPoint*<br/>
+新しい図形を開始するポイント。
+
+*figureBegin*<br/>
+かどうか白抜きまたは塗りつぶされた新しい図になります。
+
+##  <a name="cd2dgeometrysink"></a>  CD2DGeometrySink::CD2DGeometrySink
+
+CD2DPathGeometry オブジェクトから CD2DGeometrySink オブジェクトを構築します。
+
+```
 CD2DGeometrySink(CD2DPathGeometry& pathGeometry);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *pathGeometry*  
- 既存の CD2DPathGeometry オブジェクト。  
-  
-##  <a name="close"></a>  CD2DGeometrySink::Close  
- Geometry シンクを閉じます  
-  
-```  
+```
+
+### <a name="parameters"></a>パラメーター
+
+*pathGeometry*<br/>
+既存の CD2DPathGeometry オブジェクト。
+
+##  <a name="close"></a>  CD2DGeometrySink::Close
+
+ジオメトリのシンクを閉じます
+
+```
 BOOL Close();
-```  
-  
-### <a name="return-value"></a>戻り値  
- 成功した場合は 0 以外。それ以外の場合は FALSE。  
-  
-##  <a name="endfigure"></a>  CD2DGeometrySink::EndFigure  
- 現在の図を終了します。必要に応じて、ウィンドウが閉じます。  
-  
-```  
+```
+
+### <a name="return-value"></a>戻り値
+
+成功した場合、0 以外の場合それ以外の場合は FALSE です。
+
+##  <a name="endfigure"></a>  CD2DGeometrySink::EndFigure
+
+現在の図形を終了します。必要に応じて、これを閉じます。
+
+```
 void EndFigure(D2D1_FIGURE_END figureEnd);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *figureEnd*  
- 現在の図が閉じられたかどうかを示す値。 図が閉じている場合、現在のポイントと BeginFigure で指定された開始点の間で線を描画します。  
-  
-##  <a name="get"></a>  CD2DGeometrySink::Get  
- 返します ID2D1GeometrySink インターフェイス  
-  
-```  
+```
+
+### <a name="parameters"></a>パラメーター
+
+*figureEnd*<br/>
+現在の図形を閉じるかどうかを示す値。 図が閉じている場合、現在のポイントと BeginFigure で指定された開始点の間に行を描画します。
+
+##  <a name="get"></a>  CD2DGeometrySink::Get
+
+返します ID2D1GeometrySink インターフェイス
+
+```
 ID2D1GeometrySink* Get();
-```  
-  
-### <a name="return-value"></a>戻り値  
- ID2D1GeometrySink インターフェイスまたはオブジェクトがまだ初期化されていない場合は、NULL へのポインター。  
-  
-##  <a name="isvalid"></a>  CD2DGeometrySink::IsValid  
- Geometry シンクの有効性をチェックします。  
-  
-```  
-BOOL IsValid() const;  
-```  
-  
-### <a name="return-value"></a>戻り値  
- Geometry シンクが有効である場合は TRUE。それ以外の場合は FALSE。  
-  
-##  <a name="m_psink"></a>  CD2DGeometrySink::m_pSink  
- ID2D1GeometrySink へのポインター。  
-  
-```  
-ID2D1GeometrySink* m_pSink;  
-```  
-  
-##  <a name="operator_id2d1geometrysink_star"></a>  CD2DGeometrySink::operator ID2D1GeometrySink *  
- 返します ID2D1GeometrySink インターフェイス  
-  
-```  
+```
+
+### <a name="return-value"></a>戻り値
+
+ID2D1GeometrySink インターフェイスまたはオブジェクトはまだ初期化されていない場合は NULL へのポインター。
+
+##  <a name="isvalid"></a>  CD2DGeometrySink::IsValid
+
+ジオメトリのシンクの有効性を確認します。
+
+```
+BOOL IsValid() const;
+```
+
+### <a name="return-value"></a>戻り値
+
+Geometry シンクが有効な場合は TRUE。それ以外の場合は FALSE です。
+
+##  <a name="m_psink"></a>  CD2DGeometrySink::m_pSink
+
+ID2D1GeometrySink へのポインター。
+
+```
+ID2D1GeometrySink* m_pSink;
+```
+
+##  <a name="operator_id2d1geometrysink_star"></a>  CD2DGeometrySink::operator ID2D1GeometrySink *
+
+返します ID2D1GeometrySink インターフェイス
+
+```
 operator ID2D1GeometrySink*();
-```   
-  
-### <a name="return-value"></a>戻り値  
- ID2D1GeometrySink インターフェイスまたはオブジェクトがまだ初期化されていない場合は、NULL へのポインター。  
-  
-##  <a name="setfillmode"></a>  CD2DGeometrySink::SetFillMode  
- この geometry シンクによって記述された geometry の内部ポイントがあると外であるポイントを決定するために使用するメソッドを指定します。  
-  
-```  
+```
+
+### <a name="return-value"></a>戻り値
+
+ID2D1GeometrySink インターフェイスまたはオブジェクトはまだ初期化されていない場合は NULL へのポインター。
+
+##  <a name="setfillmode"></a>  CD2DGeometrySink::SetFillMode
+
+この geometry シンクによって説明されている geometry 内のポイントは、の外側にあるポイントを判断するために使用するメソッドを指定します。
+
+```
 void SetFillMode(D2D1_FILL_MODE fillMode);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *fillMode*  
- 特定の時点のジオメトリの一部であるかどうかを判断するために使用するメソッド。  
-  
-##  <a name="setsegmentflags"></a>  CD2DGeometrySink::SetSegmentFlags  
- Geometry シンクに追加された新しいセグメントに適用する線と結合オプションを指定します。  
-  
-```  
+```
+
+### <a name="parameters"></a>パラメーター
+
+*fillMode*<br/>
+指定された点がジオメトリの一部であるかどうかを判断するために使用するメソッド。
+
+##  <a name="setsegmentflags"></a>  CD2DGeometrySink::SetSegmentFlags
+
+ジオメトリのシンクに追加された新しいセグメントに適用する線と結合オプションを指定します。
+
+```
 void SetSegmentFlags(D2D1_PATH_SEGMENT vertexFlags);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *vertexFlags*  
- Geometry シンクに追加された新しいセグメントに適用する線と結合のオプションです。  
-  
-## <a name="see-also"></a>関連項目  
- [クラス](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="parameters"></a>パラメーター
+
+*vertexFlags*<br/>
+ジオメトリに追加された新しいセグメントに適用されるストロークと結合のオプションは、次のシンクします。
+
+## <a name="see-also"></a>関連項目
+
+[クラス](../../mfc/reference/mfc-classes.md)

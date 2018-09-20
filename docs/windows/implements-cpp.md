@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d21348d9c252fbcd3024ca6531671979d8834eb
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 138921cfb635125210e5f5bf9305c91243c4489c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605819"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387225"
 ---
 # <a name="implements-c"></a>implements (C++)
 
@@ -39,10 +39,10 @@ IDL コクラスのメンバーであるが強制されているディスパッ�
 
 ### <a name="parameters"></a>パラメーター
 
-*interfaces*  
+*interfaces*<br/>
 コンマ区切りの IDL コクラスのメンバーとなるインターフェイスの一覧。 1 つのインターフェイスを指定するための簡略化された方法が**実装 (** *interface_name* **)** します。
 
-*dispinterfaces*  
+*dispinterfaces*<br/>
 コンマ区切りの IDL コクラスのメンバーとなるディスパッチ インターフェイスの一覧。 1 つのディスパッチ インターフェイスを指定するための簡略化された方法が**実装 (dispinterface =** *場合* **)** します。
 
 ## <a name="remarks"></a>Remarks
@@ -56,7 +56,7 @@ IDL コクラスのメンバーであるが強制されているディスパッ�
 |||
 |-|-|
 |**対象**|**クラス**、**構造体**|
-|**反復可能**|[はい]|
+|**反復可能**|はい|
 |**必要な属性**|なし|
 |**無効な属性**|なし|
 
@@ -558,5 +558,5 @@ public:
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ属性](../windows/compiler-attributes.md)  
+[コンパイラ属性](../windows/compiler-attributes.md)<br/>
 [クラス属性](../windows/class-attributes.md)  

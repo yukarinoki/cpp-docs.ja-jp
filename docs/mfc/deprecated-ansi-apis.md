@@ -14,58 +14,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95eed7834e46f6a42a363e8a8f8134945beb54fc
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7e989b6f2193142de8feb4124e365285957ee804
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541126"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439868"
 ---
 # <a name="deprecated-ansi-apis"></a>非推奨の ANSI API
-Microsoft Foundation Class (MFC) ライブラリは、クラスと、Unicode 文字セットに基づくメソッドに向けた移行中です。 その結果、一部の MFC メソッドの ANSI バージョンの使用は推奨されていません。 今後のアプリケーションでこれらのメソッドの Unicode バージョンを使用します。  
-  
- Windows vista が出荷される Windows コモン コントロール バージョン 6.1 以降で、次の ANSI メソッドは非推奨します。  
-  
-## <a name="cbutton-class"></a>CButton クラス  
-  
-```  
+
+Microsoft Foundation Class (MFC) ライブラリは、クラスと、Unicode 文字セットに基づくメソッドに向けた移行中です。 その結果、一部の MFC メソッドの ANSI バージョンの使用は推奨されていません。 今後のアプリケーションでこれらのメソッドの Unicode バージョンを使用します。
+
+Windows vista が出荷される Windows コモン コントロール バージョン 6.1 以降で、次の ANSI メソッドは非推奨します。
+
+## <a name="cbutton-class"></a>CButton クラス
+
+```
 AFX_ANSI_DEPRECATED BOOL GetIdealSize(LPSIZE psize) const;
 
- 
+
 AFX_ANSI_DEPRECATED BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist) const;
 
- 
+
 AFX_ANSI_DEPRECATED BOOL GetTextMargin(LPRECT pmargin) const;
 
- 
+
 AFX_ANSI_DEPRECATED BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 
 AFX_ANSI_DEPRECATED BOOL SetTextMargin(LPRECT pmargin);
-```  
-  
-## <a name="ccomboboxex-class"></a>CComboBoxEx クラス  
-  
-```  
+```
+
+## <a name="ccomboboxex-class"></a>CComboBoxEx クラス
+
+```
 AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
-```  
-  
-## <a name="cedit-class"></a>CEdit クラス  
-  
-```  
+```
+
+## <a name="cedit-class"></a>CEdit クラス
+
+```
 AFX_ANSI_DEPRECATED BOOL GetCueBanner(LPWSTR lpszText,
     int cchText) const;
 
- 
+
 AFX_ANSI_DEPRECATED BOOL SetCueBanner(LPCWSTR lpszText,
     BOOL fDrawIfFocused = FALSE);
-```  
-  
-## <a name="clinkctrl-class"></a>CLinkCtrl クラス  
- クラス全体が非推奨とされます。  
-  
-## <a name="clistctrl-class"></a>CListCtrl クラス  
-  
-```  
+```
+
+## <a name="clinkctrl-class"></a>CLinkCtrl クラス
+
+クラス全体が非推奨とされます。
+
+## <a name="clistctrl-class"></a>CListCtrl クラス
+
+```
 AFX_ANSI_DEPRECATED void CancelEditLabel();
 
 AFX_ANSI_DEPRECATED int EnableGroupView(BOOL fEnable);
@@ -73,37 +75,37 @@ AFX_ANSI_DEPRECATED int EnableGroupView(BOOL fEnable);
 AFX_ANSI_DEPRECATED int GetGroupInfo(int iGroupId,
     PLVGROUP pgrp) const;
 
- 
+
 AFX_ANSI_DEPRECATED void GetGroupMetrics(PLVGROUPMETRICS pGroupMetrics) const;
 
- 
+
 AFX_ANSI_DEPRECATED BOOL GetInsertMark(LPLVINSERTMARK lvim) const;
 
- 
+
 AFX_ANSI_DEPRECATED COLORREF GetInsertMarkColor() const;
 
- 
+
 AFX_ANSI_DEPRECATED int GetInsertMarkRect(LPRECT pRect) const;
 
- 
+
 AFX_ANSI_DEPRECATED COLORREF GetOutlineColor() const;
 
- 
+
 AFX_ANSI_DEPRECATED UINT GetSelectedColumn() const;
 
- 
+
 AFX_ANSI_DEPRECATED BOOL GetTileInfo(PLVTILEINFO pti) const;
 
- 
+
 AFX_ANSI_DEPRECATED BOOL GetTileViewInfo(PLVTILEVIEWINFO ptvi) const;
 
- 
+
 AFX_ANSI_DEPRECATED DWORD GetView() const;
 
- 
+
 AFX_ANSI_DEPRECATED BOOL HasGroup(int iGroupId) const;
 
- 
+
 AFX_ANSI_DEPRECATED int InsertGroup(int index,
     PLVGROUP pgrp);
 
@@ -112,10 +114,10 @@ AFX_ANSI_DEPRECATED void InsertGroupSorted(PLVINSERTGROUPSORTED pStructInsert);
 AFX_ANSI_DEPRECATED int InsertMarkHitTest(LPPOINT pPoint,
     LPLVINSERTMARK lvim) const;
 
- 
+
 AFX_ANSI_DEPRECATED BOOL IsGroupViewEnabled() const;
 
- 
+
 AFX_ANSI_DEPRECATED void MoveGroup(int iGroupId,
     int toIndex);
 
@@ -149,34 +151,35 @@ AFX_ANSI_DEPRECATED DWORD SetView(int iView);
 
 AFX_ANSI_DEPRECATED BOOL SortGroups(PFNLVGROUPCOMPARE _pfnGroupCompare,
     LPVOID _plv);
-```  
-  
-## <a name="crebarctrl-class"></a>CReBarCtrl クラス  
-  
-```  
+```
+
+## <a name="crebarctrl-class"></a>CReBarCtrl クラス
+
+```
 AFX_ANSI_DEPRECATED void GetBandMargins(PMARGINS pMargins) const;
 
- 
+
 AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
-```  
-  
-## <a name="ctoolbarctrl-class"></a>CToolBarCtrl クラス  
-  
-```  
+```
+
+## <a name="ctoolbarctrl-class"></a>CToolBarCtrl クラス
+
+```
 AFX_ANSI_DEPRECATED void GetMetrics(LPTBMETRICS ptbm) const;
 
- 
+
 AFX_ANSI_DEPRECATED void SetMetrics(LPTBMETRICS ptbm);
 
 AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
-```  
-  
-## <a name="ctooltipctrl-class"></a>CToolTipCtrl クラス  
-  
-```  
+```
+
+## <a name="ctooltipctrl-class"></a>CToolTipCtrl クラス
+
+```
 AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
-```  
-  
-## <a name="see-also"></a>関連項目  
- [Windows Vista コモン コントロールの作成要件](../mfc/build-requirements-for-windows-vista-common-controls.md)
+```
+
+## <a name="see-also"></a>関連項目
+
+[Windows Vista コモン コントロールの作成要件](../mfc/build-requirements-for-windows-vista-common-controls.md)
 

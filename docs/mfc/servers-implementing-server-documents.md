@@ -1,5 +1,5 @@
 ---
-title: 'サーバー: サーバー ドキュメントの実装 |Microsoft ドキュメント'
+title: 'サーバー: サーバー ドキュメントの実装 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 273fd1e5afefb8a10b3e1ae8e3c2f81ccec05e7f
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: b62de2a1e6cba6ecbb29521518f5442ab002ddf3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950829"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381947"
 ---
 # <a name="servers-implementing-server-documents"></a>サーバー : サーバー ドキュメントの実装
-この記事では、アプリケーション ウィザードで、OLE サーバー オプションを指定しなかった場合、サーバー ドキュメントを正常に実装する手順について説明します。  
-  
-#### <a name="to-define-a-server-document-class"></a>サーバー ドキュメント クラスを定義するには  
-  
-1.  ドキュメント クラスを派生させる`COleServerDoc`の代わりに`CDocument`です。  
-  
-2.  派生したサーバー項目クラスを作成する`COleServerItem`です。  
-  
-3.  実装、`OnGetEmbeddedItem`サーバーのドキュメント クラスのメンバー関数。  
-  
-     `OnGetEmbeddedItem` コンテナー アプリケーションのユーザーが作成または埋め込みアイテムを編集するときと呼びます。 ドキュメント全体を表す項目を返します。 これは、値のオブジェクトには、 `COleServerItem`-クラスを派生します。  
-  
-4.  上書き、`Serialize`ドキュメントの内容をシリアル化するメンバー関数。 ドキュメントでネイティブのデータを表す使用している場合を除き、サーバーのアイテムの一覧をシリアル化する必要はありません。 詳細については、次を参照してください。*サーバー アイテムの実装*アーティクルで[サーバー: サーバー アイテム](../mfc/servers-server-items.md)です。  
-  
- サーバー ドキュメントの作成時に、フレームワークは、ドキュメントを自動的に OLE システム Dll を登録します。 これにより、サーバーのドキュメントを識別する Dll です。  
-  
- 詳細については、次を参照してください。 [COleServerItem](../mfc/reference/coleserveritem-class.md)と[COleServerDoc](../mfc/reference/coleserverdoc-class.md)で、*クラス ライブラリ リファレンス*です。  
-  
-## <a name="see-also"></a>関連項目  
- [サーバー](../mfc/servers.md)   
- [サーバー: サーバー アイテム](../mfc/servers-server-items.md)   
- [サーバー: サーバーの実装](../mfc/servers-implementing-a-server.md)   
- [サーバー: 埋め込み先フレーム ウィンドウの実装](../mfc/servers-implementing-in-place-frame-windows.md)
+
+この記事では、アプリケーション ウィザードで、OLE サーバー オプションを指定しなかった場合、サーバーのドキュメントを適切に実装するために行う手順について説明します。
+
+#### <a name="to-define-a-server-document-class"></a>サーバー ドキュメント クラスを定義するには
+
+1. ドキュメントからクラスを派生`COleServerDoc`の代わりに`CDocument`します。
+
+1. 派生したサーバーのアイテム クラスを作成`COleServerItem`です。
+
+1. 実装、`OnGetEmbeddedItem`サーバーのドキュメント クラスのメンバー関数。
+
+     `OnGetEmbeddedItem` コンテナー アプリケーションのユーザーを作成または埋め込みアイテムを編集すると呼び出されます。 ドキュメント全体を表す項目が返されます。 オブジェクトがあります、 `COleServerItem`-クラスを派生します。
+
+1. 上書き、`Serialize`メンバー関数は、ドキュメントの内容をシリアル化します。 ドキュメントでネイティブのデータを表すために使用されていない場合は、サーバーのアイテムの一覧をシリアル化する必要はありません。 詳細については、次を参照してください。*サーバー アイテムの実装*記事[サーバー: サーバー アイテム](../mfc/servers-server-items.md)します。
+
+サーバーのドキュメントが作成されると、フレームワークは、ドキュメントを自動的に OLE システム Dll に登録します。 これにより、サーバーのドキュメントを識別する Dll です。
+
+詳細については、次を参照してください。 [COleServerItem](../mfc/reference/coleserveritem-class.md)と[COleServerDoc](../mfc/reference/coleserverdoc-class.md)で、*クラス ライブラリ リファレンス*します。
+
+## <a name="see-also"></a>関連項目
+
+[サーバー](../mfc/servers.md)<br/>
+[サーバー: サーバー アイテム](../mfc/servers-server-items.md)<br/>
+[サーバー: サーバーの実装](../mfc/servers-implementing-a-server.md)<br/>
+[サーバー: 埋め込み先フレーム ウィンドウの実装](../mfc/servers-implementing-in-place-frame-windows.md)
 

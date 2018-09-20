@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fca1c097a01f34fb2cc708489338391dfced982f
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: b80c9c8ef371808fc98d0475afc00223b13194ea
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540263"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384040"
 ---
 # <a name="preprocessor-operators"></a>プリプロセッサ演算子
 4 つのプリプロセッサ固有の演算子は、`#define` ディレクティブのコンテキストで使用されます (各演算子の概要については、次の一覧を参照)。 文字列化、文字定数化、およびトークン連結演算子については、次の 3 つのセクションで説明します。 については、`defined`演算子を参照してください[#if、#elif、#else、および #endif ディレクティブ](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)します。  
@@ -34,6 +34,6 @@ ms.locfileid: "42540263"
   
 ## <a name="see-also"></a>関連項目  
  
-[プリプロセッサ ディレクティブ](../preprocessor/preprocessor-directives.md)   
-[定義済みマクロ](../preprocessor/predefined-macros.md)   
+[プリプロセッサ ディレクティブ](../preprocessor/preprocessor-directives.md)<br/>
+[定義済みマクロ](../preprocessor/predefined-macros.md)<br/>
 [C/C++ プリプロセッサ リファレンス](../preprocessor/c-cpp-preprocessor-reference.md)

@@ -26,55 +26,59 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 611786246df9da54d94e673da1a5e48940ca7241
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 56cdce805e2048cff22007a89da42c736dd14fd4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711127"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373291"
 ---
 # <a name="incgsbyte-incgsword-incgsdword-incgsqword"></a>__incgsbyte、__incgsword、__incgsdword、__incgsqword
-**Microsoft 固有の仕様**  
-  
- 先頭の相対オフセットで指定されたメモリ位置に追加する値を 1 つ、`GS`セグメント。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-void __incgsbyte(   
-   unsigned long Offset   
-);  
-void __incgsword(   
-   unsigned long Offset   
-);  
-void __incgsdword(   
-   unsigned long Offset  
-);  
-void __incgsqword(   
-   unsigned long Offset   
-);  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
+
+**Microsoft 固有の仕様**
+
+先頭の相対オフセットで指定されたメモリ位置に追加する値を 1 つ、`GS`セグメント。
+
+## <a name="syntax"></a>構文
+
+```
+void __incgsbyte( 
+   unsigned long Offset 
+);
+void __incgsword( 
+   unsigned long Offset 
+);
+void __incgsdword( 
+   unsigned long Offset
+);
+void __incgsqword( 
+   unsigned long Offset 
+);
+```
+
+#### <a name="parameters"></a>パラメーター
+
 *オフセット*<br/>
-[in]先頭からのオフセット`GS`します。  
-  
-## <a name="requirements"></a>要件  
-  
-|組み込み|アーキテクチャ|  
-|---------------|------------------|  
-|`__incgsbyte`|X64|  
-|`__incgsword`|X64|  
-|`__incgsdword`|X64|  
-|`__incgsqword`|X64|  
-  
-## <a name="remarks"></a>Remarks  
- これらの組み込みはカーネル モードで使用可能なのみとルーチンは組み込みとしてのみです。  
-  
-**Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- [_ _addgsbyte、 \__addgsword、 \__addgsdword、 \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)   
- [_ _readgsbyte、 \__readgsdword、 \__readgsqword、 \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)   
- [_ _writegsbyte、 \__writegsdword、 \__writegsqword、 \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)   
- [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)
+[in]先頭からのオフセット`GS`します。
+
+## <a name="requirements"></a>要件
+
+|組み込み|アーキテクチャ|
+|---------------|------------------|
+|`__incgsbyte`|X64|
+|`__incgsword`|X64|
+|`__incgsdword`|X64|
+|`__incgsqword`|X64|
+
+## <a name="remarks"></a>Remarks
+
+これらの組み込みはカーネル モードで使用可能なのみとルーチンは組み込みとしてのみです。
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
+[_ _addgsbyte、 \__addgsword、 \__addgsdword、 \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)<br/>
+[_ _readgsbyte、 \__readgsdword、 \__readgsqword、 \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)<br/>
+[_ _writegsbyte、 \__writegsdword、 \__writegsqword、 \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)<br/>
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

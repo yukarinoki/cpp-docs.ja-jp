@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41b212c0a8af3fde7fb8630b2fcb513f5edad2ee
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: effc4166fa25cec03ea62a5dd35a5396d2d2a3f2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759689"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419790"
 ---
 # <a name="cstringdata-class"></a>CStringData クラス
 
@@ -261,6 +261,6 @@ void Unlock() throw();
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)   
+[階層図](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 共有クラス](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 

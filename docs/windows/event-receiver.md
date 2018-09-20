@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 23607eb9d59a5c860d89444205c675c95e2b907e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d30ac0d2e1d18b22c6130212503576f5fe343a8d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594070"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407544"
 ---
 # <a name="eventreceiver"></a>event_receiver
 
@@ -45,7 +45,7 @@ ms.locfileid: "42594070"
 
 ### <a name="parameters"></a>パラメーター
 
-*type*  
+*type*<br/>
 次の値のいずれかの列挙です。
 
 - `native` アンマネージ C/C++ コード (ネイティブ クラスの既定値)。
@@ -58,7 +58,7 @@ ms.locfileid: "42594070"
     #include <atlcom.h>
     ```
 
-*layout_dependent*  
+*layout_dependent*<br/>
 指定*layout_dependent*場合にのみ`type` = **com**します。 *layout_dependent*ブール値です。
 
 - **true**ことに、受信する必要がありますと正確に一致するが、フック イベント ソース、イベント、デリゲートのシグネチャを意味します。 イベント レシーバーのハンドラー名は、関連するイベント ソース インターフェイスで指定された名前と一致する必要があります。 使用する必要があります`coclass`とき*layout_dependent*は**true**します。 指定するより効率的です**true**します。
@@ -91,9 +91,9 @@ ms.locfileid: "42594070"
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ属性](../windows/compiler-attributes.md)  
-[event_source](../windows/event-source.md)  
-[__event](../cpp/event.md)  
-[__hook](../cpp/hook.md)  
-[__unhook](../cpp/unhook.md)  
+[コンパイラ属性](../windows/compiler-attributes.md)<br/>
+[event_source](../windows/event-source.md)<br/>
+[__event](../cpp/event.md)<br/>
+[__hook](../cpp/hook.md)<br/>
+[__unhook](../cpp/unhook.md)<br/>
 [クラス属性](../windows/class-attributes.md)  

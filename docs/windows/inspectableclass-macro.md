@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9b85a10c68b7379f0e59bf859b3d8badf7413195
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a20815972f595a15097a057537d6cb5cdca4fb4b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208342"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408337"
 ---
 # <a name="inspectableclass-macro"></a>InspectableClass マクロ
 
@@ -36,10 +36,10 @@ InspectableClass(
 
 ### <a name="parameters"></a>パラメーター
 
-*runtimeClassName*  
+*runtimeClassName*<br/>
 ランタイム クラス名のテキスト形式の完全な名前です。
 
-*trustLevel*  
+*trustLevel*<br/>
 1 つ、 [TrustLevel](https://msdn.microsoft.com/library/br224625.aspx)列挙値。
 
 ## <a name="remarks"></a>Remarks

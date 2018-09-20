@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 82479dab780fce677eeee84c4ccde880fe19d2bc
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 43ba8086481ea2a8dde20d06b1dc143b297138f8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314912"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378307"
 ---
 # <a name="creating-an-icon-or-other-image-image-editor-for-icons"></a>アイコンまたはその他のイメージの作成 (アイコン用イメージ エディター)
 
@@ -67,8 +67,8 @@ ms.locfileid: "44314912"
 
 ## <a name="see-also"></a>関連項目
 
-[アイコンとカーソル: ディスプレイ デバイスのイメージ リソース](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)  
-[ビットマップからツール バーへの変換](../windows/converting-bitmaps-to-toolbars.md)  
-[ツール バーの新規作成](../windows/creating-new-toolbars.md)  
-[グラフィカル リソースの編集](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[アイコンとカーソル: ディスプレイ デバイスのイメージ リソース](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)<br/>
+[ビットマップからツール バーへの変換](../windows/converting-bitmaps-to-toolbars.md)<br/>
+[ツール バーの新規作成](../windows/creating-new-toolbars.md)<br/>
+[グラフィカル リソースの編集](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [アイコン用イメージ エディター](../windows/image-editor-for-icons.md)

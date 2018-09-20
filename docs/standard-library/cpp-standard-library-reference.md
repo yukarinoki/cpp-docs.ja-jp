@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcf760219f06ab71684d9d67240712fa501b3c00
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 0c38485e84f0b06e79e02ba780926b6e08378220
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45722606"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392919"
 ---
 # <a name="c-standard-library-reference"></a>C++ 標準ライブラリ リファレンス
 
@@ -32,10 +32,13 @@ Visual C++ ランタイム ライブラリの詳細については、「[CRT ラ
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)C++ 標準ライブラリの Microsoft 実装の概要を説明します。
+[C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)<br/>
+C++ 標準ライブラリの Microsoft の実装の概要を説明します。
 
-[iostream プログラミング](../standard-library/iostream-programming.md)iostream のプログラミングの概要を説明します。
+[iostream プログラミング](../standard-library/iostream-programming.md)<br/>
+iostream プログラミングの概要を説明します。
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)C++ 標準ライブラリ ヘッダー ファイルのコード例を含むに関するリファレンス トピックへのリンクを提供します。
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
+C++ 標準ライブラリのヘッダー ファイルに関するリファレンス トピックへのリンクを示します (コード例を含む)。
 
 

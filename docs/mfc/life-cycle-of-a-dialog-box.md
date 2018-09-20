@@ -1,5 +1,5 @@
 ---
-title: ダイアログ ボックスのライフ サイクル |Microsoft ドキュメント
+title: ダイアログ ボックスのライフ サイクル |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,46 +18,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: faf204f05c03e742e0f491fb3991b56d3405ebc4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 05138040b6283b7af01f6e010bc371490aea495e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346182"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440499"
 ---
 # <a name="life-cycle-of-a-dialog-box"></a>ダイアログ ボックスの有効期間
-ライフ サイクルは、ダイアログ ボックスの中に、ユーザーがダイアログ ボックスを呼び出します、通常コマンド ハンドラーを作成し、ダイアログ オブジェクトを初期化する、内部ユーザーと通信します ダイアログ ボックス、ダイアログ ボックスを閉じます。  
-  
- モーダル ダイアログ ボックス、ハンドラーはユーザーが入力した後、ダイアログ ボックスが閉じ、データを収集します。 ダイアログ ウィンドウが閉じられた後にダイアログ オブジェクトが存在するので、データを抽出するのにだけで、ダイアログ クラスのメンバー変数を使用できます。  
-  
- モードレス ダイアログ ボックスの可能性があります多くの場合、データを抽出するダイアログ オブジェクトからダイアログ ボックスがまだ表示されています。 ある時点で、ダイアログ オブジェクトは破棄されます。この場合は、コードによって異なります。  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>詳しくは次のトピックをクリックしてください。  
-  
--   [作成して、ダイアログ ボックスを表示します。](../mfc/creating-and-displaying-dialog-boxes.md)  
-  
--   [モーダル ダイアログ ボックスの作成](../mfc/creating-modal-dialog-boxes.md)  
-  
--   [モードレス ダイアログ ボックスの作成](../mfc/creating-modeless-dialog-boxes.md)  
-  
--   [メモリ内でダイアログ テンプレートの使用](../mfc/using-a-dialog-template-in-memory.md)  
-  
--   [ダイアログ ボックスの背景色の設定](../mfc/setting-the-dialog-boxs-background-color.md)  
-  
--   [ダイアログ ボックスの初期化](../mfc/initializing-the-dialog-box.md)  
-  
--   [ダイアログ ボックスで Windows メッセージの処理](../mfc/handling-windows-messages-in-your-dialog-box.md)  
-  
--   [ダイアログ オブジェクトからのデータの取得](../mfc/retrieving-data-from-the-dialog-object.md)  
-  
--   [ダイアログ ボックスを閉じる](../mfc/closing-the-dialog-box.md)  
-  
--   [ダイアログ ボックスの破棄](../mfc/destroying-the-dialog-box.md)  
-  
--   [ダイアログ データ エクス (チェンジ DDX) および検証 (DDV)](../mfc/dialog-data-exchange-and-validation.md)  
-  
--   [プロパティ シート ダイアログ ボックス](../mfc/property-sheets-and-property-pages-mfc.md)  
-  
-## <a name="see-also"></a>関連項目  
- [ダイアログ ボックス](../mfc/dialog-boxes.md)
+
+ダイアログ ボックスのライフ サイクルでは、ユーザーがダイアログ ボックスを呼び出す、通常コマンド ハンドラーを作成し、ダイアログのオブジェクトを初期化する内部ユーザー ダイアログ ボックスと通信、ダイアログ ボックスを閉じます。
+
+モーダル ダイアログ ボックスの場合は、ハンドラーは、ユーザーの入力 ダイアログ ボックスを閉じるとデータを収集します。 ダイアログ ウィンドウが閉じられた後にダイアログ オブジェクトが存在するので、データを抽出するのに単にダイアログ クラスのメンバー変数を使用できます。
+
+モードレス ダイアログ ボックスの可能性があります多くの場合、データを抽出するダイアログ オブジェクトから、ダイアログ ボックスがまだ表示されているときにします。 ある時点でダイアログ オブジェクトは破棄されます。この場合は、コードに依存します。
+
+## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+
+- [作成して、ダイアログ ボックスを表示します。](../mfc/creating-and-displaying-dialog-boxes.md)
+
+- [モーダル ダイアログ ボックスの作成](../mfc/creating-modal-dialog-boxes.md)
+
+- [モードレス ダイアログ ボックスの作成](../mfc/creating-modeless-dialog-boxes.md)
+
+- [メモリ内のダイアログ テンプレートの使用](../mfc/using-a-dialog-template-in-memory.md)
+
+- [ダイアログ ボックスの背景色の設定](../mfc/setting-the-dialog-boxs-background-color.md)
+
+- [ダイアログ ボックスの初期化](../mfc/initializing-the-dialog-box.md)
+
+- [ダイアログ ボックスでの Windows メッセージの処理](../mfc/handling-windows-messages-in-your-dialog-box.md)
+
+- [ダイアログ オブジェクトからのデータの取得](../mfc/retrieving-data-from-the-dialog-object.md)
+
+- [ダイアログ ボックスを閉じる](../mfc/closing-the-dialog-box.md)
+
+- [ダイアログ ボックスの破棄](../mfc/destroying-the-dialog-box.md)
+
+- [ダイアログ データ エクス (チェンジ DDX) と検証 (DDV)](../mfc/dialog-data-exchange-and-validation.md)
+
+- [プロパティ シートのダイアログ ボックス](../mfc/property-sheets-and-property-pages-mfc.md)
+
+## <a name="see-also"></a>関連項目
+
+[ダイアログ ボックス](../mfc/dialog-boxes.md)
 

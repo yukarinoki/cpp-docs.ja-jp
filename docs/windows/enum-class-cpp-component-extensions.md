@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 72c312bdec9248cdc38150163d914b2ac7036ab8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 993f0e190d87b140fba0008872d57f2a34b6a5cb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711088"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377267"
 ---
 # <a name="enum-class--c-component-extensions"></a>enum クラス (C++ コンポーネント拡張)
 
@@ -44,23 +44,23 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 
 ### <a name="parameters"></a>パラメーター
 
-*access*  
+*access*<br/>
 列挙型のアクセシビリティ**パブリック**または**プライベート**します。
 
-*enumeration-identifier*  
+*enumeration-identifier*<br/>
 列挙型の名前。
 
-*underlying-type*  
+*underlying-type*<br/>
 (省略可能) 列挙型の基になる型。
 
 (省略可能、 Windows ランタイムのみ) は、列挙体の基になる型**bool**、 **char**、 `char16`、 `int16`、 `uint16`、 **int**、 `uint32`、 `int64`、または`uint64`します。
 
-*enumerator-list*  
+*enumerator-list*<br/>
 列挙子名のコンマ区切りのリスト。
 
 それぞれの列挙子の値は、コンパイラによって暗黙的に定義された定数式か、" *enumerator*`=`*constant-expression*」をご覧ください。 既定では、最初の列挙子が暗黙的に定義されている場合、その値は 0 です。 それ以降の暗黙的に定義された列挙子の値は、前の列挙子の値に 1 を加算した値になります。
 
-*var*  
+*var*<br/>
 (省略可能) 列挙型の変数の名前。
 
 ### <a name="remarks"></a>Remarks
@@ -92,19 +92,19 @@ accessenum structname [:type] { enumerator-list } var;
 
 ### <a name="parameters"></a>パラメーター
 
-*access*  
+*access*<br/>
 列挙型のアクセシビリティ。 いずれかになります**パブリック**または**プライベート**します。
 
-*enumerator-list*  
+*enumerator-list*<br/>
 列挙型に含まれる識別子 (列挙子) のコンマ区切りのリスト。
 
-*name*  
+*name*<br/>
 列挙型の名前。 匿名のマネージド列挙型は使用できません。
 
-*type*  
+*type*<br/>
 (省略可能)基になる型、*識別子*します。 符号付きまたは符号なしのバージョンなどの任意のスカラー型を指定できます**int**、**短い**、または**長い**します。  **bool**または**char**も使用できます。
 
-*var*  
+*var*<br/>
 (省略可能) 列挙型の変数の名前。
 
 ### <a name="remarks"></a>Remarks

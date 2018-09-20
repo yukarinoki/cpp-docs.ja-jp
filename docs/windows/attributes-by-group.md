@@ -15,14 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad982ee72e93a2779e4f3334984a325514248565
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 02dd1b2cbe4d1da2364d884a0326cdc394bc16af
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315107"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444880"
 ---
 # <a name="attributes-by-group"></a>グループ別の属性
+
 C++ 属性は、次の機能グループに編成されます。
   
 |属性|説明|
@@ -32,10 +33,11 @@ C++ 属性は、次の機能グループに編成されます。
 |[OLE DB コンシューマー属性](../windows/ole-db-consumer-attributes.md)|コードを挿入、に基づいて、 [OLE DB コンシューマー テンプレート](../data/oledb/ole-db-consumer-templates-reference.md)-コンシューマーを作成する作業 OLE DB テーブルを開くなどのタスクを実行するコマンドを実行して、データにアクセスします。|
 |[コンパイラ属性](../windows/compiler-attributes.md)|Visual C コンパイラによって提供されます。|
   
- .NET Framework アプリケーション用のカスタム属性を定義する方法については、次を参照してください。[ユーザー定義の属性](../windows/user-defined-attributes-cpp-component-extensions.md)します。
+.NET Framework アプリケーション用のカスタム属性を定義する方法については、次を参照してください。[ユーザー定義の属性](../windows/user-defined-attributes-cpp-component-extensions.md)します。
   
 ## <a name="see-also"></a>関連項目
- [C++ 属性リファレンス](../windows/cpp-attributes-reference.md)  
- [概念](../windows/attributed-programming-concepts.md)  
- [使用法別の属性](../windows/attributes-by-usage.md)  
- [属性リファレンス (アルファベット順)](../windows/attributes-alphabetical-reference.md)
+
+[C++ 属性リファレンス](../windows/cpp-attributes-reference.md)<br/>
+[概念](../windows/attributed-programming-concepts.md)<br/>
+[使用法別の属性](../windows/attributes-by-usage.md)<br/>
+[属性リファレンス (アルファベット順)](../windows/attributes-alphabetical-reference.md)

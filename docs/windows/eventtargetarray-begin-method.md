@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 738ee52eb68cfbb03a380ffac52efdb4010b5205
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b818595d8ad32295dbce1498161898b215e1885f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602132"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433773"
 ---
 # <a name="eventtargetarraybegin-method"></a>EventTargetArray::Begin メソッド
 
@@ -50,5 +50,5 @@ ComPtr<IUnknown>* Begin();
 
 ## <a name="see-also"></a>関連項目
 
-[EventTargetArray クラス](../windows/eventtargetarray-class.md)  
+[EventTargetArray クラス](../windows/eventtargetarray-class.md)<br/>
 [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

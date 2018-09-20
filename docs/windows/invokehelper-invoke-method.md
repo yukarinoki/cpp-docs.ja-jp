@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a9d59ca1d404e56e7d85a8f0edfe653dc5692558
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7d1addd96456a33b30259182e4490df70335d0d3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584322"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408363"
 ---
 # <a name="invokehelperinvoke-method"></a>InvokeHelper::Invoke メソッド
 
@@ -65,31 +65,31 @@ STDMETHOD(
 
 ### <a name="parameters"></a>パラメーター
 
-*arg1*  
+*arg1*<br/>
 引数 1 です。
 
-*Arg2*  
+*Arg2*<br/>
 引数 2 を指定します。
 
-*arg3…*  
+*arg3…*<br/>
 引数 3 です。
 
-*arg4*  
+*arg4*<br/>
 4 の引数。
 
-*arg5*  
+*arg5*<br/>
 5 の引数。
 
-*arg6*  
+*arg6*<br/>
 引数 6 です。
 
-*arg7*  
+*arg7*<br/>
 7 の引数。
 
-*arg8*  
+*arg8*<br/>
 8 の引数。
 
-*arg9*  
+*arg9*<br/>
 9 の引数。
 
 ## <a name="return-value"></a>戻り値
@@ -108,5 +108,5 @@ STDMETHOD(
 
 ## <a name="see-also"></a>関連項目
 
-[InvokeHelper 構造体](../windows/invokehelper-structure.md)  
+[InvokeHelper 構造体](../windows/invokehelper-structure.md)<br/>
 [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

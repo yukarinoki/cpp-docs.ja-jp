@@ -1,5 +1,5 @@
 ---
-title: 'クリップボード: クリップボード機構を使用する場合 |Microsoft ドキュメント'
+title: 'クリップボード: クリップボード機構を使用する場合 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,28 +19,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2d7ab966eb0fcb5592f55a1b24f1558946dbd16
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 18b8a772dd58cf9623d4076665e7859d191bb27e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341927"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379815"
 ---
 # <a name="clipboard-when-to-use-each-clipboard-mechanism"></a>クリップボード : クリップボード機構を使用するタイミング
-クリップボードの使用方法でこれらのガイドラインに従います。  
-  
--   OLE クリップボード機構を使用して、今後の新機能を有効にします。 標準のクリップボード API を維持する OLE 機構は将来のデータ転送です。  
-  
--   OLE アプリケーションを作成しているか、OLE の機能のいずれかをするなど、ドラッグ アンド ドロップする場合は、OLE クリップボード機構を使用します。  
-  
--   OLE 形式を指定する場合は、OLE クリップボード機構を使用します。  
-  
-## <a name="what-do-you-want-to-do"></a>どうしたいんですか  
-  
--   [OLE クリップボード機構を使用します。](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)  
-  
--   [Windows クリップボード機構を使用します。](../mfc/clipboard-using-the-windows-clipboard.md)  
-  
-## <a name="see-also"></a>関連項目  
- [クリップボード](../mfc/clipboard.md)
+
+クリップボードを使用してこれらのガイドラインに従います。
+
+- OLE クリップボード機構を使用して、今後新しい機能を有効にします。 標準のクリップボード API を維持する OLE メカニズムは将来のデータ転送です。
+
+- OLE アプリケーションを作成している、または OLE の機能のいずれかにするなど、ドラッグ アンド ドロップする場合は、OLE クリップボード機構を使用します。
+
+- OLE 形式を指定する場合は、OLE クリップボード機構を使用します。
+
+## <a name="what-do-you-want-to-do"></a>どうしたいんですか
+
+- [OLE クリップボード機構を使用します。](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+
+- [Windows クリップボード機構を使用します。](../mfc/clipboard-using-the-windows-clipboard.md)
+
+## <a name="see-also"></a>関連項目
+
+[クリップボード](../mfc/clipboard.md)
 

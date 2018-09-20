@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bcacfb8d5cd6d15cf9ca5f9f5bb8e937119dc863
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 4ff40e03bf464d4c6f434b491c8b48d2b797d72b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43691575"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440538"
 ---
 # <a name="implementshelper-structure"></a>ImplementsHelper 構造体
 
@@ -41,13 +41,13 @@ friend struct Details::ImplementsHelper;
 
 ### <a name="parameters"></a>パラメーター
 
-*RuntimeClassFlagsT*  
+*RuntimeClassFlagsT*<br/>
 1 つまたは複数を指定するフラグのフィールド[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列挙子。
 
-*ILst*  
+*ILst*<br/>
 インターフェイスの Id の一覧。
 
-*IsDelegateToClass*  
+*IsDelegateToClass*<br/>
 指定**true**場合の現在のインスタンス`Implements`で最初のインターフェイス ID の基底クラスは、 *ILst*、それ以外の**false**。
 
 ## <a name="remarks"></a>Remarks

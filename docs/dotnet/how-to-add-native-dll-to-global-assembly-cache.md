@@ -1,5 +1,5 @@
 ---
-title: '方法: ネイティブ DLL をグローバル アセンブリ キャッシュに追加 |Microsoft ドキュメント'
+title: '方法: ネイティブ DLL をグローバル アセンブリ キャッシュに追加する |Microsoft Docs'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b7363de172eabc664bcde1e3bf42f8cc499e4251
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 74b24b96b28d8c5805a075a5ac1eee41173fc427
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33129539"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431997"
 ---
 # <a name="how-to-add-native-dll-to-global-assembly-cache"></a>方法: ネイティブ DLL をグローバル アセンブリ キャッシュに追加する
-ネイティブ DLL (COM ではない) は、グローバル アセンブリ キャッシュに配置できます。  
-  
-## <a name="example"></a>例  
- **/ASSEMBLYLINKRESOURCE**ネイティブ DLL をアセンブリに埋め込むことができます。  
-  
- 詳細については、「[/ASSEMBLYLINKRESOURCE (.NET Framework リソースへのリンク)](../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)」を参照してください。  
-  
-```  
-/ASSEMBLYLINKRESOURCE:MyComponent.dll  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [C++ Interop (暗黙の PInvoke) の使用](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+
+ネイティブ DLL (COM 以外) は、グローバル アセンブリ キャッシュに配置できます。
+
+## <a name="example"></a>例
+
+**/ASSEMBLYLINKRESOURCE**ネイティブ DLL をアセンブリに埋め込むことができます。
+
+詳細については、「[/ASSEMBLYLINKRESOURCE (.NET Framework リソースへのリンク)](../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)」を参照してください。
+
+```
+/ASSEMBLYLINKRESOURCE:MyComponent.dll
+```
+
+## <a name="see-also"></a>関連項目
+
+[C++ Interop (暗黙の PInvoke) の使用](../dotnet/using-cpp-interop-implicit-pinvoke.md)

@@ -1,5 +1,5 @@
 ---
-title: 'CObject クラス: よく寄せられる質問 |Microsoft ドキュメント'
+title: 'CObject クラス: よく寄せられる質問 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7487d8fdc016642e56a469d45c8063e764823ff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 987ae71b556abea1279605f42f5c633083221554
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343568"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433960"
 ---
 # <a name="cobject-class-frequently-asked-questions"></a>CObject クラス : Q & A 集
-ここでは、クラスでの質問`CObject`です。  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>詳しくは次のトピックをクリックしてください。  
-  
--   [CObject から新しいクラスを派生があります。](do-i-have-to-derive-new-classes-from-cobject-q.md)  
-  
--   [新機能のコストを CObject からクラスを派生します。](what-does-it-cost-me-to-derive-a-class-from-cobject-q.md)  
-  
-## <a name="see-also"></a>関連項目  
- [CObject の使い方](../mfc/using-cobject.md)
+
+ここでは、クラスに関する質問`CObject`します。
+
+## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+
+- [CObject から新しくクラスを派生する必要は](do-i-have-to-derive-new-classes-from-cobject-q.md)
+
+- [どのようなコストを CObject からクラスを派生します。](what-does-it-cost-me-to-derive-a-class-from-cobject-q.md)
+
+## <a name="see-also"></a>関連項目
+
+[CObject の使い方](../mfc/using-cobject.md)

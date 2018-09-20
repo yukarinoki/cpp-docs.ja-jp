@@ -1,5 +1,5 @@
 ---
-title: CWnd オブジェクトの初期化のタイミング |Microsoft ドキュメント
+title: CWnd オブジェクトの初期化のタイミング |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee10a4632809a224028bfa482f80ed9e8a9334a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6445190ab3da6ed84dbdd83cd0acab0ba98691f3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382874"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388434"
 ---
 # <a name="when-to-initialize-cwnd-objects"></a>CWnd オブジェクトの初期化のタイミング
-独自の子ウィンドウを作成またはのコンス トラクターで、Windows API 関数を呼び出すことはできません、 `CWnd`-派生オブジェクト。 これは、ため、`HWND`の`CWnd`オブジェクトがまだ作成されていません。 子ウィンドウを追加するなど、最も Windows 固有の初期化を行う必要があります、 [OnCreate](../mfc/reference/cwnd-class.md#oncreate)メッセージ ハンドラー。  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>詳しくは次のトピックをクリックしてください。  
-  
--   [ドキュメント フレーム ウィンドウの作成](../mfc/creating-document-frame-windows.md)  
-  
--   [ドキュメント/ビューの作成](../mfc/document-view-creation.md)  
-  
-## <a name="see-also"></a>関連項目  
- [フレーム ウィンドウの使用](../mfc/using-frame-windows.md)
+
+独自の子ウィンドウを作成またはのコンス トラクターで、Windows API 関数を呼び出すことはできません、 `CWnd`-派生オブジェクト。 これは、ため、`HWND`の`CWnd`オブジェクトが作成されていません。 子ウィンドウの追加などの Windows 固有性の高い初期化を行う必要がある、 [OnCreate](../mfc/reference/cwnd-class.md#oncreate)メッセージ ハンドラー。
+
+## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+
+- [ドキュメント フレーム ウィンドウの作成](../mfc/creating-document-frame-windows.md)
+
+- [ドキュメント/ビューの作成](../mfc/document-view-creation.md)
+
+## <a name="see-also"></a>関連項目
+
+[フレーム ウィンドウの使用](../mfc/using-frame-windows.md)
 

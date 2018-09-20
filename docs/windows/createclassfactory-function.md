@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3cecffa8505aaead738007e2a0872c3f1bc5a6d6
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c1d7c3741af7f5a0ea3a66d491f4aecc2afc8cb9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593649"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392191"
 ---
 # <a name="createclassfactory-function"></a>CreateClassFactory 関数
 
@@ -42,16 +42,16 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
 
 ### <a name="parameters"></a>パラメーター
 
-*flags*  
+*flags*<br/>
 1 つ以上を組み合わせた[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列挙値。
 
-*entry*  
+*entry*<br/>
 ポインターを[CreatorMap](../windows/creatormap-structure.md)パラメーターに関する情報を初期化し、登録を含む*riid*します。
 
-*riid*  
+*riid*<br/>
 インターフェイス ID への参照
 
-*ppFactory*  
+*ppFactory*<br/>
 この操作は、クラス ファクトリへのポインターでは正常に完了します。 場合、
 
 ## <a name="return-value"></a>戻り値

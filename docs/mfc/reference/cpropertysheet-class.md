@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2e9e13f7b5838cb13497dd874f7f0cf42f34e98
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6ec12275291321751c539d095c60fa9dabffa2b7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200147"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445179"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet クラス
 
@@ -181,7 +181,7 @@ void AddPage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>パラメーター
 
-*pPage*  
+*pPage*<br/>
 プロパティ シートに追加するページへのポインター。 Nll は指定できません。
 
 ### <a name="remarks"></a>Remarks
@@ -237,25 +237,25 @@ void Construct(
 
 ### <a name="parameters"></a>パラメーター
 
-*nIDCaption*  
+*nIDCaption*<br/>
 プロパティ シートに使用されるキャプションの ID。
 
-*pParentWnd*  
+*pParentWnd*<br/>
 プロパティ シートの親ウィンドウへのポインター。 NULL の場合、親ウィンドウは、アプリケーションのメイン ウィンドウになります。
 
-*iSelectPage*  
+*iSelectPage*<br/>
 ページ上部になる最初のインデックス。 既定値は、最初のページのシートに追加します。
 
-*pszCaption*  
+*pszCaption*<br/>
 プロパティ シートに使用されるキャプションを表す文字列へのポインター。 Nll は指定できません。
 
-*hbmWatermark*  
+*hbmWatermark*<br/>
 プロパティ ページのウォーターマーク ビットマップへのハンドルします。
 
-*hpalWatermark*  
+*hpalWatermark*<br/>
 ウォーターマーク ビットマップおよびヘッダー ビットマップのパレットへのハンドルします。
 
-*hbmHeader*  
+*hbmHeader*<br/>
 プロパティ ページのヘッダー ビットマップへのハンドルします。
 
 ### <a name="remarks"></a>Remarks
@@ -312,25 +312,25 @@ CPropertySheet(
 
 ### <a name="parameters"></a>パラメーター
 
-*nIDCaption*  
+*nIDCaption*<br/>
 プロパティ シートに使用されるキャプションの ID。
 
-*pParentWnd*  
+*pParentWnd*<br/>
 プロパティ シートの親ウィンドウへのポインター。 NULL の場合、親ウィンドウは、アプリケーションのメイン ウィンドウになります。
 
-*iSelectPage*  
+*iSelectPage*<br/>
 ページ上部になる最初のインデックス。 既定値は、最初のページのシートに追加します。
 
-*pszCaption*  
+*pszCaption*<br/>
 プロパティ シートに使用されるキャプションを表す文字列を指します。 Nll は指定できません。
 
-*hbmWatermark*  
+*hbmWatermark*<br/>
 プロパティ シートの背景ビットマップへのハンドル。
 
-*hpalWatermark*  
+*hpalWatermark*<br/>
 ウォーターマーク ビットマップおよびヘッダー ビットマップのパレットへのハンドル。
 
-*hbmHeader*  
+*hbmHeader*<br/>
 プロパティ ページのヘッダー ビットマップへのハンドル。
 
 ### <a name="remarks"></a>Remarks
@@ -357,13 +357,13 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
 
 ### <a name="parameters"></a>パラメーター
 
-*pParentWnd*  
+*pParentWnd*<br/>
 親ウィンドウへのポインター。 NULL の場合、親はデスクトップです。
 
-*dwStyle*  
+*dwStyle*<br/>
 プロパティ シートのウィンドウ スタイル。 使用可能なスタイルの完全な一覧を参照してください。[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。
 
-*dwExStyle*  
+*dwExStyle*<br/>
 プロパティ シートの拡張ウィンドウ スタイル。 使用可能なスタイルの完全な一覧を参照してください[拡張ウィンドウ スタイル。](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)
 
 ### <a name="return-value"></a>戻り値
@@ -445,7 +445,7 @@ void EnableStackedTabs(BOOL bStacked);
 
 ### <a name="parameters"></a>パラメーター
 
-*bStacked*  
+*bStacked*<br/>
 プロパティ シートのタブ行の積み上げを有効かどうかを示します。 タグの積み上げられた行を設定して無効に*bStacked*を FALSE にします。
 
 ### <a name="remarks"></a>Remarks
@@ -468,7 +468,7 @@ void EndDialog(int nEndID);
 
 ### <a name="parameters"></a>パラメーター
 
-*nEndID*  
+*nEndID*<br/>
 プロパティ シートの戻り値として使用する識別子です。
 
 ### <a name="remarks"></a>Remarks
@@ -527,7 +527,7 @@ CPropertyPage* GetPage(int nPage) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*n ページ レイアウト*  
+*n ページ レイアウト*<br/>
 0 から始まる、目的のページのインデックス。 0 と 1 つの包括的に、プロパティ シートのページ数よりも小さいの間である必要があります。
 
 ### <a name="return-value"></a>戻り値
@@ -564,7 +564,7 @@ int GetPageIndex(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>パラメーター
 
-*pPage*  
+*pPage*<br/>
 検索するインデックスを持つページへのポインター。 Nll は指定できません。
 
 ### <a name="return-value"></a>戻り値
@@ -623,7 +623,7 @@ void MapDialogRect(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*lpRect*  
+*lpRect*<br/>
 指す、 [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)  ダイアログ ボックスを含むオブジェクトを変換する座標します。
 
 ### <a name="remarks"></a>Remarks
@@ -664,7 +664,7 @@ void PressButton(int nButton);
 
 ### <a name="parameters"></a>パラメーター
 
-*n ボタン*  
+*n ボタン*<br/>
 n ボタン: ボタンが押されるを識別します。 このパラメーターには、次の値のいずれかを指定できます。
 
 - PSBTN_BACK では、[戻る] ボタンを選択します。
@@ -702,10 +702,10 @@ void RemovePage(int nPage);
 
 ### <a name="parameters"></a>パラメーター
 
-*pPage*  
+*pPage*<br/>
 プロパティ シートから削除するページへのポインター。 Nll は指定できません。
 
-*n ページ レイアウト*  
+*n ページ レイアウト*<br/>
 削除するページのインデックス。 0 と 1 つの包括的に、プロパティ シートのページ数よりも小さいの間である必要があります。
 
 ### <a name="remarks"></a>Remarks
@@ -723,10 +723,10 @@ BOOL SetActivePage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>パラメーター
 
-*n ページ レイアウト*  
+*n ページ レイアウト*<br/>
 設定するページのインデックス。 0 と 1 つの包括的に、プロパティ シートのページ数よりも小さいかでなければなりません。
 
-*pPage*  
+*pPage*<br/>
 プロパティ シートに設定するページへのポインター。 NULL にすることはできません。
 
 ### <a name="return-value"></a>戻り値
@@ -751,7 +751,7 @@ void SetFinishText(LPCTSTR lpszText);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszText*  
+*lpszText*<br/>
 [完了] のコマンド ボタンに表示されるテキストを指します。
 
 ### <a name="remarks"></a>Remarks
@@ -774,10 +774,10 @@ void SetTitle(
 
 ### <a name="parameters"></a>パラメーター
 
-*nStyle*  
+*nStyle*<br/>
 プロパティ シートのタイトルのスタイルを指定します。 0 または PSH_PROPTITLE、スタイルを指定する必要があります。 PSH_PROPTITLE としてスタイルを設定すると、キャプションとして指定されたテキストの後に"Properties"という単語が表示されます。 たとえば、呼び出し`SetTitle`「単純なプロパティです」のプロパティ シートのタイトルに ("Simple"、PSH_PROPTITLE) になります。
 
-*lpszText*  
+*lpszText*<br/>
 プロパティ シートのタイトル バーのキャプションとして使用するテキストを指します。
 
 ### <a name="remarks"></a>Remarks
@@ -798,7 +798,7 @@ void SetWizardButtons(DWORD dwFlags);
 
 ### <a name="parameters"></a>パラメーター
 
-*dwFlags*  
+*dwFlags*<br/>
 関数とウィザードのボタンの外観をカスタマイズするフラグのセット。 このパラメーターは、次の値の組み合わせを指定できます。
 
 - PSWIZB_BACK 戻るボタン
@@ -847,9 +847,9 @@ void SetWizardMode();
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル CMNCTRL1](../../visual-cpp-samples.md)  
-[MFC サンプル CMNCTRL2](../../visual-cpp-samples.md)  
-[MFC サンプル PROPDLG](../../visual-cpp-samples.md)  
-[MFC サンプル SNAPVW](../../visual-cpp-samples.md)  
-[CWnd クラス](../../mfc/reference/cwnd-class.md)  
-[階層図](../../mfc/hierarchy-chart.md)  
+[MFC サンプル CMNCTRL1](../../visual-cpp-samples.md)<br/>
+[MFC サンプル CMNCTRL2](../../visual-cpp-samples.md)<br/>
+[MFC サンプル PROPDLG](../../visual-cpp-samples.md)<br/>
+[MFC サンプル SNAPVW](../../visual-cpp-samples.md)<br/>
+[CWnd クラス](../../mfc/reference/cwnd-class.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)

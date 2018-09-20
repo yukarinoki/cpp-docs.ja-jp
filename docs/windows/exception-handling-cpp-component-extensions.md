@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6074519f472fff82af60695f37d0f96d9557f193
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2213266d281933c6a6a59775584532acaeb39d6e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313651"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412326"
 ---
 # <a name="exception-handling--c-component-extensions"></a>例外処理 (C++ コンポーネント拡張)
 
@@ -33,27 +33,27 @@ ms.locfileid: "44313651"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[マネージド例外の使用についての基本概念](../dotnet/basic-concepts-in-using-managed-exceptions.md)  
+[マネージド例外の使用についての基本概念](../dotnet/basic-concepts-in-using-managed-exceptions.md)<br/>
 について説明します例外のスローとを使用して**お試しください**/**キャッチ**ブロックします。
 
-[例外処理/CLR での動作の違い](../dotnet/differences-in-exception-handling-behavior-under-clr.md)  
+[例外処理/CLR での動作の違い](../dotnet/differences-in-exception-handling-behavior-under-clr.md)<br/>
 C++ 例外処理の標準の動作の相違点をについて説明します。
 
-[finally](../dotnet/finally.md)  
+[finally](../dotnet/finally.md)<br/>
 使用する方法について説明します、finally キーワード。
 
-[方法: グローバル例外ハンドラーを定義およびインストールする](../dotnet/how-to-define-and-install-a-global-exception-handler.md)  
+[方法: グローバル例外ハンドラーを定義およびインストールする](../dotnet/how-to-define-and-install-a-global-exception-handler.md)<br/>
 どの未処理の例外を示しますキャプチャできます。
 
-[方法: MSIL からスローされるネイティブ コードの例外をキャッチする](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)  
+[方法: MSIL からスローされるネイティブ コードの例外をキャッチする](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)<br/>
 ネイティブ コードで CLR と C++ の例外をキャッチする方法について説明します。
 
-[方法: グローバル例外ハンドラーを定義およびインストールする](../dotnet/how-to-define-and-install-a-global-exception-handler.md)  
+[方法: グローバル例外ハンドラーを定義およびインストールする](../dotnet/how-to-define-and-install-a-global-exception-handler.md)<br/>
 すべての未処理の例外をキャッチする方法を示します。
 
 ## <a name="related-sections"></a>関連項目
 
-[例外処理](../cpp/exception-handling-in-visual-cpp.md)  
+[例外処理](../cpp/exception-handling-in-visual-cpp.md)<br/>
 C++ の例外処理について説明します。
 
 ## <a name="see-also"></a>関連項目

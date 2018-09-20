@@ -1,5 +1,5 @@
 ---
-title: 印刷および印刷プレビュー |Microsoft ドキュメント
+title: 印刷および印刷プレビュー |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,27 +18,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a26bac196dbddc6c05df5850225d05f432bc566
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9aad5c69f6466ea8803cb466c5e5529f3dce1340
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346257"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374454"
 ---
 # <a name="printing-and-print-preview"></a>印刷および印刷プレビュー
-MFC クラスを使用して、プログラムのドキュメントの印刷と印刷プレビューをサポートしています[CView](../mfc/reference/cview-class.md)です。 基本的な印刷と印刷プレビューでは、単に上書きビュー クラスの[OnDraw](../mfc/reference/cview-class.md#ondraw)メンバー関数を行うことができます。 その関数が実際のプリンターのプリンター デバイス コンテキストを画面上の表示を描画できるまたは画面にプリンターをシミュレートするデバイス コンテキストにします。  
-  
- マルチページ ドキュメントの印刷とプレビュー、およびそれらにヘッダーとページ フッターを追加する、印刷されたドキュメントを改ページ調整を管理するためのコードを追加することもできます。  
-  
- この一連のトピックでは、印刷の Microsoft Foundation Class ライブラリ (MFC) を実装する方法と、フレームワークに既に組み込まれている印刷のアーキテクチャを活用する方法について説明します。 アーティクルは、方法 MFC をサポートします。 印刷プレビュー機能の簡単な実装を使用し、その機能を変更する方法も説明します。  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>詳しくは次のトピックをクリックしてください。  
-  
--   [印刷](../mfc/printing.md)  
-  
--   [印刷プレビューのアーキテクチャ](../mfc/print-preview-architecture.md)  
-  
--   [サンプル](../visual-cpp-samples.md)  
-  
-## <a name="see-also"></a>関連項目  
- [ユーザー インターフェイス要素](../mfc/user-interface-elements-mfc.md)
+
+MFC クラスを使用して、プログラムのドキュメントの印刷と印刷プレビューをサポートしている[CView](../mfc/reference/cview-class.md)します。 基本的な印刷と印刷プレビューでは、ビュー クラスをオーバーライドするだけで[OnDraw](../mfc/reference/cview-class.md#ondraw)メンバー関数で行うことができます。 その関数が実際のプリンターのプリンター デバイス コンテキストを画面上の表示を描画できます。 または画面上のプリンターをシミュレートするデバイス コンテキストにします。
+
+マルチページ ドキュメントの印刷とプレビュー、それらにヘッダーとフッターを追加して、印刷されたドキュメントでは、改ページ調整を管理するためのコードを追加することもできます。
+
+この一連のトピックでは、印刷は、Microsoft Foundation Class ライブラリ (MFC) を実装する方法と、フレームワークに組み込まれている印刷のアーキテクチャを活用する方法について説明します。 また、記事は、MFC が印刷プレビュー機能の簡単な実装をサポートする方法と、使用して、その機能を変更する方法を説明します。
+
+## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+
+- [印刷](../mfc/printing.md)
+
+- [印刷プレビューのアーキテクチャ](../mfc/print-preview-architecture.md)
+
+- [サンプル](../visual-cpp-samples.md)
+
+## <a name="see-also"></a>関連項目
+
+[ユーザー インターフェイス要素](../mfc/user-interface-elements-mfc.md)

@@ -82,205 +82,210 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d1f0f26856d6da002f5ba74bbfa8e98f27e4f02
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 69dd5e5080735c1b347b164887fdfab76aa9b178
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46042586"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428397"
 ---
 # <a name="int3-class"></a>int_3 クラス
-3 個の整数の short ベクターを表します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-class int_3;  
-```  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="public-typedefs"></a>パブリック typedef  
-  
-|名前|説明|  
-|----------|-----------------|  
-|`value_type`||  
-  
-### <a name="public-constructors"></a>パブリック コンストラクター  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[int_3 コンス トラクター](#ctor)|オーバーロードされます。 既定のコンストラクター。すべての要素を 0 で初期化します。|  
-  
-### <a name="public-methods"></a>パブリック メソッド  
-  
-|名前|説明|  
-|----------|-----------------|  
-|int_3::get_x||  
-|int_3::get_xy||  
-|int_3::get_xyz||  
-|int_3::get_xz||  
-|int_3::get_xzy||  
-|int_3::get_y||  
-|int_3::get_yx||  
-|int_3::get_yxz||  
-|int_3::get_yz||  
-|int_3::get_yzx||  
-|int_3::get_z||  
-|int_3::get_zx||  
-|int_3::get_zxy||  
-|int_3::get_zy||  
-|int_3::get_zyx||  
-|int_3::ref_b||  
-|int_3::ref_g||  
-|int_3::ref_r||  
-|int_3::ref_x||  
-|int_3::ref_y||  
-|int_3::ref_z||  
-|int_3::set_x||  
-|int_3::set_xy||  
-|int_3::set_xyz||  
-|int_3::set_xz||  
-|int_3::set_xzy||  
-|int_3::set_y||  
-|int_3::set_yx||  
-|int_3::set_yxz||  
-|int_3::set_yz||  
-|int_3::set_yzx||  
-|int_3::set_z||  
-|int_3::set_zx||  
-|int_3::set_zxy||  
-|int_3::set_zy||  
-|int_3::set_zyx||  
-  
-### <a name="public-operators"></a>パブリック演算子  
-  
-|名前|説明|  
-|----------|-----------------|  
-|int_3::operator-||  
-|int_3::operator--||  
-|int_3::operator%=||  
-|int_3::operator&=||  
-|int_3::operator*=||  
-|int_3::operator/=||  
-|int_3::operator^=||  
-|int_3::operator&#124;=||  
-|int_3::operator~||  
-|int_3::operator++||  
-|int_3::operator+=||  
-|int_3::operator<\<=||  
-|int_3::operator=||  
-|int_3::operator-=||  
-|int_3::operator>>=||  
-  
-### <a name="public-constants"></a>パブリック定数  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[定数のサイズ](#size)||  
-  
-### <a name="public-data-members"></a>パブリック データ メンバー  
-  
-|名前|説明|  
-|----------|-----------------|  
-|int_3::b||  
-|int_3::bg||  
-|int_3::bgr||  
-|int_3::br||  
-|int_3::brg||  
-|int_3::g||  
-|int_3::gb||  
-|int_3::gbr||  
-|int_3::gr||  
-|int_3::grb||  
-|int_3::r||  
-|int_3::rb||  
-|int_3::rbg||  
-|int_3::rg||  
-|int_3::rgb||  
-|int_3::x||  
-|int_3::xy||  
-|int_3::xyz||  
-|int_3::xz||  
-|int_3::xzy||  
-|int_3::y||  
-|int_3::yx||  
-|int_3::yxz||  
-|int_3::yz||  
-|int_3::yzx||  
-|int_3::z||  
-|int_3::zx||  
-|int_3::zxy||  
-|int_3::zy||  
-|int_3::zyx||  
-  
-## <a name="inheritance-hierarchy"></a>継承階層  
- `int_3`  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** amp_short_vectors.h  
-  
- **Namespace:** concurrency::graphics  
 
-## <a name="ctor"></a> int_3 
+3 個の整数の short ベクターを表します。
 
-既定のコンストラクター。すべての要素を 0 で初期化します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-int_3() restrict(amp,cpu);  
-int_3(  
-   int _V0,  
-   int _V1,  
-   int _V2  
-) restrict(amp,cpu);  
-int_3(  
-   int _V  
-) restrict(amp,cpu);  
-int_3(  
-   const int_3& _Other  
-) restrict(amp,cpu);  
-explicit inline int_3(  
-   const uint_3& _Other  
-) restrict(amp,cpu);  
-explicit inline int_3(  
-   const float_3& _Other  
-) restrict(amp,cpu);  
-explicit inline int_3(  
-   const unorm_3& _Other  
-) restrict(amp,cpu);  
-explicit inline int_3(  
-   const norm_3& _Other  
-) restrict(amp,cpu);  
-explicit inline int_3(  
-   const double_3& _Other  
-) restrict(amp,cpu);  
-```  
-  
-### <a name="parameters"></a>パラメーター  
+## <a name="syntax"></a>構文
+
+```
+class int_3;
+```
+
+## <a name="members"></a>メンバー
+
+### <a name="public-typedefs"></a>パブリック typedef
+
+|名前|説明|
+|----------|-----------------|
+|`value_type`||
+
+### <a name="public-constructors"></a>パブリック コンストラクター
+
+|名前|説明|
+|----------|-----------------|
+|[int_3 コンス トラクター](#ctor)|オーバーロードされます。 既定のコンストラクター。すべての要素を 0 で初期化します。|
+
+### <a name="public-methods"></a>パブリック メソッド
+
+|名前|説明|
+|----------|-----------------|
+|int_3::get_x||
+|int_3::get_xy||
+|int_3::get_xyz||
+|int_3::get_xz||
+|int_3::get_xzy||
+|int_3::get_y||
+|int_3::get_yx||
+|int_3::get_yxz||
+|int_3::get_yz||
+|int_3::get_yzx||
+|int_3::get_z||
+|int_3::get_zx||
+|int_3::get_zxy||
+|int_3::get_zy||
+|int_3::get_zyx||
+|int_3::ref_b||
+|int_3::ref_g||
+|int_3::ref_r||
+|int_3::ref_x||
+|int_3::ref_y||
+|int_3::ref_z||
+|int_3::set_x||
+|int_3::set_xy||
+|int_3::set_xyz||
+|int_3::set_xz||
+|int_3::set_xzy||
+|int_3::set_y||
+|int_3::set_yx||
+|int_3::set_yxz||
+|int_3::set_yz||
+|int_3::set_yzx||
+|int_3::set_z||
+|int_3::set_zx||
+|int_3::set_zxy||
+|int_3::set_zy||
+|int_3::set_zyx||
+
+### <a name="public-operators"></a>パブリック演算子
+
+|名前|説明|
+|----------|-----------------|
+|int_3::operator-||
+|int_3::operator--||
+|int_3::operator%=||
+|int_3::operator&=||
+|int_3::operator*=||
+|int_3::operator/=||
+|int_3::operator^=||
+|int_3::operator&#124;=||
+|int_3::operator~||
+|int_3::operator++||
+|int_3::operator+=||
+|int_3::operator<\<=||
+|int_3::operator=||
+|int_3::operator-=||
+|int_3::operator>>=||
+
+### <a name="public-constants"></a>パブリック定数
+
+|名前|説明|
+|----------|-----------------|
+|[定数のサイズ](#size)||
+
+### <a name="public-data-members"></a>パブリック データ メンバー
+
+|名前|説明|
+|----------|-----------------|
+|int_3::b||
+|int_3::bg||
+|int_3::bgr||
+|int_3::br||
+|int_3::brg||
+|int_3::g||
+|int_3::gb||
+|int_3::gbr||
+|int_3::gr||
+|int_3::grb||
+|int_3::r||
+|int_3::rb||
+|int_3::rbg||
+|int_3::rg||
+|int_3::rgb||
+|int_3::x||
+|int_3::xy||
+|int_3::xyz||
+|int_3::xz||
+|int_3::xzy||
+|int_3::y||
+|int_3::yx||
+|int_3::yxz||
+|int_3::yz||
+|int_3::yzx||
+|int_3::z||
+|int_3::zx||
+|int_3::zxy||
+|int_3::zy||
+|int_3::zyx||
+
+## <a name="inheritance-hierarchy"></a>継承階層
+
+`int_3`
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** amp_short_vectors.h
+
+**Namespace:** concurrency::graphics
+
+## <a name="ctor"></a> int_3
+
+既定のコンストラクター。すべての要素を 0 で初期化します。
+
+## <a name="syntax"></a>構文
+
+```
+int_3() restrict(amp,cpu);
+int_3(
+   int _V0,
+   int _V1,
+   int _V2
+) restrict(amp,cpu);
+int_3(
+   int _V
+) restrict(amp,cpu);
+int_3(
+   const int_3& _Other
+) restrict(amp,cpu);
+explicit inline int_3(
+   const uint_3& _Other
+) restrict(amp,cpu);
+explicit inline int_3(
+   const float_3& _Other
+) restrict(amp,cpu);
+explicit inline int_3(
+   const unorm_3& _Other
+) restrict(amp,cpu);
+explicit inline int_3(
+   const norm_3& _Other
+) restrict(amp,cpu);
+explicit inline int_3(
+   const double_3& _Other
+) restrict(amp,cpu);
+```
+
+### <a name="parameters"></a>パラメーター
+
 *_V0*<br/>
-0 の要素を初期化する値。  
-  
-*_V1*<br/>
-1 要素を初期化する値。  
-  
-*_V2*<br/>
-2 要素を初期化する値。  
-  
-*(_V).*<br/>
-初期化の値。  
-  
-*_Other*<br/>
-初期化するために使用するオブジェクト。  
-  
-## <a name="size"></a> サイズ 
+0 の要素を初期化する値。
 
-## <a name="syntax"></a>構文  
-  
-```  
-static const int size = 3;  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)
+*_V1*<br/>
+1 要素を初期化する値。
+
+*_V2*<br/>
+2 要素を初期化する値。
+
+*(_V).*<br/>
+初期化の値。
+
+*_Other*<br/>
+初期化するために使用するオブジェクト。
+
+## <a name="size"></a> サイズ
+
+## <a name="syntax"></a>構文
+
+```
+static const int size = 3;
+```
+
+## <a name="see-also"></a>関連項目
+
+[Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: WinInet の基礎 |Microsoft ドキュメント
+title: WinInet の基礎 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,57 +16,65 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7061c3203436197eb1bd03ae56058e0bd0f26f9d
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 98ca2eab519cdfa3140d40adfd83070976dcc965
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955584"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435650"
 ---
 # <a name="wininet-basics"></a>WinInet の基礎
-WinInet を使用して、ダウンロードしてから、アプリケーション内のファイルをアップロードする FTP サポートを追加することができます。 オーバーライドできます[OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback)を使用して、*独自*を検索して、ファイルをダウンロードすると、ユーザーに進行状況に関する情報を提供するパラメーターです。  
-  
- この記事には、次のトピックが含まれています。  
-  
--   [非常に単純なブラウザーを作成します。](#_core_create_a_very_simple_browser)  
-  
--   [Web ページをダウンロードします。](#_core_download_a_web_page)  
-  
--   [FTP ファイル](#_core_ftp_a_file)  
-  
--   [Gopher ディレクトリを取得します。](#_core_retrieve_a_gopher_directory)  
-  
--   [ファイルの転送中に進行状況に関する情報を表示します。](#_core_display_progress_information_while_transferring_files)  
-  
- 以下の各コードでは、単純なブラウザーの作成、Web ページ、FTP、ファイルをダウンロードおよび gopher ファイルを検索する方法を示します。 完全な例として、意図されていないとが含まれていない例外処理にはします。  
-  
- Wininet の基礎の詳細については、次を参照してください。 [Win32 インターネット拡張機能 (WinInet)](../mfc/win32-internet-extensions-wininet.md)です。  
-  
-##  <a name="_core_create_a_very_simple_browser"></a> 非常に単純なブラウザーを作成します。  
- [!code-cpp[NVC_MFCWinInet#1](../mfc/codesnippet/cpp/wininet-basics_1.cpp)]  
-  
-##  <a name="_core_download_a_web_page"></a> Web ページをダウンロードします。  
- [!code-cpp[NVC_MFCWinInet#2](../mfc/codesnippet/cpp/wininet-basics_2.cpp)]  
-  
-##  <a name="_core_ftp_a_file"></a> FTP ファイル  
- [!code-cpp[NVC_MFCWinInet#3](../mfc/codesnippet/cpp/wininet-basics_3.cpp)]  
-  
-##  <a name="_core_retrieve_a_gopher_directory"></a> Gopher ディレクトリを取得します。  
- [!code-cpp[NVC_MFCWinInet#4](../mfc/codesnippet/cpp/wininet-basics_4.cpp)]  
-  
-## <a name="use-onstatuscallback"></a>OnStatusCallback を使用します。  
- WinInet クラスを使用するには、する場合は、使用、 [OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback) 、アプリケーションのメンバー [CInternetSession](../mfc/reference/cinternetsession-class.md)ステータス情報を取得するオブジェクト。 派生させた場合、独自`CInternetSession`オブジェクト、オーバーライド`OnStatusCallback`、状態のコールバックを有効にして MFC を呼び出す、`OnStatusCallback`進行状況が、インターネット、そのセッションで、すべてのアクティビティに関する情報を持つ関数です。  
-  
- 1 つのセッションは、いくつかの接続 (、有効期間が多くの異なる個別の操作を実行する可能性があります) をサポートするため`OnStatusCallback`特定の接続またはトランザクションの各状態の変更を識別するメカニズムが必要です。 このメカニズムは、WinInet のサポート クラスのメンバー関数の多くに指定されたコンテキストの ID パラメーターによって提供されます。 このパラメーターは常に型**DWORD**は常に名前と*独自*です。  
-  
- インターネットの特定のオブジェクトに割り当てられているコンテキストが内のオブジェクトがアクティビティの識別にのみ使用されます、`OnStatusCallback`のメンバー、`CInternetSession`オブジェクト。 呼び出し`OnStatusCallback`いくつかのパラメーターを受け取るこれらのパラメーターが連携する進行状況がどのトランザクションと接続されています、アプリケーションに指示します。  
-  
- 作成するときに、`CInternetSession`オブジェクトを指定できます、*独自*コンス トラクターのパラメーターです。 `CInternetSession` 自体、コンテキスト ID を使用しません。いずれかにコンテキスト ID を渡す代わりに、**です**-独自のコンテキスト ID を取得しない明示的にオブジェクトを派生します。 それら`CInternetConnection`オブジェクトがに沿ってコンテキスト ID を渡す`CInternetFile`オブジェクトを別のコンテキスト ID を明示的に指定しない場合に作成します。 独自の特定のコンテキスト ID、オブジェクトおよびその動作はそのコンテキスト ID に関連付けられるを指定するはその一方で、 指定されているどのようなステータス情報を識別する Id コンテキストを使用することができます、`OnStatusCallback`関数。  
-  
-##  <a name="_core_display_progress_information_while_transferring_files"></a> ファイルの転送中に進行状況に関する情報を表示します。  
- たとえば、ファイルの読み取りに FTP サーバーとの接続を作成し、Web ページの取得に HTTP サーバーにも接続するアプリケーションを記述する場合があります、`CInternetSession`オブジェクト、2 つ`CInternetConnection`オブジェクト (いずれかになります、`CFtpSession`し、もう一方が`CHttpSession`)、2 つと`CInternetFile`オブジェクト (接続ごとに 1 つ)。 既定値を使用した場合、*独自*パラメーターでないことができますを区別する、 `OnStatusCallback` FTP 接続と呼び出しの進行状況を示す進行状況を示すための呼び出し、HTTP 接続です。 指定した場合、*独自*ID で、後でのテストできます`OnStatusCallback`、どの操作がコールバックを生成することがわかります。  
-  
-## <a name="see-also"></a>関連項目  
- [MFC インターネット プログラミングの基礎](../mfc/mfc-internet-programming-basics.md)   
- [Win32 インターネット拡張機能 (WinInet)](../mfc/win32-internet-extensions-wininet.md)
+
+WinInet を使用して、ダウンロードしてから、アプリケーション内のファイルをアップロードする FTP サポートを追加することができます。 オーバーライドできます[OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback)を使用して、*独自*検索ファイルをダウンロードすると、ユーザーに進行状況に関する情報を提供するパラメーター。
+
+この記事には、次のトピックが含まれています。
+
+- [非常にシンプルなブラウザーを作成します。](#_core_create_a_very_simple_browser)
+
+- [Web ページをダウンロードします。](#_core_download_a_web_page)
+
+- [FTP ファイル](#_core_ftp_a_file)
+
+- [Gopher ディレクトリを取得します。](#_core_retrieve_a_gopher_directory)
+
+- [ファイルの転送中に進行状況に関する情報を表示します。](#_core_display_progress_information_while_transferring_files)
+
+次のコードの抜粋では、単純なブラウザーを作成、Web ページでは、FTP、ファイルをダウンロードして gopher ファイルを検索する方法を示します。 完全な例としてはないし、例外処理が含まれていません。
+
+WinInet の詳細については、次を参照してください。 [Win32 インターネット拡張機能 (WinInet)](../mfc/win32-internet-extensions-wininet.md)します。
+
+##  <a name="_core_create_a_very_simple_browser"></a> 非常にシンプルなブラウザーを作成します。
+
+[!code-cpp[NVC_MFCWinInet#1](../mfc/codesnippet/cpp/wininet-basics_1.cpp)]
+
+##  <a name="_core_download_a_web_page"></a> Web ページをダウンロードします。
+
+[!code-cpp[NVC_MFCWinInet#2](../mfc/codesnippet/cpp/wininet-basics_2.cpp)]
+
+##  <a name="_core_ftp_a_file"></a> FTP ファイル
+
+[!code-cpp[NVC_MFCWinInet#3](../mfc/codesnippet/cpp/wininet-basics_3.cpp)]
+
+##  <a name="_core_retrieve_a_gopher_directory"></a> Gopher ディレクトリを取得します。
+
+[!code-cpp[NVC_MFCWinInet#4](../mfc/codesnippet/cpp/wininet-basics_4.cpp)]
+
+## <a name="use-onstatuscallback"></a>OnStatusCallback を使用します。
+
+WinInet クラスを使用するには、する場合は、使用、 [OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback)のアプリケーションのメンバー [CInternetSession](../mfc/reference/cinternetsession-class.md)ステータス情報を取得するオブジェクト。 独自を派生させる場合`CInternetSession`オブジェクト、オーバーライド`OnStatusCallback`、状態のコールバックを有効にして MFC が呼び出す、`OnStatusCallback`進行状況が、インターネット、そのセッションで、すべてのアクティビティに関する情報を持つ関数。
+
+1 つのセッションはいくつかの接続 (、有効期間、多くの異なる個別の操作を実行可能性があります)、サポート可能性があるため`OnStatusCallback`特定の接続またはトランザクションを使用して各状態の変更を識別するためのメカニズムを必要があります。 このメカニズムは、WinInet のサポート クラスのメンバー関数の多くに指定されたコンテキストの ID パラメーターによって提供されます。 このパラメーターは常に型**DWORD**名前は常に*独自*します。
+
+オブジェクトによって発生するアクティビティを識別するためにのみ、特定のインターネット オブジェクトに割り当てられているコンテキストが使用される、`OnStatusCallback`のメンバー、`CInternetSession`オブジェクト。 呼び出し`OnStatusCallback`いくつかのパラメーターを受け取るこれらのパラメーターが連携するトランザクションと接続はどのような進行状況をアプリケーションに指示します。
+
+作成するときに、`CInternetSession`オブジェクトを指定できます、*独自*コンス トラクターのパラメーター。 `CInternetSession` 自体、コンテキスト ID を使用しません。代わりに、どのコンテキスト ID を渡します**インターネット**-派生した独自のコンテキスト ID を明示的に取得されないオブジェクト。 さらに、その`CInternetConnection`オブジェクトはに沿ってコンテキスト ID を渡す`CInternetFile`オブジェクトを別のコンテキスト ID を明示的に指定しない場合に作成します。 場合、独自の特定のコンテキスト ID、オブジェクト、およびその動作はコンテキスト ID に関連付けられる指定した一方で、 コンテキスト Id を使用するにはどのようなステータス情報で渡さを識別するために、`OnStatusCallback`関数。
+
+##  <a name="_core_display_progress_information_while_transferring_files"></a> ファイルの転送中に進行状況に関する情報を表示します。
+
+たとえば、ある場合はファイルの読み取りに FTP サーバーとの接続を作成しても Web ページを取得する HTTP サーバーに接続するアプリケーションを記述する、`CInternetSession`オブジェクト、2 つ`CInternetConnection`オブジェクト (1 つになります、`CFtpSession`あり、その他`CHttpSession`)、2 つと`CInternetFile`オブジェクト (接続ごとに 1 つ)。 既定値を使用している場合、*独自*パラメーター、しないことができますを区別する、 `OnStatusCallback` FTP 接続と呼び出しの進行状況を示す進行状況を示す呼び出し、HTTP 接続です。 指定した場合、*独自*ID で、後でのテストできる`OnStatusCallback`、どの操作には、コールバックが生成されることがわかります。
+
+## <a name="see-also"></a>関連項目
+
+[MFC インターネット プログラミングの基礎](../mfc/mfc-internet-programming-basics.md)<br/>
+[Win32 インターネット拡張機能 (WinInet)](../mfc/win32-internet-extensions-wininet.md)
 

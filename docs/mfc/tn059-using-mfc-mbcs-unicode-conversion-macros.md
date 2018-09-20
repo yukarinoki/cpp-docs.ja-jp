@@ -1,5 +1,5 @@
 ---
-title: 'TN059: MFC の MBCS Unicode 変換マクロの使用 |Microsoft ドキュメント'
+title: 'TN059: MFC の MBCS、Unicode 変換マクロの使用 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,183 +23,189 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e857d6f5bc2ebabb0f36a3c97e011a4f2a00d641
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 232a590c7e0d2a494b447a260ab4920a148c2e0d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953504"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443918"
 ---
 # <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>テクニカル ノート 59: MFC の MBCS/Unicode 変換マクロの使用
+
 > [!NOTE]
->  次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。  
-  
- ここでは、AFXPRIV で定義されている Mbcs/unicode 変換マクロを使用する方法について説明します。H. これらのマクロはアプリケーション商談直接 OLE API でまたは何らかの理由により、多くの場合、必要がある Unicode と MBCS の間で変換する場合に特に役立ちます。  
-  
-## <a name="overview"></a>概要  
- Mfc 3.x、特別な DLL が (MFCANS32 を使用します。DLL) をクリックし、OLE インターフェイスが呼び出されたときに、Unicode と MBCS の間で自動的に変換します。 この DLL が OLE アプリケーションを書き込む場合と同様、OLE Api とインターフェイス MBCS、であっても、常に Unicode を許可されているほぼ透過的なレイヤー (Macintosh 上を除く)。 この層が便利なときに、簡単に移植して Win16 から Win32 にアプリケーションを許可 (MFC、Microsoft Word、Excel、および VBA ではこのテクノロジを使用した Microsoft アプリケーションの一部)、大幅なパフォーマンスがヒットします。 このため、MFC 4.x がこの DLL を使用しないと、代わりに Unicode OLE インターフェイスに直接通信します。 これを行うには、MFC は、OLE インターフェイスへの呼び出しを行うときに、MBCS に Unicode に変換する必要があり、多くの場合、OLE インターフェイスを実装する場合は、Unicode から MBCS に変換する必要があります。 この処理を行う簡単かつ効率的にするためにいくつかのマクロはこの変換を容易に作成されました。  
-  
- このような一連のマクロを作成する最も大きな難関の 1 つは、メモリの割り当てです。 インプレース文字列に変換できないために、変換した結果を格納する新しいメモリを割り当てる必要があります。 これは、可能性がありますが完了すると、次のようなコード。  
-  
-```  
-// we want to convert an MBCS string in lpszA  
+>  次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。
+
+ここでは、MBCS または Unicode 変換で AFXPRIV で定義されているマクロを使用する方法について説明します。H. これらのマクロは、アプリケーション取引直接 OLE API を使用した、または何らかの理由は、多くの場合、必要な Unicode と MBCS 変換する場合に特に役立ちます。
+
+## <a name="overview"></a>概要
+
+Mfc 3.x、特別な DLL が (MFCANS32 の使用します。DLL) をクリックし、OLE インターフェイスが呼び出されたときに、Unicode と MBCS の間で自動的に変換します。 この DLL が常に Unicode があるにもかかわらず、OLE Api とインターフェイスが MBCS、まるで書き込まれる OLE アプリケーションが許可されているレイヤーを透明に近い (Macintosh 上を除く)。 このレイヤーは便利でしたができ、アプリケーションの Win16 から Win32 にすばやく移植 (MFC、Microsoft Word、Excel、および VBA ではこのテクノロジを使用する Microsoft アプリケーションの一部)、大幅なパフォーマンスがヒットします。 このため、MFC 4.x この DLL は使用されないため、代わりに Unicode OLE インターフェイスに直接通信します。 これを行うには、MFC は、OLE インターフェイスへの呼び出しを行うときに、MBCS、Unicode に変換する必要があり、多くの場合、OLE インターフェイスを実装する場合は、Unicode から MBCS に変換する必要があります。 簡単かつ効率的には、これを処理するために、いくつかのマクロは、この変換を容易に作成されました。
+
+マクロのセットを作成する最も大きな難関の 1 つは、メモリの割り当てです。 文字列をインプレース変換できないため、変換した結果を格納する新しいメモリを割り当てる必要があります。 これでしたが完了すると、次のようなコード。
+
+```
+// we want to convert an MBCS string in lpszA
 int nLen = MultiByteToWideChar(CP_ACP,
     0,
     lpszA, -1,
     NULL,
     NULL);
 
-LPWSTR lpszW = new WCHAR[nLen];  
+LPWSTR lpszW = new WCHAR[nLen];
 MultiByteToWideChar(CP_ACP,
-    0,   
+    0,
     lpszA, -1,
     lpszW,
     nLen);
 
-// use it to call OLE here  
+// use it to call OLE here
 pI->SomeFunctionThatNeedsUnicode(lpszW);
 
-// free the string  
-delete[] lpszW;  
-```  
-  
- この方法には、さまざまな問題ではします。 主な問題は、多くの記述、テスト、およびデバッグするコードであることです。 単純な関数が呼び出されました、はるかに複雑になっているものです。 さらに、これにオーバーヘッドが大幅なランタイムがあります。 メモリにするため、ヒープに割り当てられた変換が行われるたびを解放します。 最後に、上記のコードが必要に適切な`#ifdefs`(これを行うには、この変換を必要としない) ビルドの Unicode および Macintosh 追加します。  
-  
- 思いつきましたソリューションでは、いくつかのマクロをどのマスク 1) との差分、さまざまなプラットフォームでは、2) を使用して、効率的なメモリの割り当て方法および 3) は、既存に簡単に挿入のソース コードを作成します。 いずれかの定義の例を次に示します。  
-  
-```  
-#define A2W(lpa) (\  
- ((LPCSTR)lpa == NULL) NULL : (\  
-    _convert = (strnlen(lpa)+1),\  
-    AfxA2WHelper((LPWSTR) alloca(_convert*2),   
+// free the string
+delete[] lpszW;
+```
+
+この方法には、さまざまな問題では。 主な問題は、大量の記述、テスト、およびデバッグするコードです。 単純な関数呼び出しが、はるかに複雑になっているものです。 さらに、これにオーバーヘッドが大幅なランタイムがあります。 メモリがヒープに割り当てられ、変換が行われるたびに解放される必要があります。 最後に、上記のコードが必要に適切な`#ifdefs`(これを行うには、この変換を必要としない)、Unicode と Mac のビルドに追加します。
+
+そうと、ソリューションでは、ソース コードをどのマスク 1) さまざまなプラットフォーム、および 2) を使用した、効率的なメモリの割り当て方法の違いと 3) は、既存に挿入する簡単ないくつかのマクロを作成します。 定義を 1 つの例を次に示します。
+
+```
+#define A2W(lpa) (\
+((LPCSTR)lpa == NULL) NULL : (\
+    _convert = (strnlen(lpa)+1),\
+    AfxA2WHelper((LPWSTR) alloca(_convert*2),
     lpa,
-    _convert)\)\)  
-```  
-  
- この上記のコードではなくマクロと処理を使用したは、はるかに簡単です。  
-  
-```  
-// use it to call OLE here  
-USES_CONVERSION;  
+    _convert)\)\)
+```
+
+この上記のコードではなくマクロと処理を使用することはとても簡単です。
+
+```
+// use it to call OLE here
+USES_CONVERSION;
 pI->SomeFunctionThatNeedsUnicode(T2OLE(lpszA));
-```  
-  
- ここで変換が必要に応じてがマクロを使用する簡単で効果的な余分な呼び出しがあります。  
-  
- 各マクロの実装では、ヒープではなく、スタックからメモリを割り当てる _alloca() 関数を使用します。 スタックからのメモリの割り当ては、ヒープのメモリを割り当てる場合よりもはるかに高速とメモリは、関数が終了したときに自動的に解放します。 マクロが通話を回避するさらに、 `MultiByteToWideChar` (または`WideCharToMultiByte`) 1 つ以上の時間。 これは、必要なは、もう少し以上のメモリを割り当てることによって行います。 MBC は多くても 1 つに変換されていることが分かって**WCHAR**と各**WCHAR**が 2 文字の最大数。 必ずがよりは少し多く必要に応じて、割り当てることによって変換を処理する、2 番目の呼び出し 2 番目の変換関数の呼び出しを回避できます。 ヘルパー関数を呼び出す`AfxA2Whelper`が変換を実行するために行う必要がある引数のプッシュの数が減り、(この結果より小さなコードよりも呼び出される場合`MultiByteToWideChar`直接)。  
-  
- 領域がないマクロを格納する順に、変換マクロを使用するは、各関数でを変換 (_c) と呼ばれるローカル変数を宣言する必要がある一時的な長さです。 これは、上記の例に示すように USES_CONVERSION マクロを呼び出すことによって行います。  
-  
- 汎用変換マクロと OLE 固有のマクロの両方があります。 これら 2 つの異なるマクロ セットを次に説明します。 すべてのマクロは、AFXPRIV に存在します。H.  
-  
-## <a name="generic-conversion-macros"></a>汎用変換マクロ  
- 汎用変換マクロは、基になるメカニズムを形成します。 マクロの例と A2W、前のセクションで示すように実装は、このような 1 つの「汎用」マクロです。 OLE を具体的には関係ことはありません。 ジェネリックのマクロのセットは次のとおりです。  
-  
-```  
-A2CW      (LPCSTR) -> (LPCWSTR)  
-A2W      (LPCSTR) -> (LPWSTR)  
-W2CA      (LPCWSTR) -> (LPCSTR)  
-W2A      (LPCWSTR) -> (LPSTR)  
-```  
-  
- テキスト変換を行うだけでなくもマクロとを変換するためのヘルパー関数`TEXTMETRIC`、 `DEVMODE`、 `BSTR`、および OLE 文字列が割り当てられます。 これらのマクロはここでは扱いません - AFXPRIV を参照してください。詳細については、これらのマクロ H します。  
-  
-## <a name="ole-conversion-macros"></a>OLE 変換マクロ  
- OLE 変換マクロが期待する関数の処理用に設計された**OLESTR**文字です。 OLE ヘッダーを確認する場合に多くの参照が表示されます**LPCOLESTR**と**OLECHAR**です。 これらの型は、プラットフォームに固有ではない方法での OLE インターフェイスで使用される文字の種類を参照に使用されます。 **OLECHAR**にマップ**char** Win16 または Macintosh プラットフォームと**WCHAR** Win32 でします。  
-  
- 数を保持するために **#ifdef** MFC でのディレクティブのコードを最小限に抑えるの各変換のようなマクロがあることを OLE 文字列が関係しています。 次のマクロがよく使用されます。  
-  
-```  
-T2COLE   (LPCTSTR) -> (LPCOLESTR)  
-T2OLE   (LPCTSTR) -> (LPOLESTR)  
-OLE2CT   (LPCOLESTR) -> (LPCTSTR)  
-OLE2T   (LPCOLESTR) -> (LPCSTR)  
-```  
-  
- もう一度は、受け取る、DEVMODE、BSTR、および OLE 文字列の割り当てを行うためのようなマクロがあります。 AFXPRIV を参照してください。詳細については H します。  
-  
-## <a name="other-considerations"></a>その他の注意事項  
- ループの中でマクロを使用しないでください。 たとえば、次のようなコードを記述することはおたくないです。  
-  
-```  
-void BadIterateCode(LPCTSTR lpsz)  
-{  
-    USES_CONVERSION; 
-    for (int ii = 0; ii <10000; ii++)  
+```
+
+変換が必要に応じてが簡単で効果的なは、マクロを使用して、余分な呼び出しがあります。
+
+各マクロの実装では、ヒープではなく、スタックからメモリを割り当てる場合、_alloca() 関数を使用します。 ヒープ上のメモリを割り当てる場合よりもはるかに高速では、スタックからメモリを割り当てると、メモリは、関数が終了したときに自動的に解放します。 さらに、呼び出すことは避け、マクロ`MultiByteToWideChar`(または`WideCharToMultiByte`) 1 つ以上の時間。 これは、必要なはよりもう少し多くのメモリを割り当てることによって行います。 MBC は多くて 1 つに変換されていることがわかって**WCHAR**と各**WCHAR** 2 文字の最大必要があります。 必ずが少々 必要に応じて、割り当てることによって、変換、2 番目の呼び出しを次に処理するために、変換関数への呼び出しを回避できます。 ヘルパー関数を呼び出す`AfxA2Whelper`変換を実行するために行う必要がある引数のプッシュの数を減らします (この結果より小さなコードよりも呼び出される場合`MultiByteToWideChar`直接)。
+
+格納する領域がないマクロの順序で、変換マクロを使用するは、各関数を変換 (_c) と呼ばれるローカル変数を宣言する必要がある一時の長さ。 これは、上記の例に示すように、USES_CONVERSION マクロを呼び出すことによって行います。
+
+汎用変換マクロと OLE 固有のマクロの両方があります。 これら 2 つの異なるマクロのセットを以下に示します。 すべてのマクロは AFXPRIV 内に存在します。H.
+
+## <a name="generic-conversion-macros"></a>汎用変換マクロ
+
+汎用変換マクロは、基になるメカニズムを形成します。 マクロの例と A2W、前のセクションで示す実装は、このような 1 つの「汎用」マクロです。 OLE に具体的には関連してがありません。 ジェネリックのマクロのセットは、次に示します。
+
+```
+A2CW      (LPCSTR) -> (LPCWSTR)
+A2W      (LPCSTR) -> (LPWSTR)
+W2CA      (LPCWSTR) -> (LPCSTR)
+W2A      (LPCWSTR) -> (LPSTR)
+```
+
+テキスト変換を行うだけでなくもマクロおよび変換するためのヘルパー関数`TEXTMETRIC`、 `DEVMODE`、 `BSTR`、および OLE 文字列が割り当てられています。 これらのマクロは、この説明の範囲を超えています - AFXPRIV を参照してください。これらのマクロの詳細については H します。
+
+## <a name="ole-conversion-macros"></a>OLE 変換マクロ
+
+OLE 変換マクロが予想される関数の処理用に設計された**OLESTR**文字。 OLE ヘッダーを確認する場合に多くの参照が表示されます**LPCOLESTR**と**OLECHAR**します。 これらの型は、プラットフォームに固有でない方法での OLE インターフェイスで使用される文字の型を参照に使用されます。 **OLECHAR**マップ**char** Win16 と Macintosh プラットフォームと**WCHAR** Win32 でします。
+
+数を維持するために **#ifdef**ディレクティブ、MFC でのコードを最小限に変換ごとのようなマクロがあることを OLE 文字列が含まれる場所。 次のマクロがよく使用されます。
+
+```
+T2COLE   (LPCTSTR) -> (LPCOLESTR)
+T2OLE   (LPCTSTR) -> (LPOLESTR)
+OLE2CT   (LPCOLESTR) -> (LPCTSTR)
+OLE2T   (LPCOLESTR) -> (LPCSTR)
+```
+
+ここでも、受け取る、DEVMODE、BSTR、および OLE 文字列の割り当てを行うための類似のマクロがあります。 AFXPRIV を参照してください。詳細については H します。
+
+## <a name="other-considerations"></a>その他の注意事項
+
+ループの中で、マクロを使わないでください。 たとえば、次のようなコードを記述することはおたくないです。
+
+```
+void BadIterateCode(LPCTSTR lpsz)
+{
+    USES_CONVERSION;
+    for (int ii = 0; ii <10000; ii++)
     pI->SomeMethod(ii, T2COLE(lpsz));
 
-}  
-```  
-  
- 上記のコードがどのような文字列の内容によってスタックにメモリのメガバイト数を割り当て、可能性があります`lpsz`は! ループの各イテレーションの文字列に変換する時間もかかります。 代わりに、このような定数の変換はループの外に移動します。  
-  
-```  
-void MuchBetterIterateCode(LPCTSTR lpsz)  
-{  
-    USES_CONVERSION; 
+}
+```
+
+上記のコードは、どのような文字列の内容によってスタックにメモリのメガバイト数の割り当てになる可能性があります`lpsz`です! また、ループの反復ごとに文字列に変換する時間がかかります。 代わりに、ループの外にこのような定数の変換を移動します。
+
+```
+void MuchBetterIterateCode(LPCTSTR lpsz)
+{
+    USES_CONVERSION;
     LPCOLESTR lpszT = T2COLE(lpsz);
 
-    for (int ii = 0; ii <10000; ii++)  
+    for (int ii = 0; ii <10000; ii++)
     pI->SomeMethod(ii, lpszT);
 
-}  
-```  
-  
- 文字列が定数でない場合は、関数にメソッドの呼び出しをカプセル化します。 これは、毎回解放する変換バッファーで許可されます。 例えば:  
-  
-```  
-void CallSomeMethod(int ii, LPCTSTR lpsz)  
-{  
-    USES_CONVERSION; 
+}
+```
+
+文字列が定数でない場合は、関数のメソッド呼び出しをカプセル化します。 これは、毎回解放する変換バッファーで許可されます。 例えば:
+
+```
+void CallSomeMethod(int ii, LPCTSTR lpsz)
+{
+    USES_CONVERSION;
     pI->SomeMethod(ii, T2COLE(lpsz));
 
-}  
- 
-void MuchBetterIterateCode2(LPCTSTR* lpszArray)  
-{  
-    for (int ii = 0; ii <10000; ii++)  
+}
+
+void MuchBetterIterateCode2(LPCTSTR* lpszArray)
+{
+    for (int ii = 0; ii <10000; ii++)
     CallSomeMethod(ii, lpszArray[ii]);
 
-}  
-```  
-  
- 戻り値は、戻り値の前にデータのコピーを作成することを意味しない限り、マクロのいずれかの結果を返すことはありません。 たとえば、このコードは正しくありません。  
-  
-```  
-LPTSTR BadConvert(ISomeInterface* pI)  
-{  
-    USES_CONVERSION; 
-    LPOLESTR lpsz = NULL;  
+}
+```
+
+戻り値は、戻り値の前に、データのコピーを作成することを意味しない限り、マクロのいずれかの結果を返すことはありません。 たとえば、このコードが正しくありません。
+
+```
+LPTSTR BadConvert(ISomeInterface* pI)
+{
+    USES_CONVERSION;
+    LPOLESTR lpsz = NULL;
     pI->GetFileName(&lpsz);
 
- LPTSTR lpszT = OLE2T(lpsz);
+LPTSTR lpszT = OLE2T(lpsz);
 
     CoMemFree(lpsz);
 
- return lpszT; // bad! returning alloca memory  
-}  
-```  
-  
- 上記のコードは、値がコピーされるように、戻り値を変更することで修復可能性があります。  
-  
-```  
-CString BetterConvert(ISomeInterface* pI)  
-{  
-    USES_CONVERSION; 
-    LPOLESTR lpsz = NULL;  
+return lpszT; // bad! returning alloca memory
+}
+```
+
+上記のコードは、値がコピーされるように、戻り値を変更することによって修正でした。
+
+```
+CString BetterConvert(ISomeInterface* pI)
+{
+    USES_CONVERSION;
+    LPOLESTR lpsz = NULL;
     pI->GetFileName(&lpsz);
 
- LPTSTR lpszT = OLE2T(lpsz);
+LPTSTR lpszT = OLE2T(lpsz);
 
     CoMemFree(lpsz);
 
- return lpszT; // CString makes copy  
-}  
-```  
-  
- マクロは使いやすく、簡単に、コードに挿入しますが、上の注意事項がありますから分かるようには、これらを使用する際は注意する必要があります。  
-  
-## <a name="see-also"></a>関連項目  
- [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   
- [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
+return lpszT; // CString makes copy
+}
+```
+
+マクロは使いやすいと、コードに簡単に挿入しますが、上記の注意事項から分かるように、これらを使用するときに注意する必要があります。
+
+## <a name="see-also"></a>関連項目
+
+[番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
+[カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
 

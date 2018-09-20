@@ -1,5 +1,5 @@
 ---
-title: 'TN046: MFC クラスのコメント規約 |Microsoft ドキュメント'
+title: 'TN046: MFC クラスのコメント規約 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de24840ed3b6b7b747bb16cf26cbdb5aed29b1eb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9984e85bbdd047f7673d683e5c5237d93acb818b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380826"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429605"
 ---
 # <a name="tn046-commenting-conventions-for-the-mfc-classes"></a>テクニカル ノート 46: MFC クラスのコメント規約
-このテクニカル ノートは、最初の MFC クラスをコメントに使用する規則を説明します。 この情報については、今すぐ[MFC: MFC ソース ファイルを使用して](../mfc/using-the-mfc-source-files.md)です。  
-  
-## <a name="see-also"></a>関連項目  
- [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   
- [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
+
+当初、このテクニカル ノートには、MFC クラスのコメントに使用する規則がについて説明します。 詳細についてはこの情報[MFC: MFC ソース ファイルを使用して](../mfc/using-the-mfc-source-files.md)します。
+
+## <a name="see-also"></a>関連項目
+
+[番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
+[カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
 

@@ -20,84 +20,96 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40566ab94c9708d7b31f88de0f96b4fc33675534
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: fa21de880dbb2b15498fb1bbcc6e9dc35350b0b3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212522"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417579"
 ---
 # <a name="cwindowdc-class"></a>CWindowDC クラス
-`CDC`の派生クラスです。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-class CWindowDC : public CDC  
-```  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="public-constructors"></a>パブリック コンストラクター  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[CWindowDC::CWindowDC](#cwindowdc)|`CWindowDC` オブジェクトを構築します。|  
-  
-### <a name="protected-data-members"></a>プロテクト データ メンバー  
-  
-|name|説明|  
-|----------|-----------------|  
-|[CWindowDC::m_hWnd](#m_hwnd)|この HWND`CWindowDC`がアタッチされています。|  
-  
-## <a name="remarks"></a>Remarks  
- Windows 関数を呼び出す[GetWindowDC](/windows/desktop/api/winuser/nf-winuser-getwindowdc)構築時に、 [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc)破棄時にします。 つまり、`CWindowDC`オブジェクト アクセスの全画面領域を[CWnd](../../mfc/reference/cwnd-class.md) (クライアントと非クライアント領域)。  
-  
- 使用しての詳細については`CWindowDC`を参照してください[デバイス コンテキスト](../../mfc/device-contexts.md)します。  
-  
-## <a name="inheritance-hierarchy"></a>継承階層  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CDC](../../mfc/reference/cdc-class.md)  
-  
- `CWindowDC`  
-  
-## <a name="requirements"></a>要件  
- ヘッダー: afxwin.h  
-  
-##  <a name="cwindowdc"></a>  CWindowDC::CWindowDC  
- 構築、`CWindowDC`の全画面領域 (クライアントと非クライアントの両方) にアクセスするオブジェクト、`CWnd`指すオブジェクト*我が物*します。  
-  
-```  
+
+`CDC`の派生クラスです。
+
+## <a name="syntax"></a>構文
+
+```
+class CWindowDC : public CDC
+```
+
+## <a name="members"></a>メンバー
+
+### <a name="public-constructors"></a>パブリック コンストラクター
+
+|名前|説明|
+|----------|-----------------|
+|[CWindowDC::CWindowDC](#cwindowdc)|`CWindowDC` オブジェクトを構築します。|
+
+### <a name="protected-data-members"></a>プロテクト データ メンバー
+
+|名前|説明|
+|----------|-----------------|
+|[CWindowDC::m_hWnd](#m_hwnd)|この HWND`CWindowDC`がアタッチされています。|
+
+## <a name="remarks"></a>Remarks
+
+Windows 関数を呼び出す[GetWindowDC](/windows/desktop/api/winuser/nf-winuser-getwindowdc)構築時に、 [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc)破棄時にします。 つまり、`CWindowDC`オブジェクト アクセスの全画面領域を[CWnd](../../mfc/reference/cwnd-class.md) (クライアントと非クライアント領域)。
+
+使用しての詳細については`CWindowDC`を参照してください[デバイス コンテキスト](../../mfc/device-contexts.md)します。
+
+## <a name="inheritance-hierarchy"></a>継承階層
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CDC](../../mfc/reference/cdc-class.md)
+
+`CWindowDC`
+
+## <a name="requirements"></a>要件
+
+ヘッダー: afxwin.h
+
+##  <a name="cwindowdc"></a>  CWindowDC::CWindowDC
+
+構築、`CWindowDC`の全画面領域 (クライアントと非クライアントの両方) にアクセスするオブジェクト、`CWnd`指すオブジェクト*我が物*します。
+
+```
 explicit CWindowDC(CWnd* pWnd);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *我が物*  
- デバイス コンテキスト オブジェクトがアクセス クライアント領域を持つウィンドウです。  
-  
-### <a name="remarks"></a>Remarks  
- コンス トラクターは、Windows の関数を呼び出します。 [GetWindowDC](/windows/desktop/api/winuser/nf-winuser-getwindowdc)します。  
-  
- 例外 (型の`CResourceException`) 場合にスローされる、Windows`GetWindowDC`呼び出しは失敗します。 Windows が既に割り当てられているすべての利用可能なデバイス コンテキストの場合は、デバイス コンテキストを使用しないことがあります。 アプリケーションは、共通のディスプレイ コンテキスト Windows の任意の時点でご利用いただけますの 5 つの競合します。  
-  
-### <a name="example"></a>例  
- [!code-cpp[NVC_MFCDocView#188](../../mfc/codesnippet/cpp/cwindowdc-class_1.cpp)]  
-  
-##  <a name="m_hwnd"></a>  CWindowDC::m_hWnd  
- HWND、`CWnd`ポインターが構築に使用される、`CWindowDC`オブジェクト。  
-  
-```  
-HWND m_hWnd;  
-```  
-  
-### <a name="remarks"></a>Remarks  
- `m_hWnd` HWND の種類の保護された変数。  
-  
-### <a name="example"></a>例  
-  例をご覧ください[CWindowDC::CWindowDC](#cwindowdc)します。  
-  
-## <a name="see-also"></a>関連項目  
- [CDC クラス](../../mfc/reference/cdc-class.md)   
- [階層図](../../mfc/hierarchy-chart.md)   
- [CDC クラス](../../mfc/reference/cdc-class.md)
+```
+
+### <a name="parameters"></a>パラメーター
+
+*我が物*<br/>
+デバイス コンテキスト オブジェクトがアクセス クライアント領域を持つウィンドウです。
+
+### <a name="remarks"></a>Remarks
+
+コンス トラクターは、Windows の関数を呼び出します。 [GetWindowDC](/windows/desktop/api/winuser/nf-winuser-getwindowdc)します。
+
+例外 (型の`CResourceException`) 場合にスローされる、Windows`GetWindowDC`呼び出しは失敗します。 Windows が既に割り当てられているすべての利用可能なデバイス コンテキストの場合は、デバイス コンテキストを使用しないことがあります。 アプリケーションは、共通のディスプレイ コンテキスト Windows の任意の時点でご利用いただけますの 5 つの競合します。
+
+### <a name="example"></a>例
+
+[!code-cpp[NVC_MFCDocView#188](../../mfc/codesnippet/cpp/cwindowdc-class_1.cpp)]
+
+##  <a name="m_hwnd"></a>  CWindowDC::m_hWnd
+
+HWND、`CWnd`ポインターが構築に使用される、`CWindowDC`オブジェクト。
+
+```
+HWND m_hWnd;
+```
+
+### <a name="remarks"></a>Remarks
+
+`m_hWnd` HWND の種類の保護された変数。
+
+### <a name="example"></a>例
+
+  例をご覧ください[CWindowDC::CWindowDC](#cwindowdc)します。
+
+## <a name="see-also"></a>関連項目
+
+[CDC クラス](../../mfc/reference/cdc-class.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[CDC クラス](../../mfc/reference/cdc-class.md)

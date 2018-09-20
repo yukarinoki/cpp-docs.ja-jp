@@ -1,5 +1,5 @@
 ---
-title: 'トラッカー: OLE アプリケーションでのトラッカーの実装 |Microsoft ドキュメント'
+title: 'トラッカー: OLE アプリケーションでのトラッカーの実装 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0936c760c9528e5ed4220c2a4c46a170b84041a8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 26fe49a9932ded22dbc1f0d4600f57b1f0eb6f14
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381551"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441409"
 ---
 # <a name="trackers-implementing-trackers-in-your-ole-application"></a>トラッカー : OLE アプリケーションでのトラッカーの実装
-トラッカーは、OLE クライアント アイテムと対話するユーザーを有効にするためのグラフィカル インターフェイスを提供します。 トラッカーの異なるスタイルを使用すると、OLE 斜線の枠で、項目を表示できるクライアント サイズ変更ハンドル、またはその他の視覚効果のさまざまな。 この記事の内容について説明します。  
-  
--   [コード内の追跡を実装する方法](../mfc/how-to-implement-tracking-in-your-code.md)です。  
-  
--   [ラバー バンド処理とトラッカー](../mfc/rubber-banding-and-trackers.md)です。  
-  
- トラッカーのスタイルの使用についても取り上げています。 また、MFC OLE サンプルを複数の参照を行う[OCLIENT](../visual-cpp-samples.md)です。  
-  
-## <a name="see-also"></a>関連項目  
- [トラッカー](../mfc/trackers.md)
+
+トラッカーは、OLE クライアント アイテムと対話するユーザーを有効にするためのグラフィカル インターフェイスを提供します。 トラッカーの異なるスタイルを使用すると、OLE クライアント斜線の境界線で表示できるアイテムのサイズ変更ハンドル、またはその他の視覚効果のさまざまな。 この記事について説明します。
+
+- [コード内の追跡を実装する方法](../mfc/how-to-implement-tracking-in-your-code.md)します。
+
+- [ラバー バンド処理とトラッカー](../mfc/rubber-banding-and-trackers.md)します。
+
+トラッカーのスタイルの使用についても取り上げています。 また、MFC OLE サンプルをいくつかの参照を[OCLIENT](../visual-cpp-samples.md)します。
+
+## <a name="see-also"></a>関連項目
+
+[トラッカー](../mfc/trackers.md)
 

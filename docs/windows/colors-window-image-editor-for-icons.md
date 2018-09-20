@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b7e4976065d32a2f88550e5f89fc464da2dbc00e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ae58ae7cf09257b399fd21d7c34890b829394b98
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316706"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430593"
 ---
 # <a name="colors-window-image-editor-for-icons"></a>[色] ウィンドウ (アイコン用イメージ エディター)
 
@@ -50,8 +50,8 @@ ms.locfileid: "44316706"
 
 ## <a name="see-also"></a>関連項目
 
-[[色] ウィンドウを非表示の表示と表示](../windows/displaying-or-hiding-the-colors-window-image-editor-for-icons.md)  
-[デバイス イメージの透明な領域または反転領域の作成](../windows/creating-transparent-or-inverse-regions-in-device-images.md)  
-[アクセラレータ キー](../windows/accelerator-keys-image-editor-for-icons.md)  
-[カスタム カラー セレクター ダイアログ ボックス](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)  
+[[色] ウィンドウを非表示の表示と表示](../windows/displaying-or-hiding-the-colors-window-image-editor-for-icons.md)<br/>
+[デバイス イメージの透明な領域または反転領域の作成](../windows/creating-transparent-or-inverse-regions-in-device-images.md)<br/>
+[アクセラレータ キー](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
+[カスタム カラー セレクター ダイアログ ボックス](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)<br/>
 [アイコン用イメージ エディター](../windows/image-editor-for-icons.md)

@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bbd42d3d51921ccab01dfdcaed9ad988e22ae9a8
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 2bb4adbb960f9d062cc8573c7ca0f7cd5dcd0426
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894708"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382220"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>SQL Server での確認可能なアセンブリの使用 (C++/CLI)
 
@@ -42,19 +42,20 @@ SQL Server TRANSACT-SQL (T-SQL) は、SQL Server に検証可能なアセンブ�
 CREATE ASSEMBLY <assemblyName> FROM <'Assembly UNC Path'> WITH
   PERMISSION_SET <permissions>
 DROP ASSEMBLY <assemblyName>
-```  
+```
 
 PERMISSION_SET コマンドでは、セキュリティ コンテキストを指定し、無制限、SAFE、または拡張値を持つことができます。
 
 さらに、クラスでメソッド名にバインドする関数の作成コマンドを使用できます。
 
 ```sql
-CREATE FUNCTION <FunctionName>(<FunctionParams>)  
+CREATE FUNCTION <FunctionName>(<FunctionParams>)
 RETURNS returnType
 [EXTERNAL NAME <AssemblyName>:<ClassName>::<StaticMethodName>]
-```  
+```
 
 ## <a name="example"></a>例
+
 次の SQL スクリプト (たとえば、名前付き"MyScript.sql") は、SQL Server にアセンブリを読み込み、クラスのメソッドを使用できるように。
 
 ```sql
@@ -69,23 +70,23 @@ with permission_set safe
 -- Create function on assembly with no external access
 drop function GetQuoteNoEA
 go
-create function GetQuoteNoEA(@sym nvarchar(10))  
+create function GetQuoteNoEA(@sym nvarchar(10))
 returns real
 external name stockNoEA:StockQuotes::GetQuote
 go
 
 -- To call the function
-select dbo.GetQuoteNoEA('MSFT')  
+select dbo.GetQuoteNoEA('MSFT')
 go
-```  
+```
 
 SQL スクリプトは、SQL クエリ アナライザーまたは sqlcmd.exe ユーティリティを使用したコマンドラインで、対話的に実行できます。 次のコマンド ライン MyServer に接続する、既定のデータベースを使用して、信頼関係接続を使用して、MyScript.sql、入出力 MyResult.txt します。
 
 ```cmd
 sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt
-```  
+```
 
 ## <a name="see-also"></a>関連項目
 
-[方法:/clr:safe に移行する (C +/cli CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)   
+[方法:/clr:safe に移行する (C +/cli CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)<br/>
 [クラスと構造体](../cpp/classes-and-structs-cpp.md)

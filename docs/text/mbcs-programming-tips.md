@@ -19,29 +19,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5beaab3fe1642b3988e9d0dcbf258eab02e26b7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ac4ed378640942dbe33490d618cec7289125b0c8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610310"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418789"
 ---
 # <a name="mbcs-programming-tips"></a>MBCS のプログラミングについて
-新しい開発では、エンド ユーザーに表示される可能性があるすべての文字列に Unicode 文字エンコーディングを使用することをお勧めします。 MBCS は、Unicode によって置き換えられたレガシ テクノロジです。 ここでは、MBCS を使用しており、Unicode への変換が実用的でない、既存のプログラムを保守する必要がある開発者のためのヒントを提供します。 ここで紹介するヒントは、MFC を使ったアプリケーションにも、使わないアプリケーションにも適用できます。 ここでは、次の内容について説明します。  
-  
--   [MBCS プログラミングにおける一般的なアドバイス](../text/general-mbcs-programming-advice.md)  
-  
--   [ポインターのインクリメントとデクリメント](../text/incrementing-and-decrementing-pointers.md)  
-  
--   [バイト インデックス](../text/byte-indices.md)  
-  
--   [文字列の最後の文字](../text/last-character-in-a-string.md)  
-  
--   [文字の代入](../text/character-assignment.md)  
-  
--   [文字の比較](../text/character-comparison.md)  
-  
--   [バッファー オーバーフロー](../text/buffer-overflow.md)  
-  
-## <a name="see-also"></a>関連項目  
- [マルチバイト文字セット (MBCS) のサポート](../text/support-for-multibyte-character-sets-mbcss.md)
+
+新しい開発では、エンド ユーザーに表示される可能性があるすべての文字列に Unicode 文字エンコーディングを使用することをお勧めします。 MBCS は、Unicode によって置き換えられたレガシ テクノロジです。 ここでは、MBCS を使用しており、Unicode への変換が実用的でない、既存のプログラムを保守する必要がある開発者のためのヒントを提供します。 ここで紹介するヒントは、MFC を使ったアプリケーションにも、使わないアプリケーションにも適用できます。 ここでは、次の内容について説明します。
+
+- [MBCS プログラミングにおける一般的なアドバイス](../text/general-mbcs-programming-advice.md)
+
+- [ポインターのインクリメントとデクリメント](../text/incrementing-and-decrementing-pointers.md)
+
+- [バイト インデックス](../text/byte-indices.md)
+
+- [文字列の最後の文字](../text/last-character-in-a-string.md)
+
+- [文字の代入](../text/character-assignment.md)
+
+- [文字の比較](../text/character-comparison.md)
+
+- [バッファー オーバーフロー](../text/buffer-overflow.md)
+
+## <a name="see-also"></a>関連項目
+
+[マルチバイト文字セット (MBCS) のサポート](../text/support-for-multibyte-character-sets-mbcss.md)

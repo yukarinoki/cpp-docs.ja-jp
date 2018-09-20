@@ -1,5 +1,5 @@
 ---
-title: '例外処理: 例外のキャッチと例外の削除 |Microsoft ドキュメント'
+title: '例外処理: 例外のキャッチと例外を削除する |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,47 +19,49 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29dea08d778ba91c5b8ab3a10aaff998095e7123
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 5bd59cc19c80e305a7e57fb711a49f59a024d528
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928770"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434766"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>例外処理 : 例外のキャッチと削除
-次の手順と例についてをキャッチして例外を削除する方法を示します。 詳細については、**を再試行してください**、**キャッチ**、および**スロー**キーワードを参照してください[C++ 例外処理](../cpp/cpp-exception-handling.md)です。  
-  
- 例外ハンドラーは、そのコードが例外をキャッチするたびに、例外の削除に失敗が、メモリ リークを引き起こします処理した例外オブジェクトを削除する必要があります。  
-  
- **キャッチ**ブロックが例外を削除する必要があるとき。  
-  
--   **キャッチ**ブロックは、新しい例外をスローします。  
-  
-     もちろん、もう一度同じ例外をスローする場合は、例外を削除する必要があります。  
-  
-     [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]  
-  
--   内から実行を返します、**キャッチ**ブロックします。  
-  
+
+次の手順と例についてをキャッチし、例外を削除する方法を表示します。 詳細については、**お試しください**、**キャッチ**、および**スロー**キーワードを参照してください[C++ 例外処理](../cpp/cpp-exception-handling.md)します。
+
+そのコードが例外をキャッチするたびに、例外を削除する障害により、メモリ リークが発生しているため、例外ハンドラーは処理した例外オブジェクトを削除する必要があります。
+
+**キャッチ**ブロックが例外を削除する必要があるとき。
+
+- **キャッチ**ブロックが新しい例外をスローします。
+
+     もちろん、もう一度同じ例外をスローする場合、例外を削除できません必要があります。
+
+     [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]
+
+- 内から実行が、**キャッチ**ブロックします。
+
 > [!NOTE]
->  削除するときに、`CException`を使用して、`Delete`例外を削除するメンバー関数。 使用しないでください、**削除**キーワードでは失敗する場合、この例外は、ヒープ上にないためです。  
-  
-#### <a name="to-catch-and-delete-exceptions"></a>キャッチおよび例外を削除するには  
-  
-1.  使用して、**を再試行してください**キーワードを設定する、**再試行**ブロックします。 内で例外をスローするすべてのプログラム ステートメントの実行、**再試行**ブロックします。  
-  
-     使用して、**キャッチ**を設定するキーワード、**キャッチ**ブロックします。 例外処理コード、**キャッチ**ブロックします。 内のコード、**キャッチ**ブロックが実行される場合にのみ内のコード、**を再試行してください**ブロックで指定された型の例外をスローする、**キャッチ**ステートメントです。  
-  
-     次のスケルトンの表示方法**を再試行してください**と**キャッチ**ブロックを通常配置。  
-  
-     [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]  
-  
-     最初に制御が渡される例外がスローされると、**キャッチ**ブロックの例外宣言は、例外の種類に対応します。 シーケンシャルでの例外の種類を選択的に処理できる**キャッチ**次に示すようにブロックします。  
-  
-     [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]  
-  
- 詳細については、次を参照してください。[例外: MFC 例外マクロからの変換](../mfc/exceptions-converting-from-mfc-exception-macros.md)です。  
-  
-## <a name="see-also"></a>関連項目  
- [例外処理](../mfc/exception-handling-in-mfc.md)
+>  削除するときに、`CException`を使用して、`Delete`例外を削除するメンバー関数。 使用しないでください、**削除**キーワード、ため、例外が、ヒープ上にない場合に失敗します。
+
+#### <a name="to-catch-and-delete-exceptions"></a>キャッチし、例外を削除するには
+
+1. 使用して、**お試しください**を設定するキーワード、**お試しください**ブロック。 内で例外をスローするすべてのプログラム ステートメントを実行する**お試しください**ブロックします。
+
+     使用して、**キャッチ**を設定するキーワード、**キャッチ**ブロック。 例外処理コードを**キャッチ**ブロックします。 コードでは、**キャッチ**場合にのみブロックが実行内のコード、**お試しください**ブロックで指定された型の例外をスローする、**キャッチ**ステートメント。
+
+     次のスケルトンに示す方法**を再試行してください**と**キャッチ**ブロックは正常に配置されます。
+
+     [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]
+
+     最初に制御が移ります例外がスローされたときに**キャッチ**ブロックの例外宣言、例外の種類に対応します。 シーケンシャルでの例外の種類を選択的に処理できる**キャッチ**次に示すようにブロックします。
+
+     [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
+
+詳細については、次を参照してください。[例外: MFC 例外マクロからの変換](../mfc/exceptions-converting-from-mfc-exception-macros.md)します。
+
+## <a name="see-also"></a>関連項目
+
+[例外処理](../mfc/exception-handling-in-mfc.md)
 

@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df624c04b1fd5a80b6e54928adb8f3ca7424920a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c6bf8f299ef46166c5b09a716e5bed21fd3b9b01
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215177"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387108"
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>テクニカル ノート 38: MFC/OLE IUnknown の実装
 
@@ -414,7 +414,7 @@ CAggrExample::CAggrExample()
 }
 
 BOOL CAggrExample::OnCreateAggregates()
-{ 
+{
     // wire up aggregate with correct controlling unknown
     m_lpAggrInner = CoCreateInstance(CLSID_Example,
         GetControllingUnknown(), CLSCTX_INPROC_SERVER,
@@ -471,10 +471,10 @@ DWORD ExternalQueryInterface(
 
 #### <a name="parameters"></a>パラメーター
 
-*lpIID*  
+*lpIID*<br/>
 IID への far ポインター (QueryInterface の第 1 引数)
 
-*ppvObj*  
+*ppvObj*<br/>
 IUnknown* へのポインター (QueryInterface の第 2 引数)
 
 #### <a name="remarks"></a>Remarks
@@ -520,10 +520,10 @@ END_INTERFACE_PART(localClass)
 
 #### <a name="parameters"></a>パラメーター
 
-*マクロ*  
+*マクロ*<br/>
 このインターフェイスを実装するクラスの名前
 
-*iface*  
+*iface*<br/>
 このクラスによって実装されるインターフェイスの名前
 
 #### <a name="remarks"></a>Remarks
@@ -560,10 +560,10 @@ END_INTERFACE_MAP
 
 #### <a name="parameters"></a>パラメーター
 
-*クラス*  
+*クラス*<br/>
 定義するインターフェイス マップが含まれるクラス
 
-*baseClass*  
+*baseClass*<br/>
 元のクラス*クラス*から派生します。
 
 #### <a name="remarks"></a>Remarks
@@ -578,13 +578,13 @@ INTERFACE_PART(theClass, iid, localClass)
 
 #### <a name="parameters"></a>パラメーター
 
-*クラス*  
+*クラス*<br/>
 インターフェイス マップを持つクラスの名前。
 
-*iid*  
+*iid*<br/>
 埋め込みクラスに割り当てられる `IID`。
 
-*マクロ*  
+*マクロ*<br/>
 ローカル クラスの名前。'X' は付けません。
 
 #### <a name="remarks"></a>Remarks
@@ -626,10 +626,10 @@ INTERFACE_AGGREGATE(theClass, theAggr)
 
 #### <a name="parameters"></a>パラメーター
 
-*クラス*  
+*クラス*<br/>
 インターフェイス マップを持つクラスの名前。
 
-*theAggr*  
+*theAggr*<br/>
 集約するメンバー変数の名前。
 
 #### <a name="remarks"></a>Remarks
@@ -638,5 +638,5 @@ INTERFACE_AGGREGATE(theClass, theAggr)
 
 ## <a name="see-also"></a>関連項目
 
-[番号順テクニカル ノート](../mfc/technical-notes-by-number.md)  
-[カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)  
+[番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
+[カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)

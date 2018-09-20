@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 05bd0ab8e402c1d3a926b46bf1df54a084fc9f93
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d0c0ea8537922c2458a48adf5a086dfec4b992f5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595176"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381108"
 ---
 # <a name="how-to-instantiate-wrl-components-directly"></a>方法: WRL コンポーネントを直接インスタンス化する
 
@@ -57,6 +57,6 @@ Windows ランタイム C++ テンプレート ライブラリを使用して、
 
 ## <a name="see-also"></a>関連項目
 
-[Windows ランタイム C++ テンプレート ライブラリ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)  
-[Microsoft::WRL::Make](../windows/make-function.md)  
+[Windows ランタイム C++ テンプレート ライブラリ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)<br/>
+[Microsoft::WRL::Make](../windows/make-function.md)<br/>
 [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)

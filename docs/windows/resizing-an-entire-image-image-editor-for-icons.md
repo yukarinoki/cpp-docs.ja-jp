@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5465ccacf6fb051e787cf390c82108cb9344d203
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2326918b6efd4c8da5f74527166d8f373dbacefc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613110"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376839"
 ---
 # <a name="resizing-an-entire-image-image-editor-for-icons"></a>イメージ全体のサイズ変更 (アイコン用イメージ エディター)
 
@@ -48,5 +48,5 @@ ms.locfileid: "42613110"
 
 ## <a name="see-also"></a>関連項目
 
-[アクセラレータ キー](../windows/accelerator-keys-image-editor-for-icons.md)  
+[アクセラレータ キー](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [イメージのサイズ変更](../windows/resizing-an-image-image-editor-for-icons.md)

@@ -1,5 +1,5 @@
 ---
-title: OMP_DYNAMIC |Microsoft ドキュメント
+title: OMP_DYNAMIC |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,45 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de4a81d861bf72943a67356577da37c36df63f69
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b02a2a4d660057ab83da39add7fd32bcff3e6d90
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695812"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392139"
 ---
 # <a name="ompdynamic"></a>OMP_DYNAMIC
-OpenMP ランタイムが、並行領域内のスレッドの数を調整できるかどうかを指定します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-set OMP_DYNAMIC[=TRUE | =FALSE]  
-```  
-  
-## <a name="remarks"></a>コメント  
- `OMP_DYNAMIC`で環境変数をオーバーライドすることができます、 [omp_set_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md)関数。  
-  
- OpenMP の標準の Visual C 実装では既定値は`OMP_DYNAMIC=FALSE`します。  
-  
- 詳細については、次を参照してください。 [4.3 OMP_DYNAMIC](../../../parallel/openmp/4-3-omp-dynamic.md)です。  
-  
-## <a name="example"></a>例  
- 次のコマンド セット、`OMP_DYNAMIC`環境変数を TRUE にします。  
-  
-```  
-set OMP_DYNAMIC=TRUE  
-```  
-  
- 次のコマンドの現在の設定を表示する、`OMP_DYNAMIC`環境変数。  
-  
-```  
-set OMP_DYNAMIC  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [環境変数](../../../parallel/openmp/reference/openmp-environment-variables.md)
+
+OpenMP の実行時に、並行領域内のスレッドの数を調整できるかどうかを指定します。
+
+## <a name="syntax"></a>構文
+
+```
+set OMP_DYNAMIC[=TRUE | =FALSE]
+```
+
+## <a name="remarks"></a>Remarks
+
+`OMP_DYNAMIC`で環境変数をオーバーライドできます、 [omp_set_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md)関数。
+
+OpenMP の標準の Visual C の実装の既定値は`OMP_DYNAMIC=FALSE`します。
+
+詳細については、次を参照してください。 [4.3 OMP_DYNAMIC](../../../parallel/openmp/4-3-omp-dynamic.md)します。
+
+## <a name="example"></a>例
+
+次のコマンド セット、`OMP_DYNAMIC`環境変数を TRUE にします。
+
+```
+set OMP_DYNAMIC=TRUE
+```
+
+次のコマンドの現在の設定の表示、`OMP_DYNAMIC`環境変数。
+
+```
+set OMP_DYNAMIC
+```
+
+## <a name="see-also"></a>関連項目
+
+[環境変数](../../../parallel/openmp/reference/openmp-environment-variables.md)

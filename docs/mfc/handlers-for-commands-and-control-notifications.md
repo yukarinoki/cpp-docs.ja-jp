@@ -1,5 +1,5 @@
 ---
-title: コマンドとコントロール通知のハンドラー |Microsoft ドキュメント
+title: コマンドとコントロール通知のハンドラー |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,29 +20,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60c66beb3c0c8874bd3d678bfc4331dc766c443a
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: bda42393cd55b60ab787665b51957bb2f94c5df3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929132"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430081"
 ---
 # <a name="handlers-for-commands-and-control-notifications"></a>コマンドとコントロール通知のハンドラー
-コマンドまたはコントロール通知メッセージの既定のハンドラーはありません。 したがって、これらのカテゴリのメッセージのハンドラーの名前付け規則でのみバインドされます。 コマンドまたはコントロールの通知をハンドラーにマップするときに、[プロパティ] ウィンドウは、コマンドの ID またはコントロール通知のコードに基づく名前を提案します。 提案された名前を受け入れる、変更するか、または置換できます。  
-  
- 規則は、それらが表すユーザー インターフェイス オブジェクトの両方のカテゴリ内のハンドラーを付けることをお勧めします。 したがって、[編集] メニューの [切り取り] コマンドのハンドラーという名前  
-  
- [!code-cpp[NVC_MFCMessageHandling#4](../mfc/codesnippet/cpp/handlers-for-commands-and-control-notifications_1.h)]  
-  
- コマンド ID として [切り取り] コマンドを使わため切り取りコマンドは、アプリケーションで、 **ID_EDIT_CUT**です。 定義済みのすべてのコマンド Id の一覧は、コマ ファイルを参照してください。H. 詳細については、次を参照してください。[標準コマンド](../mfc/standard-commands.md)です。  
-  
- さらに、規則がのハンドラーを提案、 **BN_CLICKED** "My Button"というラベルの付いたボタンからの通知メッセージの名前を指定する場合があります  
-  
- [!code-cpp[NVC_MFCMessageHandling#5](../mfc/codesnippet/cpp/handlers-for-commands-and-control-notifications_2.h)]  
-  
- このコマンドの ID を割り当てることが**として**アプリケーション固有のユーザー インターフェイス オブジェクトと等価であるためです。  
-  
- メッセージの両方のカテゴリは、引数を受け取らずし、値を返しません。  
-  
-## <a name="see-also"></a>関連項目  
- [メッセージ ハンドラー関数の宣言](../mfc/declaring-message-handler-functions.md)
+
+コマンドまたはコントロールの通知メッセージの既定のハンドラーはありません。 そのためは、これらの種類のメッセージのハンドラーの名前付け規則によってのみバインドされます。 コマンドまたはコントロールの通知をハンドラーにマップするときに、[プロパティ] ウィンドウは、コマンドの ID またはコントロール通知のコードに基づく名前を提案します。 指定された名前をそのまま使用、変更するか、または置き換えることができます。
+
+規則は、両方のカテゴリ ハンドラーを表すユーザー インターフェイス オブジェクトの名前をお勧めします。 [編集] メニューの切り取りコマンドのハンドラーの名前をそのため
+
+[!code-cpp[NVC_MFCMessageHandling#4](../mfc/codesnippet/cpp/handlers-for-commands-and-control-notifications_1.h)]
+
+として Cut コマンドのコマンド ID は、フレームワークが組み込まれて Cut コマンドは、アプリケーションによくため実装されたため、 **ID_EDIT_CUT**します。 定義済みのすべてのコマンド Id の一覧は、コマ ファイルを参照してください。H. 詳細については、次を参照してください。[標準コマンド](../mfc/standard-commands.md)します。
+
+さらに、規則がのハンドラーを提案、 **BN_CLICKED**名前に「マイ ボタン」というラベルのボタンからの通知メッセージ
+
+[!code-cpp[NVC_MFCMessageHandling#5](../mfc/codesnippet/cpp/handlers-for-commands-and-control-notifications_2.h)]
+
+このコマンドの ID を割り当てることができます**として**のため、これは、アプリケーション固有のユーザー インターフェイス オブジェクトに相当します。
+
+メッセージの両方のカテゴリは、引数を受け取らず、値が返されない。
+
+## <a name="see-also"></a>関連項目
+
+[メッセージ ハンドラー関数の宣言](../mfc/declaring-message-handler-functions.md)

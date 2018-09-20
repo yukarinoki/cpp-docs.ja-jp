@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 47925bcc647d253775e4dd61f6a7f5d5fb586dde
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2083992bcb444a10b495b7007c698499f9cd9628
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599284"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419166"
 ---
 # <a name="semaphorelock-method"></a>Semaphore::Lock メソッド
 
@@ -43,10 +43,10 @@ static SyncLock Lock(
 
 ### <a name="parameters"></a>パラメーター
 
-*(ミリ秒)*  
+*(ミリ秒)*<br/>
 タイムアウト間隔 (ミリ秒単位)。 既定値は、INFINITE で、無期限に待機します。
 
-*h*  
+*h*<br/>
 識別するハンドルを**セマフォ**オブジェクト。
 
 ## <a name="return-value"></a>戻り値

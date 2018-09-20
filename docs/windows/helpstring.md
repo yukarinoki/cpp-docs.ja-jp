@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae2d5121e17a9325ec45143e7e90e7d2a211f380
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2892f957cf8937b5b030e7624bf3e39f546a7103
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223099"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437613"
 ---
 # <a name="helpstring"></a>helpstring
 
@@ -38,7 +38,7 @@ ms.locfileid: "43223099"
 
 ### <a name="parameters"></a>パラメーター
 
-*string*  
+*string*<br/>
 ヘルプ文字列のテキスト。
 
 ## <a name="remarks"></a>Remarks
@@ -64,10 +64,10 @@ ms.locfileid: "43223099"
 
 ## <a name="see-also"></a>関連項目
 
-[IDL 属性](../windows/idl-attributes.md)  
-[インターフェイス属性](../windows/interface-attributes.md)  
-[クラス属性](../windows/class-attributes.md)  
-[メソッド属性](../windows/method-attributes.md)  
-[Typedef、Enum、Union、および Struct 型の属性](../windows/typedef-enum-union-and-struct-attributes.md)  
-[helpfile](../windows/helpfile.md)  
+[IDL 属性](../windows/idl-attributes.md)<br/>
+[インターフェイス属性](../windows/interface-attributes.md)<br/>
+[クラス属性](../windows/class-attributes.md)<br/>
+[メソッド属性](../windows/method-attributes.md)<br/>
+[Typedef、Enum、Union、および Struct 型の属性](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[helpfile](../windows/helpfile.md)<br/>
 [helpcontext](../windows/helpcontext.md)  

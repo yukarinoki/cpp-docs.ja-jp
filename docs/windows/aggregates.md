@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bf6ca06ffbd3912ac3545bc3c014224412c01bc1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4bbb5c62fb53d1246c1b8cc282b4ee36f0fcf58e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221171"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377319"
 ---
 # <a name="aggregates"></a>aggregates
 
@@ -42,10 +42,10 @@ ms.locfileid: "43221171"
 
 ### <a name="parameters"></a>パラメーター
 
-*clsid*  
+*clsid*<br/>
 集約可能オブジェクトの CLSID を指定します。
 
-*variable_name*  
+*variable_name*<br/>
 挿入する変数の名前。 この変数が含まれています、`IUnknown`の集約対象オブジェクト。
 
 ## <a name="remarks"></a>Remarks
@@ -98,7 +98,7 @@ struct CObject : IObject
 |||
 |-|-|
 |**対象**|**クラス**、**構造体**|
-|**反復可能**|[はい]|
+|**反復可能**|はい|
 |**必要な属性**|次のいずれかまたは: `coclass`、 `progid`、または`vi_progid`します。|
 |**無効な属性**|なし|
 
@@ -106,9 +106,9 @@ struct CObject : IObject
 
 ## <a name="see-also"></a>関連項目
 
-[COM 属性](../windows/com-attributes.md)  
-[クラス属性](../windows/class-attributes.md)  
-[Typedef、Enum、Union、および Struct 型の属性](../windows/typedef-enum-union-and-struct-attributes.md)  
-[集計](/windows/desktop/com/aggregation)  
-[集約可能](/windows/desktop/Midl/aggregatable)  
+[COM 属性](../windows/com-attributes.md)<br/>
+[クラス属性](../windows/class-attributes.md)<br/>
+[Typedef、Enum、Union、および Struct 型の属性](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[集計](/windows/desktop/com/aggregation)<br/>
+[集約可能](/windows/desktop/Midl/aggregatable)<br/>
 [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)  

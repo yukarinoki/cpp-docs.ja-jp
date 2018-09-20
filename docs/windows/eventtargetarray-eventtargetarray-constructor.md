@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2bbf6cb67973d7538aa7aea0d846cbadf030d585
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dc59b9c93cebb622f40881d961709079abcd9166
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590653"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388631"
 ---
 # <a name="eventtargetarrayeventtargetarray-constructor"></a>EventTargetArray::EventTargetArray コンストラクター
 
@@ -39,7 +39,7 @@ EventTargetArray(
 
 ### <a name="parameters"></a>パラメーター
 
-*hr*  
+*hr*<br/>
 このコンス トラクター操作後にパラメーター *hr*配列の割り当てが成功または失敗するかどうかを示します。 次の表に、可能な値*hr*します。
 
 S_OK 操作に成功しました。
@@ -48,7 +48,7 @@ S_OK 操作に成功しました。
 
 S_FALSE パラメーター*項目*が 0 未満です。
 
-*項目*  
+*項目*<br/>
 割り当てる配列要素の数。
 
 ## <a name="remarks"></a>Remarks
@@ -65,5 +65,5 @@ S_FALSE パラメーター*項目*が 0 未満です。
 
 ## <a name="see-also"></a>関連項目
 
-[EventTargetArray クラス](../windows/eventtargetarray-class.md)  
+[EventTargetArray クラス](../windows/eventtargetarray-class.md)<br/>
 [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

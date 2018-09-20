@@ -1,5 +1,5 @@
 ---
-title: 月間予定表コントロールの例 |Microsoft ドキュメント
+title: 月間予定表コントロールの例 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77dcf22e82fda1d0326c35f3e56ced19a1ca05fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 653c81da4cb9cd1a4beff453b4a36847e1837491
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342908"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437067"
 ---
 # <a name="month-calendar-control-examples"></a>月間予定表コントロールの例
-[CMNCTRL1](../visual-cpp-samples.md)サンプル アプリケーションは、さまざまな属性、`CMonthCalCtrl`クラスです。 サンプルでは、別のタブにあるコントロールは、基本的な機能を示し、特定の属性を動的に変更することができます。  
-  
-## <a name="see-also"></a>関連項目  
- [CMonthCalCtrl の使い方](../mfc/using-cmonthcalctrl.md)   
- [コントロール](../mfc/controls-mfc.md)
+
+[CMNCTRL1](../visual-cpp-samples.md)サンプル アプリケーションがさまざまな属性では、`CMonthCalCtrl`クラス。 サンプルでは、別のタブにあるコントロールは、基本的な機能を示しを特定の属性を動的に変更できます。
+
+## <a name="see-also"></a>関連項目
+
+[CMonthCalCtrl の使い方](../mfc/using-cmonthcalctrl.md)<br/>
+[コントロール](../mfc/controls-mfc.md)
 

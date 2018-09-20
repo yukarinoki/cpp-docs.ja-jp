@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49fada071661bd647e012bfdfac2aeedabba68fa
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 47afe841a2a8e4a1c41baf68dfd139a70b320c7d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206603"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394466"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 
@@ -38,7 +38,7 @@ ms.locfileid: "43206603"
 
 ### <a name="parameters"></a>パラメーター
 
-*contextID*  
+*contextID*<br/>
 32 ビットのヘルプ コンテキスト識別子、**ヘルプ**ファイル。
 
 ## <a name="remarks"></a>Remarks
@@ -79,8 +79,8 @@ __interface IMyI
 
 ## <a name="see-also"></a>関連項目
 
-[IDL 属性](../windows/idl-attributes.md)  
-[インターフェイス属性](../windows/interface-attributes.md)  
-[クラス属性](../windows/class-attributes.md)  
-[メソッド属性](../windows/method-attributes.md)  
+[IDL 属性](../windows/idl-attributes.md)<br/>
+[インターフェイス属性](../windows/interface-attributes.md)<br/>
+[クラス属性](../windows/class-attributes.md)<br/>
+[メソッド属性](../windows/method-attributes.md)<br/>
 [モジュール](../windows/module-cpp.md)  

@@ -13,32 +13,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5fcd354194a5fe1b28fec774b8ee26550dacf778
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 32f51f38ef6bbe1ee644af0d3194b0293acb26ef
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610905"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384547"
 ---
 # <a name="wrl-reference"></a>WRL リファレンス
+
 このセクションには、Windows ランタイム C++ テンプレート ライブラリ (WRL) 用の参照情報が含まれています。
   
 > [!NOTE]
 > Windows ランタイム C++ テンプレート ライブラリには、機能を Windows ランタイム C++ テンプレート ライブラリのインフラストラクチャをサポートし、コードから直接使用するものではありませんが定義されています。 このような機能は、このドキュメントで説明します。
   
 ## <a name="in-this-section"></a>このセクションの内容
- [Microsoft::WRL 名前空間](../windows/microsoft-wrl-namespace.md)  
- Windows ランタイム C++ テンプレート ライブラリを構成する基本的な型を定義します。
+
+[Microsoft::WRL 名前空間](../windows/microsoft-wrl-namespace.md)<br/>
+Windows ランタイム C++ テンプレート ライブラリを構成する基本的な型を定義します。
   
- [Microsoft::WRL::Wrappers 名前空間](../windows/microsoft-wrl-wrappers-namespace.md)  
- オブジェクト、文字列、およびハンドルの有効期間管理を簡素化するリソースの取得は初期化 (RAII) のラッパー型を定義します。
+[Microsoft::WRL::Wrappers 名前空間](../windows/microsoft-wrl-wrappers-namespace.md)<br/>
+オブジェクト、文字列、およびハンドルの有効期間管理を簡素化するリソースの取得は初期化 (RAII) のラッパー型を定義します。
   
- [Microsoft::WRL::Wrappers::HandleTraits 名前空間](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)  
- 一般的なハンドル ベースのリソースの種類の特性について説明します。
+[Microsoft::WRL::Wrappers::HandleTraits 名前空間](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)<br/>
+一般的なハンドル ベースのリソースの種類の特性について説明します。
   
- [Windows::Foundation 名前空間](../windows/windows-foundation-namespace.md)  
- オブジェクトおよびファクトリの作成などの基本的な Windows ランタイムの機能を有効にします。
+[Windows::Foundation 名前空間](../windows/windows-foundation-namespace.md)<br/>
+オブジェクトおよびファクトリの作成などの基本的な Windows ランタイムの機能を有効にします。
   
 ## <a name="related-sections"></a>関連項目
- [Windows ランタイム C++ テンプレート ライブラリ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)  
- Windows ランタイム C++ テンプレート ライブラリの作成および Windows ランタイム コンポーネントを使用する低レベルの方法を提供する COM ベースのテンプレート ライブラリについて説明します。
+
+[Windows ランタイム C++ テンプレート ライブラリ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)<br/>
+Windows ランタイム C++ テンプレート ライブラリの作成および Windows ランタイム コンポーネントを使用する低レベルの方法を提供する COM ベースのテンプレート ライブラリについて説明します。

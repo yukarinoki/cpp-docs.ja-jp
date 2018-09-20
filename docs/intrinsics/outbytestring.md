@@ -18,50 +18,54 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54a816bd4df165b3df9de723560192ac9072b29c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7ef1bb6e4804fc71531f694a3dac4c5504941bf0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45718836"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393764"
 ---
 # <a name="outbytestring"></a>__outbytestring
-**Microsoft 固有の仕様**  
-  
- 生成、`rep outsb`命令で、1 つ目の送信`Count`によって示されるデータのバイト`Buffer`で指定されたポートに`Port`します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-void __outbytestring(   
-   unsigned short Port,   
-   unsigned char* Buffer,   
-   unsigned long Count   
-);  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
+
+**Microsoft 固有の仕様**
+
+生成、`rep outsb`命令で、1 つ目の送信`Count`によって示されるデータのバイト`Buffer`で指定されたポートに`Port`します。
+
+## <a name="syntax"></a>構文
+
+```
+void __outbytestring( 
+   unsigned short Port, 
+   unsigned char* Buffer, 
+   unsigned long Count 
+);
+```
+
+#### <a name="parameters"></a>パラメーター
+
 *ポート*<br/>
-[in]データを送信するポート。  
-  
+[in]データを送信するポート。
+
 *Buffer*<br/>
-[in]指定したポートを送信するデータ。  
-  
+[in]指定したポートを送信するデータ。
+
 *カウント*<br/>
-[in]送信するデータのバイト数。  
-  
-## <a name="requirements"></a>要件  
-  
-|組み込み|アーキテクチャ|  
-|---------------|------------------|  
-|`__outbytestring`|x86、x64|  
-  
- **ヘッダー ファイル** \<intrin.h >  
-  
-## <a name="remarks"></a>Remarks  
- このルーチンは、組み込みとしてのみ使用できます。  
-  
-**Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)
+[in]送信するデータのバイト数。
+
+## <a name="requirements"></a>要件
+
+|組み込み|アーキテクチャ|
+|---------------|------------------|
+|`__outbytestring`|x86、x64|
+
+**ヘッダー ファイル** \<intrin.h >
+
+## <a name="remarks"></a>Remarks
+
+このルーチンは、組み込みとしてのみ使用できます。
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

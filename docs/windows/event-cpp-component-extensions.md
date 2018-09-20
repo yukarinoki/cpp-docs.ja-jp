@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d301f2bc7464d52be643d252e4febf7049657c2b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f001f61a9425a064d3b899beb6cbb689471da5bf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724770"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442592"
 ---
 # <a name="event--c-component-extensions"></a>event (C++ コンポーネント拡張)
 
@@ -50,19 +50,19 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>パラメーター
 
-*修飾子*  
+*修飾子*<br/>
 イベントの宣言またはイベントのアクセサー メソッドで使用できる修飾子。  指定できる値は**静的**と**仮想**します。
 
-*delegate*  
+*delegate*<br/>
 [委任](../windows/delegate-cpp-component-extensions.md)シグネチャを持つイベント ハンドラーに一致する必要があります。
 
-*event_name*  
+*event_name*<br/>
 イベントの名前です。
 
-*return_value*  
+*return_value*<br/>
 イベントのアクセサー メソッドの戻り値。  戻り値の型がある必要があるには検証可能な**void**します。
 
-*パラメーター*  
+*パラメーター*<br/>
 (省略可能)パラメーターを`raise`のシグネチャに一致するメソッド、*委任*パラメーター。
 
 ### <a name="remarks"></a>Remarks
@@ -71,10 +71,10 @@ modifiereventdelegate^ event_name
 
 イベントの宣言には 2 つの種類があります。
 
-*イベント データ メンバー*  
+*イベント データ メンバー*<br/>
 コンパイラが自動的にデリゲート型のメンバーの形でイベント用のストレージを作成し、内部の `add()`、`remove()`、および `raise()` の各メンバー関数を作成します。 イベント データ メンバーはクラス内で宣言する必要があります。 デリゲートの戻り値の型と、イベント ハンドラーの戻り値の型が一致する必要があります。
 
-*イベント ブロック*  
+*イベント ブロック*<br/>
 イベント ブロックを使用して、`add()`、`remove()`、および `raise()` の各メソッドの動作を明示的に宣言し、カスタマイズすることができます。
 
 使用することができます**演算子 + =** と **:operator-= 演算子**を追加および削除イベント ハンドラー、または呼び出し、`add()`と`remove()`メソッドに明示的にします。
@@ -114,19 +114,19 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>パラメーター
 
-*修飾子*  
+*修飾子*<br/>
 イベントの宣言またはイベントのアクセサー メソッドで使用できる修飾子。  指定できる値は**静的**と**仮想**します。
 
-*delegate*  
+*delegate*<br/>
 [委任](../windows/delegate-cpp-component-extensions.md)シグネチャを持つイベント ハンドラーに一致する必要があります。
 
-*event_name*  
+*event_name*<br/>
 イベントの名前です。
 
-*return_value*  
+*return_value*<br/>
 イベントのアクセサー メソッドの戻り値。  戻り値の型がある必要があるには検証可能な**void**します。
 
-*パラメーター*  
+*パラメーター*<br/>
 (省略可能)パラメーターを`raise`のシグネチャに一致するメソッド、*委任*パラメーター。
 
 ### <a name="remarks"></a>Remarks
@@ -137,10 +137,10 @@ modifiereventdelegate^ event_name
 
 イベントの宣言には 2 つの種類があります。
 
-*イベント データ メンバー*  
+*イベント データ メンバー*<br/>
 データ メンバー イベントについては、コンパイラによってイベント用のストレージがデリゲート型のメンバーの形で作成されます。  イベント データ メンバーはクラス内で宣言する必要があります。 これは、単純なイベントとも呼ばれます (下のコード サンプルを参照してください)。
 
-*イベント ブロック*  
+*イベント ブロック*<br/>
 イベント ブロックを使用し、add、remove、および raise の各メソッドを実装することで、add、remove、および raise の各メソッドの動作をカスタマイズすることができます。 add、remove、および raise の各メソッドのシグネチャが、デリゲートのシグネチャと一致する必要があります。  イベント ブロック イベントはデータ メンバーではなく、データ メンバーとして使用した場合はコンパイル エラーが生成されます。
 
 イベント ハンドラーの戻り値の型は、デリゲートの戻り値の型と一致する必要があります。

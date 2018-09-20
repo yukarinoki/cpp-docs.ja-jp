@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8a9613dbc28b3e1f263133c15ae88d20294962e9
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 94b6d94b59e1088501a22f44a219177b926dd02e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702534"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440876"
 ---
 # <a name="generic-delegates-visual-c"></a>汎用デリゲート (Visual C++)
 
@@ -39,25 +39,25 @@ generic < [class | typename] type-parameter-identifiers>
 
 ### <a name="parameters"></a>パラメーター
 
-*属性*  
+*属性*<br/>
 (省略可能)追加の宣言情報。 属性と属性クラスの詳細については、属性を参照してください。
 
-*type-parameter-identifier(s)*  
+*type-parameter-identifier(s)*<br/>
 型パラメーターの識別子のコンマ区切りリスト。
 
-*型パラメーター制約句*  
+*型パラメーター制約句*<br/>
 指定された形式の[ジェネリック型パラメーターの制約 (C +/cli CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)
 
-*アクセシビリティ修飾子*  
+*アクセシビリティ修飾子*<br/>
 (省略可能)アクセシビリティ修飾子 (例:**パブリック**、**プライベート**)。
 
-*result-type*  
+*result-type*<br/>
 デリゲートの戻り値の型。
 
-*identifier*  
+*identifier*<br/>
 デリゲートの名前。
 
-*仮パラメーター*  
+*仮パラメーター*<br/>
 (省略可能)デリゲートのパラメーターのリスト。
 
 ## <a name="example"></a>例

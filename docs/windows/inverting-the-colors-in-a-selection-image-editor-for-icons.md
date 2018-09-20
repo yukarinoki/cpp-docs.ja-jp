@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b6630ce3f2bc9fc10e1a7e6cdf037369c60adb2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3728aa708c88be0944c52f380250a49d2c8c1742
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601079"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438471"
 ---
 # <a name="inverting-the-colors-in-a-selection-image-editor-for-icons"></a>選択領域の色の反転 (アイコン用イメージ エディター)
 
@@ -41,5 +41,5 @@ ms.locfileid: "42601079"
 
 ## <a name="see-also"></a>関連項目
 
-[アクセラレータ キー](../windows/accelerator-keys-image-editor-for-icons.md)  
+[アクセラレータ キー](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [カラーを使用します。](../windows/working-with-color-image-editor-for-icons.md)

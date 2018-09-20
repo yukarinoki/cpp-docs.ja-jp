@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adfa2e2feaf44f5f29c1a16b8e68642e438095fe
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1f0fa55b7ddfc97d1073211ad23c04d724aabe50
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703327"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404281"
 ---
 # <a name="od-disable-debug"></a>/Od (無効 (デバッグ))
 
@@ -59,7 +59,7 @@ ms.locfileid: "45703327"
 
 ## <a name="see-also"></a>関連項目
 
-[/O オプション (コードの最適化)](../../build/reference/o-options-optimize-code.md)
+[/O オプション (コードの最適化)](../../build/reference/o-options-optimize-code.md)<br/>
 [コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
 [コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)<br/>
 [/Z7、/Zi、/ZI (デバッグ情報の形式)](../../build/reference/z7-zi-zi-debug-information-format.md)

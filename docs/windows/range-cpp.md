@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a4f84684c5d8f8feb8595da628976c90a2593c96
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 80b8546e461930ac184e0f5b3ed2b34499cc8d3c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201352"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384223"
 ---
 # <a name="range-c"></a>range (C++)
 
@@ -39,10 +39,10 @@ ms.locfileid: "43201352"
 
 ### <a name="parameters"></a>パラメーター
 
-*low*  
+*low*<br/>
 範囲の下限値。
 
-*high*  
+*high*<br/>
 範囲の上限値。
 
 ## <a name="remarks"></a>Remarks
@@ -80,7 +80,7 @@ __interface ICustom {
 
 ## <a name="see-also"></a>関連項目
 
-[IDL 属性](../windows/idl-attributes.md)  
-[メソッド属性](../windows/method-attributes.md)  
-[パラメーター属性](../windows/parameter-attributes.md)  
+[IDL 属性](../windows/idl-attributes.md)<br/>
+[メソッド属性](../windows/method-attributes.md)<br/>
+[パラメーター属性](../windows/parameter-attributes.md)<br/>
 [データ メンバー属性](../windows/data-member-attributes.md)  

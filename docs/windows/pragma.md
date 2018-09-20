@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f24c01c225cf971592083162fbebddd99700814
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2e6d5d832cd051c8e527b1d161158483d8fcaed1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209115"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428760"
 ---
 # <a name="pragma"></a>pragma
 
@@ -38,7 +38,7 @@ ms.locfileid: "43209115"
 
 ### <a name="parameters"></a>パラメーター
 
-*pragma_statement*  
+*pragma_statement*<br/>
 このプラグマは、生成された .idl ファイルにアクセスしたいです。
 
 ## <a name="remarks"></a>Remarks
@@ -76,6 +76,6 @@ __interface A
 
 ## <a name="see-also"></a>関連項目
 
-[IDL 属性](../windows/idl-attributes.md)  
-[スタンドアロン属性](../windows/stand-alone-attributes.md)  
+[IDL 属性](../windows/idl-attributes.md)<br/>
+[スタンドアロン属性](../windows/stand-alone-attributes.md)<br/>
 [pack](../preprocessor/pack.md)  

@@ -1,5 +1,5 @@
 ---
-title: 描画および印刷クラス |Microsoft ドキュメント
+title: 描画および印刷クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,16 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 930075a459424e5ffac00d4e620e18cd2c318273
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 331fabe63a3abad1ea19fe4440f8eec0c05481d1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344781"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380337"
 ---
 # <a name="drawing-and-printing-classes"></a>描画および印刷クラス
-Windows では、すべてのグラフィカルな出力はデバイス コンテキスト (DC) と呼ばれる仮想描画領域に描画されます。 MFC では、さまざまな種類のビットマップ、ブラシ、パレット、およびペンなどの Windows 描画ツールのカプセル化できるだけでなく、Dc をカプセル化するクラスを提供します。  
-  
-## <a name="see-also"></a>関連項目  
- [クラスの概要](../mfc/class-library-overview.md)
+
+、Windows では、すべてのグラフィカルな出力がデバイス コンテキスト (DC) と呼ばれる仮想描画領域に描画されます。 MFC は、ビットマップ、ブラシ、パレット、ペンなどの描画ツールの Windows のカプセル化と同様に、Dc のさまざまな型をカプセル化するクラスを提供します。
+
+## <a name="see-also"></a>関連項目
+
+[クラスの概要](../mfc/class-library-overview.md)
 

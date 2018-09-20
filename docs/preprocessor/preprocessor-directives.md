@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e218002171b7ad2d141be227ab277851487f0f5
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 3835d3c3d2900b97c16bc82963df2d08f35a879d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678801"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416293"
 ---
 # <a name="preprocessor-directives"></a>プリプロセッサ ディレクティブ
 
@@ -43,6 +43,6 @@ ms.locfileid: "43678801"
 
 ## <a name="see-also"></a>関連項目
 
-[プリプロセッサ演算子](../preprocessor/preprocessor-operators.md)  
-[定義済みマクロ](../preprocessor/predefined-macros.md)  
+[プリプロセッサ演算子](../preprocessor/preprocessor-operators.md)<br/>
+[定義済みマクロ](../preprocessor/predefined-macros.md)<br/>
 [C/C++ プリプロセッサ リファレンス](../preprocessor/c-cpp-preprocessor-reference.md)  

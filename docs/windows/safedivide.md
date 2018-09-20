@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e673d01aa5657d9ada9ae1ee84ad3d56483e2fc5
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 98f37a428c81276788ea4aef315e7266a9da02c4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723347"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383403"
 ---
 # <a name="safedivide"></a>SafeDivide
 
@@ -71,8 +71,8 @@ T および U のテンプレートの種類の詳細については、次を参
 
 ## <a name="see-also"></a>関連項目
 
-[SafeInt 関数](../windows/safeint-functions.md)  
-[SafeInt ライブラリ](../windows/safeint-library.md)  
-[SafeInt クラス](../windows/safeint-class.md)  
-[SafeModulus](../windows/safemodulus.md)  
+[SafeInt 関数](../windows/safeint-functions.md)<br/>
+[SafeInt ライブラリ](../windows/safeint-library.md)<br/>
+[SafeInt クラス](../windows/safeint-class.md)<br/>
+[SafeModulus](../windows/safemodulus.md)<br/>
 [SafeMultiply](../windows/safemultiply.md)

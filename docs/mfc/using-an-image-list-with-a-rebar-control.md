@@ -1,5 +1,5 @@
 ---
-title: Rebar コントロールでイメージ リストの使い方 |Microsoft ドキュメント
+title: Rebar コントロールでイメージ リストの使い方 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,35 +15,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1786c89f4ec9cf1c0908dac5d81858d5b2e6b7db
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 9ff524f1f29e4db2ac5bb4628064583f0fe7583e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950707"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372367"
 ---
 # <a name="using-an-image-list-with-a-rebar-control"></a>Rebar コントロールでのイメージ リストの使い方
-各 rebar バンド含めることができます、特に、関連付けられているイメージ リストのイメージです。 次の手順では、rebar バンドでイメージを表示するために必要な手順について説明します。  
-  
-### <a name="to-display-images-in-a-rebar-band"></a>Rebar バンドでイメージを表示するには  
-  
-1.  イメージ リスト オブジェクトにアタッチ、rebar コントロールを呼び出すことによって[SetImageList](../mfc/reference/crebarctrl-class.md#setimagelist)、既存のイメージ リストにポインターを渡します。  
-  
-2.  変更、 **REBARBANDINFO** rebar バンドにイメージを代入する構造体。  
-  
-    -   設定、 *fMask*メンバー `RBBIM_IMAGE`、必要に応じて、追加のフラグを含めるには、ビットごとの OR 演算子を使用します。  
-  
-    -   設定、*画像*を表示するイメージのイメージ リスト インデックスへのメンバーです。  
-  
-3.  サイズ、テキスト、および必要な情報を使用して、含まれる子ウィンドウのハンドルなど、残りのデータ メンバーを初期化します。  
-  
-4.  挿入 (イメージ) の新しいバンドへの呼び出しで[CReBarCtrl::InsertBand](../mfc/reference/crebarctrl-class.md#insertband)渡す、 **REBARBANDINFO**構造体。  
-  
- 次の例では、2 つのイメージを既存のイメージ リスト オブジェクトが rebar コントロール オブジェクトに接続されている前提としています (`m_wndReBar`)。 新しい rebar バンド (によって定義された`rbi`)、最初のイメージを含むへの呼び出しに追加された`InsertBand`:  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#28](../mfc/codesnippet/cpp/using-an-image-list-with-a-rebar-control_1.cpp)]  
-  
-## <a name="see-also"></a>関連項目  
- [CReBarCtrl の使い方](../mfc/using-crebarctrl.md)   
- [コントロール](../mfc/controls-mfc.md)
+
+各 rebar バンド含めることができます、特に、関連付けられているイメージ リストのイメージ。 次の手順では、rebar バンドでイメージを表示するために必要な手順について説明します。
+
+### <a name="to-display-images-in-a-rebar-band"></a>Rebar バンドでイメージを表示するには
+
+1. 呼び出すことによって、イメージ リストを rebar コントロール オブジェクトにアタッチ[SetImageList](../mfc/reference/crebarctrl-class.md#setimagelist)、既存のイメージ リストにポインターを渡すことです。
+
+1. 変更、 **REBARBANDINFO** rebar バンドにイメージを割り当てる構造体。
+
+   - 設定、 *fMask*メンバー `RBBIM_IMAGE`、必要に応じて、追加のフラグを含めるには、ビットごとの OR 演算子を使用します。
+
+   - 設定、*画像を*メンバーは、イメージのイメージ リスト インデックスを表示します。
+
+1. サイズ、テキスト、および、必要な情報は含まれている子ウィンドウのハンドルなど、残りのデータ メンバーを初期化します。
+
+1. 呼び出して (イメージ) を含む新しいバンドの挿入[CReBarCtrl::InsertBand](../mfc/reference/crebarctrl-class.md#insertband)を渡して、 **REBARBANDINFO**構造体。
+
+次の例では、2 つのイメージを既存のイメージ リスト オブジェクトが rebar コントロール オブジェクトに接続されている前提としています (`m_wndReBar`)。 新しい rebar バンド (によって定義された`rbi`)、最初のイメージを含むへの呼び出しは追加`InsertBand`:
+
+[!code-cpp[NVC_MFCControlLadenDialog#28](../mfc/codesnippet/cpp/using-an-image-list-with-a-rebar-control_1.cpp)]
+
+## <a name="see-also"></a>関連項目
+
+[CReBarCtrl の使い方](../mfc/using-crebarctrl.md)<br/>
+[コントロール](../mfc/controls-mfc.md)
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3dfee1d923536f519917a50ed44fd5c115007c27
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f2d8244b94a308970e87646505cdcade533b717f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601968"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376008"
 ---
 # <a name="synclocktsynclockt-constructor"></a>SyncLockT::SyncLockT コンストラクター
 
@@ -42,10 +42,10 @@ explicit SyncLockT(
 
 ### <a name="parameters"></a>パラメーター
 
-*other*  
+*other*<br/>
 別の右辺値参照**SyncLockT**オブジェクト。
 
-*sync*  
+*sync*<br/>
 別の参照`SyncLockWithStatusT`オブジェクト。
 
 ## <a name="remarks"></a>Remarks

@@ -1,5 +1,5 @@
 ---
-title: メモリ内でダイアログ テンプレートの使用 |Microsoft ドキュメント
+title: メモリ内のダイアログ テンプレートの使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10364cffa393c8f0968a4d7dffe40224b76ecf3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 649f3aecc79a0b05355b67b1d42cfd3cc2726f18
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381239"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430840"
 ---
 # <a name="using-a-dialog-template-in-memory"></a>メモリ内のダイアログ テンプレートの使用
-指定されたメソッドを使用する代わりに、[ダイアログの作成テーブル](../mfc/creating-a-dialog-class-with-code-wizards.md)を作成できません ダイアログ ボックスのいずれかのような直接メモリ内のダイアログ テンプレートからです。 詳細については、クラスを参照してください。 [CDialog](../mfc/reference/cdialog-class.md)で、 *『 MFC リファレンス*です。  
-  
-## <a name="see-also"></a>関連項目  
- [ダイアログ ボックスの有効期間](../mfc/life-cycle-of-a-dialog-box.md)
+
+指定されたメソッドを使用する代わりに、[ダイアログの作成テーブル](../mfc/creating-a-dialog-class-with-code-wizards.md)を作成できます ダイアログ ボックスのいずれかのような直接メモリにダイアログ テンプレートから。 詳細については、クラスを参照してください。 [CDialog](../mfc/reference/cdialog-class.md)で、 *MFC リファレンス*します。
+
+## <a name="see-also"></a>関連項目
+
+[ダイアログ ボックスの有効期間](../mfc/life-cycle-of-a-dialog-box.md)
 

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1e3ae2e982ce04743644f9c94d9c163478c0b67e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 35c552a6bb384f87c358ba25a945a7f02cc30114
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313118"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380803"
 ---
 # <a name="disabling-guides"></a>ガイドの無効化
 
@@ -58,5 +58,5 @@ Win32
 
 ## <a name="see-also"></a>関連項目
 
-[ダイアログ エディターの状態 (ガイドとグリッド)](../windows/dialog-editor-states-guides-and-grids.md)  
+[ダイアログ エディターの状態 (ガイドとグリッド)](../windows/dialog-editor-states-guides-and-grids.md)<br/>
 [ダイアログ ボックスのコントロール](../windows/controls-in-dialog-boxes.md)

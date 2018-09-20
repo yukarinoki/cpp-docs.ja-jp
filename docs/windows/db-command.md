@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 47fcbdb82501744c8155432e4f4cf220ed945dec
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6140b6764efe530664a1904940f3a8426e6fee02
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709905"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445861"
 ---
 # <a name="dbcommand"></a>db_command
 
@@ -43,7 +43,7 @@ OLE DB コマンドを作成します。
 
 ### <a name="parameters"></a>パラメーター
 
-*command*  
+*command*<br/>
 OLE DB コマンドのテキストを含むコマンド文字列。 簡単な例を次に示します。
 
 ```cpp
@@ -64,15 +64,15 @@ OLE DB コマンドのテキストを含むコマンド文字列。 簡単な例
 
 - **\[** *bindtype* **]** 以下の文字列の 1 つです。
 
-  -   **\[db_column]** 行セット内の列に各メンバー変数をバインドします。
+  - **\[db_column]** 行セット内の列に各メンバー変数をバインドします。
 
-  -   **\[bindto]** (同じ **\[db_column]**)。
+  - **\[bindto]** (同じ **\[db_column]**)。
 
-  -   **\[in]** 入力パラメーターとしてメンバー変数をバインドします。
+  - **\[in]** 入力パラメーターとしてメンバー変数をバインドします。
 
-  -   **\[out]** 出力パラメーターとしてメンバー変数をバインドします。
+  - **\[out]** 出力パラメーターとしてメンバー変数をバインドします。
 
-  -   **\[in、out]** 入力/出力パラメーターとしてメンバー変数をバインドします。
+  - **\[in、out]** 入力/出力パラメーターとしてメンバー変数をバインドします。
 
 - *szVarX*、 *nVarX*現在のスコープ内のメンバー変数に解決されます。
 
@@ -99,25 +99,25 @@ TCHAR m_state[3] = 'CA';
 ]
 ```
 
-*name*  
+*name*<br/>
 (省略可能)行セットの操作に使用するためのハンドルの名前。 *name*を指定した場合、 **db_command** は指定された *name*のクラスを生成します。このクラスを使用して、行セットを走査したり、複数のアクション クエリを実行したりできます。 *name*を指定しないと、複数の結果行をユーザーに返すことはできません。
 
-*source_name*  
+*source_name*<br/>
 (省略可能)`CSession`変数またはを持つクラスのインスタンス、`db_source`コマンドが実行されることに適用される属性。 「 [db_source](../windows/db-source.md)」をご覧ください。
 
 **db_command** は *source_name* に使用されている変数が有効であることを確認するので、指定する変数は関数スコープまたはグローバル スコープに存在する必要があります。
 
-*hresult*  
+*hresult*<br/>
 (省略可能)このデータベース コマンドの HRESULT を受け取る変数を識別します。 変数が存在しない場合は、属性によって自動的に挿入されます。
 
-*バインド*  
+*バインド*<br/>
 (省略可能)OLE DB コマンドからバインディング パラメーターを分離することができます。
 
 値を指定する場合*バインド*、 **db_command**は関連付けられている値を解析し、解析しません、 \[ *bindtype*] パラメーターです。 これにより、OLE DB プロバイダーの構文を使用できます。 パラメーターをバインドせず、解析を無効にするには指定`Bindings=""`します。
 
 値を指定しない場合*バインド*、 **db_command**を探して、バインディング パラメーター ブロックは解析 '**(**'、その後に **\[** _bindtype_**]** で後に角かっこ、1 つまたは複数以前に宣言された C++ メンバー変数を続けて '**)**'。 かっこで囲まれたすべてのテキストが最終的なコマンドから削除され、これらのパラメーターを使用してこのコマンドの列とパラメーターのバインディングが作成されます。
 
-*bulk_fetch*  
+*bulk_fetch*<br/>
 (省略可能)フェッチする行の数を指定する整数値。
 
 既定値は 1 で、単一行のフェッチを指定します (行セットは [CRowset](../data/oledb/crowset-class.md)型です)。
@@ -266,5 +266,5 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[OLE DB コンシューマー属性](../windows/ole-db-consumer-attributes.md)  
+[OLE DB コンシューマー属性](../windows/ole-db-consumer-attributes.md)<br/>
 [スタンドアロン属性](../windows/stand-alone-attributes.md)  

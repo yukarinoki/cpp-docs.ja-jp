@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 51b2045a1605a37fa9c0d17fdc0c9456652345bd
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: b4adac3b4e593ab19287e21e5a965f3a28d008b8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314197"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427616"
 ---
 # <a name="how-to-search-for-symbols-in-resources-c"></a>方法: リソース (C++) 内のシンボルの検索
 
@@ -49,6 +49,6 @@ Win32
 
 ## <a name="see-also"></a>関連項目
 
-[シンボル: リソース識別子](../windows/symbols-resource-identifiers.md)  
-[リソース ファイル](../windows/resource-files-visual-studio.md)  
+[シンボル: リソース識別子](../windows/symbols-resource-identifiers.md)<br/>
+[リソース ファイル](../windows/resource-files-visual-studio.md)<br/>
 [リソース エディター](../windows/resource-editors.md)

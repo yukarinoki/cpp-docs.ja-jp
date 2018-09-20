@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e5996d4e86275dd154e4c6931a55416885929abf
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0a0eda94c370f978bd04d7c2de1dd3e06237e490
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603662"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437716"
 ---
 # <a name="safeintexception-class"></a>SafeIntException クラス
 
@@ -38,7 +38,7 @@ class SafeIntException;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-[SafeIntException::SafeIntException](../windows/safeintexception-safeintexception.md)  
+[SafeIntException::SafeIntException](../windows/safeintexception-safeintexception.md)<br/>
 作成、 **SafeIntException**オブジェクト。
 
 ## <a name="remarks"></a>Remarks
@@ -57,5 +57,5 @@ class SafeIntException;
 
 ## <a name="see-also"></a>関連項目
 
-[SafeInt ライブラリ](../windows/safeint-library.md)  
+[SafeInt ライブラリ](../windows/safeint-library.md)<br/>
 [SafeInt クラス](../windows/safeint-class.md)

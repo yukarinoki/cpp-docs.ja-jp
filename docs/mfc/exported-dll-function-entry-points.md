@@ -1,5 +1,5 @@
 ---
-title: DLL 関数のエントリ ポイントをエクスポート |Microsoft ドキュメント
+title: DLL 関数のエントリ ポイントのエクスポート |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8e9ff08054fbef3f15283395d7eb150551926dc
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 0b6bc9d6664ef1846523d5da90553e4a9e8cc6c4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928626"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444119"
 ---
 # <a name="exported-dll-function-entry-points"></a>DLL のエクスポート関数のエントリ ポイント
-DLL のエクスポート関数を使用して、 [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) DLL モジュールから呼び出し元のアプリケーションの DLL に切り替える際に、適切なグローバル状態を維持するためにマクロです。  
-  
- 呼び出されると、このマクロは、設定`pModuleState`へのポインター、`AFX_MODULE_STATE`関数のスコープの残りの有効なモジュールの状態と、モジュール用グローバル データを含む構造体。 マクロを含むスコープから離れると、以前の有効なモジュールの状態が自動的に復元します。  
-  
- インスタンスを構築することによってこの切り替えを行う、`AFX_MODULE_STATE`スタック上のクラスです。 コンス トラクターにこのクラス現在のモジュール状態へのポインターを取得し、メンバー変数に格納し、設定`pModuleState`新しい有効なモジュールの状態とします。 デストラクターの中では、このクラスは、有効なモジュールの状態とそのメンバー変数に格納されているポインターを復元します。  
-  
- いずれかの DLL のダイアログ ボックスを起動するなど、エクスポートされた関数がある場合は、関数の先頭に次のコードを追加する必要があります。  
-  
- [!code-cpp[NVC_MFCConnectionPoints#6](../mfc/codesnippet/cpp/exported-dll-function-entry-points_1.cpp)]  
-  
- モジュールの現在の状態から返された状態と交換この[AfxGetStaticModuleState](reference/extension-dll-macros.md#afxgetstaticmodulestate)現在のスコープが終了するまでです。  
-  
- Dll のリソースに問題が発生する場合、`AFX_MANAGE_STATE`マクロは使用されません。 既定では、MFC では、メイン アプリケーションのリソース ハンドルを使用して、リソース テンプレートを読み込みます。 このテンプレートは、DLL に実際に格納されます。 根本原因がで MFC のモジュールの状態情報が切り替えられましたいないこと、`AFX_MANAGE_STATE`マクロです。 リソース ハンドルは、MFC のモジュールの状態から回復しました。 モジュールの状態が切り替えられていないすると、間違ったリソース ハンドルが使用されます。  
-  
- `AFX_MANAGE_STATE` DLL 内の各関数に挿入する必要はありません。 たとえば、`InitInstance`せず、アプリケーションで MFC コードから呼び出すことが`AFX_MANAGE_STATE`MFC する前にモジュールの状態を自動的に移動するため`InitInstance`と後、再度スイッチ、`InitInstance`を返します。 すべてのメッセージ マップ ハンドラー同様です。 正規の MFC Dll には、実際には、すべてのメッセージをルーティングする前にモジュールの状態は自動的に切り替わりますマスターの特殊なウィンドウ プロシージャがあり。  
-  
-## <a name="see-also"></a>関連項目  
- [MFC モジュールの状態データの管理](../mfc/managing-the-state-data-of-mfc-modules.md)
+
+DLL のエクスポートされた関数を使用して、 [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) DLL モジュールから呼び出し元アプリケーションの DLL に切り替える場合は、適切なグローバル状態を維持するためにマクロ。
+
+呼び出されると、このマクロは、設定`pModuleState`へのポインター、`AFX_MODULE_STATE`関数のコンテナーのスコープの残りの部分の有効なモジュールの状態と、モジュールのグローバル データを含む構造体。 マクロを含むスコープから離れると、前のモジュールの状態は自動的に復元します。
+
+インスタンスを構築することによってこの切り替えを行う、`AFX_MODULE_STATE`スタック上のクラス。 コンス トラクターにこのクラスは現在のモジュール状態へのポインターを取得しますと、メンバー変数に格納し、設定`pModuleState`として新しいモジュールの状態。 デストラクターでは、このクラスは、有効なモジュールの状態とそのメンバー変数に格納されているポインターを復元します。
+
+DLL のダイアログ ボックスを起動するなど、エクスポートされた関数がある場合は、関数の先頭に次のコードを追加する必要があります。
+
+[!code-cpp[NVC_MFCConnectionPoints#6](../mfc/codesnippet/cpp/exported-dll-function-entry-points_1.cpp)]
+
+モジュールの現在の状態から返された状態と交換この[AfxGetStaticModuleState](reference/extension-dll-macros.md#afxgetstaticmodulestate)現在のスコープが終わるまでです。
+
+Dll 内のリソースの問題が発生する場合、`AFX_MANAGE_STATE`マクロは使用されません。 既定では、MFC では、メイン アプリケーションのリソース ハンドルを使用して、リソースのテンプレートを読み込みます。 このテンプレートは、DLL に実際に格納されます。 根本原因は、MFC のモジュールの状態情報がによって切り替えられたいないこと、`AFX_MANAGE_STATE`マクロ。 リソース ハンドルが MFC のモジュール状態から復旧します。 モジュールの状態が切り替えられていないすると、間違ったリソース ハンドルが使用されます。
+
+`AFX_MANAGE_STATE` DLL 内の各関数に入力する必要はありません。 たとえば、`InitInstance`ことがなくアプリケーションの MFC コードから呼び出すことが`AFX_MANAGE_STATE`MFC モジュールの直前の状態を自動的に移動するため、`InitInstance`とスイッチの後のバックアップを作成し`InitInstance`を返します。 すべてのメッセージ マップ ハンドラーも同様です。 レギュラー MFC Dll があるすべてのメッセージをルーティングする前に、モジュールの状態を自動的に切り替わる特殊なマスター ウィンドウ プロシージャ。
+
+## <a name="see-also"></a>関連項目
+
+[MFC モジュールの状態データの管理](../mfc/managing-the-state-data-of-mfc-modules.md)
 

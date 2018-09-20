@@ -1,5 +1,5 @@
 ---
-title: --//Constructors コメント |Microsoft ドキュメント
+title: --Constructors コメント |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,22 +21,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f58c8410de51a4692dd0e7f018d40eaa28c0dae8
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: f03a65c3f870b1e7648f03b70efe7242c35a21f9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929583"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429358"
 ---
 # <a name="-constructors-comment"></a>// Constructors コメント
-`// Constructors`の MFC クラス宣言のセクションでは、実際にオブジェクトを使用するために必要なすべての初期化関数と同様に (C++ の) コンス トラクターを宣言しています。 たとえば、`CWnd::Create`コンス トラクターのセクションでは、使用する前にあるため、`CWnd`オブジェクト、その必要があります「を完全に構築」まず C++ コンス トラクターを呼び出すし、呼び出すことによって、`Create`関数。 通常、これらのメンバーはパブリックです。  
-  
- たとえば、クラス`CStdioFile`の下の一覧に表示されるうちの 1 つ、3 つのコンス トラクターを持つ[コメントの例を](../mfc/an-example-of-the-comments.md)です。  
-  
-## <a name="see-also"></a>関連項目  
- [MFC ソース ファイルを使用します。](../mfc/using-the-mfc-source-files.md)   
- [//Implementation コメント](../mfc/decrement-implementation-comment.md)   
- [//Attributes コメント](../mfc/decrement-attributes-comment.md)   
- [//Operations コメント](../mfc/decrement-operations-comment.md)   
- [//Overridables コメント](../mfc/decrement-overridables-comment.md)
+
+`// Constructors` MFC クラスの宣言のセクション (C++ の) コンス トラクターと実際にオブジェクトを使用するために必要なすべての初期化関数を宣言します。 たとえば、`CWnd::Create`ため、使用する前に、コンス トラクターのセクションでは、`CWnd`オブジェクト、その必要があります「を完全に構築」まず、C++ コンス トラクターを呼び出すし、呼び出すことによって、`Create`関数。 通常、これらのメンバーはパブリックです。
+
+たとえば、クラス`CStdioFile`の下の一覧に示したが 1 つ、3 つのコンス トラクターを持つ[コメントの例](../mfc/an-example-of-the-comments.md)します。
+
+## <a name="see-also"></a>関連項目
+
+[MFC ソース ファイルの利用](../mfc/using-the-mfc-source-files.md)<br/>
+[//Implementation コメント](../mfc/decrement-implementation-comment.md)<br/>
+[//Attributes コメント](../mfc/decrement-attributes-comment.md)<br/>
+[//Operations コメント](../mfc/decrement-operations-comment.md)<br/>
+[//Overridables コメント](../mfc/decrement-overridables-comment.md)
 

@@ -1,5 +1,5 @@
 ---
-title: コマンド Id |Microsoft ドキュメント
+title: コマンド Id |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,20 +15,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1e03f10199c1b582a1a8603a6ea6c93e1d55473
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 5087c271151793169cbf7350f78750044ccead0b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931233"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446973"
 ---
 # <a name="command-ids"></a>コマンド ID
-コマンドが、コマンド ID だけで完全に説明されている (でエンコードされた、 **WM_COMMAND**メッセージ)。 この ID は、コマンドを生成するユーザー インターフェイス オブジェクトに割り当てられます。 通常、Id に割り当てられているユーザー インターフェイス オブジェクトの機能の名前です。  
-  
- たとえば、編集 メニューの すべてクリア項目割り当てる可能性がある ID など**ID_EDIT_CLEAR_ALL**です。 クラス ライブラリは、framework が処理する自体などのコマンドをいくつかの Id が組み込まれて**ID_EDIT_CLEAR_ALL**または**ID_FILE_OPEN**です。 その他のコマンド Id は、自分で作成したされます。  
-  
- メニュー エディター、Visual C で独自のメニューを作成するときに、クラス ライブラリに従うことをお勧めの名前付け規則に示すように**ID_FILE_OPEN**です。 [標準コマンド](../mfc/standard-commands.md)クラス ライブラリで定義されている標準のコマンドについて説明します。  
-  
-## <a name="see-also"></a>関連項目  
- [ユーザー インターフェイス オブジェクトとコマンド ID](../mfc/user-interface-objects-and-command-ids.md)
+
+コマンドが、コマンド ID だけで完全に説明されている (でエンコードされた、 **WM_COMMAND**メッセージ)。 この ID は、コマンドを生成するユーザー インターフェイス オブジェクトに割り当てられます。 通常、Id に割り当てられているユーザー インターフェイス オブジェクトの機能の名前です。
+
+たとえば、編集 メニューで すべてクリア項目割り当てられる可能性が ID など**ID_EDIT_CLEAR_ALL**します。 クラス ライブラリは特に、フレームワークを処理するなどのコマンドの場合、何らかの Id が組み込まれて**ID_EDIT_CLEAR_ALL**または**ID_FILE_OPEN**します。 その他のコマンド Id 自分で作成します。
+
+メニュー エディター、Visual C の独自のメニューを作成するときに、クラス ライブラリに従うことをお勧めの名前付け規則のように**ID_FILE_OPEN**します。 [標準コマンド](../mfc/standard-commands.md)クラス ライブラリによって定義される標準のコマンドについて説明します。
+
+## <a name="see-also"></a>関連項目
+
+[ユーザー インターフェイス オブジェクトとコマンド ID](../mfc/user-interface-objects-and-command-ids.md)
 

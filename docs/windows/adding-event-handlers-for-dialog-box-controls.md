@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5caec6d9d77d743fa1a8455819b813364bde27d0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 156908a1611f8a1c8b22df61e6b789468753d25d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317057"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443086"
 ---
 # <a name="adding-event-handlers-for-dialog-box-controls-c"></a>ダイアログ ボックス コントロール (C++) のイベント ハンドラーの追加
 
@@ -76,11 +76,11 @@ Win32
 
 ## <a name="see-also"></a>関連項目
 
-[既定のコントロール イベント](../windows/default-control-events.md)  
-[ダイアログ コントロールのメンバー変数の定義](../windows/defining-member-variables-for-dialog-controls.md)  
-[ダイアログ ボックス コントロールおよび変数の型](../ide/dialog-box-controls-and-variable-types.md)  
-[クラスの追加](../ide/adding-a-class-visual-cpp.md)  
-[メンバー関数の追加](../ide/adding-a-member-function-visual-cpp.md)  
-[メンバー変数の追加](../ide/adding-a-member-variable-visual-cpp.md)  
-[仮想関数のオーバーライド](../ide/overriding-a-virtual-function-visual-cpp.md)  
+[既定のコントロール イベント](../windows/default-control-events.md)<br/>
+[ダイアログ コントロールのメンバー変数の定義](../windows/defining-member-variables-for-dialog-controls.md)<br/>
+[ダイアログ ボックス コントロールおよび変数の型](../ide/dialog-box-controls-and-variable-types.md)<br/>
+[クラスの追加](../ide/adding-a-class-visual-cpp.md)<br/>
+[メンバー関数の追加](../ide/adding-a-member-function-visual-cpp.md)<br/>
+[メンバー変数の追加](../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[仮想関数のオーバーライド](../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [MFC メッセージ ハンドラー](../mfc/reference/adding-an-mfc-message-handler.md)  

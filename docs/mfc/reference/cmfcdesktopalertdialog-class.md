@@ -24,118 +24,125 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5eb06eb9b3a764589008949485aa8e62f15d3d6
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7045692504fa2a33fc6ddf8485038193ea416b06
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710087"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377423"
 ---
 # <a name="cmfcdesktopalertdialog-class"></a>CMFCDesktopAlertDialog クラス
-`CMFCDesktopAlertDialog`と同時にクラスを使用、 [CMFCDesktopAlertWnd クラス](../../mfc/reference/cmfcdesktopalertwnd-class.md)ポップアップ ウィンドウにカスタム ダイアログを表示します。  
 
- 詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-class CMFCDesktopAlertDialog : public CDialogEx  
-```  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="public-methods"></a>パブリック メソッド  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[CMFCDesktopAlertDialog::CreateFromParams](#createfromparams)||  
-|[CMFCDesktopAlertDialog::GetDlgSize](#getdlgsize)||  
-|[CMFCDesktopAlertDialog::HasFocus](#hasfocus)||  
-|[CMFCDesktopAlertDialog::PreTranslateMessage](#pretranslatemessage)|(`CDialogEx::PreTranslateMessage` をオーバーライドします)。|  
-  
-### <a name="remarks"></a>Remarks  
- 次の手順を実行し、ポップアップ ウィンドウにカスタム ダイアログを表示します。  
-  
-1.  `CMFCDesktopAlertDialog` の派生クラスを作成します。  
-  
-2.  プロジェクトのリソースに、子のダイアログ テンプレートを作成します。  
-  
-3.  呼び出す[cmfcdesktopalertwnd::create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create)ダイアログ テンプレートとパラメーターとして、派生クラスのランタイム クラス情報へのポインターのリソース id。  
-  
-4.  ホストされるコントロールからのすべての通知を処理するようにカスタム ダイアログをプログラミングするか、これらの通知を直接処理するようにホストされるコントロールをプログラミングします。  
-  
-## <a name="inheritance-hierarchy"></a>継承階層  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
-  
- [CWnd](../../mfc/reference/cwnd-class.md)  
-  
- [CDialog](../../mfc/reference/cdialog-class.md)  
-  
- [CDialogEx](../../mfc/reference/cdialogex-class.md)  
-  
- [CMFCDesktopAlertDialog](../../mfc/reference/cmfcdesktopalertdialog-class.md)  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** afxDesktopAlertDialog.h  
-  
-##  <a name="createfromparams"></a>  CMFCDesktopAlertDialog::CreateFromParams  
+`CMFCDesktopAlertDialog`と同時にクラスを使用、 [CMFCDesktopAlertWnd クラス](../../mfc/reference/cmfcdesktopalertwnd-class.md)ポップアップ ウィンドウにカスタム ダイアログを表示します。
 
-  
-```  
+詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。
+
+## <a name="syntax"></a>構文
+
+```
+class CMFCDesktopAlertDialog : public CDialogEx
+```
+
+## <a name="members"></a>メンバー
+
+### <a name="public-methods"></a>パブリック メソッド
+
+|名前|説明|
+|----------|-----------------|
+|[CMFCDesktopAlertDialog::CreateFromParams](#createfromparams)||
+|[CMFCDesktopAlertDialog::GetDlgSize](#getdlgsize)||
+|[CMFCDesktopAlertDialog::HasFocus](#hasfocus)||
+|[CMFCDesktopAlertDialog::PreTranslateMessage](#pretranslatemessage)|(`CDialogEx::PreTranslateMessage` をオーバーライドします)。|
+
+### <a name="remarks"></a>Remarks
+
+次の手順を実行し、ポップアップ ウィンドウにカスタム ダイアログを表示します。
+
+1. `CMFCDesktopAlertDialog` の派生クラスを作成します。
+
+1. プロジェクトのリソースに、子のダイアログ テンプレートを作成します。
+
+1. 呼び出す[cmfcdesktopalertwnd::create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create)ダイアログ テンプレートとパラメーターとして、派生クラスのランタイム クラス情報へのポインターのリソース id。
+
+1. ホストされるコントロールからのすべての通知を処理するようにカスタム ダイアログをプログラミングするか、これらの通知を直接処理するようにホストされるコントロールをプログラミングします。
+
+## <a name="inheritance-hierarchy"></a>継承階層
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+
+[CWnd](../../mfc/reference/cwnd-class.md)
+
+[CDialog](../../mfc/reference/cdialog-class.md)
+
+[CDialogEx](../../mfc/reference/cdialogex-class.md)
+
+[CMFCDesktopAlertDialog](../../mfc/reference/cmfcdesktopalertdialog-class.md)
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** afxDesktopAlertDialog.h
+
+##  <a name="createfromparams"></a>  CMFCDesktopAlertDialog::CreateFromParams
+
+
+```
 BOOL CreateFromParams(
-    CMFCDesktopAlertWndInfo& params,  
+    CMFCDesktopAlertWndInfo& params,
     CMFCDesktopAlertWnd* pParent);
-```  
-  
-### <a name="parameters"></a>パラメーター  
+```
+
+### <a name="parameters"></a>パラメーター
+
 *params*<br/>
-[in][in]*pParent*  
-  
-### <a name="return-value"></a>戻り値  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="getdlgsize"></a>  CMFCDesktopAlertDialog::GetDlgSize  
+[in][in]*pParent*
 
-  
-```  
+### <a name="return-value"></a>戻り値
+
+### <a name="remarks"></a>Remarks
+
+##  <a name="getdlgsize"></a>  CMFCDesktopAlertDialog::GetDlgSize
+
+
+```
 CSize GetDlgSize();
-```  
-  
-### <a name="return-value"></a>戻り値  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="hasfocus"></a>  CMFCDesktopAlertDialog::HasFocus  
+```
 
-  
-```  
-BOOL HasFocus() const;  
-```  
-  
-### <a name="return-value"></a>戻り値  
-  
-### <a name="remarks"></a>Remarks  
-  
-##  <a name="pretranslatemessage"></a>  CMFCDesktopAlertDialog::PreTranslateMessage  
+### <a name="return-value"></a>戻り値
 
-  
-```  
+### <a name="remarks"></a>Remarks
+
+##  <a name="hasfocus"></a>  CMFCDesktopAlertDialog::HasFocus
+
+
+```
+BOOL HasFocus() const;
+```
+
+### <a name="return-value"></a>戻り値
+
+### <a name="remarks"></a>Remarks
+
+##  <a name="pretranslatemessage"></a>  CMFCDesktopAlertDialog::PreTranslateMessage
+
+
+```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- [in]*pMsg*  
-  
-### <a name="return-value"></a>戻り値  
-  
-### <a name="remarks"></a>コメント  
-  
-## <a name="see-also"></a>関連項目  
- [階層図](../../mfc/hierarchy-chart.md)   
- [クラス](../../mfc/reference/mfc-classes.md)   
- [CMFCDesktopAlertWnd クラス](../../mfc/reference/cmfcdesktopalertwnd-class.md)   
- [CMFCDesktopAlertWndInfo クラス](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)   
- [CDialogEx クラス](../../mfc/reference/cdialogex-class.md)
+```
+
+### <a name="parameters"></a>パラメーター
+
+[in]*pMsg*
+
+### <a name="return-value"></a>戻り値
+
+### <a name="remarks"></a>コメント
+
+## <a name="see-also"></a>関連項目
+
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[クラス](../../mfc/reference/mfc-classes.md)<br/>
+[CMFCDesktopAlertWnd クラス](../../mfc/reference/cmfcdesktopalertwnd-class.md)<br/>
+[CMFCDesktopAlertWndInfo クラス](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)<br/>
+[CDialogEx クラス](../../mfc/reference/cdialogex-class.md)

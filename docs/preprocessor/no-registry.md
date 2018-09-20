@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 105c2b0ee4d2648a1cc43d0baca9f30146184e78
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 8071fdf5e18542273dddfacecca913130e7bdea6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42545784"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381232"
 ---
 # <a name="noregistry"></a>no_registry
 **no_registry**レジストリにインポートされたタイプ ライブラリを検索しないようにコンパイラに指示`#import`します。  
@@ -48,5 +48,5 @@ ms.locfileid: "42545784"
   
 ## <a name="see-also"></a>関連項目  
  
-[#import の属性](../preprocessor/hash-import-attributes-cpp.md)   
+[#import の属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import ディレクティブ](../preprocessor/hash-import-directive-cpp.md)

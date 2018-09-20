@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 966759acdac3cf78625cfd072471245a6e42ad63
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: cb8eb8fbc4199ccdaf5717e465f202c0e4ec296e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597116"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437650"
 ---
 # <a name="interfacetraits-structure"></a>InterfaceTraits 構造体
 
@@ -44,10 +44,10 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
 
 ### <a name="parameters"></a>パラメーター
 
-*I0*  
+*I0*<br/>
 インターフェイスの名前。
 
-*CloakedType*  
+*CloakedType*<br/>
 `RuntimeClass`、`Implements`と`ChainInterfaces`、ことができなくなるの一覧で、インターフェイスのインターフェイス Id をサポートします。
 
 ## <a name="remarks"></a>Remarks
@@ -76,7 +76,7 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
 
 ### <a name="public-constants"></a>パブリック定数
 
-|name|説明|
+|名前|説明|
 |----------|-----------------|
 |[InterfaceTraits::IidCount 定数](../windows/interfacetraits-iidcount-constant.md)|インターフェイスに関連付けられた現在の Id の数を保持する**InterfaceTraits**オブジェクト。|
 

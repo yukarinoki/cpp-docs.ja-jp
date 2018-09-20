@@ -1,5 +1,5 @@
 ---
-title: 'marshal_context:: ~ marshal_context |Microsoft ドキュメント'
+title: 'marshal_context:: ~ marshal_context |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,33 +21,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a6cb7ed3c7b1ee5b28c4943d83b6a8ca6166b6d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 49f194f153f3e4f911333e22b11ebddf7efcaa32
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33138089"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46447259"
 ---
 # <a name="marshalcontextmarshalcontext"></a>marshal_context::~marshal_context
-`marshal_context` オブジェクトを破棄します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-~marshal_context();  
-```  
-  
-## <a name="remarks"></a>コメント  
- 一部のデータ変換では、マーシャ リング コンテキストが必要です。 参照してください[概要の C++ におけるマーシャ リング](../dotnet/overview-of-marshaling-in-cpp.md)コンテキストが必要にどの翻訳あり、マーシャ リング ファイル、アプリケーションに含まれるの詳細についてはします。  
-  
- 削除すると、`marshal_context`オブジェクトは、データをそのコンテキストで変換を無効になります。 後にデータを保持する場合、`marshal_context`オブジェクトが破棄されると、によって永続化される変数にデータを手動でコピーする必要があります。  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー ファイル:** \<msclr\marshal.h >、 \<msclr\marshal_windows.h >、 \<msclr\marshal_cppstd.h >、または\<msclr\marshal_atl.h >  
-  
- **Namespace:** msclr::interop  
-  
-## <a name="see-also"></a>関連項目  
- [C++ におけるマーシャ リングの概要](../dotnet/overview-of-marshaling-in-cpp.md)   
- [marshal_as](../dotnet/marshal-as.md)   
- [marshal_context クラス](../dotnet/marshal-context-class.md)
+
+`marshal_context` オブジェクトを破棄します。
+
+## <a name="syntax"></a>構文
+
+```
+~marshal_context();
+```
+
+## <a name="remarks"></a>Remarks
+
+一部のデータ変換には、マーシャ リング コンテキストが必要です。 参照してください[c++ Overview of Marshaling](../dotnet/overview-of-marshaling-in-cpp.md)詳細については、コンテキストが必要にどの翻訳とマーシャ リングするファイルは、アプリケーションに含める必要があります。
+
+削除、`marshal_context`オブジェクトがそのコンテキストによって変換されたデータが無効になります。 後にデータを保持する場合、`marshal_context`オブジェクトが破棄された時点で保持される変数にデータを手動でコピーする必要があります。
+
+## <a name="requirements"></a>要件
+
+**ヘッダー ファイル:** \<msclr\marshal.h >、 \<msclr\marshal_windows.h >、 \<msclr\marshal_cppstd.h >、または\<msclr\marshal_atl.h >
+
+**Namespace:** msclr::interop
+
+## <a name="see-also"></a>関連項目
+
+[C++ におけるマーシャリングの概要](../dotnet/overview-of-marshaling-in-cpp.md)<br/>
+[marshal_as](../dotnet/marshal-as.md)<br/>
+[marshal_context クラス](../dotnet/marshal-context-class.md)

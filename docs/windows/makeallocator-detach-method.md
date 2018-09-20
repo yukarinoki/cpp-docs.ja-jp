@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d609b685bb5e3d24d561e66050769b6b7728e691
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3ef07b3de2125c38064bc2a0f15559e8ef6084d4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607163"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443385"
 ---
 # <a name="makeallocatordetach-method"></a>MakeAllocator::Detach メソッド
 
@@ -48,5 +48,5 @@ __forceinline void Detach();
 
 ## <a name="see-also"></a>関連項目
 
-[MakeAllocator クラス](../windows/makeallocator-class.md)  
+[MakeAllocator クラス](../windows/makeallocator-class.md)<br/>
 [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

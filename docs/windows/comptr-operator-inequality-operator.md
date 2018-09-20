@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4874121f22daa8e4a13bf7a1d332c9b8e3db60ba
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ce6e3357582abe94fdc538932e49e773c37f116b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42578108"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384698"
 ---
 # <a name="comptroperator-operator"></a>ComPtr::operator!= 演算子
 
@@ -47,10 +47,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-*a*  
+*a*<br/>
 参照を**ComPtr**オブジェクト。
 
-*b*  
+*b*<br/>
 別の参照**ComPtr**オブジェクト。
 
 ## <a name="return-value"></a>戻り値
@@ -67,5 +67,5 @@ bool operator!=(
 
 ## <a name="see-also"></a>関連項目
 
-[Microsoft::WRL 名前空間](../windows/microsoft-wrl-namespace.md)  
+[Microsoft::WRL 名前空間](../windows/microsoft-wrl-namespace.md)<br/>
 [ComPtr クラス](../windows/comptr-class.md)

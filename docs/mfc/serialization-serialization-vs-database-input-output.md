@@ -1,5 +1,5 @@
 ---
-title: 'シリアル化: シリアル化とします。データベースの入出力 |Microsoft ドキュメント'
+title: 'シリアル化: シリアル化とします。データベースの入出力の |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d43c0259dd394a7dbbe7ef5b2ed558c9351e73a8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 67621d44766e6f4b726c8553024933fd0e904a17
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379578"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381544"
 ---
 # <a name="serialization-serialization-vs-database-inputoutput"></a>シリアル化: シリアル化とします。データベースの入力/出力
-この記事では、入力/出力 (I/O) ファイルをベースと他の I/O の手法が適切な場合に、ドキュメント オブジェクトおよびシリアル化を使用する場合について説明します: ため、アプリケーションは、読み取りし、データベース アプリケーションと同様に、トランザクションごとにデータを書き込みます。 シリアル化を使用しない場合もしないし、必要とするファイルを開く、保存、コマンドとして保存します。 トピックは次のとおりです。  
-  
--   [入力/出力を処理するための推奨事項](../mfc/recommendations-for-handling-input-output.md)  
-  
--   [データベース アプリケーションの [ファイル] メニューの処理](../mfc/file-menu-in-an-mfc-database-application.md)  
-  
-## <a name="see-also"></a>関連項目  
- [シリアル化](../mfc/serialization-in-mfc.md)
+
+この記事では、入力/出力 (I/O) ファイル ベースのおよびその他の I/O の手法が適切な場合に、ドキュメント オブジェクトとシリアル化を使用する場合について説明します: アプリケーションを読み取ってデータベース アプリケーションと同様に、トランザクションごとにデータを書き込むためです。 シリアル化を使用しない場合もしないファイルを開く、保存、保存コマンドとして。 取り上げるトピックは次のとおりです。
+
+- [入力/出力の処理の推奨事項](../mfc/recommendations-for-handling-input-output.md)
+
+- [データベース アプリケーションの [ファイル] メニューの処理](../mfc/file-menu-in-an-mfc-database-application.md)
+
+## <a name="see-also"></a>関連項目
+
+[シリアル化](../mfc/serialization-in-mfc.md)
 

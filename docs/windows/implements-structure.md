@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18616b1010dfe6a23861c512b1113c30fe5251ce
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: 27a2cfaaf4ddb5ae58cdcd212b5fdcb7ded73bb0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535354"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434727"
 ---
 # <a name="implements-structure"></a>Implements 構造体
 
@@ -69,37 +69,37 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
 
 ### <a name="parameters"></a>パラメーター
 
-*I0*  
+*I0*<br/>
 0 番目のインターフェイス ID です  (必須)。
 
-*I1*  
+*I1*<br/>
 1 番目のインターフェイス ID です  (オプション)。
 
-*I2*  
+*I2*<br/>
 2 番目のインターフェイス ID です  (オプション)。
 
-*I3*  
+*I3*<br/>
 3 番目のインターフェイス ID です  (オプション)。
 
-*I4*  
+*I4*<br/>
 4 番目のインターフェイス ID です  (オプション)。
 
-*I5*  
+*I5*<br/>
 5 番目のインターフェイス ID です  (オプション)。
 
-*I6*  
+*I6*<br/>
 6 番目のインターフェイス ID です  (オプション)。
 
-*I7*  
+*I7*<br/>
 7 番目のインターフェイス ID です  (オプション)。
 
-*I8*  
+*I8*<br/>
 8 番目のインターフェイス ID です  (オプション)。
 
-*I9*  
+*I9*<br/>
 9 番目のインターフェイス ID です  (オプション)。
 
-*flags*  
+*flags*<br/>
 クラスの構成フラグです。 1 つまたは複数[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列挙体で指定されている、 [RuntimeClassFlags](../windows/runtimeclassflags-structure.md)構造体。
 
 ## <a name="remarks"></a>Remarks
@@ -163,10 +163,10 @@ __forceinline HRESULT CanCastTo(
 
 ### <a name="parameters"></a>パラメーター
 
-*riid*  
+*riid*<br/>
 インターフェイス ID への参照
 
-*ppv*  
+*ppv*<br/>
 かどうかは成功すると、インターフェイスへのポインターで指定された*riid*します。
 
 ### <a name="return-value"></a>戻り値
@@ -206,10 +206,10 @@ __forceinline static void FillArrayWithIid(
 
 ### <a name="parameters"></a>パラメーター
 
-*index*  
+*index*<br/>
 この操作の開始の配列要素を示す 0 から始まるインデックス。 この操作が完了したら、*インデックス*1 ずつインクリメントされます。
 
-*iid*  
+*iid*<br/>
 IID 型の配列。
 
 ### <a name="remarks"></a>Remarks

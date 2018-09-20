@@ -20,93 +20,103 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0c3792ec315f21298cffa166777af61750fbd06
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 06008a2826a2ba2d358fcf3469b8a6b5b107e6be
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335842"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412358"
 ---
 # <a name="cd2dsizeu-class"></a>CD2DSizeU クラス
-D2D1_SIZE_U のラッパーです。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-class CD2DSizeU : public D2D1_SIZE_U;  
-```  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="public-constructors"></a>パブリック コンストラクター  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[CD2DSizeU::CD2DSizeU](#cd2dsizeu)|オーバーロードされます。 構築、`CD2DSizeU`オブジェクトから`D2D1_SIZE_U`オブジェクト。|  
-  
-### <a name="public-methods"></a>パブリック メソッド  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[CD2DSizeU::IsNull](#isnull)|返します、**ブール**式に有効なデータ (NULL) がないかどうかを示す値です。|  
-  
-### <a name="public-operators"></a>パブリック演算子  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[CD2DSizeU::operator CSize](#operator_csize)|変換`CD2DSizeU`に`CSize`オブジェクト。|  
-  
-## <a name="inheritance-hierarchy"></a>継承階層  
- `D2D1_SIZE_U`  
-  
- [CD2DSizeU](../../mfc/reference/cd2dsizeu-class.md)  
-  
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** afxrendertarget.h  
-  
-##  <a name="cd2dsizeu"></a>  CD2DSizeU::CD2DSizeU  
- CSize オブジェクトから CD2DSizeU オブジェクトを構築します。  
-  
-```  
-CD2DSizeU(const CSize& size);  
-CD2DSizeU(const D2D1_SIZE_U& size);  
+
+D2D1_SIZE_U のラッパーです。
+
+## <a name="syntax"></a>構文
+
+```
+class CD2DSizeU : public D2D1_SIZE_U;
+```
+
+## <a name="members"></a>メンバー
+
+### <a name="public-constructors"></a>パブリック コンストラクター
+
+|名前|説明|
+|----------|-----------------|
+|[CD2DSizeU::CD2DSizeU](#cd2dsizeu)|オーバーロードされます。 構築、`CD2DSizeU`オブジェクトから`D2D1_SIZE_U`オブジェクト。|
+
+### <a name="public-methods"></a>パブリック メソッド
+
+|名前|説明|
+|----------|-----------------|
+|[CD2DSizeU::IsNull](#isnull)|返します、**ブール**式に有効なデータ (NULL) がないかどうかを示す値です。|
+
+### <a name="public-operators"></a>パブリック演算子
+
+|名前|説明|
+|----------|-----------------|
+|[CD2DSizeU::operator CSize](#operator_csize)|変換`CD2DSizeU`に`CSize`オブジェクト。|
+
+## <a name="inheritance-hierarchy"></a>継承階層
+
+`D2D1_SIZE_U`
+
+[CD2DSizeU](../../mfc/reference/cd2dsizeu-class.md)
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** afxrendertarget.h
+
+##  <a name="cd2dsizeu"></a>  CD2DSizeU::CD2DSizeU
+
+CSize オブジェクトから CD2DSizeU オブジェクトを構築します。
+
+```
+CD2DSizeU(const CSize& size);
+CD2DSizeU(const D2D1_SIZE_U& size);
   CD2DSizeU(const D2D1_SIZE_U* size);
 
- 
+
 CD2DSizeU(
-    UINT32 cx = 0,  
+    UINT32 cx = 0,
     UINT32 cy = 0);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *size*  
- ソースのサイズ  
-  
- *cx*  
- 元の幅  
-  
- *cy*  
- 元の高さ  
-  
-##  <a name="isnull"></a>  CD2DSizeU::IsNull  
- 式に有効なデータ (Null) がないかどうかを示すブール値を返します。  
-  
-```  
-BOOL IsNull() const;  
-```  
-  
-### <a name="return-value"></a>戻り値  
- TRUE の場合、幅と高さが空です。それ以外の場合は FALSE です。  
-  
-##  <a name="operator_csize"></a>  CD2DSizeU::operator CSize  
- CD2DSizeU CSize オブジェクトに変換します。  
-  
-```  
+```
+
+### <a name="parameters"></a>パラメーター
+
+*size*<br/>
+ソースのサイズ
+
+*cx*<br/>
+元の幅
+
+*cy*<br/>
+元の高さ
+
+##  <a name="isnull"></a>  CD2DSizeU::IsNull
+
+式に有効なデータ (Null) がないかどうかを示すブール値を返します。
+
+```
+BOOL IsNull() const;
+```
+
+### <a name="return-value"></a>戻り値
+
+TRUE の場合、幅と高さが空です。それ以外の場合は FALSE です。
+
+##  <a name="operator_csize"></a>  CD2DSizeU::operator CSize
+
+CD2DSizeU CSize オブジェクトに変換します。
+
+```
 operator CSize();
-```   
-  
-### <a name="return-value"></a>戻り値  
- D2D サイズの現在の値。  
-  
-## <a name="see-also"></a>関連項目  
- [クラス](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="return-value"></a>戻り値
+
+D2D サイズの現在の値。
+
+## <a name="see-also"></a>関連項目
+
+[クラス](../../mfc/reference/mfc-classes.md)

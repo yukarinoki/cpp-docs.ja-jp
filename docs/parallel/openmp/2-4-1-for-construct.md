@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac142c628f3c2bef0bc29a2ffd50df8a9efda400
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cb9a554d9141223be7a5f6bc741c86b8f03511e2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216538"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428546"
 ---
 # <a name="241-for-construct"></a>2.4.1 for のコンストラクト
 
@@ -115,28 +115,28 @@ OpenMP 準拠のプログラムは、適切な実行の特定のスケジュー�
 
 制限は、**の**ディレクティブは、次のとおり。
 
--   **の**ループは、構造化ブロックである必要があり、さらに、それを実行する必要がありますを終了できませんが、 **break**ステートメント。
+- **の**ループは、構造化ブロックである必要があり、さらに、それを実行する必要がありますを終了できませんが、 **break**ステートメント。
 
--   ループの値の式の制御、**の**ループに関連付けられている、**の**ディレクティブは、チームのすべてのスレッドで同じである必要があります。
+- ループの値の式の制御、**の**ループに関連付けられている、**の**ディレクティブは、チームのすべてのスレッドで同じである必要があります。
 
--   **の**ループの反復変数は符号付き整数型である必要があります。
+- **の**ループの反復変数は符号付き整数型である必要があります。
 
--   1 つだけ**スケジュール**句に表示できる、**の**ディレクティブ。
+- 1 つだけ**スケジュール**句に表示できる、**の**ディレクティブ。
 
--   1 つだけ**注文**句に表示できる、**の**ディレクティブ。
+- 1 つだけ**注文**句に表示できる、**の**ディレクティブ。
 
--   1 つだけ**nowait**句に表示できる、**の**ディレクティブ。
+- 1 つだけ**nowait**句に表示できる、**の**ディレクティブ。
 
--   指定されていない場合または内の任意の辺の効果どのくらいの頻度、 *chunk_size*、 *lb*、 *b*、または*incr*式が発生します。
+- 指定されていない場合または内の任意の辺の効果どのくらいの頻度、 *chunk_size*、 *lb*、 *b*、または*incr*式が発生します。
 
--   値、 *chunk_size*式は、チームのすべてのスレッドで同じである必要があります。
+- 値、 *chunk_size*式は、チームのすべてのスレッドで同じである必要があります。
 
 ## <a name="cross-references"></a>クロス リファレンス
 
--   **プライベート**、 **firstprivate**、 **lastprivate**、および**削減**句を参照してください[セクション 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) 25 ページにします。
+- **プライベート**、 **firstprivate**、 **lastprivate**、および**削減**句を参照してください[セクション 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) 25 ページにします。
 
--   **OMP_SCHEDULE**環境変数を参照してください[セクション 4.1](../../parallel/openmp/4-1-omp-schedule.md) 48 ページ。
+- **OMP_SCHEDULE**環境変数を参照してください[セクション 4.1](../../parallel/openmp/4-1-omp-schedule.md) 48 ページ。
 
--   **順序付けられた**構築を参照してください[セクション 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) 22 ページにします。
+- **順序付けられた**構築を参照してください[セクション 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) 22 ページにします。
 
--   [付録 D](../../parallel/openmp/d-using-the-schedule-clause.md)93、ページ詳細スケジュール句を使用することを示します。
+- [付録 D](../../parallel/openmp/d-using-the-schedule-clause.md)93、ページ詳細スケジュール句を使用することを示します。

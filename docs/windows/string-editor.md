@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 94f4aaeae3acb225c2fdc457af135e3534f8d381
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 02248c7c6f61823649d9643a7321677e23a4afbf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313261"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382909"
 ---
 # <a name="string-editor-c"></a>文字列エディター (C++)
 
@@ -63,7 +63,7 @@ Win32
 
 ## <a name="see-also"></a>関連項目
 
-[リソース エディター](../windows/resource-editors.md)  
-[文字列](https://msdn.microsoft.com/library/windows/desktop/ms646979.aspx)  
+[リソース エディター](../windows/resource-editors.md)<br/>
+[文字列](https://msdn.microsoft.com/library/windows/desktop/ms646979.aspx)<br/>
 [文字列の概要](/windows/desktop/menurc/about-strings)
 

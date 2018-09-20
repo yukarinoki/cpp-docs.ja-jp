@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83ff74a460c7cb34a50d0fbdf338eccc3da27f98
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a519d9b978f5b48377b1a85d52274cba35c9d075
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197440"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401811"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession クラス
 
@@ -115,7 +115,7 @@ class CInternetSession : public CObject
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
-[CObject](../../mfc/reference/cobject-class.md)  
+[CObject](../../mfc/reference/cobject-class.md)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;`CInternetSession`
 
 ## <a name="requirements"></a>要件
@@ -138,13 +138,13 @@ CInternetSession(
 
 ### <a name="parameters"></a>パラメーター
 
-*pstrAgent*  
+*pstrAgent*<br/>
 アプリケーションまたはインターネットの機能 (たとえば、「Microsoft インターネット ブラウザー」) を呼び出してエンティティ名前を識別する文字列へのポインター。 場合*pstrAgent* NULL (既定)、フレームワークによって、グローバル関数は、 [AfxGetAppName](application-information-and-management.md#afxgetappname)アプリケーションの名前を含む null で終わる文字列が返されます。 一部のプロトコルは、サーバーにアプリケーションを識別するために、この文字列を使用します。
 
-*独自*  
+*独自*<br/>
 操作のコンテキストの識別子。 *独自*によって返される操作の状態情報を識別する[対応](#onstatuscallback)します。 既定値を 1 に設定します。ただし、操作の特定のコンテキスト ID を明示的に割り当てることができます。 オブジェクトとその動作はコンテキスト ID に関連付けられる
 
-*は*  
+*は*<br/>
 必要なアクセスの種類。 次に、有効な値、うち 1 つだけを指定することがあります。
 
 - INTERNET_OPEN_TYPE_PRECONFIG 接続に使用するには、レジストリの設定が構成済みです。 このアクセスの種類は、既定値として設定されます。 このプロキシ経由の接続に次のように設定します。*は*; でこの値にする、レジストリを適切に設定します。
@@ -155,13 +155,13 @@ CInternetSession(
 
 さまざまな種類のプロキシに接続する方法については、次を参照してください。[典型的な FTP クライアント アプリケーションでのステップ](../../mfc/steps-in-a-typical-ftp-client-application.md)します。
 
-*pstrProxyName*  
+*pstrProxyName*<br/>
 優先 CERN プロキシの名前場合*は*INTERNET_OPEN_TYPE_PROXY として設定されます。 既定では NULL です。
 
-*pstrProxyBypass*  
+*pstrProxyBypass*<br/>
 サーバーのアドレスのオプションのリストを含む文字列へのポインター。 プロキシへのアクセスを使用する場合は、これらのアドレスを迂回する可能性があります。 NULL 値が指定されている場合は、レジストリからバイパス リストを読み取ります。 このパラメーターは、意味のある場合にのみ*は*INTERNET_OPEN_TYPE_PROXY に設定されます。
 
-*dwFlags*  
+*dwFlags*<br/>
 さまざまなキャッシュ オプションを示します。 既定値は 0 に設定されます。 使用可能な値は次のとおりです。
 
 - ローカルまたはゲートウェイ サーバーでは、データをキャッシュ INTERNET_FLAG_DONT_CACHE しません。
@@ -200,7 +200,7 @@ BOOL EnableStatusCallback(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-*bEnable*  
+*bEnable*<br/>
 コールバックが有効になっているかどうかを指定します。 既定では TRUE です。
 
 ### <a name="return-value"></a>戻り値
@@ -255,16 +255,16 @@ static BOOL GetCookie(
 
 ### <a name="parameters"></a>パラメーター
 
-*pstrUrl*  
+*pstrUrl*<br/>
 URL を含む文字列へのポインター。
 
-*pstrCookieName*  
+*pstrCookieName*<br/>
 指定した URL を取得するクッキーの名前を含む文字列へのポインター。
 
-*pstrCookieData*  
+*pstrCookieData*<br/>
 最初のオーバー ロードで、cookie のデータを受信するバッファーのアドレスを含む文字列へのポインター。 この値は NULL を指定できます。 2 番目のオーバー ロードへの参照では、 [CString](../../atl-mfc-shared/reference/cstringt-class.md) cookie のデータを受信するオブジェクト。
 
-*dwBufLen*  
+*dwBufLen*<br/>
 サイズを指定する変数、 *pstrCookieData*バッファー。 バッファーにコピーされたデータの量を受け取る関数が成功した場合、 *pstrCookieData*バッファー。 場合*pstrCookieData*が null の場合、このパラメーターは、すべての cookie データをコピーするために必要なバッファーのサイズを指定する値を受け取ります。
 
 ### <a name="return-value"></a>戻り値
@@ -291,10 +291,10 @@ static DWORD GetCookieLength(
 
 ### <a name="parameters"></a>パラメーター
 
-*pstrUrl*  
+*pstrUrl*<br/>
 URL を含む文字列へのポインター
 
-*pstrCookieName*  
+*pstrCookieName*<br/>
 Cookie の名前を含む文字列へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -320,13 +320,13 @@ CFtpConnection* GetFtpConnection(
 
 ### <a name="parameters"></a>パラメーター
 
-*pstrServer*  
+*pstrServer*<br/>
 FTP サーバーの名前を含む文字列へのポインター。
 
-*pstrUserName*  
+*pstrUserName*<br/>
 ログインするユーザーの名前を指定する null で終わる文字列へのポインター。 NULL の場合、既定値は匿名です。
 
-*pstrPassword*  
+*pstrPassword*<br/>
 ログインに使用するパスワードを指定する null で終わる文字列へのポインター。 両方*pstrPassword*と*pstrUserName*匿名の既定のパスワードはユーザーの電子メール名が NULL の場合。 場合*pstrPassword*が NULL (または空の文字列) が、 *pstrUserName*が NULL でない空白のパスワードを使用します。 次の表の 4 種類の設定の動作は、 *pstrUserName*と*pstrPassword*:
 
 |*pstrUserName*|*pstrPassword*|FTP サーバーに送信されるユーザー名|FTP サーバーに送信されたパスワード|
@@ -336,10 +336,10 @@ FTP サーバーの名前を含む文字列へのポインター。
 |NULL|NULL 以外の文字列|ERROR|ERROR||
 |NULL 以外の文字列|NULL 以外の文字列|*pstrUserName*|*pstrPassword*|
 
-*ポート*  
+*ポート*<br/>
 サーバーで使用する TCP/IP ポートを識別する番号。
 
-*bPassive*  
+*bPassive*<br/>
 この FTP セッションをパッシブまたはアクティブ モードを指定します。 かどうかは TRUE に設定すると、設定、Win32 API `dwFlag` INTERNET_FLAG_PASSIVE にします。
 
 ### <a name="return-value"></a>戻り値
@@ -368,16 +368,16 @@ CGopherConnection* GetGopherConnection(
 
 ### <a name="parameters"></a>パラメーター
 
-*pstrServer*  
+*pstrServer*<br/>
 Gopher サーバー名を含む文字列へのポインター。
 
-*pstrUserName*  
+*pstrUserName*<br/>
 ユーザー名を含む文字列へのポインター。
 
-*pstrPassword*  
+*pstrPassword*<br/>
 アクセスのパスワードを含む文字列へのポインター。
 
-*ポート*  
+*ポート*<br/>
 サーバーで使用する TCP/IP ポートを識別する番号。
 
 ### <a name="return-value"></a>戻り値
@@ -409,19 +409,19 @@ CHttpConnection* GetHttpConnection(
 
 ### <a name="parameters"></a>パラメーター
 
-*pstrServer*  
+*pstrServer*<br/>
 HTTP サーバー名を含む文字列へのポインター。
 
-*ポート*  
+*ポート*<br/>
 サーバーで使用する TCP/IP ポートを識別する番号。
 
-*pstrUserName*  
+*pstrUserName*<br/>
 ユーザー名を含む文字列へのポインター。
 
-*pstrPassword*  
+*pstrPassword*<br/>
 アクセスのパスワードを含む文字列へのポインター。
 
-*dwflags*  
+*dwflags*<br/>
 任意の組み合わせ、`INTERNET_FLAG_*`フラグ。 表を参照して、**解説**の[しないで](../../mfc/reference/chttpconnection-class.md#openrequest)の説明については*dwFlags*値。
 
 ### <a name="return-value"></a>戻り値
@@ -446,16 +446,16 @@ virtual void OnStatusCallback(
 
 ### <a name="parameters"></a>パラメーター
 
-*独自*  
+*独自*<br/>
 アプリケーションによって提供されるコンテキストの値です。
 
-*dwInternetStatus*  
+*dwInternetStatus*<br/>
 コールバックが行われている理由を示す状態コード。 参照してください**解説**使用可能な値の一覧についてはします。
 
-*lpvStatusInformation*  
+*lpvStatusInformation*<br/>
 このコールバックに関連する情報を格納するバッファーへのポインター。
 
-*dwStatusInformationLength*  
+*dwStatusInformationLength*<br/>
 サイズ*lpvStatusInformation*します。
 
 ### <a name="remarks"></a>Remarks
@@ -484,7 +484,7 @@ virtual void OnStatusCallback(
 > [!NOTE]
 > ステータス コールバックには、スレッド状態の保護が必要があります。 MFC の共有ライブラリを使用している場合は、オーバーライドの先頭に次の行を追加します。
 
- [!code-cpp[NVC_MFCHtmlHttp#8](../../mfc/reference/codesnippet/cpp/cinternetsession-class_1.cpp)]
+[!code-cpp[NVC_MFCHtmlHttp#8](../../mfc/reference/codesnippet/cpp/cinternetsession-class_1.cpp)]
 
 非同期操作の詳細については、記事を参照してください。[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md)します。
 
@@ -503,13 +503,13 @@ CStdioFile* OpenURL(
 
 ### <a name="parameters"></a>パラメーター
 
-*pstrURL*  
+*pstrURL*<br/>
 読み取りの開始 URL の名前へのポインター。 Url のみファイルで始まる: ftp: gopher: または http: はサポートされています。 場合アサート*pstrURL*は NULL です。
 
-*独自*  
+*独自*<br/>
 コールバックに返されるハンドルを使用して、アプリケーション定義の値が渡されます。
 
-*dwFlags*  
+*dwFlags*<br/>
 この接続を処理する方法を記述するフラグ。 参照してください**解説**で有効なフラグの詳細について。 有効なフラグは次のとおりです。
 
 - INTERNET_FLAG_TRANSFER_ASCII 既定値。 ASCII テキストとしてファイルを転送します。
@@ -526,10 +526,10 @@ CStdioFile* OpenURL(
 
 - INTERNET_FLAG_PASSIVE は、FTP サイトに使用されます。 パッシブ FTP を使用します。 併用[CInternetConnection](../../mfc/reference/cinternetconnection-class.md)の`OpenURL`します。
 
-*pstrHeaders*  
+*pstrHeaders*<br/>
 HTTP サーバーに送信するヘッダーを含む文字列へのポインター。
 
-*dwHeadersLength*  
+*dwHeadersLength*<br/>
 追加のヘッダーの文字の長さ。 この場合は-1 L と*pstrHeaders*が NULL 以外の場合、 *pstrHeaders*を 0 にするには、終了し、長さは、計算と見なされます。
 
 ### <a name="return-value"></a>戻り値
@@ -574,13 +574,13 @@ static BOOL SetCookie(
 
 ### <a name="parameters"></a>パラメーター
 
-*pstrUrl*  
+*pstrUrl*<br/>
 Cookie を設定する URL を指定する null で終わる文字列へのポインター。
 
-*pstrCookieName*  
+*pstrCookieName*<br/>
 Cookie の名前を含む文字列へのポインター。
 
-*pstrCookieData*  
+*pstrCookieData*<br/>
 URL に関連付けるを実際の文字列データを含む文字列へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -611,19 +611,19 @@ BOOL SetOption(
 
 ### <a name="parameters"></a>パラメーター
 
-*dwOption*  
+*dwOption*<br/>
 インターネット オプションを設定します。 参照してください[オプション フラグ](/windows/desktop/WinInet/option-flags)Windows SDKfor 使用可能なオプションの一覧にします。
 
-*lpBuffer*  
+*lpBuffer*<br/>
 オプションの設定を格納するバッファー。
 
-*dwBufferLength*  
+*dwBufferLength*<br/>
 長さ*lpBuffer*のサイズまたは*dwValue*します。
 
-*dwValue*  
+*dwValue*<br/>
 オプションの設定を格納する DWORD です。
 
-*dwFlags*  
+*dwFlags*<br/>
 さまざまなキャッシュ オプションを示します。 既定値は 0 に設定されます。 使用可能な値は次のとおりです。
 
 - ローカルまたはゲートウェイ サーバーでは、データをキャッシュ INTERNET_FLAG_DONT_CACHE しません。
@@ -636,9 +636,9 @@ BOOL SetOption(
 
 ## <a name="see-also"></a>関連項目
 
-[CObject クラス](../../mfc/reference/cobject-class.md)  
-[階層図](../../mfc/hierarchy-chart.md)  
-[CInternetConnection クラス](../../mfc/reference/cinternetconnection-class.md)  
-[CHttpConnection クラス](../../mfc/reference/chttpconnection-class.md)  
-[CFtpConnection クラス](../../mfc/reference/cftpconnection-class.md)  
-[CGopherConnection クラス](../../mfc/reference/cgopherconnection-class.md)  
+[CObject クラス](../../mfc/reference/cobject-class.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[CInternetConnection クラス](../../mfc/reference/cinternetconnection-class.md)<br/>
+[CHttpConnection クラス](../../mfc/reference/chttpconnection-class.md)<br/>
+[CFtpConnection クラス](../../mfc/reference/cftpconnection-class.md)<br/>
+[CGopherConnection クラス](../../mfc/reference/cgopherconnection-class.md)

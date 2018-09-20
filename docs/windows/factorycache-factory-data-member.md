@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 634e3ca3ac410680b75c7b682bcef94401ace09e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e671c4b307c4324799a6f3b31694aa1d46b70ad5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594986"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378164"
 ---
 # <a name="factorycachefactory-data-member"></a>FactoryCache::factory データ メンバー
 
@@ -46,5 +46,5 @@ Windows ランタイムまたは COM クラス ファクトリを指します。
 
 ## <a name="see-also"></a>関連項目
 
-[FactoryCache 構造体](../windows/factorycache-structure.md)  
+[FactoryCache 構造体](../windows/factorycache-structure.md)<br/>
 [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

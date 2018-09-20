@@ -21,30 +21,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d92b95cac23eed029a49239d791df237377d8376
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d630aa39cb4eb4e56a0d64446ac5a5ea7a67881c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42587130"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395857"
 ---
 # <a name="internationalization-strategies"></a>国際化のアプローチ
-によって、ターゲットのオペレーティング システムとの市場には、いくつかの国際対応戦略がある場合。  
-  
--   アプリケーションでは、Unicode を使用します。  
-  
-     Unicode 固有の機能を使用して、(ただし、プログラムの一部の ANSI 文字を使用するには特別な目的で)、すべての文字が 16 ビット幅。 C ランタイム ライブラリでは、Unicode 専用のプログラミングの関数、マクロ、およびデータ型を提供します。 MFC は、Unicode に対応しました。  
-  
--   アプリケーションでは、MBCS を使用し、すべての Win32 プラットフォーム上で実行できます。  
-  
-     MBCS 固有の機能を使用するとします。 文字列には、1 バイト文字、2 バイト文字、またはその両方を含めることができます。 C ランタイム ライブラリでは、MBCS 専用のプログラミングの関数、マクロ、およびデータ型を提供します。 MFC は、MBCS に対応しました。  
-  
--   完全な移植性のため、アプリケーションのソース コードが記述された、シンボルの再コンパイルして`_UNICODE`または記号`_MBCS`定義されている、いずれかを使用するバージョンを生成できます。 詳細については、次を参照してください。 [Tchar.h における汎用テキスト マッピング](../text/generic-text-mappings-in-tchar-h.md)します。  
-  
-     完全に移植可能な C ランタイム関数、マクロ、およびデータ型を使用するとします。 MFC の柔軟性は、これらの方法のいずれかをサポートします。  
-  
- これらのトピックの残りの部分は、Unicode と MBCS をビルドできる完全に移植可能なコードの作成に集中します。  
-  
-## <a name="see-also"></a>関連項目  
- [Unicode と MBCS](../text/unicode-and-mbcs.md)   
- [ロケールとコード ページ](../text/locales-and-code-pages.md)
+
+によって、ターゲットのオペレーティング システムとの市場には、いくつかの国際対応戦略がある場合。
+
+- アプリケーションでは、Unicode を使用します。
+
+   Unicode 固有の機能を使用して、(ただし、プログラムの一部の ANSI 文字を使用するには特別な目的で)、すべての文字が 16 ビット幅。 C ランタイム ライブラリでは、Unicode 専用のプログラミングの関数、マクロ、およびデータ型を提供します。 MFC は、Unicode に対応しました。
+
+- アプリケーションでは、MBCS を使用し、すべての Win32 プラットフォーム上で実行できます。
+
+   MBCS 固有の機能を使用するとします。 文字列には、1 バイト文字、2 バイト文字、またはその両方を含めることができます。 C ランタイム ライブラリでは、MBCS 専用のプログラミングの関数、マクロ、およびデータ型を提供します。 MFC は、MBCS に対応しました。
+
+- 完全な移植性のため、アプリケーションのソース コードが記述された、シンボルの再コンパイルして`_UNICODE`または記号`_MBCS`定義されている、いずれかを使用するバージョンを生成できます。 詳細については、次を参照してください。 [Tchar.h における汎用テキスト マッピング](../text/generic-text-mappings-in-tchar-h.md)します。
+
+   完全に移植可能な C ランタイム関数、マクロ、およびデータ型を使用するとします。 MFC の柔軟性は、これらの方法のいずれかをサポートします。
+
+これらのトピックの残りの部分は、Unicode と MBCS をビルドできる完全に移植可能なコードの作成に集中します。
+
+## <a name="see-also"></a>関連項目
+
+[Unicode と MBCS](../text/unicode-and-mbcs.md)<br/>
+[ロケールとコード ページ](../text/locales-and-code-pages.md)

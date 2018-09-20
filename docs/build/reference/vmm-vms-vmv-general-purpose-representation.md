@@ -29,12 +29,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4e790281cd23ba43987ec6ab003787c115150be
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9cd0fb1eae8638f91ad97aec2ef24e0a578e7d7a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701303"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385548"
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm、/vms、/vmv (通常の最適化)
 
@@ -76,6 +76,6 @@ ms.locfileid: "45701303"
 
 ## <a name="see-also"></a>関連項目
 
-[/vmb、/vmg () を処理形式](../../build/reference/vmb-vmg-representation-method.md)
+[/vmb、/vmg (処理形式)](../../build/reference/vmb-vmg-representation-method.md)<br/>
 [コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
 [コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)

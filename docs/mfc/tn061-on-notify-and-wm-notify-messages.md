@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d2f1259227fa8d27778dbf0e40b13f5460b7041
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2395cb7b1f3d719fd64494ee9b9c7c64ba222bac
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218786"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381830"
 ---
 # <a name="tn061-onnotify-and-wmnotify-messages"></a>テクニカル ノート 61: ON_NOTIFY メッセージと WM_NOTIFY メッセージ
 
@@ -104,14 +104,14 @@ ON_NOTIFY(wNotifyCode, id, memberFxn)
 
 パラメーターは次のとおりです。
 
-*wNotifyCode*  
- 通知メッセージが、LVN_KEYDOWN などを処理するまでのコードです。
+*wNotifyCode*<br/>
+通知メッセージが、LVN_KEYDOWN などを処理するまでのコードです。
 
-*ID*  
- 通知の送信対象のコントロールの子の識別子。
+*ID*<br/>
+通知の送信対象のコントロールの子の識別子。
 
-*memberFxn*  
- この通知は送信時に呼び出されるメンバー関数。
+*memberFxn*<br/>
+この通知は送信時に呼び出されるメンバー関数。
 
 メンバー関数は、次のプロトタイプで宣言する必要があります。
 
@@ -121,11 +121,11 @@ afx_msg void memberFxn(NMHDR* pNotifyStruct, LRESULT* result);
 
 パラメーターは次のとおりです。
 
-*pNotifyStruct*  
- 上記のセクションで説明した通知構造体へのポインター。
+*pNotifyStruct*<br/>
+上記のセクションで説明した通知構造体へのポインター。
 
-*結果*  
- 結果コードへのポインターを返す前に設定します。
+*結果*<br/>
+結果コードへのポインターを返す前に設定します。
 
 ## <a name="example"></a>例
 
@@ -141,7 +141,7 @@ ON_NOTIFY(LVN_KEYDOWN, IDC_LIST1, OnKeydownList1)
 void CMessageReflectionDlg::OnKeydownList1(NMHDR* pNMHDR, LRESULT* pResult)
 {
     LV_KEYDOWN* pLVKeyDow = (LV_KEYDOWN*)pNMHDR;
-    
+
     // TODO: Add your control notification handler
     //       code here
 
@@ -167,17 +167,17 @@ ON_NOTIFY_RANGE(wNotifyCode, id, idLast, memberFxn)
 
 パラメーターは次のとおりです。
 
-*wNotifyCode*  
- 通知メッセージが、LVN_KEYDOWN などを処理するまでのコードです。
+*wNotifyCode*<br/>
+通知メッセージが、LVN_KEYDOWN などを処理するまでのコードです。
 
-*ID*  
- 連続した範囲の識別子の最初の識別子。
+*ID*<br/>
+連続した範囲の識別子の最初の識別子。
 
-*idLast*  
- 識別子の連続する範囲の最後の識別子。
+*idLast*<br/>
+識別子の連続する範囲の最後の識別子。
 
-*memberFxn*  
- この通知は送信時に呼び出されるメンバー関数。
+*memberFxn*<br/>
+この通知は送信時に呼び出されるメンバー関数。
 
 メンバー関数は、次のプロトタイプで宣言する必要があります。
 
@@ -187,14 +187,14 @@ afx_msg void memberFxn(UINT id, NMHDR* pNotifyStruct, LRESULT* result);
 
 パラメーターは次のとおりです。
 
-*ID*  
- 通知を送信したコントロールの子の識別子。
+*ID*<br/>
+通知を送信したコントロールの子の識別子。
 
-*pNotifyStruct*  
- 前述のように、通知構造へのポインター。
+*pNotifyStruct*<br/>
+前述のように、通知構造へのポインター。
 
-*結果*  
- 結果コードへのポインターを返す前に設定します。
+*結果*<br/>
+結果コードへのポインターを返す前に設定します。
 
 ##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a> ON_NOTIFY_EX、ON_NOTIFY_EX_RANGE
 
@@ -221,5 +221,5 @@ afx_msg BOOL memberFxn(UINT id, NMHDR* pNotifyStruct, LRESULT* result);
 
 ## <a name="see-also"></a>関連項目
 
-[番号順テクニカル ノート](../mfc/technical-notes-by-number.md)  
-[カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)  
+[番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
+[カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)

@@ -1,5 +1,5 @@
 ---
-title: 入出力処理の推奨事項 |Microsoft ドキュメント
+title: 入出力処理の推奨事項 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,43 +18,45 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ee88b7784abb6ca622e72a9dfb31efc39fa7816
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 5a8d0d2c7e560338bbef5cbe432c325385734c56
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930941"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385028"
 ---
 # <a name="recommendations-for-handling-inputoutput"></a>入出力処理の推奨事項
-ファイル ベースの I/O を使用するかどうかは、次のデシジョン ツリーの質問に応答する方法によって異なります。  
-  
- **ディスク ファイルに格納されて、アプリケーションのプライマリ データ**  
-  
--   はい、プライマリ データは、ディスク ファイルには。  
-  
-     **アプリケーションでファイルを開く上のメモリにファイル全体を読み取るし、ファイル全体で書き戻しをディスクにファイルの保存**  
-  
-    -   [はい] : これは、既定で MFC のドキュメントです。 使用して`CDocument`シリアル化します。  
-  
-    -   いいえ。 これは通常のファイルの更新トランザクション ベースの場合です。 トランザクションごとのファイルを更新し、必要はありません`CDocument`シリアル化します。  
-  
--   いいえ、プライマリ データは、ディスク ファイルに存在しません。  
-  
-     **データが、ODBC データ ソースに存在します。**  
-  
-    -   [はい]、ODBC データ ソースのデータに存在します。  
-  
-         MFC データベース サポートを使用します。 この場合は、標準的な MFC 実装が含まれています、`CDatabase`オブジェクト、記事に説明したように[MFC: ドキュメントとビューを用いたデータベース クラス](../data/mfc-using-database-classes-with-documents-and-views.md)です。 アプリケーションの読み取りし、補助ファイルを書き込む可能性がありますも、アプリケーションのウィザード オプションの「データベース ビューとファイルの両方をサポート」の目的は、します。 この例では、補助ファイルのシリアル化を使用します。  
-  
-    -   いいえ、ODBC データ ソースのデータが存在しません。  
-  
-         この場合の例: で、ODBC DBMS 以外; に存在するデータOLE や DDE など、他のいくつかのメカニズムを使用して、データが読み取られます。  
-  
-         このような場合、シリアル化を使用しないし、アプリケーションはありませんが開いているメニュー項目を保存します。 使用する場合がありますが、`CDocument`ホーム ベースとしてと同様に、MFC ODBC アプリケーションを使用して、ドキュメントを格納する`CRecordset`オブジェクト。 フレームワークの既定のファイルを開くまたは保存ドキュメントのシリアル化を使用しません。  
-  
- サポートし、オープン、save、ファイル メニューのコマンドを付けては、フレームワークは、ドキュメントのシリアル化を提供します。 シリアル化の読み書きデータ クラスから派生したオブジェクトを含む`CObject`、無期限に記憶域、通常、ディスク ファイル。 シリアル化は簡単に使用し、ニーズの多くは機能が、多くのデータ アクセス アプリケーションで適切でない可能性があります。 データ アクセス アプリケーションは、通常のトランザクションごとにデータを更新します。 トランザクションではなく読み取りや書き込みデータ ファイル全体を一度にによって影響を受けたレコードを更新します。  
-  
- シリアル化の概要については、次を参照してください。[シリアル化](../mfc/serialization-in-mfc.md)です。  
-  
-## <a name="see-also"></a>関連項目  
- [シリアル化: シリアル化とデータベースの入力/出力](../mfc/serialization-serialization-vs-database-input-output.md)
+
+ファイル ベースの I/O を使用するかどうかは、次のデシジョン ツリーの質問に応答する方法によって異なります。
+
+**アプリケーションでプライマリ データがディスク ファイル内に存在します。**
+
+- はい、プライマリ データは、ディスク ファイルには。
+
+     **アプリケーションでファイルを開く上のメモリにファイル全体を読み取るし、ファイル全体で書き戻しをディスクにファイルの保存**
+
+   - [はい] : これは、既定で MFC のドキュメントです。 使用`CDocument`シリアル化します。
+
+   - いいえ: これは、通常のファイルの更新トランザクション ベースの場合。 トランザクションごとのファイルを更新し、不要`CDocument`シリアル化します。
+
+- いいえ、プライマリ データは、ディスク ファイルに存在しません。
+
+     **データは、ODBC データ ソース内で存在します。**
+
+   - はい、ODBC データ ソースのデータが存在します。
+
+         Use MFC's database support. The standard MFC implementation for this case includes a `CDatabase` object, as discussed in the article [MFC: Using Database Classes with Documents and Views](../data/mfc-using-database-classes-with-documents-and-views.md). The application might also read and write an auxiliary file — the purpose of the application wizard "both a database view and file support" option. In this case, you'd use serialization for the auxiliary file.
+
+   - いいえ、ODBC データ ソースのデータが存在しません。
+
+         Examples of this case: the data resides in a non-ODBC DBMS; the data is read via some other mechanism, such as OLE or DDE.
+
+         In such cases, you won't use serialization, and your application won't have Open and Save menu items. You might still want to use a `CDocument` as a home base, just as an MFC ODBC application uses the document to store `CRecordset` objects. But you won't use the framework's default File Open/Save document serialization.
+
+サポートし、オープン、保存、[ファイル] メニューのコマンドを付けて、フレームワークは、ドキュメントのシリアル化を提供します。 シリアル化データ読み取りし、書き込み、クラスから派生したオブジェクトを含む`CObject`に永続的なストレージ、通常のディスク ファイル。 シリアル化は簡単に使用し、ニーズの多くは機能しますが、多くのデータ アクセス アプリケーションで適切でない可能性があります。 データ アクセス アプリケーションは、通常、トランザクション単位でデータを更新します。 トランザクションではなく読み取りと書き込みデータ ファイル全体を一度に影響を受けるレコードだけが更新されます。
+
+シリアル化については、次を参照してください。[シリアル化](../mfc/serialization-in-mfc.md)します。
+
+## <a name="see-also"></a>関連項目
+
+[シリアル化: シリアル化とデータベースの入力/出力](../mfc/serialization-serialization-vs-database-input-output.md)

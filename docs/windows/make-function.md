@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5dab76460dcbbb70f55dac864292ad9a6f1fca99
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a8b02b51dca4ae3712274b2b011c1967e5006637
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607821"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422403"
 ---
 # <a name="make-function"></a>Make 関数
 
@@ -174,61 +174,61 @@ ComPtr<T> Make();
 
 ### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 ユーザー指定のクラスから継承する`WRL::RuntimeClass`します。
 
-*TArg1*  
+*TArg1*<br/>
 指定されたランタイム クラスに渡される引数 1 の型。
 
-*TArg2*  
+*TArg2*<br/>
 指定されたランタイム クラスに渡される引数 2 の型。
 
-*TArg3*  
+*TArg3*<br/>
 指定されたランタイム クラスに渡される引数 3 の型。
 
-*TArg4*  
+*TArg4*<br/>
 指定されたランタイム クラスに渡される引数 4 の型。
 
-*TArg5*  
+*TArg5*<br/>
 指定されたランタイム クラスに渡される 5 引数の型。
 
-*TArg6*  
+*TArg6*<br/>
 指定されたランタイム クラスに渡される 6 引数の型。
 
-*TArg7*  
+*TArg7*<br/>
 指定されたランタイム クラスに渡される 7 引数の型。
 
-*TArg8*  
+*TArg8*<br/>
 指定されたランタイム クラスに渡される 8 引数の型。
 
-*TArg9*  
+*TArg9*<br/>
 指定されたランタイム クラスに渡される 9 引数の型。
 
-*arg1*  
+*arg1*<br/>
 指定されたランタイム クラスに渡される引数 1 です。
 
-*Arg2*  
+*Arg2*<br/>
 指定されたランタイム クラスに渡される引数 2
 
-*arg3…*  
+*arg3…*<br/>
 指定されたランタイム クラスに渡される引数 3 です。
 
-*arg4*  
+*arg4*<br/>
 指定されたランタイム クラスに渡される引数 4 です。
 
-*arg5*  
+*arg5*<br/>
 指定されたランタイム クラスに渡される引数 5 です。
 
-*arg6*  
+*arg6*<br/>
 指定されたランタイム クラスに渡される引数 6 です。
 
-*arg7*  
+*arg7*<br/>
 指定されたランタイム クラスに渡される引数 7 です。
 
-*arg8*  
+*arg8*<br/>
 指定されたランタイム クラスに渡される引数 8 です。
 
-*arg9*  
+*arg9*<br/>
 指定されたランタイム クラスに渡される引数 9 です。
 
 ## <a name="return-value"></a>戻り値
