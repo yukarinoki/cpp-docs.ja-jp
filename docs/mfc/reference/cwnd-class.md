@@ -828,12 +828,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a35d65509de75e117bdbeef679618b8d49ef37a2
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6cbe2269bfe4a67ba4e8c6952980216fce92165f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711621"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448611"
 ---
 # <a name="cwnd-class"></a>CWnd クラス
 
@@ -1319,7 +1319,7 @@ virtual HRESULT accDoDefaultAction(VARIANT varChild);
 
 ### <a name="parameters"></a>パラメーター
 
-*varChild*  
+*varChild*<br/>
 呼び出される既定のアクションは、オブジェクトまたはオブジェクトの子要素のいずれかのかどうかを指定します。 このパラメーターには、CHILDID_SELF (する場合、オブジェクトの既定のアクションを実行) または (オブジェクトの子要素のいずれかの既定のアクションを実行) する場合は子 ID のいずれかを指定できます。
 
 ### <a name="return-value"></a>戻り値
@@ -1345,13 +1345,13 @@ virtual HRESULT accHitTest(
 
 ### <a name="parameters"></a>パラメーター
 
-*xLeft*  
+*xLeft*<br/>
 ヒットする点の X 座標は、(画面のユニット数) でテストします。
 
-*yTop*  
+*yTop*<br/>
 ヒットする点の Y 座標は、(画面のユニット数) でテストします。
 
-*pvarChild*  
+*pvarChild*<br/>
 指定された時点でオブジェクトを識別する情報を受け取る*xLeft*と*yTop*します。 参照してください*pvarID*で[IAccessible::accHitTest](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-acchittest) Windows SDK に含まれています。
 
 ### <a name="return-value"></a>戻り値
@@ -1381,19 +1381,19 @@ virtual HRESULT accLocation(
 
 ### <a name="parameters"></a>パラメーター
 
-*pxLeft*  
+*pxLeft*<br/>
 (画面のユニット数) で、オブジェクトの左上隅の x 座標を受け取ります。
 
-*pyTop*  
+*pyTop*<br/>
 (画面のユニット数) で、オブジェクトの左上隅の y 座標を受け取ります。
 
-*pcxWidth*  
+*pcxWidth*<br/>
 (画面のユニット数) でオブジェクトの幅を受け取ります。
 
-*pcyHeight*  
+*pcyHeight*<br/>
 (画面のユニット数) 内のオブジェクトの高さを受け取ります。
 
-*varChild*  
+*varChild*<br/>
 取得する場所は、オブジェクトまたはオブジェクトの子要素のいずれかのかどうかを指定します。 このパラメーターには、CHILDID_SELF (する場合、オブジェクトに関する情報を取得) または (オブジェクトの子要素に関する情報を取得) する場合は子 ID のいずれかを指定できます。
 
 ### <a name="return-value"></a>戻り値
@@ -1419,13 +1419,13 @@ virtual HRESULT accNavigate(
 
 ### <a name="parameters"></a>パラメーター
 
-*navDir*  
+*navDir*<br/>
 移動する方向を指定します。 参照してください*navDir*で[IAccessible::accNavigate](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-accnavigate) Windows SDK に含まれています。
 
-*varStart*  
+*varStart*<br/>
 開始オブジェクトを指定します。 参照してください*varStart*で`IAccessible::accNavigate`Windows SDK に含まれています。
 
-*pvarEndUpAt*  
+*pvarEndUpAt*<br/>
 変換先のユーザー インターフェイス オブジェクトに関する情報を受け取ります。 参照してください*pvarEnd*で`IAccessible::accNavigate`Windows SDK に含まれています。
 
 ### <a name="return-value"></a>戻り値
@@ -1452,10 +1452,10 @@ virtual HRESULT accSelect(
 
 ### <a name="parameters"></a>パラメーター
 
-*flagsSelect*  
+*flagsSelect*<br/>
 現在の選択またはフォーカスを変更する方法を指定します。 参照してください*flagsSelect*で[IAccessible::accSelect](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-accselect) Windows SDK に含まれています。
 
-*varChild*  
+*varChild*<br/>
 選択するオブジェクトを指定します。 このパラメーターには、CHILDID_SELF (する場合、オブジェクト自体を選択します) または (オブジェクトの子のいずれかを選択) する場合は子 ID のいずれかを指定できます。
 
 ### <a name="return-value"></a>戻り値
@@ -1482,10 +1482,10 @@ BOOL AnimateWindow(
 
 ### <a name="parameters"></a>パラメーター
 
-*dwTime*  
+*dwTime*<br/>
 ミリ秒単位で、アニメーションの再生に要する時間を指定します。 通常、アニメーションを再生する 200 ミリ秒をかかります。
 
-*dwFlags*  
+*dwFlags*<br/>
 アニメーションの種類を指定します。 使用可能な値の完全な一覧は、次を参照してください。 [AnimateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632669)します。
 
 ### <a name="return-value"></a>戻り値
@@ -1528,7 +1528,7 @@ BOOL Attach(HWND hWndNew);
 
 ### <a name="parameters"></a>パラメーター
 
-*hWndNew*  
+*hWndNew*<br/>
 Windows のウィンドウのハンドルを指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -1563,7 +1563,7 @@ CDC* BeginPaint(LPPAINTSTRUCT lpPaint);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpPaint*  
+*lpPaint*<br/>
 指す、 [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)描画情報を受け取る構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -1596,16 +1596,16 @@ void BindDefaultProperty(
 
 ### <a name="parameters"></a>パラメーター
 
-*dwDispID*  
+*dwDispID*<br/>
 データ ソース コントロールにバインドするデータ バインド コントロールのプロパティの DISPID を指定します。
 
-*vtProp*  
+*vtProp*<br/>
 バインドされるプロパティの種類を指定します: VT_BSTR、VT_VARIANT、およびなど。
 
-*szFieldName*  
+*szFieldName*<br/>
 プロパティのバインド先のデータ ソース コントロールによって提供される、カーソル内の列の名前を指定します。
 
-*pDSCWnd*  
+*pDSCWnd*<br/>
 ウィンドウに、そのホスト データ ソース コントロールのプロパティのバインド先を指します。 呼び出す`GetDlgItem`リソース id をドメイン コント ローラーのホスト ウィンドウのこのポインターを取得します。
 
 ### <a name="remarks"></a>Remarks
@@ -1632,10 +1632,10 @@ void BindProperty(
 
 ### <a name="parameters"></a>パラメーター
 
-*dwDispId*  
+*dwDispId*<br/>
 データ ソース コントロールにバインドするデータ バインド コントロールのプロパティの DISPID を指定します。
 
-*pWndDSC*  
+*pWndDSC*<br/>
 ウィンドウに、そのホスト データ ソース コントロールのプロパティのバインド先を指します。 呼び出す`GetDlgItem`リソース id をドメイン コント ローラーのホスト ウィンドウのこのポインターを取得します。
 
 ### <a name="remarks"></a>Remarks
@@ -1706,7 +1706,7 @@ static void PASCAL CancelToolTips(BOOL bKeys = FALSE);
 
 ### <a name="parameters"></a>パラメーター
 
-*bKeys*  
+*bKeys*<br/>
 キーが押されたステータス バーのテキストを既定に設定した場合、ツール ヒントをキャンセルする場合は TRUEそれ以外の場合は FALSE です。
 
 ### <a name="remarks"></a>Remarks
@@ -1728,7 +1728,7 @@ void CenterWindow(CWnd* pAlternateOwner = NULL);
 
 ### <a name="parameters"></a>パラメーター
 
-*pAlternateOwner*  
+*pAlternateOwner*<br/>
 基準となることが別のウィンドウへのポインターには、(親ウィンドウよりもその他) が中央に配置します。
 
 ### <a name="remarks"></a>Remarks
@@ -1749,7 +1749,7 @@ BOOL ChangeClipboardChain(HWND hWndNext);
 
 ### <a name="parameters"></a>パラメーター
 
-*hWndNext*  
+*hWndNext*<br/>
 次のウィンドウを識別`CWnd`クリップボード ビューアーのチェイン。
 
 ### <a name="return-value"></a>戻り値
@@ -1768,10 +1768,10 @@ void CheckDlgButton(
 
 ### <a name="parameters"></a>パラメーター
 
-*nIDButton*  
+*nIDButton*<br/>
 変更するボタンを指定します。
 
-*確認してください。*  
+*確認してください。*<br/>
 実行するアクションを指定します。 場合*を確認してください*、0 以外の場合は、`CheckDlgButton`メンバー関数は、ボタンの横にあるチェック マークを配置する; 0 の場合、チェック マークが削除されます。 3 つの状態のボタンの場合は*を確認してください*が 2 の場合、ボタンの状態が不定になります。
 
 ### <a name="remarks"></a>Remarks
@@ -1795,13 +1795,13 @@ void CheckRadioButton(
 
 ### <a name="parameters"></a>パラメーター
 
-*nIDFirstButton*  
+*nIDFirstButton*<br/>
 グループ内の最初のラジオ ボタンの整数識別子を指定します。
 
-*nIDLastButton*  
+*nIDLastButton*<br/>
 グループ内の最後のラジオ ボタンの整数識別子を指定します。
 
-*nIDCheckButton*  
+*nIDCheckButton*<br/>
 チェックするラジオ ボタンの整数識別子を指定します。
 
 ### <a name="remarks"></a>Remarks
@@ -1826,10 +1826,10 @@ CWnd* ChildWindowFromPoint(
 
 ### <a name="parameters"></a>パラメーター
 
-*ポイント*  
+*ポイント*<br/>
 テストするポイントのクライアント座標を指定します。
 
-*nflags*  
+*nflags*<br/>
 スキップするには、どの子ウィンドウを指定します。 このパラメーターは、次の値の組み合わせを指定できます。
 
 |[値]|説明|
@@ -1863,10 +1863,10 @@ void ClientToScreen(LPPOINT lpPoint) const;  void ClientToScreen(LPRECT lpRect) 
 
 ### <a name="parameters"></a>パラメーター
 
-*lpPoint*  
+*lpPoint*<br/>
 指す、 [POINT 構造体](../../mfc/reference/point-structure1.md)または`CPoint`クライアントを含むオブジェクトを変換する座標します。
 
-*lpRect*  
+*lpRect*<br/>
 指す、 [RECT 構造体](../../mfc/reference/rect-structure1.md)または`CRect`クライアントを含むオブジェクトを変換する座標します。
 
 ### <a name="remarks"></a>Remarks
@@ -1977,17 +1977,17 @@ virtual HRESULT CreateAccessibleProxy(
 
 ### <a name="parameters"></a>パラメーター
 
-*wParam*  
+*wParam*<br/>
 Active Accessibility プロキシ経由でアクセスするオブジェクトを識別します。 次の値のいずれかを指定できます。
 
 |[値]|説明|
 |-----------|-------------|
 |OBJID_CLIENT|ウィンドウのクライアント領域を指します。|
 
-*lParam*  
+*lParam*<br/>
 メッセージに依存する追加情報を提供します。
 
-*pResult*  
+*pResult*<br/>
 結果コードを格納する、LRESULT へのポインター。
 
 ### <a name="remarks"></a>Remarks
@@ -2004,7 +2004,7 @@ void CreateCaret(CBitmap* pBitmap);
 
 ### <a name="parameters"></a>パラメーター
 
-*pBitmap*  
+*pBitmap*<br/>
 カレットの形を定義するビットマップを識別します。
 
 ### <a name="remarks"></a>Remarks
@@ -2063,40 +2063,40 @@ BOOL CreateControl(
 
 ### <a name="parameters"></a>パラメーター
 
-*pszClass*  
+*pszClass*<br/>
 この文字列は OLE「省略名」を含めることができます (ProgID)"CIRC3 など、クラス。Circ3Ctrl.1"。 名前は、コントロールによって登録された同じ名前と一致する必要があります。 また、文字列は、CLSID、かっこ、たとえば、"{9DBAFCCF-592F-101B-85CE-00608CEC297B}"内の文字列形式を含めることができます。 いずれの場合も、`CreateControl`文字列を対応するクラスの ID に変換します。
 
-*pszWindowName*  
+*pszWindowName*<br/>
 コントロールに表示されるテキストへのポインター。 (指定されている場合) は、コントロールのキャプションまたはテキストのプロパティの値を設定します。 NULL の場合、コントロールのキャプションまたはテキストのプロパティは変更されません。
 
-*dwStyle*  
+*dwStyle*<br/>
 Windows のスタイル。 使用可能なスタイルは、「解説」に一覧表示されます。
 
-*rect*  
+*rect*<br/>
 コントロールのサイズと位置を指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT 構造体](../../mfc/reference/rect-structure1.md)します。
 
-*ppt*  
+*ppt*<br/>
 指す、 [POINT 構造体](../../mfc/reference/point-structure1.md)または`CPoint`コントロールの左上隅を含むオブジェクト。
 
-*pSize*  
+*pSize*<br/>
 指す、[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)構造または`CSize`コントロールのサイズを格納しているオブジェクト
 
-*pParentWnd*  
+*pParentWnd*<br/>
 コントロールの親ウィンドウを指定します。 NULL は指定できません。
 
-*nID*  
+*nID*<br/>
 コントロールの ID を指定します
 
-*pPersist*  
+*pPersist*<br/>
 ポインターを[CFile](../../mfc/reference/cfile-class.md)コントロールの永続的な状態を格納します。 既定値は、null の場合、コントロール自体の初期化を任意の永続的なストレージからの状態を復元しないことを示すです。 ポインターである必要があります、NULL でない場合、 `CFile`-派生ストリームまたはストレージのいずれかの形式で、コントロールの永続的なデータを格納するオブジェクト。 クライアントの以前のライセンス認証でこのデータが保存された可能性があります。 `CFile` 、他のデータを含めることができますが、読み取り/書き込みを指すポインターへの呼び出し時に永続的なデータの最初のバイトに設定する必要がありますがある`CreateControl`します。
 
-*bStorage*  
+*bStorage*<br/>
 示すかどうかのデータ*pPersist* IStorage または IStream データとして解釈する必要があります。 場合内のデータ*pPersist* 、ストレージには、 *bStorage* TRUE にする必要があります。 場合内のデータ*pPersist*ストリーム、 *bStorage* FALSE にする必要があります。 既定値は FALSE です。
 
-*bstrLicKey*  
+*bstrLicKey*<br/>
 省略可能なライセンス キーのデータ。 このデータは、ランタイム ライセンス キーが必要なコントロールの作成にのみ必要です。 コントロールでは、ライセンスをサポートする場合を正常にコントロールを作成するためのライセンス キーを提供する必要があります。 既定値は、NULL です。
 
-*clsid*  
+*clsid*<br/>
 コントロールの一意のクラス ID。
 
 ### <a name="return-value"></a>戻り値
@@ -2155,46 +2155,46 @@ virtual BOOL CreateEx(
 
 ### <a name="parameters"></a>パラメーター
 
-*dwExStyle*  
+*dwExStyle*<br/>
 ビットごとの組み合わせ (OR)[拡張ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)拡張ウィンドウ スタイルを既定値は null それ以外の場合。
 
-*lpszClassName*  
+*lpszClassName*<br/>
 登録されているシステム ウィンドウ クラスの名前を含む null で終わる文字列へのポインターまたは、定義済みのシステムのウィンドウ クラスの名前。
 
-*したとき*  
+*したとき*<br/>
 ウィンドウを含む null で終わる文字列へのポインターの表示名それ以外の場合は NULL のウィンドウの表示名がありません。
 
-*dwStyle*  
+*dwStyle*<br/>
 ビットごとの組み合わせ (OR)[ウィンドウ スタイル](styles-used-by-mfc.md#window-styles)それ以外の場合、既定のウィンドウ スタイルの NULL 以外。
 
-*x*  
+*x*<br/>
 画面の左側にあるウィンドウまたは親ウィンドウの初期の水平方向の距離。
 
-*y*  
+*y*<br/>
 画面の上部からウィンドウまたは親ウィンドウの初期の垂直距離。
 
-*nWidth*  
+*nWidth*<br/>
 ウィンドウのピクセル単位の幅。
 
-*パラメーター nHeight*  
+*パラメーター nHeight*<br/>
 ウィンドウのピクセル単位の高さ。
 
-*hwndParent*  
+*hwndParent*<br/>
 子ウィンドウに対して、親ウィンドウへのハンドルそれ以外の場合、ウィンドウに所有者が設定されている場合は、オーナー ウィンドウのハンドル。
 
-*nIDorHMenu*  
+*nIDorHMenu*<br/>
 子ウィンドウ、ウィンドウの ID。それ以外の場合、ウィンドウのメニューの ID。
 
-*lpParam*  
+*lpParam*<br/>
 渡されるユーザー データへのポインター、 [CWnd::OnCreate](#oncreate)メソッドで、 *lpCreateParams*フィールド。
 
-*rect*  
+*rect*<br/>
 サイズと、画面を基準とウィンドウまたは親ウィンドウの位置。
 
-*pParentWnd*  
+*pParentWnd*<br/>
 子ウィンドウに対して、親ウィンドウへのポインターウィンドウに所有者が設定されている場合、オーナー ウィンドウに、それ以外の場合のポインター。
 
-*nID*  
+*nID*<br/>
 子ウィンドウ、ウィンドウの ID。それ以外の場合、ウィンドウのメニューの ID。
 
 ### <a name="return-value"></a>戻り値
@@ -2232,10 +2232,10 @@ void CreateGrayCaret(
 
 ### <a name="parameters"></a>パラメーター
 
-*nWidth*  
+*nWidth*<br/>
 (論理単位) 内のキャレットの幅を指定します。 このパラメーターが 0 の場合は、幅がシステム定義のウィンドウの境界線の幅に設定されます。
 
-*パラメーター nHeight*  
+*パラメーター nHeight*<br/>
 (論理単位) 内のキャレットの高さを指定します。 このパラメーターが 0 の場合は、高さがシステム定義のウィンドウの境界線の高さに設定されます。
 
 ### <a name="remarks"></a>Remarks
@@ -2266,10 +2266,10 @@ void CreateSolidCaret(
 
 ### <a name="parameters"></a>パラメーター
 
-*nWidth*  
+*nWidth*<br/>
 (論理単位) 内のキャレットの幅を指定します。 このパラメーターが 0 の場合は、幅がシステム定義のウィンドウの境界線の幅に設定されます。
 
-*パラメーター nHeight*  
+*パラメーター nHeight*<br/>
 (論理単位) 内のキャレットの高さを指定します。 このパラメーターが 0 の場合は、高さがシステム定義のウィンドウの境界線の高さに設定されます。
 
 ### <a name="remarks"></a>Remarks
@@ -2333,13 +2333,13 @@ virtual LRESULT DefWindowProc(
 
 ### <a name="parameters"></a>パラメーター
 
-*message*  
+*message*<br/>
 処理する Windows メッセージを指定します。
 
-*wParam*  
+*wParam*<br/>
 メッセージに依存する追加情報を指定します。
 
-*lParam*  
+*lParam*<br/>
 メッセージに依存する追加情報を指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -2426,16 +2426,16 @@ int DlgDirList(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpPathSpec*  
+*lpPathSpec*<br/>
 パスまたはファイル名を含む null で終わる文字列へのポインター。 `DlgDirList` この文字列は、する必要があります、変更を格納するのに十分な長さを変更します。 詳細については、次の「解説」セクションを参照してください。
 
-*nIDListBox*  
+*nIDListBox*<br/>
 リスト ボックスの識別子を指定します。 場合*nIDListBox*は 0 です。`DlgDirList`リスト ボックスは表示されませんが存在し、1 つを入力しないことを前提としています。
 
-*nIDStaticPath*  
+*nIDStaticPath*<br/>
 現在のドライブとディレクトリを表示するための静的なテキスト コントロールの識別子を指定します。 場合*nIDStaticPath*は 0 です。`DlgDirList`このようなテキスト コントロールが存在しないことを前提としています。
 
-*nFileType*  
+*nFileType*<br/>
 表示されるファイルの属性を指定します。 次の値の任意の組み合わせを指定できます。
 
 - 読み取り/書き込みデータ ファイルを DDL_READWRITE に追加の属性がありません。
@@ -2494,16 +2494,16 @@ int DlgDirListComboBox(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpPathSpec*  
+*lpPathSpec*<br/>
 パスまたはファイル名を含む null で終わる文字列へのポインター。 `DlgDirListComboBox` このデータは、リテラル文字列の形式にすることはできませんので、この文字列を変更します。 次の「解説」セクションを参照してください。
 
-*nIDComboBox*  
+*nIDComboBox*<br/>
 ダイアログ ボックスで、コンボ ボックスの識別子を指定します。 場合*nIDComboBox*は 0 です。`DlgDirListComboBox`コンボ ボックスは表示されませんが存在し、1 つを入力しないことを前提としています。
 
-*nIDStaticPath*  
+*nIDStaticPath*<br/>
 現在のドライブとディレクトリを表示するための静的なテキスト コントロールの識別子を指定します。 場合*nIDStaticPath*は 0 です。`DlgDirListComboBox`このようなテキスト コントロールが存在しないことを前提としています。
 
-*nFileType*  
+*nFileType*<br/>
 DOS ファイル、ファイルを表示するための属性を指定します。 次の値の任意の組み合わせを指定できます。
 
 - 読み取り/書き込みデータ ファイルを DDL_READWRITE に追加の属性がありません。
@@ -2560,10 +2560,10 @@ BOOL DlgDirSelect(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpString*  
+*lpString*<br/>
 リスト ボックスで現在の選択範囲を受け取るバッファーへのポインター。
 
-*nIDListBox*  
+*nIDListBox*<br/>
 ダイアログ ボックスで、リスト ボックスの整数の ID を指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -2592,10 +2592,10 @@ BOOL DlgDirSelectComboBox(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpString*  
+*lpString*<br/>
 選択したパスを受け取るバッファーへのポインター。
 
-*nIDComboBox*  
+*nIDComboBox*<br/>
 ダイアログ ボックスで、コンボ ボックスの整数の ID を指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -2622,7 +2622,7 @@ virtual void DoDataExchange(CDataExchange* pDX);
 
 ### <a name="parameters"></a>パラメーター
 
-*pDX*  
+*pDX*<br/>
 `CDataExchange` オブジェクトへのポインター。
 
 ### <a name="remarks"></a>Remarks
@@ -2649,7 +2649,7 @@ void DragAcceptFiles(BOOL bAccept = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-*BAccept*  
+*BAccept*<br/>
 ドラッグされたファイルを受け入れるかどうかを示すフラグ。
 
 ### <a name="remarks"></a>Remarks
@@ -2668,7 +2668,7 @@ BOOL DragDetect(POINT pt) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pt*  
+*pt*<br/>
 最初の画面座標、マウスの位置。 関数は、このポイントを使用して、ドラッグ四角形の座標を判断します。
 
 ### <a name="return-value"></a>戻り値
@@ -2694,13 +2694,13 @@ BOOL DrawAnimatedRects(
 
 ### <a name="parameters"></a>パラメーター
 
-*idAni*  
+*idAni*<br/>
 アニメーションの種類を指定します。 指定した位置からウィンドウのタイトル バーがアニメーション化する IDANI_CAPTION を指定する場合*lprcFrom*で指定した位置に*lprcTo*します。 効果は、最小限にするか、ウィンドウを最大化に似ています。
 
-*lprcFrom*  
+*lprcFrom*<br/>
 ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)アイコンまたは最小化されたウィンドウのサイズと場所を指定する構造体。
 
-*lprcTo*  
+*lprcTo*<br/>
 ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)復元されたウィンドウのサイズと場所を指定する構造体
 
 ### <a name="return-value"></a>戻り値
@@ -2724,13 +2724,13 @@ BOOL DrawCaption(
 
 ### <a name="parameters"></a>パラメーター
 
-*pDC*  
+*pDC*<br/>
 デバイス コンテキストへのポインター。 関数は、このデバイス コンテキストに、ウィンドウのキャプションを描画します。
 
-*lprc*  
+*lprc*<br/>
 ウィンドウ キャプションに外接する四角形を指定する RECT 構造体へのポインター。
 
-*uFlags*  
+*uFlags*<br/>
 描画のオプションを指定します。 値の完全な一覧を参照してください。 [DrawCaption](/windows/desktop/api/winuser/nf-winuser-drawcaption)します。
 
 ### <a name="return-value"></a>戻り値
@@ -2779,7 +2779,7 @@ void EnableDynamicLayout(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-*bEnable*  
+*bEnable*<br/>
 動的レイアウトを有効にする場合は TRUE。動的レイアウトを無効にする場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
@@ -2798,10 +2798,10 @@ void EnableD2DSupport(
 
 ### <a name="parameters"></a>パラメーター
 
-*bEnable*  
+*bEnable*<br/>
 ウィンドウの D2D のサポートをオンにするかオフにするかを指定します。
 
-*bUseDCRenderTarget*  
+*bUseDCRenderTarget*<br/>
 デバイス コンテキスト (DC) レンダー ターゲット、CDCRenderTarget を使用するかどうかを指定します。 FALSE の場合、CHwndRenderTarget が使用されます。
 
 ##  <a name="enablescrollbar"></a>  CWnd::EnableScrollBar
@@ -2816,7 +2816,7 @@ BOOL EnableScrollBar(
 
 ### <a name="parameters"></a>パラメーター
 
-*nSBFlags*  
+*nSBFlags*<br/>
 スクロール バーの種類を指定します。 次の値のいずれかを設定できます。
 
 - SB_BOTH の有効または無効にします。 水平および垂直方向のスクロール バーの矢印をウィンドウに関連付けられています。
@@ -2825,7 +2825,7 @@ BOOL EnableScrollBar(
 
 - SB_VERT の有効または無効にします、垂直スクロール バーの矢印は、ウィンドウに関連付けられています。
 
-*nArrowFlags*  
+*nArrowFlags*<br/>
 どちらの矢印は、有効または無効にし、スクロール バーの矢印を有効または無効にするかどうかを指定します。 次の値のいずれかを設定できます。
 
 - ESB_ENABLE_BOTH スクロールの両方の矢印を使用します (既定値)。
@@ -2852,10 +2852,10 @@ void EnableScrollBarCtrl(
 
 ### <a name="parameters"></a>パラメーター
 
-*れる*  
+*れる*<br/>
 スクロール バーの識別子です。
 
-*bEnable*  
+*bEnable*<br/>
 スクロール バーを有効または無効になっているかどうかを指定します。
 
 ### <a name="remarks"></a>Remarks
@@ -2872,7 +2872,7 @@ BOOL EnableToolTips(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-*bEnable*  
+*bEnable*<br/>
 ツール ヒント コントロールが有効になっているかどうかを指定します。 True の場合は、コントロールFALSE には、コントロールが無効にします。
 
 ### <a name="return-value"></a>戻り値
@@ -2908,7 +2908,7 @@ BOOL EnableTrackingToolTips(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-*bEnable*  
+*bEnable*<br/>
 指定しますトラッキング ツール ヒントを有効または無効になっているかどうか。 このパラメーターが true の場合、ヒントが有効にする追跡ツールである場合。 このパラメーターは、FALSE、追跡ツール ヒントが無効になります。 場合、
 
 ### <a name="return-value"></a>戻り値
@@ -2929,7 +2929,7 @@ BOOL EnableWindow(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-*bEnable*  
+*bEnable*<br/>
 指定されたウィンドウを有効または無効になっているかどうかを指定します。 このパラメーターが TRUE の場合は、ウィンドウを有効になります。 このパラメーターが FALSE の場合は、ウィンドウは無効になります。
 
 ### <a name="return-value"></a>戻り値
@@ -2964,7 +2964,7 @@ virtual void EndModalLoop(int nResult);
 
 ### <a name="parameters"></a>パラメーター
 
-*%n 結果*  
+*%n 結果*<br/>
 呼び出し元に返される値が含まれる[RunModalLoop](#runmodalloop)します。
 
 ### <a name="remarks"></a>Remarks
@@ -2989,7 +2989,7 @@ void EndPaint(LPPAINTSTRUCT lpPaint);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpPaint*  
+*lpPaint*<br/>
 指す、 [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)によって取得された描画情報を含む構造体、 [BeginPaint](#beginpaint)メンバー関数。
 
 ### <a name="remarks"></a>Remarks
@@ -3013,10 +3013,10 @@ BOOL ExecuteDlgInit(LPVOID lpResource);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszResourceName*  
+*lpszResourceName*<br/>
 リソースの名前を指定する null で終わる文字列へのポインター。
 
-*lpResource*  
+*lpResource*<br/>
 リソースへのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -3037,7 +3037,7 @@ void FilterToolTipMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>パラメーター
 
-*pMsg*  
+*pMsg*<br/>
 ツール ヒント メッセージへのポインター。
 
 ### <a name="remarks"></a>Remarks
@@ -3058,10 +3058,10 @@ static CWnd* PASCAL FindWindow(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszClassName*  
+*lpszClassName*<br/>
 ウィンドウのクラス名を指定する null で終わる文字列の指す (、`WNDCLASS`構造)。 場合*lpClassName*が null の場合、すべてのクラス名と一致します。
 
-*したとき*  
+*したとき*<br/>
 ウィンドウ名 (ウィンドウのタイトル) を指定する null で終わる文字列へのポインター。 場合*lpWindowName*が null の場合、すべてのウィンドウ名と一致します。
 
 ### <a name="return-value"></a>戻り値
@@ -3092,16 +3092,16 @@ static CWnd* FindWindowEx(
 
 ### <a name="parameters"></a>パラメーター
 
-*hwndParent*  
+*hwndParent*<br/>
 子ウィンドウが検索するには、親ウィンドウへのハンドルします。
 
-*hwndChildAfter*  
+*hwndChildAfter*<br/>
 子ウィンドウへのハンドルします。 Z オーダーで次の子ウィンドウの検索を開始します。 子ウィンドウの直接の子ウィンドウをする必要があります*hwndParent*、だけでなく子孫ウィンドウ。
 
-*lpszClass*  
+*lpszClass*<br/>
 クラス名または以前の呼び出しによって作成されたクラス アトムを指定する null で終わる文字列へのポインター、 [RegisterClass](https://msdn.microsoft.com/library/windows/desktop/ms633586)または[RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587)します。
 
-*lpszWindow*  
+*lpszWindow*<br/>
 ウィンドウ名 (ウィンドウのタイトル) を指定する null で終わる文字列へのポインター。 このパラメーターが NULL の場合は、すべてのウィンドウ名が一致します。
 
 ### <a name="return-value"></a>戻り値
@@ -3122,7 +3122,7 @@ BOOL FlashWindow(BOOL bInvert);
 
 ### <a name="parameters"></a>パラメーター
 
-*bInvert*  
+*bInvert*<br/>
 指定するかどうか、`CWnd`をフラッシュすることも、または元の状態が返されます。 `CWnd`他の場合は、1 つの状態からフラッシュ*bInvert*は TRUE です。 場合*bInvert* false で、ウィンドウが元の状態 (アクティブまたは非アクティブ) に返されます。
 
 ### <a name="return-value"></a>戻り値
@@ -3156,13 +3156,13 @@ BOOL FlashWindowEx(
 
 ### <a name="parameters"></a>パラメーター
 
-*dwFlags*  
+*dwFlags*<br/>
 Flash のステータスを指定します。 値の完全な一覧を参照してください、[は](/windows/desktop/api/winuser/ns-winuser-flashwinfo)構造体。
 
-*uCount*  
+*uCount*<br/>
 ウィンドウをフラッシュする回数を指定します。
 
-*dwTimeout*  
+*dwTimeout*<br/>
 ウィンドウをフラッシュするミリ秒単位のレートを指定します。 場合*dwTimeout* 0 の場合は、関数は既定のカーソルの点滅速度を使用します。
 
 ### <a name="return-value"></a>戻り値
@@ -3183,7 +3183,7 @@ static CWnd* PASCAL FromHandle(HWND hWnd);
 
 ### <a name="parameters"></a>パラメーター
 
-*hWnd*  
+*hWnd*<br/>
 Windows のウィンドウの HWND。
 
 ### <a name="return-value"></a>戻り値
@@ -3202,7 +3202,7 @@ static CWnd* PASCAL FromHandlePermanent(HWND hWnd);
 
 ### <a name="parameters"></a>パラメーター
 
-*hWnd*  
+*hWnd*<br/>
 Windows のウィンドウの HWND。
 
 ### <a name="return-value"></a>戻り値
@@ -3227,10 +3227,10 @@ virtual HRESULT get_accChild(
 
 ### <a name="parameters"></a>パラメーター
 
-*varChild*  
+*varChild*<br/>
 子識別が`IDispatch`インターフェイスは、取得します。
 
-*ppdispChild*  
+*ppdispChild*<br/>
 子オブジェクトのアドレスを受け取る`IDispatch`インターフェイス。
 
 ### <a name="return-value"></a>戻り値
@@ -3255,7 +3255,7 @@ virtual HRESULT get_accChildCount(long* pcountChildren);
 
 ### <a name="parameters"></a>パラメーター
 
-*pcountChildren*  
+*pcountChildren*<br/>
 子の数を受け取ります。
 
 ### <a name="return-value"></a>戻り値
@@ -3282,10 +3282,10 @@ virtual HRESULT get_accDefaultAction(
 
 ### <a name="parameters"></a>パラメーター
 
-*varChild*  
+*varChild*<br/>
 既定のアクションを取得するが、オブジェクトまたはオブジェクトの子要素のいずれかのかどうかを指定します。 このパラメーターには、CHILDID_SELF (する場合、オブジェクトに関する情報を取得) または (オブジェクトの子要素に関する情報を取得) する場合は子 ID のいずれかを指定できます。
 
-*pszDefaultAction*  
+*pszDefaultAction*<br/>
 このオブジェクトには、既定のアクションがあるない場合に、指定したオブジェクトまたは NULL の既定のアクションを説明するローカライズされた文字列を受信する BSTR のアドレス。
 
 ### <a name="return-value"></a>戻り値
@@ -3312,10 +3312,10 @@ virtual HRESULT get_accDescription(
 
 ### <a name="parameters"></a>パラメーター
 
-*varChild*  
+*varChild*<br/>
 オブジェクトまたはオブジェクトの子要素のいずれかを取得する説明は、かどうかを指定します。 このパラメーターには、CHILDID_SELF (する場合、オブジェクトに関する情報を取得) または (オブジェクトの子要素に関する情報を取得) する場合は子 ID のいずれかを指定できます。
 
-*pszDescription*  
+*pszDescription*<br/>
 指定したオブジェクトを記述するローカライズされた文字列を受信する BSTR のアドレスまたはこのオブジェクトの使用可能な説明が存在しない場合は NULL です。
 
 ### <a name="return-value"></a>戻り値
@@ -3340,7 +3340,7 @@ virtual HRESULT get_accFocus(VARIANT* pvarChild);
 
 ### <a name="parameters"></a>パラメーター
 
-*pvarChild*  
+*pvarChild*<br/>
 フォーカスのあるオブジェクトに関する情報を受け取ります。 参照してください*pvarID*で[IAccessible::get_accFocus](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accfocus) Windows SDK に含まれています。
 
 ### <a name="return-value"></a>戻り値
@@ -3367,10 +3367,10 @@ virtual HRESULT get_accHelp(
 
 ### <a name="parameters"></a>パラメーター
 
-*varChild*  
+*varChild*<br/>
 ヘルプ情報を取得するが、オブジェクトまたはオブジェクトの子要素のいずれかのかどうかを指定します。 このパラメーターには、CHILDID_SELF (する場合、オブジェクトに関する情報を取得) または (オブジェクトの子要素に関する情報を取得) する場合は子 ID のいずれかを指定できます。
 
-*pszHelp*  
+*pszHelp*<br/>
 使用可能なヘルプ情報がない場合、指定したオブジェクトまたは NULL のヘルプ情報を格納しているローカライズされた文字列を受信する BSTR のアドレス。
 
 ### <a name="return-value"></a>戻り値
@@ -3398,13 +3398,13 @@ virtual HRESULT get_accHelpTopic(
 
 ### <a name="parameters"></a>パラメーター
 
-*pszHelpFile*  
+*pszHelpFile*<br/>
 完全なパスを受信する BSTR のアドレス、`WinHelp`ファイルが存在する場合は、指定したオブジェクトに関連付けられています。
 
-*varChild*  
+*varChild*<br/>
 取得するヘルプ トピックは、オブジェクトまたはオブジェクトの子要素のいずれかのかどうかを指定します。 このパラメーターには、CHILDID_SELF (オブジェクトのヘルプ トピックを取得) するか、(オブジェクトの子のいずれかの要素に対応するヘルプ トピックを取得) する場合は子 ID を指定できます。
 
-*pidTopic*  
+*pidTopic*<br/>
 指定したオブジェクトに関連付けられたヘルプ ファイルを識別します。 参照してください*pidTopic*で[IAccessible::get_accHelpTopic](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_acchelptopic) Windows SDK に含まれています。
 
 ### <a name="return-value"></a>戻り値
@@ -3431,10 +3431,10 @@ virtual HRESULT get_accKeyboardShortcut(
 
 ### <a name="parameters"></a>パラメーター
 
-*varChild*  
+*varChild*<br/>
 取得するためのキーボード ショートカットは、オブジェクトまたはオブジェクトの子要素のいずれかのかどうかを指定します。 このパラメーターには、CHILDID_SELF (する場合、オブジェクトに関する情報を取得) または (オブジェクトの子要素に関する情報を取得) する場合は子 ID のいずれかを指定できます。
 
-*pszKeyboardShortcut*  
+*pszKeyboardShortcut*<br/>
 指定したオブジェクトに関連付けられているキーボード ショートカットがない場合は NULL または、キーボード ショートカットの識別するローカライズされた文字列を受信する BSTR のアドレスします。
 
 ### <a name="return-value"></a>戻り値
@@ -3461,10 +3461,10 @@ virtual HRESULT get_accName(
 
 ### <a name="parameters"></a>パラメーター
 
-*varChild*  
+*varChild*<br/>
 名前を取得するが、オブジェクトまたはオブジェクトの子要素のいずれかのかどうかを指定します。 このパラメーターには、CHILDID_SELF (する場合、オブジェクトに関する情報を取得) または (オブジェクトの子要素に関する情報を取得) する場合は子 ID のいずれかを指定できます。
 
-*pszName*  
+*pszName*<br/>
 指定されたオブジェクトの名前を表す文字列を受信する BSTR のアドレス。
 
 ### <a name="return-value"></a>戻り値
@@ -3489,7 +3489,7 @@ virtual HRESULT get_accParent(IDispatch** ppdispParent);
 
 ### <a name="parameters"></a>パラメーター
 
-*ppdispParent*  
+*ppdispParent*<br/>
 親オブジェクトのアドレスを受け取る`IDispatch`インターフェイス。 変数は、親が存在しない場合、またはその親が子にアクセスできない場合、NULL に設定されます。
 
 ### <a name="return-value"></a>戻り値
@@ -3516,10 +3516,10 @@ virtual HRESULT get_accRole(
 
 ### <a name="parameters"></a>パラメーター
 
-*varChild*  
+*varChild*<br/>
 ロール情報を取得するが、オブジェクトまたはオブジェクトの子要素のいずれかのかどうかを指定します。 このパラメーターには、CHILDID_SELF (する場合、オブジェクトに関する情報を取得) または (オブジェクトの子要素に関する情報を取得) する場合は子 ID のいずれかを指定できます。
 
-*pvarRole*  
+*pvarRole*<br/>
 ロール情報を受け取ります。 参照してください*pvarRole*で[IAccessible::get_accRole](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accrole) Windows SDK に含まれています。
 
 ### <a name="return-value"></a>戻り値
@@ -3544,7 +3544,7 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 
 ### <a name="parameters"></a>パラメーター
 
-*pvarChildren*  
+*pvarChildren*<br/>
 選択されている子に関する情報を受け取ります。 参照してください*pvarChildren*で[IAccessible::get_accSelection](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accselection) Windows SDK に含まれています。
 
 ### <a name="return-value"></a>戻り値
@@ -3571,10 +3571,10 @@ virtual HRESULT get_accState(
 
 ### <a name="parameters"></a>パラメーター
 
-*varChild*  
+*varChild*<br/>
 状態情報を取得するが、オブジェクトまたはオブジェクトの子要素のいずれかのかどうかを指定します。 このパラメーターには、CHILDID_SELF (する場合、オブジェクトに関する情報を取得) または (オブジェクトの子要素に関する情報を取得) する場合は子 ID のいずれかを指定できます。
 
-*pvarState*  
+*pvarState*<br/>
 オブジェクトの状態に関する情報を受け取ります。 参照してください*pvarState*で[IAccessible::get_accState](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accstate) Windows SDK に含まれています。
 
 ### <a name="return-value"></a>戻り値
@@ -3601,10 +3601,10 @@ virtual HRESULT get_accValue(
 
 ### <a name="parameters"></a>パラメーター
 
-*varChild*  
+*varChild*<br/>
 値の情報を取得するが、オブジェクトまたはオブジェクトの子要素のいずれかのかどうかを指定します。 このパラメーターには、CHILDID_SELF (する場合、オブジェクトに関する情報を取得) または (オブジェクトの子要素に関する情報を取得) する場合は子 ID のいずれかを指定できます。
 
-*終端*  
+*終端*<br/>
 オブジェクトの現在の値を格納しているローカライズされた文字列を受信する BSTR のアドレス。
 
 ### <a name="return-value"></a>戻り値
@@ -3645,7 +3645,7 @@ CWnd* GetAncestor(UINT gaFlags) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*gaFlags*  
+*gaFlags*<br/>
 取得する先祖を指定します。 使用可能な値の一覧は、次を参照してください。 [GetAncestor](https://msdn.microsoft.com/library/windows/desktop/ms633502)します。
 
 ### <a name="return-value"></a>戻り値
@@ -3702,10 +3702,10 @@ int GetCheckedRadioButton(
 
 ### <a name="parameters"></a>パラメーター
 
-*nIDFirstButton*  
+*nIDFirstButton*<br/>
 グループ内の最初のラジオ ボタンの整数識別子を指定します。
 
-*nIDLastButton*  
+*nIDLastButton*<br/>
 グループ内の最後のラジオ ボタンの整数識別子を指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -3722,7 +3722,7 @@ void GetClientRect(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*lpRect*  
+*lpRect*<br/>
 指す、 [RECT 構造体](../../mfc/reference/rect-structure1.md)または`CRect`クライアント座標を受け取るオブジェクト。 `left`と`top`メンバーは 0 になります。 `right`と`bottom`メンバーには、ウィンドウの高さと幅が含まれます。
 
 ### <a name="remarks"></a>Remarks
@@ -3835,10 +3835,10 @@ CDC* GetDCEx(
 
 ### <a name="parameters"></a>パラメーター
 
-*prgnClip*  
+*prgnClip*<br/>
 クライアント ウィンドウの表示領域を組み合わせることができますをクリッピング領域を識別します。
 
-*flags*  
+*flags*<br/>
 事前設定された値は次のいずれかを設定できます。
 
 - DCX_CACHE は、OWNDC または CLASSDC ウィンドウではなく、キャッシュからデバイス コンテキストを返します。 CS_OWNDC と CS_CLASSDC オーバーライドします。
@@ -3901,10 +3901,10 @@ CWnd* GetDescendantWindow(
 
 ### <a name="parameters"></a>パラメーター
 
-*nID*  
+*nID*<br/>
 取得するコントロールまたは子ウィンドウの識別子を指定します。
 
-*bOnlyPerm*  
+*bOnlyPerm*<br/>
 返されるウィンドウが一時的なできるかどうかを指定します。 TRUE の場合、永続的なウィンドウのみを返します。FALSE の場合、関数は、一時的なウィンドウを返すことができます。 一時的なウィンドウの詳細については、次を参照してください。[テクニカル ノート 3:](../../mfc/tn003-mapping-of-windows-handles-to-objects.md)します。
 
 ### <a name="return-value"></a>戻り値
@@ -3965,10 +3965,10 @@ void GetDlgItem(
 
 ### <a name="parameters"></a>パラメーター
 
-*nID*  
+*nID*<br/>
 取得するコントロールまたは子ウィンドウの識別子を指定します。
 
-*phWnd*  
+*phWnd*<br/>
 子ウィンドウへのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -3998,13 +3998,13 @@ UINT GetDlgItemInt(
 
 ### <a name="parameters"></a>パラメーター
 
-*nID*  
+*nID*<br/>
 変換する ダイアログ ボックス コントロールの整数識別子を指定します。
 
-*lpTrans*  
+*lpTrans*<br/>
 変換されたフラグを受信するブール値変数へのポインター。
 
-*bSigned*  
+*bSigned*<br/>
 取得する値が署名されているかどうかを指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -4040,16 +4040,16 @@ int GetDlgItemText(
 
 ### <a name="parameters"></a>パラメーター
 
-*nID*  
+*nID*<br/>
 タイトルを取得するコントロールの整数識別子を指定します。
 
-*lpStr*  
+*lpStr*<br/>
 コントロールのタイトルまたはテキストを受け取るバッファーへのポインター。
 
-*nMaxCount*  
+*nMaxCount*<br/>
 コピーする文字列の最大長 (文字) で指定*lpStr*します。 文字列がより長い場合*nMaxCount*が切り詰められています。
 
-*rString*  
+*rString*<br/>
 参照を[CString](../../atl-mfc-shared/reference/cstringt-class.md)します。
 
 ### <a name="return-value"></a>戻り値
@@ -4166,7 +4166,7 @@ HICON GetIcon(BOOL bBigIcon) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bBigIcon*  
+*bBigIcon*<br/>
 True の場合は 32 ピクセルのアイコンによって 32 ピクセルを指定します。FALSE の場合は 16 ピクセルのアイコンで 16 ピクセルを指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -4185,11 +4185,11 @@ CWnd* GetLastActivePopup() const;
 
 最後にアクティブなポップアップ ウィンドウを識別します。 次の条件のいずれかが満たされた場合、戻り値は、ウィンドウ自体になります。
 
--   ウィンドウ自体は、最後にアクティブにしました。
+- ウィンドウ自体は、最後にアクティブにしました。
 
--   ウィンドウがポップアップ ウィンドウを所有していません。
+- ウィンドウがポップアップ ウィンドウを所有していません。
 
--   ウィンドウは最上位レベルのウィンドウではないまたは別のウィンドウが所有します。
+- ウィンドウは最上位レベルのウィンドウではないまたは別のウィンドウが所有します。
 
 ポインターは一時的である可能性があり、後で使用するために格納しないでください。
 
@@ -4210,13 +4210,13 @@ BOOL GetLayeredWindowAttributes(
 
 ### <a name="parameters"></a>パラメーター
 
-*pcrKey*  
+*pcrKey*<br/>
 レイヤード ウィンドウの作成時に使用する透明のカラー キーを受け取る COLORREF 値へのポインター。 ウィンドウは、この色で描画されたすべてのピクセルは透明になります。 引数が必要でない場合は、NULL にできます。
 
-*pbAlpha*  
+*pbAlpha*<br/>
 レイヤード ウィンドウの不透明度を記述するために使用するアルファ値を受け取るバイトへのポインター。 ときに、変数で参照される*pbAlpha*が 0 の場合、ウィンドウが完全に透過的です。 ときに、変数で参照される*pbAlpha* 255 は、ウィンドウは非透過的です。 引数が必要でない場合は、NULL にできます。
 
-*pdwFlags*  
+*pdwFlags*<br/>
 階層化フラグを受け取る DWORD へのポインター。 引数が必要でない場合は、NULL にできます。 使用可能な値の一覧は、次を参照してください。 [GetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633508)します。
 
 ### <a name="return-value"></a>戻り値
@@ -4262,13 +4262,13 @@ BOOL GetMenuBarInfo(
 
 ### <a name="parameters"></a>パラメーター
 
-*idObject*  
+*idObject*<br/>
 メニュー オブジェクトを指定します。 使用可能な値の一覧は、次を参照してください。 [GetMenuBarInfo](/windows/desktop/api/winuser/nf-winuser-getmenubarinfo)します。
 
-*idItem*  
+*idItem*<br/>
 情報を取得する対象の項目を指定します。 このパラメーターが 0 の場合、関数は、メニュー自体に関する情報を取得します。 このパラメーターが 1 の場合、関数は、メニューの最初の項目に関する情報を取得します。
 
-*pmbi*  
+*pmbi*<br/>
 ポインターを[MENUBARINFO](/windows/desktop/api/winuser/ns-winuser-tagmenubarinfo)情報を受け取る構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -4294,13 +4294,13 @@ COleControlSiteOrWnd* GetNextDlgGroupItem(
 
 ### <a name="parameters"></a>パラメーター
 
-*pWndCtl*  
+*pWndCtl*<br/>
 検索の開始点として使用するコントロールを識別します。
 
-*bPrevious*  
+*bPrevious*<br/>
 ダイアログ ボックスのコントロールのグループを検索する方法を指定します。 TRUE の場合、関数は、検索、グループ内の前のコントロールFALSE の場合は、グループ内の次のコントロールを検索します。
 
-*pCurSiteOrWnd*  
+*pCurSiteOrWnd*<br/>
 識別、`COleControlSiteOrWnd`コントロール。 詳細については`COleControlSiteOrWnd`を参照してください**解説**します。
 
 ### <a name="return-value"></a>戻り値
@@ -4340,13 +4340,13 @@ COleControlSiteOrWnd* GetNextDlgTabItem(
 
 ### <a name="parameters"></a>パラメーター
 
-*pWndCtl*  
+*pWndCtl*<br/>
 検索の開始点として使用するコントロールを識別します。
 
-*pCurSiteOrWnd*  
+*pCurSiteOrWnd*<br/>
 識別、`COleControlSiteOrWnd`コントロール。 詳細については`COleControlSiteOrWnd`を参照してください[CWnd::GetNextDlgGroupItem](#getnextdlggroupitem)します。
 
-*bPrevious*  
+*bPrevious*<br/>
 ダイアログ ボックスの検索方法を指定します。 TRUE の場合、関数は、検索、ダイアログ ボックスで、前のコントロールFALSE の場合は、次のコントロールを検索します。
 
 ### <a name="return-value"></a>戻り値
@@ -4367,7 +4367,7 @@ CWnd* GetNextWindow(UINT nFlag = GW_HWNDNEXT) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*指します*  
+*指します*<br/>
 関数が次のウィンドウまたは前のウィンドウにポインターを返すかどうかを指定します。 どちらかに、次のウィンドウを返すができる、`CWnd`ウィンドウ マネージャーのリスト、または前のウィンドウをウィンドウ マネージャーの一覧を返す、指定のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -4392,7 +4392,7 @@ COleControlSite* GetOleControlSite(UINT idControl) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*idControl*  
+*idControl*<br/>
 ActiveX コントロールの ID。
 
 ##  <a name="getopenclipboardwindow"></a>  CWnd::GetOpenClipboardWindow
@@ -4488,13 +4488,13 @@ void GetProperty(
 
 ### <a name="parameters"></a>パラメーター
 
-*dwDispID*  
+*dwDispID*<br/>
 取得するプロパティを識別します。
 
-*vtProp*  
+*vtProp*<br/>
 取得するプロパティの型を指定します。 使用可能な値は、「解説」を参照してください。 [coledispatchdriver::invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)します。
 
-*pvProp*  
+*pvProp*<br/>
 プロパティの値を変数のアドレスが表示されます。 指定された型に一致する必要があります*vtProp*します。
 
 ### <a name="remarks"></a>Remarks
@@ -4546,10 +4546,10 @@ static CWnd* GetSafeOwner(
 
 ### <a name="parameters"></a>パラメーター
 
-*pParent*  
+*pParent*<br/>
 親へのポインター`CWnd`ウィンドウ。 NULL にすることがあります。
 
-*pWndTop*  
+*pWndTop*<br/>
 現在の上部にあるウィンドウへのポインター。 NULL にすることがあります。
 
 ### <a name="return-value"></a>戻り値
@@ -4573,7 +4573,7 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*れる*  
+*れる*<br/>
 スクロール バーの種類を指定します。 パラメーターには、次の値のいずれかを実行できます。
 
 - SB_HORZ では、水平スクロール バーの位置を取得します。
@@ -4600,10 +4600,10 @@ BOOL GetScrollBarInfo(
 
 ### <a name="parameters"></a>パラメーター
 
-*idObject*  
+*idObject*<br/>
 メニュー オブジェクトを指定します。 使用可能な値の一覧は、次を参照してください。 [GetScrollBarInfo](/windows/desktop/api/winuser/nf-winuser-getscrollbarinfo)します。
 
-*psbi*  
+*psbi*<br/>
 ポインターを[SCROLLBARINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollbarinfo)情報を受け取る構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -4627,7 +4627,7 @@ BOOL GetScrollInfo(
 
 ### <a name="parameters"></a>パラメーター
 
-*れる*  
+*れる*<br/>
 スクロール バーが、コントロールまたはウィンドウの非クライアント領域の一部であるかどうかを指定します。 非クライアント領域の一部である場合*れる*かどうか、スクロール バーが水平方向、垂直方向に配置されているか、どちらも示します。 次のいずれかを指定する必要があります。
 
 - SB_CTL では、スクロール バー コントロールのパラメーターを取得します。 `m_hWnd`データ メンバーは、スクロール バー コントロールのハンドルである必要があります。
@@ -4636,10 +4636,10 @@ BOOL GetScrollInfo(
 
 - SB_VERT では、ウィンドウの標準の垂直スクロール バーのパラメーターを取得します。
 
-*lpScrollInfo*  
+*lpScrollInfo*<br/>
 ポインターを[SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo)構造体。 この構造体の詳細については、Windows SDK を参照してください。
 
-*いる*  
+*いる*<br/>
 取得するスクロール バーのパラメーターを指定します。 既定では、SIF_PAGE、SIF_POS、SIF_TRACKPOS、SIF_RANGE の組み合わせを指定します。 参照してください`SCROLLINFO`の詳細については、*いる*値。
 
 ### <a name="return-value"></a>戻り値
@@ -4664,7 +4664,7 @@ int GetScrollLimit(int nBar);
 
 ### <a name="parameters"></a>パラメーター
 
-*れる*  
+*れる*<br/>
 スクロール バーの種類を指定します。 パラメーターには、次の値のいずれかを実行できます。
 
 - SB_HORZ では、水平スクロール バーのスクロールの制限を取得します。
@@ -4685,7 +4685,7 @@ int GetScrollPos(int nBar) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*れる*  
+*れる*<br/>
 スクロール バーを確認するを指定します。 パラメーターには、次の値のいずれかを実行できます。
 
 - SB_HORZ では、水平スクロール バーの位置を取得します。
@@ -4713,17 +4713,17 @@ void GetScrollRange(
 
 ### <a name="parameters"></a>パラメーター
 
-*れる*  
+*れる*<br/>
 スクロール バーを確認するを指定します。 パラメーターには、次の値のいずれかを実行できます。
 
 - SB_HORZ では、水平スクロール バーの位置を取得します。
 
 - SB_VERT では、垂直スクロール バーの位置を取得します。
 
-*lpMinPos*  
+*lpMinPos*<br/>
 最小の位置を受け取る整数変数を指します。
 
-*最大位置*  
+*最大位置*<br/>
 最大の位置を受け取る整数変数を指します。
 
 ### <a name="remarks"></a>Remarks
@@ -4754,7 +4754,7 @@ CMenu* GetSystemMenu(BOOL bRevert) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bRevert*  
+*bRevert*<br/>
 実行するアクションを指定します。 場合*bRevert* false で、`GetSystemMenu`ハンドルを現在使用されているコントロールのメニューのコピーを返します。 このコピーでは、最初に、[コントロール] メニューと同じですが、変更できます。 場合*bRevert*が true の場合、`GetSystemMenu`コントロール メニューを既定の状態にリセットします。 以前、場合によっては変更、メニューの場合制御は破棄します。 戻り値がここで定義されていません。
 
 ### <a name="return-value"></a>戻り値
@@ -4787,7 +4787,7 @@ BOOL GetTitleBarInfo(PTITLEBARINFO pti) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pti*  
+*pti*<br/>
 ポインターを[TITLEBARINFO](https://msdn.microsoft.com/library/windows/desktop/ms632608)情報を受け取る構造体。
 
 ### <a name="remarks"></a>Remarks
@@ -4876,12 +4876,12 @@ BOOL GetUpdateRect(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpRect*  
+*lpRect*<br/>
 指す、`CRect`オブジェクトまたは[RECT 構造体](../../mfc/reference/rect-structure1.md)更新領域を囲む更新プログラムのクライアント座標を受信します。
 
 このパラメーターを更新領域内に存在するかどうかを決定する NULL に設定、`CWnd`します。 場合*lpRect*が NULL の場合、`GetUpdateRect`更新領域が存在し、1 つの場合は 0 がいない場合、メンバー関数が 0 以外の値を返します。 これは、WM_PAINT メッセージが無効な領域から発生したかどうかを決定する方法を提供します。 Windows のバージョン 3.0 での NULL およびそれ以前には、このパラメーターを設定しないでください。
 
-*あらゆる*  
+*あらゆる*<br/>
 更新領域の背景を消去するかどうかを指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -4912,10 +4912,10 @@ int GetUpdateRgn(
 
 ### <a name="parameters"></a>パラメーター
 
-*pRgn*  
+*pRgn*<br/>
 更新領域を識別します。
 
-*あらゆる*  
+*あらゆる*<br/>
 背景を消去して、子ウィンドウの非クライアント領域を描画するかどうかを指定します。 値が FALSE の場合は、描画は行われません。
 
 ### <a name="return-value"></a>戻り値
@@ -4946,7 +4946,7 @@ CWnd* GetWindow(UINT nCmd) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*nCmd*  
+*nCmd*<br/>
 間のリレーションシップが指定`CWnd`と返されたウィンドウ。 次の値のいずれかがかかることができます。
 
 - GW_CHILD を識別、`CWnd`最初の子ウィンドウ。
@@ -5025,7 +5025,7 @@ BOOL GetWindowInfo(PWINDOWINFO pwi) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pwi*  
+*pwi*<br/>
 ポインターを[WINDOWINFO](https://msdn.microsoft.com/library/windows/desktop/ms632610)構造体。
 
 ### <a name="remarks"></a>Remarks
@@ -5054,7 +5054,7 @@ BOOL GetWindowPlacement(WINDOWPLACEMENT* lpwndpl) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*lpwndpl*  
+*lpwndpl*<br/>
 指す、`WINDOWPLACEMENT`表示状態と位置情報を受け取る構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -5075,7 +5075,7 @@ void GetWindowRect(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*lpRect*  
+*lpRect*<br/>
 指す、`CRect`オブジェクトまたは[RECT 構造体](../../mfc/reference/rect-structure1.md)左および右下隅の画面座標を受信します。
 
 ### <a name="remarks"></a>Remarks
@@ -5092,7 +5092,7 @@ int GetWindowRgn(HRGN hRgn)const;
 
 ### <a name="parameters"></a>パラメーター
 
-*hRgn*  
+*hRgn*<br/>
 ウィンドウ領域へのハンドル。
 
 ### <a name="return-value"></a>戻り値
@@ -5130,13 +5130,13 @@ void GetWindowText(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszStringBuf*  
+*lpszStringBuf*<br/>
 ウィンドウのタイトルのコピーされた文字列を受け取るバッファーへのポインター。
 
-*nMaxCount*  
+*nMaxCount*<br/>
 終端の null 文字を含む、バッファーにコピーする文字の最大数を指定します。 文字列がで指定された文字数よりも長いかどうか*nMaxCount*が切り詰められています。
 
-*rString*  
+*rString*<br/>
 A [CString](../../atl-mfc-shared/reference/cstringt-class.md)ウィンドウのタイトルのコピーされた文字列を受け取るオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -5202,13 +5202,13 @@ BOOL HiliteMenuItem(
 
 ### <a name="parameters"></a>パラメーター
 
-*pMenu*  
+*pMenu*<br/>
 強調表示される項目を含むトップレベルのメニューを識別します。
 
-*nIDHiliteItem*  
+*nIDHiliteItem*<br/>
 値に応じて、強調表示されるメニュー項目を指定します、*される必要*パラメーター。
 
-*される必要*  
+*される必要*<br/>
 メニュー項目が強調表示されているか、強調表示が削除されたかどうかを指定します。 MF_HILITE またはときまたは MF_BYPOSITION MF_UNHILITE の組み合わせであることができます。 値は、ビットごとの OR 演算子を使用して結合できます。 これらの値には、次の意味があります。
 
 - ときに解釈*nIDHiliteItem*メニュー項目 ID (既定の解釈) として。
@@ -5239,10 +5239,10 @@ virtual void HtmlHelp(
 
 ### <a name="parameters"></a>パラメーター
 
-*指定*  
+*指定*<br/>
 追加のデータを指定します。 使用される値の値によって異なります、 *nCmd*パラメーター。
 
-*nCmd*  
+*nCmd*<br/>
 要求されるヘルプの種類を指定します。 使用可能な値、および影響についての一覧については、*指定*パラメーターを参照してください、 *uCommand*パラメーター、Windows SDK で HTML ヘルプ API リファレンスで説明します。
 
 ### <a name="remarks"></a>Remarks
@@ -5271,7 +5271,7 @@ void Invalidate(BOOL bErase = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-*あらゆる*  
+*あらゆる*<br/>
 更新領域の背景を消去するかどうかを指定します。
 
 ### <a name="remarks"></a>Remarks
@@ -5298,10 +5298,10 @@ void InvalidateRect(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpRect*  
+*lpRect*<br/>
 指す、`CRect`オブジェクトまたは[RECT 構造体](../../mfc/reference/rect-structure1.md)更新領域に追加する (クライアント座標) 内の四角形を格納しています。 場合*lpRect*が null の場合、クライアント領域全体が、領域に追加します。
 
-*あらゆる*  
+*あらゆる*<br/>
 更新領域の背景を消去するかどうかを指定します。
 
 ### <a name="remarks"></a>Remarks
@@ -5324,10 +5324,10 @@ void InvalidateRgn(
 
 ### <a name="parameters"></a>パラメーター
 
-*pRgn*  
+*pRgn*<br/>
 ポインターを[CRgn](../../mfc/reference/crgn-class.md)更新領域に追加する領域を識別するオブジェクト。 リージョンは、クライアント座標にあると見なされます。 このパラメーターが NULL の場合は、クライアント領域全体が更新領域に追加されます。
 
-*あらゆる*  
+*あらゆる*<br/>
 更新領域の背景を消去するかどうかを指定します。
 
 ### <a name="remarks"></a>Remarks
@@ -5356,22 +5356,22 @@ void AFX_CDECL InvokeHelper(
 
 ### <a name="parameters"></a>パラメーター
 
-*dwDispID*  
+*dwDispID*<br/>
 呼び出されるメソッドまたはプロパティを識別します。
 
-*wflags が*  
+*wflags が*<br/>
 呼び出しのコンテキストを記述するフラグ`IDispatch::Invoke`します。
 
-*変数*  
+*変数*<br/>
 戻り値の型を指定します。 使用可能な値は、「解説」を参照してください。 [coledispatchdriver::invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)します。
 
-*pvRet*  
+*pvRet*<br/>
 される変数のアドレスは、プロパティ値を受け取る、または戻り値。 指定された型に一致する必要があります*変数*します。
 
-*pbParamInfo*  
+*pbParamInfo*<br/>
 次のパラメーターの型を指定するバイトの null で終わる文字列へのポインター *pbParamInfo*します。 使用可能な値は、「解説」を参照してください。`COleDispatchDriver::InvokeHelper`します。
 
-*...*  
+*...*<br/>
 パラメーターで指定された型の変数一覧*pbParamInfo*します。
 
 ### <a name="remarks"></a>Remarks
@@ -5395,7 +5395,7 @@ BOOL IsChild(const CWnd* pWnd) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*我が物*  
+*我が物*<br/>
 テストするウィンドウを識別します。
 
 ### <a name="return-value"></a>戻り値
@@ -5428,7 +5428,7 @@ BOOL IsDialogMessage(LPMSG lpMsg);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpMsg*  
+*lpMsg*<br/>
 指す、 [MSG](../../mfc/reference/msg-structure1.md)確認するメッセージを含む構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -5453,7 +5453,7 @@ UINT IsDlgButtonChecked(int nIDButton) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*nIDButton*  
+*nIDButton*<br/>
 ボタン コントロールの整数識別子を指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -5568,7 +5568,7 @@ BOOL KillTimer(UINT_PTR nIDEvent);
 
 ### <a name="parameters"></a>パラメーター
 
-*呼び出した*  
+*呼び出した*<br/>
 渡される値のタイマー イベント[SetTimer](#settimer)します。
 
 ### <a name="return-value"></a>戻り値
@@ -5593,7 +5593,7 @@ BOOL LoadDynamicLayoutResource(LPCTSTR lpszResourceName);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszResourceName*  
+*lpszResourceName*<br/>
 このウィンドウの目的の動的レイアウト情報が含まれているリソースの名前。
 
 ### <a name="return-value"></a>戻り値
@@ -5655,16 +5655,16 @@ void MapWindowPoints(
 
 ### <a name="parameters"></a>パラメーター
 
-*pwndTo*  
+*pwndTo*<br/>
 ポイントの変換先のウィンドウを識別します。 このパラメーターが NULL の場合、ポイントは、画面座標に変換されます。
 
-*lpRect*  
+*lpRect*<br/>
 変換する点を持つは、四角形を指定します。 この関数の最初のバージョンは、Windows 3.1 には、後で使用できます。
 
-*lpPoint*  
+*lpPoint*<br/>
 配列へのポインター [POINT 構造体](../../mfc/reference/point-structure1.md)変換する点のセットが含まれています。
 
-*nCount*  
+*nCount*<br/>
 数を指定`POINT`によって示される、配列内の構造体*lpPoint*します。
 
 ##  <a name="messagebox"></a>  CWnd::MessageBox
@@ -5680,13 +5680,13 @@ int MessageBox(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszText*  
+*lpszText*<br/>
 指す、`CString`オブジェクトまたは null で終わる文字列を含むメッセージが表示されます。
 
-*lpszCaption*  
+*lpszCaption*<br/>
 指す、`CString`オブジェクトまたはメッセージ ボックスのキャプションに使用される null で終わる文字列。 場合*lpszCaption*が null の場合、「エラー」が使用される既定のキャプション。
 
-*%n タイプ*  
+*%n タイプ*<br/>
 メッセージ ボックスの動作とコンテンツを指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -5723,13 +5723,13 @@ BOOL ModifyStyle(
 
 ### <a name="parameters"></a>パラメーター
 
-*dwRemove*  
+*dwRemove*<br/>
 スタイルの変更中に削除するには、ウィンドウ スタイルを指定します。
 
-*dwAdd*  
+*dwAdd*<br/>
 スタイルの変更中に追加するウィンドウ スタイルを指定します。
 
-*nFlags*  
+*nFlags*<br/>
 渡されるフラグ[SetWindowPos](#setwindowpos)、または場合は 0`SetWindowPos`呼び出すことはできません。 既定値は 0 です。 事前設定されたフラグの一覧については、「解説」を参照してください。
 
 ### <a name="return-value"></a>戻り値
@@ -5772,13 +5772,13 @@ BOOL ModifyStyleEx(
 
 ### <a name="parameters"></a>パラメーター
 
-*dwRemove*  
+*dwRemove*<br/>
 スタイルの変更中に削除する拡張スタイルを指定します。
 
-*dwAdd*  
+*dwAdd*<br/>
 スタイルの変更中に追加する拡張スタイルを指定します。
 
-*nFlags*  
+*nFlags*<br/>
 渡されるフラグ[SetWindowPos](#setwindowpos)、または場合は 0`SetWindowPos`呼び出すことはできません。 既定値は 0 です。 事前設定されたフラグの一覧については、「解説」を参照してください。
 
 ### <a name="return-value"></a>戻り値
@@ -5825,22 +5825,22 @@ void MoveWindow(
 
 ### <a name="parameters"></a>パラメーター
 
-*x*  
+*x*<br/>
 左側にあるの新しい位置を示す、`CWnd`します。
 
-*y*  
+*y*<br/>
 上部の新しい位置を示す、`CWnd`します。
 
-*nWidth*  
+*nWidth*<br/>
 新しい幅を指定します、`CWnd`します。
 
-*パラメーター nHeight*  
+*パラメーター nHeight*<br/>
 新しい高さを指定します、`CWnd`します。
 
-*bRepaint*  
+*bRepaint*<br/>
 指定するかどうか`CWnd`再描画します。 TRUE の場合、`CWnd`受信、 [WM_PAINT](/windows/desktop/gdi/wm-paint)メッセージでその[OnPaint](#onpaint)メッセージ ハンドラーを通常どおりです。 このパラメーターが FALSE の場合は、任意の種類の再描画は行われません。 これは、クライアント領域、(タイトルやスクロール バーを含む) の非クライアント領域、および検出の結果として親ウィンドウの任意の部分は適用されます。`CWnd`の移動。 アプリケーションの無効にしたりの任意の部分を再描画する必要があります明示的にこのパラメーターが FALSE の場合は、`CWnd`および親ウィンドウに描画する必要があります。
 
-*lpRect*  
+*lpRect*<br/>
 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT 構造体](../../mfc/reference/rect-structure1.md)新しいサイズと位置を指定します。
 
 ### <a name="remarks"></a>Remarks
@@ -5866,13 +5866,13 @@ void NotifyWinEvent(
 
 ### <a name="parameters"></a>パラメーター
 
-*event*  
+*event*<br/>
 発生したイベントを指定します。 この値は、のいずれかを指定する必要があります、[イベント定数](/windows/desktop/WinAuto/event-constants)します。
 
-*idObjectType*  
+*idObjectType*<br/>
 イベントを生成したオブジェクトの種類を識別します。 この値は、定義済みのいずれかの[オブジェクト識別子](/windows/desktop/WinAuto/object-identifiers)またはカスタムのオブジェクト ID の値。
 
-*idObject*  
+*idObject*<br/>
 イベントは、オブジェクトまたはオブジェクトの子要素によって生成されたかどうかを識別します。 この値が CHILDID_SELF の場合は、イベントは、オブジェクト自体によって生成されました。 それ以外の場合は、この値は、イベントを生成した要素の子 ID。
 
 ### <a name="remarks"></a>Remarks
@@ -5892,7 +5892,7 @@ afx_msg void OnActivate(
 
 ### <a name="parameters"></a>パラメーター
 
-*状態*  
+*状態*<br/>
 指定するかどうか、`CWnd`がアクティブまたは非アクティブ化します。 次の値のいずれかを指定できます。
 
 - WA_INACTIVE ウィンドウが非アクティブにします。
@@ -5901,10 +5901,10 @@ afx_msg void OnActivate(
 
 - マウスのクリックが WA_CLICKACTIVE ウィンドウをアクティブにされています。
 
-*pWndOther*  
+*pWndOther*<br/>
 ポインター、`CWnd`アクティブまたは非アクティブ化します。 ポインターが NULL にできるし、は一時的なものです。
 
-*bMinimized*  
+*bMinimized*<br/>
 最小化された状態を指定します、`CWnd`アクティブまたは非アクティブ化します。 TRUE の値は、ウィンドウが最小化を示します。
 
 TRUE の場合、`CWnd`アクティブ化しています。 それ以外の場合に非アクティブ化します。
@@ -5928,10 +5928,10 @@ afx_msg void OnActivateApp(
 
 ### <a name="parameters"></a>パラメーター
 
-*描画*  
+*描画*<br/>
 指定するかどうか、`CWnd`がアクティブまたは非アクティブ化します。 TRUE の場合は、`CWnd`アクティブ化しています。 FALSE は、`CWnd`が非アクティブにします。
 
-*dwThreadID*  
+*dwThreadID*<br/>
 スレッド ID の値を指定します 場合*描画*が true の場合、 *dwThreadID*を所有するスレッドを識別、`CWnd`が非アクティブにします。 場合*描画*false で、 *dwThreadID*を所有するスレッドを識別、`CWnd`アクティブ化しています。
 
 ### <a name="remarks"></a>Remarks
@@ -5952,13 +5952,13 @@ virtual BOOL OnAmbientProperty(
 
 ### <a name="parameters"></a>パラメーター
 
-*pSite*  
+*pSite*<br/>
 アンビエント プロパティを要求しているコントロールのサイトへのポインター。
 
-*dispid*  
+*dispid*<br/>
 要求されたアンビエント プロパティのディスパッチ ID。
 
-*pvar*  
+*pvar*<br/>
 呼び出し元が割り当てたへのポインター`VARIANT`をアンビエント プロパティの値を返される構造体します。
 
 ### <a name="return-value"></a>戻り値
@@ -6009,10 +6009,10 @@ afx_msg void OnAskCbFormatName(
 
 ### <a name="parameters"></a>パラメーター
 
-*nMaxCount*  
+*nMaxCount*<br/>
 コピーするバイトの最大数を指定します。
 
-*lpszString*  
+*lpszString*<br/>
 形式名のコピーが格納されるバッファーへのポインター。
 
 ### <a name="remarks"></a>Remarks
@@ -6048,7 +6048,7 @@ afx_msg void OnCaptureChanged(CWnd* pWnd);
 
 ### <a name="parameters"></a>パラメーター
 
-*我が物*  
+*我が物*<br/>
 マウス キャプチャを取得するウィンドウへのポインター
 
 ### <a name="remarks"></a>Remarks
@@ -6072,10 +6072,10 @@ afx_msg void OnChangeCbChain(
 
 ### <a name="parameters"></a>パラメーター
 
-*hWndRemove*  
+*hWndRemove*<br/>
 クリップボード ビューアーのチェインから削除するウィンドウ ハンドルを指定します。
 
-*hWndAfter*  
+*hWndAfter*<br/>
 クリップボード ビューアーのチェインから削除されているウィンドウを次のウィンドウ ハンドルを指定します。
 
 ### <a name="remarks"></a>Remarks
@@ -6097,7 +6097,7 @@ afx_msg void OnChangeUIState(
 
 ### <a name="parameters"></a>パラメーター
 
-*%5%6%7%8.%12%0*  
+*%5%6%7%8.%12%0*<br/>
 実行するアクションを指定します。 次のいずれかの値になります。
 
 - UI は UIS_CLEAR state 要素 (で指定された*nUIElement*) 非表示にする必要があります。
@@ -6106,7 +6106,7 @@ afx_msg void OnChangeUIState(
 
 - UI は UIS_SET state 要素 (で指定された*nUIElement*) が表示されます。
 
-*nUIElement*  
+*nUIElement*<br/>
 適用される UI 状態要素またはコントロールのスタイルを指定します。 次のいずれかの値になります。
 
 - UISF_HIDEACCEL キーボード アクセラレータ。
@@ -6132,13 +6132,13 @@ afx_msg void OnChar(
 
 ### <a name="parameters"></a>パラメーター
 
-*NChar*  
+*NChar*<br/>
 キーの文字コード値が含まれています。
 
-*nRepCnt*  
+*nRepCnt*<br/>
 繰り返し回数、ユーザーがキーを保持しているときに、キーストロークが繰り返される回数が含まれています。
 
-*nFlags*  
+*nFlags*<br/>
 次の一覧に示すようにコードのスキャン、キー遷移コード、以前のキーの状態、およびコンテキストのコードが含まれています。
 
 |[値]|説明|
@@ -6175,13 +6175,13 @@ afx_msg int OnCharToItem(
 
 ### <a name="parameters"></a>パラメーター
 
-*NChar*  
+*NChar*<br/>
 ユーザーによって押されたキーの値を指定します。
 
-*pListBox*  
+*pListBox*<br/>
 リスト ボックスへのポインターを指定します。 一時的な場合があります。
 
-*nIndex*  
+*nIndex*<br/>
 現在のカレット位置を指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -6215,16 +6215,16 @@ virtual BOOL OnChildNotify(
 
 ### <a name="parameters"></a>パラメーター
 
-*message*  
+*message*<br/>
 親ウィンドウに送信される Windows メッセージの数。
 
-*wParam*  
+*wParam*<br/>
 *Wparam*メッセージに関連付けられています。
 
-*lParam*  
+*lParam*<br/>
 *Lparam*メッセージに関連付けられています。
 
-*pLResult*  
+*pLResult*<br/>
 親のウィンドウ プロシージャから返される値へのポインター。 期待される戻り値がない場合は、このポインターを NULL になります。
 
 ### <a name="return-value"></a>戻り値
@@ -6295,10 +6295,10 @@ virtual BOOL OnCommand(
 
 ### <a name="parameters"></a>パラメーター
 
-*wParam*  
+*wParam*<br/>
 下位ワード*wParam*メニュー項目、コントロール、またはアクセラレータのコマンド ID を識別します。 上位ワード*wParam*コントロールからのメッセージがある場合は、通知メッセージを指定します。 アクセラレータからのメッセージの場合は、上位の単語は 1 です。 メニューからのメッセージの場合は、上位の単語は 0 です。
 
-*lParam*  
+*lParam*<br/>
 コントロールからのメッセージがある場合は、メッセージを送信するコントロールを識別します。 それ以外の場合、 *lParam*は 0 です。
 
 ### <a name="return-value"></a>戻り値
@@ -6324,7 +6324,7 @@ afx_msg void OnCompacting(UINT nCpuTime);
 
 ### <a name="parameters"></a>パラメーター
 
-*nCpuTime*  
+*nCpuTime*<br/>
 現在 Windows CPU 時間に圧縮するメモリは、その他の操作の実行に要したで費やされた CPU 時間の比率を指定します。 たとえば、8000 h は CPU 時間の圧縮のメモリの 50% を表します。
 
 ### <a name="remarks"></a>Remarks
@@ -6348,10 +6348,10 @@ afx_msg int OnCompareItem(
 
 ### <a name="parameters"></a>パラメーター
 
-*送るとき*  
+*送るとき*<br/>
 WM_COMPAREITEM メッセージを送信したコントロールの識別子。
 
-*lpCompareItemStruct*  
+*lpCompareItemStruct*<br/>
 Long ポインターが含まれています、 [COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md)識別子と、コンボ ボックスまたはリスト ボックス内の 2 つの項目のアプリケーションによって提供されるデータを含むデータ構造です。
 
 ### <a name="return-value"></a>戻り値
@@ -6402,10 +6402,10 @@ afx_msg void OnContextMenu(
 
 ### <a name="parameters"></a>パラメーター
 
-*我が物*  
+*我が物*<br/>
 ユーザーがマウスをクリックして右ウィンドウへのハンドルします。 メッセージを受信するウィンドウの子ウィンドウにできます。 このメッセージの処理に関する詳細については、「解説」を参照してください。
 
-*pos*  
+*pos*<br/>
 画面座標、マウスの時点で、カーソルの位置をクリックします。
 
 ### <a name="remarks"></a>Remarks
@@ -6426,10 +6426,10 @@ afx_msg BOOL OnCopyData(
 
 ### <a name="parameters"></a>パラメーター
 
-*我が物*  
+*我が物*<br/>
 ポインターを`CWnd`データを送信しているオブジェクト。
 
-*pCopyDataStruct*  
+*pCopyDataStruct*<br/>
 ポインターを[COPYDATASTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcopydatastruct)送信されるデータを含む構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -6459,7 +6459,7 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpCreateStruct*  
+*lpCreateStruct*<br/>
 指す、 [CREATESTRUCT](../../mfc/reference/createstruct-structure.md)に関する情報を格納する構造体、`CWnd`作成されるオブジェクトします。
 
 ### <a name="return-value"></a>戻り値
@@ -6490,13 +6490,13 @@ afx_msg HBRUSH OnCtlColor(
 
 ### <a name="parameters"></a>パラメーター
 
-*pDC*  
+*pDC*<br/>
 子ウィンドウのディスプレイ コンテキストへのポインターが含まれています。 一時的な場合があります。
 
-*我が物*  
+*我が物*<br/>
 色を調べるコントロールへのポインターが含まれています。 一時的な場合があります。
 
-*ため*  
+*ため*<br/>
 コントロールの種類を指定する、次の値のいずれかが含まれます。
 
 - CTLCOLOR_BTN ボタン コントロール
@@ -6547,13 +6547,13 @@ afx_msg void OnDeadChar(
 
 ### <a name="parameters"></a>パラメーター
 
-*NChar*  
+*NChar*<br/>
 配信不能キーの文字の値を指定します。
 
-*nRepCnt*  
+*nRepCnt*<br/>
 繰り返し回数を指定します。
 
-*nFlags*  
+*nFlags*<br/>
 次の一覧に示すようにコードのスキャン、キー遷移コード、以前のキーの状態、およびコンテキストのコードを指定します。
 
 |[値]|説明|
@@ -6591,10 +6591,10 @@ afx_msg void OnDeleteItem(
 
 ### <a name="parameters"></a>パラメーター
 
-*送るとき*  
+*送るとき*<br/>
 WM_DELETEITEM メッセージを送信したコントロールの識別子。
 
-*lpDeleteItemStruct*  
+*lpDeleteItemStruct*<br/>
 Long ポインターを指定します、 [DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md)削除したリスト ボックスの項目に関する情報を含むデータ構造体。
 
 ### <a name="remarks"></a>Remarks
@@ -6640,10 +6640,10 @@ afx_msg BOOL OnDeviceChange(
 
 ### <a name="parameters"></a>パラメーター
 
-*nEventType*  
+*nEventType*<br/>
 イベントの種類。 使用可能な値の説明は「解説」を参照してください。
 
-*指定*  
+*指定*<br/>
 イベントに固有のデータを格納する構造体のアドレス。 その意味は、特定のイベントによって異なります。
 
 ### <a name="remarks"></a>Remarks
@@ -6683,7 +6683,7 @@ afx_msg void OnDevModeChange(LPTSTR lpDeviceName);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpDeviceName*  
+*lpDeviceName*<br/>
 WIN Windows 初期化ファイルで指定されたデバイス名を指します。INI します。
 
 ### <a name="remarks"></a>Remarks
@@ -6724,19 +6724,19 @@ virtual void OnDrawIconicThumbnailOrLivePreview(
 
 ### <a name="parameters"></a>パラメーター
 
-*dc*  
+*dc*<br/>
 デバイス コンテキストを指定します。
 
-*rect*  
+*rect*<br/>
 表示するために領域の外接する四角形を指定します。
 
-*szRequiredThumbnailSize*  
+*szRequiredThumbnailSize*<br/>
 ターゲットのサムネイルのサイズを指定します。 場合無視するか*bIsThumbnail*は FALSE です。
 
-*bIsThumbnail*  
+*bIsThumbnail*<br/>
 アイコン サムネイルまたはライブ プレビュー (ピークして) このメソッドを呼び出すかどうかを指定します。
 
-*bAlphaChannelSet*  
+*bAlphaChannelSet*<br/>
 [out]TRUE に設定する場合は、実装で選択されているビットマップのアルファ チャネルの初期化*dc*します。
 
 ### <a name="remarks"></a>Remarks
@@ -6755,10 +6755,10 @@ afx_msg void OnDrawItem(
 
 ### <a name="parameters"></a>パラメーター
 
-*送るとき*  
+*送るとき*<br/>
 ならなくを送信したコントロールの識別子が含まれています。 メニュー、メッセージを送信する場合*送るとき*0 が含まれています。
 
-*lpDrawItemStruct*  
+*lpDrawItemStruct*<br/>
 Long ポインターを指定します、`DRAWITEMSTRUCT`描画される項目および必要な図面の種類に関する情報を含むデータ構造です。
 
 ### <a name="remarks"></a>Remarks
@@ -6782,7 +6782,7 @@ afx_msg void OnDropFiles(HDROP hDropInfo);
 
 ### <a name="parameters"></a>パラメーター
 
-*hDropInfo*  
+*hDropInfo*<br/>
 ドロップされたファイルを記述する内部データ構造体へのポインター。 このハンドルを使って、 `DragFinish`、 `DragQueryFile`、および`DragQueryPoint`ドロップされたファイルに関する情報を取得する Windows の関数。
 
 ### <a name="remarks"></a>Remarks
@@ -6802,7 +6802,7 @@ afx_msg void OnEnable(BOOL bEnable);
 
 ### <a name="parameters"></a>パラメーター
 
-*bEnable*  
+*bEnable*<br/>
 指定するかどうか、`CWnd`オブジェクトを有効になっているか、無効になっています。 場合、このパラメーターは TRUE、`CWnd`が有効になって; これが FALSE の場合、`CWnd`無効になっています。
 
 ### <a name="remarks"></a>Remarks
@@ -6822,7 +6822,7 @@ afx_msg void OnEndSession(BOOL bEnding);
 
 ### <a name="parameters"></a>パラメーター
 
-*曲げ*  
+*曲げ*<br/>
 セッションが終了されているかどうかを指定します。 TRUE である場合は、セッションが終了中です。それ以外の場合は FALSE です。
 
 ### <a name="remarks"></a>Remarks
@@ -6848,14 +6848,14 @@ afx_msg void OnEnterIdle(
 
 ### <a name="parameters"></a>パラメーター
 
-*nWhy*  
+*nWhy*<br/>
 メッセージが表示されたメニューまたはダイアログの結果であるかどうかを指定します。 このパラメーターには、次の値のいずれかを指定できます。
 
 - MSGF_DIALOGBOX システムは、ダイアログ ボックスが表示されているため、アイドル状態。
 
 - MSGF_MENU システムは、メニューが表示されているため、アイドル状態です。
 
-*pWho*  
+*pWho*<br/>
 ダイアログ ボックスへのポインターを指定します (場合*nWhy* MSGF_DIALOGBOX が)、または表示されたメニューが含まれるウィンドウ (場合*nWhy* MSGF_MENU が)。 このポインターは、一時的なと、後で使用しない格納されている必要があります。
 
 ### <a name="remarks"></a>Remarks
@@ -6875,7 +6875,7 @@ afx_msg void OnEnterMenuLoop(BOOL bIsTrackPopupMenu);
 
 ### <a name="parameters"></a>パラメーター
 
-*bIsTrackPopupMenu*  
+*bIsTrackPopupMenu*<br/>
 関連するメニューがポップアップ メニューであるかどうかを指定します。 関数が成功した場合は、0 以外の値を持つそれ以外の場合 0 を返します。
 
 ### <a name="remarks"></a>Remarks
@@ -6910,7 +6910,7 @@ afx_msg BOOL OnEraseBkgnd(CDC* pDC);
 
 ### <a name="parameters"></a>パラメーター
 
-*pDC*  
+*pDC*<br/>
 デバイス コンテキスト オブジェクトを指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -6942,7 +6942,7 @@ afx_msg void OnExitMenuLoop(BOOL bIsTrackPopupMenu);
 
 ### <a name="parameters"></a>パラメーター
 
-*bIsTrackPopupMenu*  
+*bIsTrackPopupMenu*<br/>
 関連するメニューがポップアップ メニューであるかどうかを指定します。 関数が成功した場合は、0 以外の値を持つそれ以外の場合 0 を返します。
 
 ### <a name="remarks"></a>Remarks
@@ -7031,7 +7031,7 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO* lpMMI);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpMMI*  
+*lpMMI*<br/>
 指す、`MINMAXINFO`ウィンドウに関する情報を含む構造体サイズと位置、および追跡の最小値と最大サイズを最大化します。 詳細については、この構造体は、次を参照してください。、 [MINMAXINFO](../../mfc/reference/minmaxinfo-structure.md)構造体。
 
 ### <a name="remarks"></a>Remarks
@@ -7089,7 +7089,7 @@ afx_msg BOOL OnHelpInfo(HELPINFO* lpHelpInfo);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpHelpInfo*  
+*lpHelpInfo*<br/>
 ポインターを[HELPINFO](/windows/desktop/api/winuser/ns-winuser-taghelpinfo)メニュー項目、コントロール、ダイアログ ボックスで、またはヘルプが要求されたウィンドウに関する情報を含む構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -7151,7 +7151,7 @@ afx_msg void OnHScroll(
 
 ### <a name="parameters"></a>パラメーター
 
-*nSBCode*  
+*nSBCode*<br/>
 スクロール バーのコードを示す、ユーザーの要求のスクロールを指定します。 このパラメーターには、次のいずれかを指定できます。
 
 - 一番左に SB_LEFT スクロールします。
@@ -7172,10 +7172,10 @@ afx_msg void OnHScroll(
 
 - 指定した位置にスクロール ボックスを SB_THUMBTRACK ドラッグします。 現在の位置がで指定された、 *nPos*パラメーター。
 
-*nPos*  
+*nPos*<br/>
 スクロール バーのコードが SB_THUMBPOSITION または SB_THUMBTRACK 以外の場合、スクロール ボックスの位置を指定しますそれ以外の場合は使用されません。 初期のスクロールの範囲に応じて*nPos*が負の数およびにキャストする必要があります、 **int**必要な場合。
 
-*pScrollBar*  
+*pScrollBar*<br/>
 スクロール バー コントロールからのスクロール メッセージが場合に、コントロールへのポインターが含まれています。 ユーザーがウィンドウのスクロール バーをクリックした場合、このパラメーターが NULL を使用します。 ポインターは一時的である可能性があり、後で使用するために格納しないでください。
 
 ### <a name="remarks"></a>Remarks
@@ -7204,10 +7204,10 @@ afx_msg void OnHScrollClipboard(
 
 ### <a name="parameters"></a>パラメーター
 
-*pClipAppWnd*  
+*pClipAppWnd*<br/>
 クリップボード ビューアー ウィンドウへのポインターを指定します。 ポインターは一時的である可能性があり、後で使用するために格納しないでください。
 
-*nSBCode*  
+*nSBCode*<br/>
 下位ワードでスクロール バーの次のコードのいずれかを指定します。
 
 - 右下にある SB_BOTTOM スクロールします。
@@ -7226,7 +7226,7 @@ afx_msg void OnHScrollClipboard(
 
 - 左上にある SB_TOP スクロールします。
 
-*nPos*  
+*nPos*<br/>
 スクロール ボックスの位置が含まれる場合、スクロール バーのコードは SB_THUMBPOSITION;それ以外の場合は使用されません。
 
 ### <a name="remarks"></a>Remarks
@@ -7246,7 +7246,7 @@ afx_msg void OnIconEraseBkgnd(CDC* pDC);
 
 ### <a name="parameters"></a>パラメーター
 
-*pDC*  
+*pDC*<br/>
 アイコンのデバイス コンテキスト オブジェクトを指定します。 一時的な場合があり、後で使用しない格納されている必要があります。
 
 ### <a name="remarks"></a>Remarks
@@ -7268,7 +7268,7 @@ afx_msg void OnInitMenu(CMenu* pMenu);
 
 ### <a name="parameters"></a>パラメーター
 
-*pMenu*  
+*pMenu*<br/>
 初期化するメニューを指定します。 一時的な場合があり、後で使用しない格納されている必要があります。
 
 ### <a name="remarks"></a>Remarks
@@ -7293,13 +7293,13 @@ afx_msg void OnInitMenuPopup(
 
 ### <a name="parameters"></a>パラメーター
 
-*pPopupMenu*  
+*pPopupMenu*<br/>
 ポップアップ メニューのメニュー オブジェクトを指定します。 一時的な場合があり、後で使用しない格納されている必要があります。
 
-*nIndex*  
+*nIndex*<br/>
 メイン メニューで、ポップアップ メニューのインデックスを指定します。
 
-*bSysMenu*  
+*bSysMenu*<br/>
 ポップアップ メニューがコントロール メニューは、TRUE を返します。それ以外の場合は FALSE です。
 
 ### <a name="remarks"></a>Remarks
@@ -7391,13 +7391,13 @@ afx_msg void OnKeyDown(
 
 ### <a name="parameters"></a>パラメーター
 
-*NChar*  
+*NChar*<br/>
 指定したキーの仮想キー コードを指定します。 標準の仮想キー コードの一覧は、Winuser.h を参照してください。
 
-*nRepCnt*  
+*nRepCnt*<br/>
 繰り返し回数 (キーを押し、ユーザーの結果として、キーストロークが繰り返される時間数)。
 
-*nFlags*  
+*nFlags*<br/>
 次の一覧に示すようにコードのスキャン、キー遷移コード、以前のキーの状態、およびコンテキストのコードを指定します。
 
 |[値]|説明|
@@ -7436,13 +7436,13 @@ afx_msg void OnKeyUp(
 
 ### <a name="parameters"></a>パラメーター
 
-*NChar*  
+*NChar*<br/>
 指定したキーの仮想キー コードを指定します。 標準の仮想キー コードの一覧は、Winuser.h を参照してください。
 
-*nRepCnt*  
+*nRepCnt*<br/>
 繰り返し回数 (キーを押し、ユーザーの結果として、キーストロークが繰り返される時間数)。
 
-*nFlags*  
+*nFlags*<br/>
 次の一覧に示すようにコードのスキャン、キー遷移コード、以前のキーの状態、およびコンテキストのコードを指定します。
 
 |[値]|説明|
@@ -7476,7 +7476,7 @@ afx_msg void OnKillFocus(CWnd* pNewWnd);
 
 ### <a name="parameters"></a>パラメーター
 
-*pNewWnd*  
+*pNewWnd*<br/>
 入力フォーカスを受け取るウィンドウへのポインターを指定します (NULL にすることがありますまたは一時的な場合があります)。
 
 ### <a name="remarks"></a>Remarks
@@ -7498,7 +7498,7 @@ afx_msg void OnLButtonDblClk(
 
 ### <a name="parameters"></a>パラメーター
 
-*nFlags*  
+*nFlags*<br/>
 さまざまな仮想キーがダウンしているかどうかを示します。 このパラメーターは、次の値の任意の組み合わせを指定できます。
 
 - MK_CONTROL は、CTRL キーが押された場合に設定します。
@@ -7511,7 +7511,7 @@ afx_msg void OnLButtonDblClk(
 
 - MK_SHIFT は、SHIFT キーが押された場合に設定します。
 
-*ポイント*  
+*ポイント*<br/>
 カーソルの x 座標と y 座標を指定します。 これらの座標は、ウィンドウの左上隅に対して相対的に常にします。
 
 ### <a name="remarks"></a>Remarks
@@ -7533,7 +7533,7 @@ afx_msg void OnLButtonDown(
 
 ### <a name="parameters"></a>パラメーター
 
-*nFlags*  
+*nFlags*<br/>
 さまざまな仮想キーがダウンしているかどうかを示します。 このパラメーターは、次の値の任意の組み合わせを指定できます。
 
 - MK_CONTROL は、CTRL キーが押された場合に設定します。
@@ -7546,7 +7546,7 @@ afx_msg void OnLButtonDown(
 
 - MK_SHIFT は、SHIFT キーが押された場合に設定します。
 
-*ポイント*  
+*ポイント*<br/>
 カーソルの x 座標と y 座標を指定します。 これらの座標は、ウィンドウの左上隅に対して相対的に常にします。
 
 ### <a name="remarks"></a>Remarks
@@ -7566,7 +7566,7 @@ afx_msg void OnLButtonUp(
 
 ### <a name="parameters"></a>パラメーター
 
-*nFlags*  
+*nFlags*<br/>
 さまざまな仮想キーがダウンしているかどうかを示します。 このパラメーターは、次の値の任意の組み合わせを指定できます。
 
 - MK_CONTROL は、CTRL キーが押された場合に設定します。
@@ -7577,7 +7577,7 @@ afx_msg void OnLButtonUp(
 
 - MK_SHIFT は、SHIFT キーが押された場合に設定します。
 
-*ポイント*  
+*ポイント*<br/>
 カーソルの x 座標と y 座標を指定します。 これらの座標は、ウィンドウの左上隅に対して相対的に常にします。
 
 ### <a name="remarks"></a>Remarks
@@ -7597,7 +7597,7 @@ afx_msg void OnMButtonDblClk(
 
 ### <a name="parameters"></a>パラメーター
 
-*nFlags*  
+*nFlags*<br/>
 さまざまな仮想キーがダウンしているかどうかを示します。 このパラメーターは、次の値の任意の組み合わせを指定できます。
 
 - MK_CONTROL は、CTRL キーが押された場合に設定します。
@@ -7610,7 +7610,7 @@ afx_msg void OnMButtonDblClk(
 
 - MK_SHIFT は、SHIFT キーが押された場合に設定します。
 
-*ポイント*  
+*ポイント*<br/>
 カーソルの x 座標と y 座標を指定します。 これらの座標は、ウィンドウの左上隅に対して相対的に常にします。
 
 ### <a name="remarks"></a>Remarks
@@ -7632,7 +7632,7 @@ afx_msg void OnMButtonDown(
 
 ### <a name="parameters"></a>パラメーター
 
-*nFlags*  
+*nFlags*<br/>
 さまざまな仮想キーがダウンしているかどうかを示します。 このパラメーターは、次の値の任意の組み合わせを指定できます。
 
 - MK_CONTROL は、CTRL キーが押された場合に設定します。
@@ -7645,7 +7645,7 @@ afx_msg void OnMButtonDown(
 
 - MK_SHIFT は、SHIFT キーが押された場合に設定します。
 
-*ポイント*  
+*ポイント*<br/>
 カーソルの x 座標と y 座標を指定します。 これらの座標は、ウィンドウの左上隅に対して相対的に常にします。
 
 ### <a name="remarks"></a>Remarks
@@ -7665,7 +7665,7 @@ afx_msg void OnMButtonUp(
 
 ### <a name="parameters"></a>パラメーター
 
-*nFlags*  
+*nFlags*<br/>
 さまざまな仮想キーがダウンしているかどうかを示します。 このパラメーターは、次の値の任意の組み合わせを指定できます。
 
 - MK_CONTROL は、CTRL キーが押された場合に設定します。
@@ -7676,7 +7676,7 @@ afx_msg void OnMButtonUp(
 
 - MK_SHIFT は、SHIFT キーが押された場合に設定します。
 
-*ポイント*  
+*ポイント*<br/>
 カーソルの x 座標と y 座標を指定します。 これらの座標は、ウィンドウの左上隅に対して相対的に常にします。
 
 ### <a name="remarks"></a>Remarks
@@ -7697,13 +7697,13 @@ afx_msg void OnMDIActivate(
 
 ### <a name="parameters"></a>パラメーター
 
-*bActivate*  
+*bActivate*<br/>
 アクティブ化および非アクティブにされている場合は FALSE に、子がされている場合は TRUE。
 
-*受け取る*  
+*受け取る*<br/>
 アクティブ化する MDI 子ウィンドウへのポインターが含まれています。 MDI 子ウィンドウの場合は、受信したときに*受け取る*アクティブ化されている子ウィンドウへのポインターが含まれています。 このポインターは、一時的なと、後で使用しない格納されている必要があります。
 
-*pDeactivateWnd*  
+*pDeactivateWnd*<br/>
 非アクティブ化されている MDI 子ウィンドウへのポインターが含まれています。 このポインターは、一時的なと、後で使用しない格納されている必要があります。
 
 ### <a name="remarks"></a>Remarks
@@ -7724,10 +7724,10 @@ afx_msg void OnMeasureItem(
 
 ### <a name="parameters"></a>パラメーター
 
-*送るとき*  
+*送るとき*<br/>
 コントロールの ID。
 
-*lpMeasureItemStruct*  
+*lpMeasureItemStruct*<br/>
 指す、 [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md)オーナー描画コントロールのサイズを含むデータ構造です。
 
 ### <a name="remarks"></a>Remarks
@@ -7758,13 +7758,13 @@ afx_msg LRESULT OnMenuChar(
 
 ### <a name="parameters"></a>パラメーター
 
-*NChar*  
+*NChar*<br/>
 ビルドの設定によって、ユーザーが押した ANSI または Unicode の文字を指定します。
 
-*nFlags*  
+*nFlags*<br/>
 メニューがポップアップ メニューの場合は、ならばフラグが含まれています。 メニューがコントロール メニュー、ならばフラグが含まれます。
 
-*pMenu*  
+*pMenu*<br/>
 選択したへのポインターを含む`CMenu`します。 ポインターは、一時的な場合があり、保存してはなりません。
 
 ### <a name="return-value"></a>戻り値
@@ -7882,10 +7882,10 @@ afx_msg void OnMenuSelect(
 
 ### <a name="parameters"></a>パラメーター
 
-*nItemID*  
+*nItemID*<br/>
 選択された項目を識別します。 選択した項目がメニュー項目の場合*nItemID*メニュー項目 ID が含まれます 選択した項目には、ポップアップ メニューが含まれている場合*nItemID*ポップアップ メニューのインデックスが含まれていますと*hSysMenu*メイン (クリックして) メニューのハンドルを格納します。
 
-*nFlags*  
+*nFlags*<br/>
 次のメニュー フラグの組み合わせが含まれます。
 
 - MF_BITMAP 項目は、ビットマップです。
@@ -7906,7 +7906,7 @@ afx_msg void OnMenuSelect(
 
 - ならば項目は、[コントロール] メニューに含まれます。
 
-*hSysMenu*  
+*hSysMenu*<br/>
 場合*nFlags*ならばが含まれています、メッセージに関連付けられているメニューを識別します。 場合*nFlags*ならばを含む、メイン メニューのハンドルを識別します。 場合*nFlags*ならばもを含むは使用されません。
 
 ### <a name="remarks"></a>Remarks
@@ -7929,13 +7929,13 @@ afx_msg int OnMouseActivate(
 
 ### <a name="parameters"></a>パラメーター
 
-*pDesktopWnd*  
+*pDesktopWnd*<br/>
 アクティブ化されているウィンドウの最上位の親ウィンドウへのポインターを指定します。 ポインターは、一時的な場合があり、保存してはなりません。
 
-*nHitTest*  
+*nHitTest*<br/>
 指定します、[ヒット テスト](#onnchittest)市外局番します。 ヒット テストは、カーソルの位置を決定するテストです。
 
-*message*  
+*message*<br/>
 マウス メッセージの数を指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -8052,7 +8052,7 @@ afx_msg void OnMouseMove(
 
 ### <a name="parameters"></a>パラメーター
 
-*nFlags*  
+*nFlags*<br/>
 さまざまな仮想キーがダウンしているかどうかを示します。 このパラメーターは、次の値の任意の組み合わせを指定できます。
 
 - MK_CONTROL は、CTRL キーが押された場合に設定します。
@@ -8065,7 +8065,7 @@ afx_msg void OnMouseMove(
 
 - MK_SHIFT は、SHIFT キーが押された場合に設定します。
 
-*ポイント*  
+*ポイント*<br/>
 カーソルの x 座標と y 座標を指定します。 これらの座標は、ウィンドウの左上隅に対して相対的に常にします。
 
 ### <a name="remarks"></a>Remarks
@@ -8088,7 +8088,7 @@ afx_msg BOOL OnMouseWheel(
 
 ### <a name="parameters"></a>パラメーター
 
-*nFlags*  
+*nFlags*<br/>
 さまざまな仮想キーがダウンしているかどうかを示します。 このパラメーターは、次の値の任意の組み合わせを指定できます。
 
 - MK_CONTROL は、CTRL キーが押された場合に設定します。
@@ -8101,10 +8101,10 @@ afx_msg BOOL OnMouseWheel(
 
 - MK_SHIFT は、SHIFT キーが押された場合に設定します。
 
-*zDelta*  
+*zDelta*<br/>
 回転距離を示します。 *ZDelta* 120 は倍数または部門、WHEEL_DELTA の値が表されます。 0 より小さい値は 0 を示します (ユーザー) からフォワード回転よりも大きい値は、中 (ユーザー) に向かって回転を表すバックを示します。 ユーザーは、ソフトウェアのマウス ホイールの設定を変更することで、この応答を取り消すことができます。 このパラメーターの詳細については、「解説」を参照してください。
 
-*pt*  
+*pt*<br/>
 カーソルの x 座標と y 座標を指定します。 これらの座標は画面の左上隅に対して相対的に常にします。
 
 ### <a name="return-value"></a>戻り値
@@ -8136,10 +8136,10 @@ afx_msg void OnMove(
 
 ### <a name="parameters"></a>パラメーター
 
-*x*  
+*x*<br/>
 クライアント領域の左上隅の x 座標の場所を指定します。 この新しい場所がオーバー ラップやポップアップ ウィンドウを画面座標で指定され、親クライアントが子ウィンドウの座標します。
 
-*y*  
+*y*<br/>
 クライアント領域の左上隅の y 座標の場所を指定します。 この新しい場所がオーバー ラップやポップアップ ウィンドウを画面座標で指定され、親クライアントが子ウィンドウの座標します。
 
 ### <a name="remarks"></a>Remarks
@@ -8159,10 +8159,10 @@ afx_msg void OnMoving(
 
 ### <a name="parameters"></a>パラメーター
 
-*nSide*  
+*nSide*<br/>
 移動するウィンドウの端。
 
-*lpRect*  
+*lpRect*<br/>
 アドレス、 [CRect](../../atl-mfc-shared/reference/crect-class.md)または[RECT 構造体](../../mfc/reference/rect-structure1.md)アイテムの座標を格納します。
 
 ### <a name="remarks"></a>Remarks
@@ -8180,7 +8180,7 @@ afx_msg BOOL OnNcActivate(BOOL bActive);
 
 ### <a name="parameters"></a>パラメーター
 
-*描画*  
+*描画*<br/>
 キャプション バーまたはアイコンを必要なアクティブまたは非アクティブの状態を示すために変更するを指定します。 *描画*場合、アクティブなキャプション パラメーターは、TRUE またはアイコンを描画するがします。 FALSE は、非アクティブなキャプションまたはアイコン。
 
 ### <a name="return-value"></a>戻り値
@@ -8206,10 +8206,10 @@ afx_msg void OnNcCalcSize(
 
 ### <a name="parameters"></a>パラメーター
 
-*bCalcValidRects*  
+*bCalcValidRects*<br/>
 クライアント領域のどの部分には、有効な情報が含まれています。 アプリケーションを指定する必要があるかどうかを指定します。 Windows は、有効な情報を新しいクライアント領域内の指定された領域にコピーされます。 このパラメーターが TRUE の場合、クライアント領域のどの部分が有効では、アプリケーションが指定する必要があります。
 
-*lpncsp*  
+*lpncsp*<br/>
 指す、 [NCCALCSIZE_PARAMS](../../mfc/reference/nccalcsize-params-structure.md)アプリケーションは、新しいサイズと位置の計算に使用できる情報を含むデータ構造体、`CWnd`四角形の (クライアント領域、境界線、キャプション、スクロール バー、およびなどを含む).
 
 ### <a name="remarks"></a>Remarks
@@ -8235,7 +8235,7 @@ afx_msg BOOL OnNcCreate(LPCREATESTRUCT lpCreateStruct);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpCreateStruct*  
+*lpCreateStruct*<br/>
 指す、 [CREATESTRUCT](../../mfc/reference/createstruct-structure.md)用のデータ構造`CWnd`します。
 
 ### <a name="return-value"></a>戻り値
@@ -8271,7 +8271,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 
 ### <a name="parameters"></a>パラメーター
 
-*ポイント*  
+*ポイント*<br/>
 カーソルの x 座標と y 座標が含まれています。 これらの座標は画面座標では常にします。
 
 ### <a name="return-value"></a>戻り値
@@ -8295,10 +8295,10 @@ afx_msg void OnNcLButtonDblClk(
 
 ### <a name="parameters"></a>パラメーター
 
-*nHitTest*  
+*nHitTest*<br/>
 指定します、[ヒット テスト コード](#onnchittest)します。 ヒット テストは、カーソルの位置を決定するテストです。
 
-*ポイント*  
+*ポイント*<br/>
 指定します、 `CPoint` x と y を格納しているオブジェクトのカーソル位置の画面座標。 これらの座標は画面の左上隅に対して相対的に常にします。
 
 ### <a name="remarks"></a>Remarks
@@ -8320,10 +8320,10 @@ afx_msg void OnNcLButtonDown(
 
 ### <a name="parameters"></a>パラメーター
 
-*nHitTest*  
+*nHitTest*<br/>
 指定します、[ヒット テスト コード](#onnchittest)します。 ヒット テストは、カーソルの位置を決定するテストです。
 
-*ポイント*  
+*ポイント*<br/>
 指定します、 `CPoint` x と y を格納しているオブジェクトのカーソル位置の画面座標。 これらの座標は画面の左上隅に対して相対的に常にします。
 
 ### <a name="remarks"></a>Remarks
@@ -8345,10 +8345,10 @@ afx_msg void OnNcLButtonUp(
 
 ### <a name="parameters"></a>パラメーター
 
-*nHitTest*  
+*nHitTest*<br/>
 指定します、[ヒット テスト コード](#onnchittest)します。 ヒット テストは、カーソルの位置を決定するテストです。
 
-*ポイント*  
+*ポイント*<br/>
 指定します、 `CPoint` x と y を格納しているオブジェクトのカーソル位置の画面座標。 これらの座標は画面の左上隅に対して相対的に常にします。
 
 ### <a name="remarks"></a>Remarks
@@ -8370,10 +8370,10 @@ afx_msg void OnNcMButtonDblClk(
 
 ### <a name="parameters"></a>パラメーター
 
-*nHitTest*  
+*nHitTest*<br/>
 指定します、[ヒット テスト コード](#onnchittest)します。 ヒット テストは、カーソルの位置を決定するテストです。
 
-*ポイント*  
+*ポイント*<br/>
 指定します、 `CPoint` x と y を格納しているオブジェクトのカーソル位置の画面座標。 これらの座標は画面の左上隅に対して相対的に常にします。
 
 ### <a name="remarks"></a>Remarks
@@ -8393,10 +8393,10 @@ afx_msg void OnNcMButtonDown(
 
 ### <a name="parameters"></a>パラメーター
 
-*nHitTest*  
+*nHitTest*<br/>
 指定します、[ヒット テスト コード](#onnchittest)します。 ヒット テストは、カーソルの位置を決定するテストです。
 
-*ポイント*  
+*ポイント*<br/>
 指定します、 `CPoint` x と y を格納しているオブジェクトのカーソル位置の画面座標。 これらの座標は画面の左上隅に対して相対的に常にします。
 
 ### <a name="remarks"></a>Remarks
@@ -8416,10 +8416,10 @@ afx_msg void OnNcMButtonUp(
 
 ### <a name="parameters"></a>パラメーター
 
-*nHitTest*  
+*nHitTest*<br/>
 指定します、[ヒット テスト コード](#onnchittest)します。 ヒット テストは、カーソルの位置を決定するテストです。
 
-*ポイント*  
+*ポイント*<br/>
 指定します、 `CPoint` x と y を格納しているオブジェクトのカーソル位置の画面座標。 これらの座標は画面の左上隅に対して相対的に常にします。
 
 ### <a name="remarks"></a>Remarks
@@ -8478,10 +8478,10 @@ afx_msg void OnNcMouseMove(
 
 ### <a name="parameters"></a>パラメーター
 
-*nHitTest*  
+*nHitTest*<br/>
 指定します、[ヒット テスト コード](#onnchittest)します。 ヒット テストは、カーソルの位置を決定するテストです。
 
-*ポイント*  
+*ポイント*<br/>
 指定します、 `CPoint` x と y を格納しているオブジェクトのカーソル位置の画面座標。 これらの座標は画面の左上隅に対して相対的に常にします。
 
 ### <a name="remarks"></a>Remarks
@@ -8517,10 +8517,10 @@ afx_msg void OnNcRButtonDblClk(
 
 ### <a name="parameters"></a>パラメーター
 
-*nHitTest*  
+*nHitTest*<br/>
 指定します、[ヒット テスト コード](#onnchittest)します。 ヒット テストは、カーソルの位置を決定するテストです。
 
-*ポイント*  
+*ポイント*<br/>
 指定します、 `CPoint` x と y を格納しているオブジェクトのカーソル位置の画面座標。 これらの座標は画面の左上隅に対して相対的に常にします。
 
 ### <a name="remarks"></a>Remarks
@@ -8540,10 +8540,10 @@ afx_msg void OnNcRButtonDown(
 
 ### <a name="parameters"></a>パラメーター
 
-*nHitTest*  
+*nHitTest*<br/>
 指定します、[ヒット テスト コード](#onnchittest)します。 ヒット テストは、カーソルの位置を決定するテストです。
 
-*ポイント*  
+*ポイント*<br/>
 指定します、 `CPoint` x と y を格納しているオブジェクトのカーソル位置の画面座標。 これらの座標は画面の左上隅に対して相対的に常にします。
 
 ### <a name="remarks"></a>Remarks
@@ -8563,10 +8563,10 @@ afx_msg void OnNcRButtonUp(
 
 ### <a name="parameters"></a>パラメーター
 
-*nHitTest*  
+*nHitTest*<br/>
 指定します、[ヒット テスト コード](#onnchittest)します。 ヒット テストは、カーソルの位置を決定するテストです。
 
-*ポイント*  
+*ポイント*<br/>
 指定します、 `CPoint` x と y を格納しているオブジェクトのカーソル位置の画面座標。 これらの座標は画面の左上隅に対して相対的に常にします。
 
 ### <a name="remarks"></a>Remarks
@@ -8710,13 +8710,13 @@ virtual BOOL OnNotify(
 
 ### <a name="parameters"></a>パラメーター
 
-*wParam*  
+*wParam*<br/>
 コントロールからのメッセージがある場合は、メッセージを送信するコントロールを識別します。 それ以外の場合、 *wParam*は 0 です。
 
-*lParam*  
+*lParam*<br/>
 通知メッセージへのポインター (`NMHDR`) 通知コードおよび追加情報を格納する構造体。 このパラメーターを持つより大きな構造体をポイントするいくつかの通知メッセージの`NMHDR`その最初のメンバーとして構造体。
 
-*pResult*  
+*pResult*<br/>
 メッセージが処理される場合、結果コードを格納するための LRESULT 変数へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -8801,10 +8801,10 @@ afx_msg void OnPaintClipboard(
 
 ### <a name="parameters"></a>パラメーター
 
-*pClipAppWnd*  
+*pClipAppWnd*<br/>
 クリップボード アプリケーション ウィンドウへのポインターを指定します。 ポインターは一時的である可能性があり、後で使用するために格納しないでください。
 
-*hPaintStruct*  
+*hPaintStruct*<br/>
 識別、 [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)の描画にクライアント領域のどの部分を定義するデータ構造。
 
 ### <a name="remarks"></a>Remarks
@@ -8826,7 +8826,7 @@ afx_msg void OnPaletteChanged(CWnd* pFocusWnd);
 
 ### <a name="parameters"></a>パラメーター
 
-*pFocusWnd*  
+*pFocusWnd*<br/>
 システム パレットが変更の原因となったウィンドウへのポインターを指定します。 ポインターは、一時的な場合があり、保存してはなりません。
 
 ### <a name="remarks"></a>Remarks
@@ -8850,7 +8850,7 @@ afx_msg void OnPaletteIsChanging(CWnd* pRealizeWnd);
 
 ### <a name="parameters"></a>パラメーター
 
-*pRealizeWnd*  
+*pRealizeWnd*<br/>
 論理パレットが実現されるウィンドウを指定します。
 
 ### <a name="remarks"></a>Remarks
@@ -8869,7 +8869,7 @@ afx_msg void OnParentNotify(
 
 ### <a name="parameters"></a>パラメーター
 
-*message*  
+*message*<br/>
 イベントを示す、親に通知を送信して、子ウィンドウの識別子。 イベントは、の下位ワード*メッセージ*します。 かどうか、イベントは WM_CREATE または WM_DESTROY の上位ワード*メッセージ*; の子ウィンドウの識別子は、それ以外の場合、上位の単語は定義されていません。 イベント (の下位ワード*メッセージ*) これらの値のいずれかを指定できます。
 
 - WM_CREATE 子ウィンドウを作成しています。
@@ -8882,7 +8882,7 @@ afx_msg void OnParentNotify(
 
 - ユーザーが子ウィンドウの上にマウス カーソルを置きをマウスの右ボタンをクリックします。
 
-*lParam*  
+*lParam*<br/>
 場合のイベント (下位ワード)*メッセージ*WM_CREATE または WM_DESTROY、 *lParam*子ウィンドウのウィンドウ ハンドルを指定しますそうしないと*lParam* x と y が含まれています。カーソルの座標。 X 座標は下位ワードであり、y 座標が上位ワード。
 
 ### <a name="remarks"></a>Remarks
@@ -9044,7 +9044,7 @@ afx_msg void OnRButtonDblClk(
 
 ### <a name="parameters"></a>パラメーター
 
-*nFlags*  
+*nFlags*<br/>
 さまざまな仮想キーがダウンしているかどうかを示します。 このパラメーターは、次の値の任意の組み合わせを指定できます。
 
 - MK_CONTROL は、CTRL キーが押された場合に設定します。
@@ -9057,7 +9057,7 @@ afx_msg void OnRButtonDblClk(
 
 - MK_SHIFT は、SHIFT キーが押された場合に設定します。
 
-*ポイント*  
+*ポイント*<br/>
 X と y を指定します、カーソルの座標。 これらの座標は、ウィンドウの左上隅に対して相対的に常にします。
 
 ### <a name="remarks"></a>Remarks
@@ -9079,7 +9079,7 @@ afx_msg void OnRButtonDown(
 
 ### <a name="parameters"></a>パラメーター
 
-*nFlags*  
+*nFlags*<br/>
 さまざまな仮想キーがダウンしているかどうかを示します。 このパラメーターは、次の値の任意の組み合わせを指定できます。
 
 - MK_CONTROL は、CTRL キーが押された場合に設定します。
@@ -9092,7 +9092,7 @@ afx_msg void OnRButtonDown(
 
 - MK_SHIFT は、SHIFT キーが押された場合に設定します。
 
-*ポイント*  
+*ポイント*<br/>
 X と y を指定します、カーソルの座標。 これらの座標は、ウィンドウの左上隅に対して相対的に常にします。
 
 ### <a name="remarks"></a>Remarks
@@ -9111,7 +9111,7 @@ afx_msg void OnRButtonUp(
 
 ### <a name="parameters"></a>パラメーター
 
-*nFlags*  
+*nFlags*<br/>
 さまざまな仮想キーがダウンしているかどうかを示します。 このパラメーターは、次の値の任意の組み合わせを指定できます。
 
 - MK_CONTROL は、CTRL キーが押された場合に設定します。
@@ -9122,7 +9122,7 @@ afx_msg void OnRButtonUp(
 
 - MK_SHIFT は、SHIFT キーが押された場合に設定します。
 
-*ポイント*  
+*ポイント*<br/>
 X と y を指定します、カーソルの座標。 これらの座標は、ウィンドウの左上隅に対して相対的に常にします。
 
 ### <a name="remarks"></a>Remarks
@@ -9141,10 +9141,10 @@ afx_msg LRESULT OnRegisteredMouseWheel(
 
 ### <a name="parameters"></a>パラメーター
 
-*wParam*  
+*wParam*<br/>
 ポインターの水平位置。
 
-*lParam*  
+*lParam*<br/>
 ポインターの垂直位置。
 
 ### <a name="return-value"></a>戻り値
@@ -9182,7 +9182,7 @@ afx_msg void OnRenderFormat(UINT nFormat);
 
 ### <a name="parameters"></a>パラメーター
 
-*パラメーター*  
+*パラメーター*<br/>
 クリップボードの形式を指定します。
 
 ### <a name="remarks"></a>Remarks
@@ -9233,13 +9233,13 @@ afx_msg BOOL OnSetCursor(
 
 ### <a name="parameters"></a>パラメーター
 
-*我が物*  
+*我が物*<br/>
 カーソルを含むウィンドウへのポインターを指定します。 ポインターは一時的である可能性があり、後で使用するために格納しないでください。
 
-*nHitTest*  
+*nHitTest*<br/>
 指定します、[ヒット テスト](#onnchittest)市外局番します。 ヒット テストでは、カーソルの位置を決定します。
 
-*message*  
+*message*<br/>
 マウス メッセージの数を指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -9269,7 +9269,7 @@ afx_msg void OnSetFocus(CWnd* pOldWnd);
 
 ### <a name="parameters"></a>パラメーター
 
-*pOldWnd*  
+*pOldWnd*<br/>
 含まれています、 `CWnd` (NULL にすることがあります)、入力フォーカスを失ったオブジェクト。 ポインターは一時的である可能性があり、後で使用するために格納しないでください。
 
 ### <a name="remarks"></a>Remarks
@@ -9291,10 +9291,10 @@ afx_msg void OnSettingChange(
 
 ### <a name="parameters"></a>パラメーター
 
-*uFlags*  
+*uFlags*<br/>
 システムがの結果としてメッセージを送信すると、`SystemParametersInfo`呼び出し、このパラメーターが変更されたシステム パラメーターを示すフラグ。 値の一覧は、次を参照してください。 [SystemParametersInfo](https://msdn.microsoft.com/library/windows/desktop/ms724947) Windows SDK に含まれています。 アプリケーションでは、メッセージを送信するときに、このパラメーターは 0 を指定する必要があります。
 
-*大文字、小文字*  
+*大文字、小文字*<br/>
 変更されたセクションの名前を指定する文字列を指します。 (文字列は含まれませんセクション名を囲む角かっこです。)
 
 ### <a name="remarks"></a>Remarks
@@ -9303,9 +9303,9 @@ afx_msg void OnSettingChange(
 
 ON_WM_SETTINGCHANGE メッセージは、次の相違点、ON_WM_WININICHANGE メッセージと同様です。
 
--   Windows NT 4.0 以降を実行している場合、または Windows 95/98 では、ON_WM_SETTINGCHANGE を使用します。
+- Windows NT 4.0 以降を実行している場合、または Windows 95/98 では、ON_WM_SETTINGCHANGE を使用します。
 
--   Windows NT 3.51 以前を実行している場合は、ON_WININICHANGE を使用します。 このメッセージは廃止されました。
+- Windows NT 3.51 以前を実行している場合は、ON_WININICHANGE を使用します。 このメッセージは廃止されました。
 
 これらのマクロの 1 つだけは、メッセージ マップが必要です。 Windows 95/98 と Windows NT 4.0 の両方に対して機能するプログラムを作成するには、ON_WM_SETTINGCHANGE のハンドラーを作成します。 によって Windows NT 3.51、ハンドラーが呼び出される`OnSettingChange`と*uFlags*と常に 0 になります。
 
@@ -9321,10 +9321,10 @@ afx_msg void OnShowWindow(
 
 ### <a name="parameters"></a>パラメーター
 
-*bShow*  
+*bShow*<br/>
 ウィンドウが表示されているかどうかを指定します。 TRUE である場合は、ウィンドウが表示されます。これが FALSE の場合、ウィンドウが非表示にします。
 
-*送ら*  
+*送ら*<br/>
 表示されているウィンドウの状態を指定します。 ため、メッセージが送信される場合は 0、`ShowWindow`メンバー関数の呼び出し。 そうしないと*送ら*は、次のいずれか。
 
 - (アイコン化されている) SW_PARENTCLOSING 親ウィンドウを閉じるか、ポップアップ ウィンドウが非表示にします。
@@ -9351,7 +9351,7 @@ afx_msg void OnSize(
 
 ### <a name="parameters"></a>パラメーター
 
-*%n タイプ*  
+*%n タイプ*<br/>
 要求されたサイズ変更の種類を指定します。 このパラメーターには、次の値のいずれかを指定できます。
 
 - SIZE_MAXIMIZED ウィンドウが最大化されています。
@@ -9364,10 +9364,10 @@ afx_msg void OnSize(
 
 - SIZE_MAXSHOW メッセージは、その他のいくつかのウィンドウが元のサイズに復元されたときに、すべてのポップアップ ウィンドウに送信されます。
 
-*cx*  
+*cx*<br/>
 クライアント領域の新しい幅を指定します。
 
-*cy*  
+*cy*<br/>
 クライアント領域の新しい高さを指定します。
 
 ### <a name="remarks"></a>Remarks
@@ -9393,10 +9393,10 @@ afx_msg void OnSizeClipboard(
 
 ### <a name="parameters"></a>パラメーター
 
-*pClipAppWnd*  
+*pClipAppWnd*<br/>
 クリップボード アプリケーション ウィンドウを識別します。 ポインターは、一時的な場合があり、保存してはなりません。
 
-*hRect*  
+*hRect*<br/>
 グローバル メモリ オブジェクトを識別します。 メモリ オブジェクトには、クリップボード オーナーが描画する領域を指定する RECT データ構造体が含まれています。
 
 ### <a name="remarks"></a>Remarks
@@ -9420,10 +9420,10 @@ afx_msg void OnSizing(
 
 ### <a name="parameters"></a>パラメーター
 
-*nSide*  
+*nSide*<br/>
 移動するウィンドウの端。
 
-*lpRect*  
+*lpRect*<br/>
 アドレス、 [CRect](../../atl-mfc-shared/reference/crect-class.md)または[RECT 構造体](../../mfc/reference/rect-structure1.md)アイテムの座標を格納します。
 
 ### <a name="remarks"></a>Remarks
@@ -9449,10 +9449,10 @@ afx_msg void OnSpoolerStatus(
 
 ### <a name="parameters"></a>パラメーター
 
-*送ら*  
+*送ら*<br/>
 SP_JOBSTATUS フラグを指定します。
 
-*nJobs*  
+*nJobs*<br/>
 プリント マネージャーのキューに残っているジョブの数を指定します。
 
 ### <a name="remarks"></a>Remarks
@@ -9474,14 +9474,14 @@ afx_msg void OnStyleChanged(
 
 ### <a name="parameters"></a>パラメーター
 
-*nStyleType*  
+*nStyleType*<br/>
 ウィンドウの拡張や、非拡張スタイルが変更されたかどうかを指定します。 このパラメーターは、次の値の組み合わせを指定できます。
 
 - GWL_EXSTYLE ウィンドウの拡張スタイルが変更されました。
 
 - GWL_STYLE ウィンドウの非拡張スタイルが変更されました。
 
-*lpStyleStruct*  
+*lpStyleStruct*<br/>
 指す、[持つ](https://msdn.microsoft.com/library/windows/desktop/ms632607)ウィンドウの新しいスタイルを含む構造体。 アプリケーションは、スタイルを調べることができます。 ただし変更できます。
 
 ### <a name="remarks"></a>Remarks
@@ -9501,14 +9501,14 @@ afx_msg void OnStyleChanging(
 
 ### <a name="parameters"></a>パラメーター
 
-*nStyleType*  
+*nStyleType*<br/>
 ウィンドウの拡張や、非拡張スタイルが変更されたかどうかを指定します。 このパラメーターは、次の値の組み合わせを指定できます。
 
 - GWL_EXSTYLE ウィンドウの拡張スタイルが変更されました。
 
 - GWL_STYLE ウィンドウの非拡張スタイルが変更されました。
 
-*lpStyleStruct*  
+*lpStyleStruct*<br/>
 指す、[持つ](https://msdn.microsoft.com/library/windows/desktop/ms632607)ウィンドウの新しいスタイルを含む構造体。 アプリケーションは、スタイルを調べるし、それらを変更できます。
 
 ### <a name="remarks"></a>Remarks
@@ -9529,13 +9529,13 @@ afx_msg void OnSysChar(
 
 ### <a name="parameters"></a>パラメーター
 
-*NChar*  
+*NChar*<br/>
 コントロール メニュー キーの ASCII 文字のキー コードを指定します。
 
-*nRepCnt*  
+*nRepCnt*<br/>
 繰り返し回数 (キーを押し、ユーザーの結果として、キーストロークが繰り返される時間数) を指定します。
 
-*nFlags*  
+*nFlags*<br/>
 *NFlags*パラメーターは、これらの値を持つことができます。
 
 |[値]|説明|
@@ -9585,7 +9585,7 @@ afx_msg void OnSysCommand(
 
 ### <a name="parameters"></a>パラメーター
 
-*nID*  
+*nID*<br/>
 要求されたシステム コマンドの種類を指定します。 このパラメーターは、次の値のいずれかを指定できます。
 
 - SC_CLOSE 閉じる、`CWnd`オブジェクト。
@@ -9618,7 +9618,7 @@ afx_msg void OnSysCommand(
 
 - SC_VSCROLL が垂直方向にスクロールします。
 
-*lParam*  
+*lParam*<br/>
 コントロールのメニュー コマンドをマウスで選択した場合*lParam*カーソルの座標が含まれています。 下位ワードは、x 座標を含み、上位ワードは、y 座標を格納します。 それ以外の場合、このパラメーターは使用されません。
 
 - アプリケーションで指定されたホット キーに関連付けられたウィンドウが SC_HOTKEY をアクティブ化します。 下位ワード*lParam*をアクティブ化するウィンドウを識別します。
@@ -9653,13 +9653,13 @@ afx_msg void OnSysDeadChar(
 
 ### <a name="parameters"></a>パラメーター
 
-*NChar*  
+*NChar*<br/>
 配信不能キーの文字の値を指定します。
 
-*nRepCnt*  
+*nRepCnt*<br/>
 繰り返し回数を指定します。
 
-*nFlags*  
+*nFlags*<br/>
 次の一覧に示すようにコードのスキャン、キー遷移コード、以前のキーの状態、およびコンテキストのコードを指定します。
 
 |[値]|説明|
@@ -9692,13 +9692,13 @@ afx_msg void OnSysKeyDown(
 
 ### <a name="parameters"></a>パラメーター
 
-*NChar*  
+*NChar*<br/>
 キーが押された仮想キー コードを指定します。 標準の仮想キー コードの一覧は、Winuser.h を参照してください。
 
-*nRepCnt*  
+*nRepCnt*<br/>
 繰り返し回数を指定します。
 
-*nFlags*  
+*nFlags*<br/>
 次の一覧に示すようにコードのスキャン、キー遷移コード、以前のキーの状態、およびコンテキストのコードを指定します。
 
 |[値]|説明|
@@ -9739,13 +9739,13 @@ afx_msg void OnSysKeyUp(
 
 ### <a name="parameters"></a>パラメーター
 
-*NChar*  
+*NChar*<br/>
 キーが押された仮想キー コードを指定します。 標準の仮想キー コードの一覧は、Winuser.h を参照してください。
 
-*nRepCnt*  
+*nRepCnt*<br/>
 繰り返し回数を指定します。
 
-*nFlags*  
+*nFlags*<br/>
 次の一覧に示すようにコードのスキャン、キー遷移コード、以前のキーの状態、およびコンテキストのコードを指定します。
 
 |[値]|説明|
@@ -9792,7 +9792,7 @@ afx_msg void OnTCard(
 
 ### <a name="parameters"></a>パラメーター
 
-*idAction*  
+*idAction*<br/>
 ユーザーのアクションが実行されることを示します。 このパラメーターには、これらの値のいずれかを指定できます。
 
 - IDABORT、ユーザーは、記述可能な [中止] ボタンをクリックします。
@@ -9819,7 +9819,7 @@ afx_msg void OnTCard(
 
 - IDYES、ユーザーは、編集可能な [はい] ボタンをクリックします。
 
-*dwActionData*  
+*dwActionData*<br/>
 場合*idAction* HELP_TCARD_DATA を指定します、このパラメーターは、ヘルプ作成者によって指定された長整数。 それ以外の場合、このパラメーターは 0 です。
 
 ### <a name="remarks"></a>Remarks
@@ -9848,7 +9848,7 @@ afx_msg void OnTimer(UINT_PTR nIDEvent);
 
 ### <a name="parameters"></a>パラメーター
 
-*呼び出した*  
+*呼び出した*<br/>
 タイマーの識別子を指定します。
 
 ### <a name="remarks"></a>Remarks
@@ -9874,10 +9874,10 @@ virtual INT_PTR OnToolHitTest(
 
 ### <a name="parameters"></a>パラメーター
 
-*ポイント*  
+*ポイント*<br/>
 カーソルの x 座標と y 座標を指定します。 これらの座標は、ウィンドウの左上隅に対して相対的に常に
 
-*PTI*  
+*PTI*<br/>
 ポインターを[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)構造体。 既定では、次の構造体の値が設定されます。
 
 - *hwnd*  =  `m_hWnd`ウィンドウへのハンドル
@@ -9916,16 +9916,16 @@ virtual BOOL OnTouchInput(
 
 ### <a name="parameters"></a>パラメーター
 
-*pt*  
+*pt*<br/>
 (クライアント座標) を画面がタッチされたをポイントします。
 
-*nInputNumber*  
+*nInputNumber*<br/>
 タッチ入力の数。
 
-*nInputsCount*  
+*nInputsCount*<br/>
 タッチ入力の合計数。
 
-*pInput*  
+*pInput*<br/>
 TOUCHINPUT 構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -9946,10 +9946,10 @@ virtual BOOL OnTouchInputs(
 
 ### <a name="parameters"></a>パラメーター
 
-*nInputsCount*  
+*nInputsCount*<br/>
 Windows の合計数はタッチ入力です。
 
-*pInputs*  
+*pInputs*<br/>
 TOUCHINPUT の配列。
 
 ### <a name="return-value"></a>戻り値
@@ -10020,7 +10020,7 @@ afx_msg void OnUpdateUIState(
 
 ### <a name="parameters"></a>パラメーター
 
-*%5%6%7%8.%12%0*  
+*%5%6%7%8.%12%0*<br/>
 実行するアクションを指定します。 次のいずれかの値になります。
 
 - UI は UIS_CLEAR state 要素 (で指定された*nUIElement*) 非表示にする必要があります。
@@ -10029,7 +10029,7 @@ afx_msg void OnUpdateUIState(
 
 - UI は UIS_SET state 要素 (で指定された*nUIElement*) が表示されます。
 
-*nUIElement*  
+*nUIElement*<br/>
 適用される UI 状態要素またはコントロールのスタイルを指定します。 次のいずれかの値になります。
 
 - UISF_HIDEACCEL キーボード アクセラレータ。
@@ -10070,13 +10070,13 @@ afx_msg int OnVKeyToItem(
 
 ### <a name="parameters"></a>パラメーター
 
-*nKey*  
+*nKey*<br/>
 ユーザーが押されたキーの仮想キー コードを指定します。 標準の仮想キー コードの一覧は、Winuser.h を参照してください。
 
-*pListBox*  
+*pListBox*<br/>
 リスト ボックスへのポインターを指定します。 ポインターは一時的である可能性があり、後で使用するために格納しないでください。
 
-*nIndex*  
+*nIndex*<br/>
 現在のカレット位置を指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -10103,7 +10103,7 @@ afx_msg void OnVScroll(
 
 ### <a name="parameters"></a>パラメーター
 
-*nSBCode*  
+*nSBCode*<br/>
 スクロール バーのコードを示す、ユーザーの要求のスクロールを指定します。 このパラメーターには、次のいずれかを指定できます。
 
 - SB_BOTTOM 最下部までスクロールします。
@@ -10124,10 +10124,10 @@ afx_msg void OnVScroll(
 
 - SB_TOP の上端へスクロールします。
 
-*nPos*  
+*nPos*<br/>
 スクロール バーのコードが SB_THUMBPOSITION または SB_THUMBTRACK 以外の場合、現在のスクロール ボックスの位置が含まれていますそれ以外の場合は使用されません。 初期のスクロールの範囲に応じて*nPos*が負の数およびにキャストする必要があります、 **int**必要な場合。
 
-*pScrollBar*  
+*pScrollBar*<br/>
 スクロール バー コントロールからのスクロール メッセージが場合に、コントロールへのポインターが含まれています。 ユーザーがウィンドウのスクロール バーをクリックした場合、このパラメーターが NULL を使用します。 ポインターは一時的である可能性があり、後で使用するために格納しないでください。
 
 ### <a name="remarks"></a>Remarks
@@ -10152,10 +10152,10 @@ afx_msg void OnVScrollClipboard(
 
 ### <a name="parameters"></a>パラメーター
 
-*pClipAppWnd*  
+*pClipAppWnd*<br/>
 クリップボード ビューアー ウィンドウへのポインターを指定します。 ポインターは一時的である可能性があり、後で使用するために格納しないでください。
 
-*nSBCode*  
+*nSBCode*<br/>
 スクロール バーの値は次のいずれかを指定します。
 
 - SB_BOTTOM 最下部までスクロールします。
@@ -10174,7 +10174,7 @@ afx_msg void OnVScrollClipboard(
 
 - SB_TOP の上端へスクロールします。
 
-*nPos*  
+*nPos*<br/>
 スクロール ボックスの位置が含まれる場合、スクロール バーのコードは SB_THUMBPOSITION;それ以外の場合*nPos*は使用されません。
 
 ### <a name="remarks"></a>Remarks
@@ -10215,7 +10215,7 @@ afx_msg void OnWindowPosChanged(WINDOWPOS* lpwndpos);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpwndpos*  
+*lpwndpos*<br/>
 指す、 [WINDOWPOS](../../mfc/reference/windowpos-structure1.md)ウィンドウの新しいサイズと位置に関する情報を含むデータ構造体。
 
 ### <a name="remarks"></a>Remarks
@@ -10235,7 +10235,7 @@ afx_msg void OnWindowPosChanging(WINDOWPOS* lpwndpos);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpwndpos*  
+*lpwndpos*<br/>
 指す、`WINDOWPOS`ウィンドウの新しいサイズと位置に関する情報を含むデータ構造体。
 
 ### <a name="remarks"></a>Remarks
@@ -10257,7 +10257,7 @@ afx_msg void OnWinIniChange(LPCTSTR lpszSection);
 
 ### <a name="parameters"></a>パラメーター
 
-*大文字、小文字*  
+*大文字、小文字*<br/>
 変更されたセクションの名前を指定する文字列を指します。 (文字列は含まれませんセクション名を囲む角かっこです。)
 
 ### <a name="remarks"></a>Remarks
@@ -10287,16 +10287,16 @@ virtual BOOL OnWndMsg(
 
 ### <a name="parameters"></a>パラメーター
 
-*message*  
+*message*<br/>
 送信されるメッセージを指定します。
 
-*wParam*  
+*wParam*<br/>
 メッセージに依存する追加情報を指定します。
 
-*lParam*  
+*lParam*<br/>
 メッセージに依存する追加情報を指定します。
 
-*pResult*  
+*pResult*<br/>
 戻り値[WindowProc](#windowproc)します。 メッセージに依存します。NULL にすることがあります。
 
 ### <a name="return-value"></a>戻り値
@@ -10463,7 +10463,7 @@ BOOL operator!=(const CWnd& wnd) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*wnd*  
+*wnd*<br/>
 `CWnd` オブジェクトへの参照。
 
 ### <a name="return-value"></a>戻り値
@@ -10480,7 +10480,7 @@ BOOL operator==(const CWnd& wnd) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*wnd*  
+*wnd*<br/>
 `CWnd` オブジェクトへの参照。
 
 ### <a name="return-value"></a>戻り値
@@ -10497,7 +10497,7 @@ BOOL PaintWindowlessControls(CDC* pDC);
 
 ### <a name="parameters"></a>パラメーター
 
-*pDC*  
+*pDC*<br/>
 ウィンドウなしのコントロールを描画するためにデバイス コンテキスト。
 
 ### <a name="return-value"></a>戻り値
@@ -10517,13 +10517,13 @@ BOOL PostMessage(
 
 ### <a name="parameters"></a>パラメーター
 
-*message*  
+*message*<br/>
 投稿するメッセージを指定します。
 
-*wParam*  
+*wParam*<br/>
 メッセージに関する追加情報を指定します。 このパラメーターの内容は、ポストされたメッセージに依存します。
 
-*lParam*  
+*lParam*<br/>
 メッセージに関する追加情報を指定します。 このパラメーターの内容は、ポストされたメッセージに依存します。
 
 ### <a name="return-value"></a>戻り値
@@ -10562,7 +10562,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 
 ### <a name="parameters"></a>パラメーター
 
-*cs*  
+*cs*<br/>
 A [CREATESTRUCT](../../mfc/reference/createstruct-structure.md)構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -10610,7 +10610,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>パラメーター
 
-*pMsg*  
+*pMsg*<br/>
 指す、 [MSG](../../mfc/reference/msg-structure1.md)処理するメッセージを含む構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -10629,10 +10629,10 @@ void Print(
 
 ### <a name="parameters"></a>パラメーター
 
-*pDC*  
+*pDC*<br/>
 デバイス コンテキストへのポインター。
 
-*dwFlags*  
+*dwFlags*<br/>
 描画のオプションを指定します。 このパラメーターは、これらのフラグの 1 つ以上指定できます。
 
 - 表示されている場合にのみ、PRF_CHECKVISIBLE は、ウィンドウを描画します。
@@ -10651,17 +10651,17 @@ void Print(
 
 [CWnd::DefWindowProc](#defwindowproc)関数は描画オプションの指定に基づいて、このメッセージを処理します。
 
--   PRF_CHECKVISIBLE が指定されて、ウィンドウが表示されない場合は、何もありません。
+- PRF_CHECKVISIBLE が指定されて、ウィンドウが表示されない場合は、何もありません。
 
--   PRF_NONCLIENT が指定されている場合は、特定のデバイス コンテキストでの非クライアント領域を描画します。
+- PRF_NONCLIENT が指定されている場合は、特定のデバイス コンテキストでの非クライアント領域を描画します。
 
--   PRF_ERASEBKGND が指定されている場合は、ウィンドウを送信する[WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd)メッセージ。
+- PRF_ERASEBKGND が指定されている場合は、ウィンドウを送信する[WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd)メッセージ。
 
--   PRF_CLIENT が指定されている場合は、ウィンドウを送信する[WM_PRINTCLIENT](/windows/desktop/gdi/wm-printclient)メッセージ。
+- PRF_CLIENT が指定されている場合は、ウィンドウを送信する[WM_PRINTCLIENT](/windows/desktop/gdi/wm-printclient)メッセージ。
 
--   PRF_CHILDREN が設定されている場合は、各表示されている子ウィンドウを送信する[WM_PRINT](/windows/desktop/gdi/wm-print)メッセージ。
+- PRF_CHILDREN が設定されている場合は、各表示されている子ウィンドウを送信する[WM_PRINT](/windows/desktop/gdi/wm-print)メッセージ。
 
--   PRF_OWNED が設定されている場合は、表示されている各所有ウィンドウ WM_PRINT メッセージを送信します。
+- PRF_OWNED が設定されている場合は、表示されている各所有ウィンドウ WM_PRINT メッセージを送信します。
 
 ##  <a name="printclient"></a>  CWnd::PrintClient
 
@@ -10675,10 +10675,10 @@ void PrintClient(
 
 ### <a name="parameters"></a>パラメーター
 
-*pDC*  
+*pDC*<br/>
 デバイス コンテキストへのポインター。
 
-*dwFlags*  
+*dwFlags*<br/>
 描画のオプションを指定します。 このパラメーターは、これらのフラグの 1 つ以上指定できます。
 
 - 表示されている場合にのみ、PRF_CHECKVISIBLE は、ウィンドウを描画します。
@@ -10705,10 +10705,10 @@ BOOL PrintWindow(
 
 ### <a name="parameters"></a>パラメーター
 
-*pDC*  
+*pDC*<br/>
 印刷するようにデバイス コンテキストへのポインター。
 
-*nFlags*  
+*nFlags*<br/>
 描画のオプションを指定します。 使用可能な値の一覧は、次を参照してください。 [PrintWindow](/windows/desktop/api/winuser/nf-winuser-printwindow)します。
 
 ### <a name="return-value"></a>戻り値
@@ -10732,13 +10732,13 @@ BOOL RedrawWindow(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpRectUpdate*  
+*lpRectUpdate*<br/>
 指す、 [RECT 構造体](../../mfc/reference/rect-structure1.md)更新四角形の座標を格納しています。 場合、このパラメーターは無視されます*prgnUpdate*有効なリージョンのハンドルが含まれています。
 
-*prgnUpdate*  
+*prgnUpdate*<br/>
 更新領域を識別します。 両方*prgnUpdate*と*lpRectUpdate* NULL は、クライアント領域全体が更新領域に追加されます。
 
-*flags*  
+*flags*<br/>
 次のフラグを使用するには、ウィンドウを無効にします。
 
 - RDW_ERASE が受信するウィンドウ、 [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd)メッセージが表示されるウィンドウが再描画します。 RDW_INVALIDATE フラグも指定する必要があります。それ以外の場合 RDW_ERASE には影響はありません。
@@ -10793,16 +10793,16 @@ BOOL ReflectChildNotify(
 
 ### <a name="parameters"></a>パラメーター
 
-*message*  
+*message*<br/>
 反映されるまでにメッセージを指定します。
 
-*wParam*  
+*wParam*<br/>
 メッセージに依存する追加情報を指定します。
 
-*lParam*  
+*lParam*<br/>
 メッセージに依存する追加情報を指定します。
 
-*pResult*  
+*pResult*<br/>
 親ウィンドウによって返される子ウィンドウによって生成された結果。 NULL にすることができます。
 
 ### <a name="return-value"></a>戻り値
@@ -10829,10 +10829,10 @@ static BOOL PASCAL ReflectLastMsg(
 
 ### <a name="parameters"></a>パラメーター
 
-*hWndChild*  
+*hWndChild*<br/>
 子ウィンドウへのハンドル。
 
-*pResult*  
+*pResult*<br/>
 親ウィンドウによって返される子ウィンドウによって生成された結果。 NULL にすることができます。
 
 ### <a name="return-value"></a>戻り値
@@ -10855,7 +10855,7 @@ int ReleaseDC(CDC* pDC);
 
 ### <a name="parameters"></a>パラメーター
 
-*pDC*  
+*pDC*<br/>
 解放するデバイス コンテキストを識別します。
 
 ### <a name="return-value"></a>戻り値
@@ -10884,16 +10884,16 @@ void RepositionBars(UINT nIDFirst,
 
 ### <a name="parameters"></a>パラメーター
 
-*のど*  
+*のど*<br/>
 最初の ID 範囲の位置とサイズのコントロール バーです。
 
-*nIDLast*  
+*nIDLast*<br/>
 コントロール バーの範囲内の最後の位置とサイズの ID。
 
-*nIDLeftOver*  
+*nIDLeftOver*<br/>
 クライアント領域の残りの部分ペインの ID を指定します。
 
-*指します*  
+*指します*<br/>
 次の値のいずれかを設定できます。
 
 - `CWnd::reposDefault` コントロール バーのレイアウトを実行します。 *lpRectParam*は使用されず、NULL を指定できます。
@@ -10902,13 +10902,13 @@ void RepositionBars(UINT nIDFirst,
 
 - `CWnd::reposExtra` 値を加算する*lpRectParam*のクライアント領域に*nIDLast*レイアウトによっても実行されます。
 
-*lpRectParam*  
+*lpRectParam*<br/>
 指す、 [RECT 構造体](../../mfc/reference/rect-structure1.md); うち使用量は、の値によって異なります。*指します*します。
 
-*lpRectClient*  
+*lpRectClient*<br/>
 指す、 [RECT 構造体](../../mfc/reference/rect-structure1.md)使用可能なクライアント領域を格納しています。 NULL の場合、ウィンドウのクライアント領域が使用されます。
 
-*bStretch*  
+*bStretch*<br/>
 バーをフレームのサイズに引き伸ばすかどうかを示します。
 
 ### <a name="remarks"></a>Remarks
@@ -10925,7 +10925,7 @@ int RunModalLoop(DWORD dwFlags = 0);
 
 ### <a name="parameters"></a>パラメーター
 
-*dwFlags*  
+*dwFlags*<br/>
 送信される Windows メッセージを指定します。 次のいずれかの値になります。
 
 - MLF_NOIDLEMSG しない送信[WM_ENTERIDLE](/windows/desktop/dlgbox/wm-enteridle)親へのメッセージ。
@@ -10952,10 +10952,10 @@ void ScreenToClient(LPPOINT lpPoint) const;  void ScreenToClient(LPRECT lpRect) 
 
 ### <a name="parameters"></a>パラメーター
 
-*lpPoint*  
+*lpPoint*<br/>
 指す、 [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクトまたは[POINT 構造体](../../mfc/reference/point-structure1.md)変換を画面座標を格納しています。
 
-*lpRect*  
+*lpRect*<br/>
 指す、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT 構造体](../../mfc/reference/rect-structure1.md)変換を画面座標を格納しています。
 
 ### <a name="remarks"></a>Remarks
@@ -10980,16 +10980,16 @@ void ScrollWindow(
 
 ### <a name="parameters"></a>パラメーター
 
-*xAmount*  
+*xAmount*<br/>
 水平方向のスクロールのデバイス単位の量を指定します。 このパラメーターは、左にスクロールする負の値を指定する必要があります。
 
-*yAmount*  
+*yAmount*<br/>
 垂直方向のスクロールのデバイス単位の量を指定します。 このパラメーターは、上にスクロールする負の値を指定する必要があります。
 
-*lpRect*  
+*lpRect*<br/>
 指す、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT 構造体](../../mfc/reference/rect-structure1.md)をスクロールできるクライアント領域の部分を指定します。 場合*lpRect*が null の場合、クライアント領域全体をスクロールします。 カーソルの四角形には、スクロールする四角形と交差している場合、キャレットの位置を変更します。
 
-*lpClipRect*  
+*lpClipRect*<br/>
 指す、`CRect`オブジェクトまたは`RECT`スクロールにクリッピング四角形を指定します。 この四角形内のビットだけがスクロールします。 この四角形の外側のビットである場合でも、 *lpRect*四角形。 場合*lpClipRect*が null の場合、スクロール バーの四角形の領域は実行されません。
 
 ### <a name="remarks"></a>Remarks
@@ -11019,25 +11019,25 @@ int ScrollWindowEx(
 
 ### <a name="parameters"></a>パラメーター
 
-*dx*  
+*dx*<br/>
 水平方向のスクロールのデバイス単位の量を指定します。 このパラメーターには、負の値を左にスクロールする必要があります。
 
-*dy*  
+*dy*<br/>
 垂直方向のスクロールのデバイス単位の量を指定します。 このパラメーターは、上にスクロールする負の値をいる必要があります。
 
-*形*  
+*形*<br/>
 指す、 [RECT 構造体](../../mfc/reference/rect-structure1.md)をスクロールできるクライアント領域の部分を指定します。 このパラメーターが NULL の場合は、クライアント領域全体がスクロールされます。
 
-*lpRectClip*  
+*lpRectClip*<br/>
 指す、`RECT`スクロールにクリッピング四角形を指定します。 この構造体、四角形によって示されるよりも優先*形*します。 この四角形内のビットだけがスクロールします。 この四角形の外側のビットである場合でも、*形*四角形。 このパラメーターが NULL の場合は、スクロールする四角形にクリップは実行されません。
 
-*prgnUpdate*  
+*prgnUpdate*<br/>
 スクロールによって無効となる領域を保持するために変更される領域を識別します。 このパラメーターは NULL になります。
 
-*lpRectUpdate*  
+*lpRectUpdate*<br/>
 指す、`RECT`スクロールによって無効にする四角形の境界を受信する構造体。 このパラメーターは NULL になります。
 
-*flags*  
+*flags*<br/>
 次の値のいずれかを設定できます。
 
 - SW_ERASE SW_INVALIDATE、と共に指定する場合は、送信することによって、新しく無効化されたリージョンを消去する[WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd)メッセージをウィンドウ。
@@ -11072,7 +11072,7 @@ BOOL SendChildNotifyLastMsg(LRESULT* pResult = NULL);
 
 ### <a name="parameters"></a>パラメーター
 
-*pResult*  
+*pResult*<br/>
 親ウィンドウによって返される子ウィンドウによって生成された結果。
 
 ### <a name="return-value"></a>戻り値
@@ -11099,16 +11099,16 @@ LRESULT SendDlgItemMessage(
 
 ### <a name="parameters"></a>パラメーター
 
-*nID*  
+*nID*<br/>
 メッセージを受信するダイアログ コントロールの識別子を指定します。
 
-*message*  
+*message*<br/>
 送信されるメッセージを指定します。
 
-*wParam*  
+*wParam*<br/>
 メッセージに依存する追加情報を指定します。
 
-*lParam*  
+*lParam*<br/>
 メッセージに依存する追加情報を指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -11138,13 +11138,13 @@ LRESULT SendMessage(
 
 ### <a name="parameters"></a>パラメーター
 
-*message*  
+*message*<br/>
 送信されるメッセージを指定します。
 
-*wParam*  
+*wParam*<br/>
 メッセージに依存する追加情報を指定します。
 
-*lParam*  
+*lParam*<br/>
 メッセージに依存する追加情報を指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -11174,19 +11174,19 @@ void SendMessageToDescendants(
 
 ### <a name="parameters"></a>パラメーター
 
-*message*  
+*message*<br/>
 送信されるメッセージを指定します。
 
-*wParam*  
+*wParam*<br/>
 メッセージに依存する追加情報を指定します。
 
-*lParam*  
+*lParam*<br/>
 メッセージに依存する追加情報を指定します。
 
-*パラメーター bDeep*  
+*パラメーター bDeep*<br/>
 検索するレベルを指定します。 すべての子を反復検索 TRUE の場合、FALSE の場合のみ直下の子を検索します。
 
-*bOnlyPerm*  
+*bOnlyPerm*<br/>
 一時 windows でメッセージを受信するかどうかを指定します。 TRUE の場合、一時 windows がメッセージを受信できます。FALSE の場合、永続的な windows のみにメッセージが表示されます。 一時的なウィンドウの詳細については、次を参照してください。[テクニカル ノート 3:](../../mfc/tn003-mapping-of-windows-handles-to-objects.md)します。
 
 ### <a name="remarks"></a>Remarks
@@ -11212,13 +11212,13 @@ BOOL SendNotifyMessage(
 
 ### <a name="parameters"></a>パラメーター
 
-*message*  
+*message*<br/>
 送信されるメッセージを指定します。
 
-*wParam*  
+*wParam*<br/>
 メッセージに依存する追加情報を指定します。
 
-*lParam*  
+*lParam*<br/>
 メッセージに依存する追加情報を指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -11275,7 +11275,7 @@ static void PASCAL SetCaretPos(POINT point);
 
 ### <a name="parameters"></a>パラメーター
 
-*ポイント*  
+*ポイント*<br/>
 新しい x と y を指定します (クライアント座標) をそのキャレットの座標。
 
 ### <a name="remarks"></a>Remarks
@@ -11318,7 +11318,7 @@ int SetDlgCtrlID(int nID);
 
 ### <a name="parameters"></a>パラメーター
 
-*nID*  
+*nID*<br/>
 コントロールの識別子に設定する新しい値。
 
 ### <a name="return-value"></a>戻り値
@@ -11342,13 +11342,13 @@ void SetDlgItemInt(
 
 ### <a name="parameters"></a>パラメーター
 
-*nID*  
+*nID*<br/>
 変更するコントロールの整数の ID を指定します。
 
-*値*  
+*値*<br/>
 項目のテキストを生成するために使用する整数値を指定します。
 
-*bSigned*  
+*bSigned*<br/>
 整数値が符号付きまたは符号なしかどうかを指定します。 このパラメーターが TRUE の場合*値*署名されます。 このパラメーターが TRUE の場合と*値*がマイナス記号が、文字列の最初の桁の前に配置されますが、0 未満です。 このパラメーターが FALSE の場合*値*が署名されていません。
 
 ### <a name="remarks"></a>Remarks
@@ -11371,10 +11371,10 @@ void SetDlgItemText(
 
 ### <a name="parameters"></a>パラメーター
 
-*nID*  
+*nID*<br/>
 テキストを設定するコントロールを識別します。
 
-*lpszString*  
+*lpszString*<br/>
 指す、 [CString](../../atl-mfc-shared/reference/cstringt-class.md)オブジェクトまたはコントロールにコピーするテキストを含む null で終わる文字列。
 
 ### <a name="remarks"></a>Remarks
@@ -11437,10 +11437,10 @@ void SetFont(
 
 ### <a name="parameters"></a>パラメーター
 
-*pFont*  
+*pFont*<br/>
 ポインターを`CFont`オブジェクト。
 
-*bRedraw*  
+*bRedraw*<br/>
 WM_SETFONT メッセージを処理した後すぐに再描画するウィンドウの場合は TRUE。それ以外の場合は FALSE です。
 
 ### <a name="remarks"></a>Remarks
@@ -11459,10 +11459,10 @@ HICON SetIcon(
 
 ### <a name="parameters"></a>パラメーター
 
-*hIcon*  
+*hIcon*<br/>
 以前のアイコンへのハンドル。
 
-*bBigIcon*  
+*bBigIcon*<br/>
 True の場合は 32 ピクセルのアイコンによって 32 ピクセルを指定します。FALSE の場合は 16 ピクセルのアイコンで 16 ピクセルを指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -11490,13 +11490,13 @@ BOOL SetLayeredWindowAttributes(
 
 ### <a name="parameters"></a>パラメーター
 
-*crKey*  
+*crKey*<br/>
 レイヤード ウィンドウの作成時に使用する透明のカラー キーを指定する COLORREF 値へのポインター。 ウィンドウは、この色で描画されたすべてのピクセルは透明になります。 COLORREF を生成するには、RGB マクロを使用します。
 
-*bAlpha*  
+*bAlpha*<br/>
 アルファ値が、レイヤード ウィンドウの不透明度を記述するために使用します。 詳細については、次を参照してください。、`SourceConstantAlpha`のメンバー、 [BLENDFUNCTION](/windows/desktop/api/wingdi/ns-wingdi-_blendfunction)構造体。 ときに*bAlpha*が 0 の場合、ウィンドウが完全に透過的です。 ときに*bAlpha* 255 は、ウィンドウは非透過的です。
 
-*dwFlags*  
+*dwFlags*<br/>
 実行するアクションを指定します。 このパラメーターには、次の値の 1 つ以上を指定できます。 使用可能な値の一覧は、次を参照してください。 [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)します。
 
 ### <a name="return-value"></a>戻り値
@@ -11517,7 +11517,7 @@ BOOL SetMenu(CMenu* pMenu);
 
 ### <a name="parameters"></a>パラメーター
 
-*pMenu*  
+*pMenu*<br/>
 [新規] メニューを識別します。 このパラメーターが NULL の場合は、現在のメニューが削除されます。
 
 ### <a name="return-value"></a>戻り値
@@ -11544,7 +11544,7 @@ void SetOwner(CWnd* pOwnerWnd);
 
 ### <a name="parameters"></a>パラメーター
 
-*pOwnerWnd*  
+*pOwnerWnd*<br/>
 ウィンドウ オブジェクトの新しい所有者を識別します。 このパラメーターが NULL の場合は、ウィンドウ オブジェクトの所有者がありません。
 
 ### <a name="remarks"></a>Remarks
@@ -11565,7 +11565,7 @@ CWnd* SetParent(CWnd* pWndNewParent);
 
 ### <a name="parameters"></a>パラメーター
 
-*pWndNewParent*  
+*pWndNewParent*<br/>
 新しい親ウィンドウを識別します。
 
 ### <a name="return-value"></a>戻り値
@@ -11588,13 +11588,13 @@ void AFX_CDECL SetProperty(
 
 ### <a name="parameters"></a>パラメーター
 
-*dwDispID*  
+*dwDispID*<br/>
 設定するプロパティを識別します。
 
-*vtProp*  
+*vtProp*<br/>
 設定するプロパティの型を指定します。 使用可能な値は、「解説」を参照してください。 [coledispatchdriver::invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)します。
 
-*...*  
+*...*<br/>
 1 つのパラメーターで指定された型の*vtProp*します。
 
 ### <a name="remarks"></a>Remarks
@@ -11614,7 +11614,7 @@ void SetRedraw(BOOL bRedraw = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-*bRedraw*  
+*bRedraw*<br/>
 再描画フラグの状態を指定します。 再描画フラグが設定されている場合、このパラメーターが TRUE の場合FALSE の場合、フラグがクリアされます。
 
 ### <a name="remarks"></a>Remarks
@@ -11638,7 +11638,7 @@ BOOL SetScrollInfo(
 
 ### <a name="parameters"></a>パラメーター
 
-*れる*  
+*れる*<br/>
 スクロール バーが、コントロールまたはウィンドウの非クライアント領域の一部であるかどうかを指定します。 非クライアント領域の一部である場合は、れるによって、水平、垂直にスクロール バーを配置するかどうかまたは両方がも示します。 次のいずれかを指定する必要があります。
 
 - SB_CTL には、スクロール バー コントロールのパラメーターが含まれています。 `m_hWnd`データ メンバーは、スクロール バー コントロールのハンドルである必要があります。
@@ -11647,10 +11647,10 @@ BOOL SetScrollInfo(
 
 - SB_VERT ウィンドウが垂直スクロール バーであることを指定します。
 
-*lpScrollInfo*  
+*lpScrollInfo*<br/>
 ポインターを[SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo)構造体。 この構造体の詳細については、Windows SDK を参照してください。
 
-*bRedraw*  
+*bRedraw*<br/>
 スクロール バーが新しい位置を反映するように再描画が必要かどうかを指定します。 場合*bRedraw*が true の場合、スクロール バーが再描画します。 FALSE の場合は描画されません。 既定では、スクロール バーが再描画されます。
 
 ### <a name="return-value"></a>戻り値
@@ -11679,17 +11679,17 @@ int SetScrollPos(
 
 ### <a name="parameters"></a>パラメーター
 
-*れる*  
+*れる*<br/>
 設定するスクロール バーを指定します。 このパラメーターは、次のいずれかを指定できます。
 
 - SB_HORZ は、ウィンドウの水平スクロール バーのスクロール ボックスの位置を設定します。
 
 - SB_VERT は、ウィンドウの垂直スクロール バーのスクロール ボックスの位置を設定します。
 
-*nPos*  
+*nPos*<br/>
 スクロール ボックスの新しい位置を指定します。 スクロールの範囲でなければなりません。
 
-*bRedraw*  
+*bRedraw*<br/>
 スクロール ボックスの新しい位置を反映するように、スクロール バーを再描画するかどうかを指定します。 このパラメーターが TRUE の場合、スクロール バーが再描画します。FALSE の場合、スクロール バーが再描画されません。
 
 ### <a name="return-value"></a>戻り値
@@ -11714,20 +11714,20 @@ void SetScrollRange(
 
 ### <a name="parameters"></a>パラメーター
 
-*れる*  
+*れる*<br/>
 設定するスクロール バーを指定します。 このパラメーターは、次の値のいずれかを指定できます。
 
 - SB_HORZ では、ウィンドウの水平スクロール バーの範囲を設定します。
 
 - SB_VERT では、ウィンドウの垂直スクロール バーの範囲を設定します。
 
-*nMinPos*  
+*nMinPos*<br/>
 最小スクロール位置を指定します。
 
-*とき*  
+*とき*<br/>
 最大スクロール位置を指定します。
 
-*bRedraw*  
+*bRedraw*<br/>
 スクロール バーが、変更を反映するように再描画が必要かどうかを指定します。 場合*bRedraw*が true の場合、スクロール バーが再描画されます。 FALSE の場合、スクロール バーが再描画されません。
 
 ### <a name="remarks"></a>Remarks
@@ -11756,13 +11756,13 @@ UINT_PTR SetTimer(
 
 ### <a name="parameters"></a>パラメーター
 
-*呼び出した*  
+*呼び出した*<br/>
 0 以外のタイマーの識別子を指定します。 タイマーの識別子が一意の場合、この同じ値が `SetTimer` によって返されます。 一意でない場合、`SetTimer` は、新しい一意の値を指定して返します。 ウィンドウ タイマー (NULL コールバック関数を持つ) の場合、値は現在のウィンドウに関連付けられている他のウィンドウ タイマーについてのみ一意である必要があります。 コールバックのタイマーの場合、値はすべてのプロセスのすべてのタイマーで一意である必要があります。 したがって、コールバック タイマーを作成すると、戻り値が指定した値と異なる可能性が高くなります。
 
-*nElapse*  
+*nElapse*<br/>
 タイムアウト値 (間隔) をミリ秒単位で指定します。
 
-*lpfnTimer*  
+*lpfnTimer*<br/>
 アプリケーションによって提供されるアドレス指定`TimerProc`を処理するコールバック関数、 [WM_TIMER](/windows/desktop/winmsg/wm-timer)メッセージ。 WM_TIMER メッセージをアプリケーションのメッセージ キューに置かれます、によって処理されるこのパラメーターが NULL の場合、`CWnd`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -11799,7 +11799,7 @@ BOOL SetWindowContextHelpId(DWORD dwContextHelpId);
 
 ### <a name="parameters"></a>パラメーター
 
-*dwContextHelpId*  
+*dwContextHelpId*<br/>
 ヘルプ コンテキスト識別子。
 
 ### <a name="return-value"></a>戻り値
@@ -11824,7 +11824,7 @@ BOOL SetWindowPlacement(const WINDOWPLACEMENT* lpwndpl);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpwndpl*  
+*lpwndpl*<br/>
 指す、 [WINDOWPLACEMENT](../../mfc/reference/windowplacement-structure.md)構造体の新しい表示状態と位置を指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -11847,7 +11847,7 @@ BOOL SetWindowPos(
 
 ### <a name="parameters"></a>パラメーター
 
-*pWndInsertAfter*  
+*pWndInsertAfter*<br/>
 識別、`CWnd`は前にあるオブジェクト (より多くなる) この`CWnd`Z オーダー内のオブジェクト。 このパラメーターへのポインターを指定できます、`CWnd`または、次の値のいずれかへのポインター。
 
 - `wndBottom` ウィンドウを Z オーダーの一番下に置きます。 この場合`CWnd`最前面には、ウィンドウが最上位のステータスを失った; システムが他のすべてのウィンドウの下部にあるウィンドウを置きます。
@@ -11860,19 +11860,19 @@ BOOL SetWindowPos(
 
 このパラメーターを使用する方法についての規則は、このトピックの「解説」セクションを参照してください。
 
-*x*  
+*x*<br/>
 新しいウィンドウの左側の位置を指定します。
 
-*y*  
+*y*<br/>
 ウィンドウの上部の新しい位置を指定します。
 
-*cx*  
+*cx*<br/>
 ウィンドウの新しい幅を指定します。
 
-*cy*  
+*cy*<br/>
 ウィンドウの新しい高さを指定します。
 
-*nFlags*  
+*nFlags*<br/>
 サイズ変更や配置オプションを指定します。 このパラメーターは、次のフラグの組み合わせを指定できます。
 
 - SWP_DRAWFRAME ウィンドウの周囲 (ウィンドウの作成時に定義されている) フレームを描画します。
@@ -11917,9 +11917,9 @@ Windows は、Z オーダーに従って画面に基づいて並べ替えられ�
 
 指定された値に SWP_NOACTIVATE も指定しない場合 SWP_NOZORDER は (つまり、アプリケーションを要求すると、ウィンドウのアクティブ化し指定の Z オーダーに配置される同時に)、 *pWndInsertAfter*でのみ使用されます次の状況では:
 
--   どちらも **& wndTopMost**も **& wndNoTopMost**で指定された、 *pWndInsertAfter*パラメーター。
+- どちらも **& wndTopMost**も **& wndNoTopMost**で指定された、 *pWndInsertAfter*パラメーター。
 
--   このウィンドウは、アクティブなウィンドウではありません。
+- このウィンドウは、アクティブなウィンドウではありません。
 
 アプリケーションは、Z オーダーの最上位に取り込むこともせず、非アクティブなウィンドウをアクティブにすることはできません。 アプリケーションでは、制限なしのアクティブ ウィンドウの Z オーダーを変更できます。
 
@@ -11949,10 +11949,10 @@ int SetWindowRgn(
 
 ### <a name="parameters"></a>パラメーター
 
-*hRgn*  
+*hRgn*<br/>
 リージョンへのハンドル。
 
-*bRedraw*  
+*bRedraw*<br/>
 TRUE の場合、オペレーティング システムが再描画するウィンドウ領域を設定した後それ以外の場合、しません。 通常、設定*bRedraw*ウィンドウが表示されている場合は TRUE にします。 かどうかを TRUE に設定すると、システム WM_WINDOWPOSCHANGING と WM_WINDOWPOSCHANGED メッセージ ウィンドウに送信します。
 
 ### <a name="return-value"></a>戻り値
@@ -11975,7 +11975,7 @@ void SetWindowText(LPCTSTR lpszString);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszString*  
+*lpszString*<br/>
 指す、 [CString](../../atl-mfc-shared/reference/cstringt-class.md)オブジェクトまたは新しいタイトルまたはコントロールのテキストとして使用される null で終わる文字列。
 
 ### <a name="remarks"></a>Remarks
@@ -12020,7 +12020,7 @@ void ShowOwnedPopups(BOOL bShow = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-*bShow*  
+*bShow*<br/>
 ポップアップ ウィンドウを表示/非表示にするかどうかを指定します。 このパラメーターが TRUE の場合は、すべての非表示のポップアップ ウィンドウが表示されます。 このパラメーターが FALSE の場合は、表示されているすべてのポップアップ ウィンドウが表示されません。
 
 ### <a name="example"></a>例
@@ -12039,7 +12039,7 @@ void ShowScrollBar(
 
 ### <a name="parameters"></a>パラメーター
 
-*れる*  
+*れる*<br/>
 スクロール バーが、コントロールまたはウィンドウの非クライアント領域の一部であるかどうかを指定します。 非クライアント領域の一部である場合*れる*かどうか、スクロール バーが水平方向、垂直方向に配置されているか、どちらも示します。 次のいずれかを指定する必要があります。
 
 - SB_BOTH では、ウィンドウの水平および垂直方向のスクロール バーを指定します。
@@ -12048,7 +12048,7 @@ void ShowScrollBar(
 
 - SB_VERT ウィンドウが垂直スクロール バーであることを指定します。
 
-*bShow*  
+*bShow*<br/>
 Windows 表示、スクロール バーを非表示にするかどうかを指定します。 このパラメーターが TRUE の場合、スクロール バーが表示されます。それ以外の場合、スクロール バーは表示されません。
 
 ### <a name="remarks"></a>Remarks
@@ -12065,7 +12065,7 @@ BOOL ShowWindow(int nCmdShow);
 
 ### <a name="parameters"></a>パラメーター
 
-*nCmdShow*  
+*nCmdShow*<br/>
 指定しますが、どのように`CWnd`表示します。 値は次のいずれかを指定する必要があります。
 
 - SW_HIDE では、このウィンドウを非表示にし、別のウィンドウをアクティブ化を渡します。
@@ -12112,10 +12112,10 @@ BOOL SubclassDlgItem(
 
 ### <a name="parameters"></a>パラメーター
 
-*nID*  
+*nID*<br/>
 コントロールの id。
 
-*pParent*  
+*pParent*<br/>
 コントロールの親 (通常はダイアログ ボックス)。
 
 ### <a name="return-value"></a>戻り値
@@ -12142,7 +12142,7 @@ BOOL SubclassWindow(HWND hWnd);
 
 ### <a name="parameters"></a>パラメーター
 
-*hWnd*  
+*hWnd*<br/>
 ウィンドウのハンドル。
 
 ### <a name="return-value"></a>戻り値
@@ -12200,7 +12200,7 @@ BOOL UpdateData(BOOL bSaveAndValidate = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-*bSaveAndValidate*  
+*bSaveAndValidate*<br/>
 (TRUE) ダイアログ ボックスを (FALSE) 初期化されているかどうか、またはデータを示すフラグを取得しています。
 
 ### <a name="return-value"></a>戻り値
@@ -12223,10 +12223,10 @@ void UpdateDialogControls(
 
 ### <a name="parameters"></a>パラメーター
 
-*pTarget*  
+*pTarget*<br/>
 アプリケーションのメイン フレーム ウィンドウにポイントし、更新メッセージのルーティングに使用します。
 
-*持たず*  
+*持たず*<br/>
 更新ハンドラーがないコントロールが無効と自動的に表示されるかどうかを示すフラグ。
 
 ### <a name="remarks"></a>Remarks
@@ -12253,34 +12253,34 @@ BOOL UpdateLayeredWindow(
 
 ### <a name="parameters"></a>パラメーター
 
-*pDCDst*  
+*pDCDst*<br/>
 画面のデバイス コンテキストへのポインター。 パレット カラーの一致、ウィンドウの内容が更新されたときに使用されます。 場合*pDCDst*が null の場合、既定のパレットが使用されます。
 
 場合*変わらない*が null の場合、 *pDCDst* NULL にする必要があります。
 
-*変わらない*  
+*変わらない*<br/>
 ポインター、`POINT`レイヤード ウィンドウの画面上の新しい位置を指定する構造体。 現在の位置が変更されない場合*変わらない*NULL を指定できます。
 
-*psize*  
+*psize*<br/>
 ポインター、`SIZE`レイヤード ウィンドウの新しいサイズを指定する構造体。 ウィンドウのサイズが変わらない場合*psize* NULL を指定できます。
 
 場合*変わらない*が null の場合、 *psize* NULL にする必要があります。
 
-*変わらない*  
+*変わらない*<br/>
 レイヤード ウィンドウを定義する画面の DC へのポインター。 図形と、ウィンドウのビジュアルのコンテキストを変更しない場合*変わらない*NULL を指定できます。
 
-*pptSrc*  
+*pptSrc*<br/>
 ポインターを`POINT`デバイス コンテキストで、レイヤーの場所を指定する構造体。
 
 場合*変わらない*が null の場合、 *pptSrc*は NULL になります。
 
-*crKey*  
+*crKey*<br/>
 レイヤード ウィンドウの作成時に使用する透明のカラー キーを指定する COLORREF 値へのポインター。 ウィンドウは、この色で描画されたすべてのピクセルは透明になります。 COLORREF を生成するには、RGB マクロを使用します。
 
-*pblend*  
+*pblend*<br/>
 ポインターを[BLENDFUNCTION](/windows/desktop/api/wingdi/ns-wingdi-_blendfunction)レイヤード ウィンドウの作成時に使用される、透明度の値を指定する構造体。
 
-*dwFlags*  
+*dwFlags*<br/>
 実行するアクションを指定します。 このパラメーターには、次の値の 1 つ以上を指定できます。 使用可能な値の一覧は、次を参照してください。 [UpdateLayeredWindow](https://msdn.microsoft.com/library/windows/desktop/ms633556)します。
 
 ### <a name="return-value"></a>戻り値
@@ -12317,7 +12317,7 @@ void ValidateRect(LPCRECT lpRect);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpRect*  
+*lpRect*<br/>
 指す、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT 構造体](../../mfc/reference/rect-structure1.md)更新領域から削除する四角形のクライアント座標を格納しています。 場合*lpRect*が null の場合、ウィンドウ全体を検証します。
 
 ### <a name="remarks"></a>Remarks
@@ -12336,7 +12336,7 @@ void ValidateRgn(CRgn* pRgn);
 
 ### <a name="parameters"></a>パラメーター
 
-*pRgn*  
+*pRgn*<br/>
 ポインターを[CRgn](../../mfc/reference/crgn-class.md)更新領域から削除する領域を定義する領域を識別するオブジェクト。 このパラメーターが NULL の場合は、クライアント領域全体が削除されます。
 
 ### <a name="remarks"></a>Remarks
@@ -12355,7 +12355,7 @@ static CWnd* PASCAL WindowFromPoint(POINT point);
 
 ### <a name="parameters"></a>パラメーター
 
-*ポイント*  
+*ポイント*<br/>
 指定します、 [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクトまたは[ポイント](../../mfc/reference/point-structure1.md)チェックするポイントを定義するデータ構造。
 
 ### <a name="return-value"></a>戻り値
@@ -12379,13 +12379,13 @@ virtual LRESULT WindowProc(
 
 ### <a name="parameters"></a>パラメーター
 
-*message*  
+*message*<br/>
 処理する Windows メッセージを指定します。
 
-*wParam*  
+*wParam*<br/>
 メッセージの処理で使用される追加情報を提供します。 パラメーターの値は、メッセージに依存します。
 
-*lParam*  
+*lParam*<br/>
 メッセージの処理で使用される追加情報を提供します。 パラメーターの値は、メッセージに依存します。
 
 ### <a name="return-value"></a>戻り値
@@ -12408,10 +12408,10 @@ virtual void WinHelp(
 
 ### <a name="parameters"></a>パラメーター
 
-*指定*  
+*指定*<br/>
 追加のデータを指定します。 使用される値の値によって異なります、 *nCmd*パラメーター。
 
-*nCmd*  
+*nCmd*<br/>
 要求されるヘルプの種類を指定します。 使用可能な値、および影響についての一覧については、*指定*パラメーターを参照してください、 [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) Windows SDK の Windows 関数。
 
 ### <a name="remarks"></a>Remarks
@@ -12430,10 +12430,10 @@ BOOL RegisterTouchWindow(
 
 ### <a name="parameters"></a>パラメーター
 
-*bRegister*  
+*bRegister*<br/>
 True に登録する Windows タッチのサポート。FALSE それ以外の場合。
 
-*ulFlags*  
+*ulFlags*<br/>
 省略可能な変更を指定するビット フラグのセット。 このフィールドは、0 または値は次のいずれかを含めることができます: TWF_FINETOUCH、TWF_WANTPALM します。
 
 ### <a name="return-value"></a>戻り値
@@ -12454,7 +12454,7 @@ virtual void ResizeDynamicLayout();
 
 ## <a name="see-also"></a>関連項目
 
-[CCmdTarget クラス](../../mfc/reference/ccmdtarget-class.md)  
-[階層図](../../mfc/hierarchy-chart.md)  
-[CFrameWnd クラス](../../mfc/reference/cframewnd-class.md)  
-[CView クラス](../../mfc/reference/cview-class.md)  
+[CCmdTarget クラス](../../mfc/reference/ccmdtarget-class.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[CFrameWnd クラス](../../mfc/reference/cframewnd-class.md)<br/>
+[CView クラス](../../mfc/reference/cview-class.md)
