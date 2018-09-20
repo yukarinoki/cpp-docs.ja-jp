@@ -14,118 +14,131 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65a12af3bf99075b2a2a77e0dc2c17d28e80849e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f7dccc4fec79ad11d7d4667c93b1b9ae8362ed92
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028260"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437080"
 ---
 # <a name="taskoptions-class-concurrency-runtime"></a>task_options クラス (同時実行ランタイム)
-タスクの作成に使用できるオプションを表します。  
-  
-## <a name="syntax"></a>構文  
-  
+
+タスクの作成に使用できるオプションを表します。
+
+## <a name="syntax"></a>構文
+
 ```
 class task_options;
-```  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="public-constructors"></a>パブリック コンストラクター  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[task_options::task_options コンス トラクター (同時実行ランタイム)](#ctor)|オーバーロードされます。 タスクの作成オプションに関する既定の一覧|  
-  
-### <a name="public-methods"></a>パブリック メソッド  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[task_options::get_cancellation_token メソッド (同時実行ランタイム)](#get_cancellation_token)|キャンセル トークンを返します|  
-|[task_options::get_continuation_context メソッド (同時実行ランタイム)](#get_continuation_context)|継続コンテキストを返します|  
-|[task_options::get_scheduler メソッド (同時実行ランタイム)](#get_scheduler)|スケジューラを返します|  
-|[task_options::has_cancellation_token メソッド (同時実行ランタイム)](#has_cancellation_token)|キャンセル トークンがユーザーによって指定されているかどうかを示します|  
-|[task_options::has_scheduler メソッド (同時実行ランタイム)](#has_scheduler)|スケジューラがユーザーによって指定されているかどうかを示します|  
-|[task_options::set_cancellation_token メソッド (同時実行ランタイム)](#set_cancellation_token)|指定されたトークンをオプションに設定します|  
-|[task_options::set_continuation_context メソッド (同時実行ランタイム)](#set_continuation_context)|指定された継続コンテキストをオプションに設定します|  
-  
-## <a name="inheritance-hierarchy"></a>継承階層  
- `task_options`  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** ppltasks.h  
-  
- **名前空間:** concurrency  
-  
-##  <a name="get_cancellation_token"></a>  task_options::get_cancellation_token メソッド (同時実行ランタイム)  
- キャンセル トークンを返します  
-  
+```
+
+## <a name="members"></a>メンバー
+
+### <a name="public-constructors"></a>パブリック コンストラクター
+
+|名前|説明|
+|----------|-----------------|
+|[task_options::task_options コンス トラクター (同時実行ランタイム)](#ctor)|オーバーロードされます。 タスクの作成オプションに関する既定の一覧|
+
+### <a name="public-methods"></a>パブリック メソッド
+
+|名前|説明|
+|----------|-----------------|
+|[task_options::get_cancellation_token メソッド (同時実行ランタイム)](#get_cancellation_token)|キャンセル トークンを返します|
+|[task_options::get_continuation_context メソッド (同時実行ランタイム)](#get_continuation_context)|継続コンテキストを返します|
+|[task_options::get_scheduler メソッド (同時実行ランタイム)](#get_scheduler)|スケジューラを返します|
+|[task_options::has_cancellation_token メソッド (同時実行ランタイム)](#has_cancellation_token)|キャンセル トークンがユーザーによって指定されているかどうかを示します|
+|[task_options::has_scheduler メソッド (同時実行ランタイム)](#has_scheduler)|スケジューラがユーザーによって指定されているかどうかを示します|
+|[task_options::set_cancellation_token メソッド (同時実行ランタイム)](#set_cancellation_token)|指定されたトークンをオプションに設定します|
+|[task_options::set_continuation_context メソッド (同時実行ランタイム)](#set_continuation_context)|指定された継続コンテキストをオプションに設定します|
+
+## <a name="inheritance-hierarchy"></a>継承階層
+
+`task_options`
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** ppltasks.h
+
+**名前空間:** concurrency
+
+##  <a name="get_cancellation_token"></a>  task_options::get_cancellation_token メソッド (同時実行ランタイム)
+
+キャンセル トークンを返します
+
 ```
 cancellation_token get_cancellation_token() const;
-```  
-  
-### <a name="return-value"></a>戻り値  
-  
-##  <a name="get_continuation_context"></a>  task_options::get_continuation_context メソッド (同時実行ランタイム)  
- 継続コンテキストを返します  
-  
+```
+
+### <a name="return-value"></a>戻り値
+
+##  <a name="get_continuation_context"></a>  task_options::get_continuation_context メソッド (同時実行ランタイム)
+
+継続コンテキストを返します
+
 ```
 task_continuation_context get_continuation_context() const;
-```  
-  
-### <a name="return-value"></a>戻り値  
-  
-##  <a name="get_scheduler"></a>  task_options::get_scheduler メソッド (同時実行ランタイム)  
- スケジューラを返します  
-  
+```
+
+### <a name="return-value"></a>戻り値
+
+##  <a name="get_scheduler"></a>  task_options::get_scheduler メソッド (同時実行ランタイム)
+
+スケジューラを返します
+
 ```
 scheduler_ptr get_scheduler() const;
-```  
-  
-### <a name="return-value"></a>戻り値  
-  
-##  <a name="has_cancellation_token"></a>  task_options::has_cancellation_token メソッド (同時実行ランタイム)  
- キャンセル トークンがユーザーによって指定されているかどうかを示します  
-  
+```
+
+### <a name="return-value"></a>戻り値
+
+##  <a name="has_cancellation_token"></a>  task_options::has_cancellation_token メソッド (同時実行ランタイム)
+
+キャンセル トークンがユーザーによって指定されているかどうかを示します
+
 ```
 bool has_cancellation_token() const;
-```  
-  
-### <a name="return-value"></a>戻り値  
-  
-##  <a name="has_scheduler"></a>  task_options::has_scheduler メソッド (同時実行ランタイム)  
- スケジューラがユーザーによって指定されているかどうかを示します  
-  
+```
+
+### <a name="return-value"></a>戻り値
+
+##  <a name="has_scheduler"></a>  task_options::has_scheduler メソッド (同時実行ランタイム)
+
+スケジューラがユーザーによって指定されているかどうかを示します
+
 ```
 bool has_scheduler() const;
-```  
-  
-### <a name="return-value"></a>戻り値  
-  
-##  <a name="set_cancellation_token"></a>  task_options::set_cancellation_token メソッド (同時実行ランタイム)  
- 指定されたトークンをオプションに設定します  
-  
+```
+
+### <a name="return-value"></a>戻り値
+
+##  <a name="set_cancellation_token"></a>  task_options::set_cancellation_token メソッド (同時実行ランタイム)
+
+指定されたトークンをオプションに設定します
+
 ```
 void set_cancellation_token(cancellation_token _Token);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- `_Token`  
-  
-##  <a name="set_continuation_context"></a>  task_options::set_continuation_context メソッド (同時実行ランタイム)  
- 指定された継続コンテキストをオプションに設定します  
-  
+```
+
+### <a name="parameters"></a>パラメーター
+
+`_Token`
+
+##  <a name="set_continuation_context"></a>  task_options::set_continuation_context メソッド (同時実行ランタイム)
+
+指定された継続コンテキストをオプションに設定します
+
 ```
 void set_continuation_context(task_continuation_context _ContinuationContext);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- `_ContinuationContext`  
-  
-##  <a name="ctor"></a>  task_options::task_options コンス トラクター (同時実行ランタイム)  
- タスクの作成オプションに関する既定の一覧  
-  
+```
+
+### <a name="parameters"></a>パラメーター
+
+`_ContinuationContext`
+
+##  <a name="ctor"></a>  task_options::task_options コンス トラクター (同時実行ランタイム)
+
+タスクの作成オプションに関する既定の一覧
+
 ```
 task_options();
 
@@ -151,18 +164,20 @@ task_options(
 
 task_options(
     const task_options& _TaskOptions);
-```  
-  
-### <a name="parameters"></a>パラメーター  
- `_SchedType`  
+```
 
- `_Token`  
+### <a name="parameters"></a>パラメーター
 
- `_ContinuationContext`  
+`_SchedType`
 
- `_Scheduler`  
+`_Token`
 
- `_TaskOptions`  
-  
-## <a name="see-also"></a>関連項目  
- [concurrency 名前空間](concurrency-namespace.md)
+`_ContinuationContext`
+
+`_Scheduler`
+
+`_TaskOptions`
+
+## <a name="see-also"></a>関連項目
+
+[コンカレンシー名前空間](concurrency-namespace.md)

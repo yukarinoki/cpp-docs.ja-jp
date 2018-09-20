@@ -1,5 +1,5 @@
 ---
-title: 'TN039: MFC OLE オートメーションの実装 |Microsoft ドキュメント'
+title: 'TN039: MFC/OLE オートメーションの実装 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dcc179b1481c4f1f6b6a0773bba792eefffae25
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 59eca912aab816f75ce8d585036f8f900c4f7bd3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122122"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399880"
 ---
 # <a name="tn039-mfcole-automation-implementation"></a>テクニカル ノート 39: MFC/OLE オートメーションの実装
 
@@ -34,23 +34,23 @@ ms.locfileid: "37122122"
 
 ## <a name="overview-of-ole-idispatch-interface"></a>OLE の IDispatch インターフェイスの概要
 
-`IDispatch`インターフェイスは、アプリケーションは、アプリケーションの機能の使用などの他のアプリケーションなど、Visual BASIC、または他の言語をできるようにするメソッドとプロパティを公開することを意味します。 このインターフェイスの最も重要な部分は、`IDispatch::Invoke`関数。 MFC は、「ディスパッチ マップ」を使用して実装する`IDispatch::Invoke`です。 ディスパッチ マップ"shape"のレイアウトに MFC 実装の情報を提供する、 `CCmdTarget`-派生クラスを直接、オブジェクトのプロパティを操作またはメンバーを満たすために、オブジェクト内の関数を呼び出すように`IDispatch::Invoke`要求します。
+`IDispatch`インターフェイスは、アプリケーションの機能の使用などの Visual BASIC の場合、またはその他の言語などの他のアプリケーションが実行できるメソッドとプロパティにアプリケーションが公開されることを意味します。 このインターフェイスの最も重要な部分は、`IDispatch::Invoke`関数。 MFC は、「ディスパッチ マップ」を使用して実装する`IDispatch::Invoke`します。 ディスパッチ マップ レイアウト上での「形状」の MFC 実装の情報の提供、 `CCmdTarget`-派生クラスを直接、オブジェクトのプロパティを操作またはメンバーを満たすために、オブジェクト内の関数を呼び出すように`IDispatch::Invoke`要求します。
 
-ほとんどの場合、ClassWizard および MFC 連携して、アプリケーション プログラマから OLE オートメーションの詳細のほとんどを非表示にします。 プログラマは、アプリケーションに公開する実際の機能に重点を置いてし、基になるプラミングについて心配する必要はありません。
+ほとんどの場合、ClassWizard および MFC は、アプリケーション プログラマから OLE オートメーションの詳細のほとんどを非表示に連携します。 プログラマは、アプリケーションに公開する実際の機能に重点を置いて説明し、基盤となるプラミングについて心配する必要はありません。
 
-ただし、バック グラウンドで MFC の実行内容を理解する必要がある場合があります。 この注意はフレームワークを割り当てる方法を説明**DISPID**メンバー関数とプロパティにします。 MFC は、アルゴリズムの知識**DISPID**s は、アプリケーションのオブジェクトの「タイプ ライブラリ」を作成する場合など、Id がわかっている必要がある場合にのみ必要です。
+ただし、バック グラウンドで MFC の実行内容を理解する必要がある場合があります。 この注はフレームワークの割り当て方法を対処**DISPID**メンバー関数とプロパティにします。 サポート技術情報の割り当てアルゴリズムの**DISPID**s は、アプリケーションのオブジェクトの「タイプ ライブラリ」を作成するときなど、Id がわかっている必要がある場合にのみ必要です。
 
 ## <a name="mfc-dispid-assignment"></a>MFC の DISPID の割り当て
 
-プロパティとメソッド (オブジェクトなど、コード内のオートメーション (Visual Basic のユーザー、たとえば)、エンドユーザーの実際の名前を表示するが、オートメーションが有効にShowWindow)、実装の`IDispatch::Invoke`実際の名前を受信しません。 最適化のため、受信、 **DISPID**、これは、32 ビット"マジック"を cookie メソッドまたはプロパティへのアクセスをについて説明します。 これら**DISPID**から返される値、`IDispatch`と呼ばれる別の方法で実装`IDispatch::GetIDsOfNames`です。 オートメーション クライアント アプリケーションが呼び出す`GetIDsOfNames`アクセス、およびそれ以降の呼び出しのキャッシュが意図メンバーまたはプロパティごとに一度`IDispatch::Invoke`です。 これにより、高価な文字列の検索に一度だけ実行オブジェクトを使用して、ごとの代わりに 1 回あたり`IDispatch::Invoke`呼び出します。
+(オブジェクトなど、コードのプロパティとメソッドの自動化 (Visual Basic のユーザー、たとえば)、エンドユーザーがの実際の名前が表示されますが、automation が有効にShowWindow) の実装`IDispatch::Invoke`実際の名前を受信しません。 最適化のため、受信、 **DISPID**、これは、32 ビット"マジック cookie"メソッドまたはプロパティへのアクセスをについて説明します。 これら**DISPID**から値が返されます、`IDispatch`と呼ばれる別の方法で実装`IDispatch::GetIDsOfNames`します。 オートメーション クライアント アプリケーションが呼び出す`GetIDsOfNames`アクセス、およびそれ以降の呼び出しに対してキャッシュする予定の各メンバーまたはプロパティと`IDispatch::Invoke`します。 これにより、高価な文字列の検索に一度だけ実行あたり、オブジェクトの使用の代わりに 1 回あたり`IDispatch::Invoke`呼び出します。
 
-MFC の決定、 **DISPID**メソッドとプロパティに基づいて 2 つの操作。
+MFC の決定、 **DISPID**と各メソッドのプロパティは、次の 2 つに基づきます。
 
-- ディスパッチ マップ (1 単位) の最上部からの距離。
+- ディスパッチ マップ (1 単位) の先頭からの距離
 
-- 最派生クラス (相対 0) からディスパッチ マップの距離は、
+- 最派生クラス (0 相対) からディスパッチ マップの距離は、
 
-**DISPID**は 2 つの部分に分かれています。 **LOWORD**の**DISPID**最初のコンポーネントでは、ディスパッチ マップの上部からの距離が含まれています。 **ください**最派生クラスからの距離が含まれています。 例えば:
+**DISPID**は 2 つの部分に分かれています。 **LOWORD**の**DISPID**最初のコンポーネントでは、ディスパッチ マップの上部からの距離が含まれています。 **HIWORD**最派生クラスからの距離が含まれています。 例えば:
 
 ```cpp
 class CDispPoint : public CCmdTarget
@@ -81,18 +81,18 @@ BEGIN_DISPATCH_MAP(CDisp3DPoint, CDispPoint)
 END_DISPATCH_MAP()
 ```
 
-ご覧のように、OLE オートメーション インターフェイスを公開する、2 つのクラスがあります。 これらのクラスの 1 つは、他から派生し、したがって OLE オートメーションの部分を含む、基本クラスの機能を活用して ("x"と"y"ここではプロパティ)。
+ご覧のように、OLE オートメーション インターフェイスを公開する 2 つのクラスがあります。 その他から派生し、したがって、OLE オートメーションの部分を含む基本クラスの機能を活用してこれらのクラスのいずれか ("x"と"y"ここではプロパティ)。
 
-MFC が生成する**DISPID**の s が CDispPoint を次のようにクラスします。
+MFC が生成する**DISPID**の CDispPoint を次のようにクラスします。
 
 ```cpp
 property X    (DISPID)0x00000001
 property Y    (DISPID)0x00000002
 ```
 
-プロパティは、基底クラスではないため、**ください**の**DISPID**は常に 0 (CDispPoint の最も派生クラスからの距離が 0) です。
+プロパティは、基底クラスではないため、 **HIWORD**の**DISPID**は常に 0 (CDispPoint の最派生クラスからの距離は 0)。
 
-MFC が生成する**DISPID**の s が CDisp3DPoint を次のようにクラスします。
+MFC が生成する**DISPID**の CDisp3DPoint を次のようにクラスします。
 
 ```cpp
 property Z    (DISPID)0x00000001
@@ -100,18 +100,18 @@ property X    (DISPID)0x00010001
 property Y    (DISPID)0x00010002
 ```
 
-Z プロパティが指定された、 **DISPID**のゼロ**ください**CDisp3DPoint、プロパティを公開するクラスで定義されているためです。 X および Y プロパティが、基底クラスで定義されているため、**ください**の**DISPID**ので、これらのプロパティが定義されているクラスが 1 つの派生、最派生クラスからの距離では 1 に設定されています。
+Z プロパティが指定された、 **DISPID**先頭のゼロ**HIWORD** CDisp3DPoint、プロパティを公開するクラスで定義されているためです。 X および Y プロパティは、基底クラスで定義されているため、 **HIWORD**の**DISPID**のため、これらのプロパティが定義されているクラスが 1 つの派生、最派生クラスからの距離では 1 に設定されています。
 
 > [!NOTE]
-> **LOWORD**は常に、マップ内の位置によって決定されます明示的なマップのエントリがある場合でも**DISPID** (についての情報について次のセクションを参照してください、 **_ID**バージョン、`DISP_PROPERTY`と`DISP_FUNCTION`マクロ)。
+> **LOWORD**明示的なマップのエントリがある場合でも、マップ内の位置によっては常に決まります**DISPID** (上の情報は次のセクションを参照してください、 **_ID**バージョン、`DISP_PROPERTY`と`DISP_FUNCTION`マクロ)。
 
 ## <a name="advanced-mfc-dispatch-map-features"></a>ディスパッチ マップ機能の詳細
 
-Visual C のこのリリースでいくつかの ClassWizard がサポートしていない追加の機能があります。 サポートされて`DISP_FUNCTION`、 `DISP_PROPERTY`、および`DISP_PROPERTY_EX`を定義するメソッド、メンバー変数のプロパティ、およびメンバー関数のプロパティを取得または設定、それぞれします。 これらの機能は、通常、ほとんどのオートメーション サーバーを作成するために必要なすべてです。
+このリリースの Visual C には、ClassWizard がサポートされていない追加の機能の数があります。 サポートされて`DISP_FUNCTION`、 `DISP_PROPERTY`、および`DISP_PROPERTY_EX`メソッド、メンバー変数のプロパティ、および取得/設定メンバー関数のプロパティをそれぞれ定義します。 これらの機能は、通常、ほとんどのオートメーション サーバーを作成するために必要なことだけです。
 
-ClassWizard がサポートされているマクロは不十分である場合、次の追加のマクロを使用できます: `DISP_PROPERTY_NOTIFY`、および`DISP_PROPERTY_PARAM`です。
+ClassWizard がサポートされているマクロは不十分である場合、次の追加のマクロを使用できます: `DISP_PROPERTY_NOTIFY`、および`DISP_PROPERTY_PARAM`します。
 
-## <a name="disppropertynotify--macro-description"></a>DISP_PROPERTY_NOTIFY-マクロの説明
+## <a name="disppropertynotify--macro-description"></a>— DISP_PROPERTY_NOTIFY マクロの説明
 
 ```cpp
 DISP_PROPERTY_NOTIFY(
@@ -124,26 +124,26 @@ DISP_PROPERTY_NOTIFY(
 
 ### <a name="parameters"></a>パラメーター
 
-*クラス*  
- クラスの名前です。
+*クラス*<br/>
+クラスの名前。
 
-*pszName*  
- プロパティの外部名。
+*pszName*<br/>
+プロパティの外部名。
 
-*メンバー名*  
- プロパティが格納されているメンバー変数の名前です。
+*メンバー名*<br/>
+プロパティが格納されているメンバー変数の名前。
 
-*pfnAfterSet*  
- プロパティが変更されたときに呼び出すメンバー関数の名前。
+*pfnAfterSet*<br/>
+プロパティが変更されたときに呼び出すメンバー関数の名前です。
 
-*vtPropType*  
- プロパティの型を指定する値。
+*vtPropType*<br/>
+プロパティの型を指定する値。
 
 ### <a name="remarks"></a>Remarks
 
-このマクロは、追加の引数を受け取ってする点を除いてに、DISP_PROPERTY と似ています。 追加の引数*pfnAfterSet、* が何も返され、'void OnPropertyNotify()'、パラメーターはメンバー関数である必要があります。 呼び出される**後**メンバー変数が変更されました。
+このマクロは、追加の引数を受け入れることを除いてに、DISP_PROPERTY と似ています。 追加の引数*pfnAfterSet、* nothing を返し、パラメーター 'void OnPropertyNotify()' はメンバー関数にする必要があります。 呼び出されます**後**メンバー変数は変更されています。
 
-## <a name="disppropertyparam--macro-description"></a>DISP_PROPERTY_PARAM-マクロの説明
+## <a name="disppropertyparam--macro-description"></a>— DISP_PROPERTY_PARAM マクロの説明
 
 ```cpp
 DISP_PROPERTY_PARAM(
@@ -157,27 +157,27 @@ DISP_PROPERTY_PARAM(
 
 ### <a name="parameters"></a>パラメーター
 
-*クラス*  
- クラスの名前です。
+*クラス*<br/>
+クラスの名前。
 
-*pszName*  
- プロパティの外部名。
+*pszName*<br/>
+プロパティの外部名。
 
-*memberGet*  
- プロパティの取得に使用するメンバー関数の名前です。
+*memberGet*<br/>
+プロパティを取得するために使用するメンバー関数の名前。
 
-*メンバー セット*  
- このメンバー関数は、プロパティを設定するための名前です。
+*メンバー セット*<br/>
+プロパティを設定するために使用するメンバー関数の名前。
 
-*vtPropType*  
- プロパティの型を指定する値。
+*vtPropType*<br/>
+プロパティの型を指定する値。
 
-*vtsParams*  
- 領域の文字列には、各パラメーターの vts _ が区切られます。
+*vtsParams*<br/>
+領域の文字列には、各パラメーターの vts _ が区切られます。
 
 ### <a name="remarks"></a>Remarks
 
-かなり DISP_PROPERTY_EX マクロのようにこのマクロは個別の Get および Set メンバー関数でアクセスするプロパティを定義します。 ただし、このマクロでは、プロパティのパラメーター リストを指定することができます。 これは、その他の何らかの方法でインデックスを作成またはパラメーター化されているプロパティを実装するために役立ちます。 パラメーターは常に配置されます最初に、その後にプロパティの新しい値。 例えば:
+はるか DISP_PROPERTY_EX マクロにこのマクロは別々 の Get および Set メンバー関数でアクセスするプロパティを定義します。 ただし、このマクロを使用すると、プロパティのパラメーター リストを指定できます。 これは、他の方法では、インデックス付きまたはパラメーター化されたプロパティを実装する場合に便利です。 パラメーターは常に配置されます最初に、後に、プロパティの新しい値。 例えば:
 
 ```cpp
 DISP_PROPERTY_PARAM(CMyObject, "item", GetItem, SetItem, VT_DISPATCH, VTS_I2 VTS_I2)
@@ -232,33 +232,33 @@ DISP_PROPERTY_PARAM_ID(
 
 ### <a name="parameters"></a>パラメーター
 
-*クラス*  
-クラスの名前です。
+*クラス*<br/>
+クラスの名前。
 
-*pszName*  
+*pszName*<br/>
 プロパティの外部名。
 
-*dispid*  
-プロパティまたはメソッドの固定 DISPID です。
+*dispid*<br/>
+プロパティまたはメソッドの固定の DISPID。
 
-*pfnGet*  
-プロパティの取得に使用するメンバー関数の名前です。
+*pfnGet*<br/>
+プロパティを取得するために使用するメンバー関数の名前。
 
-*pfnSet*  
-このメンバー関数は、プロパティを設定するための名前です。
+*pfnSet*<br/>
+プロパティを設定するために使用するメンバー関数の名前。
 
-*メンバー名*  
-プロパティにマップするには、このメンバー変数の名前
+*メンバー名*<br/>
+プロパティにマップするメンバー変数の名前
 
-*vtPropType*  
+*vtPropType*<br/>
 プロパティの型を指定する値。
 
-*vtsParams*  
+*vtsParams*<br/>
 領域の文字列には、各パラメーターの vts _ が区切られます。
 
 ### <a name="remarks"></a>Remarks
 
-これらのマクロでは、指定できる、 **DISPID** mfc によって自動的にではなくいずれかに割り当てます。 マクロ名をその ID が追加される点を除いて、同じ名前を持つこれらのマクロの詳細 (例: **DISP_PROPERTY_ID**) ID は、直後に指定されたパラメーターによって決定されます、 *pszName*パラメーター。 子を参照してください。詳細については、これらのマクロ H します。 **_ID**ディスパッチ マップの最後にエントリを配置する必要があります。 自動が影響**DISPID**以外と同じ方法で生成 **_ID**マクロのバージョンが (、 **DISPID**s は、位置によって決まります)。 例えば:
+これらのマクロでは、指定できる、 **DISPID** mfc によって自動的にではなくいずれかを割り当てます。 その ID は、マクロ名に追加されます。 ただし、同じ名前を持つこれらのマクロの詳細 (例: **DISP_PROPERTY_ID**) 直後に指定されたパラメーターで ID を特定し、 *pszName*パラメーター。 子を参照してください。これらのマクロの詳細については H します。 **_ID**エントリは、ディスパッチ マップの末尾に配置する必要があります。 自動への影響は**DISPID**以外と同じ方法で生成 **_ID**マクロのバージョンは (、 **DISPID**s は位置によって決まります)。 例えば:
 
 ```cpp
 BEGIN_DISPATCH_MAP(CDisp3DPoint, CCmdTarget)
@@ -268,7 +268,7 @@ BEGIN_DISPATCH_MAP(CDisp3DPoint, CCmdTarget)
 END_DISPATCH_MAP()
 ```
 
-MFC は、クラス CDisp3DPoint は、Dispid を次のように生成されます。
+Dispid は、MFC によって CDisp3DPoint クラスの次のように生成されます。
 
 ```cpp
 property X    (DISPID)0x00020003
@@ -276,11 +276,11 @@ property Y    (DISPID)0x00000002
 property Z    (DISPID)0x00000001
 ```
 
-固定を指定する**DISPID**有用な既存のディスパッチ インターフェイスへの旧バージョンとの互換性を維持するために、または特定のシステム定義のメソッドやプロパティを実装する (通常は、負の値によって示される**DISPID**、ように、 **DISPID_NEWENUM**コレクション)。
+固定を指定する**DISPID**は、既存のディスパッチ インターフェイスへの下位互換性を維持するために、または特定のシステム定義のメソッドやプロパティを実装するために便利です (通常は、負の値によって示される **。DISPID**など、**な**コレクション)。
 
 ## <a name="retrieving-the-idispatch-interface-for-a-coleclientitem"></a>COleClientItem の IDispatch インターフェイスを取得します。
 
-多くのサーバーでは、OLE サーバーの機能と共に、それらのドキュメント オブジェクト内でオートメーションをサポートします。 直接アクセスする必要は、このオートメーション インターフェイスにアクセスするために、`COleClientItem::m_lpObject`メンバー変数。 次のコードを取得、`IDispatch`インターフェイスから派生したオブジェクトを`COleClientItem`です。 見つかった場合はこの機能に必要なアプリケーションで、以下のコードを含めることができます。
+多くのサーバーでは、OLE サーバーの機能と共に、ドキュメント オブジェクト内でオートメーションをサポートします。 直接アクセスする必要が、この automation インターフェイスにアクセスするために、`COleClientItem::m_lpObject`メンバー変数。 次のコードを取得、`IDispatch`インターフェイスから派生したオブジェクトを`COleClientItem`します。 必要に応じてこの機能が見つかった場合は、アプリケーションで次のコードを含めることができます。
 
 ```cpp
 LPDISPATCH CMyClientItem::GetIDispatch()
@@ -319,9 +319,9 @@ LPDISPATCH CMyClientItem::GetIDispatch()
 }
 ```
 
-返されたディスパッチ インターフェイスこの関数が直接使用またはにアタッチされているし、可能性がある、`COleDispatchDriver`のタイプ セーフ アクセスします。 直接使用する場合は、呼び出すことを確認してください、`Release`メンバー使用するときに、ポインター (、`COleDispatchDriver`デストラクターは、既定で)。
+ディスパッチ インターフェイスから返されたこの関数が直接使用またはにアタッチしでしたが、`COleDispatchDriver`タイプ セーフ アクセス。 直接使用する場合を呼び出すこと確認その`Release`メンバー使用するときに、ポインター (、`COleDispatchDriver`デストラクターは既定)。
 
 ## <a name="see-also"></a>関連項目
 
-[番号順テクニカル ノート](../mfc/technical-notes-by-number.md)  
-[カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)  
+[番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
+[カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)

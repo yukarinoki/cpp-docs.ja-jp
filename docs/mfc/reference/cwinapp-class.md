@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1236cbdaca396aa6d52d4e30095d9a0df5379142
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8a901b7bd102736bfbeec95a1afe8e44dc26ae3b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712037"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412185"
 ---
 # <a name="cwinapp-class"></a>CWinApp クラス
 
@@ -393,7 +393,7 @@ void AddDocTemplate(CDocTemplate* pTemplate);
 
 ### <a name="parameters"></a>パラメーター
 
-*pTemplate*  
+*pTemplate*<br/>
 ポインター、`CDocTemplate`を追加します。
 
 ### <a name="remarks"></a>Remarks
@@ -414,7 +414,7 @@ virtual void AddToRecentFileList(LPCTSTR lpszPathName);
 
 ### <a name="parameters"></a>パラメーター
 
-*終了*  
+*終了*<br/>
 ファイルのパス。
 
 ### <a name="remarks"></a>Remarks
@@ -462,7 +462,7 @@ void CloseAllDocuments(BOOL bEndSession);
 
 ### <a name="parameters"></a>パラメーター
 
-*bEndSession*  
+*bEndSession*<br/>
 Windows セッションを終了するかどうかを指定します。 TRUE である場合は、セッションが終了中です。それ以外の場合は FALSE です。
 
 ### <a name="remarks"></a>Remarks
@@ -479,7 +479,7 @@ BOOL CreatePrinterDC(CDC& dc);
 
 ### <a name="parameters"></a>パラメーター
 
-*dc*  
+*dc*<br/>
 プリンター デバイス コンテキストへの参照。
 
 ### <a name="return-value"></a>戻り値
@@ -502,7 +502,7 @@ CWinApp(LPCTSTR lpszAppName = NULL);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszAppName*  
+*lpszAppName*<br/>
 Windows を使用するアプリケーション名を含む null で終わる文字列。 この引数が指定されていないか NULL の場合は、 `CWinApp` AFX_IDS_APP_TITLE リソース文字列または実行可能ファイルのファイル名を使用します。
 
 ### <a name="remarks"></a>Remarks
@@ -526,13 +526,13 @@ LONG DelRegTree(
 
 ### <a name="parameters"></a>パラメーター
 
-*hParentKey*  
+*hParentKey*<br/>
 レジストリ キーへのハンドルします。
 
-*strKeyName*  
+*strKeyName*<br/>
 削除するレジストリ キーの名前。
 
-*pTM*  
+*pTM*<br/>
 CAtlTransactionManager オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -556,13 +556,13 @@ virtual int DoMessageBox(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszPrompt*  
+*lpszPrompt*<br/>
 メッセージ ボックス内のテキストのアドレス。
 
-*%n タイプ*  
+*%n タイプ*<br/>
 メッセージ ボックス[スタイル](../../mfc/reference/styles-used-by-mfc.md#message-box-styles)します。
 
-*nIDPrompt*  
+*nIDPrompt*<br/>
 ヘルプ コンテキストの文字列のインデックスです。
 
 ### <a name="return-value"></a>戻り値
@@ -585,7 +585,7 @@ virtual void DoWaitCursor(int nCode);
 
 ### <a name="parameters"></a>パラメーター
 
-*nCode*  
+*nCode*<br/>
 このパラメーターが 1 の場合は、待機カーソルが表示されます。 0 の場合は、参照カウントをインクリメントせずに待機カーソルが復元されます。 -1 の場合、待機カーソルを終了します。
 
 ### <a name="remarks"></a>Remarks
@@ -614,10 +614,10 @@ BOOL EnableD2DSupport(
 
 ### <a name="parameters"></a>パラメーター
 
-*d2dFactoryType*  
+*d2dFactoryType*<br/>
 D2D ファクトリとリソースのスレッド処理モデルを作成します。
 
-*writeFactoryType*  
+*writeFactoryType*<br/>
 書き込みのファクトリ オブジェクトが共有か分離かどうかを指定する値
 
 ### <a name="return-value"></a>戻り値
@@ -660,7 +660,7 @@ BOOL EnableTaskbarInteraction(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-*bEnable*  
+*bEnable*<br/>
 Windows 7 タスク バーとの対話が (TRUE) を有効にするか、無効 (FALSE) かどうかを指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -767,7 +767,7 @@ HKEY GetAppRegistryKey(CAtlTransactionManager* pTM = NULL);
 
 ### <a name="parameters"></a>パラメーター
 
-*pTM*  
+*pTM*<br/>
 ポインターを`CAtlTransactionManager`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -834,7 +834,7 @@ CDocTemplate* GetNextDocTemplate(POSITION& pos) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*  
+*pos*<br/>
 以前の呼び出しによって返される位置の値への参照を`GetNextDocTemplate`または[GetFirstDocTemplatePosition](#getfirstdoctemplateposition)します。 値は、この呼び出しによって、次の位置に更新されます。
 
 ### <a name="return-value"></a>戻り値
@@ -859,7 +859,7 @@ BOOL GetPrinterDeviceDefaults(struct tagPDA* pPrintDlg);
 
 ### <a name="parameters"></a>パラメーター
 
-*pPrintDlg*  
+*pPrintDlg*<br/>
 ポインターを[PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda)構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -888,16 +888,16 @@ BOOL GetProfileBinary(
 
 ### <a name="parameters"></a>パラメーター
 
-*大文字、小文字*  
+*大文字、小文字*<br/>
 エントリがあるセクションを指定する NULL で終わる文字列へのポインター。
 
-*lpszEntry*  
+*lpszEntry*<br/>
 値を取得するエントリを指定する NULL で終わる文字列へのポインター。
 
-*ppData*  
+*ppData*<br/>
 データのアドレスを受け取るポインターへのポインター。
 
-*ペタバイト*  
+*ペタバイト*<br/>
 バイト単位でデータのサイズを受け取る UINT を指します。
 
 ### <a name="return-value"></a>戻り値
@@ -933,13 +933,13 @@ UINT GetProfileInt(
 
 ### <a name="parameters"></a>パラメーター
 
-*大文字、小文字*  
+*大文字、小文字*<br/>
 エントリがあるセクションを指定する NULL で終わる文字列へのポインター。
 
-*lpszEntry*  
+*lpszEntry*<br/>
 値を取得するエントリを指定する NULL で終わる文字列へのポインター。
 
-*見つからなかった*  
+*見つからなかった*<br/>
 フレームワークがエントリを見つけられなかったときのために指定する既定値。
 
 ### <a name="return-value"></a>戻り値
@@ -974,13 +974,13 @@ CString GetProfileString(
 
 ### <a name="parameters"></a>パラメーター
 
-*大文字、小文字*  
+*大文字、小文字*<br/>
 エントリがあるセクションを指定する NULL で終わる文字列へのポインター。
 
-*lpszEntry*  
+*lpszEntry*<br/>
 文字列を取得するエントリを含む null で終わる文字列へのポインター。 この値は、NULL は指定できません。
 
-*から*  
+*から*<br/>
 初期化ファイルにエントリが見つからない場合は、指定したエントリの既定の文字列値を指します。
 
 ### <a name="return-value"></a>戻り値
@@ -1010,10 +1010,10 @@ HKEY GetSectionKey(
 
 ### <a name="parameters"></a>パラメーター
 
-*大文字、小文字*  
+*大文字、小文字*<br/>
 取得するキーの名前。
 
-*pTM*  
+*pTM*<br/>
 ポインターを`CAtlTransactionManager`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -1042,10 +1042,10 @@ virtual void HtmlHelp(
 
 ### <a name="parameters"></a>パラメーター
 
-*指定*  
+*指定*<br/>
 追加のデータを指定します。 使用される値の値によって異なります、 *nCmd*パラメーター。
 
-*nCmd*  
+*nCmd*<br/>
 要求されるヘルプの種類を指定します。 使用可能な値、および影響についての一覧については、*指定*パラメーターを参照してください、 *uCommand*パラメーターについて、HTMLHelp API 関数で、Windows SDK で説明します。
 
 ### <a name="remarks"></a>Remarks
@@ -1105,10 +1105,10 @@ HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nID
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszResourceName*  
+*lpszResourceName*<br/>
 カーソル リソースの名前を含む null で終わる文字列へのポインター。 使用することができます、`CString`この引数にします。
 
-*可能*  
+*可能*<br/>
 カーソル リソースの ID。 リソースの一覧は、次を参照してください。 [LoadCursor](/windows/desktop/api/winuser/nf-winuser-loadcursora) Windows SDK に含まれています。
 
 ### <a name="return-value"></a>戻り値
@@ -1135,10 +1135,10 @@ HICON LoadIcon(LPCTSTR lpszResourceName) const;  HICON LoadIcon(UINT nIDResource
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszResourceName*  
+*lpszResourceName*<br/>
 アイコン リソースの名前を含む null で終わる文字列へのポインター。 使用することも、`CString`この引数にします。
 
-*可能*  
+*可能*<br/>
 アイコン リソースの ID 番号。
 
 ### <a name="return-value"></a>戻り値
@@ -1164,7 +1164,7 @@ HCURSOR LoadOEMCursor(UINT nIDCursor) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*nIDCursor*  
+*nIDCursor*<br/>
 **OCR_** マニフェスト定数の識別子を定義済みの Windows カーソルを指定します。 必要があります`#define OEMRESOURCE`する前に`#include \<afxwin.h>`アクセスするために、 **OCR_** WINDOWS で使用される定数。H.
 
 ### <a name="return-value"></a>戻り値
@@ -1191,7 +1191,7 @@ HICON LoadOEMIcon(UINT nIDIcon) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*nIDIcon*  
+*nIDIcon*<br/>
 **OIC_** マニフェスト定数の識別子を定義済みの Windows アイコンを指定します。 必要があります`#define OEMRESOURCE`する前に`#include \<afxwin.h>`にアクセスする、 **OIC_** WINDOWS で使用される定数。H.
 
 ### <a name="return-value"></a>戻り値
@@ -1212,7 +1212,7 @@ HCURSOR LoadStandardCursor(LPCTSTR lpszCursorName) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*されています*  
+*されています*<br/>
 **Idc _** マニフェスト定数の識別子を定義済みの Windows カーソルを指定します。 WINDOWS では、これらの識別子が定義されています。H. 次の一覧は、使用可能な定義済みの値との意味を示しています*されています*:。
 
 - IDC_ARROW 標準矢印カーソル
@@ -1261,7 +1261,7 @@ HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszIconName*  
+*lpszIconName*<br/>
 定義済みの Windows アイコンを指定するマニフェスト定数の識別子。 WINDOWS では、これらの識別子が定義されています。H. 可能な定義済みの値とその説明の一覧は、次を参照してください。、*されています*パラメーター [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona) Windows SDK にします。
 
 ### <a name="return-value"></a>戻り値
@@ -1282,7 +1282,7 @@ void LoadStdProfileSettings(UINT nMaxMRU = _AFX_MRU_COUNT);
 
 ### <a name="parameters"></a>パラメーター
 
-*nMaxMRU*  
+*nMaxMRU*<br/>
 追跡するために最近使用したファイルの数。
 
 ### <a name="remarks"></a>Remarks
@@ -1558,7 +1558,7 @@ virtual BOOL OnDDECommand(LPTSTR lpszCommand);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszCommand*  
+*lpszCommand*<br/>
 アプリケーションによって受信 DDE コマンド文字列を指します。
 
 ### <a name="return-value"></a>戻り値
@@ -1697,7 +1697,7 @@ virtual BOOL OnIdle(LONG lCount);
 
 ### <a name="parameters"></a>パラメーター
 
-*lCount*  
+*lCount*<br/>
 カウンターは毎回増加`OnIdle`アプリケーションのメッセージ キューが空のときに呼び出されます。 この数は、新しいメッセージが処理されるたびに 0 にリセットされます。 使用することができます、 *lCount*相対アプリケーション メッセージを処理することがなくがアイドル時間の長さを決定するパラメーター。
 
 ### <a name="return-value"></a>戻り値
@@ -1773,7 +1773,7 @@ void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 
 ### <a name="parameters"></a>パラメーター
 
-*rCmdInfo*  
+*rCmdInfo*<br/>
 参照を[CCommandLineInfo](../../mfc/reference/ccommandlineinfo-class.md)オブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -1802,7 +1802,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>パラメーター
 
-*pMsg*  
+*pMsg*<br/>
 ポインターを[MSG](../../mfc/reference/msg-structure1.md)処理するメッセージを含む構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -1821,10 +1821,10 @@ virtual BOOL ProcessMessageFilter(
 
 ### <a name="parameters"></a>パラメーター
 
-*コード*  
+*コード*<br/>
 フック コードを指定します。 このメンバー関数では、コードを使用して、処理する方法を決定*lpMsg します。*
 
-*lpMsg*  
+*lpMsg*<br/>
 Windows へのポインター [MSG](../../mfc/reference/msg-structure1.md)構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -1847,7 +1847,7 @@ BOOL ProcessShellCommand(CCommandLineInfo& rCmdInfo);
 
 ### <a name="parameters"></a>パラメーター
 
-*rCmdInfo*  
+*rCmdInfo*<br/>
 参照を[CCommandLineInfo](../../mfc/reference/ccommandlineinfo-class.md)オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -1892,10 +1892,10 @@ virtual LRESULT ProcessWndProcException(
 
 ### <a name="parameters"></a>パラメーター
 
-*e*  
+*e*<br/>
 キャッチされない例外へのポインター。
 
-*pMsg*  
+*pMsg*<br/>
 A [MSG](../../mfc/reference/msg-structure1.md)フレームワークが例外をスローする原因となった windows メッセージに関する情報を含む構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -2127,13 +2127,13 @@ void SelectPrinter(
 
 ### <a name="parameters"></a>パラメーター
 
-*場合*  
+*場合*<br/>
 識別するハンドルを[DEVNAMES](../../mfc/reference/devnames-structure.md)ドライバー、デバイス、および特定のプリンターの出力ポート名を識別する構造体。
 
-*hDevMode*  
+*hDevMode*<br/>
 識別するハンドルを[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)デバイスの初期化とプリンターの環境に関する情報を指定する構造体。
 
-*bFreeOld*  
+*bFreeOld*<br/>
 選択したプリンターを解放します。
 
 ### <a name="remarks"></a>Remarks
@@ -2150,7 +2150,7 @@ void SetHelpMode(AFX_HELP_TYPE eHelpType);
 
 ### <a name="parameters"></a>パラメーター
 
-*eHelpType*  
+*eHelpType*<br/>
 使用するヘルプの種類を指定します。 参照してください[CWinApp::m_eHelpType](#m_ehelptype)詳細についてはします。
 
 ### <a name="remarks"></a>Remarks
@@ -2170,10 +2170,10 @@ void SetRegistryKey(UINT nIDRegistryKey);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszRegistryKey*  
+*lpszRegistryKey*<br/>
 キーの名前を含む文字列へのポインター。
 
-*nIDRegistryKey*  
+*nIDRegistryKey*<br/>
 レジストリ キーの名前を含む文字列リソースの ID。
 
 ### <a name="remarks"></a>Remarks
@@ -2266,10 +2266,10 @@ virtual void WinHelp(
 
 ### <a name="parameters"></a>パラメーター
 
-*指定*  
+*指定*<br/>
 追加のデータを指定します。 使用される値の値によって異なります、 *nCmd*パラメーター。
 
-*nCmd*  
+*nCmd*<br/>
 要求されるヘルプの種類を指定します。 使用可能な値、および影響についての一覧については、*指定*パラメーターを参照してください、 [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) Windows 関数。
 
 ### <a name="remarks"></a>Remarks
@@ -2296,16 +2296,16 @@ BOOL WriteProfileBinary(
 
 ### <a name="parameters"></a>パラメーター
 
-*大文字、小文字*  
+*大文字、小文字*<br/>
 エントリがあるセクションを指定する NULL で終わる文字列へのポインター。 セクションが存在しない場合は作成されます。 セクションの名前が区別されません。任意の大文字と小文字の文字列があります。
 
-*lpszEntry*  
+*lpszEntry*<br/>
 値が書き込まれるエントリを含む null で終わる文字列へのポインター。 指定されたセクションにエントリが存在しない場合は作成されます。
 
-*pData*  
+*pData*<br/>
 書き込むデータへのポインター。
 
-*nBytes*  
+*nBytes*<br/>
 書き込むバイト数が含まれています。
 
 ### <a name="return-value"></a>戻り値
@@ -2333,13 +2333,13 @@ BOOL WriteProfileInt(
 
 ### <a name="parameters"></a>パラメーター
 
-*大文字、小文字*  
+*大文字、小文字*<br/>
 エントリがあるセクションを指定する NULL で終わる文字列へのポインター。 セクションが存在しない場合は作成されます。 セクションの名前が区別されません。任意の大文字と小文字の文字列があります。
 
-*lpszEntry*  
+*lpszEntry*<br/>
 値が書き込まれるエントリを含む null で終わる文字列へのポインター。 指定されたセクションにエントリが存在しない場合は作成されます。
 
-*値*  
+*値*<br/>
 書き込む値が含まれています。
 
 ### <a name="return-value"></a>戻り値
@@ -2367,13 +2367,13 @@ BOOL WriteProfileString(
 
 ### <a name="parameters"></a>パラメーター
 
-*大文字、小文字*  
+*大文字、小文字*<br/>
 エントリがあるセクションを指定する NULL で終わる文字列へのポインター。 セクションが存在しない場合は作成されます。 セクションの名前が区別されません。任意の大文字と小文字の文字列があります。
 
-*lpszEntry*  
+*lpszEntry*<br/>
 値が書き込まれるエントリを含む null で終わる文字列へのポインター。 指定されたセクションにエントリが存在しない場合は作成されます。 このパラメーターが NULL の場合、セクションが指定された*大文字、小文字*は削除されます。
 
-*lpszValue*  
+*lpszValue*<br/>
 書き込まれる文字列を指します。 このパラメーターが NULL の場合、エントリが指定された、 *lpszEntry*パラメーターを削除します。
 
 ### <a name="return-value"></a>戻り値
@@ -2396,13 +2396,13 @@ void SetAppID(LPCTSTR lpcszAppID);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpcszAppID*  
+*lpcszAppID*<br/>
 アプリケーションのユーザー モデル ID を指定します
 
 ### <a name="remarks"></a>Remarks
 
 ## <a name="see-also"></a>関連項目
 
-[CWinThread クラス](../../mfc/reference/cwinthread-class.md)  
-[階層図](../../mfc/hierarchy-chart.md)  
-[方法: 再起動マネージャーのサポートを追加する](../../mfc/how-to-add-restart-manager-support.md)  
+[CWinThread クラス](../../mfc/reference/cwinthread-class.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[方法: 再起動マネージャーのサポートを追加する](../../mfc/how-to-add-restart-manager-support.md)

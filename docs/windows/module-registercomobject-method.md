@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: abbe93f5359171c88134ff61759e9edc63db2451
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7cccebf6e1c6004a2416f4fdeb254369f9aa7b72
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610434"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410313"
 ---
 # <a name="moduleregistercomobject-method"></a>Module::RegisterCOMObject メソッド
 
@@ -42,19 +42,19 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
 
 ### <a name="parameters"></a>パラメーター
 
-*サーバー名*  
+*サーバー名*<br/>
 サーバーの完全修飾名。
 
-*clsid*  
+*clsid*<br/>
 登録する Clsid の配列。
 
-*ファクトリ*  
+*ファクトリ*<br/>
 パブリッシュされるかどうかをクラスのオブジェクトの IUnknown インターフェイスの配列。
 
-*Cookie*  
+*Cookie*<br/>
 操作が完了したらは、登録され、そのオブジェクト クラスを識別する値へのポインターの配列。 これらの値は使用後で登録を取り消します。
 
-*count*  
+*count*<br/>
 登録する Clsid の数。
 
 ## <a name="return-value"></a>戻り値
@@ -74,4 +74,5 @@ COM オブジェクトは、CLSCTX 列挙型の別個の列挙子に登録され
 **名前空間:** Microsoft::WRL
 
 ## <a name="see-also"></a>関連項目
+
 [Module クラス](../windows/module-class.md)

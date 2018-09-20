@@ -1,5 +1,5 @@
 ---
-title: '方法: ボックス化解除 |Microsoft ドキュメント'
+title: '方法: ボックス化解除 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,39 +15,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: afddbad696dc513546d14749c0d98ec5d81a597a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e13a45578772208f8828a7b6d7036d030f084acb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33127215"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419010"
 ---
 # <a name="how-to-unbox"></a>方法: ボックス化を解除する
-ボックス化を解除し、値を変更する方法を示します。  
-  
-## <a name="example"></a>例  
-  
-```  
-// vcmcppv2_unboxing.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-int main() {  
-   int ^ i = gcnew int(13);  
-   int j;  
-   Console::WriteLine(*i);   // unboxing  
-   *i = 14;   // unboxing and assignment  
-   Console::WriteLine(*i);  
-   j = safe_cast<int>(i);   // unboxing and assignment  
-   Console::WriteLine(j);  
-}  
-```  
-  
-```Output  
-13  
-14  
-14  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [ボックス化](../windows/boxing-cpp-component-extensions.md)
+
+ボックス化解除し、値を変更する方法を示します。
+
+## <a name="example"></a>例
+
+```
+// vcmcppv2_unboxing.cpp
+// compile with: /clr
+using namespace System;
+
+int main() {
+   int ^ i = gcnew int(13);
+   int j;
+   Console::WriteLine(*i);   // unboxing
+   *i = 14;   // unboxing and assignment
+   Console::WriteLine(*i);
+   j = safe_cast<int>(i);   // unboxing and assignment
+   Console::WriteLine(j);
+}
+```
+
+```Output
+13
+14
+14
+```
+
+## <a name="see-also"></a>関連項目
+
+[ボックス化](../windows/boxing-cpp-component-extensions.md)

@@ -1,5 +1,5 @@
 ---
-title: Windows Sockets クラス |Microsoft ドキュメント
+title: Windows Sockets クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e370c8a5f9cb2fb42c3199dbc0d56b69d93dc35
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 893fa525b04376cde0e96f280c95e6bfd1243946
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382129"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439979"
 ---
 # <a name="windows-sockets-classes"></a>Windows Sockets クラス
-Windows ソケットは、2 台のコンピューター間の通信にネットワーク プロトコルに依存しない方法を提供します。 これらのソケットは同期していることができます (プログラムは、通信が終了するまで待機する) または非同期 (プログラムは、通信が起こっている間に実行が続行されます)。  
-  
- [CAsyncSocket](../mfc/reference/casyncsocket-class.md)  
- Thin ラッパーで Windows ソケット API をカプセル化します。  
-  
- [CSocket](../mfc/reference/csocket-class.md)  
- 派生した上位レベルの抽象化`CAsyncSocket`です。 同期的に動作します。  
-  
- [CSocketFile](../mfc/reference/csocketfile-class.md)  
- 提供、 `CFile` Windows ソケットへのインターフェイスです。  
-  
-## <a name="see-also"></a>関連項目  
- [クラスの概要](../mfc/class-library-overview.md)
+
+Windows ソケットは、2 台のコンピューター間で通信するネットワーク プロトコルに依存しない方法を提供します。 これらのソケットを同期することができます (プログラムは、通信が完了するまで待機する) または非同期 (プログラムの継続での通信が行われている)。
+
+[CAsyncSocket](../mfc/reference/casyncsocket-class.md)<br/>
+シン ラッパーで Windows ソケット API をカプセル化します。
+
+[CSocket](../mfc/reference/csocket-class.md)<br/>
+高いレベルの抽象化から派生した`CAsyncSocket`します。 同期的に動作します。
+
+[CSocketFile](../mfc/reference/csocketfile-class.md)<br/>
+提供、 `CFile` Windows ソケット インターフェイス。
+
+## <a name="see-also"></a>関連項目
+
+[クラスの概要](../mfc/class-library-overview.md)
 

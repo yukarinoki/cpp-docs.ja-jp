@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb0377de88ef5e782e0e11bc563409b7094eecf5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 314853b103d74bd7907fb665b806f386ed7bd44e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598685"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46397470"
 ---
 # <a name="argtraitshelper-structure"></a>ArgTraitsHelper 構造体
 
@@ -37,7 +37,7 @@ struct ArgTraitsHelper;
 
 ### <a name="parameters"></a>パラメーター
 
-*TDelegateInterface*  
+*TDelegateInterface*<br/>
 デリゲートのインターフェイスです。
 
 ## <a name="remarks"></a>Remarks
@@ -55,7 +55,7 @@ struct ArgTraitsHelper;
 
 ### <a name="public-constants"></a>パブリック定数
 
-|name|説明|
+|名前|説明|
 |----------|-----------------|
 |[ArgTraitsHelper::args 定数](../windows/argtraitshelper-args-constant.md)|により、 [argtraits::args](../windows/argtraits-args-constant.md)パラメーターの数のカウントを保持、`Invoke`デリゲート インターフェイスのメソッド。|
 

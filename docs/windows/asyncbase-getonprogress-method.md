@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5439e1c17b7ad654d44fad575ba51b9ebc4095bb
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: fbc3010fa24c315837cc61c5a9361d7f5350a633
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592257"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420135"
 ---
 # <a name="asyncbasegetonprogress-method"></a>AsyncBase::GetOnProgress メソッド
 
@@ -38,7 +38,7 @@ STDMETHOD(
 
 ### <a name="parameters"></a>パラメーター
 
-*progressHandler*  
+*progressHandler*<br/>
 現在の進行状況イベント ハンドラーのアドレスが格納されている場所です。
 
 ## <a name="return-value"></a>戻り値

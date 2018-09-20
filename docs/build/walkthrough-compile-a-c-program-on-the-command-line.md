@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f1390259838302a56e58397afa79fa8c458b939
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2da1b645e85542631ce3e656ccaebdfbccf01137
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710334"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46397900"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>チュートリアル: コマンドラインでの C プログラムをコンパイルします。
 
@@ -169,7 +169,7 @@ C++ の Visual C コンパイラは、一般に、ISO C99 標準と互換性の�
 
 ## <a name="see-also"></a>関連項目
 
-[チュートリアル: 標準の C++ プログラム (C++) の作成](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)
+[チュートリアル: 標準 C++ プログラム (C++) の作成](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)<br/>
 [C 言語リファレンス](../c-language/c-language-reference.md)<br/>
 [C/C++ プログラムのビルド](../build/building-c-cpp-programs.md)<br/>
 [互換性](../c-runtime-library/compatibility.md)

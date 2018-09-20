@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7c8924f7b22ed86adf7721018c4df3094a2069c1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4798cf5c283fc4a663da0e1af7110df63496a6c9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200696"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408246"
 ---
 # <a name="viprogid"></a>vi_progid
 
@@ -38,7 +38,7 @@ ProgID のバージョンに依存しない形式を指定します。
 
 ### <a name="parameters"></a>パラメーター
 
-*name*  
+*name*<br/>
 オブジェクトを表すバージョン依存 ProgID です。
 
 Progid は、人間が判読できるバージョンの COM および ActiveX オブジェクトを識別するために使用したクラス id (CLSID) を提示します。
@@ -72,7 +72,7 @@ ATL プロジェクトでは、場合、[コクラス](../windows/coclass.md)属
 
 ## <a name="see-also"></a>関連項目
 
-[IDL 属性](../windows/idl-attributes.md)  
-[Typedef、Enum、Union、および Struct 型の属性](../windows/typedef-enum-union-and-struct-attributes.md)  
-[クラス属性](../windows/class-attributes.md)  
+[IDL 属性](../windows/idl-attributes.md)<br/>
+[Typedef、Enum、Union、および Struct 型の属性](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[クラス属性](../windows/class-attributes.md)<br/>
 [ProgID キー](/windows/desktop/com/-progid--key)  

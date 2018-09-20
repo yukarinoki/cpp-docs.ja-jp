@@ -1,5 +1,5 @@
 ---
-title: 値の型とその動作 (C + + CLI) |Microsoft ドキュメント
+title: 値の型とその動作 (C +/cli CLI) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,29 +15,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9c05d6198b57eeee473ab7a5ec467083a5783a55
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4d2d980e48a6f948c35faf0c4e42969795ef8dc7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169544"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404658"
 ---
 # <a name="value-types-and-their-behaviors-ccli"></a>値型とその動作 (C++/CLI)
-値の型は、Visual C に C++ のマネージ拡張からのさまざまな方法で変更されました。 このセクションで見て CLR 列挙型とボックス化と、CLR ヒープ上のボックス化されたインスタンスへのアクセスを見てと内部ポインターと固定ポインターを見ると、値クラス型。 この領域に広範な言語に変更しました。  
-  
-## <a name="in-this-section"></a>このセクションの内容  
- [CLR 列挙型](../dotnet/value-types-and-their-behaviors-cpp-cli.md)  
- 宣言と列挙型の動作の変更について説明します。  
-  
- [値型の暗黙のボックス化](../dotnet/implicit-boxing-of-value-types.md)  
- 値の型と、後で変更の動作の暗黙的なボックス化の動機について説明します。  
-  
- [追跡ハンドルからボックス化変換された値へ](../dotnet/a-tracking-handle-to-a-boxed-value.md)  
- 暗黙的なボックス化をについて説明します。 値の型がボックス化された値オブジェクトを追跡ハンドルに変換します。  
-  
- [値型セマンティクス](../dotnet/value-type-semantics.md)  
- 継承された仮想メソッド、クラスの既定のコンス トラクター、内部ポインターは、固定ポインターなど、値型セマンティクスの変更について説明します。  
-  
-## <a name="see-also"></a>関連項目  
- [C + +/CLI 移行ガイド](../dotnet/cpp-cli-migration-primer.md)   
- [クラスと構造体](../windows/classes-and-structs-cpp-component-extensions.md)
+
+値の型は、Visual c の C++ マネージ拡張からさまざまな方法に変更されました。 このセクションで、CLR 列挙型および値クラス型のボックス化と、CLR ヒープ上のボックス化されたインスタンスへのアクセスと内部ポインターと固定ポインターを見てと共にに注目します。 この領域で広範な言語の変更が発生しました。
+
+## <a name="in-this-section"></a>このセクションの内容
+
+[CLR 列挙型](../dotnet/value-types-and-their-behaviors-cpp-cli.md)<br/>
+宣言と列挙型の動作の変更について説明します。
+
+[値型の暗黙のボックス化](../dotnet/implicit-boxing-of-value-types.md)<br/>
+値型と動作の結果として生じる変更の暗黙的なボックス化の動機について説明します。
+
+[追跡ハンドルからボックス化変換された値へ](../dotnet/a-tracking-handle-to-a-boxed-value.md)<br/>
+暗黙的なボックス化をについて説明します。 値のボックス化されたオブジェクトへの追跡ハンドルに値の型が変換されます。
+
+[値型セマンティクス](../dotnet/value-type-semantics.md)<br/>
+継承された仮想メソッド、クラスの既定のコンス トラクター、内部ポインターは、固定ポインターなど、値型セマンティクスの変更について説明します。
+
+## <a name="see-also"></a>関連項目
+
+[C++/CLI 移行ガイド](../dotnet/cpp-cli-migration-primer.md)<br/>
+[クラスと構造体](../windows/classes-and-structs-cpp-component-extensions.md)

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70049daf514659a9ae525e1fca40152df4ab382a
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 28e55b9afd3a6254182f1bb0a94fb2136d036c32
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540866"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413498"
 ---
 # <a name="autorename"></a>auto_rename
 **C++ 固有の仕様**  
@@ -42,5 +42,5 @@ auto_rename
   
 ## <a name="see-also"></a>関連項目 
 
-[#import の属性](../preprocessor/hash-import-attributes-cpp.md)   
+[#import の属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import ディレクティブ](../preprocessor/hash-import-directive-cpp.md)

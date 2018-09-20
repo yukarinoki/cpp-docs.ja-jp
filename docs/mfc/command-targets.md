@@ -1,5 +1,5 @@
 ---
-title: コマンド ターゲット |Microsoft ドキュメント
+title: コマンドのターゲット |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cbcfa1042a8430c704bad93e4bc0ce5655b5921
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 408f63b80ff30a7ebdc51e5becb1dd97bb062852
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341298"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404229"
 ---
 # <a name="command-targets"></a>コマンド ターゲット
-図[フレームワークにおけるコマンド](../mfc/user-interface-objects-and-command-ids.md)メニュー項目とその結果、コマンド オブジェクトがクリックされたときに実行するためにフレームワークから呼び出されるハンドラー関数などのユーザー インターフェイス オブジェクト間の接続を示しています。  
-  
- Windows では、メッセージのハンドラーが呼び出されますウィンドウに直接コマンド メッセージではないメッセージを送信します。 ただし、フレームワークは候補オブジェクトの数にコマンドを送ります —「コマンド ターゲット」と呼ばれる — うちの 1 つ通常コマンドのハンドラーを呼び出します。 ハンドラー関数のコマンドと標準の Windows メッセージの両方で同様の動作で説明したように、呼び出されるメカニズムが異なる場合、[フレームワークがハンドラーを呼び出す方法](../mfc/how-the-framework-calls-a-handler.md)です。  
-  
-## <a name="see-also"></a>関連項目  
- [フレームワークのメッセージとコマンド](../mfc/messages-and-commands-in-the-framework.md)
+
+図[フレームワークにおけるコマンド](../mfc/user-interface-objects-and-command-ids.md)メニュー項目と、オブジェクトがクリックされたときに、結果として得られるコマンドを実行するフレームワークから呼び出されるハンドラー関数などのユーザー インターフェイス オブジェクト間の接続を示しています。
+
+Windows では、メッセージのハンドラーが呼び出され、ウィンドウに直接コマンド メッセージではないメッセージを送信します。 フレームワークが複数の候補のオブジェクトにコマンドをルーティングするただし、-「コマンド ターゲット」と呼ばれる、うちの 1 つ通常コマンドのハンドラーを呼び出します。 ハンドラー関数の動作のコマンドと標準の Windows メッセージの両方に対して同じ方法で説明したように、呼び出されるメカニズムが異なり、[フレームワークがハンドラーを呼び出す方法](../mfc/how-the-framework-calls-a-handler.md)します。
+
+## <a name="see-also"></a>関連項目
+
+[フレームワークのメッセージとコマンド](../mfc/messages-and-commands-in-the-framework.md)
 

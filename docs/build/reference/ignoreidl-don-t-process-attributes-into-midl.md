@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7014440c3479016c89b774f9a80cc03fc4b5d4c3
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9c06e06633e6d0a990c72ebb65a4bd999df45a55
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45708228"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406673"
 ---
 # <a name="ignoreidl-don39t-process-attributes-into-midl"></a>/IGNOREIDL (Don&#39;t プロセスの属性を MIDL に挿入)
 
@@ -54,7 +54,7 @@ ms.locfileid: "45708228"
 
 [リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
 [リンカー オプション](../../build/reference/linker-options.md)<br/>
-[/IDLOUT (MIDL 出力ファイルの名前を付ける)](../../build/reference/idlout-name-midl-output-files.md)
-[/TLBOUT (名前です。TLB ファイル)](../../build/reference/tlbout-name-dot-tlb-file.md)
-[/MIDL (MIDL コマンド ライン オプションの指定)](../../build/reference/midl-specify-midl-command-line-options.md)
+[/IDLOUT (MIDL 出力ファイルの指定)](../../build/reference/idlout-name-midl-output-files.md)<br/>
+[/TLBOUT (.TLB ファイル名の指定)](../../build/reference/tlbout-name-dot-tlb-file.md)<br/>
+[/MIDL (MIDL コマンド ライン オプションの指定)](../../build/reference/midl-specify-midl-command-line-options.md)<br/>
 [属性付きプログラムの作成](../../windows/building-an-attributed-program.md)

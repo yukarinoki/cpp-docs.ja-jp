@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6dba6e5d7fd478d198e48e9d8517d34e13b43484
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 97af2db56cab99412faf35efa8cd351946ab4828
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613667"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410300"
 ---
 # <a name="factorycachecookie-data-member"></a>FactoryCache::cookie データ メンバー
 
@@ -49,5 +49,5 @@ union {
 
 ## <a name="see-also"></a>関連項目
 
-[FactoryCache 構造体](../windows/factorycache-structure.md)  
+[FactoryCache 構造体](../windows/factorycache-structure.md)<br/>
 [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

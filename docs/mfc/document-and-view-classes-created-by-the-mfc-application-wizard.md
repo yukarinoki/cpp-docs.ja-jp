@@ -1,5 +1,5 @@
 ---
-title: 文書化し、MFC アプリケーション ウィザードで作成したクラスの表示 |Microsoft ドキュメント
+title: 文書化し、MFC アプリケーション ウィザードで作成されるクラスの表示 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b83886784970492da0c5e2a335dbe08119ecaae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb1a1fc6c35bfb9589e827d798cb112640fa9b2f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349923"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417619"
 ---
 # <a name="document-and-view-classes-created-by-the-mfc-application-wizard"></a>MFC のアプリケーション ウィザードで作成されるドキュメント クラスとビュー クラス
-MFC アプリケーション ウィザードできますを簡単に開始プログラムの開発をスケルトンのドキュメントとビュー クラスを作成することで。 できます[コマンドとメッセージをこれらのクラスにマップ](../mfc/reference/mapping-messages-to-functions.md)およびそのメンバー関数を作成する Visual C ソース コード エディターを使用します。  
-  
- MFC アプリケーション ウィザードによって作成されたドキュメント クラスがクラスから派生した[CDocument](../mfc/reference/cdocument-class.md)です。 ビュー クラスから派生[CView](../mfc/reference/cview-class.md)です。 アプリケーション ウィザード ダイアログ ボックスで指定すること、アプリケーションのウィザードは、これらのクラスとプロジェクト名に基づいてこれらを含むファイルの名前。 アプリケーション ウィザードで、既定の名前を変更するのにクラスの生成 ページを使用できます。  
-  
- 一部のアプリケーションには、1 つ以上のドキュメント クラス、ビュー クラス、またはフレーム ウィンドウ クラスを必要があります。 詳細については、次を参照してください。[複数のドキュメント タイプ、ビュー、およびフレーム ウィンドウ](../mfc/multiple-document-types-views-and-frame-windows.md)します。  
-  
-## <a name="see-also"></a>関連項目  
- [ドキュメント/ビュー アーキテクチャ](../mfc/document-view-architecture.md)
+
+MFC アプリケーション ウィザードできますスタートが切れますので、プログラム開発のスケルトンのドキュメントとビュー クラスを作成しています。 できます[コマンドとメッセージをこれらのクラスにマップ](../mfc/reference/mapping-messages-to-functions.md)Visual C ソース コード エディターを使用して、そのメンバー関数を記述するとします。
+
+クラスから派生した MFC アプリケーション ウィザードによって作成されたドキュメント クラスは[CDocument](../mfc/reference/cdocument-class.md)します。 ビュー クラスから派生[CView](../mfc/reference/cview-class.md)します。 アプリケーション ウィザード ダイアログ ボックスに指定した名前のアプリケーション ウィザードにはこれらのクラスをこれらを含むファイルがプロジェクト名に基づきます。 アプリケーション ウィザードでは、既定の名前を変更するのに [クラスの生成] ページを使用できます。
+
+一部のアプリケーションには、1 つ以上のドキュメント クラス、ビュー クラス、またはフレーム ウィンドウ クラスを必要があります。 詳細については、次を参照してください。[複数のドキュメント タイプ、ビュー、およびフレーム Windows](../mfc/multiple-document-types-views-and-frame-windows.md)します。
+
+## <a name="see-also"></a>関連項目
+
+[ドキュメント/ビュー アーキテクチャ](../mfc/document-view-architecture.md)
 

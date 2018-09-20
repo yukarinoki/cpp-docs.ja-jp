@@ -18,76 +18,80 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf0e6157f184cb91605d9da8bcaea0c22806f03c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 41f086c2427d8147014bb6df25f3923d3ab4b84c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705161"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401330"
 ---
 # <a name="stosw"></a>__stosw
-**Microsoft 固有の仕様**  
-  
- ストアの文字列の命令が生成されます (`rep stosw`)。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-void __stosw(   
-   unsigned short* Dest,   
-   unsigned short Data,   
-   size_t Count   
-);  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
+
+**Microsoft 固有の仕様**
+
+ストアの文字列の命令が生成されます (`rep stosw`)。
+
+## <a name="syntax"></a>構文
+
+```
+void __stosw( 
+   unsigned short* Dest, 
+   unsigned short Data, 
+   size_t Count 
+);
+```
+
+#### <a name="parameters"></a>パラメーター
+
 *追加先*<br/>
-[out]操作の転送先。  
-  
+[out]操作の転送先。
+
 *データ*<br/>
-[in]格納するデータ。  
-  
+[in]格納するデータ。
+
 *カウント*<br/>
-[in]書き込む単語のブロックの長さ。  
-  
-## <a name="requirements"></a>要件  
-  
-|組み込み|アーキテクチャ|  
-|---------------|------------------|  
-|`__stosw`|x86、x64|  
-  
- **ヘッダー ファイル** \<intrin.h >  
-  
-## <a name="remarks"></a>Remarks  
- 結果は、word`Data`のブロックに書き込まれる`Count`単語、`Dest`文字列。  
-  
- このルーチンは、組み込みとしてのみ使用できます。  
-  
-## <a name="example"></a>例  
-  
-```  
-// stosw.c  
-// processor: x86, x64  
-#include <stdio.h>  
-#include <intrin.h>  
-  
-#pragma intrinsic(__stosw)  
-  
-int main()  
-{  
-    unsigned short val = 128;  
-    unsigned short a[100];  
-    memset(a, 0, sizeof(a));  
-    __stosw(a+10, val, 2);  
-    printf_s("%u %u %u %u", a[9], a[10], a[11], a[12]);     
-}  
-```  
-  
-```Output  
-0 128 128 0  
-```  
-  
-**Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)
+[in]書き込む単語のブロックの長さ。
+
+## <a name="requirements"></a>要件
+
+|組み込み|アーキテクチャ|
+|---------------|------------------|
+|`__stosw`|x86、x64|
+
+**ヘッダー ファイル** \<intrin.h >
+
+## <a name="remarks"></a>Remarks
+
+結果は、word`Data`のブロックに書き込まれる`Count`単語、`Dest`文字列。
+
+このルーチンは、組み込みとしてのみ使用できます。
+
+## <a name="example"></a>例
+
+```
+// stosw.c
+// processor: x86, x64
+#include <stdio.h>
+#include <intrin.h>
+
+#pragma intrinsic(__stosw)
+
+int main()
+{
+    unsigned short val = 128;
+    unsigned short a[100];
+    memset(a, 0, sizeof(a));
+    __stosw(a+10, val, 2);
+    printf_s("%u %u %u %u", a[9], a[10], a[11], a[12]);
+}
+```
+
+```Output
+0 128 128 0
+```
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

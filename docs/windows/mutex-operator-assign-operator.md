@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1b7cc38d595c6f6ad1aa92e584068ccb852dbbd4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ea5aee6f248487097462028a763a98b4e814a17a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42578689"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396793"
 ---
 # <a name="mutexoperator-operator"></a>Mutex::operator= 演算子
 
@@ -38,7 +38,7 @@ Mutex& operator=(
 
 ### <a name="parameters"></a>パラメーター
 
-*h*  
+*h*<br/>
 右辺値参照を**ミュー テックス**オブジェクト。
 
 ## <a name="return-value"></a>戻り値
@@ -56,4 +56,5 @@ Mutex& operator=(
 **Namespace:** Microsoft::WRL::Wrappers
 
 ## <a name="see-also"></a>関連項目
+
 [Mutex クラス](../windows/mutex-class1.md)

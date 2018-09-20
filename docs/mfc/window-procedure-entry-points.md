@@ -1,5 +1,5 @@
 ---
-title: ウィンドウ プロシージャ エントリ ポイント |Microsoft ドキュメント
+title: ウィンドウ プロシージャ エントリ ポイント |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 315526a8f95a1d62ac89f3a76fab492c9b136715
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: c3226df51d2a83484de78d0d76c9af67e150e8eb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956383"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403189"
 ---
 # <a name="window-procedure-entry-points"></a>ウィンドウ プロシージャのエントリ ポイント
-MFC のウィンドウ プロシージャ、特殊なウィンドウ プロシージャの実装とモジュールの静的リンクを保護します。 リンケージは、MFC とリンクすると、モジュールと自動的に発生します。 このウィンドウの手順では、AFX_MANAGE_STATE マクロを使用して、有効なモジュールの状態が正しく設定し、呼び出す`AfxWndProc`、順番にデリゲートを`WindowProc`メンバー関数は、適切な`CWnd`-派生オブジェクト。  
-  
-## <a name="see-also"></a>関連項目  
- [MFC モジュールの状態データの管理](../mfc/managing-the-state-data-of-mfc-modules.md)
+
+MFC のウィンドウ プロシージャ、特別なウィンドウ プロシージャの実装を含むモジュールの静的リンクを保護します。 MFC のモジュールがリンクされている場合、リンケージは自動的に発生します。 このウィンドウの手順では、AFX_MANAGE_STATE マクロを使用して、有効なモジュールの状態が正しく設定し、呼び出す`AfxWndProc`、順番にデリゲートを`WindowProc`メンバー関数は、適切な`CWnd`-派生オブジェクト。
+
+## <a name="see-also"></a>関連項目
+
+[MFC モジュールの状態データの管理](../mfc/managing-the-state-data-of-mfc-modules.md)
 

@@ -1,5 +1,5 @@
 ---
-title: 動的オブジェクトの作成 |Microsoft ドキュメント
+title: 動的オブジェクトの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5763e3f0f3ee5a0e58ac20fe9f637e4f7e097999
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 19f6a895eb48b3ae1816edc45747c865e7e03b96
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346647"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420154"
 ---
 # <a name="dynamic-object-creation"></a>オブジェクトの動的生成
-この記事では、実行時に動的にオブジェクトを作成する方法について説明します。 プロシージャは、記事で説明したようにランタイム クラス情報を使用して[クラス情報にアクセスする](../mfc/accessing-run-time-class-information.md)です。  
-  
-#### <a name="to-dynamically-create-an-object-given-its-run-time-class"></a>ランタイム クラスを指定してオブジェクトを動的に作成するには  
-  
-1.  使用してオブジェクトを動的に作成する次のコードを使用して、`CreateObject`の関数、`CRuntimeClass`です。 失敗した場合、なお`CreateObject`返します**NULL**例外を生成する代わりに。  
-  
-     [!code-cpp[NVC_MFCCObjectSample#6](../mfc/codesnippet/cpp/dynamic-object-creation_1.cpp)]  
-  
-## <a name="see-also"></a>関連項目  
- [CObject の使い方](../mfc/using-cobject.md)
+
+この記事では、実行時に動的にオブジェクトを作成する方法について説明します。 プロシージャ、情報の記事で説明したようにランタイム クラス情報を使用して[クラス情報にアクセスする](../mfc/accessing-run-time-class-information.md)します。
+
+#### <a name="to-dynamically-create-an-object-given-its-run-time-class"></a>ランタイム クラスを指定したオブジェクトを動的に作成するには
+
+1. 使用してオブジェクトを動的に作成する次のコードを使用して、`CreateObject`の関数、`CRuntimeClass`します。 失敗した場合、なお`CreateObject`返します**NULL**例外を発生させる代わりに。
+
+     [!code-cpp[NVC_MFCCObjectSample#6](../mfc/codesnippet/cpp/dynamic-object-creation_1.cpp)]
+
+## <a name="see-also"></a>関連項目
+
+[CObject の使い方](../mfc/using-cobject.md)
 

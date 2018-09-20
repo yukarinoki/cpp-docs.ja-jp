@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eedbc29b5012c3a4355178d0fbd83aad81e9cb95
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 006b6ce67182b698a1f6d0bb5d87d8165fba9cde
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680413"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406868"
 ---
 # <a name="x64-amd64-intrinsics-list"></a>x64 (amd64) 組み込み一覧
 
@@ -1282,6 +1282,6 @@ ms.locfileid: "43680413"
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)  
-[ARM 組み込み](../intrinsics/arm-intrinsics.md)  
-[x86 組み込み](../intrinsics/x86-intrinsics-list.md)    
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[ARM 組み込み](../intrinsics/arm-intrinsics.md)<br/>
+[x86 組み込み](../intrinsics/x86-intrinsics-list.md)

@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6fc8d8100786f78d516bb5f880e4238b7e3a2388
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d2dfcf61ced958519e7255bd241d3c0ea911824e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611865"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408922"
 ---
 # <a name="eventsource"></a>event_source
 
@@ -45,7 +45,7 @@ ms.locfileid: "42611865"
 
 ### <a name="parameters"></a>パラメーター
 
-*type*  
+*type*<br/>
 次の値のいずれかの列挙です。
 
 - アンマネージ C/C++ コード用の`native` (アンマネージ クラスの既定)。
@@ -58,10 +58,10 @@ ms.locfileid: "42611865"
     #include <atlcom.h>
     ```
 
-*optimize*  
+*optimize*<br/>
 ときに*型*は`native`を指定できます`optimize=size`は 4 バイトのストレージ (最小値) のすべてのイベント クラスで示すために、または`optimize=speed`(既定値) を 4 があることを示すために * (イベントの #) バイトのストレージ。
 
-*装飾します。*  
+*装飾します。*<br/>
 ときに*型*は`native`を指定できます`decorate=false`を結合 (.mrg) ファイルの拡張名が、外側のクラス名を含める必要がありますいないことを示しています。 [/Fx](../build/reference/fx-merge-injected-code.md) では、.mrg ファイルを生成できます。 `decorate=false`、既定値は、マージされたファイルで完全修飾型名します。
 
 ## <a name="remarks"></a>Remarks
@@ -88,9 +88,9 @@ ms.locfileid: "42611865"
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ属性](../windows/compiler-attributes.md)  
-[event_receiver](../windows/event-receiver.md)  
-[__event](../cpp/event.md)  
-[__hook](../cpp/hook.md)  
-[__unhook](../cpp/unhook.md)  
+[コンパイラ属性](../windows/compiler-attributes.md)<br/>
+[event_receiver](../windows/event-receiver.md)<br/>
+[__event](../cpp/event.md)<br/>
+[__hook](../cpp/hook.md)<br/>
+[__unhook](../cpp/unhook.md)<br/>
 [クラス属性](../windows/class-attributes.md)  
