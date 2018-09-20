@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c97ca07e06da3663dfd0a06a125f361b4e4dc591
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7e3de9b373a80ef939f5ac5ff3d746e0ebdc8b74
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758031"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405464"
 ---
 # <a name="using-cstring"></a>CString の使用
 
@@ -54,41 +54,41 @@ int main() {
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[CString の基本操作](../atl-mfc-shared/basic-cstring-operations.md)  
+[CString の基本操作](../atl-mfc-shared/basic-cstring-operations.md)<br/>
 C リテラル文字列からのオブジェクトの作成、`CString` 内の個々の文字へのアクセス、2 つのオブジェクトの連結、`CString` オブジェクトの比較など、`CString` の基本操作について説明します。
 
-[文字列データ管理](../atl-mfc-shared/string-data-management.md)  
+[文字列データ管理](../atl-mfc-shared/string-data-management.md)<br/>
 `CString` での Unicode と MBCS の使用について説明します。
 
-[CString セマンティクス](../atl-mfc-shared/cstring-semantics.md)  
+[CString セマンティクス](../atl-mfc-shared/cstring-semantics.md)<br/>
 `CString` オブジェクトの使用方法について説明します。
 
-[C スタイルの文字列に関連する CString の操作方法](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)  
+[C スタイルの文字列に関連する CString の操作方法](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
 C スタイルの null で終わる文字列のように `CString` オブジェクトの内容を操作する方法について説明します。
 
-[BSTR 用のメモリの割り当てと解放](../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)  
+[BSTR 用のメモリの割り当てと解放](../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)<br/>
 BSTR および COM オブジェクトのメモリの使用について説明します。
 
-[CString の例外の後処理](../atl-mfc-shared/cstring-exception-cleanup.md)  
+[CString の例外の後処理](../atl-mfc-shared/cstring-exception-cleanup.md)<br/>
 MFC 3.0 以降で明示的な後処理が不要になったことについて説明します。
 
-[CString 引数の渡し方](../atl-mfc-shared/cstring-argument-passing.md)  
+[CString 引数の渡し方](../atl-mfc-shared/cstring-argument-passing.md)<br/>
 CString オブジェクトを関数に渡す方法と関数から `CString` オブジェクトを返す方法について説明します。
 
-[Unicode とマルチバイト文字セット (MBCS: Multibyte Character Set) のサポート](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)  
+[Unicode とマルチバイト文字セット (MBCS: Multibyte Character Set) のサポート](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)<br/>
 MFC で Unicode と MBCS をサポートできるようにする方法について説明します。
 
 ## <a name="reference"></a>参照
 
-[CStringT](../atl-mfc-shared/reference/cstringt-class.md)  
+[CStringT](../atl-mfc-shared/reference/cstringt-class.md)<br/>
 `CStringT` クラスに関するリファレンス情報を提供します。
 
-[CSimpleStringT クラス](../atl-mfc-shared/reference/csimplestringt-class.md)  
+[CSimpleStringT クラス](../atl-mfc-shared/reference/csimplestringt-class.md)<br/>
 `CSimpleStringT` クラスに関するリファレンス情報を提供します。
 
 ## <a name="related-sections"></a>関連項目
 
-[文字列 (ATL と MFC)](../atl-mfc-shared/strings-atl-mfc.md)  
+[文字列 (ATL と MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 文字列データを管理する複数の方法について説明したトピックへのリンクが含まれています。
 
 [文字列 (ATL と MFC)](../atl-mfc-shared/strings-atl-mfc.md)

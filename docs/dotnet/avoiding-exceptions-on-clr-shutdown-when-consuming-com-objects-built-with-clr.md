@@ -1,5 +1,5 @@
 ---
-title: Clr で構築された COM オブジェクトによってスローされた例外の回避 |Microsoft ドキュメント
+title: -Clr で構築された COM オブジェクトによってスローされた例外の回避 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,17 +20,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0efd2af7eb4bf8a70bff983d627f802f1976c6ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 687585d0b25c64f5575646de3cd4823e0a89988e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103513"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408982"
 ---
 # <a name="avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr"></a>/clr で構築された COM オブジェクト使用時における CLR シャットダウンの例外の回避
-共通言語ランタイム (CLR) がシャット ダウン モードになると、ネイティブ関数には CLR サービスへのアクセスが制限されます。 COM オブジェクトをコンパイルしたに対して Release を呼び出すしようとするとき **/clr**、ネイティブ コードに遷移する CLR および iunknown::release 呼び出し (これは、マネージ コードで定義されている) に対応するマネージ コードに遷移の戻さです。 CLR では、シャット ダウン モードであるために、マネージ コードへのコールバックができなくなります。  
-  
- これを解決するには、リリースのメソッドから呼び出すデストラクターがネイティブ コードのみを含めることを確認します。  
-  
-## <a name="see-also"></a>関連項目  
- [混在 (ネイティブおよびマネージ) アセンブリ](../dotnet/mixed-native-and-managed-assemblies.md)
+
+シャット ダウン モードに入ると、共通言語ランタイム (CLR) とネイティブ関数には、CLR サービスへのアクセスが制限されます。 COM オブジェクトをコンパイルした Release を呼び出すしようとしています。 **/clr**、ネイティブ コードに CLR が遷移と遷移 (マネージ コードで定義) される:release 呼び出しに対応するマネージ コードに戻さします。 シャット ダウン モードにあるために、CLR はマネージ コードへのコールバックを防ぎます。
+
+これを解決するには、リリース メソッドから呼び出されるデストラクターがネイティブ コードだけを格納することを確認します。
+
+## <a name="see-also"></a>関連項目
+
+[混在 (ネイティブおよびマネージド) アセンブリ](../dotnet/mixed-native-and-managed-assemblies.md)

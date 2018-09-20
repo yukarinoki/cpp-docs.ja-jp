@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6976669127dca79be59b85efbd15273b0f580a1
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 08fc6f6a5b93851468d412e34b3ee0a85ab534e5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43132063"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413251"
 ---
 # <a name="dynamic-layout"></a>動的レイアウト
 
@@ -153,8 +153,8 @@ IDE では、リソース エディターで各コントロールの詳細を指
 
 ## <a name="see-also"></a>関連項目
 
-[CMFCDynamicLayout クラス](../mfc/reference/cmfcdynamiclayout-class.md)  
-[コントロール クラス](../mfc/control-classes.md)  
-[ダイアログ ボックス クラス](../mfc/dialog-box-classes.md)  
-[ダイアログ エディター](../windows/dialog-editor.md)  
+[CMFCDynamicLayout クラス](../mfc/reference/cmfcdynamiclayout-class.md)<br/>
+[コントロール クラス](../mfc/control-classes.md)<br/>
+[ダイアログ ボックス クラス](../mfc/dialog-box-classes.md)<br/>
+[ダイアログ エディター](../windows/dialog-editor.md)<br/>
 [Visual C 2015 の MFC のダイナミック ダイアログのレイアウト](https://mariusbancila.ro/blog/2015/07/27/dynamic-dialog-layout-for-mfc-in-visual-c-2015/)

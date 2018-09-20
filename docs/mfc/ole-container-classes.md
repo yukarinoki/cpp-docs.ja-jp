@@ -1,5 +1,5 @@
 ---
-title: OLE コンテナー クラス |Microsoft ドキュメント
+title: OLE コンテナー クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,42 +21,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f8214b2f40926cc4ab1471dce99ce5215362011
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: e17161340881bb53601bc04dce6f5e375f746b02
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930491"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404710"
 ---
 # <a name="ole-container-classes"></a>OLE コンテナー クラス
-これらのクラスは、コンテナー アプリケーションによって使用されます。 両方`COleLinkingDoc`と`COleDocument`のコレクションを管理`COleClientItem`オブジェクト。 ドキュメント クラスの派生ではなく`CDocument`から派生します`COleLinkingDoc`または`COleDocument`文書に埋め込まれているオブジェクトへのリンクでサポートが必要かどうかによって異なります。  
-  
- 使用して、`COleClientItem`別のドキュメントから埋め込むまたは別のドキュメントへのリンクは、ドキュメント内の各 OLE 項目を表すオブジェクト。  
-  
- [関数](../mfc/reference/coledocobjectitem-class.md)  
- Active ドキュメント コンテインメントをサポートしています。  
-  
- [COleDocument](../mfc/reference/coledocument-class.md)  
- 複合ドキュメントの実装、および基本的なコンテナー サポートに対して使用されます。 派生したクラスのコンテナーとして機能する`CDocItem`です。 このクラスは、文書化しの基本クラスは、コンテナーの基底クラスとして使用できる`COleServerDoc`です。  
-  
- [直接](../mfc/reference/colelinkingdoc-class.md)  
- 派生したクラス`COleDocument`をリンクするため、インフラストラクチャを提供します。 代わりにこのクラスから、コンテナー アプリケーションのドキュメント クラスを派生させる必要があります`COleDocument`埋め込みオブジェクトへのリンクをサポートするようにする場合。  
-  
- [CRichEditDoc](../mfc/reference/cricheditdoc-class.md)  
- リッチ エディット コントロールに含まれる OLE クライアント アイテムの一覧を保持します。 と共に使用[CRichEditView](../mfc/reference/cricheditview-class.md)と[CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)です。  
-  
- [CDocItem](../mfc/reference/cdocitem-class.md)  
- 抽象基本クラスの`COleClientItem`と`COleServerItem`です。 派生したクラスのオブジェクトを`CDocItem`文書の一部を表します。  
-  
- [COleClientItem](../mfc/reference/coleclientitem-class.md)  
- 埋め込みまたはリンクされている OLE アイテムへの接続のクライアント側を表すクライアント アイテム クラスです。 クライアント アイテムは、このクラスから派生します。  
-  
- [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)  
- クライアント側のアクセスは、項目で使用する場合は、リッチ エディット コントロールに格納されている OLE`CRichEditView`と`CRichEditDoc`です。  
-  
- [COleException](../mfc/reference/coleexception-class.md)  
- OLE の処理中のエラーによる例外。 このクラスは、コンテナーとサーバーの両方で使用されます。  
-  
-## <a name="see-also"></a>関連項目  
- [クラスの概要](../mfc/class-library-overview.md)
+
+これらのクラスは、コンテナーのアプリケーションによって使用されます。 両方`COleLinkingDoc`と`COleDocument`のコレクションを管理`COleClientItem`オブジェクト。 ドキュメント クラスから派生するのではなく`CDocument`から派生します`COleLinkingDoc`または`COleDocument`ドキュメントに埋め込まれたオブジェクトへのリンクのサポートが必要かどうかによって異なります。
+
+使用して、`COleClientItem`をドキュメント別のドキュメントからに埋め込まれたか、別のドキュメントへのリンクの各 OLE 項目を表すオブジェクト。
+
+[COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md)<br/>
+Active ドキュメント コンテインメントをサポートしています。
+
+[COleDocument](../mfc/reference/coledocument-class.md)<br/>
+基本的なコンテナーのサポートだけでなく、複合ドキュメントの実装に使用されます。 派生したクラスのコンテナーとして機能します`CDocItem`します。 このクラスは、文書化しの基本クラスは、コンテナーの基底クラスとして使用できます`COleServerDoc`します。
+
+[COleLinkingDoc](../mfc/reference/colelinkingdoc-class.md)<br/>
+派生したクラス`COleDocument`をリンクするため、インフラストラクチャを提供します。 代わりにこのクラスから、コンテナー アプリケーションのドキュメント クラスを派生する必要があります`COleDocument`埋め込みオブジェクトへのリンクをサポートするためにしたい場合。
+
+[CRichEditDoc](../mfc/reference/cricheditdoc-class.md)<br/>
+リッチ エディット コントロールに含まれる OLE クライアント アイテムの一覧を保持します。 併用[CRichEditView](../mfc/reference/cricheditview-class.md)と[CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)します。
+
+[CDocItem](../mfc/reference/cdocitem-class.md)<br/>
+抽象基本クラスの`COleClientItem`と`COleServerItem`します。 派生したクラスのオブジェクトを`CDocItem`文書の一部を表します。
+
+[COleClientItem](../mfc/reference/coleclientitem-class.md)<br/>
+埋め込みまたはリンクされている OLE アイテムへの接続のクライアント側を表すクライアント項目クラス。 クライアント アイテムは、このクラスから派生します。
+
+[CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)<br/>
+Ole 項目で使用する場合は、リッチ エディット コントロールに格納されているクライアント側のアクセスを提供します。`CRichEditView`と`CRichEditDoc`します。
+
+[COleException](../mfc/reference/coleexception-class.md)<br/>
+OLE の処理中のエラーによる例外。 このクラスは、コンテナーとサーバーの両方で使用されます。
+
+## <a name="see-also"></a>関連項目
+
+[クラスの概要](../mfc/class-library-overview.md)
 

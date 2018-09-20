@@ -1,5 +1,5 @@
 ---
-title: 内部クラス |Microsoft ドキュメント
+title: 内部クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -317,107 +317,109 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f7d1ef39a80ce8a06cef14ad227c7de54163644
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fc2a7d2d51a66742794d0a58da19e77463318fc7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372548"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411730"
 ---
 # <a name="internal-classes"></a>内部クラス
-次のクラスは、MFC で内部的に使用されます。 完全を期すために、このセクションではこれらの内部クラスについて説明しますが、コードで直接使用するためのものではありません。  
-  
-## <a name="in-this-section"></a>このセクションの内容  
-  
-|クラス|説明|  
-|-----------|-----------------|  
-|`CCommandManager Class`|`CCommandManager`クラスは、コマンドとイメージとの関連付けを管理します。|  
-|`CDialogImpl Class (MFC)`|など、ダイアログ ボックスを使用したクラスに実装の詳細を提供`CDialogEx`です。|  
-|`CDocumentAdapter Class`|IDocument インターフェイスを実装するために必要な検索と整理のハンドラー。|  
-|`CFrameImpl Class`|`CFrameImpl`クラスは、次のフレーム ウィンドウ クラスにツールバーのカスタマイズを処理します[CFrameWndEx クラス](../../mfc/reference/cframewndex-class.md)、 [CMDIFrameWndEx クラス](../../mfc/reference/cmdiframewndex-class.md)、および[COleIPFrameWndEx クラス](../../mfc/reference/coleipframewndex-class.md)。|  
-|`CFullScreenImpl Class`|全画面表示機能を実装 SDI と MDI アプリケーションに共通します。|  
-|`CMDIClientAreaWnd Class`|`CMDIClientAreaWnd`クラスは、ヘルパー クラスを MDI タブおよび MDI タブ付きグループの実装を簡略化します。|  
-|`CMemDC Class`|メモリ デバイス コンテキストのヘルパー クラスです。 メモリ デバイス コンテキストでは、画面外の描画をサポートします。|  
-|`CMenuHash Class`|状態を読み取ります`CMFCToolBar`アーカイブからのオブジェクトまたは状態をアーカイブに書き込みます。|  
-|`CMenuImages Class`|閉じるボタンなどの定義済みのイメージ、ボタン、オプション ボタンの矢印を最大化する機能を提供します。|  
-|`CMFCCaptionButtonEx Class`|システム キャプション ボタンの非クライアント領域を保持します。|  
-|`CMFCCaptionMenuButton Class`|作業ウィンドウまたはツールバーのキャプション領域に配置されているメニュー ボタンを表します。|  
-|`CMFCColorPropertySheet Class`|によって使用される[CMFCColorDialog クラス](../../mfc/reference/cmfccolordialog-class.md)をタブ付きダイアログ ボックスを提供します。|  
-|`CMFCControlBarImpl Class`|コントロール バー ベースのクラスをなどに実装の詳細を提供`CMFCReBar`と`CMFCToolBar`です。|  
-|`CMFCControlRenderer Class`|イメージの表示を処理するヘルパー クラスです。|  
-|`CMFCControlRendererInfo Class`|パラメーターを渡すためのヘルパー クラス`CMFCControlRenderer`クラスです。|  
-|`CMFCCustomizeButton Class`|メニュー コマンドまたはツールバーのボタンのカスタマイズダイアログ ボックスを起動をサポートしています。|  
-|`CMFCCustomizeMenuButton Class`|[カスタマイズ] メニューの 1 つのボタンを表します。|  
-|`CMFCDropDownListBox Class`|リボンのコンボ ボックスにドロップダウン リスト ボックスの機能を提供します。|  
-|`CMFCMousePropertyPage Class`|プロパティのページで、マウスの動作をカスタマイズすることができます。|  
-|`CMFCOutlookBarPaneAdapter Class`||  
-|`CMFCOutlookBarPaneButton Class`|フレームワークを追加するボタンを実装する`CMFCOutlookBarPane`オブジェクト。|  
-|`CMFCOutlookBarPaneList Class`|拡張、 `CMFCOutlookBarPane` Outlook visual スタイルを提供するクラス。|  
-|`CMFCOutlookBarScrollButton Class`|スクロールする機能を提供、`CMFCOutlookBarTabCtrl`クラスです。|  
-|`CMFCOutlookBarToolBar Class`|Outlook 2003 visual スタイルがツールバーを実装します。|  
-|`CMFCPropertySheetCategoryInfo Class`|ツリー コントロールでノードを表します。|  
-|`CMFCPropertySheetTabCtrl Class`|拡張、`CMFCTabCtrl`プロパティ シートの機能を提供するクラス。|  
-|`CMFCProperySheetListBox Class`|拡張、`CListBox`プロパティ シートの機能を提供するクラス。|  
-|`CMFCReBarState Class`||  
-|`CMFCRibbonCaptionButton Class`|キャプション [システム] ボタンを実装します。|  
-|`CMFCRibbonCmdUI Class`|リボン バーを更新、アプリケーションがアイドル状態のときに、必要に応じて。|  
-|`CMFCRibbonCommandsListBox Class`||  
-|`CMFCRibbonDefaultPanelButton Class`||  
-|`CMFCRibbonGalleryIcon Class`|内の項目を表す、`CMFCRibbonGallery`オブジェクト。|  
-|`CMFCRibbonKeyboardCustomizeDialog Class`|リボン バーを含むアプリケーションでキーボードのカスタマイズ ダイアログ ボックスを実装します。|  
-|`CMFCRibbonKeyTip Class`|リボン バーのキー ヒントを表示するポップアップ ウィンドウを実装します。|  
-|`CMFCRibbonPanelMenu Class`||  
-|`CMFCRibbonPanelMenuBar Class`|リボン バーのポップアップ メニュー バーを表します。|  
-|`CMFCRibbonQuickAccessToolBar Class`|リボン要素のクイック アクセス ツールバーを実装します。|  
-|`CMFCRibbonRichEditCtrl Class`|リボン バーに配置されるエディット コントロールを実装します。|  
-|`CMFCRibbonTab Class`|リボン バーのタブを表します。|  
-|`CMFCShadowRenderer Class`||  
-|`CMFCShowAllButton Class`|展開を非表示のコマンドを表示するポップアップ メニューの下部にあるボタンを表します。|  
-|`CMFCStatusBarPaneInfo Class`|外観と内容について説明します、`CMFCStatusBar`ウィンドウです。|  
-|`CMFCTabButton Class`|タブ コントロールにタブ ボタンの機能を提供します。|  
-|`CMFCTabInfo Class`|タブ コントロールの概要についてを説明します。|  
-|`CMFCTasksPaneFrameWnd Class`|作業ウィンドウのキャプションのカスタム ボタンを管理します。|  
-|`CMFCTasksPanePropertyPage Class`|間のリレーションシップの管理、`CMFCTasksPane`オブジェクトとその名前。|  
-|`CMFCTasksPaneToolBar Class`|上部にあるナビゲーション ツールバーを実装する`CMFCTasksPane`オブジェクト。|  
-|`CMFCToolBarButtonsListButton Class`|カスタマイズ中に、ユーザーが選択できるイメージの一覧を表示、**ボタンの外観** ダイアログ ボックス。|  
-|`CMFCToolBarDateTimeCtrlImpl Class`|実装のドロップ ソース`CMFCToolBar`オブジェクト。|  
-|`CMFCToolBarDropSource Class`|実装のドロップ ソース`CMFCToolBar`オブジェクト。|  
-|`CMFCToolBarDropTarget Class`|ドロップ ターゲットを実装して`CMFCToolBar`オブジェクト。|  
-|`CMFCToolBarEditCtrl Class`|編集するコントロール機能を提供`CMFCToolBarEditBoxButton`オブジェクト。|  
-|`CMFCToolBarMenuButtonsButton Class`|メニュー バーの右側にあるシステム キャプション ボタンを表します。|  
-|`CMFCToolBarNameDialog Class`|ユーザーが新しいツールバーのタイトルを指定できるダイアログ ボックスを表します。|  
-|`CMFCToolBarsCommandsListBox Class`|ツール バー コマンドの一覧を含むリスト ボックスを表します。|  
-|`CMFCToolBarsCommandsPropertyPage Class`|[プロパティ] ページには、コマンドのカスタマイズを実装します。|  
-|`CMFCToolBarsKeyboardPropertyPage Class`||  
-|`CMFCToolBarsListCheckBox Class`|ツールバーの一覧を表示、**ツールバー**のページ、**カスタマイズ** ダイアログ ボックス。|  
-|`CMFCToolBarsListPropertyPage Class`|ツールバーの一覧を表示するプロパティ ページを表す、**カスタマイズ** ダイアログ ボックス。|  
-|`CMFCToolBarsMenuPropertyPage Class`|メニューのカスタマイズ オプションを含むプロパティ ページを表す、**カスタマイズ** ダイアログ ボックス。|  
-|`CMFCToolBarsOptionsPropertyPage Class`|表す、**オプション** ページで、**カスタマイズ** ダイアログ ボックス。|  
-|`CMFCToolBarSpinEditBoxButton Class`|編集ボックスにあるスピン ボタンを表します。|  
-|`CMFCToolBarsToolsPropertyPage Class`|ユーザーがユーザー ツールをカスタマイズできるようにするプロパティ ページを表します。|  
-|`CMFCToolBarSystemMenuButton Class`|ユーザーが MDI 子ウィンドウを最大化するときに、フレームワークがメイン メニュー バーに追加システム キャプション ボタンを実装します。|  
-|`CMFCVisualManagerBitmapCache Class`|管理`CMFCControlRenderer`ビットマップでの操作のパフォーマンスを向上させるオブジェクトです。|  
-|`CMultiDocTemplateEx Class`|拡張、`CMultiDocTemplate`メニュー リソース ID にアクセスできるようにするクラス|  
-|`COleCntrFrameWndEx Class`||  
-|`COleDocIPFrameWndEx Class`|OLE サポートを提供します。|  
-|`COleServerDocEx Class`|OLE サーバー ドキュメントに対する操作を提供します。|  
-|`CPaneContainerGC Class`||  
-|`CPngImage Class`|.Png ファイル形式を使用するイメージ リソースへのアクセスを提供します。|  
-|`CPreviewViewEx Class`||  
-|`CRecentPaneContainerInfo Class`|ドッキング ウィンドウの以前の状態を保持します。|  
-|`CRibbonCategoryScroll Class`|すべての要素がリボン バーの領域に収まらないときに表示されるスクロール ボタンを実装します。|  
-|`CSmartDockingGroupGuide Class`|スマート ドッキングのグループのサーバーの全体の要素を表します。|  
-|`CSmartDockingGroupGuidesManager Class`|スマート ドッキング グループ ガイドを管理します。|  
-|`CSmartDockingGroupGuidesWnd Class`|スマート ドッキング ガイドの中央のグループを表示するために、フレームワークを使用して、階層化された四角形以外のウィンドウを実装します。|  
-|`CSmartDockingHighlighterWnd Class`|半透明のウィンドウがドッキングされているペインのドッキング可能なオブジェクトによって占有される領域をカバーするを実装します。|  
-|`CSmartDockingManager Class`|スマート ドッキングする機能を提供`CDockingManager`オブジェクト。|  
-|`CSmartDockingStandaloneGuide Class`|スマート ドッキングのガイドを実装します。|  
-|`CSmartDockingStandaloneGuideWnd Class`|スマート ドッキングのガイドを表示するために、フレームワークを使用して、階層化された四角形以外のウィンドウを実装します。|  
-|`CTagManager Class`|`CTagManager`クラスは XML タグが付けられた形式で格納されている値を読み取るためのものです。|  
-|`CVSListBoxBase Class`|基本的な機能を提供、`CVSListBox`クラスです。|  
-|`CVSListBoxEditCtrl Class`|ダイアログ ボックスが表示される小さなボタンを表示することによって、標準のリスト ボックス編集コントロールを拡張します。|  
-|`CVSToolsListBox Class`|追加のボタンを追加、削除、およびリスト ボックスでアイテムを移動することにより、標準のリスト ボックス コントロールを拡張します。|  
-  
-## <a name="see-also"></a>関連項目  
- [MFC デスクトップ アプリケーション](../../mfc/mfc-desktop-applications.md)
+
+次のクラスは、MFC で内部的に使用されます。 完全を期すために、このセクションではこれらの内部クラスについて説明しますが、コードで直接使用するためのものではありません。
+
+## <a name="in-this-section"></a>このセクションの内容
+
+|クラス|説明|
+|-----------|-----------------|
+|`CCommandManager Class`|`CCommandManager`クラスは、コマンドとイメージとの関連付けを管理します。|
+|`CDialogImpl Class (MFC)`|などのダイアログ ボックスを使用したクラスに実装の詳細を提供します。`CDialogEx`します。|
+|`CDocumentAdapter Class`|検索と整理ハンドラーに必要な IDocument インターフェイスを実装します。|
+|`CFrameImpl Class`|`CFrameImpl`クラスは、次のフレーム ウィンドウ クラスにツールバーのカスタマイズを処理します[CFrameWndEx クラス](../../mfc/reference/cframewndex-class.md)、 [CMDIFrameWndEx クラス](../../mfc/reference/cmdiframewndex-class.md)、および[COleIPFrameWndEx クラス](../../mfc/reference/coleipframewndex-class.md)。|
+|`CFullScreenImpl Class`|実装は SDI と MDI アプリケーションに共通の機能の全画面表示に対応します。|
+|`CMDIClientAreaWnd Class`|`CMDIClientAreaWnd`クラスは MDI タブと MDI タブ付きグループの実装を簡素化するヘルパー クラスです。|
+|`CMemDC Class`|メモリ デバイス コンテキストのヘルパー クラスです。 メモリ デバイス コンテキストでは、オフスクリーン描画をサポートします。|
+|`CMenuHash Class`|状態を読み取る`CMFCToolBar`アーカイブからオブジェクトまたは状態をアーカイブに書き込みます。|
+|`CMenuImages Class`|閉じるボタンなどの定義済みのイメージを表示するのには、ボタン、オプション ボタン、矢印を最大化機能を提供します。|
+|`CMFCCaptionButtonEx Class`|システムのキャプション ボタンの非クライアント領域を保持します。|
+|`CMFCCaptionMenuButton Class`|作業ウィンドウまたはツール バーのキャプション領域にあるメニュー ボタンを表します。|
+|`CMFCColorPropertySheet Class`|使用される[CMFCColorDialog クラス](../../mfc/reference/cmfccolordialog-class.md)をタブ付きダイアログ ボックスを提供します。|
+|`CMFCControlBarImpl Class`|実装の詳細などバー ベースのクラスを制御する`CMFCReBar`と`CMFCToolBar`します。|
+|`CMFCControlRenderer Class`|イメージのレンダリングを処理するヘルパー クラスです。|
+|`CMFCControlRendererInfo Class`|パラメーターを渡すためのヘルパー クラス`CMFCControlRenderer`クラス。|
+|`CMFCCustomizeButton Class`|メニュー コマンドまたはツールバーのボタンのカスタマイズダイアログ ボックスを起動をサポートしています。|
+|`CMFCCustomizeMenuButton Class`|[カスタマイズ] メニューの 1 つのボタンを表します。|
+|`CMFCDropDownListBox Class`|リボンのコンボ ボックスにドロップダウン リスト ボックスの機能を提供します。|
+|`CMFCMousePropertyPage Class`|ユーザーがマウスの動作をカスタマイズできるように、プロパティ ページ。|
+|`CMFCOutlookBarPaneAdapter Class`||
+|`CMFCOutlookBarPaneButton Class`|フレームワークに追加するボタンを実装する`CMFCOutlookBarPane`オブジェクト。|
+|`CMFCOutlookBarPaneList Class`|拡張、 `CMFCOutlookBarPane` Outlook visual スタイルを提供するクラス。|
+|`CMFCOutlookBarScrollButton Class`|スクロール機能を提供します、`CMFCOutlookBarTabCtrl`クラス。|
+|`CMFCOutlookBarToolBar Class`|Outlook 2003 の visual スタイルがツールバーを実装します。|
+|`CMFCPropertySheetCategoryInfo Class`|ツリー コントロールでノードを表します。|
+|`CMFCPropertySheetTabCtrl Class`|拡張、`CMFCTabCtrl`プロパティ シートの機能を提供するクラス。|
+|`CMFCProperySheetListBox Class`|拡張、`CListBox`プロパティ シートの機能を提供するクラス。|
+|`CMFCReBarState Class`||
+|`CMFCRibbonCaptionButton Class`|システムのキャプション ボタンを実装します。|
+|`CMFCRibbonCmdUI Class`|更新プログラムは、アプリケーションがアイドル状態のときに、必要に応じてリボン バー。|
+|`CMFCRibbonCommandsListBox Class`||
+|`CMFCRibbonDefaultPanelButton Class`||
+|`CMFCRibbonGalleryIcon Class`|内の項目を表す、`CMFCRibbonGallery`オブジェクト。|
+|`CMFCRibbonKeyboardCustomizeDialog Class`|リボン バーを含むアプリケーションでキーボードのカスタマイズ ダイアログ ボックスを実装します。|
+|`CMFCRibbonKeyTip Class`|リボン バーのキー ヒントを表示するポップアップ ウィンドウを実装します。|
+|`CMFCRibbonPanelMenu Class`||
+|`CMFCRibbonPanelMenuBar Class`|リボン バーで、ポップアップ メニュー バーを表します。|
+|`CMFCRibbonQuickAccessToolBar Class`|リボン要素のクイック アクセス ツールバーを実装します。|
+|`CMFCRibbonRichEditCtrl Class`|リボン バー上にある編集コントロールを実装します。|
+|`CMFCRibbonTab Class`|リボン バーのタブを表します。|
+|`CMFCShadowRenderer Class`||
+|`CMFCShowAllButton Class`|展開を非表示のコマンドを表示するポップアップ メニューの下部にあるボタンを表します。|
+|`CMFCStatusBarPaneInfo Class`|コンテンツの外観を説明します、`CMFCStatusBar`ウィンドウ。|
+|`CMFCTabButton Class`|タブ コントロールにタブ ボタンの機能を提供します。|
+|`CMFCTabInfo Class`|タブ コントロールに関する情報を提供します。|
+|`CMFCTasksPaneFrameWnd Class`|カスタム キャプション ボタンのタスク ウィンドウを管理します。|
+|`CMFCTasksPanePropertyPage Class`|間の関係の管理、`CMFCTasksPane`オブジェクトとその名前。|
+|`CMFCTasksPaneToolBar Class`|上部にあるナビゲーション ツールバーを実装する`CMFCTasksPane`オブジェクト。|
+|`CMFCToolBarButtonsListButton Class`|カスタマイズするときに、ユーザーが選択できるイメージの一覧が表示されます、**ボタンの外観** ダイアログ ボックス。|
+|`CMFCToolBarDateTimeCtrlImpl Class`|実装のドロップ ソース`CMFCToolBar`オブジェクト。|
+|`CMFCToolBarDropSource Class`|実装のドロップ ソース`CMFCToolBar`オブジェクト。|
+|`CMFCToolBarDropTarget Class`|実装のドロップ ターゲット`CMFCToolBar`オブジェクト。|
+|`CMFCToolBarEditCtrl Class`|編集コントロールの機能を提供します`CMFCToolBarEditBoxButton`オブジェクト。|
+|`CMFCToolBarMenuButtonsButton Class`|メニュー バーの右側にあるシステム キャプション ボタンを表します。|
+|`CMFCToolBarNameDialog Class`|ユーザーがツールバーの新しいキャプションを指定できるダイアログ ボックスを表します。|
+|`CMFCToolBarsCommandsListBox Class`|ツール バー コマンドの一覧を含むリスト ボックスを表します。|
+|`CMFCToolBarsCommandsPropertyPage Class`|[プロパティ] ページには、コマンドのカスタマイズを実装します。|
+|`CMFCToolBarsKeyboardPropertyPage Class`||
+|`CMFCToolBarsListCheckBox Class`|上のツールバーの一覧を表示、**ツールバー**のページ、**カスタマイズ** ダイアログ ボックス。|
+|`CMFCToolBarsListPropertyPage Class`|ツールバーの一覧を表示するプロパティ ページを表す、**カスタマイズ** ダイアログ ボックス。|
+|`CMFCToolBarsMenuPropertyPage Class`|メニューのカスタマイズ オプションを含むプロパティ ページを表す、**カスタマイズ** ダイアログ ボックス。|
+|`CMFCToolBarsOptionsPropertyPage Class`|表す、**オプション**ページで、**カスタマイズ** ダイアログ ボックス。|
+|`CMFCToolBarSpinEditBoxButton Class`|編集ボックスにあるスピン ボタンを表します。|
+|`CMFCToolBarsToolsPropertyPage Class`|ユーザー ツールをカスタマイズするユーザーを許可するプロパティ ページを表します。|
+|`CMFCToolBarSystemMenuButton Class`|ユーザーが MDI 子ウィンドウを最大化するときに、フレームワークが、メイン メニュー バーに追加するシステム キャプション ボタンを実装します。|
+|`CMFCVisualManagerBitmapCache Class`|管理`CMFCControlRenderer`ビットマップでの操作のパフォーマンスを向上させるオブジェクト。|
+|`CMultiDocTemplateEx Class`|拡張、 `CMultiDocTemplate` ] メニューの [リソース id ですにアクセスを提供するクラス。|
+|`COleCntrFrameWndEx Class`||
+|`COleDocIPFrameWndEx Class`|OLE サポートを提供します。|
+|`COleServerDocEx Class`|OLE サーバー ドキュメントの操作を提供します。|
+|`CPaneContainerGC Class`||
+|`CPngImage Class`|.Png ファイル形式を使用するイメージのリソースへのアクセスを提供します。|
+|`CPreviewViewEx Class`||
+|`CRecentPaneContainerInfo Class`|ドッキング ペインの以前の状態を保持します。|
+|`CRibbonCategoryScroll Class`|すべての要素は、リボン バーの領域に合わせていないときに表示されるスクロール ボタンを実装します。|
+|`CSmartDockingGroupGuide Class`|スマート ドッキングのグループのサーバーの全体の要素を表します。|
+|`CSmartDockingGroupGuidesManager Class`|グループのスマート ドッキング ガイドを管理します。|
+|`CSmartDockingGroupGuidesWnd Class`|スマート ドッキング ガイドの中央のグループを表示するために、フレームワークを使用する四角形以外のレイヤード ウィンドウを実装します。|
+|`CSmartDockingHighlighterWnd Class`|ドッキングされるウィンドウのドッキング可能なオブジェクトによって占有される領域をカバーする半透明のウィンドウを実装します。|
+|`CSmartDockingManager Class`|スマート ドッキングの機能を提供します`CDockingManager`オブジェクト。|
+|`CSmartDockingStandaloneGuide Class`|スマート ドッキング ガイドを実装します。|
+|`CSmartDockingStandaloneGuideWnd Class`|フレームワークを使用してスマート ドッキング ガイドを表示する四角形以外のレイヤード ウィンドウを実装します。|
+|`CTagManager Class`|`CTagManager`クラスは XML タグが付けられた形式で格納されている値を読み取るためのものです。|
+|`CVSListBoxBase Class`|基本的な機能を提供します、`CVSListBox`クラス。|
+|`CVSListBoxEditCtrl Class`|ダイアログ ボックスが表示された小さいボタンを表示することで、標準のリスト ボックス編集コントロールを拡張します。|
+|`CVSToolsListBox Class`|その他のボタンを追加、削除、およびリスト ボックス アイテムの移動を提供することで、標準的なリスト ボックス コントロールを拡張します。|
+
+## <a name="see-also"></a>関連項目
+
+[MFC デスクトップ アプリケーション](../../mfc/mfc-desktop-applications.md)
 

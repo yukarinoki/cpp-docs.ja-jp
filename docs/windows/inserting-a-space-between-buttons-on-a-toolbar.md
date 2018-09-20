@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 09086ea214bcf2abd9708f8abcee4f9f5f376994
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: c4c205d6f800682cb67749a73f57b1c35d03de61
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313417"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46397456"
 ---
 # <a name="inserting-a-space-between-buttons-on-a-toolbar-c"></a>ツールバーのボタン (C++) の間にスペースを挿入します。
 
@@ -47,5 +47,5 @@ MFC または ATL
 
 ## <a name="see-also"></a>関連項目
 
-[ツール バー ボタンの作成、移動、および編集](../windows/creating-moving-and-editing-toolbar-buttons.md)  
+[ツール バー ボタンの作成、移動、および編集](../windows/creating-moving-and-editing-toolbar-buttons.md)<br/>
 [ツール バー エディター](../windows/toolbar-editor.md)

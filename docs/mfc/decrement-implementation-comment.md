@@ -1,5 +1,5 @@
 ---
-title: --Implementation コメント |Microsoft ドキュメント
+title: --Implementation コメント |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89f87c33abfec7b9d055b589726639fcd741e59d
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 874c7eb29f1908e6098ee4a9095f17a4dae00006
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930275"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402123"
 ---
 # <a name="-implementation-comment"></a>// Implementation コメント
-`// Implementation`セクションは、任意の MFC クラス宣言の最も重要な部分です。  
-  
- このセクションでは、すべての実装の詳細を格納します。 メンバー変数とメンバー関数の両方が、このセクションに表示できます。 MFC の将来のリリースで変更があるこの行の下のすべてのものでした。 これを回避できない場合を除き、以下の詳細に依存する必要がありますしないして、`// Implementation`行です。 さらに、実装行以下に宣言されたメンバーは記載いないが、何らかの実装は、テクニカル ノートで説明します。 仮想関数のオーバーライド、基底クラスでは、セクションに関係なく、基底クラス関数が定義されて、関数が基底クラスの実装をオーバーライドするファクトは、実装の詳細と見なされるため、このセクションに存在します。 通常、これらのメンバーは保護されて、常にではありません。  
-  
- 注意してください、`CStdioFile`下にあるを一覧表示する[のコメントの例](../mfc/an-example-of-the-comments.md)メンバーが以下に宣言された、`// Implementation`コメントとして宣言することは**パブリック**、 **の保護**、または**プライベート**です。 だけ、今後変わる可能性があるために、これらのメンバーを注意が必要を使用する必要があります。 グループのメンバーとしてを宣言する**パブリック**正常に機能するクラス ライブラリの実装に必要な場合があります。 ただし、これはいないというように宣言されているメンバーを安全に使用可能性があります。  
-  
+
+`// Implementation`セクションは、任意の MFC クラス宣言の最も重要な部分です。
+
+このセクションでは、すべての実装の詳細を格納します。 メンバー変数とメンバー関数は、このセクションに表示できます。 MFC の将来のリリースで変更があるこの行の下のすべてのものでした。 以下の詳細に依存する必要がありますしない限り、これを回避することはできません、`// Implementation`行。 さらに、実装行の下に宣言されたメンバーは記載いないが、いくつかの実装は、テクニカル ノートで説明します。 基本クラスの仮想関数のオーバーライドは、どのセクションに関係なく、基底クラスの関数が、定義関数が基底クラスの実装をオーバーライドするという事実は、実装の詳細と見なされるため、このセクションに存在します。 通常、これらのメンバーが保護されているとは限りません。
+
+注意してください、`CStdioFile`リスト[コメントの例](../mfc/an-example-of-the-comments.md)以下の宣言されたメンバー、`// Implementation`コメントとして宣言することがあります**パブリック**、 **を保護**、または**プライベート**します。 今後変更される可能性があるため、慎重にこれらのメンバーを使用する必要がありますのみ。 メンバーとしてのグループを宣言する**パブリック**正常に機能するクラス ライブラリの実装に必要な場合があります。 ただし、これは限りませんように宣言されたメンバーを安全に使用可能性があります。
+
 > [!NOTE]
->  上または下に、残りの種類のコメントを見つけることがあります、`// Implementation`コメントです。 どちらの場合は、その下で宣言されたメンバーの種類、について説明します。 次に出現する場合、`// Implementation`コメントの追加、メンバーが将来的に MFC のバージョンで変更があると想定する必要があります。  
-  
-## <a name="see-also"></a>関連項目  
- [MFC ソース ファイルを使用します。](../mfc/using-the-mfc-source-files.md)   
- [コメントの例](../mfc/an-example-of-the-comments.md)   
- [//Constructors コメント](../mfc/decrement-constructors-comment.md)   
- [//Attributes コメント](../mfc/decrement-attributes-comment.md)   
- [//Operations コメント](../mfc/decrement-operations-comment.md)   
- [//Overridables コメント](../mfc/decrement-overridables-comment.md)
+>  残りの種類の上または下のコメントを見つけることがあります、`// Implementation`コメント。 どちらの場合は、その下に宣言されたメンバーの種類がについて説明します。 次に出現する場合、`// Implementation`コメントの追加、メンバーがで将来のバージョンの MFC で変更される可能性を想定してください。
+
+## <a name="see-also"></a>関連項目
+
+[MFC ソース ファイルの利用](../mfc/using-the-mfc-source-files.md)<br/>
+[コメントの例](../mfc/an-example-of-the-comments.md)<br/>
+[//Constructors コメント](../mfc/decrement-constructors-comment.md)<br/>
+[//Attributes コメント](../mfc/decrement-attributes-comment.md)<br/>
+[//Operations コメント](../mfc/decrement-operations-comment.md)<br/>
+[//Overridables コメント](../mfc/decrement-overridables-comment.md)
 

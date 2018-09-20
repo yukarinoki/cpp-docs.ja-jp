@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3eb82c5c86411af63ea79a4dbcf2e54d2d3ce5f5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: aba3fc80e13504485cc5a4f93fb3ad35031d4ef7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46038309"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440044"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>チュートリアル: WRL および Media Foundation を使用して UWP アプリの作成
 
@@ -131,6 +131,6 @@ Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用�
 
 ## <a name="see-also"></a>関連項目
 
-[Windows ランタイム C++ テンプレート ライブラリ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)  
-[Microsoft メディア ファンデーション](/windows/desktop/medfound/microsoft-media-foundation-sdk)  
+[Windows ランタイム C++ テンプレート ライブラリ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)<br/>
+[Microsoft メディア ファンデーション](/windows/desktop/medfound/microsoft-media-foundation-sdk)<br/>
 [メディア拡張機能サンプル](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)

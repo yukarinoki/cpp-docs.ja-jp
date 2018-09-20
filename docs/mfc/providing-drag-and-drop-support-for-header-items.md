@@ -1,5 +1,5 @@
 ---
-title: ヘッダー項目に対するドラッグ アンド ドロップのサポートを提供する |Microsoft ドキュメント
+title: ヘッダー項目に対するドラッグ アンド ドロップのサポート |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bf21021e204a6caf298453bab42db2aedff409c
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: b2eaa5040d34a442868a8fa6cb9f2aae08b0a6f3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928421"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407700"
 ---
 # <a name="providing-drag-and-drop-support-for-header-items"></a>ヘッダー項目に対するドラッグ アンド ドロップのサポート
-ヘッダー項目に対するドラッグ アンド ドロップのサポートを提供するには、HDS_DRAGDROP 形式を指定します。 ヘッダー項目に対するドラッグ アンド ドロップのサポートは、ヘッダー コントロールのヘッダー項目の順序を変更する機能をユーザーに与えます。 既定の動作は、ヘッダー項目が削除された場合、ドラッグされているヘッダー項目の半透明のドラッグ イメージと、新しい位置の視覚インジケーターを提供します。  
-  
- 一般的なドラッグ アンド ドロップ機能により、としてに HDN_BEGINDRAG および HDN_ENDDRAG の通知を処理することによって既定のドラッグ アンド ドロップの動作を拡張できます。 オーバーライドすることで、ドラッグ イメージの外観をカスタマイズすることも、 [CHeaderCtrl::CreateDragImage](../mfc/reference/cheaderctrl-class.md#createdragimage)メンバー関数。  
-  
+
+ヘッダー項目に対するドラッグ アンド ドロップのサポートを提供するには、HDS_DRAGDROP 形式を指定します。 ヘッダー項目に対するドラッグ アンド ドロップのサポートにより、ユーザーは、ヘッダー コントロールのヘッダー項目の順序を変更できます。 既定の動作は、ヘッダー項目が削除された場合、ドラッグされているヘッダー項目の半透明のドラッグ イメージと、新しい位置のビジュアル インジケーターを提供します。
+
+共通のドラッグ アンド ドロップ機能を備えたとしてに HDN_BEGINDRAG と HDN_ENDDRAG 通知を処理することによって既定のドラッグ アンド ドロップ動作を拡張できます。 オーバーライドすることで、ドラッグのイメージの外観をカスタマイズすることも、 [CHeaderCtrl::CreateDragImage](../mfc/reference/cheaderctrl-class.md#createdragimage)メンバー関数。
+
 > [!NOTE]
->  埋め込みヘッダー内のコントロール リスト コントロールをドラッグ アンド ドロップのサポートを提供する場合は、拡張スタイル」を参照してください、[リスト コントロール スタイルの変更](../mfc/changing-list-control-styles.md)トピックです。  
-  
-## <a name="see-also"></a>関連項目  
- [CHeaderCtrl の使い方](../mfc/using-cheaderctrl.md)
+>  リスト コントロールの埋め込みヘッダー コントロールのドラッグ アンド ドロップのサポートを提供する場合は、拡張スタイル セクションを参照してください、[リスト コントロール スタイルの変更](../mfc/changing-list-control-styles.md)トピック。
+
+## <a name="see-also"></a>関連項目
+
+[CHeaderCtrl の使い方](../mfc/using-cheaderctrl.md)
 

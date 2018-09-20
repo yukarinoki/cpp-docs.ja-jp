@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a5e5d5ddb831c5d4025e729cb27dd3a9e11b3688
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 072c5b34d539e695f534dbafdf4afcd69a2272ab
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194754"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415682"
 ---
 # <a name="callas"></a>call_as
 
@@ -38,7 +38,7 @@ ms.locfileid: "43194754"
 
 ### <a name="parameters"></a>パラメーター
 
-*function*  
+*function*<br/>
 ローカル関数をリモート関数を呼び出すときに呼び出されます。
 
 ## <a name="remarks"></a>Remarks
@@ -76,6 +76,6 @@ __interface IMInterface {
 
 ## <a name="see-also"></a>関連項目
 
-[IDL 属性](../windows/idl-attributes.md)  
-[メソッド属性](../windows/method-attributes.md)  
+[IDL 属性](../windows/idl-attributes.md)<br/>
+[メソッド属性](../windows/method-attributes.md)<br/>
 [local](../windows/local-cpp.md)  

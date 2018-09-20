@@ -1,5 +1,5 @@
 ---
-title: コモン コントロールのサンプル一覧 |Microsoft ドキュメント
+title: 一般的なコントロールのサンプル一覧 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,22 +14,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3175463de0539f56aba3f38f373e19f11cf2388f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9108f2fbc7196a5c3110cf4a12bf4f225e454e9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341040"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417320"
 ---
 # <a name="common-control-sample-list"></a>コモン コントロールのサンプル一覧
-コモン コントロールを示す次のサンプル プログラムを参照してください。  
-  
--   [CMNCTRL1](../visual-cpp-samples.md)  
-  
--   [CMNCTRL2](../visual-cpp-samples.md)  
-  
--   [CTRLTEST](../visual-cpp-samples.md)  
-  
-## <a name="see-also"></a>関連項目  
- [コントロール](../mfc/controls-mfc.md)
+
+一般的なコントロールを示す次のサンプル プログラムを参照してください。
+
+- [CMNCTRL1](../visual-cpp-samples.md)
+
+- [CMNCTRL2](../visual-cpp-samples.md)
+
+- [CTRLTEST](../visual-cpp-samples.md)
+
+## <a name="see-also"></a>関連項目
+
+[コントロール](../mfc/controls-mfc.md)
 

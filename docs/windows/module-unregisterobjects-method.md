@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1ee7e6deeda17d2ac374b39edf70ab28fa1457fa
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 87fb8ece3e1897a3ba460403d273bd649784ad44
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603382"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400435"
 ---
 # <a name="moduleunregisterobjects-method"></a>Module::UnregisterObjects メソッド
 
@@ -38,10 +38,10 @@ HRESULT UnregisterObjects(
 
 ### <a name="parameters"></a>パラメーター
 
-*モジュール*  
+*モジュール*<br/>
 モジュールへのポインター。
 
-*サーバー名*  
+*サーバー名*<br/>
 この操作によって影響を受けるオブジェクトのサブセットを指定する修飾名。
 
 ## <a name="return-value"></a>戻り値
@@ -55,4 +55,5 @@ HRESULT UnregisterObjects(
 **名前空間:** Microsoft::WRL
 
 ## <a name="see-also"></a>関連項目
+
 [Module クラス](../windows/module-class.md)

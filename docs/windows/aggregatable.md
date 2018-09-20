@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3670924bace1d76f02da816dc061616a4c39e199
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e46bcd45040ffb50ec8bbd10d8d583211d0a3316
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719213"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400498"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -38,7 +38,7 @@ ms.locfileid: "45719213"
 
 ### <a name="parameters"></a>パラメーター
 
-*値*  
+*値*<br/>
 (省略可能)COM オブジェクトを集計できるかを示すパラメーター:
 
 - `never` COM オブジェクトを集約することはできません。
@@ -94,7 +94,7 @@ class CMyClass {};
 
 ## <a name="see-also"></a>関連項目
 
-[IDL 属性](../windows/idl-attributes.md)  
-[クラス属性](../windows/class-attributes.md)  
-[Typedef、Enum、Union、および Struct 型の属性](../windows/typedef-enum-union-and-struct-attributes.md)  
+[IDL 属性](../windows/idl-attributes.md)<br/>
+[クラス属性](../windows/class-attributes.md)<br/>
+[Typedef、Enum、Union、および Struct 型の属性](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
 [集計](/windows/desktop/com/aggregation)  

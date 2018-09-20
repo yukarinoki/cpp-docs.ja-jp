@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: efca93e2e9b52ce646ef07465682815978550414
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 61c20647d96a66cf4b50e6f0b031cc04353553e5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607778"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410651"
 ---
 # <a name="dbaccessor"></a>db_accessor
 
@@ -39,10 +39,10 @@ ms.locfileid: "42607778"
 
 #### <a name="parameters"></a>パラメーター
 
-*num*  
+*num*<br/>
 アクセサーの数 (0 から始まる整数のインデックス) を指定します。 昇順にアクセサー番号が整数を使用して、注文や、定義された値を指定する必要があります。
 
-*auto*  
+*auto*<br/>
 アクセサーが自動的に取得されます (TRUE) か (FALSE) を取得できないかどうかを指定するブール値。
 
 ## <a name="remarks"></a>Remarks

@@ -1,5 +1,5 @@
 ---
-title: フレーム ウィンドウ クラス |Microsoft ドキュメント
+title: フレーム ウィンドウ クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,30 +22,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b9003ba503e0a78e5f223e766346d63679d9959
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ac60fb8d1b12708c7e64a91beb224ca436e5005
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347887"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404528"
 ---
 # <a name="frame-window-classes"></a>フレーム ウィンドウ クラス
-各アプリケーションには 1 つの「メイン フレーム ウィンドウ」、通常、アプリケーション名がある、キャプションのするデスクトップ ウィンドウです。 各ドキュメントが通常は 1 つは「ドキュメント フレーム ウィンドウです」 ドキュメント フレーム ウィンドウには、ドキュメントのデータを表示するには、少なくとも 1 つのビューが含まれています。  
-  
-## <a name="frame-windows-in-sdi-and-mdi-applications"></a>SDI と MDI アプリケーションでのフレーム ウィンドウ  
- SDI アプリケーションの場合は、1 つのフレーム ウィンドウ クラスから派生した[CFrameWnd](../mfc/reference/cframewnd-class.md)です。 このウィンドウは、メイン フレーム ウィンドウとドキュメント フレーム ウィンドウの両方には。 MDI アプリケーションは、メイン フレーム ウィンドウ クラスから派生して[CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)、および、MDI 子ウィンドウであり、ドキュメント フレーム ウィンドウ クラスから派生[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)です。  
-  
-## <a name="use-the-frame-window-class-or-derive-from-it"></a>フレーム ウィンドウ クラスを使用するか、そこから派生  
- これらのクラスは、アプリケーションに必要なフレーム ウィンドウの機能のほとんどを提供します。 通常の状況では、既定の動作と外観を提供するは、ニーズに合うされます。 追加の機能を必要がある場合は、これらのクラスから派生します。  
-  
-### <a name="what-do-you-want-to-know-more-about"></a>詳しくは次のトピックをクリックしてください。  
-  
--   [アプリケーションのウィザードで作成されるフレーム ウィンドウ クラス](../mfc/frame-window-classes-created-by-the-application-wizard.md)  
-  
--   [フレーム ウィンドウ スタイル](../mfc/frame-window-styles-cpp.md)  
-  
--   [MFC で作成したウィンドウのスタイルを変更します。](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)  
-  
-## <a name="see-also"></a>関連項目  
- [フレーム ウィンドウ](../mfc/frame-windows.md)
+
+各アプリケーションでは、「メイン フレーム ウィンドウ」、デスクトップ ウィンドウを通常のキャプションでアプリケーション名を持つ 1 つがあります。 各ドキュメントが通常は 1 つの「ドキュメント フレーム ウィンドウ」 ドキュメント フレーム ウィンドウには、ドキュメントのデータを表示するには少なくとも 1 つのビューが含まれています。
+
+## <a name="frame-windows-in-sdi-and-mdi-applications"></a>SDI と MDI アプリケーションでのフレームの Windows
+
+SDI アプリケーションの場合は、1 つのフレーム ウィンドウ クラスから派生した[CFrameWnd](../mfc/reference/cframewnd-class.md)します。 このウィンドウはメイン フレーム ウィンドウとドキュメント フレーム ウィンドウの両方です。 MDI アプリケーションのメイン フレーム ウィンドウ クラスから派生して[CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)、MDI 子ウィンドウには、ドキュメント フレーム ウィンドウ クラスから派生し、 [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)します。
+
+## <a name="use-the-frame-window-class-or-derive-from-it"></a>フレーム ウィンドウ クラスを使用またはそこから派生
+
+これらのクラスは、ほとんどのアプリケーションに必要なフレーム ウィンドウ機能を提供します。 通常の状況で、既定の動作と外観を提供するは、ニーズに合うされます。 追加の機能が必要な場合は、これらのクラスから派生します。
+
+### <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+
+- [アプリケーション ウィザードで作成されるフレーム ウィンドウ クラス](../mfc/frame-window-classes-created-by-the-application-wizard.md)
+
+- [フレーム ウィンドウ スタイル](../mfc/frame-window-styles-cpp.md)
+
+- [MFC で作成したウィンドウのスタイルを変更します。](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)
+
+## <a name="see-also"></a>関連項目
+
+[フレーム ウィンドウ](../mfc/frame-windows.md)
 
