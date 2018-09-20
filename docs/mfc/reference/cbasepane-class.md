@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1485e997afda54a80cf4c44787881d8ffdb15ac4
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
-ms.translationtype: MT
+ms.openlocfilehash: 48c73e220c3e80abf0535e414572427f75b04511
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43683753"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718212"
 ---
 # <a name="cbasepane-class"></a>CBasePane クラス
 MFC でのすべてのペインの基本クラス。  
@@ -372,8 +372,8 @@ virtual void AccNotifyObjectFocusEvent(int);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*int*  
- 使用しません。  
+*int*<br/>
+[in]使用されません。  
   
 ##  <a name="addpane"></a>  CBasePane::AddPane  
  ペインをドッキング マネージャーに追加します。  
@@ -383,8 +383,8 @@ void AddPane(CBasePane* pBar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pBar*  
- 追加するウィンドウへのポインター。  
+*pBar*<br/>
+[in]追加するウィンドウへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
  これは、ドッキング マネージャーにペインを追加する便利なメソッドです。 このメソッドを使用すると、親フレームの種類を分析するコードを記述する必要はありません。  
@@ -399,8 +399,8 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*hdwp*  
- 複数のウィンドウの位置を格納する構造体へのハンドル。  
+*hdwp*<br/>
+[out]複数のウィンドウの位置を格納する構造体へのハンドル。  
   
 ### <a name="remarks"></a>Remarks  
  これは、ドッキング レイアウトを調整する便利なメソッドです。 このメソッドを使用すると、親フレームの種類を分析するコードを記述する必要はありません。  
@@ -427,11 +427,11 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bStretch*  
- バーをフレームのサイズに引き伸ばすかどうかを示します。 *BStretch*バーのドッキング バー (ドッキングの使用不可) ではないと (ドッキングの使用可能) をドッキングまたはフローティングがある場合に 0 をパラメーターが 0 以外の場合は。  
+*bStretch*<br/>
+[in]バーをフレームのサイズに引き伸ばすかどうかを示します。 *BStretch*バーのドッキング バー (ドッキングの使用不可) ではないと (ドッキングの使用可能) をドッキングまたはフローティングがある場合に 0 をパラメーターが 0 以外の場合は。  
   
- [in]*bHorz*  
- バーが水平方向または垂直方向であることを示します。 *BHorz*バーが水平方向および垂直方向にある場合は 0 の場合は、パラメーターが 0 以外の場合。  
+*bHorz*<br/>
+[in]バーが水平方向または垂直方向であることを示します。 *BHorz*バーが水平方向および垂直方向にある場合は 0 の場合は、パラメーターが 0 以外の場合。  
   
 ### <a name="return-value"></a>戻り値  
  コントロール バー (ピクセル単位) のサイズ、`CSize`オブジェクト。  
@@ -447,8 +447,8 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pBar*  
- ドッキング ウィンドウへのポインター。  
+*pBar*<br/>
+[in]ドッキング ウィンドウへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合は、別のウィンドウを受け入れられることができます。それ以外の場合は FALSE です。  
@@ -515,8 +515,8 @@ virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDockBar*  
- 別のウィンドウへのポインター。  
+*pDockBar*<br/>
+[in]別のウィンドウへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  このペインを別のウィンドウにドッキングできる場合は TRUE。それ以外の場合は FALSE です。  
@@ -597,8 +597,8 @@ virtual void CopyState(CBasePane* pOrgBar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pOrgBar*  
- 別のウィンドウへのポインター。  
+*pOrgBar*<br/>
+[in]別のウィンドウへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドからの状態のコピー *pOrgBar*このペインにします。  
@@ -611,8 +611,8 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*rectInitial*  
- ミニフレーム ウィンドウの初期の座標を指定します。  
+*rectInitial*<br/>
+[in]ミニフレーム ウィンドウの初期の座標を指定します。  
   
 ### <a name="return-value"></a>戻り値  
  ミニフレーム ウィンドウの新しいまたは作成が失敗した場合は NULL へのポインター。  
@@ -639,32 +639,32 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*dwStyleEx*  
- 拡張スタイル (を参照してください[とき](../../mfc/reference/cwnd-class.md#createex)詳細については)。  
+*dwStyleEx*<br/>
+[in]拡張スタイル (を参照してください[とき](../../mfc/reference/cwnd-class.md#createex)詳細については)。  
   
- [in]*lpszClassName*  
- ウィンドウ クラス名。  
+*lpszClassName*<br/>
+[in]ウィンドウ クラス名。  
   
- [in]*したとき*  
- ウィンドウの名前。  
+*したとき*<br/>
+[in]ウィンドウの名前。  
   
- [in]*dwStyle*  
- ウィンドウ スタイル (を参照してください[とき](../../mfc/reference/cwnd-class.md#createex))。  
+*dwStyle*<br/>
+[in]ウィンドウ スタイル (を参照してください[とき](../../mfc/reference/cwnd-class.md#createex))。  
   
- [in]*rect*  
- 初期の四角形。  
+*rect*<br/>
+[in]初期の四角形。  
   
- [in]*pParentWnd*  
- 親ウィンドウへのポインター。  
+*pParentWnd*<br/>
+[in]親ウィンドウへのポインター。  
   
- [in]*nID*  
- ウィンドウの ID を指定します 一意である必要があります。  
+*nID*<br/>
+[in]ウィンドウの ID を指定します 一意である必要があります。  
   
- [in]*dwControlBarStyle*  
- ウィンドウのスタイルのフラグ。  
+*dwControlBarStyle*<br/>
+[in]ウィンドウのスタイルのフラグ。  
   
- [in]*pContext*  
- ポインター `CcreateContext`  
+*pContext*<br/>
+[in]ポインター `CcreateContext`  
   
 ### <a name="return-value"></a>戻り値  
  ペインが正常に作成された場合は TRUE。それ以外の場合は FALSE です。  
@@ -699,14 +699,14 @@ virtual BOOL DockPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDockBar*  
- 別のウィンドウへのポインター。  
+*pDockBar*<br/>
+[in]別のウィンドウへのポインター。  
   
- [in]*lpRect*  
- 先の四角形を指定します。  
+*lpRect*<br/>
+[in]先の四角形を指定します。  
   
- [in]*dockMethod*  
- ドッキング方法を指定します。  
+*dockMethod*<br/>
+[in]ドッキング方法を指定します。  
   
 ### <a name="return-value"></a>戻り値  
  コントロール バーが正常にドッキングされている場合は TRUE。それ以外の場合、FALSE です。  
@@ -724,8 +724,8 @@ void DockPaneUsingRTTI(BOOL bUseDockSite);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bUseDockSite*  
- TRUE の場合は、ドッキング サイトにドッキングします。 FALSE の場合は、親フレームにドッキングします。  
+*bUseDockSite*<br/>
+[in]TRUE の場合は、ドッキング サイトにドッキングします。 FALSE の場合は、親フレームにドッキングします。  
   
 ##  <a name="docktoframewindow"></a>  CBasePane::DockToFrameWindow  
  フレームにドッキング可能ペインをドッキングします。  
@@ -741,23 +741,23 @@ virtual BOOL DockToFrameWindow(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*場合*  
- ペインをドッキングする親フレームの側です。  
+*場合*<br/>
+[in]ペインをドッキングする親フレームの側です。  
   
- [in]*lpRect*  
- 必要なサイズ。  
+*lpRect*<br/>
+[in]必要なサイズ。  
   
- [in]*dwDockFlags*  
- 無視されます。  
+*dwDockFlags*<br/>
+[in]無視されます。  
   
- [in]*pRelativeBar*  
- 無視されます。  
+*pRelativeBar*<br/>
+[in]無視されます。  
   
- [in]*nRelativeIndex*  
- 無視されます。  
+*nRelativeIndex*<br/>
+[in]無視されます。  
   
- [in]*bOuterEdge*  
- True の場合とがありますがで指定された側にドッキング可能な他のペインがかどうか*場合*、他のペインの外側のウィンドウがドッキングされている親フレームの端に近いです。 FALSE の場合、ウィンドウはクライアント領域の中央に近い位置にドッキングします。  
+*bOuterEdge*<br/>
+[in]True の場合とがありますがで指定された側にドッキング可能な他のペインがかどうか*場合*、他のペインの外側のウィンドウがドッキングされている親フレームの端に近いです。 FALSE の場合、ウィンドウはクライアント領域の中央に近い位置にドッキングします。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE。それ以外の場合は FALSE です。  
@@ -792,8 +792,8 @@ virtual void DoPaint(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
  既定の実装は、背景の塗りつぶしに現在のビジュアル マネージャーを呼び出す ( [CMFCVisualManager::OnFillBarBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfillbarbackground))。  
@@ -806,8 +806,8 @@ virtual void EnableDocking(DWORD dwAlignment);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*場合*  
- 有効にするドッキングの配置を指定します。  
+*場合*<br/>
+[in]有効にするドッキングの配置を指定します。  
   
 ### <a name="remarks"></a>Remarks  
  メイン フレームにドッキングの配置を有効にするには、このメソッドを呼び出します。 Cbrs_align _ フラグの組み合わせを渡すことができます (詳細については、次を参照してください。 [CControlBar::EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking))。  
@@ -824,8 +824,8 @@ virtual void EnableGripper(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- グリッパー; を有効にする場合は TRUE無効にする場合は FALSE。  
+*bEnable*<br/>
+[in]グリッパー; を有効にする場合は TRUE無効にする場合は FALSE。  
   
 ### <a name="remarks"></a>Remarks  
  フレームワークでは、このメソッドを使用して、WS_CAPTION スタイルを使用する代わりにグリップを有効にします。  
@@ -841,14 +841,14 @@ virtual BOOL FloatPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*rectFloat*  
- フローティング ウィンドウが表示される画面座標を指定します。  
+*rectFloat*<br/>
+[in]フローティング ウィンドウが表示される画面座標を指定します。  
   
- [in]*dockMethod*  
- 使用して、ウィンドウをフローティングするドッキング メソッドを指定します。  
+*dockMethod*<br/>
+[in]使用して、ウィンドウをフローティングするドッキング メソッドを指定します。  
   
- [in]*bShow*  
- フローティング ウィンドウが表示されている (TRUE) かどうかを指定しますか (FALSE) を非表示にします。  
+*bShow*<br/>
+[in]フローティング ウィンドウが表示されている (TRUE) かどうかを指定しますか (FALSE) を非表示にします。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合、ウィンドウが正常に; フローティングそれ以外の場合は FALSE です。  
@@ -867,14 +867,14 @@ virtual HRESULT get_accHelpTopic(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pszHelpFile*  
- 完全なパスを受信する BSTR のアドレス、 **WinHelp**存在する場合に、指定したオブジェクトに関連付けられているファイル。  
+*pszHelpFile*<br/>
+[in]完全なパスを受信する BSTR のアドレス、 **WinHelp**存在する場合に、指定したオブジェクトに関連付けられているファイル。  
   
- [in]*varChild*  
- 取得するヘルプ トピックは、オブジェクトまたはオブジェクトの子要素のいずれかのかどうかを指定します。 このパラメーターには、CHILDID_SELF (オブジェクトのヘルプ トピックを取得) するか、(オブジェクトの要素の子のいずれかのヘルプ トピックを取得) する場合は子 ID を指定できます。  
+*varChild*<br/>
+[in]取得するヘルプ トピックは、オブジェクトまたはオブジェクトの子要素のいずれかのかどうかを指定します。 このパラメーターには、CHILDID_SELF (オブジェクトのヘルプ トピックを取得) するか、(オブジェクトの要素の子のいずれかのヘルプ トピックを取得) する場合は子 ID を指定できます。  
   
- [in]*pidTopic*  
- 識別、**ヘルプ**ファイルの指定したオブジェクトに関連付けられているトピック。  
+*pidTopic*<br/>
+[in]識別、**ヘルプ**ファイルの指定したオブジェクトに関連付けられているトピック。  
   
 ### <a name="return-value"></a>戻り値  
  `CBasePane` このメソッドを実装しません。 そのため、`CBasePane::get_accHelpTopic`常に S_FALSE を返します。  
@@ -890,8 +890,8 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pvarChildren*  
- 選択された子を識別する情報を受け取ります。  
+*pvarChildren*<br/>
+[in]選択された子を識別する情報を受け取ります。  
   
 ### <a name="return-value"></a>戻り値  
  `CBasePane` このメソッドを実装しません。 場合*pvarChildren*が null の場合、このメソッドは、E_INVALIDARG を返します。 それ以外の場合、このメソッドは、DISP_E_MEMBERNOTFOUND を返します。  
@@ -1017,8 +1017,8 @@ virtual HICON GetPaneIcon(BOOL bBigIcon);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bBigIcon*  
- True の場合は 32 ピクセルのアイコンによって 32 ピクセルを指定します。FALSE の場合は 16 ピクセルのアイコンで 16 ピクセルを指定します。  
+*bBigIcon*<br/>
+[in]True の場合は 32 ピクセルのアイコンによって 32 ピクセルを指定します。FALSE の場合は 16 ピクセルのアイコンで 16 ピクセルを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  ウィンドウ アイコンへのハンドル。 失敗した場合、NULL を返します。  
@@ -1067,8 +1067,8 @@ virtual CPaneFrameWnd* GetParentMiniFrame(BOOL bNoAssert=FALSE) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bNoAssert*  
- TRUE の場合、このメソッドは、有効でないポインターをチェックしません。 アプリケーションの終了時にこのメソッドを呼び出すと、このパラメーターを TRUE に設定します。  
+*bNoAssert*<br/>
+[in]TRUE の場合、このメソッドは、有効でないポインターをチェックしません。 アプリケーションの終了時にこのメソッドを呼び出すと、このパラメーターを TRUE に設定します。  
   
 ### <a name="return-value"></a>戻り値  
  親ミニフレーム ウィンドウのウィンドウは固定されていない場合に有効なポインターそれ以外の場合は NULL です。  
@@ -1096,8 +1096,8 @@ CMFCBaseTabCtrl* GetParentTabWnd(HWND& hWndTab) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*hWndTab*  
- 戻り値が NULL でない場合、このパラメーターは、親のタブ付きウィンドウを識別するハンドルを格納します。  
+*hWndTab*<br/>
+[out]戻り値が NULL でない場合、このパラメーターは、親のタブ付きウィンドウを識別するハンドルを格納します。  
   
 ### <a name="return-value"></a>戻り値  
  タブ付きウィンドウの親に有効なへのポインター。  
@@ -1139,14 +1139,14 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pControlBar*  
- 挿入するウィンドウへのポインター。  
+*pControlBar*<br/>
+[in]挿入するウィンドウへのポインター。  
   
- [in]*pTarget*  
- 隣接するウィンドウへのポインター。  
+*pTarget*<br/>
+[in]隣接するウィンドウへのポインター。  
   
- [in]*bAfter*  
- TRUE の場合、 *pControlBar*後に挿入されます*pTarget*します。 FALSE の場合、 *pControlBar*前に挿入されます*pTarget*します。  
+*bAfter*<br/>
+[in]TRUE の場合、 *pControlBar*後に挿入されます*pTarget*します。 FALSE の場合、 *pControlBar*前に挿入されます*pTarget*します。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合、FALSE それ以外の場合は TRUE。  
@@ -1270,14 +1270,14 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ポイント*  
- 指定した点。  
+*ポイント*<br/>
+[in]指定した点。  
   
- [out]*dwBarAlignment*  
- どちらの端点が近いを指定します。 指定できる値は CBRS_ALIGN_LEFT、CBRS_ALIGN_RIGHT、CBRS_ALIGN_TOP、および CBRS_ALIGN_BOTTOM です。  
+*dwBarAlignment*<br/>
+[out]どちらの端点が近いを指定します。 指定できる値は CBRS_ALIGN_LEFT、CBRS_ALIGN_RIGHT、CBRS_ALIGN_TOP、および CBRS_ALIGN_BOTTOM です。  
   
- [out]*bOuterEdge*  
- ポイントが、ドッキング サイトの外側の境界線の近くにある場合は TRUE。FALSE それ以外の場合。  
+*bOuterEdge*<br/>
+[out]ポイントが、ドッキング サイトの外側の境界線の近くにある場合は TRUE。FALSE それ以外の場合。  
   
 ### <a name="return-value"></a>戻り値  
  点がドッキング サイトに近い場合は TRUE。それ以外の場合は FALSE です。  
@@ -1349,14 +1349,14 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszProfileName*  
- プロファイルの名前。  
+*lpszProfileName*<br/>
+[in]プロファイルの名前。  
   
- [in]*nIndex*  
- プロファイルのインデックス。  
+*nIndex*<br/>
+[in]プロファイルのインデックス。  
   
- [in]*uiID*  
- ウィンドウの id。  
+*uiID*<br/>
+[in]ウィンドウの id。  
   
 ### <a name="return-value"></a>戻り値  
  ペインの状態が正常に読み込まれている場合は TRUE。それ以外の場合は FALSE です。  
@@ -1375,14 +1375,14 @@ virtual HDWP MoveWindow(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*rect*  
- 新しい場所と、ウィンドウのサイズを指定する四角形。  
+*rect*<br/>
+[in]新しい場所と、ウィンドウのサイズを指定する四角形。  
   
- [in]*bRepaint*  
- TRUE の場合、ウィンドウが再描画します。 FALSE の場合、ウィンドウが再描画されません。  
+*bRepaint*<br/>
+[in]TRUE の場合、ウィンドウが再描画します。 FALSE の場合、ウィンドウが再描画されません。  
   
- [in]*hdwp*  
- 遅延のウィンドウの位置の構造体へのハンドルします。  
+*hdwp*<br/>
+[in]遅延のウィンドウの位置の構造体へのハンドルします。  
   
 ### <a name="return-value"></a>戻り値  
  遅延のウィンドウの位置の構造体、または NULL へのハンドル。  
@@ -1398,8 +1398,8 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWndOldParent*  
- 以前の親へのポインター。  
+*pWndOldParent*<br/>
+[in]以前の親へのポインター。  
   
 ### <a name="remarks"></a>Remarks  
  フレームワークは、ウィンドウの親を変更した後、通常、ドッキングまたはフローティング操作のために、このメソッドを呼び出します。  
@@ -1416,11 +1416,11 @@ virtual void OnBeforeChangeParent(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWndNewParent*  
- 新しい親ウィンドウへのポインター。  
+*pWndNewParent*<br/>
+[in]新しい親ウィンドウへのポインター。  
   
- [in]*bDelay*  
- レイアウトの調整を遅延する必要があるかどうかを指定します。  
+*bDelay*<br/>
+[in]レイアウトの調整を遅延する必要があるかどうかを指定します。  
   
 ### <a name="remarks"></a>Remarks  
  通常、ドッキング、フローティング、または自動非表示の操作のため、フレームワークはウィンドウの親の変更の直前にこのメソッドを呼び出します。  
@@ -1458,11 +1458,11 @@ virtual void OnPaneContextMenu(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pParentFrame*  
- 親フレームへのポインター。  
+*pParentFrame*<br/>
+[in]親フレームへのポインター。  
   
- [in]*ポイント*  
- ショートカット メニューの場所を指定します。  
+*ポイント*<br/>
+[in]ショートカット メニューの場所を指定します。  
   
 ### <a name="remarks"></a>Remarks  
  `OnPaneContextMenu` 現在のフレーム ウィンドウに属しているウィンドウの一覧を保持する、ドッキング マネージャーを呼び出します。 このメソッドは、ショートカット メニューにペインの名前を追加し、それを表示します。 メニューのコマンドは、表示または各ペインを非表示にします。  
@@ -1477,8 +1477,8 @@ virtual void OnRemoveFromMiniFrame(CPaneFrameWnd* pMiniFrame);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pMiniFrame*  
- ミニフレーム ウィンドウのウィンドウを削除するへのポインター。  
+*pMiniFrame*<br/>
+[in]ミニフレーム ウィンドウのウィンドウを削除するへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
  フレームワークは、親ミニフレーム ウィンドウ (結果としてドッキングなど) から、ウィンドウが削除されると、このメソッドを呼び出します。  
@@ -1493,8 +1493,8 @@ virtual BOOL OnSetAccData(long lVal);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lVal*  
- 使用しません。  
+*lVal*<br/>
+[in]使用されません。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドは、常に TRUE を返します。  
@@ -1513,17 +1513,17 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ポイント*  
- 確認の画面座標で、ポイントを指定します。  
+*ポイント*<br/>
+[in]確認の画面座標で、ポイントを指定します。  
   
- [in]*nSensitivity*  
- この金額には、検索領域を増やします。 指定したポイントが拡大された領域内にある場合、ペインは検索条件を満たします。  
+*nSensitivity*<br/>
+[in]この金額には、検索領域を増やします。 指定したポイントが拡大された領域内にある場合、ペインは検索条件を満たします。  
   
- [in]*bExactBar*  
- 無視する場合は TRUE、 *nSensitivity*パラメーター場合は FALSE。  
+*bExactBar*<br/>
+[in]無視する場合は TRUE、 *nSensitivity*パラメーター場合は FALSE。  
   
- [in]*pRTCBarType*  
- NULL 以外の場合、メソッドは、指定した型のウィンドウだけを検索します。  
+*pRTCBarType*<br/>
+[in]NULL 以外の場合、メソッドは、指定した型のウィンドウだけを検索します。  
   
 ### <a name="return-value"></a>戻り値  
  `CBasePane`-ウィンドウが見つからなかった場合は、特定のポイント、または NULL を含む派生オブジェクト。  
@@ -1548,20 +1548,20 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pBar*  
- 削除する ウィンドウへのポインター。  
+*pBar*<br/>
+[in]削除するウィンドウへのポインター。  
   
- [in]*bDestroy*  
- TRUE の場合、削除されたウィンドウが破棄されます。  
+*bDestroy*<br/>
+[in]TRUE の場合、削除されたウィンドウが破棄されます。  
   
- [in]*bAdjustLayout*  
- TRUE の場合は、すぐにドッキング レイアウトを調整します。  
+*bAdjustLayout*<br/>
+[in]TRUE の場合は、すぐにドッキング レイアウトを調整します。  
   
- [in]*bAutoHide*  
- TRUE の場合、ドッキング レイアウトは自動的に隠すバーのリストに関連します。 FALSE の場合、ドッキング レイアウトに関連する標準のペインの一覧。  
+*bAutoHide*<br/>
+[in]TRUE の場合、ドッキング レイアウトは自動的に隠すバーのリストに関連します。 FALSE の場合、ドッキング レイアウトに関連する標準のペインの一覧。  
   
- [in]*pBarReplacement*  
- 削除されたウィンドウを置換するウィンドウへのポインター。  
+*pBarReplacement*<br/>
+[in]削除されたウィンドウを置換するウィンドウへのポインター。  
   
 ##  <a name="savestate"></a>  CBasePane::SaveState  
  レジストリにペインの状態を保存します。  
@@ -1574,14 +1574,14 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszProfileName*  
- プロファイルの名前。  
+*lpszProfileName*<br/>
+[in]プロファイルの名前。  
   
- [in]*nIndex*  
- プロファイルのインデックス。  
+*nIndex*<br/>
+[in]プロファイルのインデックス。  
   
- [in]*uiID*  
- ウィンドウの id。  
+*uiID*<br/>
+[in]ウィンドウの id。  
   
 ### <a name="return-value"></a>戻り値  
  状態が正常に保存されている場合は TRUE。それ以外の場合は FALSE です。  
@@ -1597,8 +1597,8 @@ CFont* SelectDefaultFont(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキスト。  
+*pDC*<br/>
+[in]デバイス コンテキスト。  
   
 ### <a name="return-value"></a>戻り値  
  既定値へのポインター [CFont クラス](../../mfc/reference/cfont-class.md)オブジェクト。  
@@ -1611,8 +1611,8 @@ virtual void SetControlBarStyle(DWORD dwNewStyle);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*dwNewStyle*  
- 次の値のビットごとの OR の組み合わせ。  
+*dwNewStyle*<br/>
+[in]次の値のビットごとの OR の組み合わせ。  
   
 |スタイル|説明|  
 |-----------|-----------------|  
@@ -1629,8 +1629,8 @@ void SetDockingMode(AFX_DOCK_TYPE dockModeNew);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*dockModeNew*  
- ウィンドウの新しいドッキング モードを指定します。  
+*dockModeNew*<br/>
+[in]ウィンドウの新しいドッキング モードを指定します。  
   
 ### <a name="remarks"></a>Remarks  
  フレームワークには、2 つのドッキング モード: standard、および即時です。  
@@ -1647,8 +1647,8 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*場合*  
- 新しい配置を指定します。  
+*場合*<br/>
+[in]新しい配置を指定します。  
   
 ### <a name="remarks"></a>Remarks  
  通常、フレームワークは、別にメイン フレームの一方の側から、ウィンドウがドッキングされているときに、このメソッドを呼び出します。  
@@ -1670,8 +1670,8 @@ virtual void SetPaneStyle(DWORD dwNewStyle);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*dwNewStyle*  
- 設定する新しいスタイルを指定します。  
+*dwNewStyle*<br/>
+[in]設定する新しいスタイルを指定します。  
   
 ### <a name="remarks"></a>Remarks  
  Afxres.h 内で定義されている cbrs _ スタイルのいずれかを設定するのには、このメソッドを使用できます。 ウィンドウのスタイルとウィンドウの配置は一緒に格納されるため、次のように、現在の配置と組み合わせることにより、新しいスタイルを設定します。  
@@ -1693,26 +1693,26 @@ virtual HDWP SetWindowPos(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWndInsertAfter*  
- 識別、`CWnd`オブジェクトよりも前にこの`CWnd`Z オーダー内のオブジェクト。 詳細については、次を参照してください。 [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos)します。  
+*pWndInsertAfter*<br/>
+[in]識別、`CWnd`オブジェクトよりも前にこの`CWnd`Z オーダー内のオブジェクト。 詳細については、次を参照してください。 [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos)します。  
   
- [in]*x*  
- ウィンドウの左側の位置を指定します。  
+*x*<br/>
+[in]ウィンドウの左側の位置を指定します。  
   
- [in]*y*  
- ウィンドウの上端の位置を指定します。  
+*y*<br/>
+[in]ウィンドウの上端の位置を指定します。  
   
- [in]*cx*  
- ウィンドウの幅を指定します。  
+*cx*<br/>
+[in]ウィンドウの幅を指定します。  
   
- [in]*cy*  
- ウィンドウの高さを指定します。  
+*cy*<br/>
+[in]ウィンドウの高さを指定します。  
   
- [in]*nFlags*  
- サイズと位置のオプションを指定します。 詳細については、次を参照してください。 [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos)します。  
+*nFlags*<br/>
+[in]サイズと位置のオプションを指定します。 詳細については、次を参照してください。 [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos)します。  
   
- [in]*hdwp*  
- 1 つまたは複数のウィンドウのサイズと位置情報を格納する構造体へのハンドルします。  
+*hdwp*<br/>
+[in]1 つまたは複数のウィンドウのサイズと位置情報を格納する構造体へのハンドルします。  
   
 ### <a name="return-value"></a>戻り値  
  更新された遅延ウィンドウ位置構造体または NULL へのハンドル。  
@@ -1731,14 +1731,14 @@ virtual void ShowPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bShow*  
- ペイン (TRUE) を表示するか (FALSE) を非表示にするかどうかを指定します。  
+*bShow*<br/>
+[in]ペイン (TRUE) を表示するか (FALSE) を非表示にするかどうかを指定します。  
   
- [in]*bDelay*  
- TRUE の場合は、ドッキング レイアウトを再計算を遅延します。  
+*bDelay*<br/>
+[in]TRUE の場合は、ドッキング レイアウトを再計算を遅延します。  
   
- [in]*bActivate*  
- TRUE の場合、表示されるときにアクティブでは、ウィンドウです。  
+*bActivate*<br/>
+[in]TRUE の場合、表示されるときにアクティブでは、ウィンドウです。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドまたはウィンドウを非表示になります。 代わりに、このメソッドを使用して`ShowWindow`のため、このメソッドはウィンドウの可視性の変更について関連する、ドッキング マネージャーに通知します。  
@@ -1755,11 +1755,11 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*されて*  
- ウィンドウを拡大する長さを返します。  
+*されて*<br/>
+[in]ウィンドウを拡大する長さを返します。  
   
- [in]*bVert*  
- TRUE の場合、垂直方向に、ウィンドウを拡大します。 FALSE の場合、ウィンドウを水平方向に拡大です。  
+*bVert*<br/>
+[in]TRUE の場合、垂直方向に、ウィンドウを拡大します。 FALSE の場合、ウィンドウを水平方向に拡大です。  
   
 ### <a name="return-value"></a>戻り値  
  拡張ウィンドウのサイズ。  

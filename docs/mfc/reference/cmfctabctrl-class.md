@@ -114,12 +114,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 758b2039168825ec95a14b84b1c4c589618e7c24
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
-ms.translationtype: MT
+ms.openlocfilehash: ad50deb1cb500abb532acac8c3c0d035c37b87ce
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680105"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726441"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 `CMFCTabCtrl`クラスは、タブ コントロールの機能を提供します。 タブ コントロールは、上または下にフラットまたは 3D のタブを持つ、ドッキング可能なウィンドウを表示します。 タブにはテキストとイメージを表示でき、アクティブな状態のときに色を変更することもできます。  
@@ -265,8 +265,8 @@ void ActivateMDITab(int nTab = -1);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nTab*  
- 表示、または現在アクティブなタブを指定する-1 タブの 0 から始まるインデックス。  
+*nTab*<br/>
+[in]表示、または現在アクティブなタブを指定する-1タブの 0 から始まるインデックス。  
   
 ##  <a name="allowdestroyemptytabbedpane"></a>  CMFCTabCtrl::AllowDestroyEmptyTabbedPane  
  詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。  
@@ -288,8 +288,8 @@ void AutoSizeWindow(BOOL bAutoSize = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bAutoSize*  
- タブ コントロール ウィンドウのサイズを自動的に変更する場合は TRUEそれ以外の場合、FALSE です。 既定値は TRUE です。  
+*bAutoSize*<br/>
+[in]タブ コントロール ウィンドウのサイズを自動的に変更する場合は TRUEそれ以外の場合、FALSE です。 既定値は TRUE です。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -307,23 +307,23 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*スタイル*  
- タブ コントロールのスタイル。 詳細については、「解説」を参照してください。  
+*style*<br/>
+[in]タブ コントロールのスタイル。 詳細については、「解説」を参照してください。  
   
- [in]*rect*  
- タブ コントロールの外接する四角形にします。  
+*rect*<br/>
+[in]タブ コントロールの外接する四角形にします。  
   
- [in]*pParentWnd*  
- 親ウィンドウへのポインター。 NULL は指定できません。  
+*pParentWnd*<br/>
+[in]親ウィンドウへのポインター。 NULL は指定できません。  
   
- [in]*nID*  
- タブ コントロールの ID。  
+*nID*<br/>
+[in]タブ コントロールの ID。  
   
- [in]*場所*  
- タブの位置。 既定値は、LOCATION_BOTTOM です。 詳細については、「解説」を参照してください。  
+*location*<br/>
+[in]タブの位置。 既定値は、LOCATION_BOTTOM です。 詳細については、「解説」を参照してください。  
   
- [in]*bCloseBtn*  
- [;] タブで [閉じる] ボタンを表示する場合は TRUEそれ以外の場合、FALSE です。 既定値は FALSE です。  
+*bCloseBtn*<br/>
+[in][;] タブで [閉じる] ボタンを表示する場合は TRUEそれ以外の場合、FALSE です。 既定値は FALSE です。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -362,8 +362,8 @@ virtual void CalcRectEdit(CRect& rectEdit);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*rectEdit*  
- タブの領域を示す四角形。  
+*rectEdit*<br/>
+[in]タブの領域を示す四角形。  
   
 ### <a name="remarks"></a>Remarks  
  タブのラベルを変更するときに、このメソッドが呼び出されます。このメソッドは、現在タブ高さを 30 分で指定した四角形の左側および右側を縮小し、上部と下部にある 1 つの単位で縮小します。  
@@ -376,8 +376,8 @@ void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- アクティブなタブの閉じるボタンを表示する場合は TRUEタブ領域の右上隅の閉じるボタンを表示する場合は FALSE。 既定値は TRUE です。  
+*bEnable*<br/>
+[in]アクティブなタブの閉じるボタンを表示する場合は TRUEタブ領域の右上隅の閉じるボタンを表示する場合は FALSE。 既定値は TRUE です。  
   
 ##  <a name="enableinplaceedit"></a>  CMFCTabCtrl::EnableInPlaceEdit  
  有効または編集可能なタブのラベルを無効にします。  
@@ -387,8 +387,8 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- 編集可能なタブのラベルを有効にする場合は TRUE編集可能なタブのラベルを無効にする場合は FALSE。  
+*bEnable*<br/>
+[in]編集可能なタブのラベルを有効にする場合は TRUE編集可能なタブのラベルを無効にする場合は FALSE。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -400,8 +400,8 @@ void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- タブ付きウィンドウのラベルのポップアップ メニューを表示する場合は TRUE前方と後方スクロール ボタンを表示する場合は FALSE。 既定値は TRUE です。  
+*bEnable*<br/>
+[in]タブ付きウィンドウのラベルのポップアップ メニューを表示する場合は TRUE前方と後方スクロール ボタンを表示する場合は FALSE。 既定値は TRUE です。  
   
 ### <a name="remarks"></a>Remarks  
  ユーザーには、タブのラベルがクリックすると、フレームワークに対応するタブ付きウィンドウが表示されます。 タブ ラベルが表示されている場合は、その位置を変更することがなくタブ付きウィンドウが開かれます。 ユーザーが、ポップアップ メニューから、ドキュメントを選択し、対応するタブ付きウィンドウが画面外には、最初のタブがタブ付きウィンドウになります。  
@@ -414,8 +414,8 @@ virtual BOOL EnsureVisible(int iTab);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iTab*  
- タブの 0 から始まるインデックス。  
+*iTab*<br/>
+[in]タブの 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  これが成功した場合は TRUE。FALSE の場合、 *iTab*パラメーター インデックスが無効です。  
@@ -431,8 +431,8 @@ static HICON __stdcall GetDocumentIcon(UINT nCmdID);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nCmdID*  
- タブ付きウィンドウのポップアップ メニューのタブのコマンド ID。  
+*nCmdID*<br/>
+[in]タブ付きウィンドウのポップアップ メニューのタブのコマンド ID。  
   
 ### <a name="return-value"></a>戻り値  
  ビットマップ イメージのハンドル。  
@@ -483,11 +483,11 @@ void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*rectTabAreaTop*  
- このメソッドが戻るとき、このリファレンスには、最上位タブのラベル領域に外接する四角形が含まれています。 四角形が、クライアント座標です。 この参照は、タブ コントロールの上部にあるタブのラベルの領域が存在しない場合は空です。  
+*rectTabAreaTop*<br/>
+[out]このメソッドが戻るとき、このリファレンスには、最上位タブのラベル領域に外接する四角形が含まれています。 四角形が、クライアント座標です。 この参照は、タブ コントロールの上部にあるタブのラベルの領域が存在しない場合は空です。  
   
- [out]*rectTabAreaBottom*  
- このメソッドが戻るとき、このリファレンスには、下部にあるタブのラベル領域に外接する四角形が含まれています。 四角形が、クライアント座標です。 この参照は、タブ コントロールの下部にあるタブのラベルの領域が存在しない場合は空です。  
+*rectTabAreaBottom*<br/>
+[out]このメソッドが戻るとき、このリファレンスには、下部にあるタブのラベル領域に外接する四角形が含まれています。 四角形が、クライアント座標です。 この参照は、タブ コントロールの下部にあるタブのラベルの領域が存在しない場合は空です。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドを使用して、タブ付きウィンドウ内のタブ領域の位置とサイズを決定します。  
@@ -523,8 +523,8 @@ virtual void GetTabsRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*rect*  
- このメソッドが戻るとき、 *rect*パラメーターにはタブ領域に外接する四角形が含まれています。  
+*rect*<br/>
+[out]このメソッドが戻るとき、 *rect*パラメーターにはタブ領域に外接する四角形が含まれています。  
   
 ##  <a name="getwndarea"></a>  CMFCTabCtrl::GetWndArea  
  現在のタブ コントロールのクライアント領域の境界を取得します。  
@@ -534,8 +534,8 @@ void GetWndArea(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力、出力]*rect*  
- このメソッドが戻るとき、このパラメーターには、現在のタブ コントロールの外接する四角形が含まれています。  
+*rect*<br/>
+[入力、出力]このメソッドが戻るとき、このパラメーターには、現在のタブ コントロールの外接する四角形が含まれています。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -557,8 +557,8 @@ void HideInactiveWindow(BOOL bHide = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bHide*  
- 非アクティブなウィンドウを表示しない場合は TRUE。非アクティブなウィンドウを表示する場合は FALSE。 既定値は TRUE です。  
+*bHide*<br/>
+[in]非アクティブなウィンドウを表示しない場合は TRUE。非アクティブなウィンドウを表示する場合は FALSE。 既定値は TRUE です。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -570,8 +570,8 @@ void HideNoTabs(BOOL bHide=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bHide*  
- タブ領域の描画を有効にする場合は TRUE描画を無効にする場合は FALSE。 既定値は TRUE です。  
+*bHide*<br/>
+[in]タブ領域の描画を有効にする場合は TRUE描画を無効にする場合は FALSE。 既定値は TRUE です。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -583,8 +583,8 @@ virtual void HideSingleTab(BOOL bHide=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bHide*  
- 1 つのタブ付きウィンドウのタブを描画しない場合は TRUE。1 つのタブを描画する場合は FALSE。既定値は TRUE です。  
+*bHide*<br/>
+[in]1 つのタブ付きウィンドウのタブを描画しない場合は TRUE。1 つのタブを描画する場合は FALSE。既定値は TRUE です。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -749,8 +749,8 @@ BOOL ModifyTabStyle(Style style);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*スタイル*  
- タブ コントロールの外観を指定する列挙値の 1 つ。 詳細については、「解説」表を参照してください。  
+*style*<br/>
+[in]タブ コントロールの外観を指定する列挙値の 1 つ。 詳細については、「解説」表を参照してください。  
   
 ### <a name="return-value"></a>戻り値  
  常に TRUE です。  
@@ -780,14 +780,14 @@ virtual DROPEFFECT OnDragEnter(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDataObject*  
- ユーザーがドラッグ データを含むデータ オブジェクトへのポインター。  
+*pDataObject*<br/>
+[in]ユーザーがドラッグ データを含むデータ オブジェクトへのポインター。  
   
- [in]*ドロップ*  
- 修飾子キーの状態が含まれています。 このパラメーターは、次の値のビットごとの組み合わせ (OR): MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON します。 詳細については、次を参照してください。、**メッセージ パラメーター**の[マウス入力に関する](/windows/desktop/inputdev/about-mouse-input)します。  
+*ドロップ*<br/>
+[in]修飾子キーの状態が含まれています。 このパラメーターは、次の値のビットごとの組み合わせ (OR): MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON します。 詳細については、次を参照してください。、**メッセージ パラメーター**の[マウス入力に関する](/windows/desktop/inputdev/about-mouse-input)します。  
   
- [in]*ポイント*  
- クライアント座標でのカーソルの現在の場所が含まれています。  
+*ポイント*<br/>
+[in]クライアント座標でのカーソルの現在の場所が含まれています。  
   
 ### <a name="return-value"></a>戻り値  
  常にせず、つまり、ドロップ先がデータを受け入れることはできません。  
@@ -808,14 +808,14 @@ virtual DROPEFFECT OnDragOver(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDataObject*  
- ポインターを[COleDataObject](../../mfc/reference/coledataobject-class.md)ドロップ ターゲット上にドラッグされているオブジェクト。  
+*pDataObject*<br/>
+[in]ポインターを[COleDataObject](../../mfc/reference/coledataobject-class.md)ドロップ ターゲット上にドラッグされているオブジェクト。  
   
- [in]*ドロップ*  
- 修飾子キーの状態は MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON のビットごとの組み合わせ (OR) です。 詳細については、「メッセージ パラメーター」を参照してください[マウス入力に関する](/windows/desktop/inputdev/about-mouse-input)します。  
+*ドロップ*<br/>
+[in]修飾子キーの状態は MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON のビットごとの組み合わせ (OR) です。 詳細については、「メッセージ パラメーター」を参照してください[マウス入力に関する](/windows/desktop/inputdev/about-mouse-input)します。  
   
- [in]*ポイント*  
- 現在のマウスの位置。  
+*ポイント*<br/>
+[in]現在のマウスの位置。  
   
 ### <a name="return-value"></a>戻り値  
  常にせずします。  
@@ -831,8 +831,8 @@ virtual void OnShowTabDocumentsMenu(CPoint point);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ポイント*  
- ポップアップ メニューを表示する場所の座標。  
+*ポイント*<br/>
+[in]ポップアップ メニューを表示する場所の座標。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -844,8 +844,8 @@ void SetActiveInMDITabGroup(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*描画*  
- 現在のタブにアクティブなタブを作成する場合は TRUE現在のタブを非アクティブにする場合は FALSE。  
+*描画*<br/>
+[in]現在のタブにアクティブなタブを作成する場合は TRUE現在のタブを非アクティブにする場合は FALSE。  
   
 ### <a name="remarks"></a>Remarks  
  いずれかの垂直方向または水平タブ グループに複数のドキュメント ウィンドウを整理し、別の 1 つのタブ グループからドキュメントを簡単にシャッフルできます。  
@@ -858,8 +858,8 @@ virtual BOOL SetActiveTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*iTab*  
- アクティブ化するタブの 0 から始まるインデックスを指定します。  
+*iTab*<br/>
+[in]アクティブ化するタブの 0 から始まるインデックスを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  指定したタブがアクティブに行われた場合は TRUE。FALSE の場合、指定した*iTab*パラメーターの値が無効です。  
@@ -877,8 +877,8 @@ void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bIsBold*  
- 太字のフォントを使用して、アクティブなタブのラベルを表示する場合は TRUE。標準的なフォントを使用して、ラベルを表示する場合は FALSE。 既定値は TRUE です。  
+*bIsBold*<br/>
+[in]太字のフォントを使用して、アクティブなタブのラベルを表示する場合は TRUE。標準的なフォントを使用して、ラベルを表示する場合は FALSE。 既定値は TRUE です。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -890,8 +890,8 @@ void SetDrawFrame(BOOL bDraw=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bDraw*  
- 埋め込みバーをフレームの四角形を表示する場合は TRUEそれ以外の場合、FALSE です。 既定値は TRUE です。  
+*bDraw*<br/>
+[in]埋め込みバーをフレームの四角形を表示する場合は TRUEそれ以外の場合、FALSE です。 既定値は TRUE です。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -905,11 +905,11 @@ void SetFlatFrame(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bFlat*  
- タブ領域フラット (2 D) フレームを描画する場合は TRUE3 次元 (3 D) フレームを描画する場合は FALSE。 既定値は TRUE です。  
+*bFlat*<br/>
+[in]タブ領域フラット (2 D) フレームを描画する場合は TRUE3 次元 (3 D) フレームを描画する場合は FALSE。 既定値は TRUE です。  
   
- [in]*bRepaint*  
- ウィンドウをすぐに再描画する場合は TRUEそれ以外の場合、FALSE です。 既定値は TRUE です。  
+*bRepaint*<br/>
+[in]ウィンドウをすぐに再描画する場合は TRUEそれ以外の場合、FALSE です。 既定値は TRUE です。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -926,17 +926,17 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiID*  
- イメージ リストを含むビットマップ リソースの ID。  
+*uiID*<br/>
+[in]イメージ リストを含むビットマップ リソースの ID。  
   
- [in]*cx*  
- 各イメージには、ピクセルの幅。 既定値は 15 です。  
+*cx*<br/>
+[in]各イメージには、ピクセルの幅。 既定値は 15 です。  
   
- [in]*clrTransp*  
- イメージの透明色。 この色には、イメージの部分は透明になります。 既定値は、マゼンタ、RGB(255,0,255) です。  
+*clrTransp*<br/>
+[in]イメージの透明色。 この色には、イメージの部分は透明になります。 既定値は、マゼンタ、RGB(255,0,255) です。  
   
- [in]*hImageList*  
- 事前に読み込まれたイメージの一覧へのハンドル。  
+*hImageList*<br/>
+[in]事前に読み込まれたイメージの一覧へのハンドル。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。 FALSE のフラット スタイルを使用してタブ コントロールを作成する場合、または最初のメソッドのオーバー ロードがで指定されているビットマップを読み込むことはできません、 *uiID*パラメーター。  
@@ -954,8 +954,8 @@ void SetResizeMode(ResizeMode resizeMode);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*resizeMode*  
- 1 つ、`CMFCTabCtrl::ResizeMode`タブ コントロールのサイズを変更できる方法を指定する列挙値。 使用可能な値の一覧は、「解説」表を参照してください。  
+*resizeMode*<br/>
+[in]1 つ、`CMFCTabCtrl::ResizeMode`タブ コントロールのサイズを変更できる方法を指定する列挙値。 使用可能な値の一覧は、「解説」表を参照してください。  
   
 ### <a name="remarks"></a>Remarks  
  *ResizeMode*パラメーターは、次のいずれかを指定できます`ResizeMode`列挙値。  
@@ -974,8 +974,8 @@ void SetTabMaxWidth(int nTabMaxWidth);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nTabMaxWidth*  
- タブの最大幅 (ピクセル単位)。  
+*nTabMaxWidth*<br/>
+[in]タブの最大幅 (ピクセル単位)。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドを使用すると、タブ付きウィンドウの各タブの幅を制限できます。 このメソッドは、タブが非常に長いラベルがある場合に便利です。 [CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md)クラスのコンス トラクターは、実際には、幅が無制限であることを意味する 0、最大のタブの幅を初期化します。  
@@ -988,8 +988,8 @@ void StopResize(BOOL bCancel);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bCancel*  
- 現在のサイズの変更操作を破棄する場合は TRUE現在のサイズ操作を完了する場合は FALSE。 どちらの場合は、フレームワークは、サイズ変更の四角形の描画を停止します。  
+*bCancel*<br/>
+[in]現在のサイズの変更操作を破棄する場合は TRUE現在のサイズ操作を完了する場合は FALSE。 どちらの場合は、フレームワークは、サイズ変更の四角形の描画を停止します。  
   
 ##  <a name="synchronizescrollbar"></a>  CMFCTabCtrl::SynchronizeScrollBar  
  フラットなタブを表示するタブ コントロールに水平スクロール バーを描画します。  
@@ -999,8 +999,8 @@ BOOL SynchronizeScrollBar(SCROLLINFO* pScrollInfo = NULL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*pScrollInfo*  
- ポインターを[SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo)構造体または NULL。 このメソッドが戻るとき、このパラメーターが NULL でない場合は、構造体には、スクロール バーのすべてのパラメーターが含まれています。 既定値は、NULL です。  
+*pScrollInfo*<br/>
+[out]ポインターを[SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo)構造体または NULL。 このメソッドが戻るとき、このパラメーターが NULL でない場合は、構造体には、スクロール バーのすべてのパラメーターが含まれています。 既定値は、NULL です。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  

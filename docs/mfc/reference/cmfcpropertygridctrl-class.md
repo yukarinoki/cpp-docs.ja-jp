@@ -160,12 +160,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25e1c3fdad045b17b83f7562256592114a5c6e72
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
-ms.translationtype: MT
+ms.openlocfilehash: a9b17c62c767b6665f70e91bfd04dc03379e08ab
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680654"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724673"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl クラス
 詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。  
@@ -332,8 +332,8 @@ virtual HRESULT accSelect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*flagsSelect*  
- [in]*varChild*  
+*flagsSelect*<br/>
+[in][in]*varChild*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -350,14 +350,14 @@ int AddProperty(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pProp*  
- プロパティへのポインター。  
+*pProp*<br/>
+[in]プロパティへのポインター。  
   
- [in]*bRedraw*  
- プロパティをすぐに再描画する場合は TRUEそれ以外の場合、FALSE です。 既定値は TRUE です。  
+*bRedraw*<br/>
+[in]プロパティをすぐに再描画する場合は TRUEそれ以外の場合、FALSE です。 既定値は TRUE です。  
   
- [in]*bAdjustLayout*  
- テキストと、プロパティの値を描画し、プロパティを描画する方法を再計算する場合は TRUE既存の計算を使用して、プロパティを描画する場合は FALSE。 既定値は TRUE です。  
+*bAdjustLayout*<br/>
+[in]テキストと、プロパティの値を描画し、プロパティを描画する方法を再計算する場合は TRUE既存の計算を使用して、プロパティを描画する場合は FALSE。 既定値は TRUE です。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功すると、そのプロパティが追加、プロパティ グリッド コントロール内の位置の 0 から始まるインデックスそれ以外の場合、-1 を返します。  
@@ -447,17 +447,17 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*dwStyle*  
- ビットごとの組み合わせ (OR)[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。  
+*dwStyle*<br/>
+[in]ビットごとの組み合わせ (OR)[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。  
   
- [in]*rect*  
- クライアントで、ウィンドウの位置とサイズを指定する外接する四角形の座標を*pParentWnd*します。  
+*rect*<br/>
+[in]クライアントで、ウィンドウの位置とサイズを指定する外接する四角形の座標を*pParentWnd*します。  
   
- [in]*pParentWnd*  
- 親ウィンドウへのポインター。 NULL は指定できません。  
+*pParentWnd*<br/>
+[in]親ウィンドウへのポインター。 NULL は指定できません。  
   
- [in]*nID*  
- 子ウィンドウの ID。  
+*nID*<br/>
+[in]子ウィンドウの ID。  
   
 ### <a name="return-value"></a>戻り値  
  ウィンドウを正常に作成した場合は TRUE。それ以外の場合、FALSE です。  
@@ -481,14 +481,14 @@ BOOL DeleteProperty(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pProp*  
- プロパティへのポインター。  
+*pProp*<br/>
+[in]プロパティへのポインター。  
   
- [in]*bRedraw*  
- プロパティ グリッド コントロールを再描画する場合は TRUEそれ以外の場合、FALSE です。 既定値は TRUE です。  
+*bRedraw*<br/>
+[in]プロパティ グリッド コントロールを再描画する場合は TRUEそれ以外の場合、FALSE です。 既定値は TRUE です。  
   
- [in]*bAdjustLayout*  
- プロパティ グリッド コントロールにすべてのテキスト、イメージ、および項目を描画する方法を再計算する場合は TRUE し、コントロールを描画しますそれ以外の場合、FALSE です。 既定値は TRUE です。  
+*bAdjustLayout*<br/>
+[in]プロパティ グリッド コントロールにすべてのテキスト、イメージ、および項目を描画する方法を再計算する場合は TRUE し、コントロールを描画しますそれ以外の場合、FALSE です。 既定値は TRUE です。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -517,11 +517,11 @@ virtual BOOL EditItem(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pProp*  
- プロパティへのポインター。  
+*pProp*<br/>
+[in]プロパティへのポインター。  
   
- [in]*lptClick*  
- 編集操作を開始するユーザーがクリックしたプロパティのグリッド コントロール上のポイント。 コントロールのクライアント座標です。 既定値は、NULL です。  
+*lptClick*<br/>
+[in]編集操作を開始するユーザーがクリックしたプロパティのグリッド コントロール上のポイント。 コントロールのクライアント座標です。 既定値は、NULL です。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -536,8 +536,8 @@ void EnableDescriptionArea(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- 説明の領域を有効にする場合は TRUE説明の領域を無効にする場合は FALSE。 既定値は TRUE です。  
+*bEnable*<br/>
+[in]説明の領域を有効にする場合は TRUE説明の領域を無効にする場合は FALSE。 既定値は TRUE です。  
   
 ### <a name="remarks"></a>Remarks  
  プロパティ グリッド コントロールの下部にある説明領域が表示されます。 既定では、説明の領域は、無効になっているとは表示されません。  
@@ -553,14 +553,14 @@ void EnableHeaderCtrl(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- ヘッダー コントロールを有効にする場合は TRUEヘッダー コントロールを無効にする場合は FALSE。 既定値は TRUE です。  
+*bEnable*<br/>
+[in]ヘッダー コントロールを有効にする場合は TRUEヘッダー コントロールを無効にする場合は FALSE。 既定値は TRUE です。  
   
- [in]*lpszLeftColumn*  
- ヘッダー コントロールの左の列のタイトル。 既定値は**プロパティ**します。  
+*lpszLeftColumn*<br/>
+[in]ヘッダー コントロールの左の列のタイトル。 既定値は**プロパティ**します。  
   
- [in]*lpszRightColumn*  
- ヘッダー コントロールの右側の列のタイトル。 既定値は**値**します。  
+*lpszRightColumn*<br/>
+[in]ヘッダー コントロールの右側の列のタイトル。 既定値は**値**します。  
   
 ##  <a name="endedititem"></a>  CMFCPropertyGridCtrl::EndEditItem  
  ユーザーは、プロパティの変更が完了すると、フレームワークによって呼び出されます。  
@@ -570,8 +570,8 @@ virtual BOOL EndEditItem(BOOL bUpdateData=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bUpdateData*  
- 編集操作が完了したときに変更されたプロパティのデータを検証する必要があります指定する場合は TRUEそれ以外の場合、FALSE です。 既定値は TRUE です。  
+*bUpdateData*<br/>
+[in]編集操作が完了したときに変更されたプロパティのデータを検証する必要があります指定する場合は TRUEそれ以外の場合、FALSE です。 既定値は TRUE です。  
   
 ### <a name="return-value"></a>戻り値  
  編集操作が正常に終了した場合は TRUE。変更されたプロパティのデータが有効でない場合、または編集操作を続行する場合は FALSE です。  
@@ -588,11 +588,11 @@ void EnsureVisible(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pProp*  
- プロパティへのポインター。  
+*pProp*<br/>
+[in]プロパティへのポインター。  
   
- [in]*bExpandParents*  
- 指定したプロパティが表示されていることを親項目を展開する場合は TRUEそれ以外の場合、FALSE です。 既定では FALSE です。  
+*bExpandParents*<br/>
+[in]指定したプロパティが表示されていることを親項目を展開する場合は TRUEそれ以外の場合、FALSE です。 既定では FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -604,8 +604,8 @@ void ExpandAll(BOOL bExpand=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bExpand*  
- すべてのノードを展開する場合は TRUEすべてのノードを折りたたむには FALSE です。 既定値は TRUE です。  
+*bExpand*<br/>
+[in]すべてのノードを展開する場合は TRUEすべてのノードを折りたたむには FALSE です。 既定値は TRUE です。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -619,11 +619,11 @@ CMFCPropertyGridProperty* FindItemByData(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*指定*  
- DWORD 値です。  
+*指定*<br/>
+[in]DWORD 値です。  
   
- [in]*bSearchSubItems*  
- プロパティのサブ項目を検索する場合は TRUEそれ以外の場合、FALSE です。 既定値は TRUE です。  
+*bSearchSubItems*<br/>
+[in]プロパティのサブ項目を検索する場合は TRUEそれ以外の場合、FALSE です。 既定値は TRUE です。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は、関連付けられているプロパティ オブジェクトへのポインターそれ以外の場合は NULL です。  
@@ -669,8 +669,8 @@ virtual HRESULT get_accHelp(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*varChild*  
- [in]*pszHelp*  
+*varChild*<br/>
+[in][in]*pszHelp*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -687,8 +687,8 @@ virtual HRESULT get_accHelpTopic(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pszHelpFile*  
- [in]*varChild*  
+*pszHelpFile*<br/>
+[in][in]*varChild*  
  [in]*pidTopic*  
   
 ### <a name="return-value"></a>戻り値  
@@ -705,8 +705,8 @@ virtual HRESULT get_accKeyboardShortcut(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*varChild*  
- [in]*pszKeyboardShortcut*  
+*varChild*<br/>
+[in][in]*pszKeyboardShortcut*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -776,26 +776,26 @@ void GetCustomColors(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [out]*clrBackground*  
- プロパティの値の背景色。  
+*clrBackground*<br/>
+[out]プロパティの値の背景色。  
   
- [out]*clrText*  
- プロパティの名前とプロパティ値のテキストの色。  
+*clrText*<br/>
+[out]プロパティの名前とプロパティ値のテキストの色。  
   
- [out]*clrGroupBackground*  
- プロパティ グループの背景色。  
+*clrGroupBackground*<br/>
+[out]プロパティ グループの背景色。  
   
- [out]*clrGroupText*  
- プロパティ グループ内のテキストの色。  
+*clrGroupText*<br/>
+[out]プロパティ グループ内のテキストの色。  
   
- [out]*clrDescriptionBackground*  
- 説明の領域の背景色。  
+*clrDescriptionBackground*<br/>
+[out]説明の領域の背景色。  
   
- [out]*clrDescriptionText*  
- 説明の領域内のテキストの色。  
+*clrDescriptionText*<br/>
+[out]説明の領域内のテキストの色。  
   
- [out]*clrLine*  
- プロパティの間に描画される線の色。  
+*clrLine*<br/>
+[out]プロパティの間に描画される線の色。  
   
 ### <a name="remarks"></a>Remarks  
  使用して、 [CMFCPropertyGridCtrl::SetCustomColors](#setcustomcolors)カスタム カラーを設定します。  
@@ -883,8 +883,8 @@ CMFCPropertyGridProperty* GetProperty(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nIndex*  
- プロパティ グリッド コントロール項目の 0 から始まるインデックス。  
+*nIndex*<br/>
+[in]プロパティ グリッド コントロール項目の 0 から始まるインデックス。  
   
  このメソッドはアサート場合、 *nIndex*パラメーターが 0 未満またはより大きいかのプロパティの数と同じです。  
   
@@ -939,8 +939,8 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*れる*  
- SB_VERT 必要がありますスクロール バーの方向。  
+*れる*<br/>
+[in]SB_VERT 必要がありますスクロール バーの方向。  
   
 ### <a name="return-value"></a>戻り値  
  スクロール バーは、オブジェクト、またはスクロール バーがないか、スクロール バーの方向がある場合は NULL へのポインターは、SB_HORZ です。  
@@ -972,14 +972,14 @@ CMFCPropertyGridProperty* HitTest(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pt*  
- クライアント座標にポイントします。  
+*pt*<br/>
+[in]クライアント座標にポイントします。  
   
- [入力、出力]*pnArea*  
- ポインター、`ClickArea`変数。 このメソッドが返す場合、変数を示します、*プロパティ領域*指定したポイントを格納しています。 プロパティ領域の詳細については、「解説」を参照してください。  
+*pnArea*<br/>
+[入力、出力]ポインター、`ClickArea`変数。 このメソッドが返す場合、変数を示します、*プロパティ領域*指定したポイントを格納しています。 プロパティ領域の詳細については、「解説」を参照してください。  
   
- [in]*bPropsOnly*  
- プロパティ領域のみをテストする場合は TRUEテストする場合は FALSE、*説明領域*プロパティ領域に指定したポイントがない場合。 既定値は FALSE です。 説明の領域の詳細については、「解説」を参照してください。  
+*bPropsOnly*<br/>
+[in]プロパティ領域のみをテストする場合は TRUEテストする場合は FALSE、*説明領域*プロパティ領域に指定したポイントがない場合。 既定値は FALSE です。 説明の領域の詳細については、「解説」を参照してください。  
   
 ### <a name="return-value"></a>戻り値  
  場合、 *bPropsOnly*パラメーターが TRUE と指定したポイントは、プロパティ領域、戻り値は、対応するプロパティ オブジェクトへのポインター。 さらに、 *pnArea*パラメーターが指定したポイントを格納している特定の領域に設定します。 それ以外の場合、戻り値が NULL と*pnArea*パラメーターは変更されません。  
@@ -1127,11 +1127,11 @@ void MarkModifiedProperties(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bMark*  
- 表示する場合は True、太字のスタイルのプロパティを変更します通常のスタイルで変更されたプロパティを表示する場合は FALSE。 既定値は TRUE です。  
+*bMark*<br/>
+[in]表示する場合は True、太字のスタイルのプロパティを変更します通常のスタイルで変更されたプロパティを表示する場合は FALSE。 既定値は TRUE です。  
   
- [in]*bRedraw*  
- プロパティ グリッド コントロールをすぐに再描画する場合は Trueそれ以外の場合、FALSE です。 既定値は TRUE です。  
+*bRedraw*<br/>
+[in]プロパティ グリッド コントロールをすぐに再描画する場合は Trueそれ以外の場合、FALSE です。 既定値は TRUE です。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1148,8 +1148,8 @@ virtual void OnChangeSelection(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*pNewSel*|新しく選択されたプロパティへのポインター。|  
-|[in]*pOldSel*|以前に選択したプロパティへのポインター。|  
+|*pNewSel*|[in]新しく選択されたプロパティへのポインター。|  
+|*pOldSel*|[in]以前に選択したプロパティへのポインター。|  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドの既定の実装では、何も行われません。  
@@ -1162,8 +1162,8 @@ virtual void OnClickButton(CPoint point);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ポイント*  
- クライアント座標にポイントします。  
+*ポイント*<br/>
+[in]クライアント座標にポイントします。  
   
 ### <a name="remarks"></a>Remarks  
  既定では、このメソッドは、現在のプロパティ値を更新します。  
@@ -1176,8 +1176,8 @@ virtual void OnDrawBorder(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1191,11 +1191,11 @@ virtual void OnDrawDescription(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rect*  
- 説明の領域を描画する場所を示す四角形。  
+*rect*<br/>
+[in]説明の領域を描画する場所を示す四角形。  
   
 ### <a name="remarks"></a>Remarks  
  使用して、 [CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea)説明領域を表示するメソッド。  
@@ -1208,8 +1208,8 @@ virtual void OnDrawList(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1223,11 +1223,11 @@ virtual int OnDrawProperty(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pProp*  
- プロパティのオブジェクトへのポインター。  
+*pProp*<br/>
+[in]プロパティのオブジェクトへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
@@ -1242,8 +1242,8 @@ virtual void OnPropertyChanged(CMFCPropertyGridProperty* pProp) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pProp*  
- 値が変更されたプロパティのオブジェクトへのポインター。  
+*pProp*<br/>
+[in]値が変更されたプロパティのオブジェクトへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは既定では、送信、 [AFX_WM_PROPERTY_CHANGED](../../mfc/reference/afx-messages.md)メッセージ プロパティのグリッド コントロールの所有者にします。  
@@ -1274,8 +1274,8 @@ void ResetOriginalValues(BOOL bRedraw=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bRedraw*  
- プロパティ リストを再描画する場合は TRUEそれ以外の場合、FALSE です。 既定値は TRUE です。  
+*bRedraw*<br/>
+[in]プロパティ リストを再描画する場合は TRUEそれ以外の場合、FALSE です。 既定値は TRUE です。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1287,8 +1287,8 @@ void SetAlphabeticMode(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bSet*  
- アルファベット モードを設定する場合は TRUEFALSE は、アルファベット モードをリセットします。 既定値は TRUE です。  
+*bSet*<br/>
+[in]アルファベット モードを設定する場合は TRUEFALSE は、アルファベット モードをリセットします。 既定値は TRUE です。  
   
 ### <a name="remarks"></a>Remarks  
  プロパティのグリッド コントロールは、アルファベット モードでは、コントロールは、プロパティ名が含まれているすべてのプロパティを並べ替えます。  
@@ -1303,11 +1303,11 @@ void SetBoolLabels(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszTrue*  
- True のブール値を表示するテキスト文字列。  
+*lpszTrue*<br/>
+[in]True のブール値を表示するテキスト文字列。  
   
- [in]*lpszFalse*  
- False のブール値を表示するテキスト文字列。  
+*lpszFalse*<br/>
+[in]False のブール値を表示するテキスト文字列。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1321,11 +1321,11 @@ void SetCurSel(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pProp*  
- プロパティのオブジェクトへのポインター。  
+*pProp*<br/>
+[in]プロパティのオブジェクトへのポインター。  
   
- [in]*bRedraw*  
- プロパティ グリッド コントロールをすぐに再描画する場合は Trueそれ以外の場合、FALSE です。 既定値は TRUE です。  
+*bRedraw*<br/>
+[in]プロパティ グリッド コントロールをすぐに再描画する場合は Trueそれ以外の場合、FALSE です。 既定値は TRUE です。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドを使用して、プロパティ グリッド コントロールの現在のアイテムの選択を解除し、指定したプロパティに対応する項目を選択します。  
@@ -1345,26 +1345,26 @@ void SetCustomColors(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*clrBackground*  
- プロパティの値の背景色。  
+*clrBackground*<br/>
+[in]プロパティの値の背景色。  
   
- [in]*clrText*  
- プロパティの名前とプロパティ値のテキストの色。  
+*clrText*<br/>
+[in]プロパティの名前とプロパティ値のテキストの色。  
   
- [in]*clrGroupBackground*  
- プロパティ グループの背景色。  
+*clrGroupBackground*<br/>
+[in]プロパティ グループの背景色。  
   
- [in]*clrGroupText*  
- プロパティ グループの新しいテキストの色。  
+*clrGroupText*<br/>
+[in]プロパティ グループの新しいテキストの色。  
   
- [in]*clrDescriptionBackground*  
- 説明の領域の背景色。  
+*clrDescriptionBackground*<br/>
+[in]説明の領域の背景色。  
   
- [in]*clrDescriptionText*  
- 説明の領域内のテキストの色。  
+*clrDescriptionText*<br/>
+[in]説明の領域内のテキストの色。  
   
- [in]*clrLine*  
- プロパティの間に描画される線の色。  
+*clrLine*<br/>
+[in]プロパティの間に描画される線の色。  
   
 ### <a name="remarks"></a>Remarks  
  任意のパラメーターを指定、`((COLORREF)-1)`カラー プロパティ グリッド コントロールの要素の既定の色を使用する値。  
@@ -1379,8 +1379,8 @@ void SetDescriptionRows(int nDescRows);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nDescRows*  
- プロパティの説明に表示する行の数。  
+*nDescRows*<br/>
+[in]プロパティの説明に表示する行の数。  
   
 ##  <a name="setgroupnamefullwidth"></a>  CMFCPropertyGridCtrl::SetGroupNameFullWidth  
  現在のプロパティ グリッド コントロールのプロパティのグループのカテゴリ名の幅全体を表示するかどうかを指定します。  
@@ -1392,11 +1392,11 @@ void SetGroupNameFullWidth(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bGroupNameFullWidth*  
- プロパティ名 列の幅に関係なく、カテゴリ名の完全な幅を表示する場合は TRUE。 プロパティ名 列の幅にカテゴリ名の幅を制限する場合は FALSE。 既定値は TRUE です。  
+*bGroupNameFullWidth*<br/>
+[in]プロパティ名列の幅に関係なく、カテゴリ名の完全な幅を表示する場合は TRUE。 プロパティ名 列の幅にカテゴリ名の幅を制限する場合は FALSE。 既定値は TRUE です。  
   
- [in]*bRedraw*  
- プロパティ グリッド コントロールを直ちに更新する場合は True次の再描画イベント時にコントロールを更新する場合は FALSE に発生します。 既定値は TRUE です。  
+*bRedraw*<br/>
+[in]プロパティ グリッド コントロールを直ちに更新する場合は True次の再描画イベント時にコントロールを更新する場合は FALSE に発生します。 既定値は TRUE です。  
   
 ### <a name="remarks"></a>Remarks  
  プロパティ グリッド コントロールをサイズ変更可能なは、*プロパティ名*列と*プロパティ値*列。 [名前] 列の末尾は [値] 列の開始もです。 列のサイズを変更するには、列の間の境界線をドラッグします。  
@@ -1411,8 +1411,8 @@ void SetListDelimiter(TCHAR c);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*c*  
- 区切り記号として機能する文字。  
+*c*<br/>
+[in]区切り記号として機能する文字。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドを使用して、使用されるプロパティの値の一覧の区切り記号を定義、 [CMFCPropertyGridProperty::CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#cmfcpropertygridproperty)コンス トラクター。 そのコンス トラクターでは、設定、 *bIsValueList*パラメーターを TRUE にします。  
@@ -1427,8 +1427,8 @@ void SetShowDragContext(BOOL bShowDragContext = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bShowDragContext*  
- サイズの変更操作中に名前と値の列を再描画する場合は TRUEドラッグ操作が完了した後に、列を再描画する場合は FALSE。 既定値は TRUE です。  
+*bShowDragContext*<br/>
+[in]サイズの変更操作中に名前と値の列を再描画する場合は TRUEドラッグ操作が完了した後に、列を再描画する場合は FALSE。 既定値は TRUE です。  
   
 ### <a name="remarks"></a>Remarks  
  ユーザーは、列の間にある分割バーをドラッグして、プロパティ グリッド コントロールの名前と値の列のサイズを変更できます。 ドラッグのコンテキストが表示されている場合、ユーザーは、分割バーをドラッグしている間に名前と値の列がサイズ変更されます。 それ以外の場合、分割バーが移動しますが、列は、ドラッグ操作が完了するまで再描画されません。  
@@ -1441,8 +1441,8 @@ void SetVSDotNetLook(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bSet*  
- Visual Studio .NET で使用されるスタイルを設定する場合は True、プロパティ グリッドを制御します。それ以外の場合、FALSE です。 既定値は TRUE です。  
+*bSet*<br/>
+[in]Visual Studio .NET で使用されるスタイルを設定する場合は True、プロパティ グリッドを制御します。それ以外の場合、FALSE です。 既定値は TRUE です。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1454,8 +1454,8 @@ virtual void UpdateColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*色*  
- RGB 色の値。  
+*色*<br/>
+[in]RGB 色の値。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、プロパティ グリッド コントロールの現在選択されているプロパティは、color プロパティでがない場合、デバッグ モードでアサートします。  
@@ -1471,7 +1471,7 @@ virtual BOOL ValidateItemData(CMFCPropertyGridProperty* pProp);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[in]*pProp*|プロパティへのポインター。 このパラメーターは使用されません。|  
+|*pProp*|[in]プロパティへのポインター。 このパラメーターは使用されません。|  
   
 ### <a name="return-value"></a>戻り値  
  常に TRUE です。  
