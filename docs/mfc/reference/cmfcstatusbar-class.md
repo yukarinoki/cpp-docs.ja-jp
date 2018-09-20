@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b153d733aca6b526150c2d149c1952811c994b4
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
-ms.translationtype: MT
+ms.openlocfilehash: 7150789756273f9d70b3dd6e156c63d0649d0957
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538874"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708189"
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar クラス
 `CMFCStatusBar`クラスに似たステータス バー、`CStatusBar`クラス。 ただし、`CMFCStatusBar` クラスには、イメージ、アニメーション、およびプログレス バーを表示する機能や、マウスのダブルクリックに応答する機能など、`CStatusBar` クラスでは提供されない機能が含まれています。 
@@ -197,8 +197,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bStretch*  
- [in]*bHorz*  
+*bStretch*<br/>
+[in][in]*bHorz*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -229,8 +229,8 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pParentWnd*  
- [in]*dwStyle*  
+*pParentWnd*<br/>
+[in][in]*dwStyle*  
  [in]*nID*  
   
 ### <a name="return-value"></a>戻り値  
@@ -249,10 +249,10 @@ BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pParentWnd*  
- [in]*ツール バー*  
- [in]*dwStyle*  
- [in]*nID*  
+*pParentWnd*<br/>
+[in][in]*ツール バー*  
+*dwStyle*<br/>
+[in][in]*nID*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -277,8 +277,8 @@ void EnablePaneDoubleClick(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEnable*  
- TRUE の場合は、マウスのダブルクリックの処理を有効にします。 それ以外の場合、マウスのダブルクリックの処理を無効にします。  
+*bEnable*<br/>
+[in]TRUE の場合は、マウスのダブルクリックの処理を有効にします。 それ以外の場合、マウスのダブルクリックの処理を無効にします。  
   
 ### <a name="remarks"></a>Remarks  
  ステータス バーが二重のクリックを処理する有効な場合、Windows は、ステータス バーのステータス バー ペインで、ユーザーがダブルクリックされるたびの所有者にリソース ID と共に WM_COMMAND 通知を送信します。  
@@ -297,23 +297,23 @@ void EnablePaneProgressBar(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nIndex*  
- ペインのインデックスを有効にするには、ある進行状況バーを指定します。  
+*nIndex*<br/>
+[in]ペインのインデックスを有効にするには、ある進行状況バーを指定します。  
   
- [in]*nTotal*  
- 進行状況バーの最大値を指定します。  
+*nTotal*<br/>
+[in]進行状況バーの最大値を指定します。  
   
- [in]*bDisplayText*  
- 進行状況バーが現在の進行状況の値を表示するかどうかを指定します。  
+*bDisplayText*<br/>
+[in]進行状況バーが現在の進行状況の値を表示するかどうかを指定します。  
   
- [in]*clrBar*  
- 進行状況バーの背景色を指定します。  
+*clrBar*<br/>
+[in]進行状況バーの背景色を指定します。  
   
- [in]*clrBarDest*  
- 進行状況バーの背景の 2 番目の色を指定します。 異なる値を使用して、 *clrBar*色がグラデーションにブレンドをして入力します。  
+*clrBarDest*<br/>
+[in]進行状況バーの背景の 2 番目の色を指定します。 異なる値を使用して、 *clrBar*色がグラデーションにブレンドをして入力します。  
   
- [in]*clrProgressText*  
- 進行状況バーのテキストの色を指定します。  
+*clrProgressText*<br/>
+[in]進行状況バーのテキストの色を指定します。  
   
 ### <a name="remarks"></a>Remarks  
  進行状況バーの呼び出しを無効にしたい場合`EnablePaneProgressBar`で*nTotal*を-1 に設定します。 既定で*nTotal* 100 に設定されます。 そのため、進行状況をパーセンテージとして表示する追加の計算にする必要はありません。  
@@ -381,8 +381,8 @@ void GetItemRect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nIndex*  
- [in]*lpRect*  
+*nIndex*<br/>
+[in][in]*lpRect*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -398,10 +398,10 @@ void GetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nIndex*  
- [in]*nID*  
- [in]*nStyle*  
- [in]*cxWidth*  
+*nIndex*<br/>
+[in][in]*nID*  
+*nStyle*<br/>
+[in][in]*cxWidth*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -445,8 +445,8 @@ CString GetPaneText(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nIndex*  
- [in]*s*  
+*nIndex*<br/>
+[in][in]*s*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -460,8 +460,8 @@ int GetPaneWidth(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nIndex*  
- ステータス バー ペインのインデックスを指定します。  
+*nIndex*<br/>
+[in]ステータス バー ペインのインデックスを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  ステータス バー ペインの幅を*nIndex*を指定します。 それ以外の場合、ステータス バー ペインが存在しない場合は 0。  
@@ -474,8 +474,8 @@ CString GetTipText(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nIndex*  
- ツールヒントのテキストを取得する対象のウィンドウのインデックスを指定します。  
+*nIndex*<br/>
+[in]ツールヒントのテキストを取得する対象のウィンドウのインデックスを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  ステータス バー ペインのツールヒントのテキストを*nIndex*を指定します。 空の文字列の指定したステータス バー ペインが存在しない場合、それ以外の場合*nIndex*のツールヒント テキストが空の場合またはします。  
@@ -488,8 +488,8 @@ void InvalidatePaneContent(int nIndex);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nIndex*  
- 内容が無効にして再描画されるウィンドウのインデックスを指定します。  
+*nIndex*<br/>
+[in]内容が無効にして再描画されるウィンドウのインデックスを指定します。  
   
 ### <a name="remarks"></a>Remarks  
  ステータス バーが無効になったときは、再描画のマークされます。 Windows で再描画時に、`UpdateWindow`メソッドに WM_PAINT メッセージを送信、`OnPaint`メソッド。  
@@ -504,11 +504,11 @@ virtual void OnDrawPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- 描画のデバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]描画のデバイス コンテキストへのポインター。  
   
- [in]*pPane*  
- ポインター、`CMFCStatusBarPaneInfo`再描画するのには、ウィンドウに関する情報を含む構造体。  
+*pPane*<br/>
+[in]ポインター、`CMFCStatusBarPaneInfo`再描画するのには、ウィンドウに関する情報を含む構造体。  
   
 ### <a name="remarks"></a>Remarks  
  既定では、`OnDrawPane`デバイス コンテキストを使用して、ウィンドウを再描画*pDC*に従って、ペインのスタイルとコンテンツ。  
@@ -551,8 +551,8 @@ BOOL SetIndicators(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpIDArray*  
- [in]*nIDCount*  
+*lpIDArray*<br/>
+[in][in]*nIDCount*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -570,17 +570,17 @@ void SetPaneAnimation(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nIndex*  
- アニメーションを割り当てるウィンドウのインデックスを指定します。  
+*nIndex*<br/>
+[in]アニメーションを割り当てるウィンドウのインデックスを指定します。  
   
- [in]*hImageList*  
- アニメーション フレームを保持するイメージ リストを識別するハンドルを指定します。  
+*hImageList*<br/>
+[in]アニメーション フレームを保持するイメージ リストを識別するハンドルを指定します。  
   
- [in]*nFrameRate*  
- アニメーションのミリ秒単位で、フレーム レートを指定します。  
+*nFrameRate*<br/>
+[in]アニメーションのミリ秒単位で、フレーム レートを指定します。  
   
- [in]*b 更新*  
- TRUE の場合、直ちに ウィンドウの内容を更新します。 それ以外の場合が無効になったときに、ウィンドウのコンテンツが更新されます。  
+*b 更新*<br/>
+[in]TRUE の場合、直ちにウィンドウの内容を更新します。 それ以外の場合が無効になったときに、ウィンドウのコンテンツが更新されます。  
   
 ### <a name="remarks"></a>Remarks  
  現在のアニメーションを無効にする場合は、呼び出す`SetPaneAnimation`で`hImageList`を NULL に設定します。  
@@ -596,14 +596,14 @@ void SetPaneBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nIndex*  
- 新しい背景色を設定する対象のウィンドウのインデックスを指定します。  
+*nIndex*<br/>
+[in]新しい背景色を設定する対象のウィンドウのインデックスを指定します。  
   
- [in]*clrBackground*  
- 新しい背景色を指定します。  
+*clrBackground*<br/>
+[in]新しい背景色を指定します。  
   
- [in]*b 更新*  
- TRUE の場合、直ちに ウィンドウの内容を更新します。 それ以外の場合は更新されません ウィンドウの内容まで、ウィンドウが別の方法で無効になります。  
+*b 更新*<br/>
+[in]TRUE の場合、直ちにウィンドウの内容を更新します。 それ以外の場合は更新されません ウィンドウの内容まで、ウィンドウが別の方法で無効になります。  
   
 ##  <a name="setpaneicon"></a>  CMFCStatusBar::SetPaneIcon  
  ステータス バー ペインのアイコンを設定します。  
@@ -623,20 +623,20 @@ void SetPaneIcon(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nIndex*  
- イメージを設定する対象のウィンドウのインデックスを指定します。  
+*nIndex*<br/>
+[in]イメージを設定する対象のウィンドウのインデックスを指定します。  
   
- [in]*hIcon*  
- ウィンドウの画像として設定するアイコンを識別するハンドルを指定します。  
+*hIcon*<br/>
+[in]ウィンドウの画像として設定するアイコンを識別するハンドルを指定します。  
   
- [in]*b 更新*  
- ウィンドウのコンテンツをすぐに更新するかどうかを指定します。  
+*b 更新*<br/>
+[in]ウィンドウのコンテンツをすぐに更新するかどうかを指定します。  
   
- [in]*hBmp*  
- ウィンドウの画像として設定するビットマップを識別するハンドルを指定します。  
+*hBmp*<br/>
+[in]ウィンドウの画像として設定するビットマップを識別するハンドルを指定します。  
   
- [in]*clrTransparent*  
- ビットマップの透明色を指定する、 *hBmp*を示します。  
+*clrTransparent*<br/>
+[in]ビットマップの透明色を指定する、 *hBmp*を示します。  
   
 ### <a name="remarks"></a>Remarks  
  透明色ウィンドウのイメージを設定すると共に、HICON または HBITMAP のいずれかを渡すことができます。 不要にイメージを表示しない場合は、イメージ ハンドルとして NULL 値を渡します。  
@@ -655,10 +655,10 @@ void SetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nIndex*  
- [in]*nID*  
- [in]*nStyle*  
- [in]*cxWidth*  
+*nIndex*<br/>
+[in][in]*nID*  
+*nStyle*<br/>
+[in][in]*cxWidth*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -673,14 +673,14 @@ void SetPaneProgress(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nIndex*  
- 進行状況インジケーターを更新するためのウィンドウのインデックスを指定します。  
+*nIndex*<br/>
+[in]進行状況インジケーターを更新するためのウィンドウのインデックスを指定します。  
   
- [in]*nCurr*  
- 進行状況インジケーターの現在の値を指定します。  
+*nCurr*<br/>
+[in]進行状況インジケーターの現在の値を指定します。  
   
- [in]*b 更新*  
- ウィンドウがすぐに更新する必要があるかどうかを指定します。  
+*b 更新*<br/>
+[in]ウィンドウがすぐに更新する必要があるかどうかを指定します。  
   
 ### <a name="remarks"></a>Remarks  
  指定したウィンドウで進行状況バーの進行状況インジケーターを更新するときに、このメソッドを呼び出します。  
@@ -697,8 +697,8 @@ void SetPaneStyle(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nIndex*  
- [in]*nStyle*  
+*nIndex*<br/>
+[in][in]*nStyle*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -713,8 +713,8 @@ virtual BOOL SetPaneText(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nIndex*  
- [in]*されています。*  
+*nIndex*<br/>
+[in][in]*されています。*  
  [in]*b 更新*  
   
 ### <a name="return-value"></a>戻り値  
@@ -732,14 +732,14 @@ void SetPaneTextColor(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nIndex*  
- 新しいテキストの色を割り当てるウィンドウのインデックスを指定します。  
+*nIndex*<br/>
+[in]新しいテキストの色を割り当てるウィンドウのインデックスを指定します。  
   
- [in]*clrText*  
- テキストの色を指定します。  
+*clrText*<br/>
+[in]テキストの色を指定します。  
   
- [in]*b 更新*  
- TRUE の場合、直ちに ウィンドウの内容を更新します。 それ以外の場合は更新されません ウィンドウの内容まで、ウィンドウが別の方法で無効になります。  
+*b 更新*<br/>
+[in]TRUE の場合、直ちにウィンドウの内容を更新します。 それ以外の場合は更新されません ウィンドウの内容まで、ウィンドウが別の方法で無効になります。  
   
 ##  <a name="setpanewidth"></a>  CMFCStatusBar::SetPaneWidth  
  ステータス バー ペインの幅を設定します。  
@@ -751,11 +751,11 @@ void SetPaneWidth(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nIndex*  
- 新しい幅を設定する対象のステータス バー ペインのインデックス。  
+*nIndex*<br/>
+[in]新しい幅を設定する対象のステータス バー ペインのインデックス。  
   
- [in]*cx*  
- ステータス バー ペインの (ピクセル単位) の新しい幅。  
+*cx*<br/>
+[in]ステータス バー ペインの (ピクセル単位) の新しい幅。  
   
 ##  <a name="settiptext"></a>  CMFCStatusBar::SetTipText  
  ステータス バー ペインのツールヒントのテキストを設定します。  
@@ -767,11 +767,11 @@ void SetTipText(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nIndex*  
- ツールヒント テキストを割り当てるウィンドウのインデックス。  
+*nIndex*<br/>
+[in]ツールヒント テキストを割り当てるウィンドウのインデックス。  
   
- [in]*pszTipText*  
- 新しいツールヒント テキスト。  
+*pszTipText*<br/>
+[in]新しいツールヒント テキスト。  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

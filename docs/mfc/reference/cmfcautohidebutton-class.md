@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4cfc3e0d129fdb10ee10275000df6d8c51604be
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
-ms.translationtype: MT
+ms.openlocfilehash: cc824d31f305fe36e0971704fd63025b3c1fdad2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42543229"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722957"
 ---
 # <a name="cmfcautohidebutton-class"></a>CMFCAutoHideButton クラス
 非表示になるように構成されている [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) を表示または非表示にするボタンです。  
@@ -144,14 +144,14 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pParentBar*  
- 親ツールバーへのポインター。  
+*pParentBar*<br/>
+[in]親ツールバーへのポインター。  
   
- [in]*pAutoHideWnd*  
- ポインターを[CDockablePane](../../mfc/reference/cdockablepane-class.md)オブジェクト。 この自動的に隠すボタンが非表示になり、ことを示しています`CDockablePane`します。  
+*pAutoHideWnd*<br/>
+[in]ポインターを[CDockablePane](../../mfc/reference/cdockablepane-class.md)オブジェクト。 この自動的に隠すボタンが非表示になり、ことを示しています`CDockablePane`します。  
   
- [in]*場合*  
- メイン フレーム ウィンドウのボタンの配置を指定する値。  
+*場合*<br/>
+[in]メイン フレーム ウィンドウのボタンの配置を指定する値。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -303,8 +303,8 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
  派生した新しいクラスを作成、アプリケーションで自動的に隠すボタンの外観をカスタマイズする場合は、`CMFCAutoHideButton`します。 派生クラスでは、このメソッドをオーバーライドします。  
@@ -320,14 +320,14 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rectBounds*  
- 自動的に隠すボタンの外接する四角形。  
+*rectBounds*<br/>
+[in]自動的に隠すボタンの外接する四角形。  
   
- [in]*rectBorderSize*  
- 自動的に隠すボタンの各側の境界線の太さ。  
+*rectBorderSize*<br/>
+[in]自動的に隠すボタンの各側の境界線の太さ。  
   
 ### <a name="remarks"></a>Remarks  
  派生した新しいクラスを作成、アプリケーションでは、各自動的に隠すボタンの境界線をカスタマイズする場合、`CMFCAutoHideButton`します。 派生クラスでは、このメソッドをオーバーライドします。  
@@ -342,11 +342,11 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rect*  
- 自動的に隠すボタンの外接する四角形。  
+*rect*<br/>
+[in]自動的に隠すボタンの外接する四角形。  
   
 ### <a name="remarks"></a>Remarks  
  派生した新しいクラスを作成、アプリケーションで自動的に隠すボタンの背景をカスタマイズする場合、`CMFCAutoHideButton`します。 派生クラスでは、このメソッドをオーバーライドします。  
@@ -359,8 +359,8 @@ void ShowAttachedWindow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bShow*  
- このメソッドを示しています、関連付けられているかどうかを指定するブール値`CDockablePane`します。  
+*bShow*<br/>
+[in]このメソッドを示しています、関連付けられているかどうかを指定するブール値`CDockablePane`します。  
   
 ##  <a name="showbutton"></a>  CMFCAutoHideButton::ShowButton  
  自動的に隠すボタンの表示と非表示を切り替えます。  
@@ -370,8 +370,8 @@ virtual void ShowButton(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bShow*  
- 自動的に隠す ボタンを表示するかどうかを指定するブール値。  
+*bShow*<br/>
+[in]自動的に隠すボタンを表示するかどうかを指定するブール値。  
   
 ##  <a name="move"></a>  CMFCAutoHideButton::Move  
 
@@ -405,8 +405,8 @@ virtual void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pFirstBarInGroup*  
- グループ内で最初のバーを指すポインター。  
+*pFirstBarInGroup*<br/>
+[in]グループ内の最初のバーへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
   

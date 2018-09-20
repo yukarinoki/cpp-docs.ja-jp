@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e119251b4d7ebfbfc6dd0cd0414d72c431555e0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
-ms.translationtype: MT
+ms.openlocfilehash: a5b97912843f14c9bc73307145bd0e1542d2c01b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200655"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726584"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>CMFCDropDownToolbarButton クラス
 ツール バー ボタンの一種で、クリックされたときは標準ボタンと同じように動作します。 ただし、ドロップダウン ツールバーを開きます ( [CMFCDropDownToolBar クラス](../../mfc/reference/cmfcdropdowntoolbar-class.md)押すし、ツール バー ボタンを押したかどうか。  
@@ -103,7 +103,7 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
   
 ### <a name="data-members"></a>データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay)|ユーザーは、ドロップダウン ツールバーが表示されるまでに、ダウンのマウス ボタンを保持する必要がある時間の長さを指定します。|  
   
@@ -132,8 +132,8 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*src*  
- コピー元のソース ボタンへの参照。  
+*src*<br/>
+[in]コピー元のソースボタンへの参照。  
   
 ### <a name="remarks"></a>Remarks  
  このツール バー ボタンに別のツール バー ボタンをコピーするには、このメソッドを呼び出します。 *src*型でなければなりません`CMFCDropDownToolbarButton`します。  
@@ -151,11 +151,11 @@ CMFCDropDownToolbarButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*lpszName*  
- ボタンの既定のテキスト。  
+*lpszName*<br/>
+[in]ボタンの既定のテキスト。  
   
- [in]*pToolBar*  
- ポインター、`CMFCDropDownToolBar`ユーザーがボタンを押したときに表示されるオブジェクト。  
+*pToolBar*<br/>
+[in]ポインター、`CMFCDropDownToolBar`ユーザーがボタンを押したときに表示されるオブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
  コンス トラクターの 2 番目のオーバー ロードからにコピー ドロップダウン ボタンの最初のボタン、ツールバーを*pToolBar*を指定します。  
@@ -175,8 +175,8 @@ BOOL DropDownToolbar(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*我が物*  
- フレームのドロップ ダウン、またはドロップダウン ツール バー ボタンの親ウィンドウを使用して NULL の親ウィンドウ。  
+*我が物*<br/>
+[in]フレームのドロップ ダウン、またはドロップダウン ツール バー ボタンの親ウィンドウを使用して NULL の親ウィンドウ。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合、0 以外の場合それ以外の場合 0 を返します。  
@@ -196,8 +196,8 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*menuButton*  
- ターゲットのメニュー ボタンへの参照。  
+*メニュー ボタン*<br/>
+[in]ターゲットのメニュー ボタンへの参照。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は 0 以外。それ以外の場合は 0。  
@@ -267,14 +267,14 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- ボタンを表示するデバイス コンテキスト。  
+*pDC*<br/>
+[in]ボタンを表示するデバイス コンテキスト。  
   
- [in]*sizeDefault*  
- ボタンの既定のサイズ。  
+*sizeDefault*<br/>
+[in]ボタンの既定のサイズ。  
   
- [in]*bHorz*  
- 親ツールバーのドッキング状態。 このパラメーターは、ツールバーが垂直方向にドッキングされている場合は、ツールバーが水平方向にドッキングされているかがフローティングする場合は TRUE または FALSE です。  
+*bHorz*<br/>
+[in]親ツールバーのドッキング状態。 このパラメーターは、ツールバーが垂直方向にドッキングされている場合は、ツールバーが水平方向にドッキングされているかがフローティングする場合は TRUE または FALSE です。  
   
 ### <a name="return-value"></a>戻り値  
  A `SIZE` (ピクセル単位)、ボタンの大きさを格納する構造体。  
@@ -290,8 +290,8 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWndParent*  
- 新しい親ウィンドウです。  
+*pWndParent*<br/>
+[in]新しい親ウィンドウです。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、基本クラスの実装 ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) をテキスト ラベルをオフにして ( [CMFCToolBarButton::m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext)) と設定、 [CMFCToolBarButton::m_bText](../../mfc/reference/cmfctoolbarbutton-class.md#m_btext)と[CMFCToolBarButton::m_bUserButton](../../mfc/reference/cmfctoolbarbutton-class.md#m_buserbutton)データ メンバーを FALSE にします。  
@@ -306,11 +306,11 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*我が物*  
- ツール バー ボタンの親ウィンドウ。  
+*我が物*<br/>
+[in]ツール バー ボタンの親ウィンドウ。  
   
- [in]*bDelay*  
- TRUE の場合、メッセージは、遅延時間で処理する必要があります。  
+*bDelay*<br/>
+[in]TRUE の場合、メッセージは、遅延時間で処理する必要があります。  
   
 ### <a name="return-value"></a>戻り値  
  ボタンをクリックしてメッセージを処理する場合は 0 以外それ以外の場合 0 を返します。  
@@ -345,8 +345,8 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*我が物*  
- ツール バー ボタンの親ウィンドウ。  
+*我が物*<br/>
+[in]ツール バー ボタンの親ウィンドウ。  
   
 ### <a name="return-value"></a>戻り値  
  ボタンは、ヘルプ メッセージを処理する場合、0 以外の場合それ以外の場合 0 を返します。  
@@ -364,8 +364,8 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pMenu*  
- カスタマイズするメニュー。  
+*pMenu*<br/>
+[in]カスタマイズするメニュー。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドは、TRUE を返します。  
@@ -401,29 +401,29 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- ボタンを表示するデバイス コンテキスト。  
+*pDC*<br/>
+[in]ボタンを表示するデバイス コンテキスト。  
   
- [in]*rect*  
- ボタンの外接する四角形。  
+*rect*<br/>
+[in]ボタンの外接する四角形。  
   
- [in]*pImages*  
- ボタンに関連付けられているツール バー イメージのコレクション。  
+*pImages*<br/>
+[in]ボタンに関連付けられているツール バー イメージのコレクション。  
   
- [in]*bHorz*  
- 親ツールバーのドッキング状態。 ボタンが垂直方向にドッキングされているとき、ボタンを水平方向および FALSE はドッキング時に、このパラメーターは TRUE です。  
+*bHorz*<br/>
+[in]親ツールバーのドッキング状態。 ボタンが垂直方向にドッキングされているとき、ボタンを水平方向および FALSE はドッキング時に、このパラメーターは TRUE です。  
   
- [in]*bCustomizeMode*  
- ツールバーのカスタマイズ モードであるかどうかを指定します。 ツールバーは、ツールバーはカスタマイズ モードでないときにカスタマイズ モードと FALSE であるとき、このパラメーターは TRUE です。  
+*bCustomizeMode*<br/>
+[in]ツールバーのカスタマイズ モードであるかどうかを指定します。 ツールバーは、ツールバーはカスタマイズ モードでないときにカスタマイズ モードと FALSE であるとき、このパラメーターは TRUE です。  
   
- [in]*bHighlight*  
- ボタンが強調表示されているかどうかを指定します。 このパラメーターは、ボタンが強調表示されていない場合は、ボタンが強調表示されている場合に TRUE と FALSE です。  
+*bHighlight*<br/>
+[in]ボタンが強調表示されているかどうかを指定します。 このパラメーターは、ボタンが強調表示されていない場合は、ボタンが強調表示されている場合に TRUE と FALSE です。  
   
- [in]*bDrawBorder*  
- ボタンの境界線を表示する必要があるかどうかを指定します。 このパラメーターは、TRUE は、ボタンから、ボタンが境界線が表示されない場合に、境界線を FALSE を表示する必要があります。  
+*bDrawBorder*<br/>
+[in]ボタンの境界線を表示する必要があるかどうかを指定します。 このパラメーターは、TRUE は、ボタンから、ボタンが境界線が表示されない場合に、境界線を FALSE を表示する必要があります。  
   
- [in]*bGrayDisabledButtons*  
- 無効なボタンの影を付けるか、無効なイメージのコレクションを使用するかどうかを指定します。 このメソッドは、無効なイメージのコレクションを使用する必要がありますと、無効になっているボタンを網掛けと FALSE をする場合、このパラメーターは TRUE です。  
+*bGrayDisabledButtons*<br/>
+[in]無効なボタンの影を付けるか、無効なイメージのコレクションを使用するかどうかを指定します。 このメソッドは、無効なイメージのコレクションを使用する必要がありますと、無効になっているボタンを網掛けと FALSE をする場合、このパラメーターは TRUE です。  
   
 ### <a name="remarks"></a>Remarks  
  ツールバーのボタンの描画をカスタマイズするには、このメソッドをオーバーライドします。  
@@ -439,14 +439,14 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- ボタンを表示するデバイス コンテキスト。  
+*pDC*<br/>
+[in]ボタンを表示するデバイス コンテキスト。  
   
- [in]*rect*  
- ボタンの外接する四角形。  
+*rect*<br/>
+[in]ボタンの外接する四角形。  
   
- [in]*bSelected*  
- ボタンが選択されているかどうか。 このパラメーターが TRUE の場合、ボタンが選択されます。 このパラメーターが FALSE の場合、ボタンが選択されていません。  
+*bSelected*<br/>
+[in]ボタンが選択されているかどうか。 このパラメーターが TRUE の場合、ボタンが選択されます。 このパラメーターが FALSE の場合、ボタンが選択されていません。  
   
 ### <a name="return-value"></a>戻り値  
  指定したデバイス コンテキストにあるボタンのピクセル単位の幅。  
@@ -464,8 +464,8 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*ar*  
- `CArchive`元またはシリアル化するオブジェクト。  
+*ar*<br/>
+[in]`CArchive`元またはシリアル化するオブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドが基底クラスの実装を拡張 ( [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize)) 親ツールバーのリソース ID をシリアル化しています。 アーカイブの読み込み時に ([場合](../../mfc/reference/carchive-class.md#isloading)0 以外の値を返します)、このメソッドは、設定、`m_pToolBar`データ メンバーをシリアル化されたリソース ID を含むツールバー  
@@ -478,8 +478,8 @@ void SetDefaultCommand(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*uiCmd*  
- 既定のコマンドの ID。  
+*uiCmd*<br/>
+[in]既定のコマンドの ID。  
   
 ### <a name="remarks"></a>Remarks  
  ユーザーがボタンをクリックしたときに、framework が実行される既定のコマンドを指定するには、このメソッドを呼び出します。 指定されたコマンド ID を持つ項目*uiCmd*親ドロップダウン ツールバーに配置する必要があります。  

@@ -354,12 +354,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0eb6e8da3caa9286e14072726488ad1c16f47b1e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
-ms.translationtype: MT
+ms.openlocfilehash: fa578e3abdaeb070e32d950887443855c2af8ba9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203643"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726831"
 ---
 # <a name="cmfcvisualmanager-class"></a>CMFCVisualManager クラス
 グローバル レベルでアプリケーションの外観変更のサポートを提供します。 `CMFCVisualManager` クラスは、一貫したスタイルを使用してアプリケーションの GUI コントロールを描画する機能を提供するクラスと連携します。 これらの連携するクラスはビジュアル マネージャーと呼ばれ、 `CMFCBaseVisualManager`から継承されます。  
@@ -674,10 +674,10 @@ void DoDrawHeaderSortArrow(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*rect*  
- [in]*bIsUp*  
- [in]*bDlgCtrl*  
+*pDC*<br/>
+[in][in]*rect*  
+*bIsUp*<br/>
+[in][in]*bDlgCtrl*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -694,8 +694,8 @@ virtual BOOL DrawComboBorderWinXP(CDC*,
   
 ### <a name="parameters"></a>パラメーター  
  [in]*CDC**  
- [in]*CRect*  
- [in]*BOOL*  
+*CRect*<br/>
+[in][in]*BOOL*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -714,8 +714,8 @@ virtual BOOL DrawComboDropButtonWinXP(CDC*,
   
 ### <a name="parameters"></a>パラメーター  
  [in]*CDC**  
- [in]*CRect*  
- [in]*BOOL*  
+*CRect*<br/>
+[in][in]*BOOL*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -733,8 +733,8 @@ virtual BOOL DrawPushButtonWinXP(CDC*,
   
 ### <a name="parameters"></a>パラメーター  
  [in]*CDC**  
- [in]*CRect*  
- [in]*CMFCButton**  
+*CRect*<br/>
+[in][in]*CMFCButton**  
  [in]*UINT*  
   
 ### <a name="return-value"></a>戻り値  
@@ -755,12 +755,12 @@ virtual BOOL DrawTextOnGlass(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*strText*  
- [in]*rect*  
- [in]*dwFlags*  
- [in]*nGlowSize*  
- [in]*clrText*  
+*pDC*<br/>
+[in][in]*strText*  
+*rect*<br/>
+[in][in]*dwFlags*  
+*nGlowSize*<br/>
+[in][in]*clrText*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -786,8 +786,8 @@ virtual COLORREF GetAutoHideButtonTextColor(CMFCAutoHideButton* pButton);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pButton*  
- 自動的に隠すボタンへのポインター。  
+*pButton*<br/>
+[in]自動的に隠すボタンへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  A [COLORREF](/windows/desktop/gdi/colorref)のテキストの色を指定するパラメーター *pButton*します。  
@@ -816,8 +816,8 @@ virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pBar*  
- キャプション バーへのポインター。  
+*pBar*<br/>
+[in]キャプション バーへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  A [COLORREF](/windows/desktop/gdi/colorref)パラメーター内のテキストの色を示す*pBar*します。  
@@ -924,8 +924,8 @@ virtual COLORREF GetMenuItemTextColor(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pButton*  
- [in]*bHighlighted*  
+*pButton*<br/>
+[in][in]*bHighlighted*  
  [in]*bDisabled*  
   
 ### <a name="return-value"></a>戻り値  
@@ -953,8 +953,8 @@ virtual CSize GetNcBtnSize(BOOL bSmall) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bSmall*  
- 示すブール値パラメーターかどうか`GetNcBtnSize`小規模または大規模なシステムのボタンのサイズを取得する必要があります。 場合*bSmall*が true の場合、`GetNcBtnSize`小型のシステム ボタンのサイズを返します。 それ以外の場合、大規模なシステムのボタンのサイズを返します。  
+*bSmall*<br/>
+[in]示すブール値パラメーターかどうか`GetNcBtnSize`小規模または大規模なシステムのボタンのサイズを取得する必要があります。 場合*bSmall*が true の場合、`GetNcBtnSize`小型のシステム ボタンのサイズを返します。 それ以外の場合、大規模なシステムのボタンのサイズを返します。  
   
 ### <a name="return-value"></a>戻り値  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md)のシステム ボタンのサイズを指定するパラメーター。  
@@ -994,8 +994,8 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pPropList*  
- フレームワークを描画するプロパティ リストへのポインター。  
+*pPropList*<br/>
+[in]フレームワークを描画するプロパティ リストへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  A [COLORREF](/windows/desktop/gdi/colorref)の背景色を示すパラメーター *pPropList*します。  
@@ -1011,8 +1011,8 @@ virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pPropList*  
- プロパティ リストへのポインター。  
+*pPropList*<br/>
+[in]プロパティ リストへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  A [COLORREF](/windows/desktop/gdi/colorref)プロパティ リストのテキストの色を示すパラメーターです。  
@@ -1098,12 +1098,12 @@ virtual void GetRibbonSliderColors(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pSlider*  
- [in]*bIsHighlighted*  
- [in]*bIsPressed*  
- [in]*bIsDisabled*  
- [in]*clrLine*  
- [in]*clrFill*  
+*pSlider*<br/>
+[in][in]*bIsHighlighted*  
+*bIsPressed*<br/>
+[in][in]*bIsDisabled*  
+*clrLine*<br/>
+[in][in]*clrFill*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1131,8 +1131,8 @@ virtual int GetShowAllMenuItemsHeight(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*sizeDefault*  
+*pDC*<br/>
+[in][in]*sizeDefault*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -1148,8 +1148,8 @@ virtual void GetSmartDockingBaseGuideColors(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*clrBaseGroupBackground*  
- [in]*clrBaseGroupBorder*  
+*clrBaseGroupBackground*<br/>
+[in][in]*clrBaseGroupBorder*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1186,8 +1186,8 @@ virtual COLORREF GetStatusBarPaneTextColor(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pStatusBar*  
- [in]*pPane*  
+*pStatusBar*<br/>
+[in][in]*pPane*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -1210,32 +1210,32 @@ virtual void GetTabFrameColors(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pTabWnd*  
- フレームがタブを描画はタブ付きウィンドウへのポインター。  
+*pTabWnd*<br/>
+[in]フレームがタブを描画はタブ付きウィンドウへのポインター。  
   
- [out]*clrDark*  
- 参照を[COLORREF](/windows/desktop/gdi/colorref)パラメーターがこのメソッドが、タブの濃い境界線の色を格納します。  
+*clrDark*<br/>
+[out]参照を[COLORREF](/windows/desktop/gdi/colorref)パラメーターがこのメソッドが、タブの濃い境界線の色を格納します。  
   
- [out]*clrBlack*  
- このメソッドがタブ ウィンドウの境界線の色を格納する COLORREF パラメーターへの参照。 境界線用の既定の色は黒です。  
+*clrBlack*<br/>
+[out]このメソッドがタブ ウィンドウの境界線の色を格納する COLORREF パラメーターへの参照。 境界線用の既定の色は黒です。  
   
- [out]*clrHighlight*  
- このメソッドがタブ ウィンドウの強調表示状態の色を格納する COLORREF パラメーターへの参照。  
+*clrHighlight*<br/>
+[out]このメソッドがタブ ウィンドウの強調表示状態の色を格納する COLORREF パラメーターへの参照。  
   
- [out]*clrFace*  
- このメソッドがタブ ウィンドウの表面の色を格納する COLORREF パラメーターへの参照。  
+*clrFace*<br/>
+[out]このメソッドがタブ ウィンドウの表面の色を格納する COLORREF パラメーターへの参照。  
   
- [out]*clrDarkShadow*  
- このメソッドがタブ ウィンドウの影の色を格納する COLORREF パラメーターへの参照。  
+*clrDarkShadow*<br/>
+[out]このメソッドがタブ ウィンドウの影の色を格納する COLORREF パラメーターへの参照。  
   
- [out]*clrLight*  
- このメソッドがタブ ウィンドウの右端の色を格納する COLORREF パラメーターへの参照。  
+*clrLight*<br/>
+[out]このメソッドがタブ ウィンドウの右端の色を格納する COLORREF パラメーターへの参照。  
   
- [out]*pbrFace*  
- ブラシの参照へのポインター。 このメソッドは、このパラメーターにタブ ウィンドウの表面を塗りつぶすために使用されるブラシを格納します。  
+*pbrFace*<br/>
+[out]ブラシの参照へのポインター。 このメソッドは、このパラメーターにタブ ウィンドウの表面を塗りつぶすために使用されるブラシを格納します。  
   
- [out]*pbrBlack*  
- ブラシの参照へのポインター。 このメソッドは、このパラメーターにタブ ウィンドウの黒の端を塗りつぶすために使用するブラシを格納します。  
+*pbrBlack*<br/>
+[out]ブラシの参照へのポインター。 このメソッドは、このパラメーターにタブ ウィンドウの黒の端を塗りつぶすために使用するブラシを格納します。  
   
 ### <a name="remarks"></a>Remarks  
  タブ ウィンドウを描画するときに、フレームワークが使用されている色のセットをカスタマイズする場合は、派生クラスでは、この関数をオーバーライドします。  
@@ -1265,8 +1265,8 @@ virtual COLORREF GetTabTextColor(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*CMFCBaseTabCtrl&#42;*  
- [in]*int*  
+*CMFCBaseTabCtrl&#42;*<br/>
+[in][in]*int*  
  [in]*BOOL*  
   
 ### <a name="return-value"></a>戻り値  
@@ -1382,11 +1382,11 @@ virtual COLORREF GetToolbarButtonTextColor(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pButton*  
- ツール バー ボタンへのポインター。  
+*pButton*<br/>
+[in]ツール バー ボタンへのポインター。  
   
- [in]*状態*  
- ツール バー ボタンの状態。  
+*state*<br/>
+[in]ツール バー ボタンの状態。  
   
 ### <a name="return-value"></a>戻り値  
  テキストの色*pButton*によって示される状態がいつ*状態*します。  
@@ -1452,8 +1452,8 @@ virtual BOOL GetToolTipInfo(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*params*  
- [in]*%n タイプ*  
+*params*<br/>
+[in][in]*%n タイプ*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -1691,8 +1691,8 @@ virtual void OnActivateApp(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*我が物*  
- [in]*描画*  
+*我が物*<br/>
+[in][in]*描画*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1708,17 +1708,17 @@ virtual void OnDrawAutoHideButtonBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rectBounds*  
- サイズと、自動的に隠すボタンの位置。  
+*rectBounds*<br/>
+[in]サイズと、自動的に隠すボタンの位置。  
   
- [in]*rectBorderSize*  
- A [CRect](../../atl-mfc-shared/reference/crect-class.md)の枠線のサイズを含むパラメーター。  
+*rectBorderSize*<br/>
+[in]A [CRect](../../atl-mfc-shared/reference/crect-class.md)の枠線のサイズを含むパラメーター。  
   
- [in]*pButton*  
- 自動的に隠すボタンへのポインター。 フレームワークには、このボタンの境界線が描画します。  
+*pButton*<br/>
+[in]自動的に隠すボタンへのポインター。 フレームワークには、このボタンの境界線が描画します。  
   
 ### <a name="remarks"></a>Remarks  
  自動的に隠すボタンの境界線の外観をカスタマイズする場合は、派生クラスでこのメソッドをオーバーライドします。 既定では、このメソッドは、アプリケーションの既定の影の色でフラットな境界線を塗りつぶします。  
@@ -1737,17 +1737,17 @@ virtual void OnDrawBarGripper(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- コントロール バー用にデバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]コントロール バー用にデバイス コンテキストへのポインター。  
   
- [in]*rectGripper*  
- コントロール バーの外接する四角形。  
+*rectGripper*<br/>
+[in]コントロール バーの外接する四角形。  
   
- [in]*bHorz*  
- コントロール バーが水平方向または垂直方向にドッキングされているかどうかを指定するブール型パラメーター。  
+*bHorz*<br/>
+[in]コントロール バーが水平方向または垂直方向にドッキングされているかどうかを指定するブール型パラメーター。  
   
- [in]*pBar*  
- コントロール バーへのポインター。 ビジュアル マネージャーでは、このコントロール バーのグリップを描画します。  
+*pBar*<br/>
+[in]コントロール バーへのポインター。 ビジュアル マネージャーでは、このコントロール バーのグリップを描画します。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドの既定の実装は、標準のグリップを表示します。 グリッパーの外観をカスタマイズするから派生したカスタム クラスでは、このメソッドをオーバーライド、`CMFCVisualManager`クラス。  
@@ -1765,20 +1765,20 @@ virtual BOOL OnDrawBrowseButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rect*  
- [参照] ボタンの境界を指定する四角形。  
+*rect*<br/>
+[in][参照] ボタンの境界を指定する四角形。  
   
- [in]*pEdit*  
- エディット コントロールへのポインター。 ビジュアル マネージャーでは、このエディット コントロールの参照ボタンを描画します。  
+*pEdit*<br/>
+[in]エディット コントロールへのポインター。 ビジュアル マネージャーでは、このエディット コントロールの参照ボタンを描画します。  
   
- [in]*状態*  
- ボタンの状態を指定する列挙値。  
+*state*<br/>
+[in]ボタンの状態を指定する列挙値。  
   
- [out]*clrText*  
- 参照を[COLORREF](/windows/desktop/gdi/colorref)パラメーター。 これは、予約済みの値があり、現在使用されているではありません。  
+*clrText*<br/>
+[out]参照を[COLORREF](/windows/desktop/gdi/colorref)パラメーター。 これは、予約済みの値があり、現在使用されているではありません。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は TRUE、それ以外の場合は FALSE。  
@@ -1798,17 +1798,17 @@ virtual void OnDrawButtonBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- ツール バー ボタンのデバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]ツール バー ボタンのデバイス コンテキストへのポインター。  
   
- [in]*pButton*  
- ツール バー ボタンへのポインター。 フレームワークは、このボタンの境界線を描画します。  
+*pButton*<br/>
+[in]ツール バー ボタンへのポインター。 フレームワークは、このボタンの境界線を描画します。  
   
- [in]*rect*  
- ツール バー ボタンの境界を指定する四角形。  
+*rect*<br/>
+[in]ツール バー ボタンの境界を指定する四角形。  
   
- [in]*状態*  
- ツール バー ボタンの現在の状態を指定する列挙型。  
+*state*<br/>
+[in]ツール バー ボタンの現在の状態を指定する列挙型。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドの既定の実装では、標準の罫線が表示されます。 ツール バー ボタンの境界線の外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
@@ -1828,10 +1828,10 @@ virtual void OnDrawButtonSeparator(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*pButton*  
- [in]*rect*  
- [in]*状態*  
+*pDC*<br/>
+[in][in]*pButton*  
+*rect*<br/>
+[in][in]*状態*  
  [in]*bHorz*  
   
 ### <a name="remarks"></a>Remarks  
@@ -1849,20 +1849,20 @@ virtual void OnDrawCaptionBarBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pBar*  
- ポインターを`CMFCCaptionBar`オブジェクト。 フレームワークは、このキャプション バーを描画します。  
+*pBar*<br/>
+[in]ポインターを`CMFCCaptionBar`オブジェクト。 フレームワークは、このキャプション バーを描画します。  
   
- [in]*rect*  
- キャプション バーの境界を指定する四角形。  
+*rect*<br/>
+[in]キャプション バーの境界を指定する四角形。  
   
- [in]*clrBarBorder*  
- 罫線の色。  
+*clrBarBorder*<br/>
+[in]罫線の色。  
   
- [in]*bFlatBorder*  
- 境界線がフラットな 2D の外観を持つかどうかを指定するブール型パラメーター。  
+*bFlatBorder*<br/>
+[in]境界線がフラットな 2D の外観を持つかどうかを指定するブール型パラメーター。  
   
 ### <a name="remarks"></a>Remarks  
  キャプション バーの境界線の外観をカスタマイズする派生クラスでこのメソッドをオーバーライドします。  
@@ -1883,14 +1883,14 @@ virtual void OnDrawCaptionBarButtonBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*pBar*  
- [in]*rect*  
- [in]*bIsPressed*  
- [in]*bIsHighlighted*  
- [in]*bIsDisabled*  
- [in]*bHasDropDownArrow*  
- [in]*bIsSysButton*  
+*pDC*<br/>
+[in][in]*pBar*  
+*rect*<br/>
+[in][in]*bIsPressed*  
+*bIsHighlighted*<br/>
+[in][in]*bIsDisabled*  
+*bHasDropDownArrow*<br/>
+[in][in]*bIsSysButton*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1905,8 +1905,8 @@ virtual void OnDrawCaptionBarInfoArea(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*pBar*  
+*pDC*<br/>
+[in][in]*pBar*  
  [in]*rect*  
   
 ### <a name="remarks"></a>Remarks  
@@ -1926,26 +1926,26 @@ virtual void OnDrawCaptionButton (
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pButton*  
- ポインターを`CMFCCaptionButton`オブジェクト。 フレームワークは、キャプションは、このボタンを描画します。  
+*pButton*<br/>
+[in]ポインターを`CMFCCaptionButton`オブジェクト。 フレームワークは、キャプションは、このボタンを描画します。  
   
- [in]*描画*  
- ボタンがアクティブかどうかを指定するブール型パラメーター。  
+*描画*<br/>
+[in]ボタンがアクティブかどうかを指定するブール型パラメーター。  
   
- [in]*bHorz*  
- キャプションが水平方向かどうかを指定するブール型パラメーター。  
+*bHorz*<br/>
+[in]キャプションが水平方向かどうかを指定するブール型パラメーター。  
   
- [in]*bMaximized*  
- 親ウィンドウが最大化されているかどうかを指定するブール型パラメーター。  
+*bMaximized*<br/>
+[in]親ウィンドウが最大化されているかどうかを指定するブール型パラメーター。  
   
- [in]*bDisabled*  
- キャプション ボタンが無効になっているかどうかを指定するブール型パラメーター。  
+*bDisabled*<br/>
+[in]キャプション ボタンが無効になっているかどうかを指定するブール型パラメーター。  
   
- [in]*nImageID*  
- ボタンに使用するアイコンのイメージのインデックス。 場合*nImageID* -1 で、このメソッドを使用して、イメージのインデックスに記録*pButton*します。  
+*nImageID*<br/>
+[in]ボタンに使用するアイコンのイメージのインデックス。 場合*nImageID* -1 で、このメソッドを使用して、イメージのインデックスに記録*pButton*します。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドの既定の実装のグローバル インスタンスから小さいボタンが表示されます、`CMenuImages`クラス。 ヘッダー ファイルで、ボタンが表示されている`CMenuImages`します。 例をいくつか含める`CMenuImages::IdClose`、 `CMenuImages::IdArowLeft`、 `CMenuImages::IdArowRight`、 `CMenuImages::IdArowDown`、 `CMenuImages::IdArowUp`、および`CMenuImages::IdPinHorz`します。  
@@ -1965,10 +1965,10 @@ virtual void OnDrawCheckBox(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*rect*  
- [in]*bHighlighted*  
- [in]*bChecked*  
+*pDC*<br/>
+[in][in]*rect*  
+*bHighlighted*<br/>
+[in][in]*bChecked*  
  [in]*bEnabled*  
   
 ### <a name="remarks"></a>Remarks  
@@ -1987,12 +1987,12 @@ virtual void OnDrawCheckBoxEx(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*rect*  
- [in]*状態*  
- [in]*bHighlighted*  
- [in]*bPressed*  
- [in]*bEnabled*  
+*pDC*<br/>
+[in][in]*rect*  
+*状態*<br/>
+[in][in]*bHighlighted*  
+*bPressed*<br/>
+[in][in]*bEnabled*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -2010,23 +2010,23 @@ virtual void OnDrawComboBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- コンボ ボックス ボタンのデバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]コンボ ボックス ボタンのデバイス コンテキストへのポインター。  
   
- [in]*rect*  
- コンボ ボックス ボタンの境界を指定する四角形。  
+*rect*<br/>
+[in]コンボ ボックス ボタンの境界を指定する四角形。  
   
- [in]*bDisabled*  
- コンボ ボックス ボタンが使用できるかどうかを示すブール値パラメーター。  
+*bDisabled*<br/>
+[in]コンボ ボックス ボタンが使用できるかどうかを示すブール値パラメーター。  
   
- [in]*bIsDropped*  
- コンボ ボックスがドロップダウンになっているかどうかを示すブール値パラメーター。  
+*bIsDropped*<br/>
+[in]コンボ ボックスがドロップダウンになっているかどうかを示すブール値パラメーター。  
   
- [in]*bIsHighlighted*  
- コンボ ボックス ボタンが強調表示されているかどうかを示すブール値パラメーター。  
+*bIsHighlighted*<br/>
+[in]コンボ ボックス ボタンが強調表示されているかどうかを示すブール値パラメーター。  
   
- [in]*pButton*  
- ポインターを`CMFCToolBarComboBoxButton`オブジェクト。 フレームワークは、このコンボ ボックス ボタンを描画します。  
+*pButton*<br/>
+[in]ポインターを`CMFCToolBarComboBoxButton`オブジェクト。 フレームワークは、このコンボ ボックス ボタンを描画します。  
   
 ### <a name="remarks"></a>Remarks  
  コンボ ボックスの枠線の外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
@@ -2045,23 +2045,23 @@ virtual void OnDrawComboDropButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rect*  
- ドロップ ボタンの境界を指定する四角形。  
+*rect*<br/>
+[in]ドロップ ボタンの境界を指定する四角形。  
   
- [in]*bDisabled*  
- ドロップ ボタンは使用できないかどうかを示すブール値パラメーター。  
+*bDisabled*<br/>
+[in]ドロップ ボタンは使用できないかどうかを示すブール値パラメーター。  
   
- [in]*bIsDropped*  
- コンボ ボックスがドロップダウンになっているかどうかを示すブール値パラメーター。  
+*bIsDropped*<br/>
+[in]コンボ ボックスがドロップダウンになっているかどうかを示すブール値パラメーター。  
   
- [in]*bIsHighlighted*  
- ドロップ ボタンが強調表示されているかどうかを示すブール値パラメーター。  
+*bIsHighlighted*<br/>
+[in]ドロップ ボタンが強調表示されているかどうかを示すブール値パラメーター。  
   
- [in]*pButton*  
- ポインターを`CMFCToolBarComboBoxButton`オブジェクト。 フレームワークでは、このコンボ ボックス ボタンのドロップダウン ボタンを描画します。  
+*pButton*<br/>
+[in]ポインターを`CMFCToolBarComboBoxButton`オブジェクト。 フレームワークでは、このコンボ ボックス ボタンのドロップダウン ボタンを描画します。  
   
 ### <a name="remarks"></a>Remarks  
  コンボ ボックス ボタンのドロップダウン ボタンの外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
@@ -2091,20 +2091,20 @@ virtual void OnDrawDefaultRibbonImage(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rectImage*  
- 既定のイメージの境界を指定する四角形。  
+*rectImage*<br/>
+[in]既定のイメージの境界を指定する四角形。  
   
- [in]*bIsDisabled*  
- リボンのボタンは使用できないかどうかを示すブール値パラメーター。  
+*bIsDisabled*<br/>
+[in]リボンのボタンは使用できないかどうかを示すブール値パラメーター。  
   
- [in]*bIsPressed*  
- リボンのボタンが押されたかどうかを示すブール値パラメーター。  
+*bIsPressed*<br/>
+[in]リボンのボタンが押されたかどうかを示すブール値パラメーター。  
   
- [in]*bIsHighlighted*  
- リボンのボタンが強調表示されているかどうかを示すブール値パラメーター。  
+*bIsHighlighted*<br/>
+[in]リボンのボタンが強調表示されているかどうかを示すブール値パラメーター。  
   
 ### <a name="remarks"></a>Remarks  
  リボン ボタンに使用するイメージをカスタマイズする場合は、派生のビジュアル マネージャーでは、このメソッドをオーバーライドします。  
@@ -2122,20 +2122,20 @@ virtual void OnDrawEditBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rect*  
- 四角形の境界を指定する、`CMFCToolBarEditBoxButton`オブジェクト。  
+*rect*<br/>
+[in]四角形の境界を指定する、`CMFCToolBarEditBoxButton`オブジェクト。  
   
- [in]*bDisabled*  
- ボタンが使用できるかどうかを示すブール値パラメーター。  
+*bDisabled*<br/>
+[in]ボタンが使用できるかどうかを示すブール値パラメーター。  
   
- [in]*bIsHighlighted*  
- ボタンが強調表示されているかどうかを示すブール値パラメーター。  
+*bIsHighlighted*<br/>
+[in]ボタンが強調表示されているかどうかを示すブール値パラメーター。  
   
- [in]*pButton*  
- ポインターを`CMFCToolBarEditBoxButton`オブジェクト。 フレームワークは、このエディット ボックス ボタンの境界線を描画します。  
+*pButton*<br/>
+[in]ポインターを`CMFCToolBarEditBoxButton`オブジェクト。 フレームワークは、このエディット ボックス ボタンの境界線を描画します。  
   
 ### <a name="remarks"></a>Remarks  
  境界線をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドする`CMFCToolBarEditBoxButton`オブジェクト。  
@@ -2152,10 +2152,10 @@ virtual void OnDrawExpandingBox(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*rect*  
- [in]*bIsOpened*  
- [in]*colorBox*  
+*pDC*<br/>
+[in][in]*rect*  
+*bIsOpened*<br/>
+[in][in]*colorBox*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -2171,17 +2171,17 @@ virtual void OnDrawFloatingToolbarBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pToolBar*  
- フローティング ツールバーへのポインター。  
+*pToolBar*<br/>
+[in]フローティング ツールバーへのポインター。  
   
- [in]*rectBorder*  
- フローティング ツールバーの境界を指定する四角形。  
+*rectBorder*<br/>
+[in]フローティング ツールバーの境界を指定する四角形。  
   
- [in]*rectBorderSize*  
- ツールバーの境界線のサイズを示す四角形。  
+*rectBorderSize*<br/>
+[in]ツールバーの境界線のサイズを示す四角形。  
   
 ### <a name="remarks"></a>Remarks  
  フローティング ツールバーは、ミニフレーム ウィンドウとして表示されるツールバーです。 通常、これが不要になったドッキングされているように、ユーザーがツールバーをドラッグしたときに発生します。  
@@ -2203,20 +2203,20 @@ virtual void OnDrawHeaderCtrlBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pCtrl*  
- ポインターを`CMFCHeaderCtrl`オブジェクト。 フレームワークは、このヘッダー コントロールの境界線を描画します。  
+*pCtrl*<br/>
+[in]ポインターを`CMFCHeaderCtrl`オブジェクト。 フレームワークは、このヘッダー コントロールの境界線を描画します。  
   
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rect*  
- ヘッダー コントロールの境界を指定する四角形。  
+*rect*<br/>
+[in]ヘッダー コントロールの境界を指定する四角形。  
   
- [in]*bIsPressed*  
- ヘッダー コントロールが押されたかどうかを示すブール値パラメーター。  
+*bIsPressed*<br/>
+[in]ヘッダー コントロールが押されたかどうかを示すブール値パラメーター。  
   
- [in]*bIsHighlighted*  
- ヘッダー コントロールが強調表示されているかどうかを示すブール値パラメーター。  
+*bIsHighlighted*<br/>
+[in]ヘッダー コントロールが強調表示されているかどうかを示すブール値パラメーター。  
   
 ### <a name="remarks"></a>Remarks  
  ヘッダー コントロールの境界線をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
@@ -2233,17 +2233,17 @@ virtual void OnDrawHeaderCtrlSortArrow(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pCtrl*  
- ヘッダー コントロールへのポインター。 この並べ替え矢印を描画するビジュアル マネージャー [CMFCHeaderCtrl クラス](../../mfc/reference/cmfcheaderctrl-class.md)オブジェクト。  
+*pCtrl*<br/>
+[in]ヘッダー コントロールへのポインター。 この並べ替え矢印を描画するビジュアル マネージャー [CMFCHeaderCtrl クラス](../../mfc/reference/cmfcheaderctrl-class.md)オブジェクト。  
   
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rect*  
- 並べ替え矢印の境界を指定する四角形。  
+*rect*<br/>
+[in]並べ替え矢印の境界を指定する四角形。  
   
- [in]*bIsUp*  
- 並べ替え矢印の方向を指定するブール値。  
+*bIsUp*<br/>
+[in]並べ替え矢印の方向を指定するブール値。  
   
 ### <a name="remarks"></a>Remarks  
  場合*bIsUp*が true の場合、ビジュアル マネージャーが上向きの並べ替え矢印を描画します。 FALSE の場合、ビジュアル マネージャーは、下向きの並べ替え矢印を描画します。 オーバーライド`OnDrawHeaderCtrlSortArrow`並べ替えボタンの外観をカスタマイズする派生クラスでします。  
@@ -2259,8 +2259,8 @@ virtual void OnDrawMenuArrowOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*rectCommand*  
+*pDC*<br/>
+[in][in]*rectCommand*  
  [in]*bSelected*  
   
 ### <a name="remarks"></a>Remarks  
@@ -2276,14 +2276,14 @@ virtual void OnDrawMenuBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインターを`CMFCPopupMenu`オブジェクト。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインターを`CMFCPopupMenu`オブジェクト。  
   
- [in]*pMenu*  
- ポインターを`CMFCPopupMenu`オブジェクト。 フレームワークは、このポップアップ メニューの周りに罫線を描画します。  
+*pMenu*<br/>
+[in]ポインターを`CMFCPopupMenu`オブジェクト。 フレームワークは、このポップアップ メニューの周りに罫線を描画します。  
   
- [in]*rect*  
- ポップアップ メニューの境界を指定する四角形。  
+*rect*<br/>
+[in]ポップアップ メニューの境界を指定する四角形。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドの既定の実装では、標準のメニューの境界線が表示されます。 メニューの境界線の外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
@@ -2301,10 +2301,10 @@ virtual void OnDrawMenuCheck(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*pButton*  
- [in]*rect*  
- [in]*bHighlight*  
+*pDC*<br/>
+[in][in]*pButton*  
+*rect*<br/>
+[in][in]*bHighlight*  
  [in]*bIsRadio*  
   
 ### <a name="remarks"></a>Remarks  
@@ -2322,10 +2322,10 @@ virtual void OnDrawMenuItemButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*pButton*  
- [in]*rectButton*  
- [in]*bHighlight*  
+*pDC*<br/>
+[in][in]*pButton*  
+*rectButton*<br/>
+[in][in]*bHighlight*  
  [in]*bDisabled*  
   
 ### <a name="remarks"></a>Remarks  
@@ -2340,8 +2340,8 @@ virtual COLORREF OnDrawMenuLabel(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*rect*  
+*pDC*<br/>
+[in][in]*rect*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -2358,8 +2358,8 @@ virtual void OnDrawMenuResizeBar(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*rect*  
+*pDC*<br/>
+[in][in]*rect*  
  [in]*nResizeFlags*  
   
 ### <a name="remarks"></a>Remarks  
@@ -2378,23 +2378,23 @@ virtual void OnDrawMenuScrollButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rect*  
- スクロール ボタンの境界を指定する四角形。  
+*rect*<br/>
+[in]スクロール ボタンの境界を指定する四角形。  
   
- [in]*bIsScrollDown*  
- ビジュアル マネージャーを描画するボタンの種類を示すブール値。 TRUE の値は、下矢印ボタンを描画するビジュアル マネージャーを示します。  
+*bIsScrollDown*<br/>
+[in]ビジュアル マネージャーを描画するボタンの種類を示すブール値。 TRUE の値は、下矢印ボタンを描画するビジュアル マネージャーを示します。  
   
- [in]*bIsHighlited*  
- ボタンが強調表示されているかどうかを示すブール値。  
+*bIsHighlited*<br/>
+[in]ボタンが強調表示されているかどうかを示すブール値。  
   
- [in]*bIsPressed*  
- ボタンが押されたかどうかを示すブール値。  
+*bIsPressed*<br/>
+[in]ボタンが押されたかどうかを示すブール値。  
   
- [in]*bIsDisabled*  
- ボタンが無効になっているかどうかを示すブール値。  
+*bIsDisabled*<br/>
+[in]ボタンが無効になっているかどうかを示すブール値。  
   
 ### <a name="remarks"></a>Remarks  
  メニューのスクロール ボタンの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。 メニュー項目全体の高さが、ポップアップ メニューの高さを超えると、ポップアップ メニューの端にスクロール ボタンのメニューが表示されます。  
@@ -2416,14 +2416,14 @@ virtual void OnDrawMenuShadow(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*rectClient*  
- [in]*rectExclude*  
- [in]*nDepth*  
- [in]*iMinBrightness*  
- [in]*iMaxBrightness*  
- [in]*pBmpSaveBottom*  
- [in]*pBmpSaveRight*  
+*pDC*<br/>
+[in][in]*rectClient*  
+*rectExclude*<br/>
+[in][in]*nDepth*  
+*iMinBrightness*<br/>
+[in][in]*iMaxBrightness*  
+*pBmpSaveBottom*<br/>
+[in][in]*pBmpSaveRight*  
  [in]*bRTL*  
   
 ### <a name="remarks"></a>Remarks  
@@ -2441,20 +2441,20 @@ virtual void OnDrawMenuSystemButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rect*  
- ボタンの境界を示す四角形。  
+*rect*<br/>
+[in]ボタンの境界を示す四角形。  
   
- [in]*uiSystemCommand*  
- システム コマンドを指定するフラグは、ボタンに関連付けられます。 指定できる値は、SC_CLOSE、SC_MINIMIZE、および SC_RESTORE は。  
+*uiSystemCommand*<br/>
+[in]システム コマンドを指定するフラグは、ボタンに関連付けられます。 指定できる値は、SC_CLOSE、SC_MINIMIZE、および SC_RESTORE は。  
   
- [in]*nStyle*  
- ボタンの現在のスタイルを指定するフラグ。 指定できる値は TBBS_PRESSED、TBBS_DISABLED、および 0 です。  
+*nStyle*<br/>
+[in]ボタンの現在のスタイルを指定するフラグ。 指定できる値は TBBS_PRESSED、TBBS_DISABLED、および 0 です。  
   
- [in]*bHighlight*  
- ボタンが強調表示されているかどうかを指定するブール型パラメーター。  
+*bHighlight*<br/>
+[in]ボタンが強調表示されているかどうかを指定するブール型パラメーター。  
   
 ### <a name="remarks"></a>Remarks  
  システムのメニュー ボタンは、**閉じる**、**最小化**、**最大化**、および**復元**ボタンはタイトル バーにあります。  
@@ -2473,10 +2473,10 @@ virtual void OnDrawMiniFrameBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*pFrameWnd*  
- [in]*rectBorder*  
- [in]*rectBorderSize*  
+*pDC*<br/>
+[in][in]*pFrameWnd*  
+*rectBorder*<br/>
+[in][in]*rectBorderSize*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -2490,11 +2490,11 @@ virtual void OnDrawOutlookBarSplitter(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rectSplitter*  
- 分割線の境界を指定する四角形。  
+*rectSplitter*<br/>
+[in]分割線の境界を指定する四角形。  
   
 ### <a name="remarks"></a>Remarks  
  Outlook バーの分割線の外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
@@ -2511,17 +2511,17 @@ virtual void OnDrawOutlookPageButtonBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rectBtn*  
- Outlook の [ページ] ボタンの境界を示す四角形。  
+*rectBtn*<br/>
+[in]Outlook の [ページ] ボタンの境界を示す四角形。  
   
- [in]*bIsHighlighted*  
- ボタンが強調表示されているかどうかを指定するブール値。  
+*bIsHighlighted*<br/>
+[in]ボタンが強調表示されているかどうかを指定するブール値。  
   
- [in]*bIsPressed*  
- ボタンが押されたかどうかを指定するブール値。  
+*bIsPressed*<br/>
+[in]ボタンが押されたかどうかを指定するブール値。  
   
 ### <a name="remarks"></a>Remarks  
  Outlook のページ ボタンの外観を変更する場合は、カスタム ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
@@ -2537,14 +2537,14 @@ virtual void OnDrawPaneBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- コントロール バーのデバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]コントロール バーのデバイス コンテキストへのポインター。  
   
- [in]*pBar*  
- ウィンドウへのポインター。 ビジュアル マネージャーでは、このウィンドウの枠線を描画します。  
+*pBar*<br/>
+[in]ウィンドウへのポインター。 ビジュアル マネージャーでは、このウィンドウの枠線を描画します。  
   
- [in]*rect*  
- ウィンドウの境界を示す四角形。  
+*rect*<br/>
+[in]ウィンドウの境界を示す四角形。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドの既定の実装では、標準の罫線が表示されます。 罫線の外観をカスタマイズする派生クラスでこのメソッドをオーバーライドします。  
@@ -2562,20 +2562,20 @@ virtual COLORREF OnDrawPaneCaption(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pBar*  
- ポインターを`CDockablePane`オブジェクト。 フレームワークは、このペインのキャプションを描画します。  
+*pBar*<br/>
+[in]ポインターを`CDockablePane`オブジェクト。 フレームワークは、このペインのキャプションを描画します。  
   
- [in]*描画*  
- コントロール バーがアクティブかどうかを示すブール値パラメーター。  
+*描画*<br/>
+[in]コントロール バーがアクティブかどうかを示すブール値パラメーター。  
   
- [in]*rectCaption*  
- キャプションの境界を示す四角形。  
+*rectCaption*<br/>
+[in]キャプションの境界を示す四角形。  
   
- [in]*rectButtons*  
- キャプション ボタンの境界を指定する四角形。  
+*rectButtons*<br/>
+[in]キャプション ボタンの境界を指定する四角形。  
   
 ### <a name="return-value"></a>戻り値  
  A [COLORREF](/windows/desktop/gdi/colorref)キャプションのテキストの色を示すパラメーターです。  
@@ -2595,10 +2595,10 @@ virtual void OnDrawPaneDivider(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*pSlider*  
- [in]*rect*  
- [in]*bAutoHideMode*  
+*pDC*<br/>
+[in][in]*pSlider*  
+*rect*<br/>
+[in][in]*bAutoHideMode*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -2612,8 +2612,8 @@ virtual void OnDrawPopupWindowBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*rect*  
+*pDC*<br/>
+[in][in]*rect*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -2628,8 +2628,8 @@ virtual void OnDrawPopupWindowButtonBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*rectClient*  
+*pDC*<br/>
+[in][in]*rectClient*  
  [in]*pButton*  
   
 ### <a name="remarks"></a>Remarks  
@@ -2645,8 +2645,8 @@ virtual COLORREF OnDrawPopupWindowCaption(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*rectCaption*  
+*pDC*<br/>
+[in][in]*rectCaption*  
  [in]*pPopupWnd*  
   
 ### <a name="return-value"></a>戻り値  
@@ -2663,11 +2663,11 @@ virtual void OnDrawRibbonApplicationButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pButton*  
- ポインター、**メイン ボタン**リボン上。  
+*pButton*<br/>
+[in]ポインター、**メイン ボタン**リボン上。  
   
 ### <a name="remarks"></a>Remarks  
  外観をカスタマイズする場合は、派生のビジュアル マネージャーでは、このメソッドをオーバーライド、**メイン ボタン**します。  
@@ -2682,11 +2682,11 @@ virtual void OnDrawRibbonButtonBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pButton*  
- ポインターを[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)オブジェクト。 フレームワークは、このリボン ボタンの境界線を描画します。  
+*pButton*<br/>
+[in]ポインターを[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)オブジェクト。 フレームワークは、このリボン ボタンの境界線を描画します。  
   
 ### <a name="remarks"></a>Remarks  
  外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドする`CMFCRibbonButton`します。  
@@ -2702,14 +2702,14 @@ virtual COLORREF OnDrawRibbonButtonsGroup(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pGroup*  
- リボンのボタンのグループへのポインター。 フレームワークは、このボタンのグループを描画します。  
+*pGroup*<br/>
+[in]リボンのボタンのグループへのポインター。 フレームワークは、このボタンのグループを描画します。  
   
- [in]*rectGroup*  
- グループの境界を示す四角形。  
+*rectGroup*<br/>
+[in]グループの境界を示す四角形。  
   
 ### <a name="return-value"></a>戻り値  
  予約済みの値。 既定の実装では、-1 が返されます。  
@@ -2729,17 +2729,17 @@ virtual void OnDrawRibbonCaption(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pBar*  
- リボン バーへのポインター。 ビジュアル マネージャーでは、このリボン バーを描画します。  
+*pBar*<br/>
+[in]リボン バーへのポインター。 ビジュアル マネージャーでは、このリボン バーを描画します。  
   
- [in]*rect*  
- リボン バーの境界を指定する四角形。  
+*rect*<br/>
+[in]リボン バーの境界を指定する四角形。  
   
- [in]*rectText*  
- キャプション バーのテキストの境界を指定する四角形。  
+*rectText*<br/>
+[in]キャプション バーのテキストの境界を指定する四角形。  
   
 ### <a name="remarks"></a>Remarks  
  キャプション バーの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、この関数をオーバーライドします。 このメソッドは、リボンがメイン フレーム ウィンドウに統合されている場合にのみ、キャプション バーに影響します。  
@@ -2774,14 +2774,14 @@ virtual void OnDrawRibbonCategory(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pCategory*  
- ポインターを`CMFCRibbonCategory`オブジェクト。 フレームワークは、このリボン カテゴリを描画します。  
+*pCategory*<br/>
+[in]ポインターを`CMFCRibbonCategory`オブジェクト。 フレームワークは、このリボン カテゴリを描画します。  
   
- [in]*rectCategory*  
- リボンのカテゴリのすべてのパネルの境界を示す四角形。  
+*rectCategory*<br/>
+[in]リボンのカテゴリのすべてのパネルの境界を示す四角形。  
   
 ### <a name="remarks"></a>Remarks  
  リボン カテゴリは、メニュー コマンドの論理グループです。 リボン カテゴリの詳細については、次を参照してください。 [CMFCRibbonCategory クラス](../../mfc/reference/cmfcribboncategory-class.md)します。  
@@ -2798,11 +2798,11 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- 描画コンテキスト。  
+*pDC*<br/>
+[in]描画コンテキスト。  
   
- [in]*pContextCaption*  
- キャプション バーへのポインター。 ビジュアル マネージャーでは、この描画[CMFCRibbonContextCaption クラス](../../mfc/reference/cmfcribboncontextcaption-class.md)オブジェクト。  
+*pContextCaption*<br/>
+[in]キャプション バーへのポインター。 ビジュアル マネージャーでは、この描画[CMFCRibbonContextCaption クラス](../../mfc/reference/cmfcribboncontextcaption-class.md)オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  A [COLORREF](/windows/desktop/gdi/colorref)キャプション バーにテキストの色を示すパラメーターです。  
@@ -2820,8 +2820,8 @@ virtual void OnDrawRibbonCategoryScroll(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*pScroll*  
+*pDC*<br/>
+[in][in]*pScroll*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -2836,14 +2836,14 @@ virtual COLORREF OnDrawRibbonCategoryTab(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pTab*  
- インスタンスへのポインター、`CMFCRibbonTab`クラス。 フレームワークは、このタブを描画します。  
+*pTab*<br/>
+[in]インスタンスへのポインター、`CMFCRibbonTab`クラス。 フレームワークは、このタブを描画します。  
   
- [in]*bIsActive*  
- タブがアクティブかどうかを示すブール値パラメーター。  
+*bIsActive*<br/>
+[in]タブがアクティブかどうかを示すブール値パラメーター。  
   
 ### <a name="return-value"></a>戻り値  
  リボンの [カテゴリ] タブでテキストに使用される色。  
@@ -2864,10 +2864,10 @@ virtual void OnDrawRibbonCheckBoxOnList(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*pCheckBox*  
- [in]*rect*  
- [in]*bIsSelected*  
+*pDC*<br/>
+[in][in]*pCheckBox*  
+*rect*<br/>
+[in][in]*bIsSelected*  
  [in]*bHighlighted*  
   
 ### <a name="remarks"></a>Remarks  
@@ -2890,16 +2890,16 @@ virtual void OnDrawRibbonColorPaletteBox(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*pColorButton*  
- [in]*pIcon*  
- [in]*色*  
- [in]*rect*  
- [in]*bDrawTopEdge*  
- [in]*bDrawBottomEdge*  
- [in]*bIsHighlighted*  
- [in]*bIsChecked*  
- [in]*bIsDisabled*  
+*pDC*<br/>
+[in][in]*pColorButton*  
+*pIcon*<br/>
+[in][in]*色*  
+*rect*<br/>
+[in][in]*bDrawTopEdge*  
+*bDrawBottomEdge*<br/>
+[in][in]*bIsHighlighted*  
+*bIsChecked*<br/>
+[in][in]*bIsDisabled*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -2913,11 +2913,11 @@ virtual void OnDrawRibbonDefaultPaneButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pButton*  
- リボン ペインの既定のボタンへのポインター。  
+*pButton*<br/>
+[in]リボン ペインの既定のボタンへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
  フレームワークでは、リボン ペインは、最小サイズにサイズ変更し、パネルのコンテンツを表示する領域がない場合、既定のボタンが表示されます。 ユーザーは、既定のボタンをクリックすると、フレームワークには、ドロップダウン パネルのコンテンツを含むメニューが表示されます。  
@@ -2934,8 +2934,8 @@ virtual void OnDrawRibbonDefaultPaneButtonContext(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*pButton*  
+*pDC*<br/>
+[in][in]*pButton*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -2952,10 +2952,10 @@ virtual void OnDrawRibbonDefaultPaneButtonIndicator(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*pButton*  
- [in]*rect*  
- [in]*bIsSelected*  
+*pDC*<br/>
+[in][in]*pButton*  
+*rect*<br/>
+[in][in]*bIsSelected*  
  [in]*bHighlighted*  
   
 ### <a name="remarks"></a>Remarks  
@@ -2971,8 +2971,8 @@ virtual void OnDrawRibbonGalleryBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*pButton*  
+*pDC*<br/>
+[in][in]*pButton*  
  [in]*rectBorder*  
   
 ### <a name="remarks"></a>Remarks  
@@ -2987,8 +2987,8 @@ virtual void OnDrawRibbonGalleryButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*pButton*  
+*pDC*<br/>
+[in][in]*pButton*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -3004,10 +3004,10 @@ virtual void OnDrawRibbonKeyTip(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*pElement*  
- [in]*rect*  
- [in]*str*  
+*pDC*<br/>
+[in][in]*pElement*  
+*rect*<br/>
+[in][in]*str*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -3022,14 +3022,14 @@ virtual void OnDrawRibbonLabel(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pLabel*  
- ポインターを[CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md)オブジェクト。 フレームワークは、このリボンのラベルを描画します。  
+*pLabel*<br/>
+[in]ポインターを[CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md)オブジェクト。 フレームワークは、このリボンのラベルを描画します。  
   
- [in]*rect*  
- リボン パネルの境界を指定する四角形。  
+*rect*<br/>
+[in]リボン パネルの境界を指定する四角形。  
   
 ### <a name="remarks"></a>Remarks  
  リボンのラベルをカスタマイズする派生クラスでこのメソッドをオーバーライドします。  
@@ -3044,11 +3044,11 @@ virtual void OnDrawRibbonMainPanelButtonBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pButton*  
- ポインター、`CMFCRibbonButton`リボンのメイン パネルにあります。 フレームワークは、このボタンの境界線を描画します。  
+*pButton*<br/>
+[in]ポインター、`CMFCRibbonButton`リボンのメイン パネルにあります。 フレームワークは、このボタンの境界線を描画します。  
   
 ### <a name="remarks"></a>Remarks  
  境界線の外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドして、`CMFCRibbonButton`上、 **Main**パネル。  
@@ -3064,14 +3064,14 @@ virtual void OnDrawRibbonMainPanelFrame(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pPanel*  
- ポインター、`CMFCRibbonMainPanel`します。  
+*pPanel*<br/>
+[in]ポインター、`CMFCRibbonMainPanel`します。  
   
- [in]*rect*  
- 四角形の境界を指定する、`CMFCRibbonMainPanel`します。  
+*rect*<br/>
+[in]四角形の境界を指定する、`CMFCRibbonMainPanel`します。  
   
 ### <a name="remarks"></a>Remarks  
  フレームの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライド、`CMFCRibbonMainPanel`します。  
@@ -3087,8 +3087,8 @@ virtual void OnDrawRibbonMenuCheckFrame(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*pButton*  
+*pDC*<br/>
+[in][in]*pButton*  
  [in]*rect*  
   
 ### <a name="remarks"></a>Remarks  
@@ -3105,17 +3105,17 @@ virtual COLORREF OnDrawRibbonPanel(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pPanel*  
- ポインターを`CMFCRibbonPanel`オブジェクト。 フレームワークは、このリボン パネルを描画します。  
+*pPanel*<br/>
+[in]ポインターを`CMFCRibbonPanel`オブジェクト。 フレームワークは、このリボン パネルを描画します。  
   
- [in]*rectPanel*  
- パネルの境界を示す四角形。  
+*rectPanel*<br/>
+[in]パネルの境界を示す四角形。  
   
- [in]*rectCaption*  
- パネルのキャプションの境界を指定する四角形。  
+*rectCaption*<br/>
+[in]パネルのキャプションの境界を指定する四角形。  
   
 ### <a name="return-value"></a>戻り値  
  リボン パネル上のテキストの色。  
@@ -3134,14 +3134,14 @@ virtual void OnDrawRibbonPanelCaption(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pPanel*  
- ポインターを`CMFCRibbonPanel`オブジェクト。 フレームワークは、このリボン パネルのキャプションを描画します。  
+*pPanel*<br/>
+[in]ポインターを`CMFCRibbonPanel`オブジェクト。 フレームワークは、このリボン パネルのキャプションを描画します。  
   
- [in]*rectCaption*  
- リボン パネルのキャプションの境界を指定する四角形。  
+*rectCaption*<br/>
+[in]リボン パネルのキャプションの境界を指定する四角形。  
   
 ### <a name="remarks"></a>Remarks  
  リボン パネルのキャプションの外観をカスタマイズする派生クラスでこのメソッドをオーバーライドします。  
@@ -3159,20 +3159,20 @@ virtual void OnDrawRibbonProgressBar(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pProgress*  
- ポインターを`CMFCRibbonProgressBar`オブジェクト。 フレームワークは、この進行状況バーを描画します。  
+*pProgress*<br/>
+[in]ポインターを`CMFCRibbonProgressBar`オブジェクト。 フレームワークは、この進行状況バーを描画します。  
   
- [in]*rectProgress*  
- 進行状況バーの境界を指定する四角形。  
+*rectProgress*<br/>
+[in]進行状況バーの境界を指定する四角形。  
   
- [in]*rectChunk*  
- 進行状況バーを周囲の領域の境界を指定する四角形。  
+*rectChunk*<br/>
+[in]進行状況バーを周囲の領域の境界を指定する四角形。  
   
- [in]*bInfiniteMode*  
- 進行状況バーのモードを示すブール値パラメーター。 値が TRUE の場合、バーは無限モードです。 既定の実装では、このパラメーターを使用しません。  
+*bInfiniteMode*<br/>
+[in]進行状況バーのモードを示すブール値パラメーター。 値が TRUE の場合、バーは無限モードです。 既定の実装では、このパラメーターを使用しません。  
   
 ### <a name="remarks"></a>Remarks  
  進行状況バーの外観をカスタマイズする派生クラスでこのメソッドをオーバーライドします。  
@@ -3188,14 +3188,14 @@ virtual void OnDrawRibbonQuickAccessToolBarSeparator(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pSeparator*  
- ポインターを[CMFCRibbonSeparator](../../mfc/reference/cmfcribbonseparator-class.md)オブジェクト。 フレームワークは、このリボンの区分線を描画します。  
+*pSeparator*<br/>
+[in]ポインターを[CMFCRibbonSeparator](../../mfc/reference/cmfcribbonseparator-class.md)オブジェクト。 フレームワークは、このリボンの区分線を描画します。  
   
- [in]*rect*  
- 区切り記号の境界を指定する四角形。  
+*rect*<br/>
+[in]区切り記号の境界を指定する四角形。  
   
 ### <a name="remarks"></a>Remarks  
  派生クラスでのリボン区切り記号の外観をカスタマイズするには、このメソッドをオーバーライド、**クイック アクセス ツールバー**します。  
@@ -3211,14 +3211,14 @@ virtual void OnDrawRibbonRecentFilesFrame(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pPanel*  
- ポインター、 **Main**リボン パネル。  
+*pPanel*<br/>
+[in]ポインター、 **Main**リボン パネル。  
   
- [in]*rect*  
- 最近使ったファイルの一覧については、フレームの境界を指定する四角形。  
+*rect*<br/>
+[in]最近使ったファイルの一覧については、フレームの境界を指定する四角形。  
   
 ### <a name="remarks"></a>Remarks  
  最近使ったファイルのリストの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
@@ -3234,14 +3234,14 @@ virtual void OnDrawRibbonSliderChannel(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pSlider*  
- CMFCRibbonSlider オブジェクトへのポインター。 フレームワークは、このリボン スライダーのチャネルを描画します。  
+*pSlider*<br/>
+[in]CMFCRibbonSlider オブジェクトへのポインター。 フレームワークは、このリボン スライダーのチャネルを描画します。  
   
- [in]*rect*  
- リボン スライダーのチャネルの境界を指定する四角形。  
+*rect*<br/>
+[in]リボン スライダーのチャネルの境界を指定する四角形。  
   
 ### <a name="remarks"></a>Remarks  
  リボン スライダーのチャネルの外観をカスタマイズする派生クラスでこのメソッドをオーバーライドします。  
@@ -3260,23 +3260,23 @@ virtual void OnDrawRibbonSliderThumb(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pSlider*  
- ポインター、`CMFCRibbonSlider`します。 フレームワークは、このリボン スライダーのつまみを描画します。  
+*pSlider*<br/>
+[in]ポインター、`CMFCRibbonSlider`します。 フレームワークは、このリボン スライダーのつまみを描画します。  
   
- [in]*rect*  
- リボン スライダーのつまみの境界を指定する四角形。  
+*rect*<br/>
+[in]リボン スライダーのつまみの境界を指定する四角形。  
   
- [in]*bIsHighlighted*  
- Thumb が強調表示されているかどうかを示すブール値パラメーター。  
+*bIsHighlighted*<br/>
+[in]Thumb が強調表示されているかどうかを示すブール値パラメーター。  
   
- [in]*bIsPressed*  
- Thumb が押されたかどうかを示すブール値パラメーター。  
+*bIsPressed*<br/>
+[in]Thumb が押されたかどうかを示すブール値パラメーター。  
   
- [in]*bIsDisabled*  
- Thumb が使用可能なかどうかを示すブール値パラメーター。  
+*bIsDisabled*<br/>
+[in]Thumb が使用可能なかどうかを示すブール値パラメーター。  
   
 ### <a name="remarks"></a>Remarks  
  場合はつまみの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドする`CMFCRibbonSlider`します。  
@@ -3296,26 +3296,26 @@ virtual void OnDrawRibbonSliderZoomButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pSlider*  
- ポインターを`CMFCRibbonSlider`オブジェクト。 フレームワークでは、このリボン スライダーを描画します。  
+*pSlider*<br/>
+[in]ポインターを`CMFCRibbonSlider`オブジェクト。 フレームワークでは、このリボン スライダーを描画します。  
   
- [in]*rect*  
- リボン スライダーのズーム ボタンの境界を指定する四角形。  
+*rect*<br/>
+[in]リボン スライダーのズーム ボタンの境界を指定する四角形。  
   
- [in]*bIsZoomOut*  
- どちらのボタンを示すブール型パラメーター、フレームワークを描画します。 TRUE の値がで左ボタンを示します、"-"ズーム アウトします。FALSE の値では、拡大「+」で右側のボタンを示します。  
+*bIsZoomOut*<br/>
+[in]どちらのボタンを示すブール型パラメーター、フレームワークを描画します。 TRUE の値がで左ボタンを示します、"-"ズーム アウトします。FALSE の値では、拡大「+」で右側のボタンを示します。  
   
- [in]*bIsHighlighted*  
- ボタンが強調表示されているかどうかを示すブール値パラメーター。  
+*bIsHighlighted*<br/>
+[in]ボタンが強調表示されているかどうかを示すブール値パラメーター。  
   
- [in]*bIsPressed*  
- ボタンが押されたかどうかを示すブール値パラメーター。  
+*bIsPressed*<br/>
+[in]ボタンが押されたかどうかを示すブール値パラメーター。  
   
- [in]*bIsDisabled*  
- ボタンが使用できるかどうかを示すブール値パラメーター。  
+*bIsDisabled*<br/>
+[in]ボタンが使用できるかどうかを示すブール値パラメーター。  
   
 ### <a name="remarks"></a>Remarks  
  リボン スライダーのズーム ボタンは既定では、いずれかで、円は、+ または -、センターにサインインします。 ズーム ボタンの外観をカスタマイズするには、派生のビジュアル マネージャーでは、このメソッドをオーバーライドします。  
@@ -3331,14 +3331,14 @@ virtual COLORREF OnDrawRibbonStatusBarPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pBar*  
- ウィンドウを含むステータス バーへのポインター。  
+*pBar*<br/>
+[in]ウィンドウを含むステータス バーへのポインター。  
   
- [in]*pPane*  
- ステータス バー ペインへのポインター。 このフレームワークは、描画[CMFCRibbonStatusBarPane](../../mfc/reference/cmfcribbonstatusbarpane-class.md)オブジェクト。  
+*pPane*<br/>
+[in]ステータス バー ペインへのポインター。 このフレームワークは、描画[CMFCRibbonStatusBarPane](../../mfc/reference/cmfcribbonstatusbarpane-class.md)オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  予約済みの値。 既定の実装では、-1 が返されます。  
@@ -3385,10 +3385,10 @@ virtual void OnDrawScrollButtons(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*rect*  
- [in]*nBorderSize*  
- [in]*画像を*  
+*pDC*<br/>
+[in][in]*rect*  
+*nBorderSize*<br/>
+[in][in]*画像を*  
  [in]*bHilited*  
   
 ### <a name="remarks"></a>Remarks  
@@ -3405,17 +3405,17 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- コントロール バー用にデバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]コントロール バー用にデバイス コンテキストへのポインター。  
   
- [in]*pBar*  
- 区切り記号を格納するウィンドウへのポインター。  
+*pBar*<br/>
+[in]区切り記号を格納するウィンドウへのポインター。  
   
- [in]*rect*  
- 区切り記号の境界を指定する四角形。  
+*rect*<br/>
+[in]区切り記号の境界を指定する四角形。  
   
- [in]*bIsHoriz*  
- ドッキング ウィンドウの向きを示すブール値パラメーター。 TRUE は、水平方向のウィンドウがドッキングされることを示します。 値が FALSE のでは、垂直方向のウィンドウがドッキングされることを示します。  
+*bIsHoriz*<br/>
+[in]ドッキング ウィンドウの向きを示すブール値パラメーター。 TRUE は、水平方向のウィンドウがドッキングされることを示します。 値が FALSE のでは、垂直方向のウィンドウがドッキングされることを示します。  
   
 ### <a name="remarks"></a>Remarks  
  区切り記号は、関連するアイコンをグループ分けするコントロール バーで使用されます。 このメソッドの既定の実装では、標準の区切り記号が表示されます。 区切り記号の外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
@@ -3431,8 +3431,8 @@ virtual void OnDrawShowAllMenuItems(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*rect*  
+*pDC*<br/>
+[in][in]*rect*  
  [in]*状態*  
   
 ### <a name="remarks"></a>Remarks  
@@ -3450,20 +3450,20 @@ virtual void OnDrawSpinButtons(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rectSpin*  
- スピン コントロールの境界を示す四角形。  
+*rectSpin*<br/>
+[in]スピン コントロールの境界を示す四角形。  
   
- [in]*状態*  
- スピン コントロールの状態を示すフラグ。 詳細については、次の「解説」を参照してください。  
+*状態*<br/>
+[in]スピン コントロールの状態を示すフラグ。 詳細については、次の「解説」を参照してください。  
   
- [in]*bOrientation*  
- スピン コントロールの向きを指定するブール型パラメーター。 TRUE の値では、スピン コントロールが水平方向を示します。 それ以外の場合、垂直方向です。  
+*bOrientation*<br/>
+[in]スピン コントロールの向きを指定するブール型パラメーター。 TRUE の値では、スピン コントロールが水平方向を示します。 それ以外の場合、垂直方向です。  
   
- [in]*pSpinCtrl*  
- スピン コントロールへのポインター。 フレームワークは、このコントロールのボタンを描画します。  
+*pSpinCtrl*<br/>
+[in]スピン コントロールへのポインター。 フレームワークは、このコントロールのボタンを描画します。  
   
 ### <a name="remarks"></a>Remarks  
  *状態*パラメーターは、スピン コントロールの状態を示します。 パラメーターでは、次の値の 1 つです。  
@@ -3491,14 +3491,14 @@ virtual void OnDrawSplitterBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pSplitterWnd*  
- スプリッター ウィンドウへのポインター。 フレームワークは、このウィンドウの境界線を描画します。  
+*pSplitterWnd*<br/>
+[in]スプリッター ウィンドウへのポインター。 フレームワークは、このウィンドウの境界線を描画します。  
   
- [in]*rect*  
- スプリッター ウィンドウの境界を指定する四角形。  
+*rect*<br/>
+[in]スプリッター ウィンドウの境界を指定する四角形。  
   
 ### <a name="remarks"></a>Remarks  
  スプリッター ウィンドウの境界線の外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
@@ -3514,14 +3514,14 @@ virtual void OnDrawSplitterBox(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pSplitterWnd*  
- スプリッター ウィンドウへのポインター。 フレームワークでは、このスプリッター ウィンドウのボックスを描画します。  
+*pSplitterWnd*<br/>
+[in]スプリッター ウィンドウへのポインター。 フレームワークでは、このスプリッター ウィンドウのボックスを描画します。  
   
- [in]*rect*  
- スプリッター ウィンドウの境界を指定する四角形。  
+*rect*<br/>
+[in]スプリッター ウィンドウの境界を指定する四角形。  
   
 ### <a name="remarks"></a>Remarks  
  スプリッター ウィンドウのドラッグのボックスの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
@@ -3539,20 +3539,20 @@ virtual void OnDrawStatusBarPaneBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pBar*  
- ポインターを`CMFCStatusBar`オブジェクト。 フレームワークは、このステータス バーのオブジェクトを描画します。  
+*pBar*<br/>
+[in]ポインターを`CMFCStatusBar`オブジェクト。 フレームワークは、このステータス バーのオブジェクトを描画します。  
   
- [in]*rectPane*  
- ステータス バーの境界を指定する四角形。  
+*rectPane*<br/>
+[in]ステータス バーの境界を指定する四角形。  
   
- [in]*uiID*  
- ステータス バーの ID。  
+*uiID*<br/>
+[in]ステータス バーの ID。  
   
- [in]*nStyle*  
- ステータス バーのスタイル。  
+*nStyle*<br/>
+[in]ステータス バーのスタイル。  
   
 ### <a name="remarks"></a>Remarks  
  境界線の外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドする`CMFCStatusBar`オブジェクト。  
@@ -3574,32 +3574,32 @@ virtual void OnDrawStatusBarProgress(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- ステータス バーのデバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]ステータス バーのデバイス コンテキストへのポインター。  
   
- [in]*pStatusBar*  
- `CMFCStatusBar`進行状況バーを格納しているオブジェクト。  
+*pStatusBar*<br/>
+[in]`CMFCStatusBar`進行状況バーを格納しているオブジェクト。  
   
- [in]*rectProgress*  
- 進行状況バーの境界を指定する四角形。  
+*rectProgress*<br/>
+[in]進行状況バーの境界を指定する四角形。  
   
- [in]*nProgressTotal*  
- 進行状況バーの合計数です。  
+*nProgressTotal*<br/>
+[in]進行状況バーの合計数です。  
   
- [in]*nProgressCurr*  
- 進行状況バーの現在の進行状況。  
+*nProgressCurr*<br/>
+[in]進行状況バーの現在の進行状況。  
   
- [in]*clrBar*  
- A [COLORREF](/windows/desktop/gdi/colorref)進行状況バーが初期の色を示すパラメーターです。 値は、いずれかの色グラデーションの開始または終了の進行状況バーの色です。  
+*clrBar*<br/>
+[in]A [COLORREF](/windows/desktop/gdi/colorref)進行状況バーが初期の色を示すパラメーターです。 値は、いずれかの色グラデーションの開始または終了の進行状況バーの色です。  
   
- [in]*clrProgressBarDest*  
- 進行状況バーの色グラデーションの終了位置を示す COLORREF パラメーター。 場合*clrProgressBarDest* -1 で、フレームワークは色のグラデーションとして進行状況バーを描画できません。 代わりに、全体の進行状況バーで指定された色で塗りつぶす*clrBar*します。  
+*clrProgressBarDest*<br/>
+[in]進行状況バーの色グラデーションの終了位置を示す COLORREF パラメーター。 場合*clrProgressBarDest* -1 で、フレームワークは色のグラデーションとして進行状況バーを描画できません。 代わりに、全体の進行状況バーで指定された色で塗りつぶす*clrBar*します。  
   
- [in]*clrProgressText*  
- 現在の進行状況のテキスト表現のテキストの色を示す COLORREF パラメーター。 場合、このパラメーターは無視されます*bProgressText*が FALSE に設定します。  
+*clrProgressText*<br/>
+[in]現在の進行状況のテキスト表現のテキストの色を示す COLORREF パラメーター。 場合、このパラメーターは無視されます*bProgressText*が FALSE に設定します。  
   
- [in]*bProgressText*  
- 現在の進行状況のテキスト表現を表示するかどうかを示すブール値パラメーター。  
+*bProgressText*<br/>
+[in]現在の進行状況のテキスト表現を表示するかどうかを示すブール値パラメーター。  
   
 ### <a name="remarks"></a>Remarks  
  外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドして、`CMFCStatusBar`オブジェクト。  
@@ -3615,14 +3615,14 @@ virtual void OnDrawStatusBarSizeBox(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pStatBar*  
- ステータス バーへのポインター。 フレームワークでは、このステータス バーのサイズのボックスを描画します。  
+*pStatBar*<br/>
+[in]ステータス バーへのポインター。 フレームワークでは、このステータス バーのサイズのボックスを描画します。  
   
- [in]*rectSizeBox*  
- [サイズ] ボックスの境界を指定する四角形。  
+*rectSizeBox*<br/>
+[in][サイズ] ボックスの境界を指定する四角形。  
   
 ### <a name="remarks"></a>Remarks  
  サイズ ボックスの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドする`CMFCStatusBar`します。  
@@ -3640,20 +3640,20 @@ virtual void OnDrawTab(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rectTab*  
- タブ コントロールの境界を指定する四角形。  
+*rectTab*<br/>
+[in]タブ コントロールの境界を指定する四角形。  
   
- [in]*iTab*  
- フレームワークを描画するタブのインデックス。  
+*iTab*<br/>
+[in]フレームワークを描画するタブのインデックス。  
   
- [in]*bIsActive*  
- タブがアクティブかどうかを指定するブール型パラメーター。  
+*bIsActive*<br/>
+[in]タブがアクティブかどうかを指定するブール型パラメーター。  
   
- [in]*pTabWnd*  
- ポインターを`CMFCBaseTabCtrl`オブジェクト。 フレームワークでは、このタブ コントロールを描画します。  
+*pTabWnd*<br/>
+[in]ポインターを`CMFCBaseTabCtrl`オブジェクト。 フレームワークでは、このタブ コントロールを描画します。  
   
 ### <a name="remarks"></a>Remarks  
  A`CMFCBaseTabCtrl`オブジェクトが WM_PAINT メッセージを処理するときに、このメソッドを呼び出します。  
@@ -3674,23 +3674,23 @@ virtual void OnDrawTabCloseButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rect*  
- 四角形の境界を指定する、**閉じる**ボタンをクリックします。  
+*rect*<br/>
+[in]四角形の境界を指定する、**閉じる**ボタンをクリックします。  
   
- [in]*pTabWnd*  
- タブ コントロールへのポインター。 フレームワークは、描画、**閉じる**タブ コントロールのボタンをクリックします。  
+*pTabWnd*<br/>
+[in]タブ コントロールへのポインター。 フレームワークは、描画、**閉じる**タブ コントロールのボタンをクリックします。  
   
- [in]*bIsHighlighted*  
- 示すブール値パラメーターかどうか、**閉じる**ボタンが強調表示されます。  
+*bIsHighlighted*<br/>
+[in]示すブール値パラメーターかどうか、**閉じる**ボタンが強調表示されます。  
   
- [in]*bIsPressed*  
- 示すブール値パラメーターかどうか、**閉じる**ボタンが押されました。  
+*bIsPressed*<br/>
+[in]示すブール値パラメーターかどうか、**閉じる**ボタンが押されました。  
   
- [in]*bIsDisabled*  
- 示すブール値パラメーターかどうか、**閉じる**ボタンが無効になります。  
+*bIsDisabled*<br/>
+[in]示すブール値パラメーターかどうか、**閉じる**ボタンが無効になります。  
   
 ### <a name="remarks"></a>Remarks  
  外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドして、**閉じる**のアクティブなタブにボタン*pTabWnd*します。  
@@ -3709,23 +3709,23 @@ virtual void OnDrawTabContent(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rectTab*  
- タブの内部の境界を指定する四角形。  
+*rectTab*<br/>
+[in]タブの内部の境界を指定する四角形。  
   
- [in]*iTab*  
- タブの 0 から始まるインデックス。フレームワークは、このタブの内部を描画します。  
+*iTab*<br/>
+[in]タブの 0 から始まるインデックス。フレームワークは、このタブの内部を描画します。  
   
- [in]*bIsActive*  
- タブがアクティブかどうかを示すブール値パラメーター。  
+*bIsActive*<br/>
+[in]タブがアクティブかどうかを示すブール値パラメーター。  
   
- [in]*pTabWnd*  
- 描画されているタブを含むタブ付きコントロールへのポインター。  
+*pTabWnd*<br/>
+[in]描画されているタブを含むタブ付きコントロールへのポインター。  
   
- [in]*clrText*  
- タブの内部のテキストの色。  
+*clrText*<br/>
+[in]タブの内部のテキストの色。  
   
 ### <a name="remarks"></a>Remarks  
  タブの内部には、テキスト、タブのアイコンが含まれています。タブの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
@@ -3743,20 +3743,20 @@ virtual void OnDrawTabsButtonBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rect*  
- [タブ] ボタンの境界を指定する四角形。  
+*rect*<br/>
+[in][タブ] ボタンの境界を指定する四角形。  
   
- [in]*pButton*  
- ポインターを[CMFCButton](../../mfc/reference/cmfcbutton-class.md)オブジェクト。 フレームワークは、この境界線を描画`CMFCButton`インスタンス。  
+*pButton*<br/>
+[in]ポインターを[CMFCButton](../../mfc/reference/cmfcbutton-class.md)オブジェクト。 フレームワークは、この境界線を描画`CMFCButton`インスタンス。  
   
- [in]*uiState*  
- ボタンの状態を指定する符号なし整数。  
+*uiState*<br/>
+[in]ボタンの状態を指定する符号なし整数。  
   
- [in]*pWndTab*  
- 親のタブ ウィンドウへのポインター。  
+*pWndTab*<br/>
+[in]親のタブ ウィンドウへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
  [タブ] ボタンの境界線の外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
@@ -3774,20 +3774,20 @@ virtual void OnDrawTask(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pTask*  
- ポインターを[CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md)オブジェクト。 フレームワークは、このタスクを描画します。  
+*pTask*<br/>
+[in]ポインターを[CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md)オブジェクト。 フレームワークは、このタスクを描画します。  
   
- [in]*pIcons*  
- 作業ウィンドウに関連付けられているイメージ リストへのポインター。 各タスクには、このリスト内のイメージのインデックスが含まれています。  
+*pIcons*<br/>
+[in]作業ウィンドウに関連付けられているイメージ リストへのポインター。 各タスクには、このリスト内のイメージのインデックスが含まれています。  
   
- [in]*bIsHighlighted*  
- 表示されるタスクが強調表示されているかどうかを指定するブール型パラメーター。  
+*bIsHighlighted*<br/>
+[in]表示されるタスクが強調表示されているかどうかを指定するブール型パラメーター。  
   
- [in]*bIsSelected*  
- 表示されるタスクが選択されているかどうかを指定するブール型パラメーター。  
+*bIsSelected*<br/>
+[in]表示されるタスクが選択されているかどうかを指定するブール型パラメーター。  
   
 ### <a name="remarks"></a>Remarks  
  フレームワークには、タスク バー アイコンおよびテキストの両方でタスクが表示されます。 *PIcons*パラメーターによって示されるタスクのアイコンが含まれる*pTask*します。  
@@ -3806,17 +3806,17 @@ virtual void OnDrawTasksGroupAreaBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rect*  
- タスク ウィンドウで、グループ領域の境界を示す四角形。  
+*rect*<br/>
+[in]タスク ウィンドウで、グループ領域の境界を示す四角形。  
   
- [in]*bSpecial*  
- 境界線が強調表示されているかどうかを指定するブール型パラメーター。 TRUE の値は、枠線が強調表示されていることを示します。  
+*bSpecial*<br/>
+[in]境界線が強調表示されているかどうかを指定するブール型パラメーター。 TRUE の値は、枠線が強調表示されていることを示します。  
   
- [in]*bNoTitle*  
- [グループ] 領域にタイトルが付いているかどうかを指定するブール型パラメーター。 TRUE の値は、グループ領域にタイトルがないことを示します。  
+*bNoTitle*<br/>
+[in][グループ] 領域にタイトルが付いているかどうかを指定するブール型パラメーター。 TRUE の値は、グループ領域にタイトルがないことを示します。  
   
 ### <a name="remarks"></a>Remarks  
  タスク ウィンドウで、グループ領域の周りの境界線をカスタマイズする派生クラスでは、この関数をオーバーライドします。  
@@ -3834,20 +3834,20 @@ virtual void OnDrawTasksGroupCaption(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pGroup*  
- ポインターを`CMFCTasksPaneTaskGroup`オブジェクト。 フレームワークは、このグループのキャプションを描画します。  
+*pGroup*<br/>
+[in]ポインターを`CMFCTasksPaneTaskGroup`オブジェクト。 フレームワークは、このグループのキャプションを描画します。  
   
- [in]*bIsHighlighted*  
- グループが強調表示されているかどうかを示すブール値パラメーター。  
+*bIsHighlighted*<br/>
+[in]グループが強調表示されているかどうかを示すブール値パラメーター。  
   
- [in]*bIsSelected*  
- グループが現在選択されているかどうかを示すブール値パラメーター。  
+*bIsSelected*<br/>
+[in]グループが現在選択されているかどうかを示すブール値パラメーター。  
   
- [in]*bCanCollapse*  
- グループを折りたためるかどうかを示すブール値パラメーター。  
+*bCanCollapse*<br/>
+[in]グループを折りたためるかどうかを示すブール値パラメーター。  
   
 ### <a name="remarks"></a>Remarks  
  タスク グループが表示されます、 [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)オブジェクト。  
@@ -3868,12 +3868,12 @@ virtual void OnDrawTasksGroupIcon(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*pGroup*  
- [in]*nIconHOffset*  
- [in]*bIsHighlighted*  
- [in]*bIsSelected*  
- [in]*bCanCollapse*  
+*pDC*<br/>
+[in][in]*pGroup*  
+*nIconHOffset*<br/>
+[in][in]*bIsHighlighted*  
+*bIsSelected*<br/>
+[in][in]*bCanCollapse*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -3888,14 +3888,14 @@ virtual void OnDrawTearOffCaption(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rect*  
- キャプションの境界を示す四角形。  
+*rect*<br/>
+[in]キャプションの境界を示す四角形。  
   
- [in]*bIsActive*  
- キャプションがアクティブである場合は TRUEFALSE それ以外の場合。  
+*bIsActive*<br/>
+[in]キャプションがアクティブである場合は TRUEFALSE それ以外の場合。  
   
 ### <a name="remarks"></a>Remarks  
  この関数がフレームワークによって呼び出されたときに、`CMFCPopupMenu`オブジェクトが WM_PAINT メッセージを処理し、ティアオフ キャプションを描画する必要があります。  
@@ -3912,8 +3912,8 @@ virtual void OnDrawToolBoxFrame(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*rect*  
+*pDC*<br/>
+[in][in]*rect*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -3927,11 +3927,11 @@ virtual BOOL OnEraseMDIClientArea(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rectClient*  
- MDI クライアント領域の境界を指定する四角形。  
+*rectClient*<br/>
+[in]MDI クライアント領域の境界を指定する四角形。  
   
 ### <a name="return-value"></a>戻り値  
  予約済みの値。 既定の実装では、FALSE を返します。  
@@ -3950,8 +3950,8 @@ virtual void OnErasePopupWindowButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*rectClient*  
+*pDC*<br/>
+[in][in]*rectClient*  
  [in]*pButton*  
   
 ### <a name="remarks"></a>Remarks  
@@ -3967,14 +3967,14 @@ virtual void OnEraseTabsArea(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rect*  
- タブ領域の境界を指定する四角形。  
+*rect*<br/>
+[in]タブ領域の境界を指定する四角形。  
   
- [in]*pTabWnd*  
- タブ ウィンドウへのポインター。 フレームワークは、指定したタブ ウィンドウのタブ領域を消去します。  
+*pTabWnd*<br/>
+[in]タブ ウィンドウへのポインター。 フレームワークは、指定したタブ ウィンドウのタブ領域を消去します。  
   
 ### <a name="remarks"></a>Remarks  
  この関数がフレームワークによって呼び出されたときに、 [CMFCBaseTabCtrl クラス](../../mfc/reference/cmfcbasetabctrl-class.md)オブジェクトが WM_PAINT メッセージを処理し、タブ領域を消去します。  
@@ -3993,17 +3993,17 @@ virtual void OnEraseTabsButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rect*  
- [タブ] ボタンの境界を指定する四角形。  
+*rect*<br/>
+[in][タブ] ボタンの境界を指定する四角形。  
   
- [in]*pButton*  
- タブ ボタンへのポインター。 フレームワークは、このボタンのアイコンとテキストを消去します。  
+*pButton*<br/>
+[in]タブボタンへのポインター。 フレームワークは、このボタンのアイコンとテキストを消去します。  
   
- [in]*pWndTab*  
- [タブ] ボタンを含むタブ コントロールへのポインター。  
+*pWndTab*<br/>
+[in][タブ] ボタンを含むタブ コントロールへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
  フレームワークは、テキストとボタンのアイコン、消去時に、 [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) WM_ERASEBKGND メッセージを処理するオブジェクト。  
@@ -4021,14 +4021,14 @@ virtual BOOL OnEraseTabsFrame(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rect*  
- タブ ウィンドウの境界を指定する四角形。  
+*rect*<br/>
+[in]タブ ウィンドウの境界を指定する四角形。  
   
- [in]*pTabWnd*  
- タブ ウィンドウへのポインター。 フレームワークは、このフレームを消去`CMFCBaseTabCtrl`します。  
+*pTabWnd*<br/>
+[in]タブ ウィンドウへのポインター。 フレームワークは、このフレームを消去`CMFCBaseTabCtrl`します。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE。FALSE それ以外の場合。  
@@ -4047,14 +4047,14 @@ virtual void OnFillAutoHideButtonBackground(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rect*  
- 自動的に隠すボタンの境界を示す四角形。  
+*rect*<br/>
+[in]自動的に隠すボタンの境界を示す四角形。  
   
- [in]*pButton*  
- ポインターを[CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md)オブジェクト。 フレームワークは、この自動的に隠すボタンの背景を塗りつぶします。  
+*pButton*<br/>
+[in]ポインターを[CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md)オブジェクト。 フレームワークは、この自動的に隠すボタンの背景を塗りつぶします。  
   
 ### <a name="remarks"></a>Remarks  
  自動的に隠すボタンの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
@@ -4072,20 +4072,20 @@ virtual void OnFillBarBackground(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- コントロール バー用にデバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]コントロール バー用にデバイス コンテキストへのポインター。  
   
- [in]*pBar*  
- ポインターを`CBasePane`オブジェクト。 フレームワークは、このペインの背景を塗りつぶします。  
+*pBar*<br/>
+[in]ポインターを`CBasePane`オブジェクト。 フレームワークは、このペインの背景を塗りつぶします。  
   
- [in]*rectClient*  
- ウィンドウの境界を指定する四角形。  
+*rectClient*<br/>
+[in]ウィンドウの境界を指定する四角形。  
   
- [in]*rectClip*  
- ウィンドウのクリッピング領域を示す四角形。  
+*rectClip*<br/>
+[in]ウィンドウのクリッピング領域を示す四角形。  
   
- [in]*bNCArea*  
- 予約済みの値。  
+*bNCArea*<br/>
+[in]予約済みの値。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドの既定の実装は、グローバル変数からの 3d の背景色でバーの背景を塗りつぶす`afxGlobalData`します。 ウィンドウの背景をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
@@ -4107,17 +4107,17 @@ virtual void OnFillButtonInterior(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- ツール バー ボタンのデバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]ツール バー ボタンのデバイス コンテキストへのポインター。  
   
- [in]*pButton*  
- ポインターを[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)します。 フレームワークは、このボタンの背景を塗りつぶします。  
+*pButton*<br/>
+[in]ポインターを[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)します。 フレームワークは、このボタンの背景を塗りつぶします。  
   
- [in]*rect*  
- ツール バー ボタンの境界を指定する四角形。  
+*rect*<br/>
+[in]ツール バー ボタンの境界を指定する四角形。  
   
- [in]*状態*  
- ツール バー ボタンの状態。  
+*state*<br/>
+[in]ツール バー ボタンの状態。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドの既定の実装では、背景の塗りつぶしに既定の色を使用します。 ツール バー ボタンの背景をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
@@ -4140,14 +4140,14 @@ virtual COLORREF OnFillCaptionBarButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*pBar*  
- [in]*rect*  
- [in]*bIsPressed*  
- [in]*bIsHighlighted*  
- [in]*bIsDisabled*  
- [in]*bHasDropDownArrow*  
- [in]*bIsSysButton*  
+*pDC*<br/>
+[in][in]*pBar*  
+*rect*<br/>
+[in][in]*bIsPressed*  
+*bIsHighlighted*<br/>
+[in][in]*bIsDisabled*  
+*bHasDropDownArrow*<br/>
+[in][in]*bIsSysButton*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -4164,14 +4164,14 @@ virtual COLORREF OnFillCommandsListBackground(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rect*  
- ボタンの境界を示す四角形。  
+*rect*<br/>
+[in]ボタンの境界を示す四角形。  
   
- [in]*bIsSelected*  
- ボタンが選択されているかどうかを示すブール値パラメーター。  
+*bIsSelected*<br/>
+[in]ボタンが選択されているかどうかを示すブール値パラメーター。  
   
 ### <a name="return-value"></a>戻り値  
  ツール バー ボタンのテキストの色。  
@@ -4190,14 +4190,14 @@ virtual void OnFillHeaderCtrlBackground(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pCtrl*  
- ポインターを[CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md)オブジェクト。 フレームワークは、このヘッダー コントロールの背景を塗りつぶします。  
+*pCtrl*<br/>
+[in]ポインターを[CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md)オブジェクト。 フレームワークは、このヘッダー コントロールの背景を塗りつぶします。  
   
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rect*  
- ヘッダー コントロールの境界を指定する四角形。  
+*rect*<br/>
+[in]ヘッダー コントロールの境界を指定する四角形。  
   
 ### <a name="remarks"></a>Remarks  
  ヘッダー コントロールの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
@@ -4214,17 +4214,17 @@ virtual COLORREF OnFillMiniFrameCaption(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rectCaption*  
- キャプション バーの境界を指定する四角形。  
+*rectCaption*<br/>
+[in]キャプション バーの境界を指定する四角形。  
   
- [in]*pFrameWnd*  
- ミニフレーム ウィンドウへのポインター。 フレームワークは、このウィンドウのキャプション バーを描画します。  
+*pFrameWnd*<br/>
+[in]ミニフレーム ウィンドウへのポインター。 フレームワークは、このウィンドウのキャプション バーを描画します。  
   
- [in]*描画*  
- ウィンドウがアクティブであるかを示すブール値パラメーター。  
+*描画*<br/>
+[in]ウィンドウがアクティブであるかを示すブール値パラメーター。  
   
 ### <a name="return-value"></a>戻り値  
  キャプション バーの背景の塗りつぶしに使用される色。  
@@ -4243,14 +4243,14 @@ virtual void OnFillOutlookBarCaption(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rectCaption*  
- キャプション バーの境界を指定する四角形。  
+*rectCaption*<br/>
+[in]キャプション バーの境界を指定する四角形。  
   
- [out]*clrText*  
- 参照を[COLORREF](/windows/desktop/gdi/colorref)パラメーター。 メソッドは、このパラメーターに、キャプション バーにテキストの色を書き込みます。  
+*clrText*<br/>
+[out]参照を[COLORREF](/windows/desktop/gdi/colorref)パラメーター。 メソッドは、このパラメーターに、キャプション バーにテキストの色を書き込みます。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドの既定の実装では、現在のスキンを使用して影の色でキャプション バーを塗りつぶします。 Outlook のキャプション バーの色をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
@@ -4268,20 +4268,20 @@ virtual void OnFillOutlookPageButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rect*  
- Outlook のページ ボタンの境界を指定する四角形。  
+*rect*<br/>
+[in]Outlook のページ ボタンの境界を指定する四角形。  
   
- [in]*bIsHighlighted*  
- ボタンが強調表示されているかどうかを指定するブール型パラメーター。  
+*bIsHighlighted*<br/>
+[in]ボタンが強調表示されているかどうかを指定するブール型パラメーター。  
   
- [in]*bIsPressed*  
- ボタンが押されたかどうかを指定するブール型パラメーター。  
+*bIsPressed*<br/>
+[in]ボタンが押されたかどうかを指定するブール型パラメーター。  
   
- [out]*clrText*  
- 参照を[COLORREF](/windows/desktop/gdi/colorref)パラメーター。 このメソッドは、このパラメーターに outlook のページ ボタンのテキストの色を格納します。  
+*clrText*<br/>
+[out]参照を[COLORREF](/windows/desktop/gdi/colorref)パラメーター。 このメソッドは、このパラメーターに outlook のページ ボタンのテキストの色を格納します。  
   
 ### <a name="remarks"></a>Remarks  
  Outlook のページ ボタンの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、この関数をオーバーライドします。  
@@ -4296,11 +4296,11 @@ virtual void OnFillPopupWindowBackground(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rect*  
- ポップアップ ウィンドウの境界を指定する四角形。  
+*rect*<br/>
+[in]ポップアップ ウィンドウの境界を指定する四角形。  
   
 ### <a name="remarks"></a>Remarks  
  ポップアップ ウィンドウの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
@@ -4315,11 +4315,11 @@ virtual COLORREF OnFillRibbonButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pButton*  
- ポインターを[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)オブジェクト。 フレームワークは、このリボン ボタンの内部を塗りつぶします。  
+*pButton*<br/>
+[in]ポインターを[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)オブジェクト。 フレームワークは、このリボン ボタンの内部を塗りつぶします。  
   
 ### <a name="return-value"></a>戻り値  
  指定されたリボン ボタンのテキストの色*pButton*リボン ボタンのテキストをサポートしている場合。 テキストがリボン ボタンの有効な場合は-1 の値。  
@@ -4344,32 +4344,32 @@ virtual void OnFillRibbonEdit(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pEdit*  
- ポインターを`CMFCRibbonRichEditCtrl`オブジェクト。 フレームワークは、このエディット コントロールの内部を塗りつぶします。  
+*pEdit*<br/>
+[in]ポインターを`CMFCRibbonRichEditCtrl`オブジェクト。 フレームワークは、このエディット コントロールの内部を塗りつぶします。  
   
- [in]*rect*  
- エディット コントロールの境界を指定する四角形。  
+*rect*<br/>
+[in]エディット コントロールの境界を指定する四角形。  
   
- [in]*bIsHighlighted*  
- 編集コントロールが強調表示されているかどうかを示すブール値パラメーター。  
+*bIsHighlighted*<br/>
+[in]編集コントロールが強調表示されているかどうかを示すブール値パラメーター。  
   
- [in]*bIsPaneHighlighted*  
- 親ウィンドウが強調表示されているかどうかを示すブール値パラメーター。  
+*bIsPaneHighlighted*<br/>
+[in]親ウィンドウが強調表示されているかどうかを示すブール値パラメーター。  
   
- [in]*bIsDisabled*  
- エディット コントロールが使用できるかどうかを示すブール値パラメーター。  
+*bIsDisabled*<br/>
+[in]エディット コントロールが使用できるかどうかを示すブール値パラメーター。  
   
- [in]*clrText*  
- 編集コントロールのテキストの色への参照。  
+*clrText*<br/>
+[in]編集コントロールのテキストの色への参照。  
   
- [in]*clrSelBackground*  
- 強調表示されている場合は、エディット コントロールの背景色への参照。  
+*clrSelBackground*<br/>
+[in]強調表示されている場合は、エディット コントロールの背景色への参照。  
   
- [in]*clrSelText*  
- 編集コントロールに、選択したテキストの色への参照。  
+*clrSelText*<br/>
+[in]編集コントロールに、選択したテキストの色への参照。  
   
 ### <a name="remarks"></a>Remarks  
  `CMFCRibbonRichEditCtrl`によって示される*pEdit*リボンのコンボ ボックス ボタンを含めることができます。  
@@ -4386,11 +4386,11 @@ virtual COLORREF OnFillRibbonMainPanelButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pButton*  
- ポインターを[CMFCRibbonButton クラス](../../mfc/reference/cmfcribbonbutton-class.md)オブジェクト。 フレームワークは、このリボン ボタンを塗りつぶします。  
+*pButton*<br/>
+[in]ポインターを[CMFCRibbonButton クラス](../../mfc/reference/cmfcribbonbutton-class.md)オブジェクト。 フレームワークは、このリボン ボタンを塗りつぶします。  
   
 ### <a name="return-value"></a>戻り値  
  指定されたリボン ボタンのテキストの色*pButton*リボン ボタンのテキストをサポートしている場合。 テキストがリボン ボタンの有効な場合は-1 の値。  
@@ -4409,14 +4409,14 @@ virtual void OnFillRibbonMenuFrame(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pPanel*  
- インスタンスへのポインター、 [CMFCRibbonMainPanel クラス](../../mfc/reference/cmfcribbonmainpanel-class.md)します。 フレームワークは、このリボン パネル メニュー フレームを塗りつぶします。  
+*pPanel*<br/>
+[in]インスタンスへのポインター、 [CMFCRibbonMainPanel クラス](../../mfc/reference/cmfcribbonmainpanel-class.md)します。 フレームワークは、このリボン パネル メニュー フレームを塗りつぶします。  
   
- [in]*rect*  
- メニュー フレームの境界を指定する四角形。  
+*rect*<br/>
+[in]メニュー フレームの境界を指定する四角形。  
   
 ### <a name="remarks"></a>Remarks  
  メニュー バーの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライド、`CMFCRibbonMainPanel`します。  
@@ -4432,8 +4432,8 @@ virtual void OnFillRibbonQuickAccessToolBarPopup(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- [in]*pMenuBar*  
+*pDC*<br/>
+[in][in]*pMenuBar*  
  [in]*rect*  
   
 ### <a name="remarks"></a>Remarks  
@@ -4449,14 +4449,14 @@ virtual void OnFillSplitterBackground(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*pSplitterWnd*  
- インスタンスへのポインター、 [CSplitterWndEx クラス](csplitterwndex-class.md)します。 フレームワークは、このスプリッター ウィンドウの背景を塗りつぶします。  
+*pSplitterWnd*<br/>
+[in]インスタンスへのポインター、 [CSplitterWndEx クラス](csplitterwndex-class.md)します。 フレームワークは、このスプリッター ウィンドウの背景を塗りつぶします。  
   
- [in]*rect*  
- スプリッター ウィンドウの境界を指定する四角形。  
+*rect*<br/>
+[in]スプリッター ウィンドウの境界を指定する四角形。  
   
 ### <a name="remarks"></a>Remarks  
  スプリッター ウィンドウの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
@@ -4475,23 +4475,23 @@ virtual void OnFillTab(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rectFill*  
- タブ ウィンドウの境界を指定する四角形。  
+*rectFill*<br/>
+[in]タブ ウィンドウの境界を指定する四角形。  
   
- [in]*pbrFill*  
- ブラシへのポインター。 フレームワークでは、このブラシを使用してタブ ウィンドウを塗りつぶします。  
+*pbrFill*<br/>
+[in]ブラシへのポインター。 フレームワークでは、このブラシを使用してタブ ウィンドウを塗りつぶします。  
   
- [in]*iTab*  
- フレームワークの背景を塗りつぶす タブのタブの 0 から始まるインデックス。  
+*iTab*<br/>
+[in]フレームワークの背景を塗りつぶすタブのタブの 0 から始まるインデックス。  
   
- [in]*bIsActive*  
- タブがアクティブである場合は TRUE。それ以外の場合は FALSE です。  
+*bIsActive*<br/>
+[in]タブがアクティブである場合は TRUE。それ以外の場合は FALSE です。  
   
- [in]*pTabWnd*  
- 親のタブ コントロールへのポインター。  
+*pTabWnd*<br/>
+[in]親のタブ コントロールへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
  タブの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
@@ -4507,14 +4507,14 @@ virtual void OnFillTasksGroupInterior(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rect*  
- タスク グループの境界を指定する四角形。  
+*rect*<br/>
+[in]タスク グループの境界を指定する四角形。  
   
- [in]*bSpecial*  
- 内部は特別な色で塗りつぶされますかどうかを示すブール値。  
+*bSpecial*<br/>
+[in]内部は特別な色で塗りつぶされますかどうかを示すブール値。  
   
 ### <a name="remarks"></a>Remarks  
  タスク グループの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
@@ -4529,11 +4529,11 @@ virtual void OnFillTasksPaneBackground(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rectWorkArea*  
- 作業ウィンドウの境界を指定する四角形。  
+*rectWorkArea*<br/>
+[in]作業ウィンドウの境界を指定する四角形。  
   
 ### <a name="remarks"></a>Remarks  
  外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドする`CMFCTasksPane`オブジェクト。  
@@ -4550,17 +4550,17 @@ virtual void OnHighlightMenuItem(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- メニューのデバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]メニューのデバイス コンテキストへのポインター。  
   
- [in]*pButton*  
- ポインターを[CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md)を表示するオブジェクト。 既定の実装では、このパラメーターを使用しません。  
+*pButton*<br/>
+[in]ポインターを[CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md)を表示するオブジェクト。 既定の実装では、このパラメーターを使用しません。  
   
- [in]*rect*  
- メニュー項目の境界を指定する四角形。  
+*rect*<br/>
+[in]メニュー項目の境界を指定する四角形。  
   
- [in]*clrText*  
- 強調表示されたメニュー項目の現在のテキストの色。 既定の実装では、このパラメーターを使用しません。  
+*clrText*<br/>
+[in]強調表示されたメニュー項目の現在のテキストの色。 既定の実装では、このパラメーターを使用しません。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドの既定の実装は、パラメーターを使用しない*pButton*または*clrText*します。 指定された四角形を塗りつぶします*rect*標準の背景色を使用します。  
@@ -4577,11 +4577,11 @@ virtual void OnHighlightRarelyUsedMenuItems(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pDC*  
- デバイス コンテキストへのポインター。  
+*pDC*<br/>
+[in]デバイス コンテキストへのポインター。  
   
- [in]*rectRarelyUsed*  
- 強調表示されているコマンドの境界を指定する四角形。  
+*rectRarelyUsed*<br/>
+[in]強調表示されているコマンドの境界を指定する四角形。  
   
 ### <a name="remarks"></a>Remarks  
  強調表示されたメニュー コマンドの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
@@ -4596,8 +4596,8 @@ virtual BOOL OnNcActivate(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*我が物*  
- [in]*描画*  
+*我が物*<br/>
+[in][in]*描画*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -4614,14 +4614,14 @@ virtual BOOL OnNcPaint(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*我が物*  
- フレームワークは、描画非クライアント領域を持つウィンドウへのポインター。  
+*我が物*<br/>
+[in]フレームワークは、描画非クライアント領域を持つウィンドウへのポインター。  
   
- [in]*lstSysButtons*  
- システム ボタンの一覧。 これらは、キャプション ボタンとも呼ばれます。  
+*lstSysButtons*<br/>
+[in]システム ボタンの一覧。 これらは、キャプション ボタンとも呼ばれます。  
   
- [in]*rectRedraw*  
- 非クライアント領域の境界を指定する四角形。  
+*rectRedraw*<br/>
+[in]非クライアント領域の境界を指定する四角形。  
   
 ### <a name="return-value"></a>戻り値  
  予約済みの値。 既定の実装では、FALSE を返します。  
@@ -4639,11 +4639,11 @@ virtual BOOL OnSetWindowRegion(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*我が物*  
- 変更領域のあるウィンドウへのポインター。  
+*我が物*<br/>
+[in]変更領域のあるウィンドウへのポインター。  
   
- [in]*sizeWindow*  
- ウィンドウのサイズ。  
+*sizeWindow*<br/>
+[in]ウィンドウのサイズ。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE。FALSE それ以外の場合。  
@@ -4690,8 +4690,8 @@ static void SetDefaultManager(CRuntimeClass* pRTI);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pRTI*  
- ビジュアル マネージャーのランタイム情報へのポインター。  
+*pRTI*<br/>
+[in]ビジュアル マネージャーのランタイム情報へのポインター。  
   
 ### <a name="remarks"></a>Remarks  
  使用して、`CMFCVisualManager`クラスと派生した、アプリケーションの外観をカスタマイズするビジュアル マネージャー。 既定のビジュアル マネージャーを設定すると、このメソッドでは、新しいビジュアル マネージャーを使用してのアプリケーションが再描画します。 ビジュアル マネージャーを使用する方法の詳細については、次を参照してください。[ビジュアル マネージャー](../../mfc/visualization-manager.md)します。  
@@ -4706,8 +4706,8 @@ void SetEmbossDisabledImage (BOOL bEmboss = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bEmboss*  
- エンボスのモードを有効にするかどうかを示すブール値パラメーターには、ツール バー イメージが無効になります。  
+*bEmboss*<br/>
+[in]エンボスのモードを有効にするかどうかを示すブール値パラメーターには、ツール バー イメージが無効になります。  
   
 ### <a name="remarks"></a>Remarks  
  関数を使用して[CMFCVisualManager::IsEmbossDisabledImage](#isembossdisabledimage)エンボス モードが有効になっているかどうかを判断します。  
@@ -4720,8 +4720,8 @@ void SetFadeInactiveImage(BOOL bFade = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bFade*  
- 照明効果を有効にするかどうかを指定するブール型パラメーター。  
+*bFade*<br/>
+[in]照明効果を有効にするかどうかを指定するブール型パラメーター。  
   
 ### <a name="remarks"></a>Remarks  
  この機能は、メニューまたはツールバーにフェードアウトされている非アクティブなイメージが表示されるかどうかを制御します。 メソッドを使用して[CMFCVisualManager::IsFadeInactiveImage](#isfadeinactiveimage)をこの機能が有効になっているかどうかを判断します。  
@@ -4734,8 +4734,8 @@ void SetMenuFlatLook(BOOL bMenuFlatLook = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bMenuFlatLook*  
- メニュー ボタンがフラットに表示されるかどうかを示すブール値パラメーター。  
+*bMenuFlatLook*<br/>
+[in]メニュー ボタンがフラットに表示されるかどうかを示すブール値パラメーター。  
   
 ### <a name="remarks"></a>Remarks  
  既定では、この機能は有効になっていません。  
@@ -4748,8 +4748,8 @@ void SetMenuShadowDepth(int nDepth);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*nDepth*  
- メニューの影の深さをピクセル単位で指定する整数。  
+*nDepth*<br/>
+[in]メニューの影の深さをピクセル単位で指定する整数。  
   
 ### <a name="remarks"></a>Remarks  
  メニューの影の幅と高さは、同一である必要があります。 既定値は、7 ピクセルです。  
@@ -4762,8 +4762,8 @@ void SetShadowHighlightedImage(BOOL bShadow = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*bShadow*  
- ビジュアル マネージャーが下に影を表示するかどうかを指定するブール型パラメーターには、イメージが強調表示されます。  
+*bShadow*<br/>
+[in]ビジュアル マネージャーが下に影を表示するかどうかを指定するブール型パラメーターには、イメージが強調表示されます。  
   
 ### <a name="remarks"></a>Remarks  
  既定では、この機能は無効になります。  
