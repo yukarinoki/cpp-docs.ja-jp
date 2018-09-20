@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2710609cbf20861c77dae1cb0aea327983efef6e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9142ba85a78259c0a6e5ae06f3745d414e62e908
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098174"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425628"
 ---
 # <a name="smart-pointers-modern-c"></a>スマート ポインター (Modern C++)
 
@@ -86,29 +86,39 @@ C++ のスマート ポインターの表現方法は、C# などの言語での
 
 COM オブジェクトを使用する場合、スマート ポインターの適切な型でインターフェイス ポインターをラップします。 Active Template Library (ATL) は、さまざまな目的で複数のスマート ポインターを定義します。 さらに、コンパイラが .tlb ファイルからラッパー クラスを作成するときに使用する `_com_ptr_t` スマート ポインターの型を使用することもできます。 これは、ATL ヘッダー ファイルをインクルードしたくない場合に最も適しています。
 
-[CComPtr クラス](../atl/reference/ccomptr-class.md)ATL を使用できない場合を除き、これを使用 `AddRef` メソッドと `Release` メソッドを使用して、参照カウントを実行します。 詳細については、次を参照してください。[方法: 作成と使用の CComPtr および CComQIPtr インスタンス](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)します。
+[CComPtr クラス](../atl/reference/ccomptr-class.md)<br/>
+ATL を使用できない場合以外は、これを使用してください。 `AddRef` メソッドと `Release` メソッドを使用して、参照カウントを実行します。 詳細については、次を参照してください。[方法: 作成と使用の CComPtr および CComQIPtr インスタンス](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)します。
 
-[CComQIPtr クラス](../atl/reference/ccomqiptr-class.md)Resembles`CComPtr`通話の簡略化された構文も提供しますが、 `QueryInterface` COM オブジェクトにします。 詳細については、次を参照してください。[方法: 作成と使用の CComPtr および CComQIPtr インスタンス](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)します。
+[CComQIPtr クラス](../atl/reference/ccomqiptr-class.md)<br/>
+`CComPtr` に似ていますが、COM オブジェクトで `QueryInterface` を呼び出すための簡単な構文も提供します。 詳細については、次を参照してください。[方法: 作成と使用の CComPtr および CComQIPtr インスタンス](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)します。
 
-[CComHeapPtr クラス](../atl/reference/ccomheapptr-class.md)を使用するオブジェクトへのスマート ポインター`CoTaskMemFree`メモリを解放します。
+[CComHeapPtr クラス](../atl/reference/ccomheapptr-class.md)<br/>
+`CoTaskMemFree` を使用してメモリを解放するオブジェクトへのスマート ポインター。
 
-[CComGITPtr クラス](../atl/reference/ccomgitptr-class.md)グローバル インターフェイス テーブル (GIT) から取得されたインターフェイスのスマート ポインター。
+[CComGITPtr クラス](../atl/reference/ccomgitptr-class.md)<br/>
+グローバル インターフェイス テーブル (GIT) から取得されたインターフェイスのスマート ポインターです。
 
-[_com_ptr_t クラス](../cpp/com-ptr-t-class.md)Resembles`CComQIPtr`機能では、ATL ヘッダーには依存しません。
+[_com_ptr_t クラス](../cpp/com-ptr-t-class.md)<br/>
+機能の点では `CComQIPtr` に似ていますが、ATL ヘッダーには依存しません。
 
 ### <a name="atl-smart-pointers-for-poco-objects"></a>POCO オブジェクト用の ATL スマート ポインター
 
 COM オブジェクト用のスマート ポインターに加えて、ATL は Plain Old C++ Object 用のスマート ポインター、およびスマート ポインター コレクションも定義します。 特に、コードの移植性が必要でない場合、または C++ 標準ライブラリと ATL のプログラミング モデルを混合しない従来の Windows プログラミングでは、これらの型が、C++ 標準ライブラリ コレクションに便利な代替手段は
 
-[CAutoPtr クラス](../atl/reference/cautoptr-class.md)コピーで所有権を転送することによって、一意の所有権を強制するスマート ポインター。 非推奨とされた `std::auto_ptr` クラスに相当します。
+[CAutoPtr クラス](../atl/reference/cautoptr-class.md)<br/>
+コピー時に所有権を移動することで一意の所有権を強制するスマート ポインターです。 非推奨とされた `std::auto_ptr` クラスに相当します。
 
-[CHeapPtr クラス](../atl/reference/cheapptr-class.md)C を使用して割り当てられているオブジェクトのスマート ポインター [malloc](../c-runtime-library/reference/malloc.md)関数。
+[CHeapPtr クラス](../atl/reference/cheapptr-class.md)<br/>
+C を使用して割り当てられているオブジェクトのスマート ポインター [malloc](../c-runtime-library/reference/malloc.md)関数。
 
-[CAutoVectorPtr クラス](../atl/reference/cautovectorptr-class.md)を使用して割り当てられた配列のスマート ポインター`new[]`します。
+[CAutoVectorPtr クラス](../atl/reference/cautovectorptr-class.md)<br/>
+`new[]` を使用して割り当てられた配列のスマート ポインターです。
 
-[CAutoPtrArray クラス](../atl/reference/cautoptrarray-class.md)の配列をカプセル化するクラス`CAutoPtr`要素。
+[CAutoPtrArray クラス](../atl/reference/cautoptrarray-class.md)<br/>
+`CAutoPtr` 要素の配列をカプセル化するクラスです。
 
-[CAutoPtrList クラス](../atl/reference/cautoptrlist-class.md)の一覧を操作するメソッドをカプセル化するクラス`CAutoPtr`ノード。
+[CAutoPtrList クラス](../atl/reference/cautoptrlist-class.md)<br/>
+`CAutoPtr` ノードの一覧を操作するメソッドをカプセル化するクラスです。
 
 ## <a name="see-also"></a>関連項目
 

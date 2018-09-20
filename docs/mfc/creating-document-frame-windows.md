@@ -1,5 +1,5 @@
 ---
-title: ドキュメント フレーム ウィンドウの作成 |Microsoft ドキュメント
+title: ドキュメント フレームの Windows を作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,30 +20,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4b27154197e4e8347e73936f319aeb416a153d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 172076113a6bd7e223d99c238d0e05987cdcaae6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342944"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433698"
 ---
 # <a name="creating-document-frame-windows"></a>ドキュメント フレーム ウィンドウの作成
-[ドキュメント/ビューの作成](../mfc/document-view-creation.md)を示していますが、どのように[CDocTemplate](../mfc/reference/cdoctemplate-class.md)オブジェクト統制フレーム ウィンドウ、ドキュメント、およびビューを作成し、それらをすべて同時に接続します。 次の 3 つ[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)への引数、`CDocTemplate`コンス トラクターは、フレーム ウィンドウ、ドキュメント、およびファイルの新しいコマンドなどのユーザー コマンドに応答ドキュメント テンプレートを動的に作成するビュー クラスを指定します。メニューまたは MDI ウィンドウ メニューで、新しいウィンドウ コマンド。 ドキュメント テンプレートは、ビューおよびドキュメントのフレーム ウィンドウを作成するときに、後で使用するためのこの情報を格納します。  
-  
- [RUNTIME_CLASS](../mfc/reference/run-time-object-model-services.md#runtime_class) 、派生は正しく動作するためのメカニズムでフレーム ウィンドウ クラスを宣言する必要があります、 [DECLARE_DYNCREATE](../mfc/reference/run-time-object-model-services.md#declare_dyncreate)マクロです。 これは、フレームワークは、フレーム ウィンドウ クラスの動的な構築メカニズムを使用してドキュメントを作成する必要があるため`CObject`です。  
-  
- ドキュメントを作成するコマンドを選択すると、ドキュメント オブジェクト、そのビュー、およびビューを表示するフレーム ウィンドウを作成するドキュメント テンプレートと、フレームワークを呼び出します。 ドキュメント テンプレートが、適切なクラスのオブジェクトを作成して、ドキュメント フレーム ウィンドウの作成時から派生したクラス[CFrameWnd](../mfc/reference/cframewnd-class.md) SDI アプリケーションまたはから[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) MDI のアプリケーション。 フレームワークのフレーム ウィンドウ オブジェクトの[LoadFrame](../mfc/reference/cframewnd-class.md#loadframe)メンバー関数をリソースから作成情報を取得し、Windows ウィンドウを作成します。 フレームワークは、ウィンドウ ハンドルをフレーム ウィンドウ オブジェクトにアタッチします。 ドキュメント フレーム ウィンドウの子ウィンドウとして、ビューを作成します。  
-  
- 決定するときに注意してください[初期化のタイミング](../mfc/when-to-initialize-cwnd-objects.md)、 `CWnd`-派生オブジェクト。  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>詳しくは次のトピックをクリックしてください。  
-  
--   [CObject (動的な作成メカニズムはその) からクラスを派生します。](../mfc/deriving-a-class-from-cobject.md)  
-  
--   [ドキュメント/ビューの作成 (テンプレートおよびフレーム ウィンドウの作成)](../mfc/document-view-creation.md)  
-  
--   [フレーム ウィンドウの破棄](../mfc/destroying-frame-windows.md)  
-  
-## <a name="see-also"></a>関連項目  
- [フレーム ウィンドウの使用](../mfc/using-frame-windows.md)
+
+[ドキュメント/ビューの作成](../mfc/document-view-creation.md)を示していますが、どのように[CDocTemplate](../mfc/reference/cdoctemplate-class.md)オブジェクトは、フレーム ウィンドウ、ドキュメント、およびビューを作成し、それらすべてをまとめて接続を調整します。 次の 3 つ[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)への引数、`CDocTemplate`コンス トラクターは、フレーム ウィンドウ、ドキュメント、およびドキュメント テンプレートでファイルを新しいコマンドなどのユーザー コマンドへの応答で動的に作成されるビュー クラスを指定メニューまたは MDI ウィンドウ メニューには、[新規ウィンドウ] コマンド。 ドキュメント テンプレートは、ビューとドキュメントのフレーム ウィンドウを作成するときに、後で使用するためには、この情報を格納します。
+
+[RUNTIME_CLASS](../mfc/reference/run-time-object-model-services.md#runtime_class)派生が正常に動作するためのメカニズムでフレーム ウィンドウ クラスを宣言する必要があります、 [DECLARE_DYNCREATE](../mfc/reference/run-time-object-model-services.md#declare_dyncreate)マクロ。 これは、フレームワークは、フレーム ウィンドウのクラスの動的生成メカニズムを使用してドキュメントを作成する必要があるため`CObject`します。
+
+ユーザーがドキュメントを作成するコマンドを選択すると、ドキュメント オブジェクト、そのビュー、およびビューを表示するフレーム ウィンドウを作成するドキュメント テンプレートとフレームワークが呼び出します。 ドキュメント テンプレートが適切なクラスのオブジェクトを作成して、ドキュメント フレーム ウィンドウの作成時から派生したクラス[CFrameWnd](../mfc/reference/cframewnd-class.md) SDI アプリケーションまたはから[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) MDI のアプリケーション。 フレームワークを呼び出して、フレーム ウィンドウ オブジェクトの[LoadFrame](../mfc/reference/cframewnd-class.md#loadframe)メンバー関数はリソースから作成情報を取得し、Windows のウィンドウを作成します。 フレームワークは、ウィンドウ ハンドルをフレーム ウィンドウ オブジェクトにアタッチします。 ドキュメント フレーム ウィンドウの子ウィンドウとして、ビューを作成します。
+
+決定するときに注意が必要です。[初期化のタイミング](../mfc/when-to-initialize-cwnd-objects.md)、 `CWnd`-派生オブジェクト。
+
+## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+
+- [(動的な作成メカニズムはその) CObject からクラスの派生](../mfc/deriving-a-class-from-cobject.md)
+
+- [ドキュメント/ビューの作成 (テンプレートとフレーム ウィンドウの作成)](../mfc/document-view-creation.md)
+
+- [フレーム ウィンドウの破棄](../mfc/destroying-frame-windows.md)
+
+## <a name="see-also"></a>関連項目
+
+[フレーム ウィンドウの使用](../mfc/using-frame-windows.md)
 
